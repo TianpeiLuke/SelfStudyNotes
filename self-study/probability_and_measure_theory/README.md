@@ -3,7 +3,7 @@
 ## Books 
 
 ### Measure Theory and Real Analysis
-*An introduction to measure theory*, Terrance Tao
+*An introduction to measure theory*, Terence Tao
 
 *Real Analysis*, Folland
 
