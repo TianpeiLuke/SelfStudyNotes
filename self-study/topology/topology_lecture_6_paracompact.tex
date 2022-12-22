@@ -1,0 +1,285 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs,  mathtools, dsfont}
+\usepackage{tabularx}
+\usepackage{tikz-cd}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Lecture 5: Metrization Theorems and Paracompactness}
+\author{ Tianpei Xie}
+\date{Nov. 7th., 2022}
+\maketitle
+\tableofcontents
+\newpage
+\section{Paracompactness}
+\subsection{Local Finiteness}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Local Finiteness}})\\
+Let $X$ be a topological space. A \emph{collection} $\srA$ of \emph{subsets} of $X$ is said to be \underline{\emph{\textbf{locally finite in $X$}}} if every point of $X$ has a \emph{neighborhood} that \emph{\textbf{intersects} only \textbf{finitely many elements}} of $\srA$.
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Understanding Locally Finite}})\\
+\emph{A locally finite} collection of subsets in a topological space is \emph{\textbf{evenly spread across the space}}. In other word, there exists \emph{\textbf{no cluster point}} $x \in X$ for these subsets so that \emph{every neighborhood of $x$ will intersect with infinitely many subsets in the collection}.
+
+\emph{Local finiteness} describe \emph{the \textbf{distribution} of the given collection of subsets} in $X$. We can think of $\srA$ as the result of ``\emph{\textbf{uniform sampling}}" of subsets across the space.
+\end{remark}
+
+\item \begin{example} (\emph{\textbf{Locally Finite Collections in $\bR$}})\\
+The collection of intervals
+\begin{align*}
+\srA = \{(n, n + 2): n \in \bZ\}
+\end{align*}
+is \emph{locally finite} in the topological space $\bR$.
+
+On the other hand, the collection
+\begin{align*}
+\srB = \{(0, 1/n): n \in \bZ\}
+\end{align*} has a cluster point $0\in \bR$ so it is not locally finite in $\bR$. However, it is locally finite for $(0, 1)$.
+\end{example}
+
+\item \begin{lemma} (\textbf{Properties of Locally Finiteness}) \citep{munkres2000topology}\\
+Let $\srA$ be a locally finite collection of subsets of $X$. Then:
+\begin{enumerate}
+\item Any \textbf{subcollection} of $\srA$ is locally finite.
+\item The collection $\srB = \{\bar{A}\}_{A \in \srA}$ of the \textbf{closures} of the elements of A is locally finite.
+\item $\overline{\bigcup_{A \in \srA}A} = \bigcup_{A \in \srA}\bar{A}$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+To prove (2), note that \emph{any \textbf{open set} $U$ that intersects the set $\bar{A}$ necessarily intersects $A$}. 
+To prove (3), let $Y$ denote the union of the elements of $\srA$:
+\begin{align*}
+Y &= \bigcup_{A \in \srA}A.
+\end{align*}
+In general, $\bigcup_{A \in \srA}\bar{A} \subseteq \bar{Y}$; we prove the \emph{reverse inclusion}, under the assumption of \emph{local finiteness}. 
+
+Let $x \in \bar{Y}$; let $U$ be a neighborhood of $x$ that \emph{intersects only finitely many elements} of $\srA$, say $A_1 \xdotx{,} A_k$. We assert that $x$ belongs to one of the sets $\bar{A}_1 \xdotx{,} \bar{A}_k$, and hence belongs to $\bigcup_{A \in \srA}\bar{A}$. For otherwise, the set $U \setminus \bigcup_{i=1}^{k}\bar{A}_i$ would be a neighborhood of $x$ that \emph{\textbf{intersects no element} of $\srA$ and hence does not intersect $Y$}, contrary to the assumption that $x \in \bar{Y}$. \qed 
+\end{proof}
+
+
+\item \begin{definition} (\emph{\textbf{Locally Finite Indexed Family}})\\
+\emph{The indexed family} $\set{A_{\alpha}}_{\alpha \in J}$ is said to be a \underline{\emph{\textbf{locally finite indexed family in $X$}}} if every $x \in X$ has a neighborhood that \emph{intersects} $A_{\alpha}$ for only \emph{\textbf{finitely many values}} of $\alpha$.
+\end{definition}
+
+\item \begin{remark}
+$\set{A_{\alpha}}_{\alpha \in J}$ is a \emph{\textbf{locally finite indexed family}} if and only if it is \emph{\textbf{locally finite}} as \emph{a collection of sets} and each \emph{nonempty} subset $A$ of $X$ equals $A_{\alpha}$ for \emph{at most finitely many values} of $\alpha$.
+\end{remark}
+
+\item \begin{definition}  (\emph{\textbf{Countably Local Finiteness}})\\
+A collection $\srB$ of subsets of $X$ is said to be \underline{\emph{\textbf{countably locally finite}}} if $\srB$ can be written as \underline{\emph{\textbf{the countable union}}} of collections $\srB_n$, each of which is \emph{\textbf{locally finite}}. 
+\begin{align*}
+\srB &= \bigcup_{n\in \bZ_{+}}\srB_{n}
+\end{align*} Countably locally finite is also called \underline{\emph{\textbf{$\sigma$-locally finite}}}.
+\end{definition}
+
+\item \begin{remark}
+Note that both \emph{a \textbf{countable} collection} and \emph{a \textbf{locally finite} collection} are \emph{\textbf{countably locally finite}}.
+\end{remark}
+
+\item \begin{remark}
+We can consider a \emph{\textbf{countably locally finite}} collection as the result of \emph{\textbf{superposition}} of \emph{\textbf{countable layers}} of \emph{uniform sampling} of subsets in a topological space. 
+\end{remark}
+
+\item \begin{definition} (\textbf{\emph{Refinement of Collection}})\\
+Let $\srA$ be a collection of subsets of the space $X$. A collection $\srB$ of subsets of $X$ is said to be a \underline{\emph{\textbf{refinement of $\srA$}}} (or is said to \emph{\textbf{refine}} $\srA$) if for each element $B$ of $\srB$, there is an element $A$ of $\srA$ \emph{\textbf{containing}} $B$. 
+
+If the elements of $\srB$ are \emph{\textbf{open sets}}, we call $\srB$ an \underline{\emph{\textbf{open refinement of $\srA$}}}; if they are \emph{\textbf{closed sets}}, we call $\srB$ a \underline{\emph{\textbf{closed refinement}}}.
+\end{definition}
+
+\item \begin{exercise}
+Let $\srA$ be the following collection of subsets of $\bR$:
+\begin{align*}
+\srA = \{(n, n + 2): n \in \bZ\}.
+\end{align*}
+Which of the following collections refine $\srA$?
+\begin{align*}
+\srB = \{(x, x + 1): x \in \bR\},\\
+\srC = \{(n, n + 3/2): n \in \bZ\},\\
+\srD = \{(x, x + 3/2): x \in \bR \}
+\end{align*}
+\end{exercise}
+\begin{solution}
+$\srB$ is a refinement of $\srA$. For each $x \in \bR$, there exsits some $n \in \bZ$ such that $n \le x < n+1$. Thus $n+1 \le x + 1 < n+2$. So for every $(x, x+1)$ we can find corresponding $n$ such that $(x, x+1) \subset (n, n+2)$.
+
+$\srC$ is a refinement of $\srA$. Obviously, for given $n$, $(n, n+3/2) \subset (n, n+2)$.
+
+$\srD$ is not a refinement of $\srA$. Choose $(\sqrt{3}, \sqrt{3}+ 3/2) \in \srD$. Suppose $(\sqrt{3}, \sqrt{3}+ 3/2) \subseteq (n, n+2)$ for some $n$, i.e. $\sqrt{3} \ge n$ and $\sqrt{3} + 3/2 \le n+2$ or $\sqrt{3} \le n+ 1/2$. This is not possible since the closet integer to $\sqrt{3}$ is $n=1$, but $\sqrt{3} > 1.5$. \qed
+\end{solution}
+
+\item \begin{remark} (\emph{\textbf{Finer $\Rightarrow$ Smaller Subsets}})\\
+$\srB$ is a \emph{\textbf{refinement}} of $\srA$ $\Rightarrow$ $\forall B \in \srB$, $B$ is a subset of some element in $\srA$.
+
+Note that there may exists some $A \in \srA$ does not intersect with any $B \in \srB$.
+\end{remark}
+
+\item \begin{theorem}  \citep{munkres2000topology}\\
+Let $X$ be a \textbf{metrizable} space. If $\srA$ is an open covering of $X$, then there is an \underline{\textbf{open covering}} $\srE$ of $X$ \underline{\textbf{refining} $\srA$} that is \underline{\textbf{countably locally finite}}.
+\end{theorem}
+
+\item \begin{remark}
+For \emph{\textbf{metrizable}} space $X$, \emph{every \textbf{open covering} has a \textbf{countable locally finite refinement} that also \textbf{covers}} $X$.
+\end{remark}
+\end{itemize}
+\subsection{Paracompactness}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Compactness in terms of Refinement}})\\
+A space $X$ is \emph{\textbf{compact}} if every \emph{open covering} $\srA$ of $X$ has \underline{\emph{a \textbf{finite open refinement}}} $\srB$ that \underline{\emph{\textbf{covers}} $X$}.
+\end{definition}
+
+\item We generalize the definition of compactness by relaxing the finiteness to locally finiteness
+\begin{definition}  (\emph{\textbf{Paracompactness}})\\
+A space $X$ is  \underline{\emph{\textbf{paracompact}}} if \emph{every open covering} $\srA$ of $X$ has a \underline{\emph{\textbf{locally finite open refinement}}} $\srB$ that \underline{\emph{\textbf{covers}} $X$}.
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Compactness} vs. \textbf{Paracompactness}})\\
+\emph{Paracompactness is a \textbf{generalization} of compactness}, i.e. \emph{all compact space is paracompact}. 
+
+Both compactness and paracompactness assert \emph{the \textbf{existence} of an \textbf{open subcovering} with \textbf{some structure}}. But \emph{\textbf{the constraint on the structure}} is different:
+\begin{enumerate}
+\item \emph{Compactness} \emph{\textbf{controls the cardinality}} of \emph{subcovering}, i.e. to be \emph{\textbf{finite}}.
+\item \emph{Paracompactness} \emph{\textbf{controls the distribution}} of \emph{subcovering}, i.e. to be \emph{\textbf{evenly distributed} across space without cluster point} or to be \emph{\textbf{locally finite}}.
+\end{enumerate}
+\end{remark}
+
+\item \begin{example} (\textbf{\emph{$\bR^n$}}) \\
+The space $\bR^n$ is \emph{\textbf{paracompact}}. Let $X = \bR^n$. Let $\srA$ be an \emph{open covering} of $X$. Let $B_0 = \emptyset$, and for each \emph{positive integer} $m$, let $B_m= B(0, m)$ denote \emph{the open ball of \textbf{radius} $m$ \textbf{centered at the origin}}. Note that $B_m \subseteq B_{m+1}$ for all $m$ and its closure $\bar{B}_m$ is a \emph{compact subset} of $\bR^n$.
+ 
+Given $m$, choose \emph{\textbf{finitely many elements}} of $\srA$ that \emph{\textbf{cover}} $\bar{B}_m$ (since $\bar{B}_m$ is compact) and
+\emph{\textbf{intersect}} \emph{each one} with \emph{\textbf{the open set}} $X \setminus \bar{B}_{m-1}$; let this \emph{finite collection} of open sets be denoted $\srC_m$. That is $\srC_{m} =\{ A_{i} \cap (X \setminus \bar{B}_{m-1}): A_i \in \srA, \bar{B}_m \subseteq \bigcup_i^{k} A_i, 1\le i \le k  \}$.
+Then the collection $\srC = \bigcup_{m}\srC_m$ is a \emph{refinement} of $\srA$. 
+
+It is clearly \emph{locally finite}, for the open set $B_m$ intersects only \emph{finitely many elements} of $\srC$, namely those elements belonging to the \emph{collection} $\srC_1 \xdotx{\cup} \srC_m$. Finally, $\srC$ covers $X$. For, given $x$, let $m$ be the \emph{smallest integer} such that $x \in \bar{B}_m$. Then $x$ belongs to an element of $\srC_m$, by definition. \qed
+\end{example}
+
+\item \begin{example}(\textbf{\emph{$k$-Dimensional Topological Manifold}}) \\
+\emph{Every $k$-dimensional topological manifold is \textbf{paracompact}}.
+\end{example}
+
+\item \begin{theorem}\citep{munkres2000topology}\\
+Every \textbf{paracompact Hausdorff} space $X$ is \textbf{normal}.
+\end{theorem}
+
+\item \begin{proposition}(\textbf{Paracompactness by Closed Subspace}) \citep{munkres2000topology}\\
+Every \textbf{closed} subspace of a paracompact space is paracompact
+\end{proposition}
+
+\item \begin{remark}
+\emph{\textbf{A paracompact subspace}} of a \emph{Hausdorff space} $X$ \emph{\textbf{need not be closed}} in $X$.
+
+Indeed, the open interval $(0, 1)$ is \emph{paracompact}, being \emph{homeomorphic} to $\bR$, but it is \emph{not closed} in $\bR$.
+\end{remark}
+
+\item \begin{remark} \emph{\textbf{The product of two paracompact spaces need not be paracompact}}. 
+
+The space $\bR_{\ell}$ is \emph{paracompact}, for it is \emph{regular and Lindel\"of}. However, $\bR_{\ell} \times \bR_{\ell}$ is \emph{not paracompact}, for it is \emph{Hausdorff} but \emph{\textbf{not normal}}.
+\end{remark}
+
+\item \begin{remark} \emph{\textbf{A subspace of a paracompact space need not be paracompact}}. 
+
+The space $\bar{S}_{\Omega} \times \bar{S}_{\Omega}$ is \emph{compact} and, therefore, \emph{\textbf{paracompact}}. But the \emph{subspace} $S_{\Omega} \times \bar{S}_{\Omega}$ is \emph{\textbf{not paracompact}}, for it is \emph{Hausdorff} but \emph{not normal}.
+\end{remark}
+
+\item \begin{lemma} \citep{munkres2000topology}\\
+Let $X$ be \textbf{regular}. Then the following conditions on X are \textbf{equivalent}:  
+Every open covering of $X$ has a \textbf{refinement} that is:
+\begin{enumerate}
+\item An \textbf{open} covering of $X$ and \underline{\textbf{countably locally finite}}.
+\item A \textbf{covering} of $X$ and \textbf{locally finite}.
+\item A \textbf{closed} covering of $X$ and \textbf{locally finite}.
+\item An \textbf{open} covering of $X$ and \underline{\textbf{locally finite}}.
+\end{enumerate}
+\end{lemma}
+
+\item \begin{remark}
+Given \emph{regularity} (\emph{$T_3$ axioms of separation}),  ``\emph{open subcovering that is countably locally finite}" $=$``\emph{open subcovering that is  locally finite}"
+\end{remark}
+
+\item \begin{theorem}\citep{munkres2000topology}\\
+Every \textbf{metrizable} space is paracompact.
+\end{theorem}
+
+\item \begin{proposition} \citep{munkres2000topology}\\
+Every \textbf{regular Lindel\"of space} is paracompact.
+\end{proposition}
+
+\item \begin{example} (\emph{$\bR^{\omega}$ with \textbf{Product} and \textbf{Uniform Topologies}})\\
+The space $\bR^{\omega}$ is \emph{\textbf{paracompact}} in both \emph{the \textbf{product} and \textbf{uniform} topologies}.
+This result follows from the fact that $\bR^{\omega}$ is \emph{\textbf{metrizable}} in these topologies. 
+
+It is \emph{not known} whether $\bR^{\omega}$  is \emph{paracompact} in \emph{the box topology}.
+\end{example}
+
+\item \begin{example} (\emph{$\bR^{J}$ for \textbf{Uncountable Product is Not Paracompact}})\\
+For $\bR^{J}$ is \emph{Hausdorff} but \emph{\textbf{not normal}}.
+\end{example}
+
+\end{itemize}
+
+\subsection{Partition of Unity}
+\begin{itemize}
+\item \begin{remark}
+\emph{One of \textbf{the most useful properties}} that a \emph{paracompact space} $X$ possesses has to do with \emph{the \textbf{existence} of \textbf{partitions of unity}} on $X$.
+\end{remark}
+\end{itemize}
+
+\section{Metrization Theorems}
+\subsection{The Nagata-Smirnov Metrization Theorem}
+\begin{itemize}
+\item \begin{theorem} (\textbf{Nagata-Smirnov Metrization Theorem}). \citep{munkres2000topology} \\
+A space $X$ is \textbf{metrizable} \underline{\textbf{if and only if}} $X$ is \underline{\textbf{regular}} and has a \underline{\textbf{basis}} that is \underline{\textbf{countably}} \underline{\textbf{locally finite}}.
+\end{theorem}
+\end{itemize}
+\subsection{The Smirnov Metrization Theorem}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Locally Metrizable}})\\
+A space $X$ is \underline{\emph{\textbf{locally metrizable}}} if every point $x$ of $X$ has a \emph{\textbf{neighborhood}} $U$ that is \emph{\textbf{metrizable}} in \emph{the subspace topology}.
+\end{definition}
+
+\item \begin{theorem} (\textbf{Smirnov Metrization Theorem}).  \citep{munkres2000topology}\\
+A space $X$ is \textbf{metrizable} \underline{\textbf{if and only if}} it is a \underline{\textbf{paracompact Hausdorff}} space that is \underline{\textbf{locally metrizable}}.
+\end{theorem}
+
+\item 
+\begin{remark} (\emph{\textbf{Sufficient and Necessary Conditions for Metrization}})
+\[
+  \begin{tikzcd}
+   \text{\emph{\textbf{metrizable} space}} \arrow[bend left]{rr}{} &  &  \text{\emph{\textbf{Hausdorff} space}} \\
+   & &  \arrow[ull, leftrightarrow, swap,  "\text{\emph{countable locally finite basis}}"]   \text{\emph{\textbf{regular} space}}  \arrow{u}{} \\
+   & \text{\emph{\textbf{paracompact Hausdorff} space}} \arrow{r}{}  \arrow[uul, leftrightarrow,   "\text{\emph{locally metrizable}}"]   &  \text{\emph{\textbf{normal} space}} \arrow{u}{} \\
+   & \text{\emph{\textbf{compact Hausdorff} space}}  \arrow{u}{} \arrow{ru}{} & 
+  \end{tikzcd}
+\] 
+\end{remark}
+
+\item \begin{example} (\emph{\textbf{Locally Convex Space is Metrizable}})
+ \begin{definition} (\emph{\textbf{Locally Convex Space}})\\
+A topological vector space $(X, \srT)$ is called \underline{\emph{\textbf{locally convex space}}} if its topology $\srT$ is \emph{the weakest topology} for which all \emph{\textbf{semi-norms}} $\set{q_{\theta},\theta\in \Theta}$ are \emph{continuous}. $\srT$ is generated by \emph{\textbf{the convex basis}} $U_{\mb{x},r,\theta} = \set{\mb{y}\in X\,|\, q_{\theta}(\mb{y}-\mb{x}) \le r }\in \srB, \mb{x}\in X, r>0$. 
+\end{definition}
+
+From the \emph{Smirnov Metrization Theorem}, we see that \emph{\textbf{the locally convex space is metrizable}}.
+\end{example}
+
+\end{itemize}
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{book_reference.bib}
+\end{document}
