@@ -23,8 +23,15 @@
   - Part 3: Banach Space, Dual Space, Weak Topology, Hahn-Banach Theorem etc.
   
 - Hilbert Space
-  - Projection Theorem  
-  - Risez Representation Theorem
+  - Metric Space
+  - Inner Product Space
+  - Hilbert Space
+    - Projection Theorem  
+    - Risez Representation Theorem
+    - Orthonormal Bases
+    - Separability
+    - Hilbert Adjoint Operator
+    - Self-Adjoint, Unitary and Normal Operators
 
 - Banach Space
   - Dual Space 
