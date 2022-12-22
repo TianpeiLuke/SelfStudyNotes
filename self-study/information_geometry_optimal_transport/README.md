@@ -49,7 +49,7 @@
   - Variational Inference
 
 - Optimal Transport
-  - Optimal Transport Problem [pdf](./info_geo_3_opt_transport_optimization.pdf)
+  - Optimal Transport Problem [pdf](./info_geo_2_opt_transport.pdf)
     - Optimal Assignment Problem
       - Problem Formulations
       - Push-forward on Density
@@ -73,7 +73,7 @@
       - Brenier Theorem: Monge-Kantorovich Equivalence  
     - Examples 
 
-  - Optimization Algorithm for Optimal Transport
+  - Optimization Algorithm for Optimal Transport [pdf](./info_geo_3_opt_transport_optimization.pdf)
     - Entropic Regularization for Optimal Transport
       - Maximum Entropy Optimal Transport
       - Probability Interpretation using Mutual Information
