@@ -18,9 +18,24 @@
 
 ## Table of Contents
 - Summary 
-  - Part 1: Topology Basics, Complete Function Space, Locally Convex Space
-  - Part 2: Hilbert Space, Bounded Linear Operator, Compact Operator, Spectrum
-  - Part 3: Banach Space, Dual Space, Weak Topology, Hahn-Banach Theorem etc.
+  - Part 1: 
+    - Topology Basics
+    - Complete Function Space
+    - Topological Vector Space
+    - Locally Convex Space
+  - Part 2: 
+    - Hilbert Space
+    - Bounded Linear Operator
+    - Compact Operator
+    - Spectrum
+  - Part 3: 
+    - Banach Space
+    - Bounded Linear Operator, Dual Space
+    - Weak Topology, Weak-star Topology
+    - Hahn-Banach Theorem
+    - Uniform Boundedness Principle
+    - Open Mapping Theorem
+    - Closed Graph Theorem
   
 - Hilbert Space
   - Metric Space
@@ -71,21 +86,36 @@
     - Banach-Alaugu Theorem
 
 - Regular Borel Measure
+  - Subspace of Continuous Function Space
+    - Compactly Supported Continuous Functions  
   - Regularity
+    - Inner Regularity and Outer Regularity
+    - Radon Measure 
   - Riesz-Markov Theorem
   - Dual Space of Continuous Function with Compact Support
   
 
 - Bounded Linear Operator
   - Spectrum
+    - Finite Dimensional Case
+    - Infinite Dimensional Case
+    - Spectrum of Bounded Linear Operator in Banach Space
+    - Spectrum of Self-Adjoint Operator in Hilbert Space
+    - Positive Semidefinite Operators and the Polar Decomposition 
   - Compact Operator
-  - Trace-Class
-  - Hilbert-Schmidt
+    - Definitions 
+    - The Spectrum of Compact Operator  
+    - Trace-Class Operator
+    - Hilbert-Schmidt Operator
+    - Trace of Linear Operator
 
 - Spectral Theorem for Self-Adjoint Operator in Hilbert Space
+  - Spectral Theorem in Finite Dimensional Space 
   - Continuous Functional Calculus
-  - Spectral Theorem, Functional Calculus Version
-  - Spectral Measure
-  - Spectral Theorem, Multiplication Operator Version
-  - Spectral Theorem, Spectral Projection Version
-  - Decomposition of Spectrum of Self-Adjoint Operator  
+  - Spectral Theorem for Bounded Self-Adjoint Operator
+    - Spectral Theorem, Functional Calculus Version
+    - Spectral Measure
+    - Spectral Theorem, Multiplication Operator Version
+    - Spectral Theorem, Spectral Projection Version
+    - Decomposition of Spectral Measure
+    - Understanding Spectrum via Spectral Projection  
