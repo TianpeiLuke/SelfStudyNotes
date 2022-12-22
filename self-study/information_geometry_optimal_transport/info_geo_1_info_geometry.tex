@@ -74,7 +74,7 @@ Note that \emph{\textbf{the basis tangent vector}} under this embedding is still
 \end{align}
 
 
-\item The \emph{\textbf{log-likelihood function}} $\ell: \cP \rightarrow \ell(\cP) \bR^{\cX}$ is also a \emph{\textbf{smooth embedding}} as shown above. It is called \emph{\textbf{the exponential embedding}}. Note that $\ell(\cP) = \set{\log(p): p\in \cP}$. A tangent vector $X \in T_p\cP$ under this embedding is then represented by the result of mapping $p \mapsto \log(p)$, which is denoted as $X^{(e)}$ and call \underline{\emph{\textbf{the exponential representation}}} \citep{amari2007methods}. Note that 
+\item The \emph{\textbf{log-likelihood function}} $\ell: \cP \rightarrow \ell(\cP) \subset \bR^{\cX}$ is also a \emph{\textbf{smooth embedding}} as shown above. It is called \emph{\textbf{the exponential embedding}}. Note that $\ell(\cP) = \set{\log(p): p\in \cP}$. A tangent vector $X \in T_p\cP$ under this embedding is then represented by the result of mapping $p \mapsto \log(p)$, which is denoted as $X^{(e)}$ and call \underline{\emph{\textbf{the exponential representation}}} \citep{amari2007methods}. Note that 
 \begin{align*}
 X^{(e)} &= d\ell_{p}\paren{X} = X\ell =  p(x; \xi)^{-1}X^{(m)}(x). 
 \end{align*} Thus \emph{\textbf{the basis tangent vector}} under \emph{the exponential embedding}
@@ -94,7 +94,7 @@ $\cP(\cX)$ is \emph{$|\cX|$-dimensional submanifold} if the domain $\cX$ is fini
 \subsection{Fisher Information Metrics}
 \begin{itemize}
 \item \begin{remark}
-For probabilty models, the ambient space $\bR^{\cX}$ denotes \emph{the set of all \textbf{random variables}} on $\cX$. Moreover, it has a natural definition of \emph{\textbf{inner product}} as 
+For probabilty models, the ambient space $L^2(\cX, \mu) \subseteq \bR^{\cX}$ denotes \emph{the set of all \textbf{random variables}} on $\cX$. Moreover, it has a natural definition of \emph{\textbf{inner product}} as 
 \begin{align*}
 \inn{f}{g} &= \int_{\cX} f(x)\,g(x)\, d\mu(x). 
 \end{align*}  \emph{\textbf{The inner product}} induced by the embedding map $\iota$ in $T^{(m)}_pS$ is formulated as 
