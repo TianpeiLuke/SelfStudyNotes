@@ -1,0 +1,9 @@
+\contentsline {section}{\numberline {1}Nearest Neighbor Rules}{2}
+\contentsline {subsection}{\numberline {1.1}The Classification Rule}{2}
+\contentsline {section}{\numberline {2}Asymptotic Analysis}{3}
+\contentsline {subsection}{\numberline {2.1}Consistency of K-Nearest Neighbor Statistics}{3}
+\contentsline {subsection}{\numberline {2.2}Stone's Lemma and Function of K-Nearest Neighbor}{3}
+\contentsline {subsection}{\numberline {2.3}Stone's Theorem and Universal Consistency of $k$-NN Rules}{4}
+\contentsline {section}{\numberline {3}Non-Asymptotic Analysis}{5}
+\contentsline {subsection}{\numberline {3.1}A Generalization Bound for the $k$-NN Rule}{5}
+\contentsline {subsection}{\numberline {3.2}The ``Curse of Dimensionality"}{6}

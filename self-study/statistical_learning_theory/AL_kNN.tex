@@ -35,6 +35,13 @@
 \section{Nearest Neighbor Rules}
 \subsection{The Classification Rule}
 \begin{itemize}
+\item \begin{remark} (\emph{\textbf{Memorization of Training Set and Learning by Similarity Search}})\\
+\emph{\textbf{Nearest Neighbor algorithms}} are among the simplest of all machine learning algorithms.  \emph{The \textbf{idea}} is to \underline{\emph{\textbf{memorize} the training set}} and then to \emph{\textbf{predict}} the \emph{label} of any new instance on the basis of the labels of \emph{its \underline{\textbf{closest neighbors}} in the training set}. 
+
+The \emph{\textbf{rationale}} behind such a method is based on the assumption that the \emph{features that are used to describe the domain points are relevant to their labelings in a way that makes \textbf{\underline{close-by points likely to have the same label}}}. Furthermore, in some situations, even when the training set is immense, \emph{finding a nearest neighbor can be done extremely fast} (for example, when the training set is the entire Web and distances are based on links).
+\end{remark}
+
+
 \item \begin{definition} (\emph{\textbf{Nearest Neighbor Rules}})\\
 Formally, we define \underline{\emph{\textbf{the $k$-NN rule}}} by
 \begin{align*}
@@ -68,11 +75,15 @@ We fix $x \in \bR^d$, and \emph{\textbf{reorder}} the data $(X_1, Y_1) \xdotx{,}
 (X_{(1)}(x), Y_{(1)}(x)) \xdotx{,} (X_{(n)}(x), Y_{(n)}(x)) 
 \end{align*} where $X_{(k)}(x)$ is the $k$-th nearest neighbor of $x$. For short, we write it as $(X_{(k)}, Y_{(k)})$.
 \end{remark}
+
+\item \begin{remark} (\emph{\textbf{Efficient Learning Without Hypothesis Class}}) \citep{shalev2014understanding}\\
+Note that, in contrast with the algorithmic paradigms that we have discussed so far, like \emph{ERM}, \emph{SRM}, \emph{MDL}, or \emph{RLM}, that are determined by some hypothesis class, $\cH$, \emph{the Nearest Neighbor} method figures out a label \emph{on any test point} \emph{\textbf{without searching for a predictor} \textbf{within some predefined class of functions}}.
+\end{remark}
 \end{itemize}
 
 
-\section{Consistency}
-\subsection{Asymptotic Consistency}
+\section{Asymptotic Analysis}
+\subsection{Consistency of K-Nearest Neighbor Statistics}
 \begin{itemize}
 \item \begin{definition}
 Denote \emph{the probability measure} for $X$ by $\cP_{X}$ and let $B_{x, \epsilon}$ be the \emph{\textbf{closed ball}} centered at $x$ of radius $\epsilon > 0$. The collection of all $x$ with $\cP_{X}(B_{x ,\epsilon}) > 0$ \emph{for all} $\epsilon > 0$ is called \emph{\textbf{the support} of $X$} or $\cP_{X}$.
@@ -90,7 +101,7 @@ d(X, X_{(k)}(x)) \rightarrow 0, \quad a.s.
 \end{lemma}
 \end{itemize}
 
-\subsection{Stone's Lemma}
+\subsection{Stone's Lemma and Function of K-Nearest Neighbor}
 \begin{itemize}
 \item 
 \begin{lemma} (\textbf{Stone's Lemma})  \citep{devroye2013probabilistic}\\
@@ -109,9 +120,9 @@ For any integrable function $f$,
 \end{lemma}
 \end{itemize}
 
-\subsection{The Asymptotic Probability of Error}
+%\subsection{The Asymptotic Probability of Error}
 
-\subsection{Stone's Theorem}
+\subsection{Stone's Theorem and Universal Consistency of $k$-NN Rules}
 \begin{itemize}
 \item \begin{remark} (\emph{\textbf{Estimate Posterior Conditional Probability with Weighted Averages}})\\
 Consider a rule based on an estimate of the a \emph{\textbf{posteriori probability}} $\eta$ of the form
@@ -172,11 +183,65 @@ Then $g_n$ is \textbf{universally consistent}.
 \item Condition (3) requires that \emph{\textbf{no single} $X_i$ has \textbf{too large} a contribution to the estimate}.
 Hence, \emph{the \textbf{number of points} encountered in the \textbf{averaging} must tend to \textbf{infinity}}.
 \end{enumerate}
+\end{remark}
+\end{itemize}
 
+\section{Non-Asymptotic Analysis}
+\subsection{A Generalization Bound for the $k$-NN Rule}
+\begin{itemize}
+\item 
+\begin{lemma} (\textbf{Lipschitz Bayes Classifier Case}) \citep{shalev2014understanding}\\
+Let $\cX = [0,1]^d$, $\cY = \set{0,1}$, and $\cP$ be a distribution over $\cX \times \cY$ for which \textbf{the conditional probability function}, $\eta$, is a \textbf{$c$-Lipschitz function}. Let $\cD_m = \set{(X_1, Y_1) \xdotx{,} (X_m, Y_m)}$ be an i.i.d. sample and let $g_{m}$ be its corresponding $1$-NN hypothesis. Let $g^{*}$ be the \textbf{Bayes optimal rule} for $\eta$. Then,
+\begin{align*}
+\E{\cD_m}{L(g_{m})} &\le 2 L(g^{*}) + c\,\E{X, \cD_m}{\norm{X - X_{(1)}(X)}{}}
+\end{align*}
+\end{lemma}
 
+\item \begin{lemma} (\textbf{Nearest Neighbor Distance Bound}) \citep{shalev2014understanding}\\
+Let $C_1 \xdotx{,} C_r$ be a collection of subsets of some domain set, $\cX$ . Let $\cD$ be a sequence of $m$ points sampled i.i.d. according to some probability distribution, $\cP$ over $\cX$. Then,
+\begin{align*}
+\E{\cD_m}{\sum_{i: C_i \cap \cD_m = \emptyset}\cP\set{C_i}} \le \frac{r}{e\,m}
+\end{align*}
+\end{lemma}
 
+\item \begin{proposition} (\textbf{Generalization Bounds for 1-NN Rule}) \citep{shalev2014understanding}\\
+Let $\cX = [0,1]^d$, $\cY = \set{0,1}$, and $\cP$ be a distribution over $\cX \times \cY$ for which \textbf{the conditional probability function}, $\eta$, is a \textbf{$c$-Lipschitz function}.  Let $g_m$ denote the result of applying the $1$-NN rule to a sample $\cD_m \sim \cP^{m}$. Then,
+\begin{align*}
+\E{\cD_m}{L(g_{m})} &\le 2 L(g^{*}) + 4\,c\,\sqrt{d}\,m^{-\frac{1}{d+1}}
+\end{align*}
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Generalization Bounds for $k$-NN Rule}) \citep{shalev2014understanding}\\
+Let $\cX = [0,1]^d$, $\cY = \set{0,1}$, and $\cP$ be a distribution over $\cX \times \cY$ for which \textbf{the conditional probability function}, $\eta$, is a \textbf{$c$-Lipschitz function}.  Let $g_m$ denote the result of applying the $k$-NN rule to a sample $\cD_m \sim \cP^{m}$ where $k \ge 10$. Let $g^{*}$ be the \textbf{Bayes optimal rule} for $\eta$. 
+\begin{align*}
+\E{\cD_m}{L(g_{m})} &\le \paren{1+ \sqrt{\frac{8}{k}}} L(g^{*}) + (6\,c\,\sqrt{d}+ k)\,m^{-\frac{1}{d+1}}.
+\end{align*}
+\end{proposition}
+
+\item \begin{remark}  
+The theorem implies that if we first fix the data-generating distribution and then \emph{let $m$ go to infinity}, then the error of the $1$-NN rule converges to \emph{twice} the \emph{Bayes error}. The analysis can be generalized to larger values of $k$, showing that the expected error of the $k$-NN rule converges to $\paren{1+ \sqrt{8/k}}$ times the error of the Bayes classifier.  So when $m \rightarrow \infty$ and $k\rightarrow \infty$ with $k/m \rightarrow 0$, we have universal consistency result.
+\end{remark}
+\end{itemize}
+
+\subsection{The ``Curse of Dimensionality"}
+\begin{itemize}
+\item \begin{remark} (\emph{\textbf{Sample Complexity Exponentially Growth with Dimensionality}})\\
+The upper bound given above grows with $c$ (the Lipschitz coefficient of $\eta$) and with \emph{$d$, the Euclidean dimension of the domain set $\cX$}. In fact, it is easy to see that a necessary condition for the last term to be smaller than  $\epsilon$ is that
+\begin{align*}
+m \ge \paren{\frac{4\,c\sqrt{d}}{\epsilon}}^{d+1}.
+\end{align*}
+That is, \emph{the \textbf{size} of the training set \textbf{should increase exponentially with the dimension}}.
 \end{remark}
 
+\item \begin{proposition} \citep{shalev2014understanding}\\
+For any $c > 1$, and every learning rule, $L$, there exists a distribution over $[0,1]^d \times \set{0,1}$, such that $\eta(x)$ is $c$-Lipschitz, the Bayes error of the distribution is $0$, but for sample sizes $m \le (c + 1)^d/2$, the true error of the rule $L$ is greater than $1/4$.
+\end{proposition}
+
+\item \begin{remark}  (\textbf{\emph{The Curse of Dimensionality}})\\
+\emph{The \textbf{exponential dependence on the dimension}} is known as \underline{\emph{\textbf{the curse of dimensionality}}}. 
+
+As we saw, the $1$-NN rule might fail if the number of examples is smaller than $\Omega((c + 1)^d)$. Therefore, while the $1$-NN rule does not restrict itself to a predefined set of hypotheses, \emph{it still relies on some \textbf{prior knowledge}} since its success depends on \emph{the \textbf{assumption} that the \textbf{dimension} and \textbf{the Lipschitz constant} of the underlying distribution, $\eta$, are \textbf{not too high}}.
+\end{remark}
 
 \end{itemize}
 \newpage
