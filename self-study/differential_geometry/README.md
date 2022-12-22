@@ -16,7 +16,16 @@
   - part 4: Riemannian Manifolds, Levi-Civita Connections, Curvature
   - Notations and Computations
   
-- Chapter 1: Smooth Manifolds
+- Smooth Manifolds
+  - Topological Manifolds
+    - Definitions
+    - Coordinate Charts
+    - Topological Properties
+  - Smooth Structures
+    - Smooth Charts, Atlas, Smooth Structure
+    - Local Coordinate Representations
+    - Examples of Smooth Manifolds
+  - Manifolds with Boundary
 
 - Chapter 2: Smooth Maps
 
