@@ -1,0 +1,9 @@
+\contentsline {section}{\numberline {1}Monte Carlo Methods}{2}
+\contentsline {section}{\numberline {2}Monte Carlo Methods for Prediction}{3}
+\contentsline {section}{\numberline {3}Monte Carlo Methods for Control}{3}
+\contentsline {subsection}{\numberline {3.1}Monte Carlo for Policy Iteration}{5}
+\contentsline {section}{\numberline {4}On-policy and Off-policy learning without exploring starts}{6}
+\contentsline {subsection}{\numberline {4.1}On-policy method with $\epsilon $-soft policies}{7}
+\contentsline {subsection}{\numberline {4.2}Off-policy prediction with importance sampling}{8}
+\contentsline {subsection}{\numberline {4.3}incremental update of off-policy prediction}{10}
+\contentsline {section}{\numberline {5}Off-policy Monte Carlo Control}{10}
