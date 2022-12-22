@@ -1,0 +1,5 @@
+\contentsline {section}{\numberline {1}Principles}{2}
+\contentsline {subsection}{\numberline {1.1}Every Measurable Set is Nearly a Finite Sum of Intervals}{2}
+\contentsline {subsection}{\numberline {1.2}Every Pointwise Convergent Sequence of Functions is Nearly Uniformly Convergent}{2}
+\contentsline {subsection}{\numberline {1.3}Every Absolutely Integrable Function is Nearly Continuous}{5}
+\contentsline {section}{\numberline {2}Examples}{5}

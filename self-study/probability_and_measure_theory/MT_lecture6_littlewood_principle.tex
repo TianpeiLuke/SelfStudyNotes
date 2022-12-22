@@ -1,0 +1,215 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs, dsfont}
+\usepackage{tabularx}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Lecture 6: Littlewood's Principles}
+\author{ Tianpei Xie}
+\date{ Jul. 24th., 2015 }
+\maketitle
+\tableofcontents
+\newpage
+\section{Principles}
+\begin{itemize}
+\item \begin{proposition} (\underline{\textbf{Littlewood's Three Principles}})\citep{royden1988real, tao2011introduction}:
+\begin{enumerate}
+\item Every (\textbf{measurable}) set is nearly a \textbf{finite sum} of \textbf{intervals};
+\item Every (\textbf{absolutely integrable}) function is nearly \textbf{continuous};
+and
+\item Every \textbf{(pointwise) convergent sequence of functions} is nearly \textbf{uniformly convergent}
+\end{enumerate}
+\end{proposition}
+
+\item  \begin{remark} \emph{\textbf{The Littlewood's 1st and 2nd principles are shown only for Euclidean space}} $\bR^{d}$, since it relies on such  concepts as ``\emph{elementary set}" or ``\emph{continuous function}" defined for \emph{an abstract measure space}. In other word, \emph{\textbf{the necessary condition}} these two principles to hold is that \emph{the measure space $(X, \srF)$ is a \underline{\textbf{topological space}} with \underline{\textbf{Borel $\sigma$-algebra}} $\srB$ included in $\srF$}. 
+
+The \emph{\textbf{Littlewood's 3rd principles}}, i.e., \emph{the Egorov's theorem}, holds for a \emph{\textbf{finite measure space} $(X, \srF, \mu)$ in which $\mu(X)<\infty$}. There are cases in which $m(X)=\infty$ and the theorem does not hold. \citep{tao2011introduction}
+\end{remark}
+\end{itemize}
+
+\subsection{Every Measurable Set is Nearly a Finite Sum of Intervals}
+\begin{itemize}
+\item  \underline{The \textbf{\emph{First Principle}}}: 
+ \begin{proposition} (Criteria for measurability \citep{tao2011introduction})\\
+The followings are equivalent:
+\begin{enumerate}
+\item $E$ is Lebesgue measureable.
+\item (\textbf{Outer approximation by open}) For every $\epsilon>0$, one can contain $E$ in an open set $U$ with $m^{*}(U-E)\le \epsilon $.
+\item (\textbf{Almost open}) For every $\epsilon>0$, one can find an open set $U$ such that  $m^{*}(U\Delta E)\le \epsilon $, where $U\Delta E = (U-E)\cup (E-U) = U\cup E - U\cap E$ is the symmetric difference. (In other words, $E$ differs from an open set by a set of outer measure at most $\epsilon$.) 
+\end{enumerate}
+\end{proposition}
+
+\item \begin{remark}
+For $E$ finite Lebesgue measureable, $E$ differs from a \emph{\textbf{bounded}} \emph{open set} by a set of \emph{arbitrarily small Lebesgue outer measure}. This bounded open set can be \emph{decomposed} as a finite union of open cubes in $\bR^{d}$. \citep{royden1988real}.
+\end{remark}
+\end{itemize}
+
+
+\subsection{Every Pointwise Convergent Sequence of Functions is Nearly Uniformly Convergent}
+\begin{itemize}
+\item \begin{theorem} (\textbf{Approximation of $L^1$ functions}).\\
+Let $f \in L^1(\bR^d)$ and $\epsilon > 0$.
+\begin{enumerate}
+\item There exists an absolutely integrable simple function $g$ such that
+\begin{align*}
+\norm{f- g}{ L^1(\bR^d)} &\le \epsilon; 
+\end{align*}
+\item There exists a \emph{step function} $g$ (, i.e. $g$ is represented as a finite linear combination of indicator functions of boxes) such that $\norm{f- g}{ L^1(\bR^d)} \le \epsilon; $
+\item There exists a \textbf{continuous}, \textbf{compactly supported} $g$ such that $\norm{f- g}{ L^1(\bR^d)} \le \epsilon.$
+\end{enumerate}
+\end{theorem}
+\begin{proof} 
+\begin{itemize}
+\item When $f$ is unsigned, we see from the definition of the lower Lebesgue integral that there exists an unsigned
+simple function $g$ such that $g \le f$ and 
+\begin{align*}
+\int_{\bR^{d}}f(x)dx  &\le \int_{\bR^{d}}g(x)dx +\epsilon
+\end{align*} i.e. $\norm{f- g}{ L^1(\bR^d)}\le \epsilon$.
+For $f\in L^1(\bR^d) $, we just choose $g_{+}$ for $f_{+}$ and $g_{-}$ for $f_{-}$ as above. Therefore $g= g_{+}- g_{-}$  absolutely integrable simple function, and we have 
+\begin{align*}
+\norm{f- g}{ L^1(\bR^d)} &= \int_{\bR^{d}}\abs{f(x)- g(x)}dx \\
+&\le \abs{\int_{\bR^{d}}f(x)dx - \int_{\bR^{d}}g(x)dx}\\
+&\le  \abs{\int_{\bR^{d}}f_{+}(x)dx - \int_{\bR^{d}}g_{+}(x)dx}+ \abs{\int_{\bR^{d}}f_{-}(x)dx - \int_{\bR^{d}}g_{-}(x)dx}\\
+&\le 2\epsilon
+\end{align*}
+\item See that $\norm{f- h}{ L^1(\bR^d)} \le \norm{f- g}{ L^1(\bR^d)} + \norm{g- h}{ L^1(\bR^d)}  $, where $g$ is the absolutely integrable simple function and $h$ is step function. Thus we only need to show that $\norm{g- h}{ L^1(\bR^d)}\le \epsilon$. Note that by triangle inequality and linearity of $g$, we just need to show this when $g = \ind{x\in E}$ for some finite measureable set $E\subset \bR^{d}$. Then there exists some box $B$, such that the set $E\subset B$ and $m^{*}(E\Delta B)<\epsilon$. So $\norm{g- h}{ L^1(\bR^d)}\le \epsilon$ holds.   
+\item Again by triangle inequality, we only need to show that $\norm{h- g}{ L^1(\bR^d)}\le \epsilon$, where $g$ is the continuous function, $h= \ind{x\in E}$ is the step function.  For $E$ measureable in a normal space $\bR^{d}$, we can find an open box $F \supseteq \overline{E}$ such that $m^{*}(F - E)\le \epsilon$. Then following  the well-known \emph{Urysohn's lemma}, there exists a continuous function $g$ on $\bR^{d}$ such that $g(\overline{E})=1$ and $g(F^{c} )=0$ and $0\le g(x)\le 1$ otherwise. Therefore $g$ is the continuous, compactly supported function and $g(x)\ge \ind{x\in E}= h(x)$ with $\norm{h- g}{ L^1(\bR^d)}\le \epsilon$. \qed
+\end{itemize}
+\end{proof}
+
+\item \begin{definition} (\emph{\textbf{Locally uniform convergence}}). \\
+A sequence of functions $f_n : \bR^d \rightarrow \bC$ converges \emph{locally uniformly} to a limit $f : \bR^d \rightarrow \bC$ if, for every \emph{bounded} subset $E$ of $\bR^d$, $f_n$ converges \emph{uniformly} to $f$ on $E$. In other words, for every bounded $E \subset \bR^d$ and any $\epsilon > 0$, there exists $N > 0$ such that $\abs{f_n(x) - f(x)} \le  \epsilon$ for all $n \ge N$ and $x \in E$.
+\end{definition}
+
+\item \begin{remark} Recall the following convergence definitions:
+\begin{enumerate}
+\item (\emph{\textbf{Pointwise convergence}})\\
+ For every $x\in \bR^{d}$, any $\epsilon > 0$, there exists $N > 0$ such that $\abs{f_n(x) - f(x)} \le  \epsilon$ for all $n \ge N$.
+\item (\emph{\textbf{Pointwise almost everywhere convergence}})\\
+ For \emph{almost every} $x\in \bR^{d}$, any $\epsilon > 0$, there exists $N > 0$ such that $\abs{f_n(x) - f(x)} \le  \epsilon$ for all $n \ge N$.
+\item (\emph{\textbf{Uniform convergence}})\\
+For any $\epsilon > 0$, there exists $N > 0$ such that $\abs{f_n(x) - f(x)} \le  \epsilon$ for all $n \ge N$ and $x \in \bR^{d}$.
+\end{enumerate}
+\end{remark}
+
+\item \begin{remark}  
+Uniform convergence $\Rightarrow$ Locally Uniform convergence $\Rightarrow$ Pointwise convergence $\Rightarrow$ Pointwise almost everywhere convergence.
+\end{remark}
+
+\item \underline{The \textbf{\emph{Third Principle}}}: 
+\begin{theorem}(\textbf{Egorov's theorem}).\\
+Let $f_n : \bR^d \rightarrow \bC$ be a sequence of measurable functions that \textbf{converge pointwise almost everywhere} to another function $f : \bR^d \rightarrow \bC$, and let $\epsilon > 0$. Then there exists a Lebesgue measurable set $A$ of measure at most $\epsilon$, such that $f_n$ \textbf{converges locally uniformly} to $f$ outside of $A$.
+\end{theorem}
+\begin{proof} \citep{tao2011introduction}\\
+By modifying $f_n$ and $f$ on a set of measure zero (that can be absorbed into A at the end of the argument) we may assume that $f_n$ converges pointwise everywhere to $f$, thus for every $x \in \bR^d$ and $m > 0$ there exists $N \ge 0$ such that $\abs{f_n(x) - f(x)} \le 1/m,\;$ for all $n \ge N$.
+
+Denote $E_{N,m}\equiv\set{x\in \bR^d \;:\;   \abs{f_n(x) - f(x)} > 1/m;\; \text{for some }n\ge N}$. Then the above statement is equivalent to
+\begin{align*}
+\bigcap_{N=1}^{\infty}E_{N,m} &= \emptyset
+\end{align*}
+for each $m\ge 1$. Note that the $E_{N,m}$ are Lebesgue measurable, and are decreasing in $N$. Applying downward monotone convergence, we see that for any radius $R>0$,
+\begin{align*}
+\lim\limits_{N\rightarrow \infty}m\paren{E_{N,m}\cap B_{R}(0)} &= 0
+\end{align*} (The restriction to the ball $B_{R}(0)$ is necessary, because the downward monotone convergence property only works when the sets involved have finite measure.) In particular, for any $m \ge 1$, we can find $N_m$ such that
+\begin{align*}
+m\paren{E_{N,m}\cap B_{m}(0)} &\le \frac{\epsilon}{2^{m}}
+\end{align*} for any $N>N_{m}$. (See that now $N_{m}$ does not depend on the point $x$.)
+
+Now let $A \equiv \bigcup_{m=1}^{\infty}E_{N_{m},m}\cap B_{m}(0)$. Then A is Lebesgue measurable, and by countable subadditivity, we have
+\begin{align*}
+m(A)&\le \sum_{m=1}^{\infty}m\paren{E_{N_{m},m}\cap B_{m}(0)}\\
+&\le \epsilon
+\end{align*} By construction, we have
+\begin{align*}
+\abs{f_n(x) - f(x)} \le  1/m, 
+\end{align*}  for all $m\ge 1$, all $x\in B_{m}(0)/A$ ( i.e. $x\in \bR^{d}/A$, $\abs{x}\le m$,) and all $n\ge N_{m}$. In particular, we see for any ball $B_{m_{0}}(0)$ with an integer radius, $f_n$ converges uniformly to $f$ on $B_{m_{0}}(0)/A$. Since every bounded set is contained in such a ball, the claim follows.\qed
+\end{proof}
+Note that the exceptional set $A$ in Egorov's theorem cannot be taken to have zero measure, at least if one uses the bounded-set definition of local uniform convergence as above.
+\end{itemize}
+
+\subsection{Every Absolutely Integrable Function is Nearly Continuous}
+\begin{itemize}
+\item \underline{The \textbf{\emph{Second Principle}}}: 
+ \begin{theorem} (\textbf{Lusin's theorem}).\\
+Let $f : \bR^d \rightarrow \bC$ be \textbf{absolutely integrable}, and let $\epsilon > 0$. Then there exists a Lebesgue measurable set $E \subset \bR^d$ of measure at most $\epsilon$ such that the \textbf{restriction} of $f$ to the \textbf{complementary} set $\bR^d \setminus E$ is \textbf{continuous} on that set. 
+\end{theorem}
+\begin{proof}  \citep{tao2011introduction}\\
+By $L^{1}$ approximations, for any $n \ge 1$ one can find a \emph{continuous, compactly supported} function $f_n$ such that $\norm{f -f_n}{L^1(\bR^d)} \le \epsilon/4^{n}$. By Markov's inequality, that implies that $\abs{f(x) -f_n(x)}\le 1/2^{n-1}$  for all $x$ outside of a Lebesgue measurable set $A_n$ of measure at most $\epsilon/2^{n+1}$. 
+
+Letting $A = \bigcup_{n=1}^{\infty}A_{n}$, we conclude that $A$ is Lebesgue measurable with measure at most $\epsilon/2$, and $f_n$ converges uniformly to $f$ outside of $A$. But the uniform limit of continuous functions is continuous, and the same is true for local uniform limits (because continuity is itself a local property). We conclude that the restriction $f$ to $\bR^{d} \setminus  E$ is continuous, as required.\qed 
+\end{proof}
+
+\item \begin{remark}
+This theorem does not imply that the \emph{unrestricted} function $f$ is continuous on $\bR^d \setminus  E$. For instance, the absolutely integrable function $\ind{\bQ} : \bR \rightarrow \bC$ is nowhere continuous, so is certainly not continuous
+on $\bR \setminus  E$ for any $E$ of finite measure; but on the other hand, if one deletes the measure zero set $E \equiv \bQ$ from the reals, then the restriction of $f$ to $\bR \setminus  E$ is identically zero and thus continuous. \citep{tao2011introduction}
+\end{remark}
+
+\item \begin{remark}
+When dealing with unsigned measurable functions such as $f : \bR^d \rightarrow [0,+\infty]$, then Lusin's theorem \emph{\textbf{does not apply directly}} because $f$ could be \emph{\textbf{infinite}} on a set of positive measure, which is clearly in contradiction with the conclusion of Lusin's theorem (unless one allows the continuous function to also take values in the extended non-negative reals $[0,+\infty]$ with the extended topology). However, if one knows already that \emph{\textbf{$f$ is almost everywhere finite}} (which is for instance the case when $f$ is absolutely integrable), then \emph{Lusin's theorem applies} (since one can simply zero out $f$ on the null set where it is infinite, and add that null set to the exceptional set of Lusin's theorem).
+\end{remark}
+\end{itemize}
+
+\section{Examples}
+\begin{itemize}
+\item \begin{example} \citep{tao2011introduction}
+\begin{enumerate}
+\item The Taylor partial sum e.g. $\sum_{k=0}^{k}\frac{x^{k}}{k!}$ is locally uniform convergent to $e^{x}= \sum_{k=0}^{\infty}\frac{x^{k}}{k!}$ around bounded neighborhood of $0$.
+
+\item The functions $x \mapsto x/n$ on $\bR$ for $n = 1, 2, \ldots$ converge locally uniformly (and hence pointwise) to zero on $\bR$, but do not converge uniformly.
+
+\item The functions $f_n(x) = \frac{1}{nx}\ind{x>0}$, for $n = 1,2,\ldots$ (with the convention that $f_n(0) = 0$) converge pointwise everywhere to zero, but do not converge locally uniformly (not in a bounded set, it does locally converge if the convergence is w.r.t. open neighborhood).
+\end{enumerate}
+\end{example} 
+
+
+\item \begin{example}  (\emph{\citep{tao2011introduction} \textbf{The non-zero measure set of non-convergent points}})\\
+Consider the moving bump example $f_n = \ind{[n,n+1]}$ on $\bR$, which ``escapes to horizontal infinity". This sequence converges pointwise (and locally uniformly) to the zero function $f = 0$. However, for any $0 < \epsilon < 1$ and any $n$, we have $\abs{f_n(x)- f(x)} > \epsilon$ on a set of measure $1$, namely on the interval $[n, n + 1]$. Thus, if one wanted
+$f_n$ to converge uniformly to $f$ outside of a set $A$, then that set $A$ has to contain a set of measure $1$. In fact, the non-convergent set $A$ must contain the intervals $[n, n + 1]$ for all sufficiently large $n$ and must therefore have infinite measure.
+\end{example}
+
+
+\item \begin{exercise} \citep{tao2011introduction}
+Show that the hypothesis that $f$ is absolutely integrable in Lusin's theorem can be relaxed to being \emph{locally} absolutely integrable (i.e. absolutely integrable on every bounded set), and then relaxed further to that of being \emph{measurable} (but still finite everywhere or almost everywhere). (To achieve the latter goal, one can replace $f$ locally with a horizontal truncation $f\ind{\abs{f}\le n}$; alternatively, one can replace $f$ with a bounded variant, such as $\frac{f}{(1+\abs{f}^2)^{1/2}}$.)
+\end{exercise}
+
+
+\item \begin{exercise} \emph{(\textbf{Littlewood-like Principles})}. \citep{tao2011introduction} \\
+The following facts are not, strictly speaking, instances of any of Littlewood's three principles, but are in a similar spirit.
+\begin{enumerate}
+\item (\textbf{Absolutely integrable functions} almost have \textbf{bounded support})\\
+Let $f : \bR^d \rightarrow \bC$ be an absolutely integrable function, and let $\epsilon > 0$. Show that there exists a ball $B_{R}(0)$ outside of which $f$ has an $L^1$ norm of at most $\epsilon$, or in other words that $\int_{\bR^{d}/B_{R}(0)}f(x)dx \le \epsilon $.
+
+\item (\textbf{Measurable functions} are almost \textbf{locally bounded})\\ 
+Let $f : \bR^d \rightarrow \bC$ be a measurable function supported on a set of finite measure, and let $\epsilon > 0$. Show that there exists a measurable set $E \subset \bR^d$ of measure at most $\epsilon$ outside of which $f$ is locally bounded, or in other words that for every $R > 0$ there exists $M < 1$ such that $\abs{f(x)} \le M$ for all $x \in  B_{R}(0)/E$.
+\end{enumerate}
+\end{exercise}
+Note: it is important in the second part of the exercise that $f$ is known to be finite everywhere (or at least almost everywhere); the result would of course fail if $f$ was, say, unsigned but took the value $+\infty$ on a set of positive measure.
+
+
+\item \begin{exercise}\citep{tao2011introduction} \\
+Show that a function $f : \bR^d \rightarrow \bC$ is measurable if and only if it is the pointwise almost everywhere limit of continuous functions $f_{n} : \bR^d \rightarrow \bC$. (Hint: if $f : \bR^d \rightarrow \bC$ is measurable and $n \ge 1$, show that there exists a continuous function $f_{n} : \bR^d \rightarrow \bC$ for which the set $\set{x \in B_{n}(0) : \abs{f(x) - f_n(x)} \ge 1/n}$ has measure at most $1/2^{n}$. Use this (and Egorov's theorem) to give an alternate proof of Lusin's theorem for arbitrary \emph{measurable} functions.
+\end{exercise}
+\end{itemize}
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{reference.bib}
+\end{document}

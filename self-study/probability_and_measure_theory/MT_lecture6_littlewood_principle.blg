@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: MT_lecture5_littlewood_principle.aux
+The style file: plainnat.bst
+Database file #1: reference.bib.bib
+Warning--can't use both volume and number fields in royden1988real
+You've used 2 entries,
+            2773 wiz_defined-function locations,
+            605 strings with 5102 characters,
+and the built_in function-call counts, 709 in all, are:
+= -- 52
+> -- 31
+< -- 4
++ -- 11
+- -- 9
+* -- 49
+:= -- 117
+add.period$ -- 6
+call.type$ -- 2
+change.case$ -- 7
+chr.to.int$ -- 2
+cite$ -- 5
+duplicate$ -- 40
+empty$ -- 65
+format.name$ -- 13
+if$ -- 141
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 4
+newline$ -- 18
+num.names$ -- 8
+pop$ -- 22
+preamble$ -- 1
+purify$ -- 7
+quote$ -- 0
+skip$ -- 30
+stack$ -- 0
+substring$ -- 4
+swap$ -- 5
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 12
+warning$ -- 1
+while$ -- 6
+width$ -- 0
+write$ -- 33
+(There was 1 warning)

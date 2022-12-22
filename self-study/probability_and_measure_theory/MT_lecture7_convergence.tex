@@ -1,0 +1,810 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs, dsfont}
+\usepackage{tabularx}
+\usepackage{tikz-cd}
+\usepackage[all,cmtip]{xy}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+%\usepackage{tikz-cd}
+
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Lecture 7: Modes of Convergence}
+\author{ Tianpei Xie}
+\date{ Jul. 25th., 2015 }
+\maketitle
+\tableofcontents
+\newpage
+\section{Mode of Convergence}
+\subsection{Convergence of Functions in Measure Space}
+\begin{itemize}
+\item \begin{remark} (\emph{\textbf{Convergence of Functions vs. Convergence of Numbers and Vectors}})  \\
+Convegence of numbers $a_n \rightarrow a$ and convergence of vector $\mb{v}_n \rightarrow \mb{v}$ are both \emph{\textbf{unambiguous}}:
+\begin{enumerate}
+\item $a_n \rightarrow a$ means that $\forall \epsilon > 0$, $\exists N \in \bN$ such that for $n \ge N$, $\abs{a_n - a} \le \epsilon$;
+\item $\mb{v}_n \rightarrow \mb{v}$ means that $\forall \epsilon > 0$, $\exists N \in \bN$ such that for $n \ge N$, $\norm{\mb{v}_n - \mb{v}}{} \le \epsilon$; Note that the chioce of norm in Euclidean space will not affect the convergence results: convergence in $\ell_{p}$ will implies convergence in $\ell_{q}$ norm. 
+\end{enumerate}
+
+However, for functions $f_n: X \rightarrow \bC$ and $f: X \rightarrow \bC$, there can now be \emph{many different ways} in which the sequence $f_n$ may or may not converge to the limit $f$. Note that $a_n$ can be thought as $f_n$ with singular domain $X= \{1\}$ and $\mb{v}_n$ can be thought of $f_n$ with finite set $X = \set{1 \xdotx{,} d}$. On the other hand, once \emph{$X$ becomes \textbf{infinite}}, the functions $f_n$ acquire an \emph{\textbf{infinite number of degrees of freedom}}, and this allows them to approach $f$ in any number of \emph{inequivalent ways}.
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Two Basic Modes of Convergence}}) \citep{royden1988real, tao2011introduction}
+\begin{enumerate}
+\item \begin{definition}  \underline{(\emph{\textbf{Pointwise Convergence}})}\\
+We say that $f_n$ converges to $f$ \underline{\emph{\textbf{pointwise}}} if, for any $x\in X$ and $\epsilon > 0$, there exists $N > 0$ (\emph{that \textbf{depends} on $\epsilon$ and $x$}) such that for all $n \ge N$, $\abs{f_n(x) - f(x)} \le  \epsilon$. Denoted as $f_{n}(x)\rightarrow f(x)$.
+\end{definition}
+
+\item\begin{definition}  \underline{(\emph{\textbf{Uniform Convergence}})}\\
+We say that $f_n$ converges to $f$ \underline{\emph{\textbf{uniformly}}} if,  for any $\epsilon > 0$, there exists $N > 0$ (\emph{that \textbf{depends} on $\epsilon$ only})  such that for all $n \ge N$, $\abs{f_n(x) - f(x)} \le  \epsilon$  for every $x \in X$. Denoted as $f_{n} \rightarrow f, \text{ \emph{uniformly}}$.
+\end{definition}
+Unlike pointwise convergence, the time $N$ at which $f_n(x)$ must be permanently $\epsilon$-close to $f(x)$ is not permitted to depend on $x$, but must instead be
+chosen \emph{uniformly} in $x$.
+\end{enumerate}
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Uniform $\Rightarrow$ Pointwise, Not Vice Versa}})\\
+\emph{Uniform convergence} implies \emph{pointwise convergence}, but not conversely. 
+\begin{example}
+The functions $f_n : \bR \rightarrow \bR$ defined by $f_n(x) := x/n$ converge \emph{\textbf{pointwise}} to the zero function $f(x) := 0$, but
+\emph{\textbf{not uniformly}}.
+\end{example}
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Modes of Convergence of Measurable Functions}}) \\
+When the domain $X$ is equipped with the structure of a measure space $(X, \srB, \mu)$, and the functions $f_n$ (and their limit $f$) are measurable with respect to this space.  In this context, we have some \emph{additional modes of convergence}:
+\begin{enumerate}
+\item  \begin{definition}  \underline{(\emph{\textbf{Pointwise Almost Everywhere Convergence}})}\\
+We say that  $f_n$ converges to $f$ \underline{\emph{\textbf{pointwise almost everywhere}}} if, for \emph{\textbf{\underline{$\mu$-almost} everywhere}} $x \in X$, $f_n(x)$ converges to $f(x)$. It is denoted as \underline{$f_{n}\stackrel{a.e.}{\rightarrow} f$}.
+
+In other words, \underline{there exists \emph{\textbf{a null set}} $E$, ($\mu(E) = 0$)} such that for \underline{\emph{any $x\in X \setminus E$ }} and any $\epsilon > 0$, there exists $N > 0$ (\emph{that \textbf{depends} on $\epsilon$ and $x$}) such that for all $n \ge N$, $\abs{f_n(x) - f(x)} \le  \epsilon$. 
+\end{definition}
+
+\item \begin{definition}  \underline{(\emph{\textbf{Uniformly Almost Everywhere Convergence}})} \citep{tao2011introduction}\\
+We say $f_n$ converges to $f$ \underline{\emph{\textbf{uniformly almost everywhere}}}, \underline{\emph{\textbf{essentially uniformly}}}, or \underline{\emph{\textbf{in $L^{\infty}$ norm}}} if, for every $\epsilon> 0$, there exists $N$ such that for every $n\ge  N$, $\abs{ f_n(x) - f(x)} \le \epsilon$, \emph{\textbf{\underline{for $\mu$-almost every $x \in X$}}}. 
+
+That is, $f_n \rightarrow f$ \emph{uniformly} in $x \in X \setminus E$, for some $E$ with $\mu(E) = 0$.
+
+We can also formulate in terms of \emph{\textbf{$L^{\infty}$ norm}} as 
+\begin{align*}
+\norm{f_n(x) - f(x)}{L^{\infty}(X)} \stackrel{n\rightarrow \infty}{\longrightarrow} 0,
+\end{align*}
+where $\norm{f}{L^{\infty}(X)} = \text{ess}\sup_{x}\abs{f(x)} \equiv\inf\limits_{\{E:\mu(E)=0\}}\sup\limits_{x\in X \setminus E}\abs{f(x)}$ is the \emph{\textbf{essential bound}}. It is denoted as $f_{n}\stackrel{L^{\infty}}{\rightarrow} f$.
+\end{definition}
+
+\item \begin{definition}    \underline{(\emph{\textbf{Almost Uniform Convergence}})}  \citep{tao2011introduction}\\
+We say that $f_n$ converges to $f$ \underline{\emph{\textbf{almost uniformly}}} if, for every $\epsilon > 0$, there exists an \emph{\textbf{exceptional set}} $E \in \srB$ of \emph{measure} \underline{$\mu(E) \le \epsilon$} such that $f_n$ converges \emph{\textbf{uniformly}} to $f$ on the \emph{complement} of $E$.
+
+That is, for arbitrary $\delta$ there exists some $E$ with $\mu(E) \le \delta$ such that $f_n \rightarrow f$ \emph{uniformly} in $x \in X \setminus E$.
+\end{definition} 
+
+\item \begin{definition}  \underline{(\emph{\textbf{Convergence in $L^{1}$ Norm}})}\\
+We say that $f_n$ converges to $f$  \underline{\emph{\textbf{in $L^1$ norm}}} if the quantity 
+\begin{align*}
+\norm{f_n - f}{L^{1}(X)} =  \int_{X}\abs{ f_n(x) - f(x)}d\mu  \stackrel{n\rightarrow \infty}{\longrightarrow} 0.
+\end{align*}
+It is also called the convergence \emph{\textbf{in mean}}. Denoted as $f_{n}\stackrel{L^{1}}{\rightarrow} f$.
+\end{definition} 
+
+\item  \begin{definition}   \underline{(\emph{\textbf{Convergence in Measure}})}\\
+We say that $f_n$ converges to $f$  \underline{\emph{\textbf{in measure}}} if, for every $\epsilon> 0$,  the measures
+\begin{align*}
+\mu\paren{ \set{x \in X: \abs{f_n(x) - f(x)} \ge \epsilon}}\stackrel{n\rightarrow \infty}{\longrightarrow} 0.
+\end{align*} Denoted as $f_{n}\stackrel{\mu}{\rightarrow} f$.
+\end{definition} 
+\end{enumerate}
+\end{remark}
+
+\item \begin{remark}
+The difference between the \emph{\textbf{uniformly almost everywhere convergence}} vs. \emph{\textbf{the almost uniformly convergence}} is that:
+\begin{enumerate}
+\item the \emph{\textbf{former}} corresponds to \emph{uniform convergence} \emph{\textbf{outside a null set}}, and
+\item the \emph{\textbf{latter}} corresponds to \emph{uniform convergence} \emph{\textbf{outside an arbitrary small measure set (but still not a null set)}}.
+\end{enumerate}
+\end{remark}
+
+\item \begin{remark}
+Observe that each of \emph{these five modes of convergence} is \emph{\textbf{unaffected}} if one \emph{\textbf{modifies}} $f_n$ or $f$ on \emph{\textbf{a set of measure zero}}. In contrast, the \emph{pointwise} and \emph{uniform} modes of convergence can be \emph{\textbf{affected}} if one modifies $f_n$ or $f$ \emph{even on a single point}.
+\end{remark}
+
+\item \begin{remark}
+In the context of \emph{probability theory}, in which $f_n$ and $f$ are interpreted as \emph{random variables}, \citep{billingsley2008probability, folland2013real}
+\begin{align*}
+\text{convergence in $L^1$ \emph{norm}} \qquad &\Leftrightarrow \qquad \text{convergence in \emph{mean}}\\
+\text{\emph{\textbf{pointwise convergence almost everywhere}}}\qquad  &\Leftrightarrow \qquad \text{\emph{\textbf{almost sure convergence}}}\\
+\text{convergence in \emph{\textbf{measure}}} \qquad &\Leftrightarrow  \qquad \text{convergence in \emph{\textbf{probability}}}
+\end{align*}
+\end{remark}
+
+\item \begin{proposition} (\textbf{Linearity of Convergence}). \citep{tao2011introduction} \\
+Let $(X, \srB, \mu)$ be a measure space, let $f_n, g_n : X \rightarrow \bC$ be sequences of measurable functions, and let $f, g : X \rightarrow \bC$ be measurable functions.
+\begin{enumerate}
+\item Then $f_n$ converges to $f$ along one of the above seven modes of convergence \textbf{if and only if} $\abs{f_n - f}$ converges to 0
+along \textbf{the same mode}.
+\item If $f_n$ converges to $f$ along one of the above seven modes of convergence, and $g_n$ converges to $g$ along \textbf{the same mode},
+then $f_n + g_n$ converges to $f + g$ along the same mode, and that $c\,f_n$ converges to $c\,f$ along the same mode for any $c \in \bC$.
+\item (\textbf{Squeeze test}) If $f_n$ converges to $0$ along one of the above seven modes, and $\abs{g_n} \le f_n$ \textbf{pointwise} for each $n$, then 
+$g_n$ converges to $0$ along \textbf{the same mode}.
+\end{enumerate}
+\end{proposition}
+\end{itemize}
+
+\subsection{Modes of Convergence via Tail Support and Width}
+\begin{itemize}
+\item \begin{remark} (\textit{\textbf{Tail Support and Width}})
+\begin{definition}
+Let $E_{n,m} := \set{x \in X: \abs{f_n(x) - f(x)} \ge 1/m}$. Define \underline{\emph{\textbf{the $N$-th tail support set}}}
+\begin{align*}
+T_{N,m}:= \set{x \in X: \abs{f_n(x) - f(x)} \ge 1/m,\;\;\exists n\ge N} = \bigcup_{n\ge N}E_{n,m}.
+\end{align*} Also  let $\mu(E_{n,m})$ be the \underline{\emph{\textbf{width}}} of $n$-th event $\ind{E_{n, m}}$.  Note that $T_{N,m}\supseteq T_{N+1,m}$ is \emph{\textbf{monotone nonincreasing}} and  $T_{N,m}\subseteq T_{N,m+1}$ is \emph{\textbf{monotone nondecreasing}}.
+\end{definition}
+\begin{enumerate}
+\item The \emph{\textbf{pointwise convergence}} of $f_{n}$ to $f$ indicates that for every $x$, every $m\ge 1$, there exists some $N \equiv N(m,x)\ge 1$ such that $ T_{N,m}^{c} \ni x$ or $T_{N, m} \not\ni x$.  Equivalently, \emph{\textbf{the tail support \underline{shrinks to emptyset}}}:
+\begin{align*}
+\bigcap_{N \in \bN}T_{N,m} =  \lim\limits_{N\rightarrow \infty}T_{N,m} = \limsup\limits_{n\rightarrow \infty}E_{n,m} = \emptyset, \quad \text{for all }m.
+\end{align*} Conversely, %if we can find at least one $x \in X$ and some $m \ge 1$ such that $x \in \bigcap_{N \in \bN}E_{N, m}$, then $f_n$ \emph{does not pointwise converge} to $f$. In other word, 
+to prove \emph{\textbf{not pointwise convergence}}, we need to find a $x \in X$ and for an arbitrary fixed $m \ge 1$ such that 
+\begin{align*}
+x \in \bigcap_{N  \in \bN}\bigcup_{n\ge N}\set{x \in X: \abs{f_n(x) - f(x)} \ge 1/m} = \limsup\limits_{n\rightarrow \infty}\set{x \in X: \abs{f_n(x) - f(x)} \ge 1/m}.
+\end{align*} 
+
+\item The \emph{\textbf{pointwise almost everywhere convergence}} indicates that there exists \emph{\textbf{a null set}} $F$ with $\mu(F) = 0$ such that for every $x \in X \setminus F$ and any  $m\ge 1$, there exists some $N \equiv N(m,x)\ge 1$ such that  $(T_{N,m}\setminus F) \not\ni x$. Equivalently, \emph{\textbf{the tail support \underline{shrinks to a nulll set}}}. Note that it makes no assumption on $(T_{N,m}\cap F)$. 
+\begin{align*}
+&\lim\limits_{N\rightarrow \infty}T_{N,m} \setminus F = \limsup\limits_{n\rightarrow \infty}E_{n,m} \setminus F = \emptyset, \quad \text{for all }m.\\
+\Leftrightarrow &\quad \bigcap_{N \in \bN}T_{N,m} =   \lim\limits_{N\rightarrow \infty}T_{N,m} = F \\
+\Leftrightarrow &\quad \mu\paren{ \lim\limits_{N\rightarrow \infty}T_{N,m}} = \mu\paren{ \bigcap_{N \in \bN}T_{N,m}} = 0
+\end{align*} Conversely, %if we can find at least one $x \in X \setminus F$ and some $m \ge 1$ such that $x \in \bigcap_{N \in \bN}E_{N, m} \setminus F$, then we say $f_n$ \emph{does not pointwise almost everywhere converge} to $f$. In other word, 
+to prove \emph{\textbf{not pointwise almost convergence}},  we need to find a $x \in X$ and for an arbitrary fixed $m \ge 1$ such that 
+\begin{align*}
+x \in \bigcap_{N  \in \bN}\bigcup_{n\ge N}\set{x \in X: \abs{f_n(x) - f(x)} \ge 1/m} \setminus F = \limsup\limits_{n\rightarrow \infty}\set{x \in X\setminus F: \abs{f_n(x) - f(x)} \ge 1/m}.
+\end{align*} 
+
+\item The \emph{\textbf{uniform convergence}} indicates that for each $m\ge 1$, there exists some $N(m)\ge 1$ (not depending on $x$) such that $T_{N,m} = \emptyset$. (i.e. $T_{N,m} \not\ni x$ for all $x \in X$.) So \emph{\textbf{the tail support \underline{is an empty set}}}
+
+
+\item The \emph{\textbf{uniformly almost everywhere convergence}} indicates that there exists some null set $F$ with $\mu(F) =0$ such that for each $m\ge 1$, there exists some $N(m)\ge 1$ (not depending on $x$) such that $(T_{N,m}  \setminus F) = \emptyset$. (i.e. $T_{N,m}\not\ni x$ for all $x \in X \setminus F$.) Equivalently, \emph{\textbf{the tail support \underline{is a null set}}}: 
+\begin{align*}
+& T_{N,m} = F \\
+\Leftrightarrow &\quad \mu\paren{T_{N,m}} = 0
+\end{align*}
+
+
+\item The \emph{\textbf{almost uniform convergence}}  indicates that for every $\delta$, there exists \emph{some measurable set} $F_{\delta}$ with $\mu(F_{\delta}) < \delta$ such that  for each $m\ge 1$ there exists some $N(m)\ge 1$ (not depending on $x$) such that $(T_{N,m} \setminus F_{\delta}) = \emptyset$. (i.e. $T_{N,m} \not\ni x$ for all $x \in X \setminus F_{\delta}$.) Equivalently, \emph{\textbf{\underline{the measure of  tail support shrinks to zero}}}:
+\begin{align*}
+\mu\paren{T_{N,m}} &\le \delta  \quad \Leftrightarrow \quad T_{N,m} = F_\delta\\
+\lim\limits_{N\rightarrow \infty}\mu\paren{T_{N,m}} &=0
+\end{align*} 
+
+
+\item The \emph{\textbf{convergence in measure}} indicates that for any $m\ge 1$ and any $\delta > 0$, there exists $N \equiv N(m, \delta)\ge 1$ such that for all $n \ge N$, \emph{the \underline{\textbf{width}} of $n$-th event \underline{\textbf{shrinks to zero}}}:
+\begin{align*}
+\mu(E_{n,m}) &\le \delta \\
+ \lim\limits_{n\rightarrow \infty}\mu(E_{n, m}) &:=  \lim\limits_{n\rightarrow \infty}\mu\paren{\set{x \in X: \abs{f_n(x) - f(x)} \ge \epsilon} } =0 
+\end{align*} 
+\end{enumerate}
+\end{remark}
+
+\item \begin{definition}
+Define the \emph{\textbf{maximum variation}} between $(f_n)$ and $f$ as $ \sup_{x\in X}\abs{f_{n}(x)- f(x)}$. Note that 
+\begin{align*}
+ \sup\limits_{x\in X}\abs{f_{n}(x)- f(x)} &\ge \sup_{x\in X\setminus F, \mu(F) =0}\abs{f_{n}(x)- f(x)}.
+\end{align*}
+\end{definition}
+
+\item \begin{remark}
+From \emph{Borel-Cantelli Lemma}, we see that in order to show \emph{the \textbf{pointwise almost everywhere} convergence}, i.e.  $\mu\paren{\bigcap_{N}T_{N,\epsilon}} =\mu(\limsup_{n \rightarrow \infty}E_{n, \epsilon})= 0$ it suffice to show that \emph{\textbf{the measure of the tail support is finite}}, $\mu\paren{T_{N,\epsilon}} = \sum_{n=N}^{\infty}\mu(E_{n, \epsilon}) < \infty$. Note that this condition implies that it not only converges \emph{\textbf{in measure}} $\mu(E_{n, \epsilon}) \rightarrow 0$ but converge in \textbf{\emph{an absolutely summable}} fashion.
+\end{remark}
+
+\end{itemize}
+
+
+\subsection{Relationships between Different Modes of Convergence}
+\begin{itemize}
+\item \begin{proposition} \citep{tao2011introduction}\\
+ Let $(X, \srF, \mu)$ be a measure space, and let $f_n : X \rightarrow \bC$ and $f : X \rightarrow \bC$ be measurable functions
+\begin{enumerate}
+\item If $f_n$ converges to $f$ \textbf{uniformly}, then $f_n$ converges to $f$ \textbf{pointwisely}.
+\item If $f_n$ converges to $f$ \textbf{uniformly}, then $f_n$ converges to $f$ in \textbf{$L^\infty$ norm}. \textbf{Conversely}, if $f_n$ converges to $f$ \textbf{in $L^\infty$ norm}, then $f_n$ converges to $f$ \textbf{uniformly outside of a null set} (i.e. there exists a null set $E$ such that the restriction $\rlat{f_n}{X/E}$ of $f_n$ to the complement of $E$ converges to the restriction $\rlat{f}{X/E}$ of $f$).
+\item If $f_n$ converges to $f$ in \textbf{$L^\infty$ norm}, then $f_n$ converges to $f$ \textbf{almost uniformly}.
+\item If $f_n$ converges to $f$ \textbf{almost uniformly}, then $f_n$ converges to $f$ \textbf{pointwise almost everywhere}.
+\item If $f_n$ converges to $f$ \textbf{pointwise}, then $f_n$ converges to $f$ \textbf{pointwise almost everywhere}.
+\item If $f_n$ converges to $f$ in \textbf{$L^1$ norm}, then $f_n$ converges to $f$ \textbf{in measure}.
+\item If $f_n$ converges to $f$ \textbf{almost uniformly}, then $f_n$ converges to $f$ \textbf{in measure}.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+\begin{enumerate}
+\item It is from the definition.
+\item Note that for any $\epsilon>0$, there exists $N(\epsilon)\ge 1$, such that for all $n\ge N(\epsilon)$, $\abs{f_{n}(x)- f(x)}\le \epsilon$ for all $x\in X$. Therefore, $\sup_{x\in X}\abs{f_{n}(x)- f(x)}\le \epsilon$. Then it holds that for any $x\in X \setminus E$, $\mu(E)=0$, $\sup_{x\in X\setminus E}\abs{f_{n}(x)- f(x)}\le \epsilon$, so $f_{n}$ converges to $f$ in $L^\infty$ norm.
+
+Since $f_{n} \stackrel{L^{\infty}}{\rightarrow } f $, then for any $\epsilon>0$, there exists $N(\epsilon)\ge 1$, for all $n\ge N(\epsilon)$ such that the \emph{\textbf{infimum}} of all essential upper bound $M$ less than $\epsilon$. In other words, let $d= \norm{f_{n}(x)- f(x)}{L^{\infty}}<\epsilon $, so given $\epsilon>0$, there exists an upper bound $d+\epsilon>M>0$ such that for any $x\in X\setminus E$ with some $E$ such that $\mu(E)=0$, and $\abs{\rlat{f_n}{X\setminus E}(x)- \rlat{f}{X\setminus E}(x)}\le M<2\epsilon$. Therefore $f_{n}$ converges to $f$ uniformly outside a null set $E$.
+
+\item This follows from the argument above. 
+
+\item Let $(E_n)$ be a sequence of measurable sets in $\srB$ such that for each $n \in \bN$ we have $\mu(E_n) \le 1/n$ and $(f_n)$ converges uniformly to $f$ on $X \setminus E_n$. Now pick an arbitrary $x \in X$. We have two cases. 
+\begin{itemize}
+\item In the first case $x\in \cap_{n \in \bN}E_n$, in which case  $\lim_{n\rightarrow \infty}f_n(x)$ is not necessarily $f(x)$. But this is not harmful, since $\mu(\cap_{n \in \bN}E_n) = 0$.
+\item In the second case $x \not\in \cap_{n \in \bN}E_n$, which implies $\lim_{n\rightarrow \infty}f_n(x) = f(x)$ from the uniform convergence. 
+\end{itemize}
+
+\item This follows from the definition. 
+
+\item Apply \emph{the Markov inequality}, then the result follows.
+
+\item Pick an arbitrary  $\delta >0$, so that there exists an exceptional set $E$ such that $\mu(E) \le \delta$ and $f_n \rightarrow f$ uniformly on $X \setminus E$. That is, we can find $N \in \bN$ such that  for $n\ge N(\epsilon)$,  $\abs{f_{n}(x)- f(x)}\le \epsilon$ for all $x\in X \setminus E$. For $n\ge N$, we have
+\begin{align*}
+\mu\paren{\set{x\in X: \abs{f_{n}(x)- f(x)}> \epsilon}} &= \mu\paren{\set{x\in E: \abs{f_{n}(x)- f(x)}> \epsilon}} \\
+& \quad + \mu\paren{\set{x\in X \setminus E: \abs{f_{n}(x)- f(x)}> \epsilon}} \\
+& \le \mu(E) + \mu(\emptyset) = \delta + 0 = \delta \qed 
+\end{align*}
+\end{enumerate}
+\end{proof}
+
+\item \begin{remark} This diagram shows the \emph{relative strength} of different \emph{modes of convergence}. The direction arrows $A \rightarrow B$ means ``if $A$ holds, then $B$ holds".
+\[
+  \begin{tikzcd}
+     \text{\emph{uniform}} \arrow{dd}{}  \arrow{r}{}  \arrow[rr, swap, bend left] & \text{\emph{uniformly a.e.}}  \arrow{d}{} & \arrow[l, leftrightarrow] \text{\emph{in $L^{\infty}$ norm}} \arrow{dl}{} \\
+      & \text{\emph{almost uniform}}  \arrow{d}{} \arrow{dr}{} &  \text{\emph{in $L^{1}$ norm}} \arrow{d}{} \\
+    \text{\emph{pointwise}}  \arrow{r}{} &   \text{\emph{pointwise a.e}.} & \text{\emph{in measure}}
+  \end{tikzcd}
+\] 
+Moreover, here are some counter statements:
+\begin{itemize}
+\item $L^{\infty} \not\rightarrow L^{1}$: see the ``\emph{Escape to Width Infinity}" example below.
+\item $\text{\emph{\textbf{uniform}} } \not\rightarrow L^{1}$: see the ``\emph{Escape to Width Infinity}" example below.
+\item $L^{1}  \not\rightarrow \text{\emph{\textbf{uniform}} }$: see the ``\emph{Typewriter Sequence}" example below.
+\item $\text{\emph{\textbf{pointwise}} } \not\rightarrow L^{1}$: see the ``\emph{Escape to Horizontal Infinity}" example below.
+\item $\text{\emph{\textbf{pointwise}} } \not\rightarrow \text{\emph{\textbf{uniform}}}$: see the ``$f_n = x/n$" example above.
+\item For finite measure space, $\text{\emph{\textbf{pointwise a.e.}} } \rightarrow \text{\emph{\textbf{almost uniform}}}$: see the Egorov's theorem.
+\item $\text{\emph{\textbf{almost uniform}}}  \not\rightarrow L^{1}$: see the ``\emph{Escape to Vertical Infinity}" example below.
+\item $\text{\emph{\textbf{almost uniform}}}  \not\rightarrow L^{\infty}$: see the ``\emph{Escape to Vertical Infinity}" example below. The \emph{converse} is true, however.
+\item For bounded $f_n \le G, a.e.\; \forall n$, then $\text{\emph{\textbf{pointwise a.e.}} } \rightarrow L^{1}$: see \emph{Dominated Convergence Theorem}. 
+\item $L^{1}  \not\rightarrow \text{\emph{\textbf{pointwise a.e.}} }$: see the ``\emph{Typewriter Sequence}" example below.
+\item $\text{\emph{\textbf{in measure}}} \not\rightarrow \text{\emph{\textbf{pointwise a.e.}} }$: see the ``\emph{Typewriter Sequence}" example below.
+\item $L^{1}  \rightarrow \text{\emph{\textbf{convergence in integral}}}$:  by \emph{triangle inequality}. Note that \emph{the other modes of convergence} \emph{does \textbf{not directly} lead to convergence in integral}.
+\end{itemize} 
+\end{remark}
+%\item \begin{remark}:  
+%Note that \emph{statements involve \textbf{``$\mu$-almost everywhere"} is \textbf{weaker} than that for ``strictly everywhere"} since the latter allows the statement being \emph{false} on  \emph{\textbf{a null set}} so it is \emph{not strictly everywhere}.
+%\begin{itemize}
+%\item \emph{\textbf{Uniform} convergence} is strictly everywhere, thus is \emph{\textbf{stronger}} than \emph{\textbf{uniformly almost everywhere} convergence}
+%\item \emph{\textbf{Uniform} (almost everywhere) convergence} is \emph{\textbf{stronger}} than \emph{\textbf{pointwise} (almost everywhere) convergence}.
+%\item \emph{\textbf{Almost uniform} convergence} is \emph{\textbf{weaker}} than \emph{the \textbf{uniform almost everywhere} convergence}. But it is still \emph{\textbf{stronger}} than \emph{\textbf{pointwise} almost everywhere convergence}.
+%\item \emph{\textbf{In finite measure space, the Egorov's theorem}} states that \emph{\textbf{pointwise almost everywhere} convergence} implies \emph{\textbf{almost uniform} convergence}.
+%\end{itemize}
+%\[
+%  \begin{tikzcd}
+%     \text{\emph{uniform}}  \arrow{r}{}  \arrow{rrd}{} & \text{\emph{almost uniform}} \arrow{r}{} &  \arrow[l, swap, bend right, dashrightarrow, "\text{\emph{finite measure space}}"] \text{\emph{pointwise a.e}.}\\
+%    &  & \text{\emph{pointwise}} \arrow{u}{} 
+%  \end{tikzcd}
+%\] 
+%\end{remark}
+\end{itemize}
+
+\subsection{Counter Examples}
+\begin{itemize}
+\item \begin{example} (\emph{\textbf{Escape to Horizontal Infinity}}).\\
+ Let $X$ be the real line with Lebesgue measure, and let 
+\begin{align*}
+f_n(x) \equiv \ind{x \in [n,n+1]}.
+\end{align*}  Note that \underline{the \emph{\textbf{height}} and \emph{\textbf{width}} \emph{\textbf{do not shrink to zero}}}, but \emph{\textbf{the tail set}} shrinks to \emph{\textbf{the empty set}}. We have the following statements on different modes of convergence:
+\begin{enumerate}
+\item  $f_n$ \emph{\textbf{converges} \textbf{pointwise} to $f = 0$}, (thus \textbf{\emph{pointwise a.e.}})
+\item  $f_n$ \emph{\textbf{does not} converges  to $f = 0$ \textbf{uniformly}},
+\item  $f_n$ \emph{\textbf{does not} converges to $f = 0$} in \emph{\textbf{$L^{\infty}$ norm}}, 
+\item  $f_n$ \emph{\textbf{does not} converges to $f = 0$} \emph{\textbf{almost uniformly}} 
+\item $f_n$ \emph{\textbf{does not} converges to $f = 0$} \emph{\textbf{in measure}}.
+\item $\int_{\bR}f_{n} dx = 1$ \emph{\textbf{does not} converge} to $\int_{\bR}f dx = 0$.
+\item  $f_n$ \emph{\textbf{does not} converges to $f = 0$} \emph{\textbf{in $L^1$ norm}}. 
+\end{enumerate} Somehow, \emph{all the \textbf{mass}} in the $f_n$ has \emph{escaped} by \emph{moving off to infinity} in a \emph{\textbf{horizontal direction}}, leaving none behind for the pointwise limit $f$. In \emph{frequency domain}, it corresponds to \emph{\textbf{\underline{escaping to spatial infinity}}}.  
+\end{example}
+
+\item \begin{example} (\emph{\textbf{Escape to Width Infinity}}).\\
+Let $X$ be the real line with Lebesgue measure, and let
+\begin{align*}
+f_n \equiv \frac{1}{n}\ind{x \in [0,n]}.
+\end{align*} See that \emph{the \textbf{height} goes to \textbf{zero}}, but the \underline{\emph{\textbf{width} (and \textbf{tail support}) go to \textbf{infinity}}}, causing the \underline{$L^1$ norm to stay \textbf{\emph{bounded away from zero}}}. We have the following statements on different modes of convergence:
+\begin{enumerate}
+\item  $f_n$ \emph{\textbf{converges}  to $f = 0$ \textbf{uniformly}}. (Thus,  \emph{\textbf{pointwise}}, \emph{\textbf{pointwise a.e.}}, \emph{\textbf{uniformly a.e.}}, \emph{\textbf{almost uniformly}}, \emph{\textbf{in $L^{\infty}$ norm}} and \emph{\textbf{in measure}})
+\item $\int_{\bR}f_{n} dx = 1$ \emph{\textbf{does not converge} to $\int_{\bR} f dx = 0$}. 
+This is due to the \emph{\textbf{increasingly wide} nature} of \emph{the \underline{\textbf{support}} of the $f_n$}. If all the $f_n$ were supported \emph{in a single set of finite measure}, this will not happen. 
+\item $f_n$ \emph{\textbf{does not} converges to $f = 0$} \emph{\textbf{in $L^1$ norm}}. 
+\end{enumerate}   In \emph{frequency domain}, it corresponds to \emph{\textbf{\underline{escaping to zero frequency}}}. 
+\end{example}
+
+\item \begin{example} (\emph{\textbf{Escape to Vertical Infinity}}).\\  
+Let $X$ be the unit interval $[0, 1]$ with Lebesgue measure (restricted from $\bR$), and let 
+\begin{align*}
+f_n = n\ind{x \in\brac{ n^{-1}, 2\,n^{-1}}}.
+\end{align*} Note that the \emph{\textbf{height} goes to \textbf{infinity}}, but \emph{the \textbf{width} (and \textbf{tail support}) go to \textbf{zero} (or \textbf{the empty set})}, causing the \underline{\emph{$L^1$ norm to stay \textbf{bounded away from zero}}}. We have the following statements on different modes of convergence:
+\begin{enumerate}
+\item $f_n$ \emph{\textbf{converges} \textbf{pointwise} to $f = 0$}, (thus \textbf{\emph{pointwise a.e.}})
+\item  $f_n$ \emph{\textbf{converges} to $f = 0$} \emph{\textbf{almost uniformly}}, (thus \emph{\textbf{in measure}}) 
+\item  $f_n$ \emph{\textbf{does not} converges  to $f = 0$ \textbf{uniformly}},
+\item  $f_n$ \emph{\textbf{does not} converges to $f = 0$} in \emph{\textbf{$L^{\infty}$ norm}}, 
+\item $\int_{\bR}f_{n} dx = 1$ \emph{\textbf{does not} converge} to $\int_{\bR}f dx = 0$.
+\item  $f_n$ \emph{\textbf{does not} converges to $f = 0$} \emph{\textbf{in $L^1$ norm}}. 
+\end{enumerate} Note that we have finite measure on $X  = [0, 1]$. This time, the mass has \emph{escaped \textbf{vertically}}, through \emph{the \textbf{increasingly large} values of $f_n$}.  In \emph{frequency domain}, it corresponds to \underline{\emph{\textbf{escaping to infinity frequency}}}. 
+\end{example}
+
+\item \begin{example}  (\emph{\textbf{Typewriter Sequence}}). \\
+Let $f_n$ be defined by the formula
+\begin{align*}
+f_{n} &\equiv \ind{x \in \brac{ \frac{n- 2^{k}}{2^{k}} , \frac{n+ 1- 2^{k}}{2^{k}}}}
+\end{align*} whenever $k \ge  0$ and $2^k \le  n < 2^{k}+1$. This is a sequence of indicator functions of \underline{\emph{\textbf{intervals}} of \emph{\textbf{decreasing length}}}, \emph{marching across the unit interval $[0, 1]$ \textbf{\underline{over and over} again}}. See that \emph{the \textbf{width} goes to \textbf{zero}}, but \underline{\emph{the \textbf{height} and the \textbf{tail support stay fixed}}} (and thus \emph{\textbf{bounded away from zero}}). We have the following statements on different modes of convergence:
+\begin{enumerate}
+\item $f_n$ \emph{\textbf{converges} to $f = 0$} \emph{\textbf{in $L^1$ norm}}, (thus \emph{\textbf{in measure}}) 
+\item  $f_n$ \emph{\textbf{does not} converges  to $f = 0$ \textbf{pointwise a.e.}}, (thus \emph{\textbf{not pointwise}}, \emph{\textbf{not almost uniformly}}, \emph{\textbf{not uniformly a.e.}},  \emph{\textbf{not uniformly}}, \emph{\textbf{not in $L^{\infty}$ norm}} ) 
+\end{enumerate}
+\end{example}
+\end{itemize}
+
+
+
+
+
+\subsection{Uniqueness}
+\begin{itemize}
+\item \begin{proposition}
+Let $f_n : X \rightarrow \bC$ be a sequence of measurable functions, and let $f, g : X \rightarrow \bC$ be two additional measurable functions. Suppose that $f_n$ converges to $f$ \textbf{along one of the seven modes of convergence} defined above, and $f_n$ converges to $g$ \textbf{along another of the seven modes of convergence} (or perhaps the same mode of convergence as for $f$). Then $f$ and $g$ \textbf{agree almost everywhere}.
+\end{proposition}
+
+\item \begin{remark} It suffice to show that when $f_n$ converges to $f$ \emph{\textbf{pointwise almost everywhere}}, and $f_n$ converges to $g$ \emph{\textbf{in measure}}. We need to show that $f = g$ \emph{almost everywhere}. 
+\end{remark}
+
+\item \begin{remark}
+Even though the modes of convergence all \emph{differ} from each other, they are all \emph{\textbf{compatible}} in the sense that they \emph{\textbf{never disagree}} about \emph{which function} $f$ a sequence of functions $f_n$ \emph{\textbf{converges to}}, \emph{outside of a set of measure zero}. 
+\end{remark}
+\end{itemize}
+
+\section{Modes of Convergence for Step Functions}
+\subsection{Analysis}
+\begin{itemize}
+\item \begin{remark}
+Consider the \emph{\textbf{step function}} $f_{n}$ as a constant multiple $f_n = A_n\ind{E_n}$ of a measurable set $E_n$, which has a limit $f=0$.
+\end{remark}
+
+\item  \begin{definition} The modes of convergence for step function $f_n$ is determined by the following quantities: 
+\begin{enumerate}
+\item the $n$-th \emph{\textbf{width}} of $f_{n}$ is $\mu(E_{n})$; 
+\item the $n$-th \emph{\textbf{height}} of $f_{n}$ is $A_{n}$;
+\item the $N$-th \emph{\textbf{tail support}} $T_N \equiv \bigcup_{n\ge N}E_{n}$ of the sequence $f_1, f_2, f_3, \ldots$.
+\end{enumerate}
+ \end{definition}
+ 
+ \item \begin{remark}
+Assume the \emph{\textbf{height}} $A_n$ exhibit \emph{one of two modes of behaviour}:
+\begin{enumerate}
+\item $A_n \rightarrow 0$, \emph{\textbf{converge to zero}};
+\item $(A_n)$ are \emph{\textbf{bounded away from zero}} (i.e. there exists $c > 0$ such that $A_n \ge c$ for every $n$.) 
+\end{enumerate}
+
+  
+ \end{remark}
+
+\item \begin{proposition}
+The following regarding the seven modes of convergence of $f_{n}= A_n\ind{E_n}$ to $f=0$:
+\begin{enumerate}
+\item $f_n$ converges \textbf{uniformly} to zero if and only if $A_n \rightarrow 0$ as $n \rightarrow \infty$.
+\item $f_n$ converges \textbf{in $L^\infty$ norm} to zero if and only if $A_n \rightarrow 0$ as $n \rightarrow \infty$.
+\item $f_n$ converges \textbf{almost uniformly} to zero if and only if $A_n \rightarrow 0$ as $n \rightarrow \infty$, or $\mu(T_N ) \rightarrow 0$ as $N \rightarrow \infty$.
+\item $f_n$ converges \textbf{pointwise} to zero if and only if $A_n \rightarrow 0$ as $n \rightarrow \infty$, or\, $\bigcap_{N=1}^{\infty}T_N  = \emptyset$.
+\item $f_n$ converges \textbf{pointwise almost everywhere} to zero if and only if $A_n \rightarrow 0$ as $n \rightarrow \infty$, or $\bigcap_{N=1}^{\infty}T_N$ is a null set.
+\item $f_n$ converges \textbf{in measure} to zero if and only if $A_n \rightarrow 0$ as $n \rightarrow \infty$, or or $\mu(E_n) \rightarrow 0$ as $n \rightarrow \infty$.
+\item $f_n$ converges \textbf{in $L^1$ norm} if and only if $A_n\mu(E_n) \rightarrow 0$ as $n \rightarrow \infty$.
+\end{enumerate}
+\end{proposition}         
+
+\item \begin{remark} We summarize the above proposition:
+\begin{itemize}
+\item \underline{When the \emph{\textbf{height}} goes to \emph{\textbf{zero}}},  then one has convergence to zero in \emph{\textbf{all modes except possibly for $L^1$ convergence}}, which requires that the \emph{\textbf{product}} of the \emph{\textbf{height}} and the \emph{\textbf{width}} goes to zero.
+
+\item \underline{If the \emph{\textbf{height} is \textbf{bounded away from zero} (positive)} and the \emph{\textbf{width}} is \emph{\textbf{positive}}} (finite support), then we \emph{\textbf{never}} have \emph{\textbf{uniform}} or \emph{$L^1$} convergence.
+
+\begin{itemize}
+\item \underline{If \emph{\textbf{the width goes to zero}}}, we have convergence in \emph{\textbf{measure}}.
+
+\item \underline{If \emph{\textbf{the measure of tail support}} \emph{\textbf{goes to zero}}}, we have \emph{\textbf{almost uniform} convergence}.
+
+\item \underline{If \emph{\textbf{the tail support} \textbf{shrinks} to a \textbf{null set}}}, we have \emph{\textbf{pointwise almost everywhere} convergence}.
+
+\item \underline{If \emph{\textbf{the tail support} \textbf{shrinks} to \textbf{the empty set}}}, we have \emph{\textbf{pointwise} convergence}. 
+\end{itemize}
+\end{itemize}
+\end{remark}   
+
+\item \begin{remark}
+Four counterexamples above are all step functions:
+\begin{enumerate}
+\item In the \emph{\textbf{escape to horizontal infinity}} scenario, \emph{the height and width do not shrink to zero}, but \emph{the tail set shrinks to the empty set (while remaining of infinite measure throughout)}
+\item In the \emph{\textbf{escape to width infinity}} scenario, \emph{the height goes to zero}, but \emph{the width (and tail support) go to infinity}, causing the $L^1$ norm to \emph{stay bounded away from zero}.
+\item In the \emph{\textbf{escape to vertical infinity}}, \emph{the height goes to infinity}, but \emph{the width (and tail support) go to zero (or the empty set)}, causing the \emph{$L^1$ norm to stay bounded away from zero}.
+\end{enumerate}
+
+\end{remark}
+\end{itemize}
+\newpage
+\subsection{Comparison}
+\begin{table}[h!]
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\belowdisplayskip}{-10pt}
+\setlength{\abovedisplayshortskip}{0pt}
+\setlength{\belowdisplayshortskip}{0pt}
+\footnotesize
+\centering
+\caption{Comparison of Modes of Convergence}
+\label{tab: convergence}
+%\setlength{\extrarowheight}{1pt}
+\renewcommand\tabularxcolumn[1]{m{#1}}
+\small
+\begin{tabularx}{1\textwidth} { 
+  | >{\raggedright\arraybackslash} m{2cm}
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X  | }
+ \hline
+ &    \emph{\textbf{tail support}} & \emph{\textbf{width}} & \emph{\textbf{maximum variation}} & \emph{\textbf{subgraph}}\\
+ \hline 
+ \emph{\textbf{definition}}& 
+ \begin{align*}
+ T_{N,\epsilon} =\bigcup_{n \ge N}E_{n,\epsilon}
+\end{align*} &  
+\begin{align*}
+\mu(E_{n,\epsilon})
+\end{align*}
+& 
+\begin{align*}
+\sup_{x \in X}\{\abs{f_n(x) - f(x)}\}
+\end{align*}
+&
+\begin{align*}
+\Gamma(f_{n}) =\left\{(x,t): \right.\\
+\left. 0\le t \le f_n(x)\}\right.
+\end{align*} 
+ \\
+ \hline
+ \emph{\textbf{pointwise}}  & 
+  \begin{align*}
+ \bigcap_{N=1}^{\infty}T_{N,\epsilon} = \emptyset
+\end{align*}
+& & \emph{or}, $\rightarrow 0$ on $X$ &   \\
+\hline
+ \emph{\textbf{point-wise a.e.}}   & 
+  \begin{align*}
+ \mu\paren{\bigcap_{N=1}^{\infty}T_{N,\epsilon}} = 0
+\end{align*}
+& &  \emph{or}, $\rightarrow 0$ on $X \setminus E$ &  \\
+\hline
+\emph{\textbf{uniform}}  & $T_{N,\epsilon} = \emptyset$ & & 
+ equivalently, $\rightarrow 0$ on $X$ & \\
+\hline
+\emph{\textbf{uniform a.e.}}  & $\mu\paren{T_{N,\epsilon}} =0$ & & 
+equivalently, $\rightarrow 0$ on $X \setminus E$  & \\
+\hline
+\emph{\textbf{$L^{\infty}$ norm}}  & $\mu\paren{T_{N,\epsilon}} =0$ & & 
+equivalently, $\rightarrow 0$ on $X \setminus E$  & \\
+\hline
+ \emph{\textbf{almost uniform}} & 
+  \begin{align*}
+ \lim\limits_{N \rightarrow \infty}\mu\paren{T_{N,\epsilon}} = 0
+\end{align*} 
+ & & or, $\rightarrow 0$ on $X \setminus E$  &\\
+ \hline
+ \emph{\textbf{in measure}} & &
+  \begin{align*}
+ \lim\limits_{n \rightarrow \infty}\mu\paren{E_{n,\epsilon}} = 0
+\end{align*}  
+  & or, $\rightarrow 0$ on $X \setminus E$ &\\
+  \hline
+\emph{\textbf{$L^{1}$ norm}} & & &
+$\rightarrow 0$ and support fixed or non-increasing
+ & 
+  \begin{align*}
+  \text{area of }\Gamma(f_n) = \cA(\Gamma(f_n))\\
+ \lim\limits_{n \rightarrow \infty}\cA(\Gamma(\abs{f_n- f})) = 0
+\end{align*} \\
+\hline
+\end{tabularx}
+\end{table}
+
+\newpage
+\section{Modes of Convergence With Additional Conditions}
+\subsection{Finite Measure Space}
+\begin{itemize}
+\item \begin{remark}
+If we assume that $(X, \srB, \mu)$ has \emph{\textbf{finite measure}}, i.e. $\mu(X) < \infty$, we can shut down two of the four examples (namely, \emph{\textbf{escape to horizontal infinity}} or \emph{\textbf{escape to width infinity}}) and creates a few more equivalences. 
+\end{remark}
+
+\item \begin{example}
+\emph{A probability space} $(\Omega, \srF, \bP)$ is a finite measure space since $\bP(\Omega) = 1$.
+\end{example}
+
+\item \begin{theorem} (\textbf{Egorov's theorem}). \citep{royden1988real, tao2011introduction}\\
+Let $(X, \srF, \mu)$ be a \textbf{finite measure space}, that is, $\mu(X)<\infty$ and let  $f_n : X \rightarrow \bC$ be a sequence of measurable functions that converge \textbf{pointwise almost everywhere} to another function $f : X \rightarrow \bC$, and let $\epsilon > 0$. Then there exists a  $\mu$-measurable set $A$ of measure at most $\epsilon$, such that $f_n$ \textbf{converges  uniformly} to $f$ \textbf{outside} of $A$. That is, given finite measure space, convergence pointwise almost everywhere implies \textbf{converge almost uniformly}. 
+\end{theorem}
+
+\item \begin{remark}
+\emph{The \textbf{finite measure space}} condition allows us to use \emph{\textbf{the downward convergence}} of measure without much concern.
+\end{remark}
+
+\item \begin{proposition}
+Let $X$ have \textbf{finite measure}, and let $f_n : X \rightarrow \bC$ and $f : X \rightarrow \bC$ be measurable functions. If $f_n$ converges to $f$
+in $L^{\infty}$ norm, then $f_n$ also converges to $f$ in $L^1$ norm.
+\end{proposition}
+
+\item \begin{remark}
+For finite measure space, 
+\[
+  \begin{tikzcd}
+     \text{\emph{uniform}} \arrow{dd}{}  \arrow{r}{}  \arrow[rr, swap, bend left] & \text{\emph{uniformly a.e.}}  \arrow{d}{} &\arrow[l, leftrightarrow] \text{\emph{in $L^{\infty}$ norm}} \arrow{dl}{} \arrow[d,  red]  \\
+      & \text{\emph{almost uniform}}  \arrow{d}{} \arrow{dr}{} &  \text{\emph{in $L^{1}$ norm}} \arrow{d}{} \\
+    \text{\emph{pointwise}}  \arrow{r}{} &   \text{\emph{pointwise a.e}.} \arrow[u, bend left, red] & \text{\emph{in measure}}
+  \end{tikzcd}
+\] 
+\end{remark}
+\end{itemize}
+\subsection{Fast $L^1$ Convergence}
+\begin{itemize}
+\item \begin{proposition} (\textbf{Fast $L^1$ convergence}). \\
+Suppose that $f_n, f : X \rightarrow \bC$ are measurable functions such that $\sum_{n=1}^{\infty}\norm{f_n − f}{L^1(\mu)} < \infty$; thus,
+not only do the quantities $\norm{f_n − f}{L^1(\mu)}$ go to zero (which would mean $L^1$ convergence), but they converge in \textbf{an absolutely summable} fashion. Then 
+\begin{enumerate}
+\item $f_n$ converges \textbf{pointwise almost everywhere} to $f$.
+\item $f_n$ converges \textbf{almost uniformly} to $f$.
+\end{enumerate}
+\end{proposition}
+
+
+\item \begin{corollary} (\textbf{Subsequence Convergence}). \citep{tao2011introduction}\\
+Suppose that $f_n : X \rightarrow \bC$ are a sequence of measurable functions that converge in \textbf{$L^1$ norm} to a limit $f$. Then there exists a \textbf{subsequence} $f_{n_j}$ that converges \textbf{almost uniformly} (and hence, \textbf{pointwise almost everywhere}) to $f$ (while remaining convergent in $L^1$ norm, of course).
+\end{corollary}
+
+\item \begin{corollary} (\textbf{Subsequence Convergence in Measure}). \citep{tao2011introduction}\\
+Suppose that $f_n : X \rightarrow \bC$ are a sequence of measurable functions that \textbf{converge in measure} to a limit $f$. Then there exists a subsequence $f_{n_j}$ that converges \textbf{almost uniformly} (and hence, \textbf{pointwise almost everywhere}) to $f$.
+\end{corollary}
+
+\item \begin{remark}
+It is instructive to see how this \emph{\textbf{subsequence}} is extracted in the case of \emph{the typewriter sequence}. In general, one can view the operation of passing to a subsequence as being able to \emph{\textbf{eliminate}} ``\emph{\textbf{typewriter}}" situations in which \emph{the tail support is much larger than the width}.
+\end{remark}
+
+\item \begin{exercise} \citep{tao2011introduction}
+Let $(X, \srB, \mu)$ be a measure space, let $f_n : X \rightarrow \bC$ be a sequence of measurable functions converging \textbf{pointwise almost
+everywhere} as $n \rightarrow \infty$ to a measurable limit $f : X \rightarrow \bC$, and for each $n$, let $f_{n,m} : X \rightarrow \bC$ be a sequence of measurable functions converging \textbf{pointwise almost everywhere} as $m \rightarrow \infty$ (keeping n fixed) to $f_n$.
+\begin{enumerate}
+\item  If $\mu(X)$ is \textbf{finite}, show that there exists a sequence $m_1,  m_2, \ldots$ such that $f_{n, m_n}$ converges \textbf{pointwise almost everywhere} to $f$.
+\item  Show the same claim is true if, instead of assuming that $\mu(X)$ is finite, we merely assume that $X$ is \textbf{$\sigma$-finite}, i.e. it is
+the countable union of sets of finite measure.
+\end{enumerate}
+\end{exercise}
+
+\item \begin{exercise} \citep{tao2011introduction}\\
+Let $f_n : X \rightarrow \bC$ be a sequence of measurable functions, and let $f : X \rightarrow \bC$ be another measurable function. Show that
+the following are equivalent:
+\begin{enumerate}
+\item $f_n$ converges \textbf{in measure} to $f$.
+\item Every \textbf{subsequence} $f_{n_j}$ of the $f_n$ has a \textbf{further subsequence} $f_{n_{j_i}}$ that converges \textbf{almost uniformly} to $f$.
+\end{enumerate}
+\end{exercise}
+\end{itemize}
+\subsection{Domination and Uniform Integrability}
+\begin{itemize}
+\item \begin{remark}
+Now we turn to the \emph{reverse question}, of \emph{whether \textbf{almost uniform} convergence, \textbf{pointwise almost everywhere} convergence, or convergence \textbf{in measure} can imply \textbf{$L^1$ convergence}}. The \emph{escape to vertical} and \emph{width infinity} examples shows that without any further hypotheses, the answer to this question is \emph{\textbf{no}}. 
+\end{remark}
+
+
+\item \begin{remark} \citep{tao2011introduction} 
+There are \emph{\textbf{two major ways}} to shut down loss of mass via \emph{\textbf{escape to infinity}}.
+\begin{enumerate}
+\item One is to enforce \emph{\textbf{monotonicity}}, which \emph{\textbf{prevents each $f_n$ from abandoning the location}} where the
+mass of the preceding $f_1, \ldots , f_{n-1}$ was concentrated and which thus shuts down the above three escape scenarios. More precisely, we have the monotone convergence theorem.
+
+\item The other major way is to \emph{\textbf{dominate} all of the functions involved by an \textbf{absolutely convergent one}}. This result is known as the dominated convergence theorem. 
+\end{enumerate} 
+\end{remark}
+
+\item \begin{definition}
+We say that a sequence $f_n : X \rightarrow \bC$ is \emph{\textbf{dominated}} if there exists an \emph{\textbf{absolutely integrable function}} $g : X \rightarrow \bC$ such that $\abs{f_n(x)} \le g(x)$ for all $n$ and \emph{almost every $x$}. 
+\end{definition}
+
+\item \begin{definition} (\textbf{\emph{Uniform integrability}}).\\
+A sequence $f_n : X \rightarrow \bC$ of \textbf{\emph{absolutely integrable}} functions is said to be \underline{\textbf{\emph{uniformly integrable}}} if the following three statements hold:
+\begin{enumerate}
+\item (\textbf{\emph{Uniform bound on $L^1$ norm}}) One has $\sup_{n}\norm{f_n}{L^1(\mu)} = \sup_{n}\int_X \abs{f_n} d\mu < +\infty$.
+\item (\textbf{\emph{No escape to vertical infinity}}) One has 
+\begin{align*}
+\lim\limits_{M \rightarrow +\infty}\sup_{n}\int_{\abs{f_n} \ge M} \abs{f_n} d\mu \rightarrow 0.
+\end{align*}
+\item (\textbf{\emph{No escape to width infinity}})  One has 
+\begin{align*}
+\lim\limits_{\delta \rightarrow 0}\sup_{n}\int_{\abs{f_n} \le \delta} \abs{f_n} d\mu \rightarrow 0.
+\end{align*}
+\end{enumerate}
+\end{definition}
+
+\item \begin{proposition} (Property of Uniform Integrablility)
+\begin{enumerate}
+\item If $f$ is an \textbf{absolutely integrable} function, then the constant sequence $f_n = f$ is \textbf{uniformly integrable}. (Hint: use the monotone convergence theorem.)
+\item Every \textbf{dominated} sequence of measurable functions is \textbf{uniformly integrable}.
+\end{enumerate}
+\end{proposition}
+
+\item \begin{exercise}
+Give an example of a sequence that is uniformly integrable but not dominated.
+\end{exercise}
+
+\item \begin{remark}
+In the case of a \emph{\textbf{finite measure space}}, there is \emph{no escape to width infinity}, and the criterion for \emph{uniform integrability} simplifies to just
+that of \emph{\textbf{excluding vertical infinity}}:
+
+\begin{exercise}
+Suppose that $X$ has finite measure, and let $f_n : X \rightarrow \bC$ be a sequence of measurable functions. Show that $f_n$ is uniformly
+integrable \textbf{if and only if} $\sup_{n}\int_{\abs{f_n} \ge M} \abs{f_n} d\mu \rightarrow 0$ as $M \rightarrow \infty$.
+\end{exercise}
+\end{remark}
+
+\item \begin{exercise} (\textbf{Uniform $L^p$ bound on finite measure implies uniform integrability}). \\
+Suppose that $X$ have finite measure, let $1 < p < \infty$, and suppose that $f_n : X \rightarrow \bC$ is a sequence of measurable functions such that $\sup_{n}\int_X \abs{f_n}^{p} d\mu < +\infty$. Show that the sequence $f_n$ is uniformly integrable.
+\end{exercise}
+
+\item \begin{exercise}
+Give an example of a sequence $f_n$ of uniformly integrable functions that converge \textbf{pointwise almost everywhere} to
+zero, but do \textbf{not converge} \textbf{almost uniformly}, \textbf{in measure}, or \textbf{in $L^1$ norm}.
+\end{exercise}
+
+\item \begin{theorem} (\textbf{Uniformly integrable convergence in measure}).\\
+Let $f_n : X \rightarrow \bC$ be a \textbf{uniformly integrable} sequence of functions, and let $f : X \rightarrow \bC$ be another function. Then $f_n$ converges in \textbf{$L^1$ norm} to $f$ \textbf{if and only} if $f_n$ converges to $f$ \textbf{in measure}.
+\end{theorem}
+
+\item \begin{proposition}
+Suppose that $f_n : X \rightarrow \bC$ are a \textbf{dominated} sequence of measurable functions, and let $f : X \rightarrow \bC$  be another measurable function. Show that $f_n$ converges \textbf{pointwise almost everywhere} to $f$ \textbf{if and only if} $f_n$ converges in \textbf{almost uniformly} to $f$.
+\end{proposition}
+\end{itemize}
+
+
+
+\section{Convergence in Distribution}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Cumulative Distribution Function}}) \citep{billingsley2008probability} \\
+Let $(X,\srF, \mu)$ be a measure space. Given any real-valued measurable function $f : X \rightarrow \bR$, we define the \underline{\emph{\textbf{cumulative distribution function}}} $F : \bR \rightarrow [0, \infty]$ of $f$ to be the function $F(\lambda) := \mu_{f}((-\infty, \lambda])= \mu\paren{\set{x \in  X : f(x) \le \lambda}}$ where  $\mu_f = \mu\circ f^{-1}$ is a \emph{\textbf{measure}} on $(\bR, \srB(\bR))$ induced by function $f$.  
+\end{definition}
+
+\item \begin{definition}  (\emph{\textbf{Converge in Distribution}}) \citep{van2000asymptotic}\\
+Let $(X,\srF, \mu)$ be a measure space, $f_n : X \rightarrow \bR$ be a sequence of real-valued \emph{measurable functions}, and $f: X \rightarrow \bR$ be another measurable function. 
+
+We say that $f_n$ \underline{\emph{\textbf{converges in distribution}}} to $f$ if \emph{the cumulative distribution function} $F_n(\lambda)$ of $f_n$
+converges \emph{\textbf{pointwise}} to \emph{the cumulative distribution function} $F(\lambda)$ of $f$ at all $\lambda \in  \bR$ for which $F$ is \emph{continuous}. Denoted as \underline{$f_{n}\stackrel{d}{\rightarrow} f$} or \underline{$f_n \rightsquigarrow f$}. 
+
+Note that for the distribution $\mu_{f_n}\equiv \mu \circ f_{n}^{-1}$ is a measure on $(\bR, \srB(\bR))$. Thus $f_{n}\stackrel{d}{\rightarrow} f$ if and only if 
+\begin{align*}
+\mu_{f_n}(A)  \rightarrow \mu_f(A), \quad \forall A \in \srB(\bR).
+\end{align*} 
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Convergence of Measures Induced by Function}})\\
+\underline{\emph{\textbf{Convergence in distribution}}} is also called \underline{\emph{\textbf{weak convergence}}} in probability theory \citep{folland2013real}. In general,  it is actually \emph{\textbf{not} a mode of \textbf{convergence of functions} $f_n$ \textbf{itself}} but instead is the \underline{\emph{\textbf{convergence of measures} \textbf{induced} by function $f_n$ on $\srB(\bR)$}}.
+
+In functional analysis, however, \emph{\textbf{weak convergence}} is actually reserved for a different mode of convergence, while \emph{\textbf{the convergence in distribution}} is \emph{\textbf{the weak$^*$ convergence}}.
+\begin{align*}
+ \text{weak convergence} && \int f_n d\mu \rightarrow \int f d\mu, \quad \forall \mu \in \cM(X), \\
+\text{convergence in distribution}  &&  \int f d\mu_n \rightarrow \int f d\mu, \quad \forall f \in \cC_{0}(X)
+\end{align*}
+
+ \begin{definition}  (\textbf{\emph{Weak$^{*}$ Topology on Banach Space}})\\
+Let $X$ be a \emph{normed vector space} and $X^{*}$ be its dual space. The \underline{\emph{\textbf{weak$^{*}$ topology}} on $X^{*}$} is \emph{the weakest topology} on $X^{*}$ so that \emph{$f(x)$ is \textbf{continuous} \textbf{for all} $x \in X$}.
+\end{definition}
+
+\emph{The weak$^{*}$ topology} on space of regular Borel measures $\cM(X) \simeq (\cC_{0}(X))^{*}$ on a \emph{\textbf{compact Hausdorff}} space $X$, is often called \emph{\textbf{the vague topology}}. Note that $\mu_n \stackrel{w^{*}}{\rightarrow} \mu$ if and only if $\int f d\mu_n \rightarrow \int f d\mu$ for all $f \in \cC_0(X)$. 
+\end{remark}
+
+\item \begin{theorem} (\textbf{The Portmanteau Theorem}).  \citep{van2000asymptotic}\\
+ The following statements are equivalent.
+ \begin{enumerate}
+ \item $X_n \rightsquigarrow X$.
+ \item $\E{}{h(X_n)} \rightarrow \E{}{h(X)}$ for all \textbf{continuous functions} $h: \bR^d \rightarrow \bR$ that are non-zero only on a \textbf{closed} and \textbf{bounded} set.
+ \item $\E{}{h(X_n)} \rightarrow \E{}{h(X)}$ for all \textbf{bounded continuous functions} $h: \bR^d \rightarrow \bR$.
+ \item $\E{}{h(X_n)} \rightarrow \E{}{h(X)}$ for all \textbf{bounded measurable functions} $h: \bR^d \rightarrow \bR$ for which $\bP(X \in \{x: h\text{ is continuous at }x\})=1$.
+ \end{enumerate}
+\end{theorem}
+
+
+\item We can reformulate the definition of \emph{convergence in distribution} as below:
+\begin{definition} \citep{wellner2013weak}\\
+Let $(\Omega, d)$ be a \emph{metric space}, and $(\Omega, \srB)$ be \emph{a measurable space}, where $\srB$ is \emph{\textbf{the Borel $\sigma$-field on $\Omega$}}, the smallest $\sigma$-field containing \emph{all the open balls} (as the basis of \emph{metric topology} on $\Omega$). Let $\{P_n \}$ and $P$ be \emph{\textbf{Borel probability measures}} on $(\Omega, \srB)$.
+
+Then the sequence $P_n$ \underline{\emph{\textbf{converges in distribution}}} to $P$, which we write as $P_n \rightsquigarrow P$, if and only if
+\begin{align*}
+\int_{\Omega} f dP_n \rightarrow \int_{\Omega} f dP, \quad \text{ for all } f \in \cC_{b}(\Omega).
+\end{align*}
+Here $\cC_{b}(\Omega)$ denotes the set of \emph{all \textbf{bounded}, \textbf{continuous}, real functions on $\Omega$}.
+\end{definition} 
+We can see that \underline{\emph{\textbf{the convergence in distribution}} is actually \emph{\textbf{a weak$^{*}$ convergence}}}. That is, it is \emph{\textbf{the weak convergence}} of  \emph{\textbf{bounded linear functionals}} $I_{\cP_n} \stackrel{w^{*}}{\rightarrow} I_{\cP}$ on \emph{the space of all probability measures} $\cP(\cX) \simeq (\cC_{b}(\cX))^{*}$ on $(\cX, \srB)$ where 
+\begin{align*}
+I_{\cP}: f \mapsto \int_{\Omega} f d\cP.
+\end{align*} Note that the $I_{\cP_n} \stackrel{w^{*}}{\rightarrow} I_{\cP}$ is equivalent to $I_{\cP_n}(f) \rightarrow I_{\cP}(f)$ \emph{for all $f \in  \cC_{b}(\cX)$}.
+
+
+
+
+
+\item \begin{remark}
+The density $f_{\xi}$ of $\xi$ is defined as for $F_{\xi}$ uniformly continuous on $\bR$
+\begin{align*}
+F_{\xi}(A) \equiv \mu\circ \xi^{-1}(A) \equiv \int_{\Omega}\ind{\xi^{-1}(A)} d\mu  &\equiv \int_{\bR} f_{\xi} \ind{A} dx
+\end{align*} for all $A\in \srB(\bR)$ and the integral is the Lebesgue integral with respect to Lebesgue measure.
+\end{remark}
+
+\item \begin{remark}
+Note that $\xi_{n} \rightarrow \xi$ and $\eta_{n} \rightarrow \eta$ in distribution, but it is possible $\xi_{n}+\eta_{n} \not\rightarrow \xi+\eta$.
+\end{remark}
+
+
+\item \begin{remark}
+It is related to following convergence
+\begin{align*}
+\sup_{A\in \srB(\bR)}\abs{ F_{n}(A) - F(A)} &\rightarrow 0\\
+\text{or }F_{n}(A) \rightarrow  F(A) &, \forall\, A\in \srB(\bR)
+\end{align*}
+\end{remark}
+
+\item \begin{theorem} (\textbf{Continuous Mapping Theorem}) \citep{van2000asymptotic}\\
+Suppose that $f_n : X \rightarrow \bR^{k}, n\ge 1$ is a sequence of measureable functions and its limit $f:  X \rightarrow \bR^{k}$ is a measureable function. Let $g: \bR^{k} \rightarrow \bR^{m}$ be \textbf{continuous} \textbf{at every point} of a set $C\subset \bR^{k}$ such that $\mu(\set{x: f(x)\in C})= \mu(X)= 1$. Then 
+\begin{enumerate}
+\item If $f_{n} \stackrel{a.e.}{\rightarrow} f$, then $g(f_{n}) \stackrel{a.e.}{\rightarrow}g(f)$;
+\item If $f_{n} \stackrel{\mu}{\rightarrow} f$, then $g(f_{n}) \stackrel{\mu}{\rightarrow}g(f)$;
+\item If $f_{n} \rightsquigarrow f$, then $g(f_{n})\rightsquigarrow g(f)$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+\begin{enumerate}
+\item Directly by the property of continuous map, since $g(\lim\limits_{n\rightarrow \infty}y_{n,x})=\lim\limits_{n\rightarrow \infty}g(y_{n,x}) $, where $y_{n,x}= f_{n}(x)$ for $x\in X/E$, $\mu(E)=0$. 
+
+\item For any $\epsilon>0$, there exists $\delta>0$ such that the set 
+\begin{align*}
+B_{\delta}&\equiv\set{z\in \bR^{k}\;|\; \exists y,\, \norm{z- y}{}\le \delta,\; \norm{g(z)-  g(y)}{} > \epsilon }.
+\end{align*}
+Clearly, if $f(x)\not\in B_{\delta}$ and $\norm{g(f_{n}(x))- g(f(x))}{}>\epsilon$, then $\norm{f_{n}(x)- f(x)}{}>\delta$. So
+\begin{align*}
+\mu\paren{\set{x: \norm{g(f_{n}(x))- g(f(x))}{}>\epsilon }}&\le \mu\paren{\set{x: \norm{f_{n}(x)- f(x)}{}>\delta}}+ \mu\paren{\set{x: f(x)\in B_{\delta}}}
+\end{align*}
+The first term on RHS converges to $0$ as $n\rightarrow \infty$ for every fixed $\delta>0$ due to the convergence in measure. Since $B_{\delta}\cap C \downarrow 0$, by continuity of $g$, the second term converges to $0$ as $\delta\rightarrow 0$.
+
+\item The event $\set{x: g(f_{n}(x))\in F} \equiv \set{x: f_{n}(x)\in g^{-1}(F)}$ for any closed/open set $F$. Note that
+\begin{align*}
+g^{-1}(F) \subseteq \overline{g^{-1}(F)} \subset g^{-1}(F)\cup C^{c}
+\end{align*}
+Thus there exists a sequence of $y_{m}\rightarrow y$ and $g(y_{m})\in F$ for every closed $F$. If $y\in C$, then $g(y_{m})\rightarrow g(y)$, which is in $F$, since $F$ is closed. Otherwise, $y\in C^{c}$. By the portmanteau lemma, since $f_{n}$ converges to $f$ in distribution, 
+\begin{align*}
+\limsup\limits_{n\rightarrow \infty}\mu\paren{\set{x: g(f_{n}(x)) \in F  }} &\le\limsup\limits_{n\rightarrow \infty} \mu\paren{\set{x: f_{n}(x) \in \overline{g^{-1}(F)}  }}\\
+& \le  \mu\paren{\set{x: f(x) \in \overline{g^{-1}(F)}  }}
+\end{align*}
+Since $\mu(X)= \mu(C) =1$, so $\mu(C^{c})=0$. Thus the RHS
+\begin{align*}
+\mu\paren{\set{x: f(x) \in \overline{g^{-1}(F)}  }} &=  \mu\paren{\set{x: f(x) \in g^{-1}(F)  }}\\
+&=  \mu\paren{\set{x: g(f(x)) \in F  }}.
+\end{align*} Again by applying the portmanteau lemma, $g(f_{n})$ converges to $g(f)$ in distribution. \qed\\
+\end{enumerate}
+\end{proof}
+\end{itemize}
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{reference.bib}
+\end{document}
