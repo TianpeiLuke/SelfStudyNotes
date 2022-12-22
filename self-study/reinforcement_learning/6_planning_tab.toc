@@ -1,0 +1,6 @@
+\contentsline {section}{\numberline {1}Introduction}{2}
+\contentsline {section}{\numberline {2}Models and Planning}{2}
+\contentsline {section}{\numberline {3}Dyna: Integrated Planning, Acting, and Learning}{4}
+\contentsline {subsection}{\numberline {3.1}When the Model Is Wrong}{6}
+\contentsline {subsection}{\numberline {3.2}Prioritized Sweeping}{7}
+\contentsline {section}{\numberline {4}Summary of all RL methods}{8}
