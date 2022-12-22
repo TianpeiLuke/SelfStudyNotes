@@ -30,11 +30,20 @@
     - Restricted Boltzmann machine (RBM)
  
 - Exponential Families and Variational Representation
-  - 
+  - Definitions
+  - Exponential family via maximum entropy
+    - Maximum Entropy Estimation
+    - Properties of Log-Partition Function
+    - Conjugate Duality: Maximum Likelihood and Maximum Entropy
+    - Challenges in High Dimensional Setting
+    - Primal-Dual Formulation of KL Divergence
 - Inference in Tabular-Based Graphical Models
   - Inference in Graphical Models
   - Inference for Tabular-Based Graphical Models
   - Exact Marginal Inference on Tree-Structure Model
+    - Sum-product Belief Propagation
+    - Factor Graph Message Passing
+    - Bellman Equation in Log-Space
   - Exact Mode Inference on Tree-Structure Model 
   - Junction Tree Representation
 - 
