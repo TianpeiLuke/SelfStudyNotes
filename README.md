@@ -12,3 +12,19 @@
 - Functional Analysis
 
 - Information Geometry and Optimal Transport
+
+- Measure Theory, Abstract Integration, Probability Theory
+
+- Monte Carlo Methods
+
+- Natural Language Processing
+
+- Probabilistic Graphical Models
+
+- Reinforcement Learning
+
+- Stochastic Process and Empirical Process
+
+- Statistical Learning Theory
+
+- Topology
