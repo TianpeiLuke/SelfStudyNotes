@@ -14,7 +14,7 @@
 
 ***Functional Analysis***, Peter D. Lax
 
-***Spectral Theory - Basic Concepts And Applications***, David Borthwick
+***Spectral Theory: Basic Concepts And Applications***, David Borthwick
 
 ## Table of Contents
 - Summary 
