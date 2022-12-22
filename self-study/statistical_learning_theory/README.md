@@ -38,7 +38,7 @@
 
 - Probably Approximately Correct (PAC) Learning 
   - PAC Learning
-  - Agnositc PAC Learning
+  - Agnostic PAC Learning
   - Generalization Bound for Finite Hypothesis Class
 
 - Radmatcher Complexity and VC-Dimension
