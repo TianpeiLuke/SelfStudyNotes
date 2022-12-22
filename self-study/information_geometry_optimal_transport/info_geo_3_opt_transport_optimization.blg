@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: info_geo_3_opt_transport_optimization.aux
+The style file: plainnat.bst
+Database file #1: book_reference.bib.bib
+Warning--empty journal in vialard2019elementary
+You've used 7 entries,
+            2773 wiz_defined-function locations,
+            639 strings with 6078 characters,
+and the built_in function-call counts, 3144 in all, are:
+= -- 291
+> -- 141
+< -- 7
++ -- 49
+- -- 42
+* -- 227
+:= -- 477
+add.period$ -- 22
+call.type$ -- 7
+change.case$ -- 35
+chr.to.int$ -- 7
+cite$ -- 15
+duplicate$ -- 153
+empty$ -- 276
+format.name$ -- 55
+if$ -- 665
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 7
+newline$ -- 44
+num.names$ -- 28
+pop$ -- 67
+preamble$ -- 1
+purify$ -- 28
+quote$ -- 0
+skip$ -- 122
+stack$ -- 0
+substring$ -- 150
+swap$ -- 18
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 77
+warning$ -- 1
+while$ -- 31
+width$ -- 0
+write$ -- 98
+(There was 1 warning)

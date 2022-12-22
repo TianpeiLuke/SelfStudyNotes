@@ -1,0 +1,146 @@
+\begin{thebibliography}{21}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Arjovsky et~al.(2017)Arjovsky, Chintala, and
+  Bottou]{arjovsky2017wasserstein}
+Martin Arjovsky, Soumith Chintala, and L{\'e}on Bottou.
+\newblock Wasserstein generative adversarial networks.
+\newblock In \emph{International conference on machine learning}, pages
+  214--223. PMLR, 2017.
+
+\bibitem[Bassetti et~al.(2006)Bassetti, Bodini, and
+  Regazzini]{bassetti2006minimum}
+Federico Bassetti, Antonella Bodini, and Eugenio Regazzini.
+\newblock On minimum kantorovich distance estimators.
+\newblock \emph{Statistics \& probability letters}, 76\penalty0 (12):\penalty0
+  1298--1302, 2006.
+
+\bibitem[Bernton et~al.(2017)Bernton, Jacob, Gerber, and
+  Robert]{bernton2017inference}
+Espen Bernton, Pierre~E Jacob, Mathieu Gerber, and Christian~P Robert.
+\newblock Inference in generative models using the wasserstein distance.
+\newblock \emph{arXiv preprint arXiv:1701.05146}, 1\penalty0 (8):\penalty0 9,
+  2017.
+
+\bibitem[Canas and Rosasco(2012)]{canas2012learning}
+Guillermo Canas and Lorenzo Rosasco.
+\newblock Learning probability measures with respect to optimal transport
+  metrics.
+\newblock \emph{Advances in Neural Information Processing Systems}, 25, 2012.
+
+\bibitem[Cuturi and Avis(2014)]{cuturi2014ground}
+Marco Cuturi and David Avis.
+\newblock Ground metric learning.
+\newblock \emph{The Journal of Machine Learning Research}, 15\penalty0
+  (1):\penalty0 533--564, 2014.
+
+\bibitem[Feydy et~al.(2017)Feydy, Charlier, Vialard, and
+  Peyr{\'e}]{feydy2017optimal}
+Jean Feydy, Benjamin Charlier, Fran{\c{c}}ois-Xavier Vialard, and Gabriel
+  Peyr{\'e}.
+\newblock Optimal transport for diffeomorphic registration.
+\newblock In \emph{International Conference on Medical Image Computing and
+  Computer-Assisted Intervention}, pages 291--299. Springer, 2017.
+
+\bibitem[Flamary et~al.(2016)Flamary, Courty, Tuia, and
+  Rakotomamonjy]{flamary2016optimal}
+R~Flamary, N~Courty, D~Tuia, and A~Rakotomamonjy.
+\newblock Optimal transport for domain adaptation.
+\newblock \emph{IEEE Trans. Pattern Anal. Mach. Intell}, 1, 2016.
+
+\bibitem[Genevay et~al.(2017)Genevay, Peyr{\'e}, and Cuturi]{genevay2017gan}
+Aude Genevay, Gabriel Peyr{\'e}, and Marco Cuturi.
+\newblock Gan and vae from an optimal transport point of view.
+\newblock \emph{arXiv preprint arXiv:1706.01807}, 2017.
+
+\bibitem[Genevay et~al.(2018)Genevay, Peyr{\'e}, and
+  Cuturi]{genevay2018learning}
+Aude Genevay, Gabriel Peyr{\'e}, and Marco Cuturi.
+\newblock Learning generative models with sinkhorn divergences.
+\newblock In \emph{International Conference on Artificial Intelligence and
+  Statistics}, pages 1608--1617. PMLR, 2018.
+
+\bibitem[Gold et~al.(1998)Gold, Rangarajan, Lu, Pappu, and
+  Mjolsness]{gold1998new}
+Steven Gold, Anand Rangarajan, Chien-Ping Lu, Suguna Pappu, and Eric Mjolsness.
+\newblock New algorithms for 2d and 3d point matching: pose estimation and
+  correspondence.
+\newblock \emph{Pattern recognition}, 31\penalty0 (8):\penalty0 1019--1031,
+  1998.
+
+\bibitem[Huang et~al.(2016)Huang, Guo, Kusner, Sun, Sha, and
+  Weinberger]{huang2016supervised}
+Gao Huang, Chuan Guo, Matt~J Kusner, Yu~Sun, Fei Sha, and Kilian~Q Weinberger.
+\newblock Supervised word mover's distance.
+\newblock \emph{Advances in neural information processing systems}, 29, 2016.
+
+\bibitem[Montavon et~al.(2016)Montavon, M{\"u}ller, and
+  Cuturi]{montavon2016wasserstein}
+Gr{\'e}goire Montavon, Klaus-Robert M{\"u}ller, and Marco Cuturi.
+\newblock Wasserstein training of restricted boltzmann machines.
+\newblock \emph{Advances in Neural Information Processing Systems}, 29, 2016.
+
+\bibitem[Myronenko and Song(2010)]{myronenko2010point}
+Andriy Myronenko and Xubo Song.
+\newblock Point set registration: Coherent point drift.
+\newblock \emph{IEEE transactions on pattern analysis and machine
+  intelligence}, 32\penalty0 (12):\penalty0 2262--2275, 2010.
+
+\bibitem[Pan and Yang(2009)]{pan2009survey}
+Sinno~Jialin Pan and Qiang Yang.
+\newblock A survey on transfer learning.
+\newblock \emph{IEEE Transactions on knowledge and data engineering},
+  22\penalty0 (10):\penalty0 1345--1359, 2009.
+
+\bibitem[Peyré and Cuturi(2019)]{gabriel2019computational}
+Gabriel Peyré and Marco Cuturi.
+\newblock Computational optimal transport: With applications to data science.
+\newblock \emph{Foundations and Trends® in Machine Learning}, 11\penalty0
+  (5-6):\penalty0 355--607, 2019.
+\newblock ISSN 1935-8237.
+
+\bibitem[Rangarajan and Chui(2000)]{rangarajan2000applications}
+Anand Rangarajan and Haili Chui.
+\newblock Applications of optimizing neural networks in medical image
+  registration.
+\newblock In \emph{Artificial Neural Networks in Medicine and Biology}, pages
+  99--104. Springer, 2000.
+
+\bibitem[Salimans et~al.(2018)Salimans, Metaxas, Zhang, and
+  Radford]{salimans2018improving}
+Tim Salimans, Dimitris Metaxas, Han Zhang, and Alec Radford.
+\newblock Improving gans using optimal transport.
+\newblock In \emph{6th International Conference on Learning Representations,
+  ICLR 2018}, 2018.
+
+\bibitem[Santambrogio(2015)]{santambrogio2015optimal}
+Filippo Santambrogio.
+\newblock \emph{Optimal transport for applied mathematicians}, volume~55.
+\newblock Springer, 2015.
+
+\bibitem[Tolstikhin et~al.(2018)Tolstikhin, Bousquet, Gelly, and
+  Sch{\"o}lkopf]{tolstikhin2018wasserstein}
+I~Tolstikhin, O~Bousquet, S~Gelly, and B~Sch{\"o}lkopf.
+\newblock Wasserstein auto-encoders.
+\newblock In \emph{6th International Conference on Learning Representations
+  (ICLR 2018)}. OpenReview. net, 2018.
+
+\bibitem[Wang and Guibas(2012)]{wang2012supervised}
+Fan Wang and Leonidas~J Guibas.
+\newblock Supervised earth mover’s distance learning and its computer vision
+  applications.
+\newblock In \emph{European Conference on Computer Vision}, pages 442--455.
+  Springer, 2012.
+
+\bibitem[Zen et~al.(2014)Zen, Ricci, and Sebe]{zen2014simultaneous}
+Gloria Zen, Elisa Ricci, and Nicu Sebe.
+\newblock Simultaneous ground metric learning and matrix factorization with
+  earth mover's distance.
+\newblock In \emph{2014 22nd International Conference on Pattern Recognition},
+  pages 3690--3695. IEEE, 2014.
+
+\end{thebibliography}

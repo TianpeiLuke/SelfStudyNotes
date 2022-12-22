@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: info_geo_2_opt_transport.aux
+The style file: plainnat.bst
+Database file #1: book_reference.bib.bib
+Warning--empty publisher in figalli2021invitation
+Warning--can't use both volume and number fields in santambrogio2015optimal
+You've used 12 entries,
+            2773 wiz_defined-function locations,
+            668 strings with 6589 characters,
+and the built_in function-call counts, 4702 in all, are:
+= -- 398
+> -- 213
+< -- 16
++ -- 75
+- -- 63
+* -- 343
+:= -- 730
+add.period$ -- 38
+call.type$ -- 12
+change.case$ -- 50
+chr.to.int$ -- 12
+cite$ -- 26
+duplicate$ -- 254
+empty$ -- 433
+format.name$ -- 81
+if$ -- 986
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 19
+newline$ -- 69
+num.names$ -- 48
+pop$ -- 131
+preamble$ -- 1
+purify$ -- 45
+quote$ -- 0
+skip$ -- 182
+stack$ -- 0
+substring$ -- 133
+swap$ -- 29
+text.length$ -- 7
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 97
+warning$ -- 2
+while$ -- 44
+width$ -- 0
+write$ -- 163
+(There were 2 warnings)

@@ -1,0 +1,79 @@
+\begin{thebibliography}{12}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Arjovsky et~al.(2017)Arjovsky, Chintala, and
+  Bottou]{arjovsky2017wasserstein}
+Martin Arjovsky, Soumith Chintala, and L{\'e}on Bottou.
+\newblock Wasserstein generative adversarial networks.
+\newblock In \emph{International conference on machine learning}, pages
+  214--223. PMLR, 2017.
+
+\bibitem[Bertsimas and Tsitsiklis(1997)]{bertsimas1997introduction}
+Dimitris Bertsimas and John~N Tsitsiklis.
+\newblock \emph{Introduction to linear optimization}, volume~6.
+\newblock Athena Scientific Belmont, MA, 1997.
+
+\bibitem[Bhatia et~al.(2019)Bhatia, Jain, and Lim]{bhatia2019bures}
+Rajendra Bhatia, Tanvi Jain, and Yongdo Lim.
+\newblock On the bures--wasserstein distance between positive definite
+  matrices.
+\newblock \emph{Expositiones Mathematicae}, 37\penalty0 (2):\penalty0 165--191,
+  2019.
+
+\bibitem[Figalli and Glaudo(2021)]{figalli2021invitation}
+Alessio Figalli and Federico Glaudo.
+\newblock \emph{An Invitation to Optimal Transport, Wasserstein Distances, and
+  Gradient Flows}.
+\newblock 2021.
+
+\bibitem[Folland(1999)]{folland1999real}
+Gerald~B Folland.
+\newblock \emph{Real analysis: modern techniques and their applications},
+  volume~40.
+\newblock John Wiley \& Sons, 1999.
+
+\bibitem[Malago et~al.(2018)Malago, Montrucchio, and
+  Pistone]{malago2018wasserstein}
+Luigi Malago, Luigi Montrucchio, and Giovanni Pistone.
+\newblock Wasserstein riemannian geometry of positive definite matrices.
+\newblock \emph{arXiv preprint arXiv:1801.09269}, 2018.
+
+\bibitem[Peyré and Cuturi(2019)]{gabriel2019computational}
+Gabriel Peyré and Marco Cuturi.
+\newblock Computational optimal transport: With applications to data science.
+\newblock \emph{Foundations and Trends® in Machine Learning}, 11\penalty0
+  (5-6):\penalty0 355--607, 2019.
+\newblock ISSN 1935-8237.
+
+\bibitem[Rockafellar(1970)]{rockafellar1970convex}
+R~Tyrrell Rockafellar.
+\newblock \emph{Convex analysis}, volume~18.
+\newblock Princeton university press, 1970.
+
+\bibitem[Santambrogio(2015)]{santambrogio2015optimal}
+Filippo Santambrogio.
+\newblock \emph{Optimal transport for applied mathematicians}, volume~55.
+\newblock Springer, 2015.
+
+\bibitem[Takatsu(2011)]{takatsu2011wasserstein}
+Asuka Takatsu.
+\newblock Wasserstein geometry of gaussian measures.
+\newblock \emph{Osaka Journal of Mathematics}, 48\penalty0 (4):\penalty0
+  1005--1026, 2011.
+
+\bibitem[Villani(2009)]{villani2009optimal}
+C{\'e}dric Villani.
+\newblock \emph{Optimal transport: old and new}, volume 338.
+\newblock Springer, 2009.
+
+\bibitem[Wainwright(2019)]{wainwright2019high}
+Martin~J Wainwright.
+\newblock \emph{High-dimensional statistics: A non-asymptotic viewpoint},
+  volume~48.
+\newblock Cambridge University Press, 2019.
+
+\end{thebibliography}

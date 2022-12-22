@@ -1,0 +1,18 @@
+\contentsline {section}{\numberline {1}Recall: Optimal transport problem}{2}
+\contentsline {section}{\numberline {2}Entropic regularization of optimal transport}{3}
+\contentsline {subsection}{\numberline {2.1}Entropic regularization}{3}
+\contentsline {subsection}{\numberline {2.2}Maximum entropy optimal transport}{5}
+\contentsline {subsection}{\numberline {2.3}Probability interpretation using mutual information}{5}
+\contentsline {subsection}{\numberline {2.4}Solution of maximum entropy optimal transport}{6}
+\contentsline {subsection}{\numberline {2.5}Dual problem for maximum entropy optimal transport}{7}
+\contentsline {subsection}{\numberline {2.6}Barycentric projection}{8}
+\contentsline {section}{\numberline {3}Sinkhorn's algorithm and Its convergence}{10}
+\contentsline {subsection}{\numberline {3.1}Sinkhorn's algorithm}{10}
+\contentsline {subsection}{\numberline {3.2}Numerical analysis of Sinkhorn's algorithm}{11}
+\contentsline {subsection}{\numberline {3.3}Bregman iterative projections}{12}
+\contentsline {subsection}{\numberline {3.4}Proximal point algorithm}{12}
+\contentsline {subsection}{\numberline {3.5}Convergence analysis of Sinkhorn's algorithm}{13}
+\contentsline {subsection}{\numberline {3.6}Log-domain Sinkhorn to solve the dual problem}{14}
+\contentsline {subsubsection}{\numberline {3.6.1}Sinkhorn as block coordinate ascent in dual domain}{14}
+\contentsline {subsubsection}{\numberline {3.6.2}Log-domain Sinkhorn}{14}
+\contentsline {subsection}{\numberline {3.7}Sinkhorn divergence}{15}

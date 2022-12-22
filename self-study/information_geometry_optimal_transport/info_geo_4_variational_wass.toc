@@ -1,0 +1,20 @@
+\contentsline {section}{\numberline {1}Previous lessons}{2}
+\contentsline {section}{\numberline {2}Differentiating the Wasserstein Loss}{5}
+\contentsline {subsection}{\numberline {2.1}Eulerian and Lagrangian discretization}{6}
+\contentsline {subsection}{\numberline {2.2}Automatic differentiation}{7}
+\contentsline {section}{\numberline {3}Wasserstein Barycenters and Clustering}{8}
+\contentsline {subsection}{\numberline {3.1}Discrete measures}{8}
+\contentsline {subsection}{\numberline {3.2}Arbitrary measures}{8}
+\contentsline {subsection}{\numberline {3.3}K-means as a Wasserstein variational problem}{9}
+\contentsline {subsection}{\numberline {3.4}Infinite mixtures and non-parametric Bayesian prior}{9}
+\contentsline {subsection}{\numberline {3.5}Special cases}{9}
+\contentsline {subsubsection}{\numberline {3.5.1}Barycenter of Gaussian measures is Gaussian}{9}
+\contentsline {subsubsection}{\numberline {3.5.2}1-dimensional distributions on ${\mathbb R}$}{10}
+\contentsline {subsubsection}{\numberline {3.5.3}Affine push-forward measures}{11}
+\contentsline {subsection}{\numberline {3.6}Entropic approximation}{11}
+\contentsline {subsubsection}{\numberline {3.6.1}Primal solution and generalized Sinkhorn algorithm}{12}
+\contentsline {subsubsection}{\numberline {3.6.2}Dual problem}{13}
+\contentsline {subsection}{\numberline {3.7}Wasserstein propagation}{13}
+\contentsline {section}{\numberline {4}Minimum Kantorovich Estimators}{13}
+\contentsline {subsection}{\numberline {4.1}Challenges for Maximum Likelihood Estimation}{13}
+\contentsline {subsection}{\numberline {4.2}Learning generative models with Minimum Kantorovich Estimators}{14}

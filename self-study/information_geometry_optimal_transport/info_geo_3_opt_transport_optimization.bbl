@@ -1,0 +1,50 @@
+\begin{thebibliography}{7}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Cuturi(2013)]{cuturi2013sinkhorn}
+Marco Cuturi.
+\newblock Sinkhorn distances: Lightspeed computation of optimal transport.
+\newblock \emph{Advances in neural information processing systems}, 26, 2013.
+
+\bibitem[Franklin and Lorenz(1989)]{franklin1989scaling}
+Joel Franklin and Jens Lorenz.
+\newblock On the scaling of multidimensional matrices.
+\newblock \emph{Linear Algebra and its applications}, 114:\penalty0 717--735,
+  1989.
+
+\bibitem[Li et~al.(2021)Li, Wang, Li, Pang, and Xu]{li2021hilbert}
+Qian Li, Zhichao Wang, Gang Li, Jun Pang, and Guandong Xu.
+\newblock Hilbert sinkhorn divergence for optimal transport.
+\newblock In \emph{Proceedings of the IEEE/CVF Conference on Computer Vision
+  and Pattern Recognition}, pages 3835--3844, 2021.
+
+\bibitem[Nemirovski and Rothblum(1999)]{nemirovski1999complexity}
+Arkadi Nemirovski and Uriel Rothblum.
+\newblock On complexity of matrix scaling.
+\newblock \emph{Linear Algebra and its Applications}, 302:\penalty0 435--460,
+  1999.
+
+\bibitem[Peyré and Cuturi(2019)]{gabriel2019computational}
+Gabriel Peyré and Marco Cuturi.
+\newblock Computational optimal transport: With applications to data science.
+\newblock \emph{Foundations and Trends® in Machine Learning}, 11\penalty0
+  (5-6):\penalty0 355--607, 2019.
+\newblock ISSN 1935-8237.
+
+\bibitem[Sinkhorn(1967)]{sinkhorn1967diagonal}
+Richard Sinkhorn.
+\newblock Diagonal equivalence to matrices with prescribed row and column sums.
+\newblock \emph{The American Mathematical Monthly}, 74\penalty0 (4):\penalty0
+  402--405, 1967.
+
+\bibitem[Vialard(2019)]{vialard2019elementary}
+Fran{\c{c}}ois-Xavier Vialard.
+\newblock An elementary introduction to entropic regularization and proximal
+  methods for numerical optimal transport.
+\newblock 2019.
+
+\end{thebibliography}
