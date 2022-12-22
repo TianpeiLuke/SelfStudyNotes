@@ -1,0 +1,29 @@
+\contentsline {section}{\numberline {1}Normed Linear Space}{2}
+\contentsline {section}{\numberline {2}Banach Space}{2}
+\contentsline {subsection}{\numberline {2.1}Definition and Examples}{2}
+\contentsline {subsection}{\numberline {2.2}Isomorphism and Equivalence of Norms}{4}
+\contentsline {subsection}{\numberline {2.3}Subspace of a Banach Space}{5}
+\contentsline {subsection}{\numberline {2.4}Basis and Separability}{5}
+\contentsline {subsection}{\numberline {2.5}Direct Sum of Banach Spaces}{6}
+\contentsline {subsection}{\numberline {2.6}Finite Dimensional Case}{6}
+\contentsline {section}{\numberline {3}Bounded Linear Operators on Banach Space}{8}
+\contentsline {subsection}{\numberline {3.1}Definitions and Examples}{8}
+\contentsline {subsection}{\numberline {3.2}Dual Space}{9}
+\contentsline {subsection}{\numberline {3.3}Dual Space of Compact Supported Continuous Functions}{10}
+\contentsline {subsubsection}{\numberline {3.3.1}Radon Measure}{10}
+\contentsline {subsubsection}{\numberline {3.3.2}The Riesz-Markov Representation Theorem}{11}
+\contentsline {subsubsection}{\numberline {3.3.3}Dual Space of ${\mathcal C}_0(X)$}{13}
+\contentsline {subsection}{\numberline {3.4}Adjoints of Bounded Operator}{15}
+\contentsline {section}{\numberline {4}Compactness in Banach Space}{16}
+\contentsline {subsection}{\numberline {4.1}Strong and Weak Convergence}{16}
+\contentsline {subsection}{\numberline {4.2}Weak Topology}{17}
+\contentsline {subsection}{\numberline {4.3}Weak$^{*}$ Topology}{20}
+\contentsline {section}{\numberline {5}Fundamental Theorems}{23}
+\contentsline {subsection}{\numberline {5.1}The Hahn-Banach Theorem}{23}
+\contentsline {subsubsection}{\numberline {5.1.1}Extension Form of The Hahn-Banach Theorem}{23}
+\contentsline {subsubsection}{\numberline {5.1.2}Geometric Form of The Hahn-Banach Theorem}{24}
+\contentsline {subsection}{\numberline {5.2}Baire Category Theorem}{26}
+\contentsline {subsection}{\numberline {5.3}Uniform Boundedness Theorem}{28}
+\contentsline {subsection}{\numberline {5.4}Open Mapping Theorem}{28}
+\contentsline {subsection}{\numberline {5.5}Closed Graph Theorem}{29}
+\contentsline {section}{\numberline {6}Spectrum of Bounded Linear Operator in Banach Space}{29}

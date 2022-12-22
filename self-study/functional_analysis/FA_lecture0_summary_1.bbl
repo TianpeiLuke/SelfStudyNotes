@@ -1,0 +1,50 @@
+\begin{thebibliography}{8}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Borthwick(2020)]{borthwick2020spectral}
+David Borthwick.
+\newblock \emph{Spectral Theory: Basic Concepts and Applications}, volume 284.
+\newblock Springer Nature, 2020.
+
+\bibitem[Conway(2019)]{conway2019course}
+John~B Conway.
+\newblock \emph{A course in functional analysis}, volume~96.
+\newblock Springer, 2019.
+
+\bibitem[Halmos(2017)]{halmos2017introduction}
+Paul~R Halmos.
+\newblock \emph{Introduction to Hilbert space and the theory of spectral
+  multiplicity}.
+\newblock Courier Dover Publications, 2017.
+
+\bibitem[Horn and Johnson(2012)]{horn2012matrix}
+Roger~A Horn and Charles~R Johnson.
+\newblock \emph{Matrix analysis}.
+\newblock Cambridge university press, 2012.
+
+\bibitem[Kreyszig(1989)]{kreyszig1989introductory}
+Erwin Kreyszig.
+\newblock \emph{Introductory functional analysis with applications}, volume~81.
+\newblock wiley New York, 1989.
+
+\bibitem[Lax(2002)]{lax2002functional}
+Peter~D Lax.
+\newblock \emph{Functional analysis}, volume~55.
+\newblock John Wiley \& Sons, 2002.
+
+\bibitem[Luenberger(1997)]{luenberger1997optimization}
+David~G Luenberger.
+\newblock \emph{Optimization by vector space methods}.
+\newblock John Wiley \& Sons, 1997.
+
+\bibitem[Reed and Simon(1980)]{reed1980methods}
+Michael Reed and Barry Simon.
+\newblock \emph{Methods of modern mathematical physics: Functional analysis},
+  volume~1.
+\newblock Gulf Professional Publishing, 1980.
+
+\end{thebibliography}

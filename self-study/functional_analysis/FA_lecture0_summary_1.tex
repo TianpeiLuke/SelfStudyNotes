@@ -1,0 +1,2021 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs,  mathtools, dsfont}
+\usepackage{tabularx}
+\usepackage{tikz-cd}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+\begin{document}
+\title{Lecture 0: Summary (Part 2)}
+\author{ Tianpei Xie}
+\date{ Dec. 15th., 2022 }
+\maketitle
+\tableofcontents
+\newpage
+\section{Hilbert Space}
+\begin{itemize}
+\item \begin{remark} (\emph{\textbf{Hilbert Space vs. Banach Space}})\\
+Hilbert space is a special Banach space equipped with inner product. Historically, Hilbert space appears eariler.  The theory of inner product and Hilbert spaces is richer than that of general normed and Banach spaces. \emph{\textbf{Distinguishing features}} are
+\begin{enumerate}
+\item  \textbf{\emph{representations}} of $\cH$ as a \emph{\textbf{direct sum}} of a \emph{\textbf{closed subspace}} and its \emph{\textbf{orthogonal complement}} (section 2.3),
+\item \emph{\textbf{orthonormal sets}} and sequences and corresponding \emph{\textbf{representations}} of elements of $\cH$ (section 2.5),
+\item \emph{\textbf{the Riesz representation}} of \emph{\textbf{bounded linear functionals}} by inner products, (section 2.4)
+\item \emph{\textbf{the Hilbert-adjoint operator}} $T^{*}$ of a bounded linear operator $T$ (section 2.10).
+\end{enumerate}
+\end{remark}
+\end{itemize}
+
+\subsection{Inner Product Space}
+\begin{itemize}
+\item \begin{remark}
+Finite-dimensional vector spaces have \emph{three kinds of properties} whose generalizations we will study in the next four chapters:
+\begin{enumerate}
+\item \emph{\textbf{linear} properties},
+\item \emph{\textbf{metric} properties}, 
+\item and \emph{\textbf{geometric} properties}.
+\end{enumerate}
+\emph{A \textbf{Hilbert space}} generalizes the \emph{\textbf{geometric}} property of a finite-dimensional vector space to \emph{infinite-dimensional} via definition of inner product.
+\end{remark}
+
+\item \begin{definition}
+A \emph{complex vector space} $V$ is called \emph{\textbf{an \underline{inner product space}}} if there is a \emph{complex-valued function} $\inn{\cdot}{\cdot}: V \times V \rightarrow \bC$ that satisfies the following four conditions for an $x, y, z \in V$ and $a,b \in \bC$:
+\begin{enumerate}
+\item (\textbf{\emph{Positive Definiteness}}): $\inn{x}{x} \ge 0$ and $\inn{x}{x} = 0$ if and only if $x = 0$
+\item (\textbf{\emph{Linearity}}):  $\inn{a\,x + b\,y}{z} = a\inn{x}{z} + b\inn{y}{z}$ 
+\item (\textbf{\emph{Hermitian}}):  $\inn{x}{y} = \overline{\inn{y}{x}}$
+\end{enumerate}
+The function  $\inn{\cdot}{\cdot}$  is called \emph{\textbf{an inner product}}.
+\end{definition}
+
+
+
+\item \begin{remark}
+Without ``condition $\inn{x}{x} = 0$ if and only if $x = 0$", we have \emph{\textbf{semi-inner product}} \citep{conway2019course}.
+\end{remark}
+
+\item \begin{remark}
+From \emph{Hermitian property}, we have $\inn{x}{a\,y + b\,z} =\overline{a}\, \inn{x}{y} + \overline{b}\, \inn{x}{z}$.
+\end{remark}
+
+\item \begin{remark}
+For \emph{real vector space}, an inner product is a \emph{\textbf{symmetric covariant $2$-tensor}}, or a \emph{\textbf{symmetric bilinear form}}.
+\end{remark}
+
+\item \begin{remark}
+Some books \citep{reed1980methods} define inner product via \emph{\textbf{linearity in second argument}}; while others \citep{kreyszig1989introductory, luenberger1997optimization, conway2019course} defines it in terms of \emph{\textbf{linearity in first argument}}. The difference is the position of conjugate.
+\end{remark}
+
+\item \begin{proposition}
+Every \textbf{inner product space} $V$ is a \textbf{normed linear space} with the norm $\norm{x}{} = \sqrt{\inn{x}{x}}$.
+\end{proposition}
+
+\item \begin{remark}
+We denote $\norm{x}{} = \sqrt{\inn{x}{x}}$ as \emph{the \textbf{length}} of a vector. With the definition of length, we can define the \emph{\textbf{distance}} $d$ as 
+\begin{align*}
+d(x, y) &:= \norm{x - y}{} = \sqrt{\inn{x - y}{x - y}}.
+\end{align*} As a consequence of \emph{the Pythagorean Theorem}, $d$ satisfies the triangle inequality so it is a \emph{metric}. Thus \emph{\textbf{every inner product space is a metric space}}. 
+\end{remark}
+
+\item \begin{proposition} (\textbf{Parallelogram Law}) \\
+For any $x, y \in (V, \inn{\cdot}{\cdot})$, 
+\begin{align*}
+\norm{x + y}{}^2 + \norm{x- y}{}^2 &= 2 \norm{x}{}^2 + 2\norm{y}{}^2
+\end{align*}
+\end{proposition}
+
+\item \begin{remark}
+The followings are other versions of \textbf{\emph{Parallelogram Law}}:
+\begin{align*}
+\Re \inn{x}{y} &= \frac{1}{2}\paren{\norm{x+y}{}^2 - \norm{x}{}^2 - \norm{y}{}^2}\\
+\Re \inn{x}{y} &= \frac{1}{2}\paren{\norm{x}{}^2 + \norm{y}{}^2 - \norm{x-y}{}^2 }\\
+\Re \inn{x}{y} &= \frac{1}{4}\paren{\norm{x+y}{}^2 - \norm{x - y}{}^2 } \\
+\inn{x}{y} &= \frac{1}{4}\paren{\norm{x+y}{}^2 - \norm{x - y}{}^2 + i\norm{x+ iy}{}^2 - i \norm{x - iy}{}^2} \\
+&= \Re \inn{x}{y} + i \Re \inn{x}{iy}
+\end{align*}
+\end{remark}
+
+\item The converse holds true as well.
+\begin{proposition}
+In a \textbf{normed space} $(V, \|\cdot \|)$, if \textbf{the parallelogram law}
+\begin{align*}
+\norm{x + y}{}^2 + \norm{x- y}{}^2 &= 2 \norm{x}{}^2 + 2\norm{y}{}^2
+\end{align*} holds, then there exists a \textbf{unique inner product} $\langle \cdot ,\ \cdot \rangle$ on $V$ such that $\norm{x}{} = \sqrt{\inn{x}{x}}$ for all $x \in V$.
+\end{proposition}
+
+\item \begin{remark}
+The  inner product defines the concept of \emph{\textbf{angle}} (and \emph{orthorgonality}), and \emph{\textbf{distance}}. Hence it allows the \emph{\textbf{geometric property}} of Euclidean space to be generalized.
+\end{remark}
+
+
+\item \begin{definition}
+Two vectors, $x$ and $y$, in an inner product space $V$ are said to be \emph{\textbf{orthogonal}} if $\inn{x}{y} = 0$. A collection $\{x_n\}$ of vectors in $V$ is called \emph{\textbf{an orthonormal set}} if $\inn{x_i}{x_i} = 1$ for all $i$, and $\inn{x_i}{x_j} = 0$ if $i\neq j$.
+\end{definition}
+
+\item \begin{theorem} (\textbf{Pythagorean Theorem})\\
+Let $\{x_i\}_{i=1}^{n}$ be an \textbf{orthonormal} set in an inner product space $V$. Then for all $x \in V$,
+\begin{align*}
+\norm{x}{}^2 &= \sum_{i=1}^{n}\abs{\inn{x_i}{x}}^2 + \norm{x - \sum_{i=1}^{n}\inn{x_i}{x}x_i}{}^2
+\end{align*}
+\end{theorem}
+
+\item \begin{corollary} (\textbf{Bessel's inequality})\\
+Let $\{x_i\}_{i=1}^{n}$ be an \textbf{orthonormal} set in an inner product space $V$. Then for all $x \in V$,
+\begin{align*}
+\norm{x}{}^2 &\ge \sum_{i=1}^{n}\abs{\inn{x_i}{x}}^2 
+\end{align*}
+\end{corollary}
+
+\item \begin{corollary} (\textbf{Cauchy-Schwartz's inequality})\\
+Let $V$ be an inner product space. For $x,y \in V$,
+\begin{align*}
+\abs{\inn{x}{y}} &\le \norm{x}{}\,\norm{y}{}.
+\end{align*}
+\end{corollary}
+\end{itemize}
+\subsection{Hilbert Space}
+\begin{itemize}
+\item \begin{definition}
+A \underline{\textbf{\emph{complete}}} \emph{inner product space} is called \underline{\emph{\textbf{a Hilbert space}}}. 
+
+\emph{Inner product spaces} are sometimes called \emph{\textbf{pre-Hilbert spaces}}.
+\end{definition}
+
+\item \begin{definition}
+Two Hilbert spaces $\cH_1$ and $\cH_2$ are said to be \underline{\emph{\textbf{isomorphic}}} if there is a \emph{\textbf{\underline{surjective} \underline{linear}} operator} $U: \cH_1 \rightarrow \cH_2$ such that 
+\begin{align*}
+\inn{Ux}{Uy}_{\cH_2} = \inn{x}{y}_{\cH_1}
+\end{align*}  for all $x, y \in \cH_1$. Such an operator is called \underline{\emph{\textbf{unitary}}}.
+\end{definition}
+
+item \begin{example} ($\cL^2[a, b]$)\\
+Define $\cL^2([a, b])$ to be the set of complex-valued measurable functions on $[a, b]$, a finite interval, that satisfy $\int_{[a, b]} \abs{f(x)}^2 dx < \infty$.
+We define an inner product by
+\begin{align*}
+\inn{f}{g} &= \int_{a}^{b}f(x)\overline{g(x)} dx
+\end{align*} $\cL^2([a, b])$ is a complete metric space. Actually, $\cL^2([a,b])$ is a completion of $\cC^{0}([a,b])$ with finite $\cL^2$ norm
+\begin{align*}
+\norm{f}{\cL^2} &= \paren{\int_{a}^{b} \abs{f(x)}^2 dx }^{\frac{1}{2}}
+\end{align*} Thus $\cL^2([a, b])$ is a \emph{Hilbert space}.
+\end{example}
+
+\item \begin{example} ($\ell^2$)\\
+Define $\ell^2$ to be \emph{the set of sequences $(x_n)_{n=1}^{\infty}$ of complex numbers} which satisfy $\sum_{n= 1}^{\infty}\abs{x_n}^2 < \infty$ with the inner product
+\begin{align*}
+\inn{(x_n)_{n=1}^{\infty}}{(y_n)_{n=1}^{\infty}} &= \sum_{n= 1}^{\infty}\overline{x_n}\,y_n.
+\end{align*} $\ell^2$ is a complete metric space with $\ell^2$ norm 
+\begin{align*}
+\norm{(x_n)_{n=1}^{\infty}}{2} &= \paren{\sum_{n= 1}^{\infty}\abs{x_n}^2}^{\frac{1}{2}}.
+\end{align*} So $\ell^2$ is a \emph{Hilbert space}. 
+
+We will see that any Hilbert space that has a \emph{\textbf{countable dense set}} and is \emph{\textbf{not finite dimensional}} is \emph{\textbf{isomorphic}} to $\ell^2$ In this sense, $\ell^2$ is \emph{the canonical example} of a Hilbert space.
+\end{example}
+
+\item \begin{example} ($\cL^2(\bR^n, \mu)$)\\
+Define $\mu$ to be a \emph{Borel measure} on $\bR^n$ and $\cL^2(\bR^n, \mu)$ to be the set of complex-valued measurable functions on $\bR^n$ that satisfy $\int_{\bR^n} \abs{f(x)}^2 d\mu < \infty$.
+We define an inner product by
+\begin{align*}
+\inn{f}{g} &= \int_{\bR^n}f(x)\overline{g(x)} d\mu
+\end{align*} $\cL^2(\bR^n, \mu)$ is a \emph{Hilbert space}.
+\end{example}
+\end{itemize}
+
+\subsection{The Projection Theorem}
+\begin{itemize}
+\item \begin{remark}
+\emph{\textbf{Orthogonality}} is the central concept of Hilbert space. In the presence of closed subspaces, the orthogonality allows us to decompose the Hilbert space into the direct sum of the \emph{subspace} and its \emph{orthogonal complement}.
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{Direct Sum}})\\
+Suppose that $\cH_1$ and $\cH_2$ are Hilbert spaces. Then the set of \emph{pairs} $(x, y)$ with $x \in \cH_1, y \in \cH_2$ is a \emph{Hilbert space} with \emph{inner
+product}
+\begin{align*}
+\inn{(x_1, y_1)}{(x_2, y_2)} &:= \inn{x_1}{x_2}_{\cH_1} + \inn{y_1}{y_2}_{\cH_2}
+\end{align*}
+This space is called \emph{\underline{\textbf{the direct sum}} of the spaces $\cH_1$ and $\cH_2$} and is denoted by $\cH_1 \oplus \cH_2$.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Orthogonal Complement}})\\
+Let $\cM \subseteq \cH$ is a \emph{\textbf{closed}} \emph{linear subspace} of Hilbert space $\cH$ with \emph{induced inner product} $\inn{}{}$ (i.e. $\inn{x}{y}_{\cM} = \inn{x}{y}_{\cH}$ for all $x, y \in \cM$). $\cM$ is also a \emph{Hilbert space}.
+
+We denote by $\cM^{\bot}$ the set of vectors in $\cH$ which are \emph{orthogonal} to $\cM$;  $\cM^{\bot}$ is called \emph{\textbf{the \underline{orthogonal complement} of $\cM$}}. It follows from the linearity of the inner product that $\cM^{\bot}$ is a \emph{linear subspace} of $\cH$ and an elementary argument shows that $\cM^{\bot}$ is \emph{closed}. So $\cM^{\bot}$ is also a \emph{Hilbert space}.
+\end{definition}
+
+\item \begin{remark}
+The following theorem is going to show that 
+\begin{align*}
+\cH = \cM \oplus \cM^{\bot} = \set{x+y: x\in \cM, y \in \cM^{\bot}, \text{ i.e. }\inn{x}{y} = 0}.
+\end{align*}
+This important geometric property is one of the main reasons that Hilbert spaces are \emph{\textbf{easier}} to handle than Banach spaces.
+\end{remark}
+
+\item \begin{lemma}
+Let $\cH$ be a Hilbert space, $\cM$ a closed subspace of $\cH$, and suppose $x \in \cH$. Then there exists in $\cM$ a \textbf{unique} element $z$ \textbf{closest} to $x$.
+\end{lemma}
+
+
+\item \begin{theorem} (\textbf{The Projection Theorem})\\
+Let $\cH$ be a Hilbert space, $\cM$ a closed subspace. Then every $x \in \cH$ can be \textbf{uniquely} written $x = z + w$ where $z \in \cM$ and $w \in \cM^{\bot}$.
+\end{theorem}
+
+\item \begin{remark}
+The projection theorem sets up a natural \emph{isomorphism} $\cM \oplus \cM^{\bot} \rightarrow \cH $ given by
+\begin{align*}
+(z, w) \mapsto z + w
+\end{align*}
+We will often suppress the isomorphism and simply write $\cH = \cM \oplus \cM^{\bot}$.
+\end{remark}
+
+\end{itemize}
+
+\subsection{Orthonormal Bases}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Complete Orthonormal Basis}})\\
+If $S$ is \emph{an orthonormal set} in a Hilbert space $\cH$ and \emph{no other orthonormal set} contains $S$ as a proper subset, then $S$ is called \emph{an \underline{\textbf{orthonormal basis}}} (or a \emph{\textbf{complete orthonormal system}}) for $\cH$.
+\end{definition}
+
+\item \begin{theorem} (\textbf{Existence of Orthonormal Basis})\\
+Every Hilbert space $\cH$ has an \textbf{orthonormal basis}.
+\end{theorem}
+
+\item \begin{proposition} (\textbf{Orthogonal Representation of Element in Hilbert Space})\\
+Let $\cH$ be a Hilbert space and $S = (x_{\alpha})_{\alpha \in A}$ an \textbf{orthonormal basis}. Then for each $y \in \cH$,
+\begin{align}
+y &= \sum_{\alpha \in A}\inn{y}{x_{\alpha}}x_{\alpha} \label{eqn: hilbert_space_orthorgonal_representation}
+\end{align}
+and
+\begin{align}
+\norm{y}{\cH} &= \sum_{\alpha \in A}\abs{\inn{y}{x_{\alpha}}}^2 \label{eqn: hilbert_space_norm_representation}
+\end{align}
+The equality in \eqref{eqn: hilbert_space_orthorgonal_representation} means that the sum on the right-hand side converges (independent of order) to $y$ in $\cH$. \textbf{Conversely}, if $\sum_{\alpha \in A}\abs{c_{\alpha}}^2 < \infty$,  $c_{\alpha} \in \bC$, then
+$\sum_{\alpha \in A}c_{\alpha} x_{\alpha}$ converges to an element of $\cH$.
+\end{proposition}
+
+\item \begin{remark}
+From Bessel's inequality, we already seen that for any finite collection $A'$ of $x_{\alpha}$, we have $\sum_{\alpha \in A'}\abs{\inn{y}{x_{\alpha}}}^2 \le \norm{y}{\cH}$. The main difficulty is on how to prove convergence of $\sum_{n=1}^{N}\abs{\inn{y}{x_{n}}}^2 $ as $N\rightarrow \infty$. Similarly we need to prove that $y-  \sum_{n=1}^{m}\inn{y}{x_{\alpha_n}}x_{\alpha_n}$ is still orthogonal to $x_{\alpha}$ as $m \rightarrow \infty$. 
+\end{remark}
+
+\item \begin{remark}
+The unique coefficients $(\inn{y}{x_{\alpha}})$ is called \emph{\textbf{the Fourier coefficients of $y$} with respect to basis $(x_{\alpha})$}.
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Gram-Schmidt Orthogonalization}})\\
+Given \emph{any set of independent vectors} $(v_1, v_2, \ldots)$. we can construct \emph{an orthonormal basis} $(b_1, b_2, \ldots)$ via
+\begin{align*}
+b_1 &= \frac{v_1}{\norm{v_1}{}}\\
+b_j &= \frac{v_j - \sum_{i=1}^{j-1}\inn{v_j}{b_i}b_i}{\norm{v_j - \sum_{i=1}^{j-1}\inn{v_j}{b_i}b_i}{}}, \quad j\ge 2
+\end{align*} Thus $\text{span}\set{v_1, \xdotx{,} v_m} = \text{span}\set{b_1, \xdotx{,} b_m}$ for all $m \ge 1$.
+\end{remark}
+\end{itemize}
+\subsection{Separability}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Separability}})\\
+A \emph{metric space} which has a \underline{\emph{\textbf{countable dense subset}}} is said to be \underline{\emph{\textbf{separable}}}.
+\end{definition}
+
+\item \begin{remark}
+Most Hilbert space we have seen is separable.
+\end{remark}
+
+\item \begin{proposition} (\textbf{Canonical Hilbert Space})\\
+A Hilbert space $\cH$ is \textbf{separable} if and only if it has a \textbf{countable orthonormal basis} $S$. If there are $N < \infty$ elements in $S$, then $\cH$ is
+\textbf{isomorphic} to $\bC^N$, If there are \textbf{countably many} elements in $S$, then $\cH$ is \textbf{isomorphic} to $\ell^{2}$.
+\end{proposition}
+
+\item \begin{remark}
+Consider the map $v \mapsto (\inn{v}{x_{n}})_{n=1}^{\infty}$ for orthonormal basis $(x_n)_{n=1}^{\infty}$ as the isomorphism $\cH \rightarrow \ell^2$.
+\end{remark}
+
+\item \begin{remark}
+Notice that in the separable case, \emph{the Gram-Schmidt process} anows us to construct an orthonormal basis without using \emph{Zorn's lemma}.
+\end{remark}
+\end{itemize}
+
+\section{Bounded Linear Operator}
+\subsection{The Riesz Representation Theorem}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Bounded Linear Operator}})\\
+A \underline{\emph{\textbf{bounded linear transformation}}} (or \emph{\textbf{bounded operator}}) is a mapping $T: (X, \norm{\cdot}{X}) \rightarrow (Y, \norm{\cdot}{Y})$ from a normed linear space $X$ to a normed linear space $Y$ that satisfies 
+\begin{enumerate}
+\item (\emph{\textbf{Linearity}}) $T(\alpha x + \beta y) = \alpha T(x) + \beta T(y)$ for all $x, y \in X$, $\alpha, \beta \in \bR$ or $\bC$
+\item (\emph{\textbf{Boundedness}}) $\norm{Tx}{Y} \le C\,\norm{x}{X}$ for small $C \ge 0$.
+\end{enumerate} The smallest such $C$ is called \underline{\emph{the \textbf{norm} of $T$}}, written $\norm{T}{}$ or $\norm{T}{X, Y}$. Thus
+\begin{align*}
+\norm{T}{} &:= \sup_{\norm{x}{X} = 1 }\norm{Tx}{Y}
+\end{align*}
+\end{definition}
+
+\item \begin{remark}
+Denote the space of \emph{\textbf{all bounded linear operator}} between Hilbert space $\cH_1$ and $\cH_2$ as $\cL(\cH_1, \cH_2)$. The space $\cL(\cH_1, \cH_2)$ is linear space with norm 
+\begin{align*}
+\norm{T}{} &:= \sup_{\norm{x}{\cH_1} = 1 }\norm{Tx}{\cH_2}, \quad \forall T \in \cL(\cH_1, \cH_2).
+\end{align*} It can be shown that $\cL(\cH_1, \cH_2)$ is a \emph{complete normed space (i.e. a Banach space)}.
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{Dual Space}})\\
+The space $\cL(\cH, \bC)$ is called the \underline{\emph{\textbf{dual space}}} of $\cH$ and is denoted by $\cH^{*}$. The elements of $\cH^{*}$ are called \underline{\emph{\textbf{continuous linear functionals}}}. That is, the dual space $\cH^{*}$ is the space of \emph{continuous linear functionals} on $\cH$. 
+\end{definition}
+
+\item \begin{remark}
+The \emph{dual space} $\cH^{*}$ is also called \emph{\textbf{covector space}} with respect to a vector space $\cH$ and the linear functionals are called \emph{\textbf{covectors}}. This terms are mostly used in \emph{differential geometry} when the vector space is \emph{the tangent space}.
+\end{remark}
+
+\item \begin{theorem} (\textbf{The Riesz Representation Theorem}) \citep{reed1980methods, kreyszig1989introductory, conway2019course} \\
+For each $T \in \cH^{*}$, there is a \textbf{unique} $y_{T} \in \cH$ such that 
+\begin{align*}
+T(x) &= \inn{x}{y_T}
+\end{align*} for all $x \in \cH$. In addition $\norm{y_{T}}{\cH} = \norm{T}{\cH^{*}}$.
+\end{theorem}
+
+\item \begin{remark}
+\emph{The Riesz Representation Theorem} \citep{conway2019course, kreyszig1989introductory} is also called \emph{\textbf{The Riesz Lemma}} \citep{reed1980methods}.
+\end{remark}
+
+\item \begin{remark}
+We note that \emph{the Cauchy-Schwarz inequality} shows that the \emph{\textbf{converse}} of \emph{the Riesz Representation Theorem} is \emph{\textbf{true}}. Namely, each $y \in \cH$ defines \emph{a continuous linear functional} $T_y$ on $\cH^{*}$ by
+\begin{align*}
+T_y(x) &= \inn{x}{y}.
+\end{align*}
+Thus \emph{the Riesz Representation Theorem} together with \emph{the Cauchy-Schwarz inequality} defines an \underline{\emph{\textbf{isomorphism}}  $\cH^{*} \rightarrow \cH$} between a Hilbert space $\cH$ and its dual $\cH^{*}$. In other words, unlike the case in Banach space, the bounded linear functional on Hilbert space has a simple form.
+\end{remark}
+
+\item \begin{corollary} (\textbf{The Riesz Representation for Sesquilinear Form})\\
+Let $B(\cdot, \cdot)$ be a function from $\cH \times  \cH$ to $\bC$ which satisfies:
+\begin{enumerate}
+\item (\textbf{Linearity}) $B(\alpha x + \beta y, z) = \alpha B(x, z) + \beta B(y, z)$
+\item (\textbf{Conjugate Linearity}) $B(x, \alpha y + \beta z) = \overline{\alpha} B(x, y) + \overline{\beta} B(x, z)$
+\item (\textbf{Boundedness}) $\abs{B(x, y)} \le C\,\norm{x}{\cH}\,\norm{y}{\cH} $
+\end{enumerate} for all $x, y, z \in \cH$, $\alpha, \beta \in \bC$. Then there is a \textbf{unique bounded linear transformation} $A: \cH \rightarrow \cH$ so that
+\begin{align*}
+B(x, y) = \inn{x}{Ay}
+\end{align*} for all $x, y \in \cH$. The \textbf{norm} of $A$ is the smallest constant $C$ such that (3) holds.
+\end{corollary}
+
+\item \begin{remark}
+A bilinear function on $\cH$ obeying (1) and (2) is called a \underline{\emph{\textbf{sesquilinear form}}} (as a generalization of \emph{\textbf{bilinear form}} in complex vector space). 
+
+In terms of this, an inner product in complex vector space is \emph{\textbf{a complex \underline{Hermitian form}}} (also called a \underline{\emph{\textbf{symmetric sesquilinear form}}}).
+\end{remark}
+\end{itemize}
+\subsection{Hilbert Adjoint Operator}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Hilbert Space Adjoint}})\\
+Let $T: \cH_{1} \rightarrow \cH_{2}$ be a \emph{bounded linear operator}, where $\cH_1$ and $\cH_2$ are \emph{Hilbert spaces}. Then \underline{\emph{\textbf{the Hilbert-adjoint operator}}} $T^{*}$ of $T$ is the operator
+\begin{align*}
+T^{*}: \cH_2 \rightarrow \cH_1
+\end{align*} such that for all $x \in \cH_1$ and $y \in \cH_2$,
+\begin{align}
+\inn{Tx}{y}_{\cH_2} &= \inn{x}{T^{*}y}_{\cH_1} \label{eqn: hilbert_space_adjoint}
+\end{align}
+\end{definition}
+
+%\item \begin{remark}
+%In general, \emph{\textbf{an adjoint operator}} is a bounded linear operator from dual space $\cH_2^{*} \rightarrow \cH_1^{*}$.
+%\end{remark}
+
+\item \begin{proposition} (\textbf{Existence of Adjoint Operator}) \citep{kreyszig1989introductory}\\
+The Hilbert-adjoint operator $T^{*}$ of $T$ \textbf{exists}, is \textbf{unique} and is a \textbf{bounded linear operator} with norm
+\begin{align*}
+\norm{T^{*}}{} &= \norm{T}{}.
+\end{align*}
+\end{proposition}
+
+\item \begin{lemma}  (\textbf{Zero operator}). \citep{kreyszig1989introductory}
+Let $X$ and $Y$ be inner product spaces and $Q: X \rightarrow Y$ a bounded linear operator. Then:
+\begin{enumerate}
+\item $Q = 0$ if and only if $\inn{Qx}{y} = 0$ for all $x \in X$ and $y \in Y$.
+\item If $Q: X \rightarrow X$, where $X$ is complex, and $\inn{Qx}{x}= 0$ for all $x \in X$, then $Q=0$.
+\end{enumerate}
+\end{lemma}
+
+\item \begin{proposition} (\textbf{Properties of Hilbert-adjoint operators}).  \citep{reed1980methods, kreyszig1989introductory}\\
+Let $\cH_1$, $\cH_2$ be Hilbert spaces, $S: \cH_1 \rightarrow \cH_2$ and $T: \cH_1 \rightarrow \cH_2$ bounded linear operators and $\alpha$ any scalar. Then we have
+\begin{enumerate}
+\item $\inn{T^{*}y}{x} = \inn{y}{Tx}$,  ($x \in H_1,  y \in \cH_2$)
+\item $ (S + T)^{*} = S^{*} + T^{*}$
+\item $(\alpha T)^{*} = \alpha T^{*}$
+\item $(T^{*})^{*} = T$
+\item $\norm{T^{*}T}{} = \norm{TT^{*}}{} = \norm{T}{}^2$
+\item $T^{*}T =0 \Leftrightarrow T=0$
+\item $(ST)^{*}= T^{*}S^{*}$  (assuming $\cH_2 = \cH_1$)
+\item If $T$ has a \textbf{bounded inverse},  $T^{-1}$, then $T^*$ has a \textbf{bounded inverse} and $(T^{*})^{-1} = (T^{-1})^{*}$.
+\end{enumerate}
+\end{proposition}
+\end{itemize}
+
+\subsection{Self-Adjoint, Unitary and Normal Operators}
+\begin{itemize}
+\item \begin{definition}
+A \textbf{\emph{bounded linear operator}} $T: \cH \rightarrow \cH$ on a Hilbert space $\cH$ is said to be
+\begin{enumerate}
+\item \underline{\emph{\textbf{self-adjoint}}} or \underline{\emph{\textbf{Hermitian}}} if
+\begin{align*}
+T^{*} = T \quad \Leftrightarrow \quad \inn{Tx}{y} = \inn{x}{Ty}
+\end{align*}
+\item \underline{\emph{\textbf{unitary}}} if $T$ is \emph{bijective} and
+\begin{align*}
+T^{*} = T^{-1} 
+\end{align*}
+\item \underline{\emph{\textbf{normal}}} if
+\begin{align*}
+T^{*}T = TT^{*}
+\end{align*}
+\end{enumerate}
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Projection Operator}})\\
+If $P \in \cL(\cH)$ and $P^2 = P$, then $P$ is called a \underline{\emph{\textbf{projection}}}. If in addition $P = P^*$, then $P$ is called an \underline{\emph{\textbf{orthogonal projection}}}. 
+\end{definition}
+
+\item \begin{remark}
+If $T$ is \emph{\textbf{self-adjoint}} and \emph{\textbf{unitary}}, then $T$ is \emph{\textbf{normal}}.
+\end{remark}
+
+\item \begin{remark}
+If a basis for $\bC^n$ is given and \emph{a \textbf{linear operator}} on $\bC^n$ is represented by a certain \emph{\textbf{matrix}}, then its \emph{\textbf{Hilbert-adjoint operator}} is represented by the \emph{\textbf{complex conjugate transpose}} of that matrix. For $\bR^n$, then the  \emph{\textbf{Hilbert-adjoint operator}} is represented by the \emph{\textbf{transpose}} of that matrix
+\end{remark}
+
+\item \begin{remark}
+Similarly we have
+\begin{enumerate}
+\item The matrix representation for \emph{self-adjoint operator} is \emph{\textbf{Hermitian}} or \emph{\textbf{Symmetric}}. 
+\begin{align*}
+T^{*} = T \quad \Leftrightarrow \quad \mb{T}^{H} =\mb{T}\; (\text{ or for real vector space } \mb{T}^{T} =\mb{T})
+\end{align*}
+\item The matrix representation for \emph{unitary operator} is \emph{\textbf{unitary}} or \emph{\textbf{orthogonal}}. 
+\begin{align*}
+T^{*} = T^{-1} \quad \Leftrightarrow \quad \mb{T}^{H} =\mb{T}^{-1}\; (\text{ or for real vector space } \mb{T}^{T} =\mb{T}^{-1})
+\end{align*}
+\item The matrix representation for \emph{normal operator} is \emph{\textbf{normal}}. 
+\begin{align*}
+T^{*}T = TT^{*} \quad \Leftrightarrow \quad \mb{T}^{H}\mb{T} =\mb{T} \mb{T}^{H}\; (\text{ or for real vector space } \mb{T}^{T}\mb{T} =\mb{T} \mb{T}^{T})
+\end{align*}
+\end{enumerate}
+\end{remark}
+
+\item \begin{proposition} (\textbf{Self-adjointness}).  \citep{kreyszig1989introductory} \\
+ Let $T: \cH \rightarrow \cH$ be a bounded linear operator on a Hilbert space $\cH$. Then:
+ \begin{enumerate}
+ \item If $T$ is \textbf{self-adjoint}, $\inn{Tx}{x}$ is \textbf{real} for all $x \in \cH$.
+ \item If $\cH$ is complex and $\inn{Tx}{x}$ is \textbf{real} for all $x \in \cH$, the operator $T$ is\textbf{ self-adjoint}
+ \end{enumerate}
+\end{proposition}
+
+\item \begin{proposition}(\textbf{Self-adjointness of product}).  \citep{kreyszig1989introductory} \\
+The product of two bounded \textbf{self-adjoint} linear operators $S$ and $T$ on a Hilbert space $\cH$ is \textbf{self-adjoint} if and only if the operators \textbf{commute},
+\begin{align*}
+ST=TS.
+\end{align*}
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Sequences of self-adjoint operators}). \citep{kreyszig1989introductory}\\
+ Let $(T_n)$ be a sequence of \textbf{bounded self-adjoint} linear operators $T_n: \cH \rightarrow \cH$ on a Hilbert space $\cH$. Suppose that $(T_n)$ converges, say,
+ \begin{align*}
+ T_n \rightarrow T, \quad \text{ i.e. } \norm{T_n - T}{} \rightarrow 0
+ \end{align*}
+where $\norm{\cdot}{}$ is the norm on the space $\cL(\cH, \cH)$. Then the limit operator $T$ is a \textbf{bounded self-adjoint} linear operator on $H$.
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Unitary operator}). \citep{kreyszig1989introductory}\\
+Let the operators $U: \cH \rightarrow \cH$ and $V: \cH \rightarrow \cH$ be \textbf{unitary}; here, $\cH$ is a Hilbert space. Then:
+\begin{enumerate}
+\item $U$ is \textbf{isometric}; thus $\norm{Ux}{} = \norm{x}{}$ for all $x \in \cH$;
+\item $\norm{U}{}= 1$, provided $\cH \neq \{0\}$,
+\item $U^{-1}= U^{*}$ is \textbf{unitary},
+\item $UV$ is unitary,
+\item $U$ is normal.
+\item A bounded linear operator $T$ on a complex Hilbert space $\cH$ is \textbf{unitary} if and only if $T$ is \textbf{isometric} and \textbf{surjective}.
+\end{enumerate}
+\end{proposition}
+
+\item \begin{remark}
+Note that an \emph{\textbf{isometric operator}} need not be \emph{unitary} since it may fail to be \emph{\textbf{surjective}}. An example is the \emph{right shift operator} $T: \ell^2 \rightarrow \ell^2$ given by
+\begin{align*}
+(\xi_1, \xi_2, \xi_3, \ldots) \mapsto (0, \xi_1, \xi_2, \xi_3, \ldots).
+\end{align*}
+\end{remark}
+\end{itemize}
+
+\section{Spectrum of Bounded Linear Operator in Hilbert Space}
+\subsection{Finite Dimensional Case}
+\begin{itemize}
+\item \begin{remark} (\emph{\textbf{Eigenvalues} of Linear Transformation in \textbf{Finite Dimensional Space}})\\
+If $Τ$ is a linear transformation on $\bC^n$, then the \emph{\textbf{eigenvalues}} of $Τ$ are the  complex numbers $\lambda$ such that the \emph{\textbf{determinant}} (called \emph{\textbf{the characteristic determinant}} )
+\begin{align*}
+\det\paren{\lambda I - T} = 0.
+\end{align*} The set of such $\lambda$ is called \emph{\textbf{the spectrum of $T$}}. It can consist of \emph{\textbf{at most} $n$ points}, since $\det\paren{\lambda I - T}$ is \emph{a \textbf{polynomial} of degree $n$}, called \emph{\textbf{the characteristic polynomial} of $T$}.
+\end{remark}
+
+\item \begin{remark}
+If $\lambda$ is \emph{\textbf{not an eigenvalue}}, then $\lambda I - T$ \emph{\textbf{has an inverse}} since 
+\begin{align*}
+\det\paren{\lambda I - T} \neq 0.
+\end{align*} 
+\end{remark}
+
+\item \begin{proposition} (\textbf{Invariance of Eigenvalue under Change of Basis}) \citep{kreyszig1989introductory}\\
+All matrices representing a given linear operator $T: X \rightarrow X$ on a \textbf{finite dimensional normed space} $X$ relative to various bases for $X$ have the \textbf{same eigenvalues}.
+\end{proposition}
+
+\item \begin{theorem} (\textbf{The Existence of Eigenvalues}).  \citep{kreyszig1989introductory}\\
+A linear operator on a \textbf{finite dimensional} complex normed space $X \neq \set{0}$ has \textbf{at least one eigenvalue}.
+\end{theorem}
+\end{itemize}
+
+\subsection{Infinite Dimensional Case}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Resolvent} and \textbf{Spectrum}})\\
+Let $T \in \cL(X)$. A complex number $\lambda$ is said to be in \underline{\emph{\textbf{the resolvent set} $\rho(T)$ of $T$}} if  
+\begin{align*}
+\lambda I - T 
+\end{align*} is a \underline{\emph{\textbf{bijection}}} with a \underline{\emph{\textbf{bounded inverse}}}. 
+\begin{align*}
+R_{\lambda}(T) &:= \paren{\lambda I - T }^{-1}
+\end{align*} is called \underline{\emph{\textbf{the resolvent} of  $T$ at $\lambda$}}. Note that $R_{\lambda}(T)$ is defined on $\text{Ran}\paren{\lambda I - T }$.
+
+If $\lambda \not\in \rho(T)$, then $\lambda$ is said  to be in the \underline{\emph{\textbf{spectrum $\sigma(T)$ of $T$}}}. 
+\end{definition}
+
+\item \begin{remark}
+The name ``\emph{\textbf{resolvent}}" is appropriate, since $R_{\lambda}(T)$ helps to solve
+the equation $\paren{\lambda I - T }x = y$. Thus, $x = \paren{\lambda I - T  }^{-1}y =R_{\lambda}(T)y$ provided $R_{\lambda}(T)$ exists.
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{Point Spectrum}, \textbf{Continuous Spectrum} and \textbf{Residual Spectrum}})\\
+Let  $T \in \cL(X)$
+\begin{enumerate}
+\item  \underline{\emph{\textbf{Point Spectrum}}}: An $x \neq 0$ which satisfies 
+\begin{align*}
+&Tx = \lambda x\\
+\text{ or } &\paren{\lambda I - T }x = 0, \quad \text{for some $\lambda \in \bC$}
+\end{align*} is called an \underline{\emph{\textbf{eigenvector} of $T$}}; $\lambda$ is called \underline{\emph{\textbf{the corresponding eigenvalue}}}. 
+
+If $\lambda$ is an \emph{eigenvalue}, then $\paren{\lambda I - T }$ is \emph{\textbf{not injective}} (i.e. $\text{Ker}\paren{\lambda I - T } \neq \set{0}$) so $\lambda$ is \emph{in the spectrum of $T$}. \emph{\textbf{The set of all eigenvalues}} is called \underline{\emph{\textbf{the point spectrum of $T$}}}. It is denoted as $\sigma_{p}(T)$. 
+
+\item \underline{\textbf{\emph{Continuous Spectrum}}}: If $\lambda$ is \emph{\textbf{not an eigenvalue}} and if $\text{Ran}\paren{\lambda I - T }$ is \emph{\textbf{dense}} but the resolvent $R_{\lambda}(T)$ is \emph{\textbf{unbounded}}, then $\lambda$ is said to  be in \underline{\emph{\textbf{the continuous spectrum}}}. It is denoted as $\sigma_{c}(T)$. 
+
+\item \underline{\textbf{\emph{Residual Spectrum}}}: If $\lambda$ is \emph{\textbf{not an eigenvalue}} and if $\text{Ran}\paren{\lambda I - T }$ is \emph{\textbf{not dense}}, then $\lambda$ is said to  be in \underline{\emph{\textbf{the residual spectrum}}}. It is denoted as $\sigma_{r}(T)$. 
+\end{enumerate} 
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Pure Point Spectrum for Finite Dimensional Case}})\\
+If $X$ is \emph{\textbf{finite dimensional} normed linear space}, $T \in \cL(X)$ then $\sigma_{c}(T) = \sigma_{r}(T) = \emptyset$.
+\end{remark}
+
+\begin{table}[h!]
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\belowdisplayskip}{-10pt}
+\setlength{\abovedisplayshortskip}{0pt}
+\setlength{\belowdisplayshortskip}{0pt}
+\footnotesize
+\centering
+\caption{Comparison between different subset of spectrums and resolvent set}
+\label{tab: spectrums}
+%\setlength{\extrarowheight}{1pt}
+\renewcommand\tabularxcolumn[1]{m{#1}}
+\small
+\begin{tabularx}{1\textwidth} { 
+  | >{\raggedright\arraybackslash} m{3cm}
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X  | }
+ \hline
+  &  \emph{\textbf{point spectrum $\sigma_{p}(T)$}} & \emph{\textbf{continuous spectrum $\sigma_{c}(T)$}}   &  \emph{\textbf{residual spectrum $\sigma_{r}(T)$}}   & \emph{\textbf{resolvent set $\rho(T)$}} \\
+  \hline 
+\emph{$R_{\lambda}(T)$ \textbf{exists}}    & $\times$  &  $\checkmark$ & $\checkmark$ & $\checkmark$ \\
+ \hline \vspace{5pt}
+\emph{$R_{\lambda}(T)$ is \textbf{bounded}}  \vspace{2pt} &   $\times$   &  $\times$   & $-$  & $\checkmark$  \\
+ \hline \vspace{5pt}
+\emph{$R_{\lambda}(T)$ is defined in a \textbf{dense} subset of $Y$}  \vspace{2pt} &   $\times$   & $\checkmark$  &  $\times$   & $\checkmark$  \\
+\hline
+\end{tabularx}
+\end{table}
+
+\item \begin{remark} (\emph{\textbf{Partition} of Complex Space $\bC$})\\
+All four sets above are disjoint and they forms a partition of $\bC$
+\begin{align*}
+\bC &= \rho(T) \cup \sigma(T)\\
+&=  \rho(T) \cup \sigma_{p}(T) \cup \sigma_{c}(T) \cup \sigma_{r}(T).
+\end{align*} We will prove this later.
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Some Special Case}})
+\begin{enumerate}
+\item If $X$ \emph{\textbf{finite dimensional}}, $\bC = \rho(T) \cup  \sigma_{p}(T) $ since  $\sigma_{c}(T) = \sigma_{r}(T) = \emptyset$.
+\item If $T \in \cL(\cH)$ and $T$ is \emph{\textbf{self-adjoint}},  $\bC = \rho(T) \cup  \sigma_{p}(T) \cup  \sigma_{c}(T) $  since $\sigma_{r}(T) = \emptyset$.
+\item If $T \in \cL(\cH)$ and $T$ is \emph{\textbf{self-adjoint and compact}}, $\bC = \rho(T) \cup  \sigma_{p}(T)$
+\end{enumerate}
+\end{remark}
+
+\item \begin{remark}
+If $X$ is a function space, the \emph{eigenvectors} of \emph{linear operator} $T$ is called the \emph{\textbf{eigenfunctions}} of $T$.
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{Eigenspace of Linear Operator}})\\
+The subspace of domain $D(T)$ consisting of $\{0\}$ and \emph{\textbf{all eigenvectors}} of $T$ corresponding to \emph{an eigenvalue} $\lambda$ of $T$ is
+called  \underline{\textbf{\emph{the eigenspace of $T$}}} corresponding to that eigenvalue $\lambda$.
+\end{definition}
+\end{itemize}
+
+
+\section{Spectrum of Compact Operator}
+\subsection{Compact Operators}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Kernel of Integral Operator}})\\
+Consider the simple operator $T_{K}$, defined in $\cC[0, 1]$ by 
+\begin{align*}
+(T_{K}f)(x) = \int_{0}^{1} K(x, y)f(y) dy,
+\end{align*} where the function $K(x, y)$ is \emph{continuous} on the square $0\le x, y \le 1$.  $T_{K}$ is called an \underline{\emph{\textbf{integral kernel operator}}} and $K(x, y)$ is called \emph{the \underline{\textbf{kernel}} of the integral operator $T_K$}. 
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Properties of Integral Kernel Operator}})\\
+We summary some important property of the integral kernel operator $T_K$:
+\begin{enumerate}
+\item $T_K$ is \emph{\textbf{bounded linear operator}} on $\cC[0,1]$.
+\begin{align*}
+\abs{(T_{K}f)(x)} &\le \paren{\sup_{(x,y) \in [0,1]\times [0,1]}\abs{K(x,y)}}\paren{\sup_{y\in [0,1]}\abs{f(y)}}\\
+\Rightarrow \norm{T_K f}{\infty} & \le \paren{\sup_{(x,y) \in [0,1]\times [0,1]}\abs{K(x,y)}}\norm{f}{\infty}
+\end{align*}
+
+\item For $K^{*}(x, y) := \overline{K(y, x)}$, 
+\begin{align*}
+(T_{K})^{*} &= T_{K^{*}}
+\end{align*}
+
+\item Let $B_M$ denote the functions $f$ in $\cC[0, 1]$ such that $\norm{f}{\infty} \le M$, i.e. closed $\norm{}{\infty}$-ball in $\cC[0, 1]$
+\begin{align*}
+B_M := \set{f \in \cC[0, 1]: \norm{f}{\infty} \le M}
+\end{align*} \emph{The set of functions} $T_K(B_M) := \set{T_{K}f: f\in B_M}$ is \emph{\textbf{equicontinuous}}.
+\begin{proof}
+Since $K(x, y)$ is \emph{continuous} on the \textit{compact} set $[0,1]\times [0,1]$, $K(x, y)$ is \emph{uniformly continuous}. Thus, given an $\epsilon > 0$, we can find  $\delta > 0$ such that $\abs{x - x'} < \delta$ implies $\abs{K(x, y) - K(x', y) } < \epsilon$ for all $y \in  [0, 1]$. 
+Thus, for all $f \in B_M$
+\begin{align*}
+\abs{(T_{K}f)(x) - (T_{K}f)(x')} & \le \paren{\sup_{(x,y) \in [0,1]\times [0,1]}\abs{K(x,y) - K(x', y)}}\norm{f}{\infty} \\
+& \le \epsilon M. \qed
+\end{align*} 
+\end{proof}
+
+\item Moreover, \underline{$T_K(B_M) := \set{T_{K}f: f\in B_M}$ is \emph{\textbf{precompact}} in $\cC[0,1]$}, i.e. its closure $\overline{T_K(B_M)}$ is \emph{\textbf{compact}}. In other word, for every sequence $f_n \in B_M$, the \emph{sequence} $T_K f_n$  has a \emph{\textbf{convergent subsequence}}. 
+
+This follows from the fact that $T_K(B_M)$ is \emph{equicontinuous} and \emph{uniformly bounded} by $\norm{T_{K}}{}M$. So by \emph{the Ascoli's theorem}, we have the result.
+
+\item The \emph{operator norm} of $T_K$ is \emph{bounded above} by the \emph{$L^2$ norm} of kernel function $K$
+\begin{align*}
+\norm{T_K}{} \le \norm{K}{L^2}
+\end{align*}
+
+\item The eigenfunctions of $T_K$ $\{\varphi_n\}_{n=1}^{\infty}$ forms a complete orthonormal basis in $L^2(M, \mu)$.  
+\begin{align*}
+K(x,y) &= \sum_{n=1}^{\infty}\lambda_{n}\varphi_n(x)\overline{\varphi_n(y)}
+\end{align*} where $\lambda_n$ is the eigenvalue corresponding to eigenfunction $\varphi_n$.
+\end{enumerate}
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{Compact Operator}})\\
+Let $X$ and $Y$ be \emph{Banach spaces}. An operator $T \in \cL(X, Y)$ is called \underline{\emph{\textbf{compact}}} (or \underline{\emph{\textbf{completely}}} \underline{\emph{\textbf{continuous}}}) if $T$ takes \emph{\textbf{bounded sets}} in $X$ into \emph{\textbf{precompact sets}} in $Y$. 
+
+\emph{Equivalently}, $T$ is \emph{\textbf{compact}} if and only if for every \emph{\textbf{bounded} sequence} $\set{x_n} \subseteq X$, $\set{T x_n}$ has a \emph{\textbf{subsequence convergent}} in $Y$. 
+\end{definition}
+
+\item \begin{example} (\emph{\textbf{Finite Rank Operators}}) \\
+Suppose that \emph{the \textbf{range} of $T$ is \textbf{finite  dimensional}}. That is, every vector in the range of $T$ can be written 
+\begin{align*}
+T x = \sum_{i=1}^{n}\alpha_i y_i,
+\end{align*} for some fixed family $\{y_i\}_{i=1}^{n}$ in $Y$. If $x_n$ is any \emph{bounded sequence} in $X$, the corresponding $\alpha_i^{(n)}$ are \emph{bounded} since $T$ is \emph{bounded}. The usual subsequence trick allows one to extract a \emph{convergent subsequence} from $\set{T x_n}$ which proves that $T$ is \emph{compact}. \qed
+\end{example}
+
+\item An important property of the compact operator is 
+\begin{theorem} (\textbf{Weakly Convergent $+$ Compact Operator $=$ Uniformly Convergent}) \citep{reed1980methods}\\
+A \textbf{compact} operator maps \textbf{weakly convergent} sequences into \textbf{norm convergent} sequences; i.e. if $T \in \cL(X)$ is compact, then
+\begin{align*}
+x_n \stackrel{w}{\rightarrow} x \quad \Rightarrow \quad Tx_{n} \stackrel{norm}{\rightarrow} Tx.
+\end{align*}
+
+The converse holds true if $X$ is \textbf{reflective}.
+\end{theorem}
+
+\item \begin{proposition} \citep{reed1980methods}\\
+Let $X$ and $Y$ be \textbf{Banach spaces}, $T \in \cL(X, Y)$.
+\begin{enumerate}
+\item If  $\set{T_n}$ are \textbf{compact} and $T_n \rightarrow T$ in the \textbf{norm topology}, then $T$ is  \textbf{compact}. 
+\item $T$ is \textbf{compact} if and only if $T'$ is \textbf{compact}. 
+\item If $S \in \cL(Y,  Z)$ with $Z$ a Banach space and if $T$ \textbf{or} $S$ is \textbf{compact}, then $ST$ is \textbf{compact}. 
+\end{enumerate} 
+\end{proposition}
+
+\item The proposition above shows that the space of compact operators on $\cH$ is a \emph{\textbf{closed subspace}} of $\cL(\cH)$, thus it is \emph{a Banach space too}.
+\begin{definition} (\textbf{\emph{Space of Compact Operators}})\\
+Now assume that $\cH$ is a \emph{\textbf{separable Hilbert space}}. We denote \emph{the Banach space of \textbf{compact operators}} on \emph{a separable Hilbert space} by $\text{Com}(\cH) \subset \cL(\cH)$. 
+\end{definition}
+
+\item 
+\begin{theorem} (\textbf{Compact Operator Approximated by Finite Rank Operator})\citep{reed1980methods}\\
+Let $\cH$ be a \textbf{separable Hilbert space}. Then every \textbf{compact operator} on $\cH$ is the \textbf{norm limit} of a sequence of operators of \textbf{finite rank}. 
+\end{theorem}
+
+\end{itemize}
+\subsection{Fredholm Alternative}
+\begin{itemize}
+\item \begin{remark} (\emph{\textbf{Fredholm Alternative}})\\
+The basic principle which makes compact operators important is \emph{\textbf{the Fredholm alternative}}: If $A$ is \emph{\textbf{compact}}, then \emph{\textbf{exactly one} of the following two statements holds true}:
+\begin{enumerate}
+\item 
+\begin{align*}
+A \varphi&= \varphi \text{ has a solution;}
+\end{align*} 
+\item 
+\begin{align*}
+\paren{I - A}^{-1} \text{ exists.}
+\end{align*} 
+\end{enumerate}
+From \emph{the Fredhold alternative}, we see that if \emph{\textbf{for any $\varphi$}} there is \emph{\textbf{at most one} $\psi$} (\emph{\textbf{uniqueness} statement}) such that
+\begin{align*}
+\paren{I - A} \psi &= \varphi 
+\end{align*} then there is \emph{\textbf{always exactly one}} (\emph{i.e. \textbf{existence} statement}). That is, \emph{\textbf{compactness} and \textbf{uniqueness}  together imply \textbf{existence}}.
+\end{remark}
+
+\item \begin{theorem} (\textbf{Analytic Fredholm Theorem}) \citep{reed1980methods} \\
+Let $D$ be an \textbf{open connected} subset of $\bC$. Let $f: D \rightarrow \cL(\cH)$ be an \textbf{analytic operator-valued function} such that $f(z)$ is \textbf{compact} for each $z \in D$. Then, either 
+\begin{enumerate}
+\item $\paren{I - f(z)}^{-1}$  exists for \textbf{no} $z \in D$; or
+
+\item $\paren{I - f(z)}^{-1}$ exists for \textbf{all} $z \in D \setminus S$ where $S$  is a \textbf{discrete} subset of $D$ (i.e. $S$ is a set which has no limit points in $D$.)
+In this case,  $\paren{I - f(z)}^{-1}$ is \textbf{meromorphic} in $D$, \textbf{analytic} in $D \setminus S$, the \textbf{residues} at the poles are \textbf{finite rank operators}, and if $z \in S$ then
+\begin{align*}
+f(z)\varphi &= \varphi
+\end{align*} has a \textbf{nonzero solution} in $\cH$
+\end{enumerate}
+\end{theorem}
+
+\item \begin{corollary}(\textbf{The Fredholm Alternative}) \citep{reed1980methods}\\
+If $A$ is a \textbf{compact} operator on $\cH$,  then \textbf{either} $\paren{I - A}^{-1}$ exists \textbf{or} $Α\varphi = \varphi$ has a solution. 
+\end{corollary}
+
+\item \begin{theorem} (\textbf{Riesz-Schauder Theorem})  \citep{reed1980methods}\\
+Let $A$ be a \textbf{compact} operator on $\cH$, then \underline{$\sigma(A)$ is a \textbf{discrete set}} having \textbf{no limit points} \textbf{except} perhaps 
+$\lambda = 0$. 
+
+Further, any \underline{\textbf{nonzero} $\lambda \in \sigma(A)$ is an \textbf{eigenvalue}} of \textbf{finite multiplicity} 
+(i.e. the corresponding space of eigenvectors is \textbf{finite dimensional}). 
+\end{theorem}
+
+\item \begin{remark} (\emph{\textbf{Compact} Operator has only \textbf{Nonzero Point Spectrum} with \textbf{Finite Dimensional Eigenspace}})\\
+\emph{Riesz-Schauder Theorem} states that \emph{the \textbf{spectrum} for \textbf{compact} operator on \textbf{Hilbert} space} consists of \emph{only} the point spectrum besides $\lambda = 0$. 
+
+Moreover, \emph{the \textbf{eigenspace}} corresponding to \emph{each \textbf{nonzero eigenvalue}} is \emph{finite dimensional}.
+\end{remark}
+
+\item \begin{theorem} (\textbf{The Hilbert-Schmidt Theorem})  \citep{reed1980methods}\\
+Let $A$ be a \underline{\textbf{self-adjoint compact operator}} on $\cH$. Then, there is a \textbf{complete orthonormal basis}, $\{\phi_n\}_{n=1}^{\infty}$, for $\cH$ so that
+\begin{align*}
+A \phi_n &= \lambda_n \phi_n 
+\end{align*} and $\lambda_n \rightarrow 0$ as $n \rightarrow \infty$.
+\end{theorem}
+
+\item \begin{remark} (\emph{\textbf{Eigendecomposition} of Hilbert Space based on \textbf{Self-Adjoint Compact Operator}})\\
+In other word, given a self-adjoint compact operator $A$ on $\cH$, \emph{the HIlbert space $\cH$ is the direct sum of eigenspaces of $A$}.
+\begin{align*}
+\cH &= \bigoplus_{\lambda_n \in \sigma(A) \subset \bR}\text{Ker}\paren{\lambda_n I - A}
+\end{align*}
+
+A \underline{\textbf{\emph{self-adjoint compact operator}}} on $\cH$ is the closest counterpart of \emph{\textbf{Hermitian matrix} / \textbf{Symmetric Real matrix}} in infinite dimensional space.
+\end{remark}
+
+\item \begin{theorem}(\textbf{Canonical Form for Compact Operators})   \citep{reed1980methods}\\
+Let $A$ be a \textbf{compact} operator on $\cH$. Then there exist (\textbf{not necessarily complete}) \textbf{orthonormal sets} $\{\psi_n\}_{n=1}^{N}$ and $\{\phi_n\}_{n=1}^{N}$ and \textbf{positive real numbers} $\{\lambda_n\}_{n=1}^{N}$ with $\lambda_n \rightarrow 0$ so that 
+\begin{align}
+A &= \sum_{n=1}^{N}\lambda_n\inn{\cdot}{\psi_n}\phi_n \label{eqn: canon_compact_operator}
+\end{align}
+The sum in \eqref{eqn: canon_compact_operator}, which may be finite or infinite, \textbf{converges in norm}. The numbers, $\{\lambda_n\}_{n=1}^{N}$, are called the \underline{\textbf{singular values of $A$}}. 
+\end{theorem}
+
+\item \begin{remark} (\emph{\textbf{SVD for Compact Operator}})\\
+Recall for \emph{finite dimensional case}, \emph{the \textbf{singular value decomposition (SVD)}}
+\begin{align*}
+A &= \sum_{n=1}^{N}\lambda_n\phi_n \psi_n^{T}.
+\end{align*} The \emph{singular value decomposition} is a generalization for \emph{the spectral decomposition} for \emph{self-adjoint operator}. But it only exists for \emph{\textbf{compact operator}}.
+\end{remark}
+\end{itemize}
+
+\subsection{The Trace Class}
+\begin{itemize}
+\item We generalize the definition of \emph{trace} of linear operator from finite dimensional space to infinite dimensional space:
+\begin{definition} (\emph{\textbf{Trace of Positive Semi-Definite Operator}})\\
+Let $\cH$ be a \textbf{\emph{separable Hilbert space}}, $\{\phi_n\}_{n=1}^{\infty}$ an \textbf{\emph{orthonormal basis}} Then  for any \textbf{\emph{positive semi-definite}} operator $A \in \cL(\cH)$, we define
+\begin{align*}
+\tr{A} &= \sum_{n=1}^{\infty}\inn{A\phi_n}{\phi_n}
+\end{align*} The number $\tr{A}$ is called \underline{\textbf{\emph{the trace of $A$}}}.
+\end{definition} 
+
+\item \begin{proposition} (\textbf{Properties} of \textbf{Trace}) \citep{reed1980methods}\\
+Let $\cH$ be a separable Hilbert space, $\{\phi_n\}_{n=1}^{\infty}$ an orthonormal basis. Then  for any \textbf{positive semi-definite} operator $A \in \cL(\cH)$,  its trace $\tr{A}$ as defined above is \textbf{independent} of the orthonormal basis chosen. The trace has the following properties: 
+\begin{enumerate}
+\item (\textbf{Linearity}): $\tr{A + B} = \tr{A} + \tr{B}.$
+\item (\textbf{Positive Homogeneity}): $\tr{\lambda A} = \lambda \tr{A}$ for all $\lambda \ge 0$.
+\item (\textbf{Unitary Invariance}): $\tr{U\,A\,U^{-1}} = \tr{A}$ for any \textbf{unitary} operator $U$. 
+\item (\textbf{Monotonicity}): if $B\succeq A \succeq 0$, then $\tr{B} \ge \tr{A}$
+\end{enumerate}
+\end{proposition}
+
+\item \begin{remark} (\emph{\textbf{Trace of General Linear Operator}})\\
+Let $A \in \cL(\cH)$ be a bounded linear operator on separable Hilbert space. Instead of considering \emph{the trace of $A$}, we consider \emph{the trace of modulus of $A$},
+\begin{align*}
+\tr{\abs{A}} = \tr{\sqrt{A^{*}A}}.
+\end{align*}
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{Trace Class}})\\
+An operator $A \in \cL(\cH)$ is called \underline{\emph{\textbf{trace class}}} if and only if 
+\begin{align*}
+\tr{\abs{A}} = \tr{\sqrt{A^{*}A}} < \infty.
+\end{align*}
+\emph{The family of all trace class operators} is denoted by $\cB_1(\cH)$.
+\end{definition}
+
+\item The following lemma is used in proof of part 2 in next proposition
+ \begin{lemma}
+Every $B \in \cL(\cH)$ can be written as a linear combination of \textbf{four unitary operators}. 
+\end{lemma}
+
+\item \begin{proposition} (\textbf{Space of Trace Class Operator}) \citep{reed1980methods} \\
+The family of all trace class operators $\cB_1(\cH)$ is a \underline{\textbf{$*$-ideal} in $\cL(\cH)$}, that is, 
+\begin{enumerate}
+\item $\cB_1(\cH)$  is a \textbf{vector space}. 
+\item (\textbf{Operator Multiplication}) If $A \in \cB_1(\cH)$ and $B \in \cL(\cH)$, then $AB \in \cB_1(\cH)$ and $BA \in \cB_1(\cH)$.
+\item (\textbf{Adjoint}) If $A \in \cB_1(\cH)$ then $A^{*} \in \cB_1(\cH)$. 
+\end{enumerate}
+\end{proposition}
+
+\item \begin{remark} 
+\begin{definition} (\emph{\textbf{$*$-Algebra}})\\
+An  \emph{\textbf{algebra}} $\cA$ \emph{over field} $K$ is a \emph{\textbf{$K$-vector space}} together with a \emph{\textbf{binary product}} $(a,b)\mapsto ab$ satisfying
+\begin{enumerate}
+\item $a(bc)=(ab)c$,
+\item $\lambda(ab)=(\lambda a)b=a(\lambda b)$,
+\item $a(b+c)=ab+ac$,
+\item $(a+b)c=ac+bc,$
+\end{enumerate}
+for all $a,b,c\in \cA$ and $\lambda\in K$.
+%A \emph{\textbf{$*$-ring}} is a \emph{\textbf{ring}} $(A, +, \cdot)$ with a map $* : A \rightarrow A$ that satisfies the following properties:
+%\begin{enumerate}
+%\item $(x + y)^* = x^* + y^*$
+%\item $(x y)^* = y^* x^*$
+%\item $1^* = 1$
+%\item $(x^*)^* = x$
+%\end{enumerate}
+%for all $x, y$ in $A$.
+
+A \emph{\textbf{$*$-algebra}} $\cA$ is a \textit{\textbf{algebra}} over $\bC$ with a unary \emph{\textbf{involution}} $*: a \mapsto a^{*}$ such that
+\begin{enumerate}
+\item $(\lambda a + \mu b)^* = \bar{\lambda}a^* + \bar{\mu} b^*$,
+\item $(ab)^* = b^*  a^*$,
+\item $(a^*)^* = a$,
+\end{enumerate} for all $a, b \in \cA$ and $\lambda, \mu \in \bC$.
+\end{definition} 
+
+\begin{example} (\emph{\textbf{Hilbert Adjoint as $*$-Operation}})\\
+For $\cL(\cH)$, let the $*$-operation be \emph{the \textbf{Hilbert adjoint}}, i.e. $\inn{Tx}{y} = \inn{x}{T^{*}y}$ so \emph{$\cL(\cH)$ is a \textbf{$*$-algebra}} with \emph{operator addition} and \emph{operator multiplication}.
+\end{example}
+
+\begin{definition}(\emph{\textbf{Left Ideal}}) \\
+For an arbitrary \emph{\textbf{ring}} $(R,+,\cdot )$, let $(R,+)$ be its \emph{\textbf{additive group}}. A \emph{subset} $I$ is called a \emph{\textbf{left ideal}} of $R$ if it is an \emph{additive subgroup} of $R$ that ``\emph{absorbs multiplication from the left by elements of $R$}"; that is, $I$ is a \emph{left ideal} if it satisfies the following two conditions:
+\begin{enumerate}
+\item $(I,+)$ is a \emph{subgroup} of $(R,+)$,
+\item For every $r\in R$ and every $x\in I$, the \emph{product} $rx$ is in $I$.
+\end{enumerate}
+\end{definition}
+
+\end{remark}
+
+\item \begin{proposition} (\textbf{Norm of Trace Class}) \citep{reed1980methods}\\
+Let $\norm{\cdot}{1}$ be defined in $\cB_1(\cH)$ by
+\begin{align*}
+\norm{A}{1} &= \tr{\abs{A}}.
+\end{align*}
+Then $\cB_1(\cH)$ is a \textbf{Banach space} with norm $\norm{\cdot}{1}$  and
+\begin{align*}
+\norm{A}{} \le \norm{A}{1}
+\end{align*}
+\end{proposition}
+
+\item \begin{remark}
+$\cB_1(\cH)$ is \emph{\textbf{not closed}} under \emph{the operator norm} $\norm{\cdot}{}$ in $\cL(\cH)$.
+\end{remark}
+
+\item \begin{proposition} (\textbf{Compactness}) \citep{reed1980methods}\\
+\underline{Every $A \in \cB_1(\cH)$ is \textbf{compact}}. A \textbf{compact} operator $A$ is in $\cB_1(\cH)$ \textbf{if and only if}
+\begin{align*}
+\sum_{n=1}^{\infty}\lambda_n < \infty
+\end{align*}
+where $\set{\lambda_n}$ are the \textbf{singular values} of $A$. 
+\end{proposition}
+
+\item \begin{corollary} (\textbf{Finite Rank Approximation})  \citep{reed1980methods}\\
+The finite rank operators are \textbf{$\norm{\cdot}{1}$-dense} in $\cB_1(\cH)$. 
+\end{corollary}
+
+\item \begin{proposition} \citep{reed1980methods}\\
+If $A \in \cB_1(\cH)$  and  $\{\varphi_n\}_{n=1}^{\infty}$ is \textbf{any} orthonormal basis, then 
+\begin{align*}
+ \sum_{n=1}^{\infty}\inn{A\phi_n}{\phi_n}
+\end{align*} converges \textbf{absolutely} and the limit is \textbf{independent} of the choice of basis. 
+\end{proposition}
+\end{itemize}
+\subsection{Hilbert-Schmidt Operator}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Hilbert-Schmidt Operator}}) \\
+An operator $T \in \cL(\cH)$ is called  \underline{\textbf{\emph{Hilbert-Schmidt}}} if and only if
+\begin{align*}
+\tr{T^{*}T} < \infty.
+\end{align*}
+\emph{The family of all Hilbert-Schmidt operators} is denoted by $\cB_2(\cH)$ or $\cB_{HS}(\cH)$.
+\end{definition}
+
+\item \begin{proposition} (\textbf{Space of Hilbert-Schmidt Operator}) \citep{reed1980methods} 
+\begin{enumerate}
+\item The space of all Hilbert-Schmidt operators $\cB_2(\cH)$ is a \underline{\textbf{$*$-ideal} in $\cL(\cH)$},
+\item  (\textbf{Inner Product}): If $A, B \in \cB_2(\cH)$ , then for \textbf{any orthonormal basis} $\{\varphi_n\}_{n=1}^{\infty}$, 
+\begin{align*}
+ \sum_{n=1}^{\infty}\inn{A^{*}B\varphi_n}{\varphi_n}
+\end{align*}
+is \textbf{absolutely summable}, and its \textbf{limit}, denoted by $\inn{A}{B}_{HS}$, is \textbf{independent} of the orthonormal basis chosen, i.e. 
+\begin{align*}
+\inn{A}{B}_{HS} = \tr{A^{*}B}
+\end{align*}
+\item $\cB_2(\cH)$ with inner product  $\inn{\cdot}{\cdot}_{HS}$ is a \textbf{Hilbert space}. 
+\item (\textbf{Norm}):  Let $\norm{\cdot}{2}$ be defined in $\cB_2(\cH)$ by
+\begin{align*}
+\norm{A}{2} := \sqrt{\inn{A}{A}}_{HS} = \sqrt{\tr{A^{*}A}}.
+\end{align*} Then
+\begin{align*}
+\norm{A}{} \le \norm{A}{2} \le \norm{A}{1}, \quad \text{and} \quad  \norm{A}{2} =  \norm{A^{*}}{2}
+\end{align*} 
+\item (\textbf{Compactness}) \underline{Every $A \in \cB_2(\cH)$ is \textbf{compact}} and a \textbf{compact operator}, $A$, is in $\cB_2(\cH)$ \textbf{if and only if} 
+\begin{align*}
+\sum_{n=1}^{\infty}\lambda_n^2 < \infty
+\end{align*} where $\set{\lambda_n}$ are the \textbf{singular values} of $A$. 
+\item (\textbf{Finite Rank Approximation}) The \textbf{finite rank operators} are $\norm{\cdot}{2}$-\textbf{dense} in  $\cB_2(\cH)$. 
+\item $A \in \cB_2(\cH)$ \textbf{if and only if} 
+\begin{align*}
+\set{\norm{A\varphi_n}{}}_{n=1}^{\infty} \in \ell^2
+\end{align*}
+for \textbf{some} orthonormal basis $\{\varphi_n\}_{n=1}^{\infty}$. 
+\item $A \in \cB_1(\cH)$ if and only if $A = BC$ with $B, C \in \cB_2(\cH)$. 
+\item  $\cB_2(\cH)$ is not $\norm{\cdot}{}$-closed in $\cL(\cH)$. 
+\end{enumerate}
+\end{proposition}
+
+
+\item \begin{theorem} (\textbf{Hilbert-Schmidt Operator of $L^2$ Space}) \citep{reed1980methods}\\
+Let $(M, \mu)$ be a \textbf{measure space} and  $\cH = L^2(M, \mu)$.  Then $T \in \cL(\cH)$ is \textbf{Hilbert-Schmidt} \textbf{if and only if} there is a function 
+\begin{align*}
+K \in L^2(M \times M, \mu \otimes \mu)
+\end{align*}
+with 
+\begin{align*}
+(T f)(x) &= \int_{M} K(x, y)f(y) d\mu(y),
+\end{align*}
+Moreover, 
+\begin{align*}
+\norm{T}{2}^2 &= \int_{M \times M} \abs{K(x, y)}^2 d\mu(x) d\mu(y).
+\end{align*}
+\end{theorem}
+
+
+\item \begin{remark}
+A \emph{\textbf{Hilbert-Schmidt}} operator $T$ on a \emph{\textbf{square integrable} space $L^2(M, \mu)$} is a \emph{\textbf{integral kernel operator}}.
+
+In other word, for $T \in \cL(\cH)$, if $\tr{T^{*}T} < \infty,$ then $T$ is a \emph{\textbf{compact operator}}. If, in particular, $\cH = L^2(M, \mu)$, then $T$ can be written as the \emph{integral kernel operator} 
+\begin{align*}
+(T f)(x) &= \int_{M} K(x, y)f(y) d\mu(y),
+\end{align*}
+\end{remark}
+
+\item \begin{theorem}  (\textbf{Mercer's Theorem}) \citep{borthwick2020spectral}. \\
+Suppose $\Omega$ is a \textbf{compact domain} and $T$ is a \textbf{positive Hilbert-Schmidt operator} on $L^2(\Omega)$. If the integral kernel $K(\cdot, \cdot)$ is
+\textbf{continuous} on $\Omega \times \Omega$, then the \textbf{eigenfunction} $\varphi_k$ is \textbf{continuous} on $\Omega$ if $\lambda_k > 0$, and
+the expansion
+\begin{align*}
+K(x,y) &= \sum_{n=1}^{\infty}\lambda_{n}\varphi_n(x)\overline{\varphi_n(y)}
+\end{align*}
+converges \textbf{uniformly} on \textbf{compact} sets.
+\end{theorem}
+\end{itemize}
+
+\subsection{Trace of Linear Operator}
+\begin{itemize}
+\item \begin{definition} (\textbf{\emph{Trace}})\\
+The map $\text{tr}: \cB_1(\cH) \rightarrow \bC$ given by
+\begin{align*}
+\tr{A} &= \sum_{n=1}^{\infty}\inn{A\phi_n}{\phi_n}
+\end{align*}
+where $\{\phi_n\}_{n=1}^{\infty}$ is \emph{any} \emph{orthonormal basis} in $\cH$ is called \underline{\emph{\textbf{the trace}}}. 
+\end{definition}
+
+\item \begin{remark}
+For $A \in \cB_1(\cH)$, $\sum_{n=1}^{\infty}\abs{\inn{A\phi_n}{\phi_n}} < \infty$ for \emph{any\textbf{}} \emph{orthonormal basis} $\{\phi_n\}_{n=1}^{\infty}$.
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Decomposition of Self-Adjoint operator}})\\
+For any $A \in \cL(\cH)$ and $A$ being self-adjoint, 
+\begin{align*}
+A &= A_{+} - A_{-}
+\end{align*} where both $A_+$ and $A_{-}$ are \emph{\textbf{positive}} and $A_{+}A_{-} = 0$. 
+
+Not surprisingly, $A \in \cB_1(\cH)$  if  and only if 
+\begin{align*}
+\tr{A_{+}} < \infty, \;\; \tr{A_{-}} < \infty,
+\end{align*} and
+\begin{align*}
+\tr{A} = \tr{A_{+}} -  \tr{A_{-}}.
+\end{align*}
+\end{remark}
+
+\item Finally, we collect the property of trace for linear operators:
+\begin{proposition} (\textbf{Properties of Trace}) \citep{reed1980methods}
+\begin{enumerate}
+\item $\tr{\cdot}$  is linear. 
+\item $\tr{A^{*}} = \overline{\tr{A}}$. 
+\item$\tr{AB} = \tr{BA}$ if $A \in \cB_1(\cH)$ and $B \in \cL(\cH)$. 
+\end{enumerate}
+\end{proposition}
+
+\item \begin{remark}
+If $A \in \cB_1(\cH)$, the map
+\begin{align*}
+B \mapsto \tr{AB}
+\end{align*} is a \emph{\textbf{linear functional}} on $\cL(\cH)$. We can also hold $B \in \cL(\cH)$ \emph{fixed} and obtain a \emph{\textbf{linear functional}} on $\cB_1(\cH)$ given by the map 
+\begin{align*}
+A \mapsto \tr{BA}.
+\end{align*}
+The set of these functionals is just \emph{\textbf{the dual of $\cB_1(\cH)$}}.
+\end{remark}
+
+\item \begin{proposition} (\textbf{Dual Space of Compact Operators}) \citep{reed1980methods}
+\begin{enumerate}
+\item $\cB_1(\cH) = (\text{Com}(\cH))^{*}$.  That is, the map $A \mapsto \tr{A \cdot}$ is an \textbf{isometric isomorphism} of $\cB_1(\cH)$ onto $(\text{Com}(\cH))^{*}$. 
+\item $\cL(\cH)= (\cB_1(\cH))^{*}$.  That is, the map $B \mapsto \tr{B\cdot}$ is an \textbf{isometric isomorphism} of $\cL(\cH)$ onto $(\cB_1(\cH))^{*}$. 
+\end{enumerate}
+\end{proposition}
+\end{itemize}
+
+\section{Spectrum of Bounded Self-Adjoint Operator in Hilbert Space}
+\subsection{General Properties}
+\begin{itemize}
+\item \begin{proposition} (\textbf{Spectral Radius Calculation}) \citep{reed1980methods}\\
+Let $X$ be a  \textbf{Hilbert space}, $T \in \cL(X)$ and $T$ is \textbf{self-adjoint}. Then 
+\begin{align*}
+r(T) = \norm{T}{}
+\end{align*}
+\end{proposition}
+
+\item \begin{theorem} (\textbf{Spectrum and Resolvent of Adjoint}) (\textbf{Phillips}) \citep{reed1980methods}\\ 
+If $X$ is a \textbf{Hilbert space} and $T \in \cL(X)$, then 
+\begin{align*}
+\sigma(T) = \sigma(T^{*})\; \text{ and }\; R_{\lambda}(T^{*}) = (R_{\lambda}(T))^{*}.
+\end{align*}
+\end{theorem}
+
+\item \begin{proposition}  (\textbf{Spectrum of Self-Adjoint Operator}) \citep{reed1980methods}\\ 
+Let $Τ$ be a \textbf{self-adjoint operator} on a \textbf{Hilbert space} $\cH$. Then, 
+\begin{enumerate}
+\item $T$ has \textbf{no residual spectrum}, i.e. $\sigma_{r}(T) = \emptyset$. 
+\item $\sigma(T)$ is a subset of $\bR$. 
+\item \textbf{Eigenvectors} corresponding to \textbf{distinct eigenvalues} of $T$ are \textbf{orthogonal}. 
+\end{enumerate}
+\end{proposition}
+
+\item \begin{remark} (\emph{\textbf{Resemblence to Symmetric or Hermitian Matrix}})\\
+This property is the same as the \emph{spectrum} for \emph{symmetric} real matrix or \emph{Hermitian matrix} in \emph{finite dimensional case}. That is, 
+\begin{enumerate}
+\item \emph{the \textbf{eigenvalues} of \emph{symmetric real matrices} or \emph{Hermitian matrices} are all \textbf{real-valued}}; 
+\item the \emph{\textbf{eigenspaces}} corresponds to \emph{\textbf{distinct eigenvalue}}s are \emph{\textbf{orthorgonal}} to each other.
+\end{enumerate} 
+\end{remark}
+
+\end{itemize}
+
+
+
+\subsection{Positive Semidefinite Operators and the Polar Decomposition}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Positive-Semidefinite Operator}})\\
+Let $\cH$ be a \emph{\textbf{Hilbert space}}. An operator $B \in \cL(\cH)$ is called \underline{\emph{\textbf{positive-semidefinite}}} if 
+\begin{align*}
+\inn{Bx}{x} \ge 0\text{ for all }x \in \cH.
+\end{align*}
+We write $B \succeq 0$ if $Β$ is \emph{positive-semidefinite} and  $B \succeq A$ if $(B - A) \succeq 0$. 
+
+Similarly, $B$ is called \underline{\emph{\textbf{positive-definite}}} if 
+\begin{align*}
+\inn{Bx}{x}> 0\text{ for all }x \neq 0 \in \cH.
+\end{align*} The \emph{positive semidefinite operator} is sometimes called \emph{\textbf{positive} operator}. 
+\end{definition}
+
+\item \begin{proposition} (\textbf{Positive Semi-Definiteness $\Rightarrow$ Self-Adjoint}) \citep{reed1980methods} \\
+Every (bounded) \textbf{positive semidefinite} operator on a \textbf{complex Hilbert space} is \textbf{self-adjoint}. 
+\end{proposition}
+\begin{proof}
+Notice that $\inn{Ax}{x}$ takes only real value, so
+\begin{align*}
+\inn{Ax}{x} = \overline{\inn{Ax}{x}} = \inn{x}{Ax}
+\end{align*} By \emph{the polarization identity}, 
+\begin{align*}
+\inn{Ax}{y} = \inn{x}{Ay}
+\end{align*} if $\inn{Ax}{x} = \inn{x}{Ax}$ for all $x$.
+Thus, if $A$ is positive, it is self-adjoint. \qed 
+\end{proof}
+
+\item \begin{remark} (\emph{\textbf{Square Root of Positive Semidefinite Operator}})\\
+For any $A \in \cL(\cH)$ notice that \emph{\textbf{the normal operator} is \textbf{positive semi-definite}}
+\begin{align*}
+A^{*}A \succeq 0
+\end{align*}
+since 
+\begin{align*}
+\inn{A^{*}Ax}{x} = \norm{Ax}{}^2 \ge 0.
+\end{align*}
+Just as $\abs{z} = \sqrt{\bar{z}z}$, we want to find the modulus of a linear operator as
+\begin{align*}
+\abs{A} := \sqrt{A^{*}A }
+\end{align*} 
+To show the square root of positive semidefinite operator makes sense, we have the following lemma
+\begin{lemma}
+The power series for $\sqrt{1 - z}$ about zero converges \textbf{absolutely} for all complex numbers $z$ satisfying $\abs{z} \le 1$. 
+\end{lemma}
+
+\begin{theorem} (\textbf{Square Root Lemma})  \citep{reed1980methods}\\ 
+Let $A \in \cL(\cH)$ and $A \succeq 0$. Then there is a \textbf{unique} $B \in \cL(\cH)$ with $B \succeq 0$ and $B^2 = A$. Furthermore, $B$ 
+\textbf{commutes} with every bounded operator which commutes with $A$. 
+\end{theorem}
+\end{remark}
+
+\item \begin{definition}
+For $A \in \cL(\cH)$, we can define \emph{\underline{\textbf{absolute value}} of $A$} as the square root of its normal operation
+\begin{align*}
+\abs{A} := \sqrt{A^{*}A }
+\end{align*} 
+\end{definition}
+
+\item \begin{remark}
+For $\abs{\cdot}$ operation on linear operator $A$:
+\begin{enumerate}
+\item $\abs{\lambda A} = \abs{\lambda} \abs{A}$
+\item $\abs{\cdot}$ is \emph{\textbf{norm continuous}} on $\cL(\cH)$
+\item in general the following equations \emph{\textbf{do not hold}}
+\begin{align*}
+\abs{A B} = \abs{A}\abs{B}, \quad \abs{A} = \abs{A^{*}}
+\end{align*}
+\end{enumerate}
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{Partial Isometry}})\\
+An operator $U \in \cL(\cH)$ is called an \emph{\textbf{isometry}} if 
+\begin{align*}
+\norm{Ux}{} = \norm{x}{}, \quad \text{all $x \in \cH$.}
+\end{align*}
+$U$ is called a \underline{\emph{\textbf{partial isometry}}} if $U$ is an \emph{isometry} when \emph{\textbf{restricted}}  to the \emph{closed subspace} $(\text{Ker}(U))^{\bot}$.  
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Partial Isometry $=$ Unitary $(\text{Ker}(U))^{\bot} \rightarrow \text{Ran}(U)$}})\\
+If $U$ is a \emph{\textbf{partial isometry}},  $\cH$ can be written as 
+\begin{align*}
+\cH =(\text{Ker}(U)) \oplus (\text{Ker}(U))^{\bot}, \quad \cH =(\text{Ran}(U)) \oplus (\text{Ran}(U))^{\bot}
+\end{align*}
+and $U$ is a \emph{\textbf{unitary operator}} between $(\text{Ker}(U))^{\bot}$, \emph{the \textbf{initial subspace} of $U$}, and $\text{Ran}(U)$, \emph{the \textbf{final subspace}} of $U$. 
+
+Moreover, its \emph{adjoint} is its \emph{inverse}, $U^{*} = (U_{(\text{Ker}(U))^{\bot}})^{-1}: \text{Ran}(U) \rightarrow (\text{Ker}(U))^{\bot}$.
+\end{remark}
+
+\item \begin{proposition} (\textbf{Projection Operators by Partial Isometry}) \citep{reed1980methods}\\
+Let $U$ be a \textbf{partial isometry}.  Then $P_i =  U^{*}U$ and $P_f =  UU^{*}$ are respectively the \textbf{projections} onto the \textbf{initial} and \textbf{final subspaces} of $U$, i.e.
+\begin{align*}
+P_i := U^{*}U = P_{(\text{Ker}(U))^{\bot}}, \quad P_f := UU^{*} = P_{\text{Ran}(U) },
+\end{align*}
+Conversely, if $U \in \cL(\cH)$ with $U^{*}U$ and $UU^{*}$ \textbf{projections}, then $U$ is a \textbf{partial isometry}. 
+\end{proposition}
+
+
+\item \begin{theorem} (\textbf{Polar Decomposition})  \citep{reed1980methods}\\ 
+Let $A$ be a bounded linear  operator on a \textbf{Hilbert space}. Then there is a \textbf{partial isometry} $U$ such that 
+\begin{align*}
+A = U\abs{A}
+\end{align*} $U$ is \textbf{uniquely} determined by the condition that $\text{Ker}(U) = \text{Ker}(A)$.  Moreover, $\text{Ran}(U) = \overline{\text{Ran}(A)}$. 
+\end{theorem}
+\end{itemize}
+
+\subsection{Spectral Theorem for Finite Dimensional Case}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Similarity}}) \citep{horn2012matrix}\\
+Let $A, B \in M_n$ be given $n\times n$ matrices. We say that $B$ \underline{\emph{\textbf{is similar to}}} $A$ if there exists a \emph{\textbf{nonsingular}} $S \in M_n$ such that
+\begin{align*}
+B &= S^{-1}A S
+\end{align*}
+The transformation $A \to S^{-1} A S$ is called a \underline{\emph{\textbf{similarity transformation}}} by the \emph{similarity matrix} $S$.
+\end{definition}
+
+
+
+\item \begin{definition}  (\emph{\textbf{Normal Matrix}}) \citep{horn2012matrix}\\
+A matrix  $A \in M_n$ is \underline{\emph{\textbf{normal}}} if
+\begin{align*}
+A A^{*} &= A^{*} A,
+\end{align*} that is, if $A$ \emph{\textbf{commutes}} with its \emph{\textbf{conjugate transpose (adjoint)}}.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Diagonalizable}}) \citep{horn2012matrix}\\
+If $A \in M_n$ is \emph{similar} to a \emph{diagonal matrix}, then $A$ is said to be \underline{\emph{\textbf{diagonalizable}}}.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Unitary Similarity}}) \citep{horn2012matrix}\\
+Let $A, B \in M_n$ be given. We say that $A$ is  \underline{\emph{\textbf{unitarily similar}}} to $B$ if there is a \emph{\textbf{unitary}} $U \in M_n$ such that
+\begin{align*}
+A &= U B U^{*} 
+\end{align*} We say that $A$ is \underline{\emph{\textbf{unitarily diagonalizable}}} if it is \textbf{\emph{unitarily similar}} to a diagonal matrix.
+
+We say that $A$ is  \underline{\emph{\textbf{orthogonally similar}}} to $B$ if there is a \emph{\textbf{unitary (real orthorgonal)}} $U \in M_n(\bR)$ such that
+\begin{align*}
+A = U B U^{T}
+\end{align*} We say that $A$ is \underline{\emph{\textbf{orthogonally diagonalizable}}} if it is \textbf{\emph{orthogonally similar}} to a diagonal matrix.
+\end{definition}
+
+
+
+\item \begin{theorem} (\textbf{Spectral Theorem of Normal Matrix})   \citep{horn2012matrix}\\
+Let $A = [a_{i,j}] \in M_n$ have \textbf{eigenvalues} $\lambda_1 \xdotx{,} \lambda_n$. The following statements are \textbf{equivalent}:
+\begin{enumerate}
+\item $A$ is \textbf{normal}.
+\item $A$ is \textbf{unitarily diagonalizable}, i.e. there exists unitary matrix $U \in M_n$ such that 
+\begin{align*}
+A &= U \Lambda U^{*}
+\end{align*} where $\Lambda = \diag{\lambda_1 \xdotx{,} \lambda_n}$.
+\item $\sum_{i,j=1}^{n}\abs{a_{i,j}}^2 = \sum_{i=1}^{n}\lambda_i^2$
+\item $A$ has $n$ \textbf{orthonormal eigenvectors}
+\end{enumerate}
+\end{theorem}
+
+
+\item \begin{definition} (\emph{\textbf{Spectral Decomposition}})\\
+A \emph{representation} of a \emph{\textbf{normal matrix}} $A \in M_n$ as $A = U \Lambda U^{*}$, in which $U$ is \emph{\textbf{unitary}} and $\Lambda$ is \emph{\textbf{diagonal}}, is called a \underline{\emph{\textbf{spectral decomposition of $A$}}}.
+\end{definition}
+
+\item The Hermitian matrix is normal matrix, so the following theorem is a special case of the spectral theorem for normal matrix.
+\begin{theorem} (\textbf{Spectral Theorem for Hermitian Matrices})  \citep{horn2012matrix}\\
+Let $A \in M_n$ be \textbf{Hermitian} and have eigenvalues $\lambda_1 \xdotx{,} \lambda_n$. Let $\Lambda = \diag{\lambda_1 \xdotx{,} \lambda_n}$. Then
+\begin{enumerate}
+\item $\lambda_1 \xdotx{,} \lambda_n$ are \textbf{real} numbers.
+\item $A$ is \textbf{unitarily diagonalizable}
+\item There is a \textbf{unitary} $U \in M_n$ such that 
+\begin{align*}
+A &= U \Lambda U^{*}
+\end{align*} 
+\end{enumerate}
+\end{theorem}
+
+\item \begin{remark}
+This is equivalent to say that for \emph{\textbf{self-adjoint bounded linear operator $A$}} on finite dimensional space $V$, there exists \emph{\textbf{unitary operator} $U: \bC^n  \rightarrow V$} such that 
+\begin{align*}
+[U^{-1} A U f]_k &= \lambda_k f_k
+\end{align*} for any $f = (f_k)_{k=1}^{n} \in \bC^n$.
+\end{remark}
+\end{itemize}
+
+\subsection{Spectral Theorem}
+\subsubsection{The Continuous Functional Calculus}
+\begin{itemize}
+\item \begin{remark}  (\textbf{\emph{Spectral Theorem for Self-Adjoint Bounde Linear Operator in Hilbert Space}})\\ 
+Given a \emph{bounded self-adjoint operator} $A \in \cL(\cH)$ on \emph{Hilbert space} $\cH$, we can find a \emph{\textbf{measure}} $\mu$ on a \emph{measure space $\cM$} and a 
+\emph{\textbf{unitary operator}} $U: L^2(\cM, \mu) \to \cH $ so that 
+\begin{align*}
+[U^{-1} A U f](x) &= F(x) f(x)
+\end{align*} for some \emph{\textbf{bounded} \textbf{real-valued} \textbf{measurable function} $F$} on $\cM$. 
+
+In practice, $\cM$ will be a \emph{union of copies of $\bR$} and $F$ will be $x$,  so the \emph{\textbf{core}} of the proof of the theorem will be \emph{\textbf{the construction of certain measures $\mu$}}.  
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Functional Calculus}}) \citep{borthwick2020spectral} \\
+In operator theory, the term ``\underline{\emph{\textbf{functional calculus}}}" refers to the ability to \emph{apply a function to an operator}.
+
+For $A \in \cL(\cH)$, one need to make sense of $f(A)$ for some continuous function $f$. For instance, If $f(x) = \sum_{j=0}^{n}a_j x^j$ is a \emph{polynomial}, 
+we want 
+\begin{align*}
+f(A) &=  \sum_{j=0}^{n}a_j A^j.
+\end{align*} Similarly, suppose that $f(x) = \sum_{j=0}^{\infty}c_j x^j$  is a \emph{power series} with \emph{radius of convergence} $R$. If $\norm{A}{} < R$, then $ \sum_{j=0}^{\infty}c_j A^j$ \emph{converges} in $\cH$ so it is natural to set 
+\begin{align*}
+f(A) &=  \sum_{j=0}^{\infty}a_j A^j.
+\end{align*}
+\end{remark}
+
+\item In particular, we have
+\begin{lemma} (\textbf{Spectrum of Polynomial of Operators}) \citep{reed1980methods}\\
+Let $P(x) = \sum_{n=0}^{N}a_n x^n$ and $P(A) =  \sum_{n=0}^{N}a_n A^n$. Then 
+\begin{align*}
+\sigma\paren{P(A)} &= \set{P(\lambda): \lambda \in \sigma(A)}
+\end{align*}
+\end{lemma}
+
+\item \begin{lemma}  (\textbf{Norm of Polynomial of Bounded Self-Adjoint Operators}) \citep{reed1980methods}\\
+Let $A$ be a \textbf{bounded self-adjoint} operator. Then 
+\begin{align*}
+\norm{P(A)}{} &= \sup_{\lambda\in \sigma(A)} \abs{P(\lambda)}
+\end{align*}
+\end{lemma}
+
+\item \begin{theorem} (\textbf{Continuous Functional Calculus}) \citep{reed1980methods}\\
+Let $A$ be a \textbf{self-adjoint}  operator on a \textbf{Hilbert space} $\cH$. Then there is a \textbf{unique} map $\phi: \cC(\sigma(A)) \to \cL(\cH)$ with the following properties: 
+\begin{enumerate}
+\item $\phi$ is an \underline{\textbf{algebraic $*$-homomorphism}}, that is, 
+\begin{itemize}
+\item (\textbf{Preserve Operator Product}) $\phi(fg) = \phi(f)\phi(g)$
+\item (\textbf{Preserve Scalar Product}) $\phi(\lambda f) = \lambda \phi(f)$
+\item (\textbf{Preserve Identity}) $\phi(1) = I$
+\item (\textbf{Preserve Adjoint/Conjugacy}) $\phi(\bar{f}) =  \phi(f)^{*}$
+\end{itemize}
+\item $\phi$ is \textbf{continuous}, that is, 
+\begin{align*}
+\norm{\phi(f)}{\cL(\cH)} &\le C \norm{f}{\infty}.
+\end{align*}
+\item Let $f$ be the function $f(x) = x$; then $\phi(f) = A$. 
+Moreover,  $\phi$ has the \textbf{additional} properties: 
+\item  If $A\psi = \lambda \psi$, then 
+\begin{align}
+\phi(f)\psi  = f(\lambda) \psi  \label{eqn: cont_functional_calculas_spectral_decomp}
+\end{align}
+\item (\textbf{Spectral Mapping Theorem}) 
+\begin{align}
+\sigma(\phi(f)) &= \set{f(\lambda): \lambda \in \sigma(A)} \label{eqn: cont_functional_calculas_spectrum_mapping}
+\end{align}
+\item (\textbf{Preserve Positivity})  If $f \ge 0$, then $\phi(f) \succeq 0$. 
+\item (\textbf{Preserve Norm}) (This strengthens the (2)).
+\begin{align}
+\norm{\phi(f)}{\cL(\cH)} &= \norm{f}{\infty} \label{eqn: cont_functional_calculas_norm_preserve}
+\end{align}
+\end{enumerate} We sometimes write $f(A)$ or $\phi_{A}(f)$ for $\phi(f)$ to emphasize the dependency on $A$.
+\end{theorem}
+
+\item \begin{remark}
+Note that the continuous function $f$ in defining $f(A)$ is defined on $\sigma(A)$, i.e. \emph{\textbf{the spectrum of operator}} $A$, so \emph{\textbf{$f$ is a spectral domain transformation function}}.  In the map, 
+\begin{align*}
+\phi: f \mapsto \phi(f) := f(A): \cH \rightarrow \cH.
+\end{align*} 
+\begin{enumerate}
+\item So in equation 
+\begin{align*}
+\phi(fg) = \phi(f)\phi(g) &\Leftrightarrow (fg)(A) = f(A)g(A)\\
+\phi(\lambda f) = \lambda \phi(f) &\Leftrightarrow (\lambda f)(A) = \lambda\,f(A)\\
+\phi(1) = I &\Leftrightarrow  1(A) = I \\
+\phi(\bar{f}) =  \phi(f)^{*} &\Leftrightarrow  (\bar{f})(A) = (f(A))^{*} \\
+\phi(\text{Id}) = \text{Id} &\Leftrightarrow (\text{id})(A) = A
+\end{align*} the LHS of first equation is an operator corresponding to the \emph{\textbf{product of two functions}}, while the RHS of first equation is \emph{\textbf{the product of two operators}}, each corresponding to one function.
+
+\item The equation \eqref{eqn: cont_functional_calculas_spectral_decomp} makes sure that \emph{the spectral decomposition} of $f(A)$ and that of $A$ \emph{\textbf{\underline{shares the same set of eigenfunctions}}}.
+
+\item The spectral mapping theorem in \eqref{eqn: cont_functional_calculas_spectrum_mapping} actually defines $f(A)$ as the operator whose spectrum is transformed by $f$. In other words, \emph{\textbf{$f(A)$ is the operator obtained by spectral domain transformation via $f$}}. 
+
+In signal processing, $f(A)$ corresponds to \underline{\emph{\textbf{the spectral filtering}}} of $A$.
+\end{enumerate}
+\end{remark}
+
+\item \begin{remark}
+There are some more remarks:
+\begin{enumerate}
+\item $\phi(f) \succeq 0$  \emph{\textbf{if and only if}} $f \ge 0$.
+\item (\textbf{\emph{Abelian $C^{*}$-Algebra}})\\
+ Since $fg = gf$ for all $f, g$, 
+\begin{align*}
+\set{f(A): f \in \cC(\sigma(A))}
+\end{align*} forms an \emph{\textbf{abelian algebra}} closed under \emph{\textbf{adjoints}}.  Since  $\norm{\phi(f)}{} = \norm{f}{\infty}$  and $\cC(\sigma(A))$ is \emph{\textbf{complete}},  $\set{f(A): f \in \cC(\sigma(A))}$ is \emph{\textbf{norm-closed}}. It is thus an \underline{\emph{\textbf{abelian $C^{*}$-algebra}}} of 
+\emph{operators}.  
+\item  (\textbf{\emph{$C^{*}$-Algebra Generated by $A$}})\\
+ The image of $\phi$, i.e. $\set{f(A): f \in \cC(\sigma(A))}$ is actually the \underline{\emph{\textbf{$C^{*}$-algebra generated by $A$}}}, that is, the \emph{\textbf{smallest} $C^{*}$-algebra containing $A$}. 
+ 
+ \item This result shows that \emph{the space of \textbf{continuous function on spectrum of $A$}}, $\cC(\sigma(A))$ and \emph{the $C^{*}$-algebra generated by $A$} are \emph{\textbf{isometrically isomorphic}}.
+ \begin{align*}
+ \cC(\sigma(A)) \simeq \text{Ran }\phi = \set{f(A): f \in \cC(\sigma(A))}.
+ \end{align*}
+ 
+ \item The property (1) and (3) \emph{\textbf{uniquely} determines} the mapping $\phi$.
+\end{enumerate}
+\end{remark}
+
+\item \begin{example} (\emph{\textbf{Existence of Square Root for Positive Operator}})\\
+For $A \succeq 0$, $\sigma(A) \ge 0$ and $\sigma(A) \subset \bR$, so let $f(x) = \sqrt{x}$, then
+\begin{align*}
+A = (f(A))^2.
+\end{align*}
+\end{example}
+
+\item \begin{example}
+For $f(x) = (\lambda  - x)^{-1}$,
+\begin{align*}
+\norm{\paren{A - \lambda I}^{-1}}{} = \sup_{x \in \sigma(A)}\abs{x - \lambda }^{-1} = \frac{1}{\text{dist }(\lambda, \sigma(A))}
+\end{align*} for $A$ bounded and $\lambda \not\in \sigma(A)$.
+\end{example}
+\end{itemize}
+
+\subsubsection{Spectral Measure}
+\begin{itemize}
+\item \begin{remark} (\emph{\textbf{Positive Linear Functional on $\cC(\sigma(A))$}})\\
+%According to the Riesz Representation theorem, there exists an isomorphism between a \emph{\textbf{sesquilinear form}} on Hilbert space $\cH$ and a \emph{bounded linear operator} on $\cH$.  Thus 
+For each $\psi \in \cH$, \emph{the quadratic form} below defines a \emph{bounded linear functional} on $\cL(\cH)$
+\begin{align*}
+\widetilde{I}_{\psi}: A \mapsto \inn{\psi}{A \psi}_{\cH}.
+\end{align*} Then by continuous functional calculus, we can define a map $I_{\psi} =\widetilde{I}_{\psi} \circ \phi: \cC(\sigma(A)) \rightarrow  \bR$, which is seen as a \emph{\textbf{positive linear functional}} on $\cC(\sigma(A))$, i.e. $\forall \psi \in \cH$,
+\begin{align*}
+I_{\psi}(f) := \inn{\psi}{f(A)\psi} \ge 0 \text{ whenever }f\ge 0.
+\end{align*}
+For \emph{a \textbf{bounded self-adjoint operator}} $A$, the \emph{spectrum} $\sigma(A) \subset \bR$ is a \emph{\textbf{closed bounded subset}} of $\bR$ so it is \emph{\textbf{compact}}. Thus $\cC(\sigma(A))$ is a space of continuous functions on compact domain, so, by Riesz-Markov theorem, $(\cC(\sigma(A)))^{*} \simeq \cM(\sigma(A))$, \emph{the space of \textbf{complex signed Radon measures} on $\sigma(A)$}. In other word, for each $\psi \in \cH$, there \emph{\textbf{exists some \underline{positive Radon measure on spectral domain}}} $\mu_{\psi} \in \cM(\sigma(A))$ so that 
+\begin{align}
+I_{\psi}(f) := \inn{\psi}{f(A)\psi} &= \int_{\sigma(A)} f d\mu_{\psi}. \label{eqn: functional_calculus_spectral_measure}
+\end{align} Let $f = \bar{g}g$, the equation \eqref{eqn: functional_calculus_spectral_measure} becomes
+\begin{align}
+\norm{g(A)\psi}{\cH}^2 = \inn{\psi}{\bar{g}g(A)\psi}_{\cH} &= \int_{\sigma(A)} \bar{g}g d\mu_{\psi} = \int_{\sigma(A)} \abs{g(\lambda)}^2 d\mu_{\psi}(\lambda) \nonumber\\
+\Rightarrow \norm{g(A)\psi}{\cH}^2 &= \int_{\sigma(A)} \abs{g(\lambda)}^2 d\mu_{\psi}(\lambda),  \label{eqn: time_specturm_energy_preserve}
+\end{align}
+ which confirms that \emph{\textbf{the energy in time-domain should match the energy in spectral domain}}.
+\end{remark}
+
+\item 
+\begin{definition} (\emph{\textbf{Spectral Measure}})\\
+For each $\psi \in \cH$, the measure $\mu_{\psi} \in \cM(\sigma(A))$ defined in \eqref{eqn: functional_calculus_spectral_measure} is called \emph{the \underline{\textbf{spectral measure}} \textbf{associated with the vector} $\psi$}. 
+\end{definition}
+\end{itemize}
+
+\subsubsection{Spectral Theorem in Functional Calculus Form}
+\begin{itemize}
+\item \begin{remark} (\emph{\textbf{Extension to Bounded Borel Functions on $\bR$}}) \citep{reed1980methods}\\
+The first and simplest application of the $\mu_{\psi}$ is to allow us to \emph{\textbf{extend} the functional calculus to $B(\bR)$}, \emph{the \underline{\textbf{bounded Borel measurable functions} on $\bR$}}. 
+\begin{enumerate}
+\item Note that \emph{the double dual of $\cC(X)$} on \emph{compact} metric space $X$ is \emph{the space of bounded Borel measurable function} $B(X) = L^{\infty}(X, \mu)$ \citep{lax2002functional}.
+\begin{align*}
+B(X) \simeq (\cC(X))^{**}
+\end{align*}
+In other word, for fixed bounded self-adjoint operator $A$ and $\psi \in \cH$, the map 
+\begin{align*}
+I_{\psi}: g \mapsto \int_{\sigma(A)} g d\mu_{\psi} 
+\end{align*} is well-defined for $g \in B(\sigma(A))$. Extending to $B(\bR)$ is natural since $\bR$ is \emph{locally compact}. 
+\item Use  \emph{the polarization identity}
+\begin{align*}
+\Re \inn{x}{y} &= \frac{1}{2}(\norm{x + y}{}^2 - \norm{x}{}^2 - \norm{y}{}^2),
+\end{align*}
+we can construct \emph{the bilinear form} for any $\psi, \varphi \in \cH$
+\begin{align*}
+F(\psi, \varphi) &=\frac{1}{2} ( I_{(\psi+\varphi)}(g) - I_{(\psi)}(g) -  I_{(\varphi)}(g) )
+\end{align*}
+\item By \emph{Riesz representation theorem}, there exists a unique linear operator $\widetilde{A}_g$ on $\cH$ so that 
+\begin{align*}
+F(\psi, \varphi) = \inn{\varphi}{\widetilde{A}_{g}\psi} &= \frac{1}{2} ( I_{(\psi+\varphi)}(g) - I_{(\psi)}(g) -  I_{(\varphi)}(g) )
+\end{align*} Thus we identifies $g(A) \equiv \widetilde{A}_g$ for any $g \in B(\bR)$ so that
+\begin{align*}
+\inn{\psi}{g(A)\psi}_{\cH} &= \int_{\bR} g d\mu_{\psi}.
+\end{align*}
+\end{enumerate}
+This shows that \emph{\textbf{the functional calculus can be extended to all bounded Borel functions}}.
+\end{remark}
+
+
+\item 
+\begin{theorem} (\textbf{Spectral Theorem, Functional Calculus Form})    \citep{reed1980methods}\\
+Let $A$ be a \textbf{bounded self-adjoint} operator on $\cH$. There is a \textbf{unique map} $\widehat{\phi}: B(\bR) \to \cL(\cH)$ so that 
+\begin{enumerate}
+\item  $\widehat{\phi}$ is an \textbf{algebraic $*$-homomorphism}. 
+\item  $\widehat{\phi}$ is \textbf{norm continuous}: 
+\begin{align*}
+\|\widehat{\phi}(f)\|_{\cL(\cH)} &\le C \norm{f}{\infty}.
+\end{align*}
+\item  Let $f$ be the function $f(x) = x$; then $\widehat{\phi}(f) = A$. 
+\item  (\textbf{Pointwise Convergence $\Rightarrow$ Strong Convergence})\\
+Suppose $f_n(x) \rightarrow f(x)$ for each $x$ and $\norm{f_n}{\infty}$ is bounded. Then  $\widehat{\phi}(f_n) \to \widehat{\phi}(f)$ \textbf{strongly}. Moreover $\widehat{\phi}$ has the properties : 
+\item  If $A\psi = \lambda \psi$, then 
+\begin{align}
+\widehat{\phi}(f)\psi  = f(\lambda) \psi  \label{eqn: cont_functional_calculas_spectral_decomp_ext}
+\end{align} 
+\item (\textbf{Preserve Positivity})  If $f \ge 0$, then $\widehat{\phi}(f) \succeq 0$. 
+\item (\textbf{Preserve Commutative})  If $BA = AB$, then $B\widehat{\phi}(f) = \widehat{\phi}(f)B$. 
+\end{enumerate}
+\end{theorem}
+
+\item \begin{remark}
+The proof of (4) is via dominated convergence theorem.
+\end{remark}
+
+\item \begin{remark}
+\emph{\textbf{The norm equality}} of \emph{the continuous functional calculus} carries over if we define $\norm{f}{\infty}'$ to be \emph{ the $L^{\infty}$-norm with respect to a suitable notion} of ``\emph{\textbf{almost everywhere}}."  Namely, pick \emph{an orthonormal basis} $\set{\varphi_n}$ and say that a property is true a.e. if it is true a.e. \emph{with respect to each} $\mu_{\varphi_n}$. Then $\|\widehat{\phi}(f)\|_{L^2(\cH)} = \norm{f}{\infty}'$.
+\end{remark}
+\end{itemize}
+
+\subsubsection{Spectral Theorem in Multiplication Operator Form}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Cyclic Vector}})\\
+A vector $\psi \in \cH$ is called a \emph{\underline{\textbf{cyclic vector} for $A$}} if \emph{finite linear combinations} of the elements $\set{A^{n}\psi}_{n=0}^{\infty}$ are \emph{\textbf{dense}} in $\cH$. 
+\end{definition}
+
+\item \begin{remark}
+Not all operators have cyclic vectors.
+\end{remark}
+
+\item Recall the following theorem for normed vector space
+\begin{theorem} (\textbf{Bounded Linear Transformation Theorem}) \citep{reed1980methods}\\
+Suppose $T$ is a \textbf{bounded} linear transformation from a \textbf{normed vector space} $(V_1, \norm{}{1})$ to a \textbf{complete normed vector space} $(V_2, \norm{}{2})$. Then $T$ can be \textbf{uniquely} \textbf{extended} to a bounded linear transformation (with the same bound), $\widetilde{T}$, from the \textbf{completion} of $V_1$ to $(V_2,\norm{}{2})$
+\end{theorem}
+
+
+\item \begin{lemma} (\textbf{Spectral Theorem for Bounded Self-Adjoint Operator with Cyclic Vector}) \citep{reed1980methods}\\
+Let $A$ be a \textbf{bounded self-adjoint operator} with \textbf{cyclic vector} $\psi$.  Then, there is a \textbf{unitary operator} $U:  L^2(\sigma(A), \mu_{\psi}) \rightarrow \cH$ with
+\begin{align*}
+[U^{-1} A U f](\lambda) &= \lambda f(\lambda)
+\end{align*} 
+Equality is in the sense of elements of $L^2(\sigma(A), \mu_{\psi})$. 
+\end{lemma}
+
+\item \begin{lemma} (\textbf{Direct Sum Decomposition of Hilbert Space via Invariant Subspaces}) \citep{reed1980methods}\\
+Let $A$ be a \textbf{self-adjoint} operator on a \textbf{separable Hilbert space} $\cH$. Then there is a \textbf{direct sum decomposition} 
+\begin{align*}
+\cH &= \bigoplus_{n=1}^{N}\cH_{n}
+\end{align*}
+with $N= 1, 2, \xdotx{,}$ or $\infty$ so that: 
+\begin{enumerate}
+\item $\cH_n$ is \underline{\textbf{invariant}} under operator $A$; that is, for any $\psi \in \cH_n$, $A \psi \in \cH_n$.
+\item For each $n$, there exists a $\psi_n \in \cH_n$ that is \textbf{cyclic} for $A|_{\cH_n}$, i.e. 
+\begin{align*}
+\cH_n &= \overline{\set{ f(A)\psi_{n} : f \in \cC(\sigma(A))}}.
+\end{align*}
+\end{enumerate}
+\end{lemma}
+
+\item \begin{theorem} (\textbf{Spectral theorem, Multiplication Operator Form})  \citep{reed1980methods}\\
+Let $A$ be a \textbf{bounded self-adjoint} operator on $\cH$, a \textbf{separable Hilbert space}. Then,  there exist \textbf{measures} $\set{\mu_{\psi_n}}_{n=1}^{N}$ ($N = 1,2, \ldots, $ or $\infty$) on $\sigma(A)$ and a \textbf{unitary} operator 
+\begin{align*}
+U:  \bigoplus_{n=1}^{N}L^2(\bR, \mu_{\psi_n}) \rightarrow \cH
+\end{align*}
+so that 
+\begin{align}
+[U^{-1} A U \psi]_n(\lambda) &= \lambda  \psi_n(\lambda) \label{eqn: spectral_decomposition_hilbert_space}
+\end{align} 
+where we write an element $\psi \in \bigoplus_{n=1}^{N}L^2(\sigma(A), \mu_{\psi_n})$ as an $N$-tuple 
+$(\psi_1(\lambda) \xdotx{,} \psi_{N}(\lambda))$. This realization of $A$ is called a \underline{\textbf{spectral representation}}. 
+\end{theorem}
+
+\item \begin{remark} (\textbf{\emph{Self-Adjoint Bounded Operator $=$ Mulitplication Operator in Spectral Domain}})\\
+This theorem tells us that \emph{\textbf{every bounded self-adjoint operator is a \underline{multiplication operator} on a \underline{suitable measure space}}}; what changes as \emph{the operator  changes} are \emph{the underlying measures}. 
+\end{remark}
+
+\item \begin{remark} (\textbf{\emph{Multiplication Operator}}) \\
+Define \underline{\emph{\textbf{the multiplication operator}}} $M_f: v \mapsto f v$ on $L^2$ for $f \in L^2$, so \eqref{eqn: spectral_decomposition_hilbert_space} becomes
+\begin{align}
+U^{-1} A U  &= M_{\alpha} \label{eqn: spectral_decomposition_hilbert_space_multiplication_operator}
+\end{align} where $\alpha(x) = x$.
+\end{remark}
+
+\item \begin{corollary} (\textbf{Spectral theorem, Single Spectral Measure})   \citep{reed1980methods}\\
+Let $A$ be a \textbf{bounded self-adjoint} operator on a \textbf{separable Hilbert space} $\cH$. Then there exists a \textbf{finite measure space} $(M, \mu)$, a \textbf{bounded  function} $F$ on $M$, and a \textbf{unitary map}, $U:  L^2(M, \mu) \rightarrow \cH$, so that 
+\begin{align*}
+[U^{-1} A U f]_n(m) &= F(m)  f(m)
+\end{align*} 
+\end{corollary}
+
+
+
+\item \begin{example} (\emph{\textbf{Self-Adjoint Operator on Finite Dimensional Space}})\\
+Let $A$ be an $n \times n$ \emph{\textbf{self-adjoint (Hermitian)} matrix}. The \emph{\textbf{finite dimensional spectral theorem}} says that $A$ has a \emph{complete orthonormal set} of \emph{\textbf{eigenvectors}}, $\psi_1 \xdotx{,} \psi_n$, with
+\begin{align*}
+A \psi_i &= \lambda_i \psi_i.
+\end{align*}
+
+Suppose first that \emph{the eigenvalues are \textbf{distinct}}. The \emph{spectral measure} is just \emph{the sum of \textbf{Dirac measures}}, 
+\begin{align}
+\mu &= \sum_{i=1}^{n}\delta_{\lambda_i}, \label{eqn: spectral_measure_finite_dim}
+\end{align}
+and $L^2(\bR,\mu)$ is just $\bC^{n}$ since $f \in L^2$ is \emph{\textbf{determined}} by 
+\begin{align*}
+ \paren{f(\lambda_1) \xdotx{,} f(\lambda_n)}.
+\end{align*}
+Clearly, the function $\lambda f$ corresponds to the $n$-tuple $\paren{\lambda_1 f(\lambda_1) \xdotx{,} \lambda_n f(\lambda_n)}$, 
+so $A$ is \emph{\textbf{multiplication}} by $\lambda$ on $L^2(\bR,\mu)$. 
+
+If we take 
+\begin{align*}
+\bar{\mu} &= \sum_{i=1}^{n}a_i \delta_{\lambda_i},
+\end{align*} with $a_1 \xdotx{,} a_n >0$, $A$ \emph{can also be represented as \textbf{multiplication} by $\lambda$ on $L^2(\bR, \bar{\mu})$}. 
+Thus, we explicitly see \emph{the \textbf{nonuniqueness} of the \textbf{measure}} in this case. 
+
+We can also see when \emph{\textbf{more than one measure is needed}}: 
+\emph{one can represent a finite-dimensional self-adjoint operator as multiplication on $L^2(\bR,\mu)$ with \textbf{only one measure} \textbf{if and only if} $A$ has \textbf{no repeated eigenvalues}}. \qed
+\end{example}
+
+\item \begin{example}  (\emph{\textbf{Self-Adjoint Compact Operator}})\\
+Let $A$ be \textbf{\emph{compact}} and \textbf{\emph{self-adjoint}}. \emph{The Hilbert-Schmidt theorem} tells us there is a \emph{complete orthonormal set of \textbf{eigenvectors}} $\set{\psi_n}_{n=1}^{\infty}$, with
+\begin{align*}
+A \psi_n &= \lambda_n \psi_n.
+\end{align*}
+If there is \emph{no repeated eigenvalue}, 
+\begin{align}
+\mu &= \sum_{n=1}^{\infty}2^{-n}\delta_{\lambda_n}  \label{eqn: spectral_measure_compact}
+\end{align}
+works as a \emph{\textbf{spectral measure}}. \qed
+\end{example}
+
+\item \begin{example}  (\emph{\textbf{Fourier Transform}})\\
+Note that for $f \in L^2(\bR, dx)$, the Fourier transform of $f$ is written as
+\begin{align*}
+\cF f(\lambda) := F(\lambda)&=  \frac{1}{(2\pi)^{-1}}\int_{\bR}f(x) e^{-i \lambda x} dx \\
+f(x) &= \int_{\bR} F(\lambda) e^{i \lambda x} d\lambda
+\end{align*}
+The Fourier transform $\cF$ can be seen as a unitary map $\cF: L^2(\bR, dx) \rightarrow  L^2(\bR, \mu(d\lambda))$, which is the inverse of $U$ where $ e^{i \lambda x} d\lambda = \mu(d\lambda)$.
+
+Consider $A = \frac{1}{i}\frac{d}{dx}$ on $L^2(\bR, dx)$, which is \emph{self-adjoint} but \emph{\textbf{unbounded}}. The Fourier transform of $A$ gives
+\begin{align*}
+\cF\paren{\frac{1}{i}\frac{d}{dx}f}(\lambda) &= \lambda\,\cF f(\lambda) \\
+\Leftrightarrow (U^{-1}A UF)(\lambda) &= \lambda\, F(\lambda) 
+\end{align*} where the unitary map $U: L^2(\bR, \mu(d\lambda)) \rightarrow  L^2(\bR, dx)$ is \emph{\textbf{the inverse Fourier transform}}
+\begin{align*}
+(UF)(x) = f(x) &=  \int_{\bR} F(\lambda) e^{i \lambda x} d\lambda.
+\end{align*}
+%For the Fourier series of function $f \in L^2([-\pi, \pi], dx)$, the spectral measure
+%And the spectral measure acts on $f$ is
+%\begin{align*}
+%\mu f &= \frac{1}{(2\pi)^{-1}}\int_{\sigma(A)} \brac{\int_{\bR}f(x) e^{-i \lambda x} dx}e^{i \lambda x} d\lambda. \qed
+%\end{align*} %And \emph{only one spectral measure is needed}. 
+\end{example}
+
+\item \begin{definition} (\emph{\textbf{Essential Range}})\\
+Let $F$ be a real-valued function on a measure space $(X, \mu)$.  We say $\lambda$ is in \underline{\emph{\textbf{the essential range of}}} $F$ \emph{if and only if} for all $\epsilon > 0$,
+\begin{align*}
+\mu\set{x: F(x) \in (\lambda - \epsilon, \lambda + \epsilon)} = \mu \circ F^{-1}(B(\lambda, \epsilon)) >0.
+\end{align*} 
+\end{definition}
+
+\item \begin{proposition} (\textbf{Spectrum of Multiplication Operator via Essential Range}) \citep{reed1980methods}\\
+Let $F$ be a \textbf{bounded real-valued} function on a measure  space $(X, \mu)$. Let $M_F$ be the multiplication operator on $L^2(X, \mu)$ given by 
+\begin{align*}
+(M_F g)(x) &= F(x) g(x)
+\end{align*}
+Then $\sigma(M_F)$ is \textbf{the essential range} of $F$. 
+\end{proposition}
+\end{itemize}
+
+
+\subsubsection{Spectral Theorem in Spectral Projection Form}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Spectral Projection}})\\
+Let $A$ be a \textbf{\emph{bounded self-adjoint}} operator and $S$ a \emph{\textbf{Borel set}} of $\bR$. 
+\begin{align*}
+P_{S} := \mathds{1}_{S}(A) = \widehat{\phi}( \mathds{1}_{S})
+\end{align*} is called a  \underline{\emph{\textbf{spectral projection of $A$}}}. It is result of applying the \emph{\textbf{characteristic function of set $R$}}, $\mathds{1}_{S}(x)$, on operator $A$ via \emph{functional calculus}.
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Spectral Projection is Orthorgonal Projection}})\\
+$P_{S}$ is an \emph{\textbf{orthogonal projection}} since for each $x$
+\begin{align*}
+\mathds{1}_{S}^2(x) = \mathds{1}_{S}(x) = \bar{\mathds{1}}_{S}(x).
+\end{align*} It is equivalent to a \emph{\textbf{\underline{$0$-$1$ test}}  to check if each point of spectrum of $A$ is in $S$}.
+\end{remark}
+
+\item \begin{proposition}  (\textbf{Properties of Spectral Projection}) \citep{reed1980methods}\\
+The family $\set{P_{S}}$ of \textbf{spectral projections} of a \textbf{bounded self-adjoint} operator, $A$, has the following properties: 
+\begin{enumerate}
+\item Each $P_{S}$ is an \textbf{orthogonal projection}. 
+\item $P_{\emptyset} = 0$;  $P_{(-a, a)} = 1$ for \textbf{some} $a$.
+\item (\textbf{Countable Disjoint Union}) If $S = \bigcup_{n=1}^{\infty}S_n$ with $S_n \cap S_{m} = \emptyset$ for all $n \neq m$, then in norm topology
+\begin{align*}
+P_{S} &= \sum_{n=1}^{\infty}P_{S_n}
+\end{align*}
+\item $P_{S_1}P_{S_2} = P_{S_1 \cap S_2}$
+\end{enumerate}
+\end{proposition}
+
+\item \begin{definition} (\textbf{\emph{Projection-Valued Measure}})\\
+A family of \textbf{\emph{projections}} obeying (1)-(3) is called a \emph{\textbf{\underline{(bounded) projection-valued measure} (p.v.m.)}}. 
+\end{definition}
+
+\item \begin{remark}
+For a family of projections $\set{P_{S}: S \in \cB(\bR)}$, we have this mapping 
+\begin{align*}
+P: \cB(\bR) \to \cL(\cH).
+\end{align*} $P$ as a set function is finite i.e. $P(\bR)= 1$ and $P(\emptyset) = 0$ and countably additive, therefor $P$ is a \emph{\textbf{vector-valued} Borel measure on spectral domain} $\cB(\bR)$.
+\end{remark}
+
+\item \begin{remark}
+We can obtain a \emph{spectral measure} $\mu_{\psi, S}$ from $P_{S}$ via
+\begin{align*}
+\inn{\psi}{P_S \psi} = \int_{\sigma(A)} \mathds{1}_{S}d\mu_{\psi} = \mu_{\psi}(S \cap \sigma(A)) =\int_{\sigma(A)} d\mu_{\psi, S}
+\end{align*} for any $\psi \in \cH$. We will use the \emph{\textbf{symbol}} $d\inn{\psi}{P_S \psi}$ to mean \emph{\textbf{integration}} with respect to this measure $d\mu_{\psi, S}=  \mathds{1}_{S}d\mu_{\psi}$. 
+
+By \emph{standard Riesz representation theorem} methods, there is a \emph{\textbf{unique}} operator $Β$ with
+\begin{align*}
+\inn{\psi}{B\psi} &= \int  f(\lambda) \;d\inn{\psi}{P_S \psi}
+\end{align*} 
+\end{remark}
+
+\item \begin{proposition} (\textbf{Linear Operator Corresponding to Projection-Value Measure}) \citep{reed1980methods}\\
+If $P_{S}$ is a \textbf{projection-valued measure} and $f$ a \textbf{bounded} Borel function on $\text{supp}(P_{S})$, then there is a \textbf{unique} operator $B$ such that
+\begin{align*}
+\inn{\psi}{B\psi} &= \int f(\lambda) \;d\inn{\psi}{P_S \psi}.
+\end{align*} We denote 
+\begin{align*}
+B &:= \int  f(\lambda) dP_{S}(\lambda).\\
+\Rightarrow \inn{\psi}{\paren{\int  f(\lambda) dP_{S}(\lambda)}\psi} &=  \int f(\lambda) \;d\inn{\psi}{P_S \psi}
+\end{align*}
+\end{proposition}
+
+\item \begin{theorem}(\textbf{Spectral Theorem, Projection-Valued Measure Form}) \citep{reed1980methods}\\
+There is a \textbf{one-one correspondence} between \textbf{(bounded) self-adjoint operators} $A$ and \textbf{(bounded) projection valued measures $\set{P_{S}}$}. In particular:  
+\begin{enumerate}
+\item Given $A$, each projection-valued measure $P_{S}$ can be obtained as
+\begin{align*}
+P_{S} := \mathds{1}_{S}(A) = \widehat{\phi}( \mathds{1}_{S})
+\end{align*} 
+
+\item Given $\set{P_{S}: S \subset \bR, \text{ Borel set}}$, the operator $A$ can be obtained as
+\begin{align}
+A &= \int_{\bR} \lambda\, dP_{\lambda} \label{eqn: spectral_theorem_spectral_projection_integration}
+\end{align} and
+\begin{align}
+f(A) &=  \int_{\bR} f(\lambda)\, dP_{\lambda}  \label{eqn: spectral_theorem_spectral_projection_integration_function_form}
+\end{align}
+\end{enumerate}
+\end{theorem}
+
+\item \begin{remark} (\textbf{\emph{Understand Integration w.r.t. Projection-Valued Measure}})\\
+As always, we can develop the integration with respect to projection-valued measure from simple function $f \in  \cL^2(\sigma(A), \mu_{\psi})$:
+\begin{align*}
+f(\lambda) &= \sum_{n=1}^{N} c_n\mathds{1}_{S_n}(\lambda)
+\end{align*} where $S_n := f^{-1}(\set{c_n})$, $\sigma(A) = \bigcup_{n=1}^{N}S_n$ and $S_n \cap S_m = \emptyset$. Using $\widehat{\phi}: \cL^2(\sigma(A), \mu_{\psi}) \to \cL(\cH)$, we can apply \emph{functional calculus} on $A$ to have
+\begin{align*}
+f(A) &= \sum_{n=1}^{N} c_n \mathds{1}_{S_n}(A) := \sum_{n=1}^{N} c_n P_{S_n}= \widehat{\phi}\paren{ \sum_{n=1}^{N}c_n \mathds{1}_{S_n}}.
+\end{align*}
+Recall that when we define integration of simple function we have
+\begin{align*}
+\text{simp }\int f(\lambda) d\lambda &=  \sum_{n=1}^{N}c_n \mu_{\psi}(S_n) = \sum_{n=1}^{N} c_n \inn{\psi}{P_{S_n}\psi}.
+\end{align*} Equivalently, we can have integration of simple function with respect to the projection-valued measure $\set{P_{S_n}}$
+\begin{align*}
+\text{simp }\int f(\lambda) dP_{\lambda} &=  \sum_{n=1}^{N}c_n P(S_n) = \sum_{n=1}^{N}c_n P_{S_n} = f(A).
+\end{align*}
+Then for unsigned function $f \ge 0$,
+\begin{align*}
+\underline{\int} f(\lambda) dP_{\lambda} &= \sup_{g \text{ simple, } 0 \le g\le f}\text{simp }\int g(\lambda) dP_{\lambda}
+\end{align*} and for any absolutely integrable function $f = f_{+} - f_{-}$, 
+\begin{align*}
+\int f(\lambda) dP_{\lambda}  &= \underline{\int} f_{+}(\lambda) dP_{\lambda}  - \underline{\int} f_{-}(\lambda) dP_{\lambda}.
+\end{align*}Finally we see that $P_{B(\lambda, \epsilon)} = 0$ if $\lambda \not\in \sigma(A)$ so this integral is well-defined all over $\bR$.
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Bounded Real-Valued Measurable Function $\Leftrightarrow$ Bounded Self-Adjoint Operator}}) \citep{halmos2017introduction}\\
+\emph{The \underline{\textbf{essence}} of spectral theorem} (in \emph{functional calculus form} and in \emph{spectral projection form}):
+
+The \underline{\emph{\textbf{analogs}}} of \underline{\emph{\textbf{bounded}, \textbf{real-valued}, \textbf{measurable} function}} in Hilbert space thoery are \underline{\emph{\textbf{bounded}, \textbf{self-adjoint} \textbf{linear operators}}}. Since a function is the \emph{characteristic function of a set} \emph{if and only if} it is \emph{\textbf{idempotent}}, it is clear on the algebraic gounds that the analogs of \underline{\emph{\textbf{characteristic functions}}} are \underline{\emph{\textbf{projections}}}. The \emph{\textbf{approximability}} of functions by \emph{\textbf{simple functions}} corresponds in the analogy to the \emph{approximability} of self-adjoint operators by \emph{\textbf{real, finite linear combinations of projections}}. 
+\end{remark}
+
+\item \begin{remark}(\emph{\textbf{Comparison of Spectral Projection}})\\
+Consider the spectral theorem in projection form
+\begin{align*}
+A &= \int_{\bR} \lambda dP_{\lambda}  &&\text{\emph{\textbf{general} self-adjoint }}\\
+A &= \sum_{i=1}^{n}\lambda_i \varphi_i \varphi_i^{T} =  \sum_{i=1}^{n}\lambda_i P_{\cH_i} &&\text{\emph{\textbf{finite dimensional}}} \\
+A &=  \sum_{i=1}^{\infty}\lambda_i P_{\cH_i} &&\text{\emph{\textbf{compact} self-adjoint}} 
+\end{align*} where $\cH_i = \text{Ker}\paren{\lambda_i I - A} = \text{span}\set{A^n \varphi_i: n=0,1,\ldots}$ is \emph{\textbf{the invariant subspace}}, $\varphi_i$ is \emph{\textbf{cyclic vector} as the eigenvectors / eigenfunctions} corresponding to $\lambda_i$. For finite dimensional and compact operator case, $\cH_i$ is \emph{finite dimensional}.
+
+The decomposition of spectrum tells us that for general bounded self-adjoint operator
+\begin{align}
+A &= \int_{\bR} \lambda dP_{\lambda} = \sum_{\set{i: \lambda_i \in \sigma_{disc}(A)}}\lambda_i P_{\cH_i} + \int_{\sigma_{ess}(A)}\lambda dP_{\lambda} \label{eqn: spectral_theorem_decomposition}
+\end{align} where $\cH_i=\text{Ker}\paren{\lambda_i I - A}$ is \emph{\textbf{the invariant subspace (eigenspace)}} and $\cH_i$ is \emph{\textbf{finite dimensional}}.
+\end{remark}
+\end{itemize}
+
+\subsubsection{Understanding Spectrum via Spectral Measures}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Support of a Family of Measures}})\\
+If $\set{\mu_n}_{n=1}^{N}$ is a \emph{family of measures}, \underline{\emph{\textbf{the support of $\set{\mu_n}_{n=1}^{N}$}}} is the 
+\emph{complement} of \emph{the largest open set} $Β$ with $\mu_n(B) = 0$ for all $n$; so 
+\begin{align*}
+\text{\emph{supp}}(\set{\mu_n}_{n=1}^{N}) &= \overline{\bigcup_{n=1}^{N}\text{\emph{supp}}(\mu_n)}
+\end{align*}
+\end{definition}
+
+\item \begin{proposition} (\textbf{Support of All Spectral Measures $=$ the Spectrum}) \citep{reed1980methods}\\
+Let $A$ be a \textbf{self-adjoint operator} and $\set{\mu_n}_{n=1}^{N}$ a family of \textbf{spectral measures}. Then 
+\begin{align*}
+\sigma(A) = \text{\emph{supp}}(\set{\mu_n}_{n=1}^{N}).
+\end{align*}
+\end{proposition}
+
+
+\item \begin{remark} (\emph{\textbf{Multiple Ways to Decompose the Spectrum}})\\
+The recall the \emph{\textbf{partition}} of spectrum by \emph{\textbf{point spectrum}, \textbf{continuous spectrum} and \textbf{residual spectrum}}. We see that 
+\begin{enumerate}
+\item \begin{align*}
+\sigma(A)&= \sigma_{p}(A) \cup \sigma_{c}(A) \cup \sigma_{r}(A).
+\end{align*} This is related to the \emph{\textbf{resolvent}}  $R_{\lambda}(A) = (A - \lambda I)^{-1}$: its \emph{\textbf{existence}}, its \emph{\textbf{range}} (\emph{\textbf{dense}} or not) and its \emph{\textbf{boundedness}}. These subsets are \emph{disjoint}. Importantly, this decomposition is \emph{\textbf{general}} and it applies to \emph{\textbf{all  linear operator}}.
+
+\item  \begin{align*}
+\sigma(A) &= \overline{\sigma_{pp}(A) } \cup \sigma_{ac}(A)  \cup \sigma_{sing}(A).
+\end{align*} This is related to the \emph{\textbf{decompose}} of  \emph{\textbf{spectral measure}} $\mu_{\psi}$ \emph{with respect to Lebesgue measure} and the \emph{\textbf{pure point set}}. These sets \emph{may not be disjoint}. Both this and the one below are related to \emph{\textbf{spectral measure}} of \emph{\textbf{self-adjoint operator}}.
+
+\item \begin{align*}
+\sigma(A)&= \sigma_{disc}(A) \cup \sigma_{ess}(A).
+\end{align*} This is related to the \emph{\textbf{dimensionality of image set}} of  \emph{\textbf{spectral projection}} $P_{B(\lambda, \epsilon)}$ on any open intervals around $\lambda$. It is related to the multiplicity of the kernel $\text{Ker}\set{A - \lambda I}$. These sets \emph{are disjoint}. 
+\end{enumerate}
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{Pure Point of Measure}})\\
+Given measure space $(X, \mu)$, a collection of \emph{\textbf{closed one-point sets}} with \emph{nonzero measure} is called \emph{\textbf{\underline{the pure point set} of measure $\mu$}}. That is,
+\begin{align*}
+P := \set{x \in X:  \mu(\set{x}) >0 }.
+\end{align*} For $X = \bR$ and $\mu$ is Borel measure, the pure point set is \emph{\textbf{countable}}.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Pure Point Measure and Continuous Measure}})\\
+\emph{\textbf{\underline{The pure point measure}}} is defined as \emph{the restriction of $\mu$ on the pure point set $P$ of that measure}. For Borel measure $\mu$ on $\bR$, and any \emph{\textbf{Borel set}} $S \in \cB(\bR)$, 
+\begin{align*}
+\mu_{pp}(S) &= \mu(S \cap P) = \sum_{x \in S\cap P}\mu(\set{x}).
+\end{align*} A measure $\mu = \mu_{cont}$ is \emph{\textbf{\underline{continuous}}} if it has \emph{\textbf{no pure point}}, i.e. $\mu(\set{x}) = 0$ for any $\set{x} \in \cB(\bR)$.
+
+By definition, the following decomposition of measure $\mu$ holds: 
+\begin{align*}
+\mu = \mu_{pp} + \mu_{cont}, \quad \mu_{pp} \perp \mu_{cont}
+\end{align*}
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Decomposition of Borel Measure with respect to Lebesgue Measure}})\\
+Recall from Lebesgue decomposition theorem, given $\lambda$ as the Lebesgue measure on $\bR$, any measure $\mu$ on $\bR$ can be decomposed into two mutually singular parts:
+\begin{align*}
+ \mu &= \mu_{ac} + \mu_{sing}, \quad \mu_{ac} \perp \mu_{sing}
+\end{align*} where $\mu_{ac} \ll \lambda$ and $\mu_{sing} \perp \lambda$. Combining with decomposition of pure point measure and continuous measure, we have the decomposition of any measure on $\bR$ with respect to  Lebesgue measure on $\bR$,
+\begin{align}
+ \mu &=\mu_{pp} + \mu_{ac} + \mu_{sing}  \label{eqn: measure_decomp_pp_ac_sing}
+\end{align} where $\mu_{pp}$ is \emph{\textbf{the pure point measure}}, $\mu_{ac}$ is the part of \emph{\textbf{continuous} measure} that is \emph{\textbf{absolutely continuous}} \emph{with respect to Lebesgue measure}, and $ \mu_{sing}$ is the part of \emph{\textbf{continuous} measure} that is \emph{\textbf{singular}} \emph{with respect to Lebesgue measure}.
+\end{remark}
+
+\item \begin{remark}(\emph{\textbf{Decomposition of Invariant Subspace}})\\
+We apply above decomposition to spectral measure $\mu$. Since these parts are mutually singular to each other, we have
+\begin{align}
+L^2(\bR, \mu) &= L^2(\bR, \mu_{pp}) \oplus L^2(\bR, \mu_{ac}) \oplus L^2(\bR, \mu_{sing}).
+\end{align} 
+We can verify that any $\psi \in L^2(\bR, \mu)$ has an \emph{\textbf{absolutely continuous spectral measure}} $\mu_{ac}$ \emph{with respect to Lebesgue measure} \emph{\textbf{if and only if}} 
+\begin{align*}
+\psi \in  L^2(\bR, \mu_{ac}) \Leftrightarrow \int_{\bR} \abs{\psi}^2 d\mu_{ac} =  \int_{\bR} \abs{\psi}^2  p \,d\lambda < \infty
+\end{align*} where $p = d\mu_{ac}/d\lambda$ a.e.. Similarly for \emph{pure point} and \emph{singular measures}. 
+\end{remark}
+
+\item \begin{definition} 
+Let $A$ be a \textbf{\emph{bounded}} \emph{\textbf{self-adjoint}} operator on $\cH$. Let  
+\begin{enumerate}
+\item $\cH_{pp}:= \set{\psi \in \cH: \mu_{\psi} \text{\emph{\textbf{ is a pure point measure}}}}$
+\item $\cH_{ac}:= \set{\psi \in \cH: \mu_{\psi} \text{\emph{\textbf{  has no pure point and }}} \mu_{\psi} \ll \lambda \text{\emph{\textbf{  Lebesgue measure}}}}$
+\item $\cH_{sing}:= \set{\psi \in \cH: \mu_{\psi} \text{\emph{\textbf{  has no pure point and }}} \mu_{\psi} \perp \lambda \text{\emph{\textbf{  Lebesgue measure}}}}$
+\end{enumerate}
+\end{definition}
+
+\item \begin{proposition} (\textbf{Direct Sum Decomposition of Hilbert Space via Spectral Measure Decomposition}) \citep{reed1980methods}\\
+Let $A$ be a \textbf{bounded} \textbf{self-adjoint} operator on separable Hilbert space $\cH$. For any $\psi \in \cH$, $\mu_{\psi}$ is the spectral measure on $\sigma(A)$ corresponding to $\psi$. Then the following direct sum decompositon holds
+\begin{align*}
+\cH &= \cH_{pp} \oplus \cH_{ac} \oplus \cH_{sing}
+\end{align*}
+Moreover,
+\begin{enumerate}
+\item Each of these subspaces is \textbf{invariant} under $A$, i.e. for any $\psi$ in these subspaces, $A \psi$ is in the same subspace.
+\item $A|_{\cH_{pp}}$ has a \textbf{complete set of eigenvectors};
+\item $A|_{\cH_{ac}}$ has \textbf{only} \textbf{absolutely continuous spectral measures} 
+\item $A|_{\cH_{sing}}$ has \textbf{only} \textbf{continuous singular spectral measures}. 
+\end{enumerate}
+\end{proposition}
+
+\item \begin{definition}  (\textbf{\emph{Partition of Spectrum}})\\
+We define the following \emph{subsets of spectrum $\sigma(A)$}:
+\begin{enumerate}
+\item \underline{\textbf{\emph{Pure Point Spectrum}}}: $\sigma_{pp}(A) := \set{\lambda \in \sigma(A): \lambda \text{\emph{\textbf{ is an eigenvalue of }}}A}$
+\item \underline{\textbf{\emph{Absolutely Continuous Spectrum}}}: $\sigma_{ac}(A) := \sigma\paren{A|_{\cH_{ac}}}$
+\item \underline{\textbf{\emph{(Continuous) Singular Spectrum}}}: $\sigma_{sing}(A) := \sigma\paren{A|_{\cH_{sing}}}$
+\end{enumerate} We can also defines \underline{\textbf{\emph{the continuous spectrum}}} as $\sigma_{cont}(A) := \sigma\paren{A|_{\cH_{ac} \oplus \cH_{sing}}}$.
+\end{definition}
+
+\item \begin{remark}
+These \emph{spectrums} are \emph{\textbf{spectrum}} of \emph{the linear operator} $A$ \emph{\textbf{restricted} in \textbf{each invariant subspace}}. They are also  the \emph{\textbf{support}} of corresponding \emph{\textbf{spectral measure}}.
+\end{remark}
+
+\item \begin{remark}
+Unlike pure point spectrum, the singular spectrum $\sigma_{sing}(A)$ may contains spectral measure that is singular to Lebesgue measure but still without pure point. 
+\end{remark}
+
+\item \begin{proposition} \citep{reed1980methods}
+\begin{align*}
+\sigma(A) &= \overline{\sigma_{pp}(A) } \cup \sigma_{ac}(A)  \cup \sigma_{sing}(A) \\
+&= \overline{\sigma_{pp}(A) } \cup \sigma_{cont}(A) 
+\end{align*}
+\end{proposition}
+
+\item \begin{remark}
+The sets \emph{\textbf{need not be disjoint}}, however. The reader should be warned that $\sigma_{sing}(A)$ may have nonzero Lebesgue measure.
+\end{remark}
+
+
+\item \begin{proposition} (\textbf{Criterion for Spectrum}) \citep{reed1980methods}\\
+$\lambda \in \sigma(A)$ \textbf{if and only if} 
+\begin{align*}
+P_{B(\lambda, \epsilon)}(A) = P_{(\lambda -\epsilon, \lambda + \epsilon)}(A) \neq 0
+\end{align*}  for any $\epsilon > 0$. 
+\end{proposition}
+
+\item \begin{definition} (\emph{\textbf{Essential Spectrum and Discrete Spectrum}}) 
+\begin{enumerate}
+\item We say $\lambda \in \sigma_{ess}(A)$, \underline{\emph{\textbf{the essential spectrum of $A$}}}, \emph{if and only if} 
+\begin{align*}
+P_{(\lambda -\epsilon, \lambda + \epsilon)}(A) \text{\emph{\textbf{ is infinite dimensional }}}
+\end{align*}
+\emph{\textbf{for all}} $\epsilon > 0$. $P$ is \emph{infinite dimensional} means $\overline{\text{Ran}(P)}$ is \emph{infinite dimensional}. 
+\item If $\lambda \in \sigma(A)$, but 
+\begin{align*}
+P_{(\lambda -\epsilon, \lambda + \epsilon)}(A) \text{\emph{\textbf{ is finite dimensional }}}
+\end{align*}
+\emph{\textbf{for some}} $\epsilon > 0$, we say $\lambda \in \sigma_{disc}(A)$, \underline{\emph{\textbf{the discrete spectrum of $Α$}}}.
+\end{enumerate}
+
+\end{definition}
+
+\item \begin{proposition} \citep{reed1980methods}\\
+$\sigma_{ess}(A)$ is always \textbf{closed}. 
+\end{proposition}
+
+\item \begin{proposition}  \citep{reed1980methods}\\
+$\lambda \in \sigma_{disc}(A)$ \textbf{if and only if} \underline{\textbf{both}} the following hold: 
+\begin{enumerate}
+\item $\lambda$ is an \textbf{isolated} point of $\sigma(A)$, that is, for some $\epsilon$, $(\lambda -\epsilon, \lambda + \epsilon) \cap \sigma(A) = \set{\lambda}$. 
+\item $\lambda$ is an \textbf{eigenvalue} of \textbf{finite multiplicity}, i.e., 
+\begin{align*}
+\text{dim}\set{\varphi: A\varphi = \lambda \varphi} =\text{dim }\text{Ker}\set{A - \lambda I} < \infty.
+\end{align*} 
+\end{enumerate}
+\end{proposition}
+
+\item \begin{proposition}
+$\lambda \in \sigma_{ess}(A)$ \textbf{if and only if} \underline{\textbf{at least one}} of the following holds: 
+\begin{enumerate}
+\item $\lambda \in \sigma_{cont}(A) = \sigma_{ac}(A)  \cup \sigma_{sing}(A)$. 
+\item $\lambda$ is a \textbf{limit point} of $\sigma_{pp}(A)$.
+\item $\lambda$ is an \textbf{eigenvalue} of \textbf{infinite multiplicity}. 
+\end{enumerate}
+\end{proposition}
+
+
+
+
+\item \begin{theorem} (\textbf{Weyl's Criterion}) \citep{reed1980methods}\\
+Let $A$ be a \textbf{bounded self-adjoint} operator. Then $\lambda \in \sigma(A)$ \textbf{if and only if} there exists $\set{\psi_n}_{n=1}^{\infty}$ so that $\norm{\psi_n}{} = 1$ 
+and
+\begin{align*}
+\lim\limits_{n\to \infty}\norm{(A - \lambda)\psi_n}{} = 0.
+\end{align*}
+
+$\lambda \in \sigma_{ess}(A)$ \textbf{if and only if} the above $\set{\psi_n}_{n=1}^{\infty}$ can be chosen to be \textbf{orthogonal}. 
+\end{theorem}
+
+\item \begin{remark}
+\emph{The essential spectrum} \emph{\textbf{cannot be removed}} by \emph{\textbf{essentially finite dimensional perturbations}}. 
+
+A general implies that $\sigma_{ess}(A) = \sigma_{ess}(B)$ if $A - B$ is \textbf{\emph{compact}}. 
+\end{remark}
+
+\item \begin{remark}
+Finally, we discuss one useful formula relating the resolvent and spectral projections. It is a matter of computation to see that the box on $[a,b]$
+\begin{align*}
+f_{\epsilon}(x) &= \left\{ \begin{array}{cc}
+0 & x \not\in [a, b]\\
+\frac{1}{2} & x=a \text{ or }x=b\\
+1 & x \in (0,1)
+\end{array}
+\right.
+\end{align*} We can find 
+\begin{align*}
+f_{\epsilon}(x) &= \lim\limits_{\epsilon \rightarrow 0^{+}}\frac{1}{2\pi i} \int_{a}^{b}\paren{\frac{1}{x- \lambda - i \epsilon} - \frac{1}{x - \lambda + i\epsilon}} d\lambda
+\end{align*} Moreover,  $\abs{f_{\epsilon}(x)}$ is \emph{\textbf{bounded uniformly}} in $\epsilon$. Applying the functional calculus on $A$, we have
+\end{remark}
+
+\begin{theorem} (\textbf{Stone's formula}) \citep{reed1980methods}\\
+ Let $A$ be a \textbf{bounded self-adjoint} operator. Then 
+ \begin{align}
+ \frac{1}{2}\paren{P_{[a, b]} + P_{(a,b)}} &= \lim\limits_{\epsilon \rightarrow 0^{+}}\frac{1}{2\pi i} \int_{a}^{b}\brac{\paren{A- \lambda - i \epsilon}^{-1} - \paren{A - \lambda + i\epsilon}^{-1}} d\lambda \label{eqn: stone_formula} \\
+ &=  \lim\limits_{\epsilon \rightarrow 0^{+}}\frac{1}{2\pi i} \int_{a}^{b}\brac{R_{\lambda + i \epsilon}(A) - R_{\lambda - i \epsilon}(A)} d\lambda \nonumber
+ \end{align} for $R_{\lambda}(A) = (A - \lambda)^{-1}$, the \textbf{resolvent} of $A$.
+\end{theorem}
+\end{itemize}
+
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{reference.bib}
+\end{document}
