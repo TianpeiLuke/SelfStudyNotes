@@ -89,7 +89,7 @@
       - Log-domain Sinkhorn
       - Sinkhorn Divergence
 
-  - Variational Wasserstein Problems
+  - Variational Wasserstein Problems [pdf](./info_geo_4_variational_wass.pdf)
     - Differentiating the Wasserstein Loss
       - Eulerian and Lagrangian Discretization
       - Automatic Differentiation
