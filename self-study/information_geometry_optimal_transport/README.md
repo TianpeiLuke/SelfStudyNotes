@@ -103,7 +103,7 @@
       - Wasserstein Propagation
     - Minimum Kantorovich Estimators 
 
-  - Semi-discrete Optimal Transport
+  - Semi-discrete Optimal Transport [pdf](./info_geo_5_semidiscrete_ot.pdf)
     - Semidiscrete Problem Formulation
     - K-means via Semi-Discrete Optimal Transport
     - Entropic Regularization
