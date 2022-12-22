@@ -1,0 +1,27 @@
+\begin{thebibliography}{3}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Amann(2011)]{amann2011ordinary}
+Herbert Amann.
+\newblock \emph{Ordinary differential equations: an introduction to nonlinear
+  analysis}, volume~13.
+\newblock Walter de gruyter, 2011.
+
+\bibitem[Hirsch et~al.(2012)Hirsch, Smale, and Devaney]{hirsch2012differential}
+Morris~W Hirsch, Stephen Smale, and Robert~L Devaney.
+\newblock \emph{Differential equations, dynamical systems, and an introduction
+  to chaos}.
+\newblock Academic press, 2012.
+
+\bibitem[Lee(2003.)]{lee2003introduction}
+John~Marshall Lee.
+\newblock \emph{Introduction to smooth manifolds}.
+\newblock Graduate texts in mathematics. Springer, New York, Berlin,
+  Heidelberg, 2003.
+\newblock ISBN 0-387-95448-1.
+
+\end{thebibliography}
