@@ -1,0 +1,506 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs, dsfont, stackrel}
+\usepackage{tabularx}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Lecture 3: Markov Chain Monte Carlo}
+\author{ Tianpei Xie}
+\date{Sep. 28th., 2022 }
+\maketitle
+\tableofcontents
+\newpage
+\allowdisplaybreaks
+\section{Basic Concept of Markov Chain}
+\begin{itemize}
+\item \emph{\textbf{Markov Chain}} $(X_t)_t$ is a \emph{\textbf{probabilistic graphical model}} over a chain graph $\cG=(\cV, \cE_{C})$, where each random variable $X_t$ only has exactly one children $X_{t+1}$ and one parent $X_{t-1}$. Denote the index of variable $t$ as the time. Markov chain  $(X_t)_t$ is also a \emph{\textbf{stochastic process}}. 
+
+\item By Markov property, 
+\begin{align*}
+P(X_{t+1} | X_t, X_{t-1}, \ldots, X_1) &= P(X_{t+1} | X_t) .
+\end{align*} It is seen that the transition probability does not depend on the time $t$, i.e. Markov chain is \textbf{time-invariant}.
+
+\item Define the \emph{\textbf{kernel}} of Markov Chain as the \emph{time-invariant} \emph{\textbf{transition probability}}
+\begin{align}
+K(x, y)  = p(x, y) &:= P(X_{t+1} = y | X_t = x).  \label{eqn: mc_kernel}
+\end{align} Then the \emph{\textbf{$m$-step transition probability}} is defined as
+\begin{align}
+K^{m}(x, y) &= P(X_{t+m} = y | X_t = x). \label{eqn: mc_kernel_m}
+\end{align}
+
+\item For $X_t \in \cX:= \set{1, \ldots, n}$ as discrete random variable with $\abs{\cX} = n$, we can define the \textbf{\emph{transition matrix}}
+\begin{align}
+\mb{K} &= \brac{K(i,j)}_{n\times n} \label{eqn: mc_kernel_mat}
+\end{align}
+
+\item We have the \emph{\textbf{Chapman-Kolmogorov equation}} \citep{ross2014introduction}:
+\begin{align}
+K^{m+n}(x, y)  &= \sum_{z}K^{m}(x, z)K^{n}(z, y), \quad \forall x,y \in \cX \label{eqn: mc_ck_eqn}\\
+\Rightarrow \mb{K}^{m+n} &= \mb{K}^{m}\mb{K}^{n} \nonumber
+\end{align} That is, we split the  $(m+n)$-step path from $x\rightarrow y$ into all possible combination of a $m$-step path from $x\rightarrow z$ and a $n$-step path from $z \rightarrow y$ for some intermediate state $z$.
+
+
+\item Define $T_{j} = \min\set{t\ge 1: X_{t} = j}$ as the time steps for Markov Chain $(X_t)_t$ to \emph{hit} state $j$ for the \emph{\textbf{first time}}. $T_j$ is called the state $j$'s \underline{\textbf{\emph{first hitting time}}}.
+
+Denote $f_{i,j}$ be the \emph{\textbf{probability of ever hitting state}} $j$ (\emph{\textbf{within finite time}}) \emph{\textbf{starting from state}} $i$. That is
+\begin{align}
+f_{i,j} &:= P(T_{j} < \infty | X_{0} = i)\label{eqn: mc_hit_time_prob}
+\end{align} Denote $f_{i,j}^{(m)}$ be the \emph{probability of hitting at state $j$ at time $m$} starting from state $i$
+\begin{align}
+f_{i,j}^{(m)} &:= P(T_{j} = m | X_{0} = i)\label{eqn: mc_hit_time_prob_m}
+\end{align}
+
+\item Define $N(y):= \sum_{t=0}^{\infty}\ind{X_{t} = y}$ is the \emph{\textbf{total number of times hitting the state}} $y$.
+\begin{align}
+P(N(y) \ge 1 |\, X_{0} = x) &= P(T_{y} < \infty | X_{0} = x) = f_{x,y} \label{eqn: mc_hit_times} \\
+P(N(y) \ge m |\, X_{0} = x) &= P(N(y) \ge 1 |\, X_{0} = x)P^{m-1}(N(y) \ge 1 |\, X_{0} = y) \label{eqn: mc_hit_times_hitting_time_recusion} \\
+&=f_{x,y}\, f^{m-1}_{y,y}\nonumber
+\end{align} Note that in order to visit $y$ at least $m$ times, we need to visit $y$ first time and stating from $y$ recurrently visit $y$ $(m-1)$ times.
+
+The random variable $N(x)|X_0 = x$ follows a \underline{\textbf{\emph{geometric distribution}}} with mean $1/(1- f_{x,x})$.
+\begin{align}
+P(N(x) = m |\, X_{0} = x) &= (1- f_{x,x})f^{m-1}_{x,x} \label{eqn: mc_hit_times_m_times_recurrent}
+\end{align}
+
+\item For any pair $x, y \in \cX$, if there exists $n \in \bN_{+}$ so that $K^{n}(x, y) > 0$, then the state $y$ is \emph{\textbf{accessible}} from state $x$. This is equivalent to say that the probability of hitting time of $y$ being finite starting from $x$ is above zero, i.e. \underline{$f_{x,y} >0$}.
+
+\item If $x$ is accessible from $y$, and $y$ is accessible from $x$, then we say that $x$ and $y$ \underline{\emph{\textbf{coummunicate}}},
+$x \leftrightarrow y$. It is easy to check that this is an \underline{\emph{\textbf{equivalence relation}}}.
+
+\item A Markov Chain is \underline{\emph{\textbf{irreducible}}} if \underline{it has \textbf{only one equivalence class}}, i.e. all states in $\cX$ communicate to each other.
+
+\item Based on hitting time, we can categorize states into two groups:
+\begin{itemize}
+\item A state $i$ is \underline{\emph{\textbf{recurrent}}} if and only if \underline{$f_{i,i} =  P(T_{i} < \infty | X_{0} = i) = 1$}, i.e. the Markov Chain will definitely revisit the state $i$ after stating from $i$.
+
+\item A recurrent state $i$ is \emph{\textbf{positive recurrent}} if the \emph{expected returning time} $\E{}{T_{i} | X_0 = i} < \infty$; otherwise we say it is \emph{\textbf{null recurrent}}.
+
+\item A state $i$ is called \emph{\textbf{transient}} if $f_{i,i} < 1$.
+\end{itemize}
+\item
+\begin{proposition}
+If $i$ is recurrent, and $i \rightarrow j$, then $j$ is also recurrent. Therefore, in any \textbf{equivalent class}, \textbf{either all states are recurrent} or \textbf{all are transient}. In particular, if the chain is \emph{\textbf{irreducible}}, then either all states are recurrent or all are transient.
+\end{proposition}
+
+\begin{proposition}
+An \textbf{irreducible finite state Markov chain} must be \textbf{positive recurrent}. 
+\end{proposition}
+
+\item \begin{definition}
+The probability of states $\set{\pi(x), \forall x\in \cX}$ is a \underline{\textbf{\emph{stationary distribution}}} if and only if 
+\begin{align}
+\pi(y) &= \sum_{x \in X}K(x, y)\pi(x), \forall y \in \cX \label{eqn: mc_stationary}\\
+\mb{\pi}^{T} &= \mb{\pi}^{T}\,\mb{K}  \label{eqn: mc_stationary_mat}
+\end{align} That is, $\mb{\pi}$ is the eigenvector of stochastic matrix $\mb{K}$ corresponding to eigenvalue $\lambda_0 = 1$.
+\end{definition} The \emph{\textbf{stationary distribution does not change over time}}.
+
+\item \begin{proposition}
+Suppose that the \textbf{limit distribution} $\lim_{t\rightarrow \infty}P(X_t = y)$ exists, and 
+\begin{align*}
+\lim_{t\rightarrow \infty}K^{t}(x, y) &= \pi(y), \quad \forall x, y\in \cX
+\end{align*} which is independent of where it starts from, then the Markov Chain has a \textbf{unique stationary distribution} and 
+\begin{align}
+\lim_{t\rightarrow \infty}P(X_t = y) &= \pi(y), \quad \forall y \in \cX
+\end{align} i.e. the limit distribution is stationary distribution.
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Global Balance Equation})\\
+The stationary distribution $\set{\pi(x), \forall x\in \cX}$ satisfies the following \textbf{global balance equation}:
+\begin{align}
+\sum_{j \in \cX}\pi(i)K(i, j) &=  \sum_{j \in \cX}\pi(j)K(j, i).  \label{eqn: mc_global_balance_eqn}
+\end{align} This means the total flow out of $i$ (LHS) is equal to the total flow into $i$ (RHS) in steady state.
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Detailed Balance Equation})\\
+For distribution $\set{\pi(x), \forall x\in \cX}$, if the following \textbf{detailed balance equation} is satisfied
+\begin{align}
+\pi(i)K(i, j) &=  \pi(j)K(j, i),\quad \forall i, j\in \cX  \label{eqn: mc_detailed_balance_eqn}
+\end{align} then $\set{\pi(x), \forall x\in \cX}$ is a stationary distribution.
+\end{proposition}
+
+
+\item 
+\begin{theorem} (Stationary distribution for transient and null recurrent states)\\
+Let $\set{\pi(x), \forall x\in \cX}$  be stationary distribution. If $x \in \cX$ is \textbf{transient} or \textbf{null recurrent} state, then 
+\begin{align*}
+\pi(x) = 0.
+\end{align*} 
+\end{theorem}
+
+\item \begin{theorem} \citep{ross2014introduction}\\
+An \underline{\textbf{irreducible recurrent}} Markov Chain has a \textbf{unique} \textbf{stationary distribution} $\set{\pi(x)}$, given 
+\begin{align}
+\pi(x) &= \frac{1}{\mu_x}, \quad \forall x\in \cX
+\end{align} where $\mu_{x} := \E{}{T_{x} | X_{0} = x}$  is the \textbf{expected first return time} of state $x$.
+\end{theorem} It implies that as $n\rightarrow \infty$, for any state $x\in \cX$, the fraction of time that Markov Chain stays at $x$ is unchanged and is the reciprocal of the expected first return time.
+
+\item \begin{definition}
+The \underline{\textbf{\emph{periodicity}}} of a state $x \in \cX$ is defined as 
+\begin{align}
+d(x) &= \text{g.c.d.}\set{t\ge 0: K^{t}(x, x) > 0}
+\end{align} where $\text{g.c.d.}$ is the \emph{\textbf{greatest common divisor}}. 
+\end{definition}
+
+\item \begin{definition}
+If $d(x) \ge 2$, then state $x$ is \emph{\textbf{periodic}}. If $d(x) = 1$, then state $x$ is \underline{\emph{\textbf{aperiodic}}}
+\end{definition}
+The periodicity property is \emph{closed} under the equivalence class $C$.
+
+\item \begin{definition}
+A Markov Chain is  \underline{\emph{\textbf{irreducible}}, \emph{\textbf{positive recurrent}} and \emph{\textbf{aperiodic}}}, then it is called \underline{\emph{\textbf{ergodic}}}.
+\end{definition}
+
+\item \begin{theorem}
+A Markov Chain is \textbf{ergodic} having stationary distribution $\mb{\pi}$, then 
+\begin{align}
+\lim_{t\rightarrow \infty}K^{t}(x, y) &= \pi(y), \quad \forall x, y\in \cX \label{eqn: mc_ergodic}
+\end{align} That is, when a Markov Chain is ergodic, its marginal state distribution will converge to the stationary distribution.
+\end{theorem}
+
+\item \begin{definition}
+A Markov Chain $(X_t)_t$ is called \underline{\emph{\textbf{time-reversible}}}, if it has stationary distribution $\mb{\pi}$ and the detailed balance equation is satisfied:
+\begin{align}
+\pi(i)K(i, j) &=  \pi(j)K(j, i),\quad \forall i, j\in \cX  \label{eqn: mc_detailed_balance_eqn_time_rev}
+\end{align}
+\end{definition}
+
+\item The reversed process $(Y_{k})_k := (X_{t-k})_{k}$ is a Markov Chain and its transition probability 
+\begin{align}
+Q(i,j) &= \frac{\pi(j)K(j,i)}{\pi(i)} \label{eqn: mc_rev_kernel}
+\end{align} Note that $(Y_{k})_k$ and $(X_t)_t$ are statistically equivalent since $Q(i,j) = K(i,j)$.
+
+\item 
+\begin{theorem}
+An ergodic Markov Chain $(X_t)_t$ for which $K(i,j) =0$ whenever $K(j, i) = 0$ is \textbf{time-reversible} if and only if starting from any state $i$, any path back to $i$ has the \textbf{same probability} as its reverse path. That is, for path $i \rightarrow i_1\rightarrow i_2 \rightarrow \ldots \rightarrow i_k \rightarrow i$ and its reverse path $i \leftarrow i_1 \leftarrow i_2 \leftarrow \ldots  \leftarrow i_k \leftarrow i$
+\begin{align}
+K(i, i_1)\,K(i_1, i_2)\,\ldots\,K(i_k, i) &= K(i, i_k)\,\ldots\,K(i_2, i_{1})\,K(i_1, i), \quad \forall i,i_1,\ldots, i_k\in \cX \label{eqn: mc_path_rev}
+\end{align} 
+\end{theorem}
+
+\item 
+\begin{theorem} (\textbf{Reversal Test})\\
+Let $\mb{K}$ be a stochastic matrix indexed by a countable set $\cX$ and let $\mb{\pi}$ be a probability distribution on $\cX$. Let $\mb{Q}$ be a stochastic matrix indexed by $\cX$ such that
+\begin{align}
+\pi(i)Q(i, j) &=  \pi(j)K(j, i),\quad \forall i, j\in \cX.  \label{eqn: mc_time_rev_test}
+\end{align}  Then $\mb{\pi}$ is a stationary distribution of $\mb{K}$
+\end{theorem}
+
+\item 
+\begin{theorem} (\textbf{Ergodic Theorem})  \citep{robert1999monte} \\
+If $(X_t)_t$ is Harris recurrent with a $\sigma$-finite invariant measure $\pi$, then for any $f, g \in L_1(\pi)$ with $\E{\pi}{g} \neq 0$, 
+\begin{align}
+\lim_{T\rightarrow \infty}\frac{S_T(f)}{S_T(g)} &= \frac{\E{\pi}{f}}{\E{\pi}{g}} = \frac{\int f(x)d\pi(x)}{\int g(x)d\pi(x)} \label{eqn: ergodic theorem}
+\end{align}
+\end{theorem}
+It can be shown that if $(X_t)_t$  is \emph{\textbf{Harris positive}} with \textbf{stationary distribution} $\pi$ and if $S_T(h)$ \emph{converges} $\mu_0$-almost surely ($\mu_0$ a.s.) to $\E{\pi}{h}$, for an initial distribution $\mu_0$, this convergence occurs for \emph{\textbf{every initial distribution}} $\mu$·
+
+\item \begin{theorem} (\textbf{Central Limit Theorem for reversible chains})\citep{robert1999monte} \\
+If $(X_t)_t$ is \underline{\textbf{aperiodic, irreducible, and reversible}} with stationary distribution $\mb{\pi}$, the \textbf{Central Limit Theorem} applies when
+\begin{align}
+0< \sigma^2 &= \E{\mb{\pi}}{g^2(X_t)} + 2\sum_{s=1}^{\infty}\E{\mb{\pi}}{g(X_t)\, g(X_{t+s})} < \infty. \label{eqn: mc_asym_variance}
+\end{align}
+\end{theorem}
+\end{itemize}
+
+
+\section{Markov Chain Monte Carlo}
+\subsection{From Vanilla Monte Carlo to MCMC}
+\begin{itemize}
+\item \begin{definition}
+\underline{\emph{\textbf{A Markov Chain Monte Carlo (MCMC) method}}} for the simulation of a distribution $f$ is any method producing an ergodic Markov chain $(X_t)_t$ whose stationary distribution is $f$.
+\end{definition}
+
+\item Compared to vanilla Monte Carlo (e.g. inverse transform, reject sampling, importance sampling), MCMC has the following \textbf{characteristics}:
+\begin{itemize}
+\item Unlike vanilla Monte Carlo methods, which reply on i.i.d samples, \emph{\textbf{Markov Chain Monte Carlo (MCMC) methods}} generate \textbf{\emph{dependent} samples} via Markov chain. 
+
+\item The MCMC updates \underline{\emph{\textbf{preserve the probability measure $\pi$}}} when convergence is attained. That is, \emph{when the Markov chain \textbf{converges}}, the distribution of $X_t$ is the same as the distribution of $X_{t+1}, X_{t+2}, \ldots$. Thus we have obtained a sequence of \emph{\textbf{identically distributed (but dependent) samples}}. When Markov chain converges (\emph{\textbf{mixing}}), we can use samples the same way as we did in vanilla Monte Carlo to approximate the expectation. In particular, an MCMC estimator is
+\begin{align}
+J_{T} &= \Em{\mb{\pi}}{h(X)} = \frac{1}{T}\sum_{t=0}^{T}h(X_t). \label{eqn: mcmc_estimator}
+\end{align} The ergodic theorem guarantees the (almost sure) convergence of the empirical average  to $\E{\mb{\pi}}{h(X)}$ where $\mb{\pi}$ is the stationary distribution. A sequence $(X_t)_t$ produced by a Markov chain Monte Carlo algorithm can thus be employed just as an i.i.d sample.
+
+\item Similar to importance sampling, we can approximate the expectation $\E{f}{h(X)}$ using an alternative proposal distribution $g$ which is the stationary distribution of an ergodic Markov chain. This is the idea behind \emph{Metropolis-Hastings algorithm}. 
+\end{itemize}
+
+\item  Markov Chain Monte Carlo (MCMC) methods are \emph{\textbf{preferred}} in following situations:
+\begin{itemize}
+\item The target distribution is \emph{\textbf{high dimensional}}. Due to \emph{the curse of dimensionality}, the variance, which is a function of dimension $d$, will grow exponentially as the dimensionality increases. Moreover, many high dimensional joint distributions are usually not represented in explicit function form due to their complicated partition functions. In this situation, finding a proposal distribution that is close to the target distribution in high dimensional space is also very challenging.
+
+\item Some stochastic optimization algorithms \textbf{naturally produce Markov chain structures}. It is a general fact that the use of Markov chains allows for a greater scope than the methods presented in vanilla Monte Carlo.
+
+\item Vanilla Monte Carlo and MCMC algorithms both satisfy the $O(1/\sqrt{n})$ convergence requirement for the approximation of $J$. There are thus many instances where a specific MCMC algorithm dominates, variance-wise, the corresponding Monte Carlo proposal. 
+\end{itemize}
+\end{itemize}
+
+\subsection{Metropolis-Hastings Algorithm}
+\begin{itemize}
+\item Consider the following energy-based model
+\begin{align*}
+\pi(\mb{x}) &= \frac{1}{Z}\exp(- h(\mb{x})),\\
+\text{where }Z&= \int_{\cX}\exp(- h(\mb{x}))  d\mb{x} 
+\end{align*} is the partition function in high dimensional space.
+
+\item The basic idea for Metropolis algorithm is to simulate $\pi$ using the stationary distribution $g$ from a Markov chain. Compare to analysis of Markov chain itself, which often starts from a known transition kernel, the Metropolis algorithm starts from a known stationary distribution $g$ and is interested in how to prescribe an efficient transition kernel to reach the equilibrium.
+
+\item Starting from an initial configuration $\mb{X}_{0}$, the \underline{\textbf{\emph{Metropolis Algorithm}}} iteratively repeats the following steps \citep{liu2001monte}:
+\begin{enumerate}
+\item Propose a random unbiased "perturbation" of $\mb{X}_{t}$ so as to generate a new configuration $\mb{X}^{'}$. $\mb{X}^{'}$ is seen as generated by a \emph{symmetric} probability transition kernel (or \emph{\textbf{proposal function}}) $K(\mb{X}_{t}\,, \mb{X}^{'})$, i.e. $K(x, y) = K(y, x)$. Then calculate the change $\Delta h := h(\mb{X}^{'}) - h(\mb{X}_{t})$;
+
+\item Generate a uniform random variable $U\in \cU[0,1]$. Accept $\mb{X}_{t+1} = \mb{X}^{'}$ if
+\begin{align*}
+U &\le \pi(\mb{X}^{'}) / \pi(\mb{X}_{t}) := \exp\paren{- \Delta h};
+\end{align*} Otherwise, accept $\mb{X}_{t+1} = \mb{X}_{t}$.
+\end{enumerate}
+
+\item Heuristically, the Metropolis Algorithm is based on a \emph{"trial-and-error" strategy}: at each iteration, a random perturbation of $\mb{X}_{t}$ is generated by Markov chain. Then the gain is computed for this new sample. If the gain is large enough, it will be accepted by high probability. Otherwise, we keep using the old sample $\mb{X}_{t}$.
+
+\item The requirement for symmetric transition kernel means that the chance of getting $\mb{X}^{'}$ from $\mb{X}_{t}$ and the chance of getting $\mb{X}_{t}$ from $\mb{X}^{'}$ are equal. This could avoid the "trend bias" at the proposal stage.
+
+\item Hastings generalize the idea of Metropolis Algorithm by removing the requirement for the symmetric proposal function $K$. In Hastings' generalization, it only requires that $K(x, y) >0 \Leftrightarrow K(y, x) > 0$.
+
+\item The \underline{\emph{\textbf{Metropolis-Hastings Algorithm}}} is described as below:
+\begin{enumerate}
+\item Given current configuration $\mb{X}_{t}$, draw $\mb{Y}$ from the proposal function $K(\mb{X}_{t}\,, \mb{Y})$.
+
+\item Compute the \emph{\textbf{Hastings ratio}} (\emph{acceptance function}):
+\begin{align}
+r(\mb{X}_{t}\,, \mb{Y}):= &\frac{\pi(\mb{Y})\,K(\mb{Y}, \mb{X}_{t})}{\pi(\mb{X}_{t})\,K(\mb{X}_{t}\,, \mb{Y})} \label{eqn: mh_hastings_ratio}
+\end{align}
+
+\item (\emph{\textbf{Metropolis Rejection}}) Generate a uniform random variable $U\in \cU[0,1]$.\\ 
+Accept $\mb{X}_{t+1} = \mb{Y}$ if
+\begin{align*}
+U &\le \alpha(\mb{X}_{t}\,, \mb{Y}),
+\end{align*} where 
+\begin{align*}
+\alpha(\mb{X}_{t}, \mb{Y}) &= \min\set{1,\;r(\mb{X}_{t}\,, \mb{Y})}
+\end{align*}
+
+\item \underline{Otherwise, accept $\mb{X}_{t+1} = \mb{X}_{t}$}.
+\end{enumerate}
+Clearly if $K$ is symmetric $K(\mb{Y}\,, \mb{X}_{t}) = K(\mb{X}_{t}\,, \mb{Y})$, the ratio \eqref{eqn: mh_ratio} is equal to $\exp(- \Delta h)$. The Metropolis Algorithm is a special case of Metropolis-Hastings Algorithm.
+
+\item The intuition behind the ratio $K(\mb{y}, \mb{x}_t)/K(\mb{x}_t, \mb{y})$ is that it compensates the "flow bias" from the proposal distribution. 
+
+\item 
+\begin{theorem}
+Let $(\mb{X}_t)_t$ be the chain produced by the Metropolis-Hastings algorithm. For every conditional distribution $q(\mb{y}|\mb{x}) = K(\mb{x}, \mb{y})$, whose support includes $\cX$,
+\begin{enumerate}
+\item the kernel $K$ of the chain satisfies the \textbf{detailed balance condition} with $\pi$;
+\item $\pi$ is a stationary distribution of the chain.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+For (1), we see that the \emph{transition probability} of  $(\mb{X}_t)_t$ is computed as 
+\begin{align}
+A(\mb{x}\,, \mb{y}) &= K(\mb{x}\,, \mb{y})\,\alpha(\mb{x}\,, \mb{y}) \nonumber\\
+&= K(\mb{x}\,, \mb{y})\,\min\set{1, \; \frac{\pi(\mb{y})\,K(\mb{y}, \mb{x})}{\pi(\mb{x})\,K(\mb{x}\,, \mb{y})} }\nonumber\\
+&= \frac{\min\set{\pi(\mb{x})\,K(\mb{x}\,, \mb{y})\,, \pi(\mb{y})\,K(\mb{y}, \mb{x})}}{\pi(\mb{x})} := \frac{\delta(\mb{x}, \mb{y})}{\pi(\mb{x})}. \label{eqn: mh_transition_prob} \\
+&= \pi(\mb{y})\min\set{\frac{K(\mb{x}\,, \mb{y})}{\pi(\mb{y})}\,, \frac{K(\mb{y}, \mb{x})}{\pi(\mb{x})}} \nonumber
+\end{align}
+We can see that since $\delta(\mb{x}, \mb{y}) = \delta(\mb{y}, \mb{x})$ the \emph{detailed balance equation} holds:
+\begin{align}
+\pi(\mb{x})A(\mb{x}, \mb{y}) &= \pi(\mb{y})A(\mb{y}, \mb{x}). \qed \label{eqn: mh_detail_balance_equation}
+\end{align} 
+
+For (2), it follows that when detailed balance equation is satisfied, then $\pi$ is a stationary distribution for Markov chain $(\mb{X}_t)_t$.\qed
+\end{proof} The stationarity of $\pi$ is therefore established for \emph{almost any conditional distribution} $q$, a fact which indicates the \underline{\emph{\textbf{universality}}} of Metropolis-Hastings algorithms.
+
+\item We can check on the properties of the Markov chain $(\mb{X}_t)_t$ from Metropolis-Hastings algorithm:
+\begin{itemize}
+\item (\textbf{\emph{Irreducibility}}): To make sure the \emph{irreducibility} to hold, the domain $\cX$ of target distribution $\pi$ need to be \underline{\emph{\textbf{connected}}}. Otherwise, the Markov chain will not be able to reach other connected components. In other words, the stationary distribution $\pi$ is \textbf{\emph{not multimodal distribution}}.
+
+\item (\textbf{\emph{Positive recurrent}}): A sufficient condition for both the \emph{irreducibility} and \emph{positive recurrence} to hold is the positivity of transition kernel:
+\begin{align}
+q(\mb{y}| \mb{x}) = K(\mb{x}, \mb{y}) > 0 \quad \forall \mb{x}, \mb{y} \in \cX. \label{eqn: mh_positive}
+\end{align} This makes sure that every state can be visited in one step. Thus the Markov chain is positive recurrent. In fact, it can be shown in \citep{robert1999monte} that if $(\mb{X}_t)_t$ is \emph{$\pi$-irreducible}, then it is \emph{Harris recurrent}.
+\begin{lemma} \citep{robert1999monte}\\
+If $(\mb{X}_t)_t$ from MH algorithm is $\pi$-irreducible, then it is Harris recurrent.
+\end{lemma}
+
+
+\item (\textbf{\emph{Aperiodic}}): Unlike the Rejection Sampling, the Metropolis Rejection does not simply regenerate a new proposal repeatedly until some of them is accepted. Instead, it reuse the value from the old state. An attempt to make Metropolis Rejection like the Rejection sampling will destroy the property that \textbf{this update will preserve the distribution $\pi$}
+
+A \emph{sufficient condition} for \emph{\textbf{aperiodic}} property to hold is to have $P\set{\mb{X}_{t+1} = \mb{X}_{t}} > 0$, and thus
+\begin{align}
+P\set{\pi(\mb{X}_t)\,K(\mb{X}_t\,, \mb{Y}) \le  \pi(\mb{Y})\,K(\mb{Y}, \mb{X}_t)} < 1 \label{eqn: mh_aperiod}
+\end{align} This is \textbf{critical} to guarantee the aperiodic property of the Markov chain, which is essential for \emph{Ergodic theorem} to hold. Note that this condition also make sure $K$ is \emph{not the transition kernel} for the Markov chain induced by Metropolis-Hastings algorithm.
+
+\item (\textbf{\emph{Reversibility}}):  From the theorem, we see that $(\mb{X}_t)_t$ is \underline{\emph{\textbf{time-reversible}}} with $\pi$ as its \emph{\textbf{invariant distribution}}.
+\end{itemize}
+ 
+\item Note that due to the rejection rule, $A(\mb{x}\,, \mb{y}) \neq K(\mb{x}\,, \mb{y})$, i.e. $K$ is not the transition kernel for the Markov chain induced by Metropolis-Hastings algorithm.
+
+
+\item In fact, as long as $A(\mb{x}\,, \mb{y}) = \pi(\mb{y}) \delta(\mb{x}, \mb{y})$ for some symmetric function $\delta$, the detailed balance equation will hold. The challenge, however, lies in the constraint on $\delta(\mb{x}\,, \mb{y})$ so that $\int A(\mb{x}\,, \mb{y}) d\mb{y} = \int \pi(\mb{y}) \delta(\mb{x}, \mb{y}) d\mb{y} = 1$.
+
+For instance, We can replace the acceptance function \eqref{eqn: mh_hastings_ratio} with a more general form
+\begin{align*}
+r(\mb{x}, \mb{y}):= \frac{\delta(\mb{x}, \mb{y})}{\pi(\mb{x})\,K(\mb{x}\,, \mb{y})}
+\end{align*} where $\delta(\mb{x}, \mb{y})$ is any symmetric function that makes $r(\mb{x}, \mb{y}) \le 1$. In this case, the probability of generating $\mb{y}$ given $\mb{x}$ is
+\begin{align*}
+A(\mb{x}\,, \mb{y}):=K(\mb{x}\,, \mb{y})r(\mb{x}, \mb{y}) &= \frac{\delta(\mb{x}, \mb{y})}{\pi(\mb{x})}.
+\end{align*} Since $\delta(\mb{x}, \mb{y}) = \delta( \mb{y}, \mb{x})$, we have $\pi(\mb{x})A(\mb{x}, \mb{y}) = \pi(\mb{y})A(\mb{y}, \mb{x})$. 
+
+\item Finally, we see that the convergence of estimator \eqref{eqn: mcmc_estimator} based on ergodic theorem.
+\begin{theorem}\label{thm: mh_convergence}\citep{robert1999monte}\\
+Suppose that the Metropolis-Hastings Markov chain $(\mb{X}_t)_t$ is $\pi$-irreducible. 
+\begin{enumerate}
+\item If $h \in L_1(\pi)$, then 
+\begin{align}
+\lim_{T\rightarrow \infty}\frac{1}{T}\sum_{t=0}^{T}h(\mb{X}_t) &= \E{\mb{\pi}}{h(\mb{X})} \label{eqn: mh_convergence}
+\end{align}
+
+\item If, in addition, $(\mb{X}_t)_t$ is \textbf{aperiodic}, then 
+\begin{align}
+\lim_{t\rightarrow \infty}\norm{\int_{\cX}K^{t}(\mb{x},\cdot)d\mu(\mb{x}) - \pi }{TV} &= 0  \label{eqn: mh_convergence_total_variation}
+\end{align} for \textbf{every initial distribution} $\mu$, where $K^{t}(\mb{x},\cdot)$ denotes the kernel for $t$ transitions.
+\end{enumerate}
+\end{theorem}
+
+\item \begin{corollary}\citep{robert1999monte}\\
+The conclusions of Theorem \ref{thm: mh_convergence} hold if the Metropolis-Hastings Markov chain $(\mb{X}_t)_t$ has conditional density 
+$q(\mb{y}|\mb{x}) = K(\mb{x}, \mb{y})$ that satisfies \eqref{eqn: mh_positive} and \eqref{eqn: mh_aperiod}. 
+\end{corollary}
+\end{itemize}
+
+\section{Some Special Metropolis-Hastings Algorithms}
+\subsection{Random-walk Metropolis-Hastings}
+\begin{itemize}
+\item A natural approach for the practical construction of a Metropolis-Hastings algorithm is to take into account the value previously simulated to generate the following value; that is, to consider a \underline{\emph{\textbf{local exploration}}} of the \emph{\textbf{neighborhood}} of the current value of the Markov chain. This idea is already used in algorithms such as the \emph{simulated annealing algorithm} and the \emph{stochastic gradient method}. 
+
+\item The \emph{Random-walk Metropolis-Hastings algorithm} is very commonly used when \emph{\textbf{no prior knowledge}} is available. In this case, the preferred proposal is just a \emph{uniformly} \emph{local} move, since it is \emph{\textbf{uninformative}} and \emph{\textbf{unbiased}}.
+
+\item For Euclidean space $\cX \subset \bR^{d}$, the \emph{random walk} model is \citep{robert1999monte}:
+\begin{align}
+\mb{Y}_t &= \mb{X}_{t} + \mb{\epsilon}_{t}, \label{eqn: rw_model}
+\end{align} where the noise $\mb{\epsilon}_{t} \sim \cN(\mb{0}, \sigma^2\mb{I}_{d})$ are independent from the starting position $\mb{X}_{t}$. The transition probability $q(\mb{y}|\mb{X}_{t}) = \cN(\mb{X}_{t}, \sigma^2\mb{I}_{d}) := g(\norm{\mb{y} - \mb{X}_{t}}{2})$, where $g(\cdot)$ is a symmetric function $g(-r) = g(r)$.  
+
+\item In general, define a \emph{\textbf{symmetric distribution}} $g_{\sigma}$ so that $q(\mb{y}|\mb{x}) = g_{\sigma}(\norm{\mb{y} - \mb{x}}{2}) > 0$ for all $\norm{\mb{y} - \mb{x}}{2} < \delta$. Here $\sigma$ controls the "\emph{\textbf{range}}" of the exploration. The random walk with transition kernel as $g_{\sigma}$ will produce an ergodic Markov chain. 
+
+The most common distributions $g$ in this setup are the \emph{\textbf{uniform distributions on spheres}} centered at the origin or standard distributions like the \emph{\textbf{normal}} and the \emph{\textbf{Student's t distributions}}. \emph{All these distributions usually need to be \textbf{scaled}}.
+
+
+\item The \underline{\emph{\textbf{Random-walk Metropolis-Hastings}}} is described as below:
+\begin{enumerate}
+\item Draw $\mb{\epsilon}_{t}$ from $g_{\sigma}(\mb{\epsilon})$ and set $\mb{Y} := \mb{X}_{t} + \mb{\epsilon}_{t}$;
+
+\item Compute the ratio:
+\begin{align}
+r(\mb{X}_{t}\,, \mb{Y}):= &\frac{\pi(\mb{Y})}{\pi(\mb{X}_{t})} \label{eqn: rw_ratio}
+\end{align}
+
+\item Accept $\mb{X}_{t+1} = \mb{Y}$ with probability 
+\begin{align*}
+\alpha(\mb{X}_{t}, \mb{Y}) &= \min\set{1,\;r(\mb{X}_{t}\,, \mb{Y})}
+\end{align*}
+
+\item Otherwise, accept $\mb{X}_{t+1} = \mb{X}_{t}$.
+\end{enumerate}
+
+\item Random-walk Metropolis is not only simple to implement, it also has a particularly nice \textbf{intuition}. The \textbf{proposol distribution} is biased towards \emph{\textbf{large volumes}} ($g_{\sigma}(\cdot)$), and hence the \emph{tails} of the target distribution, while the \emph{Metropolis correction} \textbf{rejects} those proposals that jump into neighborhoods where \emph{\textbf{the density is too small}} $(\pi(\mb{x}^{(t)}))$. The combined procedure then preferentially selects out those proposals that fall into neighborhoods of high probability mass, concentrating towards the typical set as desired.
+
+\item \begin{theorem} \citep{robert1999monte}\\
+Consider a \textbf{symmetric} density $\pi$ which is $\alpha$-\textbf{log-concave} with associated constant $\alpha$, i.e. $\pi(\mb{x}) = \exp\paren{- h(\mb{x})}$ for $h(\cdot)$ is a convex function, and
+\begin{align}
+\log\pi(\mb{x}) - \log \pi(\mb{y}) & \ge \alpha\norm{\mb{y} - \mb{x}}{} \label{eqn: log_concave}
+\end{align} for $\norm{\mb{x}}{}$ large enough. If the density $g$ is \textbf{positive} and \textbf{symmetric}, the chain $(\mb{X}_{t})_t$ of Random-walk Metropolis-Hastings is \textbf{geometrically ergodic}. If $g$ is not symmetric, a sufficient condition for geometric ergodicity is that $g(r)$ be bounded by $b\exp\paren{-\alpha\,\abs{r}}$ for a sufficiently large constant $b$.
+\end{theorem}
+\end{itemize}
+
+\subsection{Independent Metropolis-Hastings (IMH) Algorithm}
+\begin{itemize}
+\item \underline{\emph{\textbf{Independent Metropolis-Hastings (IMH) Algorithm}}}:
+\begin{enumerate}
+\item Generate $\mb{Y}_t$ from $g(\mb{y})$;
+\item Compute ratio:
+\begin{align}
+r(\mb{X}_{t}\,, \mb{Y}):= &\frac{\pi(\mb{Y}_t)\,g(\mb{X}_{t})}{\pi(\mb{X}_{t})\,g(\mb{Y}_t)} = \frac{w(\mb{Y}_t)}{w(\mb{X}_t)} \label{eqn: imh_hastings_ratio}
+\end{align} where $w(\mb{x}) = \frac{\pi(\mb{x})}{g(\mb{x})}$ is the \emph{importance weight}.
+\item Accept $\mb{X}_{t+1} = \mb{Y}_t$ with probability 
+\begin{align*}
+\alpha(\mb{X}_{t}, \mb{Y}) &= \min\set{1,\;r(\mb{X}_{t}\,, \mb{Y})}
+\end{align*}
+\item Otherwise, accept $\mb{X}_{t+1} = \mb{X}_{t}$.
+\end{enumerate}
+
+\item \emph{Independent Metropolis-Hastings (IMH)} choose the proposal transition function  $K(\mb{x}, \mb{y})$ as an \emph{\textbf{independent} density} $g(\mb{y})$. That is, the proposal move $\mb{Y}_t$ is generated \underline{\emph{\textbf{independently}}} from previous sample $\mb{X}_t$. 
+
+\item This method is an \textbf{alternative} to the \emph{Rejection Sampling} and \emph{Importance Sampling}. As with Rejection sampling, the performance of \emph{IMH} depends on how close the proposal distribution $g$ to the target distribution $\pi$. It is also suggested that 
+$g$ has longer tail than $\pi$ for robustness of performance. 
+
+It can be shown that if the envelop condition $\pi(\mb{x}) \le M\,g(\mb{x})$ for all $\mb{x}\in \cX$ holds, then the Metropolis-Hastings Markov chain $(\mb{X}_t)_t$ is ergodic, thus the convergence to $\E{\pi}{h}$ is guaranteed.
+
+\begin{theorem}
+The Independent Metropolis-Hastings algorithm produces a \textbf{uniformly ergodic} chain if there exists a constant $M$ such that
+\begin{align}
+\pi(\mb{x}) \le M\,g(\mb{x}), \quad \forall \mb{x}\in \cX. \label{eqn: imh_envelop}
+\end{align} In this case, 
+\begin{align*}
+\norm{K^{t}(\mb{x}, \cdot) - \pi}{TV} &\le 2\paren{1- \frac{1}{M}}^t
+\end{align*} where $\norm{\cdot}{TV}$ denotes the total variation norm. On the other hand, if for every $M$, there exists a set of positive measure where \eqref{eqn: imh_envelop} does not hold, $(\mb{X}_t)_t$ is not even geometrically ergodic.
+\end{theorem}
+
+\item Compared to \emph{Rejection Sampling} and \emph{Importance Sampling}, the \emph{Independent Metropolis-Hastings (IMH)} has   \underline{\emph{\textbf{larger expected acceptance probability}}} (at least $1/M$ when the chain is stationary) \citep{robert1999monte}. Thus IMH is more \textbf{\emph{sample efficient}}.
+\end{itemize}
+\subsection{Configurational bias Monte Carlo}
+\begin{itemize}
+\item The \emph{Configurational bias Monte Carlo (CBMC)} can be seen as a \emph{\textbf{SIS-based IMH}}. Assume that we have auxiliary distributions $\pi_s(\mb{x}_{1:s})$ where $\mb{x}_{1:s} = [x_1,\ldots, x_s]$ at each time $s$. $\mb{x}:= \mb{x}_{1:d}$. The proposal sampling probability $g_s(x_s| \mb{x}_{1:(s-1)})$ for all $s$. Here the proposal joint distribution can be computed sequentially
+\begin{align}
+g(\mb{x}) &= g_{1}(x_1)\prod_{s=2}^{d}g_s(x_s| \mb{x}_{1:(s-1)}) \label{eqn: cbmc_proposal_seq}
+\end{align}
+
+\item The \underline{\emph{\textbf{Configurational bias Monte Carlo (CBMC)}}} is described as below:
+\begin{enumerate}
+\item Generate $\mb{Y}$ according to  $g(\mb{y})$ via the sequential process in \eqref{eqn: cbmc_proposal_seq}.
+\item Compute the \emph{importance weight}:
+\begin{align}
+w(\mb{Y}) &= \frac{\pi(\mb{Y})}{g(\mb{Y})} =\frac{\pi_1\paren{Y_1}}{g_1\paren{Y_1}}\prod_{s=2}^{d}\frac{\pi_s\paren{\mb{Y}_{1:s}}}{\pi_s\paren{\mb{Y}_{1:(s-1)}}\,g_s\paren{Y_s\,|\, \mb{Y}_{1:(s-1)}}} \label{eqn: cbmc_importance_weight}
+\end{align} Similarly compute the importance weight for $\mb{X}_{t}$ as $w(\mb{X}_t)$.
+\item Accept $\mb{X}_{t+1} = \mb{Y}$ with probability 
+\begin{align*}
+\alpha(\mb{X}_{t}, \mb{Y}) &= \min\set{1,\;\frac{w(\mb{Y})}{w(\mb{X}_t)}}
+\end{align*}
+\item Otherwise, accept $\mb{X}_{t+1} = \mb{X}_{t}$.
+\end{enumerate}
+
+\item We can modify this process to make \textbf{stage-wise acceptance decision}. Suppose that, at time $t-1$, $\mb{X}_{t}= (X_1^{(t)}, \ldots, X_d^{(t)})$ is accepted. Then at $s$-th stage, we accept $\mb{Y}_{1:s}$ with probability 
+\begin{align}
+\alpha_{s}(\mb{X}_{1:s}^{(t)}, \mb{Y}_{1:s}) &= \min\set{1,\;\frac{u_{s}(\mb{Y}_{1:s})}{u_{s}(\mb{X}_{1:s}^{(t)})}} \label{eqn: cbmc_accept_incremental_importance_weight}
+\end{align} where 
+\begin{align*}
+u_s(\mb{Y}_{1:s}) &= \frac{\pi_s\paren{\mb{Y}_{1:s}}}{\pi_s\paren{\mb{Y}_{1:(s-1)}}\,g_s\paren{Y_s\,|\, \mb{Y}_{1:(s-1)}}}.
+\end{align*} That is, the acceptance rate at each stage is equal to the \emph{ratio of incremental weights} between proposed state and the old state. 
+
+If \emph{\textbf{rejected}}, we \underline{\emph{go back to the \textbf{first stage} to rebuild the whole configuration}}.
+
+Note that it is \textbf{not necessary} to make accept-reject decision \textbf{for each stage}.
+
+\item Note that the \textbf{acceptance rate} for multi-stage CBMC is \emph{less than} the original CBMC, since $\prod_s \min\set{1, r_{s}} \le \min\set{1, \prod_s u_s}$.
+\end{itemize}
+
+
+
+
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{book_reference.bib}
+\end{document}

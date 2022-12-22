@@ -1,0 +1,8 @@
+\contentsline {section}{\numberline {1}Basic Concept of Markov Chain}{2}{}%
+\contentsline {section}{\numberline {2}Markov Chain Monte Carlo}{5}{}%
+\contentsline {subsection}{\numberline {2.1}From Vanilla Monte Carlo to MCMC}{5}{}%
+\contentsline {subsection}{\numberline {2.2}Metropolis-Hastings Algorithm}{6}{}%
+\contentsline {section}{\numberline {3}Some Special Metropolis-Hastings Algorithms}{10}{}%
+\contentsline {subsection}{\numberline {3.1}Random-walk Metropolis-Hastings}{10}{}%
+\contentsline {subsection}{\numberline {3.2}Independent Metropolis-Hastings (IMH) Algorithm}{11}{}%
+\contentsline {subsection}{\numberline {3.3}Configurational bias Monte Carlo}{12}{}%
