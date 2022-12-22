@@ -11,7 +11,7 @@
 
 - Basic Concepts of Statistical Learning
 
-- Probablly Approximately Correct (PAC) Learning 
+- Probably Approximately Correct (PAC) Learning 
 
 - Radmatcher Complexity and VC-Dimension
 
