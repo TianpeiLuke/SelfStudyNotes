@@ -8,10 +8,10 @@
 *Introduction To Riemannian Manifolds*, John M. Lee
 
 ## Table of Contents
-- Summary (part 1)
-- Summary (part 2)
-- Summary (part 3)
-- Summary (part 4)
+- Summary (part 1: Manifolds, Map, Topological and Algebraic Structure)
+- Summary (part 2: Tangent and Cotangent Vector Space, Vector Bundles and Sections)
+- Summary (part 3: Tensor, Differential Forms, Directional Derivatives)
+- Summary (part 4: Riemannian Manifolds, Levi-Civita Connections, Curvature)
 - Notations 
 - Chapter 1: Smooth Manifolds
 - Chapter 2: Smooth Maps
