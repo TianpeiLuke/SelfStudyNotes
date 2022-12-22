@@ -1,0 +1,10 @@
+\contentsline {section}{\numberline {1}Basic Concepts}{2}{}%
+\contentsline {subsection}{\numberline {1.1}Random variable generation}{2}{}%
+\contentsline {subsection}{\numberline {1.2}Why Monte Carlo ?}{3}{}%
+\contentsline {section}{\numberline {2}Rejection and Weighting}{5}{}%
+\contentsline {subsection}{\numberline {2.1}Reject Sampling}{5}{}%
+\contentsline {subsection}{\numberline {2.2}Variance Reduction}{7}{}%
+\contentsline {subsection}{\numberline {2.3}Importance Sampling}{8}{}%
+\contentsline {section}{\numberline {3}Sequential Importance Sampling}{10}{}%
+\contentsline {subsection}{\numberline {3.1}Sequential Importance Sampling (SIS)}{10}{}%
+\contentsline {subsection}{\numberline {3.2}Nonlinear filtering}{12}{}%
