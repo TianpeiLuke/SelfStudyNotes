@@ -10,10 +10,28 @@
 
 ## Table of Contents
 - Summary 
-  - part 1: Manifolds, Map, Topological and Algebraic Structure
-  - part 2: Tangent and Cotangent Vector Space, Vector Bundles and Sections
-  - part 3: Tensor, Differential Forms, Directional Derivatives
-  - part 4: Riemannian Manifolds, Levi-Civita Connections, Curvature
+  - part 1:
+    - Topologies
+    - Smooth Manifolds
+    - Smooth Map
+    - Submersion, Immersion, Embeddings
+    - Submanifolds
+  - part 2
+    - Tangent and Cotangent Vector Space
+    - Bundles and Sections
+    - Comparison of Concepts for Bundles
+    - Cotangent Bundle, Coframes and Covector Field
+    - Compare the Tangent and Cotangent Bundles 
+    - Pushforward and Pullback
+  - part 3: 
+    - Tensor
+    - Differential Forms, Exterior Derivatives
+    - Directional Derivatives, Connections
+    - Lie Derivatives
+  - part 4: 
+    - Riemannian Manifolds
+    - Levi-Civita Connections 
+    - Curvature
   - Notations and Computations
   
 - Smooth Manifolds
