@@ -1,0 +1,9 @@
+\contentsline {section}{\numberline {1}The Definition of the Gauss Map and Its Fundamental Properties}{2}{}%
+\contentsline {subsection}{\numberline {1.1}Gauss Map}{2}{}%
+\contentsline {subsection}{\numberline {1.2}The Second Fundamental Form}{4}{}%
+\contentsline {subsection}{\numberline {1.3}Gaussian Curvature and Shape of Surface}{7}{}%
+\contentsline {section}{\numberline {2}The Gauss Map in Local Coordinates}{9}{}%
+\contentsline {subsection}{\numberline {2.1}Calculations}{9}{}%
+\contentsline {subsection}{\numberline {2.2}Geometrical interpretation of the Gaussian curvature}{11}{}%
+\contentsline {section}{\numberline {3}Summary of shape operator $dN_{p}$}{12}{}%
+\contentsline {section}{\numberline {4}Examples and exercises}{13}{}%

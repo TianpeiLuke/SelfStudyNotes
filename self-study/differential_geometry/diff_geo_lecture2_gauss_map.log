@@ -1,0 +1,475 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.17)  13 OCT 2022 13:22
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**diff_geo_lecture2_gauss_map.tex
+(./diff_geo_lecture2_gauss_map.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18>
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+)
+\c@part=\count179
+\c@section=\count180
+\c@subsection=\count181
+\c@subsubsection=\count182
+\c@paragraph=\count183
+\c@subparagraph=\count184
+\c@figure=\count185
+\c@table=\count186
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/helvet.sty
+Package: helvet 2020/03/25 PSNFSS-v9.3 (WaS) 
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+\Gm@cnth=\count187
+\Gm@cntv=\count188
+\c@Gm@tempcnt=\count189
+\Gm@bindingoffset=\dimen139
+\Gm@wd@mp=\dimen140
+\Gm@odd@mp=\dimen141
+\Gm@even@mp=\dimen142
+\Gm@layoutwidth=\dimen143
+\Gm@layoutheight=\dimen144
+\Gm@layouthoffset=\dimen145
+\Gm@layoutvoffset=\dimen146
+\Gm@dimlist=\toks16
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/parskip/parskip.sty
+Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count190
+))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/09/23 v2.17i AMS math features
+\@mathmargin=\skip49
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen147
+))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen148
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count191
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count192
+\leftroot@=\count193
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count194
+\DOTSCASE@=\count195
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box47
+\strutbox@=\box48
+\big@size=\dimen149
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count196
+\c@MaxMatrixCols=\count197
+\dotsspace@=\muskip16
+\c@parentequation=\count198
+\dspbrk@lvl=\count199
+\tag@help=\toks18
+\row@=\count266
+\column@=\count267
+\maxfields@=\count268
+\andhelp@=\toks19
+\eqnshift@=\dimen150
+\alignsep@=\dimen151
+\tagshift@=\dimen152
+\tagwidth@=\dimen153
+\totwidth@=\dimen154
+\lineht@=\dimen155
+\@envbody=\toks20
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup6
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/doublestroke/dsfont.sty
+Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/array.sty
+Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
+\col@sep=\dimen156
+\ar@mcellbox=\box49
+\extrarowheight=\dimen157
+\NC@list=\toks22
+\extratabsurround=\skip52
+\backup@length=\skip53
+\ar@cellbox=\box50
+)
+\TX@col@width=\dimen158
+\TX@old@table=\dimen159
+\TX@old@col=\dimen160
+\TX@target=\dimen161
+\TX@delta=\dimen162
+\TX@cols=\count269
+\TX@ftn=\toks23
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen163
+\captionmargin@=\dimen164
+\captionwidth=\dimen165
+\caption@tempdima=\dimen166
+\caption@indent=\dimen167
+\caption@parindent=\dimen168
+\caption@hangindent=\dimen169
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count270
+\c@continuedfloat=\count271
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen170
+\Gin@req@width=\dimen171
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip54
+\bibsep=\skip55
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count272
+)
+(../../Tianpei_Report.sty
+\c@theorem=\count273
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count274
+\l__pdf_internal_box=\box51
+)
+(./diff_geo_lecture2_gauss_map.aux)
+\openout1 = `diff_geo_lecture2_gauss_map.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=59.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+(/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count275
+\scratchdimen=\dimen172
+\scratchbox=\box52
+\nofMPsegments=\count276
+\nofMParguments=\count277
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count278
+\MPscratchDim=\dimen173
+\MPnumerator=\count279
+\makeMPintoPDFobject=\count280
+\everyMPtoPDFconversion=\toks25
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    Trying to load font information for U+msa on input line 29.
+
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 29.
+
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 29
+.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+(./diff_geo_lecture2_gauss_map.toc)
+\tf@toc=\write3
+\openout3 = `diff_geo_lecture2_gauss_map.toc'.
+
+ [1
+
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+<gauss_map.png, id=13, 587.19376pt x 451.6875pt>
+File: gauss_map.png Graphic file (type png)
+<use gauss_map.png>
+Package pdftex.def Info: gauss_map.png  used on input line 47.
+(pdftex.def)             Requested size: 293.59616pt x 225.84319pt.
+
+Overfull \hbox (4.03674pt too wide) in paragraph at lines 54--55
+[]\OT1/cmr/m/n/10.95 An ori-en-ta-tion $\OML/cmm/m/it/10.95 N$ \OT1/cmr/m/n/10.
+95 in-duces an ori-en-ta-tion on $\OML/cmm/m/it/10.95 T[]S$\OT1/cmr/m/n/10.95 ,
+ i.e. the ba-sis $[]$ is \OT1/cmr/m/it/10.95 pos-i-tive\OT1/cmr/m/n/10.95 , if 
+$[] \OML/cmm/m/it/10.95 >
+ []
+
+[2 <./gauss_map.png>]
+<diff_gauss.png, id=29, 353.32pt x 208.78pt>
+File: diff_gauss.png Graphic file (type png)
+<use diff_gauss.png>
+Package pdftex.def Info: diff_gauss.png  used on input line 72.
+(pdftex.def)             Requested size: 194.3266pt x 114.82933pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--105
+
+ []
+
+[3 <./diff_gauss.png>]
+<normal_curv.png, id=35, 384.43625pt x 384.43625pt>
+File: normal_curv.png Graphic file (type png)
+<use normal_curv.png>
+Package pdftex.def Info: normal_curv.png  used on input line 143.
+(pdftex.def)             Requested size: 165.30435pt x 165.30435pt.
+<meusnier.png, id=36, 406.51875pt x 350.30875pt>
+File: meusnier.png Graphic file (type png)
+<use meusnier.png>
+Package pdftex.def Info: meusnier.png  used on input line 167.
+(pdftex.def)             Requested size: 174.79965pt x 150.62982pt.
+ [4] [5 <./normal_curv.png> <./meusnier.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6]
+[7]
+<dubinmatrix.png, id=56, 420.57124pt x 215.80624pt>
+File: dubinmatrix.png Graphic file (type png)
+<use dubinmatrix.png>
+Package pdftex.def Info: dubinmatrix.png  used on input line 284.
+(pdftex.def)             Requested size: 180.8421pt x 92.79486pt.
+
+Overfull \hbox (18.12724pt too wide) in paragraph at lines 309--310
+[]\OT1/cmr/m/n/10.95 Then we find the in-ter-sec-tion point of $[][]$ with the 
+Dupin in-di-ca-trix $[]$
+ []
+
+[8 <./dubinmatrix.png>] [9] [10]
+<guassian_curve_via_gaussian_map.png, id=68, 728.7225pt x 613.29124pt>
+File: guassian_curve_via_gaussian_map.png Graphic file (type png)
+<use guassian_curve_via_gaussian_map.png>
+Package pdftex.def Info: guassian_curve_via_gaussian_map.png  used on input lin
+e 480.
+(pdftex.def)             Requested size: 400.79861pt x 337.31122pt.
+ [11] [12 <./guassian_curve_via_gaussian_map.png>] [13]
+<hessian_fund.png, id=81, 451.6875pt x 381.425pt>
+File: hessian_fund.png Graphic file (type png)
+<use hessian_fund.png>
+Package pdftex.def Info: hessian_fund.png  used on input line 553.
+(pdftex.def)             Requested size: 225.84319pt x 190.71202pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [14 <./hessian_fund.png>]
+Overfull \hbox (6.34518pt too wide) detected at line 615
+[]
+ []
+
+
+Underfull \vbox (badness 2617) has occurred while \output is active []
+
+ [15]
+Underfull \hbox (badness 10000) in paragraph at lines 652--654
+
+ []
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 665--667
+
+ []
+
+
+Overfull \hbox (8.60097pt too wide) in paragraph at lines 668--670
+[]\OT1/cmr/m/n/10.95 Let $\OML/cmm/m/it/10.95 h \OT1/cmr/m/n/10.95 : \OMS/cmsy/
+m/n/10.95 S ! \U/msb/m/n/10.95 R$ \OT1/cmr/m/n/10.95 be the height func-tion of
+ $\OMS/cmsy/m/n/10.95 S$ \OT1/cmr/m/n/10.95 rel-a-tive to $\OML/cmm/m/it/10.95 
+T[]S$\OT1/cmr/m/n/10.95 ; that is, $\OML/cmm/m/it/10.95 h\OT1/cmr/m/n/10.95 (\O
+ML/cmm/m/it/10.95 q\OT1/cmr/m/n/10.95 ) = [] \OML/cmm/m/it/10.95 ; q \OMS/cmsy/
+m/n/10.95 2
+ []
+
+[17] (./diff_geo_lecture2_gauss_map.bbl) [18]
+(./diff_geo_lecture2_gauss_map.aux) ) 
+Here is how much of TeX's memory you used:
+ 6015 strings out of 478994
+ 87713 string characters out of 5858183
+ 407396 words of memory out of 5000000
+ 23398 multiletter control sequences out of 15000+600000
+ 420438 words of font info for 93 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 68i,16n,74p,832b,521s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2021/texmf-dist/fonts/
+enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2021/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmmib10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/
+amsfonts/cmextra/cmmib8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr17.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mti10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbo
+ls/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/s
+ymbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-sup
+er/sfrm1095.pfb>
+Output written on diff_geo_lecture2_gauss_map.pdf (18 pages, 562014 bytes).
+PDF statistics:
+ 175 PDF objects out of 1000 (max. 8388607)
+ 115 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+
