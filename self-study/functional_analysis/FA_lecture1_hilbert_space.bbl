@@ -1,0 +1,29 @@
+\begin{thebibliography}{4}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Conway(2019)]{conway2019course}
+John~B Conway.
+\newblock \emph{A course in functional analysis}, volume~96.
+\newblock Springer, 2019.
+
+\bibitem[Kreyszig(1989)]{kreyszig1989introductory}
+Erwin Kreyszig.
+\newblock \emph{Introductory functional analysis with applications}, volume~81.
+\newblock wiley New York, 1989.
+
+\bibitem[Luenberger(1997)]{luenberger1997optimization}
+David~G Luenberger.
+\newblock \emph{Optimization by vector space methods}.
+\newblock John Wiley \& Sons, 1997.
+
+\bibitem[Reed and Simon(1980)]{reed1980methods}
+Michael Reed and Barry Simon.
+\newblock \emph{Methods of modern mathematical physics: Functional analysis},
+  volume~1.
+\newblock Gulf Professional Publishing, 1980.
+
+\end{thebibliography}

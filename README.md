@@ -8,3 +8,5 @@
 - Deep Learning
 
 - [Differential Geometry](./self-study/differential_geometry/README.md)
+
+- Functional Analysis
