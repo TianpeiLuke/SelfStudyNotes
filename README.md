@@ -1,11 +1,11 @@
 # Notes for Self-Study 
 
 ## Table of Contents
-- Concentration Inequalities
+- [Concentration Inequalities](./self-study/concentration_measures/README.md)
 
 - [Causal Inference](./self-study/causal_inference/README.md)
 
-- Deep Learning
+- [Deep Learning](./self-study/deep_learning.README.md)
 
 - [Differential Geometry](./self-study/differential_geometry/README.md)
 
@@ -28,3 +28,5 @@
 - [Statistical Learning Theory](./self-study/statistical_learning_theory/README.md)
 
 - [Topology](./self-study/topology/README.md)
+
+- [Other Topics](./self-study/selected_topics/README.md)
