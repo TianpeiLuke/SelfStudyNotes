@@ -1,0 +1,443 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs, dsfont}
+\usepackage{tabularx}
+\usepackage[all,cmtip]{xy}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+%\usepackage{tikz-cd}
+
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Lecture 8: Signed Measures and Radon-Nikodym Derivative}
+\author{ Tianpei Xie}
+\date{ Aug. 2nd., 2015 }
+\maketitle
+\tableofcontents
+\newpage
+\section{Signed Measure}
+\subsection{Definitions}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Signed Measure}})\\
+Let $(X, \srB)$ be a measure space. A \underline{\emph{\textbf{signed measure}}} on $(X, \srB)$ is a function $\nu: \srB \rightarrow [-\infty, +\infty]$ such that 
+\begin{enumerate}
+\item (\emph{\textbf{Emptyset}}) $\nu(\emptyset)= 0$;
+\item (\emph{\textbf{Finiteness in One Direction}}) $\nu$ assumes at most one of the values $\pm \infty$;
+\item (\emph{\textbf{Countable Additivity}}) if $\set{E_{j}}$ is a sequence of disjoint sets in $\srB$, then $\nu\paren{\bigcup_{j=1}^{\infty}E_{j}}= \sum_{j=1}^{\infty}\nu(E_{j})$, where the latter converges absolutely if $\nu\paren{\bigcup_{j=1}^{\infty}E_{j}}$ is finite.
+\end{enumerate} 
+\end{definition}
+
+\item \begin{definition}
+A measure $\mu$ is \emph{\textbf{finite}}, if $\mu(X)<\infty$; $\mu$ is \emph{\textbf{$\sigma$-finite}}, if $X= \bigcup_{k=1}^{\infty}U_{k}$, $\mu(U_k)<\infty$. 
+\end{definition}
+
+\item \begin{example}
+If $\mu_1, \mu_2$ are measures on $\srB$ and \emph{at least one of them} is \emph{finite}, then $\nu = \mu_1 - \mu_2$ is \emph{a signed measure}. 
+\end{example}
+
+\item \begin{example}
+If $\mu$ is a measure on $\srB$ and $f: X \rightarrow [-\infty, +\infty]$ is a measurable function such that \emph{at least one of $\int_{X} f_{+} d\mu$ and $\int_X f_{-} d\mu$ is finite} (in which case,  $f$ is called an \emph{\textbf{extended $\mu$-integrable function}}). Then $\nu$ defined as $\nu(E) = \int_{X} f \mathds{1}_{E} d\mu$ is a \emph{signed measure}.
+\end{example}
+
+\item \begin{remark}
+\emph{\textbf{Every  signed measure}} can be represented as one of these two forms 
+\begin{enumerate}
+\item $\nu = \mu_{+}- \mu_{-}$, where at least one of $\mu_{+}, \mu_{-}$ is a finite measure;
+\item $\mu$ is measure on $\srB$, and $f: X \rightarrow [-\infty, +\infty]$ is \emph{extended $\mu$-integrable} with at least one of $f_{+}$ and $f_{-}$ finite integrable. Then $\nu(A) = \int_{X}f\ind{A} d\mu $ is a signed measure.
+\end{enumerate}
+\end{remark}
+
+\item Like unsigned measure, we have monotone downward and upward convergence: 
+\begin{proposition} 
+Let $\nu$ be a \textbf{signed measure} on $(X, \srB)$.
+\begin{enumerate}
+\item (\textbf{Upwards monotone convergence}) If $E_1 \subseteq E_2 \subseteq \ldots$ are $\srB$-measurable, then
+\begin{align}
+\nu\paren{\bigcup_{n=1}^{\infty} E_n} &= \lim\limits_{n\rightarrow \infty}\nu(E_n) = \sup\limits_{n}\nu(E_n). \label{eqn: signed_measure_upward_monotone_convergence}
+\end{align}
+\item (\textbf{Downwards monotone convergence}) If $E_1 \supseteq E_2 \supseteq \ldots$ are $\srB$-measurable, and \underline{$\nu(E_n) < \infty$ for \textbf{at least one $n$}}, then
+\begin{align}
+\nu\paren{\bigcap_{n=1}^{\infty} E_n} &= \lim\limits_{n\rightarrow \infty}\nu(E_n) = \inf\limits_{n}\nu(E_n). \label{eqn: signed_measure_downward_monotone_convergence}
+\end{align}
+\end{enumerate}
+\end{proposition}
+
+
+
+\item \begin{definition} (\emph{\textbf{Positive Measure}})\\
+If $\nu$ is a signed measure on $(X,\srB)$, \underline{a \textbf{\emph{set}} $E\in \srB$ is called \emph{\textbf{positive}}} (resp. \underline{\emph{\textbf{negative}}}, \underline{\emph{\textbf{null}}}) for $\nu$ if $\nu(F)\ge 0$ (resp. $\nu(F)\le 0$, $\nu(F)= 0$) for \underline{\emph{\textbf{all $\srB$-measurable subset}}} of $E$ (i.e. $F\in \srB$ such that $F\subseteq E$).  
+
+In other word, $E$ is \underline{\emph{\textbf{$\nu$-positive}, \textbf{$\nu$-negative}, \textbf{$\nu$-null}}}  if and only if $\nu(E\cap M)>0$, $\nu(E\cap M)<0$, $\nu(E\cap M)=0$ \emph{\textbf{for any $M$}}. Thus if  $\nu(E) = \int_{X}f\ind{E} d\mu $, then it corresponds to \underline{$f\ge 0$}, \underline{$f\le 0$ and $f=0$ for \emph{\textbf{$\mu$-almost everywhere}} $x\in E$}.
+\end{definition}
+
+\item \begin{lemma}\citep{folland2013real}\\
+Any \textbf{measureable} \textbf{subset} of a positive set is positive, and the \textbf{union} of any \textbf{countable} positive set is positive. 
+\end{lemma}
+\begin{proof}
+The first part is clear from the definition. Let $P_{1},\ldots, $ be countable collection of positive sets. Note that any finite collection $\bigcup_{k=1}^{n-1}P_{k}$ is positive by definition. Consider $Q_{n}= P_{n}-\bigcup_{k=1}^{n-1}P_{k}$. Since $Q_{n}\subset P_{n}$, $Q_{n}$ is positive and $\bigcup_{k=1}^{\infty}Q_{k}= \bigcup_{k=1}^{\infty}P_{k}$ with disjoint $Q_{k}$. Hence for any $E\subset \bigcup_{k=1}^{\infty}P_{k}$, then $\nu\paren{E}=
+\nu\paren{\bigcup_{k=1}^{\infty}(E\cap Q_{k})}= \sum_{k=1}^{\infty}\nu(E\cap Q_{k})>0$. \qed
+\end{proof}
+
+\item \begin{remark}
+For two measures $\mu, \nu$  on $(X,\srB)$ among which at least one of them is finite, the expression $\mu \ge \nu$ on $E$ means that for every $F \subseteq E \in \srB$,  $(\mu-nu)(F) \ge 0$. That is, $E$ is \emph{a positive set} of $(\mu-nu)$.
+\end{remark}
+\end{itemize}
+
+\subsection{Decomposition of Signed Measure}
+\begin{itemize}
+\item \begin{remark}
+Given a signed measure $\nu$, we can \emph{\textbf{partition}} the space $X$ into positive set (i.e. all of its measurable subsets have positive measure) and negative set (i.e. all of its measurable subsets have negative measure).
+\end{remark}
+
+\item \begin{theorem}(\textbf{The Hahn Decomposition Theorem})\citep{folland2013real}\\
+If $\nu$ is a \textbf{signed measure} on $(X,\srB)$, there exists a \textbf{positive set} $P$ and a \textbf{negative set} $N$ for $\nu$ such that $P\cup N= X$ and $P\cap N=\emptyset$. If $P', N'$ is another such pair, then $P\Delta P'= N\Delta N'$ is \textbf{null} w.r.t. $\nu$.
+\end{theorem}
+\begin{proof}
+Without loss of generality, assume that $\nu$ does not take value $+\infty$. Let $m$ be the supremum of $\nu(E)$ as $E$ ranges over all positive sets; thus there is a sequence $\set{P_{j}}$ of positive sets such that $\nu(P_{j})\rightarrow m$. Let $P= \bigcup_{j=1}^{\infty}P_{j}$. By the lemma and the proposition above, $P$ is positive and $\nu(P)= m$, which is finite. We claim that $N= X-P$ is negative. To this end, we assume that $N$ is not negative, and derive for a contradiction.
+
+First, notice that $N$ cannot contain any nonnull positive sets. Indeed, if $E\subset N$ is positive, then $\nu(E)>0$, and $E\cup P$ is positive with $\nu(E\cup P) = \nu(E)+ \nu(P)> m$, which violates the assumption.
+
+Second, if $A\subset N$, $\nu(A)>0$, there exists $B\subset A$, with $\nu(B)> \nu(A)$. Indeed,  since $A$ cannot be positive, there exists $C\subset A$ with $\nu(C)<0$; thus if $B= A-C$, we have $\nu(B)= \nu(A)- \nu(C) > \nu(A)$.
+
+If $N$ is not negative, then we can specify a sequence of subsets $\set{A_{j}}$ of $N$ and a sequence of positive integers $\set{n_{j}}$ as follows:  $n_{1}$ is the smallest integer for which there exists a set $B\subset N$ with $\nu(B)> 1/n_{1}$, and let $A_{1}$ be the set as defined above. And $n_j$ is the smallest integer for which there exists a set $B\subset A_{j-1}$ with $\nu(B)\ge \nu(A_{j-1})+ 1/n_{j}$ and $A_{j}$ is such a set. 
+
+Let $A = \bigcap_{j=1}^{\infty}A_{j}$. Then $\infty > \nu(A)= \lim\limits_{j\rightarrow \infty}\nu(A_{j})> \sum_{j=1}^{\infty}\frac{1}{n_{j}}$ with $n_{j}\rightarrow \infty$. But once again, there exists $B\subset A$ with $\nu(B) \ge \nu(A)+ 1/n$ for some integer $n$. For $j$ sufficiently large, we have $n<n_{j}$, and $B\subset A_{j-1}$, which violates the construction of $A_{j-1}$. So $N$ is not negative is untenable. 
+
+Finally, if $P', N'$ is another pair of sets as stated, we have $P-P'\subset P$ and $P- P'\subset N'$, so that $P-P'$ is both positive and negative, thus it is a null set. \qed
+\end{proof}
+
+
+\item \begin{definition}\citep{folland2013real, resnick2013probability}\\
+The decomposition of $X = P\cup N$ as $X$ is a \emph{\textbf{disjoint union} of a \textbf{positive set} and a \textbf{negative set}} is called a \underline{\emph{\textbf{Hahn decomposition for $\nu$}}}.
+\end{definition}
+
+\item \begin{remark}
+Note that the Hahn decomposition is usually \emph{\textbf{not unique}} as the $\nu$-null set can be transferred between subparts $P$ and $N$. To find unique decomposition, we need the following concepts:
+\end{remark}
+
+\item  \begin{definition}\citep{folland2013real}\\
+Two \emph{signed measures} $\mu, \nu$ on $(X,\srB)$ are \underline{\emph{\textbf{mutually singular}}}, or that \underline{$\nu$ is \emph{\textbf{singular}} w.r.t. to $\mu$}, or vice versa, if and only if there exists a \emph{\textbf{partition}} $E,F\in \srB$ of $X$ such that $E\cap F = \emptyset$ and $E\cup F= X$, \emph{\textbf{$E$ is null for $\mu$}} and \emph{\textbf{$F$ is null for $\nu$}}.  Informal speaking, \emph{\textbf{mutual singular}} means that \underline{$\mu$ and $\nu$ ``\emph{\textbf{live on disjoint sets}}"}. We describe it using perpendicular sign
+\begin{align*}
+\mu \perp \nu
+\end{align*}
+\end{definition}
+
+\item  \begin{theorem}(\textbf{The Jordan Decomposition Theorem})\citep{folland2013real}\\
+If $\nu$ is a signed measure on $(X,\srB)$, there exists \textbf{unique positive measure} $\nu_{+}$ and  $\nu_{-}$ such that 
+\begin{align*}
+\nu = \nu_{+} - \nu_{-} \qquad \text{and} \qquad \nu_{+} \perp \nu_{-}.
+\end{align*}
+\end{theorem}
+\begin{proof}
+Let $X = P\cup N$ be the \emph{Hahn decomposition} for $\nu$ and define $\nu_{+}(E)= \nu(E\cap P)$ and $\nu_{-}(F)= -\nu(F\cap N)$. Then clearly, $\nu = \nu_{+} - \nu_{-} $ and $\nu_{+} \perp \nu_{-}$. 
+
+If also $\nu = \mu_{+} - \mu_{-}$ and $\mu_{+} \perp \mu_{-}$, let $E,F\in \srB$ be a partition of $X$ as $E\cap F = \emptyset$ and $E\cup F= X$, and $\mu_{+}(F) = \mu_{-}(E)= 0$. Then $X= E\cup F$ is another Hahn decomposition, so $P\Delta E $ is $\nu$-null. Therefore, for any $A\in \srB$, $\mu_{+}(A) = \nu(A\cap E) = \nu(A\cap P)= \nu_{+}(A)$ and likewise $\nu_{-}= \mu_{-}$.\qed 
+\end{proof}
+
+\item \begin{definition}
+The two positive measures $\nu_{+}, \nu_{-}$ are called the \emph{\textbf{positive}} and \emph{\textbf{negative variations}} of $\nu$, and $\nu= \nu_{+} - \nu_{-} $ is called the   \underline{\emph{\textbf{Jordan decomposition}} of $\nu$}.
+
+Furthermore, define the \underline{\emph{\textbf{total variations}} of $\nu$} as the measure $\abs{\nu}$ such that 
+\begin{align*}
+\abs{\nu} &=  \nu_{+} + \nu_{-}.
+\end{align*}
+\end{definition}
+
+\item \begin{proposition}
+Let $\nu, \mu$ be  signed measures on $(X, \srB)$ and $\abs{\nu}$ is the total variations of $\nu$.  Then
+\begin{enumerate}
+\item $E \in \srB$ is $\nu$-null if and only if $\abs{\nu}(E)=0$
+\item $\nu \perp \mu$ \textbf{if and only if} $\abs{\nu}\perp \mu$ if and only if $(\nu_{+} \perp \mu) \wedge (\nu_{-} \perp \mu)$.
+\end{enumerate}
+\end{proposition}
+
+\item \begin{proposition}
+If $\nu_1, \nu_2$ are signed measures that both omit $\pm \infty$, then $\abs{\nu_1 + \nu_2} \le \abs{\nu_1} + \abs{\nu_2}$
+\end{proposition}
+
+\item \begin{exercise}
+Let $\nu$ be a signed measure on $(X, \srB)$. 
+\begin{enumerate}
+\item $L^1(\nu) = L^{1}(\abs{\nu})$;
+\item If $f \in L^1(\nu)$,  then
+\begin{align*}
+\abs{\int_X f d\nu} &\le \int_X \abs{f} d\abs{\nu}
+\end{align*}
+\item If $E \in \srB$, then 
+\begin{align*}
+\abs{\nu}(E) &= \sup\set{\abs{\int_E f d\nu}: \; \abs{f} \le 1}
+\end{align*}
+\end{enumerate}
+\end{exercise}
+
+
+\item \begin{remark} 
+We recall that $\nu$ assume at most one of values on $\pm \infty$:
+\begin{enumerate}
+\item If $\nu$ does not take $+\infty$, then \emph{\textbf{$\nu_{+}(X)  = \nu(P)<\infty$ is a finite measure}};
+\item if $\nu$ does not take $-\infty$, then \emph{\textbf{$\nu_{-}(X)  = -\nu(N)<\infty$ is a finite measure}}.
+\end{enumerate}
+In particular, if the range of $\nu$ is contained in $\bR$, then $\nu$ is \emph{bounded}.
+\end{remark}
+
+\item \begin{remark} 
+We observe that $\nu$ is \emph{of form} \underline{$\nu(E) = \int_{E} f d\mu$ where $\abs{\nu}= \mu$ and $f= \mathds{1}_{P} -\mathds{1}_{N}$} and $X = P\cup N$ being a \emph{Hahn decomposition} for $\nu$.
+\end{remark}
+
+
+\item \begin{remark} (\emph{\textbf{Integration with respect to Signed Measure}})\\
+Let $\nu$ be  signed measures on $(X, \srB)$ and $\nu = \nu_{+} - \nu_{-}$ is \emph{the Jordan decomposition} of $\nu$ then 
+\begin{align*}
+\int_{X} f d\nu &= \int_{X} f d\nu_{+} - \int_{X} f d\nu_{-}
+\end{align*} for all $f\in L^{1}(X,\nu)$.
+\end{remark}
+
+\item \begin{definition} 
+\emph{A signed measure} $\nu$ is called \underline{\emph{\textbf{$\sigma$-finite}}} if $\abs{\nu}$ is \emph{$\sigma$-finite}.
+\end{definition}
+\end{itemize}
+\subsection{Lebesgue-Radon-Nikodym Theorem}
+\begin{itemize}
+\item \begin{definition}\citep{folland2013real}\\
+Suppose $\nu$ is \emph{a \textbf{signed measure}} on $(X,\srB)$ and $\mu$ is \emph{a \textbf{positive measure}} on $(X,\srB)$. Then $\nu$ is said to be \underline{\emph{\textbf{absolutely continuous w.r.t. $\mu$}}} and write
+\begin{align*}
+\nu \ll \mu 
+\end{align*}
+if $\nu(E)=0$ for \emph{every $E\in \srB$ for which $\mu(E)=0$}. 
+\end{definition}
+
+\item
+\begin{proposition}
+Suppose $\nu$ is a signed measure on $(X,\srB)$,  $ \nu_{+}, \nu_{-}$ are positive and negative variation of $\nu$ and $\abs{\nu}$ is the total variation. Then 
+$\nu \ll \mu $ \textbf{if and only if} $\abs{\nu} \ll \mu$ \textbf{if and only if} $(\nu_{+} \ll  \mu) \wedge (\nu_{-} \ll  \mu)$.
+\end{proposition}
+
+\item \begin{remark}
+\emph{\textbf{Absolutly continuity}} is in a sense \emph{\textbf{antithesis}} (i.e. \emph{direct opposite}) of \emph{\textbf{mutual singularity}}. More precisely, 
+\underline{if $\nu \perp \mu$ and $\nu \ll \mu$, then $\nu = 0$}, since $E, F$ are disjoint sets such that $E\cup F= X$, and $\mu(E)= \abs{\nu}(F)= 0$, then $\nu \ll \mu$ implies that $\abs{\nu}(E)= 0$. One can \emph{extend} the notion of absolute continuity to the case where \emph{$\mu$ is a signed measure} (namely, $\nu \ll \mu$ iff $\nu \ll \abs{\mu}$), but we shall have no need of this more general definition.
+ \end{remark}
+ 
+ \item \begin{theorem} (\textbf{$\epsilon$-$\delta$ Language of Absolute Continuity of Measures})\\
+Let $\nu$ is a \textbf{finite signed measure} and $\mu$ is a \textbf{positive} measure on $(X,\srB)$. Then $\nu \ll \mu$ if and only if for every $\epsilon>0$, there exists a $\delta>0$ such that $\abs{\nu(E)}<\epsilon$, \textbf{whenever} $\mu(E)< \delta$.
+\end{theorem}
+\begin{proof}
+Since $\nu \ll \mu$ iff $\abs{\nu} \ll \mu$ and $\abs{\nu(E)}\le \abs{\nu}(E)$, it suffices to assume that $\nu= \abs{\nu}$ is positive. 
+
+"$\Leftarrow$", it is clear. 
+
+"$\Rightarrow$", if the $\epsilon-\delta$ condition is not satisfied, there exists $\epsilon>0$, for all $n\in \bN$ we can find $E_{n}\in \srB$, with $\mu(E_{n})< \frac{1}{2^{n}}$ and $\nu(E_{n})\ge \epsilon$. 
+
+Let $F_{k}= \bigcup_{n=k}^{\infty}E_{n}$ and $F = \bigcap_{k\ge 1}F_{k}$. Then $\mu\paren{F_{k}}\le \sum_{n=k}^{\infty}\frac{1}{2^{n}}= 2^{1-k}$, so $\mu(F) = 0$. But $\nu(F_{k})\ge \epsilon$ for all $k$, and hence since $\nu$ is finite, $\nu(F)=\lim\limits_{k\rightarrow \infty}\nu(F_{k}) \ge \epsilon $. Thus it is false that $\nu \ll \mu$. \qed
+\end{proof}
+
+
+\item \begin{remark}
+ If $\mu$ is a \emph{measure} and $f$ is \emph{\textbf{extended $\mu$-integrable}}, then \emph{\textbf{the signed measure} $\nu$ defined via $\nu(E) = \int_{E}f d\mu$ is \textbf{absolutely continuous} w.r.t. $\mu$}; it is \emph{\textbf{finite}} if and only if $f$ is \emph{\textbf{absolutely integrable}}.  For any complex-valued $f \in L^1(\mu)$, the preceding theorem can be applied to $\Re(f)$ and $\Im(f)$.
+ \end{remark}
+ 
+ \item \begin{corollary}
+If $f\in L^{1}(X, \mu)$, for every $\epsilon>0$, there exists a $\delta>0$, such that $\abs{\int_{E}f d\mu }<\epsilon$ whenever $\mu(E)<\delta$.
+\end{corollary}
+ 
+\item \begin{definition} 
+For \emph{a \textbf{signed measure}}  $\nu$ defined via $\nu(E) = \int_{E}f d\mu$ for all $E \in \srB$, we use the notation to express the relationship
+ \begin{align*}
+d\nu &= f\, d\mu.
+\end{align*} Sometimes, by a slight abuse of language, we shall refer to ``\emph{\textbf{the signed measure $f\, d\mu$}}" 
+\end{definition} 
+ 
+\item \begin{lemma}\citep{folland2013real}\\
+Suppose that $\nu$ and $\mu$ are \textbf{finite measures} on $(X,\srB)$. Either $\nu \perp \mu$, or there exists $\epsilon>0$ and $E\in \srB$ such that  $\mu(E)>0$ and $\nu \ge \epsilon \mu$ on $E$, i.e. $E$ is a \textbf{positive set for $\nu-\epsilon \mu$}. 
+\end{lemma}
+\begin{proof}
+Let $X= P_{n}\cup N_{n}$ be a Hahn decomposition on $(X, \srB)$ for $\nu- n^{-1}\mu$ and let $P = \bigcup_{n=1}^{\infty}P_{n}$ and $N= \bigcap_{n=1}^{\infty}N_{n}$. Then $N$ is a negative set for $\nu- n^{-1}\mu$ for all $n$, i.e., $0\le \nu(N)\le n^{-1}\mu(N)$ for all $n$, so $\nu(N)=0$. If $\mu(P)=0$, then $\nu \perp \mu$; if $\mu(P)>0$, then $\mu(P_{n})>0$ for some $n$, and $P_{n}$ is positive set for $\nu - n^{-1}\mu$.\qed
+\end{proof}
+ 
+\item \begin{theorem}(\textbf{Lebesgue-Radon-Nikodym Theorem})\citep{folland2013real}\\
+Let $\nu$ be a \underline{\textbf{$\sigma$-finite} \textbf{signed} measure} and $\mu$ be a \underline{\textbf{$\sigma$-finite} \textbf{positive} measure} on $(X,\srB)$. There exists \underline{\textbf{unique} \textbf{$\sigma$-finite signed measure}} $\lambda, \rho$ on $(X,\srB)$ such that 
+\begin{align*}
+\lambda \perp \mu\,, \quad \text{and} \quad \rho \ll \mu\,, \quad \text{and} \quad  \nu= \lambda+ \rho.
+\end{align*} 
+In particular, if $\nu \ll \mu$, then 
+\begin{align*}
+d\nu &= f d\mu, \qquad \text{for some }f.
+\end{align*} 
+\end{theorem}
+\begin{proof} We proof it under different cases:
+\begin{itemize}
+\item \emph{\textbf{Case 1}}: Suppose that $\nu, \mu$ are \emph{\textbf{finite positive measures}} and let 
+\begin{align*}
+\cF &\equiv \set{f: X\rightarrow [0,\infty]:  \int_{E} f d\mu \le  \nu(E), \; \forall\, E\in \srB }.
+\end{align*}
+Note that $0\in \cF$. Also for $g,f \in \cF$, then $h = \max\set{f,g}\in \cF$, since for $A= \set{x: f(x)\ge g(x)}$, 
+\begin{align*}
+\int_{E} h d\mu &= \int_{E\cap A} fd\mu + \int_{E\setminus A} gd\mu \le \nu(E\cap A)+ \nu(E\setminus A) = \nu(E). 
+\end{align*} 
+Let $a= \sup\set{\int f d\mu\,| \; f\in \cF}$, \emph{\textbf{noting that} $a< \nu(X)<\infty$}. \emph{There exists a sequence of functions} $\set{f_{n}, n\ge 1}\subset \cF$ such that $\lim\limits_{n\rightarrow \infty}\int f_{n} d\mu \rightarrow a$. Let $g_{n}= \max\set{f_{1}, \ldots, f_{n}}$ and \underline{$f= \sup_{n\ge 1}f_{n}$}. Clearly, $g_{n}\in \cF$ and $g_{n}\rightarrow f,$ $\mu$-a.e. Also $\int g_{n} d\mu \ge \int f_{n} d\mu$. Since $\set{g_{n}}$ is monotone increasing, by monotone convergence theorem, 
+$\lim\limits_{n\rightarrow \infty}\int g_{n} d\mu = \int f d\mu = a$ and $f\in \cF$.
+
+We claim that \underline{$d\lambda = d\nu - fd\mu$} (, which is a positive finite measure since $f \in \cF$), is \underline{\emph{\textbf{singular}} w.r.t. $\mu$}. By the lemma above, if not, then there exist a set $E$ and $\epsilon>0$ such that $\mu(E)>0$ and $\lambda(E)\ge \epsilon \mu(E)$. Then $\epsilon\,\mathds{1}_{E}\,d\mu \le \mathds{1}_{E}\,d\lambda\le d\lambda = d\nu - fd\mu$ and the function $(f+ \epsilon \mathds{1}_{E}) \in \cF$. 
+But $\int (f+ \epsilon \mathds{1}_{E}) d\mu = a+ \epsilon \mu(E)> a$, which violates the assumption on $a$.
+
+Thus the \emph{existence} of $\lambda, f$ and $d\rho = fd\mu$ is proved. For \emph{uniqueness}, if also $d\nu= d\lambda' + f'd\mu$, we have that $d\lambda - d\lambda' = (f'-f) d\mu$. But $(\lambda- \lambda') \perp \mu$, while $(f'-f)d\mu \ll d\nu$; hence $d\lambda - d\lambda' = 0$ and $f' = f$ $\mu$-a.e. Thus we are done in the finite measure cases.
+
+\item \textbf{\emph{Case 2}}: suppose that $\nu, \mu$ are \emph{\textbf{$\sigma$-finite positive measures}}. Then $X$ is a \emph{countable disjoint union of $\mu$-finite sets} and a countable disjoint union of $\nu$-finite sets; by taking their intersections, we have a disjoint collection $\set{A_{j}}\subset \srB$ such that $\mu(A_{j})$ and $\nu(A_{j})$ are both finite and $X = \bigcup_{j}A_{j}$. 
+
+Define $\mu_{j}(E)= \mu(E\cap A_{j})$ and $\nu_{j}(E)= \nu(E\cap A_{j})$. Use the prove above, $d\nu_{j} = d\lambda_{j}+ f_{j}d\mu_{j}$, where $\lambda_{j}\perp \mu_{j}$. Since $\mu_{j}(A_{j}^{c})= \nu_{j}(A_{j}^{c})=0$, then we have $\lambda_{j}(A_{j}^{c})=  \nu_{j}(A_{j}^{c})- \int_{A_{j}^{c}}f_{j} d\mu_{j} = 0,$ and we may assume that $f_{j}=0$ on $A_{j}^{c}$. 
+
+Let $\lambda = \sum_{j=1}^{\infty}\lambda_{j}$ and $f = \sum_{j=1}^{\infty}f_{j}$. Then $d\nu = d\lambda + fd\mu$, $\lambda \perp \mu $, and $d\lambda$ and $fd\mu$ are $\sigma$-finite, as desired. Uniqueness follows as above.
+
+\item \textbf{\emph{General Case}}:  If $\nu$ is a signed measure, just apply the preceding argument to $\nu_{+}$, $\nu_{-}$ and subtract the results. \qed
+\end{itemize}
+\end{proof} 
+ 
+ 
+\item
+\begin{definition}
+ The decomposition $\nu= \rho + \lambda$, where $\lambda \perp \mu$ and $\rho\ll \mu$, is called the \emph{\textbf{\underline{Lebesgue} \underline{decomposition}} of $\nu$ with respect to $\mu$}.
+ \end{definition}
+
+\item \begin{definition}
+If $\nu \ll \mu$, then according to \emph{the Lebesgue-Radon-Nikodym theorem}, $d\nu = f d\mu$ for some $f$, where $f$ is called the \emph{\underline{\textbf{Radon-Nikodym derivative}} of $\nu$ w.r.t. $\mu$} and is denoted as
+\begin{align*}
+f := \frac{d\nu}{ d\mu} \quad \Rightarrow \quad d\nu =  \frac{d\nu}{ d\mu} d\mu.
+\end{align*}
+ \end{definition}
+ 
+  \item \begin{remark} By Lebesgue decomposition, \emph{a signed measure} $\nu$ can be represented as
+ \begin{align*}
+ d\nu &= d\lambda + fd\mu 
+ \end{align*}
+ \end{remark}
+
+\item \begin{remark} (\emph{\textbf{Jordan Decomposition vs. Lebesgue Decomposition}})\\
+We see \emph{\textbf{two unique decompositions}}: the Jordan decomposition and the Lebesgue decomposition. We can make a comparison: 
+\begin{enumerate}
+\item Both of these two are \emph{decompositions} of \emph{a \textbf{signed} measure $\nu$}.
+\item Both of these two decompositions seperate $\nu$ into two  \emph{\textbf{mutually signular}} sub-measures of $\nu$.
+\item Both of these two decompositions are \emph{\textbf{unique}}
+\end{enumerate}
+On the other hand,
+\begin{enumerate}
+\item \emph{\textbf{The Jordan decomposition}} is to split \emph{a signed measure} $\nu$ \emph{\textbf{itself}} into \emph{\textbf{two positive measures}}, i.e. $\nu_{+}$ and $\nu_{-}$ that are \emph{\textbf{mutually singular}} ($\nu_{+} \perp \nu_{-}$). 
+
+\item \emph{\textbf{The Lebesgue decomposition}} is to split \emph{a signed measure} $\nu$ \emph{\textbf{with respect to a postive measure $\mu$}}. The result is \emph{two-fold}: 1) \emph{two mutually singular sub-measures} $\lambda \perp \rho$ 2) their relationship with $\mu$ is \emph{\textbf{opposite}}:  $\lambda \perp \mu$, i.e. their support do not overlap; $\rho \ll \mu$, i.e. its support lies within support of $\mu$.
+
+\item Note that $\lambda, \rho$ from \emph{the Lebesgue decomposition} is \emph{\textbf{not}} \emph{necessarily} \emph{\textbf{positive}}. But both $\nu$ and $\mu$ need to be \emph{\textbf{$\sigma$-finite}} which is \emph{not required} for the Jordan decomposition.
+\end{enumerate}
+\end{remark} 
+
+
+\item \begin{proposition}\citep{folland2013real}\\
+ Suppose $\nu$ is \textbf{$\sigma$-finite signed measure} and $\lambda, \mu$ are \textbf{$\sigma$-finite measure} on $(X,\srB)$ such that $\nu\ll \mu$ and $\mu \ll \lambda$.
+ \begin{enumerate}
+ \item If $g\in L^{1}(X, \nu)$, then $g\paren{\frac{d \nu}{d\mu}}\in L^{1}(X,\mu)$ and
+ \begin{align*}
+ \int g d\nu &= \int g \, \frac{d \nu}{d\mu}\, d\mu
+ \end{align*}
+ \item We have $\nu \ll \lambda$, and 
+ \begin{align*}
+ \frac{d\nu}{d\lambda} &= \frac{d\nu}{d\mu}\frac{d\mu}{d\lambda}, \;\;\; \lambda\text{-}a.e.
+ \end{align*}
+ \end{enumerate}
+\end{proposition}
+\begin{proof}
+\begin{enumerate}
+\item By Radon-Nikodym theorem, the expression holds if $g= \ind{E}$ for any $E$ $\nu$-measureable,i.e.
+\begin{align*}
+\nu(E) = \int \ind{E}d\nu &=  \int \ind{E}\paren{\frac{d \nu}{d\mu}} d\mu.
+\end{align*}
+Note that for any simple function $g= \sum_{s=1}^{m}g_{s}\ind{E_{s}}$ for finitely many $\nu$-measureable set $E$, due to the linearity, the expression 
+\begin{align*}
+\int g d\nu = \sum_{s=1}^{m}g_{s}\int \ind{E_{s}}d\nu &= \sum_{s=1}^{m}g_{s}\int \ind{E_{s}}\paren{\frac{d \nu}{d\mu}} d\mu = \int g \paren{\frac{d \nu}{d\mu}} d\mu
+\end{align*}
+hold.  Then for any nonnegative integrable function $g$,  there exists a monotone increasing sequence $g_{n}\le g_{n+1}$ converges to $g$ $\nu$-a.e.
+\begin{align*}
+\int g d\nu = \limsup\limits_{g_{n}\le g, \atop g_{n}\text{ simple}} \int g_{n} d\nu&=  \limsup\limits_{g_{n}\le g, \atop g_{n}\text{ simple}} \int g_{n} \paren{\frac{d \nu}{d\mu}} d\mu = \int g \paren{\frac{d \nu}{d\mu}} d\mu
+\end{align*}
+The last equality comes from monotone convergence theorem. For absolutely integrable function $g= g_{+}- g_{-}$ with $g_{+}, g_{-}$ both nonnegative integrable function. The expression hold by linearity. 
+
+\item Let $g = \ind{E}\paren{\frac{d \nu}{d\mu }}$ and replace $\nu, \mu$ with $\mu, \lambda$, we have
+\begin{align*}
+\int\ind{E}d\nu = \int \ind{E}\paren{\frac{d \nu}{d\mu}} d\mu &= \int \ind{E}\paren{\frac{d \nu}{d\mu}}\frac{d\mu}{d\lambda}d\lambda
+\end{align*}  for any $E$ measureable.
+Therefore, 
+ \begin{align*}
+ \frac{d\nu}{d\lambda} &= \frac{d\nu}{d\mu}\frac{d\mu}{d\lambda}, \;\; \lambda\text{-}a.e.\qed
+ \end{align*}
+\end{enumerate}
+\end{proof}
+
+\item \begin{corollary}
+If $\mu \ll \lambda$ and $\lambda \ll \mu$, then $(d\lambda / d\mu)(d\mu / d\lambda) = 1\; a.e$. (with respect to either $\lambda$ or $\mu$).
+\end{corollary}
+ 
+\item \begin{proposition} If $\mu_{1}, \ldots, \mu_{n}$ are measures on $(X,\srB)$, then there exists a measure $\mu$ such that $\mu_{i}\ll \mu$ for all $i=1,\ldots,n$, namely, $\mu= \sum_{i=1}^{n}\mu_{i}$.
+\end{proposition}
+
+
+\item  \begin{exercise} (\textbf{Conditional Expectation})\\
+Let $(X, \srB, \mu)$ be a \textbf{finite measure space}, $\srF$ is a sub-$\sigma$-algebra of $\srB$, and $\nu= \rlat{\mu}{\srF}$. Show that if $f\in L^{1}(X, \mu)$, there exists $g\in L^{1}(X, \nu)$ (thus $g$ is \textbf{$\srF$-measureable}) such that $\int_{E} f d\mu = \int_{E} g d\nu $ for all $E\in \srF$; if $g'$ is another such function then $g= g'$ $\nu$-a.e. 
+
+In \textbf{probability theory}, where $(X,\srB)\equiv (\Omega, \srA)$, $f\equiv X$ is a \textbf{random variable}, then $g\equiv \E{}{X| \srF}$ is called \textbf{the conditional expectation of $X$ on $\srF$}, which is $\srF$-measure random variable.
+\end{exercise}
+\begin{proof}
+We can define a signed measure $\lambda$ on $(X, \srB)$ as $d\lambda = f d\mu$, i.e. $\lambda \ll \mu$. We claim that $\rlat{\lambda}{\srF} \ll \nu= \rlat{\mu}{\srF}$. Then by Radon-Nikodym theorem, there exists a $\srF$-measureable function 
+\begin{align*}
+g &= \frac{\rlat{\lambda}{\srF}}{\rlat{\mu}{\srF}},
+\end{align*} so that for every $E\in \srF$,
+\begin{align*}
+\lambda(E)= \rlat{\lambda}{\srF}(E)&=  \int_{E} \frac{\rlat{\lambda}{\srF}}{\rlat{\mu}{\srF}} \rlat{d\mu}{\srF}\\
+ &= \int_{E}g d\nu.
+\end{align*}
+and $\lambda(E) = \int_{E} f d\mu$, which shows the result.
+
+To show the claim is true, we see that $\nu(E)= \mu(E)$ and $\rlat{\lambda}{\srF}(E)= \lambda(E)$ for every $E\in \srF$ and $\lambda \ll \mu$, so for any $\epsilon>0$, there exists $\delta>0$, such that if $\mu(E)<\delta$, then $\lambda(E)<\epsilon$. It is equivalent to say $\nu(E)<\delta$ implies $\rlat{\lambda}{\srF}(E)<\epsilon$, which proves the claim. \qed
+\end{proof}
+
+\item \begin{remark}
+Note that similarly, the \emph{\textbf{conditional distribution}} $P(A| \srF)= \E{}{\mathds{1}_{A}\,|\, \srF}$ is \emph{a \textbf{random variable}}.  Also, $\E{}{X| Y}= \E{}{X| \sigma(Y)}$, where $\sigma(Y)$ is the sub-$\sigma$-algebra induced by  $Y^{-1}(\cB(\bR))\subset \srB$.
+\begin{align*}
+\E{}{X| Y}(\omega_{y}) &= \int_{\Omega_{x}}K(\omega_{y}, d\omega_{x})Z_{\omega_{y}}(\omega_{x})P(d\omega_{x})
+\end{align*}
+where $K: \Omega_{Y} \times \srB_{X} \rightarrow [0,1]$ is \emph{the transition kernel}, $Z_{\omega_{y}}(\omega_{x})= Z(\omega_{x}, \omega_{y})= (X(\omega_{x}), Y(\omega_{y}))$.
+\end{remark}
+\end{itemize}
+\newpage
+\section{Exercise}
+\begin{itemize}
+\item \begin{exercise}
+Show that if $\lambda$ is a signed measure and $\mu$ is a positive measure on $(X, \srB)$, then $\lambda \ll \mu$  implies that $\lambda_{+}, \lambda_{-}$ and $\abs{\lambda}$ are absolutely continuous with respect to $\mu$.
+\end{exercise}
+
+\item \begin{exercise}
+Show that if $\lambda$ is a signed measure and $\mu$ is a positive measure on $(X, \srB)$, then $\abs{\lambda} \perp \mu$  implies that $\lambda_{+}, \lambda_{-}$ are singular with respect to $\mu$. 
+\end{exercise}
+
+\item \begin{exercise}
+Let $X= [0,1]$ and $\srB$ be the Borel $\sigma$-algebra. If $\mu$ is the counting measure on $\srB$ and $\lambda$ is the Lebesgue measure on $\srB$, then $\lambda$ is a finite measure and $\lambda \ll \mu$, but the Radon-Nikodym theorem fails. 
+\end{exercise}
+
+\end{itemize}
+
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{reference.bib}
+\end{document}
