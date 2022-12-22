@@ -1,0 +1,9 @@
+\contentsline {section}{\numberline {1}Spectral Theorem in Finite Dimensional Space}{2}
+\contentsline {section}{\numberline {2}The Continuous Functional Calculus}{3}
+\contentsline {section}{\numberline {3}Spectral Theorem for Bounded Self-Adjoint Operator}{6}
+\contentsline {subsection}{\numberline {3.1}Spectral Measure}{6}
+\contentsline {subsection}{\numberline {3.2}Spectral Theorem in Functional Calculus Form}{7}
+\contentsline {subsection}{\numberline {3.3}Spectral Theorem in Multiplication Operator Form}{8}
+\contentsline {subsection}{\numberline {3.4}Decompose of Spectral Measure}{12}
+\contentsline {subsection}{\numberline {3.5}Spectral Theorem in Spectral Projection Form}{14}
+\contentsline {subsection}{\numberline {3.6}Understanding Spectrum via Spectral Projection}{17}

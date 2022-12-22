@@ -1,0 +1,13 @@
+\contentsline {section}{\numberline {1}Topologies of Bounded Operators}{2}
+\contentsline {section}{\numberline {2}The Spectrum}{4}
+\contentsline {subsection}{\numberline {2.1}Finite Dimensional Case}{4}
+\contentsline {subsection}{\numberline {2.2}Infinite Dimensional Case}{5}
+\contentsline {subsection}{\numberline {2.3}Spectrum of Bounded Linear Operator in Banach Space}{6}
+\contentsline {subsection}{\numberline {2.4}Spectrum of Self-Adjoint Operator in Hilbert Space}{7}
+\contentsline {subsection}{\numberline {2.5}Positive Semidefinite Operators and the Polar Decomposition}{7}
+\contentsline {section}{\numberline {3}Compact Operators}{9}
+\contentsline {subsection}{\numberline {3.1}Definitions and Basic Properties}{9}
+\contentsline {subsection}{\numberline {3.2}The Spectrum of Compact Operator}{11}
+\contentsline {subsection}{\numberline {3.3}The Trace Class}{13}
+\contentsline {subsection}{\numberline {3.4}Hilbert-Schmidt Operator}{15}
+\contentsline {subsection}{\numberline {3.5}Trace of Linear Operator}{18}

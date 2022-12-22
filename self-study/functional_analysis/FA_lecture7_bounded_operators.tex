@@ -1,0 +1,960 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs,  mathtools, dsfont}
+\usepackage{tabularx}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz-cd}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Lecture 7: Bounded Operators}
+\author{ Tianpei Xie}
+\date{ Dec. 09th., 2022 }
+\maketitle
+\tableofcontents
+\newpage
+\section{Topologies of Bounded Operators}
+\begin{itemize}
+\item \begin{definition}(\emph{\textbf{Uniform Operator Topology}})\\
+Let $\cL(X, Y)$ be \emph{the space of bounded linear operators} from \emph{Banach space} $X$ to \emph{Banach space} $Y$.  $\cL(X, Y)$ is a \emph{Banach space} with \emph{norm}
+\begin{align*}
+\norm{T}{} &= \sup_{x \neq 0}\frac{\norm{Tx}{Y}}{\norm{x}{X}}
+\end{align*} \emph{The induced topology} on $\cL(X, Y)$ is called \underline{\emph{\textbf{the uniform operator topology}}} (or \emph{\textbf{norm topology}}). 
+\end{definition}
+
+
+\item \begin{definition} (\emph{\textbf{Strong Operator Topology}})\\
+\underline{\emph{\textbf{The strong operator topology}}} is \emph{the \textbf{weakest topology}} on $\cL(X, Y)$ such 
+that \emph{the evaluation maps} 
+\begin{align*}
+E_x: \cL(X, Y) \rightarrow Y
+\end{align*} given by $E_x(T) = Tx$ are \emph{\textbf{continuous for all $x \in X$}} . 
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Multiplication Map}})\\
+Consider the \emph{\textbf{multiplication map}} $\cL(X, Y) \times \cL(Y, Z) \rightarrow \cL(X, Z)$
+\begin{align*}
+(A, B) \mapsto BA
+\end{align*}
+\begin{enumerate}
+\item \emph{In \textbf{uniform operator topology}},  the map is \emph{\textbf{jointly continuous}}. 
+\item \emph{In \textbf{strong operator topology}}, the map is \emph{\textbf{separately}} but \emph{\textbf{not jointly continuous}} if $X$, $Y$, and $Z$ are \emph{infinite-dimensional}.
+\end{enumerate}
+\end{remark}
+
+
+\item \begin{definition}  (\emph{\textbf{Weak Operator Topology}})\\
+\underline{\emph{\textbf{The weak operator topology}}} on  $\cL(X, Y)$ is \emph{the \textbf{weakest topology}} such that \emph{the evaluation maps} 
+\begin{align*}
+E_{x, f}: \cL(X, Y) \rightarrow \bC
+\end{align*}
+given by $E_{x, f}(T) = f(Tx)$ are all \emph{\textbf{continuous}} \emph{\textbf{for all $x \in X$, $f \in Y^{*}$}}. 
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Neighborhood in the Bounded Operator Topologies}})
+\begin{enumerate}
+\item In \emph{\textbf{uniform operator topology}}: \emph{A \textbf{neighborhood basis}} at the \emph{origin} is given by sets of the form 
+\begin{align*}
+\set{S \in  \cL(X, Y): \;\norm{S}{} < \epsilon}.
+\end{align*}
+
+\item In \emph{\textbf{strong operator topology}}: \emph{A \textbf{neighborhood basis}} at the \emph{origin} is given by sets of the form 
+\begin{align*}
+\set{S \in  \cL(X, Y): \;\norm{Sx_i}{Y} < \epsilon, \; i=1 \xdotx{,} n}
+\end{align*}
+where $\set{x_i}_{i=1}^{n}$ is a \emph{\textbf{finite} collection of elements} of $X$ and $\epsilon$ is positive.
+
+\item  In \emph{\textbf{weak operator topology}}: \emph{A \textbf{neighborhood basis}} at the \emph{origin} is given by sets of the form 
+\begin{align*}
+\set{S \in  \cL(X, Y): \;\abs{f_j\paren{Sx_i}} < \epsilon, \; i=1 \xdotx{,} n, \; j=1 \xdotx{,} m }
+\end{align*}
+where $\set{x_i}_{i=1}^{n}$ and $\set{f_j}_{j=1}^{m}$ are \emph{\textbf{finite} families of elements of $X$ and $Y^{*}$}, respectively.
+\end{enumerate}
+\end{remark}
+
+
+\item \begin{remark} (\emph{\textbf{Convergence in the Bounded Operator Topologies}})\\
+Let $\cL(X, Y)$ be \emph{the space of bounded linear operators} from \emph{Banach space} $X$ to \emph{Banach space} $Y$. $\set{T_{\alpha}}$ is a net of operators in $\cL(X, Y)$ and $T \in \cL(X, Y)$.
+\begin{enumerate}
+\item  $\set{T_{\alpha}}$ \emph{\textbf{converges}}  to $T$ in \underline{\emph{\textbf{uniform operator topology}}} (i.e. \emph{\textbf{norm topology}}) if and only if 
+\begin{align*}
+\norm{T_{\alpha} - T}{} \rightarrow 0.
+\end{align*} That is, $T_{\alpha} \rightarrow T$ in \emph{\textbf{norm}}.
+
+\item $\set{T_{\alpha}}$ \emph{\textbf{converges}} to an operator $T$ in \underline{\emph{\textbf{strong operator topology}}} if and only if 
+\begin{align*}
+\norm{T_{\alpha}x - Tx}{Y} \rightarrow 0, \quad \forall x \in X.
+\end{align*} That is, $T_{\alpha} \stackrel{s}{\rightarrow} T $ or $(T_{\alpha}x)$ converges \emph{\textbf{strongly}} \emph{\textbf{in $Y$}} for \emph{\textbf{every}} $x \in X$.
+
+\item $\set{T_{\alpha}}$ \emph{\textbf{converges}} to an operator $T$ in \underline{\emph{\textbf{weak operator topology}}} if and only if 
+\begin{align*}
+\abs{f\paren{T_{\alpha}x} - f\paren{Tx}}\rightarrow 0, \quad \forall x \in X, \, \forall f \in Y^{*}.
+\end{align*} That is, $T_{\alpha} \stackrel{w}{\rightarrow} T $ or $(T_{\alpha}x)$ converges \emph{\textbf{weakly}} \emph{\textbf{in $Y$}} for \emph{\textbf{every}} $x \in X$.
+\end{enumerate}
+\end{remark}
+
+\item \begin{remark}
+\begin{align*}
+\text{\textbf{\emph{uniformly operator converg}}} \; \Rightarrow \; \text{\textbf{\emph{strongly operator converg}}} \; \Rightarrow \; \text{\textbf{\emph{weakly operator converg}}}
+\end{align*}
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Weak Operator Topology} vs. \textbf{Weak Topology} on $\cL(X, Y)$})\\
+We compare the weak operator topology and the weak topology on $\cL(X, Y)$ where $\cL(X, Y)$ is treated as Banach space:
+\begin{enumerate}
+\item \emph{\textbf{The weak operator topology}} on  $\cL(X, Y)$ is \emph{the weakest topology} such that 
+\begin{align*}
+f\paren{Tx} \text{ is \emph{\textbf{continous}} w.r.t. }T,\text{\emph{\textbf{ for all }}}x\in X, \; f \in Y^{*}
+\end{align*}
+
+\item \emph{\textbf{The weak topology}} on  $\cL(X, Y)$ is \emph{the weakest topology} such that 
+\begin{align*}
+F\paren{T} \text{ is \emph{\textbf{continous}} w.r.t. }T,\text{\emph{\textbf{ for all }}}F \in (\cL(X, Y))^{*}
+\end{align*}
+\end{enumerate}
+\end{remark}
+
+\item \begin{remark}
+In general, \emph{the \textbf{weak} and \textbf{strong operator topologies}} on $\cL(X, Y)$ will \emph{\textbf{not be first-countable}} 
+so that questions of \emph{compactness}, \emph{net convergence}, and \emph{sequential convergence} are complicated. 
+\end{remark}
+
+\item \begin{proposition} (\textbf{Weakly Operator Convergence in Hilbert Space}) \citep{reed1980methods}\\
+Let $\cL(\cH)$ denote the bounded operators on a Hilbert space $\cH$. Let $T_n$ be a \textbf{sequence} of bounded operators and suppose that 
+$\inn{T_n x}{y}$ converges as $n \rightarrow \infty$ for each $x, y \in  \cH$. Then there exists $T \in \cL(\cH)$
+such that $T_{n} \stackrel{w}{\rightarrow} T $. 
+\end{proposition}
+
+\item \begin{remark} (\textbf{\emph{Stronly Operator Convergence in Hilbert Space}}) \citep{reed1980methods}\\
+If $T_n x$ converges for each $x \in \cH$, then there exists $T \in \cL(\cH)$
+such that $T_{n} \stackrel{s}{\rightarrow} T $. 
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{Kernel} and \textbf{Range} of Linear Operator})\\
+Let $T \in \cL(X, Y)$. The set of vectors $x \in X$ so that $Tx = 0$ is called the \underline{\emph{\textbf{kernel}} of $T$}; that is,
+\begin{align*}
+\text{\emph{Ker}}(T) := \set{x \in X: Tx = 0}.
+\end{align*} Note that $\text{Ker}(T) \subseteq X$ is a \emph{\textbf{closed subspace}} of $X$.
+
+The set of vectors $y \in Y$ so that $y = Tx$ for some $x \in X$ is  called the \underline{\emph{\textbf{range}} of $T$}; that is,
+\begin{align*}
+\text{\emph{Ran}}(T) := \set{y \in Y: y = Tx}.
+\end{align*} Note that $\text{Ran}(T) \subseteq Y$ is a \emph{\textbf{subspace}} of $Y$, and $\text{Ran }T $ may \emph{not be closed}.
+\end{definition}
+
+\item \begin{example}
+Consider the bounded operators on $\ell^2$.
+\begin{enumerate}
+\item  Let $T_n$ be defined by 
+\begin{align*}
+T_{n}(\xi_1, \xi_2, \ldots) &= \paren{\frac{1}{n}\xi_1, \frac{1}{n}\xi_2, \ldots}.
+\end{align*}
+Then $T_n \rightarrow 0$ \emph{\textbf{uniformly}}. 
+
+\item Let $S_n$ be defined by 
+\begin{align*}
+S_{n}(\xi_1, \xi_2, \ldots) &= ( \underbrace{0 \xdotx{,} 0}_{n}, \xi_{n+1}, \xi_{n+2}, \ldots ).
+\end{align*}
+Then $S_n \rightarrow 0$ \emph{\textbf{strongly}} but \emph{\textbf{not uniformly}}. 
+
+\item Let $W_n$ be defined by 
+\begin{align*}
+W_{n}(\xi_1, \xi_2, \ldots) &= ( \underbrace{0 \xdotx{,} 0}_{n}, \xi_{1}, \xi_{2}, \ldots ).
+\end{align*}
+Then $W_n \rightarrow 0$ in the \emph{\textbf{weak operator} topology} but \emph{\textbf{not} in the \textbf{strong}  or \textbf{uniform} topologies}. 
+\end{enumerate}
+\end{example}
+\end{itemize}
+
+\section{The Spectrum}
+\subsection{Finite Dimensional Case}
+\begin{itemize}
+\item \begin{remark} (\emph{\textbf{Eigenvalues} of Linear Transformation in \textbf{Finite Dimensional Space}})\\
+If $Τ$ is a linear transformation on $\bC^n$, then the \emph{\textbf{eigenvalues}} of $Τ$ are the  complex numbers $\lambda$ such that the \emph{\textbf{determinant}} (called \emph{\textbf{the characteristic determinant}} )
+\begin{align*}
+\det\paren{\lambda I - T} = 0.
+\end{align*} The set of such $\lambda$ is called \emph{\textbf{the spectrum of $T$}}. It can consist of \emph{\textbf{at most} $n$ points}, since $\det\paren{\lambda I - T}$ is \emph{a \textbf{polynomial} of degree $n$}, called \emph{\textbf{the characteristic polynomial} of $T$}.
+\end{remark}
+
+\item \begin{remark}
+If $\lambda$ is \emph{\textbf{not an eigenvalue}}, then $\lambda I - T$ \emph{\textbf{has an inverse}} since 
+\begin{align*}
+\det\paren{\lambda I - T} \neq 0.
+\end{align*} 
+\end{remark}
+
+\item \begin{proposition} (\textbf{Invariance of Eigenvalue under Change of Basis}) \citep{kreyszig1989introductory}\\
+All matrices representing a given linear operator $T: X \rightarrow X$ on a \textbf{finite dimensional normed space} $X$ relative to various bases for $X$ have the \textbf{same eigenvalues}.
+\end{proposition}
+
+\item \begin{theorem} (\textbf{The Existence of Eigenvalues}).  \citep{kreyszig1989introductory}\\
+A linear operator on a \textbf{finite dimensional} complex normed space $X \neq \set{0}$ has \textbf{at least one eigenvalue}.
+\end{theorem}
+\end{itemize}
+
+\subsection{Infinite Dimensional Case}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Resolvent} and \textbf{Spectrum}})\\
+Let $T \in \cL(X)$. A complex number $\lambda$ is said to be in \underline{\emph{\textbf{the resolvent set} $\rho(T)$ of $T$}} if  
+\begin{align*}
+\lambda I - T
+\end{align*} is a \underline{\emph{\textbf{bijection}}} with a \underline{\emph{\textbf{bounded inverse}}}. 
+\begin{align*}
+R_{\lambda}(T) &:= \paren{\lambda I - T}^{-1}
+\end{align*} is called \underline{\emph{\textbf{the resolvent} of  $T$ at $\lambda$}}. Note that $R_{\lambda}(T)$ is defined on $\text{Ran}\paren{\lambda I - T}$.
+
+If $\lambda \not\in \rho(T)$, then $\lambda$ is said  to be in the \underline{\emph{\textbf{spectrum $\sigma(T)$ of $T$}}}. 
+\end{definition}
+
+\item \begin{remark}
+The name ``\emph{\textbf{resolvent}}" is appropriate, since $R_{\lambda}(T)$ helps to solve
+the equation $\paren{\lambda I - T}x = y$. Thus, $x = \paren{\lambda I - T}^{-1}y =R_{\lambda}(T)y$ provided $R_{\lambda}(T)$ exists.
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{Point Spectrum}, \textbf{Continuous Spectrum} and \textbf{Residual Spectrum}})\\
+Let  $T \in \cL(X)$
+\begin{enumerate}
+\item  \underline{\emph{\textbf{Point Spectrum}}}: An $x \neq 0$ which satisfies 
+\begin{align*}
+&Tx = \lambda x\\
+\text{ or } &\paren{\lambda I - T}x = 0, \quad \text{for some $\lambda \in \bC$}
+\end{align*} is called an \underline{\emph{\textbf{eigenvector} of $T$}}; $\lambda$ is called \underline{\emph{\textbf{the corresponding eigenvalue}}}. 
+
+If $\lambda$ is an \emph{eigenvalue}, then $\paren{\lambda I - T}$ is \emph{\textbf{not injective}} (i.e. $\text{Ker}\paren{\lambda I - T} \neq \set{0}$) so $\lambda$ is \emph{in the spectrum of $T$}. \emph{\textbf{The set of all eigenvalues}} is called \underline{\emph{\textbf{the point spectrum of $T$}}}. It is denoted as $\sigma_{p}(T)$. 
+
+\item \underline{\textbf{\emph{Continuous Spectrum}}}: If $\lambda$ is \emph{\textbf{not an eigenvalue}} and if $\text{Ran}\paren{\lambda I - T}$ is \emph{\textbf{dense}} but the resolvent $R_{\lambda}(T)$ is \emph{\textbf{unbounded}}, then $\lambda$ is said to  be in \underline{\emph{\textbf{the continuous spectrum}}}. It is denoted as $\sigma_{c}(T)$. 
+
+\item \underline{\textbf{\emph{Residual Spectrum}}}: If $\lambda$ is \emph{\textbf{not an eigenvalue}} and if $\text{Ran}\paren{\lambda I - T}$ is \emph{\textbf{not dense}}, then $\lambda$ is said to  be in \underline{\emph{\textbf{the residual spectrum}}}. It is denoted as $\sigma_{r}(T)$. 
+\end{enumerate} 
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Pure Point Spectrum for Finite Dimensional Case}})\\
+If $X$ is \emph{\textbf{finite dimensional} normed linear space}, $T \in \cL(X)$ then $\sigma_{c}(T) = \sigma_{r}(T) = \emptyset$.
+\end{remark}
+
+\begin{table}[h!]
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\belowdisplayskip}{-10pt}
+\setlength{\abovedisplayshortskip}{0pt}
+\setlength{\belowdisplayshortskip}{0pt}
+\footnotesize
+\centering
+\caption{Comparison between different subset of spectrums and resolvent set}
+\label{tab: spectrums}
+%\setlength{\extrarowheight}{1pt}
+\renewcommand\tabularxcolumn[1]{m{#1}}
+\small
+\begin{tabularx}{1\textwidth} { 
+  | >{\raggedright\arraybackslash} m{3cm}
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X  | }
+ \hline
+  &  \emph{\textbf{point spectrum $\sigma_{p}(T)$}} & \emph{\textbf{continuous spectrum $\sigma_{c}(T)$}}   &  \emph{\textbf{residual spectrum $\sigma_{r}(T)$}}   & \emph{\textbf{resolvent set $\rho(T)$}} \\
+  \hline 
+\emph{$R_{\lambda}(T)$ \textbf{exists}}    & $\times$  &  $\checkmark$ & $\checkmark$ & $\checkmark$ \\
+ \hline \vspace{5pt}
+\emph{$R_{\lambda}(T)$ is \textbf{bounded}}  \vspace{2pt} &   $\times$   &  $\times$   & $-$  & $\checkmark$  \\
+ \hline \vspace{5pt}
+\emph{$R_{\lambda}(T)$ is defined in a \textbf{dense} subset of $Y$}  \vspace{2pt} &   $\times$   & $\checkmark$  &  $\times$   & $\checkmark$  \\
+\hline
+\end{tabularx}
+\end{table}
+
+\item \begin{remark} (\emph{\textbf{Partition} of Complex Space $\bC$})\\
+All four sets above are disjoint and they forms a partition of $\bC$
+\begin{align*}
+\bC &= \rho(T) \cup \sigma(T)\\
+&=  \rho(T) \cup \sigma_{p}(T) \cup \sigma_{c}(T) \cup \sigma_{r}(T).
+\end{align*} We will prove this later.
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Some Special Case}})
+\begin{enumerate}
+\item If $X$ \emph{\textbf{finite dimensional}}, $\bC = \rho(T) \cup  \sigma_{p}(T) $ since  $\sigma_{c}(T) = \sigma_{r}(T) = \emptyset$.
+\item If $T \in \cL(\cH)$ and $T$ is \emph{\textbf{self-adjoint}},  $\bC = \rho(T) \cup  \sigma_{p}(T) \cup  \sigma_{c}(T) $  since $\sigma_{r}(T) = \emptyset$.
+\item If $T \in \cL(\cH)$ and $T$ is \emph{\textbf{self-adjoint and compact}}, $\bC = \rho(T) \cup  \sigma_{p}(T)$
+\end{enumerate}
+\end{remark}
+
+\item \begin{remark}
+If $X$ is a function space, the \emph{eigenvectors} of \emph{linear operator} $T$ is called the \emph{\textbf{eigenfunctions}} of $T$.
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{Eigenspace of Linear Operator}})\\
+The subspace of domain $D(T)$ consisting of $\{0\}$ and \emph{\textbf{all eigenvectors}} of $T$ corresponding to \emph{an eigenvalue} $\lambda$ of $T$ is
+called  \underline{\textbf{\emph{the eigenspace of $T$}}} corresponding to that eigenvalue $\lambda$.
+\end{definition}
+\end{itemize}
+
+
+
+\subsection{Spectrum of Bounded Linear Operator in Banach Space}
+\begin{itemize}
+\item 
+
+\item \begin{definition} (\emph{\textbf{Spectral Radius of Linear Operator}})\\
+Let 
+\begin{align*}
+r(T) &= \sup_{\lambda \in \sigma(T)} \abs{\lambda}
+\end{align*}
+$r(T)$ is called  \underline{\textbf{\emph{the spectral radius of $T$}}}. 
+\end{definition}
+
+\item \begin{proposition} (\textbf{Spectral Radius Calculation}) \citep{reed1980methods}\\
+Let $X$ be a \textbf{Banach space}, $T \in \cL(X)$. Then 
+\begin{align*}
+\lim\limits_{n\rightarrow \infty}\norm{T^n}{}^{1/n}
+\end{align*}
+exists and is equal to $r(T)$. 
+\end{proposition}
+
+\item \begin{theorem} (\textbf{Spectrum and Resolvent of Adjoint}) (\textbf{Phillips}) \citep{reed1980methods}\\ 
+Let $X$ be a \textbf{Banach space},  $T \in \cL(X)$. Then 
+\begin{align*}
+\sigma(T) = \sigma(T')\; \text{ and }\; R_{\lambda}(T') = (R_{\lambda}(T))'.
+\end{align*}
+\end{theorem}
+
+\item \begin{proposition}  (\textbf{Spectrum of Adjoint}) \citep{reed1980methods}\\ 
+Let $X$ be a Banach space and $T \in \cL(X)$. Then, 
+\begin{enumerate}
+\item If $\lambda$ is in the \textbf{residual spectrum} of $T$, then $\lambda$ is in the \textbf{point spectrum} of $T'$. 
+\item If  $\lambda$ is in the \textbf{point spectrum} of $T$, then $\lambda$ is in \textbf{either} the \textbf{point} or the \textbf{residual spectrum} of $T'$. 
+\end{enumerate}
+\end{proposition}
+\end{itemize}
+
+\subsection{Spectrum of Self-Adjoint Operator in Hilbert Space}
+\begin{itemize}
+\item \begin{proposition} (\textbf{Spectral Radius Calculation}) \citep{reed1980methods}\\
+Let $X$ be a  \textbf{Hilbert space}, $T \in \cL(X)$ and $T$ is \textbf{self-adjoint}. Then 
+\begin{align*}
+r(T) = \norm{T}{}
+\end{align*}
+\end{proposition}
+
+\item \begin{theorem} (\textbf{Spectrum and Resolvent of Adjoint}) (\textbf{Phillips}) \citep{reed1980methods}\\ 
+If $X$ is a \textbf{Hilbert space} and $T \in \cL(X)$, then 
+\begin{align*}
+\sigma(T) = \sigma(T^{*})\; \text{ and }\; R_{\lambda}(T^{*}) = (R_{\lambda}(T))^{*}.
+\end{align*}
+\end{theorem}
+
+\item \begin{proposition}  (\textbf{Spectrum of Self-Adjoint Operator}) \citep{reed1980methods}\\ 
+Let $Τ$ be a \textbf{self-adjoint operator} on a \textbf{Hilbert space} $\cH$. Then, 
+\begin{enumerate}
+\item $T$ has \textbf{no residual spectrum}, i.e. $\sigma_{r}(T) = \emptyset$. 
+\item $\sigma(T)$ is a subset of $\bR$. 
+\item \textbf{Eigenvectors} corresponding to \textbf{distinct eigenvalues} of $T$ are \textbf{orthogonal}. 
+\end{enumerate}
+\end{proposition}
+
+\item \begin{remark} (\emph{\textbf{Resemblence to Symmetric or Hermitian Matrix}})\\
+This property is the same as the \emph{spectrum} for \emph{symmetric} real matrix or \emph{Hermitian matrix} in \emph{finite dimensional case}. That is, 
+\begin{enumerate}
+\item \emph{the \textbf{eigenvalues} of \emph{symmetric real matrices} or \emph{Hermitian matrices} are all \textbf{real-valued}}; 
+\item the \emph{\textbf{eigenspaces}} corresponds to \emph{\textbf{distinct eigenvalue}}s are \emph{\textbf{orthorgonal}} to each other.
+\end{enumerate} 
+\end{remark}
+
+\end{itemize}
+
+
+
+\subsection{Positive Semidefinite Operators and the Polar Decomposition}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Positive-Semidefinite Operator}})\\
+Let $\cH$ be a \emph{\textbf{Hilbert space}}. An operator $B \in \cL(\cH)$ is called \underline{\emph{\textbf{positive-semidefinite}}} if 
+\begin{align*}
+\inn{Bx}{x} \ge 0\text{ for all }x \in \cH.
+\end{align*}
+We write $B \succeq 0$ if $Β$ is \emph{positive-semidefinite} and  $B \succeq A$ if $(B - A) \succeq 0$. 
+
+Similarly, $B$ is called \underline{\emph{\textbf{positive-definite}}} if 
+\begin{align*}
+\inn{Bx}{x}> 0\text{ for all }x \neq 0 \in \cH.
+\end{align*} The \emph{positive semidefinite operator} is sometimes called \emph{\textbf{positive} operator}. 
+\end{definition}
+
+\item \begin{proposition} (\textbf{Positive Semi-Definiteness $\Rightarrow$ Self-Adjoint}) \citep{reed1980methods} \\
+Every (bounded) \textbf{positive semidefinite} operator on a \textbf{complex Hilbert space} is \textbf{self-adjoint}. 
+\end{proposition}
+\begin{proof}
+Notice that $\inn{Ax}{x}$ takes only real value, so
+\begin{align*}
+\inn{Ax}{x} = \overline{\inn{Ax}{x}} = \inn{x}{Ax}
+\end{align*} By \emph{the polarization identity}, 
+\begin{align*}
+\inn{Ax}{y} = \inn{x}{Ay}
+\end{align*} if $\inn{Ax}{x} = \inn{x}{Ax}$ for all $x$.
+Thus, if $A$ is positive, it is self-adjoint. \qed 
+\end{proof}
+
+\item \begin{remark} (\emph{\textbf{Square Root of Positive Semidefinite Operator}})\\
+For any $A \in \cL(\cH)$ notice that \emph{\textbf{the normal operator} is \textbf{positive semi-definite}}
+\begin{align*}
+A^{*}A \succeq 0
+\end{align*}
+since 
+\begin{align*}
+\inn{A^{*}Ax}{x} = \norm{Ax}{}^2 \ge 0.
+\end{align*}
+Just as $\abs{z} = \sqrt{\bar{z}z}$, we want to find the modulus of a linear operator as
+\begin{align*}
+\abs{A} := \sqrt{A^{*}A }
+\end{align*} 
+To show the square root of positive semidefinite operator makes sense, we have the following lemma
+\begin{lemma}
+The power series for $\sqrt{1 - z}$ about zero converges \textbf{absolutely} for all complex numbers $z$ satisfying $\abs{z} \le 1$. 
+\end{lemma}
+
+\begin{theorem} (\textbf{Square Root Lemma})  \citep{reed1980methods}\\ 
+Let $A \in \cL(\cH)$ and $A \succeq 0$. Then there is a \textbf{unique} $B \in \cL(\cH)$ with $B \succeq 0$ and $B^2 = A$. Furthermore, $B$ 
+\textbf{commutes} with every bounded operator which commutes with $A$. 
+\end{theorem}
+\end{remark}
+
+\item \begin{definition}
+For $A \in \cL(\cH)$, we can define \emph{\underline{\textbf{absolute value}} of $A$} as the square root of its normal operation
+\begin{align*}
+\abs{A} := \sqrt{A^{*}A }
+\end{align*} 
+\end{definition}
+
+\item \begin{remark}
+For $\abs{\cdot}$ operation on linear operator $A$:
+\begin{enumerate}
+\item $\abs{\lambda A} = \abs{\lambda} \abs{A}$
+\item $\abs{\cdot}$ is \emph{\textbf{norm continuous}} on $\cL(\cH)$
+\item in general the following equations \emph{\textbf{do not hold}}
+\begin{align*}
+\abs{A B} = \abs{A}\abs{B}, \quad \abs{A} = \abs{A^{*}}
+\end{align*}
+\end{enumerate}
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{Partial Isometry}})\\
+An operator $U \in \cL(\cH)$ is called an \emph{\textbf{isometry}} if 
+\begin{align*}
+\norm{Ux}{} = \norm{x}{}, \quad \text{all $x \in \cH$.}
+\end{align*}
+$U$ is called a \underline{\emph{\textbf{partial isometry}}} if $U$ is an \emph{isometry} when \emph{\textbf{restricted}}  to the \emph{closed subspace} $(\text{Ker}(U))^{\bot}$.  
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Partial Isometry $=$ Unitary $(\text{Ker}(U))^{\bot} \rightarrow \text{Ran}(U)$}})\\
+If $U$ is a \emph{\textbf{partial isometry}},  $\cH$ can be written as 
+\begin{align*}
+\cH =(\text{Ker}(U)) \oplus (\text{Ker}(U))^{\bot}, \quad \cH =(\text{Ran}(U)) \oplus (\text{Ran}(U))^{\bot}
+\end{align*}
+and $U$ is a \emph{\textbf{unitary operator}} between $(\text{Ker}(U))^{\bot}$, \emph{the \textbf{initial subspace} of $U$}, and $\text{Ran}(U)$, \emph{the \textbf{final subspace}} of $U$. 
+
+Moreover, its \emph{adjoint} is its \emph{inverse}, $U^{*} = (U_{(\text{Ker}(U))^{\bot}})^{-1}: \text{Ran}(U) \rightarrow (\text{Ker}(U))^{\bot}$.
+\end{remark}
+
+\item \begin{proposition} (\textbf{Projection Operators by Partial Isometry}) \citep{reed1980methods}\\
+Let $U$ be a \textbf{partial isometry}.  Then $P_i =  U^{*}U$ and $P_f =  UU^{*}$ are respectively the \textbf{projections} onto the \textbf{initial} and \textbf{final subspaces} of $U$, i.e.
+\begin{align*}
+P_i := U^{*}U = P_{(\text{Ker}(U))^{\bot}}, \quad P_f := UU^{*} = P_{\text{Ran}(U) },
+\end{align*}
+Conversely, if $U \in \cL(\cH)$ with $U^{*}U$ and $UU^{*}$ \textbf{projections}, then $U$ is a \textbf{partial isometry}. 
+\end{proposition}
+
+
+\item \begin{theorem} (\textbf{Polar Decomposition})  \citep{reed1980methods}\\ 
+Let $A$ be a bounded linear  operator on a \textbf{Hilbert space}. Then there is a \textbf{partial isometry} $U$ such that 
+\begin{align*}
+A = U\abs{A}
+\end{align*} $U$ is \textbf{uniquely} determined by the condition that $\text{Ker}(U) = \text{Ker}(A)$.  Moreover, $\text{Ran}(U) = \overline{\text{Ran}(A)}$. 
+\end{theorem}
+\end{itemize}
+
+\section{Compact Operators}
+\subsection{Definitions and Basic Properties}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Kernel of Integral Operator}})\\
+Consider the simple operator $T_{K}$, defined in $\cC[0, 1]$ by 
+\begin{align*}
+(T_{K}f)(x) = \int_{0}^{1} K(x, y)f(y) dy,
+\end{align*} where the function $K(x, y)$ is \emph{continuous} on the square $0\le x, y \le 1$.  $T_{K}$ is called an \underline{\emph{\textbf{integral kernel operator}}} and $K(x, y)$ is called \emph{the \underline{\textbf{kernel}} of the integral operator $T_K$}. 
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Properties of Integral Kernel Operator}})\\
+We summary some important property of the integral kernel operator $T_K$:
+\begin{enumerate}
+\item $T_K$ is \emph{\textbf{bounded linear operator}} on $\cC[0,1]$.
+\begin{align*}
+\abs{(T_{K}f)(x)} &\le \paren{\sup_{(x,y) \in [0,1]\times [0,1]}\abs{K(x,y)}}\paren{\sup_{y\in [0,1]}\abs{f(y)}}\\
+\Rightarrow \norm{T_K f}{\infty} & \le \paren{\sup_{(x,y) \in [0,1]\times [0,1]}\abs{K(x,y)}}\norm{f}{\infty}
+\end{align*}
+
+\item For $K^{*}(x, y) := \overline{K(y, x)}$, 
+\begin{align*}
+(T_{K})^{*} &= T_{K^{*}}
+\end{align*}
+
+\item Let $B_M$ denote the functions $f$ in $\cC[0, 1]$ such that $\norm{f}{\infty} \le M$, i.e. closed $\norm{}{\infty}$-ball in $\cC[0, 1]$
+\begin{align*}
+B_M := \set{f \in \cC[0, 1]: \norm{f}{\infty} \le M}
+\end{align*} \emph{The set of functions} $T_K(B_M) := \set{T_{K}f: f\in B_M}$ is \emph{\textbf{equicontinuous}}.
+\begin{proof}
+Since $K(x, y)$ is \emph{continuous} on the \textit{compact} set $[0,1]\times [0,1]$, $K(x, y)$ is \emph{uniformly continuous}. Thus, given an $\epsilon > 0$, we can find  $\delta > 0$ such that $\abs{x - x'} < \delta$ implies $\abs{K(x, y) - K(x', y) } < \epsilon$ for all $y \in  [0, 1]$. 
+Thus, for all $f \in B_M$
+\begin{align*}
+\abs{(T_{K}f)(x) - (T_{K}f)(x')} & \le \paren{\sup_{(x,y) \in [0,1]\times [0,1]}\abs{K(x,y) - K(x', y)}}\norm{f}{\infty} \\
+& \le \epsilon M. \qed
+\end{align*} 
+\end{proof}
+
+\item Moreover, \underline{$T_K(B_M) := \set{T_{K}f: f\in B_M}$ is \emph{\textbf{precompact}} in $\cC[0,1]$}, i.e. its closure $\overline{T_K(B_M)}$ is \emph{\textbf{compact}}. In other word, for every sequence $f_n \in B_M$, the \emph{sequence} $T_K f_n$  has a \emph{\textbf{convergent subsequence}}. 
+
+This follows from the fact that $T_K(B_M)$ is \emph{equicontinuous} and \emph{uniformly bounded} by $\norm{T_{K}}{}M$. So by \emph{the Ascoli's theorem}, we have the result.
+
+\item The \emph{operator norm} of $T_K$ is \emph{bounded above} by the \emph{$L^2$ norm} of kernel function $K$
+\begin{align*}
+\norm{T_K}{} \le \norm{K}{L^2}
+\end{align*}
+
+\item The eigenfunctions of $T_K$ $\{\varphi_n\}_{n=1}^{\infty}$ forms a complete orthonormal basis in $L^2(M, \mu)$.  
+\begin{align*}
+K(x,y) &= \sum_{n=1}^{\infty}\lambda_{n}\varphi_n(x)\overline{\varphi_n(y)}
+\end{align*} where $\lambda_n$ is the eigenvalue corresponding to eigenfunction $\varphi_n$.
+\end{enumerate}
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{Compact Operator}})\\
+Let $X$ and $Y$ be \emph{Banach spaces}. An operator $T \in \cL(X, Y)$ is called \underline{\emph{\textbf{compact}}} (or \underline{\emph{\textbf{completely}}} \underline{\emph{\textbf{continuous}}}) if $T$ takes \emph{\textbf{bounded sets}} in $X$ into \emph{\textbf{precompact sets}} in $Y$. 
+
+\emph{Equivalently}, $T$ is \emph{\textbf{compact}} if and only if for every \emph{\textbf{bounded} sequence} $\set{x_n} \subseteq X$, $\set{T x_n}$ has a \emph{\textbf{subsequence convergent}} in $Y$. 
+\end{definition}
+
+\item \begin{example} (\emph{\textbf{Finite Rank Operators}}) \\
+Suppose that \emph{the \textbf{range} of $T$ is \textbf{finite  dimensional}}. That is, every vector in the range of $T$ can be written 
+\begin{align*}
+T x = \sum_{i=1}^{n}\alpha_i y_i,
+\end{align*} for some fixed family $\{y_i\}_{i=1}^{n}$ in $Y$. If $x_n$ is any \emph{bounded sequence} in $X$, the corresponding $\alpha_i^{(n)}$ are \emph{bounded} since $T$ is \emph{bounded}. The usual subsequence trick allows one to extract a \emph{convergent subsequence} from $\set{T x_n}$ which proves that $T$ is \emph{compact}. \qed
+\end{example}
+
+\item An important property of the compact operator is 
+\begin{theorem} (\textbf{Weakly Convergent $+$ Compact Operator $=$ Uniformly Convergent}) \citep{reed1980methods}\\
+A \textbf{compact} operator maps \textbf{weakly convergent} sequences into \textbf{norm convergent} sequences; i.e. if $T \in \cL(X)$ is compact, then
+\begin{align*}
+x_n \stackrel{w}{\rightarrow} x \quad \Rightarrow \quad Tx_{n} \stackrel{norm}{\rightarrow} Tx.
+\end{align*}
+
+The converse holds true if $X$ is \textbf{reflective}.
+\end{theorem}
+
+\item \begin{proposition} \citep{reed1980methods}\\
+Let $X$ and $Y$ be \textbf{Banach spaces}, $T \in \cL(X, Y)$.
+\begin{enumerate}
+\item If  $\set{T_n}$ are \textbf{compact} and $T_n \rightarrow T$ in the \textbf{norm topology}, then $T$ is  \textbf{compact}. 
+\item $T$ is \textbf{compact} if and only if $T'$ is \textbf{compact}. 
+\item If $S \in \cL(Y,  Z)$ with $Z$ a Banach space and if $T$ \textbf{or} $S$ is \textbf{compact}, then $ST$ is \textbf{compact}. 
+\end{enumerate} 
+\end{proposition}
+
+\item The proposition above shows that the space of compact operators on $\cH$ is a \emph{\textbf{closed subspace}} of $\cL(\cH)$, thus it is \emph{a Banach space too}.
+\begin{definition} (\textbf{\emph{Space of Compact Operators}})\\
+Now assume that $\cH$ is a \emph{\textbf{separable Hilbert space}}. We denote \emph{the Banach space of \textbf{compact operators}} on \emph{a separable Hilbert space} by $\text{Com}(\cH) \subset \cL(\cH)$. 
+\end{definition}
+
+\item 
+\begin{theorem} (\textbf{Compact Operator Approximated by Finite Rank Operator})\citep{reed1980methods}\\
+Let $\cH$ be a \textbf{separable Hilbert space}. Then every \textbf{compact operator} on $\cH$ is the \textbf{norm limit} of a sequence of operators of \textbf{finite rank}. 
+\end{theorem}
+
+\end{itemize}
+\subsection{The Spectrum of Compact Operator}
+\begin{itemize}
+\item \begin{remark} (\emph{\textbf{Fredholm Alternative}})\\
+The basic principle which makes compact operators important is \emph{\textbf{the Fredholm alternative}}: If $A$ is \emph{\textbf{compact}}, then \emph{\textbf{exactly one} of the following two statements holds true}:
+\begin{enumerate}
+\item 
+\begin{align*}
+A \varphi&= \varphi \text{ has a solution;}
+\end{align*} 
+\item 
+\begin{align*}
+\paren{I - A}^{-1} \text{ exists.}
+\end{align*} 
+\end{enumerate}
+From \emph{the Fredhold alternative}, we see that if \emph{\textbf{for any $\varphi$}} there is \emph{\textbf{at most one} $\psi$} (\emph{\textbf{uniqueness} statement}) such that
+\begin{align*}
+\paren{I - A} \psi &= \varphi 
+\end{align*} then there is \emph{\textbf{always exactly one}} (\emph{i.e. \textbf{existence} statement}). That is, \emph{\textbf{compactness} and \textbf{uniqueness}  together imply \textbf{existence}}.
+\end{remark}
+
+\item \begin{theorem} (\textbf{Analytic Fredholm Theorem}) \citep{reed1980methods} \\
+Let $D$ be an \textbf{open connected} subset of $\bC$. Let $f: D \rightarrow \cL(\cH)$ be an \textbf{analytic operator-valued function} such that $f(z)$ is \textbf{compact} for each $z \in D$. Then, either 
+\begin{enumerate}
+\item $\paren{I - f(z)}^{-1}$  exists for \textbf{no} $z \in D$; or
+
+\item $\paren{I - f(z)}^{-1}$ exists for \textbf{all} $z \in D \setminus S$ where $S$  is a \textbf{discrete} subset of $D$ (i.e. $S$ is a set which has no limit points in $D$.)
+In this case,  $\paren{I - f(z)}^{-1}$ is \textbf{meromorphic} in $D$, \textbf{analytic} in $D \setminus S$, the \textbf{residues} at the poles are \textbf{finite rank operators}, and if $z \in S$ then
+\begin{align*}
+f(z)\varphi &= \varphi
+\end{align*} has a \textbf{nonzero solution} in $\cH$
+\end{enumerate}
+\end{theorem}
+
+\item \begin{corollary}(\textbf{The Fredholm Alternative}) \citep{reed1980methods}\\
+If $A$ is a \textbf{compact} operator on $\cH$,  then \textbf{either} $\paren{I - A}^{-1}$ exists \textbf{or} $Α\varphi = \varphi$ has a solution. 
+\end{corollary}
+
+\item \begin{theorem} (\textbf{Riesz-Schauder Theorem})  \citep{reed1980methods}\\
+Let $A$ be a \textbf{compact} operator on $\cH$, then \underline{$\sigma(A)$ is a \textbf{discrete set}} having \textbf{no limit points} \textbf{except} perhaps 
+$\lambda = 0$. 
+
+Further, any \underline{\textbf{nonzero} $\lambda \in \sigma(A)$ is an \textbf{eigenvalue}} of \textbf{finite multiplicity} 
+(i.e. the corresponding space of eigenvectors is \textbf{finite dimensional}). 
+\end{theorem}
+
+\item \begin{remark} (\emph{\textbf{Compact} Operator has only \textbf{Nonzero Point Spectrum} with \textbf{Finite Dimensional Eigenspace}})\\
+\emph{Riesz-Schauder Theorem} states that \emph{the \textbf{spectrum} for \textbf{compact} operator on \textbf{Hilbert} space} consists of \emph{only} the point spectrum besides $\lambda = 0$. 
+
+Moreover, \emph{the \textbf{eigenspace}} corresponding to \emph{each \textbf{nonzero eigenvalue}} is \emph{finite dimensional}.
+\end{remark}
+
+\item \begin{theorem} (\textbf{The Hilbert-Schmidt Theorem})  \citep{reed1980methods}\\
+Let $A$ be a \underline{\textbf{self-adjoint compact operator}} on $\cH$. Then, there is a \textbf{complete orthonormal basis}, $\{\phi_n\}_{n=1}^{\infty}$, for $\cH$ so that
+\begin{align*}
+A \phi_n &= \lambda_n \phi_n 
+\end{align*} and $\lambda_n \rightarrow 0$ as $n \rightarrow \infty$.
+\end{theorem}
+
+\item \begin{remark} (\emph{\textbf{Eigendecomposition} of Hilbert Space based on \textbf{Self-Adjoint Compact Operator}})\\
+In other word, given a self-adjoint compact operator $A$ on $\cH$, \emph{the HIlbert space $\cH$ is the direct sum of eigenspaces of $A$}.
+\begin{align*}
+\cH &= \bigoplus_{\lambda_n \in \sigma(A) \subset \bR}\text{Ker}\paren{\lambda_n I - A}
+\end{align*}
+
+A \underline{\textbf{\emph{self-adjoint compact operator}}} on $\cH$ is the closest counterpart of \emph{\textbf{Hermitian matrix} / \textbf{Symmetric Real matrix}} in infinite dimensional space.
+\end{remark}
+
+\item \begin{theorem}(\textbf{Canonical Form for Compact Operators})   \citep{reed1980methods}\\
+Let $A$ be a \textbf{compact} operator on $\cH$. Then there exist (\textbf{not necessarily complete}) \textbf{orthonormal sets} $\{\psi_n\}_{n=1}^{N}$ and $\{\phi_n\}_{n=1}^{N}$ and \textbf{positive real numbers} $\{\lambda_n\}_{n=1}^{N}$ with $\lambda_n \rightarrow 0$ so that 
+\begin{align}
+A &= \sum_{n=1}^{N}\lambda_n\inn{\psi_n}{\cdot}\phi_n \label{eqn: canon_compact_operator}
+\end{align}
+The sum in \eqref{eqn: canon_compact_operator}, which may be finite or infinite, \textbf{converges in norm}. The numbers, $\{\lambda_n\}_{n=1}^{N}$, are called the \underline{\textbf{singular values of $A$}}. 
+\end{theorem}
+
+\item \begin{remark} (\emph{\textbf{SVD for Compact Operator}})\\
+Recall for \emph{finite dimensional case}, \emph{the \textbf{singular value decomposition (SVD)}}
+\begin{align*}
+A &= \sum_{n=1}^{N}\lambda_n\phi_n \psi_n^{T}.
+\end{align*} The \emph{singular value decomposition} is a generalization for \emph{the spectral decomposition} for \emph{self-adjoint operator}. But it only exists for \emph{\textbf{compact operator}}.
+\end{remark}
+\end{itemize}
+
+\subsection{The Trace Class}
+\begin{itemize}
+\item We generalize the definition of \emph{trace} of linear operator from finite dimensional space to infinite dimensional space:
+\begin{definition} (\emph{\textbf{Trace of Positive Semi-Definite Operator}})\\
+Let $\cH$ be a \textbf{\emph{separable Hilbert space}}, $\{\phi_n\}_{n=1}^{\infty}$ an \textbf{\emph{orthonormal basis}} Then  for any \textbf{\emph{positive semi-definite}} operator $A \in \cL(\cH)$, we define
+\begin{align*}
+\tr{A} &= \sum_{n=1}^{\infty}\inn{A\phi_n}{\phi_n}
+\end{align*} The number $\tr{A}$ is called \underline{\textbf{\emph{the trace of $A$}}}.
+\end{definition} 
+
+\item \begin{proposition} (\textbf{Properties} of \textbf{Trace}) \citep{reed1980methods}\\
+Let $\cH$ be a separable Hilbert space, $\{\phi_n\}_{n=1}^{\infty}$ an orthonormal basis. Then  for any \textbf{positive semi-definite} operator $A \in \cL(\cH)$,  its trace $\tr{A}$ as defined above is \textbf{independent} of the orthonormal basis chosen. The trace has the following properties: 
+\begin{enumerate}
+\item (\textbf{Linearity}): $\tr{A + B} = \tr{A} + \tr{B}.$
+\item (\textbf{Positive Homogeneity}): $\tr{\lambda A} = \lambda \tr{A}$ for all $\lambda \ge 0$.
+\item (\textbf{Unitary Invariance}): $\tr{U\,A\,U^{-1}} = \tr{A}$ for any \textbf{unitary} operator $U$. 
+\item (\textbf{Monotonicity}): if $B\succeq A \succeq 0$, then $\tr{B} \ge \tr{A}$
+\end{enumerate}
+\end{proposition}
+
+\item \begin{remark} (\emph{\textbf{Trace of General Linear Operator}})\\
+Let $A \in \cL(\cH)$ be a bounded linear operator on separable Hilbert space. Instead of considering \emph{the trace of $A$}, we consider \emph{the trace of modulus of $A$},
+\begin{align*}
+\tr{\abs{A}} = \tr{\sqrt{A^{*}A}}.
+\end{align*}
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{Trace Class}})\\
+An operator $A \in \cL(\cH)$ is called \underline{\emph{\textbf{trace class}}} if and only if 
+\begin{align*}
+\tr{\abs{A}} = \tr{\sqrt{A^{*}A}} < \infty.
+\end{align*}
+\emph{The family of all trace class operators} is denoted by $\cB_1(\cH)$.
+\end{definition}
+
+\item The following lemma is used in proof of part 2 in next proposition
+ \begin{lemma}
+Every $B \in \cL(\cH)$ can be written as a linear combination of \textbf{four unitary operators}. 
+\end{lemma}
+
+\item \begin{proposition} (\textbf{Space of Trace Class Operator}) \citep{reed1980methods} \\
+The family of all trace class operators $\cB_1(\cH)$ is a \underline{\textbf{$*$-ideal} in $\cL(\cH)$}, that is, 
+\begin{enumerate}
+\item $\cB_1(\cH)$  is a \textbf{vector space}. 
+\item (\textbf{Operator Multiplication}) If $A \in \cB_1(\cH)$ and $B \in \cL(\cH)$, then $AB \in \cB_1(\cH)$ and $BA \in \cB_1(\cH)$.
+\item (\textbf{Adjoint}) If $A \in \cB_1(\cH)$ then $A^{*} \in \cB_1(\cH)$. 
+\end{enumerate}
+\end{proposition}
+
+\item \begin{remark} 
+\begin{definition} (\emph{\textbf{$*$-Algebra}})\\
+An  \emph{\textbf{algebra}} $\cA$ \emph{over field} $K$ is a \emph{\textbf{$K$-vector space}} together with a \emph{\textbf{binary product}} $(a,b)\mapsto ab$ satisfying
+\begin{enumerate}
+\item $a(bc)=(ab)c$,
+\item $\lambda(ab)=(\lambda a)b=a(\lambda b)$,
+\item $a(b+c)=ab+ac$,
+\item $(a+b)c=ac+bc,$
+\end{enumerate}
+for all $a,b,c\in \cA$ and $\lambda\in K$.
+%A \emph{\textbf{$*$-ring}} is a \emph{\textbf{ring}} $(A, +, \cdot)$ with a map $* : A \rightarrow A$ that satisfies the following properties:
+%\begin{enumerate}
+%\item $(x + y)^* = x^* + y^*$
+%\item $(x y)^* = y^* x^*$
+%\item $1^* = 1$
+%\item $(x^*)^* = x$
+%\end{enumerate}
+%for all $x, y$ in $A$.
+
+A \emph{\textbf{$*$-algebra}} $\cA$ is a \textit{\textbf{algebra}} over $\bC$ with a unary \emph{\textbf{involution}} $*: a \mapsto a^{*}$ such that
+\begin{enumerate}
+\item $(\lambda a + \mu b)^* = \bar{\lambda}a^* + \bar{\mu} b^*$,
+\item $(ab)^* = b^*  a^*$,
+\item $(a^*)^* = a$,
+\end{enumerate} for all $a, b \in \cA$ and $\lambda, \mu \in \bC$.
+\end{definition} 
+
+\begin{example} (\emph{\textbf{Hilbert Adjoint as $*$-Operation}})\\
+For $\cL(\cH)$, let the $*$-operation be \emph{the \textbf{Hilbert adjoint}}, i.e. $\inn{Tx}{y} = \inn{x}{T^{*}y}$ so \emph{$\cL(\cH)$ is a \textbf{$*$-algebra}} with \emph{operator addition} and \emph{operator multiplication}.
+\end{example}
+
+\begin{definition}(\emph{\textbf{Left Ideal}}) \\
+For an arbitrary \emph{\textbf{ring}} $(R,+,\cdot )$, let $(R,+)$ be its \emph{\textbf{additive group}}. A \emph{subset} $I$ is called a \emph{\textbf{left ideal}} of $R$ if it is an \emph{additive subgroup} of $R$ that ``\emph{absorbs multiplication from the left by elements of $R$}"; that is, $I$ is a \emph{left ideal} if it satisfies the following two conditions:
+\begin{enumerate}
+\item $(I,+)$ is a \emph{subgroup} of $(R,+)$,
+\item For every $r\in R$ and every $x\in I$, the \emph{product} $rx$ is in $I$.
+\end{enumerate}
+\end{definition}
+
+\end{remark}
+
+\item \begin{proposition} (\textbf{Norm of Trace Class}) \citep{reed1980methods}\\
+Let $\norm{\cdot}{1}$ be defined in $\cB_1(\cH)$ by
+\begin{align*}
+\norm{A}{1} &= \tr{\abs{A}}.
+\end{align*}
+Then $\cB_1(\cH)$ is a \textbf{Banach space} with norm $\norm{\cdot}{1}$  and
+\begin{align*}
+\norm{A}{} \le \norm{A}{1}
+\end{align*}
+\end{proposition}
+
+\item \begin{remark}
+$\cB_1(\cH)$ is \emph{\textbf{not closed}} under \emph{the operator norm} $\norm{\cdot}{}$ in $\cL(\cH)$.
+\end{remark}
+
+\item \begin{proposition} (\textbf{Compactness}) \citep{reed1980methods}\\
+\underline{Every $A \in \cB_1(\cH)$ is \textbf{compact}}. A \textbf{compact} operator $A$ is in $\cB_1(\cH)$ \textbf{if and only if}
+\begin{align*}
+\sum_{n=1}^{\infty}\lambda_n < \infty
+\end{align*}
+where $\set{\lambda_n}$ are the \textbf{singular values} of $A$. 
+\end{proposition}
+
+\item \begin{corollary} (\textbf{Finite Rank Approximation})  \citep{reed1980methods}\\
+The finite rank operators are \textbf{$\norm{\cdot}{1}$-dense} in $\cB_1(\cH)$. 
+\end{corollary}
+
+\item \begin{proposition} \citep{reed1980methods}\\
+If $A \in \cB_1(\cH)$  and  $\{\varphi_n\}_{n=1}^{\infty}$ is \textbf{any} orthonormal basis, then 
+\begin{align*}
+ \sum_{n=1}^{\infty}\inn{A\phi_n}{\phi_n}
+\end{align*} converges \textbf{absolutely} and the limit is \textbf{independent} of the choice of basis. 
+\end{proposition}
+\end{itemize}
+\subsection{Hilbert-Schmidt Operator}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Hilbert-Schmidt Operator}}) \\
+An operator $T \in \cL(\cH)$ is called  \underline{\textbf{\emph{Hilbert-Schmidt}}} if and only if
+\begin{align*}
+\tr{T^{*}T} < \infty.
+\end{align*}
+\emph{The family of all Hilbert-Schmidt operators} is denoted by $\cB_2(\cH)$ or $\cB_{HS}(\cH)$.
+\end{definition}
+
+\item \begin{proposition} (\textbf{Space of Hilbert-Schmidt Operator}) \citep{reed1980methods} 
+\begin{enumerate}
+\item The space of all Hilbert-Schmidt operators $\cB_2(\cH)$ is a \underline{\textbf{$*$-ideal} in $\cL(\cH)$},
+\item  (\textbf{Inner Product}): If $A, B \in \cB_2(\cH)$ , then for \textbf{any orthonormal basis} $\{\varphi_n\}_{n=1}^{\infty}$, 
+\begin{align*}
+ \sum_{n=1}^{\infty}\inn{A^{*}B\varphi_n}{\varphi_n}
+\end{align*}
+is \textbf{absolutely summable}, and its \textbf{limit}, denoted by $\inn{A}{B}_{HS}$, is \textbf{independent} of the orthonormal basis chosen, i.e. 
+\begin{align*}
+\inn{A}{B}_{HS} = \tr{A^{*}B}
+\end{align*}
+\item $\cB_2(\cH)$ with inner product  $\inn{\cdot}{\cdot}_{HS}$ is a \textbf{Hilbert space}. 
+\item (\textbf{Norm}):  Let $\norm{\cdot}{2}$ be defined in $\cB_2(\cH)$ by
+\begin{align*}
+\norm{A}{2} := \sqrt{\inn{A}{A}}_{HS} = \sqrt{\tr{A^{*}A}}.
+\end{align*} Then
+\begin{align*}
+\norm{A}{} \le \norm{A}{2} \le \norm{A}{1}, \quad \text{and} \quad  \norm{A}{2} =  \norm{A^{*}}{2}
+\end{align*} 
+\item (\textbf{Compactness}) \underline{Every $A \in \cB_2(\cH)$ is \textbf{compact}} and a \textbf{compact operator}, $A$, is in $\cB_2(\cH)$ \textbf{if and only if} 
+\begin{align*}
+\sum_{n=1}^{\infty}\lambda_n^2 < \infty
+\end{align*} where $\set{\lambda_n}$ are the \textbf{singular values} of $A$. 
+\item (\textbf{Finite Rank Approximation}) The \textbf{finite rank operators} are $\norm{\cdot}{2}$-\textbf{dense} in  $\cB_2(\cH)$. 
+\item $A \in \cB_2(\cH)$ \textbf{if and only if} 
+\begin{align*}
+\set{\norm{A\varphi_n}{}}_{n=1}^{\infty} \in \ell^2
+\end{align*}
+for \textbf{some} orthonormal basis $\{\varphi_n\}_{n=1}^{\infty}$. 
+\item $A \in \cB_1(\cH)$ if and only if $A = BC$ with $B, C \in \cB_2(\cH)$. 
+\item  $\cB_2(\cH)$ is not $\norm{\cdot}{}$-closed in $\cL(\cH)$. 
+\end{enumerate}
+\end{proposition}
+
+
+\item \begin{theorem} (\textbf{Hilbert-Schmidt Operator of $L^2$ Space}) \citep{reed1980methods}\\
+Let $(M, \mu)$ be a \textbf{measure space} and  $\cH = L^2(M, \mu)$.  Then $T \in \cL(\cH)$ is \textbf{Hilbert-Schmidt} \textbf{if and only if} there is a function 
+\begin{align*}
+K \in L^2(M \times M, \mu \otimes \mu)
+\end{align*}
+with 
+\begin{align*}
+(T f)(x) &= \int_{M} K(x, y)f(y) d\mu(y),
+\end{align*}
+Moreover, 
+\begin{align*}
+\norm{T}{2}^2 &= \int_{M \times M} \abs{K(x, y)}^2 d\mu(x) d\mu(y).
+\end{align*}
+\end{theorem}
+\begin{proof}
+Let $K \in L^2(M \times M, \mu \otimes \mu)$ and let $T_K$ be the associated integral operator. It is easy to see (Problem 25) that $T_K$ is a well-defined operator on $\cH$ and that 
+\begin{align*}
+\norm{T_K}{} \le \norm{K}{L^2}
+\end{align*} 
+Let $\{\varphi_n\}_{n=1}^{\infty}$ be an orthonormal basis for $L^2(M, \mu)$. Then $\{\varphi_n(x)\overline{\varphi_m(y)}\}_{n,m=1}^{\infty}$ 
+is an orthonormal base for $L^2(M \times M, \mu \otimes \mu)$ so 
+\begin{align*}
+K &= \sum_{n,m=1}^{\infty}\lambda_{n,m}\varphi_n(x)\overline{\varphi_m(y)}
+\end{align*}
+Let 
+\begin{align*}
+K_N &= \sum_{n,m=1}^{N}\lambda_{n,m}\varphi_n(x)\overline{\varphi_m(y)}
+\end{align*}
+Then each $K_N$ is \emph{the integral kernel} of \emph{a finite rank operator}. In fact,
+\begin{align*}
+T_{K_N} = \sum_{n,m=1}^{N}\lambda_{n,m}\inn{\varphi_m}{\cdot}\varphi_n.
+\end{align*} Since $\norm{K_N - K}{L^2} \rightarrow 0$ as $N \rightarrow \infty$, by inequality above, we have $\norm{T_{K_N} - T_K}{} \rightarrow 0$. Thus $T_K$ is \emph{compact}. In fact, 
+\begin{align*}
+\tr{T_K^{*}T_K} &= \sum_{n=1}^{\infty}\norm{T_K \varphi_n}{}^2 = \sum_{n,m=1}^{\infty}\abs{\lambda_{n,m}}^2 = \norm{K}{L^2}^2
+\end{align*}
+Thus $T_K \in \cB_2(\cH)$ and $\norm{T_K}{2} = \norm{K}{L^2}$.
+
+We have shown that the map $Κ \mapsto A_K$ is an \emph{\textbf{isometry}} of  $L^2(M \times M, \mu \otimes \mu)$ into $\cB_2(\cH)$, so its \emph{range is \textbf{closed}}. But \emph{\textbf{the finite rank operators}} clearly come from \emph{kernels} and since they are \emph{\textbf{dense}} in $\cB_2(\cH)$ the range of $Κ \mapsto A_K$ is all of $\cB_2(\cH)$.  \qed
+\end{proof}
+
+
+
+\item \begin{remark}
+A \emph{\textbf{Hilbert-Schmidt}} operator $T$ on a \emph{\textbf{square integrable} space $L^2(M, \mu)$} is a \emph{\textbf{integral kernel operator}}.
+
+In other word, for $T \in \cL(\cH)$, if $\tr{T^{*}T} < \infty,$ then $T$ is a \emph{\textbf{compact operator}}. If, in particular, $\cH = L^2(M, \mu)$, then $T$ can be written as the \emph{integral kernel operator} 
+\begin{align*}
+(T f)(x) &= \int_{M} K(x, y)f(y) d\mu(y),
+\end{align*}
+\end{remark}
+
+\item \begin{theorem}  (\textbf{Mercer's Theorem}) \citep{borthwick2020spectral}. \\
+Suppose $\Omega$ is a \textbf{compact domain} and $T$ is a \textbf{positive Hilbert-Schmidt operator} on $L^2(\Omega)$. If the integral kernel $K(\cdot, \cdot)$ is
+\textbf{continuous} on $\Omega \times \Omega$, then the \textbf{eigenfunction} $\varphi_k$ is \textbf{continuous} on $\Omega$ if $\lambda_k > 0$, and
+the expansion
+\begin{align*}
+K(x,y) &= \sum_{n=1}^{\infty}\lambda_{n}\varphi_n(x)\overline{\varphi_n(y)}
+\end{align*}
+converges \textbf{uniformly} on \textbf{compact} sets.
+\end{theorem}
+\end{itemize}
+
+\subsection{Trace of Linear Operator}
+\begin{itemize}
+\item \begin{definition} (\textbf{\emph{Trace}})\\
+The map $\text{tr}: \cB_1(\cH) \rightarrow \bC$ given by
+\begin{align*}
+\tr{A} &= \sum_{n=1}^{\infty}\inn{A\phi_n}{\phi_n}
+\end{align*}
+where $\{\phi_n\}_{n=1}^{\infty}$ is \emph{any} \emph{orthonormal basis} in $\cH$ is called \underline{\emph{\textbf{the trace}}}. 
+\end{definition}
+
+\item \begin{remark}
+For $A \in \cB_1(\cH)$, $\sum_{n=1}^{\infty}\abs{\inn{A\phi_n}{\phi_n}} < \infty$ for \emph{any\textbf{}} \emph{orthonormal basis} $\{\phi_n\}_{n=1}^{\infty}$.
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Decomposition of Self-Adjoint operator}})\\
+For any $A \in \cL(\cH)$ and $A$ being self-adjoint, 
+\begin{align*}
+A &= A_{+} - A_{-}
+\end{align*} where both $A_+$ and $A_{-}$ are \emph{\textbf{positive}} and $A_{+}A_{-} = 0$. 
+
+Not surprisingly, $A \in \cB_1(\cH)$  if  and only if 
+\begin{align*}
+\tr{A_{+}} < \infty, \;\; \tr{A_{-}} < \infty,
+\end{align*} and
+\begin{align*}
+\tr{A} = \tr{A_{+}} -  \tr{A_{-}}.
+\end{align*}
+\end{remark}
+
+\item Finally, we collect the property of trace for linear operators:
+\begin{proposition} (\textbf{Properties of Trace}) \citep{reed1980methods}
+\begin{enumerate}
+\item $\tr{\cdot}$  is linear. 
+\item $\tr{A^{*}} = \overline{\tr{A}}$. 
+\item$\tr{AB} = \tr{BA}$ if $A \in \cB_1(\cH)$ and $B \in \cL(\cH)$. 
+\end{enumerate}
+\end{proposition}
+
+\item \begin{remark}
+If $A \in \cB_1(\cH)$, the map
+\begin{align*}
+B \mapsto \tr{AB}
+\end{align*} is a \emph{\textbf{linear functional}} on $\cL(\cH)$. We can also hold $B \in \cL(\cH)$ \emph{fixed} and obtain a \emph{\textbf{linear functional}} on $\cB_1(\cH)$ given by the map 
+\begin{align*}
+A \mapsto \tr{BA}.
+\end{align*}
+The set of these functionals is just \emph{\textbf{the dual of $\cB_1(\cH)$}}.
+\end{remark}
+
+\item \begin{proposition} (\textbf{Dual Space of Compact Operators}) \citep{reed1980methods}
+\begin{enumerate}
+\item $\cB_1(\cH) = (\text{Com}(\cH))^{*}$.  That is, the map $A \mapsto \tr{A \cdot}$ is an \textbf{isometric isomorphism} of $\cB_1(\cH)$ onto $(\text{Com}(\cH))^{*}$. 
+\item $\cL(\cH)= (\cB_1(\cH))^{*}$.  That is, the map $B \mapsto \tr{B\cdot}$ is an \textbf{isometric isomorphism} of $\cL(\cH)$ onto $(\cB_1(\cH))^{*}$. 
+\end{enumerate}
+\end{proposition}
+\end{itemize}
+
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{reference.bib}
+\end{document}

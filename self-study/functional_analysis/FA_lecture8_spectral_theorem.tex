@@ -1,0 +1,881 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs,  mathtools, dsfont}
+\usepackage{tabularx}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz-cd}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Lecture 8: Spectral Theorem}
+\author{ Tianpei Xie}
+\date{ Dec. 13th., 2022 }
+\maketitle
+\tableofcontents
+\newpage
+\section{Spectral Theorem in Finite Dimensional Space}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Similarity}}) \citep{horn2012matrix}\\
+Let $A, B \in M_n$ be given $n\times n$ matrices. We say that $B$ \underline{\emph{\textbf{is similar to}}} $A$ if there exists a \emph{\textbf{nonsingular}} $S \in M_n$ such that
+\begin{align*}
+B &= S^{-1}A S
+\end{align*}
+The transformation $A \to S^{-1} A S$ is called a \underline{\emph{\textbf{similarity transformation}}} by the \emph{similarity matrix} $S$.
+\end{definition}
+
+
+
+\item \begin{definition}  (\emph{\textbf{Normal Matrix}}) \citep{horn2012matrix}\\
+A matrix  $A \in M_n$ is \underline{\emph{\textbf{normal}}} if
+\begin{align*}
+A A^{*} &= A^{*} A,
+\end{align*} that is, if $A$ \emph{\textbf{commutes}} with its \emph{\textbf{conjugate transpose (adjoint)}}.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Diagonalizable}}) \citep{horn2012matrix}\\
+If $A \in M_n$ is \emph{similar} to a \emph{diagonal matrix}, then $A$ is said to be \underline{\emph{\textbf{diagonalizable}}}.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Unitary Similarity}}) \citep{horn2012matrix}\\
+Let $A, B \in M_n$ be given. We say that $A$ is  \underline{\emph{\textbf{unitarily similar}}} to $B$ if there is a \emph{\textbf{unitary}} $U \in M_n$ such that
+\begin{align*}
+A &= U B U^{*} 
+\end{align*} We say that $A$ is \underline{\emph{\textbf{unitarily diagonalizable}}} if it is \textbf{\emph{unitarily similar}} to a diagonal matrix.
+
+We say that $A$ is  \underline{\emph{\textbf{orthogonally similar}}} to $B$ if there is a \emph{\textbf{unitary (real orthorgonal)}} $U \in M_n(\bR)$ such that
+\begin{align*}
+A = U B U^{T}
+\end{align*} We say that $A$ is \underline{\emph{\textbf{orthogonally diagonalizable}}} if it is \textbf{\emph{orthogonally similar}} to a diagonal matrix.
+
+\end{definition}
+
+%\item \begin{lemma} \citep{horn2012matrix}\\
+%Let $\lambda_1 \xdotx{,} \lambda_k$ be $k \ge 2$ \textbf{distinct eigenvalues} of $A \in M_n$ (that is, $\lambda_i = \lambda_j$ if $i = j$ and $1\le i, j \le k$), and suppose that $x^{(i)}$ is an eigenvector associated with $\lambda_i$ for each $i = 1 \xdotx{,} k$. Then the vectors $x^{(1)} \xdotx{,} x^{(k)}$ are \textbf{linearly independent}.
+%\end{lemma}
+%
+%\item \begin{theorem}  \citep{horn2012matrix}\\
+%If $A \in M_n$  has $n$ \textbf{distinct eigenvalues}, then $A$ is \textbf{diagonalizable}.
+%\end{theorem}
+
+\item \begin{theorem} (\textbf{Spectral Theorem of Normal Matrix})   \citep{horn2012matrix}\\
+Let $A = [a_{i,j}] \in M_n$ have \textbf{eigenvalues} $\lambda_1 \xdotx{,} \lambda_n$. The following statements are \textbf{equivalent}:
+\begin{enumerate}
+\item $A$ is \textbf{normal}.
+\item $A$ is \textbf{unitarily diagonalizable}, i.e. there exists unitary matrix $U \in M_n$ such that 
+\begin{align*}
+A &= U \Lambda U^{*}
+\end{align*} where $\Lambda = \diag{\lambda_1 \xdotx{,} \lambda_n}$.
+\item $\sum_{i,j=1}^{n}\abs{a_{i,j}}^2 = \sum_{i=1}^{n}\lambda_i^2$
+\item $A$ has $n$ \textbf{orthonormal eigenvectors}
+\end{enumerate}
+\end{theorem}
+
+
+\item \begin{definition} (\emph{\textbf{Spectral Decomposition}})\\
+A \emph{representation} of a \emph{\textbf{normal matrix}} $A \in M_n$ as $A = U \Lambda U^{*}$, in which $U$ is \emph{\textbf{unitary}} and $\Lambda$ is \emph{\textbf{diagonal}}, is called a \underline{\emph{\textbf{spectral decomposition of $A$}}}.
+\end{definition}
+
+\item The Hermitian matrix is normal matrix, so the following theorem is a special case of the spectral theorem for normal matrix.
+\begin{theorem} (\textbf{Spectral Theorem for Hermitian Matrices})  \citep{horn2012matrix}\\
+Let $A \in M_n$ be \textbf{Hermitian} and have eigenvalues $\lambda_1 \xdotx{,} \lambda_n$. Let $\Lambda = \diag{\lambda_1 \xdotx{,} \lambda_n}$. Then
+\begin{enumerate}
+\item $\lambda_1 \xdotx{,} \lambda_n$ are \textbf{real} numbers.
+\item $A$ is \textbf{unitarily diagonalizable}
+\item There is a \textbf{unitary} $U \in M_n$ such that 
+\begin{align*}
+A &= U \Lambda U^{*}
+\end{align*} 
+\end{enumerate}
+\end{theorem}
+
+\item \begin{remark}
+This is equivalent to say that for \emph{\textbf{self-adjoint bounded linear operator $A$}} on finite dimensional space $V$, there exists \emph{\textbf{unitary operator} $U: \bC^n  \rightarrow V$} such that 
+\begin{align*}
+[U^{-1} A U f]_k &= \lambda_k f_k
+\end{align*} for any $f = (f_k)_{k=1}^{n} \in \bC^n$.
+\end{remark}
+\end{itemize}
+
+\section{The Continuous Functional Calculus}
+\begin{itemize}
+\item \begin{remark}  (\textbf{\emph{Spectral Theorem for Self-Adjoint Bounde Linear Operator in Hilbert Space}})\\ 
+Given a \emph{bounded self-adjoint operator} $A \in \cL(\cH)$ on \emph{Hilbert space} $\cH$, we can find a \emph{\textbf{measure}} $\mu$ on a \emph{measure space $\cM$} and a 
+\emph{\textbf{unitary operator}} $U: L^2(\cM, \mu) \to \cH $ so that 
+\begin{align*}
+[U^{-1} A U f](x) &= F(x) f(x)
+\end{align*} for some \emph{\textbf{bounded} \textbf{real-valued} \textbf{measurable function} $F$} on $\cM$. 
+
+In practice, $\cM$ will be a \emph{union of copies of $\bR$} and $F$ will be $x$,  so the \emph{\textbf{core}} of the proof of the theorem will be \emph{\textbf{the construction of certain measures $\mu$}}.  
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Functional Calculus}}) \citep{borthwick2020spectral} \\
+In operator theory, the term ``\underline{\emph{\textbf{functional calculus}}}" refers to the ability to \emph{apply a function to an operator}.
+
+For $A \in \cL(\cH)$, one need to make sense of $f(A)$ for some continuous function $f$. For instance, If $f(x) = \sum_{j=0}^{n}a_j x^j$ is a \emph{polynomial}, 
+we want 
+\begin{align*}
+f(A) &=  \sum_{j=0}^{n}a_j A^j.
+\end{align*} Similarly, suppose that $f(x) = \sum_{j=0}^{\infty}c_j x^j$  is a \emph{power series} with \emph{radius of convergence} $R$. If $\norm{A}{} < R$, then $ \sum_{j=0}^{\infty}c_j A^j$ \emph{converges} in $\cH$ so it is natural to set 
+\begin{align*}
+f(A) &=  \sum_{j=0}^{\infty}a_j A^j.
+\end{align*}
+\end{remark}
+
+\item In particular, we have
+\begin{lemma} \label{lem: poly_spectrum} (\textbf{Spectrum of Polynomial of Operators}) \citep{reed1980methods}\\
+Let $P(x) = \sum_{n=0}^{N}a_n x^n$ and $P(A) =  \sum_{n=0}^{N}a_n A^n$. Then 
+\begin{align*}
+\sigma\paren{P(A)} &= \set{P(\lambda): \lambda \in \sigma(A)}
+\end{align*}
+\end{lemma}
+
+\item \begin{lemma}  (\textbf{Norm of Polynomial of Bounded Self-Adjoint Operators}) \citep{reed1980methods}\\
+Let $A$ be a \textbf{bounded self-adjoint} operator. Then 
+\begin{align*}
+\norm{P(A)}{} &= \sup_{\lambda\in \sigma(A)} \abs{P(\lambda)}
+\end{align*}
+\end{lemma}
+
+\item \begin{theorem} (\textbf{Continuous Functional Calculus}) \citep{reed1980methods}\\
+Let $A$ be a \textbf{self-adjoint}  operator on a \textbf{Hilbert space} $\cH$. Then there is a \textbf{unique} map $\phi: \cC(\sigma(A)) \to \cL(\cH)$ with the following properties: 
+\begin{enumerate}
+\item $\phi$ is an \underline{\textbf{algebraic $*$-homomorphism}}, that is, 
+\begin{itemize}
+\item (\textbf{Preserve Operator Product}) $\phi(fg) = \phi(f)\phi(g)$
+\item (\textbf{Preserve Scalar Product}) $\phi(\lambda f) = \lambda \phi(f)$
+\item (\textbf{Preserve Identity}) $\phi(1) = I$
+\item (\textbf{Preserve Adjoint/Conjugacy}) $\phi(\bar{f}) =  \phi(f)^{*}$
+\end{itemize}
+\item $\phi$ is \textbf{continuous}, that is, 
+\begin{align*}
+\norm{\phi(f)}{\cL(\cH)} &\le C \norm{f}{\infty}.
+\end{align*}
+\item Let $f$ be the function $f(x) = x$; then $\phi(f) = A$. 
+Moreover,  $\phi$ has the \textbf{additional} properties: 
+\item  If $A\psi = \lambda \psi$, then 
+\begin{align}
+\phi(f)\psi  = f(\lambda) \psi  \label{eqn: cont_functional_calculas_spectral_decomp}
+\end{align}
+\item (\textbf{Spectral Mapping Theorem}) 
+\begin{align}
+\sigma(\phi(f)) &= \set{f(\lambda): \lambda \in \sigma(A)} \label{eqn: cont_functional_calculas_spectrum_mapping}
+\end{align}
+\item (\textbf{Preserve Positivity})  If $f \ge 0$, then $\phi(f) \succeq 0$. 
+\item (\textbf{Preserve Norm}) (This strengthens the (2)).
+\begin{align}
+\norm{\phi(f)}{\cL(\cH)} &= \norm{f}{\infty} \label{eqn: cont_functional_calculas_norm_preserve}
+\end{align}
+\end{enumerate} We sometimes write $f(A)$ or $\phi_{A}(f)$ for $\phi(f)$ to emphasize the dependency on $A$.
+\end{theorem}
+\begin{proof}
+Sketch of the proof. Let $\phi(P) = P(A)$ for polynomial $P$. Then, by previous Lemma, we have
+\begin{align*}
+\norm{\phi(P)}{\cL(\cH)} = \norm{P}{\cC(\sigma(A))}
+\end{align*} so $\phi$ has a \emph{unique linear extension} to the closure of polynomials $\overline{P(\sigma(A))} \subset \cC(\sigma(A))$.  Note that $\overline{P(\sigma(A))} = \set{P(x): x \in\sigma(A), \text{\emph{ all polynomials }}P(x) }$ forms an \emph{algebra} (with respect to \emph{function multiplication}) that contains $1$, and complex conjugates. Moreover, $\overline{P(\sigma(A))}$ \emph{separate points}, i.e. for any $x, y \in \sigma(A)$, we can find $P \in \overline{P(\sigma(A))}$ so that $P(x) \neq P(y)$. By, \emph{Stone-Weierstrass theorem}, $\overline{P(\sigma(A))} = \cC(\sigma(A))$. In other word, the domain of $\phi$ can be extended to $\cC(\sigma(A))$. 
+
+Property (1), (2), (3), (7) is directly from extension of $\phi$ in polynomial function space. If a map $\widetilde{\phi}$ obeys (1), (2), (3) it agrees on $\phi$ on polynomials and thus by \emph{continuity} (since $\overline{P(\sigma(A))} = \cC(\sigma(A))$), $\widetilde{\phi} = \phi$ on $\cC(\sigma(A))$. 
+
+To show (4), note that $\phi(f)\psi = f(A)\psi= f(\lambda) \psi$ for any $f \in \overline{P(\sigma(A))}$, then (4) is proved by continuity. To prove (6), note that if $f \ge 0$, $f = g^2$ with $g$ real and $g \in \cC(\sigma(A))$. Thus $\phi(f) = \phi(g)^2$ with $\phi(g)$ being self-adjoint, so $\phi(f) \ge 0$.  (5) comes from extension of results in Lemma \ref{lem: poly_spectrum}. \qed
+\end{proof}
+
+\item \begin{remark}
+Note that the continuous function $f$ in defining $f(A)$ is defined on $\sigma(A)$, i.e. \emph{\textbf{the spectrum of operator}} $A$, so \emph{\textbf{$f$ is a spectral domain transformation function}}.  In the map, 
+\begin{align*}
+\phi: f \mapsto \phi(f) := f(A): \cH \rightarrow \cH.
+\end{align*} 
+\begin{enumerate}
+\item So in equation 
+\begin{align*}
+\phi(fg) = \phi(f)\phi(g) &\Leftrightarrow (fg)(A) = f(A)g(A)\\
+\phi(\lambda f) = \lambda \phi(f) &\Leftrightarrow (\lambda f)(A) = \lambda\,f(A)\\
+\phi(1) = I &\Leftrightarrow  1(A) = I \\
+\phi(\bar{f}) =  \phi(f)^{*} &\Leftrightarrow  (\bar{f})(A) = (f(A))^{*} \\
+\phi(\text{Id}) = \text{Id} &\Leftrightarrow (\text{id})(A) = A
+\end{align*} the LHS of first equation is an operator corresponding to the \emph{\textbf{product of two functions}}, while the RHS of first equation is \emph{\textbf{the product of two operators}}, each corresponding to one function.
+
+\item The equation \eqref{eqn: cont_functional_calculas_spectral_decomp} makes sure that \emph{the spectral decomposition} of $f(A)$ and that of $A$ \emph{\textbf{\underline{shares the same set of eigenfunctions}}}.
+
+\item The spectral mapping theorem in \eqref{eqn: cont_functional_calculas_spectrum_mapping} actually defines $f(A)$ as the operator whose spectrum is transformed by $f$. In other words, \emph{\textbf{$f(A)$ is the operator obtained by spectral domain transformation via $f$}}. 
+
+In signal processing, $f(A)$ corresponds to \underline{\emph{\textbf{the spectral filtering}}} of $A$.
+\end{enumerate}
+\end{remark}
+
+\item \begin{remark}
+There are some more remarks:
+\begin{enumerate}
+\item $\phi(f) \succeq 0$  \emph{\textbf{if and only if}} $f \ge 0$.
+\item (\textbf{\emph{Abelian $C^{*}$-Algebra}})\\
+ Since $fg = gf$ for all $f, g$, 
+\begin{align*}
+\set{f(A): f \in \cC(\sigma(A))}
+\end{align*} forms an \emph{\textbf{abelian algebra}} closed under \emph{\textbf{adjoints}}.  Since  $\norm{\phi(f)}{} = \norm{f}{\infty}$  and $\cC(\sigma(A))$ is \emph{\textbf{complete}},  $\set{f(A): f \in \cC(\sigma(A))}$ is \emph{\textbf{norm-closed}}. It is thus an \underline{\emph{\textbf{abelian $C^{*}$-algebra}}} of 
+\emph{operators}.  
+\item  (\textbf{\emph{$C^{*}$-Algebra Generated by $A$}})\\
+ The image of $\phi$, i.e. $\set{f(A): f \in \cC(\sigma(A))}$ is actually the \underline{\emph{\textbf{$C^{*}$-algebra generated by $A$}}}, that is, the \emph{\textbf{smallest} $C^{*}$-algebra containing $A$}. 
+ 
+ \item This result shows that \emph{the space of \textbf{continuous function on spectrum of $A$}}, $\cC(\sigma(A))$ and \emph{the $C^{*}$-algebra generated by $A$} are \emph{\textbf{isometrically isomorphic}}.
+ \begin{align*}
+ \cC(\sigma(A)) \simeq \text{Ran }\phi = \set{f(A): f \in \cC(\sigma(A))}.
+ \end{align*}
+ 
+ \item The property (1) and (3) \emph{\textbf{uniquely} determines} the mapping $\phi$.
+\end{enumerate}
+\end{remark}
+
+\item \begin{example} (\emph{\textbf{Existence of Square Root for Positive Operator}})\\
+For $A \succeq 0$, $\sigma(A) \ge 0$ and $\sigma(A) \subset \bR$, so let $f(x) = \sqrt{x}$, then
+\begin{align*}
+A = (f(A))^2.
+\end{align*}
+\end{example}
+
+\item \begin{example}
+For $f(x) = (\lambda  - x)^{-1}$,
+\begin{align*}
+\norm{\paren{A - \lambda I}^{-1}}{} = \sup_{x \in \sigma(A)}\abs{x - \lambda }^{-1} = \frac{1}{\text{dist }(\lambda, \sigma(A))}
+\end{align*} for $A$ bounded and $\lambda \not\in \sigma(A)$.
+\end{example}
+
+
+\end{itemize}
+
+\section{Spectral Theorem for Bounded Self-Adjoint Operator}
+\subsection{Spectral Measure}
+\begin{itemize}
+\item \begin{remark} (\emph{\textbf{Positive Linear Functional on $\cC(\sigma(A))$}})\\
+%According to the Riesz Representation theorem, there exists an isomorphism between a \emph{\textbf{sesquilinear form}} on Hilbert space $\cH$ and a \emph{bounded linear operator} on $\cH$.  Thus 
+For each $\psi \in \cH$, the following \emph{quadratic form} defines a \emph{bounded linear functional} on $\cL(\cH)$
+\begin{align*}
+\widetilde{I}_{\psi}: A \mapsto \inn{\psi}{A \psi}_{\cH}.
+\end{align*} Then by continuous functional calculus, we can define a map $I_{\psi} =\widetilde{I}_{\psi} \circ \phi: \cC(\sigma(A)) \rightarrow  \bR$, which is seen as a \emph{\textbf{positive linear functional}} (\emph{not positive operator}) on $\cC(\sigma(A))$, i.e.  $\forall \psi \in \cH$,
+\begin{align*}
+I_{\psi}(f) := \inn{\psi}{f(A)\psi} \ge 0 \text{ whenever }f\ge 0.
+\end{align*}
+For \emph{a \textbf{bounded self-adjoint operator}} $A$, the \emph{spectrum} $\sigma(A) \subset \bR$ is a \emph{\textbf{closed bounded subset}} of $\bR$ so it is \emph{\textbf{compact}}. Thus $\cC(\sigma(A))$ is a space of continuous functions on compact domain, which, by Riesz-Markov theorem, has \emph{\textbf{dual space}} that is isomorphic to \emph{the space of \textbf{complex signed Radon measures} on $\sigma(A)$}. In other word, for each $\psi \in \cH$, there \emph{\textbf{exists a positive \underline{Radon measure on spectral domain}}} $\mu_{\psi} \in \cM(\sigma(A)) \simeq (\cC(\sigma(A)))^{*}$ so that 
+\begin{align}
+I_{\psi}(f) := \inn{\psi}{f(A)\psi} &= \int_{\sigma(A)} f d\mu_{\psi}. \label{eqn: functional_calculus_spectral_measure}
+\end{align}
+Here  let $f = \bar{g}g$, the equation \eqref{eqn: functional_calculus_spectral_measure} becomes
+\begin{align}
+\norm{g(A)\psi}{\cH}^2 &= \inn{g(A)\psi}{g(A)\psi}_{\cH} = \inn{\psi}{\bar{g}g(A)\psi}_{\cH}  \nonumber\\
+&= \int_{\sigma(A)} \bar{g}g d\mu_{\psi} = \int_{\sigma(A)} \abs{g(\lambda)}^2 d\mu_{\psi}(\lambda) \nonumber\\
+\Rightarrow \norm{g(A)\psi}{\cH}^2 &= \int_{\sigma(A)} \abs{g(\lambda)}^2 d\mu_{\psi}(\lambda),  \label{eqn: time_specturm_energy_preserve}
+\end{align}
+ which confirms that \emph{\textbf{the energy in time-domain should match the energy in spectral domain}}.
+\end{remark}
+
+\item 
+\begin{definition} (\emph{\textbf{Spectral Measure}})\\
+For each $\psi \in \cH$, the measure $\mu_{\psi} \in \cM(\sigma(A))$ defined in \eqref{eqn: functional_calculus_spectral_measure} is called \emph{the \underline{\textbf{spectral measure}} \textbf{associated with the vector} $\psi$}. 
+\end{definition}
+\end{itemize}
+
+\subsection{Spectral Theorem in Functional Calculus Form}
+\begin{itemize}
+\item \begin{remark} (\emph{\textbf{Extension to Bounded Borel Functions on $\bR$}}) \citep{reed1980methods}\\
+The first and simplest application of the $\mu_{\psi}$ is to allow us to \emph{\textbf{extend} the functional calculus to $B(\bR)$}, \emph{the \underline{\textbf{bounded Borel measurable functions} on $\bR$}}. 
+\begin{enumerate}
+\item Note that \emph{the double dual of $\cC(X)$} on \emph{compact} metric space $X$ is \emph{the space of bounded Borel measurable function} $B(X) = L^{\infty}(X, \mu)$ \citep{lax2002functional}.
+\begin{align*}
+B(X) \simeq (\cC(X))^{**}
+\end{align*}
+In other word, for fixed bounded self-adjoint operator $A$ and $\psi \in \cH$, the map 
+\begin{align*}
+I_{\psi}: g \mapsto \int_{\sigma(A)} g d\mu_{\psi} 
+\end{align*} is well-defined for $g \in B(\sigma(A))$. Extending to $B(\bR)$ is natural since $\bR$ is \emph{locally compact}. 
+\item Use  \emph{the polarization identity}, and the fact that for self-adjoint operator $A$, $I_{\psi}$ is real-valued 
+\begin{align*}
+\inn{x}{y} &= \frac{1}{2}(\norm{x + y}{}^2 - \norm{x}{}^2 - \norm{y}{}^2),
+\end{align*}
+we can construct \emph{the sesquilinear form} for any $\psi, \varphi \in \cH$
+\begin{align*}
+F(\psi, \varphi) &=\frac{1}{2} ( I_{(\psi+\varphi)}(g) - I_{(\psi)}(g) -  I_{(\varphi)}(g) )
+\end{align*}
+\item By \emph{Riesz representation theorem}, there exists a unique linear operator $\widetilde{A}_g$ on $\cH$ so that 
+\begin{align*}
+F(\psi, \varphi) = \inn{\psi}{\widetilde{A}_{g}\varphi} &= \frac{1}{2} ( I_{(\psi+\varphi)}(g) - I_{(\psi)}(g) -  I_{(\varphi)}(g) )
+\end{align*} Note that  Thus we identifies $g(A) \equiv \widetilde{A}_g$ for any $g \in B(\bR)$ so that
+\begin{align*}
+\inn{\psi}{g(A)\psi}_{\cH} &= \int_{\bR} g d\mu_{\psi}.
+\end{align*}
+\end{enumerate}
+This shows that \emph{\textbf{the functional calculus can be extended to all bounded Borel functions}}.
+\end{remark}
+
+
+\item 
+\begin{theorem} (\textbf{Spectral Theorem, Functional Calculus Form})    \citep{reed1980methods}\\
+Let $A$ be a \textbf{bounded self-adjoint} operator on $\cH$. There is a \textbf{unique map} $\widehat{\phi}: B(\bR) \to \cL(\cH)$ so that 
+\begin{enumerate}
+\item  $\widehat{\phi}$ is an \textbf{algebraic $*$-homomorphism}. 
+\item  $\widehat{\phi}$ is \textbf{norm continuous}: 
+\begin{align*}
+\|\widehat{\phi}(f)\|_{\cL(\cH)} &\le C \norm{f}{\infty}.
+\end{align*}
+\item  Let $f$ be the function $f(x) = x$; then $\widehat{\phi}(f) = A$. 
+\item  (\textbf{Pointwise Convergence $\Rightarrow$ Strong Convergence})\\
+Suppose $f_n(x) \rightarrow f(x)$ for each $x$ and $\norm{f_n}{\infty}$ is bounded. Then  $\widehat{\phi}(f_n) \to \widehat{\phi}(f)$ \textbf{strongly}. Moreover $\widehat{\phi}$ has the properties : 
+\item  If $A\psi = \lambda \psi$, then 
+\begin{align}
+\widehat{\phi}(f)\psi  = f(\lambda) \psi  \label{eqn: cont_functional_calculas_spectral_decomp_ext}
+\end{align} 
+\item (\textbf{Preserve Positivity})  If $f \ge 0$, then $\widehat{\phi}(f) \succeq 0$. 
+\item (\textbf{Preserve Commutative})  If $BA = AB$, then $B\widehat{\phi}(f) = \widehat{\phi}(f)B$. 
+\end{enumerate}
+\end{theorem}
+
+\item \begin{remark}
+The proof of (4) is via dominated convergence theorem.
+\end{remark}
+
+\item \begin{remark}
+\emph{\textbf{The norm equality}} of \emph{the continuous functional calculus} carries over if we define $\norm{f}{\infty}'$ to be \emph{ the $L^{\infty}$-norm with respect to a suitable notion} of ``\emph{\textbf{almost everywhere}}."  Namely, pick \emph{an orthonormal basis} $\set{\varphi_n}$ and say that a property is true a.e. if it is true a.e. \emph{with respect to each} $\mu_{\varphi_n}$. Then $\|\widehat{\phi}(f)\|_{L^2(\cH)} = \norm{f}{\infty}'$.
+\end{remark}
+\end{itemize}
+
+\subsection{Spectral Theorem in Multiplication Operator Form}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Cyclic Vector}})\\
+A vector $\psi \in \cH$ is called a \emph{\underline{\textbf{cyclic vector} for $A$}} if \emph{finite linear combinations} of the elements $\set{A^{n}\psi}_{n=0}^{\infty}$ are \emph{\textbf{dense}} in $\cH$. 
+\end{definition}
+
+\item \begin{remark}
+Not all operators have cyclic vectors.
+\end{remark}
+
+\item Recall the following theorem for normed vector space
+\begin{theorem} (\textbf{Bounded Linear Transformation Theorem}) \citep{reed1980methods}\\
+Suppose $T$ is a \textbf{bounded} linear transformation from a \textbf{normed vector space} $(V_1, \norm{}{1})$ to a \textbf{complete normed vector space} $(V_2, \norm{}{2})$. Then $T$ can be \textbf{uniquely} \textbf{extended} to a bounded linear transformation (with the same bound), $\widetilde{T}$, from the \textbf{completion} of $V_1$ to $(V_2,\norm{}{2})$
+\end{theorem}
+
+
+\item \begin{lemma} (\textbf{Spectral Theorem for Bounded Self-Adjoint Operator with Cyclic Vector}) \citep{reed1980methods}\\
+Let $A$ be a \textbf{bounded self-adjoint operator} with \textbf{cyclic vector} $\psi$.  Then, there is a \textbf{unitary operator} $U:  L^2(\sigma(A), \mu_{\psi}) \rightarrow \cH$ with
+\begin{align*}
+[U^{-1} A U f](\lambda) &= \lambda f(\lambda)
+\end{align*} 
+Equality is in the sense of elements of $L^2(\sigma(A), \mu_{\psi})$. 
+\end{lemma}
+\begin{proof}
+Define $U: \cC(\sigma(A)) \to \cH$ by 
+\begin{align}
+Uf &= \phi(f)\psi, \label{eqn: unitary_cyclic_functional_calculus}
+\end{align} where $f$ is \emph{continuous}. We see that $U$ is essentially the map $\phi: \cC(\sigma(A)) \to \cL(\cH)$ in the \emph{continuous functional calculus theorem.} To show that $U$ is well-defined, we see that 
+\begin{align*}
+\norm{Uf}{\cH}^2 &= \norm{ \phi(f)\psi }{\cH}^2 \\
+&= \inn{ \phi(f)\psi }{ \phi(f)\psi } \\
+&= \inn{\psi}{( \phi(f)^{*}\phi(f))\psi } \\
+&=  \inn{\psi}{(\phi(\bar{f}f)\psi } \\
+&= \int_{ \cC(\sigma(A))} \abs{f(\lambda)}^2 d\mu_{\psi}(\lambda) = \norm{f}{L^2(\mu_{\psi})}^2.
+\end{align*} Therefore if $f = g$ a.e. with respect to $\mu_{\psi}$, then $\phi(f)\psi  = \phi(g)\psi$ (i.e. $Uf = Ug$, so $U$ is \emph{injective}). Thus $U$ is 
+well defined on $\set{ \phi(f)\psi : f \in \cC(\sigma(A))}$ and is \emph{norm preserving}. By the bounded linear transformation theorem, $U$ can be \emph{extended} \emph{uniquely} to an \emph{\textbf{isometric map}} $L^2(\sigma(A), \mu_{\psi}) \to \cH$, since $L^2(\sigma(A), \mu_{\psi})$ is the \emph{completion} of $\cC(\sigma(A))$ in $ \norm{\cdot}{L^2(\mu_{\psi})}^2$ norm.
+
+Finally, if $f \in  \cC(\sigma(A))$,
+\begin{align*}
+[U^{-1} A U f](\lambda) &= [U^{-1}A \phi(f)\psi](\lambda) \\
+&= [U^{-1}\phi(xf)\psi](\lambda) \\
+&= (xf)(\lambda) = \lambda f(\lambda).
+\end{align*} By continuity and denseness of power series of cyclic vectors, this extends from $f \in \cC(\sigma(A))$ to $f \in L^2(\sigma(A), \mu_{\psi})$.  \qed
+\end{proof}
+
+\item \begin{lemma} (\textbf{Direct Sum Decomposition of Hilbert Space via Invariant Subspaces}) \citep{reed1980methods}\\
+Let $A$ be a \textbf{self-adjoint} operator on a \textbf{separable Hilbert space} $\cH$. Then there is a \textbf{direct sum decomposition} 
+\begin{align*}
+\cH &= \bigoplus_{n=1}^{N}\cH_{n}
+\end{align*}
+with $N= 1, 2, \xdotx{,}$ or $\infty$ so that: 
+\begin{enumerate}
+\item $\cH_n$ is \underline{\textbf{invariant}} under operator $A$; that is, for any $\psi \in \cH_n$, $A \psi \in \cH_n$.
+\item For each $n$, there exists a $\psi_n \in \cH_n$ that is \textbf{cyclic} for $A|_{\cH_n}$, i.e. 
+\begin{align*}
+\cH_n &= \overline{\set{ f(A)\psi_{n} : f \in \cC(\sigma(A))}}.
+\end{align*}
+\end{enumerate}
+\end{lemma}
+
+\item \begin{theorem} (\textbf{Spectral theorem, Multiplication Operator Form})  \citep{reed1980methods}\\
+Let $A$ be a \textbf{bounded self-adjoint} operator on $\cH$, a \textbf{separable Hilbert space}. Then,  there exist \textbf{measures} $\set{\mu_{\psi_n}}_{n=1}^{N}$ ($N = 1,2, \ldots, $ or $\infty$) on $\sigma(A)$ and a \textbf{unitary} operator 
+\begin{align*}
+U:  \bigoplus_{n=1}^{N}L^2(\bR, \mu_{\psi_n}) \rightarrow \cH
+\end{align*}
+so that 
+\begin{align}
+[U^{-1} A U \psi]_n(\lambda) &= \lambda  \psi_n(\lambda) \label{eqn: spectral_decomposition_hilbert_space}
+\end{align} 
+where we write an element $\psi \in \bigoplus_{n=1}^{N}L^2(\sigma(A), \mu_{\psi_n})$ as an $N$-tuple 
+$(\psi_1(\lambda) \xdotx{,} \psi_{N}(\lambda))$. This realization of $A$ is called a \underline{\textbf{spectral representation}}. 
+\end{theorem}
+
+\item \begin{remark} (\textbf{\emph{Self-Adjoint Bounded Operator $=$ Mulitplication Operator in Spectral Domain}})\\
+This theorem tells us that \emph{\textbf{every bounded self-adjoint operator is a \underline{multiplication operator} on a \underline{suitable measure space}}}; what changes as \emph{the operator  changes} are \emph{the underlying measures}. 
+\end{remark}
+
+\item \begin{remark} (\textbf{\emph{Multiplication Operator}}) \\
+Define \underline{\emph{\textbf{the multiplication operator}}} $M_f: v \mapsto f v$ on $L^2$ for $f \in L^2$, so \eqref{eqn: spectral_decomposition_hilbert_space} becomes
+\begin{align}
+U^{-1} A U  &= M_{\alpha} \label{eqn: spectral_decomposition_hilbert_space_multiplication_operator}
+\end{align} where $\alpha(x) = x$.
+\end{remark}
+
+\item \begin{corollary} (\textbf{Spectral theorem, Single Spectral Measure})   \citep{reed1980methods}\\
+Let $A$ be a \textbf{bounded self-adjoint} operator on a \textbf{separable Hilbert space} $\cH$. Then there exists a \textbf{finite measure space} $(M, \mu)$, a \textbf{bounded  function} $F$ on $M$, and a \textbf{unitary map}, $U:  L^2(M, \mu) \rightarrow \cH$, so that 
+\begin{align*}
+[U^{-1} A U f]_n(m) &= F(m)  f(m)
+\end{align*} 
+\end{corollary}
+\begin{proof}
+Choose \emph{the cyclic vectors} $\psi_n$ so that $\norm{\psi_n}{} = 2^{-n}$. Let $M = \bigcup_{n=1}^{N}\bR$, 
+i.e. \emph{the \textbf{union} of $Ν$ copies of $\bR$}. Define $\mu$ by requiring that its restriction to the $n$-th copy of $\bR$ be $\mu_{\psi_n}$. Since $\mu(M) = \sum_{n=1}^{N}\mu_{\psi_n}(\bR) < \sum_{n=1}^{N}2^{-n} < \infty$, $\mu$ is \textbf{\emph{finite}}. \qed
+\end{proof}
+
+
+\item \begin{example} (\emph{\textbf{Self-Adjoint Operator on Finite Dimensional Space}})\\
+Let $A$ be an $n \times n$ \emph{\textbf{self-adjoint (Hermitian)} matrix}. The \emph{\textbf{finite dimensional spectral theorem}} says that $A$ has a \emph{complete orthonormal set} of \emph{\textbf{eigenvectors}}, $\psi_1 \xdotx{,} \psi_n$, with
+\begin{align*}
+A \psi_i &= \lambda_i \psi_i.
+\end{align*}
+
+Suppose first that \emph{the eigenvalues are \textbf{distinct}}. The \emph{spectral measure} is just \emph{the sum of \textbf{Dirac measures}}, 
+\begin{align}
+\mu &= \sum_{i=1}^{n}\delta_{\lambda_i}, \label{eqn: spectral_measure_finite_dim}
+\end{align}
+and $L^2(\bR,\mu)$ is just $\bC^{n}$ since $f \in L^2$ is \emph{\textbf{determined}} by 
+\begin{align*}
+ \paren{f(\lambda_1) \xdotx{,} f(\lambda_n)}.
+\end{align*}
+Clearly, the function $\lambda f$ corresponds to the $n$-tuple $\paren{\lambda_1 f(\lambda_1) \xdotx{,} \lambda_n f(\lambda_n)}$, 
+so $A$ is \emph{\textbf{multiplication}} by $\lambda$ on $L^2(\bR,\mu)$. 
+
+If we take 
+\begin{align*}
+\bar{\mu} &= \sum_{i=1}^{n}a_i \delta_{\lambda_i},
+\end{align*} with $a_1 \xdotx{,} a_n >0$, $A$ \emph{can also be represented as \textbf{multiplication} by $\lambda$ on $L^2(\bR, \bar{\mu})$}. 
+Thus, we explicitly see \emph{the \textbf{nonuniqueness} of the \textbf{measure}} in this case. 
+
+We can also see when \emph{\textbf{more than one measure is needed}}: 
+\emph{one can represent a finite-dimensional self-adjoint operator as multiplication on $L^2(\bR,\mu)$ with \textbf{only one measure} \textbf{if and only if} $A$ has \textbf{no repeated eigenvalues}}. \qed
+\end{example}
+
+\item \begin{example}  (\emph{\textbf{Self-Adjoint Compact Operator}})\\
+Let $A$ be \textbf{\emph{compact}} and \textbf{\emph{self-adjoint}}. \emph{The Hilbert-Schmidt theorem} tells us there is a \emph{complete orthonormal set of \textbf{eigenvectors}} $\set{\psi_n}_{n=1}^{\infty}$, with
+\begin{align*}
+A \psi_n &= \lambda_n \psi_n.
+\end{align*}
+If there is \emph{no repeated eigenvalue}, 
+\begin{align}
+\mu &= \sum_{n=1}^{\infty}2^{-n}\delta_{\lambda_n}  \label{eqn: spectral_measure_compact}
+\end{align}
+works as a \emph{\textbf{spectral measure}}. \qed
+\end{example}
+
+\item \begin{example}  (\emph{\textbf{Fourier Transform}})\\
+Note that for $f \in L^2(\bR, dx)$, the Fourier transform of $f$ is written as
+\begin{align*}
+\cF f(\lambda) := F(\lambda)&=  \frac{1}{(2\pi)^{-1}}\int_{\bR}f(x) e^{-i \lambda x} dx \\
+f(x) &= \int_{\bR} F(\lambda) e^{i \lambda x} d\lambda
+\end{align*}
+The Fourier transform $\cF$ can be seen as a unitary map $\cF: L^2(\bR, dx) \rightarrow  L^2(\bR, \mu(d\lambda))$, which is the inverse of $U$ where $ e^{i \lambda x} d\lambda = \mu(d\lambda)$.
+
+Consider $A = \frac{1}{i}\frac{d}{dx}$ on $L^2(\bR, dx)$, which is \emph{self-adjoint} but \emph{\textbf{unbounded}}. The Fourier transform of $A$ gives
+\begin{align*}
+\cF\paren{\frac{1}{i}\frac{d}{dx}f}(\lambda) &= \lambda\,\cF f(\lambda) \\
+\Leftrightarrow (U^{-1}A UF)(\lambda) &= \lambda\, F(\lambda) 
+\end{align*} where the unitary map $U: L^2(\bR, \mu(d\lambda)) \rightarrow  L^2(\bR, dx)$ is \emph{\textbf{the inverse Fourier transform}}
+\begin{align*}
+(UF)(x) = f(x) &=  \int_{\bR} F(\lambda) e^{i \lambda x} d\lambda.
+\end{align*}
+%For the Fourier series of function $f \in L^2([-\pi, \pi], dx)$, the spectral measure
+And the spectral measure acts on $f$ is
+\begin{align*}
+\mu f &= \frac{1}{(2\pi)^{-1}}\int_{\sigma(A)} \brac{\int_{\bR}f(x) e^{-i \lambda x} dx}e^{i \lambda x} d\lambda. \qed
+\end{align*} %And \emph{only one spectral measure is needed}. 
+
+\end{example}
+
+\item \begin{definition} (\emph{\textbf{Essential Range}})\\
+Let $F$ be a real-valued function on a measure space $(X, \mu)$.  We say $\lambda$ is in \underline{\emph{\textbf{the essential range of}}} $F$ \emph{if and only if} for all $\epsilon > 0$,
+\begin{align*}
+\mu\set{x: F(x) \in (\lambda - \epsilon, \lambda + \epsilon)} = \mu \circ F^{-1}(B(\lambda, \epsilon)) >0.
+\end{align*} 
+\end{definition}
+
+\item \begin{proposition} (\textbf{Spectrum of Multiplication Operator via Essential Range}) \citep{reed1980methods}\\
+Let $F$ be a \textbf{bounded real-valued} function on a measure  space $(X, \mu)$. Let $M_F$ be the multiplication operator on $L^2(X, \mu)$ given by 
+\begin{align*}
+(M_F g)(x) &= F(x) g(x)
+\end{align*}
+Then $\sigma(M_F)$ is \textbf{the essential range} of $F$. 
+\end{proposition}
+\end{itemize}
+
+\subsection{Decompose of Spectral Measure}
+\begin{itemize} 
+\item \begin{definition} (\emph{\textbf{Support of a Family of Measures}})\\
+If $\set{\mu_n}_{n=1}^{N}$ is a \emph{family of measures}, \underline{\emph{\textbf{the support of $\set{\mu_n}_{n=1}^{N}$}}} is the 
+\emph{complement} of \emph{the largest open set} $Β$ with $\mu_n(B) = 0$ for all $n$; so 
+\begin{align*}
+\text{\emph{supp}}(\set{\mu_n}_{n=1}^{N}) &= \overline{\bigcup_{n=1}^{N}\text{\emph{supp}}(\mu_n)}
+\end{align*}
+\end{definition}
+
+\item \begin{proposition} (\textbf{Support of All Spectral Measures $=$ the Spectrum}) \citep{reed1980methods}\\
+Let $A$ be a \textbf{self-adjoint operator} and $\set{\mu_n}_{n=1}^{N}$ a family of \textbf{spectral measures}. Then 
+\begin{align*}
+\sigma(A) = \text{\emph{supp}}(\set{\mu_n}_{n=1}^{N}).
+\end{align*}
+\end{proposition}
+
+
+\item \begin{definition} (\emph{\textbf{Pure Point of Measure}})\\
+Given measure space $(X, \mu)$, a collection of \emph{\textbf{closed one-point sets}} with \emph{nonzero measure} is called \emph{\textbf{\underline{the pure point set} of measure $\mu$}}. That is,
+\begin{align*}
+P := \set{x \in X:  \mu(\set{x}) >0 }.
+\end{align*} For $X = \bR$ and $\mu$ is Borel measure, the pure point set is \emph{\textbf{countable}}.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Pure Point Measure and Continuous Measure}})\\
+\emph{\textbf{\underline{The pure point measure}}} is defined as \emph{the restriction of $\mu$ on the pure point set $P$ of that measure}. For Borel measure $\mu$ on $\bR$, and any \emph{\textbf{Borel set}} $S \in \cB(\bR)$, 
+\begin{align*}
+\mu_{pp}(S) &= \mu(S \cap P) = \sum_{x \in S\cap P}\mu(\set{x}).
+\end{align*} A measure $\mu = \mu_{cont}$ is \emph{\textbf{\underline{continuous}}} if it has \emph{\textbf{no pure point}}, i.e. $\mu(\set{x}) = 0$ for any $\set{x} \in \cB(\bR)$.
+
+By definition, the following decomposition of measure $\mu$ holds: 
+\begin{align*}
+\mu = \mu_{pp} + \mu_{cont}, \quad \mu_{pp} \perp \mu_{cont}
+\end{align*}
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Decomposition of Borel Measure with respect to Lebesgue Measure}})\\
+Recall from Lebesgue decomposition theorem, given $\lambda$ as the Lebesgue measure on $\bR$, any measure $\mu$ on $\bR$ can be decomposed into two mutually singular parts:
+\begin{align*}
+ \mu &= \mu_{ac} + \mu_{sing}, \quad \mu_{ac} \perp \mu_{sing}
+\end{align*} where $\mu_{ac} \ll \lambda$ and $\mu_{sing} \perp \lambda$. Combining with decomposition of pure point measure and continuous measure, we have the decomposition of any measure on $\bR$ with respect to  Lebesgue measure on $\bR$,
+\begin{align}
+ \mu &=\mu_{pp} + \mu_{ac} + \mu_{sing}  \label{eqn: measure_decomp_pp_ac_sing}
+\end{align} where $\mu_{pp}$ is \emph{\textbf{the pure point measure}}, $\mu_{ac}$ is the part of \emph{\textbf{continuous} measure} that is \emph{\textbf{absolutely continuous}} \emph{with respect to Lebesgue measure}, and $ \mu_{sing}$ is the part of \emph{\textbf{continuous} measure} that is \emph{\textbf{singular}} \emph{with respect to Lebesgue measure}.
+\end{remark}
+
+\item \begin{remark}(\emph{\textbf{Decomposition of Invariant Subspace}})\\
+We apply above decomposition to spectral measure $\mu$. Since these parts are mutually singular to each other, we have
+\begin{align}
+L^2(\bR, \mu) &= L^2(\bR, \mu_{pp}) \oplus L^2(\bR, \mu_{ac}) \oplus L^2(\bR, \mu_{sing}).
+\end{align} 
+We can verify that any $\psi \in L^2(\bR, \mu)$ has an \emph{\textbf{absolutely continuous spectral measure}} $\mu_{ac}$ \emph{with respect to Lebesgue measure} \emph{\textbf{if and only if}} 
+\begin{align*}
+\psi \in  L^2(\bR, \mu_{ac}) \Leftrightarrow \int_{\bR} \abs{\psi}^2 d\mu_{ac} =  \int_{\bR} \abs{\psi}^2  p \,d\lambda < \infty
+\end{align*} where $p = d\mu_{ac}/d\lambda$ a.e.. Similarly for \emph{pure point} and \emph{singular measures}. 
+\end{remark}
+
+\item \begin{definition} 
+Let $A$ be a \textbf{\emph{bounded}} \emph{\textbf{self-adjoint}} operator on $\cH$. Let  
+\begin{enumerate}
+\item $\cH_{pp}:= \set{\psi \in \cH: \mu_{\psi} \text{\emph{\textbf{ is a pure point measure}}}}$
+\item $\cH_{ac}:= \set{\psi \in \cH: \mu_{\psi} \text{\emph{\textbf{  has no pure point and }}} \mu_{\psi} \ll \lambda \text{\emph{\textbf{  Lebesgue measure}}}}$
+\item $\cH_{sing}:= \set{\psi \in \cH: \mu_{\psi} \text{\emph{\textbf{  has no pure point and }}} \mu_{\psi} \perp \lambda \text{\emph{\textbf{  Lebesgue measure}}}}$
+\end{enumerate}
+\end{definition}
+
+\item \begin{proposition} (\textbf{Direct Sum Decomposition of Hilbert Space via Spectral Measure Decomposition}) \citep{reed1980methods}\\
+Let $A$ be a \textbf{bounded} \textbf{self-adjoint} operator on separable Hilbert space $\cH$. For any $\psi \in \cH$, $\mu_{\psi}$ is the spectral measure on $\sigma(A)$ corresponding to $\psi$. Then the following direct sum decompositon holds
+\begin{align*}
+\cH &= \cH_{pp} \oplus \cH_{ac} \oplus \cH_{sing}
+\end{align*}
+Moreover,
+\begin{enumerate}
+\item Each of these subspaces is \textbf{invariant} under $A$, i.e. for any $\psi$ in these subspaces, $A \psi$ is in the same subspace.
+\item $A|_{\cH_{pp}}$ has a \textbf{complete set of eigenvectors};
+\item $A|_{\cH_{ac}}$ has \textbf{only} \textbf{absolutely continuous spectral measures} 
+\item $A|_{\cH_{sing}}$ has \textbf{only} \textbf{continuous singular spectral measures}. 
+\end{enumerate}
+\end{proposition}
+
+\item \begin{definition}  (\textbf{\emph{Partition of Spectrum}})\\
+We define the following \emph{subsets of spectrum $\sigma(A)$}:
+\begin{enumerate}
+\item \underline{\textbf{\emph{Pure Point Spectrum}}}: $\sigma_{pp}(A) := \set{\lambda \in \sigma(A): \lambda \text{\emph{\textbf{ is an eigenvalue of }}}A}$
+\item \underline{\textbf{\emph{Absolutely Continuous Spectrum}}}: $\sigma_{ac}(A) := \sigma\paren{A|_{\cH_{ac}}}$
+\item \underline{\textbf{\emph{(Continuous) Singular Spectrum}}}: $\sigma_{sing}(A) := \sigma\paren{A|_{\cH_{sing}}}$
+\end{enumerate} We can also defines \underline{\textbf{\emph{the continuous spectrum}}} as $\sigma_{cont}(A) := \sigma\paren{A|_{\cH_{ac} \oplus \cH_{sing}}}$.
+\end{definition}
+
+\item \begin{remark}
+These \emph{spectrums} are \emph{\textbf{spectrum}} of \emph{the linear operator} $A$ \emph{\textbf{restricted} in \textbf{each invariant subspace}}. They are also  the \emph{\textbf{support}} of corresponding \emph{\textbf{spectral measure}}.
+\end{remark}
+
+\item \begin{remark}
+Unlike pure point spectrum, the singular spectrum $\sigma_{sing}(A)$ may contains spectral measure that is singular to Lebesgue measure but still without pure point. 
+\end{remark}
+
+\item \begin{proposition} \citep{reed1980methods}
+\begin{align*}
+\sigma(A) &= \overline{\sigma_{pp}(A) } \cup \sigma_{ac}(A)  \cup \sigma_{sing}(A) \\
+&= \overline{\sigma_{pp}(A) } \cup \sigma_{cont}(A) 
+\end{align*}
+\end{proposition}
+
+\item \begin{remark}
+The sets \emph{\textbf{need not be disjoint}}, however. The reader should be warned that $\sigma_{sing}(A)$ may have nonzero Lebesgue measure.
+\end{remark}
+
+
+\end{itemize}
+
+\subsection{Spectral Theorem in Spectral Projection Form}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Spectral Projection}})\\
+Let $A$ be a \textbf{\emph{bounded self-adjoint}} operator and $S$ a \emph{\textbf{Borel set}} of $\bR$. 
+\begin{align*}
+P_{S} := \mathds{1}_{S}(A) = \widehat{\phi}(\ind{\lambda\in \sigma(A) \cap S})
+\end{align*} is called a  \underline{\emph{\textbf{spectral projection of $A$}}}. It is result of applying the \emph{\textbf{characteristic function of set $R$}}, $\mathds{1}_{S}(x)$, on operator $A$ via \emph{functional calculus}.
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Spectral Projection is Orthorgonal Projection}})\\
+$P_{S}$ is an \emph{\textbf{orthogonal projection}} since for each $x$
+\begin{align*}
+\mathds{1}_{S}^2(x) = \mathds{1}_{S}(x) = \bar{\mathds{1}}_{S}(x).
+\end{align*} It is equivalent to a \emph{\textbf{\underline{$0$-$1$ test}}  to check if each point of spectrum of $A$ is in $S$}.
+\end{remark}
+
+\item \begin{proposition}  (\textbf{Properties of Spectral Projection}) \citep{reed1980methods}\\
+The family $\set{P_{S}}$ of \textbf{spectral projections} of a \textbf{bounded self-adjoint} operator, $A$, has the following properties: 
+\begin{enumerate}
+\item Each $P_{S}$ is an \textbf{orthogonal projection}. 
+\item $P_{\emptyset} = 0$;  $P_{(-a, a)} = 1$ for \textbf{some} $a$.
+\item (\textbf{Countable Disjoint Union}) If $S = \bigcup_{n=1}^{\infty}S_n$ with $S_n \cap S_{m} = \emptyset$ for all $n \neq m$, then in norm topology
+\begin{align*}
+P_{S} &= \sum_{n=1}^{\infty}P_{S_n}.
+\end{align*} 
+\item $P_{S_1}P_{S_2} = P_{S_1 \cap S_2}$
+\end{enumerate}
+\end{proposition}
+
+\item \begin{definition} (\textbf{\emph{Projection-Valued Measure}})\\
+A family of \textbf{\emph{projections}} obeying (1)-(3) is called a \emph{\textbf{\underline{(bounded) projection-valued measure} (p.v.m.)}}. 
+\end{definition}
+
+\item \begin{remark}
+For a family of projections $\set{P_{S}: S \in \cB(\bR)}$, we have this mapping 
+\begin{align*}
+P: \cB(\bR) \to \cL(\cH).
+\end{align*} $P$ as a set function is finite i.e. $P(\bR)= 1$ and $P(\emptyset) = 0$ and countably additive, therefor $P$ is a \emph{\textbf{vector-valued} Borel measure on spectral domain} $\cB(\bR)$.
+\end{remark}
+
+\item \begin{remark}
+We can obtain a \emph{spectral measure} $\mu_{\psi, S}$ from $P_{S}$ via
+\begin{align*}
+\inn{\psi}{P_S \psi} = \int_{\sigma(A)} \mathds{1}_{S}d\mu_{\psi} = \mu_{\psi}(S \cap \sigma(A)) =\int_{\sigma(A)} d\mu_{\psi, S}
+\end{align*} for any $\psi \in \cH$. We will use the \emph{\textbf{symbol}} $d\inn{P_S \psi}{\psi}$ to mean \emph{\textbf{integration}} with respect to this measure $d\mu_{\psi, S}=  \mathds{1}_{S}d\mu_{\psi}$. 
+
+By \emph{standard Riesz representation theorem} methods, there is a \emph{\textbf{unique}} operator $Β$ with
+\begin{align*}
+\inn{\psi}{B\psi} &= \int  f(\lambda) \;d\inn{\psi}{P_S \psi}
+\end{align*} 
+\end{remark}
+
+\item \begin{proposition} (\textbf{Linear Operator Corresponding to Projection-Value Measure}) \citep{reed1980methods}\\
+If $P_{S}$ is a \textbf{projection-valued measure} and $f$ a \textbf{bounded} Borel function on $\text{supp}(P_{S})$, then there is a \textbf{unique} operator $B$ such that
+\begin{align*}
+\inn{\psi}{B\psi} &= \int f(\lambda) \;d\inn{\psi}{P_S \psi}.
+\end{align*} We denote 
+\begin{align*}
+B &:= \int  f(\lambda) dP_{S}(\lambda). \\
+\Rightarrow \inn{\psi}{\paren{\int  f(\lambda) dP_{S}(\lambda)}\psi} &=  \int f(\lambda) \;d\inn{\psi}{P_S \psi}
+\end{align*}
+\end{proposition}
+
+\item \begin{theorem}(\textbf{Spectral Theorem, Projection-Valued Measure Form}) \citep{reed1980methods}\\
+There is a \textbf{one-one correspondence} between \textbf{(bounded) self-adjoint operators} $A$ and \textbf{(bounded) projection valued measures $\set{P_{S}}$}. In particular:  
+\begin{enumerate}
+\item Given $A$, each projection-valued measure $P_{S}$ can be obtained as
+\begin{align*}
+P_{S} := \mathds{1}_{S}(A) = \widehat{\phi}( \mathds{1}_{S})
+\end{align*} 
+
+\item Given $\set{P_{S}: S \subset \bR, \text{ Borel set}}$, the operator $A$ can be obtained as
+\begin{align}
+A &= \int_{\bR} \lambda\, dP_{\lambda} \label{eqn: spectral_theorem_spectral_projection_integration}
+\end{align} and
+\begin{align}
+f(A) &=  \int_{\bR} f(\lambda)\, dP_{\lambda}.  \label{eqn: spectral_theorem_spectral_projection_integration_function_form}
+\end{align}
+\end{enumerate}
+\end{theorem}
+
+
+\item \begin{remark} (\textbf{\emph{Understand Integration w.r.t. Projection-Valued Measure}})\\
+As always, we can develop the integration with respect to projection-valued measure from simple function $f \in  \cL^2(\sigma(A), \mu_{\psi})$:
+\begin{align*}
+f(\lambda) &= \sum_{n=1}^{N} c_n\mathds{1}_{S_n}(\lambda)
+\end{align*} where $S_n := f^{-1}(\set{c_n})$, $\sigma(A) = \bigcup_{n=1}^{N}S_n$ and $S_n \cap S_m = \emptyset$. Using $\widehat{\phi}: \cL^2(\sigma(A), \mu_{\psi}) \to \cL(\cH)$, we can apply \emph{functional calculus} on $A$ to have
+\begin{align*}
+f(A) &= \sum_{n=1}^{N} c_n \mathds{1}_{S_n}(A) := \sum_{n=1}^{N} c_n P_{S_n}= \widehat{\phi}\paren{ \sum_{n=1}^{N}c_n \mathds{1}_{S_n}}.
+\end{align*}
+Recall that when we define integration of simple function we have
+\begin{align*}
+\text{simp }\int f(\lambda) d\lambda &=  \sum_{n=1}^{N}c_n \mu_{\psi}(S_n) = \sum_{n=1}^{N} c_n \inn{\psi}{P_{S_n}\psi}.
+\end{align*} Equivalently, we can have integration of simple function with respect to the projection-valued measure $\set{P_{S_n}}$
+\begin{align*}
+\text{simp }\int f(\lambda) dP_{\lambda} &=  \sum_{n=1}^{N}c_n P(S_n) = \sum_{n=1}^{N}c_n P_{S_n} = f(A).
+\end{align*}
+Then for unsigned function $f \ge 0$,
+\begin{align*}
+\underline{\int} f(\lambda) dP_{\lambda} &= \sup_{g \text{ simple, } 0 \le g\le f}\text{simp }\int g(\lambda) dP_{\lambda}
+\end{align*} and for any absolutely integrable function $f = f_{+} - f_{-}$, 
+\begin{align*}
+\int f(\lambda) dP_{\lambda}  &= \underline{\int} f_{+}(\lambda) dP_{\lambda}  - \underline{\int} f_{-}(\lambda) dP_{\lambda}.
+\end{align*}Finally we see that $P_{B(\lambda, \epsilon)} = 0$ if $\lambda \not\in \sigma(A)$ so this integral is well-defined all over $\bR$.
+\end{remark}
+
+
+\item \begin{remark} (\emph{\textbf{Bounded Real-Valued Measurable Function $\Leftrightarrow$ Bounded Self-Adjoint Operator}}) \citep{halmos2017introduction}\\
+\emph{The \underline{\textbf{essence}} of spectral theorem} (in \emph{functional calculus form} and in \emph{spectral projection form}):
+
+The \underline{\emph{\textbf{analogs}}} of \underline{\emph{\textbf{bounded}, \textbf{real-valued}, \textbf{measurable} function}} in Hilbert space thoery are \underline{\emph{\textbf{bounded}, \textbf{self-adjoint} \textbf{linear operators}}}. Since a function is the \emph{characteristic function of a set} \emph{if and only if} it is \emph{\textbf{idempotent}}, it is clear on the algebraic gounds that the analogs of \underline{\emph{\textbf{characteristic functions}}} are \underline{\emph{\textbf{projections}}}. The \emph{\textbf{approximability}} of functions by \emph{\textbf{simple functions}} corresponds in the analogy to the \emph{approximability} of self-adjoint operators by \emph{\textbf{real, finite linear combinations of projections}}. 
+\end{remark}
+
+\item \begin{remark}(\emph{\textbf{Comparison of Spectral Projection}})\\
+Consider the spectral theorem in projection form
+\begin{align*}
+A &= \int_{\bR} \lambda dP_{\lambda}  &&\text{\emph{\textbf{general} self-adjoint }}\\
+A &= \sum_{i=1}^{n}\lambda_i \varphi_i \varphi_i^{T} =  \sum_{i=1}^{n}\lambda_i P_{\cH_i} &&\text{\emph{\textbf{finite dimensional}}} \\
+A &=  \sum_{i=1}^{\infty}\lambda_i P_{\cH_i} &&\text{\emph{\textbf{compact} self-adjoint}} 
+\end{align*} where $\cH_i = \text{Ker}\paren{\lambda_i I - A} = \text{span}\set{A^n \varphi_i: n=0,1,\ldots}$ is \emph{\textbf{the invariant subspace}}, $\varphi_i$ is \emph{\textbf{cyclic vector} as the eigenvectors / eigenfunctions} corresponding to $\lambda_i$. For finite dimensional and compact operator case, $\cH_i$ is \emph{finite dimensional}.
+
+The decomposition of spectrum tells us that for general bounded self-adjoint operator
+\begin{align}
+A &= \int_{\bR} \lambda dP_{\lambda} = \sum_{\set{i: \lambda_i \in \sigma_{disc}(A)}}\lambda_i P_{\cH_i} + \int_{\sigma_{ess}(A)}\lambda dP_{\lambda} \label{eqn: spectral_theorem_decomposition}
+\end{align} where $\cH_i=\text{Ker}\paren{\lambda_i I - A}$ is \emph{\textbf{the invariant subspace (eigenspace)}} and $\cH_i$ is \emph{\textbf{finite dimensional}}.
+\end{remark}
+
+\end{itemize}
+
+\subsection{Understanding Spectrum via Spectral Projection}
+\begin{itemize}
+\item \begin{proposition} (\textbf{Criterion for  Spectrum}) \citep{reed1980methods}\\
+$\lambda \in \sigma(A)$ \textbf{if and only if} 
+\begin{align*}
+P_{B(\lambda, \epsilon)}(A) = P_{(\lambda -\epsilon, \lambda + \epsilon)}(A) \neq 0
+\end{align*}  for any $\epsilon > 0$. 
+\end{proposition}
+
+\item \begin{definition} (\emph{\textbf{Essential Spectrum and Discrete Spectrum}}) 
+\begin{enumerate}
+\item We say $\lambda \in \sigma_{ess}(A)$, \underline{\emph{\textbf{the essential spectrum of $A$}}}, \emph{if and only if} 
+\begin{align*}
+P_{(\lambda -\epsilon, \lambda + \epsilon)}(A) \text{\emph{\textbf{ is infinite dimensional }}}
+\end{align*}
+\emph{\textbf{for all}} $\epsilon > 0$. $P$ is \emph{infinite dimensional} means $\overline{\text{Ran}(P)}$ is \emph{infinite dimensional}. 
+\item If $\lambda \in \sigma(A)$, but 
+\begin{align*}
+P_{(\lambda -\epsilon, \lambda + \epsilon)}(A) \text{\emph{\textbf{ is finite dimensional }}}
+\end{align*}
+\emph{\textbf{for some}} $\epsilon > 0$, we say $\lambda \in \sigma_{disc}(A)$, \underline{\emph{\textbf{the discrete spectrum of $Α$}}}.
+\end{enumerate}
+
+\end{definition}
+
+\item \begin{proposition} \citep{reed1980methods}\\
+$\sigma_{ess}(A)$ is always \textbf{closed}. 
+\end{proposition}
+
+\item \begin{proposition}  \citep{reed1980methods}\\
+$\lambda \in \sigma_{disc}(A)$ \textbf{if and only if} \underline{\textbf{both}} the following hold: 
+\begin{enumerate}
+\item $\lambda$ is an \textbf{isolated} point of $\sigma(A)$, that is, for some $\epsilon$, $(\lambda -\epsilon, \lambda + \epsilon) \cap \sigma(A) = \set{\lambda}$. 
+\item $\lambda$ is an \textbf{eigenvalue} of \textbf{finite multiplicity}, i.e., 
+\begin{align*}
+\text{dim}\set{\varphi: A\varphi = \lambda \varphi} =\text{dim }\text{Ker}\set{A - \lambda I} < \infty.
+\end{align*} 
+\end{enumerate}
+\end{proposition}
+
+\item \begin{proposition}
+$\lambda \in \sigma_{ess}(A)$ \textbf{if and only if} \underline{\textbf{at least one}} of the following holds: 
+\begin{enumerate}
+\item $\lambda \in \sigma_{cont}(A) = \sigma_{ac}(A)  \cup \sigma_{sing}(A)$. 
+\item $\lambda$ is a \textbf{limit point} of $\sigma_{pp}(A)$.
+\item $\lambda$ is an \textbf{eigenvalue} of \textbf{infinite multiplicity}. 
+\end{enumerate}
+\end{proposition}
+
+\item \begin{remark} (\emph{\textbf{Multiple Ways to Decompose the Spectrum}})\\
+The recall the \emph{\textbf{partition}} of spectrum by \emph{\textbf{point spectrum}, \textbf{continuous spectrum} and \textbf{residual spectrum}}. We see that 
+\begin{enumerate}
+\item \begin{align*}
+\sigma(A)&= \sigma_{p}(A) \cup \sigma_{c}(A) \cup \sigma_{r}(A).
+\end{align*} This is related to the \emph{\textbf{resolvent}}  $R_{\lambda}(A) = (\lambda I - A)^{-1}$: its \emph{\textbf{existence}}, its \emph{\textbf{range}} (\emph{\textbf{dense}} or not) and its \emph{\textbf{boundedness}}. These subsets are \emph{disjoint}. Importantly, this decomposition is \emph{\textbf{general}} and it applies to \emph{\textbf{all  linear operator}}.
+
+\item  \begin{align*}
+\sigma(A) &= \overline{\sigma_{pp}(A) } \cup \sigma_{ac}(A)  \cup \sigma_{sing}(A).
+\end{align*} This is related to the \emph{\textbf{decompose}} of  \emph{\textbf{spectral measure}} $\mu_{\psi}$ \emph{with respect to Lebesgue measure} and the \emph{\textbf{pure point set}}. These sets \emph{may not be disjoint}. Both this and the one below are related to \emph{\textbf{spectral theorem}} of \emph{\textbf{self-adjoint operator}}.
+
+\item \begin{align*}
+\sigma(A)&= \sigma_{disc}(A) \cup \sigma_{ess}(A).
+\end{align*} This is related to the \emph{\textbf{dimensionality of image set}} of  \emph{\textbf{spectral projection}} $P_{B(\lambda, \epsilon)}$ on any open intervals around $\lambda$. It is related to the multiplicity of the kernel $\text{Ker}\set{A - \lambda I}$. These sets \emph{are disjoint}. 
+\end{enumerate}
+\end{remark}
+
+
+\item \begin{theorem} (\textbf{Weyl's Criterion}) \citep{reed1980methods}\\
+Let $A$ be a \textbf{bounded self-adjoint} operator. Then $\lambda \in \sigma(A)$ \textbf{if and only if} there exists $\set{\psi_n}_{n=1}^{\infty}$ so that $\norm{\psi_n}{} = 1$ 
+and
+\begin{align*}
+\lim\limits_{n\to \infty}\norm{(A - \lambda)\psi_n}{} = 0.
+\end{align*}
+
+$\lambda \in \sigma_{ess}(A)$ \textbf{if and only if} the above $\set{\psi_n}_{n=1}^{\infty}$ can be chosen to be \textbf{orthogonal}. 
+\end{theorem}
+
+\item \begin{remark}
+\emph{The essential spectrum} \emph{\textbf{cannot be removed}} by \emph{\textbf{essentially finite dimensional perturbations}}. 
+
+A general implies that $\sigma_{ess}(A) = \sigma_{ess}(B)$ if $A - B$ is \textbf{\emph{compact}}. 
+\end{remark}
+
+\item \begin{remark}
+Finally, we discuss one useful formula relating the resolvent and spectral projections. It is a matter of computation to see that the box on $[a,b]$
+\begin{align*}
+f_{\epsilon}(x) &= \left\{ \begin{array}{cc}
+0 & x \not\in [a, b]\\
+\frac{1}{2} & x=a \text{ or }x=b\\
+1 & x \in (0,1)
+\end{array}
+\right.
+\end{align*} We can find 
+\begin{align*}
+f_{\epsilon}(x) &= \lim\limits_{\epsilon \rightarrow 0^{+}}\frac{1}{2\pi i} \int_{a}^{b}\paren{\frac{1}{x- \lambda - i \epsilon} - \frac{1}{x - \lambda + i\epsilon}} d\lambda
+\end{align*} Moreover,  $\abs{f_{\epsilon}(x)}$ is \emph{\textbf{bounded uniformly}} in $\epsilon$. Applying the functional calculus on $A$, we have
+\end{remark}
+
+\begin{theorem} (\textbf{Stone's formula}) \citep{reed1980methods}\\
+ Let $A$ be a \textbf{bounded self-adjoint} operator. Then 
+ \begin{align}
+ \frac{1}{2}\paren{P_{[a, b]} + P_{(a,b)}} &= \lim\limits_{\epsilon \rightarrow 0^{+}}\frac{1}{2\pi i} \int_{a}^{b}\brac{\paren{A- \lambda - i \epsilon}^{-1} - \paren{A - \lambda + i\epsilon}^{-1}} d\lambda \label{eqn: stone_formula} \\
+ &=  \lim\limits_{\epsilon \rightarrow 0^{+}}\frac{1}{2\pi i} \int_{a}^{b}\brac{R_{\lambda + i \epsilon}(A) - R_{\lambda - i \epsilon}(A)} d\lambda \nonumber
+ \end{align} for $R_{\lambda}(A) = (A - \lambda)^{-1}$, the \textbf{resolvent} of $A$.
+\end{theorem}
+\end{itemize}
+
+
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{reference.bib}
+\end{document}
