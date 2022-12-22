@@ -63,4 +63,3 @@
     - The Policy Gradient Theorem
     - REINFORCE: Monte Carlo Policy Gradient
     - Actor-Critic Methods
-  - 
