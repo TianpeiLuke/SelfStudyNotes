@@ -109,7 +109,7 @@
     - Hilbert-Schmidt Operator
     - Trace of Linear Operator
 
-- Spectral Theorem for Self-Adjoint Operator in Hilbert Space
+- Spectral Theorem for Bounded Self-Adjoint Operator in Hilbert Space
   - Spectral Theorem in Finite Dimensional Space 
   - Continuous Functional Calculus
   - Spectral Theorem for Bounded Self-Adjoint Operator
