@@ -9,7 +9,7 @@ This repository is the latex-based notes for self-learning, mainly for math, sta
 
 - [Concentration Inequalities](./self-study/concentration_measures/README.md)
 
-- [Deep Learning](./self-study/deep_learning.README.md)
+- [Deep Learning](./self-study/deep_learning/README.md)
 
 - [Differential Geometry](./self-study/differential_geometry/README.md)
 
