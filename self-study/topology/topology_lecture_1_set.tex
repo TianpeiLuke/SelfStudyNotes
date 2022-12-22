@@ -1,0 +1,522 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs,  mathtools, dsfont}
+\usepackage{tabularx}
+\usepackage{tikz-cd}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Lecture 1: Set Theory}
+\author{ Tianpei Xie}
+\date{Nov. 7th., 2022}
+\maketitle
+\tableofcontents
+\newpage
+\section{Fundamental Concepts}
+\subsection{Set Operations and Logics}
+\begin{itemize}
+\item \begin{definition}
+Given a set $X$, the collection of all subsets of $X$, denoted as $2^X$, is defined as
+\begin{align*}
+2^X &:= \set{E: E \subseteq X}
+\end{align*}
+\end{definition}
+
+\item \begin{remark}
+The followings are basic operation on $2^X$: For $A, B \in 2^X$,
+\begin{enumerate}
+\item \emph{\textbf{Inclusion}}:   $A \subseteq B$ if and only if $\forall x \in A$, $x \in B$.
+\item \emph{\textbf{Union}}:  $A \cup B = \set{x: x \in A \lor x \in B}$.
+\item \emph{\textbf{Intersection}}:  $A \cap B = \set{x: x \in A \land x \in B}$.
+\item \emph{\textbf{Difference}}:  $A \setminus B = \set{x: x \in A \land x \not\in B}$.
+\item \emph{\textbf{Complement}}: $A^{c} = X \setminus A = \set{x: x \in X \land x \not\in A}$.
+\item \emph{\textbf{Symmetric Difference}}:  $A \Delta B = (A \setminus B) \cup (B \setminus A) = \set{x \in X: x \not\in A \lor x \not\in B}$.
+\end{enumerate}
+We have \emph{\textbf{deMorgan's laws}}:
+\begin{align*}
+\paren{\bigcup_{a \in A}U_a}^c = \bigcap_{a \in A}U_a^c, \quad \paren{\bigcap_{a \in A}U_a}^c = \bigcup_{a \in A}U_a^c
+\end{align*}
+\end{remark}
+
+\item \begin{remark}
+Note that the following equality is useful:
+\begin{align*}
+A \Delta B = (A \cup B) \setminus (A \cap B)
+\end{align*}
+\end{remark}
+
+\item The forms of logic statement using ``if $\ldots$ then":
+\begin{enumerate}
+\item Orignal statement: ``\emph{If $P$ then $Q$}", or "\emph{$Q$ holds \textbf{if} $P$ holds}";
+\begin{align*}
+P \Rightarrow Q
+\end{align*}
+\item \underline{\emph{\textbf{Converse statement}}}: ``\emph{If $Q$ then $P$}", or "\emph{$Q$ holds \textbf{only if} $P$ holds}";
+\begin{align*}
+Q \Rightarrow P
+\end{align*}
+\item \underline{\emph{\textbf{Contrapositive statement}}}: ``\emph{If not $Q$ then not $P$}", or "\emph{$P$ not holds \textbf{if} $Q$ not holds}";
+\begin{align*}
+\neg Q \Rightarrow \neg P
+\end{align*} The contrapositive and the original statements are  \emph{\textbf{logically equivalent}}.
+\end{enumerate}
+If it should happen that both the statement $P \Rightarrow Q$ and its converse $Q \Rightarrow P$ are \emph{true}, we express this fact by the notation 
+\begin{align*}
+P \Leftrightarrow Q
+\end{align*} ``\emph{$P$ holds \textbf{if and only if} $Q$ holds}""
+\end{itemize}
+
+\section{Functions}
+\begin{itemize}
+\item \begin{definition}
+A \underline{\emph{\textbf{rule of assignment}}} is a subset $r$ of the cartesian product $C \times D$ of two sets, having the property that each element of $C$ appears as the first coordinate  \emph{\textbf{at most one ordered pair belonging to $r$}}. Thus, a subset $r$ of $C \times D$ is \emph{a rule of assignment} if
+\begin{align*}
+[(c, d) \in r\text{ and }(c, d') \in r] \Rightarrow [d = d'].
+\end{align*}
+
+Given a rule of assignment $r$, \underline{\emph{\textbf{the domain}}} of $r$ is defined to be the \emph{subset} of $C$ consisting of \emph{all first coordinates of elements} of $r$, and \emph{\textbf{the image}} set of $r$ is defined as the \emph{subset} of $D$ consisting of \emph{all second coordinates of elements} of $r$.
+
+A \emph{\textbf{function}} $f$ is \emph{a rule of assignment $r$}, together with a set $B$ that \emph{contains the image set} of $r$.
+\end{definition}
+
+\item \begin{definition} 
+$f: X\rightarrow Y$ is a \underline{\emph{\textbf{function}}} if for each $x \in X$, there exists a unique $y = f(x) \in Y$. $X$ is called the \emph{\textbf{domain}} of $f$ and $Y$ is called the  \emph{\textbf{codomain or image}} of $f$. $f(X) = \set{y \in Y: y = f(x)}$ is called the \emph{\textbf{range}} of $f$
+
+The \emph{\textbf{pre-image}} of $f$ is defined as
+\begin{align*}
+f^{-1}(E) &= \set{x \in X: f(x) \in E}.
+\end{align*}
+\end{definition}
+
+\item \begin{definition}
+If $f: A \rightarrow B$ and if $A_0$ is a subset of $A$, we define the \underline{\emph{\textbf{restriction}}} of $f$ to $A_0$ to be the function mapping $A_0$ into $B$ whose rule is
+\begin{align*}
+\set{(a, f(a)): \; a\in A_0}.
+\end{align*}
+It is denoted by $f|_{A_0}$, which is read "``\emph{$f$ restricted to $A_0$}."
+\end{definition}
+
+\item \begin{remark}
+The pre-image operation \emph{\textbf{commutes}} with \emph{\textbf{all basic set operations}}:
+\begin{align*}
+A \subseteq B & \Rightarrow f^{-1}\paren{A} \subseteq f^{-1}(B) \\
+f^{-1}\paren{\bigcup_{\alpha \in A}E_{\alpha}} &= \bigcup_{\alpha \in A}f^{-1}\paren{E_{\alpha}}\\
+f^{-1}\paren{\bigcap_{\alpha \in A}E_{\alpha}} &= \bigcap_{\alpha \in A}f^{-1}\paren{E_{\alpha}}\\
+f^{-1}\paren{A \setminus B} &= f^{-1}(A) \setminus f^{-1}(B) \\
+f^{-1}\paren{E^c} &= \paren{f^{-1}\paren{E}}^c 
+\end{align*}
+\end{remark}
+
+
+\item \begin{remark}
+The image operation \emph{\textbf{commutes}} with only  \emph{\textbf{inclusion} and \textbf{union} operations}:
+\begin{align*}
+A \subseteq B & \Rightarrow f\paren{A} \subseteq f(B) \\
+f\paren{\bigcup_{\alpha \in A}E_{\alpha}} &= \bigcup_{\alpha \in A}f\paren{E_{\alpha}} 
+\end{align*} For the other operations:
+\begin{align*}
+f\paren{\bigcap_{\alpha \in A}E_{\alpha}} &\subseteq \bigcap_{\alpha \in A}f\paren{E_{\alpha}} \\
+f\paren{A \setminus B} &\supseteq f(A) \setminus f(B)
+\end{align*}
+\end{remark}
+
+\item \begin{definition}
+A map $f: X\rightarrow Y$ is \emph{\textbf{\underline{surjective}, or, onto}}, if for every $y \in Y$, there exists a $x \in X$ such that $y = f(x)$. In set theory notation:
+\begin{align*}
+f: X\rightarrow Y \text{ is surjective }&\Leftrightarrow \; f^{-1}(Y) \subseteq X.
+\end{align*}
+A map $f: X\rightarrow Y$ is \emph{\textbf{\underline{injective}, or one-to-one}}, if for every $x_1 \neq x_2 \in X$, their map $f(x_1) \neq f(x_2)$, or equivalently, $f(x_1) = f(x_2)$ only if $x_1 = x_2$.
+
+If a map $f: X\rightarrow Y$ is both \emph{surjective} and \emph{injective}, we say $f$ is a \underline{\emph{\textbf{bijective}}}, or there exists an \emph{\textbf{one-to-one correspondence}} between $X$ and $Y$. Thus $Y = f(X)$.
+\end{definition}
+
+\item \begin{remark}
+\begin{align*}
+f^{-1}(f(B)) &\supseteq  B,\quad \forall B \subseteq X \\
+f(f^{-1}(E)) &\subseteq E,\quad \forall E \subseteq Y \\
+f: X\rightarrow Y \text{ is surjective }&\Leftrightarrow \; f^{-1}(Y) \subseteq X. \\
+&\Rightarrow  \; f(f^{-1}(E)) = E. \\
+f: X\rightarrow Y \text{ is injective }& \Rightarrow\; f^{-1}(f(B)) = B \\
+& \Rightarrow\; f\paren{\bigcap_{\alpha \in A}E_{\alpha}} = \bigcap_{\alpha \in A}f\paren{E_{\alpha}} \\
+& \Rightarrow\; f\paren{A \setminus B} = f(A) \setminus f(B)
+\end{align*}
+\end{remark}
+
+\item \begin{proposition}
+The following statements for composite functions are true:
+\begin{enumerate}
+\item If $f, g$ are both injective, then $g \circ f$ is injective. 
+\item If $f, g$ are both surjective, then $g \circ f$ is surjective. 
+\item Every \textbf{injective} map $f: X \rightarrow Y$ can be writen as $f = \iota \circ f_{R}$ where $f_R: X \rightarrow f(X)$ is a \textbf{bijective} map and $\iota$ is the \textbf{inclusion map}.
+\item Every \textbf{surjective} map $f: X \rightarrow Y$ can be writen as $f =  f_{p} \circ \pi$ where $\pi: X\rightarrow (X/\sim)$ is \textbf{a quotient map} (projection $x \mapsto [x]$) for the equivalent relation $ x \sim y \Leftrightarrow f(x) = f(y)$ and  $f_p: (X/\sim) \rightarrow Y$ is defined as $f_p([x]) = f(x)$ \textbf{constant} in each coset $[x]$.
+\item If $g \circ f$ is \textbf{injective}, then $f$ is \textbf{injective}.
+\item If $g \circ f$ is \textbf{surjective}, then $g$ is \textbf{surjective}.
+\end{enumerate}
+\end{proposition}
+\end{itemize}
+
+\section{Relations}
+\begin{itemize}
+\item \begin{definition}
+A \underline{\emph{\textbf{relation}}} on a set $A$ is a \emph{subset} $R$ of \emph{the cartesian product} $A \times A$.
+
+If $R$ is a relation on $A$, we use the notation $xRy$ to mean the same thing as $(x, y) \in R$. We read it ``$x$ is in the relation $R$ to $y$."
+\end{definition}
+
+\item \begin{remark}
+\emph{\textbf{A rule of assignment}} $r$ for a function $f: A \rightarrow A$ is also a \emph{subset} of $A \times A$. But it is a subset of a \emph{very \textbf{special} kind}: namely, one such that \emph{\textbf{each element}} of $A$ appears as the \emph{\textbf{first coordinate}} of an element of $r$ \emph{\textbf{exactly once}}. \emph{\textbf{Any subset} of $A \times A$ is a relation on $A$}.
+\end{remark}
+\end{itemize}
+
+\subsection{Equivalence Relation}
+\begin{itemize}
+\item \begin{definition}
+\underline{\emph{\textbf{An equivalence relation}}} on $X$ is a relation $R$ on $X$ such that 
+\begin{enumerate}
+\item (\emph{\textbf{Reflexivity}}): $xRx$ for all $x \in X$;
+\item (\emph{\textbf{Symmetry}}): $xRy$ if and only if $yRx$ for all $x,y \in X$;
+\item (\emph{\textbf{Transitivity}}): $xRy$ and $yRz$ then $xRz$ for all $x,y,z \in X$. 
+\end{enumerate}
+We usually denote the equivalence relation $R$ as $\sim$. 
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Equivalence Class}})\\
+\underline{\emph{\textbf{The equivalence class}}} of an element $x$ is denoted as $[x] := \set{y \in X:  xRy}$. 
+\end{definition}
+
+\item \begin{lemma} \citep{munkres2000topology}\\
+Two equivalence classes $E$ and $E'$ are either \textbf{disjoint} or \textbf{equal}.
+\end{lemma}
+
+
+\item \begin{definition}
+A \underline{\textbf{\emph{partition}}} of a set $A$ is a collection of \textbf{\emph{disjoint}} nonempty subsets of $A$ whose \textbf{\emph{union}} is all of $A$.
+\end{definition}
+
+\item \begin{remark}
+The set of equivalence classes provides \emph{\textbf{a partition of the set $X$}} in that every $z \in X$ can must belong to \emph{only one equivalence class} $[x]$. That is $[x] \cap [y] = \emptyset$ if $x \not\sim y$ and $X = \bigcup_{x \in X}[x]$.
+\end{remark}
+
+\item \begin{definition}
+\emph{The set of all equivalence classes} of $X$ by $\sim$, denoted $X/{\mathord {\sim }}:= \{[x]: x \in X \}$, is \underline{\emph{\textbf{the quotient set}}} of $X$ by $\sim$.  $X = \bigcup_{C \in X/\sim}C.$
+\end{definition}
+
+\item \begin{remark}
+Since $x \sim y \Rightarrow y \in [x]$, we see that if $[x] \neq [y]$, then $x \not\sim y$, i.e. representative of different equivalence classes are not in the given relationship.
+\end{remark}
+\end{itemize}
+
+\subsection{Order Relation}
+\begin{itemize}
+\item  \begin{definition}
+A relation $C$ on a set $A$ is called \underline{\emph{\textbf{an order relation}}} (or \emph{\textbf{a simple order}}, or \emph{\textbf{a linear order}})
+if it has the following properties:
+\begin{enumerate}
+\item (\emph{\textbf{Comparability}}) For every $x$ and $y$ in $A$ for which $x \neq y$, either $xCy$ or $yCx$.
+\item (\emph{\textbf{Nonreflexivity}}) For no $x$ in $A$ does the relation $xCx$ hold.
+\item (\emph{\textbf{Transitivity}}) If $xCy$ and $yCz$, then $xCz$.
+\end{enumerate}
+We denote order relation as $>$ or $<$. We shall use the notation $x \le y$ to stand for the statement ``either $x < y$ or $x = y$";
+and we shall use the notation $y > x$ to stand for the statement ``$x < y$." We write $x < y < z$ to mean ``$x < y$ and $y < z$"
+\end{definition}
+
+\item \begin{remark}
+If $x \neq y$, then $x < y$ and $y < x$ cannot hold simultaneously.
+\end{remark}
+
+\item \begin{definition} (\textbf{\emph{Order Type}})\\
+Suppose that $A$ and $B$ are two sets with order relations $<_A$, and $<_B$ respectively. We say that $A$ and $B$ have \emph{the same \textbf{order type}} if there is a \emph{\textbf{bijective}} correspondence between them that \emph{\textbf{preserves order}}; that is, if there exists a bijective
+function $f : A \rightarrow B$ such that
+\begin{align*}
+x <_{A} y \Rightarrow f(x) <_B f(y)
+\end{align*}
+\end{definition}
+
+\item \begin{definition}(\emph{\textbf{Dictionary Order Relation}})\\
+Suppose that $A$ and $B$ are two sets with order relations  $\prec_A$ and $\prec_B$ respectively. Define an order relation $\prec$ on $A \times B$ by defining
+\begin{align*}
+a_1 \times b_1 < a_2 \times b_2
+\end{align*}
+if $a_1 <_A a_2$, \emph{\textbf{or}} if $a_1 = a_2$ and $b_1 <_B b_2$. It is called \underline{\emph{\textbf{the dictionary order relation}}} on $A \times B$.
+\end{definition}
+
+\item \begin{definition}
+Suppose that $A$ is a set ordered by the relation $<$.  Let $A_0$ be a subset of $A$. We say that the element $b$ is \underline{\emph{the \textbf{largest element} of $A_0$}} if $b \in A_0$ and $x \le b$ for every $x \in A_0$. 
+
+Similarly, we say that $a$ is \underline{\emph{the \textbf{smallest element}} of $A_0$} if $a \in A_0$ and if $a \le x$
+for every $x \in A_0$. 
+\end{definition}
+
+\item \begin{remark}
+It is easy to see that a set has \emph{\textbf{at most one}} largest element and \emph{at most one} smallest element.
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{The Upper Bound and The Supremum of Subset}})\\
+We say that \emph{the subset $A_0$ of $A$ is \underline{\textbf{bounded above}}} if there is \emph{an element $b$ of $A$} such that $x \le b$ for every $x \in A_0$; the element $b \in A$ is called \underline{\emph{\textbf{an upper bound for $A_0$}}}. 
+
+If \emph{the set of all upper bounds} for $A_0$ has \emph{a \textbf{smallest element}}, that element is called \emph{\textbf{\underline{the least} \underline{upper bound}}}, or \underline{\emph{\textbf{the supremum}}, of $A_0$}. It is denoted by $\sup A_0$, it may or may not belong to $A_0$. If it \emph{does}, it is \emph{\textbf{\underline{the largest element}}} of $A_0$.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{The Lower Bound and The Infimum of Subset}})\\
+Similarlly, we say that \emph{the subset $A_0$ of $A$ is \underline{\textbf{bounded below}}} if there is \emph{an element $a$ of $A$} such that $a \le x$ for every $x \in A_0$; the element $a \in A$ is called \underline{\emph{\textbf{a lower bound for $A_0$}}}. 
+
+If \emph{the set of all lower bounds} for $A_0$ has \emph{a \textbf{largest element}}, that element is called \emph{\textbf{\underline{the greatest} \underline{lower bound}}}, or \underline{\emph{\textbf{the infimum}}, of $A_0$}. It is denoted by $\inf A_0$, it may or may not belong to $A_0$. If it \emph{does}, it is \emph{\textbf{\underline{the smallest element}}} of $A_0$.
+\end{definition}
+
+\item \begin{definition} (\textit{\textbf{The Least Upper Bound Property} and \textbf{The Greatest Lower Bound Property}})\\
+An ordered set $A$ is said to have \underline{\emph{\textbf{the least upper bound property}}} if \emph{every} \emph{nonempty} subset $A_0$ of $A$ that is \emph{bounded above} has \emph{a least upper bound}. 
+
+Analogously, the set $A$ is said to have \underline{\emph{\textbf{the greatest lower bound property}}} if \emph{every nonempty} subset $A_0$ of $A$ that is \emph{bounded below} has \emph{a greatest lower bound}.
+\end{definition}
+
+\item \begin{theorem} (\textbf{Zorn's Lemma}). \citep{munkres2000topology} \\
+Let $A$ be a set that is \textbf{strictly partially ordered}. If every \textbf{simply ordered subset} of $A$ has an \textbf{upper bound in $A$}, then $A$ has a \textbf{maximal element}.
+\end{theorem}
+\end{itemize}
+
+\section{Cartesian Products}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Indexed Family of Sets}})\\
+Let $\cA$ be a nonempty collection of sets. \underline{\emph{\textbf{An indexing function}}} for $\cA$ is a \underline{\emph{\textbf{surjective}}} function $f$ from some set $J$, called \emph{\textbf{the index set}}, to $\cA$. The \emph{collection} $\cA$, together with \emph{the indexing function} $f$, is called \underline{\emph{\textbf{an indexed family of sets}}}. Given $\alpha \in J$, we shall denote the set $f(\alpha)$ by the symbol $A_{\alpha}$. And we shall denote the indexed family itself by the symbol
+\begin{align*}
+\set{A_{\alpha}}_{\alpha \in J},
+\end{align*}
+which is read ``\emph{the family of all $A_{\alpha}$, as a ranges over $J$.}" Sometimes we write merely $\{A_{\alpha}\}$, if it is clear what the index set is.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Cartesian Product of Indexed Family of Sets}})\\
+Let $m$ be a positive integer. Given a set $X$, we define an \emph{\textbf{$m$-tuple of elements}} of $X$ to be a function
+\begin{align*}
+x: \set{1 \xdotx{,} m} \rightarrow X.
+\end{align*}
+If $X$ is an $m$-tuple, we often denote the value of $x$ at $i$ by \emph{the symbol $x_i$}; rather than $x(i)$ and call it \underline{\emph{\textbf{the $i$-th coordinate of $x$}}}. And we often denote the function $x$ itself by the symbol
+\begin{align*}
+(x_1 \xdotx{,} x_m).
+\end{align*}
+Now let $\{A_1 \xdotx{,} A_m\}$ be \emph{a family of sets indexed with the set} $\{1 \xdotx{,} m\}$. Let $X = A_1 \xdotx{\cup} A_m$. We define \emph{\textbf{\underline{the cartesian product}} of this indexed family}, denoted by
+\begin{align*}
+\prod_{i=1}^{m}A_i \quad \text{ or } \quad A_1 \xdotx{\times} A_m
+\end{align*}
+to be \emph{the set of all $m$-tuples} $(x_1 \xdotx{,} x_m)$ of elements of $X$ such that $x_i \in A_i$ for each $i$.
+\end{definition}
+
+\item \begin{definition}  (\emph{\textbf{Countable Cartesian Product of Indexed Family of Sets}})\\
+Given a set $X$, we define an \underline{\emph{\textbf{$\omega$-tuple of elements}}} of $X$ to be a function
+\begin{align*}
+x: \bZ_{+} \rightarrow X;
+\end{align*}
+we also call such a function \emph{a \textbf{sequence}}, or \underline{\emph{an \textbf{infinite sequence}}}, of elements of $X$. If
+$x$ is \emph{an \textbf{$\omega$-tuple}}, we often denote the value of $x$ at $i$ by $x_i$ rather than $x(i)$, and call it \emph{\textbf{the $i$-th coordinate}} of $x$. We denote $x$ itself by the symbol
+\begin{align*}
+(x_1, x_2, \ldots ) \quad \text{ or } \quad (x_n)_{n \in \bZ_{+}}
+\end{align*}
+Now let $\{A_1, A_2, \ldots \}$  be a family of sets, \emph{indexed with the positive integers}; let $X$ be the union of the sets in this family. \emph{\textbf{\underline{The cartesian product}} of this indexed family of sets}, denoted by
+\begin{align*}
+\prod_{i \in \bZ_{+}} A_i \quad \text{ or } \quad A_1 \times A_2 \times \ldots , 
+\end{align*}
+is defined to be the set of all $\omega$-tuples $(x_1, x_2, \ldots ) $ of elements of $X$ such that $x_i \in A_i$ for each $i$.
+\end{definition}
+\end{itemize}
+
+\section{Countable and Uncountable Sets}
+\begin{itemize}
+\item \begin{definition} See the following definitions
+\begin{enumerate}
+\item A set is said to be \emph{\textbf{countably infinite}} if it admits a \emph{\textbf{bijection}} with the set of \emph{positive integers} $f: A \rightarrow \bZ_{+}$, and 
+\item A set is said to be \emph{\textbf{countable}} if it is \emph{finite} or \emph{countably infinite}. 
+\item A set that is not countable is said to be \emph{\textbf{uncountable}}.
+\end{enumerate}
+\end{definition}
+
+\item \begin{proposition}
+Let $B$ be a nonempty set. Then the following are equivalent:
+\begin{enumerate}
+\item $B$ is \textbf{countable}.
+\item There is a \textbf{surjective} function $f: \bZ_{+} \rightarrow B$.
+\item There is an \textbf{injective} function $g : B  \rightarrow \bZ_{+}$.
+\end{enumerate}
+\end{proposition}
+
+\item \begin{lemma}
+If $C$ is an infinite subset of $\bZ_{+}$, then $C$ is countably infinite.
+\end{lemma}
+\end{itemize}
+
+\section{The Principle of Recursive Definition}
+\begin{itemize}
+%\item \begin{definition} (\emph{Recusive Definition})\\
+%Given the \emph{\textbf{infinite subset}} $C$ of $\bZ_{+}$, there is a \emph{\textbf{unique function}} $h: \bZ_{+} \rightarrow C$ satisfying the formula:
+%\begin{align}
+%h(1) &=\text{ smallest element of }C, \nonumber\\
+%h(i)  &=\text{ smallest element of }[C - h(\set{1 \xdotx{,} (i-1)})]\text{ for all }i > 1.  \label{eqn: recursion_formula}
+%\end{align}
+%The formula \eqref{eqn: recursion_formula} is called a \underline{\emph{\textbf{recursion formula}}} for $h$; it defines the function $h$ \emph{in terms of itself}. A definition given by such a formula is called \emph{a \underline{\textbf{recursive definition}}}.
+%\end{definition}
+
+\item \begin{principle} (\textbf{Principle of Recursive Definition}).  \citep{munkres2000topology} \\
+Let $A$ be a set. Given a \textbf{formula} that defines $h(1)$ as a \textbf{unique} element of $A$, and for $i > 1$ defines $h(i)$ \textbf{uniquely} as an element of $A$ in terms of the values of $h$ \textbf{for positive integers less than $i$}, this formula determines \textbf{a unique function} $h: \bZ_{+} \rightarrow A$.
+\end{principle}
+
+\item \begin{theorem} (\textbf{Principle of Recursive Definition}).  \citep{munkres2000topology} \\
+Let $A$ be a set; let $a_0$ be an element of $A$. Suppose $\rho$ is a function that assigns, to \textbf{each function} $f$ mapping a \textbf{nonempty section} of \textbf{the positive integers} into $A$, an eiement of $A$. Then there exists a \underline{\textbf{unique function}}
+\begin{align*}
+h: \bZ_{+} \rightarrow A
+\end{align*} such that
+\begin{align}
+h(1) &= a_0, \nonumber\\
+h(i)  &=\rho(h | \set{1 \xdotx{,} (i-1)})\text{ for all }i > 1.  \label{eqn: recursion_formula}
+\end{align}
+The formula \eqref{eqn: recursion_formula} is called a \underline{\textbf{recursion formula}} for $h$. It specifies $h(1)$, and it
+expresses the value of $h$ at $i > 1$ in terms of the values of $h$ for positive integers less than $i$. A definition given by such a formula is called a \underline{\textbf{recursive definition}}.
+\end{theorem}
+
+\item \begin{corollary}
+A subset of a countable set is countable.
+\end{corollary}
+
+\item \begin{corollary}
+The set $\bZ_{+} \times \bZ_{+}$ is countably infinite.
+\end{corollary}
+
+\item \begin{proposition}
+A countable union of countable sets is countable.
+\end{proposition}
+
+\item \begin{proposition}
+A finite product of countable sets is countable.
+\end{proposition}
+
+\item It is very tempting to assert that \emph{countable products of countable sets should be countable}; but this assertion is in fact \emph{\textbf{not true}}:
+\begin{theorem}
+Let $X$ denote the two element set $\{0, 1\}$. Then the set $X^{\omega}$ is  uncountable.
+\end{theorem}
+
+\item \begin{theorem}
+Let $A$ be a set. There is \textbf{no injective map} $f: 2^A  \rightarrow A$, and there is \textbf{no surjective map} $g: A  \rightarrow 2^A$.
+\end{theorem}
+
+\item \begin{proposition}
+Let $A$ be a set. The following statements about $A$ are equivalent:
+\begin{enumerate}
+\item There exists an \textbf{injective} function $f : \bZ_{+} \rightarrow A$.
+\item There exists a \textbf{bijection} of $A$ with a proper subset of itself.
+\item $A$ is infinite.
+\end{enumerate}
+\end{proposition}
+\end{itemize}
+\section{The Axiom of Choice}
+\begin{itemize}
+\item \begin{principle} (\textbf{Axiom of Choice}). \citep{munkres2000topology} \\
+Given a collection $\srA$ of \textbf{disjoint} nonempty sets, there exists a set $C$ consisting of \textbf{exactly one element from each element of $\srA$}; that is, a set $C$ such that $C$ is contained in the \textbf{union of the elements} of $\cA$, and for each $A \in \srA$, the set $C \cap A$ contains \textbf{a single element}.
+\end{principle}
+
+\item \begin{lemma} (\textbf{Existence of a Choice Function}). \citep{munkres2000topology}\\
+Given a collection $\srB$ of nonempty sets (not necessarily disjoint), there exists a function
+\begin{align*}
+c: \srB \rightarrow \bigcup_{B \in \srB}B
+\end{align*}
+such that $c(B)$ is an element of $B$, for each $B \in \srB$.
+\end{lemma} 
+
+\begin{remark}
+The function $c$ is called \emph{\textbf{a choice function}} for the collection $\srB$.
+The difference between this lemma and the axiom of choice is that in this lemma the sets of the collection $\srB$ are not required to be disjoint.
+\end{remark}
+
+\item \begin{remark}
+The axiom of choice is used when someone construct \emph{an infinite set} using \emph{infinite number of arbitrary choices}.
+\end{remark}
+
+\item \begin{corollary}
+If $\set{A_{\alpha}}_{\alpha \in J}$ is a \textbf{disjoint} collection of nonempty sets, there is a set $C \subset \bigcup_{\alpha \in J}A_{\alpha}$ such that $C \cap A_{\alpha}$ contains \textbf{precisely one element} for each $\alpha \in J$.
+\end{corollary}
+\end{itemize}
+
+\section{Well-Ordering Theorem and the Maximum Principle}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Well-Ordered Set}}) \\
+A set $A$ with an order relation $<$ is said to be \emph{\textbf{well-ordered}} if \emph{every nonempty subset} of $A$ has a \emph{\textbf{smallest element}}.
+\end{definition}
+
+\item \begin{proposition} (\textbf{Finite Ordered Set is Well-Ordered}) \citep{munkres2000topology} \\
+Every nonempty \textbf{finite} ordered set has the order type of a section $\{1 \xdotx{,} n\}$ of $\bZ_{+}$, so it is \textbf{well-ordered}.
+\end{proposition}
+
+\item \begin{theorem} (\textbf{Well-Ordering Theorem}). \citep{munkres2000topology} \\
+If $A$ is a set, there \textbf{exists} an order relation on $A$ that is a well-ordering.
+\end{theorem}
+
+\item \begin{remark}
+The proof of \emph{Well-Ordering Theorem} is based on a construction involving \textit{an infinite number of arbitrary choices}, that is, a construction involving \emph{the choice axiom}.
+\end{remark}
+
+\item \begin{corollary}
+There exists an uncountable well-ordered set.
+\end{corollary}
+
+\item \begin{definition}
+Let $X$ be a well-ordered set. Given $\alpha \in X$, let $S_{\alpha}$ denote the set
+\begin{align*}
+S_{\alpha} &= \set{x: x\in X \text{ and } x <\alpha}.
+\end{align*}
+It is called \emph{the \underline{\textbf{section}} of $X$ by $\alpha$}.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Strict Partial Order}})\\
+Given a set $A$, a relation $\prec$ on $A$ is called a \underline{\emph{\textbf{strict partial order}}} on $A$ if it has the following two properties;
+\begin{enumerate}
+\item (\emph{\textbf{Nonreflexivity}}) The relation $a \prec a$ never holds.
+\item (\emph{\textbf{Transitivity}}) If $a \prec b$ and $b \prec c$, then $a \prec c$.
+\end{enumerate}
+Moreover, suppose that we define $a \preceq b$ either $a \prec b$ or $a = b$. Then the relation $\preceq$ is called \underline{\emph{\textbf{a partial order}}} on $A$.
+\end{definition}
+
+\item \begin{remark}
+\emph{The Comparability condition} means \emph{\textbf{every two elements are comparable under simple order}}. Without this condition, we have partial order $x \prec y$. Consider \emph{the simple ordering} as along \emph{\textbf{a chain graph}}, while \emph{the partial ordering} is along \emph{\textbf{the general graphs}}.
+\end{remark}
+
+\item \begin{theorem} (\textbf{The Maximum Principle}).\\
+Let $A$ be a set; let $\prec$ be a \textbf{strict partial order} on $A$. Then there exists a \textbf{maximal simply ordered subset} $B$ of $A$.
+\end{theorem}
+
+\item \begin{definition} (\emph{\textbf{Upper Bound and Maximal Element for Strict Partial Order}})\\
+Let $A$ be a set and let $\prec$ be a \emph{strict partial order} on $A$. If $B$ is a subset of $A$, \underline{\emph{\textbf{an upper bound}}} on $B$ is an element $c$ of $A$ such that for every $b$ in $B$, either $b = c$ or $b \prec c$. 
+
+\underline{\emph{\textbf{A maximal element}}} of $A$ is an element $m$ of $A$ such that for \emph{\underline{\textbf{no element} $a$ of $A$} does the relation $m \prec a$ hold}.
+\end{definition}
+
+\item \begin{remark}
+\emph{\textbf{The upper bound}} of a set $A$ is \emph{not necessarily in} $A$, but \emph{\textbf{the maximal element}} of $A$ is in $A$. 
+\end{remark}
+
+\item \begin{theorem} (\textbf{Zorn's Lemma}). \citep{munkres2000topology} \\
+Let $A$ be a set that is \textbf{strictly partially ordered}. If every \textbf{simply ordered subset} of $A$ has an \textbf{upper bound in $A$}, then $A$ has a \textbf{maximal element}.
+\end{theorem}
+
+\item \begin{remark}
+Note that the inclusion operation $\subset$  defines an order relationship between two sets. One application of Zorn's lemma is on the collection of subsets $\srA = \{A_{n}\}_{n \in J}$ that is partially ordered by $\subset$ operation. For each simply ordered sub-collection $\srA_{I}:=\{A_{n}\}_{n \in I}$, $I \subseteq J$, where $A_i \subset A_{i+1}$ we can see that $A_{\max{I}}$ is the uppper bound of $\srA_{I}$ in $\srA$. Thus there exists \emph{\textbf{a maximal subset}} $A_{max} \in \srA$ so that $A_n \subset A_{max}$ for all $n \in J$.
+\end{remark}
+\end{itemize}
+
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{book_reference.bib}
+\end{document}
