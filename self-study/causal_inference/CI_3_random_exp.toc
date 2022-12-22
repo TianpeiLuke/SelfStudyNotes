@@ -1,0 +1,10 @@
+\contentsline {section}{\numberline {1}Randomized Experiments}{2}
+\contentsline {section}{\numberline {2}Association is causation in Randomized Experiments}{2}
+\contentsline {subsection}{\numberline {2.1}Comparability and covariate balance}{2}
+\contentsline {subsection}{\numberline {2.2}Exchangeability}{3}
+\contentsline {subsection}{\numberline {2.3}No backdoor path}{3}
+\contentsline {section}{\numberline {3}Causal Inference in Randomized Experiments}{4}
+\contentsline {subsection}{\numberline {3.1}Hypothesis testing}{4}
+\contentsline {subsubsection}{\numberline {3.1.1}Testing the null hypothesis of no treatment effect}{4}
+\contentsline {subsubsection}{\numberline {3.1.2}Noparametric tests}{4}
+\contentsline {subsection}{\numberline {3.2}Attributable effects}{4}

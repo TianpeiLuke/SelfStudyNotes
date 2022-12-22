@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: CI_5_causal_estimation.aux
+The style file: plainnat.bst
+Database file #1: book_reference.bib.bib
+You've used 12 entries,
+            2773 wiz_defined-function locations,
+            664 strings with 6904 characters,
+and the built_in function-call counts, 4943 in all, are:
+= -- 426
+> -- 252
+< -- 10
++ -- 87
+- -- 75
+* -- 367
+:= -- 769
+add.period$ -- 37
+call.type$ -- 12
+change.case$ -- 55
+chr.to.int$ -- 12
+cite$ -- 24
+duplicate$ -- 256
+empty$ -- 438
+format.name$ -- 95
+if$ -- 1037
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 17
+newline$ -- 68
+num.names$ -- 48
+pop$ -- 131
+preamble$ -- 1
+purify$ -- 48
+quote$ -- 0
+skip$ -- 189
+stack$ -- 0
+substring$ -- 148
+swap$ -- 25
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 107
+warning$ -- 0
+while$ -- 46
+width$ -- 0
+write$ -- 159

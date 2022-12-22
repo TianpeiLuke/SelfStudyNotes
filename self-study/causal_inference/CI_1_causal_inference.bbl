@@ -1,0 +1,47 @@
+\begin{thebibliography}{7}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Glymour et~al.(2016)Glymour, Pearl, and Jewell]{glymour2016causal}
+Madelyn Glymour, Judea Pearl, and Nicholas~P Jewell.
+\newblock \emph{Causal inference in statistics: A primer}.
+\newblock John Wiley \& Sons, 2016.
+
+\bibitem[Imbens and Rubin(2015)]{imbens2015causal}
+Guido~W Imbens and Donald~B Rubin.
+\newblock \emph{Causal inference in statistics, social, and biomedical
+  sciences}.
+\newblock Cambridge University Press, 2015.
+
+\bibitem[Neal(2020)]{neal2020introduction}
+Brady Neal.
+\newblock Introduction to causal inference from a machine learning perspective.
+\newblock \emph{Course Lecture Notes (draft)}, 2020.
+
+\bibitem[Pearl(2000)]{pearl2000causal}
+Judea Pearl.
+\newblock \emph{{C}ausality: {Models}, {R}easoning, and {I}nference}.
+\newblock Cambridge University Press, 2000.
+
+\bibitem[Pearl(2009)]{pearl2009causal}
+Judea Pearl.
+\newblock Causal inference in statistics: An overview.
+\newblock \emph{Statistics surveys}, 3:\penalty0 96--146, 2009.
+
+\bibitem[Peters et~al.(2017)Peters, Janzing, and
+  Sch{\"o}lkopf]{peters2017elements}
+Jonas Peters, Dominik Janzing, and Bernhard Sch{\"o}lkopf.
+\newblock \emph{Elements of causal inference: foundations and learning
+  algorithms}.
+\newblock The MIT Press, 2017.
+
+\bibitem[Rosenbaum(2017)]{rosenbaum2017observation}
+Paul Rosenbaum.
+\newblock \emph{Observation and Experiment: An Introduction to Causal
+  Inference}.
+\newblock Harvard University Press, 2017.
+
+\end{thebibliography}

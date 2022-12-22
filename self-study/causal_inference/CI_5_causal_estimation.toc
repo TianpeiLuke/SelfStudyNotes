@@ -1,0 +1,7 @@
+\contentsline {section}{\numberline {1}Recall what we learned}{2}
+\contentsline {section}{\numberline {2}Conditional Outcome Modeling (COM)}{5}
+\contentsline {subsection}{\numberline {2.1}Basic concepts}{5}
+\contentsline {subsection}{\numberline {2.2}Grouped Conditional Outcome Modeling (GCOM)}{6}
+\contentsline {section}{\numberline {3}Increasing Data Efficiency: TARNet and X-learning}{6}
+\contentsline {section}{\numberline {4}Inverse Probability Weighting (IPW)}{8}
+\contentsline {section}{\numberline {5}Doubly Robust Methods}{10}

@@ -1,0 +1,16 @@
+\contentsline {section}{\numberline {1}Directed Graphical Models}{2}
+\contentsline {subsection}{\numberline {1.1}Conditional independence and d-separation}{2}
+\contentsline {subsection}{\numberline {1.2}Causal Graphical Model}{4}
+\contentsline {section}{\numberline {2}Structural Causal Models}{6}
+\contentsline {subsection}{\numberline {2.1}Definitions}{6}
+\contentsline {subsection}{\numberline {2.2}Cause-effect models}{7}
+\contentsline {subsection}{\numberline {2.3}Intervention}{8}
+\contentsline {subsubsection}{\numberline {2.3.1}\emph {do}-operators}{9}
+\contentsline {subsubsection}{\numberline {2.3.2}\emph {do}-calculus}{10}
+\contentsline {subsection}{\numberline {2.4}Counterfactuals}{10}
+\contentsline {subsection}{\numberline {2.5}Truncated Factorization}{12}
+\contentsline {section}{\numberline {3}The Principle of Independent Mechanisms}{12}
+\contentsline {section}{\numberline {4}Controlling confounding bias}{13}
+\contentsline {subsection}{\numberline {4.1}The Back-door Adjustment}{14}
+\contentsline {subsection}{\numberline {4.2}Collider Bias and Why to Not Condition on Descendants of Treatment}{15}
+\contentsline {subsection}{\numberline {4.3}Compare to Adjustment Formula}{16}

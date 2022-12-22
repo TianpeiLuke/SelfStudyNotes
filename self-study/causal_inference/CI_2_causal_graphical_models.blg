@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: CI_2_causal_graphical_models.aux
+The style file: plainnat.bst
+Database file #1: book_reference.bib.bib
+You've used 7 entries,
+            2773 wiz_defined-function locations,
+            627 strings with 5957 characters,
+and the built_in function-call counts, 2926 in all, are:
+= -- 251
+> -- 134
+< -- 8
++ -- 46
+- -- 39
+* -- 184
+:= -- 438
+add.period$ -- 21
+call.type$ -- 7
+change.case$ -- 30
+chr.to.int$ -- 7
+cite$ -- 14
+duplicate$ -- 166
+empty$ -- 269
+format.name$ -- 54
+if$ -- 633
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 11
+newline$ -- 43
+num.names$ -- 28
+pop$ -- 88
+preamble$ -- 1
+purify$ -- 27
+quote$ -- 0
+skip$ -- 131
+stack$ -- 0
+substring$ -- 86
+swap$ -- 29
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 57
+warning$ -- 0
+while$ -- 27
+width$ -- 0
+write$ -- 93

@@ -1,0 +1,10 @@
+\contentsline {section}{\numberline {1}What is an Instrument?}{2}
+\contentsline {section}{\numberline {2}Linear Setting}{3}
+\contentsline {subsection}{\numberline {2.1}Binary Linear Setting}{3}
+\contentsline {subsection}{\numberline {2.2}Continuous Linear Setting}{3}
+\contentsline {section}{\numberline {3}Nonparametric Identification of Local ATE}{5}
+\contentsline {subsection}{\numberline {3.1}New Potential Notation with Instruments}{5}
+\contentsline {subsection}{\numberline {3.2}Principal Stratification}{5}
+\contentsline {subsection}{\numberline {3.3}Local ATE}{6}
+\contentsline {section}{\numberline {4}Instrumental variables in observational studies}{9}
+\contentsline {subsection}{\numberline {4.1}Weak instruments}{9}
