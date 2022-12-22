@@ -49,7 +49,7 @@
   - Variational Inference
 
 - Optimal Transport
-  - Optimal Transport Problem
+  - Optimal Transport Problem [pdf](./info_geo_3_opt_transport_optimization.pdf)
     - Optimal Assignment Problem
       - Problem Formulations
       - Push-forward on Density
