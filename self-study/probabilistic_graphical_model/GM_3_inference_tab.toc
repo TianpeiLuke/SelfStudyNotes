@@ -1,0 +1,9 @@
+\contentsline {section}{\numberline {1}Background knowledge}{2}
+\contentsline {section}{\numberline {2}Inference in graphical models}{4}
+\contentsline {section}{\numberline {3}Inference for tabular-based graphical models}{4}
+\contentsline {section}{\numberline {4}Exact marginal inference on tree-structure model}{4}
+\contentsline {subsection}{\numberline {4.1}Sum-product belief propagation}{4}
+\contentsline {subsection}{\numberline {4.2}Factor graph message passing}{7}
+\contentsline {subsection}{\numberline {4.3}Bellman equation in log-space}{8}
+\contentsline {section}{\numberline {5}Exact mode inference on tree-structure model}{8}
+\contentsline {section}{\numberline {6}Junction tree representation}{9}

@@ -1,0 +1,36 @@
+\begin{thebibliography}{5}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bertele and Brioschi(1973)]{bertele1973non}
+Umberto Bertele and Francesco Brioschi.
+\newblock On non-serial dynamic programming.
+\newblock \emph{J. Comb. Theory, Ser. A}, 14\penalty0 (2):\penalty0 137--148,
+  1973.
+
+\bibitem[Bertsekas(2012)]{bertsekas2012dynamic}
+Dimitri Bertsekas.
+\newblock \emph{Dynamic programming and optimal control: Volume I}, volume~1.
+\newblock Athena scientific, 2012.
+
+\bibitem[Jordan(2003)]{jordan2003introduction}
+Michael~I Jordan.
+\newblock An introduction to probabilistic graphical models.
+\newblock \emph{University of California, Berkeley}, 2003.
+
+\bibitem[Koller and Friedman(2009)]{koller2009probabilistic}
+Daphne Koller and Nir Friedman.
+\newblock \emph{Probabilistic graphical models: principles and techniques}.
+\newblock MIT press, 2009.
+
+\bibitem[Wainwright et~al.(2008)Wainwright, Jordan,
+  et~al.]{wainwright2008graphical}
+Martin~J Wainwright, Michael~I Jordan, et~al.
+\newblock Graphical models, exponential families, and variational inference.
+\newblock \emph{Foundations and Trends{\textregistered} in Machine Learning},
+  1\penalty0 (1--2):\penalty0 1--305, 2008.
+
+\end{thebibliography}

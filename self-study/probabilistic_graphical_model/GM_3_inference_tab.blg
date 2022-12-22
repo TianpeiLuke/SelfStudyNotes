@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: GM_3_inference_tab.aux
+The style file: plainnat.bst
+Database file #1: book_reference.bib.bib
+You've used 5 entries,
+            2773 wiz_defined-function locations,
+            622 strings with 5583 characters,
+and the built_in function-call counts, 1925 in all, are:
+= -- 164
+> -- 91
+< -- 5
++ -- 32
+- -- 27
+* -- 139
+:= -- 308
+add.period$ -- 15
+call.type$ -- 5
+change.case$ -- 21
+chr.to.int$ -- 5
+cite$ -- 10
+duplicate$ -- 100
+empty$ -- 174
+format.name$ -- 36
+if$ -- 395
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 7
+newline$ -- 33
+num.names$ -- 20
+pop$ -- 49
+preamble$ -- 1
+purify$ -- 18
+quote$ -- 0
+skip$ -- 73
+stack$ -- 0
+substring$ -- 54
+swap$ -- 6
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 45
+warning$ -- 0
+while$ -- 19
+width$ -- 0
+write$ -- 70
