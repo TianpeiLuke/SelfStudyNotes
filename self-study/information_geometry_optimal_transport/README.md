@@ -2,6 +2,18 @@
 
 ## Book 
 
+### Information Geometry
+
+***Methods of Information Geometry***, Shun-Ichi Amari, Hiroshi Nagaoka
+
+***Differential Geometry and Statistics***, M.K.Murray and Valerie Isham
+
+### Optimal Transport
+
+***Computational Optimal Transport***, Gabriel Peyré, Marco Cuturi
+
+***Optimal Transport for Applied Mathematicians***, Santambrogio, 2015
+
 ## Table of Contents:
 - Information Geometry
   - Fundamental Concepts, Differential Geometry
