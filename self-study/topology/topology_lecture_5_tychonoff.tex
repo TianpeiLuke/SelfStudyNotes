@@ -1,0 +1,62 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs,  mathtools, dsfont}
+\usepackage{tabularx}
+\usepackage{tikz-cd}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Lecture 4: The Tychonoff Theorem}
+\author{ Tianpei Xie}
+\date{Nov. 30th., 2022}
+\maketitle
+\tableofcontents
+\newpage
+\section{The Tychonoff Theorem}
+\begin{itemize}
+\item \begin{lemma} (\textbf{Existance of Maximal Collection with Finite Intersection Property}) \citep{munkres2000topology}\\
+Let $X$ be a set; let $\srA$ be a collection of subsets of $X$ having the \textbf{finite intersection property}. Then there is a collection $\srD$ of subsets of $X$ such that $\srD$ \textbf{contains} $\srA$, and $\srD$ has the finite intersection property, and no collection of subsets of $X$ that properly contains $\srD$ has this property.
+\end{lemma}
+[Hint: apply Zorn's Lemma to \emph{the collection of collections of subsets} with finite intersection property]
+
+\item \begin{definition}
+We often say that a collection $\srD$ satisfying the conclusion of this theorem is \emph{\textbf{maximal}} \emph{with respect to \textbf{the finite intersection property}}.
+\end{definition}
+
+\item \begin{lemma} (\textbf{Elements of Maximal Collection with Finite Intersection Property})  \citep{munkres2000topology}\\
+Let $X$ be a set; let $\srD$ be a collection of subsets of $X$ that is \textbf{maximal} with respect to \textbf{the finite intersection property}. Then:
+\begin{enumerate}
+\item Any \textbf{finite intersection of elements} of $\srD$ is an \textbf{element} of $\srD$.
+\item If $A$ is a subset of $X$ that \textbf{intersects} \textbf{every element }of $\srD$, then $A$ is an element of $\srD$.
+\end{enumerate}
+\end{lemma}
+
+\item \begin{theorem} (\textbf{Tychonoff Theorem}). \citep{munkres2000topology} \\
+ An \underline{\textbf{arbitrary product}} of \textbf{compact} spaces is \textbf{compact} in the \underline{\textbf{product topology}}.
+\end{theorem}
+\end{itemize}
+
+\section{The Stone-{\^C}ech Compactification}
+
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{book_reference.bib}
+\end{document}
