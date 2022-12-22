@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: SL_lecture1_Fundamentals.aux
+The style file: plainnat.bst
+Database file #1: reference.bib.bib
+Warning--I didn't find a database entry for "mohri2012foundations"
+You've used 5 entries,
+            2773 wiz_defined-function locations,
+            615 strings with 5473 characters,
+and the built_in function-call counts, 1799 in all, are:
+= -- 133
+> -- 101
+< -- 4
++ -- 35
+- -- 30
+* -- 126
+:= -- 296
+add.period$ -- 15
+call.type$ -- 5
+change.case$ -- 20
+chr.to.int$ -- 5
+cite$ -- 10
+duplicate$ -- 102
+empty$ -- 163
+format.name$ -- 37
+if$ -- 366
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 10
+newline$ -- 33
+num.names$ -- 20
+pop$ -- 66
+preamble$ -- 1
+purify$ -- 20
+quote$ -- 0
+skip$ -- 69
+stack$ -- 0
+substring$ -- 10
+swap$ -- 6
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 30
+warning$ -- 0
+while$ -- 15
+width$ -- 0
+write$ -- 68
+(There was 1 warning)

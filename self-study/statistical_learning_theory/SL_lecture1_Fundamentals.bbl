@@ -1,0 +1,35 @@
+\begin{thebibliography}{5}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Berger(2013)]{berger2013statistical}
+James~O Berger.
+\newblock \emph{Statistical decision theory and Bayesian analysis}.
+\newblock Springer Science \& Business Media, 2013.
+
+\bibitem[Devroye et~al.(2013)Devroye, Gy{\"o}rfi, and
+  Lugosi]{devroye2013probabilistic}
+Luc Devroye, L{\'a}szl{\'o} Gy{\"o}rfi, and G{\'a}bor Lugosi.
+\newblock \emph{A probabilistic theory of pattern recognition}, volume~31.
+\newblock Springer Science \& Business Media, 2013.
+
+\bibitem[Koller and Friedman(2009)]{koller2009probabilistic}
+Daphne Koller and Nir Friedman.
+\newblock \emph{Probabilistic graphical models: principles and techniques}.
+\newblock MIT press, 2009.
+
+\bibitem[Mohri et~al.(2018)Mohri, Rostamizadeh, and
+  Talwalkar]{mohri2018foundations}
+Mehryar Mohri, Afshin Rostamizadeh, and Ameet Talwalkar.
+\newblock \emph{Foundations of machine learning}.
+\newblock MIT press, 2018.
+
+\bibitem[Murphy(2012)]{murphy2012machine}
+Kevin~P Murphy.
+\newblock \emph{Machine learning: a probabilistic perspective}.
+\newblock MIT press, 2012.
+
+\end{thebibliography}
