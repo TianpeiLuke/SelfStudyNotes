@@ -1,5 +1,9 @@
 # Notes for Self-Study 
 
+## Purpose
+
+This repository is the latex-based notes for self-learning, mainly for math, statistics and machine learning.
+
 ## Table of Contents
 - [Concentration Inequalities](./self-study/concentration_measures/README.md)
 
