@@ -34,8 +34,19 @@
     - Self-Adjoint, Unitary and Normal Operators
 
 - Banach Space
-  - Dual Space 
+  - Normed Linear Space
+  - Banach Space
+    - Definitions
+    - Isomorphism and Equivalence of Norms
+    - Subspace of a Banach Space
+    - Basis and Separability
+    - Finite Dimensional Normed Spaces and Subspaces
+    - Direct Sum of Banach Spaces 
+  - Dual Space and Double Dual Space
   - Hahn-Banach Theorem
+    - Extension Form of The Hahn-Banach Theorem
+    - Geometric Form of The Hahn-Banach Theorem
+  - Adjoints of Bounded Operator 
   - Uniform Boundedness Theorem
   - Open Mapping Theorem
   - Closed Graph Theorem
@@ -45,10 +56,19 @@
 - Locally Convex Space
 
 - Compactness in Function Spaces
-  - Equicontinuity and Ascoli's Theorem 
-  - Weak Topology
-  - Weak-star Topology
-  - Banach-Alaugu Theorem
+  - Complete Metric Spaces and Function Spaces
+    - Complete Metric Space
+    - Compactness in Metric Spaces, Total Boundedness
+    - Equicontinuity and Ascoli's Theorem 
+  - Pointwise and Compact Convergence
+    - Topology of Uniform Convergence
+    - Topology of Pointwise Convergence
+    - Topology of Compact Convergence
+  - Compactness in Banach Space
+    - Strong and Weak Convergence
+    - Weak Topology
+    - Weak-star Topology
+    - Banach-Alaugu Theorem
 
 - Regular Borel Measure
   - Regularity
