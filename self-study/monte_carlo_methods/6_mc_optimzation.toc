@@ -1,0 +1,8 @@
+\contentsline {section}{\numberline {1}Introduction}{2}{}%
+\contentsline {section}{\numberline {2}Stochastic Explorations}{2}{}%
+\contentsline {subsection}{\numberline {2.1}Gradient Methods}{2}{}%
+\contentsline {subsection}{\numberline {2.2}Simulated Annealing}{3}{}%
+\contentsline {subsection}{\numberline {2.3}Simulated Tempering}{4}{}%
+\contentsline {section}{\numberline {3}Stochastic Approximations}{4}{}%
+\contentsline {subsection}{\numberline {3.1}The EM Algorithm}{4}{}%
+\contentsline {subsection}{\numberline {3.2}Monte Carlo EM}{5}{}%
