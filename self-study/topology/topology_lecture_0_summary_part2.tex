@@ -1,0 +1,1623 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs,  mathtools, dsfont}
+\usepackage{tabularx}
+\usepackage{tikz-cd}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+\begin{document}
+\title{Lecture 0: Summary of Topology (Part 2)}
+\author{ Tianpei Xie}
+\date{Nov. 23th., 2022}
+\maketitle
+\tableofcontents
+\newpage
+\section{Connectedness and Compactness}
+\begin{itemize}
+\item \begin{remark}
+\emph{\textbf{Connectedness}} and \emph{\textbf{compactness}} are basic \emph{\textbf{topological properties}}. Both of them are defined based on a collection of open subsets. 
+\begin{enumerate}
+\item \emph{\textbf{Connectedness}} is a \emph{\textbf{global topological property}}: a topological space is \emph{connected} if it cannot be partitioned by two \emph{disjoint nonempty open} subsets. \emph{Connectedness} reveals the information of \emph{\textbf{entire space}} \emph{not just within a neighborhood}.  Connectedness is \emph{\textbf{compatible}} with the \emph{\textbf{continuity}} of functions as it implies \emph{\textbf{the intermediate value theorem}}, which in turn, can be used to construct \emph{inverse function}.  Moreover, \emph{connectedness} defines \emph{\textbf{an equivalence relationship}} which allows a \emph{\textbf{partition}} of the space into \emph{\textbf{components}}. 
+\item \emph{\textbf{Connectedness}} is a \emph{\textbf{local-to-global topological property}}: a topological space is \emph{compact} if every open cover have a finite sub-cover. Using \emph{\textbf{finite sub-cover}}, \emph{\textbf{local properties}} defined \emph{within each neighborhood} can be \emph{\textbf{generalized globally}}  to entire space. Concept of functions that are closely related to compactness is \emph{\textbf{the uniformly continuity}} and \emph{\textbf{the maximum value theorem}}. The compactness allows us to drop dependency on each individual point $x$.
+\end{enumerate}
+Compared to \emph{connectedness}, \emph{\textbf{compactness}} is usually a \emph{\textbf{strong condition}} on the topological space.
+\end{remark}
+\end{itemize}
+\subsection{Connected Spaces}
+\subsubsection{Definitions}
+\begin{itemize}
+\item \begin{definition}(\emph{\textbf{Separation} and \textbf{Connectedness}})\\
+Let $X$ be a topological space. A \emph{\textbf{separation}} of $X$ is a pair $U$, $V$ of \emph{\textbf{disjoint} \textbf{nonempty} \textbf{open} subset}s of $X$ whose union is $X$. 
+
+The space $X$ is said to be \underline{\emph{\textbf{connected}}} if there \emph{does not exist a separation} of $X$.
+\end{definition}
+
+\item  \begin{definition} 
+Equivalently, $X$ is \emph{\textbf{connected}} if and only if the only subsets of $X$ that are \emph{\textbf{both open and closed}} are $\emptyset$
+and $X$ itself.
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Proof of Connectedness}})\\
+As the definition suggests, the proof of connectedness is done \emph{\textbf{by contradition}}. One first assume that the set $X$ has a \emph{\textbf{seperation}}; it can be separated into two \emph{\textbf{disjoint nonempty open}} sets such that $X = A \cup B$. Then we proof by contradiction using \emph{\textbf{existing connectedness conditions}} and the \emph{\textbf{property of open subsets (basis, continuity etc.)}}.
+\end{remark}
+
+\item \begin{remark}
+\emph{\textbf{Connectedness}} is obviously a \emph{\textbf{topological property}}, since it is formulated entirely in terms of \emph{the collection of open sets} of $X$. 
+
+Said differently, if $X$ is \emph{\textbf{connected}}, so is any space \emph{\textbf{homeomorphic}} to $X$.
+\end{remark}
+
+\item \begin{lemma}(\textbf{Separation and Connected Subspace}) \citep{munkres2000topology}\\
+If $Y$ is a \textbf{subspace} of $X$, a \textbf{separation} of $Y$ is a pair of disjoint nonempty sets $A$ and $B$ whose union is $Y$, \textbf{neither} of which contains a \textbf{limit point} of the other. The space $Y$ is connected if there exists no separation of $Y$.
+\end{lemma}
+
+\item \begin{example} (\emph{\textbf{Indiscrete Topology is Connected}})\\
+Let $X$ denote a two-point space in \emph{\textbf{the indiscrete topology}}. Obviously there is \emph{no separation} of $X$, so $X$ is \emph{connected}.
+\end{example}
+
+\item \begin{example} (\emph{\textbf{$\bQ$ is Not Connected}})\\
+The \emph{rationals} $\bQ$ are \emph{\textbf{not connected}}. Indeed, \emph{the only connected subspaces} of $\bQ$ are the \emph{one-point sets}: If $Y$ is a subspace of $\bQ$ containing two points $p$ and $q$, one can choose \emph{an irrational number} $a$ lying between $p$ and $q$, and write $Y$ as the union of the open
+sets
+\begin{align*}
+Y \cap (-\infty, a)\text{ and }Y \cap (a, +\infty).
+\end{align*}
+\end{example}
+
+\item \begin{lemma}
+If the sets $C$ and $D$ form a \textbf{separation} of $X$, and if $Y$ is a \textbf{connected} subspace of $X$, then $Y$ lies \textbf{entirely within} either $C$ or $D$.
+\end{lemma}
+
+\item \begin{proposition} (\textbf{Connectedness by Union}) \citep{munkres2000topology}\\
+The \textbf{union} of a collection of connected subspaces of X that \textbf{have a point in common} is connected.
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Connectedness by Closure})\citep{munkres2000topology} \\
+Let $A$ be a connected subspace of $X$. If $A \subseteq B \subseteq  \bar{A}$, then $B$ is also connected.
+\end{proposition}
+
+\item \begin{remark}
+If $B$ is formed by \emph{adjoining} to the \emph{\textbf{connected} subspace $A$ some or all of its \textbf{limit points}}, then $B$ is connected.
+\end{remark}
+
+\item \begin{proposition}  (\textbf{Connectedness by Continuity}) \citep{munkres2000topology} \\
+The \textbf{image} of a connected space under a \textbf{continuous} map is connected.
+\end{proposition}
+
+\item \begin{proposition}  (\textbf{Connectedness by Finite Product}) \citep{munkres2000topology} \\
+A \textbf{finite} cartesian product of connected spaces is connected.
+\end{proposition}
+
+\item \begin{remark}
+Countable infinite product of connected spaces \emph{\textbf{may not be connected}}. It depends on the \emph{\textbf{topology}} of the product space.
+\end{remark}
+
+\item \begin{example} (\emph{\textbf{$\bR^{\omega}$ is Not Connected under Box Topology}})\\
+Consider the cartesian product $\bR^{\omega}$ in \emph{\textbf{the box topology}}. We can write $\bR^{\omega}$ as the union of the set $A$ consisting of \emph{all \textbf{bounded} sequences of real numbers}, and the set $B$ of \emph{all \textbf{unbounded} sequences}. These sets are \emph{\textbf{disjoint}}, and each is \emph{\textbf{open}} in the box topology.
+\end{example}
+
+\item \begin{example} (\emph{\textbf{$\bR^{\omega}$ is  Connected under Product Topology}})\\
+Consider the cartesian product $\bR^{\omega}$ in \emph{\textbf{the product topology}}. Let $\widetilde{\bR}^n$ denote the \emph{\textbf{subspace}} of $\bR^{\omega}$ consisting of all sequences $x = (x_1, x_2, \ldots)$ such that $x_i = 0$ for $i > n$. The space $\widetilde{\bR}^n$  is clearly
+\emph{\textbf{homeomorphic}} to $\bR^n$, so that it is \emph{\textbf{connected}}. It follows that the space $\bR^{\infty}$ that is the \emph{\textbf{union}} of the spaces $\widetilde{\bR}^n$ is \emph{\textbf{connected}}, for these spaces have the point $0 = (0, 0, \ldots)$ in common.  We show that the \emph{\textbf{closure}} of $\bR^{\infty}$ equals all of $\bR^{\omega}$, from which it follows that $\bR^{\omega}$ is \emph{\textbf{connected}} as well. 
+\end{example}
+
+
+
+%
+%\item \begin{definition}
+%A \emph{\textbf{maximal connected subset}} of $X$ (i.e., a connected subset that is not properly contained in any larger connected subset) is called a \emph{\textbf{component}} (or \emph{\textbf{connected component}}) of $X$.
+%\end{definition}
+\end{itemize}
+\subsubsection{Connected Subspaces of Real Line}
+\begin{itemize}
+\item \begin{definition}(\textbf{\emph{Linear Continuum}}) \\
+A \emph{\textbf{simply ordered set}} $L$ having \emph{more than one element} is called a \underline{\emph{\textbf{linear continuum}}} if the following hold:
+\begin{enumerate}
+\item $L$ has the \emph{\textbf{least upper bound property}}.
+\item If $x < y$, there exists $z$ such that $x < z < y$.
+\end{enumerate}
+\end{definition}
+
+\item \begin{proposition} (\textbf{Linear Continuum is Connected}) \citep{munkres2000topology} \\
+If $L$ is a \textbf{linear continuum} in the \textbf{order topology}, then $L$ is \textbf{connected}, and so are \textbf{intervals} and \textbf{rays} in $L$.
+\end{proposition}
+
+
+\item \begin{corollary} (\textbf{$\bR$ is Connected})\\
+The real line $\bR$ is \textbf{connected} and so are \textbf{intervals} and \textbf{rays} in $\bR$.
+\end{corollary}
+
+\item \begin{theorem} (\textbf{Intermediate Value Theorem}).  \citep{munkres2000topology}\\
+Let $f : X \rightarrow Y$ be a \textbf{continuous} map, where $X$ is a \textbf{connected} space and $Y$ is an ordered set in the \textbf{order topology}. If $a$ and $b$ are two points of $X$ and if $r$ is a point of $Y$ lying between $f(a)$ and $f(b)$, then there \textbf{exists} a point $c$ of X such that $f(c) = r$.
+\end{theorem}
+
+
+\item \begin{definition} (\emph{\textbf{Path Connectedness}})\\
+Given points $x$ and $y$ of the space $X$, a \underline{\emph{\textbf{path}}} in $X$ from $x$ to $y$ is a \emph{continuous map} $f : [a, b] \rightarrow X$ of some \emph{\textbf{closed interval}} in the real line into $X$, such that $f(a) = x$ and $f(b) = y$. 
+
+A space $X$ is said to be \underline{\emph{\textbf{path connected}}} if \emph{\textbf{every pair}} of points of $X$ can be \emph{\textbf{joined by a path}} in $X$.
+\end{definition}
+
+\item \begin{remark}
+It is easy to see that \emph{\textbf{a path-connected space $X$ is connected}} since $X = f([a,b])$ is the image of connected space under continuous function $f$. The \emph{converse} is \emph{not true}, i.e. connected $\not\Rightarrow$ path-connected.
+\end{remark}
+
+\item \begin{example} (\emph{\textbf{Punctured Euclidean Space $\bR^n \setminus \set{0}$ is Path Connected}})\\
+Define \emph{\textbf{punctured euclidean space}} to be the space $\bR^n \setminus \set{0}$, where $0$ is the origin in $\bR^n$. If $n > 1$, this space is \emph{\textbf{path connected}}: Given $x$ and $y$ different from $0$, we can join $x$ and $y$ by the \emph{straight-line path} between them if that path does not go through
+the origin. Otherwise, we can choose a point $z$ \emph{not on the line joining $x$ and $y$}, and take the \emph{broken-line path} from $x$ to $z$, and then from $z$ to $y$.
+\end{example}
+
+\item 
+\begin{example} (\emph{Common Path-Connected Spaces})\\
+The following spaces are \emph{\textbf{path-connected}}:
+\begin{enumerate}
+\item \emph{\textbf{The unit ball}} $\bB^n = \set{x: \norm{x}{} \le 1}$ is \emph{path-connected};
+\item \emph{\textbf{The unit sphere}} $\bS^{n-1}$ in $\bR^n$ by the equation $\bS^{n-1} = \set{x: \norm{x}{} = 1}$ is \emph{path connected}. For the map $g : \bR^n \setminus \set{0}\rightarrow \bS^{n-1}$ defined by $g(x)= x/\norm{x}{}$ is \textit{continuous} and \emph{surjective}; and the continuous image of path connected space is path connected.
+\end{enumerate}
+\end{example}
+
+
+\item \begin{example}
+\emph{\textbf{The ordered square}} $I_o^2$ (i.e. $I \times I$ under \emph{dictionary order topology}) is \emph{\textbf{connected}} but \emph{\textbf{not path connected}}.
+\end{example}
+
+\item \begin{example} 
+\emph{\textbf{The topologist's sine curve}} is defined as the \emph{\textbf{closure}} $\bar{S}$ of the set
+\begin{align*}
+S = \set{(x, \sin(1/x)): 0 < x \le 1}.
+\end{align*} $\bar{S}$ is \emph{\textbf{connected}} but \emph{\textbf{not path-connected}}.
+\end{example}
+
+\item \begin{remark}
+Recall that a topological space $X$ is
+\begin{itemize}
+\item \underline{\emph{\textbf{connected}}} if there do not exist two \emph{disjoint}, \emph{nonempty}, \emph{open} subsets of $X$ whose union is $X$;
+\item \underline{\emph{\textbf{path-connected}}} if every pair of points in $X$ can be \emph{\textbf{joined by a path}} in $X$, and
+\item \emph{\textbf{locally (path-)connected}} if $X$ has a \emph{\textbf{basis}} of \emph{\textbf{(path-)connected open subsets}}.
+\end{itemize}
+We have $\text{\emph{\textbf{path-connected}}} \Rightarrow \text{\emph{\textbf{connected}}}$ but $\text{\emph{\textbf{connected}}} \not\Rightarrow \text{\emph{\textbf{locally-connected}}}$.
+\end{remark}
+\end{itemize}
+
+\subsubsection{Components and Local Connectedness}
+\begin{itemize}
+\item Given an arbitrary space $X$, there is a natural way to \emph{\textbf{break} it up into pieces} that are connected (or path connected). 
+\begin{definition} (\emph{\textbf{Connected Component} as \textbf{Equivalence Class}})\\
+Given $X$, define an \emph{equivalence relation} on $X$ by setting $x \sim y$ if there is \emph{a \textbf{connected subspace}} of $X$ containing \emph{both} $x$ and $y$. The \emph{equivalence classes} are called \emph{\textbf{the components}} (or the \underline{\emph{\textbf{connected components}}}) of $X$.
+\end{definition}
+
+\item \begin{proposition} (\textbf{Characterization of Connected Components})\\
+The components of $X$ are \textbf{connected disjoint subspaces} of $X$ whose union is $X$, such that each nonempty \textbf{connected} subspace of $X$ \textbf{intersects only one} of them.
+\end{proposition}
+
+\item \begin{definition}(\emph{\textbf{Path Component}})\\
+We define another \emph{equivalence relation} on the space $X$ by defining $x \sim y$ if there is a \emph{path} in $X$ from $x$ to $y$. The \emph{equivalence classes} are called \emph{\underline{\textbf{the path components}} of $X$}.
+\end{definition}
+
+\item \begin{proposition} (\textbf{Characterization of Path Components})\\
+The path components of $X$ are \textbf{path-connected disjoint subspaces} of $X$ whose union is $X$, such that each nonempty \textbf{path-connected} subspace of $X$ \textbf{intersects only one} of them.
+\end{proposition}
+
+\item \begin{example}
+Each connected component of $\bQ$ in $\bR$ consists of \emph{a single point}. \emph{\textbf{None}} of the components of $\bQ$ are \emph{\textbf{open}} in $\bQ$. 
+\end{example}
+
+\item \begin{example}
+The ``\emph{\textbf{topologist’s sine curve}}” $\bar{S}$ of the preceding section is a space that has \emph{\textbf{a single component}} (since it is \emph{connected}) and \emph{\textbf{two path components}}. One path component is the curve $S$ and the other is \emph{the vertical interval} $V = 0 \times [-1, 1]$. Note that $S$ is \emph{\textbf{open}} in $\bar{S}$ but \emph{\textbf{not closed}}, while $V$ is \emph{\textbf{closed}} but \emph{\textbf{not open}}.
+
+If one forms a space from $\bar{S}$ by \emph{deleting} all points of $V$ having \emph{rational second coordinate}, one obtains a space that has \emph{\textbf{only one component}} but \emph{\textbf{uncountably many path components}}.
+\end{example}
+
+\item \begin{remark}
+From the example of topologist's sine curve, we see that the \emph{connectedness does not imply the path-connectedness} since \emph{\textbf{neither} of \textbf{two path components} are \textbf{both} open and closed}. Note that the vertical line is the set of \emph{\textbf{limit points}} of the  curve $\sin(1/x)$ but not every sequence approaches to the vertical curve is convergent. 
+\end{remark}
+
+\item \begin{example}
+See some of examples below:
+\begin{enumerate}
+\item The intervals and rays in $\bR$ are \emph{\textbf{both connected and locally connected}}.
+\item The subspace $[−1, 0) \cup (0, 1]$ of $\bR$ is \emph{\textbf{not connected}}, but it is \emph{\textbf{locally connected}}.
+\item The rationals $\bQ$ are \emph{\textbf{neither connected nor locally connected}}.
+\item \emph{The topologist’s sine curve} is \emph{\textbf{connected}} but \emph{\textbf{not locally connected}}.
+\end{enumerate} 
+\end{example}
+
+
+\item \begin{proposition} (\textbf{Characterization of Locally Connectedness}) \citep{munkres2000topology}\\
+A space $X$ is locally connected \textbf{if and only if} for every \textbf{open} set $U$ of X, each \textbf{component} of $U$ is \textbf{open} in $X$.
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Characterization of Locally Path-Connectedness}) \citep{munkres2000topology}\\
+A space $X$ is locally path connected \textbf{if and only if} for every \textbf{open} set $U$ of X, each \textbf{path component} of $U$ is \textbf{open} in $X$.
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Relationship between Components and Path Components})\\
+If $X$ is a topological space, each \textbf{path component} of $X$ lies in a \textbf{component} of $X$. If $X$ is \textbf{locally path connected}, then the \textbf{components} and \textbf{the path components} of $X$ are the same.
+\end{proposition}
+\end{itemize}
+
+\subsection{Compact Spaces}
+\begin{remark} (\emph{\textbf{Metric Space} and \textbf{Compact Hausdorff Space}})\\
+Two of the most well-behaved classes of spaces to deal with in mathematics are \emph{\textbf{the metrizable spaces}} and \emph{\textbf{the compact Hausdorff spaces}}. 
+\begin{enumerate}
+\item \underline{\emph{\textbf{Metrizable space $(X ,d)$}}}: 
+\begin{itemize}
+\item \emph{\textbf{subspace}} of \emph{metrizable} space is \emph{meterizable};
+\item \emph{\textbf{compact subspace}} of \emph{metric} space is \emph{\textbf{bounded}} in that metric and is \emph{\textbf{closed}};
+\item \emph{every metrizable space} is \emph{\textbf{normal}} ($T_4$);
+\item \emph{\textbf{compactness}} $=$ \emph{\textbf{sequential compactness}} $=$ \emph{\textbf{limit point compactness}};
+\item \emph{\textbf{sequence lemma}}: for $A \subset X$,  $x \in \bar{A}$ if and only if  there exists a squence of points in $A$ that converges to $x$.  ($\Rightarrow$ need $X$ being metric space);
+\item $f$ is \emph{\textbf{continuous}} at $x$ if and only if $x_n \rightarrow x$ leads to $f(x_n) \rightarrow f(x)$ ($\Leftarrow$ part holds for metric space)
+\item \emph{\textbf{unform limit theorem}}: If the \emph{range} of $f_n$ is a \emph{metric space} and $f_n$ are \emph{continuous}, then $f_n \rightarrow f$ \emph{uniformly} means that $f$ is a \emph{continuous} function. 
+\item \emph{\textbf{unform continuity theorem}}: if $f$ is a \emph{countinous} map between two \emph{metric spaces}, and the domain is \emph{\textbf{compact}}, then $f$ is \emph{\textbf{uniformly continuous}}.
+\item every metric space is \emph{\textbf{first-countable}}.
+\end{itemize}
+
+\item \underline{\emph{\textbf{Compact Hausdorff Space}}}:
+\begin{itemize}
+\item \emph{\textbf{subspace}} of \emph{compact Hausdorff space} is \emph{compact Hausdorff} if and only if it is \emph{\textbf{closed}}. 
+\item \emph{\textbf{closed subspace}} of \emph{compact} space is \emph{\textbf{compact}}; 
+\item \emph{\textbf{compact subspace}} of \emph{Hausdorff} space is \emph{\textbf{closed}};
+\item \emph{compact Hausdorff space} $X$ is \textbf{\emph{normal}} ($T_4$), thus it is \emph{\textbf{completely regular}};
+\item \emph{\textbf{arbitrary product}} of \emph{compact (Hausdorff)}  space is \emph{compact (Hausdorff)};
+\item \emph{\textbf{compactness}} $\Rightarrow$ \emph{\textbf{sequential compactness}};
+\item  \emph{\textbf{compactness}} $=$ \emph{\textbf{net compactness}}, i.e. every \emph{net} has a convergence \emph{subnet};
+\item \emph{\textbf{image}} of \emph{compact} space under continuous map $f$ is \emph{compact};
+\item \emph{\textbf{continuous bijection}} between two \emph{compact Hausdorff} spaces is a \emph{\textbf{homemorphism}} (and is a \emph{\textbf{closed map}});
+\item \emph{\textbf{closed graph theorem}}: $f$ is \emph{\textbf{continuous}} if and only if its \emph{\textbf{graph}} is \emph{\textbf{closed}};
+\item \emph{\textbf{uncountability}}: for \emph{compact Hausdorff space}, if the space has \emph{no isolated points}, then it is \emph{uncountable};
+\item if compact Hausdorff space is \emph{\textbf{second-countable}}, then it is \emph{\textbf{metrizable}}.
+\end{itemize}
+\end{enumerate}
+\end{remark}
+\subsubsection{Definitions}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Covering of Set} and \textbf{Open Covering of Topological Set}})\\
+\emph{A collection $\srA$ of subsets} of a space $X$ is said to \underline{\emph{\textbf{cover}} $X$,} or to be \emph{a \underline{\textbf{covering}} of $X$}, if the union of the elements of $\srA$ is equal to $X$. 
+
+It is called an \underline{\emph{\textbf{open covering of $X$}}} if its elements are \emph{open subsets} of $X$.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Compactness}})\\
+A topological space $X$ is said to be \underline{\emph{\textbf{compact}}} if \emph{every open covering} $\srA$ of $X$ contains a \emph{\textbf{finite} subcollection} that also \emph{covers} $X$.
+\end{definition}
+
+
+\item \begin{example}(\emph{Compactness is a strong condition})\\
+Consider the following examples that are \emph{connected} by \emph{not compact}:
+\begin{enumerate}
+\item The \emph{\textbf{real line}} $\bR$ is \textit{\textbf{not compact}} since the open covering $\srA = \set{(n, n+2): n \in \bZ}$ has no finite sub-covering.
+\item The \emph{\textbf{half interval}} $(0, 1]$ is \emph{\textbf{not compact}} since the open covering $\srA = \set{(1/n, 1]: n \in \bZ_{+}}$ has no finite sub-covering.
+\end{enumerate}
+\end{example}
+
+\item \begin{example}(\emph{\textbf{Finite Set is Compact}})\\
+Any space $X$ containing only \emph{\textbf{finitely} many points} is necessarily \emph{\textbf{compact}}, because in this case \emph{every open covering of $X$ is finite}.
+\end{example}
+
+\item \begin{example}
+The following \emph{subspace} of $\bR$ is \emph{\textbf{compact}} but \emph{not connected}:
+\begin{align*}
+X = \set{0} \cup \set{1/n: n\in \bZ_{+}}.
+\end{align*}
+\end{example}
+
+\item \begin{definition}
+If $Y$ is a subspace of $X$, a collection $\srA$ of \emph{subsets of $X$} is said to \emph{\textbf{cover $Y$}} if the \emph{union} of its elements \emph{contains} $Y$.
+\end{definition}
+
+
+\item \begin{lemma}(\textbf{Subspace Compactness}) \citep{munkres2000topology} \\
+Let $Y$ be a subspace of $X$. Then $Y$ is compact if and only if every covering of $Y$ by sets \textbf{open in $X$} contains \emph{a finite subcollection covering} $Y$.
+\end{lemma}
+
+\item \begin{remark}
+A \emph{\textbf{compact subset}} of a topological space is one that is a compact space in the \emph{\textbf{subspace topology}}. 
+\end{remark}
+
+\item \begin{proposition} (\textbf{Compactness by Closed Subspace}) \citep{munkres2000topology}\\
+Every \textbf{closed subspace} of a compact space is compact.
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Compact Subspace $+$ Hausdorff $\Rightarrow$ Closedness}) \citep{munkres2000topology}\\
+Every \textbf{compact} subspace of a \textbf{Hausdorff} space is \textbf{closed}.
+\end{proposition}
+
+\item \begin{remark} (\textbf{\emph{Compactness $\Rightarrow$ Closedness}})\\
+Since \emph{the Hausdorff condition is mild}, we can safely say that being \emph{compact} implies that being \emph{closed}.
+\end{remark}
+
+\item \begin{exercise}(\textbf{Compact Subspace in Metric Space})\\
+Show that every \textbf{compact subspace} of \textbf{a metric space} is \textbf{bounded} in that \textbf{metric} and is \textbf{closed}. Find a metric space in which not every closed bounded subspace is compact.
+\end{exercise}
+
+
+\item \begin{proposition} 
+If $Y$ is a \textbf{compact subspace} of the \textbf{Hausdorff} space $X$ and $x_0$ is not in $Y$, then there exist \textbf{disjoint open} sets $U$ and $V$ of $X$ containing $x_0$ and $Y$, respectively.
+\end{proposition}
+
+\item \begin{remark}
+To prove \emph{the compact subspace} is \emph{closed}, one need the \emph{Hausdorff condition}.
+\end{remark}
+
+\item \begin{proposition} (\textbf{Compactness by Continuity}) \citep{munkres2000topology} \\
+The \textbf{image} of a \textbf{compact} space under a \textbf{continuous} map is compact.
+\end{proposition}
+
+
+\item \begin{theorem} (\textbf{Closed Graph Theorem}) \citep{reed1980methods, munkres2000topology}\\
+Let $f : X \rightarrow Y$; let $Y$ be \underline{\textbf{compact Hausdorff}}. Then $f$ is \underline{\textbf{continuous} \textbf{if and only if}} the \underline{\textbf{graph}} of $f$,
+\begin{align*}
+G(f) = \set{(x, f(x)):  x\in X},
+\end{align*}
+is \underline{\textbf{closed}} in $X \times Y$. 
+\end{theorem} 
+
+\item \begin{theorem} (\textbf{Homemorphism by Domain Compactness})\citep{munkres2000topology}\\
+Let $f : X \rightarrow Y$ be a \textbf{bijective continuous} function. If $X$ is \textbf{compact} and $Y$ is \textbf{Hausdorff}, then $f$ is a \textbf{homeomorphism}.
+\end{theorem}
+
+\item \begin{proposition} (\textbf{Compactness by Finite Product}) \citep{munkres2000topology}\\
+The product of \textbf{finitely} many compact spaces is compact.
+\end{proposition}
+
+\begin{lemma} (\textbf{The Tube Lemma}).\citep{munkres2000topology} \\
+Consider the product space $X \times Y$, where $Y$ is \textbf{compact}. If $N$ is an open set of $X \times Y$ containing the \textbf{slice} $x_0 \times Y$ of $X \times Y$, then $N$ contains some \textbf{tube} $W \times Y$ about $x_0 \times Y$, where $W$ is a \textbf{neighborhood} of $x_0$ in X.
+\end{lemma}
+
+\item \begin{remark}(\textbf{\emph{Compactness by Infinite Product}}) \\
+Unlike \emph{the connectedness property}, which \emph{may not hold} for infinite product space, \emph{the infinite product of compact space is indeed compact}. This is called \emph{\textbf{the Tychonoff theorem}},
+\end{remark}
+
+
+
+\item To prove \emph{compactness}, the following property is useful:
+\begin{definition} (\emph{\textbf{Finite Intersection Property}})\\
+\emph{A collection $\srC$ of subsets} of $X$ is said to have \underline{\emph{\textbf{the finite intersection property}}} if for \emph{every finite subcollection}
+\begin{align*}
+\{C_1 \xdotx{,} C_n\}
+\end{align*}
+ of $\srC$, the \emph{\textbf{intersection}} $C_1 \xdotx{\cap} C_n$ is \emph{\textbf{nonempty}}.
+\end{definition}
+
+\item \begin{proposition} (\textbf{Equivalent Definition of Compactness}) \citep{munkres2000topology} \\
+Let $X$ be a topological space. Then $X$ is \textbf{compact} \textbf{if and only if} for every collection $\srC$ of \textbf{closed} sets in $X$ having \textbf{the finite intersection property}, the intersection $\bigcap_{C\in \srC}C$ of all the elements of $\srC$ is \textbf{nonempty}.
+\end{proposition}
+\begin{proof}
+Given a collection $\srA$ of subsets of $X$, let
+\begin{align*}
+\srC = \set{X \setminus A:  A \in \srA}
+\end{align*}
+be the collection of their \emph{complements}. Then the following statements hold:
+\begin{enumerate}
+\item $\srA$ is a collection of open sets if and only if $\srC$ is a collection of closed sets.
+\item The collection $\srA$ covers $X$ if and only if the \emph{intersection} $\bigcap_{C \in \srC} C$ of all the elements of $\srC$ is \emph{\textbf{empty}}.
+\item The \emph{\textbf{finite subcollection}} $\{A_1 \xdotx{,} A_n\}$ of $\srA$ covers $X$ if and only if the \emph{\textbf{intersection}} of the corresponding elements $C_i = X \setminus A_i$ of $\srC$ is \emph{\textbf{empty}}.
+\end{enumerate}
+The proof of the theorem now proceeds in two easy steps: taking the \emph{\textbf{contrapositive}} (of the theorem), and then the \emph{\textbf{complement}} (of the sets)!
+
+There are two equivalent statements regarding the compactness of set:
+\begin{enumerate}
+\item ``\emph{Given any collection $\srA$ of open subsets of $X$, if $\srA$ covers $X$, then some finite subcollection of $\srA$ covers $X$.}"
+\item ``\emph{Given any collection $\srA$ of open sets, if \textbf{no finite subcollection} of $\srA$ covers $X$, then $A$ \textbf{does not cover} $X$.}"
+
+\item $\Rightarrow$  ``\emph{Given any collection $\srC$ of \textbf{closed sets}, if \textbf{every finite intersection} of elements of $\srC$ is \textbf{nonempty}, then the \textbf{intersection of all the elements} of $\srC$ is \textbf{nonempty}}" \qed
+\end{enumerate}
+\end{proof}
+
+\item \begin{remark} (\emph{\textbf{Nested Sequence of Closed Sets in Compact Space}})\\
+A special case of this proposition occurs when we have a \emph{\textbf{nested} sequence $C_1 \supseteq C_2 \xdotx{\supseteq} C_n \supseteq  \ldots$ of \textbf{closed sets}} in \emph{a \textbf{compact space} $X$}. 
+
+If each of the sets $C_n$ is nonempty, then the collection $\srC = \set{C_n}_{n \in \bZ_{+}}$ automatically has \emph{\textbf{the finite intersection
+property}}. Then the intersection
+\begin{align*}
+\bigcap_{n \in \bZ_{+}}C_n
+\end{align*}
+is nonempty.
+\end{remark}
+\end{itemize}
+\subsubsection{Compact Subspaces of the Real Line}
+\begin{itemize}
+\item \begin{theorem}\citep{munkres2000topology}\\
+Let $X$ be a \textbf{simply ordered} set having the \textbf{least upper bound property}. In the order topology, each \textbf{closed interval} in $X$ is \textbf{compact}.
+\end{theorem}
+
+\item \begin{corollary} (\textbf{Closed Interval in Real Line is Compact})\citep{munkres2000topology}\\
+Every \textbf{closed interval} in $\bR$ is \textbf{compact}.
+\end{corollary}
+
+\item \begin{proposition}  (\textbf{Closed and Bounded in Euclidean Metric $=$ Compact})\citep{munkres2000topology}\\
+A subspace $A$ of $\bR^n$ is \textbf{compact} if and only if it is \underline{\textbf{closed} and is \textbf{bounded}} in the \textbf{\underline{euclidean} metric} $d$ or the \textbf{square metric} $\rho$
+\end{proposition}
+
+\item \begin{theorem} (\textbf{Extreme Value Theorem}). \citep{munkres2000topology} \\
+Let $f : X \rightarrow Y$ be \textbf{continuous}, where $Y$ is an \textbf{ordered set} in the order topology. If $X$ is \textbf{compact}, then there exist points $c$ and $d$ in $X$ such that $f(c) \le f(x) \le f (d)$ for every $x \in X$.
+\end{theorem}
+
+\item \begin{definition} (\emph{\textbf{Distance to Subset}})\\
+Let $(X, d)$ be a \emph{\textbf{metric space}}; let $A$ be a nonempty subset of $X$. For each $x \in X$, we define \emph{\textbf{the distance} from $x$ to $A$} by the equation
+\begin{align*}
+d(x, A) = \inf\set{d(x, a): a \in A}.
+\end{align*}
+\end{definition}
+
+\item \begin{remark}
+The distance to subset $d(x: A)$ is a \emph{\textbf{continuous}} function with respect to the first argument.
+\end{remark}
+
+
+\item \begin{remark}
+Recall that the \emph{\textbf{diameter}} of a \emph{bounded subset} $A$ of a \emph{metric space} $(X, d)$ is the number
+\begin{align*}
+\sup\set{d(a_1, a_2): a_1, a_2 \in A}.
+\end{align*}
+\end{remark}
+
+
+\item \begin{lemma} (\textbf{The Lebesgue Number Lemma}). \citep{munkres2000topology} \\
+Let $\srA$ be an \textbf{open covering} of the \textbf{metric space} $(X, d)$. If $X$ is \textbf{compact}, there is a $\delta > 0$ such that for each subset of $X$
+having \textbf{diameter less than} $\delta$, there exists an element of $\srA$ containing it.
+
+The number $\delta$ is called a \underline{\textbf{Lebesgue number}} for the covering $\srA$.
+\end{lemma}
+
+\item \begin{remark}
+\emph{\textbf{The Lebesgue number}} is a \emph{\textbf{threshold} on \textbf{diameter of subset}} so that all of subsets with diameter less than this threshold is fully contained in one of the open sets in the covering of $X$. The \emph{existance} of this number relies on the \emph{\textbf{compactness}} of domain $X$.
+
+This number is used in \emph{\textbf{$\epsilon$-$\delta$ condition}} to prove \emph{the uniform continuity}.
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{Uniform Continuity}})\\
+A function $f: (X, d_X) \rightarrow (Y, d_Y)$ is said to be \underline{\emph{\textbf{uniformly continuous}}} if given $\epsilon > 0$, there is a $\delta > 0$ such that for every pair of points $x_0$, $x_1$ of $X$,
+\begin{align*}
+d_X(x_0, x_1) < \delta \quad \Rightarrow \quad d_Y(f(x_0), f(x_1)) < \epsilon. 
+\end{align*}
+\end{definition}
+
+\item \begin{theorem} (\textbf{Uniform Continuity Theorem}). \citep{munkres2000topology} \\
+ Let $f: X \rightarrow Y$ be a \textbf{continuous} map of the \textbf{compact} metric space $(X, d_X) $ to the metric space $(Y, d_Y)$. Then $f$ is \textbf{uniformly continuous}.
+\end{theorem}
+
+
+\item \begin{remark}
+\begin{align*}
+f\text{ continous } + \text{ compact domain } \Rightarrow f\text{ uniformly continous }
+\end{align*}
+\end{remark}
+
+
+\item \begin{definition}
+If $X$ is a space, a point $x$ of X is said to be \emph{\textbf{an isolated point}} of $X$ if \emph{the one-point set} $\{x\}$ is \emph{\textbf{open}} in $X$.
+\end{definition}
+
+\item \begin{theorem} (\textbf{Uncountability in Compact Hausdorff Space}) \citep{munkres2000topology}\\
+Let $X$ be a nonempty \textbf{compact Hausdorff} space. If $X$ has \textbf{no isolated points}, then $X$ is \textbf{uncountable}.
+\end{theorem}
+
+
+\item \begin{corollary} \citep{munkres2000topology}\\
+Every \textbf{closed interval} in $\bR$ is \textbf{uncountable}.
+\end{corollary}
+
+\item \begin{exercise} (\textbf{Cantor Set}) \citep{munkres2000topology}\\
+Let $A_0$ be the \textbf{closed interval} $[0, 1]$ in $\bR$. Let $A_1$ be the set obtained from $A_0$ by \textbf{deleting} its ``\textbf{middle third}” $(1/3, 2/3)$. Let $A_2$ be the set obtained from $A_1$ by deleting its``middle thirds” $(1/9, 2/9)$ and $(7/9, 8/9)$. In general, define $A_n$ by the equation
+\begin{align*}
+A_n = A_{n-1} \setminus \paren{\bigcup_{k=0}^{\infty}\paren{\frac{1 + 3k}{3^k}, \frac{2 + 3k}{3^k}}}.
+\end{align*}
+The \textbf{intersection}
+\begin{align*}
+C = \bigcap_{n \in \bZ_{+}}A_n
+\end{align*}
+is called \underline{\textbf{the Cantor set}}; it is a \textbf{subspace} of $[0, 1]$.
+\begin{enumerate}
+\item Show that $C$ is \textbf{totally disconnected}.
+\item Show that $C$ is \textbf{compact}.
+\item Show that each set $A_n$ is a \textbf{union} of \textbf{finitely} many disjoint \textbf{closed intervals} of
+length $1/3^n$; and show that the \textbf{end points} of these intervals lie in $C$.
+\item Show that $C$ has \textbf{no isolated points}.
+\item Conclude that $C$ is \textbf{uncountable}.
+\end{enumerate}
+\end{exercise}
+\end{itemize}
+\subsubsection{Limit Point Compactness}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Limit Point Compactness}})\\
+A space $X$ is said to be \underline{\emph{\textbf{limit point compact}}} if \emph\textbf{{every infinite subset}} of $X$ has a \emph{\textbf{limit point}}.
+\end{definition}
+
+\item \begin{proposition}(\textbf{Compactness $\Rightarrow$ Limit Point Compactness}) \citep{munkres2000topology}\\
+\textbf{Compactness} implies \textbf{limit point compactness}, but \textbf{not conversely}.
+\end{proposition}
+
+\item \begin{example}(\textbf{Limit Point Compactness $\not\Rightarrow$ Compactness}) \\
+Let $Y$ consist of \emph{\textbf{two points}}; give $Y$ the topology consisting of $Y$ and the empty set. Then the space $X = \bZ_{+} \times Y$ is \textbf{\emph{limit point compact}}, for \emph{every nonempty subset of $X$ has a \textbf{limit point}}. It is \emph{\textbf{not compact}}, for the \emph{covering} of $X$ by the open sets $U_n = \set{n} \times Y$ has \emph{no finite subcollection covering} $X$. \qed
+\end{example}
+
+\item \begin{definition} (\emph{\textbf{Sequential Compactness}})\\
+Let $X$ be a topological space. If $(x_n)$ is a \emph{sequence} of points of $X$, and if
+\begin{align*}
+n_1 < n_2 < \ldots < n_i < \ldots
+\end{align*}
+is an increasing sequence of positive integers, then the sequence $(y_i)$ defined by setting $y_i = x_{n_i}$ is called a \emph{\textbf{subsequence}} of the sequence $(x_n)$. 
+
+The space $X$ is said to be \underline{\emph{\textbf{sequentially compact}}} if \emph{every sequence of points of $X$ has a \textbf{convergent subsequence}}.
+\end{definition}
+
+\item \begin{theorem} (\textbf{Equivalent Definitions of Compactness in Metric Space}) \citep{munkres2000topology}\\
+Let $X$ be a \textbf{metrizable space}. Then the following are \textbf{equivalent}:
+\begin{enumerate}
+\item $X$ is \textbf{compact}.
+\item $X$ is \textbf{limit point compact}.
+\item $X$ is \textbf{sequentially compact}.
+\end{enumerate}
+\end{theorem}
+\end{itemize}
+\subsubsection{Local Compactness}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Local Compactness}})\\
+A space $X$ is said to be \underline{\emph{\textbf{locally compact at $x$}}} if there is some \emph{\textbf{compact subspace}} $C$ of $X$ that contains a \emph{\textbf{neighborhood}} of $x$. 
+
+If $X$ is \emph{locally compact} at \emph{each of its points}, $X$ is said simply to be \underline{\emph{\textbf{locally compact}}}.
+\end{definition}
+
+\item \begin{example} 
+For the one-dimensional space:
+\begin{enumerate}
+\item The real line $\bR$ is \emph{\textbf{locally compact}}. The point $x$ lies in some interval $(a, b)$, which in turn is \emph{contained} in \emph{the compact subspace} $[a, b]$. 
+\item The subspace $\bQ$ of rational numbers is \emph{\textbf{not locally compact}}.
+\end{enumerate}
+\end{example}
+
+
+\item \begin{example}
+For product space of $\bR$:
+\begin{enumerate}
+\item The \emph{\textbf{finite dimensional space}} $\bR^n$ is \emph{\textbf{locally compact}}; the point $x$ lies in some basis element
+$(a_1, b_1) \xdotx{\times} (a_n, b_n)$, which in turn lies in \emph{the compact subspace} $[a_1, b_1] \xdotx{\times} [a_n, b_n]$.
+\item The \emph{\textbf{countable infinite dimensional space}} $\bR^{\omega}$ is \emph{\textbf{not locally compact}}; \emph{none of its basis elements are contained in compact
+subspaces.} For if
+\begin{align*}
+B = (a_1, b_1) \xdotx{\times} (a_n, b_n) \times \bR \xdotx{\times} \bR \times \ldots
+\end{align*}
+were contained in a \emph{compact subspace}, then its \emph{\textbf{closure}}
+\begin{align*}
+\bar{B} = [a_1, b_1] \xdotx{\times} [a_n, b_n] \times \bR \xdotx{\times} \bR \times \ldots
+\end{align*}
+would be \emph{\textbf{compact}}, which it is not.
+\end{enumerate} 
+\end{example}
+
+\item \begin{example} (\emph{\textbf{Simply Ordered Set with Least Upper Bound Property}})\\
+Every \underline{\emph{\textbf{simply ordered} set}} $X$ \emph{having \underline{\textbf{the least upper bound property}}} is \emph{\textbf{locally compact}}: Given a basis element for $X$, it is contained in a \emph{closed interval} in $X$, which is compact.
+\end{example}
+
+\item \begin{example} (\emph{\textbf{Manifold}}) \citep{lee2018introduction} \\
+Every \underline{\emph{\textbf{topological manifold}}} is \emph{\textbf{locally compact Hausdorff}}.
+
+Thus \underline{\emph{\textbf{every smooth manifold}}} is  \emph{\textbf{locally compact Hausdorff}}.
+\end{example}
+
+\item \begin{definition} (\emph{\textbf{Precompactness}})\\
+A subset of $X$ is said to be \underline{\emph{\textbf{precompact}}} in $X$ if its \emph{\textbf{closure}} in $X$ is \emph{\textbf{compact}}.
+\end{definition}
+
+
+\item If $X$ is \emph{not a compact Hausdorff space}, then \emph{under what conditions} is $X$ \emph{homeomorphic} with \emph{a \textbf{subspace} of a compact Hausdorff space} ?
+
+\begin{theorem} (\textbf{Unique One-Point Compactification}) \citep{munkres2000topology}\\
+Let $X$ be a space. Then $X$ is \underline{\textbf{locally compact Hausdorff}} if and only if there exists a space $Y$ satisfying the following conditions:
+\begin{enumerate}
+\item $X$ is a subspace of $Y$.
+\item The set $Y \setminus X$ consists of \textbf{a single point} (which is the limit point of $X$).
+\item $Y$ is a \textbf{compact Hausdorff} space.
+\end{enumerate} 
+If $Y$ and $Y'$ are two spaces satisfying these conditions, then there is a \textbf{homeomorphism} of $Y$ with $Y'$ that equals \textbf{the identity map} on $X$.
+\end{theorem}
+
+\item \begin{definition} (\emph{\textbf{One-Point Compactification}})\\
+If $Y$ is a \emph{\textbf{compact Hausdorff}} space and $X$ is a proper \emph{subspace} of $Y$ whose \emph{\textbf{closure}} equals $Y$, then $Y$ is said to be a \underline{\textbf{\emph{compactification}}} of $X$. 
+
+If $Y\setminus X$ equals \emph{a single point}, then $Y$ is called \underline{\textbf{\emph{the one-point compactification}}} of $X$.
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Locally Compact Hausdorff} $=$ Existance of Unique One-Point Compactification})\\
+$X$ has a \emph{\textbf{one-point compactification}} $Y$ if and only if $X$ is a \emph{\textbf{locally compact Hausdorff space}} that is \emph{not itself compact}. 
+
+We speak of $Y$ as ``\emph{\textbf{the}}" \emph{one-point compactification} because $Y$ is \emph{\textbf{uniquely}} determined up to a \emph{homeomorphism}.
+\end{remark}
+
+\item \begin{example}
+\emph{\textbf{The one-point compactification}} of the real line $\bR$ is \emph{\textbf{homeomorphic}} with the \emph{\textbf{circle}} $\bS^1$.
+
+Similarly, \emph{\textbf{the one-point compactification}} of $\bR^2$ is \emph{\textbf{homeomorphic}} to the \emph{\textbf{sphere}} $\bS^2$.
+\end{example}
+
+\item \begin{proposition} (\textbf{Locally Compact Hausdorff $=$ Precompact Basis}) \citep{munkres2000topology} \\
+Let $X$ be a \textbf{Hausdorff} space. Then $X$ is \textbf{locally compact} \textbf{if and only if} given $x$ in $X$, and given a neighborhood $U$ of $x$, there is a neighborhood $V$ of $x$ such that $\bar{V}$ is \textbf{compact} and $\bar{V} \subseteq U$.
+\end{proposition}
+
+\item \begin{corollary} (\textbf{Closed or Open Subspace}) \citep{munkres2000topology} \\
+Let $X$ be locally compact Hausdorff; let $A$ be a subspace of $X$. If $A$ is \textbf{closed} in $X$ or \textbf{open} in $X$, then $A$ is locally compact.
+\end{corollary}
+
+\item \begin{corollary}  \citep{munkres2000topology} \\
+A space $X$ is \textbf{homeomorphic} to an \textbf{open} subspace of a \textbf{compact Hausdorff} space \textbf{if and only if} $X$ is \textbf{locally compact Hausdorff}.
+\end{corollary}
+
+\item \begin{remark}
+\emph{Locally Compact Hausdorff $=$ Open Subspace of Compact Hausorff}
+ \end{remark}
+ 
+ \item \begin{theorem} \citep{treves2016topological}\\
+ Every locally compact Hausdorff topological vector space is \textbf{finite-dimensional}.
+ \end{theorem}
+
+
+\item \begin{remark} (\textbf{\emph{Equivalent Definition of Locally Compact Hausdorff Space}})\\
+For a \textbf{\emph{Hausdorff space}} $X$,  the following are \textbf{\emph{equivalent}}:
+\begin{enumerate}
+\item $X$ is \textbf{\emph{locally compact}}.
+\item Each point of $X$ has a \textbf{\emph{precompact}} neighborhood. 
+\item $X$ has a basis of \textbf{\emph{precompact}} open subsets.
+\end{enumerate}
+\end{remark}
+\end{itemize}
+
+\subsection{The Tychonoff Theorem}
+\begin{itemize}
+\item \begin{lemma} (\textbf{Existance of Maximal Collection with Finite Intersection Property}) \citep{munkres2000topology}\\
+Let $X$ be a set; let $\srA$ be a collection of subsets of $X$ having the \textbf{finite intersection property}. Then there is a collection $\srD$ of subsets of $X$ such that $\srD$ \textbf{contains} $\srA$, and $\srD$ has the finite intersection property, and no collection of subsets of $X$ that properly contains $\srD$ has this property.
+\end{lemma}
+[Hint: apply Zorn's Lemma to \emph{the collection of collections of subsets} with finite intersection property]
+
+\item \begin{definition}
+We often say that a collection $\srD$ satisfying the conclusion of this theorem is \emph{\textbf{maximal}} \emph{with respect to \textbf{the finite intersection property}}.
+\end{definition}
+
+\item \begin{lemma} (\textbf{Elements of Maximal Collection with Finite Intersection Property})  \citep{munkres2000topology}\\
+Let $X$ be a set; let $\srD$ be a collection of subsets of $X$ that is \textbf{maximal} with respect to \textbf{the finite intersection property}. Then:
+\begin{enumerate}
+\item Any \textbf{finite intersection of elements} of $\srD$ is an \textbf{element} of $\srD$.
+\item If $A$ is a subset of $X$ that \textbf{intersects} \textbf{every element }of $\srD$, then $A$ is an element of $\srD$.
+\end{enumerate}
+\end{lemma}
+
+\item \begin{theorem} (\textbf{Tychonoff Theorem}). \citep{munkres2000topology} \\
+ An \underline{\textbf{arbitrary product}} of \textbf{compact} spaces is \textbf{compact} in the \underline{\textbf{product topology}}.
+\end{theorem}
+\end{itemize}
+
+\subsection{Nets and Convergence in Topological Space}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Directed System of Index Set}})\\
+A \underline{\emph{\textbf{directed system}}} is \emph{an index set} $I$ together with an \emph{\textbf{ordering}} $\prec$ which satisfies:
+\begin{enumerate}
+\item If $\alpha, \beta \in l$ then there exists $\gamma \in I$ so that $\gamma \succ \alpha$ and $\gamma \succ \beta$.
+\item $\prec$  is a \textbf{\emph{partial ordering}}.
+\end{enumerate}
+\end{definition}
+
+\item \begin{definition}
+A subset $K$ of $I$ is said to be \underline{\emph{\textbf{cofinal}}} in $I$ if for each $\alpha \in I$, there exists $\beta \in K$ such that $\alpha \preceq \beta$. 
+\end{definition}
+
+\item \begin{proposition}
+If $I$ is a directed system, and $K$ is cofinal in $I$, then $K$ is a directed system. 
+\end{proposition}
+
+\item \begin{definition} (\textbf{\emph{Net}})\\
+A \underline{\emph{\textbf{net}}} in a topological space $X$ is a mapping from a \emph{\textbf{directed system}} $I$ to $X$; we denote it by $\set{x_\alpha}_{\alpha \in I}$
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Net} vs. \textbf{Sequence}})\\
+\emph{\textbf{Net}} is a generalization and abstraction of \emph{\textbf{sequence}}. The directed system $I$ is \emph{\textbf{not necessarily countable}}. So $\set{x_\alpha}_{\alpha \in I}$ may not be a countable sequence. \emph{A sequence is a net with countable index set $I \subseteq \bN$}. The directed system can be any set e.g. a graph.
+\end{remark}
+
+\item \begin{definition}
+If $P(\alpha)$ is a \emph{\textbf{proposition}} depending on an \emph{\textbf{index}} $\alpha$ in a \emph{directed set} $I$ we say \underline{\emph{\textbf{$P(\alpha)$ is eventually true}}} if there is a $\beta$ in $I$ with $P(\alpha)$ \emph{true} if \emph{for all} $\alpha \succ \beta$. 
+
+We say \underline{\emph{\textbf{$P(\alpha)$ is frequently true}}} if it is \emph{\textbf{not eventually false}}, that is, if for any $\beta$ \emph{there exists} an $\alpha \succ \beta$ with $P(\alpha)$ \emph{true}.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Convergence}})\\
+A \emph{\textbf{net}} $\set{x_\alpha}_{\alpha \in I}$  in a topological space $X$ is said to \underline{\emph{\textbf{converge}}} to a point $x \in X$ (written $x_{\alpha} \rightarrow x$) if for \textbf{\emph{any neighborhood}} $N$ of $x$, \emph{\textbf{there exists}} a $\beta \in l$ so that $x_{\alpha} \in N$ if $\alpha \succeq \beta$. The point $x$ that being converged to is called \underline{\emph{\textbf{the limit point}}} of  $x_{\alpha}$.
+
+Note that if $x_\alpha \rightarrow x$, then $x_{\alpha}$ is \emph{\textbf{\underline{eventually} in all neighborhoods of}} $x$. If $x_{\alpha}$ is \emph{\textbf{\underline{frequently} in any neighborhood of}} $x$, we say that $x$ is a \underline{\emph{\textbf{cluster point}}} of $x_{\alpha}$. 
+\end{definition}
+
+
+\item \begin{remark}
+This definition \emph{generalizes} the $\epsilon$-$\delta$ language for convergence in metric space.  Notice that the notions of \emph{limit} and \emph{cluster point} generalize the same notions for sequences in a metric space..
+\end{remark} 
+
+\item \begin{proposition} (\textbf{Net Lemma}) \citep{reed1980methods}\\
+Let $A$ be a set in a topological space $X$. Then, a point $x \in \bar{A}$, the \textbf{closure} of $A$ \textbf{if and only if} there is a net $\set{x_\alpha}_{\alpha \in I}$ with $x_{\alpha} \in A$, So that $x_{\alpha} \rightarrow x$.
+\end{proposition}
+
+\item \begin{proposition} \citep{munkres2000topology}
+\begin{enumerate}
+\item (\textbf{Continuous Function}): A function $f$ from a topological space $X$ to a topological space $Y$ is \textbf{continuous} if and only if for \textbf{every convergent net} $\set{x_\alpha}_{\alpha \in I}$ \textbf{in $X$}, with $x_{\alpha} \rightarrow x$, the net $\{f(x_{\alpha})\}_{\alpha \in I}$ \textbf{converges in $Y$} to $f(x)$.
+\item (\textbf{Uniqueness of Limit Point for Hausdorff Space}): Let $X$ be a \textbf{Hausdorff space}. Then a net $\set{x_\alpha}_{\alpha \in I}$ in $X$ can have \textbf{at most one limit}; that is, if $x_{\alpha} \rightarrow x$ and $x_{\alpha} \rightarrow y$, then $x = y$.
+\end{enumerate}
+\end{proposition}
+
+\item \begin{definition}
+A net  $\set{x_\alpha}_{\alpha \in I}$ is a \underline{\emph{\textbf{subnet}}} of a net  $\set{y_\beta}_{\beta \in J}$ if and only if there is
+a function $F: I \rightarrow J$ such that
+\begin{enumerate}
+\item $x_\alpha = y_{F(\alpha)}$ for each $\alpha \in I$.
+\item For all $\beta' \in J$, there is an $\alpha' \in I$ such that $\alpha \succ \alpha'$ implies $F(\alpha) \succ \beta'$ (that is,
+$F(\alpha)$ is \emph{\textbf{eventually} \textbf{larger} than \textbf{any fixed}} $\beta \in J$ $\Rightarrow$ \underline{$F(I)$ is \textbf{\emph{cofinal}} in $J$}).
+\end{enumerate}
+\end{definition}
+
+\item \begin{proposition}
+A point $x$ in a topological space $X$ is a \textbf{cluster point} of a \textbf{net} $\set{x_\alpha}_{\alpha \in I}$ if and only if \textbf{some subnet} of $\set{x_\alpha}_{\alpha \in I}$ \textbf{converges} to $x$.
+\end{proposition}
+
+\item \begin{theorem} (\textbf{The Bolzano-Weierstrass Theorem}) \citep{reed1980methods, munkres2000topology} \\
+A space $X$ is \textbf{compact} \textbf{if and only if} \textbf{every net} in $X$ \textbf{has a convergent subnet}.
+\end{theorem}
+\begin{proof}To prove the implication $\Rightarrow$, let $B_{\alpha} = \set{x_{\beta}: \alpha \preceq \beta}$ and show that
+$\{B_{\alpha}\}$ has \emph{\textbf{the finite intersection property}}. 
+
+To prove $\Leftarrow$, let $\srA$ be a collection of
+\emph{\textbf{closed sets}} having \emph{the finite intersection property}, and let $\srB$ be the collection of
+\emph{all finite intersections} of elements of $\srA$, \emph{\textbf{partially ordered}} by \emph{reverse inclusion}.
+\end{proof}
+
+\item \begin{remark} (\emph{\textbf{Compactness} via \textbf{Generalized Sequential Compactness}})\\
+By \emph{generalization} of \emph{\textbf{squences}} $\Rightarrow$ \emph{\textbf{nets}}, we obtain a  \emph{generalization} of the result of \emph{\textbf{sequential compactnesss} in \textbf{metric space}} to \emph{\textbf{compactness}} in \emph{general topological space}.
+
+If the \emph{\textbf{first countability axiom}} is satisfied, we can use \emph{subsequence} and \emph{sequence} in place of \emph{subnet} and \emph{net}.
+\end{remark}
+\end{itemize}
+
+\section{Countability and The Separation Axioms}
+\begin{itemize}
+\item \begin{remark} (\emph{\textbf{Countability}})\\
+A topological space $X$ is said to be 
+\begin{enumerate}
+\item \emph{\textbf{first-countable}} if there is a \emph{\textbf{countable neighborhood basis}} at each point, 
+\item \underline{\emph{\textbf{second-countable}}} if there is \emph{\textbf{a countable basis}} for its topology.
+\end{enumerate}
+\end{remark}
+
+\item \begin{remark} (\textbf{\emph{The Separation Axioms}})\\
+A topological space is called a 
+\begin{enumerate}
+\item  \underline{\emph{\textbf{$T_1$ space}}}:  every pair of \underline{\emph{\textbf{disjoint one-point sets}}} can be \emph{\textbf{separated} by  \underline{\textbf{one open set}}}, \emph{which \textbf{contains only one} of the singular pair}. 
+
+It is equivalent to say that \emph{every \textbf{one point set} is \textbf{closed}}.
+
+\item \underline{\emph{\textbf{Hausdorff}} (or $T_2$)}:  every pair of \underline{\emph{\textbf{disjoint one-point sets}}} can be  \emph{\textbf{separated} by \textbf{\underline{two} \underline{disjoint open sets}}}, \emph{each containing one of the singular sets, respectively}.
+
+\item \underline{\emph{\textbf{regular}} (or $T_3$)}:  it is $T_1$ and every pair of \underline{\emph{\textbf{disjoint one-point set and closed set}}} can be  \emph{\textbf{separated} by \textbf{\underline{two disjoint open sets}}}, \emph{each containing one of the pair (singular set and closed set), respectively}. 
+
+It is equivalent to say that each point has \emph{\textbf{closed neighborhood basis}}.
+
+\item \underline{\emph{\textbf{normal}} (or $T_4$)} if and only if it is $T_1$ and every pair of \underline{\emph{\textbf{disjoint closed sets}}} can be  \emph{\textbf{separated} by \textbf{\underline{two disjoint open sets}}}, \emph{each containing one of the closed sets, respectively}.
+\end{enumerate}
+\end{remark}
+
+\item \begin{remark}
+The \emph{\textbf{connectedness}} and \emph{\textbf{compactness}} are both \emph{\textbf{global topological properties}} of space;
+
+On the other hand,  \textit{\textbf{the countability axioms}} and  \emph{\textbf{the separation axioms}} describes \emph{\textbf{the local topological properties}} of the space.
+\end{remark}
+
+\item \begin{remark} 
+Both \emph{the countability axioms} and \emph{the separation axioms} arise from deeper study of topology itself. 
+\begin{enumerate}
+\item \textbf{\emph{first-countable}} $\Rightarrow$ if \emph{\textbf{convergent sequence}} is adequate to \emph{\textbf{detect limit points}} of a set.
+
+\item \emph{\textbf{second-countable}} $\Rightarrow$ \emph{\textbf{separability}} (i.e. existance of \emph{\textbf{countable dense set}}); \emph{\textbf{Lindel\"of space}} (existance of \emph{countable open subcovering}); \emph{\textbf{topological manifolds}};
+
+\item \emph{\textbf{Hausdorff ($T_2$)}} $\Rightarrow$ if \emph{\textbf{convergent sequence has at most one limit point}} 
+
+\item \emph{\textbf{regular ($T_3$)}} $\Rightarrow$ \emph{\textbf{Urysohn metrization theorem:}} if $+$ \emph{\textbf{second-countable}} then \emph{\textbf{metrizable}}
+
+\item  \emph{\textbf{normal ($T_4$)}} $\Rightarrow$  \emph{\textbf{Urysohn lemma:}} if every pair of \emph{\textbf{disjoint closed sets}} in $X$ can be
+\emph{separated by \textbf{disjoint open sets}}, then each such pair can be \emph{\textbf{separated by a continuous function}}.
+
+\qquad  $\Rightarrow$ \emph{\textbf{Urysohn metrization theorem:}} since  \emph{\textbf{regular}} $+$ \emph{\textbf{second-countable}} $\Rightarrow$ \emph{\textbf{normal}}.
+
+\qquad $\Rightarrow$  \emph{\textbf{Tietze extension theorem}}: any \emph{\textbf{real-valued continous function}} on \emph{\textbf{closed subspace}} of \emph{normal space} can be extended to the entire space.
+
+\qquad $\Rightarrow$ \emph{\textbf{Existence of finite partitions of unity}}: 
+\end{enumerate}
+\end{remark}
+\end{itemize}
+
+\subsection{The Countability Axioms}
+\begin{itemize}
+\item  \begin{definition} (\emph{\textbf{First-Countable}})\\
+A space $X$ is said to have a \underline{\emph{\textbf{countable basis at $x$}}} if there is a \emph{\textbf{countable} collection} $\srB$ of \emph{\textbf{neighborhoods}} of $x$ such that \emph{each neighborhood} of $x$ \emph{\textbf{contains at least one}} of the elements of $\srB$. 
+
+A space that has \emph{a \textbf{countable basis} at each of its points} is said to satisfy \underline{\emph{\textbf{the first countability}}} \underline{\emph{\textbf{axiom}}}, or to be \underline{\emph{\textbf{first-countable}}}.
+\end{definition}
+
+\item \begin{remark}
+\emph{Every metric space is first-countable.}
+\end{remark}
+
+\item \begin{proposition} (\textbf{Limit Point Detected by Convergent Sequence}) \citep{munkres2000topology}\\
+Let $X$ be a topological space.
+\begin{enumerate}
+\item Let $A$ be a subset of $X$. If there is a sequence of points of $A$ converging to $x$, then $x \in \bar{A}$; the \textbf{converse} holds if $X$ is \textbf{first-countable}.
+\item Let $f : X \rightarrow Y$. If $f$ is continuous, then for every convergent sequence $x_n \rightarrow x$ in $X$, the sequence $f(x_n)$ converges to $f(x)$. The \textbf{converse} holds if X is \textbf{first-countable}.
+\end{enumerate}
+\end{proposition}
+
+\item \begin{definition} (\emph{\textbf{Second-Countable}})\\
+If a space $X$ has \emph{\textbf{a countable basis} for its topology}, then $X$ is said to satisfy \emph{\textbf{the second countability axiom}}, or to be \underline{\emph{\textbf{second-countable}}}.
+\end{definition}
+
+\item \begin{example} ($\bR$)\\
+The real line $\bR$ has a \emph{\textbf{countable basis}}, which is the collection of all \emph{open intervals} $(a, b)$ with \emph{\textbf{rational end points}}.
+\end{example}
+
+\item \begin{example} ($\bR^n$ and $\bR^{\omega}$ under \emph{product topology})
+\begin{enumerate}
+\item \emph{The finite dimensional space} $\bR^n$ has a \emph{\textbf{countable basis}}, which is the collection of all \emph{product of intervals}  with \emph{\textbf{rational end points}}.
+\item \emph{The countable infinite dimensional space} $\bR^\omega$ has a \emph{\textbf{countable basis}}, which is the
+collection of all products $\prod_{n\in \bZ_{+}} U_n$, where $U_n$ is an \emph{open interval with \textbf{rational end points}} \emph{for \textbf{finitely many} values} of $n$, and $U_n = \bR$ for \emph{all other values} of $n$.
+\end{enumerate}
+\end{example}
+
+\item \begin{example}  (\emph{$\bR^{\omega}$ under \textbf{Uniform Topology} \textbf{Not Second-Countable}})\\
+In the \emph{\textbf{uniform topology}}, $\bR^{\omega}$ satisfies \emph{the first countability axiom (being metrizable)}. However, it \emph{does \textbf{not satisfy the second}}. 
+\end{example}
+
+\item \begin{example} (\emph{\textbf{Topological Manifolds}})
+ \begin{definition}
+Suppose $M$ is a \emph{\textbf{topological space}}. We say that $M$ is a \underline{\emph{\textbf{topological manifold}}} of \emph{dimension $n$} or a \emph{\textbf{topological $n$-manifold}} if it has the following properties:
+\begin{enumerate}
+\item $M$ is a \emph{\textbf{Hausdorff space}}: for every pair of distinct points $p, q \in M$, there are disjoint open subsets $U, V \subseteq M$ such that $p \in U$ and $q \in V$.
+\item $M$ is \emph{\textbf{second-countable}}: there exists a \emph{\textbf{countable basis}} for the topology of $M$.
+\item $M$ is \emph{\textbf{locally Euclidean of dimension}} $n$: each point of $M$ has a neighborhood that is \emph{\textbf{homeomorphic}} to an open subset of $\bR^n$. 
+\end{enumerate}
+\end{definition}
+\end{example}
+
+\item Both countability axioms are well behaved with respect to the operations of taking subspaces or countable products:
+\begin{proposition}(\textbf{Subspaces and Countable Product}) \citep{munkres2000topology}\\
+A \textbf{subspace} of \rule{1cm}{0.0001mm}
+\begin{enumerate}
+\item a first-countable space is first-countable;
+\item a second-countable space is second-countable.
+\end{enumerate}
+And a \textbf{countable product} of \rule{1cm}{0.0001mm}
+\begin{enumerate}
+\item first-countable spaces is first-countable;
+\item second-countable spaces is second-countable.
+\end{enumerate}
+\end{proposition}
+
+\item \begin{definition} (\emph{\textbf{Dense Subset}})\\
+A subset $A$ of a space $X$ is said to be \underline{\emph{\textbf{dense}}} in $X$ if $\bar{A}=X$. (That is, \emph{every point in $X$ is a limit point of $A$.})
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Separability}})\\
+A topological space $X$ is called \underline{\emph{\textbf{separable}}} if and only if it has a \emph{\textbf{countable dense set}}.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Lindel{\"o}f Space}})\\
+A space for which \emph{every open covering} contains \emph{a \textbf{countable} subcovering} is called a \underline{\emph{\textbf{Lindel{\"o}f space}}}. 
+\end{definition}
+
+\item \begin{proposition} (\textbf{Properties of Second-Countability}) \citep{munkres2000topology}\\
+Suppose that $X$ has a \textbf{countable basis}. Then:
+\begin{enumerate}
+\item Every \textbf{open covering} of $X$ contains a \textbf{countable} subcollection covering $X$. ($X$ is \textbf{Lindel{\"o}f space})
+\item There exists a \textbf{countable} subset of $X$ that is \textbf{dense} in $X$. ($X$ is \textbf{separable})
+\end{enumerate}
+\end{proposition}
+
+\item \begin{proposition}  (\textbf{Metric Space Equivalence}) \citep{munkres2000topology}\\
+Suppose that $X$ is a \textbf{metrizable spcae}. The following statements are equivalent: 
+\begin{enumerate}
+\item $X$ has a \textbf{countable basis} (\textbf{second-countable}).
+\item $X$ has a \textbf{countable dense subset} (\textbf{separable}).
+\item Every \textbf{open covering} of $X$ contains a \textbf{countable} subcollection covering $X$. (\textbf{Lindel{\"o}f space}).
+\end{enumerate}
+\end{proposition}
+
+
+
+\item \begin{example} (\emph{\textbf{The Product of two Lindel{\"o}f Spaces Need Not be Lindel{\"o}f}})\\
+The space $\bR_{\ell}$ is \emph{Lindel{\"o}f}, but the product space $\bR_{\ell}^2$ is not. $\bR_{\ell}^2$ is called \underline{\emph{\textbf{the Sorgenfrey plane}}}.
+
+The space $\bR_{\ell}^2$ has as basis all sets of the form $[a, b) \times [c, d)$. To show it is not \emph{Lindel{\"o}f}, consider the subspace
+\begin{align*}
+L = \set{(x, -x): x\in \bR_{\ell}}.
+\end{align*}
+It is easy to check that $L$ is \emph{\textbf{closed}} in $\bR_{\ell}^2$. Let us cover $\bR_{\ell}^2$ by \emph{\textbf{the open set}} $\bR_{\ell}^2 \setminus L$ and by
+all \emph{basis elements} of the form
+\begin{align*}
+[a, b) \times [-a, d).
+\end{align*}
+Each of these open sets intersects $L$ in \emph{\textbf{at most one point}}. Since $L$ is \emph{\textbf{uncountable}}, \emph{no countable subcollection covers} $\bR_{\ell}^2$. \qed
+\end{example}
+
+\item \begin{example} (\emph{\textbf{The Subspace of Lindel{\"o}f Space Need Not be Lindel{\"o}f}})\\
+The \emph{\textbf{ordered square}} $I_o^2$ is \emph{\textbf{compact}}; therefore it is \emph{Lindel{\"o}f}, trivially. However, the \emph{subspace} $A = I \times (0, 1)$ is \emph{\textbf{not Lindel{\"o}f}}. For $A$ is the union of the disjoint sets $U_x = \set{x} \times (0, 1)$, each of which is open in $A$. This collection of sets is \emph{\textbf{uncountable}}, and \emph{\textbf{no proper subcollection covers} $A$}. \qed
+\end{example}
+
+\item \begin{proposition}  (\textbf{Compact Metrizable Space}) \citep{munkres2000topology}\\
+Every \textbf{compact metrizable} space $X$ has a countable basis (i.e. \textbf{second-countable}). 
+\end{proposition} [Hint: Let $\srA_n$ be a finite covering of $X$ by $1/n$-balls.]
+
+\item \begin{proposition} (\textbf{Preservation by Continuity}) \citep{munkres2000topology}\\
+Let $f : X \rightarrow Y$ be continuous. 
+\begin{enumerate}
+\item If $X$ is \textbf{Lindel{\"o}f }, then $f(X)$ is \textbf{Lindel{\"o}f };
+\item if $X$ has a \textbf{countable dense subset}, then $f(X)$ satisfies the same condition.
+\end{enumerate}
+\end{proposition}
+
+\item \begin{proposition}(\textbf{Preservation by Product}) \citep{munkres2000topology}\\
+If $X$ is a \textbf{countable product} of spaces having countable dense subsets (\textbf{separable}), then $X$ has a countable dense subset (\textbf{separable}). 
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Preservation by Continuous Open Map}) \citep{munkres2000topology}\\
+Let $f : X \rightarrow Y$ be \textbf{continuous \underline{open map}}. If $X$ satisfies \textbf{the first} or \textbf{the second countability axiom}, then $f(X)$ satisfies the same axiom.
+\end{proposition}
+
+%\item \begin{remark} (\emph{Relationship of Several Topological Properties})
+%\[
+%  \begin{tikzcd}
+%     &  \text{\emph{\textbf{first-countable} space}} \\
+%   \text{\emph{\textbf{second-countable} space}}  \arrow[ur, bend left] \arrow{r}{} \arrow[dr]  & \arrow[l, bend right, dashed, "metrizable"] \text{\emph{\textbf{separable} space}}\\
+%     &  \arrow[ul, dashed,  bend left,  "metrizable"] \text{\emph{\textbf{Lindel{\"o}f} space}}.
+%  \end{tikzcd}
+%\] 
+%\end{remark}
+\end{itemize}
+
+\subsection{The Separation Axioms}
+\subsubsection{Definitions and Properties}
+\begin{itemize}
+\item \begin{definition} (\textbf{\emph{The Separation Axioms}})
+\begin{enumerate}
+\item A topological space is called a \underline{\emph{\textbf{$T_1$ space}}} if and only if for all $x$ and $y$, $x\neq y$, there is an \emph{\textbf{open set}} $U$ with $y \in U$, $x \not\in U$. 
+
+Equivalently, a space is $T_1$ \emph{if and only if} $\{x\}$ is \emph{\textbf{closed}} for each $x$.
+
+\item A topological space is called \underline{\emph{\textbf{Hausdorff}} (or $T_2$)} if and only if for all all $x$ and $y$, $x\neq y$, there are \emph{\textbf{open sets}}  $U$,  $V$ such that $x \in U$, $y \in V$, and $U \cap V = \emptyset$.
+
+\item A topological space is called \underline{\emph{\textbf{regular}} (or $T_3$)} if and only if it is $T_1$ and for all $x$ and $C$, \emph{\textbf{closed}}, with $x \not\in C$, there are \emph{\textbf{open sets}} $U$, $V$ such that $x \in U$, $C \subset V$, and $U \cap V = \emptyset$. 
+
+Equivalently, a space is $T_3$ if \emph{the \textbf{closed neighborhoods} of any point are a \textbf{neighborhood base}}.
+
+\item A topological space is called \underline{\emph{\textbf{normal}} (or $T_4$)} if and only if it is $T_1$ and for all $C_1$, $C_2$, \emph{\textbf{closed}}, with $C_1 \cap C_2 = \emptyset$, there are \emph{\textbf{open sets}} $U$, $V$ with $C_1 \subset U$,  $C_2 \subset V$, and $U \cap V = \emptyset$.
+\end{enumerate}
+\end{definition}
+
+\item \begin{proposition}
+\begin{align*}
+T_4 \Rightarrow T_3 \Rightarrow T_2 \Rightarrow T_1
+\end{align*}
+\end{proposition}
+
+\item \begin{remark} (\emph{\textbf{Separation axioms $\neq$ Discounnected Space}})\\
+These axioms are called \emph{\textbf{separation axioms}} for the reason that they involve ``\emph{separating”} certain kinds of \emph{sets from one another} by \emph{\textbf{disjoint open sets}}. 
+
+We have used the word ``\emph{separation}" before, of course, when we studied \emph{connected spaces}. But in that case, we were trying to find \emph{disjoint open sets} \emph{\textbf{whose union was the entire space}}.
+\end{remark}
+
+\item \begin{lemma}
+Let $X$ be a topological space. Let one-point sets in $X$ be closed.
+\begin{enumerate}
+\item $X$ is \textbf{regular} if and only if given a point $x$ of $X$ and a neighborhood $U$ of $x$,
+there is a \textbf{neighborhood} $V$ of $x$ such that $\bar{V} \subseteq U$.
+\item $X$ is \textbf{normal} if and only if given a \textbf{closed} set $A$ and an open set $U$ containing $A$,
+there is an \textbf{open set} $V$ containing $A$ such that $\bar{V}\subseteq U$.
+\end{enumerate}
+\end{lemma}
+
+\item \begin{remark}
+$X$ is \emph{\textbf{regular}} $\Leftrightarrow$  Each point of $X$ has a \textbf{\emph{closed neighborhood}}
+
+Note that $X$  is \emph{\textbf{locally compact Hausdorff}} $\Leftrightarrow$ Each point of $X$ has a \textbf{\emph{precompact neighborhood}} i.e. it has a closed neighborhood and \emph{the closure is compact}.
+\end{remark}
+
+\item \begin{proposition} (\textbf{Simply Ordered Set is Hausdorff}) \citep{munkres2000topology} \\
+Every \textbf{simply ordered set} is a \textbf{Hausdorff} space in the \textbf{order topology}. 
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Order Topology is Regular}) \citep{munkres2000topology} \\
+Every \textbf{order topology} is a \textbf{regular}. 
+\end{proposition}
+
+\item \begin{remark}
+It can be shown actually that every \textbf{\emph{order topology}} is a \textbf{\emph{normal}}, which includes all of these two previous results.
+\end{remark}
+
+
+\item 
+\begin{proposition} 
+(\textbf{Preservation of Hausdorff and Regular Axioms})
+\begin{enumerate}
+\item The \textbf{product} of two Hausdorff/regular spaces is a Hausdorff/regular space. 
+\item A \textbf{subspace} of a Hausdorff/regular space is a Hausdorff/regular space.
+\end{enumerate}
+\end{proposition}
+
+\item \begin{example} (\emph{\textbf{$\bR_{K}$ is Hausdorff but Not Regular}})\\
+The space $\bR_K$ is \emph{\textbf{Hausdorff}} but \emph{\textbf{not regular}}. Recall that $\bR_K$ denotes the reals
+in the topology having as \emph{basis all open intervals $(a, b)$ and all sets of the form $(a, b) \setminus K$},
+where $K = \set{1/n: n \in \bZ_{+}}$. This space is \emph{Hausdorff}, because any two distinct points have
+\emph{disjoint open intervals} containing them. But it is \emph{\textbf{not regular}}. The set $K$ is \emph{\textbf{closed}} in $\bR_K$ , and it does \emph{not contain the point $0$}. 
+
+But it is \emph{\textbf{not regular}}. The set $K$ is \emph{\textbf{closed}} in $\bR_K$ , and it does \emph{not contain the point $0$}.
+Suppose that there exist \emph{disjoint open sets} $U$ and $V$ containing $0$ and $K$, respectively.
+Choose a basis element containing $0$ and lying in $U$. It must be a basis element of the form $(a, b) \setminus K$, since each basis element of the form $(a, b)$ containing $0$ intersects $K$. Choose $n$ large enough that $1/n \in (a, b)$. Then choose a basis element about $1/n$ contained in $V$;
+it must be a basis element of the form $(c, d)$. Finally, choose $z$ so that $z < 1/n$ and $z > \max\set{c, 1/(n + 1)}$. Then $z$ belongs to both $U$ and $V$, so they are not disjoint. \qed
+\end{example}
+
+\item \begin{example}(\emph{\textbf{$\bR_{\ell}$ is Normal}})\\
+The space $\bR_{\ell}$ is \emph{\textbf{normal}}. Recall that $\bR_{\ell}$ is $\bR$ with \emph{\textbf{lower limit topology}}. (i.e. the basis element is \emph{the half-interval} $[a, b)$.) It is immediate that \emph{one-point sets are closed} in $\bR_{\ell}$, since the topology of $\bR_{\ell}$ is \emph{finer} than that of $\bR$. 
+
+To check \emph{\textbf{normality}}, suppose that $A$ and $B$ are \emph{disjoint closed sets} in $\bR_{\ell}$. For each point $a$ of $A$ choose a basis element $[a, x_a)$ \emph{not intersecting} $B$; and for each point $b$ of $B$ choose a basis element $[b, x_b)$ \emph{not intersecting} $A$.
+The open sets
+\begin{align*}
+U = \bigcup_{a\in A}[a, x_a)\quad \text{ and }\quad V = \bigcup_{b \in B}[b, x_b)
+\end{align*}
+are \emph{\textbf{disjoint open sets}} about $A$ and $B$, respectively.
+\end{example}
+
+\item \begin{example} (\emph{\textbf{The Sorgenfrey plane $\bR_{\ell}^2$ is Not Normal}})\\
+The space $\bR_{\ell}$ is regular, so the product space $\bR_{\ell}^2$ is regular. Thus this example serves \emph{two purposes}. It shows that \emph{\textbf{a regular space need not be normal}}, and it shows that \emph{\textbf{the product of two normal spaces need not be normal}}.
+\end{example}
+
+\item \begin{definition} (\emph{\textbf{Perfect Map}})\\
+A \emph{\textbf{closed} \textbf{continuous} \textbf{surjective} map} $p : X \rightarrow Y$ is called a \underline{\emph{\textbf{perfect map}}} if $p^{-1}(\set{y})$ is
+\emph{\textbf{compact}} for each $y \in Y$.
+\end{definition}
+
+\item \begin{remark}
+\emph{A perfect map} is a \emph{quotient map}.
+\end{remark}
+
+\item \begin{proposition}  (\textbf{Preservation Properties of Perfect Map}) \citep{munkres2000topology}\\
+Let $p : X \rightarrow Y$ be a \textbf{perfect map}, i.e. it is a \textbf{closed continuous surjective} map who preimage of one point set is \textbf{compact}. Then
+\begin{enumerate}
+\item If $X$ is \textbf{Hausdorff}, then so is $Y$.
+\item If $X$ is \textbf{regular}, then so is $Y$.
+\item If $X$ is \textbf{locally compact}, then so is $Y$.
+\item If $X$ is \textbf{second-countable}, then so is $Y$.
+\end{enumerate}
+\end{proposition}
+
+\item \begin{theorem} (\textbf{Preservation Properties of Orbit Space}) \citep{munkres2000topology}\\
+Let $G$ be a \textbf{compact topological group}; let $X$ be a topological space; let $\alpha$ be an \textbf{action} of $G$ on $X$. The orbit space $X/G$ is the quotient space under equivalence relationship $x \sim \alpha(x)$. 
+\begin{enumerate}
+\item If $X$ is \textbf{Hausdorff}, then so is $X/G$.
+\item If $X$ is \textbf{regular}, then so is $X/G$.
+\item If $X$ is \textbf{normal}, then so is $X/G$.
+\item If $X$ is \textbf{locally compact}, then so is $X/G$.
+\item If $X$ is \textbf{second-countable}, then so is $X/G$.
+\end{enumerate}
+\end{theorem}
+
+
+\item \begin{definition}
+If $X$ and $Y$ are topological spaces, a map $F: X \rightarrow Y$ (continuous or not) is said to be \underline{\emph{\textbf{proper}}} if for every \textbf{\emph{compact}} set $K \subseteq Y$, the \emph{\textbf{preimage}} $F^{-1}(K)$ is \emph{\textbf{compact}}.
+\end{definition}
+\end{itemize}
+
+\subsubsection{Normal Space}
+\begin{itemize}
+\item \begin{remark}
+As we have seen, unlike its name suggested, normal spaces are \emph{not as well-behaved} as one might wish.  On the other hand, \emph{\textbf{most of the spaces}} with which we are familiar do \emph{satisfy this axiom}, as we shall see. 
+
+Its \emph{\textbf{importance}} comes from the fact that the results one can prove \emph{\textbf{under the hypothesis of \underline{normality}}} are central to much of topology. The \emph{\textbf{Urysohn metrization theorem}} and \emph{\textbf{the Tietze extension theorem}} are two such results
+\end{remark}
+
+\item \begin{proposition}  \citep{munkres2000topology} \\
+Every \underline{\textbf{locally compact Hausdorff}} space is \textbf{regular}.
+\end{proposition}
+
+
+
+\item \begin{theorem} (\textbf{Regular $+$ Second-Countable $\Rightarrow$ Normal})\citep{munkres2000topology}\\
+Every \underline{\textbf{regular} space with a \textbf{countable basis}} is \textbf{normal}.
+\end{theorem}
+
+\item \begin{proposition}   (\textbf{Regular $+$ Lindel{\"o}f $\Rightarrow$ Normal})\citep{munkres2000topology}\\
+Every \underline{\textbf{regular Lindel{\"o}f} space} is \textbf{normal}.
+\end{proposition}
+
+
+
+\item \begin{theorem} \citep{munkres2000topology}\\
+Every \underline{\textbf{metrizable}} space is \textbf{normal}.
+\end{theorem}
+
+
+\item \begin{theorem} \citep{munkres2000topology, reed1980methods}\\
+Every \underline{\textbf{compact Hausdorff}} space $X$ is \textbf{normal}.
+\end{theorem}
+
+\item \begin{theorem} \citep{munkres2000topology}\\
+Every \underline{\textbf{well-ordered}} set $X$ is \textbf{normal} in the \textbf{order topology}.
+\end{theorem}
+
+In fact, a stronger theorem holds:
+\begin{theorem}
+Every \textbf{order} topology is normal
+\end{theorem}
+
+\item \begin{example} (\emph{\textbf{The Uncountable Product of Normal Spaces Need Not be Normal}})\\ 
+If $J$ is \emph{\textbf{uncountable}}, the product space $\bR^{J}$ is \emph{\textbf{not normal}}.  
+
+This example serves \emph{three purposes}. It shows that \underline{\emph{\textbf{a regular space $\bR^{J}$ need not be normal}}}. It shows that \underline{\emph{\textbf{a subspace of a normal space need not be normal}}}, for $\bR^{J}$ is \emph{homeomorphic} to the subspace $(0, 1)^J$ of $[0, 1]^J$, which (assuming \emph{the Tychonoff theorem}) is \emph{\textbf{compact Hausdorff}} and therefore \emph{normal}. And it shows that \emph{\textbf{an \underline{uncountable product} of normal spaces need not be normal}}. It leaves unsettled the question as to whether \emph{a finite or a countable product of normal spaces might be normal}.
+\end{example}
+
+\item \begin{example} (\emph{\textbf{The Finite Product of Normal Spaces Need Not be Normal}}).\\
+Recall $S_{\Omega} = \{x: x\in X \text{ and } x < \Omega\}$ is the \emph{\textbf{uncountable section}} of a \emph{\textbf{well-ordered set}} $X$ by $\Omega$ where $\Omega$ is the \emph{\textbf{largest element}} of $X$ (called \underline{\emph{\textbf{the minimal uncountable well-ordered set}}}).
+
+Consider \emph{\textbf{the well-ordered set}} $\bar{S}_{\Omega}$, \emph{in the order topology}, and consider the subset $S_{\Omega}$, \emph{in the subspace topology} (which is the same as the order topology). \emph{Both spaces are \textbf{normal}}, but the product space $S_{\Omega}\times \bar{S}_{\Omega}$ is \emph{\textbf{not normal}}.
+
+his example serves \emph{three purposes}. First, it shows that \underline{\emph{\textbf{a regular space need not be normal}}}, for $S_{\Omega}\times \bar{S}_{\Omega}$ is a \emph{product of regular spaces} and therefore regular. Second, it shows that \emph{\textbf{a \underline{subspace of a normal space need not be normal}}}, for $S_{\Omega}\times \bar{S}_{\Omega}$ is a \emph{subspace} of $\bar{S}_{\Omega}\times \bar{S}_{\Omega}$, which is a \emph{\textbf{compact Hausdorff} space} and therefore \emph{\textbf{normal}}. Third, it shows that \emph{\textbf{the \underline{product of two normal spaces need not be normal}}}.
+\end{example}
+\end{itemize}
+
+\subsection{Important Theorems}
+
+\subsubsection{The Urysohn Lemma}
+\begin{table}[tb]
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\belowdisplayskip}{-10pt}
+\setlength{\abovedisplayshortskip}{0pt}
+\setlength{\belowdisplayshortskip}{0pt}
+\footnotesize
+\centering
+\caption{Comparison the Urysohn Lemma and Geometric Hahn-Banach Theorem}
+\label{tab: separation}
+%\setlength{\extrarowheight}{1pt}
+\renewcommand\tabularxcolumn[1]{m{#1}}
+\small
+\begin{tabularx}{1\textwidth} { 
+  | >{\raggedright\arraybackslash} m{2.5cm}
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X  | }
+ \hline
+  &  \emph{Urysohn's Lemma}  & \emph{Geometric Hahn-Banach Theorem}   \\
+  \hline \vspace{5pt}
+\emph{space}    \vspace{2pt} & \emph{\textbf{normal} topological space $T_4$ }  & \emph{\textbf{normed linear} space} \\
+\hline \vspace{5pt}
+\emph{weaker space}    \vspace{2pt} & \emph{\textbf{completely regular} topological space}  & \emph{\textbf{locally convex} space} \\
+ \hline \vspace{5pt}
+\emph{objects}  \vspace{2pt} &  \emph{two \textbf{closed} subsets} $A, B$  & \emph{two \textbf{convex} subsets} $A, B$ \\
+ \hline \vspace{5pt}
+\emph{separation pre-condition}  \vspace{2pt} &  \emph{\textbf{closed} subsets are \textbf{disjoint} }  & \emph{\textbf{convex} sets are \textbf{disjoint} }   \\
+ \hline \vspace{5pt}
+\emph{separating function} \vspace{2pt}  &  \emph{\textbf{continuous function $f: X \rightarrow [0,1]$}}  & \emph{\textbf{a hyperplane defined by linear functional $\ell(x) = a$}}  \\
+\hline \vspace{5pt}
+\emph{conclusion}  \vspace{2pt}  & \emph{two \textbf{closed sets} can be \textbf{separated} by $f$} & \emph{two \textbf{convex sets} can be \textbf{separated} by \textbf{hyperplane}}
+    \\
+\hline \vspace{5pt}
+\emph{conclusion in math} \vspace{2pt}  &  \begin{align*}
+f(A) = \set{0}\text{ and }f(B) = \set{1}
+\end{align*}  & \begin{align*}
+\sup_{a \in A}\ell(a) \le a \le \inf_{b \in B}\ell(b)
+\end{align*}   \\
+\hline
+\end{tabularx}
+\end{table}
+
+\begin{itemize}
+\item \begin{theorem} (\textbf{Urysohn Lemma}). \citep{munkres2000topology}\\
+Let $X$ be a \textbf{normal} space; let $A$ and $B$ be \textbf{disjoint closed subsets} of $X$. Let $[a, b]$ be a \textbf{closed interval} in the real line. Then there exists a \textbf{continuous} map
+\begin{align*}
+f : X \rightarrow [a, b]
+\end{align*}
+such that $f(x) = a$ for \textbf{every} $x$ in $A$, and $f(x) = b$ for \textbf{every} $x$ in $B$.
+\end{theorem}
+
+\item \begin{corollary} (\textbf{Urysohn Lemma for $G_{\delta}$}). \citep{munkres2000topology}\\
+Let $X$ be a \textbf{normal} space. Then there exists a \textbf{continuous} map
+\begin{align*}
+f : X \rightarrow [0, 1]
+\end{align*}
+such that $f(x) = 0$ for \textbf{every} $x \in A$, and $f(x) > 0$ for \textbf{every} $x \not\in A$ \textbf{if and only if} $A$ is a $G_{\delta}$ set, i.e. it equal to a countable intersection of open sets in $X$.
+\end{corollary}
+
+\item \begin{theorem} (\textbf{Strong Form of Urysohn Lemma}). \citep{munkres2000topology}\\
+Let $X$ be a \textbf{normal} space. Then there exists a \textbf{continuous} map
+\begin{align*}
+f : X \rightarrow [0, 1]
+\end{align*}
+such that $f(x) = 0$ for $x \in A$, \textbf{and} $f(x) = 1$ for $x \in B$, and $0 < f(x) < 1$ \textbf{otherwise}  \textbf{if and only if} $A$ and $B$ are disjoint closed $G_{\delta}$ set  in $X$.
+\end{theorem}
+
+\item \begin{definition} (\emph{\textbf{Separation by Continuous Function}})\\
+If $A$ and $B$ are two subsets of the topological space $X$, and if there is a \textbf{continuous} function $f : X \rightarrow [0, 1]$ such that $f(A) = \set{0}$ and $f(B) = \set{1}$, we say that $A$ and $B$ can be \emph{\textbf{\underline{separated} \underline{by a continuous function}}}.
+\end{definition}
+
+\item \begin{remark}
+\emph{The Urysohn lemma} says that if \emph{every pair of \textbf{disjoint closed sets}} in $X$ can be \emph{separated by disjoint open sets}, then each such pair can be \emph{\textbf{separated by a continuous function}}. The \emph{\textbf{converse}} is trivial, for if $f : X \rightarrow [0, 1]$ is the function, then $f^{-1}([0, 1/2))$ and $f^{-1}((1/2, 1])$ are \emph{disjoint open sets} containing $A$ and $B$, respectively.
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Separation by Continuous Function} vs \textbf{Separation by Linear Function}})\\
+We can compare \emph{the Urysohn lemma} with \emph{the geometric Hahn-Banach theorem} which seperate two \emph{\textbf{convex sets}} with \emph{linear functional}. See Table \ref{tab: separation}. The \emph{geometric Hahn-Banach theorem} can be seen as a generalization of \emph{the Urysohn lemma} in \emph{\textbf{normed linear space}}.
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Continuous Function in Compact Hausdorff Space}}) \citep{reed1980methods} \\
+\emph{The Urysohn lemma} suggests that there are \emph{\textbf{a lot of continuous functions}} in \emph{normal space}.  \emph{The space of all real-valued continuous functions} $\cC_{\bR}(X)$ on a \emph{\textbf{compact Hausdorff space}} $X$ (which is normal space) has a \emph{\textbf{dense subset}} since any real-valued continuous functions on $[0,1]$ is a \emph{uniform limit} of \emph{\textbf{polynomials}}.  
+\end{remark}
+
+
+\item \begin{definition} (\emph{\textbf{Completely Regular}})\\
+A space $X$ is \emph{\textbf{\underline{completely regular}}} if \emph{one-point sets} are \emph{closed} in $X$ and if for each point $x_0$ and each \emph{\textbf{closed}} set $A$ not containing $x_0$, there is a \emph{\textbf{continuous function}} $f : X \rightarrow [0, 1]$ such that $f(x_0) = 1$ and $f(A) = \set{0}$.
+\end{definition}
+
+\item \begin{remark}
+\begin{align*}
+\text{normal } \Rightarrow \text{ completely regular } \Rightarrow \text{regular}
+\end{align*}
+
+\item \begin{proposition}
+A \textbf{subspace} of a completely regular space is completely regular. 
+
+A \textbf{product} of completely regular spaces is completely regular.
+\end{proposition}
+\end{remark}
+
+\item \begin{example} (\emph{\textbf{$S_{\Omega}\times \bar{S}_{\Omega}$ is Completely Regular but Not Normal}}).\\
+$S_{\Omega}\times \bar{S}_{\Omega}$ is \emph{\textbf{not normal}} but it is the product space of two completely regular spaces.
+\end{example}
+
+\item \begin{theorem}  (\textbf{Urysohn Lemma, Locally Compact Version}). \citep{folland2013real}\\ 
+Let $X$ be a \textbf{locally compact Hausdorff} space and $K \subseteq U \subseteq X$ where $K$ is \textbf{compact} and $U$ is \textbf{open}.  Then there exists a \textbf{continuous} map
+\begin{align*}
+f : X \rightarrow [0, 1]
+\end{align*}
+such that $f(x) = 1$ for \textbf{every} $x \in K$, and $f(x) = 0$ for $x$ outside a \textbf{compact subset} of $U$.
+\end{theorem}
+
+\item \begin{corollary}\citep{folland2013real}\\ 
+Every \textbf{locally compact Hausdorff} space is \textbf{completely regular}.
+\end{corollary}
+
+\item \begin{remark} (\emph{\textbf{Dual Space of $\cC_{c}(X)$ on Locally Compact Hausdorff Space}}) \citep{reed1980methods, folland2013real} \\
+The famous \emph{\textbf{Riesz-Markov theorem}} shows that  the \emph{\textbf{dual space}} of $\cC_{c}(X)$, the space of compactly supported continuous function on \emph{locally compact Hausdorff space} $X$ is isomorphic to \underline{\emph{the space of \textbf{signed regular Borel measures}}} on $X$, i.e. $(\cC_c(X))^{*} \simeq \cM(X)$. The proof of \emph{Riesz-Markov theorem} is based on \emph{\textbf{the Urysohn lemma} for locally compact space}.
+\end{remark}
+\end{itemize}
+
+\subsubsection{The Urysohn Metrization Theorem}
+\begin{itemize}
+\item \begin{theorem} (\textbf{Urysohn Metrization Theorem}). \citep{munkres2000topology}\\
+Every \textbf{regular} space $X$ with a \textbf{countable basis} is \textbf{metrizable}.
+\end{theorem}
+
+\item \begin{theorem} (\textbf{Embedding Theorem}).  \citep{munkres2000topology}\\
+Let $X$ be a space in which one-point sets are closed. Suppose that $\{f_{\alpha}\}_{\alpha \in J}$ is an indexed family of \textbf{continuous} functions $f_{\alpha}: X \rightarrow \bR$ satisfying the requirement that for each point $x_0$ of $X$ and each neighborhood $U$ of $x_0$, there is an index $\alpha$ such that $f_{\alpha}$ is \textbf{positive} at $x_0$ and \textbf{vanishes outside $U$}. Then the function $F : X \rightarrow \bR^J$ defined by
+\begin{align*}
+F(x) = \paren{f_{\alpha}(x)}_{\alpha \in J}
+\end{align*}
+is a \underline{\textbf{topological embedding}} of $X$ in $\bR^J$ . If $f_{\alpha}$ maps $X$ into $[0, 1]$ for each α$\alpha$  then $F$ \textbf{embeds} $X$ in
+$[0, 1]^J$.
+\end{theorem}
+
+\item \begin{definition} (\emph{\textbf{Separation} of \textbf{Points} From \textbf{Closed} Set by \textbf{Continuous} Functions})\\
+\emph{\textbf{A family of continuous functions}} that satisfies the hypotheses of \emph{the embedding theorem above} is said to \emph{\textbf{separate points from closed sets in $X$}}. 
+
+The existence of such a family is readily seen to be \emph{equivalent}, for a space $X$ in which one-point sets are \emph{closed}, to the requirement that $X$ be \emph{completely regular}.
+\end{definition}
+
+\item \begin{corollary} (\textbf{Embedding Equivalent Definition} of \textbf{Completely Regular}) \citep{munkres2000topology}\\
+A space $X$ is \textbf{completely regular} \textbf{if and only if} it is \textbf{homeomorphic} to a subspace of $[0, 1]^J$ for some $J$.
+\end{corollary}
+\end{itemize}
+
+\subsubsection{The Tietze Extension Theorem}
+\begin{table}[tb]
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\belowdisplayskip}{-10pt}
+\setlength{\abovedisplayshortskip}{0pt}
+\setlength{\belowdisplayshortskip}{0pt}
+\footnotesize
+\centering
+\caption{Comparison Tietze Extension Theorem and Hahn-Banach Theorem}
+\label{tab: extension}
+%\setlength{\extrarowheight}{1pt}
+\renewcommand\tabularxcolumn[1]{m{#1}}
+\small
+\begin{tabularx}{1\textwidth} { 
+  | >{\raggedright\arraybackslash} m{3cm}
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X  | }
+ \hline
+  &  \emph{Tietze Extension Theorem} & \emph{Hahn-Banach Theorem}   \\
+  \hline \vspace{5pt}
+\emph{space}    \vspace{2pt} & \emph{\textbf{normal} topological space $T_4$ }  & \emph{\textbf{normed} \textbf{linear} space} \\
+ \hline \vspace{5pt}
+\emph{subspace}  \vspace{2pt} &  \emph{\textbf{topological} subspace}  & \emph{\textbf{linear} subspace}  \\
+ \hline \vspace{5pt}
+\emph{function to be extended} \vspace{2pt}  &  \emph{\textbf{real-valued continuous function }}  & \emph{\textbf{linear functional}}  \\
+\hline \vspace{5pt}
+\emph{additional constraint}  \vspace{2pt}  & \emph{the subspace is \textbf{closed}}    & \emph{the functional \textbf{bounded above by a sublinear functional}}  \\
+\hline \vspace{5pt}
+\emph{conclusion}  \vspace{2pt}  & \emph{the domain of continuous function can be \textbf{extended to entire space}}    & \emph{the domain of linear functional can be \textbf{extended to entire space}}  \\
+\hline
+\end{tabularx}
+\end{table}
+
+\begin{itemize}
+\item \begin{theorem} (\textbf{Tietze Extension Theorem}) \citep{munkres2000topology, reed1980methods}\\
+Let $X$ be a \textbf{normal space}; let $A$ be a \textbf{closed subspace} of $X$.
+\begin{enumerate}
+\item Any \textbf{continuous} map of $A$ into the \textbf{closed interval} $[a, b]$ of $\bR$ may be \textbf{extended}
+to a \textbf{continuous} map of \textbf{all of $X$} into $[a, b]$.
+\item Any \textbf{continuous} map of $A$ into $\bR$ may be \textbf{extended} to a \textbf{continuous} map of \textbf{all of $X$} into $\bR$.
+\end{enumerate}
+\end{theorem}
+
+%\item \begin{theorem} (\textbf{Tietze Extension Theorem}) \citep{munkres2000topology, reed1980methods}\\
+%Let $X$ be a \textbf{compact} space and let $Y \subset X$ be \textbf{closed}. Let $f$ be any \textbf{continuous real-valued function} on $Y$.
+%Then there is a \textbf{continuous} real-valued function $F \in \cC_{\bR}(X)$ so that $f(y) = \widetilde{f}(y)$ for all $y \in Y$.
+%\end{theorem}
+
+\item \begin{theorem} (\textbf{Tietze Extension Theorem, Locally Compact Version}) \citep{folland2013real}\\
+Let $X$ be a \textbf{locally compact Hausdorff space}; let $K$ be a \textbf{compact subspace} of $X$. If $f \in \cC(K)$ is a \textbf{continuous} map of $K$ into $\bR$,   there exists a \textbf{continuous} extension $F \in \cC(X)$ of \textbf{all of $X$} into $\bR$ such that $F|_{K} = f$. Moreover, $F$ may be taken to \textbf{vanish}\textbf{ outside a compact set}.
+\end{theorem} 
+
+\item \begin{remark} (\emph{\textbf{Extension of Continuous Function vs. Extension of Linear Functional}})\\
+We can compare \emph{the Tietze extension theorem} with \emph{the Hahn-Banach theorem} in normed linear space. See from Table \ref{tab: extension} that the Hahn-Banach theorem generalize the Tietze extension theorem from normal topological space to the normed linear space (which is metrizable so normal).
+\end{remark}
+\end{itemize}
+
+\subsection{The Stone-{\^C}ech Compactification}
+\begin{itemize}
+\item 
+\end{itemize}
+
+\subsection{Embeddings of Manifolds}
+\begin{itemize}
+\item 
+\end{itemize}
+
+
+\newpage
+\section{Summary of Preservation of Topological Properties}
+\begin{table}[h!]
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\belowdisplayskip}{-10pt}
+\setlength{\abovedisplayshortskip}{0pt}
+\setlength{\belowdisplayshortskip}{0pt}
+\footnotesize
+\centering
+\caption{Summary of Preservation of Topological Properties Under Transformations}
+\label{tab: preservation}
+%\setlength{\extrarowheight}{1pt}
+\renewcommand\tabularxcolumn[1]{m{#1}}
+\small
+\begin{tabularx}{1\textwidth} { 
+  | >{\raggedright\arraybackslash} m{3cm}
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X  | }
+ \hline
+  &  \emph{\textbf{subspace}} &  \emph{\textbf{product space}} &  \emph{\textbf{image of continuous function}}   \\
+  \hline \vspace{5pt}
+\emph{\textbf{connected}}  \vspace{2pt} & $\checkmark$  &   $\checkmark$ under \emph{\textbf{product topology}}  &   $\checkmark$  \\
+\hline \vspace{5pt}
+\emph{\textbf{locally connected}}  \vspace{2pt} & if \emph{\textbf{open and connected}} subspace, $\checkmark$  & if \emph{\textbf{all but finitely many} of spaces are \textbf{connected}},  $\checkmark$  & in general  $\times$  \\
+ \hline \vspace{5pt}
+\emph{\textbf{compact}}  \vspace{2pt} & if \emph{\textbf{closed}} subspace, $\checkmark$;  & for \emph{\textbf{arbitrary}} product, $\checkmark$ & $\checkmark$ \\
+ \hline \vspace{5pt}
+\emph{\textbf{locally compact}}  \vspace{2pt} & if \emph{\textbf{closed} or \textbf{open}} subspace and Hausdorff, $\checkmark$  & if \emph{\textbf{finite}} product, $\checkmark$; if \emph{\textbf{infinite}} product $\times$ & if $f$ is a \emph{\textbf{perfect map}}, then $\checkmark$; in general $\times$ \\
+ \hline \vspace{5pt}
+\emph{\textbf{first-countable}} \vspace{2pt}  &  $\checkmark$ & if \emph{\textbf{countable}} product, $\checkmark$ &  if $f$ is a \emph{\textbf{open map}}, then $\checkmark$; in general $\times$ \\
+\hline \vspace{5pt}
+\emph{\textbf{second-countable}}  \vspace{2pt}  &  $\checkmark$ & if \emph{\textbf{countable}} product, $\checkmark$ &  if $f$ is a \emph{\textbf{open map or perfect map}}, then $\checkmark$; in general $\times$ \\
+\hline \vspace{5pt}
+\emph{\textbf{separable}}  \vspace{2pt}  & if metrizable, then $\checkmark$; in general $\times$ & if \emph{\textbf{countable}} product, $\checkmark$  & $\checkmark$\\
+\hline \vspace{5pt}
+\emph{\textbf{Lindel\"of}}  \vspace{2pt}  & if metrizable, then $\checkmark$; in general $\times$  & $\times$ & $\checkmark$ \\
+\hline \vspace{5pt}
+\emph{\textbf{$T_1$ axiom}}  \vspace{2pt}  &  $\checkmark$ & for \emph{\textbf{arbitrary}} product, $\checkmark$ &  in general $\times$ \\
+\hline \vspace{5pt}
+\emph{\textbf{Hausdorff $T_2$}}  \vspace{2pt}   & $\checkmark$  & for \emph{\textbf{arbitrary}} product, $\checkmark$ & if $f$ is a \emph{\textbf{perfect map}}, then $\checkmark$; in general $\times$ \\
+\hline \vspace{5pt}
+\emph{\textbf{regular $T_3$}}  \vspace{2pt}  & $\checkmark$  & for \emph{\textbf{arbitrary}} product, $\checkmark$ & if $f$ is a \emph{\textbf{perfect map}}, then $\checkmark$ ; in general $\times$ \\
+\hline \vspace{5pt}
+\emph{\textbf{completely regular}}  \vspace{2pt}  & $\checkmark$  & for \emph{\textbf{arbitrary}} product, $\checkmark$ & in general $\times$ \\
+\hline \vspace{5pt}
+\emph{\textbf{normal $T_4$}}  \vspace{2pt}  & $\times$  & $\times$ &  $\times$ \\
+\hline \vspace{5pt}
+\emph{\textbf{paracompact}}  \vspace{2pt}  & if \emph{\textbf{closed}} subspace, $\checkmark$;  &  $\times$  &  $\times$ \\
+\hline \vspace{5pt}
+\emph{\textbf{topologically complete}}  \vspace{2pt}  & for \emph{\textbf{closed} or \textbf{open}} subspace, $\checkmark$  &  if \emph{\textbf{countable}} product, $\checkmark$  &  $\times$ \\
+\hline
+\end{tabularx}
+\end{table}
+\newpage
+\section{Summary of Relationships between Topological Properties}
+\begin{itemize}
+\item  \emph{\textbf{Connectedness}}
+\[
+  \begin{tikzcd}
+ \text{\emph{\textbf{path-connected} space}}  \arrow{d}{\text{only one}}   \arrow{r}{} &  \text{\emph{\textbf{connected} space}}  \arrow{d}{\text{only one}} \\
+   \text{\emph{\textbf{path components}}}   \arrow{r}{\subseteq }  &\arrow[l, swap, bend left, dashed, "\text{if locally path connected}"]  \text{\emph{\textbf{components}}}\\
+   & & \\
+   \text{\emph{\textbf{path components} of every open subset}}   \arrow{r}{\subseteq } \arrow{uu}{\subseteq } & \text{\emph{\textbf{components}  of every open subset}} \arrow{uu}{\subseteq }\\
+  \text{\emph{\textbf{locally path connected} space}} \arrow[u, "\text{open}"]  & \text{\emph{\textbf{locally connected} space}} \arrow[u, swap, "\text{open}"].
+  \end{tikzcd}
+\] 
+
+\item  \emph{\textbf{Compactness}}
+\[
+  \begin{tikzcd}
+   &  \arrow[dl, swap, bend right, dashed, "\text{metrizable}"]   \text{\emph{\textbf{limit point compact}}} \arrow{r}{} & \arrow[l, bend right, dashed, swap,  "\text{metrizable}"]  \text{\emph{\textbf{sequential compact}}}\\
+  \text{\emph{\textbf{compact}}}  \arrow{ur}{}  \arrow{dr}{} \arrow[ddr, bend right] \arrow[dddr, bend right] & &\\
+  & \arrow[bend right, swap]{ul}{\text{closure}}  \text{\emph{\textbf{precompact}}}    & \arrow{l}{\text{precompact basis}}   \text{\emph{\textbf{locally compact}}}  \arrow[ull,  dashed,  swap, "X \bigcup \set{\infty} \simeq C"]     \arrow[ddl,   bend left,  "\text{second-countable $+$ Hausdorff}"]  \\
+ & \text{\emph{\textbf{Lindel{\"o}f}}} \arrow{d}{\text{regular}} & &\\
+ & \text{\emph{\textbf{paracompact}}} &  &
+  \end{tikzcd}
+\] 
+
+\item \emph{\textbf{Countablity Axioms}}
+\[
+  \begin{tikzcd}
+     &  \text{\emph{\textbf{first-countable} space}} &\arrow{l}{} \text{\emph{\textbf{metrizable} space}}\\
+   \text{\emph{\textbf{second-countable} space}}  \arrow[ur, bend left] \arrow{r}{} \arrow[dr]  & \arrow[l, bend right, dashed, "metrizable"] \text{\emph{\textbf{separable} space}} &\\
+     &  \arrow[ul, dashed,  bend left,  "metrizable"] \text{\emph{\textbf{Lindel{\"o}f} space}}&.
+  \end{tikzcd}
+\] 
+
+
+\item \emph{\textbf{Separation Axioms}}
+\[
+  \begin{tikzcd}
+   \text{\emph{\textbf{$T_1$} space}}  & &\arrow{lld}{} \text{\emph{\textbf{metrizable} space}} \arrow{d}{} \arrow[dddd, shift left = 9ex, bend left, ""]  \\
+   \arrow{u}{} \text{\emph{\textbf{Hausdorff} space}} &\arrow{l}{} \text{\emph{\textbf{regular} space}} \arrow[ur, leftrightarrow, bend left, "\text{ $+$ countable locally finite basis}"] \arrow[dddr,  bend right,"\text{Lindel\"of}"] &\arrow{l}{} \arrow{dl}{\text{Urysohn lemma}} \text{\emph{\textbf{normal} space}}  \\
+  &  \arrow{u}{} \text{\emph{\textbf{completely regular} space}}   &  \\
+   & &  \text{\emph{\textbf{compact Hausdorff} space}} \arrow{uu}{} \arrow{d}{} \\
+   & \text{\emph{\textbf{locally compact Hausdorff} space}} \arrow{uu}{}  \arrow[dashed, swap]{ur}{\text{\emph{compactification}}} & \text{\emph{\textbf{paracompact Hausdorff} space}} \arrow[bend right, shift right = 8ex]{uuu}{}
+  \end{tikzcd}
+\] 
+\end{itemize}
+
+
+\newpage
+\section{Summary of Counterexamples for Topological Properties}
+\begin{table}[h!]
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\belowdisplayskip}{-10pt}
+\setlength{\abovedisplayshortskip}{0pt}
+\setlength{\belowdisplayshortskip}{0pt}
+\footnotesize
+\centering
+\caption{Summary of Counterexamples for Topological Properties}
+\label{tab: counterexample}
+%\setlength{\extrarowheight}{1pt}
+\renewcommand\tabularxcolumn[1]{m{#1}}
+\small
+\begin{tabularx}{1\textwidth} { 
+  | >{\raggedright\arraybackslash} m{2cm}
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}m{1.5cm}
+  | >{\centering\arraybackslash}m{1.5cm}  | }
+ \hline
+  &  $\bR^{\omega}$  $\srT_{prod}$ &  $\bR^{\omega}$  $\srT_{box}$ &  $\bR^{\omega}$  $ \srT_{unif}$ &  $\bR_{K}$  &  $\bR_{\ell}$ & $\bR_{\ell}^2$  & $I_o^2$  & $S_{\Omega}$ & $\bar{S}_{\Omega}$ & $S_{\Omega} \times \bar{S}_{\Omega}$ & $(x,$ $\sin(1/x))$\\
+  \hline \vspace{5pt}
+\emph{\textbf{connected}}  \vspace{2pt} & $\checkmark$ & $\times$ & $\times$  & $\checkmark$ & $\times$ & $\times$ & $\checkmark$ &  $\times$ & $\times$ &  $\times$ &  $\checkmark$  \\
+\hline \vspace{5pt}
+\emph{\textbf{path connected}}  \vspace{2pt} & $\checkmark$ & $\times$ &  $\times$ & $\times$ & $\times$ & $\times$ & $\times$ & $\times$ &$\times$  & $\times$ &  $\times$ \\
+\hline \vspace{5pt}
+\emph{\textbf{locally connected}}  \vspace{2pt} &  $\checkmark$ &  $\times$  &  $\checkmark$ & $\times$ & $\times$ &  $\times$ & $\checkmark$ & $\times$ &$\times$  &  $\times$ &  $\times$ \\
+\hline \vspace{5pt}
+\emph{\textbf{locally path connected}}  \vspace{2pt} &  $\checkmark$ &  $\times$  &  $\checkmark$ &$\times$ & $\times$ & $\times$ & $\times$ & $\times$ & $\times$ &$\times$ &  $\times$ \\
+ \hline \vspace{5pt}
+\emph{\textbf{compact}}  \vspace{2pt} & $\times$ & $\times$ & $\times$ & $\times$ & $\times$ & $\times$ & $\checkmark$ &$\times$ & $\checkmark$ & $\times$  & $\checkmark$ \\
+ \hline \vspace{5pt}
+\emph{\textbf{limit point compact}}  \vspace{2pt} & $\times$  & $\times$ & $\times$ & $\times$  & $\times$& $\times$ &$\checkmark$ &$\checkmark$ & $\checkmark$ &  &  $\checkmark$\\
+ \hline \vspace{5pt}
+\emph{\textbf{sequentially compact}}  \vspace{2pt} & $\times$ & $\times$ & $\times$ & $\times$  & $\times$& $\times$ & $\checkmark$ & $\checkmark$ & $\checkmark$ &  &  $\checkmark$\\
+ \hline \vspace{5pt}
+\emph{\textbf{locally compact}}  \vspace{2pt} & $\times$ & $\times$ & $\times$ & $\times$ & $\times$ & $\times$ &  $\checkmark$ &$\checkmark$ & $\checkmark$ & $\checkmark$  & $\checkmark$\\
+ \hline \vspace{5pt}
+ \emph{\textbf{paracompact}}  \vspace{2pt}   & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\times$ & $\checkmark$ &$\times$  & $\checkmark$ &$\times$ & $\checkmark$ & $\times$  & $\checkmark$ \\
+\hline \vspace{5pt}
+\emph{\textbf{first-countable}} \vspace{2pt}   & $\checkmark$ & $\times$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$  & $\checkmark$  & $\times$ & $\times$  & \\
+\hline \vspace{5pt}
+\emph{\textbf{second-countable}}  \vspace{2pt}   & $\checkmark$ & $\times$ & $\times$& $\checkmark$ & $\times$ & $\times$& $\times$ & $\times$  & $\times$ & $\times$ &  \\
+\hline \vspace{5pt}
+\emph{\textbf{separable}}  \vspace{2pt}   & $\checkmark$ & $\times$ & $\times$ & $\checkmark$ &$\checkmark$ & $\checkmark$ & $\times$  & $\times$ & $\times$ &  $\times$ & \\
+\hline \vspace{5pt}
+\emph{\textbf{Lindel\"of}}  \vspace{2pt}   & $\checkmark$ & $\times$ & $\times$ & $\checkmark$ & $\checkmark$ & $\times$  &  $\checkmark$ & $\times$ &  $\checkmark$&  $\times$ &  $\checkmark$ \\
+\hline \vspace{5pt}
+\emph{\textbf{$T_1$ axiom}}  \vspace{2pt}  & $\checkmark$ & $\checkmark$ & $\checkmark$& $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ &$\checkmark$  &  $\checkmark$ & $\checkmark$  & $\checkmark$  \\
+\hline \vspace{5pt}
+\emph{\textbf{Hausdorff $T_2$}}  \vspace{2pt}  & $\checkmark$ &$\checkmark$  & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$  & $\checkmark$  &  $\checkmark$ & $\checkmark$   & $\checkmark$ \\
+\hline \vspace{5pt}
+\emph{\textbf{regular $T_3$}}  \vspace{2pt}   & $\checkmark$ & $\checkmark$ & $\checkmark$& $\times$  &$\checkmark$ & $\checkmark$ & $\checkmark$  & $\checkmark$  & $\checkmark$  &  $\checkmark$  &  \\
+\hline \vspace{5pt}
+\emph{\textbf{completely regular}}  \vspace{2pt}   & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\times$  & $\checkmark$ &  $\checkmark$ &  $\checkmark$ & $\checkmark$ &  $\checkmark$ & $\checkmark$  &  \\
+\hline \vspace{5pt}
+\emph{\textbf{normal $T_4$}}  \vspace{2pt}   & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\times$  & $\checkmark$ & $\times$ & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\times$ &  \\
+\hline \vspace{5pt}
+\emph{\textbf{locally metrizable}}  \vspace{2pt}   & $\checkmark$ & $\times$ & $\checkmark$ & $\times$  & & &  $\times$  &$\checkmark$  & $\times$  &  $\times$ &  \\
+\hline \vspace{5pt}
+\emph{\textbf{metrizable}}  \vspace{2pt}   & $\checkmark$ & $\times$ & $\checkmark$ & $\times$  & $\times$ & $\times$&  $\checkmark$ & $\times$ & $\times$  &  $\times$  & $\times$ \\
+\hline
+\end{tabularx}
+\end{table}
+
+\begin{enumerate}
+\item $(\bR^{\omega}, \srT_{prod})$: space of \emph{\textbf{countable infinite}} real sequence $(a_n)_{n \in \bZ}$ equipped with \emph{\textbf{product topology}}. Note that under product topology, the \emph{\textbf{basis}} is of form $\prod_{n\in \bZ_{+}}U_n$ where there exists some $N$ so that for all $n \ge N$, $U_n = \bR$.
+
+\item $(\bR^{\omega}, \srT_{box})$: space of \emph{\textbf{countable infinite}} real sequence $(a_n)_{n \in \bZ}$ equipped with \emph{\textbf{box topology}}. Note that under box topology, the \emph{\textbf{basis}} is of form $\prod_{n\in \bZ_{+}}U_n$ where $U_n \neq \bR$ for all $n$.
+
+\item $(\bR^{\omega}, \srT_{unif})$: space of \emph{\textbf{countable infinite}} real sequence $(a_n)_{n \in \bZ}$ equipped with \emph{\textbf{uniform topology}}. Note that the uniform topology is induced by \emph{\textbf{the uniform metric}} $\bar{\rho}$ on $\bR^{\omega}$, which is defined by the equation
+\begin{align*}
+\bar{\rho}((x_n)_{n \in \bZ_{+}}, (y_n)_{n \in \bZ_{+}}) &= \sup\set{\bar{d}(x_{n}, y_{n}): n \in \bZ_{+}},
+\end{align*}
+where $\bar{d}$ is \emph{\textbf{the standard bounded metric}} on $\bR$.
+
+\item $\bR_{K}$: the real line $\bR$ equipped with the \emph{\textbf{$K$-topology}}. The $K$-topology is \emph{\textbf{generated}} by \emph{all open intervals} $(a, b)$ \textbf{and} \emph{all sets \textbf{of the form}} 
+\begin{align*}
+(a,b) \setminus K\text{ where }K = \set{1/n: n \in \bZ_{+}}.
+\end{align*}
+
+\item $\bR_{\ell}$: the real line $\bR$ equipped with the \emph{\textbf{lower limit topology}}. The basis of lower limit topology is  the collection of all \emph{\textbf{half-open intervals}} of the form
+\begin{align*}
+[a,b) = \{x: a \le  x < b\},
+\end{align*} where $a < b$. $\bR_{\ell}$ is also called \emph{\textbf{the Sorgenfrey line}}.
+
+\item $\bR_{\ell}^2 = \bR_{\ell} \times \bR_{\ell}$: is called \emph{\textbf{the Sorgenfrey plane}}.
+
+\item $I_o^2$: is called \emph{\textbf{ordered square}} where $I = [0,1]$. It is the set $[0,1] \times [0,1]$ in \emph{\textbf{the dictionary order topology}}. In dictionary order relationship, $(x_1, x_2) < (y_1, y_2)$ if and only if $x_1 < y_1$ or $(x_1 = y_1) \land (x_2 < y_2)$. In dictionary order topology, open intervals are of the form 
+\begin{align*}
+\set{(x_1, x_2): x_1 \in (a, b) \text{ or } (x_1 = c) \land (x_2 \in (d, e))} = ((a, b) \times I) \cup (c \times (d, e)).
+\end{align*}
+
+\item $S_{\Omega}$: is \emph{\textbf{the uncountable ordinal space}}. If $A$ is a \emph{\textbf{well-ordered set}} then $A$ itself contains a \emph{\textbf{smallest element}} which we will denote by $a_0$. For each element $x$ in a \emph{well-ordered set} $A$, \emph{\textbf{the section at $x$}} is defined to be the subset
+\begin{align*}
+S_x = (-\infty, x) = [a_0, x) = \set{y \in A:  y < x}.
+\end{align*} \emph{The uncountable ordinal space} $S_{\Omega}$ is \emph{an \textbf{uncountable well-ordered set}} in which \emph{each
+section $S_x$ is \textbf{countable}}. This description of $S_{\Omega}$  is justified by the following:
+\begin{lemma}
+There exists an uncountable well-ordered set $A$ such that $S_x$ is countable for each $x \in A$, and any two uncountable well-ordered sets satisfying this property are \textbf{order isomorphic} (that is, they have the same order type).
+\end{lemma}
+
+\item $\bar{S}_{\Omega}$:  is \emph{\textbf{the closed uncountable ordinal space}}. It is defined by $\bar{S}_{\Omega} = S_{\Omega} \cup \set{\Omega}$ with \emph{\textbf{the well-ordering}} given by: (a) if $x, y \in S_{\Omega}$ then $x < y$ in $\bar{S}_{\Omega}$ iff $x < y$ in $S_{\Omega}$, and (b) if $x \in S_{\Omega}$ then $x < \Omega$. Notice that $ \Omega$ is a \emph{\textbf{maximal element}} in $\bar{S}_{\Omega}$ (but $S_{\Omega}$ \emph{does not have a maximal element}). $S_{\Omega}$ is the section of $\Omega$ in $\bar{S}_{\Omega}$.
+
+\item $S_{\Omega} \times \bar{S}_{\Omega}$
+
+\item $\bar{S}$: is called  \emph{\textbf{the topologist's sine curve}}. It is the closure of the graph
+\begin{align*}
+S = \set{(x, \sin(1/x)): 0 < x \le 1}.
+\end{align*} That is $\bar{S} = S \cup \set{(x,y): x=0}$.
+
+\end{enumerate}
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{book_reference.bib}
+\end{document}

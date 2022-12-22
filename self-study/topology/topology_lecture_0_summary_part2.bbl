@@ -1,0 +1,35 @@
+\begin{thebibliography}{5}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Folland(2013)]{folland2013real}
+Gerald~B Folland.
+\newblock \emph{Real analysis: modern techniques and their applications}.
+\newblock John Wiley \& Sons, 2013.
+
+\bibitem[Lee(2018)]{lee2018introduction}
+John~M Lee.
+\newblock \emph{Introduction to Riemannian manifolds}, volume 176.
+\newblock Springer, 2018.
+
+\bibitem[Munkres(2000)]{munkres2000topology}
+James~R Munkres.
+\newblock \emph{Topology, 2nd}.
+\newblock Prentice Hall, 2000.
+
+\bibitem[Reed and Simon(1980)]{reed1980methods}
+Michael Reed and Barry Simon.
+\newblock \emph{Methods of modern mathematical physics: Functional analysis},
+  volume~1.
+\newblock Gulf Professional Publishing, 1980.
+
+\bibitem[Treves(2016)]{treves2016topological}
+Fran{\c{c}}ois Treves.
+\newblock \emph{Topological Vector Spaces, Distributions and Kernels: Pure and
+  Applied Mathematics, Vol. 25}, volume~25.
+\newblock Elsevier, 2016.
+
+\end{thebibliography}
