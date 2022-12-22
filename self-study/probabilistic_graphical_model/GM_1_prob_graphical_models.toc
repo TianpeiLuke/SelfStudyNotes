@@ -1,0 +1,18 @@
+\contentsline {section}{\numberline {1}Introduction}{2}
+\contentsline {section}{\numberline {2}Probabilistic Graphical Models}{2}
+\contentsline {subsection}{\numberline {2.1}Directed graphical models (Bayesian networks)}{2}
+\contentsline {subsection}{\numberline {2.2}Undirected grapical models (Markov networks)}{3}
+\contentsline {subsection}{\numberline {2.3}Factor graph representation}{4}
+\contentsline {subsection}{\numberline {2.4}Important notes}{4}
+\contentsline {subsection}{\numberline {2.5}Representation of factors}{5}
+\contentsline {subsubsection}{\numberline {2.5.1}Tabular representation}{5}
+\contentsline {subsubsection}{\numberline {2.5.2}Function approximation}{6}
+\contentsline {section}{\numberline {3}Conditional independence}{9}
+\contentsline {section}{\numberline {4}Examples}{11}
+\contentsline {subsection}{\numberline {4.1}Ising Models (binary Markov random field)}{11}
+\contentsline {subsubsection}{\numberline {4.1.1}Metric Labeling and Potts Model}{12}
+\contentsline {subsection}{\numberline {4.2}Gaussian graphical models (GGM)}{12}
+\contentsline {subsection}{\numberline {4.3}Hidden Markov Chain (HMM)}{14}
+\contentsline {subsection}{\numberline {4.4}Conditional Random Field (CRF)}{16}
+\contentsline {subsection}{\numberline {4.5}Latent Dirichlet allocation (LDA)}{18}
+\contentsline {subsection}{\numberline {4.6}Restricted Boltzmann machine (RBM)}{19}

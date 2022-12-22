@@ -1,0 +1,81 @@
+\begin{thebibliography}{12}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bengio et~al.(2009)]{bengio2009learning}
+Yoshua Bengio et~al.
+\newblock Learning deep architectures for ai.
+\newblock \emph{Foundations and trends{\textregistered} in Machine Learning},
+  2\penalty0 (1):\penalty0 1--127, 2009.
+
+\bibitem[Goldenberg et~al.(2010)Goldenberg, Zheng, Fienberg, Airoldi,
+  et~al.]{goldenberg2010survey}
+Anna Goldenberg, Alice~X Zheng, Stephen~E Fienberg, Edoardo~M Airoldi, et~al.
+\newblock A survey of statistical network models.
+\newblock \emph{Foundations and Trends{\textregistered} in Machine Learning},
+  2\penalty0 (2):\penalty0 129--233, 2010.
+
+\bibitem[Goodfellow et~al.(2016)Goodfellow, Bengio, and
+  Courville]{goodfellow2016deep}
+Ian Goodfellow, Yoshua Bengio, and Aaron Courville.
+\newblock \emph{Deep learning}.
+\newblock MIT press, 2016.
+
+\bibitem[Jackson(2010)]{jackson2010social}
+Matthew~O Jackson.
+\newblock \emph{Social and economic networks}.
+\newblock Princeton university press, 2010.
+
+\bibitem[Kingma et~al.(2019)Kingma, Welling, et~al.]{kingma2019introduction}
+Diederik~P Kingma, Max Welling, et~al.
+\newblock An introduction to variational autoencoders.
+\newblock \emph{Foundations and Trends{\textregistered} in Machine Learning},
+  12\penalty0 (4):\penalty0 307--392, 2019.
+
+\bibitem[Koller and Friedman(2009)]{koller2009probabilistic}
+Daphne Koller and Nir Friedman.
+\newblock \emph{Probabilistic graphical models: principles and techniques}.
+\newblock MIT press, 2009.
+
+\bibitem[Newman(2018)]{newman2018networks}
+Mark Newman.
+\newblock \emph{Networks}.
+\newblock Oxford university press, 2018.
+
+\bibitem[Ortega et~al.(2018)Ortega, Frossard, Kova{\v{c}}evi{\'c}, Moura, and
+  Vandergheynst]{ortega2018graph}
+Antonio Ortega, Pascal Frossard, Jelena Kova{\v{c}}evi{\'c}, Jos{\'e}~MF Moura,
+  and Pierre Vandergheynst.
+\newblock Graph signal processing: Overview, challenges, and applications.
+\newblock \emph{Proceedings of the IEEE}, 106\penalty0 (5):\penalty0 808--828,
+  2018.
+
+\bibitem[Shapiro(2003)]{shapiro2003monte}
+Alexander Shapiro.
+\newblock Monte carlo sampling methods.
+\newblock \emph{Handbooks in operations research and management science},
+  10:\penalty0 353--425, 2003.
+
+\bibitem[Sutton et~al.(2012)Sutton, McCallum, et~al.]{sutton2012introduction}
+Charles Sutton, Andrew McCallum, et~al.
+\newblock An introduction to conditional random fields.
+\newblock \emph{Foundations and Trends{\textregistered} in Machine Learning},
+  4\penalty0 (4):\penalty0 267--373, 2012.
+
+\bibitem[Wainwright(2019)]{wainwright2019high}
+Martin~J Wainwright.
+\newblock \emph{High-dimensional statistics: A non-asymptotic viewpoint},
+  volume~48.
+\newblock Cambridge University Press, 2019.
+
+\bibitem[Wainwright et~al.(2008)Wainwright, Jordan,
+  et~al.]{wainwright2008graphical}
+Martin~J Wainwright, Michael~I Jordan, et~al.
+\newblock Graphical models, exponential families, and variational inference.
+\newblock \emph{Foundations and Trends{\textregistered} in Machine Learning},
+  1\penalty0 (1--2):\penalty0 1--305, 2008.
+
+\end{thebibliography}
