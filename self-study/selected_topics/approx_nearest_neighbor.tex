@@ -1,0 +1,42 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs, dsfont}
+\usepackage{tabularx}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Approximate nearest neighbor search}
+\author{ Tianpei Xie}
+\date{Sep. 3rd., 2022 }
+\maketitle
+\tableofcontents
+\newpage
+\allowdisplaybreaks
+\section{Definitions}
+\begin{itemize}
+\item Given a dataset $\cD$ with $n$ points and $d$ dimensions and a query point $q$ in the same space as the dataset, the \emph{goal} of \emph{\textbf{$c$-ANN search}} (where $c > 1$ is an approximation ratio) is to return points $o \in \cD$ such that $\text{dist}(o, q) \le  c \times \text{dist}(o^{*}, q)$, where $o^{*}$ is the true nearest neighbor of $q$ in $\cD$ and $\text{dist}$ is the distance between the two points. Similarily, \textbf{\emph{$c$-$k$-ANN search}} aims at returning top-$k$ points such that $\text{dist}(o_i, q) \le  c \times \text{dist}(o_i^{*}, q)$, where $1 \le i \le k$. \citep{jafari2021survey}
+\end{itemize}
+
+
+
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{book_reference.bib}
+\end{document}

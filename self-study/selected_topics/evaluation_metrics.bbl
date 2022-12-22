@@ -1,0 +1,30 @@
+\begin{thebibliography}{4}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Davis and Goadrich(2006)]{davis2006relationship}
+Jesse Davis and Mark Goadrich.
+\newblock The relationship between {P}recision-{R}ecall and {ROC} curves.
+\newblock In \emph{Proceedings of the 23rd international conference on Machine
+  learning}, pages 233--240, 2006.
+
+\bibitem[Fawcett(2006)]{fawcett2006introduction}
+Tom Fawcett.
+\newblock An introduction to {ROC} analysis.
+\newblock \emph{Pattern recognition letters}, 27\penalty0 (8):\penalty0
+  861--874, 2006.
+
+\bibitem[Japkowicz and Shah(2011)]{japkowicz2011evaluating}
+Nathalie Japkowicz and Mohak Shah.
+\newblock \emph{Evaluating learning algorithms: a classification perspective}.
+\newblock Cambridge University Press, 2011.
+
+\bibitem[Manning(2008)]{manning2008introduction}
+Christopher~D Manning.
+\newblock \emph{Introduction to information retrieval}.
+\newblock Syngress Publishing,, 2008.
+
+\end{thebibliography}

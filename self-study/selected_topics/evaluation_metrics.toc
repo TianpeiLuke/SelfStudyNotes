@@ -1,0 +1,12 @@
+\contentsline {section}{\numberline {1}Confusion table and related metrics}{2}
+\contentsline {section}{\numberline {2}Receiver Operating Characteristic (ROC)}{6}
+\contentsline {subsection}{\numberline {2.1}Graphical Performance Measures}{6}
+\contentsline {subsection}{\numberline {2.2}ROC Space}{6}
+\contentsline {subsection}{\numberline {2.3}Skew Considerations}{8}
+\contentsline {subsection}{\numberline {2.4}Isometrics}{8}
+\contentsline {subsection}{\numberline {2.5}ROC Curve Generation}{10}
+\contentsline {subsection}{\numberline {2.6}Summary Statistics and the AUC}{12}
+\contentsline {subsection}{\numberline {2.7}Calibration}{14}
+\contentsline {section}{\numberline {3}Other Visual Analysis Methods}{15}
+\contentsline {subsection}{\numberline {3.1}Precision-Recall (PR) Curves}{15}
+\contentsline {subsection}{\numberline {3.2}Lift Charts}{15}

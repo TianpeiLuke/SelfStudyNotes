@@ -1,0 +1,16 @@
+\begin{thebibliography}{1}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Jafari et~al.(2021)Jafari, Maurya, Nagarkar, Islam, and
+  Crushev]{jafari2021survey}
+Omid Jafari, Preeti Maurya, Parth Nagarkar, Khandker~Mushfiqul Islam, and
+  Chidambaram Crushev.
+\newblock A survey on locality sensitive hashing algorithms and their
+  applications.
+\newblock \emph{arXiv preprint arXiv:2102.08942}, 2021.
+
+\end{thebibliography}
