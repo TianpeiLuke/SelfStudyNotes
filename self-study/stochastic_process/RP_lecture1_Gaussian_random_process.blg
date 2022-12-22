@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: RP_lecture3_gaussian_distribution.aux
+The style file: plainnat.bst
+Database file #1: reference.bib.bib
+You've used 2 entries,
+            2773 wiz_defined-function locations,
+            605 strings with 5120 characters,
+and the built_in function-call counts, 800 in all, are:
+= -- 70
+> -- 20
+< -- 4
++ -- 8
+- -- 6
+* -- 46
+:= -- 124
+add.period$ -- 7
+call.type$ -- 2
+change.case$ -- 7
+chr.to.int$ -- 2
+cite$ -- 4
+duplicate$ -- 49
+empty$ -- 82
+format.name$ -- 8
+if$ -- 172
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 3
+newline$ -- 18
+num.names$ -- 8
+pop$ -- 23
+preamble$ -- 1
+purify$ -- 6
+quote$ -- 0
+skip$ -- 32
+stack$ -- 0
+substring$ -- 26
+swap$ -- 8
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 17
+warning$ -- 0
+while$ -- 9
+width$ -- 0
+write$ -- 34

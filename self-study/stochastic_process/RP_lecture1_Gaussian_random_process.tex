@@ -1,0 +1,542 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs,  mathtools, dsfont}
+\usepackage{tabularx}
+\usepackage{tikz-cd}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Lecture 1: Gaussian Random Element}
+\author{ Tianpei Xie}
+\date{ Jul. 8th., 2015 }
+\maketitle
+\tableofcontents
+\newpage
+\section{Gaussian Vector and its Distributions}
+\subsection{Univariate Case}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Gaussian Random Variable}})\\
+Let $(\bR, \cB(\bR))$ be a measurable space, where $\cB(\bR)$ is \emph{the Borel $\sigma-$algebra} on $\bR$. A \emph{real-valued random variable} $X$ is \underline{\emph{\textbf{Normally distributed}} or \emph{\textbf{Gaussian}}} with expectation $\mu \in \bR$ and variance $\sigma^2 > 0$, if its \emph{\textbf{distribution density}} with respect to Lebesgue measure  is 
+\begin{align*}
+p(x) &= \frac{1}{\sqrt{2\pi\sigma^{2}}}\exp\paren{-\frac{(x - \mu)^{2}}{2\sigma^{2}}}.
+\end{align*} 
+\end{definition}
+
+\item \begin{remark}
+The followings are properties to the \emph{\textbf{Gaussian distribution}}
+\begin{enumerate}
+\item The c.d.f. for \emph{\textbf{the standard Normal distribution}} $\cN(0, 1)$ is 
+\begin{align*}
+\Phi(x) &= \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{x}\exp(-u^{2}/2)du
+\end{align*}
+
+\item $p(x)$ is \emph{\textbf{unimodal}}, \emph{\textbf{symmetric}} about the mean $\mu$ and it is \emph{\textbf{uniformly bounded}} on $\bR$. which has a \emph{\textbf{unique maximum}} $\frac{1}{\sqrt{2\pi\sigma^{2}}}$ at the mean $x=\mu$.
+
+\item The Normal distribution has \emph{\textbf{super-exponential decay tail}}; that is, when $x$ moves away from $\mu$, $p(x)$ decreases \emph{monotonically} and \emph{very fast}. 
+
+\item The \emph{\textbf{barycenter} (or the center of gravity)} of $\cN(\mu, \sigma^{2})$ is $x=\mu$  due to 
+$\int (x-\mu)p(x)dx = 0$;  
+
+and the \emph{\textbf{second central moment}} $\int (x-\mu)^{2}p(x)dx = \sigma^{2}$.
+
+\item The \emph{\textbf{characteristic function (Fourier transforms)}} and \emph{\textbf{moment generating function (Laplace transforms)}}
+\begin{align*}
+\cF\set{p} &= \E{p}{\exp(i\omega x)} =  \exp\paren{i\mu \omega - \frac{1}{2}\omega^{2}\sigma^{2}}\\
+\cL\set{p} &= \E{p}{\exp(s x)} =  \exp\paren{s\mu + \frac{1}{2}s^{2}\sigma^{2}}
+\end{align*}
+
+\item $\cN(\mu_{1}, \sigma_{1}^{2}) \ast \cN(\mu_{2}, \sigma_{2}^{2}) = \cN(\mu_{1}+\mu_{2}, \sigma_{1}^{2}+\sigma_{2}^{2})$, where $\ast$ is the \emph{\textbf{convolution operation}}.  In other words, the family $\set{\cN(\mu, \sigma^{2})}$ is \emph{\textbf{stable}} with respect to convolutions
+\begin{align*}
+\cP_{1}\ast \cP_{2}(A) &\equiv \int_{r}\cP_{1}(A-r)\cP_{2}(dr), \; A\in \cB^{1}.
+\end{align*}
+
+
+\item The \emph{\textbf{Gaussian measure}} is \emph{\textbf{convex}}.  (Note not the density function $p(x)$ but the measure $d\cP = p(x) dx$). That is, for any sets $A,B\in \cB(\bR)$, and each $\gamma\in [0,1]$, 
+\begin{align*}
+\gamma g(\cP(A))+ (1-\gamma)g(\cP(B)) &\le g(\cP(\gamma A+ (1-\gamma)B))
+\end{align*}
+where $g: \bR_{+} \rightarrow \bR_{+}$ is a normalizing function. For Gaussian measure, $g= \Phi^{-1}$ the inverse c.d.f.
+\end{enumerate}
+\end{remark}
+\end{itemize}
+
+\subsection{Multivariate Case}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Standard Gaussian Random Vector}})\\
+\emph{A \textbf{random vector}} $X =(X_j)_{j=1}^{n} \in \bR^n$ is called \underline{\emph{\textbf{standard Gaussian}}}, if its components are \emph{\textbf{independent}} and have \emph{a standard normal distribution}. The \emph{\textbf{distribution}} of $X$ has a \emph{density}
+\begin{align}
+p(\mb{x}) &= \frac{1}{(2\pi)^{n}}\exp\paren{ -\frac{1}{2}\mb{x}^{T}\mb{x} }, \quad \text{for $\mb{x} \in \bR^{n}$.} \label{expr: mul_Normal_density}
+\end{align} 
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Gaussian Random Vector}})\\
+\emph{A \textbf{random vector}} $Y \in \bR^n$ is called \underline{\emph{\textbf{Gaussian}}}, if it can be represented as $Y = a+ L X$, where $X$ is a \emph{standard Gaussian vector}, $\mb{a} \in \bR^n$, and $L: \bR^n \rightarrow \bR^n$ is a \emph{\textbf{linear mapping}}.
+\end{definition}
+
+Equivalently,
+\begin{definition} (\emph{\textbf{Gaussian Random Vector}})\\
+\emph{A \textbf{random vector}} $Y \in \bR^n$ is called \underline{\emph{\textbf{Gaussian}}}, if $\inn{v}{Y}$ is a \emph{Normal random variable} for \textbf{\emph{each}} $v \in \bR^n$.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Covariance Operator} for \textbf{Gaussian Random Vector}})\\
+Given a Gaussian random vector $X = (X_j)_{j=1}^{n}$,  define the \underline{\emph{\textbf{covariance operator}}} as a \emph{\textbf{linear mapping}} $K_X: \bR^{n} \rightarrow \bR^{n}$ such that 
+\begin{align*}
+\text{cov}(\inn{u}{X}, \inn{v}{X}) &= \inn{u}{K_X(v)}.
+\end{align*} The \emph{matrix representation} of $K_X$ is called a \emph{\textbf{covariance matrix}} 
+\begin{align*}
+\mb{K} = [K(i,j)]_{i,j=1}^{n} \in \bR^{n \times n}, \quad \text{ where } K(i,j)= \inn{e_i}{K_X(e_j)}.
+\end{align*}
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{The Covariance Operator is Self-Adjoint and Positive}})\\
+\emph{\textbf{The covariance operator $K$}} is \underline{\emph{\textbf{self-adjoint}}} ($K_X^{*} = K_X$), \underline{\emph{\textbf{positive semi-definite}}} $K \succeq 0$. This is due to the \emph{symmetry} and \emph{positive definiteness} property of \emph{inner product}.
+
+Equivalently, the covariance matrix $\mb{K}$ is \emph{\textbf{symmetric}}, \emph{\textbf{positive semi-definite}}.
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Density for Multivariate Gaussian}})\\
+In the case, when the linear mapping $L$ is \emph{\textbf{invertible (non-degenerate)}}, the \emph{\textbf{multivariate Normal distribution}} $\cN(\mb{\mu}, \mb{K})$ can be defined via \emph{its density function}  w.r.t.  the Lebesgue measure on $\bR^{n}$
+\begin{align}
+p(\mb{x}) &= \frac{1}{\sqrt{(2\pi)^{n}\det(|\Sigma|)}}\exp\paren{ -\frac{1}{2}(\mb{x}- \mb{\mu})^{T}\mb{K}^{-1}(\mb{x}- \mb{\mu}) } \label{expr: mul_Normal_density}
+\end{align}
+\end{remark}
+
+\item \begin{remark}
+The expression for density in \eqref{expr: mul_Normal_density} holds only if the linear operator $L$ is invertible; that is, the general definition used is the linear projection definition. \citep{lifshits2013gaussian}
+
+If $L$ is singular, $K$ is singular, i.e., $\det K = 0$; there is \emph{no proper density expression} as \eqref{expr: mul_Normal_density}. On the other hand, for every $K$ \emph{nonnegative definite}, $L = K^{1/2}$ exists and is nonnegative definite as well. 
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{The Characteristic Function of Multivariate Gaussian}})\\
+The characteristic functions of $\cN(\mb{\mu}, K)$ is determined by its one-dimension projection
+\begin{align}
+\varphi(\mb{v}) &= \int \exp\paren{i \inn{\mb{x}}{\mb{v}}}\cP(d\mb{x})  \label{eqn: charac_functional} \\
+&= \int \exp\paren{i r}\cP^{\mb{v}}(dr) \nonumber\\
+&= \rlat{\exp\paren{i\mu^{v}\omega - \frac{1}{2}\sigma^{2}(\mb{v})\omega^{2} }}{\omega = 1} \nonumber\\
+&= \exp\paren{i \inn{\mb{\mu}}{\mb{v}} - \frac{1}{2}\inn{K\mb{v}}{\mb{v}} } \nonumber
+\end{align}
+The equation \eqref{eqn: charac_functional} is known as the \emph{characteristic functional} of measure $\cP$. 
+
+Use the affine mapping $\mb{\mu} + L\cP_{0}$, the characteristic functional is given by 
+\begin{align*}
+\varphi(\mb{v}) &= \int \exp\paren{i \inn{\mb{\mu} + L\mb{x}}{\mb{v}}}\cP_{0}(d\mb{x})\\
+&= \exp\paren{i \inn{\mb{\mu}}{\mb{y}}}\int \exp\paren{i \inn{L\mb{x}}{\mb{v}}}\cP_{0}(d\mb{x})\\
+&= \exp\paren{i \inn{\mb{\mu}}{\mb{y}}}\int \exp\paren{i \inn{\mb{x}}{L^{*}\mb{v}}}\cP_{0}(d\mb{x})\\
+&= \exp\paren{i \inn{\mb{\mu}}{\mb{y}} - \frac{1}{2}\inn{L^{*}\mb{v}}{L^{*}\mb{v}}}\\
+&= \exp\paren{i \inn{\mb{\mu}}{\mb{y}} - \frac{1}{2}\inn{LL^{*}\mb{v}}{\mb{v}}}\\
+&= \exp\paren{i \inn{\mb{\mu}}{\mb{y}} - \frac{1}{2}\inn{K\mb{v}}{\mb{v}}}
+\end{align*}
+And the density is computed, for $L$ invertible, by change of variable for $\mb{y}= \mb{\mu}+ L\mb{x}$
+\begin{align*}
+p_{\mb{\mu},K}(\mb{y}) &= \abs{\det L}^{-1}p(\mb{x})\\
+&= (2\pi)^{n/2}\abs{\mb{K}}^{-1/2}\exp\paren{- \inn{K^{-1} (\mb{y}- \mb{\mu}) }{\mb{y}- \mb{\mu}}/2}
+\end{align*}
+\end{remark}
+
+\item \begin{proposition} (\textbf{Existence and Uniqueness of Gaussian Distribution})\citep{lifshits2013gaussian}\\
+Let $\cP$ be a Gaussian distribution in $\bR^{n}$. Then the mean value $\mb{\mu}$ and the covariance operator $K$ of the measure $\cP$ exist and are \textbf{uniquely} defined. The operator $K$ is \textbf{symmetric} and \textbf{positive definite}.  
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Gaussian Random Vector from Kernel}) \citep{lifshits2013gaussian}\\
+Assume $\mb{\mu}\in \bR^{n}$ and $K: \bR^{n}\rightarrow \bR^{n}$ is nonnegative definite linear operator. Then there exists a unique Gaussian distribution $\cN(\mb{\mu}, K)$ with mean $\mb{\mu}$ and covariance operator $K$. The characteristic functional of $\cN(\mb{\mu}, K)$  has the form of \eqref{eqn: charac_functional}. If the operator $K$ is non-singular, the distribution $\cN(\mb{\mu}, K)$ is absolutely continuous with respect to the Lebesgue measure, and its density is of form \eqref{expr: mul_Normal_density}. There are no other Gaussian distribution in $\bR^{n}$, except for the form $\cN(\mb{\mu}, K)$.  
+\end{proposition}
+\end{itemize}
+
+\section{Gaussian Random Element}
+\subsection{Gaussian Random Element in Topological Vector Space}
+\begin{itemize}
+\item  \begin{definition} (\emph{\textbf{Random Element in Topological Vector Space}})\\
+Let $(\Omega, \srF, \cP)$ be \emph{a probability space},  $(\cX, \srB)$ be a \emph{\textbf{topological vector space}} with \emph{$\sigma$-algebra} $\srB$. 
+A \emph{\textbf{random element}} in $\cX$  is \emph{a $\srF/\srB$-measurable function} $X: \Omega \to \cX$ so that 
+\begin{align*}
+X^{-1}(A) \in \srF, \quad \forall A \in \srB.
+\end{align*} We write $X \in \cX$.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Duality}})\\
+Let $\cX^{*}$ be \emph{the \textbf{dual} space of $\cX$}, i.e. \emph{the space of \textbf{bounded linear functional} on $\cX$}. 
+
+We denote $\inn{f}{x}$ the \emph{\textbf{duality} between the spaces $X$ and $X^{*}$}, i.e. 
+\begin{align*}
+\inn{f}{x} := f(x), \quad \forall f \in X^{*}, x \in X.
+\end{align*} Note that we \emph{\textbf{do not confuse this notation with inner product}}. In inner product $\inn{x}{y}$ both arguments are from \emph{the same space}.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Gaussian Random Element in Topological Vector Space}})\\
+\emph{A \textbf{random element} $X \in \cX$ is called \underline{\textbf{Gaussian}}}, if 
+\begin{align*}
+\inn{f}{X} := f(X) 
+\end{align*}  is a \textbf{\emph{Normal random variable}}, for all  $f \in \cX^{*}$.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Expectation}})\\
+A vector $a \in \cX$ is called \emph{\underline{\textbf{expectation}} of a random element $X \in \cX$} , if
+\begin{align*}
+\E{}{\inn{f}{X}} = \inn{f}{a}
+\end{align*}
+for all $f \in \cX^{*}$.  We write $a = \E{}{X}$.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Covariance Operator}})\\
+\emph{A \textbf{linear operator}} $K : \cX^{*} \to  \cX$ is called  \emph{\underline{\textbf{covariance operator}}} of \emph{a random vector} $X \in \cX$, if
+\begin{align*}
+\text{cov}(\inn{f}{X}, \inn{g}{X}) &= \inn{f}{K\,g}.
+\end{align*}
+for all $f, g \in X^{*}$. We write $K = \text{cov}(X)$.
+\end{definition}
+
+\begin{remark} (\emph{\textbf{Covariance} as \textbf{Function-Valued Linear Transformation} on \textbf{Dual Space} })\\
+\emph{\textbf{The covariance operator}} $K: \cX^{*} \to  \cX$ acts on linear functional on $\cX$ and returns an element (function) in $\cX$
+\begin{align*}
+f(K g) :=  \text{cov}(f(X),\,g(X))  
+\end{align*}
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Covariance Operator is Self-Adjoint and Positive}})\\
+\emph{\textbf{Covariance operator} is \underline{\textbf{self-adjoint}}}, due to symmetric property of covariance in $\bR$.
+\begin{align*}
+\inn{f}{Kg} &= \inn{g}{Kf}, \quad \forall f, g \in X^{*},
+\end{align*} and it is \underline{\emph{\textbf{positive (semi-definite)}}}, i.e.
+\begin{align*}
+\inn{f}{Kf} = \text{var}(f(X)) \ge 0, \quad \forall f \in X^{*}.
+\end{align*}
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Topological Constraints} on $\cX$ for \textbf{Gaussian Element}})  \citep{lifshits2012lectures}\\
+From the definition of Gaussian element, we see that it only makes sense when \emph{the space of continuous linear functionals on $\cX$ is \textbf{rich} enough}. For example, if $\cX^*= \set{0}$, then any vector satisfies this definition rendering it \emph{senseless}. 
+
+Therefore, usually \emph{one of \textbf{three situations}} of increasing generality is considered.
+\begin{enumerate}
+\item $\cX$ is a \underline{\emph{\textbf{separable Banach space}}}, for example, $\cC[0, 1]$, $L^p[0, 1]$ etc; 
+\item $\cX$ is a \emph{\underline{\textbf{complete} \textbf{separable} \textbf{locally convex} \textbf{metrizable}} \textbf{topological vector space}},
+for example, $\cC[0, \infty)$, $\bR^{\infty}$ etc.
+\item $\cX$ is a \underline{\emph{\textbf{locally convex topological vector space}}} and a vector $X$ is such that its distribution is a \emph{\textbf{Radon measure}}.
+\end{enumerate}
+In cases (1) and (2) \emph{every \textbf{finite measure} is a \textbf{Radon measure}}, thus case (3) is the most general one. These assumptions are called \emph{usual assumptions} in \citep{lifshits2012lectures, lifshits2013gaussian}
+\end{remark}
+
+\item \begin{proposition} (\textbf{Existence of Covariance Operator}) \citep{lifshits2013gaussian}\\
+Under usual assumptions on $\cX$, every Gaussian random element in $\cX$ possesses an \textbf{expectation} and a \textbf{covariance operator}. In other words, the distribution of Gaussian elements in $\cX$ is of the form $\cN(a, K)$. 
+\end{proposition}
+
+\item \begin{remark} (\emph{\textbf{Distribution and Characteristic Function of Gaussan Random Element}})\\
+The pair $(a, K)$ determines \emph{the \textbf{distribution} of a Gaussian variable} $\inn{f}{x}$ as
+\begin{align*}
+\cN(\inn{f}{a},  \inn{f}{Kf}),
+\end{align*}
+and we find \underline{\emph{\textbf{the characteristic function}}} of $\inn{f}{x}$ 
+\begin{align*}
+\varphi(\inn{f}{X}) &= \E{}{\exp\set{i\omega \, \inn{f}{x}}}\\
+&= \exp\paren{i\omega \inn{f}{a} - \frac{1}{2}\omega^{2} \inn{f}{Kf}} \\
+&:=  \exp\paren{i\omega f(a) - \frac{1}{2}\omega^{2} f(Kf)}
+\end{align*}
+Any \emph{Radon distribution} in $\cX$ is \emph{determined} by \emph{its characteristic function}. Therefore, distribution $\cN(a, K)$ is \emph{\textbf{unique}}.
+\end{remark}
+
+%\item Denote $\cP^{\mb{v}}(A) = \cP\set{ \mb{x}\in\bR^{n} |   \inn{\mb{v}}{\mb{x}}\in A}$ be the \emph{one-dimensional projection} of the measure $\cP$ on vector $\mb{v}$.
+%
+%Given the mean vector $\mb{\mu}$, we can define the function $\kappa: \bR^{n} \times \bR^{n} \rightarrow \cR$ by the formula
+%\begin{align}
+%\kappa(\mb{v}_{1}, \mb{v}_{2}) &= \int \inn{\mb{u}-\mb{\mu}}{\mb{v}_{1}}\inn{\mb{u}-\mb{\mu}}{\mb{v}_{2}}\cP(d\mb{u}).
+%\end{align}
+%Then a \emph{linear operator} $K: \bR^{n} \rightarrow \bR^{n}$ is called \emph{covariance operator of the measure $\cP$} if 
+%\begin{align}
+%\kappa(\mb{v}_{1}, \mb{v}_{2}) &= \inn{K\mb{v}_{1}}{\mb{v}_{2}} \label{expr: cov_operator}
+%\end{align}
+%for all $\mb{v}_{1}, \mb{v}_{2}\in \bR^{n}$. In particular, 
+%\begin{align*}
+%\inn{K\mb{v}}{\mb{v}} &\equiv \sigma^{2}(\mb{v}) = \int (r - \mu^{v})^{2}\;\cP^{\mb{v}}(dr) 
+%\end{align*}\vspace{15pt}
+
+%\item We can also define the multivariate Normal distribution $\cN(\mb{\mu}, \mb{K})$  via its one-dimensional linear projection $\inn{\mb{v}}{\mb{x}}$. That is:
+%
+%$\mb{x}$ follows a Normal distribution iff $\inn{\mb{v}}{\mb{x}}$ is Normal distributed for all $\mb{v}\in \bR^{n}$;
+%In other words, $\cP^{\mb{v}} =\cN( \mu^{v}, \sigma^{2}(\mb{v}))$ holds for all $\mb{v}\in \bR^{n}$.\\
+%
+
+%\item the pair $(\mb{\mu}, K)$ determines any one-dimensional projection of measure, $\cP^{\mb{v}}$ uniquely; it thus determines the measure $\cP$ uniquely.\\
+\end{itemize}
+
+\subsection{Examples of Gaussian Random Elements}
+\begin{itemize}
+\item \begin{example} (\emph{\textbf{Standard Gaussian Measure in $\bR^{\infty}$}})\\
+Consider the space $\cX = \bR^{\infty}$ of \emph{all countable infinite sequence} $(x_1, x_2, \ldots)$ equipped with the \emph{\textbf{product topology}}. The product topology induces a metric as
+\begin{align*}
+\rho(\set{x_n}_{n=1}^{\infty}, \set{y_n}_{n=1}^{\infty}) &= \sup_{n}\set{\frac{\min{\abs{x_n - y_n}, 1}}{n}}.
+\end{align*} $\bR^{\infty}$ is a \emph{\textbf{complete separable metric space}} under the product topology. The dual space $\cX^{*} = c_{0}$ is \emph{the space of sequences $(f_1, f_2, \ldots)$ with $f_n = 0$ for all but finite number of $n$}. The duality 
+\begin{align*}
+\inn{f}{x} &= \sum_{n=1}^{\infty}f_n x_n < \infty.
+\end{align*}
+Consider a sequence of \emph{i.i.d. $\cN(0, 1)$-distributed random variables} as a vector $X \in \cX$, i.e. $X := (X_n)_{n=1}^{\infty}$, $X_n \sim \cN(0,1)$. Due to \emph{stability} of normal distribution, for any $f \in \cX^{*}$ the random variable 
+\begin{align*}
+\inn{f}{X} = \sum_{n=1}^{\infty}f_n X_n \sim \cN(0, \sigma^2)
+\end{align*} where $\sigma^2 = \sum_{n=1}^{\infty}f_n^2 < \infty$. Therefore, $X$ is a \emph{\textbf{Gaussian element}}. It is clear that $\E{}{X} = 0$. 
+
+\emph{\textbf{Embedding operator}} serves as \emph{\textbf{covariance operator}} for $X$, i.e.
+\begin{align*}
+K = \iota: c_0  \xhookrightarrow{} \bR^{\infty}. 
+\end{align*} To show that
+\begin{align*}
+\text{cov}\paren{\inn{f}{X}, \inn{g}{X}} &= \E{}{\inn{f}{X}\,\inn{g}{X}} \\
+&= \E{}{\paren{\sum_{n=1}^{\infty}f_n X_n}\, \paren{\sum_{n=1}^{\infty}g_n X_n}}\\
+&= \E{}{\sum_{n,m=1}^{\infty}f_n g_m X_n X_m}\\
+&= \sum_{n,m=1}^{\infty}f_n g_m  \E{}{X_n X_m} = \sum_{n,m=1}^{\infty}f_n g_m\;  \delta_{n,m}\\
+&= \sum_{n=1}^{\infty}f_n g_n := \inn{f}{Kg}
+\end{align*} We call \emph{the distribution of $X$} \emph{a \textbf{standard Gaussian measure in $\bR^{\infty}$}}. \qed
+
+
+\end{example}
+
+\item \begin{example} (\emph{\textbf{Gaussian Elements in a Hilbert space $\cH$}})  \citep{lifshits2012lectures}\\
+Let $\cX = \cH$ be a \emph{\textbf{separable Hilbert space}} whose inner product will be denoted by $\inn{\cdot}{\cdot}_{\cH}$. By the Riesz representation theorem, we can identify its dual space $\cH^{*}$ with $\cH$, i.e. for each $f \in \cH^{*}$, there exists a unique $x_f \in \cH$ such that
+\begin{align*}
+\inn{f}{x} = f(x) &= \inn{x}{x_f}_{\cH}, \quad \forall x \in \cH.
+\end{align*} Define $h: \cH^{*} \rightarrow \cH$ as an \emph{isometric isomorphism} that maps $f \mapsto x_f$.
+
+In order to construct a Gaussian element in $\cH$, consider a \emph{\textbf{complete orthonormal basis}} $\set{\varphi_n}_{n=1}^{\infty}$ on $\cH$, a  sequence of \emph{\textbf{independent}} \emph{\textbf{$\cN(0, 1)$-distributed random variables}} $\set{\xi_n}_{n=1}^{\infty}$, and a sequence of \emph{\textbf{non-negative numbers}} $\set{\sigma_n}_{n=1}^{\infty}$ satisfying assumption $\sum_{n=1}^{\infty}\sigma_n^2 < \infty$ so that the series
+\begin{align*}
+\sum_{n=1}^{\infty}\sigma_n  \xi_n(\omega) \varphi_n
+\end{align*} is \emph{\textbf{convergent}} in $\norm{\cdot}{\cH}$-\emph{\textbf{norm}}   \emph{\textbf{almost surely}} in $\cH$. 
+Define a \emph{random element} $X: \Omega \to \cH$ as the limit of the series
+\begin{align}
+X=   \sum_{n=1}^{\infty}\sigma_n \xi_n \varphi_n \label{eqn: Gaussian_hilbert_space_expansion}
+\end{align} 
+This representation  is called \underline{\emph{\textbf{Karhunen-Lo{\`e}ve expansion}}}. 
+ 
+For any linear functional $f \in \cH^{*}$, we can its corresponding vector $x_f = h(f) \in \cH$ and $x_f = \sum_{n=1}^{\infty}f_n \varphi_n$. Thus the random variable
+\begin{align*}
+\inn{f}{X} &= \inn{X}{x_f}_{\cH} = \inn{\sum_{n=1}^{\infty}\sigma_n \xi_n \varphi_n}{\sum_{n=1}^{\infty}f_n \varphi_n}_{\cH} \\
+&= \sum_{n,m=1}^{\infty}\sigma_n  \bar{f_m} \xi_n \inn{ \varphi_n}{ \varphi_m}_{\cH} \\
+& \text{by orthonormal }  \inn{ \varphi_n}{ \varphi_m}_{\cH} = \delta_{n,m}\\
+&= \sum_{n=1}^{\infty}\sigma_n  \bar{f_n} \xi_n \sim \cN(0, \sigma^2)
+\end{align*} where $\sigma^2 := \sum_{n=1}^{\infty}\sigma_n^2  f_n^2 \le  (\sum_{n=1}^{\infty}\sigma_n^2)\sup_{n}{\abs{f_n}^2}< \infty$. Therefore, $X$ is a
+\emph{\textbf{Gaussian random element}} in $\cH$ and $\E{}{X} = 0$. In order to find \emph{\textbf{the covariance operator}} of $X$, let us
+compute
+\begin{align*}
+\text{cov}\paren{\inn{f}{X} \inn{g}{X}} &= \E{}{\inn{f}{X} \inn{g}{X}}\\
+&=  \E{}{\paren{\sum_{n=1}^{\infty}\sigma_n  \bar{f_n} \xi_n } \paren{\sum_{n=1}^{\infty}\sigma_n  \bar{g}_n \xi_n }}\\
+&= \sum_{n,m=1}^{\infty}\bar{f_n} \bar{g}_m\sigma_n \sigma_m  \E{}{\xi_n \xi_m} \\
+& \text{since }  \E{}{\xi_n \xi_m} = \delta_{n,m}\\
+&= \sum_{n=1}^{\infty}\sigma_n^2 \bar{f_n} \bar{g}_n = \inn{f}{Kg}
+\end{align*}
+By plugging in the basis, we have
+\begin{align}
+ &K:  g \rightarrow \sum_{n=1}^{\infty}\sigma_n^2 g_n \varphi_n = \sum_{n=1}^{\infty}\sigma_n^2 \inn{g}{\varphi_n} \varphi_n \label{eqn: Gaussian_covariance_random_hilbert_1} \\
+&\Rightarrow \widetilde{K} = K \circ h^{-1} =  \sum_{n=1}^{\infty}\sigma_n^2 \inn{\cdot}{\varphi_n}_{\cH} \varphi_n \label{eqn: Gaussian_covariance_random_hilbert_2}
+\end{align} Therefore $\sigma_n^2$ and $\varphi_n$ are the \emph{\textbf{eigenvalues}} and \emph{\textbf{eigenfunctions}} of $\widetilde{K}= K \circ h^{-1}$ and $\widetilde{K}$ is a \emph{\textbf{positive}, \textbf{compact operator}} on $\cH$ since $\text{tr}(\widetilde{K}) =  \sum_{n=1}^{\infty}\sigma_n^2 < \infty$.
+
+One can show that \emph{\textbf{any Gaussian element in a Hilbert space admits a representation}} \eqref{eqn: Gaussian_hilbert_space_expansion} \citep{lifshits2012lectures}. This means that \emph{a \textbf{Gaussian distribution} with \textbf{covariance operator} $K$ \textbf{exists}} \underline{\emph{\textbf{if and only if}}} the induced linear operator $\widetilde{K}= K \circ h^{-1} \in \cL(\cH)$ is a \emph{\textbf{self-adjoint, \underline{positive}}, \underline{\textbf{trace-class operator}}} (which is \underline{\emph{\textbf{compact}}}). \qed
+
+%In order to define a \emph{\textbf{$\cN(0, K)$-distributed Gaussian random element  in $\cH$}}, we need to find a \emph{\textbf{complete orthonormal basis}} on $\cH$ so that, by property of orthonormal basis in Hilbert space, \emph{each random element $X$ can be represented as linear combinations of the orthonormal basis}.
+%
+%Note that for $K: \cH^{*} \rightarrow \cH$, we can define a linear operator on $\cH$ as $\widetilde{K} := K \circ h^{-1}$. Thus $\widetilde{K} \in \cL(\cH)$ such that 
+%\begin{align*}
+%\inn{f}{Kg} &= \inn{\widetilde{K}x_g}{x_f}_{\cH}
+%\end{align*} where $x_f = h(f)$ and $x_g = h(g)$. We see that $\widetilde{K}$ is \emph{\textbf{bounded, self-adjoint}} and \emph{\textbf{positive definite}} \emph{linear operator} on $\cH$ since $K$ is. By \emph{spectrum theorem}, $\widetilde{K}$ 
+\end{example}
+
+\item \begin{remark} (\emph{\textbf{Equivalent Definition of Covariance Operator on Hilbert Space}})\\
+In the previous example, we see that \emph{\textbf{the covariance operator on Hilbert space}} can be equivalently \emph{defined} via linear operator $\widetilde{K}: \cH \rightarrow \cH$ so that 
+\begin{align*}
+\cov{\inn{f_{h}}{X}_{\cH}}{\inn{g_{h}}{X}_{\cH}} &= \inn{\widetilde{K}f_h}{g_h}_{\cH}.
+\end{align*} Note that $\widetilde{K} \succeq 0$ is \emph{\textbf{self-adjoint}} and \emph{\textbf{positive}} and it has \emph{\textbf{finite trace}} $\text{tr}(\widetilde{K})$ so it is \emph{\textbf{trace-class operator}} which is \emph{\textbf{compact}}. And, conversely, for any \emph{\textbf{positive trace-class operator}} $K \in \cB_1(\cH)$, there exists \emph{\textbf{Gaussian element} in $\cH$ with distribution $\cN(0, K)$}.
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Identity Operator is Not Covariance Operator on Hilbert Space}})\\
+For identity operator $I: \cH \rightarrow \cH$, we see that its trace $\tr{I} = \infty$, this means that it \emph{does not admit }a Gaussian distribution as $\cN(0, I)$ on infinite dimensional space $\cH$. In fact, we can see that $\E{}{\abs{X(t)}^2} = \infty$.
+\end{remark}
+\end{itemize}
+
+
+\subsection{Gaussian Random Process}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Random Process}})\\
+Let $(\Omega, \srF, \cP)$ be a probability space and $T$ be a parametric set called \emph{\textbf{index set}}. \emph{A \textbf{random process}} $X$ on $T$ is
+\emph{a family of random variables $X(t, \omega), t \in T$}, defined on the \emph{\textbf{common} probability space} $(\Omega, \srF, \cP)$. For each $\omega \in \Omega$,
+\begin{align*}
+X(\omega) := \set{X_t(\omega): t\in T}
+\end{align*} is called a \emph{\textbf{sample function}} of $(X_t)$ and if $T$ is one-dimensional, they
+are often called \emph{\textbf{sample paths} of the process $(X_t)$}.
+\end{definition}
+
+\item \begin{remark}
+Determined by index set $T$, we have:
+\begin{enumerate}
+\item if $T \subset \bR$, $\set{X_t}_{t\in T}$ is called a \underline{\emph{\textbf{random process}}}.
+\item if $T \subset \bR^n$, $\set{X_t}_{t\in T}$ is called a \underline{\emph{\textbf{random field}}}.
+\item if $T = \bN$, $\set{X_t}_{t\in T}$ is called a \underline{\emph{\textbf{random sequence}}}.
+\end{enumerate}
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{Gaussian Random Process}})\\
+A process $(X_t)_{t\in T}$ is called \underline{\emph{\textbf{Gaussian}}} if for any $t_1 \xdotx{,} t_n \in T$ the \emph{distribution of the random vector}
+\begin{align*}
+\paren{X(t_1) \xdotx{,} X(t_n)}
+\end{align*}
+is a \emph{\textbf{Gaussian distribution}} in $\bR_n$. 
+
+The properties of a \emph{\textbf{Gaussian process}} are \emph{\textbf{completely determined}} by its \emph{\textbf{expectation}} $\E{}{X(t)}, t \in T$,
+and \emph{\textbf{covariance}} $\text{cov}(X(s), X(t)), s, t \in T$.
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Gaussian Random Process as Gaussian Element on Function Space}}) \\
+Consider \emph{the topological vector space} $\cX \subset \bR^{T}$ as \emph{a \textbf{function space} on $T$}, then the \emph{\textbf{Gaussian random element}} in $\cX$ is a \emph{Gaussian process}:
+\begin{align*}
+&X: \Omega \to \cX \subset \bR^{T} \\
+\Rightarrow \;&X(\omega)(t) = X(\omega, t), \forall t\in T
+\end{align*}
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{Continuous Sample Path}})\\
+If $T$ is a \emph{\textbf{topological space}}, we say that $\set{X_t}_{t\in T}$ has  \underline{\emph{\textbf{continuous sample paths}}}, if the
+function $X(\cdot, \omega)$ is \emph{\textbf{continuous}} \emph{on $T$} for \emph{$\cP$-almost every $\omega \in \Omega$}.
+\end{definition}
+\end{itemize}
+
+\subsection{Examples of Gaussian Random Processes}
+\begin{itemize}
+\item \begin{example} (\emph{\textbf{Continuous Sample Path Gaussian Process}})  \citep{lifshits2012lectures}\\
+Let $T$ be a \underline{\emph{\textbf{compact metric space}}}, let $\cX = \cC(T)$ denote \emph{the \textbf{Banach space} of all \textbf{continuous functions} on
+$T$ equipped with supremum norm} 
+\begin{align*}
+\norm{x}{\infty} := \sup_{t \in T}\abs{x(t)}
+\end{align*}
+and with the corresponding \emph{\textbf{topology of uniform convergence}}. By \emph{Riesz-Markov theorem}, the \emph{\textbf{dual space}} $\cX^{*} = \cM(T)$ is a \emph{space of \textbf{\underline{signed Radon measures} of finite variations} on $T$}. The duality is given by 
+\begin{align*}
+\inn{\mu}{f} &= \int_{T} f\;  d\mu, \quad \forall f\in \cX,  \forall \mu \in  \cM(T) = \cX^{*}.
+\end{align*}
+
+Let $\{X(t), t \in T\}$, be a \emph{\textbf{Gaussian random process}} with \underline{\emph{\textbf{continuous sample paths}}} on the parametric set $T$. It is \emph{completely characterized} by the functions
+\begin{align*}
+a(t) := \E{}{X(t)}, \quad K(s, t) := \cov{X(s)}{X(t)}.
+\end{align*} Then we can view at $X:=\{X(t), t \in T\}$ as a \emph{\textbf{Gaussian random element}} of $\cX$. The \emph{\textbf{expectation}} of $X$ is computed as
+\begin{align*}
+\E{}{X} = a := (a(t))_{t\in T},
+\end{align*} and the \underline{\emph{\textbf{covariance operator}} $K:  \cM(T) \to \cC(T)$} can be calculated by 
+\begin{align}
+(K\nu)(s) &=  \int_{T} K(s, t) \nu(dt). \label{eqn: Gaussian_covariance_random_process_continuous}
+\end{align}
+This is because
+\begin{align*}
+\cov{\inn{\mu}{X}}{\inn{\nu}{X}} &= \E{}{\inn{\mu}{(X-a)} \inn{\nu}{(X-a)}}\\
+&= \E{}{ \int_{T} (X -a) d\mu \int_{T} (X-a) d\nu } \\
+&= \E{}{\int_{T \times T} (X(s)- a(s))(X(t)-a(t)) \mu(ds)\nu(dt) } \\
+&= \int_{T}\int_{T} \E{}{ (X(s)- a(s))(X(t)-a(t)) } \mu(ds)\nu(dt) \\
+& = \int_{T} \paren{\int_T K(s, t) \nu(dt)} \mu(ds) := \inn{\mu}{K\nu},
+\end{align*} thus we have \eqref{eqn: Gaussian_covariance_random_process_continuous}. \qed
+
+\end{example}
+
+\item \begin{example} (\emph{\textbf{Wiener Process}}) \citep{lifshits2012lectures}\\
+We will now consider $T = [0,1]$ and $\cX = \cC[0,1]$ with \emph{dual} $\cM[0,1]$.  Define a \emph{Gaussian element} composed of \emph{the sample paths of a \underline{\textbf{Wiener process}}} 
+\begin{align*}
+\cW := \cW(t), \quad   0 \le t \le 1,
+\end{align*} i.e. of a process satisfying assumptions
+\begin{align*}
+\E{}{\cW(t)} = 0, \quad  \E{}{\cW(s) \cW(t)} = \min\set{s, t}.
+\end{align*} It is just a special case of previous example, so we can find the expectation of $\cW$ by
+\begin{align*}
+\E{}{\inn{\mu}{\cW}} = \E{}{\int_{[0,1]} \cW d\mu} = \int_{0}^{1}\E{}{\cW(t)} \mu(dt) = 0
+\end{align*}
+we have $\E{}{\cW} = 0$. Moreover,  the \underline{\emph{\textbf{covariance operator}} $K:  \cM([0,1]) \to \cC([0,1])$} 
+\begin{align*}
+(K\nu)(s) &=  \int_{0}^1 K(s, t) \nu(dt) \\
+&= \int_{0}^1  \min\set{s, t} \nu(dt).  \qed
+\end{align*}
+\end{example}
+
+\begin{remark}
+Finally, we recall \emph{the properties of Wiener process} $\cW(t)$: \citep{lifshits2012lectures}
+\begin{enumerate}
+\item  It is \emph{\textbf{$1/2$-self-similar}}, i.e. for any $c > 0$ the process 
+\begin{align*}
+Y(t) := \frac{\cW(ct)}{\sqrt{c}}
+\end{align*}  is also a \emph{\textbf{Wiener process}};
+\item It has \emph{\textbf{stationary increments}};
+\item It has \emph{\textbf{independent increments}};
+\item It is a \emph{\textbf{Markov process}};
+\item It admits \emph{\textbf{time inversion}}: the process 
+\begin{align*}
+Z(t) := t\cW\paren{\frac{1}{t}}
+\end{align*} is also a \emph{\textbf{Wiener process}}.
+\end{enumerate}
+\end{remark}
+
+\end{itemize}
+
+
+
+
+%\subsection{Covariance}
+%\begin{itemize}
+%\item The covariance of two random variable $\xi_{1}, \xi_{2}$ is defined as 
+%\begin{align*}
+%\cov{\xi_{1}}{\xi_{2}}&\equiv \int (x_{1} - \E{}{\xi_{1}})(x_{2} - \E{}{\xi_{2}})\cP(dx_{1}dx_{2})
+%\end{align*}
+%
+%The covariance in the set of random variables $(\xi_{1}, \ldots, \xi_{n})$ and the covariance operator $K$ of their joint distribution. More precisely, if $\set{\mb{e}_{1},\ldots, \mb{e}_{n}}$ is the standard basis in $\bR^{n}$, then 
+%\begin{align}
+%\cov{\xi_{i}}{\xi_{j}}&= \inn{K\mb{e}_{i}}{\mb{e}_{j}} = \mb{K}_{i,j}.\label{eqn: cov_basis}
+%\end{align}
+%
+%
+%\item For a random process $\xi \equiv \set{\xi_{t}, t\in T}$ with finite variance $\E{}{\xi^{2}_{t}}<\infty, t\in T$, the \emph{covariance function} of a random process is defined as 
+%\begin{align*}
+%K(s,t) &\equiv  \cov{\xi_{t}}{\xi_{s}},\quad  s,t\in T.
+%\end{align*} 
+%
+%Clearly, $K$ is p.d. 
+%\begin{align*}
+%\sum_{i,j}^{n}K(t_{i},t_{j})\gamma_{i}\overline{\gamma}_{j} &= \E{}{\abs{\sum_{i=1}^{n}\gamma_{i}(\xi_{t_i}- \E{}{\xi_{t_{i}}})}^{2}} \ge 0.
+%\end{align*}
+%
+%\end{itemize}
+%\newpage
+%\section{Theorems}
+%\begin{itemize}
+%\item \begin{theorem} (The representation of stationary kernel: \emph{Bochner}'s theorem) \\
+%A complex-valued function $K$ on $\bR^{D}$ is the covariance function of a weakly stationary mean square continuous complex-valued random process on $\bR^D$ if and only if it can be represented as
+%\begin{align}
+%K(\mb{x}, \mb{x}') = K(\mb{x}-\mb{x}')&=\int_{\bR^{D}} \exp\paren{ 2\pi j\,\mb{s}^{T}(\mb{x}-\mb{x}')}d\mu(\mb{s}), \label{eqn: Kernel_Fourier_1}
+%\end{align}
+%where $\mu$ is a positive finite measure, which is called the \emph{spectral measure} of this process \citep{lifshits2013gaussian}.
+%\end{theorem}
+%The covariance function of a stationary process can be represented as the Fourier transform of a positive finite measure.
+%
+%For the spectral density exists as $S(\mb{s})$, 
+%\begin{align}
+%K(\mb{x}-\mb{x}')= K(\mb{\tau})&=\int_{\bR^{D}} S(\mb{s})\exp\paren{2\pi j\,\mb{s}^{T}\mb{\tau}}d\mb{s}, \nonumber\\
+%S(\mb{s}) &= \int_{\bR^{D}} K(\mb{\tau})\exp\paren{-2\pi j\,\mb{s}^{T}\mb{\tau}}d\mb{\tau}.\label{eqn: Kernel_Fourier_2}
+%\end{align}\vspace{10pt}
+%
+%\item \begin{theorem}
+%Let $T$ be arbitrary set, $K: T\times T\rightarrow \bR$ a positive definite function. Then there exists a probability space and a Gaussian random function defined on that space, whose covariance function is $K$.
+%\end{theorem}
+%\end{itemize}
+
+
+
+
+
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{reference.bib}
+\end{document}
