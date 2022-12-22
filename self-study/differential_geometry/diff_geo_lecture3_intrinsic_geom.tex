@@ -1,0 +1,352 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs, dsfont}
+\usepackage{tabularx}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Lecture 3: Intrinsic Geometry of Surface}
+\author{ Tianpei Xie}
+\date{ Jun. 10th., 2015 }
+\maketitle
+\tableofcontents
+\newpage
+\allowdisplaybreaks
+\section{Isometries and Conformal Maps}
+\begin{itemize}
+\item This chapter focus on the \emph{\textbf{geometry}} of \emph{the first fundamental form}. Many important local properties of a surface can be expressed only in terms of the first fundamental form. The study of such properties is called the \emph{\textbf{intrinsic geometry}} of the surface.
+
+\item 
+\begin{definition}
+For two regular surfaces $\cS$ and $\cS'$, a \emph{diffeomorphism} $\varphi: \cS \rightarrow \bar{\cS}$ is an \underline{\emph{\textbf{isometry}}} if for all $p\in \cS$ and all pairs $\mb{w}_{1}, \mb{w}_{2} \in T_{p}S$ we have
+\begin{align*}
+\inn{\mb{w}_{1}}{\mb{w}_{2}}_{p} &= \inn{d\varphi_{p}(\mb{w}_{1})}{d\varphi_{p}(\mb{w}_{2})}_{\varphi(p)}.
+\end{align*} 
+The surface $\cS$ and $\bar{\cS}$ are said to be \underline{\emph{\textbf{isometric}}}. 
+\end{definition}
+
+\item The diffeomorphism $\varphi$ is an isometry if the differential $d\varphi$ it \textbf{preserves the inner product}. It follows that the first fundamental form 
+\begin{align}
+I_{p}(\mb{w}) &= \inn{w}{w}_{p} = \inn{d\varphi_{p}(\mb{w})}{d\varphi_{p}(\mb{w})}_{\varphi(p)} = I_{\varphi(p)}(d\varphi_{p}(\mb{w})),\quad \forall\,\mb{w}\in T_{p}S. \label{eqn: 1st_fundamental_form_inner_prod}
+\end{align}  \textbf{Conversely}, if the differential of a \emph{diffeomorphism} preserves the first fundamental form, it is an \emph{isometry}. 
+
+
+\item \begin{definition}
+A map $\varphi: V \rightarrow \bar{\cS}$ of a neighborhood $V$ of $p\in \cS$ is a \emph{\textbf{local isometry}} at $p$ if there exists a neighborhood $\bar{V}$ of $\varphi(p) \in \bar{\cS}$ such that $\varphi: V \rightarrow \bar{V}$ is an \emph{isometry}.  
+
+If there exists a local isometry into $\bar{\cS}$ at every $p\in \cS$, the surface $\cS$ is said to be \emph{\textbf{locally isometric}} to $\bar{\cS}$. Then $\cS$ and $\bar{\cS}$ are \emph{locally isometric} if $\cS$ is locally isometric to $\bar{\cS}$ and $\bar{\cS}$ is locally isometric to $\cS$. 
+\end{definition}
+
+Note that for a diffeomorphism $\varphi$ that is a \emph{local isometry} for \emph{every} $p\in \cS$, then $\varphi$ is a \emph{(global) isometry}. 
+
+It is possible that two surfaces are locally isometric but are not \emph{globally isometric}, e.g. the plane and the cylinder. 
+
+\item \begin{proposition}\label{prop: local_iso}
+Assume the existence of parameterization $\mb{x}: U\rightarrow \cS$ and $\bar{\mb{x}}: U\rightarrow \bar{\cS}$ such that $E=\bar{E}$, $F=\bar{F}$, $G=\bar{G}$ in $U$. Then the map $\varphi= \bar{\mb{x}}\circ \mb{x}^{-1}:  \mb{x}(U) \rightarrow \bar{\cS}$ is a local isometry. 
+\end{proposition}
+\begin{proof}
+Let $p\in \mb{x}(U)$, and $\mb{w}\in T_{p}S$. Then  $\mb{w}$ is tangent to a curve $\mb{x}(\beta(t))$ at $t=0$, where $\beta(t) = (u(t), v(t))$ is a curve in $U$; thus, $\mb{w}$ can be written as (at $t=0$)
+\begin{align*}
+\mb{w} &= \mb{x}_{u}u' + \mb{x}_{v}v'
+\end{align*} for $\set{\mb{x}_{u}, \mb{x}_{v}}$ basis in $T_{p}S$.
+
+By definition, the vector $d\varphi_{p}(\mb{w})$ is the tangent vector to the curve $\varphi\circ \mb{x}\circ\beta(t) = \bar{\mb{x}}\circ\beta(t) = \bar{\mb{x}}(\beta(t))$, i.e. 
+\begin{align*}
+d\varphi_{p}(\mb{w}) &= \bar{\mb{x}}_{u}u' + \bar{\mb{x}}_{v}v'
+\end{align*}
+
+Since 
+\begin{align*}
+I_{p}(\mb{w}) &= E(u')^{2} + 2F(u'v')+ G(v')^{2}\\
+I_{\varphi(p)}(d\varphi_{p}(\mb{w}))&= \bar{E}(u')^{2} + 2\bar{F}(u'v')+ \bar{G}(v')^{2}, 
+\end{align*}
+we conclude that $I_{p}(\mb{w})  = I_{\varphi(p)}(d\varphi_{p}(\mb{w}))$ for all $p\in \mb{x}(U)$ and for all $\mb{w}\in T_{p}S$; hence, $\varphi$ is an isometry. \QEDA
+\end{proof}
+
+
+\item 
+Given the first fundamental form, the \emph{\textbf{intrinsic distance}} between two points on the surface can be defined as the \emph{\textbf{infimum}} of the arc length between these points. \textbf{\emph{This distance is invariant under isometry}}, i.e. $\varphi: \cS \rightarrow \bar{\cS}$ is an isometry, then $d(p,q) = d(\varphi(p), \varphi(q)),\; p,q\in \cS$.
+
+\item The notion of \textbf{\emph{isometry}} is a natural concept of equivalence for the \textbf{\emph{metric}} properties of regular surface. Similarly, the notion of \textbf{\emph{diffeomorphism}} is an equivalence relationship form the point of view of \emph{\textbf{differentiability}}. 
+
+\item  \begin{definition}
+A diffeomorphism $\varphi: \cS \rightarrow \bar{\cS}$ is called a \underline{\emph{\textbf{conformal map}}} if for all $p\in \cS$ and all $\mb{v}_1, \mb{v}_2 \in T_{p}\cS$ we have:
+\begin{align}
+\inn{d\varphi_{p}(\mb{v}_1)}{d\varphi_{p}(\mb{v}_2)} &= \lambda^2(p)\inn{\mb{v}_1}{\mb{v}_2}_{p}, \label{eqn: conformal_map}
+\end{align} where $\lambda^2$ is a \textbf{nowhere-zero differentiable} function on $\cS$; the surfaces $\cS$ and $\bar{\cS}$ are then said to be \emph{\textbf{conformal}}. 
+
+A map $\varphi: V \rightarrow \bar{\cS}$ of a neighborhood $V$ of $p\in \cS$ into $\bar{\cS}$ is a \emph{\textbf{local conformal map}} at $p$ if there exists a neighborhood $\bar{V}$ of $\varphi(p)$ such that $\varphi: V \rightarrow \bar{V}$ is a \emph{conformal map}. If for each $p\in \cS$, there exists a local conformal map at $p$, the surface $\cS$ is said to be \emph{\textbf{locally conformal}} to $\bar{\cS}$.
+\end{definition}
+
+\item \begin{proposition}
+Let $\mb{x}: U \rightarrow \cS$ and $\bar{\mb{x}}: U \rightarrow \bar{\cS}$ be parametrizations such that $E = \lambda^2\,\bar{E}$, $F = \lambda^2\,\bar{F}$, $G = \lambda^2\,\bar{G}$ in $U$, where $\lambda^2$ is a \textbf{nowhere-zero differentiable} function on $U$. Then the map $\varphi= \bar{\mb{x}}\circ \mb{x}^{-1}:  \mb{x}(U) \rightarrow \bar{\cS}$ is a local conformal map.
+\end{proposition}
+
+\item \begin{theorem}
+Any two regular surfaces are locally conformal.
+\end{theorem}
+\end{itemize}
+
+\section{The Gauss Theorem and the Equations of Compatibility}
+\subsection{The fundamental theorem of the local theory of surfaces}
+\begin{itemize}
+\item Given a parameterization $\mb{x}: U\rightarrow \cS$ in the orientation of a regular surface $\cS$, it is possible to assign a \emph{\textbf{natural trihedron}} $(\mb{x}_{u}, \mb{x}_{v}, N)$ at each point $p\in \mb{x}(U)$. 
+
+\item (\emph{The representation of \textbf{partial derivatives} of basis under basis})\\
+Note that given parameterization $\mb{x}: U \rightarrow \cS$ and a point $p\in \cS$, the trihedron $(\mb{x}_{u}, \mb{x}_{v}, N)$ at $p$ form a basis in ambient space. In terms of this, the partial derivatives of these basis vector in this space can be linearly represented by this basis, i.e. 
+\begin{align}
+\partdiff{\mb{x}_{u}}{u} = \mb{x}_{uu} &= \Gamma_{11}^{1}\mb{x}_{u} +  \Gamma_{11}^{2}\mb{x}_{v} + e\,N\nonumber\\
+\partdiff{\mb{x}_{u}}{v} = \mb{x}_{uv} &= \Gamma_{12}^{1}\mb{x}_{u} +  \Gamma_{12}^{2}\mb{x}_{v} + f\,N\nonumber\\
+\partdiff{\mb{x}_{v}}{u} = \mb{x}_{vu} &= \Gamma_{21}^{1}\mb{x}_{u} +  \Gamma_{21}^{2}\mb{x}_{v} + f\,N\nonumber\\
+\partdiff{\mb{x}_{v}}{v} = \mb{x}_{vv} &= \Gamma_{22}^{1}\mb{x}_{u} +  \Gamma_{22}^{2}\mb{x}_{v} + g\,N\nonumber\\
+\partdiff{N}{u} =N_{u} &= a_{11}\mb{x}_{u} +  a_{21}\mb{x}_{v} \nonumber\\
+\partdiff{N}{v} =N_{v} &= a_{12}\mb{x}_{u} +  a_{22}\mb{x}_{v} \label{eqn: Christoffel_eq_1}
+\end{align}
+
+The coefficients $\Gamma_{i,j}^{k}$ for $i,j,k = 1,2$ are called \underline{\emph{\textbf{Christoffel symbols}}} of $\cS$ in paramterization. It is  a function of intrinsic parameters. From \eqref{eqn: Christoffel_eq_1}, it is seen that the Christoffel symbols are linear coefficients of the projection of $\mb{x}_{uu}, \mb{x}_{uv}, \mb{x}_{vv}$ onto the tangent plane of the surface, whereas their normal complements are represented via $e,f,g$, the coefficients of second fundamental form. The coefficients $[a_{i,j}]$ determines the differential of Gauss map $dN_{p}$, which is a function of first fundamental form $E,F,G$. 
+
+Like Frenet formula, the above formula \eqref{eqn: Christoffel_eq_1} is \emph{\textbf{\underline{the fundamental theorem} of the local theory of surfaces}}. 
+
+\item The linear coefficients of the \textbf{\emph{second partial derivatives}} of the parameterization $(\mb{x}_{uu}, \mb{x}_{uv}, \mb{x}_{vv})$ under the basis vectors $(\mb{x}_{u}, \mb{x}_{v})$ at $p$ is referred as the \underline{\emph{\textbf{Christoffel symbol}}}, $\Gamma_{i,j}^{k}$, where the upper index $k=1,2$ is related to the basis vector $(\mb{x}_{u}, \mb{x}_{v})$, and the lower index $(i,j) \in \set{1,2}\times \set{1,2}$ is related to the intrinsic parameter $(u,v)$ under second order partial derivatives. 
+
+Note that  $(\mb{x}_{uu}, \mb{x}_{uv}, \mb{x}_{vv})$ is seen also as the partial derivative of the basis vector $(\mb{x}_{u}, \mb{x}_{v})$. Thus the Christoffel symbol is the linear coefficient in representing  the partial derivative of the basis vector $(\mb{x}_{u}, \mb{x}_{v})$ under these basis vectors itself. 
+
+\item (\emph{\textbf{Christoffel symbols} via coefficients of \textbf{first fundamental form}})\\
+The Christoffel symbols can be determined by taking the inner product of the first four equations in \eqref{eqn: Christoffel_eq_1} with $\mb{x}_{u}$ and $\mb{x}_{v}$, i.e. 
+\begin{align}
+&\left\{ \begin{array}{ccl}
+\Gamma_{11}^{1}E + \Gamma_{11}^{2}F &= \inn{\mb{x}_{uu}}{\mb{x}_{u}} &= \frac{1}{2}E_{u} \\ 
+\Gamma_{11}^{1}F + \Gamma_{11}^{2}G &= \inn{\mb{x}_{uu}}{\mb{x}_{v}} &= F_{u} - \frac{1}{2}E_{v} 
+\end{array} \right. \nonumber\\
+&\left\{ \begin{array}{ccl}
+\Gamma_{12}^{1}E + \Gamma_{12}^{2}F &= \inn{\mb{x}_{uv}}{\mb{x}_{u}} &= \frac{1}{2}E_{v} \\ 
+\Gamma_{12}^{1}F + \Gamma_{12}^{2}G &= \inn{\mb{x}_{uv}}{\mb{x}_{v}} &= \frac{1}{2}G_{u}  
+\end{array} \right. \nonumber\\
+&\left\{ \begin{array}{ccl}
+\Gamma_{22}^{1}E + \Gamma_{22}^{2}F &= \inn{\mb{x}_{vv}}{\mb{x}_{u}} &=F_{v} - \frac{1}{2}G_{u}  \\ 
+\Gamma_{22}^{1}F + \Gamma_{22}^{2}G &= \inn{\mb{x}_{vv}}{\mb{x}_{v}} &= \frac{1}{2}G_{v}   
+\end{array} \right. \label{eqn: Christoffel_eq_2}
+\end{align}
+There are three pairs of equations and each pair uniquely determines a pair of Christoffel symbol $(\Gamma_{i,j}^{1}, \Gamma_{i,j}^{2}), i,j=1,2$. \emph{This system of equations in \eqref{eqn: Christoffel_eq_2} determines the \textbf{Christoffel symbol} only in terms of the coefficients of \textbf{first fundamental form} $(E,F,G)$}.  
+
+Note that $\Gamma_{i,j}^{k} = \Gamma_{j,i}^{k}$, i.e. the Chrisoffel symbol is \emph{symmetric} w.r.t. the lower indices.
+
+In particular, for orthogonal parameterization, $F=0$, the Christoffel symbol can be computed as
+\begin{align*}
+\Gamma_{11}^{1} = \frac{1}{2}\frac{E_{u}}{E};  &&
+\Gamma_{11}^{2} = -\frac{1}{2}\frac{E_{v}}{G};\\
+\Gamma_{12}^{1} = \frac{1}{2}\frac{E_{v}}{E};  &&
+\Gamma_{12}^{2} = \frac{1}{2}\frac{G_{u}}{G};\\
+\Gamma_{22}^{1} = -\frac{1}{2}\frac{G_{u}}{E};  &&
+\Gamma_{22}^{2} = \frac{1}{2}\frac{G_{v}}{G}.
+\end{align*}
+
+\item The Christoffel symbols $\Gamma_{i,j}^{k},\; i,j,k=1,2$ are \textbf{uniquely determined} via the coefficients of first fundamental form $(E,F,G)$. 
+
+\emph{\textbf{All geometric concepts and properties expressed in terms of Christoffel symbols are \underline{invariant} under isometries}}.
+\end{itemize}
+\subsection{THEOREMA EGREGIUM}
+\begin{itemize}
+\item \begin{theorem} \label{th: Gauss_theorem}
+(\emph{\textbf{THEOREMA EGREGIUM}}) [Gauss]\\
+\textbf{The Gaussian curvature $\mb{K}$ of a surface is invariant by local isometries}. 
+\end{theorem}
+\begin{proof}
+Given parameterization $\mb{x}: U \rightarrow \cS$ and a point $p\in \cS$, the trihedron $(\mb{x}_{u}, \mb{x}_{v}, N)$ at $p$ form a basis in ambient space. We consider the expression, 
+\begin{align}
+\paren{\mb{x}_{uu}}_{v} - \paren{\mb{x}_{uv}}_{u} &= 0.  \label{eqn: Gauss_theorem_1}
+\end{align}
+By fact that $\mb{x}_{uu}, \mb{x}_{uv}$ lies in the space spanned by $(\mb{x}_{u}, \mb{x}_{v}, N)$ at $p$, using the Christoffel symbol, we have the following equations
+\begin{align}
+\mb{x}_{uu} &= \Gamma_{11}^{1}\mb{x}_{u} + \Gamma_{11}^{2}\mb{x}_{v} + e\mb{N}\nonumber\\
+\mb{x}_{uv} &= \Gamma_{12}^{1}\mb{x}_{u} + \Gamma_{12}^{2}\mb{x}_{v} + f\mb{N}\nonumber\\
+\mb{x}_{vv} &= \Gamma_{22}^{1}\mb{x}_{u} + \Gamma_{22}^{2}\mb{x}_{v} + g\mb{N}\nonumber\\
+\mb{N}_{u} &= a_{11}\mb{x}_{u} + a_{21}\mb{x}_{v}
+\nonumber\\
+\mb{N}_{v} &= a_{12}\mb{x}_{u} + a_{22}\mb{x}_{v} \label{eqn: Gauss_theorem_2}
+\end{align} 
+and substitute the above equations into \eqref{eqn: Gauss_theorem_1}, we obtain
+\begin{align*}
+\Gamma_{11}^{1}\mb{x}_{uv} + \Gamma_{11}^{2}\mb{x}_{vv} + e\mb{N}_{v}
+&+\paren{\Gamma_{11}^{1}}_{v}\mb{x}_{u} + \paren{\Gamma_{11}^{2}}_{v}\mb{x}_{v}+ e_{v}\mb{N}\\
+&= \Gamma_{12}^{1}\mb{x}_{uu} + \Gamma_{12}^{2}\mb{x}_{uv} + f\mb{N}_{u}\\
+&+ \paren{\Gamma_{12}^{1}}_{u}\mb{x}_{u} + \paren{\Gamma_{12}^{2}}_{u}\mb{x}_{v} + f_{u}\mb{N} \\[5pt]
+\Leftrightarrow \paren{\Gamma_{11}^{1}\mb{x}_{uv} + \Gamma_{11}^{2}\mb{x}_{vv} - \Gamma_{12}^{1}\mb{x}_{uu} - \Gamma_{12}^{2}\mb{x}_{uv} }
+&= \paren{\paren{\Gamma_{12}^{1}}_{u}-\paren{\Gamma_{11}^{1}}_{v}}\mb{x}_{u} \\
+&+\paren{  \paren{\Gamma_{12}^{2}}_{u}- \paren{\Gamma_{11}^{2}}_{v}}\mb{x}_{v} +\paren{f\mb{N}_{u} - e\mb{N}_{v}}+ \paren{f_{u}-e_{v}}\mb{N}
+\end{align*}
+Substitute \eqref{eqn: Christoffel_eq_2} into above equations, and the LHS is 
+\begin{align*}
+&\Gamma_{11}^{1}\paren{\Gamma_{12}^{1}\mb{x}_{u} + \Gamma_{12}^{2}\mb{x}_{v} + f\mb{N}} + \Gamma_{11}^{2}\paren{\Gamma_{22}^{1}\mb{x}_{u} + \Gamma_{22}^{2}\mb{x}_{v} + g\mb{N}}\\
+& - \Gamma_{12}^{1}\paren{\Gamma_{11}^{1}\mb{x}_{u} + \Gamma_{11}^{2}\mb{x}_{v} + e\mb{N}} - \Gamma_{12}^{2}\paren{\Gamma_{12}^{1}\mb{x}_{u} + \Gamma_{12}^{2}\mb{x}_{v} + f\mb{N}}\\
+&=   \paren{\Gamma_{11}^{1}\Gamma_{12}^{1} +   \Gamma_{11}^{2}\Gamma_{22}^{1} - \Gamma_{12}^{1}\Gamma_{11}^{1}   - \Gamma_{12}^{2}\Gamma_{12}^{1}  }\mb{x}_{u} 
++  \paren{\Gamma_{11}^{1}\Gamma_{12}^{2} + \Gamma_{11}^{2}\Gamma_{22}^{2} - \Gamma_{12}^{1}\Gamma_{11}^{2}     - \paren{\Gamma_{12}^{2}}^{2}  }\mb{x}_{v} \\
+& + \paren{\Gamma_{11}^{1}f + \Gamma_{11}^{2}g   - \Gamma_{12}^{1}e - \Gamma_{12}^{2}f }\mb{N}
+\end{align*}
+And the RHS
+\begin{align*}
+&\paren{\paren{\Gamma_{12}^{1}}_{u}-\paren{\Gamma_{11}^{1}}_{v}}\mb{x}_{u} +\paren{  \paren{\Gamma_{12}^{2}}_{u}- \paren{\Gamma_{11}^{2}}_{v}}\mb{x}_{v} +\paren{f\mb{N}_{u} - e\mb{N}_{v}}+ \paren{f_{u}-e_{v}}\mb{N}\\
+&=\paren{\paren{\Gamma_{12}^{1}}_{u}-\paren{\Gamma_{11}^{1}}_{v} + a_{11}f - a_{12}e}\mb{x}_{u}
++\paren{\paren{\Gamma_{12}^{2}}_{u}- \paren{\Gamma_{11}^{2}}_{v} + a_{21}f - a_{22}e}\mb{x}_{v}+ \paren{f_{u}-e_{v}}\mb{N} 
+\end{align*}
+
+Thus we have the equation as 
+\begin{align*}
+A_{1}\mb{x}_{u}+ B_{1}\mb{x}_{v}+ C_{1}\mb{N} &= 0
+\end{align*}
+where
+\begin{align}
+A_{1} &= -\paren{\Gamma_{12}^{1}}_{u}+\paren{\Gamma_{11}^{1}}_{v} +   \Gamma_{11}^{2}\Gamma_{22}^{1}  - \Gamma_{12}^{2}\Gamma_{12}^{1}- a_{11}f+ a_{12}e\nonumber\\
+B_{1} &= -\paren{\Gamma_{12}^{2}}_{u}+ \paren{\Gamma_{11}^{2}}_{v} - a_{21}f + a_{22}e+ \Gamma_{11}^{1}\Gamma_{12}^{2} + \Gamma_{11}^{2}\Gamma_{22}^{2} - \Gamma_{12}^{1}\Gamma_{11}^{2} - \paren{\Gamma_{12}^{2}}^{2}\nonumber\\
+C_{1} &=  -f_{u}+e_{v}+ \Gamma_{11}^{1}f + \Gamma_{11}^{2}g   - \Gamma_{12}^{1}e - \Gamma_{12}^{2}f \nonumber
+\end{align}
+By independence of $(\mb{x}_{u}, \mb{x}_{v}, N)$ at $p$, $A_{1}=0, B_{1}=0, C_{1} = 0$, and by \textbf{the equations of Weingarten}, we have for $B_{1} = 0$
+\begin{align}
+\paren{\Gamma_{12}^{2}}_{u}- \paren{\Gamma_{11}^{2}}_{v} - \Gamma_{11}^{1}\Gamma_{12}^{2} - \Gamma_{11}^{2}\Gamma_{22}^{2} + \Gamma_{12}^{1}\Gamma_{11}^{2} +\paren{\Gamma_{12}^{2}}^{2} &=- a_{21}f + a_{22}e\nonumber\\
+%&= - \frac{eF- fE}{EG- F^{2}}f +  e\frac{fF- gE}{EG- F^{2}}\\
+%&= \frac{1}{EG- F^{2}}\paren{-efF +f^{2}E + efF - egE  }\nonumber\\
+&= -\frac{eg - f^{2}}{EG- F^{2}}E \nonumber\\
+&= -\mb{K}E \label{eqn: Gauss_theorem_3}
+\end{align}
+Similarly for $A_{1} = 0$
+\begin{align*}
+\paren{\Gamma_{12}^{1}}_{u}-\paren{\Gamma_{11}^{1}}_{v} -   \Gamma_{11}^{2}\Gamma_{22}^{1}  + \Gamma_{12}^{2}\Gamma_{12}^{1}&= - a_{11}f+ a_{12}e\\
+&= F\frac{eg - f^{2}}{EG- F^{2}}\\
+&=\mb{K}F 
+\end{align*}
+
+Note that by \eqref{eqn: Gauss_theorem_3}, the Gaussian curvature $\mb{K}$ only on the coefficient of first fundamental form $E$, and the Christoffel symbols $\Gamma_{11}^{1}, \Gamma_{11}^{2},  \Gamma_{12}^{1}, \Gamma_{12}^{2}, \Gamma_{22}^{2} $ and their derivatives $\paren{\Gamma_{12}^{2}}_{u}, \paren{\Gamma_{11}^{2}}_{v}$ , which is invariant under local isometries. \QEDA
+\end{proof}
+
+\item It is noted that in essence, the definition of the Gaussian curvature make use of the \emph{\textbf{position}} of the surface in the space. However, the \emph{Gaussian theorem} shows that \emph{it only depends on the \textbf{metric structure}} (i.e. the first fundamental form) of the surface not on the position of the surface in the ambient space. 
+
+\item (\emph{\textbf{The linear relationship between coefficients of first and second fundamental forms}})\\
+The relationship btw coefficients of first and second fundamental forms can be computed via the following equations
+\begin{align}
+\paren{\mb{x}_{uu}}_{v} - \paren{\mb{x}_{uv}}_{u} = 0\nonumber\\
+\paren{\mb{x}_{vv}}_{u} - \paren{\mb{x}_{uv}}_{v} = 0\nonumber\\
+N_{uv} - N_{vu} = 0\label{eqn: coeff_12_fund_relation_1}
+\end{align}
+By substituting \eqref{eqn: Christoffel_eq_1}, it equals to 
+\begin{align}
+A_{1}\mb{x}_{u} + B_{1}\mb{x}_{v} + C_{1}N = 0\nonumber\\
+A_{2}\mb{x}_{u} + B_{2}\mb{x}_{v} + C_{2}N = 0\nonumber\\
+A_{3}\mb{x}_{u} + B_{3}\mb{x}_{v} + C_{3}N = 0\label{eqn: coeff_12_fund_relation_2} 
+\end{align}
+where $A_{i}, B_{i}, C_{i}, i=1,2,3$ are functions of $e,f,g,E,F,G$ and of their derivatives. By linearly independence of $(\mb{x}_{u}, \mb{x}_{v}, N)$, it yields nine equations
+\begin{align}
+A_{i} =0; \quad B_{i} = 0; \quad C_{i}=0 \quad i=1,2,3,  \label{eqn: comp_eqn_1}
+\end{align} This system of equations are related to the \underline{\emph{\textbf{compatibility equations}}} of the theory of surfaces. 
+
+\item By solving the equations \eqref{eqn: comp_eqn_1}, one obtain the following equations
+\begin{align}
+\paren{\Gamma_{12}^{2}}_{u}- \paren{\Gamma_{11}^{2}}_{v} - \Gamma_{11}^{1}\Gamma_{12}^{2} - \Gamma_{11}^{2}\Gamma_{22}^{2} + \Gamma_{12}^{1}\Gamma_{11}^{2} +\paren{\Gamma_{12}^{2}}^{2}
+&= -\mb{K}E \label{eqn: comp_eqn_gauss_formula_1}\\
+\paren{\Gamma_{12}^{1}}_{u}-\paren{\Gamma_{11}^{1}}_{v} -   \Gamma_{11}^{2}\Gamma_{22}^{1}  + \Gamma_{12}^{2}\Gamma_{12}^{1}
+&= \mb{K}F \label{eqn: comp_eqn_guass_formula_2}\\
+ e\Gamma_{12}^{1} + f(\Gamma_{12}^{2} - \Gamma_{11}^{1}) - g\Gamma_{11}^{2}&= e_{v} - f_{u}  \label{eqn: comp_eqn_minardi_codazzi_3}\\
+ e\Gamma_{22}^{1} + f(\Gamma_{22}^{2} - \Gamma_{12}^{1}) - g\Gamma_{12}^{2}&= f_{v} - g_{u},  \label{eqn: comp_eqn_minardi_codazzi_4}
+\end{align} 
+where $\mb{K}$ is the \textbf{\emph{Gaussian curvature}} shown in Gaussian theorem. The first two equations are called the \emph{\textbf{Gauss formula}} and the last two equations are called the \emph{\textbf{Mainardi-Codazzi equations}}.  These four equations are known as the \emph{compatibility equations of the theory of surfaces}. 
+
+
+\item 
+\begin{theorem} \label{th: Bonnet_th}
+(\textbf{the completeness of the equations of compatibility})[Bonnet].\\
+Let $E,F,G, e,f,g$ be differentiable functions defines in an open set $V\subset \bR^{2}$, with $E>0, G>0$. Assume that the given functions satisfies formally the Gauss and Mainardi-Codazzi equations and that $EG-F^{2} >0$. Then, for every $q\in V$, there exits a neighborhood $U\subset V$  of $q$ and a diffeomorphism $\mb{x}: U \rightarrow \mb{x}(U)\subset \bR^{3}$ such that the regular surface $ \mb{x}(U)\subset \bR^{3}$ has $E,F,G,e,f,g$ as a coefficient of the first and second fundamental forms, respectively. Furthermore, if $U$ is connected and if $\hat{\mb{x}}: U \rightarrow \hat{\mb{x}}(U)\subset \bR^{3}$ is another diffeomorphism satisfying the same conditions, then there exits a proper linear orthogonal transformation $\rho$ and translation $T$ so that $\hat{\mb{x}} = T \circ \rho \circ \mb{x}$. 
+\end{theorem}
+
+
+\item The \underline{\emph{\textbf{compatibility equations}}} (i.e. the \emph{\textbf{Gauss formula}} \eqref{eqn: comp_eqn_gauss_formula_1} and \eqref{eqn: comp_eqn_guass_formula_2} and \emph{Mainardi-Codazzi equations} \eqref{eqn: comp_eqn_minardi_codazzi_3}, \eqref{eqn: comp_eqn_minardi_codazzi_4}) is a system of \emph{differential equations} for the coefficients of the \emph{\textbf{first and the second fundamental forms}} ($E,F,G,e,f,g$) and also there is \textbf{no further relations} btw these coefficients.
+
+\item In Bonnet theorem \ref{th: Bonnet_th}, it shows that the coefficients of the first and the second fundamental forms ($E,F,G,e,f,g$) \emph{\textbf{uniquely determines}} the \textbf{parameterization} of the surface locally up to a \emph{rigid transformation}. That is, these coefficients are \textbf{sufficient} to determine the local structure of a surface.  
+
+\end{itemize}
+\section{Summary of first and second fundamental form}
+\begin{enumerate}
+\item The \emph{first fundamental form} \citep{do1976differential} of a regular surface $\cS\subset \bR^{3}$ at $p\in \cS$ is defined as a  quadratic form,  $I_{p}: T_{p}S \rightarrow \bR$ given by 
+\begin{align*}
+I_{p}(\mb{w}) &= \inn{w}{w}_{p} = \norm{w}{2}^{2} \ge 0\; \; \mb{w}\in T_{p}S.
+\end{align*}
+
+\item  The quadratic form $\Pi_{p}$ defined in $T_{p}S$ by $\Pi_{p}(\mb{v}) = -\inn{dN_{p}(\mb{v})}{\mb{v}}$ is called the \emph{second fundamental form} of $\cS$ at $p$, where $dN_{p}$ is the differential of Gauss map at $p$, referred as the shape operator \citep{o2006elementary}. 
+
+\item The coefficients for the first and second fundamental form
+\begin{align}
+E(u,v) &= \inn{\mb{x}_{u}}{\mb{x}_{u}} \nonumber\\
+F(u,v) &= \inn{\mb{x}_{u}}{\mb{x}_{v}} \nonumber\\
+G(u,v) &= \inn{\mb{x}_{v}}{\mb{x}_{v}} \nonumber \\
+e(u,v)  &=  - \inn{N_{u}}{\mb{x}_{u}} = \inn{N}{\mb{x}_{uu}} \nonumber\\
+f(u, v)&= - \inn{N_{u}}{\mb{x}_{v}} =  \inn{N}{\mb{x}_{vu}} =  \inn{N}{\mb{x}_{uv}} =  -\inn{N_{v}}{\mb{x}_{u}}\nonumber\\
+g(u, v)&=   - \inn{N_{v}}{\mb{x}_{v}} = \inn{N}{\mb{x}_{vv}} \label{eqn: coeff_first_sec_fund_form}
+\end{align}
+
+\item See that $E,G$ are \emph{squared length of tangent vector along the coordinate curve} $\alpha(u, v_{0}), \text{with }\alpha_{u}' \equiv \mb{x}_{u}$ and $\alpha(u_{0}, v), \text{with }\alpha_{v}' \equiv \mb{x}_{v}$ .
+
+Also, $e, g$ are seen as the \emph{normal curvature of the coordinate curve} $\alpha(u, v_{0}), \text{with }\alpha_{u}' \equiv \mb{x}_{u}$ and $\alpha(u_{0}, v), \text{with }\alpha_{v}' \equiv \mb{x}_{v}$, (i.e. the projection of second-order derivatives along $\mb{N}$) or curvature of the normal section of the surface along the direction $\mb{x}_{u}, \mb{x}_{v}$.
+
+ The quantity $F$ measures the orthogonality between two coordinate curves (i.e. the angles). $F=0$ means that two coordinate curves are orthogonal to each other and $F=0 \Rightarrow f=0$. The quantity $f$ measures the projection of the rate of the change of vector field $\mb{x}_{u}$ w.r.t. the other coordinate curve $\alpha(u_{0}, v), \text{with }\alpha_{v}' \equiv \mb{x}_{v}$ along $\mb{N}$.
+
+
+%\item The coefficients of the second fundamental form $e,f,g$ are projection of the derivative of tangent plane along the normal direction of the plane, whereas the Christoffel symbols $\Gamma_{i,j}^{k}$ are the projections of the second-order derivatives of the coordinate curve, or the derivative of the tangent vector field along each basis of the tangent space. 
+
+\item 
+\begin{itemize}
+\item $E,F,G$ are quantities related to the \emph{first-order derivatives} of the coordinate curve (metric term in \emph{unit} velocity field);
+
+\item The Christoffel symbols  $\Gamma_{i,j}^{k}$ determines  the projection of the second-order derivatives of the coordinate curve, or the derivative of the tangent vector field along each basis of the tangent space; that is, they determine the \emph{tangential component of the second-order derivatives} of the coordinate curve. It is a function of $E,F,G$ and its first derivatives. 
+
+\item $e,f,g$ determines the \emph{normal component of the second-order derivatives} of the coordinate curve along $\mb{N}$;
+
+\item The Gaussian curvature by Gaussian formula is related to the third-order derivatives of the coordinate curve (i.e. the differential of the Christoffel symbol). 
+\end{itemize}
+
+\item The Christoffel symbols $\Gamma_{i,j}^{k}$ only depends on the coefficients of the first fundamental form $E,F,G$ and its first-order derivatives. 
+\end{enumerate}
+
+
+
+
+\section{Homework and Examples}
+\begin{enumerate}
+\item \begin{example}
+Show that if $\mb{x}$ is an orthogonal parameterization, i.e. $F=0$, then 
+\begin{align*}
+\mb{K} &= -\frac{1}{2\sqrt{EG}}\set{\paren{\frac{E_{v}}{\sqrt{EG}}}_{v} + \paren{\frac{G_{u}}{\sqrt{EG}}}_{u} }.
+\end{align*}
+\end{example}
+
+
+\item \begin{example}
+Show that if $\mb{x}$ is an isothermal parameterization, i.e. $E=G=\lambda(u,v)$, then 
+\begin{align*}
+\mb{K} &= -\frac{1}{2\lambda}\Delta\paren{\log \lambda}.
+\end{align*}
+where $\Delta\phi$ denotes the Laplacian $(\partial^{2} \phi/ \partial u^{2}+ \partial^{2} \phi/ \partial v^{2})$ of the function $\phi$. Conclude that when $E=G=(u^{2}+ v^{2}+ c)^{-2}$ and $F=0$, then $\mb{K} = const. = 4c$.
+\end{example}
+
+
+\end{enumerate}
+
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{book_reference.bib}
+\end{document}

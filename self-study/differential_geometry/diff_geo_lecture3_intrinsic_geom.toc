@@ -1,0 +1,6 @@
+\contentsline {section}{\numberline {1}Isometries and Conformal Maps}{2}{}%
+\contentsline {section}{\numberline {2}The Gauss Theorem and the Equations of Compatibility}{3}{}%
+\contentsline {subsection}{\numberline {2.1}The fundamental theorem of the local theory of surfaces}{3}{}%
+\contentsline {subsection}{\numberline {2.2}THEOREMA EGREGIUM}{5}{}%
+\contentsline {section}{\numberline {3}Summary of first and second fundamental form}{7}{}%
+\contentsline {section}{\numberline {4}Homework and Examples}{8}{}%

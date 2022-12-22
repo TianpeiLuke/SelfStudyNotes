@@ -1,0 +1,18 @@
+\begin{thebibliography}{2}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[do~Carmo~Valero(1976)]{do1976differential}
+Manfredo~Perdigao do~Carmo~Valero.
+\newblock \emph{Differential geometry of curves and surfaces}, volume~2.
+\newblock Prentice-hall Englewood Cliffs, 1976.
+
+\bibitem[O'neill(2006)]{o2006elementary}
+Barrett O'neill.
+\newblock \emph{Elementary differential geometry}.
+\newblock Academic press, 2006.
+
+\end{thebibliography}
