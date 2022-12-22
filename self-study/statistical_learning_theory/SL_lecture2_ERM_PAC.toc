@@ -1,0 +1,6 @@
+\contentsline {section}{\numberline {1}PAC Learning in Deterministic Setting}{2}
+\contentsline {subsection}{\numberline {1.1}Definitions}{2}
+\contentsline {subsection}{\numberline {1.2}PAC-Learnable Guarantees for Finite Hypothesis Sets}{3}
+\contentsline {subsection}{\numberline {1.3}PAC-Learnable Examples for Infinite Hypothesis Sets}{5}
+\contentsline {section}{\numberline {2}PAC Learning in Stochastic Setting}{5}
+\contentsline {section}{\numberline {3}PAC Learning vs. Universal Consistency}{6}
