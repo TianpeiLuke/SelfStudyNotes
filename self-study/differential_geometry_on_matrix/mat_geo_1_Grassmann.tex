@@ -1,0 +1,1547 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs, dsfont}
+\usepackage{tabularx}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{self-study: geometry on orthogonal group, Stiefel manifold and Grassmann manifold}
+\author{ Tianpei Xie}
+\date{ Jun. 15th., 2015 }
+\maketitle
+\tableofcontents
+\newpage
+\allowdisplaybreaks
+\section{Concepts}
+\begin{itemize}
+\item The space of all $n\times n$ real matrices is denoted as $\bM_{n}(\bR)$.
+
+\item The \emph{general linear group ($GLN$) of degree $n$} is the set of $n\times n$ invertible matrices, together with the operation of ordinary matrix multiplication.  The general linear group over $\bR$ (the set of real numbers) is the group of $n\times n$ invertible matrices of real numbers, and is denoted by $GLn(\bR)$ or $GL(n, \bR)$, i.e.
+\begin{align*}
+GL(n, \bR) &\equiv \set{\mb{A}\in \bR^{n\times n}:\; \det\paren{\mb{A}}\neq 0}. 
+\end{align*}
+ 
+
+\item The \emph{special linear group}, written $SL(n, \bR)$ or $SLn(\bR)$, is the subgroup of $GL(n, \bR)$ consisting of matrices with a determinant of $1$.
+\begin{align*}
+SL(n, \bR) &\equiv \set{\mb{A}\in \bR^{n\times n}:\; \det\paren{\mb{A}}= 1}. 
+\end{align*}
+Note that $\dim{SL(m,\bR)} = \dim{GL(n,\bR)}= n^{2}.$
+
+
+\item The \emph{orthogonal group of dimension $n$}, denoted $\mathcal{O}(n)$, is the group of distance-preserving transformations of a Euclidean space of dimension $n$ that preserve a fixed point, where the group operation is given by composing transformations.
+
+ Also, $(\cO(n), \cdot)$ is the group of $n\times n$ orthogonal matrices, where the group operation $(\cdot)$ is given by matrix multiplication, and an orthogonal matrix is a real matrix whose inverse equals its transpose. 
+\begin{align*}
+\cO(n) &\equiv \set{\mb{Q}\in GL(n, \bR):\;  \mb{Q}^{T}\mb{Q} = \mb{Q}\mb{Q}^{T} = \mb{I}_{n}}.
+\end{align*}
+
+
+
+\item An important subgroup of $\cO(n)$ is the \emph{special orthogonal group}, denoted $\cS\cO(n)$, of the orthogonal matrices of determinant $1$. This group is also called the \emph{rotation group}
+\begin{align*}
+\cS\cO(n) &\equiv \set{\mb{Q}\in \cO(n):\;  \det\paren{\mb{Q}}= 1}.
+\end{align*}
+
+Note that $\dim{\cS\cO(n)}= \dim{\cO(n)} = n(n-1)/2$.
+
+
+\item A \emph{topological group} $(G, \cdot)$ is a \emph{topological space} and \emph{group} satisfying the $T_{1}$ axiom (i.e., all finite subset are closed), such that 
+\begin{enumerate}
+\item the group operations of product:
+\begin{align*}
+G\times G \to G : (x,y)\mapsto x\cdot y
+\end{align*}
+\item and taking inverses:
+\begin{align*}
+G\to G : x \mapsto x^{-1}
+\end{align*}
+\end{enumerate}
+are \emph{continuous} functions. Here, $G\times G$ is viewed as a topological space by using the product topology.
+\begin{itemize}
+\item Define map $h_{a}: G\to G$ as $h_{a}(x) = a\cdot x$ and $g_{a}: G\to G$ as $g_{a}(x) = x \cdot a$, for $a\in G$. It can be shown that $h_{a}, \, g_{a}$ are \emph{homemorphism} and $G$ is a \emph{homogeneous} space, i.e. for every pair $x,y\in G$, there exists a homemorphism $f: G\to G$ such that $f(x) = y$. 
+
+\item For $H\subset G$ as the subgroup of $G$, define the \emph{left coset} as $xH = \set{x\cdot h \,|\, h\in H}$ and the collection of left cosets defines a \emph{quotient group} $G/H = \set{ xH\, |\, x\in G}$ with the group operation $xH \cdot yH = (x\cdot y) H$.  $G/H$ is a homogeneous space.  
+
+\item $\cO(n)$ is a compact topological group. \\[5pt]
+\end{itemize}
+
+\item Let $G$ be a topological group and $X$ is a topological space. An \emph{action} $\alpha$ of $G$ on $X$ is a continuous map $\alpha: G\times X \to X$ such that denoting $\alpha(g \times x) = g\cdot x$, then
+ \begin{enumerate}
+\item the identity map:
+\begin{align*}
+e\cdot x &= x,\,\; \forall x\in X
+\end{align*}
+\item and product of maps
+\begin{align*}
+g_{2} \cdot (g_{1}\cdot x) &= (g_{2}\cdot g_{1}) \cdot x,\;\; \forall x\in X,\, \forall g_{1}, g_{2}\in G
+\end{align*}
+\end{enumerate}
+
+Define the \emph{equivalence relationship} $\sim$ as $(x \sim g\cdot x)$ for all $g\in G$, then the coset (equivalence class) $G\,x$ is called \emph{the orbit of a point $x$ in $X$}
+\begin{align*}
+G\,x &\equiv \set{g\cdot x\;|\; g\in G }
+\end{align*}
+The \emph{quotient space} $X/G$ is the set of all orbits of $X$ under the action of $G$, or, \emph{the orbit space of $X$ under action of $G$}.\\
+
+\begin{itemize}
+\item The orbit space is a partition of space $X$; 
+
+\item The group action is \emph{transitive} if and only if it has only one orbit, i.e. if there exists $x \in X$ with $G\cdot x = X$. This is the case if and only if $G\cdot x = X$ for all $x$ in $X$.
+
+\item Note that the orbit space of space $X$ under orthogonal group action $\cO(k)$ is given as $X/\cO(k)$.
+
+\item $\paren{\cO(n)/\cO(p)} = \set{g\cO(p)  \;|\; g\in \cO(n) }$ is a quotient group and also a orbit space of $\cO(n)$ under action of $\cO(p)$. Note that the equivalance class is the (right) orbit at $g$ as $g\cO(p)$.  \\[10pt] 
+\end{itemize}
+
+
+
+
+
+
+\item The (compact) \emph{Stiefel manifold} $V_{k}(\bR^{n})$ is the set of all orthonormal $k$-frames in $\bR^n$. That is, it is the set of ordered $k$-tuples of orthonormal vectors in $\bR^n$.  
+\begin{align*}
+V_{k}(\bR^{n}) &\equiv \set{\mb{U}\in \bR^{n\times k}:\;  \mb{U}^{T}\mb{U} =  \mb{I}_{k}},\quad k\le n.
+\end{align*}
+Note that $V_{n}(\bR^{n}) = \cO(n)$ and $V_{1}(\bR^{n}) = \bS^{n-1}$. $\text{dim}(V_{k}(\bR^{n})) = kn - \frac{k(k+1)}{2}$.
+
+The topology of $V_{k}(\bR^{n})$ is the subspace topology inherited from $\bR^{n\times k}$. It is a \emph{homogeneous} \emph{quotient} space as
+\begin{align*}
+V_{k}(\bR^{n}) &\simeq  \cO(n)/\cO(n-k);\\
+V_{k}(\bR^{n}) &\simeq  \cS\cO(n)/\cS\cO(n-k),\quad k<n,
+\end{align*} which is a homogeneous space.
+It means that every orthogonal transformation of a $k$-frame in $\bR^{n}$ results in another $k$-frame, and any two $k$-frames are related by some orthogonal transformation. In other words, the orthogonal group $\cO(n)$ acts transitively on $V_{k}(\bR^{n})$. The stabilizer subgroup of a given frame is the subgroup isomorphic to $\cO(n-k)$ which acts nontrivially on the orthogonal complement of the space spanned by that frame.
+
+The point in $V_{k}(\bR^{n}) \simeq  \cO(n)/\cO(n-k)$ is the equivalence class 
+\begin{align*}
+\brac{\mb{Q}} &= \set{\mb{Q}\brac{\begin{array}{cc}
+\mb{I}_{k} & 0 \\ 
+0 & \mb{Q}_{n-k}
+\end{array} }\;\Big| \; \quad   \mb{Q}_{n-k} \in \cO(n-k) }.
+\end{align*}
+\vspace{15pt}
+
+\item The \emph{Grassmannian (or, Grassmann manifold)}  $Gr(k, \bR^{n})$ or $Gr(k, n)$ is a space which parameterizes all \emph{linear subspaces} of a vector space $\bR^{n}$ of given dimension $k$. For example, the Grassmann manifold $Gr(1, \bR^{n})$ is the space of lines through the origin in $\bR^{n}$, so it is the same as the \emph{projective} space of one dimension lower than $\bR^{n}$.
+
+$Gr(k, \bR^{n})$ is a compact smooth manifold. Equipped with topological and differential structure, via $Gr(k,n)$, a continuous and smooth choice of subspace or open and closed collections of subspaces.
+
+The Grassmann manifold has a natural motivation: Consider the tangent bundle $T\cS$ of a smooth manifold $\cS^{k} \subset \bR^{n}$ of dimension $k$, which assign for each point $p\in \cS$, the tangent space $T_{p}\cS \simeq \bR^{k}$. It defines a map $F: \cS^{k} \rightarrow Gr(k, n)$. The property of tangent bundle is related to the properties of the corresponding map $F$ viewed as continuous map. 
+
+
+Note that the general linear group $GL(n, \bR)$ acts transitively on the $k$-dimensional subspaces of $\bR^{n}$ and it holds also for the orthogonal group $\cO(n)$. By restricting to orthonormal frames, one gets the identity
+\begin{align*}
+Gr(k,n) &\simeq  \cO(n)/\paren{\cO(k)\times \cO(n-k)};\\
+&\simeq V_{k}(\bR^{n})/\cO(k),
+\end{align*} and $\text{dim}(Gr(r,n)) = k(n-k)$
+
+The point in $Gr(k,n) \simeq  \cO(n)/\paren{\cO(k)\times \cO(n-k)}$ is the equivalence class 
+\begin{align*}
+\brac{\mb{Q}} &= \set{\mb{Q}\brac{\begin{array}{cc}
+\mb{Q}_{k} & 0 \\ 
+0 & \mb{Q}_{n-k}
+\end{array} }\;\Big| \; \quad  \mb{Q}_{k}\in \cO(k), \;\; \mb{Q}_{n-k} \in \cO(n-k) }.
+\end{align*}
+or as $Gr(k,n) \simeq  V_{k}(\bR^{n})/\cO(k)$,
+\begin{align*}
+\brac{\mb{U}} &= \set{\mb{U}\mb{Q}_{k} \;\Big| \; \quad  \mb{Q}_{k}\in \cO(k)}.
+\end{align*}
+
+
+The point of Grassmann manifold can be equivalently uniquely represented by the projection matrix
+\begin{align*}
+\brac{\mb{U}} \simeq \mb{U}\mb{U}^{T},
+\end{align*} which use $n^{2}$ entries to represent as dimension of $k(n-k)$.
+
+
+\item The \emph{matrix exponential} is a matrix function on square matrices analogous to the ordinary exponential function; i.e. 
+\begin{align*}
+\exp\paren{\mb{X}} &= \sum_{k=0}^{\infty}\frac{1}{k!}\mb{X}^{k}
+\end{align*}
+\begin{itemize}
+\item It is seen as an exponential map from a \emph{Lie algebra} to a \emph{Lie group}. 
+\item $\exp\paren{\mb{0}} = \mb{I}$; 
+\item $\exp\paren{\mb{X}}\exp\paren{\mb{Y}} = \exp\paren{\mb{X}+\mb{Y}}$, $\exp\paren{\mb{X}}\,\exp\paren{\mb{X}^{-1}} = \mb{I}$.
+\item $\exp\paren{\mb{X}^{T}} =\exp\paren{\mb{X}}^{T}$. If $\mb{X}$ is skew-symmetric, $\exp\paren{\mb{X}}$ is orthogonal; and if  $\mb{X}$ is symmetric, $\exp\paren{\mb{X}}$ is symmetric.
+\item If $\mb{Y}$ is invertible, then $\exp\paren{\mb{Y}\mb{X}\mb{Y}^{-1}} = \mb{Y}\exp\paren{\mb{X}}\mb{Y}^{-1}$
+\item The solution to the system of differential equations is
+\begin{align*}
+\dot{\mb{x}} &= \mb{A\,x},\quad \mb{x}(0) = \mb{x}_{0}
+\end{align*}
+is $\mb{x}(t) = \exp\paren{t\,\mb{A}}\mb{x}_{0}$.
+
+\item  If $\mb{A}$ and $\mb{H}$ are \emph{Hermitian} matrices, then
+\begin{align*}
+\tr{\exp(\mb{A}+\mb{H})} \leq \tr{\exp(\mb{A})\exp(\mb{H})}. 
+\end{align*}
+
+\item For a fixed Hermitian matrix $\mb{H}$, the function
+\begin{align*}
+f(\mb{A}) &= \tr{\exp\paren{\mb{H} + \log\mb{A}}}.
+\end{align*}
+is \emph{concave} on the cone of positive-definite matrices.
+
+\item The exponential map $\exp: \bM_{n}(\bC) \rightarrow GL(n, \bC^{n})$ is surjective, i.e. every invertible square matrix can be represented as the exponential of some square matrix. However, $\exp: \bM_{n}(\bR) \rightarrow GL(n, \bR^{n})$ is not surjective.
+
+The exponential map is continuous and \emph{Lipschitz} continuous on compact subsets of $\bM_{n}(\bR)$. 
+
+\item The map
+$t \mapsto \exp\paren{t\mb{X}}, \; t \in \bR$
+defines a smooth \emph{curve} in the general linear group which passes through the identity element at t = 0. The tangent vector is 
+\begin{align*}
+\frac{d}{dt}\exp\paren{t\mb{X}} &= \exp\paren{t\mb{X}}\mb{X} = \mb{X}\exp\paren{t\mb{X}}
+\end{align*}
+
+\item By Jacobi's formula,
+\begin{align*}
+\det\paren{\exp\paren{\mb{X}}} &= \exp\paren{\tr{\mb{X}}}
+\end{align*}
+
+\item Any orthogonal matrix $\mb{Q}$ can be represented as 
+\begin{align}
+\mb{Q} &= \exp\paren{\mb{A}}
+\end{align}
+where $\mb{A}$ is skew-symmetric, i.e. $\mb{A} + \mb{A}^{T} = \mb{0}$.
+\end{itemize}
+
+\item For diagonal $\mb{\Sigma}_{R}$, 
+\begin{align*}
+\exp\paren{t \brac{\begin{array}{cc}
+0 & -\mb{\Sigma}_{R} \\ 
+\mb{\Sigma}_{R}& 0 \\ 
+\end{array} }}
+&= \sum_{k=0}^{\infty}\frac{1}{k!}\brac{\begin{array}{cc}
+0 & -t\mb{\Sigma}_{R} \\ 
+t\mb{\Sigma}_{R}& 0 \\ 
+\end{array} }^{k}\\
+&= \sum_{k=0}^{\infty}\frac{1}{(2k)!}\brac{\begin{array}{cc}
+0 & -t\mb{\Sigma}_{R}  \\ 
+t\mb{\Sigma}_{R}& 0 \\ 
+\end{array} }^{2k}
++
+\sum_{k=0}^{\infty}\frac{1}{(2k+1)!}\brac{\begin{array}{cc}
+0 & -t\mb{\Sigma}_{R}  \\ 
+t\mb{\Sigma}_{R}& 0  \\ 
+\end{array} }^{2k+1}\\
+&=\sum_{k=0}^{\infty}\frac{1}{(2k)!}\brac{\begin{array}{cc}
+(-1)^{k}\paren{t\mb{\Sigma}_{R}}^{2k} & 0 \\ 
+0& (-1)^{k}\paren{t\mb{\Sigma}_{R}}^{2k}  \\ 
+\end{array} }
+\\[5pt]
+&+
+\sum_{k=0}^{\infty}\frac{1}{(2k+1)!}\brac{\begin{array}{cc}
+0 & (-1)^{k+1}\paren{t\mb{\Sigma}_{R}}^{2k+1} \\ 
+(-1)^{k}\paren{t\mb{\Sigma}_{R}}^{2k+1}& 0 \\ 
+\end{array}}\\[10pt]
+&= \brac{\begin{array}{cc}
+\sum_{k=0}^{\infty}\frac{(-1)^{k}}{(2k)!}\paren{t\mb{\Sigma}_{R}}^{2k} & 0  \\ 
+0& \sum_{k=0}^{\infty}\frac{(-1)^{k}}{(2k)!}\paren{t\mb{\Sigma}_{R}}^{2k}  \\ 
+\end{array} }\\[5pt]
+& + \brac{\begin{array}{cc}
+0 & \sum_{k=0}^{\infty}\frac{(-1)^{k+1}}{(2k+1)!}\paren{t\mb{\Sigma}_{R}}^{2k+1} \\ 
+\sum_{k=0}^{\infty}\frac{(-1)^{k}}{(2k+1)!}\paren{t\mb{\Sigma}_{R}}^{2k+1}& 0 \\ 
+\end{array}}\\[10pt]
+&= \brac{\begin{array}{cc}
+\cos t\mb{\Sigma}_{R} & -\sin t\mb{\Sigma}_{R} \\ 
+\sin t\mb{\Sigma}_{R} & \cos t\mb{\Sigma}_{R}  \\ 
+\end{array}}
+\end{align*}
+
+\end{itemize}
+\newpage
+\section{Geometry of orthogonal group $\cO(n)$}
+\subsection{The tangent space and normal space of $\cO(n)$ and the local orthogonal decomposition}
+By definition, the matrix $\mb{Q} \in \cO(n)$, if and only if 
+\begin{align*}
+\mb{Q}^{T}\mb{Q} &= \mb{I}_{n}.
+\end{align*}
+Consider the regular curve on $\cO(n)$ as a one-parameter mapping $\alpha: (-\epsilon, \epsilon) \rightarrow \cO(n)$, as $t \mapsto \mb{Q}(t)$, and define the tangent vector of the curve as 
+\begin{align*}
+\dot{\mb{Q}} &= \rlat{\frac{d}{dt}\mb{Q}(t)}{t=0}.
+\end{align*}
+
+By the Leibniz rule, 
+\begin{align}
+\dot{\mb{Q}}^{T}\mb{Q} + \mb{Q}^{T}\dot{\mb{Q}} &= \mb{0}; \label{eqn: tangent_cond}
+\end{align} that is, $\dot{\mb{Q}}^{T}\mb{Q}$ is \emph{skew-symmetric}. Note that $\dot{\mb{Q}} \in T_{\mb{Q}}\cO(n)$ and it holds for any regular parameterized curve $\alpha$ on $\cO(n)$. Thus the tangent space $T_{\mb{Q}}\cO(n)$ at $\mb{Q}$ consist of  all matrix $\mb{\Delta}$ such that $\mb{A}\equiv \mb{\Delta}^{T}\mb{Q}$ is skew-symmetric. 
+
+
+Define the inner product $\inn{\cdot}{\cdot}$ on $\cO(n)$ as induced from $\bR^{n\times n}$, which is 
+\begin{align*}
+\inn{\mb{A}}{\mb{B}} &= \text{tr}\paren{\mb{A}^{T}\mb{B}}.
+\end{align*}
+
+Then the normal space of the surface $\cO(n)$ at $\mb{Q}$ consists of all matrix $\mb{N}$ such that 
+\begin{align*}
+\text{tr}\paren{\mb{\Delta}^{T}\mb{N}} &= 0.
+\end{align*} 
+By substituting the fact that $\mb{\Delta}^{T}\mb{Q}$ is skew-symmetric, we claim that 
+\begin{align}
+\mb{N} &= \mb{Q}\mb{S}, \label{eqn: normal_form}
+\end{align} for some symmetric matrix $\mb{S} \in \bS(n)$. To show this, we check that 
+\begin{align*}
+\text{tr}\paren{\mb{\Delta}^{T}\mb{N}} &=\frac{1}{2}\paren{ \text{tr}\paren{\mb{\Delta}^{T}\mb{Q}\mb{S}} + \text{tr}\paren{\mb{S}\mb{Q}^{T}\mb{\Delta}}} \\
+&= \frac{1}{2}\paren{\text{tr}\paren{\mb{A}\mb{S} - \mb{S}\mb{A}}}\\
+&= \frac{1}{2}\text{tr}\paren{\brac{\mb{A}, \mb{S}}} = 0,
+\end{align*}
+where $\mb{A}\equiv \mb{\Delta}^{T}\mb{Q} = -\mb{A}^{T}$ is skew-symmetric and $\brac{\mb{A}, \mb{S}} = \mb{A}\mb{S} - \mb{S}\mb{A}$ is the \emph{Lie bracket}. The last equality holds as the property of Lie bracket and it follows from the fact that $\text{tr}\paren{\mb{A}\mb{S}} = \text{tr}\paren{\mb{S}\mb{A}}$.
+
+Since the tangent space $T_{\mb{Q}}\cO(n)$ has the dimension of all skew-symmetric space, which is  $\frac{n(n-1)}{2}$ and the dimension of the space of all matrices $\set{\mb{QS},\,|\, \mb{S}\in \bS(n)}$ is $\frac{n(n+1)}{2}$,  the latter is the orthogonal complementary space of $T_{\mb{Q}}\cO(n)$. So it is normal space of $\cO(n)$ at $\mb{Q}$, by definition.
+
+Given the matrix $\mb{R}$, the projection of $\mb{R}$ onto normal space of $\cO(n)$ at $\mb{Q}$ is given by 
+\begin{align*}
+\min_{\mb{S}\in \bS(n)} & \frac{1}{2}\norm{\mb{R} - \mb{US}}{F}^{2}
+\end{align*}
+Then 
+\begin{align*}
+\partdiff{}{\mb{S}} \paren{\frac{1}{2}\text{tr}\paren{\mb{S}^{T}\mb{Q}^{T}\mb{US}}-\text{tr}\paren{\mb{R}^{T}\mb{US}}} &=
+ \partdiff{}{\mb{S}} \paren{\frac{1}{2}\text{tr}\paren{\mb{S}^{T}\mb{S}}-\text{tr}\paren{\mb{R}^{T}\mb{US}}}\\
+ &= \paren{2\mb{S} - \diag{\mb{S}\odot \mb{I}}} - \paren{\mb{Q}^{T}\mb{R} + \mb{R}^{T}\mb{Q} - \diag{\mb{R}^{T}\mb{Q}\odot \mb{I}} }\\
+ &= 0\\
+\Rightarrow \mb{S} &= \frac{1}{2}\paren{\mb{Q}^{T}\mb{R} + \mb{R}^{T}\mb{Q}}.  
+\end{align*}
+So the projection of $\mb{R}$ onto normal space of $\cO(n)$ at $\mb{Q}$ is 
+\begin{align}
+\pi_{\mb{N}}(\mb{R})&=\mb{Q}\paren{\frac{1}{2}\paren{\mb{Q}^{T}\mb{R} + \mb{R}^{T}\mb{Q}} }\nonumber\\
+&\equiv \mb{Q}\text{sym}\paren{\mb{Q}^{T}\mb{R} } \label{eqn: normap_proj}
+\end{align}.
+
+Thus, by orthogonal complementary property, this gives  the projection of $\mb{R}$ onto tangent space of $\cO(n)$ at $\mb{Q}$ as
+\begin{align}
+\pi_{\mb{T}}(\mb{R}) &=\mb{R} - \mb{Q}\text{sym}\paren{\mb{R}^{T}\mb{Q} }\\
+ &= \mb{R} - \mb{Q}\text{sym}\paren{\mb{Q}^{T}\mb{R} } \nonumber\\
+&=  \mb{R} - \mb{Q}\paren{  \mb{Q}^{T}\mb{R}  - \text{skew}\paren{\mb{Q}^{T}\mb{R} }}\nonumber\\
+%&= \mb{Q}\text{skew}\paren{\mb{Q}^{T}\mb{R} } \nonumber\\%+ \paren{\mb{I} - \mb{Q}\mb{Q}^{T}}\mb{R}\nonumber\\
+&= \mb{Q}\text{skew}\paren{\mb{Q}^{T}\mb{R} } \label{eqn: tangent_proj} %+ \mb{Q}_{\bot}\mb{R}\,, 
+\end{align}
+where $\text{skew}\paren{\mb{A}} = \frac{1}{2}\paren{\mb{A} - \mb{A}^{T}}$.
+
+It suggests from above that $\mb{\Delta}$ in the tangent space of $\cO(n)$ at $\mb{Q}$ can be decomposed as 
+\begin{align}
+\mb{\Delta} &= \mb{Q}\mb{A}  \label{eqn: tangent_form} %+ \mb{Q}_{\bot}\mb{R}\,, \label{eqn: tangent_form}
+\end{align}
+where $\mb{A}$ is skew-symmetric. %where $\mb{Q}_{\bot} = \paren{\mb{I} - \mb{Q}\mb{Q}^{T}}$, $\mb{A} = \mb{Q}^{T}\mb{\Delta}$ is skew-symmetric and $\mb{R}$ is arbitrary matrix. 
+
+\subsection{The geodesic on $\cO(n)$ and parallel transport }
+Assume that the vector field that assigns $\mb{\Delta} \in T_{\mb{Q}}\cO(n)$ at $\mb{Q}$ is \emph{parallel} along the curve $\mb{Q}(t)$ with the tangent direction $\dot{\mb{Q}}$. That is the tangential component of the derivative of $\mb{\Delta}$, $\dot{\mb{\Delta}}$ is zero, or, $\dot{\mb{\Delta}}$ is in the normal space. It follows from  
+\begin{align*}
+\dot{\mb{\Delta}} &=\pi_{\mb{N}}(\dot{\mb{\Delta}}) \\
+\Rightarrow  \dot{\mb{\Delta}}  &= \mb{Q}\text{sym}\paren{\mb{Q}^{T}\dot{\mb{\Delta}} }\\
+\dot{\mb{\Delta}} &= \mb{Q}\paren{ \mb{Q}^{T}\dot{\mb{\Delta}} + \dot{\mb{\Delta}}^{T}\mb{Q} }/2
+\end{align*} 
+and
+\begin{align*}
+\dot{\overline{\mb{\Delta}^{T}\mb{Q} + \mb{Q}^{T}\mb{\Delta}}} &= 0\\
+\dot{\mb{\Delta}}^{T}\mb{Q} + \mb{Q}^{T}\dot{\mb{\Delta}}+ \mb{\Delta}^{T}\dot{\mb{Q}}+  \dot{\mb{Q}}^{T}\mb{\Delta}
+&= 0\\
+\dot{\mb{\Delta}}^{T}\mb{Q} + \mb{Q}^{T}\dot{\mb{\Delta}}&= -  \mb{\Delta}^{T}\dot{\mb{Q}}+  \dot{\mb{Q}}^{T}\mb{\Delta},
+\end{align*}
+so we have the differential equation for $(\mb{\Delta}, \mb{Q})$
+\begin{align}
+\dot{\mb{\Delta}} &= -\mb{Q}\paren{ \mb{\Delta}^{T}\dot{\mb{Q}}+  \dot{\mb{Q}}^{T}\mb{\Delta} }/2 \label{eqn: cov_deriv_eqn}
+\end{align}
+
+To find the geodesic $\mb{Q}(t)$ of $\cO(n)$, we use the fact that $\mb{\Delta} = \dot{\mb{Q}}$, thus
+\begin{align}
+\ddot{\mb{Q}} &= -\mb{Q} \dot{\mb{Q}}^{T}\dot{\mb{Q}} \label{eqn: diff_geodesic_eqn_general}
+\end{align}
+where the Christoffel function is given as 
+\begin{align}
+\Gamma_{c}\paren{\mb{\Delta}_{1}, \mb{\Delta}_{2}} &= \mb{Q} \mb{\Delta}_{1}^{T}\mb{\Delta}_{2} \label{eqn: Christoffel_ortho}
+\end{align}
+
+Let $\mb{A} = \mb{Q}^{T}\dot{\mb{Q}}$, $\mb{S} = \dot{\mb{Q}}^{T}\dot{\mb{Q}}$ and $\mb{B} = \mb{Q}^{T}\mb{Q}= \mb{I}$. Then 
+\begin{align*}
+\dot{\mb{A}} &= \dot{\mb{Q}}^{T}\dot{\mb{Q}}+  \mb{Q}^{T}\ddot{\mb{Q}}\\
+&= \mb{S} - \mb{Q}^{T}\mb{Q}\mb{S} \\
+&= \mb{S} - \mb{B}\mb{S} = \mb{0}.
+\end{align*}
+ Since $\mb{A}= \mb{A}(0)$ is constant and $\mb{Q\,Q}^{T}= \mb{I}$, we have
+ \begin{align}
+ \dot{\mb{Q}} &=\mb{Q\,Q}^{T}\dot{\mb{Q}} = \mb{Q}\mb{A} \nonumber\\
+\mb{Q}(t) &= \mb{Q}(0)\exp\paren{t\mb{A}} =\mb{Q}(t-1)\exp\paren{\mb{A}} \label{eqn: geo_orthog_curve}
+\end{align}
+
+\subsection{The geodesic for Stiefel manifold}
+For Stiefel manifold, since 
+\begin{align*}
+\mb{U}^{T}\mb{U} &= \mb{I}_{k},
+\end{align*} we have similar results:
+\begin{enumerate}
+\item The normal space $N_{U}$ consists of matrices of the form
+\begin{align}
+\mb{N} &= \mb{U}\mb{S}, \label{eqn: normal_form_stiefel}
+\end{align} for some symmetric matrix $\mb{S} \in \bS(k)$.
+
+\item The tangent space $T_{U}$ consists of matrices for the form
+\begin{align}
+\mb{\Delta} &= \mb{U}\mb{A}  + \mb{U}_{\bot}\mb{R}\,, \label{eqn: tangent_form_stiefel}
+\end{align}
+where $\mb{U}_{\bot} = \paren{\mb{I} - \mb{U}\mb{U}^{T}}$, $\mb{A} = \mb{U}^{T}\mb{\Delta}$ is $k\times k$ skew-symmetric and $\mb{R}$ is arbitrary matrix. 
+
+\item The tangential projection 
+\begin{align}
+\pi_{\mb{T}}(\mb{R}) &= \mb{U}\text{skew}\paren{\mb{U}^{T}\mb{R} } + \paren{\mb{I} - \mb{U}\mb{U}^{T}}\mb{R}\nonumber\\
+&= \mb{U}\text{skew}\paren{\mb{U}^{T}\mb{R} } + \mb{U}_{\bot}\mb{R}\,, \label{eqn: tangent_proj_stiefel} 
+\end{align}
+and the normal projection
+\begin{align}
+\pi_{\mb{N}}(\mb{R})&\equiv \mb{U}\text{sym}\paren{\mb{U}^{T}\mb{R} } \label{eqn: normap_proj}
+\end{align}.
+
+\item The differential equation for parallel vector field $(\mb{\Delta}, \mb{U})$
+\begin{align}
+\dot{\mb{\Delta}} &= -\mb{U}\paren{ \mb{\Delta}^{T}\dot{\mb{U}}+  \dot{\mb{U}}^{T}\mb{\Delta} }/2 \label{eqn: cov_deriv_eqn_stiefel}
+\end{align}
+
+\item The Christoffel function is given as 
+\begin{align}
+\Gamma_{c}\paren{\mb{\Delta}_{1}, \mb{\Delta}_{2}} &= \mb{U} \mb{\Delta}_{1}^{T}\mb{\Delta}_{2} \label{eqn: Christoffel_ortho_stiefel}
+\end{align} thus with $\mb{\Delta}= \dot{\mb{U}}$, the differential equation for the geodesic is 
+\begin{align}
+\ddot{\mb{U}} &= -\mb{U} \dot{\mb{U}}^{T}\dot{\mb{U}} \label{eqn: diff_geodesic_eqn_general}
+\end{align}
+
+\item Let $\mb{A} = \mb{U}^{T}\dot{\mb{U}}$, $\mb{S} = \dot{\mb{U}}^{T}\dot{\mb{U}}$ and $\mb{B} = \mb{U}^{T}\mb{U}=\mb{I}_{k}$. Then 
+\begin{align*}
+\dot{\mb{B}} & = \mb{A} + \mb{A}^{T} = \mb{0}\\
+\dot{\mb{A}} &= \dot{\mb{U}}^{T}\dot{\mb{U}}+  \mb{U}^{T}\ddot{\mb{U}}\\
+&= \mb{S} - \mb{U}^{T}\mb{U}\mb{S} \\
+&= \mb{S} - \mb{B}\mb{S} \\
+\dot{\mb{S}} &= \ddot{\mb{U}}^{T}\dot{\mb{U}}+  \dot{\mb{U}}^{T}\ddot{\mb{U}}\\
+&= -\mb{S}\mb{U}^{T}\dot{\mb{U}} - \dot{\mb{U}}^{T}\mb{U}\mb{S} \\
+&= -\mb{SA} - \mb{A}^{T}\mb{S}\quad (\text{since } \mb{A}^{T} = -\mb{A} )\\
+&= \mb{A}\mb{S}-\mb{SA} \\
+& = \brac{\mb{A}, \mb{S}}
+\end{align*}
+
+ This gives a system of differential equations 
+ \begin{align}
+ \dot{\mb{B}} & = \mb{A} + \mb{A}^{T} = \mb{0},\nonumber\\
+ \dot{\mb{A}}&= \mb{S} - \mb{B}\mb{S} = \mb{0}, \nonumber\\
+ \dot{\mb{S}} & = \brac{\mb{A}, \mb{S}}, \nonumber\\
+ \mb{B}(0) &= \mb{I}, \nonumber\\
+ \mb{A}(0) &= \mb{A}_{0},\nonumber\\
+ \mb{S}(0) &=  \mb{S}_{0}.\label{eqn: diff_geodesic_eqn}
+ \end{align}
+Note that $\mb{U\,U}^{T}\neq \mb{I}$, but since $\mb{A}= \mb{A}_{0}$ is constant, we can solve above equations to find the following solution \citep{edelman1998geometry}
+\begin{align*}
+\mb{B}(t) &= \mb{I}_{k} \\
+\mb{A}(t) &= \mb{A}_{0}\\
+\mb{S}(t) &=  \exp\paren{t\mb{A}_{0}}\mb{S}_{0}\exp\paren{-t\mb{A}_{0}}
+\end{align*}
+It follows that 
+\begin{align}
+\rlat{\frac{d}{dt}\brac{\begin{array}{cc}
+\mb{U}\exp\paren{t\mb{A}} & \dot{\mb{U}}\exp\paren{t\mb{A}}
+\end{array} }}{t=0}
+&= \brac{\begin{array}{cc}
+\mb{U}\exp\paren{t\mb{A}} & \dot{\mb{U}}\exp\paren{t\mb{A}}
+\end{array} }
+\brac{\begin{array}{cc}
+\mb{A} & -\mb{S}(0) \\ 
+\mb{I}_{k} & \mb{A}
+\end{array} } 
+\end{align}
+with the solution by \citep{edelman1998geometry} as 
+\begin{align}
+\brac{\begin{array}{cc}
+\mb{U}& \dot{\mb{U}}
+\end{array} }\mb{I}_{2}\otimes\exp\paren{t\mb{A}}  &=  \brac{\begin{array}{cc}
+\mb{U}(0)& \dot{\mb{U}}(0)
+\end{array} }\paren{\mb{I}_{2}\otimes\exp\paren{t\mb{A}}} \exp\paren{t\,\brac{\begin{array}{cc}
+\mb{A} & -\mb{S}(0) \\ 
+\mb{I}_{k} & \mb{A}
+\end{array} } } \nonumber\\
+\mb{U}(t) &=  \brac{\begin{array}{cc}
+\mb{U}(0)& \dot{\mb{U}}(0)
+\end{array} }\exp\paren{t\,\brac{\begin{array}{cc}
+\mb{A} & -\mb{S}(0) \\ 
+\mb{I}_{k} & \mb{A}
+\end{array} } }\mb{I}_{2k,k}\exp\paren{-t\mb{A}} \label{eqn: geo_Stiefel_curve}
+\end{align}
+Note that \eqref{eqn: geo_Stiefel_curve} does not contain the tangent $\dot{\mb{U}}(t-1)$ and $\mb{U}(t-1)$ as the update step, as shown in \eqref{eqn: geo_orthog_curve} for the orthogonal group $\cO(n)$. So we have to find another way to find the geodesic. %also holds for the ortho manifold where $n=k$. However, the above formulation 
+\end{enumerate}
+
+
+%where $\mb{A} = \mb{A}_{0}$ is constant. 
+ 
+
+%
+%
+%
+%For orthogonal group $\mb{Q\,Q}^{T} = \mb{Q}^{T}\mb{Q} = \mb{B}=\mb{I}$, so the trajectory of the geodesic in $\cO(n)$ is given by 
+%\begin{align}
+%\dot{\mb{A}} &= \mb{S}- \mb{BS} = \mb{0}\\
+%\mb{A}&=  \mb{Q}^{T}\dot{\mb{Q}} \nonumber\\
+%\dot{\mb{Q}} &= \mb{Q}\mb{A} \nonumber\\
+%\mb{Q}(t) &= \mb{Q}(0)\exp\paren{t\mb{A}} =\mb{Q}(t-1)\exp\paren{\mb{A}} \label{eqn: geo_orthog_curve}
+%\end{align}
+%where $\mb{A} = \mb{A}_{0}$ is constant. 
+
+
+
+\newpage
+\section{Geometry of Stiefel manifold $V_{k}(\bR^{n})$}
+\subsection{Geometry of quotient manifold $X/G$}
+Given the differential structure of the orbit space $X/G$, we want to find the tangent space of $X/G$ at the orbit $Gx$ through $x\in X$. 
+
+Note that the map $\pi: X \to X/G$ that $\pi\paren{x} = Gx$ is a surjective submersion. Hence for each $x\in X$, you can identify the tangent space $T_{\pi(x)}\paren{X/G}$ with the quotient of $T_{x}X$ by the \emph{tangent space of the orbit} $Gx$ through $x$.  The latter is the subspace of $T_{x}X$ spanned by the fundamental vector fields for the action associated to elements in the Lie algebra $\mathfrak{g}$ of $X$. Here  $\mb{A}\in \mathfrak{g}$, the fundamental vector field is defined by $\zeta_{\mb{A}}(x)= \rlat{\frac{d}{dt}}{t=0}\paren{x \cdot \exp(t\mb{A})}$.
+Note that it is a common strategy for finding the tangent space of orbit space $X/G$.
+
+
+In \citep{kobayashi1963foundations}, the subspace of $T_{x}X$ that are tangent to the orbit at $x$ under action of $G$ is called the \emph{vertical space}. Its  orthogonal complement space is called the \emph{horizontal space}. Then the tangent  space to the orbit space can be represented by the horizontal space. Intuitively, the motion along the tangent vector in the vertical space does not leave the given orbit and thus the motion that traverse across different orbits should be  perpendicular to them. Let $\zeta$ be the tangent vector of $\paren{X/G}$ at $Gx$ and  denote the corresponding horizontal vector at $T_{x}X$ as $\zeta\diamond x$ and called it the \emph{horizontal lift} of $x$.
+
+Dimensionality of quotient space is equal to the dimensionality of horizontal space. Dimensionality of tangent space is equal to the sum of dimensionalities of Horizontal and Vertical spaces. 
+
+We can derive a \emph{Riemannian metric} for the quotient space $X/G$ using the Riemannian metric of $X$. The idea is to define inner product between two tangent vectors $\zeta$ and $\eta$ at $Gx \in X/G$ in terms of inner product between their \emph{horizontal lifts} $\zeta\diamond x$ and $\eta\diamond x$ at $x\in X$. Note that we need to make sure that the value of the inner product between $\zeta$ and $\eta$ at $Gx \in X/G$ does not depend on the $x \in X$ used for lifting.
+
+Note that the curve tangent at $\zeta$ in quotient space is equal to the horizontal curve $\alpha(t)\in X$, which is defined to be the curve in $X$ such that its tangent vector is horizontal lift $\alpha'(t) = \zeta\diamond x$.
+
+For the Stiefel and Grassmann manifold case, we can represent the geodesic on the quotient space, i.e.  Stiefel and Grassmann manifold as the horizontal geodesic on $\cO(n)$. In general, if the quotient $M/G$ is a manifold, with $M$ being a finite dimensional complete Riemannian manifold, and $G$ a compact Lie group acting isometrically on $M$,  \emph{the geodesics on the quotient can be lifted to horizontal geodesics on the original manifold}.  In general, it may not be true, since  $M/G$ may not even have the differential structure. Note that the projection of horizontal geodesic onto the quotient space gives the generalized geodesic on the quotient space. 
+
+
+\subsection{The tangent space of $V_{k}(\bR^{n})$}
+We use the fact that $$V_{k}(\bR^{n}) \simeq \cO(n)/\cO(n-k).$$ To find the tangent space of $V_{k}(\bR^{n})$ as the quotient manifold $\cO(n)/\cO(n-k)$, we find the horizontal space of $\cO(n)$. 
+
+Note that $\mb{\Delta}\in T_{\mb{Q}}\cO(n)$ follows the decomposition
+\begin{align*}
+\mb{\Delta} &= \mb{Q}\mb{A}%+ (\mb{I}- \mb{U\,U}^{T})\mb{R},
+\end{align*}
+where $\mb{A}$ is skew-symmetric.% and $\mb{R}$ is arbitrary.
+
+Since the orbit at $\mb{Q}$ under the action in $\cO(n-k)$ is given as 
+\begin{align*}
+\brac{\mb{Q}} &= \set{\mb{Q}\brac{\begin{array}{cc}
+\mb{I} & \mb{0} \\ 
+\mb{0} & \mb{Q}_{n-k}
+\end{array}} \;\Big|\;  \mb{Q}_{n-k}\in  \cO(n-k) }.
+\end{align*}
+
+Denote the vertical space at $\mb{U}$ as $\mathcal{V}_{\mb{U}}$ and the horizontal space as $\mathcal{H}_{\mb{U}}$. Note that the dimension of $\mathcal{H}_{\mb{U}}$ is the same as the dimension of $\cO(n)/\cO(n-k)$, i.e. $nk- \frac{1}{2}k(k+1)$. So the dimension of vertical space $\mathcal{V}_{\mb{U}}$ is 
+\begin{align*}
+\frac{1}{2}n(n-1) - nk+ \frac{1}{2}k(k+1)
+&=\frac{1}{2}(n-k)^{2} - \frac{1}{2}(n -k)\\
+&=\frac{1}{2}(n-k-1)(n-k).
+\end{align*}
+
+Let $\mb{\Delta}_{H} \in \mathcal{H}_{\mb{U}}$, then $\mb{\Delta}_{H}  = \mb{U}\mb{A}_{H}$ for $\mb{A}_{H} = -\mb{A}_{H}^{T}$ and $\mb{\Delta}_{H}$ orthogonal to $[\mb{Q}]$, i.e. 
+\begin{align*}
+\inn{\mb{\Delta}_{H}}{ \mb{U}\brac{\begin{array}{cc}
+\mb{I} & \mb{0} \\ 
+\mb{0} & \mb{Q}_{n-k}
+\end{array}} }
+&= \tr{ \mb{A}_{H}^{T}\mb{U}^{T}\mb{U}\brac{\begin{array}{cc}
+\mb{I} & \mb{0} \\ 
+\mb{0} & \mb{Q}_{n-k}
+\end{array}}  }\\
+&= \tr{ \brac{\begin{array}{cc}
+\mb{A}^{H}_{11} & \mb{A}^{H}_{12} \\ 
+\mb{A}^{H}_{21} & \mb{A}^{H}_{22}
+\end{array}}^{T}\brac{\begin{array}{cc}
+\mb{I} & \mb{0} \\ 
+\mb{0} & \mb{Q}_{n-k}
+\end{array}}  }\\
+&=0. \;\; \forall \; \mb{Q}_{n-k}\in \cO(n-k)
+\end{align*}
+That is 
+\begin{align*}
+\Rightarrow \tr{ \mb{A}^{H}_{22}\mb{Q}_{n-k}} &= 0. \;\; \forall \; \mb{Q}_{n-k}\in \cO(n-k)
+\end{align*}
+It only happens when $\mb{A}^{H}_{22} = 0$.   
+So the horizontal space and also \emph{the tangent space} of $V_{k}(\bR^{n}) \simeq \cO(n)/\cO(n-k)$ contains matrix
+\begin{align*}
+\mb{\Delta}_{H}  &= \mb{Q}\brac{\begin{array}{cc}
+\mb{A}_{11}^{(H)} & \mb{A}_{12}^{(H)}\\ 
+-(\mb{A}_{12}^{(H)})^{T}& \mb{0}
+\end{array} } \equiv \mb{Q}\brac{\begin{array}{cc}
+\mb{A} & -\mb{R}^{T} \\ 
+\mb{R}& \mb{0}
+\end{array} } 
+\end{align*} for arbitrary skew-symmetric $k \times k$ matrix $\mb{A}$ and arbitrary matrix $\mb{R}$
+up to a isotropy subgroup $\brac{\begin{array}{cc}
+\mb{I} & \mb{0} \\ 
+\mb{0} & \mb{Q}_{n-k}
+\end{array}}.$
+
+
+
+We claim that the vertical space contains matrix
+\begin{align*}
+\mb{\Delta}_{V}  &= \mb{Q}\brac{\begin{array}{cc}
+\mb{0} & \mb{0} \\ 
+\mb{0} & \mb{A}^{V}_{22}
+\end{array} } \equiv \mb{Q}\brac{\begin{array}{cc}
+\mb{0} & \mb{0} \\ 
+\mb{0} & \mb{C}
+\end{array} } 
+\end{align*} for arbitrary skew-symmetric $(n-k)\times(n-k)$ matrix $\mb{C}$
+up to a isotropy subgroup $\brac{\begin{array}{cc}
+\mb{I} & \mb{0} \\ 
+\mb{0} & \mb{Q}_{n-k}
+\end{array}}.$
+
+Note that $\tr{\mb{\Delta}_{V}^{T}\mb{\Delta}_{H}} = 0$ and  $\mb{\Delta}_{V} \in T_{\mb{Q}}\cO(n)$. So the space of all matrices $\mb{\Delta}_{V}$ is orthogonal complement of $\mathcal{H}_{\mb{Q}}$, which is by definition the vertical space $\mathcal{V}_{\mb{Q}}$.  See that the space of $\mb{\Delta}_{V}$ has dimension $\frac{1}{2}(n-k)(n-k-1)$ that is equal to the dimension of $\mathcal{V}_{\mb{Q}}$
+
+Instead of considering the quotient structure, we could use the direction definition of the Stiefel manifold.  Let the tangent vector at $\mb{Q}$ be $\bar{\mb{\Delta}} = \mb{Q}\mb{A} + \mb{Q}_{\bot}\mb{R}$, where $\mb{Q}\in V_{k}(\bR^{n}) \subset \bR^{n\times k}$ and $\mb{A} = \mb{Q}^{T}\bar{\mb{\Delta}} \in \bR^{k\times k}$ is skew-symmetric with $\mb{R} \in \bR^{n\times k}$; that is in \eqref{eqn: tangent_form}
+\begin{align*}
+\bar{\mb{\Delta}} &= \mb{Q}\mb{A} + \mb{Q}_{\bot}\mb{R}  \in \bR^{n\times k}\,
+\end{align*}
+and compare with the horizontal vector at $\mb{Q}$
+\begin{align*}
+\mb{\Delta}_{H}  &=\mb{Q}\brac{\begin{array}{cc}
+\mb{A} & -\mb{R}^{T} \\ 
+\mb{R}& \mb{0}
+\end{array} } \\
+&= \brac{\begin{array}{cc}
+\mb{Q} & \mb{Q}_{\bot}
+\end{array} }\brac{\begin{array}{cc}
+\mb{A} & -\mb{R}^{T} \\ 
+\mb{R}& \mb{0}
+\end{array} }\brac{\begin{array}{cc}
+\mb{I} & \mb{0} \\ 
+\mb{0} & \mb{Q}_{n-k}
+\end{array}} \\
+&= \brac{\begin{array}{cc}
+\bar{\mb{\Delta}} & -\mb{Q} \mb{R}^{T}\mb{Q}_{n-k}
+\end{array} } \in \bR^{n\times n}
+\end{align*}
+Thus it follows that
+\begin{align*}
+\bar{\mb{\Delta}} &= \mb{\Delta}_{H}\mb{I}_{n,k}.
+\end{align*}
+ and 
+ \begin{align*}
+ \mb{Q}^{T} \mb{\Delta}_{H} &=\mb{I}_{n,k}^{T}\brac{\begin{array}{cc}
+\mb{A} & -\mb{R}^{T} \\ 
+\mb{R}& \mb{0}
+\end{array} } = \brac{\begin{array}{cc}
+\mb{A} & -\mb{R}^{T}
+\end{array} }
+ \end{align*}
+
+%Note that by the decomposition, for $\mb{\Delta} \in T_{\mb{Q}}\cO(n)$ 
+%\begin{align*}
+%\mb{\Delta} &= \mb{Q}\brac{\begin{array}{cc}
+%\mb{A} & -\mb{R}^{T} \\ 
+%\mb{R}& \mb{C}
+%\end{array} } \\
+%&= \mb{Q}\brac{\begin{array}{cc}
+%\mb{A} & -\mb{R}^{T} \\ 
+%\mb{R}& \mb{0}
+%\end{array} }  + \mb{Q}\brac{\begin{array}{cc}
+%\mb{0} & \mb{0} \\ 
+%\mb{0}& \mb{C}
+%\end{array} } \\
+%&= \mb{\Delta}_{H} +  \mb{\Delta}_{V} 
+%\end{align*}
+
+
+
+\subsection{canonical metric on $V_{k}(\bR^{n})$}
+The canonical metric on $V_{k}(\bR^{n})$ is derived using from Riemannian metric of manifold $\cO(n)$. That is, via the inner product between the horizontal lifts,  
+\begin{align}
+g_{c}(\bar{\mb{\Delta}}_{\zeta}, \bar{\mb{\Delta}}_{\eta}) &= g_{c}(\mb{\Delta}_{H,\zeta}\mb{I}_{n,k}, \;\mb{\Delta}_{H,\eta}\mb{I}_{n,k}) \nonumber\\
+&\equiv g_{e}(\mb{\Delta}_{H, \zeta}, \mb{\Delta}_{H, \eta})\nonumber\\
+&= \frac{1}{2}\tr{\paren{\mb{Q}\brac{\begin{array}{cc}
+\mb{A}_{\zeta} & -\mb{R}_{\zeta}^{T} \\ 
+\mb{R}_{\zeta} & \mb{0}
+\end{array} } }^{T}\mb{Q}\brac{\begin{array}{cc}
+\mb{A}_{\eta} & -\mb{R}_{\eta}^{T} \\ 
+\mb{R}_{\eta}& \mb{0}
+\end{array} }   } \nonumber\\
+&= \frac{1}{2}\mb{A}_{\zeta}^{T}\mb{A}_{\eta} + \mb{R}_{\zeta}^{T}\mb{R}_{\eta},  \label{eqn: can_metric_Stiefel}
+\end{align} where $\bar{\mb{\Delta}}_{\zeta} \in \bR^{n\times k}$ lies in the tangent space of $V_{k}(\bR^{n}) \simeq \cO(n)/\cO(n-k)$ at $\mb{U} = [\mb{Q}]$, as compared to $\mb{\Delta}_{H}$ and $\mb{\Delta} \in \bR^{n\times n}$.
+
+
+
+
+Note that the Euclidean metric in $ T_{\mb{U}}V_{k}(\bR^{n})$ is given as 
+\begin{align*}
+g_{e}(\bar{\mb{\Delta}},  \bar{\mb{\Delta}}) &= g_{e}\paren{\mb{\Delta}_{H,\zeta}\mb{I}_{n,k}, \;\mb{\Delta}_{H,\eta}\mb{I}_{n,k}}\\
+&= \frac{1}{2}\tr{\bar{\mb{\Delta}}^{T}\bar{\mb{\Delta}}}\\
+&= \frac{1}{2}\mb{A}^{T}\mb{A} + \frac{1}{2}\mb{R}^{T}\mb{R},
+\end{align*}
+as compared to the canonical metric at the point $\mb{U}$ is given by
+\begin{align}
+g_{c}(\bar{\mb{\Delta}},  \bar{\mb{\Delta}}) &= \frac{1}{2}\tr{\mb{\Delta}_{H}^{T}\mb{\Delta}_{H} } \nonumber\\
+&=\tr{ \bar{\mb{\Delta}}^{T} \paren{ \mb{I} - \frac{1}{2}\mb{U}\mb{U}^{T} }\,  \bar{\mb{\Delta}} } \label{eqn: can_metric_Stiefel_mat}
+\end{align}
+for $\bar{\mb{\Delta}} = \mb{U}\mb{A} + \mb{U}_{\bot}\mb{R}$.
+
+ 
+
+
+\subsection{Geodesic on $V_{k}(\bR^{n})$}
+There are two ways to find the geodesic on $V_{k}(\bR^{n})$: 
+\begin{enumerate}
+\item Use the definition of $V_{k}(\bR^{n}) = \set{\mb{U}\in \bR^{n\times k}\;|\;  \mb{U}^{T}\mb{U}= \mb{I}_{k}}$ and the differential equation for the geodesic in \eqref{eqn: diff_geodesic_eqn_general}, we can obtain the system of differential equations in \eqref{eqn: diff_geodesic_eqn} and the solution is the integral curve of the equations, which is the trajectory of the geodesic, as described in \eqref{eqn: geo_Stiefel_curve}
+\begin{align*}
+\mb{U}(t) &=  \brac{\begin{array}{cc}
+\mb{U}(0)& \dot{\mb{U}}(0)
+\end{array} }\exp\paren{t\,\brac{\begin{array}{cc}
+\mb{A} & -\mb{S}(0) \\ 
+\mb{I} & \mb{A}
+\end{array} } }\mb{I}_{2k,k}\exp\paren{-t\mb{A}},
+\end{align*}
+where $\mb{A} = \paren{\mb{U}(0)}^{T}\dot{\mb{U}}(0)$ is skew-symmetric and $\mb{S}(0) = \paren{\dot{\mb{U}}(0)}^{T}\dot{\mb{U}}(0)$ is symmetric.  \citep{edelman1998geometry}\\[15pt]
+
+\item Based on the property of the quotient manifold, the geodesic on $V_{k}(\bR^{n}) \simeq \cO(n)/\cO(n-k)$ is the projection of the horizontal geodesic onto $\cO(n)/\cO(n-k)$. The horizontal geodesic is given by projection of geodesic on $\cO(n)$ to the horizontal space at each point; that is,
+\begin{align*}
+\mb{Q}^{(H)}(t) &= \mb{Q}^{(H)}(0)\,\exp\paren{t\brac{\begin{array}{cc}
+\mb{A} & -\mb{R}^{T} \\ 
+\mb{R}& \mb{0}
+\end{array} }}, 
+\end{align*}
+where $\mb{A}(t)$ is skew-symmetric and $\mb{R}(t)$ is arbitrary. To check it, the tangent of the curve is 
+\begin{align*}
+\dot{\mb{Q}^{(H)}}(t) &= \mb{Q}^{(H)}(t)\,\brac{\begin{array}{cc}
+\mb{A} & -\mb{R}^{T} \\ 
+\mb{R}& \mb{0}
+\end{array} }.
+\end{align*}
+Note that by definition, $\mb{A} =(\dot{\mb{Q}^{(H)}}(t))^{T}\mb{Q}^{(H)}(t) $ is a constant along the geodesic. 
+
+Then the geodesic on $V_{k}(\bR^{n}) $ is given by the equivalent class $\brac{\mb{Q}^{(H)}(t) } = \pi\circ \mb{Q}^{(H)}(t)$.\\[15pt]
+
+\item Use the minimal property of the geodesic as minimizing the functional
+\begin{align*}
+\min L(t, \dot{\mb{U}}) &= \int \sqrt{g_{c}(\dot{\mb{U}}, \dot{\mb{U}})} dt\\
+&= \int \paren{ \tr{ \dot{\mb{U}}^{T} \paren{ \mb{I} - \frac{1}{2}\mb{U}\mb{U}^{T} }  \dot{\mb{U}} } }^{1/2} dt\\
+&\le a\sqrt{\int \paren{ \tr{ \dot{\mb{U}}^{T} \paren{ \mb{I} - \frac{1}{2}\mb{U}\mb{U}^{T} }  \dot{\mb{U}} } }dt}
+\end{align*}
+using the Euler-Lagrange equation on $E = \tr{ \dot{\mb{U}}^{T} \paren{ \mb{I} - \frac{1}{2}\mb{U}\mb{U}^{T} }  \dot{\mb{U}} } $. 
+
+Since 
+\begin{align*}
+\partdiff{}{\dot{\mb{U}}} \tr{ \dot{\mb{U}}^{T} \paren{ \mb{I} - \frac{1}{2}\mb{U}\mb{U}^{T} } \dot{\mb{U}} } 
+&=2\paren{ \mb{I} - \frac{1}{2}\mb{U}\mb{U}^{T}} \dot{\mb{U}} = 2\dot{\mb{U}} - \mb{U}\mb{U}^{T}\dot{\mb{U}} \\
+&= 2\dot{\mb{U}} + \mb{U}\dot{\mb{U}}^{T}\mb{U} \\
+\partdiff{}{\mb{U}} \tr{ \dot{\mb{U}}^{T} \paren{ \mb{I} - \frac{1}{2}\mb{U}\mb{U}^{T} } \dot{\mb{U}} } 
+&= -\frac{1}{2}\partdiff{}{\mb{U}} \tr{  \dot{\mb{U}}\dot{\mb{U}}^{T} \mb{U}\mb{U}^{T}   }\\
+&= -\dot{\mb{U}}\dot{\mb{U}}^{T}\mb{U}\\
+\frac{d}{dt}\partdiff{}{\dot{\mb{U}}} \tr{ \dot{\mb{U}}^{T} \paren{ \mb{I} - \frac{1}{2}\mb{U}\mb{U}^{T} } \dot{\mb{U}} } &= 
+2\ddot{\mb{U}} + \dot{\mb{U}}\dot{\mb{U}}^{T}\mb{U} + \mb{U}\ddot{\mb{U}}^{T}\mb{U}+ \mb{U}\dot{\mb{U}}^{T}\dot{\mb{U}}  ,
+\end{align*}
+so 
+\begin{align}
+\partdiff{E}{\mb{U}} - \frac{d}{dt}\partdiff{E}{\dot{\mb{U}}} &= 0 \nonumber\\
+2\ddot{\mb{U}} + \dot{\mb{U}}\dot{\mb{U}}^{T}\mb{U} + \mb{U}\ddot{\mb{U}}^{T}\mb{U}+ \mb{U}\dot{\mb{U}}^{T}\dot{\mb{U}} + \dot{\mb{U}}\dot{\mb{U}}^{T}\mb{U}&= 0\nonumber\\
+%2\ddot{\mb{U}} - \dot{\mb{U}}\mb{U}^{T}\dot{\mb{U}} - \mb{U}\dot{\mb{U}}^{T}\dot{\mb{U}} -\mb{U}\mb{U}^{T}\ddot{\mb{U}} +\dot{\mb{U}}\dot{\mb{U}}^{T}\mb{U} &= 0\\
+%2\ddot{\mb{U}} + 2\dot{\mb{U}}\dot{\mb{U}}^{T}\mb{U} - \mb{U}\dot{\mb{U}}^{T}\dot{\mb{U}} -\mb{U}\mb{U}^{T}\ddot{\mb{U}}  &= 0\\
+\ddot{\mb{U}} +\dot{\mb{U}}\dot{\mb{U}}^{T}\mb{U} +\mb{U}\paren{ \frac{1}{2}\ddot{\mb{U}}^{T}\mb{U}+\frac{1}{2}\dot{\mb{U}}^{T}\dot{\mb{U}} } &= 0 \label{eqn: geo_Stiefel_eqn_1}\\
+\text{From } (\mb{U}^{T}\cdot\eqref{eqn: geo_Stiefel_eqn_1}) \Rightarrow \frac{1}{2}\mb{U}^{T}\ddot{\mb{U}}- \paren{\dot{\mb{U}}^{T}\mb{U}}^{2}  - \frac{1}{2}\dot{\mb{U}}^{T}\dot{\mb{U}}  &= 0 \nonumber\\
+\frac{1}{2}\ddot{\mb{U}}^{T}\mb{U} = \paren{\mb{U}^{T}\dot{\mb{U}}}^{2}  + \frac{1}{2}\dot{\mb{U}}^{T}\dot{\mb{U}} &\label{eqn: geo_Stiefel_eqn_2}\\[10pt]
+\eqref{eqn: geo_Stiefel_eqn_2}\Rightarrow \eqref{eqn: geo_Stiefel_eqn_1}, \quad \ddot{\mb{U}} +\dot{\mb{U}}\dot{\mb{U}}^{T}\mb{U} +\mb{U}\paren{  \paren{\mb{U}^{T}\dot{\mb{U}}}^{2}   + \dot{\mb{U}}^{T}\dot{\mb{U}} } &=0
+\label{eqn: geo_Stiefel_eqn_final}
+\end{align}
+
+Let $\mb{U} = \mb{Q}\exp\paren{t\mb{A}_{H}}\mb{I}_{n,k}$ for $\mb{A}_{H}$ is skew-symmetric, then 
+\begin{align*}
+\dot{\mb{U}}&=  \mb{Q}\exp\paren{t\mb{A}_{H}}\mb{A}_{H}\mb{I}_{n,k}\\
+\dot{\mb{U}}^{T}\dot{\mb{U}} &= \mb{I}_{n,k}^{T}\mb{A}_{H}^{T}\exp\paren{t\mb{A}_{H}^{T}}\exp\paren{t\mb{A}_{H}}\mb{A}_{H}\mb{I}_{n,k}\\
+&= -\mb{I}_{n,k}^{T}\mb{A}_{H}^{2}\mb{I}_{n,k}\\
+\mb{A} = \mb{U}^{T}\dot{\mb{U}} &=  \mb{I}_{n,k}^{T}\exp\paren{t\mb{A}_{H}^{T}}\exp\paren{t\mb{A}_{H}}\mb{A}_{H}\mb{I}_{n,k}\\
+&=  \mb{I}_{n,k}^{T}\mb{A}_{H}\mb{I}_{n,k}\\
+\paren{\mb{U}^{T}\dot{\mb{U}}}^{2}   &= \mb{I}_{n,k}^{T}\mb{A}_{H}^{2}\mb{I}_{n,k}\\
+\text{so } \paren{\mb{U}^{T}\dot{\mb{U}}}^{2}   + \dot{\mb{U}}^{T}\dot{\mb{U}} &= 0\\
+\text{also } \ddot{\mb{U}}&=  \mb{Q}\exp\paren{t\mb{A}_{H}}\mb{A}_{H}^{2}\mb{I}_{n,k}\\
+\text{and }  \dot{\mb{U}} \dot{\mb{U}}^{T}\mb{U} &= 
+- \mb{Q}\exp\paren{t\mb{A}_{H}}\mb{A}_{H}\mb{I}_{n,k}\mb{I}_{n,k}^{T}\mb{A}_{H}\mb{I}_{n,k} 
+\end{align*}
+so the equation \eqref{eqn: geo_Stiefel_eqn_final} yields 
+\begin{align*}
+ \mb{A}_{H}\paren{\mb{I}_{n} - \mb{I}_{n,k}\mb{I}_{n,k}^{T}}\mb{A}_{H} &=\mb{0} \\
+ \mb{A}_{H, (n-k, n-k)} &= \mb{0}\\
+ \text{that is }
+ \mb{A}_{H} &= \brac{\begin{array}{cc}
+\mb{A} & -\mb{R}^{T} \\ 
+\mb{R}& \mb{0}
+\end{array} },
+\end{align*} where $\mb{A} = \mb{U}^{T}\dot{\mb{U}}$ is skew-symmetric.
+\begin{align*}
+&\dot{\mb{U}}^{T} \paren{ \mb{I} - \mb{U}\mb{U}^{T} }  \dot{\mb{U}}\\
+&= \mb{I}_{n,k}^{T}\mb{A}_{H}^{T}\paren{\mb{I} - \mb{I}_{n,k}\mb{I}_{n,k}^{T}  }\mb{A}_{H}\mb{I}_{n,k}\\
+&= \brac{\begin{array}{cc}
+\mb{I}_{k} &
+\mb{0}
+\end{array} }
+\brac{\begin{array}{cc}
+-\mb{A} & \mb{R}^{T} \\ 
+-\mb{R}& \mb{0}
+\end{array} }
+\brac{\begin{array}{cc}
+\mb{0} & \mb{0} \\ 
+\mb{0}& \mb{I}_{n-k}
+\end{array} }\brac{\begin{array}{cc}
+\mb{A} & -\mb{R}^{T} \\ 
+\mb{R}& \mb{0}
+\end{array} }\brac{\begin{array}{c}
+\mb{I}_{k} \\ 
+\mb{0}
+\end{array} }\\
+&= \brac{\begin{array}{cc}
+-\mb{A} & \mb{R}^{T} 
+\end{array} }\brac{\begin{array}{cc}
+\mb{0} & \mb{0} \\ 
+\mb{0}& \mb{I}_{n-k}
+\end{array} }\brac{\begin{array}{cc}
+\mb{A} \\
+ \mb{R}
+\end{array} } \\
+&=  \mb{R}^{T} \mb{R}. 
+\end{align*} 
+
+
+
+The trajectory of the geodesic is given as 
+\begin{align}
+\mb{U}(t) = \mb{Q}\exp\paren{t\brac{\begin{array}{cc}
+\mb{A} & -\mb{R}^{T} \\ 
+\mb{R}& \mb{0}
+\end{array} }}\mb{I}_{n,k}. \label{eqn: geo_Stiefel_curve_2}
+\end{align}
+
+Note that
+\begin{align*}
+\mb{U}_{\bot}(0)\dot{\mb{U}}(0) 
+&=  \mb{Q}\mb{I}_{n,n-k}\mb{I}_{n,n-k}^{T}\mb{Q}^{T}\mb{Q}\brac{\begin{array}{cc}
+\mb{A} & -\mb{R}^{T} \\ 
+\mb{R}& \mb{0}
+\end{array} }\mb{I}_{n,k}\\
+&= \mb{Q}\brac{\begin{array}{cc}
+\mb{0} & \mb{0} \\ 
+\mb{0} & \mb{I}_{n-k}
+\end{array} }\brac{\begin{array}{cc}
+\mb{A} & -\mb{R}^{T} \\ 
+\mb{R}& \mb{0}
+\end{array} }\brac{\begin{array}{c}
+\mb{I}_{k} \\ 
+\mb{0}
+\end{array} }\\
+&= \mb{Q}\mb{R}
+\end{align*} is the QR-decomposition of the matrix $\mb{U}_{\bot}(0)\dot{\mb{U}}(0) $.  \citep{edelman1998geometry}\\
+
+
+\item To express $\mb{U}(t)$ using $\mb{U}(0)$ and $\dot{\mb{U}}(0)$, we see that $\mb{A} = \mb{U}(0)^{T} \dot{\mb{U}}(0)$ and $\mb{R}^{T} \mb{R}= \dot{\mb{U}}(0)^{T} $ $\paren{ \mb{I} - \mb{U}(0)\mb{U}^{T}(0) }  \dot{\mb{U}}(0)$. From \eqref{eqn: geo_Stiefel_curve_2}, we see that $\mb{U}(0) = \mb{Q}\mb{I}_{n,k}$ and $\mb{U}_{\bot}(0) = \mb{I} -\mb{U}(0) \mb{U}^{T}(0) = \mb{Q}\paren{\mb{I} - \mb{I}_{n,k}\mb{I}_{n,k}^{T}  }\mb{Q}^{T} = \mb{Q}\mb{I}_{n,n-k}\mb{I}_{n,n-k}^{T}\mb{Q}^{T} $.
+
+Let $\mb{M}(t) = \mb{I}_{n,k}^{T}\exp\paren{t\brac{\begin{array}{cc}
+\mb{A} & -\mb{R}^{T} \\ 
+\mb{R}& \mb{0}
+\end{array} }}\mb{I}_{n,k}$, then
+\begin{align*}
+\mb{U}(t) &= \mb{Q}\exp\paren{t\brac{\begin{array}{cc}
+\mb{A} & -\mb{R}^{T} \\ 
+\mb{R}& \mb{0}
+\end{array} }}\mb{I}_{n,k}\\
+&=\mb{Q}\mb{I}_{n,k}\mb{I}_{n,k}^{T}\exp\paren{t\brac{\begin{array}{cc}
+\mb{A} & -\mb{R}^{T} \\ 
+\mb{R}& \mb{0}
+\end{array} }}\mb{I}_{n,k} + \mb{Q}\mb{I}_{n,n-k}\mb{I}_{n,n-k}^{T}\exp\paren{t\brac{\begin{array}{cc}
+\mb{A} & -\mb{R}^{T} \\ 
+\mb{R}& \mb{0}
+\end{array} }}\mb{I}_{n,k}\\
+&= \mb{U}(0)\mb{M}(t) +  \mb{Q}\mb{I}_{n,n-k}\mb{I}_{n,n-k}^{T}\mb{Q}^{T}\mb{Q}\exp\paren{t\brac{\begin{array}{cc}
+\mb{A} & -\mb{R}^{T} \\ 
+\mb{R}& \mb{0}
+\end{array} }}\mb{I}_{n,k}\\
+&= \mb{U}(0)\mb{M}(t) + \mb{U}_{\bot}(0)\mb{U}(t)\\
+&= \mb{U}(0)\mb{M}(t) + \mb{U}_{\bot}(0)\int_{0}^{t} \dot{\mb{U}}(s) ds\\
+&= \mb{U}(0)\mb{M}(t) + \mb{U}_{\bot}(0)\int_{0}^{t} \dot{\mb{U}}(s) ds\\
+&=\mb{U}(0)\mb{M}(t) + \mb{U}_{\bot}(0)\dot{\mb{U}}(0)\int_{0}^{t} \mb{M}(s) ds\\
+\end{align*}
+Denote $\mb{U} = \mb{U}(0)$ and $\mb{H} = \dot{\mb{U}}(0)$, then the geodesic trajectory is given as 
+\begin{align}
+\mb{U}(t) &= \mb{U}\mb{M}(t) +  \paren{\mb{I} - \mb{U}\mb{U}^{T}}\mb{H}\int_{0}^{t} \mb{M}(s) ds \label{eqn: geo_Stiefel_curve_3}
+\end{align}
+
+\item To further simplify \eqref{eqn: geo_Stiefel_curve_3}, define $\mb{N}(t)=\brac{\begin{array}{cc}
+0 & \mb{I}_{n-k}
+\end{array} }\exp\paren{t\brac{\begin{array}{cc}
+\mb{A} & -\mb{R}^{T} \\ 
+\mb{R}& \mb{0}
+\end{array} }}\mb{I}_{n,k} \in bR^{(n-k)\times k}$  so that 
+\begin{align*}
+\brac{\begin{array}{c}
+\mb{M}(t) \\ 
+\mb{N}(t)
+\end{array} } &= \brac{\begin{array}{c}
+\mb{I}_{n,k}^{T} \\ 
+\mb{I}_{n,n-k}^{T}
+\end{array} }\exp\paren{t\brac{\begin{array}{cc}
+\mb{A} & -\mb{R}^{T} \\ 
+\mb{R}& \mb{0}
+\end{array} }}\mb{I}_{n,k}\\
+&=\exp\paren{t\brac{\begin{array}{cc}
+\mb{A} & -\mb{R}^{T} \\ 
+\mb{R}& \mb{0}
+\end{array} }}\mb{I}_{n,k}.
+\end{align*}
+See that 
+\begin{align*}
+\dot{\mb{N}}(t) &= \brac{\begin{array}{cc}
+0 & \mb{I}_{n-k}
+\end{array} }\brac{\begin{array}{cc}
+\mb{A} & -\mb{R}^{T} \\ 
+\mb{R}& \mb{0}
+\end{array} }\exp\paren{t\brac{\begin{array}{cc}
+\mb{A} & -\mb{R}^{T} \\ 
+\mb{R}& \mb{0}
+\end{array} }}\mb{I}_{n,k}\\
+&=\brac{\begin{array}{cc}
+\mb{R}& \mb{0}
+\end{array} }\exp\paren{t\brac{\begin{array}{cc}
+\mb{A} & -\mb{R}^{T} \\ 
+\mb{R}& \mb{0}
+\end{array} }}\mb{I}_{n,k}\\
+&=\mb{R}\mb{I}_{n,k}^{T}\exp\paren{t\brac{\begin{array}{cc}
+\mb{A} & -\mb{R}^{T} \\ 
+\mb{R}& \mb{0}
+\end{array} }}\mb{I}_{n,k}\\
+&= \mb{R}\mb{M}(t)\\
+\Rightarrow\;\; \mb{N}(t) &= \mb{R}\int_{0}^{t} \mb{M}(s) ds.
+\end{align*}
+
+So the geodesic curve in \eqref{eqn: geo_Stiefel_curve_3} can be represented as 
+\begin{align}
+\mb{U}(t) &= \mb{U}\mb{M}(t) +  \mb{Q}\mb{N}(t) \label{eqn: geo_Stiefel_curve_4}
+\end{align}
+where
+\begin{align*}
+\brac{\begin{array}{c}
+\mb{M}(t) \\ 
+\mb{N}(t)
+\end{array} } 
+&=\exp\paren{t\brac{\begin{array}{cc}
+\mb{A} & -\mb{R}^{T} \\ 
+\mb{R}& \mb{0}
+\end{array} }}\mb{I}_{n,k}
+\end{align*}
+and 
+\begin{align*}
+ \paren{\mb{I} - \mb{U}\mb{U}^{T}}\mb{H}
+&= \mb{Q}\mb{R}
+\end{align*} is the Q-R decomposition.
+\end{enumerate}
+\subsection{parallel translation}
+From the equation in \eqref{eqn: geo_Stiefel_eqn_final}
+\begin{align*}
+\ddot{\mb{U}} +\dot{\mb{U}}\dot{\mb{U}}^{T}\mb{U} +\mb{U}\paren{  \paren{\mb{U}^{T}\dot{\mb{U}}}^{2}   + \dot{\mb{U}}^{T}\dot{\mb{U}} } &=0,
+\end{align*}
+we see that the Christoffel function under the canonical metric is given as 
+\begin{align}
+\Gamma_{c}\paren{\mb{\Delta} , \mb{\Delta} } &= \mb{\Delta}\mb{\Delta}^{T}\mb{U} +\mb{U}\paren{  -\mb{\Delta}^{T}\mb{U}\mb{U}^{T}\mb{\Delta}  + \mb{\Delta}^{T}\mb{\Delta}  } \nonumber\\
+&= \mb{\Delta}\mb{\Delta}^{T}\mb{U} +\mb{U}\mb{\Delta}^{T}\paren{ \mb{I} -\mb{U}\mb{U}^{T}  } \mb{\Delta}.
+\label{eqn: Christoffel_Stiefel}
+\end{align}
+
+The parallel translation satisfies the differential equation
+\begin{align}
+\dot{\mb{\Delta}} + \Gamma_{c}\paren{\mb{\Delta}, \dot{\mb{U}} }&= 0  \label{eqn: Christoffel_Stiefel_2}
+\end{align}
+\subsection{Gradient function on Stiefel manifold}
+The gradient of function $F: V_{k}(\bR^{n}) \rightarrow \bR$ is given by projection of the Euclidean gradient on the tangent plane of the surface, i.e.  for all tangent vector $\mb{\Delta}$ at $\mb{U}$, the gradient $\nabla F$ is given so that the equation holds  
+\begin{align}
+\tr{\partdiff{F}{\mb{U}}^{T}\,\mb{\Delta} } &= g_{c}\paren{\nabla F, \mb{\Delta}} \nonumber\\
+&= \tr{\paren{\nabla F}^{T}\,\paren{\mb{I} - \frac{1}{2}\mb{U\,U}^{T}}  \mb{\Delta}} ,
+\end{align}
+where $\mb{U}^{T}\paren{\nabla F}$ is skew-symmetric. 
+
+We see that 
+\begin{align*}
+\paren{\nabla F}^{T}\,\paren{\mb{I} - \frac{1}{2}\mb{U\,U}^{T}}  \mb{\Delta}
+&= \paren{\nabla F}^{T}\mb{\Delta} + \frac{1}{2}\mb{U}^{T}\paren{\nabla F}\mb{U}^{T}\mb{\Delta}
+\end{align*}
+So
+\begin{align*}
+\tr{\paren{\partdiff{F}{\mb{U}}^{T} -  \paren{\nabla F}^{T}-  \frac{1}{2}\mb{U}^{T}\paren{\nabla F}\mb{U}^{T}}\mb{\Delta} } = 0\\
+\partdiff{F}{\mb{U}} - \paren{\nabla F}-  \frac{1}{2}\mb{U}\paren{\nabla F}^{T}\mb{U} = \mb{U}\\
+\partdiff{F}{\mb{U}}^{T}\mb{U} - \paren{\nabla F}^{T}\mb{U} -  \frac{1}{2}\mb{U}^{T}\paren{\nabla F}= \mb{I}\\
+\partdiff{F}{\mb{U}}^{T}\mb{U} - \frac{1}{2}\paren{\nabla F}^{T}\mb{U} = \mb{I}\\
+\partdiff{F}{\mb{U}} - \paren{\nabla F} +   \mb{U}\paren{\mb{I} -  \partdiff{F}{\mb{U}}^{T}\mb{U}} &= \mb{U}\\
+\partdiff{F}{\mb{U}} - \paren{\nabla F} -  \mb{U}\partdiff{F}{\mb{U}}^{T}\mb{U} &= 0
+\end{align*}
+and the gradient $\nabla F$ is 
+\begin{align}
+\paren{\nabla F} &= \partdiff{F}{\mb{U}}-  \mb{U}\partdiff{F}{\mb{U}}^{T}\mb{U}  \label{eqn: gradient_fun_Stiefel}
+\end{align} 
+
+\subsection{Hessian of function }
+The Hessian is defined as 
+\begin{align}
+\text{Hess}\,F\paren{\mb{\Delta}, \mb{\Delta}} &= \rlat{\frac{d^{2}}{dt^{2}}}{t=0}F\paren{\mb{U}(t)}
+\end{align}
+where $\mb{U}(t)$ is the geodesic with tangent $\dot{\mb{U}} = \mb{\Delta}$.
+
+Note that
+\begin{align}
+\rlat{\frac{d}{dt}}{t=0}F\paren{\mb{U}(t)}
+&= \rlat{\tr{\partdiff{F}{\mb{U}}^{T}\dot{\mb{U}}(t)}}{t=0}\\
+&= \tr{\partdiff{F}{\mb{U}}^{T}\mb{\Delta}}\\
+\text{Hess}\,F\paren{\mb{\Delta}, \mb{\Delta}}&= \rlat{\frac{d^{2}}{dt^{2}}}{t=0}F\paren{\mb{U}(t)} \nonumber\\
+&= \dot{\mb{U}}(0)^{T}F_{UU}\dot{\mb{U}}(0)+ \tr{\partdiff{F}{\mb{U}}^{T}\ddot{\mb{U}}(0)}\nonumber\\
+&= \mb{\Delta}^{T}F_{UU}\mb{\Delta}-  \tr{\partdiff{F}{\mb{U}}^{T}\Gamma_{c}(\mb{\Delta}, \mb{\Delta})  } \label{eqn: Hessian_Stiefel}
+\end{align} 
+For $\mb{\Delta}_{1}$ and $\mb{\Delta}$ are tangent vectors, 
+\begin{align}
+\text{Hess}\,F\paren{\mb{\Delta}_{1}, \mb{\Delta}_{2}}
+&= \mb{\Delta}_{1}^{T}F_{UU}\mb{\Delta}_{2}-  \tr{\partdiff{F}{\mb{U}}^{T}\Gamma_{c}(\mb{\Delta}_{1}, \mb{\Delta}_{2})  } \label{eqn: Hessian_Stiefel2}
+\end{align} 
+where
+\begin{align}
+\Gamma_{c}\paren{\mb{\Delta}_{1}, \mb{\Delta}_{2} } 
+&= \mb{\Delta}_{1}\mb{\Delta}_{2}^{T}\mb{U} +\mb{U}\mb{\Delta}_{1}^{T}\paren{ \mb{I} -\mb{U}\mb{U}^{T}  } \mb{\Delta}_{2}.
+\nonumber
+\end{align}
+
+The inverse of Hessian times the gradient is given by solving the equation
+\begin{align}
+\text{Hess}\,F\paren{\mb{\Delta}, \mb{Y}} &= g_{c}\paren{-\nabla F, \mb{X}}, \quad \forall \; \mb{X} \text{ is the tangent vector of } V_{k}(\bR^{n})
+\end{align}
+for $\mb{\Delta} \text{ is the tangent vector of } V_{k}(\bR^{n})$ and is denoted as $-(\text{Hess}\,F)^{-1}\nabla F$
+ 
+\newpage
+\section{Geometry of Grassmann manifold}
+\subsection{The tangent space of $Gr(k, n)$}
+\begin{enumerate}
+\item The point in $Gr(k,n) \simeq  \cO(n)/\paren{\cO(k)\times \cO(n-k)}$ is the equivalence class 
+\begin{align*}
+\brac{\mb{Q}} &= \set{\mb{Q}\brac{\begin{array}{cc}
+\mb{Q}_{k} & 0 \\ 
+0 & \mb{Q}_{n-k}
+\end{array} }\;\Big| \; \quad  \mb{Q}_{k}\in \cO(k), \;\; \mb{Q}_{n-k} \in \cO(n-k) }.
+\end{align*}
+
+As in the Stiefel manifold, we can obtain the tangent space of $Gr(k,n)$ by the horizontal space of $\cO(n)$. Let $\mb{\Delta}_{H} = \mb{Q}\mb{A}_{H}$, where $\mb{A}_{H}= \brac{\begin{array}{cc}
+\mb{A}_{11}^{H} & -\mb{R}_{H}^{T} \\ 
+\mb{R}_{H} & \mb{A}_{22}^{H}
+\end{array} }$ is skew-symmetric, be the tangent vector in the horizontal space $\mathcal{H}$ at $\mb{Q}$. By definition, it should be orthogonal to the orbit.  So 
+\begin{align*}
+&\tr{\mb{A}_{H}^{T}\mb{Q}^{T}\mb{Q}\brac{\begin{array}{cc}
+\mb{Q}_{k} & 0 \\ 
+0 & \mb{Q}_{n-k}
+\end{array} }}\\
+&=\tr{\brac{\begin{array}{cc}
+-\mb{A}_{11}^{H} & \mb{R}_{H}^{T} \\ 
+-\mb{R}_{H} & -\mb{A}_{22}^{H}
+\end{array} }\brac{\begin{array}{cc}
+\mb{Q}_{k} & 0 \\ 
+0 & \mb{Q}_{n-k}
+\end{array} }} = \tr{ \brac{\begin{array}{cc}
+-\mb{A}_{11}^{H}\mb{Q}_{k} & \mb{R}_{H}^{T}\mb{Q}_{k} \\ 
+-\mb{R}_{H}\mb{Q}_{n-k} & -\mb{A}_{22}^{H}\mb{Q}_{n-k}
+\end{array} } }\\
+&= -\tr{\mb{A}_{11}^{H}\mb{Q}_{k}}-\tr{\mb{A}_{22}^{H} \mb{Q}_{n-k}}\\
+&= \tr{(\mb{A}_{11}^{H})^{T}\mb{Q}_{k}}+\tr{(\mb{A}_{22}^{H})^{T}\mb{Q}_{n-k}}=0, \quad \forall \mb{Q}_{k}\in \cO(k), \;\; \mb{Q}_{n-k} \in \cO(n-k)
+\end{align*}
+We see that if $\tr{(\mb{A}_{11}^{H})^{T}\mb{Q}_{k}} = 0$ and $\tr{(\mb{A}_{22}^{H})^{T}\mb{Q}_{n-k}}=0$ for all $\mb{Q}_{k}\in \cO(k), \;\; \mb{Q}_{n-k} \in \cO(n-k)$, the above expression is satisfied. This means that $\mb{A}_{11}^{H}= 0$ and $\mb{A}_{22}^{H}= 0$. The horizontal space $\mathcal{H}$ contains matrix of the form 
+\begin{align*}
+\mb{\Delta}_{H} = \mb{Q}\brac{\begin{array}{cc}
+0 & -\mb{R}^{T} \\ 
+\mb{R} & 0
+\end{array} }
+\end{align*} up to a postmultiplication of $\brac{\begin{array}{cc}
+\mb{Q}_{k} & 0 \\ 
+0 & \mb{Q}_{n-k}
+\end{array} }$. Note that the dimension of the horizontal space is $k(n-k)$ that is equal to the dimension of $Gr(k,n)$.  
+
+We claim that the vertical space $\mathcal{V}$ contains all matrices of the form 
+\begin{align*}
+\mb{\Delta}_{V} &= \mb{Q}\brac{\begin{array}{cc}
+\mb{A} & 0 \\ 
+0 & \mb{C}
+\end{array} }
+\end{align*} up to a postmultiplication of $\brac{\begin{array}{cc}
+\mb{Q}_{k} & 0 \\ 
+0 & \mb{Q}_{n-k}
+\end{array} }$, where $\mb{A}, \mb{C}$ are skew-symmetric of dimension $k \text{-by-} k$ and $(n-k)\text{-by-} (n-k)$. See that $\mb{\Delta}_{V}$ is tangent to $\cO(n)$ at $\mb{Q}$ and it is orthogonal to all matrices in $\mathcal{H}$.
+
+Note that the dimensionalities of all skew-symmetric matrices $\mb{A}_{11}^{V} \in \bR^{k\times k}$ and  any $\mb{A}_{22}^{V}\in \bR^{(n-k)\times (n-k)}$ are $\frac{k(k-1)}{2}$ and $\frac{(n-k)(n-k-1)}{2}$, respectively. Note that the dimension of the vertical space is given by 
+\begin{align*}
+\frac{n(n-1)}{2} - k(n-k) &= \frac{1}{2}n^{2} - nk+ \frac{1}{2}k^{2} - \frac{1}{2}n+ \frac{1}{2}k + \frac{1}{2}k^{2}-\frac{1}{2}k \\
+&=\frac{(n-k)(n-k-1)}{2} + \frac{k(k-1)}{2}.
+\end{align*}
+
+\item The second form is given by  $Gr(k,n) \simeq V_{k}(\bR^{n})/\cO(k)$ with the point as $[\mb{U}] = \mb{U}\cO(k)$.
+Since the tangent vector of $\mb{U}\in  V_{k}(\bR^{n})$ is given as 
+\begin{align*}
+\mb{\Sigma} &= \mb{U}\mb{A} + \mb{U}_{\bot}\mb{R}
+\end{align*} for $\mb{A}\in \bR^{k\times k}$ is skew-symmetric, it is clear by above decomposition that the vertical space at $\mb{U}$ is given by 
+\begin{align*}
+\mb{\Sigma}_{V} &= \mb{U}\mb{A} 
+\end{align*} and the horizontal space is given as 
+\begin{align*}
+\mb{\Sigma}_{H} &= \mb{U}_{\bot}\mb{R}, 
+\end{align*} which is equivalent to all $n$-by-$k$ matrices that 
+\begin{align*}
+\mb{U}^{T}\mb{\Sigma}_{H}  &= 0.
+\end{align*}
+
+\end{enumerate}
+\subsection{canonical metric on $Gr(k, n)$}
+Let $\bar{\mb{\Delta}}_{\zeta}, \bar{\mb{\Delta}}_{\eta} \in \bR^{(n-k) \times k}$ be two tangent vectors of $[\mb{U}]\in Gr(k,n)\simeq  V_{k}(\bR^{n})/\cO(k)(\bR^{n})$. The canonical metric is defined via the induced canonical metric in the horizontal space of $V_{k}(\bR^{n})$, i.e. 
+\begin{align}
+ g_{c}(\bar{\mb{\Delta}}_{\zeta}, \bar{\mb{\Delta}}_{\eta}) &=g_{c}\paren{ \mb{\Sigma}_{H,\zeta}, \mb{\Sigma}_{H,\eta} }\nonumber\\
+&=\tr{ \mb{\Sigma}_{H,\zeta}^{T}\paren{\mb{I} -  \frac{1}{2}\mb{U}\mb{U}^{T} }  \mb{\Sigma}_{H,\eta}} \nonumber\\
+&= \tr{  \mb{\Sigma}_{H,\zeta}^{T}\mb{\Sigma}_{H,\eta}}\nonumber\\
+&= g_{e}\paren{ \mb{\Sigma}_{H,\zeta}, \mb{\Sigma}_{H,\eta} }, \label{eqn: can_metric_Grass_mat}
+\end{align}
+which is equal to the Euclidean metric.
+
+It can also be derived using the form
+\begin{align*}
+\mb{\Delta}_{H} = \mb{Q}\brac{\begin{array}{cc}
+0 & -\mb{R}^{T} \\ 
+\mb{R} & 0
+\end{array} }
+\end{align*} 
+and 
+\begin{align}
+g_{c}(\bar{\mb{\Delta}}_{\zeta}, \bar{\mb{\Delta}}_{\eta}) &= g_{e}\paren{ \mb{\Delta}_{H,\zeta}, \mb{\Delta}_{H,\eta} }\nonumber\\
+&=\frac{1}{2}\tr{\brac{\begin{array}{cc}
+0 & \mb{R}_{\zeta}^{T} \\ 
+-\mb{R}_{\zeta} & 0
+\end{array}}\brac{\begin{array}{cc}
+0 & -\mb{R}_{\eta}^{T} \\ 
+\mb{R}_{\eta} & 0
+\end{array}  }} \nonumber\\
+&= \tr{\mb{R}_{\zeta}^{T}\mb{R}_{\eta}} \nonumber\\
+&=g_{e}\paren{ \bar{\mb{\Delta}}_{\zeta}, \bar{\mb{\Delta}}_{\eta}},  \label{eqn: can_metric_Grass}
+\end{align} where $\bar{\mb{\Delta}}_{\zeta} = \mb{R}_{\zeta}.$ 
+\subsection{Geodesic on $Gr(k, n)$}
+\begin{enumerate}
+\item \citep{edelman1998geometry}\\ As in Stiefel manifold, the geodesic on $Gr(k,n)$ is given by restricting the horizontal geodesic on the orbit. Note that given the horizontal vector, the horizontal geodesic follows the differential equation
+\begin{align*}
+\dot{\mb{Q}}(t) &= \mb{Q}(t)\brac{\begin{array}{cc}
+0 & -\mb{R}^{T} \\ 
+\mb{R} & 0
+\end{array} },
+\end{align*}
+and then the horizontal geodesic trajectory gives as
+\begin{align}
+\mb{Q}(t) &= \mb{Q}(0)\exp\paren{t \brac{\begin{array}{cc}
+0 & -\mb{R}^{T} \\ 
+\mb{R} & 0
+\end{array} }} \label{eqn: geo_horizontal_Grass}
+\end{align}
+
+Therefore, the geodesic of Grassmann manifold is given as $\brac{\mb{Q}(t)}$ and it gives 
+\begin{align}
+\mb{U}(t) &= \brac{\begin{array}{cc}
+\mb{U}(0) & \mb{U}_{\bot}(0)
+\end{array}}\exp\paren{t \brac{\begin{array}{cc}
+0 & -\mb{R}^{T} \\ 
+\mb{R} & 0
+\end{array} }}\mb{I}_{n,k}
+\end{align}
+
+\item Note that let SVD of $\mb{R}$ is given by $\brac{\begin{array}{cc}
+\mb{W}(0) & \mb{W}_{\bot}(0)
+\end{array}}\paren{\begin{array}{c}
+\mb{\Sigma}_{R} \\ 
+0
+\end{array} }\mb{V}^{T}$, then 
+\begin{align*}
+\brac{\begin{array}{cc}
+0 & -\mb{R}^{T} \\ 
+\mb{R} & 0
+\end{array}} &=  \brac{\begin{array}{cc}
+0 & \mb{V}\paren{\begin{array}{cc}
+-\mb{\Sigma}_{R} & 
+0
+\end{array} }\brac{\begin{array}{c}
+\mb{W}(0)^{T} \\ \mb{W}_{\bot}(0)^{T}
+\end{array}} \\ 
+\brac{\begin{array}{cc}
+\mb{W}(0) & \mb{W}_{\bot}(0)
+\end{array}}\paren{\begin{array}{c}
+\mb{\Sigma}_{R} \\ 
+0
+\end{array} }\mb{V}^{T}& 0
+\end{array}}\\
+&= \brac{\begin{array}{ccc}
+\mb{V} & 0 & 0 \\ 
+0 & \mb{W}(0) & \mb{W}_{\bot}(0)
+\end{array} }  
+\brac{\begin{array}{ccc}
+0 & -\mb{\Sigma}_{R} & 0 \\ 
+\mb{\Sigma}_{R}& 0 & 0 \\ 
+0 & 0 & 0
+\end{array} }
+\brac{\begin{array}{cc}
+\mb{V}^{T} &0\\
+ 0&  \mb{W}^{T}(0)\\ 
+0 & \mb{W}_{\bot}^{T}(0)
+\end{array} }
+\end{align*}
+
+Therefore
+\begin{align*}
+\mb{U}(t) &= \brac{\begin{array}{cc}
+\mb{U}(0) & \mb{U}_{\bot}(0)
+\end{array}}\exp\paren{t \brac{\begin{array}{ccc}
+\mb{V} & 0 & 0 \\ 
+0 & \mb{W}(0) & \mb{W}_{\bot}(0)
+\end{array} }  
+\brac{\begin{array}{ccc}
+0 & -\mb{\Sigma}_{R} & 0 \\ 
+\mb{\Sigma}_{R}& 0 & 0 \\ 
+0 & 0 & 0
+\end{array} }
+\brac{\begin{array}{cc}
+\mb{V}^{T} &0\\
+ 0&  \mb{W}^{T}(0)\\ 
+0 & \mb{W}_{\bot}^{T}(0)
+\end{array} }}\mb{I}_{n,k}\\
+&= \brac{\begin{array}{cc}
+\mb{U}(0) & \mb{U}_{\bot}(0)
+\end{array}}\brac{\begin{array}{ccc}
+\mb{V} & 0 & 0 \\ 
+0 & \mb{W}(0) & \mb{W}_{\bot}(0)
+\end{array} }\exp\paren{t \brac{\begin{array}{ccc}
+0 & -\mb{\Sigma}_{R} & 0 \\ 
+\mb{\Sigma}_{R}& 0 & 0 \\ 
+0 & 0 & 0
+\end{array} }}\brac{\begin{array}{cc}
+\mb{V}^{T} &0\\
+ 0&  \mb{W}^{T}(0)\\ 
+0 & \mb{W}_{\bot}^{T}(0)
+\end{array} }  \mb{I}_{n,k}\\
+&= \brac{\begin{array}{ccc}
+\mb{U}(0)\mb{V} & \mb{U}_{\bot}(0) \mb{W}(0) & \mb{U}_{\bot}(0) \mb{W}_{\bot}(0)
+\end{array}}\exp\paren{t \brac{\begin{array}{ccc}
+0 & -\mb{\Sigma}_{R} & 0 \\ 
+\mb{\Sigma}_{R}& 0 & 0 \\ 
+0 & 0 & 0
+\end{array} }}\brac{\begin{array}{c}
+\mb{V}^{T} \\
+ 0\\ 
+0 
+\end{array} }  
+\end{align*}
+and
+\begin{align*}
+\dot{\mb{U}}(t) &=\brac{\begin{array}{ccc}
+\mb{U}(0)\mb{V} & \mb{U}_{\bot}(0) \mb{W}(0) & \mb{U}_{\bot}(0) \mb{W}_{\bot}(0)
+\end{array}}\brac{\begin{array}{ccc}
+0 & -\mb{\Sigma}_{R} & 0 \\ 
+\mb{\Sigma}_{R}& 0 & 0 \\ 
+0 & 0 & 0
+\end{array} }\exp\paren{t \brac{\begin{array}{ccc}
+0 & -\mb{\Sigma}_{R} & 0 \\ 
+\mb{\Sigma}_{R}& 0 & 0 \\ 
+0 & 0 & 0
+\end{array} }}\brac{\begin{array}{c}
+\mb{V}^{T} \\
+ 0\\ 
+0 
+\end{array} } \\
+&=    \brac{\begin{array}{ccc}
+\mb{U}_{\bot}(0) \mb{W}(0)\mb{\Sigma}_{R} & - \mb{U}(0)\mb{V}\mb{\Sigma}_{R}  & 0
+\end{array}}\exp\paren{t \brac{\begin{array}{ccc}
+0 & -\mb{\Sigma}_{R} & 0 \\ 
+\mb{\Sigma}_{R}& 0 & 0 \\ 
+0 & 0 & 0
+\end{array} }}\brac{\begin{array}{c}
+\mb{V}^{T} \\
+ 0\\ 
+0 
+\end{array} }\\
+&=  \brac{\begin{array}{cc}
+\mb{U}_{\bot}(0) \mb{W}(0)\mb{\Sigma}_{R} & - \mb{U}(0)\mb{V}\mb{\Sigma}_{R} 
+\end{array}}\exp\paren{t \brac{\begin{array}{cc}
+0 & -\mb{\Sigma}_{R} \\ 
+\mb{\Sigma}_{R}& 0  \\ 
+\end{array} }}\brac{\begin{array}{c}
+\mb{V}^{T} \\
+ 0\\ 
+\end{array} }
+\end{align*}
+Thus
+\begin{align}
+\dot{\mb{U}}(0)\equiv \mb{H} &=   \brac{\begin{array}{cc}
+\mb{U}_{\bot}(0) \mb{W}(0)\mb{\Sigma}_{R} & - \mb{U}(0)\mb{V}\mb{\Sigma}_{R} 
+\end{array}}\brac{\begin{array}{c}
+\mb{V}^{T} \\
+ 0\\ 
+\end{array} } \nonumber\\
+&= \paren{\mb{U}_{\bot}(0) \mb{W}(0)}\mb{\Sigma}_{R} \mb{V}^{T} \nonumber\\
+&= \mb{U}_{H}\mb{\Sigma}_{R} \mb{V}^{T} \label{eqn: geo_Grass_derivation_1}
+\end{align}
+
+Note that
+\begin{align*}
+\exp\paren{t \brac{\begin{array}{ccc}
+0 & -\mb{\Sigma}_{R} & 0 \\ 
+\mb{\Sigma}_{R}& 0 & 0 \\ 
+0 & 0 & 0
+\end{array} }}
+&= \sum_{k=0}^{\infty}\frac{1}{k!}\brac{\begin{array}{ccc}
+0 & -t\mb{\Sigma}_{R} & 0 \\ 
+t\mb{\Sigma}_{R}& 0 & 0 \\ 
+0 & 0 & 0
+\end{array} }^{k}\\
+&= \sum_{k=0}^{\infty}\frac{1}{(2k)!}\brac{\begin{array}{ccc}
+0 & -t\mb{\Sigma}_{R} & 0 \\ 
+t\mb{\Sigma}_{R}& 0 & 0 \\ 
+0 & 0 & 0
+\end{array} }^{2k}
++
+\sum_{k=0}^{\infty}\frac{1}{(2k+1)!}\brac{\begin{array}{ccc}
+0 & -t\mb{\Sigma}_{R} & 0 \\ 
+t\mb{\Sigma}_{R}& 0 & 0 \\ 
+0 & 0 & 0
+\end{array} }^{2k+1}\\
+&=I+
+\sum_{k=1}^{\infty}\frac{1}{(2k)!}\brac{\begin{array}{ccc}
+(-1)^{k}\paren{t\mb{\Sigma}_{R}}^{2k} & 0 & 0 \\ 
+0& (-1)^{k}\paren{t\mb{\Sigma}_{R}}^{2k}  & 0 \\ 
+0 & 0 & 0
+\end{array} }
+\\
+&+
+\sum_{k=0}^{\infty}\frac{1}{(2k+1)!}\brac{\begin{array}{ccc}
+0 & (-1)^{k+1}\paren{t\mb{\Sigma}_{R}}^{2k+1} & 0 \\ 
+(-1)^{k}\paren{t\mb{\Sigma}_{R}}^{2k+1}& 0 & 0 \\ 
+0 & 0 & 0
+\end{array}}\\
+&= \brac{\begin{array}{ccc}
+\sum_{k=0}^{\infty}\frac{(-1)^{k}}{(2k)!}\paren{t\mb{\Sigma}_{R}}^{2k} & 0 & 0 \\ 
+0& \sum_{k=0}^{\infty}\frac{(-1)^{k}}{(2k)!}\paren{t\mb{\Sigma}_{R}}^{2k}  & 0 \\ 
+0 & 0 & I
+\end{array} }\\
+& + \brac{\begin{array}{ccc}
+0 & \sum_{k=0}^{\infty}\frac{(-1)^{k+1}}{(2k+1)!}\paren{t\mb{\Sigma}_{R}}^{2k+1} & 0 \\ 
+\sum_{k=0}^{\infty}\frac{(-1)^{k}}{(2k+1)!}\paren{t\mb{\Sigma}_{R}}^{2k+1}& 0 & 0 \\ 
+0 & 0 & 0
+\end{array}}\\
+&= \brac{\begin{array}{ccc}
+\cos t\mb{\Sigma}_{R} & -\sin t\mb{\Sigma}_{R}& 0 \\ 
+\sin t\mb{\Sigma}_{R} & \cos t\mb{\Sigma}_{R} & 0 \\ 
+0 & 0 & I
+\end{array}}
+\end{align*}
+
+
+\begin{align}
+\mb{U}(t) &=\brac{\begin{array}{ccc}
+\mb{U}(0)\mb{V} & \mb{U}_{\bot}(0) \mb{W}(0) & \mb{U}_{\bot}(0) \mb{W}_{\bot}(0)
+\end{array}}\brac{\begin{array}{ccc}
+\cos t\mb{\Sigma}_{R} & -\sin t\mb{\Sigma}_{R}& 0 \\ 
+\sin t\mb{\Sigma}_{R} & \cos t\mb{\Sigma}_{R} & 0 \\ 
+0 & 0 & I
+\end{array}}\brac{\begin{array}{c}
+\mb{V}^{T} \\
+ 0\\ 
+0 
+\end{array} } \nonumber \\
+&= \brac{\begin{array}{ccc}
+\mb{U}(0)\mb{V} & \mb{U}_{\bot}(0) \mb{W}(0) & \mb{U}_{\bot}(0) \mb{W}_{\bot}(0)
+\end{array}}\brac{\begin{array}{c}
+\cos t\mb{\Sigma}_{R}\\
+\sin t\mb{\Sigma}_{R} \\
+0 
+\end{array}}\mb{V}^{T} \nonumber\\
+&= 
+\brac{\begin{array}{cc}
+\mb{U}(0)\mb{V} & \mb{U}_{\bot}(0) \mb{W}(0) 
+\end{array}}\brac{\begin{array}{c}
+\cos t\mb{\Sigma}_{R}\\
+\sin t\mb{\Sigma}_{R} 
+\end{array}}\mb{V}^{T}\nonumber\\
+&=
+\brac{\begin{array}{cc}
+\mb{U}(0)\mb{V} & \mb{U}_{H}
+\end{array}}\brac{\begin{array}{c}
+\cos t\mb{\Sigma}_{R}\\
+\sin t\mb{\Sigma}_{R} 
+\end{array}}\mb{V}^{T}\nonumber
+\end{align}
+
+Thus the geodesic of Grassmann manifold is given as 
+\begin{align}
+\dot{\mb{U}}(t) &= 
+\brac{\begin{array}{cc}
+\mb{U}(0)\mb{V} & \mb{U}_{H}
+\end{array}}\brac{\begin{array}{c}
+\cos t\mb{\Sigma}_{R}\\
+\sin t\mb{\Sigma}_{R} 
+\end{array}}\mb{V}^{T} \label{eqn: geo_Grass_curve}
+\end{align}
+where 
+\begin{align}
+\dot{\mb{U}}(0)\equiv \mb{H} 
+&= \paren{\mb{U}_{\bot}(0) \mb{W}(0)}\mb{\Sigma}_{R} \mb{V}^{T} \nonumber\\
+&= \mb{U}_{H}\mb{\Sigma}_{R} \mb{V}^{T}  \nonumber
+\end{align}
+and $(\mb{W}(0), \mb{\Sigma}_{R}, \mb{V} )$ is economic SVD of $\mb{R}$, which is given by $\mb{R} = 
+\mb{W}(0)\mb{\Sigma}_{R}\mb{V}^{T}$, where $\mb{W}(0)\in \bR^{(n-k)\times k}$, $\mb{U}_{\bot}(0) \in \bR^{n\times (n-k)}$.
+\end{enumerate}
+
+We make comments on the geodesic on Grassmann manifold in \eqref{eqn: geo_Grass_curve}: 
+\begin{itemize}
+\item \begin{align*}
+\dot{\mb{U}}(t) &= 
+\brac{\begin{array}{cc}
+\mb{U}(0)\mb{V} & \mb{U}_{H}
+\end{array}}\brac{\begin{array}{c}
+\cos t\mb{\Sigma}_{R}\\
+\sin t\mb{\Sigma}_{R} 
+\end{array}}\mb{V}^{T} ,
+\end{align*}
+where $ t\mb{\Sigma}_{R} = \brac{\begin{array}{cccc}
+\phi_{1} & • & • & • \\ 
+• & \phi_{2}  & • & • \\ 
+• & • & \ldots & • \\ 
+• & • & • & \phi_{k} 
+\end{array} }$. The angle $\phi_{k}$ is the k-th \emph{principal ang}le btw the subspaces spanned by $\mb{U}(t)$ and that by origin $\mb{I}_{n,k}$.
+
+\item In general, let $\mb{U}\cos\paren{\mb{\Theta}}\mb{V}^{T}$ be the SVD of the matrix $\mb{U}_{1}^{T}\mb{U}_{2}$, where $\mb{\Theta}$ is the diagonal matrix of principal angles.
+
+\item The \emph{arc length} btw $\mb{U}(0)$ and $\mb{U}(t)$ is given by 
+\begin{align}
+d(\mb{U}(0), \mb{U}(t)) &= t\norm{\dot{\mb{U}}(0)}{F} = t\sqrt{\sum_{i=1}^{k}\sigma_{i}^{2}} \quad(t\text{ small}). \label{eqn: arc_length_Grass}
+\end{align}
+
+Similarly, one could use the \emph{projection Frobenius-norm} as
+\begin{align}
+d_{pF}(\mb{U}(s), \mb{U}(t)) &= \norm{\mb{U}(s)\mb{U}(s)^{T} -  \mb{U}(t)\mb{U}(t)^{T} }{F} \label{eqn: proj_F_norm_Grass}
+\end{align}
+or
+the \emph{chordal Frobenius-norm}
+\begin{align}
+d_{cF}(\mb{U}(s), \mb{U}(t)) &= \min_{\mb{Q}_{1}, \mb{Q}_{2} \in \cO(k)}\norm{\mb{U}(s)\mb{Q}_{1} -  \mb{U}(t)\mb{Q}_{2} }{F} \label{eqn: proj_F_norm_Grass}
+\end{align}
+The following inequality holds
+\begin{align}
+d(\mb{U}(s), \mb{U}(t))&&> d_{cF}(\mb{U}(s), \mb{U}(t)) &&> d_{pF}(\mb{U}(s), \mb{U}(t)),
+\end{align}which due to the fact that the chordal F-norm is obtained by embedding the Grassmann manifold into $\bR^{n\times k}$, whereas the projection Frobenius-norm 
+
+\end{itemize}
+
+
+
+
+
+\subsection{parallel translation}
+The parallel translation of $\mb{\Delta}$ is given by 
+\begin{align}
+\tau\mb{\Delta}(t) &=  \brac{\begin{array}{cc}
+\mb{U}(0) & \mb{U}_{\bot}(0)
+\end{array}}\exp\paren{t \brac{\begin{array}{cc}
+0 & -\mb{R}_{\mb{A}}^{T} \\ 
+\mb{R}_{\mb{A}} & 0
+\end{array} }}\brac{\begin{array}{c}
+ 0\\
+ \mb{R}_{\Delta}
+\end{array} }
+\end{align}
+where $\mb{\Delta} =   \mb{U}_{\bot}^{T}\mb{R}_{\Delta}$ and $\mb{H} = \mb{U}_{\bot}^{T}\mb{R}_{\mb{A}}$
+
+So we obtain the parallel transport as 
+\begin{align}
+\tau\mb{\Delta}(t)  &= 
+\brac{\begin{array}{cc}
+\mb{U}\mb{V} & \mb{U}_{H}
+\end{array}}\brac{\begin{array}{c}
+\cos\mb{\Sigma}_{R}\\
+\sin\mb{\Sigma}_{R} 
+\end{array}}\mb{U}_{H}^{T}\mb{\Delta} + \paren{\mb{I} - \mb{U}_{H}\mb{U}_{H}^{T}}\mb{\Delta} \label{eqn: parallel_transport_Grass}
+\end{align}
+\subsection{Gradient function on Grassmann manifold}
+The gradient of function $F: Gr(k,n) \rightarrow \bR$ is given by projection of the Euclidean gradient on the tangent plane of the surface, i.e.  for all tangent vector $\mb{\Delta}$ at $\mb{U}$, the gradient $\nabla F$ is given so that the equation holds  
+\begin{align*}
+\tr{\partdiff{F}{\mb{U}}^{T}\,\mb{\Delta} } &= g_{c}\paren{\nabla F, \mb{\Delta}} \nonumber\\
+&= \tr{\paren{\nabla F}^{T}\mb{\Delta}} ,
+\end{align*}
+where $\mb{U}^{T}\paren{\nabla F} = 0$. 
+
+We see that 
+\begin{align*}
+\tr{\paren{\partdiff{F}{\mb{U}}^{T} - \paren{\nabla F}^{T}}\mb{\Delta}} &= 0\\
+\end{align*}
+So
+\begin{align*}
+\partdiff{F}{\mb{U}}^{T} - \paren{\nabla F}^{T} &= \mb{R}\mb{U}^{T}\\
+\partdiff{F}{\mb{U}}^{T}\mb{U} &= \mb{R} 
+\end{align*}
+thus, 
+\begin{align}
+\paren{\nabla F} &= \partdiff{F}{\mb{U}}- \mb{U}\mb{U}^{T}\partdiff{F}{\mb{U}} \label{eqn: gradient_fun_Grass}
+\end{align}
+\subsection{Hessian of function}
+For the geodesic $\mb{U}(t)$, 
+\begin{align*}
+\mb{U}(t) &= \mb{Q}\exp\paren{t \brac{\begin{array}{cc}
+0 & -\mb{R}^{T} \\ 
+\mb{R} & 0
+\end{array} }}\mb{I}_{n,k}\\
+\dot{\mb{U}}(t) &=  \mb{Q}\exp\paren{t \brac{\begin{array}{cc}
+0 & -\mb{R}^{T} \\ 
+\mb{R} & 0
+\end{array} }}\brac{\begin{array}{c}
+0 \\ 
+\mb{R} 
+\end{array} }\\
+\dot{\mb{U}}(t)^{T}\dot{\mb{U}}(t) &=\brac{\begin{array}{cc}
+0 & 
+\mb{R}^{T} 
+\end{array} }\brac{\begin{array}{c}
+0 \\ 
+\mb{R} 
+\end{array} }\\
+ &= \mb{R}^{T} \mb{R}\\
+\ddot{\mb{U}}(t) &=  \mb{Q}\exp\paren{t \brac{\begin{array}{cc}
+0 & -\mb{R}^{T} \\ 
+\mb{R} & 0
+\end{array} }}\brac{\begin{array}{cc}
+0 & -\mb{R}^{T} \\ 
+\mb{R} & 0
+\end{array} }\brac{\begin{array}{c}
+0 \\ 
+\mb{R} 
+\end{array} }\\
+&=  \mb{Q}\exp\paren{t \brac{\begin{array}{cc}
+0 & -\mb{R}^{T} \\ 
+\mb{R} & 0
+\end{array} }}\brac{\begin{array}{cc}
+-\mb{R}^{T}\mb{R}  \\ 
+ 0
+\end{array} }\\
+&= -\mb{U}(t) \dot{\mb{U}}(t)^{T}\dot{\mb{U}}(t)\\
+&= -\Gamma_{c}\paren{\dot{\mb{U}}(t), \dot{\mb{U}}(t)}
+\end{align*}
+
+Apply the formula \eqref{eqn: Hessian_Stiefel2} and we obtain 
+\begin{align}
+\text{Hess}\,F\paren{\mb{\Delta}_{1}, \mb{\Delta}_{2}}%&= \rlat{\frac{d^{2}}{dt^{2}}}{t=0}F\paren{\mb{U}(t)} \nonumber\\
+%&= \dot{\mb{U}}(0)^{T}F_{UU}\dot{\mb{U}}(0)+ \tr{\partdiff{F}{\mb{U}}^{T}\ddot{\mb{U}}(0)}\nonumber\\
+&= \mb{\Delta}_{1}^{T}F_{UU}\mb{\Delta}_{2}-  \tr{\partdiff{F}{\mb{U}}^{T}\Gamma_{c}(\mb{\Delta}_{1}, \mb{\Delta}_{2})  } \label{eqn: Hessian_Grass} 
+\end{align}
+where 
+\begin{align}
+\Gamma_{c}\paren{\mb{\Delta}_{1}, \mb{\Delta}_{2}} &= \mb{U}\mb{\Delta}_{1}^{T}\mb{\Delta}_{2} \label{eqn: Christoffel_Grass}
+\end{align}
+Note that since the Riemannian metric of Grassmann manifold $Gr(k,n)$ is the same as the Riemannian metric for the orthogonal group $\cO(n)$, the Christoffel function in \eqref{eqn: Christoffel_Grass} is equal to \eqref{eqn: Christoffel_ortho} and it results in the same form of system of  differential equation for the parallel translation.
+
+
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{book_reference.bib}
+\end{document}

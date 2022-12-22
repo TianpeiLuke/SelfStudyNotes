@@ -1,0 +1,19 @@
+\begin{thebibliography}{2}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Edelman et~al.(1998)Edelman, Arias, and Smith]{edelman1998geometry}
+Alan Edelman, Tom{\'a}s~A Arias, and Steven~T Smith.
+\newblock The geometry of algorithms with orthogonality constraints.
+\newblock \emph{SIAM journal on Matrix Analysis and Applications}, 20\penalty0
+  (2):\penalty0 303--353, 1998.
+
+\bibitem[Kobayashi and Nomizu(1963)]{kobayashi1963foundations}
+Shoshichi Kobayashi and Katsumi Nomizu.
+\newblock \emph{Foundations of differential geometry}, volume~1.
+\newblock New York, 1963.
+
+\end{thebibliography}

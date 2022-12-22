@@ -1,0 +1,20 @@
+\contentsline {section}{\numberline {1}Concepts}{2}
+\contentsline {section}{\numberline {2}Geometry of orthogonal group ${\mathcal O}(n)$}{7}
+\contentsline {subsection}{\numberline {2.1}The tangent space and normal space of ${\mathcal O}(n)$ and the local orthogonal decomposition}{7}
+\contentsline {subsection}{\numberline {2.2}The geodesic on ${\mathcal O}(n)$ and parallel transport }{8}
+\contentsline {subsection}{\numberline {2.3}The geodesic for Stiefel manifold}{9}
+\contentsline {section}{\numberline {3}Geometry of Stiefel manifold $V_{k}({\mathbb R}^{n})$}{12}
+\contentsline {subsection}{\numberline {3.1}Geometry of quotient manifold $X/G$}{12}
+\contentsline {subsection}{\numberline {3.2}The tangent space of $V_{k}({\mathbb R}^{n})$}{12}
+\contentsline {subsection}{\numberline {3.3}canonical metric on $V_{k}({\mathbb R}^{n})$}{14}
+\contentsline {subsection}{\numberline {3.4}Geodesic on $V_{k}({\mathbb R}^{n})$}{15}
+\contentsline {subsection}{\numberline {3.5}parallel translation}{19}
+\contentsline {subsection}{\numberline {3.6}Gradient function on Stiefel manifold}{19}
+\contentsline {subsection}{\numberline {3.7}Hessian of function }{20}
+\contentsline {section}{\numberline {4}Geometry of Grassmann manifold}{21}
+\contentsline {subsection}{\numberline {4.1}The tangent space of $Gr(k, n)$}{21}
+\contentsline {subsection}{\numberline {4.2}canonical metric on $Gr(k, n)$}{22}
+\contentsline {subsection}{\numberline {4.3}Geodesic on $Gr(k, n)$}{23}
+\contentsline {subsection}{\numberline {4.4}parallel translation}{26}
+\contentsline {subsection}{\numberline {4.5}Gradient function on Grassmann manifold}{26}
+\contentsline {subsection}{\numberline {4.6}Hessian of function}{26}

@@ -1,0 +1,76 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs, dsfont}
+\usepackage{tabularx}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Self-study: differential geometry for manifolds}
+\author{ Tianpei Xie}
+\date{ Jun. 1st., 2015 }
+\maketitle
+\tableofcontents
+\newpage
+\section{Definitions}
+\subsection{General and differential manifold}
+\begin{itemize}
+\item A \emph{topological manifold}\citep{munkres2000topology} \\
+
+
+\item A \emph{differential manifold} \citep{guillemin2010differential}\\
+
+
+\item is referred as the \emph{parameterization} \citep{guillemin2010differential} \\
+
+\item is referred as a \emph{coordinate system} \citep{guillemin2010differential}\\ 
+
+\item The \emph{differential} of a map $f$, $df$
+\end{itemize}
+
+\subsection{Stiefel and Grassmann manifold}
+\begin{itemize}
+\item A \emph{Stiefel manifold} $V(r,n) \subset \bR^{n\times r}$ is space of all $n$-by-$r$ matrices whose rank is $r$ (full column rank). It is a submanifold embedded in a $rn-$dimensional Euclidean space of all $n$-by-$r$ matrices. $\mb{V}\in V(r,n)$ then $\mb{V} = \mb{T}_{n\times n}\,\brac{\begin{array}{c}
+\mb{V}_{r}\\
+\mb{0}
+\end{array}}$.  The other representation of $V(r,n)$ arises from quotient group.  Consider two orthogonal matrices in $O(n)$ are equivalent if their first $r$-columns are identical, then $U_{1} = U_{1} \paren{\begin{array}{cc}
+\mb{I}&0\\
+0&\mb{Q}
+\end{array}}$, where $\mb{Q}\in O(n-r)$. Then $V(r,n) = O(n)/O(n-r)$ as we can add arbitrary $n-r$ more orthogonal basis vectors and make them all orthogonal.\\
+
+\item A \emph{Grassmann manifold} $G(r,n)$ is the space of all $r-$dimensional linear subspace in $\bR^{n}$ and  $G(r,n)$ is the quotient space of $V(r,n)$ by identifying the $p$-dim orthogonal group, i.e. $G(r,n) = V(r,n)/O(p)$. A point in $G(r,n)$ is an equivalence class with respect to the relationship $\mb{W} \sim_{R} \mb{V} \Rightarrow \mb{W} = \mb{V}\,\mb{U}$, where $\mb{U}\in O(p)$, and two matrices are equivalent if their column span is the same subspace.\\
+\end{itemize}
+
+
+
+
+
+\newpage
+\section{Theorems and Properties for topological and differential manifold}
+
+\newpage
+\section{Theorems and Properties for Stiefel and Grassmann manifold}
+
+
+
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{book_reference.bib}
+\end{document}

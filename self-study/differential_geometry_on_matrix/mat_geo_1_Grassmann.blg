@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: mat_geo_1_Grassmann.aux
+The style file: plainnat.bst
+Database file #1: book_reference.bib.bib
+Warning--can't use both volume and number fields in kobayashi1963foundations
+You've used 2 entries,
+            2773 wiz_defined-function locations,
+            605 strings with 5178 characters,
+and the built_in function-call counts, 912 in all, are:
+= -- 75
+> -- 51
+< -- 2
++ -- 17
+- -- 15
+* -- 79
+:= -- 145
+add.period$ -- 6
+call.type$ -- 2
+change.case$ -- 10
+chr.to.int$ -- 2
+cite$ -- 5
+duplicate$ -- 41
+empty$ -- 74
+format.name$ -- 19
+if$ -- 182
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 3
+newline$ -- 18
+num.names$ -- 8
+pop$ -- 21
+preamble$ -- 1
+purify$ -- 9
+quote$ -- 0
+skip$ -- 32
+stack$ -- 0
+substring$ -- 29
+swap$ -- 4
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 17
+warning$ -- 1
+while$ -- 8
+width$ -- 0
+write$ -- 33
+(There was 1 warning)
