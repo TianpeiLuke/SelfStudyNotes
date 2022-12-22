@@ -1,0 +1,8 @@
+\contentsline {section}{\numberline {1}Introduction}{2}
+\contentsline {section}{\numberline {2}Temporal-Difference Prediction}{2}
+\contentsline {subsection}{\numberline {2.1}Advantages of TD Prediction Methods}{4}
+\contentsline {section}{\numberline {3}Temporal-Difference Control}{6}
+\contentsline {subsection}{\numberline {3.1}Sarsa: On-policy TD Control}{6}
+\contentsline {subsection}{\numberline {3.2}Q-learning: Off-policy TD Control}{7}
+\contentsline {subsection}{\numberline {3.3}Expected Sarsa: Off-policy TD Control}{8}
+\contentsline {section}{\numberline {4}Summary}{9}
