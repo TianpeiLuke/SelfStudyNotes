@@ -1,0 +1,250 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs, dsfont}
+\usepackage{tabularx}
+\usepackage[all,cmtip]{xy}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+%\usepackage{tikz-cd}
+
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Lecture 4: Non-Uniform PAC Learning}
+\author{ Tianpei Xie}
+\date{Dec. 20th., 2022}
+\maketitle
+\tableofcontents
+\newpage
+\section{Non-Uniform PAC Learning}
+\subsection{Definitions}
+\begin{itemize}
+\item \begin{remark} (\emph{\textbf{Relaxation of PAC Learning}})\\
+The notions of \emph{\textbf{PAC learnability}} discussed so far allow \emph{the sample sizes} to depend on the \emph{accuracy} and \emph{confidence parameters}, but they are \emph{\textbf{uniform} with respect to the \textbf{labeling rule} and \textbf{the underlying data distribution}}. Consequently, classes that are learnable in that respect are \emph{limited} (they must have a finite VC-dimension). In this chapter we consider more \emph{relaxed}, \emph{\textbf{weaker} notions of learnability}. 
+\end{remark}
+
+\item Recall that the agnostic PAC-learning:
+ \begin{definition} (\emph{\textbf{Agnostic PAC-Learning}})\\
+Let $\cH$ be a hypothesis set. $\cA$ is an \underline{\emph{\textbf{agnostic PAC-learning algorithm}}} if there
+exists a \emph{\textbf{polynomial function}} $\text{poly}(\cdot, \cdot, \cdot, \cdot)$  such that for any $\epsilon > 0$ and $\delta > 0$,
+for all distributions $\cP$ over $\cX \times \cY$, the following holds for any sample size $m \ge \text{poly}(1/\epsilon, 1/\delta, d, \text{size}(c))$:
+\begin{align}
+\cP_{\cD_m}\set{L(g_m(\cdot| \cD_{m})) - \inf_{g \in \cH}L(g)  \le \epsilon } \ge 1 - \delta. \label{eqn: agnostic_pac_definition}
+\end{align} If $\cA$ further runs in $\text{poly}(1/\epsilon, 1/\delta, d, \text{size}(c))$, then $\cC$ is said to be \emph{\textbf{\underline{efficiently agnostic} \underline{PAC-learnable}}}. 
+\end{definition}
+
+\item We now introduce the concept of competitivity:
+\begin{definition} (\emph{\textbf{Competitiveness}}) \\
+A hypothesis $g$ is \underline{\emph{\textbf{$(\epsilon, \delta)$-competitive}}} with another hypothesis $g'$ if, \emph{with probability higher than} $(1 - \delta)$,
+\begin{align*}
+L(g) \le L(g') + \epsilon.
+\end{align*}
+\end{definition}
+
+\item  \begin{definition} (\emph{\textbf{Non-Uniform Learning}})\\
+Let $\cH$ be a hypothesis set. $\cA$ is an \underline{\emph{\textbf{non-uniform learning algorithm}}} if there
+exists a \emph{\textbf{polynomial function}} $\text{poly}(\cdot, \cdot, \cdot, \cdot, \cdot)$  such that for any $\epsilon > 0$ and $\delta > 0$,
+for all distributions $\cP$ over $\cX \times \cY$, the following holds \underline{for \textbf{\emph{any}} $h \in \cH$}, any sample size $m \ge \text{poly}(1/\epsilon, 1/\delta, h, d, \text{size}(c))$:
+\begin{align}
+\cP_{\cD_m}\set{L(g_m(\cdot| \cD_{m})) - L(h)  \le \epsilon } \ge 1 - \delta. \label{eqn: agnostic_pac_definition}
+\end{align} If $\cA$ further runs in $\text{poly}(1/\epsilon, 1/\delta, h, d, \text{size}(c))$, then $\cC$ is said to be \emph{\textbf{\underline{non-uniformly learnable}}}. 
+\end{definition}
+
+\item \begin{remark}
+From the definition of \emph{non-uniform learning}, we see that \emph{\textbf{the sample size}} $m \ge m(\epsilon, \delta, h)$, which \emph{\textbf{depends on other hypothesis}} $h \in \cH$, while for agnostic PAC learning, the sample size $m \ge m(\epsilon, \delta)$ is chosen uniformly over $\cH$. 
+
+It is easy to see that an \emph{agnostic PAC learnable} class is also \emph{non-uniformly learnable}.
+\end{remark}
+\end{itemize}
+
+\subsection{Characterizing Non-Uniform Learnability}
+\begin{itemize}
+\item \begin{lemma} \citep{shalev2014understanding}\\
+Let $\cH$ be a hypothesis class that can be written as a \textbf{countable union} of hypothesis classes, 
+\begin{align*}
+\cH &= \bigcup_{n = 1}^{\infty}\cH_n,
+\end{align*}
+where each $\cH_n$ enjoys the \textbf{uniform convergence} property. Then, $\cH$ is \textbf{non-uniformly learnable}.
+\end{lemma}
+
+\item \begin{proposition} (\textbf{Characterization of Non-Uniform Learnable Class}) \citep{shalev2014understanding}\\
+A hypothesis class $\cH$ of binary classifiers is \textbf{non-uniformly learnable} \textbf{if and only if} it is \textbf{a countable union} of \textbf{agnostic PAC learnable} hypothesis classes.
+\end{proposition}
+
+
+\item \begin{example} (\textbf{\emph{Non-Uniform Learable But Not Agnostic PAC Learnable}})\\
+The following example shows that \emph{\textbf{non-uniform learnability} is a \textbf{strict relaxation} of \textbf{agnostic PAC learnability}}; namely, there are hypothesis classes that are non-uniform learnable but are not agnostic PAC learnable.
+
+Consider a binary classification problem with the instance domain being $\cX = \bR$. For every $n \in \bN$ let $\cH_n$ be the class of \emph{polynomial classifiers} of \emph{degree $n$}; namely, $\cH_n$ is the set of all classifiers of the form $h(x) = \sgn{p(x)}$ where $p: \bR \to \bR$ is a polynomial of degree $n$. Let $\cH = \bigcup_{n = 1}^{\infty}\cH_n$. Therefore, $\cH$ is \emph{the class of all polynomial classifiers} over $\bR$. 
+
+It is easy to verify that $VCdim(\cH) = \infty$ while $VCdim(\cH_n) = n + 1$. Hence, $\cH$ is \emph{not PAC learnable}, while on the basis of Proposition above, $\cH$ is \emph{non-uniformly learnable}.
+\end{example}
+\end{itemize}
+
+\section{Structrual Risk Minimization}
+\begin{itemize}
+\item \begin{remark} (\emph{\textbf{Encoding Prior Knowledge}})\\
+So far, we have \emph{\textbf{encoded our prior knowledge}} by \emph{\textbf{specifying a hypothesis class $\cH$}}, which we believe includes a good predictor for the learning task at hand. 
+
+Yet another way to express our prior knowledge is by \emph{\textbf{specifying preferences} over hypotheses within $\cH$}. In the \emph{Structural Risk Minimization (SRM)} paradigm, we do so by first assuming that $\cH$ can be written as $\cH = \bigcup_{n = 1}^{\infty}\cH_n$ and then specifying a \emph{\textbf{weight function}}, $w : \bN \to [0,1]$, which assigns a \emph{\textbf{weight}} to \emph{\textbf{each hypothesis class}}, $\cH_n$, such that a \emph{higher weight} reflects a \emph{stronger preference} for the hypothesis class. 
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{Structural Risk Minimization (SRM)} paradigm})\\
+Let $\cH$ be a hypothesis class that can be written as 
+\begin{align*}
+\cH &= \bigcup_{n = 1}^{\infty}\cH_n,
+\end{align*} Assume that for each $n$, the class $\cH_n$ enjoys \emph{\textbf{the uniform convergence property}}, i.e. \emph{PAC-learnable} regardless underlying distribution, with a \emph{sample complexity function} $m_{\cH_n}(\epsilon, \delta)$. Let us also define the function $\epsilon_n: \bN \times (0,1) \to (0,1)$ by
+\begin{align}
+\epsilon_n(m, \delta) &= \min\set{\epsilon \in (0,1):  m_{\cH_n}(\epsilon, \delta) \le m}. \label{eqn: srm_uniform_error}
+\end{align} In other words, we have a \emph{\textbf{fixed sample size}} $m$, and we are interested in \emph{\textbf{the lowest possible upper bound}} on the \emph{gap} between \emph{empirical} and \emph{true risks} achievable by using a sample of $m$ examples. 
+
+Note that  it follows that for every $m$ and $\delta$, with probability of at least $1 - \delta$ over the choice of $\cD_{m} \sim \cP$ we have that
+\begin{align*}
+\abs{L_{\cP}(h) - \widehat{L}_{m}(h)} \le \epsilon_n(m, \delta), \quad \forall h \in \cH_n.
+\end{align*}
+
+Let $w : \bN \to [0,1]$ be a function such that $\sum_{n=1}^{\infty}w(n) \le 1$. We refer to $w$ as a \emph{\textbf{weight function} over the hypothesis classes} $\cH_1, \cH_2, \ldots$ Such a weight function can \emph{reflect the \textbf{importance} that the learner attributes to \textbf{each hypothesis class}}, or some \emph{measure of the} \emph{complexity} of different hypothesis classes.
+
+The goal of a \underline{\emph{\textbf{Structural Risk Minimization (SRM) rule}}} is to find a hypothesis $h \in \cH$ that minimizes a certain upper bound on the true risk by \emph{\textbf{choosing weight}} in a ``\emph{\textbf{bound minimization}}" manner. In particular, the SRM solves the following problem:
+\begin{align}
+\min_{h \in \cH}\set{\widehat{L}_{m}(h) + \epsilon_{n(h)}\paren{m, \,w(n(h)) \cdot \delta \,}}  \label{eqn: srm_objective}
+\end{align} where 
+\begin{align}
+n(h) := \min\set{n : h \in \cH_n}.  \label{eqn: srm_index_assign}
+\end{align}
+\end{definition}
+
+\item We have the following proposition:
+\begin{proposition} \citep{shalev2014understanding}\\
+Let $w : \bN \to [0,1]$ be a function such that $\sum_{n=1}^{\infty}w(n) \le 1$. Let $\cH$ be a hypothesis class that can be written as $\cH = \bigcup_{n = 1}^{\infty}\cH_n$, where for each $n$, $\cH_n$ satisfies \textbf{the uniform convergence property} with a sample complexity function $m_{\cH_n}(\epsilon, \delta)$. Let $\epsilon_n$ be as defined in Equation \ref{eqn: srm_uniform_error}. 
+
+Then, for every $\delta \in (0,1)$ and distribution $\cP$, with probability of at least $1- \delta$ over the choice of $\cD_m \sim \cP^m$, the following bound \textbf{holds (simultaneously)} for every $n \in \bN$ and $h \in \cH_n$. 
+\begin{align*}
+\abs{L_{\cP}(h) - \widehat{L}_{m}(h)} \le \epsilon_n(m, w(n) \cdot \delta).
+\end{align*}
+Therefore, for every $\delta \in (0,1)$ and distribution  $\cP$, with probability of at least $1- \delta$ it
+holds that
+\begin{align}
+L_{\cP}(h) \le \widehat{L}_{m}(h) + \min_{n: h \in \cH_n}\epsilon_n(m, w(n) \cdot \delta). \label{eqn: srm_uniform_generalization_bound}
+\end{align}
+\end{proposition}
+
+\item \begin{remark} (\emph{\textbf{Bias for Lower Risk vs Bias for Smaller Estimation Error Tradoff}})\\
+Unlike the \emph{ERM paradigm} discussed in previous chapters, we \emph{no longer just care about the empirical risk}, $\widehat{L}_m(h)$, but we are \emph{willing to \textbf{trade} some of our \textbf{bias} toward \textbf{low empirical risk} with a \textbf{bias} toward \textbf{classes} for which $\epsilon_{n(h)}\paren{m, \,w(n(h)) \cdot \delta \,}$ is \textbf{smaller}}, for the sake of a smaller estimation error.
+\end{remark}
+
+\item \begin{remark}
+By \emph{Hoeffding's inequality}, each singleton class has the uniform convergence property with rate $m_{\cH_n}(\epsilon, \delta) = \frac{\log(2/\delta)}{2\epsilon^2}$ so SRM rule \eqref{eqn: srm_objective} becomes
+\begin{align}
+&\min_{h \in \cH}\set{\widehat{L}_{m}(h) + \sqrt{\frac{-\log(w(n)) + \log(2/\delta)}{2m}}}  \label{eqn: srm_objective_hoeffding} \\
+\Rightarrow & \min_{h \in \cH}\set{\widehat{L}_{m}(h) + \sqrt{\frac{-\log(w(h)) + \log(2/\delta)}{2m}}}  \nonumber
+\end{align}
+\end{remark}
+
+\item \begin{proposition} (\textbf{SRM for Non-Uniform Learning}) \citep{shalev2014understanding}\\
+Let $\cH$ be a hypothesis class such that $\cH = \bigcup_{n = 1}^{\infty}\cH_n$, where each $\cH_n$ has the uniform convergence property with sample complexity $m_{\cH_n}$. Let $w : \bN \to [0,1]$ be such that
+\begin{align*}
+w(n) &= \frac{6}{\pi^2 n^2}.
+\end{align*}
+Then, $\cH$ is \textbf{non-uniformly learnable} using the \textbf{SRM rule} with rate
+\begin{align*}
+m_{\cH}(\epsilon, \delta, h) &\le m_{\cH_n}\paren{\frac{\epsilon}{2}, \frac{6 \delta}{(\pi n(h))^2}}.
+\end{align*}
+\end{proposition}
+
+\item \begin{remark} (\emph{\textbf{SRM as Resource Allocation}})\\
+Consider SRM as \emph{\textbf{simultaneously run}} $n$ PAC learning algorithm on different hypothesis classes with \emph{\textbf{shared sample size $m$}} so that it  need to \emph{\textbf{allocate resources}} to the hypothesis class $\cH_n$ in some optimal way to minimize the overall gap between true risk and empirical risk.
+\end{remark}
+\end{itemize}
+
+\section{Minimum Description Length and Occam's Razor}
+\subsection{Occam's Razor}
+\begin{itemize}
+\item \begin{remark} (\emph{\textbf{Occam's Razor}})\\
+\emph{A \textbf{short explanation} (that is, a hypothesis that has a short length) tends to be \textbf{more valid} than a \textbf{long explanation}}.
+\end{remark}
+\end{itemize}
+
+\subsection{Minimum Description Length}
+\begin{itemize}
+\item \begin{remark} (\emph{\textbf{Efficient Prior Knowledge Encoding}})\\
+See that the SRM optimize the following objective:
+\begin{align*}
+ \min_{h \in \cH}\set{\widehat{L}_{m}(h) + \sqrt{\frac{-\log(w(h)) + \log(2/\delta)}{2m}}} 
+\end{align*} It follows that in this case, \emph{\textbf{the prior knowledge} is solely determined by the \textbf{weight}} we assign \emph{to each hypothesis}. We assign \textit{\textbf{higher}} \emph{weights} to hypotheses that we \emph{believe are \textbf{more likely to be the correct one}}, and in the learning algorithm we prefer hypotheses that have higher weights.
+\end{remark}
+
+\item \begin{definition} (\textbf{\emph{Description Language of Hypothesis Class}}) \\
+Let $\cH$ be the hypothesis class we wish to describe. Fix some \emph{finite set} $\Sigma$ of \emph{\textbf{symbols}} (or ``characters"), which we call the \underline{\emph{\textbf{alphabet}}}. For concreteness, we let $\Sigma = \set{0,1}$.  \underline{\emph{\textbf{A string}}} is a \emph{finite sequence of symbols} from $\Sigma$; for example,  $\sigma = (0,1,1,1,0)$ is a string of \emph{length $5$}. We denote by $\abs{\sigma}$ \emph{\textbf{the length} of a string}. \emph{The set of all finite length strings is denoted $\Sigma^{*}$}. 
+
+\underline{\emph{\textbf{A description language for $\cH$}}} is a function $d: \cH \to \Sigma^{*}$ mapping \emph{each member} $h$ of $\cH$ to a string $d(h)$. $d(h)$ is called \emph{\textbf{the description of $h$}}, and its \emph{length} is denoted by $\abs{h}$.
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Restriction of $\cH$ on $\cD_m$}})\\
+\emph{\textbf{The restriction of $\cH$ to $\cD$}} is \emph{the set of functions} from $\cD$ to $\set{0,1}$ that can be \emph{derived from} $\cH$. That is,
+\begin{align*}
+\cH_{\cD} := \set{(h(x_1) \xdotx{,} h(x_m)): h \in \cH}.
+\end{align*} For each $h \in \cH$, $h_{\cD} \in \cH_{\cD} \subset \set{0, 1}^{*}$ is a \emph{\textbf{description}} of $h$ which is \emph{a \textbf{binary} string of \textbf{fixed length} $m$}. It is \emph{not a prefix-free string} and is \emph{\textbf{data-dependent}} which is not preferred in MDL.
+\end{remark}
+
+\item \begin{definition} (\textbf{\emph{Prefix-Free String}})\\
+For every \emph{\textbf{distinct}} $h, h'$,  $d(h)$ is \emph{\textbf{not a prefix}} of $d(h')$. 
+
+That is, we do not allow that any string $d(h)$ is \emph{exactly the first $\abs{h}$ symbols} of \emph{any longer string} $d(h')$.
+\end{definition}
+
+\item \begin{lemma} (\textbf{Kraft's Inequality}). \\
+If $S \subseteq \set{0,1}^{*}$ is a \textbf{prefix-free} set of strings, then
+\begin{align*}
+\sum_{\sigma \in S}\frac{1}{2^{\abs{\sigma}}} \le 1
+\end{align*}
+\end{lemma}
+
+\item \begin{remark}
+In light of Kraft’s inequality, any prefix-free description language of a hypothesis class, $\cH$, gives rise to a \emph{\textbf{weighting function}} $w$ over that hypothesis class where
+\begin{align*}
+w(h) &= \frac{1}{2^{\abs{h}}}.
+\end{align*}
+\end{remark}
+
+\item \begin{proposition} (\textbf{Generalization Bound by Description  Length }) \citep{shalev2014understanding} \\
+Let $\cH$ be a hypothesis class and let $d: \cH \to \set{0,1}^{*}$ be a \textbf{prefix-free description language} for $\cH$. Then, for every sample size, $m$, every confidence parameter, $\delta > 0$, and every probability distribution, $\cP$, with probability greater than $1 - \delta$ over the choice of $\cD_m \sim \cP^m$ we have that,
+\begin{align}
+L_{\cP}(h) \le \widehat{L}_{m}(h)  + \sqrt{\frac{\abs{h} + \log(2/\delta)}{2m}} \label{eqn: srm_generalization_bound_mdl}
+\end{align} where $\abs{h}$ is the \textbf{length of description} $d(h)$ of $h$.
+\end{proposition}
+
+\item \begin{definition} (\emph{\textbf{Minimum Description Length (MDL) learning paradigm}})\\
+With the definition of description language of hypothesis, the goal of a \emph{\textbf{Minimum Description Length (MDL) learning}} is to find a hypothesis $h \in \cH$ such that 
+\begin{align}
+\min_{h \in \cH}\set{\widehat{L}_{m}(h) + \sqrt{\frac{\abs{h} + \log(2/\delta)}{2m}}}   \label{eqn: srm_mdl}
+\end{align} In particular, it suggests \emph{\textbf{trading off}} \emph{empirical risk} for \emph{\textbf{saving description length}}. 
+\end{definition}
+
+\item \begin{remark} (\textbf{\emph{Choose Description Language Independent From the Data}})\\
+As we know from the basic Hoeffding's bound, if we \emph{\textbf{commit} to any hypothesis \textbf{before} seeing the data}, then we are guaranteed a rather small estimation error term. 
+
+\emph{Choosing a description language} (or, equivalently, \emph{some weighting of hypotheses}) is \emph{a \textbf{weak form} of \textbf{committing} to a hypothesis}. Rather than committing to a \emph{single} hypothesis, we \emph{spread} out our commitment among many. As long as it is done \emph{\textbf{independently}} of the training sample, our generalization bound holds. Just as the choice of a \emph{single hypothesis} to be evaluated by a sample can be arbitrary, so is \emph{the choice of description language}.
+\end{remark}
+\end{itemize}
+
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{reference.bib}
+\end{document}
