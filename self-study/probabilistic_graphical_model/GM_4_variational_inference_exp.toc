@@ -1,0 +1,14 @@
+\contentsline {section}{\numberline {1}Background knowledge}{2}
+\contentsline {section}{\numberline {2}Approximate inference via variational methods}{5}
+\contentsline {section}{\numberline {3}Belief propagation for exponential families}{5}
+\contentsline {subsection}{\numberline {3.1}Approximate ${\mathcal M}({\mathcal G})$ via pseudo-marginal distributions}{6}
+\contentsline {subsection}{\numberline {3.2}Bethe entropy approximation}{7}
+\contentsline {subsection}{\numberline {3.3}Sum-product for Bethe variational problem}{8}
+\contentsline {subsection}{\numberline {3.4}Reparameterization}{10}
+\contentsline {section}{\numberline {4}Expectation propagation}{10}
+\contentsline {section}{\numberline {5}Mean field approximation}{11}
+\contentsline {subsection}{\numberline {5.1}Tractable families}{11}
+\contentsline {subsection}{\numberline {5.2}Mean field lower bound and the problem formulation}{12}
+\contentsline {subsection}{\numberline {5.3}Variational representation of mean field}{12}
+\contentsline {subsection}{\numberline {5.4}Naive mean field algorithms}{13}
+\contentsline {subsection}{\numberline {5.5}Nonconvexity of mean field}{15}
