@@ -9,28 +9,28 @@ This repository is the latex-based notes for self-learning, mainly for math, sta
 
 - [Concentration Inequalities](./self-study/concentration_measures)
 
-- [Deep Learning](./self-study/deep_learning/README.md)
+- [Deep Learning](./self-study/deep_learning)
 
-- [Differential Geometry](./self-study/differential_geometry/README.md)
+- [Differential Geometry](./self-study/differential_geometry)
 
-- [Functional Analysis](./self-study/functional_analysis/README.md)
+- [Functional Analysis](./self-study/functional_analysis)
 
-- [Information Geometry and Optimal Transport](./self-study/information_geometry_optimal_transport/README.md)
+- [Information Geometry and Optimal Transport](./self-study/information_geometry_optimal_transport)
 
-- [Measure Theory, Abstract Integration, Probability Theory](./self-study/probability_and_measure_theory/README.md)
+- [Measure Theory, Abstract Integration, Probability Theory](./self-study/probability_and_measure_theory)
 
-- [Monte Carlo Methods](./self-study/monte_carlo_methods/README.md)
+- [Monte Carlo Methods](./self-study/monte_carlo_methods)
 
-- [Natural Language Processing](./self-study/natural_language_processing/README.md)
+- [Natural Language Processing](./self-study/natural_language_processing)
 
-- [Probabilistic Graphical Models](./self-study/probabilistic_graphical_model/README.md)
+- [Probabilistic Graphical Models](./self-study/probabilistic_graphical_model)
 
-- [Reinforcement Learning](./self-study/reinforcement_learning/README.md)
+- [Reinforcement Learning](./self-study/reinforcement_learning)
 
-- [Stochastic Process and Statistical Analysis in Infinite Dimensional Space](./self-study/stochastic_process/README.md)
+- [Stochastic Process and Statistical Analysis in Infinite Dimensional Space](./self-study/stochastic_process)
 
-- [Statistical Learning Theory](./self-study/statistical_learning_theory/README.md)
+- [Statistical Learning Theory](./self-study/statistical_learning_theory)
 
-- [Topology](./self-study/topology/README.md)
+- [Topology](./self-study/topology)
 
-- [Other Topics](./self-study/selected_topics/README.md)
+- [Other Topics](./self-study/selected_topics)
