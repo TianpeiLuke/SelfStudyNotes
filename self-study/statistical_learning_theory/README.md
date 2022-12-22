@@ -27,22 +27,25 @@
 ### Statistical Learning Theory
 
 - Basic Concepts of Statistical Learning
-  - Data, Loss, Hypothesis Class
-  - Deterministic and Stochastic Scenario
-  - Generalization Error
-  - Bayes Error
+  - Settings
+    - Data, Loss, Hypothesis Class
+    - Deterministic and Stochastic Scenario
+    - Generalization Error
+    - Bayes Error
   - Empirical Risk
   - Consistency, Universal Consistency
+  - No-Free-Lunch Theorem
 
 - Probably Approximately Correct (PAC) Learning 
   - PAC Learning
   - Agnositc PAC Learning
+  - Generalization Bound for Finite Hypothesis Class
 
 - Radmatcher Complexity and VC-Dimension
   - Radmatcher Complexity
   - VC-Dimension
-  - Growth Number
-  - Generalization Bound
+  - Growth Number, Sauer's Lemma
+  - Generalization Bound via Radmatcher Complexity, Growth Number and VC-Dimension
 
 - Non-Uniform Learning and Structural Risk Minimization
   - Non-Uniform Learning
