@@ -1,0 +1,12 @@
+\contentsline {section}{\numberline {1}Covectors}{2}
+\contentsline {subsection}{\numberline {1.1}Covectors on Vector Space}{2}
+\contentsline {subsection}{\numberline {1.2}Tangent Covectors on Manifolds}{4}
+\contentsline {subsection}{\numberline {1.3}Covector Fields}{5}
+\contentsline {subsection}{\numberline {1.4}Coframes}{7}
+\contentsline {section}{\numberline {2}The Differential of a Function}{9}
+\contentsline {section}{\numberline {3}Pullbacks of Covector Fields}{12}
+\contentsline {subsection}{\numberline {3.1}Definitions}{12}
+\contentsline {subsection}{\numberline {3.2}Restricting Covector Fields to Submanifolds}{14}
+\contentsline {section}{\numberline {4}Compare Tangent Bundle and Cotangent Bundle}{15}
+\contentsline {section}{\numberline {5}Line Integrals}{16}
+\contentsline {section}{\numberline {6}Conservative Covector Fields}{16}
