@@ -19,7 +19,7 @@
 ### Statistics
 ***Theory of Statistics***, Mark J. Schervish
 
-***Bayesian Nonparametrics***,J.K. Ghosh, R.V. Ramamoorthi
+***Bayesian Nonparametrics***, J.K. Ghosh, R.V. Ramamoorthi
 
 ## Table of Contents
 
