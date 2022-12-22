@@ -1,0 +1,7 @@
+\contentsline {section}{\numberline {1}Value-based methods vs. Policy-based methods}{2}
+\contentsline {subsection}{\numberline {1.1}Policy Gradient methods}{2}
+\contentsline {section}{\numberline {2}Policy approximation}{2}
+\contentsline {section}{\numberline {3}The Policy Gradient Theorem}{4}
+\contentsline {section}{\numberline {4}REINFORCE: Monte Carlo Policy Gradient}{7}
+\contentsline {subsection}{\numberline {4.1}REINFORCE with baseline}{9}
+\contentsline {section}{\numberline {5}Actor-Critic Methods}{9}
