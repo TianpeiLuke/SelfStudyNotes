@@ -1,0 +1,6 @@
+\contentsline {section}{\numberline {1}Markov Decision Process}{2}
+\contentsline {section}{\numberline {2}Goals and Rewards}{3}
+\contentsline {section}{\numberline {3}Returns and Episodes}{4}
+\contentsline {section}{\numberline {4}Policies and Value Functions}{5}
+\contentsline {subsection}{\numberline {4.1}Bellman equation}{6}
+\contentsline {subsection}{\numberline {4.2}Optimal Policy and Optimal Value Function}{8}
