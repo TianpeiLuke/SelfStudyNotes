@@ -1,0 +1,382 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs,  mathtools, dsfont}
+\usepackage{tabularx}
+\usepackage{tikz-cd}
+
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Lecture 13: Riemannian Metrics}
+\author{ Tianpei Xie}
+\date{Oct. 26th., 2022}
+\maketitle
+\tableofcontents
+\newpage
+\section{Riemannian Metrics}
+\subsection{Definitions}
+\begin{itemize}
+\item \begin{remark}
+The most important examples of symmetric tensors on a vector space are \emph{\textbf{inner products}}. Any inner product allows us to define \emph{\textbf{lengths}} of vectors and \emph{\textbf{angles}} between them, and thus to do Euclidean geometry.
+\end{remark}
+
+\item \begin{definition}
+Let $M$ be a smooth manifold with or without boundary. \underline{\emph{\textbf{A Riemannian metric}}} on $M$ is a smooth \underline{\emph{\textbf{symmetric covariant $2$-tensor field}}} on $M$ that is \underline{\emph{\textbf{positive definite}}} at each point. 
+
+\underline{\emph{\textbf{A Riemannian manifold}}} is a pair $(M, g)$, where $M$ is a smooth manifold and $g$ is a Riemannian metric on $M$. One sometimes simply says ``\emph{$M$ is a Riemannian manifold}" if $M$ is understood to be endowed with \emph{a specific Riemannian metric}. \emph{A Riemannian manifold \textbf{with boundary}} is defined similarly.
+\end{definition}
+
+\item \begin{remark}
+If $g$ is a Riemannian metric on $M$, then for each $p \in M$, \emph{the $2$-tensor $g_p$} is an \underline{\emph{\textbf{inner product}}} on $T_{p}M$. Because of this, we often use the notation $\inn{v}{w}_g$ to denote the real number $g_p(v, w)$ for $v,w \in T_{p}M$.
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Coordinate Representation of Riemannian Metric}})\\
+In any smooth local coordinates  $(x^i)$, \emph{\textbf{a Riemannian metric}} can be written 
+\begin{align}
+g &= g_{i,j}\;dx^i \otimes dx^j, \label{eqn: riemannian_metric_tensor_product}
+\end{align} where $(g_{i,j})$ is \underline{\emph{\textbf{a symmetric positive definite matrix}}} of smooth functions. 
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Alternative Coordinate Representation of Riemannian Metric}})\\
+The \emph{\textbf{symmetry}} of $g$ allows us to write $g$ also in terms of \underline{\emph{\textbf{symmetric products}}} as follows:
+\begin{align}
+g &= g_{i,j}\;dx^i \otimes dx^j,  \nonumber\\
+&(\text{since  a symmetric tensor is equal to its symmetrization})  \nonumber\\
+&=  \frac{1}{2}\paren{g_{i,j}dx^i \otimes dx^j + g_{j,i} dx^j \otimes dx^i} \nonumber\\
+&(\text{since  }g_{i,j} = g_{j,i})  \nonumber\\
+&= \frac{1}{2}g_{i,j}\paren{dx^i \otimes dx^j + dx^j \otimes dx^i} \nonumber\\
+&(\text{by definition of symmetric product})  \nonumber\\
+&=\frac{1}{2}g_{i,j} dx^i\,dx^{j} \label{eqn: riemannian_metric_symmetric_product}
+\end{align}
+\end{remark}
+
+\item \begin{example}(\emph{\textbf{The Euclidean Metric}}).\\
+The simplest example of a Riemannian metric is \underline{\emph{\textbf{the Euclidean metric}}} $\bar{g}$ on $\bR^n$, given in standard coordinates by 
+\begin{align*}
+\bar{g} &= \delta_{i,j} dx^i dx^j,
+\end{align*} where $\delta_{i,j}$ is \emph{the Kronecker delta}. It is common to abbreviate \emph{\textbf{the symmetric product} of a tensor $\alpha$ \textbf{with itself}} by $\alpha^2$, so the Euclidean metric can also be written
+\begin{align*}
+\bar{g} &= \paren{dx^1}^2 + \ldots + (dx^n)^2.
+\end{align*} 
+Applied to vectors $v,w \in T_{p}\bR^n$, this yields 
+\begin{align*}
+\bar{g}_{p}(v,w) &= \delta_{i,j} v^i w^j   = \sum_{i}v^i w^i = \inn{\mb{v}}{\mb{w}}
+\end{align*} In other words, $\bar{g}$ is the $2$-tensor field whose value at each point is \emph{\textbf{the Euclidean dot product}}. We denote the value of this 2-tensor field as $g(v, w) := \inn{v}{w}_g$.
+\end{example}
+
+\item \begin{example}(\emph{\textbf{Product Metrics}}). \\
+If $(M,g)$ and $(\widetilde{M},\widetilde{g})$ are Riemannian manifolds, we can define a Riemannian metric $\hat{g} = g \oplus \tilde{g}$ on the product manifold
+$M \times \widetilde{M}$, called \underline{\emph{\textbf{the product metric}}}, as follows:
+\begin{align}
+\hat{g}((v,\widetilde{v}), (w, \widetilde{w})) &= g(v,w) + \widetilde{g}(\widetilde{v},\widetilde{w}) \label{eqn: riemannian_product_metric}
+\end{align} for any $(v,\widetilde{v}), (w, \widetilde{w}) \in T_{p}M \times T_{q}\widetilde{M} \simeq T_{(p,q)}(M\times \widetilde{M})$. Given any local coordinates $x^1,\ldots, x^n$ for $M$ and $y^1,\ldots, y^m$ for $\widetilde{M} $, we obtain local coordinates $(x^1,\ldots, x^n, y^1,\ldots, y^m)$ for $M \times \widetilde{M}$, and you can check that the product metric is represented locally by the block diagonal matrix
+\begin{align*}
+\hat{g}_{i,j} &= 
+\brac{\begin{array}{cc}
+g_{i,j} & 0\\
+0 & \widetilde{g}_{i,j}
+\end{array}}.
+\end{align*} For example, it is easy to verify that the Euclidean metric on $\bR^{n+m}$ is the same as the product metric determined by the Euclidean metrics on $\bR^n$ and $\bR^m$.
+(Note that the product metrics is the sum of tensors \textbf{\emph{not tensor product}} of Riemannian metrics, which would increase the rank of the metric.)
+\end{example}
+
+\item \begin{proposition} (\textbf{Existence of Riemannian Metrics}). \citep{lee2003introduction, lee2018introduction}\ \\
+\textbf{Every smooth manifold} with or without boundary admits a \textbf{Riemannian metric}.
+\end{proposition}
+\begin{proof}
+(A sketch of the proof).  Let $M$ be a smooth manifold with or without boundary, and choose a covering of $M$ by smooth coordinate charts $(U_{\alpha}, \varphi_{\alpha})$. In each coordinate domain, there is a Riemannian metric $g_{\alpha}= \varphi^{*}\bar{g}$ via \emph{pullback of Euclidean metric} $\bar{g}$ by $\varphi$, whose coordinate expression is $\delta_{i,j} dx^i dx^j$. Let $\set{\Psi_{\alpha}}$ be a smooth partition of unity subordinate to the cover ${U_{\alpha}}$, and define
+\begin{align*}
+g &= \sum_{\alpha}\Psi_{\alpha} g_{\alpha}, 
+\end{align*} with each term interpreted to be zero outside $\text{supp }\Psi_{\alpha}$. By local finiteness, there are \emph{only finitely many nonzero terms} in a neighborhood of each point, so this expression defines \emph{a smooth tensor field}. It is obviously \emph{symmetric}. We can proof this term $g(v,v)$ is postive for each nonzero $v  \in T_{p}M$. \qed 
+\end{proof}
+
+\item \begin{definition}
+The \underline{\emph{\textbf{length}} or \emph{\textbf{norm}}} of a tangent vector $v \in T_{p}M$ is defined to be
+\begin{align*}
+\abs{v}_{g} &= \sqrt{g_{p}(v, v)} := \sqrt{\inn{v}{v}_g}
+\end{align*}
+\end{definition}
+
+\item \begin{definition}
+The \underline{\emph{\textbf{angle}}} between two nonzero tangent vectors $v, w \in T_{p}M$ is the unique $\theta \in [0, \pi]$ satisfying:
+\begin{align*}
+\theta &= \frac{\inn{v}{w}_g}{\abs{v}_g \, \abs{w}_g}.
+\end{align*}
+\end{definition}
+
+\item \begin{definition}
+Tangent vectors $v, w \in T_{p}M$ are said to be \underline{\emph{\textbf{orthogonal}}} if $\inn{v}{w}_g = 0$. This means either one or both vectors are zero, or the angle between them is $\pi/2$.
+\end{definition}
+
+\item \begin{definition}
+Let $(M, g)$ be an $n$-dimensional Riemannian manifold with or without boundary. \emph{A local frame} $(E_1 \xdotx{,} E_n)$ for $M$ on an open subset $U \subseteq M$ is an \underline{\emph{\textbf{orthonormal frame}}} if the vectors $(E_1|_{p} \xdotx{,} E_n|_{p})$ form an \emph{\textbf{orthonormal basis}} for $T_{p}M$ at each point $p \in U$, or
+equivalently if $\inn{E_i}{E_j}_g = \delta_{i,j}$.
+\end{definition}
+
+\item \begin{proposition}
+Suppose $(M, g)$ is a Riemannian manifold with or without boundary, and $(X_j)$ is a smooth local frame for $M$ over an open subset $U \subseteq M$. Then there is a smooth \textbf{orthonormal frame} $(E_j)$ over $U$ such that $\text{span}\set{E_1|_{p} \xdotx{,} E_n|_{p}}=\text{span}\set{X_1|_{p} \xdotx{,} X_n|_{p}}$ for each $j = 1\xdotx{,} n$ and each $p \in U$.
+\end{proposition}
+
+\item \begin{corollary} (\textbf{Existence of Local Orthonormal Frames}).\\
+Let $(M, g)$ be a Riemannian manifold with or without boundary. For each $p \in M$, there is a smooth orthonormal frame on a neighborhood of $p$.
+\end{corollary}
+
+\item \begin{definition}
+For a Riemannian manifold $(M, g)$ with or without boundary, we define the \emph{\textbf{unit tangent bundle}} to be the subset $U\,TM \subseteq TM$ consisting of unit vectors:
+\begin{align*}
+U\,TM = \set{(p,v) \in TM: \abs{v}_g = 1}.
+\end{align*}
+\end{definition}
+
+\item \begin{proposition}(\textbf{Properties of the Unit Tangent Bundle}). \citep{lee2018introduction}\\
+If $(M, g)$ is a Riemannian manifold with or without boundary, its unit tangent bundle $U\,TM$ is a \textbf{smooth}, \textbf{properly embedded} \textbf{codimension-$1$} submanifold with boundary in $TM$, with $\partial(U\,TM) = \pi^{-1}(\partial M)$ (where  $\pi: U\,TM \rightarrow M$ is the canonical projection). The unit
+tangent bundle is \textbf{connected} if and only if $M$ is \textbf{connected}, and \textbf{compact} if and only if $M$ is \textbf{compact}.
+\end{proposition}
+\end{itemize}
+
+\subsection{Pullback Metrics}
+\begin{itemize}
+\item  \begin{definition}
+Suppose $M, N$ are smooth manifolds with or without boundary, $g$ is a Riemannian metric on $N$, and $F: M \rightarrow N$ is smooth. The \emph{\textbf{pullback}} $F^{*}g$ is a smooth $2$-tensor field on $M$. If it is \emph{\textbf{positive definite}}, it is a Riemannian metric on $M$, called \underline{\emph{\textbf{the pullback metric}}} determined by $F$. 
+\end{definition}
+
+%\item \begin{remark}
+%Every Riemannian metric $g$ is \emph{a pullback metric} of the Euclidean metric $\bar{g}$ determined by \emph{the coordinate map} $\varphi$.
+%\end{remark}
+
+\item \begin{proposition} (\textbf{Pullback Metric Criterion}). \citep{lee2003introduction} \\
+Suppose $F: M \rightarrow N$ is a smooth map and $g$ is a Riemannian metric on $N$. Then $F^{*}g$ is a \textbf{Riemannian metric} on $M$ if and only if $F$ is a \underline{\textbf{smooth immersion}}.
+\end{proposition}
+
+\item \begin{definition}
+If $(M, g)$ and  $(\widetilde{M}, \widetilde{g})$ are both Riemannian manifolds, a smooth map  $F: M \rightarrow \widetilde{M}$ is called a \underline{\emph{\textbf{(Riemannian) isometry}}} if it is a \emph{\textbf{diffeomorphism}} that satisfies $F^{*}\widetilde{g} = g$. More generally, $F$ is called \underline{\emph{\textbf{a local isometry}}} if every point $p \in M$ has a neighborhood $U$ such that $F|_{U}$ is an \emph{isometry} of $U$ onto an open subset of $\widetilde{M}$; or equivalently, if $F$ is a \emph{\textbf{local diffeomorphism}} satisfying $F^{*}\widetilde{g} = g$.
+
+If there exists a \emph{Riemannian isometry} between $(M, g)$ and  $(\widetilde{M}, \widetilde{g})$, we say that they are \underline{\emph{\textbf{isometric}}} as Riemannian manifolds. If each point of $M$ has a \emph{neighborhood} that is \emph{isometric} to an \emph{open subset} of $(\widetilde{M}, \widetilde{g})$, then we say that $(M, g)$ is \underline{\emph{\textbf{locally isometric}}} to $(\widetilde{M}, \widetilde{g})$.
+\end{definition}
+
+\item \begin{definition}
+The study of properties of Riemannian manifolds that are \emph{\textbf{invariant under (local or global) isometries}} is called \underline{\emph{\textbf{Riemannian geometry}}}.
+\end{definition}
+
+\item \begin{definition}
+A Riemannian $n$-manifold $(M, g)$ is said to be a \emph{\textbf{\underline{flat} Riemannian manifold}}, and $g$ is a \emph{\textbf{flat metric}}, if .$(M, g)$ is \textbf{locally isometric} to $(\bR^n, \bar{g})$.
+\end{definition}
+
+\item \begin{theorem}
+For a Riemannian manifold $(M, g)$, the following are equivalent:
+\begin{enumerate}
+\item $g$ is flat.
+\item Each point of $M$ is contained in the domain of a smooth coordinate chart in which $g$ has the coordinate representation $g = \delta_{i,j}dx^i\,dx^j$.
+\item Each point of $M$ is contained in the domain of a smooth coordinate chart in which \textbf{the coordinate frame} is \textbf{orthonormal}.
+\item Each point of M is contained in the domain of a \textbf{commuting orthonormal frame}.
+\end{enumerate}
+\end{theorem}
+\end{itemize}
+\section{Methods for Constructing Riemannian Metrics}
+\subsection{Riemannian Submanifolds}
+\subsection{Riemannian Submersions}
+\subsection{Riemannian Coverings}
+
+\section{Basic Constructions on Riemannian Manifolds}
+\subsection{Raising and Lowering Indices}
+\begin{itemize}
+\item
+\begin{definition}
+Given a Riemannian metric $g$ on M, we define a \underline{\emph{\textbf{bundle homomorphism}}} $\widehat{g}: TM \rightarrow T^{*}M$ by setting
+\begin{align*}
+\widehat{g}(v)(w) &= g_{p}(v, w)
+\end{align*} for all $p \in M$ and $v, w \in T_{p}M$.
+\end{definition}
+
+\item \begin{remark}
+ If $X$ and $Y$ are smooth vector fields on $M$, this yields
+\begin{align*}
+\widehat{g}(X)(Y) = g(X, Y).
+\end{align*} $\widehat{g}(X)(Y)$ is \emph{\textbf{linear}} over $\cC^{\infty}(M)$ in $Y$ and thus \underline{$\widehat{g}(X)$} is a \underline{\emph{\textbf{smooth covector field}}} by the tensor characterization lemma. On the other hand, the covector field $\widehat{g}(X)$ is \emph{\textbf{linear}} over $\cC^{\infty}(M)$ as a function of $X$, and thus $\widehat{g}$ is a \emph{\textbf{smooth bundle homomorphism}}. As usual, we use the same symbol for both the \emph{pointwise bundle homomorphism} $\widehat{g}: TM \rightarrow T^{*}M$ and \emph{the \textbf{linear map} on \textbf{sections}} $\widehat{g}: \frX(M) \rightarrow \frX^{*}(M)$.
+\end{remark}
+
+%\item \begin{remark}
+%Given a smooth local frame $(E_i)$ and its dual coframe $(\epsilon^i)$, let $g = g_{i,j}\epsilon^i \epsilon^j$ be the \emph{\textbf{local expression}} for $g$. If $X= X^i\,E_i$ is a smooth vector field, the \emph{covector field} $\widehat{g}(X)$ has the \emph{\textbf{coordinate expression}}:
+%\begin{align*}
+%\widehat{g}(X) = \paren{g_{i,j}X^i} \epsilon^j.
+%\end{align*} Thus \emph{\textbf{the matrix of $\widehat{g}$} in any local frame is the \textbf{same} as \textbf{the matrix of $g$} itself}.
+%\end{remark}
+
+
+\item \begin{definition}
+Given a smooth local frame $(E_i)$ and its dual coframe $(\epsilon^i)$, let $g = g_{i,j}\epsilon^i \epsilon^j$ be the \emph{\textbf{local expression}} for $g$. If $X= X^i\,E_i$ is a smooth vector field, the \emph{covector field} $\widehat{g}(X)$ has the \emph{\textbf{coordinate expression}}:
+\begin{align*}
+\widehat{g}(X) = \paren{g_{i,j}X^i} \epsilon^j := X_j\,\epsilon^j,
+\end{align*} where the \emph{\textbf{components}} of \emph{\textbf{the covector field}} $\widehat{g}(X)$ is denoted by 
+\begin{align}
+X_j &= g_{i,j}X^i. \label{eqn: rieman_lower_index}
+\end{align} We say that \emph{$\widehat{g}(X)$ is obtained from $X$} \underline{\emph{\textbf{by lowering an index}}}. And \underline{\emph{\textbf{the covector field}} $\widehat{g}(X)$} is denoted by \underline{$X^{\flat}$} and called \underline{\emph{\textbf{$X$ flat}}}, borrowing from the musical notation for lowering a tone.
+\end{definition} 
+
+\item \begin{remark}
+Because the matrix $(g_{i,j})$ is nonsingular at each point, the map $\widehat{g}$ is \textit{\textbf{invertible}}, and the matrix of $\widehat{g}^{-1}$ is just \emph{\textbf{the inverse matrix of $(g_{i,j})$}}. We denote \emph{\textbf{this inverse matrix}} by $(g^{i,j})$, so that $g^{i,j} g_{j,k} = g_{k,j} g^{j,i} = \delta_{k}^{i}$. The \emph{\textbf{symmetry}} of $(g_{i,j})$ easily implies that $(g^{i,j})$ is also \emph{\textbf{symmetric}} in $i$ and $j$. 
+\end{remark}
+
+\item \begin{definition}
+Given $\omega = \omega_j\,\epsilon^{j}$, the inverse map $\widehat{g}^{-1}$ is given by
+\begin{align*}
+\widehat{g}^{-1}(\omega) &= \omega^i\,E_i
+\end{align*}
+where
+\begin{align}
+\omega^{i} &= g^{i,j}\,\omega_{j} \label{eqn: rieman_raising_index}
+\end{align} If $\omega$ is \emph{a covector field}, \underline{the \emph{\textbf{vector field}} $\widehat{g}^{-1}(\omega)$} is called \underline{\emph{\textbf{$\omega$ sharp}}} and denoted by \underline{$\omega^{\sharp}$}, and we say that \emph{it is obtained from $\omega$ by} \emph{\textbf{raising an index}}.
+
+The \emph{two \textbf{inverse isomorphisms}} $\flat$ and $\sharp$ are known as \underline{\emph{\textbf{the musical isomorphisms}}}.
+\end{definition}
+
+\item \begin{definition}
+If $g$ is a Riemannian metric on $M$ and $f: M \rightarrow \bR$ is a smooth function, the \underline{\emph{\textbf{gradient}}} of $f$ is \emph{\textbf{the vector field}}
+\begin{align*}
+\text{grad }f &= \paren{df}^{\sharp}:= \widehat{g}^{-1}(df)
+\end{align*}  \emph{obtained from $df$ by \textbf{raising an index}}. It is also denoted as $\grad{}{f}$.
+\end{definition}
+
+
+
+\item \begin{remark}
+Unwinding the definition we have
+\begin{align*}
+\inn{\text{grad }f}{X}_{g} &= \widehat{g}\paren{\text{grad }f}(X)\\
+&=  \widehat{g}\paren{ \widehat{g}^{-1}(df)}(X) \\
+&= df(X) = Xf
+\end{align*}
+We see that  $\text{grad }f$ is \emph{\textbf{characterized}} by the fact that
+\begin{align}
+df(X) &= \inn{\text{grad }f}{X}_{g}\, \quad \forall X  \in \frX(M),  \label{eqn: gradient_projection_differential}
+\end{align} and has the \textit{\textbf{local basis expression}}
+\begin{align}
+\text{grad }f&= \paren{g^{i,j}E_i f} E_j. \label{eqn: gradient_coordinate_representation}
+\end{align} Thus if $(E_i)$ is an \emph{\textbf{orthonormal frame}}, then $\text{grad }f$ is the \emph{vector field} whose \emph{\textbf{components are the same as the components of $df$}}; but \emph{in other frames}, \emph{this will not be the case}. 
+\end{remark}
+
+\item \begin{remark}
+In smooth coordinates $(\partial / \partial x^i)$, we have
+\begin{align}
+\text{grad }f&= g^{i,j}\partdiff{f}{x^i}\partdiff{}{x^j}. \label{eqn: gradient_coordinate_representation_2}
+\end{align}
+\end{remark}
+
+\item \begin{definition}
+If $f$ is a smooth real-valued function on a smooth manifold $M$, recall that a point $p \in M$ is called \emph{\textbf{a regular point}} of $f$ if $df_p \neq 0$, and \emph{\textbf{a critical point}} of $f$ otherwise; and a level set $f^{-1}(c)$ is called \emph{\textbf{a regular level set}} if every point of $f^{-1}(c)$ is a regular point of $f$
+\end{definition}
+
+\item \begin{proposition}
+Suppose $(M, g)$ is a Riemannian manifold, $f \in \cC^{\infty}(M)$, and $R\subseteq M$ is the set of regular points of $f$. For each $c \in R$, the set $M_{c} = f^{-1}(c)\cap R$, if nonempty, is an \textbf{embedded smooth hypersurface} in $M$, and $\text{grad }f$ is everywhere \textbf{normal} to $M_{c}$.
+\end{proposition}
+
+\item \begin{remark}
+If $h$ is any covariant $k$-tensor field on a Riemannian manifold with $k \ge 2$, we can \emph{\textbf{raise}} one of its indices (say the last one for definiteness) and obtain a $(1, k-1)$-tensor $h^{\sharp}$. The \emph{\textbf{trace of $h^{\sharp}$}} is thus a well-defined \emph{\textbf{covariant $(k-2)$-tensor field}}.
+
+We define \underline{\emph{\textbf{the trace of $h$ with respect to $g$}}} as
+\begin{align*}
+\text{tr}_{g}(h) &= \text{tr}(h^{\sharp}).
+\end{align*}
+The most important case is that of a \emph{covariant $2$-tensor field}. In this case, $h^{\sharp}$ is a $(1,1)$-tensor field, which can equivalently be regarded as an \emph{\textbf{endomorphism field}}, and $\text{tr}_g h$ is just \emph{\textbf{the ordinary trace} of this endomorphism field}. In terms of a basis,
+this is
+\begin{align*}
+\text{tr}_g (h) = h_i^{\;i} = g^{i,j}\,h_{i,j}.
+\end{align*} In particular, \emph{\textbf{in an orthonormal frame}} this is \emph{\textbf{the ordinary trace} of the matrix $[h_{i,j}]$ (the sum of its diagonal entries)}; but if the frame is not orthonormal, then this trace is different from the ordinary trace.
+\end{remark}
+\end{itemize}
+
+\subsection{Inner Products of Tensors}
+\begin{itemize}
+\item \begin{definition}
+Suppose $g$ is a Riemannian metric on $M$, and $x \in M$. We can define an \emph{\textbf{inner product}} on \emph{\textbf{the cotangent space}} $T_{x}^{*}M$ by
+\begin{align*}
+\langle\,\omega\,,\,\eta\,\rangle_g &= \langle\,\omega^{\sharp}\,,\,\eta^{\sharp}\,\rangle_g.
+\end{align*}
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Coordinate Representation of Inner Product on Covectors}})\\
+We see that under the formula for sharp operator
+\begin{align*}
+\langle\,\omega\,,\,\eta\,\rangle_g &= \langle\,\omega^{\sharp}\,,\,\eta^{\sharp}\,\rangle_g\\
+&= g_{k,l}\paren{g^{k,i}\,\omega_{i}}\paren{g^{l,j}\,\eta_{j}}\\
+&= \delta_{l}^{i}\omega_i\paren{g^{l,j}\,\eta_{j}} \\
+&= g^{i,j}\omega_{i}\,\eta_{j}.
+\end{align*} In other words, \emph{\textbf{the inner product on covectors} is represented by \textbf{the inverse matrix} $g^{i,j}$}. Using our conventions for raising and lowering indices, this can also be written
+\begin{align*}
+\langle\,\omega\,,\,\eta\,\rangle_g &= \omega_{i}\,\eta^{i} = \omega^{j}\, \eta_{j}
+\end{align*}
+where $\eta^{i} = g^{i,j}\eta_{j}$ and $\omega^j = g^{i,j}\omega_{i}$.
+\end{remark}
+
+\item \begin{definition}
+If $E \rightarrow M$ is a smooth vector bundle, \emph{\textbf{a smooth fiber metric}} on $E$ is an \emph{\textbf{inner product} on each fiber} $E_p$ that varies \emph{\textbf{smoothly}}, in the sense that for any (local) smooth sections $\sigma, \tau$ of $E$, the inner product $\inn{\sigma}{\tau}$ is a \emph{\textbf{smooth} function}.
+\end{definition}
+
+\item \begin{proposition} (\textbf{Inner Products of Tensors}). \citep{lee2018introduction} \\
+Let $(M,g)$ be an $n$-dimensional Riemannian manifold with or without boundary. There is a \textbf{unique smooth fiber metric} on each tensor bundle $T^{(k,l)}TM$ with the property that if $\alpha_1 \xdotx{,} \alpha_{k+l}, \beta_1 \xdotx{,} \beta_{k+l}$ are vector or covector fields as appropriate, then
+\begin{align}
+\inn{\alpha_1 \xdotx{\otimes} \alpha_{k+l}}{\beta_1 \xdotx{\otimes} \beta_{k+l}} &= \inn{\alpha_1}{\beta_1} \xdotx{\cdot} \inn{\alpha_{k+l}}{\beta_{k+l}} \label{eqn: inner_product_tensor}
+\end{align} With this inner product, if $(E_1 \xdotx{,} E_n)$ is a \textbf{local orthonormal frame} for $TM$ and $(\epsilon^1 \xdotx{,} \epsilon^n)$ is the corresponding dual \textbf{coframe}, then the collection of tensor fields $E_{i_1} \xdotx{\otimes} E_{i_k} \otimes \epsilon^{j_1} \xdotx{\otimes} \epsilon^{j_l}$ as all the indices range from $1$ to $n$ \textbf{forms a local orthonormal frame} for $T^{(k,l)}(T_pM)$. In terms of any (not necessarily orthonormal) frame, this \textbf{fiber metric} satisfies
+\begin{align}
+\inn{F}{G} &= g_{i_1, r_1} \xdotx{} g_{i_k, r_k}\; g^{j_1, s_1} \xdotx{} g^{j_l, s_l}\; F_{j_i \xdotx{,} j_l}^{i_1 \xdotx{,} i_k}\,G_{s_1 \xdotx{,} s_l}^{r_1 \xdotx{,} r_k} \label{eqn: inner_product_tensor_represent}
+\end{align} If $F$ and $G$ are both covariant, this can be written
+\begin{align*}
+\inn{F}{G} &= F_{j_1 \xdotx{,} j_l} G^{j_1\xdotx{,} j_l}.
+\end{align*} where the last factor on the right represents the components of $G$ with \textbf{all of its indices raised}:
+\begin{align*}
+G^{j_1\xdotx{,} j_l} &= g^{j_1, s_1} \xdotx{} g^{j_l, s_l} G_{s_1 \xdotx{,} s_l}.
+\end{align*}
+\end{proposition}
+\end{itemize}
+
+\subsection{The Volume Form and Integration}
+
+\subsection{The Divergence and the Laplacian}
+
+\section{Length and Distance}
+\subsection{The Riemannian Distance Function}
+
+
+
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{book_reference.bib}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
