@@ -1,0 +1,5 @@
+\contentsline {section}{\numberline {1}Policy evaluation vs. Control}{2}
+\contentsline {section}{\numberline {2}Policy evaluation (Prediction)}{3}
+\contentsline {section}{\numberline {3}Policy Iteration (Control)}{4}
+\contentsline {section}{\numberline {4}Value iteration}{7}
+\contentsline {section}{\numberline {5}Generalized Policy Iteration}{8}
