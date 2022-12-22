@@ -1,0 +1,45 @@
+\begin{thebibliography}{5}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Broder et~al.(2000)Broder, Charikar, Frieze, and
+  Mitzenmacher]{broder2000min}
+Andrei~Z Broder, Moses Charikar, Alan~M Frieze, and Michael Mitzenmacher.
+\newblock Min-wise independent permutations.
+\newblock \emph{Journal of Computer and System Sciences}, 60:\penalty0
+  630--659, 2000.
+
+\bibitem[Ch{\'a}vez et~al.(2001)Ch{\'a}vez, Navarro, Baeza-Yates, and
+  Marroqu{\'\i}n]{chavez2001searching}
+Edgar Ch{\'a}vez, Gonzalo Navarro, Ricardo Baeza-Yates, and Jos{\'e}~Luis
+  Marroqu{\'\i}n.
+\newblock Searching in metric spaces.
+\newblock \emph{ACM computing surveys (CSUR)}, 33\penalty0 (3):\penalty0
+  273--321, 2001.
+
+\bibitem[Datar et~al.(2004)Datar, Immorlica, Indyk, and
+  Mirrokni]{datar2004locality}
+Mayur Datar, Nicole Immorlica, Piotr Indyk, and Vahab~S Mirrokni.
+\newblock Locality-sensitive hashing scheme based on p-stable distributions.
+\newblock In \emph{Proceedings of the twentieth annual symposium on
+  Computational geometry}, pages 253--262, 2004.
+
+\bibitem[Indyk and Motwani(1998)]{indyk1998approximate}
+Piotr Indyk and Rajeev Motwani.
+\newblock Approximate nearest neighbors: towards removing the curse of
+  dimensionality.
+\newblock In \emph{Proceedings of the thirtieth annual ACM symposium on Theory
+  of computing}, pages 604--613, 1998.
+
+\bibitem[Jafari et~al.(2021)Jafari, Maurya, Nagarkar, Islam, and
+  Crushev]{jafari2021survey}
+Omid Jafari, Preeti Maurya, Parth Nagarkar, Khandker~Mushfiqul Islam, and
+  Chidambaram Crushev.
+\newblock A survey on locality sensitive hashing algorithms and their
+  applications.
+\newblock \emph{arXiv preprint arXiv:2102.08942}, 2021.
+
+\end{thebibliography}

@@ -1,0 +1,132 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs, dsfont}
+\usepackage{tabularx}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Locality sensitive hashing and semantic hashing}
+\author{ Tianpei Xie}
+\date{Sep. 3rd., 2022 }
+\maketitle
+\tableofcontents
+\newpage
+\allowdisplaybreaks
+\section{Definitions of locality sensitive hashing}
+\begin{itemize}
+\item Given a dataset $\cD$ with $n$ points and $d$ dimensions and a query point $q$ in the same space as the dataset, the \emph{goal} of \underline{\emph{\textbf{$c$-ANN search}}} (where $c = (1+\epsilon) > 1$ is an approximation ratio) is to return points $o \in \cD$ such that $\text{dist}(o, q) \le  c \times \text{dist}(o^{*}, q)$, where $o^{*}$ is the true nearest neighbor of $q$ in $\cD$ and $\text{dist}$ is the distance between the two points. Similarily, \underline{\textbf{\emph{$c$-$k$-ANN search}}} aims at returning top-$k$ points such that $\text{dist}(o_i, q) \le  c \times \text{dist}(o_i^{*}, q)$, where $1 \le i \le k$. \citep{jafari2021survey} $c$-ANN is also called \textbf{$\epsilon$-ANN} given $c = (1+\epsilon) > 1$.
+
+\item Hashing-based methods try to find the nearest neighbors in high-dimensional datasets by \textbf{projecting} them into one or more low-dimensional spaces using \emph{hash functions}. \textbf{Locality sensitive hashing (LSH)} is a famous hashing-based method that creates the lowd-imensional projections such that the \emph{localities of the original space are preserved} in them (i.e. two nearby points in the original space are also nearby in the projected space).
+
+\item For two points $\mb{x}$ and $\mb{y}$ in a $d$-dimensional dataset $\cD \subset \bR^{d}$, we say a \textbf{\emph{hash function}} $H$ is \textbf{$(R, cR, p_1, p_2)$-sensitive} if it satisfies the following two conditions:
+\begin{enumerate}
+\item if $\abs{\mb{x} - \mb{y}} \le R$, then $\bP[H(\mb{x}) = H(\mb{y})] \ge p_1$, and
+\item if $\abs{\mb{x} - \mb{y}} > cR$, then $\bP[H(\mb{x}) = H(\mb{y})] \le p_2$
+\end{enumerate} Here, $c$ is an approximation ratio and $p_1$ and $p_2$ are probabilities. In order for this definition to work, $c > 1$ and $p_1 > p_2$. 
+
+The definition states that two points $\mb{x}$ and $\mb{y}$ are hashed to the \textbf{same bucket} in the projection with a \textbf{\emph{very high probability}} $\ge p_1$ if they \textbf{are close to each other}, and if they are \textbf{not close to each other}, then they will be hashed to the same bucket with a \emph{\textbf{low probability}} $\le p_2$. Next, we present the popular hash function families for the Hamming, Minkowski, Angular, and Jaccard distances.
+\end{itemize}
+
+\section{Hamming-based Locality Hashing}
+\emph{Locality Sensitive Hashing} was first proposed in \citep{indyk1998approximate} for the Hamming distance to solve the \textbf{$(R, c)$-near neighbor search problem}. The proposed method uses multiple hash functions and hash tables to be able to guarantee a good search quality. Moreover, authors theoretically find the optimal number of hash functions and hash tables in order to have constant hashing probabilities.
+
+The \textbf{Hamming distance} for comparing two \textbf{binary} data strings of equal length is the number of positions at which the corresponding symbols are different.
+\begin{align*}
+\text{dist}_{H}(\mb{x}, \mb{y}) &= \sum_{i}^{d}\abs{x_i - y_i}
+\end{align*} where $x_i, y_i \in \{0, 1\}$ for all $i \in [1,d]$. \citep{indyk1998approximate} defined the LSH function as
+\begin{align}
+H(\mb{x}) &= x_i,  \label{eqn: lsh_hamming}
+\end{align} where $x_i$ is the $i$-th dimension of the point $\mb{x}$ for some $i \in [1, d]$. Therefore, for two points $\mb{x}$ and $\mb{y}$ with a \emph{\textbf{Hamming distance}} of $r$, the probability that they have the same hash value is $$\bP[H(\mb{x}) = H(\mb{y})] = 1 - \frac{r}{d}$$. This LSH function is called \underline{\emph{\textbf{bit sampling}}}. A \emph{random} function $H$ simply selects \emph{\textbf{a random bit}} from the input point. 
+
+\section{Jaccard-based Locality Hashing}
+The  \underline{\textbf{Jaccard distance}} between two sets $A$ and $B$ is defined as
+\begin{align}
+\text{dist}_{J}(A, B) &= \frac{\abs{A \cap B}}{\abs{A \cup B}}  \label{eqn: jaccard_dist}
+\end{align} It is also called \emph{\textbf{set resemblance}} in \citep{indyk1998approximate, broder2000min}.
+
+Assume that for all documents of interest $S \subset [1, \ldots, n]$. The LSH functions that preserve the \textbf{Jaccard distance} \citep{broder2000min} is defined as 
+\begin{align}
+H(A) &= \min_{x_i  \in A}\{\pi(x_i)\},  \label{eqn: lsh_jaccard}
+\end{align} where $x_i \in A \subset S$ and $\pi$ is a \emph{\textbf{random permutation}} on the index set $S$ from the set of \emph{all possible permutations} $\Pi$. Therefore, for two points $A$ and $B$ with a Jaccard similarity of $J$, the probability that they have the same hash value is $$\bP[H(A) = H(B)] = J$$.
+
+Define the function family $\cH$ to be the set of all such functions and let $D$ be the uniform distribution. Given two sets $A, B \subset S$, and  $H(A)=H(B)$, we need to show that the minimizer in $A\cup B$, $x_s:= \arg\min_{x_i  \in A \cup B}\{\pi(x_i)\}$ lies in $A\cap B$, i.e. $x_s \in A\cap B$
+\begin{align*}
+x_s:= \arg\min_{x_i  \in A \cup B}\{\pi(x_i)\} & \\
+\text{since } \min_{x_i  \in A}\{\pi(x_i)\} = \min_{x_i  \in B}\{\pi(x_i)\} \\
+\Rightarrow r = \pi(x_s)= \min_{x_i  \in A}\{\pi(x_i)\} & = \min_{x_i  \in B}\{\pi(x_i)\}\\
+\Rightarrow r =  \min_{x_i  \in A \cap B}\{\pi(x_i)\} &\Rightarrow x_s = \arg\min_{x_i  \in A \cap B}\{\pi(x_i)\}
+\end{align*} As $H$ was chosen uniformly at random, $\bP[H(A) = H(B)] = \bP\{x_s=  \arg\min_{x_i  \in A \cup B}\{\pi(x_i)\}: x_s \in A\cap B, \pi \in D\} = \bP\{A\cap B | A\cup B\} = J$. 
+
+In practice, as in the case of hashing discussed in \citep{broder2000min}, we have to deal with the sad reality that it is impossible to choose $\pi$ uniformly at random in $\Pi$. We are thus led to consider smaller families of permutations that still satisfy the \emph{\textbf{min-wise independence condition}}.
+
+Let $\Pi$ be the set of all permutations of $[n]$. We say that \emph{a family of permutations} $\cF \subset \Pi$ is \emph{\textbf{pair-wise independent}} if for any $\set{x_1, x_2, y_1, y_2} \subset [n]$ with $x_1 \neq x_2$ and $y_1 \neq  y_2$,
+\begin{align*}
+\bP\set{\pi(x_1) = y_1 \;\land\;  \pi(x_2) = y_2} &= \frac{1}{n(n-1)}
+\end{align*} In a similar vein, in this paper, we say that a family of permutations $\cF \subset \Pi$ is exactly \emph{\textbf{min-wise independent}} (or just min-wise independent where the meaning is clear) if for any set $A \subset [n]$ and any $x \in A$, when $\pi$ is chosen at random in $\cF$ we have
+\begin{align*}
+\bP\set{\min\set{\pi(A)} = \pi(x)} &= \frac{1}{\abs{A}}.
+\end{align*} We say that $\cF \subset \Pi$ is \emph{\textbf{k-restricted min-wise independent}} (or just restricted min-wise independent where the meaning is clear) if for any set $A \subseteq [n]$ with $|A| \le k$ and any$x \in A$, when $\pi$ is chosen at random in $\cF$ we have
+\begin{align*}
+\bP\set{\min\set{\pi(A)} = \pi(x)} &= \frac{1}{\abs{A}}, \quad |A| \le k.
+\end{align*} 
+
+%  corresponds exactly to the event that the minimizer of $\pi$ over A∪B lies inside A∩B. {\displaystyle Pr[h(A)=h(B)]=J(A,B)\,}Pr[h(A)=h(B)]=J(A,B) and {\displaystyle (H,D)\,}(H,D) define an LSH scheme for the Jaccard index.
+
+\section{Angular-based Locality Hashing}
+Euclidean distance on a sphere corresponds to the \emph{angular distance} or \emph{\textbf{cosine similarity}}. For $\mb{x}, \mb{y} \in \cS_{d} \subset \bR^{d}$, i.e. $\norm{\mb{x}}{2} = \norm{\mb{y}}{2} = 1$. The  \underline{\emph{\textbf{cosine similarity}}} is defined as
+\begin{align}
+\cos(\theta_{x,y}) &= \frac{\inn{\mb{x}}{\mb{y}}}{\norm{\mb{x}}{2}  \norm{\mb{y}}{2} } \label{eqn: cos_sim}
+\end{align} And the normalized angle, referred to as \underline{\emph{\textbf{angular distance}}}, between any two vectors $\mb{x}, \mb{y} \in \cS_{d} \subset \bR^{d}$ is a formal \emph{distance} \emph{metric} and can be calculated from the cosine similarity.
+\begin{align}
+\text{dist}_{\theta}(\mb{x}, \mb{y}) &= \frac{\theta_{x,y}}{\pi} = \frac{\arccos\paren{\inn{\mb{x}}{\mb{y}}}}{\pi}
+\end{align}
+
+For the \textbf{angular metric}, \citep{chavez2001searching} defined the LSH functions as 
+\begin{align}
+H(\mb{x}) &= \text{sgn}\{\inn{\mb{a}}{\mb{x}}\}, \label{eqn: lsh_angular}
+\end{align} where $\text{sgn}(\cdot) \in \{-1, 1\}$ is the \emph{\textbf{sign function}} and $\mb{a}$ is a \emph{random vector} drawn from the \textbf{Normal distribution}. In this case, for two points $\mb{x}$ and $\mb{y}$ with $\theta_{x,y}$ defined as the angle between them, the probability that they have the same hash value is $$\bP[H(\mb{x}) = H(\mb{y})] = 1 - \frac{\theta_{x,y}}{d}$$.
+
+\section{Minkowski-based LSH Techniques}
+The $\ell_{p}$ norm is 
+\begin{align*}
+\norm{\mb{x}}{p} &= \paren{\sum_{i}\abs{x}^{p}}^{\frac{1}{p}}
+\end{align*}  A distribution $D$ over $\cR$ is called \emph{\textbf{$p$-stable}}, if there exists $p \ge 0$ such that for any $n$ real numbers $v_1, \ldots, v_n$ and i.i.d. variables $X_1,\ldots, X_n$ with distribution $D$, the random variable $\sum_{i}v_i\,X_i$ has \textbf{the same distribution} as the variable  $\norm{\mb{v}}{p}\,X =(\sum_{i}\abs{x}^{p})^{\frac{1}{p}}X$, where $X$ is a random variable with distribution $D$. 
+\begin{itemize}
+\item \emph{The Cauchy distribution} $D_C$, defined by the density function
+\begin{align*}
+f_{1}(x) &=\frac{1}{\pi} \frac{1}{1 + x^2}
+\end{align*} is \textbf{1-stable}
+\item \emph{The Gaussian (normal) distribution $D_G$}, defined by the density function
+\begin{align*}
+f_{2}(x) &= \frac{1}{\sqrt{2\pi}}\exp\paren{-\frac{x^2}{2}}
+\end{align*} is \textbf{2-stable}
+\end{itemize}
+
+
+For the $\ell_{p}$ norm,  \citep{datar2004locality} defined the LSH functions as 
+\begin{align}
+H_{\mb{a}, b}(\mb{x}) &= \floor{\frac{\inn{\mb{a}}{\mb{x}} + b}{w}} \label{eqn: lsh_lp}
+\end{align}
+where $\mb{a}$ is a $d$-dimensional random vector chosen from the standard \emph{\textbf{$p$-stable distribution}} and $b$ is a real number chosen uniformly from $[0, w)$, such that $w$ is the \textbf{\emph{width}} of the hash bucket. For two points $\mb{x}$ and $\mb{y}$ with a $\ell_{p}$ distance of $r$, the probability that they have the same hash value is $$\bP[H(\mb{x}) = H(\mb{y})] = \int_{0}^{w}\frac{1}{r}f_{p}\paren{\frac{t}{r}}\paren{1- \frac{t}{w}}dt.$$ Here, $f_{p}\paren{t}$ is the density function of the $p$-stable distribution.
+
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{book_reference.bib}
+\end{document}

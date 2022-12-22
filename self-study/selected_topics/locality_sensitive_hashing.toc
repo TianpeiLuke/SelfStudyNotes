@@ -1,0 +1,5 @@
+\contentsline {section}{\numberline {1}Definitions of locality sensitive hashing}{2}
+\contentsline {section}{\numberline {2}Hamming-based Locality Hashing}{2}
+\contentsline {section}{\numberline {3}Jaccard-based Locality Hashing}{3}
+\contentsline {section}{\numberline {4}Angular-based Locality Hashing}{4}
+\contentsline {section}{\numberline {5}Minkowski-based LSH Techniques}{4}
