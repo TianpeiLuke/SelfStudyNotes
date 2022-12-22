@@ -1,0 +1,558 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs, dsfont}
+\usepackage{tabularx}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Summary: essential in differential geometry}
+\author{ Tianpei Xie}
+\date{ Jun. 12th., 2015 }
+\maketitle
+\tableofcontents
+\newpage
+\section{Concepts}
+\subsection{Curves and Surfaces}
+\begin{itemize}
+\item The definition of \emph{regular parameterized curve} $\alpha(s)$ and definition of arc length $L(\alpha)$. 
+\item The concept of \emph{curvature} $k$, \emph{torsion} $\tau$ with the tangent vector $\mb{t}$,  \emph{normal vector} $\mb{n}$, \emph{binormal vector} $\mb{b} = \mb{t}\wedge \mb{n}$. 
+\item The \emph{Frenet trihedron} $(\mb{t}(s), \mb{n}(s), \mb{b}(s))$ and a system of differential equations (\emph{Frenet formula})
+
+\item The concept of \emph{osculating plane} $(\mb{t}, \mb{n})$, \emph{normal plane} $(\mb{n}, \mb{b})$ and \emph{rectifying plane} $(\mb{t}, \mb{b})$.\\[5pt]
+
+\item The definition of a \emph{regular} surface $\cS$ in $\bR^{3}$, \emph{parameterization}, system of coordinates, coordinate neighborhood.
+
+\item The change of coordinates, Jacobian determinant and \emph{diffeomorphism}.
+
+\item The definition of tangent space $T_{p}\cS$ via a family of embedded curves $\set{\alpha(s)}\subset \cS$ and the basis of tangent space $\set{\mb{x}_{u}, \mb{x}_{v}}$ under the parameterization $\mb{x}(u,v)$ of $p$.
+
+\item The definition of the \emph{differential} of $f: \cS_{1} \rightarrow \cS_{2}$ on surface $\cS_{1}$ as linear mapping $df: T_{p}\cS_{1}\rightarrow T_{p}\cS_{2}$.
+
+\item The preimage of a map, \emph{regular value}, \emph{critical point}, critical value, regular point.  
+\end{itemize}
+\subsection{Vector fields}
+\begin{itemize}
+\item The definition of (tangent) vector field on the surface and the differentiable vector field;
+\item The definition of trajectory of vector field and the solution of the system of first-order differential equations;
+\item The uniqueness and existence of the trajectory, given initial condition;
+\item The definition of the first integral of the vector field;
+\item The derivative of function relative to vector field; the vector field as an operator on space of smooth functions $\mathbb{C}^{\infty}(U)$
+\begin{align*}
+\mb{w}(u,v) &= a(u,v)\partdiff{}{u} + b(u,v)\partdiff{}{v}\\
+\mb{w}(f) &= \rlat{\frac{d}{dt}\paren{f\circ \alpha}}{t=0} = a(u,v)\partdiff{f}{u} + b(u,v)\partdiff{f}{v}
+\end{align*}
+\item The existence of local (orthogonal) parameterization given a set of independent vector fields or fields of directions
+\item The field of directions as the equivalence class of vector fields; the integral curve of a field of directions;
+\item The Lie bracket $[\mb{w}, \mb{v}]\equiv \mb{w\,v} - \mb{v\,w}$ as operator for $f\,g$ functions. 
+\end{itemize}
+
+
+\subsection{Local and Intrinsic geometry of surface}
+\begin{itemize}
+\item The \emph{Gauss map} $N: \cS \rightarrow \bS^{2}$ associates each point $p\in \cS$, the \emph{unit} normal vector $N(p)$ to the tangent plane $T_{p}\cS$ as $N(p) = \mb{x}_{u}\wedge \mb{x}_{v} /\norm{\mb{x}_{u}\wedge \mb{x}_{v}}{}$.
+
+\item The \emph{shape operator} on $T_{p}\cS$ as the differential of Gauss map $dN_{p}: T_{p}\cS \rightarrow T_{p}\cS$. Motivated as the rate of change of the unit normal vectors $N(p)$ along a given curve $\alpha$. The shape operator $dN_{p}$ is \emph{self-adjoint}. \\[10pt]
+
+\item The inner product  $\inn{\cdot}{\cdot}_{p}$ on tangent plane $T_{p}\cS$. 
+
+\item The concept of \emph{isometry} as the property of transformation that preserving the inner product (length and angle).
+
+\item The \emph{first fundamental form} of a regular surface $\cS\subset \bR^{3}$ at $p\in \cS$ is defined as a  quadratic form,  $I_{p}: T_{p}S \rightarrow \bR$ given by 
+\begin{align*}
+I_{p}(\mb{w}) &= \inn{w}{w}_{p} = \norm{w}{2}^{2} \ge 0\; \; \mb{w}\in T_{p}S.
+\end{align*}
+
+\item  The quadratic form $\Pi_{p}$ defined in $T_{p}S$ by $\Pi_{p}(\mb{v}) = -\inn{dN_{p}(\mb{v})}{\mb{v}}$ is called the \emph{second fundamental form} of $\cS$ at $p$, where $dN_{p}$ is the differential of Gauss map at $p$, referred as the shape operator.  
+
+\item The \emph{Christoffel symbols} $\Gamma_{i,j}^{k},\; i,j,k=1,2$ as the linear coefficients in representing the tangential component of the second-order derivatives of parameterization $\mb{x}_{uu}, \mb{x}_{uv}, \mb{x}_{vv}$ under the basis $\set{\mb{x}_{u}, \mb{x}_{v}}$ in $T_{p}\cS$.
+
+\item The \emph{Gaussian curvature} $\mb{K} = \det\paren{dN_{p}}$ as the determinant of the shape operator. 
+
+\item The quantity that only depends on the first fundamental form is \emph{invariant} under isometry, or that is \emph{intrinsic} to the local \emph{geometry} of the surface.\\
+
+\item  The intuition behind the coefficients of first and second fundamental form and the \emph{Christoffel symbols}
+\begin{enumerate}
+\item $E,F,G$ are quantities related to the \emph{first-order derivatives} of the coordinate curve (metric term in \emph{unit} velocity field);
+
+\item $e,f,g$ determines the \emph{normal component of the second-order derivatives} of the coordinate curve along $\mb{N}$;
+
+\item The Christoffel symbols  $\Gamma_{i,j}^{k}$ determines  the projection of the second-order derivatives of the coordinate curve, or the derivative of the tangent vector field along each basis of the tangent space; that is, they determine the \emph{tangential component of the second-order derivatives} of the coordinate curve. It is a function of $E,F,G$ and its first derivatives. 
+
+
+\item The Gaussian curvature by Gaussian formula is related to the third-order derivatives of the coordinate curve (i.e. the differential of the Christoffel symbol). 
+\end{enumerate}
+
+\item The Christoffel symbols can be obtained via the coefficients of the first fundamental form and its derivatives.  
+
+\item The Gauss Theorem states that the Gaussian curvature can be determined by the Christoffel symbols and their derivatives, which is invariant under isometries. \\[10pt]
+
+
+\item The concept of normal curvature $k_{n}$ as the geometric interpretation of the second fundamental form. 
+
+\item The concept of the principal curvature $k_{\max}, k_{\min}$ and principal directions and the notion like the curve of curvature. 
+
+\item The classification of the local geometry at a point via the Gaussian curvature
+\begin{itemize}
+\item Elliptic, if $\mb{K}= \det\paren{dN_{p}} >0$; e.g. sphere, All curves passing through an $\sim$ point have their normal vector pointing towards the same side of the tangent plane.
+
+\item Hyperbolic, if $\mb{K}=\det\paren{dN_{p}} <0$; $\sim $ normal vector pointing towards the opposite side of the tangent plane.
+
+\item Parabolic, if  $\mb{K}=\det\paren{dN_{p}} =0$ but $dN_{p}\neq 0$; e.g. the cylinder, one of the principal curvature is nonzero. 
+
+\item Planar, if $dN_{p} = 0$. Note: may not be in a plane.   
+\end{itemize}\vspace{15pt}
+
+
+\item The quantities that depend only on the intrinsic geometry of the surface
+\begin{enumerate}
+\item The coefficients of the first and second fundamental form, $E,F,G, e,f,g$;
+\item The Christoffel symbols $\Gamma_{i,j}^{k}$;
+\item The Gaussian curvature $\mb{K}$;
+\item The covariant derivative $\nabla_{\mb{z}}\mb{w}$ and the notion of affine connection $\nabla$;
+\item The trajectory of the geodesic $\gamma$ via $\nabla_{\dot{\gamma}}\dot{\gamma} = 0$.
+\end{enumerate}
+\end{itemize}
+
+\subsection{Parallel transport and geodesic}
+\begin{itemize}
+\item The definition of differentiable \emph{vector field} $\mb{w}(p) = \sum_{k}w_{k}(\mb{e}_{k})_{p}$ for $\mb{e}_{k} = \mb{x}_{\xi_{k}}$ in the \emph{tangent bundle} $T\cS  = \bigcup_{p\in \cS}\set{p}\times T_{p}\cS$. 
+
+\item In regular surface, the \emph{covariant derivative} $\frac{D\mb{w}}{dt}\equiv \nabla_{\mb{v}}\mb{w}$ is seen as \emph{tangential projection} of the Euclidean derivative of the field $\mb{w}$ along a curve $\alpha$ with $\mb{v} = \dot{\alpha}(0)$. The operator $\nabla$ is a differential operator on the space of vector fields. 
+
+\item An important characteristic when tangent space rolls on the surface: the origin (the contact point) will move above the surface, so the\emph{ basis vector} $\set{\mb{x}_{u}, \mb{x}_{v}}$ is a \emph{smooth function} of parameterization.
+
+\item The covariant derivative satisfies a set of four properties for affine connections, invariant of inner product and symmetry of Christoffel symbols.
+
+\item The intuition: make a connection of vector field $\mb{w}$ in tangent space $T_{p}\cS$ to $T_{q}\cS$ of different points along a curve. \\[5pt]
+
+\item The notion of \emph{parallel vector field} along a curve, $\nabla_{\dot{\alpha}(0)}\mb{w} = 0$.
+
+\item The definition of \emph{parallel transport} of vector field $\mb{w}(p)$ in $T_{p}\cS$ to $\mb{w}(q)$ in $T_{q}\cS$.
+
+\item Given a parallel unit vector field $\mb{v}$ along a curve, we can compute the infinitesimal parallel transport of the other unit vector field $\mb{w}$, $\nabla_{\dot{\alpha}(0)}\mb{w}$ via the differential of the angle from $\mb{v}$ to $\mb{w}$ along the curve. 
+
+
+\item On surface, the covariant derivative equivalently define an affine connection and is the infinitesimal parallel transport.
+
+\item Given a Riemannian metric, one can determine a natural connection called \emph{Levi-Civita connection}. \\[10pt]
+
+\item Define $k_{g} = \inn{d\dot{\alpha}(t)/dt}{\mb{N} \wedge \dot{\alpha}}$ is the \emph{geodesic curvature} and 
+$k^{2} = k_{n}^{2} + k_{g}^{2}.$
+
+\item The curve $\gamma$ on $\cS$ is said to be \emph{geodesic} at $t\in I$ if $\nabla_{\dot{\gamma}}\dot{\gamma} = 0$, its velocity field is parallel along the curve.
+
+\item The trajectory of geodesic is \emph{uniquely} determined via a set of \emph{second-order ordinary differential equations} with coefficients as the Christoffel symbols. 
+
+\item The curve that \emph{minimize} the arc length joins two point is the geodesic.\\[10pt]
+
+\item Given a point $p$ and the direction $\mb{v} = \dot{\alpha}$, at local neighborhood $U\ni p$, there exists a unique geodesic from $p$ to any point $q\in U$ satisfies $\gamma(0)=p, \gamma(t_{1}) = q, \dot{\gamma}(0) = \mb{v}$.
+
+\item The definition of \emph{exponential map} at $p$ as $\exp_{p}: T_{p}\cS \rightarrow \cS$ as $\exp_{p}(\mb{v}) = \gamma(1,\mb{v})$ and $\exp_{p}(0) = p$, where $\gamma(1,\mb{v}) = \gamma(\norm{\mb{v}}{}, \mb{v}/\norm{v}{})$ is the point $\gamma(1)$ for the geodesic with initial value $\gamma(0) = p$ and $\dot{\gamma}(0) = \mb{v}$.
+
+\item The exponential map is a \emph{diffeomorphism} in $B_{\epsilon} \subset  T_{p}\cS$, $(d\exp_{p})_{0}(\mb{v}) = \mb{v}, \forall \mb{v}\in B_{\epsilon}$, and thus defines a parameterization on $\cS$.
+
+\item The \emph{geodesic polar coordinate} $\exp_{p}(\rho_{0}, \theta_{0}) = q$ with $p$ as the origin is given by intersection of the  \emph{geodesic circle} $\exp_{p}(\rho_{0}, \theta(t))$ and the \emph{radical geodesic} $\exp_{p}(\rho(t), \theta_{0})$.
+
+\item The geodesic polar coordinate system is orthogonal with $E=1,F=0$, $\lim_{\rho\rightarrow 0}G = 0$, $\lim_{\rho\rightarrow 0}(\sqrt{G})_{\rho} = 1 $.
+\end{itemize}
+
+\subsection{The Gauss-Bonnet Theorem and the non-Euclidean geometry}
+\begin{itemize}
+\item \begin{theorem}\label{thm: gauss_bonnet_local}  (\textbf{Gauss-Bonnet Theorem (Local)}) \citep{do1976differential}\\
+Let $\mb{x}: U \rightarrow \cS$ be an \textbf{isothermal parametrization} (i.e., $F = 0, E = G = \lambda^2(u, v)$) of an oriented surface $\cS$, where $U \subset \cR^2$ is \textbf{homeomorphic} to an \textbf{open disk} and $\mb{x}$ is compatible with the orientation of $\cS$. Let $\cR \subset \mb{x}(U)$ be a \textbf{simple region} of $\cS$ and let $\alpha: I \rightarrow \cS$ be such that  $\partial \cR = \alpha(I)$. Assume that $\alpha$ is \textbf{positively oriented}, parametrized by arc length $s$, and let $\alpha(s_0),\ldots, \alpha(s_k)$ and $\theta_0,\ldots,\theta_k$ be, respectively, the vertices and the \textbf{external angles} of $\alpha$. Then
+\begin{align}
+\sum_{i=1}^{k}\int_{s_{i}}^{s_{i+1}}k_{g}(s)ds + \iint_{\cR}\mb{K}d\sigma + \sum_{i=1}^{k}\theta_{i} &= 2\pi \label{eqn: gauss_bonnet}
+\end{align} where $k_g(s)$ is the \textbf{geodesic curvature} of the regular arcs of $\alpha$ and $\mb{K}$ is the
+\textbf{Gaussian curvature} of $\cS$.
+\end{theorem}
+
+\item \begin{remark}
+It is seen that the techniques used in the proof of this theorem may also be used to give an interpretation of the \underline{\textbf{Gaussian curvature}} in terms of \underline{\emph{\textbf{parallelism}}}. 
+
+Let $\mb{x}: U \rightarrow \cS$ be an \textbf{isothermal parametrization} (i.e., $F = 0, E = G = \lambda^2(u, v)$) at point $p \in \cS$ and let $\cR \subset \mb{x}(U)$ be a \emph{simple} region \emph{without vertices}, containing $p$ in its interior. Let $\alpha: [0,1] \rightarrow \mb{x}(U)$ be a curve parametrized by arc length $s$ such that the trace of $\alpha$ is the boundary of $\cR$. Let $\mb{w}_0$ be a unit vector \emph{\textbf{tangent}} to $\cS$ at $\alpha(0)$ and let $\mb{w}(s)$, $s \in [0, 1]$, be the \emph{\textbf{parallel transport}} of $\mb{w}_0$ \emph{along} $\alpha$. By using representation of algebraic value in terms of $E,F,G$ and the Gauss-Green theorem in the $uv$ plane, we obtain
+\begin{align*}
+ 0 &= \int_{0}^{1}\frac{D\mb{w}}{ds}\,ds \\
+ &= \int_{0}^{1} \frac{1}{2\sqrt{EG}}\set{G_{u}\frac{dv}{ds} - E_{v}\frac{du}{ds}}ds +  \int_{0}^{1}\frac{d\varphi}{ds}ds\\
+ &= -\iint_{\cR}\mb{K}d\sigma + \varphi(1) - \varphi(0)
+\end{align*} where $\varphi = \varphi(s)$ is a differentiable \emph{determination} of the \emph{\textbf{angle}} from $\mb{x}_u$ to $\mb{w}(s)$.
+
+It follows that $\varphi(1) - \varphi(0) = \Delta \varphi$ is given by
+\begin{align}
+ \Delta \varphi &= \iint_{\cR}\mb{K}d\sigma \label{eqn: gaussian_curvature_angle_diff}
+\end{align}
+
+Now, $\Delta \varphi$ does not depend on the choice of $\mb{w}_0$, and it follows from the expression above that $\Delta \varphi$ does not depend on the choice of $\alpha(0)$ either. By taking the limit
+\begin{align*}
+\lim_{\cR \rightarrow p}\frac{\Delta \varphi}{A(\cR)} &= \mb{K}(p),
+\end{align*} where $A(\cR)$ denotes the \emph{\textbf{area}} of the region $\cR$, we obtain the desired interpretation of $\mb{K}$.
+\end{remark}
+
+\item Given a triangulation $J$ of a regular region $\cR \subset \cS$  of a surface $\cS$, we shall denote by $F$ the \emph{number of triangles (\textbf{faces})}, by $E$ \emph{the number of sides (\textbf{edges})}, and by $V$ \emph{the number of \textbf{vertices} of the triangulation}. The number
+\begin{align*}
+F - E + V &= \chi
+\end{align*} is called \emph{\textbf{the Euler-Poincar\'e characteristic of the triangulation}}.
+
+\item \begin{proposition}
+If $\cR \subset \cS$ is a regular region of a surface $\cS$, the \textbf{the Euler-Poincar\'e characteristic} does \textbf{not} depend on the \textbf{triangulation} of $\cR$. It is convenient, therefore, to denote it by $\chi(\cR)$
+\end{proposition}
+
+\item \begin{proposition}
+\textbf{Every regular region} of a regular surface admits a \textbf{triangulation}.
+\end{proposition}
+
+\item \begin{theorem}\label{thm: gauss_bonnet_global} (\textbf{Gauss-Bonnet Theorem (Global)}) \citep{do1976differential}\\
+Let $\cR \subset \cS$  be a \textbf{regular region} of an oriented surface and let $C_1,\ldots, C_n$ be the closed, simple, piece-wise regular curves which form the \textbf{boundary} $\partial \cR$ of $\cR$. Suppose that each $C_i$ is positively oriented and let $\theta_0,\ldots,\theta_p$ be the set of \textbf{all external angles of the curves} $C_1,\ldots, C_n$. Then
+\begin{align}
+\sum_{i=1}^{n}\int_{C_{i}}k_{g}(s)ds + \iint_{\cR}\mb{K}d\sigma + \sum_{i=1}^{p}\theta_{i} &= 2\pi \,\chi(\cR) \label{eqn: gauss_bonnet_global}
+\end{align} where $s$ denotes the arc length of $C_i$, and the integral over $C_i$ means the sum of integrals in every regular arc of $C_i$.
+\end{theorem}
+
+\item \begin{proposition} 
+A \textbf{compact} surface of \underline{\textbf{positive curvature}} is \textbf{homeomorphic} to a sphere.
+\end{proposition}
+
+\item \begin{proposition}
+Let $\cS$ be an orientable surface of \underline{\textbf{negative or zero curvature}}. Then two geodesics $\gamma_1$ and $\gamma_2$ which start from a point $p \in \cS$ \textbf{cannot meet again} at a point $q \in \cS$ in such a way that the \textbf{traces} of $\gamma_1$ and $\gamma_2$ constitute the \textbf{boundary} of a simple region $\cR$ of $\cS$.
+\end{proposition}
+
+\item \begin{proposition}
+If there exist two simple \textbf{closed} \textbf{geodesics} $\Gamma_1$ and $\Gamma_2$ on a \textbf{compact}, connected surface $\cS$ of \textbf{positive curvature}, then $\Gamma_1$ and $\Gamma_2$  \textbf{intersect}.
+\end{proposition}
+
+\item \begin{remark} (\textbf{\emph{Non-Euclidean Geometry}})\\
+Let $T$ be a \textbf{geodesic triangle} (that is, the sides of $T$ are \textbf{geodesics}) in an oriented surface $\cS$. Assume that Gauss curvature $\mb{K}$ does not change sign in $T$. Let $\theta_1, \theta_2, \theta_3$ be the \textbf{external angles} of $T$ and let $\varphi_1 = \pi - \theta_1$,  $\varphi_2 = \pi - \theta_2$,  $\varphi_3 = \pi - \theta_3$ be its \textbf{interior angles}. By the Gauss-Bonnet theorem,
+\begin{align*}
+\iint_{T}\mb{K}d\sigma + \sum_{i=1}^{3}\theta_i &= 2\pi\,
+\end{align*}
+Thus,
+\begin{align}
+\iint_{T}\mb{K}d\sigma &= 2\pi- \sum_{i=1}^{3}\theta_i = -\pi + \sum_{i=1}^{3}\varphi_{i} \label{eqn: non_euclidean_sum_interior_angles}
+\end{align}
+It follows that the sum of the interior angles, $\sum_{i=1}^{3}\varphi_{i}$, of a geodesic triangle is
+\begin{enumerate}
+\item Equal to $\pi$ if $\mb{K} = 0$. (i.e. \textbf{plane})
+\item Greater than $\pi$ if $\mb{K} > 0$. (i.e. \textbf{elliptic}) 
+\item Smaller than $\pi$ if $\mb{K} < 0$. (i.e. \textbf{hyperbolic}) 
+\end{enumerate}
+
+Furthermore, the difference $\sum_{i=1}^{3}\varphi_{i} - \pi$ (the \emph{\textbf{excess}} of $T$) is given precisely  by $\iint_{T}\mb{K}d\sigma$. If $\mb{K} \neq 0$ on $T$, this is the \emph{\textbf{area} of \textbf{image}} $N(T)$ of $T$ by the \emph{\textbf{Gauss map}} $N: \cS \rightarrow \bS^2$. This was the form in which Gauss himself stated his theorem: 
+
+\emph{\textbf{The excess of a geodesic triangle $T$ is equal to the area of its spherical image $N(T)$}}.
+
+The above fact is related to a historical controversy about the possibility of proving Euclid’s fifth axiom (the axiom of the parallels), from which it follows that the sum of the interior angles of any triangle is equal to $\pi$. 
+\end{remark} 
+\end{itemize}
+
+\newpage
+\section{Formula}
+\begin{itemize}
+\item The cross product (vector product) of two vectors $\mb{u}$ and $\mb{v}$ under the basis $\set{\mb{e}_{1}, \mb{e}_{2}, \mb{e}_{3}}$ is denoted as $\mb{u}\wedge \mb{v}$ and computed as
+\begin{align}
+\inn{\mb{u}\wedge \mb{v}}{\mb{w}} &= \det\abs{\begin{array}{ccc}
+u_{1} & u_{2} & u_{3} \\ 
+v_{1} & v_{2} & v_{3} \\ 
+w_{1} & w_{2} & w_{3}
+\end{array} }  \equiv \det(\mb{u, v, w})\label{eqn: cross_prod}
+\end{align}
+and
+\begin{align}
+\mb{u}\wedge \mb{v} \equiv \mb{u} \times \mb{v} &\equiv \abs{\begin{array}{cc}
+u_{2} & u_{3} \\ 
+v_{2} & v_{3}
+\end{array} }\mb{e}_{1}
+- 
+\abs{\begin{array}{cc}
+u_{1} & u_{3} \\ 
+v_{1} & v_{3}
+\end{array} }\mb{e}_{2}
++
+\abs{\begin{array}{cc}
+u_{1} & u_{2} \\ 
+v_{1} & v_{2}
+\end{array} }\mb{e}_{3}  \label{eqn: cross_prod2}
+\end{align}
+
+\item The Frenet trihedron $(\mb{t}(s), \mb{n}(s), \mb{b}(s))$ and a system of differential equations (Frenet formula)
+\begin{align}
+\mb{t}' &= k\,\mb{n}\nonumber\\
+\mb{n}' &= -k\,\mb{t} - \tau\,\mb{b}\nonumber\\
+\mb{b}' &= \tau\,\mb{n} \label{eqn: Frenet_formula}
+\end{align}
+
+\item (Tangent vector via basis)\\
+ For $\dot{\alpha}(0)\equiv \mb{w} \in T_{p}S$, for some $\alpha = \mb{x}\circ \mb{\beta}$, where  $\mb{\beta}(t) = (u(t), v(t))$, with $\mb{\beta}(0) = q = \mb{x}^{-1}(p)$. Then 
+\begin{align}
+\dot{\alpha}(0)&= \frac{d}{dt}(\mb{x}\circ\mb{\beta})(0)\\
+&=\mb{x}_{u}\dot{u}(0) + \mb{x}_{v}\dot{v}(0) \label{eqn: tangent_line_coord}
+\end{align} 
+Thus under the basis $(\mb{x}_{u}, \mb{x}_{v})$ of $T_{p}S$, the coordinate of $\mb{w}$ in $T_{p}S$ is $(\dot{u}(0), \dot{v}(0))$, and $\mb{w}$ is the velocity of  the curve $\alpha$ is represented as $(u(t), v(t))$ in parameterization $\mb{x}$ at $t=0$. 
+
+\item (Differential of map via basis)\\
+ If $\mb{w} = (\dot{u}(0), \dot{v}(0))$ in $T_{p}(S_{1})$,  and $f(u,v) = (f_{1}(u,v), f_{2}(u,v))$, with $\alpha(t) = (u(t), v(t))$, then the tangent of $\beta = f \circ \alpha$ at $f(p)$ is given as 
+\begin{align}
+ \dot{\beta}(0)= df_{p}(\mb{w}) &= \brac{\begin{array}{cc}
+ \dpartdiff{f_{1}}{u} & \dpartdiff{f_{1}}{v} \\ [8pt]
+ \dpartdiff{f_{2}}{u} & \dpartdiff{f_{2}}{v}
+ \end{array} } \brac{\begin{array}{c}
+ \dot{u}(0) \\ 
+ \dot{v}(0)
+ \end{array} } \label{eqn: diff_map_coord}
+\end{align}
+Thus $df_{p}$ as a linear mapping under coordinates $(\mb{x}_{u}, \mb{x}_{v})$ in $T_{p}S$ is given as the matrix 
+\begin{align*}
+df_{p}  &= \brac{\begin{array}{cc}
+ \partdiff{f_{1}}{u} & \partdiff{f_{1}}{v} \\[3pt] 
+ \partdiff{f_{2}}{u} & \partdiff{f_{2}}{v}
+ \end{array} }.
+\end{align*} \vspace{15pt}
+
+\item The inner product of $\mb{w} = (\dot{u}(0), \dot{v}(0)) \in T_{p}\cS$ with itself gives
+\begin{align*}
+I_{p}(\mb{w}) &= \inn{w}{w}_{p} = \norm{w}{2}^{2}\\
+&= E\,\paren{\dot{u}(0)}^{2} + 2\,F\paren{\dot{u}(0)\dot{v}(0)} + G\paren{\dot{v}(0)}^{2}
+\end{align*}
+
+
+
+
+\item The coefficients for the first and second fundamental form
+\begin{align}
+E(u,v) &= \inn{\mb{x}_{u}}{\mb{x}_{u}} \nonumber\\
+F(u,v) &= \inn{\mb{x}_{u}}{\mb{x}_{v}} \nonumber\\
+G(u,v) &= \inn{\mb{x}_{v}}{\mb{x}_{v}} \nonumber \\
+e(u,v)  &=  - \inn{N_{u}}{\mb{x}_{u}} = \inn{N}{\mb{x}_{uu}} \nonumber\\
+f(u, v)&= - \inn{N_{u}}{\mb{x}_{v}} =  \inn{N}{\mb{x}_{vu}} =  \inn{N}{\mb{x}_{uv}} =  -\inn{N_{v}}{\mb{x}_{u}}\nonumber\\
+g(u, v)&=   - \inn{N_{v}}{\mb{x}_{v}} = \inn{N}{\mb{x}_{vv}} \label{eqn: coeff_first_sec_fund_form}
+\end{align} 
+
+\item The equation for Gaussian curvature 
+\begin{align}
+\mb{K} &=  \frac{eg- f^{2}}{EG- F^{2}} \label{eqn: Gaussian_curvature}
+\end{align} \vspace{10pt}
+
+
+
+\item The local basis of $\bR^{3}$ given by the trihedron  $(\mb{x}_{u}, \mb{x}_{v}, \mb{N})$ 
+\begin{align}
+\partdiff{\mb{x}_{u}}{u} = \mb{x}_{uu} &= \Gamma_{11}^{1}\mb{x}_{u} +  \Gamma_{11}^{2}\mb{x}_{v} + e\,N\nonumber\\
+\partdiff{\mb{x}_{u}}{v} = \mb{x}_{uv} &= \Gamma_{12}^{1}\mb{x}_{u} +  \Gamma_{12}^{2}\mb{x}_{v} + f\,N\nonumber\\
+\partdiff{\mb{x}_{v}}{u} = \mb{x}_{vu} &= \Gamma_{21}^{1}\mb{x}_{u} +  \Gamma_{21}^{2}\mb{x}_{v} + f\,N\nonumber\\
+\partdiff{\mb{x}_{v}}{v} = \mb{x}_{vv} &= \Gamma_{22}^{1}\mb{x}_{u} +  \Gamma_{22}^{2}\mb{x}_{v} + g\,N\nonumber\\
+\partdiff{N}{u} =N_{u} &= a_{11}\mb{x}_{u} +  a_{21}\mb{x}_{v} \nonumber\\
+\partdiff{N}{v} =N_{v} &= a_{12}\mb{x}_{u} +  a_{22}\mb{x}_{v} \label{eqn: Christoffel_eq_1}
+\end{align}
+
+
+\item (The equations of Christoffel symbols via first fundamental form)\\
+\begin{align}
+&\left\{ \begin{array}{ccl}
+\Gamma_{11}^{1}E + \Gamma_{11}^{2}F &= \inn{\mb{x}_{uu}}{\mb{x}_{u}} &= \frac{1}{2}E_{u} \\ 
+\Gamma_{11}^{1}F + \Gamma_{11}^{2}G &= \inn{\mb{x}_{uu}}{\mb{x}_{v}} &= F_{u} - \frac{1}{2}E_{v} 
+\end{array} \right. \nonumber\\
+&\left\{ \begin{array}{ccl}
+\Gamma_{12}^{1}E + \Gamma_{12}^{2}F &= \inn{\mb{x}_{uv}}{\mb{x}_{u}} &= \frac{1}{2}E_{v} \\ 
+\Gamma_{12}^{1}F + \Gamma_{12}^{2}G &= \inn{\mb{x}_{uv}}{\mb{x}_{v}} &= \frac{1}{2}G_{u}  
+\end{array} \right. \nonumber\\
+&\left\{ \begin{array}{ccl}
+\Gamma_{22}^{1}E + \Gamma_{22}^{2}F &= \inn{\mb{x}_{vv}}{\mb{x}_{u}} &=F_{v} - \frac{1}{2}G_{u}  \\ 
+\Gamma_{22}^{1}F + \Gamma_{22}^{2}G &= \inn{\mb{x}_{vv}}{\mb{x}_{v}} &= \frac{1}{2}G_{v}   
+\end{array} \right. \label{eqn: Christoffel_eq_2}
+\end{align}
+
+
+
+\item By solving the equations $\paren{\mb{x}_{vv}}_{u} = \paren{\mb{x}_{uv}}_{v} $, $\paren{\mb{x}_{uu}}_{v} = \paren{\mb{x}_{uv}}_{u}$ and $\mb{N}_{uv} = \mb{N}_{vu}$, one obtain the following equations
+\begin{align}
+\paren{\Gamma_{12}^{2}}_{u}- \paren{\Gamma_{11}^{2}}_{v} - \Gamma_{11}^{1}\Gamma_{12}^{2} - \Gamma_{11}^{2}\Gamma_{22}^{2} + \Gamma_{12}^{1}\Gamma_{11}^{2} +\paren{\Gamma_{12}^{2}}^{2}
+&= -\mb{K}E \nonumber\\
+\paren{\Gamma_{12}^{1}}_{u}-\paren{\Gamma_{11}^{1}}_{v} -   \Gamma_{11}^{2}\Gamma_{22}^{1}  + \Gamma_{12}^{2}\Gamma_{12}^{1}
+&= \mb{K}F \nonumber\\
+ e\Gamma_{12}^{1} + f(\Gamma_{12}^{2} - \Gamma_{11}^{1}) - g\Gamma_{11}^{2}&= e_{v} - f_{u}  \nonumber\\
+ e\Gamma_{22}^{1} + f(\Gamma_{22}^{2} - \Gamma_{12}^{1}) - g\Gamma_{12}^{2}&= f_{v} - g_{u},  \label{eqn: comp_eqn_surface_formula}
+\end{align} 
+where $\mb{K}$ is the Gaussian curvature shown in Gaussian theorem. The first two equations are called the \emph{Gauss formula} and the last two equations are called the \emph{Mainardi-Codazzi equations}.  These four equations are known as the \emph{compatibility equations of the theory of surfaces}. \\[20pt]
+
+ \item In surface in $\bR^{3}$, it is an \emph{affine connection}, satisfies the following properties: for $\mb{w}, \mb{v}, \mb{y}, \mb{z}$ the vector field in $U\subset \cS$ and $f: U \rightarrow \bR$ is a differentiable function in $\cS$; $\nabla_{\mb{y}}\paren{f}$ is the directional derivative of $f$ in the direction of $\mb{y}$, $\lambda, \mu$ are real numbers, 
+\begin{enumerate}
+\item The affine property for vector field 
+ \begin{align*}
+\nabla_{\mb{y}}\paren{\lambda\mb{w}+ \mu\mb{v}} &= \lambda\nabla_{\mb{y}}\paren{\mb{w}}+ \mu\nabla_{\mb{y}}\paren{\mb{v}}; \\
+\nabla_{\lambda\mb{y}+ \mu\mb{z}}\paren{\mb{w}} &= \lambda\nabla_{\mb{y}}\paren{\mb{w}}+ \mu\nabla_{\mb{z}}\paren{\mb{w}}
+\end{align*}
+\item The Leibniz rule
+ \begin{align*}
+\nabla_{\mb{y}}\paren{f\mb{w}} &= \nabla_{\mb{y}}\paren{f}\mb{w}+ f\nabla_{\mb{y}}\paren{\mb{w}};\\
+ \nabla_{f\mb{y}}\paren{\mb{v}} &=  f\nabla_{\mb{y}}\paren{\mb{v}};
+\end{align*}
+\item The metric-preserving property
+\begin{align*}
+\nabla_{\mb{y}}\paren{\inn{\mb{w}}{\mb{v}}} &= \inn{\nabla_{\mb{y}}\paren{\mb{w}}}{\mb{v}} + \inn{\mb{w}}{\nabla_{\mb{y}}\paren{\mb{v}}};
+\end{align*}
+\item The symmetry property
+\begin{align*}
+\nabla_{\mb{e}_{i}}\paren{\mb{e}_{j}} &= \nabla_{\mb{e}_{j}}\paren{\mb{e}_{i}}, \quad \mb{e}_{i} = \mb{x}_{\xi_{i}}\text{ for parameterization }\mb{x}(\xi_{1},\ldots, \xi_{m}).
+\end{align*}
+\end{enumerate}
+The first two properties defines the \emph{affine connection} in $U\subset \cS$. The last two properties associate the connection with the Riemannian metric and guarantee that the Christoffel symbols are symmetric w.r.t. lower indices.  These four properties defines the \emph{unique} connections or covariant derivatives, and parallel transport, geodesic on the surface. \\
+
+\item For $\partial_{k} = \partdiff{}{\xi_{k}}$ as a differential operator and a basis vector field,
+\begin{align*}
+\nabla_{i}\paren{\partial_{j}} \equiv \nabla_{\partial_{i}}\paren{\partial_{j}} &= \Gamma_{i,j}^{k}\partial_{k}
+\end{align*} 
+
+\item Let $\mb{w} = \sum_{k}w_{k}\mb{e}_{k}$ and $\mb{v} = \sum_{k}v_{k}\mb{e}_{k}$ in $T_{p}\cS$, then 
+\begin{align*}
+\nabla_{\mb{v}}\mb{w} &=\sum_{k} \paren{ \sum_{i}v_{i}\paren{\partial_{i}w_{k}} + \sum_{i,j}v_{i}\Gamma_{i,j}^{k}w_{j} }\mb{e}_{k}
+\end{align*}
+or in each component $(\partial_{k} = \partdiff{}{\xi_{k}}\equiv \mb{e}_{k})$
+\begin{align*}
+(\nabla_{\mb{v}}\mb{w}) &= v_{i}\set{\paren{\partial_{i}w_{k}} + \Gamma_{i,j}^{k}w_{j}}\partial_{k},
+\end{align*}
+where we ignore the summation over common indices $i,j,k$. \\
+
+
+
+
+\item Let $\mb{w}$ be a differentiable vector field of \emph{unit} vectors along a parameterized curve $\alpha: I \rightarrow \cS$ on an oriented surface $\cS$. Since $\mb{w}(t), t\in I$ is a unit vector field, $d\mb{w}(t)/dt$ is normal to $\mb{w}(t)$, and therefore, 
+\begin{align*}
+\frac{D\mb{w}}{dt} &= \lambda\,\paren{\mb{N} \wedge \mb{w}(t)},
+\end{align*} 
+where $\lambda = \lambda(t)$ denoted as $\brac{D\mb{w}/dt}$, is called \emph{the algebraic value} of the covariant derivative of $\mb{w}$ at $p$.
+
+Note that $\lambda = \brac{D\mb{w}/dt} = \inn{d\mb{w}(t)/dt}{\mb{N} \wedge \mb{w}}$ and its sign depends on the orientation of the surface. 
+
+
+
+\item Given the Riemannian metric as $\inn{\mb{x}_{\xi_{i}}}{\mb{x}_{\xi_{j}}} = \mb{J}_{i,j}$, one can solve the Christoffel symbols as 
+\begin{align}
+\Gamma_{i,j}^{k} &= \frac{1}{2}\sum_{m}\mb{J}^{k,m}\set{\partdiff{\mb{J}_{j,m}}{\xi_{i}}+ \partdiff{\mb{J}_{m,i}}{\xi_{j}}  - \partdiff{\mb{J}_{i,j}}{\xi_{m}}}, \quad i,j,k=1,2 \label{eqn: Christoffel_metric_expr}
+\end{align}
+where $\sum_{m}\mb{J}^{k,m}\mb{J}_{m,j}=\delta_{k}(j).$
+Therefore, given the Riemannian metric in $\cS$, there exist unique covariant derivative or connection in $\cS$, which is called the \emph{Levi-Civita connection} of \emph{the Riemannian structure}.  \\[10pt]
+
+\item To find the trajectory of the geodesic $\gamma$ under parameterization $\mb{x}(\xi_{1}(t),\ldots, \xi_{n}(t))$, 
+\begin{align}
+\frac{d^{2} \xi^{k}}{dt^{2}} + \sum_{i,j \in \set{1,\ldots,n}}\Gamma_{i,j}^{k}\frac{d\xi^{i}}{dt}\frac{d\xi^{j}}{dt} = 0, \quad k=1,\ldots, n.\label{eqn: geo_diff_eqn_high}
+\end{align}
+Note that $\Gamma_{i,j}^{k},\; i,j,k=1,\ldots,n$ are functions of intrinsic coordinate functions $(\xi_{1}(t),\ldots, \xi_{n}(t)).$\\[10pt]
+
+\item  Consider the Gaussian curvature $\mb{K}(\rho,\theta)$ in a polar system. Since $E(\rho,\theta)=1,F(\rho, \theta)=0$, it means that the following \emph{Gauss-Jacobi equation} is satisfied
+\begin{align}
+\mb{K} &= -\frac{(\sqrt{G})_{\rho\rho}}{\sqrt{G}} \label{eqn: Gauss_Jacobi_formula}
+\end{align}
+In other words, this is the differential equation for $\sqrt{G}(\rho, \theta)$ given the curvature $\mb{K}(\rho, \theta)$.  
+\begin{align}
+(\sqrt{G})_{\rho\rho} + \mb{K}\sqrt{G} = 0 \label{eqn: Gauss_Jacobi_formula2}
+\end{align}
+ For constant $\mb{K}$, the equation \eqref{eqn: Gauss_Jacobi_formula} a linear differential equation of the second order with constant coefficients. 
+
+\item The second covariant derivative $\nabla^{2} f = \nabla\paren{\nabla f}$ for a smooth function $f: \cS \rightarrow \bR$, and it gives as
+\begin{align}
+\nabla^{2} f = \paren{  \partial_{i}\partial_{j} f  - \Gamma_{i,j}^{k}\partial_{k} f } \mb{e}_{i}\wedge \mb{e}_{j}
+\end{align}
+\end{itemize}
+\newpage
+\section{Important theorems}
+\begin{itemize}
+\item \begin{proposition}\label{prop: Gauss_selfadj}
+The differential $dN_{p}:  T_{p}S \rightarrow T_{p}S$ of the Gauss map is a self-adjoint linear map, i.e. $\inn{dN_{p}(\mb{w}_{1})}{\mb{w}_{2}} = \inn{\mb{w}_{1}}{dN_{p}(\mb{w}_{2})}  $ for $\set{\mb{w}_{1}, \mb{w}_{2}}$ any two vectors in $T_{p}S$. 
+\end{proposition}\vspace{10pt}
+
+ \item \begin{theorem}(Meusnier) \label{th: meusnier}\\
+All curves lying on a surface $\cS$ and having at a given point $p\in \cS$ the same tangent line have at this point the same normal curvatures. 
+\end{theorem}\vspace{10pt}
+
+ \item \begin{theorem} \label{th: Gauss_theorem}
+(THEOREMA EGREGIUM, Gauss)\\
+The Gaussian curvature $\mb{K}$ of a surface is invariant by local isometries. 
+\end{theorem}\vspace{10pt}
+
+\item \begin{proposition}\label{prop: para_transp}
+Let $\mb{w}, \mb{v}$ be parallel vector fields along $\alpha: I\rightarrow \cS$. Then $\inn{\mb{w}(t)}{\mb{v}(t)}$ is constant.  In particular, $\abs{\mb{w}(t)}$ and $\abs{\mb{v}(t)}$ are constant, and the angle between $\mb{w}, \text{and }\mb{v}$ is constant. 
+\end{proposition}\vspace{10pt}
+
+ \item \begin{proposition}\label{prop: para_transp_curv}
+Let $\alpha: I\rightarrow \cS$ be a parameterized curve in $\cS$ and let $\mb{w}_{0} \in T_{\alpha(t_{0})}S,\; t_{0}\in I$. There exists a unique parallel vector field $\mb{w}(t)$ along $\alpha(t)$, with $\mb{w}(t_{0}) = \mb{w}_{0}$. 
+\end{proposition}
+
+\item \begin{proposition}\label{prop: geo_unique}
+Given a point $p\in \cS$ and a vector $\mb{w}\in T_{p}(\cS), \mb{w}\neq 0$, there exists an $\epsilon>0$ and a unique parameterized geodesic $\gamma: (-\epsilon, \epsilon) \rightarrow \cS$ such that $\gamma(0)=p$ and $\dot{\gamma}(0) = \mb{w}$.
+\end{proposition}\vspace{15pt}
+
+\item \begin{lemma} \label{lem: cov_deriv_angle}
+Let $\mb{v,w}$ be two differentiable vector fields along the curve $\alpha: I \rightarrow \cS$, with $\abs{\mb{w}(t)} = \abs{\mb{v}(t)} = 1$, $t\in I$. Then 
+\begin{align*}
+\brac{\frac{D\mb{w}}{dt}} - \brac{\frac{D\mb{v}}{dt}} &= \frac{d\phi}{dt},
+\end{align*}
+where $\phi$ is one of the differentiable determination of the angle from $\mb{v}$ to $\mb{w}$.
+\end{lemma}
+
+\item \begin{proposition}\label{prop: alg_value_angle}
+Let $\mb{x}(u,v)$ be an orthogonal parameterization ($F=0$) of a neighborhood of an oriented surface $\cS$, and $\mb{w}(t)$ be a differentiable vector field of unit vectors along the curve $\mb{x}(u(t), v(t))$. Then 
+\begin{align*}
+\brac{\frac{D\mb{w}}{dt}} &= \frac{1}{2\sqrt{EG}}\set{G_{u}\frac{dv}{dt} - E_{v}\frac{du}{dt} } +  \frac{d\phi}{dt},
+\end{align*}
+where $\phi(t)$ is the angle from $\mb{x}_{u}$ to $\mb{w}(t)$ in the given orientation. 
+\end{proposition}\vspace{10pt}
+
+ \item \begin{theorem}\label{thm: exp_map_unique}
+(The dependence of the geodesic on its initial conditions). Given $p\in \cS$, there exists an $\epsilon_{1}>0, \epsilon_{2}>0$ and a differentiable map 
+\begin{align*}
+\gamma: (-\epsilon_{2}, \epsilon_{2}) \times B_{\epsilon_{1}} \rightarrow \cS, \quad  B_{\epsilon_{1}}\subset T_{p}\cS
+\end{align*}
+such that for $\mb{v}\in B_{\epsilon_{1}}, \mb{v}\neq 0$, $t\in (-\epsilon_{2}, \epsilon_{2})$, the curve $t\mapsto \gamma(t,\mb{v})$ is the geodesic of $\cS$ with $\gamma(0,\mb{v}) = p$ and $\dot{\gamma}(0,\mb{v}) = \mb{v}$ and for $\mb{v} =0$, then $\gamma(t,0) = p$.
+\end{theorem}
+
+\item  \begin{proposition}\label{prop: exp_map_diffeomorph}
+The exponential map $\exp_{p}: B_{\epsilon}\subset T_{p}\cS \rightarrow \cS$ is a diffeomorphism in a neighborhood $U\subset B_{\epsilon}$ of the origin $0$ of $T_{p}\cS$. 
+\end{proposition}\vspace{10pt}
+
+ \item \begin{proposition}\label{prop: exp_map_first_fund}
+Let $\mb{x}: (U-\ell)\rightarrow (V-L)$  be a system of geodesic polar coordinates $(\rho, \theta)$. Then the coefficients $E\equiv E(\rho, \theta)$, $F\equiv F(\rho, \theta)$ and $G\equiv G(\rho, \theta)$ of the first fundamental form satisfies the conditions
+\begin{align*}
+E = 1, && F=0, && \lim_{\rho \rightarrow 0}G = 0, && \lim_{\rho\rightarrow 0}(\sqrt{G})_{\rho} = 1.
+\end{align*}
+\end{proposition}\vspace{10pt}
+
+\item \begin{theorem}\label{thm: minding_thm}
+(Minding). Any two regular surfaces with the same constant Gaussian curvature are locally isometric. More precisely, let $\cS_{1}$ and $\cS_{2}$ be two regular surfaces with the same constant curvature $\mb{K}$. Choose points $p_{1}\in \cS_{1}$, $p_{2}\in \cS_{2}$, and orthonormal basis $\set{\mb{e}_{1}, \mb{e}_{2}}\in T_{p_{1}}\cS_{1}$ and $\set{\mb{f}_{1}, \mb{f}_{2}}\in T_{p_{2}}\cS_{2}$. Then there exists neighborhood $V_{1}$ of $p_{1}$, $V_{2}$ of $p_{2}$ and an isometry $\psi: V_{1}\rightarrow V_{2}$ such that $d\psi(\mb{e}_{1}) = \mb{f}_{1} $ and  $d\psi(\mb{e}_{2}) = \mb{f}_{2} $.
+\end{theorem}\vspace{20pt}
+
+
+\item \begin{proposition}\label{prop: regular_minimal_arc}
+(The minimal arc length regular curve joins two points is the geodesic).\\ 
+Let $\alpha: [0,t_{1}]\rightarrow \cS$ is a parameterized regular curve with parameter as the arc length. Suppose that the arc length of $\alpha$ between any two points $t, \tau \in I$ is smaller than or equal to the arc length of any regular parameterized curve joining $\alpha(t), \alpha(\tau)$. Then $\alpha$ is a geodesic. 
+\end{proposition}
+
+\item \begin{proposition}\label{prop: geo_minimal_arc}
+(The geodesic joins two points has the minimal arc length).\\ 
+Let $p$ be a point on a surface $\cS$. Then there exists a neighborhood $W\subset \cS$ of $p$ such that if $\gamma: I\rightarrow W$ is  a parameterized geodesic with $\gamma(0) = p$, $\gamma(t_{1}) = q,\; t_{1}\in I$, and $\alpha: [0,t_{1}]\rightarrow \cS$ is a parameterized regular curve joining $p$ and $q$, we have
+\begin{align*}
+\ell_{\gamma} \le \ell_{\alpha},
+\end{align*}
+where $\ell_{\alpha}$ denotes the arc length of the curve $\alpha$. Moreover, if $\ell_{\gamma} = \ell_{\alpha}$, then the trace of $\gamma$ coincides with the trace of $\alpha$ between $p$ and $q$.
+\end{proposition}
+Note the above proposition holds only locally. It is seen that two nonantipodal points of a sphere may be connected by two meridians of unequal lengths, and only the smallest one satisfies the property. That is, the geodesics, if sufficiently extended, may not be the shortest path between its end points. \\[15pt] 
+
+
+
+\end{itemize}
+\end{document}

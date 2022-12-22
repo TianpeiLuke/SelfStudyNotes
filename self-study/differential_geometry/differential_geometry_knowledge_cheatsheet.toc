@@ -1,0 +1,8 @@
+\contentsline {section}{\numberline {1}Concepts}{2}{}%
+\contentsline {subsection}{\numberline {1.1}Curves and Surfaces}{2}{}%
+\contentsline {subsection}{\numberline {1.2}Vector fields}{2}{}%
+\contentsline {subsection}{\numberline {1.3}Local and Intrinsic geometry of surface}{3}{}%
+\contentsline {subsection}{\numberline {1.4}Parallel transport and geodesic}{4}{}%
+\contentsline {subsection}{\numberline {1.5}The Gauss-Bonnet Theorem and the non-Euclidean geometry}{5}{}%
+\contentsline {section}{\numberline {2}Formula}{8}{}%
+\contentsline {section}{\numberline {3}Important theorems}{12}{}%
