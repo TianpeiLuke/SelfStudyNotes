@@ -6,7 +6,7 @@
 
 ***Elements of Causal Inference: Foundations and Learning Algorithms***, Jonas Peters, Dominik Janzing, and Bernhard Scholkopf
 
-***Causality_Models, Reasoning and Inference***, Judea_Pearl, 2nd
+***Causality: Models, Reasoning and Inference***, Judea_Pearl, 2nd
 
 ***Design of Observational Studies***, P. R. Rosenbaum, 2nd ed, 2020 
 
