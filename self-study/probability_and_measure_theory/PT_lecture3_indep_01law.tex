@@ -1,0 +1,576 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, amscd}
+\usepackage{mathrsfs, dsfont}
+\usepackage[all,cmtip]{xy}
+\usepackage{tikz-cd}
+%\diagramstyle[labelstyle=\scriptstyle]
+\usepackage{tabularx}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Lecture 3: Independence and Zero-One law}
+\author{ Tianpei Xie}
+\date{ Jul. 17th., 2015 }
+\maketitle
+\tableofcontents
+\newpage
+\section{Independence}
+\subsection{Basic Definitions}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Independence for Two Events}})\\
+Suppose  $(\Omega, \srF, \cP)$ is a fixed \emph{probability space}. \emph{\textbf{Events}} $A$, $B \in \srF$ are \underline{\emph{\textbf{independent}}} if
+\begin{align*}
+\cP(A \cap B) = \cP(A) \, \cP(B).
+\end{align*}
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Independence of a Finite Number of Events}})\\
+The events $A_1 \xdotx{,} A_n$ are  \underline{\emph{\textbf{independent}}} if
+\begin{align*}
+\cP\paren{\bigcap_{i \in I} A_i} &= \prod_{i \in I}\cP(A_i), \quad\text{\emph{\textbf{ for all finite }}}I \subseteq \set{1 \xdotx{,} n}. 
+\end{align*}
+\end{definition}
+
+\item \begin{remark}
+In order for $n$ events to be independent, we need 
+\begin{align*}
+\sum_{k=2}^{n}{{n}\choose{k}} = 2^n - n - 1
+\end{align*} equations.
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Alternative Definitions}})\\
+The events $A_1 \xdotx{,} A_n$ are  \underline{\emph{\textbf{independent}}} if
+\begin{align*}
+\cP\paren{\bigcap_{i = 1}^{n} B_i} &= \prod_{i =1}^{n}\cP(B_i)
+\end{align*}
+where for each $i = 1,\xdotx{,} n$, 
+\begin{align*}
+B_i = A\text{ or }\Omega.
+\end{align*}
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{Independent Classes}})\\
+Let $\srC_i \subseteq \srF$, $i = 1 \xdotx{,} n.$ The classes $\srC_i$ are  \underline{\emph{\textbf{independent}}}, if for \emph{any choice} $A_1 \xdotx{,} A_n$, with $A_i \in \srC_i$, $i = 1 \xdotx{,} n$, we have the events $A_1 \xdotx{,} A_n$ \emph{independent events}.
+\end{definition}
+
+\item \begin{proposition} (\textbf{Basic Criterion}) \citep{resnick2013probability}\\
+If for each $i = 1 \xdotx{,} n$, $\srC_i$ is a non-empty class o fevents satisfying
+\begin{enumerate}
+\item $\srC_i$ is a \textbf{$\pi$-system} (closure under finite intersection),
+\item $\srC_i, i = 1 \xdotx{,} n$ are \textbf{independent},
+\end{enumerate}
+then
+\begin{align*}
+\sigma(\srC_1) \xdotx{,} \sigma(\srC_n)
+\end{align*} are \textbf{independent}.
+\end{proposition}
+
+\item \begin{definition} (\textbf{\emph{Arbitrary Number of Independent Classes}}) \\
+Let $T$ be an arbitrary index set. The classes $\srC_t, t \in T$ are \underline{\emph{\textbf{independent families}}} if for \emph{each finite} $I$, $I \subset T$,
+$\{\srC_t, t \in I\}$ is independent.
+\end{definition}
+
+\item \begin{corollary} \citep{resnick2013probability}\\
+If $\srC_t, t \in T$ are non-empty $\pi$-systems that are \textbf{independent}, then $\{\sigma(\srC_t),\, t \in T\}$ are \textbf{independent}.
+\end{corollary}
+\end{itemize}
+
+\subsection{Independent Random Variables}
+\begin{itemize}
+\item \begin{definition}(\emph{\textbf{Independent Random Variables}}) \\
+$\{X_t, t \in T\}$ is an \underline{\emph{\textbf{independent family of random variables}}} if $\{\sigma(X_t),\, t \in T\}$ are \emph{\textbf{independent}} $\sigma$-algebras.
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Indicator Random Variables}}) \\
+Note that $\sigma(\mathds{1}_{A}) = \set{\emptyset, \Omega, A, A^c}$.
+\begin{align*}
+ &\set{\mathds{1}_{A_t}, t\in T} \text{ are independent random variables}\\
+ \Leftrightarrow &\set{A_t, t\in T} \text{ are independent}
+\end{align*}
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{Finite Dimensional Distribution Functions}})\\
+For a family of random variables $\{X_t, t \in T\}$ indexed by a set $T$, the \underline{\emph{\textbf{finite dimensional}}} \underline{\emph{\textbf{distribution functions}}} are \emph{the family of \textbf{multivariate distribution functions}}
+\begin{align*}
+F_J\paren{x_t, t \in T} &= \cP\brac{X_t \le x_t, \forall t\in J}
+\end{align*}
+for all \emph{finite subsets} $J \subset T$.
+\end{definition}
+
+\item \begin{proposition} (\textbf{Factorization Criterion})  \citep{resnick2013probability} \\
+A family of random variables $\{X_t, t \in T\}$ indexed by a set $T$, is \textbf{independent} if and only if for \textbf{all finite} $J \subset T$
+\begin{align*}
+F_J\paren{x_t, t \in T} &= \prod_{t \in J}\cP[X_t \le x_t], \quad \forall x_t \in \bR.
+\end{align*}
+\end{proposition}
+
+\item \begin{remark}
+A family of random variables $\{X_t, t \in T\}$ indexed by a set $T$ above may contain \emph{infinite number of random variables}.
+\end{remark}
+
+\item \begin{corollary} (\textbf{Finite Dimensional Case}) \citep{resnick2013probability} \\
+The finite collection of random variables $X_1 \xdotx{,} X_k$ is \textbf{independent} if and only if
+\begin{align*}
+\cP\brac{X_1 \le x_1 \xdotx{,} X_k \le x_k} &= \prod_{i =1}^{k}\cP[X_i \le x_i], \quad \forall x_i \in \bR.
+\end{align*}
+\end{corollary}
+
+\item \begin{corollary}  (\textbf{Finite Dimensional Discrete Case}) \citep{resnick2013probability} \\
+The \textbf{discrete} random variables $X_1 \xdotx{,} X_k$ with \textbf{countable} range $\cR$ are \textbf{independent} if and only if
+\begin{align*}
+\cP\brac{X_i = x_i, i=1 \xdotx{,} k} &= \prod_{i =1}^{k}\cP[X_i = x_i], \quad \forall x_i \in \cR.
+\end{align*}
+\end{corollary}
+\end{itemize}
+\subsection{Examples of Independence}
+
+\subsection{Groupings}
+\begin{itemize}
+\item 
+%\item Let 
+%\begin{align*}
+%\srC'_{n} &= \sigma\paren{X_{1}, \cdots, X_{n}}, n\ge 1.
+%\end{align*}
+%be the $\sigma$-algebra generated by $n-$dimensional cylinder sets
+%\begin{align*}
+%C&= \set{\omega: \paren{X_{1}(\omega), \cdots, X_{n}(\omega)} \in A' },\quad A'\in \cB^{n}
+%\end{align*}
+%Note that $\srC'_{n}\subset \srC'_{n+1}$ and $\srC'= \srC'_{\infty} = \bigvee_{n\ge 1}\srC'_{n}$. Here $A\vee B = \set{\max\set{a,b}, a\in A,b\in B}.$
+\end{itemize}
+
+\section{Independence, Zero-One Laws, Borel-Cantelli Lemma}
+\begin{itemize}
+\item \begin{remark}
+There are several common zero-one laws which identify the possible range of a
+random variable to be trivial. There are also several zero-one laws which provide
+the basis for all proofs of \emph{almost sure convergence}. 
+\end{remark}
+
+\item \begin{remark}
+Note that \emph{\textbf{almost surely convergence}} is the \emph{pointwise convergence} \emph{\textbf{outside a null set}}. That is, \emph{\textbf{the asymptotic behavior} is the same} for \emph{\textbf{every possible outcome}} \emph{besides} those with zero measure.
+\begin{enumerate}
+\item \emph{\textbf{The Borel-Cantelli Lemma}} provides a basic criterion for \emph{almost sure convergence}, i.e. the \emph{\textbf{total sum of probabilities} for \textbf{all events} is \textbf{convergent}}
+\begin{align*}
+\sum_{i=1}^{\infty}\cP\paren{A_i} < \infty. 
+\end{align*} This condition \emph{guarentees that \textbf{the measure of tail support converges to zero}}. The drawback is that it only provides a \emph{\textbf{sufficient condition}} for \emph{the almost sure convergence}. In other word, it says that if the total proabilities of all event is \emph{\textbf{unbounded}}, then we \textit{\textbf{cannot}} say we would not have almost sure convergence.
+
+\item With \emph{\textbf{the independence assumption}}, we have an \underline{\emph{\textbf{almost deterministic criterion}}} on whether or not \emph{asymptotic events} will happen.
+\begin{enumerate}
+\item \emph{\textbf{The Borel Zero-One Law}} directly comes from \emph{the Borel-Cantelli Lemma}, which asserts that \emph{\textbf{with independence assumption}}, \emph{the \textbf{convergence of total probabilities}} is \emph{an almost deterministic criterion} for the almost sure convergence.
+
+\item \emph{\textbf{The Komogorov Zero-One Law}} even claims that \emph{\textbf{all tail events}} follow the same \emph{zero-one law}, i.e. it will \emph{either \textbf{happen almost surely}} or \emph{\textbf{not happen almost surely}}.
+\end{enumerate}
+\end{enumerate}
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Zero-One Law $=$ Almost Deteriminstic Test on Asymptotic of Indenpendent Variables}})\\
+\emph{\textbf{The Komogorov zero-one Law}} provides a siginificant insight on \emph{the \textbf{test} of \textbf{asymptotic behavior} of \textbf{indenpendent} random variables}. Note that \emph{all \textbf{asymptotic statistics} are \textbf{tail random variables}}, i.e. it relies on \emph{\textbf{information collected in the future}}. 
+
+And the conclusion of the zero-one law is that \underline{\emph{the \textbf{test} on the asymptotic statistics}} will have a \underline{\emph{\textbf{deterministic answer}}} ($1$ or $0$) for \emph{\textbf{every possible outcome}} of the experiment \emph{\textbf{excepts}} for outcomes with \emph{zero probability}.
+\end{remark}
+\end{itemize}
+
+\subsection{Borel-Cantelli Lemma}
+\begin{itemize}
+\item \begin{theorem} (\textbf{Borel-Cantelli Lemma}). \citep{resnick2013probability} \\
+Let $\set{A_{n}}$ be any events. If 
+\begin{align*}
+\sum_{n}\cP(A_{n})<\infty,
+\end{align*}  then
+\begin{align*}
+\cP\set{ \limsup\limits_{n\rightarrow \infty} A_{n} } \equiv \cP\paren{\brac{A_{n} \text{ i.o.}}} = 0
+\end{align*}
+where $i.o$ is infinitely often.
+\end{theorem}
+\begin{proof}
+We know that
+\begin{align*}
+\cP\set{ \limsup\limits_{n\rightarrow \infty} A_{n} }&= \cP\set{ \bigcap_{k\ge 1}\bigcup_{n\ge k}A_{n}  }\\
+&= \lim\limits_{k\rightarrow \infty}\cP\set{\bigcup_{n\ge k}A_{n}  } \quad (\text{by downward convergence})\\
+&= \lim\limits_{k\rightarrow \infty}\sum_{n=k}^{\infty}\cP\set{A_{n}}\\
+&\le  \limsup\limits_{k\rightarrow \infty}\sum_{n=k}^{\infty}\cP\set{A_{n}} = 0,
+\end{align*}
+since $\sum_{n}\cP(A_{n})<\infty$ implies that $\sum_{n=k}^{\infty}\cP\set{A_{n}} \rightarrow 0$ as $k\rightarrow \infty$.\qed
+\end{proof}
+
+\item \begin{remark}
+The \emph{Borel-Cantelli Lemma} does not require any independence between events. It states that \emph{almost every outcome $\omega$ in $\Omega$  is contained \textbf{at most finitely many} of events $A_n$} or equivalently, $\set{n: \omega \in A_n}$ is finite for every $\omega$.
+\end{remark}
+
+\item \begin{remark}
+The \emph{Borel-Cantelli Lemma} is used as the basis for all proofs of \emph{\textbf{almost sure convergence}}. 
+%There are several common zero-one laws which identify the possible range of a random variable to be trivial. There are also several zero-one laws which provide the basis for all proofs of almost sure convergence. 
+\end{remark}
+\end{itemize}
+\subsection{Borel Zero-One Law}
+\begin{itemize}
+\item The \emph{Borel-Cantelli Lemma} does not require \textbf{\emph{independence}}. The next result does.
+ \begin{theorem} (\textbf{Borel Zero-One Law}) \citep{resnick2013probability}\\
+If $\set{A_{n}}$ is a sequence of \textbf{independent} events, then 
+\begin{align*}
+\cP\set{ \limsup\limits_{n\rightarrow\infty} A_{n} }=\cP\paren{\brac{A_{n} \text{ i.o.}}} = \left\{\begin{array}{cc}
+0 & \text{if } \sum_{n}\cP(A_{n})<\infty\\ 
+1 & \text{if } \sum_{n}\cP(A_{n})=\infty
+\end{array}  \right.
+\end{align*}
+\end{theorem}
+\begin{proof}
+From the \emph{Borel-Cantelli lemma}, we see that if $\sum_{n}\cP(A_{n})<\infty$, $\cP\set{A_{n} \text{ i.o.}}=0$. For $\sum_{n}\cP(A_{n})=\infty$, we see that
+\begin{align*}
+\cP\set{ \limsup\limits_{n\rightarrow\infty} A_{n} }&= \cP\set{ \bigcap_{k\ge 1}\bigcup_{n\ge k}A_{n}  }\\
+&=1- \cP\set{ \bigcup_{k\ge 1}\bigcap_{n\ge k}A^{c}_{n}  }\\
+&= 1- \lim\limits_{k\rightarrow \infty}\cP\set{\bigcap_{n\ge k}A^{c}_{n}  } \quad (\text{by upward convergence})\\
+&= 1- \lim\limits_{k\rightarrow \infty}\cP\set{\lim\limits_{m\rightarrow\infty}\downarrow\bigcap_{n=k}^{m}A^{c}_{n}  }\\
+&= 1- \lim\limits_{k\rightarrow \infty}\lim\limits_{m\rightarrow \infty}\cP\set{\bigcap_{n=k}^{m}A^{c}_{n}  }  \quad (\text{by downward convergence})\\
+&= 1- \lim\limits_{k\rightarrow \infty}\lim\limits_{m\rightarrow \infty}\paren{\prod_{n=k}^{m}\cP(A_{n}^{c})}\\
+&= 1- \lim\limits_{k\rightarrow \infty}\lim\limits_{m\rightarrow \infty}\prod_{n=k}^{m}\paren{1-\cP(A_{n})}.
+\end{align*}
+Thus it suffice to show that
+\begin{align*}
+\lim\limits_{k\rightarrow \infty}\lim\limits_{m\rightarrow \infty}\prod_{n=k}^{m}\paren{1-\cP(A_{n})} = 0.
+\end{align*}
+We use the inequality 
+\begin{align*}
+1 - x&\le \exp(-x), \quad x\in (0,1)
+\end{align*}
+thus \begin{align*}
+\lim\limits_{m\rightarrow \infty}\prod_{n=k}^{m}\paren{1-\cP(A_{n})} &\le \lim\limits_{m\rightarrow \infty}\prod_{n=k}^{m}\exp\paren{- \cP(A_{n})}\\
+&= \lim\limits_{m\rightarrow \infty}\exp\paren{- \sum_{n=k}^{m}\cP(A_{n})}\\
+&= \exp(-\infty)\\
+& = 0,  \text{ for all }n\le m,
+\end{align*}
+since $\sum_{n}\cP(A_{n})=\infty$. Therefore $\lim\limits_{k\rightarrow \infty}\lim\limits_{m\rightarrow \infty}\prod_{n=k}^{m}\paren{1-\cP(A_{n})} = 0$. \qed
+\end{proof}
+
+\item \begin{example} (\emph{\textbf{Behavior of Exponential Random Variables}}) \citep{resnick2013probability} \\
+We assume that $\set{E_{n}, n\ge 1}$ are \emph{\textbf{$i.i.d.$ unit exponential variables}}; that is,
+\begin{align*}
+\cP\brac{E_{n} >x} = e^{-x}, \quad x>0.
+\end{align*}
+Then 
+\begin{align*}
+\cP\set{\limsup\limits_{n\rightarrow \infty}\frac{E_{n}}{\log n}= 1} = 1
+\end{align*}
+\end{example}
+\begin{proof}
+For any $\omega$, 
+\begin{align*}
+\limsup\limits_{n\rightarrow \infty}\frac{E_{n}(\omega)}{\log n}= 1
+\end{align*}
+means that $\forall \epsilon>0$, there exists $n$ such that 
+\begin{align*}
+\frac{E_{n}(\omega)}{\log n}>  1-\epsilon
+\end{align*}
+and also for large $n$, 
+\begin{align*}
+\frac{E_{n}(\omega)}{\log n} \le   1+\epsilon.
+\end{align*}
+Therefore 
+\begin{align*}
+\set{\limsup\limits_{n\rightarrow \infty}\frac{E_{n}}{\log n}= 1} &= \bigcap_{s}\brac{ \bigcup_{n\ge 1}\set{\frac{E_{n}(\omega)}{\log n}>  1-\epsilon_{s}} \bigcap \bigcup_{k\ge 1}\bigcap_{n\ge k}\set{\frac{E_{n}(\omega)}{\log n}\le  1+\epsilon_{s}} }\\
+&=  \bigcap_{s}\set{\brac{\frac{E_{n}(\omega)}{\log n}>  1-\epsilon_{s}}, i.o.} \bigcap \bigcap_{s}\set{\liminf\limits_{n\rightarrow \infty}\brac{\frac{E_{n}(\omega)}{\log n}\le  1+\epsilon_{s}}} 
+\end{align*}
+To show the RHS has probability $1$, it then suffice to show that each bracket event occurs with probability $1$. 
+
+For the event $\set{\brac{\frac{E_{n}(\omega)}{\log n}>  1-\epsilon_{s}}, n\ge 1}$,
+\begin{align*}
+\sum_{n=1}^{\infty}\cP\set{\frac{E_{n}(\omega)}{\log n}>  1-\epsilon_{s}} &= \sum_{n=1}^{\infty}\exp\paren{(1-\epsilon_{s})\log n } = \sum_{n=1}^{\infty}\frac{1}{n^{(-1+\epsilon_{s})}}=\infty,
+\end{align*}
+so $\set{\brac{\frac{E_{n}(\omega)}{\log n}>  1-\epsilon_{s}}, i.o.}$ occurs with probability $1$ for all $s$.
+
+\begin{align*}
+\cP\set{\liminf\limits_{n\rightarrow \infty}\brac{\frac{E_{n}(\omega)}{\log n}\le  1+\epsilon_{s}}} 
+&= 1- \cP\set{\limsup\limits_{n\rightarrow \infty}\brac{\frac{E_{n}(\omega)}{\log n}\ge  -1-\epsilon_{s}}} 
+\end{align*}
+Since 
+\begin{align*}
+\sum_{n=1}^{\infty}\cP\set{\frac{E_{n}(\omega)}{\log n}\ge  -1-\epsilon_{s}} &= \sum_{n=1}^{\infty}\exp\paren{(-1-\epsilon_{s})\log n }\\
+&= \sum_{n=1}^{\infty}\frac{1}{n^{(1+\epsilon_{s})}} < \infty,
+\end{align*}
+we have 
+\begin{align*}
+\cP\set{\liminf\limits_{n\rightarrow \infty}\brac{\frac{E_{n}(\omega)}{\log n}\le  1+\epsilon_{s}}} 
+&= 1- \cP\set{\limsup\limits_{n\rightarrow \infty}\brac{\frac{E_{n}(\omega)}{\log n}\ge  -1-\epsilon_{s}}} \\
+&= 1- 0= 1. \qed
+\end{align*}
+\end{proof}
+
+\item 
+\begin{remark} (\emph{\textbf{Heavy Tail}})\\
+This result is sometimes considered \emph{\textbf{surprising}}. There is a (\emph{mistaken}) tendency to think of i.i.d sequences as somehow roughly constant, and therefore the division by $\log n$ should send the ratio to $0$. 
+
+However, \emph{every so often}, the sequence $\set{E_n}$ \emph{\textbf{spits out a large value}} and the \emph{\textbf{growth}} of these \emph{\textbf{large values} approximately matches} that of $\{\log n, n \ge 1\}$.
+\end{remark}
+
+
+\item \begin{example} (\emph{\textbf{Behavior of Normal Random Variables}}) \citep{resnick2013probability} \\
+We assume that  $\set{X_{n}, n\ge 1}$ are \emph{\textbf{$i.i.d.$ standard normal variables}} $\cN(0,1)$. Then 
+\begin{align*}
+\cP\set{\limsup\limits_{n\rightarrow \infty}\frac{\abs{X_{n}}}{\sqrt{\log n}}= \sqrt{2}} = 1.
+\end{align*}
+Use the fact that 
+\begin{align*}
+\lim\limits_{x\rightarrow \infty}\frac{\cP\brac{X_{n}\ge x}}{n(x)/x} = 1
+\end{align*}
+where $n(x)= \frac{1}{\sqrt{2\pi}}\exp(-\frac{1}{2}x^{2})$ is standard normal density.
+\end{example}
+\begin{proof}
+\begin{align*}
+\set{\limsup\limits_{n\rightarrow \infty}\frac{\abs{X_{n}}}{\sqrt{\log n}}= \sqrt{2}} &= \bigcap_{s}\brac{ \bigcup_{n\ge 1}\set{\frac{\abs{X_{n}}}{\sqrt{\log n}}>  \sqrt{2}-\epsilon_{s}} \bigcap \bigcup_{k\ge 1}\bigcap_{n\ge k}\set{\frac{\abs{X_{n}}}{\sqrt{\log n}}\le  \sqrt{2}+\epsilon_{s}} }\\
+&=  \bigcap_{s}\set{\brac{\frac{\abs{X_{n}}}{\sqrt{\log n}}>  \sqrt{2}-\epsilon_{s}}, i.o.} \bigcap \bigcap_{s}\set{\liminf\limits_{n\rightarrow \infty}\brac{\frac{\abs{X_{n}}}{\sqrt{\log n}}\le  \sqrt{2}+\epsilon_{s}}}. 
+\end{align*}
+
+\begin{enumerate}
+\item Show that 
+\begin{align*}
+\cP\set{\brac{\frac{\abs{X_{n}}}{\sqrt{\log n}}>  \sqrt{2}-\epsilon_{s}}, i.o.} &=1\quad \forall \epsilon_{s}>0.
+\end{align*}
+From 
+\begin{align*}
+\lim\limits_{x\rightarrow \infty}\frac{\cP\brac{X_{n}\ge x}}{n(x)/x} = 1,
+\end{align*}
+we know that for any $\epsilon_{s}>0$, for large $x$
+\begin{align*}
+\abs{\frac{\cP\brac{X_{n}\ge x}}{n(x)/x} - 1}&<\epsilon_{s}\\
+\abs{x\cP\brac{X_{n}\ge x} - \frac{1}{\sqrt{2\pi}}\exp(-\frac{1}{2}x^{2})}& <\epsilon_{s}\\ 
+\frac{1}{\sqrt{2\pi}}\exp\paren{-\frac{1}{2}x^{2}}- \epsilon_{s} < \abs{x\cP\brac{X_{n}\ge x}} &< \frac{1}{\sqrt{2\pi}}\exp\paren{-\frac{1}{2}x^{2}}+\epsilon_{s}
+\end{align*}
+Thus
+\begin{align*}
+\abs{\paren{ \sqrt{\log n}(\sqrt{2}- \epsilon_{s}}\cP\brac{X_{n}\ge \sqrt{\log n}(\sqrt{2}- \epsilon'_{s})}} &< \frac{1}{\sqrt{2\pi}}\exp\paren{-\frac{1}{2} \paren{\sqrt{\log n}(\sqrt{2}- \epsilon'_{s}}^{2}}+\epsilon_{s}\\
+&= \frac{1}{\sqrt{2\pi}}\exp\paren{-\frac{1}{2} \paren{(\sqrt{2}- \epsilon'_{s}}^{2}\log n}+\epsilon_{s}\\
+&= \frac{1}{\sqrt{2\pi}}\frac{1}{n^{c_{\epsilon'}}}+\epsilon_{s}\\
+&\text{where }c_{\epsilon'} = \paren{1- \frac{\epsilon'_{s}}{\sqrt{2}}}^{2}<1\\
+ \text{for }X_{n}\ge 0&\\
+\cP\brac{X_{n}\ge \sqrt{\log n}(\sqrt{2}- \epsilon'_{s})}
+&\le \frac{1}{2\sqrt{\pi}}\frac{1}{n^{c_{\epsilon'}}\sqrt{\log n}} + \frac{B\epsilon_{s}}{\sqrt{2\log n}}\quad 0<c_{\epsilon'}<1\\
+ \text{for }X_{n}\le 0, \text{ let }X'_{n} = -X_{n}\sim \cN(0,1)&\\
+ \cP\brac{X'_{n}\ge \sqrt{\log n}(\sqrt{2}- \epsilon'_{s})}&\le C_{\epsilon'_{s}}\frac{1}{n^{c_{\epsilon'}}\sqrt{\log n}}+\epsilon_{s}\\
+ \cP\brac{X_{n}\le \sqrt{\log n}(-\sqrt{2}+ \epsilon'_{s})}&\le C_{\epsilon'_{s}}\frac{1}{n^{c_{\epsilon'}}\sqrt{\log n}}+\epsilon_{s}\quad 0<c_{\epsilon'}<1
+\end{align*}
+Similarly
+\begin{align*}
+\cP\brac{X_{n}\ge \sqrt{\log n}(\sqrt{2}- \epsilon'_{s})}&\ge C_{\epsilon'_{s}}\frac{1}{n^{c_{\epsilon'}}\sqrt{\log n}}-\epsilon_{s}\quad \text{for }X_{n}\ge 0\\
+\cP\brac{X_{n}\le \sqrt{\log n}(-\sqrt{2}+ \epsilon'_{s})}&\ge C_{\epsilon'_{s}}\frac{1}{n^{c_{\epsilon'}}\sqrt{\log n}}-\epsilon_{s}\quad \text{for }X_{n}\le 0
+\end{align*}
+
+
+Therefore consider
+\begin{align*}
+\cP\set{ \frac{\abs{X_{n}}}{\sqrt{\log n}}>  \sqrt{2}-\epsilon'_{s} }
+&= \cP\set{ \paren{\frac{X_{n}}{\sqrt{\log n}}>  \sqrt{2}-\epsilon'_{s}}\cup  \paren{\frac{X_{n}}{\sqrt{\log n}} <  -\sqrt{2}+\epsilon'_{s}} }\\
+&\ge  C_{\epsilon'_{s}}\frac{1}{n^{c_{\epsilon'}}\sqrt{\log n}}-\epsilon_{s}\quad  (\text{by monotonicity})\\
+\sum_{n=1}^{\infty}\cP\set{ \frac{\abs{X_{n}}}{\sqrt{\log n}}>  \sqrt{2}-\epsilon'_{s} } &=\infty
+\end{align*} as $\sum_{n=1}^{\infty}\frac{1}{n^{c_{\epsilon'}}\sqrt{\log n}}$ diverges for $0<c_{\epsilon'}<1$ and we see that by Borel-Cantelli lemma
+\begin{align*}
+\cP\set{\brac{\frac{\abs{X_{n}}}{\sqrt{\log n}}>  \sqrt{2}-\epsilon_{s}}, i.o.} &=1\quad \forall \epsilon_{s}>0.
+\end{align*}
+
+\item Show that
+\begin{align*}
+\cP\set{\liminf\limits_{n\rightarrow \infty}\brac{\frac{\abs{X_{n}}}{\sqrt{\log n}}\le  \sqrt{2}+\epsilon_{s}}} &= 1\\
+\Leftrightarrow \cP\set{\limsup\limits_{n\rightarrow \infty}\brac{\frac{\abs{X_{n}}}{\sqrt{\log n}}\ge  -\sqrt{2}-\epsilon_{s}}} &= 0
+\end{align*}
+
+See that 
+\begin{align*}
+\cP\set{\brac{\frac{\abs{X_{n}}}{\sqrt{\log n}}\ge  -\sqrt{2}-\epsilon'_{s}}}
+&\le \cP\set{ \paren{\frac{X_{n}}{\sqrt{\log n}}\ge  -\sqrt{2}-\epsilon'_{s}}}+\cP\set{\paren{\frac{X_{n}}{\sqrt{\log n}} \le  \sqrt{2}+\epsilon'_{s}} }
+\end{align*}
+
+We consider 
+\begin{align*}
+\cP\set{X_{n}\ge  (\sqrt{2}+\epsilon'_{s})\sqrt{\log n} }&\ge 
+C_{\epsilon'_{s}}\frac{1}{n^{c'_{\epsilon'}}\sqrt{\log n}}-\epsilon_{s}, \text{where }c'_{\epsilon'} = \paren{1+\frac{\epsilon'}{\sqrt{2}}}^{2}\ge 1
+\end{align*}
+so
+\begin{align*}
+\sum_{n=1}^{\infty}\cP\set{\paren{\frac{X_{n}}{\sqrt{\log n}} \ge  -\sqrt{2}-\epsilon'_{s}} }&= \cP\set{X_{n}\ge  -(\sqrt{2}+\epsilon'_{s})\sqrt{\log n} }\\
+&= 1- \sum_{n=1}^{\infty}\cP\set{X_{n}\ge  (\sqrt{2}+\epsilon'_{s})\sqrt{\log n} } \quad(\text{by symmetry of }\cN(0,1))\\
+&\le 1- \sum_{n=1}^{\infty}\frac{1}{n^{c'_{\epsilon'}}\sqrt{\log n}} <\infty
+\end{align*}
+since $\sum_{n=1}^{\infty}\frac{1}{n^{c'_{\epsilon'}}\sqrt{\log n}} <\infty$ for $c'_{\epsilon'} \ge 1$.
+Similarly, 
+$$
+\sum_{n=1}^{\infty}\cP\set{\paren{\frac{X_{n}}{\sqrt{\log n}} \le  \sqrt{2}+\epsilon'_{s}} } <\infty
+$$
+
+By Borel-Cantelli lemma, 
+\begin{align*}
+\cP\set{\limsup\limits_{n\rightarrow \infty}\brac{\frac{\abs{X_{n}}}{\sqrt{\log n}}\ge  -\sqrt{2}-\epsilon_{s}}} &= 0,\\
+\Rightarrow \quad \cP\set{\liminf\limits_{n\rightarrow \infty}\brac{\frac{\abs{X_{n}}}{\sqrt{\log n}}\le  \sqrt{2}+\epsilon_{s}}} &= 1,
+\end{align*} which completes our proof.\qed
+\end{enumerate}
+\end{proof} 
+\end{itemize}
+
+\subsection{Tail $\sigma$-Algebra and Komogorov Zero-One Law}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Tail $\sigma$-Algebra}})\\
+Let $\set{X_{n}}$ be a sequence of random variables and define 
+\begin{align*}
+\srF_{n}' &= \sigma\paren{X_{n+1}, \cdots}, \quad n\ge 1,
+\end{align*} which is the smallest $\sigma$-algebra containing random variables $X_k$ for $k > n$.
+Define the \underline{\emph{\textbf{tail $\sigma$-algebra}}} as 
+\begin{align*}
+\srT &= \bigcap_{n\ge 1}\srF_{n}' = \lim\limits_{n\rightarrow \infty} \downarrow \sigma\paren{X_n, X_{n+1}, \cdots}.
+\end{align*}
+These are events which depend on \emph{the \textbf{tail} of the $\set{X_{n}}$ sequence}. If  $A\in \srT$, we
+will call $A$ a \underline{\emph{\textbf{tail event}}}. 
+
+\emph{A \textbf{random variable}} \emph{\textbf{measurable}} with respect to $\srT$ is called a \underline{\emph{\textbf{tail random variable}}}.
+\end{definition}
+
+
+\item \begin{example} (\emph{\textbf{Examples of Tail Events}})
+\begin{enumerate}
+\item The event 
+\begin{align*}
+\set{\omega: \sum_{n=1}^{\infty}X_{n}(\omega) \text{ converges}} \in \srT
+\end{align*}
+To see this note that, for any $m$, the sum $\sum_{n=1}^{\infty}X_{n}(\omega)$ \emph{converges} if and only if $\sum_{n=m}^{\infty}X_{n}(\omega)$ \emph{converges}. So
+\begin{align*}
+\set{\omega: \sum_{n=1}^{\infty}X_{n}(\omega) \text{ converges}} = \set{\omega: \sum_{n=m+1}^{\infty}X_{n}(\omega) \text{ converges}} \in \srF_{m}'
+\end{align*}
+This holds for all $m$ and after \emph{intersecting} over $m$. \qed
+
+\item The event 
+\begin{align*}
+\set{\omega: \lim\limits_{n\rightarrow \infty}X_{n}(\omega) \text{ exists}} \in \srT
+\end{align*} Note that both $\limsup\limits_{n\rightarrow \infty} X_{n}$ and $\liminf\limits_{n\rightarrow \infty} X_{n}$ are the same as 
+$\lim\limits_{m\rightarrow \infty}\sup_{n \ge m} X_{n}$ and $\lim\limits_{m \rightarrow \infty}\inf_{n \ge m} X_{n}$ \qed.
+
+
+\item Let $S_n = \sum_{i=1}^{n}X_i$, the event 
+\begin{align*}
+\set{\omega: \lim\limits_{n\rightarrow \infty}\frac{S_n(\omega)}{n} = 0} = \set{\omega: \lim\limits_{n\rightarrow \infty}\frac{\sum_{k=1}^{n}X_{k}(\omega)}{n} = 0} \in \srT,
+\end{align*} 
+This is because for any $m$,
+\begin{align*}
+ \lim\limits_{n\rightarrow \infty}\frac{S_n(\omega)}{n} = \lim\limits_{n\rightarrow \infty}\frac{\sum_{k=1}^{n}X_{k}(\omega)}{n} = \lim\limits_{n\rightarrow \infty}\frac{\sum_{k=m+1}^{n}X_{k}(\omega)}{n}
+\end{align*} and so for any $m$,
+\begin{align*}
+\lim\limits_{n\rightarrow \infty}\frac{S_n(\omega)}{n}\, \text{ is $\srF_{m}'$ measurable.}
+\end{align*}
+\end{enumerate}
+\end{example}
+
+\item \begin{example}  (\emph{\textbf{Examples of Tail Random Variables}})
+\begin{enumerate}
+\item $\sum_{i=1}^{\infty}X_i$ is a \emph{\textbf{tail random variable}}.
+
+\item $\limsup\limits_{n\rightarrow \infty} X_{n}$ and $\liminf\limits_{n\rightarrow \infty} X_{n}$ are both \emph{\textbf{tail random variables}}.
+
+This is true since the $\limsup$ of the sequence $\set{X_1, X_2, \ldots}$ is the same as the lim sup of the sequence $\set{X_{m}, X_{m+1}, \ldots}$ for all $m$. \qed
+
+\item Let $S_n = \sum_{i=1}^{n}X_i$, then 
+\begin{align*}
+\lim\limits_{n\rightarrow \infty}\frac{S_n}{n} = \lim\limits_{n\rightarrow \infty}\frac{\sum_{k=1}^{n}X_{k}}{n}
+\end{align*} is a \emph{\textbf{tail random variable}}.
+\end{enumerate}
+\end{example}
+
+\item \begin{definition} (\emph{\textbf{Almost Trivial $\sigma$-Algebra}})\\
+For a $\sigma$-algebra $\srF$, if 
+\begin{align*}
+\cP(A) \in \set{0, 1}, \quad \forall A\in \srF
+\end{align*}
+ then $\srF$ is \underline{\emph{\textbf{almost trivial}}}. 
+\end{definition}
+
+\item \begin{remark}
+A trivial $\sigma$-algebra  $\srF = \set{\emptyset, \Omega}$ is almost trivial, of course. 
+
+\emph{The Komogorov Zero-One Law} below confirms that \emph{\textbf{\underline{the tail $\sigma$-algebra $\srT$} for a set of \underline{independent} random variables is almost trivial}}. This provide the basis for all proofs of \emph{\textbf{almost sure convergence}} under the independence assumption. 
+\end{remark}
+
+
+\item \begin{lemma} (\textbf{Almost Trivial $\sigma$-Algebra}) \citep{resnick2013probability} \\
+Let $\cG$ be an \textbf{almost trivial} $\sigma$-algebra and let $X$ be a random variable measureable w.r.t. $\cG$. Then there exists $c$ such that $\cP\set{X=c}=1$.
+\end{lemma}
+\begin{proof}
+Let $F(x) = \cP\set{X\le x}.$ Then $F$ is non-decreasing and since $\set{\omega: X(\omega)\le x}\in \sigma(X)\subset \cG$, $F(x)=0$ or $F(x)=1$ for any $x\in \bR$. 
+
+Let $c= \sup\set{x: F(x)=0}$. The distribution function must have a jump of size $1$ at $x=c$ and thus $\cP\set{X=c}= 1$. \qed
+\end{proof}
+
+
+\item \begin{theorem}(\textbf{Komogorov Zero-One Law}) \citep{resnick2013probability} \\
+If $\set{X_{n}}$ are \textbf{independent} random variables with \textbf{tail $\sigma$-algebra} $\srT$, then $\Lambda\in \srT$ implies $\cP(\Lambda)=0$ or $\cP(\Lambda)=1$ so that \underline{\textbf{$\sigma$-algebra $\srT$ is almost trivial}}. 
+\end{theorem}
+\begin{proof}
+Suppose  $\Lambda\in \srT$. It suffice to show that \emph{\textbf{$\Lambda$ is independent to itself}} so that $\cP(\Lambda) = \cP(\Lambda\cap \Lambda) = \cP(\Lambda)^{2}$. It only occurs if $\cP(\Lambda)= 0$ or $1$.
+
+See that \begin{align*}
+\srF_{n} &= \sigma\paren{X_{1}, \cdots, X_{n}}= \bigvee_{k=1}^{n}\sigma(X_{k}), n\ge 1.
+\end{align*}
+is the smallest $\sigma$-algebra contains all $\sigma(X_{k}), 1\le k\le n$. Here $\cC = \set{A, B}$ and $\cD=\set{C, D}$, then $\cC \vee \cD = \set{A\cap C, A\cap D, B\cap C, B\cap D}$ is union of collection via elementwise intersection. Therefore, $\srF_{n}\subset \srF_{n+1}$ with 
+\begin{align*}
+\srF_{\infty}= \sigma\paren{X_{1},X_2, \ldots}= \bigvee_{n=1}^{\infty} \srF_{n} = \bigvee_{n=1}^{\infty}\sigma(X_n).
+\end{align*}
+Note that 
+\begin{align*}
+\Lambda\in \srT\subset \srF_{n}' = \sigma\paren{X_{n+1}, \cdots}  \subset \srF_{\infty} =  \sigma\paren{X_{1},X_2, \ldots}.
+\end{align*}
+ So since for all $n$, $\Lambda\in \srF_{n}'$ and  $\srF_{n}'\indep \srF_{n} $, we have 
+\begin{align*}
+\Lambda \indep \srF_{n}, \text{ for all $n$.}
+\end{align*} Hence 
+\begin{align*}
+\Lambda \indep \bigcup_{n=1}^{\infty}\srF_{n}.
+\end{align*}  
+Let $\srC_1 =\set{\Lambda}$, and $\srC_2 = \bigcup_{n}\srF_{n}$. Then $\srC_i$ is a $\pi$-system, $i = 1, 2$, $\srC_1 \indep \srC_2$ and
+therefore \emph{the Basic Criterion} implies 
+\begin{align*}
+\sigma(\set{\Lambda}) = \set{\emptyset, \Omega, \Lambda, \Lambda^{c}} \;\text{ and }\; \sigma\paren{\bigcup_{n=1}^{\infty}\srF_{n}}=  \bigvee_{n=1}^{\infty}\srF_{n}= \srF_{\infty}\;\; \text{ are \emph{\textbf{independent}}. }
+\end{align*}
+Now $\Lambda\in \sigma(\srC_1)$ and $\Lambda\in \srF_{\infty} = \sigma(\srC_2)$ therefore $\Lambda$ is independent to itself. \qed
+\end{proof}
+
+
+\item \begin{corollary} (\textbf{Corollaries of the Kolmogorov Zero-One Laws}) \citep{resnick2013probability} \\
+Let $\set{X_{n}}$ be \textbf{independent} random variables. Then 
+\begin{enumerate}
+\item The event 
+\begin{align*}
+\set{\omega: \sum_{n=1}^{\infty}X_{n}(\omega) \text{ converges}} \in \srT
+\end{align*} has probability $0$ or $1$.
+\item The \textbf{tail} random variables $\limsup\limits_{n\rightarrow \infty} X_{n}$ and $\liminf\limits_{n\rightarrow \infty} X_{n}$ are \textbf{constant} with probability $0$ or $1$.
+\item The event 
+\begin{align*}
+\set{\omega: \lim\limits_{n\rightarrow \infty}\frac{S_n(\omega)}{n} = 0} = \set{\omega: \lim\limits_{n\rightarrow \infty}\frac{\sum_{k=1}^{n}X_{k}(\omega)}{n} = 0} \in \srT,
+\end{align*} has probability $0$ or $1$.
+\end{enumerate}
+\end{corollary}
+
+\item \begin{remark} (\emph{\textbf{Independence Assumption is Preferred}})\\
+\emph{The Komogorov zero-one law} reveals the reason why \emph{\textbf{the independence assumption is preferred}} in a lot of \emph{statistical analysis} esp. concerning \textit{\textbf{the consistency of statistics}}.
+
+%The \emph{\textbf{asymptotic behavior}} of statistics that are \emph{measurable} via \emph{\textbf{tail events}}. The proof of the Komogorov zero-one law shows that the \emph{\textbf{independence}} of random variables implies that \emph{\textbf{the tail events}} are \emph{\textbf{independent}} from  \emph{\textbf{any past and present events}}. Since \emph{the tail events} will be eventually past or present events, it shows that  \emph{\textbf{the tail events}} are \emph{\textbf{independent}} from \emph{\textbf{themselves}}!
+
+The theorem reveals that the tail $\sigma$-algebra $\srT = \bigcap_{n \ge 1}\sigma(X_{n+1}, \ldots)$ for \emph{\textbf{independent variables}} are \underline{\emph{\textbf{almost trivial}}}, thus the test run on the $\srT$ is \underline{\emph{\textbf{almost deterministic}}}. This is because \emph{\textbf{all tail events}} either \emph{\textbf{form a null set}} or occupy \emph{\textbf{the entire space outside a null set}}.
+\end{remark}
+\end{itemize}
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{reference.bib}
+\end{document}
