@@ -1,0 +1,733 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, amscd}
+\usepackage{mathrsfs, dsfont}
+\usepackage[all,cmtip]{xy}
+\usepackage{tikz-cd}
+%\diagramstyle[labelstyle=\scriptstyle]
+\usepackage{tabularx}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Lecture 5: Conditional Expectation}
+\author{ Tianpei Xie}
+\date{ Aug.4th., 2015 }
+\maketitle
+\tableofcontents
+\newpage
+\section{Recall Signed Measure and Lebesgue Decomposition}
+\subsection{Signed Measure}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Signed Measure}})\\
+Let $(X, \srB)$ be a measure space. A \underline{\emph{\textbf{signed measure}}} on $(X, \srB)$ is a function $\nu: \srB \rightarrow [-\infty, +\infty]$ such that 
+\begin{enumerate}
+\item (\emph{\textbf{Emptyset}}) $\nu(\emptyset)= 0$;
+\item (\emph{\textbf{Finiteness in One Direction}}) $\nu$ assumes at most one of the values $\pm \infty$;
+\item (\emph{\textbf{Countable Additivity}}) if $\set{E_{j}}$ is a sequence of disjoint sets in $\srB$, then $\nu\paren{\bigcup_{j=1}^{\infty}E_{j}}= \sum_{j=1}^{\infty}\nu(E_{j})$, where the latter converges absolutely if $\nu\paren{\bigcup_{j=1}^{\infty}E_{j}}$ is finite.
+\end{enumerate} 
+\end{definition}
+
+\item \begin{definition}
+A measure $\mu$ is \emph{\textbf{finite}}, if $\mu(X)<\infty$; $\mu$ is \emph{\textbf{$\sigma$-finite}}, if $X= \bigcup_{k=1}^{\infty}U_{k}$, $\mu(U_k)<\infty$. 
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Positive Measure}})\\
+If $\nu$ is a signed measure on $(X,\srB)$, \underline{a \textbf{\emph{set}} $E\in \srB$ is called \emph{\textbf{positive}}} (resp. \underline{\emph{\textbf{negative}}}, \underline{\emph{\textbf{null}}}) for $\nu$ if $\nu(F)\ge 0$ (resp. $\nu(F)\le 0$, $\nu(F)= 0$) for \underline{\emph{\textbf{all $\srB$-measurable subset}}} of $E$ (i.e. $F\in \srB$ such that $F\subseteq E$).  
+
+In other word, $E$ is \underline{\emph{\textbf{$\nu$-positive}, \textbf{$\nu$-negative}, \textbf{$\nu$-null}}}  if and only if $\nu(E\cap M)>0$, $\nu(E\cap M)<0$, $\nu(E\cap M)=0$ \emph{\textbf{for any $M$}}. Thus if  $\nu(E) = \int_{X}f\ind{E} d\mu $, then it corresponds to \underline{$f\ge 0$}, \underline{$f\le 0$ and $f=0$ for \emph{\textbf{$\mu$-almost everywhere}} $x\in E$}.
+\end{definition}
+
+\item \begin{lemma}\citep{folland2013real}\\
+Any \textbf{measureable} \textbf{subset} of a positive set is positive, and the \textbf{union} of any \textbf{countable} positive set is positive. 
+\end{lemma}
+
+\item \begin{theorem}(\textbf{The Hahn Decomposition Theorem})\citep{folland2013real}\\
+If $\nu$ is a \textbf{signed measure} on $(X,\srB)$, there exists a \textbf{positive set} $P$ and a \textbf{negative set} $N$ for $\nu$ such that $P\cup N= X$ and $P\cap N=\emptyset$. If $P', N'$ is another such pair, then $P\Delta P'= N\Delta N'$ is \textbf{null} w.r.t. $\nu$.
+\end{theorem}
+
+\item \begin{definition}\citep{folland2013real, resnick2013probability}\\
+The decomposition of $X = P\cup N$ as $X$ is a \emph{\textbf{disjoint union} of a \textbf{positive set} and a \textbf{negative set}} is called a \underline{\emph{\textbf{Hahn decomposition for $\nu$}}}.
+\end{definition}
+
+\item \begin{remark}
+Note that the Hahn decomposition is usually \emph{\textbf{not unique}} as the $\nu$-null set can be transferred between subparts $P$ and $N$. To find unique decomposition, we need the following concepts:
+\end{remark}
+
+\item  \begin{definition}\citep{folland2013real}\\
+Two \emph{signed measures} $\mu, \nu$ on $(X,\srB)$ are \underline{\emph{\textbf{mutually singular}}}, or that \underline{$\nu$ is \emph{\textbf{singular}} w.r.t. to $\mu$}, or vice versa, if and only if there exists a \emph{\textbf{partition}} $E,F\in \srB$ of $X$ such that $E\cap F = \emptyset$ and $E\cup F= X$, \emph{\textbf{$E$ is null for $\mu$}} and \emph{\textbf{$F$ is null for $\nu$}}.  Informal speaking, \emph{\textbf{mutual singular}} means that \underline{$\mu$ and $\nu$ ``\emph{\textbf{live on disjoint sets}}"}. We describe it using perpendicular sign
+\begin{align*}
+\mu \perp \nu
+\end{align*}
+\end{definition}
+
+\item  \begin{theorem}(\textbf{The Jordan Decomposition Theorem})\citep{folland2013real}\\
+If $\nu$ is a signed measure on $(X,\srB)$, there exists \textbf{unique positive measure} $\nu_{+}$ and  $\nu_{-}$ such that 
+\begin{align*}
+\nu = \nu_{+} - \nu_{-} \qquad \text{and} \qquad \nu_{+} \perp \nu_{-}.
+\end{align*}
+\end{theorem}
+
+\item \begin{definition}
+The two positive measures $\nu_{+}, \nu_{-}$ are called the \emph{\textbf{positive}} and \emph{\textbf{negative variations}} of $\nu$, and $\nu= \nu_{+} - \nu_{-} $ is called the   \underline{\emph{\textbf{Jordan decomposition}} of $\nu$}.
+
+Furthermore, define the \underline{\emph{\textbf{total variations}} of $\nu$} as the measure $\abs{\nu}$ such that 
+\begin{align*}
+\abs{\nu} &=  \nu_{+} + \nu_{-}.
+\end{align*}
+\end{definition}
+
+\item \begin{proposition}
+Let $\nu, \mu$ be  signed measures on $(X, \srB)$ and $\abs{\nu}$ is the total variations of $\nu$.  Then
+\begin{enumerate}
+\item $E \in \srB$ is $\nu$-null if and only if $\abs{\nu}(E)=0$
+\item $\nu \perp \mu$ \textbf{if and only if} $\abs{\nu}\perp \mu$ if and only if $(\nu_{+} \perp \mu) \wedge (\nu_{-} \perp \mu)$.
+\end{enumerate}
+\end{proposition}
+
+\item \begin{proposition}
+If $\nu_1, \nu_2$ are signed measures that both omit $\pm \infty$, then $\abs{\nu_1 + \nu_2} \le \abs{\nu_1} + \abs{\nu_2}$
+\end{proposition}
+\end{itemize}
+\subsection{Lebesgue Decomposition and Radon-Nikodym derivative}
+\begin{itemize}
+\item \begin{definition}\citep{folland2013real}\\
+Suppose $\nu$ is \emph{a \textbf{signed measure}} on $(X,\srB)$ and $\mu$ is \emph{a \textbf{positive measure}} on $(X,\srB)$. Then $\nu$ is said to be \underline{\emph{\textbf{absolutely continuous w.r.t. $\mu$}}} and write
+\begin{align*}
+\nu \ll \mu 
+\end{align*}
+if $\nu(E)=0$ for \emph{every $E\in \srB$ for which $\mu(E)=0$}. 
+\end{definition}
+
+\item
+\begin{proposition}
+Suppose $\nu$ is a signed measure on $(X,\srB)$,  $ \nu_{+}, \nu_{-}$ are positive and negative variation of $\nu$ and $\abs{\nu}$ is the total variation. Then 
+$\nu \ll \mu $ \textbf{if and only if} $\abs{\nu} \ll \mu$ \textbf{if and only if} $(\nu_{+} \ll  \mu) \wedge (\nu_{-} \ll  \mu)$.
+\end{proposition}
+
+\item \begin{remark}
+\emph{\textbf{Absolutly continuity}} is in a sense \emph{\textbf{antithesis}} (i.e. \emph{direct opposite}) of \emph{\textbf{mutual singularity}}. More precisely, 
+\underline{if $\nu \perp \mu$ and $\nu \ll \mu$, then $\nu = 0$}, since $E, F$ are disjoint sets such that $E\cup F= X$, and $\mu(E)= \abs{\nu}(F)= 0$, then $\nu \ll \mu$ implies that $\abs{\nu}(E)= 0$. One can \emph{extend} the notion of absolute continuity to the case where \emph{$\mu$ is a signed measure} (namely, $\nu \ll \mu$ iff $\nu \ll \abs{\mu}$), but we shall have no need of this more general definition.
+ \end{remark}
+ 
+ \item \begin{theorem} (\textbf{$\epsilon$-$\delta$ Language of Absolute Continuity of Measures})\\
+Let $\nu$ is a \textbf{finite signed measure} and $\mu$ is a \textbf{positive} measure on $(X,\srB)$. Then $\nu \ll \mu$ if and only if for every $\epsilon>0$, there exists a $\delta>0$ such that $\abs{\nu(E)}<\epsilon$, \textbf{whenever} $\mu(E)< \delta$.
+\end{theorem}
+
+\item \begin{remark}
+ If $\mu$ is a \emph{measure} and $f$ is \emph{\textbf{extended $\mu$-integrable}}, then \emph{\textbf{the signed measure} $\nu$ defined via $\nu(E) = \int_{E}f d\mu$ is \textbf{absolutely continuous} w.r.t. $\mu$}; it is \emph{\textbf{finite}} if and only if $f$ is \emph{\textbf{absolutely integrable}}.  For any complex-valued $f \in L^1(\mu)$, the preceding theorem can be applied to $\Re(f)$ and $\Im(f)$.
+ \end{remark}
+ 
+ \item \begin{corollary}
+If $f\in L^{1}(X, \mu)$, for every $\epsilon>0$, there exists a $\delta>0$, such that $\abs{\int_{E}f d\mu }<\epsilon$ whenever $\mu(E)<\delta$.
+\end{corollary}
+ 
+\item \begin{definition} 
+For \emph{a \textbf{signed measure}}  $\nu$ defined via $\nu(E) = \int_{E}f d\mu$ for all $E \in \srB$, we use the notation to express the relationship
+ \begin{align*}
+d\nu &= f\, d\mu.
+\end{align*} Sometimes, by a slight abuse of language, we shall refer to ``\emph{\textbf{the signed measure $f\, d\mu$}}" 
+\end{definition} 
+ 
+\item \begin{lemma}\citep{folland2013real}\\
+Suppose that $\nu$ and $\mu$ are \textbf{finite measures} on $(X,\srB)$. Either $\nu \perp \mu$, or there exists $\epsilon>0$ and $E\in \srB$ such that  $\mu(E)>0$ and $\nu \ge \epsilon \mu$ on $E$, i.e. $E$ is a \textbf{positive set for $\nu-\epsilon \mu$}. 
+\end{lemma}
+
+\item \begin{theorem}(\textbf{Lebesgue-Radon-Nikodym Theorem})\citep{folland2013real}\\
+Let $\nu$ be a \underline{\textbf{$\sigma$-finite} \textbf{signed} measure} and $\mu$ be a \underline{\textbf{$\sigma$-finite} \textbf{positive} measure} on $(X,\srB)$. There exists \underline{\textbf{unique} \textbf{$\sigma$-finite signed measure}} $\lambda, \rho$ on $(X,\srB)$ such that 
+\begin{align*}
+\lambda \perp \mu\,, \quad \text{and} \quad \rho \ll \mu\,, \quad \text{and} \quad  \nu= \lambda+ \rho.
+\end{align*} 
+In particular, if $\nu \ll \mu$, then 
+\begin{align*}
+d\nu &= f d\mu, \qquad \text{for some }f.
+\end{align*} 
+\end{theorem}
+
+\item
+\begin{definition}
+ The decomposition $\nu= \rho + \lambda$, where $\lambda \perp \mu$ and $\rho\ll \mu$, is called the \emph{\textbf{\underline{Lebesgue} \underline{decomposition}} of $\nu$ with respect to $\mu$}.
+ \end{definition}
+
+  \item \begin{remark} By Lebesgue decomposition, \emph{a signed measure} $\nu$ can be represented as
+ \begin{align*}
+ d\nu &= d\lambda + fd\mu 
+ \end{align*}
+ \end{remark}
+
+\item \begin{definition}
+If $\nu \ll \mu$, then according to \emph{the Lebesgue-Radon-Nikodym theorem}, $d\nu = f d\mu$ for some $f$, where $f$ is called the \emph{\underline{\textbf{Radon-Nikodym derivative}} of $\nu$ w.r.t. $\mu$} and is denoted as
+\begin{align*}
+f := \frac{d\nu}{ d\mu} \quad \Rightarrow \quad d\nu =  \frac{d\nu}{ d\mu} d\mu.
+\end{align*}
+ \end{definition}
+ 
+ \item We stated it in terms a theorem in probability space: 
+\begin{theorem}  (\textbf{Radon-Nikodym Theorem}) \citep{resnick2013probability} \\
+Let $(\Omega, \srF, \cP)$ be the \textbf{probability space}. Suppose $\nu$ is a \textbf{positive bounded measure} and $\nu \ll \cP$. Then there exists
+an \textbf{$\srF$-integrable random variable} $X$, such that
+\begin{align*}
+\nu(E) &= \int_E X d\cP, \; \forall \, E \in \srF.
+\end{align*}
+$X$ is \textbf{almost everywhere unique} (P) and is written
+\begin{align*}
+f &= \frac{d\nu}{d\cP}
+\end{align*}
+We also write $d\nu = Xd\cP$.
+ \end{theorem}
+ 
+ \item \begin{corollary} (\textbf{$\sigma$-Finite Measures}) \citep{resnick2013probability} \\
+ If $\mu$, $\nu$ are \textbf{$\sigma$-finite measures} on $(\Omega, \srF)$, there exists a \textbf{$\srF$-measurable} $X$ such that
+ \begin{align*}
+ \nu(E) &= \int_E X d\mu, \; \forall \, E \in \srF,
+ \end{align*}
+if and only if
+\begin{align*}
+\nu \ll \mu.
+\end{align*}
+\end{corollary}
+
+ 
+\item The following corollary is very important in definition of \emph{\textbf{conditional expectation}}: 
+\begin{corollary} (\textbf{Restriction to Sub $\sigma$-Algebra}) \citep{resnick2013probability} \\
+ Suppose $Q, P$ are both probability measure on $(\Omega, \srF)$ such that $Q\ll P$. Let $\srG \subset \srF$ be a sub-$\sigma$-algebra. Let $\rlat{Q}{\srG}, \rlat{P}{\srG}$ be the restriction of $Q,P $ to $\srG$. Then in $(\Omega, \srG)$, 
+\begin{align*}
+\rlat{Q}{\srG}&\ll \rlat{P}{\srG}
+\end{align*} 
+and 
+\begin{align*}
+\frac{d\rlat{Q}{\srG}}{d\rlat{P}{\srG}} \text{ is }\srG\text{-measureable.}
+\end{align*}
+\end{corollary}
+
+\item \begin{remark} (\emph{\textbf{Jordan Decomposition vs. Lebesgue Decomposition}})\\
+We see \emph{\textbf{two unique decompositions}}: the Jordan decomposition and the Lebesgue decomposition. We can make a comparison: 
+\begin{enumerate}
+\item Both of these two are \emph{decompositions} of \emph{a \textbf{signed} measure $\nu$}.
+\item Both of these two decompositions seperate $\nu$ into two  \emph{\textbf{mutually signular}} sub-measures of $\nu$.
+\item Both of these two decompositions are \emph{\textbf{unique}}
+\end{enumerate}
+On the other hand,
+\begin{enumerate}
+\item \emph{\textbf{The Jordan decomposition}} is to split \emph{a signed measure} $\nu$ \emph{\textbf{itself}} into \emph{\textbf{two positive measures}}, i.e. $\nu_{+}$ and $\nu_{-}$ that are \emph{\textbf{mutually singular}} ($\nu_{+} \perp \nu_{-}$). 
+
+\item \emph{\textbf{The Lebesgue decomposition}} is to split \emph{a signed measure} $\nu$ \emph{\textbf{with respect to a postive measure $\mu$}}. The result is \emph{two-fold}: 1) \emph{two mutually singular sub-measures} $\lambda \perp \rho$ 2) their relationship with $\mu$ is \emph{\textbf{opposite}}:  $\lambda \perp \mu$, i.e. their support do not overlap; $\rho \ll \mu$, i.e. its support lies within support of $\mu$.
+
+\item Note that $\lambda, \rho$ from \emph{the Lebesgue decomposition} is \emph{\textbf{not}} \emph{necessarily} \emph{\textbf{positive}}. But both $\nu$ and $\mu$ need to be \emph{\textbf{$\sigma$-finite}} which is \emph{not required} for the Jordan decomposition.
+\end{enumerate}
+\end{remark} 
+
+\item \begin{proposition}\citep{folland2013real}\\
+ Suppose $\nu$ is \textbf{$\sigma$-finite signed measure} and $\lambda, \mu$ are \textbf{$\sigma$-finite measure} on $(X,\srB)$ such that $\nu\ll \mu$ and $\mu \ll \lambda$.
+ \begin{enumerate}
+ \item If $g\in L^{1}(X, \nu)$, then $g\paren{\frac{d \nu}{d\mu}}\in L^{1}(X,\mu)$ and
+ \begin{align*}
+ \int g d\nu &= \int g \, \frac{d \nu}{d\mu}\, d\mu
+ \end{align*}
+ \item We have $\nu \ll \lambda$, and 
+ \begin{align*}
+ \frac{d\nu}{d\lambda} &= \frac{d\nu}{d\mu}\frac{d\mu}{d\lambda}, \;\;\; \lambda\text{-}a.e.
+ \end{align*}
+ \end{enumerate}
+\end{proposition}
+
+\item \begin{corollary}
+If $\mu \ll \lambda$ and $\lambda \ll \mu$, then $(d\lambda / d\mu)(d\mu / d\lambda) = 1\; a.e$. (with respect to either $\lambda$ or $\mu$).
+\end{corollary}
+ 
+\item \begin{proposition} If $\mu_{1}, \ldots, \mu_{n}$ are measures on $(X,\srB)$, then there exists a measure $\mu$ such that $\mu_{i}\ll \mu$ for all $i=1,\ldots,n$, namely, $\mu= \sum_{i=1}^{n}\mu_{i}$.
+\end{proposition}
+\end{itemize}
+\section{Conditional Probability}
+\subsection{Definitions}
+\begin{itemize}
+\item \begin{remark} (\emph{\textbf{Conditional probability  in terms of Decision with Partial Information}})\\
+It is helpful to consider \emph{\textbf{conditional probability}} in terms of \emph{an observer in possession of \textbf{partial information}}. A \emph{probability space} $(\Omega,  \srF,  \cP)$ describes the working of a \emph{\textbf{mechanism}}, \emph{governed by chance}, which produces a result $\omega$ \emph{distributed} according to $\cP$; $\cP(A)$ is for the observer the probability that the point $\omega$ produced lies in $A$. 
+
+Suppose now that $\omega$ lies in $G$ and that the observer \emph{learns this fact and no more}. From the point of view of the \emph{observer}, now in possession of \emph{this partial information about $\omega$}, \emph{the \textbf{probability} that $\omega$ also lies in $A$} is $\cP(A | B)$ rather than $\cP(A)$. This is the idea lying back of the
+definition.
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Conditional Probability with respect to Experiments}})\\
+Let  $(\Omega,  \srF,  \cP)$ be a probability space and $\srG \subset \srF$ is a \emph{\textbf{sub-$\sigma$-algebra}} on $\Omega$. One can imagine an observer who knows for each $G$ in $\srG$ whether $w \in G$ or $w \in G^{c}$. Thus the $\sigma$-algebra  $\srG$ can in principle be \emph{\textbf{identified}} with an \emph{\textbf{experiment}} or \emph{\textbf{observation}}. 
+
+It is natural to try and define \emph{conditional probabilities} $\cP[A \,|\, \srG]$ with respect to the experiment $\srG$.  To do this, \emph{fix} an $A$ in $\srF$ and define \emph{a finite
+measure} $\nu$ on $\srG$ by
+\begin{align*}
+\nu(G) &= \cP(A \cap G), \quad G \in \srG
+\end{align*} Then $\cP(G) = 0$ implies that $\nu(G) = 0$, i.e. $\nu \ll \cP$. The \emph{Lebesgue-Radon-Nikodym Theorem} can be applied to the measures $\nu$ and $\cP$ on the measurable space $(\Omega, \srG)$ because the first one is \emph{\textbf{absolutely continuous}} with respect to the second. It follows
+that there exists a \emph{\textbf{function}} or \emph{\textbf{random variable}} $f$, $\srG$-\emph{measurable}  and \emph{integrable} with respect to $\cP$, such that 
+\begin{align*}
+\nu(G) &= \cP(A \cap G) = \int_{G} f d\cP
+\end{align*} for all $G \in \srG$. This random variable $f$ is \emph{\textbf{the conditional probabilty of $A$ given $\srG$}}.
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{Conditional Probability}})\\
+Let  $(\Omega,  \srF,  \cP)$ be a probability space and $\srG \subset \srF$ is a \emph{\textbf{sub-$\sigma$-algebra}} on $\Omega$. Given a \emph{\textbf{$\srF$-measurable set}} $A \in \srF$,  there exists a \emph{\textbf{random variable}}, \emph{\textbf{denoted} as $\cP[A | \srG]$} with two properties:
+\begin{enumerate}
+\item $\cP[A | \srG]$ is a \emph{\textbf{$\srG$-measurable function}} and \emph{\textbf{integrable}} \emph{with respect to} $\cP$
+\item $\cP[A | \srG]$ satisfies \emph{\textbf{the functional equation}}:
+\begin{align*}
+ \int_{G} \cP[A | \srG] \,d\cP &= \cP(A \cap G), \quad \forall\, G \in \srG.
+\end{align*}
+\end{enumerate}
+The random variable $\cP[A | \srG]$ is called \underline{\emph{\textbf{the conditional probability of $A$ given $\srG$}}}.
+\end{definition}
+
+\item \begin{remark}
+By definition, the conditional probability is a \emph{\textbf{Radon-Nikodym derivative}} of $\nu$ w.r.t. $\cP$.
+\begin{align*}
+\cP[A | \srG] &:= \frac{\rlat{d\nu}{\srG}}{\rlat{d\cP}{\srG}}
+\end{align*}
+ is a \underline{\emph{\textbf{$\srG$-measurable function}}}. It is \emph{\textbf{\underline{not a measure} itself}} but there exists an \emph{\textbf{isomorphism}} $\cP[A | \srG] \mapsto \nu$ between a \emph{\textbf{conditional probability}} (as random variable) given $\srG$ and \emph{a \textbf{probability measure} on $\srG$}. 
+\end{remark}
+
+
+\item \begin{remark} (\emph{\textbf{Observe Outcome via Functional $\cP[A | \srG]_{\omega}$}})\\
+Condition (1) in the definition above in effect requires that the \emph{\textbf{values of $\cP[A | \srG]$ depend only on the sets in $\srG$}}. An observer who knows the outcome of $\srG$ viewed as an experiment \emph{knows for each} $G$ in \emph{whether it contains $\omega$ or not}; \emph{for each $x$} he \emph{\textbf{knows}} this in particular for the set 
+\begin{align*}
+\set{\omega: \cP[A | \srG]_{\omega} = x},
+\end{align*}
+and hence he knows in principle \emph{\textbf{the functional value}} $\cP[A | \srG]_{\omega}$, even if he \emph{\textbf{does not know $\omega$ itself}}.
+\end{remark}
+
+\item \begin{remark}
+Note that 
+\begin{align*}
+\int_{G} \cP[A | \srG] \,d\cP
+\end{align*} is a \emph{measure} of $G \in \srG$, \emph{not a measure of $A \in \srF$}. 
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{$\sigma$-Algebra Generated by Partition of Sample Space}})\\
+If $\srG$ is the $\sigma$-algebra \emph{\textbf{generated}} by a \emph{\textbf{partition}} $B_1, B_2, \ldots$, then the general element of $\srG$ is a \emph{\textbf{disjoint union}} 
+\begin{align*}
+B_1 \xdotx{\cup} B_n \cup \ldots
+\end{align*}
+\emph{\textbf{finite} or \textbf{countable}}, of certain of the $B_i$; To know which set $B_i$ it is that \emph{contains} $\omega$ is the same thing as to know which sets in $\srG$ contain $\omega$ and which do not. This second way of looking at the matter \emph{carries over to the general $\sigma$-algebra} $\srG$ \emph{contained in} $\srF$.
+
+As always, the probability space is $(\Omega,  \srF,  \cP)$. The $\sigma$-algebra $\srF$ will not in general come from a partition as above. Then \emph{\textbf{the conditional distribution}}  $\cP[A | \srG]$ can be written as 
+\begin{align*}
+f(\omega) := \cP(A | B_i) &= \frac{\cP(A \cap B_i)}{\cP(B_i)}, \quad \text{ if }\omega \in B_i,\, i=1 \xdotx{,} n \ldots
+\end{align*} In this case, $\cP[A | \srG]$ is the \emph{\textbf{function}} whose value on $B_i$ is \emph{the \textbf{ordinary conditional probability} $\cP[A | B_i]$}. If the observer learns which element $B_i$ of the \emph{partition} it is that contains $\omega$, then his \emph{\textbf{new probability}} for the event $\omega \in A$ is $f(\omega)$.  The partition $\set{B_i}$, or equivalently the $\sigma$-algebra, $\srG$, can be regarded as an \emph{\textbf{experiment}}, and \emph{to \textbf{learn which $B_i$ it is that contains $\omega$} is to \textbf{learn the outcome of the experiment}}.  Any $G$ in $\srG$ is a disjoint union $G = \bigcup_k B_{i_k}$, and 
+\begin{align*}
+\cP(A \cap G) &= \sum_{k} \cP(A \,|\, B_{i_k}) \cP(B_{i_k})\\
+\Rightarrow \cP[A | \srG] &= \sum_{k} \cP(A \,|\, B_{i_k})\ind{B_i}
+\end{align*}
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Condition Probability Given $\sigma(X)$}})\\
+\emph{The $\sigma$-algebra $\sigma(X)$ generated by a random variable $X$} consists of the sets
+\begin{align*}
+\set{\omega: X(\omega) \in H}
+\end{align*} for $H \in \srB$. The \underline{\emph{\textbf{conditional probability of $A$ given $X$}}} is defined as $\cP[A | \sigma(X)]$ and is denoted $\cP[A | X]$. Thus
+\begin{align*}
+\cP[A | X] &:= \cP[A | \sigma(X)]
+\end{align*}
+ by definition. 
+\end{remark}
+
+\item \begin{example} (\emph{\textbf{Discrete Case}})\\
+Let $X$ be a \emph{\textbf{discrete random variable}} with possible values $x_1, x_2, \ldots$. Then for $A \in \srF$, 
+\begin{align*}
+\cP(A \,|\,X) &= \cP(A \,|\, \sigma(X))\\
+&= \cP(A \,|\, \sigma([X =x_i], i = 1, 2, \ldots))\\
+&= \sum_{i=1}^{\infty}\cP(A \,| X=x_i) \ind{[X=x_i]}.
+\end{align*}
+\end{example}
+
+\item \begin{example} (\emph{\textbf{Absolutely Continuous Case}})\\
+Let $\Omega = \bR^2$ and suppose $X$ and $Y$ are random variables whose \emph{joint distribution is \textbf{absolutely continuous}} with \emph{\textbf{density}} $f(x, y)$ so that for $A \in \cB(\bR^2)$,
+\begin{align*}
+\cP[(X, Y) \in A] &= \iint_{A} f(x, y) dx dy.
+\end{align*} We use $\srG = \sigma(X)$. Let
+\begin{align*}
+I(x) &:= \int f(x, y) dy.
+\end{align*}
+be the \emph{\textbf{marginal density}} of $X$ and define and
+\begin{align*}
+\phi(X) &=\left\{
+\begin{array}{cc}
+\frac{\int_{C} f(X, y) dy}{I(x)} &\text{ if } I(x) > 0\\
+0 &\text{ if } I(x) = 0.
+\end{array}
+ \right.
+\end{align*} Then we claim that for $C \in \cB(\bR)$,
+\begin{align*}
+\cP(Y \in C | X ) = \cP(Y \in C | \sigma(X) ) &= \phi(X).
+\end{align*}
+\end{example}
+\begin{proof}
+First of all, note that $\int_{C} f(X, y) dy$ is \emph{$\sigma(X)$-measurable} and hence $\phi(X)$ is \emph{$\sigma(X)$-measurable}. So it remains to show for any $\Lambda \in \sigma(X)$ that
+\begin{align*}
+\int_{\Lambda} \phi(X) d\cP &= \cP([Y \in C] \cap \Lambda).
+\end{align*}
+
+Since $\Lambda \in \sigma(X)$, the form of $\Lambda$ is $\Lambda = [X \in A]$ for some $A \in \cB(\bR)$. By the Transformation Theorem,
+\begin{align*}
+\int_{\Lambda} \phi(X) d\cP &= \int_{X^{-1}(A)} \phi(X) d\cP\\
+&= \int_{A} \phi(x)\, \cP[X \in dx]
+\end{align*}
+and because a density exists for the joint distribution of $(X, Y)$, we get this equal to
+\begin{align*}
+\int_{A} \phi(x)\, \cP[X \in dx] &=\int_{A} \phi(x)\, \brac{\int_{\bR}f(x, y) dy} dx \\
+&= \int_{A \cap \{x: I(x) > 0\}} \phi(x)\, \brac{\int_{\bR}f(x, y) dy} dx + \int_{A \cap \{x: I(x) = 0\}} \phi(x)\, \brac{\int_{\bR}f(x, y) dy} dx\\
+&= \int_{A \cap \{x: I(x) > 0\}} \phi(x)\, \brac{\int_{\bR}f(x, y) dy} dx  + 0\\
+&= \int_{A \cap \{x: I(x) > 0\}} \frac{\int_{C} f(x, y) dy}{I(x)} I(x) dx \\
+&= \int_{A \cap \{x: I(x) > 0\}} \int_{C} f(x, y) dy  dx\\
+&= \int_{A } \int_{C} f(x, y) dy  dx = \cP[X \in A, Y \in C]\\
+&= \cP([Y \in C] \cap \Lambda). \qed
+\end{align*}
+\end{proof}
+
+\item \begin{remark}
+\begin{align*}
+\cP[X \in H | \srG] &= \cP\brac{\set{\omega': X(\omega') \in H} | \srG}
+\end{align*}
+\end{remark}
+\end{itemize}
+\subsection{Properties}
+\begin{itemize}
+\item \begin{proposition} (\textbf{Conditional Probabilty from Generating $\pi$-System})\citep{billingsley2008probability}\\
+Let $\srP$ be a \textbf{$\pi$-system} generating the $\sigma$-algebra $\srG$, and suppose that $\Omega$ is a finite or countable \textbf{union} of sets in $\srP$. An integrable function $f$ is \textbf{a version} of $\cP[A | \srG]$ if it is \textbf{$\srG$-measurable} and if
+\begin{align*}
+\int_{G} f d\cP &= \cP(A \cap G)
+\end{align*}
+holds for all $G$ in $\srP$.
+\end{proposition}
+
+\item \begin{remark} (\textbf{\emph{$\srG$ as Borel $\sigma$-algebra on Subspace}})\\
+Consider a topological space $X$ with \emph{\textbf{Borel $\sigma$-algebra}} $\srB$ generated by all open sets in $X$, we define a \emph{\textbf{subspace}} $S \subseteq X$ equipped with \emph{\textbf{the subspace topology}}. Then $\srG \subset \srB$ is \emph{\textbf{the Borel $\sigma$-algebra on $S$}}. Note that a subset $G \subset S$ is \emph{open} in $S$ if and only if there exists some open subset $G_X \subset X$ such that 
+\begin{align*}
+G &= G_X \cap S.
+\end{align*} Thus $\srG$ is generated by subsets of form $(G_X \cap S)$. Thus a measure $\nu$ can be defined as the restriction of measure $\cP$ in probability space $(X, \srB, \cP)$ in the subspace $(S, \srG)$, so that given $A \subset X$
+\begin{align*}
+\nu(G) = \int_{G}\cP[A | \srG] d\cP &=\cP(A \cap G) = \int_{G_X \cap S}\cP[A | \srG] d\cP.
+\end{align*} for all $G \in \srG$ as subset of $S$.
+\end{remark}
+
+\item \begin{proposition} \citep{billingsley2008probability}\\
+With probability $1$, $\cP[\emptyset | \srG] = 0$, $\cP[\Omega | \srG] = 1$; and
+\begin{align*}
+0 \le \cP[A | \srG] \le 1
+\end{align*}
+for each $A$. If $A_1$, $A_2$, $\ldots$ is a finite or countable sequence of \textbf{disjoint} sets, then
+\begin{align*}
+\cP\brac{\bigcup_{n=1}^{\infty}A_n \Bigr| \srG} &= \sum_{n=1}^{\infty}\cP\brac{A_n | \srG}.
+\end{align*}
+with probability $1$.
+\end{proposition}
+\end{itemize}
+
+\subsection{Conditional Probability Distributions}
+\begin{itemize}
+\item 
+\begin{proposition} \label{prop: cond_prob_dist} (\textbf{Conditional Probability Distribution}) \citep{billingsley2008probability}\\
+Let  $(\Omega,  \srF,  \cP)$ be a probability space and  $\srG \subset \srF$ is a \textbf{sub-$\sigma$-algebra} on $\Omega$. Define $X: (\Omega, \srF) \rightarrow (\bR, \cB(\bR))$ as a random variable and $\cB(\bR)$ is the \textbf{Borel $\sigma$-algebra} on $\bR$. There exists a function called \underline{\textbf{transition function} or \textbf{transition kernel}} 
+\begin{align*}
+K: \Omega \times  \cB(\bR)  \rightarrow [0, 1]
+\end{align*}
+ such that
+\begin{enumerate}
+\item For each $\omega$ in $\Omega$, $K(\omega, \cdot)$ is a \underline{\textbf{probability measure} on $\cB(\bR)$};
+\item For each \textbf{Borel set} $H\in \cB(\bR)$, $K(\cdot, H)$ is the \underline{\textbf{conditional probability} $\cP[X \in H | \srG]$}.
+\end{enumerate}
+The probability measure $\mu := K(\omega, \cdot)$ is a \underline{\textbf{conditional distribution of $X$ given $\srG$}}.
+If $\srG = \sigma(Z)$, it is a \underline{\textbf{conditional distribution of $X$ given $Z$}}.
+\end{proposition}
+
+\item \begin{remark}
+Note that \emph{\textbf{the first argument}} of \emph{kernel} is a \emph{\textbf{point}} in $\Omega$ while \emph{\textbf{the second argument}} is a \emph{\textbf{Borel measurable set}} in $\cB(\bR)$. Thus it make sense for 
+\begin{align*}
+K(\omega, dx) = \lim\limits_{r \rightarrow 0 }K(\omega, B(x, r)).
+\end{align*}
+\end{remark}
+
+\item \begin{remark} (\textbf{\emph{Conditional Probability Distribution $\neq$ Conditional Probability}})\\
+From the definition above, we see that conditional probability distribution is not the conditional probability:
+\begin{itemize}
+\item \emph{\textbf{A conditional probability}} $\cP[X \in H | \srG]$ is a \emph{\textbf{$\srG$-measurable function}} $f(\omega)$.
+\begin{align*}
+ \omega \mapsto \cP[X \in H | \srG]_{\omega}, \quad \text{\emph{for fixed }}H
+\end{align*}
+
+ In other word, $\cP[X \in H | \srG]$ is a \emph{\textbf{random variable}} \emph{determined by the \textbf{conditioning} term} $\srG$. If $\srG = \sigma(Z)$, then $\cP[X \in H |  \sigma(Z)] = \cP[X \in H | Z] = f(Z)$ is \emph{\textbf{a function of conditioning random variable}} $Z$.
+ 
+ \item \emph{\textbf{A conditional probability distribution}} is \emph{\textbf{a measure on $(\bR, \cB(\bR))$}}. 
+ 
+ In this case, it is resulting \emph{\textbf{probability measure}} on real line $\bR$ when \emph{the outcome on the \textbf{conditioning} term $\omega$ is \textbf{observed (fixed)}}
+ \begin{align*}
+ H &\rightarrow \cP\brac{\set{\omega': X(\omega') \in H} | \srG}_{\omega}, \quad \text{\emph{for fixed }}\omega
+\end{align*}
+Note that the \emph{outcome} $\omega$ in \emph{\textbf{conditioning term}} is \textbf{\emph{different}} from the \emph{outcome} $\omega'$ measured in the \emph{\textbf{preimage set}} of $X^{-1}(H)$ since they are  \emph{two \textbf{separated} \textbf{events}}.
+\end{itemize}
+\end{remark}
+\end{itemize}
+
+\section{Conditional Expectation}
+\subsection{Definitions}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Conditional Expectation}}) \citep{resnick2013probability}\\
+Let $(\Omega, \srF, \cP)$ be a probability space and $\srG \subset \srF$ be a sub-$\sigma$-algebra. Suppose $X\in  L^{1}(\Omega, \srF, \cP)$. There exists a function $\E{}{X| \srG}$, called the \underline{\emph{\textbf{conditional expectation}}} of $X$ \emph{\textbf{with respect to}} $\srG$ such that
+\begin{enumerate}
+\item $\E{}{X| \srG}$ is \emph{\textbf{$\srG$-measureable}} and \emph{\textbf{integrable}} \emph{with respect to} $\cP$. 
+
+\item $\E{}{X| \srG}$ satisfies \emph{\textbf{the functional equation}}: 
+\begin{align*}
+\int_{G} X d\cP &= \int_{G} \E{}{X| \srG} d\cP, \quad \forall\, G \in \srG.
+\end{align*}
+\end{enumerate}
+\end{definition}
+
+\item \begin{remark}
+To \emph{prove the \textbf{existence}} of such a random variable, 
+\begin{enumerate}
+\item consider first the case of
+\emph{\textbf{nonnegative} X}. Define a measure $\nu$ on $\srG$ by 
+\begin{align*}
+\nu(G) = \int_{G} X d\cP = \int_{\Omega} X \mathds{1}_{G}\; d\cP.
+\end{align*}
+This measure is \emph{finite} because $X$ is \emph{integrable}, and it is \emph{\textbf{absolutely continuous}} with respect to $\cP$. By the \emph{Lebesgue-Radon-Nikodym Theorem},  there is a $\srG$-measurable function $f$
+such that 
+\begin{align*}
+\nu(G) = \int_{G} f d\cP.
+\end{align*}
+This $f$ has properties (1) and (2). 
+\item If $X$ is \emph{not necessarily nonnegative}, $\E{}{X_{+}| \srG} - \E{}{X_{-}| \srG}$ clearly has the required properties.
+\end{enumerate}
+\end{remark}
+
+\item \begin{remark}
+As $\srG$ increases, condition (1) becomes \emph{\textbf{weaker}} and condition (2) becomes \emph{\textbf{stronger}}.
+\end{remark}
+
+\item \begin{remark}
+Let $(\Omega, \srF, \cP)$ be a probability space, with  $\srG \subset \srF$ a sub-$\sigma$-algebra, define
+\begin{align*}
+\cP[A | \srG] &= \E{}{\mathds{1}_{A}| \srG}
+\end{align*} for all $A\in \srF$.
+\end{remark}
+
+\item \begin{remark}
+By definition, the conditional expectation is a \emph{\textbf{Radon-Nikodym derivative}} of $d\nu|_{\srG} = X d\cP|_{\srG}$ w.r.t. $d\cP|_{\srG}$ within $\srG$.
+\begin{align*}
+\E{}{X| \srG}&:=  \frac{Xd\cP|_{\srG}}{d\cP|_{\srG}} = X|_{\srG}.
+\end{align*} Thus \underline{\emph{$\E{}{X| \srG}$ is the \textbf{projection} of $X$ on \textbf{sub $\sigma$-algebra} $\srG$}}.
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Conditioning on Random Variables}})\\
+By definition, conditioning on random variables $(X_{t}, t\in T)$ on $(\Omega, \srB)$ can be expressed as 
+\begin{align*}
+\E{}{X| X_{t}, t\in T} &\equiv \E{}{X| \sigma(X_{t}, t\in T)}, 
+\end{align*}
+where $\sigma(X_{t}, t\in T)$ is the $\sigma$-algebra generated by the cylinder set
+\begin{align*}
+C_{n}[A]&\equiv \set{\omega: (X_{t}(\omega), 1\le t\le n) \in A  } \in \srB, \quad A\in \cB(\bR^{n}), \forall \, n
+\end{align*}
+\end{remark}
+
+\item \begin{remark}(\emph{\textbf{$\sigma$-Algebra Generated by Partition of Sample Space}})\\
+As above, assume that the sub $\sigma$-algebra $\srG$ is generated by a \emph{\textbf{partition}} $B_1, B_2, \ldots$ of $\Omega$, then for $X \in L^1(\Omega, \srF, \cP)$, 
+\begin{align*}
+\E{}{X | B_i} &= \int X d\cP(X | B_i) = \int_{B_i} X d\cP / \cP(B_i)
+\end{align*} where $\cP(X | B_i)$ is \emph{the conditional probability} defined in previous section. If $\cP(B_i) = 0$, then $\E{}{X | B_i} = 0$.
+We claim that 
+\begin{enumerate}
+\item 
+\begin{align*}
+\E{}{X | \srG} &= \sum_{i=1}^{\infty}\E{}{X | B_i} \mathds{1}_{B_i}, \quad a.s.
+\end{align*}
+\item For any $A \in \srF$,
+\begin{align*}
+\cP(A | \srG) &= \sum_{i=1}^{\infty}\cP(A | B_i) \mathds{1}_{B_i}, \quad a.s.
+\end{align*}
+\end{enumerate}
+\end{remark}
+
+
+
+\item \begin{remark}
+Both $P[A | \srF]$ and $\E{}{X| \srF}$ are \emph{random variables} from $\Omega \rightarrow \bR$. Formally speaking, 
+\begin{align*}
+P\brac{(X,Y)\in A| \sigma(X)}_{\omega} &\equiv P\brac{(X(\omega), Y)\in A}\\
+&= P\set{\omega': (X(\omega), Y(\omega'))\in A}\\
+&\equiv f(X(\omega))\\
+&= \rlat{\nu}{\sigma(X)}(A)\\
+\E{}{(X,Y)| \sigma(X)}_{\omega} &= \lim\limits_{m(A)\rightarrow 0\atop \omega\in A\in \sigma(X)} \frac{P\set{\omega': (X(\omega), Y(\omega'))\in A}}{m(A)}
+\end{align*}
+It is the expected value of $X$ for someone who knows for each $E\in \srF$, whether or not $\omega\in E$, which $E$ itself remains unknown.
+\end{remark}
+\end{itemize}
+
+
+\subsection{Properties}
+\begin{itemize}
+\item \begin{proposition} (\textbf{Properties of Conditional Expectation}) \citep{resnick2013probability}\\
+Let $(\Omega, \srF, \cP)$ be a probability space and $\srG \subset \srF$ be a sub-$\sigma$-algebra. Suppose $X, Y \in  L^{1}(\Omega, \srF, \cP)$ and $\alpha, \beta \in \bR$.
+\begin{enumerate}
+\item (\textbf{Linearity}): $\E{}{\alpha X+ \beta Y | \srG} = \alpha \E{}{X| \srG} +\beta  \E{}{Y | \srG}$;
+\item (\textbf{Projection}): If $X$ is \textbf{$\srG$-measurable}, then $\E{}{X | \srG} = X$ almost surely.
+\item (\textbf{Conditioning on Indiscrete $\sigma$-Algebra}): 
+\begin{align*}
+\E{}{X | \set{\emptyset, \Omega}} = \E{}{X}.
+\end{align*}
+\item (\textbf{Monotonicity}):  If $X \ge 0$, then $\E{}{X | \srG} \ge 0$ almost surely. Similarly, if $X \ge Y$, then $\E{}{X | \srG} \ge \E{}{Y | \srG}$  almost surely.
+\item (\textbf{Modulus Inequality}): 
+\begin{align*}
+\abs{\,\E{}{X | \srG}\,} &\le \E{}{\,\abs{X} \, | \srG}.
+\end{align*}
+\item (\textbf{Monotone Convergence Theorem}): If  $\set{X_n}_{n=1}^{\infty} \subset  L^{1}(\Omega, \srF, \cP)$,  $0 \le X_1 \le X_{2}\le \ldots$ is a \textbf{monotone sequence} of \textbf{non-negative} random variables and $X_n \rightarrow X$ then
+\begin{align*}
+\lim\limits_{n\rightarrow \infty}\E{}{X_n | \srG} &= \E{}{\lim\limits_{n\rightarrow \infty} X_n \big| \srG} = \E{}{X | \srG}.
+\end{align*}
+\item (\textbf{Fatou Lemma}): If  $\set{X_n}_{n=1}^{\infty} \subset  L^{1}(\Omega, \srF, \cP)$, and $X_n \ge 0$ for all $n$, then
+\begin{align*}
+\E{}{\liminf\limits_{n\rightarrow \infty} X_n \big| \srG} &\le \liminf\limits_{n\rightarrow \infty} \E{}{X_n | \srG} 
+\end{align*} 
+\item  (\textbf{Dominated Convergence Theorem}):  If  $\set{X_n}_{n=1}^{\infty} \subset  L^{1}(\Omega, \srF, \cP)$ and $\abs{X_n} \le Z$, where $Z \in L^{1}(\Omega, \srF, \cP)$ is a random variable, $X_n \rightarrow X$ almost surely,  then
+\begin{align*}
+\lim\limits_{n\rightarrow \infty}\E{}{X_n | \srG} &= \E{}{\lim\limits_{n\rightarrow \infty} X_n \big| \srG} = \E{}{X | \srG}, \quad a.s.
+\end{align*}
+\item (\textbf{Product Rule}): If $Y$ is $\srG$-measurable, 
+\begin{align*}
+\E{}{X\,Y | \srG} &= Y\,\E{}{X | \srG},\;\; \text{ a.s.}
+\end{align*}
+\begin{proof}
+For any $E\in \srF$,
+\begin{align*}
+\int_{E} Y\E{}{X|\srF} dP &= \int_{E} XY dP\\
+&= \int_{E} \E{}{XY|\srF} dP
+\end{align*}
+using the fact that $Y= \ind{A}$ with linearity, and monotone converging theorem, 
+\begin{align*}
+\int_{E} \ind{A}\E{}{X|\srF} dP &= \int_{E\cap A} \E{}{X|\srF} dP\\
+&= \int_{E\cap A} XdP\\
+&= \int_{E} \ind{A}X dP \qed
+\end{align*} 
+\end{proof}
+
+\item (\textbf{Smoothing}): For $\srF_{1}\subset \srF_{0} \subset \srF$, 
+\begin{align*}
+\E{}{\E{}{X| \srF_{0}}\,|\srF_{1} } &= \E{}{X| \srF_{1}}\\
+\E{}{\E{}{X| \srF_{1}}\,|\srF_{0} } &= \E{}{X| \srF_{1}}.
+\end{align*} Note that $ \E{}{X| \srF_{1}}$ is \textbf{smoother} than $ \E{}{X| \srF_{0}}$.
+Moreover
+\begin{align*}
+\E{}{X} = \E{}{X| \set{\emptyset, \Omega}} &= \E{}{\E{}{X| \srF_{0}}\,|\set{\emptyset, \Omega} } = \E{}{\E{}{X| \srF_{0}}}.
+\end{align*}
+\begin{proof}
+Since for any $F\in \srF_{1}\subset \srF_{0} \subset \srF$,
+\begin{align*}
+\int_{F}\E{}{\E{}{X| \srF_{0}}\,|\srF_{1} }dP &= \int_{F}\E{}{X| \srF_{0}} dP\\
+&= \int_{F}XdP \quad ( \text{ since } F\in \srF_{0} \subset \srF)\\
+&=  \int_{F}\E{}{X| \srF_{1}}dP; \quad ( \text{ since } F\in \srF_{1} \subset \srF) \qed
+\end{align*}
+\end{proof}
+
+\item (\textbf{The Conditional Jensen's Inequality}). Let $\phi$ be a \textbf{convex} function, $\phi(X) \in L^1(\Omega, \srF, \cP)$. Then almost surely
+\begin{align*}
+\phi\paren{\E{}{X | \srG}} &\le \E{}{\phi(X) | \srG}
+\end{align*}
+\end{enumerate}
+\end{proposition}
+
+\item \begin{theorem} (\textbf{Projection Theorem} or \textbf{The Minimum Mean Squared Estimation}) \citep{billingsley2008probability, resnick2013probability} \\
+Let $(\Omega, \srF, \cP)$ be a probability space and $\srG \subset \srF$ be a sub-$\sigma$-algebra.  $L^{2}(\Omega, \srG)$ is the space of the square integrable \textbf{$\srG$-measurable} functions. If $X \in L^{2}(\Omega, \srF)$, then $\E{}{X| \srG}$ is the \underline{\textbf{orthogonal projection}} of $X$ onto $L^{2}(\Omega, \srG) \subset  L^{2}(\Omega, \srF)$. That is, $\E{}{X| \srG}$ is the \textbf{\underline{unique} element} in the \textbf{subspace} $L^{2}(\Omega, \srG)$ that achieves
+\begin{align*}
+\inf_{Z \in L^{2}(\Omega, \srG)}\norm{X - Z}{L^2}.
+\end{align*} In other word, $\E{}{X| \srG}$ is \underline{\textbf{the minimum mean squared estimator (MMSE)}} of $X$ in $L^{2}(\Omega, \srG)$.
+\end{theorem}
+\begin{proof}
+It is computed by solving the orthogonality condition for $Z \in L^{2}(\Omega, \srG)$:
+\begin{align*}
+\inn{Y}{X - Z} = 0, \quad \forall\, Y \in L^{2}(\Omega, \srG).
+\end{align*}
+This says that
+\begin{align*}
+\int Y(X-Z) d\cP = 0, \quad \forall\, Y \in L^{2}(\Omega, \srG).
+\end{align*}
+But trying a solution of $Z = \E{}{X| \srG}$, we get
+\begin{align*}
+\int Y(X-Z) d\cP  &= \int Y\paren{X-  \E{}{X| \srG}} d\cP \\
+&= \E{}{Y\paren{X-  \E{}{X| \srG}}}\\
+&= \E{}{YX} - \E{}{Y\,\E{}{X| \srG}} \\
+& (\text{ since }Y \text{ is $\srG$-measurable})\\
+&= \E{}{YX} - \E{}{\E{}{YX| \srG}}\\
+&= \E{}{YX} - \E{}{YX} = 0. \qed
+\end{align*}
+\end{proof}
+
+\item \begin{remark}
+The result above is essentially \emph{\textbf{the projection theorem}} for Hilbert space. Note that $L^{2}(\Omega, \srF, \cP)$ is a \emph{\textbf{Hilbert space}} and $L^{2}(\Omega, \srG) \subset  L^{2}(\Omega, \srF)$ is a \emph{\textbf{closed subspace}}. Thus for every $X \in L^{2}(\Omega, \srF, \cP)$, it can be \emph{\textbf{uniquely}} written as
+\begin{align*}
+X &= \E{}{X| \srG} + \Delta
+\end{align*} where $\Delta \perp L^{2}(\Omega, \srG)$.
+\end{remark}
+
+\item \begin{proposition} (\textbf{Conditioning and Independence})  \citep{resnick2013probability}\\
+Let $(\Omega, \srF, \cP)$ be a probability space and $\srG \subset \srF$ be a sub-$\sigma$-algebra. Suppose $X \in  L^{1}(\Omega, \srF, \cP)$.  
+\begin{enumerate}
+\item If $X \indep \srG$, i.e. $X$ is \textbf{independent} from $\srG$, then 
+\begin{align*}
+\E{}{X| \srG} &= \E{}{X}
+\end{align*}
+\item Let  $\phi: \bR^j \times \bR^k \rightarrow \bR$ be a \textbf{bounded Borel function}. Suppose also that
+$X: \Omega \rightarrow \bR^j$, $Y: \Omega \rightarrow \bR^k$, $X$ is $\srG$-measurable and $Y$ is \textbf{independent} of $\srG$. Define
+\begin{align*}
+f_{\phi}(x) &= \E{}{\phi(x, Y)}.
+\end{align*}
+Then
+\begin{align*}
+\E{}{\phi(X, Y) | \srG} &= f_{\phi}(X).
+\end{align*}
+\end{enumerate}
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Continuity in $L^p$ Norm}) \citep{resnick2013probability}\\
+Let $(\Omega, \srF, \cP)$ be a probability space and $\srG \subset \srF$ be a sub-$\sigma$-algebra.  $X \in L^{p}(\Omega, \srF, \cP)$ for $1 \le p < \infty$, i.e. 
+\begin{align*}
+\norm{X}{p} &= \paren{\int \abs{X}^p d\cP}^{1/p} < \infty.
+\end{align*} Then 
+\begin{align*}
+\norm{\E{}{X| \srG}}{p} &\le \norm{X}{p},
+\end{align*} and conditional expectation $\E{}{X| \srG}$ as functional of $X$ is \textbf{continuous} in $L^p$ \textbf{norm topology}, i.e. 
+\begin{align*}
+X_n \stackrel{L^p}{\rightarrow} X \quad \text{ implies }\quad \E{}{X_n| \srG} \stackrel{L^p}{\rightarrow} \E{}{X| \srG}
+\end{align*}
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Conditional Distributions and Expectations}) \citep{billingsley2008probability}\\
+Let $K(\omega, \cdot)$ be a \textbf{conditional distribution} with respect to $\srG$ of a random variable $X$, in the sense of Proposition \ref{prop: cond_prob_dist}. If $\varphi: \bR \rightarrow \bR$ is a Borel measurable function for which $\varphi(X)$ is \textbf{integrable}, then 
+\begin{align*}
+\int_{\bR} \varphi(x) K(\omega, dx) &= \E{}{\varphi(X) | \srG}_{\omega}, \quad a.s.
+\end{align*}
+\end{proposition}
+
+\item \begin{remark} (\emph{\textbf{Conditional Expectation as Expectation w.r.t. Conditional Probability}})\\
+It is a consequence of the proof above that $\int_{\bR} \varphi(x) K(\omega, dx) $ is \emph{\textbf{$\srG$-measurable}} and \emph{\textbf{finite}} \emph{with probability $1$}. If X is itself integrable, it follows by the $\varphi(x) = x$ that 
+\begin{align*}
+ \E{}{X | \srG}_{\omega} &= \int_{\bR} x K(\omega, dx) , \quad a.s. \\
+ &= \int_{\bR} x \,P(dx | \srG)_{\omega}.
+\end{align*}
+\end{remark}
+\end{itemize}
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{reference.bib}
+\end{document}
