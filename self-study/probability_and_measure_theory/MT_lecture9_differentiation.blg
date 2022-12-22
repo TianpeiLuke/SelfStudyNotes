@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: MT_lecture9_differentiation.aux
+The style file: plainnat.bst
+Database file #1: reference.bib.bib
+Repeated entry---line 231 of file reference.bib.bib
+ : @book{reed1980methods
+ :                      ,
+I'm skipping whatever remains of this entry
+Warning--can't use both volume and number fields in royden1988real
+You've used 5 entries,
+            2773 wiz_defined-function locations,
+            620 strings with 5476 characters,
+and the built_in function-call counts, 1726 in all, are:
+= -- 131
+> -- 83
+< -- 8
++ -- 29
+- -- 24
+* -- 113
+:= -- 280
+add.period$ -- 15
+call.type$ -- 5
+change.case$ -- 18
+chr.to.int$ -- 5
+cite$ -- 11
+duplicate$ -- 100
+empty$ -- 161
+format.name$ -- 35
+if$ -- 354
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 10
+newline$ -- 33
+num.names$ -- 20
+pop$ -- 59
+preamble$ -- 1
+purify$ -- 18
+quote$ -- 0
+skip$ -- 73
+stack$ -- 0
+substring$ -- 10
+swap$ -- 9
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 30
+warning$ -- 1
+while$ -- 15
+width$ -- 0
+write$ -- 70
+(There was 1 error message)
