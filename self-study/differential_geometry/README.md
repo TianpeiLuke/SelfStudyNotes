@@ -113,20 +113,91 @@
   - Line Integrals
   - Conservative Covector Fields
 
-- Chapter 12: Tensors
+- Tensors
+  - Multilinear Algebra
+    - Multilinear Functions and Tensor Product
+    - Abstract Tensor Products of Vector Spaces
+    - Covariant and Contravariant Tensors on a Vector Space 
+  - Symmetric and Alternating Tensors
+    - Symmetric Tensors
+    - Alternating Tensors
+  - Tensors and Tensor Fields on Manifolds
+    - Definitions
+    - Pullbacks of Tensor Fields
+    - Contraction
+    - Lie Derivatives of Tensor Fields 
 
-- Chapter 13: Riemannian Manifolds
+- Riemannian Manifolds
+  - Riemannian Metrics
+    - Definitions
+    - Pullback Metrics 
+  - Methods for Constructing Riemannian Metrics
+    - Riemannian Submanifolds
+    - Riemannian Submersions
+    - Riemannian Coverings
+  - Basic Constructions on Riemannian Manifolds
+    - Raising and Lowering Indices
+    - Inner Products of Tensors
+    - The Volume Form and Integration
+    - The Divergence and the Laplacian 
+  - Length and Distance
+    - The Riemannian Distance Function 
 
-- Chapter 14: Differential Forms
+- Differential Forms
+  - The Algebra of Alternating Tensors
+    - The Exterior Form
+    - Elementary Alternating Tensors
+    - The Wedge Product
+    - Interior Multiplication 
+  - Differential Forms on Manifolds
+  - Exterior Derivatives
+    - Definitions
+    - An Invariant Formula for the Exterior Derivative
+    - Lie Derivatives of Differential Forms 
 
-- Chapter 15: Connections
+- Connections
+  - Differentiating Vector Fields
+  - Connections
+    - Definitions
+    - Connections in the Tangent Bundle 
+    - Existence of Connections 
+  - Covariant Derivatives of Tensor Fields
+    - Extension of Connection From Tangent Bundle to Tensor Bundles, Covariant Derivatives
+    - Second Covariant Derivatives
 
-- Chapter 16: Geodesics
+- Geodesics
+  - Vector and Tensor Fields Along Curves
+    - Definitions
+    - Covariant Derivatives Along Curves 
+  - Geodesics
+  - Parallel Transport
+  - Pullback Connections
 
-- Chapter 17: Levi-Civita Connection
+- Levi-Civita Connection
+  - The Tangential Connection
+  - Connections on Abstract Riemannian Manifolds
+    - Metric Connections
+    - Symmetric Connections
+    - The Levi-Civita Connection 
+  - The Exponential Map
+  - Normal Neighborhoods and Normal Coordinates
+  - Tubular Neighborhoods and Fermi Coordinates
+    - Tubular Neighborhoods
+    - Fermi Coordinates
+  - Geodesics of the Model Spaces
 
-- Chapter 18: Riemannian Geodesics
+- Riemannian Geodesics
 
-- Chapter 19: Geodesic Distance
+- Geodesic Distance
 
-- Chapter 20: Curvatures
+- Curvatures
+  - Local Invariants
+  - The Curvature Tensor
+    - Definitions
+    - Flat Manifolds
+    - Symmetries of the Curvature Tensor 
+  - Ricci and Scalar Curvatures
+    - The Ricci Identities
+    - Ricci and Scalar Curvatures
+  - The Weyl Tensor
+  - Curvatures of Conformally Related Metrics
