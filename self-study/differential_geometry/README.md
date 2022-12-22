@@ -27,9 +27,23 @@
     - Examples of Smooth Manifolds
   - Manifolds with Boundary
 
-- Chapter 2: Smooth Maps
+- Smooth Maps
+  - Smooth Functions and Smooth Maps
+    - Smooth Functions On Manifolds
+    - Smooth Functions Between Manifolds   
+    - Examples of Smooth Map
+    - Diffeomorphisms
+  - Partitions of Unity
 
-- Chapter 3: Tangent Vectors
+- Tangent Vectors
+  - Tangent Vectors
+    - Geometric Tangent Vector
+    - Tangent Vectors on Manifolds 
+  - The Differential of a Smooth Map
+  - Computations in Coordinates
+    - The Derivation in Coordinates
+    - The Differential in Coordinates 
+    - Change of Coordinates  
 
 - Chapter 4: Submersion, Immersion, Embedding
 
