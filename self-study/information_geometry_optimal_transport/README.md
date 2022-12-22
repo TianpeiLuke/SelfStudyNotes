@@ -30,7 +30,7 @@
    
   - Comparison Between Riemannian Geometry and Information Geometry
    
-  - Information Metrics and Statistical Divergence
+  - Information Metrics and Statistical Divergence [pdf](./info_geo_6_divergence.pdf)
     - Statistical Divergence and its Properties
       - KL Divergence
       - Renyi Alpha-Divergence
