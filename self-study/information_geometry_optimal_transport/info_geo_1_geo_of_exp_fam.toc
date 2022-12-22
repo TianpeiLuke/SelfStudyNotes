@@ -1,0 +1,10 @@
+\contentsline {section}{\numberline {1}The statistical manifold and the exponential families}{2}
+\contentsline {subsection}{\numberline {1.1}Concepts}{2}
+\contentsline {subsection}{\numberline {1.2}Exponential families}{2}
+\contentsline {section}{\numberline {2}The information geometry of exponential families}{4}
+\contentsline {subsection}{\numberline {2.1}Information geometry and its related concepts}{4}
+\contentsline {subsection}{\numberline {2.2}Affine spaces}{5}
+\contentsline {subsection}{\numberline {2.3}Log-likelihood and affine structure}{5}
+\contentsline {subsection}{\numberline {2.4}Geometrical criterion for exponential families}{6}
+\contentsline {subsection}{\numberline {2.5}Computational criterion for exponential families}{8}
+\contentsline {subsection}{\numberline {2.6}Parameter independence}{9}

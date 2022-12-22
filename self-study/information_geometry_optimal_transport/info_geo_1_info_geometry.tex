@@ -1,0 +1,477 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs,  mathtools, dsfont}
+\usepackage{tabularx}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+
+
+\begin{document}
+\title{Self-study: Information Geometry Basis}
+\author{ Tianpei Xie}
+\date{ Nov. 6th., 2022 }
+\maketitle
+\tableofcontents
+\newpage
+\section{Geometry of $\cP(\cX)$}
+\subsection{Definitions}
+\begin{itemize}
+\item Let $\cP(\cX)$ be the set of \underline{\emph{\textbf{probability density functions}}} on $\cX$ with respect to base measure $\mu$
+\begin{align*}
+\cP(\cX) := \set{p: \cX \rightarrow \bR: \, \int_{\cX} p(x)d\mu(x) = 1,\;  p(x) > 0 \,(\forall x \in \cX). \;  }
+\end{align*} In general, $p = \frac{dP}{d\mu}$ is \emph{\textbf{the Radon-Nikodym derivative}} where $\mu$ is $\sigma$-finite measure on a measurable set $(\cX, \cB)$ with $\cB$ being \emph{the Borel field} consisting of $\cX$ and its subsets. $P$ is \emph{\textbf{the probability measure}} that is \emph{absolutely continuous} with respect to $\mu$. We also assume that \emph{\textbf{the support of $p$ covers $\cX$}} so that $p(x) >0$ for all $x\in \cX$.
+
+\item Define $S \subseteq \cP(\cX)$ as a family of probability densities on $\cX$. Suppose for each probability function can be parameterized as $p_{\xi} = p(x; \xi) \in S$, where $\xi = (\xi^1 \xdotx{,} \xi^n) \in \Xi \subseteq \bR^n$. Thus 
+\begin{align*}
+S &:= \set{p_{\xi} = p(x; \xi): \xi \in \Xi  \subseteq \bR^n }
+\end{align*} and $\xi \mapsto p_{\xi}$ is injective. We call $S$ as an \emph{\textbf{$n$-dimensional statistical model}}, a \emph{\textbf{parametric model}}, simply a \emph{\textbf{model}} on $\cX$.
+
+\item Define the space of all \emph{real-valued \textbf{measurable functions}} on $\cX$ as $\bR^{\cX} := \set{f: \cX\rightarrow \bR}$. $\bR^{\cX}$ is an \textbf{\emph{infinite-dimensional vector space}} under function addition and scalar multiplication. We see that $\cP(\cX) \subseteq \bR^{\cX}$, is an  \emph{\textbf{affine subspace}} of $\bR^{\cX}$. Moreover, since $\bR^{\cX}$ is a metric space, with metric topology, we assume that $\cP(\cX)$ has \emph{\textbf{subspace topology}}.
+
+\item Assume that the statistical model $S = \set{p(x; \xi): \xi \in \Xi}$ is \emph{\textbf{a topological manifold}} equipped with \emph{\textbf{smooth structure}}  $\set{(U_{\alpha}, \varphi_{\alpha})}$ where each smooth chart $(U, \varphi)$ is defined and $\varphi: U \rightarrow \widehat{U} \subseteq \bR^n$ is defined by $\varphi(p_{\xi}) = \xi := (\xi^1 \xdotx{,} \xi^n).$ For any $(U_{\alpha}, \varphi_{\alpha})$ and $(U_{\beta}, \varphi_{\beta})$ such that $U_{\alpha} \cap U_{\beta} \neq \emptyset$, we have $\varphi_{\beta} \circ \varphi_{\alpha}^{-1}$ being a diffeomorphism. That is, \emph{\textbf{$S$ is a $n$-dimenisional smooth manifold}}. We may call $S$ \underline{\emph{\textbf{a statistical manifold}}}.
+
+\item Define $\ell: \cP \rightarrow \bR^{\cX}$ as $\ell(p) = \log(p)$. $\ell$ is  the \emph{\textbf{log-likelihood function}}. Under the subspace topology in $\cP$,  $\ell$ is \emph{\textbf{continous}} mapping, and is \emph{\textbf{injective}}. It is a \emph{\textbf{homemorphism}} onto its image $\ell: \cP \rightarrow \ell(\cP) \subseteq \bR^{\cX}$ with its inverse being $(\ell)^{-1}(f) = \exp(f)$ for $f \in \ell(\cP)$. The \emph{\textbf{restriction}} of $\ell$ on statistical manifold $S$ is a \emph{\textbf{smooth injection}} since the \emph{differential} of $\ell$ at $p$ as $d\ell_{p} = p^{-1}dp = p_{\xi}^{-1}(\partial_i\,p_{\xi}) d\xi^i \neq 0$ for all $\xi \in \Xi$. Moreover, $d\ell_p$ is also \emph{\textbf{injective}}, thus $\ell$ is \emph{\textbf{an injective immersion}}. Since $\ell$ is also a homemorphism onto its image, the log-likelihood $\ell$ is \underline{\emph{\textbf{a smooth embedding}}}.
+
+\item The \underline{\emph{\textbf{Fisher Information matrix}}} for $p_\xi \in S$ is defined  as 
+\begin{align}
+g_{i,j}(\xi) &= \E{p}{\partdiff{}{\xi^i}\ell_{\xi}\, \partdiff{}{\xi^j}\ell_{\xi} } := \int_{\cX}\partdiff{}{\xi^i}\log p(x; \xi) \partdiff{}{\xi^j}\log p(x; \xi) d\mu  \label{eqn: fisher_info_mat} \\
+&= - \E{p}{\partdiff{^2 }{\xi^i\,\xi^j}\ell_{\xi}}, \quad \forall i,j =1 \xdotx{,} n \nonumber\\
+G(\xi) &= [g_{i,j}(\xi)] \succeq 0 \nonumber
+\end{align} since $\partial_i \int_{\cX} p_{\xi}d\mu = \int_{\cX} \partial_i p_{\xi} d\mu = 0$, thus $\E{p}{\partial_i \ell_{\xi}} = \int \partial_i \ell_{\xi} = \int p_{\xi}^{-1} \partial_i p_{\xi} = 0$. 
+
+Let us \emph{\textbf{assume}} that \emph{\textbf{the Fisher Information matrix is positive definite}} for all $\xi \in \Xi$. This is \emph{\textbf{equivalent}} to say that the $n$-tuple 
+\begin{align*}
+\paren{\partdiff{}{\xi^1}\ell_{\xi} \xdotx{,} \partdiff{}{\xi^n}\ell_{\xi}} \subset \bR^{\cX} \text{ \emph{are \textbf{linearly independent}}.}
+\end{align*}
+\end{itemize}
+\subsection{$\cP(\cX)$ as Embedded Submanifold}
+\begin{itemize}
+\item As discussed above, $\cP(\cX) \subseteq \bR^{\cX}$ is a subspace in $\bR^{\cX}$. In fact, it is \emph{an open subset} of \emph{\textbf{the affine subspace}} $\cA_0 := \set{A: \int_{\cX} A(x) = 1}$. 
+
+\item Given $|\cX| < \infty$, $\cP(\cX)$ is \underline{\emph{\textbf{an embedded submanifold of $\bR^{\cX}$}}} under two different embeddings: 
+\begin{enumerate}
+\item The \emph{\textbf{natural inclusion map}} $\iota: \cP \xhookrightarrow{} \bR^{\cX}$  is an \emph{\textbf{embedding}}. If we assume that the probability density function is smooth, then $\iota$ is a \emph{smooth embedding} as well.  We call it \emph{\textbf{the mixture embedding}}.
+
+\emph{The \textbf{tangent space} $T_{p}^{(m)}\cP$ \textbf{under this embedding}} is the \emph{subspace} of $T_{p}\bR^{\cX} \simeq \bR^{\cX}$. In particular, 
+\begin{align*}
+T_{p}^{(m)}\cP &= \cA_0 = \set{A \in \bR^{\cX}: \int_{\cX}A(x) d\mu = 0}
+\end{align*} Denote the tangent vector under this embedding as $X^{(m)} = d\iota_{p}(X)$. That is, $X^{(m)}$ is a representation of the tangent vector $X \in T_p\cP$ when considered as an element of $\cA_{0}$,  It is called \underline{\emph{\textbf{the mixture representation}}} of the tangent vector $X \in T_p\cP$ \citep{amari2007methods}.
+Thus the tangent space under the mixture embedding is 
+\begin{align}
+T_{p}^{(m)}\cP &:= \set{X^{(m)}: X \in T_p\cP} = \cA_0 = \set{A \in \bR^{\cX}: \int_{\cX}A(x) d\mu = 0}. \label{eqn:tangent_space_mix}
+\end{align}
+Note that \emph{\textbf{the basis tangent vector}} under this embedding is still
+\begin{align}
+\paren{\partdiff{}{\xi^i}\Bigr|_{p}}^{(m)} &= \partdiff{}{\xi^i}\Bigr|_{\iota(p)} = \partdiff{}{\xi^i}\Bigr|_{p}. \label{eqn: basis_tangent_vec_mix}
+\end{align}
+
+
+\item The \emph{\textbf{log-likelihood function}} $\ell: \cP \rightarrow \ell(\cP) \bR^{\cX}$ is also a \emph{\textbf{smooth embedding}} as shown above. It is called \emph{\textbf{the exponential embedding}}. Note that $\ell(\cP) = \set{\log(p): p\in \cP}$. A tangent vector $X \in T_p\cP$ under this embedding is then represented by the result of mapping $p \mapsto \log(p)$, which is denoted as $X^{(e)}$ and call \underline{\emph{\textbf{the exponential representation}}} \citep{amari2007methods}. Note that 
+\begin{align*}
+X^{(e)} &= d\ell_{p}\paren{X} = X\ell =  p(x; \xi)^{-1}X^{(m)}(x). 
+\end{align*} Thus \emph{\textbf{the basis tangent vector}} under \emph{the exponential embedding}
+\begin{align}
+\paren{\partdiff{}{\xi^i}\Bigr|_{p}}^{(e)} &= \partdiff{}{\xi^i}\Bigr|_{\ell(p)} = \partdiff{\ell}{\xi^i}\Bigr|_{p}. \label{eqn: basis_tangent_vec_exp}
+\end{align} Denote \emph{the \textbf{tangent space} under this embedding} as $T_p^{(e)}\cP$. We can verify that 
+\begin{align}
+T_p^{(e)}\cP &= \set{X^{(e)}: X \in T_p\cP} = \set{A \in \bR^{\cX}: \int_{\cX}A(x) p(x) d\mu = \E{p}{A} = 0 }. \label{eqn:tangent_space_exp}
+\end{align}
+\end{enumerate}
+
+\item \begin{remark} 
+$\cP(\cX)$ is \emph{$|\cX|$-dimensional submanifold} if the domain $\cX$ is finite. Otherwise,  $\cP(\cX)$ is \emph{\textbf{not seen as a manifold itself}}. However, the above discussion is still valid if we restrict our attention to the \emph{\textbf{$n$-dimensional statistical manifold} $S \subseteq \cP(\cX)$}. We just need to replace $\cP$ with $S$ above. Without noticing, we will focus on $S$ instead of $\cP$ for our discussion. 
+\end{remark}
+\end{itemize}
+
+\subsection{Fisher Information Metrics}
+\begin{itemize}
+\item \begin{remark}
+For probabilty models, the ambient space $\bR^{\cX}$ denotes \emph{the set of all \textbf{random variables}} on $\cX$. Moreover, it has a natural definition of \emph{\textbf{inner product}} as 
+\begin{align*}
+\inn{f}{g} &= \int_{\cX} f(x)\,g(x)\, d\mu(x). 
+\end{align*}  \emph{\textbf{The inner product}} induced by the embedding map $\iota$ in $T^{(m)}_pS$ is formulated as 
+\begin{align}
+\inn{d\iota_p(X)}{d\iota_{p}(Y)} := \inn{X^{(m)}}{Y^{(m)}} &:=  \int_{\cX} X^{(m)}(s)\,Y^{(m)}(s) d\mu(s) \label{eqn: inner_product_mix}
+\end{align}
+Similarly,  \emph{the \textbf{inner product}} induced by the embedding map $\ell$ in $T^{(e)}_pS$ becomes
+\begin{align}
+\inn{d\ell_p(X)}{d\ell_{p}(Y)} := \inn{X^{(e)}}{Y^{(e)}}_{p} &:= \E{p}{X^{(e)}\,Y^{(e)}}=  \int \brac{X^{(e)}(s)\,Y^{(e)}(s)} p(s) d\mu(s)  \label{eqn: inner_product_exp}
+\end{align} where the additional $p(s)$ comes from \emph{the \textbf{Jacobian} for the \textbf{inverse} of the log-likelihood}.
+\end{remark}
+
+\item By definition, \emph{\textbf{the Riemannian metric}} on $S$ under \emph{\textbf{the exponential representation}} is defined as 
+\begin{align*}
+\hat{g}_{i,j} &:= \inn{\paren{\partdiff{}{\xi^i}\Bigr|_{p}}^{(e)}}{\paren{\partdiff{}{\xi^j}\Bigr|_{p}}^{(e)}}_{p} \\
+&= \E{p}{ \partdiff{}{\xi^i}\ell(p)\, \partdiff{}{\xi^i}\ell(p)} := \text{Fisher information }g_{i,j} .
+\end{align*}  $g_{i,j}$ is called \emph{\underline{\textbf{the Fisher metric}} or \underline{\textbf{the Information metric}}} \citep{amari2007methods}. It is seen that  \emph{\textbf{the Fisher metric is a Riemannian metric on $S$}}. 
+
+Thus, $S$ is a \underline{\emph{\textbf{$n$-dimensional Riemannian submanifold}}}.
+\end{itemize}
+\subsection{$\alpha$-Connections}
+\begin{itemize}
+\item  \citep{amari2007methods} proposed \underline{\emph{\textbf{the $\alpha$-connections}}} $\nabla^{(\alpha)}$ as \emph{\textbf{a family of affine connections}} on the tangent bundle $TS$, for $\alpha \in [-1, 1]$. The \emph{\underline{\textbf{coefficient of the $\alpha$-connection}}} under \emph{\textbf{the Fisher metric}} is formulated as
+\begin{align}
+\Gamma_{i,j; k}^{(\alpha)} &= \E{\xi}{\paren{\partdiff{}{\xi^i}\partdiff{}{\xi^j}\ell_{\xi} + \frac{1 - \alpha}{2} \partdiff{}{\xi^i}\ell_{\xi}\, \partdiff{}{\xi^j}\ell_{\xi} }\paren{\partdiff{}{\xi^k}\ell_{\xi}}}  \label{eqn: alpha_connection_coefficient}
+\end{align} where
+\begin{align*}
+\Gamma_{i,j; k}^{(\alpha)} &:= \inn{\nabla^{(\alpha)}_{\partial_i}{\partial_j}}{\partial_k},
+\end{align*} where $g = \inn{\cdot}{\cdot}_p$ is \emph{\textbf{the Fisher metric}}.
+
+We see that for $\alpha = 0$, the coefficient for $0$-connection
+\begin{align*}
+\Gamma_{i,j; k}^{(0)} &= \E{\xi}{\paren{\partdiff{}{\xi^i}\partdiff{}{\xi^j}\ell_{\xi}}\paren{\partdiff{}{\xi^k}\ell_{\xi}}} + \frac{1}{2} \E{\xi}{\paren{ \partdiff{}{\xi^i}\ell_{\xi}\, \partdiff{}{\xi^j}\ell_{\xi} }\paren{\partdiff{}{\xi^k}\ell_{\xi}}} 
+\end{align*}
+Thus
+\begin{align*}
+\partial_k\,g_{i,j} = \partial_k \E{p}{(\partial_i \ell)(\partial_j \ell)} &= \E{p}{(\partial_k\partial_i\ell)(\partial_j \ell)} + \E{p}{(\partial_i\ell)(\partial_k\partial_j \ell)} + \E{p}{(\partial_i \ell)(\partial_j \ell)(\partial_k \ell)} 
+\end{align*} The last terms from $\partial_k$ acting on the expectation function $\E{p}{\cdot}$. 
+Thus
+\begin{align*}
+\partial_k\,g_{i,j} &= \E{p}{(\partial_k\partial_i\ell)(\partial_j \ell)} + \E{p}{(\partial_i\ell)(\partial_k\partial_j \ell)} + \E{p}{(\partial_i \ell)(\partial_j \ell)(\partial_k \ell)} \\
+&= \Gamma_{k,i; j}^{(0)} + \Gamma_{k,j; i}^{(0)}
+\end{align*}
+
+\item Note that for Levi-Civita connection (i.e. connection that is both metric and symmetric), the relationship between the Riemannian metric and the coefficients of connection under the metric is
+\begin{align*}
+\partdiff{}{\xi^k} g_{i,j} &= \Gamma_{k,i; j} + \Gamma_{k,j; i} \\
+\text{where } \Gamma_{i,j; k} &:= \inn{\nabla_{\partial_i}{\partial_j}}{\partial_k},
+\end{align*}
+Thus \emph{\textbf{the $\alpha$-connection is the Levi-Civita connection with respect to the Fisher metric if and only if $\alpha = 0$}}.
+
+\item \emph{\textbf{The family of $\alpha$-connections} forms \textbf{an affine space} itself}, i.e. 
+\begin{align*}
+\nabla^{(\alpha)} &= \frac{1+\alpha}{2}\nabla^{(1)} + \frac{1 - \alpha}{2}\nabla^{(-1)} \\
+&= (1-\alpha) \nabla^{(0)} + \alpha\,\nabla^{(1)}
+\end{align*} Also since $\nabla^{(0)}$ is the Levi-Civita connection (Riemannian connections) on $S$ and also that this connection is unique, we see that \textbf{\emph{$\nabla^{(\alpha)}$ is not the Levi-Civita connection for all $\alpha \neq 0$}}.  In fact, \textbf{\emph{$\nabla^{(\alpha)}$ is not a metric connection for all $\alpha \neq 0$}}
+
+\item There are two special $\alpha$-connections:
+\begin{enumerate}
+\item When $\alpha = -1$, the $\nabla^{(-1)}$ is called \underline{\emph{\textbf{the mixture connection}}} and is denoted as $\nabla^{(m)}$.
+
+\underline{\textit{\textbf{The mixture family}}} of distributions is seen as a \underline{\emph{\textbf{$m$-affine subspaces}}} since it is considered \emph{\textbf{flat}} (i.e. $\Gamma^{(-1)}_{i,j;k} =0$) under \emph{\textbf{the mixture connections}} $\nabla^{(m)}$. 
+\begin{align}
+p(x; \xi) &= \sum_{i=1}^{n}\xi^{i}\,\phi_i(x) + C(x) \label{eqn: mixture_family}
+\end{align}
+
+
+\item When $\alpha = 1$, the $\nabla^{(1)}$ is called \underline{\emph{\textbf{the exponential connection}}} and is denoted as $\nabla^{(e)}$.
+
+\underline{\textit{\textbf{The exponential family}}} of distributions is seen as an \underline{\emph{\textbf{$e$-affine subspaces}}} since it is considered \emph{\textbf{flat}} (i.e. $\Gamma^{(1)}_{i,j;k} =0$) under \emph{\textbf{the exponential connections}} $\nabla^{(e)}$. 
+\begin{align}
+p(x; \xi) &= \exp\set{\sum_{i=1}^{n}\xi^{i}\,\phi_i(x) - A(\xi)}C(x) \label{eqn: exponential_family}
+\end{align}
+\end{enumerate}
+\end{itemize}
+
+\subsection{Dual Connections}
+\begin{itemize}
+\item 
+\begin{definition} 
+Let $(S, g)$ be a Riemannian manifold and $\nabla$ and $\nabla^{*}$ are two connections on $TS$. If for all vector fields $X, Y, Z \in \frX(S)$, 
+\begin{align}
+Z\inn{X}{Y} &= \inn{\nabla_{Z}{X}}{Y} + \inn{X}{\nabla^{*}_{Z}(Y)}   \label{eqn: dual_connections}
+\end{align} holds, then we say that $\nabla$ and $\nabla^{*}$ are \emph{\textbf{duals}} to each other with respect to the Riemannian metric $g$. We call one either \underline{\emph{\textbf{the dual connection}}}   or \underline{\emph{\textbf{the conjugate connection}}}.
+
+We call the triple $(g, \nabla, \nabla^{*})$ \underline{\emph{\textbf{a dualistic structure}}} on $S$.
+\end{definition}
+
+\item We see that the coefficients $\Gamma_{i,j;k}$ and $\Gamma^{*}_{i,j;k}$ for $\nabla$ and $\nabla^{*}$ have the relationship:
+\begin{align*}
+\partial_k\,g_{i,j} &= \Gamma_{k,i; j} + \Gamma_{k,j; i}^{*}
+\end{align*}
+
+\item Similarly, define \emph{\textbf{the covariant derivative}} of vector field \emph{along curve} with respect to $\nabla$ and its dual connection $\nabla^{*}$ as $D_t$ and $D_t^{*}$, then 
+\begin{align*}
+\frac{d}{dt}\inn{X(t)}{Y(t)} &= \inn{D_tX(t)}{Y(t)} + \inn{X(t)}{D_t^{*}Y(t)}
+\end{align*}
+
+\item For \emph{\textbf{the parallel transport map}} $\Pi_{\gamma}$ and $\Pi^{*}_{\gamma}$ along the curve $\gamma$ (from $t_0$ to $t_1$) with respect to $\nabla$ and its dual $\nabla^{*}$, we have 
+\begin{align*}
+\inn{\Pi_{\gamma}(X)}{\Pi^{*}_{\gamma}(Y)}_q &= \inn{X}{Y}_p.
+\end{align*} where $p=\gamma(t_0)$ and $q = \gamma(t_1)$. This is a generalization of ``\emph{\textbf{the \underline{invariance} of the inner product under \underline{parallel translation} with respect to \underline{metric connections}}}."
+
+\item Also \emph{\textbf{the Riemannian curvature tensor}} with respect to $\nabla$ and its dual $\nabla^{*}$ has the relationship
+\begin{align*}
+\inn{R(X,Y)Z}{W} &= -\inn{R^{*}(X,Y)Z}{W}.
+\end{align*} Thus $Rm = -Rm^{*}$, so $R = 0 \Leftrightarrow R^{*} = 0$. 
+
+In other word, \emph{a Riemannian manifold $S$ with dualistic structure $(g, \nabla, \nabla^{*})$ is \underline{\textbf{flat} in $\nabla$} \textbf{if and only} if it is \underline{\textbf{flat} in its \textbf{dual connection} $\nabla^{*}$}}.
+
+
+\item It is clear that if $\nabla$ is \emph{\textbf{a metric connection}}, then $\nabla = \nabla^{*}$. The concept of dual connections $(\nabla, \nabla^{*})$ is a generalization of the metric connection. Moreover, $\frac{1}{2}(\nabla + \nabla^{*})$ becomes \emph{a metric connection}. 
+
+
+\item Within $\alpha$-connections, $(\nabla^{(-\alpha)}, \nabla^{(\alpha)})$ are \textbf{\emph{duals}} to each other with respect to \emph{the Fisher metric}. Specifically, $(\nabla^{(m)}, \nabla^{(e)})$, i.e. \textit{\textbf{the mixture connection} and \textbf{the exponential connection} are \textbf{duals} to each other}.
+
+From above statement, we see that 
+\begin{align}
+S \text{ is $(\alpha)$-flat } \Leftrightarrow S \text{ is $(-\alpha)$-flat }\label{eqn: dual_flat}
+\end{align} That $(S, g, \nabla, \nabla^{*})$ is called \underline{\emph{\textbf{a dually flat space}}}
+
+\item \begin{remark}
+\emph{The exponential family} is \emph{a dually flat space} since it is both \emph{\textbf{$1$-flat}} and \textbf{$(-1)$-flat}. The former corresponds to \underline{\emph{\textbf{the natural parameterization}}} $(\xi^i)$ which is \emph{\textbf{$\nabla^{(e)}$-affine}} and the latter corresponds to \underline{\emph{\textbf{the mean parameterization}}} $(\mu_i)$ which is \emph{\textbf{$\nabla^{(m)}$-affine}}.  It has \emph{\textbf{two mutually dual coordinate systems}}.
+\end{remark}
+
+%\item \begin{remark}
+%From this section we see that given one metric $g$, there are many ways to define a connection $\nabla$ and for each connection, we can define parallel transport, geodesics as well as many other geometric structures etc. 
+%\end{remark}
+\end{itemize}
+
+\subsection{Embedding Associated with $\alpha$-Connections}
+\begin{itemize}
+\item We have seen the mixture embeddings and the exponential embeddings and their associated definition of inner product. In this section, we see the embedding associated with $\alpha$-connections, which includes both embeddings above as its special cases. 
+
+\item Consider the extension of $\cP(\cX)$ by dropping the normalization constraint:
+\begin{align*}
+\widetilde{\cP} := \set{p: \cX \rightarrow \bR: \, \int_{\cX} p(x)d\mu(x) < \infty,\;  p(x) > 0 \,(\forall x \in \cX). \;  }
+\end{align*}
+
+\item \begin{definition}
+For each $\alpha \in \bR$, define the following \underline{\emph{\textbf{$\alpha$-likelihood function}}}: 
+\begin{align}
+L^{(\alpha)}(x) &:= \left\{ 
+\begin{array}{cc}
+\frac{2}{(1-\alpha)} x^{\frac{(1-\alpha)}{2}}& \text{if}\ \alpha\neq 1, \\
+  \log(x), & \text{if}\ \alpha=1.
+\end{array}
+\right..  \label{eqn: alpha_embeddings}\\
+\ell^{(\alpha)}(x; \xi) &:= L^{(\alpha)}(p(x; \xi)) \label{eqn: alpha_likelihood}
+\end{align}
+\end{definition}
+
+Note in particular that $\ell^{(1)}(x; \xi) = \ell(x; \xi)$ and that $\ell^{(-1)}(x; \xi) = p(x; \xi)$.
+
+\item \begin{definition}
+For a tangent vector $X \in T_{p}(S)$, we call 
+\begin{align}
+X^{(\alpha)}(x) &:= X\,\ell^{(\alpha)}(x; \xi) \label{eqn: alpha_representatin}
+\end{align} as a function of $x$ \underline{\emph{\textbf{the $\alpha$-representation of $X$}}}. The \emph{$e$-representation} and \emph{$m$-representation} correspond to $\alpha = 1$ and $\alpha = -1$.
+\end{definition}
+
+\item  \begin{definition}
+With the $\alpha$-representation, we have \emph{\textbf{the induced inner product}} by \emph{the $\alpha$-likelihood function} $\ell^{(\alpha)}$:
+\begin{align}
+\inn{X}{Y}_{g}^{(\alpha)} &:= \inn{X^{(\alpha)}}{Y^{(-\alpha)}} =  \int_{\cX}\paren{X\ell^{(\alpha)}(x; \xi)} \paren{Y\ell^{(-\alpha)}(x; \xi)}d\mu(x) \label{eqn: alpha_inner_product}
+\end{align}
+\end{definition}
+
+\item We can compute the first and second order partial derivatives of the $\alpha$-likelihood as
+\begin{align}
+\partdiff{}{\xi^i}\ell^{(\alpha)} &= p^{(1-\alpha)/2}\partdiff{}{\xi^i}\ell \label{eqn: alpha_likelihood_derivative}\\
+\partdiff{}{\xi^i}\partdiff{}{\xi^j}\ell^{(\alpha)} &= p^{(1-\alpha)/2}\paren{\partdiff{}{\xi^i}\partdiff{}{\xi^j}\ell + \frac{1 - \alpha}{2} \partdiff{}{\xi^i}\ell\, \partdiff{}{\xi^j}\ell } \label{eqn: alpha_likelihood_2nd_derivative}
+\end{align}
+
+\item We may rewrite \emph{\textbf{the Fisher metric}} and \emph{\textbf{the Christoffel symbol}} of $\alpha$-connection as
+\begin{align}
+g_{i,j}(\xi) &= \int_{\cX}\partdiff{}{\xi^i}\ell^{(\alpha)}(x; \xi) \partdiff{}{\xi^j}\ell^{(-\alpha)}(x; \xi)d\mu(x) \label{eqn: fisher_metric_alpha} \\
+\Gamma^{(\alpha)}_{i,j;k} &= \int_{\cX}\partdiff{}{\xi^i}\partdiff{}{\xi^j}\ell^{(\alpha)}(x; \xi) \partdiff{}{\xi^k}\ell^{(-\alpha)}(x; \xi)d\mu(x) \label{eqn: alpha_connection_coefficient_alpha}
+\end{align}
+
+\item \begin{remark}
+From \eqref{eqn: alpha_connection_coefficient_alpha}, we see that the $\alpha$-likelihood defines an \emph{\textbf{embedding}} $\ell^{(\alpha)}: \widetilde{\cP} \rightarrow \bR^{\cX}$. And the $\alpha$-connection on $S \subset \widetilde{\cP}$ is \emph{\textbf{the induced connection}} from \emph{\textbf{the affine structure}} of the space $\bR^{\cX}$ of functions on $\cX$  through the embedding $\ell^{(\alpha)}$.
+\end{remark}
+
+\item \begin{remark}
+For probability distribution, since $\int \partial_i p = 0$, we have
+\begin{align*}
+\int p(x; \xi)^{\frac{1+\alpha}{2}} \partial_i \ell^{(\alpha)}(x; \xi) dx = 0\\
+\frac{1+ \alpha}{2}g_{i,j}(\xi) = -\int_{\cX}p(x; \xi)^{\frac{1+\alpha}{2}}\partial_i \partial_j \ell^{\alpha}(x; \xi) dx
+\end{align*}
+\end{remark}
+
+\item \begin{definition}
+For given $\alpha$, if under some coordinate system $(\xi^i)$ of $S$, 
+\begin{align}
+\partdiff{}{\xi^i}\partdiff{}{\xi^j}\ell^{(\alpha)}(x; \xi) &= 0, \label{eqn: alpha_affine}
+\end{align} then it is seen from \eqref{eqn: alpha_connection_coefficient_alpha} that $\Gamma^{(\alpha)}_{i,j;k} = 0$. Thus $S$ is \underline{\emph{\textbf{$\alpha$-flat}}}. 
+
+We call $(\xi^i)$ an \underline{\emph{\textbf{$\alpha$-affine coordinate system}}}, and such an $S$ an \underline{\emph{\textbf{$\alpha$-affine manifold}}}.
+\end{definition}
+
+\item \begin{remark} Thus we can say that:
+\begin{enumerate}
+\item A \emph{mixture family} is a \emph{\textbf{$(-1)$-affine manifold}}, 
+\item An \emph{exponential family} is \underline{\textbf{\emph{not}}} a \textit{\textbf{$1$-affine manifold}}.
+\item For \emph{\textbf{finite}} $\cX$, $\cP(\cX)$ is an \textbf{\emph{$\alpha$-affine manifold}} for \emph{\textbf{every}} $\alpha \in \bR$
+\end{enumerate}
+\end{remark}
+
+
+\item \begin{definition}
+We can also extend $S \subset \cP$ by varying the sum of mass:
+\begin{align*}
+\widetilde{S} &:= \set{\tau p_{\xi}:  \xi \in \Xi, \tau >0 } \subset \widetilde{\cP} 
+\end{align*} We see that $\widetilde{S}$ is \emph{a manifold  of dimension $\text{dim }S + 1$ which contains $S$}. We call $\widetilde{S}$ a \emph{\textbf{denormalization}} of $S$. The adopted coordinate system of $\widetilde{S}$ is $(\xi^1 \xdotx{,} \xi^n, \tau)$. We can extend our definition of $\ell^{\alpha}$ as $\widetilde{\ell}^{(\alpha)} := \ell^{(\alpha)}(x; \xi, \tau) :=  L^{(\alpha)}(\tau\, p(x; \xi))$. We then extend compuatation of derivatives with $\tau$ added.
+\end{definition}
+
+\item The following is the relation between $\widetilde{S}$ and $S$:
+\begin{proposition}
+$S$ is $(-1)$-autoparallel in $\widetilde{S}$.
+\end{proposition}
+
+\item \begin{proposition}
+Let $M$ be a submanifold of $S$ and $\widetilde{M}$ be its denormalization. For every $\alpha \in \bR$, the following conditions (1) and (2) are \textbf{equivalent}.
+\begin{enumerate}
+\item $M$ is $\alpha$-autoparallel in $S$.
+\item $\widetilde{M}$ is $\alpha$-autoparallel in $\widetilde{S}$.
+\end{enumerate}
+\end{proposition}
+
+\item \begin{definition}
+We call a statistical model $S = \{p(x; \xi)\}$ whose \textbf{denormalization} $\widetilde{S}$ is \emph{an $\alpha$-affine manifold} \underline{\textbf{\emph{an $\alpha$-family}}}.
+\end{definition}
+
+\item \begin{remark} We have the following results
+\begin{enumerate}
+\item \emph{\textbf{An exponential family}} is a \emph{\textbf{$1$-family}}; and conversely, \emph{\textbf{every $1$-family is  exponential family}}.
+
+\item \emph{\textbf{A mixture family}} is a \emph{\textbf{$(-1)$-family}}; and conversely, \emph{\textbf{every $(-1)$-family is  mixture family}}.
+
+\item For \emph{\textbf{finite}} $\cX$, $\cP(\cX)$ is an \textbf{$\alpha$-family} for \emph{\textbf{every}} $\alpha \in \bR$
+\end{enumerate}
+
+\end{remark}
+\end{itemize}
+
+\newpage
+\section{Differential Geometry vs. Information Geometry}
+\begin{table}[h!]
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\belowdisplayskip}{-10pt}
+\setlength{\abovedisplayshortskip}{0pt}
+\setlength{\belowdisplayshortskip}{0pt}
+\centering
+\caption{Comparison between differential geometry and information geometry}
+\label{tab: info_geometry}
+%\setlength{\extrarowheight}{1pt}
+\renewcommand\tabularxcolumn[1]{m{#1}}
+\small
+\begin{tabularx}{1\textwidth} { 
+  | >{\raggedright\arraybackslash} m{3cm}
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X  | }
+ \hline
+ base &  \emph{\textbf{smooth manifold}} $M$ & \emph{\textbf{statistical manifold}} $S \subseteq \cP$.  \\
+ \hline
+ embeddings & $M \subseteq \cR$ with smooth embedding $\iota: M \xhookrightarrow{} \cR$ & $\cP \subset \bR^{\cX}$ with a \emph{\textbf{smooth embedding}} as \emph{\textbf{the log-likelihood}} $\ell: \cP  \rightarrow  \bR^{\cX}: \ell(p) = \log(p)$. \\
+ \hline
+ element  & a point $p \in M$ & a \emph{\textbf{parametric model}} $p(x; \xi) \in S, \;\xi \in \Xi $\\
+ \hline
+ coordinate map  & $\varphi(p) = (x^1, \ldots, x^{n})$ &  $\varphi(p_{\xi}) = (\xi^1, \ldots, \xi^{n})$ \\ 
+ %where $\varphi : = \varphi_{\ell}\circ \ell$ \\
+\hline
+smooth map & $f: M \rightarrow \bR$ & e.g. $\kappa: \cP \rightarrow \bR$, $\kappa(p):=\E{p}{f}$ for some \emph{\textbf{random variable}} $f \in \bR^{\cX}$.
+%$f: P \rightarrow \bR$ is smooth if $F: P \rightarrow \cR_{\cX}$ and $F(p)$ is smooth for each $p \in P$.
+\\ 
+\hline
+ space of smooth maps & $\cC^{\infty}(M)$ & $\cC^{\infty}(\cS) \subseteq \cC^{\infty}(\cP)$ \\ %\vspace{1em}   %$\cR_{S}$, the space of \emph{\textbf{all random variables}} $X$ whose distribution in $S$ \vspace{1em} \\
+\hline
+tangent vector at $p$ &  a \emph{\textbf{derivation operator}} at $p$: $v: \cC^{\infty}(M) \rightarrow \bR$ &  a \emph{\textbf{derivation operator}} at $p$: $X: \cC^{\infty}(S) \rightarrow \bR$  \\ 
+%\vspace{1em} a \emph{\textbf{random variable}} $X$ drawn from $p$ with \emph{\textbf{zero mean}}: $X: \cX \rightarrow \bR$  and $\E{p}{X} = 0$.  \vspace{1em}\\
+\hline
+tangent space at $p$ &  \textbf{tangent space}  $T_{p}M$ & \textbf{tangent space}  $T_{p}S \subseteq T_{p}\cP$ \\ 
+\hline
+embedding representation of $T_p\cP$ & 
+\begin{align*}
+\set{\widetilde{v} := d\iota_p(v): v \in T_pM} \subseteq T_p\cR
+\end{align*}
+&  \vspace{-1.5em}   
+\begin{align*}
+\text{\emph{\textbf{exponential-representation}}}\\
+T_{p}^{(e)}\cP = \set{X^{(e)}:= X\ell:\, X \in T_p\cP}\\
+ = \set{f \in \bR^{\cX}: \E{p}{f} =0} \subseteq T_p\bR^{\cX} \simeq \bR^{\cX}
+\end{align*}  \vspace{-1.25em} \\
+\hline
+$\text{dim }T_pM$ & $n$ & $n=\text{dim }T_pS < \text{dim }T_p\cP = +\infty$  \\
+\hline
+basis of tangent space & 
+\vspace{-1.25em}
+\begin{align*}
+ \paren{\dfrac{\partial}{\partial x^{1}}\Bigr|_{p}, \ldots, \dfrac{\partial}{\partial x^{n}}\Bigr|_{p}}
+\end{align*}
+% \paren{\dfrac{\partial}{\partial x^{1}}\Bigr|_{p} \xdotx{,} \dfrac{\partial}{\partial x^{n}}\Bigr|_{p}}
+%\end{align*}
+\vspace{-1em}
+&   
+\vspace{-1.25em}
+\begin{align*}
+\begin{array}{c}
+\paren{\dfrac{\partial }{\partial \xi^{1}}\Bigr|_{p} \xdotx{,} \dfrac{\partial }{\partial \xi^{n}}\Bigr|_{p}}
+\end{array}
+\end{align*} \vspace{-1em}\\
+\hline
+basis of embedding tangent space & 
+\vspace{-1.25em}
+\begin{align*}
+ \paren{\dfrac{\partial }{\partial x^{1}}\Bigr|_{\iota(p)}, \ldots, \dfrac{\partial}{\partial x^{n}}\Bigr|_{\iota(p)}}
+\end{align*}
+% \paren{\dfrac{\partial}{\partial x^{1}}\Bigr|_{p} \xdotx{,} \dfrac{\partial}{\partial x^{n}}\Bigr|_{p}}
+%\end{align*}
+\vspace{-1em}
+&   
+\vspace{-1.25em}
+\begin{align*}
+\begin{array}{c}
+\paren{\dfrac{\partial }{\partial \xi^{1}}\Bigr|_{\ell(p)} \xdotx{,} \dfrac{\partial }{\partial \xi^{n}}\Bigr|_{\ell(p)}}
+\end{array}
+\end{align*} \vspace{-1em}\\
+%\hline
+%element in vector space   &
+%\vspace{-1.25em}
+% \begin{align*} 
+%\text{\textbf{tangent vector}}:\cC^{\infty}(M) \rightarrow \bR\\
+%  v = v^{i}\dfrac{\partial}{\partial x^{i}}\Bigr|_{p}
+% \end{align*} \vspace{-1em}  & 
+%\vspace{-1.25em} 
+% \begin{align*} 
+% \text{\textbf{random variable} }X: \cX \rightarrow \bR\\
+% X  =X^{i}\;\dfrac{\partial \ell}{\partial \xi^{i}}\Bigr|_{p}
+% \end{align*} \vspace{-1em} \\
+%\hline
+%differential $1$-form & \vspace{-1.25em}
+%\begin{align*}
+%df = \partdiff{f}{x^i}dx^i
+%\end{align*} \vspace{-1em}
+%& 
+%\begin{align*}
+%d\ell = \partdiff{\ell}{\xi^i}d\xi^i
+%\end{align*}
+%\\
+\hline
+inner product on tangent space &\vspace{1em}  $\inn{v}{w}_{g}:= g(v, w)$ \vspace{1em}& The \textbf{\emph{cross correlation}} $\inn{X}{Y}_{p} := \E{p}{(X\ell)\,(Y\ell)}$ \\
+\hline
+Riemanian metric &\vspace{1em} The \textbf{\emph{Riemanian metric}} $g = g_{i,j}\,dx^i dx^j$ where $g_{i,j}= \inn{\partdiff{}{x^i}}{\partdiff{}{x^j}}_{g}$ \vspace{1em}& The \textbf{\emph{Fisher information metric}} $g = g_{i,j}\,d\xi^i\, d\xi^j$ where $g_{i,j} = \E{p}{\partial_{i}\ell\,\partial_{j}\ell}:= \inn{\partial_{i}}{\partial_{j}}_{p}$, and $\partial_i \equiv \partdiff{}{\xi^i}$  \\
+\hline
+Riemanian matrix & $(g_{i,j}) \in \cS_{+}^{n}$ & The \textbf{\emph{Fisher information matrix}} $I$ where $(g_{i,j}(\xi))  \in \cS_{+}^{n}$ \\
+\hline
+connections / Christoffel symbols &\vspace{-1.25em}
+\begin{flalign*}
+\text{\emph{\textbf{Riemannian connection}}}\\
+\Gamma_{i,j; k}:= \inn{\conn{\partial_i}{\partial_j}}{\partial_k}_{g} \\
+=\frac{1}{2}\paren{\partial_{i}g_{j,k} + \partial_{j} g_{k,i} - \partial_{k}g_{i,j}}\\
+\Rightarrow \partial_{k}g_{i,j} = \Gamma_{k,i;j} +  \Gamma_{k,j; i}
+\end{flalign*} & \vspace{-1.25em}
+\begin{flalign*}
+ \text{\emph{\textbf{$\mb{\alpha}$-connection}}}\\
+\Gamma_{i,j;k}^{(\alpha)} :=  \langle \nabla^{(\alpha)}_{(\partial_i)^{(e)}}(\partial_j)^{(e)}, (\partial_k)^{(e)}\rangle_{p} \\
+= \E{\xi}{\paren{\partial_{i}\partial_{j}\ell_{\xi} + \frac{1 - \alpha}{2}\partial_{i}\ell_{\xi}\partial_{j}\ell_{\xi} }\partial_{k}\ell_{\xi}}\\
+\Rightarrow  \partial_{k}g_{i,j} = \Gamma_{k,i;j}^{(0)} +  \Gamma_{k,j;i}^{(0)}
+\end{flalign*}
+\\
+\hline
+\end{tabularx}
+\end{table}
+
+
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{book_reference.bib}
+\end{document}
