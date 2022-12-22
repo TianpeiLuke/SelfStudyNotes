@@ -1,0 +1,7 @@
+\contentsline {section}{\numberline {1}Background knowledge}{2}
+\contentsline {section}{\numberline {2}Parameter estimation in fully observed models}{4}
+\contentsline {subsection}{\numberline {2.1}Maximum likelihood for triangulated graphs}{4}
+\contentsline {section}{\numberline {3}Parameter estimation in partially observed models}{7}
+\contentsline {subsection}{\numberline {3.1}Exact EM algorithm in exponential families}{7}
+\contentsline {subsection}{\numberline {3.2}Variational EM}{8}
+\contentsline {subsection}{\numberline {3.3}Variational Bayes}{9}
