@@ -1,0 +1,443 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs, dsfont, stackrel}
+\usepackage{tabularx}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Lecture 4: Gibbs Sampling}
+\author{ Tianpei Xie}
+\date{Oct. 8th., 2022}
+\maketitle
+\tableofcontents
+\newpage
+\allowdisplaybreaks
+\section{Basic Concept of Markov Chain Monte Carlo}
+\begin{itemize}
+\item \begin{definition}
+\underline{\emph{\textbf{A Markov Chain Monte Carlo (MCMC) method}}} for the simulation of a distribution $f$ is any method producing an ergodic Markov chain $(X_t)_t$ whose stationary distribution is $f$.
+\end{definition}
+
+\item The MCMC updates \underline{\emph{\textbf{preserve the probability measure $\pi$}}} when convergence is attained. That is, \emph{when the Markov chain \textbf{converges}}, the distribution of $X_t$ is the same as the distribution of $X_{t+1}, X_{t+2}, \ldots$. Thus we have obtained a sequence of \emph{\textbf{identically distributed (but dependent) samples}}. When Markov chain converges (\emph{\textbf{mixing}}), we can use samples the same way as we did in vanilla Monte Carlo to approximate the expectation. In particular, an MCMC estimator is
+\begin{align}
+J_{T} &= \Em{\mb{\pi}}{h(X)} = \frac{1}{T}\sum_{t=0}^{T}h(X_t). \label{eqn: mcmc_estimator}
+\end{align} The ergodic theorem guarantees the (almost sure) convergence of the empirical average  to $\E{\mb{\pi}}{h(X)}$ where $\mb{\pi}$ is the stationary distribution. A sequence $(X_t)_t$ produced by a Markov chain Monte Carlo algorithm can thus be employed just as an i.i.d sample.
+
+\item The basic idea for Metropolis algorithm is to simulate $\pi$ using the stationary distribution $g$ from a Markov chain. Compare to analysis of Markov chain itself, which often starts from a known transition kernel, the Metropolis algorithm starts from a known stationary distribution $g$ and is interested in how to prescribe an efficient transition kernel to reach the equilibrium.
+
+\item The \underline{\emph{\textbf{Metropolis-Hastings Algorithm}}} \citep{robert1999monte, liu2001monte} is described as below:
+\begin{enumerate}
+\item Given current configuration $\mb{X}_{t}$, draw $\mb{Y}$ from the proposal function $K(\mb{X}_{t}\,, \mb{Y})$.
+
+\item Compute the \emph{\textbf{Hastings ratio}} (\emph{acceptance function}):
+\begin{align}
+r(\mb{X}_{t}\,, \mb{Y}):= &\frac{\pi(\mb{Y})\,K(\mb{Y}, \mb{X}_{t})}{\pi(\mb{X}_{t})\,K(\mb{X}_{t}\,, \mb{Y})} \label{eqn: mh_hastings_ratio}
+\end{align}
+
+\item (\emph{\textbf{Metropolis Rejection}}) Generate a uniform random variable $U\in \cU[0,1]$.\\ 
+Accept $\mb{X}_{t+1} = \mb{Y}$ if
+\begin{align*}
+U &\le \alpha(\mb{X}_{t}\,, \mb{Y}),
+\end{align*} where 
+\begin{align*}
+\alpha(\mb{X}_{t}, \mb{Y}) &= \min\set{1,\;r(\mb{X}_{t}\,, \mb{Y})}
+\end{align*}
+
+\item \underline{Otherwise, accept $\mb{X}_{t+1} = \mb{X}_{t}$}.
+\end{enumerate}
+
+\item The \emph{transition probability} of $(\mb{X}_t)_t$ from the Metropolis-Hastings algorithm is computed as 
+\begin{align}
+A(\mb{x}\,, \mb{y}) &= K(\mb{x}\,, \mb{y})\,\alpha(\mb{x}\,, \mb{y}) \nonumber\\
+&= K(\mb{x}\,, \mb{y})\,\min\set{1, \; \frac{\pi(\mb{y})\,K(\mb{y}, \mb{x})}{\pi(\mb{x})\,K(\mb{x}\,, \mb{y})} }\nonumber\\
+&= \frac{\min\set{\pi(\mb{x})\,K(\mb{x}\,, \mb{y})\,, \pi(\mb{y})\,K(\mb{y}, \mb{x})}}{\pi(\mb{x})} := \frac{\delta(\mb{x}, \mb{y})}{\pi(\mb{x})}. \label{eqn: mh_transition_prob}
+\end{align} Note that due to the \textbf{rejection rule}, $A(\mb{x}\,, \mb{y}) \neq K(\mb{x}\,, \mb{y})$. We can see that since $\delta(\mb{x}, \mb{y}) = \delta(\mb{y}, \mb{x})$, the \emph{detailed balance equation} holds
+\begin{align}
+\pi(\mb{x})A(\mb{x}, \mb{y}) &= \pi(\mb{y})A(\mb{y}, \mb{x}). \label{eqn: mh_detail_balance_equation}
+\end{align} From the theorem on detailed balance equation, we see that $\pi$ is guaranteed to be the stationary distribution of the Markov chain and the Markov chain $(\mb{X}_t)_t$ is \emph{time-reversible}.
+
+\item In general, define a \emph{\textbf{symmetric distribution}} $g_{\sigma}$ so that $q(\mb{y}|\mb{x}) = g_{\sigma}(\norm{\mb{y} - \mb{x}}{2}) > 0$ for all $\norm{\mb{y} - \mb{x}}{2} < \delta$. Here $\sigma$ controls the "\emph{\textbf{range}}" of the exploration. The random walk with transition kernel as $g_{\sigma}$ will produce an ergodic Markov chain. 
+
+The most common distributions $g$ in this setup are the \emph{\textbf{uniform distributions on spheres}} centered at the origin or standard distributions like the \emph{\textbf{normal}} and the \emph{\textbf{Student's t distributions}}. \emph{All these distributions usually need to be \textbf{scaled}}.
+
+
+\item The \underline{\emph{\textbf{Random-walk Metropolis-Hastings}}} is described as below:
+\begin{enumerate}
+\item Draw $\mb{\epsilon}_{t}$ from $g_{\sigma}(\mb{\epsilon})$ and set $\mb{Y} := \mb{X}_{t} + \mb{\epsilon}_{t}$;
+
+\item Compute the ratio:
+\begin{align}
+r(\mb{X}_{t}\,, \mb{Y}):= &\frac{\pi(\mb{Y})}{\pi(\mb{X}_{t})} \label{eqn: rw_ratio}
+\end{align}
+
+\item Accept $\mb{X}_{t+1} = \mb{Y}$ with probability 
+\begin{align*}
+\alpha(\mb{X}_{t}, \mb{Y}) &= \min\set{1,\;r(\mb{X}_{t}\,, \mb{Y})}
+\end{align*}
+
+\item Otherwise, accept $\mb{X}_{t+1} = \mb{X}_{t}$.
+\end{enumerate}
+\end{itemize}
+\section{Gibbs Sampling}
+\begin{itemize}
+\item Choosing a good proposal function $q(\mb{y}|\mb{x}) = K(\mb{x}, \mb{y})$ is an art. When no prior information is available, people tend to choose it arbitrarily. In many applications, the \emph{Random Walk Metropolis-Hastings} is commonly used as "unbiased proposals". If not subject to Metropolis rejection rule, this type of Markov chain would explore the entire space of $\cX$, which is very inefficient.
+
+%\item \begin{theorem}
+%The \textbf{Gibbs sampling method} is equivalent to the \textbf{composition} of $d$ Metropolis-Hastings algorithms, with acceptance probabilities \textbf{uniformly} equal to $1$.
+%\end{theorem} 
+
+\item The basic update of \underline{\emph{\textbf{Gibbs sampling}}} involves two steps:
+\begin{enumerate}
+\item Split the multi-dimensional sample $\mb{X} := (X_j, \mb{X}_{-j})$. 
+\item Update $X_j'$ by conditional distribution $\pi_{j}(x_j | \mb{x}_{-j})$; Then $\mb{X}' := (X_j', \mb{X}_{-j})$.
+\end{enumerate}
+
+\item As compared to Metropolis-Hastings algorithm, Gibbs sampling has a number of distinct features:
+\begin{itemize}
+\item The \underline{\emph{\textbf{acceptance rate}}} of the Gibbs sampler is \emph{\textbf{uniformly}} \textbf{equal to} $1$. Therefore, every simulated value is accepted and the suggestions on the optimal acceptance rates for Metropolis-Hastings do not apply in this setting. This also means that \emph{\textbf{convergence assessment}} for this algorithm should be treated differently than for Metropolis-Hastings techniques.
+
+\item The use of the Gibbs sampler implies limitations on the choice of instrumental distributions and requires a \textbf{prior knowledge} of some analytical or \emph{\textbf{probabilistic properties}} of $\pi$.
+
+\item The Gibbs sampler is, by construction, \underline{\emph{\textbf{multidimensional}}}. Even though some components of the simulated vector may be artificial for the problem of interest, or unnecessary for the required inference, the construction is still at least two-dimensional.
+
+\item The Gibbs sampler does not apply to problems where \emph{the number of parameters \textbf{varies}}, because of the obvious lack of irreducibility of the resulting chain.
+\end{itemize}
+
+\item Gibbs sampling is \underline{\textbf{preferred}} in following situations:
+\begin{itemize}
+\item For \textbf{\emph{high dimensional}} joint distribution $\pi(\mb{x})$, \emph{\textbf{the local factor}} $\pi(x_k | \mb{x}_{-k})$ can be represented in \emph{\textbf{explicit function form}} and is \emph{\textbf{easy to simulate}}. For instance, in many \emph{probabilistic graphical models} such as \emph{Ising model}, \emph{Gaussian graphical models}, \emph{hierarchical models}, \emph{non-parametric Bayesian models}, \emph{Hidden Markov models} etc., the local factor can explicitly simulated.  Similarly, in many complex system, people have \emph{\textbf{more knowledge on the local dynamics}} as compared to the overall system. 
+
+\item The target domain $\cX$ contains \textbf{certain structures} such as \emph{clusters}, \emph{low-dimensional subspaces/sub-manifolds} etc. A simple Metropolis-Hastings algorithm such as random walk is \textbf{\emph{inefficient}} since it spends too much efforts on exploration of low density regions. In high dimensional spaces, this type of random walk is doomed to fail. Instead, Gibbs sampling use conditional distribution resulting from constraining the target distribution $\pi$ on certain subspaces. As a result, no rejection is incurred at sampling.
+\end{itemize}
+
+\item Finally, note that Gibbs sampling is heavily affected by the \textbf{\emph{parameterization}} (or \emph{decomposition}) of space of distributions (like \emph{coordinate descent}). 
+\end{itemize}
+
+\subsection{Slice Sampling}
+\begin{itemize}
+\item To understand the idea of Gibbs sampling, we revisit the \emph{\textbf{fundamental theorem of simulation}}. In order to simulate from distribution $f$, we generate uniform samples from the \emph{\textbf{subgraph}} of $f$, $\mathfrak{L}(f) := \set{(x,u): 0 \le u \le f(x)}$.
+
+\item We can choose to simulate this distribution using \emph{random walk} as Markov chain with stationary distribution as $\cU(\mathfrak{L}(f))$. A natural implementation of this random walk is to \emph{\textbf{go one direction at a time}} along the $x$-axis and $u$-axis iteratively.
+\begin{enumerate}
+\item Starting from a point $(x, u) \in \mathfrak{L}(f)$, move along $u$-axis, i.e. sampling according to the conditional distribution
+\begin{align*}
+U|X = x \sim \cU\set{u: 0\le u\le f(x)}.
+\end{align*} This results in a point $(x, u') \in \mathfrak{L}(f)$.
+
+\item Then given $(x, u') \in \mathfrak{L}(f)$, move along $x$-axis, i.e. sampling according to the conditional distribution
+\begin{align*}
+X|U = u' \sim \cU\set{x: u'\le f(x)}.
+\end{align*} This results in a point $(x', u') \in \mathfrak{L}(f)$.
+\end{enumerate}
+This set of proposals is the basis chosen for the original \underline{\emph{\textbf{Slice Sampler}}}.
+
+\item This slice sampler \emph{\textbf{do not need accept-rejection step}} in normal Metropolis-Hastings algorithm since it directly sample from the target distribution conditioned on each variable.
+
+\item Note that we can use the unnormalized density $f_1 = C\,f$ in the simulation without changing the distribution.
+
+\item The validity of slice sampling as an MCMC algorithm associated with $f$ stems from the fact that both steps 1. and 2. successively \emph{preserve the uniform distribution} on the subgraph of $f$:
+\begin{align*}
+(x_t, u_{t+1}) &\sim f(x)\frac{\ind{u\in [0, f_1(x)]}}{f_1(x)} &\propto \ind{u\in [0, f_1(x)]} \\
+(x_t, u_{t+1}, x_{t+1})& \sim f(x_t)\frac{\ind{u_{t+1}\in [0, f_1(x_t)]}}{f_1(x_t)}\frac{\ind{x_{t+1} \in A_{t+1}}}{\text{vol}(A_{t+1})}&\\
+\Rightarrow (u_{t+1}, x_{t+1})&\sim \frac{1}{C}\ind{x_{t+1} \in A_{t+1}} \int \frac{\ind{u_{t+1}\in [0, f_1(x)]}}{\text{vol}(A_{t+1})} dx &\propto  \ind{x_{t+1} \in A_{t+1}}
+\end{align*} where $A_{t+1} := \set{x: f(x) \ge u_{t+1}}$.
+
+\item This can be extended to $f$ with multiple components. See that
+\begin{align*}
+f(x) &\propto \prod_{i}^{k}f_{i}(x)
+\end{align*} where $f_i(x)$ is some positive functions, e.g. likelihoods. This decomposition can then be associated with $k$ \emph{\textbf{auxiliary variables}} $\omega_i$, so that 
+\begin{align*}
+f_{i}(x)&= \int \ind{0\le \omega_i \le f(x)} d\omega_i.
+\end{align*}  Therefore, $f$ is the marginal distribution of $(f, \omega_1, \ldots, \omega_k)$. This is called \emph{de-marginalization} of $f$.
+
+\item The \underline{\emph{\textbf{General Slice Sampler}}} will be
+\begin{enumerate}
+\item For $i=1,\ldots,k$, sample $\omega_i^{(t+1)} \sim \cU[0, f_{i}(x^{(t)})]$; 
+\item sample $x^{(t+1)}$ from $\cU(A_{t+1})$ where $A_{t+1} := \set{x: f_i(x) \ge \omega_i^{(t+1)}, \;i=1,\ldots, k}$
+\end{enumerate}
+
+\item \begin{lemma}\citep{robert1999monte}\\
+If $h$ is bounded and $\text{supp}(f_i)$ is bounded, the slice sampler above is \textbf{uniformly ergodic}.
+\end{lemma}
+\end{itemize}
+
+\subsection{Gibbs Sampling}
+\begin{itemize}
+\item The general Gibbs Sampling is an extension of Slice Sampling, where each time sample one variable from the region $A^{(t+1)}_{k} := \set{x_k: f(x_k, \mb{x}_{-k}) \ge u/ f_{-k}(\mb{x}_{-k})}$ where $f_{-k}(\mb{x}_{-k})$ is the marginal distribution on the rest of  variables $\mb{x}_{-k}$. In the limit, this is equivalent to sampling $x_{k}$ from the conditional distribution $f_{k|-k}(x_k|\mb{x}_{-k})$.
+
+\item The most prominent feature of \textbf{Gibbs sampling} is that the underlying Markov chain is constructed by composing a sequence of \emph{\textbf{conditional distributions} (local factors)} along \emph{a set of directions (often along the coordinate axis)}. 
+
+\item Suppose $\mb{X} = [X_1, \ldots, X_d]$ and for given $k$, the rest of variables $\mb{X}_{-k} = [X_j, \forall\,j\neq k]$. Let $\pi(\cdot|\mb{x}_{-k})$ be the conditional distribution of target $\pi$ on rest of variables $\mb{x}_{-k}$.
+
+\item The \underline{\emph{\textbf{Random Scan Gibbs Sampling}}} is described as below at $t+1$ iteration:
+\begin{enumerate}
+\item Given $\mb{X}^{(t)} = [X_1^{(t)}, \ldots, X_d^{(t)}]$ from iteration $t$, \emph{\textbf{randomly}} select a coordinate $i$ from $\set{1,\ldots, d}$ with probability $(\alpha_1, \ldots, \alpha_d)$ (usually uniform $(1/d, \ldots, 1/d)$).
+\item Draw $X_{i}^{(t+1)}$ from conditional distribution $\pi(x_i|\mb{X}_{-i}^{(t)})$ and \emph{leave the rest of variable} \emph{\textbf{unchanged}}. That is
+\begin{align*}
+\mb{X}_{-i}^{(t+1)} &= \mb{X}_{-i}^{(t)}
+\end{align*}
+\end{enumerate}
+
+\item The \underline{\emph{\textbf{Systematic Scan Gibbs Sampling}}} is described as below at $t+1$ iteration:
+\begin{enumerate}
+\item Given $\mb{X}^{(t)} = [X_1^{(t)}, \ldots, X_d^{(t)}]$ from iteration $t$, then\\
+      for $i=1,\ldots, d$: 
+      \begin{enumerate}
+      \item draw $X_{i}^{(t+1)}$ from conditional distribution 
+      \begin{align*}
+      \pi \paren{x_i \Big|\mb{X}_{1:(i-1)}^{(t+1)},\, \mb{X}_{(i+1):d}^{(t)}}
+      \end{align*}
+      \end{enumerate}
+\end{enumerate}
+
+\item It is easy to check that \emph{every} single conditional update for both \emph{Random Scan Gibbs Sampling} and \emph{Systematic Scan Gibbs Sampling} \textbf{preserve the joint probability} $\pi$. Suppose $\mb{X}^{(t)} \sim \pi$, then $\mb{X}_{-i}^{(t)} \sim \pi(\mb{X}_{-i}^{(t)})$ its marginal distribution. Then 
+\begin{align*}
+\pi(X_{i}^{(t+1)} | \mb{X}_{-i}^{(t)})\,\times \pi(\mb{X}_{-i}^{(t)}) &= \pi\paren{X_{i}^{(t+1)}, \mb{X}_{-i}^{(t)}},
+\end{align*} which means that after one update the new configuration follows the same distribution $\pi$.
+\end{itemize}
+
+\subsection{The Hammersley-Clifford Theorem}
+\begin{itemize}
+\item A most surprising feature of the Gibbs sampler is that the \emph{conditional distributions} contain \emph{\textbf{sufficient information}} to produce a sample from the \emph{joint distribution}. A similar case is the \emph{coordinate ascent algorithm} in optimization problem. However, it is well known that this optimization method does not necessarily lead to the \emph{global maximum}, but may end up in a saddlepoint. It is, therefore, somewhat remarkable that the full conditional distributions perfectly summarize the joint density, although the set of \textbf{marginal distributions obviously fails to do so}. The following result then shows that the joint density can be directly and constructively derived from the conditional densities.
+
+\item \begin{definition}
+Let $(X_1, X_2, \ldots, X_d) \sim \pi(x_1, x_2, \ldots, x_d)$, where $\pi_i$ denotes the marginal distribution of $X_i$. If $\pi_i(x_i) > 0$ for every $i = 1, \ldots, d$, implies that $\pi(x_1, x_2, \ldots, x_d) > 0$, then $\pi$ satisfies the \underline{\emph{\textbf{positivity condition}}}.
+\end{definition}
+
+\item \begin{theorem} (\textbf{Hammersley-Clifford})\\
+Under the \textbf{positivity condition}, the joint distribution $\pi$ satisfies 
+\begin{align}
+\pi(x_1, x_2, \ldots, x_d) &= \prod_{j=1}^{d}\frac{\pi_{\ell_{j}}(x_{\ell_j}\,|\, x_{\ell_1}, x_{\ell_2}, \ldots, x_{\ell_{j-1}}, x_{\ell_{j+1}}', \ldots, x_{\ell_{d}}') }{\pi_{\ell_{j}}(x_{\ell_j}'\,|\, x_{\ell_1}, x_{\ell_2}, \ldots, x_{\ell_{j-1}}, x_{\ell_{j+1}}', \ldots, x_{\ell_{d}}') } \label{eqn: hammersley_clifford}
+\end{align}
+for every permutation $\ell$ on $\{1, 2, \ldots ,d\}$ and every $\mb{x}' \in \cX$.
+\end{theorem}
+
+\item In two-stage Gibbs sampling, the joint distribution $\pi$ associated with conditionals $\pi_{X|Y}(x|y)$ and $\pi_{Y|X}(y|x)$ can be reconstructed as 
+\begin{align*}
+\pi(x, y) &= \frac{\pi_{Y|X}(y|x)}{\int \pi_{Y|X}(y|x)/\pi_{X|Y}(x|y) dy}
+\end{align*}
+\end{itemize}
+
+\subsection{Partial Resampling}
+\begin{itemize}
+\item From Hammersley-Clifford theorem, we see that \underline{\emph{\textbf{any transition rule}}} $A(x_{j} \rightarrow x_{j}')$ that leaves the \underline{\emph{\textbf{conditional distribution}} $\pi_{j}(x_j \,|\,\mb{x}_{-j})$ \emph{\textbf{invariant}}} will leave the \emph{joint distribution} $\pi$ \emph{invariant}.
+\begin{align*}
+&\quad \int \pi(x_j, \mb{x}_{-j})\,A(x_{j} \rightarrow x_{j}' | \mb{x}_{-j}) d x_{j} \\
+&= \pi(\mb{x}_{-j})\int \pi_{j}(x_j| \mb{x}_{-j})\,A(x_{j} \rightarrow x_{j}' | \mb{x}_{-j}) d x_{j}\\
+&= \pi(\mb{x}_{-j})\,\pi_{j}(x_j'| \mb{x}_{-j}) = \pi(x_j', \mb{x}_{-j})
+\end{align*}
+
+\item This inspires the idea of \underline{\emph{\textbf{partial resampling}}} \citep{liu2001monte}, which use \emph{reparameterization} to improve the performance of sampling.
+
+\item Suppose we have a \emph{\textbf{partition}} of sample space $\cX = \bigcup_{\alpha \in A}\cX_{\alpha}$, $\cX_{a}\cap \cX_{b} = \emptyset, \; a,b\in A$. Then the joint distribution $\pi$ can be reconstructed as \citep{liu2001monte}
+\begin{align*}
+\pi(\mb{x}) &= \int \nu_{\alpha}(\mb{x})\,\rho(\alpha)
+\end{align*} where $\nu_{\alpha}(\mb{x})$ is the conditional distribution of $\mb{X}$ on subspace $\cX_{\alpha}$. Each  $\cX_{\alpha}$ is called a \emph{\textbf{fiber}}.
+
+It is seen that any transition rule $A(\mb{x} \rightarrow \mb{x}')$ that leaves $\nu_{\alpha}(\mb{x})$ on \emph{\textbf{fiber}} $\cX_{\alpha}$ \emph{\textbf{invariant}} will \emph{leave the joint distribution $\pi$ invariant}.
+
+\item Choosing different fibers will allow Gibbs sampling updates in directions other than coordinate axis.
+
+\item The benefits of partial resampling include:
+\begin{itemize}
+\item Similar to Metropolis move, a conditional move will reduce the \emph{high dimensional} simulation problem into a \emph{\textbf{low dimensional}} one;
+\item It allows the sampler to follow the \emph{\textbf{local dynamics}} of the target distribution;
+\item It enables the \emph{\textbf{non-axis moves}} that cannot be achieved by Gibbs sampler.
+\end{itemize}
+ 
+\end{itemize}
+
+
+\subsection{Probabilistic Structures of two-stage Gibbs Sampling Markov Chain}
+\begin{itemize}
+\item For two-stage Gibbs sampling, not only $(X_t, Y_t)_t$ is a Markov chain, but also \emph{\textbf{each subsequence}} $(X_t)_t$ and $(Y_t)_t$ \emph{\textbf{is a Markov chain}}. The transition probability for $(X_t)$ is 
+\begin{align}
+K_{X}(x_{t}, x_{t+1}) &= \int \pi_{X|Y}(x_{t+1}\,|\, y_{t+1})\,\pi_{Y|X}(y_{t+1}\,|\,x_{t})\, dy_{t+1}  \label{eqn: gibbs_sub_chain_kernel}
+\end{align} which indeed depends on the past only through the last value of $(X_t)$· 
+
+\item We have the following lemma
+\begin{lemma}\citep{robert1999monte}\\
+Each of the sequences $(X_t)_t$ and $(Y_t)_t$ produced by the two-stage Gibbs sampling is a \textbf{Markov chain} with corresponding stationary distributions
+\begin{align}
+\pi_{X}(x) = \int \pi(x, y) dy, \quad  \pi_{Y}(y) = \int \pi(x, y) dx  \label{eqn: gibbs_sub_chain_stationary}
+\end{align} as the \textbf{marginal distribution} of $\pi$.
+\end{lemma}
+\begin{proof}
+The development of \eqref{eqn: gibbs_sub_chain_kernel} shows that each chain is, individually, a Markov chain. The stationary distribution is computed via
+\begin{align*}
+\pi_{X}(x_{t+1}) &= \int \pi_{X|Y}(x_{t+1}|y_{t+1}) \pi_{Y}(y_{t+1}) dy_{t+1}\\
+&= \int \pi_{X|Y}(x_{t+1}|y_{t+1}) \int \pi_{Y|X}(y_{t+1}|x_{t}) \pi_{X}(x_{t}) dx_{t} dy_{t+1}\\
+&= \int \brac{\int \pi_{X|Y}(x_{t+1}|y_{t+1})\pi_{Y|X}(y_{t+1}|x_{t}) dy_{t+1}}\pi_{X}(x_{t}) dx_{t} \\
+&= \int K_{X}(x_{t}, x_{t+1}) \pi_{X}(x_{t}) dx_{t}.
+\end{align*} Thus $\pi_{X}(x)$ is the stationary distribution associated with $(X_t)$ with kernel $K_{X}(x_{t}, x_{t+1})$.
+Under the positivity constraint, if $\pi$ is positive, $\pi_{X|Y}(x|y)$ is positive on the (projected) support of $\pi$ and every Borel set of $\cX$ can be visited in a single iteration of Gibbs update, establishing the strong irreducibility. This development also applies to $(Y_t)$. \qed
+\end{proof}
+
+This elementary reasoning shows, in addition, that if only the chain $(X_t)$ is of interest and if the condition $\pi_{X|Y}(x|y) > 0 $ holds for every pair $(X', Y)$, \textbf{\emph{irreducibility}} is satisfied. As shown further below, the "\emph{dual}" chain $(Y_t)$ can be used to establish some probabilistic properties of $(X_t)$.
+
+\item For two-stage Gibbs sampling, if the sub-chain $(X_t)$ is of interest, the sub-chain $(Y_t)$ is called \emph{dual} chain or \emph{\textbf{instrumental chain}}. 
+\begin{definition}
+Two Markov chains $(X_t)$ and $(Y_t)$ are said to be \underline{\emph{\textbf{conjugate}}} to each other with the \emph{\textbf{interleaving property}} (or \emph{\textbf{interleaved}}) if
+\begin{enumerate}
+\item $X_{t+1} \indep X_t \,|\, Y_{t}$
+\item $Y_t \indep Y_{t-1} \,|\, X_{t}$
+\item $(X_t, Y_{t-1})$ and $(X_t, Y_{t})$ are \emph{\textbf{identically distributed}} under \emph{\textbf{stationarity}}.
+\end{enumerate}
+\end{definition} This implies the \emph{interleaving link structure} $\ldots \rightarrow Y_{t-1} \rightarrow X_t \rightarrow Y_{t} \rightarrow X_{t+1} \rightarrow \ldots$
+
+\item \begin{lemma}\citep{robert1999monte}\\
+Each of the chains $(X_t)$ and $(Y_t)$ generated by a two-stage Gibbs sampling algorithm is \textbf{reversible}, and the chain $(X_t, Y_{t})$ satisfies the \textbf{interleaving property}.
+\end{lemma}
+
+\item The well-known concept of \emph{Rao-Blackwellization} is based on the fact that a \emph{\textbf{conditioning}} argument, using variables other than those directly of interest, can result in an improved procedure. We will see below that this phenomenon is more fundamental than a mere improvement of the variance of some estimators, as it provides a general technique to establish convergence properties for the chain \emph{of interest} $(X_t)$ based on the instrumental chain $(Y_t)$, even when the latter is \emph{\textbf{unrelated}} with the inferential problem. this use of the dual chain the \underline{\emph{\textbf{Duality Principle}}} when they used it in the setup of mixtures of distributions.
+
+\item \begin{theorem}\citep{robert1999monte}\\
+Consider a \textbf{Markov chain} $(X_t)$ and a \textbf{sequence} $(Y_t)$ of random variables generated from the conditional distributions 
+\begin{align*}
+X_t \,|\, y_t \sim \pi(x|\,y_t), \quad Y_{t+1}\,|\,x_t, y_t \sim f(y \,|\, x_t, y_t)
+\end{align*}
+If the chain $(Y_t)$ is \textbf{ergodic} (geometrically or uniformly ergodic) and if $\pi_{y_0}^{t}$ denotes the distribution of $(X_t)$ associated with the initial value $y_0$, the norm $\norm{\pi_{y_0}^{t} - \pi}{TV}$ goes to $0$ when $t$ goes to infinity (goes to $0$ at a geometric or uniformly bounded rate).
+\end{theorem} 
+Note that this setting contains as a particular case \emph{hidden Markov models}, where $Y_{t+1}\,|\,x_t, y_t \sim f(y \,|\, y_t)$ is not fully observed.
+
+\item 
+\begin{theorem}\citep{robert1999monte}\\
+If $(Y_t)$  is a \textbf{finite} state-space Markov chain, with state-space $\cY$, such that
+\begin{align*}
+P(Y_{t+1} =k\,|\,y_t, x ) > 0, \quad \forall k \in \cY,\, \forall x\in \cX,
+\end{align*}
+the sequence $(X_t)$ derived from $(Y_t)$ by the transition $\pi(x|\,y_t)$ is \textbf{uniformly ergodic}.
+\end{theorem} Notice that this convergence result does not impose any constraint on the \emph{transition} $\pi(x|\,y)$, which, for instance, is \emph{\textbf{not necessarily everywhere positive}}.
+
+\item \begin{corollary}
+For two \textbf{interleaved} Markov chains, $(X_t)$ and $(Y_t)$, if $(X_t)$ is \textbf{ergodic} (geometrically ergodic), then $(Y_t)$ is \textbf{ergodic} (geometrically ergodic).
+\end{corollary}
+
+\item Finally, we turns to the rate of convergence:
+\begin{proposition}\citep{robert1999monte}\\
+If $(Y_t)$ is geometrically convergent with \textbf{compact} state-space and with convergence rate $\rho$, there exists $C_h$ such that
+\begin{align*}
+\norm{\E{}{h(X_t)|y_0} - \E{\pi}{h(X)}}{} &< C_h \rho^t
+\end{align*} for every function $h \in \cL_{1}(\pi(\cdot|x))$ \textbf{uniformly} in $y_{0} \in \cY$.
+\end{proposition}
+\end{itemize}
+
+\subsection{Theoretical Justifications}
+\begin{itemize}
+\item For multi-stage Gibbs sampling, we can extend the result from two-stage Gibbs sampling above. We first extend the distribution $\pi$ by introducing new \emph{auxiliary variables} $\mb{z}$. 
+\begin{definition}\citep{robert1999monte}\\ 
+Given a probability density $\pi$, a density $g$ that satisfies
+\begin{align}
+\int_{\cZ} g(\mb{x}, \mb{z}) d\mb{z} &= \pi(\mb{x}) \label{eqn: completion}
+\end{align} is called a \emph{\textbf{completion}} of $\pi$.
+\end{definition}
+The density $g$ is chosen so that the full conditionals of $g$ are \textbf{easy to simulate from} and the Gibbs algorithm is implemented on $g$ instead of $\pi$. For $p > 1$, write $\mb{y} = (\mb{x}, \mb{z})$ and denote the conditional densities of $g(\mb{y}) = g(y_1, \ldots, y_p)$ by
+\begin{align*}
+Y_{k} \,|\,\mb{y}_{-k} \sim g_{k}(y_k \,|\, \mb{y}_{-k})
+\end{align*} 
+In principle, the Gibbs sampler does not require that the completion of $\pi$ into $g$ and of $\mb{x}$ in $\mb{y} = (\mb{x}, \mb{z})$ should be related to the problem of interest. Indeed, there are settings where the vector $\mb{z}$ has no meaning from a statistical point of view and is only a useful device.
+
+\item Using the auxiliary variables, we can prove the following theorem.
+\begin{theorem}\citep{robert1999monte}\\ 
+For the systematic scan Gibbs sampler, if $(Y_t)$ is \textbf{ergodic}, then the distribution $g$ is a \textbf{stationary distribution} for the chain $(Y_t)$ and $\pi$ is the \textbf{limiting distribution} of the subchain $(X_t)$.
+\end{theorem} Note that the kernel of $(Y_t)$ is
+\begin{align*}
+K(\mb{y}, \mb{y}') &= \prod_{j=1}^{p}g_{j}(y_{j}'| \mb{y}_{1:(j-1)}', \mb{y}_{(j+1):p}).
+\end{align*}
+
+\item \begin{theorem}
+For the systematic scan Gibbs sampler, if the density $g$ satisfies the \textbf{positivity condition}, it is \textbf{irreducible}.
+\end{theorem}
+
+\item \begin{lemma}\citep{robert1999monte}\\
+If the transition kernel associated with Gibbs sampling is \textbf{absolutely continuous} with respect to the dominating measure, the resulting chain is \textbf{Harris recurrent}.
+\end{lemma} Note that the condition on the Gibbs transition kernel yields an irreducible chain, and Harris recurrence was shown to follow from irreducibility.
+
+\item Finally, we have convergence guarantee:
+\begin{theorem}\citep{robert1999monte}\\
+If the transition kernel of the Gibbs chain $(Y_t)$ is \textbf{absolutely continuous} with respect to the measure $\mu$,
+\begin{enumerate}
+\item If $h_1, h_2 \in \cL_{1}(g)$ with $\E{g}{h_2(Y)} := \int h_2(y)dg(y) \neq 0$, then
+\begin{align}
+\lim_{T\rightarrow \infty}\frac{\sum_{t=1}^{T}h_1(Y_t) }{\sum_{t=1}^{T}h_2(Y_t) } &= \frac{\E{g}{h_1(Y)}}{\E{g}{h_2(Y)}}
+= \frac{\int h_1(y)dg(y)}{\int h_2(y)dg(y)}, \quad \text{a.e. }g \label{eqn: gibbs_ergodic_exp_convergence}
+\end{align}
+\item If, in addition, $(Y_t)$ is \textbf{aperiodic}, then, for \textbf{every} initial distribution $\mu$,
+\begin{align}
+\lim_{t\rightarrow \infty}\norm{\int K^{t}(\mb{y}, \cdot)\mu(d\mb{y}) -  g}{TV} &= 0 \label{eqn: gibbs_ergodic_convergence}
+\end{align}
+\end{enumerate}
+\end{theorem}
+\end{itemize}
+
+\subsection{Gibbs Sampling as Metropolis-Hastings}
+\begin{itemize}
+\item \begin{theorem}
+The Gibbs sampling method is equivalent to the composition of $d$ Metropolis-Hastings algorithms, with acceptance probabilities \textbf{uniformly} equal to $1$.
+\end{theorem}
+Note that we can write the proposal function of $j$-th Metropolis-Hastings algorithms as 
+\begin{align}
+K_{j}(\mb{x}, \mb{x}') &= \delta_{\mb{x}_{-j}}(\mb{x}_{-j}')\, \pi_{j}(x_{j}'| \mb{x}_{-j}), \quad j=1,\ldots, d \label{eqn: gibbs_mh_proposal}
+\end{align} where $\delta_{\mb{x}_{-j}}(\mb{x}_{-j}') = 1$ if $\mb{x}_{-j} = \mb{x}_{-j}'$, otherwise equal to $0$.
+Therefore, the Hastings ratio is 
+\begin{align*}
+\frac{\pi(\mb{x}')\,K_{j}(\mb{x}', \mb{x})}{\pi(\mb{x})\,K_{j}(\mb{x}, \mb{x}')} &= \frac{\pi(\mb{x}')\delta_{\mb{x}_{-j}'}(\mb{x}_{-j})\, \pi_{j}(x_{j}| \mb{x}_{-j}')}{\pi(\mb{x})\delta_{\mb{x}_{-j}}(\mb{x}_{-j}')\, \pi_{j}(x_{j}'| \mb{x}_{-j})}
+\\
+&=\frac{[\pi_{j}(x_{j}'|\mb{x}_{-j}')\pi(\mb{x}_{-j}')\delta_{\mb{x}_{-j}'}(\mb{x}_{-j})]\, \pi_{j}(x_{j}| \mb{x}_{-j}')}{[\pi_{j}(x_{j}|\mb{x}_{-j})\pi(\mb{x}_{-j})\delta_{\mb{x}_{-j}}(\mb{x}_{-j}')]\, \pi_{j}(x_{j}'| \mb{x}_{-j})}\\
+&=\frac{\pi_{j}(x_{j}'|\mb{x}_{-j})\, \pi_{j}(x_{j}| \mb{x}_{-j}')}{\pi_{j}(x_{j}|\mb{x}_{-j}')\, \pi_{j}(x_{j}'| \mb{x}_{-j})}= 1
+\end{align*} 
+\end{itemize}
+
+\subsection{Metroplized Gibbs sampling}
+\begin{itemize}
+\item When the state-space of interest is discrete, Liu suggested an completion strategy described above to improve the Gibbs sampling. In particular, we augment state $\mb{x}$ to be $\mb{y} = (\mb{x}, \mb{z})$ and the distribution $g$ replace $\pi$. We have the following lemma
+\begin{lemma}\citep{robert1999monte}\\
+Consider two \textbf{reversible} Markov chains on a \textbf{countable} state-space, with transition matrices $\mb{K}_1$ and $\mb{K}_2$ such that $\mb{K}_1 \ll \mb{K}_2$, which means that the \textbf{non-diagonal entries} of $\mb{K}_2$ is larger than those of $\mb{K}_1$. The chain associated with $\mb{K}_2$ dominates the chain associated with $\mb{K}_1$ in terms of variances.
+\end{lemma}
+Given a conditional distribution $g_i(y_i \,|\, \mb{y}_{-i}^{(t)})$ on a discrete space, the modification proposed by Liu (1995) is to use an additional Metropolis-Hastings step.
+
+\item The \underline{\emph{\textbf{Metropolized Gibbs Sampling}}} \citep{robert1999monte, liu2001monte} is described as below: \\
+
+Given $\mb{Y}^{(t)}$, for $i=1,\ldots, p$:
+\begin{enumerate}
+\item (\emph{\textbf{Gibbs Update}}) generate $Z_i \neq Y_{i}^{(t)}$ with probability
+\begin{align*}
+p_i &:= \frac{g_i(z_i \,|\, \mb{y}_{-i}^{(t)})}{1 - g_i(z_i \,|\, \mb{y}_{-i}^{(t)})}
+\end{align*}
+
+\item (\emph{\textbf{Metropolis Rejection}}) Accept $Y_{i}^{(t+1)} = Z_i$ with probability 
+\begin{align*}
+\alpha(\mb{X}_{t}, \mb{Y}) &= \min\set{1,\;\frac{1 - g_i(y_i^{(t)} \,|\, \mb{y}_{-i}^{(t)})}{1 - g_i(z_i \,|\, \mb{y}_{-i}^{(t)})}}
+\end{align*}
+\end{enumerate}
+
+The probability of moving from $Y_i^{(t)}$ to a different value is then necessarily higher than in the original Gibbs sampling algorithm. Following the Lemma above, we have:
+
+\item \begin{theorem}\citep{robert1999monte}\\
+The Metroplized Gibbs sampling is more efficient than the random scan Gibbs sampling in terms of variance.
+\end{theorem}
+
+\end{itemize}
+
+
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{book_reference.bib}
+\end{document}

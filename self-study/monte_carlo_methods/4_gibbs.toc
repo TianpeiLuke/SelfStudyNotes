@@ -1,0 +1,10 @@
+\contentsline {section}{\numberline {1}Basic Concept of Markov Chain Monte Carlo}{2}{}%
+\contentsline {section}{\numberline {2}Gibbs Sampling}{3}{}%
+\contentsline {subsection}{\numberline {2.1}Slice Sampling}{4}{}%
+\contentsline {subsection}{\numberline {2.2}Gibbs Sampling}{5}{}%
+\contentsline {subsection}{\numberline {2.3}The Hammersley-Clifford Theorem}{6}{}%
+\contentsline {subsection}{\numberline {2.4}Partial Resampling}{7}{}%
+\contentsline {subsection}{\numberline {2.5}Probabilistic Structures of two-stage Gibbs Sampling Markov Chain}{8}{}%
+\contentsline {subsection}{\numberline {2.6}Theoretical Justifications}{9}{}%
+\contentsline {subsection}{\numberline {2.7}Gibbs Sampling as Metropolis-Hastings}{11}{}%
+\contentsline {subsection}{\numberline {2.8}Metroplized Gibbs sampling}{11}{}%

@@ -1,0 +1,18 @@
+\begin{thebibliography}{2}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Liu(2001)]{liu2001monte}
+Jun~S Liu.
+\newblock \emph{Monte Carlo strategies in scientific computing}, volume~10.
+\newblock Springer, 2001.
+
+\bibitem[Robert and Casella(1999)]{robert1999monte}
+Christian~P Robert and George Casella.
+\newblock \emph{Monte Carlo statistical methods}, volume~2.
+\newblock Springer, 1999.
+
+\end{thebibliography}
