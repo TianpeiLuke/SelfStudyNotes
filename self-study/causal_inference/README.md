@@ -27,19 +27,48 @@
 	- Structural Causal Models
 	- Basic process in Causal Inference
 
-- Causal Graphical Models 
+- Causal Graphical Models
+	- Directed Graphical Models
 	- Causal Graphial Models
-	- Intervention
-	- Counterfactuals
-	- Do-calculus 
+	- Structural Causal Models 
+		- Cause-Effect models 
+		- Intervention
+		- Counterfactuals
+		- Do-calculus
+		- Truncated Factorization
+	- The Principle of Independent Mechanisms
 	- Controling Confounding Factor
-	-  Back-door Adjustment
+		-  Back-Door Adjustment
+		-  Collider Bias and Why to Not Condition on Descendants of Treatment
+		-  Compare to Adjustment Formula
 
 - Randomized Experiments
+	- Association is Causation in Completely Randomized Experiments
+		- Comparability and Covariate Balance
+		- Exchangeability
+		- No Backdoor Path
+	- Causal Inference in Randomized Experiments
+		- Hypothesis Testing
+		- Attributable Effects
 
 - Observational Studies
-	- Covariate Matching
-	- Sensitivity Analysis
+	- Controlling Confounding Bias
+		- The Back-Door Adjustment
+		- The Front-Door Adjustment
+		- Propensity Scores
+	- Controlling Covariate Balance by Matching
+		- Matching directly on Confounders
+		- Greedy Matching by Nearest Neighbor
+		- Optimal Pair Matching
+		- Matching by Propensity Score
+		- Accessing Balance
+	- Unobserved Confounding
+		- Bounds
+			- No-Assumptions Bound
+			- Monotone Treatment Response
+			- Monotone Treatment Selection
+			- Optimal Treatment Selection
+		- Sensitivity Analysis
 
 - Causal Estimations 
 	- Conditional Outcome Modeling
@@ -47,3 +76,12 @@
 	- Doubly Robust Methods
 
 - Instrumental Variables
+	- What is an Instrument
+	- Linear Setting
+		- Binary Linear Setting
+		- Continuous Linear Setting 
+	- Nonparametric Identification of Local ATE
+		- New Potential Notation with Instruments
+		- Principal Stratification
+		- Local ATE
+	- Weak Instruments
