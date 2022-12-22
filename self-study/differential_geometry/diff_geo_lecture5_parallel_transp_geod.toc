@@ -1,0 +1,10 @@
+\contentsline {section}{\numberline {1}Parallel Transport}{2}{}%
+\contentsline {subsection}{\numberline {1.1}Covariant Derivative}{2}{}%
+\contentsline {subsection}{\numberline {1.2}Parallel Transport}{5}{}%
+\contentsline {subsection}{\numberline {1.3}Geodesic}{8}{}%
+\contentsline {subsection}{\numberline {1.4}The equations of a geodesic}{14}{}%
+\contentsline {subsection}{\numberline {1.5}Geodesic via Riemannian metric}{14}{}%
+\contentsline {section}{\numberline {2}The Exponential Map and Geodesic Polar Coordinates}{16}{}%
+\contentsline {subsection}{\numberline {2.1}The Exponential Map}{16}{}%
+\contentsline {subsection}{\numberline {2.2}Geodesic Polar Coordination}{17}{}%
+\contentsline {section}{\numberline {3}Homework and Examples}{22}{}%
