@@ -1,0 +1,25 @@
+\contentsline {section}{\numberline {1}Tensors}{2}
+\contentsline {subsection}{\numberline {1.1}Abstract Tensor Product}{3}
+\contentsline {subsection}{\numberline {1.2}Covariant and Contravariant Tensors on a Vector Space}{5}
+\contentsline {subsection}{\numberline {1.3}Symmetric and Alternating Tensors}{7}
+\contentsline {subsubsection}{\numberline {1.3.1}Symmetric Tensors}{7}
+\contentsline {subsubsection}{\numberline {1.3.2}Alternating Tensors}{8}
+\contentsline {subsection}{\numberline {1.4}Tensor Fields and Tensor Bundle}{9}
+\contentsline {subsection}{\numberline {1.5}Pullbasks of Tensor Fields}{11}
+\contentsline {subsection}{\numberline {1.6}Contraction}{11}
+\contentsline {section}{\numberline {2}Differential Forms}{13}
+\contentsline {subsection}{\numberline {2.1}Elementary $k$-covectors}{13}
+\contentsline {subsection}{\numberline {2.2}Wedge Product}{14}
+\contentsline {subsection}{\numberline {2.3}Interior Product}{16}
+\contentsline {subsection}{\numberline {2.4}Differential Forms on Manifolds}{16}
+\contentsline {subsection}{\numberline {2.5}Exterior Derivatives of Differential Forms}{19}
+\contentsline {subsection}{\numberline {2.6}An Invariant Formula for the Exterior Derivative}{20}
+\contentsline {section}{\numberline {3}Directional Derivatives of Vector Fields}{21}
+\contentsline {subsection}{\numberline {3.1}Connections}{21}
+\contentsline {subsection}{\numberline {3.2}Connections in the Tangent Bundle}{22}
+\contentsline {subsection}{\numberline {3.3}Total Covariant Derivatives}{24}
+\contentsline {subsection}{\numberline {3.4}Vector and Tensor Fields Along Curves}{26}
+\contentsline {subsection}{\numberline {3.5}Geodesics}{27}
+\contentsline {subsection}{\numberline {3.6}Parallel Transport}{28}
+\contentsline {section}{\numberline {4}Lie Derivatives}{30}
+\contentsline {section}{\numberline {5}Lie Group and Lie Algebra}{31}

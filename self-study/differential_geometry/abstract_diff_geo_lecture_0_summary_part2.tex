@@ -1,0 +1,1634 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs,  mathtools, dsfont}
+\usepackage{tabularx}
+\usepackage{tikz-cd}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Lecture 0: Summary (part 2)}
+\author{ Tianpei Xie}
+\date{Oct. 24th., 2022}
+\maketitle
+\tableofcontents
+\newpage
+\section{Vector Space}
+\subsection{Topological Vector Space}
+\begin{itemize}
+\item
+\begin{definition} 
+A \underline{\emph{\textbf{vector space}}} over a field $F$ is a set $V$ together with two operations,  the \emph{\textbf{(vector) addition}} $+: V\times V \rightarrow V$ and \emph{\textbf{scalar multiplication}} $\cdot: F \times V \rightarrow V$, that satisfy the eight axioms listed below:
+for all $\mb{x, y, z}\in V$, $\alpha, \beta\in F$, 
+\begin{enumerate}
+\item The \emph{associativity} of addition: $\mb{x}+ (\mb{y}+ \mb{z}) = (\mb{x}+ \mb{y})+ \mb{z}$;
+\item The \emph{commutativity} of addition:  $\mb{x}+ \mb{y} = \mb{y}+ \mb{x}$;
+\item The \emph{identity} of addition: $\exists\;\mb{0}\in V$	 such that $\mb{0}+ \mb{x} = \mb{x}$;
+\item The \emph{inverse} of addition: $\forall\, \mb{x}\in V$, $\exists\;-\mb{x}\in V$, so that $\mb{x}+ (- \mb{x}) = \mb{0}$;
+\item \emph{Compatibility} of scalar multiplication with field multiplication: $\alpha(\beta \cdot\mb{x}) = (\alpha\beta)\cdot\mb{x}$;
+\item The \emph{identity} of scalar multiplication: $\exists\, 1\in F$, such that $1\cdot \mb{x} = \mb{x}$;
+\item The \emph{distributivity} of scalar multiplication with respect to vector addition: $\alpha\cdot (\mb{x}+\mb{y})= \alpha\cdot \mb{x}+ \alpha\cdot \mb{y}$;
+\item The \emph{distributivity} of scalar multiplication with respect to field addition: $(\alpha+ \beta)\cdot \mb{x} = \alpha\cdot \mb{x}+ \beta\cdot\mb{x}$.	
+\end{enumerate}
+Elements of $V$ are commonly called \emph{vectors}. Elements of $F$ are commonly called \emph{scalars}. When $F = \bR$, we say $V$ is \emph{\textbf{a real vector space}}.
+\end{definition}
+
+\item \begin{definition} 
+A vector space $X$ endowed with a topology is called a \emph{\textbf{topological vector space}}, denoted as $(X, \srT)$, if the addition $+: X\times X \rightarrow X$ and scale multiplication $\cdot: F \times X \rightarrow X$ are continuous. 
+\end{definition}
+
+\item  \begin{definition} 
+A topological vector space is \emph{\textbf{locally convex space}}, if $V$ is open and $\mb{x}\in V$, then one can find a \emph{convex} \emph{open} set $U\subset X$ such that $\mb{x}\in U\subset V$. That is, there exists a base of convex sets $\srB$ that generates the topology $\srT$. 
+\end{definition}
+
+\item \begin{definition}
+Let $V$ and $W$ be \emph{real vector spaces}. A map $T: V \rightarrow W$ is \emph{\textbf{linear}} if $T(a\,v + b\,w) = a\,T(v) + b\,T(w)$ for all vectors $v, w \in V$ and all scalars $a, b$.
+
+In the special case $W = F$, a linear map from $V$ to $F$ is usually called \emph{\textbf{a linear functional}} on $V$.
+\end{definition}
+
+\item \begin{definition}
+If $T: V \rightarrow W$ is a linear map, the \emph{\textbf{kernel}} or \emph{\textbf{null space}} of $T$, denoted by $\text{Ker}T$ or $T^{-1}(0)$, is the set $\set{v \in V: T(v) = 0}$, and the \emph{\textbf{image}} of $T$, denoted by $\text{Im}T$ or $T(V)$, is the set $\set{w \in W: w = T(v) \text{ for some }v \in V }$.
+\end{definition}
+
+\item \begin{definition}
+If $V$ and $W$ are vector spaces, a \emph{\textbf{bijective linear map}} $T: V \rightarrow W$  is called an \underline{\emph{\textbf{isomorphism}}}. 
+
+In this case, there is a \emph{unique inverse map} $T^{-1}: W \rightarrow V$, and $T^{-1}$ is also \emph{linear}:
+\begin{align*}
+a\,T^{-1}(v) + b\,T^{-1}(w) &= T^{-1}\paren{a\,v + b\,w}
+\end{align*} For this reason, a \emph{bijective linear map} is also said to be \emph{\textbf{invertible}}. If there exists an \emph{isomorphism} $T: V \rightarrow W$, then $V$ and $W$ are said to be \emph{\textbf{isomorphic}}.
+\end{definition}
+\end{itemize}
+
+\subsection{Dual Vector Spaces and Covectors}
+\begin{itemize}
+\item \begin{definition}
+Let $V$ be a \emph{finite-dimensional real vector space}. We define a \underline{\emph{\textbf{covector}}} on $V$ to be a \textbf{\emph{real-valued linear functional}} on $V$, that is, a \emph{\textbf{linear map}} $\omega: V \rightarrow F$.
+
+\emph{\textbf{The space of all covectors}} on $V$ is itself a \emph{real vector space} under the obvious operations of \emph{pointwise addition} and \emph{scalar multiplication}. It is denoted by $V^{*}$ and called the \underline{\emph{\textbf{dual space}}} of $V$.
+\end{definition}
+
+\item \begin{proposition} (\textbf{Duality between Vector Space and Covector Space})\\
+Let $V$ be a finite-dimensional vector space. Given any basis $(E_1,\ldots, E_n)$ for $V$, let $\epsilon^1, \ldots, \epsilon^n \in V^{*}$ be the covectors defined by 
+\begin{align*}
+\epsilon^{i}(E_{j}) &= \delta_{j}^{i}
+\end{align*}
+where $\delta_{j}^{i}$ is the Kronecker delta symbol. Then $\epsilon^1, \ldots, \epsilon^n$ is a \textbf{basis} for $V^{*}$, called the \textbf{dual basis} to $(E_j)$. Therefore, $\text{dim}\,V^{*} = \text{dim}\,V$.
+\end{proposition}
+
+\item \begin{example}
+For example, we can apply this to \emph{\textbf{the standard basis}} $(e_1, \ldots, e_n)$ for $\bR^n$. The \emph{dual basis} is denoted by $(e^1,\ldots,e^n)$ (note the \emph{upper indices}), and is called \emph{\textbf{the standard dual basis}}. These basis \emph{covectors} are the \emph{linear functionals} on $\bR^n$ given by
+\begin{align}
+e^{i}(v) &= e^{i}(v^1,\ldots, v^{n}) = v^{i}. \label{eqn: covector_basis_vector_basis}
+\end{align} In other words, $e^i$ is the linear functional that \emph{picks out the $i$-th component of a vector}. 
+
+In \textbf{matrix notation}, a linear map from $\bR^n$ to $\bR$ is represented by a $1 \times n$ matrix, called a \emph{\textbf{row matrix}}. The \emph{\textbf{basis covectors}} can therefore also be thought of as the linear functionals represented by the \emph{row matrices}
+\begin{align}
+e^{i} = (0,\ldots, 1, \ldots, 0), \quad i=1,\ldots, n \label{eqn: covector_basis_row_mat}
+\end{align} where $i$-th element is $1$ and the others are all zeros.
+\end{example}
+
+\item  \begin{remark} (\emph{\textbf{Coordinate Representation of Covectors}})\\
+More generally, we can express an arbitrary covector $\omega \in V^{*}$ in terms of the \emph{\textbf{dual basis}} $(\epsilon^i)$ as
+\begin{align}
+\omega & = \omega_i \epsilon^{i} \label{eqn: covector_linear_reprsent_via_basis}
+\end{align} where the components are determined by $\omega_i = \omega(E_i)$. 
+\end{remark}
+
+\item \begin{remark}
+Covector acts on vector to obtain a real number, which is \emph{\textbf{the inner product}} between the component functions (coordinates in $V^*$) of covector and the component function (coordinates in $V$) of vector. This is \textit{\textbf{the duality principle}}.
+\begin{align}
+\omega(v) &= \paren{\omega_i \epsilon^{i}}\paren{v^{j} E_j} = \omega_i v^{j} \epsilon^{i}\paren{E_j} = \omega_i v^{j} \delta_{j}^{i} =  \omega_i v^{i}. \label{eqn: duality}
+\end{align}
+\end{remark}
+
+\item 
+\begin{definition}
+Suppose $V$ and $W$ are vector spaces and $A: V \rightarrow W$ is a \emph{linear map}. We define a \emph{linear map} $A^{*}: W^{*} \rightarrow V^{*}$, called \underline{\emph{\textbf{the dual map}}} or \underline{\textbf{\emph{transpose of $A$}}}, by
+\begin{align}
+(A^{*}\,\omega)(v) &= \omega\paren{A\,v}, \quad \forall\, \omega \in W^{*}, \; v \in V. \label{eqn: dual_map}
+\end{align}
+\end{definition}
+
+\item \begin{definition}
+Apart from the fact that the dimension of $V^{*}$ is the same as that of $V$, the second most important fact about dual spaces is the following characterization of the \emph{\textbf{second dual space}} $V^{**} = (V^{*})^{*}$.
+
+For each vector space $V$ there is a natural, \emph{\textbf{basis-independent map}} $\xi: V \rightarrow V^{**}$, defined as follows. For each vector $v \in V$, define a \emph{\textbf{linear functional}} $\xi(v): V^{*} \rightarrow \bR$ by
+\begin{align}
+\xi(v)(\omega) = \omega(v), \quad \forall \omega \in V^{*}. \label{eqn: double_dual_vector}
+\end{align}
+\end{definition}
+
+\item \begin{proposition}
+For any finite-dimensional vector space $V$, the map $\xi: V \rightarrow V^{**}$ is an \textbf{isomorphism}.
+\end{proposition}
+
+\item \begin{remark}
+When a covector $\omega$ acts on a vector $v$ as $\omega(v)$, it is \textbf{\emph{equivalent}} to say that the vector $\xi_v$ acts on covector $\omega$ as $\xi_v(\omega)$. The isomorphism $v \mapsto \xi_v$ indicates that \emph{\textbf{a vector can be seen as a linear functional on space of linear functionals itself}}.
+\end{remark}
+
+\item \begin{remark} Some of important things to note:
+\begin{itemize}
+\item The preceding proposition shows that when $V$ is finite-dimensional, we can unambiguously \textbf{\emph{identify}} $V^{**}$ with $V$ itself, because the map $\xi$ is \emph{canonically defined}, without reference to any basis. 
+
+\item It is important to observe that although $V^{*}$ is \emph{also \textbf{isomorphic}} to $V$ (for the simple reason that any two finite-dimensional vector spaces of the same dimension are isomorphic), there is \emph{\textbf{no canonical isomorphism}} $V \simeq V^{*}$.
+
+\item Because of Proposition above, the real number $\omega(v)$ obtained by applying a covector $\omega$ to a vector $v$ is sometimes denoted by either of the more \emph{\textbf{symmetric-looking notations}} $\inn{\omega}{v}$ and $\inn{v}{\omega}$, both expressions can be thought of either as \emph{\textbf{the action of the covector $\omega \in V^{*}$ on the vector $v \in V$}}, or as \emph{\textbf{the action of the linear functional $\xi(v) \in V^{**}$ on the element $\omega \in V^{*}$}}. 
+
+There should be no cause for confusion with the use of the same angle bracket notation for inner products: \emph{whenever one of the arguments is a \textbf{vector} and the other a \textbf{covector}}, the notation $\inn{\omega}{v}$ is always to be interpreted as the \emph{\textbf{natural pairing}} between vectors and covectors, \emph{not as an inner product}. We typically omit any mention of the map $\xi$, and think of $v \in V$ \emph{either as a \textbf{vector}} or as \emph{a \textbf{linear functional}} on $V^{*}$, depending on the context.
+
+\item There is also a \textbf{\emph{symmetry}} between \emph{\textbf{bases}} and \emph{\textbf{dual bases}} for a finite-dimensional vector space $V$: any \emph{basis} for $V$ \emph{\textbf{determines}} a \emph{dual basis} for $V^{*}$, and \emph{\textbf{conversely}}, any \emph{basis} for $V^{*}$ determines a \emph{dual basis} for $V^{**} = V$. 
+
+If $(\epsilon^i)$ is the basis for $V^{*}$ \emph{dual} to a basis $(E_j)$ for $V$, then $(E_j)$ is the basis \emph{dual} to $(\epsilon^i)$, because both statements are equivalent to the relation $\inn{\epsilon^i}{E_j} = \delta_j^i$.
+\end{itemize}
+\end{remark}
+\end{itemize}
+
+\newpage
+\section{Tangent Vector and Cotangent Vector}
+\subsection{Tangent Vectors and Differentials at $p$}
+\begin{itemize}
+ \item \begin{remark}
+ An element in Euclidean space $(x^1, \ldots, x^n) \in \bR^{n}$ has two distinct roles: 
+\begin{enumerate}
+\item As a \emph{\textbf{point}} in space, whose only property is its \emph{\textbf{location}} $(x^1, \ldots, x^n)$;
+\item As a \emph{\textbf{vector}}, which are objects that have \emph{\textbf{magnitude}} and \emph{\textbf{direction}}, but whose location is irrelevant.
+\end{enumerate} These two roles are \emph{\textbf{split}} in the settings of a \emph{\textbf{smooth manifold}} $M$:
+The first one corresponds to a \emph{\textbf{point}} $p \in M$ and the second one corresponds to \emph{\textbf{the tangent vector}} $v \in T_pM$.  The point $p$ and its associated tangent vector $v$ are \emph{independent}. 
+\end{remark}
+
+
+\item \begin{definition}
+If $a$ is a point of $\bR^n$, a map $w: \cC^{\infty}(\bR^n) \rightarrow \bR$ is called a \underline{\emph{\textbf{derivation at $a$}}} if it is \emph{\textbf{linear}} over $\bR$ and satisfies the following \emph{\textbf{product rule (Leibnitz rule)}}:
+\begin{align}
+w(f\,g) &= f(a)\,w(g) + g(a)\,w(f), \quad  \forall\,f,g \in \cC^{\infty}(\bR^{n})  \label{eqn: derivation_def}
+\end{align}
+\end{definition}
+
+\item \begin{remark}
+Let $T_{a}\bR^n$ denote the \emph{\textbf{set of all derivations}} of $\cC^{\infty}(\bR^n)$ at $a$. Clearly, $T_{a}\bR^n$  is a
+\emph{vector space} under the operations
+\begin{align*}
+(w_1 + w_2)(f)  = w_1(f) + w_2(f), \quad (c\,w)(f) = c\,w(f).
+\end{align*}
+\end{remark}
+
+\item \begin{remark}
+For vector space, its tangent space coincides with its self. That is, derivations at a point are in \emph{one-to-one correspondence} with geometric tangent vectors.
+\begin{proposition} \label{prop: iso_geo_tangent}
+Let $a \in \bR^n$.
+\begin{enumerate}
+\item For each geometric tangent vector $v_a \in \bR_{a}^n$, the map $D_v|_a: \cC^{\infty}(\bR^n) \rightarrow \bR$ defined by following
+\begin{align}
+D_v|_a(f) &= D_{v}(f(a)) = \frac{d}{dt}\Big|_{t=0}f(a + t\,v). \label{eqn: directional_derivative}
+\end{align}
+ is a derivation at a.
+\item The map $v_a \rightarrow D_v|_a$ is an \textbf{isomorphism} from $\bR_{a}^n$ onto $T_{a}\bR^n$.
+\end{enumerate}
+\end{proposition}
+\end{remark}
+
+\item \begin{corollary}\label{coro: basis_tangent_space}
+For any $a \in \bR^n$, the \textbf{$n$ derivations}
+\begin{align}
+\partdiff{}{x^{1}}\Bigr|_{a}, \ldots, \partdiff{}{x^{n}}\Bigr|_{a} \quad\text{defined by }\;\;\partdiff{}{x^{i}}\Bigr|_{a}(f) := \partdiff{f}{x^{i}}(a).
+\end{align} form a \textbf{basis} for $T_{a}\bR^n$, which therefore has dimension $n$.
+\end{corollary}
+
+
+\item 
+\begin{definition}
+Let $M$ be a smooth manifold with or without boundary, and let $p$ be a point of $M$. A \emph{\textbf{linear} map} $v: \cC^{\infty}(M) \rightarrow \bR$ is called a \underline{\textbf{\emph{derivation at p}}} if it satisfies the \emph{Product rule}:
+\begin{align}
+v(f\,g) &= f(a)\,v(g) + g(a)\,v(f), \quad \forall\,f,g \in \cC^{\infty}(M)  \label{eqn: derivation_def_man}
+\end{align}
+
+The set of all derivations of $\cC^{\infty}(M)$ at $p$, denoted by $T_{p}M$, is a \emph{\textbf{vector space}} called the \underline{\emph{\textbf{tangent space}}} to $M$ at $p$. An element of $T_{p}M$ is called a \emph{\textbf{tangent vector}} at $p$.
+\end{definition}
+
+
+\item \begin{remark}
+Each tangent vector $v \in T_{p}M$ has \emph{\textbf{two roles}}:
+\begin{enumerate}
+\item An \emph{\textbf{element (vector)}} in tangent space $T_pM$; 
+\item A \emph{\textbf{linear functional}} $v: \cC^{\infty}(M) \rightarrow \bR$ that act on a smooth function $f$ by taking directional derivatives of $f$ along direction of $v$
+\end{enumerate}
+\end{remark}
+
+\item \begin{definition}
+If $M$ and $N$ are \emph{smooth} manifolds with or without boundary and $F: M \rightarrow N$ is a \emph{smooth} map, for each $p \in M$ we define a map
+\begin{align*}
+dF_{p}: T_{p}M \rightarrow T_{F(p)}N ,
+\end{align*} called the \underline{\emph{\textbf{differential}}} of $F$ at $p$, as follows. Given $v \in T_{p}M$, we let $dF_{p}(v)$ be the \emph{\textbf{derivation} at $F(p)$} that \emph{\textbf{acts}} on $f \in \cC^{\infty}(N)$ by the rule 
+\begin{align}
+dF_{p}(v)(f) &= v(f \circ F). \label{eqn: differential_F_at_p}
+\end{align} Note that if $f \in \cC^{\infty}(N)$, then $f \circ F \in \cC^{\infty}(M)$, so $v(f \circ F)$ makes sense. 
+\end{definition}
+
+\item \begin{remark}
+$dF_{p}(v): \cC^{\infty}(N) \rightarrow \bR$ is a \emph{\textbf{linear operator}} because $v$ is, and is a \emph{\textbf{derivation}} at $F(p)$ because for any $f, g \in \cC^{\infty}(N)$ we have the product rule
+\begin{align*}
+dF_{p}(v)(fg) &= v((f\,g)\circ F) = v((f\circ F)\,(g \circ F))\\
+&= (f\circ F)(p)\,v(g \circ F) + (g \circ F)(p)\,v(f \circ F)\\
+&= f(F(p))\,dF_{p}(v)(g) + g(F(p))\,dF_{p}(v)(f)
+\end{align*}
+\end{remark}
+
+\item \begin{remark}
+ The \emph{differential} at $p$, $dF_{p}$ is a \emph{\textbf{linear operator}} that maps \emph{a \textbf{linear functional}} on $\cC^{\infty}(M)$ to \emph{another \textbf{linear functional}} $\cC^{\infty}(N)$. This reflects the impact of smooth map $F: M \rightarrow N$.
+\end{remark}
+
+\item \begin{proposition}\label{prop: diff_properties} (\textbf{Properties of Differentials}).\\
+Let $M, N$, and $P$ be smooth manifolds with or without boundary, let $F: M \rightarrow N$ and $G: N \rightarrow P$ be smooth maps, and let $p \in M$.
+\begin{enumerate}
+\item $dF_{p}: T_{p}M \rightarrow T_{F(p)}N$ is \textbf{linear}.
+\item $d(G \circ F)_{p} = dG_{F(p)} \circ dF_{p}: T_{p}M \rightarrow T_{(G \circ F)(p)}P$.
+\item $d(\text{Id}_{M})_{p} = \text{Id}_{T_{p}M}: T_{p}M \rightarrow T_{p}M$.
+\item If $F$ is a \textbf{diffeomorphism}, then $dF_{p}: T_{p}M \rightarrow T_{F(p)}N$ is an \textbf{isomorphism}, and
+$(dF_{p})^{-1} = d(F^{-1})_{F(p)}$
+\end{enumerate}
+\end{proposition}
+
+\item \begin{remark}
+The property 4 is critical. Note that given a smooth chart $(U, \varphi)$, $\varphi: U\rightarrow \bR^{n}$ is a \emph{diffeomorphism} so \emph{\textbf{the differential of coordinate map}} $d\varphi_p$ is an \textbf{\emph{isomorphism}} between $T_pU$ and $T_{\varphi(p)}\bR^{n}$.
+\end{remark}
+
+
+\item \begin{remark}
+Get familar with these following expressions:
+\begin{enumerate}
+\item $vf \in \bR$ where $v\in T_pM$. This is to compute the directional derivatives of $f$ along direction of $v$ at point $p$;
+\item $dF_p(v) \in T_{F(p)}N$, where $v\in T_pM$. This is a linear operator that maps a tangent vector in $T_pM$ to a tangent vector in $T_{F(p)}N$. Note that the base point $p \mapsto F(p)$.
+\item $dF_p(v)g \in \bR$ where $g \in \cC^{\infty}(N)$. This is to  compute the directional derivatives of $g$ along direction of $dF_p(v)$ at point $F(p)$;
+\end{enumerate}
+\end{remark}
+
+\end{itemize}
+
+\subsection{Coordinate Representation of Tangent Vector and Differentials}
+\begin{itemize}
+\item \begin{remark} 
+By Corollary \ref{coro: basis_tangent_space}, the derivations $\partdiff{}{x^{1}}\big|_{\varphi(p)}, \ldots, \partdiff{}{x^{n}}\big|_{\varphi(p)}$ form a basis for $T_{\varphi(p)}\bR^n$. Therefore, \emph{\textbf{the preimages of these vectors under the \emph{isomorphism} $d\varphi_p$ form a basis for $T_{p}M$}} 
+\begin{align}
+\partdiff{}{x^{i}}\Bigr|_{p} &:= (d\varphi_{p})^{-1}\paren{\partdiff{}{x^{i}}\Bigr|_{\varphi(p)}} 
+= d(\varphi^{-1})_{\varphi(p)}\paren{\partdiff{}{x^{i}}\Bigr|_{\varphi(p)}} \label{eqn: identification_tangent_basis}
+\end{align}
+\end{remark}
+
+\item  \begin{remark} Unwinding the definitions \eqref{eqn: identification_tangent_basis}, we see that $\partdiff{}{x^{i}}\big|_{p}$ acts on a function $f \in \cC^{\infty}(U)$ by
+\begin{align}
+\partdiff{}{x^{i}}\Bigr|_{p}(f) &= \partdiff{}{x^{i}}\Bigr|_{\varphi(p)}(f \circ \varphi^{-1}) \equiv \partdiff{}{x^{i}}\Bigr|_{\widehat{p}}\;\widehat{f}   \label{eqn: coordinate_basis_tangent_vector}
+\end{align} where $\widehat{f} = f \circ \varphi^{-1}$ is the \emph{\textbf{coordinate representation}} of $f$, and $\widehat{p} = (p^1, \ldots, p^n) = \varphi(p)$ is the \emph{\textbf{coordinate representation}} of $p$.
+
+In other word, using same coordinate representation $\varphi^{-1}$ we can convert the derivation of function along coordinate basis in tangent space of manifold to a partial derivatives of that parameterized function along coordinate axis in Euclidean space.  
+\end{remark}
+
+\begin{definition}
+$\dfrac{\partial}{\partial x^{i}}\Bigr|_{p}$ is  the \textbf{\emph{derivation}} that takes the \emph{$i$-th partial derivative of (the coordinate representation of) $f$ at (the coordinate representation of) $p$}. The vectors $\partdiff{}{x^{i}}\big|_{p}$ are called the \underline{\emph{\textbf{coordinate vectors at p} associated with the given coordinate system}}.
+\end{definition}
+
+\item We summarize our discussion as below proposition.
+\begin{proposition}
+Let $M$ be a smooth $n$-manifold with or without boundary, and let $p \in M$. Then $T_{p}M$ is an $n$-dimensional vector space, and for any smooth chart $(U, \varphi)$ containing $p$, the \textbf{coordinate vectors} $(\partial / \partial x^{1}|_{p}, \ldots, \partial / \partial  x^{n}|_{p})$ \textbf{form a basis} for $T_{p}M$.
+\end{proposition}
+
+\item 
+\begin{definition}  (\emph{\textbf{Coordinate Representation of Tangent Vector}})\\
+A tangent vector $v \in T_{p}M$ can be written \textbf{\emph{uniquely}} as a linear combination
+\begin{align}
+v&=v^{i} \partdiff{}{x^{i}}\Bigr|_{p} \label{eqn: tangent_vec_decomp}
+\end{align} where we use the \emph{Einstein summation convention} as usual. 
+
+The \emph{ordered basis} $(\partdiff{}{x^{i}}\big|_{p})$ is called a \underline{\emph{\textbf{coordinate basis}}} for $T_{p}M$, and the numbers $(v^1, \ldots, v^n)$ are called the \emph{\textbf{components}} of $v$ \emph{with respect to the coordinate basis}.
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Coordinate Representation of $dF_p$ between Euclidean spaces}})
+\begin{definition}
+The action of \emph{\textbf{differential}} of $F: U \rightarrow V$ , where $U \subseteq \bR^n$ and $V \subseteq \bR^m$ \emph{on a typical basis vector} can be represented as
+\begin{align}
+dF_p\paren{\partdiff{}{x^{i}}\Bigr|_{p}} &= \partdiff{F^{j}}{x^{i}}(p)\,\partdiff{}{y^{j}}\Bigr|_{F(p)} \label{eqn: differential_coordinate}
+\end{align} where $(x^1,\ldots, x^n)$ is the coordinates of $U$ and $(y^1,\ldots, y^m)$ is the coordinate of $V$.
+\end{definition} 
+
+Here, the \emph{\textbf{matrix}} of $dF_p$ in terms of the coordinate bases is 
+\begin{align}
+\brac{\begin{array}{ccc}
+\dfrac{\partial\,F^{1}}{\partial\,x^{1}}(p)& \ldots& \dfrac{\partial\,F^{1}}{\partial\,x^{n}}(p)\\
+\vdots & \ddots & \vdots\\
+\dfrac{\partial\,F^{m}}{\partial\,x^{1}}(p)& \ldots& \dfrac{\partial\,F^{m}}{\partial\,x^{n}}(p)
+\end{array}}_{m \times n}  \label{eqn: differential_coordinate_mat}
+\end{align} This matrix is none other than \underline{\emph{\textbf{the Jacobian matrix}}} of $F$ at $p$, which is the \emph{\textbf{matrix representation}} of the \emph{\textbf{total derivative}} $DF_{p}: \bR^n \rightarrow \bR^m$. 
+Therefore, in this case, $dF_p: T_{p}\bR^n \rightarrow T_{F(p)}\bR^m$ corresponds to \emph{\textbf{the total derivative}} $DF_{p}: \bR^n \rightarrow \bR^m$, under our usual identification of Euclidean spaces with their tangent spaces. The same calculation applies if $U$ is an open subset of $\bH^n$ and $V$ is an open subset of $\bH^m$.
+\end{remark}
+
+\item  (\emph{\textbf{Coordinate Representation of $dF_p$ between Manifolds}})
+\begin{definition}
+For a smooth map $F: M \rightarrow N$ between smooth manifolds with or without boundary, the action of \emph{\textbf{differential}} $dF_{p}$ on a typical basis vector can be represented as
+\begin{align}
+dF_{p}\paren{\partdiff{}{x^{i}}\Bigr|_{p}} &= \partdiff{\widehat{F}^{j}}{x^{i}}(\widehat{p})\,\partdiff{}{y^{j}}\Bigr|_{F(p)}, \label{eqn: differential_coordinate_manifold}
+\end{align} where  $\widehat{F} = \psi \circ F \circ \varphi^{-1}: \varphi(U \cap F^{-1}(V)) \rightarrow \psi(V)$ is the \emph{\textbf{coordinate representation}} of $F$ under smooth charts $(U,\varphi)$ for $M$ and $(V, \psi)$ for $N$. Also $\widehat{p} = \varphi(p)$  is the coordinate representation of $p$. The matrix for $[\partdiff{\widehat{F}^{j}}{x^{i}}(\widehat{p})]_{j,i}$ is the Jacobian matrix.
+
+That is $dF_{p}$ is represented \emph{\textbf{in coordinate bases}} by the \emph{\textbf{Jacobian matrix}} of (\emph{the coordinate representative of}) $F$.
+\end{definition}
+
+\item \begin{remark}
+Unlike the Euclidean space, the \emph{Jacobian matrix} $[\partdiff{\widehat{F}^{j}}{x^{i}}(\widehat{p})]_{j,i}$ based on \emph{\textbf{local representation}} of $F$ and $p$ under smooth charts $(U,\varphi)$ for $M$ and $(V, \psi)$ for $N$. Thus the Jacobian matrix for differential $dF$  \emph{\textbf{is dependent on the point $p$.}}
+\end{remark}
+
+
+\item \begin{remark}
+Get familar with these following expressions:
+\begin{enumerate}
+\item Notice that for coordinate basis, the directional derivatives coincides with the partial derivatives after converting to coordinate representation.
+\begin{align*}
+\dfrac{\partial}{\partial x^{i}}\Bigr|_p  f =  \dfrac{\partial f}{\partial x^{i}}(p) =  \dfrac{\partial \widehat{f}}{\partial x^{i}}(\widehat{p}) =\dfrac{\partial \widehat{f}}{\partial x^{i}}(x^1, \ldots, x^n)  \in \bR \; \text{ is }
+\end{align*}
+\begin{itemize}
+\item \emph{the coordinate basis vector $\frac{\partial}{\partial x^{i}}\bigr|_p$ act on $f$}.
+\item the $i$-th partial derivatives of (coordinate representation) $\widehat{f}$ evaluated at $\widehat{p} =\varphi(p)$
+\end{itemize}
+
+
+\item  The diferential of basis in $T_pM$ is the linear map (via transition matrix) of the basis $T_{F(p)}N$  
+\begin{align*}
+dF_p\paren{\dfrac{\partial}{\partial x^{i}}\Bigr|_p} &=  \dfrac{\partial \widehat{F}^{j}}{\partial x^{i}}(\widehat{p}) \dfrac{\partial}{\partial y^{j}}\Bigr|_{F(p)} \in T_{F(p)}N.
+\end{align*}
+
+\item Notice that how differential $dF_p$ act on the coordinate basis operator to obtain a new differential operator through the composition of $F$.  Under coordinate $(x^i)$ in $M$ and $(y^j)$ in $N$, the following is just \emph{\textbf{the chain rule}}
+\begin{align*}
+dF_p\paren{\dfrac{\partial}{\partial x^{i}}\Bigr|_p}g =  \dfrac{\partial}{\partial x^{i}}\Bigr|_p\paren{g \circ F} =  \dfrac{\partial \widehat{F}^{j}}{\partial x^{i}}(\widehat{p}) \dfrac{\partial}{\partial y^{j}}\Bigr|_{F(p)}\; g = \dfrac{\partial \widehat{F}^{j}}{\partial x^{i}}(\widehat{p})\, \dfrac{\partial g}{\partial y^{j}}(y^1, \ldots, y^{m}),
+\end{align*}
+\end{enumerate}
+\end{remark}
+\end{itemize}
+
+\subsection{Change of Coordinates}
+\begin{itemize}
+\item Suppose $(U, \varphi)$ and $(V, \psi)$ are two smooth charts on $M$, and $p \in U \cap V$. Let us denote the coordinate functions of $\varphi$ by $(x^i)$ and those of $\psi$ by $(\widetilde{x}^i)$. Any tangent vector at $p$ can be represented with respect to either basis $(\partdiff{}{x^{i}}\big|_{p})$ or $(\partdiff{}{\widetilde{x}^{i}}\big|_{p})$. 
+
+\item \begin{remark}
+Given two smooth charts $(U, \varphi)$ and $(V, \psi)$ on $M$, the \emph{\textbf{change of coordinates}} between basis vectors $(\partdiff{}{x^{i}}\big|_{p})$ (of $\varphi$) and $(\partdiff{}{\widetilde{x}^{i}}\big|_{p})$ (of $\psi$) is obtained via
+\begin{align}
+\partdiff{}{x^{i}}\Bigr|_{p} &=  \partdiff{\widetilde{x}^{j}}{x^{i}}(\widehat{p})\,\partdiff{}{\widetilde{x}^{j}}\Bigr|_{p}   \label{eqn: change_of_coordinates}
+\end{align} where $\widehat{p} = \varphi(p)$ is the coordinate representation of $p$ under $\varphi$. 
+\end{remark}
+\end{itemize}
+
+\subsection{Parameterized Curves}
+\begin{itemize}
+\item \begin{definition}
+If $M$ is a manifold with or without boundary, we define a \textbf{\emph{curve}} in $M$ to be a \emph{continuous} map $\gamma: J \rightarrow M$ where $J \subseteq \bR$ is an interval. 
+\end{definition}
+
+\item \begin{definition}
+Let $M$ be a smooth manifold with or without boundary. Our definition of tangent spaces leads to a natural interpretation of \emph{velocity vectors}: given a smooth curve $\gamma: J \rightarrow M$ and $t_{0} \in J$, we define the \textbf{\emph{velocity of $\gamma$ at $t_0$}}, denoted by $\gamma'(t_0)$, to be the vector
+\begin{align*}
+\gamma'(t_0) &= d\gamma\paren{\frac{d}{dt}\Bigr|_{t_0}} \in T_{\gamma(t_))}M
+\end{align*} where $\frac{d}{dt}\big|_{t_0}$ is the standard coordinate basis vector in $T_{t_0}\bR$. 
+\end{definition}
+
+\item \begin{remark}
+This tangent vector \emph{\textbf{acts}} on functions by
+\begin{align*}
+\gamma'(t_0)\;f &= d\gamma\paren{\frac{d}{dt}\Bigr|_{t_0}}\;f = \frac{d}{dt}\Bigr|_{t_0}\paren{f \circ \gamma} = (f \circ \gamma)'(t_0).
+\end{align*}
+In other words, $\gamma'(t_0)$ is the \emph{\textbf{derivation}} at $\gamma(t_0)$ obtained by taking the \emph{derivative of a function along} $\gamma$. 
+
+If $t_0$ is an endpoint of $J$, this still holds, provided that we interpret the derivative with respect to $t$ as a \emph{one-sided derivative},  or equivalently as the derivative of any smooth extension of $f \circ \gamma$ to an open subset of $\bR$.
+\end{remark}
+
+\item \begin{remark}
+Now let $(U, \varphi)$ be a smooth chart with coordinate functions $(x^i)$. If $\gamma(t_0) \in U$, we can write the \emph{\textbf{coordinate representation}} of $\gamma$ as $\gamma(t) = (\gamma^1(t), \ldots, \gamma^{n}(t))$, at least for $t$ sufficiently close to $t_0$, and then the \textbf{\emph{coordinate formula}} for the differential yields
+\begin{align}
+\gamma'(t_0) := d\gamma\paren{\frac{d}{dt}\Bigr|_{t_0}} &= \frac{d\gamma^{i}}{dt}(t_0)\partdiff{}{x^{i}}\Bigr|_{\gamma(t_0)} \label{eqn: curve_coordinate}
+\end{align} This means that $\gamma'(t_0)$ is given by essentially the same formula as it would be in \emph{Euclidean space}: it is the tangent vector whose components in a coordinate basis are the derivatives of the component functions of $\gamma$.
+\end{remark}
+
+\item \begin{proposition} (\textbf{The Velocity of a Composite Curve}) \citep{lee2003introduction}\\
+ Let $F: M \rightarrow N$ be a smooth map, and let $\gamma: J \rightarrow M$ be a smooth curve. For any $t_0 \in J$, the velocity at $t = t_0$ of the composite curve $F \circ \gamma: J \rightarrow N$ is given by
+\begin{align}
+(F\circ \gamma)'(t_0) &= dF\paren{\gamma'(t_0)}. \label{eqn: curve_composite}
+\end{align}
+\end{proposition}
+
+\item \begin{corollary} (\textbf{Computing the Differential Using a Velocity Vector}) \citep{lee2003introduction} \\
+Suppose $F: M \rightarrow N$ is a smooth map, $p \in M$, and $v \in T_{p}M$. Then
+\begin{align}
+dF_{p}(v) = (F \circ \gamma)'(0) \label{eqn: differential_via_curve}
+\end{align} for any smooth curve $\gamma: J \rightarrow M$ such that $0 \in J$, $\gamma(0) = p$, and $\gamma'(0) = v$.
+\end{corollary} 
+
+\item \begin{proposition}(\textbf{Derivative of a Function Along a Curve}). \\
+Suppose $M$ is a smooth manifold with or without boundary, $\gamma:  J \rightarrow M$ is a smooth curve, and $f: M \rightarrow \bR$ is a smooth function. Then the \textbf{derivative} of the real-valued function $f \circ \gamma:  J \rightarrow \bR$ is given by
+\begin{align}
+(f \circ  \gamma)'(t) &=  df_{\gamma(t)}(\gamma'(t)). \label{eqn: differential_rate_of_change_curve}
+\end{align}
+\end{proposition}
+
+\item \begin{remark}
+Therefore we have
+\begin{align*}
+\gamma'(t_0)f = d\gamma\paren{\frac{d}{dt}\Bigr|_{t_0}}\;f =  (f \circ \gamma)'(t_0) = df_{\gamma(t_0)}\paren{\gamma'(t_0)}
+\end{align*} This shows the \emph{duality} between the tangent vector $\gamma'(t_0) \in T_{\gamma(t_0)}M$ and the differential $df_{\gamma(t_0)}$. 
+\end{remark}
+\end{itemize}
+
+
+
+\subsection{Tangent Covectors on Manifolds}
+\begin{itemize}
+\item 
+\begin{definition}
+Let $M$ be a smooth manifold with or without boundary. For each $p \in M$, we define the \underline{\emph{\textbf{cotangent space}}} at $p$, denoted by $T_{p}^{*}M$, to be the \emph{\textbf{dual space}} to the \emph{tangent space} $T_{p}M$:
+\begin{align*}
+T_{p}^{*}M  &= (T_{p}M)^{*}.
+\end{align*} \emph{Elements} of $T_{p}^{*}M$ are called \underline{\emph{\textbf{tangent covectors at $p$}}}, \underline{\emph{\textbf{cotangent vectors at $p$}}} , or just \emph{\textbf{covectors at $p$}}. $\omega \in T_{p}^{*}M$ is a \emph{\textbf{linear functional}} on tangent space $T_pM$. 
+\end{definition}
+
+
+\item 
+\begin{remark} (\emph{\textbf{Coordinate Representation of Covectors}}) \citep{lee2003introduction}\\
+Given smooth local coordinates $(x^i)$ on an open subset $U \subseteq M$, for each $p \in U$ the coordinate basis $(\partdiff{}{x^{i}}\big|_{p})$ gives rise to a dual basis for $T_{p}^{*}M$, which we denote for the moment by $(\lambda^i\big|_{p})$. (In a short while, we will come up with a better notation.) 
+
+\emph{\textbf{Any covector}} $\omega \in T_{p}^{*}M$ can thus be written \emph{\textbf{uniquely}} as $\omega = \omega_{i}\,\lambda^i\big|_{p}$ where
+\begin{align}
+\omega_{i} &= \omega\paren{\partdiff{}{x^{i}}\Bigr|_{p}}. \label{eqn: covectors_components}
+\end{align}
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Change of Coordinates for Covectors}}) \citep{lee2003introduction}\\
+Suppose now that  $(\widetilde{x}^i)$ is \emph{another set of smooth coordinates} whose domain contains $p$, and let $(\widetilde{\lambda}^{j}\big|_{p})$ denote the basis for $T_{p}^{*}M$ dual to $(\partdiff{}{\widetilde{x}^{j}}\big|_{p})$. We can compute the \emph{components} of the same covector $\omega$ with respect to the \emph{new coordinate system} as follows. 
+
+First observe that the computations in \eqref{eqn: change_of_coordinates} show that the coordinate vector fields transform as follows:
+\begin{align*}
+\partdiff{}{x^{i}}\Bigr|_{p} &= \partdiff{\widetilde{x}^{j}}{x^{i}}(p)\partdiff{}{\widetilde{x}^{j}}\Bigr|_{p}.
+\end{align*}
+
+Writing $\omega$ in both systems as $\omega = \omega_{i}\,\lambda^i\big|_{p} =  \widetilde{\omega}_{j}\,\widetilde{\lambda}^j\big|_{p} $, we can use \eqref{eqn: vector_change_of_coordinate} to compute the components $\omega_i$ in terms of $\widetilde{\omega}_{j}$:
+\begin{align*}
+\omega_{i} = \omega\paren{\partdiff{}{x^{i}}\Bigr|_{p}} = \omega\paren{\partdiff{\widetilde{x}^{j}}{x^{i}}(p)\partdiff{}{\widetilde{x}^{j}}\Bigr|_{p}}= \partdiff{\widetilde{x}^{j}}{x^{i}}(p)\,\widetilde{\omega}_{j}.
+\end{align*}
+In sum, we have \emph{\textbf{the change of coordinate formula for covectors}}
+\begin{align}
+\omega_{i} &= \partdiff{\widetilde{x}^{j}}{x^{i}}(p)\,\widetilde{\omega}_{j}. \label{eqn: covector_change_of_coordinate}
+\end{align}
+\end{remark}
+
+\item  \begin{definition}
+Let $f$ be a \emph{smooth real-valued function} on a \emph{smooth manifold} $M$ with or without boundary. (As usual, all of this discussion applies to functions defined on an open subset $U \subseteq M$; simply by \emph{replacing} $M$ with $U$ throughout.) We define a \emph{\textbf{covector field}} $df$ , called \underline{\emph{\textbf{the differential of $f$}}}, by
+\begin{align*}
+df_{p}(v) &= v\,f, \quad \forall v\in T_{p}M.
+\end{align*}
+\end{definition}
+
+
+\item \begin{remark} (\emph{\textbf{Coordinate Representation of differential of $f$}})\\
+Let $(x^i)$ be smooth coordinates on an open subset $U \subseteq M$, and let $(\lambda^i)$ be the corresponding \emph{coordinate coframe} on $U$. Write $df$ in coordinates as $df_p = A_i(p) \lambda^i |_p$ for some functions $A_i: U \rightarrow \bR$,  then the definition of $df$ implies
+\begin{align*}
+A_i(p) &= df_{p}\paren{\partdiff{}{x^{i}}\Bigr|_{p}} = \partdiff{}{x^{i}}\Bigr|_{p} f = \partdiff{f}{x^{i}}(p).
+\end{align*} This yields the following formula for \emph{\textbf{the coordinate representation of $df$}}:
+\begin{align}
+df_p = \partdiff{f}{x^{i}}(p) \; \lambda^i |_p \label{eqn: differential_coordinate_representation_0}
+\end{align} Thus, the \emph{\textbf{component functions}} of $df$ in any smooth coordinate chart are \emph{\textbf{the partial derivatives of $f$} with respect to those coordinates}. Because of this, we can think of $df$ as \emph{an analogue of the classical gradient}, reinterpreted in a way that makes \emph{coordinate-independent sense} on a manifold.
+\end{remark}
+
+\item \begin{remark}  (\emph{\textbf{Basis of Tangent Covector Space $T_p^{*}M$}})\\
+Let  $(x^j)$ be a set of  \emph{\textbf{coordinate functions}}, where $x^{j}: U \rightarrow \bR$ has coordinate representation as $(x^{j} \circ \varphi^{-1})(x^1, \ldots, x^{n}) = x^{j}$. According to \eqref{eqn: differential_coordinate_representation_0}, we can represent the \emph{\textbf{differential of coordinate function}} $x^{j}$ as 
+\begin{align*}
+d x^{j} |_p  &= \partdiff{x^{j}}{x^{i}}(p) \; \lambda^i |_p = \delta_{i}^{j}\; \lambda^i |_p =  \lambda^j |_p.
+\end{align*}
+
+In other words, \emph{\textbf{the coordinate covector field $\lambda^j$} is none other than \textbf{the differential $dx^j$}}. Therefore, the formula \eqref{eqn: differential_coordinate_representation_0} for $df_p$ can be rewritten as
+\begin{align}
+df_p = \partdiff{f}{x^{i}}(p) \; d x^{i} |_p.   \label{eqn: differential_coordinate_representation_1}
+\end{align} or as \emph{\textbf{an equation between covector fields}} instead of covectors. The \emph{\textbf{coordinate representation of differential $df$}} is
+\begin{align}
+df = \partdiff{f}{x^{i}} \; d x^{i}.   \label{eqn: differential_coordinate_representation}
+\end{align} Thus, we have recovered the familiar classical expression for the differential of a
+function $f$ in coordinates. Henceforth, we abandon the notation $\lambda^i$ for the coordinate coframe, and use $dx^i$ instead. 
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Coordinate Representation of Tangent Covectors}})\\
+The \underline{\emph{\textbf{coordinate representation of tangent covector $\omega_{p} \in T_pM^{*}$}}} is
+\begin{align}
+&\omega_{p} = \omega_i\, dx^i |_p \label{eqn: covector_field_coordinate_representation} \\
+&\text{where }  \omega_i = \omega_p\paren{\partdiff{}{x^{i}}\Bigr|_{p}} \nonumber
+\end{align}
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Duality of Basis}})\\
+The basis of tangent space $T_pM$ is $(\partial / \partial x^j|_{p})$ and the basis for the cotangent space $T_p^{*}M$ is $(dx^{i}|_{p})$. Thus we have \emph{\textbf{the duality principle}} on basis
+\begin{align}
+dx^{i}|_{p}\paren{\partdiff{}{x^{j}}\Bigr|_{p}} = \delta_{j}^{i}, \quad \forall i,j =1,\ldots, n,\;\; p \in M \label{eqn: covector_field_coordinate_duality} 
+\end{align} In other word, $dx^i |_p$ is the \emph{linear functional that \textbf{picks out the $i$-th component of a tangent vector}} at $p$. 
+\end{remark}
+
+\item \begin{remark}
+Just like a tangent vector $v \in T_pM$ has two roles: an element in vector space and a linear functional on $\cC^{\infty}(M)$,  \textbf{a cotangent vector} $df_{p} \in T_{p}^{*}M$ has two roles as well:
+\begin{enumerate}
+\item \emph{\textbf{A linear map (operator)}} from $T_pM$ to $T_{f(p)}\bR$. That is, it maps a tangent vector in  $T_pM$ to a tangent vector in $T_{f(p)}\bR$: $v \mapsto df_p(v)$. Therefore, \emph{\textbf{$df_p(v)$ is a linear functional}} can act on a function $\bR$.
+\item \emph{\textbf{An element (covector)}} in dual vector space $T_{p}^{*}M$. Each element in this dual space is \emph{\textbf{a linear functional}} on $T_pM$. In this sense, \emph{\textbf{$df_p(v)$ is a real number}}.
+\end{enumerate}
+\end{remark}
+
+\item \begin{remark}
+Note that a nonzero linear functional $\omega_{p} \in T_{p}^{*}M$ is completely determined by two pieces of data: its \emph{\textbf{kernel}}, which is a linear hyperplane in $T_{p}M$ (\emph{a codimension-$1$ linear subspace}); and the set of vectors $v$ for which $\omega_p(v) = 1$, which is \emph{an \textbf{affine hyperplane parallel to the kernel}}. The value of $\omega_{p}(v)$ for any other vector $v$ is then obtained by linear interpolation or extrapolation.
+\end{remark}
+
+\item \emph{\textbf{One very important property}} of the differential is the following characterization of smooth functions with vanishing differentials.
+\begin{proposition} (\textbf{Functions with Vanishing Differentials}). \citep{lee2003introduction} \\
+If $f$ is a smooth real-valued function on a smooth manifold $M$ with or without boundary, then $df = 0$ if and only if $f$ is \textbf{constant} on \textbf{each component} of $M$ .
+\end{proposition}
+
+\item \begin{remark} Be familiar with the following expressions:
+\begin{enumerate}
+\item The \emph{\textbf{differential $1$-form of $f$}} is \emph{\textbf{a covector field}}
+\begin{align*}
+df &= \partdiff{f}{x^i} dx^{i}
+\end{align*} where $(dx^i)$ are the coordinate covector fields. 
+
+\item A \emph{covector} $\omega \in T_p^{*}M$ acts on a \emph{tangent vector} $v \in T_pM$ results in ``\emph{the inner product}"
+\begin{align*}
+\omega(v) =  \paren{\omega_i\, dx^{i}|_{p}}\paren{v^i \partdiff{}{x^{i}}\Bigr|_{p}} = \omega_i v^i = \inn{\omega}{v} \in \bR
+\end{align*} Note that $\inn{\omega}{v}$ is not actually inner product in normal sense, since the first term is a cotangent vector and the second term is a tangent vector.
+
+%\item The \emph{\textbf{gradient of function}} $f$ is a tangent vector (not fit Einstein convention)
+%\begin{align*}
+%\text{grad }f \equiv \nabla f = \sum_{i=1}^{n}\partdiff{f}{x^i} \partdiff{}{x^{i}}\Bigr|_{p}
+%\end{align*} We have the directional derivatives of $f$ along $v$ as 
+%\begin{align*}
+%v\,f = df_p(v) =  \partdiff{f}{x^i} dx^{i}|_{p}(v)   =  \inn{\nabla f}{v}
+%\end{align*}
+
+\item Since $(T_pM)^{**} \simeq T_pM$, we can identify a linear functional that associated with each tangent vector to \emph{act} on covector. The linear functional $\xi$ in $(T_pM)^{**}$ that \emph{\textbf{identifies}} with the coordinate vector $\partial / \partial x^{j}$ is \emph{\textbf{the component function}} $\omega_j$ of the covectors.  
+\begin{align*}
+\xi\paren{\partdiff{}{x^{j}}\Bigr|_{p}}\paren{\omega_{p}} &= \omega_{p}\paren{\partdiff{}{x^{j}}\Bigr|_{p}} = \omega_{j}
+\end{align*} 
+
+\item For $df_p(v) \in T_{f(p)}\bR$, it can acts on a one-parameter function $g \in \cC^{\infty}(\bR)$ 
+\begin{align*}
+df_p\paren{\partdiff{}{x^{j}}\Bigr|_{p}}\,g &= \partdiff{}{x^{j}}\Bigr|_{p}\paren{g \circ f} = \frac{dg}{ds}(f(p))\, \partdiff{f}{x^{j}}(x^1, \ldots, x^n)
+\end{align*}
+
+\item Do not confuse $df_p: T_{p}M \rightarrow T_{f(p)}\bR$ with differential of parameterized curve $d\gamma: T_{0}\bR \rightarrow T_{\gamma(0)}M$.
+\end{enumerate}
+\end{remark}
+\end{itemize}
+
+\section{Bundles}
+\subsection{Tangent Bundle, Frames and Vector Field}
+\subsubsection{Tangent Bundle}
+\begin{itemize}
+\item Often it is useful to consider the set of \emph{all tangent vectors at all points} of a manifold. 
+\begin{definition}
+Given a smooth manifold $M$ with or without boundary, the \underline{\emph{\textbf{tangent bundle}}} of $M$, denoted by $TM$, is defined as the \emph{\textbf{disjoint union}} of \emph{the tangent spaces} \emph{\textbf{at all points}} of $M$:
+\begin{align*}
+TM &= \bigsqcup_{p \in M}T_{p}M.
+\end{align*}
+\end{definition}
+
+\item \begin{definition}
+The tangent bundle comes equipped with a \underline{\emph{\textbf{natural projection map}}} $\pi: TM \rightarrow M$, which sends each vector in $T_{p}M$ to the point $p$ at which it is tangent: $\pi(p, v) = p$.
+\end{definition}
+
+\item \begin{remark}
+The \emph{\textbf{tangent bundle}} $TM$ is \underline{\emph{\textbf{a global extension}}} of \emph{the local tangent space} $T_pM$. It plays a critical role when we want to \emph{\textbf{generalize}} a concept on local tangent space \emph{\textbf{globally}} (i.e. \emph{\textbf{dropping the dependency} on point $p$}). These concepts include:
+\begin{enumerate}
+\item From \emph{\textbf{tangent vector}} $v\in T_pM$ to \emph{\textbf{vector field}} $X: M \rightarrow TM$, where $X_p \in T_pM$;
+\item From \emph{\textbf{derivation}} \emph{at $p$} $: \cC^{\infty}(M) \rightarrow \bR$, to \emph{\textbf{derivation operator}} $X: \cC^{\infty}(M) \rightarrow \cC^{\infty}(M)$;
+\item From \emph{\textbf{differential of $F$}} at $p$, $dF_p: T_pM \rightarrow T_pN$, to \emph{\textbf{the global differential of $F$}}, $dF: TM \rightarrow TN$.
+\item From \emph{\textbf{basis} tangent vectors} in $T_pM$ to \emph{\textbf{local frames} of manifold $M$}.
+\end{enumerate}
+\end{remark}
+
+\item \begin{remark}
+Intuitively, the natural projection map $\pi: TM \rightarrow M$ helps us to \emph{\textbf{locate}} for local information given the global structure. Its preimage also confine the region of interest in the global structure. Each tangnet space $T_pM = \pi^{-1}(p)$ is the preimage of $\pi$ at $p$, called the \emph{\textbf{fiber}} at $p$ 
+\end{remark}
+
+
+\item 
+\begin{proposition} (\textbf{Tangent Bundle Is a Manifold}) \citep{lee2003introduction}\\
+For any smooth n-manifold $M$, the tangent bundle $TM$ has a \textbf{natural topology} and \textbf{smooth structure} that make it into a \underline{\textbf{$2n$-dimensional smooth manifold}}. With respect to this structure, the projection $\pi: TM \rightarrow M$ is \textbf{smooth}.
+\end{proposition}
+
+\item \begin{definition}
+Given any smooth chart $(U, (x^i))$ for $M$,  the coordinates $(x^i, v^i)$ given by 
+\begin{align*}
+\widetilde{\varphi}\paren{v^{i}\partdiff{}{x^{i}}\Bigr|_{p}} &= (x^{1}(p), \ldots, x^{n}(p), v^{1}, \ldots, v^{n}). 
+\end{align*}  are called \emph{\textbf{natural coordinates}} on $TM$. Here, the coordinate map $\widetilde{\varphi}: \pi^{-1}(U) \rightarrow \bR^{2n}$.
+\end{definition}
+
+\item \begin{remark}
+From the coordinate of $TM$, we can see that \emph{\textbf{the tangent vector} $v$ is considered as \underline{\textbf{free variables}}} as opposed to be considered as associated with the position $p$  in $TM$  as $v \in T_pM$. 
+\end{remark}
+
+\item \begin{proposition}
+If $M$ is a smooth $n$-manifold with or without boundary, and $M$ can be covered by \textbf{a single smooth chart}, then $TM$ is diffeomorphic to $M \times \bR^n$.
+\end{proposition}
+
+\item \begin{remark}
+The above proposition states that for a manifold that has a global coordinate system, its tangent bundle also have \emph{a global structure} as $M \times \bR^n$. Note that normally since a tangent space is diffeomorphic to $\set{p} \times \bR^{n}$, the tangent bundle is only defined locally.
+\end{remark}
+
+\item \begin{definition}
+By putting together the \emph{\textbf{differentials}} of $F$ \emph{\textbf{at all points}} of $M$, we obtain a \emph{\textbf{globally} defined map} between \emph{\textbf{tangent bundles}}, called \underline{\emph{\textbf{the global differential}}} or \emph{\textbf{global tangent map}} and denoted by $dF: TM \rightarrow TN$.
+
+This is just the map whose restriction to each tangent space $T_{p}M \subseteq TM$ is $dF_{p}$.
+\end{definition}
+
+\item \emph{One important feature} of the smooth structure we have defined on $TM$ is that it makes the differential of a smooth map into \textbf{a smooth map between tangent bundles}. 
+\begin{proposition}
+If $F: M \rightarrow N$ is a smooth map, then its global differential $dF: TM \rightarrow TN$ is a smooth map.
+\end{proposition}
+
+\item The following properties of tangent bundle comes from Proposition \ref{prop: diff_properties}:
+\begin{corollary} (\textbf{Properties of the Global Differential}) \citep{lee2003introduction} \\
+Suppose $F: M \rightarrow N$ and $G: N \rightarrow P$ are smooth maps.
+\begin{enumerate}
+\item $d(G \circ F) = dG \circ dF: TM \rightarrow TP$.
+\item $d(\text{Id}_{M}) = \text{Id}_{TM}: TM \rightarrow TM$.
+\item If $F$ is a \textbf{diffeomorphism}, then $dF: TM \rightarrow TN$ is also a  \textbf{diffeomorphism}, and
+$(dF)^{-1} = d(F^{-1})$
+\end{enumerate}
+\end{corollary}
+\end{itemize}
+
+\subsubsection{Vector Fields}
+\begin{itemize}
+\item \begin{definition}
+If $M$ is a smooth manifold with or without boundary, a \underline{\emph{\textbf{vector field}}} on $M$ is a \emph{\textbf{section}} of the map $\pi: TM \rightarrow M$. More concretely, a \emph{vector field} is a \emph{\textbf{continuous}} map $X: M \rightarrow TM$, usually written $p \mapsto X_p$, with the property that
+\begin{align}
+\pi \circ X = \text{Id}_{M}, \label{eqn: section_definition}
+\end{align} or \emph{equivalently}, $X_p \in T_{p}M$ for each $p \in M$. 
+\end{definition}
+
+\item \begin{remark}
+We write the \emph{\textbf{value of $X$ at $p$}} as $X_p$ instead of $X(p)$ to be consistent with our notation for elements of the tangent bundle, as well as to avoid conflict with the notation $v(f)$ for the action of a vector on a function.
+\end{remark}
+
+\item \begin{definition}
+When the map $X: M \rightarrow TM$ is \emph{smooth} and the tangent bundle $TM$ is given a \emph{smooth manifold structure},  $X$ is a \textbf{\emph{smooth vector field}}. 
+
+In addition, for some purposes it is useful to consider maps from $M$ to $TM$ that would be vector fields except that they \emph{might not be continuous}. A \emph{\textbf{rough vector field}} on $M$ is a (\emph{not necessarily continuous}) map $X: M \rightarrow TM$ satisfying \eqref{eqn: section_definition}.
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Coordinate Representation of Vector Field At a Point}})\\
+Suppose $M$ is a smooth $n$-manifold (with or without boundary). If $X: M \rightarrow TM$ is a \emph{rough vector field} and $(U, (x^i)) $ is any \emph{smooth coordinate chart} for $M$, we can write the \emph{\textbf{value} of $X$ at any point $p \in U$} in terms of the coordinate basis vectors:
+\begin{align}
+X_{p} &= X^{i}(p)\,\partdiff{}{x^{i}}\Bigr|_{p}.  \label{eqn: vector_fields_at_p_coordinate_expansion}
+\end{align} 
+This defines \textbf{\emph{$n$ functions}} $X^i: U \rightarrow \bR$, called the \emph{\textbf{component functions}} of $X$ in the given chart.
+\end{remark}
+
+\item 
+\begin{proposition}\label{prop: vector_field_smooth_condition} (\textbf{Smoothness Criterion for Vector Fields}) \citep{lee2003introduction} \\
+Let $M$ be a smooth manifold with or without boundary, and let $X: M \rightarrow TM$ be a rough vector field. If $(U, (x^i))$ is any smooth coordinate chart on $M$, then the \textbf{restriction} of $X$ to $U$ is \textbf{smooth} if and only if its \textbf{component functions} with respect to this chart are \textbf{smooth}.
+\end{proposition}
+
+\item \begin{remark} (\emph{\textbf{The Space of all Vector Fields on a Manifold is a Vector Space}})\\
+If $M$ is a smooth manifold with or without boundary, it is standard to use the \emph{\textbf{notation}} $\mathfrak{X}(M)$ (or \emph{\textbf{equivalently}} $\Gamma(TM)$) to denote \emph{\textbf{the set of all smooth vector fields on M}}. 
+
+\underline{\emph{$\mathfrak{X}(M)$ is a \textbf{vector space}} under pointwise addition and scalar multiplication}:
+\begin{enumerate}
+\item For any $a, b \in \bR$ and any $X, Y \in \mathfrak{X}(M)$,
+\begin{align*}
+(a\,X + b\,Y)_{p} &= a\,X_{p} + b\,Y_{p}.
+\end{align*}
+\item The \emph{zero element} of this vector space is the \emph{\textbf{zero vector field}}, whose value at each $p \in M$ is $0 \in T_{p}M$.
+\end{enumerate}
+
+In addition, \emph{smooth vector fields} can be multiplied by \emph{smooth real-valued functions}: if $f \in \cC^{\infty}(M)$ and $X \in \mathfrak{X}(M)$, we define $fX: M \rightarrow TM$ by
+\begin{align*}
+(fX)_p &= f(p)\, X_p.
+\end{align*}
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Coordinate Representation of Vector Field}})\\
+We can generalize the formula \eqref{eqn: vector_fields_at_p_coordinate_expansion} as the coordinate representation of the vector field $X$
+\begin{align}
+X &= X^{i}\,\partdiff{}{x^{i}}.  \label{eqn: vector_fields_coordinate_expansion}
+\end{align}  where $(\partial / \partial x^{i})$ are \emph{the coordinate vector fields}, which are \emph{\textbf{basis}} for $\mathfrak{X}(M)$ and $X^i$ is the $i$-th component function of $X$ in the given coordinates.
+
+In partial differential equations (PDEs), we usually write \eqref{eqn: vector_fields_coordinate_expansion} in \emph{dot-product form}
+\begin{align}
+&X = \mb{X} \cdot \nabla = \sum_{i=1}^{n}X^{i}\,\partdiff{}{x^{i}} \label{eqn: vector_fields_coordinate_dot_product}\\
+&\quad \text{where }\mb{X} = [X^{1}, \ldots, X^{n}], \quad \nabla := \paren{\partdiff{}{x^{1}}, \ldots, \partdiff{}{x^{n}}}.  \nonumber
+\end{align} $\nabla$ (\emph{the nabla symbol}) is also called \emph{\textbf{gradient operator}}.
+\end{remark}
+
+
+\item An essential property of vector fields is that they define \emph{\textbf{operators}} on the space of smooth real-valued functions.
+\begin{definition}
+ If $X \in \mathfrak{X}(M)$ and $f$ is a smooth real-valued function defined on an open subset $U \subseteq M$, we obtain a new function $Xf:  U \rightarrow \bR$, defined
+by 
+\begin{align*}
+(X\,f)_{p} &=  X_{p}\,f
+\end{align*} Note that $v\,f \equiv v(f)$ as we omit the parenthesis.
+\end{definition}
+
+\item \begin{remark} Please do not \emph{confuse} with these two terms:
+\begin{enumerate}
+\item \emph{\underline{A function} \textbf{mulitiplies} \underline{a vector field}  is \underline{a vector field}}, i.e. $fX \in \mathfrak{X}(M)$. Thus $(fX)_p = f(p)\,X_p \in T_pM$.
+\item \emph{\underline{A vector field} \textbf{acts} on \underline{a function} is \underline{a function}}, i.e. $Xf \in \cC^{\infty}(M)$. Thus $(Xf)_p = X_p\,f  \in \cC^{\infty}(M)$
+\end{enumerate}
+\end{remark}
+
+\item \begin{definition}
+Define a map $X: \cC^{\infty}(M) \rightarrow \cC^{\infty}(M)$ is called a \underline{\emph{\textbf{derivation}}} (as distinct from a \emph{derivation at p}, defined in Chapter 3) if it is \textbf{linear} over $\bR$ and satisfies the \emph{Product rule}
+\begin{align}
+X(fg) &= f\, X(g) + g\, X(f),  \qquad \forall\,\, f,g \in \cC^{\infty}(M) \label{eqn: derivation_vector_fields}
+\end{align}
+\end{definition} Note $fX\,g \equiv (fX)(g)$ is a function $f$ multiplying the vector field $X$ \emph{then} acts on function $g$.
+
+\item \begin{remark}
+Please not be confused by the following notions:
+\begin{enumerate}
+\item $\dfrac{\partial}{\partial x^i}\Bigr|_{p}f \in \bR$ is a real number. Similarly $vf \equiv v(f) \in \bR$.
+\item $X\,f \equiv X(f) \in \cC^{\infty}(M)$ is a smooth function. At each point $p$, $X_pf \equiv (Xf)_p \in \bR$.
+\item $(Xf)_p = X_pf$  is the directional derivative of $f$ along the direction $X_p$. In other word, to compute the function $g(p)$ evaluated at $p$, we can first assign $p$ to vector field $X$ to ``simplify" it as $X_p$, and then to compute the directional derivatives $X_pf$. This is usually simpler than computing $g = Xf$ first and then assign $p$ to value.
+
+An example 
+\begin{align*}
+&X = y^2\partdiff{}{x} + \cos(x) \partdiff{}{y}, \quad f(x,y) = \sin(x)\,y \\
+g(0,1)&= (Xf)_{(0,1)} = \paren{y^2\Bigr|_{(0,1)}\partdiff{}{x}\Bigr|_{(0,1)} + \cos(x)\Bigr|_{(0,1)} \partdiff{}{y}\Bigr|_{(0,1)}}(\sin(x)\,y)\\
+&=\paren{\partdiff{}{x}\Bigr|_{(0,1)} + \partdiff{}{y}\Bigr|_{(0,1)}}(\sin(x)\,y)\\
+&= (y\cos(x) + \sin(x))|_{(0,1)} = 1
+\end{align*}
+\end{enumerate}
+\end{remark}
+
+\item 
+\begin{definition}
+Suppose $F: M \rightarrow N$ is \emph{smooth} and $X$ is a \emph{vector field} on $M$,  and suppose there happens to be a \emph{vector field} $Y$ on $N$ with the property that for each $p \in M$,
+\begin{align*}
+dF_{p}(X_p) &= Y_{F(p)}.
+\end{align*}
+ In this case, we say \emph{the \textbf{vector fields} $X$ and $Y$ are \underline{\textbf{F-related}}}. 
+\end{definition}
+
+\item \begin{remark}
+The \emph{\textbf{differential}} $dF_{p}$ is defined \emph{locally}, and it \emph{\textbf{does not guarantee to map a vector field (a global concept) to a vector field}}.  For example,
+if $F$ is \emph{not surjective}, there is no way to decide what vector to assign to a point $q \in N \setminus F(M)$.  If $F$ is \emph{not injective}, then for some points of $N$ there may be several different vectors obtained by applying $dF$ to $X$ at different points of $M$.
+\end{remark}
+\end{itemize}
+
+\subsubsection{Local and Global Frames}
+\begin{itemize}
+\item \begin{definition}
+Suppose $M$ is a smooth $n$-manifold with or without boundary. An \emph{ordered $k$-tuple} $(X_1, \ldots, X_k)$ of \emph{\textbf{vector fields}} defined on some subset $A \subseteq M$ is said to be \textit{\textbf{linearly independent}} if $(X_1|_{p}, \ldots, X_k|_{p})$ is a \emph{linearly independent} $k$-tuple in $T_{p}M$ for each $p \in A$, and is said to \emph{\textbf{span the tangent bundle}} if the $k$-tuple $(X_1|_{p},\ldots,X_k|_{p})$ spans $T_{p}M$ at each $p \in A$. 
+\end{definition}
+
+\item \begin{definition}
+A \underline{\emph{\textbf{local frame}}} for $M$ is \emph{an ordered $n$-tuple of \textbf{vector fields}} $(E_1,\ldots,E_n)$ defined on an \textbf{open subset} $U \subseteq M$ that is \emph{\textbf{linearly independent}} and \emph{\textbf{spans the tangent bundle}}; thus the vectors $(E_1|_{p},\ldots,E_n|_{p})$ form a basis for $T_{p}M$ at each $p \in U$.
+
+$(E_1,\ldots,E_n)$ is called a \underline{\emph{\textbf{global frame}}} if $U = M$, and a \emph{\textbf{smooth frame}} if each of the vector fields $E_i$ is \emph{smooth}.
+\end{definition} We often use the shorthand notation $(E_i)$ to denote a frame $(E_1,\ldots,E_n)$. 
+
+\item \begin{remark}
+The concept of \emph{frames} is an extension of \emph{the basis vector and coordinate system} to \emph{manifold}. Frames are a set of \emph{linearly independent \textbf{vector fields}}, which form the \emph{basis} of space of all vector fields $\mathfrak{X}(M)$. Note that \emph{\textbf{the concept of linear independent vector fields is defined \underline{locally} at each tangent space}}. 
+\end{remark}
+
+\item \begin{definition}
+A $k$-tuple of vector fields $(E_1,\ldots,E_k)$ defined on some subset $A \subseteq \bR^n$ is said to be \emph{\textbf{orthonormal}} if for each $p \in A$, the vectors $(E_1|_{p},\ldots,E_k|_{p})$ are \emph{\textbf{orthonormal}} with respect to the Euclidean dot product (where we identify $T_{p}\bR^n$ with $\bR^n$ in the usual way). 
+
+A \emph{(local or global) frame} consisting of \emph{orthonormal vector fields} is called an \emph{\textbf{orthonormal frame}}.
+\end{definition}
+
+\item \begin{lemma}\label{lemma: gram_schmidt} (\textbf{Gram-Schmidt Algorithm for Frames}). \\
+Suppose $(X_j)$ is a smooth local frame for $T \bR^n$ over an open subset $U \subseteq \bR^n$. Then there is a smooth orthonormal frame $(E_j)$ over $U$ such that $\text{span}(E_1|_{p},\ldots, E_j|_{p}) = \text{span}(X_1|_{p},\ldots, X_j|_{p})$ for each $j = 1,\ldots,n$ and each $p \in U$.
+\end{lemma}
+
+\item Although \emph{smooth local frames} are plentiful, \emph{global ones} are not.
+\begin{definition}
+A smooth manifold with or without boundary is said to be \emph{\textbf{parallelizable}} if it admits a \textbf{smooth global frame}.
+\end{definition}
+
+\item 
+\begin{example} These are some examples of parallizable or non-parallizable manifolds:
+\begin{itemize}
+\item $\bR^{n}$, $\bS^{1}$ and $\mathbb{T}^{n}$ are all \emph{parallelizable manifold}.
+\item \emph{All \textbf{Lie groups}} are \emph{parallelizable}.
+\item Most smooth manifolds are \emph{not parallelizable}. The simplest example of a \emph{nonparallelizable manifold} is $\bS^2$. (In fact, $\bS^{1}$, $\bS^{3}$ and $\bS^{7}$ are the \emph{\textbf{only}} spheres that are parallelizable.)
+\end{itemize}
+\end{example}
+\end{itemize}
+
+
+\subsubsection{Integral Curves and Flows}
+\begin{itemize}
+\item \begin{definition}
+ Suppose $M$ is a smooth manifold with or without boundary and $V$ is a \emph{vector field} on $M$.  An \underline{\emph{\textbf{integral curve}}} of $V$ is a \emph{differentiable curve} $\gamma: J \rightarrow M$ whose \emph{\textbf{velocity}} at each point is equal to the \emph{\textbf{value of $V$}} at that point:
+ \begin{align*}
+ \gamma'(t) &= V_{\gamma(t)}, \quad \forall t\in J.
+ \end{align*} If $0 \in J$, the point $\gamma(0)$ is called \emph{\textbf{the starting point of $\gamma$}}.
+\end{definition}
+
+\item \begin{remark}
+Finding integral curves boils down to solving \emph{a system of ordinary differential equations} in a smooth chart.  Suppose $\gamma: J \rightarrow M$ is a smooth curve and $V$ is a smooth vector field on $M$. On a smooth coordinate domain $U \subseteq M$, we can write $\gamma$ in local coordinates as $\gamma(t) = (\gamma^{1}(t), \ldots, \gamma^{n}(t))$. Then the condition $\gamma'(t) =  V_{\gamma(t)}$ for to be an integral curve of $V$ can be written
+\begin{align}
+\dot{\gamma}^{i}\partdiff{}{x^{i}}\Bigr|_{\gamma(t)} &= V^{i}(\gamma(t))\partdiff{}{x^{i}}\Bigr|_{\gamma(t)}, \label{eqn: integral_curve_differential_equations_1}
+\end{align} which reduces to the following \emph{\textbf{autonomous system of ordinary differential equations (ODEs)}}:
+\begin{align}
+\dot{\gamma}^{i}(t) &= V^{i}(\gamma^{1}(t), \ldots, \gamma^{n}(t)), \qquad i=1,\ldots, n.
+\end{align}
+\end{remark}
+
+\item The fundamental fact about such systems is \textbf{the \emph{existence}, \emph{uniqueness}, and \emph{smoothness theorem}} from ODE theory \citep{amann2011ordinary, hirsch2012differential}.
+\begin{proposition}
+Let $V$ be a smooth vector field on a smooth manifold $M$. For each point $p \in M$, there exist $\epsilon > 0$ and a smooth curve $\gamma: (-\epsilon, \epsilon) \rightarrow M$ that is an integral curve of $V$ starting at $p$.
+\end{proposition}
+
+\item \begin{remark}
+The followings show how how \emph{\textbf{affine reparametrizations}} affect integral curves:
+\begin{enumerate}
+\item 
+\begin{lemma} (\textbf{Rescaling Lemma}). \citep{lee2003introduction}\\
+Let $V$ be a smooth vector field on a smooth manifold $M$, let $J \subseteq \bR$ be an interval, and let $\gamma: J \rightarrow M$ be an integral curve of $V$. For any $a \in \bR$, the curve $\widetilde{\gamma}: \widetilde{J} \rightarrow M$ defined by $\widetilde{\gamma}(t) =  \gamma(at)$ is an integral curve of the vector field $aV$, where $\widetilde{J} = \set{t: at \in J}$. 
+\end{lemma}
+
+\item \begin{lemma} (\textbf{Translation Lemma}).  \citep{lee2003introduction}\\
+Let $V, M, J$, and $\gamma$ be as in the preceding lemma. For any $b \in \bR$, the curve $\widehat{\gamma}:  \widehat{J} \rightarrow M$ defined by $\widehat{\gamma}(t) =  \gamma(t + b)$ is also an integral curve of $V$, where $ \widehat{J} = \set{t: t + b \in J}$.
+\end{lemma}
+
+\item \begin{proposition} (\textbf{Naturality of Integral Curves}).  \citep{lee2003introduction}\\
+Suppose $M$ and $N$ are smooth manifolds and $F: M \rightarrow N$ is a smooth map. Then $X \in \mathfrak{X}(M)$ and $Y \in \mathfrak{X}(N)$ are $F$-related \textbf{if and only if} $F$ takes integral curves of $X$ to integral curves of $Y$, meaning that for each integral curve $\gamma$ of $X$,  $F \circ \gamma$ is an integral curve of $Y$.
+\end{proposition}
+\end{enumerate}
+\end{remark}
+
+\item \begin{definition}
+A \underline{\emph{\textbf{global flow on $M$}}} (also called \textbf{\emph{a one-parameter group action}}) is defined as a \emph{\textbf{continuous left $\bR$-action on $M$}}; that is, a \emph{continuous map} $\theta: \bR \times M \rightarrow M$ satisfying the following properties for all $s, t \in \bR$ and $p \in M$:
+\begin{align}
+\theta(t, \theta(s, p)) = \theta(t+s, p), \quad \theta(0, p) = p \label{eqn: global_flow}
+\end{align}
+\end{definition}
+
+\item \begin{definition}
+If $M$ is a manifold, a \emph{\textbf{flow domain}} for $M$ is an open subset $\mathfrak{D} \subseteq \bR \times M$ with the property that for each $p \in M$,
+the set $\mathfrak{D}^{(p)} = \set{t \in \bR: (t, p) \in \mathfrak{D}}$ is an \emph{open interval} \emph{\textbf{containing}} $0$.
+
+A \underline{\emph{\textbf{flow}}} on $M$ is a continuous map $\theta: \mathfrak{D} \rightarrow M$; where  $\mathfrak{D} \subseteq \bR \times M$ is \emph{a flow domain}, that satisfies the following \emph{\textbf{group laws}}: 
+\begin{align}
+\theta(0, p) &=p, \quad \forall p \in M  \label{eqn: local_flow_group_identity}\\
+\theta(t, \theta(s, p)) &= \theta(t+s, p), \quad \forall s \in \mathfrak{D}^{(p)}, \; t \in \mathfrak{D}^{(\theta(s, p))},\; (\text{i.e. }t+s \in \mathfrak{D}^{(p)})  \label{eqn: local_flow_group}
+\end{align} We sometimes call $\theta$ \underline{\emph{\textbf{a local flow}}} to distinguish it from \emph{a global flow} as defined earlier. The unwieldy term \emph{\textbf{local one-parameter group action}} is also used.
+\end{definition}
+
+\item For a global flow $\theta$ on $M$, we define two collections of maps as follows:
+\begin{itemize}
+\item \begin{definition}
+For each $t\in \bR$, \textbf{\emph{define}} a continuous map $\theta_t: M \rightarrow M$ by 
+\begin{align*}
+\theta_t(p) &= \theta(t, p). 
+\end{align*} The defining properties in \eqref{eqn: global_flow} are equivalent to \emph{\textbf{the group laws}}:
+\begin{align}
+\theta_t \circ \theta_s = \theta_{t+s}, \quad \theta_0 = \text{Id}_{M} \label{eqn: global_flow_group}
+\end{align}
+\end{definition}
+
+\item \begin{definition}
+For each $p \in M$, define a curve $\theta^{(p)}: \bR \rightarrow M$ by
+\begin{align*}
+\theta^{(p)}(t) &= \theta(t, p).
+\end{align*} The image of this curve is \emph{\textbf{the \underline{orbit} of $p$ under the group action}}.
+\end{definition}
+\end{itemize}
+
+\item \begin{definition}
+If $\theta: \bR \times M \rightarrow M$ is a smooth global flow, for each $p \in M$ we define a \emph{tangent vector $V_p \in T_pM$} by
+\begin{align*}
+V_p &=  (\theta^{(p)})'(0) = d\theta^{(p)}\paren{\frac{d}{dt}\Bigr|_{t=0}}.
+\end{align*} 
+The assignment $p \mapsto V_p$ is \emph{\textbf{a (rough) vector field}} on $M$; which is called \emph{\textbf{the infinitesimal generator of the global flow $\theta$}}. That is, $\theta$ is the integral curve of $V$.
+\end{definition}
+
+\item \begin{definition}
+If $\theta$ is a flow, we define $\theta_t(p) = \theta^{(p)}(t) = \theta(t, p)$ whenever $(t, p) \in \mathfrak{D}$, just as for a global flow. For each $t \in \bR$, we also define
+\begin{align}
+M_t = \set{p \in M: (t, p) \in \mathfrak{D}} \label{eqn: local_flow_starting_points}
+\end{align} so that
+\begin{align*}
+p \in M_t \Leftrightarrow t \in \mathfrak{D}^{(p)} \Leftrightarrow (t,p) \in \mathfrak{D}.
+\end{align*} If $\theta$ is smooth, \emph{\textbf{the infinitesimal generator}} of $\theta$ is defined by $V_p =  (\theta^{(p)})'(0)$.
+\end{definition}
+
+\item \begin{definition}
+\emph{A \textbf{maximal integral curve}} is one that cannot be extended to an integral curve on \emph{any larger open interval}, and \emph{a \textbf{maximal flow}} is a flow that admits \emph{no extension} to a flow on a \emph{larger flow domain}.
+\end{definition}
+
+\item \begin{remark}
+Given a smooth flow, we can define a vector field as the infinitesimal generator of it. Conversely, for every smooth vector field, there exists a unique maximal smooth flow which is the \emph{\textbf{integral curve} of the vector field} \emph{\textbf{locally}}. The flow is \emph{\textbf{time-reversible}}.
+\begin{enumerate}
+\item \begin{proposition}
+If $\theta: \mathfrak{D} \rightarrow M$ is a smooth flow, then the infinitesimal generator $V$ of $\theta$ is a smooth vector field, and each curve $\theta^{(p)}$ is an integral curve of $V$.
+\end{proposition}
+
+\item \begin{theorem} (\textbf{Fundamental Theorem on Flows}). \citep{lee2003introduction}\\
+Let $V$ be a smooth vector field on a smooth manifold $M$. There is a \textbf{unique smooth maximal flow} $\theta: \mathfrak{D} \rightarrow M$
+whose \textbf{infinitesimal generator} is $V$. This flow has the following properties:
+\begin{enumerate}
+\item For each $p \in M$, the curve $\theta^{(p)}: \mathfrak{D}^{(p)} \rightarrow M$ is the \textbf{unique maximal integral curve} of $V$ starting at $p$.
+\item If $s \in \mathfrak{D}^{(p)}$, then $\mathfrak{D}^{(\theta(s, p))}$ is the interval $\mathfrak{D}^{(p)} - s = \set{t - s: t \in \mathfrak{D}^{(p)}}$.
+\item For each $t \in \bR$, the set $M_t$ is \textbf{open} in $M$; and $\theta_t: M_t \rightarrow M_{-t}$ is a \textbf{diffeomorphism} with \textbf{inverse} $\theta_{-t}$.
+\end{enumerate}
+\end{theorem}
+\end{enumerate}
+\end{remark}
+\end{itemize}
+
+\subsection{Vector Bundle, Frames and Section}
+\begin{itemize}
+\item \begin{definition}
+Let $M$ be a \emph{topological space}. A \emph{(real) \underline{\textbf{vector bundle}} of \underline{rank $k$} over $M$} is a \emph{\textbf{topological space}} $E$ together with a \emph{\textbf{surjective continuous} map} $\pi: E \rightarrow M$ satisfying the following conditions:
+\begin{enumerate}
+\item For each $p \in M$, the \underline{\emph{\textbf{fiber}}} $E_{p} = \pi^{-1}(p)$ over $p$ is endowed with the structure of a \emph{\underline{$k$-dimensional real \textbf{vector space}}}.
+\item For each $p \in M$, there exist a neighborhood $U$ of $p$ in $M$ and a \emph{\textbf{homeomorphism}} $\Phi: \pi^{-1}(U) \rightarrow U \times \bR^k$ (called \emph{a \underline{\textbf{local trivialization}} of $E$ over $U$}), satisfying the following conditions:
+\begin{enumerate}
+\item $\pi_{U}\circ \Phi = \pi$ (where $\pi_U: U \times  \bR^k \rightarrow U$ is the \emph{\textbf{projection}});
+\item for each $q \in U$, the \emph{restriction} of $\Phi$ to $E_q$ is a \emph{\textbf{vector space}} \emph{\textbf{isomorphism}} from
+$E_q$ to $\set{q} \times \bR^k \simeq \bR^k$.
+\end{enumerate}
+\end{enumerate}
+The space $E$ is called \emph{\textbf{the total space of the bundle}}, $M$ is called its \emph{\textbf{base}}, and $\pi$ is its \emph{\textbf{projection}}. 
+\end{definition}
+
+\item \begin{definition}
+If $M$ and $E$ are smooth manifolds with or without boundary, $\pi$ is \emph{a smooth map}, and \emph{the local trivializations} can be chosen to be \emph{diffeomorphisms}, then $E$ is called \emph{a \textbf{smooth vector bundle}}. In this case, we call \emph{any local trivialization} that is a \emph{diffeomorphism} onto its image \emph{a \textbf{smooth local trivialization}}.
+\end{definition}
+
+\item \begin{remark}
+The \emph{\textbf{rank}} of a vector bundle is the \emph{\textbf{dimension}} of \emph{vector space} $\pi^{-1}(p)$ associated with each point $p$.
+\end{remark}
+
+\item \begin{remark}
+The idea of local trivialization provides a way to map a fiber $\pi^{-1}(p)$ in vector bundle to a Euclidean space. This is critical to make sure the vector bundle itself is a \emph{topological manifold}. 
+\end{remark}
+
+\item \begin{definition}
+If there exists \emph{a local trivialization} of $E$ over \emph{\textbf{all of $M$}} (called \emph{a \textbf{global trivialization} of} $E$), then $E$ is said to be \emph{a \textbf{trivial bundle}}. In this case, $E$ itself is \emph{\textbf{homeomorphic}} to the \emph{product space} $M \times \bR^k$. 
+
+If $E \rightarrow M$ is a \emph{smooth bundle} that admits \emph{a smooth global trivialization}, then we say that $E$ is \emph{\textbf{smoothly trivial}}. In this case $E$
+is \emph{\textbf{diffeomorphic}} to $M \times \bR^k$, not just \emph{homeomorphic}. 
+\end{definition}
+For brevity, when we say that \emph{a smooth bundle} is \emph{trivial}, we always understand this to mean \emph{smoothly trivial}, not just trivial in the topological sense.
+
+
+\item \begin{lemma} (\textbf{Transition between Two Smooth Local Trivializations})\\
+Let $\pi: E \rightarrow M$ be a smooth vector bundle of rank $k$ over $M$. Suppose $\Phi: \pi^{-1}(U) \rightarrow U \times \bR^{k}$ and $\Psi: \pi^{-1}(V) \rightarrow V \times \bR^{k}$ are \textbf{two smooth local trivializations} of $E$ with $U \cap V \neq \emptyset$. There exists a \textbf{smooth map} $\tau:  U \cap V \rightarrow GL(k, \bR)$
+such that the composition $\Phi \circ \Psi^{-1}: (U \cap V )\times \bR^k \rightarrow (U \cap V) \times \bR^k$ has the form
+\begin{align*}
+\Phi \circ \Psi^{-1}(p,v)  &=  (p,  \, \tau(p)v),
+\end{align*} where $\tau(p)v$ denotes the usual action of the $k\times k$ matrix $\tau(p)$ on the vector $v \in \bR^k$.
+\end{lemma} Note that the following diagram commute:
+\[
+  \begin{tikzcd}
+     (U \cap V )\times \bR^k  \arrow[swap]{dr}{\pi_1} & \arrow[swap]{l}{\Psi}  \pi^{-1}(U \cap V) \arrow{r}{\Phi} \arrow[swap]{d}{\pi} &  (U \cap V )\times \bR^k   \arrow{dl}{\pi_1}\\
+    & U \cap V &
+  \end{tikzcd}
+\] 
+\begin{definition}
+The smooth map $\tau:  U \cap V \rightarrow GL(k, \bR)$ described in this lemma is called the \underline{\emph{\textbf{transition function}}} between the local trivializations $\Phi$ and $\Psi$. 
+
+For example, if $M$ is a smooth manifold and $\Phi$ and $\Psi$ are the local trivializations of tangent bundle $TM$ associated with two different smooth charts, then the transition function between them is \emph{\textbf{the Jacobian matrix}} of the \emph{coordinate transition map}.
+\end{definition}
+
+\item Like the tangent bundle, vector bundles are often most easily described by giving \emph{\textbf{a collection of vector spaces}}, one for each point of the base manifold. The next lemma shows that in order to construct a smooth vector bundle, it is sufficient to construct the local trivializations, as long as they overlap with smooth transition
+functions. 
+\begin{lemma} (\textbf{Vector Bundle Chart Lemma}). \citep{lee2003introduction} \\
+Let $M$ be a smooth manifold with or without boundary, and suppose that for each $p \in M$ we are given a \textbf{real vector space} $E_p$ of some fixed dimension $k$. Let $E = \bigsqcup_{p\in M} E_p$, and let $\pi: E \rightarrow M$ be the map that takes each element of $E_p$ to the point $p$. Suppose furthermore that we are
+given the following data:
+\begin{enumerate}
+\item an \textbf{open cover} $\set{U_{\alpha}}_{\alpha \in A}$ of $M$
+\item for each $\alpha \in A$, a \textbf{bijective} map $\Phi_{\alpha}: \pi^{-1}(U_{\alpha}) \rightarrow U_{\alpha} \times \bR^k$ whose restriction to each $E_p$ is a vector space \textbf{isomorphism} from $E_p$ to $\set{p} \times \bR^k \simeq \bR^k$
+\item for each $\alpha, \beta \in A$  with $U_{\alpha} \cap U_{\beta} \neq \emptyset$, a smooth map $\tau_{\alpha, \beta}: U_{\alpha} \cap U_{\beta} \rightarrow  GL(k, \bR)$ such that the map $\Phi_{\alpha} \circ \Phi_{\beta}^{-1}$ from $(U_{\alpha} \cap U_{\beta}) \times \bR^k$ to itself has the form
+\begin{align}
+\Phi_{\alpha} \circ \Phi_{\beta}^{-1}(p,v)  &=  (p,  \, \tau_{\alpha, \beta}(p)v),  \label{eqn: change_of_coordinate_vector_bundle}
+\end{align}
+\end{enumerate}
+Then $E$ has a \textbf{unique topology} and \textbf{smooth structure} making it into \textbf{a smooth manifold} with or without boundary and a \textbf{smooth rank-$k$ vector bundle over M}; with $\pi$ as \textbf{projection} and $\set{(U_{\alpha}, \Phi_{\alpha})}$ as smooth local trivializations.
+\end{lemma}
+
+\item \begin{definition}
+Let $\pi: E \rightarrow M$ be a vector bundle. A \underline{\emph{\textbf{section}}} of $E$ (sometimes called \emph{\textbf{a cross section}}) is a \emph{\textbf{section}} of the map $\pi$, that is, a continuous map  $\sigma: M \rightarrow E$ satisfying
+\begin{align*}
+\pi \circ \sigma =  \text{Id}_M. 
+\end{align*} This means that $\sigma(p)$ is an element of the \emph{fiber} $E_p$ for each $p \in M$.
+\end{definition}
+
+\item \begin{definition} 
+More generally, \emph{\textbf{a \underline{local section} of $E$}} is a \emph{continuous} map $\sigma: U \rightarrow E$ defined on some open subset $U \subseteq M$ and satisfying $\pi \circ \sigma =  \text{Id}_U.$ 
+
+To emphasize the distinction, a section defined on \emph{all of $M$} is sometimes called \emph{\textbf{a global section}}. Note that a \emph{local section} of $E$ over $U \subseteq  M$ is the same as a \emph{global section} of \emph{the \textbf{restricted bundle}} $E|_{U}$.
+\end{definition}
+
+
+\item \begin{definition}
+If $M$ is a smooth manifold with or without boundary and $E$ is a \emph{\textbf{smooth vector bundle}}, a \underline{\emph{\textbf{smooth (local or global) section} of $E$}} is one that is a
+\emph{smooth map} from its domain to $E$.
+\end{definition}
+
+\item \begin{definition}
+Define a \emph{\textbf{rough (local or global) section}} of $E$ over a set $U \subseteq M$ to be a map $\sigma: U \rightarrow E$ (\textit{not necessarily continuous}) such that  $\pi \circ \sigma =  \text{Id}_U$. A ``section” without further qualification always means a continuous section.
+\end{definition}
+
+\item \begin{definition}
+The \emph{\textbf{zero section}} of $E$ is the \textbf{global section} $\xi: M \rightarrow E$ defined by
+\begin{align*}
+\xi(p) &= 0 \in E_{p}, \quad \forall p \in M.
+\end{align*}
+\end{definition}
+
+\item \begin{definition}
+As in the case of vector fields, the \emph{\textbf{support}} of a section $\sigma$ is the \emph{\textbf{closure} of the set} $\set{p \in M:\;  \sigma(p) \neq 0}$.
+\end{definition}
+
+\item \begin{definition}
+If $E \rightarrow M$ is a smooth vector bundle, the set of \emph{\textbf{all smooth global sections of $E$}} is a \emph{\textbf{vector space}} under pointwise addition and scalar multiplication:
+\begin{align*}
+(c_1 \sigma_1 + c_2 \sigma_2)(p) &= c_1 \sigma_1(p) + c_2 \sigma_2(p)
+\end{align*} This vector space is usually \underline{\textbf{\emph{denoted by $\Gamma(E)$}}}.  Note that for vector fields of tangent bundle $TM$, we use $\mathfrak{X}(M)$
+\end{definition}
+
+\item \begin{remark}
+Just like smooth vector fields, \emph{smooth sections} of a \emph{smooth bundle} $E \rightarrow M$  can be \emph{multiplied} by \emph{smooth real-valued functions}: if $f \in \cC^{\infty}(M)$ and $\sigma \in \Gamma(E)$, we obtain \emph{a \textbf{new section}} $f\sigma$ defined by
+\begin{align*}
+(f\sigma)(p) &= f(p)\,\sigma(p).
+\end{align*}
+\end{remark}
+
+\item \begin{definition}
+Let $E \rightarrow M$ be a vector bundle. If $U \subseteq M$ is an open subset, a \emph{\textbf{$k$-tuple}} of \emph{\textbf{local sections}} $(\sigma_1,\ldots, \sigma_k)$ of $E$ over $U$ is said to be \emph{\textbf{linearly independent}} if their values $(\sigma_1(p),\ldots, \sigma_k(p))$ form a \emph{linearly independent $k$-tuple in $E_p$} for each $p\in U$. 
+
+Similarly, they are said to \emph{\textbf{span}} $E$ if \emph{their values span $E_p$ for each $p \in U$}.
+\end{definition}
+
+\item \begin{definition}
+\emph{A \textbf{local frame} for $E$ over $U$} is an ordered $k$-tuple $(\sigma_1,\ldots, \sigma_k)$ of \emph{\textbf{linearly independent} local sections} over U that \emph{\textbf{span}} $E$; thus $(\sigma_1(p),\ldots, \sigma_k(p))$ is a \emph{\textbf{basis}} for the \emph{fiber} $E_p$ for each $p \in U$. 
+
+It is called a \emph{\textbf{global frame}} if $U = M$. 
+\end{definition}
+
+
+\item \begin{definition}
+If  $E \rightarrow M$ is a smooth vector bundle, a \emph{local or global frame} is a \emph{\textbf{smooth frame}} if each $\sigma_i$ is a \emph{smooth section}. We often\emph{ denote a frame $(\sigma_1,\ldots, \sigma_k)$ by $(\sigma_i)$}.
+\end{definition}
+
+
+\item \begin{remark}
+The \emph{(local or global) frames} for $M$ that we defined in Chapter 8 are, in our new terminology, frames for the tangent bundle. We use both terms interchangeably
+depending on context: ``\emph{\textbf{frame for $M$}}" and ``\emph{\textbf{frame for $TM$}}" mean the same thing.
+\end{remark}
+
+\item \begin{corollary} (\textbf{The Coordinate Representation of Vector Bundle})\\
+Let  $E \rightarrow M$  be a smooth vector bundle of rank $k$, let $(V, \varphi)$ be a smooth chart on $M$ with coordinate functions $(x^i)$, and suppose there exists a
+smooth local frame $(\sigma_i)$ for $E$ over $V$. Define $\widetilde{\varphi}: \pi^{-1}(V) \rightarrow \varphi(V)  \times \bR^k$ by
+\begin{align}
+\widetilde{\varphi}\paren{v^{i} \sigma_i(p)} &= \paren{x^1(p), \ldots, x^{n}(p), v^1, \ldots, v^{k}}.   \label{eqn: coordinate_representation_vector_bundle_local_frame}
+\end{align} Then $(\pi^{-1}(V), \widetilde{\varphi})$ is a \textbf{smooth coordinate chart} for $E$.
+\end{corollary}
+
+\item \begin{definition} 
+Suppose  $(\sigma_i)$ is a smooth local frame for $E$ over some open subset $U \subseteq M$. If $\tau: M \rightarrow E$ is a \emph{rough section}, the value of $\tau$ at
+an arbitrary point $p \in U$ can be written $\tau(p) = \tau^{i}(p)\sigma_i(p)$ for some uniquely determined numbers $(\tau^1(p), \ldots, \tau^{k}(p))$. This defines $k$ functions $\tau^i: U \rightarrow \bR$, called \emph{the \textbf{component functions} of $\tau$ with respect to the given local frame}.
+\end{definition}
+
+\item \begin{proposition}  (\textbf{Local Frame Criterion for Smoothness}).\\
+Let $\pi: E \rightarrow M$ be a smooth vector bundle, and let $\tau: M \rightarrow E$ be a rough section. If  $(\sigma_i)$ is a smooth local frame for $E$ over an open subset $U \subseteq M$, then $\tau$ is smooth on $U$ if and only if its component functions with respect to $(\sigma_i)$ are smooth.
+\end{proposition}
+\end{itemize}
+
+\newpage
+\subsection{Comparison of Concepts for Bundles}
+\begin{itemize}
+\item By far, we have introduced a lot of abstract concepts that are generalization of our known concepts. Let us compare them in the following Table \ref{tab: concepts}.
+\begin{table}[h!]
+\centering
+\caption{Comparison between concepts}
+\label{tab: concepts}
+%\setlength{\extrarowheight}{1pt}
+\renewcommand\tabularxcolumn[1]{m{#1}}
+\footnotesize
+\begin{tabularx}{1\textwidth} { 
+  | >{\raggedright\arraybackslash} m{2cm}
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X  | }
+ \hline
+ base & \emph{\textbf{Euclidean space}} $\bR^{n}$ & \emph{\textbf{smooth manifold}} $M$ & \emph{\textbf{topological space}} $M$  \\
+ \hline
+ element  & $p$, \textbf{global coordinate} $\mb{x} = (x^1, \ldots, x^{n})$  & $p$, \textbf{local coordinate} $\varphi(p) = (x^1, \ldots, x^{n})$ & $p$\\
+\hline
+ basis of base & coordinate vectors
+$\mb{e}_1, \ldots, \mb{e}_{n}$  & the \emph{local frame} for $M$ & the \emph{local frame} for $M$ \\
+\hline
+vector space (\emph{\textbf{fiber}}) at $p$ & tangent space $T_{\mb{x}}\bR^{n}  \simeq \set{\mb{x}} \times \bR^{n} \simeq \bR^{n}$ &  \textbf{tangent space}  $T_{p}M \simeq \set{p} \times \bR^{n}$ & \textbf{fiber} $E_{p} = \pi^{-1}(p)$; $E_{p}  \simeq \set{p} \times \bR^{k} \simeq \bR^{k}$ \\
+\hline
+dimension of vector space & $n$ & $n$ & $k$ \\
+\hline
+basis of vector space &
+
+\begin{center}
+ \begin{align*}
+ \paren{\dfrac{\partial}{\partial x^{1}}\Bigr|_{p}, \ldots, \dfrac{\partial}{\partial x^{n}}\Bigr|_{p}}  \equiv  \\
+(\mb{e}_1, \ldots, \mb{e}_{n})
+\end{align*} 
+ \end{center} &  \begin{align*}
+ \paren{\dfrac{\partial}{\partial x^{1}}\Bigr|_{p}, \ldots, \dfrac{\partial}{\partial x^{n}}\Bigr|_{p}}
+\end{align*} &   \begin{align*}
+ (\sigma_1(p), \ldots, \sigma_{k}(p))
+\end{align*} \\
+\hline
+element in vector space &  \begin{align*}
+\text{tangent vector }\\
+ \mb{v} = v^{i}\mb{e}_{i}
+ \end{align*}  & \begin{align*} 
+\text{\textbf{tangent vector} }\\
+  v = v^{i}\dfrac{\partial}{\partial x^{i}}\Bigr|_{p}
+ \end{align*}  & \begin{align*} 
+ v = v^{i}\sigma_{i}(p)
+ \end{align*}\\
+\hline
+total space of \emph{\textbf{bundle}} & \begin{align*}
+\text{tangent bundle }\\
+ T\bR^{n} \simeq  \bR^{n} \times \bR^{n}
+ \end{align*}  & \begin{align*}
+ \text{\textbf{tangent bundle} }\\
+TM =  \bigsqcup_{p\in M}T_{p}M
+ \end{align*} 
+ & 
+\begin{align*}
+ \text{\textbf{vector bundle} }\\
+E =  \bigsqcup_{p\in M}E_{p}, 
+ \end{align*}\\
+\hline
+element in bundle & $(x^1,\ldots, x^{n}, v^1, \ldots, v^{n})$ &
+$(x^1(p), \ldots, x^{n}(p),  v^1, \ldots, v^{n})$
+& 
+$(x^1(p), \ldots, x^{n}(p),  v^1, \ldots, v^{k})$ \\
+\hline
+\emph{\textbf{section}} & 
+\begin{align*}
+\text{\textbf{global vector field} }\\
+X = X^{i}\mb{e}_{i} \equiv X^{i}\partdiff{}{x^{i}}
+\end{align*} &  
+\begin{align*}
+\text{\textbf{local vector field} }\\
+X = X^{i}\partdiff{}{x^{i}}\\
+X_{p} \in T_{p}M
+\end{align*}
+& \begin{align*}
+\text{\textbf{local section} }\\
+\tau = \tau^{i}\sigma_{i}\\
+\tau(p) \in E_{p}
+\end{align*} \\
+\hline
+vector space of sections & $\mathfrak{X}(\bR^{n}) \simeq \bR^{n}$ & $\mathfrak{X}(M) \equiv \Gamma(TM)$ & $\Gamma(E)$ \\
+\hline
+\emph{\textbf{frame}} &
+\begin{align*}
+\text{\textbf{coordinate basis}}\\
+\text{or \textbf{global frame}}\\
+\paren{\mb{e}_1, \ldots, \mb{e}_{n}}
+\end{align*} 
+&
+\begin{align*}
+\text{\textbf{coordinate vector fields}}\\
+\paren{\partdiff{}{x^{1}}, \ldots, \partdiff{}{x^{n}}}
+\end{align*} &
+\begin{align*}
+\text{\textbf{local frame}}\\
+\paren{\sigma_1, \ldots, \sigma_{k}}
+\end{align*} \\
+\hline
+\end{tabularx}
+\end{table}
+\end{itemize}
+\newpage
+\subsection{Bundle Homomorphism}
+\begin{itemize}
+\item \begin{definition}
+If $\pi: E \rightarrow M$ and $\pi': E' \rightarrow M'$ are vector bundles, a \emph{\textbf{continuous map}} $F: E \rightarrow E'$ is called a \underline{\emph{\textbf{bundle homomorphism}}} if there exists a map $f: M \rightarrow M'$ satisfying $\pi' \circ F = f \circ \pi$,
+\[
+  \begin{tikzcd}
+    E \arrow{r}{F} \arrow{d}{\pi} &  E' \arrow{d}{\pi'} \\
+    M                \arrow{r}{f}                                &  M',
+  \end{tikzcd}
+\] with the property that for each $p \in M$, the \emph{\textbf{restricted map}} $F|_{E_{p}}: E_p \rightarrow E'_{f(p)}$ is \emph{\textbf{linear}}. The \emph{relationship} between $F$ and $f$ is expressed by saying that \underline{\emph{$F$ \textbf{covers} $f$}}.
+\end{definition}
+
+\item \begin{definition}
+A \emph{\textbf{bijective bundle homomorphism}} $F: E \rightarrow E'$ whose \emph{inverse} is also a \emph{bundle homomorphism} is called a \underline{\emph{\textbf{bundle isomorphism}}}; if $F$ is also a \emph{diffeomorphism}, it is called a \underline{\emph{\textbf{smooth bundle isomorphism}}}. If there exists a \emph{(smooth) bundle isomorphism} between $E$ and $E'$, the two bundles are said to be \emph{\textbf{(smoothly) isomorphic}}.
+\end{definition}
+
+\item \begin{definition}
+\emph{\textbf{A bundle homomorphism over $M$}} is a \emph{bundle homomorphism} covering the
+\emph{\textbf{identity map}} of $M$; or in other words, a \emph{continuous} map $F: E \rightarrow E'$ such that
+\[
+  \begin{tikzcd}
+    E \arrow{rr}{F} \arrow[swap]{dr}{\pi} &  & E' \arrow{dl}{\pi'} \\
+    & M,              &  
+  \end{tikzcd}
+\]
+and whose \emph{\textbf{restriction to each fiber} is \textbf{linear}}. If there exists a \emph{bundle homomorphism $F: E \rightarrow E'$ over $M$} that is also a \emph{(smooth) bundle isomorphism}, then we say that $E$ and $E'$ are \emph{\textbf{(smoothly) isomorphic over $M$}}. 
+\end{definition}
+
+\item \begin{definition}
+Suppose $E \rightarrow M$ and $E' \rightarrow M'$ are smooth vector bundles over a smooth manifold $M$ with or without boundary, and let $\Gamma(E)$, $\Gamma(E')$ denote their spaces of smooth global sections. If $F: E \rightarrow E'$ is a \emph{\textbf{smooth bundle homomorphism over $M$}}, then \emph{\textbf{composition with $F$}} \textit{\textbf{induces}} a map $\widetilde{F}: \Gamma(E) \rightarrow \Gamma(E')$ as follows:
+\begin{align}
+\widetilde{F}(\sigma)(p) &= (F \circ \sigma)(p) = F(\sigma(p)) \label{eqn: bundle_homomorphism_induced_map}
+\end{align}
+It is easy to check that $\widetilde{F}(\sigma)$ is a \emph{\textbf{section}} of $E'$, and it is \emph{\textbf{smooth}} by composition.
+\end{definition}
+
+\item \begin{definition}
+A map $\cF: \Gamma(E) \rightarrow \Gamma(E')$ is said to be \emph{\textbf{linear over $\cC^{\infty}(M)$}} if for any smooth functions $u_1,u_2 \in \cC^{\infty}(M)$ and smooth sections $\sigma_1, \sigma_2 \in \Gamma(E)$,
+\begin{align*}
+\cF(u_1\sigma_1 + u_2\sigma_2) &= u_1 \cF(\sigma_1) + u_2\cF(\sigma_2).
+\end{align*}
+\end{definition}
+
+\item
+\begin{lemma} (\textbf{Bundle Homomorphism Characterization Lemma}). \citep{lee2003introduction}\\
+Let $\pi: E \rightarrow M$ and $\pi': E' \rightarrow M'$ be smooth vector bundles over a smooth manifold $M$ with or without boundary, and let $\Gamma(E)$, $\Gamma(E')$ denote their spaces of smooth sections. A map $\cF: \Gamma(E) \rightarrow \Gamma(E')$ is \textbf{linear over $\cC^{\infty}(M)$} \textbf{if and only if} there is a \textbf{smooth bundle homomorphism} $F: E \rightarrow E'$ over $M$ such that $\cF(\sigma) = F\circ \sigma$ for all $\sigma \in \Gamma(E)$.
+\end{lemma}
+
+\item \begin{remark}
+Because of \emph{Bundle Homomorphism Characterization Lemma}, we usually dispense with the notation $\widetilde{F}$ and use \emph{\textbf{the same symbol}} for both \emph{\textbf{a bundle homomorphism}} $F: E \rightarrow E'$ over $M$ and \emph{\textbf{the linear map}} $F: \Gamma(E) \rightarrow \Gamma(E')$ that it induces on \emph{\textbf{sections}}, and we refer to a map of \emph{\textbf{either} of these types} as \emph{\textbf{a bundle homomorphism}}.
+\end{remark}
+\end{itemize}
+
+\subsection{Cotangent Bundle, Coframes and Covector Field}
+\begin{itemize}
+\item \begin{definition}
+For any smooth manifold M with or without boundary, \emph{the disjoint union}
+\begin{align*}
+T^{*}M &= \bigsqcup_{p \in M}T_{p}^{*}M
+\end{align*} is called the \underline{\emph{\textbf{cotangent bundle of $M$}}}. It has a \emph{\textbf{natural projection map}} $\pi: T^{*}M \rightarrow M$ sending $\omega \in T_{p}^{*}M$ to $p \in M$. 
+\end{definition}
+
+
+\item
+\begin{definition}
+Given any smooth local coordinates $(x^i)$ on an open subset $U \subseteq M$, for each $p \in U$ we can show that the \emph{\textbf{basis}} for $T_{p}^{*}M$ dual to $(\partdiff{}{x^{i}}\big|_{p})$ is \emph{the differential of coordinate function} $(dx^{i}\big|_{p})$. This defines $n$ maps $dx^1,\ldots, dx^n: U \rightarrow  T^{*}M$, called \underline{\emph{\textbf{coordinate covector fields}}}.
+\end{definition}
+
+\item 
+\begin{definition}
+As in the case of the \emph{tangent bundle},  smooth local coordinates for $M$ yield smooth local coordinates for its \emph{cotangent bundle}. If $(x^i)$ are \emph{smooth coordinates} on an open subset $U \subseteq M$, the map from $\pi^{-1}(U)$ to $\bR^{2n}$ given by
+\begin{align*}
+\Phi\paren{\xi_{i} \;dx^{i}\bigr|_{p}} = (x^{1}(p), \ldots, x^{n}(p), \xi_1, \ldots, \xi_n)
+\end{align*} is a smooth coordinate chart for $T^{*}M$. We call $(x^i, \xi_i)$ the \emph{\textbf{natural coordinates}} for $T*M$ associated with $(x^i)$. 
+\end{definition}
+
+\item \begin{remark}
+Here $\xi_{i}$ is the \emph{fiber coordinates} for the covectors $\omega$ in $T_{p}^{*}M$.
+\end{remark}
+
+\item
+\begin{definition}
+A \emph{\textbf{(local or global) section}} of $T^{*}M$ is called a \underline{\emph{\textbf{covector field}}} or a \emph{\textbf{(differential) 1-form}}.
+\end{definition}
+
+\item \begin{remark}  (\emph{\textbf{Representation of Covector Field via Coordinate Fields}})\\
+In any smooth local coordinates on an open subset $U \subseteq M$; \emph{\textbf{a (rough) covector field}} $\omega \in \Gamma(T^{*}M)$ can be written in terms of \emph{\textbf{the coordinate covector fields}} $(dx^i)$ as
+\begin{align*}
+\omega &= \omega_{i}\, dx^{i}
+\end{align*} where $n$ \emph{functions} $\omega_i: U \rightarrow \bR$ are called the \emph{\textbf{component functions}} of $\omega$. They are characterized by
+\begin{align*}
+\omega_{i} &= \omega_{p}\paren{\partdiff{}{x^{i}}\Bigr|_{p}}.
+\end{align*}
+\end{remark}
+
+\item \begin{remark}
+ If $\omega$ is a \emph{\textbf{(rough) covector field}} and $X$ is a \emph{\textbf{vector field}} on $M$, then we can form a
+\textbf{\emph{function}} $\omega(X): M \rightarrow \bR$ by
+\begin{align*}
+\omega(X)(p) &= \omega_{p}(X_{p}), \quad p \in M.
+\end{align*} If we write $\omega = \omega_i\,\lambda^i$ and $X = X^j \partdiff{}{x_{j}}$ in terms of \emph{local coordinates}, then $\omega(X)$ has the \emph{\textbf{local coordinate representation}} $\omega(X) = \omega_i\, X^i$.
+\end{remark}
+
+\item \begin{remark}
+Recall that $\omega_p(v) \in \bR$ and $\omega(X) \in \cC^{\infty}(M)$.
+\end{remark}
+
+\item \begin{definition}
+Let $M$ be a smooth manifold with or without boundary, and let $U \subseteq M$ be an open subset. \emph{\textbf{A \underline{local coframe}}} for $M$ over $U$ is an ordered $n$-tuple of covector fields $(\epsilon^1, \ldots, \epsilon^n)$ defined on $U$ such that $(\epsilon^{i}|_{p})$ forms a basis for $T_{p}^{*}M$ at each point $p \in U$. If $U = M$, it is called \emph{\textbf{a global coframe}}. (\emph{\textbf{A local coframe}} for $M$ is just a local frame for the vector bundle $T^{*}M$
+\end{definition}
+
+\item \begin{example} (\emph{\textbf{Coordinate Coframes}}). \\
+For any smooth chart $(U, (x^i))$, the \emph{\textbf{coordinate covector fields}} $(dx^i)$ constitute a local coframe over $U$, called \emph{\textbf{a coordinate coframe}}. Every coordinate frame is \emph{\textbf{smooth}}, because its \emph{\textbf{component functions}} in the given chart are \emph{\textbf{constants}}.
+\end{example}
+
+\item \begin{definition}
+Given a local frame $E_1,\ldots,E_n)$ for $TM$ over an open subset $U$, there is a \emph{\textbf{uniquely determined (rough) local coframe}} $(\epsilon^1, \ldots, \epsilon^n)$ over $U$ such that $\epsilon_i|_{p}$ is \emph{the \textbf{dual basis} to $E_i|_{p}$} for each $p \in U$, or equivalently $\epsilon^i(E_{j}) = \delta_{j}^{i}$. This coframe
+is called \emph{the \underline{\textbf{coframe dual to $(E_i)$}}}. \emph{Conversely}, if we start with a local coframe $(\epsilon^{i})$ over an open subset $U \subseteq M$, there is a uniquely determined local frame $(E_i)$, called \emph{the \underline{\textbf{frame dual to  $(\epsilon^{i})$}}}, determined by $\epsilon^i(E_{j}) = \delta_{j}^{i}$. 
+\end{definition}
+
+\item \begin{remark}
+The coframe dual to $(\partial / \partial x^i)$ is $(dx^{i})$ and the frame dual to $(dx^{i})$ is $(\partial / \partial x^i)$.
+\end{remark}
+
+
+\item \begin{remark}
+We denote \emph{the real vector space of \textbf{all smooth covector fields} on $M$ by $\mathfrak{X}^{*}(M)$} (or $\Gamma(T^{*}M)$). As smooth sections of a vector bundle, elements of $\mathfrak{X}^{*}(M)$ can be \emph{\textbf{multiplied}} by smooth real-valued functions: if $f \in \cC^{\infty}(M)$ and $\omega \in \mathfrak{X}^{*}(M)$, the covector field $f\omega$ is defined by
+\begin{align}
+(f\omega)_p &= f(p)\,\omega_{p}. \label{eqn: function_multiply_covector}
+\end{align} Because it is the space of smooth sections of a vector bundle, $\mathfrak{X}^{*}(M)$ is a \emph{module} over  $\cC^{\infty}(M)$.
+\end{remark}
+
+\item \begin{remark}
+Note that a nonzero linear functional $\omega_{p} \in T_{p}^{*}M$ is completely determined by two pieces of data: its \emph{\textbf{kernel}}, which is a linear hyperplane in $T_{p}M$ (\emph{a codimension-$1$ linear subspace}); and the set of vectors $v$ for which $\omega_p(v) = 1$, which is \emph{an \textbf{affine hyperplane parallel to the kernel}}  The value of $\omega_{p}(v)$ for any other vector $v$ is then obtained by linear interpolation or extrapolation.
+\end{remark}
+
+\item \begin{remark} (\textbf{\emph{Visualize the Vector Fields and the Covector Fields}})
+\begin{enumerate}
+\item A vector field on $M$ can be considered as an arrow attached to each point of $M$.
+\item A covector field on $M$ can be considered as defining \emph{\textbf{a pair of hyperplanes}} in each tangent space, \emph{one \textbf{through the origin}} and \emph{another \textbf{parallel} to it}, and varying continuously from point to point. 
+
+Where the covector field is small, one of the hyperplanes becomes \emph{very far from the kernel}, eventually disappearing altogether at points where the covector field takes the value zero.
+\end{enumerate}
+\end{remark}
+
+\item  \begin{definition}
+Let $f$ be a \emph{smooth real-valued function} on a \emph{smooth manifold} $M$ with or without boundary. (As usual, all of this discussion applies to functions defined on an open subset $U \subseteq M$; simply by \emph{replacing} $M$ with $U$ throughout.) We define a \emph{\textbf{covector field}} $df$ , called \underline{\emph{\textbf{the differential of $f$}}}, by
+\begin{align*}
+df_{p}(v) &= v\,f, \quad \forall v\in T_{p}M.
+\end{align*}
+\end{definition}
+
+
+\item \begin{remark} (\emph{\textbf{Coordinate Representation of differential of $f$}})\\
+Let $(x^i)$ be smooth coordinates on an open subset $U \subseteq M$, and let $(dx^i)$ be the corresponding \emph{coordinate coframe} on $U$. Then \emph{\textbf{the coordinate representation of $df$}}:
+\begin{align}
+df = \partdiff{f}{x^{i}} \; dx^i  \label{eqn: differential_covector_coordinate_representation}
+\end{align} Thus, the \emph{\textbf{component functions}} of $df$ in any smooth coordinate chart are \emph{\textbf{the partial derivatives of $f$} with respect to those coordinates}. Because of this, we can think of $df$ as \emph{an analogue of the classical gradient}, reinterpreted in a way that makes \emph{coordinate-independent sense} on a manifold.
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{The Differential $df_p$ is the Best Linear Approximation of Function $f$ Near $p$}})\\
+ Suppose $M$ is a smooth manifold and $f \in \cC^{\infty}(M)$, and let $p$ be a point in $M$. By choosing smooth coordinates on a neighborhood of $p$, we can think of $f$ as a function on an open subset $U\subseteq \bR^n$.  Recall that $dx^i |_p$ is the \emph{linear functional that picks out the $i$-th component of a tangent vector} at $p$.  Writing $\Delta f = f(p + v) - f(p)$ for $v\in \bR^{n}$, Taylor’s theorem shows that $f$ is well approximated when $v$ is small by
+\begin{align*}
+\Delta f = f(p + v) -  f(p)  &\approx \partdiff{f}{x^{i}}(p) v^{i} = \partdiff{f}{x^{i}}(p) dx^{i}(v) = df_{p} (v).
+\end{align*} In other words, \emph{\textbf{$df_p$ is the linear functional that best approximates $f$ near $p$.}}
+
+The great power of the concept of the differential comes from the fact that we can define df \underline{\emph{\textbf{invariantly on any manifold}}}, without resorting
+to vague arguments involving \emph{infinitesimals}.
+\end{remark}
+\end{itemize}
+
+\subsection{Pushforward and Pullback}
+\begin{itemize}
+\item 
+\begin{definition}
+Suppose $F: M \rightarrow N$ is \emph{smooth} and $X$ is a \emph{vector field} on $M$,  and suppose there happens to be a \emph{vector field} $Y$ on $N$ with the property that for each $p \in M$,
+\begin{align*}
+dF_{p}(X_p) &= Y_{F(p)}.
+\end{align*}
+ In this case, we say \emph{the \textbf{vector fields} $X$ and $Y$ are \underline{\textbf{F-related}}}. 
+\end{definition}
+
+\item \begin{remark}
+The \emph{\textbf{differential}} $dF_{p}$ is defined \emph{locally}, and it \emph{\textbf{does not guarantee to map a vector field (a global concept) to a vector field}}.  For example,
+if $F$ is \emph{not surjective}, there is no way to decide what vector to assign to a point $q \in N \setminus F(M)$.  If $F$ is \emph{not injective}, then for some points of $N$ there may be several different vectors obtained by applying $dF$ to $X$ at different points of $M$.
+\end{remark}
+
+\item \begin{proposition}
+Suppose $F: M \rightarrow N$ is a smooth map between manifolds with or without boundary, $X \in \mathfrak{X}(M)$, and $Y \in \mathfrak{X}(N)$. Then $X$ and $Y$ are \textbf{$F$-related} \textbf{if and only if} for \textbf{every smooth real-valued function} $f$ defined on an open subset of $N$,
+\begin{align}
+X(f \circ F) &= (Yf) \circ F \label{eqn: F_related_vector_fields_condition}
+\end{align}
+\end{proposition}
+
+\item 
+\begin{proposition}
+Suppose $M$ and $N$ are smooth manifolds with or without boundary, and $F: M \rightarrow N$ is a \textbf{diffeomorphism}. For every $X \in \mathfrak{X}(M)$, there is a \textbf{unique} smooth vector field on $N$ that is $F$-related to $X$.
+\end{proposition}
+
+\item \begin{definition}
+Suppose $M$ and $N$ are \emph{smooth manifolds with or without boundary}, and $F: M \rightarrow N$ is a \textbf{\emph{diffeomorphism}}. For every $X \in \mathfrak{X}(M)$, there is a \textbf{\emph{unique}} \emph{smooth vector field} $Y$ on $N$ that is $F$-related to $X$. We denote the \emph{\textbf{unique vector field}} that is \emph{\textbf{$F$-related}} to $X$ by \underline{$F_{*}X$}, and call it the \underline{\emph{\textbf{pushforward of $X$ by $F$}}}. And $F_{*}X$ is defined explicitly by the formula
+\begin{align}
+(F_{*}X)_{q} &= dF_{F^{-1}(q)}(X_{F^{-1}(q)}),\quad \forall q\in N. \label{eqn: pushforward_of_vector_fields}
+\end{align} 
+\end{definition} 
+
+\item \begin{corollary}
+Suppose $F: M \rightarrow N$ is a diffeomorphism and $X \in \mathfrak{X}(M)$.  For any $f \in \cC^{\infty}(N)$, 
+\begin{align*}
+(F_{*}X\,f) \circ F &= X(f \circ F)
+\end{align*}
+\end{corollary}
+
+\item \begin{definition}
+Let $F: M \rightarrow N$ be a \emph{smooth map} between smooth manifolds with or without boundary, and let $p \in M$ be arbitrary. The differential $dF_p: T_{p}M \rightarrow T_{F(p)}N$ yields \emph{a \textbf{dual linear map}}
+\begin{align*}
+dF_{p}^{*}:  T_{F(p)}^{*}N \rightarrow T_{p}^{*}M,
+\end{align*} called \underline{\emph{\textbf{the (pointwise) pullback by $F$ at $p$}}, or \textbf{\emph{the cotangent map} of $F$}}. Unraveling
+the definitions, we see that $dF_{p}^{*}$ is characterized by
+\begin{align*}
+dF_{p}^{*}(\omega)(v) &= \omega(dF_{p}(v)), \quad  \omega \in T_{F(p)}^{*}N, \; v \in T_{p}^{*}M.
+\end{align*}
+\end{definition}
+
+\item \begin{definition}
+Given a smooth map $F: M \rightarrow N$ and a \emph{covector field} $\omega$ on $N$ , define a \emph{\textbf{rough covector field}} $F^{*}\omega$ on $M$, called the
+\textbf{\emph{pullback of $\omega$ by $F$}}, by
+\begin{align}
+(F^{*}\omega)_p &= dF_{p}^{*}\paren{\omega_{F(p)}}  \label{eqn: pullback_of_covector_field}
+\end{align}  We also denote \emph{the pullback of $\omega$ by $F$as $F^{\#}\omega$}.
+\end{definition}
+
+\item \begin{remark} 
+\emph{\textbf{Pushforward operator}} $F_{*}$ is \emph{more restricted} than \emph{\textbf{Pullback operator}} $F^{*}$ on $F$. The former acts on a vector field on $M$ to produce a vector field on $N$ and the latter acts on a covector field (a differential $1$-form) on $N$ to produce a covector field on $M$.
+\end{remark}
+
+\item \begin{remark} Get familiar with the following expressions:
+\begin{enumerate}
+\item For $g \in \cC^{\infty}(N)$, $q = F(p) \in N$ so that $p= F^{-1}(q) \in M$, 
+\begin{align*}
+(F_{*}X)_{q}\,g &= dF_{p}(X_{p})g = X_{p}\paren{g \circ F} 
+\end{align*}
+
+\item For $p\in M$, $X_{p} \in T_{p}M$, $q = F(p) \in N$, $\omega_{q} \in T_{q}^{*}N$, 
+\begin{align*}
+(F^{*}\omega)_{p}(X_{p}) &= \paren{dF_{p}^{*}\omega_{q}}\paren{X_{p}} = \omega_{q}\paren{dF_{p}(X_{p})}
+\end{align*} The last equality use the definition of dual map $(A^{*}w)(v) = w(A\,v)$
+
+\item  Given the  coordinate representation of covector  $\omega = \omega_{j}dy^{j}$, the pullback of a covector field  can also be written in the
+following way:
+\begin{align}
+F^{*}\omega &= F^{*}(\omega_{j}dy^{j}) = (\omega_{j} \circ F) F^{*}(dy^{j}) \nonumber\\
+&= (\omega_{j} \circ F)\, d\paren{y^{j} \circ F}  \label{eqn: pullback_covector_field_decompo_1}\\
+&= (\omega_{j} \circ F) \,d\,F^{j}  \label{eqn: pullback_covector_field_decompo_2}
+\end{align}
+$F^{*}\omega$ is computed as follows: whereaver you see $y^i$ in the expression for $B$, just substitute the $i$th component function of $F$ and expand.
+
+\item For a diffeomorphism $F$, $(F^{*})^{-1} = F_{*}$. That is \textbf{\emph{the inverse of pullback operation is the pushforward operation}}.
+\end{enumerate}
+\end{remark}
+\end{itemize}
+
+
+\newpage
+\subsection{Compare the Tangent and Cotangent Bundles}
+\begin{table}[h!]
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\belowdisplayskip}{-10pt}
+\setlength{\abovedisplayshortskip}{0pt}
+\setlength{\belowdisplayshortskip}{0pt}
+\centering
+\caption{Comparison between tangent space and cotangent space}
+\label{tab: tangent_cotangent}
+%\setlength{\extrarowheight}{1pt}
+\renewcommand\tabularxcolumn[1]{m{#1}}
+\footnotesize
+\begin{tabularx}{1\textwidth} { 
+  | >{\raggedright\arraybackslash} m{2cm}
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X  | }
+ \hline
+ base &  \emph{\textbf{smooth manifold}} $M$ & \emph{\textbf{smooth manifold}} $M$  \\
+ \hline
+ element  & $\varphi(p) = (x^1, \ldots, x^{n})$ & $\varphi(p) = (x^1, \ldots, x^{n})$\\
+\hline
+vector space (\emph{\textbf{fiber}}) at $p$ &  \textbf{tangent space}  $T_{p}M$ &  \textbf{cotangent space} $T_{p}^{*}M = (T_{p}M)^{*}$ \\
+\hline
+dimension of vector space & $n$ & $n$  \\
+\hline
+basis of vector space & 
+\vspace{-1.25em}
+\begin{align*}
+ \paren{\dfrac{\partial}{\partial x^{1}}\Bigr|_{p}, \ldots, \dfrac{\partial}{\partial x^{n}}\Bigr|_{p}}
+\end{align*}
+\vspace{-1em}
+ &   
+\vspace{-1.25em}
+\begin{align*}
+ (dx^1\bigr|_{p}, \ldots, dx^n\bigr|_{p})
+\end{align*} \vspace{-1em}\\
+\hline
+element in vector space   &
+\vspace{-1.25em}
+ \begin{align*} 
+\text{\textbf{tangent vector} }:\cC^{\infty}(M) \rightarrow \bR\\
+  v = v^{i}\dfrac{\partial}{\partial x^{i}}\Bigr|_{p}
+ \end{align*} \vspace{-1em}  & 
+\vspace{-1.25em} 
+ \begin{align*} 
+ \text{\textbf{cotangent vector} }:T_pM \rightarrow \bR\\
+ \omega = \xi_{i}\;dx^i\bigr|_{p}
+ \end{align*} \vspace{-1em} \\
+\hline
+total space of \emph{\textbf{bundle}}   & 
+\vspace{-1.25em}
+\begin{align*}
+ \text{\textbf{tangent bundle} }\\
+TM =  \bigsqcup_{p\in M}T_{p}M
+ \end{align*} 
+ & 
+ \vspace{-1.25em}
+\begin{align*}
+ \text{\textbf{cotangent bundle} }\\
+T^{*}M =  \bigsqcup_{p\in M}T_{p}^{*}M, 
+ \end{align*}\\
+\hline
+element in bundle &
+$(x^1(p), \ldots, x^{n}(p),  v^1, \ldots, v^{n})$
+& 
+$(x^1(p), \ldots, x^{n}(p),  \xi_1, \ldots, \xi_{n})$ \\
+\hline
+\emph{\textbf{section}}  &  
+\vspace{-1.25em}
+\begin{align*}
+\text{\textbf{local vector field} }\\
+X = X^{i}\partdiff{}{x^{i}}\\
+X_{p} \in T_{p}M
+\end{align*} \vspace{-1.25em}
+&
+\vspace{-1.25em}
+\begin{align*}
+\text{\textbf{local covector field} }\\
+\omega = \xi_{i} dx^{i}\\
+\omega_p \in T_{p}^{*}M
+\end{align*} \vspace{-1.25em} \\
+\hline
+vector space of sections & $\mathfrak{X}(M) \equiv \Gamma(TM)$ & $\mathfrak{X}^{*}(M) \equiv \Gamma(T^{*}M)$ \\
+\hline
+\emph{\textbf{frame}} 
+&
+\vspace{-1.25em}
+\begin{align*}
+\text{\textbf{coordinate vector fields}}\\
+\paren{\partdiff{}{x^{1}}, \ldots, \partdiff{}{x^{n}}}
+\end{align*} \vspace{-1em} &
+\vspace{-1.25em}
+\begin{align*}
+\text{\textbf{coordinate covector fields}}\\
+\paren{dx^1, \ldots, dx^{n}}
+\end{align*} \vspace{-1em}\\
+\hline
+\emph{\textbf{duality}} & 
+\vspace{-1.25em}
+\begin{align*}
+\xi\paren{\partdiff{}{x^{i}}\Bigr|_{p}}(dx^{j}|_{p}) = \delta_{i}^{j}
+\end{align*} \vspace{-1em} &
+\vspace{-1.25em}
+\begin{align*}
+dx^{j}|_{p}\paren{\partdiff{}{x^{i}}\Bigr|_{p}} = \delta_{i}^{j}
+\end{align*} \vspace{-1em} \\
+\hline
+\emph{\textbf{change of coordinates}} &
+\vspace{-1.25em}
+\begin{align*}
+\text{\textbf{contravariant}}\\
+\widetilde{v}^{j}= \partdiff{\widetilde{x}^{j}}{x^{i}}(p)\, v^{i}
+\end{align*}\vspace{-1em}
+&
+\vspace{-1.25em}
+\begin{align*}
+\text{\textbf{covariant}}\\
+\omega_{i} = \partdiff{\widetilde{x}^{j}}{x^{i}}(p)\,\widetilde{\omega}_{j}
+\end{align*}\vspace{-1em}
+\\
+\hline
+\emph{\textbf{functions}} &
+\vspace{-1.25em}
+\begin{align*}
+F: M \rightarrow N\text{ \emph{\textbf{diffeomorphism}}}\\
+dF_{p}: T_pM \rightarrow T_{F(p)}N \\
+\text{\emph{\textbf{Pushforward}}: }F_{*}: \mathfrak{X}(M) \rightarrow \mathfrak{X}(N)  \\
+(F_{*}X)_{q} = dF_{F^{-1}(q)}(X_{F^{-1}(q)}),\; q\in N
+\end{align*}\vspace{-1em}
+&
+\vspace{-1.25em}
+\begin{align*}
+\\
+dF_{p}^{*}:  T_{F(p)}^{*}N \rightarrow T_{p}^{*}M \text{ \emph{\textbf{dual map of }}}dF_p\\
+\text{\emph{\textbf{Pullback}}: }F^{*}: \mathfrak{X}^{*}(N) \rightarrow \mathfrak{X}^{*}(M)\\
+(F^{*}\omega)_p = dF_{p}^{*}\paren{\omega_{F(p)}},\; p\in M
+\end{align*} \vspace{-1em}
+\\
+\hline
+\end{tabularx}
+\end{table}
+
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{book_reference.bib}
+\end{document}

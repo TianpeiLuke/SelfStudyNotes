@@ -1,0 +1,1269 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs,  mathtools, dsfont}
+\usepackage{tabularx}
+\usepackage{tikz-cd}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Lecture 0: Notations, Expressions and Formulas}
+\author{ Tianpei Xie}
+\date{Nov. 3rd., 2022}
+\maketitle
+\tableofcontents
+\newpage
+\section{Notations and Symbols}
+\subsection{Tangent Space and Differential at $p$}
+\begin{itemize}
+\item $(U, \varphi)$: \emph{\textbf{a smooth (coordinate) chart}} for $M$. $U \subseteq M$ is \emph{\textbf{coordinate domain}}, $\varphi: U \rightarrow \widehat{U} \subseteq \bR^{n}$ is \emph{\textbf{coordinate map}}. $\varphi(p) = (x^1(p), \ldots, x^{n}(p))$ is the \emph{\textbf{coordinate representation}} of $p \in M$.
+
+\item $x^{i}: U \rightarrow \bR$ is \emph{\textbf{the $i$-th coordinate function}}. It is also simplied as the coordinate value itself.
+
+\item \begin{align*}
+\dfrac{\partial}{\partial x^{i}}\Bigr|_{p} \in T_pM, \quad i=1,\ldots, n
+\end{align*}  is \emph{\textbf{the partial derivative operation}} $\cC^{\infty}(M) \rightarrow \bR$ with respect to the $i$-th coordinate. It is \emph{one of \textbf{the basis vector}} in $T_pM$. It is the derivation operation at $p$ along $i$-th basis vector in $T_pM$.
+
+\item $vf \equiv v(f) \in \bR$ for $v \in T_pM$: \quad This is the \emph{\textbf{derivation}} of $f$ at $p$ \emph{\textbf{along direction of}} $v$. Since $v\in T_pM$ is also a \emph{derivation operator at $p$} on $\cC^{\infty}(M) \rightarrow \bR$, it can \emph{\textbf{acts on}} $f\in \cC^{\infty}(M)$.
+
+\item $T_pM$: \quad  \emph{\textbf{the tangent space}} of $M$ at $p$. It is also \emph{the vector space} of \emph{all \textbf{derivations operations} on $\cC^{\infty}(M)$ at $p$}. This is a \emph{\textbf{$n$-dimensional space}}.
+
+\item  $dF_p$: \quad \emph{the \textbf{differential} of $F$ at $p$}. It is \emph{\textbf{a linear map}} from the tangent spaces $T_{p}M$ to $T_{F(p)}N$, for $F: M \rightarrow N$. It is also called \emph{the \textbf{pointwise pushforward} by $F$}.
+
+\item $dF_p(v) \in T_{F(p)}N$: \quad This is \emph{\textbf{the tangent vector}} on \emph{\textbf{codomain}} $N$ at $F(p)$.
+
+\item $dF_p(v)\,g \in \bR$: \quad This is \emph{the tangent vector on $N$} at $F(p)$ acts on $g$, which produce the directional derivatives of $g$ along $dF_p(v)$ at $F(p)$.
+
+\item $\gamma'(t)$: \quad For a curve $\gamma: J \rightarrow M$, it is \emph{the \textbf{differential} of $\gamma$ at $t$}. It is also \emph{\textbf{the tangent direction}} of $\gamma$ at $t$. It is \emph{\textbf{velocity}} of the curve at $t$.
+
+\item $\gamma'(t)f$: \quad The \emph{\textbf{directional derivatives}} of a function $f$ along \emph{\textbf{the tangent direction of curve}}. It is \emph{\textbf{the rate of change}} of $f$ along the curve $\gamma$.
+\end{itemize}
+\subsection{Cotangent Space}
+\begin{itemize}
+\item $dx^i|_{p}$: \quad a \emph{\textbf{linear functional}} $T_pM \rightarrow \bR$. The set $(dx^i)$ is also \emph{\textbf{the dual basis}} in $T_p^{*}M$ corresponds to $(\partial /\partial x^i)$. We can also see it as \emph{\textbf{the differential of the coordinate function}} $x^{i}$ at $p$, i.e. $dx^{i}|_{p} = dx_{p}^{i}$.
+
+\item $\omega \in T_p^{*}M$: \quad a \emph{\textbf{linear functional}} on $T_pM$, i.e. $T_pM \rightarrow \bR$. It is called \emph{\textbf{(tangent) covector, or cotangent vector}}
+
+\item $\omega(v) \in \bR$: \quad when \emph{a linear functional} $\omega$ \emph{taking value at} given \emph{tangent vector $v$}, it returns a real value. 
+
+
+\item $df_p$: \quad for \emph{real-valued function} $f \in \cC^{\infty}(M)$. $df_p$ can be thought as \emph{\textbf{the differential} of $f$ at $p$}, which is a linear map between $T_pM$ to $T_{f(p)}\bR$. It can also be thought as \emph{\textbf{the linear functional}} on $T_pM$, i.e. the linear map $T_pM \rightarrow \bR$. Thus it is a \emph{\textbf{covector}}. It is also \emph{\textbf{the differential $1$-form}} evaluated at $p$.
+
+\item $df_p(v)$: \quad for $v \in T_pM$, this is a \emph{\textbf{real number}} since $df_p$ is a linear functional on $T_pM$ and $df_p(v) = vf$. But it is also a linear operator on function on $\bR$. This is also equal to the directional derivative of $f$ along $v$, by definition of differentials.
+
+\item $df_p(v)g$: \quad when $df_p$ treated as linear operator, this is the derivation $v$ act on the composite $g \circ f$, i.e. $v(g \circ f)$.
+
+\item $T_p^{*}M$: \quad \emph{\textbf{the tangent covector (cotangent) space}}. It is the vector space of \emph{all linear functionals on $T_pM$}. It is the dual space of $T_pM$, i.e. $T_p^{*}M = (T_pM)^{*}$. This is a \emph{\textbf{$n$-dimensional space}}.
+
+\item $F^{*}$: \quad \emph{\textbf{the pullback operator}}: $T_{F(p)}^{*}N \rightarrow T_{p}^{*}M$ for $F: M \rightarrow N$. It maps a covector on $T_{F(p)}N$ to a covector on $T_{p}M$. 
+\end{itemize}
+
+\subsection{Tangent Bundle and Vector Field}
+\begin{itemize}
+\item $TM$: \quad The \emph{\textbf{tangent bundle}} on $M$. It is the \emph{\textbf{union}} of \emph{all tangent spaces} for all $p\in M$. \emph{Tangent bundle} itself is a \emph{\textbf{$2n$-manifold}}.
+\begin{align*}
+TM &= \bigsqcup_{p\in M}T_pM
+\end{align*}
+
+\item $\pi$: \quad The \emph{\textbf{natural projection}} $\pi: TM \rightarrow M$ onto the manifold $M$.  $\pi(p, v) = p$. It is a \emph{\textbf{smooth surjective submersion}}. Each tangent space is \emph{\textbf{the level set}} of $\pi$, i.e. $T_pM = \pi^{-1}(p)$.
+
+\item $X$: \quad A \emph{\textbf{vector field}}. It is a \emph{\textbf{section}} of $\pi$, i.e. a continuous map $X: M \rightarrow TM$ so that $\pi \circ X = \text{Id}_{M}$. That is, $\pi(X(p)) = p$. The value of $X$ at $p$ is denoted as $X_p := X(p) \in T_pM$. $X_p$ is \emph{a tangent vector} at $p$. A vector field $X$ also defines \emph{\textbf{a derivation operation}} on $\cC^{\infty}(M)$, i.e. $X: \cC^{\infty}(M) \rightarrow \cC^{\infty}(M)$.
+
+\item $\frX(M):= \Gamma(TM)$: \quad The \emph{\textbf{vector space}} of all vector fields on $M$. $\Gamma(TM)=$  the vector space of all sections on tangent bundle $TM$. This is a \emph{\textbf{$n$-dimensional space}}.
+
+\item $Xf \in \cC^{\infty}(M)$: \quad This is a \emph{\textbf{smooth function}} since the derivation of a smooth function is another smooth function. 
+
+\item $fX \in \frX(M)$: \quad This is a \emph{\textbf{vector field}}. At each point $p$, $(fX)_p = f(p)X_p$. $f$ only multiplies the component function.
+
+\item \begin{align*}
+\dfrac{\partial}{\partial x^{i}} \in \frX(M), \quad i=1,\ldots, n
+\end{align*} forms a set of basis in $\frX(M)$. It is called \emph{\textbf{the (local) coordinate frames of $M$}}. Note that it drops dependency on $p$.
+
+\item $X_pf \in \bR$: \quad The same as $vf$ where $v = X_p \in T_pM$.
+
+\item $Xf(p)$: \quad The same as $X_pf$. $Xf(p) = X_pf$.
+
+\item $fX(p) \in T_pM$: \quad The same as $(fX)_p = f(p)X_p$. This is a tangent vector at $p$.
+
+\item $XY$: \quad for both $X, Y \in \frX(M)$. It is \emph{\textbf{a linear map}} $\cC^{\infty}(M) \rightarrow \cC^{\infty}(M)$ but it is \textbf{\emph{not necessarily is a vector field}} since the product rule may not hold. That is, normally,  $XY \not\in \frX(M)$ since it contains a \emph{second-order derivative term}.
+
+\item $XYf \in \cC^{\infty}(M)$: \quad It is a smooth function by linear map $XY$. It is $Xg$ where $g=Yf$.
+
+\item $XYf(p) \in \bR$: \quad It is equal to $(XY)_pf = X_pY_pf$.
+
+\item $fXY(p)$: \quad It is equal to $f(p)X_pY_p$. It is still \emph{a smooth linear operator}  $\cC^{\infty}(M) \rightarrow \bR$.
+
+\item $[X, Y] \in \frX(M)$: \quad \emph{\textbf{Lie bracket of vector fields $X$ and $Y$}}. $[X, Y] = XY - YX$ is a vector field on $M$, even if neither $XY$ nor $YX$ is a vector field. The Lie bracket of vector fields $X$ and $Y$ is seen as \emph{\textbf{the Lie direvative}} of $Y$ along flow of $X$.
+
+\item $[X, Y]f \in \cC^{\infty}(M)$: \quad It is equal to $XYf - YXf$.
+
+\item $[X, Y]_{p}f \in \bR$: \quad It is equal to $(XY-YX)_pf = (XY)_pf - (YX)_pf = X_pY_pf - Y_pX_pf$.
+
+\item $f[X, Y] \in \frX(M)$
+
+\item $f[X, Y](p) \in  T_pM$: \quad It is $f(p)[X, Y]_p = f(p)X_pY_p - f(p)Y_pX_p$
+
+\item $[fX, gY] \in \frX(M)$: \quad It is equal to $fg\,[X, Y]$.
+\end{itemize}
+
+
+\subsection{Cotangent Bundle and Covector Field}
+\begin{itemize}
+\item  $T^{*}M$: \quad The \emph{\textbf{cotangent bundle}} on $M$. It is the \emph{\textbf{union}} of \emph{all cotangent spaces} for all $p\in M$. \emph{Cotangent bundle} itself is a \emph{\textbf{$2n$-manifold}}.
+\begin{align*}
+T^{*}M &= \bigsqcup_{p\in M}T_p^{*}M
+\end{align*}
+
+\item $\pi$: \quad The \emph{\textbf{natural projection}} $\pi: T^{*}M \rightarrow M$ onto the manifold $M$.  $\pi(p, \xi) = p$. It is a \emph{\textbf{smooth surjective submersion}}. Each cotangent space is \emph{\textbf{the level set}} of $\pi$, i.e. $T_p^{*}M = \pi^{-1}(p)$.
+
+\item $\omega$: \quad A \emph{\textbf{covector field}}. It is a \emph{\textbf{section}} of $\pi$, i.e. a continuous map $X: M \rightarrow T^{*}M$ so that $\pi \circ \omega = \text{Id}_{M}$. That is, $\pi(\omega(p)) = p$. The value of $\omega$ at $p$ is denoted as $\omega_p := \omega(p) \in T_p^{*}M$. $\omega_p$ is \emph{a tangent covector vector} at $p$. 
+
+\item $\frX^{*}(M):= \Gamma(T^{*}M)$: \quad The \emph{\textbf{vector space}} of all covector fields on $M$. $\Gamma(T^{*}M)=$  the vector space of all sections on cotangent bundle $T^{*}M$. This is a \emph{\textbf{$n$-dimensional space}}.
+
+\item $f\omega \in \frX^{*}(M)$: \quad at each point $p$, $(f\omega)_p = f(p)\omega_p$
+
+\item $f\omega(p) \in T_p^{*}M$: \quad It is $(f\omega)_p$
+
+\item \begin{align*}
+dx^i \in \frX^{*}(M)
+\end{align*} forms a set of dual basis in $\frX^{*}(M)$. It is called \emph{\textbf{the (local) coordinate coframes of $M$}}. Note that it drops dependency on $p$.
+
+\item $\omega(X) \in \cC^{\infty}(M)$: \quad defines \emph{\textbf{a smooth function}} on $M$, i.e. $\omega(X): M \rightarrow \bR$ for each $X \in \frX(M)$.
+
+\item $\omega(X)(p) \in \bR$: \quad It is equal to $\omega_p(X_p)$
+
+\item $df \in \frX^{*}(M)$: \quad It is \emph{\textbf{a differential 1-form}} and also is \emph{\textbf{a covector field}}.
+
+\item $g\, df \in \frX^{*}(M)$: \quad This is the same as $g\,\omega$, where $\omega = df$.
+
+\item $df(X) \in \cC^{\infty}(M)$: \quad $df(X) = Xf$, it is also a \emph{linear function}.
+
+\item $df(X)(p)  \in \bR$: \quad $df_p(X_p) = X_pf$
+
+\item $Y(\omega(X)) \in  \cC^{\infty}(M)$: \quad Note that $g:= \omega(X) \in \cC^{\infty}(M)$ is a smooth function on $M$ for given $X$. Thus $Y(\omega(X)) = Yg$ is a smooth function on $M$
+
+\item $Y(\omega(X))(p)$: \quad It is equal to $Y_p(\omega(X))$. That is, $Y_p\,f$, for smooth function $f = \omega(X)$.
+
+\item $Y(df(X))$: \quad $Y(df(X)) = YXf$
+
+\item $F^{*}$: \quad  \emph{\textbf{the pullback operator}}: $T^{*}N \rightarrow T^{*}M$ for $F: M \rightarrow N$. It maps a covector field $\omega \in \frX^{*}(N)$ to a covector field $\eta = F^{*}\omega \in \frX^{*}(M)$
+
+\item $F^{*}\omega \in \frX^{*}(M)$: \quad it is a covector field on $M$ where $\omega$ is a covector field on $N$.
+
+\item $F^{*}\omega(p) \in T_p^{*}M$: \quad It is $(F^{*}\omega)_p$, which is a \emph{covector} on $M$
+
+\item $(F^{*}\omega)_p(v) \in \bR$: \quad $(F^{*}\omega)_p(v) = \omega_p(dF_p(v))$
+
+\item $F^{*}df$: \quad This is equal to $F^{*}df = d(f \circ F)$
+
+\item $F^{*}dy^j$: \quad $F^{*}df = d(y^j\circ F) = dF^{j}$
+\end{itemize}
+
+
+\subsection{Vector Bundle and Section}
+\begin{itemize}
+\item $E$: \quad denote the \textbf{\emph{vector bundle}}.  The definition of vector bundle is for a pair $(E, \pi)$. A vector bundle is \emph{a generalization of tangent bundle}, 
+\begin{align*}
+E &= \bigsqcup_{p\in M}E_p
+\end{align*} $E$ is also called \emph{\textbf{the total space of vector bundle}} and $M$ is its \emph{\textbf{base}}.
+
+\item $\pi$: \quad is the \emph{\textbf{surjective continuous map (i.e. projection map)}} $\pi: E \rightarrow M$, which has two properties: 
+\begin{enumerate}
+\item its \emph{\textbf{fiber}} $E_p = \pi^{-1}(p)$ is a \emph{\textbf{vector space}} of (the same) dimension $k$
+\item There exists a \emph{\textbf{local homemorphism}} from neighborhood $\pi^{-1}(U)$ in $E$  to $U \times \bR^{k}$; i.e. $\Phi: \pi^{-1}(U) \rightarrow U \times \bR^{k} \subseteq M \times \bR^{k}$ such that $\pi = \pi_U \circ \Phi$. Moreover, $\Phi|_{E_p}: E_p \rightarrow \set{p}\times \bR^{k}$ is an \emph{\textbf{isomorphism}}. 
+\end{enumerate}
+
+\item  $E_p$: \quad \emph{the \textbf{fiber} of} $\pi$ at $p\in M$, i.e. $E_p = \pi^{-1}(p)$. This is a $k$-dimensional vector space. It is a generalization of tangent space $T_pM$;
+
+\item $k$: \quad the \emph{\textbf{rank}} of vector bundle $E$, which is the \emph{\textbf{dimension}} of each fiber.
+
+\item $\Phi$: \quad  is called \emph{\textbf{a local trivialization}} of $E$ over $U \subseteq M$. It is a homemorphism $\Phi: \pi^{-1}(U) \rightarrow U \times \bR^{k} \subseteq M \times \bR^{k}$ and for $(p, v) \in E$, $\pi_{U}(\Phi(p, v)) = p$. Restricting the local trivialization in each fiber will have an \emph{\textbf{isomorphism}} $\Phi|_{E_p}: E_p \rightarrow \set{p}\times \bR^{k}$. That is $\Phi$ will map each fiber to a $k$-dimensional Euclidean space. $\Phi$ is \emph{a \textbf{tool to build a coordinate map} of} $E$.
+
+For smooth vector bundle, $\Phi$ is a \emph{\textbf{diffeomorphism}}. If $U = M$, then $E$ is \emph{\textbf{globally trivial}} since it admits a \emph{global trivialization} over $M$.
+
+\item $\tau$: \quad is called \emph{\textbf{the transition function}} between the local trivializations $\Phi$ and $\Psi$.  It is the smooth map $\tau: U\cap V \rightarrow GL(k, \bR)$, for $U, V$ both neighborhoods in $M$ corresponding to two  local trivializations $\Phi$ and $\Psi$. The map $\Phi \circ \Psi^{-1}(p, v) = (p, \tau(p)v)$.
+
+\item $\tau(p)$: \quad for $p\in M$ is a \emph{\textbf{generalization}} of \emph{\textbf{the Jacobian matrix}} between two \emph{\textbf{coordinate maps} in vector bundle}.  
+
+\item $\sigma$: \quad a \emph{\textbf{section}} of vector bundle $E$, which is a section of $\pi$, i.e. a \emph{continous} map $\sigma: M \rightarrow E$ so that $\pi \circ \sigma = \text{Id}_{M}$. $\pi(\sigma(p)) = p$ for all $p\in M$. A section is a \emph{\textbf{generalization}} of \emph{\textbf{vector fields}}.
+
+\item $\sigma(p):$ \quad a \emph{\textbf{vector}} in $E_p$. It is an abstraction of tangent vector in $T_pM$.
+
+\item $\Gamma(E)$: \quad the \emph{\textbf{vector space}} of all sections on $E$.  For example, $\frX(M)= \Gamma(TM)$.
+
+\item $f\sigma \in \Gamma(E)$: \quad  \emph{a section} on $E$. $(f\sigma)(p) = f(p)\sigma(p)$
+
+\item $(\sigma_i)$: \quad \emph{\textbf{a local frame for $E$ over $U \subseteq M$}} is a $k$-tuple $(\sigma_1, \ldots, \sigma_k)$ in $\Gamma(E)$ such that $(\sigma_1(p), \ldots, \sigma_k(p))$ forms a \emph{basis} for the fiber $E_p$ at each point $p \in U$. $(\sigma_1, \ldots, \sigma_k)$ forms \emph{the \textbf{basis} for all sections $\Gamma(E)$}.   It is often abbreviated as ``\emph{\textbf{a frame for $M$}}"
+
+\item $(\pi^{-1}(V), \widetilde{\varphi})$: \quad \emph{\textbf{the smooth chart for $E$}}, given smooth chart $(V, \varphi)$, local frames $(\sigma_i)$, $\widetilde{\varphi}: \pi^{-1}(V) \rightarrow \varphi(V) \times \bR^{k}$ such that $\widetilde{\varphi}\paren{v^i \sigma_i(p)} = (\varphi(p), v^1, \ldots, v^k)$
+\end{itemize}
+
+\subsection{Submerision, Immersion and Embedding}
+\begin{itemize}
+\item $\iota$: \quad The \textit{\textbf{inclusion map}} $\iota: S \xhookrightarrow{} M$. The \emph{\textbf{canonical inclusion map}} is $\widehat{\iota}(x^1, \ldots, x^m) = (x^1, \ldots, x^m, 0,\ldots, 0)\in \bR^{n}$, i.e. to \emph{\textbf{pad zeros}} until the output dimension matches. $\iota$ is an \textbf{\emph{injective linear map}}.  All \emph{\textbf{immersion}} $F$ has representation locally as the \emph{canonical inclusion map}.
+
+\item $\pi$: \quad The \textit{\textbf{projection map}} $\pi: S \subseteq N \rightarrow M$. The \emph{\textbf{canonical projection map}} is $\widehat{\pi}(x^1, \ldots, x^m, \ldots, x^n) = (x^1, \ldots, x^m)\in \bR^{m}$, i.e. to \emph{\textbf{truncate}} until the output dimension matches. $\pi$ is an \textbf{\emph{surjective linear map}}.  All \emph{\textbf{submersion}} $F$ has representation locally as the \emph{canonical projection map}.
+
+\item $\text{rank }F$ at $p$: \quad for \emph{\textbf{smooth function}} $F: M \rightarrow N$. It is \emph{the rank of \textbf{differential} of $F$ at $p$}, i.e. $\text{rank }dF_p$ or \emph{\textbf{the rank of Jacobian matrix}} at $p$ under coordinate representation. $\text{rank }F \le \min\set{\text{dim }M, \text{dim }N}$. If the equality holds, then $F$ is  \emph{\textbf{of full rank}}. 
+\end{itemize}
+
+\subsection{Tensors}
+\begin{itemize}
+\item $v_1 \xdotx{\otimes} v_k$: \quad for $v_i \in V_i$ vector space, $i=1 \xdotx{,} k$. This is a \emph{\textbf{tensor product of $k$ vectors}}. It is a \emph{\textbf{$k$-tuple}} $(v_1 \xdotx{,} v_k)$ that also admits the \emph{\textbf{multi-linearity property}}. That is $(v_1 \xdotx{\otimes} (a\,v_i + b\,v_{i}')  \xdotx{\otimes} v_k) = a\,( v_1 \xdotx{\otimes} v_i  \xdotx{\otimes} v_k)  + b\, (v_1 \xdotx{\otimes} v_{i}'  \xdotx{\otimes} v_k)$ for all $1\le i\le k$ and $a, b\in \bR$. 
+
+Therefore $v_1 \xdotx{\otimes} v_k = \Pi(v_1 \xdotx{,} v_k)$ for some \emph{\textbf{(quotient) projection map}} $\Pi$.
+
+\item $V_1 \xdotx{\otimes} V_k$: \quad the \emph{\textbf{tensor product of spaces}} $(V_i)_{i=1}^{k}$. The tensor product space $V_1 \xdotx{\otimes} V_k$ can be obtained as \emph{\textbf{the quotient space}} of $\cF(V_1 \xdotx{\times} V_k) / \cR$ where $\cF(S)$ is the set of all finite linear combinations of elements in $S$ and $\cR \subseteq \cF(V_1 \xdotx{\times} V_k)$ is the subspace spanned by the \emph{multi-linearity equation}.
+
+\item $\omega^1 \xdotx{\otimes} \omega^k$: \quad for $\omega^i \in V_i^{*}$ dual vector space. This is a \emph{\textbf{tensor product of $k$ covectors}}. This is also a \emph{\textbf{multi-linear function}} $\alpha: V_1 \xdotx{\times} V_k \rightarrow \bR$. The value of $\omega^1 \xdotx{\otimes} \omega^k(v_1 \xdotx{,} v_k) = \prod_{i=1}^{k}\omega^i(v_i)$
+
+\item $V_1^{*} \xdotx{\otimes} V_k^{*}$: \quad the \emph{\textbf{tensor product of dual spaces}} $(V_i^{*})_{i=1}^{k}$. 
+
+\item $T^{k}V$: \quad is called \emph{\textbf{the space of contravariant k-tensors}} on $V$.  This is equal to $V_1 \xdotx{\otimes} V_k$ where $V_i = V$ are all equal. The \emph{\textbf{dimension}} of this vector space is $n^k$ where $n= \text{dim }V$.
+
+\item $T^{k}V^{*}$: \quad  is called \emph{\textbf{the space of covariant k-tensors}} on $V$.  This is equal to $V_1^{*} \xdotx{\otimes} V_k^{*}$ where $V_i^{*} = V^{*}$ are all equal. The \emph{\textbf{dimension}} of this vector space is $n^k$ where $n= \text{dim }V^{*}$.
+
+\item $\omega^1 \xdotx{\otimes} \omega^k \in T^{k}V^{*}$: \quad is called \emph{\textbf{a covariant k-tensor}}. 
+
+\item $k$: \quad is called \emph{the \textbf{rank} of tensor}.
+
+\item $v_1 \xdotx{\otimes} v_k \in T^{k}V$: \quad is called \emph{\textbf{a contravariant k-tensor}}. It is also identifies as a \emph{\textbf{multi-linear functions}} on $(\omega^1 \xdotx{,} \omega^k)$.
+
+\item $T^{(k,l)}V$: \quad is called \emph{\textbf{the space of mixed $(k,l)$-tensors}} on $V$. Its element is $v_1 \xdotx{\otimes} v_k \otimes \omega^1 \xdotx{\otimes} \omega^l$.
+
+\item $a_{i_1 \xdotx{,} i_k} \in \bR$: \quad for $\alpha = a_{i_1 \xdotx{,} i_k} \omega^{i_1} \xdotx{\otimes} \omega^{i_k}$. It is a component for the covariant $k$-tensor.
+$a_{i_1 \xdotx{,} i_k} = \alpha\paren{E_1 \xdotx{,} E_k}$ for $(E_i)$ as basis for $V_i$.
+
+\item $T^{k}T_{p}^{*}M = T^{k}(T_{p}^{*}M)$: \quad \emph{\textbf{the space of all covariant k-tensors on $V = T_pM$}} at $p$. This space has \emph{\textbf{the finite dimension of $n^k$}}.
+
+\item $T^{k}T_{p}M = T^{k}(T_{p}M)$: \quad \emph{\textbf{the space of all contravariant k-tensors on $V = T_pM$}} at $p$. This space has \emph{\textbf{the finite dimension of $n^k$}}.
+
+\item $T^{k}T^{*}M$: \quad is the \emph{\textbf{vector bundle of all covariant k-tensors}} on $M$.
+\begin{align*}
+T^{k}T^{*}M&= \bigsqcup_{p\in M}T^{k}T_{p}^{*}M
+\end{align*} The vector bundle has a projection map $\pi: T^{k}T^{*}M \rightarrow M$.
+
+\item $T^{k}TM$: \quad is the \emph{\textbf{vector bundle of all contravariant k-tensors}} on $M$.
+\begin{align*}
+T^{k}TM&= \bigsqcup_{p\in M}T^{k}T_{p}M
+\end{align*} The vector bundle has a projection map $\pi: T^{k}TM \rightarrow M$.
+
+\item $T^{(k,l)}TM$: \quad is the \emph{\textbf{vector bundle of all mixed $(k,l)$-tensors}} on $M$.
+\begin{align*}
+T^{(k,l)}TM&= \bigsqcup_{p\in M}T^{(k,l)}T_{p}M
+\end{align*}
+
+\item $T^{(0,0)}TM$: \quad is equal to $M \times \bR^{k}$
+
+\item $T^{(0,1)}TM$: \quad is equal to \emph{the cotangent bundle} $T^{*}M$.
+
+\item $T^{(1,0)}TM$: \quad is equal to \emph{the tangent bundle} $TM$.
+
+\item $T^{(k,0)}TM$: \quad is equal to $T^{k}TM$.
+
+\item $T^{(0,k)}TM$: \quad is equal to $T^{k}T^{*}M$.
+
+\item $\cT^{k}:=\Gamma(T^{k}T^{*}M)$: \quad is called \emph{\textbf{the space of all covariant k-tensor fields}}.  It is the vector space of all sections on $T^{k}T^{*}M$.  This is an \emph{\textbf{infinite dimensional space}} for $k > 1$.
+
+\item $\Gamma(T^{k}TM)$: \quad is called \emph{\textbf{the space of all contravariant k-tensor fields}}.  It is the vector space of all sections on $T^{k}TM$.  This is an \emph{\textbf{infinite dimensional space}} for $k > 1$.
+
+\item $\omega^1 \xdotx{\otimes} \omega^k \in \Gamma(T^{k}T^{*}M)$: \quad is \emph{\textbf{a covariant $k$-tensor field on $M$}}. Each $\omega^i \in \Gamma(T^{*}M):= \frX^{*}(M)$ is a \emph{covector field} on $M$.
+
+\item $(\omega^1 \xdotx{\otimes} \omega^k)_p \in T^{k}T_p^{*}M$: \quad \emph{a covariant $k$-tensor} at $p$. It is equal to $(\omega_p^1 \xdotx{\otimes} \omega_p^k)$, which is \emph{\textbf{a multi-linear function}} as \emph{the tensor product of covectors at $p$}.
+
+\item $X_1 \xdotx{\otimes} X_k \in \Gamma(T^{k}TM)$: \quad is \emph{\textbf{a contravariant $k$-tensor field on $M$}}. Each $X_i \in \Gamma(TM) := \frX(M)$ is a \emph{vector field} on $M$.
+
+\item $(X_1 \xdotx{\otimes} X_k)(p) \in T^{k}T_pM$: \quad is \emph{a contravariant $k$-tensor} at $p$. It is equal to \emph{\textbf{the tensor product of tangent vectors}} at $p$, i.e.  $X_1(p) \xdotx{\otimes} X_k(p)$.
+
+\item $dx^{i_1} \xdotx{\otimes} dx^{i_k}  \in \Gamma(T^{k}T^{*}M)$: \quad is a covariant $k$-tensor field and is a \emph{\textbf{basis}} for $\Gamma(T^{k}T^{*}M)$
+
+\item $(dx^{i_1} \xdotx{\otimes} dx^{i_k})_p$: \quad $=(dx_p^{i_1} \xdotx{\otimes} dx_p^{i_k})$ is a basis for $T^{k}T_{p}^{*}M$
+
+\item $\partdiff{}{x^{i_1}} \xdotx{\otimes} \partdiff{}{x^{i_k}} \in \Gamma(T^{k}TM)$ : \quad is a contravariant $k$-tensor field and is a \emph{\textbf{basis}} for $\Gamma(T^{k}TM)$
+
+\item $\partdiff{}{x^{i_1}} \xdotx{\otimes} \partdiff{}{x^{i_k}}(p)$: \quad $=(\partdiff{}{x^{i_1}}\big|_{p} \xdotx{\otimes} \partdiff{}{x^{i_k}}\big|_{p})$ is a basis for $T^{k}T_{p}M$
+
+\item $A(X_1 \xdotx{,} X_k) \in \cC^{\infty}(M)$: \quad is a \emph{\textbf{smooth function}} $M \rightarrow \bR$ where $A \in \Gamma(T^{k}T^{*}M)$ is a covariant $k$-tensor field and $X_1 \xdotx{,} X_k \in \frX(M)$ are smooth vector fields on $M$. It is a generalization of $\omega(X)$.
+
+\item $A(X_1 \xdotx{,} X_k)(p) \in \bR$: \quad it is equal to $A_p(X_1|_{p} \xdotx{,} X_k|_{p})$. This is close to $\omega(X)(p) = \omega_p(X_p)$.
+
+\item $\cA$: \quad is \emph{\textbf{a multi-linear map}} over $\cC^{\infty}$ induced by \emph{the covariant $k$-tensor field} $A \in \Gamma(T^{k}T^{*}M)$. That is,  $\cA: \frX(M) \xdotx{\times} \frX(M) \rightarrow  \cC^{\infty}(M)$ where $\cA(X_1 \xdotx{,} X_k) = A(X_1 \xdotx{,} X_k)$ as above.
+
+\item $F^{*}$: \quad is \emph{\textbf{the pullback operator}} on covariant tensor fields. $F^{*}: \Gamma(T^{k}T^{*}N) \rightarrow \Gamma(T^{k}T^{*}M)$ where $F: M\rightarrow N$.
+
+\item $F^{*}A$: \quad is a \emph{covariant $k$-tensor field} on $M$ when $A$ is a covariant $k$-tensor field on $N$
+
+\item $F^{*}A(X_1 \xdotx{,} X_k)$: \quad is a smooth function on $M$ where $A$ is a covariant $k$-tensor field on $N$ and $(X_i)$ are vector fields on $M$.
+\end{itemize}
+
+\subsection{Symmetric Tensor Fields}
+\begin{itemize}
+\item $\Sigma^{k}(V^{*}) \subseteq T^{k}V^{*}$: \quad is the \emph{vector space of all \textbf{symmetric covariant $k$-tensors}} on $V$. A covariant $k$-tensor is \emph{\textbf{symmetric}} if its value will not change when rearranging the order of its input vectors. It has \emph{\textbf{dimension}} $n +k -1 \choose k$ where $n = \text{dim }V$.
+
+\item $\sigma \in S_k$: \quad is a \emph{\textbf{permutation}} of set $\set{1 \xdotx{,} k}$. $S_k$ is \emph{the permutation group} for $\set{1 \xdotx{,} k}$.  $\sigma(i) = j$. 
+
+\item $\sgn{\sigma} \in \set{-1, +1}$: \quad  is called the \emph{\textbf{sign}} of permutation $\sigma$. Note that every permutation of a finite set can be expressed as the product of \emph{transpositions}. $\sgn{\sigma}=(-1)$ if $\sigma$ is composed of odd number of transpositions; $\sgn{\sigma}=1$ if $\sigma$ is is composed of even number of transpositions. 
+
+\item ${^\sigma \alpha} \in T^{k}V^{*}$ : \quad is the covariant $k$-tensor \emph{\textbf{after permutation on the indices}} of its input ${^\sigma \alpha}(v_1 \xdotx{,} v_k) = \alpha(v_{\sigma(1)} \xdotx{,} v_{\sigma(k)})$.
+
+\item $\text{Sym }(\alpha) \in \Sigma^{k}(V^{*})$: \quad is the \emph{\textbf{symmetrization}} of a tensor $\alpha$. $\text{Sym }: T^{k}V^{*} \rightarrow \Sigma^{k}(V^{*})$ is a projection of a covariant $k$-tensor $\alpha$ to its symmetrized version. It is the \emph{\textbf{average}} of ${^\sigma \alpha}$ for all possible permutations in $S_k$. $\text{Sym }(\alpha) = \frac{1}{k!}\sum_{\sigma \in S_k}{^\sigma \alpha}$.
+
+\item $\alpha\beta \in \Sigma^{k+l}(V^{*})$: \quad is \emph{\textbf{the symmetric product}} between two covariant k-tensors $\alpha \in T^{k}V^{*}$ and $\beta \in T^{l}V^{*}$. $\alpha\beta = \text{Sym }(\alpha \otimes \beta)$.
+
+\item $\Sigma^{k}(T^{*}M)  \subseteq T^kT^{*}M$: \quad is \emph{the \textbf{subbundle} of \textbf{symmetric covariant $k$-tensor fields}} on $M$.
+\begin{align*}
+\Sigma^{k}(T^{*}M) &= \bigsqcup_{p\in M}\Sigma^{k}(T_{p}^{*}M)
+\end{align*}
+
+\item $\Gamma(\Sigma^{k}(T^{*}M)) \subseteq \Gamma(T^kT^{*}M)$: \quad is \emph{the vector space of all \textbf{symmetric covariant $k$-tensor fields} on $M$}.
+
+\item $dx^{i}dx^{j}  \in \Gamma(\Sigma^{2}(T^{*}M))$: \quad is the \emph{\textbf{symmetric product}}  between \emph{\textbf{two covector fields}} $dx^{i}, dx^{j} \in \Gamma(T^{*}M)$. $dx^{i}dx^{j}$ is a \emph{\textbf{symmetric covariant $2$-tensor field}} on $M$, i.e. $dx^i dx^j = dx^j dx^i$. This is also one of basis in $\Sigma^{2}(T^{*}M)$.
+
+\item $g \in \Gamma(\Sigma^2(T^{*}M))$: \quad is \emph{\textbf{the Riemannian metric}}. A Riemannian metric is a \emph{\textbf{symmetric covariant $2$-tensor}} that is also \emph{\textbf{positive definite}}.
+
+\item $(g_{i,j})$: \quad the \emph{matrix (\textbf{component} function)} of \emph{Riemannian metric}, i.e. $g = g_{i,j}dx^i\,dx^j$. This is a \emph{\textbf{positive definite (PSD) matrix}}.
+
+\item $(g^{i,j})$: \quad the \emph{\textbf{inverse}} of matrix $(g_{i,j})$.
+
+\item $\widehat{g}$: \quad a \emph{\textbf{bundle homemorphism}} $TM \rightarrow T^{*}M$. $\widehat{g}(X)$ is a covector field. And $\widehat{g}^{-1}(\omega)$ is a vector field. 
+
+\item $\widehat{g}(X) = g(X, \cdot) \in \frX^{*}(M)$: \quad is a \emph{\textbf{covector field called $X^{\flat}$}} so that $\widehat{g}(X)(Y) = g(X, Y)$. 
+
+\item $\widehat{g}^{-1}(\omega)  \in \frX(M)$: \quad is a \emph{\textbf{vector field called $\omega^{\sharp}$}}.
+
+\item $\flat$: \quad  is called the \emph{\textbf{flat operator}}. $\flat: \frX(M) \rightarrow \frX^{*}(M)$  is an \emph{\textbf{isomorphism}}, called \emph{\textbf{musical isomorphism}}. Its inverse is $\sharp$.
+
+\item $\sharp$: \quad is called the \emph{\textbf{sharp operator}}. $\sharp: \frX^{*}(M) \rightarrow \frX(M)$  is an \emph{\textbf{isomorphism}}, called \emph{\textbf{musical isomorphism}}. Its inverse is $\flat$.
+
+\item $X^{\flat} \in \frX^{*}(M)$: \quad is a \emph{\textbf{covector field}} obtained from vector field $X$ by \emph{\textbf{lowering an index}}. $X^{\flat}(\cdot) = \inn{X}{\cdot}_g$.
+
+\item $X^{\flat}(Y) \in  \cC^{\infty}(M)$: \quad  $= g(X, Y) = \inn{X}{Y}_g$.
+
+\item $\omega^{\sharp} \in \frX(M)$: \quad is a \emph{\textbf{vector field}} obtained from covector field $\omega$ by \emph{\textbf{raising an index}}. $\omega^{\sharp}(\cdot) = \inn{\omega}{\cdot}_{g^{-1}}$.
+
+\item $\omega^{\sharp}f \in \cC^{\infty}(M)$: \quad is a smooth function since $\omega^{\sharp}$ is a vector field which is a derivation operator.
+
+\item $\text{grad }f  \in \frX(M)$: \quad is the \emph{\textbf{gradient}} of $f$, i.e. $\text{grad }f = (df)^{\sharp}$. It is a \emph{\textbf{vector field obtained from $df$ by raising an index}}.
+
+\item $(df)^{\sharp}$: \quad $= \text{grad }f$ is a vector field as above.
+
+\item $F^{\flat} \in \Gamma(T^{(k-1, l+1)}TM)$: \quad for $(k,l)$-tensor field $F$, this is a $(k-1, l+1)$-tensor field.
+
+\item $F^{\sharp} \in \Gamma(T^{(k+1, l-1)}TM)$: \quad for $(k,l)$-tensor field $F$, this is a $(k+1, l-1)$-tensor field.
+\end{itemize}
+
+\subsection{Differential Forms} 
+\begin{itemize}
+\item $\Lambda^{k}(V^{*}) \subseteq T^{k}V^{*}$: \quad is the \emph{vector space of all \textbf{alternating covariant $k$-tensors}} on $V$. A covariant $k$-tensor is \emph{\textbf{alternating}} if its value will change sign whenever two indices of its input vectors interchange. It has \emph{\textbf{dimension}} $n \choose k$ where $n = \text{dim }V$.
+
+\item $\text{Alt }(\alpha) \in \Lambda^{k}(V^{*})$: \quad is the \emph{\textbf{alternation}} of a tensor $\alpha$. $\text{Alt }: T^{k}V^{*} \rightarrow \Lambda^{k}(V^{*})$ is a projection of a covariant $k$-tensor $\alpha$ to its alternating version. It is the \emph{\textbf{signed average}} of ${^\sigma \alpha}$ for all possible permutations in $S_k$. $\text{Alt }(\alpha) = \frac{1}{k!}\sum_{\sigma \in S_k}(\sgn{\sigma})({^\sigma \alpha})$. \emph{An alternating covariant $k$-tensor} is also called a \emph{\textbf{k-covector}}, \emph{\textbf{exterior form}}, or \emph{\textbf{multicovector}}.
+
+\item $\alpha \wedge \beta \in \Lambda^{k+l}(V^{*})$: \quad is \emph{\textbf{the wedge product}} or \emph{\textbf{exterior product}} between $\alpha \in \Lambda^{k}(V^{*})$ and $\beta \in \Lambda^{l}(V^{*})$. $\alpha \wedge \beta = \frac{(k+l)!}{k! l!}\text{Alt }(\alpha \otimes \beta)$.
+
+\item $I = (i_1 \xdotx{,} i_k)$: \quad is called a \emph{\textbf{multi-index}}. If $1 \le i_1 \xdotx{\le} i_k \le n$, then it is called an \emph{\textbf{increasing multi-index}}.
+
+\item $I_{\sigma} = (i_{\sigma(1)} \xdotx{,} i_{\sigma(k)})$: \quad is a \emph{permutation} of multi-index.
+
+\item $\epsilon^{I} \in \Lambda^{k}(V^{*})$: \quad is equal to $\epsilon^{i_1 \xdotx{,} i_k} = \epsilon^{i_1} \xdotx{\wedge} \epsilon^{i_k}$ where $(\epsilon^i)$ is dual basis in $V^{*}$. 
+
+\item $a_{I} \in \bR$: \quad $:= a_{i_1 \xdotx{,} i_k}$.
+
+\item $\epsilon^{I}(v_1 \xdotx{,} v_k) \in \bR$: \quad is the \emph{\textbf{determinant}} of $k\times k$ sub-matrix $\det(\epsilon^{i}(v_j))_{i\in I, j \in J}$
+
+\item $\delta_{J}^{I} \in \set{-1, 0, 1}$: \quad is equal to $\sgn{\sigma} = \pm 1$ if $J = I_{\sigma}$ for some $\sigma \in S_k$ and $I, J$ do not have a repeated index; otherwise is equal to $0$.
+
+\item $\sum_{I}' a_{I} \epsilon^I$: \quad represent $\sum_{\set{1 \le i_1 \xdotx{\le} i_k \le n}} a_{I} \epsilon^I$; that is, summation over \emph{\textbf{all increasing multi-index}}.
+
+\item $IJ$: \quad $= (i_1 \xdotx{,} i_k, j_1 \xdotx{,} j_k)$ is the \emph{\textbf{concatenation}} of two multi-index $I = (i_1 \xdotx{,} i_k)$ and $J = (j_1 \xdotx{,} j_k)$.
+
+\item $\epsilon^{IJ}  \in \Lambda^{k+l}(V^{*})$: \quad is a basis $(k+l)$-covector when $\epsilon^{k} \in \Lambda^{k}(V^{*})$, $\epsilon^{I} \in \Lambda^{l}(V^{*})$. We have formula $\epsilon^{IJ} = \epsilon^{I} \wedge \epsilon^{J}$.
+
+\item $\omega^1 \xdotx{\wedge} \omega^k (v_1 \xdotx{,} v_k) \in \bR$: \quad is the \emph{\textbf{determinant}} of $k\times k$ sub-matrix $\det(\omega^{i}(v_j))_{i\in I, j \in J}$ where $i\in I$ is the row number, $j \in J$ is the column number.
+
+\item $\Lambda(V^{*})$: \quad is called \emph{\textbf{the exterior algebra}} or \emph{\textbf{Grassman algebra}}. It is the \emph{\textbf{direct sum}} of  \emph{vector space of all \textbf{alternating covariant tensors}} of \emph{\textbf{rank}} $k \le n$ on $V$.
+\begin{align*}
+\Lambda(V^{*}) &= \oplus_{k=1}^{n}\Lambda^{k}(V^{*})
+\end{align*} The \emph{exterior product} $\wedge$ is an \emph{operation} in this algebra. This algebra is \emph{\textbf{graded}} and \emph{\textbf{anticommutative}}.
+
+\item $\iota_{v}$: \quad is called an \emph{\textbf{interior product/multiplication operatior}} where $v \in V$. The map $\iota_{v}: \Lambda^{k}(V^{*}) \rightarrow \Lambda^{k-1}(V^{*})$ as $\iota_v(\omega)(v_2 \xdotx{,} v_k) = \omega(v, v_2 \xdotx{,} v_k)$. It is also denoted as $v \iprod{\omega}$ where $\omega \in \Lambda^{k}(V^{*})$.
+
+\item $v \iprod{\omega}$: \quad $= \iota_v(\omega)$ see above. 
+
+\item $\Lambda^{k}(T^{*}M) \subseteq T^kT^{*}M$: \quad is \emph{the \textbf{subbundle} of \textbf{alternating covariant $k$-tensor fields}}.
+\begin{align*}
+\Lambda^{k}(T^{*}M) &= \bigsqcup_{p\in M}\Lambda^{k}(T_{p}^{*}M)
+\end{align*}
+
+\item $\Omega^k(M):= \Gamma(\Lambda^{k}(T^{*}M)) \subseteq \Gamma(T^kT^{*}M)$: \quad is \emph{the vector space of all \textbf{alternating covariant $k$-tensor fields} on $M$}.
+
+\item $\omega \in \Omega^k(M)$: \quad is called \emph{\textbf{a differential $k$-form}} or just \emph{\textbf{$k$-form}}. It is an \emph{alternating covariant $k$-tensor field}.
+
+\item $\Omega^1(M)$: \quad $= \frX^{*}(M)$ is the space of covector fields on $M$.
+
+\item $\Omega^0(M)$: \quad $= \cC^{\infty}(M)$ is the space of all smooth functions on $M$.
+
+\item $df \in \Omega^1(M) = \frX^{*}(M)$: \quad is a \emph{\textbf{differential $1$-form}}.
+
+\item $\Omega^{*}(M)$: \quad is \emph{\textbf{the exterior algebra}} for \emph{\textbf{all differential $k$-forms}} on $M$. It is \emph{\textbf{the direct sum}} of all $\Omega^k(M)$. The exterior product $\wedge$ is an operation of this algebra.
+
+\item $\omega \wedge \eta \in \Omega^{k+l}(M)$: \quad for $\omega \in \Omega^k(M)$ and $\eta \in \Omega^l(M)$.
+
+\item $dx^{i_1} \xdotx{\wedge} dx^{i_k}  \in \Omega^k(M)$: \quad is \emph{\textbf{a basis differential $k$-form}} when $i_1 \xdotx{\le} i_k$.
+
+\item $dx^{I}$: \quad $=dx^{i_1} \xdotx{\wedge} dx^{i_k}$
+
+\item $F^{*}\omega \in \Omega^{k}(M)$: \quad is the \emph{\textbf{pullback}} of $\omega \in \Omega^{k}(N)$ by $F: M\rightarrow N$.
+
+\item $F^{*}dy$: \quad $= d(y \circ F)$.
+
+\item $dx^{I}(\partdiff{}{x^{j_1}} \xdotx{,} \partdiff{}{x^{j_k}}) \in \set{-1, 0, 1}$: \quad $= \delta_{J}^{I}$.
+
+\item $\iota_{X}$: \quad is \emph{\textbf{the interior multiplication}}: $\Omega^{k}(M) \rightarrow \Omega^{k-1}(M)$ for any $X \in \frX{M}$. 
+
+\item $\iota_{X}(\omega) = X \iprod{\omega} \in  \Omega^{k-1}(M)$: \quad is \emph{a differential $(k-1)$-form}.
+
+\item $\iota_{X}(\omega)(p) = (X \iprod{\omega})_p \in \Lambda^k(T_p^{*}M)$: \quad is a \emph{$(k-1)$-covector}. $(X \iprod{\omega})_p = X_p \iprod{\omega_p}$.
+
+\item $d$: \quad is called \emph{\textbf{the exterior derivative operation}}. It is a \emph{\textbf{linear}} map $d: \Omega^{k}(M) \rightarrow \Omega^{k+1}(M) $ that satisfies:
+\begin{enumerate}
+\item $d (\omega \wedge \eta) = d\omega \wedge \eta + (-1)^{k}\omega \wedge d\eta$
+\item $d \circ d \equiv 0$
+\item $df(X) = Xf$ for $f \in \Omega^{0}(M) := \cC^{\infty}(M)$ and $X \in \frX(M)$.
+\end{enumerate}
+
+\item $d\omega \in \Omega^{k+1}(M)$: \quad is a $(k+1)$-form, where $\omega$ is a $k$-form
+
+\item $d(u\,dx)$: \quad $= du \wedge  dx$.
+
+\item $F^{*}d\omega \in \Omega^{k+1}(M)$: \quad is a $(k+1)$-form on $M$, where $\omega$ is a $k$-form on $N$. 
+
+\item $d\paren{F^{*}\omega}$: \quad We have the formula $F^{*}d\omega = d\paren{F^{*}\omega}$, which is called \emph{\textbf{the naturality of the exterior derivative}}.
+
+\item $F^{*}(\omega \wedge \eta)  \in \Omega^{k+l}(M)$: \quad $= F^{*}\omega \wedge F^{*}\eta$
+
+\item $F^{*}f \in \Omega^{0}(M) = \cC^{\infty}(M)$: \quad $=f \circ F$ where $f \in \cC^{\infty}(N) = \Omega^{0}(N)$
+
+\item $d\omega(X, Y) \in \cC^{\infty}(M)$: \quad where $\omega \in \frX^{*}(M) = \Omega^1(M)$, and $X, Y \in \frX(M)$. Note that  $d\omega \in \Omega^2(M)$ is a \emph{differential $2$-form}. For $\alpha = d\omega$, we know that $\alpha(X, Y): M \rightarrow \bR$ is a smooth function on $M$ such that $\alpha(X, Y)(p) = \alpha_p(X_p, Y_p) \in \bR$.
+
+\item $X(\omega(Y)) \in \cC^{\infty}(M)$: \quad Note that $\omega(Y) \in \cC^{\infty}(M)$ is a smooth function since $\omega$ is a differential $1$-form. Then $X(\omega(Y)) = Xf$ where $f = \omega(Y)$.
+
+\item $\omega([X, Y]) \in \cC^{\infty}(M)$: \quad Note that $[X, Y] \in \frX(M)$ is a vector field, so $\omega([X, Y]) := \omega(Z)$ where $Z = [X, Y]$. Thus it is a smooth function on $M$.
+\end{itemize}
+
+\subsection{Connections}
+\begin{itemize}
+\item $\nabla$: \quad the \emph{\textbf{connection} symbol}. It is the (smooth) map $\frX(M) \times \Gamma(E) \rightarrow \Gamma(E)$ that denotes \emph{\textbf{the covariant derivative} of a section on vector bundle $E$ along the (tangential) direction} specified by a vector field. A connection operation satisfies 3 rules: 1) linear over $\cC^{\infty}(M)$ in its first argument; 2) linear over $\bR$ in its second argument; 3) the product rule in its second argument.
+
+\item $\overline{\nabla}$: \quad the \emph{\textbf{Euclidean connection} symbol}. No rotation of axis during the directional derivative process.  
+
+\item $\nabla^{\top}$: \quad \emph{\textbf{the tangential connection}} on  embedded Riemannian submanifold as the tangential projection of the Euclidean connection.
+
+\item $\conn{X}{Y}\in \Gamma(E) \text{ or } \frX(M)$: \quad \emph{\textbf{the covariant derivative of $Y$ in the direction of $X$}}. Note that it is not a $(1, 2)$-tensor since it is not linear in $\cC^{\infty}(M)$ in its second argument.
+
+\item $\nabla^a_{X}{Y} - \nabla^b_{X}{Y} \in \Gamma(T^{(1,2)}TM)$: \quad it is a $(1, 2)$-tensor.
+
+\item $\conn{X}{f} \in \cC^{\infty}(M)$: \quad $= Xf$, i.e. the covariant derivative of  a smooth function $f \in \cC^{\infty}(M)$ along direction of $X$.
+
+\item $\conn{X}{Y}|_{p} \in T_pM$: \quad $= \conn{X_p}{Y_p}$. It is equal to the \emph{covariant derivatives} of \emph{vector field} $Y \in \frX(M)$ along the direction $X_p$ \emph{in $T_pM$}.
+
+\item $\conn{fX}{Y} \in \frX(M)$: \quad  the covariant derivative of $Y$ along direction of $fX$. $\conn{fX}{Y} =f\,\conn{X}{Y}$.
+
+\item $\conn{X}{(fY)} \in \frX(M)$: \quad $=X(fY) + f\,\conn{X}{Y}$.
+
+\item $\Gamma_{i,j}^{k}$: \quad \emph{\textbf{the coefficient for connection}} on $TM$. They are  $n^3$ smooth functions $U \rightarrow \bR$. The lower two indices $i,j$ corresponds to the basis of direction vector field and the basis of the target vector field, and the upper index $k$ corresponds to the basis for the resulting vector field. If the connection is a \emph{metric connection}, then these functions are called \emph{\textbf{the Christoffel Symbols}}.
+
+\item $\conn{\partial_i}{\partial_j} \in \frX(M)$: \quad $= \Gamma_{i,j}^{k}\partial_k$; It accounts for the rotation of basis vector $\partial_j$ along the other basis direction $\partial_i$
+
+
+\item $\conn{(\conn{X}{Y})}{Z} \in \frX(M)$: \quad the covariant direvatives of $Z$ along direction $W = \conn{X}{Y}$, which is also the directional derivatives of $Y$ along  $X$.
+
+\item $\conn{[X, Y]}{Z} \in \frX(M)$: \quad the covariant direvatives of $Z$ along direction $[X, Y]$. Note that if $X, Y$ orthorgonal, then $[X,Y] = 0$, it will becomes $0$.
+
+
+\item $\conn{X}{\conn{Y}{Z}} \in \frX(M)$: \quad the \emph{\textbf{covariant direvatives}} of $Z$ \textbf{first} along direction $Y$ and \textbf{then} taking \emph{covariant derivatives} along $X$. (i.e. the \emph{\textbf{second-order} derivatives} for two directions)
+
+
+\item $\conn{Z}{\inn{X}{Y}} \in \cC^{\infty}(M)$: \quad $= Z\inn{X}{Y}$ it is the covariant direvatives of the inner product $\inn{X}{Y} \in \cC^{\infty}(M)$ along direction $Z$
+
+\item $Z\inn{X}{Y}  \in \cC^{\infty}(M)$: \quad Note that $\inn{X}{Y} \in \cC^{\infty}(M)$. So this is just $Zg$ where $g = \inn{X}{Y}$.
+
+\item $\inn{\conn{Z}{X}}{Y} \in \cC^{\infty}(M)$: \quad This is the inner product $\inn{W}{Y}$ where $W = \conn{Z}{X}$. For \emph{\textbf{metric connection}}, 
+$Z\inn{X}{Y} = \inn{\conn{Z}{X}}{Y} + \inn{X}{\conn{Z}{Y}} $
+
+\item $\nabla F \in \Gamma(T^{(k, l+1)}TM)$: \quad is called \emph{\textbf{the total covariant derivative of $F$}}. It is a $(k, l+1)$-tensor field for a $(k,l)$-tensor field $F$. $\nabla F(\xdotx{\,}, Y) =( \nabla_{Y}F)(\xdotx{\,})$
+
+\item $(\nabla F)^{\flat}  \in \Gamma(T^{(k-1, l+2)}TM)$: \quad for a $(k,l)$-tensor field $F$, $\nabla F$ is a $(k,l+1)$-tensor, then this is a $(k-1, l+2)$-tensor field;
+
+\item $(\nabla F)^{\sharp}  \in \Gamma(T^{(k+1, l)}TM)$: \quad for a $(k,l)$-tensor field $F$, $\nabla F$ is a $(k,l+1)$-tensor,  then this is a $(k+1, l)$-tensor field;
+
+\item $\nabla Y(X) \in \frX(M)$: \quad $=\conn{X}{Y}$ where $Y \in \Gamma(T^{(1,0)}TM)$. $\nabla Y \in  \Gamma(T^{(1,1)}TM)$
+
+\item $\nabla \omega(X) \in \frX^{*}(M)$: \quad $= \conn{X}{\omega}$ where $\omega \in \Gamma(T^{(0,1)}TM)$, so $\nabla \omega \in \Gamma(T^{(0,2)}TM)$
+
+\item $\conn{X}{\omega} \in \frX^{*}(M)$: \quad Here $\nabla$ is \emph{\textbf{the induced connection}} in $T^{*}M$ from $\nabla$ in $TM$. 
+
+\item $\nabla \omega(Y, X) \in \cC^{\infty}(M)$: \quad $= (\conn{X}{\omega})(Y)$ where $\omega \in \Gamma(T^{(0,1)}TM)$, so $\nabla \omega \in \Gamma(T^{(0,2)}TM)$
+
+
+\item $(\conn{X}{\omega})(Y) \in \cC^{\infty}(M)$: \quad $= \inn{\conn{X}{\omega}}{Y} \neq \conn{X}{(\omega(Y))}$. This is just a covector field $\eta = \conn{X}{\omega}$ act on a vector field $Y$. In fact $(\conn{X}{\omega})(Y) = \conn{X}{(\omega(Y))} - \omega(\conn{X}{Y})$.
+
+\item $\conn{X}{(\omega(Y))} \in \cC^{\infty}(M)$: \quad $= \conn{X}{\inn{\omega}{Y}} $. It is the covariant derivatives of function $\omega(Y) \in \cC^{\infty}(M)$ along $X$. Also it is equal to $(\conn{X}{\omega})(Y) + \omega(\conn{X}{Y})$
+
+
+\item $\nabla^2 F \in \Gamma(T^{(k, l+2)}TM)$:  \quad is called \emph{\textbf{the second covariant derivative of $F$}}. It is a $(k, l+2)$-tensor field for a $(k,l)$-tensor field $F$.  $\nabla F(\xdotx{\,}, Y, X) =( \nabla^2_{X, Y}F)(\xdotx{\,})$. Note that we have $\nabla^2_{X, Y}F = \conn{X}{\conn{Y}{F}} - \conn{(\conn{X}{Y})}{F}$
+
+
+\item $\text{tr}(F) \in \Gamma(T^{(k-1, l-1)}TM)$: \quad is called \emph{the \textbf{contraction} or \textbf{trace}} of $F$. For $(k, l)$-tensor $F$, this is equal to $(k-1, l-1)$-tensor  . Note that $\text{tr}(v \otimes \omega) = \omega(v)$ is the trace of the matrix representation of $v\otimes \omega = [\omega_i\,v^j]$
+
+\item  $V(t) \in \frX(\gamma)$: \quad is called \emph{\textbf{the vector field $V$ along curve $\gamma$}}. If $\widetilde{V}$ is the extension of $V$ in $M$ then $V(t) = \widetilde{V}_{\gamma(t)}$.
+
+\item $\frX(\gamma)$: \quad is the vector space of all vector field $V(t)$ along curve $\gamma$.
+
+\item $\gamma'(t) \in  \frX(\gamma)$: \quad is \emph{\textbf{the velocity vector field}} of curve $\gamma$, which is a vector field along the curve $\gamma$;
+
+\item $\conn{\gamma'(t)}{V} \in \frX(M)$: \quad is the covariant derivative of $V$ along the velocity vector field $\gamma'$. $V$ restricted on image of $\gamma$ will be the vector field along curve. 
+
+\item $D_t$: \quad is the \emph{\textbf{covariant derivative along the curve $\gamma$}}. It is a map $\frX(\gamma) \rightarrow \frX(\gamma)$, and $D_tV(t) = \conn{\gamma'(t)}{ \widetilde{V}}$
+
+\item $\conn{\gamma'(t)}{\gamma'(t)} \in \frX(M)$: \quad is called \emph{\textbf{the tangential acceleration}},  when viewed as a vector field in $M$. It is the directional derivative of velocity vector field $\gamma'(t)$ along the direction of velocity vector field.
+
+\item $D_tV(t) \in \frX(\gamma)$: \quad is the covariant derivative of vector field $V(t)$ along the curve $\gamma$. For \emph{\textbf{parallel transport}}, $D_tV(t) \equiv 0$ for all $t$.
+
+\item $D_t\gamma'(t) \in \frX(\gamma):$ \quad is \emph{\textbf{the tangential acceleration}}, when viewed as the vector field along $\gamma$.
+
+\item $\gamma_{v}$: \quad is \emph{\textbf{the maximal geodesic curve}} $\gamma$ with initial point $\gamma(0) =p$ and $\gamma'(0) = v$. Note that for geodesic curve $D_t\gamma'(t) \equiv 0$.
+
+\item $P_{t_0, t_1}^{\gamma}$: \quad is the map of \emph{\textbf{parallel transport}} along $\gamma$ from $t=t_0$ to $t =t_1$. $P_{t_0, t_1}^{\gamma}: \frX(\gamma) \rightarrow \frX(\gamma)$.
+
+\item $P_{t_0, t_1}^{\gamma}V(t) \in \frX(M)$: \quad is the resulting vector field after \emph{parallel transport} of $V(t)$ along $\gamma$. $P_{t_0, t_1}^{\gamma}V(t) = (D_tV(t_0))|_{t_1}$. 
+
+\item $\exp$: \quad is \emph{\textbf{the exponential map}}$: \cE \subseteq TM \rightarrow M$ that maps from a tangent vector $v$ to a point in $M$ that reached by the geodesic passing $0$ with initial velocity given. $\exp(v\,t) = \gamma_v(t)$
+
+\item $\exp_p:$ \quad is \emph{\textbf{the exponential map restricted at $p$}} $: \cE_p \subseteq T_pM \rightarrow M$.
+
+\item $d(\exp_p)_0$: \quad is \emph{the \textbf{differential} of the exponential map restricted at $p$ evaluated at $0$}. This is \emph{an \textbf{identity map}} $T_{0}(T_{p}M) \simeq T_pM \rightarrow T_pM$.
+\end{itemize}
+
+\subsection{Curvatures}
+\begin{itemize}
+\item $R \in \Gamma(T^{(1,3)}TM)$: \quad a $(1,3)$-tensor called \emph{\textbf{Riemann curvature endomorphism}}; $R:  \frX(M) \times  \frX(M) \times  \frX(M) \rightarrow  \frX(M)$.
+
+\item $R(X, Y)Z \in \frX(M)$: \quad is a vector field that is $\conn{X}{\conn{Y}{Z}}- \conn{Y}{\conn{X}{Z}} - \conn{[X, Y]}{Z}$. Compare it with \emph{the second order covariant derivative} $\nabla^2_{X, Y}Z = \conn{X}{\conn{Y}{Z}} - \conn{(\conn{X}{Y})}{Z}$
+
+\item $Rm  \in  \Gamma(T^{(0,4)}TM)$: \quad is called the \emph{\textbf{Riemann curvature tensor}}.  It is a $(0,4)$-tensor. $Rm = R^{\flat}$ is obtained from \emph{the Riemann curvature endomorphism} by \emph{lowering an index}.
+
+\item $Rm(X, Y, Z, W) \in \cC^{\infty}(M)$: \quad It is the inner product of the $(1,3)$-tensor $R(X,Y)Z$ with $W$. $Rm(X, Y, Z, W)= \inn{R(X, Y)Z}{W}$
+\end{itemize}
+
+\newpage
+\section{Definitions and Theorems}
+\subsection{Tangent Space and Differential at $p$}
+\begin{itemize}
+\item Given $(U, \varphi)$, $p \in U$, the basis vector in  $T_pM$ is defined via partial derivatives in $\bR^{n}$ via differential of parameterization map $d\varphi^{-1}$ at $\varphi(p)$
+\begin{align}
+\partdiff{}{x^i}\Bigr|_{p} &\equiv d(\varphi^{-1})_{\varphi(p)}\paren{ \partdiff{}{x^i}\Bigr|_{\varphi(p)}} \label{eqn: basis_tangent_at_p_def}
+\end{align}
+
+\item The basis vector at $T_pM$ acts on a smooth function $f$ is the partial derivatives of $f$ at $p$
+\begin{align*}
+\partdiff{}{x^i}\Bigr|_{p} f &= \partdiff{f}{x^i}\Bigr|_{p} =  \partdiff{f}{x^i}(p)
+\end{align*}
+
+\item For $F: M \rightarrow N$, where $M, N$ are smooth manifolds, $v \in T_pM$, $g \in \cC^{\infty}(N)$, the differential of $F$ at $p$ as a linear map is defined as 
+\begin{align}
+dF_p(v)g &= v(g \circ F).  \label{eqn: differential_at_p_def}
+\end{align} So $dF_p(v)g|_q = v\paren{g(F(p))}|_{p}$ where $q = F(p)$. $g \in \cC^{\infty}(N)$ and $g \circ F \in \cC^{\infty}(M)$.
+
+\begin{remark}
+\[
+  \begin{tikzcd}
+     & dF_p(v) \arrow{r}{|_{F(p)}}    &dF_p(v)g  \arrow[d, leftrightarrow,  "="] \\
+     & v \arrow[swap]{u}{dF_p}  \arrow{r}{|_{p}} &  v( g \circ F) \\
+     g \arrow[swap]{r}{\circ F} \arrow{uur}{\text{acted on by}}& g\circ F \arrow[swap]{u}{\text{acted on by}} & 
+  \end{tikzcd}
+\] 
+\end{remark}
+
+\item For $\gamma: J \rightarrow M$, $f \in \cC^{\infty}(M)$, 
+\begin{align}
+\gamma'(t) &= d\gamma\paren{\frac{d}{dt}\Bigr|_{t}} \label{eqn: curve_velocity_def} \\
+\Rightarrow \gamma'(t)f &\equiv d\gamma\paren{\frac{d}{dt}\Bigr|_{t}}f \nonumber \\
+&= \frac{d}{dt}\Bigr|_{t}\paren{f \circ \gamma} \label{eqn: curve_velocity_on_f}
+\end{align}
+
+\item The \emph{\textbf{chain rule}} of differentials
+\begin{align*}
+d\paren{G \circ F}_{p} &= dG_{F(p)} \circ dF_{p}
+\end{align*} Think of two systems that connected sequentially. $dG$ takes output of $dF_p$ as input. It also computes the evaluation point $F(p)$.
+
+\item The \emph{\textbf{product rule}} (\emph{Leibniz's Law}) of derivations at $p$: $v \in T_pM$, $f, g \in \cC^{\infty}(M)$
+\begin{align*}
+v(fg) &= g(p) v(f) + f(p)\, v(g)
+\end{align*}
+\end{itemize}
+\subsection{Cotangent Space}
+\begin{itemize}
+\item Given $(\partial / \partial x^i|_{p})$ as basis in $T_pM$, $(dx_{p}^i)$ is its \emph{\textbf{dual basis}}
+\begin{align}
+dx_{p}^{i}\paren{\partdiff{}{x^{j}}\Bigr|_{p}} &= \delta_{j}^{i} \label{eqn: dual_basis_def}
+\end{align}
+
+\item For \emph{\textbf{real-valued}} smooth function $f: M \rightarrow \bR$, $df_p: T_pM \rightarrow \bR$, $v\in T_pM$
+\begin{align}
+df_{p}(v) &:= vf   \label{eqn: differential_1_form_at_p_tang_vec}
+\end{align} In other word, \emph{$df_p$ is a \textbf{linear functional}} on $T_pM$, i.e. $df_p \in T_p^{*}M$.
+
+\item Let $df_p$ acts on $\gamma'(0) \in T_{\gamma(0)}M$ where $p = \gamma(0)$
+\begin{align*}
+df_{p}(\gamma'(0)) &:= \gamma'(0)f = \frac{d}{dt}\Bigr|_{t=0}\paren{f \circ \gamma}
+\end{align*}
+
+\item For $F: M \rightarrow N$, where $M, N$ are smooth manifolds, the \emph{\textbf{pullback}} of covector $\omega$ on $T_{F(p)}N$ by $F$ is a covector on $T_{p}M$. 
+\begin{align}
+(F^{*}\omega)_{p}(v) &= \omega(dF_p(v)) \label{eqn: pullback_covector_def}
+\end{align}
+\begin{remark}
+pullback at point $p$
+\[
+  \begin{tikzcd}
+                     &  &(F^{*}\omega)_{p}(v) \arrow[d, leftrightarrow, "="] \\
+     v  \arrow{r}{dF_p} \arrow[rru, bend left, "(F^{*}\omega)_{p}"] & dF_p(v)  \arrow{r}{\omega} &  \omega(dF_p(v))
+  \end{tikzcd}
+\] 
+\end{remark}
+\end{itemize}
+
+\subsection{Tangent Bundle and Vector Field}
+\begin{itemize}
+\item Every smooth vector field in $\frX(M)$ has a (local) coordinate representation based on the coordinate chart $(U, (x^i))$ and local coordinate frames
+\begin{align*}
+X &= X^i\, \partdiff{}{x^i} = \nabla \cdot \mb{X} \\
+\text{where }&X^i = X(x^i) 
+\end{align*}We have product rule
+\begin{align*}
+X(fg) &= g\,X(f) + f\,X(g)
+\end{align*}
+
+
+\item $X_p$ can be computed via plug-in coordinate $\varphi(p)= \mb{x}$ into the component function
+\begin{align*}
+X_p &= X^i(p)\, \partdiff{}{x^i}\Bigr|_{p} 
+\end{align*} 
+
+\item If $X \in \frX(M)$ and $Y \in \frX(N)$ are $F$-related, for $F: M\rightarrow N$, then 
+\begin{align}
+Y_{F(p)} &= dF_{p}(X_p) \label{eqn: F_related}
+\end{align} 
+
+ In particular, if $F$ is a diffeomorphism, then $F_{*}: TM \rightarrow TN$ is the \emph{\textbf{pushforward operator}} so that $F_{*}X$ is $F$-related to $X$. 
+\begin{align*}
+(F_{*}X)_{q} &= dF_{p}(X_p) = dF_{F^{-1}(q)}\paren{X_{F^{-1}(q)}}
+\end{align*}  where $q = F(p)$, i.e. $p = F^{-1}(q)$.
+\begin{remark} 
+The pushforward operation for vector field
+\[
+  \begin{tikzcd}
+                     &                                                                                     &  & (F_{*}X)_{q} \arrow[d, leftrightarrow, "="] \\
+     q \arrow{r}{F^{-1}} \arrow[rrru, bend left, "(F_{*}X)|_{\cdot}"] & p  \arrow{r}{dF|_{\cdot}} \arrow[swap]{d}{X|_{\cdot}}&  dF_p \arrow{r}{}& dF_p(X_p)  \\
+     &  X_p  \arrow[ru, swap, bend right, "\text{acted on}"]  & &
+  \end{tikzcd}
+\] 
+\end{remark}
+
+\item For any smooth function $f \in \cC^{\infty}(N)$ on $N$, $Y$ is $F$-related to $X$, then 
+\begin{align}
+X(f \circ F) &= (Yf) \circ F \label{eqn: F_related_act_on_f}
+\end{align}
+
+\end{itemize}
+
+\subsection{Cotangent Bundle and Covector Field}
+\begin{itemize}
+\item For any $\omega \in \frX^{*}(M)$, it can be represented via linear combination of its coframes $(dx^i)$
+ \begin{align*}
+\omega &= \omega_i dx^i \\
+\text{where }& \omega_i = \omega\paren{\partdiff{}{x^i}}
+\end{align*}
+Moreover, we have duality 
+\begin{align*}
+dx^{i}\paren{\partdiff{}{x^j}} &= \delta_{j}^{i}.
+\end{align*}
+
+\item For $F: M\rightarrow N$, the pullback of $\omega$ by $F$ is a linear map $F^{*}: T^{*}N \rightarrow T^{*}M$ so that 
+\begin{align*}
+(F^{*}\omega)_p(X_p) &= \omega_p\paren{dF_p(X_p)}
+\end{align*}
+\begin{remark}
+The pullback operation for covector field
+\[
+  \begin{tikzcd}
+                     &  &(F^{*}\omega)_{p}(\cdot)  \arrow[d, leftrightarrow, "="]\\
+         p  \arrow[swap]{dr}{dF|_{\cdot}} \arrow[urr, bend left, "(F_{*}\omega)|_{\cdot}"] \arrow[r, "\omega|_{\cdot}"]            &  \omega_p \arrow{r}{}  &  \omega(dF_p(\cdot))\\
+      & dF_p  \arrow[swap]{u}{\text{acted on}}&  
+  \end{tikzcd}
+\] 
+\end{remark}
+\end{itemize}
+\subsection{Tensor}
+\begin{itemize}
+\item Let $A \in \Gamma(T^k T^{*}M)$ be a \emph{\textbf{covariant $k$-tensor field}} on $M$. $A$ has the following coordinate representation:
+\begin{align}
+A &=a_{i_1 \xdotx{,} i_k}\, dx^{i_1} \xdotx{\otimes} dx^{i_k}  \label{eqn: covariant_k_tensor_coordinate}\\
+\text{where }& a_{i_1 \xdotx{,} i_k} = A\paren{\partdiff{}{x^{i_1}} \xdotx{,} \partdiff{}{x^{i_k}}} \label{eqn: covariant_k_tensor_coordinate_component}
+\end{align}
+
+\item Let $T \in \Gamma(T^k TM)$  be a \emph{\textbf{contravariant $k$-tensor field}} on $M$. $T$ has the following coordinate representation:
+\begin{align}
+T &=T^{i_1 \xdotx{,} i_k}\, \partdiff{}{x^{i_1}} \xdotx{\otimes} \partdiff{}{x^{i_k}}  \label{eqn: contravariant_k_tensor_coordinate}\\
+\text{where }& T^{i_1 \xdotx{,} i_k} = T\paren{x^{i_1} \xdotx{,} x^{i_k}} \label{eqn: contravariant_k_tensor_coordinate_component}
+\end{align}
+\end{itemize}
+
+\subsection{Differential Form}
+\begin{itemize}
+\item Let $\omega \in \Omega^{k}(M)$ be \emph{a \textbf{differential $k$-form}} on $M$. $\omega$ has the following coordinate reprsentation:
+\begin{align}
+\omega &=\omega_{i_1 \xdotx{,} i_k}\, dx^{i_1} \xdotx{\wedge} dx^{i_k}  \label{eqn: differential_k_form_coordinate}\\
+\text{where }& \omega_{i_1 \xdotx{,} i_k} = \omega\paren{\partdiff{}{x^{i_1}} \xdotx{,} \partdiff{}{x^{i_k}}} \label{eqn: differential_k_form_coordinate_component} \\
+&1 \le i_1 \xdotx{\le} i_k \le n \nonumber
+\end{align} Note that $\omega_{i_1 \xdotx{,} i_k}$ is a determinant of $k \times k$ matrix whose row indexed by $(i_1 \xdotx{,} i_k)$. 
+
+\item Compute \emph{\textbf{the pullback of a $n$-form by $F: M \rightarrow N$}}. If $(x^i)$ and $(y^j)$ are smooth coordinates locally, and $u$ is a continuous real-valued function on $V$, then the following holds locally.
+\begin{align}
+F^{*}\paren{u\,dy^{1} \xdotx{\wedge} dy^{n}} &= (u \circ F)\,(\det(DF))\,dx^{1} \xdotx{\wedge} dx^{n}  \label{eqn: differential_form_pull_back_coordinate_1}
+\end{align}
+where $DF$ represents \textbf{the Jacobian matrix of $F$} in these coordinates.
+
+Note that \emph{the \textbf{pullback operator} is equivalent to ``\textbf{plug-in of $F$ whenever you see coordinate in codomain $(y^j)$}"}. The \emph{\textbf{determinant} of} \emph{\textbf{Jacobian}} $\det(DF)$ is the result of converting differential of composite $y^i \circ F$ into the coframes $(dx^i)$ in domain $M$.
+\begin{align*}
+F^{*}\paren{u\,dy^{1} \xdotx{\wedge} dy^{n}} &= (u \circ F)\, d\paren{y^1 \circ F} \xdotx{\wedge} d\paren{y^n \circ F}
+\end{align*}
+
+
+
+\item The following \emph{\textbf{invariant formula}} holds for all $\omega \in \Omega^{1}(M) = \frX^{*}(M)$ and $X, Y \in \frX(M)$, 
+\begin{align}
+d\omega\paren{X, Y} &= X\paren{\omega\paren{Y}} - Y\paren{\omega\paren{X}} - \omega\paren{[X, Y]} \label{eqn: ext_derivative_invariant_form}
+\end{align} Note that both LHS and RHS are \emph{\textbf{smooth functions}} and they can be written in terms of its component functions:
+\begin{align*}
+\omega\paren{[X, Y]} &= \paren{X^j\partdiff{Y^i}{x^j} - Y^j\partdiff{X^i}{x^j}}\omega_i && \text{ \emph{\textbf{contains only $w_i$}} also $1$-order derivative of $X_i, Y_i$}\\
+X\paren{\omega\paren{Y}} &= X^j\, \partdiff{\omega_i}{x^j}\,Y^i + X^{j}\,\partdiff{Y^i}{x^j}\,\omega_i && \text{ contains mixed $0,1$-order derivatives of $w_i, Y_i$}\\
+Y\paren{\omega\paren{X}} &= Y^j\, \partdiff{\omega_i}{x^j}\,X^i + Y^{j}\,\partdiff{X^i}{x^j}\,\omega_i && \text{ contains mixed $0,1$-order derivatives of $w_i, X_i$}\\
+d\omega\paren{X, Y} &= \paren{\partdiff{\omega_j}{x^i} - \partdiff{\omega_i}{x^j}}X^{i}Y^{j} && \text{ \textbf{\emph{contains only $1$-order derivatives of $w_i$}}}
+\end{align*}
+\end{itemize}
+
+\subsection{Connections}
+\begin{itemize}
+\item For $\nabla$ a connection in $TM$, $\nabla$ is a \emph{\textbf{metric connection}} when 
+\begin{align}
+Z\inn{X}{Y} = \conn{Z}{\inn{X}{Y}} &= \inn{\conn{Z}{X}}{Y} + \inn{X}{\conn{Z}{Y}}  \label{eqn: metric_connection}
+\end{align}
+
+\item For $\nabla$ a connection in $TM$, $\nabla$ is a \emph{\textbf{symmetric connection}} when 
+\begin{align}
+\conn{X}{Y} - \conn{Y}{X} &= [X, Y] \label{eqn: symmetric_connection}
+\end{align}
+
+\item The \emph{\textbf{second covariant derivatives}}  is computed as 
+\begin{align}
+\nabla^2_{X,Y}Z &= \conn{X}{\conn{Y}{Z}} - \conn{(\conn{X}{Y})}{Z}   \label{eqn: 2nd_covariant_derivative}
+\end{align}
+
+\item The \emph{\textbf{Riemann curvature endomorphism}} is defined as
+\begin{align}
+R(X,Y)Z &=  \conn{X}{\conn{Y}{Z}} - \conn{Y}{\conn{X}{Z}} - \conn{[X,Y]}{Z}  \label{eqn: riemann_curv_endo}
+\end{align}
+\end{itemize}
+
+\newpage
+\section{Computation}
+\subsection{Tangent Space and Differential at $p$}
+\begin{itemize}
+\item The \emph{\textbf{coordinate representation of tangent vector}} and the value after it acts on $f$:
+\begin{align}
+v &= v^i \partdiff{}{x^i}\Bigr|_{p}, \quad (v^i) \in \bR^{n}  \label{eqn: tangent_vector_coordinate}\\
+\text{where }v^i &= v\paren{x^i} \nonumber\\
+\Rightarrow vf &= v^i \partdiff{}{x^i}\Bigr|_{p}f = v^i \partdiff{f}{x^i}(p) \nonumber
+\end{align}
+
+
+\item For $F: M \rightarrow N$, where $M, N$ are smooth manifolds and $(U, (x^i))$ and $(V, (y^j))$ are coordinate charts for $M$ and $N$. The \emph{\textbf{coordinate representation}} of $dF_p$ is
+\begin{align}
+dF_p\paren{\partdiff{}{x^i}\Bigr|_{p}} &= \partdiff{F^{j}}{x^i}(p)\partdiff{}{y^j}\Bigr|_{F(p)}  \label{eqn: differential_at_p_jacobian_coordinate}
+\end{align} where $DF_p = [\partdiff{F^{j}}{x^i}(p)]_{i,j}$ is the \emph{\textbf{Jacobian matrix}} of $dF_p$ relative to the coordinates in $M$ and $N$.
+
+Then $dF_p(v)$ acts on $g$ can be represented as 
+\begin{align*}
+dF_p\paren{\partdiff{}{x^i}\Bigr|_{p}}g &= \partdiff{F^{j}}{x^i}(p)\partdiff{g}{y^j}(F(p))
+\end{align*}
+
+\item The \emph{\textbf{change of coordinate}} formula between $(\widetilde{x}^{j})$ and $(x^i)$ on $M$
+\begin{align}
+\partdiff{}{x^i}\Bigr|_{p} &= \partdiff{\widetilde{x}^{j}}{x^i}(p)\partdiff{}{\widetilde{x}^j}\Bigr|_{p}. \label{eqn: tangent_vector_change_coordinate}
+\end{align} Then its component function
+\begin{align}
+v &= v^i \partdiff{}{x^i}\Bigr|_{p} = \widetilde{v}^i\partdiff{}{\widetilde{x}^j}\Bigr|_{p} \nonumber\\
+\Rightarrow \widetilde{v}^j = v\paren{\widetilde{x}^j} &= \paren{ v^i \partdiff{}{x^i}\Bigr|_{p}}(\widetilde{x}^j) =\partdiff{\widetilde{x}^j}{x^i}(p)\; v^i  \label{eqn: tangent_vector_change_coordinate_component}
+\end{align}
+
+\item The \emph{\textbf{product rule}} (\emph{Leibniz's Law}) of derivations at $p$: $v \in T_pM$, $f, g \in \cC^{\infty}(M)$
+\begin{align*}
+v(fg) &= g(p) v(f) + f(p)\, v(g)
+\end{align*}
+Thus for coordinate map $(x^i)$, and $v = v^i \partdiff{}{x^i}|_{p}$, $\mb{x} = (x^1, \ldots, x^{n})$,
+\begin{align*}
+v^i \partdiff{}{x^i}\Bigr|_{p}(f\,g) &= g(\mb{x}) v^i \partdiff{f}{x^i}(\mb{x}) + f(\mb{x})v^i \partdiff{g}{x^i}(\mb{x})
+\end{align*}
+\end{itemize}
+
+\subsection{Cotangent Space}
+\begin{itemize}
+\item For any $\omega \in T_p^{*}M$, \emph{\textbf{the coordinate representation}} of $\omega$
+\begin{align}
+\omega &= \omega_i \, dx_p^{i} \label{eqn: covector_coordinate}\\
+\text{where }& \omega_i = \omega\paren{\partdiff{}{x^{i}}\Bigr|_{p}} \in \bR \label{eqn: covector_coordinate_component}
+\end{align}
+
+\item The \emph{computation} of $\omega(v)$ via \emph{its coordinate representation} is the inner product between their component functions:
+\begin{align}
+\omega(v) &= \paren{\omega_i \, dx_p^{i}}\paren{v^i \partdiff{}{x^i}\Bigr|_{p}} \nonumber\\
+&= \omega_i\,v^i  \label{eqn: covector_act_on_vector_coordinate}\\
+&:= \inn{\omega}{v}  \nonumber
+\end{align}
+
+\item \emph{\textbf{A differential $1$-form at $p$}}, $df_p \in T_p^{*}M$, under dual basis $(dx_p^i)$ is
+\begin{align}
+df_{p} &= \partdiff{f}{x^i}(p)\, dx_p^i  \label{eqn: differential_1_form_at_p}
+\end{align}
+
+\item The \emph{\textbf{change of coordinate}} formula for covector between $(\widetilde{x}^{j})$ and $(x^i)$ on $M$
+\begin{align}
+\omega &= \widetilde{\omega}_j\,d\widetilde{x}_p^{j} = \omega_i\,dx_p^i \nonumber\\
+\text{where } \omega_i&= \omega\paren{\partdiff{}{x^i}\Bigr|_{p}}\nonumber\\
+&= \omega\paren{\partdiff{\widetilde{x}^{j}}{x^i}(p)\partdiff{}{\widetilde{x}^j}\Bigr|_{p}} \nonumber\\
+\Rightarrow \omega_i &= \partdiff{\widetilde{x}^j}{x^i}(p)\,\widetilde{\omega}_j \label{eqn: covector_change_of_coordinate}
+\end{align} Note that the covariant trends i.e. from $(\widetilde{x}^{j})$ to $(x^i)$ for both the basis and function transformation. This is the opposite as compared to \eqref{eqn: tangent_vector_change_coordinate}.
+
+\item The \emph{\textbf{pullback}} of $\omega$ by $F$ under coordinate map $(x^i)$ for $M$ and $(y^j)$ for $N$ is 
+\begin{align}
+F^{*}\paren{\omega_j\, dy_{F(p)}^{j}}&= (\omega_j \circ F)_{p}\;d\paren{y^{j} \circ F}|_{p} \label{eqn: pullback_coordinate_1}\\
+&= (\omega_j \circ F)_{p}\;dF_{p}^{j} \label{eqn: pullback_coordinate_2}\\
+&=(\omega_j \circ F)_{p}\;  \partdiff{F^{j}}{x^{i}}(p) \,dx_{p}^{i}\label{eqn: pullback_coordinate_3}
+\end{align}
+
+\item $df_p$ acts on $v \in T_{p}M$ under standard basis vector is
+\begin{align}
+df_p\paren{v^i \partdiff{}{x^i}\Bigr|_{p}} &= v^i \partdiff{f}{x^i}(p).
+\end{align}
+\end{itemize}
+
+\subsection{Tangent Bundle and Vector Field}
+\begin{itemize}
+\item  For given smooth chart $(U, (x^i))$ in $M$ and $(V, (y^j))$ in $N$, for $p \in U \cap F^{-1}(V)$, when $Y$ are $F$-related to $X$
+\begin{align}
+X &= X^i\, \partdiff{}{x^i} \nonumber\\
+Y_{F(p)} &= dF_p\paren{X^i(p)\, \partdiff{}{x^i}\Bigr|_{p} } \nonumber\\
+&= X^i(p)\, dF_p\paren{\partdiff{}{x^i}\Bigr|_{p} }\nonumber\\
+&= X^i(p)\, \partdiff{F^{j}}{x^i}(p)\partdiff{}{y^j}\Bigr|_{F(p)} \label{eqn: F_related_coordinate}
+\end{align} That  is, its component function 
+\begin{align}
+Y^j \circ F&= \partdiff{F^{j}}{x^i}X^i  \label{eqn: F_related_y_component}
+\end{align} 
+
+\item $Xf$ in a smooth function while $fX$ is a vector field:
+\begin{align*}
+X &= X^i\, \partdiff{}{x^i} \\
+\Rightarrow Xf &= X^i\, \partdiff{f}{x^i}\\
+\text{and } fX &= fX^i\,\partdiff{}{x^i}
+\end{align*}
+
+\item For any smooth function $f \in \cC^{\infty}(N)$ on $N$, $Y$ is $F$-related to $X$, then 
+\begin{align*}
+X(f \circ F) &= (Yf) \circ F
+\end{align*} Note that $f\circ F \in \cC^{\infty}(M)$, so the $X(f\circ F)$ is a smooth function on $M$. $(Yf)$ is a smooth function on $N$. This equation implies that $F$ can be ``taken out of the bracket" while $X$ is \emph{pushforwarded} to become $Y$. Under the coordinates $(U, (x^i))$ in $M$ and $(V, (y^j))$ in $N$
+\begin{align}
+X(f \circ F) &= X^i\, \partdiff{(f \circ F)}{x^i} = X^i\,\paren{\partdiff{f}{y^j}\circ F}\partdiff{F^j}{x^i} \nonumber\\
+&=\paren{X^i\,\partdiff{F^j}{x^i}} \paren{\partdiff{f}{y^j}\circ F} \nonumber\\
+&=\paren{Y^j \circ F}\paren{\partdiff{f}{y^j}\circ F} \quad (\text{by }\eqref{eqn: F_related_y_component}) \nonumber\\
+&= \paren{Y^j  \partdiff{f}{y^j}}\circ F \label{eqn: F_related_composite}
+\end{align}
+
+\item The coordinate representation of the pushforward of vector field $X$ by F, i.e. $F_{*}X$ is
+\begin{align}
+X &= X^i\, \partdiff{}{x^i} \nonumber\\
+\Rightarrow F_{*}X &= \paren{\paren{\partdiff{F^{j}}{x^i}\,X^i} \circ F^{-1}}\partdiff{}{y^j}
+\end{align}
+
+\item If $X, Y \in \frX(M)$, \emph{\textbf{the Lie bracket}} $[X, Y] \in \frX(M)$ has \emph{the following \textbf{coordinate representation}}:
+\begin{align}
+X = X^i\partdiff{}{x^i}, &\quad Y = Y^j\partdiff{}{x^j} \nonumber\\
+\Rightarrow \brac{X , Y} &= XY - YX \nonumber\\
+&=  \paren{X^i\partdiff{}{x^i}}\paren{Y^j\partdiff{}{x^j}} - \paren{Y^j\partdiff{}{x^j}}\paren{X^i\partdiff{}{x^i}} \nonumber\\
+&=  X^i\partdiff{Y^j}{x^i}\partdiff{}{x^j} + X^iY^j\,\partdiff{}{x^i}\,\partdiff{}{x^j}  - Y^j\partdiff{X^i}{x^j}\partdiff{}{x^i}   - Y^jX^i\,\partdiff{}{x^j}\,\partdiff{}{x^i}  \nonumber\\
+&= X^i\partdiff{Y^j}{x^i}\partdiff{}{x^j} - Y^j\partdiff{X^i}{x^j}\partdiff{}{x^i} \nonumber\\
+&=\paren{X^j\partdiff{Y^i}{x^j} - Y^j\partdiff{X^i}{x^j}}\partdiff{}{x^i}  \label{eqn: lie_bracket_coordinate}
+\end{align}
+We also see that $XY  \not\in \frX(M)$, which can be seen in its coordinate representation.
+\begin{align*}
+XY &= X^i\partdiff{Y^j}{x^i}\partdiff{}{x^j} + X^iY^j\,\partdiff{^2}{x^i\,\partial\,x^j}
+\end{align*} Note that every vector fields can be written as linear combination of $(\partdiff{}{x^j} )$ but $XY$ contains a \emph{\textbf{second-order derivative}} term which does not belong to the tangent space at any point. In \emph{\textbf{Lie bracket}}, this second order mixed derivative term is \emph{\textbf{cancelled out}} so it is a vector field. $XY$ is still \emph{\textbf{a linear smooth map}} though.
+\end{itemize}
+
+\subsection{Cotangent Bundle and Covector Field}
+\begin{itemize}
+\item Let $X \in \frX(M)$ be a vector field. 
+\begin{align}
+X &=X^i \partdiff{}{x^i} \nonumber\\
+dx^i \paren{X} &= dx^i \paren{X^i \partdiff{}{x^i}} \nonumber\\
+&= X^i \label{eqn: basis_covector_field_on_vector_field}
+\end{align}
+
+\item The differential $1$-form is a covector field and its component function is the partial derivatives of $f$
+\begin{align*}
+df &= \partdiff{f}{x^i} dx^i
+\end{align*}
+
+\item The \emph{computation} of $\omega(X)$ via \emph{\textbf{its coordinate representation}} is the inner product between their component functions:
+\begin{align}
+X = X^i \partdiff{}{x^i},&\quad \omega = \omega_i\, dx^i  \nonumber\\
+\omega(X) &= \paren{\omega_i \, dx^{i}}\paren{X^i \partdiff{}{x^i}} \nonumber\\
+&= \omega_i\,X^i  \label{eqn: covector_field_act_on_vector_field_coordinate}
+\end{align}
+
+\item $df(X)$ is a continous function. In fact, 
+\begin{align*}
+df(X) &= Xf \\
+\partdiff{f}{x^i}dx^i\paren{X^j \partdiff{}{x^j}} &= \partdiff{f}{x^i}X^i = \paren{X^i \partdiff{}{x^i}}f
+\end{align*} For $X = \gamma'(t)$ for smooth curve $\gamma: J \rightarrow M$, we have
+\begin{align*}
+df(\gamma'(t)) &= \gamma'(t)f = \frac{d}{dt}(f\circ \gamma) = (f\circ \gamma)'
+\end{align*}
+
+\item The covector field $\omega$ \emph{acts on \textbf{the Lie bracket}} $[X, Y]$ has the form
+\begin{align}
+\omega = \omega_i dx^i &\quad \brac{X , Y} = \paren{X^j\partdiff{Y^i}{x^j} - Y^j\partdiff{X^i}{x^j}}\partdiff{}{x^i} \nonumber\\
+\Rightarrow \omega\paren{\brac{X, Y}} &= \omega_i \,dx^i\paren{\brac{X, Y}} \nonumber\\
+&= \paren{X^j\partdiff{Y^i}{x^j} - Y^j\partdiff{X^i}{x^j}}\omega_i \label{eqn: covector_field_act_on_lie_bracket}
+\end{align}
+
+\item We compute the representation of function $X(\omega(Y))$ where $X, Y \in \frX(M)$ and $\omega \in \frX^{*}(M)$
+\begin{align*}
+X(\omega(Y)) &= \paren{X^j \partdiff{}{x^j}}\paren{\omega_i\,dx^i\paren{Y^s \partdiff{}{x^s}}} \\
+&= \paren{X^j \partdiff{}{x^j}}\paren{\omega_i\,Y^i} \\
+&= X^j\, \partdiff{\omega_i}{x^j}\,Y^i + X^{j}\,\partdiff{Y^i}{x^j}\,\omega_i
+\end{align*}
+\end{itemize}
+
+\subsection{Tensor}
+\begin{itemize}
+\item Let $A$ acts on $X_i  \in \frX(M)$, $i=1 \xdotx{,} k$. The \emph{Tensor Characterization Lemma} states that $A$ induced a smooth function as
+\begin{align}
+A = a_{i_1 \xdotx{,} i_k}\, dx^{i_1} \xdotx{\otimes} dx^{i_k},& \quad X_i = X_i^{j}\partdiff{}{x^j}. \quad i=1 \xdotx{,} k \nonumber\\
+\Rightarrow A\paren{X_1 \xdotx{,} X_k} &= \paren{a_{i_1 \xdotx{,} i_k}\, dx^{i_1} \xdotx{\otimes} dx^{i_k}}\paren{X_1 \xdotx{,} X_k}  \nonumber\\
+&= a_{i_1 \xdotx{,} i_k}\,dx^{i_1}\paren{X_1} \xdotx{\,}dx^{i_k}\paren{X_k} \nonumber\\
+&= a_{i_1 \xdotx{,} i_k}\,X_1^{i_1} \xdotx{\,} X_k^{i_k} \label{eqn: tensor_characterization}
+\end{align} Note that this is a composite of $k$ derivations.
+\end{itemize}
+
+\subsection{Differential Forms}
+\begin{itemize}
+\item Let $\omega_p \in \Lambda^k(T_{p}^{*}M)$, and $v_1 \xdotx{,} v_k \in T_pM$.
+\begin{align}
+\text{If } \quad \omega_p &= \omega_p^{1} \xdotx{\wedge} \omega_p^{k}, \nonumber\\
+\Rightarrow \quad \omega_p(v_1 \xdotx{,} v_k)&=\det\brac{\begin{array}{ccc}
+\omega_p^{1}(v_1) & \ldots & \omega_p^{1}(v_k)  \\
+\vdots & \ddots & \vdots \\
+\omega_p^{k}(v_1) & \ldots & \omega_p^{k}(v_k) 
+\end{array}}. \label{eqn: differential_k_form_act_on_tangent_vector_determinant_1}
+\end{align}
+
+\item Furthermore, assume that $\omega \in \Omega^k(M)$ is \emph{\textbf{a differential $k$-form}}, while each $\omega^{s} = dw^{s} = w_{i_s}^{s}\,dx^{i_s} \in \Omega^{1}(M)$ is a \emph{$1$-form} for $s=1,\ldots,k$ and $v_j = v_j^{i_s}\, \partdiff{}{x^{i_s}} \in \frX(M)$ is a set of \emph{\textbf{vector fields}} for $j = 1,\ldots, k$. $I := (i_1 \xdotx{,} i_k) \subset \set{1 \xdotx{,} n}$ is a multi-index of size $k$. The coordinate representation of \eqref{eqn: differential_k_form_act_on_tangent_vector_determinant_1} is
+\begin{align}
+\omega &=\paren{w_{i_s}^{1}\,dx^{i_s}} \xdotx{\wedge} \paren{w_{i_s}^{k}\,dx^{i_s}} \nonumber\\
+&=\sum_{I}' \omega_{i_1 \xdotx{,} i_k}dx^{i_1} \xdotx{\wedge} dx^{i_k} , \quad 1\le i_1 \xdotx{\le} i_k \le n \nonumber\\
+\omega(v_1 \xdotx{,} v_k)&= \paren{\paren{w_{i_s}^{1}\,dx^{i_s}} \xdotx{\wedge} \paren{w_{i_s}^{k}\,dx^{i_s}}}(v_1 \xdotx{,} v_k) \nonumber\\
+&=\sum_{\sigma \in S_k}  \sgn{\sigma}  \paren{ {^{\sigma}\paren{w_{i_s}^{1}\,dx^{i_s}} \xdotx{\otimes} \paren{w_{i_s}^{k}\,dx^{i_s}}}}(v_1 \xdotx{,} v_k) \nonumber\\
+&= \sum_{\sigma \in S_k}  \sgn{\sigma}\prod_{j=1}^{k}\paren{w_{i_s}^{\sigma(j)}\,dx^{i_s}}(v_j)\nonumber\\
+&= \sum_{\sigma \in S_k} \sgn{\sigma}  \prod_{j=1}^{k}v_j^{i_s}w_{i_s}^{\sigma(j)} \nonumber\\
+&=  \det\brac{\begin{array}{ccc}
+v_1^{i_s}w_{i_s}^{1} & \ldots & v_k^{i_s}w_{i_s}^{1}  \\
+\vdots & \ddots & \vdots \\
+v_1^{i_s}w_{i_s}^{k}  & \ldots & v_k^{i_s}w_{i_s}^{k} 
+\end{array}} \nonumber\\
+&=  \det\paren{\mb{W}^{T}\mb{V}},  \label{eqn: differential_k_form_act_on_tangent_vector_determinant_2}
+\end{align} where $\mb{V}: M \rightarrow \bR^{n \times k}$ is a matrix of  component functions of vector fields $(v_1 \xdotx{,} v_k)$, and $\mb{W}: M \rightarrow \bR^{n \times k}$ is a matrix of component functions of covector fields $(\omega^1 \xdotx{,} \omega^k)$ 
+\begin{align*}
+\mb{V}  &= [\mb{v}_1 \xdotx{,} \mb{v}_k]_{n \times k} \\
+\mb{W} &=  [\mb{w}^1 \xdotx{,} \mb{w}^k]_{n \times k}
+\end{align*}
+
+\item Thus we can compute \emph{\textbf{the component function}} of a $k$-form as
+\begin{align*}
+\omega &=\paren{w_{i_s}^{1}\,dx^{i_s}} \xdotx{\wedge} \paren{w_{i_s}^{k}\,dx^{i_s}} \nonumber\\
+&= \omega_{i_1 \xdotx{,} i_k}\,dx^{i_1} \xdotx{\wedge} dx^{i_k}, \quad (1\le i_1 \xdotx{\le} i_k \le n) \nonumber\\
+\Rightarrow \omega_{i_1 \xdotx{,} i_k}&= \omega\paren{\partdiff{}{x^{i_1}} \xdotx{,} \partdiff{}{x^{i_k}}} \nonumber\\
+&= \det\paren{\mb{W}^{T}[\mb{e}_{i_1} \xdotx{,} \mb{e}_{i_k}]} = \det(\mb{W}_{I}^{T})
+\end{align*} where $\mb{W}_{I}$ is a $k\times k$ submatrix of component matrix $\mb{W}$ by only selecting rows whose indices are in $I = \{(i_1 \xdotx{,} i_k): 1\le i_1 \xdotx{\le} i_k \le n\}$.
+
+\item The \emph{\textbf{exterior derivative}} $d\omega \in \Omega^{k+1}(M)$ can be represented as
+\begin{align}
+d\omega &= d\paren{\omega_{i_1 \xdotx{,} i_k}\, dx^{i_1} \xdotx{\wedge} dx^{i_k}} \nonumber\\
+&= d \omega_{i_1 \xdotx{,} i_k} \wedge  dx^{i_1} \xdotx{\wedge} dx^{i_k} \nonumber\\
+&= \paren{\partdiff{\omega_{i_1 \xdotx{,} i_k}}{x^s}} dx^s  \wedge  dx^{i_1} \xdotx{\wedge} dx^{i_k}  \label{eqn: differential_k_form_ext_derivative}
+\end{align}
+
+For $1$-form $\omega = \omega_j\,dx^j$, we have the $2$-forms $d\omega$ can be written as
+\begin{align}
+d\omega &=d\paren{\omega_j\,dx^j} \nonumber\\
+&= d\omega_j \wedge dx^j  \nonumber\\ 
+&= \paren{\partdiff{\omega_j}{x^i}\,dx^i} \wedge dx^j \quad \paren{\text{note that } \, d\omega_j= \partdiff{\omega_j}{x^i}\,dx^i} \nonumber\\
+&=\partdiff{\omega_j}{x^i}dx^i \wedge dx^j \nonumber\\
+&=\sum_{i < j}\paren{\partdiff{\omega_j}{x^i} - \partdiff{\omega_i}{x^j}}dx^i \wedge dx^j  \label{eqn: eqn: differential_1_form_ext_derivative}
+\end{align}
+
+\item Let $X, Y \in \frX(M)$ be a vector field on $M$, $X = X^i \partdiff{}{x^i}$ and $Y = Y^j\partdiff{}{x^j}$. Let $\omega = \omega_i dx^i$ as the $1$-form.  Then 
+\begin{align}
+d\omega(X, Y)&= \paren{\partdiff{\omega_j}{x^i}dx^i \wedge dx^j}\paren{X, Y} \nonumber\\
+&=\sum_{i < j}\paren{\partdiff{\omega_j}{x^i} - \partdiff{\omega_i}{x^j}}dx^i \otimes dx^j\paren{X, Y} \nonumber\\
+&= \sum_{i < j}\paren{\partdiff{\omega_j}{x^i} - \partdiff{\omega_i}{x^j}}X^i Y^j \label{eqn: ext_derivative_act_on_two_vector_fields}
+\end{align} This is \emph{\textbf{a differential operator}} that \emph{\textbf{only}} contains \emph{\textbf{the second-order derivative terms}} $X^i\,Y^j$ on smooth functions. The component function is in fact \emph{\textbf{the determinant of a $2 \times 2$ submatrix}} of \emph{\textbf{the Jacobian matrix}} $[\partdiff{\omega_j}{x^i}]_{j, i}$
+
+\item Let $X \in \frX(M)$ be a vector field on $M$. The \emph{\textbf{interior product}} $X \iprod{\paren{dx^{1} \xdotx{\wedge} dx^{k}}}$ has the following representation:
+\begin{align}
+X &= X^i \partdiff{}{x^{i}}  \nonumber\\
+X \iprod{\paren{dx^{1} \xdotx{\wedge} dx^{k}}} &= \sum_{i=1}^{k}(-1)^{i-1}dx^i(X) \,dx^{1} \xdotx{\wedge} \widehat{dx^i} \xdotx{\wedge} dx^{k} \nonumber \\
+&= \sum_{i=1}^{k}(-1)^{i-1}X^i\,dx^{1} \xdotx{\wedge} \widehat{dx^i} \xdotx{\wedge} dx^{k} \label{eqn: differential_k_form_interior_prod}
+\end{align} where $\widehat{dx^i}$ indicates that $dx^i$ is \emph{\textbf{omitted}}.  
+
+For $Y_2 \xdotx{,} Y_k \in \frX(M)$, where $Y_j = Y_j^{s}\partdiff{}{x^s}$, $X = X^s\partdiff{}{x^s}$
+\begin{align}
+X \iprod{\paren{dx^{1} \xdotx{\wedge} dx^{k}}}\paren{Y_2 \xdotx{,} Y_k}&=\paren{dx^{1} \xdotx{\wedge} dx^{k}}\paren{X, Y_2 \xdotx{,} Y_k} \nonumber\\
+&= \det\brac{\mb{X} \mid \mb{Y}} \label{eqn: differential_k_form_interior_prod_mat_result}
+\end{align} where $\brac{\mb{X} \mid \mb{Y}}: M \rightarrow \bR^{k \times k}$ is a matrix-valued function whose first column is from the component functions of $X$ and the rest columns are component functions of $(Y_j)$.
+\begin{align*}
+\mb{Y} &= \brac{\mb{Y}_2 \xdotx{,} \mb{Y}_k}_{k \times (k-1)}
+\end{align*}
+
+The equation \eqref{eqn: differential_k_form_interior_prod} corresponds to \emph{\textbf{the expansion by minors}} along the first columns
+\begin{align}
+X \iprod{\paren{dx^{1} \xdotx{\wedge} dx^{k}}}\paren{Y_2 \xdotx{,} Y_k}&=  \sum_{i=1}^{k}(-1)^{i-1}X^i \det(\mb{Y}_{-i}) \label{eqn: differential_k_form_interior_prod_mat_expansion}
+\end{align} where $\mb{Y}_{-i}$ is obtained by dropping $i$-th row of $\mb{Y}$.
+
+
+\item Compute \emph{\textbf{the pullback of a $n$-form by $F: M \rightarrow N$}}. If $(x^i)$ and $(y^j)$ are smooth coordinates locally, and $u$ is a continuous real-valued function on $V$, then the following holds locally.
+\begin{align*}
+F^{*}\paren{u\,dy^{1} \xdotx{\wedge} dy^{n}} &= (u \circ F)\,(\det(DF))\,dx^{1} \xdotx{\wedge} dx^{n}  
+\end{align*}
+where $DF$ represents \textbf{the Jacobian matrix of $F$} in these coordinates.
+\end{itemize}
+
+\subsection{Connections}
+\begin{itemize}
+\item Given coordinate system $(x^i)$, and $\nabla$ is a connection on $TM$, the covariant derivative of $Y = Y^j\partdiff{}{x^j}$ in the direction of $X = X^i \partdiff{}{x^i}$ is
+\begin{align}
+\conn{X}{Y} &= \conn{X^i \partdiff{}{x^i}}{(Y^j\partdiff{}{x^j})} \nonumber\\
+&= X^i  \conn{\partdiff{}{x^i}}{(Y^j\partdiff{}{x^j})} \nonumber\\
+&= X^i  \paren{\paren{\conn{\partdiff{}{x^i}}{Y^j}}\partdiff{}{x^j} + Y^j\conn{\partdiff{}{x^i}}{(\partdiff{}{x^j})} } \nonumber\\
+&= X^i  \paren{\paren{\partdiff{}{x^i}Y^j}\partdiff{}{x^j} + Y^j\,\Gamma_{i,j}^{k}\partdiff{}{x^k} } \nonumber\\
+&= X^i\, \paren{\partdiff{Y^k}{x^i} + Y^j\,\Gamma_{i,j}^{k}}\partdiff{}{x^k} \label{eqn: affine_connection_1} \\
+&= \paren{X(Y^k) + X^i\,Y^j\,\Gamma_{i,j}^{k}}\partdiff{}{x^k} \label{eqn: affine_connection_2}
+\end{align}
+
+\item The \emph{\textbf{inner product}} of \textit{covariant derivative of $Y$ in direction of $X$} with $Z$ gives:
+\begin{align}
+\inn{\conn{X}{Y}}{Z}_g &= \inn{\paren{X(Y^k) + X^i\,Y^j\,\Gamma_{i,j}^{k}}\partdiff{}{x^k}}{Z^l \partdiff{}{x^l}}_g\nonumber\\
+&= \paren{X(Y^k) + X^i\,Y^j\,\Gamma_{i,j}^{k}}Z^l \inn{\partdiff{}{x^k}}{\partdiff{}{x^l}}_g       \nonumber\\
+&= g_{k,l}\paren{X(Y^k) + X^i\,Y^j\,\Gamma_{i,j}^{k}}Z^l \label{eqn: affine_connection_riemannian} \\
+&:= g_{k,l}X(Y^k)Z^l + \Gamma_{i,j;l}\,X^i\,Y^j\,Z^l  \label{eqn: affine_connection_riemannian2}
+\end{align} Note that
+\begin{align}
+\Gamma_{i,j;k}:= \inn{\conn{\partdiff{}{x^i}}{\partdiff{}{x^j}}}{\partdiff{}{x^k}}_g &= \inn{\Gamma_{i,j}^{l}\partdiff{}{x^l}}{\partdiff{}{x^k}}_g \nonumber\\
+&= g_{l,k}\Gamma_{i,j}^{l} \label{eqn: affine_connection_inn_riemannian_christoffel_symbol}
+\end{align}
+
+For metric connection $\nabla$, 
+\begin{align*}
+X\inn{Y}{Z} &= \inn{\conn{X}{Y}}{Z} + \inn{Y}{\conn{X}{Z}}
+\end{align*}
+Thus
+\begin{align*}
+X\paren{g_{k,l}Y^k\,Z^{l}} &= g_{k,l}X(Y^k)Z^{l} + g_{k,l}Y^{k}X(Z^{l}) + X(g_{k,l})Y^k\,Z^{l}\\
+\inn{\conn{X}{Y}}{Z} &=g_{k,l}X(Y^k)Z^l + \Gamma_{i,j;l}\,X^i\,Y^j\,Z^l \\
+\inn{Y}{\conn{X}{Z}} &=g_{k,l}X(Z^k)Y^l + \Gamma_{i,j;l}\,X^i\,Z^j\,Y^l \\
+&\text{since }\nabla\text{ is a metric connection, the equation holds} \\
+X(g_{k,l})Y^k\,Z^{l} &= \Gamma_{i,k;l}\,X^i\,Y^k\,Z^l + \Gamma_{i,l;k}\,X^i\,Y^k \,Z^l \\
+\partial_i(g_{k,l})X^i Y^k\,Z^{l} &= \Gamma_{i,k;l}\,X^i\,Y^k\,Z^l + \Gamma_{i,l;k}\,X^i\,Y^k \,Z^l \\
+& \text{ set }X^i =1, Y^k = 1, \; Z^l = 1, \quad \forall i, k, l\\
+\Rightarrow  \partdiff{}{x^i}(g_{j,k})&=\Gamma_{i,j;k} + \Gamma_{i,k;j} = g_{m,k}\Gamma_{i,j}^{m} + g_{m,j}\Gamma_{i,k}^{m}
+\end{align*}
+
+
+\item The \emph{\textbf{difference}} between two covariant derivatives $\conn{X}{Y} - \conn{Y}{X}$:
+\begin{align}
+\conn{X}{Y} - \conn{Y}{X} &= \paren{X(Y^k) + X^i\,Y^j\,\Gamma_{i,j}^{k}}\partdiff{}{x^k} - \paren{Y(X^k) + Y^i\,X^j\,\Gamma_{i,j}^{k}}\partdiff{}{x^k} \nonumber\\
+&= \paren{X(Y^k) - Y(X^k) + \paren{ X^i\,Y^j - Y^i\,X^j}\Gamma_{i,j}^{k}}\partdiff{}{x^k} \nonumber\\
+&= [X,Y] +  \paren{\paren{ X^i\,Y^j - Y^i\,X^j}\Gamma_{i,j}^{k}}\partdiff{}{x^k}  \label{eqn: difference_covariant_der}
+\end{align} Note that the Lie bracket is
+\begin{align*}
+[X, Y] &= \paren{X(Y^k) - Y(X^k)}\partdiff{}{x^k}
+\end{align*} So the connection $\nabla$ is \emph{\textbf{symmetric}} if and only if $\Gamma_{i,j}^{k} = \Gamma_{j,i}^{k}$. If so, then
+\begin{align*}
+\conn{X}{Y} - \conn{Y}{X} &= \brac{X(Y^k) - Y(X^k) + \paren{ X^i\,Y^j - Y^i\,X^j}\Gamma_{i,j}^{k}}\partdiff{}{x^k} \\
+&\text{when }\Gamma_{i,j}^{k} = \Gamma_{j,i}^{k}\\
+&= \paren{X(Y^k) - Y(X^k)}\partdiff{}{x^k} + \paren{X^i\,Y^j\,\Gamma_{i,j}^{k} - Y^{i}X^j\,\Gamma_{j,i}^{k}}\partdiff{}{x^k}\\
+&= [X, Y]  + \paren{X^i\,Y^j\,\Gamma_{i,j}^{k} - Y^{j}X^i\,\Gamma_{i,j}^{k}}\partdiff{}{x^k}\\
+&= [X, Y]
+\end{align*} Thus the \emph{\textbf{torsion tensor}} $\tau$ is computed as
+\begin{align*}
+\tau(X, Y) &= \conn{X}{Y} - \conn{Y}{X} - [X,Y]\\
+&=  \paren{X^i\,Y^j\,\Gamma_{i,j}^{k} - Y^{j}X^i\,\Gamma_{i,j}^{k}}\partdiff{}{x^k}
+\end{align*}
+
+That is the connection $\nabla$ is \emph{\textbf{symmetric}} if and only if
+\begin{align*}
+\conn{X}{Y} - \conn{Y}{X} &= [X, Y] 
+\end{align*}
+
+%Let $F = g$ be a covariant $2$-tensor
+
+%\item The covariant derivative of covariant derivative of $Z$ in direction of $Y$ and $X$ respectively is $\conn{X}{\conn{Y}{Z}}$ and it is computed as
+%\begin{align*}
+%\conn{X}{\conn{Y}{Z}} &= \conn{(X^i\partdiff{}{x^i})}{\paren{\conn{(Y^j\partdiff{}{x^j})}{\paren{Z^l\partdiff{}{x^l}}}}}\\
+%&=X^i\,\conn{\partial_i}{\paren{Y^j\,\conn{\partial_j}{\paren{Z^l \partial_l}}}} \\
+%&= X^i\,\conn{\partial_i}{\paren{Y^j\, \set{(\partial_j\,Z^l)\partial_l +   Z^l \conn{\partial_j}{\partial_l}}  }} \\
+%&= X^i\,\conn{\partial_i}{\paren{Y(Z^l)\partial_l +   Y^j\,Z^l \;\Gamma_{j,l}^{k}\partial_k  }} \\
+%&= X^i\set{\conn{\partial_i}{\paren{Y(Z^l)\partial_l }}} +   X^i\set{\conn{\partial_i}{\paren{Y^j\,Z^l \;\Gamma_{j,l}^{k}\partial_k  }}} \\
+%&= X^i\conn{\partial_i}{\paren{Y(Z^l)\partial_l }} + X^i\conn{\partial_i}{\paren{Y^j\,Z^l \;\Gamma_{j,l}^{k}}}\partial_k + X^i\,Y^j\,Z^l \;\Gamma_{j,l}^{m}\conn{\partial_i}{\partial_m} \\
+%&= X^i \partial_i Y(Z^l)\partial_l  + X^iY(Z^l)\conn{\partial_i}{\partial_l} + \set{X^i\partial_i\paren{Y^jZ^l}\Gamma_{j,l}^k + X^iY^jZ^l \brac{\partial_i \Gamma_{j,l}^k +   \Gamma_{j,l}^{m}\Gamma_{i,m}^{k}        }}\partial_k \\
+%&= XY(Z^l)\partial_l + X^iY(Z^l) \Gamma_{i,l}^{k}\partial_k +  \set{X\paren{Y^jZ^l}\Gamma_{j,l}^k + X^iY^jZ^l \brac{\partial_i \Gamma_{j,l}^k +   \Gamma_{j,l}^{m}\Gamma_{i,m}^{k}        }}\partial_k \\
+%&= \set{XY(Z^k) + X^iY(Z^l) \Gamma_{i,l}^{k} +  X(Y^jZ^l)\Gamma_{j,l}^k + X^iY^jZ^l \brac{\partial_i \Gamma_{j,l}^k +   \Gamma_{j,l}^{m}\Gamma_{i,m}^{k}        }} \partial_k \\
+%&= \set{XY(Z^k) + X^iY(Z^l) \Gamma_{i,l}^{k} + Y^j X(Z^l)\Gamma_{j,l}^k +  X(Y^j)Z^l\Gamma_{j,l}^k   + X^iY^jZ^l \brac{\partial_i \Gamma_{j,l}^k +   \Gamma_{j,l}^{m}\Gamma_{i,m}^{k}        }} \partial_k\\
+%&= \set{XY(Z^k) + \brac{X^iY(Z^l) + Y^i X(Z^l) + X(Y^i)Z^l}\,\Gamma_{i,l}^{k}    + X^iY^jZ^l \brac{\partial_i \Gamma_{j,l}^k +   \Gamma_{j,l}^{m}\Gamma_{i,m}^{k}        }}\partial_k
+%\end{align*}
+
+\item The covariant derivative of $Z$ in direction of $[X, Y]$
+\begin{align}
+\conn{[X, Y]}{Z} &= \conn{\paren{\paren{X(Y^k) - Y(X^k)}\partdiff{}{x^k}}}{Z^l \partdiff{}{x^l}} \nonumber\\
+&= \paren{X(Y^k) - Y(X^k)}\conn{\partdiff{}{x^k}}{\paren{Z^l \partdiff{}{x^l}}} \nonumber\\
+&= \paren{X(Y^k) - Y(X^k)}\partdiff{Z^l}{x^k}\partdiff{}{x^l} + \paren{X(Y^k) - Y(X^k)}Z^l (\conn{\partial_k}{\partial_l}) \nonumber\\
+&=  \paren{X(Y^i) - Y(X^i)}\partdiff{Z^k}{x^i}\partdiff{}{x^k} + \Gamma_{i,j}^{k}\paren{X(Y^i) - Y(X^i)}Z^j \partdiff{}{x^k} \nonumber\\
+&= \set{\paren{X(Y^i) - Y(X^i)}\partdiff{Z^k}{x^i} + \paren{X(Y^i) - Y(X^i)}Z^j\Gamma_{i,j}^{k}}\partdiff{}{x^k} \nonumber\\
+&= \set{[X, Y](Z^k) + [X, Y]^i\,Z^j\Gamma_{i,j}^{k}}\partdiff{}{x^k} \label{eqn: affine_connection_lie_bracket}
+\end{align}
+
+\item The covariant derivative of $\omega$ in direction of $X$:
+\begin{align*}
+\conn{X}{\omega}(Y) &= X(\omega(Y)) - \omega\paren{\conn{X}{Y}}
+\end{align*}
+Thus the coordinate representation is 
+\begin{align}
+\conn{X}{\omega} &= \paren{X(\omega_k) -  \omega_i\,X^j\, \Gamma_{j,k}^{i}} dx^k. \label{eqn: covariant_derivative_1_form}
+\end{align}
+
+\item The total covariant derivative of a $1$-form $\omega$ is
+\begin{align*}
+\nabla\,\omega(Y, X) &= (\conn{X}{\omega})(Y) = X(\omega(Y)) - \omega\paren{\conn{X}{Y}}
+\end{align*}
+
+\item We check the formula for total covariant derivative for tensor $F$
+\begin{align*}
+\conn{X}{F} &= \tr{\conn{}{F} \otimes X}
+\end{align*}
+
+
+\item \begin{example}(\textbf{\emph{The Covariant Hessian}}).\\
+Let $u$ be a smooth function on $M$.
+\begin{itemize}
+\item The \underline{\emph{\textbf{total covariant derivative of a smooth function is equal to its $1$-form}}} $\nabla u = du \in \Omega^1(M) = \Gamma(T^{(0,1)}TM)$ since 
+\begin{align*}
+\nabla u(X) &= \conn{X}{u} = Xu = du(X)
+\end{align*}
+
+\item The $2$-tensor $\nabla^2u = \nabla(du)$  is called \underline{\emph{\textbf{the covariant Hessian of $u$}}}. Its action
+on smooth vector fields $X,Y$ can be computed by the following formula:
+\begin{align}
+\nabla^2u(Y, X) = \nabla_{X, Y}^2 u &= \conn{X}{\conn{Y}{u}} - \conn{(\conn{X}{Y})}{u} = X(Yu) - (\conn{X}{Y})(u)  \label{eqn: covariant_hessian}
+\end{align} In any local coordinates, it is
+\begin{align*}
+\nabla^2u &= u_{\;;i,j}\,dx^i \otimes dx^j
+\end{align*} where 
+\begin{align*}
+u_{\;;i,j} &= \partdiff{^2 u}{x^j\,\partial x^i} - \Gamma_{j,i}^{k}\partdiff{u}{x^k}
+\end{align*}
+
+If $\nabla$ is symmetric, i.e. $\conn{X}{Y} - \conn{Y}{X} = [X, Y]$ then 
+\begin{align}
+\nabla^2u(Y, X) &=X(Yu) - (\conn{X}{Y})(u)    \nonumber\\
+&= (XY)u - [X,Y](u) - \conn{Y}{X}(u)  \nonumber \\
+&= (YX)u - \conn{Y}{X}(u)  := \nabla^2u(X, Y) \label{eqn: covariant_hessian_symmetric}
+\end{align} Thus \emph{\textbf{$\nabla^2u$ is a symmetric $2$-tensor if $\nabla$ is symmetric}}.
+\begin{align*}
+\nabla^2u &= u_{\;;i,j}\,dx^i \,dx^j
+\end{align*}
+\end{itemize}
+\end{example}
+\end{itemize}
+\subsection{Geodesics and Parallel Transport}
+\begin{itemize}
+\item The \emph{\textbf{parallel transport}} of $V$ along curve $\gamma(t) = (\gamma^1(t) \xdotx{,} \gamma^n(t))$ is computed as
+\begin{align*}
+\conn{\gamma'(t)}{V} = \conn{\dot{\gamma}^i(t)\partial_i}{V} &\equiv 0\\
+\Leftrightarrow \brac{\gamma'(t)(V^k) + \dot{\gamma}^i(t)\,V^j \Gamma_{i,j}^k} \partial_k& \equiv 0 \\
+\Leftrightarrow \gamma'(t)(V^k) + \dot{\gamma}^i(t)\,V^j \Gamma_{i,j}^k(\gamma(t)) &= 0 \\
+\Leftrightarrow \dot{V}^k(\gamma(t)) + \dot{\gamma}^i(t)\,V^j \Gamma_{i,j}^k(\gamma(t)) &= 0, \quad k=1,\ldots, n
+\end{align*} Let $V(t) = V_{\gamma(t)}$ be the vector field along curve $\gamma$, so that $V(t) = V^{k}(\gamma(t)) \partial_k := V^k(t) \partial_k$.
+\begin{align}
+\dot{V}^k &= -\dot{\gamma}^i(t)\, \Gamma_{i,j}^k(\gamma(t))V^j, \quad \quad k=1,\ldots, n. \label{eqn: parallel_transport}
+\end{align} For fixed $\gamma$, this is \emph{a system of $n$ 1st-order \textbf{linear ODEs}} for $(V^1(t) \xdotx{,} V^{n}(t))$.
+
+\item To obtain the geodesic equations, note that $\conn{\gamma'(t)}{V} \equiv 0$ for $V= \gamma'(t) = \dot{\gamma}^k(t)\partial_k$. Thus we have \emph{\textbf{the geodesic equations}}:
+\begin{align}
+\ddot{\gamma}^k &= -\dot{\gamma}^i\,\dot{\gamma}^j \Gamma_{i,j}^k(\gamma(t)), \quad \quad k=1,\ldots, n. \label{eqn: geodesic_equations}
+\end{align} This is a system of $n$ \emph{\textbf{2nd-order nonlinear ODEs}} for $(\gamma^1(t) \xdotx{,} \gamma^n(t))$.
+
+It can reduce to a system of $2n$ \emph{\textbf{1st-order nonlinear ODEs}}
+\begin{align}
+\dot{\gamma}^k &= v^k  \nonumber\\
+\dot{v}^k &= -v^i\,v^j \Gamma_{i,j}^k(\gamma(t)), \quad \quad k=1,\ldots, n. \label{eqn: geodesic_equations_1st_order}
+\end{align} 
+\end{itemize}
+
+\subsection{Divergence of Vector Field}
+\begin{itemize}
+\item From the formula, $d\paren{X \iprod dV} = \text{div}(X)\,dV$, we can derive the coordinate representation of divergence of vector field $X$
+\begin{align*}
+X &= X^i \partdiff{}{x^i}\\
+dV &= \rho\, dx^1 \xdotx{\wedge} dx^n\\
+\Rightarrow X \iprod dV &= X \iprod{\paren{ \rho\, dx^1 \xdotx{\wedge} dx^n}} \\
+&= \sum_{i=1}^{n}(-1)^{i-1}\rho X^i dx^1\xdotx{\wedge} \widehat{dx^i} \xdotx{\wedge} dx^n\\
+\Rightarrow d\paren{X \iprod dV}&=  \sum_{i=1}^{n}(-1)^{i-1}d\paren{\rho X^i} \wedge dx^1\xdotx{\wedge} \widehat{dx^i} \xdotx{\wedge} dx^n\\
+&= \sum_{i=1}^{n}(-1)^{i-1}\paren{\sum_{s=1}^{n}\partdiff{(\rho X^i)}{x^s}dx^s} \wedge dx^1\xdotx{\wedge} \widehat{dx^i} \xdotx{\wedge} dx^n\\
+&= \sum_{i=1}^{n}(-1)^{i-1}\paren{\partdiff{(\rho X^i)}{x^i}dx^i} \wedge dx^1\xdotx{\wedge} \widehat{dx^i} \xdotx{\wedge} dx^n\\
+&=  \frac{1}{\rho}\sum_{i=1}^{n}\paren{\partdiff{(\rho X^i)}{x^i} \rho\,dx^1\xdotx{\wedge} dx^i  \xdotx{\wedge} dx^n}\\
+&=  \frac{1}{\rho}\sum_{i=1}^{n}\partdiff{(\rho X^i)}{x^i}  dV = \paren{\frac{1}{\rho}\sum_{i=1}^{n} \partdiff{(\rho X^i)}{x^i}}dV\\
+\Rightarrow  \text{div}(X)&=\frac{1}{\rho} \sum_{i=1}^{n} \partdiff{(\rho X^i)}{x^i}
+\end{align*}
+\end{itemize}
+
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{book_reference.bib}
+\end{document}

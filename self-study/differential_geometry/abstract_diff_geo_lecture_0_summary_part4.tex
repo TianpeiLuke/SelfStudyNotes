@@ -1,0 +1,639 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs,  mathtools, dsfont}
+\usepackage{tabularx}
+\usepackage{tikz-cd}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Lecture 0: Summary (part 4)}
+\author{ Tianpei Xie}
+\date{Nov. 7th., 2022}
+\maketitle
+\tableofcontents
+\newpage
+\section{Riemannian Metrics and Riemannian Manifolds}
+\subsection{Riemannian Metrics}
+\begin{itemize}
+\item \begin{remark}
+The most important examples of symmetric tensors on a vector space are \emph{\textbf{inner products}}. Any inner product allows us to define \emph{\textbf{lengths}} of vectors and \emph{\textbf{angles}} between them, and thus to do Euclidean geometry.
+\end{remark}
+
+\item \begin{definition}
+Let $M$ be a smooth manifold with or without boundary. \underline{\emph{\textbf{A Riemannian metric}}} on $M$ is a smooth \underline{\emph{\textbf{symmetric covariant $2$-tensor field}}} on $M$ that is \underline{\emph{\textbf{positive definite}}} at each point. 
+
+\underline{\emph{\textbf{A Riemannian manifold}}} is a pair $(M, g)$, where $M$ is a smooth manifold and $g$ is a Riemannian metric on $M$. One sometimes simply says ``\emph{$M$ is a Riemannian manifold}" if $M$ is understood to be endowed with \emph{a specific Riemannian metric}. \emph{A Riemannian manifold \textbf{with boundary}} is defined similarly.
+\end{definition}
+
+\item \begin{remark}
+If $g$ is a Riemannian metric on $M$, then for each $p \in M$, \emph{the $2$-tensor $g_p$} is an \underline{\emph{\textbf{inner product}}} on $T_{p}M$. Because of this, we often use the notation $\inn{v}{w}_g$ to denote the real number $g_p(v, w)$ for $v,w \in T_{p}M$.
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Coordinate Representation of Riemannian Metric}})\\
+In any smooth local coordinates  $(x^i)$, \emph{\textbf{a Riemannian metric}} can be written 
+\begin{align}
+g &= g_{i,j}\;dx^i \otimes dx^j, \label{eqn: riemannian_metric_tensor_product}
+\end{align} where $(g_{i,j})$ is \underline{\emph{\textbf{a symmetric positive definite matrix}}} of smooth functions. 
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Alternative Coordinate Representation of Riemannian Metric}})\\
+The \emph{\textbf{symmetry}} of $g$ allows us to write $g$ also in terms of \emph{\textbf{symmetric products}} as follows:
+\begin{align}
+g &=\frac{1}{2}g_{i,j} dx^i\,dx^{j} \label{eqn: riemannian_metric_symmetric_product}
+\end{align}
+\end{remark}
+
+\item \begin{remark}
+The followings are Riemannian metrics:
+\begin{enumerate}
+\item The Euclidean metric $\bar{g} = \delta_{i,j} dx^i dx^j,$ is a Riemannian metric. 
+\item If $(M,g)$ and $(\widetilde{M},\widetilde{g})$ are Riemannian manifolds, we can define a Riemannian metric $\hat{g} = g \oplus \tilde{g}$ on the product manifold
+$M \times \widetilde{M}$, called \underline{\emph{\textbf{the product metric}}}, as follows:
+\begin{align}
+\hat{g}((v,\widetilde{v}), (w, \widetilde{w})) &= g(v,w) + \widetilde{g}(\widetilde{v},\widetilde{w}) \label{eqn: riemannian_product_metric}
+\end{align} for any $(v,\widetilde{v}), (w, \widetilde{w}) \in T_{p}M \times T_{q}\widetilde{M} \simeq T_{(p,q)}(M\times \widetilde{M})$. 
+\end{enumerate}
+\end{remark}
+
+
+\item \begin{proposition} (\textbf{Existence of Riemannian Metrics}). \citep{lee2003introduction, lee2018introduction}\ \\
+\textbf{Every smooth manifold} with or without boundary admits a \textbf{Riemannian metric}.
+\end{proposition}
+
+\item \begin{definition}
+The \underline{\emph{\textbf{length}} or \emph{\textbf{norm}}} of a tangent vector $v \in T_{p}M$ is defined to be
+\begin{align*}
+\abs{v}_{g} &= \sqrt{g_{p}(v, v)} := \sqrt{\inn{v}{v}_g}
+\end{align*}
+\end{definition}
+
+\item \begin{definition}
+The \underline{\emph{\textbf{angle}}} between two nonzero tangent vectors $v, w \in T_{p}M$ is the unique $\theta \in [0, \pi]$ satisfying:
+\begin{align*}
+\theta &= \frac{\inn{v}{w}_g}{\abs{v}_g \, \abs{w}_g}.
+\end{align*}
+\end{definition}
+
+\item \begin{definition}
+Tangent vectors $v, w \in T_{p}M$ are said to be \underline{\emph{\textbf{orthogonal}}} if $\inn{v}{w}_g = 0$. This means either one or both vectors are zero, or the angle between them is $\pi/2$.
+\end{definition}
+
+\item \begin{definition}
+Let $(M, g)$ be an $n$-dimensional Riemannian manifold with or without boundary. \emph{A local frame} $(E_1 \xdotx{,} E_n)$ for $M$ on an open subset $U \subseteq M$ is an \underline{\emph{\textbf{orthonormal frame}}} if the vectors $(E_1|_{p} \xdotx{,} E_n|_{p})$ form an \emph{\textbf{orthonormal basis}} for $T_{p}M$ at each point $p \in U$, or
+equivalently if $\inn{E_i}{E_j}_g = \delta_{i,j}$.
+\end{definition}
+\end{itemize}
+\subsection{Pullback Metrics and Riemannian Isometry}
+\begin{itemize}
+\item  \begin{definition}
+Suppose $M, N$ are smooth manifolds with or without boundary, $g$ is a Riemannian metric on $N$, and $F: M \rightarrow N$ is smooth. The \emph{\textbf{pullback}} $F^{*}g$ is a smooth $2$-tensor field on $M$. If it is \emph{\textbf{positive definite}}, it is a Riemannian metric on $M$, called \underline{\emph{\textbf{the pullback metric}}} determined by $F$. 
+\end{definition}
+
+\item \begin{proposition} (\textbf{Pullback Metric Criterion}). \citep{lee2003introduction} \\
+Suppose $F: M \rightarrow N$ is a smooth map and $g$ is a Riemannian metric on $N$. Then $F^{*}g$ is a \textbf{Riemannian metric} on $M$ if and only if $F$ is a \underline{\textbf{smooth immersion}}.
+\end{proposition}
+
+\item \begin{definition}
+If $(M, g)$ and  $(\widetilde{M}, \widetilde{g})$ are both Riemannian manifolds, a smooth map  $F: M \rightarrow \widetilde{M}$ is called a \underline{\emph{\textbf{(Riemannian) isometry}}} if it is a \emph{\textbf{diffeomorphism}} that satisfies $F^{*}\widetilde{g} = g$. More generally, $F$ is called \underline{\emph{\textbf{a local isometry}}} if every point $p \in M$ has a neighborhood $U$ such that $F|_{U}$ is an \emph{isometry} of $U$ onto an open subset of $\widetilde{M}$; or equivalently, if $F$ is a \emph{\textbf{local diffeomorphism}} satisfying $F^{*}\widetilde{g} = g$.
+
+If there exists a \emph{Riemannian isometry} between $(M, g)$ and  $(\widetilde{M}, \widetilde{g})$, we say that they are \underline{\emph{\textbf{isometric}}} as Riemannian manifolds. If each point of $M$ has a \emph{neighborhood} that is \emph{isometric} to an \emph{open subset} of $(\widetilde{M}, \widetilde{g})$, then we say that $(M, g)$ is \underline{\emph{\textbf{locally isometric}}} to $(\widetilde{M}, \widetilde{g})$.
+\end{definition}
+
+\item \begin{definition}
+The study of properties of Riemannian manifolds that are \emph{\textbf{invariant under (local or global) isometries}} is called \underline{\emph{\textbf{Riemannian geometry}}}.
+\end{definition}
+
+\item \begin{definition}
+A Riemannian $n$-manifold $(M, g)$ is said to be a \emph{\textbf{\underline{flat} Riemannian manifold}}, and $g$ is a \emph{\textbf{flat metric}}, if .$(M, g)$ is \textbf{locally isometric} to $(\bR^n, \bar{g})$.
+\end{definition}
+
+\item \begin{theorem}
+For a Riemannian manifold $(M, g)$, the following are equivalent:
+\begin{enumerate}
+\item $g$ is flat.
+\item Each point of $M$ is contained in the domain of a smooth coordinate chart in which $g$ has the coordinate representation $g = \delta_{i,j}dx^i\,dx^j$.
+\item Each point of $M$ is contained in the domain of a smooth coordinate chart in which \textbf{the coordinate frame} is \textbf{orthonormal}.
+\item Each point of M is contained in the domain of a \textbf{commuting orthonormal frame}.
+\end{enumerate}
+\end{theorem}
+\end{itemize}
+
+\subsection{The Tangent-Cotangent Isomorphism}
+\begin{itemize}
+\item \begin{definition}
+Given a Riemannian metric $g$ on M, we define a \underline{\emph{\textbf{bundle homomorphism}}} $\widehat{g}: TM \rightarrow T^{*}M$ by setting
+\begin{align*}
+\widehat{g}(v)(w) &= g_{p}(v, w)
+\end{align*} for all $p \in M$ and $v, w \in T_{p}M$.
+\end{definition}
+
+\item \begin{remark}
+ If $X$ and $Y$ are smooth vector fields on $M$, this yields
+\begin{align*}
+\widehat{g}(X)(Y) = g(X, Y).
+\end{align*} $\widehat{g}(X)(Y)$ is \emph{\textbf{linear}} over $\cC^{\infty}(M)$ in $Y$ and thus \underline{$\widehat{g}(X)$ is a \emph{\textbf{smooth covector field}}} by the tensor characterization lemma. On the other hand, the covector field $\widehat{g}(X)$ is \emph{\textbf{linear}} over $\cC^{\infty}(M)$ as a function of $X$, and thus $\widehat{g}$ is a \underline{\emph{\textbf{smooth bundle homomorphism}}}. As usual, we use \textbf{\emph{the same symbol}} for both the \emph{pointwise bundle homomorphism} $\widehat{g}: TM \rightarrow T^{*}M$ and \emph{the \textbf{linear map} on \textbf{sections}} $\widehat{g}: \frX(M) \rightarrow \frX^{*}(M)$. $\widehat{g}$ is also a \emph{\textbf{bundle isomorphism}}.
+\end{remark}
+
+\item \begin{definition}
+Given a smooth local frame $(E_i)$ and its dual coframe $(\epsilon^i)$, let $g = g_{i,j}\epsilon^i \epsilon^j$ be the \emph{\textbf{local expression}} for $g$. If $X= X^i\,E_i$ is a smooth vector field, the \emph{covector field} $\widehat{g}(X)$ has the \emph{\textbf{coordinate expression}}:
+\begin{align*}
+\widehat{g}(X) = \paren{g_{i,j}X^i} \epsilon^j := X_j\,\epsilon^j,
+\end{align*} where the \emph{\textbf{components}} of \emph{\textbf{the covector field}} $\widehat{g}(X)$ is denoted by 
+\begin{align}
+X_j &= g_{i,j}X^i. \label{eqn: rieman_lower_index}
+\end{align} We say that \emph{$\widehat{g}(X)$ is obtained from $X$} \underline{\emph{\textbf{by lowering an index}}}. And \underline{\emph{\textbf{the covector field}} $\widehat{g}(X)$} is denoted by \underline{$X^{\flat}$} and called \underline{\emph{\textbf{$X$ flat}}}.
+\end{definition} 
+
+\item \begin{remark}
+Because the matrix $(g_{i,j})$ is nonsingular at each point, the map $\widehat{g}$ is \textit{\textbf{invertible}}, and the matrix of $\widehat{g}^{-1}$ is just \emph{\textbf{the inverse matrix of $(g_{i,j})$}}. We denote \emph{\textbf{this inverse matrix}} by $(g^{i,j})$, so that $g^{i,j} g_{j,k} = g_{k,j} g^{j,i} = \delta_{k}^{i}$. The \emph{\textbf{symmetry}} of $(g_{i,j})$ easily implies that $(g^{i,j})$ is also \emph{\textbf{symmetric}} in $i$ and $j$. 
+\end{remark}
+
+\item \begin{definition}
+Given $\omega = \omega_j\,\epsilon^{j}$, the inverse map $\widehat{g}^{-1}$ is given by
+\begin{align*}
+\widehat{g}^{-1}(\omega) &= \omega^i\,E_i
+\end{align*}
+where
+\begin{align}
+\omega^{i} &= g^{i,j}\,\omega_{j} \label{eqn: rieman_raising_index}
+\end{align} If $\omega$ is a \emph{covector field}, the \underline{\emph{\textbf{vector field} $\widehat{g}^{-1}(\omega)$ is called \textbf{$\omega$ sharp}}} and denoted by \underline{$\omega^{\sharp}$}, and we say that \emph{it is obtained from $\omega$ by} \emph{\textbf{raising an index}}.
+\end{definition}
+
+\begin{definition}
+The \emph{two \textbf{inverse isomorphisms}} $\flat$ and $\sharp$ are known as \underline{\emph{\textbf{the musical isomorphisms}}}.
+\end{definition}
+
+\item \begin{definition}
+If $g$ is a Riemannian metric on $M$ and $f: M \rightarrow \bR$ is a smooth function, the \underline{\emph{\textbf{gradient}}} of $f$ is \emph{\textbf{the vector field}}
+\begin{align*}
+\text{grad }f &= \paren{df}^{\sharp} := \widehat{g}^{-1}(df)
+\end{align*}  \emph{obtained from $df$ by \textbf{raising an index}}. It is also denoted as $\grad{}{f}$.
+\end{definition}
+
+\item \begin{remark}
+$\text{grad }f$ is \emph{\textbf{characterized}} by the fact that
+\begin{align}
+df_p(w) &= \inn{\text{grad }f |_{p}}{w}_{g}\, \quad \forall p \in M, \, w \in T_{p}M,  \label{eqn: gradient_projection_differential}\\
+\text{or }df(X) &= \inn{\text{grad }f}{X}_{g}\, \quad \forall X  \in \frX(M),  \nonumber
+\end{align} and has the \textit{\textbf{local basis expression}}
+\begin{align}
+\text{grad }f&= \paren{g^{i,j}E_i f} E_j. \label{eqn: gradient_coordinate_representation}
+\end{align} Thus if $(E_i)$ is an \emph{\textbf{orthonormal frame}}, then $\text{grad }f$ is the \emph{vector field} whose \emph{\textbf{components are the same as the components of $df$}}; but \emph{in other frames}, \emph{this will not be the case}. 
+\end{remark}
+
+\item \begin{remark}
+In smooth coordinates $(\partial / \partial x^i)$, we have
+\begin{align}
+\text{grad }f&= g^{i,j}\partdiff{f}{x^i}\partdiff{}{x^j}. \label{eqn: gradient_coordinate_representation_2}
+\end{align}
+\end{remark}
+
+\item \begin{definition}
+Suppose $g$ is a Riemannian metric on $M$, and $x \in M$. We can define an \emph{\textbf{inner product}} on \emph{\textbf{the cotangent space}} $T_{x}^{*}M$ by
+\begin{align*}
+\langle\,\omega\,,\,\eta\,\rangle_g &= \langle\,\omega^{\sharp}\,,\,\eta^{\sharp}\,\rangle_g.
+\end{align*}
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Coordinate Representation of Inner Product on Covectors}})\\
+We see that under the formula for sharp operator
+\begin{align*}
+\langle\,\omega\,,\,\eta\,\rangle_g &= \langle\,\omega^{\sharp}\,,\,\eta^{\sharp}\,\rangle_g\\
+&= g_{k,l}\paren{g^{k,i}\,\omega_{i}}\paren{g^{l,j}\,\eta_{j}}\\
+&= \delta_{l}^{i}\omega_i\paren{g^{l,j}\,\eta_{j}} \\
+&= g^{i,j}\omega_{i}\,\eta_{j}.
+\end{align*} In other words, \emph{\textbf{the inner product on covectors} is represented by \textbf{the inverse matrix} $g^{i,j}$}. 
+\end{remark}
+
+\item Finally, there is a \emph{\textbf{unique smooth fiber metric}} on each tensor bundle $T^{(k,l)}TM$ so that 
+\begin{align}
+\inn{\alpha_1 \xdotx{\otimes} \alpha_{k+l}}{\beta_1 \xdotx{\otimes} \beta_{k+l}} &= \inn{\alpha_1}{\beta_1} \xdotx{\cdot} \inn{\alpha_{k+l}}{\beta_{k+l}} \label{eqn: inner_product_tensor}
+\end{align}
+\end{itemize}
+
+\section{The Levi-Civita Connection}
+\subsection{Metric Connections}
+\begin{itemize}
+\item \begin{definition}
+Let $g$ be a \emph{Riemannian or pseudo-Riemannian metric} on a smooth manifold $M$ (with or without boundary). A connection $\nabla$ on $TM$ is said to be \underline{\emph{\textbf{compatible with g}}}, or to be \underline{\emph{\textbf{a metric connection}}}, if it satisfies the following \emph{product rule} for all
+$X, Y, Z \in \frX(M)$:
+\begin{align}
+ \conn{Z}{\inn{X}{Y}} &= \inn{\conn{Z}{X}}{Y} + \inn{X}{\conn{Z}{Y}} \label{eqn: metric_connection} \\
+\Leftrightarrow Z\inn{X}{Y} &= \inn{\conn{Z}{X}}{Y} + \inn{X}{\conn{Z}{Y}} \nonumber
+\end{align} 
+\end{definition}
+
+
+\item \begin{remark} More understanding of the equation \eqref{eqn: metric_connection}:
+\begin{enumerate}
+\item $\conn{Z}{\inn{X}{Y}} = \conn{Z}{(g(X, Y))}$. Note that $\inn{X}{Y} = g(X, Y) \in \cC^{\infty}(M)$ is \emph{a smooth function} since $g$ is a \emph{\textbf{covariant $2$-tensor}}.  Thus $\conn{Z}{\inn{X}{Y}} = Z\inn{X}{Y} \in \cC^{\infty}(M)$ since for $f \in \cC^{\infty}(M)$, the directional derivative of $f$ along direction of $Z$, $\conn{Z}{f} = Zf$. Intuitively, it measures \emph{\textbf{the directional derivatives of the angle} between two vector fields $X$ and $Y$ along the direction of vector field $Z$}.
+
+\item $\inn{\conn{Z}{X}}{Y} = g\paren{\conn{Z}{X}, Y} \in \cC^{\infty}(M)$ measures \emph{\textbf{the angle between $\conn{Z}{X}$ and $Y$}}; similarly, $\inn{X}{\conn{Z}{Y}} = g\paren{X, \conn{Z}{Y}}$ measures \emph{\textbf{the angle between $X$ and $\conn{Z}{Y}$}}. In both terms,  $\conn{Z}{X}$ is the \emph{\textbf{directional derivative}} $X$ along $Z$, which is \emph{the difference} between $X$ and \emph{its infinitesimal parallel transport} along $Z$. 
+
+\item The equation \eqref{eqn: metric_connection} states that  ``\emph{\textbf{the directional derivatives of the angle} between two vector fields $X$ and $Y$ along the direction of vector field $Z$} \emph{\textbf{is equal to}} the \emph{\textbf{sum of angles}} of \emph{the \textbf{directional derivative of one vector field} along direction of $Z$} \emph{\textbf{with respect to the other vector field}}".
+\end{enumerate}
+\end{remark}
+
+\item \begin{proposition} (\textbf{Characterizations of Metric Connections}).\\
+Let $(M, g)$ be a Riemannian or pseudo-Riemannian manifold (with or without boundary), and let $\nabla$ be a connection on $TM$. The following conditions are \textbf{equivalent}:
+\begin{enumerate}
+\item $\nabla$ is \textbf{compatible} with $g$: $\conn{Z}{\inn{X}{Y}} = \inn{\conn{Z}{X}}{Y} + \inn{X}{\conn{Z}{Y}}$.
+\item $g$ is \textbf{parallel with respect to} $\nabla$: $\nabla g \equiv 0$.
+\item In terms of any smooth local frame $(E_i)$, the \textbf{connection coefficients} of $\nabla$ satisfy
+\begin{align}
+\Gamma_{k,i}^{l}g_{l,j} + \Gamma_{k,j}^{l}g_{i,l} &= E_k(g_{i,j}).  \label{eqn: metric_connection_christoffel_symbol}
+\end{align}
+\item If $V, W$ are smooth vector fields along any smooth curve $\gamma$, then
+\begin{align}
+\frac{d}{dt}\inn{V}{W} &= \inn{D_tV}{W} + \inn{V}{D_tW}. \label{eqn: metric_connection_derivative_of_inn}
+\end{align}
+\item If $V, W$ are \textbf{parallel} vector fields \textbf{along a smooth curve} $\gamma$ in $M$, then $\inn{V}{W}$ is \textbf{constant} along $\gamma$.
+\item Given any smooth curve $\gamma$ in $M$, every \textbf{parallel transport map} along $\gamma$ is a \textbf{linear isometry}.
+\item  Given any smooth curve $\gamma$ in $M$, every \textbf{orthonormal basis} at a point of $\gamma$ can be \textbf{extended} to a \textbf{parallel orthonormal frame} along $\gamma$.
+\end{enumerate}
+\end{proposition}
+
+\item \begin{remark}
+From the proposition statement 5,6,7 above, we see that \emph{\textbf{the metric connection}} $\nabla$ that is compatible with $g$ \emph{defines} \emph{the \textbf{parallel transport operation}} that maintains \emph{the \textbf{angle} between two vector fields \textbf{unchanged}}. In other word, \emph{\textbf{\underline{the parallel transport} defined by \underline{the metric connection}}} is  an \emph{\textbf{\underline{isometry}}} on the manifold. 
+\end{remark}
+
+\item \begin{corollary}
+Suppose $(M, g)$ is a Riemannian or pseudo-Riemannian manifold with or without boundary, $\nabla$ is a \textbf{metric connection} on $M$, and $\gamma: I \rightarrow M$ is a smooth curve.
+\begin{enumerate}
+\item $\abs{\gamma'(t)}$ is \textbf{constant} if and only if $D_t\gamma'(t)$ is \textbf{orthogonal} to $\gamma'(t)$ for all $t \in I$.
+\item If $\gamma$ is a \textbf{geodesic}, then $\abs{\gamma'(t)}$ is \textbf{constant}.
+\end{enumerate}
+\end{corollary}
+
+\item \begin{proposition}
+If $M$ is an embedded Riemannian or pseudo-Riemannian \textbf{submanifold} of $\bR^n$ or $\bR^{r,s}$, the \textbf{tangential connection} on $M$ is \textbf{compatible} with the \textbf{induced} Riemannian or pseudo-Riemannian \textbf{metric}.
+\end{proposition}
+\end{itemize}
+\subsection{Symmetric Connections}
+\begin{itemize}
+\item \begin{definition}
+A \emph{\textbf{connection}} $\nabla$ on the tangent bundle of a smooth manifold $M$ is \underline{\emph{\textbf{symmetric}}} if
+\begin{align*}
+\conn{X}{Y} - \conn{Y}{X} &= [X, Y]  \quad \text{for all }X,Y \in \frX(M),
+\end{align*} where $[X, Y]$ is the Lie bracket of two vector fields.
+\end{definition}
+
+\item \begin{definition}
+The \emph{\textbf{torsion tensor}} of the \emph{connection} $\nabla$ is a \emph{\textbf{smooth $(1,2)$-tensor field}} $\tau: \frX(M) \times \frX(M) \rightarrow \frX(M)$ defined by
+\begin{align*}
+\tau(X, Y) &:= \conn{X}{Y} - \conn{Y}{X} - [X, Y].
+\end{align*}
+\end{definition}
+
+\item \begin{remark}
+Thus, a connection $\nabla$ is \emph{\textbf{symmetric}} if and only if its torsion \emph{\textbf{vanishes}} identically $\tau \equiv 0$.
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Coordinate Representation of Symmetric Connections}})\\
+A connection is \emph{\textbf{symmetric}} if and only if \emph{its \textbf{connection coefficients}} in \emph{every coordinate frame} is \emph{\textbf{symmetric}} in \emph{\textbf{lower two indices}} That is, \underline{$\Gamma_{i,j}^{k} = \Gamma_{j,i}^{k}$} for all $i,j$. 
+\end{remark}
+
+\item \begin{proposition}
+If $M$ is an embedded (pseudo-)Riemannian submanifold of a (pseudo-)Euclidean space, then the \textbf{tangential connection} on $M$ is \textbf{symmetric}.
+\end{proposition}
+\end{itemize}
+
+\subsection{The Levi-Civita Connections}
+\begin{itemize}
+\item \begin{theorem} (\textbf{Fundamental Theorem of Riemannian Geometry}). \citep{lee2018introduction}\\
+Let $(M, g)$ be a Riemannian or pseudo-Riemannian manifold (with or without boundary). There exists a \textbf{unique connection} $\nabla$ on $TM$ that \textbf{is compatible with $g$} and \textbf{symmetric}. It is called the \underline{\textbf{Levi-Civita connection of $g$}} (or also, when $g$ is \textbf{positive definite}, the \underline{\textbf{Riemannian connection}}).
+\end{theorem}
+
+\item \begin{corollary} (\textbf{Formulas for the Levi-Civita Connection}). \citep{lee2018introduction}\\
+Let  $(M, g)$ be a Riemannian or pseudo-Riemannian manifold (with or without boundary), and let $\nabla$ be its \textbf{Levi-Civita connection}.
+\begin{enumerate}
+\item  \underline{(\textbf{In Terms of Vector Fields})}: If $X, Y, Z$ are smooth vector fields on $M$, then
+\begin{align}
+\inn{\conn{X}{Y}}{Z} &=\frac{1}{2}\paren{X\langle{Y,Z}\rangle + Y\langle{Z,X}\rangle - Z\langle{X,Y}\rangle -  \langle{Y, [X, Z]}\rangle - \langle{Z, [Y, X]}\rangle + \langle{X, [Z, Y]}\rangle}\label{eqn: levi_civita_formula_vector_fields}
+\end{align}
+(This is known as \underline{\textbf{Koszul's formula}}.)
+\item \underline{(\textbf{In Coordinates})}: In any smooth coordinate chart for $M$, the \textbf{coefficients of the Levi-Civita connection} are given by
+\begin{align}
+\Gamma_{i,j}^{k} &= \frac{1}{2}g^{k,l}\paren{ \partdiff{}{x^i}g_{j,l} + \partdiff{}{x^j}g_{i,l} - \partdiff{}{x^l}g_{i,j} }.\label{eqn: levi_civita_formula_christoffel_symbol_metric}
+\end{align}
+\item (\textbf{In A Local Frame}): Let $(E_i)$ be a smooth \textbf{local frame} on an open subset $U \subseteq M$, and let $c_{i,j}^{k}: U \rightarrow \bR$ be the $n^3$ smooth functions defined by
+\begin{align}
+[E_i, E_j] &= c_{i,j}^k \, E_k\label{eqn: coefficient_lie_bracket}
+\end{align}
+Then \textbf{the coefficients of the Levi-Civita connection} in this frame are
+\begin{align}
+\Gamma_{i,j}^{k} &= \frac{1}{2}g^{k,l}\paren{E_i\,g_{j,l} + E_j\,g_{i,l} - E_l\,g_{i,j} - g_{j,m}c_{i,l}^{m} - g_{l,m}c_{j,i}^m + g_{i,m}c_{l,j}^m}. \label{eqn: levi_civita_formula_christoffel_symbol_local_frames}
+\end{align}
+
+\item (\textbf{In A Local Orthonormal Frame}): If $g$ is Riemannian, $(E_i)$ is a smooth \textbf{local orthonormal frame}, and the functions $c_{i,j}^k$ are defined by \eqref{eqn: coefficient_lie_bracket}, then
+\begin{align}
+\Gamma_{i,j}^{k} &= \frac{1}{2}\paren{ c_{i,j}^{k} - c_{i,k}^{j} - c_{j,k}^{i} } \label{eqn: levi_civita_formula_christoffel_symbol_ortho_local_frames}
+\end{align}
+\end{enumerate}
+\end{corollary}
+
+\item \begin{remark}
+On every Riemannian or pseudo-Riemannian manifold, we will always use the Levi-Civita connection from now on without further comment.
+\end{remark}
+
+\item \begin{remark}
+\emph{Geodesics} with respect to the Levi-Civita connection are called \underline{\emph{\textbf{Riemannian geodesics}}}, or
+simply ``\emph{geodesics”} as long as there is no risk of confusion. 
+\end{remark}
+
+\item \begin{remark}
+The \emph{\textbf{connection coefficients} $\Gamma_{i,j}^{k}$ of \textbf{the Levi-Civita connection}} in coordinates, given by \eqref{eqn: levi_civita_formula_christoffel_symbol_metric}, are called \underline{\emph{\textbf{the Christoffel symbols of $g$}}}.
+\end{remark}
+
+\item \begin{proposition}
+\begin{enumerate}
+\item The Levi-Civita connection on a (pseudo-)\textbf{Euclidean space} is equal to the \textbf{Euclidean connection}.
+\item Suppose $M$ is an \textbf{embedded} (pseudo-)Riemannian \textbf{submanifold} of a (pseudo-)Euclidean space. Then the Levi-Civita connection on $M$ is equal to\textbf{ the tangential connection} $\nabla^{\top}$.
+\end{enumerate}
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Naturality of the Levi-Civita Connection}). \citep{lee2018introduction}\\
+Suppose $(M,g)$ and $(\widetilde{M}, \widetilde{g})$ are Riemannian or pseudo-Riemannian manifolds with or without boundary, and let $\nabla$ denote the Levi-Civita connection of $g$ and $\widetilde{\nabla}$ that of $\widetilde{g}$. If $\varphi: M \rightarrow \widetilde{M}$ is an isometry, then $\varphi^{*}\widetilde{g} = \nabla$.
+\end{proposition}
+
+\begin{remark} 
+An \emph{\textbf{isometry}} $\varphi$ between the manifold $M$ and $ \widetilde{M}$ can be used to define \emph{\textbf{the pullback connection}} in $M$ from \emph{the  Levi-Civita connection} $\widetilde{M}$. Recall that for general connections, we can only define a pullback connection if $\varphi$ is a \emph{diffeomorphism}.
+\end{remark}
+
+\item \begin{corollary} (\textbf{Naturality of Geodesics}). \\
+Suppose $(M,g)$ and $(\widetilde{M}, \widetilde{g})$ are Riemannian or pseudo-Riemannian manifolds with or without boundary, and $\varphi: M \rightarrow \widetilde{M}$ is a \textbf{local isometry}. If $\gamma$ is a \textbf{geodesic} in $M$, then $\varphi \circ \gamma$ is a \textbf{geodesic} in $M$.
+\end{corollary}
+
+\begin{remark} 
+An \emph{\textbf{isometry}} $\varphi$ between the manifold $M$ and $ \widetilde{M}$ maps a $\nabla$-geodesic in $M$ to a $\widetilde{\nabla}$ -geodesic in $\widetilde{M}$ for both \emph{Levi-Civita Connections} $\nabla$ and $\widetilde{\nabla}$.
+\end{remark}
+
+\item \begin{proposition}
+Suppose $(M,g)$ is a Riemannian or pseudo-Riemannian manifold. The connection induced on each \textbf{tensor bundle} by the Levi-Civita connection is \textbf{compatible} with \textbf{the induced inner product on tensors}, in the sense that $X \inn{F}{G}= \inn{\conn{X}{F}}{G} + \inn{F}{\conn{X}{G}}$ for every vector field $X$ and every pair of smooth tensor fields $F, G \in T^{(k,l)}TM$.
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Volume Preseving under Parallel Transport})\\
+Let $(M, g)$ be an oriented Riemannian manifold. The Riemannian volume form of $g$ is \textbf{parallel} with respect to the Levi-Civita connection.
+\end{proposition}
+
+\item \begin{proposition} 
+The \textbf{musical isomorphisms commute with the total covariant derivative operator}: if $F$ is any smooth tensor field with a \textbf{contravariant} $i$-th index
+position, and $\flat$ represents the operation of lowering the $i$-th index, then
+\begin{align}
+\nabla (F^{\flat}) &= \paren{\nabla F}^{\flat}  \label{eqn: levi_civita_connection_flat_operation}
+\end{align}
+Similarly, if $G$ has a \textbf{covariant} $i$-th position and $\sharp$ denotes raising the $i$-th index, then
+\begin{align}
+\nabla (G^{\sharp}) &= \paren{\nabla G}^{\sharp}  \label{eqn: levi_civita_connection_sharp_operation}
+\end{align}
+\end{proposition}
+\end{itemize}
+
+\subsection{The Exponential Map}
+\begin{itemize}
+\item \begin{lemma} (\textbf{Rescaling Lemma}).\\
+ For every $p\in M$, $v \in T_{p}M$, and $c, t \in \bR$,
+ \begin{align}
+ \gamma_{c\,v}(t) = \gamma_{v}(c\,t) \label{eqn: exp_map_rescaling}
+ \end{align} whenever either side is defined.
+\end{lemma}
+
+\item \begin{definition}
+Define a subset $\cE \subseteq  TM$, \emph{\textbf{the domain of the exponential map}}, by
+\begin{align*}
+\cE = \set{v \in TM: \gamma_v\text{ is defined on an interval containing [0,1]}},
+\end{align*}
+and then define \underline{\emph{\textbf{the exponential map}}} $\exp: \cE \rightarrow M$ by
+\begin{align*}
+\exp(v)  &= \gamma_{v}(1)
+\end{align*}
+For each $p \in M$, the \emph{\textbf{restricted exponential map}} at $p$, denoted by $\exp_p$, is the restriction of $\exp$ to the set $\cE_p = \cE \cap T_{p}M$.
+\end{definition}
+
+\item \begin{remark}
+The \emph{\textbf{exponential map} of a \textbf{Riemannian manifold}} should not be confused with \emph{the \textbf{exponential map} of a \textbf{Lie group}}. The two are closely related for \emph{\textbf{bi-invariant metrics}}, but in general they need not be. 
+\end{remark}
+
+\item \begin{remark}
+Recall that a subset of a vector space $V$ is said to be \emph{\textbf{star-shaped}} \emph{with respect to a point} $x \in S$ if for every $y \in S$, the \emph{line segment} from $x$ to $y$ is contained in $S$.
+\end{remark}
+
+\item \begin{proposition}(\textbf{Properties of the Exponential Map}). \citep{lee2018introduction}\\
+Let $(M, g)$ be a Riemannian or pseudo-Riemannian manifold, and let $\exp: \cE \rightarrow M$ be its exponential map.
+\begin{enumerate}
+\item  $\cE$ is an \textbf{open} subset of $TM$ containing the image of the \textbf{zero section}, and each
+set $\cE_p \subseteq T_{p}M$ is \textbf{star-shaped with respect to $0$}.
+\item For each $v \in TM$, the \textbf{geodesic} $\gamma_v$ is given by
+\begin{align}
+\gamma_{v}(t) &= \exp(v\,t) \label{eqn: exp_map_geodesic}
+\end{align} for all $t$ such that either side is defined.
+\item The exponential map is \textbf{smooth}.
+\item For each point $p \in M$, the \textbf{differential} $d(\exp_p)_0: T_0(T_{p}M) \simeq T_{p}M \rightarrow T_{p}M$ is \textbf{the identity map} of $T_{p}M$, under the usual identification of $T_{0}(T_{p}M)$ with $T_{p}M$.
+\end{enumerate}
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Naturality of the Exponential Map}). \\
+Suppose $(M, g)$ and $\widetilde{M},\widetilde{g})$ are Riemannian or pseudo-Riemannian manifolds and $\varphi: M \rightarrow \widetilde{M}$ is a \textbf{local isometry}. Then for every $p \in M$, the following diagram commutes:
+\[
+  \begin{tikzcd}
+    \cE_{p} \arrow{r}{d\varphi_p} \arrow[swap]{d}{\exp_p} & \widetilde{\cE}_{\varphi(p)} \arrow{d}{\exp_{\varphi(p)}} \\
+    M \arrow{r}{\varphi} & \widetilde{M},
+  \end{tikzcd}
+\] where $\cE_p \subseteq T_{p}M$ and $ \widetilde{\cE}_{\varphi(p)} \subseteq T_{\varphi(p)}\widetilde{M}$ are the domains of the restricted exponential maps $\exp_p$ (with respect to $g$) and $\exp_{\varphi(p)}$ (with respect to $\tilde{g}$), respectively.
+\end{proposition}
+
+\item \begin{remark}
+Under isometry transformation, the exponential map \emph{\textbf{remain unchanged}} from $TM$ to $T\widetilde{M}$.
+\end{remark}
+
+\item The following proposition shows that \emph{\textbf{local isometries}} of connected manifolds are \emph{\textbf{completely determined}} by their \emph{\textbf{values}} and \emph{\textbf{differentials}} at a single point.
+\begin{proposition}
+Let $(M, g)$ and $(\widetilde{M},\widetilde{g})$ be Riemannian or pseudo-Riemannian manifolds, with $M$ \textbf{connected}. Suppose $\varphi, \psi: M \rightarrow \widetilde{M}$ are \textbf{local isometries} such that for some point $p \in M$, we have $\varphi(p) = \psi(p)$ and $d\varphi_p = d\psi_p$. Then $\varphi \equiv \psi$.
+\end{proposition}
+
+\item \begin{definition}
+A Riemannian or pseudo-Riemannian manifold  $(M, g)$ is said to be \emph{\textbf{geodesically complete}} if \emph{every maximal geodesic} is defined for \emph{\textbf{all}} $t \in \bR$, or equivalently if \emph{the domain of the exponential map is all of $TM$}. 
+\end{definition}
+\end{itemize}
+
+\subsection{Normal Neighborhoods and Normal Coordinates}
+\begin{itemize}
+\item \begin{definition}
+Let $(M, g)$ be a Riemannian or pseudo-Riemannian manifold of dimension $n$ (without boundary). Recall that for every $p \in M$, the restricted exponential map $\exp_p$ maps the open subset $\cE_p \subseteq T_{p}M$ smoothly into $M$. Because $d(\exp_p)_0$ is \emph{\textbf{invertible}}, the \emph{inverse function theorem} guarantees that there exist a neighborhood $V$ of the origin in $T_{p}M$ and a neighborhood $U$ of $p$ in $M$ such that $\exp_p: V \rightarrow U$ is a \emph{\textbf{diffeomorphism}}. 
+
+A neighborhood $U$ of $p \in M$ that is the \emph{\textbf{diffeomorphic image}} under $\exp_p$ of \emph{a star-shaped neighborhood of $0 \in T_{p}M$} is called \underline{\emph{\textbf{a normal neighborhood}}} of $p$.
+\end{definition}
+
+\item \begin{definition}
+Every \emph{orthonormal basis} $(b_i)$ for $T_{p}M$ determines \emph{\textbf{a basis isomorphism}} $B: \bR^n \rightarrow T_{p}M$ by $B(x^1 \xdotx{,} x^n) = x^i\,b_i$. If $U = \exp_{p}(V)$ is \emph{\textbf{a normal neighborhood}} of $p$, we can combine this \emph{isomorphism} with \emph{the exponential map} to get \emph{\textbf{a smooth coordinate map}} $\varphi: B^{-1} \circ (\exp_p|_{V})^{-1}: U \rightarrow \bR^n$:
+\[
+  \begin{tikzcd}
+   T_{p}M  \arrow{r}{B^{-1}} & \bR^{n} \\
+    U. \arrow{u}{(\exp_p|_{V})^{-1}} \arrow{ur}{\varphi} & 
+  \end{tikzcd}
+\] 
+Such coordinates are called \underline{\emph{\textbf{(Riemannian or pseudo-Riemannian) normal coordinates}}} centered at $p$.
+\end{definition}
+
+\item \begin{proposition} (\textbf{Uniqueness of Normal Coordinates}). \citep{lee2018introduction} \\
+Let $(M, g)$ be a Riemannian or pseudo-Riemannian $n$-manifold, $p$ a point of $M$, and $U$ a \textbf{normal neighborhood} of $p$. For every \textbf{normal coordinate chart} on $U$ centered at $p$, the coordinate basis is \textbf{orthonormal} at $p$; and for every orthonormal basis $(b_i)$ for $T_{p}M$, there is a \textbf{unique normal coordinate chart} $(x^i)$ on $U$ such that $\partdiff{}{x^i}|_{p} = b_i$ for $i = 1 \xdotx{,} n$. In the Riemannian case, any two normal coordinate charts $(x^i)$ and $(\widetilde{x}^j)$ are related by
+\begin{align}
+\widetilde{x}^j &= A_i^j \,x^i  \label{eqn: normal_coordinate_change_of_coordinate}
+\end{align} for some (constant) matrix $A_{i}^{j} \in \cO(n)$.
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Properties of Normal Coordinates}). \citep{lee2018introduction} \\
+Let $(M, g)$ be a Riemannian or pseudo-Riemannian $n$-manifold, and let $(U, (x^i))$ be any \textbf{normal coordinate chart} centered at $p \in M$.
+\begin{enumerate}
+\item The coordinates of $p$ are $(0 \xdotx{,} 0)$.
+\item The \textbf{components} of the \textbf{metric} at $p$ are $g_{i,j} = \delta_{i,j}$ if $g$ is \textbf{Riemannian}, and $g_{i,j} = \pm \delta_{i,j}$ otherwise.
+\item For every $v = v^i \partdiff{}{x^i}|_{p} \in T_{p}M$, the \textbf{geodesic} $\gamma_v$ starting at $p$ with \textbf{initial velocity $v$} is represented in \textbf{normal coordinates} by the line
+\begin{align}
+\gamma_{v}(t) &= (tv^1 \xdotx{,} tv^n), \label{eqn: normal_coordinate_geodesic}
+\end{align} as long as $t$ is in some interval $I$ containing $0$ such that $\gamma_v(I) \subseteq U$.
+\item The \textbf{Christoffel symbols} in these coordinates \textbf{vanish} at $p$.
+\item All of the \textbf{first partial derivatives} of $g_{i,j}$ in these coordinates \textbf{vanish} at $p$.
+\end{enumerate}
+\end{proposition}
+
+\item \begin{remark}
+The \emph{geodesics} \emph{\textbf{starting at $p$}} and lying in a \emph{\textbf{normal neighborhood}} of $p$ are called \underline{\emph{\textbf{radial geodesics}}}. (But be warned that geodesics that do not pass through p do not in general have a simple form in normal coordinates.)
+\end{remark}
+\end{itemize}
+
+\section{Curvature}
+\subsection{Flatness Criterion}
+\begin{itemize}
+\item \begin{remark}
+Under the Euclidean connection, let us look more closely at the quantity $\overline{\nabla}_{X}{\overline{\nabla}_{Y}}Z  - \overline{\nabla}_{Y}{\overline{\nabla}_{X}}Z$ when $X$, $Y$, and $Z$ are smooth vector fields.
+\begin{align*}
+\overline{\nabla}_{X}{\overline{\nabla}_{Y}}Z &= \overline{\nabla}_{X}{(Y(Z^k)\partial_k)} = X\paren{Y^{j} \partial_j(Z^k)}\partial_k= XY(Z^k)\partial_k\\
+\overline{\nabla}_{Y}{\overline{\nabla}_{X}}Z &= YX(Z^k)\partial_k\\
+\overline{\nabla}_{X}{\overline{\nabla}_{Y}}Z  - \overline{\nabla}_{Y}{\overline{\nabla}_{X}}Z &= (XY - YX)(Z^k)\partial_k = [X, Y](Z^k)\partial_k = \overline{\nabla}_{[X, Y]}{Z}\\
+\Rightarrow \overline{\nabla}_{X}{\overline{\nabla}_{Y}}Z  - \overline{\nabla}_{Y}{\overline{\nabla}_{X}}Z &=\overline{\nabla}_{[X, Y]}{Z}.
+\end{align*} Recall that a Riemannian manifold is said to be \emph{\textbf{flat}} if it is \emph{\textbf{locally isometric}} to a \emph{\textbf{Euclidean space}}, that is, if every point has a neighborhood that is \emph{\textbf{isometric}} to an open set in $\bR^n$ with its \emph{\textbf{Euclidean metric}}. 
+
+We say that a \emph{\textbf{connection}} $\nabla$ on a smooth manifold $M$ satisfies \underline{\emph{\textbf{the flatness criterion}}} if whenever $X, Y, Z$ are smooth vector fields defined on an open subset of $M$, the following identity holds:
+\begin{align}
+\conn{X}{\conn{Y}{Z}} - \conn{Y}{\conn{X}{Z}}  = \conn{[X, Y]}{Z} \label{eqn: flatness_criterion}
+\end{align}
+\end{remark}
+
+\item \begin{remark}
+The geometric interpretation of the term $\conn{X}{\conn{Y}{Z}}$ is the \emph{two-step process}:
+\begin{enumerate}
+\item First, \emph{\textbf{parallel transport}} of $Z$ along \emph{the \textbf{flow} of vector field} $Y$;
+\item Then, \emph{\textbf{parallel transport}} of $Z$ along \emph{the \textbf{flow} of vector field} $X$
+\end{enumerate} Then the resulting vector field is $\conn{X}{\conn{Y}{Z}}$.
+\end{remark}
+
+\item \begin{proposition}
+If $(M,g)$ is a \textbf{flat} Riemannian or pseudo-Riemannian manifold, then its \textbf{Levi-Civita connection} satisfies \textbf{the flatness criterion}.
+\end{proposition}
+\end{itemize}
+\subsection{The Curvature Tensor}
+\begin{itemize}
+\item \begin{definition}
+Let $(M,g)$ be a Riemannian or pseudo-Riemannian manifold, and define a map $R: \frX(M) \times \frX(M) \times \frX(M) \rightarrow \frX(M)$ by
+\begin{align}
+R(X, Y)Z &= \conn{X}{\conn{Y}{Z}} - \conn{Y}{\conn{X}{Z}}  -  \conn{[X, Y]}{Z} \label{eqn: curvature_def}
+\end{align}
+\end{definition}
+
+\item The following proposition make sure this multilinear map defines a $(1,3)$-tensor field
+\begin{proposition}
+The map $R$ defined above is \textbf{multilinear} over $\cC^{\infty}(M)$, and thus defines a \textbf{$(1,3)$-tensor field} on $M$.
+\end{proposition}
+
+\item \begin{definition}
+For each pair of vector fields $X, Y \in \frX(M)$, the map $R(X,Y): \frX(M) \rightarrow \frX(M)$ given by $Z \mapsto R(X,Y)Z$ is a \emph{\textbf{smooth bundle endomorphism}} of $TM$, called \emph{\textbf{the curvature endomorphism determined by $X$ and $Y$}}.
+
+The \emph{\textbf{tensor field $R$}} itself is called \emph{\textbf{the (Riemann) curvature endomorphism}} or the \underline{\emph{\textbf{$(1, 3)$-curvature tensor}}}. 
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Coordinate Representation of the Curvature Tensor}})\\
+We adopt the convention that \emph{\textbf{the last index is the contravariant (upper) one}}. This is contrary to our default assumption that \emph{covector arguments come first}. Thus, for example, \emph{the curvature endomorphism} can be written in terms of local coordinates $(x^i)$ as
+\begin{align*}
+R &= R_{i,j,k}^{l}\,dx^i \otimes dx^j \otimes dx^k \otimes \partdiff{}{x^l},
+\end{align*} where the coefficients $R_{i,j,k}^{l}$ are defined by
+\begin{align*}
+R\paren{\partdiff{}{x^i}, \partdiff{}{x^j}}\partdiff{}{x^k} &= R_{i,j,k}^{l}\, \partdiff{}{x^l}.
+\end{align*}
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Understanding the Geometric Meaning of the $(1,3)$-Curvature Tensor}})\\
+The  $(1,3)$-tensor $R(X, Y)Z$ describes \emph{the \textbf{difference} of  resulting \textbf{vector fields}} after \emph{\textbf{parallel transporting}} vector field $Z$ through \emph{\textbf{two different routes}}: 
+\begin{enumerate}
+\item First \emph{\textbf{parallel transporting}} along \emph{\textbf{the flow of $Y$}}, then \emph{\textbf{parallel transporting}} along \emph{\textbf{the flow of $X$}}, the resulting vector field is $ \conn{X}{\conn{Y}{Z}}$;
+\item First \emph{\textbf{parallel transporting}} along \emph{\textbf{the flow of $X$}}, then \emph{\textbf{parallel transporting}} along \emph{\textbf{the flow of $Y$}}, the resulting vector field is $ \conn{Y}{\conn{X}{Z}}$;
+\end{enumerate}
+The last term $\conn{[X, Y]}{Z}$ provides additional \emph{\textbf{correction}} if $X$ and $Y$ are \emph{\textbf{not orthorgonal}}.
+
+Thus $R(X, Y)Z = \conn{X}{\conn{Y}{Z}} - \conn{Y}{\conn{X}{Z}}  -  \conn{[X, Y]}{Z}$ is \emph{\textbf{close related to}} \emph{the \textbf{angle} of these \textbf{two resulting vector fields}}. If the surface is \emph{\textbf{flat}}, this angle should be \emph{\textbf{zero}} since \emph{the vector field \textbf{does not rotate}} during the transport and it is \emph{\textbf{regardless of the path it takes}}. On the other hand, if \emph{\textbf{the surface bends}}, then the vector field \emph{will rotate} during the parallel transport and thus traversing through different paths will cause the vector field \emph{points to different directions} in final destination, i.e. the angle is not zero.
+\end{remark}
+
+\item \begin{proposition} (\textbf{The Riemann Curvature via Coefficients of Connection}) \citep{lee2018introduction}\\
+Let $(M,g)$ be a Riemannian or pseudo-Riemannian manifold. In terms of any smooth local coordinates, the components of the $(1,3)$-curvature tensor are given by
+\begin{align}
+R_{i,j,k}^l &= \partial_i \Gamma_{j,k}^{l} -\partial_j \Gamma_{i,k}^{l} + \Gamma_{j,k}^{m}\Gamma_{i,m}^{l}- \Gamma_{i,k}^{m}\Gamma_{j,m}^{l}. \label{eqn: rieman_curvature_13_tensor_coefficient}
+\end{align}
+\end{proposition}
+
+\item \begin{remark}
+The curvature endomorphism also measures \emph{\underline{\textbf{the failure}} of \textbf{second covariant derivatives} along \textbf{families} of curves to \underline{\textbf{commute}}}. Given a smooth one-parameter \emph{family of curves} $\Gamma: J \times I \rightarrow M$, recall that the velocity fields $\partial_{t}\Gamma(s,t) = (\Gamma_s)'(t)$ and $\partial_{s}\Gamma(s,t) = (\Gamma^{(t)})'(s)$ are smooth vector fields along $\Gamma$.
+
+\begin{proposition}
+Suppose $(M,g)$  is a smooth Riemannian or pseudo-Riemannian manifold and  $\Gamma: J \times I \rightarrow M$  is a smooth one-parameter \textbf{family} of curves in $M$.
+Then for every smooth vector field $V$ along $\Gamma$,
+\begin{align}
+D_{s}D_{t}V - D_{t}D_{s}V &= R(\partial_s\,\Gamma, \partial_t\,\Gamma)V  \label{eqn: rieman_curvature_2nd_covariant_deriv_not_commute}
+\end{align}
+\end{proposition}
+\end{remark}
+
+\item \begin{definition}
+We define the \underline{\emph{\textbf{(Riemann) curvature tensor}}} to be the \underline{\emph{$(0,4)$-tensor field}} $Rm = R^{\flat}$ (also denoted by
+$Riem$ by some authors) obtained from the $(1,3)$-curvature tensor $R$ by \emph{\textbf{lowering its last index}}. Its \emph{action} on vector fields is given by
+\begin{align}
+Rm(X, Y, Z, W) &:= \inn{R(X, Y)Z}{W}_{g} \label{eqn: rieman_curvature_tensor_on_vector_field}
+\end{align} This quanitity measures the angle between $R(X, Y)Z$ and $W$.
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Coordinate Representation of the Riemann Curvature Tensor}})\\
+In terms of any smooth local coordinates, it is written
+\begin{align*}
+Rm &= R_{i,j,k,l}\,dx^i \otimes dx^j \otimes dx^k \otimes dx^l,
+\end{align*}
+where $ R_{i,j,k,l} = g_{l,m}R_{i,j,k}^{m}$.  We also see that 
+\begin{align}
+R_{i,j,k,l} &= g_{l,m}\paren{\partial_i \Gamma_{j,k}^{m} -\partial_j \Gamma_{i,k}^{m} + \Gamma_{j,k}^{p}\Gamma_{i,p}^{m}- \Gamma_{i,k}^{p}\Gamma_{j,p}^{m}}. \label{eqn: rieman_curvature_tensor_coefficient}
+\end{align}
+\end{remark}
+
+\item \begin{proposition}
+The \textbf{curvature tensor} is a \underline{\textbf{local isometry invariant}}: if $(M,g)$ and $(\widetilde{M}, \widetilde{g})$ are Riemannian or pseudo-Riemannian manifolds and $\varphi: M \rightarrow \widetilde{M}$ is a local isometry, then $\varphi^{*}\widetilde{Rm} = Rm$.
+\end{proposition}
+\end{itemize}
+
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{book_reference.bib}
+\end{document}

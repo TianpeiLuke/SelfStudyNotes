@@ -1,0 +1,30 @@
+\contentsline {section}{\numberline {1}Notations and Symbols}{2}
+\contentsline {subsection}{\numberline {1.1}Tangent Space and Differential at $p$}{2}
+\contentsline {subsection}{\numberline {1.2}Cotangent Space}{2}
+\contentsline {subsection}{\numberline {1.3}Tangent Bundle and Vector Field}{3}
+\contentsline {subsection}{\numberline {1.4}Cotangent Bundle and Covector Field}{4}
+\contentsline {subsection}{\numberline {1.5}Vector Bundle and Section}{5}
+\contentsline {subsection}{\numberline {1.6}Submerision, Immersion and Embedding}{6}
+\contentsline {subsection}{\numberline {1.7}Tensors}{7}
+\contentsline {subsection}{\numberline {1.8}Symmetric Tensor Fields}{9}
+\contentsline {subsection}{\numberline {1.9}Differential Forms}{10}
+\contentsline {subsection}{\numberline {1.10}Connections}{12}
+\contentsline {subsection}{\numberline {1.11}Curvatures}{14}
+\contentsline {section}{\numberline {2}Definitions and Theorems}{16}
+\contentsline {subsection}{\numberline {2.1}Tangent Space and Differential at $p$}{16}
+\contentsline {subsection}{\numberline {2.2}Cotangent Space}{17}
+\contentsline {subsection}{\numberline {2.3}Tangent Bundle and Vector Field}{17}
+\contentsline {subsection}{\numberline {2.4}Cotangent Bundle and Covector Field}{18}
+\contentsline {subsection}{\numberline {2.5}Tensor}{19}
+\contentsline {subsection}{\numberline {2.6}Differential Form}{19}
+\contentsline {subsection}{\numberline {2.7}Connections}{20}
+\contentsline {section}{\numberline {3}Computation}{21}
+\contentsline {subsection}{\numberline {3.1}Tangent Space and Differential at $p$}{21}
+\contentsline {subsection}{\numberline {3.2}Cotangent Space}{22}
+\contentsline {subsection}{\numberline {3.3}Tangent Bundle and Vector Field}{23}
+\contentsline {subsection}{\numberline {3.4}Cotangent Bundle and Covector Field}{24}
+\contentsline {subsection}{\numberline {3.5}Tensor}{25}
+\contentsline {subsection}{\numberline {3.6}Differential Forms}{25}
+\contentsline {subsection}{\numberline {3.7}Connections}{28}
+\contentsline {subsection}{\numberline {3.8}Geodesics and Parallel Transport}{31}
+\contentsline {subsection}{\numberline {3.9}Divergence of Vector Field}{32}
