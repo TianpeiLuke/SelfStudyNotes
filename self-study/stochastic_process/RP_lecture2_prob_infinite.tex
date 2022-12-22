@@ -1,0 +1,437 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, amscd, mathrsfs, dsfont}
+\usepackage[all,cmtip]{xy}
+%\diagramstyle[labelstyle=\scriptstyle]
+\usepackage{tabularx}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Lecture 1: probability measure on infinite-dimensional space}
+\author{ Tianpei Xie}
+\date{ Jul. 9th., 2015 }
+\maketitle
+\tableofcontents
+\newpage
+\section{Weak Topology}
+\subsection{Weak Topology}
+\begin{itemize}
+\item \begin{definition} (\textbf{\emph{Weak Topology on a Set $S$}})  \citep{reed1980methods}\\
+Let $\cF$ be a family of functions from a set $S$ to a topological vector space $(X, \srT)$. The \emph{\textbf{$\cF$-weak} (or simply \textbf{weak}) \textbf{topology}} on $S$ is the weakest topology for which \emph{\textbf{all the functions} $f \in \cF$ are \textbf{continuous}}.
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Construction of Weak Topology}}) \citep{reed1980methods} \\
+To construct a \emph{\textbf{$\cF$-weak topology}} on $S$, we take the family of \emph{all \underline{\textbf{finite intersections}} of sets} of the form $f^{-1}(U)$ where $f \in \cF$ and $U \in \srT$. The collections of these finite intersections of sets \emph{form \textbf{a basis} of \textbf{the $\cF$-weak topology}}.
+
+In other word, \emph{\textbf{the subbasis}} for the \emph{$\cF$-weak topology} on $S$ is of form 
+\begin{align*}
+\srS = \set{f^{-1}(U):  f \in \srF, \text{ and }  U \in \srT}
+\end{align*}
+And the basis of $\srT$
+\begin{align*}
+\srB &= \set{f_1^{-1}(U_1) \xdotx{\cap} f_k^{-1}(U_k): f_1 \xdotx{,} f_k \in \srF, \;\; U_1 \xdotx{,} U_k \in \srT, \;1 \le k < \infty}\\
+B \in \srB \Rightarrow B &= \set{x: f_1(x) \in U_1 \xdotx{,} f_k(x) \in U_k},\; 1 \le k < \infty \\
+&= \set{x: (f_1(x) \xdotx{,} f_k(x)) \in U}.
+\end{align*} The basis element is called a \underline{\emph{\textbf{$k$-dimensional cylinder set}}}.
+\end{remark}
+
+\item \begin{remark}
+Given a topology  on $Y$ and a family of functions in $Y^X= \set{f: X\rightarrow Y}$, $\srF$-weak topolgy is \emph{\textbf{a natural topology}} on $X$ without additional information. 
+
+A product topology on $Y^{\omega}$ can be seen as a $\srF$-weak topology when $\srF = \{\pi_{\alpha}: \prod_{i}Y_i \rightarrow Y_{\alpha} \}$.
+\end{remark}
+
+\item \begin{remark}
+A set $S$ equipped with \emph{$\cF$-weak topology} \emph{\textbf{has little knowledge on itself besides the output of functions}} $f \in \cF$ from a family $\cF$. The induced topology through a family of functions thus does not tell much besides  the behavior of its output. 
+
+For instance, $S$ is the space of hidden states, $\cF = \set{f_1 \xdotx{,} f_n} \subset 2^{S}$ is a series of binary statistical tests, the weak topology on $S$ \emph{partition the domain according to the output of each test}. 
+\end{remark}
+
+\item \begin{remark}
+By construction,  the \emph{\textbf{neighborhood base}} of each point $x \in S$ under the $\cF$-weak topology is contained in the pre-images  $\{f_{n}^{-1}(U_{n})\}$ for \emph{\textbf{finitely many}} of $(f_n) \in \cF$.
+\end{remark}
+
+
+\item \begin{definition} (\textbf{\emph{Weak Topology on Banach Space}})\\
+Let $X$ be a \emph{\textbf{Banach space}} with dual space $X^{*}$. The \underline{\emph{\textbf{weak topology}} on $X$} is \emph{the weakest topology} on $X$ so that \emph{$f(x)$ is \textbf{continuous} \textbf{for all} $f \in X^{*}$}.
+\end{definition}
+
+\item \begin{remark}
+For infinite dimensional Banach spaces, \emph{\textbf{the weak topology does not arise from a metric}}. This is one of the main reasons we have introduced topological spaces.
+\end{remark}
+
+\item \begin{remark}
+Thus a \emph{\textbf{neighborhood} base at zero} for \emph{\textbf{the weak topology}} is given by the sets
+of the form
+\begin{align*}
+N(f_1 \xdotx{,} f_n; \epsilon) &= \set{x: \abs{f_{j}(x)} <\epsilon; \; i= 1 \xdotx{,} n}
+\end{align*}
+that is, neighborhoods of zero contain \emph{\textbf{cylinders} with \textbf{finite-dimensional} open bases}. A net $\{x_{\alpha}\}$ converges \emph{weakly} to $x$, written $x_\alpha \stackrel{w}{\rightarrow} x$, if and only if $f(x_{\alpha}) \rightarrow f(x)$ for all $f \in X^{*}$.
+\end{remark}
+
+
+
+\item \begin{proposition} \citep{reed1980methods}
+\begin{enumerate}
+\item The weak topology is \textbf{weaker} than \textbf{the norm topology}, that is, every weakly open set is norm open.
+\item Every \textbf{weakly convergent} sequence is \textbf{norm bounded}.
+\item The weak topology is a Hausdorff topology.
+\end{enumerate}
+\end{proposition}
+
+\item \begin{proposition} \citep{reed1980methods}\\
+A linear functional $f$ on a Banach space is \textbf{weakly continuous} if and only if it is \textbf{norm continuous}.
+\end{proposition}
+\end{itemize}
+
+
+\section{Cylindrical $\sigma$-Algebra on Weak Topology}
+\subsection{Cylinder Set}
+\begin{itemize}
+\item 
+\begin{definition}
+Let $X$ be locally convex space, a $n$-dimensional \emph{cylinder set} as \citep{lifshits2013gaussian}
+\begin{align*}
+C_{A}[f_{1},\ldots, f_{n}]\equiv \set{\mb{x}\,|\, \paren{f_{1}(\mb{x}),  \ldots, f_{n}(\mb{x})} \in A\;  } = \set{\mb{x}\,|\, f_{i}(\mb{x}) \in A_{i},\; 1\le i \le n } , n=1,2,\ldots,
+\end{align*}
+for any $A\in \cB(\bR^{n})$, $A_{i}\in \cB(\bR)$, $f_{i}\in X^{*}\subset \bR^{X}$, the dual space of continuous linear functional on $X$.
+\end{definition}
+
+\item Note that we can define space of $X^{*}$-valued functions as $(X^{*})^{T}$, where $f: T\rightarrow X^{*}$ denotes a trajectory on $X^{*}$.  Define an evaluation map $\pi_{k}: (X^{*})^{T} \rightarrow X^{*}$ so that $\pi_{k}\paren{f} = f_{k}$. $C_{A}[f_{1},\ldots, f_{n}] = (\pi_{N}(f))^{-1}(A)$.
+
+\item Define $\srC_{n}$ consists of $C_{A}[f_{1},\ldots, f_{n}]$ with all possible $A\in \cB(\bR^{n})$, and $f_{i}\in X^{*}\subset \bR^{X}$.
+
+\item Given $\set{f_{k}, 1\le k\le n}$, define an equivalence relationship: $\mb{x}_{1}\stackrel{R}{\sim} \mb{x}_{2}$, iff $f_{k}(\mb{x}_{1}) = f_{k}(\mb{x}_{2}), \forall 1\le k\le n$. 
+
+A cylinder set $C_{A}[f_{1},\ldots, f_{n}]$ can be represented as the union of \emph{cosets} in $X$ corresponding to points in $A$, under the equivalence relationship $R$. Conversely, any union of cosets in $X$ under this relationship forms a cylinder set. 
+
+In particular,  $\mb{x}_{1}, \mb{x}_{2}$ in the same coset iff their difference lies in the kernel space of the system of functions $f_{k}, 1\le k \le n$; i.e., 
+\begin{align*}
+f_{k}(\mb{x}_{1}) - f_{k}(\mb{x}_{2}) &=0\\
+\Rightarrow f_{k}(\mb{x}_{1} - \mb{x}_{2})&=0,\; 1\le k \le n \quad (\text{linearity of } f_{k})\\
+\mb{x}_{1} - \mb{x}_{2} &\in \text{ker}\set{f_{k}},\;1\le k \le n.
+\end{align*}
+Note that $\mb{s}\in \text{ker}\set{f_{k}}, 1\le k \le n$, $\Leftrightarrow$ $\mb{s}\in \text{ker}\set{\sum_{k}\alpha_{k}f_{k}}, \forall \alpha_{k}$. Let $X_{n}^{*}\equiv X^{*}[f_{1},\ldots, f_{n}]$ be the $n$-dimensional subspace in $X^{*}$ spanned by $\set{f_{k}, 1\le k\le n}$. Here the subspace $X^{*}_{n}$ does not change by a change of basis $(f'_{1},\ldots, f'_{n})$.
+
+\item Define the \emph{annihilator $X_{0}$ of $X_{n}^{*}$} in $X$ as the linear subspace consisting of $\mb{x}\in X$ such that $f(\mb{x}) = 0, \forall\, f\in X_{n}^{*}$, where $X_{n}^{*}$ is the $n$-dimensional linear subspace in $X^{*}$ spanned by $\set{f_{k}, 1\le k\le n}$.
+
+% Accordingly, we decompose $X$ into cosets, putting same coset all $\mb{x}$ taking the same value in $X_{n}^{*}$, which results in a quotient space $X/X_{0}$ and a quotient map $q: X \rightarrow X/X_{0}:  \mb{x} \mapsto [\mb{x}]$ the coset containing it. The 
+
+\item Then an alternative \emph{definition} of $n$-dimensional \emph{cylinder set} is as following \citep{gel2014generalized}:
+\begin{definition}
+Let $X_{n}^{*}$ be the $n$-dimensional linear subspace in $X^{*}$ spanned by $\set{f_{k}, 1\le k\le n}$, $X_{0}$ be the linear subspace in $X$ consisting of all $\mb{x}$ such that $f(\mb{x})= 0, \forall f\in X_{n}^{*}$. Define the \emph{quotient} map $q: X \rightarrow X/X_{0}$, which maps $\mb{x}$ to the \emph{coset} $\mb{x}+X_{0}$ and $X/X_{0}$ is the \emph{quotient space} induced by the relationship $\mb{x}\sim \mb{y} \Leftrightarrow \mb{x}-\mb{y}\in X_{0}$. 
+
+Then a $n$-dimensional cylinder set $C_{A}[f_{1},\ldots, f_{n}]$ is 
+\begin{align*}
+C_{A}[f_{1},\ldots, f_{n}]\equiv C[A, X_{0}] = q^{-1}(A),\quad A\in X/X_{0}. 
+\end{align*}
+It is called a \emph{cylinder set with base $A$ and generating subspace $X_{0}$}. \\
+\end{definition}
+
+\item Let $F_{n}\equiv F[f_{1},\ldots, f_{n}]: \mb{x} \mapsto \paren{f_{1}(\mb{x}),  \ldots, f_{n}(\mb{x})}$ maps $X$ to a $n$-dimension linear subspace in $\bR^{n}$. $A\in \cB(\bR^{n})$. Note that $X/X_{0}\simeq F_{n}(X)= (X_{n}^{*})^{*}\subset \bR^{n}$ by the following commutative diagram.
+\begin{align*}
+\xymatrix{
+X \ar[rd]_{F_{n}= (f_{1},\cdots,f_{n})} \ar[r]^q & X/X_{0}  \ar@{-->}[d]^{p}\\
+&F_{n}(X)\subset \bR^{n}
+}
+\end{align*}
+
+
+%\item Given $X^{*}$ is locally convex linear topological space, then any linear continuous functional defined on a subspace $X_{n}^{*}$ can be extended to the linear continuous functional defined on the whole $X^{*}$.
+%
+%Define a linear continuous functional $G_{\mb{x}}: X_{n}^{*} \rightarrow \bR$ as $f \mapsto f(\mb{x})$, for all $f\in X_{n}^{*}$.
+
+\item Given $X^{*}$ is locally convex linear topological space, $X_{n}^{*}$ is linear subspace of $X^{*}$, then $X/X_{0}$ is the \emph{adjoint space} of $X_{n}^{*}$. 
+
+In other words, $X/X_{0}$ is a $n-$dimensional subspace. 
+
+\item A cylinder set can be defined via various bases $A$ and subsets $X_{0}$: \citep{gel2014generalized}
+
+ If $C[A_{1}, X_{1,0}]= C[A_{2}, X_{2,0}]$, then both cylinders can be generated by a common subspace $X_{3,0}$, which coincides with $X_{1,0} \cap X_{2,0}$ and is the annihilator $X_{3,0}$ of $X^{*}_{n,3}$ in $X^{*}$ 
+
+Since $X_{3,0}\subset X_{1,0}$, any coset w.r.t. $X_{3,0}$ corresponds to some coset w.r.t. $X_{1,0}$, so we can associate any  coset w.r.t. $X_{3,0}$ with  some coset w.r.t. $X_{1,0}$ that contains it. So it defines a linear mapping $T_{1}: X/X_{3,0}\rightarrow  X/X_{1,0}$. The consider the preimage $T_{1}^{-1}(A_{1})$, then the cylinder set is defined as generated by $X_{3,0}$ with base $T_{1}^{-1}(A_{1})$. Similarly,   the cylinder set is defined as generated by $X_{3,0}$ with base $T_{2}^{-1}(A_{2})$, where $T_{2}: X/X_{3,0}\rightarrow  X/X_{2,0}$ is the linear mapping.
+
+Note that two cylinder with the same generating subspace coincide iff their bases coincide, i.e.,  $T_{1}^{-1}(A_{1}) = T_{2}^{-1}(A_{2})$.\\
+ 
+
+\item For a nondecreasing sequence of sets $\set{A_{n}}$, $A_{n}=  \pi_{N}A_{n+1} \subset A_{n+1}$, $n\ge 1$ and $T_{n}\equiv [t_{1},\ldots, t_{n}]\cup {t_{n+1}}= [t_{1},\ldots, t_{n}, t_{n+1}] =T_{n+1}$, the cylinder sets $C_{\xi}[A_{n}; t_{1},\ldots t_{n}] \supset C_{\xi}[A_{n+1}; t_{1},\ldots t_{n+1}]$ is nonincreasing. 
+
+In other word, $C_{n} \equiv A_{1}\times \ldots A_{n} \times X \times X \ldots \supseteq A_{1}\times \ldots A_{n} \times A_{n+1} \times X \times X \ldots \equiv C_{n+1}$.
+
+So for any $C_{n} \in \srC_{n} \Rightarrow C_{n}\in \srC_{n+1}$, i.e. $\srC_{n+1}$ is finer than $\srC_{n}$, or $\srC_{n}\subset \srC_{n+1}$.
+\end{itemize}
+
+
+
+\subsection{Cylindrical $\sigma$-algebra}
+\begin{itemize}\vspace{-10pt}
+\item Denote $\srC_{n}$ as the collection of all $C[A, X_{0}]$, for all $A\in X/X_{0}\simeq \cB^{n}$ and $X_{0}$ as the annihilator of all possible $n$-dimensional subspace $X_{n}^{*} \subset X^{*}$. 
+
+\item $\srC_{n}$ forms an \emph{algebra} and $\srC_{1} \subset \srC_{2}\subset \cdots \subset \srC_{n} \subset \cdots$ form increasing nested sets.
+
+\item \begin{definition}
+The collection of all cylinder sets $\srC_{n}$  for all finite dimensions $n\ge 1$ is referred as the \emph{algebra of cylinder sets}, denoted as $\srC_{0}$. That is, $\srC_{0}\equiv \bigvee_{n\in \bN}\srC_{n}$ and $\srA\vee \srB = \set{A\cap B, A\in \srA, B\in \srB}$. $\srC_{0}$ is denotes as $\cB^{n}\times X^{*}\times X^{*} \times X^{*} \times \cdots$.
+\end{definition} 
+
+\item Similar as $\srC_{n}$, $\srC_{0}$ is an \emph{algebra}. Note that for intersection of $C_{1}\in \srC_{n}$ and $C_{2} \in\srC_{m}, n\neq m$, we can always find some $\max\set{m,n} \le s\le m+n$ so that $C_{1}\in \srC_{s}$  and $C_{2}\in \srC_{s}$, then it shows the closure under finite intersection. 
+
+
+\item In general, $X= \prod_{i\in A}X_{i}$, then a \emph{$n$-dimensional cylinder set} in $X$ is of form $U\times \prod_{i\not\in S}X_{i}$ where $\abs{S}= n$ is a finite subset of index set $A$, and $U\subset \prod_{i \in S}X_{i}$. Define the operation $\pi_{j}: X \rightarrow X_{j}$ as a projection on $j$-th coordinate, then a $1$-dimensional cylinder is $\pi_{j}^{-1}(U), \; U\subset X_{j}$. For a $n$-dimensional cylinder set, $\bigotimes_{j\in S}\pi_{j}^{-1}(U), U\subset \prod_{i \in S}X_{i}$. The cylinder sets are open sets if $U$ is open in $\prod_{i \in S}X_{i}$.
+
+\item The collection of all cylinder sets forms an algebra but \emph{not} $\sigma$-algebra. \\
+
+\item Note that on the algebra of cylinder sets, we can define a measure $\mu$ that is \emph{finitely additive}, since for a union of a system of finite cylinder sets, we can find a common generating subspace so that the resulting bases is the finite union of individual bases. However, for the algebra of cylinder sets, the \emph{countably additive} does not hold. This motivates the wider space with $\sigma$-algebra defined:
+
+ \begin{definition}
+ The $\sigma$-algebra $\srC = \sigma(\srC_{0})$ generated from the algebra of cylinders $\srC_{0}$ is called \emph{cylinderical $\sigma$-algebra}. 
+ \end{definition}
+
+The cylinderical $\sigma$-algebra is the key ingredient in defining a measure on the topological vector space.  
+
+\item For a nondecreasing sequence of sets $A_{n}\uparrow A$, $A_{n}=  \pi_{T_{n}}A_{n+1} \subset A_{n+1}$, $n\ge 1$ and $T_{n}\uparrow T$, the cylinder sets $\lim\limits_{n\rightarrow}C_{\xi}[A_{n};T_{n}] = \bigcap_{n=1}^{\infty}C_{\xi}[A_{n};T_{n}] = C_{\xi}[A; T]$.  \\[10pt]
+
+\item The cylinderical $\sigma$-algebra is \emph{not} the Borel $\sigma$-algebra $\cB\equiv \cB(X)$, which is generated from all open sets in topology of $X$.
+
+
+
+\item Note that $\srC_{0} \subset \srC \subset \cB_{W} \subset \cB$, where $\cB$ is the Borel $\sigma$-algebra generated from topology in $X$ and $\cB_{W}$ is the Borel $\sigma$-algebra generated from weak topology in $X$.
+\end{itemize}
+\section{Measure on infinite dimensional function space}
+\begin{itemize}
+\item 
+\begin{definition}
+Let $(X, \srT)$ be a topological space and let $\srF$ be a $\sigma$-algebra on X. Let $\cP$ be a measure on $(X, \srF)$. A measurable subset $A$ of $X$ is said to be \emph{inner regular }if
+\begin{align*}
+\cP (A) = \sup \set{ \cP (F) \;|\; F \subseteq A, F \mbox{ compact and measurable} }
+\end{align*} 
+and said to be \emph{outer regular} if
+\begin{align*}
+\cP (A) = \inf \set{ \cP (G) \;|\; G \supseteq A, G \mbox{ open and measurable} }
+\end{align*} 
+\end{definition}
+
+\item A measure $\cP$ is \emph{inner regular} if all measurable set is inner regular; it is \emph{outer regular}, if all measureable set is outer regular. 
+
+$\cP$ is \emph{regular} if it is both inner regular and outer regular. 
+
+\item Any Borel probability measure on a \emph{locally compact Hausdorff space} with a \emph{countable} base for its topology, or \emph{compact metric space}, or Radon space, is regular.
+
+%\item \begin{definition}
+%Let $X$ be Hausdorff topological spaces, $\cB$ be a $\sigma$-algebra of Borel subsets of $X$, and $\cP: \cB \rightarrow \bR_{+}$ is nonnegative, monotone function defined on some algebra of sets $\cZ\subset \cB$ and taking finite values. 
+%Then $\cP$ is called \emph{regular} if it satisfies the following: for any $B\subset X$, 
+%\begin{align*}
+%\cP(B) = \sup\set{\cP(Z)\,|\, Z\subset B, Z \text{ is compact, } Z\in \cZ }.
+%\end{align*} 
+%\end{definition}
+
+\item $\cP$ is called \emph{locally finite} if every point of $X$ has a neighborhood $U$ for which $\cP(U)$ is finite.
+
+\item $\cP$ is \emph{Radon measure}, if it is locally finite and inner regular. 
+
+%\item $\cP$ is a \emph{Radon function}, if the subset $Z\subset B$ in above expression is compact and $\cP$ is locally finite. 
+
+\item $\cP$ is \emph{tight} if $B= X$ in above.
+
+\item A \emph{Radon measure} on the  locally compact Hausdorff space can be expressed in terms of \emph{continuous linear functionals} on the space of \emph{continuous functions with compact support}. (A Radon measure is real then it can be decomposed into the difference of two positive measures.)
+
+
+\item $\cP$ is \emph{Radon} $\Rightarrow$  $\cP$ is \emph{tight} and \emph{regular}. 
+
+\item $\cP$ is finitely additive, regular, tight, then it is Radon. 
+
+\item Let $\cZ$ be an algebra of Borel subsets of Hausdorff topological space $X$, $\cZ\subset \cB$, where $\cB$ denotes the Borel $\sigma$-algebra on $X$.  The function $\cP: \cZ \rightarrow \bR_{+}$ is called a \emph{Radon function} if 
+\begin{align*}
+\cP(B) &=\sup\set{ \cP(Z) \;|\; Z\subset B, Z\in \cZ, Z\text{ is compact} }.
+\end{align*}
+
+
+
+\item \begin{definition}
+The function $\cP^{*}$defined for all $B\subset X$ is said to be \emph{outer measure} if 
+\begin{align*}
+\cP^{*}(B) = \inf\set{ \cP(Z)\,|\, Z\supset B, Z\in \cZ }
+\end{align*}
+where $\cZ$ is an \emph{algebra} of Borel subsets in $X$.
+\end{definition}
+
+\item If  $\cZ$ is a $\sigma$-algebra and $\cP$ is countably additive, then $\cP$ is called a \emph{measure}. A \emph{probability measure} satisfies additionally $\cP(X) = 1$.
+
+If $\cP$ has more properties such as tight, regular, Radon, then $\cP$ is called tight, regular, Radon, respectively.
+
+\item Any measure defined on the Borel $\sigma$-field in a complete separable metric space is Radon measure. 
+\begin{itemize}
+\item The Lebesgue measure on Euclidean space, restricted on Borel sets;
+\item Haar measure on any locally compact topological group;
+\item Gaussian measure on Euclidean space $\bR^n$ with its Borel $\sigma$-algebra;
+\item Counting measure on Euclidean space is an example of a measure that is \emph{not} a Radon measure, since it is not locally finite.
+\end{itemize} 
+ 
+\item Note that we can define a finitely additive measure on $\srC_{0}$ and we need to extend it to countably additive, tight, regular (Radon) measure on $\srC$.  
+
+Here we need to verify that $\srC$ contains a base for the weak topology (. in fact, the generating subspace $X_{0}$ is closed in weak topology of $X$); and see that $\cP$ as a measure on $\srC_{0}$ is finitely additive. Finally, \emph{any} measure on $\srC$ is regular, if $X$ is Hausdorff, locally convex topological space. 
+
+What we need additionally is the tightness of the outer measure. 
+
+\item The topological support $\text{supp}(\cP)$ of a measure $\cP$ is defined to be the set of $\mb{x}\in X$ whose each neighborhood has a positive measure. The topological support is always closed set. 
+
+The support of Radon measure $\cP$ is well-defined, as the least closed set of full measure
+\begin{align*}
+\cP(\text{supp}(\cP)) = \cP(X), \quad  \text{supp}(\cP)= \bigcap\set{A\,|\, \cP(A) = \cP(X), A\text{ is closed}}.
+\end{align*} 
+
+%\item As an example, take $X=\Omega$, $\omega\in \Omega$ for a random function $\xi_{t}(\omega)$ is $\cP$-measureable if and only if all its finite-dimensional distribution $(\xi_{t_{1}}(\omega), \ldots, \xi_{t_{n}}(\omega))$ is measureable in $\bR^{n},\; n\ge 1$. 
+\end{itemize}
+
+
+
+
+
+
+\newpage
+\section{Theorems}
+\begin{itemize}
+\item \begin{proposition} \citep{gel2014generalized} \\
+Let $X_{n}^{*}$ be the $n$-dimensional linear subspace in $X^{*}$ spanned by $\set{f_{k}, 1\le k\le n}$, $X_{0}$ be the linear subspace in $X$ consisting of all $\mb{x}$ such that $f(\mb{x})= 0, \forall f\in X_{n}^{*}$. Define the \emph{quotient} map $q: X \rightarrow X/X_{0}$, which maps $\mb{x}$ to the \emph{coset} $\mb{x}+X_{0}$ and $X/X_{0}$ is the \emph{quotient space} induced by the relationship $\mb{x}\sim \mb{y} \Leftrightarrow \mb{x}-\mb{y}\in X_{0}$. 
+
+If $X^{*}$ is locally convex linear topological space, then $X/X_{0}$ is the \emph{adjoint space} of $X_{n}^{*}$.
+\end{proposition}
+\begin{proof}
+Given $X^{*}$ is locally convex linear topological space, then any linear continuous functional defined on a subspace $X_{n}^{*}$ can be extended to the linear continuous functional defined on the whole $X^{*}$.
+
+Define a linear continuous functional $G_{\mb{x}}: X_{n}^{*} \rightarrow \bR$ as $f \mapsto f(\mb{x})$, for all $f\in X_{n}^{*}$. 
+By duality, any $\mb{x}\in X$ is uniquely associated with a linear continuous functional $G_{\mb{x}}$ that is defined on $X^{*}$ and thus on $X_{n}^{*}$. Two functionals $G_{\mb{x}}$ and $G_{\mb{y}}$ lies in the same coset iff $\mb{x}\sim \mb{y}$ relative to $X_{0}$; that is, they correspond to the same element in $X/X_{0}$. Thus for every $s\in X/X_{0}$, there corresponds a linear functional on $X_{n}^{*}$ and to distinct elements in $X/X_{0}$, there corresponds distinct functionals.
+
+We show that the converse is true: For any linear functional $G_{\mb{x}}$ defined on $X_{n}^{*}$, it can be extended to $X^{*}$, and for all possible extension, since they coincide on $X_{n}^{*}$, should belong to the same coset relative to $X_{0}$ in $X$. Thus any linear functional on $X_{n}^{*}$ corresponds to some element in $X/X_{0}$, which completes the proof. \qed
+ 
+Note that $X/X_{0}\simeq F_{n}(X)= (X_{n}^{*})^{*}\subset \bR^{n}$ by the following commutative diagram.
+\begin{align*}
+\xymatrix{
+X \ar[rd]_{F_{n}= (f_{1},\cdots,f_{n})} \ar[r]^q & X/X_{0}  \ar@{-->}[d]^{p}\\
+&F_{n}(X)\subset \bR^{n}
+}
+\end{align*}
+\end{proof}
+\vspace{15pt}
+
+
+\item \begin{proposition}
+Denote $\srC_{n}$ as the collection of all $C[A, X_{0}]$, for all $A\in X/X_{0}\simeq (X_{n}^{*})^{*}\subset \cB^{n}$ and $X_{0}$ as the annihilator of all possible $n$-dimensional subspace $X_{n}^{*} \subset X^{*}$. 
+
+Then $\srC_{n}$ forms an \emph{algebra}.
+\end{proposition}
+\begin{proof}
+We check for the axiom of algebra: 
+\begin{enumerate}
+\item The complement: for given $C[A, X_{0}] \in \srC_{n}$
+\begin{align*}
+X- C[A, X_{0}]&= X-  \set{\mb{x}\,|\, \paren{f_{1}(\mb{x}),  \ldots, f_{n}(\mb{x})} \in A\;  } \\
+&= \set{\mb{x}\,|\, \paren{f_{1}(\mb{x}),  \ldots, f_{n}(\mb{x})} \not\in A\;  } \\
+&= C[A^{c}, X_{0}]\in \srC_{n}
+\end{align*} 
+
+\item Finite intersection: for any $C[A_{1}, X_{1,0}], C[A_{2}, X_{2,0}] \in \srC_{n}$
+\begin{align*}
+C[A_{1}, X_{1,0}]\;\cap\; C[A_{2}, X_{2,0}]
+&= C[A_{1}\cap A_{2}, X_{1,0}\cap X_{2,0}]\in \srC_{n}
+\end{align*}
+where $X_{1,0}\cap X_{2,0}$ is the annihilator of $X_{3,n}^{*}$ generated by $X_{1,n}^{*}$ and $X_{2,n}^{*}$
+and $A_{3} = A_{1}\cap A_{2}$.
+\end{enumerate}
+
+To clarify the finite intersection part, we consider the subspace $X_{3,0} = X_{1,0} \cap X_{2,0} \subset X$, which is seen as the annihilator $X_{3,0}$ of $X^{*}_{n,3}$ in $X^{*}$ and a cylinder set $C_{3}$ generated from $X_{3,0}$ on the base $A_{3} = A_{1}\cap A_{2}$. 
+
+We show that $C_{3}[A_{3}, X_{3,0}] = C[A_{1}, X_{1,0}]\;\cap\; C[A_{2}, X_{2,0}]$. 
+
+$\Rightarrow$\\
+ We show $C_{3}[A_{3}, X_{3,0}] \subseteq C[A_{1}, X_{1,0}]\;\cap\; C[A_{2}, X_{2,0}]$. Note that $X_{3,0}\subset X_{1,0}$, so any $\mb{x}\in C_{3}[A_{3}, X_{3,0}]$, $\mb{x}\in f^{-1}(A_{3})+ \mb{s}, \forall f\in X^{*}_{n,3}$, where $\mb{s}\in X_{3,0}\subset X_{1,0}$ and $\mb{x}_{3} \in f^{-1}(A_{3})=   f^{-1}(A_{1}\cap A_{2})\subset f^{-1}(A_{1})$. Note that $X^{*}_{n,3} = \paren{X/X_{3,0}}^{*} \supset \paren{X/X_{1,0}}^{*} = X^{*}_{n,1}$, hence  $\mb{x}\in f_{1}^{-1}(A_{3})+ \mb{s} \subset f_{1}^{-1}(A_{1})+ \mb{s},\; \forall f_{1}\in X^{*}_{n,1}  , \Rightarrow \mb{x} \in C_{1}[A_{1}, X_{1,0}]$. Similarly,  $\mb{x}\in C_{2}[A_{2}, X_{2,0}]$. So the left-inclusion is proved. \\
+
+$\Leftarrow$\\
+ For arbitrary $\mb{x}\in C[A_{1}, X_{1,0}]\;\cap\; C[A_{2}, X_{2,0}]$,  $\mb{x} \in f_{1}^{-1}(A_{1}) + \mb{s},\,\forall f_{1}\in X^{*}_{n,1}$, where $\mb{s} \in X_{1,0}$, and $\mb{x} \in f_{2}^{-1}(A_{2}) + \mb{s},\,\forall f_{2}\in X^{*}_{n,2}$, where $\mb{s} \in X_{2,0}$. Clearly, $\mb{s}\in X_{3,0} = X_{1,0} \cap X_{2,0}$ and $f_{1}, f_{2}\in X^{*}_{n,3}$. Since $X_{3,0}\subset X_{1,0}$, any coset w.r.t. $X_{3,0}$ corresponds to some coset w.r.t. $X_{1,0}$, so we can associate any  coset w.r.t. $X_{3,0}$ with  some coset w.r.t. $X_{1,0}$ that contains it. Therefore, there exists a linear mapping $T_{1}: X/X_{3,0}\rightarrow  X/X_{1,0}$ as a inclusion map. Then consider the preimage $T_{1}^{-1}(A_{1})$, then the set $C[A_{1}, X_{1,0}]\cap C[A_{2}, X_{2,0}]$ is by definition a cylinder set generated by $X_{3,0}$ with base $T_{1}^{-1}(A_{1})$. Similarly, the cylinder set $C[A_{1}, X_{1,0}]\cap C[A_{2}, X_{2,0}]$ is defined as generated by $X_{3,0}$ with base $T_{2}^{-1}(A_{2})$, where $T_{2}: X/X_{3,0}\rightarrow  X/X_{2,0}$ is the linear mapping.
+Finally, since two cylinders with the same generating subspace coincide iff their bases coincide, i.e.,  $T_{1}^{-1}(A_{1}) = T_{2}^{-1}(A_{2})$, so $T_{1}^{-1}(A_{1}) = T_{2}^{-1}(A_{2}) = A_{1}\cap A_{2}$. This shows $C_{3}[A_{3}, X_{3,0}] \supseteq C[A_{1}, X_{1,0}]\;\cap\; C[A_{2}, X_{2,0}]$.
+
+This completes the proof.\qed\\[15pt]
+\end{proof}
+
+\item \begin{proposition}
+Let $\srC_{0}$ be the algebra of cylinder sets defined on $X$ and $\srC$ is the $\sigma$-algebra that is generated from $\srC_{0}$. Define $\srE$ as the minimal $\sigma$-algebra generated from the collection of sets $\set{\pi_{t}, t\ge 1 }$, where $\pi_{t}: X^{T} \rightarrow \bR$ as $\pi_{t}(\xi) = \xi(t)$ is $(\cB(X^{T}), \cB(X))$.
+
+Then $\srC = \srE$.
+\end{proposition}
+
+\vspace{15pt}
+\item \begin{theorem} \label{thm: fini_add2_count_add} (Extension from finite additive, regular measure to Radon measure) \\
+Assume that a function $\cP$ is defined on some algebra of Borel sets $\cZ$ of a Hausdorff  topological space $X$, and the following conditions are satisfied:
+\begin{enumerate}
+\item The algebra $\cZ$ contains a base of topology on $X$;
+\item The function $\cP$ is finitely additive on $\cZ$;
+\item The function $\cP$ is regular on $\cZ$;
+\item The outer measure $\cP^{*}$ is \emph{tight} on $\cZ$, that is for any $\epsilon>0$, there exists a \emph{compact} set $M$ such that
+\begin{align*}
+\cP^{*}(M) = \inf\set{P(Z)\,|\, Z\supset M, Z\in\cZ } \ge P(X) - \epsilon.
+\end{align*}
+\end{enumerate} 
+Then the function $\cP$ can be \emph{uniquely extended to a Radon measure} on the whole of the Borel $\sigma$-algebra of space $X$.
+\end{theorem}
+\end{itemize}
+\newpage
+\section{Examples}
+\begin{itemize}
+\item 
+\begin{example}
+For Hilbert space $X$, which is self-dual, i.e., $X = X^{*}$, the cylinder set is defined as 
+\begin{align*}
+C[A, X_{0}] &= \set{\mb{x}|  \set{\inn{\mb{x}}{\mb{y}_{k}}, 1\le k\le n}\in A }, \set{\mb{y}_{1}, \ldots, \mb{y}_{n}} \subset X, A\in \cB^{n}.
+\end{align*} 
+Note that $X_{n}^{*}= \text{span}\set{\inn{\cdot}{\mb{y}_{1}}, \ldots, \inn{\cdot}{\mb{y}_{n}} } = \text{Img}\set{ \mb{y}_{1}, \ldots,\mb{y}_{n}}  \subset X$, which is the column space of matrix $[\mb{y}_{1}, \ldots,\mb{y}_{n}]$. Define the linear mapping $F_{n}: X\rightarrow \bR^{n}$ as $\mb{x} \mapsto \set{\inn{\mb{x}}{\mb{y}_{k}}, 1\le k\le n}$. So $X_{n}^{*}= F_{n}(X)$. 
+
+Then the generating subspace $X_{0}$ is the kernel space of $F_{n}$, and $X_{0} =(X_{n}^{*})^{\bot} $ is the orthogonal complement of $X_{n}^{*}$. 
+
+The quotient space $\text{dim}(X/X_{0}) = \text{dim}(X) - \text{dim}(X_{0}) = \dim(X_{n}^{*}) = n$, which is \emph{codimension} of $X_{0}$ in $X$. By  first isomorphism theorem of linear algebra, $X/X_{0}\simeq X_{n}^{*}=F_{n}(X)$. 
+
+So $C[A, X_{0}] = A + (X_{n}^{*})^{\bot} $, $A \subset \cB(X_{n}^{*})$. \qed
+\end{example}\vspace{15pt}
+
+\item \begin{example}
+Let $X$ be an locally compact space and $\set{f_{j}, 1\le j\le n}$ a sequence of elements of $X$. Consider the mapping 
+$\hat{f}: (X, \srC) \rightarrow (\bR^{\infty}, \cB)$ defined by the formula $\hat{f}(\mb{x}) = \set{f_{j}(\mb{x}), 1\le j\le n}$. Prove that the mapping $\hat{f}$ is measureable and continuous in the weak topology. Check that, for any set $C\subset \srC$,  one can choose $\hat{f}$ and a Borel set $A\subset \bR^{\infty}$ such that $C = \hat{f}^{-1}(A)$.
+\end{example}
+
+\item \begin{example}
+Show that any measure in $\bR^{\infty}$ is a Radon measure. (Check that the space $\bR^{\infty}$ is separable, and metrizable.)
+\end{example}
+
+
+\item \begin{example}
+Let $X$ be an locally compact space. Show that any measure in $\srC$ is regular both in the original topology and in the weak topology in the space $X$. (Check that the space $\bR^{\infty}$ is separable, and metrizable.)
+\end{example}
+
+\item \begin{example}
+Consider the locally convex Hausdorff topological space $\Omega$ as the sample space, and the functional $\xi\in \Omega^{*}$ as random variables $\xi: \Omega \rightarrow \bR$. $\cP$ defined on the cylindrical algebra $\srC \subset \cB$ is the probability measure for the random function $\xi_{\cdot}: \Omega\times T \rightarrow \bR $. In specific, any finitely-dimensional sample function $(\xi_{1}, \ldots, \xi_{t}) \subset \Omega^{*}$; i.e., for any $t\ge 1$
+\begin{align*}
+\cP((\xi_{1}, \ldots, \xi_{t}) \in A)& = \cP\paren{ \set{\omega:  (\xi_{1}(\omega), \ldots, \xi_{t}(\omega)) \in A }  }
+\end{align*}
+where $ \set{\omega:  (\xi_{1}(\omega), \ldots, \xi_{t}(\omega)) \in A } = C[A, \xi_{1}, \ldots, \xi_{t}]\in \srC$.
+\end{example}
+\end{itemize}
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{reference.bib}
+\end{document}

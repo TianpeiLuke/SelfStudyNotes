@@ -1,0 +1,166 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs, dsfont}
+\usepackage{tabularx}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Lecture 2: random functions and functional analysis}
+\author{ Tianpei Xie}
+\date{ Jul. 9th., 2015 }
+\maketitle
+\tableofcontents
+\newpage
+\section{Definitions}
+\subsection{Random functions}
+\begin{itemize}
+\item A family of random variables $\xi \equiv \set{\xi_{t}, t\in T}$ defined on $(\Omega, \srF, \bP)$ is called a \emph{random function}. For $T\subset \bR$, it is called a \emph{random process}, whereas for $T\subset \bR^{n}$, it is called a \emph{random field}.  
+
+\item Note that each random variable is a function $\xi_{t}: T\times \Omega \rightarrow \bR$, and it is a measureable mapping from $(\Omega, \srF, \bP)$ to $(\bR, \cB^{1})$. 
+
+For fixed $\omega \in \Omega$,  $\xi_{\cdot}(\omega)$ a function on $T$. It is called  a \emph{sample function} of the random function \citep{lifshits2013gaussian}, or a \emph{sample path} of the random process for $T\subset \bR$.
+
+\item It is assumed that all $\xi_{t}, \forall t$ are well-defined on a \emph{common} subset $\Omega_{0}\subset \Omega$. Then $\xi: T\times \Omega_{0} \rightarrow \bR$ is a \emph{modification} of the random function above. 
+
+Different modifications defines a different property about the sample paths (measureabilty, boundedness, continuity etc.) That is, a random process $\xi_{t}$ process the corresponding property, if an appropriate modification of this random function is considered.  \\[3pt]
+
+\item The joint distributions of random vectors $(\xi_{t_{1}},\ldots, \xi_{t_{n}}  )$ for all possible $(t_{1},\ldots, t_{n})$ are called the \emph{finite-dimensional distributions} of the random functions $\xi$.
+
+\item $\set{\xi_{t}, t\in T}$ is called \emph{(Strictly Sense) Stationary (SSS)}, if its finite-dimensional distributions remain unaltered upon a parameter shift; i.e., $(\xi_{t_{1}},\ldots, \xi_{t_{n}}  )$ and $(\xi_{t_{1}+\tau},\ldots, \xi_{t_{n}+\tau}  )$ are identical distributed, for all $(t_{1},\ldots, t_{n})$, $\tau\in \bR^{1}$.
+
+$\set{\xi_{t}, t\in T}$ is called  \emph{stationary increments} if $(\xi_{t_{2}}-\xi_{t_{1}},\ldots, \xi_{t_{n}}-\xi_{t_{n-1}}  )$ and $(\xi_{t_{2}+\tau}-\xi_{t_{1}+\tau},\ldots, \xi_{t_{n}+\tau} - \xi_{t_{n-1}+\tau}  )$ are identical distributed, for all $(t_{1},\ldots, t_{n})$, $\tau\in \bR^{1}$.
+
+$\set{\xi_{t}, t\in T}$ is called  \emph{uncorrelated increments} if $\xi_{t_{2}}-\xi_{t_{1}},\ldots, \xi_{t_{n}}-\xi_{t_{n-1}}  $ are pairwise uncorrelated, for all $(t_{1},\ldots, t_{n})$, $\tau\in \bR^{1}$.
+
+If these variables are jointly independent, it is called \emph{independent increments}. \\[3pt]
+
+\item Given the metric topology on $T = (T,\rho)$ and a random function $\xi$ on it, a modification of $\xi$ is called \emph{$\rho-$separable}, if there exists a countable subset $T_{c} \subset T$ such that, for any open set $V\subset T$, the equalities 
+\begin{align*}
+\sup_{t\in V}\xi_{t} = \sup_{t\in V\cap T_{c}}\xi_{t}; && \inf_{t\in V}\xi_{t} = \inf_{t\in V\cap T_{c}}\xi_{t};
+\end{align*} holds with probability one.  The subset $T_{c}$ is called the \emph{separant} of the modification $\xi$. 
+
+Note we always deals with the countable index set $T$ or within the separant $T_{c}$ of the uncountable set. \\
+
+\item $\set{\xi_{t}, t\in T}$ is called \emph{Wide-Sense Stationary (WSS)} if the covariance function is the function of increment of index
+\begin{align*}
+K(s,t) &\equiv  \cov{\xi_{t}}{\xi_{s}}\\
+&= K(t-s),\quad  s,t\in T.
+\end{align*} 
+
+SSS process is WSS process. The covariance function of WSS process has spectral representation. \\[15pt] 
+\end{itemize}
+
+
+\subsection{Topology and functional analysis}
+\begin{itemize}
+\item A vector space $X$ endowed with a topology is called a \emph{topological vector space}, denoted as $(X, \srT)$, if the addition $+: X\times X \rightarrow X$ and scale multiplication $\cdot: \bR\times X \rightarrow X$ are continuous. 
+
+\item A topological vector space is \emph{locally convex space}, if $V$ is open and $x\in V$, then one can find a \emph{convex} \emph{open} set $U\subset X$ such that $x\in U\subset V$. That is, there exists a base of convex sets $\srB$ that generates the topology. 
+
+\item A \emph{semi-norm} on a vector space $X$ is a mapping $q: X\rightarrow \bR_{+}$ satisfying the homogeneity condition, i.e. 
+$q(\gamma x) = \abs{\gamma}q(x)$ and the triangle inequality, $q(x+y)\le q(x)+ q(y)$. If furthermore $q(x)=0 \Rightarrow x=0$, then $q$ is a \emph{norm}.
+
+\item The smallest topology $\srT$ induced by the set of semi-norms $\set{q_{\theta},\theta\in \Theta}$ is generated by the convex basis $U_{x,r,\theta} = \set{y\in X\,|\, q_{\theta}(y-x) \le r }\in \srB, x\in X, r>0$. The topological vector space $(X, \srT)$ is thus locally convex space. 
+
+If $\set{q_{\theta},\theta\in \Theta}$ is a set of norms, then $(X, \srT)$ is a \emph{normed space}. 
+
+\item Given the inner product (\emph{duality}) $\inn{\cdot}{\cdot}_{d}$ defined a product space $X\times X'$, a set of semi-norm is defined as $\set{ q_{\mb{v}}(\cdot) \equiv \inn{\cdot}{\mb{v}}_{d}| \; \mb{v}\in X'}$.\\[10pt]
+
+
+\item In a topological vector space $X$, the \emph{dual} space $X^{*}$ is the set of all \emph{linear continuous} real-valued \emph{functionals} on $X$.   
+
+The dual space $X^{*}$ is a vector space.
+
+\item For a Hausdorff locally convex space $X$, for any $\mb{x}\in X, \mb{x}\neq 0$, there exists a linear functional $f\in X^{*}$ such that $f(x) = 1$.
+
+
+\item The dual space can be made a Hausdorff locally convex space as well, by defining the \emph{weak topology} in $X^{*}$. The weak topology in $X^{*}$ is induced by the norm $q_{\mb{x}}(f) = \abs{f(\mb{x})}$, for all $f\in X^{*}$, $\mb{x}\in X$.
+
+The weak topology can also be introduced into $X$ by $q_{f}(\mb{x}) = \abs{f(\mb{x})}$, for all  $\mb{x}\in X$, $f\in X^{*}$.
+
+
+\item Another topology in $X^{*}$ is given by norm $q_{\Delta}(f) = \sup_{\mb{x}\in \Delta}\abs{f(\mb{x})}$, for any $\Delta$ strongly convex compact subset of $X$. Denote the topology as $\srT_{X, X^{*}}$,  which is no weaker than the topology above. 
+
+If a linear functional of functional $L: X^{*} \rightarrow \bR$ is continuous in $\srT_{X, X^{*}}$, then there exists a vector $\mb{v}\in X$, such that $L(f) = f(\mb{v})$ for all $f\in X^{*}$. In other words, $(X^{*}, \srT_{X, X^{*}})^{*} = X$, the dual space of dual with $\srT_{X, X^{*}}$ is the primal space. \\
+
+\item A \emph{duality} is naturally induced btw $X$ and $X'$ in that a topology induced by $\set{ q_{\mb{v}}(\cdot) \equiv \inn{\cdot}{\mb{v}}| \; \mb{v}\in X'}$ in $X$ and similarly in $X'$. The dual space $(X^{*}, \srT_{X, X^{*}}) \simeq (X', \srT_{q})$.
+
+\item In dual form, a linear functional can be uniquely represented as $f(\cdot) = \inn{\cdot}{\mb{v}}_{d}, \mb{v}\in X'$.
+
+\item The weak topology $\srT_{X, X^{*}}$ coincides with the topology induced by duality. 
+
+\item As an example, for $X=\bR^{\infty}$, $X^{*}\equiv c_{0} \subset \bR^{\infty}$ be the subspace of finite sequences. The weak topology is induced by the semi-norm $\set{q_{j} = \abs{x_{j}}, j\in \bN}$ and it defines the point-wise convergence. 
+
+\item For $X$ Hausdorff, locally convex, $X'=X^{*}$ and $\inn{X}{X^{*}}_{d}$ is a dual pair, so $\inn{f}{\mb{x}}_{d} \equiv f(\mb{x}), \mb{x}\in X, f\in X^{*}$. 
+
+\item If $X$ is Hilbert space, then $X' = X$ and $\inn{}{}_{d}$ is given by the $\inn{}{}_{X}$ defined in $X$. 
+\end{itemize}
+
+
+
+\subsection{Gaussian process as measure on space of functions}
+\begin{itemize}
+\item A random function $\xi$ is \emph{Gaussian} if \emph{all} its finite-dimensional distributions are Gaussian. For a Gaussian random function, a covariance function 
+\begin{align*}
+\cov{\xi_{s}}{\xi_{t}} &= K(s,t),\quad \forall s\,t \in T
+\end{align*} is well defined. $K$ is a covariance function of a Gaussian random function if and only if $K$ is positive definite. 
+
+
+\item For Gaussian process, WSS $\Leftrightarrow$ SSS.
+
+\item A random function is Gaussian if its distribution $\cP$ that defined on $(X, \cB)$ is Gaussian. Here $X$ is the linear space of functions on $T$, which is infinite-dimensional. 
+\end{itemize}
+
+\newpage
+\section{Theorems}
+\begin{itemize}
+\item \begin{theorem} (The representation of stationary kernel: \emph{Bochner}'s theorem) \\
+A complex-valued function $K$ on $\bR^{D}$ is the covariance function of a weakly stationary mean square continuous complex-valued random process on $\bR^D$ if and only if it can be represented as
+\begin{align}
+K(\mb{x}, \mb{x}') = K(\mb{x}-\mb{x}')&=\int_{\bR^{D}} \exp\paren{ 2\pi j\,\mb{s}^{T}(\mb{x}-\mb{x}')}d\mu(\mb{s}), \label{eqn: Kernel_Fourier_1}
+\end{align}
+where $\mu$ is a positive finite measure, which is called the \emph{spectral measure} of this process \citep{lifshits2013gaussian}.
+\end{theorem}
+The covariance function of a stationary process can be represented as the Fourier transform of a positive finite measure.
+
+For the spectral density exists as $S(\mb{s})$, 
+\begin{align}
+K(\mb{x}-\mb{x}')= K(\mb{\tau})&=\int_{\bR^{D}} S(\mb{s})\exp\paren{2\pi j\,\mb{s}^{T}\mb{\tau}}d\mb{s}, \nonumber\\
+S(\mb{s}) &= \int_{\bR^{D}} K(\mb{\tau})\exp\paren{-2\pi j\,\mb{s}^{T}\mb{\tau}}d\mb{\tau}.\label{eqn: Kernel_Fourier_2}
+\end{align}\vspace{10pt}
+
+\item \begin{theorem}
+Let $T$ be arbitrary set, $K: T\times T\rightarrow \bR$ a positive definite function. Then there exists a probability space and a Gaussian random function defined on that space, whose covariance function is $K$.
+\end{theorem}
+\end{itemize}
+
+\newpage
+\section{Computations and examples}
+\begin{itemize}
+\item
+\end{itemize}
+
+
+
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{reference.bib}
+\end{document}
