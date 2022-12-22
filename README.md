@@ -10,3 +10,5 @@
 - [Differential Geometry](./self-study/differential_geometry/README.md)
 
 - Functional Analysis
+
+- Information Geometry and Optimal Transport
