@@ -59,7 +59,21 @@
       - Brenier Theorem: Monge-Kantorovich Equivalence  
     - Examples 
 
-  - Optimization Algorithm for Entropic Regularized Optimal Transport
+  - Optimization Algorithm for Optimal Transport
+    - Entropic Regularization for Optimal Transport
+      - Maximum Entropy Optimal Transport
+      - Probability Interpretation using Mutual Information
+      - Solution of Entropic Regularization Optimal Transport
+      - Dual Problem
+      - Barycentric Projection
+    - Sinkhorn’s Algorithm and Convergence Analysis
+      - Sinkhorn’s Algorithm
+      - Numerical Analysis
+      - Bregman Iterative Projections
+      - Proximal Point Algorithm
+      - Convergence Analysis
+      - Log-domain Sinkhorn
+      - Sinkhorn Divergence
 
   - Wasserstein Distance, Variational Wasserstein Problems
 
