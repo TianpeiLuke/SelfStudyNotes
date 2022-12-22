@@ -1,0 +1,13 @@
+\contentsline {section}{\numberline {1}Vector Fields on Manifolds}{2}
+\contentsline {subsection}{\numberline {1.1}Definitions}{2}
+\contentsline {subsection}{\numberline {1.2}Examples of Smooth Vector Fields}{4}
+\contentsline {subsection}{\numberline {1.3}Local and Global Frames}{5}
+\contentsline {subsection}{\numberline {1.4}Vector Fields as Derivations of ${\mathcal C}^{\infty }(M)$}{7}
+\contentsline {section}{\numberline {2}Vector Fields and Smooth Maps}{8}
+\contentsline {subsection}{\numberline {2.1}Smooth Maps on Vector Fields}{8}
+\contentsline {subsection}{\numberline {2.2}Vector Fields and Submanifolds}{9}
+\contentsline {section}{\numberline {3}Lie Brackets}{10}
+\contentsline {section}{\numberline {4}The Lie Algebra of a Lie Group}{12}
+\contentsline {subsection}{\numberline {4.1}Lie Algebra}{12}
+\contentsline {subsection}{\numberline {4.2}Induced Lie Algebra Homomorphisms}{12}
+\contentsline {subsection}{\numberline {4.3}The Lie Algebra of a Lie Subgroup}{12}
