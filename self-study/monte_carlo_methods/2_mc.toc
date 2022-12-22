@@ -1,0 +1,12 @@
+\contentsline {section}{\numberline {1}Markov Chain}{2}{}%
+\contentsline {subsection}{\numberline {1.1}Basic Concepts}{2}{}%
+\contentsline {subsection}{\numberline {1.2}Hitting time}{3}{}%
+\contentsline {section}{\numberline {2}Classification of States}{4}{}%
+\contentsline {subsection}{\numberline {2.1}Equivalence class by communication}{4}{}%
+\contentsline {subsection}{\numberline {2.2}Foster's theorem and Poke's lemma}{6}{}%
+\contentsline {section}{\numberline {3}Limiting and stationary distribution}{7}{}%
+\contentsline {subsection}{\numberline {3.1}Property of limiting distributions}{7}{}%
+\contentsline {subsection}{\numberline {3.2}Ergodicity}{9}{}%
+\contentsline {subsection}{\numberline {3.3}Mean hitting time formula}{9}{}%
+\contentsline {section}{\numberline {4}Time-reversible Markov Chain}{11}{}%
+\contentsline {section}{\numberline {5}Ergodic Theorem and Central Limit Theorem}{12}{}%
