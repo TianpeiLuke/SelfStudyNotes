@@ -1,0 +1,716 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, amscd}
+\usepackage{mathrsfs, dsfont}
+\usepackage[all,cmtip]{xy}
+\usepackage{tikz-cd}
+%\diagramstyle[labelstyle=\scriptstyle]
+\usepackage{tabularx}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Lecture 1: Probability Measure and Random Variables}
+\author{ Tianpei Xie}
+\date{ Jul. 19th., 2015 }
+\maketitle
+\tableofcontents
+\newpage
+\section{Probability Measure}
+\subsection{Definitions}
+\begin{itemize}
+\item \begin{definition} \citep{resnick2013probability, billingsley2008probability}\\
+A \underline{\emph{\textbf{probability space}}} is a triple $(\Omega, \srF, \cP)$ where
+\begin{enumerate}
+\item $\Omega$ is \underline{\emph{\textbf{the sample space}}} corresponding to \emph{\textbf{outcomes}} of some (perhaps hypothetical) experiment.
+\item $\srF$ is the $\sigma$-algebra of subsets of $\Omega$. These subsets are called \emph{\textbf{events}}.
+\item $\cP$ is a \underline{\emph{\textbf{probability measure}}}; that is, $\cP$ is a function with domain $\srF$ and range $[0, 1]$ such that
+\begin{enumerate}
+\item \emph{\textbf{Non-Negative}}: $\cP(A)\ge 0$ for all $A\in \srF$.
+\item \emph{\textbf{Countably Additive}}: If $\set{A_{n}}\subset \srF$ are \emph{disjoint}, then 
+\begin{align*}
+\cP\paren{\bigcup_{n=1}^{\infty}A_{n}} &= \sum_{n=1}^{\infty}\cP\paren{A_{n}}.
+\end{align*}
+\item \emph{\textbf{Finiteness}}: $\cP(\Omega) = 1$.
+\end{enumerate}
+\end{enumerate}
+\end{definition}
+
+\item \begin{proposition}
+The following properties are important
+\begin{enumerate}
+\item \textbf{Complements}: $\cP(A^{c}) = 1- \cP(A);$
+\item $\cP(\emptyset) = 0$;
+\item \textbf{Finite subadditivity}: for any collection of $\set{A_{k}: 1\le k\le n}\subset \srF$,
+  $$\cP\paren{\bigcup_{k=1}^{n}A_{k}}\le \sum_{k=1}^{n}\cP(A_{k});$$
+\item \textbf{Monotonicity}: If $A\subset B$, then $\cP(A)\le \cP(B)$;
+\item \textbf{Countably Subadditivity}:  for any collection of $\set{A_{k}: k\ge 1}\subset \srF$,
+   $$\cP\paren{\bigcup_{k=1}^{\infty}A_{k}}\le \sum_{k=1}^{\infty}\cP(A_{k});$$
+% \item Monotone continuity: 
+% \begin{itemize}
+% \item If $A_{n}\uparrow A$, for $A_{n}\in \srF$, then $\cP(A_{n})\uparrow \cP(A)$;
+% \item If $A_{n}\downarrow A$, for $A_{n}\in \srF$, then $\cP(A_{n})\downarrow \cP(A)$;
+% \end{itemize}
+% \item Fatou Lemma: 
+% \begin{align*}
+% \cP\paren{\liminf\limits_{n\rightarrow \infty}A_{n}} &\le \liminf\limits_{n\rightarrow \infty}\cP(A_{n})\\
+% &\le \limsup\limits_{n\rightarrow \infty}\cP(A_{n})\\
+% &\le \cP\paren{\limsup\limits_{n\rightarrow \infty}A_{n}} 
+% \end{align*}
+% Moreover, if $A_{n}\rightarrow A$, then $\cP(A_{n})\rightarrow \cP(A)$.
+\end{enumerate}
+\end{proposition}
+
+\item \begin{remark}\citep{billingsley2008probability}
+\begin{enumerate}
+\item $\Omega$ is called the \emph{sample space}, and a point $\omega\in \Omega$ is referred as a \emph{sample point}. 
+
+\item Each sample point is associated with an outcome of some experiment. It can be interpreted as a \emph{trigger} from which an experiments start; or a \emph{probe} from which an observation is made.  
+
+\item The $\sigma$-algebra $\srF$ encodes all possible information conveyed in outcomes of all possible experiments. A measureable set $E\in \srF$ is called an \emph{event}. In terms of this, $\srF$ is the collection of all possible events associated with all experiments.
+
+\item Each event is associated with a measure of ``\emph{possibility volume}", which is a probability measure of that event. 
+\end{enumerate}
+\end{remark}
+
+\item \begin{proposition}(\textbf{Monotone Continuity}) \citep{resnick2013probability, billingsley2008probability}
+ \begin{itemize}
+ \item If $A_{n}\uparrow A$, for $A_{n}\in \srF$, then $\cP(A_{n})\uparrow \cP(A)$;
+ \item If $A_{n}\downarrow A$, for $A_{n}\in \srF$, then $\cP(A_{n})\downarrow \cP(A)$;
+ \end{itemize}
+\end{proposition}
+\begin{proof}
+\begin{itemize}
+\item Suppose $A_{1}\subset A_{2} \cdots$ and $A = \bigcup_{n=1}^{\infty}A_{n}$, so $\lim\limits_{n\rightarrow\infty}\uparrow A_{n} = A$. Define $\set{B_{k}} \subset \srF$ such that 
+\begin{align*}
+B_{1}&= A_{1}\\
+B_{k}& = A_{k}- A_{k-1};\quad k> 1.
+\end{align*}
+So 
+\begin{align*}
+B_{i}\cap B_{j} = \emptyset; \text{ and }  \bigcup_{k= 1}^{n}B_{k} = \bigcup_{k= 1}^{n}A_{k}= A_{n}.
+\end{align*}
+
+Therefore,
+\begin{align*}
+\cP\paren{A} &= \cP\paren{\bigcup_{k\ge 1}A_{k}}\\
+&= \cP\paren{\bigcup_{k\ge 1}B_{k} }\\
+&= \sum_{k=1}^{\infty}\cP\paren{B_{k}}=\lim\limits_{n\rightarrow \infty}\uparrow\sum_{k=1}^{n}\cP\paren{B_{k}}\\
+&= \lim\limits_{n\rightarrow \infty}\uparrow\cP\paren{\bigcup_{k=1}^{n}B_{k}}\\
+&= \lim\limits_{n\rightarrow \infty}\uparrow\cP\paren{A_{n}}.
+\end{align*}
+
+For the second part, it is similar. \qed
+\end{itemize}
+\end{proof}
+
+\item \begin{proposition} (\textbf{Fatou Lemma})  \citep{resnick2013probability, billingsley2008probability}
+ \begin{align*}
+ \cP\paren{\liminf\limits_{n\rightarrow \infty}A_{n}} &\le \liminf\limits_{n\rightarrow \infty}\cP(A_{n})\\
+ &\le \limsup\limits_{n\rightarrow \infty}\cP(A_{n})\\
+ &\le \cP\paren{\limsup\limits_{n\rightarrow \infty}A_{n}}. 
+ \end{align*}
+\end{proposition}
+\begin{proof}
+See that
+\begin{align*}
+\cP\paren{\liminf\limits_{n\rightarrow \infty}A_{n}} &=\cP\paren{\lim\limits_{k\rightarrow \infty}\uparrow \set{\bigcap_{n\ge k}A_{n}} } \\
+&= \lim\limits_{k\rightarrow \infty}\uparrow \cP\paren{ \bigcap_{n\ge k}A_{n} }  \qquad\text{(by monotone continuity)}\\
+&\le \liminf\limits_{k\rightarrow \infty}\cP\paren{ A_{k} }  \qquad\text{(by monotonicity } \cP(\bigcap_{n\ge k}A_{n})\le \cP(A_{k}) )\\
+&\le \limsup\limits_{k\rightarrow \infty}\cP(A_{k})\qquad  \text{( by definition)}\\
+&\le \lim\limits_{k\rightarrow \infty}\downarrow \cP\paren{ \bigcup_{n\ge k}A_{n} }  \qquad\text{(by monotonicity } \cP(\bigcup_{n\ge k}A_{n})\ge \cP(A_{k}) )\\
+&= \cP\paren{\lim\limits_{k\rightarrow \infty}\downarrow \set{\bigcup_{n\ge k}A_{n}} } \qquad\text{(by monotone continuity)}\\
+&= \cP\paren{\limsup\limits_{n\rightarrow \infty}A_{n}} \qed
+\end{align*}
+\end{proof}
+
+\item \begin{definition}
+Let $\Omega = \bR$, and suppose $\cP$ is a \emph{probability measure on $\bR$}. Define $F: \bR \rightarrow [0, 1]$ by
+\begin{align*}
+F(x) = \cP((-\infty, x]), \;\; x \in \bR.
+\end{align*} $F$ satisfies \emph{the following conditions}
+\begin{enumerate}
+\item $F$ is \emph{\textbf{right continuous}},
+\item $F$ is \emph{\textbf{monotone non-decreasing}},
+\item $F$ has \emph{\textbf{limits}} at $\pm \infty$
+\begin{align*}
+F(+\infty) &:= \lim\limits_{x\rightarrow +\infty} F(x) = 1\\
+F(-\infty) &:= \lim\limits_{x\rightarrow -\infty} F(x) = 0
+\end{align*}
+\end{enumerate}
+The function $F$ defined above is called a \underline{\emph{\textbf{(probability) distribution function}}}. We abbreviate distribution function by $df$.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Outer Regularity}}) \citep{folland2013real} \\
+Let $\mu$ be a \textbf{\emph{Borel}} measure on $X$ and $E$ a \emph{Borel subset} of $X$. The measure $\mu$ is called \underline{\textbf{\emph{outer regular}}} on $E$  if
+\begin{align*}
+\mu(E) &= \inf\set{\mu(U): U \supseteq E, U \text{ is open}}
+\end{align*}
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Inner Regularity}}) \citep{folland2013real} \\
+Let $\mu$ be a \textbf{\emph{Borel}} measure on $X$ and $E$ a \emph{Borel subset} of $X$. The measure $\mu$ is called \underline{\textbf{\emph{inner regular}}} on $E$  if
+\begin{align*}
+\mu(E) &= \sup\set{\mu(C): C \subseteq E, C \text{ is compact}}
+\end{align*}
+\end{definition}
+
+\item \begin{definition}
+If $\mu$ is \emph{outer} and \emph{inner regular} on \emph{all Borel sets}, $\mu$ is called \underline{\textbf{\emph{regular}}}. 
+\end{definition}
+
+\item \begin{remark}
+\emph{\textbf{Baire measure}} is equivalent to a \emph{\textbf{regular Borel measure (Randon measure)}} in the context of \emph{\textbf{compact space}} $X$.
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{Radon Measure}}) \citep{folland2013real} \\
+A \underline{\textbf{\emph{Radon measure}}} $\mu$ on $X$ is a \emph{Borel measure} that is 
+\begin{enumerate}
+\item \emph{\textbf{finite}} on \emph{all \textbf{compact} sets}; i.e. for any \emph{\textbf{compact subset}} $K \subseteq X$, 
+\begin{align*}
+\mu(K) < \infty.
+\end{align*}
+\item \emph{\textbf{outer regular}} on \emph{all Borel sets}; i.e. for any \emph{Borel set} $E$ 
+\begin{align*}
+\mu(E) &= \inf\set{\mu(U): E \subseteq U, U \text{\emph{ is open}}}.
+\end{align*}
+\item  \emph{\textbf{inner regular}} on all \emph{open sets}; i.e. for any \emph{open set} $E$
+\begin{align*}
+\mu(E) &= \sup\set{\mu(C): C \subseteq E, C \text{\emph{ is compact and Borel}}}.
+\end{align*}
+\end{enumerate}
+\end{definition}
+
+%\item \begin{remark}
+%\emph{Every regular probability measure} is a \emph{Radon measure}.
+%\end{remark}
+\end{itemize}
+\subsection{Dynkin's $\pi$-$\lambda$ System}
+\begin{itemize}
+\item \begin{remark} (\emph{\textbf{Beyond $\sigma$-Algebra}})\\
+A $\sigma$-algebra is a collection of subsets of $\Omega$ satisfying certain closure properties, namely \emph{\textbf{closure} under \textbf{complementation} and \textbf{countable union}}. We will have need of collections of sets satisfying \emph{\textbf{different closure axioms}}. We define a \emph{structure} $\srG$ to be a collection of subsets of $\Omega$ satisfying certain specified closure axioms. 
+\end{remark}
+
+\item 
+\begin{definition}\citep{resnick2013probability, billingsley2008probability}
+\begin{enumerate}
+\item \underline{\emph{\textbf{$\pi$-system}}} ($\srG$ is a $\pi$-system, if it is \emph{\textbf{closed} under \textbf{finite intersections}}: $A , B \in \srG$ implies $A \cap B \in \srG$).
+\item \underline{\emph{\textbf{$\lambda$-system}}} (synonyms: \emph{\textbf{$\sigma$-additive class}}, \emph{\textbf{Dynkin class}}): $\srG$ contains $\Omega$ and is \textbf{\emph{closed}} under the formation of \emph{\textbf{complements}} and of \emph{\textbf{finite} and \textbf{countable \underline{disjoint} unions}}:
+\begin{enumerate}
+\item $\Omega \in \srG$.
+\item $A \in \srG$ then $A^{c} = \Omega \setminus A \in \srG$
+\item $A_1, A_2, \ldots \in \srG$ and $A_n \cap A_m = \emptyset$ for $m \neq n$ imply 
+\begin{align*}
+\bigcup_{n=1}^{\infty}A_{n} \in \srG.
+\end{align*}
+\end{enumerate}
+Because of the \emph{\textbf{disjointness condition}} in (3), \emph{the definition of $\lambda$-system} is \emph{\textbf{weaker}} (more inclusive) than that of \emph{$\sigma$-algebra}. Although a \emph{$\sigma$-algebra} is a \emph{$\lambda$-system}, the \emph{\textbf{reverse}} is not true.
+\end{enumerate}
+\end{definition}
+
+\item
+\begin{lemma}\citep{resnick2013probability, billingsley2008probability}\\
+A class that is \textbf{both} a \textbf{$\pi$-system} and a \textbf{$\lambda$-system} is a $\sigma$-algebra.
+\end{lemma}
+
+\item Many \emph{\textbf{uniqueness arguments}} depend on the following theorem:
+\begin{theorem} (\textbf{Dynkin's $\pi$-$\lambda$ Theorem}) \citep{resnick2013probability, billingsley2008probability}
+\begin{enumerate}
+\item If $\srP$ is a \textbf{$\pi$-system} and $\srG$ is a \textbf{$\lambda$-system}, then $\srP \subseteq \srG$ implies $\sigma(\srP) \subseteq \srG$.
+\item lf $\srP$is a \textbf{$\pi$-system}
+\begin{align*}
+\sigma(\srP) = \srG(\srP),
+\end{align*}
+that is, \textbf{the minimal $\sigma$-field over $\srP$}equals \textbf{the minimal $\lambda$-system over $\srP$}.
+\end{enumerate}
+\end{theorem}
+
+\item \begin{remark}
+\emph{Dynkin's theorem} is a remarkably flexible device for performing set inductions which is ideally suited to probability theory.
+\end{remark}
+
+\item \begin{corollary} (\textbf{Uniquness Condition of Probability Measure}) \citep{resnick2013probability, billingsley2008probability}\\
+Suppose that $\cP_1$ and $\cP_2$ are probability measures on $\sigma(\srP)$, where $\srP$ is a \textbf{$\pi$-system}. If $\cP_1$ and $\cP_2$ \textbf{agree} on $\srP$, then they \textbf{agree} on $\sigma(\srP)$.
+\end{corollary}
+
+\item The following shows that \emph{probability measure} on $\bR$ is \emph{\textbf{uniquely determined}} by \emph{its distribution function}.
+\begin{corollary}  \citep{resnick2013probability, billingsley2008probability}\\
+Let $\Omega = \bR$. Let $\cP_1, \cP_2$ be two probability measures on $(\bR, \srF(\bR))$ such that their \textbf{distribution functions are equal}:
+\begin{align*}
+F_1(x) = \cP_1((-\infty, x]) = F_2(x) = \cP_2((-\infty, x]), \quad \forall x\in \bR.
+\end{align*}
+Then 
+\begin{align*}
+\cP_1 \equiv \cP_2
+\end{align*}
+on $\srF(\bR)$.
+\end{corollary}
+
+\item \begin{definition} (\emph{\textbf{Monotone Classes}})\\
+A class $\srM$ of subsets of $\Omega$ is \underline{\emph{\textbf{monotone}}} if it is \emph{\textbf{closed}} under the formation of \emph{\textbf{monotone unions}} and \emph{\textbf{intersections}}:
+\begin{enumerate}
+\item $A_1, A_2,\ldots \in \srM$ and $A_n \uparrow A$ imply $A \in \srM$;
+\item $A_1, A_2,\ldots \in \srM$ and $A_n \downarrow A$ imply $A \in \srM$.
+\end{enumerate}
+\end{definition}
+
+\item \begin{theorem} (\textbf{Halmos's Monotone Class Theorem}) \citep{resnick2013probability}\\
+If $\srF_0$ is a \textbf{field} and $\srM$ is a \textbf{monotone class}, then $\srF_0 \subseteq \srM$ implies $\sigma(\srF_0) \subseteq \srM$.
+\end{theorem}
+\end{itemize}
+
+
+\section{Random Variables}
+\subsection{Pre-image}
+\begin{itemize}
+\item \begin{remark}
+Suppose $\Omega$ and $\Omega'$ are two sets. Frequently $\Omega' = \bR$. Suppose
+\begin{align*}
+X: \Omega \rightarrow \Omega'
+\end{align*}
+meaning X is a function with domain $\Omega$ and range $\Omega'$. Then $X$ determines a \emph{\textbf{preimage}}
+\begin{align*}
+X^{-1}: 2^{\Omega'} \rightarrow 2^{\Omega}
+\end{align*}
+defined by
+\begin{align*}
+X^{-1}(A') = \set{\omega \in \Omega: X(\omega) \in A'}
+\end{align*}
+for $A' \subseteq \Omega'$. $X^{-1}$ \emph{preserves} complementation, union and intersections.
+\end{remark}
+
+\item \begin{proposition} (\textbf{$\sigma$-Algebra Preserved by Preimage}) \citep{resnick2013probability}\\
+If $\srB$ is a \textbf{$\sigma$-algebra} of subsets of $\Omega'$, then $X^{-1}(\srB)$ is a \textbf{$\sigma$-algebra} of subsets of $\Omega$.
+\end{proposition}
+
+\item \begin{proposition}  \citep{resnick2013probability}\\
+If $\srC$ is a collection of subsets in $\Omega'$, then 
+\begin{align*}
+X^{-1}\paren{\sigma(\srC)} &= \sigma\paren{X^{-1}(\srC)},
+\end{align*}
+that is, \textbf{the pre-image of the $\sigma$-algebra} generated by $\srC$ in $\Omega'$ is the same as the $\sigma$-algebra generated by pre-image of $\srC$.  
+\end{proposition}
+
+\end{itemize}
+\subsection{Measurable Functions as Random Variable}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Random Element  and Random Variables}})\\
+Given $(\Omega, \srF)$ and $(\Omega', \srB)$ are two \emph{measureable space}, a map $X: \Omega \rightarrow \Omega'$ is a \emph{measurable map} (or $(\srF/\srB)$ \emph{measurable}) if
+\begin{align*}
+X^{-1}(\srB) \subset \srF.
+\end{align*}
+$X$ is called a \underline{\emph{\textbf{random element}}} in $\Omega'$, and denoted as
+\begin{align*}
+X\in \srF/\srB, \\
+\text{or } X: (\Omega, \srF) \rightarrow (\Omega', \srB)
+\end{align*}
+If $(\Omega', \srB) = (\bR, \cB)$, $\cB=\srB(\bR)$ is \emph{Borel $\sigma$-algebra} on $\bR$, $X$ is called a \underline{\emph{\textbf{random variable}}}.
+\end{definition}
+
+%\item \begin{remark} (\emph{\textbf{$\sigma$-Algebra on Domain Generated by Random Varibles}})\\
+%Note that for $\srB$ as a $\sigma$-algebra for  $\Omega'$, then for any map $X: \Omega \rightarrow \Omega'$, $X^{-1}(\srB)$ is a $\sigma$-algebra for  $\Omega'$ for $\Omega$
+%\end{remark}
+
+\item   \begin{definition} (\emph{\textbf{Distribution of Random Variable}})\\
+Given the probability space $(\Omega, \srF, \cP)$ and suppose $X: (\Omega, \srF) \rightarrow (\Omega', \srB)$ is measurable, then the set function 
+\begin{align*}
+\cP_{X} &\equiv \cP\,\circ\, X^{-1} \\
+\Rightarrow \cP_{X}(B) &= \cP(X^{-1}(B)) \quad \text{for all }B \in \srB 
+\end{align*}
+is called the \underline{\emph{\textbf{induced probability}}} or \underline{\emph{\textbf{the distribution for random variable $X$}}}. 
+
+Given random variable $X$, we obtain \emph{an \textbf{induced probability space}} $(\Omega', \srB, \cP_X)$ on the image set.
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Pushforward Measure}})
+\begin{definition} For a \emph{continous} map $T : \cX \rightarrow \cY$,  the \textbf{\emph{push-forward operator}} is defined as $T_{\#}: \cM(\cX) \rightarrow \cM(\cY)$ that  satisfies 
+\begin{align*}
+\paren{T_{\#}\alpha}(B)&:= \alpha\paren{\set{ \mb{x}: T(\mb{x}) \in B \subset \cY }} = \alpha(T^{-1}(B))  
+\end{align*} where the \underline{\textbf{\emph{push-forward measure}}} $\beta := T_{\#}\alpha \in \cM(\cY)$ of some $\alpha \in  \cM(\cX)$, $T^{-1}(\cdot)$ is the \emph{pre-image} of $T$, and $\cM(\cX)$ is the set of \emph{\textbf{Radon measures}} on the space $\cX$. 
+\end{definition} 
+
+Thus \emph{the \textbf{distribution of random variable}} $X$ is \emph{\textbf{the pushforward measure}} of $\cP$ by \emph{random map} $X$:
+\begin{align*}
+\cP_{X} &= X_{\#}\cP.
+\end{align*}
+\end{remark}
+
+\item \begin{remark}
+Usually we write
+\begin{align*}
+\cP\,\circ\, X^{-1}(B) &=  \cP\paren{\set{\omega: X(\omega) \in B}} = \cP(X \in B)
+\end{align*}
+If $X$ is a random variable, $\cP_X$ is an \emph{induced probability measure} on $\bR$:
+\begin{align*}
+\cP\,\circ\, X^{-1}((-\infty, x]) &= \cP(X \le x)
+\end{align*}
+\end{remark}
+
+
+%\item \begin{remark}
+%Note that $\sigma(X) \subseteq \srF$ is a sub $\sigma$-algebra of $\srF$ in the \emph{domain} measurable space.
+%
+%
+%Moreover, for sub-$\sigma$-algebra of $\srF$, $\srF' \subset \srF$, we say $X$ is \emph{\textbf{measureable}} with respect to $\srF'$, $X\in \srF'$ if and only if $\sigma(X)\subset \srF'$.
+%%Note that $\cP_X$ is defined on the $\sigma$-algebra $X^{-1}(\srB)\subset \srF$ and under some conditions, it can be unique extended to the whole Borel $\sigma$-algebra $\srF$. 
+%%
+%%In particular,
+%\end{remark}
+
+\item \begin{remark} \citep{billingsley2008probability}
+\begin{itemize}
+\item We can interpret each random variable $X: \Omega \rightarrow \bR$ as the result of a \emph{\textbf{random experiment}} whose \emph{outcome measurement} is a real number. %Each specific outcome corresponds to some $\omage\in \Omega$ via the random variable $X$. 
+When the experiment design is complete, the random variable as a $\srF$-measurealbe function is fixed, and the outcome for each run is associated with a specific \emph{sample point} $\omega\in \Omega$.
+
+\item The $\sigma$-algebra generated by a random variable $X$, $\sigma(X)$, encodes \emph{\textbf{all possible information}} conveyed by the \emph{\textbf{outcome} of experiment} $X$.  In communication, where $X$ is the message, all information of the message can be encoded in $\sigma(X)$.  %\emph{random message} $X$, which can be \emph{explored by the associated experiment}.  
+The set $\brac{X\in A}\equiv \set{\omega: X(\omega)\in A}\in \sigma(X)$ incorporates all possible realizations whose outcomes lie in $A$. 
+
+\item Moreover,  $\sigma(X)\subset \srF$ provides a specific structure in $\srF$ that is induced by the given random variable $X$.  Here, $\sigma(X) \subset \sigma(X,Z)$ indicates that the there is, in general, finer information structure contained in experiments yielding multiple outcome $(X(\omega),Z(\omega)), \omega\in \Omega$ than those yielding a simple outcome $X(\omega)$. Finer means more detailed information is available to be explored. %Therefore, the (information) structure of $\sigma(X,Z)$ is finer than $\sigma(X)$ in $\srF$.
+
+\item In terms of this, the overall $\sigma$-algebra $\srF$ just encode all possible information conveyed by any feasible experiments.
+
+\item The distribution of random variable as an induced probability measure $\cP \equiv \bP\circ X^{-1}$ is then a measure of all possible outcomes in real $\bR$, which is generated by experiments of $X$. Here $\bP$ is a probability measure of event in sample space. 
+
+Note that the induced probability space $(\bR, \cB(\bR), \cP)$ contained all information regarding the random experiment. It allow as to "forget" the original space $(\Omega, \srF, \bP)$.
+
+\item Sometime, we can specify a fixed sample point $\omega\in \Omega$ from a given outcome of the experiment $X$, then for any \emph{event} $E\in \sigma(X)$, we can reveal whether or not $\omega\in E$, but still have no information about the event itself. \\
+\end{itemize} 
+\end{remark}
+
+\item \begin{proposition} (\textbf{Test for Measurability})\citep{resnick2013probability}\\
+ Suppose
+  \begin{align*}
+ X: \Omega \rightarrow \Omega'
+\end{align*}
+where $(\Omega, \srF)$, and $(\Omega', \srB)$ are two measurable spaces. Suppose $\srC$ \textbf{generates} $\srB$;
+that is
+\begin{align*}
+\srB &= \sigma(\srC).
+\end{align*}
+Then $X$ is \textbf{measurable} \textbf{if and only if}
+\begin{align*}
+X^{-1}(\srC) \subset \srB.
+\end{align*}
+\end{proposition}
+
+\item \begin{corollary} (\textbf{Special Case of Random Variables}) \citep{resnick2013probability}\\
+The real valued function 
+  \begin{align*}
+ X: \Omega \rightarrow \bR
+\end{align*}
+ is a random variable if and only if
+\begin{align*}
+X^{-1}((-\infty, \lambda])= [X \le \lambda] \in \srB, \quad \forall \, \lambda \in \bR.
+\end{align*}
+
+\end{corollary}
+
+
+%
+%\item For $\Omega$ and $\Omega'$ both metric space with Borel $\sigma$-algebra $\srF$ and $\srB$ generated by metric topology, respectively, then if $X: (\Omega, \srF) \rightarrow (\Omega', \srB)$ is continuous,  then  $X$ is $\srF/\srB$ measureable.\\
+%
+%\item Define $a\vee b \equiv \max\set{a,b}$ and $a\wedge b \equiv \min\set{a,b}$. Then $\bigvee_{k\ge 1}X_{k} = \sup\limits_{k\ge 1}X_{k}$ is a random variable, (measureable w.r.t. $\srC = \sigma(X_{k}, k\ge 1) =\bigvee_{k\ge 1} \sigma(X_{k}) $). Also $\bigwedge_{k\ge 1}X_{k}=\inf\limits_{k\ge 1}X_{k}$ is a random variable.
+\end{itemize}
+
+\subsection{Measurability and Limits}
+\begin{itemize}
+ \item \begin{proposition} \citep{resnick2013probability}\\
+Let $X_{1}, X_2, \ldots$ be random variables defined on $(\Omega, \srF)$. Then 
+\begin{itemize}
+\item $\inf_{n\ge 1}X_{n}$ and $\sup_{n\ge 1}X_{n}$ are random variables;
+\item $\liminf\limits_{n\rightarrow \infty}X_{n}$ and $\limsup\limits_{n\rightarrow \infty}X_{n}$ are random variables;
+\item If $\lim\limits_{n\rightarrow}X_{n}(\omega)$ exists for all $\omega$, then $\lim\limits_{n\rightarrow}X_{n}$ is a random variable;
+\item The set on which $\set{X_{n}: n\ge 1}$ has a limit is measureable; that is,
+\begin{align*}
+\set{\omega\;:\; \lim\limits_{n\rightarrow}X_{n}(\omega) \text{ exists} } \in \srF.
+\end{align*}
+\end{itemize}
+\end{proposition}
+\begin{proof}
+\begin{itemize}
+\item Given that $X_{k}\in \srF/\cB$, $k\ge 1$, the event 
+\begin{align*}
+\set{\omega: \inf\limits_{n\rightarrow \infty}X_{n}(\omega)\in (-\infty, \lambda] }&=  \bigcup_{n\ge 1}\set{\omega: X_{n}(\omega)\in (-\infty, \lambda] } \in \srF, \text{for any }\lambda \in \bR
+\end{align*}
+since $\set{\omega: X_{n}(\omega)\in (-\infty, \lambda] } \in \srF$.
+
+Also
+\begin{align*}
+\set{\omega: \sup\limits_{n\rightarrow \infty}X_{n}(\omega)\in (-\infty, \lambda] }&=  \bigcap_{n\ge 1}\set{\omega: X_{n}(\omega)\in (-\infty, \lambda] } \in \srF, \text{for any }\lambda \in \bR.\\
+\end{align*}
+
+\item The event 
+\begin{align*}
+\set{\omega: \liminf\limits_{n\rightarrow \infty}X_{n}(\omega)\in (-\infty, \lambda] }&= \set{\omega: \sup\limits_{k\ge 1}\inf_{n\ge k} X_{n}(\omega) \in (-\infty, \lambda] }\\
+&= \bigcap_{k\ge 1}\bigcup_{n\ge k}\set{\omega: X_{n}(\omega)\in (-\infty, \lambda] } \in \srF, \text{for any }\lambda \in \bR.
+\end{align*}
+
+Similarly,  
+\begin{align*}
+\set{\omega: \limsup\limits_{n\rightarrow \infty}X_{n}(\omega)\in (-\infty, \lambda] }&= \set{\omega: \inf\limits_{k\ge 1}\sup_{n\ge k} X_{n}(\omega) \in (-\infty, \lambda] }\\
+&= \bigcup_{k\ge 1}\bigcap_{n\ge k}\set{\omega: X_{n}(\omega)\in (-\infty, \lambda] } \in \srF, \text{for any }\lambda \in \bR
+\end{align*}
+
+
+\item If $\lim\limits_{n\rightarrow}X_{n}(\omega)$ exists for all $\omega$, then
+\begin{align*}
+\lim\limits_{n\rightarrow}X_{n} &=  \limsup\limits_{n\rightarrow \infty}X_{n} = \liminf\limits_{n\rightarrow \infty}X_{n},
+\end{align*}
+which is a random variable.\\
+
+\item Consider the complement
+\begin{align*}
+\set{\omega\;:\; \lim\limits_{n\rightarrow}X_{n}(\omega) \text{ exists} }^{c}
+&= \set{ \omega\;:\; \limsup\limits_{n\rightarrow \infty}X_{n}(\omega) >  \liminf\limits_{n\rightarrow \infty}X_{n}(\omega)}\\
+&=  \bigcup_{r\in \cQ}\set{ \omega\;:\; \limsup\limits_{n\rightarrow \infty}X_{n}(\omega) > r\ge   \liminf\limits_{n\rightarrow \infty}X_{n}(\omega)}\\
+&= \bigcup_{r\in \cQ}\paren{\brac{\set{ \omega\;:\; \limsup\limits_{n\rightarrow \infty}X_{n}(\omega) \le r}^{c}}\bigcap\brac{\set{ \omega\;:\; \liminf\limits_{n\rightarrow \infty}X_{n}(\omega) \le r}}} \\
+&= \bigcup_{r\in \cQ} \bigcap_{k\ge 1}\paren{\bigcup_{n\ge k}\set{X_{n}(\omega) > r}\cap\bigcup_{n\ge k}\set{X_{n}(\omega) \le r}   }\\
+&\in \srF, 
+\end{align*}
+since $\limsup\limits_{n\rightarrow \infty}X_{n} , \;\; \liminf\limits_{n\rightarrow \infty}X_{n}$ are both measureable.\qed
+\end{itemize}
+\end{proof}
+\end{itemize}
+
+\subsection{$\sigma$-Algebra Generated by Random Variables}
+\begin{itemize}
+\item  \begin{definition} (\emph{\textbf{$\sigma$-Algebra Generated by Random Variable}})\\
+Let $X: (\Omega, \srF) \rightarrow (\bR, \cB(\bR))$  be a \emph{\textbf{random variable}}. The \underline{\emph{\textbf{$\sigma$-algebra generated by random}}} \underline{\emph{\textbf{variable}}}, \emph{denoted $\sigma(X)$}, is defined as
+\begin{align*}
+\sigma(X) &= X^{-1}(\cB(\bR)).
+\end{align*}
+Another \emph{equivalent} description of $\sigma(X)$ is
+\begin{align*}
+\sigma(X) &:= \set{ \brac{X \in A},\; A \in \cB(\bR)  },
+\end{align*} where 
+\begin{align*}
+ \brac{X \in A} \equiv X^{-1}(A) = \set{\omega \in \Omega: X(\omega) \in A}.
+\end{align*}
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{$\sigma(X) =$ Information about $X$ in Probability Space}})\\
+This is the $\sigma$-algebra generated by \emph{\textbf{information} about $X$}, which is a way of \emph{\textbf{isolating} that \textbf{information} in the probability space that \textbf{pertains} to $X$}. 
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{$\sigma$-Algebra Generated by Random Element}})\\
+Suppose
+\begin{align*}
+X: (\Omega, \srF) \rightarrow (\Omega', \srB)
+\end{align*} is a random element. Then we define
+\begin{align*}
+\sigma(X) &= X^{-1}(\srB).
+\end{align*} as  \underline{\emph{\textbf{$\sigma$-algebra generated by random element}}}.
+%The \underline{\emph{\textbf{$\sigma$-algebra generated by random element}}}  is the \emph{\textbf{smallest} $\sigma$-field} with respect to which $X$ is measurable; it is generated by 
+%is denoted as 
+%\begin{align*}
+%\sigma(X) &:= \set{ \set{\omega: X(\omega)\in A'}, A'\in \srB  }.
+%\end{align*}
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Measurable with respect to Sub $\sigma$-Algebra}})\\
+ $\srF' \subset \srF$, we say $X$ is \emph{\textbf{measureable}} with respect to $\srF'$, written $X\in \srF'$ if and only if $\sigma(X)\subset \srF'$.
+ \end{remark}
+ 
+ \item \begin{definition} (\emph{\textbf{Smallest $\sigma$-Algebra Containing $\sigma(X_t)$}})\\ 
+ Let $X_t:  (\Omega, \srF) \rightarrow (\Omega', \srB)$ for each $t$ in some index set $T$, then denote
+ \begin{align*}
+ \sigma(X_{t}, t\in T) = \bigvee_{t\in T}\sigma(X_{t})
+ \end{align*} the \emph{\textbf{smallest $\sigma$-algebra}} \emph{containing all} $\sigma(X_t)$.
+ \end{definition}
+ 
+ \item \begin{remark} (\emph{\textbf{Increasing Family of $\sigma$-Algebras in Stochastic Process}})\\
+In \emph{stochastic process theory}, we frequently keep track of \emph{\textbf{potential information}} that can be \emph{revealed} to us by \emph{observing the evolution of a stochastic process} by \underline{\emph{\textbf{an increasing family of}}} \underline{\emph{\textbf{$\sigma$-algebras}}}. 
+
+If $\set{X_n, n \ge1}$ is a \emph{\textbf{(discrete time) stochastic process}}, we may define
+\begin{align*}
+\srF_n &:= \sigma\paren{X_1 \xdotx{,} X_n}, \quad n\ge 1.
+\end{align*}
+Thus, $\srF_n \subset \srF_{n+1}$ and we think of $\srF_n$ as the \emph{\textbf{information potentially available at time $n$}}. This is a way of cataloguing what information is contained in \emph{the probability model}. \emph{\textbf{Properties}} of the stochastic process are sometimes expressed in
+terms of $\set{\srF_n, n \ge 1}$. 
+
+For instance, one formulation of \emph{\textbf{the Markov property}} is that \emph{the conditional distribution of $X_{n+1}$ given $\srF_n$} is the \emph{\textbf{same}} as \emph{the conditional distribution of $X_{n+1}$ given $X_n$}. 
+\begin{align*}
+\cP(X_{n+1} | \srF_{n}) = \cP(X_{n+1} | X_{n}) 
+\end{align*}
+ \end{remark}
+ 
+ \item \begin{proposition} \citep{resnick2013probability}\\
+Suppose $X$ is a random variable and $\srC$ is a class of subsets of $\bR$. such that
+ \begin{align*}
+ \sigma(\srC) = \cB(\bR).
+ \end{align*}
+Then
+\begin{align*}
+\sigma(X) &= \sigma\paren{[X \in B]: B \in \srC}.
+\end{align*}
+\end{proposition}
+A special case of this result is
+\begin{align*}
+\sigma(X) &= \sigma\paren{[X \le \lambda], \lambda \in \bR}.
+\end{align*}
+
+\item \begin{example}
+The followings are $\sigma(X)$ from some special random variables:
+\begin{enumerate}
+\item For \textbf{\emph{constant function}} $X(\omega) = a\in \bR$ for all $\omega$, then generated $\sigma$-algebra 
+\begin{align*}
+\sigma(X) = \set{\emptyset, \Omega}.
+\end{align*}
+
+
+\item For \textbf{\emph{indicator function}} $X(\omega) = \ind{\omega \in A}$, the generated $\sigma$-algebra
+\begin{align*}
+\sigma(X) = \set{\emptyset, A, A^{c}, \Omega}.
+\end{align*} Since $X^{-1}({1})= A$, and  $X^{-1}({0})= A^{c}$, so $X^{-1}(B)= \emptyset$, $\set{0,1}\cap B = \emptyset$ and $X^{-1}(B)= \Omega$, $\set{0,1}\subset B$; similarly, $X^{-1}(B)= A$, $\set{0,1}\cap B = \set{1}$  and $X^{-1}(B)= A^{c}$, $\set{0,1}\cap B = \set{0}$.
+
+\item If $(X_{1}, X_2, \ldots )$ is a \emph{\textbf{stochastic process}}, then 
+\begin{align*}
+\srF_{n}\equiv \sigma\paren{X_{1},\ldots, X_{n}}
+\end{align*}
+is the $\sigma$-algebra generated by collection of subsets ($n$-dimensional \emph{cylinder sets})
+\begin{align*}
+\set{\omega: (X_{1}(\omega),\ldots, X_{n}(\omega))\in A' } \in \srF,\text{ for } A'\in \cB(\bR^{n}). 
+\end{align*} This collects all information from $0$ to $n$. See that
+\begin{align*}
+\sigma\paren{X_{1},\ldots, X_{n}} \subset \sigma\paren{X_{1},\ldots, X_{n}, X_{n+1}}.
+\end{align*}
+\end{enumerate} 
+\end{example}
+
+\end{itemize}
+
+\section{Probability Measures on Product Spaces}
+\subsection{Product Spaces}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Product Space}})\\
+Let $\Omega_1$, $\Omega_2$ be two sets. Define \underline{\emph{\textbf{the product space}}}
+\begin{align*}
+\Omega_{1}\times \Omega_{2} = \set{(\omega_1, \omega_2) : \omega_i \in \Omega_i, i = 1, 2}
+\end{align*}
+and define \emph{the \textbf{coordinate} or \underline{\textbf{projection maps}}} by ($i = 1, 2$)
+\begin{align*}
+\pi_i: \Omega_{1}\times \Omega_{2} \rightarrow \Omega_i \\
+(\omega_1, \omega_2) \mapsto \omega_i
+\end{align*}
+so that If $A \subset \Omega_{1}\times \Omega_{2}$ define
+\begin{align*}
+A_{\omega_1} &= \set{\omega_2: (\omega_1, \omega_2) \in A} = \pi_2(A) \subset \Omega_2 \\
+A_{\omega_2} &= \set{\omega_1: (\omega_1, \omega_2) \in A} = \pi_1(A) \subset \Omega_1.
+\end{align*} $A_{\omega_i}$ is called \underline{\emph{\textbf{the section of $A$ at $\omega_i$}}}.
+\end{definition}
+
+\item \begin{definition}  (\emph{\textbf{Function on Product Space}})\\
+Now suppose we have a function $X$ with \emph{\textbf{domain} $\Omega_{1}\times \Omega_{2}$ and range} equal to some set $S$. It does no harm to think of $S$ as a \emph{metric space}. Define \underline{\emph{\textbf{the section of the function $X$}}} as
+\begin{align*}
+X_{\omega_1}(\omega_2) &= X(\omega_1, \omega_2)
+\end{align*}
+so $X_{\omega_1} \circ \pi_2 = X$ for
+\begin{align*}
+X_{\omega_1}: \Omega_2 \rightarrow S.
+\end{align*}
+We think of $\omega_1$ as \emph{\textbf{fixed}} and \textbf{\emph{the section}} is a function \emph{of varying $\omega_2$}. Call $X_{\omega_1}$ \emph{\textbf{the section of $X$ at $\omega_1$}}.
+\end{definition}
+
+\item \begin{lemma} (\textbf{Sectioning Sets}) \citep{resnick2013probability}\\
+\textbf{Sections of measurable} sets are \textbf{measurable}. If $A \in \srF_{1}\times \srF_{2}$, then for all $\omega_1 \in \Omega_1$
+\begin{align*}
+A_{\omega_1} \in \srF_2.
+\end{align*}
+\end{lemma}
+
+\item \begin{corollary}  \citep{resnick2013probability}\\
+\textbf{Sections of measurable} functions are \textbf{measurable}. That is, if
+\begin{align*}
+X: (\Omega_{1}\times \Omega_{2}, \srF_{1}\times \srF_{2}) \rightarrow (S, \srS)
+\end{align*}
+then
+\begin{align*}
+X_{\omega_1} \text{ is }\srF_2\text{-measurable.}
+\end{align*}
+\end{corollary}
+\end{itemize}
+\subsection{Probability Measure on Product Spaces}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Transition Function / Transition Kernel}})\\
+Let $(\Omega_1, \srF_1)$ and $(\Omega_2, \srF_2)$ be measurable spaces.  A map 
+\begin{align*}
+K: \Omega_1 \times \srF_2 \rightarrow [0,1]
+\end{align*}
+is called  \underline{\emph{\textbf{a transition function}}} \underline{\emph{\textbf{(or transition kernel)}}} if it satisfies the following conditions:
+\begin{enumerate}
+\item for each $\omega_1$, $K(\omega_1, \cdot)$ is a \textbf{\emph{probability measure}} on $\srF_2$, and
+\item for each $A_2 \in \srF_2$, $K(\cdot, A_2)$ is a \emph{\textbf{$\srF_1 / \cB([0,1])$-measurable function}}.
+\end{enumerate} 
+\end{definition}
+
+\item \begin{proposition} (\textbf{Joint Probability from Transition Kernel}) \citep{resnick2013probability}\\
+Let $\cP_1$ be a \textbf{probability measure} on $\srF_1$, and suppose
+\begin{align*}
+K: \Omega_1 \times \srF_2 \rightarrow [0,1]
+\end{align*}
+is a \textbf{transition function}. Then $K$ and $\cP_1$ \textbf{uniquely} determine a \textbf{probability} on $\srF_1 \times \srF_2$ via the formula
+\begin{align*}
+\cP(A_{1}\times A_{2}) &= \int_{A_{1}}K(\omega_{1}, A_{2})\cP_{1}(d\omega_{1}) 
+\end{align*} for all $A_1 \times A_2 \in \srF_1 \times \srF_2$. This probability measure on product space $(\Omega_{1}\times \Omega_{2}, \srF_{1}\times \srF_{2})$ is called \underline{\textbf{the joint probability}}.
+\end{proposition}
+
+
+\item \begin{proposition} (\textbf{Marginal Random Variable}) \citep{resnick2013probability}\\
+Let $\cP_1$ be a \textbf{probability measure} on $(\Omega_1, \srF_1)$ and suppose $K: \Omega_1 \times \srF_2 \rightarrow [0,1]$ is a \textbf{transition kernel}. Define $\cP$ on $(\Omega_{1}\times \Omega_{2}, \srF_{1}\times \srF_{2})$ by
+\begin{align*}
+\cP(A_{1}\times A_{2}) &= \int_{A_{1}}K(\omega_{1}, A_{2})\cP_{1}(d\omega_{1}).
+\end{align*}
+Assume
+\begin{align*}
+X: (\Omega_{1}\times \Omega_{2}, \srF_{1}\times \srF_{2}) \rightarrow (\bR, \cB(\bR))
+\end{align*}
+and furthermore suppose $X \ge 0$ or $X \in L^1(\cP)$ is \textbf{integrable}. Then
+\begin{align*}
+Y(\omega_1) &= \int_{\Omega_2}K(\omega_{1}, d\omega_2)X_{\omega_1}(\omega_{2}).
+\end{align*}
+has the properties
+\begin{enumerate}
+\item $Y$ is well defined.
+\item $Y$ is \textbf{$\srF_1$-measurable}.
+\item $Y \ge 0$ or $Y \in L^1(\cP_1)$ is \textbf{integrable},
+\end{enumerate} and furthermore
+\begin{align*}
+\int_{\Omega_1 \times \Omega_2} X d\cP &= \int_{\Omega_1} Y(\omega_1)\cP_1(d\omega_1) = \int_{\Omega_1} \brac{\ \int_{\Omega_2}K(\omega_{1}, d\omega_2)X_{\omega_1}(\omega_{2})}\cP_1(d\omega_1).
+\end{align*}
+\end{proposition}
+%\item 
+%The joint distribution on product space $(\Omega_{1}\times \Omega_{2}, \cB_{1}\times \cB_{2})$ is absolutely continuous w.r.t. the marginal distribution:
+%\begin{align*}
+%P(A_{1}\times A_{2}) &= \int_{A_{1}}K(\omega_{1}, A_{2})P_{1}(d\omega_{1}) 
+%\end{align*}
+%where $K: \Omega_{1} \times \cB_{2} \rightarrow [0,1]$ is the transition function (kernel) that from $\Omega_{1}$ to $\cB_{2}$, $K(\omega_{1}, \cdot)$ is a probability measure on $\cB_{2}$, and $K(\cdot, A_{2})$ is a random variable from $\Omega_{1} \rightarrow [0,1]$.
+
+\item \begin{theorem} (\textbf{Fubini Theorem}) \citep{resnick2013probability}\\
+Let $\cP = \cP_1 \times \cP_2$ be \textbf{product measure}. If $X$ is $(\srF_{1}\times \srF_{2})$-measurable and is either non-negative or \textbf{integrable} with respect to $\cP$, then
+\begin{align*}
+\int_{\Omega_1 \times \Omega_2} X d\cP &= \int_{\Omega_1} \brac{\int_{\Omega_2}X_{\omega_1}(\omega_2)\cP_2(d\omega_2)}\cP_1(d\omega_1)\\
+&= \int_{\Omega_2} \brac{\int_{\Omega_1} X_{\omega_2}(\omega_1)\cP_1(d\omega_1)}\cP_2(d\omega_2).
+\end{align*}
+\end{theorem}
+\end{itemize}
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{reference.bib}
+\end{document}
