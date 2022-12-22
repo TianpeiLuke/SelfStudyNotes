@@ -9,6 +9,8 @@
 
 ## Table of Contents
 
+### Statistical Learning Theory
+
 - Basic Concepts of Statistical Learning
   - Data, Loss, Hypothesis Class
   - Deterministic and Stochastic Scenario
@@ -33,3 +35,11 @@
   - Strctural Risk Minimization
   - Minimal Description Length
 
+### Machine Learning Models
+
+- Reproducing Kernel Hilbert Space
+  - Definition 
+  - Construction via Positive Definite Kernel
+  - Construction via Kernel Integral Operator
+
+- Gaussian Process for Machine Learning
