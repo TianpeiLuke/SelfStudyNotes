@@ -1,0 +1,6 @@
+\contentsline {section}{\numberline {1}Multi-armed Bandits}{2}
+\contentsline {subsection}{\numberline {1.1}Exploration and Exploitation}{2}
+\contentsline {section}{\numberline {2}Methods}{3}
+\contentsline {subsection}{\numberline {2.1}Action-value Methods}{3}
+\contentsline {subsubsection}{\numberline {2.1.1}Incremental update}{4}
+\contentsline {subsubsection}{\numberline {2.1.2}Tracking nonstationary problem}{4}
