@@ -1,0 +1,12 @@
+\contentsline {section}{\numberline {1}Embedded Submanifolds}{2}
+\contentsline {subsection}{\numberline {1.1}Defintions and Examples}{2}
+\contentsline {subsection}{\numberline {1.2}Slice Charts for Embedded Submanifolds}{3}
+\contentsline {subsection}{\numberline {1.3}Level Sets}{4}
+\contentsline {section}{\numberline {2}Immersed Submanifolds}{7}
+\contentsline {subsection}{\numberline {2.1}Definitions and Examples}{7}
+\contentsline {section}{\numberline {3}Restricting Maps to Submanifolds}{9}
+\contentsline {subsection}{\numberline {3.1}Theorems}{9}
+\contentsline {subsection}{\numberline {3.2}Uniqueness of Smooth Structures on Submanifolds}{10}
+\contentsline {subsection}{\numberline {3.3}Extending Functions from Submanifolds}{10}
+\contentsline {section}{\numberline {4}The Tangent Space to a Submanifold}{11}
+\contentsline {section}{\numberline {5}Submanifolds with Boundary}{12}
