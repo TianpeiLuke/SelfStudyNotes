@@ -12,6 +12,7 @@
 
 ***An Introduction to Hamiltonian Monte Carlo Method for Sampling***, Nisheeth K. Vishnoi
 
+***Calculus Of Variations***, I. M. Gelfand, S. V. Fomin
 
 
 ## Table of Contents
