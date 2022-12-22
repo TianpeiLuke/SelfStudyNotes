@@ -21,12 +21,12 @@
     
   - Statistical Manifolds
     - Geometry of Space of Probability Density Functions
-    - Statistical Manifold
-    - Fisher Metric as Riemannian Metric
-    - Vector Fields
-    - Alpha-Connections
-    - Dual Connections 
-    - Embedding
+      - Statistical Manifold
+      - Fisher Metric as Riemannian Metric
+      - Vector Fields
+      - Alpha-Connections
+      - Dual Connections 
+      - Embedding
    
   - Comparison Between Riemannian Geometry and Information Geometry
    
