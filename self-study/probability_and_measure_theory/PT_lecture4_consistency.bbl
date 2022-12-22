@@ -1,0 +1,50 @@
+\begin{thebibliography}{8}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Devroye et~al.(2013)Devroye, Gy{\"o}rfi, and
+  Lugosi]{devroye2013probabilistic}
+Luc Devroye, L{\'a}szl{\'o} Gy{\"o}rfi, and G{\'a}bor Lugosi.
+\newblock \emph{A probabilistic theory of pattern recognition}, volume~31.
+\newblock Springer Science \& Business Media, 2013.
+
+\bibitem[Folland(2013)]{folland2013real}
+Gerald~B Folland.
+\newblock \emph{Real analysis: modern techniques and their applications}.
+\newblock John Wiley \& Sons, 2013.
+
+\bibitem[Lehmann and Casella(1998)]{lehmann1998theory}
+Erich~Leo Lehmann and George Casella.
+\newblock \emph{Theory of point estimation}, volume~31.
+\newblock Springer Science \& Business Media, 1998.
+
+\bibitem[Resnick(2013)]{resnick2013probability}
+Sidney~I Resnick.
+\newblock \emph{A probability path}.
+\newblock Springer Science \& Business Media, 2013.
+
+\bibitem[Royden and Fitzpatrick(1988)]{royden1988real}
+Halsey~Lawrence Royden and Patrick Fitzpatrick.
+\newblock \emph{Real analysis}, volume 198.
+\newblock Prentice Hall, Macmillan New York, 1988.
+
+\bibitem[Tao(2011)]{tao2011introduction}
+Terence Tao.
+\newblock \emph{An introduction to measure theory}, volume 126.
+\newblock American Mathematical Soc., 2011.
+
+\bibitem[Van~der Vaart(2000)]{van2000asymptotic}
+Aad~W Van~der Vaart.
+\newblock \emph{Asymptotic statistics}, volume~3.
+\newblock Cambridge university press, 2000.
+
+\bibitem[Wellner et~al.(2013)]{wellner2013weak}
+Jon Wellner et~al.
+\newblock \emph{Weak convergence and empirical processes: with applications to
+  statistics}.
+\newblock Springer Science \& Business Media, 2013.
+
+\end{thebibliography}

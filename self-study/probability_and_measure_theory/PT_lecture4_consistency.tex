@@ -1,0 +1,674 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, amscd}
+\usepackage{mathrsfs, dsfont}
+\usepackage[all,cmtip]{xy}
+\usepackage{tikz-cd}
+%\diagramstyle[labelstyle=\scriptstyle]
+\usepackage{tabularx}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Lecture 4: Convergence and Consistency}
+\author{ Tianpei Xie}
+\date{ Jul. 26th., 2015 }
+\maketitle
+\tableofcontents
+\newpage
+\section{Recall: Modes of Convergence}
+\subsection{Definitions}
+\begin{itemize}
+\item \begin{remark} (\emph{\textbf{Two Basic Modes of Convergence}}) \citep{royden1988real, tao2011introduction}
+\begin{enumerate}
+\item \begin{definition}  (\emph{\textbf{Pointwise Convergence}})\\
+We say that $f_n$ converges to $f$ \underline{\emph{\textbf{pointwise}}} if, for any $x\in X$ and $\epsilon > 0$, there exists $N > 0$ (\emph{that \textbf{depends} on $\epsilon$ and $x$}) such that for all $n \ge N$, $\abs{f_n(x) - f(x)} \le  \epsilon$. Denoted as $f_{n}(x)\rightarrow f(x)$.
+\end{definition}
+
+\item\begin{definition} (\emph{\textbf{Uniform Convergence}})\\
+We say that $f_n$ converges to $f$ \underline{\emph{\textbf{uniformly}}} if,  for any $\epsilon > 0$, there exists $N > 0$ (\emph{that \textbf{depends} on $\epsilon$ only})  such that for all $n \ge N$, $\abs{f_n(x) - f(x)} \le  \epsilon$  for every $x \in X$. Denoted as $f_{n} \rightarrow f, \text{ \emph{uniformly}}$.
+\end{definition}
+Unlike pointwise convergence, the time $N$ at which $f_n(x)$ must be permanently $\epsilon$-close to $f(x)$ is not permitted to depend on $x$, but must instead be
+chosen \emph{uniformly} in $x$.
+\end{enumerate}
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Modes of Convergence of Measurable Functions}}) \\
+When the domain $X$ is equipped with the structure of a measure space $(X, \srB, \mu)$, and the functions $f_n$ (and their limit $f$) are measurable with respect to this space.  In this context, we have some \emph{additional modes of convergence}:
+\begin{enumerate}
+\item  \begin{definition} (\emph{\textbf{Pointwise Almost Everywhere Convergence}})\\
+We say that  $f_n$ converges to $f$ \underline{\emph{\textbf{pointwise almost everywhere}}} if, for \emph{\textbf{$\mu$-almost everywhere}} $x \in X$, $f_n(x)$ converges to $f(x)$. It is denoted as $f_{n}\stackrel{a.e.}{\rightarrow} f$. In probabilty, it is called \underline{\emph{\textbf{almost sure convergence}}} or \underline{\emph{\textbf{convergence with probability $1$}}}. It is denoted as $f_n \stackrel{a.s.}{\rightarrow} f$.
+
+In other words, there exists \emph{\textbf{a null set}} $E$, ($\mu(E) = 0$) such that for \emph{any $x\in X \setminus E$} and any $\epsilon > 0$, there exists $N > 0$ (\emph{that \textbf{depends} on $\epsilon$ and $x$}) such that for all $n \ge N$, $\abs{f_n(x) - f(x)} \le  \epsilon$. 
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Uniformly Almost Everywhere Convergence}}) \citep{tao2011introduction}\\
+We say $f_n$ converges to $f$ \underline{\emph{\textbf{uniformly almost everywhere}}}, \underline{\emph{\textbf{essentially uniformly}}}, or \underline{\emph{\textbf{in $L^{\infty}$ norm}}} if, for every $\epsilon> 0$, there exists $N$ such that for every $n\ge  N$, $\abs{ f_n(x) - f(x)} \le \epsilon$, \emph{\textbf{for $\mu$-almost every $x \in X$}}. 
+
+That is, $f_n \rightarrow f$ \emph{uniformly} in $x \in X \setminus E$, for some $E$ with $\mu(E) = 0$.
+
+We can also formulate in terms of \emph{\textbf{$L^{\infty}$ norm}} as 
+\begin{align*}
+\norm{f_n(x) - f(x)}{L^{\infty}(X)} \stackrel{n\rightarrow \infty}{\longrightarrow} 0,
+\end{align*}
+where $\norm{f}{L^{\infty}(X)} = \text{ess}\sup_{x}\abs{f(x)} \equiv\inf\limits_{\{E:\mu(E)=0\}}\sup\limits_{x\in X \setminus E}\abs{f(x)}$ is the \emph{\textbf{essential bound}}. It is denoted as $f_{n}\stackrel{L^{\infty}}{\rightarrow} f$.
+\end{definition}
+
+\item \begin{definition}  (\emph{\textbf{Almost Uniform Convergence}})  \citep{tao2011introduction}\\
+We say that $f_n$ converges to $f$ \underline{\emph{\textbf{almost uniformly}}} if, for every $\epsilon > 0$, there exists an \emph{\textbf{exceptional set}} $E \in \srB$ of \emph{measure} $\mu(E) \le \epsilon$ such that $f_n$ converges \emph{\textbf{uniformly}} to $f$ on the \emph{\textbf{complement}} of $E$.
+
+That is, for arbitrary $\delta$ there exists some $E$ with $\mu(E) \le \delta$ such that $f_n \rightarrow f$ \emph{uniformly} in $x \in X \setminus E$.
+\end{definition} 
+
+\item \begin{definition} (\emph{\textbf{Convergence in $L^{1}$ Norm}})\\
+We say that $f_n$ converges to $f$  \underline{\emph{\textbf{in $L^1$ norm}}} if the quantity 
+\begin{align*}
+\norm{f_n - f}{L^{1}(X)} =  \int_{X}\abs{ f_n(x) - f(x)}d\mu  \stackrel{n\rightarrow \infty}{\longrightarrow} 0.
+\end{align*} In probability theory, it is called the \underline{\emph{\textbf{convergence in mean}}}. Denoted as $f_{n}\stackrel{L^{1}}{\rightarrow} f$.
+\end{definition} 
+
+\item  \begin{definition} (\emph{\textbf{Convergence in Measure}})\\
+We say that $f_n$ converges to $f$  \underline{\emph{\textbf{in measure}}} if, for every $\epsilon> 0$,  the measures
+\begin{align*}
+\mu\paren{ \set{x \in X: \abs{f_n(x) - f(x)} \ge \epsilon}}\stackrel{n\rightarrow \infty}{\longrightarrow} 0.
+\end{align*} Denoted as $f_{n}\stackrel{\mu}{\rightarrow} f$.
+
+In probability theory, it is called \underline{\emph{\textbf{convergence in probability}}} and is denoted as $f_n \stackrel{p}{\rightarrow} f$.
+\end{definition} 
+\end{enumerate}
+\end{remark}
+\end{itemize}
+
+\subsection{Modes of Convergence via Tail Support and Width}
+\begin{itemize}
+\item \begin{remark} (\textit{\textbf{Tail Support and Width}})
+\begin{definition}
+Let $E_{n,m} := \set{x \in X: \abs{f_n(x) - f(x)} \ge 1/m}$. Define \underline{\emph{\textbf{the $N$-th tail support set}}}
+\begin{align*}
+T_{N,m}:= \set{x \in X: \abs{f_n(x) - f(x)} \ge 1/m,\;\;\exists n\ge N} = \bigcup_{n\ge N}E_{n,m}.
+\end{align*} Also  let $\mu(E_{n,m})$ be the \underline{\emph{\textbf{width}}} of $n$-th event $\ind{E_{n, m}}$.  Note that $T_{N,m}\supseteq T_{N+1,m}$ is \emph{\textbf{monotone nonincreasing}} and  $T_{N,m}\subseteq T_{N,m+1}$ is \emph{\textbf{monotone nondecreasing}}.
+\end{definition}
+\begin{enumerate}
+\item The \emph{\textbf{pointwise convergence}} of $f_{n}$ to $f$ indicates that for every $x$, every $m\ge 1$, there exists some $N \equiv N(m,x)\ge 1$ such that $ T_{N,m}^{c} \ni x$ or $T_{N, m} \not\ni x$.  Equivalently, \emph{\textbf{the tail support \underline{shrinks to emptyset}}}:
+\begin{align*}
+\bigcap_{N \in \bN}T_{N,m} =  \lim\limits_{N\rightarrow \infty}T_{N,m} = \limsup\limits_{n\rightarrow \infty}E_{n,m} = \emptyset, \quad \text{for all }m.
+\end{align*} 
+
+\item The \emph{\textbf{pointwise almost everywhere convergence}} indicates that there exists \emph{\textbf{a null set}} $F$ with $\mu(F) = 0$ such that for every $x \in X \setminus F$ and any  $m\ge 1$, there exists some $N \equiv N(m,x)\ge 1$ such that  $(T_{N,m}\setminus F) \not\ni x$. Equivalently, \emph{\textbf{the tail support \underline{shrinks to a nulll set}}}. Note that it makes no assumption on $(T_{N,m}\cap F)$. 
+\begin{align*}
+&\lim\limits_{N\rightarrow \infty}T_{N,m} \setminus F = \limsup\limits_{n\rightarrow \infty}E_{n,m} \setminus F = \emptyset, \quad \text{for all }m.\\
+\Leftrightarrow &\quad \bigcap_{N \in \bN}T_{N,m} =   \lim\limits_{N\rightarrow \infty}T_{N,m} = F \\
+\Leftrightarrow &\quad \mu\paren{ \lim\limits_{N\rightarrow \infty}T_{N,m}} = \mu\paren{ \bigcap_{N \in \bN}T_{N,m}} = 0
+\end{align*} 
+
+\item The \emph{\textbf{uniform convergence}} indicates that for each $m\ge 1$, there exists some $N(m)\ge 1$ (not depending on $x$) such that $T_{N,m} = \emptyset$. (i.e. $T_{N,m} \not\ni x$ for all $x \in X$.) So \emph{\textbf{the tail support \underline{is an empty set}}}
+
+
+\item The \emph{\textbf{uniformly almost everywhere convergence}} indicates that there exists some null set $F$ with $\mu(F) =0$ such that for each $m\ge 1$, there exists some $N(m)\ge 1$ (not depending on $x$) such that $(T_{N,m}  \setminus F) = \emptyset$. (i.e. $T_{N,m}\not\ni x$ for all $x \in X \setminus F$.) Equivalently, \emph{\textbf{the tail support \underline{is a null set}}}: 
+\begin{align*}
+& T_{N,m} = F \\
+\Leftrightarrow &\quad \mu\paren{T_{N,m}} = 0
+\end{align*}
+
+
+\item The \emph{\textbf{almost uniform convergence}}  indicates that for every $\delta$, there exists \emph{some measurable set} $F_{\delta}$ with $\mu(F_{\delta}) < \delta$ such that  for each $m\ge 1$ there exists some $N(m)\ge 1$ (not depending on $x$) such that $(T_{N,m} \setminus F_{\delta}) = \emptyset$. (i.e. $T_{N,m} \not\ni x$ for all $x \in X \setminus F_{\delta}$.) Equivalently, \emph{\textbf{\underline{the measure of  tail support shrinks to zero}}}:
+\begin{align*}
+\mu\paren{T_{N,m}} &\le \delta  \quad \Leftrightarrow \quad T_{N,m} = F_\delta\\
+\lim\limits_{N\rightarrow \infty}\mu\paren{T_{N,m}} &=0
+\end{align*} 
+
+
+\item The \emph{\textbf{convergence in measure}} indicates that for any $m\ge 1$ and any $\delta > 0$, there exists $N \equiv N(m, \delta)\ge 1$ such that for all $n \ge N$, \emph{the \underline{\textbf{width}} of $n$-th event \underline{\textbf{shrinks to zero}}}:
+\begin{align*}
+\mu(E_{n,m}) &\le \delta \\
+ \lim\limits_{n\rightarrow \infty}\mu(E_{n, m}) &:=  \lim\limits_{n\rightarrow \infty}\mu\paren{\set{x \in X: \abs{f_n(x) - f(x)} \ge \epsilon} } =0 
+\end{align*} 
+\end{enumerate}
+\end{remark}
+%\section{Definitions}
+%\subsection{Convergence in distributions}
+%\begin{itemize}
+%\item \begin{definition} \citep{tao2011introduction}
+%Let $(\Omega,\srF, \cP)$ be a probability space. Given any real-valued measurable function $X : \Omega \rightarrow \bR$, we define the \emph{cumulative distribution function} $F : \bR \rightarrow [0, \infty]$ of $X$ to be the function $$ F(\lambda) := F((-\infty, \lambda])= \cP\paren{\set{\omega \in  \Omega : X(\omega) \le \lambda}} = \cP\set{X\le \lambda}.$$ In fact, $F= \cP\circ X^{-1}$ as a measure on $(\bR, \srB(\bR))$.  Given another sequence $X_n : \Omega \rightarrow \bR$ of real-valued measurable functions, we say that $X_n$ \emph{converges in distribution} (\emph{in law}) to $X$ if the cumulative distribution function $F_n(\lambda)$ of $X_n$
+%converges pointwise to the cumulative distribution function $F(\lambda)$ of $X$ at all $\lambda \in  \bR$ for which $F$ is continuous. Here $F_{n}\equiv \cP \circ f_{n}^{-1}$ is another measure on $(\bR, \srB(\bR))$.
+%
+%For each $\lambda\in \bR$, 
+%\begin{align*}
+%\abs{ F_{n}\paren{(-\infty,\lambda]} - F\paren{(-\infty,\lambda]} } \rightarrow 0
+%\end{align*} Denoted as $X_{n}\stackrel{F}{\rightarrow} X$ or $X_{n} \rightsquigarrow X$. 
+%
+%\end{definition}
+%
+%\item The density $f_{X}$ of $X$ is defined as for $F_{X}$ uniformly continuous on $\bR$
+%\begin{align*}
+%F_{X}(A) \equiv \mu\circ X^{-1}(A) \equiv \int_{\Omega}\ind{X^{-1}(A)} d\mu  &\equiv \int_{\bR} f_{X} \ind{A} dx
+%\end{align*} for all $A\in \srB(\bR)$ and the integral is the Lebesgue integral with respect to Lebesgue measure.
+%
+%
+%\item Note that $X_{n} \rightarrow X$ and $Y_{n} \rightarrow Y$ in distribution, but it is possible $X_{n}+ Y_{n} \not\rightarrow X+ Y$. 
+\end{itemize}
+
+\subsection{Relationships between Different Modes of Convergence}
+\begin{itemize}
+\item \begin{remark} This diagram shows the \emph{relative strength} of different \emph{modes of convergence}. The direction arrows $A \rightarrow B$ means ``if $A$ holds, then $B$ holds".
+\[
+  \begin{tikzcd}
+     \text{\emph{uniform}} \arrow{dd}{}  \arrow{r}{}  \arrow[rr, swap, bend left] & \text{\emph{uniformly a.e.}}  \arrow{d}{} & \arrow[l, leftrightarrow] \text{\emph{in $L^{\infty}$ norm}} \arrow{dl}{} \\
+      & \text{\emph{almost uniform}}  \arrow{d}{} \arrow{dr}{} &  \text{\emph{in $L^{1}$ norm}} \arrow{d}{} \\
+    \text{\emph{pointwise}}  \arrow{r}{} &   \text{\emph{pointwise a.e}.} & \text{\emph{in measure}}
+  \end{tikzcd}
+\] 
+Moreover, here are some counter statements:
+\begin{itemize}
+\item $L^{\infty} \not\rightarrow L^{1}$: see the ``\emph{Escape to Width Infinity}" example below.
+\item $\text{\emph{\textbf{uniform}} } \not\rightarrow L^{1}$: see the ``\emph{Escape to Width Infinity}" example below.
+\item $L^{1}  \not\rightarrow \text{\emph{\textbf{uniform}} }$: see the ``\emph{Typewriter Sequence}" example below.
+\item $\text{\emph{\textbf{pointwise}} } \not\rightarrow L^{1}$: see the ``\emph{Escape to Horizontal Infinity}" example below.
+\item $\text{\emph{\textbf{pointwise}} } \not\rightarrow \text{\emph{\textbf{uniform}}}$: see the ``$f_n = x/n$" example above.
+\item For finite measure space, $\text{\emph{\textbf{pointwise a.e.}} } \rightarrow \text{\emph{\textbf{almost uniform}}}$: see the Egorov's theorem.
+\item $\text{\emph{\textbf{almost uniform}}}  \not\rightarrow L^{1}$: see the ``\emph{Escape to Vertical Infinity}" example below.
+\item $\text{\emph{\textbf{almost uniform}}}  \not\rightarrow L^{\infty}$: see the ``\emph{Escape to Vertical Infinity}" example below. The \emph{converse} is true, however.
+\item For bounded $f_n \le G, a.e.\; \forall n$, then $\text{\emph{\textbf{pointwise a.e.}} } \rightarrow L^{1}$: see \emph{Dominated Convergence Theorem}. 
+\item $L^{1}  \not\rightarrow \text{\emph{\textbf{pointwise a.e.}} }$: see the ``\emph{Typewriter Sequence}" example below.
+\item $\text{\emph{\textbf{in measure}}} \not\rightarrow \text{\emph{\textbf{pointwise a.e.}} }$: see the ``\emph{Typewriter Sequence}" example below.
+\item $L^{1}  \rightarrow \text{\emph{\textbf{convergence in integral}}}$:  by \emph{triangle inequality}. Note that \emph{the other modes of convergence} \emph{does \textbf{not directly} lead to convergence in integral}.
+\end{itemize} 
+\end{remark}
+
+
+\item \begin{remark}
+For finite measure space such as \emph{the probability space}, 
+\[
+  \begin{tikzcd}
+     \text{\emph{uniform}} \arrow{dd}{}  \arrow{r}{}  \arrow[rr, swap, bend left] & \text{\emph{uniformly a.e.}}  \arrow{d}{} &\arrow[l, leftrightarrow] \text{\emph{in $L^{\infty}$ norm}} \arrow{dl}{} \arrow[d,  red]  \\
+      & \text{\emph{almost uniform}}  \arrow{d}{} \arrow{dr}{} &  \text{\emph{in $L^{1}$ norm}} \arrow{d}{} \\
+    \text{\emph{pointwise}}  \arrow{r}{} &   \text{\emph{pointwise a.e}.} \arrow[u, bend left, red] & \text{\emph{in measure}}
+  \end{tikzcd}
+\] 
+\end{remark}
+\end{itemize}
+
+\newpage
+\subsection{Comparison}
+\begin{table}[h!]
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\belowdisplayskip}{-10pt}
+\setlength{\abovedisplayshortskip}{0pt}
+\setlength{\belowdisplayshortskip}{0pt}
+\footnotesize
+\centering
+\caption{Comparison of Modes of Convergence}
+\label{tab: convergence}
+%\setlength{\extrarowheight}{1pt}
+\renewcommand\tabularxcolumn[1]{m{#1}}
+\small
+\begin{tabularx}{1\textwidth} { 
+  | >{\raggedright\arraybackslash} m{2cm}
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X  | }
+ \hline
+ &    \emph{\textbf{tail support}} & \emph{\textbf{width}} & \emph{\textbf{maximum variation}} & \emph{\textbf{subgraph}}\\
+ \hline 
+ \emph{\textbf{definition}}& 
+ \begin{align*}
+ T_{N,\epsilon} =\bigcup_{n \ge N}E_{n,\epsilon}
+\end{align*} &  
+\begin{align*}
+\mu(E_{n,\epsilon})
+\end{align*}
+& 
+\begin{align*}
+\sup_{x \in X}\{\abs{f_n(x) - f(x)}\}
+\end{align*}
+&
+\begin{align*}
+\Gamma(f_{n}) =\left\{(x,t): \right.\\
+\left. 0\le t \le f_n(x)\}\right.
+\end{align*} 
+ \\
+ \hline
+ \emph{\textbf{pointwise}}  & 
+  \begin{align*}
+ \bigcap_{N=1}^{\infty}T_{N,\epsilon} = \emptyset
+\end{align*}
+& & \emph{or}, $\rightarrow 0$ on $X$ &   \\
+\hline
+ \emph{\textbf{point-wise a.e.}}   & 
+  \begin{align*}
+ \mu\paren{\bigcap_{N=1}^{\infty}T_{N,\epsilon}} = 0
+\end{align*}
+& &  \emph{or}, $\rightarrow 0$ on $X \setminus E$ &  \\
+\hline
+\emph{\textbf{uniform}}  & $T_{N,\epsilon} = \emptyset$ & & 
+ equivalently, $\rightarrow 0$ on $X$ & \\
+\hline
+\emph{\textbf{uniform a.e. / $L^{\infty}$ norm}}  & $\mu\paren{T_{N,\epsilon}} =0$ & & 
+equivalently, $\rightarrow 0$ on $X \setminus E$  & \\
+\hline
+ \emph{\textbf{almost uniform}} & 
+  \begin{align*}
+ \lim\limits_{N \rightarrow \infty}\mu\paren{T_{N,\epsilon}} = 0
+\end{align*} 
+ & & or, $\rightarrow 0$ on $X \setminus E$  &\\
+ \hline
+ \emph{\textbf{in measure}} & &
+  \begin{align*}
+ \lim\limits_{n \rightarrow \infty}\mu\paren{E_{n,\epsilon}} = 0
+\end{align*}  
+  & or, $\rightarrow 0$ on $X \setminus E$ &\\
+  \hline
+\emph{\textbf{$L^{1}$ norm}} & & &
+$\rightarrow 0$ and support fixed or non-increasing
+ & 
+  \begin{align*}
+  \text{area of }\Gamma(f_n) = \cA(\Gamma(f_n))\\
+  \lim\limits_{n \rightarrow \infty}\cA(\Gamma(\abs{f_n- f})) = 0
+\end{align*} \\
+\hline
+\end{tabularx}
+\end{table}
+
+\newpage
+\section{Consistency}
+\subsection{Weak and Strong Consistency}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Weak Consistency}}) \citep{lehmann1998theory, resnick2013probability} \\
+%A sequence of random variables $Y_{n}$ defined over sample space $(\Omega_{n}, \srB_{n})$ tends \emph{in probability} to a constant $Y_{n}\stackrel{p}{\rightarrow}c$ if for every $\epsilon >0$, 
+%\begin{align*}
+%\cP\set{\abs{Y_{n}- c} \ge \epsilon } &\rightarrow 0,\quad \text{as } n\rightarrow \infty.
+%\end{align*}
+Suppose $X_{1},\cdots, X_{n}, \cdots$ are \emph{i.i.d. random variables} on $(\Omega, \srF, \cP_{\theta})$ with $\theta\in \Theta$ being parameter of distribution $\cP_{\theta}$. Let the \emph{\textbf{estimand}} be $g(\theta)$  and the estimator be $\delta_{n}\equiv  \delta_{n}\paren{X_{1},\ldots, X_{n}}$, which is also a random variable. 
+
+A sequence of estimator $\delta_{n}$ of $g(\theta)$ is \underline{\emph{\textbf{(weak) consistent}}} if for every $\theta \in \Theta$, 
+\begin{align*}
+\delta_{n} \stackrel{p}{\rightarrow} g(\theta).
+\end{align*} i.e. \underline{\emph{\textbf{$\delta_{n}$ converges to $g(\theta)$ in probability}}} for every parameter $\theta$.
+\end{definition}
+
+\item \begin{remark}
+In other word, the statistic
+\begin{align*}
+\widehat{g}_{n} := \widehat{g}_{n}(X_1 \xdotx{,} X_n)
+\end{align*} is \emph{\textbf{consistent}}, if for every $\theta \in \Theta$, any $\epsilon, \delta >0$, $\exists N = N(\epsilon, \delta) \in \bN$, such that for all $n \ge N$
+\begin{align*}
+\cP\paren{\set{\omega \in \Omega: \abs{\widehat{g}_{n}(\omega, \theta) - g(\theta)} \ge \epsilon} } < \delta.
+\end{align*}
+\end{remark}
+
+\item In constrasts, we can define the strong consistency based on \emph{pointwise almost everywhere (almost sure) convergence}.
+\begin{definition} (\emph{\textbf{Strong Consistency}}) \citep{lehmann1998theory, resnick2013probability} \\
+A sequence of estimator $\delta_{n}$ of $g(\theta)$ is \underline{\emph{\textbf{strong consistent}}} if for every $\theta \in \Theta$, 
+\begin{align*}
+\delta_{n} \stackrel{a.s.}{\rightarrow} g(\theta).
+\end{align*} i.e. \underline{\emph{\textbf{$\delta_{n}$ converges to $g(\theta)$ almost surely}}} for every parameter $\theta$.
+\end{definition}
+
+\item \begin{remark}
+In other word, the statistic
+\begin{align*}
+\widehat{g}_{n} := \widehat{g}_{n}(X_1 \xdotx{,} X_n)
+\end{align*} is \emph{\textbf{strong consistent}}, if for every $\theta \in \Theta$, any $\epsilon >0$, 
+\begin{align*}
+&\cP\paren{\bigcap_{N \ge 1}\set{\omega \in \Omega:\; \exists n \ge N \text{ such that } \abs{\widehat{g}_{n}(\omega, \theta) - g(\theta)} \ge \epsilon} } = 0. \\
+\Rightarrow & \cP\paren{\limsup\limits_{n \rightarrow \infty}\set{\omega \in \Omega:\; \abs{\widehat{g}_{n}(\omega, \theta) - g(\theta)} \ge \epsilon} } = 0.
+\end{align*}
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Consistency $=$ Asymptotic Analysis}})\\
+The \emph{\textbf{consistency}} property of a statistic is based on \emph{\textbf{the asymptotic analysis}} of the $\srF$-measurable functions $(X_1, X_2, \ldots)$. It states that \emph{\textbf{the statistical estimator}} will \emph{\textbf{converge}} to \underline{\emph{\textbf{the true value}} of the \emph{\textbf{estimand}}}, given \emph{\textbf{infinite amount} of data}. So the consistency statement is to say that \emph{the estimator will \textbf{reveal the ground truth} given enough data}.
+
+\emph{The \textbf{asymptotic random variable}} such as $(\limsup_{n}X_n)$, $(\liminf_{n}X_n)$, $\lim\limits_{n\rightarrow \infty}\frac{S_n}{n}$ are all \emph{\textbf{tail random variables}}, i.e. they are measurable with respect to \emph{tail $\sigma$-algebra $\srT$}. They tends to behave regularly given that all samples are i.i.d.
+\end{remark}
+
+
+\item We distinguish the consistency with the unbiasedness
+\begin{definition} (\textbf{\emph{Unbiasedness}})\\
+An estimator $\delta(X)$ of $g(\theta)$ is \underline{\emph{\textbf{unbiased}}} if 
+\begin{align*}
+\E{\cP_{\theta}}{\delta(X)} &= g(\theta),\quad \forall\, \theta\in \Theta 
+\end{align*}
+\end{definition}
+
+\item \begin{remark}
+The  statistic is unbiased if it fits a \emph{\textbf{linear functional equation}}
+\begin{align*}
+\int_{\Omega} \delta(X(\omega)) \;d\cP_{\theta}(\omega) &= g(\theta), \quad \forall \theta\in \Theta
+\end{align*}
+\end{remark}
+
+%
+%\item \begin{remark}
+%Note that converges of $\abs{\delta_{n}-g(\theta) }$ in mean/$L^{1}$ norm or in mean squared error/$L^{2}$ norm  will generate a consistent estimator. On the other hand, a consistent estimator does converges in distribution. 
+%\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Consistency vs. Unbiasedness}})\\
+In general, there is \emph{\textbf{no direct relationship}} between \emph{consistency} and \emph{unbiaseness}:
+\begin{itemize}
+\item An \emph{estimator} is \emph{\textbf{unbiased}} if it is \emph{\textbf{centered}} around \emph{the true value}. 
+%In fact, by central limit theorem, we can say 
+%\begin{align*}
+%\delta(\widehat{\cP}_n) \stackrel{w}{\rightarrow} \cN(g(\theta), (I(\theta))^{-1}).
+%\end{align*} 
+It does not guarantee that when the sample size increases, the estimator \emph{\textbf{itself}} will \emph{\textbf{converge}} to its \emph{\textbf{mean value}} $g(\theta)$ for any choice of $\theta \in \Theta$.  
+
+For instance, the samples $(X_n)$ are \emph{independent uniformly distributed} in \emph{a unit circle centered at $0$}, each sample is an \emph{estimator} of constant $\theta_0 = 0$. The expected value of $X_n$ is $0$ so each $X$ is \emph{\textbf{unbiased}}. But \emph{$X_n$ does not converge to $0$} in any sense.
+
+\item An \emph{estimator} is \emph{\textbf{consistent}} if it  \emph{\textbf{converges to}} \emph{the true value}. It does not guarantee that $(X_n)$ are \emph{distributed around} the true value for each $n$. 
+
+For instance, the sample $X_n(\omega) = \frac{1}{n}\omega$. We see that $X_n \rightarrow 0$ almost surely, but 
+\begin{align*}
+\int_{\Omega} \brac{X_n(\omega)  - g(\theta)} d\cP_{\theta}(\omega) = \frac{1}{n}
+\end{align*} is \emph{\textbf{nonzero}} for each $n$. So $(X_n)$ is \emph{\textbf{consistent}} but \emph{\textbf{biased}}.
+\end{itemize}
+
+In other word, the \emph{\textbf{unbiasedness}} is about \emph{the \textbf{distribution} of estimators} $\set{\widehat{g}_n}$, while the \emph{\textbf{consistency}} is about \emph{the \textbf{trends} of estimators} $\widehat{g}_n$ .
+\end{remark}
+
+
+\item \begin{remark} (\emph{\textbf{Consistency is just Approximation}})\\
+The notion of consistency \emph{describes the \textbf{ideal behavior} of estimator}. But a \emph{consistency performance} just provides \emph{\textbf{an approximation in theory}}, since most asymptotic result only works when  $n\rightarrow \infty$, which is \emph{\textbf{impractical}}. 
+\end{remark}
+
+\item \begin{theorem}(\textbf{Gilvenko-Cantelli Theorem})\citep{devroye2013probabilistic, resnick2013probability}\\
+Let $Z_{1}, \ldots, Z_{n}$ be i.i.d. real valued random variables with \textbf{distribution functional} $F(\lambda) = \cP\brac{Z\le \lambda}$. Denote \textbf{the standard empirical distribution functional} by 
+\begin{align*}
+\widehat{F}_{n}(\lambda) &\equiv \frac{1}{n}\sum_{i=1}^{n}\ind{\brac{Z_{i}\le \lambda}}. 
+\end{align*}
+Then  for any $\lambda\in \bR$, 
+\begin{align*}
+\widehat{F}_{n}(\lambda)\stackrel{a.s.}{\rightarrow} F(\lambda),
+\end{align*}
+that is, $\widehat{F}_{n}(\lambda)$ is \textbf{strongly consistent}. 
+\end{theorem}
+
+\item \begin{remark}
+It is shown that 
+\begin{align*}
+\cP\set{ \sup_{\lambda\in \bR}\abs{F(\lambda) -  \widehat{F}_{n}(\lambda) }\ge \epsilon  } \le 8(n+1)\exp\paren{-n\epsilon^{2}/32},
+\end{align*}
+and, in particular, by \emph{the Borel-Cantelli lemma},
+\begin{align*}
+\cP\paren{\limsup\limits_{n\rightarrow \infty}\set{\omega: \sup_{\lambda\in \bR}\abs{F(\lambda) -  \widehat{F}_{n}(\lambda, \omega) }\ge \epsilon}}= 0
+\end{align*}
+
+Note that we may define $\nu(A) = \cP\circ Z^{-1}(A)$ as the induced measure on $(\bR, \srB(\bR))$, and let $\cA = \set{(-\infty, \lambda], \lambda\in \bR}$, then it is equivalent to
+\begin{align*}
+\cP\set{ \sup_{A \in \cA \subset \srB}\abs{\nu(A)-  \nu_{n}(A)}\ge \epsilon  } \le 8(n+1)\exp\paren{-n\epsilon^{2}/32}
+\end{align*}
+\end{remark}
+\end{itemize}
+
+
+
+\subsection{Consistency in Statistical Learning Theory}
+\begin{itemize}
+\item Finally, we introduce similar notion of consistency used in \emph{statistical learning}. 
+\begin{definition} (\emph{\textbf{Bayes Error}}) \citep{devroye2013probabilistic}\\
+Given a sequence of i.i.d. training variables $\cD_{n}\equiv \set{(X_{i}, Y_{i}), 1\le i\le n}$ on $(\Omega, \srF, \cP)$  and a sequence of \emph{\textbf{classification rules}} $g_{n}\equiv g_{n}\paren{X; X_{1}, \ldots, X_{n}}$ such that the error probability is defined as
+\begin{align*}
+L_{n}&\equiv \cP\set{ g_{n}(X, \cD_{n})\neq Y | \cD_{n} }.
+\end{align*} The optimal error probability is given by the \emph{\textbf{Bayes error}}
+\begin{align*}
+L^{*}= \inf_{g}\cP\set{g(X)\neq Y}.
+\end{align*}
+\end{definition}
+
+\item 
+\begin{definition} (\emph{\textbf{Consistent Classification Rules}})\\
+A classification rule is \underline{\emph{\textbf{consistent (asymoptotically Bayes-risk efficient}}}) \emph{\textbf{for a certain distribution}} $\cP(X,Y)$ if 
+\begin{align*}
+\E{\cP}{L_{n}(g_{n})}&\equiv \cP\set{ g_{n}(X, \cD_{n})\neq Y } \rightarrow L^{*},\;\; \text{as } n\rightarrow \infty
+\end{align*}
+Since $1\ge L_{n} \ge  L^{*}$, the above is equivalent to \emph{\textbf{convergence in probability}} 
+\begin{align*}
+\lim\limits_{n\rightarrow \infty}\cP\set{ L_{n}(g_{n}) - L^{*}\ge \epsilon }&= 0.
+\end{align*}
+Also the classification rule is the \underline{\emph{\textbf{strongly consistent}}} if 
+\begin{align*}
+L_{n} \rightarrow L^{*} \;\; a.s.
+\end{align*}
+\end{definition}
+
+\item \begin{remark}
+Note that for bounded continuous $L_{n}$, $\E{\cP}{L_{n}(g_{n})}\rightarrow L^{*},\;\; \text{as } n\rightarrow \infty$ means that $L_{n}\rightsquigarrow L^{*}$ in distribution. It implies convergence in probability since the limiting random variable $L^{*}$ is a constant.
+\end{remark}
+
+\item A stronger version of consistency when the underlying distribution $\cP$ is unknown
+\begin{definition} (\emph{\textbf{Universal Consistency}})\\
+A sequence of \emph{classification rules} is called \underline{\emph{\textbf{universally consistent (strongly) consistent}}} if it is \emph{\textbf{(strongly) consistent}} for \emph{\textbf{any distribution}} $\cP(X,Y)$, i.e. 
+\begin{align*}
+\lim\limits_{n\rightarrow \infty}\cP\set{ L_{n}(g_{n}) - L^{*}\ge \epsilon }&= 0, \quad \forall\, \cP \text{ on }(\Omega, \srF)
+\end{align*}
+and 
+\begin{align*}
+\cP\set{ \limsup\limits_{n\rightarrow \infty}\set{L_{n} - L^{*}\ge \epsilon }} = 0, \quad \forall\, \cP \text{ on }(\Omega, \srF).
+\end{align*}
+\end{definition}
+\end{itemize}
+
+\section{Laws of Large Number}
+\subsection{Weak Laws of Large Number}
+\begin{itemize}
+\item 
+\end{itemize}
+\subsection{Strong Laws of Large Number}
+\begin{itemize}
+\item 
+\end{itemize}
+\subsection{Fisher Consistency}
+\begin{itemize}
+\item A different type of consistency is \emph{Fisher consistency}: 
+\begin{definition}  \emph{\textbf{Fisher Consistency}}\\
+Suppose $X_{1},\cdots, X_{n}, \cdots$ are i.i.d. random variables on $(\Omega, \srF, \cP_{\theta})$ with $\theta\in \Theta$ being parameter of distribution $\cP_{\theta}$. If an estimator of $g(\theta)$, $\delta_{n}\equiv  \delta_{n}\paren{X_{1},\ldots, X_{n}}$ can be represented as \emph{\textbf{functional of empirical distributions}}
+\begin{align*}
+\widehat{\cP}_{n}X(\lambda)=\frac{1}{n} \sum_{i=1}^{n}\ind{X_{i}\le \lambda}
+\end{align*}
+ such as $\delta'_{n}\equiv \delta'(\widehat{\cP}_{n}X)$. Then the estimator  $\delta'_{n}$ of $g(\theta)$ is \underline{\emph{\textbf{Fisher consistent}}} if
+\begin{align*}
+\delta'\paren{\cP_{\theta}} &= g(\theta)
+\end{align*} or equivalently under the strong law of large numbers, $\widehat{\cP}_{n}X(\lambda)\rightarrow \cP_{\theta}(\lambda)$ \emph{\textbf{almost surely}}, so 
+\begin{align*}
+\delta'\paren{\lim\limits_{n\rightarrow \infty}\widehat{\cP}_{n}X} &= g(\theta)
+\end{align*}
+\end{definition}
+
+\item \begin{remark}
+As long as the $X_i$ are exchangeable, an estimator $\delta$ defined in terms of the $X_i$ can be converted into an estimator $\delta'$ that can be defined in terms of $\widehat{\cP}_{n}$ by averaging $\delta$ over all permutations of the data. The resulting estimator will have the same expected value as $\delta$ and its variance will be no larger than that of $\delta$.
+\end{remark}
+\end{itemize}
+
+\section{Weak Convergence}
+\subsection{Definitions}
+\begin{itemize}
+\item \begin{remark} (\emph{\textbf{Weak$^{*}$ Convergence}})\\
+\underline{\emph{\textbf{Convergence in distribution}}} is also called \underline{\emph{\textbf{weak convergence}}} in probability theory \citep{folland2013real}. In general, we can see that it is actually \emph{\textbf{not} a mode of \textbf{convergence of random variables} $X_n$ \textbf{itself}} but instead is \underline{\emph{the \textbf{convergence} of \textbf{their distributions}}} $\int f d\mu_n$. Equivalently, it is \emph{the \textbf{convergence of probability measures} $\cP_{X_n} = \cP \circ X_n^{-1}$ on $\cB(\bR)$}.
+
+Note that in functional analysis, however, \emph{\textbf{weak convergence}} is actually for a different mode of convergence (i.e. $\int f_n d\mu \rightarrow \int f d\mu$ for all $\mu \in \cM(X)$), while \emph{\textbf{the convergence in distribution}} is \underline{\emph{\textbf{the weak$^*$ convergence}}}.
+
+ \begin{definition}  (\textbf{\emph{Weak$^{*}$ Topology on Banach Space}})\\
+Let $X$ be a \emph{normed vector space} and $X^{*}$ be its dual space. The \underline{\emph{\textbf{weak$^{*}$ topology}} on $X^{*}$} is \emph{the weakest topology} on $X^{*}$ so that \emph{$f(x)$ is \textbf{continuous} \textbf{for all} $x \in X$}.
+\end{definition}
+
+\emph{The weak$^{*}$ topology} on space of regular Borel measures $\cM(X) \simeq (\cC_{0}(X))^{*}$ on a \emph{\textbf{compact Hausdorff}} space $X$, is often called \emph{\textbf{the vague topology}}. Note that $\mu_n \stackrel{w^{*}}{\rightarrow} \mu$ if and only if $\int f d\mu_n \rightarrow \int f d\mu$ for all $f \in \cC_0(X)$. 
+\end{remark}
+
+\item
+\begin{definition} (\emph{\textbf{Cumulative Distribution Function}}) \citep{van2000asymptotic} \\
+Let $(\Omega,\srF, \cP)$ be a probability space. Given any real-valued measurable function $\xi : \Omega \rightarrow \bR$, we define the \emph{\textbf{cumulative distribution function}} $F : \bR \rightarrow [0, \infty]$ of $\xi$ to be the function
+\begin{align*}
+F_{\xi}(\lambda) :=  \cP\paren{\set{\omega \in  \Omega : \xi(\omega) \le \lambda}} = \int_{X} \ind{\xi(\omega) \le \lambda}d\cP(\omega).
+\end{align*}
+\end{definition}
+
+\item 
+\begin{definition}  (\emph{\textbf{Converge in Distribution}}) \citep{van2000asymptotic}\\
+Let $\xi_n : \Omega \rightarrow \bR$ be a sequence of real-valued \emph{measurable functions}, and $\xi: \Omega \rightarrow \bR$ be another measurable function. We say that $\xi_n$ \underline{\emph{\textbf{converges in distribution}}} to $\xi$ if \emph{the cumulative distribution function} $F_n(\lambda)$ of $\xi_n$
+\underline{\emph{\textbf{converges pointwise}}} to the cumulative distribution function $F(\lambda)$ of $\xi$ at all $\lambda \in  \bR$ for which $F$ is continuous. Denoted as $\xi_{n}\stackrel{F}{\rightarrow} \xi$ or \underline{$\xi_{n}\stackrel{d}{\rightarrow} \xi$} or \underline{$\xi_n \rightsquigarrow \xi$}. 
+\begin{align*}
+\xi_{n}\stackrel{d}{\rightarrow} \xi \; \Leftrightarrow \; F_n(\lambda) \rightarrow F(\lambda), \text{ for all }\lambda \in \bR
+\end{align*}
+\end{definition}
+
+\item \begin{theorem} (\textbf{Portmanteau Theorem}). \citep{van2000asymptotic}\\
+For any random vectors $X_{n}$ and $X$ the followings are \textbf{equivalent}
+\begin{enumerate}
+\item $\cP\set{X_{n}\le \lambda} \rightarrow \cP\set{X\le \lambda}$ for all \textbf{continuity point} $\lambda \mapsto \cP\set{X\le \lambda}$;
+\item $\E{\cP}{f(X_{n})} \rightarrow \E{\cP}{f(X)} $ for all \textbf{bounded}, \textbf{continuous} function $f$;
+\item $\E{\cP}{f(X_{n})} \rightarrow \E{\cP}{f(X)} $ for all bounded, Lipschitz continuous function $f$;
+\item $\liminf\limits_{n\rightarrow \infty}\E{\cP}{f(X_{n})}  \ge \E{\cP}{f(X)}$ for all nonnegative continuous function $f$;
+\item $\liminf\limits_{n\rightarrow \infty}\cP\set{X_{n}\in G}  \ge \cP\set{X\in G} $ for every open set $G$;
+\item $\limsup\limits_{n\rightarrow \infty}\cP\set{X_{n}\in F}  \le \cP\set{X\in F} $ for every closed set $F$;
+\item $\cP\set{X_{n} \in B} \rightarrow \cP\set{X \in B}$ for all Borel sets $B$ with $\cP\set{X\in \delta B}= 0$, where $\delta B  = \overline{B}- \text{int}(B)$ is the boundary of $B$.
+\end{enumerate} 
+\end{theorem}
+\begin{proof}
+\begin{enumerate}
+\item 1) $\Rightarrow$ 2) Assume that the distribution function $F_{X}$ of $X$ is continuous. Then condition 1) implies that  
+$\cP\set{X_{n}\in I} \rightarrow \cP\set{X\in I}  $ for any box $I\in \bR^{d}$. Choose  $I$ be sufficiently large and compact, so that $\cP(X\not\in I)<\epsilon$. A continuous function $f$ is uniformly continuous on compact $I$ and $I = \bigcup_{k=1}^{n}I_{k}$ has partition into finitely many boxes $I_{k}$ such that $f$ varies at most $\epsilon$ in $I_{k}$. 
+
+Define a simple function $f_{\epsilon}(x) = \sum_{k=1}^{n}f(x_{k}) \ind{I_{k}} $ where $x_{k}\in I_{k}$ is arbitrary chosen. Then $\abs{f - f_{\epsilon}}<\epsilon$ for $x\in I$, given that $f$ is bounded e.g. within $[-1,1]$.
+\begin{align*}
+\abs{\E{\cP}{f(X_{n})} - \E{\cP}{f_{\epsilon}(X_{n})}} &\le \epsilon + \cP\set{X_{n}\not\in I}\\
+\abs{\E{\cP}{f(X)} - \E{\cP}{f_{\epsilon}(X)}} &\le \epsilon + \cP\set{X\not\in I}<2\epsilon
+\end{align*}
+For sufficiently large $n$, the right side of the first equation is smaller than $2\epsilon$ as well (convergence in distribution). We combine this with 
+\begin{align*}
+\abs{\E{\cP}{f_{\epsilon}(X_{n})} - \E{\cP}{f_{\epsilon}(X)} }&\le \sum_{k=1}^{n}\abs{f(x_{k})}\abs{\cP\set{X_{n}\in I_{k}}- \cP\set{X\in I_{k}}}\\
+&\rightarrow 0
+\end{align*}  together with the triangle inequality we can get $\abs{\E{\cP}{f(X_{n})} - \E{\cP}{f(X)} }$ is bounded by $5\epsilon$ eventually for any $\epsilon>0$, so the result hold.\qed
+
+\item  1) to 3) is similar to 1) to 2). 
+
+\item 3) to 5) For every open set $G$ there exists a sequence of Lipschitz functions with $0\le f_{m} \uparrow \ind{G}$. For instance $f_{m} = \min\set{1, m\,d(x, G^{c})}$. For every fixed $m$, by assumption on convergence in expectation,
+\begin{align*}
+\liminf\limits_{n\rightarrow \infty}\cP\set{X_{n}\in G} &\ge \liminf\limits_{n\rightarrow \infty}\E{\cP}{f_{m}(X_{n})} = \E{\cP}{f_{m}(X)}.
+\end{align*} As $m\rightarrow \infty$, the RHS increases to $\cP\set{X\in G}$ by monotone convergence theorem. \qed
+
+\item  5) to 6) take the complements. 
+
+\item  5) $+$ 6) to 7). Let $\text{int}(B)$ and $\overline{B}$ be the interior and closure of $B$, respectively. By 5) and 6)
+\begin{align*}
+\cP\set{X\in\text{int}(B)  } &\le \liminf\limits_{n\rightarrow \infty}\cP\set{ X_{n}\in \text{int}(B)  }\\
+&\le   \limsup\limits_{n\rightarrow \infty}\cP\set{X_{n}\in \overline{B}  } \\
+&\le    \cP\set{X \in \overline{B}  }. 
+\end{align*}
+If $\cP\set{X\in \delta B} = 0$ then the LHS and RHS will be equal. Note that by remark below, we can almost find such $B$ in practice. The probability $\cP\set{X\in B} = \lim\limits_{n\rightarrow \infty}\cP\set{X_{n}\in B}$, since they lies in between these inequalities. 
+
+\item 7) to 1) Each cell $(-\infty, x]$ such that $x$ is a continuity point of $x\mapsto \cP\set{X\le x}$ is a continuity set. Then the convergence results follows as a specification $B\equiv (-\infty, \lambda]$. 
+
+\item 4) to 2).  Given any $f$ is bounded, continuous, we need to prove that $ \E{\cP}{f(X)} \ge \limsup\limits_{n\rightarrow \infty}\E{\cP}{f(X_{n})}$ and $ \E{\cP}{f(X)} \le \liminf\limits_{n\rightarrow \infty}\E{\cP}{f(X_{n})}$.
+
+Note that $(\sup\set{f(x)} - f)$ and $(f- \inf\set{f(x)} )$  are nonnegative, bounded  continuous. Then 
+\begin{align*}
+\E{\cP}{(\sup\set{f(x)} - f(X))} &\le \liminf\limits_{n\rightarrow \infty}\E{\cP}{(\sup\set{f(x)} - f(X_{n}))}\\
+\Rightarrow \sup\set{f(x)}- \E{\cP}{f(X))} &\le \sup\set{f(x)}+\liminf\limits_{n\rightarrow \infty}\E{\cP}{ -f(X_{n})}\\
+\E{\cP}{f(X))}&\ge \limsup\limits_{n\rightarrow \infty}\E{\cP}{f(X_{n})}
+\end{align*} similarly
+\begin{align*}
+\E{\cP}{(f(X)- \inf\set{f(x)})} &\le \liminf\limits_{n\rightarrow \infty}\E{\cP}{(f(X_{n})- \inf\set{f(x)}))}\\
+\Rightarrow -\inf\set{f(x)}+ \E{\cP}{f(X))} &\le -\inf\set{f(x)}+\liminf\limits_{n\rightarrow \infty}\E{\cP}{f(X_{n})}\\
+\E{\cP}{f(X))}&\le \liminf\limits_{n\rightarrow \infty}\E{\cP}{f(X_{n})}
+\end{align*} which completes the proof. \qed
+
+\item 2) to 4) Define $f_{M} = \min\set{f, M}$ for nonegative $f$ and any real $M\ge 0$, so $f_{M}$ is bounded continuous, as
+\begin{align*}
+\E{\cP}{f_{M}(X))}& = \lim\limits_{n\rightarrow \infty}\E{\cP}{f_{M}(X_{n})}\\
+&\le \liminf\limits_{n\rightarrow \infty}\E{\cP}{f(X_{n})}
+\end{align*} Take $M\rightarrow \infty$, we have RHS $\E{\cP}{f_{M}(X))}\rightarrow \E{\cP}{f(X))}$ by monotone convergence theorem, so completes the proof.\qed
+\end{enumerate}
+\end{proof}
+
+\item \begin{remark}
+A \emph{continuity} set $B$ has boundary of measure zero $\cP\set{X\in \delta B}=0$. Since for any collection of pairwise disjoint measureable sets, at most countable many sets can have positive measures, o.w. the total measure will be infinite. Thus given $\set{B_{\alpha}}_{\alpha\in A}$ all except at most countable many sets are continuity sets. For each $k$, at most countably sets of form $\set{x: x_{k}\le \alpha}$ are not continuity sets. As a conclusion, there exists a dense subsets $Q_{1},\cdots, Q_{j}$ so that each box with corner in $Q_{1}\times Q_{j}$ is a continuity set. We can then choose $I$ side this box.
+\end{remark}
+
+\item \begin{remark}
+The c.d.f.  $F(\lambda) := \cP_{f}((-\infty, \lambda])= \cP\paren{\set{x \in  X : f(x) \le \lambda}}$ where  $\cP_f = \cP\circ f^{-1}$ is a \emph{\textbf{measure}} on $(\bR, \srB(\bR))$ induced by function $f$.  Thus $f_{n}\stackrel{d}{\rightarrow} f$ if and only if 
+\begin{align*}
+\cP_{f_n}(A)  \rightarrow \cP_f(A), \quad \forall A \in \srB(\bR).
+\end{align*} 
+\end{remark}
+
+
+\item We can reformulate the definition of \emph{convergence in distribution} as below:
+\begin{definition} \citep{wellner2013weak}\\
+Let $(\cX, d)$ be a \emph{metric space}, and $(\cX, \srB)$ be \emph{a measurable space}, where $\srB$ is \emph{\textbf{the Borel $\sigma$-field on $\cX$}}, the smallest $\sigma$-field containing \emph{all the open balls} (as the basis of \emph{metric topology} on $\cX$). Let $\{\cP_n \}$ and $\cP$ be \emph{\textbf{Borel probability measures}} on $(\cX, \srB)$.
+
+Then the sequence $\cP_n$ \underline{\emph{\textbf{converges in distribution}}} to $\cP$, which we write as $\cP_n \rightsquigarrow \cP$, if and only if
+\begin{align*}
+\int_{\Omega} f d\cP_n \rightarrow \int_{\Omega} f d\cP, \quad \text{ for all } f \in \cC_{b}(\cX).
+\end{align*}
+Here $\cC_{b}(\cX)$ denotes the set of \emph{all \textbf{bounded}, \textbf{continuous}, real functions on $\cX$}.
+\end{definition} 
+We can see that \underline{\emph{\textbf{the convergence in distribution}} is actually \emph{\textbf{a weak$^{*}$ convergence}}}. That is, it is \emph{\textbf{the weak convergence}} of  \emph{\textbf{bounded linear functionals}} $I_{\cP_n} \stackrel{w^{*}}{\rightarrow} I_{\cP}$ on \emph{the space of all probability measures} $\cP(\cX) \simeq (\cC_{b}(\cX))^{*}$ on $(\cX, \srB)$ where 
+\begin{align*}
+I_{\cP}: f \mapsto \int_{\Omega} f d\cP.
+\end{align*} Note that the $I_{\cP_n} \stackrel{w^{*}}{\rightarrow} I_{\cP}$ is equivalent to $I_{\cP_n}(f) \rightarrow I_{\cP}(f)$ \emph{for all $f \in  \cC_{b}(\cX)$}.
+
+
+\end{itemize}
+
+\subsection{Properties}
+\begin{itemize}
+\item \begin{theorem} (\textbf{Continuous Mapping Theorem}) \citep{van2000asymptotic}\\
+Let $g: \bR^{k} \rightarrow \bR^{m}$ be \textbf{continuous} at every point of a set $C\subset \bR^{k}$ such that $\cP\paren{X\in C}= 1$. Then 
+\begin{enumerate}
+\item If $X_{n} \stackrel{a.s.}{\rightarrow} X$, then $g(X_{n}) \stackrel{a.s.}{\rightarrow}g(X)$;
+\item If $X_{n} \stackrel{\cP}{\rightarrow} X$, then $g(X_{n}) \stackrel{\cP}{\rightarrow}g(X)$;
+\item If $X_{n} \rightsquigarrow f$, then $g(X_{n})\rightsquigarrow g(X)$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+\begin{enumerate}
+\item Directly by the property of continuous map, since $g(\lim\limits_{n\rightarrow \infty}y_{n,\omega})=\lim\limits_{n\rightarrow \infty}g(y_{n,\omega}) $, where $y_{n,\omega}= X_{n}(\omega)$ for $\omega\in \Omega/E$, $\cP(E)=0$. 
+
+\item For any $\epsilon>0$, there exists $\delta>0$ such that the set 
+\begin{align*}
+B_{\delta}&\equiv\set{z\in \bR^{k}\;|\; \exists y,\, \norm{z- y}{}\le \delta,\; \norm{g(z)-  g(y)}{} > \epsilon }.
+\end{align*}
+Clearly, if $X \not\in B_{\delta}$ and $\norm{g(X_{n})- g(X)}{}>\epsilon$, then $\norm{X_{n}- X}{}>\delta$. So
+\begin{align*}
+\cP\set{\norm{g(X_{n})- g(X)}{}>\epsilon }&\le \cP\set{\norm{X_{n}- X}{}>\delta}+ \cP\set{X\in B_{\delta}}
+\end{align*}
+The first term on RHS converges to $0$ as $n\rightarrow \infty$ for every fixed $\delta>0$ due to the convergence in measure. Since $B_{\delta}\cap C \downarrow 0$, by continuity of $g$, the second term converges to $0$ as $\delta\rightarrow 0$.
+
+\item The event $\set{g(X_{n})\in F} \equiv \set{X_{n} \in g^{-1}(F)}$ for any closed/open set $F$. Note that
+\begin{align*}
+g^{-1}(F) \subseteq \overline{g^{-1}(F)} \subset g^{-1}(F)\cup C^{c}
+\end{align*}
+Thus there exists a sequence of $y_{m}\rightarrow y$ and $g(y_{m})\in F$ for every closed $F$. If $y\in C$, then $g(y_{m})\rightarrow g(y)$, which is in $F$, since $F$ is closed. Otherwise, $y\in C^{c}$. By the portmanteau lemma, since $X_{n}$ converges to $X$ in distribution, 
+\begin{align*}
+\limsup\limits_{n\rightarrow \infty}\cP\set{g(X_{n}) \in F  } &\le\limsup\limits_{n\rightarrow \infty} \cP\set{X_{n} \in \overline{g^{-1}(F)}  }\\
+& \le  \cP\set{X \in \overline{g^{-1}(F)}  }
+\end{align*}
+Since $\cP(C^{c})=0$,  the RHS
+\begin{align*}
+\cP\set{X \in \overline{g^{-1}(F)}  } &=  \cP\set{ X \in g^{-1}(F)  }\\
+&=  \cP\set{g(X) \in F  }.
+\end{align*} Again by applying the portmanteau lemma, $g(X_{n})$ converges to $g(X)$ in distribution. \qed
+\end{enumerate}
+\end{proof}
+\end{itemize}
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{reference.bib}
+\end{document}

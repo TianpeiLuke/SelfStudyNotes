@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: PT_lecture4_consistency.aux
+The style file: plainnat.bst
+Database file #1: reference.bib.bib
+Warning--can't use both volume and number fields in royden1988real
+You've used 8 entries,
+            2773 wiz_defined-function locations,
+            630 strings with 5704 characters,
+and the built_in function-call counts, 2727 in all, are:
+= -- 206
+> -- 132
+< -- 12
++ -- 47
+- -- 39
+* -- 180
+:= -- 444
+add.period$ -- 24
+call.type$ -- 8
+change.case$ -- 28
+chr.to.int$ -- 8
+cite$ -- 17
+duplicate$ -- 161
+empty$ -- 258
+format.name$ -- 52
+if$ -- 561
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 16
+newline$ -- 48
+num.names$ -- 32
+pop$ -- 95
+preamble$ -- 1
+purify$ -- 28
+quote$ -- 0
+skip$ -- 112
+stack$ -- 0
+substring$ -- 16
+swap$ -- 14
+text.length$ -- 5
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 48
+warning$ -- 1
+while$ -- 24
+width$ -- 0
+write$ -- 108
+(There was 1 warning)
