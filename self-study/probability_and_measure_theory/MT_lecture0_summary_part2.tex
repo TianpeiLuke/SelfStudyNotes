@@ -1,0 +1,854 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs,  mathtools, dsfont}
+\usepackage{tabularx}
+\usepackage{tikz-cd}
+\usepackage[all,cmtip]{xy}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Lecture 0:  Summary (part 2)}
+\author{ Tianpei Xie}
+\date{ Nov. 16th., 2022 }
+\maketitle
+\tableofcontents
+\newpage
+\section{Signed Measures and Radon-Nikodym Derivative}
+\subsection{Signed Measure}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Signed Measure}})\\
+Let $(X, \srB)$ be a measure space. A \underline{\emph{\textbf{signed measure}}} on $(X, \srB)$ is a function $\nu: \srB \rightarrow [-\infty, +\infty]$ such that 
+\begin{enumerate}
+\item (\emph{\textbf{Emptyset}}) $\nu(\emptyset)= 0$;
+\item (\emph{\textbf{Finiteness in One Direction}}) $\nu$ assumes at most one of the values $\pm \infty$;
+\item (\emph{\textbf{Countable Additivity}}) if $\set{E_{j}}$ is a sequence of disjoint sets in $\srB$, then $\nu\paren{\bigcup_{j=1}^{\infty}E_{j}}= \sum_{j=1}^{\infty}\nu(E_{j})$, where the latter converges absolutely if $\nu\paren{\bigcup_{j=1}^{\infty}E_{j}}$ is finite.
+\end{enumerate} 
+\end{definition}
+
+\item \begin{definition}
+A measure $\mu$ is \emph{\textbf{finite}}, if $\mu(X)<\infty$; $\mu$ is \emph{\textbf{$\sigma$-finite}}, if $X= \bigcup_{k=1}^{\infty}U_{k}$, $\mu(U_k)<\infty$. 
+\end{definition}
+
+\item \begin{remark}
+\emph{\textbf{Every  signed measure}} can be represented as one of these two forms 
+\begin{enumerate}
+\item $\nu = \mu_{+}- \mu_{-}$, where at least one of $\mu_{+}, \mu_{-}$ is a finite measure;
+\item $\mu$ is measure on $\srB$, and $f: X \rightarrow [-\infty, +\infty]$ is \emph{extended $\mu$-integrable} with at least one of $f_{+}$ and $f_{-}$ finite integrable. Then $\nu(A) = \int_{X}f\ind{A} d\mu $ is a signed measure.
+\end{enumerate}
+\end{remark}
+
+\item Like unsigned measure, we have monotone downward and upward convergence: 
+\begin{proposition} 
+Let $\nu$ be a \textbf{signed measure} on $(X, \srB)$.
+\begin{enumerate}
+\item (\textbf{Upwards monotone convergence}) If $E_1 \subseteq E_2 \subseteq \ldots$ are $\srB$-measurable, then
+\begin{align}
+\nu\paren{\bigcup_{n=1}^{\infty} E_n} &= \lim\limits_{n\rightarrow \infty}\nu(E_n) = \sup\limits_{n}\nu(E_n). \label{eqn: signed_measure_upward_monotone_convergence}
+\end{align}
+\item (\textbf{Downwards monotone convergence}) If $E_1 \supseteq E_2 \supseteq \ldots$ are $\srB$-measurable, and \underline{$\nu(E_n) < \infty$ for \textbf{at least one $n$}}, then
+\begin{align}
+\nu\paren{\bigcap_{n=1}^{\infty} E_n} &= \lim\limits_{n\rightarrow \infty}\nu(E_n) = \inf\limits_{n}\nu(E_n). \label{eqn: signed_measure_downward_monotone_convergence}
+\end{align}
+\end{enumerate}
+\end{proposition}
+
+
+
+\item \begin{definition} (\emph{\textbf{Positive Measure}})\\
+If $\nu$ is a signed measure on $(X,\srB)$, \underline{a \textbf{\emph{set}} $E\in \srB$ is called \emph{\textbf{positive}}} (resp. \underline{\emph{\textbf{negative}}}, \underline{\emph{\textbf{null}}}) for $\nu$ if $\nu(F)\ge 0$ (resp. $\nu(F)\le 0$, $\nu(F)= 0$) for \underline{\emph{\textbf{all $\srB$-measurable subset}}} of $E$ (i.e. $F\in \srB$ such that $F\subseteq E$).  
+
+In other word, $E$ is \underline{\emph{\textbf{$\nu$-positive}, \textbf{$\nu$-negative}, \textbf{$\nu$-null}}}  if and only if $\nu(E\cap M)>0$, $\nu(E\cap M)<0$, $\nu(E\cap M)=0$ \emph{\textbf{for any $M$}}. Thus if  $\nu(E) = \int_{X}f\ind{E} d\mu $, then it corresponds to \underline{$f\ge 0$}, \underline{$f\le 0$ and $f=0$ for \emph{\textbf{$\mu$-almost everywhere}} $x\in E$}.
+\end{definition}
+
+\item \begin{lemma}\citep{folland2013real}\\
+Any \textbf{measureable} \textbf{subset} of a positive set is positive, and the \textbf{union} of any \textbf{countable} positive set is positive. 
+\end{lemma}
+
+\item \begin{remark}
+For two measures $\mu, \nu$  on $(X,\srB)$ among which at least one of them is finite, the expression $\mu \ge \nu$ on $E$ means that for every $F \subseteq E \in \srB$,  $(\mu-nu)(F) \ge 0$. That is, $E$ is \emph{a positive set} of $(\mu-nu)$.
+\end{remark}
+\end{itemize}
+
+\subsection{Decomposition of Signed Measure}
+\begin{itemize}
+\item \begin{remark}
+Given a signed measure $\nu$, we can \emph{\textbf{partition}} the space $X$ into positive set (i.e. all of its measurable subsets have positive measure) and negative set (i.e. all of its measurable subsets have negative measure).
+\end{remark}
+
+\item \begin{theorem}(\textbf{The Hahn Decomposition Theorem})\citep{folland2013real}\\
+If $\nu$ is a \textbf{signed measure} on $(X,\srB)$, there exists a \textbf{positive set} $P$ and a \textbf{negative set} $N$ for $\nu$ such that $P\cup N= X$ and $P\cap N=\emptyset$. If $P', N'$ is another such pair, then $P\Delta P'= N\Delta N'$ is \textbf{null} w.r.t. $\nu$.
+\end{theorem}
+
+\item \begin{definition}\citep{folland2013real, resnick2013probability}\\
+The decomposition of $X = P\cup N$ as $X$ is a \emph{\textbf{disjoint union} of a \textbf{positive set} and a \textbf{negative set}} is called a \underline{\emph{\textbf{Hahn decomposition for $\nu$}}}.
+\end{definition}
+
+\item \begin{remark}
+Note that the Hahn decomposition is usually \emph{\textbf{not unique}} as the $\nu$-null set can be transferred between subparts $P$ and $N$. To find unique decomposition, we need the following concepts:
+\end{remark}
+
+\item  \begin{definition}\citep{folland2013real}\\
+Two \emph{signed measures} $\mu, \nu$ on $(X,\srB)$ are \underline{\emph{\textbf{mutually singular}}}, or that \underline{$\nu$ is \emph{\textbf{singular}} w.r.t. to $\mu$}, or vice versa, if and only if there exists a \emph{\textbf{partition}} $E,F\in \srB$ of $X$ such that $E\cap F = \emptyset$ and $E\cup F= X$, \emph{\textbf{$E$ is null for $\mu$}} and \emph{\textbf{$F$ is null for $\nu$}}.  Informal speaking, \emph{\textbf{mutual singular}} means that \underline{$\mu$ and $\nu$ ``\emph{\textbf{live on disjoint sets}}"}. We describe it using perpendicular sign
+\begin{align*}
+\mu \perp \nu
+\end{align*}
+\end{definition}
+
+\item  \begin{theorem}(\textbf{The Jordan Decomposition Theorem})\citep{folland2013real}\\
+If $\nu$ is a signed measure on $(X,\srB)$, there exists \textbf{unique positive measure} $\nu_{+}$ and  $\nu_{-}$ such that 
+\begin{align*}
+\nu = \nu_{+} - \nu_{-} \qquad \text{and} \qquad \nu_{+} \perp \nu_{-}.
+\end{align*}
+\end{theorem}
+
+\item \begin{definition}
+The two positive measures $\nu_{+}, \nu_{-}$ are called the \emph{\textbf{positive}} and \emph{\textbf{negative variations}} of $\nu$, and $\nu= \nu_{+} - \nu_{-} $ is called the   \underline{\emph{\textbf{Jordan decomposition}} of $\nu$}.
+
+Furthermore, define the \underline{\emph{\textbf{total variations}} of $\nu$} as the measure $\abs{\nu}$ such that 
+\begin{align*}
+\abs{\nu} &=  \nu_{+} + \nu_{-}.
+\end{align*}
+\end{definition}
+
+\item \begin{proposition}
+Let $\nu, \mu$ be  signed measures on $(X, \srB)$ and $\abs{\nu}$ is the total variations of $\nu$.  Then
+\begin{enumerate}
+\item $E \in \srB$ is $\nu$-null if and only if $\abs{\nu}(E)=0$
+\item $\nu \perp \mu$ \textbf{if and only if} $\abs{\nu}\perp \mu$ if and only if $(\nu_{+} \perp \mu) \wedge (\nu_{-} \perp \mu)$.
+\end{enumerate}
+\end{proposition}
+
+\item \begin{proposition}
+If $\nu_1, \nu_2$ are signed measures that both omit $\pm \infty$, then $\abs{\nu_1 + \nu_2} \le \abs{\nu_1} + \abs{\nu_2}$
+\end{proposition}
+
+\item \begin{exercise}
+Let $\nu$ be a signed measure on $(X, \srB)$. 
+\begin{enumerate}
+\item $L^1(\nu) = L^{1}(\abs{\nu})$;
+\item If $f \in L^1(\nu)$,  then
+\begin{align*}
+\abs{\int_X f d\nu} &\le \int_X \abs{f} d\abs{\nu}
+\end{align*}
+\item If $E \in \srB$, then 
+\begin{align*}
+\abs{\nu}(E) &= \sup\set{\abs{\int_E f d\nu}: \; \abs{f} \le 1}
+\end{align*}
+\end{enumerate}
+\end{exercise}
+
+\item \begin{remark} 
+We recall that $\nu$ assume at most one of values on $\pm \infty$:
+\begin{enumerate}
+\item If $\nu$ does not take $+\infty$, then \emph{\textbf{$\nu_{+}(X)  = \nu(P)<\infty$ is a finite measure}};
+\item if $\nu$ does not take $-\infty$, then \emph{\textbf{$\nu_{-}(X)  = -\nu(N)<\infty$ is a finite measure}}.
+\end{enumerate}
+In particular, if the range of $\nu$ is contained in $\bR$, then $\nu$ is \emph{bounded}.
+\end{remark}
+
+\item \begin{remark} 
+We observe that $\nu$ is \emph{of form} \underline{$\nu(E) = \int_{E} f d\mu$ where $\abs{\nu}= \mu$ and $f= \mathds{1}_{P} -\mathds{1}_{N}$} and $X = P\cup N$ being a \emph{Hahn decomposition} for $\nu$.
+\end{remark}
+
+
+\item \begin{remark} (\emph{\textbf{Integration with respect to Signed Measure}})\\
+Let $\nu$ be  signed measures on $(X, \srB)$ and $\nu = \nu_{+} - \nu_{-}$ is \emph{the Jordan decomposition} of $\nu$ then 
+\begin{align*}
+\int_{X} f d\nu &= \int_{X} f d\nu_{+} - \int_{X} f d\nu_{-}
+\end{align*} for all $f\in L^{1}(X,\nu)$.
+\end{remark}
+
+\item \begin{definition} 
+\emph{A signed measure} $\nu$ is called \underline{\emph{\textbf{$\sigma$-finite}}} if $\abs{\nu}$ is \emph{$\sigma$-finite}.
+\end{definition}
+\end{itemize}
+
+\subsection{Lebesgue-Radon-Nikodym Theorem}
+\begin{itemize}
+\item \begin{definition}\citep{folland2013real}\\
+Suppose $\nu$ is \emph{a \textbf{signed measure}} on $(X,\srB)$ and $\mu$ is \emph{a \textbf{positive measure}} on $(X,\srB)$. Then $\nu$ is said to be \underline{\emph{\textbf{absolutely continuous w.r.t. $\mu$}}} and write
+\begin{align*}
+\nu \ll \mu 
+\end{align*}
+if $\nu(E)=0$ for \emph{every $E\in \srB$ for which $\mu(E)=0$}. 
+\end{definition}
+
+\item
+\begin{proposition}
+Suppose $\nu$ is a signed measure on $(X,\srB)$,  $ \nu_{+}, \nu_{-}$ are positive and negative variation of $\nu$ and $\abs{\nu}$ is the total variation. Then 
+$\nu \ll \mu $ \textbf{if and only if} $\abs{\nu} \ll \mu$ \textbf{if and only if} $(\nu_{+} \ll  \mu) \wedge (\nu_{-} \ll  \mu)$.
+\end{proposition}
+
+\item \begin{remark}
+\emph{\textbf{Absolutly continuity}} is in a sense \emph{\textbf{antithesis}} (i.e. \emph{direct opposite}) of \emph{\textbf{mutual singularity}}. More precisely, 
+\underline{if $\nu \perp \mu$ and $\nu \ll \mu$, then $\nu = 0$}, since $E, F$ are disjoint sets such that $E\cup F= X$, and $\mu(E)= \abs{\nu}(F)= 0$, then $\nu \ll \mu$ implies that $\abs{\nu}(E)= 0$. One can \emph{extend} the notion of absolute continuity to the case where \emph{$\mu$ is a signed measure} (namely, $\nu \ll \mu$ iff $\nu \ll \abs{\mu}$), but we shall have no need of this more general definition.
+ \end{remark}
+ 
+ \item \begin{theorem} (\textbf{$\epsilon$-$\delta$ Language of Absolute Continuity of Measures})\\
+Let $\nu$ is a \textbf{finite signed measure} and $\mu$ is a \textbf{positive} measure on $(X,\srB)$. Then $\nu \ll \mu$ if and only if for every $\epsilon>0$, there exists a $\delta>0$ such that $\abs{\nu(E)}<\epsilon$, \textbf{whenever} $\mu(E)< \delta$.
+\end{theorem}
+
+\item \begin{remark}
+ If $\mu$ is a \emph{measure} and $f$ is \emph{\textbf{extended $\mu$-integrable}}, then \emph{\textbf{the signed measure} $\nu$ defined via $\nu(E) = \int_{E}f d\mu$ is \textbf{absolutely continuous} w.r.t. $\mu$}; it is \emph{\textbf{finite}} if and only if $f$ is \emph{\textbf{absolutely integrable}}.  For any complex-valued $f \in L^1(\mu)$, the preceding theorem can be applied to $\Re(f)$ and $\Im(f)$.
+ \end{remark}
+ 
+ \item \begin{corollary}
+If $f\in L^{1}(X, \mu)$, for every $\epsilon>0$, there exists a $\delta>0$, such that $\abs{\int_{E}f d\mu }<\epsilon$ whenever $\mu(E)<\delta$.
+\end{corollary}
+ 
+\item \begin{definition} 
+For \emph{a \textbf{signed measure}}  $\nu$ defined via $\nu(E) = \int_{E}f d\mu$ for all $E \in \srB$, we use the notation to express the relationship
+ \begin{align*}
+d\nu &= f\, d\mu.
+\end{align*} Sometimes, by a slight abuse of language, we shall refer to ``\emph{\textbf{the signed measure $f\, d\mu$}}" 
+\end{definition} 
+ 
+ \item \begin{lemma}\citep{folland2013real}\\
+Suppose that $\nu$ and $\mu$ are \textbf{finite measures} on $(X,\srB)$. Either $\nu \perp \mu$, or there exists $\epsilon>0$ and $E\in \srB$ such that  $\mu(E)>0$ and $\nu \ge \epsilon \mu$ on $E$, i.e. $E$ is a \textbf{positive set for $\nu-\epsilon \mu$}. 
+\end{lemma}
+
+\item \begin{theorem}(\textbf{Lebesgue-Radon-Nikodym Theorem})\citep{folland2013real}\\
+Let $\nu$ be a \underline{\textbf{$\sigma$-finite} \textbf{signed} measure} and $\mu$ be a \underline{\textbf{$\sigma$-finite} \textbf{positive} measure} on $(X,\srB)$. There exists \underline{\textbf{unique} \textbf{$\sigma$-finite signed measure}} $\lambda, \rho$ on $(X,\srB)$ such that 
+\begin{align*}
+\lambda \perp \mu\,, \quad \text{and} \quad \rho \ll \mu\,, \quad \text{and} \quad  \nu= \lambda+ \rho.
+\end{align*} 
+In particular, if $\nu \ll \mu$, then 
+\begin{align*}
+d\nu &= f d\mu, \qquad \text{for some }f.
+\end{align*} 
+\end{theorem}
+
+\item
+\begin{definition}
+ The decomposition $\nu= \rho + \lambda$, where $\lambda \perp \mu$ and $\rho\ll \mu$, is called the \emph{\textbf{\underline{Lebesgue} \underline{decomposition}} of $\nu$ with respect to $\mu$}.
+ \end{definition}
+
+\item \begin{definition}
+If $\nu \ll \mu$, then according to \emph{the Lebesgue-Radon-Nikodym theorem}, $d\nu = f d\mu$ for some $f$, where $f$ is called the \emph{\underline{\textbf{Radon-Nikodym derivative}} of $\nu$ w.r.t. $\mu$} and is denoted as
+\begin{align*}
+f := \frac{d\nu}{ d\mu} \quad \Rightarrow \quad d\nu =  \frac{d\nu}{ d\mu} d\mu.
+\end{align*}
+ \end{definition}
+ 
+ \item \begin{remark} By Lebesgue decomposition, \emph{a signed measure} $\nu$ can be represented as
+ \begin{align*}
+ d\nu &= d\lambda + fd\mu 
+ \end{align*}
+ \end{remark}
+ 
+ \item \begin{remark} (\emph{\textbf{Jordan Decomposition vs. Lebesgue Decomposition}})\\
+We see \emph{\textbf{two unique decompositions}}: the Jordan decomposition and the Lebesgue decomposition. We can make a comparison: 
+\begin{enumerate}
+\item Both of these two are \emph{decompositions} of \emph{a \textbf{signed} measure $\nu$}.
+\item Both of these two decompositions seperate $\nu$ into two  \emph{\textbf{mutually signular}} sub-measures of $\nu$.
+\item Both of these two decompositions are \emph{\textbf{unique}}
+\end{enumerate}
+On the other hand,
+\begin{enumerate}
+\item \emph{\textbf{The Jordan decomposition}} is to split \emph{a signed measure} $\nu$ \emph{\textbf{itself}} into \emph{\textbf{two positive measures}}, i.e. $\nu_{+}$ and $\nu_{-}$ that are \emph{\textbf{mutually singular}} ($\nu_{+} \perp \nu_{-}$). 
+
+\item \emph{\textbf{The Lebesgue decomposition}} is to split \emph{a signed measure} $\nu$ \emph{\textbf{with respect to a postive measure $\mu$}}. The result is \emph{two-fold}: 1) \emph{two mutually singular sub-measures} $\lambda \perp \rho$ 2) their relationship with $\mu$ is \emph{\textbf{opposite}}:  $\lambda \perp \mu$, i.e. their support do not overlap; $\rho \ll \mu$, i.e. its support lies within support of $\mu$.
+
+\item Note that $\lambda, \rho$ from \emph{the Lebesgue decomposition} is \emph{\textbf{not}} \emph{necessarily} \emph{\textbf{positive}}. But both $\nu$ and $\mu$ need to be \emph{\textbf{$\sigma$-finite}} which is \emph{not required} for \emph{the Jordan decomposition}.
+\end{enumerate}
+\end{remark} 
+
+\item \begin{proposition}\citep{folland2013real}\\
+ Suppose $\nu$ is \textbf{$\sigma$-finite signed measure} and $\lambda, \mu$ are \textbf{$\sigma$-finite measure} on $(X,\srB)$ such that $\nu\ll \mu$ and $\mu \ll \lambda$.
+ \begin{enumerate}
+ \item If $g\in L^{1}(X, \nu)$, then $g\paren{\frac{d \nu}{d\mu}}\in L^{1}(X,\mu)$ and
+ \begin{align*}
+ \int g d\nu &= \int g\, \frac{d \nu}{d\mu}\, d\mu
+ \end{align*}
+ \item We have $\nu \ll \lambda$, and 
+ \begin{align*}
+ \frac{d\nu}{d\lambda} &= \frac{d\nu}{d\mu}\frac{d\mu}{d\lambda}, \;\;\; \lambda\text{-}a.e.
+ \end{align*}
+ \end{enumerate}
+\end{proposition}
+
+\item \begin{corollary}
+If $\mu \ll \lambda$ and $\lambda \ll \mu$, then $(d\lambda / d\mu)(d\mu / d\lambda) = 1\; a.e$. (with respect to either $\lambda$ or $\mu$).
+\end{corollary}
+
+\item \begin{proposition} If $\mu_{1}, \ldots, \mu_{n}$ are measures on $(X,\srB)$, then there exists a measure $\mu$ such that $\mu_{i}\ll \mu$ for all $i=1,\ldots,n$, namely, $\mu= \sum_{i=1}^{n}\mu_{i}$.
+\end{proposition}
+
+\item  \begin{exercise} (\textbf{Conditional Expectation})\\
+Let $(X, \srB, \mu)$ be a \textbf{finite measure space}, $\srF$ is a sub-$\sigma$-algebra of $\srB$, and $\nu= \rlat{\mu}{\srF}$. Show that if $f\in L^{1}(X, \mu)$, there exists $g\in L^{1}(X, \nu)$ (thus $g$ is \textbf{$\srF$-measureable}) such that $\int_{E} f d\mu = \int_{E} g d\nu $ for all $E\in \srF$; if $g'$ is another such function then $g= g'$ $\nu$-a.e. 
+
+In \textbf{probability theory}, where $(X,\srB)\equiv (\Omega, \srA)$, $f\equiv X$ is a \textbf{random variable}, then $g\equiv \E{}{X| \srF}$ is called \textbf{the conditional expectation of $X$ on $\srF$}, which is $\srF$-measure random variable.
+\end{exercise}
+\end{itemize}
+
+\section{Differentiation}
+\begin{itemize}
+\item \begin{remark}
+In these notes we explore the question of the extent to which these theorems continue to hold when the differentiability or integrability
+conditions on the various functions $F, F', f$ are relaxed. Among the results proven in these notes are
+\begin{enumerate}
+\item \emph{\textbf{The Lebesgue differentiation theorem}}, which roughly speaking asserts that \emph{\textbf{the Fundamental Theorem of Calculus}} continues to hold for almost every $x$ if $f$ is merely \emph{\textbf{absolutely integrable}}, rather than \emph{continuous};
+\item A number of \emph{differentiation theorems}, which assert for instance that \emph{monotone}, \emph{Lipschitz}, or \emph{bounded variation functions} in one dimension are \emph{\textbf{almost everywhere differentiable}}; and
+\item \emph{\textbf{The Second Fundamental Theorem of Calculus}} for \emph{absolutely continuous functions}.
+\end{enumerate}
+\end{remark}
+\end{itemize}
+\subsection{The Lebesgue Differentiation Theorem in One Dimension}
+\begin{itemize}
+\item \begin{theorem} (\textbf{Lebesgue differentiation theorem, one-dimensional case}). \\
+Let $f: \bR \rightarrow \bC$ be an \textbf{absolutely integrable} function, and let $F: \bR \rightarrow \bC$ be the definite integral $F(x) := \int_{[-\infty,x]} f(t) dt$. Then $F$ is \textbf{continuous} and \textbf{almost everywhere differentiable}, and $F'(x) = f(x)$ for \textbf{almost every} $x \in \bR$.
+\end{theorem}
+
+\item \begin{theorem} (\textbf{Lebesgue differentiation theorem, second formulation}). \\
+Let $f: \bR \rightarrow \bC$ be an \textbf{absolutely integrable} function. Then
+\begin{align}
+ \lim\limits_{h\rightarrow 0+}\frac{1}{h} \int_{[x,x+h]} f(t) dt = f(x) \label{eqn: lebesgue_diff_theo_1}
+\end{align} for almost every $x \in \bR$, and
+\begin{align}
+ \lim\limits_{h\rightarrow 0+}\frac{1}{h} \int_{[x-h,x]} f(t) dt = f(x) \label{eqn: lebesgue_diff_theo_2}
+\end{align} for almost every $x \in \bR$.
+\end{theorem}
+
+\item \begin{remark} (\emph{\textbf{Density Argument}}) \citep{tao2011introduction} \\
+The conclusion \eqref{eqn: lebesgue_diff_theo_1} we want to prove is a \emph{\textbf{convergence theorem}} - an assertion that for all functions $f$ in a given class (in this case, \emph{the class of absolutely integrable functions} $f : \bR \rightarrow \bR$), a certain sequence of \emph{linear expressions} $T_h\,f$ (in this case, \textit{the right averages} $T_h\,f(x) = \frac{1}{h} \int_{[x,x+h]} f(t) dt$) \emph{converge in some sense} (in this case, pointwise almost everywhere) to a specified limit (in this case, $f$).
+
+There is a general and very useful argument to prove such convergence theorems, known as \underline{\emph{\textbf{the density argument}}}. This argument requires
+\emph{\textbf{two ingredients}}, which we state informally as follows:
+\begin{enumerate}
+\item A \emph{\textbf{verification}} of the convergence result for some ``\emph{\textbf{dense subclass}}" of ``\emph{\textbf{nice}}" functions $f$, such as \emph{continuous functions}, \emph{smooth functions}, \emph{simple functions}, etc.. By ``\emph{dense}", we mean that a \emph{general function} $f$ in the \emph{original class} can be \emph{\textbf{approximated to arbitrary accuracy}} in a suitable sense by a function \emph{in the nice subclass}.
+\item A \emph{\textbf{quantitative estimate}} that \emph{\textbf{upper bounds}} \emph{the \textbf{maximal fluctuation}} of the \emph{linear expressions} $T_h\,f$ in terms of the ``\emph{\textbf{size}}" of the function $f$ (where \emph{the precise definition of ``size" depends on the nature of the approximation} in the first ingredient).
+\end{enumerate} 
+Once one has these two ingredients, it is usually not too hard to put them together to obtain the desired convergence theorem for general functions $f$ (\emph{not just those in the dense subclass}). 
+\end{remark}
+
+\item \begin{remark}
+One drawback with \emph{\textbf{the density argument}} is it gives convergence results which are \emph{\textbf{qualitative}} rather than \emph{\textbf{quantitative}} - there is no explicit bound on the rate of convergence.
+\end{remark}
+\end{itemize}
+
+\subsection{The Lebesgue Differentiation Theorem in $\bR^{d}$}
+\subsubsection{Absolute Integrable Version}
+\begin{itemize}
+\item \begin{theorem}(\textbf{Lebesgue Differentiation Theorem  (Absolute Integrable version)}) \citep{tao2011introduction}\\
+Suppose $f: \bR^{d} \rightarrow \bC$ is \textbf{absolutly integrable}. Then for almost every $x$, we have 
+\begin{align}
+&\lim\limits_{r\rightarrow 0}\frac{1}{m(B(x, r))}\int_{B(x, r)}\abs{f(z) - f(x)}dz = 0 \label{eqn: lebesgue_points}\\
+\text{and }\quad & \lim\limits_{r\rightarrow 0}\frac{1}{m(B(x, r))}\int_{B(x, r)}f(z) dz = f(x), \nonumber
+\end{align}
+where $B(x, r) := \{ y \in \bR^d : \norm{x - y}{} < r\}$ is the open ball of radius $r$ centred at $x$.
+\end{theorem}
+
+\item \begin{definition}
+A point $x$ for which \eqref{eqn: lebesgue_points} holds is called \emph{\textbf{a Lebesgue point}} of $f$; thus, for an \textbf{\emph{absolutely integrable function}} $f$, \emph{almost every point in $\bR^d$ will be a Lebesgue point for $\bR^d$}.
+\end{definition}
+
+
+\item The \emph{\textbf{quantitative estimate}} we will need is \emph{the Hardy-Littlewood maximal inequality}. First, we need to introduce \emph{the Hardy-Littlewood maximal function}: 
+\begin{definition}\citep{folland2013real}\\
+If $f\in L_{loc}^{1}(\bR^{d})$, the \underline{\emph{\textbf{Hardy-Littlewood maximal function}}} $Hf(x)$ is defined as
+\begin{align*}
+Hf(x)&\equiv \sup_{r>0}\frac{1}{m\paren{B(r,x)}}\int_{B(r,x)}\abs{f(z)}dz
+\end{align*}
+where $B(r,x)= \set{y: \norm{y-x}{}< r}$, and the \emph{\textbf{average value}} of $f$ on $B(r,x)$ is 
+\begin{align*}
+A_{r}f(x)&=\frac{1}{m\paren{B(r,x)}}\int_{B(r,x)}f(z)dz.
+\end{align*}
+\end{definition}
+
+\item \begin{remark}
+ A useful variant of $Hf(x)$ (see \citep{stein2009real}) as 
+\begin{align*}
+H^{*}f(x) &\equiv \sup\set{ \frac{1}{m\paren{B}}\int_{B}\abs{f(z)}dz, \;\, B\text{ is a ball }, x\in B  }.
+\end{align*}
+\end{remark}
+
+\item \begin{remark}
+\emph{The Hardy-Littlewood maximal function} is an important function in the field of \emph{(real-variable) harmonic analysis}.
+\end{remark}
+
+\item \begin{remark} The Hardy-Littlewood maximal function has the following properties:
+\begin{enumerate}
+\item $(Hf)^{-1}(a, \infty) = \bigcup_{r>0}(A_{r}f)^{-1}(a,\infty)$ is open for any $a\in \bR$, so the Hardy-Littlewood maximal function is \emph{measureable}. 
+\item  Moreover, $Hf(x)<\infty, a.e. x$ is \emph{\textbf{essentially bounded}}.  
+\item Note that $Hf \le H^{*}f \le 2^{d}Hf$
+\end{enumerate}
+\end{remark}
+
+\item We need to prove the following theorem for \emph{Lebesgue differentiation theorem}:
+\begin{theorem} (\textbf{The Hardy-Littlewood Maximal Theorem}) \citep{stein2009real, folland2013real}\\
+Suppose $f$ is integrable, then 
+\begin{enumerate}
+\item \begin{align*}
+H^{*}f(x) &\equiv \sup\set{ \frac{1}{m\paren{B}}\int_{B}\abs{f(z)}dz, \;\, B\text{ is a ball }, x\in B  }.
+\end{align*} is measurable. 
+
+\item $H^{*}f(x) <\infty$ for $a.e.\, x$.
+
+\item  $H^{*}f$ satisfies \underline{\textbf{the Hardy-Littlewood maximal inequality}}:
+\begin{align*}
+m\paren{\set{x: \, H^{*}f(x)> \alpha}} &\le \frac{A}{\alpha}\norm{f}{L^{1}(\bR^{d})}
+\end{align*}
+for $\alpha>0$, where $A= 3^{d}$, and $\norm{f}{L^{1}(\bR^{d})}= \int_{\bR^{d}}\abs{f(x)}dx$.
+\end{enumerate}
+Note that $H^{*}f \ge \abs{f}, a.e. x$, but the above expression indicates that \textbf{$H^{*}f$ is not much larger than $\abs{f}$}. However, we may not be able to assume $H^{*}f$ integrable for any $f$.
+\end{theorem}
+
+\item \begin{remark} In order to show \emph{the Hardy-Littlewood maximal inequality}, we need to first find a dense covering called \emph{Vitali covering}: 
+\begin{itemize}
+\item \begin{definition}(\emph{\textbf{Vitali Covering}}) \citep{royden1988real, stein2009real}\\
+\emph{A collection $\cB$ of balls} $\set{B}$ is said to be a \underline{\emph{\textbf{Vitali covering}}} of a set $E$, (\emph{\textbf{covers $E$ in Vitali sense}},) if for every $x\in E$,  any $\eta>0$, there is a \emph{ball} $B\in \cB$, such that $x\in B$ and $m(B)<\eta$. Thus \emph{every point is covered by \textbf{balls} of \textbf{arbitrary small measure}}.
+\end{definition}
+
+
+\item \begin{lemma}(\textbf{Lebesgue number lemma})\\
+For any \textbf{open covering} $\cA$ of the \textbf{metric} space $(X,d)$. If $X$ is \textbf{compact}, there exists a number $\delta>0$ such that for \textbf{any subset} of $X$ having \textbf{diameter} $<\delta$, there exists an element of $\cA$ containing it. 
+\end{lemma}
+
+\item \begin{lemma}(\textbf{Vitali Covering Lemma in elementary form}) \citep{stein2009real}\\
+Suppose $\cB \equiv \set{B_{1},\ldots, B_{N}}$ is a finite collection of open balls in $\bR^{d}$. Then there exists a disjoint sub-collection $B_{i_{1}}, B_{i_2}, \ldots, B_{i_k}$ of $\cB$ that satisfies
+\begin{align*}
+m\paren{\bigcup_{s=1}^{N}B_{s}} &\le 3^{d}\sum_{j=1}^{k}m(B_{i_{j}}) 
+\end{align*}
+Loosely speaking, we may always find \textbf{a disjoint sub-collection of balls} that covers \textbf{a fraction of the region} covered by the original collection of balls. 
+\end{lemma}
+
+\item 
+\begin{lemma} (\textbf{Vitali Covering Lemma in general})  \citep{stein2009real, folland2013real}\\
+Suppose $E$ is a set of finite measure and $\cB$ is a Vitali covering of $E$. For any $\delta>0$, we can find \textbf{finitely many balls} $B_{1},\ldots, B_{N}$ in $\cB$ that are disjoint and so that 
+\begin{align*}
+\sum_{i=1}^{N}m(B_{i}) &\ge m(E) - \delta
+\end{align*}
+\end{lemma}
+
+\item \begin{corollary} \citep{stein2009real, royden1988real}\\
+Follwing the setting above, we can arrange the choice of balls so that
+\begin{align*}
+m\paren{E- \bigcup_{i=1}^{N}B_{i}} &< 2\delta
+\end{align*}
+\end{corollary}
+\end{itemize}
+\end{remark}
+\end{itemize}
+
+\subsubsection{Local Integrable Version}
+\begin{itemize}
+\item \begin{definition}\citep{stein2009real}\\
+A \emph{measurable function} $f$ on $\bR^{d}$ is \emph{\textbf{locally integrable}}, i.e. $f\in L_{loc}^{1}(\bR^{d})$, if for every ball $B$ the function $f(x)\mathds{1}_{B}$ is \emph{integrable}. 
+\end{definition}
+
+
+\item This theorem follows from \emph{the Hardy-Littlewood maximal inequality}
+\begin{theorem}  \citep{stein2009real}\\
+If $f\in L_{loc}^{1}(\bR^{d})$ is \textbf{locally integrable}, then for the \textbf{average} of $f$, i.e. 
+\begin{align*}
+A_{r}f(x)&=\frac{1}{m\paren{B(r,x)}}\int_{B(r,x)}f(z)dz,\\
+\end{align*} we have
+\begin{align*}
+A_{r}f(x) \stackrel{a.e.}{\rightarrow} f(x), \quad r\rightarrow 0. 
+\end{align*}
+\end{theorem}
+
+\item \begin{definition}\citep{stein2009real}\\
+If $f\in L_{loc}^{1}(\bR^{d})$, the \emph{\textbf{Lebesgue set}} of $f$ consists of all points $\overline{x}\in \bR^{d}$ for which $f(\overline{x})$ is \emph{\textbf{finite}} and 
+\begin{align*}
+\lim\limits_{m(B)\rightarrow 0\atop \overline{x}\in B}\frac{1}{m\paren{B}}\int_{B}\abs{f(z)- f(\overline{x})}dz &= 0.
+\end{align*}
+or \emph{equivalently}, \citep{folland2013real},
+\begin{align*}
+Lf &\equiv\set{x\in \bR^{d}: \lim\limits_{r\rightarrow 0}\frac{1}{m\paren{B(r,x)}}\int_{B(r,x)}\abs{f(z)- f(x)}dz = 0}.
+\end{align*}
+\end{definition}
+
+\item These results are from \emph{the Hardy-Littlewood maximal inequality} 
+\begin{corollary}
+Suppose $E$ is a measureable set in $\bR^{d}$. Then
+\begin{enumerate}
+\item Almost every $x\in E$ is \textbf{a point of Lebesgue density} of $E$;
+\item Almost every $x\not\in E$ is \textbf{not a point of Lebesgue density} of $E$.
+\end{enumerate}
+\end{corollary}
+
+\item \begin{corollary}
+If $f$ is \textbf{locally integrable} on $\bR^{d}$, then \textbf{almost every point} belongs to\textbf{ the Lebesgue set} of $f$. 
+\end{corollary}
+
+\item \begin{definition}
+A collection of sets $\set{U_{\alpha}}$ is said to \emph{\textbf{shrink regularly}} to $\overline{x}$ or has \emph{\textbf{bounded eccentricity}} at $\overline{x}$ if there is a constant $c>0$ such that for each $U_{\alpha}$ there is a ball $B$ with 
+\begin{align*}
+\overline{x}\in B, \qquad U_{\alpha} \subset B,  \qquad m(U_{\alpha}) \ge c\,m(B). 
+\end{align*}
+\end{definition}
+
+\item \begin{theorem}(\textbf{Lebesgue Differentiation Theorem (Local Integrable version)}) \citep{stein2009real, folland2013real}\\
+Suppose $f$ is \textbf{locally integrable} on $\bR^{d}$. For every $x$ in the Lebesgue set of $f$, i.e. for almost every $x$, we have 
+\begin{align*}
+&\lim\limits_{m(U_{\alpha})\rightarrow 0\atop x\in U_{\alpha}}\frac{1}{m(U_{\alpha})}\int_{U_{\alpha}}\abs{f(z) - f(x)}dz = 0\\
+\text{and }&\lim\limits_{m(U_{\alpha})\rightarrow 0\atop x\in U_{\alpha}}\frac{1}{m(U_{\alpha})}\int_{U_{\alpha}}f(z) dz = f(x),
+\end{align*}
+for every family $\set{U_{\alpha}}$ that shrinks regularly to $x$.
+\end{theorem}
+\end{itemize}
+\subsection{Lebesgue Density and Radon-Nikodym Derivative}
+\begin{itemize}
+\item Now we turn to consequences of \emph{the Lebesgue differentiation theorem}. 
+\begin{definition}\citep{stein2009real}\\
+If $E$ is a measureable set in $\bR^{d}$, $x\in \bR^{d}$ is a \underline{\emph{\textbf{point of Lebesgue density}}} of $E$ if
+\begin{align*}
+\lim\limits_{m(B)\rightarrow 0 \atop x\in B}\frac{m(B\cap E)}{m(B)} &= 1.
+\end{align*} 
+\emph{Loosely speaking}, it says that a small ball contains $x$ are \emph{almost entirely covered by $E$}. Then for any $\alpha<1$ close to $1$, and \emph{every ball of \textbf{sufficiently small radius}} containing $x$, we have
+\begin{align*}
+m(E\cap B) &\ge \alpha\, m(B).
+\end{align*}
+\end{definition}
+
+\item \begin{definition} 
+A Borel \emph{measure} $\nu$ on $\bR^d$ will be called \emph{\textbf{regular}} if
+\begin{enumerate}
+\item $\nu(K) < \infty$ for every \emph{\textbf{compact}} $K$;
+\item $\nu(E) = \inf\{\nu(U): U\text{ open}, E \subseteq U\}$ for every $E \in \cB[\bR^{d}]$.
+\end{enumerate}
+(Condition (2) is actually implied by condition (1). \emph{A \textbf{signed} or \textbf{complex} Borel measure $\nu$} will be called \emph{\textbf{regular}} if $\abs{\nu}$ is \emph{regular}.
+\end{definition}
+
+\item \begin{theorem}(\textbf{Lebesgue Density from Radon-Nikodym derivative}) \citep{folland2013real}\\
+Let $\nu$ be a \textbf{regular signed measure} on $\bR^{d}$, and let $d\nu = d\lambda+ fdm$ be its Lebesgue-Radon-Nikodym decomposition, where $\lambda \perp m$.  Then for $m$-almost every $x\in \bR^{d}$,
+\begin{align*}
+\lim\limits_{r\rightarrow 0}\frac{\nu(E_{r})}{m(E_{r})} &= f(x),
+\end{align*} where $E_{r}$ \textbf{shrinks regularly} to $x$.
+\end{theorem}
+\end{itemize}
+
+\section{The Fundamental Theorem of Calculus for Lebesgue Integral}
+\subsection{Functions of Bounded Variations}
+\begin{itemize}
+\item \begin{theorem} (\textbf{Monotone Differentiation Theorem}). \citep{tao2011introduction} \\
+Any function $F : \bR \rightarrow \bR$ which is \textbf{monotone} (either monotone non-decreasing or monotone non-increasing) is \textbf{differentiable almost everywhere}.
+\end{theorem}
+
+\item \begin{definition} (\textbf{\emph{Jump function}}). \citep{tao2011introduction}\\
+\emph{A \textbf{basic jump function}} $J$ is a function of the form
+\begin{align*}
+J(x) &:= \left\{
+\begin{array}{cc}
+0 &\text{when }x < x_0 \\
+\theta &\text{when }x = x_0 \\
+1 &\text{when }x > x_0
+\end{array}
+\right.
+\end{align*}
+for some real numbers $x_0 \in \bR$ and $0 \le \theta \le 1$; we call $x_0$ \emph{\textbf{the point of discontinuity}} for $J$ and $\theta$ \emph{\textbf{the fraction}}. Observe that such functions are \emph{\textbf{monotone non-decreasing}}, but have a \emph{\textbf{discontinuity}} at one point.
+
+\emph{A \textbf{jump function}} is any \emph{\textbf{absolutely convergent} combination of basic jump functions}, i.e. a function of the form $F = \sum_{n}c_n\,J_n$, where $n$ ranges over an \emph{at most countable set}, each $J_n$ is \emph{a basic jump function}, and the $c_n$ are \emph{\textbf{positive} reals} with $\sum_n c_n < \infty$. If there are \emph{only \textbf{finitely many}} $n$ involved, we say that $F$ is a \emph{\textbf{piecewise constant jump function}}.
+\end{definition}
+
+\begin{example}
+If $q_1, q_2, q_3, \ldots$ is any enumeration of the \emph{rationals}, then $\sum_{n=1}^{\infty} 2^{-n}\mathds{1}_{[q_n,+\infty)}$ is \emph{a jump function}.
+\end{example}
+
+
+\item \begin{remark}
+\emph{All jump functions are monotone non-decreasing}.  
+
+From the absolute convergence of the $c_n$ we see that \emph{\textbf{every jump function is the uniform limit of piecewise constant jump functions}}, for instance
+$\sum_{n=1}^{\infty}c_n\,J_n$ is the uniform limit of $\sum_{n=1}^{N}c_n\,J_n$. One consequence of this is that the \emph{points of discontinuity of a jump function} $\sum_{n=1}^{\infty}c_n\,J_n$ are \emph{precisely those of the individual summands} $c_n\,J_n$, i.e. \emph{of the points $x_n$ where each $J_n$ jumps}.
+\end{remark}
+
+\item The key fact is that \emph{these \textbf{Jump functions}}, together with \emph{\textbf{the continuous monotone functions}}, \emph{\textbf{essentially generate all monotone functions}}, at least \emph{in the bounded case}:
+\begin{lemma} (\textbf{Continuous-singular decomposition for monotone functions}). \\
+Let $F : \bR \rightarrow \bR$ be a \textbf{monotone non-decreasing} function.
+\begin{enumerate}
+\item The only \textbf{discontinuities} of F are \textbf{jump discontinuities}. More precisely, if $x$ is a point where $F$ is discontinuous, then the
+limits $\lim_{y\rightarrow x^{-}}F (y)$ and $\lim_{y\rightarrow x^{+}}F (y)$ both exist, but are \textbf{unequal}, with $\lim_{y\rightarrow x^{-}}F (y) < \lim_{y\rightarrow x^{+}}F (y)$.
+\item There are at most \textbf{countably} many \textbf{discontinuities} of $F$.
+\item If $F$ is \textbf{bounded}, then $F$ can be expressed as the \textbf{sum} of a \textbf{continuous} \textbf{monotone non-decreasing function} $F_c$ and a \textbf{jump function} $F_{pp}$.
+\end{enumerate}
+\end{lemma}
+
+\item \begin{exercise}
+Show that the decomposition of a bounded monotone non-decreasing function $F$ into continuous $F_c$ and jump components $F_{pp}$ given by the above lemma is unique.
+\end{exercise}
+
+\item \begin{remark}
+As \emph{positive measures} on $\bR$ are related to \emph{increasing functions}, \emph{complex measures} on $\bR$ are related to so-called \emph{functions of bounded variation}. 
+\end{remark}
+
+\item \begin{remark}
+Just as the \emph{integration theory} of \emph{unsigned functions} can be used to develop \emph{the integration theory} of the \emph{absolutely convergent functions}, the \emph{\textbf{differentiation theory}} of \emph{\textbf{monotone functions}} can be used to develop a parallel \emph{differentiation theory} for the class of \emph{\textbf{functions of bounded variation}}:
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{Bounded variation}}).\\
+Let $F : \bR \rightarrow \bR$  be a function. \underline{\emph{\textbf{The total variation}}} $\norm{F}{TV(\bR)}$ (or $\norm{F}{TV}$ for short) of $F$ is
+defined to be the \emph{\textbf{supremum}}
+\begin{align*}
+\norm{F}{TV(\bR)} := \sup\limits_{x_0 \xdotx{<} x_n}\sum_{i=1}^{n}\abs{F(x_i) - F (x_{i-1})}
+\end{align*} where the supremum ranges over all \textbf{\emph{finite increasing sequences}} $x_0 \xdotx{,} x_n$ of real numbers with $n \ge 0$; this is a quantity in $[0, +\infty]$. We say that \underline{\emph{\textbf{$F$ has bounded variation (on $\bR$)}}} if $\norm{F}{TV(\bR)}$ is \emph{\textbf{finite}}. (In this case, $\norm{F}{TV(\bR)}$ is often written as $\norm{F}{BV(\bR)}$ or just $\norm{F}{BV}$.)
+\end{definition}
+
+\item \begin{remark}
+Given any \emph{\textbf{interval}} $[a, b]$, we define \emph{\textbf{the total variation}} $\norm{F}{TV([a, b])}$ of $F$ on $[a, b]$ as
+\begin{align*}
+\norm{F}{TV(\bR)} := \sup\limits_{a\le x_0 \xdotx{<} x_n \le b}\sum_{i=1}^{n}\abs{F(x_i) - F (x_{i-1})}
+\end{align*} We say that a function $F$ has \emph{\textbf{bounded variation on $[a, b]$}} if $\norm{F}{BV([a,b])}$ is \emph{finite}. Note that $\norm{F}{TV(\bR)} = \lim_{N\rightarrow \infty}\norm{F}{TV([-N, N])}$.
+\end{remark}
+
+\item \begin{proposition}
+If $F : \bR \rightarrow \bR$ is a \textbf{monotone function},  $\norm{F}{TV([a, b])}= \abs{F(b) - F(a)}$ for any interval $[a, b]$. Thus $F$ has
+\textbf{bounded variation} on $\bR$ if and only if it is \textbf{bounded}.
+\end{proposition}
+
+\item \begin{proposition}
+For any functions $F, G: \bR \rightarrow \bR$, the total variation $\norm{\cdot}{TV(\bR)}$ satisfies the following property:
+\begin{enumerate}
+\item (\textbf{Non-Negativity}): $\norm{F}{TV(\bR)} \ge 0$; 
+\item (\textbf{Positive Definiteness}): $\norm{F}{TV(\bR)} = 0$ if and only if $F$ is constant.
+\item (\textbf{Homogeneity}): $\norm{c\,F}{TV(\bR)} =\abs{c}\,\norm{F}{TV(\bR)}$ for any $c \in \bR$.
+\item (\textbf{Triangle Inequality}): $\norm{F + G}{TV(\bR)} \le \norm{F}{TV(\bR)} + \norm{G}{TV(\bR)}$
+\end{enumerate} Thus $\norm{\cdot}{TV(\bR)}$ is a \textbf{norm}.
+\end{proposition}
+
+\item \begin{exercise} (Bounded Variation is \textbf{Stronger} than Bounded)
+\begin{enumerate}
+\item Show that every function $f : \bR \rightarrow \bR$ of \textbf{bounded variation} is \textbf{bounded}, and that the limits $\lim_{x\rightarrow+\infty} f(x)$
+and $\lim_{x\rightarrow-\infty} f(x)$, are well-defined.
+\item Give a counterexample of a \textbf{bounded}, \textbf{continuous}, \textbf{compactly supported} function $f$ that is \textbf{not} of \textbf{bounded variation}.
+\end{enumerate}
+\end{exercise}
+
+\item 
+\begin{proposition}
+A function $F : \bR \rightarrow \bR$ is of \textbf{bounded variation} if and only if it is the \textbf{difference} of two \textbf{bounded monotone functions}.
+\end{proposition}
+
+\item \begin{remark}
+Much as \emph{an absolutely integrable function} can be expressed as the difference of its \emph{positive} and \emph{negative parts}, \emph{\textbf{a bounded variation function}} can be expressed as \emph{\textbf{the difference of two bounded monotone functions}}. Let
+\begin{align*}
+F^{+}(x) &=  \sup\limits_{x_0 \xdotx{<} x_n \le x}\sum_{i=1}^{n}\max\{F(x_i) - F (x_{i-1}), 0\}\\
+F^{-}(x) &=  \sup\limits_{x_0 \xdotx{<} x_n \le x}\sum_{i=1}^{n}\max\{-F(x_i) + F (x_{i-1}), 0\}
+\end{align*}
+We have 
+\begin{align*}
+F(x) &= F(-\infty) + F^{+}(x) - F^{-}(x)\\
+\norm{F}{TV([a, b])}  &= F^{+}(b) - F^{+}(a) + F^{-}(b) - F^{-}(a)\\
+\norm{F}{TV(\bR)}  &= F^{+}(+\infty) + F^{-}(+\infty) 
+\end{align*} for every interval $[a, b]$, where $F(-\infty) := \lim_{x\rightarrow-\infty} F(x)$, $F^{+}(+\infty) := \lim_{x\rightarrow+\infty} F^{+}(x)$, and $F^{-}(+\infty) := \lim_{x\rightarrow+\infty} F^{-}(x)$. 
+\end{remark}
+
+\item \begin{corollary} (\textbf{Bounded Variation Differentiation Theorem}). \\
+Every \textbf{bounded variation} function is \textbf{differentiable almost everywhere}.
+\end{corollary}
+
+
+\item \begin{definition} (\emph{\textbf{Locally Bounded Variation}})\\
+A function is \underline{\emph{\textbf{locally of bounded variation}}} if it is of \emph{bounded variation} on \emph{every \textbf{compact} interval} $[a, b]$. 
+\end{definition}
+
+\begin{corollary} (\textbf{Locally Bounded Variation Differentiation Theorem}). \\
+Every \textbf{locally bounded variation} function is \textbf{differentiable almost everywhere}.
+\end{corollary}
+
+\item \begin{definition} (\emph{\textbf{Lipschitz Continuous Function}})\\
+A function $f : \bR \rightarrow \bR$ is said to be \underline{\emph{\textbf{Lipschitz continuous}}} if there exists a constant $C > 0$ such that
+\begin{align*}
+\abs{f(x) - f(y)} \le C\,\abs{x - y} 
+\end{align*} for all $x, y \in \bR$; the \emph{smallest} $C$ with this property is known as \emph{\textbf{the Lipschitz constant}} of $f$.
+\end{definition}
+
+\begin{corollary}  (\textbf{Lipschitz Differentiation Theorem}, one-dimensional case). \\
+Every Lipschitz continuous function $F$ is \textbf{locally} of \textbf{bounded variation}, and hence \textbf{differentiable almost everywhere}. Furthermore,  the \textbf{derivative} $F'$, when it exists, is \textbf{bounded} in magnitude by the Lipschitz constant of $F$.
+\end{corollary}
+
+\begin{remark}
+The same result is true in \emph{higher dimensions}, and is known as \emph{\textbf{the Rademacher differentiation theorem}}.
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{Convex Function}})\\
+A function $f : \bR \rightarrow \bR$  is said to be \emph{\textbf{convex}} if one has $f((1- t)x + ty) \le (1- t)f(x) + tf(y)$ for all $x < y$ and $0 < t < 1$.
+\end{definition}
+
+\begin{corollary} (\textbf{Convex Differentiation Theorem}, one-dimensional case)\\
+If $f$ is convex, then it is \textbf{continuous} and \textbf{almost everywhere differentiable}, and its \textbf{derivative} $f'$ is \textbf{equal} \textbf{almost everywhere} to a \textbf{monotone non-decreasing function}, and so is itself \textbf{almost everywhere differentiable}. 
+\end{corollary} (Hint: Drawing the graph of f, together with a number of chords and tangent lines, is likely to be very helpful in providing
+visual intuition.) 
+
+\begin{remark}
+Thus we see that in some sense, \emph{\textbf{convex functions}} are ``\emph{\textbf{almost everywhere twice differentiable}}". Similar claims also hold
+for \emph{concave functions}, of course.
+\end{remark}
+
+\item \begin{remark}
+From above, we see that \emph{the class} of \emph{\textbf{functions of locally bounded variations}} contains the following sub-classes:
+\begin{enumerate}
+\item \emph{\textbf{Bounded Monotone Functions}}
+\item \emph{\textbf{Lipschitz Continuous Functions}}
+\item \emph{\textbf{Convex (Concave) Function}}
+\item \emph{\textbf{Absolute Continuous Function}} thus includes \emph{Uniformly Continuous Function} too
+\end{enumerate}
+\end{remark}
+\end{itemize}
+
+\subsection{The Second Fundamental Theorem of Calculus for Lebesgue Integral}
+\begin{itemize}
+\item \begin{proposition} (\textbf{Upper bound for second fundamental theorem}). \\
+Let $F: [a, b] \rightarrow \bR$ be \textbf{monotone non-decreasing} (so that, as discussed above, $F$' is defined almost everywhere, is unsigned, and is
+measurable). Then
+\begin{align*}
+\int_{[a, b]}F'(x) dx \le F(b) - F(a).
+\end{align*} In particular, $F'$ is \textbf{absolutely integrable}.
+\end{proposition}
+
+\item For function of bounded variation, the derivative is also absolutely integrable
+\begin{proposition}
+Any function of bounded variation has an (almost everywhere defined) derivative that is \textbf{absolutely integrable}.
+\end{proposition}
+
+\item For Lipschitz continuous function, we can directly prove the second fundamental theorem of calculus:
+\begin{theorem} (\textbf{Second fundamental theorem for Lipschitz functions}). \\
+Let $F: [a, b] \rightarrow \bR$ be \textbf{Lipschitz continuous}.\begin{align*}
+\int_{[a, b]}F'(x) dx = F(b) - F(a).
+\end{align*}
+\end{theorem} (Hint: Argue as in the proof of Proposition above, but use \emph{\textbf{the dominated convergence theorem}}  in place of
+\emph{Fatou’s lemma})
+
+\item \begin{remark}
+One of the main \emph{\textbf{challenge}} to show the second fundament theorem of calculus for \emph{all monotone function} (i.e. to show the equality condition  holds above) is that \emph{all the variation} of $F$ may be \textbf{\emph{concentrated in a set of measure zero}}, and thus \emph{undetectable} by the \emph{Lebesgue integral} of $F'$. The following is one of example
+\end{remark}
+
+\begin{example}
+\emph{\textbf{The Heaviside function}} is defined as $F := \ind{[0,+\infty)}$. It is clear that $F'$ vanishes almost everywhere, but $F(b) − F(a)$ is
+\emph{not equal to} $\int_{[a,b]} F'(x) dx$ if $b$ and $a$ lie on \emph{\textbf{opposite}} sides of the discontinuity at $0$.
+\end{example}
+
+\item Moreover, we have
+ \begin{proposition}
+If $F$ is a jump function, then $F'$ \textbf{vanishes} almost everywhere.
+\end{proposition} Thus \emph{the second fundamental theorem of calculus does not hold for any jump functions}.
+
+\item \begin{remark}
+Even only consider \emph{\textbf{the continuous monotone function}}, it is still possible for \emph{all the fluctuation to now be \textbf{concentrated}, not in a countable collection of jump discontinuities, but instead \textbf{in an uncountable set of zero measure}}, such as \emph{the middle thirds \textbf{Cantor set}}. This
+can be illustrated by the key counterexample of \emph{\textbf{the Cantor function}}, also known as \emph{\textbf{the Devil's staircase function}}.
+
+This example shows that the classical derivative $F'(x) := \lim_{h\rightarrow 0}\frac{F(x+h)−F (x)}{h}$ of a function has some defects; \emph{it
+cannot ``see" some of the variation of a continuous monotone function} such as the Cantor function.
+\end{remark}
+
+\item \begin{remark}
+In view of this counterexample, we see that we need to add \emph{an additional hypothesis} to \emph{\textbf{the continuous monotone} non-increasing function} $F$ before we can recover the second fundamental theorem. One such hypothesis is \emph{\textbf{absolute continuity}}.
+\end{remark}
+
+
+\item \begin{definition}
+A function $F : \bR \rightarrow \bR$ is \emph{\textbf{continuous}} if, for every $\epsilon > 0$ and $x_0 \in \bR$, there exists a $\delta > 0$ such that $\abs{F(b) - F (a)} \le \epsilon$ whenever $(a, b)$ is an interval of length at most $\delta$ that contains $x_0$.
+\end{definition}
+
+\begin{definition}
+A function $F : \bR \rightarrow \bR$ is \emph{\textbf{uniformly continuous}} if, for every $\epsilon > 0$, there exists a $\delta > 0$ such that $\abs{F(b) - F (a)} \le \epsilon$ whenever $(a, b)$  is an interval of length at most $\delta$.
+\end{definition}
+
+\item \begin{definition} (\textbf{\emph{Absolute Continuity}})\\
+A function $F : \bR \rightarrow \bR$ is said to be \textbf{\emph{absolutely continuous}} if, for every $\epsilon > 0$, there exists a $\delta > 0$ such that $\sum_{j=1}^{n}\abs{F(b_j) - F(a_j)} \le \epsilon$ whenever $(a_1, b_1) \xdotx{,} (a_n, b_n)$ is a \textbf{finite collection of disjoint intervals} of \emph{\textbf{total length}} $\sum_{j=1}^{n}\abs{b_j - a_j}$ \emph{\textbf{at most $\delta$}}.
+\end{definition}
+
+\item \begin{proposition} The followings statements are true:
+\begin{enumerate}
+\item Every \textbf{absolutely continuous} function is \textbf{uniformly continuous} and therefore \textbf{continuous}.
+
+\item Every \textbf{absolutely continuous} function is of \textbf{bounded variation} on every \textbf{compact} interval $[a, b]$. (Hint: first show this is true for any sufficiently small interval.) Thus, by the Local Bounded Variation Differentiation Theorem, absolutely continuous functions are \textbf{differentiable almost everywhere}.
+
+\item Every \textbf{Lipschitz continuous} function is \textbf{absolutely continuous}.
+
+\item The function $x \mapsto \sqrt{x}$ is absolutely continuous, but not Lipschitz continuous, on the interval $[0, 1]$.
+
+\item \textbf{The Cantor function} is continuous, \textbf{monotone}, and \textbf{uniformly continuous}, but \textbf{not absolutely continuous}, on $[0, 1]$.
+
+\item  If $f: \bR \rightarrow \bR$ is \textbf{absolutely integrable}, then the indefinite integral $F(x) := \int_{[-\infty,x]} f(y) dy$ is \textbf{absolutely continuous}, and $F$ is differentiable almost everywhere with $F'(x) = f(x)$ for almost every $x$.
+
+\item The \textbf{sum} or \textbf{product} of two absolutely continuous functions on an interval $[a, b]$ remains absolutely continuous.
+\end{enumerate}
+\end{proposition}
+
+\item \begin{remark}
+We can draw the relative strength of different concepts on a \emph{compact interval} $[a, b]$.
+\[
+  \begin{tikzcd}
+     \text{\emph{Lipschitz continuous}} \arrow{r}{}  \arrow{dr}{} & \text{\emph{absolutely continuous}} \arrow{d}{} \arrow{r}{} &  \text{\emph{uniformly continuous}}  \arrow{r}{}  &\text{\emph{continuous}} \\
+     \text{\emph{convex}} \arrow{u}{} \arrow{ur}{}  \arrow{dr}{} & \text{\emph{locally bounded variation}} \arrow{dr}{} & & \\
+\text{\emph{monotone}}  \arrow[rr, bend right]   \arrow{r}{\text{\emph{bounded}}}   & \text{\emph{bounded variation}}  \arrow{u}{} \arrow{r}{} & \text{\emph{differentiable a.e.}} &
+  \end{tikzcd}
+\] 
+\begin{itemize}
+\item \emph{\textbf{uniformly continuous}} $\not\rightarrow$ \emph{\textbf{absolutely continuous}}: See Cantor function example \citep{tao2011introduction}.
+\item  \emph{\textbf{absolutely continuous}} $\not\rightarrow$ \emph{\textbf{Lipschitz continuous}}: $x \mapsto \sqrt{x}$
+\end{itemize}
+\end{remark}
+
+\item \begin{proposition}
+Absolutely continuous functions map \textbf{null sets} to \textbf{null sets}, i.e. if $F : \bR \rightarrow \bR$ is \textbf{absolutely continuous} and $E$ is a null set then $F(E) := \set{F(x): x \in E}$ is also a null set.
+\end{proposition} 
+
+\begin{exercise}
+Show that the Cantor function does not have this property above.
+\end{exercise}
+
+\item For absolutely continuous functions, we can recover the second fundamental theorem of calculus:
+\begin{theorem} (\textbf{Second Fundamental Theorem for Absolutely Continuous Functions}).\\
+Let $F: [a, b] \rightarrow \bR$ be \underline{\textbf{absolutely continuous}}. Then
+\begin{align*}
+\int_{[a, b]}F'(x) dx = F(b) - F(a).
+\end{align*}
+\end{theorem}
+
+\item \begin{proposition} (\textbf{Classification of Absolute Continuous Function})\\
+A function $F: [a, b] \rightarrow \bR$ is \textbf{absolutely continuous} if and only if it takes the form 
+\begin{align*}
+F(x) = \int_{[a,x]} f(y) dy + C
+\end{align*} for some \textbf{absolutely integrable} $f: [a, b] \rightarrow \bR$ and a constant $C$.
+\end{proposition}
+
+\item \begin{remark}
+We see that the \emph{\textbf{absolute continuity}} was used primarily in \emph{two ways}: 
+\begin{enumerate}
+\item firstly, to ensure \emph{\textbf{the almost everywhere existence}} of $F'$
+\item to control \emph{an exceptional \textbf{null set} $E$}.
+\end{enumerate}
+It turns out that one can achieve the latter control by making \emph{a different hypothesis}, namely that \emph{the function $F$ is everywhere differentiable} rather than merely \emph{almost everywhere differentiable}. More
+precisely, we have
+\end{remark}
+
+\item \begin{theorem} (\textbf{Second Fundamental Theorem of Calculus, again}).\\
+Let $[a, b]$ be a compact interval of positive length, let $F: [a, b] \rightarrow \bR$ be a \textbf{differentiable} function, such that \textbf{$F'$ is absolutely integrable}. Then the Lebesgue integral 
+\begin{align*}
+\int_{[a, b]}F'(x) dx = F(b) - F(a).
+\end{align*}
+\end{theorem}
+
+\item \begin{exercise}
+Let $F: [-1, 1] \rightarrow \bR$ be the function defined by setting 
+\begin{align*}
+F(x) := x^2 \sin\paren{\frac{1}{x^3}} 
+\end{align*} when $x$ is non-zero, and $F(0) := 0$. Show that $F$ is everywhere differentiable, but the deriative $F'$ is not absolutely integrable, and so the second fundamental theorem of calculus does not apply in this case (at least if we interpret $\int_{[a,b]} F'(x) dx$ using the absolutely convergent Lebesgue integral). 
+\end{exercise}
+\end{itemize}
+
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{reference.bib}
+\end{document}

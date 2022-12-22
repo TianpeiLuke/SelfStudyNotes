@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: MT_lecture2_measure.aux
+The style file: plainnat.bst
+Database file #1: reference.bib.bib
+Warning--can't use both volume and number fields in royden1988real
+You've used 4 entries,
+            2773 wiz_defined-function locations,
+            615 strings with 5266 characters,
+and the built_in function-call counts, 1293 in all, are:
+= -- 96
+> -- 51
+< -- 6
++ -- 19
+- -- 15
+* -- 79
+:= -- 213
+add.period$ -- 12
+call.type$ -- 4
+change.case$ -- 13
+chr.to.int$ -- 4
+cite$ -- 9
+duplicate$ -- 80
+empty$ -- 129
+format.name$ -- 21
+if$ -- 263
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 8
+newline$ -- 28
+num.names$ -- 16
+pop$ -- 46
+preamble$ -- 1
+purify$ -- 13
+quote$ -- 0
+skip$ -- 54
+stack$ -- 0
+substring$ -- 8
+swap$ -- 7
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 24
+warning$ -- 1
+while$ -- 12
+width$ -- 0
+write$ -- 57
+(There was 1 warning)

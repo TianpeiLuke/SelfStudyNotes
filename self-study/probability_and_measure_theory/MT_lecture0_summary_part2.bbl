@@ -1,0 +1,34 @@
+\begin{thebibliography}{5}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Folland(2013)]{folland2013real}
+Gerald~B Folland.
+\newblock \emph{Real analysis: modern techniques and their applications}.
+\newblock John Wiley \& Sons, 2013.
+
+\bibitem[Resnick(2013)]{resnick2013probability}
+Sidney~I Resnick.
+\newblock \emph{A probability path}.
+\newblock Springer Science \& Business Media, 2013.
+
+\bibitem[Royden and Fitzpatrick(1988)]{royden1988real}
+Halsey~Lawrence Royden and Patrick Fitzpatrick.
+\newblock \emph{Real analysis}, volume 198.
+\newblock Prentice Hall, Macmillan New York, 1988.
+
+\bibitem[Stein and Shakarchi(2009)]{stein2009real}
+Elias~M Stein and Rami Shakarchi.
+\newblock \emph{Real analysis: measure theory, integration, and Hilbert
+  spaces}.
+\newblock Princeton University Press, 2009.
+
+\bibitem[Tao(2011)]{tao2011introduction}
+Terence Tao.
+\newblock \emph{An introduction to measure theory}, volume 126.
+\newblock American Mathematical Soc., 2011.
+
+\end{thebibliography}
