@@ -45,19 +45,51 @@
     - The Differential in Coordinates 
     - Change of Coordinates  
 
-- Chapter 4: Submersion, Immersion, Embedding
+- Submersions, Immersions, and Embeddings
+  - Maps of Constant Rank
+    - Submersions and Immersions
+    - Local Diffeomorphisms
+    - The Rank Theorem
+    - The Rank Theorem for Manifolds with Boundary
+  - Embeddings
+  - Submersions
 
-- Chapter 5: Submanifolds
+- Submanifolds
+  - Embedded Submanifolds
+    - Definitions and Examples
+    - Slice Charts for Embedded Submanifolds
+    - Level Sets
+  - Immersed Submanifolds
+  - Restricting Maps to Submanifolds
+  - The Tangent Space to a Submanifold
+  - Submanifolds with Boundary 
 
-- Chapter 6: Sard's Theorem
+- Sard's Theorem
 
-- Chapter 7: Lie Groups
+- Lie Groups
 
-- Chapter 8: Vector Fields
+- Vector Fields
+  - Vector Fields on Manifolds
+    - Definitions 
+    - Examples of Smooth Vector Fields
+    - Local and Global Frames
+    - Vector Fields as Derivations of Smooth Function Space 
+  - Vector Fields and Smooth Maps
+    - Smooth Maps on Vector Fields
+    - Vector Fields and Submanifolds
+  - Lie Brackets
+  - The Lie Algebra of a Lie Group
 
-- Chapter 9: Integral Curves
+- Integral Curves
+  - Integral Curves
+  - Flows
+    - Global Flows
+    - The Fundamental Theorem on Flows
+    - Complete Vector Fields
+  - Flowouts
+  - Flows and Flowouts on Manifolds with Boundary
 
-- Chapter 10: Vector Bundle
+- Vector Bundle
 
 - Chapter 11: Cotangent Bundle
 
