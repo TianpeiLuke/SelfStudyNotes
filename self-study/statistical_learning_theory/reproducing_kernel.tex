@@ -1,0 +1,1570 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs, dsfont}
+\usepackage{tabularx}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Self-study: Reproducing Kernel Hilbert Space}
+\author{ Tianpei Xie}
+\date{ Jul. 6th., 2015 }
+\maketitle
+\tableofcontents
+\newpage
+\section{Hilbert Space and Functional Analysis Basis}
+\subsection{Complete Metric Space}
+\begin{itemize}
+\item \begin{definition}
+A \emph{\textbf{metric space}} is a set $M$ and a real-valued function $d(\cdot , \cdot): M \times M \rightarrow \bR$  which satisfies:
+\begin{enumerate}
+\item (\emph{\textbf{Non-Negativity}}) $d(x, y) \ge 0$
+\item (\emph{\textbf{Definiteness}}) $d(x, y) = 0$ if and only if $x = y$
+\item (\emph{\textbf{Symmetric}}) $d(x, y) = d(y, x)$
+\item (\emph{\textbf{Triangle Inequality}}) $d(x, z) \le d(x, y) + d(y, z)$
+\end{enumerate} The function $d$ is called a \underline{\emph{\textbf{metric}}} on $M$. The metric space $M$ equipped with metric $d$ is denoted as $(M, d)$.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Cauchy Sequence}})\\
+A sequence of elements $\{x_n\}$ of a metric space $(M, d)$ is called a \underline{\emph{\textbf{Cauchy sequence}}} if $\forall \epsilon >0$, there exists $N \in \bN$, for all $n, m \ge N$, $d(x_n, x_m ) < \epsilon$.
+\end{definition}
+
+\item \begin{proposition}
+Any convergent sequence is a Cauchy sequence.
+\end{proposition} Note that this is the direct result of \emph{triangle inequality property of a metric}.
+
+\item \begin{definition}  (\emph{\textbf{Complete Metric Space}})\\
+A metric space in which \emph{\textbf{all Cauchy sequences converge}} is called \underline{\emph{\textbf{complete}}}.
+\end{definition}
+
+\item \begin{definition}  (\emph{\textbf{Denseness}})\\
+A set $B$ in a \emph{metric space} $M$ is called \underline{\emph{\textbf{dense}}} if \emph{every $m \in M$ is a limit of elements in $B$}.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Continuity}})\\
+A function $f: (X, d) \rightarrow (Y, p)$ is called \emph{\textbf{continuous}} at $x$ if $f(x_n) \stackrel{p}{\rightarrow} f(x)$ whenever $x_n \stackrel{d}{\rightarrow} x$.
+\end{definition}
+
+\item \begin{definition}  (\emph{\textbf{Isometry}})\\
+A \emph{\textbf{bijection}} $h: (X, d) \rightarrow (Y, p)$ which \emph{\textbf{preserves} the metric}, that is,
+\begin{align*}
+p(h(x), h(y)) = d(x, y)
+\end{align*}
+is called an \underline{\emph{\textbf{isometry}}}. It is automatically \emph{continuous}. $(X, d)$ and $(Y, p)$ are said to be \emph{\textbf{isometric}} if such an isometry exists.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Normed Linear Space}})\\
+A \underline{\emph{\textbf{normed linear space}}} is a vector space, $V$, over $\bR$ (or $\bC$) and a function, $\norm{\cdot}{}: V \rightarrow \bR$ which satisfies:
+\begin{enumerate}
+\item (\emph{\textbf{Non-Negativity}}): $\norm{v}{} \ge 0$ for all $v$ in $V$;
+\item (\emph{\textbf{Positive Definiteness}}): $\norm{v}{} = 0$ if and only if $v = 0$;
+\item (\emph{\textbf{Absolute Homogeneity}}) $\norm{\alpha v}{} = \abs{\alpha}\norm{v}{}$ for all $v$ in $V$ and $\alpha$ in $\bR$ (or $\bC$)
+\item (\emph{\textbf{Subadditivity / Triangle Inequality}}) $\norm{v + w}{}\le \norm{v}{} + \norm{w}{}$ for all $v$ and $w$ in $V$
+\end{enumerate}
+We denote the normed linear space as $(V, \norm{\cdot}{})$.
+\end{definition}
+\end{itemize}
+
+\subsection{Hilbert Space}
+\begin{itemize}
+\item \begin{definition}
+An \emph{inner product space} (\emph{pre-Hilbert space}) $X$ is an abstract vector space possessing the structure of an inner product that allows length and angle to be measured. An inner product on $X$ is a mapping on $X\times X$ to a scale field $E$ of $X$; that is, for every pair $\mb{x}, \mb{y}\in X$, the associated scalar in $E$ as the inner product, denoted as $\inn{\mb{x}}{\mb{y}}$ satisfies the following properties
+\begin{enumerate}
+\item Addition $\inn{\mb{x}+ \mb{y}}{\mb{z}} = \inn{\mb{x}}{\mb{z}} + \inn{\mb{y}}{\mb{z}}$ for all $\mb{x},\mb{y},\mb{z}\in X$;
+\item Scalar product $\inn{a\mb{x}}{\mb{y}} = a\inn{\mb{x}}{\mb{y}}, $ for all $\mb{x,y}\in X$, $a\in E$;
+\item Hermitian $\inn{\mb{x}}{\mb{y}} = \overline{\inn{\mb{y}}{\mb{x}}}$; 
+\item Nonegative $\inn{\mb{x}}{\mb{x}} \ge 0$ with equality holds iff $\mb{x} = \mb{0}$.\\
+\end{enumerate}
+\end{definition}
+
+\item \begin{remark}
+A \emph{norm} is induced by inner product via 
+\begin{align*}
+\norm{\mb{x}}{} &= \sqrt{\inn{\mb{x}}{\mb{x}}}
+\end{align*} 
+and a \emph{metric} is defined via 
+\begin{align*}
+d(\mb{x}, \mb{y}) &= \sqrt{\inn{\mb{x}- \mb{y}}{\mb{x}-\mb{y}} } = \norm{\mb{x}- \mb{y}}{}.
+\end{align*}
+\end{remark}
+
+\item \begin{definition}
+A \underline{\textbf{\emph{complete}}} \emph{inner product space} is called \underline{\emph{\textbf{a Hilbert space}}}. 
+
+\emph{Inner product spaces} are sometimes called \emph{\textbf{pre-Hilbert spaces}}.
+\end{definition}
+
+\item \begin{remark} 
+
+Consider a \emph{complex} Hilbert space $F_{c}$, where a function $f_{1} + i\,f_{2} \in F_{c}$  for every $f_{1}, f_{2}\in F$, a Hilbert space of real valued functions.  
+Note that $\norm{f_{1} + i\,f_{2}}{2}^{2} = \norm{f_{1}}{2}^{2} + \norm{f_{2}}{2}^{2}$. The following property holds:
+\begin{enumerate}
+\item If $f\in F_{c}$, then $\overline{f}\in F_{c}$; 
+\item $\norm{f}{} = \norm{\overline{f}}{}$.
+\end{enumerate}
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{Complete Orthonormal Basis}})\\
+If $S$ is \emph{an orthonormal set} in a Hilbert space $\cH$ and \emph{no other orthonormal set} contains $S$ as a proper subset, then $S$ is called \emph{an \underline{\textbf{orthonormal basis}}} (or a \emph{\textbf{complete orthonormal system}}) for $\cH$.
+\end{definition}
+
+\item \begin{theorem} (\textbf{Existence of Orthonormal Basis})\\
+Every Hilbert space $\cH$ has an \textbf{orthonormal basis}.
+\end{theorem}
+
+\item \begin{proposition} (\textbf{Orthogonal Representation of Element in Hilbert Space})\\
+Let $\cH$ be a Hilbert space and $S = (x_{\alpha})_{\alpha \in A}$ an \textbf{orthonormal basis}. Then for each $y \in \cH$,
+\begin{align}
+y &= \sum_{\alpha \in A}\inn{y}{x_{\alpha}}x_{\alpha} \label{eqn: hilbert_space_orthorgonal_representation}
+\end{align}
+and
+\begin{align}
+\norm{y}{\cH} &= \sum_{\alpha \in A}\abs{\inn{y}{x_{\alpha}}}^2 \label{eqn: hilbert_space_norm_representation}
+\end{align}
+The equality in \eqref{eqn: hilbert_space_orthorgonal_representation} means that the sum on the right-hand side converges (independent of order) to $y$ in $\cH$. \textbf{Conversely}, if $\sum_{\alpha \in A}\abs{c_{\alpha}}^2 < \infty$,  $c_{\alpha} \in \bC$, then
+$\sum_{\alpha \in A}c_{\alpha} x_{\alpha}$ converges to an element of $\cH$.
+\end{proposition}
+
+\item \begin{remark}
+\emph{\textbf{Orthogonality}} is the central concept of Hilbert space. In the presence of closed subspaces, the orthogonality allows us to decompose the Hilbert space into the direct sum of the \emph{subspace} and its \emph{orthogonal complement}.
+\end{remark}
+
+
+\item \begin{definition} (\emph{\textbf{Direct Sum}})\\
+Suppose that $\cH_1$ and $\cH_2$ are Hilbert spaces. Then the set of \emph{pairs} $(x, y)$ with $x \in \cH_1, y \in \cH_2$ is a \emph{Hilbert space} with \emph{inner
+product}
+\begin{align*}
+\inn{(x_1, y_1)}{(x_2, y_2)} &:= \inn{x_1}{x_2}_{\cH_1} + \inn{y_1}{y_2}_{\cH_2}
+\end{align*}
+This space is called \emph{\underline{\textbf{the direct sum}} of the spaces $\cH_1$ and $\cH_2$} and is denoted by $\cH_1 \oplus \cH_2$.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Orthogonal Complement}})\\
+Let $\cM \subseteq \cH$ is a \emph{\textbf{closed}} \emph{linear subspace} of Hilbert space $\cH$ with \emph{induced inner product} $\inn{}{}$ (i.e. $\inn{x}{y}_{\cM} = \inn{x}{y}_{\cH}$ for all $x, y \in \cM$). $\cM$ is also a \emph{Hilbert space}.
+
+We denote by $\cM^{\bot}$ the set of vectors in $\cH$ which are \emph{orthogonal} to $\cM$;  $\cM^{\bot}$ is called \emph{\textbf{the \underline{orthogonal complement} of $\cM$}}. It follows from the linearity of the inner product that $\cM^{\bot}$ is a \emph{linear subspace} of $\cH$ and an elementary argument shows that $\cM^{\bot}$ is \emph{closed}. So $\cM^{\bot}$ is also a \emph{Hilbert space}.
+\end{definition}
+
+\item \begin{lemma}
+Let $\cH$ be a Hilbert space, $\cM$ a closed subspace of $\cH$, and suppose $x \in \cH$. Then there exists in $\cM$ a \textbf{unique} element $z$ \textbf{closest} to $x$.
+\end{lemma}
+
+\item \begin{theorem} (\textbf{The Projection Theorem})\\
+Let $\cH$ be a Hilbert space, $\cM$ a closed subspace. Then every $x \in \cH$ can be \textbf{uniquely} written $x = z + w$ where $z \in \cM$ and $w \in \cM^{\bot}$.
+\end{theorem}
+
+\item \begin{remark}
+The projection theorem sets up a natural \emph{isomorphism} $\cM \oplus \cM^{\bot} \rightarrow \cH $ given by
+\begin{align*}
+(z, w) \mapsto z + w
+\end{align*}
+We will often suppress the isomorphism and simply write $\cH = \cM \oplus \cM^{\bot}$.
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{Separability}})\\
+A \emph{metric space} which has a \underline{\emph{\textbf{countable dense subset}}} is said to be \underline{\emph{\textbf{separable}}}.
+\end{definition}
+
+\item \begin{remark}
+Most Hilbert space we have seen is separable.
+\end{remark}
+
+\item \begin{proposition} (\textbf{Canonical Hilbert Space})\\
+A Hilbert space $\cH$ is \textbf{separable} if and only if it has a \textbf{countable orthonormal basis} $S$. If there are $N < \infty$ elements in $S$, then $\cH$ is
+\textbf{isomorphic} to $\bC^N$, If there are \textbf{countably many} elements in $S$, then $\cH$ is \textbf{isomorphic} to $\ell^{2}$.
+\end{proposition}
+\end{itemize}
+
+\subsection{Bounded Linear Operator and Dual Space}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Bounded Linear Operator}})\\
+A \underline{\emph{\textbf{bounded linear transformation}}} (or \emph{\textbf{bounded operator}}) is a mapping $T: (X, \norm{\cdot}{X}) \rightarrow (Y, \norm{\cdot}{Y})$ from a normed linear space $X$ to a normed linear space $Y$ that satisfies 
+\begin{enumerate}
+\item (\emph{\textbf{Linearity}}) $T(\alpha x + \beta y) = \alpha T(x) + \beta T(y)$ for all $x, y \in X$, $\alpha, \beta \in \bR$ or $\bC$
+\item (\emph{\textbf{Boundedness}}) $\norm{Tx}{Y} \le C\,\norm{x}{X}$ for small $C \ge 0$.
+\end{enumerate} The smallest such $C$ is called \underline{\emph{the \textbf{norm} of $T$}}, written $\norm{T}{}$ or $\norm{T}{X, Y}$. Thus
+\begin{align*}
+\norm{T}{} &:= \sup_{\norm{x}{X} = 1 }\norm{Tx}{Y}
+\end{align*}
+\end{definition}
+
+\item \begin{remark}
+Denote the space of \emph{\textbf{all bounded linear operator}} between Hilbert space $\cH_1$ and $\cH_2$ as $\cL(\cH_1, \cH_2)$. The space $\cL(\cH_1, \cH_2)$ is linear space with norm 
+\begin{align*}
+\norm{T}{} &:= \sup_{\norm{x}{\cH_1} = 1 }\norm{Tx}{\cH_2}, \quad \forall T \in \cL(\cH_1, \cH_2).
+\end{align*} It can be shown that $\cL(\cH_1, \cH_2)$ is a \emph{complete normed space (i.e. a Banach space)}.
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{Dual Space}})\\
+The space $\cL(\cH, \bC)$ is called the \underline{\emph{\textbf{dual space}}} of $\cH$ and is denoted by $\cH^{*}$. The elements of $\cH^{*}$ are called \underline{\emph{\textbf{continuous linear functionals}}}. That is, the dual space $\cH^{*}$ is the space of \emph{continuous linear functionals} on $\cH$. 
+\end{definition}
+
+\item \begin{remark}
+The \emph{dual space} $\cH^{*}$ is also called \emph{\textbf{covector space}} with respect to a vector space $\cH$ and the linear functionals are called \emph{\textbf{covectors}}. This terms are mostly used in \emph{differential geometry} when the vector space is \emph{the tangent space}.
+\end{remark}
+
+\item \begin{theorem} (\textbf{The Riesz Representation Theorem}) \citep{reed1980methods, kreyszig1989introductory, conway2019course} \\
+For each $T \in \cH^{*}$, there is a \textbf{unique} $y_{T} \in \cH$ such that 
+\begin{align*}
+T(x) &= \inn{x}{y_T}
+\end{align*} for all $x \in \cH$. In addition $\norm{y_{T}}{\cH} = \norm{T}{\cH^{*}}$.
+\end{theorem}
+
+\item \begin{remark}
+The \emph{the Riesz representation theorem} together with \emph{the Cauchy-Schwarz inequality} defines an \underline{\emph{\textbf{isomorphism}}  $\cH^{*} \rightarrow \cH$} between a Hilbert space $\cH$ and its dual $\cH^{*}$. In other words, the bounded linear functional on Hilbert space has a simple form.
+\end{remark}
+
+\item \begin{corollary} (\textbf{The Riesz Representation for Sesquilinear Form})\\
+Let $B(\cdot, \cdot)$ be a function from $\cH \times  \cH$ to $\bC$ which satisfies:
+\begin{enumerate}
+\item (\textbf{Linearity}) $B(\alpha x + \beta y, z) = \alpha B(x, z) + \beta B(y, z)$
+\item (\textbf{Conjugate Linearity}) $B(x, \alpha y + \beta z) = \overline{\alpha} B(x, y) + \overline{\beta} B(x, z)$
+\item (\textbf{Boundedness}) $\abs{B(x, y)} \le C\,\norm{x}{\cH}\,\norm{y}{\cH} $
+\end{enumerate} for all $x, y, z \in \cH$, $\alpha, \beta \in \bC$. Then there is a \textbf{unique bounded linear transformation} $A: \cH \rightarrow \cH$ so that
+\begin{align*}
+B(x, y) = \inn{Ax}{y}
+\end{align*} for all $x, y \in \cH$. The \textbf{norm} of $A$ is the smallest constant $C$ such that (3) holds.
+\end{corollary}
+
+\item \begin{remark}
+A bilinear function on $\cH$ obeying (1) and (2) is called a \underline{\emph{\textbf{sesquilinear form}}} (as a generalization of \emph{\textbf{blinear form}} in complex vector space). 
+
+In terms of this, an inner product in complex vector space is \emph{\textbf{a complex \underline{Hermitian form}}} (also called a \underline{\emph{\textbf{symmetric sesquilinear form}}}).
+\end{remark}
+\end{itemize}
+
+\subsection{Hilbert Adjoints and Self Adjoint Operator}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Hilbert Space Adjoint}})\\
+Let $T: \cH_{1} \rightarrow \cH_{2}$ be a \emph{bounded linear operator}, where $\cH_1$ and $\cH_2$ are \emph{Hilbert spaces}. Then \underline{\emph{\textbf{the Hilbert-adjoint operator}}} $T^{*}$ of $T$ is the operator
+\begin{align*}
+T^{*}: \cH_2 \rightarrow \cH_1
+\end{align*} such that for all $x \in \cH_1$ and $y \in \cH_2$,
+\begin{align}
+\inn{Tx}{y}_{\cH_2} &= \inn{x}{T^{*}y}_{\cH_1} \label{eqn: hilbert_space_adjoint}
+\end{align}
+\end{definition}
+
+\item \begin{proposition} (\textbf{Existence of Adjoint Operator}) \citep{kreyszig1989introductory}\\
+The Hilbert-adjoint operator $T^{*}$ of $T$ \textbf{exists}, is \textbf{unique} and is a \textbf{bounded linear operator} with norm
+\begin{align*}
+\norm{T^{*}}{} &= \norm{T}{}.
+\end{align*}
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Properties of Hilbert-adjoint operators}).  \citep{reed1980methods, kreyszig1989introductory}\\
+Let $\cH_1$, $\cH_2$ be Hilbert spaces, $S: \cH_1 \rightarrow \cH_2$ and $T: \cH_1 \rightarrow \cH_2$ bounded linear operators and $\alpha$ any scalar. Then we have
+\begin{enumerate}
+\item $\inn{T^{*}y}{x} = \inn{y}{Tx}$,  ($x \in H_1,  y \in \cH_2$)
+\item $ (S + T)^{*} = S^{*} + T^{*}$
+\item $(\alpha T)^{*} = \alpha T^{*}$
+\item $(T^{*})^{*} = T$
+\item $\norm{T^{*}T}{} = \norm{TT^{*}}{} = \norm{T}{}^2$
+\item $T^{*}T =0 \Leftrightarrow T=0$
+\item $(ST)^{*}= T^{*}S^{*}$  (assuming $\cH_2 = \cH_1$)
+\item If $T$ has a \textbf{bounded inverse},  $T^{-1}$, then $T^*$ has a \textbf{bounded inverse} and $(T^{*})^{-1} = (T^{-1})^{*}$.
+\end{enumerate}
+\end{proposition}
+
+\item \begin{definition}
+A \textbf{\emph{bounded linear operator}} $T: \cH \rightarrow \cH$ on a Hilbert space $\cH$ is said to be
+\begin{enumerate}
+\item \underline{\emph{\textbf{self-adjoint}}} or \underline{\emph{\textbf{Hermitian}}} if
+\begin{align*}
+T^{*} = T \quad \Leftrightarrow \quad \inn{Tx}{y} = \inn{x}{Ty}
+\end{align*}
+\item \underline{\emph{\textbf{unitary}}} if $T$ is \emph{bijective} and
+\begin{align*}
+T^{*} = T^{-1} 
+\end{align*}
+\item \underline{\emph{\textbf{normal}}} if
+\begin{align*}
+T^{*}T = TT^{*}
+\end{align*}
+\end{enumerate}
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Projection Operator}})\\
+If $P \in \cL(\cH)$ and $P^2 = P$, then $P$ is called a \underline{\emph{\textbf{projection}}}. If in addition $P = P^*$, then $P$ is called an \underline{\emph{\textbf{orthogonal projection}}}. 
+\end{definition}
+
+\item \begin{remark}
+If $T$ is \emph{\textbf{self-adjoint}} and \emph{\textbf{unitary}}, then $T$ is \emph{\textbf{normal}}.
+\end{remark}
+
+\item \begin{proposition} (\textbf{Self-adjointness}).  \citep{kreyszig1989introductory} \\
+ Let $T: \cH \rightarrow \cH$ be a bounded linear operator on a Hilbert space $\cH$. Then:
+ \begin{enumerate}
+ \item If $T$ is \textbf{self-adjoint}, $\inn{Tx}{x}$ is \textbf{real} for all $x \in \cH$.
+ \item If $\cH$ is complex and $\inn{Tx}{x}$ is \textbf{real} for all $x \in \cH$, the operator $T$ is\textbf{ self-adjoint}
+ \end{enumerate}
+\end{proposition}
+
+\item \begin{proposition}(\textbf{Self-adjointness of product}).  \citep{kreyszig1989introductory} \\
+The product of two bounded \textbf{self-adjoint} linear operators $S$ and $T$ on a Hilbert space $\cH$ is \textbf{self-adjoint} if and only if the operators \textbf{commute},
+\begin{align*}
+ST=TS.
+\end{align*}
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Sequences of self-adjoint operators}). \citep{kreyszig1989introductory}\\
+ Let $(T_n)$ be a sequence of \textbf{bounded self-adjoint} linear operators $T_n: \cH \rightarrow \cH$ on a Hilbert space $\cH$. Suppose that $(T_n)$ converges, say,
+ \begin{align*}
+ T_n \rightarrow T, \quad \text{ i.e. } \norm{T_n - T}{} \rightarrow 0
+ \end{align*}
+where $\norm{\\cdot}{}$ is the norm on the space $\cL(\cH, \cH)$. Then the limit operator $T$ is a \textbf{bounded self-adjoint} linear operator on $H$.
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Unitary operator}). \citep{kreyszig1989introductory}\\
+Let the operators $U: \cH \rightarrow \cH$ and $V: \cH \rightarrow \cH$ be \textbf{unitary}; here, $\cH$ is a Hilbert space. Then:
+\begin{enumerate}
+\item $U$ is \textbf{isometric}; thus $\norm{Ux}{} = \norm{x}{}$ for all $x \in \cH$;
+\item $\norm{U}{}= 1$, provided $\cH \neq \{0\}$,
+\item $U^{-1}= U^{*}$ is \textbf{unitary},
+\item $UV$ is unitary,
+\item $U$ is normal.
+\item A bounded linear operator $T$ on a complex Hilbert space $\cH$ is \textbf{unitary} if and only if $T$ is \textbf{isometric} and \textbf{surjective}.
+\end{enumerate}
+\end{proposition}
+\end{itemize}
+
+\subsection{Regular Measure and Duality of $\cC_0(X)$}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Subspace of Continuous Functions}})\\
+Let $\cC(X) := \cC(X, \bR)$ be \emph{the space of \textbf{continuous} real-valued functions} on topological space $X$ and $\cB(X): = \cB(X, \bR)$ be \emph{the space of \textbf{bounded} real-valued functions} on $X$.
+\begin{enumerate}
+\item The intersection of  $\cB(X)$ and $\cC(X)$ is the space of all \emph{\underline{\textbf{bounded continuous}} functions}
+\begin{align*}
+\cB\cC(X) := \mathcal{BC}(X, \bR) &= \cB(X, \bR) \cap \cC(X, \bR)
+\end{align*} Note that $\mathcal{BC}(X) \subseteq \cB(X)$ is a \emph{\textbf{closed subspace}}. 
+
+\item Define the \emph{\textbf{support}} of a function $f$, $\text{supp}(f)$ as  \emph{the \textbf{smallest closed set} outside of which  $f$ vanishes}. The subset $\cC_{c}(X) \subseteq \cC(X)$ is the space of all \emph{continuous functions} with \underline{\emph{\textbf{compact support}}}
+\begin{align*}
+\cC_{c}(X) &= \set{f \in \cC(X, \bR): \text{supp }(f) \text{\emph{ is compact}}}.
+\end{align*} Note that by \emph{Tietze Extension Theorem}, \emph{the locally compact Hausdorff space} $X$ has a rich supply of continuous functions that vanishes outside a compact set.
+
+\item Recall also that $\cC_{0}(X)$ is the space of \emph{continuous functions} on $X$ that \underline{\emph{\textbf{vanishes at infinity}}}, i.e. for all $\epsilon >0$, $\abs{f(x)} < \epsilon$ if $x \in X\setminus C$ for some \emph{\textbf{compact subset}} $C \subseteq X$.
+\begin{align*}
+\cC_{0}(X) &= \set{f \in \cC(X, \bR): f \text{\emph{ vanishes at infinity}}}.
+\end{align*} 
+\end{enumerate}
+Note that 
+\begin{align*}
+\cC_{c}(X)  \subseteq \cC_{0}(X) \subseteq \mathcal{BC}(X) \subseteq \cC(X)
+\end{align*}
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Radon Measure}}) \citep{folland2013real} \\
+A \underline{\textbf{\emph{Radon measure}}} $\mu$ on $X$ is a \emph{Borel measure} that is 
+\begin{enumerate}
+\item \emph{\textbf{finite}} on \emph{all \textbf{compact} sets}; i.e. for any \emph{\textbf{compact subset}} $K \subseteq X$, 
+\begin{align*}
+\mu(K) < \infty.
+\end{align*}
+\item \emph{\textbf{outer regular}} on \emph{all Borel sets}; i.e. for any \emph{Borel set} $E$ 
+\begin{align*}
+\mu(E) &= \inf\set{\mu(U): E \subseteq U, U \text{\emph{ is open}}}.
+\end{align*}
+\item  \emph{\textbf{inner regular}} on all \emph{open sets}; i.e. for any \emph{open set} $E$
+\begin{align*}
+\mu(E) &= \sup\set{\mu(C): C \subseteq E, C \text{\emph{ is compact and Borel}}}.
+\end{align*}
+\end{enumerate}
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Complex Radon Measure}})\\
+A \underline{\emph{\textbf{signed Radon measure}}} is a \emph{\textbf{signed Borel measure}} whose \emph{\textbf{positive}} and \emph{\textbf{negative variations}} are \emph{\textbf{Radon}}, and a \underline{\emph{\textbf{complex Radon measure}}} is a \emph{\textbf{complex Borel measure}} whose \emph{real and imaginary parts} are \textit{signed Radon measures}. 
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Space of Complex Radon Measures}})\\
+On \emph{locally compact Hausdorff space} $X$, We denote \emph{the space of complex Radon measures
+on} $X$ by $\cM(X)$. For $\mu \in \cM(X)$ we define
+\begin{align*}
+\norm{\mu}{} &= \abs{\mu}(X),
+\end{align*}
+where $ \abs{\mu}$ is the \emph{\textbf{total variation}} of $\mu$.  
+\end{definition}
+
+
+\item \begin{theorem} (\textbf{The Riesz-Markov Theorem, Locally Compact Version}) \citep{reed1980methods, folland2013real}\\
+Let $X$ be a \textbf{locally compact Hausdorff} space. For any continuous linear functional $I$ on $\cC_{0}(X)$, (the space of \emph{continuous functions} on $X$ that vanishes at infinity), there is a \textbf{\underline{unique regular countably additive complex Borel measure}} $\mu$ on $X$ such that
+\begin{align*}
+I(f) &= \int_{X} f d\mu, \quad \text{ for all } f \in \cC_0(X).
+\end{align*} The \underline{\textbf{norm}} of $I$ as a linear functional is \underline{\textbf{the total variation}} of $\mu$, that is
+\begin{align*}
+\norm{I}{} &= \abs{\mu}(X).
+\end{align*}
+Finally, $I$ is \textbf{positive} if and only if the measure $\mu$ is \textbf{non-negative}.
+\end{theorem}
+
+\item \begin{remark}
+In other word, the map $\mu \mapsto I_{\mu}$, is an \emph{\textbf{isometric isomorphism}} from $\cM(X)$  to $(\cC_0(X))^{*}$, or 
+\begin{align*}
+\cM(X) \simeq (\cC_0(X))^{*}.
+\end{align*}
+\end{remark}
+
+\item \begin{corollary}  \citep{reed1980methods, folland2013real}\\
+Let $X$ be a \textbf{compact Hausdorff} space. Then the \underline{\textbf{dual space} $\cC(X)^{*}$} is \textbf{isometric isomorphism} to $\cM(X)$. 
+\end{corollary}
+
+\item \begin{definition}
+Given $\cM(X) \simeq (\cC_{0}(X))^{*}$, we define subspaces of $\cM$:
+\begin{align*}
+\cM_{+}(X) &= \set{I \in  \cM(X): I \text{\emph{ is a positive linear functional}}},\\
+\cM_{+,1}(X) &= \set{I \in  \cM(X): \norm{I}{} = 1}.
+\end{align*} Thus $\cM_{+}(X)$ is \emph{identified} with \emph{\textbf{the space of all positive Randon measures on $X$}}.
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Isometric Embedding of $L^1(\mu)$ into $M(X)$}})\\
+Let $\mu$ be a fixed \emph{positive Radon measure} on $X$. If $f \in L^1(\mu)$, \emph{the complex measure}
+\begin{align*}
+d\nu_f = f d\mu 
+\end{align*}
+is easily seen to be \emph{\textbf{Radon}}, and $\norm{\nu}{} = \int \abs{f}d\mu = \norm{f}{1}$.
+Thus $f \mapsto \nu_f$ is an \emph{\textbf{isometric embedding}} of $L^1(\mu)$ into $M(X)$ whose range consists precisely of those $\nu \in \cM(X)$ such that $\nu \ll \mu$. 
+\end{remark}
+
+\item \begin{proposition} (\textbf{$\cM(X)$ is Normed Linear Space}) \citep{folland2013real}\\
+If $\mu$ is a \textbf{complex Borel measure}, then $\mu$ is \textbf{Radon} if and only if $\abs{\mu}$ is \textbf{Radon}.
+Moreover, $\cM(X)$ is a vector space and $\mu \mapsto \norm{\mu}{}$ is a \textbf{norm} on it.
+\end{proposition}
+
+\item \begin{remark} (\emph{\textbf{Two Perspectives of Measures}})\\
+For \emph{regular Borel measure} $\mu$ or in general, \emph{Radon measures} on \emph{\textbf{locally compact}} space $X$, there are two perspectives:
+\begin{enumerate}
+\item \emph{\textbf{Nonegative set function on the $\sigma$-algebra $\srA$}}: as a \emph{\textbf{measure of the volume}} of a \emph{subset} in $X$;
+\item \emph{\textbf{Positive linear functional on $\cC_0(X)$}}: as a \emph{\textbf{integral} of compactly supported continuous functions with respect to \textbf{given measure}}.
+\end{enumerate}
+In some cases, it is important to think of \emph{\textbf{measures}} not merely as individual  objects but instead as \emph{elements of $(\cC_{0}(X))^{*}$}, so that we can employ \emph{geometric} ideas. 
+\end{remark}
+\end{itemize}
+
+\subsection{Spectrum of Bounded Linear Operator}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Resolvent} and \textbf{Spectrum}})\\
+Let $T \in \cL(X)$. A complex number $\lambda$ is said to be in \underline{\emph{\textbf{the resolvent set} $\rho(T)$ of $T$}} if  
+\begin{align*}
+\lambda I - T
+\end{align*} is a \underline{\emph{\textbf{bijection}}} with a \underline{\emph{\textbf{bounded inverse}}}. 
+\begin{align*}
+R_{\lambda}(T) &:= \paren{\lambda I - T}^{-1}
+\end{align*} is called \underline{\emph{\textbf{the resolvent} of  $T$ at $\lambda$}}. Note that $R_{\lambda}(T)$ is defined on $\text{Ran}\paren{\lambda I - T}$.
+
+If $\lambda \not\in \rho(T)$, then $\lambda$ is said  to be in the \underline{\emph{\textbf{spectrum $\sigma(T)$ of $T$}}}. 
+\end{definition}
+
+\item \begin{remark}
+The name ``\emph{\textbf{resolvent}}" is appropriate, since $R_{\lambda}(T)$ helps to solve
+the equation $\paren{\lambda I - T}x = y$. Thus, $x = \paren{\lambda I - T}^{-1}y =R_{\lambda}(T)y$ provided $R_{\lambda}(T)$ exists.
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{Point Spectrum}, \textbf{Continuous Spectrum} and \textbf{Residual Spectrum}})\\
+Let  $T \in \cL(X)$
+\begin{enumerate}
+\item  \underline{\emph{\textbf{Point Spectrum}}}: An $x \neq 0$ which satisfies 
+\begin{align*}
+&Tx = \lambda x\\
+\text{ or } &\paren{\lambda I - T}x = 0, \quad \text{for some $\lambda \in \bC$}
+\end{align*} is called an \underline{\emph{\textbf{eigenvector} of $T$}}; $\lambda$ is called \underline{\emph{\textbf{the corresponding eigenvalue}}}. 
+
+If $\lambda$ is an \emph{eigenvalue}, then $\paren{\lambda I - T}$ is \emph{\textbf{not injective}} (i.e. $\text{Ker}\paren{\lambda I - T} \neq \set{0}$) so $\lambda$ is \emph{in the spectrum of $T$}. \emph{\textbf{The set of all eigenvalues}} is called \underline{\emph{\textbf{the point spectrum of $T$}}}. It is denoted as $\sigma_{p}(T)$. 
+
+\item \underline{\textbf{\emph{Continuous Spectrum}}}: If $\lambda$ is \emph{\textbf{not an eigenvalue}} and if $\text{Ran}\paren{\lambda I - T}$ is \emph{\textbf{dense}} but the resolvent $R_{\lambda}(T)$ is \emph{\textbf{unbounded}}, then $\lambda$ is said to  be in \underline{\emph{\textbf{the continuous spectrum}}}. It is denoted as $\sigma_{c}(T)$. 
+
+\item \underline{\textbf{\emph{Residual Spectrum}}}: If $\lambda$ is \emph{\textbf{not an eigenvalue}} and if $\text{Ran}\paren{\lambda I - T}$ is \emph{\textbf{not dense}}, then $\lambda$ is said to  be in \underline{\emph{\textbf{the residual spectrum}}}. It is denoted as $\sigma_{r}(T)$. 
+\end{enumerate} 
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Pure Point Spectrum for Finite Dimensional Case}})\\
+If $X$ is \emph{\textbf{finite dimensional} normed linear space}, $T \in \cL(X)$ then $\sigma_{c}(T) = \sigma_{r}(T) = \emptyset$.
+\end{remark}
+
+\item \begin{remark}
+If $X$ is a function space, the \emph{eigenvectors} of \emph{linear operator} $T$ is called the \emph{\textbf{eigenfunctions}} of $T$.
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{Eigenspace of Linear Operator}})\\
+The subspace of domain $D(T)$ consisting of $\{0\}$ and \emph{\textbf{all eigenvectors}} of $T$ corresponding to \emph{an eigenvalue} $\lambda$ of $T$ is
+called  \underline{\textbf{\emph{the eigenspace of $T$}}} corresponding to that eigenvalue $\lambda$.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Spectral Radius of Linear Operator}})\\
+Let 
+\begin{align*}
+r(T) &= \sup_{\lambda \in \sigma(T)} \abs{\lambda}
+\end{align*}
+$r(T)$ is called  \underline{\textbf{\emph{the spectral radius of $T$}}}. 
+\end{definition}
+
+\item \begin{proposition} (\textbf{Spectral Radius Calculation}) \citep{reed1980methods}\\
+Let $X$ be a  \textbf{Hilbert space}, $T \in \cL(X)$ and $T$ is \textbf{self-adjoint}. Then 
+\begin{align*}
+r(T) = \norm{T}{}
+\end{align*}
+\end{proposition}
+
+\item \begin{theorem} (\textbf{Spectrum and Resolvent of Adjoint}) (\textbf{Phillips}) \citep{reed1980methods}\\ 
+If $X$ is a \textbf{Hilbert space} and $T \in \cL(X)$, then 
+\begin{align*}
+\sigma(T) = \sigma(T^{*})\; \text{ and }\; R_{\lambda}(T^{*}) = (R_{\lambda}(T))^{*}.
+\end{align*}
+\end{theorem}
+
+\item \begin{proposition}  (\textbf{Spectrum of Self-Adjoint Operator}) \citep{reed1980methods}\\ 
+Let $Τ$ be a \textbf{self-adjoint operator} on a \textbf{Hilbert space} $\cH$. Then, 
+\begin{enumerate}
+\item $T$ has \textbf{no residual spectrum}, i.e. $\sigma_{r}(T) = \emptyset$. 
+\item $\sigma(T)$ is a subset of $\bR$. 
+\item \textbf{Eigenvectors} corresponding to \textbf{distinct eigenvalues} of $T$ are \textbf{orthogonal}. 
+\end{enumerate}
+\end{proposition}
+
+\item \begin{definition} (\emph{\textbf{Positive-Semidefinite Operator}})\\
+Let $\cH$ be a \emph{\textbf{Hilbert space}}. An operator $B \in \cL(\cH)$ is called \underline{\emph{\textbf{positive-semidefinite}}} if 
+\begin{align*}
+\inn{Bx}{x} \ge 0\text{ for all }x \in \cH.
+\end{align*}
+We write $B \succeq 0$ if $Β$ is \emph{positive-semidefinite} and  $B \succeq A$ if $(B - A) \succeq 0$. 
+
+Similarly, $B$ is called \underline{\emph{\textbf{positive-definite}}} if 
+\begin{align*}
+\inn{Bx}{x}> 0\text{ for all }x \neq 0 \in \cH.
+\end{align*} The \emph{positive semidefinite operator} is sometimes called \emph{\textbf{positive} operator}. 
+\end{definition}
+
+\item \begin{proposition} (\textbf{Positive Semi-Definiteness $\Rightarrow$ Self-Adjoint}) \citep{reed1980methods} \\
+Every (bounded) \textbf{positive semidefinite} operator on a \textbf{complex Hilbert space} is \textbf{self-adjoint}. 
+\end{proposition}
+
+\begin{theorem} (\textbf{Square Root Lemma})  \citep{reed1980methods}\\ 
+Let $A \in \cL(\cH)$ and $A \succeq 0$. Then there is a \textbf{unique} $B \in \cL(\cH)$ with $B \succeq 0$ and $B^2 = A$. Furthermore, $B$ 
+\textbf{commutes} with every bounded operator which commutes with $A$. 
+\end{theorem}
+
+\item \begin{definition}
+For $A \in \cL(\cH)$, we can define \emph{\underline{\textbf{absolute value}} of $A$} as the square root of its normal operation
+\begin{align*}
+\abs{A} := \sqrt{A^{*}A }
+\end{align*} 
+\end{definition}
+\end{itemize}
+
+\subsection{Compact Operator}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Compact Operator}})\\
+Let $X$ and $Y$ be \emph{Banach spaces}. An operator $T \in \cL(X, Y)$ is called \underline{\emph{\textbf{compact}}} (or \underline{\emph{\textbf{completely}}} \underline{\emph{\textbf{continuous}}}) if $T$ takes \emph{\textbf{bounded sets}} in $X$ into \emph{\textbf{precompact sets}} in $Y$. 
+
+\emph{Equivalently}, $T$ is \emph{\textbf{compact}} if and only if for every \emph{\textbf{bounded} sequence} $\set{x_n} \subseteq X$, $\set{T x_n}$ has a \emph{\textbf{subsequence convergent}} in $Y$. 
+\end{definition}
+
+\item \begin{example} (\emph{\textbf{Finite Rank Operators}}) \\
+Suppose that \emph{the \textbf{range} of $T$ is \textbf{finite  dimensional}}. That is, every vector in the range of $T$ can be written 
+\begin{align*}
+T x = \sum_{i=1}^{n}\alpha_i y_i,
+\end{align*} for some fixed family $\{y_i\}_{i=1}^{n}$ in $Y$. If $x_n$ is any \emph{bounded sequence} in $X$, the corresponding $\alpha_i^{(n)}$ are \emph{bounded} since $T$ is \emph{bounded}. The usual subsequence trick allows one to extract a \emph{convergent subsequence} from $\set{T x_n}$ which proves that $T$ is \emph{compact}. \qed
+\end{example}
+
+\item An important property of the compact operator is 
+\begin{theorem} (\textbf{Weakly Convergent $+$ Compact Operator $=$ Uniformly Convergent}) \citep{reed1980methods}\\
+A \textbf{compact} operator maps \textbf{weakly convergent} sequences into \textbf{norm convergent} sequences; i.e. if $T \in \cL(X)$ is compact, then
+\begin{align*}
+x_n \stackrel{w}{\rightarrow} x \quad \Rightarrow \quad Tx_{n} \stackrel{norm}{\rightarrow} Tx.
+\end{align*}
+
+The converse holds true if $X$ is \textbf{reflective}.
+\end{theorem}
+
+\item 
+\begin{theorem} (\textbf{Compact Operator Approximated by Finite Rank Operator})\citep{reed1980methods}\\
+Let $\cH$ be a \textbf{separable Hilbert space}. Then every \textbf{compact operator} on $\cH$ is the \textbf{norm limit} of a sequence of operators of \textbf{finite rank}. 
+\end{theorem}
+
+\item \begin{theorem} (\textbf{Analytic Fredholm Theorem}) \citep{reed1980methods} \\
+Let $D$ be an \textbf{open connected} subset of $\bC$. Let $f: D \rightarrow \cL(\cH)$ be an \textbf{analytic operator-valued function} such that $f(z)$ is \textbf{compact} for each $z \in D$. Then, either 
+\begin{enumerate}
+\item $\paren{I - f(z)}^{-1}$  exists for \textbf{no} $z \in D$; or
+
+\item $\paren{I - f(z)}^{-1}$ exists for \textbf{all} $z \in D \setminus S$ where $S$  is a \textbf{discrete} subset of $D$ (i.e. $S$ is a set which has no limit points in $D$.)
+In this case,  $\paren{I - f(z)}^{-1}$ is \textbf{meromorphic} in $D$, \textbf{analytic} in $D \setminus S$, the \textbf{residues} at the poles are \textbf{finite rank operators}, and if $z \in S$ then
+\begin{align*}
+f(z)\varphi &= \varphi
+\end{align*} has a \textbf{nonzero solution} in $\cH$
+\end{enumerate}
+\end{theorem}
+
+\item \begin{corollary}(\textbf{The Fredholm Alternative}) \citep{reed1980methods}\\
+If $A$ is a \textbf{compact} operator on $\cH$,  then \textbf{either} $\paren{I - A}^{-1}$ exists \textbf{or} $Α\varphi = \varphi$ has a solution. 
+\end{corollary}
+
+\item \begin{theorem} (\textbf{Riesz-Schauder Theorem})  \citep{reed1980methods}\\
+Let $A$ be a \textbf{compact} operator on $\cH$, then \underline{$\sigma(A)$ is a \textbf{discrete set}} having \textbf{no limit points} \textbf{except} perhaps 
+$\lambda = 0$. 
+
+Further, any \underline{\textbf{nonzero} $\lambda \in \sigma(A)$ is an \textbf{eigenvalue}} of \textbf{finite multiplicity} 
+(i.e. the corresponding space of eigenvectors is \textbf{finite dimensional}). 
+\end{theorem}
+
+\item \begin{remark} (\emph{\textbf{Compact} Operator has only \textbf{Nonzero Point Spectrum} with \textbf{Finite Dimensional Eigenspace}})\\
+\emph{Riesz-Schauder Theorem} states that \emph{the \textbf{spectrum} for \textbf{compact} operator on \textbf{Hilbert} space} consists of \emph{only} the point spectrum besides $\lambda = 0$. 
+
+Moreover, \emph{the \textbf{eigenspace}} corresponding to \emph{each \textbf{nonzero eigenvalue}} is \emph{finite dimensional}.
+\end{remark}
+
+\item \begin{theorem} (\textbf{The Hilbert-Schmidt Theorem})  \citep{reed1980methods}\\
+Let $A$ be a \underline{\textbf{self-adjoint compact operator}} on $\cH$. Then, there is a \textbf{complete orthonormal basis}, $\{\phi_n\}_{n=1}^{\infty}$, for $\cH$ so that
+\begin{align*}
+A \phi_n &= \lambda_n \phi_n 
+\end{align*} and $\lambda_n \rightarrow 0$ as $n \rightarrow \infty$.
+\end{theorem}
+
+\item \begin{remark} (\emph{\textbf{Eigendecomposition} of Hilbert Space based on \textbf{Self-Adjoint Compact Operator}})\\
+In other word, given a self-adjoint compact operator $A$ on $\cH$, \emph{the HIlbert space $\cH$ is the direct sum of eigenspaces of $A$}.
+\begin{align*}
+\cH &= \bigoplus_{\lambda_n \in \sigma(A) \subset \bR}\text{Ker}\paren{\lambda_n I - A}
+\end{align*}
+
+A \underline{\textbf{\emph{self-adjoint compact operator}}} on $\cH$ is the closest counterpart of \emph{\textbf{Hermitian matrix} / \textbf{Symmetric Real matrix}} in infinite dimensional space.
+\end{remark}
+
+\item \begin{theorem}(\textbf{Canonical Form for Compact Operators})   \citep{reed1980methods}\\
+Let $A$ be a \textbf{compact} operator on $\cH$. Then there exist (\textbf{not necessarily complete}) \textbf{orthonormal sets} $\{\psi_n\}_{n=1}^{N}$ and $\{\phi_n\}_{n=1}^{N}$ and \textbf{positive real numbers} $\{\lambda_n\}_{n=1}^{N}$ with $\lambda_n \rightarrow 0$ so that 
+\begin{align}
+A &= \sum_{n=1}^{N}\lambda_n\inn{\psi_n}{\cdot}\phi_n \label{eqn: canon_compact_operator}
+\end{align}
+The sum in \eqref{eqn: canon_compact_operator}, which may be finite or infinite, \textbf{converges in norm}. The numbers, $\{\lambda_n\}_{n=1}^{N}$, are called the \underline{\textbf{singular values of $A$}}. 
+\end{theorem}
+\end{itemize}
+
+\subsection{Trace Class and Hilbert-Schmidt Operators}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Trace of Positive Semi-Definite Operator}})\\
+Let $\cH$ be a \textbf{\emph{separable Hilbert space}}, $\{\phi_n\}_{n=1}^{\infty}$ an \textbf{\emph{orthonormal basis}} Then  for any \textbf{\emph{positive semi-definite}} operator $A \in \cL(\cH)$, we define
+\begin{align*}
+\tr{A} &= \sum_{n=1}^{\infty}\inn{A\phi_n}{\phi_n}
+\end{align*} The number $\tr{A}$ is called \underline{\textbf{\emph{the trace of $A$}}}.
+\end{definition} 
+
+\item \begin{remark} (\emph{\textbf{Trace of General Linear Operator}})\\
+Let $A \in \cL(\cH)$ be a bounded linear operator on separable Hilbert space. Instead of considering \emph{the trace of $A$}, we consider \emph{the trace of absolute value of $A$},
+\begin{align*}
+\tr{\abs{A}} = \tr{\sqrt{A^{*}A}}.
+\end{align*}
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{Hilbert-Schmidt Operator}}) \\
+An operator $T \in \cL(\cH)$ is called  \underline{\textbf{\emph{Hilbert-Schmidt}}} if and only if
+\begin{align*}
+\tr{T^{*}T} < \infty.
+\end{align*}
+\emph{The family of all Hilbert-Schmidt operators} is denoted by $\cB_2(\cH)$ or $\cB_{HS}(\cH)$.
+\end{definition}
+
+\item \begin{proposition} (\textbf{Space of Hilbert-Schmidt Operator}) \citep{reed1980methods} 
+\begin{enumerate}
+\item The space of all Hilbert-Schmidt operators $\cB_2(\cH)$ is a \underline{\textbf{$*$-ideal} in $\cL(\cH)$},
+\item  (\textbf{Inner Product}): If $A, B \in \cB_2(\cH)$ , then for \textbf{any orthonormal basis} $\{\varphi_n\}_{n=1}^{\infty}$, 
+\begin{align*}
+ \sum_{n=1}^{\infty}\inn{A^{*}B\varphi_n}{\varphi_n}
+\end{align*}
+is \textbf{absolutely summable}, and its \textbf{limit}, denoted by $\inn{A}{B}_{HS}$, is \textbf{independent} of the orthonormal basis chosen, i.e. 
+\begin{align*}
+\inn{A}{B}_{HS} = \tr{A^{*}B}
+\end{align*}
+\item $\cB_2(\cH)$ with inner product  $\inn{\cdot}{\cdot}_{HS}$ is a \textbf{Hilbert space}. 
+\item (\textbf{Norm}):  Let $\norm{\cdot}{2}$ be defined in $\cB_2(\cH)$ by
+\begin{align*}
+\norm{A}{2} := \sqrt{\inn{A}{A}}_{HS} = \sqrt{\tr{A^{*}A}}.
+\end{align*} Then
+\begin{align*}
+\norm{A}{} \le \norm{A}{2} \le \norm{A}{1}, \quad \text{and} \quad  \norm{A}{2} =  \norm{A^{*}}{2}
+\end{align*} 
+\item (\textbf{Compactness}) \underline{Every $A \in \cB_2(\cH)$ is \textbf{compact}} and a \textbf{compact operator}, $A$, is in $\cB_2(\cH)$ \textbf{if and only if} 
+\begin{align*}
+\sum_{n=1}^{\infty}\lambda_n^2 < \infty
+\end{align*} where $\set{\lambda_n}$ are the \textbf{singular values} of $A$. 
+\item (\textbf{Finite Rank Approximation}) The \textbf{finite rank operators} are $\norm{\cdot}{2}$-\textbf{dense} in  $\cB_2(\cH)$. 
+\item $A \in \cB_2(\cH)$ \textbf{if and only if} 
+\begin{align*}
+\set{\norm{A\varphi_n}{}}_{n=1}^{\infty} \in \ell^2
+\end{align*}
+for \textbf{some} orthonormal basis $\{\varphi_n\}_{n=1}^{\infty}$. 
+\item $A \in \cB_1(\cH)$ if and only if $A = BC$ with $B, C \in \cB_2(\cH)$. 
+\item  $\cB_2(\cH)$ is not $\norm{\cdot}{}$-closed in $\cL(\cH)$. 
+\end{enumerate}
+\end{proposition}
+
+
+\item \begin{theorem} (\textbf{Hilbert-Schmidt Operator of $L^2$ Space}) \citep{reed1980methods}\\
+Let $(M, \mu)$ be a \textbf{measure space} and  $\cH = L^2(M, \mu)$.  Then $T \in \cL(\cH)$ is \textbf{Hilbert-Schmidt} \textbf{if and only if} there is a function 
+\begin{align*}
+K \in L^2(M \times M, \mu \otimes \mu)
+\end{align*}
+with 
+\begin{align*}
+(T f)(x) &= \int_{M} K(x, y)f(y) d\mu(y),
+\end{align*}
+Moreover, 
+\begin{align*}
+\norm{T}{2}^2 &= \int_{M \times M} \abs{K(x, y)}^2 d\mu(x) d\mu(y).
+\end{align*}
+\end{theorem}
+
+
+
+\item \begin{definition} (\emph{\textbf{Kernel of Integral Operator}})\\
+Consider the simple operator $T_{K}$, defined in $\cC[0, 1]$ by 
+\begin{align*}
+(T_{K}f)(x) = \int_{0}^{1} K(x, y)f(y) dy,
+\end{align*} where the function $K(x, y)$ is \emph{continuous} on the square $0\le x, y \le 1$.  $T_{K}$ is called an \underline{\emph{\textbf{integral kernel operator}}} and $K(x, y)$ is called \emph{the \underline{\textbf{kernel}} of the integral operator $T_K$}. 
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Properties of Integral Kernel Operator}})\\
+We summary some important property of the integral kernel operator $T_K$:
+\begin{enumerate}
+\item $T_K$ is \emph{\textbf{compact operator}} on $\cC[0,1]$.
+
+\item For $K^{*}(x, y) := \overline{K(y, x)}$, 
+\begin{align*}
+(T_{K})^{*} &= T_{K^{*}}
+\end{align*}
+
+\item Let $B_M$ denote the functions $f$ in $\cC[0, 1]$ such that $\norm{f}{\infty} \le M$, i.e. closed $\norm{}{\infty}$-ball in $\cC[0, 1]$
+\begin{align*}
+B_M := \set{f \in \cC[0, 1]: \norm{f}{\infty} \le M}
+\end{align*} \emph{The set of functions} $T_K(B_M) := \set{T_{K}f: f\in B_M}$ is \emph{\textbf{equicontinuous}}.
+
+
+\item The \emph{operator norm} of $T_K$ is \emph{bounded above} by the \emph{$L^2$ norm} of kernel function $K$
+\begin{align*}
+\norm{T_K}{} \le \norm{K}{L^2}
+\end{align*}
+
+\item The eigenfunctions of $T_K$, $\{\varphi_n\}_{n=1}^{\infty}$, forms a complete orthonormal basis in $L^2(M, \mu)$. Then 
+\begin{align*}
+K(x,y) &= \sum_{n=1}^{\infty}\lambda_{n}\varphi_n(x)\overline{\varphi_n(y)}
+\end{align*} where $\lambda_n$ is the eigenvalue corresponding to eigenfunction $\varphi_n$.
+\end{enumerate}
+\end{remark}
+
+
+\item \begin{theorem}  (\textbf{Mercer's Theorem}) \\
+Suppose $\Omega$ is a \textbf{compact domain} and $T$ is a \textbf{positive Hilbert-Schmidt operator} on $L^2(\Omega)$. If the integral kernel $K(\cdot, \cdot)$ is
+\textbf{continuous} on $\Omega \times \Omega$, then the \textbf{eigenfunction} $\varphi_k$ is \textbf{continuous} on $\Omega$ if $\lambda_k > 0$, and
+the expansion
+\begin{align*}
+K(x,y) &= \sum_{n=1}^{\infty}\lambda_{n}\varphi_n(x)\overline{\varphi_n(y)}
+\end{align*}
+converges \textbf{uniformly} on \textbf{compact} sets.
+\end{theorem}
+
+%\item \begin{theorem} (Mercer)\\
+%Let $E\equiv (E,\mu)$ be a measure space. Suppose $K \in L^{\infty}(E\times E)$ is a symmetric real-valued function such that the integral operator
+%\begin{align*}
+%&K: L^{2}(E) \rightarrow L^{2}(E)\\
+%&(Kf)(\mb{z}) = \int_{E}K(\mb{z},\mb{x})f(\mb{x}) d\mu(\mb{x}). 
+%\end{align*}
+%is positive definite; that is, for all $f \in L^{2}(E)$, we have
+%\begin{align*}
+%\int_{E\times E} K(\mb{z},\mb{x})f(\mb{z})f(\mb{x}) d\mu(\mb{z})d\mu(\mb{x}) \ge 0. 
+%\end{align*}
+%Let $\psi_{j} \in L^{2}(E)$ be the normalized orthogonal eigenfunctions of $K$ associated with the
+%eigenvalues $\lambda_{j} > 0$, sorted in non-increasing order. Then
+%\begin{enumerate}
+%\item $(\lambda_{j})_{j}\in \ell_{1}$; 
+%\item $K(\mb{x}, \mb{x}') = \sum_{j}^{\cN_{E}}\lambda_{j}\psi_{j}(\mb{x})\psi_{j}(\mb{x}')$  holds for almost all $(\mb{x}, \mb{x}')$. Either $\cN_{E} \in  \bN$, or $\cN_{E} = \infty$; in the latter case, the series converges absolutely and uniformly for almost all $(\mb{x}, \mb{x}')$.
+%\end{enumerate}
+%\end{theorem}\vspace{15pt}
+%
+%\item 
+%\begin{theorem} (The representation of stationary kernel: \emph{Bochner}'s theorem) \\
+%A complex-valued function $K$ on $\bR^{D}$ is the covariance function of a weakly stationary mean square continuous complex-valued random process on $\bR^D$ if and only if it can be represented as
+%\begin{align}
+%K(\mb{x}, \mb{x}') = K(\mb{x}-\mb{x}')&=\int_{\bR^{D}} \exp\paren{ 2\pi j\,\mb{s}^{T}(\mb{x}-\mb{x}')}d\mu(\mb{s}), \label{eqn: Kernel_Fourier_1}
+%\end{align}
+%where $\mu$ is a positive finite measure.
+%\end{theorem}
+%The covariance function of a stationary process can be represented as the Fourier transform of a positive finite measure.
+%
+%For the spectral density exists as $S(\mb{s})$, 
+%\begin{align}
+%K(\mb{x}-\mb{x}')= K(\mb{\tau})&=\int_{\bR^{D}} S(\mb{s})\exp\paren{2\pi j\,\mb{s}^{T}\mb{\tau}}d\mb{s}, \nonumber\\
+%S(\mb{s}) &= \int_{\bR^{D}} K(\mb{\tau})\exp\paren{-2\pi j\,\mb{s}^{T}\mb{\tau}}d\mb{\tau}.\label{eqn: Kernel_Fourier_2}
+%\end{align}
+
+\end{itemize}
+
+
+\section{Reproducing Kernel Hilbert Space (RKHS)}
+\subsection{Definitions}
+\begin{itemize}
+\item \begin{definition} (\textbf{\emph{Evaluation Functional}})\\
+Let $X$ be a space, $\cH$ be the \emph{Hilbert space} of complex-valued functions on $X$,  a linear functional $\delta_x: \cH \rightarrow \bC$ is called an \underline{\emph{\textbf{evalution functional}}} if 
+\begin{align*}
+\delta_x(f) = f(x), \quad \forall f \in \cH
+\end{align*} That is, $\delta_x$ evaluates each function $f \in \cH$ at a point $x$.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Reproducing Kernel Hilbert Space}})\\
+A \emph{Hilbert space} $\cH$ is a \underline{\emph{\textbf{reproducing kernel Hilbert space}}} (\emph{RKHS}) if, \emph{\textbf{for all $x$ in $X$}}, \emph{the evaluation functional $\delta_x$} is \underline{\emph{\textbf{bounded linear operator}} on $\cH$}, i.e. there exists some $M_{x}>0$ such that
+\begin{align*}
+\abs{\delta_x(f) } := \abs{f(x)} \le M_{x}\norm{f}{\cH}\qquad \forall f\in \cH.\,
+\end{align*} 
+Equivalently, for every $x\in X$, $\delta_x$ is \emph{\textbf{continuous}} \emph{at \textbf{every} $f$ in $\cH$} 
+\end{definition}
+
+
+
+\item \begin{remark}
+\begin{align*}
+\cH \text{ is a RKHS } \Leftrightarrow \delta_x \in \cH^{*}, \forall x \in X
+\end{align*}
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Unique Representation of Evaluation Functional at Each Point}})\\
+If $\cH$ is a \emph{reproducing kernel Hilbert space}, $\delta_x \in \cH^{*}$, then \emph{the Riesz Representation theorem} implies that for all $x \in X$, there exists \emph{\textbf{a unique function}} $k_x \in \cH$ so that 
+\begin{align*}
+\delta_x &= \inn{\cdot}{k_x} \\
+\Rightarrow f(x) = \delta_x(f) &= \inn{f}{k_x}, \forall f\in \cH
+\end{align*}
+Note that $k_x: X \rightarrow \bC$ is a complex-valued function on $X$, so 
+\begin{align*}
+k_x(y) := \delta_y(k_x) &= \inn{k_x}{k_y} := K(x, y)
+\end{align*} where the complex-valued function $K: X \times X \rightarrow \bC$ is called a \underline{\emph{\textbf{reproducing kernel}}}
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{Reproducing Kernel}})\\
+Let $\cH$ be a class of functions on $X$ forming a Hilbert space (complex in the latter, but possibly real). A function $K:  X \times X \rightarrow \bC$ is called a \underline{\emph{\textbf{reproducing kernel}}} (\emph{r.k.}) of $\cH$, if
+\begin{enumerate}
+\item For every $x \in X$, the kernel $K(x, \cdot)$ as a function belongs to $\cH$; i.e., $K(x, \cdot) := k_x \in \cH$; 
+\item The \emph{\textbf{reproducing property}}: for every $x \in X$ and every $f\in \cH$,
+\begin{align}
+f(x) = \delta_x(f) &=  \inn{f}{k_x}_{\cH}  = \inn{f}{K(x, \cdot)}_{\cH}  \label{expr: reprod_property}
+\end{align} 
+\end{enumerate}
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Reproducing Kernel via Inner Product in RKHS}})\\
+We can define \emph{\textbf{the reproducing kernel}} $K:  X \times X \rightarrow \bC$ using \emph{\textbf{the inner product}}
+\begin{align*}
+K(x, y) &=  \inn{k_x}{k_y}_{\cH}, \quad  \forall x, y \in X
+\end{align*} where $k_x, k_y \in \cH$ correspond to evaluation functionals $\delta_x$ and $\delta_y$ in RKHS $\cH$, respesctively. 
+
+Equivalently, we can the following equation:
+\begin{align*}
+K(x, y) &= \inn{K(x, \cdot)}{K(y, \cdot)}_{\cH}
+\end{align*}
+\end{remark}
+
+\item \begin{remark}
+The following properties hold for reproducing kernels:
+\begin{enumerate}
+\item (\emph{\textbf{Existence}}). The existence of reproducing kernel $K$ is based on the definition of RKHS $\cH$ that $\delta_x \in \cH^{*}$ for all $x \in X$. Then by \emph{the Riesz representation theorem (Riesz Lemma)}, we can find a unique $k_x$ corresponding to $\delta_x$ so that $K(x, y):= \delta_y(k_x) = \inn{k_x}{k_y}$.
+
+\item (\emph{\textbf{Uniqueness}}) If a reproducing kernel $K(x, y)$ \emph{exists}, it is \emph{\textbf{unique}}. This is due to \emph{the Riesz representation theorem (Riesz Lemma)}.
+
+\item (\emph{\textbf{Positive Semi-Definite}}) $K(x, y)$ is \emph{\textbf{positive semidefinite}} in $X$; i.e., 
+\begin{align*}
+\sum_{i,j=1}^{n}K(x_{i}, x_{j})\xi_{i}\overline{\xi}_{j} \ge 0
+\end{align*}
+for all $x_{1}\ldots, x_{n}\in X$ and all $\xi_{1},\ldots, \xi_{n}\in \bC$.  It follows that 
+\begin{align*}
+\sum_{i,j=1}^{n}K(x_{i}, x_{j})\xi_{i}\overline{\xi}_{j} &= \sum_{i,j=1}^{n}\inn{k_{x_i}}{k_{x_j}}_{\cH}\xi_{i}\overline{\xi}_{j}\\
+&= \inn{ \sum_{i=1}^{n}\xi_{i}k_{x_i}}{\sum_{j=1}^{n}\xi_j k_{x_j}}_{\cH}\\
+&= \norm{\sum_{i=1}^{n}\xi_{i}k_{x_i}}{\cH}^2 \ge 0 \qed
+\end{align*}
+
+\item (\emph{\textbf{Hermitian}}): $K(x, y)$ is \emph{Hermitian}  i.e.
+\begin{align*}
+K(x, y) = \overline{K(y, x)}
+\end{align*}
+This is due to the Hermitian property of inner product.
+
+\item (\emph{\textbf{Cauchy-Schwartz Inequality}})
+\begin{align*}
+ \abs{K(x, y)}^{2}\le K(x, x)^{1/2}K(y, y)^{1/2}.
+\end{align*}
+\end{enumerate}
+\end{remark}
+\end{itemize}
+
+
+
+\subsection{Properties}
+\begin{itemize}
+\item \begin{proposition} (\textbf{Closed Subspace})\\
+A \textbf{closed linear subspaces} $\cF$ of reproducing kernel Hilbert space $\cH$ is a reproducing kernel Hilbert space with the reproducing kernel $K_{\cF} = K|_{\cF}$.
+\end{proposition}
+
+\item \begin{proposition}  (\textbf{Orthorgonal Complements})\\
+If $\cH'$ and $\cH''$ are \textbf{complementary} subspaces of $\cH$, i.e. $\cH = \cH' \oplus \cH''$, then their reproducing kernels satisfy the equation $K'+ K'' = K$.
+\end{proposition}
+
+\item \begin{remark} (\emph{\textbf{Projection} via \textbf{Reproducing Kernel}})\\
+ If the class $\cF$ with the reproducing kernel $K$ is a \emph{subspace} of a larger Hilbert space $\cH$, then the formula 
+\begin{align*}
+f(x) &=\inn{h}{K(x, \cdot)}_{\cH},
+\end{align*} 
+gives the projection $f$ of $h \in \cH$ in $\cF$.
+\end{remark}
+
+\item 
+\begin{proposition}
+If $K$ is the reproducing kernel of the class $F$ with the norm $\norm{\cdot}{}$, and if the linear class $F_{1}\subset F$ forms a Hilbert space with the norm $\norm{\cdot}{1}$ such that $\norm{f_{1}}{1} \ge \norm{f_{1}}{}$ for every $f_{1} \in F_{1}$, then the class $F_{1}$ possesses a reproducing kernel $K_{1}$ satisfying $K_{1} \preceq K$; i.e., $K-K_{1}$ is positive definite.
+\end{proposition}
+
+
+
+%\item 
+%\begin{theorem} (\textbf{Decomposition of RKHS})\\
+%Let $K$ be the reproducing kernel of class $\cF$. To every decomposition $K =K_{1}+K_{2}$ in two positive matrices $K_1$ and $K_2$, there corresponds a decomposition of the identity operator $I$ in $F$ in two positive operators $L_{1}$ and $L_2$, $I= L_{1}+ L_{2}$, given by 
+%\begin{align*}
+%L_{1}f(\mb{y}) = \inn{f(\mb{x})}{K_{1}(\mb{x}, \mb{y})}, && L_{2}f(\mb{y}) = \inn{f(\mb{x})}{K_{2}(\mb{x}, \mb{y})}, 
+%\end{align*} 
+%such that if $L_{1}^{1/2}$ and $L_{2}^{1/2}$ denote any symmetric square roots of $L_1$ and $L_2$, the classes $F_1$ and $F_2$ of all transform $L_{1}^{1/2}f$ and $L_{2}^{1/2}f$ respectively, $f \in F$, correspond to the kernels $K_1$ and $K_2$. If $F_{i0}, i = 1, 2$, is the class of all $f \in F$ with $L_{i}f = 0$, and if $F_{i}''$ is the complement as $F = F_{i}'' \oplus F_{i0}$, then $L_{i}^{1/2}$ establishes a one-to-one correspondence between $F_{i}''$ and $F_i$ and the norm $\norm{\cdot}{i}$ in $F_i$ is given by $\norm{L_{i}^{1/2}f}{i} = \norm{f}{}$  for every $f \in  F_{i}''$.
+%
+%Conversely, to each decomposition $I= L_{1}+L_{2}$ in two positive operators there correspond classes $F_{i}$ with norms $\norm{\cdot}{i}$ defined as above. The corresponding r.k.'s $K_{i}$ are defined by $K_{i}(\mb{x}, \mb{y})=L_{i}K(\mb{x}, \mb{y})$ and satisfy the equation $K=K_{1}+K_{2}$.
+%\end{theorem}\vspace{15pt}
+
+\end{itemize}
+
+\subsection{Convergence Properties}
+\begin{itemize}
+\item 
+\begin{remark}
+Recall different convergence:
+\begin{enumerate}
+\item \begin{definition} (\emph{\textbf{Pointwise Convergence}}). \citep{kreyszig1989introductory}\\
+A sequence $(f_n)$ in a normed space $\cH$ is said to be \underline{\emph{\textbf{pointwise convergent}}} (or \emph{\textbf{convergent \underline{in pointwise topology}}}) if
+there is  an $f \in \cH$ such that for every $x \in X$
+\begin{align*}
+\lim\limits_{n\rightarrow \infty} f_n(x) = f(x).
+\end{align*}
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Strong Convergence}}). \citep{kreyszig1989introductory}\\
+A sequence $(f_n)$ in a normed space $\cH$ is said to be \underline{\emph{\textbf{strongly convergent}}} (or \emph{\textbf{convergent \underline{in the norm}}}) if
+there is  an $f \in \cH$ such that
+\begin{align*}
+\lim\limits_{n\rightarrow \infty} \norm{f_n - f}{} = 0.
+\end{align*}
+This is written $\lim\limits_{n\rightarrow \infty}f_n = f$ or simply $f_n \rightarrow f$ is called \emph{the \textbf{strong limit} of $(f_n)$}, and we say that $(f_n)$ \emph{converges \textbf{strongly} to $f$}. 
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Weak Convergence}}). \citep{kreyszig1989introductory}\\
+A sequence $(f_n)$ in a normed space $\cH$ is said to be \underline{\emph{\textbf{weakly convergent}}} if there is an $f \in \cH$ such that \emph{for \textbf{every}} $I \in \cH^{*}$,
+\begin{align*}
+\lim\limits_{n\rightarrow \infty} I(f_n) = I(f).
+\end{align*}
+This is written $f_n \stackrel{w}{\rightarrow} f$ or $f_n \rightharpoonup f$. The element $f$ is called \emph{\textbf{the weak limit} of $(f_n)$}, and we say
+that \underline{$(f_n)$ \emph{\textbf{converges weakly} to $f$.}}
+\end{definition}
+\end{enumerate}
+\end{remark}
+
+
+\item \begin{proposition} (\textbf{Convergence in Norm} leads to \textbf{Pointwise Convergence})\\
+If the class $\cH$ possesses a reproducing kernel $K(x, y)$, every sequence of functions $\set{f_{n}}$ which converges \textbf{strongly} to a function $f$ in the Hilbert space $\cH$, converges also \textbf{at every point} in the ordinary sense, i.e. 
+\begin{align*}
+\norm{f_n - f}{\cH} \rightarrow 0\; \Rightarrow \; f_{n}(x) \rightarrow f(x), \;\;\text{  for each }x \in X
+\end{align*}
+This convergence becomes \textbf{uniform} in every subset of $E$ in which $K(x, y)$ is \textbf{uniformly bounded}.
+\end{proposition}
+\begin{proof}
+This follows from 
+\begin{align}
+\abs{f(x) - f_{n}(x)} &= \abs{\inn{f - f_{n}}{K(x, \cdot) }_{\cH}}  \nonumber\\
+&\le \norm{f - f_{n}}{}\,\norm{K(x, \cdot)}{}= \norm{f - f_{n}}{}\,K(x, x)^{1/2}. \label{eqn: CS_Kernel}
+\end{align}  Thus $\norm{f - f_{n}}{} \rightarrow 0$ leads to $\abs{f(x) - f_{n}(x)} \rightarrow 0$ for every $x \in X$.
+
+
+If $\set{f_{n}}$ converges \emph{\textbf{weakly}} to $f$; i.e., $\inn{f_{n}}{K(x, \cdot) } \rightarrow \inn{f}{K(x, \cdot)} $ for every $x \in X$, we have again $f_{n}(x) \rightarrow f(x)$ for every $x$.  That is, in RKHS, 
+\begin{align*}
+\text{strong convergence }\Rightarrow \text{weak convergence }\Rightarrow \text{ pointwise convergence}
+\end{align*}
+
+there exists non-increasing nested sets $E_{1}\subset E_{2}\ldots$  in which $f_{n}$ \emph{\textbf{uniformly} converges} to $f$. Let $E = \lim\limits_{n\rightarrow \infty}E_n = \bigcup_{n}E_n$ Moreover, if $x \mapsto K(x, \cdot)$ is a transformation that is \emph{continuous} from $X$ to a subset of $\cH$, then in every \emph{\textbf{compact}} $E_{1}\subset E$, $f_{n}$ converges \emph{\textbf{uniformly}} to $f$ and it transforms to a \emph{\textbf{compact subset}} of $\cH$. 
+
+To see that, for every $\epsilon>0$, $\exists (x_{1}, \ldots, x_{n})\subset E_{1}$ such that for every $x \in E_{1}$, there exists at least one $x_{k}$ such that $\norm{K(x, \cdot) - K(x_k, \cdot)}{} \le \epsilon/4\,\norm{f}{} \le \epsilon/4\,M$ for $M = \sup_{\mb{x}\in E}\norm{f(x)}{}$. Further if we choose $n_{0}, $ so that $n>n_{0}$, $\abs{f(x_{k}) - f_{n}(x_{k})}\le \epsilon/4$,  then for the selected $x \in E_{1}$, the following holds
+\begin{align*}
+\abs{f(x) - f(x_{k})} &\le \abs{f(x_{k}) - f_{n}(x_{k})} + \abs{\inn{ f(x) - f_{n}(x) }{ K(x, y) -K(x_k, y) }}\\
+&\le \frac{\epsilon}{4} + \norm{f - f_{n}}{}\,\norm{K(x, \cdot) -K(x_k, \cdot) }{}\\
+&\le \frac{\epsilon}{4} + 2\,M\frac{\epsilon}{4M} < \epsilon.
+\end{align*}
+The \emph{continuity} of the correspondence $x \mapsto K(x, \cdot)$ is equivalent to \emph{\textbf{equicontinuity}} of all functions of $\cH$ with $\norm{f(x)}{} < M $ for any $M> 0$. \qed
+\end{proof}
+
+\item \begin{remark}
+In reproducing kernel Hilbert space,  
+\begin{align*}
+\text{strong (norm) convergence }\Rightarrow \text{weak convergence }\Rightarrow \text{ pointwise convergence}
+\end{align*}
+\end{remark}
+
+
+\end{itemize}
+
+\subsection{Construction from Hermitian Positive Definite Kernel}
+\begin{itemize}
+\item \begin{definition}
+Let $X$ be a nonempty set. A \emph{Hermitian form} $K: X\times X \to \bC$ is called a \emph{\textbf{positive-definite (p.d.) kernel}} on $X$ if
+\begin{align*}
+ \sum _{i=1}^{n}\sum _{j=1}^{n}c_{i}\bar{c}_{j}K(x_{i},x_{j})\ge 0
+\end{align*}
+holds for any $x_{1},\ldots ,x_{n} \in X$, given $n\in \mathbb {N}$, $c_{1},\ldots ,c_{n}\in \bC$.
+\end{definition}
+
+
+\item In this section, we show that a RKHS can be constructed from any positive definite kernels:
+\begin{theorem}  (\textbf{RKHS from Positive Definite Kernel})  (\textbf{Moore-Aronszajn})\\
+Suppose $K$ is a \textbf{symmetric, positive definite kernel} on a set $X$. Then there is a \textbf{unique} Hilbert space of functions on $X$ for which $K$ is a \textbf{reproducing kernel}.
+\end{theorem}
+\begin{proof}
+For all $x \in X$, define $K_x := K(x, \cdot)$. Let $\cH_0$ be the linear span of $\set{K_x : x \in X}$, that is, it is the space of functions of the form
+\begin{align*}
+\sum_{k=1}^{n}\xi_{k}K_{x_{k}}
+\end{align*} where $x_1, x_2, \ldots x_n \in X$ and $\xi_1, \xi_2, \ldots \xi_n \in \bC$. Define an inner product on $\cH_0$ by
+\begin{align*}
+\inn{\sum_{k=1}^{n}\xi_{k}K_{x_{k}}}{\sum_{j=1}^{m}\eta_{j}K_{y_{j}}}_{\cH_0} := \sum_{i=1}^{n}\sum_{j=1}^{m}K(x_{i}, y_{j})\xi_{i}\overline{\eta}_{j}.
+\end{align*} which implies $K(x, y) = \inn{K_{x}}{K_{y}}_{\cH_0}$. It is an inner product due to symmetric and positive definite property of kernel $K$.
+
+Let $\cH$ be the completion of $\cH_0$ with respect to this inner product. Then $\cH$ consists of functions of the form
+\begin{align*}
+f:= \sum_{k=1}^{\infty}\xi_{k}K_{x_{k}}
+\end{align*} where 
+\begin{align*}
+\lim\limits_{n\rightarrow \infty}\sup_{p \ge 0}\|\sum_{i=n}^{n+p}\xi_{i}K_{x_{i}}\|_{\cH_0}^2 = 0
+\end{align*}
+Now we can check the reproducing property
+\begin{align*}
+\inn{f}{K_x}_{\cH} &= \inn{\sum_{k=1}^{\infty}\xi_{k}K_{x_{k}}}{K_x}_{\cH} = \sum_{k=1}^{\infty}\xi_{k}\inn{K_{x_k}}{K_x}_{\cH} = \sum_{k=1}^{\infty}\xi_{k}K(x_k, x) = f(x)
+\end{align*}
+To prove \emph{\textbf{uniqueness}}, let $\cG$ be \emph{another Hilbert space} of functions for which $K$ is a reproducing kernel. For every $x$ and y in $X$, the reproducing property implies that
+\begin{align*}
+\langle K_{x},K_{y}\rangle _{\cH}= K(x,y) = \langle K_{x},K_{y}\rangle_{\cG}.
+\end{align*}
+By linearity,  $\langle \cdot ,\cdot \rangle _{\cH}=\langle \cdot ,\cdot \rangle _{\cG}$ on the span of $\{K_{x}: x\in X\}$. Then $\cH\subseteq \cG$ because $\cG$ is complete and contains $\cH_0$ and hence contains its completion.
+
+Now we need to prove that every element of $\cG$ is in $\cH$. Let $f$ be an element of $\cG$. Since $\cH$ is a \emph{closed subspace} of $\cG$, we can write $f=f_{\cH}+f_{\cH^{\bot }}$ where  $f_{\cH}\in \cH$ and $f_{\cH^{\bot }}\in \cH^{\bot }$. Now if $x\in X$ then, since $K$ is a reproducing kernel of $\cG$ and $\cH$:
+\begin{align*}
+f(x)=\inn{K_{x}}{f}_{\cG} &=\inn{K_{x}}{f_{\cH}}_{\cG}+\inn{K_{x}}{f_{\cH^{\bot }}}_{\cG} \\
+&=\inn{K_{x}}{f_{\cH}}_{\cG} \\
+&=\inn{K_{x}}{f_{\cH}}_{\cH} = f_{\cH}(x)
+\end{align*} where we have used the fact that $K_{x}$  belongs to $\cH$ so that its inner product with $f_{\cH^{\bot }}$ in $\cG$ is zero. This shows that $f=f_{H}$ in $\cG$.\qed
+\end{proof}
+\end{itemize}
+
+%For $f =  \sum_{k}^{m}\alpha_{k}K(\cdot, \mb{y}_{k}) \in F$, 
+%\begin{align*}
+%f(\mb{x}) &=  \sum_{k}^{m}\alpha_{k}\sum_{j}^{\cN_{E}}\lambda_{j}\psi_{j}(\mb{x})\psi_{j}(\mb{y}_{k}),
+%\end{align*}
+%so
+%\begin{align*}
+%\inn{f}{K(\cdot, \mb{y})} &= \sum_{k}^{m}\alpha_{k}\sum_{i,j}^{\cN_{E}}\lambda_{i}\psi_{i}(\mb{y}_{k})\inn{\psi_{i}}{\psi_{j}}\lambda_{j}\psi_{j}(\mb{y})\\
+%&(\inn{\psi_{i}}{\psi_{j}} = \delta_{i}(j)/\lambda_{j})\\
+%&= \sum_{k}^{m}\alpha_{k}\sum_{i}^{\cN_{E}}\lambda_{i}\psi_{i}(\mb{y}_{k})\psi_{i}(\mb{y}) = f(\mb{y}).
+%\end{align*}
+
+\subsection{Construction from Integral Kernel Operator on Compact Space}
+\begin{itemize}
+\item \begin{remark}(\emph{\textbf{Integral Operator}})\\
+Let $X$ be a \emph{\textbf{compact}} space equipped with a \emph{strictly positive \textbf{finite}} \emph{Borel measure} $\mu$ and $K: X\times X \rightarrow \bR$ a \emph{\textbf{continuous}}, \emph{\textbf{symmetric}}, and \emph{\textbf{positive definite function}}. We can define a linear operator $T_K$ on $L^2(X, \mu)$ by
+\begin{align*}
+(T_{K}f)(x) := \int_{X} K(x, y)f(y) d\mu(y),
+\end{align*} i.e. $T_K$ is a \underline{\emph{\textbf{integral kernel operator}}} on $L^2(X, \mu)$. 
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{RKHS from Integral Kernel Operator}})\\
+We see that 
+\begin{enumerate}
+\item $T_K \in \cB_2(L^2(X, \mu))$ is a \emph{Hilbert-Schmidt operator}, thus
+\item $T_K$ is a \emph{\textbf{compact operator}}.
+\item $T_K$ is a  \emph{\textbf{self-adjoint}, \textbf{positive semi-definite}} operator on $L^2(X, \mu)$ since $K$ is a symmetric and positive definite kernel.
+\item By \emph{Hilbert-Schmidt theorem}, since $T_K$ is \emph{self-adjoint and compact}, the Hilbert space $L^2(X, \mu)$ has a \emph{\textbf{complete orthonormal basis}} $\set{\varphi_n}_{n=1}^{\infty}$ where each $\varphi_n$ is the \textbf{\emph{eigenfunction}} of $T_K$ corresponding to \emph{\textbf{eigenvalue}} $\lambda_n \ge 0$ with $\lambda_n \rightarrow 0$.
+
+\item $T_K$  maps \emph{\textbf{continuously}} into the space of \emph{continuous functions} $\cC(X)$. 
+
+\item By \emph{Mercer's Theorem}, there exists an orthonormal basis $\set{\varphi_n}_{n=1}^{\infty}$ on $L^2(X, \mu)$ where each $\varphi_n$ is a \emph{\textbf{continuous}} \emph{eigenfunction} of $T_K$ corresponding to the \emph{\textbf{eigenvalue}} $\lambda_n \ge 0$ so that the kernel $K$ has an expansion
+\begin{align*}
+K(x,y) &= \sum_{n=1}^{\infty}\lambda_{n}\varphi_n(x)\overline{\varphi_n(y)}
+\end{align*} that  converges \textbf{\textit{uniformly}} on \textbf{\emph{compact}} set $X$. This above series representation is referred to as a \emph{\textbf{Mercer kernel}} or \emph{\textbf{Mercer representation}} of $K$. Thus any function $f$ in $L^2(X, \mu)$ can be represented as 
+\begin{align*}
+f(x) &= \sum_{n=1}^{\infty}\alpha_n \varphi_n(x).
+\end{align*} 
+
+\item Finally, a \emph{\textbf{reproducing kernel Hilbert space}} $\cH \subseteq L^2(X, \mu)$ based on spectral decomposition of $T_K$ is given by 
+\begin{align*}
+\cH &= \set{f \in L^2(X, \mu): \sum_{n=1}^{\infty}\frac{\abs{\inn{f}{\varphi_n}_{L^2}}^2}{\lambda_n} < \infty }
+\end{align*} where the inner product of $\cH$ given by
+\begin{align*}
+\inn{f}{g}_{\cH} &= \sum_{n=1}^{\infty}\frac{\inn{f}{\varphi_n}_{L^2}\, \inn{g}{\varphi_n}_{L^2}}{\lambda_n}.
+\end{align*} The kernel $K$ is the reproducing kernel of $\cH$.
+\end{enumerate}
+\end{remark}
+\end{itemize}
+
+%\item \begin{remark}
+%The reproducing property in \eqref{expr: reprod_property} is equivalent to the assumption that there exists a \emph{\textbf{self-adjoint}, \textbf{positive semi-definite}} operator $K: \cH \rightarrow \cH$, which induces a inner product in $\cH$ as 
+%\begin{align*}
+%\inn{f}{g}_{F} &\equiv \inn{K^{-1}f}{g}_{\mb{x}} , \forall f,g\in \cH
+%\end{align*} 
+%where $K^{-1}$ is inverse to the linear operator $K: \cH \rightarrow \cH$ given by
+%\begin{align*}
+%(Kf)(z) &= \int_{E}K(x, z)f(x) d\mu(x). 
+%\end{align*}
+%and $(K^{-1}K(x, \cdot))(z) = \delta_{x}(z)$.
+%And
+%\begin{align*}
+%\int\int K(x, z)f(x)\overline{f}(z)d\mu(x)d\mu(z)\ge 0. 
+%\end{align*} for all $f\in L^{2}(X)$. See \citep{ramm1998theory}\\
+%
+%\end{remark}
+
+
+%\subsection{Spectrum}
+%\begin{itemize}
+%
+%
+%
+%\item If $F$ possesses a r.k. $K$ and if $\set{g_{n}}$ is an orthonormal system in $F$, then for every sequence $\set{\alpha_{n}}$ of numbers satisfying
+%\begin{align*}
+%\sum_{n}^{\infty}\abs{\alpha_{n}}^{2} < \infty,
+%\end{align*} we have 
+%\begin{align*}
+%\sum_{n}^{\infty}\abs{\alpha_{n}}\abs{g_{n}(\mb{x})} &\le K(\mb{x}, \mb{x})^{1/2}\paren{\sum_{n}^{\infty}\abs{\alpha_{n}}^{2} }^{1/2}.
+%\end{align*}
+%
+%To see this, we can find the Fourier coefficients for $K(\mb{x}, \mb{y})$ in $\set{g_{n}(\mb{x})}$ as
+%\begin{align*}
+%\inn{K(\cdot, \mb{y})}{g_{n}} &= \overline{\inn{g_{n}}{K(\cdot, \mb{y})}} = \overline{g_{n}(\mb{y})}.
+%\end{align*}
+%Consequently, 
+%\begin{align*}
+%\sum_{n}^{\infty}\abs{g_{n}(\mb{y})}^{2} &\le \inn{K(\cdot, \mb{y})}{K(\cdot, \mb{y})} = K(\mb{y}, \mb{y}). 
+%\end{align*}
+%Therefore
+%\begin{align*}
+%\sum_{n}^{\infty}\abs{\alpha_{n}}\abs{g_{n}(\mb{x})} &\le \paren{\sum_{n}^{\infty}\abs{g_{n}(\mb{x})}^{2}}^{1/2} \paren{\sum_{n}^{\infty}\abs{\alpha_{n}}^{2} }^{1/2}\\
+%&\le  K(\mb{x}, \mb{x})^{1/2}\paren{\sum_{n}^{\infty}\abs{\alpha_{n}}^{2} }^{1/2}.
+%\end{align*}
+%
+%%\item Each kernel $K$ is associated with a linear operator from $F$ to $F$, denoted also as $K: F\rightarrow F$, given by
+%%\begin{align}
+%%(Kf)(\cdot) &= \int_{E}K(\mb{x}, \cdot)f(\mb{x})d\mb{x} \equiv \inn{f}{K(, \cdot )}_{\mb{x}} \label{expr: Kernel_opt}.
+%%\end{align} 
+%%$K$ is injective by definition of r.k..\\
+%
+%
+%
+%\end{itemize}
+
+
+
+
+
+
+%\item 
+%
+%Note that the RHS of reproducing formula has two interpretations: it is the inner product in $\bC$ with $f(\mb{x})\in \bC, K(\mb{x}, \mb{y})\in \bC$ given $\mb{x},\mb{y}$; or, it is inner product of functions $f$ and $K(\cdot, \mb{y})$ in function space $F$, as a function of $\mb{x}$ \citep{hofmann2008kernel}. The last equality emphasize that $f(\mb{y})$ given $\mb{y}$ is views as a functional (operator) on $f\in F$ via kernel $K$. 
+%
+%If a real class $F$ possesses a r.k. $K(\mb{x}, \mb{y})$ then it is immediately verified that the corresponding complex space $F_{c}$, possesses the same kernel (which is real valued). Both the \emph{completion} of $F$ and $F_{c}$ that possess a r.k. $K$ is referred as a \emph{\textbf{Reproducing Kernel Hilbert Space (RKHS)}.} \\[10pt]
+\subsection{Construction from Feature Map}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Feature Map}}) \citep{scholkopf2001learning}\\
+A \underline{\emph{\textbf{feature map}}} is a map $\Phi: X\rightarrow \cF$, where $\cF$ is a \emph{Hilbert space} such that the image of $X$ under $\Phi$, $\cH := \Phi(X) \subseteq \cF$ is a \emph{\textbf{reproducing kernel Hilbert space}} with kernel function 
+\begin{align*}
+K(x,y) := \inn{\Phi(x)}{\Phi(y)}_{\cF}.
+\end{align*}
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Feature Map via Kernel Function}})\\
+We can think of $\Phi$ as a vector-valued function with possibly \emph{infinite-dimensional} output. Moreover, given kernel function $K$, let $K_x:= K(x, \cdot) \in \cH$, we can define the feature map as 
+\begin{align*}
+\Phi: x \rightarrow K_x = K(x, \cdot)
+\end{align*}
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Feature Map via Eigenfunction of Integral Operator}})  \citep{scholkopf2001learning, rasmussen2006gaussian}  \\
+Any \emph{symmetric positive definite kernel} $K$ induces a \emph{\textbf{integral kernel operator}} $T_K$ that is \emph{self-adjoint} and \emph{compact}. $T_K$ has discrete real spectrum $\sigma(T_K) \subset \bR$ with eigenfunctions $\set{\varphi_n}$ that spans the entire space $\cF$. 
+
+ Use the \emph{Mercer's theorem}. Given the kernel function $K: X \times X \rightarrow \bC$, the \emph{eigenfunction} $\varphi_n: X\rightarrow \bC$ associated with the \emph{eigenvalue} $\lambda_n \ge 0$ is defined by the integral equation
+\begin{align*}
+\lambda_n \varphi_n(x) &= \int_{X}K(x, y) \varphi_n(y) d\mu(y).\\
+\text{ where } K(x,y) &= \sum_{n=1}^{\infty}\lambda_{n}\varphi_n(x)\overline{\varphi_n(y)}
+\end{align*}
+And we can define the feature map $\Phi$ via
+\begin{align*}
+\Phi: x \mapsto \paren{\sqrt{\lambda_{n}}\varphi_{n}(x)}_{n=1}^{\infty}.
+\end{align*} Note that the output dimension of $\Phi$ is determined by the Mercer representation of $K$. It can be finite dimensional if the kernel $K$ is simple. In this way, we have 
+\begin{align*}
+K(x,y) := \inn{\Phi(x)}{\Phi(y)}_{\cF}.
+\end{align*}
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Equivalence of Two Representations}})\\
+The kernel map and the Mercer's feature map are equivalent in that there exists an \emph{\textbf{isometric isomorphism}} between them so that the inner product is preserved. In specific, $\Phi: x \mapsto K(x, \cdot)$ maps a feature to a function in $\cF$ and the Mercer's kernel  $\Phi: X \mapsto (\sqrt{\lambda_{n}}\varphi_{n}(x))_{j=1}^{\infty}$ maps a feature vector to a \emph{\textbf{vector representation}} of $K(x, \cdot)$ under a set of orthonormal basis $\set{\sqrt{\lambda_{n}}\varphi_{n}(\cdot)}_{n=1}^{\infty} \subset \cF$.
+ 
+Note, however, $\set{K(x, \cdot)}_{n\in S}$ for a set of features $\set{x_{n}}_{n\in S}$ are not orthonormal. $\set{K(x, \cdot)}_{n\in S}  \not\subset \set{\sqrt{\lambda_{n}}\varphi_{n}(\cdot)}_{n=1}^{\infty} $.
+\end{remark}
+
+%Denote $\bR^{E} = \set{f: E \rightarrow \bR}$ and a \emph{feature map} $\Phi: E \rightarrow F\subset \bR^{E}$ is defined as 
+%\begin{align}
+%\Phi: \; \mb{y} \mapsto K(\cdot, \mb{y}) \in F\subset \bR^{E}, \; \forall \mb{y}\in E. \label{expr: feature_map_Kernel}
+%\end{align} See that
+%$\Phi(\mb{y})(\mb{x}) = K(\mb{x}, \mb{y})$ and $\Phi$ is a mapping from a point $\mb{y}$ to a function $K(\cdot, \mb{y})$.
+\end{itemize}
+
+
+\newpage
+\section{Equivalent Definition of Reproducing Kernel Hilbert Space}
+We summarize four different ways to construct a reproducing kernel Hilbert space (RKHS):
+\begin{enumerate}
+\item (\emph{\textbf{Bounded Evaluation Functional}})\\ A RKHS $\cH$ is a \emph{Hilbert space} of functions on $X$ such that \emph{\textbf{the evalution functional}} $\delta_x \in \cH^{*}$ is \emph{\textbf{bounded linear functional}} for all $x \in X$. 
+\begin{itemize}
+\item This implies that
+ \begin{align*}
+f(x) := \delta_x(f)  &= \inn{f}{K_x}
+\end{align*} for some unique $K_x \in \cH$ for each $x \in X$;
+\item Define \emph{the reproducing kernel} as function $K: X \times X \rightarrow \bC$ such that
+\begin{align*}
+K(x, y) &= \inn{K_x}{K_y} = K_x(y).
+\end{align*} Thus $K(x, y)$ satisfies the reproducing property:
+\begin{align*}
+f(x) &= \inn{f}{K(x, \cdot)}
+\end{align*}
+\end{itemize}
+
+\item  (\emph{\textbf{Hermitian Positive Definite Kernel}})\\ 
+Given a \emph{\textbf{Hermitian positive definite kernel}}, $K: X \times X \rightarrow \bC$, there exists a \emph{\textbf{unique RKHS}} $\cH$ that admits $K$ as its \emph{reproducing kernel}.
+\begin{itemize}
+\item From the subspace $\cH_0 = \text{span}\set{K_x: x\in X}$ where $K_x:= K(x, \cdot)$:
+\begin{align*}
+f \in \cH_0 \Rightarrow f = \sum_{k=1}^{n}\xi_{k}K_{x_{k}}, \;\; \exists n\in \bN, \set{x_i}_{i=1}^{n} \subset X, \; \set{\xi_i} \subset \bC
+\end{align*}
+\item Define the inner product on $\cH_0$ as 
+\begin{align*}
+\inn{\sum_{k=1}^{n}\xi_{k}K_{x_{k}}}{\sum_{j=1}^{m}\eta_{j}K_{y_{j}}}_{\cH_0} := \sum_{i=1}^{n}\sum_{j=1}^{m}K(x_{i}, y_{j})\xi_{i}\overline{\eta}_{j}.
+\end{align*} Due to Hermitian and positive definite property of $K$, the inner product above is well-defined.
+\item $K(x, y) = \inn{K_x}{K_y}_{\cH_0}$ by definition. The reproducing property holds as well.
+\item Construct the RKHS $\cH$ by the \emph{\textbf{completion}} of $\cH_0$.
+\end{itemize}
+
+
+\item (\emph{\textbf{Integral Kernel Operator}})\\
+Consider a measure space $(X, \mu)$ where  $X$ is  a \emph{\textbf{compact}} space and $\mu$ is a \emph{Borel measure}. Given $K: X \times X \rightarrow \bC$ as a \emph{\textbf{continuous Hermitian positive definite kernel}} on $X$, we can define a \emph{\textbf{integral kernel operator}} $T_K$ on $L^2(X, \mu)$ by
+\begin{align*}
+(T_{K}f)(x) := \int_{X} K(x, y)f(y) d\mu(y).
+\end{align*}
+\begin{itemize}
+\item $T_K$ is a \emph{\textbf{self-adjoint, positive}} and \emph{\textbf{compact operator}} on \emph{separable Hilbert space}.
+\item The \emph{\textbf{spectrum}} of $T_K$ is \emph{\textbf{discrete}} and is of \emph{\textbf{real nonnegative value $\lambda_n \ge 0$}} such that  $\lambda_n \rightarrow 0$.
+\item There exists a \emph{\textbf{complete orthonormal basis}} in $L^2(X, \mu)$ that are \emph{\textbf{eigenfunctions}} $\set{\varphi_n(x)}$ of $T_K$.
+\item There exists a \emph{\textbf{orthonormal basis}} formed by continuous eigenfunctions $\set{\varphi_n(x)}$ and their eigenvalues $\set{\lambda_n}$ so that the expansion  
+\begin{align*}
+K(x,y) = \sum_{n=1}^{\infty}\lambda_{n}\varphi_n(x)\overline{\varphi_n(y)}
+\end{align*} converges \emph{uniformly} on compact set $X$. 
+\item The RKHS $\cH \subseteq L^2(X, \mu)$ based on spectral decomposition of $T_K$ is given by 
+\begin{align*}
+\cH &= \set{f \in L^2(X, \mu): \sum_{n=1}^{\infty}\frac{\abs{\inn{f}{\varphi_n}_{L^2}}^2}{\lambda_n} < \infty }
+\end{align*} where the inner product of $\cH$ given by
+\begin{align*}
+\inn{f}{g}_{\cH} &= \sum_{n=1}^{\infty}\frac{\inn{f}{\varphi_n}_{L^2}\, \inn{g}{\varphi_n}_{L^2}}{\lambda_n}.
+\end{align*} The kernel $K$ is the reproducing kernel of $\cH$.
+\end{itemize}
+
+
+\item (\emph{\textbf{Feature Map}})\\
+Define \emph{\textbf{feature map}} $\Phi: X \rightarrow \cF$ from $X$ to a Hilbert space $\cF$ so that $\cH := \Phi(X)$ is a RKHS with the reproducing kernel
+\begin{align*}
+K(x, y) := \inn{\Phi(x)}{\Phi(y)}_{\cF}, \quad \forall x,y\in X
+\end{align*} 
+\begin{itemize}
+\item We can define 
+\begin{align*}
+\Phi: x \rightarrow K_x = K(x, \cdot)
+\end{align*}
+
+\item We can also define
+\begin{align*}
+\Phi: x \mapsto \paren{\sqrt{\lambda_{n}}\varphi_{n}(x)}_{n=1}^{\infty}
+\end{align*} where the eigenfunctions $\set{\varphi_n(x)}$ and their eigenvalues $\set{\lambda_n}$ form expansion of kernel $K$
+\begin{align*}
+K(x,y) = \sum_{n=1}^{\infty}\lambda_{n}\varphi_n(x)\overline{\varphi_n(y)}
+\end{align*}
+
+\item These two definitions are equivalent based on Mercer's theorem.
+\end{itemize}
+
+\end{enumerate}
+\section{Reproducing Kernel Hilbert Space in Machine Learning}
+\subsection{Empirical Feature Map}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Empirical Feature Map}}) \citep{scholkopf2001learning} \\
+Given a set of samples $S:= (z_{1},\ldots, z_{m}) \subset X$, the \underline{\emph{\textbf{empirical feature map}}} $\Phi_{m}: X  \rightarrow \bR^{m}$ is the empirical estimate of the feature map $\Phi: x \mapsto K(x, \cdot)\in \cH$ under $S$.  That is 
+\begin{align*}
+\Phi_{m}: x \mapsto \rlat{K( x, \cdot)}{(z_{1},\ldots, z_{m})} \equiv (K(x, z_{n}) )_{n=1}^{m}.
+\end{align*}
+\end{definition}
+
+\item \begin{remark} 
+Note that the image of empirical feature map $\Phi_{m}(X) \subset \bR^{m}$ does \emph{not necessarily} form a \emph{closed linear subspace}. Also the inner product defined in the linear span of $\set{\Phi_{m}(\mb{z}_{i}), 1\le i \le m}$ is \emph{\textbf{not canonical}}, since $ \Phi_{m}(\mb{x}_{i})$ are \emph{\textbf{not orthogonal}} in $\bR^{m}$ in general. 
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Induced Inner Product on $\bR^{m}$} from \textbf{Empirical Feature Map}})\\
+The empirical feature map that is associated with kernel $K$ should be defined by inducing an \emph{\textbf{inner product}} of $\bR^{m}$ into $\Phi_{m}(X)$ as
+\begin{align*}
+\inn{\Phi_{m}(x)}{\Phi_{m}(y)}_{m} &= K(x, y),
+\end{align*} 
+where $\inn{\cdot}{\cdot}_{m}\equiv \inn{M\,\cdot}{\cdot}_{\bR^{m}}$ for \emph{\textbf{positive definite matrix}} $M$. Enforcing $x, y \in S:= (z_{1},\ldots,z_{m})$ be in training set, we can obtain the equation
+\begin{align*}
+\mb{K} &= \mb{K\,M\,K},\\
+\Rightarrow \mb{M} &= \mb{K}^{\dagger} = \mb{K}^{-1}.
+\end{align*} where $\mb{K} = [K(z_i, z_j)]_{i,j=1}^{m} \in \bR^{m \times m}$ is \emph{\textbf{the matrix representation}} of $T_K$ in $\bR^{m}$.
+\end{remark}
+
+\item 
+\begin{remark} (\emph{\textbf{Explict Form of Empirical Feature Map}}) \citep{scholkopf2001learning}\\
+Therefore, we could define \underline{\emph{\textbf{empirical feature map} that is \textbf{associated with kernel} $K$}} as
+\begin{align*}
+\Phi_{m}: x  \mapsto \mb{K}^{-\frac{1}{2}}(K(x, z_{n}) )_{n=1}^{m}.
+\end{align*} The above is equivalent to the \emph{\textbf{Kernel PCA whitening}}.
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Empirical Feature Map as Finite Dimensional Approximation}})\\
+This $\Phi_{m}$ maps $X$ to a \emph{\textbf{$m$-dimensional space}} $\bR^{m}$ as opposed to the original $\Phi$ that maps to $\cH$, \emph{a \textbf{Hilbert space of functions}} with \emph{high or infinite dimensionality}. Moreover, the induced inner product on $\bR^{m}$ has representation
+\begin{align*}
+\inn{\Phi_{m}(x)}{\Phi_{m}(y)}_{m}\equiv \mb{k}_{x}^{T}\mb{K}^{-1}\mb{k}_{y}
+\end{align*}
+where $\mb{K} = [K(z_{i}, z_{j})]_{i,j}^{m}$, and $\mb{k}_{x}= ((K( x, z_{i}) )_{i=1}^{m})^{T}$.
+\end{remark}
+
+\end{itemize}
+
+\subsection{Representer Theorem}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Loss Function}})\\
+Denote by $(x, y, f(x)) \in \cX \times \cY \times \cY$ the triplet consisting of a \emph{\textbf{pattern}} $x$, an \emph{\textbf{observation}} $y$ and a \emph{\textbf{prediction}} $f(x)$. Then the map
+\begin{align*}
+c : \cX \times \cY \times \cY \rightarrow [0, \infty)
+\end{align*}
+with the property $c(x, y, y) = 0$ for all $x \in \cX$ and $y \in \cY$ will be called \underline{\emph{\textbf{a loss function}}}.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Expected Risk}}) \\
+Let $((\cX, \cY), \srF, \cP)$ be a probability space on domain $(\cX, \cY)$ and $f: \cX \rightarrow \cY$ be a measurable function on $\cX$.  \underline{\emph{\textbf{The expected risk}}} of $f$ \emph{with respect to $\cP$ and $c$} is defined as 
+\begin{align*}
+\cR(f) &= \E{\cP}{c(x, y, f(x))} = \int_{\cX \times \cY} c(x, y, f(x)) \; d\cP(x, y)
+\end{align*}
+\end{definition} 
+
+
+\item \begin{definition} (\emph{\textbf{Empirical Risk}}) \\
+Since $\cP$ is unknown, given a set of samples $\cD := \{(x_n, y_n) \}_{n=1}^{m} \subset \cX \times \cY$, we replace $\cP$ by \emph{\textbf{the empirical probability measure}}
+\begin{align*}
+\widehat{\cP}_{m} &=\frac{1}{m} \sum_{n=1}^{m}\delta_{(x_n, y_n)}.
+\end{align*} Then we define \underline{\emph{\textbf{the empirical risk}}} of $f$ \emph{with respect to $\widehat{\cP}_{m}$ and $c$}  as 
+\begin{align*}
+\cR_{emp}(f) &= \E{\widehat{\cP}_{m}}{c(x, y, f(x))} =\frac{1}{m} \sum_{n=1}^{m}c(x_n, y_n, f(x_n)) 
+\end{align*}
+\end{definition}
+
+\item \begin{remark}
+We assume the \emph{empirical risk functional} $\cR_{emp}(f) $ is \emph{\textbf{continuous}} with respect to $f$.
+\end{remark}
+
+
+\item \begin{remark} (\emph{\textbf{Regularization}})\\
+The key idea in \emph{\textbf{regularization}} is to restrict \emph{the class of possible minimizers} $\cF$ (with $f\in \cF$) of \emph{the empirical risk functional} $\cR_{emp}(f) $ such that $\cF$ becomes a \emph{\textbf{compact set}}.
+
+\emph{We do not directly specify a compact set $\cF$}, since this leads to a \emph{constrained optimization problem}, which can be cumbersome in practice. Instead, we add a \emph{\textbf{stabilization (regularization) term}} $\Omega(f)$ to the original objective function; the latter could be $\cR_{emp}(f)$, for instance. This, too, leads to \emph{\textbf{better conditioning}} of the problem. We consider \emph{the following class of \underline{\textbf{regularized risk functionals}}}:
+\begin{align*}
+\cR_{reg}(f)  := \cR_{emp}(f) + \lambda \Omega(f)
+\end{align*}
+Here $\lambda > 0$ is the so-called \emph{\textbf{regularization parameter}} which specifies the \emph{\textbf{tradeoff}} between minimization of $\cR_{emp}(f)$ and \emph{the \textbf{smoothness} or \textbf{simplicity}} which is enforced by small $\Omega(f)$. Usually one chooses $\Omega(f)$ to be \emph{\textbf{convex}}, since this ensures that there exists \emph{only one global minimum}, provided $\cR_{emp}(f)$ is also \emph{convex}
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{Regularized Risk in Reproducing Kernel Hilbert Space}})\\
+Suppose that $f \in \cH$ where $\cH$ is a \emph{\textbf{reproducing kernel Hilbert space}} on $X$. $\cR_{emp}(f)$ is \emph{the empirical risk functional}. The \underline{\textbf{\emph{regularized risk functionals}}} on $\cH$ is defined as
+\begin{align*}
+\cR_{reg}(f)  := \cR_{emp}(f) + \frac{\lambda}{2} \norm{f}{\cH}^2
+\end{align*}
+\end{definition}
+
+\item \begin{lemma}(\textbf{Operator Inversion Lemma}) \citep{scholkopf2001learning}\\
+ Let $X$ be a \textbf{compact} set and let the map $f : X \rightarrow Y$ be \textbf{continuous}. Then there exists an \textbf{inverse} map $f^{-1}: f(X) \rightarrow X$
+that is also \textbf{continuous}.
+\end{lemma}
+
+\item \begin{theorem} (\textbf{Representer Theorem}) \citep{scholkopf2001learning}\\
+Let $\cX$ be a set, and $c: (\cX \times \bR \times \bR)^m \to \bR \cup \set{\infty}$ be an arbitrary loss function, $\cH$ be the reproducing kernel Hilbert space associated with kernel $K$ on $X$. Denote $\Omega: [0, \infty) \rightarrow \bR$ as a \textbf{strictly} \textbf{monotonic increasing} function. Then each minimizer $f \in \cH$ of the regularized risk
+\begin{align}
+c\paren{(x_1, y_1, f(x_1)) \xdotx{,}  (x_m, y_m, f(x_m))}+  \Omega\paren{\norm{f}{\cH}} \label{eqn: representer_theorem_risk_functional}
+\end{align}
+admits a \textbf{representation} of the form
+\begin{align*}
+f(x) &= \sum_{n=1}^{m}\alpha_n K(x_n, x).
+\end{align*}
+\end{theorem}
+\begin{proof}
+For convenience we will assume that we are dealing with $\bar{\Omega}(\norm{f}{\cH}^2) := \Omega(\norm{f}{\cH})$ rather than $\Omega(\norm{f}{\cH})$. This is no restriction at all, since \emph{the quadratic function is strictly monotonic} on $[0, \infty)$, and therefore $\bar{\Omega}$ is strictly monotonic on $[0, \infty)$ if
+and only if $\Omega$ also satisfies this requirement.
+
+We may decompose any $f\in \cH$ into a part contained $\cH_0 = \text{span}\set{K(x_i, \cdot), i=1,\ldots, m}$ and one in the \emph{\textbf{orthogonal complement}} $\cH_0^{\bot}$;
+\begin{align*}
+f(x) &= f_{\cH_0}(x) + f_{\cH_0^{\bot}}(x) = \sum_{n=1}^{m}\alpha_n K(x_n, x) + f_{\cH_0^{\bot}}(x)  
+\end{align*}
+Here $\alpha_n \in \bR$ and $f_{\cH_0^{\bot}} \in \cH$ with $\langle f_{\cH_0^{\bot}}, K(x_n, \cdot)\rangle_{\cH} = 0$ for all $n \in [m] := \set{1 \xdotx{,} m}$. By reproducing property of $K$ we may write $f(x_i)$ (for all $i \in  [m]$) as
+\begin{align*}
+f(x_i) &= \inn{f}{K(x_i, \cdot)}_{\cH}\\
+&=\sum_{n=1}^{m}\alpha_n K(x_n, x_i) + \langle f_{\cH_0^{\bot}}, K(x_i, \cdot)\rangle_{\cH} \\
+&=\sum_{n=1}^{m}\alpha_n K(x_n, x_i) 
+\end{align*}
+Second, for all $f_{\cH_0^{\bot}}$, by \emph{Pythagorean theorem} and the \emph{monotonicity} of $\Omega$, 
+\begin{align*}
+ \Omega(\norm{f}{\cH}) := \bar{\Omega}\paren{ \norm{\sum_{n=1}^{m}\alpha_n K(x_n, \cdot)}{\cH}^2 + \norm{f_{\cH_0^{\bot}}}{\cH}^2} \ge \bar{\Omega}\paren{ \norm{\sum_{n=1}^{m}\alpha_n K(x_n, \cdot)}{\cH}^2}
+\end{align*}
+Thus for any fixed $\alpha_n \in \bR$ the risk functional \eqref{eqn: representer_theorem_risk_functional} is minimized for $f_{\cH_0^{\bot}} = 0$. Since
+this also has to hold for the solution, the theorem holds. \qed
+\end{proof}
+
+\item \begin{remark} (\emph{\textbf{Monotonicity of Regularizer Functional $\Omega(\cdot)$ is Required}})\\
+\emph{\textbf{Monotonicity}} of $\Omega$ is \emph{\textbf{necessary}} to ensure that the theorem holds. It does not prevent the \emph{\textbf{regularized risk functional}} from having \emph{\textbf{multiple local minima}}. To ensure a single minimum, we would need to require \emph{\textbf{convexity}}. If we discard the \emph{\textbf{strictness of the monotonicity}}, then it no longer follows that \emph{each minimizer of the regularized risk admits an expansion}; it still follows, however, that \emph{there is always another solution that is \textbf{as good}}, and that does \emph{admit the expansion}.
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Function Space Minimizer Lies in Finite Dimensional Subspace}})\\
+The \emph{\textbf{significance}} of \emph{the Representer Theorem} is that although we might be trying to solve \emph{an \textbf{optimization problem in an infinite-dimensional space $\cH$}}, containing \emph{linear combinations of kernels} \emph{centered} on \emph{\textbf{arbitrary}} points of $X$, it states that the solution lies \emph{\textbf{in the span of $m$ particular kernels}} --  \emph{those centered on the training points}.
+
+In the \emph{Support Vector} community,
+\begin{align*}
+f(x) &= \sum_{n=1}^{m}\alpha_n K(x_n, x)
+\end{align*}  is called \emph{\textbf{the Support Vector expansion}}. For suitable choices of loss functions, it has empirically been found that many of the $\alpha_n$ often equal $0$.
+\end{remark}
+\end{itemize}
+
+
+
+\section{Example and Computation}
+\begin{itemize}
+\item $K$ as an operator is self-adjoint, i.e. 
+\begin{align*}
+\inn{f}{Kg} &= \inn{Kf}{g}.
+\end{align*}
+
+
+\item The inner product in Reproducing Kernel Hilbert Space (RKHS) $\cH$ is given by  \citep{ramm1998theory}:
+\begin{align}
+\inn{f}{g}_{\cH} &\equiv \inn{K^{-1}f}{g}_{\mb{x}} \label{expr: RKHS_inn}
+\end{align} 
+where $K^{-1}$ is inverse to the linear operator $K: \cH \rightarrow \cH$ given by
+\begin{align*}
+(Kf)(\mb{z}) &= \int_{E}K(\mb{z},\mb{x})f(\mb{x}) d\mb{x}. 
+\end{align*}
+Note that the reproducing property holds
+\begin{align*}
+\inn{f}{K(\cdot, \mb{y})}_{\cH} &=\inn{K^{-1}f}{K(\cdot, \mb{y})}_{\mb{x}}=  \inn{f}{K^{-1}K(\cdot, \mb{y})}_{\mb{x}} = \inn{f}{\delta_{\mb{y}}}_{\mb{x}}\\
+&= f(\mb{y}).
+\end{align*}
+
+\item The \emph{Gaussian kernel} 
+\begin{align}
+K(\mb{x}, \mb{x}') &= \exp\paren{-\frac{\norm{\mb{x} - \mb{x}'}{2}^{2}}{2\lambda}}, \lambda>0 \label{eqn: Gaussian_Kernel}
+\end{align}
+
+The  Gaussian kernel has universally bounded norm $\abs{K(\mb{x} , \mb{x} )}^{1/2}= \norm{\Phi(\mb{x})}{} = 1$. Moreover, $K(\mb{x}, \mb{x}')>0$ for $\mb{x} \neq \mb{x}'$; i.e., all points lies in the same orthant 
+\begin{align*}
+\cos(\angle \mb{x}, \mb{x}') = \inn{\Phi(\mb{x})}{\Phi(\mb{x}')} = K(\mb{x}, \mb{x}')>0.
+\end{align*} This indicates that in the Gaussian case, the mapped data lie in a fairly restricted area of feature space. \emph{However}, in another sense, they occupy a space which is as large as possible: given distinct points $(\mb{x}_{1}, \ldots, \mb{x}_{m})\subset E$, $\set{\Phi(\mb{x}_{1}),\ldots, \Phi(\mb{x}_{m}) }$ are linearly independent and $[K_{i,j}] = [K(\mb{x}_{i},  \mb{x}_{j})]$ has full rank. 
+ 
+$\set{\Phi(\mb{x}_{1}),\ldots, \Phi(\mb{x}_{m}) }$ span an $m$-dimensional subspace of $F$. Therefore a Gaussian kernel defined on a domain of infinite cardinality, with no a priori restriction on the number of training examples, produces a feature space of \emph{infinite}-dimension. 
+
+The eigenfunction of Gaussian kernel can be found using Fourier transformation; i.e., $K(\mb{x}, \mb{x}') = f(\norm{\mb{x}-\mb{x}'}{}) \equiv G(\mb{x}-\mb{x}')$
+\begin{align*}
+\lambda\psi(\mb{x}) &= \int G(\mb{x} - \mb{x}')\psi(\mb{x}') d\mu(\mb{x}') = G \otimes \psi\\
+\Rightarrow \lambda\cF\set{\psi}(\mb{s}) &= \cF\set{G}\,\cF\set{\psi} = G(\mb{s})\,\cF\set{\psi}(\mb{s})\\
+\psi&\in \cF^{-1}\set{ N\paren{\lambda I - G(\mb{s})}  }, \\
+&\text{ where } N\paren{\lambda I - G(\mb{s})} = \set{F(\mb{s}): \paren{\lambda I - G(\mb{s})}F(\mb{s}) = 0}
+\end{align*}
+Note that $\cF\set{G}$ of Gaussian is also Gaussian which is rescaled in mass and variance from the original one by some constants. Since the spheres centered at $0$ are the sets on which the multiplier equality $\lambda=G(\mb{s})$ can hold, $\psi \equiv 0$ for $\mb{s}\in $ the complementary of a sphere centered at $0$.
+
+Thus, the eigenfunctions will be inverse Fourier transforms of \emph{tempered distributions} \citep{grafakos2008classical} supported in spheres centered at the origin. There are a lot of them, for example, the most familiar ones are the \emph{Bessel functions}, which correspond to uniform surface measure on a nondegenerate sphere.
+ 
+ 
+ 
+
+\item The \emph{homogeneous polynomial kernel }
+ \begin{align}
+K(\mb{x}, \mb{x}') &= \inn{\mb{x}}{\mb{x}'}^{d}, d>0 \label{eqn: PolyHom_Kernel}
+\end{align} and \emph{inhomogeneous polynomial kernel} 
+ \begin{align}
+K(\mb{x}, \mb{x}') &= \paren{\inn{\mb{x}}{\mb{x}'}+c}^{d}, d>0 \label{eqn: PolyInhom_Kernel}
+\end{align}
+
+
+\item The \emph{$B_{n}$-spline kernel}
+\begin{align}
+K(\mb{x}, \mb{x}') &= B_{2p+1}\paren{\norm{\mb{x}-\mb{x}'}{}}, p>0 \label{eqn: Bspline_Kernel}
+\end{align}  where $B_{n} = \otimes_{i=1}^{n}I[-\frac{1}{2}, \frac{1}{2}]$ and $f\otimes g = \int f(t)g(\tau- t)dt$.\\
+
+\item All the kernel above (w/o inhomogeneous one) is invariant  under the unitary transformation $\mb{U}$, i.e. 
+\begin{align*}
+K(\mb{Ux}, \mb{Ux}') &= \inn{\Phi(\mb{Ux})}{\Phi(\mb{Ux}')} \\
+&= \inn{\Phi(\mb{x})}{\Phi(\mb{x}')} = K(\mb{x}, \mb{x}') 
+\end{align*}\vspace{5pt}
+
+
+\item The \emph{Radial basis function} (\textit{RBF}) kernels are kernels that can be written in the form
+\begin{align}
+K(\mb{x}, \mb{x}') &= f\paren{d(\mb{x}, \mb{x}')} \label{eqn: RBF_Kernel}
+\end{align} for $d(\mb{x}, \mb{x}')$ is the metric on $E$.
+
+The RBF kernels are \emph{unitary invariant}, too. In addition, they are \emph{translation invariant}.
+
+By Bochner's theorem, if a kernel $K$ can be written in terms of $\norm{x - y}{}$, i.e. $K(x, y) = f(\norm{x -y}{})$ for some f, then $K$ is a kernel iff the Fourier transform of $f$ is non-negative.
+\begin{align*}
+K(\mb{x}, \mb{x}') &= \int_{\bR^{D}}S(\mb{s})\exp\paren{-i\,\mb{s}^{T}(\mb{x}-\mb{x}') }d\mb{s}
+\end{align*}
+
+In terms of this, for RBF kernel, the eigenfunctions can be obtained by Fourier analysis; in particular, it could be Bessel functions etc.
+
+The RBF kernel is sometimes called a convolutional kernel, with the feature map
+\begin{align*}
+&\Phi_{\mb{u}}: E\mapsto L^{2}\\ 
+&\mb{x} \mapsto \frac{1}{(2\pi)^{n/2}}\cF^{-1}(\sqrt{S})(\mb{x}-\mb{u})
+\end{align*}
+So that 
+\begin{align*}
+K(\mb{x}, \mb{x}') &= \int_{\bR^{D}}\Phi_{\mb{u}}(\mb{x})\Phi_{\mb{u}}(\mb{x}')d\mb{u}
+\end{align*}
+For example, for Gaussian kernel
+\begin{align*}
+\exp\paren{- \frac{\norm{\mb{x}-\mb{x}'}{}^{2}}{\sigma^{2}}} &= \paren{\frac{4}{\sigma^{2}\pi}}^{n/2}\int_{\bR^{D}}
+ \exp\paren{- \frac{2\norm{\mb{x}-\mb{u}}{}^{2}}{\sigma^{2}}}\exp\paren{- \frac{2\norm{\mb{x}'-\mb{u}}{}^{2}}{\sigma^{2}}}d\mb{u}
+\end{align*}
+with the convolutional  feature map
+\begin{align*}
+\Phi_{\mb{u}}(\mb{x}) &= \paren{\frac{2}{\sigma\sqrt{\pi}}}^{n/2}\exp\paren{- \frac{2\norm{\mb{x}-\mb{u}}{}^{2}}{\sigma^{2}}}.
+\end{align*}
+
+
+\end{itemize}
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{kernel_Hilbert_GP.bib}
+\end{document}

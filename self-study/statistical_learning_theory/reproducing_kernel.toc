@@ -1,0 +1,21 @@
+\contentsline {section}{\numberline {1}Hilbert Space and Functional Analysis Basis}{2}
+\contentsline {subsection}{\numberline {1.1}Complete Metric Space}{2}
+\contentsline {subsection}{\numberline {1.2}Hilbert Space}{3}
+\contentsline {subsection}{\numberline {1.3}Bounded Linear Operator and Dual Space}{4}
+\contentsline {subsection}{\numberline {1.4}Hilbert Adjoints and Self Adjoint Operator}{6}
+\contentsline {subsection}{\numberline {1.5}Regular Measure and Duality of ${\mathcal C}_0(X)$}{7}
+\contentsline {subsection}{\numberline {1.6}Spectrum of Bounded Linear Operator}{10}
+\contentsline {subsection}{\numberline {1.7}Compact Operator}{11}
+\contentsline {subsection}{\numberline {1.8}Trace Class and Hilbert-Schmidt Operators}{13}
+\contentsline {section}{\numberline {2}Reproducing Kernel Hilbert Space (RKHS)}{16}
+\contentsline {subsection}{\numberline {2.1}Definitions}{16}
+\contentsline {subsection}{\numberline {2.2}Properties}{18}
+\contentsline {subsection}{\numberline {2.3}Convergence Properties}{18}
+\contentsline {subsection}{\numberline {2.4}Construction from Hermitian Positive Definite Kernel}{19}
+\contentsline {subsection}{\numberline {2.5}Construction from Integral Kernel Operator on Compact Space}{21}
+\contentsline {subsection}{\numberline {2.6}Construction from Feature Map}{22}
+\contentsline {section}{\numberline {3}Equivalent Definition of Reproducing Kernel Hilbert Space}{23}
+\contentsline {section}{\numberline {4}Reproducing Kernel Hilbert Space in Machine Learning}{25}
+\contentsline {subsection}{\numberline {4.1}Empirical Feature Map}{25}
+\contentsline {subsection}{\numberline {4.2}Representer Theorem}{25}
+\contentsline {section}{\numberline {5}Example and Computation}{28}

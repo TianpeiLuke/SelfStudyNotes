@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: reproducing_kernel.aux
+The style file: plainnat.bst
+Database file #1: kernel_Hilbert_GP.bib.bib
+Warning--I didn't find a database entry for "borthwick2020spectral"
+You've used 10 entries,
+            2773 wiz_defined-function locations,
+            650 strings with 6147 characters,
+and the built_in function-call counts, 3832 in all, are:
+= -- 330
+> -- 153
+< -- 15
++ -- 55
+- -- 45
+* -- 243
+:= -- 590
+add.period$ -- 31
+call.type$ -- 10
+change.case$ -- 38
+chr.to.int$ -- 10
+cite$ -- 20
+duplicate$ -- 221
+empty$ -- 358
+format.name$ -- 61
+if$ -- 816
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 17
+newline$ -- 59
+num.names$ -- 40
+pop$ -- 110
+preamble$ -- 1
+purify$ -- 35
+quote$ -- 0
+skip$ -- 166
+stack$ -- 0
+substring$ -- 117
+swap$ -- 34
+text.length$ -- 6
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 75
+warning$ -- 0
+while$ -- 38
+width$ -- 0
+write$ -- 136
+(There was 1 warning)

@@ -1,0 +1,65 @@
+\begin{thebibliography}{10}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Aronszajn(1950)]{aronszajn1950theory}
+Nachman Aronszajn.
+\newblock Theory of reproducing kernels.
+\newblock \emph{Transactions of the American mathematical society}, pages
+  337--404, 1950.
+
+\bibitem[Conway(2019)]{conway2019course}
+John~B Conway.
+\newblock \emph{A course in functional analysis}, volume~96.
+\newblock Springer, 2019.
+
+\bibitem[Folland(2013)]{folland2013real}
+Gerald~B Folland.
+\newblock \emph{Real analysis: modern techniques and their applications}.
+\newblock John Wiley \& Sons, 2013.
+
+\bibitem[Grafakos(2008)]{grafakos2008classical}
+Loukas Grafakos.
+\newblock \emph{Classical fourier analysis}, volume~2.
+\newblock Springer, 2008.
+
+\bibitem[Hofmann et~al.(2008)Hofmann, Sch{\"o}lkopf, and
+  Smola]{hofmann2008kernel}
+Thomas Hofmann, Bernhard Sch{\"o}lkopf, and Alexander~J Smola.
+\newblock Kernel methods in machine learning.
+\newblock \emph{The annals of statistics}, pages 1171--1220, 2008.
+
+\bibitem[Kreyszig(1989)]{kreyszig1989introductory}
+Erwin Kreyszig.
+\newblock \emph{Introductory functional analysis with applications}, volume~81.
+\newblock wiley New York, 1989.
+
+\bibitem[Ramm(1998)]{ramm1998theory}
+AG~Ramm.
+\newblock On the theory of reproducing kernel hilbert spaces.
+\newblock \emph{Journal of Inverse and Ill posed problems}, 6:\penalty0
+  515--520, 1998.
+
+\bibitem[Rasmussen and Williams(2005)]{rasmussen2006gaussian}
+Carl~Edward Rasmussen and Christopher K.~I. Williams.
+\newblock \emph{Gaussian Processes for Machine Learning (Adaptive Computation
+  and Machine Learning)}.
+\newblock The MIT Press, 2005.
+\newblock ISBN 026218253X.
+
+\bibitem[Reed and Simon(1980)]{reed1980methods}
+Michael Reed and Barry Simon.
+\newblock \emph{Methods of modern mathematical physics: Functional analysis},
+  volume~1.
+\newblock Gulf Professional Publishing, 1980.
+
+\bibitem[Scholkopf and Smola(2001)]{scholkopf2001learning}
+Bernhard Scholkopf and Alexander~J Smola.
+\newblock \emph{Learning with kernels: support vector machines, regularization,
+  optimization, and beyond}.
+\newblock MIT press, 2001.
+
+\end{thebibliography}
