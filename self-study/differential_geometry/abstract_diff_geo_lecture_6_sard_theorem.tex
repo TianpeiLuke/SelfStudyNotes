@@ -1,0 +1,162 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs,  mathtools, dsfont}
+\usepackage{tabularx}
+\usepackage{tikz-cd}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Lecture 6: Sard's Theorem}
+\author{ Tianpei Xie}
+\date{Oct. 17th., 2022}
+\maketitle
+\tableofcontents
+\newpage
+\section{Sard's Theorem}
+\subsection{Sets of Measure Zero}
+\begin{itemize}
+\item \begin{definition} 
+A set $A \subseteq \bR^n$ to have \emph{\textbf{measure zero}} if for any $\delta > 0$,  $A$ can be \emph{\textbf{covered}} by \emph{\textbf{a countable collection of open rectangles}}, the \emph{\textbf{sum}} of whose \emph{\textbf{volumes}} is less than $\delta$ (Fig.).
+\end{definition}
+
+\item \begin{lemma}\label{lemma: compact_intersection_measure_zero}
+Suppose $A \subseteq \bR^n$ is a \textbf{compact} subset whose intersection with $\set{c} \times \bR^{n-1}$ has  $(n-1)$-dimensional measure zero for \textbf{every} $c \in \bR$. Then $A$ has $n$-dimensional measure zero.
+\end{lemma}
+
+\item \begin{proposition}
+Suppose $A$ is an open or closed subset of $\bR^{n-1}$ or $\bH^{n-1}$, and $f: A \rightarrow \bR$ is a \textbf{continuous} function. Then the \textbf{graph} of $f$ has measure zero in $\bR^n$.
+\end{proposition}
+
+\item \begin{corollary}
+Every \textbf{proper affine subspace} of $\bR^n$ has measure zero in $\bR^n$.
+\end{corollary}
+
+\item \begin{proposition}
+Suppose $A \subseteq \bR^n$ has \textbf{measure zero} and $F: A \rightarrow \bR^n$ is a \textbf{smooth} map. Then $F(A)$ has measure zero.
+\end{proposition}
+
+\item \begin{definition}
+Let $M$ be a smooth $n$-manifold with or without boundary. A subset $A \subseteq M$ has \emph{\textbf{measure zero}} in $M$ if for \emph{\textbf{every smooth chart}} $(U, \varphi)$ for $M$, the \emph{subset} $\varphi(A \cap U ) \subseteq  \bR^n$ has \emph{\textbf{$n$-dimensional measure zero}}. 
+\end{definition}
+
+\item The following lemma shows that we need only check this condition for \emph{a single collection of smooth charts} whose \emph{domains cover} $A$. 
+\begin{lemma}
+Let $M$ be a smooth $n$-manifold with or without boundary and $A \subseteq M$. Suppose that for \textbf{some collection} $\set{(U_{\alpha}, \varphi_{\alpha})}$ of smooth charts whose domains \textbf{cover} $A$, $\varphi_{\alpha}(A \cap U_{\alpha})$ has \textbf{measure zero} in $\bR^n$ for each $\alpha$. Then $A$ has measure zero in $M$.
+\end{lemma}
+
+\item \begin{proposition}
+Suppose $M$ is a smooth manifold with or without boundary and $A \subseteq M$ has \textbf{measure zero} in $M$. Then $M \setminus A$ is \textbf{dense} in $M$.
+\end{proposition}
+
+\item \begin{theorem}
+Suppose $M$ and $N$ are smooth $n$-manifolds with or without boundary, $F: M \rightarrow N$ is a \textbf{smooth} map, and $A \subseteq M$ is a subset of \textbf{measure zero}. Then $F(A)$ has measure zero in $N$.
+\end{theorem}
+\end{itemize}
+\subsection{Proof of Sard's Theorem}
+\begin{itemize}
+\item \emph{The Sard's theorem} underlies all of our results about embedding, approximation, and transversality.
+
+\item \begin{theorem}(\textbf{Sard's Theorem}). \\
+Suppose $M$ and $N$ are smooth manifolds with or without boundary and $F: M \rightarrow N$ is a \textbf{smooth map}. Then the set of \textbf{critical
+values} of $F$ has \textbf{measure zero} in $N$.
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+\end{itemize}
+
+\subsection{Corollaries}
+\begin{itemize}
+\item \begin{corollary}
+Suppose $M$ and $N$ are smooth manifolds with or without boundary, and $F: M \rightarrow N$ is a \textbf{smooth map}. If $\text{dim}\,M < \text{dim}\,N$ , then $F(M)$ has measure
+zero in $N$.
+\end{corollary}
+
+\item \begin{remark}
+It is important to be aware tha Corollary above is false if $F$ is merely assumed to be \textbf{continuous}. For example, there is a continuous map $F: [0,1] \rightarrow \bR^2$ whose image is the entire unit square $[0,1] \times [0, 1]$. (Such a map is called \emph{\textbf{a space-filling curve}}).
+\end{remark}
+
+\item \begin{corollary}
+Suppose $M$ is a smooth manifold with or without boundary, and $S \subseteq M$ is an \textbf{immersed submanifold} with or without boundary. If $\text{dim}\,S < \text{dim}\,M$,  then $S$ has measure zero in $M$.
+\end{corollary}
+\end{itemize}
+
+\section{The Whitney Embedding Theorem}
+\begin{itemize}
+\item Our first application of \emph{Sard's theorem} is to show that \emph{\textbf{every smooth manifold can be embedded into a Euclidean space}}. In fact, we will show that every smooth $n$-manifold with or without boundary is \emph{diffeomorphic} to a \emph{properly embedded submanifold} (with or without boundary) of $\bR^{2n+1}$.
+
+\item \begin{theorem} (\textbf{Whitney Embedding Theorem}).\\
+Every smooth $n$-manifold with or without boundary admits a proper \textbf{smooth embedding} into $\bR^{2n+1}$.
+\end{theorem}
+
+
+\item \begin{theorem} (\textbf{Whitney Immersion Theorem}). \\
+Every smooth $n$-manifold with or without boundary admits a \textbf{smooth immersion} into $\bR^{2n}$.
+\end{theorem}
+
+\item \begin{theorem}  (\textbf{Strong Whitney Embedding Theorem}). \\
+If $n > 0$, every smooth $n$-manifold admits a \textbf{smooth embedding} into $\bR^{2n}$.
+\end{theorem}
+
+\item \begin{theorem} (\textbf{Strong Whitney Immersion Theorem}). \\
+If $n > 1$, every smooth $n$-manifold admits a \textbf{smooth immersion} into $\bR^{2n-1}$.
+\end{theorem} Because of these results, the first two theorems are sometimes called the \emph{easy} or \emph{weak Whitney embedding and immersion theorems}.
+\end{itemize}
+\section{The Whitney Approximation Theorems}
+\subsection{Whitney Approximation Theorem for Functions}
+\begin{itemize}
+\item We begin with a theorem about \emph{\textbf{smoothly approximating functions} into Euclidean spaces}. Our first theorem shows, in particular, that \emph{any continuous function} from a smooth manifold $M$ into $\bR^k$ can be \emph{uniformly approximated} by a smooth function.
+
+\item \begin{theorem} (\textbf{Whitney Approximation Theorem for Functions}). \\
+Suppose $M$ is a smooth manifold with or without boundary, and $F: M \rightarrow \bR^k$ is a \textbf{continuous} function. Given any \textbf{positive continuous} function $\delta: M \rightarrow \bR$, there exists a \textbf{smooth} function $\widetilde{F}: M \rightarrow \bR^k$ that is $\delta$-close to $F$. If $F$ is smooth on a closed subset $A \subseteq M$, then $\widetilde{F}$ can be chosen to be equal to $F$ on $A$.
+\end{theorem}
+\end{itemize}
+\subsection{Tubular Neighborhoods}
+
+\subsection{Smooth Approximation of Maps Between Manifolds}
+\begin{itemize}
+\item Now we can extend \emph{the Whitney approximation theorem} to \emph{maps between manifolds}. This extension will have important applications to \emph{line integrals}.
+
+\item \begin{theorem} (\textbf{Whitney Approximation Theorem}). \\
+Suppose $N$ is a smooth manifold with or without boundary, $M$ is a smooth manifold (without boundary), and $F: N \rightarrow M$ is a \textbf{continuous} map. Then $F$ is \textbf{homotopic} to a smooth map. If $F$ is already smooth on a closed subset $A \subseteq N$, then the \textbf{homotopy} can be taken to be relative to $A$.
+\end{theorem}
+\end{itemize}
+
+\section{Transversality}
+\begin{itemize}
+\item As our final application of \emph{Sard's theorem}, we show how \emph{submanifolds} can be \emph{perturbed} so that \emph{\textbf{they intersect "nicely."}} To explain what this means, we introduce the concept of \emph{\textbf{transversality}}.
+
+\item \begin{definition}
+Suppose $M$ is a smooth manifold. Two \emph{embedded submanifolds} $S, S' \subseteq M$ are said to \underline{\emph{\textbf{intersect transversely}}} if for each $p \in S \cap S'$, the tangent spaces \underline{$T_{p}S$} and \underline{$T_{p}S'$} \emph{together} \underline{\emph{\textbf{span}} $T_{p}M$} (where we consider $T_{p}S$ and $T_{p}S'$ as subspaces of $T_{p}M$).
+\end{definition}
+
+\item \begin{definition}
+If $F: N \rightarrow M$ is a smooth map and $S \subseteq M$ is an \emph{embedded submanifold}, we say that \underline{$F$ \emph{\textbf{is transverse to $S$}}} if for every $x \in F^{-1}(S)$, the spaces \underline{$T_{F(x)}S$} and \underline{$dF_{x}\paren{T_{x}N}$} \emph{together} \underline{\emph{\textbf{span}} $T_{F(x)}M$}.
+\end{definition}
+\end{itemize}
+
+
+
+
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{book_reference.bib}
+\end{document}
