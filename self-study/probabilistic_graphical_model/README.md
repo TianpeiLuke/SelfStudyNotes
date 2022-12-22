@@ -37,6 +37,7 @@
     - Conjugate Duality: Maximum Likelihood and Maximum Entropy
     - Challenges in High Dimensional Setting
     - Primal-Dual Formulation of KL Divergence
+
 - Inference in Tabular-Based Graphical Models
   - Inference in Graphical Models
   - Inference for Tabular-Based Graphical Models
@@ -46,5 +47,26 @@
     - Bellman Equation in Log-Space
   - Exact Mode Inference on Tree-Structure Model 
   - Junction Tree Representation
-- 
+
+- Variational Inference in Exponential Family Graphical Models
+  - Approximate Inference via Variational Methods
+  - Belief Propagation for Exponential Families
+    - Approximate Marginal Polytope via Pseudo-Marginal Distributions
+    - Bethe Entropy Approximation
+    - Sum-Product for Bethe Variational Problem
+    - Reparameterization
+  - Expectation Propagation
+  - Mean Field Approximation
+    - Tractable Families
+    - Mean Field Lower Bound and the Problem Formulation
+    - Variational Representation of Mean Field
+    - Naive Mean Field Algorithms
+    - Nonconvexity of Mean Field
+
+- Parameter Estimation in Graphical Models
+  - Parameter Estimation in Fully Observed Models
+  - Parameter Estimation in Partially Observed Models
+    - Exact EM Algorithm in Exponential Families
+    - Variational EM
+    - Variational Bayes
 
