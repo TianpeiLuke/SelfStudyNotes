@@ -54,6 +54,12 @@
   - Minimal Description Length
 
 ### Machine Learning Models
+- K-Nearest Neighbor
+  - The Classification Rule
+  - Asymptotic Analysis
+    - Asymptotic Convergence of K-Nearest Neigbhor Distance 
+    - Stone’s Lemma 
+    - Stone’s Theorem, Universal Consistency of K-NN Classification Rule
 
 - Reproducing Kernel Hilbert Space
   - Reproducing Kernel Hilbert Space
