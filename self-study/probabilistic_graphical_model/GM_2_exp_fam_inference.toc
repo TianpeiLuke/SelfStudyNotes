@@ -1,0 +1,7 @@
+\contentsline {section}{\numberline {1}Background knowledge}{2}
+\contentsline {section}{\numberline {2}Exponential family via maximum entropy}{4}
+\contentsline {subsection}{\numberline {2.1}Maximum entropy estimation}{4}
+\contentsline {subsection}{\numberline {2.2}Properties of log-partition function}{5}
+\contentsline {subsection}{\numberline {2.3}Conjugate Duality: Maximum Likelihood and Maximum Entropy}{6}
+\contentsline {subsection}{\numberline {2.4}Challenges in high dimensional setting}{8}
+\contentsline {subsection}{\numberline {2.5}Primal-dual formulation of KL divergence}{8}
