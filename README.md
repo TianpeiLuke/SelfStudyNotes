@@ -5,9 +5,9 @@
 This repository is the latex-based notes for self-learning, mainly for math, statistics and machine learning.
 
 ## Table of Contents
-- [Concentration Inequalities](./self-study/concentration_measures/README.md)
-
 - [Causal Inference](./self-study/causal_inference/README.md)
+
+- [Concentration Inequalities](./self-study/concentration_measures/README.md)
 
 - [Deep Learning](./self-study/deep_learning.README.md)
 
