@@ -1,0 +1,193 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, amscd}
+\usepackage{mathrsfs, dsfont}
+\usepackage[all,cmtip]{xy}
+%\diagramstyle[labelstyle=\scriptstyle]
+\usepackage{tabularx}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Lecture 6: Gaussian process for learning}
+\author{ Tianpei Xie}
+\date{ Jul. 15th., 2015 }
+\maketitle
+\tableofcontents
+\newpage
+\section{Definitions}
+%\subsection{Review: conventional random process and Gaussian process}
+%\begin{itemize}
+%\item A random function as $\xi_{\cdot}: T\times \Omega  \rightarrow \bR$, and for each subset $N = \set{t_{1},\ldots t_{n}}$, $\xi_{N}: (\Omega, \srB ) \rightarrow (\bR^{n}, \cB^{n})$, $n\ge 1$.  On the other hand, for fixed $\omega$,  the whole sample-path $\xi_{t}(\omega)$ is seen as a function in $\bR^{T}$  (usually smooth, or integrable functions s.t. structure of $T$). Therefore, the random function $\xi_{\cdot}$ is a mapping $(\Omega, \srB) \rightarrow (\bR^{T},  \cB^{T})$. Here $\cB^{T}\equiv \cB(\bR^{T})$ is the Borel $\sigma$-algebra on function space $\bR^{T}$, with respect to which each coordinate functional (evaluation functional) $\pi_{t}: \bR^{T}\rightarrow \bR$, $\pi_{t}(x) = x(t)$, are $(\cB^{T}, \cB^{1})$ measureable. 
+%
+%
+%\item Define the probability measure $\cP$ on the cylindrical $\sigma$-algebra $\srC$ and for locally convex Hausdorff topological space $\Omega$, $\cP$ can be uniquely extended to the Borel $\sigma$-algebra $\srB$. The probability measure $\bP$ on function space $\bR^{T}$ can be induced from the measureable random function $\xi_{\cdot}: (\Omega, \srB) \rightarrow (\bR^{T},  \cB^{T})$; i.e., 
+%\begin{align*}
+% \bP(A) &\equiv \cP\set{ \omega\in \Omega\; |\; \xi_{\cdot}\equiv \xi(\cdot,\omega) \in A  } = \cP\circ\xi_{\cdot}^{-1}(A), \quad A\in \cB^{T}.
+%\end{align*} The above $\bP$ is said to be the \emph{distribution of random function} $\xi_{\cdot}\equiv \xi(\cdot,\omega)$.  
+%
+%\item  In particular, for any $n\ge 1$, any $A\in \cB^{n} \subset \cB^{T}$, $\bP$ can be defined via each $n$-dimensional cylinder set $C_{\xi}[A; t_{1},\ldots t_{n}] \in \srC$. 
+%\begin{align}
+% \bP(A) &\equiv  \cP\paren{C_{\xi}[A_{n}; t_{1},\ldots t_{n}]} \nonumber \\
+% &= \cP\set{ \omega\in \Omega\; |\;  (\xi_{t_{1}}(\omega), \cdots, \xi_{t_{n}}(\omega) )  \in A_{n}  } \nonumber\\
+% &= \cP\circ \xi_{T_{n}}^{-1}(A), \quad A_{n}\in \cB^{n}, \label{eqn: measureable_finite_dim_fun}
+%\end{align} where $\xi_{T_{n}}= \xi_{\cdot}\circ \pi_{T_{n}}$, $\xi_{\cdot}: (\Omega, \srB) \rightarrow (\bR^{T},  \cB^{T})$ and $\pi_{N}: (\bR^{T}, \cB^{T} )\rightarrow (\bR^{n},\cB^{n})$ as $\pi_{T_{n}}(f)= (f_{t_{1}}, \cdots, f_{t_{n}})$, $T_{n}= \set{t_{1},\ldots t_{n}} \subset T$, $n\ge 1$ is the evaluation map. The above formula holds for all $n\ge 1$, $(t_{1},\ldots t_{n})\subset T$.
+%
+%This is called a \emph{finite $n$-dimensional joint distribution} of random function $\xi_{\cdot}$. 
+%
+%\item Define the \emph{barycenter} $\omega_{a}\in \Omega$ of a measure $\cP$ if for any continuous linear functional (random variable) $\xi\in \Omega^{*}$, 
+%\begin{align}
+%\xi(\omega_{a}) &= \int_{\Omega}\xi(\omega)\cP(d\omega) \equiv m(\xi)  , \label{expr: mean_operator}
+%\end{align}
+%where $m\in \Omega^{**}$ is a linear functional on random variable $\xi \in \Omega^{*}$, called \emph{mean} functional.
+%
+%\item The linear operator  $K: \Omega^{*} \rightarrow \Omega$ is called the \emph{covariance operator} of a measure $\cP$ if  for any $\xi, \eta \in \Omega^{*}$,  the following equality holds,
+%\begin{align}
+%\xi\paren{ K(\eta ) } &= \int_{\Omega}\xi(\omega - \omega_{a})\eta(\omega - \omega_{a})\cP(d\omega) \nonumber\\
+%&= \int_{\Omega}\paren{\xi(\omega) - \xi(\omega_{a})}\paren{\eta(\omega) - \eta(\omega_{a})}\cP(d\omega)\nonumber\\
+%&= \int_{\Omega}\paren{\xi(\omega) - m(\xi)}\paren{\eta(\omega) - m(\eta)}\cP(d\omega) \label{expr: covariance_operator}
+%\end{align}
+%
+%\item For $\xi$ and $\eta\in \Omega^{*}$, so $\xi(\omega) = \inn{\omega}{\xi}$ and $\eta(\omega) = \inn{\omega}{\eta}$, where $\inn{\cdot}{\cdot}: \Omega\times \Omega^{*}  \rightarrow \bR$ is the \emph{duality bilinear products}, so the covariance operator $K$ corresponds to 
+%\begin{align}
+% \widehat{K}(\xi, \eta) &= \int_{\Omega}\xi(\omega - \omega_{a})\eta(\omega - \omega_{a})\cP(d\omega) \nonumber\\
+%&= \int_{\Omega}\inn{\omega - \omega_{a}}{\xi} \inn{\omega - \omega_{a}}{\eta}\cP(d\omega) \nonumber\\
+%&= \inn{K\eta}{\xi}\equiv  \xi\paren{ K(\eta ) }
+%\end{align}
+%where $\widehat{K}: \Omega^{*} \times \Omega^{*} \rightarrow \bR$ is a functional on $\Omega^{*}\times \Omega^{*}$. 
+%
+%\item A measure $\cP$ defined on some algebra that contains $\srC$ is called \emph{Gaussian} if the distribution for any (continuous) \emph{linear} functional $\xi \in X^{*}$ with respect to the measure $\cP$ is a Gaussian distribution in $\bR$; i.e., 
+%\begin{align}
+%\cP\circ \xi^{-1} &= \cN(\omega_{a}, \sigma^{2}) \label{expr: Gaussian_measure}
+%\end{align}
+%for some $m, \sigma$.
+%
+%\item Let $X$ be a Hausdorff locally convex space and let $\cP\in  \cG(X)$. The definition of Gaussian measure implies that each linear continuous functional on X is square integrable (having finite variance), that is $X^{*} \subset \cL^{2}(X, \cB, \cP)$. The closure of $X^{*}$ is called \emph{space of measurable linear functionals} $X_{P}^{*}$. 
+%
+%The elements of $X_{P}^{*}$ is called \emph{measureable linear functional}.
+%
+%\item Both $X_{P}^{*}$ and $X_{A}^{*}$ inherits a \emph{Hilbert space structure} from $\cL^{2}(X, \cB, \cP)$, where the scalar product $\inn{\cdot}{\cdot}: X_{P}^{*}\times X_{P}^{*} \rightarrow \bR$ and $\bL^{2}$ norm is defined as 
+%\begin{align}
+%\inn{\xi}{\eta} &= \int_{X}\xi(\omega - \omega_{a})\eta(\omega - \omega_{a})\cP(d\omega)\label{eqn: inn_prod_cov}
+%\end{align}
+%and
+%\begin{align}
+%\norm{\xi}{2} &= \sqrt{\int_{X}\xi^{2}(\omega - \omega_{a})\cP(d\omega) } \nonumber\\
+%&= \sqrt{\inn{K\xi}{\xi}} \label{eqn: norm_L2_var},
+%\end{align} respectively, 
+%and $\omega_{a}$ is the barycenter so that $\xi(\omega_{a}) = \int \xi(\omega)\cP(d\omega)$.\\
+%\end{itemize}
+%\newpage
+\subsection{Gaussian process with feature space as index}
+\begin{itemize}
+\item Let  $f: \cX \rightarrow \cY$ be a measureable functions in a RKHS $\cH \subset  \cY^{\cX}$ associated with kernel $K$, where $\cX\subset \bR^{d}$ is the feature domain and $\cY \subset \bR$ is the decision space.  Define a linear functional  $\eta : \cH \rightarrow \bR,\; f\mapsto \eta(f)$ and $\eta \in \cH^{*}\simeq \cH$, the space of all linear functionals. In specific, $\set{\phi_{i}}$ is the set of eigenfunctions of $K$ associated with eigenvalue $\set{\lambda_{i}}$, which also forms a set of orthonormal basis in $\cH$,
+\begin{align*}
+\lambda_{i}\phi_{i}(x) &= \inn{K(\cdot, x)}{\phi_{i}}= \int_{\cX}\phi_{i}(z)K(z,x)d\mu(z), \forall x\in \cX\\
+K(x,x') &= \sum_{i}\lambda_{i}\phi_{i}(x)\phi_{i}(x')\\
+f&= \sum_{i}\beta_{i}\phi_{i}= \sum_{i}e_{i}\sqrt{\lambda_{i}}\phi_{i}, \qquad \sum_{i=1}^{\infty}\beta_{i}^{2}/\lambda_{i}=\sum_{i=1}^{\infty}e_{i}^{2} <\infty\\
+&= \sum_{m}\widehat{\beta}_{m}K(\cdot, x_{m}) \\
+\eta(\cdot) &= \inn{\cdot}{\eta} = \sum_{i}\alpha_{i}\inn{\cdot}{\phi_{i}}_{\cH} = \sum_{n}\widehat{\alpha}_{n}\inn{\cdot}{K(\cdot, x_{n})} \\
+\eta(f) &= \sum_{i}\alpha_{i}\beta_{i} = \sum_{n,m}\widehat{\alpha}_{n}\widehat{\beta}_{m}K(x_{n}, x_{m})\\
+\inn{f}{g}_{\cH} &= \sum_{i=1}^{\infty}\frac{f_{i}g_{i}}{\lambda_{i}} = \inn{K^{-1}f}{g}, \\  
+f(x)&= \inn{f}{K(\cdot, x)}_{\cH}.\\
+\end{align*}
+
+
+
+\item A random function on feature domain is given by $f: \cX \times \Omega \rightarrow \bR$. Note that the index set is the feature domain $\cX$ not the conventional time domain $T$. Assume that the domain space $\cX$ is Hausdorff, locally convex and separable so that the results in previous sections hold in general. \\[10pt]
+
+\item A random function $f$ can be seen as generated by the while noise Gaussian measure (Wiener measure) $\cW$ on $\ell^{2}\subset \bR^{\infty}$.
+
+Let $e\equiv\paren{e_{i}, i=1,\ldots}\in \ell^{2}$ with $\sum_{i}^{\infty}e^{2}_{i}<\infty$. Then a white noise Gaussian measure $\cW(e)$ has zero mean and 
+\begin{align*}
+\int_{\ell^{2}}e_{i}e_{j}\cW(de) &= \delta_{i,j} =\left\{ \begin{array}{cc}
+0 & i\neq j \\ 
+1 & i = j
+\end{array} \right.
+\end{align*} 
+
+Then $f\sim \cG(\cH)$, if and only if 
+\begin{align*}
+f(\cdot) &= \sum_{i}\sqrt{\lambda_{i}}\phi_{i}(\cdot)e_{i}
+\end{align*}
+where $\set{\phi_{i}}$ is the set of eigenfunctions of $K$ associated with eigenvalue $\set{\lambda_{i}}$, with respect to Lebesgue measure $\mu$ on $\cX$.\\[10pt]
+
+
+
+%Then a random variable 
+%\begin{align*}
+%f(x_{0}, \omega)&= \inn{f_{\cdot}(\omega)}{K(\cdot, x_{0})}
+%\end{align*}
+
+
+%\item Since $\cX \subset \bR^{d}$, $f(\cdot, \omega)$ has a domain that is widely spread over the space $\bR^{d}$. It is a \emph{sample field} not a sample path of the random function $f$. It is in analogy to the potential field in physics. 
+
+\item  The function space $\cH $ is equipped with $\sigma$-algebra $\srB$ generated by the collection of all cylinder sets $\set{f\in \cH: (\eta_{1}(f), \ldots, \eta_{k}(f))\in A }$ for all $k$, all $\eta_{1},\ldots, \eta_{k} \in \cH^{*}$ are linear functionals on $\cH$ and all $A\in \cB(\bR^{k})$. A induced probability measure $\cP \equiv \bP \circ f_{\cdot}^{-1}$ defined on $\srB$ is given as 
+\begin{align*}
+\cP(C) &\equiv \bP\set{\omega: f_{\cdot}\equiv  f(\cdot, \omega) \in C  }, \; C\in \srB
+\end{align*}
+
+
+
+\item In practice, one could define a sampling map $\cS: T\rightarrow \cX$ that induced a sampling ordering from $T$ over the field $\cX$, then the sample path is $f(\mb{x}_{t}, \omega)$ not $f(t, \omega)$ for $t\in T$. Since $\cX$ is separable, the image $\overline{\cS(T)}= \cX$ is dense. 
+ 
+  We may consider a random function $g: T \times \Omega \rightarrow \bR$ with sample path $g(\cdot, \omega)= f(\cdot, \omega)\circ \cS$ as a conventional process.
+
+\item  Given $\cH$, the random function $f\sim \cG(\cH)$, the Gaussian measure on function space $\cH$, if and only if all its linear functionals $\eta(f)\in \cH^{*}$ yields a Gaussian distribution on $\bR$. 
+
+\end{itemize}
+
+\subsection{Covariance function}
+\begin{itemize}
+\item The dual space $\cH^{*}$ has all linear functional $I(f)$. Note that the evaluation functional of $f$ at $\xi$ is a linear functional, as $\xi(f) \equiv f(\xi)$.\\
+
+\item The linear operator  $K: \cH \rightarrow \cH$ is called the \emph{covariance operator} of a measure $\cP$ if  for any $\xi, \eta \in \cH^{*} \simeq \cH $,  the following equality holds,
+\begin{align}
+\xi\paren{ K(\eta ) } &= \int_{\cH}\xi(f-m)\eta(f-m)\cP(df) \nonumber
+\end{align} 
+\vspace{15pt}
+\item Note that $\xi(f) \equiv f(\xi)= \inn{f}{K(\cdot, \xi)}_{\cH}\in \cH^{*}$ and $\eta(f)\equiv f(\eta)= \inn{f}{K(\cdot, \eta)}_{\cH} \in \cH^{*}$ are two functionals on $\cH$. Therefore,
+\begin{align*}
+cov(f(\xi), f(\eta))\equiv \xi\paren{ K(\eta ) } &= \int_{\cH}\xi(f)\eta(f)\cP(df) \nonumber\\
+&=  \int_{\cH}\inn{f}{K(\cdot, \xi)}_{\cH}\inn{f}{K(\cdot, \eta)}_{\cH}\cP(df)\\
+&= \int_{\bR^{\infty}}\sum_{i=1}^{\infty} \sum_{j=1}^{\infty} \beta_{i}\beta_{j}\inn{\phi_{i}}{K(\cdot, \xi)}_{\cH}\inn{\phi_{j}}{K(\cdot, \eta)}_{\cH} \cW(d\mb{\beta})\\
+&=\sum_{i=1}^{\infty} \sum_{j=1}^{\infty} \paren{  \int_{\bR^{\infty}}\beta_{i}\beta_{j}\cW(d\mb{\beta})}\phi_{i}(\xi)\phi_{j}(\eta)\\
+&= \sum_{i=1}^{\infty} \sum_{j=1}^{\infty}\lambda_{i}\delta_{i}(j)\,\phi_{i}(\xi)\phi_{j}(\eta)\\
+&= \sum_{i=1}^{\infty}\lambda_{i}\phi_{i}(\xi)\phi_{i}(\eta)\\
+&= K(\xi, \eta)
+\end{align*} where $\cW(d\mb{\beta})= \cN(0,\text{diag}(\lambda_{1},\ldots, ))d\mb{\beta}$ so that $\sum_{i=1}^{\infty}\beta_{i}^{2}/\lambda_{i}<\infty$
+
+
+ 
+%In other way, 
+%\begin{align*}
+%\xi\paren{ K(\eta ) } &= \int_{\cH}\xi(f)\eta(f)\cP(df) \nonumber\\
+%&= \int_{\cH}\inn{\xi}{f}_{\cH}\inn{\eta}{f}_{\cH}\cP(df) \\
+%&= \sum_{n}\sum_{m}\widehat{\alpha}_{n}\widehat{\beta}_{m}\int_{\cH}\inn{K(\cdot, x_{n})}{f}_{\cH}\inn{K(\cdot, x_{m})}{f}_{\cH}d\cP \nonumber\\
+%&= \sum_{n}\sum_{m}\widehat{\alpha}_{n}\widehat{\beta}_{m}\int_{\cH}f(x_{n})f(x_{m})d\cP\\
+%&=  \sum_{n}\sum_{m}\widehat{\alpha}_{n}\widehat{\beta}_{m}K(x_{n}, x_{m})
+%\end{align*} 
+%Thus the distribution of linear functional $\eta(\cdot)$, i.e. $P((-\infty, r])\equiv \cP(f: \sum_{n}\widehat{\alpha}_{n}\inn{K(x_{n}, \cdot)}{f} \in (-\infty, r])$ is $\cN(0, \sum_{n}\sum_{m}\widehat{\alpha}_{n}\widehat{\alpha}_{m}K(x_{n}, x_{m}))$
+
+\end{itemize}
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{reference.bib}
+\end{document}
