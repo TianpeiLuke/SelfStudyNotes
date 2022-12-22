@@ -2,6 +2,25 @@
 
 ## Books 
 
+### Measure Theory and Real Analysis
+*An introduction to measure theory*, Terrance Tao
+
+*Real Analysis*, Folland
+
+*Real Analysis*, Royden, 4th edition
+
+### Probability Theory
+*A Probability Path*, Resnick S.I., Birkhauser, 1999
+
+*Probability and Measure*, Patrick Billingsley, 3rd Ed, Wiley
+
+*Functional Analysis For Probability And Stochastic Processes: An Introduction*, Adam Bobrowski
+
+### Statistics
+*Theory of Statistics*, Mark J. Schervish
+
+*Bayesian Nonparametrics*,J.K. Ghosh, R.V. Ramamoorthi
+
 ## Table of Contents
 
 ### Measure Theory
@@ -14,6 +33,8 @@
 - Abstract Measure Theory
 
 - Abstract Integration Theory
+
+- Littlewood's Three Principles
 
 - Modes of Convergence
 
