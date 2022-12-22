@@ -3,15 +3,15 @@
 ## Table of Contents
 - Concentration Inequalities
 
-- Causal Inference
+- [Causal Inference](./self-study/causal_inference/README.md)
 
 - Deep Learning
 
 - [Differential Geometry](./self-study/differential_geometry/README.md)
 
-- Functional Analysis
+- [Functional Analysis](./self-study/functional_analysis/README.md)
 
-- Information Geometry and Optimal Transport
+- [Information Geometry and Optimal Transport](./self-study/information_geometry_optimal_transport/README.md)
 
 - Measure Theory, Abstract Integration, Probability Theory
 
