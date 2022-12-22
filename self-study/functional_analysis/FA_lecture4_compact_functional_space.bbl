@@ -1,0 +1,45 @@
+\begin{thebibliography}{7}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Folland(2013)]{folland2013real}
+Gerald~B Folland.
+\newblock \emph{Real analysis: modern techniques and their applications}.
+\newblock John Wiley \& Sons, 2013.
+
+\bibitem[Kreyszig(1989)]{kreyszig1989introductory}
+Erwin Kreyszig.
+\newblock \emph{Introductory functional analysis with applications}, volume~81.
+\newblock wiley New York, 1989.
+
+\bibitem[Munkres(2000)]{munkres2000topology}
+James~R Munkres.
+\newblock \emph{Topology, 2nd}.
+\newblock Prentice Hall, 2000.
+
+\bibitem[Reed and Simon(1980)]{reed1980methods}
+Michael Reed and Barry Simon.
+\newblock \emph{Methods of modern mathematical physics: Functional analysis},
+  volume~1.
+\newblock Gulf Professional Publishing, 1980.
+
+\bibitem[Rynne and Youngson(2007)]{rynne2007linear}
+Bryan Rynne and Martin~A Youngson.
+\newblock \emph{Linear functional analysis}.
+\newblock Springer Science \& Business Media, 2007.
+
+\bibitem[Van~der Vaart(2000)]{van2000asymptotic}
+Aad~W Van~der Vaart.
+\newblock \emph{Asymptotic statistics}, volume~3.
+\newblock Cambridge university press, 2000.
+
+\bibitem[Wellner et~al.(2013)]{wellner2013weak}
+Jon Wellner et~al.
+\newblock \emph{Weak convergence and empirical processes: with applications to
+  statistics}.
+\newblock Springer Science \& Business Media, 2013.
+
+\end{thebibliography}

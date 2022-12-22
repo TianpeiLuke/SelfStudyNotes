@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: FA_lecture3_topology_review.aux
+The style file: plainnat.bst
+Database file #1: reference.bib.bib
+You've used 4 entries,
+            2773 wiz_defined-function locations,
+            611 strings with 5264 characters,
+and the built_in function-call counts, 1283 in all, are:
+= -- 99
+> -- 51
+< -- 5
++ -- 19
+- -- 15
+* -- 73
+:= -- 213
+add.period$ -- 12
+call.type$ -- 4
+change.case$ -- 14
+chr.to.int$ -- 4
+cite$ -- 8
+duplicate$ -- 79
+empty$ -- 127
+format.name$ -- 21
+if$ -- 262
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 7
+newline$ -- 28
+num.names$ -- 16
+pop$ -- 45
+preamble$ -- 1
+purify$ -- 13
+quote$ -- 0
+skip$ -- 54
+stack$ -- 0
+substring$ -- 8
+swap$ -- 5
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 29
+warning$ -- 0
+while$ -- 12
+width$ -- 0
+write$ -- 56

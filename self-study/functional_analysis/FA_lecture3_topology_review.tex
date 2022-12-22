@@ -1,0 +1,1326 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs,  mathtools, dsfont}
+\usepackage{tabularx}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz-cd}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Lecture 3: Topology Review}
+\author{ Tianpei Xie}
+\date{ Jul. 8th., 2015 }
+\maketitle
+\tableofcontents
+\newpage
+\section{Review of Topology}
+\subsection{Set Theory Basis}
+\begin{itemize}
+\item \begin{definition}
+Given a set $X$, the collection of all subsets of $X$, denoted as $2^X$, is defined as
+\begin{align*}
+2^X &:= \set{E: E \subseteq X}
+\end{align*}
+\end{definition}
+
+\item \begin{remark}
+The followings are basic operation on $2^X$: For $A, B \in 2^X$,
+\begin{enumerate}
+\item \emph{\textbf{Inclusion}}:   $A \subseteq B$ if and only if $\forall x \in A$, $x \in B$.
+\item \emph{\textbf{Union}}:  $A \cup B = \set{x: x \in A \lor x \in B}$.
+\item \emph{\textbf{Intersection}}:  $A \cap B = \set{x: x \in A \land x \in B}$.
+\item \emph{\textbf{Difference}}:  $A \setminus B = \set{x: x \in A \land x \not\in B}$.
+\item \emph{\textbf{Complement}}: $A^{c} = X \setminus A = \set{x: x \in X \land x \not\in A}$.
+\item \emph{\textbf{Symmetric Difference}}:  $A \Delta B = (A \setminus B) \cup (B \setminus A) = \set{x \in X: x \not\in A \lor x \not\in B}$.
+\end{enumerate}
+We have \emph{\textbf{deMorgan's laws}}:
+\begin{align*}
+\paren{\bigcup_{a \in A}U_a}^c = \bigcap_{a \in A}U_a^c, \quad \paren{\bigcap_{a \in A}U_a}^c = \bigcup_{a \in A}U_a^c
+\end{align*}
+\end{remark}
+
+\item \begin{remark}
+Note that the following equality is useful:
+\begin{align*}
+A \Delta B = (A \cup B) \setminus (A \cap B)
+\end{align*}
+\end{remark}
+
+
+
+\item \begin{definition}
+A \underline{\emph{\textbf{rule of assignment}}} is a subset $r$ of the cartesian product $C \times D$ of two sets, having the property that each element of $C$ appears as the first coordinate  \emph{\textbf{at most one ordered pair belonging to $r$}}. Thus, a subset $r$ of $C \times D$ is \emph{a rule of assignment} if
+\begin{align*}
+[(c, d) \in r\text{ and }(c, d') \in r] \Rightarrow [d = d'].
+\end{align*}
+
+Given a rule of assignment $r$, \underline{\emph{\textbf{the domain}}} of $r$ is defined to be the \emph{subset} of $C$ consisting of \emph{all first coordinates of elements} of $r$, and \emph{\textbf{the image}} set of $r$ is defined as the \emph{subset} of $D$ consisting of \emph{all second coordinates of elements} of $r$.
+
+A \emph{\textbf{function}} $f$ is \emph{a rule of assignment $r$}, together with a set $B$ that \emph{contains the image set} of $r$.
+
+The \emph{\textbf{pre-image}} of $f$ is defined as
+\begin{align*}
+f^{-1}(E) &= \set{x \in X: f(x) \in E}.
+\end{align*}
+\end{definition}
+
+
+
+\item \begin{remark}
+The pre-image operation \emph{\textbf{commutes}} with \emph{\textbf{all basic set operations}}:
+\begin{align*}
+A \subseteq B & \Rightarrow f^{-1}\paren{A} \subseteq f^{-1}(B) \\
+f^{-1}\paren{\bigcup_{\alpha \in A}E_{\alpha}} &= \bigcup_{\alpha \in A}f^{-1}\paren{E_{\alpha}}\\
+f^{-1}\paren{\bigcap_{\alpha \in A}E_{\alpha}} &= \bigcap_{\alpha \in A}f^{-1}\paren{E_{\alpha}}\\
+f^{-1}\paren{A \setminus B} &= f^{-1}(A) \setminus f^{-1}(B) \\
+f^{-1}\paren{E^c} &= \paren{f^{-1}\paren{E}}^c 
+\end{align*}
+\end{remark}
+
+
+\item \begin{remark}
+The image operation \emph{\textbf{commutes}} with only  \emph{\textbf{inclusion} and \textbf{union} operations}:
+\begin{align*}
+A \subseteq B & \Rightarrow f\paren{A} \subseteq f(B) \\
+f\paren{\bigcup_{\alpha \in A}E_{\alpha}} &= \bigcup_{\alpha \in A}f\paren{E_{\alpha}} 
+\end{align*} For the other operations:
+\begin{align*}
+f\paren{\bigcap_{\alpha \in A}E_{\alpha}} &\subseteq \bigcap_{\alpha \in A}f\paren{E_{\alpha}} \\
+f\paren{A \setminus B} &\supseteq f(A) \setminus f(B)
+\end{align*}
+\end{remark}
+
+\item \begin{definition}
+A map $f: X\rightarrow Y$ is \emph{\textbf{surjective, or, onto}}, if for every $y \in Y$, there exists a $x \in X$ such that $y = f(x)$. In set theory notation:
+\begin{align*}
+f: X\rightarrow Y \text{ is surjective }&\Leftrightarrow \; f^{-1}(Y) \subseteq X.
+\end{align*}
+A map $f: X\rightarrow Y$ is \emph{\textbf{injective}}, if for every $x_1 \neq x_2 \in X$, their map $f(x_1) \neq f(x_2)$, or equivalently, $f(x_1) = f(x_2)$ only if $x_1 = x_2$.
+
+If a map $f: X\rightarrow Y$ is both \emph{surjective} and \emph{injective}, we say $f$ is a \emph{\textbf{bijective}}, or there exists an \emph{\textbf{one-to-one correspondence}} between $X$ and $Y$. Thus $Y = f(X)$.
+\end{definition}
+
+\item \begin{remark}
+\begin{align*}
+f^{-1}(f(B)) &\supseteq  B,\quad \forall B \subseteq X \\
+f(f^{-1}(E)) &\subseteq E,\quad \forall E \subseteq Y \\
+f: X\rightarrow Y \text{ is surjective }&\Leftrightarrow \; f^{-1}(Y) \subseteq X. \\
+&\Rightarrow  \; f(f^{-1}(E)) = E. \\
+f: X\rightarrow Y \text{ is injective }& \Rightarrow\; f^{-1}(f(B)) = B \\
+& \Rightarrow\; f\paren{\bigcap_{\alpha \in A}E_{\alpha}} = \bigcap_{\alpha \in A}f\paren{E_{\alpha}} \\
+& \Rightarrow\; f\paren{A \setminus B} = f(A) \setminus f(B)
+\end{align*}
+\end{remark}
+
+\item \begin{proposition}
+The following statements for composite functions are true:
+\begin{enumerate}
+\item If $f, g$ are both injective, then $g \circ f$ is injective. 
+\item If $f, g$ are both surjective, then $g \circ f$ is surjective. 
+\item Every \textbf{injective} map $f: X \rightarrow Y$ can be writen as $f = \iota \circ f_{R}$ where $f_R: X \rightarrow f(X)$ is a \textbf{bijective} map and $\iota$ is the \textbf{inclusion map}.
+\item Every \textbf{surjective} map $f: X \rightarrow Y$ can be writen as $f =  f_{p} \circ \pi$ where $\pi: X\rightarrow (X/\sim)$ is \textbf{a quotient map} (projection $x \mapsto [x]$) for the equivalent relation $ x \sim y \Leftrightarrow f(x) = f(y)$ and  $f_p: (X/\sim) \rightarrow Y$ is defined as $f_p([x]) = f(x)$ \textbf{constant} in each coset $[x]$.
+\item If $g \circ f$ is \textbf{injective}, then $f$ is \textbf{injective}.
+\item If $g \circ f$ is \textbf{surjective}, then $g$ is \textbf{surjective}.
+\end{enumerate}
+\end{proposition}
+
+\item \begin{definition}
+A \underline{\emph{\textbf{relation}}} on a set $A$ is a \emph{subset} $R$ of \emph{the cartesian product} $A \times A$.
+
+If $R$ is a relation on $A$, we use the notation $xRy$ to mean the same thing as $(x, y) \in R$. We read it ``$x$ is in the relation $R$ to $y$."
+\end{definition}
+
+\item \begin{remark}
+\emph{\textbf{A rule of assignment}} $r$ for a function $f: A \rightarrow A$ is also a \emph{subset} of $A \times A$. But it is a subset of a \emph{very \textbf{special} kind}: namely, one such that \emph{\textbf{each element}} of $A$ appears as the \emph{\textbf{first coordinate}} of an element of $r$ \emph{\textbf{exactly once}}. \emph{\textbf{Any subset} of $A \times A$ is a relation on $A$}.
+\end{remark}
+
+\item \begin{definition}
+\underline{\emph{\textbf{An equivalence relation}}} on $X$ is a relation $R$ on $X$ such that 
+\begin{enumerate}
+\item (\emph{\textbf{Reflexivity}}): $xRx$ for all $x \in X$;
+\item (\emph{\textbf{Symmetry}}): $xRy$ if and only if $yRx$ for all $x,y \in X$;
+\item (\emph{\textbf{Transitivity}}): $xRy$ and $yRz$ then $xRz$ for all $x,y,z \in X$. 
+\end{enumerate}
+We usually denote the equivalence relation $R$ as $\sim$. 
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Equivalence Class}})\\
+\underline{\emph{\textbf{The equivalence class}}} of an element $x$ is denoted as $[x] := \set{y \in X:  xRy}$. 
+\end{definition}
+
+\item  \begin{definition}
+A relation $C$ on a set $A$ is called \underline{\emph{\textbf{an order relation}}} (or \emph{\textbf{a simple order}}, or \emph{\textbf{a linear order}})
+if it has the following properties:
+\begin{enumerate}
+\item (\emph{\textbf{Comparability}}) For every $x$ and $y$ in $A$ for which $x \neq y$, either $xCy$ or $yCx$.
+\item (\emph{\textbf{Nonreflexivity}}) For no $x$ in $A$ does the relation $xCx$ hold.
+\item (\emph{\textbf{Transitivity}}) If $xCy$ and $yCz$, then $xCz$.
+\end{enumerate}
+We denote order relation as $>$ or $<$. We shall use the notation $x \le y$ to stand for the statement ``either $x < y$ or $x = y$";
+and we shall use the notation $y > x$ to stand for the statement ``$x < y$." We write $x < y < z$ to mean ``$x < y$ and $y < z$"
+\end{definition}
+
+
+
+\item \begin{definition}
+Suppose that $A$ is a set ordered by the relation $<$.  Let $A_0$ be a subset of $A$. We say that the element $b$ is \underline{\emph{the \textbf{largest element} of $A_0$}} if $b \in A_0$ and $x \le b$ for every $x \in A_0$. 
+
+Similarly, we say that $a$ is \underline{\emph{the \textbf{smallest element}} of $A_0$} if $a \in A_0$ and if $a \le x$
+for every $x \in A_0$. 
+\end{definition}
+
+\item \begin{remark}
+It is easy to see that a set has \emph{\textbf{at most one}} largest element and \emph{at most one} smallest element.
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{The Upper Bound and The Supremum of Subset}})\\
+We say that \emph{the subset $A_0$ of $A$ is \underline{\textbf{bounded above}}} if there is \emph{an element $b$ of $A$} such that $x \le b$ for every $x \in A_0$; the element $b \in A$ is called \underline{\emph{\textbf{an upper bound for $A_0$}}}. 
+
+If \emph{the set of all upper bounds} for $A_0$ has \emph{a \textbf{smallest element}}, that element is called \emph{\textbf{\underline{the least} \underline{upper bound}}}, or \underline{\emph{\textbf{the supremum}}, of $A_0$}. It is denoted by $\sup A_0$, it may or may not belong to $A_0$. If it \emph{does}, it is \emph{\textbf{\underline{the largest element}}} of $A_0$.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{The Lower Bound and The Infimum of Subset}})\\
+Similarlly, we say that \emph{the subset $A_0$ of $A$ is \underline{\textbf{bounded below}}} if there is \emph{an element $a$ of $A$} such that $a \le x$ for every $x \in A_0$; the element $a \in A$ is called \underline{\emph{\textbf{a lower bound for $A_0$}}}. 
+
+If \emph{the set of all lower bounds} for $A_0$ has \emph{a \textbf{largest element}}, that element is called \emph{\textbf{\underline{the greatest} \underline{lower bound}}}, or \underline{\emph{\textbf{the infimum}}, of $A_0$}. It is denoted by $\inf A_0$, it may or may not belong to $A_0$. If it \emph{does}, it is \emph{\textbf{\underline{the smallest element}}} of $A_0$.
+\end{definition}
+
+\item \begin{definition} (\textit{\textbf{The Least Upper Bound Property} and \textbf{The Greatest Lower Bound Property}})\\
+An ordered set $A$ is said to have \underline{\emph{\textbf{the least upper bound property}}} if \emph{every} \emph{nonempty} subset $A_0$ of $A$ that is \emph{bounded above} has \emph{a least upper bound}. 
+
+Analogously, the set $A$ is said to have \underline{\emph{\textbf{the greatest lower bound property}}} if \emph{every nonempty} subset $A_0$ of $A$ that is \emph{bounded below} has \emph{a greatest lower bound}.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Well-Ordered Set}}) \\
+A set $A$ with an order relation $<$ is said to be \emph{\textbf{well-ordered}} if \emph{every nonempty subset} of $A$ has a \emph{\textbf{smallest element}}.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Strict Partial Order}})\\
+Given a set $A$, a relation $\prec$ on $A$ is called a \underline{\emph{\textbf{strict partial order}}} on $A$ if it has the following two properties;
+\begin{enumerate}
+\item (\emph{\textbf{Nonreflexivity}}) The relation $a \prec a$ never holds.
+\item (\emph{\textbf{Transitivity}}) If $a \prec b$ and $b \prec c$, then $a \prec c$.
+\end{enumerate}
+Moreover, suppose that we define $a \preceq b$ either $a \prec b$ or $a = b$. Then the relation $\preceq$ is called \underline{\emph{\textbf{a partial order}}} on $A$.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Upper Bound and Maximal Element for Strict Partial Order}})\\
+Let $A$ be a set and let $\prec$ be a \emph{strict partial order} on $A$. If $B$ is a subset of $A$, \underline{\emph{\textbf{an upper bound}}} on $B$ is an element $c$ of $A$ such that for every $b$ in $B$, either $b = c$ or $b \prec c$. 
+
+\underline{\emph{\textbf{A maximal element}}} of $A$ is an element $m$ of $A$ such that for \emph{\underline{\textbf{no element} $a$ of $A$} does the relation $m \prec a$ hold}.
+\end{definition}
+
+\item \begin{theorem} (\textbf{Zorn's Lemma}). \citep{munkres2000topology} \\
+Let $A$ be a set that is \textbf{strictly partially ordered}. If every \textbf{simply ordered subset} of $A$ has an \textbf{upper bound in $A$}, then $A$ has a \textbf{maximal element}.
+\end{theorem}
+
+\item \begin{principle} (\textbf{The Axiom of Choice}).\\
+If $\set{X_{\alpha}}_{\alpha \in A}$ is a nonempty collection of nonempty sets, then $\prod_{\alpha \in A}X_{\alpha}$ is non-empty.
+\end{principle}
+
+\item \begin{corollary}
+If $\set{X_{\alpha}}_{\alpha \in A}$ is a \textbf{disjoint} collection of nonempty sets, there is a set $Y \subset \bigcup_{\alpha \in A}X_{\alpha}$ such that $Y \cap X_{\alpha}$ contains \textbf{precisely one element} for each $\alpha \in A$.
+\end{corollary}
+\end{itemize}
+\subsection{Topological Space}
+\begin{itemize}
+\item 
+\begin{definition} 
+Let $X$ be a set. \underline{\emph{A \textbf{topology}}} on $X$ is \emph{a collection} $\mathscr{T}$ of \emph{subsets} of X, called \emph{\textbf{open subsets}}, satisfying
+\begin{enumerate}
+\item $X$ and $\emptyset$ are \emph{open}.
+\item The \emph{\textbf{union}} of \emph{\textbf{any family}} of open subsets is open.
+\item The \emph{\textbf{intersection}} of \emph{any \textbf{finite} family} of open subsets is open.
+\end{enumerate}
+A pair $(X, \mathscr{T})$ consisting of a set $X$ together with a topology $\mathscr{T}$ on $X$ is called \emph{\textbf{a topological space}}.
+\end{definition}
+
+\item \begin{definition}
+A map $F: X \rightarrow Y$ is said to be \underline{\emph{\textbf{continuous}}} if for every open subset $U \subseteq Y$, the \emph{\textbf{preimage}} $F^{-1}(U)$ is \emph{\textbf{open}} in $X$.
+\end{definition}
+
+\item \begin{definition}
+A \emph{\textbf{continuous bijective}} map $F: X \rightarrow Y$ with \emph{\textbf{continuous inverse}} is called a \underline{\emph{\textbf{homeomorphism}}}. If there exists a \emph{homeomorphism} from $X$ to $Y$, we say that X and Y are \emph{\textbf{homeomorphic}}.
+\end{definition}
+
+\item \begin{definition}
+Suppose $X$ is a topological space. A collection $\mathscr{B}$ of open subsets of $X$ is said to be \emph{\textbf{a basis}} for \emph{the topology of $X$} (plural: \emph{\textbf{bases}}) if every open subset of $X$ is the \emph{union of some collection of elements} of $\mathscr{B}$.
+
+More generally, suppose $X$ is merely a set, and $\mathscr{B}$ is a collection of \emph{subsets} of $X$ satisfying the following conditions:
+\begin{enumerate}
+\item $X = \bigcup_{B \in \mathscr{B}}B$.
+\item If $B_1, B_2 \in \mathscr{B}$ and $x \in B_1 \cap B_2$, then there exists $B_3 \in \mathscr{B}$ such that $x \in B_3 \subseteq B_1 \cap B2$.
+\end{enumerate}
+Then \emph{the collection of \textbf{all unions} of elements of $\mathscr{B}$} is a \emph{topology} on X, called \emph{\textbf{the topology generated by $\mathscr{B}$}}, and $\mathscr{B}$ is a \underline{\emph{\textbf{basis}} for this \emph{topology}}.
+\end{definition}
+
+\item \begin{lemma} (\textbf{Obtaining Basis from Given Topology}). \citep{munkres2000topology}\\
+Let $X$ be a topological space. Suppose that $\srC$ is a collection of open sets of $X$ such that for each open set $U$ of $X$ and each $x$ in $U$, there is an element $C$ of $\srC$ such that $x \in C \subset U$. Then $C$ is a basis for the topology of $X$.
+\end{lemma}
+
+\item \begin{lemma} (\textbf{Topology Comparison via Bases}). \citep{munkres2000topology}\\
+Let $\srB$ and $\srB'$ be bases for the topologies $\srT$ and $\srT'$, respectively, on $X$. Then the following are equivalent:
+\begin{enumerate}
+\item  $\srT'$ is \textbf{finer} than $\srT$.
+\item For each $x \in X$ and each basis element $B \in \srB$ containing $x$, there is a basis element $B' \in \srB'$ such that $x \in B' \subset B$.
+\end{enumerate}
+\end{lemma}
+
+\item \begin{definition}(\emph{\textbf{Subbasis}})\\
+\underline{\emph{\textbf{A subbasis}} $\srS$ for a \emph{topology} on $X$} is a collection of subsets of $X$ whose union equals $X$. The topology generated by the \emph{subbasis} $\srS$ is defined to be the  collection $\srT$ of \emph{\textbf{all unions} of \textbf{finite intersections} of elements of $\srS$}.
+\end{definition}
+
+\item \begin{remark}(\textbf{\emph{Basis from Subbasis}})\\
+For a \emph{subbasis} $\srS$, the collection $\srB$ of \emph{\textbf{all finite intersections}} of elements of $\srS$ is a \emph{\textbf{basis}},
+\end{remark}
+\end{itemize}
+
+\subsection{Limit Point and Closure}
+\begin{itemize}
+\item \begin{definition}
+A subset $A$ of a topological space $X$ is said to be \emph{\textbf{closed}} if the set $X \setminus A$ is \emph{open}.
+\end{definition}
+
+\item \begin{definition}
+Given a subset $A$ of a topological space $X$, \underline{\emph{\textbf{the interior of $A$}}} is defined as \emph{the union of all open sets} \emph{\textbf{contained}} in $A$, and \underline{\emph{\textbf{the closure of $A$}}} is defined as \emph{the intersection of all closed sets} \emph{\textbf{containing}} $A$.
+
+\emph{\textbf{The interior of $A$}} is denoted by $\text{Int }A$ or by $\mathring{A}$ and \emph{\textbf{the closure of $A$}} is denoted by $\text{CI }A$ or
+by $\bar{A}$. Obviously $\mathring{A}$ is \emph{an open set} and $\bar{A}$ is \emph{a closed set}; furthermore,
+\begin{align*}
+\mathring{A} \subseteq A \subseteq \bar{A}.
+\end{align*}
+If $A$ is \emph{\textbf{open}}, $A = \mathring{A}$; while if $A$ is \emph{\textbf{closed}}, $A = \bar{A}$.
+\end{definition}
+
+\item \begin{proposition} (\textbf{Characterization of Closure in terms of Basis}) \citep{munkres2000topology} \\
+Let $A$ be a subset of the topological space $X$.
+\begin{enumerate}
+\item Then $x \in \bar{A}$ if and only if every \textbf{open} set $U$ \textbf{containing} $x$ \textbf{intersects} $A$.
+\item Supposing the topology of $X$ is given by a \textbf{basis}, then $x \in \bar{A}$ if and only if every basis element $B$ \textbf{containing} $x$ \textbf{intersects} $A$.
+\end{enumerate}
+\end{proposition}
+
+\item \begin{remark}
+We can say ``\emph{$U$ is a \textbf{neighborhood} of $x$}'' if ``\emph{$U$ is an open set containing $x$}".
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{Limit Point}})\\
+If $A$ is a subset of the topological space $X$ and if $x$ is a point of $X$, we say that $x$ is a \underline{\emph{\textbf{limit point}}} (or ``\emph{\textbf{cluster point}}," or ``\emph{\textbf{point of accumulation}}") of $A$ if \emph{\textbf{every neighborhood} of $x$ \textbf{intersects} $A$} \emph{in some point \textbf{other than} $x$ itself}. 
+
+Said differently, $x$ is \emph{\textbf{a limit point}} of $A$ if it belongs to \emph{\textbf{the closure of $A \setminus \{x\}$}}. The point $x$ may lie in $A$ or not; for this definition it does not matter.
+\end{definition}
+
+\item \begin{theorem} (\textbf{Decomposition of Closure})\\
+Let $A$ be a subset of the topological space $X$; let $A'$ be the set of \textbf{all limit points} of $A$. Then
+\begin{align*}
+\bar{A} &= A \cup A'.
+\end{align*}
+\end{theorem}
+
+\item \begin{corollary}
+A subset of a topological space is \textbf{closed} if and only if it contains all its \textbf{limit points}.
+\end{corollary}
+\end{itemize}
+
+\subsection{Subspace, Product and Quotient Topologies}
+\subsubsection{Subspace Topology}
+\begin{itemize}
+\item \begin{definition}
+If $X$ is a topological space and $S \subseteq X$ is an arbitrary subset, we define \emph{\textbf{the subspace topology}} on $S$ (sometimes called \emph{the \textbf{relative topology}}) by declaring a subset $U \subseteq S$ to be \emph{open} in $S$ \emph{if and only} if there exists an open subset $V \subseteq X$ such that $U = V \cap S$. 
+
+Any subset of $X$ endowed with the subspace topology is said to be \emph{\textbf{a subspace of $X$}}.
+\end{definition}
+
+\item \begin{lemma} (\textbf{Basis of Subspace Topology})\\
+If $\srB$ is a basis for the topology of $X$ then the collection
+\begin{align*}
+\srB_{S} = \set{B \cap S:  B \in \srB}
+\end{align*}
+is a \textbf{basis}  for the subspace topology on $S \subset X$.
+\end{lemma}
+
+\item \begin{proposition}
+Let $Y$ be a subspace of $X$. If $A$ is closed in $Y$ and $Y$ is closed in $X$, then $A$ is closed in $X$.
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Closure in Subspace Topology})\\
+Let $Y$ be a subspace of $X$; let $A$ be a subset of $Y$; let $\bar{A}$ denote the closure of $A$ in $X$. Then the closure of $A$ in $Y$ equals $\bar{A} \cap Y$.
+\end{proposition}
+\end{itemize}
+\subsubsection{Product Topology}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{$J$-tuples}})\\
+Let $J$ be an index set. Given a set $X$, we define a \emph{\underline{\textbf{$J$-tuple}} of elements} of $X$ to be a function $x : J \rightarrow X$. If $\alpha$ is an element of $J$, we often denote \emph{\textbf{the value of $X$ at $\alpha$}} by $X_{\alpha}$ rather than $x(\alpha)$; we call it \underline{\emph{\textbf{the $\alpha$-th coordinate}}} of $x$. And we often \emph{denote the function $x$ itself} by the symbol
+\begin{align*}
+(x_{\alpha})_{\alpha \in J}
+\end{align*}
+which is as close as we can come to a ``\emph{tuple notation}" for an arbitrary index set $J$. We denote \emph{\textbf{the set of all $J$-tuples}} of elements of $X$ by $X^{J}$.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Arbitrary Cartestian Products}})\\
+Let $\{A_{\alpha}\}_{\alpha \in J}$ be an \emph{indexed} family of sets; let $X = \bigcup_{\alpha \in J}A_{\alpha}$. \emph{The \textbf{cartesian product} of this indexed family}, denoted by
+\begin{align*}
+\prod_{\alpha \in J} A_{\alpha}
+\end{align*}
+is defined to be the set of all $J$-tuples $(x_{\alpha})_{\alpha \in J}$ of elements of $X$ such that $x_{\alpha} \in A_{\alpha}$ for each $\alpha \in J$. That is, it is the set of all functions
+\begin{align*}
+x: J \rightarrow \bigcup_{\alpha \in J}A_{\alpha}
+\end{align*}
+such that $x(\alpha) \in A_{\alpha}$ for each $\alpha \in J$.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Projection Mapping or Coordinate Projection}})\\
+Let
+\begin{align*}
+\pi_{\beta}: \prod_{\alpha \in J} X_{\alpha} \rightarrow X_{\beta}
+\end{align*}
+be the function assigning to each element of the product space its $\beta$-th coordinate,
+\begin{align*}
+\pi_{\beta}((x_{\alpha})_{\alpha \in J}) = x_{\beta};
+\end{align*}
+it is called \emph{\underline{\textbf{the projection mapping}} associated with the index $\beta$}.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Product Topology}})\\
+Let $\srS_\beta$ denote the collection
+\begin{align*}
+\srS_\beta = \set{ \pi_\beta^{-1}(U_\beta): U_{\beta}\text{ open in }X_\beta},
+\end{align*}
+and let $\srS$ denote \emph{the union of these collections},
+\begin{align*}
+\srS &= \bigcup_{\beta \in J} \srS_\beta.
+\end{align*}
+The topology generated by \emph{the \textbf{subbasis} S} is called \underline{\emph{\textbf{the product topology}}}. In this 
+topology $\prod_{\alpha \in J} X_{\alpha}$ is called \emph{\textbf{a product space}}.
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Product Topology $=$ Weak Topology by Coordinate Projections}})\\
+\emph{The product topology} on $\prod_{\alpha \in J} X_{\alpha}$ is \emph{\textbf{the weak topology}} generated by \emph{a family of projection mappings} $(\pi_{\beta})_{\beta \in J}$. It is \underline{\emph{\textbf{the coarest (weakest) topology} such that $(\pi_{\beta})_{\beta \in J}$ are \textbf{continuous}}}.
+
+\emph{\textbf{A typical element of the basis}} from \emph{the product topology} is \emph{\textbf{the finite intersection} of subbasis} where the \emph{index is different}:
+\begin{align*}
+\pi_{\beta_1}^{-1}(V_{\beta_1}) \xdotx{\cap} \pi_{\beta_n}^{-1}(V_{\beta_n})
+\end{align*} Thus a \emph{\textbf{neighborhood}} of $x$ in \emph{\textbf{the product topology}} is \
+\begin{align*}
+N(x) &= \set{(x_{\alpha})_{\alpha \in J}:  x_{\beta_1} \in V_{\beta_1} \xdotx{,} x_{\beta_n} \in V_{\beta_n}}
+\end{align*} where there is \emph{\textbf{no restriction}} for $\alpha \in \set{\beta_1 \xdotx{,} \beta_n}$.
+
+Note that for \emph{\textbf{the box topology}}, a \emph{neighborhood} of $x$ is
+\begin{align*}
+N_b(x) &= \set{(x_{\alpha})_{\alpha \in J}:  x_{\alpha} \in U_{\alpha}, \; \forall \alpha \in J} \subset N(x)
+\end{align*} Thus \underline{\emph{\textbf{the box topology}} is \emph{\textbf{finer}} than \emph{\textbf{the product topology}}}. Moreover, \emph{for \textbf{finite product}}  $\prod_{\alpha =1}^{n} X_{\alpha}$, the box topology and the product topology is the \emph{\textbf{same}}.
+\end{remark}
+
+
+\item \begin{definition}
+If $X$ and $Y$ are topological spaces, a continuous injective map $F: X \rightarrow Y$ is called a \underline{\emph{\textbf{topological embedding}}} if it is a \emph{\textbf{homeomorphism}} onto its image $F(X) \subseteq Y$ in the subspace topology.
+\end{definition}
+\end{itemize}
+
+\subsubsection{Quotient Topology}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Quotient Map}})\\
+Let $X$ and $Y$ be topological spaces; let $\pi : X \rightarrow Y$ be a \emph{\textbf{surjective map}}. The map $\pi$ is said to be \underline{\emph{\textbf{a quotient map}}} provided a subset $U$ of $Y$ is \emph{\textbf{open}} in $Y$ \underline{\emph{\textbf{if and only if}}} $\pi^{-1}(U)$ is \emph{\textbf{open}} in $X$.
+\end{definition}
+
+\item \begin{remark}(\emph{\textbf{Quotient Map $=$ Strong Continuity}})\\
+The condition of quotient map is \emph{\textbf{stronger}} than continuity (it is called \underline{\emph{\textbf{strong continuity}}} in some literature). 
+\begin{align*}
+\text{continuity}: \quad U \text{ is open in }Y & \Rightarrow \pi^{-1}(U) \text{ is open in }X\\
+\text{open map}: \quad \pi(V) \text{ is open in }Y & \Leftarrow V \text{ is open in }X\\
+\text{quotient map}: \quad U \text{ is open in }Y & \Leftrightarrow \pi^{-1}(U) \text{ is open in }X
+\end{align*}
+\emph{An equivalent condition} is to require that a subset $A$ of K be \emph{\textbf{closed}} in $Y$ \emph{if and only if} $\pi^{-1}(A)$ is \emph{\textbf{closed}} in $X$. Equivalence of the two conditions follows from equation
+\begin{align*}
+\pi^{-1}(Y \setminus B) = X \setminus \pi^{-1}(B).
+\end{align*}
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{Saturated Set and Fiber}})\\
+If $\pi: X \rightarrow Y$ is a \emph{\textbf{surjective} map}, a subset $U \subseteq X$ is said to be \underline{\emph{\textbf{saturated}}} with respect to $\pi$ if $U$ contains every set $\pi^{-1}(\{y\})$ that it \emph{\textbf{intersects}}. Thus $U$ is \emph{\textbf{saturated}} if it equals to the \textbf{\emph{entire preimage}} of its \emph{\textbf{image}}: $U =\pi^{-1}(\pi(U))$. 
+
+Given $y \in Y$, the \underline{\emph{\textbf{fiber}}} of $\pi$ over $y$ is the set $\pi^{-1}(\{y\})$. 
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Quotient Map via Saturated Set}})\\
+A surjective map $\pi : X \rightarrow Y$ is a \underline{\emph{\textbf{quotient map}}} if $\pi$ is \emph{\textbf{continuous}} and $\pi$ maps \emph{\textbf{saturated open sets}} of $X$ to \emph{\textbf{open sets}} of $Y$ (or \emph{saturated closed sets} of $X$ to \emph{closed sets} of $Y$).
+\end{definition}
+
+
+\item \begin{definition} (\emph{\textbf{Open Map} and \textbf{Closed Map}})\\
+A map $f: X \rightarrow Y$ (continuous or not) is said to be an \underline{\emph{\textbf{open map}}} if for every \emph{open} subset $U \subseteq X$, the image set $f(U)$ is \emph{open} in $Y$, and a  \underline{\emph{\textbf{closed map}}} if for every \emph{closed} subset $K \subseteq X$, the image $f(K)$ is \emph{closed} in Y . 
+\end{definition}
+
+
+\item \begin{definition} (\emph{\textbf{Quotient Topology}})\\
+If $X$ is a space and $A$ is a set and if $\pi: X \rightarrow A$ is a \textbf{surjective} map, then there exists \textbf{exactly one topology} $\srT$ on $A$ relative to which $\pi$ is a quotient map; it is called \underline{\emph{\textbf{the quotient topology}} induced by $\pi$}.
+\end{definition}
+
+\item \begin{definition}(\emph{\textbf{Quotient Space}})\\
+Suppose $X$ is a topological space and $\sim$ is \emph{an equivalence relation} on $X$. Let $X/\sim$ denote \emph{\textbf{the set of equivalence classes}} in $X$, and let $\pi: X \rightarrow X/\sim$ be the \emph{\textbf{natural projection}} sending each \emph{point} to its \emph{equivalence class}. Endowed with \emph{\textbf{the quotient topology}} determined by $\pi$, the space $X/\sim$ is called \underline{\emph{\textbf{the quotient space}}} (or \emph{identification space}) of $X$ determined by $\pi$.
+\end{definition}
+\end{itemize}
+
+\subsection{Constructing Continuous Functions}
+\begin{itemize}
+\item \begin{proposition}(\textbf{Rules for Constructing Continuous Functions}). \citep{munkres2000topology}\\
+Let $X$, $Y$, and $Z$ be topological spaces.
+\begin{enumerate}
+\item (\textbf{Constant Function}) If $f : X \rightarrow Y$ maps all of $X$ into the \textbf{single point} $y_0$ of Y, then $f$ is \textbf{continuous}.
+\item (\textbf{Inclusion}) If $A$ is a subspace of $X$, the \textbf{inclusion function} $\iota : A \xhookrightarrow X$ is  \textbf{continuous}.
+\item (\textbf{Composites}) If $f : X \rightarrow Y$ and $g : Y \rightarrow Z$ are continuous, then the map $g \circ f : X \rightarrow Z$ is continuous
+\item (\textbf{Restricting the Domain}) If $f : X \rightarrow Y$ is \textbf{continuous}, and if $A$ is a subspace of $X$, then \textbf{the restricted function} $f|_{A}: A \rightarrow Y$ is continuous.
+\item (\textbf{Restricting or Expanding the Range}) Let $f : X \rightarrow Y$ be \textbf{continuous}. If $Z$ is a \textbf{subspace} of $Y$ containing the \textbf{image} set $f(X)$, then the function $g : X \rightarrow Z$ obtained by \textbf{restricting the range} of $f$ is \textbf{continuous}.  If $Z$ is a space having $Y$ as a \textbf{subspace}, then the function $h : X \rightarrow Z$ obtained by \textbf{expanding the range} of $f$ is \textbf{continuous}.
+\item (\textbf{Local Formulation of Continuity}) The map  $f : X \rightarrow Y$ is \textbf{continuous} if $X$ can be written as the \textbf{union of open sets} $U_{\alpha}$ such that $f|_{U_{\alpha}}$ is \textbf{continuous} for each $\alpha$.
+\end{enumerate}
+\end{proposition}
+
+\item \begin{theorem} (\textbf{The Pasting Lemma / Gluing Lemma}). \citep{munkres2000topology} \\ 
+Let $X = A \cup B$, where $A$ and $B$ are \textbf{closed} in $X$. Let $f : A \rightarrow Y$ and $g : B \rightarrow Y$ be \textbf{continuous}. If $f(x) = g(x)$ for \textbf{every} $x \in A \cap B$, then $f$ and $g$ combine to give a \textbf{continuous function} $h : X \rightarrow Y$, defined by setting $h|_{A} = f$, and $h|_{B} = g$.
+\end{theorem}
+
+\item \begin{remark}
+The set $A$ and $B$ can be open sets, and the gluing lemma comes ``\emph{\textbf{Local Formulation of Continuity}}".
+\end{remark}
+
+\item \begin{remark}
+Notice the condition for \emph{the gluing lemma}:
+\begin{enumerate}
+\item The domain $X$ is a union of two \emph{\textbf{closed sets (or open sets)}} $A$ and $B$
+\item The two functions $f$ and $g$ are \emph{\textbf{continuous}} each of closed domain sets, respectively
+\item $f$ and $g$ \emph{\textbf{agree on the intersection}} of two sets $A \cap B$.
+\end{enumerate}
+\end{remark}
+
+\item \begin{theorem} (\textbf{Maps into Products}). \citep{munkres2000topology}\\
+Let $f : A \rightarrow X \times Y$ be given by the equation
+\begin{align*}
+f(a)  &= (f_1(a), f_2(a)).
+\end{align*} Then $f$ is \textbf{continuous} if and only if the functions
+\begin{align*}
+f_1: A \rightarrow X\quad \text{ and }\quad f_2: A \rightarrow Y
+\end{align*} 
+are \textbf{continuous}. The maps $f_1$ and $f_2$ are called \underline{\textbf{the coordinate functions}} of $f$.
+\end{theorem}
+\end{itemize}
+
+\subsection{Metric Topology}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Metric Space}})\\
+A \emph{\textbf{metric space}} is a set $M$ and a real-valued function $d(\cdot , \cdot): M \times M \rightarrow \bR$  which satisfies:
+\begin{enumerate}
+\item (\emph{\textbf{Non-Negativity}}) $d(x, y) \ge 0$
+\item (\emph{\textbf{Definiteness}}) $d(x, y) = 0$ if and only if $x = y$
+\item (\emph{\textbf{Symmetric}}) $d(x, y) = d(y, x)$
+\item (\emph{\textbf{Triangle Inequality}}) $d(x, z) \le d(x, y) + d(y, z)$
+\end{enumerate} The function $d$ is called a \underline{\emph{\textbf{metric}}} on $M$. The metric space $M$ equipped with metric $d$ is denoted as $(M, d)$.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{$\epsilon$-Ball}})\\
+Given a metric $d$ on $X$, the number $d(x, y)$ is often called \emph{the \textbf{distance} between $x$ and $y$ in the metric $d$}. Given $\epsilon > 0$, consider the set
+\begin{align*}
+B_{d}(x, \epsilon) &= \set{y: d(x,y) < \epsilon}
+\end{align*}
+of all points $y$ whose distance from $x$ is less than $\epsilon$. It is called \underline{\emph{\textbf{the $\epsilon$-ball centered at $x$}}}. Sometimes we omit the metric $d$ from the notation and write this ball simply as $B(x, \epsilon)$, when no confusion will arise.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Metric Topology}})\\
+If $d$ is a \emph{metric} on the set $X$, then \emph{the collection of all $\epsilon$-balls $B_{d}(x, \epsilon)$}, for $x \in X$ and $\epsilon > 0$, is a \emph{\textbf{basis}} for a \emph{topology} on $X$, called \emph{\underline{\textbf{the metric topology}} induced by $d$}.
+\end{definition}
+
+\item \begin{definition} (\textbf{\emph{Metrizability}})\\
+If $X$ is a topological space, $X$ is said to be \underline{\emph{\textbf{metrizable}}} if \emph{there exists a metric} $d$ on the set $X$ that \emph{induces the topology} of $X$. \underline{\emph{\textbf{A metric space}}} is \emph{a metrizable space} $X$ together with a specific metric $d$ that \emph{gives the topology of $X$}.
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Metrizability as Inverse Problem}})\\
+Given a \emph{metric} $d$ on $X$, we can generate \emph{a metric topology} using $\epsilon$-balls as basis. \emph{\textbf{Conversely}}, \underline{\emph{\textbf{given a topology} $\srT$ on $X$}, \emph{\textbf{is $\srT$ a metric topology for some unknown metric $d$ ?}}} 
+
+This is the question that \emph{\textbf{the metrization theory}} is trying to answer.
+\end{remark}
+
+
+\item \begin{theorem} (\textbf{$\epsilon$-$\delta$ Definition of Continuous Function in Metric Space}). \citep{munkres2000topology} \\
+Lei $f: X \rightarrow Y$; let $X$ and $Y$ be \textbf{metrizable} with metrics $d_x$ and $d_y$, respectively. Then \textbf{continuity} of $f$ is \textbf{equivalent} to the requirement that given $x \in X$ and given $\epsilon > 0$, there exists $\delta > 0$ such that
+\begin{align*}
+d_x(x, y) < \delta \Rightarrow d_{y}(f(x), f(y)) < \epsilon.
+\end{align*}
+\end{theorem}
+
+\item \begin{remark}
+To use $\epsilon$-$\delta$ definition, \emph{both \textbf{domain} and \textbf{codomain}} need to be \emph{\textbf{metrizable}}.
+\end{remark}
+
+\item \begin{lemma}(\textbf{The Sequence Lemma}). \citep{munkres2000topology}\\
+Let $X$ be a topologicaJ space; let $A \subseteq X$. If there is a sequence of points of $A$ \textbf{converging} to $x$, then $x \in \bar{A}$; the \textbf{converse} holds if $X$ is \textbf{metrizable}.
+\end{lemma}
+
+\item \begin{proposition}
+Let $f: X \rightarrow Y$. If the function $f$ is \textbf{continuous}, then for every \textbf{convergent} sequence $x_n \rightarrow x$ in $X$, the sequence $f(x_n)$ \textbf{converges} to $f(x)$. The \textbf{converse} holds if $X$ is \textbf{metrizable}.
+\end{proposition}
+
+\item \begin{remark}
+To show the converse part, i.e. ``\emph{if $x_n \rightarrow x \Rightarrow f(x_n) \rightarrow f(x)$ then $f$ is continuous}", we just need the space $X$ to be \emph{\textbf{first countable}}. That is, at each point $x$, there is \emph{\textbf{a countable collection}} $(U_{n})_{n \in \bZ_{+}}$ of \emph{\textbf{neighborhoods}} of $x$ such that any neighborhood $U$ of $x$ \emph{contains} at least one of the sets $U_n$.
+\end{remark}
+
+\item \begin{proposition} (\textbf{Arithmetic Operations of Continuous Functions}).\\
+If $X$ is a topological space, and if $f, g : X \rightarrow Y$ are continuous functions, then $f + g$,  $f - g$, and $f \cdot g$ are continuous. If $g(x) \neq 0$ for all $x$, then $f/g$ is continuous.
+\end{proposition}
+
+\item \begin{definition} (\emph{\textbf{Uniform Convergence}})\\
+Let $f_n : X \rightarrow Y$ be a sequence of functions from the \textbf{\emph{set}} $X$ to \emph{\textbf{the metric space}} $Y$. Let $d$ be the metric for $Y$. We say that the sequence $(f_n)$ \underline{\emph{\textbf{converges uniformly}}} to the function $f: X \rightarrow Y$ if given $\epsilon > 0$, there exists an integer $N$ such that
+\begin{align*}
+d(f_n(x), f(x)) < \epsilon
+\end{align*}
+for all $n > N$ and \textbf{\emph{all $x$ in $X$}}.
+\end{definition}
+
+\item \begin{theorem} (\textbf{Uniform Limit Theorem}). \citep{munkres2000topology}\\
+Let $f_n : X \rightarrow Y$ be a sequence of  \textbf{continuous} functions from the \textbf{topological} space $X$ to the \textbf{metric space} $Y$. If $(f_n)$ converges
+\textbf{uniformly} to $f$, then $f$ is \textbf{continuous}.
+\end{theorem}
+\end{itemize}
+
+
+\subsection{Connectedness and Compactness}
+ \begin{remark}
+\emph{\textbf{Connectedness}} and \emph{\textbf{compactness}} are basic \emph{\textbf{topological properties}}. Both of them are defined based on a collection of open subsets. 
+\begin{enumerate}
+\item \emph{\textbf{Connectedness}} is a \emph{\textbf{global topological property}}: a topological space is \emph{connected} if it cannot be partitioned by two \emph{disjoint nonempty open} subsets. \emph{Connectedness} reveals the information of \emph{\textbf{entire space}} \emph{not just within a neighborhood}.  Connectedness is \emph{\textbf{compatible}} with the \emph{\textbf{continuity}} of functions as it implies \emph{\textbf{the intermediate value theorem}}, which in turn, can be used to construct \emph{inverse function}.  Moreover, \emph{connectedness} defines \emph{\textbf{an equivalence relationship}} which allows a \emph{\textbf{partition}} of the space into \emph{\textbf{components}}. 
+\item \emph{\textbf{Connectedness}} is a \emph{\textbf{local-to-global topological property}}: a topological space is \emph{compact} if every open cover have a finite sub-cover. Using \emph{\textbf{finite sub-cover}}, \emph{\textbf{local properties}} defined \emph{within each neighborhood} can be \emph{\textbf{generalized globally}}  to entire space. Concept of functions that are closely related to compactness is \emph{\textbf{the uniformly continuity}} and \emph{\textbf{the maximum value theorem}}. The compactness allows us to drop dependency on each individual point $x$.
+\end{enumerate}
+Compared to \emph{connectedness}, \emph{\textbf{compactness}} is usually a \emph{\textbf{strong condition}} on the topological space.
+\end{remark}
+\subsubsection{Connectedness and Local Connectedness}
+\begin{itemize}
+\item  \emph{\textbf{Concepts Related to Connectedness}}
+\[
+  \begin{tikzcd}
+ \text{\emph{\textbf{path-connected} space}}  \arrow{d}{\text{only one}}   \arrow{r}{} &  \text{\emph{\textbf{connected} space}}  \arrow{d}{\text{only one}} \\
+   \text{\emph{\textbf{path components}}}   \arrow{r}{\subseteq }  &\arrow[l, swap, bend left, dashed, "\text{if locally path connected}"]  \text{\emph{\textbf{components}}}\\
+   & & \\
+   \text{\emph{\textbf{path components} of every open subset}}   \arrow{r}{\subseteq } \arrow{uu}{\subseteq } & \text{\emph{\textbf{components}  of every open subset}} \arrow{uu}{\subseteq }\\
+  \text{\emph{\textbf{locally path connected} space}} \arrow[u, "\text{open}"]  & \text{\emph{\textbf{locally connected} space}} \arrow[u, swap, "\text{open}"].
+  \end{tikzcd}
+\] 
+
+\item \begin{definition}(\emph{\textbf{Separation} and \textbf{Connectedness}})\\
+Let $X$ be a topological space. A \emph{\textbf{separation}} of $X$ is a pair $U$, $V$ of \emph{\textbf{disjoint} \textbf{nonempty} \textbf{open} subset}s of $X$ whose union is $X$. 
+
+The space $X$ is said to be \underline{\emph{\textbf{connected}}} if there \emph{does not exist a separation} of $X$.
+\end{definition}
+
+\item  \begin{definition} 
+Equivalently, $X$ is \emph{\textbf{connected}} if and only if the only subsets of $X$ that are \emph{\textbf{both open and closed}} are $\emptyset$
+and $X$ itself.
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Proof of Connectedness}})\\
+As the definition suggests, the proof of connectedness is done \emph{\textbf{by contradition}}. One first assume that the set $X$ has a \emph{\textbf{seperation}}; it can be separated into two \emph{\textbf{disjoint nonempty open}} sets such that $X = A \cup B$. Then we proof by contradiction using \emph{\textbf{existing connectedness conditions}} and the \emph{\textbf{property of open subsets (basis, continuity etc.)}}.
+\end{remark}
+
+\item \begin{definition}
+Recall that a topological space $X$ is
+\begin{itemize}
+\item \underline{\emph{\textbf{connected}}} if there do not exist two \emph{disjoint}, \emph{nonempty}, \emph{open} subsets of $X$ whose union is $X$;
+\item \underline{\emph{\textbf{path-connected}}} if every pair of points in $X$ can be \emph{\textbf{joined by a path}} in $X$, and
+\item \emph{\textbf{locally path-connected}} if $X$ has a \emph{\textbf{basis}} of \emph{path-connected open subsets}.
+\end{itemize}
+\end{definition}
+
+\item \begin{definition}
+A \emph{\textbf{maximal connected subset}} of $X$ (i.e., a connected subset that is not properly contained in any larger connected subset) is called a \emph{\textbf{component}} (or \emph{\textbf{connected component}}) of $X$.
+\end{definition}
+\end{itemize}
+
+
+\subsubsection{Compactness and Local Compactness}
+\begin{itemize}
+\item  \emph{\textbf{Concepts Related to Compactness}}
+\[
+  \begin{tikzcd}
+   &  \arrow[dl, swap, bend right, dashed, "\text{metrizable}"]   \text{\emph{\textbf{limit point compact}}} \arrow{r}{} & \arrow[l, bend right, dashed, swap,  "\text{metrizable}"]  \text{\emph{\textbf{sequential compact}}}\\
+  \text{\emph{\textbf{compact}}}  \arrow{ur}{}  \arrow{dr}{} \arrow[ddr, bend right] \arrow[dddr, bend right] & &\\
+  & \arrow[bend right, swap]{ul}{\text{closure}}  \text{\emph{\textbf{precompact}}}    & \arrow{l}{\text{precompact basis}}   \text{\emph{\textbf{locally compact}}}  \arrow[ull,  dashed,  swap, "X \bigcup \set{\infty} \simeq C"]     \arrow[ddl,   bend left,  "\text{second-countable $+$ Hausdorff}"]  \\
+ & \text{\emph{\textbf{Lindel{\"o}f}}} \arrow{d}{\text{regular}} & &\\
+ & \text{\emph{\textbf{paracompact}}} &  &
+  \end{tikzcd}
+\] 
+
+\item \begin{definition} (\emph{\textbf{Covering of Set} and \textbf{Open Covering of Topological Set}})\\
+\emph{A collection $\srA$ of subsets} of a space $X$ is said to \underline{\emph{\textbf{cover}} $X$,} or to be \emph{a \underline{\textbf{covering}} of $X$}, if the union of the elements of $\srA$ is equal to $X$. 
+
+It is called an \underline{\emph{\textbf{open covering of $X$}}} if its elements are \emph{open subsets} of $X$.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Compactness}})\\
+A topological space $X$ is said to be \underline{\emph{\textbf{compact}}} if \emph{every open covering} $\srA$ of $X$ contains a \emph{\textbf{finite} subcollection} that also \emph{covers} $X$.
+\end{definition}
+
+\item To prove \emph{compactness}, the following property is useful:
+\begin{definition} (\emph{\textbf{Finite Intersection Property}})\\
+\emph{A collection $\srC$ of subsets} of $X$ is said to have \underline{\emph{\textbf{the finite intersection property}}} if for \emph{every finite subcollection}
+\begin{align*}
+\{C_1 \xdotx{,} C_n\}
+\end{align*}
+ of $\srC$, the \emph{\textbf{intersection}} $C_1 \xdotx{\cap} C_n$ is \emph{\textbf{nonempty}}.
+\end{definition}
+
+\item \begin{proposition} (\textbf{Equivalent Definition of Compactness}) \citep{munkres2000topology} \\
+Let $X$ be a topological space. Then $X$ is \textbf{compact} \textbf{if and only if} for every collection $\srC$ of \textbf{closed} sets in $X$ having \textbf{the finite intersection property}, the intersection $\bigcap_{C\in \srC}C$ of all the elements of $\srC$ is \textbf{nonempty}.
+\end{proposition}
+
+
+\item \begin{definition}
+If $X$ and $Y$ are topological spaces, a map $F: X \rightarrow Y$ (continuous or not) is said to be \underline{\emph{\textbf{proper}}} if for every \textbf{\emph{compact}} set $K \subseteq Y$, the \emph{\textbf{preimage}} $F^{-1}(K)$ is \emph{\textbf{compact}}.
+\end{definition}
+
+\item \begin{definition}
+A topological space $X$ is said to be \underline{\emph{\textbf{locally compact}}} if every point has a \emph{\textbf{neighborhood}} contained in a \emph{\textbf{compact subset}} of $X$. 
+
+A subset of $X$ is said to be \emph{\textbf{precompact}} in $X$ if its \emph{\textbf{closure}} in $X$ is \emph{compact}.
+\end{definition}
+
+
+
+\item If $X$ is \emph{not a compact Hausdorff space}, then \emph{under what conditions} is $X$ \emph{homeomorphic} with \emph{a \textbf{subspace} of a compact Hausdorff space} ?
+
+\begin{theorem} (\textbf{Unique One-Point Compactification}) \citep{munkres2000topology}\\
+Let $X$ be a space. Then $X$ is \underline{\textbf{locally compact Hausdorff}} if and only if there exists a space $Y$ satisfying the following conditions:
+\begin{enumerate}
+\item $X$ is a subspace of $Y$.
+\item The set $Y \setminus X$ consists of \textbf{a single point} (which is the limit point of $X$).
+\item $Y$ is a \textbf{compact Hausdorff} space.
+\end{enumerate} 
+If $Y$ and $Y'$ are two spaces satisfying these conditions, then there is a \textbf{homeomorphism} of $Y$ with $Y'$ that equals \textbf{the identity map} on $X$.
+\end{theorem}
+
+\item \begin{definition} (\emph{\textbf{One-Point Compactification}})\\
+If $Y$ is a \emph{\textbf{compact Hausdorff}} space and $X$ is a proper \emph{subspace} of $Y$ whose \emph{\textbf{closure}} equals $Y$, then $Y$ is said to be a \underline{\textbf{\emph{compactification}}} of $X$. 
+
+If $Y\setminus X$ equals \emph{a single point}, then $Y$ is called \underline{\textbf{\emph{the one-point compactification}}} of $X$.
+\end{definition}
+
+\item \begin{proposition} (\textbf{Locally Compact Hausdorff $=$ Precompact Basis}) \citep{munkres2000topology} \\
+Let $X$ be a \textbf{Hausdorff} space. Then $X$ is \textbf{locally compact} \textbf{if and only if} given $x$ in $X$, and given a neighborhood $U$ of $x$, there is a neighborhood $V$ of $x$ such that $\bar{V}$ is \textbf{compact} and $\bar{V} \subseteq U$.
+\end{proposition}
+
+\item \begin{corollary} (\textbf{Closed or Open Subspace}) \citep{munkres2000topology} \\
+Let $X$ be locally compact Hausdorff; let $A$ be a subspace of $X$. If $A$ is \textbf{closed} in $X$ or \textbf{open} in $X$, then $A$ is locally compact.
+\end{corollary}
+
+\item \begin{corollary}  \citep{munkres2000topology} \\
+A space $X$ is \textbf{homeomorphic} to an \textbf{open} subspace of a \textbf{compact Hausdorff} space \textbf{if and only if} $X$ is \textbf{locally compact Hausdorff}.
+\end{corollary}
+
+\item For a \emph{\textbf{Hausdorff space}} $X$,  the following are equivalent:
+\begin{enumerate}
+\item $X$ is \emph{\textbf{locally compact}}.
+\item Each point of $X$ has a \emph{\textbf{precompact}} neighborhood. 
+\item $X$ has a basis of \emph{\textbf{precompact}} open subsets.
+\end{enumerate}
+
+\item \begin{theorem} (\textbf{Tychonoff Theorem}). \citep{munkres2000topology} \\
+ An \underline{\textbf{arbitrary product}} of \textbf{compact} spaces is \textbf{compact} in the \underline{\textbf{product topology}}.
+\end{theorem}
+\end{itemize}
+\subsection{Countability and Separability}
+\subsubsection{Countability Axioms}
+\begin{itemize}
+\item \emph{\textbf{Concepts Related to Countablity Axioms}}
+\[
+  \begin{tikzcd}
+     &  \text{\emph{\textbf{first-countable} space}} &\arrow{l}{} \text{\emph{\textbf{metrizable} space}}\\
+   \text{\emph{\textbf{second-countable} space}}  \arrow[ur, bend left] \arrow{r}{} \arrow[dr]  & \arrow[l, bend right, dashed, "metrizable"] \text{\emph{\textbf{separable} space}} &\\
+     &  \arrow[ul, dashed,  bend left,  "metrizable"] \text{\emph{\textbf{Lindel{\"o}f} space}}&.
+  \end{tikzcd}
+\] 
+
+\item \begin{definition} (\emph{\textbf{Countability}})\\
+A topological space $X$ is said to be 
+\begin{enumerate}
+\item \emph{\textbf{first-countable}} if there is a \emph{\textbf{countable neighborhood basis}} at each point, 
+\item \underline{\emph{\textbf{second-countable}}} if there is \emph{\textbf{a countable basis}} for its topology.
+\end{enumerate}
+\end{definition}
+
+\item \begin{proposition} (\textbf{Limit Point Detected by Convergent Sequence}) \citep{munkres2000topology}\\
+Let $X$ be a topological space.
+\begin{enumerate}
+\item Let $A$ be a subset of $X$. If there is a sequence of points of $A$ converging to $x$, then $x \in \bar{A}$; the \textbf{converse} holds if $X$ is \textbf{first-countable}.
+\item Let $f : X \rightarrow Y$. If $f$ is continuous, then for every convergent sequence $x_n \rightarrow x$ in $X$, the sequence $f(x_n)$ converges to $f(x)$. The \textbf{converse} holds if X is \textbf{first-countable}.
+\end{enumerate}
+\end{proposition}
+
+\item \begin{definition} (\emph{\textbf{Dense Subset}})\\
+A subset $A$ of a space $X$ is said to be \underline{\emph{\textbf{dense}}} in $X$ if $\bar{A}=X$. (That is, \emph{every point in $X$ is a limit point of $A$.})
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Separability}})\\
+A topological space $X$ is called \underline{\emph{\textbf{separable}}} if and only if it has a \emph{\textbf{countable dense set}}.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Lindel{\"o}f Space}})\\
+A space for which \emph{every open covering} contains \emph{a \textbf{countable} subcovering} is called a \underline{\emph{\textbf{Lindel{\"o}f space}}}. 
+\end{definition}
+
+\item \begin{proposition} (\textbf{Properties of Second-Countability}) \citep{munkres2000topology}\\
+Suppose that $X$ has a \textbf{countable basis}. Then:
+\begin{enumerate}
+\item Every \textbf{open covering} of $X$ contains a \textbf{countable} subcollection covering $X$. ($X$ is \textbf{Lindel{\"o}f space})
+\item There exists a \textbf{countable} subset of $X$ that is \textbf{dense} in $X$. ($X$ is \textbf{separable})
+\end{enumerate}
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Metric Space Countablility and Separablility})
+\begin{enumerate}
+\item Every \textbf{metric space} is \textbf{first countable}.
+\item A metric space is \textbf{second countable} if and only if it is \textbf{separable}.
+\item Any \textbf{second countable} topological space is \textbf{separable}.
+\end{enumerate}
+\end{proposition}
+\end{itemize}
+
+\subsubsection{Separability Axioms}
+\begin{itemize}
+\item \emph{\textbf{Concepts Related to Separation Axioms}}
+\[
+  \begin{tikzcd}
+   \text{\emph{\textbf{$T_1$} space}}  & &\arrow{lld}{} \text{\emph{\textbf{metrizable} space}} \arrow{d}{} \arrow[dddd, shift left = 9ex, bend left, ""]  \\
+   \arrow{u}{} \text{\emph{\textbf{Hausdorff} space}} &\arrow{l}{} \text{\emph{\textbf{regular} space}} \arrow[ur, leftrightarrow, bend left, "\text{ $+$ countable locally finite basis}"] \arrow[dddr,  bend right,"\text{Lindel\"of}"] &\arrow{l}{} \arrow{dl}{\text{Urysohn lemma}} \text{\emph{\textbf{normal} space}}  \\
+  &  \arrow{u}{} \text{\emph{\textbf{completely regular} space}}   &  \\
+   & &  \text{\emph{\textbf{compact Hausdorff} space}} \arrow{uu}{} \arrow{d}{} \\
+   & \text{\emph{\textbf{locally compact Hausdorff} space}} \arrow{uu}{}  \arrow[dashed, swap]{ur}{\text{\emph{compactification}}} & \text{\emph{\textbf{paracompact Hausdorff} space}} \arrow[bend right, shift right = 8ex]{uuu}{}
+  \end{tikzcd}
+\] 
+
+\item \begin{definition} (\textbf{\emph{Separation Axioms}})
+\begin{enumerate}
+\item A topological space is called a \underline{\emph{\textbf{$T_1$ space}}} if and only if for all $x$ and $y$, $x\neq y$, there is an \emph{\textbf{open set}} $U$ with $y \in U$, $x \not\in U$. 
+
+Equivalently, a space is $T_1$ \emph{if and only if} $\{x\}$ is \emph{\textbf{closed}} for each $x$.
+
+\item A topological space is called \underline{\emph{\textbf{Hausdorff}} (or $T_2$)} if and only if for all all $x$ and $y$, $x\neq y$, there are \emph{\textbf{open sets}}  $U$,  $V$ such that $x \in U$, $y \in V$, and $U \cap V = \emptyset$.
+
+\item A topological space is called \underline{\emph{\textbf{regular}} (or $T_3$)} if and only if it is $T_1$ and for all $x$ and $C$, \emph{\textbf{closed}}, with $x \not\in C$, there are \emph{\textbf{open sets}} $U$, $V$ such that $x \in U$, $C \subset V$, and $U \cap V = \emptyset$. 
+
+Equivalently, a space is $T_3$ if \emph{the \textbf{closed neighborhoods} of any point are a \textbf{neighborhood base}}.
+
+\item A topological space is called \underline{\emph{\textbf{normal}} (or $T_4$)} if and only if it is $T_1$ and for all $C_1$, $C_2$, \emph{\textbf{closed}}, with $C_1 \cap C_2 = \emptyset$, there are \emph{\textbf{open sets}} $U$, $V$ with $C_1 \subset U$,  $C_2 \subset V$, and $U \cap V = \emptyset$.
+\end{enumerate}
+\end{definition}
+
+\item \begin{proposition}
+\begin{align*}
+T_4 \Rightarrow T_3 \Rightarrow T_2 \Rightarrow T_1
+\end{align*}
+\end{proposition}
+
+\item \begin{proposition} (\underline{\textbf{Limit Point in $T_1$ Axiom}}). \citep{munkres2000topology} \\
+Let $X$ be a space satisfying the $T_1$ axiom; let $A$ be a subset of $X$. Then the point $x$ is \textbf{a limit point} of $A$ if and only if every \textbf{neighborhood} of $x$ contains \textbf{infinitely many points} of $A$.
+\end{proposition}
+
+\item \begin{proposition} (\underline{\textbf{Limit Point is Unique in Hausdorff Space}}). \citep{munkres2000topology} \\
+If $X$ is a \textbf{Hausdorff space}, then a sequence of points of $X$ \textbf{converges to at most one point} of $X$.
+\end{proposition}
+
+\item \begin{lemma}
+Let $X$ be a topological space. Let one-point sets in $X$ be closed.
+\begin{enumerate}
+\item $X$ is \textbf{regular} if and only if given a point $x$ of $X$ and a neighborhood $U$ of $x$,
+there is a \textbf{neighborhood} $V$ of $x$ such that $\bar{V} \subseteq U$.
+\item $X$ is \textbf{normal} if and only if given a \textbf{closed} set $A$ and an open set $U$ containing $A$,
+there is an \textbf{open set} $V$ containing $A$ such that $\bar{V}\subseteq U$.
+\end{enumerate}
+\end{lemma}
+
+
+\item \begin{proposition}  \citep{munkres2000topology} \\
+Every \underline{\textbf{locally compact Hausdorff}} space is \textbf{regular}.
+\end{proposition}
+\end{itemize}
+
+\subsection{Important Results and Theorems on Normal Space}
+\begin{itemize}
+\item \begin{theorem} (\textbf{Regular $+$ Second-Countable $\Rightarrow$ Normal})\citep{munkres2000topology}\\
+Every \underline{\textbf{regular} space with a \textbf{countable basis}} is \textbf{normal}.
+\end{theorem}
+
+\item \begin{proposition}   (\textbf{Regular $+$ Lindel{\"o}f $\Rightarrow$ Normal})\citep{munkres2000topology}\\
+Every \underline{\textbf{regular Lindel{\"o}f} space} is \textbf{normal}.
+\end{proposition}
+
+
+\item \begin{theorem} \citep{munkres2000topology}\\
+Every \underline{\textbf{metrizable}} space is \textbf{normal}.
+\end{theorem}
+
+
+\item \begin{theorem} \citep{munkres2000topology, reed1980methods}\\
+Every \underline{\textbf{compact Hausdorff}} space $X$ is \textbf{normal}.
+\end{theorem}
+
+\item \begin{theorem} \citep{munkres2000topology}\\
+Every \underline{\textbf{well-ordered}} set $X$ is \textbf{normal} in the \textbf{order topology}.
+\end{theorem}
+
+
+\item \begin{theorem} (\textbf{Urysohn Lemma}). \citep{munkres2000topology}\\
+Let $X$ be a \textbf{normal} space; let $A$ and $B$ be \textbf{disjoint closed subsets} of $X$. Let $[a, b]$ be a \textbf{closed interval} in the real line. Then there exists a \textbf{continuous} map
+\begin{align*}
+f : X \rightarrow [a, b]
+\end{align*}
+such that $f(x) = a$ for \textbf{every} $x$ in $A$, and $f(x) = b$ for \textbf{every} $x$ in $B$.
+\end{theorem}
+
+\item \begin{definition} (\emph{\textbf{Separation by Continuous Function}})\\
+If $A$ and $B$ are two subsets of the topological space $X$, and if there is a \textbf{continuous} function $f : X \rightarrow [0, 1]$ such that $f(A) = \set{0}$ and $f(B) = \set{1}$, we say that $A$ and $B$ can be \emph{\textbf{\underline{separated} \underline{by a continuous function}}}.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Completely Regular}})\\
+A space $X$ is \emph{\textbf{\underline{completely regular}}} if \emph{one-point sets} are \emph{closed} in $X$ and if for each point $x_0$ and each \emph{\textbf{closed}} set $A$ not containing $x_0$, there is a \emph{\textbf{continuous function}} $f : X \rightarrow [0, 1]$ such that $f(x_0) = 1$ and $f(A) = \set{0}$.
+\end{definition}
+
+\item \begin{remark}
+\begin{align*}
+\text{normal } \Rightarrow \text{ completely regular } \Rightarrow \text{regular}
+\end{align*}
+\end{remark}
+
+\item \begin{theorem}  (\textbf{Urysohn Lemma, Locally Compact Version}). \citep{folland2013real}\\ 
+Let $X$ be a \textbf{locally compact Hausdorff} space and $K \subseteq U \subseteq X$ where $K$ is \textbf{compact} and $U$ is \textbf{open}.  Then there exists a \textbf{continuous} map
+\begin{align*}
+f : X \rightarrow [0, 1]
+\end{align*}
+such that $f(x) = 1$ for \textbf{every} $x \in K$, and $f(x) = 0$ for $x$ outside a \textbf{compact subset} of $U$.
+\end{theorem}
+
+\item \begin{corollary}\citep{folland2013real}\\ 
+Every \textbf{locally compact Hausdorff} space is \textbf{completely regular}.
+\end{corollary}
+
+\item \begin{proposition} \citep{reed1980methods}\\
+Let $\cC(X)$ be the set of all complex-valued \textbf{continuous functions} on $X$ and $\cC_{\bR}(X) \subseteq \cC(X)$ be the set of all \textbf{real-valued continuous functions} on $X$. Also define $\cC^{b}(X)$ as the set of all complex-valued \textbf{bounded continuous functions} on $X$. When $X$ is \textbf{a compact space}, $\cC^{b}(X) = \cC(X)$.  Define the norm as 
+\begin{align*}
+\norm{f}{\infty} &= \sup_{x\in X}\abs{f(x)}.
+\end{align*} Then for \underline{\textbf{compact Hausdorff space} $X$}, \underline{$\cC(X)$ is a (complex) \textbf{Banach space}} and $\cC(X)$ is \textbf{a (real) Banach space}.
+\end{proposition}
+
+%\item \begin{theorem} (\textbf{Tietze Extension Theorem}) \citep{munkres1975topology, reed1980methods}\\
+%Let $X$ be a \textbf{compact} space and let $Y \subset X$ be \textbf{closed}. Let $f$ be any \textbf{continuous real-valued function} on $Y$.
+%Then there is a continuous real-valued function $\widetilde{f} \in \cC_{\bR}(X)$ so that $f(y) = \widetilde{f}(y)$ for all $y \in Y$.
+%\end{theorem}
+
+\item \begin{theorem} (\textbf{Embedding Theorem}).  \citep{munkres2000topology}\\
+Let $X$ be a space in which one-point sets are closed. Suppose that $\{f_{\alpha}\}_{\alpha \in J}$ is an indexed family of \textbf{continuous} functions $f_{\alpha}: X \rightarrow \bR$ satisfying the requirement that for each point $x_0$ of $X$ and each neighborhood $U$ of $x_0$, there is an index $\alpha$ such that $f_{\alpha}$ is \textbf{positive} at $x_0$ and \textbf{vanishes outside $U$}. Then the function $F : X \rightarrow \bR^J$ defined by
+\begin{align*}
+F(x) = \paren{f_{\alpha}(x)}_{\alpha \in J}
+\end{align*}
+is a \underline{\textbf{topological embedding}} of $X$ in $\bR^J$ . If $f_{\alpha}$ maps $X$ into $[0, 1]$ for each α$\alpha$  then $F$ \textbf{embeds} $X$ in
+$[0, 1]^J$.
+\end{theorem}
+
+\item \begin{definition} (\emph{\textbf{Separation} of \textbf{Points} From \textbf{Closed} Set by \textbf{Continuous} Functions})\\
+\emph{\textbf{A family of continuous functions}} that satisfies the hypotheses of \emph{the embedding theorem above} is said to \emph{\textbf{separate points from closed sets in $X$}}. 
+
+The existence of such a family is readily seen to be \emph{equivalent}, for a space $X$ in which one-point sets are \emph{closed}, to the requirement that $X$ be \emph{completely regular}.
+\end{definition}
+
+\item \begin{corollary} (\textbf{Embedding Equivalent Definition} of \textbf{Completely Regular}) \citep{munkres2000topology}\\
+A space $X$ is \textbf{completely regular} \textbf{if and only if} it is \textbf{homeomorphic} to a subspace of $[0, 1]^J$ for some $J$.
+\end{corollary}
+
+\item \begin{theorem} (\textbf{Tietze Extension Theorem}) \citep{munkres2000topology, reed1980methods}\\
+Let $X$ be a \textbf{normal space}; let $A$ be a \textbf{closed subspace} of $X$.
+\begin{enumerate}
+\item Any \textbf{continuous} map of $A$ into the \textbf{closed interval} $[a, b]$ of $\bR$ may be \textbf{extended}
+to a \textbf{continuous} map of \textbf{all of $X$} into $[a, b]$.
+\item Any \textbf{continuous} map of $A$ into $\bR$ may be \textbf{extended} to a \textbf{continuous} map of \textbf{all of $X$} into $\bR$.
+\end{enumerate}
+\end{theorem}
+
+%\item \begin{theorem} (\textbf{Tietze Extension Theorem}) \citep{munkres2000topology, reed1980methods}\\
+%Let $X$ be a \textbf{compact} space and let $Y \subset X$ be \textbf{closed}. Let $f$ be any \textbf{continuous real-valued function} on $Y$.
+%Then there is a \textbf{continuous} real-valued function $F \in \cC_{\bR}(X)$ so that $f(y) = \widetilde{f}(y)$ for all $y \in Y$.
+%\end{theorem}
+
+\item \begin{theorem} (\textbf{Tietze Extension Theorem, Locally Compact Version}) \citep{folland2013real}\\
+Let $X$ be a \textbf{locally compact Hausdorff space}; let $K$ be a \textbf{compact subspace} of $X$. If $f \in \cC(K)$ is a \textbf{continuous} map of $K$ into $\bR$,   there exists a \textbf{continuous} extension $F \in \cC(X)$ of \textbf{all of $X$} into $\bR$ such that $F|_{K} = f$. Moreover, $F$ may be taken to \textbf{vanish}\textbf{ outside a compact set}.
+\end{theorem} 
+\end{itemize}
+
+\subsection{Metrization}
+\begin{itemize}
+\item \begin{theorem} (\textbf{The Urysohn Metrization Theorem}). \citep{munkres1975topology, folland2013real}\\
+Every \textbf{second countable} \textbf{normal} space is \textbf{metrizable}.
+\end{theorem}
+
+% \item \begin{proposition}
+% A \textbf{Hausdorff} locally convex space is \textbf{metrizable} if and only if the metric topology $(X,d)$ is generated from a countable set of semi-norms $\set{q_{\theta},\theta\in \Theta}$ for $\Theta$ countable. 
+%\end{proposition}
+\end{itemize}
+
+\subsection{Nets and Convergence in Topological Space}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Directed System of Index Set}})\\
+A \underline{\emph{\textbf{directed system}}} is \emph{an index set} $I$ together with an \emph{\textbf{ordering}} $\prec$ which satisfies:
+\begin{enumerate}
+\item If $\alpha, \beta \in l$ then there exists $\gamma \in I$ so that $\gamma \succ \alpha$ and $\gamma \succ \beta$.
+\item $\prec$  is a \textbf{\emph{partial ordering}}.
+\end{enumerate}
+\end{definition}
+
+\item \begin{definition} (\textbf{\emph{Net}})\\
+A \underline{\emph{\textbf{net}}} in a topological space $X$ is a mapping from a \emph{directed system} $I$ to $X$; we denote it by $\set{x_\alpha}_{\alpha \in I}$
+\end{definition}
+
+\item \begin{remark} (\emph{Net vs. Sequence})\\
+\emph{\textbf{Net}} is a generalization and abstraction of \emph{\textbf{sequence}}. The directed system $I$ is \emph{\textbf{not necessarily countable}}. So $\set{x_\alpha}_{\alpha \in I}$ may not be a countable sequence. \emph{A sequence is a net with countable index set $I \subseteq \bN$}. The directed system can be any set e.g. a graph.
+\end{remark}
+
+\item \begin{definition}
+If $P(\alpha)$ is a \emph{\textbf{proposition}} depending on an \emph{\textbf{index}} $\alpha$ in a \emph{directed set} $I$ we say \underline{\emph{\textbf{$P(\alpha)$ is eventually true}}} if there is a $\beta$ in $I$ with $P(\alpha)$ \emph{true} if \emph{for all} $\alpha \succ \beta$. 
+
+We say \underline{\emph{\textbf{$P(\alpha)$ is frequently true}}} if it is \emph{\textbf{not eventually false}}, that is, if for any $\beta$ \emph{there exists} an $\alpha \succ \beta$ with $P(\alpha)$ \emph{true}.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Convergence}})\\
+A \emph{\textbf{net}} $\set{x_\alpha}_{\alpha \in I}$  in a topological space $X$ is said to \underline{\emph{\textbf{converge}}} to a point $x \in X$ (written $x_{\alpha} \rightarrow x$) if for \textbf{\emph{any neighborhood}} $N$ of $x$, \emph{\textbf{there exists}} a $\beta \in l$ so that $x_{\alpha} \in N$ if $\alpha \succ \beta$. The point $x$ that being converged to is called \underline{\emph{\textbf{the limit point}}} of  $x_{\alpha}$.
+
+Note that if $x_\alpha \rightarrow x$, then $x_{\alpha}$ is \emph{\textbf{\underline{eventually} in all neighborhoods of}} $x$. If $x_{\alpha}$ is \emph{\textbf{\underline{frequently} in any neighborhood of}} $x$, we say that $x$ is a \underline{\emph{\textbf{cluster point}}} of $x_{\alpha}$. 
+\end{definition}
+
+
+\item \begin{remark}
+This definition \emph{generalizes} the $\epsilon$-$\delta$ language for convergence in metric space.  Notice that the notions of \emph{limit} and \emph{cluster point} generalize the same notions for sequences in a metric space..
+\end{remark} 
+
+\item \begin{proposition} \citep{reed1980methods}\\
+Let $A$ be a set in a topological space $X$. Then, a point $x$ is in the \textbf{closure} of $A$ if and only if there is a net $\set{x_\alpha}_{\alpha \in I}$ with $x_{\alpha} \in A$, So that $x_{\alpha} \rightarrow x$.
+\end{proposition}
+
+\item \begin{proposition} \citep{reed1980methods}
+\begin{enumerate}
+\item (\textbf{Continuous Function}): A function $f$ from a topological space $X$ to a topological space $Y$ is \textbf{continuous} if and only if for \textbf{every convergent net} $\set{x_\alpha}_{\alpha \in I}$ \textbf{in $X$}, with $x_{\alpha} \rightarrow x$, the net $\{f(x_{\alpha})\}_{\alpha \in I}$ \textbf{converges in $Y$} to $f(x)$.
+\item (\textbf{Uniqueness of Limit Point for Hausdorff Space}): Let $X$ be a \textbf{Hausdorff space}. Then a net $\set{x_\alpha}_{\alpha \in I}$ in $X$ can have \textbf{at most one limit}; that is, if $x_{\alpha} \rightarrow x$ and $x_{\alpha} \rightarrow y$, then $x = y$.
+\end{enumerate}
+\end{proposition}
+
+\item \begin{definition}
+A net  $\set{x_\alpha}_{\alpha \in I}$ is a \underline{\emph{\textbf{subnet}}} of a net  $\set{y_\beta}_{\beta \in J}$ if and only if there is
+a function $F: I \rightarrow J$ such that
+\begin{enumerate}
+\item $x_\alpha = y_{F(\alpha)}$ for each $\alpha \in I$.
+\item For all $\beta' \in J$, there is an $\alpha' \in I$ such that $\alpha \succ \alpha'$ implies $F(\alpha) \succ \beta'$ (that is,
+$F(\alpha)$ is \emph{\textbf{eventually} \textbf{larger} than any fixed} $\beta \in J$).
+\end{enumerate}
+\end{definition}
+
+\item \begin{proposition}
+A point $x$ in a topological space $X$ is a \textbf{cluster point} of a \textbf{net} $\set{x_\alpha}_{\alpha \in I}$ if and only if \textbf{some subnet} of $\set{x_\alpha}_{\alpha \in I}$ \textbf{converges} to $x$.
+\end{proposition}
+
+\item \begin{theorem} (\textbf{The Bolzano-Weierstrass Theorem}) \citep{reed1980methods} \\
+A space $X$ is \textbf{compact} if and only if \textbf{every net} in $X$ \textbf{has a convergent subnet}.
+\end{theorem}
+\end{itemize}
+
+
+
+\section{Special Space}
+\begin{itemize}
+\item \begin{remark} (\emph{\textbf{Metric Space} and \textbf{Compact Hausdorff Space}})\\
+Two of the most well-behaved classes of spaces to deal with in mathematics are \emph{\textbf{the metrizable spaces}} and \emph{\textbf{the compact Hausdorff spaces}}. 
+\begin{enumerate}
+\item \underline{\emph{\textbf{Metrizable space $(X ,d)$}}}: 
+\begin{itemize}
+\item \emph{\textbf{subspace}} of \emph{metrizable} space is \emph{meterizable};
+\item \emph{\textbf{compact subspace}} of \emph{metric} space is \emph{\textbf{bounded}} in that metric and is \emph{\textbf{closed}};
+\item \emph{every metrizable space} is \emph{\textbf{normal}} ($T_4$);
+\item \emph{\textbf{compactness}} $=$ \emph{\textbf{sequential compactness}} $=$ \emph{\textbf{limit point compactness}};
+\item \emph{\textbf{sequence lemma}}: for $A \subset X$,  $x \in \bar{A}$ if and only if  there exists a squence of points in $A$ that converges to $x$.  ($\Rightarrow$ need $X$ being metric space);
+\item $f$ is \emph{\textbf{continuous}} at $x$ if and only if $x_n \rightarrow x$ leads to $f(x_n) \rightarrow f(x)$ ($\Leftarrow$ part holds for metric space)
+\item \emph{\textbf{unform limit theorem}}: If the \emph{range} of $f_n$ is a \emph{metric space} and $f_n$ are \emph{continuous}, then $f_n \rightarrow f$ \emph{uniformly} means that $f$ is a \emph{continuous} function. 
+\item \emph{\textbf{unform continuity theorem}}: if $f$ is a \emph{countinous} map between two \emph{metric spaces}, and the domain is \emph{\textbf{compact}}, then $f$ is \emph{\textbf{uniformly continuous}}.
+\item every metric space is \emph{\textbf{first-countable}}.
+\end{itemize}
+
+\item \underline{\emph{\textbf{Compact Hausdorff Space}}}:
+\begin{itemize}
+\item \emph{\textbf{subspace}} of \emph{compact Hausdorff space} is \emph{compact Hausdorff} if and only if it is \emph{\textbf{closed}}. 
+\item \emph{\textbf{closed subspace}} of \emph{compact} space is \emph{\textbf{compact}}; 
+\item \emph{\textbf{compact subspace}} of \emph{Hausdorff} space is \emph{\textbf{closed}};
+\item \emph{compact Hausdorff space} $X$ is \textbf{\emph{normal}} ($T_4$), thus it is \emph{\textbf{completely regular}};
+\item \emph{\textbf{arbitrary product}} of \emph{compact (Hausdorff)}  space is \emph{compact (Hausdorff)};
+\item \emph{\textbf{compactness}} $\Rightarrow$ \emph{\textbf{sequential compactness}};
+\item  \emph{\textbf{compactness}} $=$ \emph{\textbf{net compactness}}, i.e. every \emph{net} has a convergence \emph{subnet};
+\item \emph{\textbf{image}} of \emph{compact} space under continuous map $f$ is \emph{compact};
+\item \emph{\textbf{continuous bijection}} between two \emph{compact Hausdorff} spaces is a \emph{\textbf{homemorphism}} (and is a \emph{\textbf{closed map}});
+\item \emph{\textbf{closed graph theorem}}: $f$ is \emph{\textbf{continuous}} if and only if its \emph{\textbf{graph}} is \emph{\textbf{closed}};
+\item \emph{\textbf{uncountability}}: for \emph{compact Hausdorff space}, if the space has \emph{no isolated points}, then it is \emph{uncountable};
+\item if compact Hausdorff space is \emph{\textbf{second-countable}}, then it is \emph{\textbf{metrizable}}.
+\end{itemize}
+\end{enumerate}
+\end{remark}
+\end{itemize}
+
+
+%\subsection{Measures on Compact Space}
+%\begin{itemize}
+%\item Let $X$ be a \emph{compact Hausdorff }space and let $f\in \cC_{\bR}(X)$ is the real-valued continuous functions on $X$. Then $f^{-1}([a,\infty)) = \bigcap_{k=1}^{\infty}f^{-1}((a-\frac{1}{k}, \infty))$ is a \emph{compact} $G_{\delta}$ set. 
+
+%
+%\item A $\sigma$-algebra generated by \emph{compact} $G_{\delta}$'s in a \emph{compact space} $X$ is called the family of \emph{Baire sets}. \citep{reed1980methods}
+%
+%\item A function $f: X\rightarrow \bR$ measureable relative to this $\sigma$-field are called \emph{Baire functions}. 
+%
+%\item A measure $\mu$ on the Baire sets is called a Baire measure if it satisfies all the axioms (nonnegative, countably additive, finite additive) and it is finite, $\mu(X)<\infty$.\\[10pt]
+%
+%\item Every Baire measure is \emph{regular}; i.e., it is outer regular
+%\begin{align*}
+%\mu(Y) &= \inf\set{\mu(B): B\supset Y, B\text{ is open and Baire}};
+%\end{align*}
+%and inner regular
+%\begin{align*}
+%\mu(Y) &= \sup\set{\mu(C): C\subset Y, C\text{ is compact and Baire}};
+%\end{align*}
+%
+%\item A Baire measure can be extended to all Borel sets (Borel measure is a Baire measure). The extension is not unique, but there is only one regular extension to a Borel measure; i.e. 
+%\begin{align*}
+%\mu(Y) &= \inf\set{\mu(B): B\supset Y, B\text{ is open}};\\
+%&=\sup\set{\mu(C): C\subset Y, C\text{ is compact and Borel}}
+%\end{align*}
+%
+%\item There exists a one-to-one correspondence between Baire measure and regular Borel measure. 
+%
+%\item If $\mu$ is a Borel measure, then $\cC(X)$ is dense in $\cL^{1}(X,d\mu)$ if and only if $\mu$ is regular. 
+%
+%If $\mu$ is regular, every Borel set is almost everywhere a Baire set in the sense that given a Borel set $Y$, there is a Baire set $\tilde{Y}$ with
+%\begin{align*}
+%\int \abs{\ind{Y} - \ind{\tilde{Y}}}d\mu &\equiv \mu\paren{Y- \tilde{Y}}+ \mu\paren{\tilde{Y}-Y} = 0
+%\end{align*}
+%
+%\item Any Baire function is equal, up to a change on a Borel set of measure zero, a Borel function. 
+%
+%\item In \emph{compact metric space} $X$, every compact set is a $G_{\delta}$ set, so the Baire sets and Borel sets are identical. \\[15pt]
+%
+%\item Consider a map $\ell_{\mu}: \cC(X) \rightarrow \bC$ given by $f \mapsto \ell_{\mu}(f)\equiv \int f d\mu$, where $\ell_{\mu}$ is a linear functional on $\cC(X)$ and 
+%\begin{align*}
+%\abs{\ell_{\mu}(f)} &\le \int \abs{f}d\mu \le \norm{f}{\infty}\mu(X).
+%\end{align*}
+%So $\ell_{\mu}$ is a \emph{continuous linear functional} on $\cC(X).$
+%
+%\item  In fact, $\norm{\ell_{\mu}}{\cC(X)^{*}}\equiv \mu(X)$, for $f=1$
+%
+%\item \begin{definition}
+%A \emph{positive linear functional} on $\cC(X)$ is a (not necessarily a priori continuous) linear functional $\ell$ with $\ell(f)\ge 0$ pointwise. 
+%\end{definition}
+% Then $\ell_{\mu}$ is positive. 
+% 
+%\item  Any Baire measure $\mu$ is associated with a positive continuous linear functional $\ell_{\mu}$ on $\cC(X)$.\\[10pt]
+%
+%\item (Riesz-Markov Theorem)\\
+%Let $X$ be compact Hausdorff space. For any positive linear functional $\ell$ on $\cC(X)$ there is a unique Baire measure $\mu$ on $X$ with 
+%\begin{align*}
+%\ell(f) &= \int f \; d\mu 
+%\end{align*}
+%
+%\item In general, a pointwise limit of a net of Baire functions is not a Barie or even a Borel function. 
+%
+%\item If $\set{f_{\alpha}}_{\alpha\in I}$ is a net of functions with each $f_{\alpha}$ continuous and $\set{f_{\alpha}}$ is increasing in the sense that $f_{\alpha} \ge f_{\beta}$ for $\alpha \succ \beta$, then $f=\lim_{\alpha}f_{\alpha} = \sup_{\alpha}f_{\alpha}$ is Borel function. This is because
+%\begin{align*}
+%f^{-1}((a,\infty)) &= \bigcup_{\alpha}f_{\alpha}^{-1}((a,\infty))
+%\end{align*} is open \\[15pt]
+%
+%\item The \emph{dual space} of $\cC_{\bR}(X)$, $\cC_{\bR}(X)^{*}$ consists of all continuous linear functional $\ell$ on $\cC_{\bR}(X)$. And $\ell = \ell_{\mu_{1}} - \ell_{\mu_{2}}$, that is any $\ell\in \cC_{\bR}(X)^{*}$ is the difference of two positive continuous linear functionals. 
+%
+%\item For $\cM(X) = \cC(X)^{*}$, $\cM_{+}(X) = \set{\ell\in \cM(X) \;|\; \ell \text{ is positive linear functionals}  }$ and $\cM_{+, 1}(X) = \set{\ell\in \cM(X) \;|\; \ell \text{ is positive linear functionals and }\norm{\ell}{} = 1  }$.
+%
+%$\cM_{+, 1}(X) $ is convex and $\cM_{+}(X) $ is convex cone. \\[15pt]
+%
+%\item \begin{definition}
+%A Baire measure on $X$, a \emph{locally compact space}, is a measure on the Baire sets for which $\mu(C)<\infty$ for any compact Baire set $C$. 
+%\end{definition}
+%
+%Note that we associate $\mu$ on locally compact space to the restriction of Baire measure on compact $G_{\delta}$ sets. And conversely a family of measures $\set{\mu_{C}}$ one for each compact $G_{\delta}$ set, with property $\mu_{C}(Y)= \mu_{D}(Y)$ if $Y\subset C\cap D$, defines a Baire measure on $X$.\\
+%
+%\item  \begin{definition}
+%For $X$ locally compact, $\kappa(X)$, the \emph{algebra of continuous functions of compact support}, is the set of functions that vanish outside some compact set. $\cC_{\infty}(X)$ is the \emph{algebra of all continuous function that vanish at} $\infty$, is the set of $f\in \cC(X)$ with property that for any $\epsilon>0$, there is a compact set $D_{\epsilon} \subset X$ such that $\abs{f(X)}<\epsilon$ if $x\not\in D_{\epsilon}$. 
+%
+%$\kappa(X)\subset \cC_{\infty}(X) \subset \cC(X)$.
+%\end{definition}
+
+%\item \begin{theorem}
+%If $\mu$ is a Baire measure, then $\cC(X) \subset \cL^{p}(X, d\mu)$ for all $p$ and $\cC(X)$ is dense in $\cL^{1}(X, d\mu)$ or any $\cL^{p}$ space for $p<\infty$. (In general, not $\cL^{\infty}$).
+%\end{theorem}
+%
+%\vspace{15pt}
+%\item \begin{proposition}
+%Let $\ell$ be a positive linear functional. Then $\ell$ is continuous and $\norm{\ell_{\mu}}{\cC(X)^{*}}\equiv \ell(1)$,
+%\end{proposition}
+%\begin{proof}
+%Suppose that $f$ is real. Since $-\norm{f}{\infty} \le f \le \norm{f}{\infty}$, we have $-\ell(1)\norm{f}{\infty} \le \ell(f) \le \ell(1)\norm{f}{\infty}$; that is, $\abs{\ell(f)} \le \norm{f}{\infty}\ell(1)$. If $f$ is arbitrary, $\ell(f) = r\exp(j\phi)$ with $r$ real and positive, so
+%\begin{align*}
+%\abs{\ell(f)} = \ell\paren{\Re\brac{ \exp(-j\phi)f}}\le \norm{\Re\brac{\exp(-j\phi)f}}{\infty}\ell(1) \le \norm{f}{\infty}\ell(1)
+%\end{align*}\qed
+%\end{proof}
+%
+%\vspace{15pt}
+%\item \begin{theorem} (Riesz-Markov Theorem)\\
+%Let $X$ be compact Hausdorff space. For any positive linear functional $\ell$ on $\cC(X)$ there is a unique Baire measure $\mu$ on $X$ with 
+%\begin{align*}
+%\ell(f) &= \int f \; d\mu 
+%\end{align*}
+%\end{theorem}
+%\begin{proof}
+%Remark: recover $\mu$ from any positive linear functional (w/o know the form of $\ell_{\mu}$)
+%\begin{enumerate}
+%\item $\mu$ is regular, so to find $\mu(Y)$, we only need to find compact subset $C\subset Y$ and $\mu(C)$; then 
+%$\mu(Y) = \sup\set{\mu(C): C\subset Y, C\text{ is compact and Baire}};$
+%\item $\mu$ is positive; so $\mu(C) \le \ell_{\mu}(f)$ if $f\ge \ind{C}$.
+%\item Thus, we only need to show that, given any $\epsilon>0$, there exists $f\in \cC(X)$ with $f\ge \ind{C}$ and $\ell_{\mu}(f) \le \mu(C)+ \epsilon$;
+%\item Since $\mu$ is outer regular, given $\epsilon>0$, there exists open set $O$ with $\mu(O-C)< \epsilon$ and $C\subset O$.
+%\item Use the Urysohn's lemma \citep{munkres1975topology}, show that we can find continuous separation $f\in \cC(X)$ with $0\le f\le 1$ and $f(x)= 1$ if $x\in C$ and $f(x)=0$ if $x\in X-O$.
+%\item This indicates that $\ell(f)\le \mu(O)\le \mu(C)+\epsilon$, as desired;
+%\item This shows that $\mu$ can be recovered from $\ell_{\mu}$; then we can find a measure from an arbitrary $\ell$. 
+%\end{enumerate}
+%\end{proof}
+%
+%\vspace{15pt}
+%\item \begin{theorem}(Monotone convergence for nets) \citep{reed1980methods}\\
+%Let $\mu$ be a regular \emph{Borel measure} on a compact Hausdorff space $X$. Let $\set{f_{\alpha}}_{\alpha\in I}$ be an increasing net of continuous functions. Then $f=\lim_{\alpha}f_{\alpha} = \sup_{\alpha}f_{\alpha} \in \cL^{1}(X, d\mu)$ if and only if $\sup_{\alpha}\norm{f_{\alpha}}{1}<\infty$ and in that case, $\lim_{\alpha}\norm{f- f_{\alpha}}{1}= 0$.
+%\end{theorem}
+%
+%\vspace{15pt}
+%\item \begin{lemma}\citep{reed1980methods}
+%Let $f, g\in \cC_{\bR}(X)$ with $f,g\ge 0$. Suppose $h\in \cC_{\bR}(X)$ and $0\le h \le f+g$. Then we can write $h = h_{1}+ h_{2}$ with $0\le h_{1}\le f$, $0\le h_{2}\le g$, $h_{1}, h_{2}\in \cC_{\bR}(X)$.
+%\end{lemma}
+%\begin{proof}
+%Let $h_{1} = \min\set{f, h}$. Then $0\le h_{1}\le f$ and if $h_{2} \equiv h- h_{1}$, then $h_{2}\ge 0$. Moreover, if $h_{1}(x)= h(x)$, then $h_{2}(x)=0\le g(x)$ and if $h_{1}(x) = f(x)$ then $h_{2}(x) = h(x)- f(x)\le f(x)+ g(x)-f(x) = g(x)$, so $h_{2}\le g$.\qed
+%\end{proof}
+%\vspace{15pt}
+%\item \begin{theorem}
+%Let $X$ be compact space and  $\ell\in \cC_{\bR}(X)^{*}$. Then $\ell$ can be written as $\ell = \ell_{+} - \ell_{-}$, with $\ell_{+}$ and $\ell_{-}$ are two positive linear functionals. Moreover, $\norm{\ell}{}= \ell_{+}(1)+ \ell_{-}(1)$ and this uniquely determines $\ell_{+}$ and $\ell_{-}$.
+%\end{theorem}
+%\begin{proof}
+%For $f\in \cC_{\bR_{+}}(X) = \set{f\in \cC_{\bR}(X)\;| f\ge 0}$, define $\ell_{+}(f) = \sup\set{\ell(h)\;|\; 0\le h\le f,\; h\in \cC_{\bR}(X)}$. Since $\abs{\ell(h)}\le \norm{\ell}{}\norm{h}{\infty} \le \norm{\ell}{}\norm{f}{\infty},$ this supremum is finite.
+%
+%Clearly, $\ell_{+}(tf) = t\ell_{+}(f)$ for any $t>0$ and $\ell_{+}(f)\ge \ell(0) = 0$ for all $f\in \cC_{\bR_{+}}(X)$. Let $f,g\in \cC_{\bR_{+}}(X)$, by the lemma above, 
+%\begin{align*}
+%\ell_{+}(f+g) &= \sup\set{\ell(h)\;|\; 0\le h\le f+g,\; h\in \cC_{\bR}(X)}\\
+%&=  \sup\set{\ell(h_{1}+h_{2})\;|\; 0\le h_{1}\le f, 0\le h_{2}\le g,\; h_{1}, h_{2}\in \cC_{\bR}(X)}\\
+%&= \ell_{+}(f)+\ell_{+}(g).
+%\end{align*} 
+%
+%For any $f\in \cC_{\bR}(X)$, define $f_{+} = \max\set{f, 0}$ and $f_{-} = -\min\set{f,0}$, so $f= f_{+}- f_{-}$. Define $\ell_{+}(f)= \ell_{+}(f_{+})- \ell_{+}(f_{-}).$ It is then easy to show that $\ell_{+}$ is linear on $\cC(X)$. By definition, $\ell_{+}(f)\ge \ell(f)$ if $f\ge 0$ so $\ell_{-}(f)\equiv \ell_{+}(f) - \ell(f)$ is a positive linear functional. We have thus $\ell = \ell_{+}- \ell_{-}$ as the difference of two positive linear functionals. 
+%
+%To show that $\norm{\ell}{}= \ell_{+}(1)+ \ell_{-}(1)$, we note first $\norm{\ell}{} \le \norm{\ell_{+}}{}+ \norm{\ell_{-}}{}= \ell_{+}(1)+ \ell_{-}(1)$. To show the alternative direction, we first write $\ell_{-}$ in a way symmetric to $\ell_{+}$. For $f\ge 0$, 
+%\begin{align*}
+%\ell_{-}(f) &= \sup\set{\ell(h)- \ell(f)\;|\; 0\le h\le f }\\
+%&= \sup\set{\ell(k)\;|\; -f\le k\le 0}
+%\end{align*} where $k= h-f$.
+%
+%Thus 
+%\begin{align*}
+%\ell_{+}(1)+ \ell_{-}(1) &= \sup\set{\ell(h)\;|\; 0\le h\le 1}+ \sup\set{\ell(k)\;|\; -1\le k\le 0}\\
+%&=\sup\set{\ell(g)\;|\; -1\le g\le 1}\\
+%&\le \norm{\ell}{}\sup\set{\norm{g}{\infty}\;|\; -1\le g\le 1}\\
+%&= \norm{\ell}{}
+%\end{align*}
+%The uniqueness is straightforward. \qed
+%\end{proof}
+%\vspace{15pt}
+%\item \begin{theorem}
+%For $X$ a compact space, the dual of $C(X)$, $C(X)^{*}$ consists of all complex Baire measures (finite linear combination of Baire measures). \\[15pt]
+%\end{theorem}
+%
+%\item \begin{theorem} (Riesz-Markov Theorem)\\
+%Let $X$ be locally compact Hausdorff space. A positive linear functional $\ell$ on $\kappa(X)$ is of the form 
+%\begin{align*}
+%\ell(f) &= \int f \; d\mu 
+%\end{align*}
+%for some Baire measure $\mu$. A positive linear functional on $C_{\infty}(X)$ comes form a measure $\mu$ with\emph{ total finite mass}, that is, $\sup\limits_{A\in \srB}\mu(A)< \infty$. 
+%\end{theorem} 
+%
+%Note that there exists a topology on $\kappa(X)$ with dual as the complex Baire measures, but the topology is not induced from the norm $\norm{\cdot}{\infty}$, since $\kappa(X)$ is \emph{not} a complete space in $\norm{\cdot}{\infty}$. The completion is  $C_{\infty}(X)$ with norm $\norm{\cdot}{\infty}$ and the dual space is the \emph{finite measures}. 
+%\end{itemize}
+
+
+
+\newpage
+\section{Summary of Preservation of Topological Properties}
+\begin{table}[h!]
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\belowdisplayskip}{-10pt}
+\setlength{\abovedisplayshortskip}{0pt}
+\setlength{\belowdisplayshortskip}{0pt}
+\footnotesize
+\centering
+\caption{Summary of Preservation of Topological Properties Under Transformations}
+\label{tab: preservation}
+%\setlength{\extrarowheight}{1pt}
+\renewcommand\tabularxcolumn[1]{m{#1}}
+\small
+\begin{tabularx}{1\textwidth} { 
+  | >{\raggedright\arraybackslash} m{3cm}
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X  | }
+ \hline
+  &  \emph{\textbf{subspace}} &  \emph{\textbf{product space}} &  \emph{\textbf{image of continuous function}}   \\
+  \hline \vspace{5pt}
+\emph{\textbf{connected}}  \vspace{2pt} & $\checkmark$  &   $\checkmark$ under \emph{\textbf{product topology}}  &   $\checkmark$  \\
+\hline \vspace{5pt}
+\emph{\textbf{locally connected}}  \vspace{2pt} & if \emph{\textbf{open and connected}} subspace, $\checkmark$  & if \emph{\textbf{all but finitely many} of spaces are \textbf{connected}},  $\checkmark$  & in general  $\times$  \\
+ \hline \vspace{5pt}
+\emph{\textbf{compact}}  \vspace{2pt} & if \emph{\textbf{closed}} subspace, $\checkmark$;  & for \emph{\textbf{arbitrary}} product, $\checkmark$ & $\checkmark$ \\
+ \hline \vspace{5pt}
+\emph{\textbf{locally compact}}  \vspace{2pt} & if \emph{\textbf{closed} or \textbf{open}} subspace and Hausdorff, $\checkmark$  & if \emph{\textbf{finite}} product, $\checkmark$; if \emph{\textbf{infinite}} product $\times$ & if $f$ is a \emph{\textbf{perfect map}}, then $\checkmark$; in general $\times$ \\
+ \hline \vspace{5pt}
+\emph{\textbf{first-countable}} \vspace{2pt}  &  $\checkmark$ & if \emph{\textbf{countable}} product, $\checkmark$ &  if $f$ is a \emph{\textbf{open map}}, then $\checkmark$; in general $\times$ \\
+\hline \vspace{5pt}
+\emph{\textbf{second-countable}}  \vspace{2pt}  &  $\checkmark$ & if \emph{\textbf{countable}} product, $\checkmark$ &  if $f$ is a \emph{\textbf{open map or perfect map}}, then $\checkmark$; in general $\times$ \\
+\hline \vspace{5pt}
+\emph{\textbf{separable}}  \vspace{2pt}  & if metrizable, then $\checkmark$; in general $\times$ & if \emph{\textbf{countable}} product, $\checkmark$  & $\checkmark$\\
+\hline \vspace{5pt}
+\emph{\textbf{Lindel\"of}}  \vspace{2pt}  & if metrizable, then $\checkmark$; in general $\times$  & $\times$ & $\checkmark$ \\
+\hline \vspace{5pt}
+\emph{\textbf{$T_1$ axiom}}  \vspace{2pt}  &  $\checkmark$ & for \emph{\textbf{arbitrary}} product, $\checkmark$ &  in general $\times$ \\
+\hline \vspace{5pt}
+\emph{\textbf{Hausdorff $T_2$}}  \vspace{2pt}   & $\checkmark$  & for \emph{\textbf{arbitrary}} product, $\checkmark$ & if $f$ is a \emph{\textbf{perfect map}}, then $\checkmark$; in general $\times$ \\
+\hline \vspace{5pt}
+\emph{\textbf{regular $T_3$}}  \vspace{2pt}  & $\checkmark$  & for \emph{\textbf{arbitrary}} product, $\checkmark$ & if $f$ is a \emph{\textbf{perfect map}}, then $\checkmark$ ; in general $\times$ \\
+\hline \vspace{5pt}
+\emph{\textbf{completely regular}}  \vspace{2pt}  & $\checkmark$  & for \emph{\textbf{arbitrary}} product, $\checkmark$ & in general $\times$ \\
+\hline \vspace{5pt}
+\emph{\textbf{normal $T_4$}}  \vspace{2pt}  & $\times$  & $\times$ &  $\times$ \\
+\hline \vspace{5pt}
+\emph{\textbf{paracompact}}  \vspace{2pt}  & if \emph{\textbf{closed}} subspace, $\checkmark$;  &  $\times$  &  $\times$ \\
+\hline \vspace{5pt}
+\emph{\textbf{topologically complete}}  \vspace{2pt}  & for \emph{\textbf{closed} or \textbf{open}} subspace, $\checkmark$  &  if \emph{\textbf{countable}} product, $\checkmark$  &  $\times$ \\
+\hline
+\end{tabularx}
+\end{table}
+
+
+
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{reference.bib}
+\end{document}
