@@ -15,7 +15,7 @@
 
 - Measure Theory, Abstract Integration, Probability Theory
 
-- Monte Carlo Methods
+- [Monte Carlo Methods](./self-study/monte_carlo_methods/README.md)
 
 - Natural Language Processing
 
