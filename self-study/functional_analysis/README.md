@@ -35,7 +35,10 @@
 
 - Topology Basis
 
+- Locally Convex Space
+
 - Compactness in Function Spaces
+  - Equicontinuity and Ascoli's Theorem 
   - Weak Topology
   - Weak-star Topology
   - Banach-Alaugu Theorem
@@ -45,7 +48,6 @@
   - Riesz-Markov Theorem
   - Dual Space of Continuous Function with Compact Support
   
-- Locally Convex Space
 
 - Bounded Linear Operator
   - Spectrum
