@@ -1,0 +1,16 @@
+\contentsline {section}{\numberline {1}Metrization Theorems and Paracompactness}{2}
+\contentsline {subsection}{\numberline {1.1}Paracompactness}{2}
+\contentsline {subsubsection}{\numberline {1.1.1}Local Finiteness}{2}
+\contentsline {subsubsection}{\numberline {1.1.2}Paracompactness}{3}
+\contentsline {subsubsection}{\numberline {1.1.3}Partition of Unity}{5}
+\contentsline {subsection}{\numberline {1.2}Metrization Theorems}{5}
+\contentsline {subsubsection}{\numberline {1.2.1}The Nagata-Smirnov Metrization Theorem}{5}
+\contentsline {subsubsection}{\numberline {1.2.2}The Smirnov Metrization Theorem}{5}
+\contentsline {section}{\numberline {2}Complete Metric Spaces and Function Spaces}{6}
+\contentsline {subsection}{\numberline {2.1}Complete Metric Space}{6}
+\contentsline {subsection}{\numberline {2.2}Compactness in Metric Spaces}{8}
+\contentsline {subsubsection}{\numberline {2.2.1}Total Boundedness and Equicontinuous}{8}
+\contentsline {subsubsection}{\numberline {2.2.2}Pointwise and Compact Convergence}{9}
+\contentsline {subsubsection}{\numberline {2.2.3}Ascoli's Theorem}{12}
+\contentsline {section}{\numberline {3}Baire Spaces}{13}
+\contentsline {section}{\numberline {4}The Fundamental Group}{14}
