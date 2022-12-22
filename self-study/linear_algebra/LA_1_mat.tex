@@ -1,0 +1,296 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs, dsfont}
+\usepackage{tabularx}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Lecture 1: Fundamentals of Linear Algebra and Matrix Analysis}
+\author{Tianpei Xie}
+\date{Sep. 1st., 2022}
+\maketitle
+\tableofcontents
+\newpage
+\allowdisplaybreaks
+\section{Basics in Linear Algebra}
+\begin{itemize}
+\item A \emph{\textbf{vector space}} over a field $F$ is a set $V$ together with two operations,  the (vector) addition $+: V\times V \rightarrow V$ and scale multiplication $\cdot: \bR\times V \rightarrow V$, that satisfy the eight axioms listed below:
+for all $\mb{x, y, z}\in V$, $\alpha, \beta\in F$, 
+\begin{enumerate}
+\item The \emph{associativity} of addition: $\mb{x}+ (\mb{y}+ \mb{z}) = (\mb{x}+ \mb{y})+ \mb{z}$;
+\item The \emph{commutativity} of addition:  $\mb{x}+ \mb{y} = \mb{y}+ \mb{x}$;
+\item The \emph{identity} of addition: $\exists\;\mb{0}\in V$	 such that $\mb{0}+ \mb{x} = \mb{x}$;
+\item The \emph{inverse} of addition: $\forall\, \mb{x}\in V$, $\exists\;-\mb{x}\in V$, so that $\mb{x}+ (- \mb{x}) = \mb{0}$;
+\item \emph{Compatibility} of scalar multiplication with field multiplication: $\alpha(\beta \cdot\mb{x}) = (\alpha\beta)\cdot\mb{x}$;
+\item The \emph{identity} of scalar multiplication: $\exists\, 1\in F$, such that $1\cdot \mb{x} = \mb{x}$;
+\item The \emph{distributivity} of scalar multiplication with respect to vector addition: $\alpha\cdot (\mb{x}+\mb{y})= \alpha\cdot \mb{x}+ \alpha\cdot \mb{y}$;
+\item The \emph{distributivity} of scalar multiplication with respect to field addition: $(\alpha+ \beta)\cdot \mb{x} = \alpha\cdot \mb{x}+ \beta\cdot\mb{x}$.	
+\end{enumerate}
+Elements of $V$ are commonly called \emph{vectors}. Elements of $F$ are commonly called \emph{scalars}.\\
+
+\item A vector space $X$ endowed with a topology is called a \emph{topological vector space}, denoted as $(X, \srT)$, if the addition $+: X\times X \rightarrow X$ and scale multiplication $\cdot: \bR\times X \rightarrow X$ are continuous. 
+
+\item A \emph{\textbf{subspace}} $S \subset V$ over a field $F$ is, by itself, a vector space over $F$ that \emph{is closed} under the same operations of the vector addition and scalar multiplication as in $V$.
+
+The subsets $\{0\}$ and $V$ are always subspaces of $V$ , so they are often called \emph{trivial subspaces}; a subspace of $V$ is said to be \emph{nontrivial} if it is different from both $\{0\}$ and $V$. We call $\{0\}$ the \emph{zero vector space}. A subspace of $V$ is said to be a \emph{proper subspace} if it is not equal to $V$.
+
+\item A \emph{\textbf{linear combination}} of vectors in a vector space $V$ over a field $F$ is any expression
+of the form $a_1\mb{v}_1 + \ldots + a_k\mb{v}_k$ in which $k$ is a \emph{positive integer}, $a_1, \ldots, a_k \in F$, and $\mb{v}_1, \ldots, \mb{v}_k \in V$. 
+
+A linear combination is \emph{trival} if $a_1=\ldots = a_{k} = 0$; otherwise, it is \emph{nontrivial}. A linear combination is by definition a sum of \emph{finitely many elements} of a vector space. 
+\item The \emph{span} of a nonempty subset $S$ of $V$, $\text{span}(S)$, consists of \emph{all linear combinations} of finitely many vectors in $S$. 
+
+\item Let $S_1$ and $S_2$ be subspaces of a vector space over a field $F$. The \emph{sum} of $S_1$ and $S_2$ is the \emph{subspace}
+\begin{align*}
+S_1 + S_2 = \text{span}\{S_1 \cap S_2\} = \{\mb{x} + \mb{y} : \mb{x} \in S_1, \mb{y} \in S_2\}
+\end{align*} If $S_1 \cap S_2 = \{0\}$, we say that the sum of $S_1$ and $S_2$ is a \emph{direct sum} and write it as $S_1 \oplus S_2$; every $\mb{z} \in S_1 \oplus S_2$ can be written as  $\mb{z} = \mb{x} + \mb{y}$ with $\mb{x} \in S_1$ and $\mb{y} \in S_2$ in one and \emph{only one way}.
+\end{itemize}
+
+\subsection{Linear indepenence}
+\begin{itemize}
+\item We say that a finite list of vectors $\mb{v}_1, \ldots, \mb{v}_k$ in a vector space $V$ over a field $F$ is \emph{\textbf{linearly dependent}} \emph{if and
+only if} there are scalars $a_1, \ldots, a_k \in F$, \emph{not all} zero, such that $a_1\mb{v}_1 + \ldots + a_k\mb{v}_k = \mb{0}$. Thus, a list of vectors $\mb{v}_1, \ldots, \mb{v}_k$ is \emph{linearly dependent} if and only if some \emph{nontrivial} linear combination of $\mb{v}_1, \ldots, \mb{v}_k$ is the zero vector. A list of vectors  $\mb{v}_1, \ldots, \mb{v}_k$ is said to have \emph{length} $k$.
+
+\item A finite list of vectors $\mb{v}_1, \ldots, \mb{v}_k$ in a vector space $V$ over a field $F$ is \emph{\textbf{linearly independent}} if and only if  $a_1\mb{v}_1 + \ldots + a_k\mb{v}_k = \mb{0} \Leftrightarrow a_1= \ldots = a_k = 0$. 
+\item A list of vectors are linearly independent if and only if \emph{every finite sublist} is linearly independent. Any list of vectors that \emph{contains the zero} vector is linearly dependent.
+
+\item The \emph{\textbf{cardinality}} of a finite set is the number of its (necessarily distinct) elements. If  $\mb{v}_1, \ldots, \mb{v}_k$ are linearly independent, then the cardinality of the set $\{\mb{v}_1, \ldots, \mb{v}_k\}$ is $k$, i.e. there is no element that is identical to others.
+
+\item A set $S$ of vectors is said to be linearly independent if \emph{every finite list of distinct vectors} in $S$ is linearly independent; $S$ is said to be linearly dependent if some finite list of distinct vectors in $S$ is linearly dependent.
+
+\item A \emph{linearly independent} list of vectors in a vector space $V$ whose span is $V$ is a \emph{\textbf{basis}} for $V$. Each element of $V$ can be represented as a linear combination of vectors in a basis in \textbf{one \emph{unique} way}.
+\begin{align*}
+V = \text{span}(\set{\mb{v}_1, \ldots, \mb{v}_k}) = \set{\mb{v}\in V: \mb{v} = a_1\mb{v}_1 + \ldots + a_k\mb{v}_k, a_i \in F}
+\end{align*} Note that removing one basis vector will result is some $\mb{v}$ that cannot be linear represented by the rest. 
+
+\item A linearly independent list of vectors $(\set{\mb{v}_1, \ldots, \mb{v}_k}$ in $V$ is a basis of $V$ if and only if no list of vectors that properly \emph{contains it} is linearly independent, i.e. it is a maximum list of independent vectors. 
+\item A list of vectors that \emph{spans} $V$ is a basis for $V$ if and only if \emph{no proper sublist} of it spans $V$. The empty list is a basis for the zero vector space.
+
+\item Any \emph{linearly independent} list of vectors in a vector space $V$ may be \emph{extended}, perhaps in more than one way, to a \emph{basis} of $V$. 
+\end{itemize}
+
+\subsection{Dimensions}
+\begin{itemize}
+\item If there is a positive integer $n$ such that a \emph{basis} of the vector space $V$ contains exactly $n$ vectors, then \emph{every basis} of $V$ consists of exactly $n$ vectors; this common cardinality of bases is the \textbf{\emph{dimension}} of the vector space $V$ and is denoted by $\text{dim}(V)$. Here $V$ is \emph{finite-dimensional}.
+
+In the \emph{infinite-dimensional} case, there is a one-to-one correspondence between the elements of any two bases.
+
+\item Let $V$ be a finite-dimensional vector space and let $S_1$ and $S_2$ be two given subspaces of $V$. The \emph{\textbf{subspace intersection lemma}} is
+\begin{align}
+\text{dim}(S_{1}) + \text{dim}(S_{2}) &= \text{dim}(S_1 \cap S_2) + \text{dim}(S_1 + S_2) \label{eqn: subspace_intersection_lemma}
+\end{align} The following inequality is true
+\begin{align}
+\text{dim}(S_1 \cap S_2)  & \ge \text{dim}(S_{1}) + \text{dim}(S_{2}) - \text{dim}(V) \label{eqn: subspace_intersection_inequality}
+\end{align} reveals the useful fact that if $\delta = \text{dim}(S_{1}) + \text{dim}(S_{2}) - \text{dim}(V) \ge 1$, then the subspace $S_1 \cap S_2$ has dimension at least $\delta$, and hence it contains $\delta$ linearly independent vectors, namely, any $\delta$ elements of a \emph{basis} of $S_1 \cap S_2$. 
+
+This statement can be extended. If $S_1, \ldots , S_k$ are subspaces of $V$, and if $\delta = \text{dim}(S_{1}) + \ldots +\text{dim}(S_{k}) - (k-1)\text{dim}(V) \ge 1$, then
+\begin{align}
+\text{dim}(S_1 \cap \ldots \cap S_k) & \ge \delta \label{eqn: subspace_intersection_inequality_k}
+\end{align}
+\end{itemize} 
+
+\subsection{Isomorphism}
+\begin{itemize}
+\item If $U$ and $V$ are vector spaces over the same scalar field $F$, and if $f: U \rightarrow V$ is an \emph{invertible} function such that $f(a\mb{x} + b\mb{y}) = af(\mb{x}) + b f(\mb{y})$ for all $\mb{x}, \mb{y} \in U$ and all $a, b \in F$, then $f$ is said to be an \emph{\textbf{isomorphism}} and $U$ and $V$ are said to be \emph{\textbf{isomorphic}} ("\emph{same structure}"). Isomorphism is a \emph{bijective} (one-to-one and onto) mapping that \emph{preserve} linear operations.
+
+\item Two \emph{finite-dimensional} vector spaces over the same field are \emph{isomorphic} if and only if they have \emph{the same dimension}.
+
+\item Any n-dimensional vector space over $F$ is isomorphic to $F^n$.
+
+\item Specifically, if $V$ is an $n$-dimensional vector space over a field $F$ with specified basis $B = \{\mb{x}_1, . . . , \mb{x}_n\}$, then, since any element $\mb{x} \in V$ may be written uniquely as $\mb{x} = a_1\mb{x}_1 + \ldots + a_n\mb{x}_n$ in which each $a_i \in F$, we may identify $\mb{x}$ with the $n$-vector $[\mb{x}]_{B} = [a_1, \ldots, a_n]^T$. For any basis $B$, the mapping $\mb{x} \rightarrow [\mb{x}]_{B}$ is an \emph{isomorphism} between $V$ and $F^n$. $[\mb{x}]_{B}$ is referred as the \emph{\textbf{cooridnate}} of $\mb{x}$ in $V$. $B$ forms a \emph{coordinate system} of $V$.
+\end{itemize}
+
+\section{Basics in Matrix}
+\begin{itemize}
+\item A \emph{\textbf{matrix}} is an $m$-by-$n$ array of scalars from a field $F$. If $m = n$, the matrix is said to be \emph{square}. The set of \emph{all} $m$-by-$n$ matrices over $F$ is denoted by $M_{m,n}(F)$, and $M_{n,n}(F)$ is often denoted by $M_n(F)$. 
+\begin{align*}
+\mb{A} &= \brac{\begin{array}{ccc}
+a_{1,1}& \ldots& a_{1,n}\\
+\ldots & \ldots & \ldots \\
+a_{m,1}& \ldots& a_{m,n}
+\end{array}} := [a_{i,j}]_{m \times n}
+\end{align*}
+
+\item The vector spaces  $M_{n,1}(F)$ and $F^n$ are identical. 
+
+\item A \emph{submatrix} of a given matrix is a \emph{rectangular} array lying in specified \emph{subsets} of the rows and columns of a given matrix. 
+
+\item Suppose that $A = [a{i,j}] \in M_{n,m}(F)$. The \emph{\textbf{main diagonal}} of $A$ is the list of entries $a_{1,1}, a_{2,2}, \ldots, a_{q,q}$, in which $q = \min\{n, m\}$, denoted as $\diag{A} = [a_{i.i}]_{i=1}^{q} \in F^q$.
+
+The $p$-th \emph{superdiagonal} of $A$ is the list $a_{1, p+1}, a_{2, p+2}, \ldots , a_{k, p+k}$, in which $k = \min\{n, m - p\}$, $p = 0, 1, 2, \ldots, m-1$; 
+the $p$-th \emph{subdiagonal} of $A$ is the list $a{p+1,1}, a{p+2,2}, \ldots, a{p+l,l}$, in which $l= \min\{n - p, m\}$, $p = 0, 1, 2, . . . , n - 1$.
+\end{itemize}
+
+\subsection{Linear transformation}
+
+\subsection{Matrix operations}
+
+
+\subsection{Rank}
+
+\subsection{Nonsingularity}
+
+\section{The Euclidean inner product and norm}
+
+\section{Partition set and matrices}
+\subsection{Submatrices}
+\begin{itemize}
+\item Let $\mb{A} \in M_{m, n}(F)$. For index sets $\alpha \subset \set{1,\ldots, m}$ and $\beta \subset \set{1,\ldots,n}$, we denote by $\mb{A}[\alpha, \beta]$ the (sub)matrix of entries that lie in the rows of $\mb{A}$ indexed by $\alpha$ and the columns indexed by $\beta$. 
+
+\item If $\alpha = \beta$, the submatrix $\mb{A}[\alpha] = \mb{A}[\alpha, \alpha]$ is a \emph{\textbf{principal submatrix}} of  $\mb{A}$. An $n$-by-$n$  matrix has $n \choose k$ distinct principal submatrices of size $k$
+
+\item For $\mb{A} \in M_{n}(F)$ and $k \subset \set{1,\ldots,n}$, $\mb{A}[\set{1,\ldots,k}]$ is a \emph{\textbf{leading principal submatrix}} and $\mb{A}[\set{k,\ldots,n}]$ is a \emph{trailing principal submatrix}.
+
+\item The \emph{\textbf{determinant}} of an $r$-by-$r$ submatrix of A is called a \emph{\textbf{minor}}; if we wish to
+indicate the size of the submatrix, we call its determinant \emph{a minor of size $r$}.
+
+If the $r$-by-$r$  submatrix is a principal submatrix, then its determinant is a \emph{\textbf{principal minor}} (of size $r$); if the submatrix is a leading principal matrix, then its determinant is a \emph{\textbf{leading principal minor}}; if the submatrix is a trailing principal submatrix, then its determinant is a \emph{trailing principal minor}.
+
+\item A \emph{\textbf{signed}} minor, such as those appearing in the Laplace expansion $[(-1)^{i+ j} \det \mb{A}_{i,j}]$ is called a \emph{\textbf{cofactor}}; if we wish to indicate the size of the submatrix, we call its signed determinant a \emph{cofactor of size $r$}.
+
+\item Suppose that $\mb{A} \in M_{n}(F)$ and $\text{rank}(\mb{A}) = r$. We say that $\mb{A}$ is \emph{\textbf{rank principal}} if it has a nonsingular $r$-by-$r$ principal submatrix. 
+
+If there is some index set $\alpha \subseteq \set{1,\ldots,n}$ such that
+\begin{align}
+\text{rank}(\mb{A}) &= \text{rank}(\mb{A}[\alpha, \emptyset^{c}]) =  \text{rank}(\mb{A}[ \emptyset^{c}, \alpha]) \label{eqn: rank_principal}
+\end{align} (that is, if there are $r$ linearly independent rows of $\mb{A}$ such that the corresponding $r$ columns are linearly independent), then $\mb{A}$ is rank principal; moreover, $\mb{A}[\alpha]$ is nonsingular.
+\end{itemize}
+
+
+\subsection{The inverse of a partitioned matrix}
+\begin{itemize}
+\item Given $\mb{A} \in M_{n}(F)$ and $\mb{A}^{-1}$ are also nonsingular. For simplicity, let $\mb{A}$ be partitioned as a 2-by-2 block matrix
+\begin{align*}
+\mb{A} = \brac{ \begin{array}{cc}
+\mb{A}_{1,1} & \mb{A}_{1,2}\\
+\mb{A}_{2,1} & \mb{A}_{2,2}
+\end{array} }
+\end{align*} with $\mb{A}_{i,i} \in M_{n_i}(F)$, $i = 1, 2$, and $n_1 + n_2 = n$.  A useful expression for the correspondingly \textbf{partitioned} presentation of $\mb{A}^{-1}$ is
+\begin{align}
+\mb{A}^{-1} &= \brac{ \begin{array}{cc}
+\paren{\mb{A}_{1,1} -   \mb{A}_{1,2} \mb{A}_{2,2}^{-1}\mb{A}_{2,1}}^{-1}& -\mb{A}_{1,1}^{-1}\mb{A}_{1,2} \paren{\mb{A}_{2,2} -   \mb{A}_{2,1} \mb{A}_{1,1}^{-1}\mb{A}_{1,2}}^{-1}\\
+-\mb{A}_{2,2}^{-1}\mb{A}_{2,1}\paren{\mb{A}_{1,1} -   \mb{A}_{1,2} \mb{A}_{2,2}^{-1}\mb{A}_{2,1}}^{-1} & \paren{\mb{A}_{2,2} -   \mb{A}_{2,1} \mb{A}_{1,1}^{-1}\mb{A}_{1,2}}^{-1}
+\end{array} }\label{eqn: block_matrix_inversion}
+\end{align} assuming that all the relevant inverses exist. The block diagonal terms $(\mb{A}^{-1}_{1,1}, \mb{A}^{-1}_{2,2})$ are the \underline{\textbf{\emph{inverse of Schur complement}}} with respect to $\mb{A}_{2,2}$ and $\mb{A}_{1,1}$, respectively.
+
+\item Let $\mb{A} = [a_{i,j}] \in M_{n}(F)$ be given and suppose that $\alpha \subset \set{1,\ldots,n}$ is an index set such that $\mb{A}[\alpha]$ is nonsingular. An important formula for $\det{\mb{A}}$, based on the 2-partition of $\mb{A}$ using $\alpha$ and $\alpha^c$, is
+\begin{align}
+\det{\mb{A}} &= \det\paren{\mb{A}[\alpha]}\; \det\paren{\mb{A}[\alpha^{c}] - \mb{A}[\alpha^{c}, \alpha]\, \mb{A}[\alpha]^{-1}\, \mb{A}[ \alpha, \alpha^{c}]} \label{eqn: det_decom_schur}
+\end{align}
+The special matrix
+\begin{align}
+\mb{S}:= \mb{A}/ \mb{A}[\alpha] &=  \mb{A}[\alpha^{c}] - \mb{A}[\alpha^{c}, \alpha]\, \mb{A}[\alpha]^{-1}\, \mb{A}[ \alpha, \alpha^{c}] \label{eqn: schur_compl}
+\end{align} is called the \underline{\textbf{\emph{Schur complement}}} of $\mb{A}[\alpha]$ in $\mb{A}$. Thus we have
+\begin{align}
+\det{\mb{A}} &=  \det\paren{\mb{A}[\alpha]} \; \det\paren{\mb{A}/ \mb{A}[\alpha]}\label{eqn: det_decom_schur2}
+\end{align}
+\begin{align}
+ \brac{ \begin{array}{cc}
+\mb{I} & \mb{0}\\
+-\mb{A}_{2,1}\mb{A}_{1,1}^{-1} &\mb{I} 
+\end{array} }\, \brac{ \begin{array}{cc}
+\mb{A}_{1,1} & \mb{A}_{1,2}\\
+\mb{A}_{2,1} & \mb{A}_{2,2}
+\end{array} }\,
+ \brac{ \begin{array}{cc}
+\mb{I}  & -\mb{A}_{1,1}^{-1}\mb{A}_{1,2} \\
+\mb{0} & \mb{I} 
+\end{array} } &= \brac{ \begin{array}{cc}
+\mb{A}_{1,1} & \mb{0}\\
+\mb{0}&  \mb{A}_{2,2} - \mb{A}_{2,1} \mb{A}_{1,1}^{-1} \mb{A}_{1,2}
+\end{array} }  \nonumber \\
+&= \brac{ \begin{array}{cc}
+\mb{A}_{1,1} & \mb{0}\\
+\mb{0}& \mb{A}/\mb{A}_{1,1}
+\end{array} }\label{eqn: block_mat_diagonal_schur_comp} 
+\end{align}
+
+\item $\mb{A}$ is nonsingular \emph{if and only} if both $\mb{A}_{1,1}$ and its the Schur complement $\mb{A}/ \mb{A}_{1,1}$ are nonsingular, since $\det{\mb{A}} = \det\paren{\mb{A}_{1,1}}\det\paren{\mb{A}/ \mb{A}_{1,1}}$. If $\mb{A}$ is nonsingular, then $\det \paren{\mb{A}/ \mb{A}_{1,1}} = \det \mb{A} / \det \mb{A}_{1,1}$.
+
+\item We can have alternative expression in inverse of block matrix for Schur complement $\mb{S} := \mb{A}/ \mb{A}_{1,1}$
+\begin{align}
+\mb{A}^{-1} &= \brac{ \begin{array}{cc}
+\mb{A}_{1,1} + \mb{A}_{1,1}^{-1}\mb{A}_{1,2}\mb{S}^{-1}\mb{A}_{2,1}\mb{A}_{1,1}^{-1} & -\mb{A}_{1,1}^{-1}\mb{A}_{1,2}\mb{S}^{-1}\\
+-\mb{S}^{-1}\mb{A}_{2,1}\mb{A}_{1,1}^{-1} &\mb{S}^{-1}
+\end{array} }\label{eqn: block_matrix_inversion_2}
+\end{align}
+\end{itemize}
+
+\subsection{The Sherman-Morrison-Woodbury formula}
+Suppose that a nonsingular matrix $\mb{A} = [a_{i,j}] \in M_{n}(F)$ has a known inverse $\mb{A}^{-1}$ and consider $\mb{B} = \mb{A} + \mb{X} \mb{R} \mb{Y}$ , in which $\mb{X}$ is $n$-by-$r$, $\mb{Y}$ is $r$-by-$n$, and $\mb{R}$ is $r$-by-$r$ and nonsingular. If $\mb{B}$ and $\mb{R}^{-1} + \mb{Y} \mb{A}^{-1}  \mb{X}$  are nonsingular, then
+\begin{align}
+\mb{B}^{-1} = \paren{ \mb{A} + \mb{X} \mb{R} \mb{Y}}^{-1} &= \mb{A}^{-1} - \mb{A}^{-1}\mb{X}\paren{\mb{R}^{-1} + \mb{Y} \mb{A}^{-1}  \mb{X}}^{-1} \mb{Y}\mb{A}^{-1}  \label{eqn: sherman_morrison_woodbury}
+\end{align} If $r$ is much smaller than $n$, then $\mb{R}$ and $\mb{R}^{-1} + \mb{Y} \mb{A}^{-1}  \mb{X}$ may be much easier to invert than $\mb{B}$.
+For instance
+\begin{align}
+\paren{ \mb{A} + \mb{x}\mb{y}^{T}}^{-1} &=  \mb{A}^{-1} -  \frac{\mb{A}^{-1}\mb{x}\mb{y}^{T}\mb{A}^{-1}}{1 + \mb{y}^{T} \mb{A} \mb{x}}\label{eqn: sherman_morrison_woodbury_rank_1_inverse}
+\end{align} if $\mb{A} = \mb{I}$ and $ \mb{y}^{T}\mb{x} \neq -1$ then
+\begin{align}
+\paren{ \mb{I} + \mb{x}\mb{y}^{T}}^{-1} &=  \mb{I} -  \frac{\mb{x}\mb{y}^{T}}{1 + \mb{y}^{T} \mb{x}} \label{eqn: sherman_morrison_woodbury_rank_1_inverse2}
+\end{align}
+
+
+\subsection{Complementary nullities}
+
+\subsection{Rank in a partitioned matrix and rank-principal matrices}
+
+\subsection{Commutativity}
+
+
+\section{Determinant}
+\subsection{Definition and basic properties}
+\subsection{Elementary row and column operations}
+
+\subsection{Reduced row echelon form}
+
+\subsection{Compound matrices}
+
+\subsection{The adjugate and the inverse}
+
+\subsection{Cramer’s rule}
+
+\subsection{Minors of the inverse}
+
+\subsection{Schur complements and determinantal formulae}
+
+\subsection{Determinantal identities of Sylvester and Kronecker}
+
+\subsection{The Cauchy-Binet formula}
+Let $\mb{A} \in M_{m, k}(F)$, $\mb{B} \in M_{k, n}(F)$, and $\mb{C} = \mb{A}\mb{B}$. Furthermore, let $1 \le r \le \min\{m, k, n\}$,
+and let  $\alpha \subseteq \set{1,\ldots, m}$ and $\beta \subseteq \set{1,\ldots,n}$  be index sets, each of \emph{cardinality} $r$. An
+expression for the $\alpha, \beta$ minor of $\mb{C}$ is
+\begin{align}
+\det\paren{\mb{C}[\alpha, \beta]} &= \sum_{\gamma}\det\paren{\mb{A}[\alpha, \gamma]}\det\paren{\mb{B}[\gamma, \beta]}, \label{eqn: cauchy_binet}
+\end{align} where the sum is taken over \emph{all} index sets  $\gamma \subseteq  \set{1,\ldots, k}$ of cardinality $r$.
+
+\subsection{The Laplace expansion theorem}
+
+
+
+\subsection{Derivative of the determinant}
+
+\subsection{Adjugates and compounds}
+
+\section{Equivalence relations}
+
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{book_reference.bib}
+\end{document}
