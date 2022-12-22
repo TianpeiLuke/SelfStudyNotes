@@ -1,0 +1,7 @@
+\contentsline {section}{\numberline {1}Introduction}{2}
+\contentsline {section}{\numberline {2}Value-function approximation as supervised learning}{3}
+\contentsline {subsection}{\numberline {2.1}The objective of prediction}{4}
+\contentsline {section}{\numberline {3}Stochastic gradient and semi-gradient methods}{4}
+\contentsline {section}{\numberline {4}Linear methods}{6}
+\contentsline {subsection}{\numberline {4.1}Choice of basis function / feature construction }{8}
+\contentsline {section}{\numberline {5}Function approximation via Artificial Neural Networks}{11}
