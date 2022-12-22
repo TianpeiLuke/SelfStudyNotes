@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: diff_geo_cs.aux
+The style file: plainnat.bst
+Database file #1: book_reference.bib.bib
+You've used 6 entries,
+            2773 wiz_defined-function locations,
+            626 strings with 5492 characters,
+and the built_in function-call counts, 1977 in all, are:
+= -- 155
+> -- 82
+< -- 9
++ -- 30
+- -- 24
+* -- 120
+:= -- 326
+add.period$ -- 20
+call.type$ -- 6
+change.case$ -- 20
+chr.to.int$ -- 6
+cite$ -- 12
+duplicate$ -- 120
+empty$ -- 193
+format.name$ -- 34
+if$ -- 409
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 12
+newline$ -- 39
+num.names$ -- 24
+pop$ -- 67
+preamble$ -- 1
+purify$ -- 20
+quote$ -- 0
+skip$ -- 82
+stack$ -- 0
+substring$ -- 12
+swap$ -- 9
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 36
+warning$ -- 0
+while$ -- 18
+width$ -- 0
+write$ -- 86

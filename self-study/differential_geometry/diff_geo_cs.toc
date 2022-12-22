@@ -1,0 +1,28 @@
+\contentsline {section}{\numberline {1}Definitions and concepts}{3}{}%
+\contentsline {subsection}{\numberline {1.1}Curves}{3}{}%
+\contentsline {subsection}{\numberline {1.2}Surfaces}{3}{}%
+\contentsline {subsection}{\numberline {1.3}Normal vector field and the Gauss map}{6}{}%
+\contentsline {subsection}{\numberline {1.4}The intrinsic geometry of surfaces}{8}{}%
+\contentsline {subsection}{\numberline {1.5}Parallel transport and geodesic}{10}{}%
+\contentsline {subsection}{\numberline {1.6}Functions on manifold}{15}{}%
+\contentsline {subsection}{\numberline {1.7}Exponential maps and local polar coordinate system}{17}{}%
+\contentsline {section}{\numberline {2}Summary of shape operator $dN_{p}$}{19}{}%
+\contentsline {section}{\numberline {3}Summary of first and second fundamental form}{21}{}%
+\contentsline {section}{\numberline {4}More understanding of parallel transport, covariant derivative and affine connection}{22}{}%
+\contentsline {section}{\numberline {5}Theorems and Properties for curves and surfaces}{26}{}%
+\contentsline {subsection}{\numberline {5.1}curves and surfaces}{26}{}%
+\contentsline {subsection}{\numberline {5.2}Gauss map}{26}{}%
+\contentsline {subsection}{\numberline {5.3}Intrinsic geometry of surfaces}{28}{}%
+\contentsline {subsection}{\numberline {5.4}Parallel transport and geodesic}{30}{}%
+\contentsline {subsection}{\numberline {5.5}The Gauss-Bonnet theorem with non-Euclidean geometry}{30}{}%
+\contentsline {section}{\numberline {6}Computational tools and formulas}{33}{}%
+\contentsline {subsection}{\numberline {6.1}algebra and calculus}{33}{}%
+\contentsline {subsection}{\numberline {6.2}curves}{33}{}%
+\contentsline {subsection}{\numberline {6.3}surfaces}{33}{}%
+\contentsline {subsection}{\numberline {6.4}Gauss map}{35}{}%
+\contentsline {subsection}{\numberline {6.5}Intrinsic geometry of surfaces}{39}{}%
+\contentsline {subsection}{\numberline {6.6}Functions on manifold}{40}{}%
+\contentsline {subsection}{\numberline {6.7}Parallel transport and geodesic}{41}{}%
+\contentsline {subsection}{\numberline {6.8}Exponential maps and geodesic polar coordinate system}{43}{}%
+\contentsline {subsection}{\numberline {6.9}Geodesic and its computation via Riemannian metric and calculus of variations}{44}{}%
+\contentsline {section}{\numberline {7}Homework and Examples}{46}{}%
