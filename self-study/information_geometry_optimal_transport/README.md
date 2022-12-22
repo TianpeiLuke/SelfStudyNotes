@@ -3,16 +3,28 @@
 ## Book 
 
 ## Table of Contents:
-- Fundamental of Information Geometry
+- Information Geometry
+  - Fundamental Concepts, Differential Geometry
+  - Statistical Manifolds
+    - Statistical Manifold
+    - Riemannian Metric
+    - Vector Fields
+    - Embedding
+   
+  - Information Metrics and Statistical Divergence
+  
+  - Variational Inference
 
-- Fundamental of Optimal Transport
+- Optimal Transport
+  - Optimal Transport Problem
+    - Problem Formulation
+    - Relaxation of Optimal Transport Problem
+    - Dual Formulation
 
-- Optimization Algorithm for Entropic Regularized Optimal Transport
+  - Optimization Algorithm for Entropic Regularized Optimal Transport
 
-- Wasserstein Distance, Variational Wasserstein Problems
+  - Wasserstein Distance, Variational Wasserstein Problems
 
-- Semi-discrete Optimal Transport
+  - Semi-discrete Optimal Transport
 
-- Information Metrics and Statistical Divergence
 
-- Variational Inference
