@@ -22,5 +22,20 @@
       - Function approximation
   - Conditional independence
   - Examples
+    - Ising Models (Binary Markov Random Field)
+    - Gaussian Graphical Models (GGM)
+    - Hidden Markov Chain (HMM)
+    - Conditional Random Field (CRF)
+    - Latent Dirichlet allocation (LDA)
+    - Restricted Boltzmann machine (RBM)
+ 
+- Exponential Families and Variational Representation
+  - 
+- Inference in Tabular-Based Graphical Models
+  - Inference in Graphical Models
+  - Inference for Tabular-Based Graphical Models
+  - Exact Marginal Inference on Tree-Structure Model
+  - Exact Mode Inference on Tree-Structure Model 
+  - Junction Tree Representation
 - 
 
