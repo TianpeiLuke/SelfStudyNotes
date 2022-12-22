@@ -1,0 +1,57 @@
+\begin{thebibliography}{8}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Cover and Thomas(2006)]{thomas2006elements}
+Thomas~M. Cover and Joy~A. Thomas.
+\newblock \emph{Elements of information theory {(2.} ed.)}.
+\newblock Wiley, 2006.
+\newblock ISBN 978-0-471-24195-9.
+
+\bibitem[Csisz{\'a}r et~al.(2004)Csisz{\'a}r, Shields,
+  et~al.]{csiszar2004information}
+Imre Csisz{\'a}r, Paul~C Shields, et~al.
+\newblock Information theory and statistics: A tutorial.
+\newblock \emph{Foundations and Trends{\textregistered} in Communications and
+  Information Theory}, 1\penalty0 (4):\penalty0 417--528, 2004.
+
+\bibitem[Hero et~al.(2001)Hero, Ma, Michel, and Gorman]{hero2001alpha}
+Alfred~O Hero, Bing Ma, Olivier Michel, and John Gorman.
+\newblock Alpha-divergence for classification, indexing and retrieval.
+\newblock In \emph{University of Michigan}. Citeseer, 2001.
+
+\bibitem[Liese and Vajda(2006)]{liese2006divergences}
+Friedrich Liese and Igor Vajda.
+\newblock On divergences and informations in statistics and information theory.
+\newblock \emph{IEEE Transactions on Information Theory}, 52\penalty0
+  (10):\penalty0 4394--4412, 2006.
+
+\bibitem[Nielsen and Nock(2011)]{nielsen2011r}
+Frank Nielsen and Richard Nock.
+\newblock On {R}\'enyi and {T}sallis entropies and divergences for exponential
+  families.
+\newblock \emph{arXiv preprint arXiv:1105.3259}, 2011.
+
+\bibitem[P{\'o}czos and Schneider(2011)]{poczos2011estimation}
+Barnab{\'a}s P{\'o}czos and Jeff Schneider.
+\newblock On the estimation of alpha-divergences.
+\newblock In \emph{Proceedings of the Fourteenth International Conference on
+  Artificial Intelligence and Statistics}, pages 609--617. JMLR Workshop and
+  Conference Proceedings, 2011.
+
+\bibitem[Polyanskiy and Wu(2014)]{polyanskiy2014lecture}
+Yury Polyanskiy and Yihong Wu.
+\newblock Lecture notes on information theory.
+\newblock \emph{Lecture Notes for ECE563 (UIUC) and}, 6\penalty0
+  (2012-2016):\penalty0 7, 2014.
+
+\bibitem[Wan et~al.(2020)Wan, Li, and Hovakimyan]{wan2020f}
+Neng Wan, Dapeng Li, and Naira Hovakimyan.
+\newblock f-divergence variational inference.
+\newblock \emph{Advances in neural information processing systems},
+  33:\penalty0 17370--17379, 2020.
+
+\end{thebibliography}

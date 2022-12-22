@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: info_geo_5_semidiscrete_ot.aux
+The style file: plainnat.bst
+Database file #1: book_reference.bib.bib
+Warning--can't use both volume and number fields in santambrogio2015optimal
+You've used 4 entries,
+            2773 wiz_defined-function locations,
+            623 strings with 5487 characters,
+and the built_in function-call counts, 1540 in all, are:
+= -- 136
+> -- 62
+< -- 5
++ -- 22
+- -- 18
+* -- 111
+:= -- 245
+add.period$ -- 13
+call.type$ -- 4
+change.case$ -- 17
+chr.to.int$ -- 4
+cite$ -- 9
+duplicate$ -- 79
+empty$ -- 141
+format.name$ -- 26
+if$ -- 318
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 5
+newline$ -- 29
+num.names$ -- 16
+pop$ -- 32
+preamble$ -- 1
+purify$ -- 14
+quote$ -- 0
+skip$ -- 60
+stack$ -- 0
+substring$ -- 48
+swap$ -- 6
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 39
+warning$ -- 1
+while$ -- 15
+width$ -- 0
+write$ -- 61
+(There was 1 warning)

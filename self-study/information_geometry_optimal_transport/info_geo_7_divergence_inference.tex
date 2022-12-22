@@ -1,0 +1,241 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs, dsfont}
+\usepackage{tabularx}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+
+
+\begin{document}
+\title{Self-study: Variational Inference via  Divergence Minimization}
+\author{Tianpei Xie}
+\date{ Nov. 9th., 2022 }
+\maketitle
+\tableofcontents
+\newpage
+\section{Statistical Divergence}
+\subsection{Definitions}
+\begin{itemize}
+\item \begin{definition}
+Given a \emph{differentiable manifold} $\cM$ of dimension $n$, a \underline{\emph{\textbf{divergence}}} on $\cM$ is a $C^{2}$-function $\mathds{D}: \cM\times \cM \to [0,\infty )$  satisfying:
+\begin{enumerate}
+\item (\textbf{\emph{non-negativity}}) $\divg{}{p}{q} \geq 0$ for all $p,q\in \cM$;
+\item (\textbf{\emph{positivity}}) $\divg{}{p}{q} =0$ if and only if $p=q$;
+\item At every point $p\in \cM$,  $\divg{}{p}{p+dp}$  is a \emph{\textbf{positive-definite}} quadratic form for infinitesimal displacements $dp$ from $p$. 
+\end{enumerate} The last property means that divergence defines an \emph{inner product} on the \emph{\textbf{tangent space}} $T_{p}\cM$ for every $p\in \cM$. Since $\mathds{D}$ is $C^{2}$ on $\cM$, this defines a \emph{\textbf{Riemannian metric}} $g$ on $\cM$.
+\end{definition}
+
+
+
+
+\item \begin{definition}
+Let $p$, $q$ be $\bR^d \supset \cM_{0}: \rightarrow  \bR$ density functions and let $\alpha \in \bR \setminus \set{1}$. The \emph{\textbf{R\'enyi divergence}} of order $\alpha$ or \underline{\textbf{$\alpha-$divergence}} of a distribution $p$ from a distribution $q$ is defined to be 
+\begin{align}
+\divg{\alpha}{p}{q} &= \frac{1}{\alpha -1}\log\paren{\E{Q}{\paren{\frac{dP}{dQ}}^{\alpha}}}  = \frac{1}{\alpha -1}\log\paren{\int_{ \cM_{0}}p^{\alpha}(x)q^{1-\alpha}(x)\;  \mu(dx)} \label{eqn: alpha_divg}
+\end{align} 
+\end{definition}
+
+\item   \begin{definition}
+Let $P$ and $Q$ be two probability distributions over a space $\Omega$, such that  $P\ll Q$, that is, $P$ is \emph{\textbf{absolutely continuous}} with respect to $Q$. Then, for a \underline{\emph{\textbf{convex function}}}  $f: [0, +\infty)\to (-\infty ,+\infty]$ such that $f(x)$ is finite for all $x>0$, \underline{$f(1)=0$}, and  \underline{$f(0)=\lim _{t\to 0^{+}}f(t)$} (which could be infinite), the \underline{\emph{\textbf{f-divergence}}} of $P$ from $Q$ is defined as
+\begin{align}
+\divg{f}{P}{Q} &= \E{Q}{f\paren{\frac{dP}{dQ}}} =  \int_{\Omega} f\paren{\frac{dP}{dQ}} dQ  =  \int_{\Omega} q(x) f\paren{\frac{p(x)}{q(x)}} \mu(dx)  \label{eqn: f_divg}
+\end{align} The convex function $f$ is referred as \emph{\textbf{generator function}}.
+\end{definition}
+
+\item \begin{definition}
+Let $F: \cX \rightarrow \bR$ be a \emph{continuously-differentiable}, \emph{\textbf{strictly convex}} function defined on a convex set $\cX$. The \underline{\textbf{\emph{Bregman divergence}}} associated with $F$ for points $p,q \in \cX$ is the difference between the value of $F$ at point $p$ and the value of the \emph{first-order Taylor expansion} of F around point $q$ evaluated at point $p$:
+\begin{align}
+\divg{F}{p}{q} &= F(p) - F(q) - \inn{\grad{}{F}(q)}{p - q} \label{eqn: bregman_divg}
+\end{align}
+\end{definition}
+
+\item \begin{definition}
+We suppose $\cX = \cY$ and that for some $p \ge 1$, $c(x,y)= d(x,y)^p$, where $d$ is a distance on $\cX$,  the \underline{\textbf{$p$-Wasserstein distance}} between measures $\alpha, \beta$ on $\cX$ is $\cW_{p}(\alpha, \beta)$, where
+\begin{align}
+\paren{\cW_{p}(\alpha, \beta)}^{p}:= \min_{\substack{(X, Y) \sim \pi; \\ X_{\#}\pi = \alpha,\\ Y_{\#}\pi = \beta}}& \E{(X,Y)}{d(X, Y)^{p}}\label{eqn: wasserstein_dist}
+\end{align}
+\end{definition}
+\end{itemize}
+
+\subsection{KL Divergence for Exponential Families}
+\begin{itemize}
+\item The canonical representation of \underline{\emph{\textbf{exponential famlity}}} of distribution has the following form
+\begin{align}
+p(x_1, \ldots, x_{m}) = p(\mb{x}; \mb{\eta}) &= \exp\paren{\inn{\mb{\eta}}{\mb{\phi}(\mb{x})} - A(\mb{\eta})}h(\mb{x})\nu(d\mb{x}) \nonumber \\
+&= \exp\paren{\sum_{\alpha}\eta_{\alpha}\phi_{\alpha}(\mb{x}) -  A(\mb{\eta})} \label{eqn: exp_fam}
+\end{align} where $\phi$ is a feature map  and $\mb{\phi}(\mb{x})$ defines a set of \emph{\textbf{sufficient statistics}} (or \emph{\textbf{potential functions}}). The normalization factor is defined as
+\begin{align*}
+ A(\mb{\eta}) &:= \log \int \exp\paren{ \inn{\mb{\eta}}{\mb{\phi}(\mb{x})} }h(\mb{x})\nu(d\mb{x}) = \log Z(\mb{\eta})
+\end{align*} $A(\mb{\eta})$ is also referred as \textbf{\emph{log-partition function}} or \emph{cumulant function}. The parameters $\mb{\eta} = (\eta_{\alpha})$ are called \textbf{\emph{natural parameters}}  or \emph{canonical parameters}. The canonical parameter $\set{\eta_{\alpha}}$ forms a \textbf{natural (canonical) parameter space}
+\begin{align}
+\Omega = \set{\mb{\eta} \in \bR^{d}: A(\mb{\eta}) < \infty} \label{eqn: canonical_space}
+\end{align}
+
+\item The exponential family is the unique solution of \textbf{\emph{maximum entropy estimation}} problem:
+\begin{align}
+\min_{q \in \Delta}&\quad \kl{q}{p_{0}} \label{eqn: max_ent}\\
+\text{s.t.}&\quad \E{q}{\phi_{\alpha}(X)} = \mu_{\alpha}\,\quad  \forall\, \alpha \in \cI   \label{eqn: max_ent_mean_constraint}
+\end{align} where $\kl{q}{p_0} = \int \log(\frac{q}{p_0}) q dx = \E{q}{\log\frac{q}{p_0}}$ is the relative entropy or the Kullback-Leibler divergence of $q$ w.r.t. $p_0$.
+
+Here $\mb{\mu} = (\mu_{\alpha})_{\alpha \in \cI}$ is a set of  \textbf{\emph{mean parameters}}. The space of mean parameters $\cM$ is a \emph{convex polytope} spanned by potential functions $\set{\phi_{\alpha}}$.
+\begin{align}
+\cM &:= \set{\mb{\mu} \in \bR^d: \exists q\,\; \text{s.t. } \E{q}{\phi_{\alpha}(X)} = \mu_{\alpha}\,\quad  \forall\, \alpha \in \cI} = \text{conv}\set{\phi_{\alpha}(x),\; x\in \cX, \;\alpha \in \cI}  \label{eqn: marginal_polytope}
+\end{align}
+
+\item Moreover $A(\mb{\eta})$ has a variational form 
+\begin{align}
+A(\mb{\eta}) &=  \sup_{\mb{\mu} \in \cM}\set{ \inn{\mb{\eta}}{\mb{\mu}} - A^{*}(\mb{\mu})} \label{eqn: log_partition_variational_form}
+\end{align}
+where $A^{*}(\mb{\mu})$ is the conjugate dual function of $A$ and it is defined as
+\begin{align}
+A^{*}(\mb{\mu}) &:= \sup_{\mb{\eta} \in \Omega} \set{\inn{\mb{\mu}}{\mb{\eta}} - A(\mb{\eta})} \label{eqn: conjugate_dual_partition}
+\end{align}
+
+It is shown that $A^{*}(\mb{\mu})  = -H(q_{\mb{\eta}(\mb{\mu})})$ for $\mb{\mu} \in  \cM^{\circ}$ which is the negative entropy. $A^{*}(\mb{\mu})$ is also the optimal value for the \textbf{maximum likelihood estimation} problem on $p$. The exponential family can be reparameterized according to its mean parameters $\mb{\mu}$ via backward mapping $(\grad{}{A})^{-1}: \cM^{\circ} \rightarrow  \Omega$, called \textbf{mean parameterization}.
+
+\item We can formulate the \textbf{KL divergence} between two distributions in exponential family $\Omega$ using its primal and dual form
+\begin{itemize}
+\item \textbf{Primal-form}: given $\mb{\eta}_1, \mb{\eta}_2 \in \Omega$
+\begin{align}
+\kl{p_{\mb{\eta}_1}}{p_{\mb{\eta}_2}} \equiv  \kl{\mb{\eta}_1}{\mb{\eta}_2}
+&=  A(\mb{\eta}_2) - A(\mb{\eta}_1) -  \inn{\mb{\mu}_{1}}{\mb{\eta}_2 - \mb{\eta}_1}  \label{eqn: kl_primal}\\
+&\equiv  A(\mb{\eta}_2) - A(\mb{\eta}_1) -  \inn{\grad{}{A}(\mb{\eta}_1)}{\mb{\eta}_2 - \mb{\eta}_1}  \nonumber
+\end{align}
+
+\item \textbf{Primal-dual form}: given $\mb{\mu}_1 \in \cM, \mb{\eta}_2 \in \Omega$
+\begin{align}
+ \kl{\mb{\mu}_1}{\mb{\eta}_2} &= A(\mb{\eta}_2) + A^{*}(\mb{\mu}_1) - \inn{\mb{\mu}_{1}}{\mb{\eta}_2}  \label{eqn: kl_primal_dual}
+\end{align}
+
+\item \textbf{Dual-form}: given $\mb{\mu}_1, \mb{\mu}_2  \in \cM$
+\begin{align}
+ \kl{\mb{\mu}_1}{\mb{\mu}_2} &= A^{*}(\mb{\mu}_1) - A^{*}(\mb{\mu}_{2}) - \inn{\mb{\eta}_2}{\mb{\mu}_{1} - \mb{\mu}_{2}}  \label{eqn: kl_dual} \\
+ &\equiv  A^{*}(\mb{\mu}_1) - A^{*}(\mb{\mu}_{2}) - \inn{\grad{}{A^{*}}(\mb{\mu}_{2})}{\mb{\mu}_{1} - \mb{\mu}_{2}} \nonumber
+\end{align}
+\end{itemize}
+
+\item The dual form is related to the \emph{Bregman divergence}, which induce the \textbf{projection operation}.  We see that dual form $\kl{\mb{\mu}_1}{\mb{\mu}_2} = \divg{A^{*}}{\mb{\mu}_1}{\mb{\mu}_2}$, where $F = A^{*}$ is the negative entropy.
+\end{itemize}
+
+\subsection{$\alpha$-Divergence Properties}
+See papers in \citep{hero2001alpha, nielsen2011r, poczos2011estimation}.
+\begin{itemize}
+\item $\divg{\alpha}{p}{q} = \divg{1-\alpha}{q}{p}$
+\item $\frac{\alpha}{1 - \alpha}\divg{1-\alpha}{p}{q} = \divg{\alpha}{q}{p}$
+\item If $\alpha = -1$, $\divg{(-1)}{p}{q} =\divg{(1)}{q}{p} = \kl{p}{q} \equiv \int_{x} p(x)\log\frac{p(x)}{q(x)} dx $ is the \textbf{Kullback-Leibler divergence}. 
+\item For $p_{\mb{\eta}_1}, q_{\mb{\eta}_2}$ exponential families, $\alpha$-divergence has closed form expression:
+\begin{align}
+\divg{\alpha}{p_{\mb{\eta}_1}}{q_{\mb{\eta}_2}} &= \frac{1}{1- \alpha}\paren{\alpha A(\mb{\eta}_1) + (1-\alpha) A(\mb{\eta}_2) - A(\alpha \mb{\eta}_1 + (1- \alpha)\mb{\eta}_2)} \label{eqn: alpha_divg_exp_fam}
+\end{align} where $A(\mb{\eta})$ is the \textbf{\emph{log-partition function}} or \emph{cumulant function}.
+\end{itemize}
+
+\subsection{$f$-Divergence Properties}
+For more details see tutorials in \citep{csiszar2004information, liese2006divergences} and see lecture notes in \citep{polyanskiy2014lecture}.
+\begin{itemize}
+\item $\divg{f_1 + f_2}{p}{q} = \divg{f_1}{p}{q} + \divg{f_2}{p}{q}$
+
+\item $\divg{f}{p}{q} = \divg{g}{p}{q}$ if $f(x) = g(x) + c(x-1)$ for some $c\in \bR$
+
+\item \emph{\textbf{Reversal by convex inversion}}: for any function $f$, its \emph{\textbf{convex inversion}} is defined as $g(t):=tf(1/t)$. If $f$ satisfies condition for $f$-divergence, then $g$ satisfies the condition as well and $\divg{g}{Q}{P} = \divg{f}{P}{Q}$.
+
+\item \emph{\textbf{Data processing inequality}}: if $\kappa$ is an arbitrary transition probability that transforms measures $P$ and $Q$ into $P_{\kappa}$ and $Q_{\kappa}$ correspondingly, then
+\begin{align}
+\divg{f}{P}{Q} \geq \divg{f}{P_{\kappa }}{Q_{\kappa }}. \label{eqn: f_divg_data_processing_ineq}
+\end{align} The equality here holds if and only if the transition is induced from a \emph{\textbf{sufficient statistic}} with respect to $\{P, Q\}$.
+
+\item \textbf{\emph{Joint Convexity}}: for any $0 \le \lambda \le 1$, 
+\begin{align}
+\divg{f}{\lambda P_{1}+(1-\lambda )P_{2}}{\lambda Q_{1}+(1-\lambda )Q_{2}}  \leq \lambda\divg{f}{P_{1}}{Q_{1}}+ (1-\lambda) \divg{f}{(P_{2}}{Q_{2}}. \label{eqn: f_divg_convex}
+\end{align} This follows from the convexity of the mapping $(p,q) \mapsto q\,f(p/q)$  on $\bR _{+}^{2}$.
+
+\item  
+\begin{theorem} (\textbf{Variational representations}) \citep{polyanskiy2014lecture, wan2020f}\\
+Let $f^{*}$ be the \emph{\textbf{convex conjugate}} of $f$. Let $\mathrm{effdom} (f^{*})$ be the \textit{effective domain} of $f^{*}$, that is,  $\mathrm {effdom} (f^{*})=\{y:\, f^{*}(y)<\infty \}$. Then we have \emph{two \textbf{variational representations}} of $\divg{f}{p}{q}$:
+\begin{align}
+\divg{f}{P}{Q} &= \sup _{g:\, \Omega\, \to \,\mathrm{effdom} (f^{*})} \E{P}{g} - \E{Q}{f^{*}\circ g} \label{eqn: f_divg_variational_representation}
+\end{align}
+\end{theorem}
+
+\item Special cases:
+\begin{enumerate}
+\item \textbf{\emph{KL divergence}} if $f(x) = x \log(x)$:
+\begin{align*}
+\divg{f}{P}{Q} &= \int_{\Omega}dQ \frac{dP}{dQ} \log\paren{\frac{dP}{dQ}}  = \int_{\Omega} dP  \log\paren{\frac{dP}{dQ}} = \E{P}{\log\paren{\frac{dP}{dQ}} }=  \kl{P}{Q}
+\end{align*}
+
+\item \underline{\emph{\textbf{Total Variation divergence}}} if $ f(x)=\frac {1}{2}|x-1|$:
+\begin{align}
+\divg{f}{P}{Q} &= \frac{1}{2} \E{Q}{\abs{\paren{\frac{dP}{dQ}} - 1}} = \frac{1}{2} \int \abs{dP - dQ} := TV(P\!\parallel \!Q)   \label{eqn: f_divg_tv_divg}
+\end{align} It has \emph{variational representation}
+\begin{align}
+TV(P\!\parallel \!Q) &= \sup_{f \in \text{Lip}_1}\E{P}{f(X)} - \E{Q}{f(X)} = \cW_{1}(P, Q) \label{eqn: f_divg_tv_divg_var}
+\end{align} where $\text{Lip}_1 := \set{f : \cX \rightarrow \bR: \norm{f}{\infty} \le 1}$ is Lipschitz function. It is also equal to the Wasserstein-$1$ distance.
+
+\item \underline{\emph{\textbf{$\chi^2$-divergence}}} if $f(x) = (x - 1)^2$:
+\begin{align}
+\divg{f}{P}{Q} &= \E{Q}{\paren{\frac{dP}{dQ} - 1}^2} = \int_{\Omega} \frac{\paren{dP - dQ}^2}{dQ}  :=\chi^2(P\!\parallel \!Q)  \label{eqn: f_divg_chi2_divg}
+\end{align}
+
+\item \underline{\emph{\textbf{Squared Hellinger distance}}}: $f(x) = (1 - \sqrt{x})^2$
+\begin{align}
+\divg{f}{P}{Q} &= \E{Q}{\paren{1 - \sqrt{\frac{dP}{dQ}}}^2} \nonumber\\
+&= \int_{\Omega} \paren{\sqrt{dP} - \sqrt{dQ}}^2 = 2- 2 \int \sqrt{dP\,dQ} := H^2(P\!\parallel \!Q)   \label{eqn: f_divg_hellinger_divg}
+\end{align}
+
+\item \underline{\emph{\textbf{Jensen-Shannon divergence}}}: $f(x) = x \log(\frac{2 x}{x + 1}) + \log(\frac{2}{x + 1})$ ,
+\begin{align}
+\divg{f}{P}{Q} &= \kl{P}{\frac{P + Q}{2}} + \kl{Q}{\frac{P + Q}{2}}  := \divg{JS}{P}{Q}   \label{eqn: f_divg_jensen_divg}
+\end{align}
+
+\item  \underline{\emph{\textbf{Hellinger $\alpha$-divergence}}} $\divg{f_{\alpha}}{p}{q}$ is defined by generator 
+%\begin{align*}
+%f_{\alpha}(x) &:= \left\{ 
+%\begin{array}{cc}
+%\frac{x^{\alpha} - \alpha x - \left( 1 - \alpha \right)}{\alpha  \left(\alpha - 1 \right)} & \text{if}\ \alpha\neq 0,\, \alpha\neq 1, \\
+%    x\log(x)-x+1, & \text{if}\ \alpha=1, \\
+%    - \log(x) +x-1, & \text{if}\ \alpha=0
+%\end{array}
+%\right..
+%\end{align*}
+\begin{align*}
+f^{(\alpha)}(x) &:= \left\{ 
+\begin{array}{cc}
+\frac{4}{(1-\alpha^2)} \set{1 - x^{\frac{(1+\alpha)}{2}}}& \text{if}\ \alpha\neq \pm 1, \\
+    x\log(x), & \text{if}\ \alpha=1, \\
+    - \log(x), & \text{if}\ \alpha=-1
+\end{array}
+\right..
+\end{align*} For $\alpha = \pm 1$, it is the KL divergence. For $\alpha \neq \pm 1$, the corresponding divergence is 
+\begin{align}
+\divg{f^{(\alpha)}}{p}{q} &=\frac{4}{(1-\alpha^2)}\set{1 - \int_{\cX}(p(x))^{\frac{1 + \alpha}{2}}  (q(x))^{\frac{1 - \alpha}{2}} dx } \label{eqn: hellinger_alpha_divergence}
+\end{align}
+
+The R\'enyi divergence and Hellinger $\alpha$-divergence has one-to-one correspondence
+\begin{align*}
+\divg{\frac{\alpha + 1}{2}}{p}{q} &= \frac{2}{\alpha - 1}\log\paren{1- \paren{\frac{1 - \alpha^2}{4}}\divg{f^{(\alpha)}}{P}{Q}}.
+\end{align*} Note that R\'enyi divergence itself is \textbf{not $f$-divergence}.
+
+We can formulate the \emph{\textbf{dual}} of Hellinger $\alpha$-divergence using \emph{\textbf{the conjugate dual}} of  $(f^{(\alpha)})^{*} = f^{(-\alpha)}$.  When $\alpha = 1$, it is the KL divergence.
+
+
+\item  \underline{\emph{\textbf{Bregman divergence}}}:
+The only $f$-divergence that is also a Bregman divergences is the \textbf{KL divergence}. 
+\end{enumerate}
+
+
+\item $f$-divergence is a \textbf{generalization} of  KL divergence from \emph{\textbf{information theorectial perspective}} \citep{thomas2006elements}. Bregman divergence is a generalization of KL divergence from the \emph{\textbf{projection perspective}} as well as \emph{Generalized Pythagorean Theorem}.
+\end{itemize}
+
+\section{Divergence and Variational Inference}
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{book_reference.bib}
+\end{document}

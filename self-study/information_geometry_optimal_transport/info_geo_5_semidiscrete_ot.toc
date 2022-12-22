@@ -1,0 +1,5 @@
+\contentsline {section}{\numberline {1}Optimal transport, entropy regularization, c-transform}{2}
+\contentsline {section}{\numberline {2}Semidiscrete optimal transport}{4}
+\contentsline {subsection}{\numberline {2.1}semidiscrete problem formulation}{4}
+\contentsline {subsection}{\numberline {2.2}K-means via semi-discrete optimal transport}{6}
+\contentsline {subsection}{\numberline {2.3}Entropic regularization}{7}
