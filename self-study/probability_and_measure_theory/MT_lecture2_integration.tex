@@ -1,0 +1,839 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs, dsfont}
+\usepackage{tabularx}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Lecture 2: Lebesgue integration}
+\author{ Tianpei Xie}
+\date{ Jul. 22nd., 2015 }
+\maketitle
+\tableofcontents
+\newpage
+\section{From Riemann integration to Lebesgue integration}
+\subsection{Riemann Integration}
+\begin{itemize}
+\item \begin{definition}
+Let $[a, b]$ be an interval of positive length, and $f : [a, b] \rightarrow \bR$ be a function. A \underline{\emph{\textbf{tagged partition}}}
+$P \equiv ((x_{0}, x_{1}, \cdots, x_{n}); (x'_{1}, \cdots, x'_{n}))$ of $[a, b]$ is a finite sequence of real numbers $a = x_0 < x_1 < \cdots < x_{n} = b$, together with additional numbers $x_{i-1} \le  x'_{i} \le  x_{i}$ for each $1\le i\le n$. We abbreviate $(x_{i}- x_{i-1})$ as $\Delta x_{i}$. The quantity $\Delta(P) \equiv \sup_{1\le i\le n} \Delta x_{i}$ will be called the \emph{\textbf{norm}} of the tagged partition. The \emph{\textbf{Riemann sum}} $\cR(f ; P)$ of $f$ with respect to the tagged partition $P$ is denoted as
+\begin{align*}
+\cR(f ; P) &\equiv \sum_{i=1}^{n}f(x'_{i})\Delta x_{i}
+\end{align*} Then $f$ is said to be \underline{\emph{\textbf{Riemann integrable}}} if there exist a number $\int_{a}^{b}f(x)dx$ such as for any $\epsilon>0$, there exists $\delta>0$, for all $P$ such that $\Delta P < \delta$,  
+\begin{align*}
+\abs{\cR(f ; P) - \int_{a}^{b}f(x)dx} \le \epsilon
+\end{align*}
+holds.
+\end{definition}
+
+\item \begin{remark}
+Note that for $f$ \emph{\textbf{piecewise constant}} in a partition of intervals $[a,b]= \bigcup_{k}^{n} I_{k}$, where $f(x)=c_{k}$ if $x\in I_{k}$ interval, 
+\begin{align*}
+\int_{a}^{b}f(x)dx &= \sum_{k=1}^{n}c_{k}\abs{I_{k}}.
+\end{align*}
+\end{remark}
+
+\item  \begin{definition}
+Given any  tagged partition $P=  ((x_{0}, x_{1}, \cdots, x_{n}); (x'_{1}, \cdots, x'_{n}))$, we can define $g_{i}\equiv \min_{x\in [x_{i-1}, x_{i}]}f(x) \le f(x'_{i})\le \max_{x\in [x_{i-1}, x_{i}]}f(x)\equiv h_{i}$, for all $1\le i\le n$. Define the piecewise constant function $g, h$ on interval $\bigcup_{i}[x_{i-1}, x_{i}]$ so that $g(x) = g_{i}$ if $x\in  [x_{i-1}, x_{i}]$, and $h(x) = h_{i}$ if $x\in  [x_{i-1}, x_{i}]$. Clearly, $g \le f \le h$ on $[0,1]$. Denote the \emph{\textbf{upper and lower \underline{Darboux sums}}} 
+ \begin{align*}
+ U(f,P)&\equiv \sum_{i=1}^{n}h_{i}\Delta x_{i} \\
+ L(f,P)&\equiv \sum_{i=1}^{n}g_{i}\Delta x_{i}
+ \end{align*}
+ \end{definition}
+ 
+ \item \begin{proposition}
+ We have the following properties
+\begin{enumerate}
+\item $L(f,P)\le \cR(f ; P) \le U(f,P)$ for all $P$.
+\item $\overline{\int_{a}^{b}}f(x)dx = \inf_{P}U(f,P)$ and $\underline{\int_{a}^{b}}f(x)dx = \sup_{P}L(f,P)$;
+\item For the \textbf{refinement of partition} $P* \supseteq P$, 
+\begin{align*}
+L(f, P*) &\ge L(f,P) \\
+U(f, P*) &\le U(f,P)
+\end{align*}
+\end{enumerate} 
+\end{proposition}
+
+\item \begin{definition} (\emph{\textbf{Upper and lower integral}}).\\
+Let $[a, b]$ be an interval, and $f:  [a, b] \rightarrow \bR$ be a bounded function. The \emph{\textbf{lower Riemann integral}} $\underline{\int_{a}^{b}}f(x)dx$ of $f$ on $[a, b]$ is defined as
+\begin{align*}
+\underline{\int_{a}^{b}}f(x)dx &\equiv \sup\limits_{g\le f, \atop g \text{ piecewise constant}}\int_{a}^{b}g(x)dx =  \sup_{P}L(f,P),
+\end{align*}
+where $g$ ranges over all piecewise constant functions that are pointwise bounded above by $f$.
+
+Similarly, define the \emph{\textbf{upper Riemann integral}} $\overline{\int_{a}^{b}}f(x)dx$ of $f$ on $[a, b]$ as
+\begin{align*}
+\overline{\int_{a}^{b}}f(x)dx &\equiv \inf\limits_{h\ge f, \atop h \text{ piecewise constant}}\int_{a}^{b}h(x)dx = \inf_{P}U(f,P),
+\end{align*}
+where $h$ ranges over all piecewise constant functions that are pointwise bounded below by $f$.
+
+If $\underline{\int_{a}^{b}}f(x)dx = \overline{\int_{a}^{b}}f(x)dx$, we say that $f$ is \emph{\textbf{Riemann integrable}}, and refer to this quantity as \emph{the Darboux integral} of $f$ on $[a, b]$.
+\end{definition}
+
+\item \begin{theorem}
+ For any $\epsilon>0$, there exists a partition $P$ such that $\abs{U(f,P) - L(f,P) } \le \epsilon $, \textbf{if and only if} $f$ is Riemann integrable (Darboux integrable).
+\end{theorem}
+
+\item \begin{exercise}
+ Show that for bounded function  $f: [a,b] \rightarrow \bR$  on $[a,b]$, $f$ is Riemann integrable if and only if $f$ is Darboux integrable. 
+ \end{exercise}
+ \begin{proof} 
+ Given any  tagged partition $P=  ((x_{0}, x_{1}, \cdots, x_{n}); (x'_{1}, \cdots, x'_{n}))$, we can define $g_{i}\equiv \min_{x\in [x_{i-1}, x_{i}]}f(x) \le f(x'_{i})\le \max_{x\in [x_{i-1}, x_{i}]}f(x)\equiv h_{i}$, for all $1\le i\le n$. Define the piecewise constant function $g, h$ on interval $\bigcup_{i}[x_{i-1}, x_{i}]$ so that $g(x) = g_{i}$ if $x\in  [x_{i-1}, x_{i}]$, and $h(x) = h_{i}$ if $x\in  [x_{i-1}, x_{i}]$. Clearly, $g \le f \le h$ on $[0,1]$. Denote
+ \begin{align*}
+ U(f,P)&\equiv \sum_{i=1}^{n}h_{i}\Delta x_{i} \\
+ L(f,P)&\equiv \sum_{i=1}^{n}g_{i}\Delta x_{i}
+ \end{align*}
+ Thus $L(f,P)\le \cR(f ; P) \le U(f,P)$ and also $L(f,P)\le  \underline{\int_{a}^{b}}f(x)dx$ and $U(f,P)\ge \overline{\int_{a}^{b}}f(x)dx$ for any $P$.  
+ 
+  Finally, for the refinement of partition $P_{1}\cup P_{2}$, $L(f, P_{1}\cup P_{2})\ge L(f,P_{i}) $, $U(f, P_{1}\cup P_{2})\le U(f,P_{i})$.
+
+\begin{itemize}
+\item $\Rightarrow$  Since $f$ is Riemann integrable, for any $\epsilon>0$, there must exists tagged partitions $P_{1}, P_{2}$ such that 
+\begin{align*}
+\cR(f ; P_{1}) \le U(f,P_{1})&\le  \int_{a}^{b}f(x)dx + \epsilon/2\\
+\cR(f ; P_{2}) \ge L(f,P_{2})&\ge  \int_{a}^{b}f(x)dx - \epsilon/2
+\end{align*} 
+Furthermore, 
+\begin{align*}
+ U(f, P_{1}\cup P_{2})\le U(f,P_{1})&\le  \int_{a}^{b}f(x)dx + \epsilon/2\\
+L(f, P_{1}\cup P_{2}) \ge L(f,P_{2})&\ge  \int_{a}^{b}f(x)dx - \epsilon/2
+\end{align*}
+
+
+Clearly, we have
+\begin{align*}
+\abs{ \overline{\int_{a}^{b}}f(x)dx- \underline{\int_{a}^{b}}f(x)dx} &\le \abs{U(f, P_{1}\cup P_{2}) -  L(f, P_{1}\cup P_{2})  }\\
+&\le \abs{U(f, P_{1}\cup P_{2}) - \int_{a}^{b}f(x)dx}+ \abs{ \int_{a}^{b}f(x)dx - L(f, P_{1}\cup P_{2})} \le \epsilon.
+\end{align*}
+
+\item $\Leftarrow$ See that for any partition $P$, $\underline{\int_{a}^{b}}f(x)dx \le\cR(f ; P) \le \overline{\int_{a}^{b}}f(x)dx$.  Since $\underline{\int_{a}^{b}}f(x)dx - \overline{\int_{a}^{b}}f(x)dx  = \int_{a}^{b}f(x)dx$, therefore,  for any $\epsilon>0$, for all $P$, 
+\begin{align*}
+ 0\le  \cR(f ; P)- \int_{a}^{b}f(x)dx &\le  \overline{\int_{a}^{b}}f(x)dx-  \underline{\int_{a}^{b}}f(x)dx\\
+\Rightarrow  \abs{ \cR(f ; P)- \int_{a}^{b}f(x)dx} \le \epsilon,
+\end{align*}
+which completes our proof. \qed
+\end{itemize}
+\end{proof}
+\end{itemize}
+
+\subsection{Lebesgue Integration of Unsigned Simple Functions}
+\begin{itemize}
+\item  \begin{definition}
+A \emph{\underline{\textbf{complex-valued simple function}}} $f: \bR^{d} \rightarrow \bC$ is \emph{piecewise constant} in \emph{\textbf{a finite collection} of Lebesgue measurable sets} $E_{1},\cdots, E_{n}$ such that 
+\begin{align*}
+f(x)&= \sum_{k=1}^{n}c_{k}\ind{x\in E_{k}},
+\end{align*}
+where $c_{k}\in \bC$ are complex numbers. If $c_{k}\in [0,\infty)$, the piecewise constant function $f: \bR^{d} \rightarrow [0,\infty)$ as above is called  an \underline{\emph{\textbf{unsigned simple function}}}.
+\end{definition}
+
+\item \begin{remark} For the space  $\text{Simp}(\bR^d)$
+\begin{enumerate}
+\item \emph{The space $\text{Simp}(\bR^d)$ of complex valued simple functions} forms \emph{\textbf{a complex vector space}}; also, 
+\item $\text{Simp}(\bR^d)$ is also \emph{\textbf{closed}} under \emph{pointwise product} $f, g \mapsto fg$ and \emph{complex conjugation} $f \mapsto \bar{f}$. In short, $\text{Simp}(\bR^d)$ is a \emph{\textbf{commutative ∗-algebra}}. 
+\end{enumerate}
+\end{remark}
+
+\item \begin{remark}
+Note for $E_{k}, 1\le k\le n$ disjoint, we can further partition them into disjoint sets so that $f$ is constant on each disjoint subset. 
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{integral of unsigned simple function}})\\
+If $f= \sum_{k=1}^{n}c_{k}\ind{x\in E_{k}}$ is an unsigned simple function, then its \emph{\textbf{integral}} is defined as 
+\begin{align*}
+\text{simp} \int_{\bR^{d}} f(x) dx&\equiv \sum_{k=1}^{n}c_{k}m\paren{E_{k}},
+\end{align*}
+where $\int_{\bR^{d}} \ind{x\in E_{k}} dx  = m\paren{E_{k}}$.
+\end{definition}
+
+\item \begin{lemma} (\textbf{Well-definedness of simple integral}).\citep{tao2011introduction} \\
+Let $k, k' \ge 0$ be natural numbers, $c_1 \xdotx{,} c_k$, $c_1' \xdotx{,} c_{k'}' \in [0, +\infty]$, and let $E_1 \xdotx{,} E_k, E_1' \xdotx{,} E_{k'}' \subseteq  \bR^d$ be Lebesgue measurable sets such that the identity
+\begin{align*}
+c_1\mathds{1}_{E_1} \xdotx{+} c_k\mathds{1}_{E_k} = c_1'\mathds{1}_{E_1'} \xdotx{+} c_{k'}'\mathds{1}_{E_{k'}'}
+\end{align*} holds identically on $\bR^d$. Then one has
+\begin{align*}
+c_1\mu(E_1) \xdotx{+} c_k\mu(E_k) = c_1'\mu(E_1') \xdotx{+} c_{k'}'\mu(E_{k'}')
+\end{align*}
+\end{lemma}
+
+
+\item \begin{remark} 
+The simple integral could also be defined on finitely additive measure spaces, rather than countably additive ones, and all the above properties would still apply. However, on a finitely additive measure space one would have difficulty extending the integral beyond simple functions.
+\end{remark}
+
+
+\item \begin{definition} (\emph{\textbf{Almost everywhere and support}}).\\
+ A property $P(\mb{x})$ of a point $\mb{x} \in \bR^d$ is said to hold \underline{\emph{\textbf{(Lebesgue) almost everywhere}}} in $\bR^d$, or for \underline{\emph{\textbf{(Lebesgue) almost every point}}} $\mb{x} \in  \bR^d$, if the set of $\mb{x} \in  \bR^d$ for which $P(\mb{x})$ \emph{\textbf{fails}} has  \emph{\textbf{Lebesgue measure zero}} (i.e. $P$ is true \emph{\textbf{outside}} of \emph{a null set}). We usually omit the prefix Lebesgue, and often abbreviate ``\emph{\textbf{almost everywhere}}" or ``\emph{\textbf{almost every}}" as \underline{\emph{\textbf{a.e.}}}
+ 
+ The \emph{\textbf{support}} of a function $f: \bR^d \rightarrow \bC$ or $f : \bR^d \rightarrow  [0, \infty]$ is defined to be the set $\set{\mb{x}\in \bR^d: f(\mb{x}) \neq 0}$ where $f$ is \emph{non-zero}.
+\end{definition}
+
+\item \begin{remark}
+The followings are helpful to understand \emph{\textbf{the almost everywhere}} concept:
+\begin{enumerate}
+\item Two functions $f, g : \bR^d \rightarrow Z$ into an arbitrary range $Z$ are said to \emph{\textbf{agree almost everywhere}} if one has $f(\mb{x}) = g(\mb{x})$ for almost every $\mb{x} \in \bR^d$.
+
+\item If $P_{1}(x), P_{2}(x), \cdots$ are an \emph{\textbf{at most countable}} family of \emph{properties}, each of which individually holds
+for \emph{almost every $x$}, then they will \emph{\textbf{simultaneously}} be true \emph{for almost every $x$}, because \emph{\textbf{the countable union of null sets is still a null set}}.
+
+\item  if $P(x)$ holds for \emph{almost every $x$}, and $P(x)$ implies $Q(x)$, then $Q(x)$ holds \emph{for almost every $x$}.
+\end{enumerate}
+
+Because of these properties, one can (as a rule of thumb) treat the \emph{\textbf{almost universal quantifier}} ``\emph{for almost every}" \emph{\textbf{as if}} it was the truly \emph{\textbf{universal quantifier}} ``\emph{for every}", as long as one is only concatenating \emph{at most countably many} properties together, and as long as one \emph{never specialises} the free variable $x$ to \emph{a null set}.
+\end{remark}
+
+\item \begin{proposition}(\textbf{Basic properties of the simple unsigned integral}). \\
+Let $f, g: \bR^d \rightarrow [0, +\infty]$ be simple unsigned functions.
+\begin{enumerate}
+\item \textbf{(Unsigned linearity)} We have
+\begin{align*}
+\text{simp} \int_{\bR^d} (f(x) + g(x)) dx &= \text{simp} \int_{\bR^d} f(x) dx +  \text{simp} \int_{\bR^d} g(x) dx
+\end{align*}
+and
+\begin{align*}
+\text{simp} \int_{\bR^d} cf(x)  dx &=c\, \text{simp} \int_{\bR^d} f(x) dx
+\end{align*} for all $c \in [0, +\infty]$.
+\item (\textbf{Finiteness}) We have $\text{simp} \int_{\bR^d} f(x) dx < \infty$ \textbf{if and only if} $f$ is \textbf{finite} \textbf{almost everywhere}, and its \textbf{support} has \textbf{finite
+measure}.
+\item (\textbf{Vanishing}) We have $\text{simp} \int_{\bR^d} f(x) dx = 0$ \textbf{if and only if} $f$ is \textbf{zero almost everywhere}.
+\item (\textbf{Equivalence}) If $f$ and $g$ \textbf{agree almost everywhere}, then
+\begin{align*}
+\text{simp} \int_{\bR^d} f(x) dx &= \text{simp} \int_{\bR^d} g(x) dx
+\end{align*}
+\item (\textbf{Monotonicity}) If $f(x) \le g(x)$ for \textbf{almost every} $x \in \bR^d$, then
+\begin{align*}
+\text{simp} \int_{\bR^d} f(x) dx &\le \text{simp} \int_{\bR^d} g(x) dx
+\end{align*}
+\item (\textbf{Compatibility with Lebesgue measure}) For any Lebesgue measurable $E$, one has 
+\begin{align*}
+\text{simp} \int_{\bR^d} \mathds{1}_{E}(x)\,dx &= m(E). 
+\end{align*}
+\end{enumerate}
+Furthermore, the simple unsigned integral $f \mapsto \text{simp} \int_{\bR^d} f(x) dx$ is the \textbf{only map} from the space $\text{Simp}_{+}(\bR^d)$ of unsigned simple functions to $[0, +\infty]$ that \textbf{obeys all of the above properties}.
+\end{proposition}
+\begin{proof}
+\begin{itemize}
+\item Proof of \emph{3. Vanishing}
+\begin{align*}
+\text{simp}\int_{\bR^{d}}f(x) dx &= \sum_{i=1}^{k}c_{i}\,m(E_{i}) = 0
+\end{align*}
+for a finite collection of Lebesgue measureable set $E_{1},\cdots, E_{k}$.
+
+Since Lebesgue measure is nonnegative,  and $c_{i}\ge 0$ for all $1\le i\le k$, the above holds if and only if $c_{i}m(E_{i})=0$ for $1\le i\le k$. Then except for the null set that $m(E_{i}) = 0$, the coefficient $c_{i}=0$ for all $i$. It means that $f=0,\; a.e.$. 
+
+\item Proof of \emph{4. Equivalence} Let $f(x) = \sum_{i=1}^{k}c_{i}\ind{x\in E_{i}}$ and $g(x) = \sum_{j=1}^{m}d_{j}\ind{x\in F_{j}}$. Without loss of generality, assume $E_{i}\neq \emptyset$ for all $i$ and $F_{j}\neq \emptyset$.  
+\begin{align*}
+&\text{simp}\int_{\bR^{d}}f(x) dx - \text{simp}\int_{\bR^{d}}g(x) dx\\
+&= \text{simp}\int_{\bR^{d}} (f(x) -g(x)) dx\\
+&= \sum_{i=1}^{k}\sum_{j=1}^{m}(c_{i}-d_{j})m(E_{i}\cap F_{j})+ \sum_{i=1}^{k}c_{i}m\paren{E_{i}/\bigcup_{j=1}^{m}F_{j}}
+- \sum_{j=1}^{m}d_{j}m\paren{F_{j}/\bigcup_{i=1}^{k}E_{i}}
+\end{align*}
+If $f=g, a.e.$, or $f-g=0, a.e.$. In other word, for $E_{i}\cap F_{j}\neq \emptyset$, either $m(E_{i}\cap F_{j})=0$ or $c_{i}= d_{j}$. For $m(E_{i}/\bigcup_{j=1}^{m}F_{j}) \neq 0$, $c_{i}=0$ and $m(F_{j}/\bigcup_{i=1}^{k}E_{j})\neq 0$, $d_{j}=0$. In indicates that the above integral is zero. \qed
+\end{itemize}
+\end{proof}
+
+
+
+\item \begin{definition} (\emph{\textbf{Absolutely convergent simple integral}}). \\
+A complex-valued simple function $f : \bR^d \rightarrow  \bC$ is said to be \underline{\emph{\textbf{absolutely integrable}}} of $\text{simp}\int_{\bR^d }\abs{f(x)}dx$ $ < \infty$. If $f$ is absolutely integrable, the \emph{\textbf{integral}} $\text{simp}\int_{\bR^d }f(x)dx$ is defined for \emph{\textbf{real}} signed $f$ by the formula
+\begin{align*}
+\text{simp}\int_{\bR^d }f(x)dx &= \text{simp}\int_{\bR^d }f_{+}(x)dx - \text{simp}\int_{\bR^d }f_{-}(x)dx
+\end{align*}
+where $f_{+}(x) = \max\set{f(x), 0}$ and $f_{-}(x) = \max\set{-f(x), 0}$. (note that these are unsigned simple functions that are pointwise dominated by $\abs{f}$ and thus have finite integral), and for complex-valued $f$ by the formula
+\begin{align*}
+\text{simp}\int_{\bR^d }f(x)dx &= \text{simp}\int_{\bR^d }\Re f(x)dx + j\;\text{simp}\int_{\bR^d }\Im f(x)dx
+\end{align*}
+\end{definition}
+
+\item \begin{proposition} (\textbf{Basic properties of the complex-valued simple integral}). \\
+Let $f, g: \bR^d \rightarrow \bC$ be absolutely integrable simple functions.
+\begin{enumerate}
+\item (\textbf{*-linearity}) We have
+\begin{align*}
+\text{simp} \int_{\bR^d} (f(x) + g(x)) dx &= \text{simp} \int_{\bR^d} f(x) dx +  \text{simp} \int_{\bR^d} g(x) dx
+\end{align*}
+and
+\begin{align*}
+\text{simp} \int_{\bR^d} cf(x)  dx &=c\, \text{simp} \int_{\bR^d} f(x) dx
+\end{align*}
+for all $c \in \bC$. Also we have
+\begin{align*}
+\text{simp} \int_{\bR^d} \overline{f(x)}  dx &= \overline{\text{simp} \int_{\bR^d} f(x) dx}
+\end{align*}
+\item  (\textbf{Equivalence}) If $f$ and $g$ agree almost everywhere, then
+\begin{align*}
+\text{simp} \int_{\bR^d} f(x) dx &= \text{simp} \int_{\bR^d} g(x) dx
+\end{align*}
+\item (\textbf{Compatibility with Lebesgue measure}) For any Lebesgue measurable $E$, one has
+\begin{align*}
+\text{simp} \int_{\bR^d} \mathds{1}_{E}(x)\,dx &= m(E). 
+\end{align*}
+\end{enumerate}
+\end{proposition}
+
+%\item Note that a complex-valued simple function $f$ is absolutely integrable if and only if it has finite measure support (since finiteness almost everywhere is automatic). In particular, the space $\text{simp}^{abs}(\bR^d)$ of absolutely integrable simple functions is closed under addition and scalar multiplication by complex numbers, and is thus a complex vector space.\\
+
+\item \begin{remark}
+(Simple) functions that agree almost everywhere, have the same integral. We can view this
+as an assertion that \emph{\textbf{integration}} is a \emph{\textbf{noise-tolerant operation}}: one can have ``\emph{noise}" or ``\emph{errors}" in a function $f(x)$ on a \emph{\textbf{null set}}, and this will not affect the final value of the integral. One can even integrate functions $f$ that are merely \emph{defined \textbf{almost} everywhere} on $\bR^d$, \emph{except for a null set}. And \emph{the extension on null set is arbitrary}. For example $\sin(x)/x$ is not defined everywhere but almost everywhere in $\bR$.  
+
+In \emph{\textbf{functional analysis}}, it is convenient to abstract the notion of an almost everywhere defined function somewhat, by replacing any such function $f$ with \emph{\textbf{the equivalence class} of \textbf{almost everywhere defined} functions that are equal to $f$ almost everywhere}. Such classes are then no longer functions in the standard set-theoretic sense (called the \emph{distribution}). \citep{tao2011introduction}
+\end{remark}
+
+\item \begin{remark}
+The ``\emph{\textbf{Lebesgue philosophy}}" that one is \emph{\textbf{willing to lose control}} on \emph{\textbf{sets of measure zero}} is a perspective that distinguishes \emph{Lebesgue-type analysis} from other types of analysis.
+\end{remark}
+\end{itemize}
+
+\subsection{Unsigned Lebesgue Measurable Function}
+\begin{itemize}
+\item \begin{remark}
+Much as the piecewise constant integral can be completed to the Riemann integral, the unsigned simple integral can be completed to the unsigned Lebesgue integral, by extending the class of \emph{unsigned simple functions} to the larger class of \emph{unsigned \textbf{Lebesgue measurable functions}}.
+\end{remark}
+
+\item \begin{definition}(\emph{\textbf{Unsigned measurable function}}). \\
+An \emph{unsigned function} $f : \bR^d \rightarrow [0,+\infty]$ is \underline{\emph{\textbf{unsigned Lebesgue measurable}}}, or \emph{\textbf{measurable}} for short, if it is \emph{the pointwise limit} of \emph{unsigned simple functions}, i.e. if there exists a sequence $f_1, f_2, f_3, \ldots : \bR^d \rightarrow [0,+\infty]$ of unsigned simple functions such that $f_n(x) \rightarrow f(x)$ for \emph{every} $x \in  \bR^d$.
+\end{definition}
+
+\item The followings are equivalent definitions for \emph{the unsigned measurable function}: 
+\begin{lemma} \label{lem: unsigned_measurable_function} (\textbf{Equivalent notions of measurability}) \citep{tao2011introduction} \\
+Let $f : \bR^d \rightarrow [0,+\infty]$ be an unsigned function. Then the following are equivalent:
+\begin{enumerate}
+\item $f$ is \textbf{unsigned Lebesgue measurable}.
+\item $f$ is the \textbf{pointwise limit} of \textbf{unsigned simple functions} $f_n$ (thus the limit $\lim\limits_{n \rightarrow \infty} f_n(\mb{x})$ exists and is equal to $f(\mb{x})$ for all $\mb{x} \in \bR^d$).
+\item $f$ is the \textbf{pointwise almost everywhere limit} of \textbf{unsigned simple functions} $f_n$ (thus the limit $\lim\limits_{n \rightarrow \infty} f_n(\mb{x})$ exists and is equal to $f(\mb{x})$ for almost every $\mb{x} \in  \bR^d$).
+\item $f$ is the \textbf{supremum} $f(\mb{x}) = \sup_{n} f_{n}(\mb{x})$ of an \textbf{increasing} sequence $0 \le f_1 \le f_2 \le \cdots $ of \textbf{unsigned simple functions} $f_n$, each of which are \textbf{bounded} with \textbf{finite} measure support.
+\item For every $\lambda \in [0, +\infty]$, the set $\set{ \mb{x} \in  \bR^d : f(\mb{x}) > \lambda}$ is \textbf{Lebesgue measurable}.
+\item For every $\lambda \in [0, +\infty]$, the set $\set{ \mb{x} \in  \bR^d : f(\mb{x}) \ge \lambda}$ is \textbf{Lebesgue measurable}.
+\item For every $\lambda \in [0, +\infty]$, the set $\set{ \mb{x} \in  \bR^d : f(\mb{x}) < \lambda}$ is \textbf{Lebesgue measurable}.
+\item For every $\lambda \in [0, +\infty]$, the set $\set{ \mb{x} \in  \bR^d : f(\mb{x}) \le \lambda}$ is \textbf{Lebesgue measurable}.
+\item For every interval $I \subset [0,+\infty)$, the set $f^{-1}(I) \equiv \set{\mb{x} \in  \bR^d : f(\mb{x}) \in I}$ is \textbf{Lebesgue measurable}.
+\item For every (relatively) \textbf{open} set $U \subset [0,+\infty)$, the set $f^{-1}(U) \equiv \set{\mb{x} \in  \bR^d : f(\mb{x}) \in U}$ is \textbf{Lebesgue measurable}.
+\item For every (relatively) \textbf{closed} set $K \subset [0,+\infty)$, the set $f^{-1}(K) \equiv \set{\mb{x} \in  \bR^d : f(\mb{x}) \in K}$ is \textbf{Lebesgue measurable}.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+\begin{enumerate}
+\item 1) to 2) is the definition.  3) is a specification of 2). 
+\item 3) $\Rightarrow$ 4)  Let a sequence of unsigned simple function $f_{1},\cdots,$ $f_{n}\rightarrow f$ for almost every $\mb{x}\in \bR^{d}$, then there exist a monotone subsequence $0\le f_{i_{1}}\le f_{i_{2}} \le \cdots, $ that is convergent to $f = \sup_{n}f_{i_{n}}$ for almost every $\mb{x}\in \bR^{d}$. Then we can find a monotone subsequence $0\le f_{i_{1}}\ind{\norm{\mb{x}}{}<1} \le f_{i_{2}}\ind{\norm{\mb{x}}{}<2} \le \cdots$, in which  $f_{i_n}(\mb{x})\ind{\norm{\mb{x}}{} <n}$ is bounded has finite measure support. This is because $f_{i_n}$ only takes finite values and its support is bounded by $m(\set{\mb{x}\,| \norm{\mb{x}}{} <n})<\infty$. To show that $f_{i_n}(\mb{x})\ind{\norm{\mb{x}}{} <n} \rightarrow f$ for almost every $\mb{x}\in \bR^{d}$, we see that $f_{i_n}(\mb{x})\ind{\abs{\mb{x}} <n}\le f_{i_n}$, and $f_{i_n}\rightarrow f, a.e. \mb{x}\in \bR^{d}$, so by dominated convergence, it is true. 
+\item 4) $\Rightarrow$ 5) Consider a sequence of monotone increasing unsigned simple functions $f_{n}\le f_{n+1}, n\ge 1$, which is bounded with finite measure support. Let  $f = \sup_{n}f_{n}$. Note that for any $\lambda\in [0,\infty]$, $(\lambda, \infty]$ is Lebesgue mesureable and $f_{n}^{-1}((\lambda, \infty])= \bigcup_{k=1}^{s}E_{n,k}$ for $m(E_{n,k})<\infty$ (it could be $E_{n,k} = \emptyset$ for some $k$) for  all $n\ge 1$. Since $\set{f_{n}}$ is monotone, $f_{n}^{-1}((\lambda, \infty])\subseteq f_{n+1}^{-1}((\lambda, \infty]), n\ge 1$. Hence $f_{n}^{-1}((\lambda, \infty])$ are measureable, since $E_{k}$ are all measureable.  Therefore, we have a monotone nondecreasing sequence of nested sets, and $f^{-1}((\lambda, \infty])= \bigcup_{n=1}^{\infty}f_{n}^{-1}((\lambda, \infty])$ so that $f_{n}^{-1}((\lambda, \infty]) \uparrow f^{-1}((\lambda, \infty])$.  Therefore, $f^{-1}((\lambda, \infty])$ is Lebesgue measurable, since each $f_{n}^{-1}((\lambda, \infty])$ is Lebesgue measureable. 
+\item 5) $\Rightarrow$ 6) See that $f^{-1}([\lambda, \infty])= f^{-1}(\bigcap_{m=1}^{\infty}(\lambda-\frac{1}{2^{m}}, \infty])= \bigcap_{m=1}^{\infty}f^{-1}((\lambda-\frac{1}{2^{m}}, \infty])$, which is measureable. 
+\item 6) $\Leftrightarrow$ 7) The pre-image is closed under complement operation. Similarly, 7) $\Rightarrow$ 8) follow the same argument as 5) $\Leftrightarrow$ 6), with reversed direction.
+\item 9)  Any interval $I$ is just a countable union of finite of intersection of the interval above. And for 10), any open set in $\bR$ is a countable union of intervals. Conversely, an open interval naturally works, while others are countable  intersection of open intervals. 11) is true if and only if 10) is true, since 11) is the complement of 10).
+\item 11) $\Rightarrow$ 2)  For $f\ge 0$, we should construct the simple function $f_{n}$ by subdividing the values of $f$ that fall in $[0, k]$ by partitioning $[0, k]$ into subintervals $[(j - 1)2^{-k}, j2^{-k}], j = 1, . . . , k2^{k}$. By assumption, $E_{j,k}\equiv f^{-1}([(j - 1)2^{-k}, j2^{-k}])$ are all measureable for $j=1,\cdots, k2^{k}$. Finally, the complement $\bR/f^{-1}([0,k])$ is measureable. 
+
+Let
+\begin{align*}
+f_{k}(\mb{x}) &= \left\{\begin{array}{cc}
+\frac{j-1}{2^{k}} & \mb{x}\in E_{j,k}, j=1,\cdots,k2^{k}  \\ 
+k & \mb{x}\in \bR/f^{-1}([0,k])\phantom{====}
+\end{array} \right.
+\end{align*} Each $f_k$ is a simple function defined everywhere in the domain of $f$ . Clearly, $f_k \le f_{k+1}$ since in passing from $f_k$ to $f_{k+1}$, each subinterval $[(j - 1)2^{-k}, j2^{-k}]$ is divided in half. Then we have constructed a simple function as
+\begin{align*}
+f_{k}(\mb{x}) &= \sum_{j=1}^{k2^{k}}\frac{j-1}{2^{k}}\ind{ E_{j,k}}+ k\,\ind{\bR^{d}/f^{-1}([0,k])}
+\end{align*}
+And $f_{k} \uparrow f$ for every $\mb{x}\in \bR^{d}$. Note that this example could be used to prove 3).  It then completes our proof. \qed. 
+\end{enumerate}
+\end{proof}
+
+\item With these equivalent formulations, we can now generate plenty of measurable functions:
+\item \begin{exercise}
+\begin{enumerate}
+\item Show that every \textbf{continuous} function $f: \bR^{d} \rightarrow [0,\infty]$ is \textbf{measureable};
+\item Show that every \textbf{unsigned simple function} is \textbf{measurable}
+\item Show that the \textbf{supremum}, \textbf{infimum}, \textbf{limit superior}, or \textbf{limit inferior} of unsigned measurable functions is unsigned measurable.
+\item Show that an \textbf{unsigned function} that is \textbf{equal almost everywhere} to an unsigned measurable function, is itself measurable.
+\item Show that if a sequence $f_n$ of unsigned measurable functions \textbf{converges} pointwise almost everywhere to an \textbf{unsigned limit} $f$, then $f$ is also measurable;
+\item If $f: \bR^{d} \rightarrow [0,\infty]$ is \textbf{measurable} and $\phi : [0,+\infty] \rightarrow [0,+\infty]$ is \textbf{continuous}, show that $\phi \circ f : \bR^{d} \rightarrow [0,+\infty]$ is measurable.
+\item If $f, g$ are unsigned measurable functions, show that $f + g$ and $fg$ are measurable.
+\end{enumerate}
+\end{exercise}
+\begin{proof}
+\begin{enumerate}
+\item Note that for any $\lambda\in [0,\infty]$, $f^{-1}((\lambda,\infty])$ is open, thus Lebesgue measureable. So $f$ is unsigned measureable. 
+\item Just by definition.
+\item For any $\lambda\in [0,\infty]$, $(\inf_{n} f_{n})^{-1}((\lambda, \infty])= \bigcap_{n}f_{n}^{-1}((\lambda, \infty]) $ so measureable. Similarly, $(\sup_{n} f_{n})^{-1}([0,\lambda))= \bigcap_{n}f_{n}^{-1}([0,\lambda)) $ measureable. Also
+\begin{align*}
+\paren{\liminf\limits_{n\rightarrow\infty}f_{n}}^{-1}((\lambda, \infty])&= \paren{\sup_{k\ge 1}\inf_{n\ge k}f_{n}}^{-1}((\lambda, \infty])\\
+&= \bigcup_{m}\bigcup_{k\ge 1}\bigcap_{n\ge k}f_{n}^{-1}((\lambda+\frac{1}{m}, \infty])
+\end{align*} is measureable and
+\begin{align*}
+\paren{\limsup\limits_{n\rightarrow\infty}f_{n}}^{-1}([0,\lambda))&= \paren{\inf_{k\ge 1}\sup_{n\ge k}f_{n}}^{-1}([0,\lambda))\\
+&= \bigcup_{m}\bigcup_{k\ge 1}\bigcap_{n\ge k}f_{n}^{-1}([0,\lambda-\frac{1}{m}))
+\end{align*} is measureable.
+\item Assume that $g= f, a.e.$ where $f$ is unsigned measuresble, $g$ is unsigned function. Then $f= \limsup_{n\rightarrow \infty}f_{n}$ for a sequence of unsigned simple function. For any $\lambda\in [0,\infty]$, $g^{-1}((\lambda, \infty])$ is equal to $f^{-1}((\lambda, \infty])$ outside a null set. Then $g^{-1}((\lambda, \infty])$ is equal to 
+\begin{align*}
+\bigcup_{m}\bigcap_{k\ge 1}\bigcup_{n\ge k}f_{n}^{-1}((\lambda+\frac{1}{m},\infty])
+\end{align*} outside a null set. As each $f_n$ is an unsigned simple function, $f_{n}^{-1}((\lambda+\frac{1}{m},\infty])$ is Lebesgue measureable, so as their countable union and intersection. Modifying a Lebesgue measurable set on a null set produces another Lebesgue measurable set, so $g^{-1}((\lambda, \infty])$ is measureable.
+\item  Each $f_{n}= \sup_{k}f_{n,k}$ for some monotone unsigned simple function $f_{n,k}\le f_{n,k+1}$. For every convergent sequence of unsigned measureable function $f_{n}$, we can find a monotone increasing subsequence that is convergent to $f$. Therefore there exists a sequence of some monotone unsigned simple function $f_{1,1}, \cdots, f_{1,k}, \cdots, f_{n,k},  f_{n,k+1}, \cdots$ so that $f = \sup_{n\ge 1}\sup_{k\ge n}f_{n,k}$, so $f$ is unsigned measureable. 
+\item Trivial, since $(\phi\circ f)^{-1}(\lambda,\infty] = f^{-1}(\phi^{-1}((\lambda,\infty]))$, which is measureable. \qed
+\end{enumerate}
+\end{proof}
+
+
+\item \begin{exercise}
+Let $f : \bR^d \rightarrow [0,+\infty]$. Show that $f$ is a \emph{\textbf{bounded}} unsigned measurable function if and only if $f$ is the \emph{\textbf{uniform}} limit of \emph{bounded} simple functions.
+\end{exercise}
+\begin{proof}
+$\Rightarrow$ Given $f : \bR^d \rightarrow [0,+\infty)$ is \emph{bounded} unsigned measureable function, suppose $f(\mb{x})\in [0,M]$ for all $\mb{x}$, where $M= \inf_{s\in \bN}\set{s\ge \sup_{\mb{x}}\set{f(\mb{x})}}$. For each $k$, we subdivided it into $M2^{k}$ interval $E_{j,k}\equiv [(j - 1)2^{-k}, j2^{-k}]$. Then the monotone increasing bounded unsigned simple function  $f_{k}$ is constructed as 
+\begin{align*}
+f_{k}(\mb{x}) &= \sum_{j=1}^{M2^{k}}\frac{j-1}{2^{k}}\ind{\mb{x}\in E_{j,k}}.
+\end{align*}
+Clearly $f= \sup_{k}f_{k}$ for any $\mb{x}$ and $f_{k}\le f_{k+1}$.
+
+Then for any $\epsilon>0$, there exists $k$, for all $n\ge k$ 
+\begin{align*}
+\sup_{\mb{x}}\abs{f(\mb{x}) - f_{n}(\mb{x})} 
+&\le \frac{1}{2^{n}}<\epsilon. 
+\end{align*}
+The sequence $\set{f_{n}}$ converges to $f$ uniformly. 
+
+$\Leftarrow$ Given that the unsigned function $f = \lim\limits_{n\rightarrow \infty}f_{n}$ is the uniform limit of bounded simple functions $\set{f_{n}}$, we see that there exist $k\ge 1$, such that for all $n\ge k$, $f_{n}(\mb{x})\ge 0$ for all $\mb{x}$. Then we can find $(i_k, i_{k+1}, \cdots)\subset (k,k+1,\cdots)$ such that  $f_{i_k},f_{i_{k+1}}, \cdots, $ is a monotone increasing sequence of bounded \emph{unsigned} simple function so that $f= \sup_{k}f_{i_k}$. Therefore $f$ is unsigned measureable and $f$ is bounded since $f_{n}$ is bounded for all $n$. \qed
+\end{proof}
+
+\item \begin{exercise}
+Show that an \textbf{unsigned} function $f: \bR^d \rightarrow [0, +\infty]$ is a \textbf{simple} function if and only if it is \textbf{measurable} and takes on \textbf{at most finitely many values}.
+\end{exercise}
+
+\item \begin{exercise}
+Let $f: \bR^d \rightarrow [0, +\infty]$ be an unsigned measurable function. Show that the region $\{(x, t) \in \bR^d \times \bR: 0 \le t \le f(x)\}$ is a \textbf{measurable} subset of $\bR^{d+1}$.
+\end{exercise}
+
+\item \begin{definition} (\emph{\textbf{Complex measurability}}).\\
+An almost everywhere defined \emph{\textbf{complex-valued function}} $f : \bR^d \rightarrow \bC$ is \emph{\textbf{Lebesgue measurable}}, or measurable for short, if it is the pointwise almost everywhere limit of complex-valued simple functions.
+\end{definition} 
+\end{itemize}
+
+\subsection{Unsigned Lebesgue Integrals}
+\begin{itemize}
+\item \begin{definition}(\emph{\textbf{Lower unsigned Lebesgue integral}}). \\
+Let $f : \bR^d \rightarrow [0,+\infty]$ be an unsigned function (\emph{not necessarily measurable}). We define the \underline{\emph{\textbf{lower unsigned Lebesgue integral}}} $\underline{\int_{\bR^{d}}}f(x)dx$ to be the quantity
+\begin{align*}
+\underline{\int_{\bR^{d}}}f(x)dx &\equiv \sup\limits_{0\le g\le f,\; g\text{ simple}} \text{simp}\int_{\bR^{d}}g(x) dx,
+\end{align*}
+where $g$ ranges over all unsigned simple functions $g : \bR^d \rightarrow [0,+\infty]$ that are pointwise bounded by $f$.
+\end{definition}
+
+\item \begin{remark}
+One can also define the \underline{\emph{\textbf{upper unsigned Lebesgue integral}}}
+\begin{align*}
+\overline{\int_{\bR^{d}}}f(x)dx &\equiv \inf\limits_{h\ge f,\; h\text{ simple}} \text{simp}\int_{\bR^{d}}h(x) dx,
+\end{align*} but we will use this integral much more rarely. Note that both integrals take values in $[0,+\infty]$, and that the upper Lebesgue integral is always at least as large as the lower Lebesgue integral.
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Compatibility with the simple integral}})\\
+ If $f$ is \emph{simple}, then
+ \begin{align*}
+ \underline{\int_{\bR^{d}}}f(x)dx = \overline{\int_{\bR^{d}}}f(x)dx = \text{simp }\int_{\bR^{d}}f(x)dx.
+ \end{align*}
+\end{remark}
+
+\item \begin{proposition} (\textbf{Basic properties of the lower Lebesgue integral}).\\
+Let $f, g : \bR^d \rightarrow [0,+\infty]$ be unsigned functions (not necessarily measurable). Then the following is true: 
+\begin{enumerate}
+\item (\textbf{Equivalence}) If $f,g$ agree almost everywhere, then $\underline{\int_{\bR^{d}}}f(x)dx = \underline{\int_{\bR^{d}}}g(x)dx$.
+\item (\textbf{Monotonicity}) If $f\le g$ almost everywhere, then $\underline{\int_{\bR^{d}}}f(x)dx \le \underline{\int_{\bR^{d}}}g(x)dx$ and $\overline{\int_{\bR^{d}}}f(x)dx \le \overline{\int_{\bR^{d}}}g(x)dx$.
+\item (\textbf{Superadditivity}) $\underline{\int_{\bR^{d}}}(f(x)+g(x))dx \ge \underline{\int_{\bR^{d}}}f(x)dx + \underline{\int_{\bR^{d}}}g(x)dx$.
+\item (\textbf{Divisibility}) For any measurable set $E$, one has $\underline{\int_{\bR^{d}}}f(x)dx = \underline{\int_{\bR^{d}}}\ind{x\in E}f(x)dx+\underline{\int_{\bR^{d}}}\ind{x\in \bR^{d}/E}f(x)dx$.
+\item (\textbf{Horizontal truncation}) As $n \rightarrow \infty$, $\underline{\int_{\bR^{d}}}\min(f(x), n)dx$ converges to $\underline{\int_{\bR^{d}}}f(x)dx$.
+\item (\textbf{Vertical truncation}) As  $n \rightarrow \infty$, $\underline{\int_{\bR^{d}}}f(x)\ind{\abs{x}\le n}dx$ converges to
+$\underline{\int_{\bR^{d}}}f(x)dx$. Hint: show that  $m(E \cap \set{x : \abs{x} \le n}) \rightarrow m(E)$ for any measurable set $E$.
+\item (\textbf{Reflection}) If $f + g$ is a simple function that is bounded with finite measure support (i.e. it is absolutely integrable),
+then $\text{simp}\int_{\bR^{d}}(f(x)+g(x))dx = \underline{\int_{\bR^{d}}}f(x)dx+ \overline{\int_{\bR^{d}}}f(x)dx$.
+\item (\textbf{Subadditivity of upper integral}) $\overline{\int_{\bR^{d}}}(f(x)+g(x))dx \le \overline{\int_{\bR^{d}}}f(x)dx + \overline{\int_{\bR^{d}}}g(x)dx$.
+\end{enumerate} 
+\end{proposition}
+\begin{proof}
+\begin{enumerate}
+\item By assumption, $f=g$ outside a set of measure zero. Then for simple unsigned function $0\le h\le f$, $h\le g$ outside a set of measure zero. Then  \begin{align*}
+\underline{\int_{\bR^{d}}}f(x)dx &= \sup\limits_{0\le h\le f,\; h\text{ simple}} \text{simp}\int_{\bR^{d}}h(x) dx\\
+&=  \sup\limits_{0\le h\le g, a.e. ,\; h\text{ simple}} \text{simp}\int_{\bR^{d}}h(x) dx\\
+& \le \sup\limits_{0\le g'\le g,\; g'\text{ simple}} \text{simp}\int_{\bR^{d}}g'(x) dx\\
+& = \underline{\int_{\bR^{d}}}g(x)dx.
+\end{align*} By symmetry,  $\underline{\int_{\bR^{d}}}f(x)dx \ge \underline{\int_{\bR^{d}}}g(x)dx$. So the equality holds. 
+
+\item Trivial, since any unsigned simple function $0\le h\le f$ $\Rightarrow$ $0\le h\le g$, thus the $\sup_{0\le h\le f}I(h)\le \sup_{0\le h\le g}I(h)$. 
+
+\item Note that since $\underline{\int_{\bR^{d}}}g(x)dx = \sup\limits_{0\le h_{g}\le g,\; h_{g}\text{ simple}} \text{simp}\int_{\bR^{d}}h_{g}(x) dx$, then $\forall \epsilon>0$, $\exists\, h_{g,f}:\, 0 \le  h_{g,f} \le g$ simple, s.t. $\underline{\int_{\bR^{d}}}g(x)dx - \epsilon \le   \text{simp}\int_{\bR^{d}}h_{g,f}(x)dx$. So
+ \begin{align*}
+\underline{\int_{\bR^{d}}}f(x)dx + \underline{\int_{\bR^{d}}}g(x)dx &= \sup\limits_{0\le h_{f}\le f,\; h_{f}\text{ simple}} \text{simp}\int_{\bR^{d}}h_{f}(x) dx+  \underline{\int_{\bR^{d}}}g(x)dx\\
+&=  \sup\limits_{0\le h_{f}\le f,\; h_{f}\text{ simple}} \text{simp}\int_{\bR^{d}}(h_{f}(x) + h_{g,f}(x))dx\\
+&\phantom{==}+ \paren{\underline{\int_{\bR^{d}}}g(x)dx - \text{simp}\int_{\bR^{d}}h_{g,f}(x)dx }\\
+& \le  \sup\limits_{0\le h_{f}\le f,\; h_{f}\text{ simple}} \text{simp}\int_{\bR^{d}}(h_{f}(x) + h_{g,f}(x))dx+ \epsilon\\
+&\le  \sup\limits_{0\le h_{f+g}\le f+g,\;\atop h_{f+g}\text{ simple}} \text{simp}\int_{\bR^{d}} h_{f+g}(x) dx+ \epsilon\quad (\text{since }h_{f}(x) + h_{g,f}(x)\le f+g)\\
+& = \underline{\int_{\bR^{d}}}(f(x)+g(x))dx+ \epsilon, \quad \forall \epsilon>0.
+\end{align*} 
+
+\item Trivial, since each simple integration is divideable. 
+
+\item Note that $\min(f(x), n) \le \min(f(x), n+1), \forall x\in \bR^{d}$. By monotonicity, 
+\begin{align*}
+\underline{\int_{\bR^{d}}}\min(f(x), n)dx &\le \underline{\int_{\bR^{d}}}\min(f(x), n+1)dx \le \cdots 
+\end{align*} 
+If $f$ is bounded above, then let $m_{n}= \min\set{n, \left\lceil\sup\limits_{x\in \bR^{d}, a.e.}f(x)\right\rceil} \le n$ and $\lceil\sup_{x}f(x)\rceil $ is the smallest integer above $\sup\limits_{x\in \bR^{d}, a.e.}f(x)$; otherwise let $m_{n}= n$. We subdivide $[0,m_{n}]$ into $m_{n}2^{k}$ intervals $[(j - 1)2^{-k}, j2^{-k}], j=1,\ldots, m_{n}2^{k}$ with $E_{j,k}\equiv  f^{-1}([(j - 1)2^{-k}, j2^{-k}])$ and define the simple function as 
+\begin{align*}
+f_{n,k} &= \sum_{j=1}^{m_{n}2^{k}}\frac{j-1}{2^{k}}\ind{\mb{x}\in E_{j,k}}+ m_{n}\ind{\bR^{d}/f^{-1}[0,m_{n}]}.
+\end{align*}
+Clearly, $f_{n,k}\le \min\set{f, n}\le f$ for all $\mb{x}$, all $n,k$ and $f_{n,k}\uparrow \min\set{f, n}$ as $k\rightarrow \infty$. Also
+\begin{align*}
+\underline{\int_{\bR^{d}}}\min(f(x), n)dx&= \lim\limits_{k\rightarrow \infty}\text{simp}\int_{\bR}f_{n,k}(x)dx\\
+&=  \paren{\lim\limits_{k\rightarrow \infty}\sum_{j=1}^{m_{n}2^{k}}\frac{j-1}{2^{k}}m\paren{E_{j,k}}}+ m_{n}\paren{\bR^{d}/f^{-1}([0,m_n])}
+\end{align*}
+If $f$ is bounded above almost everywhere, for any $\epsilon>0$, there exists $M\equiv \lceil\sup_{x}f(x)\rceil<\infty$, such that for all $n\ge M$, $\exists K$, for all $k\ge K$,  
+\begin{align*}
+\underline{\int_{\bR^{d}}}f(x)dx - \underline{\int_{\bR^{d}}}\min(f(x), n)dx  &\le  \underline{\int_{\bR^{d}}}f(x)dx- \sum_{j=1}^{M2^{k}}\frac{j-1}{2^{k}}m\paren{E_{j,k}}-m_{n}\paren{\bR^{d}/f^{-1}([0,m_n])}\\
+&\le \epsilon
+\end{align*}
+If $f\ge M$ for any $M\ge 0$, $x\in E$, then $\underline{\int_{\bR^{d}}}f(x)dx=\infty$ and for $n\ge M$, $\underline{\int_{\bR^{d}}}\min(f(x), n)dx \ge M\,m(E) \rightarrow \infty$. So it completes the proof. 
+
+\item Denote $B_{n}= \set{x:  \abs{x}\le n}$. We subdivide $[0,k]$ into $k2^{k}$ intervals $[(j - 1)2^{-k}, j2^{-k}], j=1,\ldots, k2^{k}$ with $E_{j,k}\equiv  f^{-1}([(j - 1)2^{-k}, j2^{-k}])$ and define the simple function as 
+\begin{align*}
+f_{k} &= \sum_{j=1}^{k2^{k}}\frac{j-1}{2^{k}}\ind{E_{j,k}}+ k\ind{\bR^{d}/f^{-1}([0,k])}.
+\end{align*}
+Thus $f_{k}\le f$ for all $k$ and $f_{k} \uparrow f$ for $k\rightarrow\infty$. 
+Therefore
+\begin{align*}
+\underline{\int_{\bR^{d}}}f(x)dx&= \lim\limits_{k\rightarrow \infty}\text{simp}\int_{\bR}f_{k}(x)dx\\
+\underline{\int_{\bR^{d}}}f(x)\ind{B_{n}}dx&
+=\lim\limits_{k\rightarrow \infty}\text{simp}\int_{\bR}f_{k}\ind{B_{n}}dx\\
+&=  \lim\limits_{k\rightarrow \infty}\set{\sum_{j=1}^{k2^{k}}\frac{j-1}{2^{k}}m\paren{E_{j,k}\cap B_{n}}+ k\;m(B_{n}/f^{-1}([0,k])))}
+\end{align*}
+Since $n\rightarrow \infty$, 
+\begin{align*}
+\lim\limits_{n\rightarrow\infty}m\paren{E_{j,k}\cap B_{n}} &= m\paren{E_{j,k}}, \quad\forall\, j,k\\
+ \lim\limits_{n\rightarrow\infty}m(B_{n}/f^{-1}([0,k]))) &= m\paren{\bR^{d}/f^{-1}([0,k])},
+\end{align*}
+then  
+\begin{align*}
+\lim\limits_{n\rightarrow\infty}\underline{\int_{\bR^{d}}}f(x)\ind{B_{n}}dx&= 
+\lim\limits_{k\rightarrow \infty}\set{\sum_{j=1}^{k2^{k}}\frac{j-1}{2^{k}}\paren{\lim\limits_{n\rightarrow\infty}m\paren{E_{j,k}\cap B_{n}}}+ k\;\lim\limits_{n\rightarrow\infty}m(B_{n}/f^{-1}([0,k])))}\\
+&= \lim\limits_{k\rightarrow \infty}\set{\sum_{j=1}^{k2^{k}}\frac{j-1}{2^{k}}m\paren{E_{j,k}}+ k\;m(\bR^{d}/f^{-1}([0,k])))}\\
+&= \underline{\int_{\bR^{d}}}f(x)dx.
+\end{align*}
+To show $m(E\cap B_{n})\rightarrow m(E)$ for any measureable set, we see that $\set{E\cap B_{n}}$ is monotone nondecreasing, and $E\cap B_{n} \uparrow E\cap \bR^{d}=E$ for any $E\subseteq \bR^{d}$. Then by upward convergence of the Lebesgue measure, the result holds. \qed
+\end{enumerate}
+\end{proof}
+
+
+\item \begin{definition}(\emph{\textbf{Unsigned Lebesgue integral}}).\\
+ If $f : \bR^d \rightarrow [0,+\infty]$ is \emph{\textbf{measurable}}, we define the \underline{\emph{\textbf{unsigned Lebesgue integral}}} $\int_{\bR^{d}}f(x)dx$ of $f$ to \emph{\textbf{equal}} the \emph{\textbf{lower unsigned Lebesgue integral}} $\underline{\int_{\bR^{d}}}f(x)dx$. (For non-measurable functions, we leave the unsigned Lebesgue integral
+undefined.)
+\end{definition}
+
+\item One nice feature of measurable functions is that \emph{the \textbf{lower} and \textbf{upper} Lebesgue integrals can \textbf{match}}, if one also assumes some \emph{\textbf{boundedness}}:
+\begin{exercise}
+Let $f : \bR^d \rightarrow [0,+\infty]$ be measurable, \textbf{bounded}, and \textbf{vanishing} outside of a set of \textbf{finite measure}. The \textbf{lower} and \textbf{upper} Lebesgue integrals of $f$ \textbf{agree}.
+\end{exercise}
+
+
+\item \begin{corollary}(\textbf{Finite additivity of the Lebesgue integral}).\\
+ Let $f, g : \bR^d \rightarrow [0,+\infty]$ be measurable. Then 
+ \begin{align*}
+ \int_{\bR^{d}}(f(x)+g(x))dx &= \int_{\bR^{d}}f(x)dx+ \int_{\bR^{d}}g(x)dx.
+ \end{align*}
+\end{corollary}
+\begin{proof} From \emph{\textbf{the horizontal truncation property}} and \emph{a limiting argument}, we may assume that $f, g$ are \emph{\textbf{bounded}}. From the \emph{\textbf{vertical truncation property}} and \emph{another limiting argument}, we may assume that $f, g$ are \emph{\textbf{supported inside a bounded set}}. Under condition that $f,g$ are both \emph{measurablity, bounded, vanishing outside a set of finite measure}, we now see that the lower and upper Lebesgue integrals of $f, g$, and $f +g$ agree. The claim now follows by \emph{combining} the \emph{\textbf{superadditivity}} of \emph{the lower Lebesgue integral} with the \emph{subadditivity} of \emph{the upper Lebesgue integral}.\qed
+\end{proof}
+
+\item \begin{exercise} (\textbf{Upper Lebesgue integral and outer Lebesgue measure}). \\
+Show that for any set $E \subseteq \bR^d$, $\overline{\int_{\bR^d}}\mathds{1}_E(x) dx = m^{*}(E)$. Conclude that the \textbf{upper} and \textbf{lower Lebesgue integrals} are \textbf{not necessarily additive} if \textbf{no measurability hypotheses} are assumed.
+\end{exercise}
+
+\item \begin{exercise}(\textbf{Area interpretation of integral}). \\
+If $f : \bR^d \rightarrow [0,+\infty]$ is \textbf{measurable}, show that $\int_{\bR^d} f(x) dx$ is equal to the $(d+1)$-dimensional \textbf{Lebesgue measure} of the \textbf{region}
+\begin{align*}
+\set{(x, t) \in \bR^d \times \bR: 0 \le t \le f(x)}
+\end{align*}
+(This can be used as an \textbf{alternate}, and more \textbf{geometrically intuitive}, \textbf{definition} of the \textbf{unsigned Lebesgue integral}; it is a more convenient formulation for establishing the basic convergence theorems, but not quite as convenient for establishing basic properties such as additivity.) 
+\end{exercise}
+
+\item \begin{proposition} (\textbf{Uniqueness of the Lebesgue integral}). \\
+The \textbf{Lebesgue integration} $f \mapsto \int_{\bR^d}f(x) dx$  is the \underline{\textbf{only map}} from measurable unsigned functions $f : \bR^d \rightarrow [0,+\infty]$ to $[0,\infty]$ that obeys the following properties for measurable $f, g : \bR^d \rightarrow [0,+\infty]$:
+\begin{enumerate}
+\item (\textbf{Compatible with simple integration}): If $f$ is simple, $\int_{\bR^{d}}f dx = \text{simp}\int_{\bR^{d}}f dx$
+\item (\textbf{Finite Additivity}): $\int_{\bR^{d}}(f(x)+g(x))dx = \int_{\bR^{d}}f(x)dx+ \int_{\bR^{d}}g(x)dx.$
+\item \underline{(\textbf{Horizontal truncation})} As $n \rightarrow \infty$, 
+\begin{align*}
+\int_{\bR^{d}}\min(f(x), n)dx \rightarrow \int_{\bR^{d}}f(x)dx.
+\end{align*}
+\item \underline{(\textbf{Vertical truncation})} As  $n \rightarrow \infty$, 
+\begin{align*}
+\int_{\bR^{d}}f(x)\ind{\abs{x}\le n}dx \rightarrow \int_{\bR^{d}}f(x)dx.
+\end{align*}
+\end{enumerate}
+\end{proposition}
+
+\item \begin{exercise} (\textbf{Translation invariance}). \\
+Let $f : \bR^d \rightarrow [0,+\infty]$ be measurable. Show that $ \int_{\bR^{d}}f(x + y)dx = \int_{\bR^{d}}f(x)dx$ for any $y \in \bR^d$.
+\end{exercise}
+
+\item \begin{exercise}  (\textbf{Linear change of variables}).\\
+Let $f : \bR^d \rightarrow [0,+\infty]$  be measurable, and let $T : \bR^d \rightarrow \bR^d$ be an invertible linear transformation. Show that 
+\begin{align*}
+\int_{\bR^d} f(T^{-1}(x)) dx = \abs{\det{T}} \int_{\bR^d} f(x) dx,
+\end{align*}
+or equivalently $\int_{\bR^d} f(Tx) dx = \abs{det{T}}^{-1} \int_{\bR^d} f(x) dx$.
+\end{exercise}
+
+\item \begin{exercise} (\textbf{Compatibility with the Riemann integral}).\\
+Let $f : [a, b] \rightarrow [0,+\infty]$ be Riemann integrable. If we extend $f$ to $\bR$ by declaring $f$ to equal zero outside of $[a, b]$, show that
+\begin{align*}
+\int_{\bR^{d}}f(x)dx &= \int_{a}^{b}f(x)dx.
+\end{align*}
+\end{exercise}
+
+\item \begin{lemma}(\textbf{Markov's inequality}).\\
+ Let $f : \bR^d \rightarrow [0,+\infty]$ be \textbf{measurable}. Then for any $0 < \lambda < \infty$, one has
+\begin{align*}
+m\paren{\set{x\in \bR^{d}: f(x)\ge \lambda}} &\le \frac{1}{\lambda}\int_{\bR^{d}}f(x)dx
+\end{align*}
+\end{lemma}
+\begin{proof}
+We have the trivial pointwise inequality
+\begin{align*}
+\lambda \ind{x\in \bR^d: f(x) \ge \lambda} \le f(x).
+\end{align*}
+From the \emph{definition} of the \emph{lower Lebesgue integral}, we conclude that
+\begin{align*}
+\lambda \,m\paren{\set{x\in \bR^d: f(x) \ge \lambda}} &\le \int_{\bR^{d}}f(x)dx
+\end{align*} and the claim follows. \qed
+\end{proof}
+
+\item By sending $\lambda$ to infinity or to zero, we obtain the following important corollary:
+\begin{exercise}
+Let function $f: \bR^{d} \rightarrow [0,+\infty]$ be measureable. Then
+\begin{enumerate}
+\item Show that if $\int_{\bR^{d}}f(x)dx<\infty$, $f$ is finite almost everywhere. Give a counterexample to show that the converse statement is false.
+\item Show that $\int_{\bR^{d}}f(x)dx= 0$ if and only if $f=0$ almost everywhere.
+\end{enumerate}
+\end{exercise}
+\begin{proof}
+\begin{enumerate}
+\item Suppose that there exists subset $E\subset \bR^{d}$, $m(E)>0$ such that $f(\mb{x})> M\ge 0,\; \mb{x}\in E$ for all $M\ge 0$. Let $g(\mb{x})= M\ind{\mb{x}\in E}$ be a unsigned simple function, then $f\ge g$ and $\int_{\bR^{d}}f(x)dx \ge \int_{\bR^{d}}g(x)dx =M m(E)\rightarrow \infty$ for $M\rightarrow \infty$. Then $\int_{\bR^{d}}f(x)dx=\infty$, which contradicts with the assumption. 
+
+For converse part, see that $f(\mb{x})= \sum_{n=1}^{\infty}\frac{2^{-n}}{\norm{\mb{x}- \mb{q}_{n}}{}^{1/2}}$, where $\mb{q}_{n}\in \bQ^{d}\cap [0,1]^{d}$ is finite everywhere $\mb{x}\in [0,1]^{d}$, but $\int_{[0,1]^{d}}f(x)dx \ge\int_{[0,1]^{d}}\frac{1}{\norm{\mb{x}- \mb{q}_{n}}{}}  = \infty$. For $f$ defined on all $\bR$, simply let $f(\mb{x}+\mb{d}) = f(\mb{x})$ for all $\mb{d}\in \bN^{d}$.
+
+
+\item Suppose that there exists subset $E\subset \bR^{d}$, $m(E)>0$ such that for some $\epsilon>0$,  $f(\mb{x})> \epsilon,\; \mb{x}\in E$. Then we can find a simple function $g(\mb{x})= \epsilon\ind{\mb{x}\in E}$ such that $f\ge g$ and $\text{simp}\int_{\bR^{d}}g(x)dx= c m(E)>0$. Thus $\int_{\bR^{d}}f(x)dx>0$, resulting in contradiction.
+
+Conversely, if $f=0$ outside a set of measure zero, then for any simple unsigned function $0\le g\le f$, $g$ is nonzero only for a set of measure zero. Therefore $\text{simp}\int_{\bR^{d}}g(x)dx= 0$, so $\int_{\bR^{d}}f(x)dx=0$.\qed
+\end{enumerate}
+\end{proof}
+
+\item \begin{remark}
+The use of the integral $\int_{\bR^{d}}f(x)dx$ to control the \emph{distribution} of $f$ is known as \emph{\textbf{the first moment method}}. One can also control this distribution using \emph{\textbf{higher moments}} such as $\int_{\bR^{d}}\abs{f(x)}^p dx$ for various values of $p$, or \emph{\textbf{exponential moments}} such as $\int_{\bR^{d}}e^{t\,f(x)}dx$ or \emph{\textbf{the Fourier moments}} $\int_{\bR^{d}}e^{i\,t\,f(x)}dx$ for various values of $t$; such \emph{moment methods} are \emph{fundamental} to probability theory.
+\end{remark}
+\end{itemize}
+
+
+
+\subsection{Absolute Integrable}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Absolute integrability}}).\\
+ An almost everywhere defined measurable function $f : \bR^d \rightarrow \bC$ is said to be \underline{\emph{\textbf{absolutely integrable}}} if \emph{\textbf{the unsigned integral}}
+\begin{align*}
+\norm{f}{L^{1}(\bR^{d})} &:= \int_{\bR^{d}}\abs{f(\mb{x})}d\mb{x} < \infty.
+\end{align*}
+We refer to this quantity $\norm{f}{L^{1}(\bR^{d})}$ as \underline{\emph{\textbf{the $L^1(\bR^d)$ norm of $f$}}}, and use \underline{$L^1(\bR^d)$} or $L^1(\bR^d \rightarrow \bC)$ to denote \underline{\emph{\textbf{the space of absolutely integrable functions}}}. If $f$ is \emph{\textbf{real-valued}} and absolutely integrable, we define \emph{\textbf{the Lebesgue integral}} $\int_{\bR^{d}}f(x)dx$ by the formula
+\begin{align*}
+\int_{\bR^{d}}f(x)dx &= \int_{\bR^{d}}f_{+}(x)dx - \int_{\bR^{d}}f_{-}(x)dx
+\end{align*}
+where $f_{+} = \max\set{f, 0}$ and $f_{-} = \max\set{-f, 0}$ are the magnitudes of the positive and negative components of $f$. (note that the two unsigned integrals on the right-hand side are finite, as $f_+, f_{-}$ are pointwise dominated by $\abs{f}$). If f is \emph{\textbf{complex-valued}} and absolutely integrable, we define the Lebesgue integral $\int_{\bR^{d}}f(x)dx$ by the formula
+\begin{align*}
+\int_{\bR^{d}}f(x)dx &= \int_{\bR^{d}}\Re f(x)dx + i\,\int_{\bR^{d}}\Im f(x)dx,
+\end{align*}
+where the two integrals \emph{\textbf{on the right}} are interpreted as \emph{\textbf{real-valued absolutely integrable} Lebesgue integrals}. It is easy to see that the unsigned, real-valued, and complex-valued Lebesgue integrals defined in this manner are \emph{compatible} on their common domains of definition.
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{$L^1(\bR^d)$ is a Normed Vector Space}})\\
+From the pointwise triangle inequality $\abs{f(x) + g(x)} \le \abs{f(x)} + \abs{g(x)}$  we conclude the \emph{\textbf{$L^1$ triangle inequality}}
+\begin{align*}
+\norm{f  + g}{L^1(\bR^d)} &\le \norm{f}{L^1(\bR^d)} + \norm{g}{L^1(\bR^d)},
+\end{align*} for any \emph{almost everywhere defined measurable} $f, g : \bR^d \rightarrow \bC$. It is also easy to see that
+\begin{align*}
+\norm{c\,f}{L^1(\bR^d)} &\le \abs{c}\norm{f}{L^1(\bR^d)},
+\end{align*} for any complex number $c$. As such, we see that $L^1(\bR^d \rightarrow \bC)$ is a \emph{\textbf{complex vector space}}. 
+\end{remark}
+
+\item \begin{remark}  (\emph{\textbf{$L^1$ distance on $L^1(\bR^d)$}})\\
+Given two functions $f, g \in L^1(\bR^d \rightarrow \bC)$, we can define the $L^1$ distance $d_{L^1}(f, g)$ between them by the formula
+\begin{align*}
+d_{L^1}(f, g) &:= \norm{f - g}{L^1(\bR^d)}.
+\end{align*}
+Thanks to the triangle inequality, this distance obeys almost all the axioms of a metric on $L^1(\bR^d)$, with \emph{\textbf{one exception}}: it is possible for \emph{two different functions} $f, g \in L^1(\bR^d \rightarrow \bC)$ to have a \emph{zero $L^1$ distance}, if they \emph{agree almost everywhere}. As such, $d_{L^1}$ is only \underline{\emph{\textbf{a semi-metric}}} (also known as a \underline{\emph{\textbf{pseudo-metric}}}) rather than a metric.
+
+However, if one adopts the convention that any two functions that agree almost everywhere are considered \emph{\textbf{equivalent}} (or more formally, one works in \emph{the quotient space} of $L^1(\bR^d)$ by \emph{\textbf{the equivalence relation of almost everywhere agreement}}, which \emph{by abuse of notation} is also denoted $L^1(\bR^d)$, then \emph{one recovers a genuine \textbf{metric}}.
+\end{remark}
+
+
+\item \begin{exercise}
+If $f : \bR^d \rightarrow \bC$ is absolutely integrable, then $f$ is bounded almost everywhere by Markov inequality. 
+\end{exercise}
+
+\item \begin{exercise} $f : E \rightarrow \bC$ is a function, we say that $f$ is \emph{measurable} (resp. \emph{absolutely integrable}) if its extension $\hat{f}: \bR^{d } \rightarrow \bC$ is a (absolute) measurable function, s.t. $\hat{f} = f$ for all $\mb{x}\in E$ and is zero outside. Then 
+\begin{align*}
+\int_{E}f(x)dx &\equiv \int_{\bR^{d}}\hat{f}(x)dx.
+\end{align*}
+\end{exercise}
+
+\item \begin{exercise}
+If $E,F$ are disjoin sets, $f: E\cup F\rightarrow \bC$, then 
+\begin{align*}
+\int_{E}f(x)dx &= \int_{E\cup F}f(x)\ind{x\in E}dx
+\end{align*}
+and
+\begin{align*}
+\int_{E\cup F}f(x)dx &= \int_{E}f(x)dx+ \int_{F}f(x)dx.
+\end{align*}
+\end{exercise}
+
+\item \begin{lemma} (\textbf{The Triangle Inequality}):\\
+Let  $f\in L^{1}(\bR^{d})$, then
+\begin{align*}
+\abs{\int_{\bR^{d}}f(x)dx} &\le \int_{\bR^d}\abs{f(x)}dx. 
+\end{align*}
+\end{lemma}
+\begin{proof}
+If $f$ is real-valued, then $\abs{f} = f_{+} + f_{-}$ and the claim is obvious from triangle inequality. 
+
+When $f$ is \emph{complex-valued}, one \emph{cannot argue quite so simply}; a naive mimicking of the real-valued argument would \emph{lose a factor of $2$}, giving the inferior bound
+\begin{align*}
+\abs{\int_{\bR^{d}}f(x)dx} &\le 2\int_{\bR^d}\abs{f(x)}dx. 
+\end{align*}
+To do better, we exploit \emph{\textbf{the phase rotation invariance properties}} of the \emph{absolute value operation} and of the \emph{integral}, as follows. Note that
+for any complex number $z$, one can write $\abs{z}$ as $ze^{i\theta}$ for some real $\theta$. In particular, we have
+\begin{align*}
+\abs{\int_{\bR^{d}}f(x)dx}= e^{i\theta} \int_{\bR^{d}} f(x) dx = \int_{\bR^{d}}  e^{i\theta} f(x) dx
+\end{align*} for some real $\theta$. Taking \emph{real parts of both sides}, we obtain
+\begin{align*}
+\abs{\int_{\bR^{d}}f(x)dx}= \int_{\bR^{d}}  \Re \paren{e^{i\theta} f(x)} dx.
+\end{align*}  Since $ \Re \paren{e^{i\theta} f(x)} \le \abs{e^{i\theta}f(x)} = \abs{f(x)}$, we obtain the claim. \qed
+\end{proof}
+\end{itemize}
+\newpage
+\section{Development of Lebesgue Integration}
+\begin{table}[h!]
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\belowdisplayskip}{-10pt}
+\setlength{\abovedisplayshortskip}{0pt}
+\setlength{\belowdisplayshortskip}{0pt}
+\footnotesize
+\centering
+\caption{Development on Lebesgue Integration}
+\label{tab: integration}
+%\setlength{\extrarowheight}{1pt}
+\renewcommand\tabularxcolumn[1]{m{#1}}
+\small
+\begin{tabularx}{1\textwidth} { 
+  | >{\raggedright\arraybackslash} m{3cm}
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X  | }
+ \hline
+  &  \emph{\textbf{Unsigned Simple Function}} & \emph{\textbf{Unsigned Measurable Function}}   &  \emph{\textbf{Abusolute Integrable Function}}   \\
+  \hline 
+\textbf{\emph{Definition}}    &
+\begin{align*}
+f = \sum_{i=k}^{m}c_k \mathds{1}_{E_k}
+\end{align*}
+ & 
+ \begin{align*}
+\set{f_n} \rightarrow f \text{ pointwise}\\
+\set{f_n} \text{ unsigned simple}
+\end{align*}
+ & 
+\begin{align*}
+\norm{f}{L^1(\bR^d)} < \infty\\
+\abs{f} \text{ unsigned}
+\end{align*}
+\\
+ \hline \vspace{5pt}
+\emph{\textbf{Integration}}  \vspace{2pt} &  
+\begin{align*}
+\text{simp }\int_{\bR^d} f(x) dx \\
+= \sum_{i=k}^{m}c_k \mu(E_k)
+\end{align*}
+ &
+ \begin{align*}
+\int_{\bR^{d}}f(x)dx =  \underline{\int_{\bR^{d}}}f(x)dx =\\
+  \sup\limits_{0\le g\le f,\; g\text{ simple}} \text{simp}\int_{\bR^{d}}g(x) dx
+ \end{align*}
+  & \begin{align*}
+\int_{\bR^{d}}f(x)dx =\\
+ \int_{\bR^{d}}f_{+}(x)dx - \int_{\bR^{d}}f_{-}(x)dx
+\end{align*}  \\
+ \hline \vspace{5pt}
+\emph{Compatibility} \vspace{2pt}  &    & $\checkmark$  & $\checkmark$    \\
+ \hline \vspace{5pt}
+\emph{Compatibility to Rieman Integral} \vspace{2pt}  &  $\checkmark$  & $\checkmark$  & $\checkmark$    \\
+\hline \vspace{5pt}
+\emph{Linearity}  \vspace{2pt}  &  Unsigned $\checkmark$  & $\checkmark$  & $\checkmark$    \\
+\hline \vspace{5pt}
+\emph{\textbf{Equivalence}} \vspace{2pt}   & $\checkmark$  & $\checkmark$  & $\checkmark$    \\
+\hline \vspace{5pt}
+\emph{Vanishing} \vspace{2pt}   &   $\checkmark$  & $\checkmark$  & $\checkmark$  \\
+\hline \vspace{5pt}
+\emph{\textbf{Monotonicity}} \vspace{2pt}   & $\checkmark$    &  $\checkmark$   & $\checkmark$  \\
+\hline \vspace{5pt}
+\emph{\textbf{Superadditivity}} \vspace{2pt}   & & lower Lebesgue integral $\checkmark$  &    \\
+\hline \vspace{5pt}
+\emph{Reflection} \vspace{2pt}   & &  lower Lebesgue integral $\checkmark$  &    \\
+\hline \vspace{5pt}
+\emph{Divisibility} \vspace{2pt}   & &  lower Lebesgue integral $\checkmark$  &    \\
+\hline \vspace{5pt}
+\emph{\textbf{Finite additivity}} \vspace{2pt}   & $\checkmark$ & $\checkmark$ & $\checkmark$     \\
+\hline \vspace{5pt}
+\emph{\textbf{Horizontal truncation}} \vspace{2pt}   &   & $\checkmark$  & $\checkmark$     \\
+\hline \vspace{5pt}
+\emph{\textbf{Vertical truncation}} \vspace{2pt}   &   & $\checkmark$  & $\checkmark$     \\
+\hline \vspace{5pt}
+\emph{Translation Invariance} \vspace{2pt}   &   & $\checkmark$ & $\checkmark$    \\
+\hline
+\end{tabularx}
+\end{table}
+
+
+\newpage
+\section{Examples}
+\subsection{Unsigned Measureable Functions}
+\begin{itemize}
+\item \begin{example}
+If $f : \bR^d \rightarrow [0, +\infty]$ is measurable, then $f^{-1}(E)$ is \emph{\textbf{Lebesgue measurable}} for many classes of sets $E$. However, we caution that it is \emph{\textbf{not necessarily}} the case that $f^{-1}(E)$ is \emph{Lebesgue measurable} \emph{if} $E$ is \emph{Lebesgue measurable}. 
+\end{example}
+\begin{proof}
+We let $C$ be \emph{\textbf{the Cantor set}}
+\begin{align*}
+C:= \set{\sum_{j=1}^{\infty}a_j 3^{-j}: a_j \in set{0, 2}, \forall j}
+\end{align*}
+and let $f : \bR^d \rightarrow [0, +\infty]$ be the function defined by setting
+\begin{align*}
+f(x) &= \sum_{j=1}^{\infty}2 b_j 3^{-j}
+\end{align*}
+whenever $ x \in [0, 1]$ is \emph{\textbf{not} a \textbf{terminating binary decimal}}, and so has a \emph{unique binary expansion} $x = \sum_{j=1}^{\infty} b_j 2^{-j}$ for some $b_j \in \{0, 1\}$, and $f(x) \equiv 0$ otherwise. We thus see that $f$ takes values in $C$, and is \emph{\textbf{bijective}} on the set $A$ of \emph{\textbf{non-terminating decimals}} in $[0, 1]$. 
+
+Using Lemma \ref{lem: unsigned_measurable_function}, it is not difficult to show that $f$ is measurable. On the other hand, by modifying the construction from the previous notes, we can find a subset $F$ of $A$ which is \emph{\textbf{non-measurable}}. If we set $E := f(F)$, then $E$ is a subset of \emph{the null set} $C$ and is thus itself
+\emph{\textbf{a null set}}; but \emph{$f^{-1}(E) = F$ is \textbf{non-measurable}}, and so the \emph{\textbf{inverse image of a Lebesgue measurable set by a measurable function need not remain Lebesgue measurable}}. However, we will later see that it is still true that \emph{$f^{-1}(E)$ is Lebesgue measurable if $E$ has a slightly stronger measurability property than Lebesgue measurability}, namely \emph{\textbf{Borel measurability}}.
+\end{proof}
+\end{itemize}
+
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{reference.bib}
+\end{document}
