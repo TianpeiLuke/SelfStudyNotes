@@ -2,10 +2,25 @@
 
 ## Books
 
+### Statistical Learning Theory
+
 ***Foundations_of_Machine_Learning***, Mehryar Mohri, Afshin Rostamizadeh, Ameet Talwalkar
 
 ***Understanding Machine Learning: From Theory To Algorithms***, Shalev-Shwartz S., Ben-David S.
 
+***A Probabilistic Theory of Pattern Recognition***, Devroye, Gyorfi, Lugosi
+
+### Machine Learning Algorithms
+
+#### Kernel Methods
+
+***Learning With Kernels Support Vector Machines, Regularization, Optimization, And Beyond***, Bernhard Schölkopf, Alexander J. Smola
+
+***Gaussian Process for Machine Learning***, C.E. Rasmussen, C.K.I. Williams
+
+#### Boosting
+
+***Boosting: Foundations and Algorithms***, Robert E Schapire Yoav Freund
 
 ## Table of Contents
 
