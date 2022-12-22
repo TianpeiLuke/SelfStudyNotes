@@ -2,6 +2,8 @@
 
 ## Books
 
+*Topology*, James R. Munkres, 2nd Edition
+
 ## Table of Contents
 - Summary 
 	- Part 1:
