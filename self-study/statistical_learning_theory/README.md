@@ -59,7 +59,10 @@
   - Asymptotic Analysis
     - Asymptotic Convergence of K-Nearest Neigbhor Distance 
     - Stone’s Lemma 
-    - Stone’s Theorem, Universal Consistency of K-NN Classification Rule
+    - Stone’s Theorem, Universal Consistency of k-NN Classification Rule
+  - Non-Asymptotic Analysis
+    - Generalization Bounds for k-NN Rules
+    - Curse of Dimensionality  
 
 - Reproducing Kernel Hilbert Space
   - Reproducing Kernel Hilbert Space
