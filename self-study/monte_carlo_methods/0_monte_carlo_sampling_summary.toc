@@ -1,0 +1,36 @@
+\contentsline {section}{\numberline {1}Basic Concepts}{3}{}%
+\contentsline {subsection}{\numberline {1.1}Random variable generation}{3}{}%
+\contentsline {subsection}{\numberline {1.2}Why Monte Carlo ?}{3}{}%
+\contentsline {subsection}{\numberline {1.3}Advantages and disadvantages of Monte Carlo Methods}{5}{}%
+\contentsline {section}{\numberline {2}Rejection and Weighting}{6}{}%
+\contentsline {subsection}{\numberline {2.1}Reject Sampling}{6}{}%
+\contentsline {subsection}{\numberline {2.2}Variance Reduction}{6}{}%
+\contentsline {subsection}{\numberline {2.3}Importance Sampling}{7}{}%
+\contentsline {subsection}{\numberline {2.4}Sequential Importance Sampling (SIS)}{9}{}%
+\contentsline {section}{\numberline {3}Markov Chain Monte Carlo}{10}{}%
+\contentsline {subsection}{\numberline {3.1}From Vanilla Monte Carlo to MCMC}{10}{}%
+\contentsline {subsection}{\numberline {3.2}Metropolis-Hastings Algorithm}{11}{}%
+\contentsline {subsection}{\numberline {3.3}Some Special Metropolis-Hastings Algorithms}{13}{}%
+\contentsline {subsubsection}{\numberline {3.3.1}Random-walk Metropolis-Hastings}{13}{}%
+\contentsline {subsubsection}{\numberline {3.3.2}Independent Metropolis-Hastings (IMH) Algorithm}{14}{}%
+\contentsline {subsubsection}{\numberline {3.3.3}Configurational bias Monte Carlo}{15}{}%
+\contentsline {subsection}{\numberline {3.4}Gibbs Sampling}{16}{}%
+\contentsline {subsubsection}{\numberline {3.4.1}Slice Sampling}{17}{}%
+\contentsline {subsubsection}{\numberline {3.4.2}Gibbs Sampling}{18}{}%
+\contentsline {subsubsection}{\numberline {3.4.3}The Hammersley-Clifford Theorem}{18}{}%
+\contentsline {section}{\numberline {4}Hamiltonian Monte Carlo}{19}{}%
+\contentsline {subsection}{\numberline {4.1}Hamiltonian Dynamics}{19}{}%
+\contentsline {subsection}{\numberline {4.2}From MCMC to Hamilton Monte Carlo}{21}{}%
+\contentsline {subsubsection}{\numberline {4.2.1}Monte Carlo in high dimensional space}{21}{}%
+\contentsline {subsubsection}{\numberline {4.2.2}Hamiltonian Monte Carlo}{22}{}%
+\contentsline {subsection}{\numberline {4.3}Idealized Hamiltonian Monte Carlo}{24}{}%
+\contentsline {subsubsection}{\numberline {4.3.1}Formulation}{24}{}%
+\contentsline {subsubsection}{\numberline {4.3.2}Euclidean-Gaussian Kinetic Energies}{25}{}%
+\contentsline {subsection}{\numberline {4.4}Hamiltonian Monte Carlo in Practice}{26}{}%
+\contentsline {subsubsection}{\numberline {4.4.1}Symplectic Integrators}{26}{}%
+\contentsline {subsubsection}{\numberline {4.4.2}Correcting for Symplectic Integrator Error}{27}{}%
+\contentsline {section}{\numberline {5}Monte Carlo Optimization}{29}{}%
+\contentsline {subsection}{\numberline {5.1}Gradient Methods}{30}{}%
+\contentsline {subsection}{\numberline {5.2}Simulated Annealing}{30}{}%
+\contentsline {subsection}{\numberline {5.3}Simulated Tempering}{31}{}%
+\contentsline {subsection}{\numberline {5.4}Monte Carlo EM}{31}{}%

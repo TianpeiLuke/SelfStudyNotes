@@ -1,0 +1,50 @@
+\begin{thebibliography}{8}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Betancourt(2017)]{betancourt2017conceptual}
+Michael Betancourt.
+\newblock A conceptual introduction to hamiltonian monte carlo.
+\newblock \emph{arXiv preprint arXiv:1701.02434}, 2017.
+
+\bibitem[Brooks et~al.(2011)Brooks, Gelman, Jones, and
+  Meng]{brooks2011handbook}
+Steve Brooks, Andrew Gelman, Galin Jones, and Xiao-Li Meng.
+\newblock \emph{Handbook of markov chain monte carlo}.
+\newblock CRC press, 2011.
+
+\bibitem[Gelfand et~al.(2000)Gelfand, Silverman, et~al.]{gelfand2000calculus}
+Izrail~Moiseevitch Gelfand, Richard~A Silverman, et~al.
+\newblock \emph{Calculus of variations}.
+\newblock Courier Corporation, 2000.
+
+\bibitem[Haier et~al.(2006)Haier, Lubich, and Wanner]{haier2006geometric}
+Ernst Haier, Christian Lubich, and Gerhard Wanner.
+\newblock \emph{Geometric Numerical integration: structure-preserving
+  algorithms for ordinary differential equations}.
+\newblock Springer, 2006.
+
+\bibitem[Leimkuhler and Reich(2004)]{leimkuhler2004simulating}
+Benedict Leimkuhler and Sebastian Reich.
+\newblock \emph{Simulating hamiltonian dynamics}.
+\newblock Number~14. Cambridge university press, 2004.
+
+\bibitem[Liu(2001)]{liu2001monte}
+Jun~S Liu.
+\newblock \emph{Monte Carlo strategies in scientific computing}, volume~10.
+\newblock Springer, 2001.
+
+\bibitem[Robert and Casella(1999)]{robert1999monte}
+Christian~P Robert and George Casella.
+\newblock \emph{Monte Carlo statistical methods}, volume~2.
+\newblock Springer, 1999.
+
+\bibitem[Vishnoi(2021)]{vishnoi2021introduction}
+Nisheeth~K Vishnoi.
+\newblock An introduction to hamiltonian monte carlo method for sampling.
+\newblock \emph{arXiv preprint arXiv:2108.12107}, 2021.
+
+\end{thebibliography}
