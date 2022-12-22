@@ -1,0 +1,4 @@
+\contentsline {section}{\numberline {1}Concepts}{2}
+\contentsline {subsection}{\numberline {1.1}Word Classes in English}{2}
+\contentsline {section}{\numberline {2}Part-of-speech tagging}{4}
+\contentsline {section}{\numberline {3}Named Entities and Named Entity Tagging}{5}

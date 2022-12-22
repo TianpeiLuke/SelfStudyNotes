@@ -1,0 +1,12 @@
+\contentsline {section}{\numberline {1}Hidden Markov Model}{2}
+\contentsline {subsection}{\numberline {1.1}HMM for POS tagging}{2}
+\contentsline {section}{\numberline {2}Conditional Random Fields (CRFs)}{3}
+\contentsline {subsection}{\numberline {2.1}Inference on CRF}{4}
+\contentsline {section}{\numberline {3}Recurrent Neural Networks}{5}
+\contentsline {subsection}{\numberline {3.1}LSTM}{6}
+\contentsline {section}{\numberline {4}Transformer}{7}
+\contentsline {subsection}{\numberline {4.1}Transformer blocks}{10}
+\contentsline {subsection}{\numberline {4.2}Multi-head attention}{11}
+\contentsline {subsection}{\numberline {4.3}Modeling word order: positional embeddings}{12}
+\contentsline {subsection}{\numberline {4.4}Encoder-Decoder structure}{12}
+\contentsline {subsection}{\numberline {4.5}Transformer for Contextual Generation and Summarization}{12}

@@ -1,0 +1,40 @@
+\begin{thebibliography}{5}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Chu(1965)]{chu1965shortest}
+Yoeng-Jin Chu.
+\newblock On the shortest arborescence of a directed graph.
+\newblock \emph{Scientia Sinica}, 14:\penalty0 1396--1400, 1965.
+
+\bibitem[Dozat and Manning(2016)]{dozat2016deep}
+Timothy Dozat and Christopher~D Manning.
+\newblock Deep biaffine attention for neural dependency parsing.
+\newblock \emph{arXiv preprint arXiv:1611.01734}, 2016.
+
+\bibitem[Edmonds(1968)]{edmonds1968optimum}
+Jack Edmonds.
+\newblock Optimum branchings.
+\newblock \emph{Mathematics and the Decision Sciences, Part}, 1\penalty0
+  (335-345):\penalty0 25, 1968.
+
+\bibitem[Gabow et~al.(1986)Gabow, Galil, Spencer, and
+  Tarjan]{gabow1986efficient}
+Harold~N Gabow, Zvi Galil, Thomas Spencer, and Robert~E Tarjan.
+\newblock Efficient algorithms for finding minimum spanning trees in undirected
+  and directed graphs.
+\newblock \emph{Combinatorica}, 6\penalty0 (2):\penalty0 109--122, 1986.
+
+\bibitem[Nivre et~al.(2016)Nivre, De~Marneffe, Ginter, Goldberg, Hajic,
+  Manning, McDonald, Petrov, Pyysalo, Silveira, et~al.]{nivre2016universal}
+Joakim Nivre, Marie-Catherine De~Marneffe, Filip Ginter, Yoav Goldberg, Jan
+  Hajic, Christopher~D Manning, Ryan McDonald, Slav Petrov, Sampo Pyysalo,
+  Natalia Silveira, et~al.
+\newblock Universal dependencies v1: A multilingual treebank collection.
+\newblock In \emph{Proceedings of the Tenth International Conference on
+  Language Resources and Evaluation (LREC'16)}, pages 1659--1666, 2016.
+
+\end{thebibliography}

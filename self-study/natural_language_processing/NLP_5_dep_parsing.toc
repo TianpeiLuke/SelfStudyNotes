@@ -1,0 +1,12 @@
+\contentsline {section}{\numberline {1}Concepts}{2}
+\contentsline {section}{\numberline {2}Dependent relations}{3}
+\contentsline {subsection}{\numberline {2.1}Dependency Formalisms}{4}
+\contentsline {section}{\numberline {3}Transition-Based Dependency Parsing}{5}
+\contentsline {subsection}{\numberline {3.1}Creating an Oracle}{7}
+\contentsline {subsection}{\numberline {3.2}Feature-based classifier}{7}
+\contentsline {subsection}{\numberline {3.3}Neural classifier}{8}
+\contentsline {subsection}{\numberline {3.4}Advanced Methods in Transition-Based Parsing}{8}
+\contentsline {section}{\numberline {4}Graph-Based Dependency Parsing}{11}
+\contentsline {subsection}{\numberline {4.1}Parsing via finding the maximum spanning tree}{11}
+\contentsline {subsection}{\numberline {4.2}A feature-based algorithm for assigning scores}{13}
+\contentsline {subsection}{\numberline {4.3}Using neural network for assigning scores}{14}
