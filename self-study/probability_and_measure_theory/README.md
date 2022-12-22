@@ -3,23 +3,23 @@
 ## Books 
 
 ### Measure Theory and Real Analysis
-*An introduction to measure theory*, Terence Tao
+***An introduction to measure theory***, Terence Tao
 
-*Real Analysis*, Folland
+***Real Analysis***, Folland
 
-*Real Analysis*, Royden, 4th edition
+***Real Analysis***, Royden, 4th edition
 
 ### Probability Theory
-*A Probability Path*, Resnick S.I., Birkhauser, 1999
+***A Probability Path***, Resnick S.I., Birkhauser, 1999
 
-*Probability and Measure*, Patrick Billingsley, 3rd Ed, Wiley
+***Probability and Measure***, Patrick Billingsley, 3rd Ed, Wiley
 
-*Functional Analysis For Probability And Stochastic Processes: An Introduction*, Adam Bobrowski
+***Functional Analysis For Probability And Stochastic Processes: An Introduction***, Adam Bobrowski
 
 ### Statistics
-*Theory of Statistics*, Mark J. Schervish
+***Theory of Statistics***, Mark J. Schervish
 
-*Bayesian Nonparametrics*,J.K. Ghosh, R.V. Ramamoorthi
+***Bayesian Nonparametrics***,J.K. Ghosh, R.V. Ramamoorthi
 
 ## Table of Contents
 
