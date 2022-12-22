@@ -1,4 +1,4 @@
-# Statistical Learning Theory and Theorectical Machine Learning
+# Statistical Learning Theory and Machine Learning Algorithms
 
 ## Books
 
