@@ -1,0 +1,1 @@
+\contentsline {section}{\numberline {1}More understanding of parallel transport, covariant derivative and affine connection}{2}{}%
