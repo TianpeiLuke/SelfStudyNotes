@@ -1,0 +1,895 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs, dsfont}
+\usepackage{tabularx}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Lecture 3: The Boolean Algebra, $\sigma$-Algebra and Limits in Set Theory}
+\author{ Tianpei Xie}
+\date{ Jul. 9th., 2015 }
+\maketitle
+\tableofcontents
+\newpage
+\section{Set Theory Basics}
+\subsection{Set, Function and Axiom of Choice}
+\begin{itemize}
+\item \begin{definition}
+Given a set $X$, the collection of all subsets of $X$, denoted as $2^X$, is defined as
+\begin{align*}
+2^X &:= \set{E: E \subseteq X}
+\end{align*}
+\end{definition}
+
+\item \begin{remark}
+The followings are basic operation on $2^X$: For $A, B \in 2^X$,
+\begin{enumerate}
+\item \emph{\textbf{Inclusion}}:   $A \subseteq B$ if and only if $\forall x \in A$, $x \in B$.
+\item \emph{\textbf{Union}}:  $A \cup B = \set{x: x \in A \lor x \in B}$.
+\item \emph{\textbf{Intersection}}:  $A \cap B = \set{x: x \in A \land x \in B}$.
+\item \emph{\textbf{Difference}}:  $A \setminus B = \set{x: x \in A \land x \not\in B}$.
+\item \emph{\textbf{Complement}}: $A^{c} = X \setminus A = \set{x: x \in X \land x \not\in A}$.
+\item \emph{\textbf{Symmetric Difference}}:  $A \Delta B = (A \setminus B) \cup (B \setminus A) = \set{x \in X: x \not\in A \lor x \not\in B}$.
+\end{enumerate}
+We have \emph{\textbf{deMorgan's laws}}:
+\begin{align*}
+\paren{\bigcup_{a \in A}U_a}^c = \bigcap_{a \in A}U_a^c, \quad \paren{\bigcap_{a \in A}U_a}^c = \bigcup_{a \in A}U_a^c
+\end{align*}
+\end{remark}
+
+\item \begin{remark}
+Note that the following equality is useful:
+\begin{align*}
+A \Delta B = (A \cup B) \setminus (A \cap B)
+\end{align*}
+\end{remark}
+
+\item \begin{definition}
+\emph{\textbf{An equivalence relation}} on $X$ is a relation $R$ on $X$ such that 
+\begin{enumerate}
+\item (\emph{\textbf{Reflexivity}}): $xRx$ for all $x \in X$;
+\item (\emph{\textbf{Symmetry}}): $xRy$ if and only if $yRx$ for all $x,y \in X$;
+\item (\emph{\textbf{Transitivity}}): $xRy$ and $yRz$ then $xRz$ for all $x,y,z \in X$. 
+\end{enumerate}
+\emph{\textbf{The equivalence class}} of an element $x$ is denoted as $[x] := \set{y \in X:  xRy}$. We usually denote the equivalence relation $R$ as $\sim$. The set of equivalence classes provides \emph{\textbf{a partition of the set $X$}} in that every $z \in X$ can must belong to \emph{only one equivalence class} $[x]$. That is $[x] \cap [y] = \emptyset$ if $x \not\sim y$ and $X = \bigcup_{x \in X}[x]$.
+
+\emph{The set of all equivalence classes} of $X$ by $\sim$, denoted $X/{\mathord {\sim }}:= \{[x]: x \in X \}$, is \emph{\textbf{the quotient set}} of $X$ by $\sim$.  $X = \bigcup_{C \in X/\sim}C.$
+\end{definition}
+
+\item \begin{definition} 
+$f: X\rightarrow Y$ is a \emph{\textbf{function}} if for each $x \in X$, there exists a unique $y = f(x) \in Y$. $X$ is called the \emph{\textbf{domain}} of $f$ and $Y$ is called the  \emph{\textbf{codomain}} of $f$. $f(X) = \set{y \in Y: y = f(x)}$ is called the \emph{\textbf{range}} of $f$
+
+The \emph{\textbf{pre-image}} of $f$ is defined as
+\begin{align*}
+f^{-1}(E) &= \set{x \in X: f(x) \in E}.
+\end{align*}
+\end{definition}
+
+
+\item \begin{remark}
+The pre-image operation \emph{\textbf{commutes}} with \emph{\textbf{all basic set operations}}:
+\begin{align*}
+A \subseteq B & \Rightarrow f^{-1}\paren{A} \subseteq f^{-1}(B) \\
+f^{-1}\paren{\bigcup_{\alpha \in A}E_{\alpha}} &= \bigcup_{\alpha \in A}f^{-1}\paren{E_{\alpha}}\\
+f^{-1}\paren{\bigcap_{\alpha \in A}E_{\alpha}} &= \bigcap_{\alpha \in A}f^{-1}\paren{E_{\alpha}}\\
+f^{-1}\paren{A \setminus B} &= f^{-1}(A) \setminus f^{-1}(B) \\
+f^{-1}\paren{E^c} &= \paren{f^{-1}\paren{E}}^c 
+\end{align*}
+\end{remark}
+
+
+\item \begin{remark}
+The image operation \emph{\textbf{commutes}} with only  \emph{\textbf{inclusion} and \textbf{union} operations}:
+\begin{align*}
+A \subseteq B & \Rightarrow f\paren{A} \subseteq f(B) \\
+f\paren{\bigcup_{\alpha \in A}E_{\alpha}} &= \bigcup_{\alpha \in A}f\paren{E_{\alpha}} 
+\end{align*} For the other operations:
+\begin{align*}
+f\paren{\bigcap_{\alpha \in A}E_{\alpha}} &\subseteq \bigcap_{\alpha \in A}f\paren{E_{\alpha}} \\
+f\paren{A \setminus B} &\supseteq f(A) \setminus f(B)
+\end{align*}
+\end{remark}
+
+\item \begin{definition}
+A map $f: X\rightarrow Y$ is \emph{\textbf{surjective, or, onto}}, if for every $y \in Y$, there exists a $x \in X$ such that $y = f(x)$. In set theory notation:
+\begin{align*}
+f: X\rightarrow Y \text{ is surjective }&\Leftrightarrow \; f^{-1}(Y) \subseteq X.
+\end{align*}
+A map $f: X\rightarrow Y$ is \emph{\textbf{injective}}, if for every $x_1 \neq x_2 \in X$, their map $f(x_1) \neq f(x_2)$, or equivalently, $f(x_1) = f(x_2)$ only if $x_1 = x_2$.
+
+If a map $f: X\rightarrow Y$ is both \emph{surjective} and \emph{injective}, we say $f$ is a \emph{\textbf{bijective}}, or there exists an \emph{\textbf{one-to-one correspondence}} between $X$ and $Y$. Thus $Y = f(X)$.
+\end{definition}
+
+\item \begin{remark}
+\begin{align*}
+f^{-1}(f(B)) &\supseteq  B,\quad \forall B \subseteq X \\
+f(f^{-1}(E)) &\subseteq E,\quad \forall E \subseteq Y \\
+f: X\rightarrow Y \text{ is surjective }&\Leftrightarrow \; f^{-1}(Y) \subseteq X. \\
+&\Rightarrow  \; f(f^{-1}(E)) = E. \\
+f: X\rightarrow Y \text{ is injective }& \Rightarrow\; f^{-1}(f(B)) = B \\
+& \Rightarrow\; f\paren{\bigcap_{\alpha \in A}E_{\alpha}} = \bigcap_{\alpha \in A}f\paren{E_{\alpha}} \\
+& \Rightarrow\; f\paren{A \setminus B} = f(A) \setminus f(B)
+\end{align*}
+\end{remark}
+
+\item \begin{proposition}
+The following statements for composite functions are true:
+\begin{enumerate}
+\item If $f, g$ are both injective, then $g \circ f$ is injective. 
+\item If $f, g$ are both surjective, then $g \circ f$ is surjective. 
+\item Every \textbf{injective} map $f: X \rightarrow Y$ can be writen as $f = \iota \circ f_{R}$ where $f_R: X \rightarrow f(X)$ is a \textbf{bijective} map and $\iota$ is the \textbf{inclusion map}.
+\item Every \textbf{surjective} map $f: X \rightarrow Y$ can be writen as $f =  f_{p} \circ \pi$ where $\pi: X\rightarrow (X/\sim)$ is \textbf{a quotient map} (projection $x \mapsto [x]$) for the equivalent relation $ x \sim y \Leftrightarrow f(x) = f(y)$ and  $f_p: (X/\sim) \rightarrow Y$ is defined as $f_p([x]) = f(x)$ \textbf{constant} in each coset $[x]$.
+\item If $g \circ f$ is \textbf{injective}, then $f$ is \textbf{injective}.
+\item If $g \circ f$ is \textbf{surjective}, then $g$ is \textbf{surjective}.
+\end{enumerate}
+\end{proposition}
+
+\item \begin{principle} (\textbf{The Axiom of Choice}).\\
+If $\set{X_{\alpha}}_{\alpha \in A}$ is a nonempty collection of nonempty sets, then $\prod_{\alpha \in A}X_{\alpha}$ is non-empty.
+\end{principle}
+
+\item \begin{corollary}
+If $\set{X_{\alpha}}_{\alpha \in A}$ is a \textbf{disjoint} collection of nonempty sets, there is a set $Y \subset \bigcup_{\alpha \in A}X_{\alpha}$ such that $Y \cap X_{\alpha}$ contains \textbf{precisely one element} for each $\alpha \in A$.
+\end{corollary}
+\end{itemize}
+\subsection{The Limits of Sets}
+\begin{itemize}
+\item   \begin{definition}
+A \emph{\textbf{nested}} sequence of sets $E_{1}, E_{2}, \ldots $ is \emph{\textbf{nondecreasing}} if $E_{i}\subseteq E_{i+1}$, and it is \emph{\textbf{nonincreasing}}  if $E_{i}\supseteq E_{i+1}$.
+\end{definition}
+
+\item \begin{definition}
+The \underline{\emph{\textbf{infimum}}} and the \underline{\emph{\textbf{supremum}}} of a collection of sets $\set{E_{n}}_{n\ge k}$ is given by 
+\begin{align*}
+&\inf\limits_{n\ge k}E_{n} = \bigcap_{n= k}^{\infty}E_{n}, \quad \sup\limits_{n\ge k}E_{n} = \bigcup_{n= k}^{\infty}E_{n} ,
+\end{align*}
+respectively.
+\end{definition}
+
+\item \begin{remark} Note that
+\begin{enumerate}
+\item $\inf\limits_{n\ge 1}E_{n} \xdotx{,} \inf\limits_{n\ge k}E_{n} , \ldots $ is \emph{\textbf{monotone increasing}} as $k$ increases since 
+\begin{align*}
+\inf\limits_{n\ge k}E_{n} \subseteq \inf\limits_{n\ge k+1}E_{n}.
+\end{align*} \emph{The \textbf{more}} sets that are involved in the \emph{\textbf{intersection}}, \emph{the \textbf{less} cardinality of} the intersection will be. As $k$ increases, \emph{less} sets are involved in the intersection. 
+\item $\sup\limits_{n\ge 1}E_{n}\ \xdotx{,} \sup\limits_{n\ge k}E_{n} , \ldots $ is \emph{\textbf{monotone decreasing}}. as $k$ increases since 
+\begin{align*}
+\sup\limits_{n\ge k}E_{n} \supseteq \sup\limits_{n\ge k+1}E_{n}.
+\end{align*} \emph{The \textbf{more}} sets that are involved in the \emph{\textbf{union}}, \emph{the \textbf{more} cardinality of} the union will be. As $k$ increases, \emph{less} sets are involved in the union. 
+\end{enumerate}
+\end{remark}
+
+\item \begin{definition} \citep{resnick2013probability} \\
+The \underline{\emph{\textbf{limit infimum}}} and \underline{\emph{\textbf{limit supremum}}} is defined as  
+\begin{align}
+&\liminf\limits_{n\rightarrow \infty}E_{n} = \bigcup_{k=1}^{\infty}\bigcap_{n= k}^{\infty}E_{n}, \quad \limsup\limits_{n\rightarrow \infty}E_{n} = \bigcap_{k=1}^{\infty}\bigcup_{n= k}^{\infty}E_{n}, \label{eqn: liminf_limsup}
+\end{align}
+respectively.
+\end{definition}
+
+\item  \begin{remark}
+It is clear that for \emph{\textbf{nested sequence}} $\set{E_{n}}_{n\ge 1}$ that is \emph{\textbf{nondecreasing}}, 
+\begin{align*}
+\liminf\limits_{n\rightarrow \infty}E_{n} = \bigcup_{n=1}^{\infty}E_{n} = \limsup\limits_{n\rightarrow \infty}E_{n}
+\end{align*}
+so define \emph{the \textbf{limit} of monotone increasing nested sets} as $\lim\limits_{n\rightarrow \infty}E_{n} = \bigcup_{n=1}^{\infty}E_{n} $.
+
+Similarly, for \emph{\textbf{nonincreasing nested sets}} $\set{E_{n}}_{n\ge 1}$, 
+\begin{align*}
+\liminf\limits_{n\rightarrow \infty}E_{n} = \bigcap_{n=1}^{\infty}E_{n} = \limsup\limits_{n\rightarrow \infty}E_{n}
+\end{align*}
+so define \emph{the \textbf{limit} of monotone decreasing nested sets} as $\lim\limits_{n\rightarrow \infty}E_{n} = \bigcap_{n=1}^{\infty}E_{n} $.
+\end{remark}
+
+\item  \begin{remark} (\emph{\textbf{Limit Infimum and Limit Supremum of a Sequence}})\\
+Note that the notion $$\liminf_{n\rightarrow \infty}a_{n} \equiv \lim_{k\rightarrow \infty}\inf_{n\ge k}a_{n} = \sup_{k\ge 1}\inf_{n\ge k}a_{n} $$ and $$\limsup_{n\rightarrow \infty}a_{n} \equiv \lim_{k\rightarrow \infty}\sup_{n\ge k}a_{n} = \inf_{k\ge 1}\sup_{n\ge k}a_{n}.$$ It is \emph{\textbf{the limit infimum} and \textbf{limit supremum}} among all the \emph{\textbf{accumulation points}} of a sequence $(a_{n})$, respectively. 
+
+\begin{proposition}
+The following properties hold
+\begin{enumerate}
+\item $\inf\limits_{n \ge 1}a_{n} \le \liminf\limits_{n\rightarrow \infty}a_{n}  \le \limsup\limits_{n\rightarrow \infty}a_{n} \le \sup\limits_{n \ge 1}a_{n}$, if the total infimum and total supremum exists.
+
+\item 
+\begin{align*}
+\liminf_{n\rightarrow \infty}(a_{n}+b_{n}) &\ge \liminf_{n\rightarrow \infty}a_{n} + \liminf_{n\rightarrow \infty}b_{n},\\
+\limsup_{n\rightarrow \infty}(a_{n}+b_{n}) &\le \limsup_{n\rightarrow \infty}a_{n} + \limsup_{n\rightarrow \infty}b_{n}.
+\end{align*}
+
+ 
+\item \textbf{A lower bound} on $\liminf a_{n} \ge c$ means that the sequence $a_{n}$ will ``\textbf{no smaller than the case} ... " and $c$ is a \textbf{lower bound} for \textbf{all possible sub-sequence} $(a_{k_{n}})$.
+
+\item \textbf{An upper bound} on $\limsup a_{n} \le b$ means that the sequence $a_{n}$ will ``\textbf{no greater than the case} ... " and $b$ is a \textbf{upper bound} for \textbf{all possible sub-sequence} $(a_{k_n})$.
+\end{enumerate}
+ \end{proposition}
+ 
+Unlike \emph{the limit operation}, which \emph{may not exists} for some sequence $(a_{n})$, \emph{\textbf{the limit infimum and limit supremum are always exists}}, provided that the sequence lies in any \emph{\textbf{partially ordered set}}, where the suprema and infima exist, such as in a complete lattice. The \emph{limit} exists \emph{\textbf{if and only if}} the \emph{limit infimum} and \emph{limit supremum} are equal: $\lim_{n\rightarrow}a_{n} = \liminf_{n\rightarrow \infty}a_{n}= \limsup_{n\rightarrow \infty}a_{n}$.
+\end{remark}
+
+\item \begin{remark} Under complement operation, we have
+\begin{align*}
+\paren{\liminf\limits_{n\rightarrow \infty}E_{n} }^{c} = \limsup\limits_{n\rightarrow \infty}E_{n}
+\end{align*}
+and \emph{vice versa}.
+\end{remark}
+
+
+
+\item \begin{proposition} The \underline{\textbf{interpretation}} of limit infimum and limit supremum
+\begin{align*}
+&\liminf\limits_{n\rightarrow \infty}E_{n} = \set{x: \; x\in E_{n}, \text{ for \textbf{all but finite} }n } = \set{x: \; \exists k,\, \forall n\ge k, \, x\in E_{n} }\\
+&\limsup\limits_{n\rightarrow \infty}E_{n} = \set{x: \; x\in E_{n}, \text{ for \textbf{infinitely many} }n }  = \set{x: \; \exists k,\, \forall n\ge k, \, x\in E_{n} }
+\end{align*}
+\end{proposition}
+\begin{proof}
+Define the indicator function of set $\mathds{1}_{C}(x) = \ind{x\in C} = 1, $ if $x\in C$; $=0$, o.w. 
+Then 
+\begin{align*}
+x\in \limsup\limits_{n\rightarrow \infty}E_{n} &= \bigcap_{k\ge 1}\bigcup_{n\ge k}E_{n}
+\end{align*} 
+indicates that for $k\ge 1$, there exists some $n_{k} > k$ such that $x\in E_{n_{k}} \Leftrightarrow  \mathds{1}_{E_{n_{k}}}(x)=1$. 
+Therefore 
+\begin{align*}
+\sum_{n=1}^{\infty}\mathds{1}_{E_{n}}(x) \ge \sum_{k=1}^{\infty}\mathds{1}_{E_{n_{k}}}(x) = \infty,  
+\end{align*} 
+and 
+\begin{align*}
+\limsup\limits_{n\rightarrow \infty}E_{n} \subseteq \set{x\;\Big|\; \sum_{n=1}^{\infty}\mathds{1}_{E_{n}}(x)  = \infty}.
+\end{align*}
+
+For the converse part, see that for any $x \in \set{x\;\Big|\; \sum_{n=1}^{\infty}\mathds{1}_{E_{n}}(x)  = \infty}$, it indicates that there exists an infinite sub-sequence with indices $\set{n_{k}}\rightarrow \infty$ such that $x\in E_{n_{k}} $, so, by definition, for any $k>1$, there exists some $n \ge k$, such that $x\in E_{n} $, or $x\in \bigcup_{n\ge k}E_{n}$. Clearly, 
+$x \in \limsup\limits_{n\rightarrow \infty}E_{n} \Rightarrow  \limsup\limits_{n\rightarrow \infty}E_{n}  \supseteq \set{x\;\Big|\; \sum_{n=1}^{\infty}\mathds{1}_{E_{n}}(x)  = \infty}$. This completes the proof for limit supremum.
+
+For limit infimum, consider the following set
+\begin{align*}
+\set{x\;\Big|\; \sum_{n=1}^{\infty}\mathds{1}_{E_{n}^{c}}(x)  < \infty}.
+\end{align*}
+
+To show $\liminf\limits_{n\rightarrow \infty}E_{n} \subseteq  \set{x\;\Big|\; \sum_{n=1}^{\infty}\mathds{1}_{E_{n}^{c}}(x)  < \infty}$, we see that $x\in \liminf\limits_{n\rightarrow \infty}E_{n}$, iff for some $k\ge 1$,  $x\in E_{n} \Rightarrow \mathds{1}_{E_{n}}(x) = 1;$ or $\mathds{1}_{E_{n}^{c}}(x)=0$ holds for all $n\ge k$ $\Rightarrow$ $\sum_{n\ge k}\mathds{1}_{E_{n}^{c}}(x) = 0$. 
+
+Choose one such $k$, the following decomposition holds
+\begin{align*}
+\sum_{n=1}^{\infty}\mathds{1}_{E_{n}^{c}}(x) &= \sum_{n=1}^{k}\mathds{1}_{E_{n}^{c}}(x) + \sum_{n\ge k}\mathds{1}_{E_{n}^{c}}(x) \\
+&\le k < \infty,
+\end{align*}which prove the inclusion part.
+
+To show the converse, see that $x\in \set{x\;\Big|\; \sum_{n=1}^{\infty}\mathds{1}_{E_{n}^{c}}(x)  < \infty}$, means that it is possible to find $k\ge  1$ such that $\sum_{n\ge k}\mathds{1}_{E_{n}^{c}}(x) = 0$, which means that $x\in E_{n}, \forall n\ge k$, therefore $x\in \liminf\limits_{n\rightarrow \infty}E_{n} \Rightarrow \liminf\limits_{n\rightarrow \infty}E_{n} \supset  \set{x\;\Big|\; \sum_{n=1}^{\infty}\mathds{1}_{E_{n}^{c}}(x)  < \infty}.$  \qed
+\end{proof}
+
+\item  \begin{remark} Note 
+\begin{enumerate}
+\item  $\liminf E_{n}$ is ``\emph{\textbf{lower bound}}" for the event $\set{x\in E_{n}}$, since  $x\in \liminf E_{n}$ indicates only \emph{\textbf{finitely many}} of $n$ that $x$ is \emph{\textbf{not}} in $E_{n}$; In other words, $(a_{n})$ will ``\emph{\textbf{finally}}" lies in $E_{n}$., or ``\emph{\textbf{with a few exceptions}, ...} "
+
+\underline{It is an \emph{\textbf{assertion}} even in the \emph{\textbf{worst}} case}.
+
+\item $\limsup$ is ``\emph{\textbf{upper bound}}" for the event $\set{x\in E_{n}}$, as it indicates there \emph{\textbf{exists}} a \emph{\textbf{infinite sub-sequence}}, $k_{n}$, such that $x\in E_{k_n}$ for every $k_{n}$. 
+
+\underline{It is an \emph{\textbf{assertion}} for the \emph{\textbf{infinitely often occurrence}}  of a event}.
+\end{enumerate}
+\end{remark}
+\end{itemize}
+
+\section{Development of $\sigma$-Algebra}
+\subsection{Boolean Algebra}
+\begin{itemize}
+\item \begin{definition} \citep{tao2011introduction}\\
+Let $X$ be a set. \emph{A (concrete) \underline{\textbf{Boolean algebra (Boolean field)}}} on $X$ is a \emph{collection of subsets} $\srB$ of $X$ which obeys the following
+properties:
+\begin{enumerate}
+\item (\textbf{\emph{Empty set}}) $\emptyset \in \srB$;
+\item (\textbf{\emph{Complements}}) For any $E\in \srB$, then $E^{c}\equiv (X \setminus E) \in \srB$;
+\item (\textbf{\emph{Finite unions}}) For any  $E, F \subset \srB$, $E\cup F \in \srB$.
+\end{enumerate}
+We sometimes say that $E$ is \textbf{\emph{$\srB$-measurable}}, or \textbf{\emph{measurable with respect to $\srB$}}, if $E \in \srB$.
+\end{definition}
+
+\item \begin{remark}
+Note that \emph{\textbf{the finite difference}} $A-B$, $A\Delta B$ and \emph{\textbf{intersections}} $A\cap B$ are also \emph{\textbf{closed}} under the Boolean algebra. 
+\end{remark}
+
+\item \begin{definition}
+A \underline{\textbf{\emph{field} (\emph{algebra})}} is a \emph{non-empty collection of subsets} in $X$ that is \emph{\textbf{closed}} under \emph{\textbf{finite union}} and \emph{\textbf{complements}}. 
+
+It is just a \emph{subset (sub-algebra)} of \emph{Boolean field} $(X, \subset, \cup, \cdot^{c})$. 
+\end{definition} 
+
+\item \begin{definition}
+Given two Boolean algebras $\srB, (\srB)'$ on $X$, we say that $(\srB)'$ is \underline{\emph{\textbf{finer}}} than, a \emph{\textbf{sub-algebra}} of, or a \underline{\emph{\textbf{refinement}}} of $\srB$, or that $\srB$ is \underline{\emph{\textbf{coarser}}} than or a \underline{\emph{\textbf{coarsening}}} of $(\srB)'$, if $\srB \subset (\srB)'$.
+\end{definition}
+
+\item \begin{remark}
+In \emph{\textbf{abstract Boolean algebra}}, $\cup$ is replaced by \emph{join} operation $\lor$ and $\cap$ is replaced by \emph{meet} operation $\land$.
+\end{remark}
+
+\item \begin{remark}
+The definition of Boolean algebra \emph{\textbf{does not requires}} $X$ to have a \emph{\textbf{topology}}. It focus on a collection of subsets that is \emph{\textbf{closed}} under \emph{the set union operation} $\cup$ and the set complement $\cdot^c$. In other words, the concerns is the \underline{\emph{\textbf{set-algebraic property}}} not the topological property. Note that the set intersection operation $\cap$ can be obtained from composite of set union and set complement operations.
+\end{remark}
+
+\item 
+\begin{definition} \citep{tao2011introduction}\\
+Let $X$ be partitioned into \emph{a union $X= \bigcup_{\alpha\in I}A_{\alpha}$ of \emph{\textbf{disjoint sets}} $A_{\alpha}$}, which we refer to as \underline{\emph{\textbf{atoms}}}. Then this partition \emph{generates} \emph{\textbf{a Boolean algebra}} $\srA((A_{\alpha})_{\alpha\in I} )$, defined as \emph{the collection of all the sets $E$ of the form $E =\bigcup_{\alpha\in J}A_{\alpha}$} for some $J \subseteq I$, i.e. $\srA((A_{\alpha})_{\alpha\in I} )$ is \emph{the collection of all sets that can be represented as \textbf{the union of one or more atoms}}. Then $\srA((A_{\alpha})_{\alpha\in I} )$ is \emph{\textbf{a Boolean algebra}}, and we refer to it as the \underline{\emph{\textbf{atomic algebra}}} with \emph{atoms} $(A_{\alpha})_{\alpha\in I}$.
+\end{definition}
+
+\item \begin{definition}
+A Boolean algebra is \emph{\textbf{finite}} if it only consists of \emph{finite many of subsets} (i.e., its \emph{cardinality} is finite)  \citep{tao2011introduction}.  
+\end{definition}
+
+\item \begin{remark}
+The definition of \emph{\textbf{atomic algebra}} as \emph{generated} by \emph{\textbf{atoms}} resembles the definition of \emph{\textbf{topology}} \emph{generated} by \emph{\textbf{basis}}. 
+\begin{itemize}
+\item In both cases, a subset in the collection of \emph{atomic algebra / topology}  is seen as the \emph{\textbf{union}} of some subsets in the \emph{atoms / basis}. 
+\item On the other hand, \emph{\textbf{atoms} are all \textbf{disjoint}}, while \emph{sets in \textbf{basis}} are \emph{\textbf{not necessarily disjoint}}. In fact, by definition, for any two sets in basis that have nonempty intersection, there must exists a third set in basis that is a subset of the intersection.
+\end{itemize}
+\end{remark}
+
+\item \begin{example}
+The followings are examples of \emph{Boolean algebra}:
+\begin{enumerate}
+\item \emph{\textbf{The trivial algebra}} $\set{X, \emptyset}$ is \emph{atomic algebra} with atoms $\set{X}$.
+\item \emph{\textbf{The discrete algebra}} $2^{X}$ is \emph{atomic algebra} generated by collection of \emph{\textbf{singletons}} $\set{x}$.
+\end{enumerate}
+\end{example}
+
+\item \begin{remark}
+The \emph{non-empty atoms} of an \emph{atomic algebra} are determined up to \emph{\textbf{relabeling}}. More precisely, if $X= \bigcup_{\alpha\in I}A_{\alpha} = \bigcup_{\alpha'\in I'}A'_{\alpha'} $ are two partitions of $X$ into non-empty
+atoms $A_{\alpha}$, $A'_{\alpha'}$, then $\bigcup_{\alpha\in I}A_{\alpha} = \bigcup_{\alpha'\in I'}A'_{\alpha'} $ if and only if exists a \emph{\textbf{bijection}} $\phi : \alpha \rightarrow \alpha'$ such that $A'_{\phi(\alpha)} = A_{\alpha}$ for all $\alpha \in I$.  \citep{tao2011introduction}
+\end{remark}
+
+
+
+\item \begin{remark}
+There is a \emph{\textbf{one-to-one correspondence}} between \emph{\textbf{finite Boolean algebras}} on $X$ and \emph{\textbf{finite partitions}} of $X$ into non-empty sets. (its cardinality is $2^{m}$, for some $m$).  \citep{tao2011introduction}
+\end{remark}
+
+\item \begin{definition} \citep{tao2011introduction}\\
+Let $n$ be an integer. The \underline{\emph{\textbf{dyadic algebra}}} $\srD_{n}$ at scale $2^{-n}$ in $\bR^d$ is defined to be the atomic algebra generated by the \emph{half-open dyadic cubes}
+\begin{align*}
+\left[\frac{i_{1}}{2^{n}}, \frac{i_{1}+1}{2^{n}}\right) \times \cdots  \left[\frac{i_{d}}{2^{n}}, \frac{i_{d}+1}{2^{n}}\right)
+\end{align*} of length $2^{-n}$. Note that $\srD_{n}\subset \srD_{n+1}$. 
+\end{definition}
+
+\item 
+\begin{example} Here are some more examples for Boolean algebra \citep{tao2011introduction}
+\begin{enumerate}
+\item The collection $\overline{\cE[\bR^{d}]}$ of \emph{\textbf{elementary sets}} (boxes and its finite union and intersections) and co-elementary sets (its complements is elementary) in $\bR^{d}$ forms a Boolean algebra.
+
+\item The collection $\overline{\mathcal{J}[\bR^{d}]}$ of \emph{\textbf{Jordan measureable set}} (contained in finite union of elementary sets) and co-Jordan measureable sets in $\bR^{d}$ forms a Boolean algebra.
+
+\item The collection $\cL[\bR^{d}]$  of \emph{\textbf{Lebesgue measureable set}}  (contained in countable union of elementary sets) in $\bR^{d}$ forms a Boolean algebra.
+
+\item The collection $\cN[\bR^{d}]$ of \emph{\textbf{Lebesgue null sets}} and \emph{\textbf{co-null sets}} (its complement is null set) in $\bR^{d}$ forms a Boolean algebra. we refer to it as \emph{\textbf{the null algebra}} on $\bR^d$.
+
+\item  Given $Y\subset X$, and $\srB$ is a Boolean algebra on $X$, then the \emph{\textbf{restriction}} of algebra on $Y$ is 
+$\rlat{\srB}{Y} = \srB \cap 2^Y = \set{E\cap Y: E\in \srB}$, which is a \emph{sub-algebra}.
+
+\item  The \emph{\textbf{dyadic algebra}} $\srD_{n}$ at \textbf{\emph{scale}} $2^{-n}$ in $\bR^d$ is defined to be \emph{\textbf{the atomic algebra}} generated by the \emph{half-open dyadic cubes}  of length $2^{-n}$.
+
+
+
+\item Note that $\set{\emptyset,\bR^{d}}\subset \srD_{n}\subset \overline{\cE[\bR^{d}]} = \bigcup_{n\ge 1}\srD_{n} \subset \overline{J[\bR^{d}]} \subset L[\bR^{d}]  \subset 2^{\bR^{d}}$. $N[\bR^{d}]\subset L[\bR^{d}]$. Although $\srD_{n}$ for given $n$ is atomic algebra, $\overline{\cE[\bR^{d}]}$ and all its predecessors are \emph{\textbf{non-atomic}}, since they do not have finite cardinality. 
+
+\item $\bigwedge_{\alpha\in I}\srB_{\alpha}\equiv \bigcap_{\alpha\in I}\srB_{\alpha}$ for all $\alpha\in I$ is a Boolean algebra ($I$ is arbitrary), which is \emph{\textbf{the finest algebra}} that is \emph{\textbf{coarser}} than any $\srB_{\alpha}$.  
+\end{enumerate}
+\end{example}
+
+\item \begin{example} (\emph{\textbf{Boolean Algebra Generated by $\cF$}})
+\begin{definition}
+Given a collection of sets $\cF$, then $\langle \cF \rangle_{bool}$ is \underline{\emph{\textbf{the Boolean algebra generated}}} by $\cF$, i.e. the \emph{\textbf{intersection}} of all the Boolean algebras that contain $\cF$. 
+\begin{align*}
+\langle \cF \rangle_{bool} = \bigwedge_{\srB_{\alpha} \supseteq \cF}\srB_{\alpha}.
+\end{align*} 
+\end{definition}
+
+\begin{proposition}
+We have the following results regarding $\langle \cF \rangle_{bool}$
+\begin{enumerate}
+\item $\langle \cF \rangle_{bool}$ is the \textbf{coarest} Boolean algebra that contains $\cF$.
+\item Note that $\cF$ is a Boolean algebra if and only if $\cF = \langle \cF \rangle_{bool}$.
+\item If $\cF$ is collection of \textbf{$n$ sets}, then $\langle \cF \rangle_{bool}$ is \textbf{a finite Boolean algebra} with cardinality $2^{2^{n}}$.
+\end{enumerate}
+\end{proposition}
+
+\begin{exercise} (\textbf{Recursive description of a generated Boolean algebra}). \citep{tao2011introduction} \\
+Let $\cF$ be a collection of sets in a set $X$. Define the sets $\cF_0, \cF_1, \cF_2, \ldots$ \textbf{recursively} as follows:
+\begin{enumerate}
+\item $\cF_0  := \cF$.
+\item For each $n \ge 1$, we define $\cF_n$ to be the collection of all sets that \textbf{either} the \textbf{union} of a \textbf{finite number} of sets in $\cF_{n-1}$
+(including the empty union $\emptyset$), or the \textbf{complement} of such a union.
+\end{enumerate}
+Show that $\langle \cF \rangle_{bool} =  \bigcup_{n=0}^{\infty}\cF_{n}$.
+\end{exercise}
+
+\end{example}
+\end{itemize}
+\subsection{$\sigma$-Algebra}
+\begin{itemize}
+\item
+\begin{definition}
+ Given space $X$, a \underline{\emph{\textbf{$\sigma$-field}} (or, \emph{\textbf{$\sigma$-algebra}})} $\srF$ is a non-empty collection of \emph{subsets} in $X$ such that 
+\begin{enumerate}
+\item $\emptyset \in \srF$; $X\in \srF$;
+\item \emph{\textbf{Complements}}:  For any $B\in \srF$, then $B^{c}\equiv (X-B) \in \srF$;
+%\item \emph{Finite union}: for any  $A, B \subset \srF$, 
+%\begin{align*}
+%A\cup B \in \srF;
+%\end{align*} 
+\item \underline{\emph{\textbf{Countable union}}}: for any sub-collection $\set{B_{k}}_{k=1}^{\infty} \subset \srF$, 
+\begin{align*}
+\bigcup_{k=1}^{\infty}B_{k} \in \srF;
+\end{align*} 
+Also, \emph{\textbf{Countable intersection}}: $\bigcap_{k=1}^{\infty}B_{k} \in \srF,$ \emph{\textbf{de Morgan's law}}.
+\end{enumerate} 
+We refer to the pair $(X, \srF)$ of a set $X$ together with a $\sigma$-algebra on that set as \emph{\textbf{a measurable space}}.
+\end{definition}
+
+\item \begin{remark}
+\underline{The prefix $\sigma$ usually denotes ``\emph{\textbf{countable union}}"}. Other instances of this prefix include a \emph{\textbf{$\sigma$-compact topological space}} (\emph{a countable union of compact sets}), a \emph{\textbf{$\sigma$-finite measure space}} (\emph{a countable union of sets of finite measure}), or \emph{\textbf{$F_{\sigma}$ set}} (\emph{a countable union of closed sets}) for other instances of this prefix.
+\end{remark}
+
+\item \begin{remark}
+A $\sigma$-algebra can be \emph{\textbf{equivalently}} defined as an algebra that is closed under \emph{\textbf{countable \underline{disjoint union}}}. Using the following transformation, for given $\set{E_{j}} $, 
+\begin{align*}
+F_{j} = E_{j} - \bigcup_{i=1}^{j-1}E_{i}, \forall\, j\in \bN.
+\end{align*} Then $F_{i}\cap F_{j} = \emptyset, i\neq j$ and $\bigcup_{j=1}^{\infty}E_{j} = \bigcup_{j=1}^{\infty}F_{j}$.
+\end{remark}
+
+\item \begin{remark}
+A field (algebra) may not be a $\sigma$-field since it \emph{may not be \textbf{closure} under \textbf{countable union}}.
+\end{remark}
+
+
+
+\item \begin{remark}
+\emph{\textbf{The closure under countable union}} for $\sigma$-algebra is the key property to make sure that it is a proper \emph{domain} to define  \emph{\textbf{measure}}, since a desired property for a \emph{measure} $\mu$ is the \emph{\textbf{countably additive over disjoint sets}}:  $\mu\paren{\sum_{t=1}^{\infty}A_{t}} = \sum_{t=1}^{\infty}\mu\paren{A_{t}}$. Thus $\sum_{t=1}^{\infty}A_{t}$ need to be included in the domain of a proper measure. 
+%Here one need to first make sure the set limits $\lim_{k \rightarrow \infty}E_k$ is included in the domain of measure $\mu$. The definition of $\sigma$-algebra provides the basic environment to consider ``\emph{limits of a sequence of measured sets $\set{A_k}_{k\in I}$}".
+\end{remark}
+
+\item \begin{remark} \emph{\textbf{($\sigma$-Algebra vs. Boolean Algebra)}}
+\begin{enumerate}
+\item \begin{proposition}
+Any $\sigma$-algebra is Boolean-algebra. 
+\end{proposition}
+
+\item \begin{proposition}
+Any \textbf{atomic algebra} is $\sigma$-algebra. 
+\end{proposition}
+
+\item  \begin{proposition}
+An algebra of \textbf{finite} set $X$ is  a $\sigma$-algebra of $X$ and it is \textbf{the power set} $2^{X}$ itself. 
+\end{proposition}
+\end{enumerate}
+\end{remark}
+
+\item 
+\begin{example} Here are some more examples for  $\sigma$-algebra \citep{tao2011introduction}
+\begin{enumerate}
+\item \emph{\textbf{The trivial algebra}} $\set{X, \emptyset}$ is \emph{$\sigma$-algebra} since it is an atomic algebra.
+
+\item \emph{\textbf{The discrete algebra}} $2^{X}$ is \emph{$\sigma$-algebra} since it is an atomic algebra.
+
+\item  All the \emph{\textbf{finite Boolean algebra}} is $\sigma$-algebra.
+
+\item  The \emph{\textbf{dyadic algebra}} $\srD_{n}$ at \textbf{\emph{scale}} $2^{-n}$ in $\bR^d$ is a \emph{\textbf{$\sigma$-algebra}} since it is an atomic algebra.
+
+\item The collection $\cL[\bR^{d}]$  of \emph{\textbf{Lebesgue measureable set}}  (contained in countable union of elementary sets) in $\bR^{d}$ forms a Boolean algebra.
+
+\item The collection $\cN[\bR^{d}]$ of \emph{\textbf{Lebesgue null sets}} and \emph{\textbf{co-null sets}} (its complement is null set) in $\bR^{d}$ forms a Boolean algebra. we refer to it as \emph{\textbf{the null algebra}} on $\bR^d$.
+
+\item  Given $Y\subset X$ as a subspace of $X$, and $\srB$ is a  $\sigma$-algebra on $X$, then the \emph{\textbf{restriction}} of algebra on $Y$ is 
+$\rlat{\srB}{Y} = \srB \cap 2^Y = \set{E\cap Y: E\in \srB}$, which is a \emph{\textbf{$\sigma$-algebra on subspace $Y$}}.
+
+
+\item Note that both the collections of \emph{elementary sets} $\cE[\bR^{d}]$ and \emph{\textbf{the Jordan measurable sets}} $\mathcal{J}[\bR^{d}]$ \emph{\textbf{do not form a $\sigma$-algebra}}.
+
+%$\set{\emptyset,\bR^{d}}\subset \srD_{n}\subset \overline{\cE[\bR^{d}]} = \bigcup_{n\ge 1}\srD_{n} \subset \overline{J[\bR^{d}]} \subset L[\bR^{d}]  \subset 2^{\bR^{d}}$. $N[\bR^{d}]\subset L[\bR^{d}]$. Although $\srD_{n}$ for given $n$ is atomic algebra, $\overline{\cE[\bR^{d}]}$ and all its predecessors are \emph{\textbf{non-atomic}}, since they do not have finite cardinality. 
+
+\item If $\{\srB_{\alpha}\}$ are $\sigma$-algebras, then $\bigwedge_{\alpha\in I}\srB_{\alpha}\equiv \bigcap_{\alpha\in I}\srB_{\alpha}$ for all $\alpha\in I$ is a  $\sigma$-algebra ($I$ is arbitrary), which is \emph{\textbf{the finest $\sigma$-algebra}} that is \emph{\textbf{coarser}} than any $\srB_{\alpha}$.  
+\end{enumerate}
+\end{example}
+
+
+\item  \begin{example} (\emph{\textbf{$\sigma$-Algebra Generated by $\cF$}})
+\begin{definition}
+Denote $\sigma(\cF) := \langle \cF \rangle$ as  \underline{\emph{\textbf{the $\sigma$-algebra generated by $\cF$}}}, given by 
+\begin{align*}
+\sigma(\cF) = \langle \cF \rangle = \bigwedge_{\srB_{\alpha} \supseteq \cF}\srB_{\alpha}.
+\end{align*}
+ It is the  \emph{\textbf{coarsest}} $\sigma$-algebra containing $\cF$, for any $\sigma$-algebra that contains $\cF$  . 
+\end{definition}
+
+It is easy to see that 
+\begin{align*}
+\langle \cF \rangle_{bool} \subseteq \langle \cF \rangle 
+\end{align*} The equality holds if and only if $\langle \cF \rangle_{bool}$ is a $\sigma$-algebra. 
+
+\begin{proposition} (\textbf{Recursive description of a generated  $\sigma$-algebra}). \citep{tao2011introduction} \\
+$\sigma(\cF)$ is generated according to the following procedure: 
+\begin{enumerate}
+\item For every set $A \in \cF$, $A\in \sigma(\cF)$; $\cF \subset \sigma(\cF)$;
+\item Take the \textbf{finite union} and \textbf{finite intersection} of any \textbf{subcollections} $\set{A_{k}}\subset \cF$, put $\bigcup_{k=1}^{n}A_{k} \in \sigma(\cF), n\ge 1$ and  $\bigcap_{k=1}^{n}A_{k} \in \sigma(\cF), n\ge 1$;
+\item Put the \textbf{countably infinite union} and \textbf{intersections} of any \textbf{subcollections} $\set{A_{k}}\subset \cF$, put $\bigcup_{k=1}^{\infty}A_{k} \in \sigma(\cF)$ and  $\bigcap_{k=1}^{\infty}A_{k} \in \sigma(\cF)$;
+\item Put the \textbf{complements} $A^{c} \in \sigma(\cF), \forall A\in \sigma(\cF)$;
+\end{enumerate}
+\end{proposition}
+
+Finally we have the \emph{\textbf{monotonicity}}: 
+\begin{enumerate}
+\item \begin{proposition}
+ If $\cF_{1} \subset \cF_{2}$, then $\sigma(\cF_{1}) \subset \sigma(\cF_{2})$. 
+ \end{proposition}
+\item \begin{proposition}
+  If $\cF_{1}  \subset \cF_{2} \subset \sigma(\cF_{1})$, then $\sigma(\cF_{2}) = \sigma(\cF_{1})$.
+ \end{proposition}
+\item \begin{proposition}
+Let $\srF$ be a $\sigma$-algebra on a set $X$. Let $S \subset X$ be a subset of $X$.
+
+Then \begin{align*}
+\sigma(\srF\cup \set{S}) &=\set{(E_{1}\cap S)\cup (E_{2}\cap S^{c}): E_{1},E_{2}\in \srF}
+\end{align*}
+where $\sigma$ denotes \textbf{generated $\sigma$-algebra}.
+\end{proposition}
+\end{enumerate}
+
+\end{example}
+
+\item \begin{remark}
+ Note that $\srF_{1}\cup \srF_{2}$ is usually not a $\sigma$-algebra.
+ \end{remark}
+\end{itemize}
+
+\subsection{Borel $\sigma$-Algebra}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Borel $\sigma$-algebra}}). \citep{tao2011introduction} \\
+ Let $X$ be a \emph{\textbf{metric space}}, or more generally \emph{\textbf{a topological space}}. The \underline{\emph{\textbf{Borel $\sigma$-algebra}}} $\cB[X]$ of $X$ is defined to be \underline{the $\sigma$-algebra \emph{generated by the \textbf{open subsets} of $X$}}.
+
+Elements of $\cB[X]$ will be called \emph{\textbf{Borel measurable}}.
+\end{definition}
+
+\item \begin{example}
+The followings are examples of \emph{Borel measurable subsets} in $X$: 
+\begin{enumerate}
+\item Any \emph{\textbf{the open set}} and \emph{\textbf{the closed set}} (which are \emph{complements} of open sets),
+including \emph{\textbf{The arbitrary union}} of \emph{open sets}, and \emph{\textbf{arbitrary intersection}} of \emph{closed set}. 
+\item The \emph{\textbf{countable unions}} of \emph{\textbf{closed sets}} (known as $F_{\sigma}$ sets), 
+\item The \emph{\textbf{countable intersections}} of \emph{\textbf{open sets}} (known as $G_{\delta}$ sets), 
+\item The \emph{\textbf{countable intersections}} of $F_{\sigma}$ sets, and so forth.
+\end{enumerate}
+\end{example}
+
+\item \begin{exercise}
+Show that the Borel $\sigma$-algebra $\cB[\bR^d]$ of a Euclidean set is generated by any of the following collections of sets:
+\begin{enumerate}
+\item The open subsets of $\bR^d$.
+\item The closed subsets of $\bR^d$.
+\item The compact subsets of $\bR^d$.
+\item The open balls of $\bR^d$.
+\item The boxes in $\bR^d$.
+\item The elementary sets in $\bR^d$.
+\end{enumerate} 
+(Hint: To show that two families $\cF, \cF'$ of sets generate the same $\sigma$-algebra, it suffices to show that every $\sigma$-algebra that contains $\cF$, contains $\cF'$ also, and conversely.)
+\end{exercise}
+
+\item \begin{remark}
+$\cB[X] \subset \cL[X]$, i.e. the Borel $\sigma$-algebra is \emph{\textbf{coarser}} than the Lebesgue $\sigma$-algebra.
+\end{remark}
+
+\item \begin{remark}
+There exist \emph{\textbf{Jordan measurable}} (and hence Lebesgue measurable) subsets of $\bR^d$ which are \emph{\textbf{not Borel measurable}}. \citep{tao2011introduction}
+\end{remark}
+
+\item \begin{remark}
+Despite this demonstration that \emph{\textbf{not all Lebesgue measurable subsets are Borel measurable}}, it is \emph{remarkably \textbf{difficult} (though not impossible)} to exhibit a specific set that is not Borel measurable. Indeed, a large majority of the explicitly constructible sets that one actually encounters in practice tend to be Borel measurable, and one can view the property of Borel measurability intuitively as a kind of ``\emph{constructibility}" property.  A Borel $\sigma$-algebra is large enough to contain all subsets in $X$ that is of "practical use" in computing measures and integrations within $(0,1]$. 
+%(Indeed, as a very crude first approximation, one can view the Borel measurable sets as those sets of ``\emph{countable descriptive complexity}"; in contrast, sets of \emph{finite descriptive complexity} tend to be Jordan measurable (assuming they are \emph{bounded}, of course)
+\end{remark}
+
+\item \begin{exercise}
+Show that the Lebesgue $\sigma$-algebra on $\bR^d$ is generated by the union of the Borel $\sigma$-algebra and the null $\sigma$-algebra.
+\end{exercise}
+
+%\item If $\srF$ is the $\sigma$-algebra on $X$, then $\srF_{Y} = \set{A\cap Y: A\in \srF}$ is the $\sigma$-algebra on $Y\subset X$. Suppose $(Y, \srF_{Y})$ is a measurable space. The collection $\set{A \subset X: A \cap Y \in \srF_{Y}}$ is a $\sigma$-algebra of subsets of $X$.
+
+
+\end{itemize}
+
+\newpage
+\section{Topology, $\sigma$-algebra and Borel $\sigma$-algebra }
+\subsection{Definition}
+\begin{itemize}
+\item \begin{definition} \citep{munkres2000topology}\\
+Given space $X$, a collection of subsets $\srT$ is called a \underline{\emph{\textbf{topology}}} on $X$, if the following conditions holds
+\begin{enumerate}
+\item $\emptyset \in \srT$; $X\in \srT$;
+\item \emph{\textbf{Aribitray Union property}}: for any sub-collection $\set{U_{\lambda}}_{\lambda\in \Lambda} \subset \srT$, 
+\begin{align*}
+\bigcup_{\lambda\in \Lambda}U_{\lambda} \in \srT;
+\end{align*} Note that $\Lambda$ could be uncountable. 
+\item \emph{\textbf{Finite intersection}}: for any finite sub-collection $\set{U_{k}}_{1\le k \le n} \subset \srT$, 
+\begin{align*}
+\bigcap_{k=1}^{n}U_{k} \in \srT.
+\end{align*}
+\end{enumerate}
+$U\in \srT$ is called an open set in topology $\srT$ on $X$.
+\end{definition}
+
+\item \begin{definition} \citep{royden1988real, billingsley2008probability, folland2013real, resnick2013probability}\\
+Given space $X$, a \underline{\emph{\textbf{$\sigma$-field}} (or, \emph{\textbf{$\sigma$-algebra}})} $\srF$ is a non-empty collection of subsets in $X$ such that 
+\begin{enumerate}
+\item $\emptyset \in \srF$; $X\in \srF$;
+\item \underline{\emph{\textbf{Complements}}}:  For any $B\in \srF$, then $B^{c}\equiv (X-B) \in \srF$;
+\item \emph{Finite union}: for any  $A, B \subset \srF$, 
+\begin{align*}
+A\cup B \in \srF;
+\end{align*} 
+\item \underline{\emph{\textbf{Countable union}}}: for any sub-collection $\set{B_{k}}_{k=1}^{\infty} \subset \srF$, 
+\begin{align*}
+\bigcup_{k=1}^{\infty}B_{k} \in \srF;
+\end{align*} 
+Also, Countable intersection: $\bigcap_{k=1}^{\infty}B_{k} \in \srF,$ \underline{\emph{\textbf{de Morgan's law}}}.
+\end{enumerate} 
+\end{definition}
+
+
+\item \begin{definition}
+Given a \underline{\emph{\textbf{topological space}}} $(X, \srT)$, a \underline{\emph{\textbf{Borel $\sigma$-field}} (or, \emph{\textbf{Borel $\sigma$-algebra}}) $\srB$} is \emph{the $\sigma$-algebra} \emph{generated} from \emph{\textbf{open sets} (or closed sets) in $\srT$}. Note that this $\sigma$-algebra is not, in general, the whole power set. 
+
+The \emph{Borel $\sigma$-algebra} on $X$ is the \emph{\textbf{smallest}} $\sigma$-algebra containing \emph{all open sets} (or, equivalently, all closed sets).
+\end{definition}
+
+\item \begin{remark} We compare the (open-set) topoloy with $\sigma$-algebra: 
+\begin{itemize}
+\item  \emph{\textbf{The open-set topology}} on $X$ is \emph{\textbf{closed}} under \underline{\emph{\textbf{any union}}}, or \emph{\textbf{finite intersection} operation}. It does \underline{\emph{\textbf{not} consider} the \emph{\textbf{complements}}} as the complements defines \emph{a \textbf{closed set}} \emph{not in open-set topology}. It contains the open sets as \underline{\emph{the basic environment}} in investigating the \underline{\emph{\textbf{infinitesimal behavior}}} of functions in \emph{\textbf{analysis}}. 
+
+\item \emph{\textbf{A $\sigma$-algebra}} concerns more about the \emph{\textbf{closure}} under a set of \emph{\textbf{operations}} on $X$: \underline{\emph{countable union}}, \emph{countable intersection}, \underline{\emph{\textbf{complementation}}}. It has nothing to do with \emph{the open set}, \emph{closed set}, or the \emph{continuity}.
+
+\item The \emph{\textbf{analysis}} replies on \emph{\textbf{topology}} on space $X$; while the \emph{\textbf{modern algebra}} replies on \emph{\textbf{the closure of operation}} on a space $X$.  A $\sigma$-algebra is a collection of subsets in $X$ that endows a \underline{\emph{\textbf{algebraic structure}}}.   
+\end{itemize}
+\end{remark}
+
+\item \begin{remark}
+The \emph{\textbf{Borel $\sigma$-algebra}} lies in between, which concerns both \emph{\textbf{algebraic}} and \emph{\textbf{analytical structure}}. 
+\begin{itemize}
+\item A \emph{\textbf{open set}} $U$ is a \emph{Borel set} in $\srB$; also a \emph{\textbf{closed set}} $C\equiv U^{c}$ is a \emph{Borel set} in $\srB$. 
+\item Any \emph{\underline{\textbf{countable union}} of \underline{\textbf{closed set}}}, denoted as ``$F_{\sigma}$ set",  $F_{\sigma, \Lambda}= \bigcup_{\lambda\in \Lambda}C_{\lambda} \in \srB$  
+\item Any \emph{\underline{\textbf{countable intersection}} of \underline{\textbf{open sets}}}, denoted as ``$G_{\delta}$ set", $G_{\delta, \Lambda}= \bigcap_{\lambda\in \Lambda}U_{\lambda} \in \srB$. 
+\item Note that a $F_{\sigma}$ set is \emph{\textbf{not closed}} (but could be open) and a $G_{\delta}$ set is \emph{\textbf{not open} (but could be closed)}. 
+\end{itemize}
+The Borel $\sigma$-algebra contains \emph{open sets}, \emph{closed sets}, \emph{$G_{\delta}$ sets}, \emph{$F_{\sigma}$ sets}, and their further \emph{countable union and intersections}, according to the topology. 
+\end{remark}
+
+\item \begin{example}
+On the Euclidean space $\bR^{n}$, another $\sigma$-algebra is of importance: \emph{the collection of all \textbf{Lebesgue measurable sets}}. This $\sigma$-algebra contains \emph{\textbf{more sets}} than the Borel $\sigma$-algebra on $\bR^{n}$ and is preferred in integration theory, as it gives a complete measure space.
+\end{example}
+
+\item \begin{remark}
+Note that not all Lebesgue measurable subsets are Borel measurable  \citep{tao2011introduction}.
+\end{remark}
+
+\item \begin{remark}
+The \emph{\textbf{Lebesgue $\sigma$-algebra}} on $\bR^d$ is generated by the \emph{\textbf{union}} of \emph{\textbf{the Borel $\sigma$-algebra}} and \emph{\textbf{the null $\sigma$-algebra}}. \citep{tao2011introduction}
+
+Thus, The Lebesgue $\sigma$-algebra on $\bR^d$ is a \emph{\textbf{completion}} of the Borel $\sigma$-algebra  \citep{tao2011introduction}.
+\end{remark}
+
+\item \begin{example}
+The $\sigma$-algebra $\srF$ is the domain where \emph{a \textbf{probability measure}} $\bP: \srF \rightarrow \bR$ is defined, whereas when considering a measure on $\bR$, \emph{a \textbf{Borel $\sigma$-algebra} $\cB$} generated by \emph{\textbf{order topology}} $\{ (a,b], a< b,\forall a,b\in \bR\}$ is of primarily concern.
+\end{example}
+
+\item \begin{remark} \emph{\textbf{A common problem}} is to find a good notion of a \emph{\textbf{measure}} on a \emph{\textbf{topological space}} that is \underline{\emph{\textbf{compatible}} with the \emph{\textbf{topology}} in some sense}. 
+\begin{itemize}
+\item One way to do this is to define a measure on the \emph{\textbf{Borel sets}} of \emph{the topological space}.  
+\item In general, however, the \underline{\emph{\textbf{algebraic structure}} of the \textbf{$\sigma$-algebra}}: \underline{\emph{\textbf{closure under}}} complements, finite intersections and countably unions, instead of its \emph{\textbf{geometric}} structure or \emph{\textbf{topology}}, are \emph{\textbf{crucial}} to define a proper measure that \emph{\textbf{mimic the length, area and volume}} in $\bR^{1}, \bR^{2}, \bR^{3}$, respectively. 
+
+Also there are several problems with this: for example, such a measure may not have a well defined support. 
+\end{itemize}
+\end{remark}
+\end{itemize}
+\newpage
+\subsection{Comparison}
+\begin{table}[h!]
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\belowdisplayskip}{-10pt}
+\setlength{\abovedisplayshortskip}{0pt}
+\setlength{\belowdisplayshortskip}{0pt}
+\footnotesize
+\centering
+\caption{Comparison between $\sigma$-algebra and topology}
+\label{tab: measure}
+%\setlength{\extrarowheight}{1pt}
+\renewcommand\tabularxcolumn[1]{m{#1}}
+\small
+\begin{tabularx}{1\textwidth} { 
+  | >{\raggedright\arraybackslash} m{3cm}
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X  | }
+ \hline
+  &  \emph{\textbf{Boolean Algebra}} & \emph{\textbf{$\sigma$-Algebra}}   &  \emph{\textbf{Borel $\sigma$-Algebra}}   & \emph{\textbf{Topology}} \\
+  \hline 
+\textbf{\emph{compatibility}}    & & $\Leftarrow \checkmark \Rightarrow$  & \emph{$\sigma$-algebra generated} by \emph{\textbf{open subsets}} & \emph{no relation} \\
+ \hline \vspace{5pt}
+\emph{collection of subsets}  \vspace{2pt} &  $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$  \\
+ \hline \vspace{5pt}
+\emph{include emptyset} \vspace{2pt}  &  $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$  \\
+\hline \vspace{5pt}
+\emph{include fullset}  \vspace{2pt}  &  $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$  \\
+\hline \vspace{5pt}
+\emph{finite union} \vspace{2pt}   & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$  \\
+\hline \vspace{5pt}
+\emph{countable union} \vspace{2pt}   &   & $\checkmark$  & $\checkmark$  & $\checkmark$  \\
+\hline \vspace{5pt}
+\emph{arbitrary union} \vspace{2pt}   &   &  &  & $\checkmark$  \\
+\hline \vspace{5pt}
+\emph{finite intersection} \vspace{2pt}   & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$  \\
+\hline \vspace{5pt}
+\emph{countable intersection} \vspace{2pt}   &   & $\checkmark$  & $\checkmark$  &   \\
+\hline \vspace{5pt}
+\emph{complements} \vspace{2pt}   &  $\checkmark$ & $\checkmark$ & $\checkmark$  &   \\
+\hline \vspace{5pt}
+\emph{\textbf{structure}} \vspace{2pt}   &  \emph{\textbf{analytical}} & \emph{\textbf{analytical}} & \emph{\textbf{analytical $\&$ topological}}  &  \emph{\textbf{topological}}  \\
+\hline \vspace{5pt}
+\emph{related \textbf{measure}}  \vspace{2pt}  & $\checkmark$ & $\checkmark$ &  $\checkmark$ &  \\
+\hline \vspace{5pt}
+\emph{set \textbf{in} collection}  \vspace{2pt}  &  \emph{\textbf{elementary sets}};  \emph{\textbf{Jordan measurable sets}}; \emph{\textbf{atomic algebra}}; \emph{dyadic algebra}; \emph{\textbf{finite union}} of measurable sets; etc. &   \emph{Boolean measurable set};  \emph{\textbf{Lebesgue measurable sets}}, Lebesgue null sets;  \emph{\textbf{the countable union}} and complements  etc.  & open sets, \emph{\textbf{closed sets}}, \emph{\textbf{compact sets}}, \emph{elementary sets}, $G_{\delta}$ and $F_{\sigma}$ sets  etc. & \emph{\textbf{open sets}} \\
+\hline \vspace{5pt}
+\emph{set \textbf{not in} collection}  \vspace{2pt}  & some \emph{\textbf{Lebesgue measurable sets}} & some \emph{\textbf{non-measurable sets}} & some Jordan measurable set but not Borel measurable & \emph{\textbf{closed set}}, $G_{\delta}$ and $F_{\sigma}$ sets \\
+\hline \vspace{5pt}
+\emph{function}  \vspace{2pt}  & \emph{\textbf{Boolean measurable function}}; \emph{Rieman integrable function}, & \emph{\textbf{Lebesgue measurable function}}, \emph{$\sigma$-finite function}, \emph{continuous function} & \emph{\textbf{Borel measurable function}}, \emph{continuous function} & \emph{\textbf{continuous function}}  \\
+\hline
+\end{tabularx}
+\end{table}
+
+\newpage
+\section{Example}
+\begin{itemize}
+\item \begin{example}
+\begin{enumerate}
+\item For finite set $X$, the power set $2^{X}$ is both algebra and $\sigma$-algebra of $X$.
+
+\item In particular, all finite Boolean algebra (atomic algebra) is a $\sigma$-algeba \citep{tao2011introduction}; 
+
+\item All Lebesgue measuerable sets form a $\sigma$-algebra; All null sets and co-null sets form a $\sigma$-algebra \citep{tao2011introduction}.
+
+\item The elementary algebra $\overline{\cE[\bR^{d}]} $ and Jordan algebra $\overline{J[\bR^{d}]}$ are \emph{not} $\sigma$-algebra.
+
+\item the Lebesgue $\sigma$-algebra on $\bR^d$ is generated by the union of the Borel $\sigma$-algebra and the null $\sigma$-algebra.
+
+\item An \emph{algebra} of $X$ can be defined as the collection of all \emph{finite} and \emph{cofinite} (i.e., its complement is finite) subsets in $X$.  It is \emph{not} a $\sigma$-algebra if $X$ is infinite \citep{billingsley2008probability}. 
+
+\item A $\sigma$-algebra $\srF$ of $X$ can be defined as the collection of all \emph{countable} and \emph{co-countable} (i.e., its complement is countable) subsets in $X$. There exists subset $A$ of $X$ that is uncountable with uncountable complement.  Thus $A\not\in \srF$, by definition, but $A\in 2^{X}$, and $\srF \subsetneq 2^{X}$ \citep{billingsley2008probability}.
+
+\item Use the $\sigma$-algebra $\srF$ of $X$ as defined above: note that the uncountable union $A$ of singleton sets is uncountable and if $A$ has uncountable complement, $A\not\in \srF$, although each singleton set is in $\srF$. It shows that \emph{arbitrary} union of sets may not in $\srF$ \citep{billingsley2008probability}.
+
+\item The restriction of $\sigma$-algebra $\srF$ on subset $Y$, i.e. $\rlat{\srF}{Y}$ is a $\sigma$-algebra.
+\end{enumerate}
+\end{example}
+
+
+\item \begin{example} \citep{tao2011introduction} The generation of $\sigma$-algebra, given a collection of sets $\cF$. First, define the \emph{ordinal} with $\omega_{1}$ being the first uncountable ordinal. Define the sets $\cF_{\alpha}$ for every countable ordinal $\alpha \in \omega_{1}$
+\begin{enumerate}
+\item $\srF_{\alpha}\equiv \cF$
+\item For each countable successor ordinal $\alpha = \beta + 1$, we define $F_{\alpha}$ to be the collection of all sets that either the union of an \emph{at most countable} number of sets in $\cF_{n-1}$ (including the empty union ;), or the complement of such a union;
+\item For each countable limit ordinal $\alpha = sup_{\beta<\alpha}\beta$, we define $\cF_{\alpha} \equiv \bigcup_{\beta<\alpha}\cF_{\beta}$
+\end{enumerate}
+Then $\sigma(\cF) = \bigcup_{\alpha\in \omega_{1}}\cF_{\alpha}$ is the $\sigma$-algebra generated by $\cF$.
+\end{example}
+
+\item \begin{example}
+\begin{enumerate}
+\item If $\srC = \set{\emptyset}$ or $\srC = \set{X}$, then $\sigma(\srC) = \set{\emptyset , X}$. It is a \emph{Borel $\sigma$-algebra} over indiscrete topology on $X$.
+
+\item If $\srC = \set{\set{a}, a\in X}$ the collection of all singletons, then $\sigma(\srC)$ is the collection of all \emph{countable} and \emph{co-countable} (i.e., its complement is countable) subsets in $X$. (called $\sigma$-algebra of countable and co-countable sets.) 
+
+\item If $\srC = \set{(a,b], 0\le a<b\le 1}$ the collection of all subintervals in $(0,1]$, then $\sigma(\srC)$ is the \emph{Borel $\sigma$-algebra} on $(0,1]$, denote as $\cB((0,1])$. 
+\end{enumerate}
+\end{example}
+
+
+\item \begin{example}
+Find the $\sigma$-algebra generated from the subintervals of $(0,1]$.
+\end{example}
+\begin{solution}
+We take the following sets 
+\begin{itemize}
+\item Define a collection $\srB_{0}$, where $\emptyset \in \srB_{0}$ and $(0,1] \in \srB_{0}$;
+\item Find the collection $\srC$ of all \emph{disjoint} subintervals $\srC = \set{ (a_{i}, b_{i}] ,  0\le \cdots \le a_{i} < b_{i} \le a_{i+1} \cdots \le 1}$. And let $\srC\subset \srB_{0}$.
+\item Suppose $A  = \bigcup_{i=1}^{n}(a_{i}, a'_{i}], n\in \bN$ with $ a_{1} < a'_{1} \le a_{2} \cdots \le a'_{n}\le 1$, then $A^{c} = (0,a_{1}]\cup \paren{\bigcup_{i=1}^{n-1}(a'_{i}, a_{i+1}]} \cup (a'_{n}, 1] $. Let $A, A^{c} \in \srB_{0}$.
+
+\item Take the intersection btw $A,B$, as $A\cap B = \bigcup_{i=1}^{n}\bigcup_{j=1}^{m}((a_{i}, a'_{i}]\cap (b_{j}, b'_{j}])$ . Note that $A\cap B$ is union of disjoint subintervals, or intervals, or emptyset.  So $A\cap B\in \srB_{0}$.
+\item Repeated the above procedures until all finite union of disjoint subintervals in $\srC$ is in $\srB_{0}$.
+\item $\srB_{0}$ is an algebra but not $\sigma$-algebra. It does not contain $\set{b_{i}} = \bigcup_{i\in \bN}(b_{i}-\frac{1}{n}, b_{i}]$. The Borel $\sigma$-algebra is $\sigma(\srB_{0})$, including all the countable union and intersections of elements in $\srB_{0}$.
+\end{itemize}
+\end{solution}
+
+
+\item \begin{example} \citep{resnick2013probability, billingsley2008probability}
+\begin{itemize}
+\item $A_{n} = \left( \frac{1}{n}, 1 \right]$, then $A_{n+1}\supset A_{n}$, the limits of sequence $\set{A_{n}, n\ge 1}$ is given as $$ \lim\limits_{n\rightarrow \infty}A_{n} = \bigcup_{n\ge 1}\left( \frac{1}{n}, 1 \right] = (0,1]$$.
+
+\item $A_{n} = \left[ \frac{(-1)^{n}}{n}, 1 - \frac{(-1)^{n}}{n} \right]$,  then 
+\begin{align*}
+\liminf\limits_{n\rightarrow \infty}A_{n} &= \lim\limits_{k\rightarrow\infty}\inf\limits_{n\ge k}\left[ \frac{(-1)^{n}}{n}, 1 - \frac{(-1)^{n}}{n} \right]\\
+&= \bigcup_{k=1}^{\infty}\bigcap_{n\ge 2k-1}\left[ \frac{(-1)^{n}}{n}, 1 - \frac{(-1)^{n}}{n} \right]\\
+&= \bigcup_{k=1}^{\infty}\brac{\frac{1}{2k}, 1-\frac{1}{2k} } = (0,1)
+\end{align*}
+and 
+\begin{align*}
+\limsup\limits_{n\rightarrow \infty}A_{n} &= \lim\limits_{k\rightarrow\infty}\sup\limits_{n\ge k}\left[ \frac{(-1)^{n}}{n}, 1 - \frac{(-1)^{n}}{n} \right]\\
+&= \bigcap_{k=1}^{\infty}\bigcup_{n\ge 2k-1}\left[ \frac{(-1)^{n}}{n}, 1 - \frac{(-1)^{n}}{n} \right]\\
+&= \bigcap_{k=1}^{\infty}\brac{-\frac{1}{2k-1}, 1+\frac{1}{2k-1} } = [0,1]
+\end{align*}
+Thus $\lim\limits_{n\rightarrow}A_{n}$ does not exists, although the end points are convergent. \qed
+\end{itemize}
+\end{example}
+
+\item \begin{example} \citep{resnick2013probability}
+Suppose $A_{n}= \set{\frac{m}{n}, m\in \bN}, n\in \bN$. What is $\liminf\limits_{n\rightarrow}A_{n}$ and $\limsup\limits_{n\rightarrow}A_{n}$ ?
+\end{example}
+\begin{solution}
+Since $\frac{m_{0}}{n_{0}}$ for given $(m_{0},n_{0})$, if $\frac{m_{0}}{n_{0}}\in \liminf\limits_{n\rightarrow}A_{n}$, then $\exists k$ such that $\frac{m_{0}}{n_{0}}\in \set{\frac{m}{n}, m\in \bN}$ for all $n\ge k$. It is impossible for $\frac{m_{0}}{n_{0}}\not\in \bN$. Therefore, 
+\begin{align*}
+\liminf\limits_{n\rightarrow}A_{n} &= \bigcup_{k=1}^{\infty}\bigcap_{n= k}^{\infty}\set{\frac{m}{n}, m\in \bN}\\
+&= \set{0, 1, 2, \ldots, } = \bN.\\
+\end{align*}
+
+Since $\frac{m_{0}}{n_{0}}$ for given $(m_{0},n_{0})$, for any $k\ge 1$, there always exists $n= k\,n_{0}\ge k$ such that $\frac{m_{0}}{n_{0}} = \frac{n\,m_{0}}{n\,n_{0}} \in \set{\frac{n_{0}\,m}{n\,n_{0}}, m\in \bN} \equiv  \set{\frac{m}{n}, m\in \bN  } $
+
+\begin{align*}
+\limsup\limits_{n\rightarrow \infty}A_{n} &= \bigcap_{k=1}^{\infty}\bigcup_{n= k}^{\infty}\set{\frac{m}{n}, m\in \bN}\\
+&= \set{\frac{m}{n}| n,m\in \bN}= \bQ.  \qed
+\end{align*} 
+\end{solution}
+
+
+\item \begin{example} \citep{resnick2013probability}
+Show that 
+\begin{align*}
+\liminf\limits_{n\rightarrow \infty}A_{n} &= \set{x\;| \;  \lim\limits_{n\rightarrow \infty}\ind{x\in A_{n}} = 1  }.
+\end{align*}
+\end{example}
+
+
+\item \begin{example} \citep{resnick2013probability}
+\begin{enumerate}
+\item\label{item_example1} Suppose $\cC$ is a finite partition of $\Omega$, that is 
+\begin{align*}
+\cC = \set{A_{1}, \ldots, A_{k}}, \Omega = \bigcup_{i=1}^{k}A_{i}, \; A_{i}\cap A_{j} = \emptyset,\, \forall i\neq j. 
+\end{align*}
+Show that the minimal algebra $\cA(\cC)$ generated by $\cC$ is the class of unions of subfamilies of $\cC$; that is, 
+\begin{align*}
+\cA(\cC) &= \set{ \bigcup_{I}A_{j}: I \subset \set{1,\ldots, k} }.
+\end{align*} (This includes the empty set.)
+
+\item What is the $\sigma$-algebra generated from $\cC$?
+
+\item If $\cC = \set{A_{1}, \ldots }$ is a countable partition of $\Omega$, what is the induced $\sigma$-algebra? 
+
+\item If $\cA$ is an algebra of subsets of $\Omega$, we say $A\in \cA$ is an atom of $\cA$; if $A\neq \emptyset$ and for $\emptyset \neq B\in \cA$, if $B \subset A$, then $B=A$. Thus $A$ cannot be split into smaller nonempty set that is in $\cA$. 
+
+Example: $\Omega = \bR$, and $\cA$ is the algebra generated by intervals with integer end points $(a,b], a,b\in \bZ$. What is the atoms in $\cA$ ?
+
+\item As converse to \eqref{item_example1}, prove that if $\cA$ is a finite algebra of subsets of $\Omega$, then the atoms of $\cA$ constitute a finite partition of $\Omega$  that generates $\cA$.
+\end{enumerate}
+\end{example}
+\end{itemize}
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{reference.bib}
+\end{document}

@@ -1,0 +1,11 @@
+\contentsline {section}{\numberline {1}Set Theory Basics}{2}
+\contentsline {subsection}{\numberline {1.1}Set, Function and Axiom of Choice}{2}
+\contentsline {subsection}{\numberline {1.2}The Limits of Sets}{4}
+\contentsline {section}{\numberline {2}Development of $\sigma $-Algebra}{7}
+\contentsline {subsection}{\numberline {2.1}Boolean Algebra}{7}
+\contentsline {subsection}{\numberline {2.2}$\sigma $-Algebra}{10}
+\contentsline {subsection}{\numberline {2.3}Borel $\sigma $-Algebra}{12}
+\contentsline {section}{\numberline {3}Topology, $\sigma $-algebra and Borel $\sigma $-algebra }{13}
+\contentsline {subsection}{\numberline {3.1}Definition}{13}
+\contentsline {subsection}{\numberline {3.2}Comparison}{15}
+\contentsline {section}{\numberline {4}Example}{16}
