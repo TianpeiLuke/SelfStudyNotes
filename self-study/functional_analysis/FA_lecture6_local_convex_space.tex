@@ -1,0 +1,145 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs,  mathtools, dsfont}
+\usepackage{tabularx}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz-cd}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Lecture 6: Locally Convex Topological Vector Space}
+\author{ Tianpei Xie}
+\date{ Nov. 30th., 2022 }
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Topological Vector Space}
+\subsection{Vector Space}
+\begin{itemize}
+\item \begin{definition}
+ A \underline{\emph{\textbf{vector space}}} over a \emph{\textbf{field}} $F$ is a set $V$ together with two operations,  the \emph{\textbf{(vector) addition}} $+: V\times V \rightarrow V$ and \emph{\textbf{scale multiplication}} $\cdot: \bR\times V \rightarrow V$, that satisfy the eight axioms listed below:
+for all $x, y, z\in V$, $\alpha, \beta\in F$, 
+\begin{enumerate}
+\item The \underline{\emph{\textbf{associativity}}} of \emph{\textbf{vector addition}}: $x+ (y+ z) = (x+ y)+ z$;
+\item The \underline{\emph{\textbf{commutativity}}} of \emph{\textbf{vector addition}}:  $x + y = y+ x$;
+\item The \underline{\emph{\textbf{identity}}} of \emph{\textbf{vector addition}}: $\exists\; 0\in V$	 such that $0+ x = x$;
+\item The \underline{\emph{\textbf{inverse}}} of \emph{\textbf{vector addition}}: $\forall\, x\in V$, $\exists\;-x\in V$, so that $x+ (- x) = 0$;
+\item \emph{\textbf{Compatibility}} of \underline{\emph{\textbf{scalar multiplication}}} with \underline{\emph{\textbf{field multiplication}}}: $\alpha(\beta \cdot x) = (\alpha\beta)\cdot x$;
+\item The \emph{\textbf{identity}} of \emph{\textbf{scalar multiplication}}: $\exists\, 1\in F$, such that $1\cdot x = x$;
+\item The \underline{\emph{\textbf{distributivity}}} of \emph{\textbf{scalar multiplication}} with respect to \emph{\textbf{vector addition}}: $\alpha\cdot (x+y)= \alpha\cdot x+ \alpha\cdot y$;
+\item The \underline{\emph{\textbf{distributivity}}} of \emph{\textbf{scalar multiplication}} with respect to \emph{\textbf{field addition}}: $(\alpha+ \beta)\cdot x = \alpha\cdot x+ \beta\cdot x $.	
+\end{enumerate}
+Elements of $V$ are commonly called \emph{\textbf{vectors}}. Elements of $F$ are commonly called \emph{\textbf{scalars}}.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Topological Vector Space}})\\
+A vector space $X$ endowed with a topology $\srT$ is called a \underline{\emph{\textbf{topological vector space}}}, denoted as $(X, \srT)$, if the addition $+: X\times X \rightarrow X$ and scale multiplication $\cdot: \bR\times X \rightarrow X$ are \emph{\textbf{continuous}}. 
+\end{definition}
+
+ \item \begin{theorem} \citep{treves2016topological}\\
+ Every \textbf{locally compact Hausdorff} topological vector space is \textbf{finite-dimensional}.
+ \end{theorem}
+\end{itemize}
+
+\section{Locally Convex Topological Vector Space}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Locally Convex Space}})\\
+\emph{A topological vector space} $X$ is a \underline{\emph{\textbf{locally convex topological vector space}}} (or just \emph{l\textbf{ocally convex space}}), if $V$ is open and $x \in V$, then one can find a \emph{convex} \emph{open} set $U\subset X$ such that $x \in U\subset V$. That is, there exists \emph{a \textbf{base of convex sets} $\srB$ that \textbf{generates the topology} $\srT$}. 
+\end{definition}
+
+\item \begin{remark}
+The most common way of defining locally convex topologies on vector spaces is in terms of \emph{semi-norms}. 
+\end{remark}
+
+\item  \begin{definition} (\emph{\textbf{Semi-Norm}})\\
+A \emph{\textbf{semi-norm}} on a vector space $X$ is a mapping $q: X\rightarrow \bR_{+}$ satisfying the following conditions: 
+\begin{enumerate}
+\item \emph{homogeneity}: $q(\gamma \mb{x}) = \abs{\gamma}q(\mb{x})$;
+\item the \emph{triangle inequality}: $q(\mb{x}+\mb{y})\le q(\mb{x})+ q(\mb{y})$.
+\end{enumerate}
+ If furthermore $q(\mb{x})=0 \Rightarrow \mb{x}=0$, then $q$ is a \emph{\textbf{norm}}.
+\end{definition}
+
+\item \begin{remark}
+ A \emph{\textbf{metric}} $d: X\times X \rightarrow \bR_{+}$ that \emph{\textbf{induced}} from a norm is given by $d_{\theta}(\mb{x}, \mb{y})= q_{\theta}(\mb{y}-\mb{x}),\; \forall \mb{x,y}\in X $.
+ \end{remark}
+
+\item \begin{proposition}
+A normed space $(X, \srT)$ induced by $\set{q_{\theta},\theta\in \Theta}$ is \emph{Hausdorff} if and only if for any $\mb{x}\neq 0, \mb{x}\in X$, $\exists \theta\in \Theta$, such that $q_{\theta}(\mb{x})>0$.
+\end{proposition}
+
+\item \begin{definition} (\emph{\textbf{Locally Convex Space} generated by \textbf{Semi-Norms}})\\
+The \emph{\textbf{smallest topology}} $\srT$ induced by the set of \emph{\textbf{semi-norms}} $\set{q_{\theta},\theta\in \Theta}$ is generated by \emph{\textbf{the convex basis}} $U_{\mb{x},r,\theta} = \set{\mb{y}\in X\,|\, q_{\theta}(\mb{y}-\mb{x}) \le r }\in \srB, \mb{x}\in X, r>0$. The topological vector space $(X, \srT)$ is thus \underline{\emph{\textbf{locally convex space}}}. 
+
+If $\set{q_{\theta},\theta\in \Theta}$ is a set of \emph{\textbf{norms}}, then $(X, \srT)$ is a \emph{\textbf{normed space}}. 
+\end{definition}
+
+
+
+\item \begin{remark}
+The most commonly seen \emph{topological vector space} are \emph{\textbf{the normed linear space}}. It is a vector space $X$ equipped with norm $\norm{\cdot}{}$ and the topology generated by the norm induced metric $d$. It is denoted as $(X, \norm{\cdot}{})$. 
+
+The \emph{\textbf{locally convex space}} is seen as a generalization of \emph{normed vector space}.
+\end{remark}
+
+\item \begin{proposition} (\textbf{Continuous Linear Operator}) \citep{folland2013real}\\
+Suppose $X$ and $Y$ are vector spaces with topologies defined, respectively, by the families $\set{p_{\alpha}}_{\alpha\in A}$ and $\set{q_{\beta}}_{\beta \in B}$ of \textbf{semi-norms}, and $T: X \rightarrow Y$ is a linear map. Then $T$ is \textbf{continuous} \textbf{if and only if} for each $\beta \in B$, there exists $\alpha_1 \xdotx{,} \alpha_k \in A$ and $C > 0$ such that $q_{\beta}(T x) \le C\, \sum_{i=1}^{k}p_{\alpha_i}(x)$.
+\end{proposition}
+
+\item \begin{remark}
+If the semi-norms are \emph{norms}, then the condition above is \emph{the bounded condition} for continuous linear operator.
+\end{remark}
+
+\item \begin{proposition}\citep{folland2013real}\\
+Let $X$ be a vector space equipped with the topology defined by a family $\set{p_{\alpha}}_{\alpha\in A}$ of \textbf{seminorms}.
+\begin{enumerate}
+\item $X$ is \textbf{Hausdorff} if and only if for each $x \neq 0$ there exists $\alpha \in A$ such that $p_{\alpha}(x) \neq 0$.
+\item If $X$ is \textbf{Hausdorff} and $A$ is \textbf{countable}, then $X$ is \textbf{metrizable} with a \textbf{translation invariant metric} (i.e., $d(x, y) = d(x +z, y+ z)$ for all $x, y, z \in X$).
+\end{enumerate}
+\end{proposition}
+
+\item \begin{definition} (\emph{\textbf{Fr{\'e}chet Space}})\\
+A \emph{\textbf{\underline{complete Hausdorff} topological vector space}} $X$ whose topology is defined by a \textbf{\emph{countable}} family of \emph{seminorms} $\set{q_{\theta},\theta\in \Theta}$ is called a \underline{\emph{\textbf{Fr{\'e}chet space}}}.
+\end{definition}
+
+\item \begin{example}
+\begin{enumerate}
+\item \emph{A \textbf{Fr{\'e}chet space}} is a \emph{\textbf{complete locally convex space}}. 
+
+\item \emph{A \textbf{Banach space} is a \textbf{Fr{\'e}chet space}}.
+\end{enumerate}
+\end{example}
+
+\item \begin{example} (\emph{\textbf{Locally Integrable Functions $L_{loc}^{1}(X, \mu)$}})\\
+\emph{The space of all \textbf{locally integrable functions} on $\bR$, $L_{loc}^{1}(\bR)$, is a \textbf{Fr{\'e}chet space}} with the topology defined by the \emph{\textbf{semi-norms}}
+\begin{align*}
+ p_{k}(f) = \int_{\abs{x} \le k} \abs{f(x)} dx.
+\end{align*}
+Completeness follows easily from the completeness of $L^1$.  An obvious \emph{generalization} of this construction yields a \emph{\textbf{locally convex topological vector space}}  $L_{loc}^{1}(X, \mu)$ where $X$ is any \emph{locally convex Hausdorff (LCH) space} and $\mu$ is a \emph{Borel measure} on $X$ that is \emph{finite} on \emph{compact sets}.
+\end{example}
+\end{itemize}
+
+
+
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{reference.bib}
+\end{document}
