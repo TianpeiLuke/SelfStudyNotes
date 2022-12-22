@@ -75,8 +75,23 @@
       - Log-domain Sinkhorn
       - Sinkhorn Divergence
 
-  - Wasserstein Distance, Variational Wasserstein Problems
+  - Variational Wasserstein Problems
+    - Differentiating the Wasserstein Loss
+      - Eulerian and Lagrangian Discretization
+      - Automatic Differentiation
+    - Wasserstein Barycenters and Clustering
+      - Discrete Measures
+      - Arbitrary Measures
+      - K-means as a Wasserstein Variational Problem
+      - Infinite Mixtures and Non-Parametric Bayesian Prior
+      - Special Cases
+      - Entropic Approximation
+      - Wasserstein Propagation
+    - Minimum Kantorovich Estimators 
 
   - Semi-discrete Optimal Transport
+    - Semidiscrete Problem Formulation
+    - K-means via Semi-Discrete Optimal Transport
+    - Entropic Regularization
 
 
