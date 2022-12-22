@@ -1,0 +1,8 @@
+\contentsline {section}{\numberline {1}Reinforcement Learning}{2}
+\contentsline {section}{\numberline {2}Summary of methods learned}{5}
+\contentsline {subsection}{\numberline {2.1}From Multi-armed Bandit to MDP}{5}
+\contentsline {subsection}{\numberline {2.2}Tabular methods vs. Function approximation}{6}
+\contentsline {subsubsection}{\numberline {2.2.1}Tabular methods}{6}
+\contentsline {subsubsection}{\numberline {2.2.2}Function Approximation}{10}
+\contentsline {subsection}{\numberline {2.3}Learning vs. Planning}{14}
+\contentsline {subsection}{\numberline {2.4}Reward and Average reward}{16}

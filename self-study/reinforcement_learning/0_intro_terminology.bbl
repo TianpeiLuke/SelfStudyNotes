@@ -1,0 +1,48 @@
+\begin{thebibliography}{7}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Cesa-Bianchi and Lugosi(2006)]{cesa2006prediction}
+Nicolo Cesa-Bianchi and G{\'a}bor Lugosi.
+\newblock \emph{Prediction, learning, and games}.
+\newblock Cambridge university press, 2006.
+
+\bibitem[Fran{\c{c}}ois-Lavet et~al.(2018)Fran{\c{c}}ois-Lavet, Henderson,
+  Islam, Bellemare, Pineau, et~al.]{franccois2018introduction}
+Vincent Fran{\c{c}}ois-Lavet, Peter Henderson, Riashat Islam, Marc~G Bellemare,
+  Joelle Pineau, et~al.
+\newblock An introduction to deep reinforcement learning.
+\newblock \emph{Foundations and Trends{\textregistered} in Machine Learning},
+  11\penalty0 (3-4):\penalty0 219--354, 2018.
+
+\bibitem[Koller and Friedman(2009)]{koller2009probabilistic}
+Daphne Koller and Nir Friedman.
+\newblock \emph{Probabilistic graphical models: principles and techniques}.
+\newblock MIT press, 2009.
+
+\bibitem[Liu and Liu(2001)]{liu2001monte}
+Jun~S Liu and Jun~S Liu.
+\newblock \emph{Monte Carlo strategies in scientific computing}, volume~10.
+\newblock Springer, 2001.
+
+\bibitem[Puterman(2014)]{puterman2014markov}
+Martin~L Puterman.
+\newblock \emph{Markov decision processes: discrete stochastic dynamic
+  programming}.
+\newblock John Wiley \& Sons, 2014.
+
+\bibitem[Shalev-Shwartz et~al.(2012)]{shalev2012online}
+Shai Shalev-Shwartz et~al.
+\newblock Online learning and online convex optimization.
+\newblock \emph{Foundations and Trends{\textregistered} in Machine Learning},
+  4\penalty0 (2):\penalty0 107--194, 2012.
+
+\bibitem[Sutton and Barto(2018)]{sutton2018reinforcement}
+Richard~S Sutton and Andrew~G Barto.
+\newblock \emph{Reinforcement learning: An introduction}.
+\newblock MIT press, 2018.
+
+\end{thebibliography}
