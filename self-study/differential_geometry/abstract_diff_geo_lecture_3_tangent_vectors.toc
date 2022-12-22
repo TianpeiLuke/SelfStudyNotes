@@ -1,0 +1,14 @@
+\contentsline {section}{\numberline {1}Tangent Vectors}{2}
+\contentsline {subsection}{\numberline {1.1}Geometric Tangent Vectors}{2}
+\contentsline {subsection}{\numberline {1.2}Tangent Vectors on Manifolds}{4}
+\contentsline {section}{\numberline {2}The Differential of a Smooth Map}{5}
+\contentsline {section}{\numberline {3}Computations in Coordinates}{8}
+\contentsline {subsection}{\numberline {3.1}The Derivation in Coordinates}{8}
+\contentsline {subsection}{\numberline {3.2}The Differential in Coordinates}{9}
+\contentsline {subsection}{\numberline {3.3}Change of Coordinates}{11}
+\contentsline {section}{\numberline {4}The Tangent Bundle}{13}
+\contentsline {section}{\numberline {5}Velocity Vectors of Curves}{16}
+\contentsline {section}{\numberline {6}Alternative Definitions of the Tangent Space}{18}
+\contentsline {subsection}{\numberline {6.1}Tangent Vectors as Derivations of the Space of Germs}{18}
+\contentsline {subsection}{\numberline {6.2}Tangent Vectors as Equivalence Classes of Curves}{19}
+\contentsline {subsection}{\numberline {6.3}Tangent Vectors as Equivalence Classes of $n$-Tuples}{19}
