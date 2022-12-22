@@ -10,8 +10,10 @@
 		- Set Theory
 		- Topological Spaces
 	- Part 2
-		-  
-	- Part 3:
+		- Connectedness and Compactness
+		- Countability Axioms and Separation Axioms
+	- Part 3
+		- 	 
 
 - Set Theory
 	- Set Operations, Logic
