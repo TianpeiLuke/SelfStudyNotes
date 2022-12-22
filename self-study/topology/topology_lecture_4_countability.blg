@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: topology_lecture_4_countability.aux
+The style file: plainnat.bst
+Database file #1: book_reference.bib.bib
+You've used 3 entries,
+            2773 wiz_defined-function locations,
+            607 strings with 5202 characters,
+and the built_in function-call counts, 985 in all, are:
+= -- 73
+> -- 41
+< -- 4
++ -- 15
+- -- 12
+* -- 58
+:= -- 164
+add.period$ -- 9
+call.type$ -- 3
+change.case$ -- 10
+chr.to.int$ -- 3
+cite$ -- 6
+duplicate$ -- 60
+empty$ -- 97
+format.name$ -- 17
+if$ -- 200
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 6
+newline$ -- 23
+num.names$ -- 12
+pop$ -- 36
+preamble$ -- 1
+purify$ -- 10
+quote$ -- 0
+skip$ -- 41
+stack$ -- 0
+substring$ -- 6
+swap$ -- 4
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 18
+warning$ -- 0
+while$ -- 9
+width$ -- 0
+write$ -- 44
