@@ -38,6 +38,7 @@
 	- Continuous Functions
 		- Definitions and Basics
 		- Homemorphism
+		- Hausdorff Space
 		- Constructing Continuous Functions 
 	- The Metric Topology
 		- Metric Definition
@@ -61,6 +62,17 @@
 	- Nets and Convergence in Topological Space 
 
 - Countability Axioms and Separation Axioms
+	- The Countability Axioms
+	- The Separation Axioms
+		- Definitions and Properties
+		- Normal Space
+	- Important Theorems
+		- The Urysohn Lemma
+		- The Urysohn Metrization Theorem
+		- Embedding Theorem
+		- The Tietze Extension Theorem  
+	- Embeddings of Manifolds
+		- Partition of Unity 
 
 - Paracompactness and Meterization Theorems
 
