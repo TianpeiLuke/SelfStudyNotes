@@ -1,0 +1,2339 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs,  mathtools, dsfont}
+\usepackage{tabularx}
+\usepackage{tikz-cd}
+\usepackage[all,cmtip]{xy}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Lecture 0:  Summary (part 1)}
+\author{ Tianpei Xie}
+\date{ Nov. 14th., 2022 }
+\maketitle
+\tableofcontents
+\newpage
+\section{Topology}
+\subsection{Set Theory Basis}
+\begin{itemize}
+\item \begin{definition}
+Given a set $X$, the collection of all subsets of $X$, denoted as $2^X$, is defined as
+\begin{align*}
+2^X &:= \set{E: E \subseteq X}
+\end{align*}
+\end{definition}
+
+\item \begin{remark}
+The followings are basic operation on $2^X$: For $A, B \in 2^X$,
+\begin{enumerate}
+\item \emph{\textbf{Inclusion}}:   $A \subseteq B$ if and only if $\forall x \in A$, $x \in B$.
+\item \emph{\textbf{Union}}:  $A \cup B = \set{x: x \in A \lor x \in B}$.
+\item \emph{\textbf{Intersection}}:  $A \cap B = \set{x: x \in A \land x \in B}$.
+\item \emph{\textbf{Difference}}:  $A \setminus B = \set{x: x \in A \land x \not\in B}$.
+\item \emph{\textbf{Complement}}: $A^{c} = X \setminus A = \set{x: x \in X \land x \not\in A}$.
+\item \emph{\textbf{Symmetric Difference}}:  $A \Delta B = (A \setminus B) \cup (B \setminus A) = \set{x \in X: x \not\in A \lor x \not\in B}$.
+\end{enumerate}
+We have \emph{\textbf{deMorgan's laws}}:
+\begin{align*}
+\paren{\bigcup_{a \in A}U_a}^c = \bigcap_{a \in A}U_a^c, \quad \paren{\bigcap_{a \in A}U_a}^c = \bigcup_{a \in A}U_a^c
+\end{align*}
+\end{remark}
+
+\item \begin{remark}
+Note that the following equality is useful:
+\begin{align*}
+A \Delta B = (A \cup B) \setminus (A \cap B)
+\end{align*}
+\end{remark}
+
+\item \begin{definition}
+\emph{\textbf{An equivalence relation}} on $X$ is a relation $R$ on $X$ such that 
+\begin{enumerate}
+\item (\emph{\textbf{Reflexivity}}): $xRx$ for all $x \in X$;
+\item (\emph{\textbf{Symmetry}}): $xRy$ if and only if $yRx$ for all $x,y \in X$;
+\item (\emph{\textbf{Transitivity}}): $xRy$ and $yRz$ then $xRz$ for all $x,y,z \in X$. 
+\end{enumerate}
+\emph{\textbf{The equivalence class}} of an element $x$ is denoted as $[x] := \set{y \in X:  xRy}$. We usually denote the equivalence relation $R$ as $\sim$. The set of equivalence classes provides \emph{\textbf{a partition of the set $X$}} in that every $z \in X$ can must belong to \emph{only one equivalence class} $[x]$. That is $[x] \cap [y] = \emptyset$ if $x \not\sim y$ and $X = \bigcup_{x \in X}[x]$.
+
+\emph{The set of all equivalence classes} of $X$ by $\sim$, denoted $X/{\mathord {\sim }}:= \{[x]: x \in X \}$, is \emph{\textbf{the quotient set}} of $X$ by $\sim$.  $X = \bigcup_{C \in X/\sim}C.$
+\end{definition}
+
+\item \begin{definition} 
+$f: X\rightarrow Y$ is a \emph{\textbf{function}} if for each $x \in X$, there exists a unique $y = f(x) \in Y$. $X$ is called the \emph{\textbf{domain}} of $f$ and $Y$ is called the  \emph{\textbf{codomain}} of $f$. $f(X) = \set{y \in Y: y = f(x)}$ is called the \emph{\textbf{range}} of $f$
+
+The \emph{\textbf{pre-image}} of $f$ is defined as
+\begin{align*}
+f^{-1}(E) &= \set{x \in X: f(x) \in E}.
+\end{align*}
+\end{definition}
+
+
+\item \begin{remark}
+The pre-image operation \emph{\textbf{commutes}} with \emph{\textbf{all basic set operations}}:
+\begin{align*}
+A \subseteq B & \Rightarrow f^{-1}\paren{A} \subseteq f^{-1}(B) \\
+f^{-1}\paren{\bigcup_{\alpha \in A}E_{\alpha}} &= \bigcup_{\alpha \in A}f^{-1}\paren{E_{\alpha}}\\
+f^{-1}\paren{\bigcap_{\alpha \in A}E_{\alpha}} &= \bigcap_{\alpha \in A}f^{-1}\paren{E_{\alpha}}\\
+f^{-1}\paren{A \setminus B} &= f^{-1}(A) \setminus f^{-1}(B) \\
+f^{-1}\paren{E^c} &= \paren{f^{-1}\paren{E}}^c 
+\end{align*}
+\end{remark}
+
+
+\item \begin{remark}
+The image operation \emph{\textbf{commutes}} with only  \emph{\textbf{inclusion} and \textbf{union} operations}:
+\begin{align*}
+A \subseteq B & \Rightarrow f\paren{A} \subseteq f(B) \\
+f\paren{\bigcup_{\alpha \in A}E_{\alpha}} &= \bigcup_{\alpha \in A}f\paren{E_{\alpha}} 
+\end{align*} For the other operations:
+\begin{align*}
+f\paren{\bigcap_{\alpha \in A}E_{\alpha}} &\subseteq \bigcap_{\alpha \in A}f\paren{E_{\alpha}} \\
+f\paren{A \setminus B} &\supseteq f(A) \setminus f(B)
+\end{align*}
+\end{remark}
+
+\item \begin{definition}
+A map $f: X\rightarrow Y$ is \emph{\textbf{surjective, or, onto}}, if for every $y \in Y$, there exists a $x \in X$ such that $y = f(x)$. In set theory notation:
+\begin{align*}
+f: X\rightarrow Y \text{ is surjective }&\Leftrightarrow \; f^{-1}(Y) \subseteq X.
+\end{align*}
+A map $f: X\rightarrow Y$ is \emph{\textbf{injective}}, if for every $x_1 \neq x_2 \in X$, their map $f(x_1) \neq f(x_2)$, or equivalently, $f(x_1) = f(x_2)$ only if $x_1 = x_2$.
+
+If a map $f: X\rightarrow Y$ is both \emph{surjective} and \emph{injective}, we say $f$ is a \emph{\textbf{bijective}}, or there exists an \emph{\textbf{one-to-one correspondence}} between $X$ and $Y$. Thus $Y = f(X)$.
+\end{definition}
+
+\item \begin{remark}
+\begin{align*}
+f^{-1}(f(B)) &\supseteq  B,\quad \forall B \subseteq X \\
+f(f^{-1}(E)) &\subseteq E,\quad \forall E \subseteq Y \\
+f: X\rightarrow Y \text{ is surjective }&\Leftrightarrow \; f^{-1}(Y) \subseteq X. \\
+&\Rightarrow  \; f(f^{-1}(E)) = E. \\
+f: X\rightarrow Y \text{ is injective }& \Rightarrow\; f^{-1}(f(B)) = B \\
+& \Rightarrow\; f\paren{\bigcap_{\alpha \in A}E_{\alpha}} = \bigcap_{\alpha \in A}f\paren{E_{\alpha}} \\
+& \Rightarrow\; f\paren{A \setminus B} = f(A) \setminus f(B)
+\end{align*}
+\end{remark}
+
+\item \begin{proposition}
+The following statements for composite functions are true:
+\begin{enumerate}
+\item If $f, g$ are both injective, then $g \circ f$ is injective. 
+\item If $f, g$ are both surjective, then $g \circ f$ is surjective. 
+\item Every \textbf{injective} map $f: X \rightarrow Y$ can be writen as $f = \iota \circ f_{R}$ where $f_R: X \rightarrow f(X)$ is a \textbf{bijective} map and $\iota$ is the \textbf{inclusion map}.
+\item Every \textbf{surjective} map $f: X \rightarrow Y$ can be writen as $f =  f_{p} \circ \pi$ where $\pi: X\rightarrow (X/\sim)$ is \textbf{a quotient map} (projection $x \mapsto [x]$) for the equivalent relation $ x \sim y \Leftrightarrow f(x) = f(y)$ and  $f_p: (X/\sim) \rightarrow Y$ is defined as $f_p([x]) = f(x)$ \textbf{constant} in each coset $[x]$.
+\item If $g \circ f$ is \textbf{injective}, then $f$ is \textbf{injective}.
+\item If $g \circ f$ is \textbf{surjective}, then $g$ is \textbf{surjective}.
+\end{enumerate}
+\end{proposition}
+
+\item \begin{principle} (\textbf{The Axiom of Choice}).\\
+If $\set{X_{\alpha}}_{\alpha \in A}$ is a nonempty collection of nonempty sets, then $\prod_{\alpha \in A}X_{\alpha}$ is non-empty.
+\end{principle}
+
+\item \begin{corollary}
+If $\set{X_{\alpha}}_{\alpha \in A}$ is a \textbf{disjoint} collection of nonempty sets, there is a set $Y \subset \bigcup_{\alpha \in A}X_{\alpha}$ such that $Y \cap X_{\alpha}$ contains \textbf{precisely one element} for each $\alpha \in A$.
+\end{corollary}
+\end{itemize}
+\subsection{Topological Space}
+\begin{itemize}
+\item 
+\begin{definition} 
+Let $X$ be a set. \underline{\emph{A \textbf{topology}}} on $X$ is \emph{a collection} $\mathscr{T}$ of \emph{subsets} of X, called \emph{\textbf{open subsets}}, satisfying
+\begin{enumerate}
+\item $X$ and $\emptyset$ are \emph{open}.
+\item The \emph{\textbf{union}} of \emph{\textbf{any family}} of open subsets is open.
+\item The \emph{\textbf{intersection}} of \emph{any \textbf{finite} family} of open subsets is open.
+\end{enumerate}
+A pair $(X, \mathscr{T})$ consisting of a set $X$ together with a topology $\mathscr{T}$ on $X$ is called \emph{\textbf{a topological space}}.
+\end{definition}
+
+\item \begin{definition}
+A map $F: X \rightarrow Y$ is said to be \underline{\emph{\textbf{continuous}}} if for every open subset $U \subseteq Y$, the \emph{\textbf{preimage}} $F^{-1}(U)$ is \emph{\textbf{open}} in $X$.
+\end{definition}
+
+\item \begin{definition}
+A \emph{\textbf{continuous bijective}} map $F: X \rightarrow Y$ with \emph{\textbf{continuous inverse}} is called a \underline{\emph{\textbf{homeomorphism}}}. If there exists a \emph{homeomorphism} from $X$ to $Y$, we say that X and Y are \emph{\textbf{homeomorphic}}.
+\end{definition}
+
+\item \begin{definition}
+A map $F: X \rightarrow Y$ (continuous or not) is said to be \emph{\textbf{an open map}} if for every \emph{open} subset $U \subseteq X$, the image set $F(U)$ is \emph{open} in $Y$, and  \emph{\textbf{a closed map}} if for every \emph{closed} subset $K \subseteq X$, the image $F(K)$ is \emph{closed} in Y . 
+\end{definition}
+
+
+
+\item \begin{definition}
+A topological space $X$ is said to be a \underline{\emph{\textbf{Hausdorff space}}} if for every pair of \emph{\textbf{distinct}} points $p,q \in X$, there exist \emph{\textbf{disjoint open subsets}} $U,V \subseteq X$ such that $p \in U$ and $q \in V$.
+\end{definition}
+
+\item \begin{definition}
+Suppose $X$ is a topological space. A collection $\mathscr{B}$ of open subsets of $X$ is said to be \emph{\textbf{a basis}} for \emph{the topology of $X$} (plural: \emph{\textbf{bases}}) if every open subset of $X$ is the \emph{union of some collection of elements} of $\mathscr{B}$.
+
+More generally, suppose $X$ is merely a set, and $\mathscr{B}$ is a collection of \emph{subsets} of $X$ satisfying the following conditions:
+\begin{enumerate}
+\item $X = \bigcup_{B \in \mathscr{B}}B$.
+\item If $B_1, B_2 \in \mathscr{B}$ and $x \in B_1 \cap B_2$, then there exists $B_3 \in \mathscr{B}$ such that $x \in B_3 \subseteq B_1 \cap B2$.
+\end{enumerate}
+Then \emph{the collection of \textbf{all unions} of elements of $\mathscr{B}$} is a \emph{topology} on X, called \emph{\textbf{the topology generated by $\mathscr{B}$}}, and $\mathscr{B}$ is a \underline{\emph{\textbf{basis}} for this \emph{topology}}.
+\end{definition}
+
+\item \begin{definition} See the following definitions
+\begin{enumerate}
+\item A set is said to be \emph{\textbf{countably infinite}} if it admits a \emph{bijection} with the set of \emph{positive integers}, and 
+\item \emph{\textbf{countable}} if it is \emph{finite} or \emph{countably infinite}. 
+\item A topological space $X$ is said to be \emph{\textbf{first-countable}} if there is a \emph{\textbf{countable neighborhood basis}} at each point, and 
+\item \underline{\emph{\textbf{second-countable}}} if there is \emph{\textbf{a countable basis}} for its topology.
+\end{enumerate}
+\end{definition}
+
+\end{itemize}
+
+\subsection{Subspaces and Quotients}
+\begin{itemize}
+\item \begin{definition}
+If $X$ is a topological space and $S \subseteq X$ is an arbitrary subset, we define \emph{\textbf{the subspace topology}} on $S$ (sometimes called \emph{the \textbf{relative topology}}) by declaring a subset $U \subseteq S$ to be \emph{open} in $S$ \emph{if and only} if there exists an open subset $V \subseteq X$ such that $U = V \cap S$. 
+
+Any subset of $X$ endowed with the subspace topology is said to be \emph{\textbf{a subspace of $X$}}.
+\end{definition}
+
+\item \begin{definition}
+If $X$ and $Y$ are topological spaces, a continuous injective map $F: X \rightarrow Y$ is called a \underline{\emph{\textbf{topological embedding}}} if it is a \emph{\textbf{homeomorphism}} onto its image $F(X) \subseteq Y$ in the subspace topology.
+\end{definition}
+
+\item \begin{definition}
+If $X$ is a \emph{topological space}, $Y$ is a set, and $\pi: X \rightarrow Y$ is a \textbf{surjective} map, \emph{\textbf{the \underline{quotient topology}}} on $Y$ determined by $\pi$ is defined by declaring a subset $U \subseteq Y$ to be \emph{open} \emph{if and only} if $\pi^{-1}(U)$ is \emph{open} in $X$. 
+
+If $X$ and $Y$ are topological spaces, a map $\pi: X \rightarrow Y$ is called \emph{\textbf{a quotient map}} if it is \emph{\textbf{surjective}} and \emph{\textbf{continuous}} and $Y$ has the quotient topology determined by $\pi$.
+\end{definition}
+
+\item \begin{definition}
+The following construction is the most common way of producing quotient maps. \emph{A \textbf{relation}} on a set $X$ is called \emph{\textbf{an equivalence relation}} if it is 
+\begin{enumerate}
+\item \emph{\textbf{reflexive}}: $x \sim x$ for all $x \in X$,
+\item \emph{\textbf{symmetric}}: $x \sim y$ implies $y \sim x$,
+\item \emph{\textbf{transitive}}: $x \sim y$ and $y \sim z$ imply $x \sim z$.
+\end{enumerate} 
+
+If $R \subseteq X \times X$ is any \emph{\textbf{relation}} on $X$, then \emph{\textbf{the intersection of all equivalence
+relations}} on $X$ \emph{\textbf{containing}} $R$ is \emph{an equivalence relation}, called \emph{\textbf{the equivalence relation generated by $R$}}. 
+\end{definition}
+
+\begin{remark}
+If is an equivalence relation on $X$, then for each $x\in X$, \emph{\textbf{the equivalence class} of $x$}, denoted by $[x]$, is the \emph{set of all $y \in X$ such that $y\sim x$}. The set of \emph{all equivalence classes} is a \emph{\textbf{partition}} of $X$: a collection of disjoint nonempty subsets whose union is $X$.
+\end{remark}
+
+\item \begin{definition}
+Suppose $X$ is a topological space and $\sim$ is an equivalence relation on $X$. Let $X/\sim$ denote \emph{\textbf{the set of equivalence classes}} in $X$, and let $\pi: X \rightarrow X/\sim$ be the \emph{\textbf{natural projection}} sending each \emph{point} to its \emph{equivalence class}. Endowed with \emph{\textbf{the quotient topology}} determined by $\pi$, the space $X/\sim$ is called \underline{\emph{\textbf{the quotient space}}} (or \emph{identification space}) of $X$ determined by $\pi$.
+\end{definition}
+
+\item \begin{definition}
+If $\pi: X \rightarrow Y$ is a map, a subset $U \subseteq X$ is said to be \emph{\textbf{saturated}} with respect to $\pi$ if $U$ is the \textbf{\emph{entire preimage}} of its \emph{\textbf{image}}: $U =\pi^{-1}(\pi(U))$. 
+
+Given $y \in Y$, the \underline{\emph{\textbf{fiber}}} of $\pi$ over $y$ is the set $\pi^{-1}(y)$. 
+\end{definition}
+\end{itemize}
+
+
+\subsection{Connectedness and Compactness}
+\begin{itemize}
+\item  \begin{definition} 
+A topological space $X$ is said to be \emph{\textbf{disconnected}} if it has two \emph{\textbf{disjoint nonempty open subsets}} whose union is $X$, and it is \emph{\textbf{connected}} otherwise.  Equivalently, $X$ is connected if and only if the only subsets of $X$ that are \emph{\textbf{both open and closed}} are $\emptyset$
+and $X$ itself.
+\end{definition}
+
+\item \begin{definition}
+Recall that a topological space $X$ is
+\begin{itemize}
+\item \underline{\emph{\textbf{connected}}} if there do not exist two \emph{disjoint}, \emph{nonempty}, \emph{open} subsets of $X$ whose union is $X$;
+\item \underline{\emph{\textbf{path-connected}}} if every pair of points in $X$ can be \emph{\textbf{joined by a path}} in $X$, and
+\item \emph{\textbf{locally path-connected}} if $X$ has a \emph{\textbf{basis}} of \emph{path-connected open subsets}.
+\end{itemize}
+\end{definition}
+
+\item \begin{definition}
+A \emph{\textbf{maximal connected subset}} of $X$ (i.e., a connected subset that is not properly contained in any larger connected subset) is called a \emph{\textbf{component}} (or \emph{\textbf{connected component}}) of $X$.
+\end{definition}
+
+\item \begin{definition}
+A topological space $X$ is said to be \underline{\emph{\textbf{compact}}} if every open cover of $X$ has a \emph{\textbf{finite} subcover}. A \emph{\textbf{compact subset}} of a topological space is one that is a compact space in the subspace topology. 
+\end{definition}
+
+\item \begin{definition}
+If $X$ and $Y$ are topological spaces, a map $F: X \rightarrow Y$ (continuous or not) is said to be \emph{\textbf{proper}} if for every \textbf{\emph{compact}} set $K \subseteq Y$, the \emph{\textbf{preimage}} $F^{-1}(K)$ is \emph{\textbf{compact}}.
+\end{definition}
+
+\item \begin{definition}
+A topological space $X$ is said to be \underline{\emph{\textbf{locally compact}}} if every point has a \emph{neighborhood} contained in a \emph{\textbf{compact subset}} of $X$. 
+
+A subset of $X$ is said to be \emph{\textbf{precompact}} in $X$ if its \emph{\textbf{closure}} in $X$ is \emph{compact}.
+\end{definition}
+
+
+\item For a \emph{\textbf{Hausdorff space}} $X$,  the following are equivalent:
+\begin{enumerate}
+\item $X$ is \emph{\textbf{locally compact}}.
+\item Each point of $X$ has a \emph{\textbf{precompact}} neighborhood. 
+\item $X$ has a basis of \emph{\textbf{precompact}} open subsets.
+\end{enumerate}
+\end{itemize}
+\newpage
+\section{Analytical Structure of Subsets}
+\subsection{The Limits of Sets}
+\begin{itemize}
+\item   \begin{definition}
+A \emph{\textbf{nested}} sequence of sets $E_{1}, E_{2}, \ldots $ is \emph{\textbf{nondecreasing}} if $E_{i}\subseteq E_{i+1}$, and it is \emph{\textbf{nonincreasing}}  if $E_{i}\supseteq E_{i+1}$.
+\end{definition}
+
+\item \begin{definition}
+The \underline{\emph{\textbf{infimum}}} and the \underline{\emph{\textbf{supremum}}} of a collection of sets $\set{E_{n}}_{n\ge k}$ is given by 
+\begin{align*}
+&\inf\limits_{n\ge k}E_{n} = \bigcap_{n= k}^{\infty}E_{n}, \quad \sup\limits_{n\ge k}E_{n} = \bigcup_{n= k}^{\infty}E_{n} ,
+\end{align*}
+respectively.
+\end{definition}
+
+\item \begin{remark} Note that
+\begin{enumerate}
+\item $\inf\limits_{n\ge 1}E_{n} \xdotx{,} \inf\limits_{n\ge k}E_{n} , \ldots $ is \emph{\textbf{monotone increasing}} as $k$ increases since 
+\begin{align*}
+\inf\limits_{n\ge k}E_{n} \subseteq \inf\limits_{n\ge k+1}E_{n}.
+\end{align*} \emph{The \textbf{more}} sets that are involved in the \emph{\textbf{intersection}}, \emph{the \textbf{less} cardinality of} the intersection will be. As $k$ increases, \emph{less} sets are involved in the intersection. 
+\item $\sup\limits_{n\ge 1}E_{n}\ \xdotx{,} \sup\limits_{n\ge k}E_{n} , \ldots $ is \emph{\textbf{monotone decreasing}}. as $k$ increases since 
+\begin{align*}
+\sup\limits_{n\ge k}E_{n} \supseteq \sup\limits_{n\ge k+1}E_{n}.
+\end{align*} \emph{The \textbf{more}} sets that are involved in the \emph{\textbf{union}}, \emph{the \textbf{more} cardinality of} the union will be. As $k$ increases, \emph{less} sets are involved in the union. 
+\end{enumerate}
+\end{remark}
+
+\item \begin{definition} \citep{resnick2013probability} \\
+The \underline{\emph{\textbf{limit infimum}}} and \underline{\emph{\textbf{limit supremum}}} is defined as  
+\begin{align}
+&\liminf\limits_{n\rightarrow \infty}E_{n} = \bigcup_{k=1}^{\infty}\bigcap_{n= k}^{\infty}E_{n}, \quad \limsup\limits_{n\rightarrow \infty}E_{n} = \bigcap_{k=1}^{\infty}\bigcup_{n= k}^{\infty}E_{n}, \label{eqn: liminf_limsup}
+\end{align}
+respectively.
+\end{definition}
+
+\item  \begin{remark}
+It is clear that for \emph{\textbf{nested sequence}} $\set{E_{n}}_{n\ge 1}$ that is \emph{\textbf{nondecreasing}}, 
+\begin{align*}
+\liminf\limits_{n\rightarrow \infty}E_{n} = \bigcup_{n=1}^{\infty}E_{n} = \limsup\limits_{n\rightarrow \infty}E_{n}
+\end{align*}
+so define \emph{the \textbf{limit} of monotone increasing nested sets} as $\lim\limits_{n\rightarrow \infty}E_{n} = \bigcup_{n=1}^{\infty}E_{n} $.
+
+Similarly, for \emph{\textbf{nonincreasing nested sets}} $\set{E_{n}}_{n\ge 1}$, 
+\begin{align*}
+\liminf\limits_{n\rightarrow \infty}E_{n} = \bigcap_{n=1}^{\infty}E_{n} = \limsup\limits_{n\rightarrow \infty}E_{n}
+\end{align*}
+so define \emph{the \textbf{limit} of monotone decreasing nested sets} as $\lim\limits_{n\rightarrow \infty}E_{n} = \bigcap_{n=1}^{\infty}E_{n} $.
+\end{remark}
+
+%\item  \begin{remark} (\emph{\textbf{Limit Infimum and Limit Supremum of a Sequence}})\\
+%Note that the notion $$\liminf_{n\rightarrow \infty}a_{n} \equiv \lim_{k\rightarrow \infty}\inf_{n\ge k}a_{n} = \sup_{k\ge 1}\inf_{n\ge k}a_{n} $$ and $$\limsup_{n\rightarrow \infty}a_{n} \equiv \lim_{k\rightarrow \infty}\sup_{n\ge k}a_{n} = \inf_{k\ge 1}\sup_{n\ge k}a_{n}.$$ It is \emph{\textbf{the limit infimum} and \textbf{limit supremum}} among all the \emph{\textbf{accumulation points}} of a sequence $(a_{n})$, respectively. 
+%
+%\begin{proposition}
+%The following properties hold
+%\begin{enumerate}
+%\item $\inf\limits_{n \ge 1}a_{n} \le \liminf\limits_{n\rightarrow \infty}a_{n}  \le \limsup\limits_{n\rightarrow \infty}a_{n} \le \sup\limits_{n \ge 1}a_{n}$, if the total infimum and total supremum exists.
+%
+%\item 
+%\begin{align*}
+%\liminf_{n\rightarrow \infty}(a_{n}+b_{n}) &\ge \liminf_{n\rightarrow \infty}a_{n} + \liminf_{n\rightarrow \infty}b_{n},\\
+%\limsup_{n\rightarrow \infty}(a_{n}+b_{n}) &\le \limsup_{n\rightarrow \infty}a_{n} + \limsup_{n\rightarrow \infty}b_{n}.
+%\end{align*}
+%
+% 
+%\item \textbf{A lower bound} on $\liminf a_{n} \ge c$ means that the sequence $a_{n}$ will ``\textbf{no smaller than the case} ... " and $c$ is a \textbf{lower bound} for \textbf{all possible sub-sequence} $(a_{k_{n}})$.
+%
+%\item \textbf{An upper bound} on $\limsup a_{n} \le b$ means that the sequence $a_{n}$ will ``\textbf{no greater than the case} ... " and $b$ is a \textbf{upper bound} for \textbf{all possible sub-sequence} $(a_{k_n})$.
+%\end{enumerate}
+% \end{proposition}
+% 
+%Unlike \emph{the limit operation}, which \emph{may not exists} for some sequence $(a_{n})$, \emph{\textbf{the limit infimum and limit supremum are always exists}}, provided that the sequence lies in any \emph{\textbf{partially ordered set}}, where the suprema and infima exist, such as in a complete lattice. The \emph{limit} exists \emph{\textbf{if and only if}} the \emph{limit infimum} and \emph{limit supremum} are equal: $\lim_{n\rightarrow}a_{n} = \liminf_{n\rightarrow \infty}a_{n}= \limsup_{n\rightarrow \infty}a_{n}$.
+%\end{remark}
+%
+%\item \begin{remark} Under complement operation, we have
+%\begin{align*}
+%\paren{\liminf\limits_{n\rightarrow \infty}E_{n} }^{c} = \limsup\limits_{n\rightarrow \infty}E_{n}
+%\end{align*}
+%and \emph{vice versa}.
+%\end{remark}
+
+
+
+\item \begin{proposition} The \underline{\textbf{interpretation}} of limit infimum and limit supremum
+\begin{align*}
+&\liminf\limits_{n\rightarrow \infty}E_{n} = \set{x: \; x\in E_{n}, \text{ for \textbf{all but finite} }n } = \set{x: \; \exists k,\, \forall n\ge k, \, x\in E_{n} }\\
+&\limsup\limits_{n\rightarrow \infty}E_{n} = \set{x: \; x\in E_{n}, \text{ for \textbf{infinitely many} }n }  = \set{x: \; \exists k,\, \forall n\ge k, \, x\in E_{n} }
+\end{align*}
+\end{proposition}
+
+\item \begin{remark}
+A sequence of sets $E_1, E_2, \ldots$ converges to $E$ if and only if 
+\begin{align*}
+\liminf\limits_{n\rightarrow \infty}E_{n} = \limsup\limits_{n\rightarrow \infty}E_{n} = E.
+\end{align*} It is equivalent to \emph{\textbf{pointwise}} convergence of indicator function $\ind{x \in E_n}$ to $\ind{x \in E}$ for each $x$.
+
+\end{remark}
+\end{itemize}
+
+\subsection{Boolean Algebra}
+\begin{itemize}
+\item \begin{definition} \citep{tao2011introduction}\\
+Let $X$ be a set. \emph{A (concrete) \underline{\textbf{Boolean algebra (Boolean field)}}} on $X$ is a \emph{collection of subsets} $\srB$ of $X$ which obeys the following
+properties:
+\begin{enumerate}
+\item (\textbf{\emph{Empty set}}) $\emptyset \in \srB$;
+\item (\textbf{\emph{Complements}}) For any $E\in \srB$, then $E^{c}\equiv (X \setminus E) \in \srB$;
+\item (\textbf{\emph{Finite unions}}) For any  $E, F \subset \srB$, $E\cup F \in \srB$.
+\end{enumerate}
+We sometimes say that $E$ is \underline{\textbf{\emph{$\srB$-measurable}}}, or \textbf{\emph{measurable with respect to $\srB$}}, if $E \in \srB$.
+\end{definition}
+
+\item \begin{remark}
+Note that \emph{the finite difference} $A-B$, $A\Delta B$ and \emph{intersections} $A\cap B$ are also \emph{\textbf{closed}} under the Boolean algebra. 
+\end{remark}
+
+\item \begin{definition}
+A \underline{\textbf{\emph{field} (\emph{algebra})}} is a \emph{non-empty collection of subsets} in $X$ that is \emph{\textbf{closed}} under \emph{\textbf{finite union}} and \emph{\textbf{complements}}. 
+
+It is just a \emph{subset (sub-algebra)} of \emph{Boolean field} $(X, \subset, \cup, \cdot^{c})$. 
+\end{definition} 
+
+\item \begin{definition}
+Given two Boolean algebras $\srB, (\srB)'$ on $X$, we say that $(\srB)'$ is \underline{\emph{\textbf{finer}}} than, a \emph{\textbf{sub-algebra}} of, or a \underline{\emph{\textbf{refinement}}} of $\srB$, or that $\srB$ is \underline{\emph{\textbf{coarser}}} than or a \underline{\emph{\textbf{coarsening}}} of $(\srB)'$, if $\srB \subset (\srB)'$.
+\end{definition}
+
+\item \begin{remark}
+In \emph{\textbf{abstract Boolean algebra}}, $\cup$ is replaced by \emph{join} operation $\lor$ and $\cap$ is replaced by \emph{meet} operation $\land$.
+\end{remark}
+
+\item \begin{remark}
+The definition of Boolean algebra \emph{\textbf{does not requires}} $X$ to have a \emph{\textbf{topology}}. It focus on a collection of subsets that is \emph{\textbf{closed}} under \emph{the set union operation} $\cup$ and the set complement $\cdot^c$. In other words, the concerns is the \underline{\emph{\textbf{set-algebraic property}}} not the topological property. Note that the set intersection operation $\cap$ can be obtained from composite of set union and set complement operations.
+\end{remark}
+
+\item 
+\begin{definition} \citep{tao2011introduction}\\
+Let $X$ be \emph{partitioned} into a union $X= \bigcup_{\alpha\in I}A_{\alpha}$ of \emph{\textbf{disjoint sets} $A_{\alpha}$}, which we refer to as \underline{\emph{\textbf{atoms}}}. Then this partition \emph{generates} \emph{\textbf{a Boolean algebra}} $\srA((A_{\alpha})_{\alpha\in I} )$, defined as \emph{the collection of all the sets $E$ of the form \underline{$E =\bigcup_{\alpha\in J}A_{\alpha}$}} for some $J \subseteq I$, i.e. $\srA((A_{\alpha})_{\alpha\in I} )$ is \emph{the collection of all sets that can be represented as \textbf{the union of one or more atoms}}. Then $\srA((A_{\alpha})_{\alpha\in I} )$ is \emph{\textbf{a Boolean algebra}}, and we refer to it as the \underline{\emph{\textbf{atomic algebra}}} with \emph{atoms} $(A_{\alpha})_{\alpha\in I}$.
+\end{definition}
+
+\item \begin{definition}
+A Boolean algebra is \emph{\textbf{finite}} if it only consists of \emph{finite many of subsets} (i.e., its \emph{cardinality} is finite)  \citep{tao2011introduction}.  
+\end{definition}
+
+\item \begin{remark}
+The definition of \emph{\textbf{atomic algebra}} as \emph{generated} by \emph{\textbf{atoms}} resembles the definition of \emph{\textbf{topology}} \emph{generated} by \emph{\textbf{basis}}. 
+\begin{itemize}
+\item In both cases, a subset in the collection of \emph{atomic algebra / topology}  is seen as the \emph{\textbf{union}} of some subsets in the \emph{atoms / basis}. 
+\item On the other hand, \emph{\textbf{atoms} are all \textbf{disjoint}}, while \emph{sets in \textbf{basis}} are \emph{\textbf{not necessarily disjoint}}. In fact, by definition, for any two sets in basis that have nonempty intersection, there must exists a third set in basis that is a subset of the intersection.
+\end{itemize}
+\end{remark}
+
+\item \begin{example}
+The followings are examples of \emph{Boolean algebra}:
+\begin{enumerate}
+\item \emph{\textbf{The trivial algebra}} $\set{X, \emptyset}$ is \emph{atomic algebra} with atoms $\set{X}$.
+\item \emph{\textbf{The discrete algebra}} $2^{X}$ is \emph{atomic algebra} generated by collection of \emph{\textbf{singletons}} $\set{x}$.
+\end{enumerate}
+\end{example}
+
+\item \begin{remark}
+The \emph{non-empty atoms} of an \emph{atomic algebra} are determined up to \emph{\textbf{relabeling}}. More precisely, if $X= \bigcup_{\alpha\in I}A_{\alpha} = \bigcup_{\alpha'\in I'}A'_{\alpha'} $ are two partitions of $X$ into non-empty
+atoms $A_{\alpha}$, $A'_{\alpha'}$, then $\bigcup_{\alpha\in I}A_{\alpha} = \bigcup_{\alpha'\in I'}A'_{\alpha'} $ if and only if exists a \emph{\textbf{bijection}} $\phi : \alpha \rightarrow \alpha'$ such that $A'_{\phi(\alpha)} = A_{\alpha}$ for all $\alpha \in I$.  \citep{tao2011introduction}
+\end{remark}
+
+
+
+\item \begin{remark}
+There is a \emph{\textbf{one-to-one correspondence}} between \emph{\textbf{finite Boolean algebras}} on $X$ and \emph{\textbf{finite partitions}} of $X$ into non-empty sets. (its cardinality is $2^{m}$, for some $m$).  \citep{tao2011introduction}
+\end{remark}
+
+\item \begin{definition} \citep{tao2011introduction}\\
+Let $n$ be an integer. The \underline{\emph{\textbf{dyadic algebra}}} $\srD_{n}$ at scale $2^{-n}$ in $\bR^d$ is defined to be the atomic algebra generated by the \emph{half-open dyadic cubes}
+\begin{align*}
+\left[\frac{i_{1}}{2^{n}}, \frac{i_{1}+1}{2^{n}}\right) \times \cdots  \left[\frac{i_{d}}{2^{n}}, \frac{i_{d}+1}{2^{n}}\right)
+\end{align*} of length $2^{-n}$. Note that $\srD_{n}\subset \srD_{n+1}$. 
+\end{definition}
+
+\item 
+\begin{example} Here are some more examples for Boolean algebra \citep{tao2011introduction}
+\begin{enumerate}
+\item The collection $\overline{\cE[\bR^{d}]}$ of \emph{\textbf{elementary sets}} (boxes and its finite union and intersections) and co-elementary sets (its complements is elementary) in $\bR^{d}$ forms a Boolean algebra.
+
+\item The collection $\overline{\mathcal{J}[\bR^{d}]}$ of \emph{\textbf{Jordan measureable set}} (contained in finite union of elementary sets) and co-Jordan measureable sets in $\bR^{d}$ forms a Boolean algebra.
+
+\item The collection $\cL[\bR^{d}]$  of \emph{\textbf{Lebesgue measureable set}}  (contained in countable union of elementary sets) in $\bR^{d}$ forms a Boolean algebra.
+
+\item The collection $\cN[\bR^{d}]$ of \emph{\textbf{Lebesgue null sets}} and \emph{\textbf{co-null sets}} (its complement is null set) in $\bR^{d}$ forms a Boolean algebra. we refer to it as \emph{\textbf{the null algebra}} on $\bR^d$.
+
+\item  Given $Y\subset X$, and $\srB$ is a Boolean algebra on $X$, then the \emph{\textbf{restriction}} of algebra on $Y$ is 
+$\rlat{\srB}{Y} = \srB \cap 2^Y = \set{E\cap Y: E\in \srB}$, which is a \emph{sub-algebra}.
+
+\item  The \emph{\textbf{dyadic algebra}} $\srD_{n}$ at \textbf{\emph{scale}} $2^{-n}$ in $\bR^d$ is defined to be \emph{\textbf{the atomic algebra}} generated by the \emph{half-open dyadic cubes}  of length $2^{-n}$.
+
+
+
+\item Note that $\set{\emptyset,\bR^{d}}\subset \srD_{n}\subset \overline{\cE[\bR^{d}]} = \bigcup_{n\ge 1}\srD_{n} \subset \overline{J[\bR^{d}]} \subset L[\bR^{d}]  \subset 2^{\bR^{d}}$. $N[\bR^{d}]\subset L[\bR^{d}]$. Although $\srD_{n}$ for given $n$ is atomic algebra, $\overline{\cE[\bR^{d}]}$ and all its predecessors are \emph{\textbf{non-atomic}}, since they do not have finite cardinality. 
+
+\item $\bigwedge_{\alpha\in I}\srB_{\alpha}\equiv \bigcap_{\alpha\in I}\srB_{\alpha}$ for all $\alpha\in I$ is a Boolean algebra ($I$ is arbitrary), which is \emph{\textbf{the finest algebra}} that is \emph{\textbf{coarser}} than any $\srB_{\alpha}$.  
+\end{enumerate}
+\end{example}
+
+\item \begin{example} (\emph{\textbf{Boolean Algebra Generated by $\cF$}})
+\begin{itemize}
+\item \begin{definition}
+Given a collection of sets $\cF$, then $\langle \cF \rangle_{bool}$ is \underline{\emph{\textbf{the Boolean algebra generated}}} by $\cF$, i.e. the \emph{\textbf{intersection}} of all the Boolean algebras that \emph{contain} $\cF$. 
+\begin{align*}
+\langle \cF \rangle_{bool} = \bigwedge_{\srB_{\alpha} \supseteq \cF}\srB_{\alpha}.
+\end{align*} 
+\end{definition}
+
+\item \begin{proposition}
+We have the following results regarding $\langle \cF \rangle_{bool}$
+\begin{enumerate}
+\item $\langle \cF \rangle_{bool}$ is the \textbf{coarest} Boolean algebra that contains $\cF$.
+\item Note that $\cF$ is a Boolean algebra if and only if $\cF = \langle \cF \rangle_{bool}$.
+\item If $\cF$ is collection of \textbf{$n$ sets}, then $\langle \cF \rangle_{bool}$ is \textbf{a finite Boolean algebra} with cardinality $2^{2^{n}}$.
+\end{enumerate}
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Recursive description of a generated Boolean algebra}). \citep{tao2011introduction} \\
+Let $\cF$ be a collection of sets in a set $X$. Define the sets $\cF_0, \cF_1, \cF_2, \ldots$ \textbf{recursively} as follows:
+\begin{enumerate}
+\item $\cF_0  := \cF$.
+\item For each $n \ge 1$, we define $\cF_n$ to be the collection of all sets that \textbf{either} the \textbf{union} of a \textbf{finite number} of sets in $\cF_{n-1}$
+(including the empty union $\emptyset$), or the \textbf{complement} of such a union.
+\end{enumerate}
+Then $\langle \cF \rangle_{bool} =  \bigcup_{n=0}^{\infty}\cF_{n}$.
+\end{proposition}
+\end{itemize}
+\end{example}
+\end{itemize}
+
+\subsection{$\sigma$-Algebra}
+\begin{itemize}
+\item
+\begin{definition}
+ Given space $X$, a \underline{\emph{\textbf{$\sigma$-field}} (or, \emph{\textbf{$\sigma$-algebra}})} $\srF$ is a non-empty collection of \emph{subsets} in $X$ such that 
+\begin{enumerate}
+\item $\emptyset \in \srF$; $X\in \srF$;
+\item \emph{\textbf{Complements}}:  For any $B\in \srF$, then $B^{c}\equiv (X-B) \in \srF$;
+\item \underline{\emph{\textbf{Countable union}}}: for any sub-collection $\set{B_{k}}_{k=1}^{\infty} \subset \srF$, 
+\begin{align*}
+\bigcup_{k=1}^{\infty}B_{k} \in \srF;
+\end{align*} 
+Also, \emph{\textbf{Countable intersection}}: $\bigcap_{k=1}^{\infty}B_{k} \in \srF,$ \emph{\textbf{de Morgan's law}}.
+\end{enumerate} 
+We refer to the pair $(X, \srF)$ of a set $X$ together with a $\sigma$-algebra on that set as \emph{\textbf{a measurable space}}.
+\end{definition}
+
+\item \begin{remark}
+\underline{The prefix $\sigma$ usually denotes ``\emph{\textbf{countable union}}"}. Other instances of this prefix include a \emph{\textbf{$\sigma$-compact topological space}} (\emph{a countable union of compact sets}), a \emph{\textbf{$\sigma$-finite measure space}} (\emph{a countable union of sets of finite measure}), or \emph{\textbf{$F_{\sigma}$ set}} (\emph{a countable union of closed sets}) for other instances of this prefix.
+\end{remark}
+
+\item \begin{remark}
+A $\sigma$-algebra can be \emph{\textbf{equivalently}} defined as an algebra that is closed under \emph{\textbf{countable \underline{disjoint union}}}. Using the following transformation, for given $\set{E_{j}} $, 
+\begin{align*}
+F_{j} = E_{j} - \bigcup_{i=1}^{j-1}E_{i}, \forall\, j\in \bN.
+\end{align*} Then $F_{i}\cap F_{j} = \emptyset, i\neq j$ and $\bigcup_{j=1}^{\infty}E_{j} = \bigcup_{j=1}^{\infty}F_{j}$.
+\end{remark}
+
+\item \begin{remark}
+A field (algebra) may not be a $\sigma$-field since it \emph{may not be \textbf{closure} under \textbf{countable union}}.
+\end{remark}
+
+
+\item \begin{remark} \emph{\textbf{($\sigma$-Algebra vs. Boolean Algebra)}}
+\begin{enumerate}
+\item \begin{proposition}
+Any $\sigma$-algebra is Boolean-algebra. 
+\end{proposition}
+
+\item \begin{proposition}
+Any \textbf{atomic algebra} is $\sigma$-algebra. 
+\end{proposition}
+
+\item  \begin{proposition}
+An algebra of \textbf{finite} set $X$ is  a $\sigma$-algebra of $X$ and it is \textbf{the power set} $2^{X}$ itself. 
+\end{proposition}
+\end{enumerate}
+\end{remark}
+
+\item 
+\begin{example} Here are some more examples for  $\sigma$-algebra \citep{tao2011introduction}
+\begin{enumerate}
+\item \emph{\textbf{The trivial algebra}} $\set{X, \emptyset}$ is \emph{$\sigma$-algebra} since it is an atomic algebra.
+
+\item \emph{\textbf{The discrete algebra}} $2^{X}$ is \emph{$\sigma$-algebra} since it is an atomic algebra.
+
+\item  All the \emph{\textbf{finite Boolean algebra}} is $\sigma$-algebra.
+
+\item  The \emph{\textbf{dyadic algebra}} $\srD_{n}$ at \textbf{\emph{scale}} $2^{-n}$ in $\bR^d$ is a \emph{\textbf{$\sigma$-algebra}} since it is an atomic algebra.
+
+\item The collection $\cL[\bR^{d}]$  of \underline{\emph{\textbf{Lebesgue measureable set}}}  (contained in countable union of \emph{elementary sets}) in $\bR^{d}$ forms a Boolean algebra.
+
+\item The collection $\cN[\bR^{d}]$ of \underline{\emph{\textbf{Lebesgue null sets}}} and \emph{\textbf{co-null sets}} (its complement is null set) in $\bR^{d}$ forms a Boolean algebra. we refer to it as \emph{\textbf{the null algebra}} on $\bR^d$.
+
+\item  Given $Y\subset X$ as a subspace of $X$, and $\srB$ is a  $\sigma$-algebra on $X$, then the \emph{\textbf{restriction}} of algebra on $Y$ is 
+$\rlat{\srB}{Y} = \srB \cap 2^Y = \set{E\cap Y: E\in \srB}$, which is a \emph{\textbf{\underline{$\sigma$-algebra on subspace} $Y$}}.
+
+
+\item Note that both the collections of \emph{elementary sets} $\cE[\bR^{d}]$ and \emph{\textbf{the Jordan measurable sets}} $\mathcal{J}[\bR^{d}]$ \emph{\textbf{do not form a $\sigma$-algebra}}.
+
+%$\set{\emptyset,\bR^{d}}\subset \srD_{n}\subset \overline{\cE[\bR^{d}]} = \bigcup_{n\ge 1}\srD_{n} \subset \overline{J[\bR^{d}]} \subset L[\bR^{d}]  \subset 2^{\bR^{d}}$. $N[\bR^{d}]\subset L[\bR^{d}]$. Although $\srD_{n}$ for given $n$ is atomic algebra, $\overline{\cE[\bR^{d}]}$ and all its predecessors are \emph{\textbf{non-atomic}}, since they do not have finite cardinality. 
+
+\item If $\{\srB_{\alpha}\}$ are $\sigma$-algebras, then \underline{$\bigwedge_{\alpha\in I}\srB_{\alpha}\equiv \bigcap_{\alpha\in I}\srB_{\alpha}$} for all $\alpha\in I$ is a  $\sigma$-algebra ($I$ is arbitrary), which is \emph{\textbf{the finest $\sigma$-algebra}} that is \emph{\textbf{coarser}} than any $\srB_{\alpha}$.  
+\end{enumerate}
+\end{example}
+
+
+\item  \begin{example} (\emph{\textbf{$\sigma$-Algebra Generated by $\cF$}})
+\begin{itemize}
+\item \begin{definition}
+Denote $\sigma(\cF) := \langle \cF \rangle$ as  \underline{\emph{\textbf{the $\sigma$-algebra generated by $\cF$}}}, given by 
+\begin{align*}
+\sigma(\cF) = \langle \cF \rangle = \bigwedge_{\srB_{\alpha} \supseteq \cF}\srB_{\alpha}.
+\end{align*}
+ It is the  \emph{\textbf{coarsest}} $\sigma$-algebra containing $\cF$, for any $\sigma$-algebra that contains $\cF$  . 
+\end{definition}
+
+\item It is easy to see that 
+\begin{align*}
+\langle \cF \rangle_{bool} \subseteq \langle \cF \rangle 
+\end{align*} The equality holds if and only if $\langle \cF \rangle_{bool}$ is a $\sigma$-algebra. 
+
+\item \begin{proposition} (\textbf{Recursive description of a generated  $\sigma$-algebra}). \citep{tao2011introduction} \\
+$\sigma(\cF)$ is generated according to the following procedure: 
+\begin{enumerate}
+\item For every set $A \in \cF$, $A\in \sigma(\cF)$; $\cF \subset \sigma(\cF)$;
+\item Take the \textbf{finite union} and \textbf{finite intersection} of any \textbf{subcollections} $\set{A_{k}}\subset \cF$, put $\bigcup_{k=1}^{n}A_{k} \in \sigma(\cF), n\ge 1$ and  $\bigcap_{k=1}^{n}A_{k} \in \sigma(\cF), n\ge 1$;
+\item Put the \textbf{countably infinite union} and \textbf{intersections} of any \textbf{subcollections} $\set{A_{k}}\subset \cF$, put $\bigcup_{k=1}^{\infty}A_{k} \in \sigma(\cF)$ and  $\bigcap_{k=1}^{\infty}A_{k} \in \sigma(\cF)$;
+\item Put the \textbf{complements} $A^{c} \in \sigma(\cF), \forall A\in \sigma(\cF)$;
+\end{enumerate}
+\end{proposition}
+
+\item Finally we have the \emph{\textbf{monotonicity}}: 
+\begin{enumerate}
+\item \begin{proposition}
+ If $\cF_{1} \subset \cF_{2}$, then $\sigma(\cF_{1}) \subset \sigma(\cF_{2})$. 
+ \end{proposition}
+\item \begin{proposition}
+  If $\cF_{1}  \subset \cF_{2} \subset \sigma(\cF_{1})$, then $\sigma(\cF_{2}) = \sigma(\cF_{1})$.
+ \end{proposition}
+\item \begin{proposition}
+Let $\srF$ be a $\sigma$-algebra on a set $X$. Let $S \subset X$ be a subset of $X$.
+
+Then \begin{align*}
+\sigma(\srF\cup \set{S}) &=\set{(E_{1}\cap S)\cup (E_{2}\cap S^{c}): E_{1},E_{2}\in \srF}
+\end{align*}
+where $\sigma$ denotes \textbf{generated $\sigma$-algebra}.
+\end{proposition}
+\end{enumerate}
+\end{itemize}
+
+\end{example}
+
+\item \begin{remark}
+ Note that $\srF_{1}\cup \srF_{2}$ is usually not a $\sigma$-algebra.
+ \end{remark}
+ 
+ 
+\item \begin{remark} We compare the (open-set) topoloy with $\sigma$-algebra: 
+\begin{itemize}
+\item  \emph{\textbf{The open-set topology}} on $X$ is \emph{\textbf{closed}} under \underline{\emph{\textbf{any union}}}, or \emph{\textbf{finite intersection} operation}. It does \underline{\emph{\textbf{not} consider} the \emph{\textbf{complements}}} as the complements defines \emph{a \textbf{closed set}} \emph{not in open-set topology}. It contains the open sets as \underline{\emph{the basic environment}} in investigating the \underline{\emph{\textbf{infinitesimal behavior}}} of functions in \emph{\textbf{analysis}}. 
+
+\item \emph{\textbf{A $\sigma$-algebra}} concerns more about the \emph{\textbf{closure}} under a set of \emph{\textbf{operations}} on $X$: \underline{\emph{countable union}}, \emph{countable intersection}, \underline{\emph{\textbf{complementation}}}. It has nothing to do with \emph{the open set}, \emph{closed set}, or the \emph{continuity}.
+
+\item The \emph{\textbf{analysis}} replies on \emph{\textbf{topology}} on space $X$; while the \emph{\textbf{modern algebra}} replies on \emph{\textbf{the closure of operation}} on a space $X$.  A $\sigma$-algebra is a collection of subsets in $X$ that endows a \underline{\emph{\textbf{algebraic structure}}}.   
+\end{itemize}
+\end{remark} 
+\end{itemize}
+
+\subsection{Borel $\sigma$-Algebra}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Borel $\sigma$-algebra}}). \citep{tao2011introduction} \\
+ Let $X$ be a \emph{\textbf{metric space}}, or more generally \emph{\textbf{a topological space}}. The \underline{\emph{\textbf{Borel $\sigma$-algebra}}} $\cB[X]$ of $X$ is defined to be \underline{the $\sigma$-algebra \emph{generated by the \textbf{open subsets} of $X$}}.
+
+Elements of $\cB[X]$ will be called \emph{\textbf{Borel measurable}}.
+\end{definition}
+
+\item \begin{example}
+The followings are examples of \emph{Borel measurable subsets} in $X$: 
+\begin{enumerate}
+\item Any \emph{\textbf{the open set}} and \emph{\textbf{the closed set}} (which are \emph{complements} of open sets),
+including \emph{\textbf{The arbitrary union}} of \emph{open sets}, and \emph{\textbf{arbitrary intersection}} of \emph{closed set}. 
+\item The \emph{\textbf{countable unions}} of \emph{\textbf{closed sets}} (known as $F_{\sigma}$ sets), 
+\item The \emph{\textbf{countable intersections}} of \emph{\textbf{open sets}} (known as $G_{\delta}$ sets), 
+\item The \emph{\textbf{countable intersections}} of $F_{\sigma}$ sets, and so forth.
+\end{enumerate}
+\end{example}
+
+\item \begin{exercise}
+Show that the Borel $\sigma$-algebra $\cB[\bR^d]$ of a Euclidean set is generated by any of the following collections of sets:
+\begin{enumerate}
+\item The open subsets of $\bR^d$.
+\item The closed subsets of $\bR^d$.
+\item The compact subsets of $\bR^d$.
+\item The open balls of $\bR^d$.
+\item The boxes in $\bR^d$.
+\item The elementary sets in $\bR^d$.
+\end{enumerate} 
+(Hint: To show that two families $\cF, \cF'$ of sets generate the same $\sigma$-algebra, it suffices to show that every $\sigma$-algebra that contains $\cF$, contains $\cF'$ also, and conversely.)
+\end{exercise}
+
+\item \begin{remark}
+$\cB[X] \subset \cL[X]$, i.e. the Borel $\sigma$-algebra is \emph{\textbf{coarser}} than the Lebesgue $\sigma$-algebra.
+\end{remark}
+
+\item \begin{remark}
+There exist \emph{\textbf{Jordan measurable}} (and hence Lebesgue measurable) subsets of $\bR^d$ which are \emph{\textbf{not Borel measurable}}. \citep{tao2011introduction}
+\end{remark}
+
+\item \begin{remark}
+Despite this demonstration that \emph{\textbf{not all Lebesgue measurable subsets are Borel measurable}}, it is \emph{remarkably \textbf{difficult} (though not impossible)} to exhibit a specific set that is not Borel measurable. Indeed, a large majority of the explicitly constructible sets that one actually encounters in practice tend to be Borel measurable, and one can view the property of Borel measurability intuitively as a kind of ``\emph{constructibility}" property.  A Borel $\sigma$-algebra is large enough to contain all subsets in $X$ that is of "practical use" in computing measures and integrations within $(0,1]$. 
+%(Indeed, as a very crude first approximation, one can view the Borel measurable sets as those sets of ``\emph{countable descriptive complexity}"; in contrast, sets of \emph{finite descriptive complexity} tend to be Jordan measurable (assuming they are \emph{bounded}, of course)
+\end{remark}
+
+\item \begin{proposition} (\textbf{Lebesgue $\sigma$-algebra vs. Borel $\sigma$-algebra})\\
+The Lebesgue $\sigma$-algebra on $\bR^d$ is generated by the union of the Borel $\sigma$-algebra and the null $\sigma$-algebra.
+\end{proposition}
+
+\item \begin{remark}
+The \emph{\textbf{Borel $\sigma$-algebra}} lies in between, which concerns both \emph{\textbf{algebraic}} and \emph{\textbf{analytical structure}}. 
+\begin{itemize}
+\item A \emph{\textbf{open set}} $U$ is a \emph{Borel set} in $\srB$; also a \emph{\textbf{closed set}} $C\equiv U^{c}$ is a \emph{Borel set} in $\srB$. 
+\item Any \emph{\underline{\textbf{countable union}} of \underline{\textbf{closed set}}}, denoted as ``$F_{\sigma}$ set",  $F_{\sigma, \Lambda}= \bigcup_{\lambda\in \Lambda}C_{\lambda} \in \srB$  
+\item Any \emph{\underline{\textbf{countable intersection}} of \underline{\textbf{open sets}}}, denoted as ``$G_{\delta}$ set", $G_{\delta, \Lambda}= \bigcap_{\lambda\in \Lambda}U_{\lambda} \in \srB$. 
+\item Note that a $F_{\sigma}$ set is \emph{\textbf{not closed}} (but could be open) and a $G_{\delta}$ set is \emph{\textbf{not open} (but could be closed)}. 
+\end{itemize}
+The Borel $\sigma$-algebra contains \emph{open sets}, \emph{closed sets}, \emph{$G_{\delta}$ sets}, \emph{$F_{\sigma}$ sets}, and their further \emph{countable union and intersections}, according to the topology. 
+\end{remark} 
+\end{itemize}
+\newpage
+\subsection{Comparison between Analytical and Topological Structure of Subsets}
+\begin{table}[h!]
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\belowdisplayskip}{-10pt}
+\setlength{\abovedisplayshortskip}{0pt}
+\setlength{\belowdisplayshortskip}{0pt}
+\footnotesize
+\centering
+\caption{Comparison between $\sigma$-algebra and topology}
+\label{tab: measure}
+%\setlength{\extrarowheight}{1pt}
+\renewcommand\tabularxcolumn[1]{m{#1}}
+\small
+\begin{tabularx}{1\textwidth} { 
+  | >{\raggedright\arraybackslash} m{3cm}
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X  | }
+ \hline
+  &  \emph{\textbf{Boolean Algebra}} & \emph{\textbf{$\sigma$-Algebra}}   &  \emph{\textbf{Borel $\sigma$-Algebra}}   & \emph{\textbf{Topology}} \\
+  \hline 
+\textbf{\emph{compatibility}}    & & $\Leftarrow \checkmark \Rightarrow$  & \emph{$\sigma$-algebra generated} by \emph{\textbf{open subsets}} & \emph{no relation} \\
+ \hline \vspace{5pt}
+\emph{collection of subsets}  \vspace{2pt} &  $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$  \\
+ \hline \vspace{5pt}
+\emph{include emptyset} \vspace{2pt}  &  $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$  \\
+\hline \vspace{5pt}
+\emph{include fullset}  \vspace{2pt}  &  $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$  \\
+\hline \vspace{5pt}
+\emph{finite union} \vspace{2pt}   & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$  \\
+\hline \vspace{5pt}
+\emph{countable union} \vspace{2pt}   &   & $\checkmark$  & $\checkmark$  & $\checkmark$  \\
+\hline \vspace{5pt}
+\emph{arbitrary union} \vspace{2pt}   &   &  &  & $\checkmark$  \\
+\hline \vspace{5pt}
+\emph{finite intersection} \vspace{2pt}   & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$  \\
+\hline \vspace{5pt}
+\emph{countable intersection} \vspace{2pt}   &   & $\checkmark$  & $\checkmark$  &   \\
+\hline \vspace{5pt}
+\emph{complements} \vspace{2pt}   &  $\checkmark$ & $\checkmark$ & $\checkmark$  &   \\
+\hline \vspace{5pt}
+\emph{\textbf{structure}} \vspace{2pt}   &  \emph{\textbf{analytical}} & \emph{\textbf{analytical}} & \emph{\textbf{analytical $\&$ topological}}  &  \emph{\textbf{topological}}  \\
+\hline \vspace{5pt}
+\emph{related \textbf{measure}}  \vspace{2pt}  & $\checkmark$ & $\checkmark$ &  $\checkmark$ &  \\
+\hline \vspace{5pt}
+\emph{set \textbf{in} collection}  \vspace{2pt}  &  \emph{\textbf{elementary sets}};  \emph{\textbf{Jordan measurable sets}}; \emph{\textbf{atomic algebra}}; \emph{dyadic algebra}; \emph{\textbf{finite union}} of measurable sets; etc. &   \emph{Boolean measurable set};  \emph{\textbf{Lebesgue measurable sets}}, Lebesgue null sets;  \emph{\textbf{the countable union}} and complements  etc.  & open sets, \emph{\textbf{closed sets}}, \emph{\textbf{compact sets}}, \emph{elementary sets}, $G_{\delta}$ and $F_{\sigma}$ sets  etc. & \emph{\textbf{open sets}} \\
+\hline \vspace{5pt}
+\emph{set \textbf{not in} collection}  \vspace{2pt}  & some \emph{\textbf{Lebesgue measurable sets}} & some \emph{\textbf{non-measurable sets}} & some Jordan measurable set but not Borel measurable & \emph{\textbf{closed set}}, $G_{\delta}$ and $F_{\sigma}$ sets \\
+\hline \vspace{5pt}
+\emph{function}  \vspace{2pt}  & \emph{\textbf{Boolean measurable function}}; \emph{Rieman integrable function}, & \emph{\textbf{Lebesgue measurable function}}, \emph{$\sigma$-finite function}, \emph{continuous function} & \emph{\textbf{Borel measurable function}}, \emph{continuous function} & \emph{\textbf{continuous function}}  \\
+\hline
+\end{tabularx}
+\end{table}
+
+\newpage
+\section{Abstract Measure Theory}
+\subsection{Measure as Non-Negative Function on Algebra of Subsets}
+\begin{itemize}
+\item \begin{remark}
+The concept of measure is a \emph{generalization} of volumes from Euclidean space to arbitrary subsets in $2^X$. \citep{tao2011introduction} A set of intuitive axioms for a measure function $m$ defined on power set $2^{\bR}$: 
+\begin{enumerate}
+\item The \emph{\textbf{unit length}} of interval: $E= (0,1]$, then $m((0,1]) = 1$;
+\item If $E$ is \emph{\textbf{congruent}} to $F$: (There exists a proper translation, rotation or reflection from $E$ to $F$), then $m(E) = m(F)$;
+\item The \emph{\textbf{countably additive}}: for a countable union of disjoint sets, $\bigcup_{k=1}^{\infty}E_{k}$, the measure 
+\begin{align*}
+m\paren{\bigcup_{k=1}^{\infty}E_{k}} &= \bigcup_{k=1}^{\infty}m\paren{E_{k}}
+\end{align*} 
+\end{enumerate} 
+
+Unfortunately, \underline{\emph{\textbf{these three axioms are inconsistent}}}: \emph{\textbf{no proper definition of measure function $m$ could satisfies all these three axioms for any subset in $\bR$}}. The measure theory should be built on a collection of ``ordinary" subsets, which motivates the introduction of \emph{\textbf{$\sigma$-algebra}}. 
+\end{remark}
+
+\item \begin{remark}
+The \textit{\textbf{domain}} of measures are \emph{confined} as \emph{the Boolean algebra} $\srB$ or \emph{$\sigma$-algebra} $\srF$ instead of all possible subsets of $X$. We call the tuple $(X, \srB)$  \emph{\textbf{measurable space}}, as it can be used as a domain for \emph{some \textbf{measure function}} $\mu: \srB \rightarrow [0, +\infty]$.
+\end{remark}
+
+\item \begin{remark}
+The \emph{\textbf{measure}} $\mu$ defined on a given algebra $\srB$ need to be \emph{\textbf{compatible}} with the \emph{\textbf{analytical structure}} of the \emph{\textbf{algebra}} $\srB$.
+\begin{itemize}
+\item If $\srB$ is \emph{Boolean-algebra} (closed under \emph{finite union}), then the measure is \emph{finitely  additive}.
+\item If $\srB$ is \emph{$\sigma$-algebra} (closed under \emph{countable union}), then the measure is \emph{countably additive}. 
+\item If $\srB = \srF|_{Y}$ is the \emph{restriction} of $\srF$ on subspace $Y$, the corresponding measure on $\srB$ should agree with measure on $\srF$ for subsets of the subspace $Y$.
+\item If $\srB = \srA((A_{\alpha})_{\alpha \in I})$ is \emph{atomic algebra}, the corresponding measure is also \emph{the finite sum} of \emph{Dirac measures} on each atom.
+\end{itemize}
+\end{remark}
+
+\item \begin{remark}
+\emph{The space of finitely additive and countably additive measures} on $\srB$ forms \emph{\textbf{a vector space}} as it is \emph{closed} under measure addition and scale mutiplication operations.
+\end{remark}
+\end{itemize}
+\subsection{Finitely Additive Measure}
+\begin{itemize}
+\item
+\begin{definition}
+Let $\srB$ be a \emph{Boolean algebra} on a space $X$. An (\emph{unsigned}) \underline{\emph{\textbf{finitely additive measure}}} $\mu$ on $\srB$ is a map $\mu : \srB \rightarrow [0,+\infty]$ that obeys the following axioms
+\begin{enumerate}
+\item $\mu(\emptyset) = 0$;
+\item \emph{\textbf{Finite union}}: for any  \emph{\textbf{disjoint sets}} $A, B \in \srB$, 
+\begin{align*}
+\mu\paren{A\cup B} = \mu(A)+ \mu(B).
+\end{align*} 
+\end{enumerate}
+\end{definition}
+
+\item \begin{proposition} (\textbf{Properties of Finitely Additive Measure}) \citep{tao2011introduction}\\
+Let $\mu: \srB \rightarrow [0, +\infty]$be a finitely additive measure on a Boolean $\sigma$-algebra $\srB$. 
+\begin{enumerate}
+\item (\textbf{Monotonicity}) If $E, F$ are $\srB$-measurable and $E \subseteq F$, then
+\begin{align*}
+\mu(E) \le \mu(F).
+\end{align*}
+\item  (\textbf{Finite additivity}) If $k$ is a natural number, and $E_1 \xdotx{,} E_k$ are $\srB$-measurable and \textbf{disjoint}, then 
+\begin{align*}
+\mu(E_1 \xdotx{\cup} E_k) = \mu(E_1)  \xdotx{+} \mu(E_k).
+\end{align*}
+\item  (\textbf{Finite subadditivity}) If $k$ is a natural number, and $E_1 \xdotx{,} E_k$ are $\srB$-measurable, then
+\begin{align*}
+\mu(E_1 \xdotx{\cup} E_k) \le \mu(E_1)  \xdotx{+} \mu(E_k).
+\end{align*}
+\item \textbf{(Inclusion-exclusion for two sets}) If $E, F$ are $\srB$-measurable, then
+\begin{align*}
+\mu(E \cup F ) + \mu(E \cap F ) = \mu(E) + \mu(F).
+\end{align*}
+\end{enumerate}
+(Caution: remember that the cancellation law $a+c = b+c \Rightarrow a = b$ does not hold in [0; +1] if c is infinite, and so the use of cancellation
+(or subtraction) should be avoided if possible.)
+\end{proposition}
+
+\item \begin{example}
+See the following examples on finitely additive measures:
+\begin{enumerate}
+\item \emph{\textbf{Lebesgue measure}} $m$ is a \emph{finitely additive measure} on \emph{\textbf{the Lebesgue $\sigma$-algebra}}, and hence on \emph{all sub-algebras} (such as \emph{the null algebra}, \emph{the Jordan algebra}, or \emph{the elementary algebra}).
+
+\item \emph{\textbf{Jordan measure}} and \emph{\textbf{elementary measure}} are \emph{finitely additive} (adopting the convention that co-Jordan measurable sets have infinite Jordan measure, and co-elementary sets have infinite elementary measure).
+
+\item \emph{\textbf{Lebesgue outer measure}} is \emph{\textbf{not}} \emph{finitely additive} on \emph{\textbf{the discrete algebra}}.
+
+\item \emph{\textbf{Jordan outer measure}} is \emph{\textbf{not}} \emph{finitely additive} on \emph{\textbf{the Lebesgue algebra}}.
+\end{enumerate}
+\end{example}
+
+\item  \begin{example} (\emph{\textbf{Dirac measure}}). \\
+Let $x \in X$ and $\srB$ be an arbitrary \emph{Boolean algebra} on $X$. Then \underline{\emph{\textbf{the Dirac measure}}} $\delta_x$ at $x$, defined by
+setting $\delta_x(E) := \ind{x \in E}$, is \emph{\textbf{finitely additive}}.
+\end{example}
+
+\item \begin{example} (\emph{\textbf{Zero measure}}). \\
+The \emph{\textbf{zero measure}} $0: E \mapsto 0$ is a \emph{finitely additive measure} on any Boolean algebra.
+\end{example}
+
+\item \begin{example} (\emph{\textbf{Linear combinations of measures}}). \\
+If $\srB$ is a Boolean algebra on $X$, and $\mu, \nu: \srB \rightarrow [0, +\infty]$ are \emph{finitely additive measures} on $\srB$, then $\mu + \nu: E \mapsto \mu(E)+ \nu(E)$ is also a \emph{\textbf{finitely additive measure}}, as is $c\mu: E \mapsto c \times \mu(E)$ for any $c \in [0, +\infty]$. Thus, for instance, the sum of Lebesgue measure and a Dirac measure is also a finitely additive measure on the Lebesgue algebra (or on any of its sub-algebras).
+
+In other word, \underline{\emph{\textbf{the space of all finitely additive measures} on $\srB$ is a \textbf{vector space}}}.
+\end{example}
+
+\item \begin{example} (\emph{\textbf{Restriction of a measure}}).\\
+If $\srB$ is a Boolean algebra on $X$, $\mu: \srB \rightarrow [0, +\infty]$ is a \emph{finitely additive measure}, and $Y$ is a $\srB$-measurable subset of $X$, then \emph{\textbf{the restriction}} $\mu|_{Y}: \srB|_{Y}  \rightarrow [0, +\infty]$ of $\srB$ to $Y$, defined by setting $\mu|_{Y}(E) := \mu(E)$ whenever $E \in \srB|_{Y}$ (i.e.
+if $E \in \srB$ and $E \subseteq Y$), is also a \emph{\textbf{finitely additive measure}}.
+\end{example}
+
+\item \begin{example} (\emph{\textbf{Counting measure}}).\\
+If $\srB$ is a Boolean algebra on $X$, then the function $\#: \srB \rightarrow [0, +\infty]$ defined by setting $\#(E)$ to be the \emph{\textbf{cardinality}} of $E$ if $E$ is \textit{finite}, and $\#(E) := +\infty$ if $E$ is infinite, is a \emph{\textbf{finitely additive measure}}, known as \underline{\emph{\textbf{counting measure}}}.
+\end{example}
+
+\item \begin{proposition} (\textbf{Finitely Additive Measures on Atomic Algebra})\\
+Let $\srB$ be a \textbf{finite} Boolean algebra, generated by a finite family $A_1 \xdotx{,} A_k$ of non-empty \textbf{atoms}. For every \textbf{finitely additive measure} $\mu$ on $\srB$ there exists $c_1 \xdotx{,} c_k \in [0, +\infty]$ such that
+\begin{align*}
+\mu(E) &= \sum_{1 \le j \le k: A_j \subseteq E} c_j.
+\end{align*}
+Equivalently, if $x_j$ is a point in $A_j$ for each $1 \le j \le k$, then
+\begin{align*}
+\mu &= \sum_{j=1}^{k}c_j\,\delta_{x_j}. 
+\end{align*}
+where $c_1 \xdotx{,} c_k$ are \textbf{uniquely} determined by $\mu$.
+\end{proposition}
+\end{itemize}
+
+\subsection{Countably Additive Measure}
+\begin{itemize}
+\item \begin{definition} 
+Let $(X, \srB)$ be a measurable space. \emph{An (unsigned) \underline{\textbf{countably additive measure}}} $\mu$ on $\srB$, or \emph{\textbf{measure}} for short, is a map $\mu: \srB \rightarrow [0, +\infty]$ that obeys the following axioms:
+\begin{enumerate}
+\item (\emph{\textbf{Empty set}}) $\mu(\emptyset) = 0$.
+\item (\emph{\textbf{Countable additivity}}) Whenever $E_1, E_2, \ldots \in \srB$ are a \emph{\textbf{countable sequence}} of \emph{\textbf{disjoint} measurable sets}, then 
+\begin{align*}
+\mu\paren{\bigcup_{n=1}^{\infty} E_n} &= \sum_{n=1}^{\infty} \mu(E_n).
+\end{align*}
+\end{enumerate}
+A triplet $(X, \srB, \mu)$, where $(X, \srB)$ is a \underline{\emph{\textbf{measurable space}}} and $\mu: \srB \rightarrow [0, +\infty]$ is a \emph{\textbf{countably additive measure}}, is known as \underline{\emph{\textbf{a measure space}}}.
+\end{definition}
+
+\item \begin{remark}
+Note the distinction between a \emph{\textbf{measure space}} and a \emph{\textbf{measurable space}}. The latter has the \emph{\textbf{capability}} to be equipped with a \emph{measure}, but the former is \emph{\textbf{actually}} equipped with a \emph{measure}.
+\end{remark}
+
+\item \begin{definition} \citep{folland2013real}\\
+Let $(X, \srB, \mu)$ be a measure space. 
+\begin{itemize}
+\item If $\mu(X)< \infty$ (which implies that $\mu(E) < \infty$ for all $E \in \srB$), then $\mu$ is called \emph{\textbf{finite}}. 
+\item If $X = \cup_{j=1}^{\infty}E_j$ where $E_j \in \srB$ and $\mu(E_j) < \infty$, then $\mu$ is called \emph{\textbf{$\sigma$-finite}}. More generally, if $E = \cup_{j=1}^{\infty}E_j$ where $E_j \in \srB$ and $\mu(E_j) < \infty$, then $E$ is said to be \emph{\textbf{$\sigma$-finite}} for $\mu$.
+\item If for each $E \in \srB$ with $\mu(E) = \infty$ there exists $F\in \srB$ with $F \subseteq E$ and $0 < \mu(F) < \infty$, then $\mu$ is called \emph{\textbf{semi-finite}}.
+\end{itemize}
+\end{definition}
+
+\item \begin{example}
+The followings are examples for \emph{countably additive measures}:
+\begin{enumerate}
+\item \emph{\textbf{Lebesgue measure}} is a \emph{countably additive measure} on the \emph{\textbf{Lebesgue $\sigma$-algebra}}, and hence on every sub-$\sigma$-algebra (such as the Borel $\sigma$-algebra)
+
+\item The \emph{\textbf{Dirac measures}} $\delta_x$ are \emph{\textbf{countably additive}} 
+
+\item The \emph{\textbf{counting measure}} $\#$ is \emph{countably additive measure}.
+
+\item The \emph{\textbf{zero measure}} is \textit{countably additive measure}.
+
+\item Any \emph{\textbf{restriction}} of \emph{a countably additive measure} to \emph{\textbf{a measurable subspace}} is again \emph{countably additive}.
+\end{enumerate}
+\end{example}
+
+\item \begin{example} (\emph{\textbf{Countable combinations of measures}}). \\
+Let $(X, \srB)$ be a \emph{measurable space}.
+\begin{enumerate}
+\item If $\mu$ is a \emph{countably additive measure} on $\srB$, and $c \in [0, +\infty]$, then $c\mu$ is also \emph{countably additive}.
+
+\item If $\mu_1, \mu_2, \ldots$ are a \emph{sequence of countably additive measures} on $\srB$, then \emph{the sum} $\sum_{n=1}^{\infty}\mu_n: E \mapsto \sum_{n=1}^{\infty}\mu_n(E)$ is also a \emph{countably additive measure}.
+\end{enumerate}
+That is, \underline{\emph{\textbf{the space of all countable additive measures} on $\srB$ is a \textbf{vector space}}}.
+\end{example}
+
+\item \begin{remark}
+Note that \emph{\textbf{countable additivity measures are necessarily finitely additive}} (by padding out a finite union into a countable union using the empty set), and so countably additive measures inherit all the properties of finitely additive properties, such as monotonicity and finite subadditivity. But one also has additional properties:
+\end{remark}
+
+\begin{proposition} 
+Let $(X, \srB, \mu)$ be a \textbf{measure space}.
+\begin{enumerate}
+\item (\textbf{Countable subadditivity}) If $E_1, E_2, \ldots $ are $\srB$-measurable, then 
+\begin{align*}
+\mu\paren{\bigcup_{n=1}^{\infty} E_n} &\le \sum_{n=1}^{\infty} \mu(E_n).
+\end{align*}
+\item (\textbf{Upwards monotone convergence}) If $E_1 \subseteq E_2 \subseteq \ldots$ are $\srB$-measurable, then
+\begin{align}
+\mu\paren{\bigcup_{n=1}^{\infty} E_n} &= \lim\limits_{n\rightarrow \infty}\mu(E_n) = \sup\limits_{n}\mu(E_n). \label{eqn: countable_additive_measure_upward_monotone_convergence}
+\end{align}
+\item (\textbf{Downwards monotone convergence}) If $E_1 \supseteq E_2 \supseteq \ldots$ are $\srB$-measurable, and \underline{$\mu(E_n) < \infty$ for \textbf{at least one $n$}}, then
+\begin{align}
+\mu\paren{\bigcap_{n=1}^{\infty} E_n} &= \lim\limits_{n\rightarrow \infty}\mu(E_n) = \inf\limits_{n}\mu(E_n). \label{eqn: countable_additive_measure_downward_monotone_convergence}
+\end{align}
+\end{enumerate}
+\end{proposition}
+
+\item \begin{exercise}
+Show that the \textbf{downward monotone convergence} claim can \textbf{fail} if the hypothesis that $\mu(E_n) < \infty$ for at least one $n$ is \textbf{dropped}. 
+\end{exercise}
+
+\item \begin{proposition} (\textbf{Dominated convergence for sets}). \citep{tao2011introduction} \\
+Let $(X, \srB, \mu)$ be a measure space. Let $E_1, E_2, \ldots $ be a sequence of $\srB$-measurable sets that \textbf{converge} to another set $E$, in the sense that $\mathds{1}_{E_n}$ converges \textbf{pointwise} to $\mathds{1}_{E}$. Then 
+\begin{enumerate}
+\item $E$ is also $\srB$-measurable.
+\item If there exists a $\srB$-measurable set $F$ of \textbf{finite measure} (i.e. $\mu(F) < \infty$) that \textbf{contains all of the $E_n$}, then
+\begin{align*}
+\lim\limits_{n \rightarrow \infty} \mu(E_n) = \mu(E). 
+\end{align*}
+(Hint: Apply downward monotonicity to the sets $\bigcup_{n>N}(E_n \Delta E)$.)
+\item The previous part of this proposition can \textbf{fail} if the hypothesis that all the $E_n$ are contained in a set of finite measure is \textbf{omitted}.
+\end{enumerate}
+\end{proposition}
+
+\item \begin{proposition}  (\textbf{Countably Additive Measures on Countable Set with Discrete $\sigma$-Algebra})\\
+Let $X$ be an at most \textbf{countable} set with \textbf{the discrete $\sigma$-algebra}.Then every measure $\mu$ on this measurable space can be uniquely represented in the form
+\begin{align*}
+\mu &= \sum_{x \in X}c_x \, \delta_x
+\end{align*} for some $c_x \in [0, +\infty]$, thus
+\begin{align*}
+\mu(E) &= \sum_{x \in E}c_x
+\end{align*} for all $E \subseteq X$. (This claim fails in the \textbf{uncountable} case, although showing this is slightly tricky.)
+\end{proposition}
+
+\item \begin{definition}(\emph{\textbf{Completeness}}). \citep{tao2011introduction} \\
+A \underline{\emph{\textbf{null set}}} of a measure space $(X, \srB, \mu)$ is defined to be a $\srB$-measurable set of \emph{\textbf{measure zero}}. A \emph{\textbf{sub-null}} set is any subset of a null set. 
+
+\emph{A measure space} is said to be \underline{\emph{\textbf{complete}}} if \emph{every sub-null set is a null set}.
+\end{definition}
+
+\item \begin{theorem}
+The \textbf{Lebesgue measure space} $(\bR^d, \cL[\bR^d], m)$ is \textbf{complete}, but \textbf{the Borel measure space} $(\bR^d, \cB[\bR^d], m)$ is \textbf{not}.
+\end{theorem}
+
+\item \begin{proposition} (\textbf{Completion}).\\
+ Let $(X, \srB, \mu)$  be a measure space. There exists a \textbf{unique refinement} $(X, \overline{\srB}, \overline{\mu})$, known as \textbf{the completion} of $(X, \srB, \mu)$, which is the \textbf{coarsest} refinement of  $(X, \srB, \mu)$ that is \textbf{complete}. Furthermore, $\overline{\srB}$ consists precisely of those sets that differ from a $\srB$-measurable set by \textbf{a $\srB$-subnull set}.
+\end{proposition}
+
+\item \begin{remark}
+\emph{The Lebesgue measure space} $(\bR^d, \cL[\bR^d], m)$ is the \emph{\textbf{completion}} of \emph{the Borel measure space} $(\bR^d, \cB[\bR^d], m)$.
+\end{remark}
+
+\item \begin{proposition} (\textbf{Approximation by an algebra}). \\
+Let $\srA$ be a \textbf{Boolean algebra} on $X$, and let $\mu$ be a measure on the $\sigma$-algebra generated by $\srA$, i.e. $\langle \srA \rangle$.
+\begin{enumerate}
+\item If $\mu(X) < \infty$,  then for every $E \in \langle \srA \rangle$ and $\epsilon > 0$ there exists $F \in \srA$ such that $\mu(E \Delta F) < \epsilon$.
+\item More generally, if $X = \cup_{n=1}^{\infty} A_n$ for some $A_1, A_2, \ldots \in \srA$ with $\mu(A_n) < \infty$ for all $n$, $E \in \langle \srA \rangle$ has finite measure, and $\epsilon > 0$,  then there exists $F \in \srA$ such that $\mu(E \Delta F) < \epsilon$.
+\end{enumerate}
+\end{proposition}
+\end{itemize}
+\subsection{Outer Measures and the Carath{\'e}odory Extension Theorem}
+\begin{itemize}
+%\item \begin{remark}
+%Just like when we constructed the Lebesgue measure, we first constructed the Lebesgue outer measure. We can abstract this process: 
+%\begin{enumerate}
+%\item We first define outer measure for \emph{\textbf{all subsets}} in $X$ (not just in $\sigma$-algebra);
+%\item Then we use the \emph{Carath{\'e}odory Extension Theorem} to constructs a countably additive measure from outer measure.
+%\end{enumerate}
+%\end{remark}
+
+\item \begin{definition} (\emph{\textbf{Abstract outer measure}}). \citep{tao2011introduction} \\
+Let $X$ be a set. \underline{\emph{An \textbf{abstract outer measure}}} (or \underline{\emph{\textbf{outer measure}}} for short) is a map $\mu^{*}: 2^X \rightarrow [0, +\infty]$ that assigns an \emph{unsigned extended real number} $\mu^{*}(E) \in [0, +\infty]$ to every set $E \subseteq X$ which obeys the following axioms:
+\begin{enumerate}
+\item (\textbf{\emph{Empty set}}) $\mu^{*}(\emptyset) = 0$.
+\item \underline{(\textbf{\emph{Monotonicity}})} If $E \subseteq F$,  then $\mu^{*}(E) \le  \mu^{*}(F)$.
+\item  \underline{(\textbf{\emph{Countable subadditivity}})} If $E_1, E_2, \ldots \subseteq X$ is a countable sequence of subsets of X, then 
+\begin{align*}
+\mu^{*}\paren{\bigcup_{n=1}^{\infty} E_n} &\le \sum_{n=1}^{\infty}\mu^{*}(E_n).
+\end{align*}
+\end{enumerate}
+Outer measures are also known as \underline{\emph{\textbf{exterior measures}}}.
+\end{definition}
+
+\item \begin{remark}
+\emph{\textbf{Lebesgue outer measure}} $m^{*}$ is \emph{an outer measure}. On the other hand, \emph{\textbf{Jordan outer measure}} $m^{*, J}$ is only \emph{finitely subadditive} rather than \emph{countably subadditive} and thus is \emph{\textbf{not}}, strictly speaking, \emph{an outer measure}.
+\end{remark}
+
+\item \begin{remark}
+Note that \emph{outer measures} are \emph{\textbf{weaker}} than measures in that they are merely \emph{countably \textbf{subadditive}}, rather than \emph{countably additive}. On the other hand, they are able to \emph{measure \textbf{all subsets} of $X$}, whereas measures can only measure a $\sigma$-algebra of \emph{measurable sets}.
+\end{remark}
+
+
+\item \begin{definition} (\emph{\textbf{Carath{\'e}odory measurability}}).\\
+Let $\mu^{*}$ be an \emph{outer measure} on a set $X$. A \emph{set} $E \subseteq X$ is said to be \underline{\emph{\textbf{Carath{\'e}odory measurable}}} \emph{with respect to $\mu^{*}$}  (or, \emph{\textbf{$\mu^{*}$-measurable}}) if one has
+\begin{align*}
+\mu^{*}(A) &= \mu^{*}(A \setminus E) + \mu^{*}(A \cap E)
+\end{align*} for every set $A \subseteq X$.
+\end{definition}
+
+\item \begin{example} (\emph{\textbf{Null sets are Carath{\'e}odory measurable}}). \\
+Suppose that $E$ is a \emph{\textbf{null set}} for \emph{an \textbf{outer measure}} $\mu^{*}$  (i.e. $\mu^{*}(E) = 0$).  Then 
+that \emph{$E$ is Carath{\'e}odory measurable with respect to $\mu^{*}$}.
+\end{example}
+
+\item \begin{example} (\emph{\textbf{Compatibility with Lebesgue measurability}}). 
+A set $E \subseteq \bR^d$ is \emph{Carath\'eodory measurable with respect to Lebesgue outer measurable} if and only if it is \emph{Lebesgue measurable}.
+\end{example}
+
+\item \begin{theorem} (\textbf{Carath\'eodory extension theorem}). \citep{tao2011introduction} \\
+Let $\mu^{*}: 2^X \rightarrow [0, +\infty]$ be an outer measure on a set X, let $\srB$ be the collection of all subsets of X that are \textbf{Carath\'eodory measurable with respect to $\mu^{*}$}, and let $\mu: \srB \rightarrow [0, +\infty]$ be the \textbf{restriction} of $\mu^{*}$ to $\srB$ (thus $\mu(E) := \mu^{*}(E)$
+whenever $E \in \srB$). Then \textbf{$\srB$ is a $\sigma$-algebra}, and \textbf{$\mu$ is a measure}.
+\end{theorem}
+
+\item \begin{remark}
+The measure $\mu$ constructed by \emph{the Carath\'eodory extension theorem} is automatically \emph{\textbf{complete}}.
+\end{remark}
+
+\item \begin{proposition}
+Let $\srB$ be a \textbf{Boolean algebra} on a set $X$. Then $\srB$ is a $\sigma$-algebra \textbf{if and only if} it is \textbf{closed} under countable \emph{disjoint}
+unions, which means that $\bigcup_{n=1}^{\infty} E_n \in \srB$ whenever $E_1, E_2, E_3, \ldots \in \srB$ are a countable sequence of \textbf{disjoint} sets in $\srB$.
+\end{proposition}
+
+\item \begin{definition}  (\emph{\textbf{Pre-measure}}). \citep{folland2013real} \\
+\underline{\emph{A \textbf{pre-measure}}} on a \emph{\textbf{Boolean algebra}} $\srB_{0}$  is a function $\mu_0 : \srB_0 \rightarrow [0, +\infty]$ that satisfies the conditions:
+\begin{enumerate}
+\item (\textbf{\emph{Empty Set}}): $\mu_0(\emptyset) = 0$
+\item (\textbf{\emph{Countably Additivity}}): If $E_1, E_2, \ldots \in \srB_0$ are \emph{disjoint sets} such that $\bigcup_{n=1}^{\infty} E_n$ is in $\srB_0$,
+ \begin{align*}
+\mu_0\paren{\bigcup_{n=1}^{\infty} E_n} &= \sum_{n=1}^{\infty} \mu_0(E_n).
+\end{align*} 
+\end{enumerate} 
+\end{definition}
+
+\item \begin{remark}
+A \emph{pre-measure} $\mu_0$ is a \emph{\textbf{finitely additive measure}} that \emph{\textbf{already}} is \emph{countably additive} \emph{\textbf{within}} a Boolean algebra $\srB_0$. 
+\end{remark}
+
+\item \begin{remark}
+\emph{The countably additivity condition} for pre-measure can be releaxed to be \emph{the countably subadditivity} $\mu_0(\cup_{n=1}^{\infty} E_n) \le \sum_{n=1}^{\infty} \mu_0(E_n)$ without affecting the definition of a pre-measure.
+\end{remark}
+
+\item \begin{proposition} \label{prop: outer_measure_premeasure}
+Let $\srB \subset 2^X$ and $\mu_0: \srB \rightarrow [0, +\infty]$ be such that $\emptyset, X \in \srB$, and $\mu_0(\emptyset) = 0$. For any $A \subseteq X$, define 
+\begin{align*}
+\mu^{*}(A) &:= \inf\set{\sum_{j=1}^{\infty}\mu_0(E_j): E_j \in \srB, \text{ and } A \subseteq \bigcup_{j=1}^{\infty}E_j}. 
+\end{align*} Then $\mu^{*}$ is an outer measure. 
+\end{proposition}
+
+\item \begin{theorem} (\textbf{Hahn-Kolmogorov Theorem}).\\
+Every \textbf{pre-measure} $\mu_0 : \srB_0 \rightarrow [0, +\infty]$  on a Boolean algebra $\srB_{0}$ in $X$ can be \textbf{extended} to a \textbf{countably additive measure} $\mu : \srB \rightarrow [0, +\infty]$.
+\end{theorem}
+
+\item \begin{remark}
+We can construct an \emph{outer measure} $\mu^{*}$ according to Proposition \ref{prop: outer_measure_premeasure}. Let $\srB$ be the \emph{collection} of all sets $E \subseteq X$ that are \textit{Carath\'eodory measurable with respect to $µ^{*}$ ($\mu^{*}$-measurable)}, and let $\mu$ be the \emph{restriction} of $\mu^{*}$  to $\srB$. The tuple $(X, \srB, \mu)$ is what we want in \emph{Hahn-Kolmogorov theorem}. 
+
+\emph{The measure $\mu$} constructed in this way is called \emph{\textbf{ \underline{the Hahn-Kolmogorov extension} of the pre-measure $\mu_0$}}. 
+\end{remark}
+
+\item \begin{proposition} (\textbf{Uniqueness of the Hahn-Kolmogorov Extension})\\
+Let $\mu_0 : \srB_0 \rightarrow [0, +\infty]$ be a \textbf{pre-measure}, let $\mu : \srB \rightarrow [0, +\infty]$ be the \textbf{Hahn-Kolmogorov extension} of $\mu_0$, and let $\mu' : \srB' \rightarrow  [0, +\infty]$ be \textbf{another} countably additive extension of $\mu_0$. Suppose also that $\mu_0$ is \textbf{$\sigma$-finite}, which means that one can express the whole space $X$ as the countable union of sets $E_1, E_2, \ldots \in \srB_{0}$ for which $\mu_0(E_n) < \infty$ for all $n$. Then $\mu$ and $\mu'$ agree on their common domain of definition. In other words, show that  $\mu(E) = \mu'(E)$ for all $E \in \srB \cap \srB'$.
+\end{proposition}
+\end{itemize}
+\newpage
+\subsection{Development of Lebesgue Measure Theory in $\bR^d$}
+\begin{table}[h!]
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\belowdisplayskip}{-10pt}
+\setlength{\abovedisplayshortskip}{0pt}
+\setlength{\belowdisplayshortskip}{0pt}
+\footnotesize
+\centering
+\caption{Comparison between different measures in measure theory}
+\label{tab: measure}
+%\setlength{\extrarowheight}{1pt}
+\renewcommand\tabularxcolumn[1]{m{#1}}
+\small
+\begin{tabularx}{1\textwidth} { 
+  | >{\raggedright\arraybackslash} m{3cm}
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X  | }
+ \hline
+  &  \emph{\textbf{Elementary measure}} & \emph{\textbf{Jordan measure}}   &  \emph{\textbf{Lebesgue outer measure}}   & \emph{\textbf{Lebesgue measure}} \\
+  \hline 
+\textbf{\emph{compatibility}}    & & $\Leftarrow \checkmark$  & $\Leftarrow \checkmark$  & $\Leftarrow \checkmark$ \\
+ \hline
+\emph{non-negative} &  $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$  \\
+ \hline
+$m(\emptyset) = 0$  &  $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$  \\
+\hline
+$m([0,1]^d) = 1$  &  $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$  \\
+\hline \vspace{5pt}
+\emph{\textbf{translation-invariant}}  \vspace{-5pt} &  $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$ \\
+\hline \vspace{5pt}
+\emph{finitely additive}   \vspace{2pt}&  $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$   \\
+\hline \vspace{5pt}
+\emph{monotonicity}   \vspace{2pt}&  $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$   \\
+\hline \vspace{5pt}
+\emph{finitely subadditive}   \vspace{2pt}&  $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$   \\
+\hline \vspace{5pt}
+\emph{outer regularity}  \vspace{2pt}  & &  &   $\checkmark$ & $\checkmark$ \\
+\hline \vspace{5pt}
+\emph{inner regularity}  \vspace{2pt}  & &  &  $\checkmark$  & $\checkmark$ \\
+\hline \vspace{5pt}
+\emph{countably subadditivity}  \vspace{2pt}  & &  & $\checkmark$  & $\checkmark$ \\
+\hline \vspace{5pt}
+\textbf{\emph{countably additivity}}  \vspace{2pt}  & &  &  & $\checkmark$ \\
+\hline \vspace{5pt}
+\textbf{\emph{measurable set}}  \vspace{2pt}  & box $I_1 \xdotx{\times} I_d$ & All \emph{elementary sets}; any \emph{\textbf{compact convex }polytope}; any \emph{\textbf{open sets}} and \emph{\textbf{closed sets}}; \emph{\textbf{finite union}} of measurable sets; \emph{\textbf{graph/epigraph} of \textbf{continous function}}; & All \emph{Jordan measurable sets}; \emph{\textbf{countable union}} of measurable sets, e.g. $G_{\delta}$ and $F_{\sigma}$  & forms a \emph{\textbf{$\sigma$-algebra}} that includes \emph{\textbf{all Borel sets}}; sets with Lebesgue outer measure zero (\emph{\textbf{null sets}}). \\
+\hline \vspace{5pt}
+\textbf{\emph{non-measurable set}}  \vspace{2pt}  & \emph{any subsets} other than box & \emph{countable union} of Jordan measurable sets; \emph{\textbf{bullet-riddled square}} and \emph{\textbf{sets of bullets}}; subsets with a lot of ``\emph{holes}" or ``\emph{fractal}" & same as right & $E = \bR/\bQ \cap [0,1]$ \\
+\hline \vspace{5pt}
+\emph{\textbf{algebra} for collection of measurable sets}  \vspace{2pt}  & \emph{\textbf{boolean algebra $\srA_0$}} & \emph{boolean algebra} $\srA_1 \supsetneq \srA_0$ &   & \emph{\textbf{$\sigma$-algebra}} $\srA_{2} \supsetneq \srA_1$ \\
+\hline \vspace{5pt}
+\emph{relation to \textbf{integration}}  \vspace{2pt}  & & \emph{\textbf{Riemann integration}}  &  & \emph{\textbf{Lebesgue integration}} \\
+\hline
+\end{tabularx}
+\end{table}
+
+\newpage
+\section{Measurable Functions and Integration on a Measure Space}
+\subsection{Measurable Functions}
+\begin{itemize}
+\item \begin{definition}
+Let $(X, \srB)$ be a \emph{measurable space}, and let $f : X \rightarrow [0, +\infty]$ or $f: X \rightarrow \bC$ be an \emph{\textbf{unsigned}} or \emph{\textbf{complex-valued function}}. We say that $f$ is \underline{\emph{\textbf{measurable}}} if $f^{-1}(U)$ is \underline{\emph{$\srB$-\textbf{measurable}}} for every \emph{\textbf{open subset}} $U$ of $[0, +\infty]$ or $\bC$.
+\end{definition}
+
+\item \begin{remark}
+The inverse image of a Lebesgue measurable set by a \emph{measurable function} need not remain Lebesgue. measurable. This is due to the definition of above measureable function. The pre-image of $E$ is Lebesgue measureable, if if $E$ has a slightly stronger measurability property than Lebesgue measurability, namely \emph{\textbf{Borel measurability}}.
+\end{remark}
+
+\item We can define \emph{a \textbf{measurable mapping}} between \emph{two measurable spaces}.
+\begin{definition}
+For $f: X\rightarrow Y$, and $X\equiv (X, \srF)$, $Y\equiv (Y, \srB)$ are \emph{measurable spaces}, then $f$ is called \underline{\emph{\textbf{$(\srF, \srB)$ measureable}}} (or $(\srF/\srB)$ measureable or, simply, \emph{measureble}), if $f^{-1}(E) \in \srF$ for every $E\in \srB$.
+\end{definition}
+
+
+\item  \begin{definition} 
+Note that if $\set{(Y_{\alpha}, \srB_{\alpha})}$ is a family of measureable spaces, and $\set{f_{\alpha}}$ for $f_{\alpha}: X\rightarrow Y_{\alpha}$, then there is a \emph{\textbf{unique smallest}} $\sigma$-algebra on $X$ so that $\set{f_{\alpha}}$ are \emph{all measureable}. It is generated by $f_{\alpha}^{-1}(E_{\alpha}), E_{\alpha}\in \srB_{\alpha}$, i.e.
+\begin{align*}
+\srF &= \langle \set{f_{\alpha}^{-1}(E_{\alpha}): E_{\alpha}\in \srB_{\alpha}, \alpha \in I} \rangle
+\end{align*} It is called the \emph{\textbf{$\sigma$-algebra generated by $\set{f_{\alpha}}$}}.  In particular, $X= \prod_{\alpha}Y_{\alpha}$ has \emph{\textbf{product $\sigma$-algebra}} that is \emph{generated by coordinate functions} $\set{\pi_{\alpha}}$.
+\end{definition}
+
+\item \begin{proposition} (\textbf{Properties of Measurable Function})\\
+Let $(X, \srB)$ be a measurable space.
+\begin{enumerate}
+\item $f : X \rightarrow [0, +\infty]$ is \textbf{measurable} if and only if the \textbf{level sets} $\set{x \in X : f(x) > \lambda}$ are $\srB$-measurable.
+\item The \textbf{indicator function} $\mathds{1}_E$ of a set $E \subseteq X$ is \textbf{measurable} if and only if $E$ itself is $\srB$-\textbf{measurable}.
+\item $f : X \rightarrow [0, +\infty]$ or $f: X \rightarrow \bC$ is measurable if and only if $f^{-1}(E)$ is $\srB$-measurable for every \textbf{Borel-measurable} subset $E$ of $[0, +\infty]$ or $\bC$.
+\item $f: X \rightarrow \bC$ is measurable if and only if its \textbf{real} and \textbf{imaginary} parts are measurable.
+\item $f: X \rightarrow \bR$ is measurable if and only if the \textbf{magnitudes} $f_{+} := \max\{f, 0\}$, $f_{-} := \max\{-f, 0\}$ of its \textbf{positive} and \textbf{negative} parts are \textbf{measurable}.
+\item  If $f_n : X \rightarrow [0, +\infty]$ are a sequence of \textbf{measurable} functions that converge \textbf{pointwise} to a limit $f : X \rightarrow [0, +\infty]$, then $f$ is also \textbf{measurable}. The same claim holds if $[0, +\infty]$ is replaced by $\bC$.
+\item  If $f : X \rightarrow [0, +\infty]$ is measurable and $\varphi: [0, +\infty] \rightarrow [0, +\infty]$ is \textbf{continuous}, the composite $\varphi \circ f$ is measurable. The same claim holds if $[0, +\infty]$ is replaced by $\bC$.
+\item The \textbf{sum} or \textbf{product} of two \textbf{measurable} functions in $[0, +\infty]$ or $\bC$ is still measurable.
+\end{enumerate}
+\end{proposition}
+
+\item  \begin{definition} 
+A function $f: (X,\srF)\rightarrow (Y,\srB)$ is \underline{\emph{\textbf{simple}}} if it only takes \emph{\textbf{finitely many} different values} $s_{1} \xdotx{,} s_{k}\in Y$.  
+
+Then the $\sigma$-algebra $f^{-1}(\srB)$ reduce to $\sigma\paren{\set{f^{-1}(\set{s_{\alpha}})}_{\alpha=1}^{k}}$, the \emph{\textbf{finite $\sigma$-algebra}} generated by \emph{\textbf{atomic algebra}} with atoms $E_{\alpha}\equiv f^{-1}(\set{s_{\alpha}})$. The \emph{\textbf{canonical representation}} of $f$ is 
+\begin{align*}
+f = \sum_{\alpha=1}^{k}s_{\alpha}\ind{E_{\alpha}},
+\end{align*}
+which is determined up to a reordering.
+\end{definition}
+
+\item \begin{proposition} (\textbf{Measurable Function with respect to Atomic Algebra is Simple})\\
+Let $(X, \srB)$ be a measurable space that is \textbf{atomic}, thus $\srB = \srA((A_{\alpha})_{\alpha\in I})$ for some partition $X = \bigcup_{\alpha\in I}A_{\alpha}$ of X into disjoint non-empty atoms. A function $f : X \rightarrow [0,+\infty]$ or $f : X \rightarrow \bC$ is measurable if and only if it is \textbf{constant} on each atom, or equivalently if one has a \textbf{representation of the form}
+\begin{align*}
+f(x)&= \sum_{\alpha \in I}c_{\alpha}\ind{x\in A_{\alpha}},
+\end{align*} for some constants $c_{\alpha} \in [0;+\infty]$ or in $\bC$ as appropriate. Furthermore, the $c_{\alpha}$ are uniquely determined by $f$.
+\end{proposition}
+\end{itemize}
+
+\subsection{Simple Integral of Simple Functions}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Simple integral}}).\\
+ Let $(X, \srB, \mu)$ be a measure space with $\srB$ \emph{\textbf{finite}} (i.e., its \emph{cardinality} is \emph{finite} and there are only \emph{finitely many measurable sets}). $X$ can then be partitioned into a finite number of atoms $A_1, \cdots, A_n$. If $f : X \rightarrow [0, +\infty]$ is measurable, it has \emph{\textbf{a unique representation}} of the form
+\begin{align*}
+f(x)&= \sum_{\alpha \in I}c_{\alpha}\ind{x\in A_{\alpha}},
+\end{align*} 
+for some constants $c_{\alpha} \in [0;+\infty]$. We then define the \underline{\emph{\textbf{simple integral}}}
+$\text{simp}\int_{X} f d\mu$ of $f$ by the formula
+\begin{align*}
+\text{simp}\int_{X} f d\mu &\equiv \sum_{\alpha\in I}c_{\alpha}\mu(A_{\alpha})
+\end{align*} 
+\end{definition}
+
+\item \begin{remark}
+Note that the precise decomposition into atoms \emph{does not affect} the definition of the simple integral. 
+\begin{proposition}\label{prop: simple_integral_refinement} (\textbf{Simple integral unaffected by refinements}).  \citep{tao2011introduction} \\
+Let $(X, \srB, \mu)$ be a measure space, and let $(X, \srB', \mu')$ be a \textbf{refinement} of $(X, \srB, \mu)$, which means that $\srB'$ contains $\srB$ and $\mu': \srB' \rightarrow [0, +\infty]$ \textbf{agrees} with $\mu: \srB \rightarrow [0, +\infty]$ on $\srB$. Suppose that both $\srB, \srB'$ are \textbf{finite}, and let $f: \srB \rightarrow [0, +\infty]$ be measurable. We have
+\begin{align*}
+\text{simp }\int_{X} f d\mu &= \text{simp }\int_{X} f d\mu'.
+\end{align*}
+\end{proposition}
+\end{remark}
+
+
+\item The above proposition allows one to extend the \emph{simple integral} to \emph{simple functions}:
+\begin{definition} (\emph{\textbf{Integral of simple functions}}).\\ 
+An \underline{\emph{\textbf{(unsigned) simple function}}} $f : X \rightarrow [0,+\infty]$ on a measurable space $(X, \srB)$ is a \emph{measurable function} that takes on \emph{\textbf{finitely many values}} $a_1, \cdots , a_k$. Note that such a function is then automatically \textit{measurable} with respect to \emph{at least one \textbf{finite sub-$\sigma$-algebra}} $\srB'$ of $\srB$, namely \emph{the $\sigma$-algebra $\srB'$ \textbf{generated by the preimages}} $f^{-1}\set{a_1}, \cdots,  f^{-1}\set{a_k}$ of $a_1, \cdots , a_k$.
+
+We then define the \underline{\emph{\textbf{simple integral}}} $\text{simp}\int_{X} f d\mu $ by the formula
+\begin{align*}
+\text{simp}\int_{X} f d\mu &\equiv \text{simp}\int_{X} f \rlat{d\mu}{\srB'}\\
+&= \sum_{i=1}^{k}a_{i}\mu\paren{f^{-1}\set{a_k}}
+\end{align*}
+where $\rlat{\mu}{\srB'} : \srB' \rightarrow [0,+\infty]$ is the \emph{\textbf{restriction}} of $\mu : \srB \rightarrow [0,+\infty]$ to $\srB'$.
+\end{definition}
+
+
+
+\item \begin{remark}
+Note that there could be \emph{\textbf{multiple finite $\sigma$-algebras}} with respect to which $f$ is \emph{measurable}, but all such
+extensions will give the same simple integral.  Indeed, if $f$ were measurable with respect to two separate finite sub-$\sigma$-algebras $\srB'$ and $\srB''$ of $\srB$, then it would also be \emph{measurable} with respect to their \emph{\textbf{common refinement}} $\srB' \lor \srB'' := (\srB' \cup \srB'')$, which is also \emph{finite} and then by Proposition \ref{prop: simple_integral_refinement}, $\int_X f d\mu|_{\srB'}$ and $\int_X f d\mu|_{\srB''}$ are both equal to $\int_X f d\mu|_{\srB' \lor \srB''}$, and hence equal to each other.
+\end{remark}
+
+\item \begin{remark}
+As with the Lebesgue theory, we say that a property $P(x)$ of an element $x \in X$ of a measure space $(X, \srB, \mu)$ \underline{\emph{\textbf{holds $\mu$-almost everywhere}}} if it \emph{\textbf{holds}} \emph{\textbf{outside}} of a \emph{\textbf{sub-null set}}, i.e. $\mu(\set{P(x) \text{ \emph{does not hold}}}) = 0$.
+\end{remark}
+
+\item \begin{proposition} (\textbf{Property of Simple Integral})\\
+Let  $(X, \srB, \mu)$ be a measure space, and let $f, g: X \rightarrow [0, +\infty]$  be simple unsigned functions.
+\begin{enumerate}
+\item (\textbf{Monotonicity}) If $f \le g$  then $\text{simp }\int_X f d\mu \le \text{simp }\int_X g d\mu$.
+\item (\textbf{Compatibility with measure}) For every $\srB$-measurable set $E$, we have $\text{simp }\int_X \mathds{1}_{E} d\mu = \mu(E)$.
+\item (\textbf{Homogeneity}) For every $c \in [0, +\infty]$,  one has $\text{simp }\int_X (cf) d\mu = c\times \text{simp }\int_X f d\mu  $.
+\item (\textbf{Finite additivity}) We have $\text{simp }\int_X (f + g)d\mu = \text{simp }\int_X f d\mu + \text{simp }\int_X g d\mu$.
+\item (\textbf{Insensitivity to refinement}) Let $(X, \srB, \mu)$ be a measure space, and let $(X, \srB', \mu')$ be its refinement, which means that $\srB'$ contains $\srB$ and $\mu': \srB' \rightarrow [0, +\infty]$ \textbf{agrees} with $\mu: \srB \rightarrow [0, +\infty]$ on $\srB$. Suppose that both $\srB, \srB'$ are \textbf{finite}, and let $f: \srB \rightarrow [0, +\infty]$ be measurable. We have
+\begin{align*}
+\text{simp }\int_{X} f d\mu &= \text{simp }\int_{X} f d\mu'.
+\end{align*}
+\item (\textbf{Almost everywhere equivalence}) If $\mu$-almost everywhere $f =g$, then  $\text{simp }\int_X f d\mu =  \text{simp }\int_X g d\mu$
+\item (\textbf{Finiteness}) $\text{simp }\int_X f d\mu < \infty$  if and only if $f$  is \textbf{finite} \textbf{$\mu$-almost everywhere} and is \textbf{supported} on a set of \textbf{finite measure}.
+\item (\textbf{Vanishing}) $\text{simp }\int_X f d\mu  = 0$  if and only if $f = 0$ $\mu$-almost everywhere.
+\end{enumerate}
+\end{proposition}
+
+\item \begin{proposition}(\textbf{Inclusion-exclusion principle}).\\
+ Let $(X, \srB, \mu)$ be a measure space, and let $A_1 \xdotx{,} A_n$ be $\srB$-measurable sets of \textbf{finite measure}. Show that
+ \begin{align*}
+\mu\paren{\bigcup_{i=1}^{n}A_i} &= \sum_{J \subseteq [1:n], J \neq \emptyset}(-1)^{\abs{J}-1}\mu\paren{\bigcap_{i\in J}A_i}
+ \end{align*}
+(Hint: Compute $\text{simp }\int_{X}(1 - \prod_{i=1}^{n}(1- \mathds{1}_{A_i})) d\mu$ in two different ways.)
+\end{proposition}
+
+\item \begin{remark}
+The simple integral could also be defined on \emph{finitely additive measure spaces}, rather than \emph{countably additive ones}, and all the above properties would still apply. However, on a finitely additive measure space one would have difficulty extending the integral beyond simple functions.
+\end{remark}
+\end{itemize}
+
+\subsection{Unsigned Integral of Measurable Functions}
+\begin{itemize}
+\item \begin{definition}
+Let $(X,\srB, \mu)$ be a measure space, and let $f : X\rightarrow  [0,+\infty]$ be \emph{(unsigned) measurable}. Then we define the \underline{\emph{\textbf{unsigned integral}}} $\int_X f d\mu$ of $f$ by the formula
+\begin{align*}
+\int_{X}f d\mu &\equiv \sup\limits_{0\le g\le f, \atop g \text{ simple}} \text{simp}\int_{X}g d\mu
+\end{align*}
+\end{definition}
+
+\item \begin{proposition} (\textbf{Properties of the unsigned integral}). \\
+Let $(X,\srB, \mu)$ be a measure space, and let $f, g : X \rightarrow [0, +\infty]$ be measurable.
+\begin{enumerate}
+\item (\textbf{Almost everywhere equivalence}) If $f = g$ $\mu$-almost everywhere, then $\int_X f d\mu = \int_X g d\mu$
+\item (\textbf{Monotonicity}) If $f \le g$ $\mu$-almost everywhere, then $\int_X f d\mu \le \int_X g d\mu$.
+\item (\textbf{Homogeneity}) We have $\int_X (cf) d\mu = c\, \int_X f d\mu$ for every $c \in [0, +\infty]$.
+\item (\textbf{Superadditivity}) We have $\int_X (f+g) d\mu \ge \int_X f d\mu + \int_X g d\mu$.
+\item (\textbf{Compatibility with the simple integral}) If $f$ is \textbf{simple}, then $\int_X f d\mu = \text{simp }\int_X f d\mu$.
+\item (\textbf{Markov's inequality}) For any $0 < \lambda < 1$, one has 
+\begin{align*}
+\mu\paren{\set{x \in X: f(x) \ge \lambda}} \le \frac{1}{\lambda}\int_{X} f d\mu
+\end{align*}
+In particular, if $\int_X f d\mu < \infty$, then the sets $\{x \in X : f(x) \ge \lambda \}$ have finite measure for each $\lambda > 0$.
+\item (\textbf{Finiteness}) If $\int_X f d\mu < \infty$, then $f(x)$ is \textbf{finite} for \textbf{$\mu$-almost every $x$}.
+\item (\textbf{Vanishing}) If $\int_X f d\mu = 0$, then $f(x)$ is zero for $\mu$-almost every $x$.
+\item (\textbf{Vertical truncation}) We have 
+\begin{align*}
+\lim\limits_{n \rightarrow \infty} \int_{X} \min\set{f, n} d\mu = \int_{X} f d \mu
+\end{align*}
+\item  (\textbf{Horizontal truncation}) If $E_1 \subseteq E_2 \subseteq \ldots$ is an \textbf{increasing sequence} of $\srB$-measurable sets, then
+\begin{align*}
+\lim\limits_{n\rightarrow \infty} \int_X f \mathds{1}_{E_n} d\mu = \int_X f  \mathds{1}_{\cup_{n=1}^{\infty}E_n} d\mu.
+\end{align*}
+\item (\textbf{Restriction}) If $Y$ is a measurable subset of $X$, then 
+\begin{align*}
+\int_X f \mathds{1}_{Y} d\mu = \int_Y f|_{Y}  d\mu|_{Y},
+\end{align*}
+where $f|_{Y}: Y \rightarrow [0, +\infty]$ is the \textbf{restriction} of $f : X \rightarrow [0, +\infty]$ to $Y$, and $\mu|_{Y}$ is the restriction $\mu$ on $Y$. We will often abbreviate
+$ \int_Y f|_{Y}  d\mu|_{Y}$ (by slight abuse of notation) as $\int_Y f d\mu$.
+\end{enumerate}
+\end{proposition}
+
+\item \begin{theorem}
+Let $(X,\srB, \mu)$ be a measure space, and let $f, g : X \rightarrow [0, +\infty]$ be measurable. Then
+\begin{align*}
+\int_X (f+g) d\mu &= \int_X f d\mu + \int_X g d\mu.
+\end{align*}
+\end{theorem}
+
+\item \begin{proposition} (\textbf{Linearity in $\mu$}).\\
+Let $(X,\srB, \mu)$ be a measure space, and let $f : X \rightarrow [0, +\infty]$ be measurable.
+\begin{enumerate}
+\item $\int_X f d(c\mu) = c \times \int_X f d\mu$ for every $c \in [0, +\infty]$.
+\item If $\mu_1, \mu_2, \ldots$ are a sequence of measures on $\srB$, 
+\begin{align*}
+\int_X f d\paren{\sum_{n=1}^{\infty}\mu_n} =\sum_{n=1}^{\infty}\int_X f d\mu_n.
+\end{align*}
+\end{enumerate}
+\end{proposition}
+
+\item 
+\begin{proposition}  (\textbf{Pushforward Measure}). \\
+Let $(X,\srB, \mu)$ be a measure space, and let $\varphi: X \rightarrow Y$ be $(\srB, \srC)$ measureable from $(X, \srB)$ to another measurable space
+$(Y, \srC)$. Define the \underline{\textbf{pushforward}} $\phi_{*}\mu: \srC \rightarrow [0, +\infty]$ of $\mu$ \textbf{by} $\varphi$ by the formula
+\begin{align*}
+\varphi_{*}\mu(E) := \mu(\phi^{-1}(E)).
+\end{align*}
+\begin{enumerate}
+\item $\varphi_{*}\mu$ is a \textbf{measure} on $\srC$, so that $(Y, \srC, \phi_{*}\mu)$ is a measure space.
+\item  (\textbf{Change of variables formula}). If $f : Y \rightarrow [0, +\infty]$ is $\srC$-measurable, then 
+\begin{align*}
+\int_Y f d(\phi_{*}\mu) = \int_X (f \circ \phi) d\mu.
+\end{align*}
+\end{enumerate}
+\end{proposition}
+
+\item \begin{corollary} 
+Let $T : \bR^d \rightarrow \bR^d$ be an invertible linear transformation, and let $m$ be Lebesgue measure on $\bR^d$. Then $T_{*}m =\frac{1}{\abs{\det{T}}}m$, where $T_{*}m$ is \textbf{the pushforward of $m$}.
+\end{corollary}
+
+\item \begin{example} (\emph{\textbf{Sums as integrals}}).
+Let $X$ be an arbitrary set (with the \emph{\textbf{discrete $\sigma$-algebra}}), let $\#$ be \emph{\textbf{counting measure}}, and let $f: X \rightarrow [0, +\infty]$ be an arbitrary unsigned function. Then $f$ is \textbf{\emph{measurable}} with
+\begin{align*}
+\int_X f d\# = \sum_{x \in X} f(x).
+\end{align*}
+\end{example}
+\end{itemize}
+
+\subsection{Absolutely Convergent Integral}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Absolutely convergent integral}}). \\
+Let $(X,\srF, \mu)$ be a measure space. A \emph{measurable function} $f : X \rightarrow \bC$ is said to be \underline{\emph{\textbf{absolutely integrable}}} if the \emph{unsigned integral} 
+\begin{align*}
+\norm{f}{L^{1}(X, \srF, \mu)} &\equiv \int_{X}\abs{f}d\mu 
+\end{align*}
+is \emph{\textbf{finite}}. We refer to this quantity $\norm{f}{L^{1}(X)}$ as \underline{\emph{\textbf{the $L^1(X)$ norm of $f$}}}, and use $L^1(X)$ or $L^1(X, \srF, \mu)$ or $L^1(\mu)$ to denote the space of absolutely integrable functions. If $f$ is \emph{real-valued} and absolutely integrable, we define \underline{\emph{\textbf{the Lebesgue integral}}} $\int_{X}f d\mu$ by the formula
+\begin{align*}
+\int_{X}f d\mu &= \int_{X}f_{+}d\mu - \int_{X}f_{-}d\mu
+\end{align*}
+where $f_{+} = \max\set{f, 0}$ and $f_{-} = \max\set{-f, 0}$ are the magnitudes of the positive and negative components of $f$. (note that the two unsigned integrals on the right-hand side are finite, as $f_+, f_{-}$ are pointwise dominated by $\abs{f}$). If f is \emph{complex-valued} and absolutely integrable, we define \emph{\textbf{the Lebesgue integral}} $\int_{X}f(x)d\mu$ by the formula
+\begin{align*}
+\int_{X}f d\mu &= \int_{X}\Re( f ) d\mu  + i\,\int_{X}\Im(f) d\mu,
+\end{align*}
+where the two integrals on the right are interpreted as real-valued absolutely integrable Lebesgue integrals.
+\end{definition}
+
+\item \begin{remark}
+ Sometimes $\int_{X}f d\mu $ is also denoted as $\int_{X}f(x) \mu(dx) $ or $\int_{X}f(x) d\mu(x)$, where $X\subseteq \bR^{d}$ and $\mu(E) = \int_{E}\mu dx$.
+\end{remark}
+
+\item \begin{proposition} (\textbf{Properties of absolutly convergent integral})\\
+Let $(X,\srB, \mu)$ be a measure space.
+\begin{enumerate}
+\item $L^1(X, \srB, \mu)$ is a \textbf{complex vector space}.
+\item The integration map $f \mapsto \int_X f d\mu$ is a \textbf{complex linear map} from $L^1(X, \srB, \mu)$ to $\bC$.
+\item The \textbf{triangle inequality}
+\begin{align*}
+\norm{f + g}{L^{1}(\mu)} & \le \norm{f}{L^{1}(\mu)} + \norm{g}{L^{1}(\mu)}
+\end{align*}
+and the \textbf{homogeneity property} 
+\begin{align*}
+\norm{c\,f}{L^{1}(\mu)}= \abs{c} \norm{f}{L^{1}(\mu)} 
+\end{align*} hold for all $f, g \in L^1(X, \srB, \mu)$ and $c \in \bC$.
+\item If $f, g \in L^1(X, \srB, \mu)$ are such that $f(x) = g(x)$ for $\mu$-almost every $x \in X$, then $\int_X f d\mu = \int_X g d\mu$.
+\item If $f \in L^1(X, \srB, \mu)$, and $(X, \srB', \mu')$ is a \textbf{refinement} of $(X,\srB, \mu)$, then $f \in L^1(X, \srB', \mu')$, and 
+\begin{align*}
+\int_X f d\mu' = \int_X f d\mu.
+\end{align*}
+(Hint: it is easy to get one inequality. To get the other inequality, first work in the case when f is both bounded and has finite measure support (i.e. is both vertically and horizontally truncated).)
+\item If $f \in L^1(X, \srB, \mu)$, then $\norm{f}{L^{1}(\mu)}  = 0$  if and only if $f$ is zero $\mu$-almost everywhere.
+\item If $Y \subseteq X$ is $\srB$-measurable and $f \in L^1(X, \srB, \mu)$, then $f|_{Y} \in L^1(Y, \srB|_{Y}, \mu|_{Y})$ and 
+\begin{align*}
+\int_Y f|_{Y} \, d\mu|_{Y} = \int_X f \mathds{1}_Y \,d\mu.
+\end{align*}
+As before, by abuse of notation we write $\int_Y f d\mu$ for $\int_Y f|_{Y}\, d\mu|_{Y}$.
+\end{enumerate}
+\end{proposition}
+\end{itemize}
+
+\subsection{The Convergence Theorems}
+\begin{itemize}
+\item \begin{proposition} (\textbf{Uniform Convergence on a Finite Measure Space}). \citep{tao2011introduction}\\
+Suppose that $(X, \srB, \mu)$ is a \textbf{finite measure space} (so $\mu(X) < \infty$), and $f_n: X \rightarrow [0, +\infty]$ (resp. $f_n: X \rightarrow \bC$) are a sequence of unsigned measurable functions (resp. absolutely integrable functions) that \textbf{converge uniformly} to a limit $f$. Then $\int_X f_n d\mu$ \textbf{converges} to $\int_X f d\mu$.
+\end{proposition}
+
+
+\item \begin{theorem}(\textbf{Monotone Convergence Theorem}). \citep{tao2011introduction} \\
+Let $(X, \srB, \mu)$ be a measure space, and let $0 \le f_1 \le  f_2 \le \ldots $ be a \textbf{monotone non-decreasing} sequence of \textbf{unsigned} measurable functions on $X$. Then we have
+\begin{align*}
+\lim\limits_{n\rightarrow \infty}\int_{X}f_{n} d\mu &= \int_{X}\paren{\lim\limits_{n\rightarrow \infty} f_{n}} d\mu 
+\end{align*}
+\end{theorem}
+
+\item \begin{remark}
+Note that in the special case when each $f_n$ is an indicator function $f_n = \ind{E_n}$, this theorem collapses to \emph{\textbf{the upwards monotone convergence} property}. Conversely, \emph{the upwards monotone convergence property} will play a key role in the proof of this theorem.
+\end{remark}
+
+\item \begin{remark}
+ Note that  the result still holds if the monotonicity $f_n \le f_{n+1}$ only holds almost everywhere rather than everywhere.
+ \end{remark}
+ 
+\item \begin{corollary}(\textbf{Tonelli's Theorem for Sums and Integrals})\\
+Let $(X, \srB, \mu)$ be a measure space, and let $f_1, f_2, \ldots $ be a sequence of \textbf{unsigned} measurable functions on $X$. Then 
+\begin{align*}
+\sum_{k=1}^{\infty}\int_{X}f_{k} d\mu &= \int_{X}\paren{\sum_{k=1}^{\infty}f_{k}} d\mu 
+\end{align*}
+\end{corollary}
+
+\item \begin{lemma} (\textbf{Borel-Cantelli Lemma}). \citep{tao2011introduction, resnick2013probability} \\
+Let $(X, \srB, \mu)$ be a measure space, and let $E_1, E_2,  \ldots$ be a sequence of $\srB$-measurable sets such that $\sum_{n=1}^{\infty}\mu(E_n) < \infty$. Then 
+\begin{align*}
+\mu\set{ \limsup\limits_{n\rightarrow \infty} E_{n} }  = 0.
+\end{align*} That is,  almost every $x \in X$ is contained in \textbf{at most finitely many} of the $E_n$ (i.e. $\set{ n \in \bN : x \in E_n}$ is finite for almost every $x \in X$).
+\end{lemma} 
+
+\item 
+\begin{corollary} (\textbf{Fatou's Lemma}). \\
+Let $(X, \srB, \mu)$ be a measure space, and let $f_1, f_2, \ldots : X\rightarrow [0,\infty]$ be a sequence of unsigned measurable functions. Then
+\begin{align*}
+\int_{X}\paren{\liminf\limits_{n\rightarrow \infty} f_{n}} d\mu &\le \liminf\limits_{n\rightarrow \infty}\int_{X}f_{n} d\mu 
+\end{align*}
+\end{corollary}
+
+\begin{remark}
+Informally, \emph{Fatou's lemma} tells us that when taking \emph{\textbf{the pointwise limit}} of \textit{\textbf{unsigned functions}} $f_n$, that mass
+$\int_{X}f_{n} d\mu$ can be \emph{\textbf{destroyed in the limit}} (as was the case in the three key moving bump examples), \emph{but} it \emph{\textbf{cannot be created in the limit}}. Of course the unsigned hypothesis is necessary here.
+
+While this lemma was stated only for pointwise limits, the same general \emph{\textbf{principle}} (\emph{that mass can be destroyed, but not created, by the process of taking limits}) tends to hold for other ``\emph{weak}" notions of convergence.
+\end{remark}
+
+\item \begin{theorem} (\textbf{Dominated Convergence Theorem}). \\
+Let $(X, \srB, \mu)$ be a measure space, and let $f_1, f_2, \ldots : X\rightarrow \bC$ be a sequence of measurable functions that converge \textbf{pointwise $\mu$-almost everywhere} to a measurable limit $f : X\rightarrow \bC$. Suppose that there is an \textbf{unsigned absolutely integrable} function $G : X\rightarrow [0, +\infty]$ such that $\abs{f_n}$ are pointwise $\mu$-almost everywhere \textbf{bounded} by $G$ for each $n$. Then we have
+\begin{align*}
+\lim\limits_{n\rightarrow \infty}\int_{X}f_{n}d\mu  &= \int_{X}f d\mu.
+\end{align*}
+\end{theorem}
+
+\item \begin{remark}
+From the moving bump examples we see that this statement \emph{fails} if there is no \emph{absolutely integrable dominating function} $G$. 
+\end{remark}
+
+\item \begin{remark}
+Note also that when each of the fn is an indicator function $f_n= \mathds{1}_{E_n}$, the dominated convergence theorem collapses to \emph{dominated convergence for sets} in previous chapter.
+\end{remark}
+
+\item \begin{exercise}
+Under the hypotheses of the dominated convergence theorem, establish also that $\norm{f_n - f}{L^1} \rightarrow 0$ as $n \rightarrow \infty$.
+\end{exercise}
+
+\item \begin{proposition} (\textbf{Almost Dominated Convergence}). \\
+Let $(X, \srB, \mu)$ be a measure space, and let $f_1, f_2, \ldots: X \rightarrow \bC$ be a sequence of measurable functions that converge pointwise $\mu$-almost everywhere to a measurable limit $f : X \rightarrow \bC$. Suppose that there is an unsigned absolutely integrable functions $G, g_1, g_2, \ldots X \rightarrow [0, +\infty]$ such that the $\abs{f_n}$ are pointwise $\mu$-almost everywhere bounded by $G + g_n$, and that $\int_X g_n d\mu \rightarrow 0$ as $n \rightarrow \infty$. Then
+\begin{align*}
+\lim\limits_{n\rightarrow \infty} \int_X f_n d\mu = \int_X f d\mu.
+\end{align*}
+\end{proposition}
+
+\item \begin{exercise}  (\textbf{Defect Version of Fatou's Lemma}). \\
+Let $(X, \srB, \mu)$ be a measure space, and let $f_1, f_2, \ldots: X \rightarrow [0, +\infty]$ be a sequence of \textbf{unsigned absolutely integrable functions} that converges \textbf{pointwise} to an absolutely integrable limit $f$. Show that
+\begin{align*}
+\int_X f_n d\mu - \int_X f d\mu - \norm{f - f_n}{L^1(\mu)} \rightarrow 0
+\end{align*} as $n \rightarrow \infty$. (Hint: Apply the dominated convergence theorem to $\min(f_n, f)$.) Informally, this result tells us that the gap between the left and right hand sides of Fatou’s lemma can be measured by the quantity $\norm{f - f_n}{L^1(\mu)}$.
+\end{exercise}
+
+\item \begin{proposition} 
+Let $(X, \srB, \mu)$ be a measure space, and let $g: X \rightarrow [0, +\infty]$ be measurable. Then the function $\mu_g : \srB \rightarrow [0, +\infty]$ defined by the formula
+\begin{align*}
+\mu_g(E) := \int_X g\,\mathds{1}_{E} d\mu = \int_E g d\mu
+\end{align*} is a measure.
+\end{proposition}
+
+\item \emph{The monotone convergence theorem} is, in some sense, \emph{a \textbf{defining property} of the unsigned integral}:
+\begin{proposition} (\textbf{Characterisation of the Unsigned Integral}). \\
+Let $(X, \srB)$ be a measurable space. $I: f \mapsto I(f)$ be a map from the space $U(X, \srB)$ of \textbf{unsigned measurable functions} $f: X \rightarrow [0, +\infty]$ to $[0, +\infty]$ that obeys the following axioms:
+\begin{enumerate}
+\item (\textbf{Homogeneity}) For every $f \in U(X, \srB)$ and $c \in [0, +\infty]$, one has $I(c\,f) = c\,I(f)$.
+\item (\textbf{Finite additivity}) For every $f, g  \in U(X, \srB)$, one has $I(f + g) = I(f) + I(g)$.
+\item (\textbf{Monotone convergence}) If $0 \le f_1 \le f_2 \le \ldots$ are a \textbf{nondecreasing} sequence of unsigned measurable functions, then $I(\lim_{n\rightarrow \infty} f_n) = \lim_{n\rightarrow \infty} I(f_n)$.
+\end{enumerate}
+Then there exists a \textbf{unique measure} $\mu$ on $(X, \srB)$ such that 
+\begin{align*}
+I(f) = \int_X f d\mu, \quad \text{ for all }f \in U(X, \srB).
+\end{align*}
+Furthermore, $\mu$ is given by the formula $\mu(E) := I(\mathds{1}_E)$ for all $\srB$-measurable sets $E$.
+\end{proposition}
+\end{itemize}
+
+\newpage
+\subsection{Development of Integration of Measurable Functions}
+\begin{table}[h!]
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\belowdisplayskip}{-10pt}
+\setlength{\abovedisplayshortskip}{0pt}
+\setlength{\belowdisplayshortskip}{0pt}
+\footnotesize
+\centering
+\caption{Development on Lebesgue Integration}
+\label{tab: integration}
+%\setlength{\extrarowheight}{1pt}
+\renewcommand\tabularxcolumn[1]{m{#1}}
+\small
+\begin{tabularx}{1\textwidth} { 
+  | >{\raggedright\arraybackslash} m{3cm}
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X  | }
+ \hline
+  &  \emph{\textbf{Unsigned Simple Function}} & \emph{\textbf{Unsigned Measurable Function}}   &  \emph{\textbf{Abusolute Integrable Function}}   \\
+  \hline 
+\textbf{\emph{Definition}}    &
+\begin{align*}
+f = \sum_{i=k}^{m}c_k \mathds{1}_{E_k}
+\end{align*}
+ & 
+ \begin{align*}
+\set{f_n} \rightarrow f \text{ pointwise}\\
+\set{f_n} \text{ unsigned simple}
+\end{align*}
+ & 
+\begin{align*}
+\norm{f}{L^1(\bR^d)} < \infty\\
+\abs{f} \text{ unsigned}
+\end{align*}
+\\
+ \hline \vspace{5pt}
+\emph{\textbf{Integration}}  \vspace{2pt} &  
+\begin{align*}
+\text{simp }\int_{\bR^d} f(x) dx \\
+= \sum_{i=k}^{m}c_k \mu(E_k)
+\end{align*}
+ &
+ \begin{align*}
+\int_{\bR^{d}}f(x)dx =  \underline{\int_{\bR^{d}}}f(x)dx =\\
+  \sup\limits_{0\le g\le f,\; g\text{ simple}} \text{simp}\int_{\bR^{d}}g(x) dx
+ \end{align*}
+  & \begin{align*}
+\int_{\bR^{d}}f(x)dx =\\
+ \int_{\bR^{d}}f_{+}(x)dx - \int_{\bR^{d}}f_{-}(x)dx
+\end{align*}  \\
+ \hline \vspace{5pt}
+\emph{Compatibility} \vspace{2pt}  &    & $\checkmark$  & $\checkmark$    \\
+ \hline \vspace{5pt}
+\emph{Compatibility to Rieman Integral} \vspace{2pt}  &  $\checkmark$  & $\checkmark$  & $\checkmark$    \\
+\hline \vspace{5pt}
+\emph{Linearity}  \vspace{2pt}  &  Unsigned $\checkmark$  & $\checkmark$  & $\checkmark$    \\
+\hline \vspace{5pt}
+\emph{\textbf{Equivalence}} \vspace{2pt}   & $\checkmark$  & $\checkmark$  & $\checkmark$    \\
+\hline \vspace{5pt}
+\emph{Vanishing} \vspace{2pt}   &   $\checkmark$  & $\checkmark$  & $\checkmark$  \\
+\hline \vspace{5pt}
+\emph{\textbf{Monotonicity}} \vspace{2pt}   & $\checkmark$    &  $\checkmark$   & $\checkmark$  \\
+\hline \vspace{5pt}
+\emph{\textbf{Superadditivity}} \vspace{2pt}   & & lower Lebesgue integral $\checkmark$  &    \\
+\hline \vspace{5pt}
+\emph{Reflection} \vspace{2pt}   & &  lower Lebesgue integral $\checkmark$  &    \\
+\hline \vspace{5pt}
+\emph{Divisibility} \vspace{2pt}   & &  lower Lebesgue integral $\checkmark$  &    \\
+\hline \vspace{5pt}
+\emph{\textbf{Finite additivity}} \vspace{2pt}   & $\checkmark$ & $\checkmark$ & $\checkmark$     \\
+\hline \vspace{5pt}
+\emph{\textbf{Horizontal truncation}} \vspace{2pt}   &   & $\checkmark$  & $\checkmark$     \\
+\hline \vspace{5pt}
+\emph{\textbf{Vertical truncation}} \vspace{2pt}   &   & $\checkmark$  & $\checkmark$     \\
+\hline \vspace{5pt}
+\emph{Translation Invariance} \vspace{2pt}   &   & $\checkmark$ & $\checkmark$    \\
+\hline
+\end{tabularx}
+\end{table}
+
+\newpage
+\section{Littlewood's Three Principles}
+\begin{itemize}
+\item \begin{theorem} (\underline{\textbf{Littlewood's Three Principles}})\citep{royden1988real, tao2011introduction}:
+\begin{enumerate}
+\item Every (\textbf{measurable}) set is nearly a \textbf{finite sum} of \textbf{intervals};
+\item Every (\textbf{absolutely integrable}) function is nearly \textbf{continuous};
+and
+\item Every \textbf{(pointwise) convergent sequence of functions} is nearly \textbf{uniformly convergent}
+\end{enumerate}
+\end{theorem}
+
+\item  \begin{remark} \emph{\textbf{The Littlewood's 1st and 2nd principles are shown only for Euclidean space}} $\bR^{d}$, since it relies on such  concepts as ``\emph{elementary set}" or ``\emph{continuous function}" defined for \emph{an abstract measure space}. In other word, \emph{\textbf{the necessary condition}} these two principles to hold is that \emph{the measure space $(X, \srF)$ is a \underline{\textbf{topological space}} with \underline{\textbf{Borel $\sigma$-algebra}} $\srB$ included in $\srF$}. 
+
+The \emph{\textbf{Littlewood's 3rd principles}}, i.e., \emph{the Egorov's theorem}, holds for a \emph{\textbf{finite measure space} $(X, \srF, \mu)$ in which $\mu(X)<\infty$}. There are cases in which $m(X)=\infty$ and the theorem does not hold. \citep{tao2011introduction}
+\end{remark}
+\end{itemize}
+\subsection{Every Measurable Set is Nearly a Finite Sum of Intervals}
+\begin{itemize}
+\item 
+ \begin{proposition} (\textbf{Criteria for measurability} \citep{tao2011introduction})\\
+The followings are equivalent:
+\begin{enumerate}
+\item $E$ is Lebesgue measureable.
+\item (\textbf{Outer approximation by open}) For every $\epsilon>0$, one can contain $E$ in an open set $U$ with $m^{*}(U \setminus E)\le \epsilon $.
+\item (\textbf{Almost open}) For every $\epsilon>0$, one can find an open set $U$ such that  $m^{*}(U\Delta E)\le \epsilon $, where $U\Delta E = (U  \setminus E)\cup (E  \setminus U) = (U\cup E)  \setminus (U\cap E)$ is the symmetric difference. (In other words, $E$ differs from an open set by a set of outer measure at most $\epsilon$.) 
+\end{enumerate}
+\end{proposition}
+
+\item \begin{remark}
+For $E$ \emph{\textbf{finite}} Lebesgue measureable, $E$ differs from a \emph{\textbf{bounded}} \emph{open set} by a set of \emph{\textbf{arbitrarily small} Lebesgue outer measure}. This bounded open set can be \emph{\textbf{decomposed}} as a finite union of open cubes in $\bR^{d}$. \citep{royden1988real}.
+\end{remark}
+\end{itemize}
+\subsection{Every Absolutely Integrable Function is Nearly Continuous}
+\begin{itemize}
+\item \begin{proposition} (\textbf{Approximation of $L^1$ functions}).\\
+Let $f \in L^1(\bR^d)$ and $\epsilon > 0$.
+\begin{enumerate}
+\item There exists an absolutely integrable simple function $g$ such that
+\begin{align*}
+\norm{f- g}{ L^1(\bR^d)} &\le \epsilon; 
+\end{align*}
+\item There exists a \textbf{step function} $g$ (, i.e. $g$ is represented as a finite linear combination of indicator functions of boxes) such that $\norm{f- g}{ L^1(\bR^d)} \le \epsilon; $
+\item There exists a \textbf{continuous}, \textbf{compactly supported} $g$ such that $\norm{f- g}{ L^1(\bR^d)} \le \epsilon.$
+\end{enumerate}
+\end{proposition}
+
+
+\item \begin{theorem} (\textbf{Lusin's theorem}).\\
+Let $f : \bR^d \rightarrow \bC$ be \textbf{absolutely integrable}, and let $\epsilon > 0$. Then there exists a Lebesgue measurable set $E \subset \bR^d$ of measure at most $\epsilon$ such that the \textbf{restriction} of $f$ to the \textbf{complementary} set $\bR^d \setminus E$ is \textbf{continuous} on that set. 
+\end{theorem}
+\begin{remark}
+This theorem does not imply that the \emph{\textbf{unrestricted}} function $f$ is \emph{continuous} on $\bR^d \setminus  E$. For instance, the absolutely integrable function $\ind{\bQ} : \bR \rightarrow \bC$ is nowhere continuous, so is certainly not continuous
+on $\bR \setminus  E$ for any $E$ of finite measure; but on the other hand, if one deletes the measure zero set $E \equiv \bQ$ from the reals, then the restriction of $f$ to $\bR \setminus  E$ is identically zero and thus continuous. \citep{tao2011introduction}
+\end{remark}
+
+\item \begin{remark}
+When dealing with unsigned measurable functions such as $f : \bR^d \rightarrow [0,+\infty]$, then Lusin's theorem \emph{\textbf{does not apply directly}} because $f$ could be \emph{\textbf{infinite}} on a set of positive measure, which is clearly in contradiction with the conclusion of Lusin's theorem (unless one allows the continuous function to also take values in the extended non-negative reals $[0,+\infty]$ with the extended topology). However, if one knows already that \emph{\textbf{$f$ is almost everywhere finite}} (which is for instance the case when $f$ is absolutely integrable), then \emph{Lusin's theorem applies} (since one can simply zero out $f$ on the null set where it is infinite, and add that null set to the exceptional set of Lusin's theorem).
+\end{remark}
+\end{itemize}
+
+\subsection{Every Pointwise Convergent Sequence of Functions is Nearly Uniformly Convergent}
+\begin{itemize}
+\item \begin{remark} Recall the following convergence definitions:
+\begin{enumerate}
+\item \underline{(\emph{\textbf{Pointwise convergence}})}\\
+ For every $x\in \bR^{d}$, any $\epsilon > 0$, there exists $N > 0$ such that $\abs{f_n(x) - f(x)} \le  \epsilon$ for all $n \ge N$.
+\item \underline{(\emph{\textbf{Pointwise almost everywhere convergence}})}\\
+ For \emph{almost every} $x\in \bR^{d}$, any $\epsilon > 0$, there exists $N > 0$ such that $\abs{f_n(x) - f(x)} \le  \epsilon$ for all $n \ge N$.
+\item \underline{(\emph{\textbf{Uniform convergence}})}\\
+For any $\epsilon > 0$, there exists $N > 0$ such that $\abs{f_n(x) - f(x)} \le  \epsilon$ for all $n \ge N$ and $x \in \bR^{d}$.
+\end{enumerate}
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{Locally uniform convergence}}). \\
+A sequence of functions $f_n : \bR^d \rightarrow \bC$ converges \underline{\emph{\textbf{locally uniformly}}} to a limit $f : \bR^d \rightarrow \bC$ if, for every \emph{bounded} subset $E$ of $\bR^d$, $f_n$ converges \emph{uniformly} to $f$ on $E$. In other words, for every \emph{\textbf{bounded}} $E \subset \bR^d$ and any $\epsilon > 0$, there exists $N > 0$ such that $\abs{f_n(x) - f(x)} \le  \epsilon$ for all $n \ge N$ and $x \in E$.
+\end{definition}
+
+\item \begin{theorem}(\textbf{Egorov's theorem}).\\
+Let $f_n : \bR^d \rightarrow \bC$ be a sequence of measurable functions that \textbf{converge pointwise almost everywhere} to another function $f : \bR^d \rightarrow \bC$, and let $\epsilon > 0$. Then there exists a Lebesgue measurable set $A$ of measure at most $\epsilon$, such that $f_n$ \textbf{converges locally uniformly} to $f$ outside of $A$.
+\end{theorem}
+\end{itemize}
+
+\section{Modes of Convergence}
+\subsection{Convergence of Functions in Measure Space}
+\begin{itemize}
+\item \begin{remark} (\emph{\textbf{Convergence of Functions vs. Convergence of Numbers and Vectors}})  \\
+Convegence of numbers $a_n \rightarrow a$ and convergence of vector $\mb{v}_n \rightarrow \mb{v}$ are both \emph{\textbf{unambiguous}}:
+\begin{enumerate}
+\item $a_n \rightarrow a$ means that $\forall \epsilon > 0$, $\exists N \in \bN$ such that for $n \ge N$, $\abs{a_n - a} \le \epsilon$;
+\item $\mb{v}_n \rightarrow \mb{v}$ means that $\forall \epsilon > 0$, $\exists N \in \bN$ such that for $n \ge N$, $\norm{\mb{v}_n - \mb{v}}{} \le \epsilon$; Note that the chioce of norm in Euclidean space will not affect the convergence results: convergence in $\ell_{p}$ will implies convergence in $\ell_{q}$ norm. 
+\end{enumerate}
+
+However, for functions $f_n: X \rightarrow \bC$ and $f: X \rightarrow \bC$, there can now be \emph{many different ways} in which the sequence $f_n$ may or may not converge to the limit $f$. Note that $a_n$ can be thought as $f_n$ with singular domain $X= \{1\}$ and $\mb{v}_n$ can be thought of $f_n$ with finite set $X = \set{1 \xdotx{,} d}$. On the other hand, once \emph{$X$ becomes \textbf{infinite}}, the functions $f_n$ acquire an \emph{\textbf{infinite number of degrees of freedom}}, and this allows them to approach $f$ in any number of \emph{inequivalent ways}.
+\end{remark}
+
+\item We have the following modes of convergence
+\begin{enumerate}
+\item \begin{definition}  \underline{(\emph{\textbf{Pointwise Convergence}})}\\
+We say that $f_n$ converges to $f$ \underline{\emph{\textbf{pointwise}}} if, for any $x\in X$ and $\epsilon > 0$, there exists $N > 0$ (\emph{that \textbf{depends} on $\epsilon$ and $x$}) such that for all $n \ge N$, $\abs{f_n(x) - f(x)} \le  \epsilon$. Denoted as $f_{n}(x)\rightarrow f(x)$.
+\end{definition}
+
+\item \begin{definition}  \underline{(\emph{\textbf{Uniform Convergence}})}\\
+We say that $f_n$ converges to $f$ \underline{\emph{\textbf{uniformly}}} if,  for any $\epsilon > 0$, there exists $N > 0$ (\emph{that \textbf{depends} on $\epsilon$ only})  such that for all $n \ge N$, $\abs{f_n(x) - f(x)} \le  \epsilon$  for every $x \in X$. Denoted as $f_{n} \rightarrow f, \text{ \emph{uniformly}}$.
+\end{definition}
+Unlike pointwise convergence, the time $N$ at which $f_n(x)$ must be permanently $\epsilon$-close to $f(x)$ is not permitted to depend on $x$, but must instead be
+chosen \emph{uniformly} in $x$.
+
+\item  \begin{definition}  \underline{(\emph{\textbf{Pointwise Almost Everywhere Convergence}})}\\
+We say that  $f_n$ converges to $f$ \underline{\emph{\textbf{pointwise almost everywhere}}} if, for \emph{\textbf{\underline{$\mu$-almost} everywhere}} $x \in X$, $f_n(x)$ converges to
+$f(x)$. It is denoted as \underline{$f_{n}\stackrel{a.e.}{\rightarrow} f$}.
+
+In other words, \underline{there exists \emph{\textbf{a null set}} $E$, ($\mu(E) = 0$)} such that for \underline{\emph{any $x\in X \setminus E$ }} and any $\epsilon > 0$, there exists $N > 0$ (\emph{that \textbf{depends} on $\epsilon$ and $x$}) such that for all $n \ge N$, $\abs{f_n(x) - f(x)} \le  \epsilon$. 
+\end{definition}
+
+\item \begin{definition}  \underline{(\emph{\textbf{Uniformly Almost Everywhere Convergence}})} \citep{tao2011introduction}\\
+We say $f_n$ converges to $f$ \underline{\emph{\textbf{uniformly almost everywhere}}}, \underline{\emph{\textbf{essentially uniformly}}}, or \underline{\emph{\textbf{in $L^{\infty}$ norm}}} if, for every $\epsilon> 0$, there exists $N$ such that for every $n\ge  N$, $\abs{ f_n(x) - f(x)} \le \epsilon$, \emph{\textbf{\underline{for $\mu$-almost every $x \in X$}}}. 
+
+That is, $f_n \rightarrow f$ uniformly in $x \in X \setminus E$, for some $E$ with $\mu(E) = 0$.
+
+We can also formulate in terms of \emph{\textbf{$L^{\infty}$ norm}} as 
+\begin{align*}
+\norm{f_n(x) - f(x)}{L^{\infty}(X)} \stackrel{n\rightarrow \infty}{\longrightarrow} 0,
+\end{align*}
+where $\norm{f}{L^{\infty}(X)} = \text{ess}\sup_{x}\abs{f(x)} \equiv\inf\limits_{\{E:\mu(E)=0\}}\sup\limits_{x\in X \setminus E}\abs{f(x)}$ is the \emph{\textbf{essential bound}}. It is denoted as $f_{n}\stackrel{L^{\infty}}{\rightarrow} f$.
+\end{definition}
+
+\item \begin{definition}    \underline{(\emph{\textbf{Almost Uniform Convergence}})}  \citep{tao2011introduction}\\
+We say that $f_n$ converges to $f$ \underline{\emph{\textbf{almost uniformly}}} if, for every $\epsilon > 0$, there exists an \emph{\textbf{exceptional set}} $E \in \srB$ of \emph{measure} \underline{$\mu(E) \le \epsilon$} such that $f_n$ converges \emph{\textbf{uniformly}} to $f$ on the \emph{complement} of $E$.
+
+That is, for arbitrary $\delta$ there exists some $E$ with $\mu(E) \le \delta$ such that $f_n \rightarrow f$ \emph{uniformly} in $x \in X \setminus E$.
+\end{definition} 
+
+\item \begin{definition}  \underline{(\emph{\textbf{Convergence in $L^{1}$ Norm}})}\\
+We say that $f_n$ converges to $f$  \underline{\emph{\textbf{in $L^1$ norm}}} if the quantity 
+\begin{align*}
+\norm{f_n - f}{L^{1}(X)} =  \int_{X}\abs{ f_n(x) - f(x)}d\mu  \stackrel{n\rightarrow \infty}{\longrightarrow} 0.
+\end{align*}
+It is also called the convergence \emph{\textbf{in mean}}. Denoted as $f_{n}\stackrel{L^{1}}{\rightarrow} f$.
+\end{definition} 
+
+\item  \begin{definition}   \underline{(\emph{\textbf{Convergence in Measure}})}\\
+We say that $f_n$ converges to $f$  \underline{\emph{\textbf{in measure}}} if, for every $\epsilon> 0$,  the measures
+\begin{align*}
+\mu\paren{ \set{x \in X: \abs{f_n(x) - f(x)} \ge \epsilon}}\stackrel{n\rightarrow \infty}{\longrightarrow} 0.
+\end{align*} Denoted as $f_{n}\stackrel{\mu}{\rightarrow} f$.
+\end{definition} 
+\end{enumerate}
+
+\item \begin{remark}
+The difference between the \emph{\textbf{uniformly almost everywhere convergence}} vs. \emph{\textbf{the almost uniformly convergence}} is that:
+\begin{enumerate}
+\item the \emph{\textbf{former}} corresponds to \emph{uniform convergence} \emph{\textbf{outside a null set}}, and
+\item the \emph{\textbf{latter}} corresponds to \emph{uniform convergence} \emph{\textbf{outside an arbitrary small measure set (but still not a null set)}}.
+\end{enumerate}
+\end{remark}
+
+\item \begin{remark}
+Observe that each of \emph{these five modes of convergence} is \emph{\textbf{unaffected}} if one \emph{\textbf{modifies}} $f_n$ or $f$ on \emph{\textbf{a set of measure zero}}. In contrast, the \emph{pointwise} and \emph{uniform} modes of convergence can be \emph{\textbf{affected}} if one modifies $f_n$ or $f$ \emph{even on a single point}.
+\end{remark}
+
+\item \begin{remark}
+In the context of \emph{probability theory}, in which $f_n$ and $f$ are interpreted as \emph{random variables}, \citep{billingsley2008probability, folland2013real}
+\begin{align*}
+\text{convergence in $L^1$ \emph{norm}} \qquad &\Leftrightarrow \qquad \text{convergence in \emph{mean}}\\
+\text{\emph{\textbf{pointwise convergence almost everywhere}}}\qquad  &\Leftrightarrow \qquad \text{\emph{\textbf{almost sure convergence}}}\\
+\text{convergence in \emph{\textbf{measure}}} \qquad &\Leftrightarrow  \qquad \text{convergence in \emph{\textbf{probability}}}
+\end{align*}
+\end{remark}
+
+\item \begin{proposition} (\textbf{Linearity of Convergence}). \citep{tao2011introduction} \\
+Let $(X, \srB, \mu)$ be a measure space, let $f_n, g_n : X \rightarrow \bC$ be sequences of measurable functions, and let $f, g : X \rightarrow \bC$ be measurable functions.
+\begin{enumerate}
+\item Then $f_n$ converges to $f$ along one of the above seven modes of convergence \textbf{if and only if} $\abs{f_n - f}$ converges to 0
+along \textbf{the same mode}.
+\item If $f_n$ converges to $f$ along one of the above seven modes of convergence, and $g_n$ converges to $g$ along \textbf{the same mode},
+then $f_n + g_n$ converges to $f + g$ along the same mode, and that $c\,f_n$ converges to $c\,f$ along the same mode for any $c \in \bC$.
+\item (\textbf{Squeeze test}) If $f_n$ converges to $0$ along one of the above seven modes, and $\abs{g_n} \le f_n$ \textbf{pointwise} for each $n$, then 
+$g_n$ converges to $0$ along \textbf{the same mode}.
+\end{enumerate}
+\end{proposition}
+\end{itemize}
+
+\subsection{Modes of Convergence via Tail Support and Width}
+\begin{itemize}
+\item \begin{remark} (\textit{\textbf{Tail Support and Width}})
+\begin{definition}
+Let $E_{n,m} := \set{x \in X: \abs{f_n(x) - f(x)} \ge 1/m}$. Define \underline{\emph{\textbf{the $N$-th tail support set}}}
+\begin{align*}
+T_{N,m}:= \set{x \in X: \abs{f_n(x) - f(x)} \ge 1/m,\;\;\exists n\ge N} = \bigcup_{n\ge N}E_{n,m}.
+\end{align*} Also  let $\mu(E_{n,m})$ be the \underline{\emph{\textbf{width}}} of $n$-th event $\ind{E_{n, m}}$.  Note that $T_{N,m}\supseteq T_{N+1,m}$ is \emph{\textbf{monotone nonincreasing}} and  $T_{N,m}\subseteq T_{N,m+1}$ is \emph{\textbf{monotone nondecreasing}}.
+\end{definition}
+\begin{enumerate}
+\item The \emph{\textbf{pointwise convergence}} of $f_{n}$ to $f$ indicates that for every $x$, every $m\ge 1$, there exists some $N \equiv N(m,x)\ge 1$ such that $ T_{N,m}^{c} \ni x$ or $T_{N, m} \not\ni x$.  Equivalently, \emph{\textbf{the tail support \underline{shrinks to emptyset}}}:
+\begin{align*}
+\bigcap_{N \in \bN}T_{N,m} =  \lim\limits_{N\rightarrow \infty}T_{N,m} = \limsup\limits_{n\rightarrow \infty}E_{n,m} = \emptyset, \quad \text{for all }m.
+\end{align*} Conversely, %if we can find at least one $x \in X$ and some $m \ge 1$ such that $x \in \bigcap_{N \in \bN}E_{N, m}$, then $f_n$ \emph{does not pointwise converge} to $f$. In other word, 
+to prove \emph{\textbf{not pointwise convergence}}, we need to find a $x \in X$ and for an arbitrary fixed $m \ge 1$ such that 
+\begin{align*}
+x \in \bigcap_{N  \in \bN}\bigcup_{n\ge N}\set{x \in X: \abs{f_n(x) - f(x)} \ge 1/m} = \limsup\limits_{n\rightarrow \infty}\set{x \in X: \abs{f_n(x) - f(x)} \ge 1/m}.
+\end{align*} 
+
+\item The \emph{\textbf{pointwise almost everywhere convergence}} indicates that there exists \emph{\textbf{a null set}} $F$ with $\mu(F) = 0$ such that for every $x \in X \setminus F$ and any  $m\ge 1$, there exists some $N \equiv N(m,x)\ge 1$ such that  $(T_{N,m}\setminus F) \not\ni x$. Equivalently, \emph{\textbf{the tail support \underline{shrinks to a nulll set}}}. Note that it makes no assumption on $(T_{N,m}\cap F)$. 
+\begin{align*}
+&\lim\limits_{N\rightarrow \infty}T_{N,m} \setminus F = \limsup\limits_{n\rightarrow \infty}E_{n,m} \setminus F = \emptyset, \quad \text{for all }m.\\
+\Leftrightarrow &\quad \bigcap_{N \in \bN}T_{N,m} =   \lim\limits_{N\rightarrow \infty}T_{N,m} = F \\
+\Leftrightarrow &\quad \mu\paren{ \lim\limits_{N\rightarrow \infty}T_{N,m}} = \mu\paren{ \bigcap_{N \in \bN}T_{N,m}} = 0
+\end{align*} Conversely, %if we can find at least one $x \in X \setminus F$ and some $m \ge 1$ such that $x \in \bigcap_{N \in \bN}E_{N, m} \setminus F$, then we say $f_n$ \emph{does not pointwise almost everywhere converge} to $f$. In other word, 
+to prove \emph{\textbf{not pointwise almost convergence}},  we need to find a $x \in X$ and for an arbitrary fixed $m \ge 1$ such that 
+\begin{align*}
+x \in \bigcap_{N  \in \bN}\bigcup_{n\ge N}\set{x \in X: \abs{f_n(x) - f(x)} \ge 1/m} \setminus F = \limsup\limits_{n\rightarrow \infty}\set{x \in X\setminus F: \abs{f_n(x) - f(x)} \ge 1/m}.
+\end{align*} 
+
+\item The \emph{\textbf{uniform convergence}} indicates that for each $m\ge 1$, there exists some $N(m)\ge 1$ (not depending on $x$) such that $T_{N,m} = \emptyset$. (i.e. $T_{N,m} \not\ni x$ for all $x \in X$.) So \emph{\textbf{the tail support \underline{is an empty set}}}
+
+
+\item The \emph{\textbf{uniformly almost everywhere convergence}} indicates that there exists some null set $F$ with $\mu(F) =0$ such that for each $m\ge 1$, there exists some $N(m)\ge 1$ (not depending on $x$) such that $(T_{N,m}  \setminus F) = \emptyset$. (i.e. $T_{N,m}\not\ni x$ for all $x \in X \setminus F$.) Equivalently, \emph{\textbf{the tail support \underline{is a null set}}}: 
+\begin{align*}
+& T_{N,m} = F \\
+\Leftrightarrow &\quad \mu\paren{T_{N,m}} = 0
+\end{align*}
+
+
+\item The \emph{\textbf{almost uniform convergence}}  indicates that for every $\delta$, there exists \emph{some measurable set} $F_{\delta}$ with $\mu(F_{\delta}) < \delta$ such that  for each $m\ge 1$ there exists some $N(m)\ge 1$ (not depending on $x$) such that $(T_{N,m} \setminus F_{\delta}) = \emptyset$. (i.e. $T_{N,m} \not\ni x$ for all $x \in X \setminus F_{\delta}$.) Equivalently, \emph{\textbf{\underline{the measure of  tail support shrinks to zero}}}:
+\begin{align*}
+\mu\paren{T_{N,m}} &\le \delta  \quad \Leftrightarrow \quad T_{N,m} = F_\delta\\
+\lim\limits_{N\rightarrow \infty}\mu\paren{T_{N,m}} &=0
+\end{align*} 
+
+
+\item The \emph{\textbf{convergence in measure}} indicates that for any $m\ge 1$ and any $\delta > 0$, there exists $N \equiv N(m, \delta)\ge 1$ such that for all $n \ge N$, \emph{the \underline{\textbf{width}} of $n$-th event \underline{\textbf{shrinks to zero}}}:
+\begin{align*}
+\mu(E_{n,m}) &\le \delta \\
+ \lim\limits_{n\rightarrow \infty}\mu(E_{n, m}) &:=  \lim\limits_{n\rightarrow \infty}\mu\paren{\set{x \in X: \abs{f_n(x) - f(x)} \ge \epsilon} } =0 
+\end{align*} 
+\end{enumerate}
+\end{remark}
+
+\item \begin{definition}
+Define the \emph{\textbf{maximum variation}} between $(f_n)$ and $f$ as $ \sup_{x\in X}\abs{f_{n}(x)- f(x)}$. Note that 
+\begin{align*}
+ \sup\limits_{x\in X}\abs{f_{n}(x)- f(x)} &\ge \sup_{x\in X\setminus F, \mu(F) =0}\abs{f_{n}(x)- f(x)}.
+\end{align*}
+\end{definition}
+
+\item \begin{remark}
+From \emph{Borel-Cantelli Lemma}, we see that in order to show \emph{the \textbf{pointwise almost everywhere} convergence}, i.e.  $\mu\paren{\bigcap_{N}T_{N,\epsilon}} =\mu(\limsup_{n \rightarrow \infty}E_{n, \epsilon})= 0$ it suffice to show that \emph{\textbf{the measure of the tail support is finite}}, $\mu\paren{T_{N,\epsilon}} = \sum_{n=N}^{\infty}\mu(E_{n, \epsilon}) < \infty$. Note that this condition implies that it not only converges \emph{\textbf{in measure}} $\mu(E_{n, \epsilon}) \rightarrow 0$ but converge in \textbf{\emph{an absolutely summable}} fashion.
+\end{remark}
+\end{itemize}
+
+\newpage
+\subsubsection{Comparison}
+\begin{table}[h!]
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\belowdisplayskip}{-10pt}
+\setlength{\abovedisplayshortskip}{0pt}
+\setlength{\belowdisplayshortskip}{0pt}
+\footnotesize
+\centering
+\caption{Comparison of Modes of Convergence}
+\label{tab: convergence}
+%\setlength{\extrarowheight}{1pt}
+\renewcommand\tabularxcolumn[1]{m{#1}}
+\small
+\begin{tabularx}{1\textwidth} { 
+  | >{\raggedright\arraybackslash} m{2cm}
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X  | }
+ \hline
+ &    \emph{\textbf{tail support}} & \emph{\textbf{width}} & \emph{\textbf{maximum variation}} & \emph{\textbf{subgraph}}\\
+ \hline 
+ \emph{\textbf{definition}}& 
+ \begin{align*}
+ T_{N,\epsilon} =\bigcup_{n \ge N}E_{n,\epsilon}
+\end{align*} &  
+\begin{align*}
+\mu(E_{n,\epsilon})
+\end{align*}
+& 
+\begin{align*}
+\sup_{x \in X}\{\abs{f_n(x) - f(x)}\}
+\end{align*}
+&
+\begin{align*}
+\Gamma(f_{n}) =\left\{(x,t): \right.\\
+\left. 0\le t \le f_n(x)\}\right.
+\end{align*} 
+ \\
+ \hline
+ \emph{\textbf{pointwise}}  & 
+  \begin{align*}
+ \bigcap_{N=1}^{\infty}T_{N,\epsilon} = \emptyset
+\end{align*}
+& & \emph{or}, $\rightarrow 0$ on $X$ &   \\
+\hline
+ \emph{\textbf{point-wise a.e.}}   & 
+  \begin{align*}
+ \mu\paren{\bigcap_{N=1}^{\infty}T_{N,\epsilon}} = 0
+\end{align*}
+& &  \emph{or}, $\rightarrow 0$ on $X \setminus E$ &  \\
+\hline
+\emph{\textbf{uniform}}  & $T_{N,\epsilon} = \emptyset$ & & 
+ equivalently, $\rightarrow 0$ on $X$ & \\
+\hline
+\emph{\textbf{uniform a.e. / $L^{\infty}$ norm}}  & $\mu\paren{T_{N,\epsilon}} =0$ & & 
+equivalently, $\rightarrow 0$ on $X \setminus E$  & \\
+\hline
+ \emph{\textbf{almost uniform}} & 
+  \begin{align*}
+ \lim\limits_{N \rightarrow \infty}\mu\paren{T_{N,\epsilon}} = 0
+\end{align*} 
+ & & or, $\rightarrow 0$ on $X \setminus E$  &\\
+ \hline
+ \emph{\textbf{in measure}} & &
+  \begin{align*}
+ \lim\limits_{n \rightarrow \infty}\mu\paren{E_{n,\epsilon}} = 0
+\end{align*}  
+  & or, $\rightarrow 0$ on $X \setminus E$ &\\
+  \hline
+\emph{\textbf{$L^{1}$ norm}} & & &
+$\rightarrow 0$ and support fixed or non-increasing
+ & 
+  \begin{align*}
+  \text{area of }\Gamma(f_n) = \cA(\Gamma(f_n))\\
+  \lim\limits_{n \rightarrow \infty}\cA(\Gamma(\abs{f_n- f})) = 0
+\end{align*} \\
+\hline
+\end{tabularx}
+\end{table}
+
+\newpage
+
+\subsection{Relationships between Different Modes of Convergence}
+\begin{itemize}
+\item \begin{proposition} \citep{tao2011introduction}\\
+ Let $(X, \srF, \mu)$ be a measure space, and let $f_n : X \rightarrow \bC$ and $f : X \rightarrow \bC$ be measurable functions
+\begin{enumerate}
+\item If $f_n$ converges to $f$ \textbf{uniformly}, then $f_n$ converges to $f$ \textbf{pointwisely}.
+\item If $f_n$ converges to $f$ \textbf{uniformly}, then $f_n$ converges to $f$ in \textbf{$L^\infty$ norm}. \textbf{Conversely}, if $f_n$ converges to $f$ \textbf{in $L^\infty$ norm}, then $f_n$ converges to $f$ \textbf{uniformly outside of a null set} (i.e. there exists a null set $E$ such that the restriction $\rlat{f_n}{X/E}$ of $f_n$ to the complement of $E$ converges to the restriction $\rlat{f}{X/E}$ of $f$).
+\item If $f_n$ converges to $f$ in \textbf{$L^\infty$ norm}, then $f_n$ converges to $f$ \textbf{almost uniformly}.
+\item If $f_n$ converges to $f$ \textbf{almost uniformly}, then $f_n$ converges to $f$ \textbf{pointwise almost everywhere}.
+\item If $f_n$ converges to $f$ \textbf{pointwise}, then $f_n$ converges to $f$ \textbf{pointwise almost everywhere}.
+\item If $f_n$ converges to $f$ in \textbf{$L^1$ norm}, then $f_n$ converges to $f$ \textbf{in measure}.
+\item If $f_n$ converges to $f$ \textbf{almost uniformly}, then $f_n$ converges to $f$ \textbf{in measure}.
+\end{enumerate}
+\end{proposition}
+
+\item \begin{remark} This diagram shows the \emph{relative strength} of different \emph{modes of convergence}. The direction arrows $A \rightarrow B$ means ``if $A$ holds, then $B$ holds".
+\[
+  \begin{tikzcd}
+     \text{\emph{uniform}} \arrow{dd}{}  \arrow{r}{}  \arrow[rr, swap, bend left] & \text{\emph{uniformly a.e.}}  \arrow{d}{} & \arrow[l, leftrightarrow] \text{\emph{in $L^{\infty}$ norm}} \arrow{dl}{} \\
+      & \text{\emph{almost uniform}}  \arrow{d}{} \arrow{dr}{} &  \text{\emph{in $L^{1}$ norm}} \arrow{d}{} \\
+    \text{\emph{pointwise}}  \arrow{r}{} &   \text{\emph{pointwise a.e}.} & \text{\emph{in measure}}
+  \end{tikzcd}
+\] 
+Moreover, here are some counter statements:
+\begin{itemize}
+\item $L^{\infty} \not\rightarrow L^{1}$: see the ``\emph{Escape to Width Infinity}" example below.
+\item $\text{\emph{\textbf{uniform}} } \not\rightarrow L^{1}$: see the ``\emph{Escape to Width Infinity}" example below.
+\item $L^{1}  \not\rightarrow \text{\emph{\textbf{uniform}} }$: see the ``\emph{Typewriter Sequence}" example below.
+\item $\text{\emph{\textbf{pointwise}} } \not\rightarrow L^{1}$: see the ``\emph{Escape to Horizontal Infinity}" example below.
+\item $\text{\emph{\textbf{pointwise}} } \not\rightarrow \text{\emph{\textbf{uniform}}}$: see the ``$f_n = x/n$" example above.
+\item For finite measure space, $\text{\emph{\textbf{pointwise a.e.}} } \rightarrow \text{\emph{\textbf{almost uniform}}}$: see the Egorov's theorem.
+\item $\text{\emph{\textbf{almost uniform}}}  \not\rightarrow L^{1}$: see the ``\emph{Escape to Vertical Infinity}" example below.
+\item $\text{\emph{\textbf{almost uniform}}}  \not\rightarrow L^{\infty}$: see the ``\emph{Escape to Vertical Infinity}" example below. The \emph{converse} is true, however.
+\item For bounded $f_n \le G, a.e.\; \forall n$, then $\text{\emph{\textbf{pointwise a.e.}} } \rightarrow L^{1}$: see \emph{Dominated Convergence Theorem}. 
+\item $L^{1}  \not\rightarrow \text{\emph{\textbf{pointwise a.e.}} }$: see the ``\emph{Typewriter Sequence}" example below.
+\item $\text{\emph{\textbf{in measure}}} \not\rightarrow \text{\emph{\textbf{pointwise a.e.}} }$: see the ``\emph{Typewriter Sequence}" example below.
+\item $L^{1}  \rightarrow \text{\emph{\textbf{convergence in integral}}}$:  by \emph{triangle inequality}. Note that \emph{the other modes of convergence} \emph{does \textbf{not directly} lead to convergence in integral}.
+\end{itemize} 
+\end{remark}
+\end{itemize}
+
+\subsection{Counter Examples}
+\begin{itemize}
+\item \begin{example} (\emph{\textbf{Escape to Horizontal Infinity}}).\\
+ Let $X$ be the real line with Lebesgue measure, and let 
+\begin{align*}
+f_n(x) \equiv \mathds{1}_{[n,n+1]}.
+\end{align*}  Note that \underline{the \emph{\textbf{height}} and \emph{\textbf{width}} \emph{\textbf{do not shrink to zero}}}, but \emph{\textbf{the tail set}} shrinks to \emph{\textbf{the empty set}}. We have the following statements on different modes of convergence:
+\begin{enumerate}
+\item  $f_n$ \emph{\textbf{converges} \textbf{pointwise} to $f = 0$}, (thus \textbf{\emph{pointwise a.e.}})
+\item  $f_n$ \emph{\textbf{does not} converges  to $f = 0$ \textbf{uniformly}},
+\item  $f_n$ \emph{\textbf{does not} converges to $f = 0$} in \emph{\textbf{$L^{\infty}$ norm}}, 
+\item  $f_n$ \emph{\textbf{does not} converges to $f = 0$} \emph{\textbf{almost uniformly}} 
+\item $f_n$ \emph{\textbf{does not} converges to $f = 0$} \emph{\textbf{in measure}}.
+\item $\int_{\bR}f_{n} dx = 1$ \emph{\textbf{does not} converge} to $\int_{\bR}f dx = 0$.
+\item  $f_n$ \emph{\textbf{does not} converges to $f = 0$} \emph{\textbf{in $L^1$ norm}}. 
+\end{enumerate} Somehow, \emph{all the \textbf{mass}} in the $f_n$ has \emph{escaped} by \emph{moving off to infinity} in a \emph{\textbf{horizontal direction}}, leaving none behind for the pointwise limit $f$. In \emph{frequency domain}, it corresponds to \emph{\textbf{\underline{escaping to spatial infinity}}}.  
+\end{example}
+
+\item \begin{example} (\emph{\textbf{Escape to Width Infinity}}).\\
+Let $X$ be the real line with Lebesgue measure, and let
+\begin{align*}
+f_n \equiv \frac{1}{n}\mathds{1}_{[0,n]}.
+\end{align*} See that \emph{the \textbf{height} goes to \textbf{zero}}, but the \underline{\emph{\textbf{width} (and \textbf{tail support}) go to \textbf{infinity}}}, causing the \underline{$L^1$ norm to stay \textbf{\emph{bounded away from zero}}}. We have the following statements on different modes of convergence:
+\begin{enumerate}
+\item  $f_n$ \emph{\textbf{converges}  to $f = 0$ \textbf{uniformly}}. (Thus,  \emph{\textbf{pointwise}}, \emph{\textbf{pointwise a.e.}}, \emph{\textbf{uniformly a.e.}}, \emph{\textbf{almost uniformly}}, \emph{\textbf{in $L^{\infty}$ norm}} and \emph{\textbf{in measure}})
+\item $\int_{\bR}f_{n} dx = 1$ \emph{\textbf{does not converge} to $\int_{\bR} f dx = 0$}. 
+This is due to the \emph{\textbf{increasingly wide} nature} of \emph{the \underline{\textbf{support}} of the $f_n$}. If all the $f_n$ were supported \emph{in a single set of finite measure}, this will not happen. 
+\item $f_n$ \emph{\textbf{does not} converges to $f = 0$} \emph{\textbf{in $L^1$ norm}}. 
+\end{enumerate}   In \emph{frequency domain}, it corresponds to \emph{\textbf{\underline{escaping to zero frequency}}}. 
+\end{example}
+
+\item \begin{example} (\emph{\textbf{Escape to Vertical Infinity}}).\\  
+Let $X$ be the unit interval $[0, 1]$ with Lebesgue measure (restricted from $\bR$), and let 
+\begin{align*}
+f_n = n\mathds{1}_{\brac{ \frac{1}{n}, \frac{2}{n}}}.
+\end{align*} Note that the \emph{\textbf{height} goes to \textbf{infinity}}, but \emph{the \textbf{width} (and \textbf{tail support}) go to \textbf{zero} (or \textbf{the empty set})}, causing the \underline{\emph{$L^1$ norm to stay \textbf{bounded away from zero}}}. We have the following statements on different modes of convergence:
+\begin{enumerate}
+\item $f_n$ \emph{\textbf{converges} \textbf{pointwise} to $f = 0$}, (thus \textbf{\emph{pointwise a.e.}})
+\item  $f_n$ \emph{\textbf{converges} to $f = 0$} \emph{\textbf{almost uniformly}}, (thus \emph{\textbf{in measure}}) 
+\item  $f_n$ \emph{\textbf{does not} converges  to $f = 0$ \textbf{uniformly}},
+\item  $f_n$ \emph{\textbf{does not} converges to $f = 0$} in \emph{\textbf{$L^{\infty}$ norm}}, 
+\item $\int_{\bR}f_{n} dx = 1$ \emph{\textbf{does not} converge} to $\int_{\bR}f dx = 0$.
+\item  $f_n$ \emph{\textbf{does not} converges to $f = 0$} \emph{\textbf{in $L^1$ norm}}. 
+\end{enumerate} Note that we have finite measure on $X  = [0, 1]$. This time, the mass has \emph{escaped \textbf{vertically}}, through \emph{the \textbf{increasingly large} values of $f_n$}.  In \emph{frequency domain}, it corresponds to \underline{\emph{\textbf{escaping to infinity frequency}}}. 
+\end{example}
+
+\item \begin{example}  (\emph{\textbf{Typewriter Sequence}}). \\
+Let $f_n$ be defined by the formula
+\begin{align*}
+f_{n} &\equiv \ind{x \in \brac{ \frac{n- 2^{k}}{2^{k}} , \frac{n+ 1- 2^{k}}{2^{k}}}}
+\end{align*} whenever $k \ge  0$ and $2^k \le  n < 2^{k}+1$. This is a sequence of indicator functions of \underline{\emph{\textbf{intervals}} of \emph{\textbf{decreasing length}}}, \emph{\textbf{marching} across the unit interval $[0, 1]$ \textbf{\underline{over and over} again}}. See that \emph{the \textbf{width} goes to \textbf{zero}}, but \underline{\emph{the \textbf{height} and the \textbf{tail support stay fixed}}} (and thus \emph{\textbf{bounded away from zero}}). We have the following statements on different modes of convergence:
+\begin{enumerate}
+\item $f_n$ \emph{\textbf{converges} to $f = 0$} \emph{\textbf{in $L^1$ norm}}, (thus \emph{\textbf{in measure}}) 
+\item  $f_n$ \emph{\textbf{does not} converges  to $f = 0$ \textbf{pointwise a.e.}}, (thus \emph{\textbf{not pointwise}}, \emph{\textbf{not almost uniformly}}, \emph{\textbf{not uniformly a.e.}},  \emph{\textbf{not uniformly}}, \emph{\textbf{not in $L^{\infty}$ norm}} ) 
+\end{enumerate}
+\end{example}
+\end{itemize}
+
+\subsection{Uniqueness}
+\begin{itemize}
+\item \begin{proposition}
+Let $f_n : X \rightarrow \bC$ be a sequence of measurable functions, and let $f, g : X \rightarrow \bC$ be two additional measurable functions. Suppose that $f_n$ converges to $f$ \textbf{along one of the seven modes of convergence} defined above, and $f_n$ converges to $g$ \textbf{along another of the seven modes of convergence} (or perhaps the same mode of convergence as for $f$). Then $f$ and $g$ \textbf{agree almost everywhere}.
+\end{proposition}
+
+\item \begin{remark} It suffice to show that when $f_n$ converges to $f$ \emph{\textbf{pointwise almost everywhere}}, and $f_n$ converges to $g$ \emph{\textbf{in measure}}. We need to show that $f = g$ \emph{almost everywhere}. 
+\end{remark}
+
+\item \begin{remark}
+Even though the modes of convergence all \emph{differ} from each other, they are all \emph{\textbf{compatible}} in the sense that they \emph{\textbf{never disagree}} about \emph{which function} $f$ a sequence of functions $f_n$ \emph{\textbf{converges to}}, \emph{outside of a set of measure zero}. 
+\end{remark}
+\end{itemize}
+
+\subsection{Modes of Convergence for Step Functions}
+\begin{itemize}
+\item \begin{remark}
+Consider the \emph{\textbf{step function}} $f_{n}$ as a constant multiple $f_n = A_n\ind{E_n}$ of a measurable set $E_n$, which has a limit $f=0$.
+\end{remark}
+
+\item  \begin{definition} The modes of convergence for step function $f_n$ is determined by the following quantities: 
+\begin{enumerate}
+\item the $n$-th \emph{\textbf{width}} of $f_{n}$ is $\mu(E_{n})$; 
+\item the $n$-th \emph{\textbf{height}} of $f_{n}$ is $A_{n}$;
+\item the $N$-th \emph{\textbf{tail support}} $T_N \equiv \bigcup_{n\ge N}E_{n}$ of the sequence $f_1, f_2, f_3, \ldots$.
+\end{enumerate}
+ \end{definition}
+ 
+ \item \begin{remark}
+Assume the \emph{\textbf{height}} $A_n$ exhibit \emph{one of two modes of behaviour}:
+\begin{enumerate}
+\item $A_n \rightarrow 0$, \emph{\textbf{converge to zero}};
+\item $(A_n)$ are \emph{\textbf{bounded away from zero}} (i.e. there exists $c > 0$ such that $A_n \ge c$ for every $n$.) 
+\end{enumerate}
+
+  
+ \end{remark}
+
+\item \begin{proposition}
+The following regarding the seven modes of convergence of $f_{n}= A_n\ind{E_n}$ to $f=0$:
+\begin{enumerate}
+\item $f_n$ converges \textbf{uniformly} to zero if and only if $A_n \rightarrow 0$ as $n \rightarrow \infty$.
+\item $f_n$ converges \textbf{in $L^\infty$ norm} to zero if and only if $A_n \rightarrow 0$ as $n \rightarrow \infty$.
+\item $f_n$ converges \textbf{almost uniformly} to zero if and only if $A_n \rightarrow 0$ as $n \rightarrow \infty$, or $\mu(T_N ) \rightarrow 0$ as $N \rightarrow \infty$.
+\item $f_n$ converges \textbf{pointwise} to zero if and only if $A_n \rightarrow 0$ as $n \rightarrow \infty$, or\, $\bigcap_{N=1}^{\infty}T_N  = \emptyset$.
+\item $f_n$ converges \textbf{pointwise almost everywhere} to zero if and only if $A_n \rightarrow 0$ as $n \rightarrow \infty$, or $\bigcap_{N=1}^{\infty}T_N$ is a null set.
+\item $f_n$ converges \textbf{in measure} to zero if and only if $A_n \rightarrow 0$ as $n \rightarrow \infty$, or or $\mu(E_n) \rightarrow 0$ as $n \rightarrow \infty$.
+\item $f_n$ converges \textbf{in $L^1$ norm} if and only if $A_n\mu(E_n) \rightarrow 0$ as $n \rightarrow \infty$.
+\end{enumerate}
+\end{proposition}         
+
+\item \begin{remark} We summarize the above proposition:
+\begin{itemize}
+\item \underline{When the \emph{\textbf{height}} goes to \emph{\textbf{zero}}},  then one has convergence to zero in \emph{\textbf{all modes except possibly for $L^1$ convergence}}, which requires that the \emph{\textbf{product}} of the \emph{\textbf{height}} and the \emph{\textbf{width}} goes to zero.
+
+\item \underline{If the \emph{\textbf{height} is \textbf{bounded away from zero} (positive)} and the \emph{\textbf{width}} is \emph{\textbf{positive}}} (finite support), then we \emph{\textbf{never}} have \emph{\textbf{uniform}} or \emph{$L^1$} convergence.
+
+\begin{itemize}
+\item \underline{If \emph{\textbf{the width goes to zero}}}, we have convergence in \emph{\textbf{measure}}.
+
+\item \underline{If \emph{\textbf{the measure of tail support}} \emph{\textbf{goes to zero}}}, we have \emph{\textbf{almost uniform} convergence}.
+
+\item \underline{If \emph{\textbf{the tail support} \textbf{shrinks} to a \textbf{null set}}}, we have \emph{\textbf{pointwise almost everywhere} convergence}.
+
+\item \underline{If \emph{\textbf{the tail support} \textbf{shrinks} to \textbf{the empty set}}}, we have \emph{\textbf{pointwise} convergence}. 
+\end{itemize}
+\end{itemize}
+\end{remark}   
+\end{itemize}
+\subsection{Modes of Convergence With Additional Conditions}
+\subsubsection{Finite Measure Space}
+\begin{itemize}
+\item \begin{remark}
+If we assume that $(X, \srB, \mu)$ has \emph{\textbf{finite measure}}, i.e. $\mu(X) < \infty$, we can shut down two of the four examples (namely, \emph{\textbf{escape to horizontal infinity}} or \emph{\textbf{escape to width infinity}}) and creates a few more equivalences. 
+\end{remark}
+
+\item \begin{example}
+\emph{A probability space} $(\Omega, \srF, \bP)$ is a finite measure space since $\bP(\Omega) = 1$.
+\end{example}
+
+\item \begin{theorem} (\textbf{Egorov's theorem}). \citep{royden1988real, tao2011introduction}\\
+Let $(X, \srF, \mu)$ be a \textbf{finite measure space}, that is, $\mu(X)<\infty$ and let  $f_n : X \rightarrow \bC$ be a sequence of measurable functions that converge \textbf{pointwise almost everywhere} to another function $f : X \rightarrow \bC$, and let $\epsilon > 0$. Then there exists a  $\mu$-measurable set $A$ of measure at most $\epsilon$, such that $f_n$ \textbf{converges  uniformly} to $f$ \textbf{outside} of $A$. That is, given finite measure space, convergence pointwise almost everywhere implies \textbf{converge almost uniformly}. 
+\end{theorem}
+
+\item \begin{remark}
+\emph{The \textbf{finite measure space}} condition allows us to use \emph{\textbf{the downward convergence}} of measure without much concern.
+\end{remark}
+
+\item \begin{proposition}
+Let $X$ have \textbf{finite measure}, and let $f_n : X \rightarrow \bC$ and $f : X \rightarrow \bC$ be measurable functions. If $f_n$ converges to $f$
+in $L^{\infty}$ norm, then $f_n$ also converges to $f$ in $L^1$ norm.
+\end{proposition}
+
+\item \begin{remark}
+For finite measure space, 
+\[
+  \begin{tikzcd}
+     \text{\emph{uniform}} \arrow{dd}{}  \arrow{r}{}  \arrow[rr, swap, bend left] & \text{\emph{uniformly a.e.}}  \arrow{d}{} &\arrow[l, leftrightarrow] \text{\emph{in $L^{\infty}$ norm}} \arrow{dl}{} \arrow[d,  red]  \\
+      & \text{\emph{almost uniform}}  \arrow{d}{} \arrow{dr}{} &  \text{\emph{in $L^{1}$ norm}} \arrow{d}{} \\
+    \text{\emph{pointwise}}  \arrow{r}{} &   \text{\emph{pointwise a.e}.} \arrow[u, bend left, red] & \text{\emph{in measure}}
+  \end{tikzcd}
+\] 
+\end{remark}
+\end{itemize}
+\subsubsection{Fast $L^1$ Convergence}
+\begin{itemize}
+\item \begin{proposition} (\textbf{Fast L1 convergence}). \\
+Suppose that $f_n, f : X \rightarrow \bC$ are measurable functions such that $\sum_{n=1}^{\infty}\norm{f_n − f}{L^1(\mu)} < \infty$; thus,
+not only do the quantities $\norm{f_n − f}{L^1(\mu)}$ go to zero (which would mean $L^1$ convergence), but they converge in \textbf{an absolutely summable} fashion. Then 
+\begin{enumerate}
+\item $f_n$ converges \textbf{pointwise almost everywhere} to $f$.
+\item $f_n$ converges \textbf{almost uniformly} to $f$.
+\end{enumerate}
+\end{proposition}
+
+
+\item \begin{corollary} (\textbf{Subsequence Convergence}). \citep{tao2011introduction}\\
+Suppose that $f_n : X \rightarrow \bC$ are a sequence of measurable functions that converge in \textbf{$L^1$ norm} to a limit $f$. Then there exists a \textbf{subsequence} $f_{n_j}$ that converges \textbf{almost uniformly} (and hence, \textbf{pointwise almost everywhere}) to $f$ (while remaining convergent in $L^1$ norm, of course).
+\end{corollary}
+
+\item \begin{corollary} (\textbf{Subsequence Convergence in Measure}). \citep{tao2011introduction}\\
+Suppose that $f_n : X \rightarrow \bC$ are a sequence of measurable functions that \textbf{converge in measure} to a limit $f$. Then there exists a subsequence $f_{n_j}$ that converges \textbf{almost uniformly} (and hence, \textbf{pointwise almost everywhere}) to $f$.
+\end{corollary}
+
+\item \begin{remark}
+It is instructive to see how this \emph{\textbf{subsequence}} is extracted in the case of \emph{the typewriter sequence}. In general, one can view the operation of passing to a subsequence as being able to \emph{\textbf{eliminate}} ``\emph{\textbf{typewriter}}" situations in which \emph{the tail support is much larger than the width}.
+\end{remark}
+\end{itemize}
+\subsubsection{Domination and Uniform Integrability}
+\begin{itemize}
+\item \begin{remark}
+Now we turn to the \emph{reverse question}, of \emph{whether \textbf{almost uniform} convergence, \textbf{pointwise almost everywhere} convergence, or convergence \textbf{in measure} can imply \textbf{$L^1$ convergence}}. The \emph{escape to vertical} and \emph{width infinity} examples shows that without any further hypotheses, the answer to this question is \emph{\textbf{no}}. 
+\end{remark}
+
+
+\item \begin{remark} \citep{tao2011introduction} 
+There are \emph{\textbf{two major ways}} to shut down loss of mass via \emph{\textbf{escape to infinity}}.
+\begin{enumerate}
+\item One is to enforce \emph{\textbf{monotonicity}}, which \emph{\textbf{prevents each $f_n$ from abandoning the location}} where the
+mass of the preceding $f_1, \ldots , f_{n-1}$ was concentrated and which thus shuts down the above three escape scenarios. More precisely, we have the monotone convergence theorem.
+
+\item The other major way is to \emph{\textbf{dominate} all of the functions involved by an \textbf{absolutely convergent one}}. This result is known as the dominated convergence theorem. 
+\end{enumerate} 
+\end{remark}
+
+\item \begin{definition}
+We say that a sequence $f_n : X \rightarrow \bC$ is \emph{\textbf{dominated}} if there exists an \emph{\textbf{absolutely integrable function}} $g : X \rightarrow \bC$ such that $\abs{f_n(x)} \le g(x)$ for all $n$ and \emph{almost every $x$}. 
+\end{definition}
+
+\item \begin{definition} (\textbf{\emph{Uniform integrability}}).\\
+A sequence $f_n : X \rightarrow \bC$ of \textbf{\emph{absolutely integrable}} functions is said to be \underline{\textbf{\emph{uniformly integrable}}} if the following three statements hold:
+\begin{enumerate}
+\item (\textbf{\emph{Uniform bound on $L^1$ norm}}) One has $\sup_{n}\norm{f_n}{L^1(\mu)} = \sup_{n}\int_X \abs{f_n} d\mu < +\infty$.
+\item (\textbf{\emph{No escape to vertical infinity}}) One has 
+\begin{align*}
+\lim\limits_{M \rightarrow +\infty}\sup_{n}\int_{\abs{f_n} \ge M} \abs{f_n} d\mu \rightarrow 0.
+\end{align*}
+\item (\textbf{\emph{No escape to width infinity}})  One has 
+\begin{align*}
+\lim\limits_{\delta \rightarrow 0}\sup_{n}\int_{\abs{f_n} \le \delta} \abs{f_n} d\mu \rightarrow 0.
+\end{align*}
+\end{enumerate}
+\end{definition}
+
+\item \begin{proposition} (Property of Uniform Integrablility)
+\begin{enumerate}
+\item If $f$ is an \textbf{absolutely integrable} function, then the constant sequence $f_n = f$ is \textbf{uniformly integrable}. (Hint: use the monotone convergence theorem.)
+\item Every \textbf{dominated} sequence of measurable functions is \textbf{uniformly integrable}.
+\end{enumerate}
+\end{proposition}
+
+\item \begin{exercise}
+Give an example of a sequence $f_n$ of uniformly integrable functions that converge \textbf{pointwise almost everywhere} to
+zero, but do \textbf{not converge} \textbf{almost uniformly}, \textbf{in measure}, or \textbf{in $L^1$ norm}.
+\end{exercise}
+
+\item \begin{theorem} (\textbf{Uniformly integrable convergence in measure}).\\
+Let $f_n : X \rightarrow \bC$ be a \textbf{uniformly integrable} sequence of functions, and let $f : X \rightarrow \bC$ be another function. Then $f_n$ converges in \textbf{$L^1$ norm} to $f$ \textbf{if and only} if $f_n$ converges to $f$ \textbf{in measure}.
+\end{theorem}
+
+\item \begin{proposition}
+Suppose that $f_n : X \rightarrow \bC$ are a \textbf{dominated} sequence of measurable functions, and let $f : X \rightarrow \bC$  be another measurable function. Show that $f_n$ converges \textbf{pointwise almost everywhere} to $f$ \textbf{if and only if} $f_n$ converges in \textbf{almost uniformly} to $f$.
+\end{proposition}
+\end{itemize}
+
+\subsection{Convergence in Distribution}
+\begin{itemize}
+\item \begin{remark} (\emph{\textbf{Convergence of Measures Induced by Function}})\\
+\underline{\emph{\textbf{Convergence in distribution}}} is also called \underline{\emph{\textbf{weak convergence}}} in probability theory \citep{folland2013real}. In general,  it is actually \emph{\textbf{not} a mode of \textbf{convergence of functions} $f_n$ \textbf{itself}} but instead is the \underline{\emph{\textbf{convergence of measures} \textbf{induced} by function $f_n$ on $\srB(\bR)$}}.
+
+In functional analysis, however, \emph{\textbf{weak convergence}} is actually reserved for a different mode of convergence, while \emph{\textbf{the convergence in distribution}} is \emph{\textbf{the weak$^*$ convergence}}.
+\begin{align*}
+ \text{weak convergence} && \int f_n d\mu \rightarrow \int f d\mu, \quad \forall \mu \in \cM(X), \\
+\text{convergence in distribution}  &&  \int f d\mu_n \rightarrow \int f d\mu, \quad \forall f \in \cC_{0}(X)
+\end{align*}
+
+ \begin{definition}  (\textbf{\emph{Weak$^{*}$ Topology on Banach Space}})\\
+Let $X$ be a \emph{normed vector space} and $X^{*}$ be its dual space. The \underline{\emph{\textbf{weak$^{*}$ topology}} on $X^{*}$} is \emph{the weakest topology} on $X^{*}$ so that \emph{$f(x)$ is \textbf{continuous} \textbf{for all} $x \in X$}.
+\end{definition}
+
+\emph{The weak$^{*}$ topology} on space of regular Borel measures $\cM(X) \simeq (\cC_{0}(X))^{*}$ on a \emph{\textbf{compact Hausdorff}} space $X$, is often called \emph{\textbf{the vague topology}}. Note that $\mu_n \stackrel{w^{*}}{\rightarrow} \mu$ if and only if $\int f d\mu_n \rightarrow \int f d\mu$ for all $f \in \cC_0(X)$. 
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{Cumulative Distribution Function}}) \citep{billingsley2008probability} \\
+Let $(X,\srF, \mu)$ be a measure space. Given any real-valued measurable function $f : X \rightarrow \bR$, we define the \underline{\emph{\textbf{cumulative distribution function}}} $F : \bR \rightarrow [0, \infty]$ of $f$ to be the function $F(\lambda) := \mu_{f}((-\infty, \lambda])= \mu\paren{\set{x \in  X : f(x) \le \lambda}}$ where  $\mu_f = \mu\circ f^{-1}$ is a \emph{\textbf{measure}} on $(\bR, \srB(\bR))$ induced by function $f$.  
+\end{definition}
+
+\item \begin{definition}  (\emph{\textbf{Converge in Distribution}}) \citep{van2000asymptotic}\\
+Let $(X,\srF, \mu)$ be a measure space, $f_n : X \rightarrow \bR$ be a sequence of real-valued \emph{measurable functions}, and $f: X \rightarrow \bR$ be another measurable function. 
+
+We say that $f_n$ \underline{\emph{\textbf{converges in distribution}}} to $f$ if \emph{the cumulative distribution function} $F_n(\lambda)$ of $f_n$
+converges \emph{\textbf{pointwise}} to \emph{the cumulative distribution function} $F(\lambda)$ of $f$ at all $\lambda \in  \bR$ for which $F$ is \emph{continuous}. Denoted as \underline{$f_{n}\stackrel{d}{\rightarrow} f$} or \underline{$f_n \rightsquigarrow f$}. 
+
+Note that for the distribution $\mu_{f_n}\equiv \mu \circ f_{n}^{-1}$ is a measure on $(\bR, \srB(\bR))$. Thus $f_{n}\stackrel{d}{\rightarrow} f$ if and only if 
+\begin{align*}
+\mu_{f_n}(A)  \rightarrow \mu_f(A), \quad \forall A \in \srB(\bR).
+\end{align*} 
+\end{definition}
+
+\item  \begin{theorem} (\textbf{The Portmanteau Theorem}).  \citep{van2000asymptotic}\\
+ The following statements are equivalent.
+ \begin{enumerate}
+ \item $X_n \rightsquigarrow X$.
+ \item $\E{}{h(X_n)} \rightarrow \E{}{h(X)}$ for all \textbf{continuous functions} $h: \bR^d \rightarrow \bR$ that are non-zero only on a \textbf{closed} and \textbf{bounded} set.
+ \item $\E{}{h(X_n)} \rightarrow \E{}{h(X)}$ for all \textbf{bounded continuous functions} $h: \bR^d \rightarrow \bR$.
+ \item $\E{}{h(X_n)} \rightarrow \E{}{h(X)}$ for all \textbf{bounded measurable functions} $h: \bR^d \rightarrow \bR$ for which $\bP(X \in \{x: h\text{ is continuous at }x\})=1$.
+ \end{enumerate}
+\end{theorem}
+
+\item We can reformulate the definition of \emph{convergence in distribution} as below:
+\begin{definition} \citep{wellner2013weak}\\
+Let $(\Omega, d)$ be a \emph{metric space}, and $(\Omega, \srB)$ be \emph{a measurable space}, where $\srB$ is \emph{\textbf{the Borel $\sigma$-field on $\Omega$}}, the smallest $\sigma$-field containing \emph{all the open balls} (as the basis of \emph{metric topology} on $\Omega$). Let $\{P_n \}$ and $P$ be \emph{\textbf{Borel probability measures}} on $(\Omega, \srB)$.
+
+Then the sequence $P_n$ \underline{\emph{\textbf{converges in distribution}}} to $P$, which we write as $P_n \rightsquigarrow P$, if and only if
+\begin{align*}
+\int_{\Omega} f dP_n \rightarrow \int_{\Omega} f dP, \quad \text{ for all } f \in \cC_{b}(\Omega).
+\end{align*}
+Here $\cC_{b}(\Omega)$ denotes the set of \emph{all \textbf{bounded}, \textbf{continuous}, real functions on $\Omega$}.
+\end{definition} 
+We can see that \underline{\emph{\textbf{the convergence in distribution}} is actually \emph{\textbf{a weak$^{*}$ convergence}}}. That is, it is \emph{\textbf{the weak convergence}} of  \emph{\textbf{bounded linear functionals}} $I_{\cP_n} \stackrel{w^{*}}{\rightarrow} I_{\cP}$ on \emph{the space of all probability measures} $\cP(\cX) \simeq (\cC_{b}(\cX))^{*}$ on $(\cX, \srB)$ where 
+\begin{align*}
+I_{\cP}: f \mapsto \int_{\Omega} f d\cP.
+\end{align*} Note that the $I_{\cP_n} \stackrel{w^{*}}{\rightarrow} I_{\cP}$ is equivalent to $I_{\cP_n}(f) \rightarrow I_{\cP}(f)$ \emph{for all $f \in  \cC_{b}(\cX)$}.
+\end{itemize}
+
+
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{reference.bib}
+\end{document}
