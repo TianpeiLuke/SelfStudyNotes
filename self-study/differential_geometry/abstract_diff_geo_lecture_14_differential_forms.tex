@@ -1,0 +1,594 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs,  mathtools, dsfont}
+\usepackage{tabularx}
+\usepackage{tikz-cd}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Lecture 14: Differential Forms}
+\author{ Tianpei Xie}
+\date{Oct. 30th., 2022}
+\maketitle
+\tableofcontents
+\newpage
+\section{The Algebra of Alternating Tensors}
+\subsection{The Exterior Form}
+\begin{itemize}
+\item \begin{remark}
+Let $V$ be a finite-dimensional (real) vector space. Recall that a covariant $k$-tensor on $V$ is said to be \emph{\textbf{alternating}} if its value changes sign whenever two arguments are interchanged, or equivalently if any permutation of the arguments causes its value to be multiplied by the \emph{sign} of the permutation.
+\end{remark}
+
+\item \begin{definition}
+\emph{Alternating covariant $k$-tensors} are also called \underline{\emph{\textbf{exterior forms}}}, \underline{\emph{\textbf{multicovectors}}}, or \underline{\emph{\textbf{$k$-covectors}}}. The vector space of all k-covectors on $V$ is denoted by $\Lambda^k(V^{*})$.
+\end{definition}
+
+\item \begin{lemma}
+Let $\alpha$ be a covariant $k$-tensor on a finite-dimensional vector space $V$. The following are equivalent:
+\begin{enumerate}
+\item $\alpha$ is \textbf{alternating}.
+\item $\alpha(v_1,\ldots, v_k) = 0$ whenever the $k$-tuple $(v_1,\ldots, v_k)$ is \textbf{linearly dependent}.
+\item $\alpha$ gives the value zero whenever \textbf{two of its arguments} are \textbf{equal}:
+\begin{align*}
+\alpha(v_1, \ldots, w, \ldots, w, v_k) &= 0.
+\end{align*}
+\end{enumerate}
+\end{lemma}
+
+\item \begin{definition}
+We define a projection $\text{Alt }: T^k(V^{*}) \rightarrow \Lambda^k(V^{*})$, called \underline{\emph{\textbf{alternation}}}, as follows:
+\begin{align*}
+\text{Alt }\alpha &=\frac{1}{k!} \sum_{\sigma \in S_k} \paren{\sign{\sigma}}\paren{^{\sigma}\alpha}
+\end{align*} where $S_k$ is \emph{the symmetric group on $k$ elements}. More explicitly, this means
+\begin{align*}
+\text{Alt }\alpha(v_1, \ldots, v_k) &= \frac{1}{k!} \sum_{\sigma \in S_k} \paren{\sign{\sigma}}\alpha(v_{\sigma(1)}, \ldots, v_{\sigma(k)}).
+\end{align*}
+\end{definition}
+
+\item \begin{example}
+If $\alpha$ is any $1$-tensor, then $\text{Alt }\alpha = \alpha$. If $\beta$ is a $2$-tensor, then
+\begin{align*}
+\text{Alt }\beta(v, w) = \frac{1}{2}\paren{\beta(v, w) - \beta(w, v)}.
+\end{align*}
+For a $3$-tensor $\gamma$,
+\begin{align*}
+\text{Alt }\gamma(v, w, x) &= \frac{1}{6}\paren{\gamma(v, w, x) + \gamma(w, x, v) + \gamma(x, v, w) - \gamma(w, v, x) - \gamma(v, x, w) - \gamma(x, w, v)}.
+\end{align*} 
+\end{example}
+
+\item \begin{proposition}(\textbf{Properties of Alternation}). \\
+Let $\alpha$ be a covariant tensor on a finite-dimensional vector space.
+\begin{enumerate}
+\item $\text{Alt }\alpha$ is alternating.
+\item $\text{Alt }\alpha = \alpha$ if and only if $\alpha$ is alternating.
+\end{enumerate}
+\end{proposition}
+\end{itemize}
+\subsection{Elementary Alternating Tensors}
+\begin{itemize}
+\item \begin{definition}
+Given a positive integer $k$, \emph{\textbf{an ordered $k$-tuple}} $I=(i_1,\ldots, i_k)$ of \emph{positive integers} is called \emph{a \underline{\textbf{multi-index}} of length $k$}. If $I$ is such a multi-index and  $\sigma \in S_k$ is a permutation of $\set{1,\ldots,k}$, we write $I$ for the following multi-index:
+\begin{align*}
+I_{\sigma} &= \paren{i_{\sigma(1)},\ldots, i_{\sigma(k)}}.
+\end{align*} Note that $I_{\sigma\tau}= (I_{\sigma})_{\tau}$ for $\sigma, \tau \in S_k$.
+\end{definition}
+
+\item \begin{definition}
+Let $V$ be an $n$-dimensional vector space, and suppose $(\epsilon^1,\ldots, \epsilon^n)$ is any \emph{basis} for $V^{*}$. We now define a collection of \emph{$k$-covectors} on $V$ that generalize \underline{\emph{\textbf{the determinant function}}} on $\bR^n$. 
+
+For each multi-index $I=(i_1,\ldots, i_k)$ of length $k$ such that $1\le i_1\le \ldots \le i_k \le n$, define \emph{\textbf{a covariant $k$-tensor}} $\epsilon^I = \epsilon^{i_1,\ldots, i_k}$ by
+\begin{align}
+\epsilon^I(v_1, \ldots, v_k) &= \det{\brac{\begin{array}{ccc}
+\epsilon^{i_1}(v_1) & \ldots & \epsilon^{i_1}(v_k)\\
+\vdots & \ddots & \vdots \\
+\epsilon^{i_k}(v_1) & \ldots & \epsilon^{i_k}(v_k)
+\end{array}}} = \det{\brac{ \begin{array}{ccc}
+v_1^{i_1} & \ldots & v_k^{i_1}\\
+\vdots & \ddots & \vdots \\
+v_1^{i_k} & \ldots & v_k^{i_k}
+\end{array}  }}.   \label{eqn: elementary_alt_tensor}
+\end{align} 
+
+In other words, if $\mb{V}$ denotes the $n \times k$ matrix whose columns are the components of the vectors $v_1,\ldots,v_k$ with respect to the basis $(E_i)$ dual to $(\epsilon^i)$, then $\epsilon^I(v_1, \ldots, v_k)$ is the \emph{\textbf{determinant of the $k\times k$ submatrix}} consisting of rows $i_1,\ldots, i_k$ of $\mb{V}$. Because the determinant changes sign whenever two columns are interchanged, it is clear that $\epsilon^I$ is \emph{an alternating $k$-tensor}. We call $\epsilon^I$ \underline{\emph{\textbf{an elementary alternating tensor}}} or \underline{\emph{\textbf{elementary $k$-covector}}}.
+\end{definition}
+
+\item \begin{definition}
+If $I$ and $J$ are multiindices of length $k$, we define the Kronecker delta function:
+\begin{align*}
+\delta_{J}^{I} &= \det{\brac{ \begin{array}{ccc}
+v_{j_1}^{i_1} & \ldots & v_{j_k}^{i_1}\\
+\vdots & \ddots & \vdots \\
+v_{j_1}^{i_k} & \ldots & v_{j_k}^{i_k}
+\end{array}  }}
+\end{align*} ($I$ represent the row number, $J$ represent the column number.)
+\end{definition}
+
+\item \begin{remark} The following is the property of Kronecker delta
+\begin{equation*}
+  \delta_{J}^{I} =
+    \begin{cases}
+      \sign{\sigma} &\text{if neither $I$ nor $J$ has a repeated index},\; J = I_{\sigma}, \; \sigma \in S_k\\
+      0 & \text{if $I$ or $J$ has a repeated index or $J$ is not a permutation of $I$}
+    \end{cases}       
+\end{equation*}
+\end{remark}
+
+\item \begin{lemma} (\textbf{Properties of Elementary $k$-Covectors}). \\
+Let $(E_i)$ be a basis for $V$, let $(\epsilon^i)$ be the dual basis for $V^{*}$, and let $\epsilon^I$ be as defined above.
+\begin{enumerate}
+\item If $I$ has a repeated index, then $\epsilon^I = 0$.
+\item If $J = I_{\sigma}$ for some $\sigma \in S_k$, then $\epsilon^I = \sign{\sigma}\epsilon^{J}$.
+\item The result of evaluating $\epsilon^I$ on a sequence of basis vectors is
+\begin{align*}
+\epsilon^I\paren{E_{j_1},\ldots, E_{j_{k}}} = \delta_{J}^{I}.
+\end{align*}
+\end{enumerate}
+\end{lemma}
+
+\item \begin{definition}
+A multi-index $I=(i_1,\ldots, i_k)$ is said to be \emph{\textbf{increasing}} if $i_1 < \ldots < i_k$. It is useful
+to use a primed summation sign to denote a sum over \emph{only increasing multi-indices}
+\begin{align*}
+\sum_{I}'a_{I}\epsilon^{I} &= \sum_{\set{I: i_1 < \ldots < i_k}}a_{I}\epsilon^{I}.
+\end{align*}
+\end{definition}
+
+\item \begin{proposition}\label{prop: basis_alternating_tensor} (\textbf{A Basis for $\Lambda^k(V^{*})$})\\
+Let $V$ be an $n$-dimensional vector space. If $(\epsilon^i)$ is any basis for $V^{*}$, then for each positive integer $k \le n$, the collection of $k$-covectors
+\begin{align*}
+\underline{\mathcal{E} = \set{\epsilon^I: \text{$I$ is an increasing multi-index of length $k$}}}
+\end{align*} is \textbf{a basis for $\Lambda^k(V^{*})$}. Therefore,
+\begin{align*}
+\text{dim }\Lambda^k(V^{*}) = {n  \choose  k} = \frac{n!}{k! (n-k)!}
+\end{align*} If $k > n$, then $\text{dim }\Lambda^k(V^{*}) = 0$.
+\end{proposition}
+
+\item \begin{remark}
+In particular, for an $n$-dimensional vector space $V$, this proposition implies that $\Lambda^n(V^{*})$ is \emph{\textbf{$1$-dimensional}} and is spanned by $\epsilon^{1,\ldots,n}$.
+\end{remark}
+
+\item \begin{proposition} Suppose $V$ is an $n$-dimensional vector space and $\omega \in \Lambda^n(V^{*})$. If $T: V \rightarrow V$ is any \textbf{linear map} and $v_1, \ldots, v_n$ are arbitrary vectors in $V$, then
+\begin{align}
+\omega\paren{Tv_1, \ldots, Tv_n} &= \paren{\det{T}}\omega\paren{v_1, \ldots, v_n}. \label{eqn: k_covector_linear_map}
+\end{align}
+\end{proposition}
+\end{itemize}
+
+\subsection{The Wedge Product}
+\begin{itemize}
+\item \begin{definition}
+Let $V$ be a finite-dimensional real vector space. Given $\omega \in \Lambda^k(V^{*})$ and $\eta \in \Lambda^l(V^{*})$, we define their \underline{\emph{\textbf{wedge product}}} or \underline{\emph{\textbf{exterior product}}} to be the following \emph{$(k+ l)$-covector}:
+\begin{align}
+\omega \wedge \eta &= \frac{(k+l)!}{k! \,l!}\text{Alt}\paren{\omega \otimes \eta } =   \frac{1}{k! \,l!}\sum_{\sigma \in S_{k+l}} \paren{\sign{\sigma}}\paren{^{\sigma}\paren{\omega \otimes \eta }}  \label{eqn: wedge_product}
+\end{align}
+\end{definition}
+
+\item The coefficients come from the following lemma:
+\begin{lemma}
+Let $V$ be an $n$-dimensional vector space and let $(\epsilon^1,\ldots, \epsilon^n)$ be a basis for $V^{*}$. For any multi-indices $I=(i_1,\ldots, i_k)$ and $J=(j_1,\ldots, j_l)$,
+\begin{align}
+\epsilon^{I} \wedge \epsilon^{J} &= \epsilon^{IJ} \label{eqn: wedge_product_of_basis}
+\end{align}
+where $IJ= (i_1,\ldots, i_k, j_1,\ldots, j_l)$ is obtained by \textbf{concatenating} $I$ and $J$.
+\end{lemma}
+
+\item \begin{proposition} (\textbf{Properties of the Wedge Product}). \\
+Suppose $\omega, \omega', \eta, \eta'$ and $\xi$ are \textbf{multicovectors} on a finite-dimensional vector space $V$.
+\begin{enumerate}
+\item (\textbf{Bilinearity}): For $a,a; \in \bR$,
+\begin{align*}
+(a \omega + a' \omega')\wedge \eta &=  a (\omega \wedge \eta)+a' (\omega' \wedge \eta),\\
+\eta \wedge  (a \omega + a' \omega')&=  a ( \eta \wedge \omega)+a' ( \eta  \wedge \omega').
+\end{align*}
+\item (\textbf{Associativity}):
+\begin{align*}
+\omega \wedge (\eta  \wedge \xi) &= (\omega \wedge \eta ) \wedge \xi 
+\end{align*}
+\item (\textbf{Anticommutativity}): For $\omega \in \Lambda^k(V^{*})$ and $\eta \in \Lambda^l(V^{*})$,
+\begin{align}
+\omega \wedge \eta &= \paren{-1}^{kl} \eta \wedge \omega \label{eqn: wedge_product_anticommutative}
+\end{align}
+\item  If $(\epsilon^i)$ is any basis for $V^{*}$ and $I=(i_1,\ldots, i_k)$ is any multi-index, then
+\begin{align}
+\epsilon^{i_1} \wedge \ldots \wedge \epsilon^{i_k} = \epsilon^{I} \label{eqn: wedge_product_basis}
+\end{align}
+\item For any covectors $\omega^1,\ldots, \omega^k$ and vectors $v_1,\ldots,v_k$,
+\begin{align}
+(\omega^1 \wedge \ldots \wedge \omega^k)(v_1,\ldots,v_k) &= \det\paren{\omega^{j}(v_i)} \label{eqn: wedge_product_determinant}
+\end{align}
+\end{enumerate}
+\end{proposition}
+
+\item \begin{remark}
+Because of part (4) of this lemma, henceforth we generally use the notations $\epsilon^I$ and $\epsilon^{i_1}  \wedge \ldots \wedge \epsilon^{i_k}$ \emph{\textbf{interchangeably}}
+\end{remark}
+
+\item \begin{definition}
+A $k$-covector $\eta$ is said to be \emph{\textbf{decomposable}} if it can be expressed in the form $\eta = \omega^1 \wedge \ldots \wedge \omega^k$, where $\omega^1,\ldots, \omega^k$ are \emph{covectors}. 
+\end{definition}
+
+\item \begin{remark}
+It is important to be aware that not every $k$-covector is decomposable when $k > 1$; however, it follows from Proposition \ref{prop: basis_alternating_tensor} and above Lemma part (4) that \emph{\textbf{every $k$-covector} can be written as a \textbf{linear combination} of \textbf{decomposable ones}}.
+\end{remark}
+
+\item \begin{definition}
+For any $n$-dimensional vector space $V$, define \textbf{a vector space} $\Lambda(V^{*})$ by
+\begin{align*}
+\Lambda(V^{*}) &= \bigoplus_{k=0}^{n} \Lambda^k(V^{*}).
+\end{align*}
+It follows from Proposition \ref{prop: basis_alternating_tensor} that $\text{dim }\Lambda(V^{*}) = 2^n$. The wedge product turns $\Lambda(V^{*})$ into an \emph{\textbf{associative algebra}}, called \underline{\emph{\textbf{the exterior algebra}}} (or \emph{\textbf{Grassmann algebra}}) of $V$.  
+
+An algebra $A$ is said to be \emph{\textbf{graded}} if it has a direct sum decomposition $A = \bigoplus_{k\in \bZ}A^k$ such that the product satisfies $(A^k)(A^l) \subseteq A^{k+l}$ for each $k$ and $l$. A graded algebra is \emph{\textbf{anticommutative}} if the product satisfies $ab = (-1)^{kl}ba$ for $a \in A^k$, $b \in A^l$.  So \emph{\textbf{$\Lambda(V^{*})$ is an anticommutative graded algebra}}.
+\end{definition}
+
+\item \begin{remark} There are two \emph{\textbf{conventions}} to define the wedge product:
+\begin{enumerate}
+\item \underline{\emph{\textbf{The determinant convention}}}: 
+\begin{align*}
+\omega \wedge \eta &= \frac{(k+l)!}{k! \,l!}\text{Alt}\paren{\omega \otimes \eta }
+\end{align*} In this way, we have
+\begin{align*}
+\epsilon^{i_1} \wedge \ldots \wedge \epsilon^{i_k} &= \epsilon^{I},\\
+(\omega^1 \wedge \ldots \wedge \omega^k)(v_1,\ldots,v_k) &= \det\paren{\omega^{j}(v_i)}
+\end{align*}
+\item \emph{\textbf{The Alt convention}}
+\begin{align*}
+\omega\, \overline{\wedge} \,\eta &= \text{Alt}\paren{\omega \otimes \eta }
+\end{align*} In this way, we have to multiply the coefficient in front of basis and deterimant
+\begin{align*}
+\epsilon^{I}\, \overline{\wedge} \,\epsilon^{J} &= \frac{k! \,l!}{(k+l)!}\epsilon^{IJ}, \\
+(\omega^1 \, \overline{\wedge} \, \ldots \, \overline{\wedge} \, \omega^k)(v_1,\ldots,v_k) &= \frac{1}{k!} \det\paren{\omega^{j}(v_i)}
+\end{align*}
+\end{enumerate}
+\end{remark}
+
+\item \begin{remark}
+ For any covectors $\omega^1,\ldots, \omega^k$ and vectors $v_1,\ldots,v_k$, \emph{\textbf{the exterior product}} is considered as the \emph{\textbf{determinant function}} of a $k \times k$ submatrix 
+\begin{align*}
+(\omega^1 \wedge \ldots \wedge \omega^k)(v_1,\ldots,v_k) &= \det\brac{ \begin{array}{ccc}
+\omega^{1}(v_1) & \ldots & \omega^{1}(v_k)\\
+\vdots & \ddots & \vdots\\
+\omega^{k}(v_1) & \ldots & \omega^{k}(v_k)
+\end{array}} 
+\end{align*} where \emph{\textbf{vectors} $v_1,\ldots,v_k$ forms \textbf{column vector}}, and \emph{\textbf{covectors} $\omega^1,\ldots, \omega^k$ form the \textbf{row vector}}. 
+
+In other words, we can think of \emph{\textbf{exterior product of covectors}} as \emph{\textbf{an \underline{abstraction} of \underline{determinant operation}}}.
+\end{remark}
+\end{itemize}
+
+\subsection{Interior Multiplication}
+\begin{itemize}
+\item \begin{definition}
+Let $V$ be a finite-dimensional vector space. For each $v \in V$, we define a \emph{linear map} $\iota_v: \Lambda^k(V^{*}) \rightarrow \Lambda^{k-1}(V^{*})$, called \underline{\emph{\textbf{interior multiplication (interior product)}}} by $v$, as follows:
+\begin{align*}
+(\iota_v\omega)(w_1,\ldots, w_{k-1}) &= \omega\paren{v, w_1,\ldots, w_{k-1}}.
+\end{align*} In other words, $(\iota_v\omega)$ is obtained from $\omega$ by \emph{\textbf{inserting $v$ into the first slot}}.  By convention, we interpret $(\iota_v\omega)$ to be \emph{\textbf{zero}} when $\omega$ is a \emph{\textbf{$0$-covector}} (i.e., a \emph{\textbf{number}}). Another common notation is
+\begin{align*}
+v \mathbin{\lrcorner } \omega &= (\iota_v\omega).
+\end{align*}
+This is often read ``\underline{\emph{\textbf{$v$ into $\omega$}}}."
+\end{definition}
+
+\item \begin{proposition}
+Let $V$ be a finite-dimensional vector space and $v \in V$.
+\begin{enumerate}
+\item $ \iota_v \circ \iota_v = 0$.
+\item If $\omega \in \Lambda^k(V^{*})$ and $\eta \in \Lambda^l(V^{*})$,
+\begin{align}
+\iota_v(\omega \wedge \eta) &= \iota_{v}(\omega) \wedge \eta + (-1)^{k}\omega \wedge \iota_v(\eta)  \label{eqn: interior_product_property}
+\end{align}
+\end{enumerate}
+\end{proposition}
+
+\item \begin{remark} It is easy to verify the following form
+\begin{align}
+\iota_v\paren{\omega^1 \wedge \ldots \wedge \omega^{k}} = v\iprod{\paren{\omega^1 \wedge \ldots \wedge \omega^{k}}}= \sum_{i=1}^{k}(-1)^{i-1}\omega^{i}(v)\,\paren{\omega^1 \wedge \ldots \wedge \widehat{\omega}^{i} \wedge \ldots \wedge \omega^{k}} \label{eqn: interior_product_expansion}\\
+\Leftrightarrow \paren{\omega^1 \wedge \ldots \wedge \omega^{k}}(v, v_2, \ldots, v_k)= \sum_{i=1}^{k}(-1)^{i-1}\omega^{i}(v)\,\paren{\omega^1 \wedge \ldots \wedge \widehat{\omega}^{i} \wedge \ldots \wedge \omega^{k}}(v_2, \ldots, v_k) \nonumber
+\end{align} where the hat indicates that $\omega^i$ is \emph{\textbf{omitted}}. In \emph{determiant form}, it can be written as
+\begin{align}
+\det{\mb{V}} &=  \sum_{i=1}^{k}(-1)^{i-1}\omega^{i}(v)\,\det\mb{V}_{1}^{i}  \label{eqn: interior_product_determinant_expansion}
+\end{align} where $\mb{V}_{j}^{i}$ denote the $(k -1) \times (k -1)$ submatrix of $\mb{V}$ obtained by \emph{\textbf{deleting}} the $i$-th row and $j$-th column.  This is just \emph{\textbf{the expansion of $\det \mb{V}$ by minors}\ along the first column}, and therefore is equal to $\det \mb{v}$. 
+\end{remark}
+
+\item \begin{remark} 
+The \emph{exterior product} \emph{\textbf{increase}} the \emph{rank} of tensor, while the \emph{interior product} \emph{\textbf{decrease}} the \emph{rank} of tensor by $1$.
+\end{remark}
+\end{itemize}
+
+\section{Differential Forms on Manifolds}
+\begin{itemize}
+\item \begin{definition} 
+Let $T^kT^{*}M$ be the \emph{bundle} of all covariant $k$-tensors on $M$. The subset of $T^kT^{*}M$ consisting of \emph{\textbf{alternating tensors}} is denoted by $\Lambda^k(T^{*}M)$:
+\begin{align*}
+\Lambda^k(T^{*}M) &= \bigsqcup_{p\in M}\Lambda^k(T_{p}^{*}M).
+\end{align*}  $\Lambda^k(T^{*}M)$ is a \emph{smooth subbundle} of $T^{k}T^{*}M$, so it is a \emph{smooth vector bundle of rank $n \choose k$}.
+\end{definition}
+
+\item \begin{remark}
+$\Lambda^k(T^{*}M)$ is \emph{\textbf{the bundle of all alternating covariant $k$-tensors (exterior forms, $k$-covectors)}} on $M$.  
+\end{remark}
+
+\item \begin{definition}
+A \emph{\textbf{section}} of $\Lambda^k(T^{*}M)$ is called \underline{\emph{\textbf{a differential $k$-form}}}, or just a \underline{\emph{\textbf{$k$-form}}}; this is
+a \emph{(continuous) tensor field} whose value at each point is an \emph{alternating tensor}. The integer $k$ is called \emph{the \textbf{degree} of the form}. We denote the \emph{vector space} of \emph{\textbf{smooth $k$-forms}} by
+\begin{align*}
+\Omega^{k}(M) &= \Gamma\paren{\Lambda^k(T^{*}M)}.
+\end{align*}
+\end{definition}
+
+\item \begin{remark}
+\textit{A $k$-form is just an alternating covariant $k$-tensor fields}. 
+\end{remark}
+
+\item \begin{remark}
+The \emph{\textbf{wedge product}} of \emph{two differential forms} is defined \emph{\textbf{pointwise}}: $(\omega \wedge \eta)_p = \omega_p \wedge \eta_p$. Thus, \underline{\emph{\textbf{the wedge product of a $k$-form with an $l$-form is a $(k +l)$-form}}}. If $f$ is a $0$-form (i.e. a smooth function) and $\omega$ is a $k$-form, we interpret the wedge product  $f\wedge \omega$ to mean the ordinary product $f\omega$.
+\end{remark}
+
+\item \begin{remark}
+The direct sum of all vector spaces of smooth $k$-forms for $k\le n$ is 
+\begin{align}
+\Omega^{*}(M) &= \bigoplus_{k=0}^{n}\Omega^{k}(M). \label{eqn: grassman_algebra_k_form}
+\end{align} Then the wedge product turns $\Omega^{*}(M) $ into \emph{an \textbf{associative}, \textbf{anticommutative} \textbf{graded algebra}}.
+\end{remark}
+
+\item \begin{remark}(\emph{\textbf{Duality of Basis}})\\
+The basis of differential $k$-forms $(dx^{i_1} \wedge \ldots \wedge dx^{i_k})$ in $\Gamma\paren{\Lambda^{k}(T^{*}M)}$ acts on the local coordinate frames $(\partial / \partial x^i)$ in $TM$
+\begin{align*}
+\paren{dx^{i_1} \wedge \ldots \wedge dx^{i_k}}\paren{\partdiff{}{x^{j_1}}, \ldots, \partdiff{}{x^{j_k}}} = \delta_{J}^{I}
+\end{align*}  
+\end{remark}
+
+\item \begin{remark}(\emph{\textbf{Coordinate Representation of $k$-Forms}})\\
+In any smooth chart, a $k$-form $\omega$ can be written locally as
+\begin{align*}
+\omega &= \sum_{I}'\omega_{I}dx^{I} := \sum_{I}'\omega_{I}\,dx^{i_1} \wedge \ldots \wedge dx^{i_k}
+\end{align*} where the coefficients $\omega^{I}$ are \emph{\textbf{continuous functions}} defined on the coordinate domain, and we use $dx^I$ as an abbreviation for $dx^{i_1} \wedge \ldots \wedge dx^{i_k}$ (not to be mistaken for the differential of a real-valued function $x^I$). Also $\sum_{I}'\epsilon^{I}$ means that sum with increasing multi-indices.  \emph{\textbf{The component function}} $\omega_I$ is computed as
+\begin{align*}
+\omega_{I} &= \omega\paren{\partdiff{}{x^{j_1}}, \ldots, \partdiff{}{x^{j_k}}}.
+\end{align*} Note that $\omega_I$ is \underline{\emph{\textbf{the determinant of a $k \times k$ principal sub-matrix}}} \emph{\textbf{(i.e. principal minors)}} whose \emph{rows and columns} are indexed by increasing multi-index $I$.
+\end{remark}
+
+\item \begin{example} The followings are some basic differential $k$-forms:
+\begin{enumerate}
+\item Any smooth function $f \in \cC^{\infty}(M)$ is a \emph{\textbf{$0$-form}};
+\item \emph{\textbf{A differential $1$-form}} is \emph{\textbf{the covariant vector field}} $df$
+\begin{align*}
+df &= \sum_{i}\partdiff{f}{x^{i}}dx^{i}
+\end{align*}
+\item \emph{\textbf{A differential $2$-form}}  is written as
+\begin{align*}
+\omega &= \sum_{i < j}\omega_{i,j}\; dx^{i} \wedge dx^j
+\end{align*}
+\end{enumerate}
+\end{example}
+
+\item \begin{definition}
+If $F: M \rightarrow N$ is a smooth map and $\omega$ is \emph{\textbf{a differential form}} on $N$, \emph{the \textbf{pullback} $F^{*}$ is a \textbf{differential form on $M$}}; defined as for any covariant tensor field:
+\begin{align*}
+(F^{*}\omega)_p(v_1, \ldots, v_k) &= \omega_p\paren{dF_p(v_1), \ldots, dF_p(v_k)}.
+\end{align*}
+\end{definition}
+
+\item \begin{lemma}
+Suppose $F: M \rightarrow N$ is smooth.
+\begin{enumerate}
+\item $F^{*}: \Omega^k(N) \rightarrow \Omega^k(M)$ is \emph{\textbf{linear}} over $\bR$.
+\item $F^{*}(\omega \wedge \eta) = (F^{*}\omega) \wedge (F^{*}\eta)$.
+\item  In any smooth chart,
+\begin{align}
+F^{*}\paren{\sum_{I}'\omega_{I}\,dy^{i_1} \wedge \ldots \wedge dy^{i_k}} &= \sum_{I}'\paren{\omega_I \circ F}\,d(y^{i_1} \circ F) \wedge \ldots \wedge d(y^{i_k} \circ F) \label{eqn: differential_form_pull_back_coordinate_0}
+\end{align}
+\end{enumerate}
+\end{lemma}
+
+
+
+\item \begin{example}
+Let $\omega =  dx \wedge dy$ on $\bR^2$. Thinking of the transformation to polar coordinates $x = r\cos(\theta), y = r\sin(\theta)$ as an expression for the identity map with
+respect to different coordinates on the domain and codomain, we obtain
+\begin{align*}
+dx \wedge dy &= d\paren{r \cos\theta} \wedge d\paren{r \sin\theta}\\
+&= (\cos \theta \,dr -r \sin \theta  d\theta) \wedge (\sin \theta dr + r\cos \theta d\theta) \\
+&= r dr \wedge d\theta.
+\end{align*}
+\end{example}
+
+\item \begin{proposition}(\textbf{Pullback Formula for Top-Degree Forms}). \\
+Let $F: M \rightarrow N$ be a smooth map between $n$-manifolds with or without boundary. If $(x^i)$ and $(y^j)$ are smooth coordinates on open subsets $U \subseteq M$ and $V \subseteq N$, respectively, and $u$ is a continuous real-valued function on $V$, then the following holds on $U \cap F^{-1}(V)$:
+\begin{align}
+F^{*}\paren{u\,dy^{1} \xdotx{\wedge} dy^{n}} &= (u \circ F)\,(\det(DF))\,dx^{1} \xdotx{\wedge} dx^{n}  \label{eqn: differential_form_pull_back_coordinate_1}
+\end{align}
+where $DF$ represents \textbf{the Jacobian matrix of $F$} in these coordinates.
+\end{proposition} Note that $d(y^i \circ F) = dF^{i} = \det(DF)_{j}^{i} dx^{j}$
+
+\item \begin{corollary} (\textbf{Change of Coordinates for Differential Forms})\\
+If $(U, (x^i))$ and $(\widetilde{U}, (\widetilde{x}^j))$ are overlapping smooth coordinate charts on $M$, then the following identity holds on $U \cap \widetilde{U}$:
+\begin{align}
+d\widetilde{x}^{1} \wedge \ldots \wedge d\widetilde{x}^{n} &=\det\paren{\dfrac{\partial \widetilde{x}^{j}}{\partial x^i}} dx^1 \wedge \ldots \wedge dx^n.  \label{eqn: differential_form_change_of_variables}
+\end{align}
+\end{corollary}
+
+\item \begin{remark}
+The equation \eqref{eqn: differential_form_pull_back_coordinate_1} provides a computational formula for pullback of differential forms under coordinate systems for domain and codomain. And the equation \eqref{eqn: differential_form_change_of_variables} provides the fomula for change of variables of differential forms.
+\end{remark}
+
+\item \begin{definition}
+\emph{\textbf{Interior multiplication}} also extends naturally to \emph{\textbf{vector fields}} and \emph{\textbf{differential forms}}, simply by letting it act \emph{pointwise}: if $X\in \frX(M)$ and $\omega \in \Omega^k(M)$, define a $(k-1)$-form $X \iprod \omega = \iota_{X}\omega$ by
+\begin{align*}
+(X \iprod \omega)_p &= X_p \iprod \omega_p.
+\end{align*}
+\end{definition}
+\end{itemize}
+
+\section{Exterior Derivatives}
+\subsection{Definitions}
+\begin{itemize}
+\item \begin{remark}
+An important question for differential $k$-form $\omega$ is that under what condition there exists a function $f$ so that $\omega = df$, i.e, the tensor field $\omega$ is \emph{exact}. A necessary condition is that $\omega$ is \emph{closed}, i.e.
+\begin{align*}
+\partdiff{\omega_i}{x^{j}} &= \partdiff{\omega_j}{x^{i}}.
+\end{align*} In other word, $\omega$ is closed if and only if $d\omega = 0$.
+\end{remark}
+
+\item \begin{remark}
+For each smooth manifold $M$ with or without boundary, we will show that there is \emph{\textbf{a differential operator}} $d: \Omega^k(M) \rightarrow \Omega^{k+1}(M)$ satisfying $d(d\omega) = 0$ for all $\omega$.  Thus, it will follow that \emph{a necessary condition} for a smooth
+$k$-form $\omega$ to be equal to $d\eta$ for some $(k-1)$-form $\eta$ is that $d\omega = 0$.
+\end{remark}
+
+\item \begin{definition}
+If $\omega = \sum_{J}'\omega_J dx^J$ is a smooth $k$-form on an open subset $U\subseteq \bR^n$ or $\bH^n$, we define its \underline{\emph{\textbf{exterior derivative}}} $d\omega$ to be the following \underline{$(k+1)$-form}:
+\begin{align}
+d\omega := d\paren{\sum_{J}'\omega_J dx^J} =\sum_{J}' d\omega_J \wedge dx^{J},  \label{eqn: exterior_derivatives_def_0}
+\end{align}
+where $d\omega_J$ is the differential of the function $\omega_J$. In somewhat more detail, this is
+\begin{align}
+d\omega := d\paren{\sum_{J}'\omega_J dx^J} = \sum_{J}'\sum_{i}\partdiff{\omega_{J}}{x^i} dx^i \wedge dx^{j_1} \wedge \ldots \wedge dx^{j_k}. \label{eqn: exterior_derivatives_def_1}
+\end{align}
+\end{definition}
+
+\item \begin{remark}
+The \emph{exterior derivatives} of a $k$-form is \emph{\textbf{a linear combination}} of \emph{$(k+1)$-forms}. It component function is  \emph{\textbf{the principal minior} of \textbf{Jacobian matrix of component functions} $(\partdiff{\omega_j}{x^i})$}.
+\end{remark}
+
+\item \begin{remark}
+When $\omega$ is a $1$-form, this becomes
+\begin{align*}
+d\omega = d\paren{\sum_{j}\omega_j dx^j} &= \sum_j d\omega_j \wedge dx^{j}\\
+&= \sum_j \sum_{i}\partdiff{\omega_j}{x^i} dx^i \wedge dx^{j} \\
+&= \sum_{i < j} \partdiff{\omega_j}{x^i} dx^i \wedge dx^{j} + \sum_{i > j}\partdiff{\omega_j}{x^i} dx^i \wedge dx^{j}\\
+&= \sum_{i < j}\paren{\partdiff{\omega_j}{x^i}  - \partdiff{\omega_i}{x^j}}dx^i \wedge dx^{j}.
+\end{align*} Note that the component is the determinant of a $2 \times 2$ sub-matrix of Jacobian $(\partdiff{\omega_j}{x^i})$.
+\end{remark}
+
+\item \begin{proposition} (\textbf{Properties of the Exterior Derivative on $\bR^n$}).\\
+\begin{enumerate}
+\item $d$ is \textbf{linear} over $\bR$.
+\item If $\omega$ is a smooth $k$-form and $\eta$ is a smooth $l$-form on an open subset $U \subseteq \bR^n$ or $\bH^n$, then
+\begin{align*}
+d(\omega \wedge \eta) &= d\omega \wedge \eta + (-1)^{k}\omega \wedge d \eta.
+\end{align*}
+\item $d \circ d  \equiv 0$.
+\item $d$ \textbf{commutes} with \textbf{pullbacks}: if $U$ is an open subset of $\bR^n$ or $\bH^n$, $V$ is an open subset of $\bR^m$ or $\bH^m$,  $F: U \rightarrow V$ is a smooth map, and $\omega \in \Omega^k(V)$, then
+\begin{align}
+F^{*}(d\omega) &= d\paren{F^{*}\omega}.  \label{eqn: exterior_derivatives_pullback_commute}
+\end{align}
+\end{enumerate}
+\end{proposition}
+
+\item These results allow us to transplant the definition of the exterior derivative to
+manifolds.
+\begin{theorem} (\textbf{Existence and Uniqueness of Exterior Differentiation}).\\
+Suppose $M$ is a smooth manifold with or without boundary. There are \textbf{unique operators} $d: \Omega^k(M) \rightarrow \Omega^{k+1}(M)$ for all $k$, called \underline{\textbf{exterior differentiation}}, satisfying the following four properties:
+\begin{enumerate}
+\item $d$ is \textbf{linear} over $\bR$.
+\item If $\omega \in \Omega^{k}(M)$ and $\eta \in \Omega^{l}(M)$, then
+\begin{align*}
+d(\omega \wedge \eta) &= d\omega \wedge \eta + (-1)^{k}\omega \wedge d \eta.
+\end{align*}
+\item $d \circ d  \equiv 0$.
+\item For $f \in \Omega^0(M) = \cC^{\infty}(M)$, $df$ is the differential of $f$, given by $df(X) =Xf$.
+\end{enumerate}
+In any smooth coordinate chart, $d$ is given by \eqref{eqn: exterior_derivatives_def_0}.
+\end{theorem}
+
+\item \begin{remark}
+The \emph{\textbf{exterior differentiation}} defines the differential of $k$-form. It is an \textbf{\emph{extension}} of \underline{\emph{\textbf{differentiation}} to \emph{\textbf{determinant function}}}.
+\end{remark}
+
+
+\item \begin{definition}
+If $A =  \oplus_{k} A^k$ is a \emph{graded algebra}, a \emph{linear map} $T: A \rightarrow A$ is said to be a map \emph{\textbf{of degree $m$}} if $T(A^k) \subseteq A^{k+m}$ for each $k$. It is said to be an \emph{\textbf{antiderivation}} if it satisfies $T(xy) = (Tx)y + (-1)^k\, x(Ty)$ whenever $x\in A^k$ and $y \in A^l$. 
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{The Exterior Differentiation vs. The Interior Multiplication}})
+\begin{enumerate}
+\item The \emph{\textbf{exterior differentiation}} $d: \Omega^k(M) \rightarrow \Omega^{k+1}(M)$ is an  \emph{\textbf{antiderivation}} of \emph{degree} $+1$ whose \emph{\textbf{square is zero}}.
+\item On the other hand, the \emph{\textbf{interior multiplication}} $\iota_{X}: \Omega^k(M) \rightarrow \Omega^{k-1}(M)$ is an \emph{\textbf{antiderivation}} of \emph{degree} $-1$ whose \emph{\textbf{square is zero}}, where $X \in \frX(M).$
+\end{enumerate}
+\end{remark}
+
+\item Another important feature of the exterior derivative is that \emph{it \textbf{commutes} with all pullbacks}.
+\begin{proposition} (\textbf{Naturality of the Exterior Derivative}). \\
+If $F: M \rightarrow N$ is a smooth map, then for each $k$ \textbf{the pullback map} $F^{*}: \Omega^k(N) \rightarrow \Omega^k(M)$ \textbf{commutes}
+with $d$: for all $\omega \in \Omega^{k}(N)$,
+\begin{align}
+F^{*}(d\omega) &= d\paren{F^{*}\omega}.  \label{eqn: exterior_derivatives_pullback_commute_2}
+\end{align}
+\end{proposition}
+\end{itemize}
+
+%\subsection{Exterior Derivatives and Vector Calculus in $\bR^3$}
+
+\subsection{An Invariant Formula for the Exterior Derivative}
+\begin{itemize}
+\item \begin{proposition} (\textbf{Exterior Derivative of a $1$-Form}). \\
+For any smooth $1$-form $\omega$ and smooth vector fields $X$ and $Y$,
+\begin{align}
+d\omega(X,Y) &= X(\omega(Y)) - Y(\omega(X)) - \omega([X, Y]).\label{eqn: exterior_derivatives_1_form_invariant}
+\end{align}
+\end{proposition}
+\begin{proof}
+Since any smooth $1$-form can be expressed locally as a sum of terms of the form $u\,dv$ for smooth functions $u$ and $v$, it suffices to consider that case.  Suppose
+$\omega = u\,dv$, and $X, Y$ are smooth vector fields. The LHS of \eqref{eqn: exterior_derivatives_1_form_invariant}
+\begin{align*}
+d\paren{u\, dv}(X, Y) &= (du \wedge dv)(X, Y) = du(X)dv(Y) - du(Y)dv(X) \\
+&= X(u) Y(v) - X(v) Y(u)
+\end{align*}
+The RHS is
+\begin{align*}
+&=X(u\, dv(Y)) - Y(u\, dv(X)) -u\, dv([X, Y]) \\
+&= X(u\, Y(v)) - Y(u\,X(v)) - u\,[X,Y](v)\\
+&= X(u) Y(v) + u\,XY(v) - Y(u)X(v) - u\,YX(v) - u\,\paren{(XY- YX)v}\\
+&= X(u) Y(v) - Y(u)X(v) + u\,\paren{XY(v) - YX(v)} - u\,\paren{XY(v) - YX(v)}\\
+&= X(u) Y(v) - Y(u)X(v).
+\end{align*} Thus \eqref{eqn: exterior_derivatives_1_form_invariant} holds. \qed.
+\end{proof}
+
+\item \begin{proposition}
+Let $M$ be a smooth $n$-manifold with or without boundary, let $(E_i)$ be a smooth local frame for $M$, and let $(\epsilon^i)$ be the dual coframe. For each $i$,
+let $b^{i}_{j,k}$ denote the \textbf{component functions} of \textbf{the exterior derivative} of $\epsilon^i$ in this frame, and for each $j,k$, let $c^{i}_{j,k}$ be the \textbf{component functions} of the \textbf{Lie bracket} $[E_j, E_k]$:
+\begin{align*}
+d\epsilon^i =\sum_{j < k} b^{i}_{j,k}\epsilon^{j} \wedge \epsilon^{k}; \quad [E_j, E_k] = c^{i}_{j,k} E_i
+\end{align*} Then $b^{i}_{j,k}= - c^{i}_{j,k}$. 
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Invariant Formula for the Exterior Derivative}).\\
+Let $M$ be a smooth manifold with or without boundary, and $\omega \in \Omega^k(M)$. For any smooth vector fields $X_1,\ldots, X_{k+1}$ on $M$,
+\begin{align}
+d\omega\paren{X_1,\ldots, X_{k+1}} &= \sum_{1\le i \le k+1}(-1)^{i}X_i\paren{\omega\paren{X_1,\ldots,  \widehat{X}_i  \ldots, X_{k+1}}}  \nonumber\\
+&\, +   \sum_{1\le i < j \le k+1}(-1)^{i+j}\omega\paren{[X_i, X_j], X_1,\ldots,  \widehat{X}_i, \ldots,  \widehat{X}_j, \ldots, X_{k+1}},
+ \label{eqn: exterior_derivatives_k_form_invariant}
+\end{align}
+where the hats indicate \textbf{omitted} arguments.
+\end{proposition}
+
+\item \begin{remark}
+The proof of formula \eqref{eqn: exterior_derivatives_k_form_invariant} and \eqref{eqn: exterior_derivatives_1_form_invariant} is only based on the definition of $k$-form and vector fields, and it does not involve any specific coordinate system. Thus it can be used to give an \underline{\emph{\textbf{invariant definition}}} of \emph{\textbf{the exterior differentiation}} $d$.
+\end{remark}
+\end{itemize}
+
+\subsection{Lie Derivatives of Differential Forms}
+
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{book_reference.bib}
+\end{document}
+\grid

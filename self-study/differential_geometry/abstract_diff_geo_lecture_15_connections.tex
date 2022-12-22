@@ -1,0 +1,466 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs,  mathtools, dsfont}
+\usepackage{tabularx}
+\usepackage{tikz-cd}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Lecture 15: Connections}
+\author{ Tianpei Xie}
+\date{Oct. 26th., 2022}
+\maketitle
+\tableofcontents
+\newpage
+\section{Differentiating Vector Fields}
+\begin{itemize}
+\item \begin{remark}
+There are \emph{two alternatives} for the definition of \emph{\textbf{geodesics}}:
+\begin{itemize}
+\item Geodesics is the \emph{``\textbf{shortest}" path} that connects two points on the surface; This definition is hard since the definition of manifold is abstract. 
+\item Geodesics is the curve on the surface that has \emph{\textbf{zero tangential acceleration}}. This is the motivation to introduce the concept of \emph{connections}.
+\end{itemize} 
+\end{remark}
+
+\item \begin{remark}
+\emph{\textbf{A connection}} is a \underline{\emph{\textbf{coordinate-independent}}} set of rules for taking \emph{\textbf{directional derivatives of vector fields}}.
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Defining Directional Derivatives of Vector Fields on $\bR^n$}}) \citep{lee2018introduction}\\
+Let $I \subseteq \bR$ be an interval and  $\gamma: I \rightarrow \bR^n$ a smooth curve, written in standard coordinates as $\gamma(t)= (\gamma^1(t) \xdotx{,} \gamma^n(t))$. The \emph{\textbf{velocity}} $\dot{\gamma}$ and \emph{\textbf{acceleration}} $\ddot{\gamma}$ at each $t \in I$, computed by \emph{\textbf{differentiating the components}}:
+\begin{align}
+\dot\gamma(t) &= \dot{\gamma}^i(t)\partdiff{}{x^i}\Bigr|_{\gamma(t)} \label{eqn: curve_vel_euclidean}\\
+\ddot\gamma(t) &= \ddot{\gamma}^i(t)\partdiff{}{x^i}\Bigr|_{\gamma(t)} \label{eqn: curve_acc_euclidean}
+\end{align} A curve $\gamma$ in $\bR^n$ is a \emph{\textbf{straight line}} if and only if it has a parametrization for which $\ddot{\gamma}(t) = 0$.
+
+We can define \emph{the directional derivative of a vector field} similarly by \emph{differentiating the components of the vector field}. Given a vector field $Y \in \frX(\bR^n)$ and a vector $v \in T_{p}\bR^n$, we define \emph{\textbf{the Euclidean directional derivative of $Y$ in the direction $v$}} by the formula
+\begin{align*}
+\overline{\nabla}_{v}Y &:= v(Y^{i})\partdiff{}{x^i}\Bigr|_{p}
+\end{align*} where its \emph{\textbf{component}} is \emph{the \textbf{directional derivative of the component function $Y^i$ along direction $v$}}
+\begin{align*}
+v(Y^{i}) &:= v\,Y^{i} = v^i \partdiff{Y^i}{x^i}(p)
+\end{align*} Note that $v = v^i\partdiff{}{x^i}|_{p}$.
+
+We can further generalize this definition by replacing the tangent vector $v \in T_{p}\bR^n$ by \emph{another vector field} $X \in  \frX(\bR^n)$. Thus \emph{\textbf{the directional derivative of $Y$ along $X$}} is written as
+\begin{align}
+\overline{\nabla}_{X}Y &:= X(Y^{i})\partdiff{}{x^i} \label{eqn: connection_euclidean}
+\end{align}
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Directional Derivatives of Vector Fields on embedded submanifold $M \subseteq \bR^n$}}) \citep{lee2018introduction}\\
+Suppose $M \subseteq \bR^n$ is an \emph{\textbf{embedded submanifold}}, and consider a smooth curve $\gamma: I \rightarrow M$. We want to think of a \emph{geodesic} in $M$ as a curve in M that is ``\emph{as straight as possible}.” Of course, if $M$ itself is curved, then $\dot{\gamma}(t)$ (thought of as a vector in $\bR^n$) will probably have to vary, or else the curve will leave $M$. But we can try to insist that \emph{the velocity not change any more than necessary for the curve to stay in $M$}.  
+
+One way to do this is to compute the Euclidean acceleration $\ddot{\gamma}(t)$ as above, and then apply the tangential projection $\pi^{\top}: T_{\gamma(t)}\bR^{n} \rightarrow T_{\gamma(t)}M$. This yields a vector $\ddot{\gamma}^{\top}(t) = \pi^{\top}(\ddot{\gamma}(t))$ tangent to $M$ , which we call \emph{\textbf{the tangential acceleration}} of $\gamma$.  It is reasonable to say that \emph{$\gamma$ is as straight as it is possible for a curve in $M$ to be if its tangential acceleration is zero}.
+
+Similarly, suppose $Y$ is a smooth vector field on (an open subset of) $M$, and we wish to ask \emph{\textbf{how much $Y$ is varying in $M$ in the direction of a vector $v \in T_{p}M$}}. As in the case of velocity vectors, if we look at it from the point of view of $\bR^n$, the vector field $Y$ might be forced to vary just so that it can \emph{remain tangent to $M$}. One plausible way is to extend $Y$ to a smooth vector field $\widetilde{Y}$ on an open subset of $\bR^n$, compute \emph{the Euclidean directional derivative of $\widetilde{Y}$} in the direction $v$, and then \emph{project orthogonally onto $T_{p}M$}. Let us define \emph{the \textbf{tangential directional derivative} of $Y$ in the direction $v$} to be
+\begin{align}
+\overline{\nabla}_{v}^{\top}Y &:= \pi^{\top}\paren{\overline{\nabla}_{v}\widetilde{Y}} \label{eqn: tangential_directional_derivative}
+\end{align} 
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Defining Directional Derivatives of Vector Fields on $M$ ?}})\\
+\emph{Without the amibient Euclidean space $\bR^{n}$}, how to define the directional derivatives of vector fields on an abstract manifold $M$ ? Still, consider a smooth curve $\gamma: I \rightarrow M$. Its \emph{velocity} $\dot{\gamma}(t)$ is well defined on $T_{\gamma(t)}M$ via $\dot{\gamma}(t) = d\gamma(\frac{d}{dt})$. \emph{\textbf{But the acceleration is not well defined}} since in order to define it, we need compute $\dot{\gamma}(t + \Delta)$ which does not lie in the space $T_{\gamma(t)}M$.
+
+The acceleration in Euclidean space is a special case since \emph{\textbf{the tangent space $T_{p}\bR^n$ at every point $p$ is the same as $\bR^n$}}. This is \emph{\textbf{not the case}} for general smooth manifold $M$.
+
+The velocity vector $\dot{\gamma}(t)$ is an example of \emph{\textbf{a vector field along a curve}}. To interpret the acceleration of a curve in a manifold, what we need is some \emph{\textbf{coordinate-independent way}} to \emph{differentiate vector fields along curves}.
+\end{remark}
+
+\item \begin{remark}
+To do so, we need a way to \emph{\textbf{compare values of the vector field at different points}}, or intuitively, to ``\emph{\textbf{connect}}" \emph{\textbf{nearby tangent spaces}}. This is where a connection comes in: it will be an additional piece of data on a manifold, \emph{a \textbf{rule}} for \emph{computing directional derivatives of vector fields}.
+\end{remark}
+
+\end{itemize}
+
+\section{Connections}
+\subsection{Definitions}
+\begin{itemize}
+\item \begin{definition}
+Let $\pi: E \rightarrow M$ be a \emph{smooth vector bundle} over \emph{a smooth manifold} $M$ with or without boundary, and let $\Gamma(E)$ denote the space of \emph{smooth sections} of $E$. A \underline{\emph{\textbf{connection}}} in $E$ is a map 
+\begin{align*}
+\nabla: \frX(M) \times \Gamma(E) \rightarrow \Gamma(E),
+\end{align*} written $(X, Y) \mapsto \conn{X}{Y}$, satisfying the following properties:
+\begin{enumerate}
+\item $\conn{X}{Y}$ is \emph{\textbf{linear} over $\cC^{\infty}(M)$ \textbf{in $X$}}: for $f_1, f_2 \in \cC^{\infty}(M)$ and $X_1, X_2  \in \frX(M)$,
+\begin{align*}
+\conn{\paren{f_1\,X_1 + f_2\,X_2}}{Y} &= f_1\,\conn{X_1}{Y} + f_2\,\conn{X_2}{Y}
+\end{align*}
+\item $\conn{X}{Y}$ is \emph{\textbf{linear} over $\bR$ \textbf{in}} $Y$: for $a_1, a_2 \in \bR$ and $Y_1, Y_2  \in \Gamma(E)$,
+\begin{align*}
+\conn{X}{\paren{a_1\,Y_1 + a_2\,Y_2}} &= a_1\,\conn{X}{Y_1} + a_2\,\conn{X}{Y_2}
+\end{align*}
+\item $\nabla$ satisfies the following \emph{\textbf{product rule}}: for $f \in \cC^{\infty}(M)$,
+\begin{align*}
+\conn{X}{(fY)} &= f\,\conn{X}{Y} + (Xf)\,Y
+\end{align*}
+\end{enumerate} 
+The symbol $\nabla$ is read ``\emph{\textbf{del}}" or ``\emph{\textbf{nabla}}," and $\conn{X}{Y}$ is called \emph{\textbf{\underline{the covariant derivative} of $Y$ \underline{in the direction $X$}}}.
+\end{definition}
+
+\item \begin{remark}
+There is \emph{a variety of types of connections} that are useful in different circumstances. The type of connection we have defined here is sometimes called \emph{\textbf{a Koszul connection}} to distinguish it from other types. 
+\end{remark}
+
+\item \begin{remark}
+In definition, we see that \emph{\textbf{the first argument is always a vector field on $M$}}, while \emph{the second argument} can be any sections for any vector bundle $E$ on $M$. By definition, the nabla operator $\nabla$ is \emph{\textbf{not symmetric}}, since the first argument specifies the direction along which the second argument changes.
+\end{remark}
+
+\item \begin{remark}
+The notion of ``\textit{covariant}" reflects the fact that the \emph{components of the covariant derivative} have a transformation law that ``\emph{varies correctly}" to give a well-defined meaning \emph{independent of coordinates}. 
+\end{remark}
+
+\item \begin{remark}
+$\conn{X}{Y}$ is \emph{\textbf{linear}} over smooth function space $\cC^{\infty}(M)$ in \emph{\textbf{its first argument}} $X$ but \emph{\textbf{not in its second argument}} $Y$ due to \emph{the product rule}. Following this argument, we see that $\conn{X}{Y}$ is \emph{\textbf{not a tensor}} since it is \emph{\textbf{not bilinear}} due to not being linear over $\cC^{\infty}(M)$ in second argument.
+\end{remark}
+
+\item \begin{remark}
+Although a connection is defined by its action on \emph{global sections}, it follows from the definitions that it is actually a \emph{\textbf{local operator}}.
+\end{remark}
+\begin{lemma} \label{lem: locality} (\textbf{Locality}). \citep{lee2018introduction}\\
+Suppose $\nabla$ is a connection in a smooth vector bundle $E \rightarrow M$. For every $X \in \frX(M)$, $Y\in \Gamma(E)$, and $p \in M$, the covariant derivative $\conn{X}{Y}|_{p}$ depends \textbf{only} on the values of $X$ and $Y$ in an arbitrarily \textbf{small neighborhood} of $p$. More precisely, if $X = \widetilde{X}$ and $Y = \widetilde{Y}$ on a neighborhood of $p$, then $\conn{X}{Y}|_{p} = \conn{\widetilde{X}}{\widetilde{Y}}|_{p}$.
+\end{lemma}
+
+\item \begin{proposition} (\textbf{Restriction of a Connection}).\citep{lee2018introduction} \\
+Suppose $\nabla$ is a connection in a smooth vector bundle  $E \rightarrow M$. For every open subset $U \subseteq M$, there is a \textbf{unique} \textbf{connection} $\nabla^{U}$ on the \textbf{restricted bundle} $E|_{U}$ that satisfies the following relation for every $X \in \frX(M)$ and $Y\in \Gamma(E)$:
+\begin{align}
+\nabla^U_{(X|_{U})}(Y|_{U}) &= (\conn{X}{Y})|_{U}.  \label{eqn: connection_restriction}
+\end{align}
+\end{proposition}
+
+\item \begin{proposition}
+Under the hypotheses of Lemma \ref{lem: locality}, $\conn{X}{Y}|_{p}$ depends \textbf{only} on the \textbf{values} of $Y$ in a \textbf{neighborhood} of $p$ and the \textbf{value} of $X$ \textbf{at} $p$.
+\end{proposition}
+
+\item \begin{remark}
+In the situation of these two propositions, we typically just refer to the \emph{restricted connection} as $\nabla$ instead of $\nabla^U$; the proposition guarantees that there is no ambiguity in doing so. Thus if $X$ is a vector field defined in a neighorhood of $p$, 
+\begin{align*}
+\conn{v}{Y} &= \conn{X}{Y}|_{p}, \quad \text{ for }v = X_p.
+\end{align*}
+\end{remark}
+
+\item \begin{remark}
+Note that \emph{\textbf{the Lie derivative}} is defined as
+\begin{align*}
+\paren{\mathscr{L}_{X}\,Y}_{p}  &= \frac{d}{dt}\Bigr|_{t=0} d\paren{\theta_{-t}}_{\theta_{t}(p)}\paren{Y_{\theta_t(p)}}  \nonumber,
+\end{align*} where $\theta$ is the \emph{\textbf{flow of $X$}} in the neighborhood of $p$.
+Comparing $\mathscr{L}_{X}\,Y$ to connections $\conn{X}{Y}$, we see that \emph{the Lie derivative depends on \textbf{the value of $X$ is the neighorhood of $p$}}, while the connection $\conn{X}{Y}$ just depends on $X$ \textbf{at} $p$:
+\begin{align*}
+\conn{v}{Y} &= \conn{X}{Y}|_{p}, \quad \text{ for }v = X_p.
+\end{align*} On the other hand, \emph{the Lie derivative is also defined as a \textbf{directional derivative} of a vector field} that is \emph{\textbf{coordinate invariant}}, just as the connection. 
+
+\emph{\textbf{Another difference}} is that \emph{\textbf{the Lie derivative}} does \emph{\textbf{not}} requires the \emph{\textbf{additional geometric structure}} (e.g. the definition of the abstract connections) and it applies to all smooth manifolds. However, \emph{\textbf{its extension to tensor fields}} is not straightforward without specifyinig how to extend that tangent vector to a vector field.
+\end{remark}
+\end{itemize}
+
+\subsection{Connections in the Tangent Bundle}
+\begin{itemize}
+\item We focus on the connection in tangent bundle.
+\begin{definition}
+Suppose $M$ is a smooth manifold with or without boundary. By the definition we just gave, \emph{a connection in $TM$} is a map
+\begin{align*}
+\nabla: \frX(M) \times \frX(M) \rightarrow \frX(M),
+\end{align*}
+satisfying properties (1)-(3) above. \emph{A connection in the tangent bundle $TM$} is often called simply \underline{\emph{\textbf{a connection on M}}}. (The terms \underline{\emph{\textbf{affine connection}}} and \emph{\textbf{linear connection}} are also sometimes used in this context.)
+\end{definition}
+
+\item \begin{definition}
+For computations, we need to examine how a connection appears in terms of \emph{a local frame}. Let $(E_i)$ be a \emph{smooth local frame} for $TM$ on an open subset $U\subseteq M$. For every choice of the indices $i$ and $j$, we can expand the vector field $\conn{E_i}{E_j}$ in terms of this same frame:
+\begin{align}
+\conn{E_i}{E_j} &= \Gamma_{i,j}^{k}\,E_k. \label{eqn: christoffel_symbol_basis}
+\end{align} As $i$, $j$, and $k$ range from $1$ to $n = \text{dim }M$, this defines $n^3$ smooth functions $\Gamma_{i,j}^{k}: U \rightarrow \bR$, called \emph{\underline{\textbf{the connection coefficients}} of $\nabla$ \textbf{with respect to the given frame}}. 
+\end{definition}
+
+\item The following proposition shows that the connection is completely determined in $U$ by its connection coefficients. 
+\begin{proposition} (\textbf{Coordinate Representation of Connection}) \citep{lee2018introduction}\\
+Let $M$ be a smooth manifold with or without boundary, and let $\nabla$ be a connection in $TM$. Suppose $(E_i)$ is a smooth local frame over an open subset $U\subseteq M$, and let $\set{\Gamma_{i,j}^{k}}$ be the connection coefficients of $\nabla$ with respect to this frame. For smooth vector fields $X, Y  \in \frX(M)$, written in terms of the frame as $X = X^i\,E_i$, $Y = Y^j\,E_j$, one has
+\begin{align}
+\conn{X}{Y} &= \paren{X(Y^k) + X^i\,Y^j \Gamma_{i,j}^{k} }\,E_k. \label{eqn: connection_represent_christoffel_symbol}
+\end{align}
+\end{proposition}
+
+\item \begin{remark}
+The $n^3$ functions $\{\Gamma_{i,j}^{k}\}$ are called \underline{\emph{\textbf{the Christoffel symbols}}} under \emph{the metric connections}. \citep{do1976differential}
+\end{remark}
+
+\item \begin{remark}
+The smooth function $\Gamma_{i,j}^{k} \in \cC^{\infty}(M)$ has three indices: \emph{two lower indices} $(i,j)$ cooresponds to the index of \emph{\textbf{component $X^i$ for the directional vector field}} $X$, and the index of \emph{\textbf{component $Y^j$ for the differentiated vector field}} $Y$ in $\conn{X}{Y}$; \emph{the one upper index} $k$ correponds to the index of the \emph{\textbf{basis}} vector field $\partial/ \partial x^k$ which spans the space of vector fields. 
+\end{remark}
+
+\item \begin{remark}
+Compare these two coordinate representation:
+\begin{align*}
+\conn{X}{Y} &= \paren{X(Y^k) + X^i\,Y^j \Gamma_{i,j}^{k} }\,E_k &&\text{for }X, Y \in \frX(M)\\
+\overline{\nabla}_{X}{Y} &=X(Y^k) \,E_k  &&\text{for }X, Y \in \Gamma(T\bR^{n}).
+\end{align*} The connection coefficients $\{\Gamma_{i,j}^{k}\}$ account for an \textbf{additional} \textbf{``\emph{rotation}" of basis} vector when moving $Y$ from one tangent space to another along the direction of $X$. For Euclidean space, the basis is fixed when moving along the tangent direction (i.e. no \emph{rotation} just \emph{translation}).
+\end{remark}
+
+\item \begin{proposition} (\textbf{Transformation Law for Connection Coefficients}).  \citep{lee2018introduction} \\
+Let $M$ be a smooth manifold with or without boundary, and let $\nabla$ be a connection in $TM$. Suppose we are given two smooth local frames $(E_i)$ and $(\widetilde{E}_j)$ for $TM$ on an open subset $U \subseteq M$, related by $\widetilde{E}_i = A_i^j E_j$ for some matrix of functions $(A_i^j)$. Let $\Gamma_{i,j}^{k}$ and $\widetilde{\Gamma}_{i,j}^{k}$ denote the connection coefficients of $\nabla$ with respect to these two frames.
+Then
+\begin{align}
+\widetilde{\Gamma}_{i,j}^{k} &= (A^{-1})_{t}^{k}A_{i}^{r}A_{j}^{s}\Gamma_{r,s}^{t}+ (A^{-1})_{t}^{k}A_{i}^{s}E_{s}(A_{j}^{t})  \label{eqn: chistoffel_symbol_change_of_basis}
+\end{align}
+\end{proposition}
+\end{itemize}
+
+\subsection{Existence of Connections}
+\begin{itemize}
+\item \begin{example} (\emph{\textbf{The Euclidean Connection}}).\\
+In $T\bR^n$, define \underline{\emph{\textbf{the Euclidean connection}}} $\overline{\nabla}$ by formula 
+\begin{align*}
+\overline{\nabla}_{X}{Y} &=X(Y^i) \,\partdiff{}{x^i}  &&\text{for }X, Y \in \Gamma(T\bR^{n}).
+\end{align*} It is easy to check that this satisfies the required properties for a connection, and that its \emph{connection coefficients} in the standard coordinate
+frame are all zero
+\end{example}
+
+\item \begin{example} (\emph{\textbf{The Tangential Connection on a Submanifold of $\bR^n$}}). \\
+Let $M\subseteq \bR^n$ be an \emph{embedded submanifold}. Define a connection $\nabla^{\top}$ on $TM$ by setting
+\begin{align*}
+\nabla_{X}^{\top}Y &:= \pi^{\top}\paren{\overline{\nabla}_{\widetilde{X}}\widetilde{Y}\bigr|_{M}}
+\end{align*} where $\pi^{\top}$ is the \emph{\textbf{orthogonal projection}} onto $TM$, $\overline{\nabla}$ is the Euclidean connection on $\bR^n$, and $\widetilde{X}$ and $\widetilde{Y}$ are smooth extensions of $X$ and $Y$ to an open set in $\bR^n$. $\nabla^{\top}$ is called \underline{\emph{\textbf{the tangential connection}}}. 
+
+Since the value of $\overline{\nabla}_{\widetilde{X}}\widetilde{Y}$ at a point $p \in M$ depends only on $\widetilde{X}_p = X_p$, this just boils down to defining $(\overline{\nabla}_{X}\widetilde{Y})_{p}$ to be equal to the tangential directional derivative $\overline{\nabla}_{X_p}\widetilde{Y}$ that we defined in \eqref{eqn: tangential_directional_derivative} above.
+\end{example}
+
+\item \begin{lemma}
+Suppose $M$ is a smooth $n$-manifold with or without boundary, and $M$ admits \textbf{a global frame} $(E_i)$. Formula \eqref{eqn: connection_represent_christoffel_symbol} gives a \textbf{one-to-one correspondence} between connections in $TM$ and choices of $n^3$ smooth real-valued functions $\{\Gamma_{i,j}^{k}\}$ on $M$.
+\end{lemma}
+
+\item \begin{proposition}
+The tangent bundle of every smooth manifold with or without boundary admits a connection.
+\end{proposition}
+
+\item 
+\begin{proposition} (\textbf{The Difference Tensor}). \\
+Let $M$ be a smooth manifold with or without boundary. For any two connections $\nabla^0$ and $\nabla^1$ in $TM$, define a map $D: \frX(M) \times \frX(M) \rightarrow \frX(M)$ by
+\begin{align*}
+D(X, Y) = \nabla^0_{X}{Y} - \nabla^1_{X}{Y}.
+\end{align*} Then $D$ is \textbf{bilinear} over $\cC^{\infty}(M)$, and thus defines a \textbf{$(1,2)$-tensor field} called \textbf{the difference tensor between $\nabla^0$ and $\nabla^1$}.
+\end{proposition}
+
+\item \begin{theorem}
+Let $M$ be a smooth manifold with or without boundary, and let $\nabla^0$ be any connection in $TM$. Then \textbf{the set $\cA(TM)$ of all connections} in $TM$ is equal
+to the following \underline{\textbf{affine space}}:
+\begin{align*}
+\cA(TM) = \set{\nabla^0 + D:\, D \in \Gamma(T^{(1,2)}TM)},
+\end{align*} 
+where $D \in \Gamma(T^{(1,2)}TM)$ is interpreted as a map from $ \frX(M) \times \frX(M)$ to $\frX(M)$, and $\nabla^0 + D: \frX(M) \times \frX(M) \rightarrow \frX(M)$ is defined by
+\begin{align*}
+(\nabla^0 + D)(X, Y) &= \nabla^0_{X}{Y} + D(X, Y).
+\end{align*}
+\end{theorem}
+\end{itemize}
+
+\section{Covariant Derivatives of Tensor Fields}
+\subsection{Extension of $\nabla$ From Tangent Bundle to Tensor Bundles}
+\begin{itemize}
+\item \begin{remark}
+Given the connection $\nabla$ on \emph{tangent bundle}, we can induce a connection on each \emph{\textbf{tensor bundle}} of all ranks. Note that connection is a set of rules, which also are compatible to tensor space.
+\end{remark}
+
+\item \begin{proposition} (\textbf{Induced Connection on Tensor Bundle})\\
+Let $M$ be a smooth manifold with or without boundary, and let $\nabla$ be a connection in $TM$. Then $\nabla$ \underline{\textbf{uniquely}} determines a \underline{\textbf{connection}} in \textbf{each tensor bundle} $T^{(k,l)}TM$, also denoted by $\nabla$, such that the following four conditions are satisfied.
+\begin{enumerate}
+\item In $T^{(1,0)}TM = TM$,  $\nabla$ \textbf{agrees} with the given connection.
+\item In $T^{(0,0)}TM = M \times \bR$, $\nabla$ is given by ordinary \textbf{differentiation of functions}:
+\begin{align*}
+\conn{X}{f} &= Xf.
+\end{align*}
+\item $\nabla$ obeys the following \textbf{product rule} with respect to \textbf{tensor products}:
+\begin{align*}
+\conn{X}{F\otimes G} &= (\conn{X}{F}) \otimes G +  F \otimes (\conn{X}{G})
+\end{align*}
+\item $\nabla$ \textbf{commutes} with all \textbf{contractions}: if ``$\text{tr}$" denotes a \textbf{trace} on any pair of indices, one \textbf{covariant} and one \textbf{contravariant}, then
+\begin{align*}
+\conn{X}{(\tr F)} = \tr{\conn{X}{F}}:
+\end{align*}
+\end{enumerate}
+This connection also satisfies the following \textbf{additional properties}:
+\begin{enumerate}
+\item[(1)] $\nabla$ obeys the following \textbf{product rule} with respect to the \textbf{natural pairing} between
+a \textbf{covector field} $\omega$ and a \textbf{vector field} $Y$:
+\begin{align*}
+\conn{X}{\inn{\omega}{Y}} &= \inn{\conn{X}{\omega}}{Y} + \inn{\omega}{\conn{X}{Y}}.
+\end{align*} Note that $\inn{\omega}{Y}= \omega(Y)$.
+\item[(2)] For all $F\in \Gamma(T^{(k,l)}TM)$, smooth $1$-forms $\omega_1 \xdotx{,} \omega_k$, and smooth vector fields $Y_1 \xdotx{,} Y_l$,
+\begin{align}
+(\conn{X}{F})\paren{\omega^1 \xdotx{,} \omega^k, Y_1 \xdotx{,} Y_l} &= X\paren{F\paren{\omega^1 \xdotx{,} \omega^k, Y_1 \xdotx{,} Y_l}} \nonumber\\
+&\quad -\sum_{i=1}^{k}F\paren{\omega^1 \xdotx{,} (\conn{X}{\omega^i}) \xdotx{,} \omega^k, Y_1 \xdotx{,} Y_l} \nonumber\\
+&\quad -\sum_{j=1}^{l} F\paren{\omega^1 \xdotx{,} \omega^k, Y_1 \xdotx{,} (\conn{X}{Y_j}) \xdotx{,} Y_l} \label{eqn: connection_k_l_tensor}
+\end{align}
+\end{enumerate}
+\end{proposition}
+
+\item \begin{remark}
+We have the formula for a $(k,l)$-tensor field $F$
+\begin{align}
+F(\omega^1 \xdotx{,} \omega^k, V_1 \xdotx{,} V_{l}) &= \underbrace{\text{tr}\xdotx{\circ} \text{tr}}_{k+l}\paren{F \otimes \omega^1 \xdotx{\otimes} \omega^k \otimes V_1 \xdotx{\otimes} V_l}, \label{eqn: tensor_trace_computation}
+\end{align} where each trace operator acts on an upper index of $F$ and the lower index of the corresponding $1$-form, or a lower index of $F$ and the upper index of the corresponding vector field.
+
+For instance, for covariant $2$-tensor field $g =\omega^1 \otimes \omega^2$:
+\begin{align*}
+g(X, Y) &= \text{tr}\paren{\text{tr}(\omega^1 \otimes \omega^2 \otimes X \otimes Y )} \\
+&= \text{tr}\paren{\text{tr}(\omega^2 \otimes Y)\, \omega^1 \otimes X} \\
+&= \text{tr}\paren{(\omega^2(Y))\, \omega^1 \otimes X} \\
+&= (\omega^2(Y))\,\text{tr}\paren{\omega^1 \otimes X} \\
+&= (\omega^2(Y))\,(\omega^1(X))\,
+\end{align*}
+\end{remark}
+
+\item \begin{remark}
+For a covariant $2$-tensor field $g= g_{i,j} dx^i \otimes dx^j$, the covariant derivative of $g$ in direction of $Z$ is
+\begin{align*}
+(\conn{(Z)}{g})(X, Y) &= Z\paren{g(X, Y)} - g\paren{\conn{Z}{X}, Y} - g\paren{X, \conn{Z}{Y}}
+\end{align*}
+\end{remark}
+
+\item \begin{remark}
+Observe that condition 2 and additional property (1) imply that \emph{\textbf{the covariant derivative of every $1$-form $\omega$}} can be computed by
+\begin{align} 
+\inn{\conn{X}{\omega}}{Y} &= \conn{X}{\inn{\omega}{Y}} - \inn{\omega}{\conn{X}{Y}} \nonumber\\
+\Rightarrow (\conn{X}{\omega})(Y)&= X(\omega(Y)) - \omega(\conn{X}{Y}). \label{eqn: connections_1_form}
+\end{align} It follows that the \underline{\emph{\textbf{connection on $1$-forms}}} is \emph{\textbf{uniquely}} determined by \emph{the original connection in $TM$}.
+\end{remark}
+
+\item \begin{proposition}
+Let $M$ be a smooth manifold with or without boundary, and let $\nabla$ be a connection in $TM$. Suppose  $(E_i)$ is a local frame for M , $(\epsilon^j)$ is its dual coframe, and $\{\Gamma_{i,j}^{k}\}$ are the connection coefficients of $\nabla$ with respect to this frame. Let $X$ be a smooth vector field, and let $X^i\,E_i$ be its local expression in terms of this frame.
+\begin{enumerate}
+\item The \textbf{covariant derivative of a $1$-form} $\omega = \omega_i \epsilon^i$ is given locally by
+\begin{align}
+\conn{X}{\omega} &= \paren{X(\omega_k) - X^{j}\omega_{i}\Gamma_{j,k}^{i}}\epsilon^{k} \label{eqn: connection_1_form_coordinate}
+\end{align}
+\item If $F\in \Gamma(T^{(k, l)}TM)$ is a smooth mixed tensor field of any rank, expressed locally as
+\begin{align*}
+F &= F_{i_1 \xdotx{,} i_k}^{j_1 \xdotx{,} j_l}\,E_{i_1} \xdotx{\otimes} E_{i_k} \otimes \epsilon^{j_1} \xdotx{\otimes} \epsilon^{j_l}
+\end{align*} then the covariant derivative of $F$ is given locally by
+\begin{align*}
+\conn{X}{F} &= \paren{X\paren{F_{i_1 \xdotx{,} i_k}^{j_1 \xdotx{,} j_l}} + \sum_{s=1}^{k}X^{m}F_{i_1 \xdotx{,} i_k}^{j_1 \xdotx{,} p \xdotx{,}  j_l}\Gamma_{m,p}^{i_s} -   \sum_{s=1}^{l}X^{m}F_{i_1  \xdotx{,} p \xdotx{,} i_k}^{j_1 \xdotx{,}  j_l}\Gamma_{m, j_s}^{p} } \times\\
+&\qquad E_{i_1} \xdotx{\otimes} E_{i_k} \otimes \epsilon^{j_1} \xdotx{\otimes} \epsilon^{j_l}.
+\end{align*}
+\end{enumerate}
+\end{proposition}
+
+
+
+\item \begin{proposition} (\textbf{The Total Covariant Derivative}). \citep{lee2018introduction}\\
+Let $M$ be a smooth manifold with or without boundary and let $\nabla$ be a connection in $TM$. For every $F\in \Gamma(T^{(k,l)}TM)$,  the map
+\begin{align*}
+\nabla F: \underbrace{\Omega^1(M) \xdotx{\times} \Omega^1(M)}_{k} \times \underbrace{\frX(M) \xdotx{\times} \frX(M)}_{l+1} \rightarrow \cC^{\infty}(M)
+\end{align*} given by
+\begin{align}
+\conn{}{F}\paren{\omega^1 \xdotx{,} \omega^k, Y_1 \xdotx{,} Y_l, X}&= (\conn{X}{F})\paren{\omega^1 \xdotx{,} \omega^k, Y_1 \xdotx{,} Y_l}\label{eqn: total_covariant_derivatives_tensor}
+\end{align} defines a \textbf{smooth $(k, l+1)$-tensor field} on $M$ called \underline{\textbf{the total covariant derivative of $F$}}.
+\end{proposition}
+
+\item \begin{remark}
+The total covariant derivative of $Y \in \frX(M) := \Gamma(T^{(1,0)}TM)$ is a \emph{\textbf{$(1,1)$-tensor field}}
+\begin{align*}
+\nabla Y (\omega, X) &= (\conn{X}{Y})(\omega) = \omega\paren{\conn{X}{Y}}.
+\end{align*} %$\nabla Y \in \Gamma(T^{(1,1)}TM)$. 
+
+Similarly, the total covariant derivative of $\omega \in \frX^{*}(M) = \Omega^1(M) = \Gamma(T^{(0,1)}TM)$ is a \emph{\textbf{$(0,2)$-tensor field}}
+\begin{align*}
+\nabla \omega (Y, X) &= (\conn{X}{\omega})(Y) = X(\omega(Y)) -  \omega\paren{\conn{X}{Y}}
+\end{align*}
+Note that we can compare it with the \emph{\textbf{invariant formula} for \textbf{exterior derivatives}}:
+\begin{align*}
+d \omega (X, Y) &=  X(\omega(Y)) - Y(\omega(X)) - \omega([X, Y])
+\end{align*}
+\end{remark}
+
+\item \begin{remark}
+When we write the components of a total covariant derivative in terms of a local frame, it is standard practice to use a \emph{\textbf{semicolon}} to \emph{separate indices resulting from differentiation from the preceding indices}.
+
+Thus, for example, if $Y$ is a vector field written in coordinates as $Y = Y^i\, E_i$, the components of the $(1,1)$-tensor field $\nabla Y$
+are written $Y^i_{\;;j}$, so that
+\begin{align*}
+\nabla Y &= Y^{i}_{\;;j}\,E_i \otimes \epsilon^j,
+\end{align*} with
+\begin{align*}
+Y^{i}_{\;;j} &= (E_j Y^{i} + Y^k \Gamma_{j,k}^i)
+\end{align*}
+
+For a $1$-form $\omega$, the formulas read
+\begin{align*}
+\nabla \omega &= \omega_{i\;;j} \epsilon^i \otimes \epsilon^j
+\end{align*} with 
+\begin{align*}
+\omega_{i,\;;j} &= E_j \omega_i - \omega_k \Gamma_{j,i}^{k}.
+\end{align*}
+\end{remark}
+
+\item \begin{proposition}
+Let $M$ be a smooth manifold with or without boundary, and let $\nabla$ be a connection in $TM$. Suppose  $(E_i)$ is a local frame for M , $(\epsilon^j)$ is its dual coframe, and $\{\Gamma_{i,j}^{k}\}$ are the connection coefficients of $\nabla$ with respect to this frame. The components of the total covariant
+derivative of a $(k,l)$-tensor field $F$ with respect to this frame are given by
+\begin{align*}
+F_{i_1 \xdotx{,} i_k\;;m}^{j_1 \xdotx{,} j_l}\,&=E_m\paren{F_{i_1 \xdotx{,} i_k}^{j_1 \xdotx{,} j_l}}+ \sum_{s=1}^{k}F_{i_1 \xdotx{,} i_k}^{j_1 \xdotx{,} p \xdotx{,}  j_l}\Gamma_{m,p}^{i_s} -   \sum_{s=1}^{l}F_{i_1  \xdotx{,} p \xdotx{,} i_k}^{j_1 \xdotx{,}  j_l}\Gamma_{m, j_s}^{p}.
+\end{align*}
+\end{proposition}
+
+\item \begin{remark} It can be verified that the following formula for total covariant derivative holds
+\begin{align}
+\conn{Y}{F} &= \text{tr}\paren{\conn{}{F} \otimes Y} \label{eqn: total_covariant_trace}
+\end{align}
+\end{remark}
+\end{itemize}
+\subsection{Second Covariant Derivatives}
+\begin{itemize}
+\item \begin{definition}
+Given vector fields $X, Y \in \frX(M)$, let us introduce the notation $\nabla^2_{X, Y}F$ for the $(k,l)$-tensor field obtained by inserting $X,Y$ in the last two slots of $\nabla^2\,F= \nabla(\nabla F)$:
+\begin{align*}
+\nabla^2_{X, Y}F(\xdotx{}) &= \nabla^2 F(\ldots, Y, X)
+\end{align*}
+\end{definition}
+
+\item \begin{proposition}
+Let $M$ be a smooth manifold with or without boundary and let $\nabla$ be a connection in $TM$. For every smooth vector field or tensor field $F$,
+\begin{align}
+\nabla^2_{X, Y}F &= \nabla_{X}\paren{\nabla_{Y}F} - \nabla_{(\conn{X}{Y})}F.  \label{eqn: second_covariant_derivation}
+\end{align}
+\end{proposition}
+
+\item \begin{example}(\textbf{\emph{The Covariant Hessian}}).\\
+Let $u$ be a smooth function on $M$.
+\begin{itemize}
+\item The \underline{\emph{\textbf{total covariant derivative of $u$ is equal to its $1$-form}}} $\nabla u = du \in \Omega^1(M) = \Gamma(T^{(0,1)}TM)$ since 
+\begin{align*}
+\nabla u(X) &= \conn{X}{u} = Xu = du(X)
+\end{align*}
+
+\item The $2$-tensor $\nabla^2u = \nabla(du)$  is called \underline{\emph{\textbf{the covariant Hessian of $u$}}}. Its action
+on smooth vector fields $X,Y$ can be computed by the following formula:
+\begin{align}
+\nabla^2u(Y, X) = \nabla_{X, Y}^2 u &= \conn{X}{\conn{Y}{u}} - \conn{(\conn{X}{Y})}{u} = X(Yu) - (\conn{X}{Y})(u)  \label{eqn: covariant_hessian}
+\end{align} In any local coordinates, it is
+\begin{align*}
+\nabla^2u &= u_{\;;i,j}\,dx^i \otimes dx^j
+\end{align*} where 
+\begin{align*}
+u_{\;;i,j} &= \partdiff{}{x^j}\partdiff{u}{x^i} - \Gamma_{j,i}^{k}\partdiff{u}{x^k}
+\end{align*}
+\end{itemize}
+\end{example}
+\end{itemize}
+
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{book_reference.bib}
+\end{document}
