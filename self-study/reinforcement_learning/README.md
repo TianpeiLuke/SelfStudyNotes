@@ -2,7 +2,7 @@
 
 ## Books
 
-***Reinforcement Learning-An Introduction***, Richard S. Sutton and Andrew G. Barto, 2nd Edition
+***Reinforcement Learning: An Introduction***, Richard S. Sutton and Andrew G. Barto, 2nd Edition
 
 ***Markov Decision Processes Discrete Stochastic Dynamic Programming***, Martin L. Puterman
 
