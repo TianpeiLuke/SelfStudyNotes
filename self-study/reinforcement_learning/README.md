@@ -11,9 +11,12 @@
 
 - Summary
 
-- Multi-Armed Bandit Problem
-
 - Tabluar-Based Methods
+  - Multi-Armed Bandit Problem
+    - Exploration and Exploitation
+    - Action-Value Methods
+    - Nonstationary Problem
+    
   - Markov Decision Process (MDP)
     - Goal and Rewards
     - Average Rewards
@@ -43,7 +46,21 @@
     - Models and Planning
     - Dyna: Integrated Planning, Acting, and Learning
  
- - Function Approximation
+- Function Approximation
   - On-policy Prediction with Function Approximation
-    - Value-function approximation as supervised learning
+    - Value-Function Approximation as Supervised Learning
+    - Stochastic Gradient and Semi-Gradient Methods
+    - Linear Methods 
+    - Value Function Approximation via Artificial Neural Networks
+
+  - Control with Function Approximation
+    - Episodic Semi-Gradient Control
+    - Average Rewards as New Problem Setting for Continuing Tasks
+ 
+  - Policy Gradient Methods
+    - Value-based methods vs. Policy-based methods
+    - Policy Approximation 
+    - The Policy Gradient Theorem
+    - REINFORCE: Monte Carlo Policy Gradient
+    - Actor-Critic Methods
   - 
