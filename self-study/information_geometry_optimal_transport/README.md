@@ -19,7 +19,7 @@
   - Fundamental Concepts, Differential Geometry
     - The Information Geometry of Exponential Families
     
-  - Statistical Manifolds [pdf](./info_geo_1_info_geometry.pdf)
+  - Statistical Manifolds         [pdf](./info_geo_1_info_geometry.pdf)
     - Geometry of Space of Probability Density Functions
       - Statistical Manifold
       - Fisher Metric as Riemannian Metric
