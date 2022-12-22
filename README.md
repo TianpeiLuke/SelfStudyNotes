@@ -7,4 +7,4 @@
 
 - Deep Learning
 
-- Differential Geometry
+- [Differential Geometry](./self-study/differential_geometry/README.md)
