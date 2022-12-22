@@ -12,8 +12,12 @@
 	- Part 2
 		- Connectedness and Compactness
 		- Countability Axioms and Separation Axioms
+		- Important Theorems
+		- Embeddings of Manifolds
 	- Part 3
-		- 	 
+		- Metrization Theorems and Paracompactness
+		- Complete Metric Spaces and Function Spaces 
+		- Baire Spaces	 
 
 - Set Theory
 	- Set Operations, Logic
@@ -75,5 +79,19 @@
 		- Partition of Unity 
 
 - Paracompactness and Meterization Theorems
+	- Paracompactness
+		- Local Finiteness
+		- Paracompactness
+		- Partition of Unity 
+	- Metrization Theorems
+		- The Nagata-Smirnov Metrization Theorem
+		- The Smirnov Metrization Theorem 
 
 - Complete Metric Space
+	- Complete Metric Space
+	- Compactness in Metric Spaces
+		- Total Boundedness and Equicontinuous
+		- Ascoli's Theorem
+		- Uniform, Pointwise and Compact Convergence
+- Baire Spaces
+	- Baire Category Theorem 
