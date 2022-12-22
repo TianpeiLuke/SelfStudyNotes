@@ -1,0 +1,16 @@
+\begin{thebibliography}{1}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Fran{\c{c}}ois-Lavet et~al.(2018)Fran{\c{c}}ois-Lavet, Henderson,
+  Islam, Bellemare, Pineau, et~al.]{franccois2018introduction}
+Vincent Fran{\c{c}}ois-Lavet, Peter Henderson, Riashat Islam, Marc~G Bellemare,
+  Joelle Pineau, et~al.
+\newblock An introduction to deep reinforcement learning.
+\newblock \emph{Foundations and Trends{\textregistered} in Machine Learning},
+  11\penalty0 (3-4):\penalty0 219--354, 2018.
+
+\end{thebibliography}
