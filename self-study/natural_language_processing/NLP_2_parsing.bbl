@@ -1,0 +1,32 @@
+\begin{thebibliography}{4}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Gaddy et~al.(2018)Gaddy, Stern, and Klein]{gaddy2018s}
+David Gaddy, Mitchell Stern, and Dan Klein.
+\newblock What’s going on in neural constituency parsers? an analysis.
+\newblock In \emph{Proceedings of the 2018 Conference of the North American
+  Chapter of the Association for Computational Linguistics: Human Language
+  Technologies, Volume 1 (Long Papers)}, pages 999--1010, 2018.
+
+\bibitem[Jurafsky and Martin(2014)]{jurafsky2014speech}
+Dan Jurafsky and James~H Martin.
+\newblock Speech and language processing. vol. 3.
+\newblock \emph{US: Prentice Hall}, 2014.
+
+\bibitem[Kitaev and Klein(2018)]{kitaev2018constituency}
+Nikita Kitaev and Dan Klein.
+\newblock Constituency parsing with a self-attentive encoder.
+\newblock In \emph{Proceedings of the 56th Annual Meeting of the Association
+  for Computational Linguistics (Volume 1: Long Papers)}, pages 2676--2686,
+  2018.
+
+\bibitem[Skiena(2020)]{skiena2020algorithm}
+Steven~S Skiena.
+\newblock The algorithm design manual (texts in computer science).
+\newblock \emph{group}, 23:\penalty0 2516, 2020.
+
+\end{thebibliography}

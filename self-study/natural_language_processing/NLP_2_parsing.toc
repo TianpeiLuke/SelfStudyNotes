@@ -1,0 +1,9 @@
+\contentsline {section}{\numberline {1}Concepts}{2}
+\contentsline {subsection}{\numberline {1.1}Ambiguity in syntatic parsing}{2}
+\contentsline {section}{\numberline {2}CKY parsing}{2}
+\contentsline {subsection}{\numberline {2.1}Conversion to Chomsky Normal Form}{3}
+\contentsline {subsection}{\numberline {2.2}CKY Recognition}{5}
+\contentsline {subsection}{\numberline {2.3}CKY Parsing}{6}
+\contentsline {section}{\numberline {3}Neural CKY parsing}{8}
+\contentsline {subsection}{\numberline {3.1}Computing scores for a Span}{9}
+\contentsline {subsection}{\numberline {3.2}Computing scores for a parse tree}{9}

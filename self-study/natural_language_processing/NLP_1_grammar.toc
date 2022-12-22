@@ -1,0 +1,10 @@
+\contentsline {section}{\numberline {1}Concepts and Terminology}{2}
+\contentsline {subsection}{\numberline {1.1}Constituency}{3}
+\contentsline {subsection}{\numberline {1.2}Context-Free Grammars}{4}
+\contentsline {section}{\numberline {2}Grammar rules in English and some terminologies}{6}
+\contentsline {subsection}{\numberline {2.1}English Sentence-Level Constructions}{6}
+\contentsline {subsection}{\numberline {2.2}The Noun Phrase}{6}
+\contentsline {subsection}{\numberline {2.3}The Verb Phrase}{7}
+\contentsline {subsection}{\numberline {2.4}Coordination}{8}
+\contentsline {section}{\numberline {3}Treebanks and Head-finding rules}{9}
+\contentsline {section}{\numberline {4}Grammar Equivalence and Normal Form}{10}
