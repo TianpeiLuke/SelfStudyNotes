@@ -1,0 +1,20 @@
+\begin{thebibliography}{2}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Lee(2003.)]{lee2003introduction}
+John~Marshall Lee.
+\newblock \emph{Introduction to smooth manifolds}.
+\newblock Graduate texts in mathematics. Springer, New York, Berlin,
+  Heidelberg, 2003.
+\newblock ISBN 0-387-95448-1.
+
+\bibitem[Munkres(2000)]{munkres2000topology}
+James~R Munkres.
+\newblock \emph{Topology, 2nd}.
+\newblock Prentice Hall, 2000.
+
+\end{thebibliography}
