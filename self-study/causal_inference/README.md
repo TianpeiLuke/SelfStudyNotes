@@ -14,8 +14,18 @@
 
 
 ## Table of Contents
-- Fundamental of Causal Inference 
+- Fundamental of Causal Inference
+  	- Association Does Not Imply Causation
 	- Potential Outcomes
+		- Potential Outcomes and Individual Treatment Effects
+		- The Fundamental Problem of Causal Inference
+		- Average Treatment Effects and Causal Assumptions
+			- Ignorability and Exchangeability
+			- Conditional Exchangeability and Unconfoundedness
+			- Positivity/Overlap and Extrapolation
+			- No Interference, Consistency, and SUTVA
+	- Structural Causal Models
+	- Basic process in Causal Inference
 
 - Causal Graphical Models 
 	- Causal Graphial Models
