@@ -1,0 +1,8 @@
+\contentsline {section}{\numberline {1}Smooth Functions and Smooth Maps}{2}
+\contentsline {subsection}{\numberline {1.1}Smooth Functions on Manifolds}{2}
+\contentsline {subsection}{\numberline {1.2}Smooth Maps Between Manifolds}{2}
+\contentsline {subsection}{\numberline {1.3}Examples of Smooth Map}{4}
+\contentsline {subsection}{\numberline {1.4}Diffeomorphisms}{5}
+\contentsline {section}{\numberline {2}Partitions of Unity}{6}
+\contentsline {subsection}{\numberline {2.1}Theorems}{6}
+\contentsline {subsection}{\numberline {2.2}Applications of Partitions of Unity}{7}
