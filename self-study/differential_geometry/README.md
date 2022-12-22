@@ -1,11 +1,12 @@
 # Differential Geometry
 
 ## Book 
-***Differential Geometry of Curves and Surfaces***, DoCarmo
-
 ***Introduction To Smooth Manifolds***, John Lee
 
 ***Introduction To Riemannian Manifolds***, John M. Lee
+
+***Differential Geometry of Curves and Surfaces***, DoCarmo
+
 
 ## Table of Contents
 - Summary 
