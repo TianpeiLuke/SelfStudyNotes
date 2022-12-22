@@ -53,8 +53,13 @@
 ### Machine Learning Models
 
 - Reproducing Kernel Hilbert Space
-  - Definition 
-  - Construction via Positive Definite Kernel
-  - Construction via Kernel Integral Operator
+  - Reproducing Kernel Hilbert Space
+    - Definition vis Evaluation Functional
+    - Construction via Positive Definite Kernel
+    - Construction via Kernel Integral Operator
+    - Construction via Feature Map
+  - Machine Learning Applications
+    - Empirical Risk Minimization with Regularization in RKHS
+    - Representer Theorem
 
 - Gaussian Process for Machine Learning
