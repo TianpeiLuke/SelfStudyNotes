@@ -31,6 +31,20 @@
   - Comparison Between Riemannian Geometry and Information Geometry
    
   - Information Metrics and Statistical Divergence
+    - Statistical Divergence and its Properties
+      - KL Divergence
+      - Renyi Alpha-Divergence
+      - f-Divergence
+      - KL Divergence for Exponential Families
+      - Properties of f-Divergence
+      - Dual Formulation
+    - Divergence on Statistical Manifolds
+      - Dual Connections
+      - Divergence as General Contrast Function
+      - Induced Connections from KL-Divergence and f-Divergence
+      - Hellinger Alpha-Divergence and Alpha-Connection
+      - Dual Coordinate System
+      - Canonical Divergence
   
   - Variational Inference
 
