@@ -1,0 +1,18 @@
+\begin{thebibliography}{2}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Ghosh and Ramamoorthi(2003)]{ghosh2003bayesian}
+Jayanta~K Ghosh and RV~Ramamoorthi.
+\newblock \emph{Bayesian nonparametrics}.
+\newblock Springer Science \& Business Media, 2003.
+
+\bibitem[Schervish(2012)]{schervish2012theory}
+Mark~J Schervish.
+\newblock \emph{Theory of statistics}.
+\newblock Springer Science \& Business Media, 2012.
+
+\end{thebibliography}

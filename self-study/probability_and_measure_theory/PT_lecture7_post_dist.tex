@@ -1,0 +1,175 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, amscd}
+\usepackage{mathrsfs, dsfont}
+\usepackage[all,cmtip]{xy}
+%\diagramstyle[labelstyle=\scriptstyle]
+\usepackage{tabularx}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Lecture 6: Posterior distribution and posterior consistency}
+\author{ Tianpei Xie}
+\date{ Aug.11st., 2015 }
+\maketitle
+\tableofcontents
+\newpage
+\section{Prior, Posterior, and Predictive Distributions}
+\begin{itemize}
+\item \begin{definition}  (\emph{\textbf{Prior Distribution}}) \citep{ghosh2003bayesian, schervish2012theory}\\
+Let $(\Omega, \srP, \bP)$ be a \emph{probability space}, and let $(\cX, \cB(\cX))$ and $(\Theta, \cB(\Theta))$ be \emph{Borel spaces}. Let $X: \Omega \to \cX$ and $\theta: \Omega \to \Theta$ be \emph{measurable}. Then $\theta$ is called a \underline{\emph{\textbf{parameter}}} and $\Theta$ is called a \underline{\emph{\textbf{parameter space}}}. 
+
+The \emph{conditional distribution for $X$ given $\theta$} is called \underline{\emph{\textbf{a parametric family of distributions}}} of $X$. \emph{The parametric family} is denoted by
+\begin{align*}
+\cP_{0} = \set{\cP_{\theta_0}: \forall A \in \cB(\cX),  \cP_{\theta_0}(A) = \bP\set{X \in A | \theta = \theta_0 }, \theta_0 \in \Theta }.
+\end{align*}
+We also use the symbol $\bP_{\theta_0}[X \in A]$ to stand for $\cP_{\theta_0}(A)$. \underline{\emph{\textbf{The prior distribution}}} of $\theta$ is \emph{the probability measure} $\mu_{\theta}$ over $(\Theta, \cB(\Theta))$ induced by $\theta$ from $\bP$.
+%\citep{ghosh2003bayesian}\\
+%Let $\Theta$ be a \emph{\textbf{parameter space}} and assume that $\Theta$ is a complete separable metric space endowed with its Borel $\sigma$-algebra $\cB(\Theta)$, i.e. $(\Theta, \cB(\Theta))$ is a measurable space. Let $(\cX, \srA)$ be another Borel space.
+%
+%For each $\theta\in \Theta$, $\cP_{\theta}$ is a probability measure on space $(\cX, \srA)$ such that for every $A\in \srA$, $\theta \mapsto \cP_{\theta}(A)$ is $\cB(\Theta)$ measureable. 
+%
+%Let $X_{1}, \cdots, X_{n}$ be a sequence of $\cX$-valued random elements that are, for each $\theta\in \Theta$, independent and identically distributed as $\cP_{\theta}$. It is possible to consider $X_{1}, \cdots$ as the coordinate evaluation of function $X_{(\cdot)}$ defined on $\Omega\equiv (\cX^{\infty}, \srA^{\infty})$ and $\cP_{\theta}^{\infty}$ as the i.i.d. product measure defined on $\Omega$. Denote $\Omega_{n}\equiv (\cX^{n}, \srA^{n})$ and $P_{\theta}^{n}$ as $n$-fold product of $\cP_{\theta}$ and abbreviate $\mb{X}_{n}= [X_{1},\ldots, X_{n}]$.
+\end{definition}
+
+%\item \begin{definition}  (\emph{\textbf{Prior Distribution}})\citep{ghosh2003bayesian}\\
+%A \emph{\textbf{prior measure}} $\mu_{\theta}$ is a pre-specified probability measure on $(\Theta, \cB(\Theta))$. For each $n$, $\mu_{\theta}$ and $\cP_{\theta}^{n}$ together defines \emph{the joint distribution of $\theta$ and $[X_{1},\ldots, X_{n}]= \mb{X}_{n}$} as the probability measure $\lambda_{n,\mu_{\theta}}$ on $(\Theta, \cB(\Theta))\times \Omega_{n}$
+%\begin{align*}
+%\lambda_{n,\Pi}(B\times A) &= \int_{B}\cP^{n}_{\theta}(A)d\Pi(\theta);\quad \forall A\in \srA^{n}, \;\forall B\in \cB(\Theta)
+%\end{align*}
+%Moreover, the marginal distribution $\lambda_{n}$ of $[X_{1},\ldots, X_{n}]= \mb{X}_{n}$ is
+%\begin{align*}
+%\lambda_{n}(A) &= \lambda_{n,\Pi}(\Theta\times A)\; 
+%\end{align*}
+%Similarly, for infinite sequence $X_{1},\cdots,$, the joint distribution of $\theta, X_{1},\cdots,$ is denoted as $\lambda_{\Pi}$  with the marginal $\lambda$ on $\Omega$. 
+%\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Likelihood Function and Conditional Density}})  \citep{schervish2012theory}\\
+Suppose that each $\cP_{\theta_0}$, when considered as a measure on $(\cX, \cB(\cX))$, is \textit{absolutely continuous} with respect to a measure $\nu$ on $(\cX, \cB(\cX))$. Let
+\begin{align*}
+f_{X|\theta}(x|\theta_0) &= \frac{d\cP_{\theta_0}}{d\nu}.
+\end{align*}
+We can assume that $f_{X|\theta}$ is \emph{\textbf{measurable}} with respect to \emph{\textbf{the product $\sigma$-field}} $\cB(\cX) \otimes \cB(\Theta)$. This will allow us to integrate this function with respect to measures on \emph{both} $\cX$ and $\Theta$. The function $f_{X|\theta}(x|\theta_0)$, considered as \emph{\textbf{a function of $\theta$}} after $X=x$ is observed, is often called \emph{\textbf{the likelihood function} $L(\theta)$}.
+
+For each $\theta \in \Theta$, the function $f_{X|\theta}(x|\theta_0)$ is \emph{\textbf{the conditional density}} with respect to $\nu$ of $X$ given $\theta = \theta_0$. That is for each $A \in \cB(\cX)$, 
+\begin{align*}
+\cP_{\theta}(A) &= \int_{A} f_{X|\theta}(x|\theta) d\nu(x)
+\end{align*}
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Marginal Distribution}})  \citep{schervish2012theory}\\
+Let $\mu_{X}$ be \emph{\textbf{the marginal distribution}} so that 
+\begin{align*}
+\mu_{X}(A) &= \bP\brac{X \in A}
+\end{align*} Using \emph{Tonelli's theorem}, we have
+\begin{align*}
+\mu_{X}(A) &= \int_{\Theta} \brac{\int_{A}f_{X|\theta}(x|\theta) d\nu(x)} d\mu_{\theta}(\theta) = \int_{A}  \brac{\int_{\Theta} f_{X|\theta}(x|\theta)d\mu_{\theta}(\theta)}d\nu(x) 
+\end{align*} It follows that $\mu_{X}$ is \emph{absolutely continuous} with respect to $\nu$ with \emph{density}
+\begin{align*}
+f_{X}(x) &= \int_{\Theta} f_{X|\theta}(x|\theta)d\mu_{\theta}(\theta)
+\end{align*} This density is often called \emph{\textbf{the (prior) predictive density} of $X$} or \emph{\textbf{the marginal density} of $X$}.
+\end{definition}
+
+\item \begin{theorem} (\textbf{Bayes' Theorem}).  \citep{schervish2012theory}\\
+Suppose that $X$ has a parametric family $\cP_{0}$ of distributions with \textbf{parameter space} $\Theta$. Suppose that $\cP_{\theta} \ll \nu$ in $\cX$ for all $\theta \in \Theta$, and let $f_{X|\theta}(x|t)$ be the \textbf{conditional density} (with respect to $\nu$) of $X$ given $\theta = t$. Let $\mu_{\theta}$ be the \textbf{prior distribution} of $\theta$. 
+
+Let $\mu_{\theta|X}(\cdot | x)$ denote \textbf{the conditional distribution of $\theta$ given $X = x$}. Then $\mu_{\theta|X} \ll \mu_{\theta}$, a.s. \textbf{with respect to the marginal of $X$}, and the Radon-Nikodym \textbf{derivative} is
+\begin{align}
+\frac{d\mu_{\theta|X}}{d\mu_{\theta}}(\theta | x) &= \frac{f_{X|\theta}(x|\theta)}{ \int_{\Theta} f_{X|\theta}(x|t)d\mu_{\theta}(t)}  \label{eqn: Bayes_theorem}
+\end{align} for those $x$ such that the \textbf{denominator} is \textbf{neither $0$ nor infinite}. The \textbf{prior predictive probability} of the set of $x$ values such that the denominator is $0$ or infinite is $0$, hence the posterior can be defined arbitrarily for such $x$ values.
+\end{theorem}
+
+\item \begin{definition}  (\emph{\textbf{Posterior Distribution}}) \citep{schervish2012theory}\\
+The conditional distribution of $\theta$ given $X = x$ is called \underline{\emph{\textbf{the posterior distribution} of $\theta$}}, denoted as $\mu_{\theta | X}$.
+\begin{enumerate}
+\item $\mu_{\theta | X}(\cdot | x)$ is a \emph{\textbf{measure}} on $\cB(\Theta)$ given $X = x$; 
+
+The Bayes theorem confirms that $\mu_{\theta | X} \ll \mu_{\theta}$ and for all $B \in \cB(\Theta)$, and the following equation holds \emph{almost surely with respect to $\mu_X$}
+\begin{align}
+\mu_{\theta | X}(B|x) &= \int_{B}\frac{ f_{X|\theta}(x|s) }{ \int_{\Theta} f_{X|\theta}(x|t)d\mu_{\theta}(t)}d\mu_{\theta}(s), \quad \mu_X\text{-a.s.}  \label{eqn: posterior_measure}
+\end{align}
+
+\item $\mu_{\theta | X}(B|\cdot)$ is a \emph{\textbf{$\cB(\cX)$-measurable function}} of $X$ given any $B \in \cB(\Theta)$;
+
+\item $\mu_{\theta | X}(B|\cdot)$ is \emph{\textbf{integrable}} with respect to \emph{\textbf{marginal distribution}} $\mu_{X}$ and 
+\begin{align}
+\bP[X \in A,  \theta \in B] &= \int_{A}\mu_{\theta | X}(B | x) d\mu_{X}(x)    \label{eqn: posterior_joint}
+\end{align}
+\end{enumerate}
+\end{definition}
+
+
+
+%\item  \begin{definition}\citep{ghosh2003bayesian}\\
+%Any version of the conditional distribution of $\theta$ given $(X_{1},\cdots, X_{n})$ is called a posterior distribution given $(X_{1},\cdots, X_{n})$. Formally, a function $\Pi(\cdot| \cdot): \cB(\Theta)\times \Omega_{n} \rightarrow [0,1]$ is called a posterior distribution of $\theta$ given $X_{1},\cdots, X_{n}$ if 
+%\begin{enumerate}
+%\item For every $\omega\in \Omega_{n}$, $\Pi(\cdot| \omega)$ is a probability measure on $\cB(\Theta)$;
+%\item For every $B\in \cB(\Theta)$, $\Pi(B| \cdot)$ is a $\srA^{n}$-measureable function;
+%\item For every $B\in \cB(\Theta)$, $A\in \srA^{n}$, 
+%\begin{align*}
+%\lambda_{n,\Pi}(B\times A) &= \int_{A} \Pi(B| \omega)d\lambda_{n}(\omega)
+%\end{align*}
+%\end{enumerate}
+%From the second condition, $\Pi(B|\cdot)\equiv \Pi(B|X_{1},\ldots, X_{n})\equiv \Pi(B|\mb{X}_{n})$.
+%\end{definition}
+%
+%\item \begin{definition}\citep{ghosh2003bayesian}\\
+%For $\cP_{\theta}\ll \mu$ for $\mu$ some $\sigma$-finite measure, then the density $p_{\theta} = d\cP_{\theta}/ d\mu$. Then since, 
+%\begin{align*}
+%\Pi(B| \mb{X}_{n}) &= \frac{\int_{B}\prod_{k=1}^{n}p_{\theta}(X_{k})d\Pi(\theta) }{\int_{\Theta}\prod_{k=1}^{n}p_{\theta}(X_{k})d\Pi(\theta)}
+%\end{align*}
+%we see that  
+%\begin{align*}
+%p(\theta| \mb{X}_{n}) &= \frac{\prod_{k=1}^{n}p_{\theta}(X_{k})}{\int_{\Theta}\prod_{k=1}^{n}p_{\theta}(X_{k})d\Pi(\theta)}
+%\end{align*} is the \emph{density of $\Pi(\cdot|\mb{X}_{n})$ with respect to the prior $\Pi$}.
+%\end{definition}
+%
+%\item \begin{remark}\citep{ghosh2003bayesian}\\
+%The posterior $\Pi(\cdot|\mb{X}_{n})$ is the function of the \emph{empirical process} $(1/n)\sum_{k}^{n}\delta_{X_{k}}$ and it is invariant under permutation of $X_{1},\ldots, X_{n}$ into $X_{\pi(1)},\ldots, X_{\pi(n)}$.
+%\end{remark}
+%
+%\item \begin{definition}\citep{ghosh2003bayesian}\\ 
+%For each $n$, let $\Pi(\cdot|X_{1},\ldots, X_{n})$ be a posterior given $X_1, X_2, \ldots, X_n$.
+%The sequence $\{\Pi(\cdot|X_{1},\ldots, X_{n})$ $, n\ge 1\}$ is said to be \emph{consistent} at $\theta_0$ if there is a $\Omega_0 \subset \Omega$ with  $\cP_{\theta_{0}}^{\infty}(\Omega_{0}) = 1$ such that if $\omega$ is in $\Omega_0$, then for every neighborhood $U$ of $\theta_0$ 
+%\begin{align*}
+%\rlat{\Pi(U|X_{1},\ldots, X_{n})}{\omega} &\rightarrow 1,
+%\end{align*} as $n\rightarrow \infty$. (When $U=U(\epsilon)\equiv U(\Omega_{0})$, it is to say with $\cP^{\infty}_{\theta_{0}}$ probability one, the convergence result holds.)
+%\end{definition}
+%
+%\item \begin{remark}\citep{ghosh2003bayesian}\\ 
+%When $\Theta$ is a metric space $\set{\theta : \rho(\theta, \theta_0) < 1/n : n \ge 1}$ forms a base for the neighborhoods of $\theta_0$, and hence one can allow the set of measure $1$ to depend on $U$. In other words, it is enough to show that for each neighborhood $U$ of $\theta_0$,
+%\begin{align*}
+%\rlat{\Pi(U|X_{1},\ldots, X_{n})}{\omega} &\rightarrow 1, \;\; a.e.  \;\cP_{\theta_{0}}^{\infty}.
+%\end{align*}
+%Further, when $\Theta$  is a separable metric space it follows from the Portmanteau theorem
+%that consistency of the sequence $\{\Pi(\cdot|X_{1},\ldots, X_{n})$ $, n\ge 1\}$ at  $\theta_0$ is equivalent to requiring that
+%\begin{align*}
+%\{\Pi(\cdot|X_{1},\ldots, X_{n}), n\ge 1\} &\stackrel{weakly}{\rightarrow}\delta_{\theta_{0}}, \;\; a.e.  \;\cP_{\theta_{0}}^{\infty}.
+%\end{align*}
+%Thus the posterior is consistent at $\theta_0$, if with $\cP^{\infty}_{\theta_{0}}$ probability $1$, as $n$ gets large, the
+%posterior concentrates around $\theta_0$.
+%\end{remark}
+\end{itemize}
+
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{reference.bib}
+\end{document}
