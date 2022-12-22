@@ -1,0 +1,6 @@
+\contentsline {section}{\numberline {1}Complete Metric Space}{2}
+\contentsline {section}{\numberline {2}Compactness in Metric Spaces}{3}
+\contentsline {subsection}{\numberline {2.1}Total Boundedness and Equicontinuous}{3}
+\contentsline {subsection}{\numberline {2.2}Pointwise and Compact Convergence}{5}
+\contentsline {subsection}{\numberline {2.3}Ascoli's Theorem}{9}
+\contentsline {section}{\numberline {3}Baire Category Theorem}{10}
