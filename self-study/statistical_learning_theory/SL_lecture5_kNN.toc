@@ -1,0 +1,7 @@
+\contentsline {section}{\numberline {1}Nearest Neighbor Rules}{2}
+\contentsline {subsection}{\numberline {1.1}The Classification Rule}{2}
+\contentsline {section}{\numberline {2}Consistency}{3}
+\contentsline {subsection}{\numberline {2.1}Asymptotic Consistency}{3}
+\contentsline {subsection}{\numberline {2.2}Stone's Lemma}{3}
+\contentsline {subsection}{\numberline {2.3}The Asymptotic Probability of Error}{3}
+\contentsline {subsection}{\numberline {2.4}Stone's Theorem}{3}

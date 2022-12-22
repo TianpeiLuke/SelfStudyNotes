@@ -1,0 +1,14 @@
+\begin{thebibliography}{1}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Devroye et~al.(2013)Devroye, Gy{\"o}rfi, and
+  Lugosi]{devroye2013probabilistic}
+Luc Devroye, L{\'a}szl{\'o} Gy{\"o}rfi, and G{\'a}bor Lugosi.
+\newblock \emph{A probabilistic theory of pattern recognition}, volume~31.
+\newblock Springer Science \& Business Media, 2013.
+
+\end{thebibliography}
