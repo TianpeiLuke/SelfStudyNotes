@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  15 NOV 2022 18:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  21 DEC 2022 22:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -386,10 +386,7 @@ cmsy/m/n/10.95 ^^R \OML/cmm/m/it/10.95 X$ \OT1/cmr/m/n/10.95 is said to be $[]$
 
  []
 
-[5]
-Missing character: There is no Â in font cmr10!
-Missing character: There is no µ in font cmr10!
- [6]
+[5] [6]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7]
@@ -459,10 +456,10 @@ Missing character: There is no ™ in font cmti10!
  [18] (./MT_lecture5_abstract_integration.bbl) [19]
 (./MT_lecture5_abstract_integration.aux) ) 
 Here is how much of TeX's memory you used:
- 5069 strings out of 493029
- 71395 string characters out of 6136233
- 146018 words of memory out of 5000000
- 8507 multiletter control sequences out of 15000+600000
+ 5080 strings out of 493029
+ 71428 string characters out of 6136233
+ 146084 words of memory out of 5000000
+ 8518 multiletter control sequences out of 15000+600000
  13705 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,11n,38p,698b,301s stack positions out of 5000i,500n,10000p,200000b,80000s
