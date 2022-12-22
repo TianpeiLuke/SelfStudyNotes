@@ -90,8 +90,28 @@
   - Flows and Flowouts on Manifolds with Boundary
 
 - Vector Bundle
+  - Vector Bundles
+    - Definitions
+    - Examples
+  - Local and Global Sections of Vector Bundles
+    - Local and Global Sections
+    - Local and Global Frames
+  - Bundle Homomorphisms
+  - Subbundles
 
-- Chapter 11: Cotangent Bundle
+- Cotangent Bundle
+  - Covectors
+    - Linear Functional, Dual Space of Vector Space 
+    - Tangent Covectors on Manifolds
+    - Covector Fields
+    - Coframes
+  - The Differential of a Function
+  - Pullbacks of Covector Fields
+    - Definitions
+    - Restricting Covector Fields to Submanifolds 
+  - Compare Tangent Bundle and Cotangent Bundle
+  - Line Integrals
+  - Conservative Covector Fields
 
 - Chapter 12: Tensors
 
