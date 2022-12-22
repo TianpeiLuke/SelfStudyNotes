@@ -1,0 +1,8 @@
+\contentsline {section}{\numberline {1}Rates of change under variations}{2}{}%
+\contentsline {section}{\numberline {2}The chain rule, velocities and tangent vectors}{2}{}%
+\contentsline {subsection}{\numberline {2.1}Coordinate independence}{2}{}%
+\contentsline {section}{\numberline {3}Differentials and $1$-forms}{2}{}%
+\contentsline {section}{\numberline {4}Vector fields}{2}{}%
+\contentsline {subsection}{\numberline {4.1}Coordinate calculations}{2}{}%
+\contentsline {section}{\numberline {5}Manifolds}{2}{}%
+\contentsline {subsection}{\numberline {5.1}Coordinates and geometry}{2}{}%
