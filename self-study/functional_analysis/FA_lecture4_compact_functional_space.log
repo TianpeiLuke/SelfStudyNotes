@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  10 DEC 2022 20:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  23 DEC 2022 11:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -681,11 +681,7 @@ Overfull \hbox (9.37354pt too wide) in paragraph at lines 74--76
 der Uni-form Met-ric\OT1/cmr/m/it/10.95 ) [Munkres,
  []
 
-[2] [3]
-Missing character: There is no â in font cmbxti10!
-Missing character: There is no € in font cmbxti10!
-Missing character: There is no ™ in font cmbxti10!
- [4]
+[2] [3] [4]
 <pointwise_convergence_topology.png, id=33, 635.37375pt x 484.81125pt>
 File: pointwise_convergence_topology.png Graphic file (type png)
 
@@ -728,10 +724,10 @@ Overfull \hbox (3.7102pt too wide) in paragraph at lines 728--729
 [15] (./FA_lecture4_compact_functional_space.bbl) [16]
 (./FA_lecture4_compact_functional_space.aux) ) 
 Here is how much of TeX's memory you used:
- 15922 strings out of 493029
- 315336 string characters out of 6136233
- 359508 words of memory out of 5000000
- 19121 multiletter control sequences out of 15000+600000
+ 15923 strings out of 493029
+ 315339 string characters out of 6136233
+ 359514 words of memory out of 5000000
+ 19122 multiletter control sequences out of 15000+600000
  17250 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,16n,84p,644b,458s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -756,7 +752,7 @@ m/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti1
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on FA_lecture4_compact_functional_space.pdf (16 pages, 330349 by
+Output written on FA_lecture4_compact_functional_space.pdf (16 pages, 330336 by
 tes).
 PDF statistics:
  149 PDF objects out of 1000 (max. 8388607)
