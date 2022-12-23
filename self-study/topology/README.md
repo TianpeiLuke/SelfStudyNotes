@@ -6,15 +6,15 @@
 
 ## Table of Contents
 - Summary 
-	- Part 1
+	- Part 1 [pdf](./topology_lecture_0_summary_part1.pdf)
 		- Set Theory
 		- Topological Spaces
-	- Part 2
+	- Part 2 [pdf](./topology_lecture_0_summary_part2.pdf)
 		- Connectedness and Compactness
 		- Countability Axioms and Separation Axioms
 		- Important Theorems
 		- Embeddings of Manifolds
-	- Part 3
+	- Part 3 [pdf](./topology_lecture_0_summary_part3.pdf)
 		- Metrization Theorems and Paracompactness
 		- Complete Metric Spaces and Function Spaces 
 		- Baire Spaces	 
