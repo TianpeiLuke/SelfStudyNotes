@@ -29,7 +29,16 @@
   
   - Part 2 [pdf](./MT_lecture0_summary_part2.pdf)
 
-- Development of Lebesgue Measure
+- Development of Lebesgue Measure [pdf](./MT_lecture1_measure.pdf)
+  - Elementary Measure and Jordan Measure 
+    - Measure and its motivations
+    - Elementary Measure
+    - Jordan Measure
+  - Lebesgue Measure
+    - Lebesgue outer measure
+    - Lebesgue measure
+  - The Development of Lebesgue Measure Theory
+  - Counterexamples
 
 - Development of Lebesgue Integration Theory
 
