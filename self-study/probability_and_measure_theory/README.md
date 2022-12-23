@@ -40,7 +40,13 @@
   - The Development of Lebesgue Measure Theory
   - Counterexamples
 
-- Development of Lebesgue Integration Theory
+- Development of Lebesgue Integration Theory [pdf](./MT_lecture2_integration.pdf)
+  - Riemann Integration
+  - Lebesgue Integration of Unsigned Simple Functions
+  - Unsigned Lebesgue Measurable Function
+  - Unsigned Lebesgue Integrals
+  - Absolute Integrable Function
+  - Development of Lebesgue Integration 
 
 - Sigma-Algebra 
 
