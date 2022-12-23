@@ -62,7 +62,7 @@
   - Construction of Abstract Measure
     - Outer Measure
     - The Caratheodory Extension Theorem
-    - Premeasure and Hahn-Kolmogorov Theorem
+    - Pre-measure and Hahn-Kolmogorov Theorem
 
 - Abstract Integration Theory [pdf](./MT_lecture5_abstract_integration.pdf)
   - Measurable Functions, and Integration on a Measure Space
