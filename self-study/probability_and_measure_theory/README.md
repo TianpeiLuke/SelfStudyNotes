@@ -75,9 +75,25 @@
     - Fatau's Lemma
     - Dominated Convergence Theorem 
 
-- Littlewood's Three Principles
+- Littlewood's Three Principles [pdf](./MT_lecture6_littlewood_principle.pdf)
+  - Every Measurable Set is Nearly a Finite Sum of Intervals
+  - Every Pointwise Convergent Sequence of Functions is Nearly Uniformly Convergent
+  - Every Absolutely Integrable Function is Nearly Continuous 
 
-- Modes of Convergence
+- Modes of Convergence [pdf](./MT_lecture7_convergence.pdf)
+  - Convergence of Functions in Measure Space
+    - Definitions 
+    - Modes of Convergence via Tail Support and Width
+    - Comparison
+    - Relationships between Different Modes of Convergence
+    - Counter Examples
+    - Uniqueness
+  - Modes of Convergence for Step Functions
+  - Modes of Convergence With Additional Conditions
+    - Finite Measure Space
+    - Fast L1 Convergence
+    - Domination and Uniform Integrability
+  - Convergence in Distribution 
 
 - Signed Measures and Radon-Nikodym Theorem
 
