@@ -37,7 +37,7 @@
     - Open Mapping Theorem
     - Closed Graph Theorem
   
-- Hilbert Space
+- Hilbert Space [pdf](./FA_lecture1_hilbert_space.pdf)
   - Metric Space
   - Inner Product Space
   - Hilbert Space
@@ -48,7 +48,7 @@
     - Hilbert Adjoint Operator
     - Self-Adjoint, Unitary and Normal Operators
 
-- Banach Space
+- Banach Space [pdf](./FA_lecture2_banach_space.pdf)
   - Normed Linear Space
   - Banach Space
     - Definitions
@@ -66,11 +66,11 @@
   - Open Mapping Theorem
   - Closed Graph Theorem
 
-- Topology Basis
+- Topology Basis 
 
-- Locally Convex Space
+- Locally Convex Space [pdf](./FA_lecture3_topology_review.pdf)
 
-- Compactness in Function Spaces
+- Compactness in Function Spaces [pdf](./FA_lecture4_compact_functional_space.pdf)
   - Complete Metric Spaces and Function Spaces
     - Complete Metric Space
     - Compactness in Metric Spaces, Total Boundedness
@@ -85,7 +85,7 @@
     - Weak-star Topology
     - Banach-Alaugu Theorem
 
-- Regular Borel Measure
+- Regular Borel Measure [pdf](./FA_lecture5_radon_measure.pdf)
   - Subspace of Continuous Function Space
     - Compactly Supported Continuous Functions  
   - Regularity
@@ -95,7 +95,7 @@
   - Dual Space of Continuous Function with Compact Support
   
 
-- Bounded Linear Operator
+- Bounded Linear Operator [pdf](./FA_lecture7_bounded_operators.pdf)
   - Spectrum
     - Finite Dimensional Case
     - Infinite Dimensional Case
@@ -109,7 +109,7 @@
     - Hilbert-Schmidt Operator
     - Trace of Linear Operator
 
-- Spectral Theorem for Bounded Self-Adjoint Operator in Hilbert Space
+- Spectral Theorem for Bounded Self-Adjoint Operator in Hilbert Space [pdf](./FA_lecture8_spectral_theorem.pdf)
   - Spectral Theorem in Finite Dimensional Space 
   - Continuous Functional Calculus
   - Spectral Theorem for Bounded Self-Adjoint Operator
