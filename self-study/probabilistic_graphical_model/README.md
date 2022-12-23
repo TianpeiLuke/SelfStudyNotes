@@ -38,7 +38,7 @@
     - Challenges in High Dimensional Setting
     - Primal-Dual Formulation of KL Divergence
 
-- Inference in Tabular-Based Graphical Models
+- Inference in Tabular-Based Graphical Models [pdf](./GM_3_inference_tab.pdf)
   - Inference in Graphical Models
   - Inference for Tabular-Based Graphical Models
   - Exact Marginal Inference on Tree-Structure Model
