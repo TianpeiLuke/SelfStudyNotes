@@ -25,9 +25,9 @@
 
 ### Measure Theory
 - Summary 
-  - Part 1 [pdf](./MT_lecture0_summary_part1.pdf)
+  - Part 1 Measure Theory and Integration Theory [pdf](./MT_lecture0_summary_part1.pdf)
   
-  - Part 2 [pdf](./MT_lecture0_summary_part2.pdf)
+  - Part 2 Differentiation Theory [pdf](./MT_lecture0_summary_part2.pdf)
 
 - Development of Lebesgue Measure [pdf](./MT_lecture1_measure.pdf)
   - Elementary Measure and Jordan Measure 
