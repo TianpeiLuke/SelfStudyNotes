@@ -43,7 +43,15 @@
   - Time-Reversible Markov Chain
   - Ergodic Theorem and Central Limit Theorem
 
-- Markov Chain Monte Carlo Sampling Methods
+- Markov Chain Monte Carlo Sampling Methods [pdf](./3_mcmc.pdf)
+  - Basic Concept from Markov Chain
+  - Markov Chain Monte Carlo
+    - From Vanilla Monte Carlo to Markov Chain Monte Carlo
+    - Metropolis-Hastings Algorithm
+  - Special Metropolis-Hastings Algorithms
+    - Random-Walk Metropolis-Hastings
+    - Independence Metropolis-Hastings
+    - Configurational Bias Monte Carlo
 
 - Gibbs Sampling
 
