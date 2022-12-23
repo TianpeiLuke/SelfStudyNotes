@@ -98,8 +98,12 @@
 - Signed Measures and Radon-Nikodym Theorem [pdf](./MT_lecture8_density_measure.pdf)
   -  Signed Measure
   -  Decomposition of Signed Measure
-  -  Hahn Decomposition  
+    - Positive Measure
+    - Hahn Decomposition Theorem
+    - Jodan Decomposition Theorem
   -  Lebesgue-Radon-Nikodym Theorem
+    - Lebesgue Decomposition
+    - Radon-Nikodym derivative  
 
 - Lebesgue Differentiation Theory and Fundamental Theorem of Calculus
 
