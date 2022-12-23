@@ -83,4 +83,12 @@
     - Correcting Errors for Symplectic Integrators 
   - Connection with Topology
   
-- Monte Carlo Optimization Methods
+- Monte Carlo Optimization Methods [pdf](./6_mc_optimzation.pdf)
+  - Stochastic Optimization Problems
+  - Stochastic Explortation
+    - Gradient Methods, Stochastic Gradient Descent
+    - Simulated Annealing
+    - Simulated Tempering
+  - Stochastic Approximation
+    - EM Algorithm
+    - Monte Carlo EM Algorithm
