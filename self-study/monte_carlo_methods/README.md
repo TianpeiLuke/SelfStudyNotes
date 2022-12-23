@@ -62,9 +62,25 @@
     - Partial Resampling
     - Probabilistic Structure of Two-Stage Gibbs Sampling Markov Chain
     - Theoretical Justifications
-    - Gibbs Sampling as Metropolis-Hastings Algorithms
-    - Metroplized Gibbs Sampling
+  - Gibbs Sampling as Metropolis-Hastings Algorithms
+  - Metroplized Gibbs Sampling
 
-- Hamiltonian Monte Carlo Methods
-
+- Hamiltonian Monte Carlo Methods [pdf](./5_hmc.pdf)
+  - Calculus of Variations
+    - Basic Theorems in Calculus of Variations 
+    - Euler-Lagrangian Equations
+    - Hamilton's Equations
+    - Hamiltonian Dynamics and its Properties
+  - Markov Chain Monte Carlo From Hamiltonian Dynamics
+    - Monte Carlo in High Dimensional Space
+    - Hamiltonian Monte Carlo
+    - Idealized Hamiltonian Monte Carlo
+    - The Natural Geometry of Phase Space
+    - Properties of Hamiltonian Monte Carlo
+    - Euclidean-Gaussian Kinetic Energies
+  - Hamiltonian Monte Carlo in Practice
+    - Symplectic Integrators
+    - Correcting Errors for Symplectic Integrators 
+  - Connection with Topology
+  
 - Monte Carlo Optimization Methods
