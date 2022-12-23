@@ -19,7 +19,7 @@
 		- Complete Metric Spaces and Function Spaces 
 		- Baire Spaces	 
 
-- Set Theory
+- Set Theory [pdf](./topology_lecture_1_set.pdf)
 	- Set Operations, Logic
 	- Functions
 	- Relations
@@ -30,7 +30,7 @@
 	- The Axioms of Choice
 	- Well-Ordering Theorem and Zorn’s Lemma
 
-- Topological Spaces
+- Topological Spaces [pdf](./topology_lecture_2_top_space.pdf)
 	- Topology Definitions
 		- Topology
 		- Basis
@@ -52,7 +52,7 @@
 		- Constructing Continuous Function on Quotient Space 
 	- Topological Groups 
 
-- Connectedness and Compactness
+- Connectedness and Compactness [pdf](./topology_lecture_3_connected_compact.pdf)
 	- Connected Spaces
 		- Definitions and Properties
 		- Connected Subspaces of Real Line
@@ -62,10 +62,10 @@
 		- Compact Subspaces of the Real Line
 		- Limit Point Compactness
 		- Local Compactness 
-	- The Tychonoff Theorem
+	- The Tychonoff Theorem [pdf](./topology_lecture_5_tychonoff.pdf)
 	- Nets and Convergence in Topological Space 
 
-- Countability Axioms and Separation Axioms
+- Countability Axioms and Separation Axioms [pdf](./topology_lecture_4_countability.pdf)
 	- The Countability Axioms
 	- The Separation Axioms
 		- Definitions and Properties
@@ -78,7 +78,7 @@
 	- Embeddings of Manifolds
 		- Partition of Unity 
 
-- Paracompactness and Meterization Theorems
+- Paracompactness and Meterization Theorems [pdf](./topology_lecture_6_paracompact.pdf)
 	- Paracompactness
 		- Local Finiteness
 		- Paracompactness
@@ -87,11 +87,11 @@
 		- The Nagata-Smirnov Metrization Theorem
 		- The Smirnov Metrization Theorem 
 
-- Complete Metric Space
+- Complete Metric Space [pdf](./topology_lecture_7_complete_metric_space.pdf)
 	- Complete Metric Space
 	- Compactness in Metric Spaces
 		- Total Boundedness and Equicontinuous
 		- Ascoli's Theorem
 		- Uniform, Pointwise and Compact Convergence
-- Baire Spaces
+- Baire Spaces [pdf](./topology_lecture_7_complete_metric_space.pdf)
 	- Baire Category Theorem 
