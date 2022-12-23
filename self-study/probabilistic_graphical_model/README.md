@@ -10,7 +10,7 @@
 
 ## Table of Contents
 
-- Probabilistic Graphical Models
+- Probabilistic Graphical Models [pdf](./GM_1_prob_graphical_models.pdf)
   - Introductions
   - Probabilistic Graphical Models
     - Directed Graphical Models (Bayesian Networks)
