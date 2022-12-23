@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  15 DEC 2022 09:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  23 DEC 2022 11:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -717,10 +717,10 @@ r/m/n/10.95 , $\OML/cmm/m/it/10.95 A$ \OT1/cmr/m/n/10.95 is said to be $[]$
 [10] [11] (./topology_lecture_7_complete_metric_space.bbl) [12]
 (./topology_lecture_7_complete_metric_space.aux) ) 
 Here is how much of TeX's memory you used:
- 15895 strings out of 493029
- 314761 string characters out of 6136233
- 366560 words of memory out of 5000000
- 19100 multiletter control sequences out of 15000+600000
+ 15896 strings out of 493029
+ 314764 string characters out of 6136233
+ 366566 words of memory out of 5000000
+ 19101 multiletter control sequences out of 15000+600000
  16962 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,16n,84p,648b,458s stack positions out of 5000i,500n,10000p,200000b,80000s
