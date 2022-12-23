@@ -14,7 +14,7 @@
 
 
 ## Table of Contents
-- Fundamental of Causal Inference
+- Fundamental of Causal Inference [pdf](./CI_1_causal_inference.pdf)
   	- Association Does Not Imply Causation
 	- Potential Outcomes
 		- Potential Outcomes and Individual Treatment Effects
@@ -27,7 +27,7 @@
 	- Structural Causal Models
 	- Basic process in Causal Inference
 
-- Causal Graphical Models
+- Causal Graphical Models [pdf](./CI_2_causal_graphical_models.pdf)
 	- Directed Graphical Models
 	- Causal Graphial Models
 	- Structural Causal Models 
@@ -42,7 +42,7 @@
 		-  Collider Bias and Why to Not Condition on Descendants of Treatment
 		-  Compare to Adjustment Formula
 
-- Randomized Experiments
+- Randomized Experiments [pdf](./CI_3_random_exp.pdf)
 	- Association is Causation in Completely Randomized Experiments
 		- Comparability and Covariate Balance
 		- Exchangeability
@@ -51,7 +51,7 @@
 		- Hypothesis Testing
 		- Attributable Effects
 
-- Observational Studies
+- Observational Studies [pdf](./CI_4_observ_studies.pdf)
 	- Controlling Confounding Bias
 		- The Back-Door Adjustment
 		- The Front-Door Adjustment
@@ -70,12 +70,12 @@
 			- Optimal Treatment Selection
 		- Sensitivity Analysis
 
-- Causal Estimations 
+- Causal Estimations [pdf](./CI_5_causal_estimation.pdf)
 	- Conditional Outcome Modeling
 	- Inverse Probability Weighting 
 	- Doubly Robust Methods
 
-- Instrumental Variables
+- Instrumental Variables [pdf](./CI_6_instrumental_variables.pdf)
 	- What is an Instrument
 	- Linear Setting
 		- Binary Linear Setting
