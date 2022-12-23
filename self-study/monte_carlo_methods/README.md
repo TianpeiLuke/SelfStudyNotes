@@ -37,7 +37,7 @@
     - Equivalence Class by Communication
     - Foster Theorem and Poke's Lemma
   - Limiting and Stationary Distribution 
-    - Invariance Measure
+    - Invariant Measure
     - Ergodicity
     - Mean Hitting Time Formula
   - Time-Reversible Markov Chain
@@ -53,7 +53,17 @@
     - Independence Metropolis-Hastings
     - Configurational Bias Monte Carlo
 
-- Gibbs Sampling
+- Gibbs Sampling [pdf](./4_gibbs.pdf)
+  - Drawbacks of Metropolis-Hastings Algorithms
+  - Gibbs Sampling
+    - Slice Sampling
+    - Gibbs Sampling
+    - The Hammersley-Cliffold Theorem
+    - Partial Resampling
+    - Probabilistic Structure of Two-Stage Gibbs Sampling Markov Chain
+    - Theoretical Justifications
+    - Gibbs Sampling as Metropolis-Hastings Algorithms
+    - Metroplized Gibbs Sampling
 
 - Hamiltonian Monte Carlo Methods
 
