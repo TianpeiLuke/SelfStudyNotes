@@ -9,7 +9,7 @@
 
 ## Table of Content
 
-- Summary
+- Summary [pdf](./0_intro_terminology.pdf)
 
 - Tabluar-Based Methods
   - Multi-Armed Bandit Problem
