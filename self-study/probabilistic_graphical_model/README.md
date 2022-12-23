@@ -4,13 +4,13 @@
 
 ***Graphical Models, Exponential Families, and Variational Inference***, Martin J. Wainwright and Michael I. Jordan
 
-***Probabilistic Graphical Models Principles and Techniques***, Daphone Koller, Nir Friedman
+***Probabilistic Graphical Models: Principles and Techniques***, Daphone Koller, Nir Friedman
 
 ***Information Theory, Inference, and Learning Algorithms***, David J. C. Mackay
 
 ## Table of Contents
 
-- Probabilistic Graphical Models
+- Probabilistic Graphical Models [pdf](./GM_1_prob_graphical_models.pdf)
   - Introductions
   - Probabilistic Graphical Models
     - Directed Graphical Models (Bayesian Networks)
@@ -29,7 +29,7 @@
     - Latent Dirichlet allocation (LDA)
     - Restricted Boltzmann machine (RBM)
  
-- Exponential Families and Variational Representation
+- Exponential Families and Variational Representation [pdf](./GM_2_exp_fam_inference.pdf)
   - Definitions
   - Exponential family via maximum entropy
     - Maximum Entropy Estimation
@@ -38,7 +38,7 @@
     - Challenges in High Dimensional Setting
     - Primal-Dual Formulation of KL Divergence
 
-- Inference in Tabular-Based Graphical Models
+- Inference in Tabular-Based Graphical Models [pdf](./GM_3_inference_tab.pdf)
   - Inference in Graphical Models
   - Inference for Tabular-Based Graphical Models
   - Exact Marginal Inference on Tree-Structure Model
@@ -48,7 +48,7 @@
   - Exact Mode Inference on Tree-Structure Model 
   - Junction Tree Representation
 
-- Variational Inference in Exponential Family Graphical Models
+- Variational Inference in Exponential Family Graphical Models [pdf](./GM_4_variational_inference_exp.pdf)
   - Approximate Inference via Variational Methods
   - Belief Propagation for Exponential Families
     - Approximate Marginal Polytope via Pseudo-Marginal Distributions
@@ -63,7 +63,7 @@
     - Naive Mean Field Algorithms
     - Nonconvexity of Mean Field
 
-- Parameter Estimation in Graphical Models
+- Parameter Estimation in Graphical Models [pdf](./GM_5_param_est.pdf)
   - Parameter Estimation in Fully Observed Models
   - Parameter Estimation in Partially Observed Models
     - Exact EM Algorithm in Exponential Families
