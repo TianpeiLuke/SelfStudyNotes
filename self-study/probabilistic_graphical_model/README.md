@@ -4,7 +4,7 @@
 
 ***Graphical Models, Exponential Families, and Variational Inference***, Martin J. Wainwright and Michael I. Jordan
 
-***Probabilistic Graphical Models Principles and Techniques***, Daphone Koller, Nir Friedman
+***Probabilistic Graphical Models: Principles and Techniques***, Daphone Koller, Nir Friedman
 
 ***Information Theory, Inference, and Learning Algorithms***, David J. C. Mackay
 
