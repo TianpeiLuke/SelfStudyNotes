@@ -18,17 +18,17 @@
 
 ## Table of Contents
 - Summary 
-  - Part 1: 
+  - Part 1 [pdf](./FA_lecture0_summary_0.pdf)
     - Topology Basics
     - Complete Function Space
     - Topological Vector Space
     - Locally Convex Space
-  - Part 2: 
+  - Part 2 [pdf](./FA_lecture0_summary_1.pdf)
     - Hilbert Space
     - Bounded Linear Operator
     - Compact Operator
     - Spectrum
-  - Part 3: 
+  - Part 3 [pdf](./FA_lecture0_summary_2.pdf)
     - Banach Space
     - Bounded Linear Operator, Dual Space
     - Weak Topology, Weak-star Topology
