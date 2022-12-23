@@ -96,12 +96,12 @@
   - Convergence in Distribution 
 
 - Signed Measures and Radon-Nikodym Theorem [pdf](./MT_lecture8_density_measure.pdf)
-  -  Signed Measure
-  -  Decomposition of Signed Measure
+  - Signed Measure
+  - Decomposition of Signed Measure
     - Positive Measure
     - Hahn Decomposition Theorem
     - Jodan Decomposition Theorem
-  -  Lebesgue-Radon-Nikodym Theorem
+  - Lebesgue-Radon-Nikodym Theorem
     - Lebesgue Decomposition
     - Radon-Nikodym derivative  
 
