@@ -34,7 +34,7 @@
     - Curvature
   - Notations and Computations [pdf](./abstract_diff_geo_lecture_0_notations.pdf)
   
-- Smooth Manifolds
+- Smooth Manifolds [pdf](./abstract_diff_geo_lecture_1_smooth_manifolds.pdf)
   - Topological Manifolds
     - Definitions
     - Coordinate Charts
@@ -45,7 +45,7 @@
     - Examples of Smooth Manifolds
   - Manifolds with Boundary
 
-- Smooth Maps
+- Smooth Maps [pdf](./abstract_diff_geo_lecture_2_smooth_maps.pdf)
   - Smooth Functions and Smooth Maps
     - Smooth Functions On Manifolds
     - Smooth Functions Between Manifolds   
@@ -53,7 +53,7 @@
     - Diffeomorphisms
   - Partitions of Unity
 
-- Tangent Vectors
+- Tangent Vectors [pdf](./abstract_diff_geo_lecture_3_tangent_vectors.pdf)
   - Tangent Vectors
     - Geometric Tangent Vector
     - Tangent Vectors on Manifolds 
@@ -63,7 +63,7 @@
     - The Differential in Coordinates 
     - Change of Coordinates  
 
-- Submersions, Immersions, and Embeddings
+- Submersions, Immersions, and Embeddings [pdf](./abstract_diff_geo_lecture_4_subm_imm_emb.pdf)
   - Maps of Constant Rank
     - Submersions and Immersions
     - Local Diffeomorphisms
@@ -72,7 +72,7 @@
   - Embeddings
   - Submersions
 
-- Submanifolds
+- Submanifolds [pdf](./abstract_diff_geo_lecture_5_submanifold.pdf)
   - Embedded Submanifolds
     - Definitions and Examples
     - Slice Charts for Embedded Submanifolds
@@ -82,11 +82,11 @@
   - The Tangent Space to a Submanifold
   - Submanifolds with Boundary 
 
-- Sard's Theorem
+- Sard's Theorem [pdf](./abstract_diff_geo_lecture_6_sard_theorem.pdf)
 
-- Lie Groups
+- Lie Groups [pdf](./abstract_diff_geo_lecture_7_lie_groups.pdf)
 
-- Vector Fields
+- Vector Fields [pdf](./abstract_diff_geo_lecture_8_vector_fields.pdf)
   - Vector Fields on Manifolds
     - Definitions 
     - Examples of Smooth Vector Fields
@@ -98,7 +98,7 @@
   - Lie Brackets
   - The Lie Algebra of a Lie Group
 
-- Integral Curves
+- Integral Curves [pdf](./abstract_diff_geo_lecture_9_integral_curves.pdf)
   - Integral Curves
   - Flows
     - Global Flows
@@ -107,7 +107,7 @@
   - Flowouts
   - Flows and Flowouts on Manifolds with Boundary
 
-- Vector Bundle
+- Vector Bundle [pdf](./abstract_diff_geo_lecture_10_vector_bundle.pdf)
   - Vector Bundles
     - Definitions
     - Examples
@@ -117,7 +117,7 @@
   - Bundle Homomorphisms
   - Subbundles
 
-- Cotangent Bundle
+- Cotangent Bundle [pdf](./abstract_diff_geo_lecture_11_cotangent_bundle.pdf)
   - Covectors
     - Linear Functional, Dual Space of Vector Space 
     - Tangent Covectors on Manifolds
@@ -131,7 +131,7 @@
   - Line Integrals
   - Conservative Covector Fields
 
-- Tensors
+- Tensors [pdf](./abstract_diff_geo_lecture_12_tensors.pdf)
   - Multilinear Algebra
     - Multilinear Functions and Tensor Product
     - Abstract Tensor Products of Vector Spaces
@@ -145,7 +145,7 @@
     - Contraction
     - Lie Derivatives of Tensor Fields 
 
-- Riemannian Manifolds
+- Riemannian Manifolds [pdf](./abstract_diff_geo_lecture_13_riemannian_metrics.pdf)
   - Riemannian Metrics
     - Definitions
     - Pullback Metrics 
@@ -161,7 +161,7 @@
   - Length and Distance
     - The Riemannian Distance Function 
 
-- Differential Forms
+- Differential Forms [pdf](./abstract_diff_geo_lecture_14_differential_forms.pdf)
   - The Algebra of Alternating Tensors
     - The Exterior Form
     - Elementary Alternating Tensors
@@ -173,7 +173,7 @@
     - An Invariant Formula for the Exterior Derivative
     - Lie Derivatives of Differential Forms 
 
-- Connections
+- Connections [pdf](./abstract_diff_geo_lecture_15_connections.pdf)
   - Differentiating Vector Fields
   - Connections
     - Definitions
@@ -183,7 +183,7 @@
     - Extension of Connection From Tangent Bundle to Tensor Bundles, Covariant Derivatives
     - Second Covariant Derivatives
 
-- Geodesics
+- Geodesics [pdf](./abstract_diff_geo_lecture_16_geodesics.pdf)
   - Vector and Tensor Fields Along Curves
     - Definitions
     - Covariant Derivatives Along Curves 
@@ -191,7 +191,7 @@
   - Parallel Transport
   - Pullback Connections
 
-- Levi-Civita Connection
+- Levi-Civita Connection [pdf](./abstract_diff_geo_lecture_17_riemannian_connections.pdf)
   - The Tangential Connection
   - Connections on Abstract Riemannian Manifolds
     - Metric Connections
@@ -208,7 +208,7 @@
 
 - Geodesic Distance
 
-- Curvatures
+- Curvatures [pdf](./abstract_diff_geo_lecture_20_curvatures.pdf)
   - Local Invariants
   - The Curvature Tensor
     - Definitions
