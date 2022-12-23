@@ -24,6 +24,11 @@
 ## Table of Contents
 
 ### Measure Theory
+- Summary 
+  - Part 1 [pdf](./MT_lecture0_summary_part1.pdf)
+  
+  - Part 2 [pdf](./MT_lecture0_summary_part2.pdf)
+
 - Development of Lebesgue Measure
 
 - Development of Lebesgue Integration Theory
