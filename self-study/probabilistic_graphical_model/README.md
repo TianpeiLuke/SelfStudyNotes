@@ -29,7 +29,7 @@
     - Latent Dirichlet allocation (LDA)
     - Restricted Boltzmann machine (RBM)
  
-- Exponential Families and Variational Representation
+- Exponential Families and Variational Representation [pdf](./GM_2_exp_fam_inference.pdf)
   - Definitions
   - Exponential family via maximum entropy
     - Maximum Entropy Estimation
