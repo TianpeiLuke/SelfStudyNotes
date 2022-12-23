@@ -29,8 +29,19 @@
   - Sequential Importance Sampling (SIS)
   - Nonlinear Filtering, Particle Filter (Sequential Importance Resampling)
 
-- Introduction to Markov Chain Stochastic Process
-  - 
+- Introduction to Markov Chain Stochastic Process [pdf](./2_mc.pdf)
+  - Markov Chain
+    - Definitions
+    - Hitting Time
+  - Classification of States
+    - Equivalence Class by Communication
+    - Foster Theorem and Poke's Lemma
+  - Limiting and Stationary Distribution 
+    - Invariance Measure
+    - Ergodicity
+    - Mean Hitting Time Formula
+  - Time-Reversible Markov Chain
+  - Ergodic Theorem and Central Limit Theorem
 
 - Markov Chain Monte Carlo Sampling Methods
 
