@@ -10,7 +10,7 @@
 
 ## Table of Contents
 - Summary 
-  - part 1:
+  - part 1 
     - Topologies
     - Smooth Manifolds
     - Smooth Map
@@ -32,7 +32,7 @@
     - Riemannian Manifolds
     - Levi-Civita Connections 
     - Curvature
-  - Notations and Computations
+  - Notations and Computations [pdf](./abstract_diff_geo_lecture_0_notations.pdf)
   
 - Smooth Manifolds
   - Topological Manifolds
