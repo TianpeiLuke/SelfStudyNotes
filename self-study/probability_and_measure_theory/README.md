@@ -121,7 +121,7 @@
 
 - Expectation
 
-- Independence and Zero-One Laws
+- Independence and Zero-One Laws [pdf](./PT_lecture3_indep_01law.pdf)
   - Independence
     - Definitions
     - Independent Random Variables
