@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  18 DEC 2022 16:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  23 DEC 2022 11:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -766,10 +766,10 @@ Missing character: There is no Î in font cmr10!
 Missing character: There is no ¤ in font cmr10!
  [29] [30] (./FA_lecture0_summary_2.bbl) [31] (./FA_lecture0_summary_2.aux) ) 
 Here is how much of TeX's memory you used:
- 15914 strings out of 493029
- 315150 string characters out of 6136233
- 366821 words of memory out of 5000000
- 19119 multiletter control sequences out of 15000+600000
+ 15915 strings out of 493029
+ 315153 string characters out of 6136233
+ 366827 words of memory out of 5000000
+ 19120 multiletter control sequences out of 15000+600000
  15424 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,18n,84p,806b,322s stack positions out of 5000i,500n,10000p,200000b,80000s
