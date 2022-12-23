@@ -54,7 +54,7 @@
   - Minimal Description Length
 
 ### Machine Learning Models
-- K-Nearest Neighbor
+- k-Nearest Neighbor
   - The Classification Rule
   - Asymptotic Analysis
     - Asymptotic Convergence of K-Nearest Neigbhor Distance 
