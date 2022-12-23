@@ -117,14 +117,28 @@
     - The Second Fundamental Theorem of Calculus
 
 ### Probability Theory
-- Probabilty Measure
+- Probabilty Measure [pdf](./PT_lecture1_Prob_measure.pdf)
 
 - Expectation
 
 - Independence and Zero-One Laws
+  - Independence
+    - Definitions
+    - Independent Random Variables
+    - Examples of Independence
+    - Groupings 
+  - Zero-One Laws, Borel-Cantelli Lemma
+    - Borel-Cantelli Lemma
+    - Borel Zero-One Law
+    - Tail Sigma-Algebra and Komogorov Zero-One Law
 
 - Modes of Convergence and Statistical Consistency
 
 - Conditional Probability and Conditional Expectation
+  - Conditional Probability
+    - Definitions and Properties
+    - Conditional Probability Distribution   
+  - Conditional Expectation
+    - Definitions and Properties 
 
 - Posterior Distributions
