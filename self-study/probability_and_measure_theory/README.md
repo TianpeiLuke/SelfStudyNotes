@@ -42,15 +42,27 @@
 
 - Development of Lebesgue Integration Theory [pdf](./MT_lecture2_integration.pdf)
   - Riemann Integration
-  - Lebesgue Integration of Unsigned Simple Functions
-  - Unsigned Lebesgue Measurable Function
-  - Unsigned Lebesgue Integrals
-  - Absolute Integrable Function
   - Development of Lebesgue Integration 
+    - Lebesgue Integration of Unsigned Simple Functions
+    - Unsigned Lebesgue Measurable Function
+    - Unsigned Lebesgue Integrals
+    - Absolute Integrable Function
 
-- Sigma-Algebra 
+- Sigma-Algebra [pdf](./MT_lecture3_sigma_algebra.pdf)
+  - Development of Sigma-Algebra
+    - Algebra of Subsets
+    - Sigma-Algebra
+    - Borel Sigma-Algebra 
+  - Topology, Sigma-algebra and Borel Sigma-algebra
 
-- Abstract Measure Theory
+- Abstract Measure Theory [pdf](./MT_lecture4_abstract_measure.pdf)
+  - Measure Spaces
+  - Finitely Additive Measure
+  - Countably Additive Measure
+  - Construction of Abstract Measure
+    - Outer Measure
+    - The Carath\'eodory Extension Theorem
+    - Premeasure and Hahn-Kolmogorov Theorem
 
 - Abstract Integration Theory
 
