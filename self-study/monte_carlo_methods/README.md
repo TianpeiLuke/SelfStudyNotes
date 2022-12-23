@@ -16,6 +16,8 @@
 
 
 ## Table of Contents
+- Summary [pdf](./0_monte_carlo_sampling_summary.pdf)
+
 - Fundamental of Monte Carlo Sampling Methods 
 
 - Importance Sampling
