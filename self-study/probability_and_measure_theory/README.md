@@ -95,7 +95,7 @@
     - Domination and Uniform Integrability
   - Convergence in Distribution 
 
-- Sigma Algebra, Measure and Integration on Product Space (./MT_lecture10_product_measure.pdf)
+- Sigma Algebra, Measure and Integration on Product Space [pdf](./MT_lecture10_product_measure.pdf)
   - Product Sigma-Algebra
   - Product Measure
   - Tonelli’s Theorem
