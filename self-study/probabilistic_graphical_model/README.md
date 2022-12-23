@@ -63,7 +63,7 @@
     - Naive Mean Field Algorithms
     - Nonconvexity of Mean Field
 
-- Parameter Estimation in Graphical Models
+- Parameter Estimation in Graphical Models [pdf](./GM_5_param_est.pdf)
   - Parameter Estimation in Fully Observed Models
   - Parameter Estimation in Partially Observed Models
     - Exact EM Algorithm in Exponential Families
