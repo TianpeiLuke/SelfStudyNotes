@@ -18,11 +18,19 @@
 ## Table of Contents
 - Summary [pdf](./0_monte_carlo_sampling_summary.pdf)
 
-- Fundamental of Monte Carlo Sampling Methods 
+- Fundamental of Monte Carlo Sampling Methods [pdf](./1_importance_sampling.pdf)
+  - Why Monte Carlo ?
+  - Random Variable Generation
+  - Reject Sampling
+  - Variance Reduction
 
-- Importance Sampling
+- Importance Sampling [pdf](./1_importance_sampling.pdf)
+  - Algorithm
+  - Sequential Importance Sampling (SIS)
+  - Nonlinear Filtering, Particle Filter (Sequential Importance Resampling)
 
-- Fundamental of Markov Chain Stochastic Process
+- Introduction to Markov Chain Stochastic Process
+  - 
 
 - Markov Chain Monte Carlo Sampling Methods
 
