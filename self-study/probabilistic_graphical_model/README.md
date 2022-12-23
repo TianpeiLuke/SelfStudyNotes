@@ -48,7 +48,7 @@
   - Exact Mode Inference on Tree-Structure Model 
   - Junction Tree Representation
 
-- Variational Inference in Exponential Family Graphical Models
+- Variational Inference in Exponential Family Graphical Models [pdf](./GM_4_variational_inference_exp.pdf)
   - Approximate Inference via Variational Methods
   - Belief Propagation for Exponential Families
     - Approximate Marginal Polytope via Pseudo-Marginal Distributions
