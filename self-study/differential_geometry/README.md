@@ -10,25 +10,25 @@
 
 ## Table of Contents
 - Summary 
-  - part 1 
+  - part 1 [pdf](./abstract_diff_geo_lecture_0_summary_part1.pdf)
     - Topologies
     - Smooth Manifolds
     - Smooth Map
     - Submersion, Immersion, Embeddings
     - Submanifolds
-  - part 2
+  - part 2 [pdf](./abstract_diff_geo_lecture_0_summary_part2.pdf)
     - Tangent and Cotangent Vector Space
     - Bundles and Sections
     - Comparison of Concepts for Bundles
     - Cotangent Bundle, Coframes and Covector Field
     - Compare the Tangent and Cotangent Bundles 
     - Pushforward and Pullback
-  - part 3: 
+  - part 3 [pdf](./abstract_diff_geo_lecture_0_summary_part3.pdf)
     - Tensor
     - Differential Forms, Exterior Derivatives
     - Directional Derivatives, Connections
     - Lie Derivatives
-  - part 4: 
+  - part 4 [pdf](./abstract_diff_geo_lecture_0_summary_part4.pdf)
     - Riemannian Manifolds
     - Levi-Civita Connections 
     - Curvature
