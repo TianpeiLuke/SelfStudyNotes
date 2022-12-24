@@ -26,7 +26,7 @@
 
 
 \begin{document}
-\title{Lecture 5: K-Nearest Neigbhor Rules}
+\title{Lecture 5: $k$-Nearest Neigbhor Rules}
 \author{ Tianpei Xie}
 \date{ Dec. 19th., 2022 }
 \maketitle
@@ -83,25 +83,25 @@ Note that, in contrast with the algorithmic paradigms that we have discussed so 
 
 
 \section{Asymptotic Analysis}
-\subsection{Consistency of K-Nearest Neighbor Statistics}
+\subsection{Consistency of $k$-Nearest Neighbor Statistics}
 \begin{itemize}
 \item \begin{definition}
 Denote \emph{the probability measure} for $X$ by $\cP_{X}$ and let $B_{x, \epsilon}$ be the \emph{\textbf{closed ball}} centered at $x$ of radius $\epsilon > 0$. The collection of all $x$ with $\cP_{X}(B_{x ,\epsilon}) > 0$ \emph{for all} $\epsilon > 0$ is called \emph{\textbf{the support} of $X$} or $\cP_{X}$.
 \end{definition}
 
 \item \begin{lemma}\citep{devroye2013probabilistic}\\
-If $x \in \text{support}(\cP_{X})$ and $\lim\limits_{n\rightarrow \infty}k/n = 0$, then 
+Let $x \in \text{support}(\cP_{X})$ and let $X_{(k)}(x)$ be the $k$-th nearest neigbhor of $x$ among $n$ $i.i.d.$ samples $\cD_n= \set{X_i}_{i=1}^{n}$ drawn according to $\cP_{X}^{n}$. If $n\rightarrow \infty$ and $\lim\limits_{n\rightarrow \infty}k/n = 0$, then 
 \begin{align*}
 d(x,X_{(k)}(x)) \rightarrow 0, \quad a.s.
 \end{align*} 
-If $X$ is independent of the data and has probability measure $\cP_{X}$, then 
+If $X$ is independent of the data $\cD_n$ and has probability measure $\cP_{X}$, then 
 \begin{align*}
 d(X, X_{(k)}(x)) \rightarrow 0, \quad a.s.
 \end{align*}   whenever $k/n \rightarrow 0$.
 \end{lemma}
 \end{itemize}
 
-\subsection{Stone's Lemma and Function of K-Nearest Neighbor}
+\subsection{Stone's Lemma and Function of $k$-Nearest Neighbor}
 \begin{itemize}
 \item 
 \begin{lemma} (\textbf{Stone's Lemma})  \citep{devroye2013probabilistic}\\
