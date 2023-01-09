@@ -10,9 +10,9 @@
 
 ## Table of Contents
 
-* Basic Inequalities 
- ** Basic Inequalities in Probability Space and Functional Space
- ** Sum of Independent Random Variables
+- Basic Inequalities 
+ -- Basic Inequalities in Probability Space and Functional Space
+ -- Sum of Independent Random Variables
  
 
-* 
+- 
