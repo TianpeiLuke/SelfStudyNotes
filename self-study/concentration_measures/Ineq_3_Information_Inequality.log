@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  8 JAN 2023 19:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  8 JAN 2023 20:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Ineq_1_Basic_Inequality.tex
-(./Ineq_1_Basic_Inequality.tex
+**Ineq_3_Information_Inequality.tex
+(./Ineq_3_Information_Inequality.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -536,12 +536,8 @@ LaTeX Info: Redefining \cite on input line 694.
 )
 (../../Tianpei_Report.sty
 \c@theorem=\count129
-) (./Ineq_1_Basic_Inequality.aux
-
-LaTeX Warning: Label `eqn: sub_gaussian_norm' multiply defined.
-
-)
-\openout1 = `Ineq_1_Basic_Inequality.aux'.
+) (./Ineq_3_Information_Inequality.aux)
+\openout1 = `Ineq_3_Information_Inequality.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
 LaTeX Font Info:    ... okay on input line 28.
@@ -665,111 +661,40 @@ LaTeX Font Info:    Try loading font information for U+rsfs on input line 32.
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-(./Ineq_1_Basic_Inequality.toc)
+(./Ineq_3_Information_Inequality.toc)
 \tf@toc=\write4
-\openout4 = `Ineq_1_Basic_Inequality.toc'.
+\openout4 = `Ineq_3_Information_Inequality.toc'.
 
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 37.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 39.
  (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 37.
-LaTeX Font Info:    Try loading font information for U+dsrom on input line 41.
-
-(/usr/share/texlive/texmf-dist/tex/latex/doublestroke/Udsrom.fd
-File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-) [2] [3]
-[4]
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ™ in font cmr10!
- [5] [6]
-Missing character: There is no â in font cmr8!
-Missing character: There is no € in font cmr8!
-Missing character: There is no “ in font cmr8!
- [7]
-Overfull \hbox (1.22195pt too wide) in paragraph at lines 374--376
-[]\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Characterization of Sub-Gaussian Ra
-n-dom Vari-ables\OT1/cmr/m/it/10.95 ) [Boucheron
- []
-
-[8] [9] [10] [11]
-Overfull \hbox (16.5921pt too wide) in paragraph at lines 563--564
-[]\OT1/cmr/m/n/10.95 More gen-er-ally, \OT1/cmr/m/it/10.95 the \OT1/cmr/bx/it/1
-0.95 prod-uct \OT1/cmr/m/it/10.95 of two \OT1/cmr/bx/it/10.95 sub-gaussian ran-
-dom vari-ables \OT1/cmr/m/it/10.95 is \OT1/cmr/bx/it/10.95 sub-exponential\OT1/
-cmr/m/n/10.95 : 
- []
-
-
-Overfull \hbox (14.62032pt too wide) in paragraph at lines 573--576
-[]\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Characterization of Sub-Exponential
- Ran-dom Vari-ables\OT1/cmr/m/it/10.95 ) [Boucheron
- []
-
-[12]
-Overfull \hbox (3.91669pt too wide) in paragraph at lines 611--612
-[]\OT1/cmr/m/n/10.95 Similarlly, a real-valued cen-tered ran-dom vari-able $\OM
-L/cmm/m/it/10.95 X$ \OT1/cmr/m/n/10.95 is said to be $[]$
- []
-
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no “ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no “ in font cmr10!
-[13] [14] [15] [16] [17]
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ™ in font cmr10!
- [18] [19] [20]
-Overfull \hbox (6.16812pt too wide) in paragraph at lines 1006--1008
-[]\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Bernstein's In-equal-ity, Sub-Gamma
- Dis-tri-bu-tion\OT1/cmr/m/it/10.95 ). [Boucheron et al.,
- []
-
-[21] (./Ineq_1_Basic_Inequality.bbl) [22] (./Ineq_1_Basic_Inequality.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 39.
+ [2]
+No file Ineq_3_Information_Inequality.bbl.
+(./Ineq_3_Information_Inequality.aux) ) 
 Here is how much of TeX's memory you used:
- 15929 strings out of 493029
- 315746 string characters out of 6136233
- 368034 words of memory out of 5000000
- 19135 multiletter control sequences out of 15000+600000
- 14610 words of font info for 59 fonts, out of 8000000 for 9000
+ 15845 strings out of 493029
+ 313793 string characters out of 6136233
+ 358499 words of memory out of 5000000
+ 19065 multiletter control sequences out of 15000+600000
+ 12011 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,15n,84p,654b,345s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/doublestroke/dsrom8.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/rsfs/rsfs10.pfb>
-Output written on Ineq_1_Basic_Inequality.pdf (22 pages, 297177 bytes).
+ 61i,6n,84p,525b,196s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
+7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on Ineq_3_Information_Inequality.pdf (2 pages, 76484 bytes).
 PDF statistics:
- 163 PDF objects out of 1000 (max. 8388607)
- 116 compressed objects within 2 object streams
+ 38 PDF objects out of 1000 (max. 8388607)
+ 27 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
