@@ -26,13 +26,962 @@
 
 
 \begin{document}
-\title{Lecture 1: Basic Inequality}
+\title{Lecture 1: Basic Inequalities}
 \author{ Tianpei Xie}
 \date{Dec. 16th., 2022 }
 \maketitle
 \tableofcontents
 \newpage
+\section{Measure Concentraion}
+\begin{itemize}
+\item \begin{remark}
+The topic of \emph{\textbf{measure concentration}} is the study of \emph{random fluctuations of functions of independent random variables}. \underline{\emph{\textbf{Concentration inequalities}}} quantify such statements, typically by bounding the probability that such a function differs from its expected value (or from its median) by more than a certain amount. That is, for small $\epsilon, \delta >0$
+\begin{align*}
+\bP\set{\abs{Z - \E{}{Z}} > \epsilon }\le \delta 
+\end{align*} where $Z = f(X_1 \xdotx{,} X_n)$ is a random variable that smoothly depends on a set of independent random variables $X_1 \xdotx{,} X_n$.
+
+\emph{\textbf{The main principle}}, as summarized by Talagrand (1995), is that ``\emph{a random variable that \textbf{smoothly} depends on the influence of \textbf{many independent random variables} satisfies Chernoff type bounds}." 
+\end{remark}
+
+\item \begin{remark}
+The concentration-of-measure phenomenon has spread out to an impressively wide range of illustrations and applications, and became a central tool and viewpoint in the
+quantitative analysis of a number of asymptotic properties in numerous topics of interest including \emph{\textbf{geometric analysis}}, \emph{\textbf{probability theory}}, \emph{\textbf{statistical mechanics}}, \emph{\textbf{mathematical statistics}} and \emph{\textbf{learning theory}}, \emph{\textbf{random matrix theory}} or \emph{\textbf{quantum information theory}}, \emph{\textbf{stochastic dynamics}}, \emph{\textbf{randomized algorithms}}, \emph{\textbf{complexity}}, and so on. \citep{boucheron2013concentration}
+\end{remark}
+\end{itemize}
+
 \section{Basic Inequality}
+\subsection{Basic Quantities associated with Random Variables}
+\begin{itemize}
+\item Assume a probability space $(\Omega, \srF, \bP)$ and a random variable $X: \Omega \to \bR$ is a real-valued measurable function on $\Omega$.
+
+\item For a random variable $X$, the \emph{\textbf{expectation}} and \emph{\textbf{variance}} are denoted as
+\begin{align*}
+\E{}{X} &= \int X d\bP \\
+Var(X) &= \E{}{\paren{X - \E{}{X}}^2}
+\end{align*}
+
+\item The \emph{\textbf{moment generating function}} of $X$ and its \emph{\textbf{logarithm}} are denoted as
+\begin{align*}
+M_{X}(\lambda) &:= \E{}{e^{\lambda X}} \\
+\psi_{X}(\lambda) &:= \log   \E{}{e^{\lambda X}}
+\end{align*}
+
+\item For $p > 0$, \emph{\textbf{the $p$-th moment} of $X$} is defined as $\E{}{X^p}$, and the \emph{\textbf{$p$-th absolute moment}} is $\E{}{\abs{X}^p}$.
+
+\item The \emph{\textbf{$L^p$ norm}} of $X$ is
+\begin{align*}
+\norm{X}{L^p} &:= \E{}{\abs{X}^p}^{1/p}
+\end{align*} where $1 \le p  < \infty$. Note that the $L^p$ space is a \emph{Banach space}, which is defined as
+\begin{align*}
+L^{p}(\Omega, \bP) := \set{X: \norm{X}{L^p} < \infty }.
+\end{align*}
+
+\item \emph{The \textbf{essential supremum}} of $\abs{X}$ is the \emph{\textbf{$L^\infty$ norm}} of $X$
+\begin{align*}
+\norm{X}{L^\infty} &:= \text{ess sup}\abs{X}
+\end{align*} Similarly, $L^{\infty}$ is a Banach space as well
+\begin{align*}
+L^{\infty}(\Omega, \bP) := \set{X: \norm{X}{L^\infty} < \infty }.
+\end{align*}
+
+\item For $p=2$, $L^2$ space is a \emph{Hilbert space} with inner product between random variables $X, Y \in L^2(\Omega, \bP)$
+\begin{align*}
+\inn{X}{Y}_{L^2} &:= \E{}{XY} = \int X Y d\bP
+\end{align*} The \emph{\textbf{standard deviation}} is 
+\begin{align*}
+\sigma(X) &= \paren{Var(X) }^{1/2} = \norm{X - \E{}{X}}{L^2}.
+\end{align*} The \emph{\textbf{covariance}} is defined as 
+\begin{align*}
+cov(X, Y) &:= \inn{X- \E{}{X}}{Y - \E{}{Y}} \\
+&= \E{}{\paren{X- \E{}{X}}\paren{Y - \E{}{Y}}}
+\end{align*} When we consider random variables as vectors in the Hilbert space $L^2$, the identity above gives a \emph{\textbf{geometric interpretation} of the notion of covariance}. The more the vectors $X - \E{}{X}$ and $Y - \E{}{Y}$ are aligned with each other, the bigger their inner product and covariance are.
+
+\item The \emph{\textbf{cumulative distribution function (CDF)}} is defined as
+\begin{align*}
+F_{X}(t) &:= \bP\brac{X \le t}, \quad t\in \bR.
+\end{align*}
+
+The following result is important 
+\begin{lemma} (\textbf{Integral Identity}).  \citep{vershynin2018high}\\
+Let $X$ be a \textbf{non-negative} random variable.
+Then
+\begin{align}
+\E{}{X} &= \int_{0}^{\infty}\bP\brac{X > t} dt. \label{eqn: integral_identity}
+\end{align}
+The two sides of this identity are either finite or infinite simultaneously.
+\end{lemma}
+
+
+\end{itemize}
+
+\subsection{Some Classical Inequalities}
+\begin{itemize}
+\item \begin{proposition} (\textbf{Jensen's inequality}) \citep{vershynin2018high}\\
+Let $(\Omega, \srF, \bP)$ be a probability space. Let $f:\Omega \to \bR$ be a $\bP$-measurable function and  $\varphi: \bR \to \bR$ be \textbf{convex function}. Then
+\begin{align}
+\varphi\paren{\E{}{X}} := \varphi\paren{\int X d\bP} &\le \int \varphi \circ X d\bP := \E{}{\varphi\paren{X}}. \label{ineqn: jensen}
+\end{align}
+\end{proposition}
+
+\item \begin{remark}
+As a simple consequence of Jensen's inequality, $\norm{X}{L^p}$ is an \emph{\textbf{increasing function in $p$}}, that is
+\begin{align}
+\norm{X}{L^p} \le \norm{X}{L^q}\,\quad \text{for any } 1 \le p \le q \le \infty  \label{ineqn: lp_norm}
+\end{align}
+This inequality follows since $\varphi(x) = x^{q/p}$ is a \emph{convex function} if $q/p \ge 1$.
+\end{remark}
+
+\item \begin{proposition} (\textbf{Minkowski's inequality}) \citep{vershynin2018high}\\
+For any $p\in [1, \infty]$, $X, Y \in L^p(\Omega, \bP)$, 
+\begin{align}
+\norm{X+ Y}{L^p} \le \norm{X}{L^p} + \norm{Y}{L^p},  \label{ineqn: norm_triangle_inequality}
+\end{align} which implies that $\norm{\cdot}{L^p}$ is a norm.
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Cauchy-Schwarz inequality}) \citep{vershynin2018high}\\
+For any random variables $X, Y \in L^2(\Omega, \bP)$, the following inequality is satisfied:
+\begin{align}
+\abs{\inn{X}{Y}_{L^2}} := \abs{\E{}{XY}} \le \norm{X}{L^2} \, \norm{Y}{L^2}. \label{ineqn: cauchy_schwarz_inequality}
+\end{align}
+\end{proposition}
+
+This inequalities can be extended to \emph{conjugate spaces} $L^p$ and $L^q$ 
+ \begin{proposition} (\textbf{H\"older's inequality}) \citep{vershynin2018high}\\
+For $p,q \in (1, \infty)$, $1/p + 1/q = 1$, then the random variables $X \in L^p(\Omega, \bP)$, $Y \in L^q(\Omega, \bP)$ satisfy
+\begin{align}
+\abs{\inn{X}{Y}_{L^2}} := \abs{\E{}{XY}}  \le \norm{X}{L^p} \, \norm{Y}{L^q}. \label{ineqn: holder_inequality}
+\end{align}
+\end{proposition}
+
+\item A classical result is Markov inequality:
+\begin{proposition} (\textbf{Markov's Inequality}). \citep{vershynin2018high}\\
+For any \textbf{non-negative} random variable $X$ and $t > 0$, we have
+\begin{align}
+\bP\set{X \ge t} &\le \frac{\E{}{X}}{t} \label{ineqn: markov_inequality}
+\end{align}
+\end{proposition}
+\begin{proof}
+Fix $t > 0$. We can represent any real number $x$ via the identity
+\begin{align*}
+x &= x\ind{x \ge t} + x\ind{x < t}
+\end{align*}
+\emph{Substitute} the random variable $X$ for $x$ and \emph{take expectation of both sides}. This
+gives
+\begin{align*}
+\E{}{X} &= \E{}{X\ind{X \ge t}} + \E{}{X\ind{X < t}} \\
+& \ge \E{}{t \;\ind{X \ge t}} + 0 \\
+& = t\; \bP\set{X \ge t}
+\end{align*}
+Dividing both sides by $t$, we complete the proof. \qed
+\end{proof}
+
+\item A well-known consequence of \emph{Markov's inequality} is the following \emph{Chebyshev's inequality}. It offers a better, quadratic dependence on $t$, and instead of the plain tails, it quantifies \emph{the \textbf{concentration} of $X$ about its mean}.
+\begin{proposition} (\textbf{Chebyshev's Inequality}). \citep{vershynin2018high}\\
+Let $X$ be a random variable with mean $\mu$ and variance $\sigma^2$. Then, for any $t > 0$, we have
+\begin{align}
+\bP\set{\abs{X - \mu} \ge t} &\le \frac{\sigma^2}{t^2}. \label{ineqn: chebyshev_inequality}
+\end{align}
+\end{proposition}
+
+\item  \begin{remark}
+If $\phi$ denotes a \emph{\textbf{nondecreasing} and \textbf{nonnegative} function} defined on a (possibly infinite) interval $I \subset \bR$, and if $X$ denotes a random variable taking values in $I$, then Markov's inequality implies that for every $t \in I$ with $\phi(t) > 0$,
+\begin{align}
+\bP\set{X \ge t} \le \bP\set{\phi(X) \ge \phi(t)} &\le \frac{\E{}{\phi(X)}}{\phi(t)}  \label{ineqn: generalized_markov_inequality}
+\end{align}
+\end{remark}
+\end{itemize}
+
+\section{Sum of Independent Random Variables}
+\begin{itemize}
+\item The simplest and most thoroughly studied example is \emph{the sum of independent real-valued
+random variables}. The key to the study of this case is summarized by the trivial but
+fundamental additive formulas
+\begin{align*}
+\text{Var}\paren{\sum_{i=1}^{n}X_i} &= \sum_{i=1}^{n}\text{Var}\paren{X_i}
+\end{align*} and
+\begin{align*}
+\psi_{\sum_{i=1}^{n}X_i}(\lambda) &=  \sum_{i=1}^{n}\psi_{X_i}(\lambda)
+\end{align*} where $\psi_{X}(\lambda) := \log   \E{}{e^{\lambda X}}$ is the logarithm of moment generating function of $X$.
+
+\item \begin{remark}
+The consequence of Chebyshev’s inequality on the sum of $n$ independent random variables is 
+\begin{align*}
+\bP\set{\frac{1}{n}\abs{\sum_{i=1}^{n}\paren{X_i - \E{}{X_i}}} \ge t} &\le \frac{\sigma^2}{n\,t^2}
+\end{align*} where $\sigma^2 := n^{-1} \sum_{i=1}^{n}\text{Var}\paren{X_i}$.
+\end{remark}
+
+\item \begin{remark}
+Choose $\phi(x) = e^{\lambda x}$, we can apply the Markov's inequality to obtain 
+\begin{align}
+\bP\set{X \ge t} &\le  \frac{\E{}{e^{\lambda X}}}{e^{\lambda t}} := \frac{M_{X}(\lambda)}{e^{\lambda t}}. \label{ineqn: mgf_chernoff_inequality}
+\end{align} If $Z := X_1 \xdotx{+} X_n$  as the sum of $n$ independent random variables, then 
+\begin{align*}
+\bP\set{ Z - \E{}{Z} \ge t} &\le  \frac{\E{}{e^{\lambda (Z - \E{}{Z})}}}{e^{\lambda t}} = e^{-\lambda t} \prod_{i=1}^{n}M_{(X_i - \E{}{X_i})}(\lambda)
+\end{align*} Note that by union bound
+\begin{align*}
+\bP\set{ \abs{Z - \E{}{Z}} \ge t} &\le \bP\set{ Z - \E{}{Z} \ge t} + \bP\set{ \E{}{Z} - Z  \ge t}
+\end{align*}
+\end{remark}
+
+\item \begin{exercise}
+Prove the following inequalities appearing in the text \citep{boucheron2013concentration}:
+\begin{align}
+- \log(1 - u) - u &\le \frac{u^2}{2(1 - u)}, \quad  \text{ for }u \in (0, 1), \label{ineqn: basic_log_square} \\
+h(u) = (1 + u) \log(1 + u) - u &\le \frac{u^2}{2(1 + u/3)}, \quad\text{ for }u > 0,  \label{ineqn: basic_logistic} \\
+h_1(u) = 1 + u - \sqrt{1 + 2u }&\ge \frac{u^2}{2(1 + u)},  \quad \text{ for }u > 0.  \label{ineqn: basic_sqrt}
+\end{align}
+\end{exercise}
+\end{itemize}
+
+\subsection{The Cram\'er-Chernoff Method}
+\begin{itemize}
+\item \begin{remark}
+In this section we describe and formalize the Cram{\'e}r-Chernoff bounding method. This method determines \emph{the best possible bound} for a \emph{\textbf{tail probability}} that one can possibly obtain using \emph{Markov's inequality} with an exponential function $\phi(t) = e^{\lambda t}$.
+
+Recall that for a real-valued random variable $X$, any $\lambda \ge 0$, the following inequality holds
+\begin{align*}
+\bP\set{X \ge t} &\le e^{-\lambda t} \E{}{e^{\lambda X}} = \exp\paren{-\lambda t + \psi_{X}(\lambda) }
+\end{align*} where $\psi_{X}(\lambda) := \log   \E{}{e^{\lambda X}}$. One can choose optimal $\lambda^{*}$ that \emph{\textbf{minimizes} the upper bound above}.
+Since $\psi_{X}(\lambda)$ is a \emph{\textbf{convex function}}, we can define its \underline{\emph{\textbf{Legendre transform}}}
+\begin{align*}
+\psi^{*}_{X}(t) &:= \sup_{\lambda \in \bR}\set{\lambda\,t - \psi_{X}(\lambda)}.
+\end{align*} The expression of the right-hand side is known as the \underline{\emph{\textbf{Fenchel-Legendre dual function}}} (or the \textbf{\emph{convex conjugate}}) of $\psi_{X}$. The Legendre transform of log-moment generating function is also its convex conjugate. % Since $e^t$ is monotone convex function, we can obtain the following inequality
+\end{remark}
+
+\item \begin{proposition} (\textbf{Chernoff's inequality}) \citep{boucheron2013concentration}\\
+Let $X$ be a real-valued random variable. For $\lambda \ge 0$,  $\psi_{X}(\lambda)$ is the \textbf{the logarithm of moment generating function} of $X$ and $\psi^{*}_{X}(t)$ is its \textbf{Legendre (Cram{\'e}r) transform}. Then 
+\begin{align}
+\bP\set{X \ge t} &\le \exp\paren{-\psi^{*}_{X}(t)}. \label{ineqn: chernoff_inequality}
+\end{align}
+\end{proposition}
+
+\item \begin{remark}
+The \textbf{\emph{Legendre transform}} is also called \emph{\textbf{the Cram{\'e}r transform}} \citep{boucheron2013concentration}.
+
+Since $\psi_{X}(0) = 0$, its \emph{Legendre transform} $\psi^{*}_{X}(t)$ is \emph{\textbf{nonnegative}}.
+\end{remark}
+
+\item \begin{definition} (\textbf{\emph{The Rate Function}})\\
+\underline{\emph{\textbf{The rate function}}} is defined as \emph{\textbf{the Legendre transformation}} of \emph{the logarithm of the moment generating function} of a random variable. That is, 
+\begin{align}
+\psi^{*}_{X}(t) &:= \sup_{\lambda \in \bR}\set{\lambda\,t - \psi_{X}(\lambda)}, \label{eqn: rate_function}
+\end{align} where $\psi_{X}(\lambda) := \log   \E{}{e^{\lambda X}}$. Thus, by \emph{Chernoff's inequality}, we can bound \emph{the tail probabilities} of random variables via \emph{its rate function}.
+\end{definition}
+
+\item \begin{remark}
+The optimal $\lambda^{*}:= \lambda_t$ that attains the maximum on the right hand side for  
+\begin{align*}
+\psi^{*}_{X}(t) &= \sup_{\lambda \in \bR}\set{\lambda\,t - \psi_{X}(\lambda)}
+\end{align*} can be found by differentiating $\lambda\,t - \psi_{X}(\lambda)$ with respect to $\lambda$. That is,
+\begin{align*}
+\psi^{*}_{X}(t) &= \lambda_t\,t -  \psi_{X}(\lambda_t)
+\end{align*} where $\lambda_t$ is such that $\psi_{X}'(\lambda_t) = t$. The strict convexity of $\psi_{X}$ implies that $\psi_{X}'$  has an
+\emph{\textbf{increasing inverse}} $(\psi_{X}')^{-1}$ on the interval $\psi_X(I) := (0, B)$ and therefore, for any $t \in (0, B)$,
+\begin{align*}
+\lambda_t &= \paren{\psi_{X}'}^{-1}(t).
+\end{align*}
+\end{remark}
+
+\item \begin{remark}(\emph{\textbf{Sums of independent random variables}})\\
+The reason why Chernoff's inequality became popular is that it is very simple to use when applied to a sum of independent random
+variables. As an illustration, assume that $Z := X_1 \xdotx{+} X_n$ where $X_1 \xdotx{,} X_n$ are \emph{\textbf{independent} and \textbf{identically distributed} real-valued random variables}.  Denote the logarithm of the moment-generating function of the $X_i$ by $\psi_X(\lambda) = \log \E{}{e^{\lambda X_i}}$, and the corresponding \emph{Legendre transform} by $\psi_X^{*}(t)$. Then, by independence, for all $\lambda$ for which $\psi_X(\lambda) < \infty$,
+\begin{align*}
+\psi_Z(\lambda) &= \log \E{}{e^{\lambda\sum_{i=1^{n}X_i}}} = \log \prod_{i=1}^{n}\E{}{e^{\lambda X_i}}  = n\, \psi_{X}(\lambda)
+\end{align*} and consequently,
+\begin{align*}
+\psi_Z^{*}(t) &= n\,\psi_{X}^{*}\paren{\frac{t}{n}}.
+\end{align*} Thus \emph{the Chernoff's inequality} states that 
+\begin{align*}
+\bP\set{Z \ge t} &\le \exp\paren{-\psi^{*}_{Z}(t)} = \exp\paren{-n\,\psi_{X}^{*}\paren{\frac{t}{n}}}.
+\end{align*}
+\end{remark}
+
+\item \begin{example} (\emph{\textbf{Normal Distribution}})\\
+Let $X$ be a \emph{\textbf{centered normal random variable}} with variance $\sigma^2$. Then
+\begin{align*}
+\psi_X(\lambda) = \frac{\lambda^2 \sigma^2}{2},\, \quad \lambda_t = \frac{t}{\sigma^2}
+\end{align*} and, therefore for every $t > 0$, 
+\begin{align*}
+\psi_{X}^{*}(t) &= \frac{t^2}{2\sigma^2}.
+\end{align*} Hence, \emph{Chernoff's inequality} implies, for all $t > 0$,
+\begin{align*}
+\bP\set{X \ge t} &\le \exp\paren{-\frac{t^2}{2\sigma^2}}.
+\end{align*} \emph{Chernoff's inequality} appears to be quite sharp in this case. In fact, one can show that it cannot be improved uniformly by more than a factor of $1/2$. \qed
+\end{example}
+
+
+\item \begin{example} (\emph{\textbf{Poisson Distribution}})\\
+Let $X$ be a \emph{\textbf{Poisson random variable}} with parameter $\nu$, that is, $\bP\set{X = k} = \frac{1}{k!}e^{–\nu}\nu^k$ for all $k = 0, 1, 2, \ldots$ Let $Z = X - \nu$ be the \emph{corresponding centered variable}. Then by direct calculation,
+\begin{align*}
+\psi_Z(\lambda) = \nu\paren{e^{\lambda} - \lambda - 1 },\, \quad \lambda_t = \log\paren{1 + \frac{t}{\nu}}
+\end{align*} Therefore \emph{the Legendre transform} equals, for every $t > 0$,
+\begin{align*}
+\psi_{Z}^{*}(t) &= \nu h\paren{\frac{t}{\nu}}.
+\end{align*} where the function $h$ is defined, for all  $x \ge -1$, by $h(x) = (1 + x) \log(1 + x) - x$. Similarly,
+for every $t \le \nu$,
+\begin{align*}
+\psi_{-Z}^{*}(t) &= \nu h\paren{-\frac{t}{\nu}}.
+\end{align*} 
+\end{example}
+
+
+\item \begin{example} (\emph{\textbf{Bernoulli Distribution}})\\
+Let $X$ be  a \emph{\textbf{Bernoulli random variable}} with probability of success $p$, that is, $\bP\set{X = 1} = 1- \bP\set{X =0} = p$. Let $Z = X -  p$ be the \emph{corresponding centered variable}. If $0 < t < 1 - p$, we have
+\begin{align*}
+\psi_Z(\lambda) = \log\paren{p e^{\lambda} + 1 - p } - p \,\lambda ,\, \quad \lambda_t = \log \frac{(1-p)(p + t)}{p(1 - p - t)}
+\end{align*} and therefore, for every $t \in (0, 1 - p)$,
+\begin{align*}
+\psi_{Z}^{*}(t) &= (1-p-t)\log\frac{1 - p - t}{1 - p} + (p + t)\log \frac{p + t}{p}.
+\end{align*} Equivalently, setting $a = t + p$ for every $a \in (p, 1)$,
+\begin{align*}
+\psi_{Z}^{*}(t) = h_p(a)&= (1- a)\log\frac{1- a}{1 - p} + a \log\frac{a}{p}.
+\end{align*}  We note here that $h_p(a)$ is just the \emph{\textbf{Kullback-Leibler divergence}} $\kl{\bP_a}{\bP_p}$ between a Bernoulli distribution $\bP_a$ of parameter $a$ and a Bernoulli distribution $\bP_p$ of parameter $p$. 
+\begin{align*}
+\bP\set{X \ge t} \le \exp\paren{- \kl{\bP_{p+t}}{\bP_p}}
+\end{align*}
+\end{example}
+\end{itemize}
+
+\subsection{Sub-Gaussian Random Variables}
+\begin{itemize}
+\item \begin{definition}(\textbf{\emph{Sub-Gaussian Random Variable}})\\
+A \emph{\textbf{centered}} random variable $X$ is said to be \underline{\emph{\textbf{sub-Gaussian} with \textbf{variance factor} $\nu$}} if
+\begin{align}
+\psi_X(\lambda) &\le  \frac{\lambda^2 \nu}{2}, \quad \text{ for every }\lambda \in \bR. \label{eqn: sub_gaussian_def_1}
+\end{align} We denote the collection of such random variables by $\cG(\nu)$.
+\end{definition}
+
+\item \begin{remark}
+Note that this definition does not require the variance of $X$ to be equal to $\nu$, just that it is \emph{bounded by} $\nu$. 
+
+The above definition says that a \emph{centered random variable} $X$ belongs to $\cG(\nu)$ if \emph{the moment-generating function} of $X$ is \emph{\textbf{dominated by}} \emph{the moment-generating function} of a \emph{\textbf{center normal random variable}} $Y$. 
+\end{remark}
+
+\item \begin{remark}
+This notion is also convenient because it is naturally \emph{stable under \textbf{convolution}} in the sense that if $X_1 \xdotx{,} X_n$ are \emph{\textbf{independent}} such that for every $i$, $X_i \in \cG(\nu_i)$, then $\sum_{i=1}^{n}X_i \in \cG(\sum_{i=1}^{n}\nu_i)$.
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Characterization}})\\
+Next we connect the notion of a \emph{sub-Gaussian random variable} with some \emph{other standard ways of defining sub-Gaussian distributions}. 
+
+First observe that \emph{Chernoff's inequality} implies that \emph{\textbf{the tail probabilities of a sub-Gaussian random variable
+are dominated by the corresponding Gaussian tail probabilities}}. More precisely, if $X$ belongs to $\cG(\nu)$, then for every $t > 0$,
+\begin{align*}
+\bP\set{X > t} \lor  \bP\set{-X > t} \le \exp\paren{-\frac{t^2}{2\nu}}
+\end{align*} where $a \lor b$ denotes the \emph{maximum} of $a$ and $b$. 
+\end{remark}
+
+\item \begin{proposition} (\textbf{Characterization of Sub-Gaussian Random Variables})  \citep{boucheron2013concentration}\\
+Let $X$ be a random variable with $\E{}{X} = 0$. If for some $\nu > 0$
+\begin{align}
+\bP\set{X > t} \lor  \bP\set{-X > t} \le \exp\paren{-\frac{t^2}{2\nu}}, \quad \text{ for all } t > 0   \label{eqn: sub_gaussian_def_2}
+\end{align}
+then for every integer $q \ge 1$,
+\begin{align}
+\E{}{X^{2q}} \le 2q! (2\nu)^q \le q! (4\nu)^q. \label{eqn: sub_gaussian_even_power_moment}
+\end{align}
+\textbf{Conversely}, if for some positive constant $C$
+\begin{align*}
+\E{}{X^{2q}} \le  q! C^q,
+\end{align*} then $X \in \cG(4C)$ (and therefore \eqref{eqn: sub_gaussian_even_power_moment} holds with $\nu = 4C$).
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Sub-Gaussian properties}).  \citep{vershynin2018high}\\
+Let $X$ be a random variable. Then the following properties are \textbf{equivalent}; the parameters $K_i > 0$ appearing in these
+properties differ from each other by at most an absolute constant factor.
+\begin{enumerate}
+\item The \textbf{tails} of $X$ satisfy
+\begin{align*}
+\bP\set{\abs{X} \ge t} \le 2 \exp\paren{-t^2/K_1^2}\quad\text{ for all }t \ge 0.
+\end{align*}
+
+\item The \textbf{moments} of $X$ satisfy
+\begin{align*}
+\norm{X}{L^p} = \paren{\E{}{\abs{X}^p}}^{1/p} \le K_2 \sqrt{p}\quad \text{ for all }p \ge 1.
+\end{align*}
+
+\item The \textbf{moment-generating function (MGF)} of $X^2$ satisfies
+\begin{align*}
+\E{}{\exp(\lambda^2 X^2)} \le \exp(K_3^2 \;\lambda^2) \quad \text{ for all $\lambda$ such that $\abs{\lambda} \le \frac{1}{K_3}$}
+\end{align*}
+
+\item The \textbf{MGF} of $X^2$ is \textbf{bounded} at some point, namely
+\begin{align*}
+\E{}{\exp(X^2 / K_4^2)} \le 2.
+\end{align*}
+Moreover, if $\E{}{X} = 0$ then properties $(1)$-$(4)$ are also \textbf{equivalent} to the following one.
+
+\item The \textbf{MGF} of $X$ satisfies
+\begin{align*}
+\E{}{\exp(\lambda X)} \le  \exp(K_5^2\,\lambda^2)\quad\text{ for all }\lambda \in \bR.
+\end{align*}
+\end{enumerate}
+\end{proposition}
+
+\item \begin{remark} (\textbf{\emph{Equivalent Definitions for Sub-gaussian Random Variables}}). \\
+A random variable $X$ that satisfies one of the equivalent properties $(1)$-$(4)$ in Proposition above is called a \emph{sub-gaussian random variable}. 
+
+Note that if $\E{}{X^{2q}} \le  q! C^q$ for every integer $q$, then setting $\alpha = 1/(2C)$
+\begin{align*}
+\E{}{\exp(\alpha X^2)} = \sum_{q=0}^{\infty}\frac{\alpha^q \E{}{X^{2q}}}{q!} \le  \sum_{q=0}^{\infty}2^{-q} = 2
+\end{align*} Conversely, if
+\begin{align*}
+\E{}{\exp(\alpha X^2)} = \sum_{q=0}^{\infty}\frac{\alpha^q \E{}{X^{2q}}}{q!} \le 2
+\end{align*} then $ \sum_{q=1}^{\infty}\frac{\alpha^q \E{}{X^{2q}}}{q!} \le 1$, which implies that $\E{}{X^{2q}} \le  q! \alpha^{-q}$ for every integer $q$.
+\end{remark}
+
+\item \begin{definition} (\textbf{\emph{Sub-Gaussian Norm}}) \\
+The \underline{\emph{\textbf{sub-gaussian norm}}} of $X$, denoted $\norm{X}{\psi_2}$, is defined
+to be the \emph{\textbf{smallest}} $K_4$ that satisfies 
+\begin{align*}
+\E{}{\exp(X^2 / K_4^2)} \le 2.
+\end{align*} In other words, we define
+\begin{align}
+\norm{X}{\psi_2}= \inf\set{t > 0: \E{}{\exp(X^2 / t^2)} \le 2}.  \label{eqn: sub_gaussian_norm}
+\end{align}
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Sub-Gaussian  Properties in Sub-Gaussian Norm}})\\
+We can restate the properties of sub-gaussian random variables in terms of sub-gaussian norm:
+\begin{align*}
+\bP\set{\abs{X} \ge t} &\le 2 \exp\paren{-c t^2/\norm{X}{\psi_2}^2}\quad\text{ for all }t \ge 0; \\
+\norm{X}{L^p} &\le C \norm{X}{\psi_2} \sqrt{p}\quad \text{ for all }p \ge 1; \\
+\E{}{\exp(X^2 / \norm{X}{\psi_2}^2)} &\le 2; \\
+\text{ if }\E{}{X} = 0, \;\;\text{ then } \E{}{\exp(\lambda X)} &\le  \exp(C \lambda^2 \norm{X}{\psi_2}^2)\quad\text{ for all }\lambda \in \bR.
+\end{align*}
+\end{remark}
+
+\item \begin{example}
+Here are some classical examples of sub-gaussian distributions.
+\begin{enumerate}
+\item  (\textbf{\emph{Gaussian}}): As we already noted, $X \sim N(0, 1)$ is a sub-gaussian random
+variable with $\norm{X}{\psi_2} \le C$, where $C$ is an absolute constant. More generally, if $X \sim N(0, \sigma^2)$ then $X$ is sub-gaussian with
+\begin{align}
+\norm{X}{\psi_2} \le C\sigma \label{eqn: gaussian_sub_guassian_norm}
+\end{align}
+\item  (\emph{\textbf{Bernoulli}}): Let $X$ be a random variable with \emph{\textbf{symmetric Bernoulli distribution}}. Since $\abs{X} = 1$, it follows that X is a
+sub-gaussian random variable with
+\begin{align}
+\norm{X}{\psi_2} \le \frac{1}{\sqrt{\log 2}} \label{eqn: sym_bernoulli_sub_guassian_norm}
+\end{align}
+\item (\emph{\textbf{Bounded}}): More generally, any \emph{\textbf{bounded random variable}} $X$ is sub-gaussian with
+\begin{align}
+\norm{X}{\psi_2} \le C\norm{X}{\infty} \label{eqn: bounded_sub_guassian_norm}
+\end{align}
+where $C = 1/\sqrt{\log 2}$.
+\end{enumerate}
+\end{example}
+
+\item \begin{example}
+The \emph{\textbf{Poisson}}, \emph{\textbf{exponential}}, \emph{\textbf{Pareto}} and \emph{\textbf{Cauchy}} distributions are \emph{\textbf{not sub-gaussian}}.
+\end{example}
+\end{itemize}
+
+\subsection{Sub-Exponential Random Variables}
+\begin{itemize}
+\item \begin{definition}(\emph{\textbf{Sub-Exponential Random Variables}})\\
+A \emph{\textbf{nonnegative}} random variable $X$ has a \emph{\textbf{sub-exponential distribution}} if there exists a constant $a > 0$ such that
+\begin{align*}
+\E{}{e^{\lambda X}} \le \frac{1}{1 - \lambda/a} \quad \text{for every $\lambda$ such that $0 < \lambda < a$} 
+\end{align*}
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Heavy Tail Distributions}})\\
+The class of \emph{sub-gaussian distributions} is natural and quite large. Nevertheless, it leaves out some important distributions \emph{whose \textbf{tails are heavier than gaussian}}.
+
+Consider a standard normal random vector $g = (g_1 \xdotx{,} g_n)$ in $\bR_{n}$, whose coordinates $g_i$ are independent $N(0, 1)$ random variables. It is useful
+in many applications to have a \emph{\textbf{concentration inequality} for \textbf{the Euclidean norm}} of $g$, which is
+\begin{align*}
+\norm{g}{2} := \paren{\sum_{i=1}^{n}g_i^2}^{1/2}.
+\end{align*}
+Here we find ourselves in a strange situation. On the one hand, $\norm{g}{2}$ is a sum of independent random variables $g_i^2$, so we should expect some concentration to hold. On the other hand, although $g_i$ are \emph{sub-gaussian random variables}, $g_i^2$ are not. Indeed, recalling the behavior of Gaussian tails we have
+\begin{align*}
+\bP\set{g_i^2 > t} = \bP\set{\abs{g_i} > \sqrt{t}} \sim \exp\paren{- (\sqrt{t})^2/2} = \exp\paren{- t^2/2}
+\end{align*}
+The tails of $g_i^2$ are like for the exponential distribution, and are \emph{\textbf{strictly heavier than sub-gaussian}}. 
+\end{remark}
+
+\item \begin{proposition} (\textbf{Sub-Exponential properties}).  \citep{vershynin2018high}\\
+Let $X$ be a random variable. Then the following properties are \textbf{equivalent}; the parameters $K_i > 0$ appearing in these
+properties differ from each other by at most an absolute constant factor.
+\begin{enumerate}
+\item The \textbf{tails} of $X$ satisfy
+\begin{align*}
+\bP\set{\abs{X} \ge t} \le 2 \exp\paren{-t/K_1}\quad\text{ for all }t \ge 0.
+\end{align*}
+
+\item The \textbf{moments} of $X$ satisfy
+\begin{align*}
+\norm{X}{L^p} = \paren{\E{}{\abs{X}^p}}^{1/p} \le K_2\, p\quad \text{ for all }p \ge 1.
+\end{align*}
+
+\item The \textbf{moment-generating function (MGF)} of $\abs{X}$ satisfies
+\begin{align*}
+\E{}{\exp(\lambda \abs{X})} \le \exp(K_3\;\lambda) \quad \text{ for all $\lambda$ such that $0 \le \lambda \le \frac{1}{K_3}$}
+\end{align*}
+
+\item The \textbf{MGF} of $\abs{X}$ is \textbf{bounded} at some point, namely
+\begin{align*}
+\E{}{\exp(\abs{X} / K_4)} \le 2.
+\end{align*}
+Moreover, if $\E{}{X} = 0$ then properties $(1)$-$(4)$ are also \textbf{equivalent} to the following one.
+
+\item The \textbf{MGF} of $X$ satisfies
+\begin{align*}
+\E{}{\exp(\lambda X)} \le  \exp(K_5^2\,\lambda^2)\quad\text{ for all }\lambda \text{ such that } \abs{\lambda} \le \frac{1}{K_5}.
+\end{align*}
+\end{enumerate}
+\end{proposition}
+
+\item \begin{remark} (\textbf{\emph{Equivalent Definitions for Sub-gaussian Random Variables}}). \\
+A random variable $X$ that satisfies one of the equivalent properties $(1)$-$(4)$ in Proposition above is called a \emph{sub-exponential random variable}. 
+\end{remark}
+
+\item \begin{definition} (\textbf{\emph{Sub-Exponential Norm}}) \\
+The \underline{\emph{\textbf{sub-exponential norm}}} of $X$, denoted $\norm{X}{\psi_1}$, is defined
+to be the \emph{\textbf{smallest}} $K_4$ that satisfies 
+\begin{align*}
+\E{}{\exp(\abs{X} / K_4)} \le 2.
+\end{align*} In other words, we define
+\begin{align}
+\norm{X}{\psi_1}= \inf\set{t > 0: \E{}{\exp(\abs{X} / t)} \le 2}.  \label{eqn: sub_gaussian_norm}
+\end{align}
+\end{definition}
+
+\item \begin{remark}
+Sub-gaussian and sub-exponential distributions are closely related. 
+\begin{enumerate}
+\item First, \emph{any sub-gaussian distribution is clearly sub-exponential}. 
+\item Second, \emph{the \textbf{square} of a \textbf{sub-gaussian random variable} is \textbf{sub-exponential}}:
+\begin{lemma} (\textbf{Sub-exponential is Sub-gaussian Squared}).  \citep{vershynin2018high}\\
+A random variable  $X$ is \textbf{sub-gaussian} if and only if $X^2$ is \textbf{sub-exponential}. Moreover,
+\begin{align*}
+\norm{X^2}{\psi_1} = \norm{X}{\psi_2}^2
+\end{align*}
+\end{lemma}
+
+More generally, \emph{the \textbf{product} of two \textbf{sub-gaussian random variables} is \textbf{sub-exponential}}:
+\begin{lemma} (\textbf{Product of Sub-Gaussians is Sub-Exponential}).  \citep{vershynin2018high}\\
+Let $X$ and $Y$ be \textbf{sub-gaussian random variables}. Then $XY$ is \textbf{sub-exponential}. Moreover,
+\begin{align*}
+\norm{XY}{\psi_1} \le \norm{X}{\psi_2} \norm{Y}{\psi_2}.
+\end{align*}
+\end{lemma}
+\end{enumerate}
+\end{remark}
+
+\item \begin{proposition} (\textbf{Characterization of Sub-Exponential Random Variables})  \citep{boucheron2013concentration}\\
+Let $X$ be a nonnegative random variable. If $X$ is sub-exponential distributed with parameter $a > 0$ 
+then for every integer $q \ge 1$,
+\begin{align}
+\E{}{X^{q}} \le 2^{q+1}\frac{q!}{a^q}. \label{eqn: sub_exponential_power_moment}
+\end{align}
+\textbf{Conversely}, if there exists a constant $a > 0$ in order that for every positive integer $q$,
+\begin{align*}
+\E{}{X^{q}} \le  \frac{q!}{a^q},
+\end{align*} then $X$ is sub-exponential. More precisely, for any $0 < \lambda < a$, 
+\begin{align*}
+\E{}{e^{\lambda X}} \le \frac{1}{1 - \lambda /a}.
+\end{align*}
+\end{proposition}
+
+\item \begin{example}
+Here are some classical examples of sub-exponential distributions.
+\begin{enumerate}
+\item  (\textbf{\emph{Exponential}}): Recall that $X$ has \emph{\textbf{exponential distribution}} with rate $a > 0$, denoted $X \sim Exp(a)$, if
+$X$ is a \emph{non-negative random variable} with tails
+\begin{align*}
+\bP\set{X \ge t} \le \exp\paren{- a t}, \quad \forall t \ge 0
+\end{align*} Then 
+\begin{align}
+\norm{X}{\psi_1} \le \frac{C}{a} \label{eqn: exp_sub_exp_norm}
+\end{align}
+\end{enumerate}
+\end{example}
+\end{itemize}
+
+\subsection{Sub-Gamma Random Variables}
+\begin{itemize}
+\item \begin{definition}(\emph{\textbf{Sub-Gamma Random Variables}})\\
+A real-valued centered random variable $X$ is said to be \emph{\underline{\textbf{sub-gamma} on \textbf{the right tail}} with \textbf{variance factor} $\nu$ and \textbf{scale parameter} $c$} if
+\begin{align*}
+\psi_X(\lambda) \le \frac{\lambda^2 \nu}{2(1 - c\lambda)} \quad \text{for every $\lambda$ such that $0 < \lambda < 1/c$} 
+\end{align*} We denote the collection of such random variables by $\Gamma_{+}(\nu, c)$.
+
+Similarlly, a real-valued centered random variable $X$ is said to be \emph{\underline{\textbf{sub-gamma} on \textbf{the left tail}} with \textbf{variance factor} $\nu$ and \textbf{scale parameter} $c$} if $-X$ is \emph{\textbf{sub-gamma on the right tail} with variance factor $\nu$ and tail parameter $c$}. We denote the collection of such random variables by $\Gamma_{-}(\nu, c)$. 
+
+Finally, $X$ is simply said to be \emph{\underline{\textbf{sub-gamma}} with \textbf{variance factor} $\nu$ and \textbf{scale parameter} $c$} if $X$ is \emph{sub-gamma} \emph{\textbf{both}} \emph{on the right and left tails} with \emph{\textbf{the same}} \emph{variance factor} $\nu$ and \emph{scale parameter} $c$. The collection of such random variables is denoted by  $\Gamma(\nu, c)$.
+
+Observe that $\Gamma(\nu, 0)= \cG(\nu)$.
+\end{definition}
+
+\item \begin{remark} (\textbf{\emph{Characterization}})\\
+Similarly to the \emph{sub-Gaussian property}, the \emph{\textbf{sub-gamma property}} can be characterized in terms of \emph{tail or moment conditions}. We start by computing \emph{\textbf{the Fenchel-Legendre dual function}} of
+\begin{align*}
+\psi(\lambda) = \frac{\lambda^2 \nu}{2(1 - c\lambda)}.
+\end{align*}
+Setting
+\begin{align*}
+h_1(u) = 1 + u - \sqrt{1 + 2u}\text{ for }u > 0,
+\end{align*}
+it follows by elementary calculation that for every $t > 0$,
+\begin{align*}
+\psi^{*}(t)  = \sup_{\lambda \in (0, 1/c)}\set{t\lambda - \frac{\lambda^2 \nu}{2(1 - c\lambda)}} = \frac{\nu}{c^2}h_1\paren{\frac{c\,t}{\nu}}.
+\end{align*}
+Since $h_1$ is an increasing function from $(0, \infty)$ onto $(0, \infty)$ with \textbf{\emph{inverse function}}
+\begin{align*}
+h^{-1}(u) = u + \sqrt{2u}\text{ for }u > 0,
+\end{align*} we finally get
+\begin{align*}
+\psi^{*-1}(u) = \sqrt{2\nu u} + c u.
+\end{align*}
+Hence, \emph{Chernoff's inequality} implies that whenever $X$ is a \emph{sub-gamma random variable on the right tail} with \emph{variance factor} $\nu$ and \textit{scale parameter} $c$, for every $t > 0$, we have
+\begin{align}
+\bP\set{X > t} \le \exp\paren{– \frac{\nu}{c^2}h_1\paren{\frac{c\,t}{\nu}}}, \label{ineqn: tail_sub_gamma}
+\end{align}
+or equivalently, for every $t > 0$,
+\begin{align}
+\bP\set{X > \sqrt{2\nu t}+ c t} \le e^{-t}.
+\end{align} Therefore, if $X$ belongs to $\Gamma(\nu, c)$, then for every $t > 0$,
+\begin{align*}
+\bP\set{X > \sqrt{2\nu t}+ c t} \lor \bP\set{-X > \sqrt{2\nu t}+ c t}  \le e^{-t}. \qed
+\end{align*}
+\end{remark}
+\end{itemize}
+
+\subsection{Orlicz Spaces}
+\begin{itemize}
+\item \begin{definition}(\textbf{\emph{Orlicz Spaces}}) \citep{vershynin2018high}\\
+A function : $\psi: [0, \infty) \to [0, \infty)$ is called \underline{\emph{\textbf{an Orlicz function}}} if $\psi$ is \emph{\textbf{convex}}, \emph{\textbf{increasing}}, and satisfies:
+\begin{align*}
+\psi(0) = 0, \quad \psi(x) \to \infty, \;\text{ as }x\to \infty.
+\end{align*}
+For a \emph{given Orlicz function} $\psi$, \emph{\underline{\textbf{the Orlicz norm}} of a random variable $X$} is defined as
+\begin{align*}
+\norm{X}{\psi} := \inf\set{t>0: \E{}{\psi\paren{\abs{X}/t}} \le 1}.
+\end{align*}
+\underline{\emph{\textbf{The Orlicz space}}} $L_{\psi} = L_{\psi}(\Omega, \srF, \bP)$ consists of \emph{all random variables $X$} on the \emph{probability space} $(\Omega, \srF, \bP)$ with \emph{finite Orlicz norm}, i.e.
+\begin{align*}
+L_{\psi} := \set{X: \norm{X}{\psi} < \infty}.
+\end{align*}
+\end{definition}
+
+\item \begin{example}
+The Orlicz Spaces generalizes the $L^p$ space for random variables:
+\begin{enumerate}
+\item \emph{\textbf{$L^p$ space}}:  Consider the function
+\begin{align*}
+\psi(x) &= x^{p},
+\end{align*} which is obviously \emph{an Orlicz function} for $p \ge 1$. The resulting Orlicz space $L_{\psi}$ is the classical space $L^p$.
+
+\item \emph{\textbf{$L_{\psi}$ space}}:  Consider the function
+\begin{align*}
+\psi_2(x) &= e^{x^2} - 1,
+\end{align*} which is obviously \emph{an Orlicz function}. The resulting \emph{Orlicz norm} is exactly the sub-gaussian norm $\norm{\cdot}{\psi_2}$ that we defined. The corresponding Orlicz space $L_{\psi_2}$ consists of \emph{all sub-gaussian random variables}.
+\end{enumerate}
+\end{example}
+
+\item \begin{remark}
+We can easily locate $L_{\psi_2}$ in the hierarchy of the classical $L^p$ spaces:
+\begin{align*}
+L^{\infty} \subset L_{\psi_2} \subset L^p \text{ for every $p \in [1, \infty)$}.
+\end{align*} Thus \emph{the space of \textbf{sub-gaussian random variables}} $L_{\psi_2}$ is smaller than all of $L^p$ spaces, but it is still larger than \emph{the space of \textbf{bounded random variables}} $L^{\infty}$.
+\end{remark}
+\end{itemize}
+
+\subsection{A Maximal Inequality}
+\begin{itemize}
+\item The purpose of this section is to show how information about the Legendre transform of random variables in a finite collection can be used to bound the expected maximum of these random variables.
+
+\item \begin{remark} (\textbf{\emph{Mean of Maximum of Finite Sub-Gaussian Random Variables}})\\
+Let $X_1 \xdotx{,} X_n$ be real-valued random variables where a $\nu  > 0$ exists such that for every $i = 1 \xdotx{,} n$, the logarithm of the moment-generating function of $X_i$ satisfies
+\begin{align*}
+\psi_{X_i}(\lambda) \le \frac{\lambda^2 \nu}{2}, \quad \text{for all $\lambda > 0$}.
+\end{align*}
+Then, by Jensen's inequality, 
+\begin{align*}
+\exp\paren{\lambda \E{}{\max\limits_{i=1 \xdotx{,} n} X_i}} &\le \E{}{\exp\paren{\lambda \max\limits_{i=1 \xdotx{,} n} X_i }} \\
+&=  \E{}{\max\limits_{i=1 \xdotx{,} n}  \exp\paren{\lambda X_i }} \\
+&\le  \sum_{i=1}^{n} \E{}{ \exp\paren{\lambda X_i }}\\
+&\le n  \exp\paren{\frac{\lambda^2 \nu}{2}}
+\end{align*}
+Taking logarithms on both sides, we have
+\begin{align*}
+\E{}{\max\limits_{i=1 \xdotx{,} n} X_i} &\le \frac{\log n}{\lambda} + \frac{\lambda \nu}{2}
+\end{align*} The upper bound is minimized for $\lambda^{*} = \sqrt{2 \log n/\nu}$, which yields
+\begin{align}
+\E{}{\max\limits_{i=1 \xdotx{,} n} X_i} &\le \sqrt{2 \nu \log n} \label{ineqn: maximal_finite_subgaussian}
+\end{align}  This simple bound is \emph{\textbf{asymptotically sharp}} if the $X_i$ are \emph{\textbf{i.i.d. normal random variables}}
+\end{remark}
+
+\item \begin{lemma} (\textbf{Generalized Inverse of Legendre Transform}) \citep{boucheron2013concentration}\\
+Let $\phi$ be a \textbf{convex} and \textbf{continuously differentiable} function defined on the interval $[0, b)$ where $0 < b \le \infty$. Assume that $\phi(0) = \phi'(0) = 0$ and set, for every $t \ge 0$, the Legendre transform 
+\begin{align*}
+\phi^{*}(t) = \sup_{\lambda \in (0, b)}\set{\lambda\,t - \phi(\lambda)}.
+\end{align*}
+Then $\phi^{*}$ is a \textbf{nonnegative convex} and \textbf{nondecreasing function} on $[0, \infty)$. Moreover, for every $y \ge 0$, the set $\set{t \ge 0: \phi^{*}(t) > y}$ is \textbf{non-empty} and \underline{\textbf{the generalized inverse} of $\phi^{*}$}, defined by
+\begin{align}
+\phi^{*-1}(y) = \inf\set{t \ge 0 : \phi^{*}(t) > y}, \label{eqn: generalized_inverse_legendre_transform}
+\end{align} can also be written as
+\begin{align*}
+\phi^{*-1}(y) = \inf_{\lambda \in (0, b)}\brac{\frac{y + \phi(\lambda)}{\lambda}}.
+\end{align*}
+\end{lemma}
+
+\item The next result offers a convenient bound for the expected value of the maximum of finitely many exponentially integrable random variables. This type of bound has been used  in so-called \emph{\textbf{chaining arguments} for bounding \textbf{suprema of Gaussian or empirical processes}}.
+\begin{proposition} (\textbf{Mean of Maximum of Finite Random Variables with Convex Bounds on Log-MGF}) \citep{boucheron2013concentration}\\
+Let $X_1 \xdotx{,} X_n$ be real-valued random variables such that for every $\lambda \in (0, b)$ and $i = 1, . . . , n$, the \textbf{logarithm of the moment-generating function} of $X_i$ satisfies
+\begin{align}
+\psi_{X_i}(\lambda) \le \phi(\lambda) \label{ineqn: bounded_by_convex_surrogate}
+\end{align} where $\phi$ is a \textbf{convex} and \textbf{continuously differentiable} function on $[0, b)$ with $0 < b \le \infty$ such that $\phi(0) = \phi'(0) = 0$. Then
+\begin{align}
+\E{}{\max\limits_{i=1 \xdotx{,} n} X_i} &\le \phi^{*-1}(\log n).  \label{ineqn: maximal_finite_generalized_inverse_legendre_transform}
+\end{align} In particular, if the $X_i$ are \textbf{sub-Gaussian with variance factor $\nu$}, that is, $\psi_{X_i}(\lambda) \le \lambda^2 \nu/2$ for
+every $\lambda \in (0, \infty)$, then
+\begin{align*}
+\E{}{\max\limits_{i=1 \xdotx{,} n} X_i} &\le \sqrt{2 \nu \log n}.
+\end{align*}
+\end{proposition}
+\begin{proof}
+By Jensen's inequality, 
+\begin{align*}
+\exp\paren{\lambda \E{}{\max\limits_{i=1 \xdotx{,} n} X_i}} &\le \E{}{\exp\paren{\lambda \max\limits_{i=1 \xdotx{,} n} X_i }} =  \E{}{\max\limits_{i=1 \xdotx{,} n}  \exp\paren{\lambda X_i }}
+\end{align*} for any $\lambda \in (0, b)$. Thus, recalling that $\psi_{X_i}(\lambda) = \log \E{}{\exp (\lambda X_i)}$,
+\begin{align*}
+\exp\paren{\lambda \E{}{\max\limits_{i=1 \xdotx{,} n} X_i}}  &\le  \sum_{i=1}^{n} \E{}{ \exp\paren{\lambda X_i }} \le n  \exp\paren{\phi(\lambda)}.
+\end{align*} Therefore, for any $\lambda \in (0, b)$,
+\begin{align*}
+\lambda\E{}{\max\limits_{i=1 \xdotx{,} n} X_i} - \phi(\lambda) \le \log n,
+\end{align*} which means that
+\begin{align*}
+\E{}{\max\limits_{i=1 \xdotx{,} n} X_i} \le \inf_{\lambda \in (0, b)}\set{ \frac{\log n +  \phi(\lambda)}{\lambda}}
+\end{align*} and the results follows from the equivalent definition of generalized inverse of $\phi$. \qed
+\end{proof}
+
+
+\item \begin{corollary} (\textbf{Mean of Maximum of Finite Sub-Gamma Random Variables})\\
+Let $X_1 \xdotx{,} X_n$ be real-valued random variables belonging to $\Gamma_{+}(\nu, c)$. Then
+\begin{align}
+\E{}{\max\limits_{i=1 \xdotx{,} n} X_i} &\le \sqrt{2 \nu \log n} + c\log n. \label{ineqn: maximal_finite_subgamma}
+\end{align}
+\end{corollary}
+
+%\item \begin{remark} (\emph{\textbf{Log-MGF Bounded by Convex Surrogate Function}})\\
+%Let $X_1 \xdotx{,} X_n$ be real-valued random variables such that for every $\lambda \in (0, b)$ and $i = 1, . . . , n$, the \textbf{logarithm of the moment-generating function} of $X_i$ satisfies
+%\begin{align*}
+%\psi_{X_i}(\lambda) \le \phi(\lambda) 
+%\end{align*} where $\phi$ is a \textbf{convex} and \textbf{continuously differentiable} function on $[0, b)$ with $0 < b \le \infty$ such that $\phi(0) = \phi'(0) = 0$. 
+%Then 
+%\begin{align*}
+%\psi_{\sum_{i=1}^{n}X_i}(\lambda) &=  \sum_{i=1}^{n}\psi_{X_i}(\lambda) \le n \phi(\lambda) 
+%\end{align*} Then the Chernoff's bound implies that 
+%\begin{align*}
+%\bP\set{\sum_{i=1}^{n}X_i \ge  t} &\le \exp\paren{- \lambda t + \psi_{\sum_{i=1}^{n}X_i}(\lambda) }\\
+%& \le \inf_{\lambda \in [0, b)}\exp\paren{- \lambda t + n \phi(\lambda)  } \\
+%& = \exp\set{- n \sup_{\lambda \in [0, b)}\paren{ \lambda t/n -  \phi(\lambda) }} = \exp\paren{-n \phi^{*}(t/n)}
+%\end{align*}
+%\end{remark}
+\end{itemize}
+
+\subsection{Hoeffding's Inequality}
+\begin{itemize}
+\item \begin{remark} (\textbf{\emph{Bounded Variables}})\\
+Bounded variables are an important class of \emph{sub-Gaussian random variables}. The \emph{sub-Gaussian property} of \emph{bounded random variables} is established by the
+following lemma:
+\end{remark}
+
+\item \begin{lemma} (\textbf{Hoeffding's Lemma}) \citep{boucheron2013concentration} \\
+Let $X$ be a random variable with $\E{}{X} = 0$, taking values in a \textbf{bounded interval} $[a, b]$ and let $\psi_{X}(\lambda) := \log  \E{}{e^{\lambda X}}$. Then
+\begin{align*}
+\psi_{X}''(\lambda) \le \frac{(b - a)^2}{4}
+\end{align*}
+and $X \in \cG((b - a)^2/4)$.
+\end{lemma}
+\begin{proof}
+Observe first that
+\begin{align*}
+\abs{X - \frac{b+a}{2}} \le \frac{b - a}{2}
+\end{align*}
+and therefore
+\begin{align*}
+\text{Var}(X) = \text{Var}\paren{X -  \frac{(b + a)}{2}} \le \frac{(b - a)^2}{4}.
+\end{align*}
+Now, let $\bP$ denote the distribution of $X$ and let $\bP_{\lambda}$ be the probability distribution with density
+\begin{align*}
+x \mapsto e^{-\psi_{X}(\lambda)}e^{\lambda x}
+\end{align*}
+with respect to $\bP$. Since $\bP_{\lambda}$ is \emph{concentrated} on $[a, b]$, the variance of a random variable $Z$
+with distribution $\bP_{\lambda}$ is \emph{bounded by} $(b - a)^2/4$. Hence, by an elementary computation,
+\begin{align*}
+\psi_{X}''(\lambda) &= e^{-\psi_X(\lambda)}\E{}{X^2e^{\lambda X}} - e^{-2\psi_X(\lambda)}\paren{\E{}{X e^{\lambda X}}}^2\\
+& = \text{Var}(Z) \le \frac{(b - a)^2}{4}.
+\end{align*}
+The sub-Gaussian property follows by noting that $\psi_X(0) = \psi_X'(0) = 0$, and by \emph{Taylor's theorem} that implies that, for some $\theta \in [0, \lambda]$,
+\begin{align*}
+\psi_X(\lambda) = \psi_X(0) + \lambda\,\psi_X'(0) + \frac{\lambda^2}{2}  \psi_{X}''(\theta) \le \frac{\lambda^2(b - a)^2}{8}. \qed
+\end{align*}
+\end{proof}
+
+\item \begin{proposition} (\textbf{Hoeffding's inequality}) \citep{boucheron2013concentration} \\
+Let $X_1 \xdotx{,} X_n$ be independent random variables such that $X_i$ takes its values in $[a_i, b_i]$ \textbf{almost surely} for all $i \le n$. Let
+\begin{align*}
+S &= \sum_{i=1}^{n}\paren{X_i - \E{}{X_i}}.
+\end{align*}
+Then for every $t > 0$,
+\begin{align}
+\bP\set{S \ge  t} \le \exp\paren{- \frac{2t^2}{\sum_{i=1}^{n}(b_i - a_i)^2}}. \label{ineqn: hoeffding_inequality}
+\end{align}
+\end{proposition}
+
+\item \begin{remark}  (\textbf{\emph{Hoeffding's inequality for Scaled Radmatcher Random Variables}}) \\
+Let us consider the random variables 
+\begin{align*}
+X_i &= \epsilon_i \alpha_i, \quad i=1 \xdotx{,} n 
+\end{align*} where $\epsilon_1 \xdotx{,} \epsilon_n$ are \emph{\textbf{independent Rademacher random variables}} (i.e. \emph{\textbf{symmetric Bernoulli random variables}} with $\bP\set{\epsilon_i = 1} = \bP\set{\epsilon_i = -1} = 1/2$) and $\alpha_1 \xdotx{,} \alpha_n$ are real numbers.  We get
+\begin{align*}
+\bP\set{S \ge  t} \le \exp\paren{- \frac{t^2}{2\sum_{i=1}^{n}\alpha_i^2}}.
+\end{align*}
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Hoeffding's inequality}} as \textbf{\emph{Concentration version of the Central Limit Theorem}}) \citep{vershynin2018high} \\
+We can view Hoeffding's inequality as \emph{a \underline{\textbf{concentration version}} of \textbf{the central limit theorem}}. Indeed, the most we may expect from a concentration inequality is that \emph{\textbf{the tail of}} $\sum_{i}\epsilon_i \alpha_i$ behaves similarly to \emph{\textbf{the tail of the normal distribution}}. 
+
+With the normalization $\norm{\alpha}{2} = 1$, Hoeffding’s inequality provides the tail $e^{-t^2/2}$, which is exactly the same as the bound for the standard normal tail. This is good news. We have been able to obtain the same exponentially light tails for sums as for the normal distribution, even though \emph{the difference of these two distributions is not exponentially small}.
+\end{remark}
+
+\item \begin{remark} (\textbf{\emph{Non-asymptotic Results}}). \citep{vershynin2018high}\\
+ It should be stressed that unlike \emph{\textbf{the classical limit theorems}} of \emph{\textbf{Probability Theory}}, \emph{Hoeffding's inequality} is \underline{\emph{\textbf{non-asymptotic}}} in that it holds for \emph{\textbf{all fixed} $N$ as opposed to $N \to \infty$}. The \emph{\textbf{larger}} $N$, the \emph{\textbf{stronger}} inequality becomes. As we will see later, \emph{\textbf{the non-asymptotic nature}} of \emph{\textbf{concentration inequalities}} like \emph{Hoeffding} makes them attractive in application  in data sciences, where $N$ often corresponds to \emph{\textbf{sample size}}.
+\end{remark}
+
+\end{itemize}
+\subsection{Bennett's Inequality}
+\begin{itemize}
+\item \begin{remark}
+Our starting point is the fact that  \emph{the logarithmic moment-generating function} of an \emph{independent sum} equals \emph{the sum of the logarithmic moment-generating functions of the centered summands}, that is,
+\begin{align*}
+\psi_{S}(\lambda) &=  \sum_{i=1}^{n}\paren{\log\E{}{e^{\lambda X_i}} - \lambda \E{}{X_i}}.
+\end{align*}
+Using $\log u \le u - 1$ for $u > 0$,
+\begin{align}
+\psi_{S}(\lambda) &\le \sum_{i=1}^{n}\E{}{e^{\lambda X_i} - \lambda X_i - 1}. \label{ineqn: log_mgf_bound}
+\end{align}
+Both Bennett's and Bernstein's inequalities may be derived from this bound, under different integrability conditions for the $X_i$.
+\end{remark}
+
+\item \begin{proposition} (\textbf{Bennett's Inequality}) \citep{boucheron2013concentration}\\
+Let $X_1 \xdotx{,} X_n$ be independent random variables with \textbf{finite variance} such that $X_i \le b$ for some $b > 0$ \textbf{almost surely} for all $i \le n$. Let
+\begin{align*}
+S &= \sum_{i=1}^{n}\paren{X_i - \E{}{X_i}}
+\end{align*} and $\nu = \sum_{i=1}^{n}\E{}{X_i^2}$. If we write $\phi(u) = e^u - u - 1$ for $u \in \bR$, then, for all $\lambda > 0$,
+\begin{align*}
+\log \E{}{e^{\lambda S}} \le n \log\paren{1 + \frac{\nu}{n b^2}\phi(b \lambda)} \le \frac{\nu}{b^2}\,\phi(b\lambda),
+\end{align*}
+and for any $t > 0$,
+\begin{align}
+\bP\set{S \ge t} \le \exp\paren{-\frac{\nu}{b^2}h\paren{\frac{b\,t}{\nu}}} \label{ineqn: bennett_inequality}
+\end{align}
+where $h(u) = (1 + u) \log(1 + u) - u$ for $u > 0$.
+\end{proposition}
+
+\item \begin{remark}
+Compare \emph{the Bennett's inequality} and \emph{Hoeffding's inequality}:
+\begin{enumerate}
+\item \emph{Hoeffding's inequality} assumes $X_i$ is \emph{\textbf{bounded}} within \emph{a \textbf{closed interval}} $[a_i, b_i]$
+
+\item \emph{Bennett's inequality} assumes $X_i$ is \emph{\textbf{bounded above}} by $b_i$ but need to \emph{\textbf{have finite variance}}. It is seen as a generalization of \emph{Chernoff's inequality}.
+\end{enumerate}
+\end{remark}
+
+\item \begin{remark} This bound can be analyzed in two different regimes:
+\begin{enumerate}
+\item \emph{In the \textbf{small deviation regime}}, where $u := b t/ \nu \ll 1$, we have \emph{asymptotically} $h(u) \approx u^2$ and \emph{Bennett's inequality} gives \emph{approximately the Gaussian tail bound} $\approx \exp(-t^2/\nu)$. 
+
+\item \emph{In the \textbf{large deviations regime}}, say where $u := b t/ \nu \ge 2$, we have $h(u) \ge \frac{1}{2}u \log u$, and \emph{Bennett's inequality} gives a \emph{\textbf{Poisson-like tail}} $(\nu/bt)^{t/2 b}$.
+\end{enumerate}
+\end{remark}
+\end{itemize}
+
+\subsection{Bernstein's Inequality}
+\begin{itemize}
+\item We are ready to state and prove a concentration inequality for sums of independent sub-exponential random variables.
+\begin{proposition} (\textbf{Bernstein's Inequality}).  \citep{vershynin2018high}\\
+Let $X_1 \xdotx{,} X_n$ be \textbf{independent}, \textbf{mean zero}, \textbf{sub-exponential random variables}. Then, for every $t \ge 0$, we have
+\begin{align}
+\bP\set{\abs{\sum_{i=1}^{n}X_i} \ge t} \le 2 \exp\brac{- c \min\set{\frac{t^2}{\sum_{i=1}^{n}\norm{X_i}{\psi_2}^2},  \frac{t}{\max_i \norm{X_i}{\psi_1}}}} \label{ineqn: bernstein_inequality}
+\end{align}
+where $c > 0$ is an absolute constant.
+\end{proposition}
+
+\item 
+\begin{proposition} (\textbf{Bernstein's Inequality, Linear Combination Form}).  \citep{vershynin2018high}\\
+Let $X_1 \xdotx{,} X_n$ be \textbf{independent}, \textbf{mean zero}, \textbf{sub-exponential random variables}, and $a = (a_1 \xdotx{,} a_n) \in \bR^n$. Then, for every $t \ge 0$, we have
+\begin{align}
+\bP\set{\abs{\sum_{i=1}^{n}a_i X_i} \ge t} \le 2 \exp\brac{- c \min\set{\frac{t^2}{K^2\, \norm{a}{2}^2},  \frac{t}{K \norm{a}{\infty}}}} \label{ineqn: bernstein_inequality_linear_comb}
+\end{align}
+where $c > 0$ is an absolute constant and $K = \max_i \norm{X_i}{\psi_1}$.
+\end{proposition}
+
+\item \begin{corollary}(\textbf{Bernstein's Inequality, Average Form}).  \citep{vershynin2018high}\\
+Let $X_1 \xdotx{,} X_n$ be \textbf{independent}, \textbf{mean zero}, \textbf{sub-exponential random variables}. Then, for every $t \ge 0$, we have
+\begin{align}
+\bP\set{\abs{\frac{1}{n}\sum_{i=1}^{n}X_i} \ge t} \le 2 \exp\brac{- c \min\set{\frac{t^2}{K^2},  \frac{t}{K}}n} \label{ineqn: bernstein_inequality_average}
+\end{align} where $K = \max_i \norm{X_i}{\psi_1}$.
+\end{corollary}
+
+\item \begin{remark} This bound can be analyzed in two different regimes:
+\begin{align*}
+\bP\set{\abs{\frac{1}{n}\sum_{i=1}^{n}X_i} \ge t} \le \left\{\begin{array}{cc}
+2 \exp\paren{- c t^2} &  t\le C \sqrt{n}\\[10pt]
+2 \exp\paren{-  t\sqrt{n}} &  t\ge C \sqrt{n}
+\end{array} 
+\right. 
+\end{align*} 
+\begin{enumerate}
+\item \emph{In the \textbf{small deviation regime}}, where $t\le C \sqrt{n}$, we have a \emph{\textbf{sub-gaussian tail bound}} as if the sum had a normal distribution with constant variance. Note that \emph{this domain \textbf{widens}} as $n$ \emph{\textbf{increases}} and \emph{\textbf{the central limit theorem}} becomes more powerful. 
+
+\item \emph{In the \textbf{large deviations regime}}, say where $t\ge C \sqrt{n}$, the sum has a \emph{heavier, sub-exponential tail bound}, which can be due to the contribution of \emph{\textbf{a single term}} $X_i$. 
+\end{enumerate}
+\end{remark}
+
+\item \begin{proposition} (\textbf{Bernstein's Inequality for Bounded Distributions}).  \citep{vershynin2018high}\\
+Let $X_1 \xdotx{,} X_n$ be \textbf{independent}, \textbf{mean zero} random variables, such that $\abs{X_i} \le b$ all $i$. Then, for every $t \ge 0$, we have
+\begin{align}
+\bP\set{\abs{\frac{1}{n}\sum_{i=1}^{n}X_i} \ge t} \le 2\exp\paren{- \frac{t^2}{2(\nu + bt/3)}}. \label{ineqn: bernstein_inequality_bounded}
+\end{align}
+Here $\nu = \sum_{i=1}^{n}\E{}{X_i^2}$ is the variance of the sum.
+\end{proposition}
+
+\item \begin{proposition}  \citep{boucheron2013concentration}\\
+Let $X_1 \xdotx{,} X_n$ be independent real-valued random variables. Assume that there exist positive numbers  $\nu$ and $c$ such that
+$\sum_{i=1}^{n}\E{}{X_i^2} \le \nu$ and
+\begin{align*}
+\sum_{i=1}^{n}\E{}{(X_i)_{+}^q} \le \frac{q!}{2} \nu c^{q-2}, \quad \text{ for all integers }q \ge 3,
+\end{align*} where $(x)_{+} = \max\set{x, 0}$. If $S = \sum_{i=1}^{n}\paren{X_i - \E{}{X_i}}$, then for all $\lambda \in (0, 1/c)$ and $t > 0$
+\begin{align*}
+\psi_S(\lambda) \le \frac{\lambda^2 \nu}{2(1 - c\lambda)} 
+\end{align*} and
+\begin{align*}
+\psi_S^{*}(t) \ge \frac{\nu}{c^2}h_1\paren{\frac{ct}{\nu}},
+\end{align*} where $h_1(u) = 1+ u - \sqrt{1 + 2u}$ for $u >0$. In particular, for all $t > 0$, 
+\begin{align}
+\bP\set{S \ge \sqrt{2\nu t} + ct } \le e^{-t}. \label{ineqn: bernstein_inequality_gammar_dist_0}
+\end{align}
+\end{proposition}
+
+\item \begin{corollary}(\textbf{Bernstein's Inequality, Sub-Gamma Distribution}).  \citep{boucheron2013concentration}\\
+Let $X_1 \xdotx{,} X_n$ be independent real-valued random variables satisfying the conditions above and let $S = \sum_{i=1}^{n}\paren{X_i - \E{}{X_i}}$. Then for all $t > 0$,
+\begin{align}
+\bP\set{S \ge t } \le \exp\paren{- \frac{t^2}{2(\nu + ct)}}.  \label{ineqn: bernstein_inequality_gammar_dist}
+\end{align}
+\end{corollary}
+
+\item \begin{remark}
+For bounded random variables $X_i \le b$ almost surely for all $i \le n$, then the conditions of above corollary hold with
+\begin{align*}
+\nu = \sum_{i=1}^{n}\E{}{X_i^2}, \quad c = b/3.
+\end{align*}
+\end{remark}
+\end{itemize}
 
 
 \newpage
