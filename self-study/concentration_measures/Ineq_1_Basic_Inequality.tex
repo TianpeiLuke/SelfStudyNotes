@@ -853,6 +853,41 @@ With the normalization $\norm{\alpha}{2} = 1$, Hoeffding’s inequality provides
  It should be stressed that unlike \emph{\textbf{the classical limit theorems}} of \emph{\textbf{Probability Theory}}, \emph{Hoeffding's inequality} is \underline{\emph{\textbf{non-asymptotic}}} in that it holds for \emph{\textbf{all fixed} $N$ as opposed to $N \to \infty$}. The \emph{\textbf{larger}} $N$, the \emph{\textbf{stronger}} inequality becomes. As we will see later, \emph{\textbf{the non-asymptotic nature}} of \emph{\textbf{concentration inequalities}} like \emph{Hoeffding} makes them attractive in application  in data sciences, where $N$ often corresponds to \emph{\textbf{sample size}}.
 \end{remark}
 
+\item 
+ \begin{proposition} (\textbf{General Hoeffding's inequality}) \citep{vershynin2018high} \\
+Let $X_1 \xdotx{,} X_n$ be \textbf{independent} \textbf{sub-gaussian} random variables. Let
+\begin{align*}
+S &= \sum_{i=1}^{n}\paren{X_i - \E{}{X_i}}.
+\end{align*}
+Then for every $t > 0$,
+\begin{align}
+\bP\set{S \ge  t}  \le \exp\paren{- \frac{c\,t^2}{\sum_{i=1}^{n}\norm{X_i}{\psi_2}}}. \label{ineqn: general_hoeffding_inequality}
+\end{align}
+\end{proposition}
+
+ \begin{proposition} (\textbf{General Hoeffding's inequality, Linear Form}) \citep{vershynin2018high} \\
+Let $X_1 \xdotx{,} X_n$ be \textbf{independent}, \textbf{mean zero}, \textbf{sub-gaussian} random variables, and $a = (a_1 \xdotx{,} a_n) \in \bR^{n}$.   Then for every $t > 0$,
+\begin{align}
+\bP\set{\sum_{i=1}^{n}a_i X_i \ge  t} \le \exp\paren{- \frac{c\,t^2}{K^2\,\norm{a}{2}^2}}. \label{ineqn: general_hoeffding_inequality_2}
+\end{align} where $K = \max_i \norm{X_i}{\psi_2}$.
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Khintchine's inequality, $L^p$ norm, $p \ge 2$}).  \citep{vershynin2018high} \\
+Let $X_1 \xdotx{,} X_n$ be \textbf{independent} \textbf{sub-gaussian} random variables with \textbf{zero means} and \textbf{unit variances}, and let $a = (a_1 \xdotx{,} a_n) \in \bR^{n}$. Then for every $p \in [2, \infty)$, we have
+\begin{align}
+\paren{\sum_{i=1}^{n}a_i^2}^{1/2} \le \norm{\sum_{i=1}^{n}a_i X_i}{L^p}  \le C\,K \sqrt{p} \paren{\sum_{i=1}^{n}a_i^2}^{1/2} \label{ineqn: khintchine_inequality_1}
+\end{align}
+where $K = \max_i \norm{X_i}{\psi_2}$ and $C$ is an absolute constant.
+\end{proposition}
+
+ \begin{proposition} (\textbf{Khintchine's inequality, $L^1$ norm}).  \citep{vershynin2018high} \\
+Let $X_1 \xdotx{,} X_n$ be \textbf{independent} \textbf{sub-gaussian} random variables with \textbf{zero means} and \textbf{unit variances}, and let $a = (a_1 \xdotx{,} a_n) \in \bR^{n}$. Then 
+\begin{align}
+c(K)\paren{\sum_{i=1}^{n}a_i^2}^{1/2} \le \norm{\sum_{i=1}^{n}a_i X_i}{L^1}  \le \paren{\sum_{i=1}^{n}a_i^2}^{1/2} \label{ineqn: khintchine_inequality_2}
+\end{align}
+where $K = \max_i \norm{X_i}{\psi_2}$ and $c(K) > 0$ is a quantity which may depend only on $K$.
+\end{proposition}
+
 \end{itemize}
 \subsection{Bennett's Inequality}
 \begin{itemize}
