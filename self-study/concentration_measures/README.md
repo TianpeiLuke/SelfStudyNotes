@@ -10,7 +10,7 @@
 
 ## Table of Contents
 
-- Basic Inequalities  [pdf](./CI_1_causal_inference.pdf)
+- Basic Inequalities  [pdf](./Ineq_1_Basic_Inequality.pdf)
   	- Basic Inequalities in Probability Space and Functional Space
 	- Sum of Independent Random Variables
 		- The Cram\'er-Chernoff Method.
