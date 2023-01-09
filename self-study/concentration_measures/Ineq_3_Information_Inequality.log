@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  8 JAN 2023 20:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  8 JAN 2023 20:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -678,10 +678,10 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 No file Ineq_3_Information_Inequality.bbl.
 (./Ineq_3_Information_Inequality.aux) ) 
 Here is how much of TeX's memory you used:
- 15845 strings out of 493029
- 313793 string characters out of 6136233
- 358499 words of memory out of 5000000
- 19065 multiletter control sequences out of 15000+600000
+ 15846 strings out of 493029
+ 313801 string characters out of 6136233
+ 359499 words of memory out of 5000000
+ 19066 multiletter control sequences out of 15000+600000
  12011 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,6n,84p,525b,196s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -691,7 +691,7 @@ lic/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
 7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Ineq_3_Information_Inequality.pdf (2 pages, 76484 bytes).
+Output written on Ineq_3_Information_Inequality.pdf (2 pages, 78383 bytes).
 PDF statistics:
  38 PDF objects out of 1000 (max. 8388607)
  27 compressed objects within 1 object stream
