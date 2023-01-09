@@ -13,7 +13,7 @@
 - Basic Inequalities  [pdf](./Ineq_1_Basic_Inequality.pdf)
   	- Basic Inequalities in Probability Space and Functional Space
 	- Sum of Independent Random Variables
-		- The Cram\{e}r-Chernoff Method.
+		- The Cram\er-Chernoff Method.
 		- Sub-Gaussian Random Variables
 		- Sub-Exponential Random Variables
 		- Sub-Gamma Random Variables
