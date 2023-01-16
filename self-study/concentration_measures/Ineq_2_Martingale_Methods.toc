@@ -1,13 +1,13 @@
 \contentsline {section}{\numberline {1}Martingale-based Methods}{2}
 \contentsline {subsection}{\numberline {1.1}Martingale}{2}
-\contentsline {subsection}{\numberline {1.2}Concentration Inequalities for Martingale Difference Sequences}{4}
-\contentsline {subsubsection}{\numberline {1.2.1}Bernstein Inequality for Martingale Difference Sequence}{4}
-\contentsline {subsubsection}{\numberline {1.2.2}Azuma-Hoeffding Inequality}{5}
-\contentsline {subsubsection}{\numberline {1.2.3}McDiarmid's Inequality}{6}
-\contentsline {subsubsection}{\numberline {1.2.4}Applications}{7}
-\contentsline {section}{\numberline {2}The Efron-Stein Inequality}{7}
-\contentsline {subsection}{\numberline {2.1}Bounding Variance}{7}
+\contentsline {subsection}{\numberline {1.2}Bernstein Inequality for Martingale Difference Sequence}{4}
+\contentsline {subsection}{\numberline {1.3}Azuma-Hoeffding Inequality}{5}
+\contentsline {subsection}{\numberline {1.4}McDiarmid's Inequality}{5}
+\contentsline {subsection}{\numberline {1.5}Lipschitz Functions of Gaussian Variables}{7}
+\contentsline {subsection}{\numberline {1.6}Applications}{7}
+\contentsline {section}{\numberline {2}Bounding Variance}{7}
+\contentsline {subsection}{\numberline {2.1}The Efron-Stein Inequality}{7}
 \contentsline {subsection}{\numberline {2.2}Functions with Bounded Differences}{9}
 \contentsline {subsection}{\numberline {2.3}Self-Bounding Functions}{10}
-\contentsline {subsection}{\numberline {2.4}Lipschitz Functions of Gaussian Variables}{11}
-\contentsline {subsection}{\numberline {2.5}A Proof of the Efron–Stein Inequality Based on Duality}{11}
+\contentsline {subsection}{\numberline {2.4}Applications}{11}
+\contentsline {subsection}{\numberline {2.5}A Proof of the Efron-Stein Inequality Based on Duality}{11}
