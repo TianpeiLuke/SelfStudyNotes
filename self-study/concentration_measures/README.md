@@ -28,7 +28,7 @@
 		- Martingale and Martingale Difference Sequence
 		- Bernstein’s Inequality for Martingale Difference Sequence
 		- Azuma-Hoeffding’s Inequality for Martingale Difference Sequence
-		- Functions with Bounded Difference and McDiarmid’s Inequality
+		- Bounded Difference Inequality / McDiarmid’s Inequality
 		- Lipschitz Functions of Gaussian Variables
 		- Applications
 	- Bounding Variance for Martingale Difference Sequence
