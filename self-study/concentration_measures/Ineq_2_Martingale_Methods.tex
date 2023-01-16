@@ -182,9 +182,9 @@ Let $\set{(D_k, \srB_k), k \ge 1}$ be a \textbf{martingale difference sequence},
 \E{}{\exp\paren{\lambda D_k} | \srB_{k-1}} \le \exp\paren{\frac{\lambda^2 \nu_k^2}{2} }
 \end{align*} almost surely for any $\abs{\lambda} < 1/\alpha_k$. Then the following hold:
 \begin{enumerate}
-\item The sum $\sum_{k=1}^{n}D_k$ is \textbf{sub-exponential} with \textbf{parameters} $\paren{\sqrt{\sum_{k=1}^{n}\nu_k^2}\;  , \;\alpha_{*}}$ where $\alpha_{*} := \max_{k=1 \xdotx{,} n} \alpha_k$. That is, for any $\abs{\lambda} < 1/\alpha_{*}$, $\mu := \E{}{\sum_{k=1}^{n}D_k}$,
+\item The sum $\sum_{k=1}^{n}D_k$ is \textbf{sub-exponential} with \textbf{parameters} $\paren{\sqrt{\sum_{k=1}^{n}\nu_k^2}\;  , \;\alpha_{*}}$ where $\alpha_{*} := \max_{k=1 \xdotx{,} n} \alpha_k$. That is, for any $\abs{\lambda} < 1/\alpha_{*}$, 
 \begin{align*}
-\E{}{\exp\set{\lambda \paren{\sum_{k=1}^{n}D_k - \mu}}} \le \exp\paren{\frac{\lambda^2\sum_{k=1}^{n}\nu_k^2}{2} }
+\E{}{\exp\set{\lambda \paren{\sum_{k=1}^{n}D_k}}} \le \exp\paren{\frac{\lambda^2\sum_{k=1}^{n}\nu_k^2}{2} }
 \end{align*}
 \item The sum satisfies \textbf{the concentration inequality}
 \begin{align}
@@ -195,6 +195,23 @@ Let $\set{(D_k, \srB_k), k \ge 1}$ be a \textbf{martingale difference sequence},
 \end{align}
 \end{enumerate}
 \end{proposition}
+\begin{proof}
+We follow the standard approach of controlling the moment generating function of $\sum_{k=1}^{n}D_k$, and then applying \emph{the Chernoff bound}. For any scalar $\lambda$ such that $\abs{\lambda} < 1/\alpha_{*}$, conditioning on $\srB_{n-1}$ and applying iterated expectation yields
+\begin{align*}
+\E{}{\exp\set{\lambda \paren{\sum_{k=1}^{n}D_k }}} &= \E{}{\exp\set{\lambda \paren{\sum_{k=1}^{n-1}D_k }} \E{}{\exp\set{\lambda D_n }  \;\Big|\; \srB_{n-1}}} \\
+&\le \E{}{\exp\set{\lambda \paren{\sum_{k=1}^{n-1}D_k }}}\exp\paren{\frac{\lambda^2 \nu_k^2}{2} },
+\end{align*} where the inequality follows from the stated assumption on $D_n$. Iterating this procedure yields the bound
+$\E{}{\exp\set{\lambda \paren{\sum_{k=1}^{n}D_k}}} \le \exp\paren{\frac{\lambda^2\sum_{k=1}^{n}\nu_k^2}{2} }$, valid for all $\abs{\lambda} < 1/\alpha_{*}$. By definition, we conclude that $\sum_{k=1}^{n}D_k$ is \emph{sub-exponential} with \emph{parameters} $\paren{\sqrt{\sum_{k=1}^{n}\nu_k^2}\;  , \;\alpha_{*}}$, as claimed. The tail bound \eqref{ineqn: bernstein_inequality_martingale} follows by properties of sub-exponential distribution. \qed
+\end{proof}
+
+\item \begin{remark}
+This result is a \emph{\textbf{generalization}} of \emph{the Bernstein's inequality} when $\set{D_k}$ are \emph{\textbf{independent sub-exponential distributed}} random variables. 
+
+The proof used the property of conditional expectation 
+\begin{align*}
+\E{}{\E{}{X|\srB_{n}}} &= \E{}{X}, \quad \E{}{h(X) g(Y) | Y} \stackrel{a.s.}{=} h(X)\E{}{g(Y) | Y}
+\end{align*}
+\end{remark}
 \end{itemize}
 \subsubsection{Azuma-Hoeffding Inequality}
 \begin{itemize}
@@ -231,6 +248,34 @@ Suppose that $f$ satisfies \textbf{the bounded difference property} \eqref{eqn: 
 \bP\set{\abs{f(X) - \E{}{f(X)}} \ge t } &\le  2 \exp\paren{- \frac{2 t^2}{ \sum_{k=1}^{n}L_k^2}}. \label{ineqn: macdiarmid_bounded_difference_inequality}
 \end{align}
 \end{corollary}
+\begin{proof}
+Consider the associated \emph{martingale difference sequence}
+\begin{align*}
+D_k := \E{}{f(X) | X_1 \xdotx{,} X_k} - \E{}{f(X) | X_1 \xdotx{,} X_{k-1}}.
+\end{align*}
+We claim that $D_k$ lies in \emph{an interval of length at most $L_k$ almost surely}. In order to prove this claim, define the random variables
+\begin{align*}
+A_k &:= \inf_x \set{\E{}{f(X) | X_1 \xdotx{,} X_{k-1}, x}} - \E{}{f(X) | X_1 \xdotx{,} X_{k-1}} \\
+B_k &:= \sup_{x} \set{\E{}{f(X) | X_1 \xdotx{,} X_{k-1}, x}} - \E{}{f(X) | X_1 \xdotx{,} X_{k-1}}.
+\end{align*}
+On one hand, we have
+\begin{align*}
+D_k - A_k &=  \E{}{f(X) | X_1 \xdotx{,} X_k} - \inf_x \set{\E{}{f(X) | X_1 \xdotx{,} X_{k-1}, x}},
+\end{align*}
+so that $D_k \ge  A_k$ \emph{almost surely}. A similar argument shows that $D_k \le B_k$ \emph{almost surely}.
+We now need to show that $B_k - A_k \le L_k$ \emph{almost surely}. Observe that by the independence of $\set{X_k}^n_{k=1}$, we have
+\begin{align*}
+\E{}{f(X) \,|\, x_1 \xdotx{,} x_k } &= \E{(k+1)}{f(x_1 \xdotx{,} x_k, X_{k+1} \xdotx{,} X_n)},\text{ for any }(x_1 \xdotx{,} x_k),
+\end{align*}  where $\E{(k+1)}{\cdot}$ denote the expectation over $(X_{k+1} \xdotx{,} X_n)$.
+Consequently, we have
+\begin{align*}
+B_k - A_k &=  \sup_{x} \E{(k+1)}{f(X_1 \xdotx{,} X_{k-1}, x, X_{k+1} \xdotx{,} X_n)}  \\
+&\quad - \inf_x  \E{(k+1)}{f(X_1 \xdotx{,} X_{k-1}, x, X_{k+1} \xdotx{,} X_n)} \\
+&\le  \sup_{x,y}\set{\E{(k+1)}{f(X_{1:k-1}, x, X_{k+1:n})} - \E{(k+1)}{f(X_{1:k-1}, y, X_{k+1:n})}} \\
+&\le L_k,
+\end{align*}
+using \emph{the bounded differences assumption}. Thus, the variable $D_k$ lies within an interval of length $L_k$ at most surely, so that the claim follows as a corollary of \emph{the Azuma-Hoeffding inequality}. \qed
+\end{proof}
 \end{itemize}
 
 \subsubsection{Applications}
