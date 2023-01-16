@@ -23,7 +23,21 @@
 		- Bennett’s Inequality
 		- Bernstein’s Inequality
 
-- Martingale-Based Inequalities 
+- Martingale-Based Inequalities [pd](./Ineq_2_Martingale_Methods.pdf)
+	- Martingale-based Methods
+		- Martingale and Martingale Difference Sequence
+		- Bernstein’s Inequality for Martingale Difference Sequence
+		- Azuma-Hoeffding’s Inequality for Martingale Difference Sequence
+		- Functions with Bounded Difference and McDiarmid’s Inequality
+		- Lipschitz Functions of Gaussian Variables
+		- Applications
+	- The Efron-Stein Inequality
+		- Bounding Variance for Martingale Difference Sequence
+		- The Efron-Stein Inequality
+		- Functions with Bounded Difference
+		- Self-Bounding Property
+		- Applications
+
 
 
 
