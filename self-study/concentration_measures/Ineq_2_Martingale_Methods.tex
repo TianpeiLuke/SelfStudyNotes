@@ -35,23 +35,403 @@
 \section{Martingale-based Methods}
 \subsection{Martingale}
 \begin{itemize}
-\item 
+\item \begin{definition} (\emph{\textbf{Martingale}}) \citep{resnick2013probability}\\
+Let $\set{X_n, n \ge 0}$ be a stochastic process on $(\Omega, \srF)$ and $\set{\srF_n, n \ge 0}$ be a \underline{\textbf{\emph{filtration}}}; that is, $\set{\srF_n, n \ge 0}$ is an \emph{increasing sub $\sigma$-fields} of $\srF$
+\begin{align*}
+\srF_0 \subseteq \srF_1 \subseteq \srF_2 \xdotx{\subseteq} \srF.
+\end{align*} Then $\set{ (X_n, \srF_n),  n \ge 0}$ is a \underline{\emph{\textbf{martingale (mg)}}} if
+\begin{enumerate}
+\item  $X_n$ is \emph{\textbf{adapted}} in the sense that for each $n$, $X_n \in \srF_n$; that is, $X_n$ is $\srF_n$-measurable.
+\item  $X_n \in L_1$; that is $\E{}{\abs{X_n}} < \infty$ for $n \ge 0$.
+\item For $0 \le m < n$
+\begin{align}
+\E{}{X_n \;|\; \srF_m} &= X_m, \quad \text{a.s.} \label{def: martingale}
+\end{align}
+\end{enumerate}
+If the equality of \eqref{def: martingale} is replaced by $\ge$; that is, things are getting better on the average:
+\begin{align}
+\E{}{X_n \;|\; \srF_m} &\ge X_m, \quad \text{a.s.} \label{def: sub_martingale}
+\end{align} then $\set{X_n}$ is called a \underline{\emph{\textbf{sub-martingale (submg)}}} while if things are getting worse on
+the average
+\begin{align}
+\E{}{X_n \;|\; \srF_m} &\le X_m, \quad \text{a.s.} \label{def: sup_martingale}
+\end{align}  $\set{X_n}$ is called a \underline{\emph{\textbf{super-martingale (supermg)}}}.
+\end{definition}
+
+\item \begin{remark}
+$\set{X_n}$ is \emph{\textbf{martingale}} if it is \emph{both} a \emph{\textbf{sub}} and \emph{\textbf{supermartingale}}. $\set{X_n}$ is a \emph{\textbf{supermartingale}} if and only if $\set{-X_n}$ is a \emph{\textbf{submartingale}}.
+\end{remark}
+
+\item \begin{remark}
+If $\set{X_n}$ is a \emph{\textbf{martingale}}, then $\E{}{X_n}$ is \emph{constant}. In the case of a \emph{\textbf{submartingale}}, \emph{the mean increases} and for a \emph{\textbf{supermartingale}}, \emph{the mean decreases}.
+\end{remark}
+
+\item \begin{proposition} \citep{resnick2013probability}\\
+If  $\set{ (X_n, \srF_n),  n \ge 0}$ is a \textbf{(sub, super) martingale}, then 
+\begin{align*}
+\set{ (X_n, \sigma\paren{X_0, X_1 \xdotx{,} X_n}),  n \ge 0}
+\end{align*} is also a \textbf{(sub, super) martingale}.
+\end{proposition}
+
+\item \begin{definition} (\textbf{\emph{Martingale Differences}}).  \citep{resnick2013probability}\\
+$\set{(d_j, \srB_j), j \ge 0}$ is a \underline{\emph{\textbf{(sub, super) martingale difference sequence}}} or a \textit{\textbf{(sub, super) fair sequence}} if
+\begin{enumerate}
+\item For $j \ge 0$,  $\srB_j \subset \srB_{j+1}$.
+\item For $j \ge 0$,  $d_j \in L_1$,  $d_j \in \srB_j$; that is, $d_j$ is \emph{absolutely integrable} and \emph{$\srB_j$-measurable}.
+\item For $j \ge 0$,
+\begin{align*}
+\E{}{d_{j+1} | \srB_j} &= 0, && \text{(\emph{martingale difference / fair sequence})};\\
+& \ge 0, && \text{(\emph{submartingale difference / subfair sequence})};\\
+& \le 0, && \text{(\emph{supmartingale difference / supfair sequence})}
+\end{align*}
+\end{enumerate}
+\end{definition}
+
+\item \begin{proposition} (\textbf{Construction of Martingale From Martingale Difference})\citep{resnick2013probability}\\
+If $\set{(d_j, \srB_j), j \ge 0}$ is \textbf{(sub, super) martingale difference sequence}, and
+\begin{align*}
+X_n = \sum_{j=0}^{n} d_j, 
+\end{align*} then $\set{(X_n, \srB_n), n \ge 0}$ is a \textbf{(sub, super) martingale}.
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Construction of Martingale Difference From Martingale}) \citep{resnick2013probability}\\
+Suppose $\set{(X_n, \srB_n), n \ge 0}$ is a \textbf{(sub, super) martingale}. Define
+\begin{align*}
+d_0&:= X_0 - \E{}{X_0}\\
+d_j &:= X_j - X_{j-1}, \quad j\ge 1.
+\end{align*}
+Then $\set{(d_j, \srB_j), j \ge 0}$ is a \textbf{(sub, super) martingale difference sequence}.
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Orthogonality of Martingale Differences}). \citep{resnick2013probability}\\
+If $\set{(X_n, \srB_n), n \ge 0}$ is a \textbf{martingale} where $X_n$ can be decomposed as
+\begin{align*}
+X_n = \sum_{j=0}^{n} d_j, 
+\end{align*}  $d_j$ is $\srB_j$-measurable and  $\mathds{E}[d_j^2] < \infty$ for $j \ge 0$, then $\set{d_j}$ are \textbf{orthogonal}:
+\begin{align*}
+\E{}{d_i\,d_j} = 0 \quad i \neq j.
+\end{align*}
+\end{proposition}
+
+\item \begin{example} (\textbf{\emph{Smoothing as Martingale}})\\
+Suppose $X \in L_1$ and $\set{\srB_n, n \ge 0}$ is an increasing family of sub $\sigma$-algebra of $\srB$. Define for $n \ge 0$
+\begin{align*}
+X_n &:= \E{}{X | \srB_n}.
+\end{align*}
+Then $(X_n, \srB_n)$ is a \emph{\textbf{martingale}}. From this result, we see that $\set{(d_n, \srB_n), n \ge 0}$ is a \emph{\textbf{martingale difference sequence}} when 
+\begin{align}
+d_n &:= \E{}{X | \srB_n} - \E{}{X | \srB_{n-1}}, \quad n\ge 1. \label{eqn: smoothing_martingale_difference}
+\end{align}
+\end{example}
+\begin{proof}
+See that 
+\begin{align*}
+\E{}{X_{n+1} | \srB_{n}} &= \E{}{ \E{}{X | \srB_{n+1}} | \srB_n} \\
+&= \E{}{X | \srB_{n}}  \qquad \text{(Smoothing property of conditional expectation)}\\
+&= X_n \qed
+\end{align*} 
+\end{proof}
+
+\item \begin{example}(\emph{\textbf{Sums of Independent Random Variables}}) \\
+Suppose that $\set{Z_n, n \ge 0}$ is an \emph{\textbf{independent} sequence of integrable random variables} satisfying for $n \ge 0$, 
+$\E{}{Z_n} = 0$.  Set
+\begin{align*}
+X_0 &:= 0,\\
+X_n &:= \sum_{i=1}^{n}Z_i, \quad n \ge 1 \\
+\srB_n &:= \sigma\paren{Z_0 \xdotx{,} Z_n}.
+\end{align*} Then $\set{(X_n, \srB_n), n \ge 0}$ is a \emph{\textbf{martingale}} since $\set{(Z_n, \srB_n), n \ge 0}$ is a \emph{\textbf{martingale difference sequence}}.
+\end{example}
+
+
+\item \begin{example} (\emph{\textbf{Likelihood Ratios}}).\\ 
+Suppose $\set{Y_n, n \ge 0}$ are \emph{\textbf{independent identically distributed}} random variables and suppose \emph{the true density} of $Y_n$ is $f_0$· (The word ``\emph{density}" can be understood with respect to some fixed reference measure $\mu$.)  Let $f_1$ be \emph{some other probability density}. For simplicity suppose $f_0(y) > 0$, for all $y$.  For $n \ge 0$, define the likelihood ratio
+\begin{align*}
+X_n &:= \frac{\prod_{i=0}^{n}f_1(Y_i)}{\prod_{i=0}^{n}f_0(Y_i)}\\
+\srB_n &:= \sigma\paren{Y_0 \xdotx{,} Y_n}
+\end{align*} Then $(X_n, \srB_n)$ is a \emph{\textbf{martingale}}.
+\end{example}
+\begin{proof}
+See that
+\begin{align*}
+\E{}{X_{n+1} | \srB_n} &= \E{}{ \paren{\frac{\prod_{i=0}^{n}f_1(Y_i)}{\prod_{i=0}^{n}f_0(Y_i)}}\frac{f_1(Y_{n+1})}{f_0(Y_{n+1})} \;  \Big| \; Y_0 \xdotx{,} Y_{n}}\\
+&= X_n \E{}{\frac{f_1(Y_{n+1})}{f_0(Y_{n+1})} \;  \big| \; Y_0 \xdotx{,} Y_{n}} \\
+&= X_n \E{}{\frac{f_1(Y_{n+1})}{f_0(Y_{n+1})}} \quad (\text{by independence})\\
+&:= X_n \int \frac{f_1(y_{n+1})}{f_0(y_{n+1})} f_0(y_{n+1}) d\mu(y_{n+1}) = X_n. \qed
+\end{align*}
+\end{proof}
 \end{itemize}
 
 \subsection{Concentration Inequalities for Martingale Difference Sequences}
+\subsubsection{Bernstein Inequality for Martingale Difference Sequence}
+\begin{itemize}
+\item \begin{proposition} (\textbf{Bernstein Inequality, Martingale Difference Sequence Version}) \citep{wainwright2019high}\\
+Let $\set{(D_k, \srB_k), k \ge 1}$ be a \textbf{martingale difference sequence}, and suppose that 
+\begin{align*}
+\E{}{\exp\paren{\lambda D_k} | \srB_{k-1}} \le \exp\paren{\frac{\lambda^2 \nu_k^2}{2} }
+\end{align*} almost surely for any $\abs{\lambda} < 1/\alpha_k$. Then the following hold:
+\begin{enumerate}
+\item The sum $\sum_{k=1}^{n}D_k$ is \textbf{sub-exponential} with \textbf{parameters} $\paren{\sqrt{\sum_{k=1}^{n}\nu_k^2}\;  , \;\alpha_{*}}$ where $\alpha_{*} := \max_{k=1 \xdotx{,} n} \alpha_k$.
+\item The sum satisfies \textbf{the concentration inequality}
+\begin{align}
+\bP\set{\abs{\sum_{k=1}^{n}D_k} \ge t } &\le \left\{ \begin{array}{cc}
+2 \exp\paren{- \frac{t^2}{2 \sum_{k=1}^{n}\nu_k^2}} & \text{ if } 0 \le t \le \frac{\sum_{k=1}^{n}\nu_k^2}{\alpha_{*}} \\[15pt]
+2 \exp\paren{- \frac{t}{\alpha_{*}}} &\text{ if } t > \frac{\sum_{k=1}^{n}\nu_k^2}{\alpha_{*}}.
+\end{array}\right. \label{ineqn: bernstein_inequality_martingale}
+\end{align}
+\end{enumerate}
+\end{proposition}
+\end{itemize}
 \subsubsection{Azuma-Hoeffding Inequality}
+\begin{itemize}
+\item \begin{corollary} (\textbf{Azuma-Hoeffding Inequality, Martingale Difference})\citep{wainwright2019high}\\
+Let $\set{(D_k, \srB_k), k \ge 1}$ be a \textbf{martingale difference sequence} for which there are constants $\set{(a_k, b_k)}^{n}_{k=1}$ such that $D_k \in [a_k, b_k]$ almost surely for all $k = 1 \xdotx{,} n$. Then, for all $t \ge 0$,
+\begin{align}
+\bP\set{\abs{\sum_{k=1}^{n}D_k} \ge t } &\le  2 \exp\paren{- \frac{2 t^2}{ \sum_{k=1}^{n}(b_k - a_k)^2}} \label{ineqn: hoeffding_inequality_martingale}
+\end{align}
+\end{corollary}
+\end{itemize}
 
 \subsubsection{McDiarmid's Inequality}
+\begin{itemize}
+\item An important application of \emph{Azuma-Hoeffding Inequality} concerns functions that satisfy a \emph{bounded difference property}. 
+\begin{definition} (\textbf{\emph{Functions with Bounded Difference Property}})\\
+Given vectors $x, x' \in \cX^n$ and an index $k \in \set{1, 2 \xdotx{,} n}$, we define a new vector $x^{(-k)} \in \cX^n$ via
+\begin{align*}
+x_j^{(-k)} &= \left\{\begin{array}{cc}
+x_j & j \neq k\\
+x_k'& j = k
+\end{array}
+\right.
+\end{align*}
+With this notation, we say that $f: \cX^n \to \bR$ satisfies \underline{\textbf{\emph{the bounded difference inequality}}} with parameters $(L_1 \xdotx{,} L_n)$ if, for each index $k = 1, 2 \xdotx{,} n$,
+\begin{align}
+\abs{f(x) - f(x^{(-k)})} \le L_k, \quad\text{ for all }x, x' \in \cX^n. \label{eqn: bounded_difference_property}
+\end{align}
+\end{definition}
+
+
+\item \begin{corollary} (\textbf{McDiarmid's Inequality / Bounded Differences Inequality})\citep{wainwright2019high}\\
+Suppose that $f$ satisfies \textbf{the bounded difference property} \eqref{eqn: bounded_difference_property} with parameters $(L_1 \xdotx{,} L_n)$ and that the random vector $X = (X_1, X_2 \xdotx{,} X_n)$ has \textbf{independent} components. Then
+\begin{align}
+\bP\set{\abs{f(X) - \E{}{f(X)}} \ge t } &\le  2 \exp\paren{- \frac{2 t^2}{ \sum_{k=1}^{n}L_k^2}}. \label{ineqn: macdiarmid_bounded_difference_inequality}
+\end{align}
+\end{corollary}
+\end{itemize}
 
 \subsubsection{Applications}
 
 \section{The Efron-Stein Inequality}
 \subsection{Bounding Variance}
+\begin{itemize}
+\item \begin{remark} (\textbf{\emph{Variance of Independence Random Variables}})\\
+Let $X_n =  \sum_{i=1}^{n}Z_i$ be the sum of \emph{\textbf{independent}} real-valued random variables $Z_1 \xdotx{,} Z_n$. Then we have 
+\begin{align*}
+\E{}{\paren{X_n - \E{}{X_n}}^2} &= \sum_{i=1}^{n}\E{}{\paren{Z_i - \E{}{Z_i}}^2}\\
+\Rightarrow \text{Var}(X_n) &= \sum_{i=1}^{n}\text{Var}(Z_i).
+\end{align*}
+\end{remark}
+
+\item \begin{remark} (\textbf{\emph{Variance of Smoothing Martingale Difference Sequence}})\\
+Suppose $X \in L_1$ and $\set{\srB_n, n \ge 0}$ is an increasing family of sub $\sigma$-algebra of $\srB$ formed by 
+\begin{align*}
+\srB_n &:= \sigma\paren{Z_1 \xdotx{,} Z_n}.
+\end{align*} For $n \ge 1$, define 
+\begin{align*}
+d_0 &:= \E{}{X} \\ 
+d_n &:= \E{}{X | \srB_n} - \E{}{X | \srB_{n-1}} \\
+&= \E{}{X | Z_1 \xdotx{,} Z_n} -  \E{}{X | Z_1 \xdotx{,} Z_{n-1}}.
+\end{align*} From \eqref{eqn: smoothing_martingale_difference} we see that $(d_n, \srB_n)$ is a martingale difference sequence. By \emph{orthogonality of martingale difference}, we see that 
+\begin{align*}
+\E{}{d_i\, d_j} =0 \quad i\neq j.
+\end{align*} Therefore, based on the decomposition
+\begin{align*}
+X - E{}{X} &= \sum_{i=1}^{n}d_i
+\end{align*}
+we have 
+\begin{align}
+\text{Var}(X) &= \E{}{\paren{\sum_{i=1}^{n}d_i}^2} = \sum_{i=1}^{n}\E{}{d_i^2} + 2 \sum_{i > j}\E{}{d_i\,d_j}\nonumber\\
+&=  \sum_{i=1}^{n}\E{}{d_i^2}. \label{eqn: martingale_smoothing}
+\end{align}
+\end{remark}
+
+\item \begin{remark}(\textbf{\emph{Variance of General Functions of Independent Random Variables}})\\
+Then above formula \eqref{eqn: martingale_smoothing} holds when $X = f\paren{Z_1 \xdotx{,} Z_n}$ for general function $f: \bR^n \to \bR$ with $n$ independent random variables $(Z_1 \xdotx{,} Z_n)$. By \emph{Fubini's theorem},
+\begin{align*}
+ \E{}{X | Z_1 \xdotx{,} Z_i} &= \int_{\cZ^{n-i}} f(Z_1 \xdotx{,} Z_i, z_{i+1} \xdotx{,} z_n) \;\;d\mu_{i+1}(z_{i+1})  \xdotx{} d\mu_{n}(z_{n})
+\end{align*} where $\mu_j$ is the probability distribution of $Z_j$ for $j \ge 1$. Define the conditional expectation of $X$ given all random variables  $(Z_1 \xdotx{,} Z_n)$ \emph{\textbf{except for}} $Z_i$ as 
+\begin{align*}
+ \E{(-i)}{X} &:= \E{}{X | Z_1 \xdotx{,} Z_{i-1}, Z_{i+1} \xdotx{,} Z_n} \\
+ &= \int_{\cZ} f(Z_1 \xdotx{,} Z_{i-1}, z_{i}, Z_{i+1} \xdotx{,} Z_n) \;\;d\mu_{i}(z_{i}).
+\end{align*} Then, again by \emph{Fubini's theorem} (\emph{smoothing properties of conditional expectation}),
+\begin{align}
+\E{}{ \E{(-i)}{X} | Z_1 \xdotx{,} Z_i} &= \E{}{X | Z_1 \xdotx{,} Z_{i-1}} \label{eqn: martingale_smoothing_expectation}
+\end{align} Denote $Z_{(-i)} := (Z_1 \xdotx{,} Z_{i-1}, Z_{i+1} \xdotx{,} Z_n)$.
+\end{remark}
+
+\item \begin{proposition}(\textbf{Efron-Stein Inequality}) \citep{boucheron2013concentration} \\
+Let $Z_1 \xdotx{,} Z_n$ be \textbf{independent random variables} and let $X = f(Z)$ be a square-integrable function of $Z = (Z_1 \xdotx{,} Z_n)$. Then
+\begin{align}
+\text{Var}(X) &\le  \sum_{i=1}^{n}\E{}{\paren{X - \E{(-i)}{X}}^2} := \nu.  \label{ineqn: efron_stein_inequality}
+\end{align}
+Moreover, if $Z_1' \xdotx{,} Z_n'$ are \textbf{independent} copies of $Z_1 \xdotx{,} Z_n$ and if we define, for every $i = 1 \xdotx{,} n$,
+\begin{align*}
+X_i' &:= f\paren{Z_1 \xdotx{,} Z_{i-1}, Z_{i}' ,Z_{i+1} \xdotx{,} Z_n},
+\end{align*}
+then
+\begin{align*}
+\nu &= \frac{1}{2}\sum_{i=1}^{n}\E{}{\paren{X -  X_i'}^2} = \sum_{i=1}^{n}\E{}{\paren{X -  X_i'}_{+}^2} = \sum_{i=1}^{n}\E{}{\paren{X -  X_i'}_{-}^2}
+\end{align*}
+where $x_{+} = \max\set{x, 0}$ and $x_{-} = \max\set{-x, 0}$ denote the \textbf{positive} and \textbf{negative} parts of a real number $x$. Also,
+\begin{align*}
+\nu &= \inf_{X_i}\;\sum_{i=1}^{n}\E{}{\paren{X -  X_i}^2},
+\end{align*}
+where the infimum is taken over the class of all $Z_{(-i)}$-measurable and square-integrable variables $X_i$, $i = 1 \xdotx{,} n$.
+\end{proposition}
+\begin{proof}
+We begin with the proof of the first statement. Note that, using \eqref{eqn: martingale_smoothing_expectation}, we may write
+\begin{align*}
+d_i &:= \E{}{X | Z_1 \xdotx{,} Z_i} - \E{}{X | Z_1 \xdotx{,} Z_{i-1}} \\
+&= \E{}{X | Z_1 \xdotx{,} Z_i} - \E{}{ \E{(-i)}{X} | Z_1 \xdotx{,} Z_i}\\
+&= \E{}{X -  \E{(-i)}{X} | Z_1 \xdotx{,} Z_i}.
+\end{align*}
+By \emph{Jensen's inequality} used conditionally,
+\begin{align*}
+d_i^2 &\le  \E{}{\paren{X -  \E{(-i)}{X}}^2 | Z_1 \xdotx{,} Z_i}
+\end{align*} Using  \eqref{eqn: martingale_smoothing} $\text{Var}(X) = \sum_{i=1}^{n}\E{}{d_i^2}$, we have
+\begin{align*}
+\text{Var}(X)  \le \sum_{i=1}^{n}\E{}{\E{}{\paren{X -  \E{(-i)}{X}}^2 | Z_1 \xdotx{,} Z_i}} = \sum_{i=1}^{n}\E{}{\paren{X - \E{(-i)}{X}}^2},
+\end{align*} we obtain the desired inequality. 
+
+To prove the identities for $\nu$, denote by $\text{Var}_{(-i)}$ the \emph{conditional variance operator} conditioned on $Z_{(-i)} := (Z_1 \xdotx{,} Z_{i-1}, Z_{i+1} \xdotx{,} Z_n)$. Then we may write $\nu$ as
+\begin{align*}
+\nu &= \sum_{i=1}^{n}\E{}{\text{Var}_{(-i)}(X)}.
+\end{align*}
+Now note that one may simply use (conditionally) the elementary fact that if $X$ and $Y$ are \emph{independent and identically distributed} real-valued random variables, then
+\begin{align*}
+\text{Var}(X) &= \frac{1}{2}\E{}{(X - Y )^2}.
+\end{align*}
+Since conditionally on $Z_{(-i)}$,  $X_i'$ is an independent copy of $X$, we may write
+\begin{align*}
+\text{Var}_{(i)}(X) &= \frac{1}{2}\E{(-i)}{\paren{X -  X_i'}^2 } = \sum_{i=1}^{n}\E{(-i)}{\paren{X -  X_i'}_{+}^2 } = \sum_{i=1}^{n}\E{(-i)}{\paren{X -  X_i'}_{-}^2 },
+\end{align*}
+where we used the fact that the conditional distributions of $X$ and $X_i'$ are \emph{identical}. 
+
+The last identity is obtained by recalling that, for any real-valued random variable $X$, 
+\begin{align*}
+\text{Var}(X) &= \inf_{a \in \bR}\E{}{(X -a)^2}.
+\end{align*}
+Using this fact conditionally, we have, for every $i = 1 \xdotx{,} n$,
+\begin{align*}
+\text{Var}_{(-i)}(X) &= \inf_{X_i} \E{(-i)}{\paren{X -  X_i}^2 }.
+\end{align*}
+Note that this infimum is achieved whenever $X_i = \E{(-i)}{X}$. \qed
+\end{proof}
+
+\end{itemize}
 
 \subsection{Functions with Bounded Differences}
+\begin{itemize}
+\item \begin{remark}
+Recall that a function $f: \cX^n \to \bR$ satisfies \textbf{\emph{the bounded difference inequality}} with parameters $(L_1 \xdotx{,} L_n)$ if, for each index $k = 1, 2 \xdotx{,} n$,
+\begin{align*}
+\abs{f(x) - f(x^{(-k)})} \le L_k, \quad\text{ for all }x, x' \in \cX^n. 
+\end{align*} where 
+\begin{align*}
+x_j^{(-k)} &= \left\{\begin{array}{cc}
+x_j & j \neq k\\
+x_k'& j = k
+\end{array}
+\right.
+\end{align*}
+\end{remark}
 
+\item \begin{corollary} \citep{boucheron2013concentration}\\
+If $f$ has the \textbf{bounded differences property} with parameters $(L_1 \xdotx{,} L_n)$, then
+\begin{align*}
+\text{Var}(f(X)) &\le \frac{1}{4}\sum_{i=1}^{n}L_i^2.
+\end{align*}
+\end{corollary}
+\end{itemize}
 
 \subsection{Self-Bounding Functions}
+\begin{itemize}
+\item Another simple property which is satisfied for many important examples is the so-called \emph{self-bounding property}. 
+\begin{definition} (\emph{\textbf{Self-Bounding Property}})\\
+A \emph{\textbf{nonnegative} function} $f: \cX^n  \to [0, \infty)$ has the \underline{\emph{\textbf{self-bounding property}}} if \emph{there exist} functions $f_i: \cX^{n-1} \to \bR$ such that for all $x_1 \xdotx{,} x_n \in \cX$ and all $i = 1 \xdotx{,} n$,
+\begin{align}
+0 \le  f(x_1 \xdotx{,} x_n) - f_i(x_1 \xdotx{,} x_{i-1}, x_{i+1} \xdotx{,} x_n) \le 1 \label{eqn: self_bounding_1}
+\end{align}
+and also
+\begin{align}
+\sum_{i=1}^{n}\paren{f(x_1 \xdotx{,} x_n) - f_i(x_1 \xdotx{,} x_{i-1}, x_{i+1} \xdotx{,} x_n)}  \le  f(x_1 \xdotx{,} x_n). \label{eqn: self_bounding_2}
+\end{align}
+\end{definition}
+
+\item \begin{remark}
+Clearly if $f$ has the \textbf{\emph{self-bounding property}}, 
+\begin{align}
+\sum_{i=1}^{n}\paren{f(x_1 \xdotx{,} x_n) - f_i(x_1 \xdotx{,} x_{i-1}, x_{i+1} \xdotx{,} x_n)}^2  \le  f(x_1 \xdotx{,} x_n) \label{eqn: self_bounding_3}
+\end{align}
+\end{remark}
+
+\item \begin{corollary} \citep{boucheron2013concentration}\\
+If $f$ has the \textbf{self-bounding property}, then
+\begin{align*}
+\text{Var}(f(X)) &\le \E{}{f(X)}.
+\end{align*}
+\end{corollary}
+
+\item \begin{remark} (\emph{\textbf{Relative Stability}}) \citep{boucheron2013concentration}\\
+A sequence of nonnegative random variables $(Z_n)_{n\in \bN}$ is said to be \underline{\emph{\textbf{relatively stable}}} if 
+\begin{align*}
+\frac{Z_n}{\E{}{Z_n}} \stackrel{\bP}{\rightarrow} 1.
+\end{align*}
+This property guarantees that \emph{\textbf{the random fluctuations} of $Z_n$ around its \textbf{expectation} are \textbf{of negligible size} when compared to the expectation}, and therefore \emph{\textbf{most information about the size of $Z_n$ is given by $\E{}{Z_n}$}}. 
+
+\emph{\textbf{Bounding the variance of $Z_n$ by its expected value} implies, in many cases, \textbf{the relative stability} of $(Z_n)_{n\in \bN}$}. If $Z_n$ has the
+\emph{\textbf{self-bounding property}}, then, by \emph{Chebyshev's inequality}, for all $\epsilon > 0$,
+\begin{align*}
+\bP\set{\abs{\frac{Z_n}{\E{}{Z_n}} - 1} > \epsilon} &\le \frac{\text{Var}(Z_n)}{\epsilon^2 (\E{}{Z_n})^2} \le \frac{1}{\epsilon^2 \E{}{Z_n}}.
+\end{align*}
+Thus, for relative stability, it suffices to have $\E{}{Z_n} \to \infty$.
+\end{remark}
+
+\item An important class of functions satisfying \emph{the self-bounding property} consists of the so-called \emph{\textbf{configuration functions}}.
+\begin{definition} (\emph{\textbf{Configuration Function}})\\
+Assume that we have a property $\Pi$ \emph{\textbf{defined over the union of finite products}} of a set $\cX$, that is, a sequence of sets 
+\begin{align*}
+\Pi_1 \subset \cX,\;  \Pi_2 \subset \cX \times \cX, \;\;\ldots,\;\; \Pi_n \subset \cX^n.
+\end{align*} We say that $(x_1 \xdotx{,} x_m) \in \cX^m$ \emph{\textbf{satisfies the property}} $\Pi$ if $(x_1 \xdotx{,} x_m) \in \Pi_m$. 
+
+We assume that $\Pi$ is \underline{\emph{\textbf{hereditary}}} in the sense that if $(x_1 \xdotx{,} x_m)$ satisfies $\Pi$ then so does \emph{\textbf{any sub-sequence}} $\set{x_{i_1} \xdotx{,} x_{i_k}}$ of $(x_1 \xdotx{,} x_m)$. 
+
+The function $f$ that maps any vector $x = (x_1 \xdotx{,} x_n)$  to \emph{\textbf{the size} of a \textbf{largest sub-sequence} satisfying} $\Pi$ is \underline{\emph{\textbf{the configuration function}}} \emph{associated with property} $\Pi$.
+\end{definition}
+
+\item \begin{corollary} \citep{boucheron2013concentration}\\
+Let $f$ be a \textbf{configuration function}, and let $Z = f(X_1 \xdotx{,} X_n)$, where $X_1 \xdotx{,} X_n$ are \textbf{independent} random variables. Then
+\begin{align*}
+\text{Var}(Z) &\le \E{}{Z}.
+\end{align*}
+\end{corollary}
+
+\item \begin{example} (\emph{\textbf{VC Dimension}})\\
+Let $\cH$ be an arbitrary collection of subsets of $\cX$, and let $x = (x_1 \xdotx{,} x_n)$ be a vector of $n$ points of $\cX$. Define the \emph{\textbf{trace}} of $\cH$ on $x$ by
+\begin{align*}
+\tr{x} = \set{A \cap \set{x_1 \xdotx{,} x_n}: A \in \cH}.
+\end{align*}
+\emph{\textbf{The shatter coefficient}}, (or \emph{Vapnik-Chervonenkis \textbf{growth function}}) of $\cH$ in $x$ is $\tau_{\cH}(x) = \abs{\tr{x}}$, \emph{the size of the trace}. $\tau_{\cH}(x)$ is the number of different subsets of the $n$-point set $\set{x_1 \xdotx{,} x_n}$ generated by intersecting it with elements of $\cH$. A subset
+$\set{x_{i_1} \xdotx{,} x_{i_k}}$ of $\set{x_1 \xdotx{,} x_n}$ is said to be \emph{\textbf{shattered}} if $2^k = T(x_{i_1} \xdotx{,} x_{i_k})$. 
+
+\emph{\textbf{The VC dimension} $D(x)$ of $\cH$} (with respect to $x$) is the \emph{cardinality} $k$ of \emph{the largest shattered subset of $x$}. From the definition it is obvious that \underline{$f(x) = D(x)$ is a \emph{\textbf{configuration function}}} (associated with the property of ``\emph{\textbf{shatteredness}}") and therefore if $X_1 \xdotx{,} X_n$ are \emph{independent random variables}, then
+\begin{align*}
+\text{Var}(D(X)) \le \E{}{D(X)}.
+\end{align*}
+\end{example}
+\end{itemize}
+
+\subsection{Lipschitz Functions of Gaussian Variables}
+
 
 \subsection{A Proof of the Efron–Stein Inequality Based on Duality}
 \newpage
