@@ -36,6 +36,7 @@
 		- Functions with Bounded Difference
 		- Self-Bounding Property
 		- Applications
+		- The Efron-Stein Inequality via Duality
 
 
 
