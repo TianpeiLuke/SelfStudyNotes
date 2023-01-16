@@ -23,7 +23,7 @@
 		- Bennett’s Inequality
 		- Bernstein’s Inequality
 
-- Martingale-Based Inequalities [pd](./Ineq_2_Martingale_Methods.pdf)
+- Martingale-Based Inequalities [pdf](./Ineq_2_Martingale_Methods.pdf)
 	- Martingale-based Methods
 		- Martingale and Martingale Difference Sequence
 		- Bernstein’s Inequality for Martingale Difference Sequence
