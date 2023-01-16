@@ -31,8 +31,8 @@
 		- Functions with Bounded Difference and McDiarmid’s Inequality
 		- Lipschitz Functions of Gaussian Variables
 		- Applications
-	- The Efron-Stein Inequality
-		- Bounding Variance for Martingale Difference Sequence
+	- Bounding Variance for Martingale Difference Sequence
+		- The Efron-Stein Inequality 
 		- The Efron-Stein Inequality
 		- Functions with Bounded Difference
 		- Self-Bounding Property
