@@ -112,6 +112,18 @@ X_n = \sum_{j=0}^{n} d_j,
 \E{}{d_i\,d_j} = 0 \quad i \neq j.
 \end{align*}
 \end{proposition}
+\begin{proof}
+This is an easy verification: If $j > i$, then
+\begin{align*}
+\E{}{d_i\, d_j} &= \E{}{\E{}{d_i\, d_j \,|\, \srB_i}}\\
+&= \E{}{d_i \E{}{d_j \,|\, \srB_i}} = 0. \qed
+\end{align*}
+A consequence is that
+\begin{align*}
+\E{}{X_n^2} &= \E{}{\sum_{i=1}^{n}d_i^2} + 2\sum_{0 \le i < j \le n}\E{}{d_i\,d_j} = \E{}{\sum_{i=1}^{n}d_i^2},
+\end{align*}
+which is \textbf{\emph{non-decreasing}}. From this, it seems likely (and turns out to be true) that $\set{X_n^2}$ is a \emph{\textbf{sub-martingale}}. 
+\end{proof}
 
 \item \begin{example} (\textbf{\emph{Smoothing as Martingale}})\\
 Suppose $X \in L_1$ and $\set{\srB_n, n \ge 0}$ is an increasing family of sub $\sigma$-algebra of $\srB$. Define for $n \ge 0$
@@ -170,7 +182,10 @@ Let $\set{(D_k, \srB_k), k \ge 1}$ be a \textbf{martingale difference sequence},
 \E{}{\exp\paren{\lambda D_k} | \srB_{k-1}} \le \exp\paren{\frac{\lambda^2 \nu_k^2}{2} }
 \end{align*} almost surely for any $\abs{\lambda} < 1/\alpha_k$. Then the following hold:
 \begin{enumerate}
-\item The sum $\sum_{k=1}^{n}D_k$ is \textbf{sub-exponential} with \textbf{parameters} $\paren{\sqrt{\sum_{k=1}^{n}\nu_k^2}\;  , \;\alpha_{*}}$ where $\alpha_{*} := \max_{k=1 \xdotx{,} n} \alpha_k$.
+\item The sum $\sum_{k=1}^{n}D_k$ is \textbf{sub-exponential} with \textbf{parameters} $\paren{\sqrt{\sum_{k=1}^{n}\nu_k^2}\;  , \;\alpha_{*}}$ where $\alpha_{*} := \max_{k=1 \xdotx{,} n} \alpha_k$. That is, for any $\abs{\lambda} < 1/\alpha_{*}$, $\mu := \E{}{\sum_{k=1}^{n}D_k}$,
+\begin{align*}
+\E{}{\exp\set{\lambda \paren{\sum_{k=1}^{n}D_k - \mu}}} \le \exp\paren{\frac{\lambda^2\sum_{k=1}^{n}\nu_k^2}{2} }
+\end{align*}
 \item The sum satisfies \textbf{the concentration inequality}
 \begin{align}
 \bP\set{\abs{\sum_{k=1}^{n}D_k} \ge t } &\le \left\{ \begin{array}{cc}
