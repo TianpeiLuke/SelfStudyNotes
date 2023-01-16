@@ -32,7 +32,6 @@
 		- Lipschitz Functions of Gaussian Variables
 		- Applications
 	- Bounding Variance for Martingale Difference Sequence
-		- The Efron-Stein Inequality 
 		- The Efron-Stein Inequality
 		- Functions with Bounded Difference
 		- Self-Bounding Property
