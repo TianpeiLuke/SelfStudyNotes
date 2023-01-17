@@ -29,14 +29,21 @@
 		- Bernstein’s Inequality for Martingale Difference Sequence
 		- Azuma-Hoeffding’s Inequality for Martingale Difference Sequence
 		- Bounded Difference Inequality / McDiarmid’s Inequality
-		- Lipschitz Functions of Gaussian Variables
 		- Applications
+			- U-Statistics
+			- Clique Number of Erdos-Renyi Random Graph
+			- Radematcher Complexity
 	- Bounding Variance for Martingale Difference Sequence
 		- The Efron-Stein Inequality
 		- Functions with Bounded Difference
 		- Self-Bounding Property
 		- Applications
+		        - Kernel Density Estimation
+			- VC Dimension
+			- Convex Poincare Inequality 
+			- Gaussian Poincare Inequality
 		- The Efron-Stein Inequality via Duality
+		- Exponential Tail Bounds via Efron-Stein Inequality
 
 
 
