@@ -38,7 +38,7 @@
 		- Functions with Bounded Difference
 		- Self-Bounding Property
 		- Applications
-		        - Kernel Density Estimation
+			- Kernel Density Estimation
 			- VC Dimension
 			- Convex Poincare Inequality 
 			- Gaussian Poincare Inequality
