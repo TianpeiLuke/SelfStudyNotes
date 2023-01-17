@@ -277,14 +277,85 @@ using \emph{the bounded differences assumption}. Thus, the variable $D_k$ lies w
 \end{proof}
 \end{itemize}
 
-\subsection{Lipschitz Functions of Gaussian Variables}
+%\subsection{Lipschitz Functions of Gaussian Variables}
 
 
 \subsection{Applications}
+\begin{itemize}
+\item \begin{example} (\textbf{\emph{U-Statistics}}) \citep{wainwright2019high}\\
+Let $g: \bR^2 \to \bR$ be a \emph{\textbf{symmetric function}} of its arguments. Given an i.i.d. sequence $\set{X_k, k \ge 1}$, of random variables, the quantity
+\begin{align}
+U&:= \frac{1}{{n \choose 2}}\sum_{j < k}g(X_j, X_k)\label{def: u_stats}
+\end{align} is known as a \underline{\emph{\textbf{pairwise U-statistic}}}. For instance, if $g(s, t) = \abs{s - t}$, then $U$ is an \emph{unbiased estimator} of \emph{the mean absolute pairwise deviation $\E{}{\abs{X_1 − X_2}}$}. Note that, while $U$ is \emph{\textbf{not} a sum of independent random variables}, the \emph{dependence is relatively weak}, and this fact can be revealed by a martingale analysis. 
+
+If $g$ is bounded (say $\norm{g}{\infty} \le b$), then \emph{the Bounded Difference Inequality} can be used to establish the concentration of $U$ around its mean. Viewing $U$ as a function $f(x) = f(x_1 \xdotx{,} x_n)$, for any given coordinate $k$, we have
+\begin{align*}
+\abs{f(x) - f(x^{(-k)})} &\le  \frac{1}{{n \choose 2}}\sum_{j \neq k}\abs{g(x_j, x_k) - g(x_j, x_k')} \\
+&\le \frac{(n-1) 2b }{{n \choose 2}} = \frac{4b}{n},
+\end{align*} so that the bounded differences property holds with parameter $L_k = \frac{4b}{n}$ in each coordinate. Thus, we conclude that
+\begin{align*}
+\bP\set{\abs{U - \E{}{U}} \ge t} &\le 2 \exp\paren{-\frac{n\,t^2}{8 b^2}},
+\end{align*} This tail inequality implies that $U$ is a consistent estimate of $\E{}{U}$, and also yields \emph{finite sample bounds} on its quality as an estimator. Similar techniques can be used to obtain \emph{tail bounds on U-statistics of higher order}, involving sums over $k$-tuples of variables. \qed
+\end{example}
+
+\item \begin{example} (\textbf{\emph{Clique Number in Erd{\"o}s-R{\'e}nyi Random Graphs}})  \citep{wainwright2019high}\\
+Let $\cG = (\cV, \cE)$ be an \emph{undirected graph}, where $\cV = \set{1 \xdotx{,} d}$ is the vertex set and $\cE = \set{(i,j), i,j \in \cV}$ is the undirected edge set. \emph{A \underline{\textbf{graph clique} $C$}} is a subset of vertices such that $(i, j) \in \cE$ \emph{for all} $i, j \in C$. \underline{\emph{\textbf{The clique number}} $C(\cG)$} of the graph is \emph{\textbf{the cardinality of the largest clique}}. Note that $C(\cG) \in [1, d]$. When the edges $\cE$ of the graph are drawn according to some random process, then \emph{the clique number} $C(\cG)$ is a \emph{random variable}, and we can study its concentration around its mean $\E{}{C(\cG)}$.
+
+\emph{\textbf{\underline{The Erd{\"o}s-R{\'e}nyi ensemble}} of \textbf{random graphs}} is one of the most well-studied models: it is defined by a parameter $p \in (0, 1)$ that specifies the probability with which each edge $(i, j)$ is \emph{included} in the graph, \emph{\textbf{independently} across all $d \choose 2$ edges}. More formally, for each $i < j$, let us introduce a \emph{\textbf{Bernoulli} \textbf{edge-indicator} variable} $X_{i,j}$ with parameter $p$, where $X_{i,j} = 1$ means that edge $(i, j)$ is \emph{included} in the graph, and $X_{i,j} = 0$ means that it is \emph{not included}.
+
+Note that the $d \choose 2$-dimensional random vector $Z := \set{X_{i,j}}_{i< j}$ specifies the edge set; thus, we may view \emph{the clique number} $C(\cG)$ as a function $Z \to f(Z)$. Based on definition in Section \ref{sec: self_bounding}, we see that $f(Z)$ is a \emph{\textbf{configuration function}} with property of ``\emph{being in a clique}".
+
+Let $Z'$ denote a vector in which a \emph{single coordinate} of $Z$ has been changed, and let $\cG'$ and $\cG$ be the associated graphs. It is easy to see that $C(\cG')$ can differ from $C(\cG)$ by at most $1$, so that 
+\begin{align*}
+\abs{f(Z) - f(Z')} \le 1,
+\end{align*}
+Thus, the function $C(\cG) = f(Z)$ satisfies \emph{the bounded difference property} in each coordinate with parameter $L = 1$, so that
+\begin{align*}
+\bP\set{\frac{1}{n}\abs{C(\cG) - \E{}{C(\cG)}} \ge \delta} &\le 2\exp\paren{- 2 n \delta^2}.
+\end{align*}
+Consequently, we see that the clique number of an \emph{Erd{\"o}s-R{\'e}nyi random graph} is\emph{ very sharply concentrated around its expectation}. \qed
+\end{example}
+
+\item \begin{example} (\textbf{\emph{Rademacher Complexity}}) \citep{wainwright2019high}\\
+Let $\set{\epsilon_k}^n_{k=1}$ be an i.i.d. sequence of \emph{Rademacher variables} (i.e., taking the values $\set{-1, +1}$ \emph{equiprobably}). Given a collection of vectors $\cA \subset \bR^n$, define the random variable
+\begin{align}
+Z &:= \sup_{a\in \cA}\sum_{k=1}^{n}\epsilon_k a_k = \sup_{a \in \cA}\inn{a}{\epsilon}. \label{def: radematcher_complexity_1}
+\end{align}
+\emph{The random variable $Z$ measures the \textbf{size} of $\cA$} in a certain sense, and its expectation 
+\begin{align}
+\frR(\cA) := \E{}{Z(\cA)} \label{def: radematcher_complexity_2}
+\end{align} is known as \emph{\underline{\textbf{the Rademacher complexity}} of the set $\cA$}.
+
+Let us now show how the bounded difference inequality can be used to establish that $Z(\cA)$ is \emph{\textbf{sub-Gaussian}}.
+Viewing $Z(\cA)$ as a function $(\epsilon_1 \xdotx{,} \epsilon_n) \to f(\epsilon_1 \xdotx{,} \epsilon_n)$, we need to \emph{bound the maximum change} when coordinate $k$ is changed. Given two Rademacher vectors $\epsilon, \epsilon' \in \set{-1, +1}^n$, recall our definition of the modified vector $\epsilon^{(-k)}$. Since 
+\begin{align*}
+f(\epsilon^{(-k)}) \ge \inn{a}{\epsilon^{(-k)}}, \quad\text{ for any }a \in \cA,
+\end{align*}
+we have
+\begin{align*}
+\inn{a}{\epsilon} - f(\epsilon^{(-k)}) &\le \inn{a}{\epsilon - \epsilon^{(-k)}} = a_k(\epsilon_k - \epsilon_k') \le 2\abs{a_k}.
+\end{align*}
+Taking \emph{the supremum over $\cA$ on both sides}, we obtain the inequality
+\begin{align*}
+f(\epsilon) - f(\epsilon^{(-k)}) &\le 2 \sup_{a \in \cA}\abs{a_k}.
+\end{align*} Since the same argument applies with the roles of $\epsilon$ and $\epsilon^{(-k)}$ \emph{reversed}, we conclude that $f$ satisfies \emph{the bounded difference inequality} in coordinate $k$ with parameter $L_k := 2 \sup_{a \in \cA}\abs{a_k}$. 
+
+Consequently, the bounded difference inequality implies that the random variable $Z(\cA)$ is \emph{sub-Gaussian} with parameter at most $2 \sqrt{\sum_{k=1}^{n}\sup_{a \in \cA}a_k^2}$. This sub-Gaussian parameter can be reduced to the (potentially much) smaller quantity $\sqrt{\sup_{a \in \cA}\sum_{k=1}^{n}a_k^2}$ using alternative techniques. \qed
+\end{example}
+\end{itemize}
 
 \section{Bounding Variance}
 \subsection{The Efron-Stein Inequality}
 \begin{itemize}
+\item \begin{remark}
+Let $X$ be a random variable with finite variance $\text{Var}(X)$.  By \emph{Chebyshev's Inequality},  for any $t > 0$, we have
+\begin{align*}
+\bP\set{\abs{X - \E{}{X}} \ge t} &\le \frac{\text{Var}(X)}{t^2}. 
+\end{align*}
+Thus, we can obtain the tail probability by bounding the variance $\text{Var}(X)$.
+\end{remark}
+
+
 \item \begin{remark} (\textbf{\emph{Variance of Independence Random Variables}})\\
 Let $X_n =  \sum_{i=1}^{n}Z_i$ be the sum of \emph{\textbf{independent}} real-valued random variables $Z_1 \xdotx{,} Z_n$. Then we have 
 \begin{align*}
@@ -320,14 +391,16 @@ we have
 Then above formula \eqref{eqn: martingale_smoothing} holds when $X = f\paren{Z_1 \xdotx{,} Z_n}$ for general function $f: \bR^n \to \bR$ with $n$ independent random variables $(Z_1 \xdotx{,} Z_n)$. By \emph{Fubini's theorem},
 \begin{align*}
  \E{}{X | Z_1 \xdotx{,} Z_i} &= \int_{\cZ^{n-i}} f(Z_1 \xdotx{,} Z_i, z_{i+1} \xdotx{,} z_n) \;\;d\mu_{i+1}(z_{i+1})  \xdotx{} d\mu_{n}(z_{n})
-\end{align*} where $\mu_j$ is the probability distribution of $Z_j$ for $j \ge 1$. Define the conditional expectation of $X$ given all random variables  $(Z_1 \xdotx{,} Z_n)$ \emph{\textbf{except for}} $Z_i$ as 
+\end{align*} where $\mu_j$ is the probability distribution of $Z_j$ for $j \ge 1$. 
+
+Let $Z_{(-i)} := (Z_1 \xdotx{,} Z_{i-1}, Z_{i+1} \xdotx{,} Z_n)$ be all random variables $(Z_1 \xdotx{,} Z_n)$ \emph{\textbf{except for}} $Z_i$ . Denote $\E{(-i)}{\cdot}$ as the conditional expectation of $X$ given $Z_{(-i)}$
 \begin{align*}
  \E{(-i)}{X} &:= \E{}{X | Z_1 \xdotx{,} Z_{i-1}, Z_{i+1} \xdotx{,} Z_n} \\
  &= \int_{\cZ} f(Z_1 \xdotx{,} Z_{i-1}, z_{i}, Z_{i+1} \xdotx{,} Z_n) \;\;d\mu_{i}(z_{i}).
 \end{align*} Then, again by \emph{Fubini's theorem} (\emph{smoothing properties of conditional expectation}),
 \begin{align}
 \E{}{ \E{(-i)}{X} | Z_1 \xdotx{,} Z_i} &= \E{}{X | Z_1 \xdotx{,} Z_{i-1}} \label{eqn: martingale_smoothing_expectation}
-\end{align} Denote $Z_{(-i)} := (Z_1 \xdotx{,} Z_{i-1}, Z_{i+1} \xdotx{,} Z_n)$.
+\end{align} 
 \end{remark}
 
 \item \begin{proposition}(\textbf{Efron-Stein Inequality}) \citep{boucheron2013concentration} \\
@@ -389,6 +462,22 @@ Using this fact conditionally, we have, for every $i = 1 \xdotx{,} n$,
 Note that this infimum is achieved whenever $X_i = \E{(-i)}{X}$. \qed
 \end{proof}
 
+\item \begin{example} (\textbf{\emph{The Jackknife Estimate}}) \\
+We should note here that the Efron-Stein inequality was first motivated by the study of the so-called \underline{\emph{\textbf{jackknife estimate} of \textbf{statistics}}}. 
+
+To describe this estimate, assume that $Z_1 \xdotx{,} Z_n$ are i.i.d. random variables and one wishes to\emph{ estimate a functional $\theta$ of the distribution} of the $Z_i$ by a function $X = f(Z_1 \xdotx{,} Z_n)$ of the data. The quality of the estimate is often measured by its bias $\E{}{X} - \theta$ and its variance $\text{Var}(X)$. Since the distribution of the $Z_i$'s is unknown, one needs to \emph{estimate} the bias and variance \emph{\textbf{from the same sample}}. \underline{\emph{\textbf{The jackknife estimate}} of \emph{\textbf{the bias}}} is defined by
+\begin{align}
+(n-1)\paren{\frac{1}{n}\sum_{i=1}^{n}X_i - X} \label{eqn: jackknive_estimate_bias}
+\end{align} where $X_i$ is an appropriately defined function of $Z_{(-i)} := (Z_1 \xdotx{,} Z_{i-1}, Z_{i+1} \xdotx{,} Z_n)$. $Z_{(-i)}$ is often called \emph{\textbf{the $i$-th jackknife sample}} while $X_i$ is the so-called \emph{\textbf{jackknife replication} of $X$}. In an analogous way, \underline{\emph{\textbf{the jackknife estimate} of the \textbf{variance}}} is defined by
+\begin{align}
+\sum_{i=1}^{n}\paren{X - X_i}^2 \label{eqn: jackknive_estimate_bias}
+\end{align}
+Using this language, \emph{\textbf{the Efron-Stein inequality}} simply states that \emph{\textbf{the jackknife estimate of the variance} is \underline{\textbf{always positively biased}}}. In fact, this is how Efron and Stein originally formulated their inequality.
+\end{example}
+
+\item \begin{remark}
+Observe that in the case when $X = \sum_{i=1}^{n}Z_i$ is a sum of \emph{independent} random variables (with \emph{finite variance}), then \emph{the Efron-Stein inequality} becomes an \emph{equality}. Thus, \emph{\textbf{the bound in the Efron-Stein inequality} is, in a sense, \textbf{not improvable}}.
+\end{remark}
 \end{itemize}
 
 \subsection{Functions with Bounded Differences}
@@ -396,12 +485,12 @@ Note that this infimum is achieved whenever $X_i = \E{(-i)}{X}$. \qed
 \item \begin{remark}
 Recall that a function $f: \cX^n \to \bR$ satisfies \textbf{\emph{the bounded difference inequality}} with parameters $(L_1 \xdotx{,} L_n)$ if, for each index $k = 1, 2 \xdotx{,} n$,
 \begin{align*}
-\abs{f(x) - f(x^{(-k)})} \le L_k, \quad\text{ for all }x, x' \in \cX^n. 
+\abs{f(z) - f(z^{(-k)})} \le L_k, \quad\text{ for all }z, z' \in \cX^n. 
 \end{align*} where 
 \begin{align*}
-x_j^{(-k)} &= \left\{\begin{array}{cc}
-x_j & j \neq k\\
-x_k'& j = k
+z_j^{(-k)} &= \left\{\begin{array}{cc}
+z_j & j \neq k\\
+z_k'& j = k
 \end{array}
 \right.
 \end{align*}
@@ -410,36 +499,50 @@ x_k'& j = k
 \item \begin{corollary} \citep{boucheron2013concentration}\\
 If $f$ has the \textbf{bounded differences property} with parameters $(L_1 \xdotx{,} L_n)$, then
 \begin{align*}
-\text{Var}(f(X)) &\le \frac{1}{4}\sum_{i=1}^{n}L_i^2.
+\text{Var}(f(Z)) &\le \frac{1}{4}\sum_{i=1}^{n}L_i^2.
 \end{align*}
 \end{corollary}
+\begin{proof}
+From the Efron-Stein inequality,
+\begin{align*}
+\text{Var}(f(Z)) &\le \sum_{i=1}^{n}\E{}{\text{Var}_{(-i)}(f(Z))} \\
+&= \inf_{X_i}\sum_{i=1}^{n}\E{(-i)}{\paren{f(Z) - X_i}^2}
+\end{align*} where the infimum is taken over the class of all $Z_{(-i)}$-measurable and square-integrable variables $X_i$. Here we choose
+\begin{align*}
+X_i &= \frac{1}{2}\paren{\sup_{z_i'}f(Z_{1:i-1}, z_i', Z_{i+1:n} )   - \inf_{z_i'}f(Z_{1:i-1}, z_i', Z_{i+1:n} ) }
+\end{align*}
+Hence
+\begin{align*}
+\paren{f(Z) - X_i}^2 &\le \frac{1}{4} L_i^2,
+\end{align*} and the proposition follows. \qed
+\end{proof}
 \end{itemize}
 
-\subsection{Self-Bounding Functions}
+\subsection{Self-Bounding Functions}\label{sec: self_bounding}
 \begin{itemize}
 \item Another simple property which is satisfied for many important examples is the so-called \emph{self-bounding property}. 
 \begin{definition} (\emph{\textbf{Self-Bounding Property}})\\
-A \emph{\textbf{nonnegative} function} $f: \cX^n  \to [0, \infty)$ has the \underline{\emph{\textbf{self-bounding property}}} if \emph{there exist} functions $f_i: \cX^{n-1} \to \bR$ such that for all $x_1 \xdotx{,} x_n \in \cX$ and all $i = 1 \xdotx{,} n$,
+A \emph{\textbf{nonnegative} function} $f: \cX^n  \to [0, \infty)$ has the \underline{\emph{\textbf{self-bounding property}}} if \emph{there exist} functions $f_i: \cX^{n-1} \to \bR$ such that for all $z_1 \xdotx{,} z_n \in \cX$ and all $i = 1 \xdotx{,} n$,
 \begin{align}
-0 \le  f(x_1 \xdotx{,} x_n) - f_i(x_1 \xdotx{,} x_{i-1}, x_{i+1} \xdotx{,} x_n) \le 1 \label{eqn: self_bounding_1}
+0 \le  f(z_1 \xdotx{,} z_n) - f_i(z_1 \xdotx{,} z_{i-1}, z_{i+1} \xdotx{,} z_n) \le 1 \label{eqn: self_bounding_1}
 \end{align}
 and also
 \begin{align}
-\sum_{i=1}^{n}\paren{f(x_1 \xdotx{,} x_n) - f_i(x_1 \xdotx{,} x_{i-1}, x_{i+1} \xdotx{,} x_n)}  \le  f(x_1 \xdotx{,} x_n). \label{eqn: self_bounding_2}
+\sum_{i=1}^{n}\paren{f(z_1 \xdotx{,} z_n) - f_i(z_1 \xdotx{,} z_{i-1}, z_{i+1} \xdotx{,} z_n)}  \le  f(z_1 \xdotx{,} z_n). \label{eqn: self_bounding_2}
 \end{align}
 \end{definition}
 
 \item \begin{remark}
 Clearly if $f$ has the \textbf{\emph{self-bounding property}}, 
 \begin{align}
-\sum_{i=1}^{n}\paren{f(x_1 \xdotx{,} x_n) - f_i(x_1 \xdotx{,} x_{i-1}, x_{i+1} \xdotx{,} x_n)}^2  \le  f(x_1 \xdotx{,} x_n) \label{eqn: self_bounding_3}
-\end{align}
+\sum_{i=1}^{n}\paren{f(z_1 \xdotx{,} z_n) - f_i(z_1 \xdotx{,} z_{i-1}, z_{i+1} \xdotx{,} z_n)}^2  \le  f(z_1 \xdotx{,} z_n) \label{eqn: self_bounding_3}
+\end{align} Taking expectation on both sides, we have the following inequality
 \end{remark}
 
 \item \begin{corollary} \citep{boucheron2013concentration}\\
 If $f$ has the \textbf{self-bounding property}, then
 \begin{align*}
-\text{Var}(f(X)) &\le \E{}{f(X)}.
+\text{Var}(f(Z)) &\le \E{}{f(Z)}.
 \end{align*}
 \end{corollary}
 
@@ -463,19 +566,29 @@ Thus, for relative stability, it suffices to have $\E{}{Z_n} \to \infty$.
 Assume that we have a property $\Pi$ \emph{\textbf{defined over the union of finite products}} of a set $\cX$, that is, a sequence of sets 
 \begin{align*}
 \Pi_1 \subset \cX,\;  \Pi_2 \subset \cX \times \cX, \;\;\ldots,\;\; \Pi_n \subset \cX^n.
-\end{align*} We say that $(x_1 \xdotx{,} x_m) \in \cX^m$ \emph{\textbf{satisfies the property}} $\Pi$ if $(x_1 \xdotx{,} x_m) \in \Pi_m$. 
+\end{align*} We say that $(z_1 \xdotx{,} z_m) \in \cX^m$ \emph{\textbf{satisfies the property}} $\Pi$ if $(z_1 \xdotx{,} z_m) \in \Pi_m$. 
 
-We assume that $\Pi$ is \underline{\emph{\textbf{hereditary}}} in the sense that if $(x_1 \xdotx{,} x_m)$ satisfies $\Pi$ then so does \emph{\textbf{any sub-sequence}} $\set{x_{i_1} \xdotx{,} x_{i_k}}$ of $(x_1 \xdotx{,} x_m)$. 
+We assume that $\Pi$ is \underline{\emph{\textbf{hereditary}}} in the sense that if $(z_1 \xdotx{,} z_m)$ satisfies $\Pi$ then so does \emph{\textbf{any sub-sequence}} $\set{z_{i_1} \xdotx{,} z_{i_k}}$ of $(z_1 \xdotx{,} z_m)$. 
 
-The function $f$ that maps any vector $x = (x_1 \xdotx{,} x_n)$  to \emph{\textbf{the size} of a \textbf{largest sub-sequence} satisfying} $\Pi$ is \underline{\emph{\textbf{the configuration function}}} \emph{associated with property} $\Pi$.
+The function $f$ that maps any vector $z = (z_1 \xdotx{,} z_n)$  to \emph{\textbf{the size} of a \textbf{largest sub-sequence} satisfying} $\Pi$ is \underline{\emph{\textbf{the configuration function}}} \emph{associated with property} $\Pi$.
 \end{definition}
 
 \item \begin{corollary} \citep{boucheron2013concentration}\\
-Let $f$ be a \textbf{configuration function}, and let $Z = f(X_1 \xdotx{,} X_n)$, where $X_1 \xdotx{,} X_n$ are \textbf{independent} random variables. Then
+Let $f$ be a \textbf{configuration function}, and let $X = f(Z_1 \xdotx{,} Z_n)$, where $Z_1 \xdotx{,} Z_n$ are \textbf{independent} random variables. Then
 \begin{align*}
-\text{Var}(Z) &\le \E{}{Z}.
+\text{Var}(f(Z)) &\le \E{}{f(Z)}.
 \end{align*}
 \end{corollary}
+\begin{proof}
+It suffices to show that \emph{\textbf{any configuration function is self-bounding}}.
+Let $X_i := f(Z_{(-i)}) =  f(Z_1 \xdotx{,} Z_{i-1}, Z_{i+1} \xdotx{,} Z_n)$. By definition of configuration function, the condition $0 \le X - X_i \le 1$ is trivially satisfied. 
+
+On the other hand, assume that $X = k$ and let $\set{Z_{i_1} \xdotx{,} Z_{i_k}} \subset \set{Z_1 \xdotx{,} Z_n}$ be a sub-sequence of cardinality $k$ such that $f_k(Z_{i_1} \xdotx{,} Z_{i_k}) = k$. (Note that by \emph{the definition of a configuration function} such \emph{a sub-sequence exists}.) Clearly, if the index $i$ is such that $i \not\in \set{i_1 \xdotx{,} i_k}$ then $X = X_i$, and therefore
+\begin{align*}
+\sum_{i=1}^{n}\paren{X - X_i} \le X
+\end{align*}
+is also satisfied, which concludes the proof. \qed
+\end{proof}
 
 \item \begin{example} (\emph{\textbf{VC Dimension}})\\
 Let $\cH$ be an arbitrary collection of subsets of $\cX$, and let $x = (x_1 \xdotx{,} x_n)$ be a vector of $n$ points of $\cX$. Define the \emph{\textbf{trace}} of $\cH$ on $x$ by
@@ -493,9 +606,301 @@ $\set{x_{i_1} \xdotx{,} x_{i_k}}$ of $\set{x_1 \xdotx{,} x_n}$ is said to be \em
 \end{itemize}
 
 \subsection{Applications}
+\subsubsection{Kernel Density Estimation}
+\begin{itemize}
+\item \begin{example} (\emph{\textbf{Kernel Density Estimation}})\\
+Let $Z_1 \xdotx{,} Z_n$ be i.i.d. samples drawn according to some (unknown) density $\phi$ on the real line. The density is estimated by the kernel estimate
+\begin{align*}
+\phi_n(z) &=\frac{1}{n\, h_n} \sum_{i=1}^{n}K\paren{\frac{z - Z_i}{h_n}},
+\end{align*} where $h_n > 0$ is a \emph{smoothing parameter}, and $K$ is a nonnegative function with $\int K(z) = 1$. The performance of the estimate is typically measured by \emph{\textbf{the $L_1$ error}}:
+\begin{align*}
+X(n) &:= f(Z_1 \xdotx{,} Z_n) = \int \abs{\phi(z) - \phi_n(z)} d z.
+\end{align*} It is easy to see that
+\begin{align*}
+\abs{f(z_1 \xdotx{,} z_n) - f_i(z_1 \xdotx{,} z_{i-1}, z_i', z_{i+1} \xdotx{,} z_n)} &\le \frac{1}{n h_n}\int \abs{K\paren{\frac{z - z_i}{h_n}} - K\paren{\frac{z - z_i'}{h_n}}} d z\\
+&\le \frac{2}{n},
+\end{align*} so without further work we obtain
+\begin{align*}
+\text{Var}\paren{X(n)} \le \frac{1}{n}
+\end{align*}
+It is known that for every $\phi$, $\sqrt{n} \E{}{X(n)} \to \infty$, which implies, by \emph{Chebyshev's inequality}, that for every $\epsilon > 0$
+\begin{align*}
+\bP\set{\abs{\frac{X(n)}{\E{}{X(n)}} - 1} > \epsilon} = \bP\set{\abs{X(n) -\E{}{X(n)}} > \epsilon \E{}{X(n)} } &\le \frac{\text{Var}(X(n))}{\epsilon^2 (\E{}{X(n)})^2}  \to 0
+\end{align*} as $n \to \infty$. That is, $\frac{X(n)}{\E{}{X(n)}} \to 1$ \emph{\textbf{in probability}}, or in other words, $X(n)$ is \emph{\textbf{relatively stable}}. This means that \emph{\textbf{the random $L_1$-error}} essentially \emph{behaves like \textbf{its expected value}}.
+
+By bounded difference inequality, we have
+\begin{align*}
+\bP\set{\abs{X(n) - \E{}{X(n)}} \ge t} &\le 2 \exp\paren{- \frac{n t^2}{2}}  \qed
+\end{align*}
+\end{example}
+\end{itemize}
+
+\subsubsection{Convex Poincar{\'e} Inequality}
+\begin{itemize}
+\item \begin{theorem} (\textbf{Convex Poincar{\'e} Inequality}) \citep{boucheron2013concentration} \\
+Let $Z_1 \xdotx{,} Z_n$ be \textbf{independent} random variables taking values in the interval $[0, 1]$ and let $f : [0, 1]^n \to \bR$ be a \textbf{separately convex function} whose partial derivatives exist; that is, for every $i = 1 \xdotx{,} n$ and fixed $z_1 \xdotx{,} z_{i-1}, z_{i+1} \xdotx{,} z_n$,  $f$ is a convex function of its $i$-th variable. Then $f(Z) = f(Z_1 \xdotx{,} Z_n)$ satisfies
+\begin{align}
+\text{Var}(f(Z)) &\le \E{}{\norm{\nabla f(Z)}{2}^2}. \label{ineqn: convex_poincare_inequality}
+\end{align}
+\end{theorem}
+\begin{proof}
+The proof is an easy consequence of the Efron-Stein inequality, because it suffices to bound the random variable $\sum_{i=1}^{n}\paren{X - X_i}^2$ where
+$X_i := \inf_{z_i'}f(Z_1 \xdotx{,} Z_{i-1}, z_i, Z_{i+1} \xdotx{,} Z_n)$. Denote by $Z_i'$ the value of $z_i'$ for which the minimum is achieved. This is guaranteed by \emph{\textbf{continuity}} and the \emph{\textbf{compactness}} of the domain of $f$.
+Then, writing $\bar{Z}_{(i)} = (Z_1 \xdotx{,} Z_{i-1}, Z_i', Z_{i+1} \xdotx{,} Z_n)$, we have
+\begin{align*}
+\sum_{i=1}^{n}\paren{X - X_i}^2 &= \sum_{i=1}^{n}\paren{f(Z) - f(\bar{Z}_{(i)} )}^2\\
+&\le \sum_{i=1}^{n}\paren{\partdiff{f}{z_i}(Z)}^2\paren{Z - \bar{Z}_{(i)}}^2 \quad (\text{ by separate convexity})\\
+&\le  \sum_{i=1}^{n}\paren{\partdiff{f}{z_i}(Z)}^2 = \norm{\nabla f(Z)}{2}^2. \qed
+\end{align*}
+\end{proof}
+
+\item \begin{remark} (\textbf{\emph{Dimension-Free Concentration}})\\
+Note that \emph{the convex Poincar{\'e} inequality} provides a \emph{\textbf{dimension-free concentration}} for an \emph{\textbf{arbitrary sub-Gaussian distribution}} given that $f$ is separately \emph{convex}.
+\end{remark}
+\end{itemize}
+
+\subsubsection{Gaussian Poincar{\'e} Inequality}
+\begin{itemize}
+\item \begin{theorem} (\textbf{Gaussian Poincar{\'e} Inequality}) \citep{boucheron2013concentration} \\
+Let $Z = (Z_1 \xdotx{,} Z_n)$ be a vector of \textbf{i.i.d. standard Gaussian} random variables (i.e. $Z$ is a Gaussian vector with \textbf{zero mean} vector and \textbf{identity covariance matrix}). Let $f : \bR^n \to \bR$ be any \textbf{continuously differentiable} function. Then
+\begin{align}
+\text{Var}(f(Z)) &\le \E{}{\norm{\nabla f(Z)}{2}^2}. \label{ineqn: gaussian_poincare_inequality}
+\end{align}
+\end{theorem}
+\begin{proof}
+We may assume that $\E{}{\norm{\nabla f(Z)}{2}^2} <\infty$, since otherwise the inequality is trivial. 
+
+The proof is based on a \emph{double use} of \emph{the Efron-Stein inequality}.  A first straightforward use of it reveals that it suffices to prove the theorem when the dimension $n$ equals $1$. Thus, the problem reduces to show that
+\begin{align}
+\text{Var}(f(Z)) &\le \E{}{(f'(Z))^2}, \label{ineqn: gaussian_poincare_inequality_step1}
+\end{align} where $f: \bR \to \bR$ is any continuously differentiable function on the real line and $Z$ is a standard normal random variable. 
+\begin{enumerate}
+\item First, notice that it suffices to prove this inequality when $f$ has a \emph{\textbf{compact support}} and is \emph{\textbf{twice continuously differentiable}}. 
+
+\item Now let $\epsilon_1 \xdotx{,} \epsilon_n$ be \emph{independent Rademacher random variables} and introduce
+\begin{align*}
+S_n := \frac{1}{\sqrt{n}}\sum_{j=1}^{n}\epsilon_j.
+\end{align*}
+Since for every $i$
+\begin{align*}
+\text{Var}_{(-i)}\paren{f(S_n)} &= \frac{1}{4}\paren{f\paren{S_n + \frac{1+ \epsilon_i}{\sqrt{n}} }  - f\paren{S_n - \frac{1+ \epsilon_i}{\sqrt{n}} }}^2,
+\end{align*}
+applying \emph{the Efron-Stein inequality again}, we obtain
+\begin{align}
+\text{Var}(f(S_n)) &\le   \frac{1}{4}\sum_{i=1}^{n}\E{}{\paren{f\paren{S_n + \frac{1+ \epsilon_i}{\sqrt{n}} }  - f\paren{S_n - \frac{1+ \epsilon_i}{\sqrt{n}} }}^2}  \label{ineqn: gaussian_poincare_inequality_step2} 
+\end{align}
+\emph{\textbf{The central limit theorem}} implies that $S_n$ converges \emph{in distribution} to $Z$, where $Z$ has \emph{the standard normal law}. Hence $\text{Var}(f(S_n))$ converges to $\text{Var}(f(Z))$.
+
+\item Let $K$ denote the \emph{supremum} of \emph{the absolute value} of \emph{the second derivative} of $f$. \emph{Taylor's theorem} implies that, for every $i$,
+\begin{align*}
+\abs{f\paren{S_n + \frac{1+ \epsilon_i}{\sqrt{n}} }  - f\paren{S_n - \frac{1+ \epsilon_i}{\sqrt{n}} }} &\le \frac{2}{\sqrt{n}}\abs{f'(S_n)} + \frac{2K}{n}
+\end{align*}
+and therefore
+\begin{align*}
+\frac{n}{4}\paren{f\paren{S_n + \frac{1+ \epsilon_i}{\sqrt{n}} }  - f\paren{S_n - \frac{1+ \epsilon_i}{\sqrt{n}} }}^2 &\le \paren{f'(S_n)}^2 +\frac{2K}{\sqrt{n}} \abs{f'(S_n)} + \frac{K^2}{n}
+\end{align*}
+This and \emph{the central limit theorem} imply that
+\begin{align*}
+\limsup\limits_{n\to \infty}\frac{1}{4}\sum_{i=1}^{n}\E{}{\paren{f\paren{S_n + \frac{1+ \epsilon_i}{\sqrt{n}} }  - f\paren{S_n - \frac{1+ \epsilon_i}{\sqrt{n}} }}^2}
+&= \E{}{(f'(Z))^2},
+\end{align*} which means that \eqref{ineqn: gaussian_poincare_inequality_step2} leads to \eqref{ineqn: gaussian_poincare_inequality_step1} by letting $n$ go to infinity.  \qed
+\end{enumerate}
+\end{proof}
+
+\item \begin{remark} (\textbf{\emph{Lipschitz Function of Gaussian Vector}})\\
+A straightforward consequence of \emph{the Gaussian Poincar{\'e} inequality} is that, whenever $f: \bR^n \to \bR$ is \emph{\textbf{$L$-Lipschitz}}, that is, for all $x, y \in \bR^n$,
+\begin{align*}
+\abs{f(x) - f(y)} \le L\norm{x - y}{}
+\end{align*} and $Z$ is a \emph{\textbf{standard Gaussian} random vector}, then
+\begin{align}
+\text{Var}(f(Z)) \le L. \label{ineqn: gaussian_variance_lipschitz}
+\end{align}
+Note that this is independent from the dimensionality of function domain.
+\end{remark}
+\end{itemize}
 
 
 \subsection{A Proof of the Efron-Stein Inequality Based on Duality}
+\begin{itemize}
+\item \begin{proposition} (\textbf{Variational Principle for Variance Estimator}) \citep{boucheron2013concentration}\\
+If $Y$ is a real-valued square-integrable random variable ($Y \in L^2$ in short), then
+\begin{align}
+\text{Var}(Y) &= \sup_{T\in L^2}(2 \text{Cov}(Y, T) - \text{Var}(T)) . \label{eqn: variational_variance}
+\end{align}
+\end{proposition}
+\begin{proof}
+since $\text{Var}(Y – T) \ge 0$, and
+\begin{align*}
+\text{Var}(Y) &\ge 2 \text{Cov}(Y, T) - \text{Var}(T)
+\end{align*} and since this inequality becomes an equality whenever $T = Y$, the duality formula follows. \qed
+\end{proof}
+
+\item \begin{remark}
+Let $X = f(Z)$ for $Z= (Z_1 \xdotx{,} Z_n)$ and define $\E{i}{X} := \E{}{f(Z) | Z_1 \xdotx{,} Z_i}$. Then consider the telescoping sum
+\begin{align*}
+(f(Z))^2 - (\E{}{f(Z)})^2 &= \sum_{i=1}^{n}\paren{(\E{i}{f(Z)})^2 - (\E{i-1}{f(Z)})^2},
+\end{align*} which leads to
+\begin{align*}
+\text{Var}(f(Z)) = \E{}{(f(Z))^2} - (\E{}{f(Z)})^2 &=  \sum_{i=1}^{n}\E{}{(\E{i}{f(Z)})^2 - (\E{i-1}{f(Z)})^2}
+\end{align*} Note that $f(Z) - \E{}{f(Z)} = \sum_{i=1}^{n}\paren{\E{i}{f(Z)} - \E{i-1}{f(Z)}}$
+\begin{align*}
+\text{Var}(f(Z)) = \E{}{\paren{f(Z) - \E{}{f(Z)}}^2} &=   \sum_{i=1}^{n}\E{}{\paren{\E{i}{f(Z)} - \E{i-1}{f(Z)}}^2}
+\end{align*} Thus
+\begin{align*}
+\sum_{i=1}^{n}\E{}{\paren{\E{i}{f(Z)} - \E{i-1}{f(Z)}}^2} &=  \sum_{i=1}^{n}\E{}{(\E{i}{f(Z)})^2 - (\E{i-1}{f(Z)})^2}
+\end{align*} Similarly to our first proof of the Efron-Stein inequality, the independence of the variables $X_1 \xdotx{,} X_n$ is used by noting that
+\begin{align*}
+\E{(-i)}{\E{i}{f(Z)}} = \E{i-1}{f(Z)}
+\end{align*} and therefore
+\begin{align*}
+\sum_{i=1}^{n}\E{}{(\E{i}{f(Z)})^2 - (\E{i-1}{f(Z)})^2} &= \E{}{\text{Var}_{(-i)}(\E{i}{f(Z)})}
+\end{align*} In other words, we have proven the following alternative formulation (using \emph{\textbf{independence}} but \emph{without using \textbf{the orthogonality structure}} of \emph{\textbf{the martingale differences}}):
+\begin{align}
+\text{Var}(f(Z)) &=  \sum_{i=1}^{n} \E{}{\text{Var}_{(-i)}(\E{i}{f(Z)})}.  \label{eqn: variational_variance_conditional_exp}
+\end{align} It remains to commute the $\text{Var}_{(-i)}$ and $\mathds{E}_i$ operators and this is precisely the step where we use a \emph{duality argument}.
+\end{remark}
+
+\item \begin{lemma} \citep{boucheron2013concentration}\\
+For every $i = 1 \xdotx{,} n$,
+\begin{align*}
+\E{}{\text{Var}_{(-i)}(\E{i}{f(Z)})} \le \E{}{\text{Var}_{(-i)}(f(Z))}.
+\end{align*}
+\end{lemma}
+\begin{proof}
+Applying the duality formula of \eqref{eqn: variational_variance} conditionally on $Z_{(-i)}$, we show that for any square-integrable variable $T$,
+\begin{align}
+2 \text{Cov}_{(-i)}(f(Z), T) - \text{Var}_{(-i)}(T) &\le \text{Var}_{(-i)}(f(Z))  \label{eqn: variational_variance_2}
+\end{align} But if we take $T$ to be $(Z_1 \xdotx{,} Z_i)$-measurable, then
+\begin{align*}
+\E{}{\text{Cov}_{(-i)}(f(Z), T)} &= \E{}{f(Z)\paren{T - \E{i}{T}}}\\
+&= \E{}{\E{i}{f(Z)}\paren{T - \E{i}{T}}}\\
+&= \E{}{\text{Cov}_{(-i)}(\E{i}{f(Z)}, T)}.
+\end{align*}
+Hence, choosing $T = \E{i}{f(Z)}$ leads to
+\begin{align*}
+\E{}{\text{Cov}_{(-i)}(f(Z), \E{i}{f(Z)})} &= \E{}{\text{Var}_{(-i)}(\E{i}{f(Z)})}
+\end{align*} and therefore, by \eqref{eqn: variational_variance_2}, 
+\begin{align*}
+ \E{}{\text{Var}_{(-i)}(\E{i}{f(Z)})} &\le  \E{}{\text{Var}_{(-i)}(f(Z))} \qed 
+\end{align*}
+\end{proof}
+
+\item \begin{remark}
+Combining Lemma above with the decomposition \eqref{eqn: variational_variance_conditional_exp} leads to
+\begin{align}
+\text{Var}(f(Z)) &\le  \sum_{i=1}^{n} \E{}{\text{Var}_{(-i)}(f(Z))} \label{ineqn: efron_stein_inequality_duality}
+\end{align} which is equivalent to the Efron–Stein inequality. \qed
+\end{remark}
+\end{itemize}
+
+\subsection{Exponential Tail Bounds via the Efron-Stein Inequality}
+\begin{itemize}
+\item \begin{remark} (\textbf{\emph{Assumption}}) \citep{boucheron2013concentration}\\
+Suppose $Z := (Z_1 \xdotx{,} Z_n)$ are independent random variables and $X := f(Z)$. $X_i$ is \emph{\textbf{the $i$-th Jackknife replication}} of $X$, which is a function of $Z_{(-i)} := (Z_1 \xdotx{,} Z_{i-1}, Z_{i+1} \xdotx{,} Z_{n})$, \emph{\textbf{the $i$-th Jackknife sample}}. 
+
+\emph{Assume} that there exists a positive constant $\nu$ such that  
+\begin{align}
+\sum_{i=1}^{n}\paren{X - X_i}_{+}^2 \le \nu  \label{ineqn: tail_bound_efron_stein_assumption}
+\end{align} holds almost surely. Define, for any $\alpha \in (0, 1)$, \emph{\textbf{the $\alpha$-quantile}} of $X := f(Z)$ by
+\begin{align*}
+Q_{\alpha} &= \inf\set{\alpha: \bP\set{X \le x} \ge \alpha}.
+\end{align*}
+In particular, we denote \emph{the \textbf{median} of Z} by $\text{Med}(Z) = Q_{1/2}$.
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Clipping of Function}})\\
+The trick is to use the Efron-Stein inequality for the random variable $g_{a,b}(Z) = g_{a,b}(Z_1 \xdotx{,} Z_n)$ where $b \ge a$ and the function $g_{a,b}: \cX^n \to \bR$ is defined as
+\begin{align*}
+g_{a,b}(z) &=\left\{\begin{array}{cc}
+b    & \text{ if }f(z) \ge b\\
+f(z) & \text{ if }a < f(z) < b\\
+a    & \text{ if }f(z) \le a
+\end{array}
+\right. 
+\end{align*} It is the clipping of function $f(z)$ taking values within $[a, b]$, i.e. $g_{a, b}(z) = \max\set{a, \min\set{f(z), b}}$. 
+\end{remark}
+
+\item \begin{remark}  (\emph{\textbf{Bounding Variance of $g_{a,b}(Z)$}})\\
+First observe that if $a \ge \text{Med}(X)$, then $\E{}{g_{a, b}(Z)}\le (a + b)/2$ and therefore the lower bound of the variance is 
+\begin{align*}
+\text{Var}\paren{g_{a,b}(Z)} &\ge \frac{(b-a)^2}{4}\bP\set{g_{a,b}(Z) = b} = \frac{(b-a)^2}{4}\bP\set{f(Z) \ge b}.
+\end{align*}
+
+On the other hand, we may use the Efron-Stein inequality to obtain \emph{an upper bound} for the variance of $g_{a,b}(Z)$. To this end, observe that if $f(z) \le a$ then
+\begin{align*}
+g_{a,b}(\bar{z}^{(i)}) \ge g_{a,b}(z),
+\end{align*}  for
+\begin{align*}
+\bar{z}^{(i)} := (z_1 \xdotx{,} z_{i-1}, z_i', z_{i+1} \xdotx{,} z_{n}) 
+\end{align*} and so
+\begin{align*}
+\sum_{i=1}^{n}\E{}{\paren{g_{a,b}(Z) - g_{a,b}(\bar{Z}^{(i)})}^2} &= 2 \sum_{i=1}^{n}\E{}{\paren{g_{a,b}(Z) - g_{a,b}(\bar{Z}^{(i)})}_{+}^2}\\
+&\le 2 \sum_{i=1}^{n}\E{}{\ind{f(Z) > a}\paren{g_{a,b}(Z) - g_{a,b}(\bar{Z}^{(i)})}_{+}^2} \\
+&\le 2 \nu \bP\set{f(Z) > a},
+\end{align*} where, in the last step, we used the fact that condition \eqref{ineqn: tail_bound_efron_stein_assumption} implies that
+\begin{align*}
+\sum_{i=1}^{n}\paren{g_{a,b}(Z) - g_{a,b}(\bar{Z}^{(i)})}_{+}^2 &\le \sum_{i=1}^{n}\paren{f(Z) - f(\bar{Z}^{(i)})}_{+}^2 \le \nu.
+\end{align*} Comparing the obtained upper and lower bounds for $\text{Var}\paren{g_{a,b}(Z)}$, we get
+\begin{align*}
+b - a &\le \sqrt{8 \nu \frac{\bP\set{f(Z) > a}}{\bP\set{f(Z) \ge b}}}.
+\end{align*}
+\end{remark}
+
+\item \begin{remark} (\textbf{\emph{Bounding the Distance between Quantiles of $f(Z)$}})\\
+To this end, let $0 < \delta < \gamma \le 1/2$ and choose $a = Q_{1-\gamma}$ and $b = Q_{1-\delta}$. Then $\bP\set{f(Z) > a} \le \gamma$ and
+$\bP\set{f(Z) \ge b} \ge \delta$ and therefore the distance between any two quantiles of $X =f(Z)$ (to the \emph{right} of the median) can be \emph{bounded} as
+\begin{align*}
+b -a = Q_{1-\delta} - Q_{1-\gamma} \le \sqrt{\frac{8 \nu \gamma}{\delta}}
+\end{align*}
+It is instructive to choose $\gamma = 2^{-k}$ and $\delta = 2^{-(k+1)}$ for some integer $k \ge 1$. Then, denoting $a_k = Q_{1 - 2^{-k}}$, we get
+\begin{align*}
+a_{k+1} - a_k &\le 4 \sqrt{\nu},
+\end{align*}
+so the difference between \emph{consecutive quantiles} corresponding to \emph{exponentially decreasing tail probabilities} is \emph{bounded by a constant}. In particular, by summing this inequality for $k = 1 \xdotx{,} m$, we have
+\begin{align*}
+a_{m+1} \le \text{Med}(f(Z)) + 4m\sqrt{\nu}
+\end{align*} which implies that for all $t > 0$,
+\begin{align}
+\bP\set{f(Z) > \text{Med}(f(Z)) + t} \le 2^{-\frac{t}{4\sqrt{\nu}}}. \label{ineqn: tail_bound_efron_stein}
+\end{align}
+\end{remark}
+
+\item \begin{remark} (\textbf{\emph{Bounding the Deviations from Mean instead of Median of $f(Z)$}})\\
+An alternative route to obtain exponential bounds is by applying \emph{the Efron-Stein inequality} to $\exp(\lambda X/2)$ with $\lambda > 0$. Then, by \emph{the mean-value theorem}, 
+\begin{align*}
+\E{}{\exp\paren{\lambda X}} - \paren{\E{}{\exp\paren{\frac{\lambda X}{2}}}}^2 &\le \E{}{\sum_{i=1}^{n}\paren{\exp\paren{\frac{\lambda X}{2}} - \exp\paren{\frac{\lambda X'}{2}}}_{+}^2} \quad (\text{Efron-Stein inequality})\\
+&\le \frac{\lambda^2}{4} \E{}{\exp\paren{\lambda X}\sum_{i=1}^{n}\paren{X -  X'}_{+}^2} \quad (\text{mean-value theorem})
+\end{align*} Now we may use our condition \eqref{ineqn: tail_bound_efron_stein_assumption} to derive
+\begin{align*}
+\E{}{\exp\paren{\lambda X}} - \paren{\E{}{\exp\paren{\frac{\lambda X}{2}}}}^2 &\le  \frac{\nu \lambda^2}{4}\E{}{\exp\paren{\lambda X}}
+\end{align*} or equivalently
+\begin{align*}
+\paren{1-\frac{\nu \lambda^2}{4}}\Phi(\lambda) &\le \paren{\Phi\paren{\frac{\lambda}{2}}}^2,
+\end{align*} where $\Phi(\lambda):= \E{}{\exp\paren{\lambda (X - \E{}{X})}}$ is \emph{the moment generating function} of $X- \E{}{X}$.
+
+\begin{lemma}
+Let $g : (0, 1) \to (0, \infty)$ be a function such that $\lim\limits_{x\to 0}(g(x) - 1) /x = 0$. If for every $x \in (0, 1)$
+\begin{align*}
+(1- x^2)g(x) \le g(x/2)^2,
+\end{align*} then
+\begin{align*}
+g(x) \le (1- x^2)^{-2}.
+\end{align*}
+\end{lemma}
+
+Since $\Phi(0) = 1$ and $\Phi'(0) = 0$, we may apply above Lemma to the function $x \to \Phi(2 x \nu^{-1/2})$ and get, for every $\lambda \in (0, 2 \nu^{-1/2})$,
+\begin{align}
+\Phi(\lambda) &\le \paren{1-\frac{\nu \lambda^2}{4}}^{-2}. \label{ineqn: tail_bound_efron_stein_mgf}
+\end{align} Thus, \emph{the Efron-Stein inequality} may be used to prove \emph{exponential integrability} of $X$.
+
+Moreover, since by \eqref{ineqn: tail_bound_efron_stein_mgf} $\Phi( \nu^{-1/2}) \le 2$, by \emph{Markov's inequality}, for every $t > 0$,
+\begin{align}
+\bP\set{f(Z) - \E{}{f(Z)} \ge t} \le 2\exp\paren{-\frac{t}{\sqrt{\nu}}}. \label{ineqn: tail_bound_efron_stein_2}
+\end{align} This inequality has the same form as the one derived using the first method of this section but now we \emph{bound deviations} from the \emph{mean} instead of the \emph{median} and the constants are somewhat better. \qed
+\end{remark}
+\end{itemize}
+
+
 \newpage
 \bibliographystyle{plainnat}
 \bibliography{reference.bib}
