@@ -1,13 +1,14 @@
-\contentsline {section}{\numberline {1}Information Theory Basics}{2}
-\contentsline {subsection}{\numberline {1.1}Entropy, Relative Entropy, and Mutual Information}{2}
-\contentsline {subsection}{\numberline {1.2}Chain Rules for Entropy, Relative Entropy, and Mutual Information}{2}
-\contentsline {subsection}{\numberline {1.3}Log-Sum Inequalities and Convexity}{2}
-\contentsline {subsection}{\numberline {1.4}Combinatorial Entropies}{2}
-\contentsline {section}{\numberline {2}Information Inequalities}{2}
-\contentsline {subsection}{\numberline {2.1}Han's Inequality}{2}
-\contentsline {subsection}{\numberline {2.2}Sub-Additivity of Entropy and Relative Entropy}{2}
-\contentsline {subsection}{\numberline {2.3}Duality and Variational Formulas}{2}
-\contentsline {subsection}{\numberline {2.4}Optimal Transport}{2}
-\contentsline {subsection}{\numberline {2.5}Pinsker's Inequality}{2}
-\contentsline {subsection}{\numberline {2.6}Birg{\'e}'s Inequality}{2}
-\contentsline {subsection}{\numberline {2.7}The Brunn-Minkowski Inequality}{2}
+\contentsline {section}{\numberline {1}Information Theory Basics}{2}{}%
+\contentsline {subsection}{\numberline {1.1}Entropy, Relative Entropy, and Mutual Information}{2}{}%
+\contentsline {subsection}{\numberline {1.2}Chain Rules for Entropy, Relative Entropy, and Mutual Information}{4}{}%
+\contentsline {subsection}{\numberline {1.3}Log-Sum Inequalities and Convexity}{5}{}%
+\contentsline {subsection}{\numberline {1.4}Data Processing Inequality}{5}{}%
+\contentsline {subsection}{\numberline {1.5}Combinatorial Entropies}{6}{}%
+\contentsline {section}{\numberline {2}Information Inequalities}{6}{}%
+\contentsline {subsection}{\numberline {2.1}Han's Inequality}{6}{}%
+\contentsline {subsection}{\numberline {2.2}Sub-Additivity of Entropy and Relative Entropy}{6}{}%
+\contentsline {subsection}{\numberline {2.3}Duality and Variational Formulas}{6}{}%
+\contentsline {subsection}{\numberline {2.4}Optimal Transport}{6}{}%
+\contentsline {subsection}{\numberline {2.5}Pinsker's Inequality}{6}{}%
+\contentsline {subsection}{\numberline {2.6}Birg{\'e}'s Inequality}{6}{}%
+\contentsline {subsection}{\numberline {2.7}The Brunn-Minkowski Inequality}{6}{}%

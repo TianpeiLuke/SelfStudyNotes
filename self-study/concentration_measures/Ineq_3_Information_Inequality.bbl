@@ -1,0 +1,14 @@
+\begin{thebibliography}{1}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Cover and Thomas(2006)]{thomas2006elements}
+Thomas~M. Cover and Joy~A. Thomas.
+\newblock \emph{Elements of information theory {(2.} ed.)}.
+\newblock Wiley, 2006.
+\newblock ISBN 978-0-471-24195-9.
+
+\end{thebibliography}
