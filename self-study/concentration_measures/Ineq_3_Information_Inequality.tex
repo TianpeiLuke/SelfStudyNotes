@@ -66,6 +66,10 @@ H(X, Y) &= H(X) + H(Y | X)
 \begin{align*}
 H(X, Y | Z) &= H(X | Z) + H(Y | X, Z)
 \end{align*}
+\item (\textbf{Sub-Additivity}) 
+\begin{align*}
+H(X, Y) &\le H(X) + H(Y)
+\end{align*}
 \item (\textbf{Concavity}) $H(p) := \E{p}{-\log p(X)}$ is a concave function in terms of p.d.f. $p$, i.e.
 \begin{align*}
 H(\lambda p_1 + (1- \lambda) p_2) \ge \lambda H(p_1) + (1- \lambda) H(p_2)
@@ -106,6 +110,11 @@ Let $X, Y$ be random variables.
 \begin{align*}
 I(X; Y) \ge 0
 \end{align*} with equality if and only if $X$ and $Y$ are independent.
+\item (\textbf{Finite Cardinality Domain}) Let $\abs{\cX}$ be the number of elements in domain $\cX$ and $X$ is a discrete random variables in $\cX$. Then the relative entropy of probability distribution $p$ with respect to uniform distribution $u$ on $\cX$ is 
+\begin{align*}
+\kl{p}{u}  &= \log \abs{\cX} - H(X) \ge 0\\
+\Rightarrow H(X) &\le \log \abs{\cX}
+\end{align*}
 \item (\textbf{Symmetry})  $I(X; Y) = I(Y; X)$
 \item (\textbf{Information Gain via Conditioning}) The mutual information $I(X; Y)$ is the reduction in the uncertainty of $X$ due to the knowledge of $Y$ (and vice versa)
 \begin{align}
@@ -134,10 +143,10 @@ H(X_1, X_2 \xdotx{,} X_n) &= \sum_{i=1}^{n}H(X_i | X_{i-1} \xdotx{,} X_1) \label
 \end{align}
 \end{proposition}
 
-\item \begin{proposition} (\textbf{Independence Bound on Entropy}) \citep{thomas2006elements}\\
+\item \begin{proposition} (\textbf{Sub-Additivity of Entropy}) \citep{thomas2006elements}\\
 Let $X_1, X_2 \xdotx{,} X_n$ be drawn according to $p(x_1, x_2 \xdotx{,} x_n)$. Then
 \begin{align}
-H(X_1, X_2 \xdotx{,} X_n) &\le \sum_{i=1}^{n}H(X_i)  \label{ineqn: conditional_entropy_2}
+H(X_1, X_2 \xdotx{,} X_n) &\le \sum_{i=1}^{n}H(X_i)  \label{ineqn: sub_additivity_entropy}
 \end{align} with equality if and only if the $X_i$ are independent.
 \end{proposition}
 
@@ -154,10 +163,13 @@ I(X; Y | Z) := H(X | Z) - H(X | Y, Z) = \kl{P_{(X, Y| Z)}}{P_{X|Z}\otimes P_{Y|Z
 \item \begin{proposition} (\textbf{Chain Rule for Relative Entropy}) \citep{thomas2006elements}\\
 Let $P_{(X, Y)}$ and $Q_{(X, Y)}$ be two probability measures on product space $\cX \times \cY$ and $P \ll Q$. Denote the marginal distributions $P_X, Q_X$ and $P_Y$, $Q_Y$ on $\cX$ and $\cY$, respectively. $P_{Y|X}$ and $Q_{Y|X}$ are conditional distributions (Note that $P_{Y|X} \ll Q_{Y|X}$).  Define \textbf{the conditional relative entropy} as
 \begin{align*}
-\kl{P_{Y | X}}{Q_{Y | X}} := \E{P_{(X,Y)}}{\log \paren{\frac{dP_{Y| X}}{dQ_{Y | X}}}}. 
+\E{X}{\kl{P_{Y | X}}{Q_{Y | X}}} := \E{X}{\E{P_{Y|X}}{\log \paren{\frac{dP_{Y| X}}{dQ_{Y | X}}}}}. 
 \end{align*} Then the relative entropy of joint distribution $P_{(X, Y)}$ with respect to $Q_{(X, Y)}$ is 
 \begin{align}
-\kl{P_{(X, Y)}}{Q_{(X, Y)}} &= \kl{P_{X}}{Q_{X}} + \kl{P_{Y | X}}{Q_{Y | X}} \label{eqn: chain_rule_kl}
+\kl{P_{(X, Y)}}{Q_{(X, Y)}} &= \kl{P_{X}}{Q_{X}} + \E{X}{\kl{P_{Y | X}}{Q_{Y | X}}} \label{eqn: chain_rule_kl}
+\end{align} In addition, let $P$ and $Q$ denote two joint distributions for $X_1, X_2 \xdotx{,} X_n$, let $P_{1:i}$ and $Q_{1:i}$ denote the marginal distributions of $X_1, X_2 \xdotx{,} X_i$ under $P$ and $Q$, respectively. Let $P_{X_i | 1 \ldots i-1}$ and $Q_{X_i | 1 \ldots i-1}$ denote the conditional distribution of $X_i$ with respect to $X_1, X_2 \xdotx{,} X_{i-1}$ under $P$ and under $Q$.
+\begin{align}
+\kl{P}{Q} &= \sum_{i=1}^{n}\E{P_{1:i-1}}{\kl{P_{X_i | 1 \ldots i-1}}{Q_{X_i | 1 \ldots i-1}}} \label{eqn: chain_rule_kl_k}
 \end{align} 
 \end{proposition}
 \end{itemize}
@@ -213,13 +225,162 @@ I(X; Y| Z) &\le I(X; Y)
 \end{corollary}
 \end{itemize}
 
-\subsection{Combinatorial Entropies}
 
 \section{Information Inequalities}
-
 \subsection{Han's Inequality}
+\begin{itemize}
+\item \begin{proposition} (\textbf{Han's Inequality}) \citep{thomas2006elements, boucheron2013concentration}\\
+Let $X_1, X_2 \xdotx{,} X_n$ be random variables. Then
+\begin{align}
+H(X_1, X_2 \xdotx{,} X_n) &\le \frac{1}{n-1}\sum_{i=1}^{n}H(X_1 \xdotx{,} X_{i-1}, X_{i+1} \xdotx{,} X_n) \label{ineqn: han_inequality}
+\end{align}
+\end{proposition}
+\begin{proof}
+For any $i= 1 \xdotx{,} n$, by the definition of the conditional entropy and the fact that conditioning reduces entropy,
+\begin{align*}
+H(X_1, X_2 \xdotx{,} X_n) &= H(X_1 \xdotx{,} X_{i-1}, X_{i+1} \xdotx{,} X_n)  + H(X_i | X_1 \xdotx{,} X_{i-1}, X_{i+1} \xdotx{,} X_n) \\
+&\le H(X_1 \xdotx{,} X_{i-1}, X_{i+1} \xdotx{,} X_n)  + H(X_i | X_1 \xdotx{,} X_{i-1}).
+\end{align*} Summing these n inequalities and using the chain rule for entropy, we get
+\begin{align*}
+n H(X_1, X_2 \xdotx{,} X_n) &\le \sum_{i=1}^{n}H(X_1 \xdotx{,} X_{i-1}, X_{i+1} \xdotx{,} X_n) + \sum_{i=1}^{n}H(X_i | X_1 \xdotx{,} X_{i-1})\\
+&= \sum_{i=1}^{n}H(X_1 \xdotx{,} X_{i-1}, X_{i+1} \xdotx{,} X_n) + H(X_1, X_2 \xdotx{,} X_n)
+\end{align*} which is what we wanted to prove. \qed
+\end{proof}
 
-\subsection{Sub-Additivity of Entropy and Relative Entropy}
+\item \begin{proposition} (\textbf{Han's Inequality for Relative Entropy}) \citep{boucheron2013concentration}\\
+Let $(\cX, \srB)$ be a measurable space, and $P$ and $Q$ be probability measures on $\cX^{n}$ such that $P = P_1 \xdotx{\otimes} P_n$ is a \textbf{product measure}. We denote the element of $\cX^{n}$ by $x = (x_1 \xdotx{,} x_n)$ and write $x_{(-i)} := (x_1 \xdotx{,} x_{i-1}, x_{i+1} \xdotx{,} x_n)$ for the $(n-1)$-vector obtained by \textbf{leaving out the $i$-th component of $x$} (i.e. the $i$-th Jackknife sample of $x$). Denote $Q_{(-i)}$ and $P_{(-i)}$ the marginal distributions of $Q$ and $P$. Let $p_{(-i)}$ and $q_{(-i)}$ denote the corresponding probability density function with respect to base measure $\mu$ on $\cX$.
+\begin{align*}
+q_{(-i)}(x_{(-i)}) &= \int_{y \in \cX}q(x_1 \xdotx{,} x_{i-1}, y, x_{i+1} \xdotx{,} x_n) d\mu(y)\\
+p_{(-i)}(x_{(-i)}) &= \int_{y \in \cX}p(x_1 \xdotx{,} x_{i-1}, y, x_{i+1} \xdotx{,} x_n) d\mu(y)\\
+&= \prod_{j \neq i}p_{j}(x_j).
+\end{align*} Then 
+\begin{align}
+\kl{Q}{P} &\ge \frac{1}{n-1}\sum_{i=1}^{n}\kl{Q_{(-i)}}{P_{(-i)}}  \label{ineqn: han_inequality_relative_entropy}
+\end{align} or equivalently, 
+\begin{align}
+\kl{Q}{P} &\le \sum_{i=1}^{n}\paren{\kl{Q}{P} - \kl{Q_{(-i)}}{P_{(-i)}}}  \label{ineqn: han_inequality_relative_entropy_2}
+\end{align}
+\end{proposition}
+\begin{proof}
+From Han's inequality, we have
+\begin{align*}
+-H(Q) &\ge -\frac{1}{n-1}\sum_{i=1}^{n}H(Q_{(-i)}).
+\end{align*} Since
+\begin{align*}
+\kl{Q}{P} &= -H(Q) + \E{Q}{-\log P(X)}
+\end{align*} and
+\begin{align*}
+\kl{Q_{(-i)}}{P_{(-i)}} &= -H(Q_{(-i)}) + \E{Q_{(-i)}}{-\log P_{(-i)}(X_{(-i)})}, 
+\end{align*} it suffices to show that 
+\begin{align*}
+\E{Q}{-\log P(X)} &= \frac{1}{n-1}\sum_{i=1}^{n}\E{Q_{(-i)}}{-\log P_{(-i)}(X_{(-i)})}.
+\end{align*} This may be seen easily by noting that by the product property of $P$, we have $p(x) = p_{(-i)}(x_{(-i)})p_i(x_i)$ for all $i$, and also $p(x) = \prod_i p_i(x_i)$, and therefore
+\begin{align*}
+\E{Q}{-\log P(X)} &= \frac{1}{n}\sum_{i=1}^{n}\E{Q}{-\log P_{(-i)}(X_{(-i)}) -\log P_i(X_i)} \\
+&= \frac{1}{n}\sum_{i=1}^{n}\E{Q}{-\log P_{(-i)}(X_{(-i)})} + \frac{1}{n}\sum_{i=1}^{n}\E{Q}{-\log P_i(X_i)}\\
+&= \frac{1}{n}\sum_{i=1}^{n}\E{Q}{-\log P_{(-i)}(X_{(-i)})} + \frac{1}{n}\E{Q}{-\log P(X)}.
+\end{align*} Rearranging, we obtain
+\begin{align*}
+\E{Q}{-\log P(X)} &= \frac{1}{n-1}\sum_{i=1}^{n}\E{Q}{-\log P_{(-i)}(X_{(-i)})}\\
+&=\frac{1}{n-1}\sum_{i=1}^{n}\E{Q_{(-i)}}{-\log P_{(-i)}(X_{(-i)})}. \qed
+\end{align*}
+\end{proof}
+\end{itemize}
+
+\subsection{Applications of Han's Inequality}
+\subsubsection{Combinatorial Entropies}
+\subsubsection{Edge Isoperimetric Inequality on the Binary Hypercube}
+
+
+\subsection{$\Phi$-Entropy}
+\begin{itemize}
+\item \begin{definition}(\textbf{\emph{$\Phi$-Entropy}})\citep{boucheron2013concentration}\\
+Let $\Phi: [0, \infty) \rightarrow \bR$ be a \textbf{\emph{convex}} function, and assign, to every \emph{\textbf{non-negative} integrable random variable} $X$, \underline{\textbf{\emph{the $\Phi$-entropy}}} of $X$ is defined as 
+\begin{align}
+H_{\Phi}(X) &= \E{}{\Phi(X)} - \Phi(\E{}{X}). \label{def: phi_entropy}
+\end{align}
+\end{definition}
+
+\item \begin{remark}
+By Jenson's inequality, the $\Phi$-entropy is \emph{non-negative}
+\begin{align*}
+\Phi(\E{}{X}) &\le \E{}{\Phi(X)}\\
+\Rightarrow H_{\Phi}(X) &= \E{}{\Phi(X)} - \Phi(\E{}{X}) \ge 0.
+\end{align*} 
+\end{remark}
+
+\item \begin{example} (\emph{\textbf{Special Examples for $\Phi$-Entropy}})
+\begin{enumerate}
+\item For $\Phi(x) = x^2$, \emph{the $\Phi$-entropy} of $X$ is \emph{the \textbf{variance}} of $X$:
+\begin{align*}
+H_{\Phi}(X) &= \E{}{X^2} - (\E{}{X})^2 = \text{Var}(X).
+\end{align*}
+\item For $\Phi(x) = x\log x$, \emph{the $\Phi$-entropy} of $X$ is defined as the \underline{\emph{\textbf{entropy}} of $X$}
+\begin{align}
+\text{Ent}(X)&:= \E{}{X\log X} - \E{}{X}\log\paren{\E{}{X}}. \label{def: phi_entropy_kl}
+\end{align} Let $(\Omega, \srB)$ be measurable space, and $P$ and $Q$ are probability measures on $\Omega$ with $P \ll Q$. Define a random variable $X$ by the \emph{Radon-Nikodym derivative} of $P$ with respect to $Q$; that is,
+\begin{align*}
+X(\omega) &:= \left\{ \begin{array}{cc}
+\frac{dP}{dQ}(\omega) & Q(\omega) > 0\\
+0 &\text{o.w.}
+\end{array}
+\right. .
+\end{align*} We see that $X$ is $Q$-measurable and $dP = X\,dQ$ with $\E{Q}{X} = 1$. Then the entropy of $X$ is the relative entropy of $P$ with respect to $Q$.
+\begin{align}
+\text{Ent}(X)&= \kl{P}{Q} \label{eqn: phi_entropy_kl_divg}
+\end{align}
+\end{enumerate}
+\end{example}
+
+\end{itemize}
+
+
+
+
+\subsection{Sub-Additivity of $\Phi$-Entropy}
+\begin{itemize}
+\item \begin{remark}(\emph{\textbf{Sub-Additivity of Shannon Entropy}})\\
+Let $X_1, X_2 \xdotx{,} X_n$ be drawn according to $p(x_1, x_2 \xdotx{,} x_n)$. Then
+\begin{align*}
+H(X_1, X_2 \xdotx{,} X_n) &\le \sum_{i=1}^{n}H(X_i)  
+\end{align*} with equality if and only if the $X_i$ are independent.
+\end{remark}
+
+\item \begin{proposition} (\textbf{Sub-Additivity of The Entropy}) \citep{boucheron2013concentration}\\
+Let $\Phi(x) = x\log x$,  for $x >0$ and $\Phi(0) = 0$. Let $Z_1, Z_2 \xdotx{,} Z_n$ be independent random variables taking values in $\cX$, and let $f: \cX^n \to [0, \infty)$. Letting $X = f(Z_1, Z_2 \xdotx{,} Z_n)$, we have 
+\begin{align}
+\E{}{\Phi(X)} - \Phi(\E{}{X}) &\le \sum_{i=1}^{n}\E{}{\E{(-i)}{\Phi(X)} - \Phi(\E{(-i)}{X})}, \label{ineqn: sub_additivity_phi_entropy}
+\end{align} where $\E{(-i)}{\cdot}$ is the conditional expectation operator conditioning on $Z_{(-i)}$. Introducing the notation $\text{Ent}_{(-i)}(X) = \E{(-i)}{\Phi(X)} - \Phi(\E{(-i)}{X})$, this can be re-written as
+\begin{align}
+\E{}{\Phi(X)} - \Phi(\E{}{X}) &\le \E{}{\sum_{i=1}^{n} \text{Ent}_{(-i)}(X)}. \label{ineqn: sub_additivity_phi_entropy_2}
+\end{align}
+\end{proposition}
+\begin{proof}
+The proposition is a direct consequence of Han's inequality for relative entropies. First note that if the inequality is true for a random variable $X$, then it is also true for $cX$ where $c$ is a positive constant. Hence, we may assume that $\E{}{X} = 1$. Now define the probability measure $P$ on $\cX^n$ by its probability density function $p$ given by
+\begin{align*}
+p(z) &= f(z) q(z), \quad \forall z \in \cX^n
+\end{align*} where $q$ denote the probability density of $Z:= (Z_1, Z_2 \xdotx{,} Z_n)$ and $Q$ the corresponding probability measure. Then 
+\begin{align*}
+\text{Ent}(X)&:= \E{}{X\log X} - \E{}{X}\log\paren{\E{}{X}} = \kl{P}{Q}
+\end{align*} which, by Han's inequality for relative entropy
+\begin{align*}
+\text{Ent}(X) = \kl{P}{Q}& \le \sum_{i=1}^{n}\paren{\kl{P}{Q} - \kl{P_{(-i)}}{Q_{(-i)}}} 
+\end{align*} However, straightforward calculation shows that
+\begin{align*}
+\sum_{i=1}^{n}\paren{\kl{P}{Q} - \kl{P_{(-i)}}{Q_{(-i)}}} &=  \sum_{i=1}^{n}\E{}{\E{(-i)}{\Phi(X)} - \Phi(\E{(-i)}{X})}
+\end{align*} and the statement follows. \qed
+\end{proof}
+
+\item \begin{remark}
+The Efron-Stein inequality is the special case of the inequality when $\Phi(x) = x^2$,
+\begin{align*}
+\E{}{\Phi(X)} - \Phi(\E{}{X}) &\le \sum_{i=1}^{n}\E{}{\E{(-i)}{\Phi(X)} - \Phi(\E{(-i)}{X})}.\\
+\Rightarrow \text{Var}(X) &\le \sum_{i=1}^{n}\E{}{\text{Var}_{(-i)}(X)}
+\end{align*} 
+\end{remark}
+\end{itemize}
+
+
 
 \subsection{Duality and Variational Formulas}
 
