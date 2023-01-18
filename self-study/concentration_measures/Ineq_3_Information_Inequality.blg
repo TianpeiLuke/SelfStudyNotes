@@ -3,44 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Ineq_3_Information_Inequality.aux
 The style file: plainnat.bst
 Database file #1: reference.bib
-You've used 1 entry,
+You've used 2 entries,
             2773 wiz_defined-function locations,
-            598 strings with 5001 characters,
-and the built_in function-call counts, 403 in all, are:
-= -- 31
-> -- 21
+            603 strings with 5185 characters,
+and the built_in function-call counts, 810 in all, are:
+= -- 61
+> -- 51
 < -- 1
-+ -- 7
-- -- 6
-* -- 26
-:= -- 70
-add.period$ -- 4
-call.type$ -- 1
-change.case$ -- 4
-chr.to.int$ -- 1
-cite$ -- 2
-duplicate$ -- 20
-empty$ -- 33
-format.name$ -- 9
-if$ -- 79
++ -- 17
+- -- 15
+* -- 60
+:= -- 136
+add.period$ -- 7
+call.type$ -- 2
+change.case$ -- 9
+chr.to.int$ -- 2
+cite$ -- 4
+duplicate$ -- 41
+empty$ -- 66
+format.name$ -- 19
+if$ -- 162
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 2
-newline$ -- 14
-num.names$ -- 4
-pop$ -- 12
+missing$ -- 4
+newline$ -- 19
+num.names$ -- 8
+pop$ -- 27
 preamble$ -- 1
-purify$ -- 4
+purify$ -- 9
 quote$ -- 0
-skip$ -- 16
+skip$ -- 30
 stack$ -- 0
-substring$ -- 2
-swap$ -- 1
+substring$ -- 4
+swap$ -- 2
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 6
+type$ -- 12
 warning$ -- 0
-while$ -- 3
+while$ -- 6
 width$ -- 0
-write$ -- 21
+write$ -- 33

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.17)  17 JAN 2023 22:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.17)  18 JAN 2023 12:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -682,21 +682,21 @@ LaTeX Font Info:    Trying to load font information for U+dsrom on input line 4
 (/usr/local/texlive/2021/texmf-dist/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 )
-Overfull \hbox (16.95583pt too wide) in paragraph at lines 76--78
+Overfull \hbox (16.95583pt too wide) in paragraph at lines 80--82
 \OT1/cmr/m/it/10.95 con-tin-u-ous \OT1/cmr/m/n/10.95 with re-spect to $\OML/cmm
 /m/it/10.95 Q$\OT1/cmr/m/n/10.95 , then $[]$ or $[]$
  []
 
-[2] [3] [4] [5] [6] (./Ineq_3_Information_Inequality.bbl) [7]
+[2] [3] [4] [5] [6] [7] [8] [9] (./Ineq_3_Information_Inequality.bbl) [10]
 (./Ineq_3_Information_Inequality.aux) ) 
 Here is how much of TeX's memory you used:
- 17232 strings out of 478994
- 341067 string characters out of 5858183
- 633542 words of memory out of 5000000
- 34397 multiletter control sequences out of 15000+600000
- 413135 words of font info for 66 fonts, out of 8000000 for 9000
+ 17251 strings out of 478994
+ 341501 string characters out of 5858183
+ 632689 words of memory out of 5000000
+ 34413 multiletter control sequences out of 15000+600000
+ 413932 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 127i,11n,130p,580b,295s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 127i,16n,130p,695b,358s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/font
 s/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2021/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/
@@ -712,16 +712,17 @@ ic/amsfonts/cm/cmr17.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmr6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/doublestr
-oke/dsrom10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts
-/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/rsfs
-/rsfs10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfr
-m1095.pfb>
-Output written on Ineq_3_Information_Inequality.pdf (7 pages, 211388 bytes).
+ts/cm/cmsy6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmti10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/doublestrok
+e/dsrom10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/s
+ymbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/rsfs/r
+sfs10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1
+095.pfb>
+Output written on Ineq_3_Information_Inequality.pdf (10 pages, 241524 bytes).
 PDF statistics:
- 108 PDF objects out of 1000 (max. 8388607)
- 79 compressed objects within 1 object stream
+ 121 PDF objects out of 1000 (max. 8388607)
+ 88 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

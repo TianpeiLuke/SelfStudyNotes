@@ -1,9 +1,16 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{2}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Boucheron et~al.(2013)Boucheron, Lugosi, and
+  Massart]{boucheron2013concentration}
+St{\'e}phane Boucheron, G{\'a}bor Lugosi, and Pascal Massart.
+\newblock \emph{Concentration inequalities: A nonasymptotic theory of
+  independence}.
+\newblock Oxford university press, 2013.
 
 \bibitem[Cover and Thomas(2006)]{thomas2006elements}
 Thomas~M. Cover and Joy~A. Thomas.

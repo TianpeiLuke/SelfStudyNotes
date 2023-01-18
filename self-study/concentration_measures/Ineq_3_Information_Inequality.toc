@@ -3,12 +3,15 @@
 \contentsline {subsection}{\numberline {1.2}Chain Rules for Entropy, Relative Entropy, and Mutual Information}{4}{}%
 \contentsline {subsection}{\numberline {1.3}Log-Sum Inequalities and Convexity}{5}{}%
 \contentsline {subsection}{\numberline {1.4}Data Processing Inequality}{5}{}%
-\contentsline {subsection}{\numberline {1.5}Combinatorial Entropies}{6}{}%
 \contentsline {section}{\numberline {2}Information Inequalities}{6}{}%
 \contentsline {subsection}{\numberline {2.1}Han's Inequality}{6}{}%
-\contentsline {subsection}{\numberline {2.2}Sub-Additivity of Entropy and Relative Entropy}{6}{}%
-\contentsline {subsection}{\numberline {2.3}Duality and Variational Formulas}{6}{}%
-\contentsline {subsection}{\numberline {2.4}Optimal Transport}{6}{}%
-\contentsline {subsection}{\numberline {2.5}Pinsker's Inequality}{6}{}%
-\contentsline {subsection}{\numberline {2.6}Birg{\'e}'s Inequality}{6}{}%
-\contentsline {subsection}{\numberline {2.7}The Brunn-Minkowski Inequality}{6}{}%
+\contentsline {subsection}{\numberline {2.2}Applications of Han's Inequality}{8}{}%
+\contentsline {subsubsection}{\numberline {2.2.1}Combinatorial Entropies}{8}{}%
+\contentsline {subsubsection}{\numberline {2.2.2}Edge Isoperimetric Inequality on the Binary Hypercube}{8}{}%
+\contentsline {subsection}{\numberline {2.3}$\Phi $-Entropy}{8}{}%
+\contentsline {subsection}{\numberline {2.4}Sub-Additivity of $\Phi $-Entropy}{8}{}%
+\contentsline {subsection}{\numberline {2.5}Duality and Variational Formulas}{9}{}%
+\contentsline {subsection}{\numberline {2.6}Optimal Transport}{9}{}%
+\contentsline {subsection}{\numberline {2.7}Pinsker's Inequality}{9}{}%
+\contentsline {subsection}{\numberline {2.8}Birg{\'e}'s Inequality}{9}{}%
+\contentsline {subsection}{\numberline {2.9}The Brunn-Minkowski Inequality}{9}{}%
