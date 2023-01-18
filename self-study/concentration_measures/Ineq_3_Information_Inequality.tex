@@ -35,10 +35,183 @@
 \section{Information Theory Basics}
 \subsection{Entropy, Relative Entropy, and Mutual Information}
 \begin{itemize}
-\item 
+\item \begin{definition} (\textbf{\emph{Shannon Entropy}}) \citep{thomas2006elements}\\
+Let $(\Omega, \srF, \bP)$ be a probability space and $X: \bR \to \cX$ be a random variable. Define $p(x)$ as \emph{the probability density function} of $X$ with respect to a base measure $\mu$ on $\cX$. \underline{\emph{\textbf{The Shannon Entropy}}} is defined as 
+\begin{align*}
+H(X) &:= \E{p}{-\log p(X)} \\
+&= \int_{\Omega} -\log p(X(\omega)) d\bP(\omega) \\
+&= - \int_{\cX} p(x)  \log p(x) d\mu(x)
+\end{align*}
+\end{definition}
+
+\item \begin{definition} (\textbf{\emph{Conditional Entropy}}) \citep{thomas2006elements}\\
+If a pair of random variables $(X, Y)$ follows the joint probability density function $p(x, y)$ with respect to a base product measure $\mu$ on $\cX \times \cY$. Then \emph{\textbf{the joint entropy}} of $(X, Y)$, denoted as $H(X, Y)$, is defined as
+\begin{align*}
+H(X, Y) &:=  \E{X, Y}{-\log p(X, Y)} = - \int_{\cX \times \cY} p(x, y)  \log p(x, y) d\mu(x, y)
+\end{align*} Then \emph{\textbf{the conditional entropy}} $H(Y | X)$ is defined as
+\begin{align*}
+H(Y | X) &:= \E{X, Y}{-\log p(Y|X)}  = -\int_{\cX \times \cY} p(x, y)  \log p(y | x) d\mu(x, y) \\
+&=  \E{X}{\E{Y}{-\log p(Y|X)}} = \int_{\cX}p(x) \paren{-\int_{\cY}p(y|x) \log p(y|x) d\mu(y)}d\mu(x)
+\end{align*}
+\end{definition}
+
+\item \begin{proposition}(\textbf{Properties of Shannon Entropy})  \citep{thomas2006elements}\\
+Let $X, Y, Z$ be random variables. 
+\begin{enumerate}
+\item (\textbf{Non-negativity}) $H(X) \ge 0$;
+\item (\textbf{Chain Rule}) 
+\begin{align*}
+H(X, Y) &= H(X) + H(Y | X)
+\end{align*} Furthermore, 
+\begin{align*}
+H(X, Y | Z) &= H(X | Z) + H(Y | X, Z)
+\end{align*}
+\item (\textbf{Concavity}) $H(p) := \E{p}{-\log p(X)}$ is a concave function in terms of p.d.f. $p$, i.e.
+\begin{align*}
+H(\lambda p_1 + (1- \lambda) p_2) \ge \lambda H(p_1) + (1- \lambda) H(p_2)
+\end{align*} for any two p.d.fs $p_1, p_2$ on $\cX$ and any $\lambda \in [0,1]$.
+\end{enumerate}
+\end{proposition}
+
+\item \begin{definition} (\textbf{\emph{Relative Entropy / Kullback-Leibler Divergence}}) \citep{thomas2006elements}\\
+Suppose that $P$ and $Q$ are \emph{probability measures} on a measurable space $\cX$, and $P$ is \emph{absolutely continuous} with respect to $Q$, then \underline{\emph{\textbf{the relative entropy}}} or \underline{\emph{\textbf{the Kullback-Leibler divergence}}} is defined as
+\begin{align*}
+\kl{P}{Q} &:=\E{P}{\log\paren{\frac{dP}{dQ}}} = \int_{\cX} \log\paren{\frac{dP(x)}{dQ(x)}} dP(x)
+\end{align*} where $\frac{dP}{dQ}$ is \emph{the Radon-Nikodym derivative} of $P$ with respect to $Q$. Equivalently, the KL-divergence can be written as
+\begin{align*}
+\kl{P}{Q} &= \int_{\cX} \paren{\frac{dP(x)}{dQ(x)}} \log\paren{\frac{dP(x)}{dQ(x)}} dQ(x) 
+\end{align*} which is \emph{the entropy of $P$ relative to $Q$}. Furthermore, if $\mu$ is a base measure on $\cX$ for which densities $p$ and $q$ with $dP = p(x)d\mu$ and $dQ = q(x) d\mu$ exist, then 
+\begin{align*}
+\kl{P}{Q} &= \int_{\cX} p(x)\log\paren{\frac{p(x)}{q(x)}} d\mu(x)
+\end{align*}
+\end{definition}
+
+\item \begin{definition}(\textbf{\emph{Mutual Information}}) \citep{thomas2006elements}\\
+Consider two random variables $X, Y$ on $\cX \times \cY$ with joint probability distribution $P_{(X, Y)}$ and marginal distribution $P_{X}$ and $P_{Y}$. \underline{\emph{\textbf{The mutual information $I(X; Y)$}}} is \emph{the relative entropy} between \emph{the joint distribution} $P_{(X, Y)}$ and \emph{the product distribution} $P_{X}\otimes P_{Y}$:
+\begin{align*}
+I(X; Y) &= \kl{P_{(X, Y)}}{P_{X}\otimes P_{Y}} = \E{P_{(X, Y)}}{\log \frac{dP_{(X,Y)}}{dP_{X} \otimes dP_{Y}}}
+\end{align*} If $P_{(X, Y)}$ has a probability density function $p(x,y)$ with respect to a base measure $\mu$ on $\cX \times \cY$, then 
+\begin{align*}
+I(X; Y) &=\int_{\cX \times \cY} p(x, y)\log\paren{\frac{p(x, y)}{p_{X}(x)p_{Y}(y)}} d\mu(x, y)
+\end{align*}
+\end{definition}
+
+\item \begin{proposition} (\textbf{Properties of Relative Entropy and Mutual Information})  \citep{thomas2006elements}\\
+Let $X, Y$ be random variables.
+\begin{enumerate}
+\item (\textbf{Non-negativity})  Let $p(x), q(x)$ be probability density function of $P ,Q$.
+\begin{align*}
+\kl{P}{Q} \ge 0
+\end{align*} with equality if and only if $p(x) = q(x)$ almost surely. Therefore, the mutual information is non-negative as well:
+\begin{align*}
+I(X; Y) \ge 0
+\end{align*} with equality if and only if $X$ and $Y$ are independent.
+\item (\textbf{Symmetry})  $I(X; Y) = I(Y; X)$
+\item (\textbf{Information Gain via Conditioning}) The mutual information $I(X; Y)$ is the reduction in the uncertainty of $X$ due to the knowledge of $Y$ (and vice versa)
+\begin{align}
+I(X; Y) &= H(X) - H(X | Y) \label{eqn: mutual_information_gain}\\
+&= H(Y) - H(Y | X) \nonumber\\
+&= H(X) + H(Y) - H(X, Y) \nonumber
+\end{align}
+\item (\textbf{Shannon Entropy as Self-Information})  $I(X; X) = H(X)$
+\end{enumerate}
+\end{proposition}
 \end{itemize}
 \subsection{Chain Rules for Entropy, Relative Entropy, and Mutual Information}
+\begin{itemize}
+\item \begin{proposition} (\textbf{Conditioning Reduces Entropy}) \citep{thomas2006elements}\\
+From non-negativity of mutual information, we see that the entropy of $X$ is non-increasing when conditioning on $Y$
+\begin{align}
+H(X | Y) \le  H(X)  \label{ineqn: conditional_entropy}
+\end{align} where equality holds if and only if $X$ and $Y$ are independent.
+\end{proposition}
+
+
+\item \begin{proposition} (\textbf{Chain Rule for Entropy}) \citep{thomas2006elements}\\
+Let $X_1, X_2 \xdotx{,} X_n$ be drawn according to $p(x_1, x_2 \xdotx{,} x_n)$. Then
+\begin{align}
+H(X_1, X_2 \xdotx{,} X_n) &= \sum_{i=1}^{n}H(X_i | X_{i-1} \xdotx{,} X_1) \label{eqn: chain_rule_entropy}
+\end{align}
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Independence Bound on Entropy}) \citep{thomas2006elements}\\
+Let $X_1, X_2 \xdotx{,} X_n$ be drawn according to $p(x_1, x_2 \xdotx{,} x_n)$. Then
+\begin{align}
+H(X_1, X_2 \xdotx{,} X_n) &\le \sum_{i=1}^{n}H(X_i)  \label{ineqn: conditional_entropy_2}
+\end{align} with equality if and only if the $X_i$ are independent.
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Chain Rule for Mutual Information}) \citep{thomas2006elements}\\
+Let $X_1, X_2 \xdotx{,} X_n, Y$ be drawn according to $p(x_1, x_2 \xdotx{,} x_n, y)$. Then
+\begin{align}
+I(X_1, X_2 \xdotx{,} X_n; Y) &= \sum_{i=1}^{n}H(X_i ; Y | X_{i-1} \xdotx{,} X_1) \label{eqn: chain_rule_mutual_info}
+\end{align} where \textbf{the conditional mutual information} is defined as 
+\begin{align*}
+I(X; Y | Z) := H(X | Z) - H(X | Y, Z) = \kl{P_{(X, Y| Z)}}{P_{X|Z}\otimes P_{Y|Z}} 
+\end{align*}
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Chain Rule for Relative Entropy}) \citep{thomas2006elements}\\
+Let $P_{(X, Y)}$ and $Q_{(X, Y)}$ be two probability measures on product space $\cX \times \cY$ and $P \ll Q$. Denote the marginal distributions $P_X, Q_X$ and $P_Y$, $Q_Y$ on $\cX$ and $\cY$, respectively. $P_{Y|X}$ and $Q_{Y|X}$ are conditional distributions (Note that $P_{Y|X} \ll Q_{Y|X}$).  Define \textbf{the conditional relative entropy} as
+\begin{align*}
+\kl{P_{Y | X}}{Q_{Y | X}} := \E{P_{(X,Y)}}{\log \paren{\frac{dP_{Y| X}}{dQ_{Y | X}}}}. 
+\end{align*} Then the relative entropy of joint distribution $P_{(X, Y)}$ with respect to $Q_{(X, Y)}$ is 
+\begin{align}
+\kl{P_{(X, Y)}}{Q_{(X, Y)}} &= \kl{P_{X}}{Q_{X}} + \kl{P_{Y | X}}{Q_{Y | X}} \label{eqn: chain_rule_kl}
+\end{align} 
+\end{proposition}
+\end{itemize}
 \subsection{Log-Sum Inequalities and Convexity}
+\begin{itemize}
+\item \begin{proposition} (\textbf{Log-Sum Inequalities}) \citep{thomas2006elements}\\
+For non-negative numbers $a_1 \xdotx{,} a_n$ and $b_1 \xdotx{,} b_n$,
+\begin{align}
+\sum_{i=1}^{n}a_i \log\frac{a_i}{b_i} \ge \paren{\sum_{i=1}^{n}a_i} \log\frac{\sum_{i=1}^{n}a_i}{\sum_{i=1}^{n}b_i} \label{ineqn: log_sum_inequality}
+\end{align} with equality if and only if $\frac{a_i}{b_i}$ is constant.
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Joint Convexity of Relative Entropy}) \citep{thomas2006elements}\\
+$\kl{p}{q}$ is \textbf{convex} in the pair $(p, q)$; that is, if $(p_1, q_1)$ and $(p_2, q_2)$ are two pairs of probability density functions, then for $\lambda \in [0, 1]$,  
+\begin{align}
+\kl{\lambda p_1 + (1- \lambda) p_2}{\lambda q_1 + (1- \lambda) q_2} &\le \lambda \kl{p_1}{q_1} + (1- \lambda) \kl{p_2}{q_2} \label{ineqn: kl_divergence_joint_convex}
+\end{align}
+\end{proposition}
+
+\item \begin{proposition} \citep{thomas2006elements}\\
+Let $(X,Y) \sim p(x,y) = p(x)p(y|x)$. The mutual information $I(X; Y)$ is a \textbf{concave} function of $p(x)$ for fixed $p(y|x)$ and a \textbf{convex} function of $p(y|x)$ for fixed $p(x)$.
+\end{proposition}
+\end{itemize}
+
+\subsection{Data Processing Inequality}
+\begin{itemize}
+\item \begin{definition} (\emph{Data Processing Markov Chain})\\
+Random variables $X, Y, Z$ are said to \emph{\textbf{form a Markov chain}} in that order (denoted by $X \to Y \to Z$) if the conditional distribution of $Z$ depends only on $Y$ and is \emph{\textbf{conditionally independent}} of $X$. Specifically, $X, Y$, and $Z$ form a Markov chain $X \to Y \to Z$ if the joint probability mass function can be written as
+\begin{align*}
+p(x, y, z) &= p(x) p(y | x) p(z | y)
+\end{align*}
+\end{definition}
+
+\item \begin{proposition} (\textbf{Data Processing Inequality})   \citep{thomas2006elements}\\
+If $X \to Y \to Z$, then
+\begin{align*}
+I(X; Z) \le I(X; Y)
+\end{align*}
+\end{proposition}
+
+\item \begin{corollary}\citep{thomas2006elements}\\
+In particular, if $Z = g(Y)$, we have 
+\begin{align*}
+I(X; g(Y)) &\le I(X; Y)
+\end{align*}
+\end{corollary}
+
+\item \begin{corollary}\citep{thomas2006elements}\\
+If $X \to Y \to Z$, then
+\begin{align*}
+I(X; Y| Z) &\le I(X; Y)
+\end{align*} Thus, the dependence of $X$ and $Y$ is \textbf{decreased} (or remains unchanged) by the observation of a ``\textbf{downstream}" random variable $Z$. 
+\end{corollary}
+\end{itemize}
 
 \subsection{Combinatorial Entropies}
 
