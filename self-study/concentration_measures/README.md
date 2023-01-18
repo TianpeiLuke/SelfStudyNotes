@@ -45,6 +45,13 @@
 		- The Efron-Stein Inequality via Duality
 		- Exponential Tail Bounds via Efron-Stein Inequality
 
+- Information Inequalities [pdf](./Ineq_3_Information_Inequality.pdf)
+	- Information Theory Basics
+		- Shannon Entropy, Relative Entropy and Mutual Information
+		- Chain Rules for Entropy, Relative Entropy, and Mutual Information
+		- Log-Sum Inequalities and Joint Convexity of Relative Entropy
+		- Data Processing Inequality
+
 
 
 
