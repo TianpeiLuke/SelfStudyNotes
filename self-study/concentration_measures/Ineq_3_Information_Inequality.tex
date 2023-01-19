@@ -303,6 +303,10 @@ H_{\Phi}(X) &= \E{}{\Phi(X)} - \Phi(\E{}{X}). \label{def: phi_entropy}
 \end{definition}
 
 \item \begin{remark}
+The $\Phi$-entropy is a \emph{\textbf{functional}} of \emph{distribution} $P_{X}$ instead of a function of $X$.
+\end{remark}
+
+\item \begin{remark}
 By Jenson's inequality, the $\Phi$-entropy is \emph{non-negative}
 \begin{align*}
 \Phi(\E{}{X}) &\le \E{}{\Phi(X)}\\
@@ -316,9 +320,13 @@ By Jenson's inequality, the $\Phi$-entropy is \emph{non-negative}
 \begin{align*}
 H_{\Phi}(X) &= \E{}{X^2} - (\E{}{X})^2 = \text{Var}(X).
 \end{align*}
+\item For $\Phi(x) = -\log(x)$, \emph{the $\Phi$-entropy} of $Y=e^{\lambda X}$ is \emph{the \textbf{logarithm of moment generating function}} of $X - \E{}{X}$:
+\begin{align}
+H_{\Phi}(e^{\lambda X}) &= -\lambda \E{}{X} + \log\paren{\E{}{e^{\lambda X}}} = \log\E{}{e^{\lambda(X - \E{}{X})}} := \psi_{X- \E{}{X}}(\lambda). \label{eqn: phi_entropy_log_mgf}
+\end{align}
 \item For $\Phi(x) = x\log x$, \emph{the $\Phi$-entropy} of $X$ is defined as the \underline{\emph{\textbf{entropy}} of $X$}
 \begin{align}
-\text{Ent}(X)&:= \E{}{X\log X} - \E{}{X}\log\paren{\E{}{X}}. \label{def: phi_entropy_kl}
+H_{\Phi}(X) = \text{Ent}(X)&:=  \E{}{X\log X} - \E{}{X}\log\paren{\E{}{X}}. \label{def: phi_entropy_kl}
 \end{align} Let $(\Omega, \srB)$ be measurable space, and $P$ and $Q$ are probability measures on $\Omega$ with $P \ll Q$. Define a random variable $X$ by the \emph{Radon-Nikodym derivative} of $P$ with respect to $Q$; that is,
 \begin{align*}
 X(\omega) &:= \left\{ \begin{array}{cc}
@@ -378,6 +386,10 @@ The Efron-Stein inequality is the special case of the inequality when $\Phi(x) =
 \E{}{\Phi(X)} - \Phi(\E{}{X}) &\le \sum_{i=1}^{n}\E{}{\E{(-i)}{\Phi(X)} - \Phi(\E{(-i)}{X})}.\\
 \Rightarrow \text{Var}(X) &\le \sum_{i=1}^{n}\E{}{\text{Var}_{(-i)}(X)}
 \end{align*} 
+\end{remark}
+
+\item \begin{remark} (\textbf{\emph{Tensorization of Entropy}})\\
+The inequality in \eqref{ineqn: sub_additivity_phi_entropy} or \ref{ineqn: sub_additivity_phi_entropy_2} is also called the tensoriztion of entropy in \citep{wainwright2019high}
 \end{remark}
 
 \item \begin{proposition} (\textbf{Sub-Additivity of $\Phi$-Entropy}) \citep{boucheron2013concentration}\\
@@ -494,7 +506,7 @@ Conversely, let $U$ be such that $\E{P}{UX} \le \text{Ent}(X)$ for all non-negat
 From \eqref{eqn: duality_entropy}, taking $U = \log\frac{T}{\E{}{T}}$, so that $\E{}{e^U} = \E{}{\frac{T}{\E{}{T}}} = 1$. This gives us \eqref{eqn: duality_entropy_2}.\qed
 \end{proof}
 
-\item \begin{corollary}  (\textbf{Duality Formula of Log Moment Generating Function}) \citep{thomas2006elements, boucheron2013concentration}\\
+\item \begin{corollary} \label{coro: dual_log_mgf}  (\textbf{Duality Formula of Log Moment Generating Function}) \citep{thomas2006elements, boucheron2013concentration}\\
 Let $X$ be a real-valued integrable random variable. Then for every $\lambda \in \bR$, 
 \begin{align}
 \log \E{Q}{e^{\lambda\paren{X - \E{}{X}}}} &= \sup_{P \ll Q}\set{\lambda\paren{\E{P}{X} - \E{Q}{X}} - \kl{P}{Q} }, \label{eqn: duality_log_mgf}
@@ -523,7 +535,7 @@ U &= \lambda\paren{X - \E{Q}{X}} - \sup_{P \ll Q}\set{\lambda(\E{P}{X} - \E{Q}{X
 \end{align*}
 \end{proof}
 
-\item \begin{corollary}  (\textbf{Duality Formula of K-L divergence}) \citep{thomas2006elements, boucheron2013concentration}\\
+\item \begin{corollary}  (\textbf{Duality Formula of Kullback-Leibler Divergence}) \citep{thomas2006elements, boucheron2013concentration}\\
 Let $P$ and $Q$ be two probability distributions on the same space.Then
 \begin{align}
 \kl{P}{Q} &= \sup_{X}\set{\E{P}{X} - \log \E{Q}{e^{X}} }, \label{eqn: duality_kl_divg}
@@ -558,7 +570,57 @@ Let $X$ be a non-negative random variable such that $\E{}{\Phi(X)} < \infty$. Th
 \end{corollary}
 \end{itemize}
 
-\subsection{Optimal Transport}
+\subsection{Wasserstein Distance and Information Inequality}
+\begin{itemize}
+\item \begin{proposition} (\textbf{Wasserstein Distance and Information Inequality}) \citep{boucheron2013concentration}\\
+Let $X$ be a real-valued integrable random variable. Let $\phi$ be a \textbf{convex} and \textbf{continuously differentiable} function on a (possibly unbounded) interval $[0, b)$ and assume that $\phi(0) = \phi'(0) = 0$. Define, for every $x \ge 0$, \textbf{the Legendre transform} $\phi^{*}(x) = \sup_{\lambda \in (0,b)}(\lambda x - \phi(\lambda))$, and let, for every $t \ge 0$, $\phi^{*-1}(t) = \inf\{x \ge 0: \phi^{*}(x) > t\}$, i.e. the \textbf{the generalized inverse} of $\phi^{*}$. Then the following two statements are equivalent:
+\begin{enumerate}
+\item for every $\lambda \in (0,b)$,
+\begin{align*}
+\psi_{X - \E{}{X}}(\lambda) &\le \phi(\lambda)
+\end{align*} where $\psi_{X}(\lambda):= \log\E{Q}{e^{\lambda X}}$ is the logarithm of moment generating function;
+\item for any probability measure $P$ absolutely continuous with respect to $Q$ such that $\kl{P}{Q} < \infty$,
+\begin{align}
+\E{P}{X} - \E{Q}{X} &\le \phi^{*-1}\paren{\kl{P}{Q}}. \label{ineqn: information_inequality_general}
+\end{align} 
+
+In particular, given $\nu > 0$,
+\begin{align*}
+\psi_{X - \E{}{X}}(\lambda) &\le \frac{\nu\lambda^2}{2}
+\end{align*} for every $\lambda >0$ \textbf{if and only if} for any probability measure $P$ absolutely continuous with respect to $Q$ and such that $\kl{P}{Q} < \infty$, 
+\begin{align}
+\E{P}{X} - \E{Q}{X} &\le \sqrt{2\nu\kl{P}{Q}}. \label{ineqn: information_inequality_sub_gaussian}
+\end{align}
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+As a direct consequence of Corollary \ref{coro: dual_log_mgf}, we see that (1) holds if and only if for every distribution $P \ll Q$, 
+\begin{align*}
+\psi_{X - \E{}{X}}(\lambda) &\le  \phi(\lambda) &&\\
+\Leftrightarrow  \lambda\paren{\E{P}{X} - \E{Q}{X}} - \kl{P}{Q}  &\le  \phi(\lambda), && \forall P\ll Q\\
+\Leftrightarrow \E{P}{X} - \E{Q}{X} &\le \frac{\phi(\lambda) + \kl{P}{Q}}{\lambda}, && \forall P\ll Q, \lambda \in (0,b)\\
+\Leftrightarrow \E{P}{X} - \E{Q}{X} &\le \inf_{\lambda \in (0,b)}\set{\frac{\kl{P}{Q} + \phi(\lambda)}{\lambda}} && \forall P\ll Q
+\end{align*}
+Note that 
+\begin{align*}
+\phi^{*-1}(t) = \inf_{\lambda \in (0,b)}\brac{\frac{t + \phi(\lambda)}{\lambda}}
+\end{align*} Setting $t= \kl{P}{Q}$, we have
+\begin{align*}
+\psi_{X - \E{}{X}}(\lambda) &\le  \phi(\lambda) \\
+\Leftrightarrow \E{P}{X} - \E{Q}{X} &\le  \phi^{*-1}\paren{\kl{P}{Q}}.
+\end{align*} which shows that (i) is equivalent to (ii). Applying the previous result with $\phi(\lambda) = \lambda^2 \nu/2$ for every $
+\lambda > 0$ leads to the stated special case of equivalence since then $\phi^{*-1}(t) = \sqrt{2\nu t}$. \qed
+\end{proof}
+
+\item \begin{remark} (\emph{\textbf{The Quadratic Transportation Cost Inequality / The Information Inequality}}) \citep{boucheron2013concentration, wainwright2019high} \\
+The inequality \eqref{ineqn: information_inequality} and \eqref{ineqn: information_inequality_sub_gaussian} are called \emph{\textbf{information inequality}} in \citep{wainwright2019high} due to the role of Kullback-Leibler Divergence in information theory. 
+
+The inequality  \eqref{ineqn: information_inequality_sub_gaussian} is related to what is usually termed a \emph{\textbf{quadratic transportation cost inequality}}. If $\Omega$ is a \emph{metric space}, the probability measure $Q$ is said to satisfy a \emph{quadratic transportation cost inequality} if the last inequality holds for every $X$ which is \emph{Lipschitz} on $\Omega$ with \emph{Lipschitz norm} at most $1$. 
+\begin{align}
+\cW_1(P, Q) = \sup_{X \in \text{Lip}_1}\set{\E{P}{X} - \E{Q}{X} } &\le \sqrt{2\nu\kl{P}{Q}}. \label{ineqn: information_inequality_sub_gaussian_wasserstein}
+\end{align} where $Lip_1 = \set{f \in \bR^{\Omega}: \abs{f(x) - f(y)} \le L\norm{x - y}{}, \;\; L\le 1}$.
+\end{remark}
+\end{itemize}
 
 \subsection{Pinsker's Inequality}
 
