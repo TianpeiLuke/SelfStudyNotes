@@ -51,6 +51,7 @@
 		- Chain Rules for Entropy, Relative Entropy, and Mutual Information
 		- Log-Sum Inequalities and Joint Convexity of Relative Entropy
 		- Data Processing Inequality
+		- Fano's Inequality
 	- Information Inequalities
 		- Han's Inequalities for Shannon Entropy and Relative Entropy
 		- Applications
