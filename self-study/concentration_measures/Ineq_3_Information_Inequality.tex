@@ -224,7 +224,63 @@ I(X; Y| Z) &\le I(X; Y)
 \end{align*} Thus, the dependence of $X$ and $Y$ is \textbf{decreased} (or remains unchanged) by the observation of a ``\textbf{downstream}" random variable $Z$. 
 \end{corollary}
 \end{itemize}
+\subsection{Fano's Inequality}
+\begin{itemize}
+\item \begin{remark}
+Suppose that we know a random variable $Y$ and we wish to guess the value of a correlated random variable $X$. \emph{\textbf{Fano's inequality}} relates \emph{\textbf{the probability of error}} in guessing the random variable $X$ to its \emph{conditional entropy} $H(X|Y)$. It will be crucial in proving \emph{the \textbf{converse} to Shannon's \textbf{channel capacity theorem}}.
+\end{remark}
 
+\item \begin{proposition} (\textbf{Fano's Inequality})\citep{thomas2006elements} \\
+Let $X, Y$ be random variables on domain $\cX, \cY$ and $\widehat{X} = g(Y)$ is an estimate of $X$ where $g: \cY \to \cX$ is measurable function. The probability of error is defined as
+\begin{align*}
+P_{e} &= \bP\set{\widehat{X} \neq X}.
+\end{align*} Then we have
+\begin{align}
+H(P_{e}) + P_{e}\log \abs{\cX} \ge H(X | \widehat{X}) \ge H(X | Y) \label{ineqn: fano_inequality}
+\end{align} This inequality can be weakened to
+\begin{align}
+1+ P_{e}\log \abs{\cX} &\ge H(X|Y) \label{ineqn: fano_inequality_2}\\
+P_{e} &\ge \frac{H(X|Y) - 1}{\log \abs{\cX}}.  \label{ineqn: fano_inequality_3}
+\end{align}
+\end{proposition}
+
+\item \begin{corollary}\citep{thomas2006elements} \\
+For any two random variables $X, Y$, let $p = \bP\set{X \neq Y}$. 
+\begin{align}
+H(p) + p\log \abs{\cX} \ge H(X | Y) \label{ineqn: fano_inequality_4}
+\end{align}
+\end{corollary}
+
+\item \begin{corollary}\citep{thomas2006elements} \\
+Let  $P_{e} = \bP\set{\widehat{X} \neq X}$, and let $\widehat{X}: \cY \to \cX$; then
+\begin{align}
+H(P_{e}) + P_{e}(\log \abs{\cX} - 1) \ge H(X | Y) \label{ineqn: fano_inequality_5}
+\end{align}
+\end{corollary}
+
+\item \begin{lemma} (\textbf{Bound of Error Probability via Shannon Entropy}) \citep{thomas2006elements} \\
+If $X, X'$ are independent identically distributed random variables with entropy $H(X)$, 
+\begin{align}
+\bP\set{X \neq X'} &\le 1 - e^{-H(X)} \label{ineqn: error_prob_inequality_iid}
+\end{align} with equality if and only if $X$ has a uniform distribution.
+\end{lemma}
+
+\item \begin{corollary}  (\textbf{Bound of Error Probability via Relative Entropy}) \citep{thomas2006elements} \\
+If $X, X'$ are independent random variables with distribution $P$ and $Q$, respectively on $\cX$, and $P \ll Q$ 
+\begin{align}
+\bP\set{X \neq X'} &\le 1 - e^{-H(P) - \kl{P}{Q}}. \label{ineqn: error_prob_inequality_kl}
+\end{align} Similarly, if $Q \ll P$, then
+\begin{align*}
+\bP\set{X' \neq X} &\le 1 - e^{-H(Q) - \kl{Q}{P}}.
+\end{align*}
+\end{corollary}
+
+\item \begin{remark}
+The error probability bound \eqref{ineqn: error_prob_inequality_iid} states that \emph{the \textbf{higher} the uncertainty} is (i.e. $H(X)$ increases), \emph{the \textbf{lower} the probability that $X = X'$}. Or, equivalently, \emph{the \textbf{lower} (the Shannon and relative) \textbf{entropy}} is, \emph{the \textbf{lower} the \textbf{probability of error}} for an estimate $X'$ of $X$.
+
+From \emph{Fano's inequality} \eqref{ineqn: fano_inequality}, we see that \emph{\textbf{the probability of error}} for estimator $\widehat{X}$ based on observation $Y$ is \emph{\textbf{bounded below}} by  \emph{the conditional entropy} $H(X|Y)$ of state $X$ given observation $Y$. That is, we \emph{cannot achieve lower error} of the estimation if uncertainty of state given observation ($H(X|Y)$) is high. 
+\end{remark}
+\end{itemize}
 
 \section{Information Inequalities}
 \subsection{Han's Inequality}
@@ -718,19 +774,6 @@ Let $P, Q$ be two probability distributions on measurable space $(\Omega, \srF)$
 \end{align} where $h(p, q) = \kl{p}{q} = q\log(q/p) + (1-q)\log((1-q)/(1-p))$ when $p,q \in [0, 1]$ are parameters of Bernoulli random variables. 
 \end{proposition}
 
-\item \begin{proposition} (\textbf{Fano's Inequality})\citep{thomas2006elements} \\
-Let $X, Y$ be random variables on domain $\cX, \cY$ and $\widehat{X} = g(Y)$ is an estimate of $X$ where $g: \cY \to \cX$ is measurable function. The probability of error is defined as
-\begin{align*}
-P_{e} &= \bP\set{\widehat{X} \neq X}.
-\end{align*} Then we have
-\begin{align}
-H(P_{e}) + P_{e}\log \abs{\cX} \ge H(X | \widehat{X}) \ge H(X | Y) \label{ineqn: fano_inequality}
-\end{align} This inequality can be weakened to
-\begin{align}
-1+ P_{e}\log \abs{\cX} &\ge H(X|Y) \label{ineqn: fano_inequality_2}\\
-P_{e} &\ge \frac{H(X|Y) - 1}{\log \abs{\cX}}.  \label{ineqn: fano_inequality_3}
-\end{align}
-\end{proposition}
 
 \item \begin{remark}
 \emph{\textbf{The variational representation} of \textbf{relative entropy}} may be used to establish \emph{\textbf{lower bounds}} for \emph{\textbf{the probability of error}} in \emph{multiple testing problems}. The next result is a sharper version of \emph{Fano's inequality}, a classical tool from information theory.
