@@ -773,6 +773,26 @@ Let $P, Q$ be two probability distributions on measurable space $(\Omega, \srF)$
 \sup_{A \in \srF} h(P(A), Q(A)) &\le \kl{P}{Q} \label{ineqn: total_variation_inequality_duality}
 \end{align} where $h(p, q) = \kl{p}{q} = q\log(q/p) + (1-q)\log((1-q)/(1-p))$ when $p,q \in [0, 1]$ are parameters of Bernoulli random variables. 
 \end{proposition}
+\begin{proof}
+For any $p \in [0, 1]$, let 
+\begin{align*}
+\phi_{p}(\lambda) &= \log\paren{p\paren{e^{\lambda} - 1} + 1}
+\end{align*} denote the logarithm of the moment generating function of the Bernoulli$(p)$ distribution where $\lambda \in \bR$. By the duality formulation of relative entropy, for $X = \ind{A}$,
+\begin{align*}
+\kl{P}{Q} &\ge \E{P}{\lambda \ind{A}} - \log\E{Q}{e^{\lambda \ind{A}}} \\
+\Rightarrow \kl{P}{Q}  &\ge \sup_{\lambda \ge 0}\set{\lambda P(A) - \phi_{P(A)}(\lambda) }.
+\end{align*} The proposition follows by noting that for any $a \in [0, 1]$, 
+\begin{align*}
+h(p, a) &= \sup_{\lambda\ge 0}\set{\lambda a - \phi_{p}(\lambda)}. \qed
+\end{align*}
+\end{proof}
+
+\item \begin{remark}
+Note that
+\begin{align*}
+h(P(A), Q(A)) &\ge 2\paren{P(A) - Q(A)}^2.
+\end{align*} Thus the proposition above implies the Pinsker's inequality.
+\end{remark}
 
 
 \item \begin{remark}
@@ -785,6 +805,25 @@ Let $P_0, P_1 \xdotx{,} P_N$ be probability distributions on measurable space $(
 a \le h\paren{a, \frac{1 - a}{N}} \le \frac{1}{N}\sum_{i=1}^{N}\kl{P_i}{P_0} \label{ineqn: birge_inequality}
 \end{align}
 \end{proposition}
+\begin{proof}
+By the variational representation of relative entropy, for any $i=0 \xdotx{,} N$, 
+\begin{align*}
+\sup_{\lambda > 0}\set{\E{P_i}{\lambda \ind{A_i}} - \log\E{P_0}{e^{\lambda \ind{A_i}}}} &\le \kl{P_i}{P_0}.
+\end{align*} See that 
+\begin{align*}
+1 - a&= 1 - \min_{i=0 \xdotx{,} N}P_{i}(A_i)\\
+&\ge 1- P_{0}(A_0) \ge \sum_{i=1}^{N}P_{0}(A_i).
+\end{align*} For any $\lambda >0$, 
+\begin{align*}
+\frac{1}{N}\sum_{i=1}^{N}\kl{P_i}{P_0} &\ge \frac{1}{N}\sum_{i=1}^{N}\set{\lambda P_i(A_i) - \log\E{P_0}{e^{\lambda \ind{A_i}}}} \\
+&\ge \frac{1}{N}\sum_{i=1}^{N}\set{\lambda a  - \log\paren{P_0(A_i)\paren{e^{\lambda} - 1} + 1}} \\
+&= \lambda a  - \frac{1}{N}\sum_{i=1}^{N}\log\paren{P_0(A_i)\paren{e^{\lambda} - 1} + 1} \\
+& \ge \lambda a  - \log\paren{\frac{1}{N}\sum_{i=1}^{N}\paren{P_0(A_i)\paren{e^{\lambda} - 1} + 1}}  \quad (\text{by convexity of}-\log(x))\\
+& = \lambda a  - \log\paren{\paren{\frac{1}{N}\sum_{i=1}^{N}P_0(A_i)}\paren{e^{\lambda} - 1} + 1  } \\
+& \ge \lambda a  -  \log\paren{\frac{1 - P_0(A_0)}{N}\paren{e^{\lambda} - 1} + 1 }\\
+&\ge \lambda a  - \log\paren{\frac{1 - a}{N}\paren{e^{\lambda} - 1} + 1 }
+\end{align*} Note that the supremum of the right-hand side with respect to $\lambda$ is $h\paren{a, \frac{1- a}{N}}$. \qed
+\end{proof}
 
 
 \end{itemize}
