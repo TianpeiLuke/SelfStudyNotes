@@ -55,7 +55,7 @@
 		- Han's Inequalities for Shannon Entropy and Relative Entropy
 		- Applications
 			- VC Entropy
-			- Edge Isopermetric Property of Hypercube 
+			- Edge Isopermetric Property of Binary Hypercube 
 		- Phi-Entropy
 		- Sub-Additivity of Phi-Entropy
 		- Variational Formulation of Phi-Entropy and Duality
