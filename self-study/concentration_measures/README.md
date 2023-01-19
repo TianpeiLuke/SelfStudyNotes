@@ -60,6 +60,8 @@
 		- Sub-Additivity of Phi-Entropy
 		- Variational Formulation of Phi-Entropy and Duality
 		- Wasserstein Distance, Transportation Cost Inequality / Information Inequality
+		- Pinsker's Inequality
+		- Birge's Inequality and Multiple Testing Problem
 
 
 
