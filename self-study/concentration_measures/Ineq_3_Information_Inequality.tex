@@ -356,7 +356,7 @@ H(X_1, X_2 \xdotx{,} X_n) &\le \sum_{i=1}^{n}H(X_i)
 \end{remark}
 
 \item \begin{proposition} (\textbf{Sub-Additivity of The Entropy}) \citep{boucheron2013concentration}\\
-Let $\Phi(x) = x\log x$,  for $x >0$ and $\Phi(0) = 0$. Let $Z_1, Z_2 \xdotx{,} Z_n$ be independent random variables taking values in $\cX$, and let $f: \cX^n \to [0, \infty)$. Letting $X = f(Z_1, Z_2 \xdotx{,} Z_n)$, we have 
+Let $\Phi(x) = x\log x$,  for $x >0$ and $\Phi(0) = 0$. Let $Z_1, Z_2 \xdotx{,} Z_n$ be independent random variables taking values in $\cX$, and let $f: \cX^n \to [0, \infty)$ be a measurable function. Letting $X = f(Z_1, Z_2 \xdotx{,} Z_n)$ such that $\E{}{X\log X} < \infty$, we have 
 \begin{align}
 \E{}{\Phi(X)} - \Phi(\E{}{X}) &\le \sum_{i=1}^{n}\E{}{\E{(-i)}{\Phi(X)} - \Phi(\E{(-i)}{X})}, \label{ineqn: sub_additivity_phi_entropy}
 \end{align} where $\E{(-i)}{\cdot}$ is the conditional expectation operator conditioning on $Z_{(-i)}$. Introducing the notation $\text{Ent}_{(-i)}(X) = \E{(-i)}{\Phi(X)} - \Phi(\E{(-i)}{X})$, this can be re-written as
@@ -379,6 +379,23 @@ p(z) &= f(z) q(z), \quad \forall z \in \cX^n
 \sum_{i=1}^{n}\paren{\kl{P}{Q} - \kl{P_{(-i)}}{Q_{(-i)}}} &=  \sum_{i=1}^{n}\E{}{\E{(-i)}{\Phi(X)} - \Phi(\E{(-i)}{X})}
 \end{align*} and the statement follows. \qed
 \end{proof}
+\begin{proof} (\emph{\textbf{Alternative Proof via Duality Formulation of Entropy}})\\
+Denote the conditional expectation operator $\E{1:i}{\cdot} = \E{}{\cdot | Z_1 \xdotx{,} Z_i}$ for $i=1 \xdotx{,} n$ and the convention $\E{0}{\cdot} = \E{}{\cdot}$. Noting that the operator $\E{1:n}{\cdot}$ is just identity when restricted to the set of $(Z_1 \xdotx{,} Z_n)$-measurable and integrable random variables, we have the decomposition
+\begin{align*}
+X \paren{\log X - \log\paren{\E{}{X}}} &= \sum_{i=1}^{n}X \paren{\log\paren{\E{1:i}{X}} - \log\paren{\E{1:i-1}{X}}}.
+\end{align*} Note that since $Z_1, Z_2 \xdotx{,} Z_n$  are independent, we have $\E{(-i)}{\E{1:i}{X}} = \E{1:i-1}{X}$.
+Now the duality formula given in Theorem \ref{thm: duality_entropy_2} yields
+\begin{align*}
+\E{}{X \paren{\log(T) - \log\paren{\E{}{T}}}} &\le \text{Ent}(X)
+\end{align*} Setting $T:= \E{1:i}{X}$, and replacing expectation $\E{}{\cdot}$ by conditional expectation $\E{(-i)}{\cdot}$
+\begin{align*}
+\E{(-i)}{X \paren{\log\paren{\E{1:i}{X}} - \log\paren{\E{(-i)}{\E{1:i}{X}}}}} &\le \text{Ent}_{(-i)}(X).
+\end{align*} Finally, taking expectations on both sides of the decomposition above yields 
+\begin{align*}
+\E{}{X \paren{\log X - \log\paren{\E{}{X}}}} &= \sum_{i=1}^{n}\E{}{\E{(-i)}{X \paren{\log\paren{\E{1:i}{X}} - \log\paren{\E{(-i)}{\E{1:i}{X}}}}}} \\
+&\le \sum_{i=1}^{n}\E{}{\text{Ent}_{(-i)}(X)} \qed
+\end{align*}
+\end{proof}
 
 \item \begin{remark}
 The Efron-Stein inequality is the special case of the inequality when $\Phi(x) = x^2$,
@@ -388,8 +405,12 @@ The Efron-Stein inequality is the special case of the inequality when $\Phi(x) =
 \end{align*} 
 \end{remark}
 
-\item \begin{remark} (\textbf{\emph{Tensorization of Entropy}})\\
-The inequality in \eqref{ineqn: sub_additivity_phi_entropy} or \eqref{ineqn: sub_additivity_phi_entropy_2} is also called the \emph{\textbf{tensoriztion of entropy}} in \citep{wainwright2019high}
+\item \begin{remark} (\textbf{\emph{Han's inequality from Sub-additivity of Entropy}}) \citep{boucheron2013concentration} \\
+It is interesting to notice that \emph{Han's inequality} itself can be derived from \emph{the sub-additivity of entropy}. In other words, for \emph{discrete probability distributions}, the sub-additivity of entropy and Han's inequality are \emph{\textbf{equivalent}}. 
+\end{remark}
+
+\item \begin{remark} (\textbf{\emph{Tensorization Property of Entropy}}) \citep{wainwright2019high}\\
+The inequality in \eqref{ineqn: sub_additivity_phi_entropy} or \eqref{ineqn: sub_additivity_phi_entropy_2} is also called \underline{\emph{\textbf{the tensoriztion property of entropy}}}.
 \end{remark}
 
 \item \begin{proposition} (\textbf{Sub-Additivity of $\Phi$-Entropy}) \citep{boucheron2013concentration}\\
@@ -432,10 +453,8 @@ Let $\cC$ denote the class of functions $\Phi: [0, \infty) \to \bR$ that are \te
 H_{\Phi}\paren{\int f(z, Z_2)d\mu_1(z)} &\le \int H_{\Phi}(f(z, Z_2)) d\mu_1(z) \nonumber\\
 \Leftrightarrow H_{\Phi}\paren{\E{Z_1}{f(Z_1, Z_2)}} &\le \E{Z_1}{H_{\Phi}\paren{f(Z_1, Z_2)}} \label{eqn: sub_additivity_phi_entropy_general_proof_1}
 \end{align}
-This implies that in order to prove sub-additivity of a $\Phi$-entropy, it
-suffices to show that it has the Jensen property.
+The proof of this property can be done by using the duality formulation of $\Phi$-entropy in Theorem \ref{thm: duality_general_phi_entropy}.
 \end{remark}
-
 \end{itemize}
 
 
@@ -497,7 +516,7 @@ Conversely, let $U$ be such that $\E{P}{UX} \le \text{Ent}(X)$ for all non-negat
 \end{align*} and taking the limit when $n\to \infty$, we show by monotonicity that $\E{}{e^{U}} \le 1$. \qed
 \end{proof}
 
-\item  \begin{theorem}(\textbf{Alternative Duality Formula of Entropy}) \citep{boucheron2013concentration}
+\item  \begin{theorem} \label{thm: duality_entropy_2}(\textbf{Alternative Duality Formula of Entropy}) \citep{boucheron2013concentration}
 \begin{align}
 \text{Ent}(X) &= \sup_{T}\E{}{X\paren{\log(T) - \log\paren{\E{}{T}}}}  \label{eqn: duality_entropy_2}
 \end{align} where the supremum is taken over all non-negative and integrable random variables.
@@ -568,6 +587,13 @@ Let $X$ be a non-negative random variable such that $\E{}{\Phi(X)} < \infty$. Th
 \text{Ent}(X) &= \inf_{u > 0}\E{}{X\paren{\log(X) - \log(u)} - (X - u) } \label{eqn: duality_entropy_3_breg}
 \end{align}
 \end{corollary}
+
+\item \begin{theorem} \label{thm: duality_general_phi_entropy} (\textbf{Duality Formula of General $\Phi$-Entropy}) \citep{boucheron2013concentration}\\
+Let $\cC$ denote the class of functions $\Phi: [0, \infty) \to \bR$ that are \textbf{continuous} and \textbf{convex} on $[0, \infty)$, \textbf{twice differentiable} on $(0, \infty)$, and such that either $\Phi$ is \textbf{affine} or $\Phi''$ is \textbf{strictly positive} and $1/\Phi''$ is \textbf{concave}. Denote $\text{conv}(L_{1}^{+})$ as \textbf{the convex set} of \textbf{non-negative} and \textbf{integrable} random variables $X$. Let $\Phi \in \cC$ and $X \in \text{conv}(L_{1}^{+})$. If $\Phi(X)$ is integrable, then
+\begin{align}
+H_{\Phi}(X) &=  \sup_{T \in \text{conv}(L_{1}^{+}), T\neq 0}\set{\E{}{\paren{\Phi'(T) - \Phi'(\E{}{T})}(X-T) + \Phi(T)} - \Phi(\E{}{T})}.  \label{eqn: duality_phi_entropy_general}
+\end{align} The supremum is achieved when $T=X$ (or $T=1$ if $X=0$).
+\end{theorem}
 \end{itemize}
 
 \subsection{Wasserstein Distance and Information Inequality}
@@ -613,20 +639,114 @@ Note that
 \end{proof}
 
 \item \begin{remark} (\emph{\textbf{The Quadratic Transportation Cost Inequality / The Information Inequality}}) \citep{boucheron2013concentration, wainwright2019high} \\
-The inequality \eqref{ineqn: information_inequality} and \eqref{ineqn: information_inequality_sub_gaussian} are called \emph{\textbf{information inequality}} in \citep{wainwright2019high} due to the role of Kullback-Leibler Divergence in information theory. 
+The inequality \eqref{ineqn: information_inequality_general} and \eqref{ineqn: information_inequality_sub_gaussian} are called \emph{\textbf{information inequality}} in \citep{wainwright2019high} due to the role of Kullback-Leibler Divergence in information theory. 
 
 The inequality  \eqref{ineqn: information_inequality_sub_gaussian} is related to what is usually termed a \emph{\textbf{quadratic transportation cost inequality}}. If $\Omega$ is a \emph{metric space}, the probability measure $Q$ is said to satisfy a \emph{quadratic transportation cost inequality} if the last inequality holds for every $X$ which is \emph{Lipschitz} on $\Omega$ with \emph{Lipschitz norm} at most $1$. 
 \begin{align}
-\cW_1(P, Q) = \sup_{X \in \text{Lip}_1}\set{\E{P}{X} - \E{Q}{X} } &\le \sqrt{2\nu\kl{P}{Q}}. \label{ineqn: information_inequality_sub_gaussian_wasserstein}
-\end{align} where $Lip_1 = \set{f \in \bR^{\Omega}: \abs{f(x) - f(y)} \le L\norm{x - y}{}, \;\; L\le 1}$.
+\cW(P, Q) = \sup_{X \in \text{Lip}_1}\set{\E{P}{X} - \E{Q}{X} } &\le \sqrt{2\nu\kl{P}{Q}}. \label{ineqn: information_inequality_sub_gaussian_wasserstein}
+\end{align} where $Lip_1 = \set{f \in \bR^{\Omega}: \abs{f(x) - f(y)} \le L\,d(x, y), \;\; L\le 1}$ and $d$ is the metric in $\Omega$. Here $\cW(P,Q)$ is \emph{\textbf{the Wasserstein distance}} between $P$ and $Q$ induced by metric $d$.
 \end{remark}
 \end{itemize}
 
 \subsection{Pinsker's Inequality}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Total Variation / Variational Distance}})\\
+Let $P, Q$ be two probability measures on measurable space $(\Omega, \srF)$. The \underline{\emph{\textbf{total variation}}} or \underline{\emph{\textbf{variational distance}}} between $P$ and $Q$ is defined by
+\begin{align}
+V(P,Q) &:= \sup_{A \in \srF}\abs{P(A) - Q(A)} \label{def: total_variation_prob}
+\end{align}
+\end{definition}
 
-\subsection{Birg{\'e}'s Inequality}
+\item \begin{remark} (\emph{\textbf{Equivalent Formulation of Total Variation}})\\
+It is a well-known and simple fact that the total variation is half the $L_1$-distance, that is, if $\mu$ is a \emph{common dominating measure} of $P$ and $Q$ and $p(x) = dP/d\mu$ and $q(x) = dQ /d\mu$ denote their respective densities, then
+\begin{align}
+V(P,Q) &:= P(A^{*}) - Q(A^{*}) = \frac{1}{2}\int_{\Omega}\abs{p(x) - q(x)} d\mu(x), \label{def: total_variation_l1}
+\end{align} where $A^{*} = \set{x: p(x) \ge q(x)}$.
+\end{remark}
 
-\subsection{The Brunn-Minkowski Inequality}
+\item \begin{remark} (\emph{\textbf{Total Variation via Optimal Coupling of Two Measures}})\\
+We note that another important interpretation of \emph{the variational distance} is related to \emph{the best coupling of the two measures}
+\begin{align}
+V(P,Q) &= \min P\set{X \neq Y}
+\end{align} where the minimum is taken over \emph{all pairs of joint distributions} for the random variables $(X, Y)$ whose marginal distributions are $X \sim P$ and $Y \sim Q$. 
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Applications of Pinsker's Inequality}})\\
+The importance of \emph{Pinsker's inequality} in statistics stems from the fact that it provides \emph{\textbf{a lower bound}} for \emph{the \textbf{error} of certain hypothesis testing problems}. 
+
+We use Pinsker's inequality for a completely different purpose, namely for establishing a transportation cost inequality that may be used to prove concentration inequalities. 
+\end{remark}
+
+\item \begin{proposition} (\textbf{Pinsker's Inequality}) \citep{thomas2006elements, boucheron2013concentration} \\
+Let $P, Q$ be two probability distributions on measurable space $(\Omega, \srF)$ such that $P \ll Q$. Then
+\begin{align}
+V(P, Q)^2 &\le \frac{1}{2}\kl{P}{Q}. \label{ineqn: pinsker_inequality}
+\end{align}
+\end{proposition}
+\begin{proof}
+Define the random variable $X$ such that $dP = X dQ$ and let $A^{*} = \set{X \ge 1}$ be the set achieving the maximum in the definition of the total variation between $P$ and $Q$. Then, setting $Z = \ind{A^{*}}$, 
+\begin{align*}
+V(P,Q) &:= P(A^{*}) - Q(A^{*}) = \E{P}{Z} - \E{Q}{Z}.
+\end{align*} It follows from Hoeffding's lemma that
+\begin{align*}
+\psi_{Z - \E{}{Z}}(\lambda) &\le \frac{\lambda^2}{8}
+\end{align*} which by transportation cost inequality for sub-Gaussian variables we have
+\begin{align*}
+\E{P}{Z} - \E{Q}{Z} &\le \sqrt{\frac{1}{2}\kl{P}{Q}}. \qed
+\end{align*}
+\end{proof}
+
+
+\item \begin{remark} (\textbf{\emph{Total Variation as $1$-Wasserstein Distance}})\\
+\emph{The total variation} between $P$ and $Q$ is \emph{\textbf{the Wasserstein distance}} induced by \emph{\textbf{the Hamming distance}} $d(x, y) = \#\set{i: x_i \neq y_i}$.
+\begin{align*}
+V(P, Q) &= \cW_1(P, Q).
+\end{align*} Thus \emph{the Pinsker's inequality} \eqref{ineqn: pinsker_inequality} is the special case of \emph{transportation cost inequality} \eqref{ineqn: information_inequality_general}.
+\end{remark}
+\end{itemize}
+
+\subsection{Birg{\'e}'s Inequality and Multiple Testing Problem}
+\begin{itemize}
+\item \begin{remark}
+We will use \emph{the Pinsker's inequality} to derive a \emph{\textbf{lower bound}} on \emph{\textbf{the probability of error}} in \emph{multiple testing problem}.
+\end{remark}
+
+\item \begin{proposition} (\textbf{Sharper Information Inequality for Total Variation}) \citep{boucheron2013concentration}\\
+Let $P, Q$ be two probability distributions on measurable space $(\Omega, \srF)$ such that $P \ll Q$.
+\begin{align}
+\sup_{A \in \srF} h(P(A), Q(A)) &\le \kl{P}{Q} \label{ineqn: total_variation_inequality_duality}
+\end{align} where $h(p, q) = \kl{p}{q} = q\log(q/p) + (1-q)\log((1-q)/(1-p))$ when $p,q \in [0, 1]$ are parameters of Bernoulli random variables. 
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Fano's Inequality})\citep{thomas2006elements} \\
+Let $X, Y$ be random variables on domain $\cX, \cY$ and $\widehat{X} = g(Y)$ is an estimate of $X$ where $g: \cY \to \cX$ is measurable function. The probability of error is defined as
+\begin{align*}
+P_{e} &= \bP\set{\widehat{X} \neq X}.
+\end{align*} Then we have
+\begin{align}
+H(P_{e}) + P_{e}\log \abs{\cX} \ge H(X | \widehat{X}) \ge H(X | Y) \label{ineqn: fano_inequality}
+\end{align} This inequality can be weakened to
+\begin{align}
+1+ P_{e}\log \abs{\cX} &\ge H(X|Y) \label{ineqn: fano_inequality_2}\\
+P_{e} &\ge \frac{H(X|Y) - 1}{\log \abs{\cX}}.  \label{ineqn: fano_inequality_3}
+\end{align}
+\end{proposition}
+
+\item \begin{remark}
+\emph{\textbf{The variational representation} of \textbf{relative entropy}} may be used to establish \emph{\textbf{lower bounds}} for \emph{\textbf{the probability of error}} in \emph{multiple testing problems}. The next result is a sharper version of \emph{Fano's inequality}, a classical tool from information theory.
+\end{remark}
+
+\begin{proposition} (\textbf{Birg{\'e}'s Inequality})  \citep{boucheron2013concentration}\\
+Let $P_0, P_1 \xdotx{,} P_N$ be probability distributions on measurable space $(\Omega, \srF)$  and let $A_0, A_1 \xdotx{,} A_N \in \srF$ be pairwise disjoint events. If $a = \min_{i=0 \xdotx{,} N}P_{i}(A_i) \ge 1/(N+1)$,
+\begin{align}
+a \le h\paren{a, \frac{1 - a}{N}} \le \frac{1}{N}\sum_{i=1}^{N}\kl{P_i}{P_0} \label{ineqn: birge_inequality}
+\end{align}
+\end{proposition}
+
+
+\end{itemize}
+
+%\subsection{The Brunn-Minkowski Inequality}
 \newpage
 \bibliographystyle{plainnat}
 \bibliography{reference.bib}
