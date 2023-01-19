@@ -232,7 +232,8 @@ I(X; Y| Z) &\le I(X; Y)
 \item \begin{proposition} (\textbf{Han's Inequality}) \citep{thomas2006elements, boucheron2013concentration}\\
 Let $X_1, X_2 \xdotx{,} X_n$ be random variables. Then
 \begin{align}
-H(X_1, X_2 \xdotx{,} X_n) &\le \frac{1}{n-1}\sum_{i=1}^{n}H(X_1 \xdotx{,} X_{i-1}, X_{i+1} \xdotx{,} X_n) \label{ineqn: han_inequality}
+H(X_1, X_2 \xdotx{,} X_n) &\le \frac{1}{n-1}\sum_{i=1}^{n}H(X_1 \xdotx{,} X_{i-1}, X_{i+1} \xdotx{,} X_n) \label{ineqn: han_inequality} \\
+\Leftrightarrow H(X) &\le \frac{1}{n-1}\sum_{i=1}^{n}H(X_{(-i)}) \nonumber
 \end{align}
 \end{proposition}
 \begin{proof}
@@ -378,11 +379,184 @@ The Efron-Stein inequality is the special case of the inequality when $\Phi(x) =
 \Rightarrow \text{Var}(X) &\le \sum_{i=1}^{n}\E{}{\text{Var}_{(-i)}(X)}
 \end{align*} 
 \end{remark}
+
+\item \begin{proposition} (\textbf{Sub-Additivity of $\Phi$-Entropy}) \citep{boucheron2013concentration}\\
+Let $\cC$ denote the class of functions $\Phi: [0, \infty) \to \bR$ that are \textbf{continuous} and \textbf{convex} on $[0, \infty)$, \textbf{twice differentiable} on $(0, \infty)$, and such that either $\Phi$ is \textbf{affine} or $\Phi''$ is \textbf{strictly positive} and $1/\Phi''$ is \textbf{concave}. For all $\Phi \in \cC$, the \textbf{entropy functional} $H_{\Phi}$ is \textbf{sub-additive}. That is,
+\begin{align}
+\E{}{\Phi(X)} - \Phi(\E{}{X}) &\le \sum_{i=1}^{n}\E{}{\E{(-i)}{\Phi(X)} - \Phi(\E{(-i)}{X})}, \label{ineqn: sub_additivity_phi_entropy_general}\\
+\Leftrightarrow H_{\Phi}(X) &\le \E{}{\sum_{i=1}^{n} H_{\Phi}^{(-i)}(X)} \nonumber
+\end{align} where $H_{\Phi}^{(-i)}(X) := \E{(-i)}{\Phi(X)} - \Phi(\E{(-i)}{X})$ is the conditional entropy and, $\E{(-i)}{\cdot}$ denotes conditional expectation conditioned on the $(n-1)$-vector $Z_{(-i)}:= (Z_1 \xdotx{,} Z_{i-1}, Z_{i+1} \xdotx{,} Z_n)$.
+\end{proposition}
+%\begin{proof}
+%It suffice to show that for $n=2$ and setting $X = f(Z_1, Z_2)$, the sub-additivity property reduces to 
+%\begin{align}
+%H_{\Phi}\paren{\int f(z, Z_2)d\mu_1(z)} &\le \int H_{\Phi}(f(z, Z_2)) d\mu_1(z) \nonumber\\
+%\Leftrightarrow H_{\Phi}\paren{\E{Z_1}{f(Z_1, Z_2)}} &\le \E{Z_1}{H_{\Phi}\paren{f(Z_1, Z_2)}} \label{eqn: sub_additivity_phi_entropy_general_proof_1}
+%\end{align} where $\mu_1$ denotes the distribution of $Z_1$. It is a direct consequence of \emph{the Jenson's inequality} since $H_{\Phi}$ is a convex function. 
+%\begin{align*}
+%H_{\Phi}(\lambda X_1 + (1-\lambda) X_2)&= \E{}{\Phi\paren{\lambda X_1 + (1-\lambda) X_2}} - \Phi\paren{\E{}{\lambda X_1 + (1-\lambda) X_2}} \\
+%&= \E{}{\Phi\paren{\lambda X_1 + (1-\lambda) X_2}} -  \Phi\paren{\lambda \E{}{X_1} + (1-\lambda) \E{}{X_2}} \\
+%&\le \E{}{\lambda \Phi(X_1) + (1- \lambda)\Phi(X_2)} - \Phi\paren{\lambda \E{}{X_1} + (1-\lambda) \E{}{X_2}} \\
+%\end{align*}
+%
+%To show the \eqref{ineqn: sub_additivity_phi_entropy_general}, let $Y_1= Z_1$ and $Y_2 := (Z_2 \xdotx{,} Z_n)$ with distributions $\mu_1$ and $\mu_2$, respectively. Then $X = f(Z_1, Z_2)$ is a measurable function of two independent random variables $Y_1$ and $Y_2$. By the \emph{Tonelli-Fubini theorem}, 
+%\begin{align*}
+%H_{\Phi}(X) %&= \iint\paren{\Phi\paren{f(y_1, y_2)} - \Phi\paren{\iint f(y_1', y_2') d\mu_1(y_1') d\mu_2(y_2')}} d\mu_1(y_1) d\mu_2(y_2)\\
+%&= \E{(Y_1, Y_2)}{\Phi(f(Y_1, Y_2)) - \Phi\paren{\E{(Y_1, Y_2)}{f(Y_1, Y_2)}}}\\
+%&= \E{(Y_1, Y_2)}{\Phi(f(Y_1, Y_2)) - \Phi\paren{\E{Y_1}{f(Y_1, Y_2)}} + \Phi\paren{\E{Y_1}{f(Y_1, Y_2)}} - \Phi\paren{\E{(Y_1, Y_2)}{f(Y_1, Y_2)}}} \\
+%&= \E{Y_2}{\E{Y_1}{\Phi(f(Y_1, Y_2)) - \Phi\paren{\E{Y_1}{f(Y_1, Y_2)}} }} \\
+%&\quad + \E{Y_2}{\Phi\paren{\E{Y_1}{f(Y_1, Y_2)}} - \Phi\paren{\E{(Y_1, Y_2)}{f(Y_1, Y_2)}}} \\
+%&= \E{Y_2}{H_{\Phi}^{(-1)}(f(Y_1, Y_2))} + H_{\Phi}\paren{\E{Y_1}{f(Y_1, Y_2)}} \\
+%&\le  \E{Y_2}{H_{\Phi}^{(-1)}(f(Y_1, Y_2))} + \E{Y_1}{H_{\Phi}\paren{f(Y_1, Y_2)}}
+%\end{align*} where the last step from \eqref{eqn: sub_additivity_phi_entropy_general_proof_1}. In other words, we get,
+%\begin{align*}
+%H_{\Phi}(X) &\le \E{}{H_{\Phi}^{(-1)}(X)} + \int H_{\Phi}(f(z, Z_2 \xdotx{,} Z_n)) d\mu_1(z)
+%\end{align*} Proceeding by induction, \eqref{eqn: sub_additivity_phi_entropy_general_proof_1} leads to the sub-additivity property for every $n$. \qed
+%\end{proof}
+
+\item \begin{remark}
+\emph{\textbf{The sub-additivity property}} of $H_{\Phi}$ is equivalent to what we could call \emph{\textbf{the Jensen property}}
+\begin{align}
+H_{\Phi}\paren{\int f(z, Z_2)d\mu_1(z)} &\le \int H_{\Phi}(f(z, Z_2)) d\mu_1(z) \nonumber\\
+\Leftrightarrow H_{\Phi}\paren{\E{Z_1}{f(Z_1, Z_2)}} &\le \E{Z_1}{H_{\Phi}\paren{f(Z_1, Z_2)}} \label{eqn: sub_additivity_phi_entropy_general_proof_1}
+\end{align}
+This implies that in order to prove sub-additivity of a $\Phi$-entropy, it
+suffices to show that it has the Jensen property.
+\end{remark}
+
 \end{itemize}
 
 
 
 \subsection{Duality and Variational Formulas}
+\begin{itemize}
+\item \begin{lemma}
+The \textbf{Legendre transform} (or \textbf{convex conjugate}) of $\Phi(x) = x\log(x)$ is $e^{u-1}$. That is,
+\begin{align*}
+\sup_{x > 0}\set{u\,x - x\log(x)} &= e^{u-1}
+\end{align*}
+\end{lemma}
+\begin{proof}
+Solve the supremum on the left-hand side by taking derivative of the objective function and setting it as zero:
+\begin{align*}
+\nabla g(x) &= u - \log(x) - 1 = 0\\
+\Rightarrow x^{*} &= e^{u-1} \\
+\Rightarrow \sup_{x}\set{u\,x - x\log(x)} &= g(x^{*}) = u\,e^{u-1} - e^{u-1}(u-1) = e^{u-1} \qed
+\end{align*}
+\end{proof}
+
+\item \begin{remark}
+If $\Phi(X) = X\log(X)$ is integrable, and $\E{}{e^{U}} = 1$, we have
+\begin{align*}
+UX \le X\log(X) + \frac{1}{e}e^{U}.
+\end{align*} Therefore, $U_{+}X$ is integrable, and one can always define $\E{}{UX} = \E{}{U_{+}X} - \E{}{U_{-}X}$ for positive and negative part of $U$. Thus the $\E{}{UX}$ is well-defined.
+\end{remark}
+
+\item \begin{theorem}(\textbf{Duality Formula of Entropy}) \citep{boucheron2013concentration}\\
+Let $X$ be a non-negative random variable defined on a probability space $(\Omega, \srA, P)$ such that $\E{}{\Phi(X)} < \infty$. Then we have \textbf{the duality formula}
+\begin{align}
+\text{Ent}(X) &= \sup_{U \in \cU}\E{}{U\,X}  \label{eqn: duality_entropy}
+\end{align} where the supremum is taken over the set $\cU$ of all random variables $U: \Omega \to \bR \cup \set{\infty}$ with $\E{}{e^{U}} = 1$. Moreover, if $U$ is such that $\E{}{U X} \le \text{Ent}(X)$ for all non-negative random variable $X$ such that $\Phi(X)$ is integrable and $\E{}{X} = 1$, then $\E{}{e^{U}} \le 1$. 
+\end{theorem}
+\begin{proof}
+Note that for any random variable $U$ such that $\E{}{e^{U}} = 1$, we have
+\begin{align*}
+\text{Ent}(X) - \E{P}{UX} &= \E{P}{X\log(X)} - \E{P}{X}\log(\E{P}{X}) - \E{P}{UX}\\
+&= \E{P}{X(\log(X) - U)}  - \E{P}{X}\log(\E{P}{X}) \\
+&= \E{P}{X\log(Xe^{-U})} - \E{P}{X}\log(\E{P}{X})\\
+&= \E{e^{U}P}{Xe^{-U}\log(Xe^{-U})} - \E{e^{U}P}{Xe^{-U}}\log(\E{e^{U}P}{Xe^{-U}}) \\
+&= \text{Ent}_{e^{U}P}(Xe^{-U})
+\end{align*} Note that due to $\E{}{e^{U}} = 1$, $\int e^{U}dP = 1$, thus $e^{U}P$ is a proper probability measure. This shows that
+\begin{align*}
+\text{Ent}_{e^{U}P}(Xe^{-U}) &\ge 0\\
+\Rightarrow \text{Ent}(X) &\ge \E{P}{UX}
+\end{align*}  with equality whenever $e^U = X/\E{P}{X}$. This proves the duality formula. 
+
+Conversely, let $U$ be such that $\E{P}{UX} \le \text{Ent}(X)$ for all non-negative random variables such that $\Phi(X)$ is integrable. If $\E{}{e^{U}} = 0$, then there is nothing to prove Otherwise, given a positive integer $n$ large enough to ensure that $x_n = \E{}{e^{\min\set{U, n}}} >0$, one may define $X_n = e^{\min\set{U, n}}/x_n$, so that $\E{}{X_n} = 1$, which leads to 
+\begin{align*}
+\E{}{UX_n} &\le  \text{Ent}(X_n),
+\end{align*} and therefore
+\begin{align*}
+\frac{1}{x_n}\E{}{U e^{\min\set{U, n}}} &\le \text{Ent}(e^{\min\set{U, n}}/x_n)\\
+&= \frac{1}{x_n}\brac{\E{}{\min\set{U, n} e^{\min\set{U, n}} }  - \log(x_n)} 
+\end{align*} Hence 
+\begin{align*}
+\log(x_n) \le 0
+\end{align*} and taking the limit when $n\to \infty$, we show by monotonicity that $\E{}{e^{U}} \le 1$. \qed
+\end{proof}
+
+\item  \begin{theorem}(\textbf{Alternative Duality Formula of Entropy}) \citep{boucheron2013concentration}
+\begin{align}
+\text{Ent}(X) &= \sup_{T}\E{}{X\paren{\log(T) - \log\paren{\E{}{T}}}}  \label{eqn: duality_entropy_2}
+\end{align} where the supremum is taken over all non-negative and integrable random variables.
+\end{theorem}
+\begin{proof}
+From \eqref{eqn: duality_entropy}, taking $U = \log\frac{T}{\E{}{T}}$, so that $\E{}{e^U} = \E{}{\frac{T}{\E{}{T}}} = 1$. This gives us \eqref{eqn: duality_entropy_2}.\qed
+\end{proof}
+
+\item \begin{corollary}  (\textbf{Duality Formula of Log Moment Generating Function}) \citep{thomas2006elements, boucheron2013concentration}\\
+Let $X$ be a real-valued integrable random variable. Then for every $\lambda \in \bR$, 
+\begin{align}
+\log \E{Q}{e^{\lambda\paren{X - \E{}{X}}}} &= \sup_{P \ll Q}\set{\lambda\paren{\E{P}{X} - \E{Q}{X}} - \kl{P}{Q} }, \label{eqn: duality_log_mgf}
+\end{align} where the supremum is taken over all probability measures $P$ absolutely continuous with respect to $Q$, and $\E{P}{\cdot}$ denotes integration with respect to the measure $P$ (recall that $\E{Q}{\cdot}$ is integration with respect to $Q$).
+\end{corollary}
+\begin{proof}
+Let $P \ll Q$. Taking $Y := \frac{dP}{dQ}$ and $U:= \lambda(X - \E{Q}{X}) - \psi_{X- \E{Q}{X}}(\lambda)$ where $\psi_{X}(\lambda) := \log \E{Q}{e^{\lambda X}}$. Note that $\E{Q}{Y} = 1$ and $\E{}{e^{U}} = 1$. It follows from the duality formula that 
+\begin{align*}
+\kl{P}{Q} = \text{Ent}(Y) &\ge \E{}{U\,Y} = \E{}{\lambda(X - \E{Q}{X})Y} - \psi_{X- \E{Q}{X}}(\lambda)\\
+&= \lambda(\E{P}{X} - \E{Q}{X})  - \psi_{X- \E{Q}{X}}(\lambda)
+\end{align*} or equivalently
+\begin{align*}
+\psi_{X- \E{Q}{X}}(\lambda) &\ge \lambda(\E{P}{X} - \E{Q}{X})  - \kl{P}{Q},
+\end{align*} therefore
+\begin{align*}
+\log\E{Q}{e^{\lambda(X- \E{Q}{X})}} &\ge \sup_{P \ll Q}\set{\lambda(\E{P}{X} - \E{Q}{X})  - \kl{P}{Q}}.
+\end{align*} Conversely, setting
+\begin{align*}
+U &= \lambda\paren{X - \E{Q}{X}} - \sup_{P \ll Q}\set{\lambda(\E{P}{X} - \E{Q}{X})  - \kl{P}{Q}}
+\end{align*} for every non-negative random variable $Y$ such that $\E{}{Y} = 1$,
+\begin{align*}
+\E{}{UY} \le \text{Ent}(Y).
+\end{align*} Hence, $\E{}{e^{U}} \le 1$ by duality theorem, which means that 
+\begin{align*}
+\log \E{Q}{e^{\lambda\paren{X - \E{Q}{X}}}} &\le \sup_{P \ll Q}\set{\lambda(\E{P}{X} - \E{Q}{X})  - \kl{P}{Q}}. \qed
+\end{align*}
+\end{proof}
+
+\item \begin{corollary}  (\textbf{Duality Formula of K-L divergence}) \citep{thomas2006elements, boucheron2013concentration}\\
+Let $P$ and $Q$ be two probability distributions on the same space.Then
+\begin{align}
+\kl{P}{Q} &= \sup_{X}\set{\E{P}{X} - \log \E{Q}{e^{X}} }, \label{eqn: duality_kl_divg}
+\end{align} where the supremum is taken over all random variables such that $\E{Q}{\exp\paren{X}} < \infty$.
+\end{corollary}
+\begin{proof}
+If $P \ll Q$, $\kl{P}{Q} = \text{Ent}(dP/dQ)$ and the corollary follows from the alternative formulation of the duality formula. Let $Y=dP/dQ$ and $X = \log(T)$ so that 
+\begin{align*}
+\kl{P}{Q} = \text{Ent}(Y) &= \sup_{T}\E{}{dP/dQ\paren{\log(T) - \log\paren{\E{}{T}}}} \\
+&= \sup_{X}\set{\E{P}{X} - \log\E{Q}{e^{X}} }.
+\end{align*}
+If $P \not\ll Q$, then there exists an event $A$ such that $P(A) > 0 = Q(A)$, $\kl{P}{Q} = \infty$, and choosing $X_n = n\ind{A}$ and letting $n$ tend to infinity, we observe that the supremum on the right-hand side is infinite.\qed
+\end{proof}
+
+\item \begin{remark}
+This corollary asserts that if $Q$ remains fixed, $\kl{P}{Q} $ is \emph{the \textbf{convex dual} of the functional}
+$X \to \log\E{Q}{e^X}$.
+\end{remark}
+
+\item \begin{theorem} (\textbf{The Expected Value Minimizes Expected Bregman Divergence}) \citep{boucheron2013concentration} \\
+Let $I \subseteq \bR$ be an open interval and let $f: I \to \bR$ be \textbf{convex} and \textbf{differentiable}. For any $x,y \in I$, \textbf{the Bregman divergence} of $f$ from $x$ to $y$ is $f(y) - f(x) - f'(x)(y-x)$. Let $X$ be an $I$-valued random variable. Then
+\begin{align}
+\E{}{f(X) - f(\E{}{X}) } &= \inf_{a \in I}\E{}{f(X) - f(a) - f'(a)(X-a)}\label{eqn: bregmann_inf}
+\end{align}
+\end{theorem}
+
+\item \begin{corollary} (\textbf{Duality Formula of Entropy via Bregman Divergence}) \citep{boucheron2013concentration}\\
+Let $X$ be a non-negative random variable such that $\E{}{\Phi(X)} < \infty$. Then 
+\begin{align}
+\text{Ent}(X) &= \inf_{u > 0}\E{}{X\paren{\log(X) - \log(u)} - (X - u) } \label{eqn: duality_entropy_3_breg}
+\end{align}
+\end{corollary}
+\end{itemize}
 
 \subsection{Optimal Transport}
 
