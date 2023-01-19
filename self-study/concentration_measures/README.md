@@ -58,6 +58,8 @@
 			- Edge Isopermetric Property of Hypercube 
 		- Phi-Entropy
 		- Sub-Additivity of Phi-Entropy
+		- Dual Formulation of Phi-Entropy
+		- Wasserstein Distance and Transportation Cost Inequality / Information Inequality
 
 
 
