@@ -10,8 +10,7 @@
 \contentsline {subsubsection}{\numberline {2.2.2}Edge Isoperimetric Inequality on the Binary Hypercube}{8}{}%
 \contentsline {subsection}{\numberline {2.3}$\Phi $-Entropy}{8}{}%
 \contentsline {subsection}{\numberline {2.4}Sub-Additivity of $\Phi $-Entropy}{9}{}%
-\contentsline {subsection}{\numberline {2.5}Duality and Variational Formulas}{10}{}%
-\contentsline {subsection}{\numberline {2.6}Wasserstein Distance and Information Inequality}{13}{}%
-\contentsline {subsection}{\numberline {2.7}Pinsker's Inequality}{14}{}%
-\contentsline {subsection}{\numberline {2.8}Birg{\'e}'s Inequality}{14}{}%
-\contentsline {subsection}{\numberline {2.9}The Brunn-Minkowski Inequality}{14}{}%
+\contentsline {subsection}{\numberline {2.5}Duality and Variational Formulas}{11}{}%
+\contentsline {subsection}{\numberline {2.6}Wasserstein Distance and Information Inequality}{14}{}%
+\contentsline {subsection}{\numberline {2.7}Pinsker's Inequality}{15}{}%
+\contentsline {subsection}{\numberline {2.8}Birg{\'e}'s Inequality and Multiple Testing Problem}{17}{}%
