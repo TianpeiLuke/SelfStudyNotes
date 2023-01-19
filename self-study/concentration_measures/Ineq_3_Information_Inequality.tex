@@ -780,10 +780,10 @@ For any $p \in [0, 1]$, let
 \end{align*} denote the logarithm of the moment generating function of the Bernoulli$(p)$ distribution where $\lambda \in \bR$. By the duality formulation of relative entropy, for $X = \ind{A}$,
 \begin{align*}
 \kl{P}{Q} &\ge \E{P}{\lambda \ind{A}} - \log\E{Q}{e^{\lambda \ind{A}}} \\
-\Rightarrow \kl{P}{Q}  &\ge \sup_{\lambda \ge 0}\set{\lambda P(A) - \phi_{P(A)}(\lambda) }.
+\Rightarrow \kl{P}{Q}  &\ge \sup_{\lambda \ge 0}\set{\lambda P(A) - \phi_{Q(A)}(\lambda) }.
 \end{align*} The proposition follows by noting that for any $a \in [0, 1]$, 
 \begin{align*}
-h(p, a) &= \sup_{\lambda\ge 0}\set{\lambda a - \phi_{p}(\lambda)}. \qed
+h(a, p) &= \sup_{\lambda\ge 0}\set{\lambda a - \phi_{p}(\lambda)}. \qed
 \end{align*}
 \end{proof}
 
