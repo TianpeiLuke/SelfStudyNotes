@@ -466,7 +466,12 @@ It is interesting to notice that \emph{Han's inequality} itself can be derived f
 \end{remark}
 
 \item \begin{remark} (\textbf{\emph{Tensorization Property of Entropy}}) \citep{wainwright2019high}\\
-The inequality in \eqref{ineqn: sub_additivity_phi_entropy} or \eqref{ineqn: sub_additivity_phi_entropy_2} is also called \underline{\emph{\textbf{the tensoriztion property of entropy}}}.
+The inequality in \eqref{ineqn: sub_additivity_phi_entropy} or \eqref{ineqn: sub_additivity_phi_entropy_2} is also called \underline{\emph{\textbf{the tensoriztion property of entropy}}}. 
+
+Let $\mu = \mu_1 \xdotx{\otimes} \mu_n$ where $\mu_i$ be the probability distribution of $Z_i$. Thus $\mu$ is the probability distribution of $Z = (Z_1 \xdotx{,} Z_n)$ when $Z_i$ are independent. \emph{The sub-additivity of entropy} states that
+\begin{align*}
+\text{Ent}_{\mu_1 \xdotx{\otimes} \mu_n}(f) &\le \E{\mu_1 \xdotx{\otimes} \mu_n}{\sum_{i=1}^{n}\text{Ent}_{\mu_i}(f)}
+\end{align*} where the subscript $\mu_i$ indicates that the integration concerns the $i$-th variable only.
 \end{remark}
 
 \item \begin{proposition} (\textbf{Sub-Additivity of $\Phi$-Entropy}) \citep{boucheron2013concentration}\\
@@ -652,9 +657,9 @@ H_{\Phi}(X) &=  \sup_{T \in \text{conv}(L_{1}^{+}), T\neq 0}\set{\E{}{\paren{\Ph
 \end{theorem}
 \end{itemize}
 
-\subsection{Wasserstein Distance and Information Inequality}
+\subsection{Wasserstein Distance and Transportation Cost Inequality}
 \begin{itemize}
-\item \begin{proposition} (\textbf{Wasserstein Distance and Information Inequality}) \citep{boucheron2013concentration}\\
+\item \begin{proposition} (\textbf{Wasserstein Distance and Transportation Cost Inequality}) \citep{boucheron2013concentration}\\
 Let $X$ be a real-valued integrable random variable. Let $\phi$ be a \textbf{convex} and \textbf{continuously differentiable} function on a (possibly unbounded) interval $[0, b)$ and assume that $\phi(0) = \phi'(0) = 0$. Define, for every $x \ge 0$, \textbf{the Legendre transform} $\phi^{*}(x) = \sup_{\lambda \in (0,b)}(\lambda x - \phi(\lambda))$, and let, for every $t \ge 0$, $\phi^{*-1}(t) = \inf\{x \ge 0: \phi^{*}(x) > t\}$, i.e. the \textbf{the generalized inverse} of $\phi^{*}$. Then the following two statements are equivalent:
 \begin{enumerate}
 \item for every $\lambda \in (0,b)$,
@@ -665,15 +670,14 @@ Let $X$ be a real-valued integrable random variable. Let $\phi$ be a \textbf{con
 \begin{align}
 \E{P}{X} - \E{Q}{X} &\le \phi^{*-1}\paren{\kl{P}{Q}}. \label{ineqn: information_inequality_general}
 \end{align} 
-
-In particular, given $\nu > 0$,
+\end{enumerate}
+In particular, given $\nu > 0$, $X$ follows a sub-Gaussian distribution, i.e.
 \begin{align*}
 \psi_{X - \E{}{X}}(\lambda) &\le \frac{\nu\lambda^2}{2}
 \end{align*} for every $\lambda >0$ \textbf{if and only if} for any probability measure $P$ absolutely continuous with respect to $Q$ and such that $\kl{P}{Q} < \infty$, 
 \begin{align}
 \E{P}{X} - \E{Q}{X} &\le \sqrt{2\nu\kl{P}{Q}}. \label{ineqn: information_inequality_sub_gaussian}
 \end{align}
-\end{enumerate}
 \end{proposition}
 \begin{proof}
 As a direct consequence of Corollary \ref{coro: dual_log_mgf}, we see that (1) holds if and only if for every distribution $P \ll Q$, 
