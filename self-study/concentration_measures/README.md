@@ -84,7 +84,8 @@
 			- Concentration on Hypercube 
 			- Bounded Difference Inequality 
 			- Gaussian Random Projections
-			- 
+			- Concentration of Convex Lipschitz Functions
+			- Exponential Tails for Self-Bounding Functions
 
 
 
