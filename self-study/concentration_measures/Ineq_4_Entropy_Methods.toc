@@ -1,12 +1,15 @@
 \contentsline {section}{\numberline {1}Logarithmic Sobolev Inequality}{2}{}%
-\contentsline {subsection}{\numberline {1.1}Logarithmic Sobolev Inequality for Bernoulli Distributions}{2}{}%
+\contentsline {subsection}{\numberline {1.1}Bernoulli Logarithmic Sobolev Inequality}{2}{}%
 \contentsline {subsection}{\numberline {1.2}Gaussian Logarithmic Sobolev Inequality}{4}{}%
-\contentsline {subsection}{\numberline {1.3}Logarithmic Sobolev Inequality for Binomial and Poisson Distributions}{4}{}%
-\contentsline {subsection}{\numberline {1.4}Logarithmic Sobolev Inequality for General Probability Measures}{4}{}%
-\contentsline {section}{\numberline {2}The Entropy Methods}{5}{}%
-\contentsline {subsection}{\numberline {2.1}Tensorization Property of $\Phi $-Entropy}{5}{}%
-\contentsline {subsection}{\numberline {2.2}Herbst's Argument}{5}{}%
-\contentsline {subsection}{\numberline {2.3}Bounded Difference Inequality}{5}{}%
-\contentsline {subsection}{\numberline {2.4}Modified Logarithmic Sobolev Inequalities}{5}{}%
-\contentsline {subsection}{\numberline {2.5}Concentration of Convex Lipschitz Functions}{5}{}%
-\contentsline {subsection}{\numberline {2.6}Exponential Tail Bounds for Self-Bounding Functions}{5}{}%
+\contentsline {subsection}{\numberline {1.3}Information Theory Interpretation}{6}{}%
+\contentsline {subsection}{\numberline {1.4}Logarithmic Sobolev Inequality for General Probability Measures}{7}{}%
+\contentsline {subsection}{\numberline {1.5}Variants of Logarithmic Sobolev Inequalities}{8}{}%
+\contentsline {subsection}{\numberline {1.6}Poisson Logarithmic Sobolev Inequality}{8}{}%
+\contentsline {subsection}{\numberline {1.7}Applications}{9}{}%
+\contentsline {section}{\numberline {2}The Entropy Methods}{9}{}%
+\contentsline {subsection}{\numberline {2.1}Tensorization Property of $\Phi $-Entropy}{9}{}%
+\contentsline {subsection}{\numberline {2.2}Herbst's Argument}{9}{}%
+\contentsline {subsection}{\numberline {2.3}Bounded Difference Inequality}{9}{}%
+\contentsline {subsection}{\numberline {2.4}Modified Logarithmic Sobolev Inequalities}{9}{}%
+\contentsline {subsection}{\numberline {2.5}Concentration of Convex Lipschitz Functions}{9}{}%
+\contentsline {subsection}{\numberline {2.6}Exponential Tail Bounds for Self-Bounding Functions}{9}{}%
