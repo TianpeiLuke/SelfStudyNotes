@@ -32,14 +32,166 @@
 \maketitle
 \tableofcontents
 \newpage
-\section{$\Phi$-Entropy and Logarithmic Sobolev Inequality}
-\subsection{Tensorization Property of $\Phi$-Entropy}
+\section{Logarithmic Sobolev Inequality}
 \subsection{Logarithmic Sobolev Inequality for Bernoulli Distributions}
+\begin{itemize}
+\item \begin{remark} (\emph{Setting})\\
+Consider a \emph{\textbf{uniformly distributed binary vector}} $Z = (Z_1 \xdotx{,} Z_n)$ on the hypercube $\set{-1, +1}^n$. In other words, the components of $X$ are \emph{independent}, \emph{identically distributed} \emph{\textbf{random sign (Rademacher) variables}} with $\bP\set{Z_i = -1} = \bP\set{Z_i = +1} = 1/2$ (i.e. \emph{symmetric Bernoulli random variables}). 
 
-\subsection{Logarithmic Sobolev Inequality for Gaussian Distributions}
+Let $f: \set{-1, +1}^n \to \bR$ be a real-valued function on \emph{\textbf{binary hypercube}}. $X := f(Z)$ is an induced real-valued random variable. Define $\widetilde{Z}^{(i)} = (Z_1 \xdotx{,} Z_{i-1}, Z_{i}', Z_{i+1} \xdotx{,} Z_n)$ be the sample $Z$ with $i$-th component replaced by an \emph{independent copy} $Z_{i}'$. Since $Z, \widetilde{Z}^{(i)} \in \set{-1, +1}^n$, $\widetilde{Z}^{(i)} = (Z_1 \xdotx{,} Z_{i-1}, -Z_{i}, Z_{i+1} \xdotx{,} Z_n)$, i.e. \emph{the $i$-th sign is \textbf{flipped}}. Also denote the $i$-th \emph{Jackknife sample} as $Z_{(i)} = (Z_1 \xdotx{,} Z_{i-1},  Z_{i+1} \xdotx{,} Z_n)$ by \emph{leaving out} the $i$-th component. $\E{(-i)}{X} := \E{}{X | Z_{(i)}}$.
+
+Denote the $i$-th component of \emph{\textbf{discrete gradient}} of $f$ as
+\begin{align*}
+\nabla_{i}f(z) &:= \frac{1}{2}\paren{f(z) - f(\widetilde{z}^{(i)})}
+\end{align*} and $\nabla f(z) = (\nabla_{1}f(z) \xdotx{,} \nabla_{n}f(z) )$
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Jackknife Estimate of Variance}})\\
+Recall that \emph{the \textbf{Jackknife estimate of variance}}
+\begin{align*}
+\cE(f) &:= \E{}{\sum_{i=1}^{n}\paren{f(Z) - \E{(-i)}{f(\widetilde{Z}^{(i)})} }^2}\\
+& = \frac{1}{2}\E{}{\sum_{i=1}^{n}\paren{f(Z) - f(\widetilde{Z}^{(i)}) }^2}.
+\end{align*} Using the notation of discrete gradient of $f$, we see that
+\begin{align*}
+\cE(f) &:= 2\E{}{\norm{\nabla f(Z)}{2}^2}
+\end{align*}
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Entropy Functional}})\\
+Recall that the entropy functional for $f$ is defined as
+\begin{align*}
+H_{\Phi}(f(Z)) = \text{Ent}(f)&:=  \E{}{f(Z)\log f(Z)} - \E{}{f(Z)}\log\paren{\E{}{f(Z)}}. 
+\end{align*}
+\end{remark}
+
+\item \begin{proposition} (\textbf{Logarithmic Sobolev Inequality for Function of Rademacher Random Variables}). \citep{boucheron2013concentration}\\
+If $f: \set{-1, +1}^n \to \bR$ be an arbitrary real-valued function  defined on the $n$-dimensional \textbf{binary hypercube} and assume that $Z$ is \textbf{uniformly} \textbf{distributed} over $\set{-1, +1}^n$. Then
+\begin{align}
+\text{Ent}(f^2) &\le \cE(f) \label{ineqn: log_sobolev_inequality_binary_cube} \\
+\Leftrightarrow \text{Ent}(f^2(Z)) &\le 2\E{}{\norm{\nabla f(Z)}{2}^2}  \label{ineqn: log_sobolev_inequality_binary_cube_2}
+\end{align}
+\end{proposition}
+\begin{proof}
+The key is to apply the tensorization property of $\Phi$-entropy. Let $X = f(Z)$. By tensorization property,
+\begin{align*}
+\text{Ent}(X^2) &\le \sum_{i=1}^{n}\E{}{\text{Ent}_{(-i)}(X^2) } 
+\end{align*} where $\text{Ent}_{(-i)}(X^2) := \E{(-i)}{X^2\log X^2} - \E{(-i)}{X^2}\log\paren{\E{(-i)}{X^2}}$.
+
+It thus suffice to show that for all $i=1\xdotx{,} n$,
+\begin{align*}
+\text{Ent}_{(-i)}(X^2) &\le \frac{1}{2}\E{(-i)}{\paren{f(Z) - f(\widetilde{Z}^{(i)}) }^2}.
+\end{align*} Given any fixed realization of $Z_{(-i)}$, $X = f(Z) = \widetilde{f}(Z_i)$ can only takes two different values with equal probability. Call these two values $a$ and $b$. See that  
+\begin{align*}
+\text{Ent}_{(-i)}(X^2) &= \frac{1}{2}a^2\log a^2 + \frac{1}{2}b^2\log b^2 - \frac{1}{2}(a^2 + b^2)\log\paren{\frac{a^2 + b^2}{2}} \\
+\frac{1}{2}\E{(-i)}{\paren{f(Z) - f(\widetilde{Z}^{(i)}) }^2} &= \frac{1}{2}\paren{a - b}^2.
+\end{align*} Thus we need to show
+\begin{align*}
+\frac{1}{2}a^2\log a^2 + \frac{1}{2}b^2\log b^2 - \frac{1}{2}(a^2 + b^2)\log\paren{\frac{a^2 + b^2}{2}} &\le \frac{1}{2}\paren{a - b}^2. 
+\end{align*} By symmetry, we may assume that $a \ge b$. Since $(\abs{a} - \abs{b})^2 \le (a-b)^2$, without loss of generality, we may further assume that $a, b \ge 0$.
+
+Define 
+\begin{align*}
+h(a) := \frac{1}{2}a^2\log a^2 + \frac{1}{2}b^2\log b^2 - \frac{1}{2}(a^2 + b^2)\log\paren{\frac{a^2 + b^2}{2}} -  \frac{1}{2}\paren{a - b}^2 
+\end{align*} for $a \in [b, \infty)$. $h(b) = 0$. It suffice to check that $h'(b) = 0$ and that $h$ is concave on $[b, \infty)$.
+Note that
+\begin{align*}
+h'(a) &= a\log a^2 + 1 - a\log\paren{\frac{a^2 + b^2}{2}} - 1 - (a-b)\\
+&= a\log\frac{2a^2}{(a^2 + b^2)} - (a-b).
+\end{align*} So $h'(b) = 0$. Moreover, 
+\begin{align*}
+h''(a) &= \log\frac{2a^2}{(a^2 + b^2)} + 1 - \frac{2a^2}{(a^2 + b^2)} \le 0
+\end{align*} due to inequality $\log(x) + 1 \le x$. \qed
+\end{proof}
+
+\item \begin{remark} (\emph{\textbf{Logarithmic Sobolev Inequality Stronger than Efron-Stein Inequality}}). \citep{boucheron2013concentration}\\
+Note that for $f$ non-negative, 
+\begin{align*}
+\text{Var}(f(Z)) &\le \text{Ent}(f^2(Z)).
+\end{align*} Thus \emph{logarithmic Sobolev inequality} \eqref{ineqn: log_sobolev_inequality_binary_cube} implies
+\begin{align*}
+\text{Var}(f(Z)) &\le  \cE(f) 
+\end{align*} which is \emph{the Efron-Stein inequality}.
+\end{remark}
+
+\item \begin{corollary} (\textbf{Logarithmic Sobolev Inequality for Function of Asymmetric Bernoulli Random Variables}). \citep{boucheron2013concentration}\\
+If $f: \set{-1, +1}^n \to \bR$ be an arbitrary real-valued function and $Z = (Z_1 \xdotx{,} Z_n) \in \set{-1, +1}^n$ with $p= \bP\set{Z_i = +1}$. Then
+\begin{align}
+\text{Ent}(f^2) &\le \frac{1}{2}c(p)\cE(f) \label{ineqn: log_sobolev_inequality_binary_cube_asym}
+\end{align} where 
+\begin{align*}
+c(p) &= \frac{1}{1 - 2p}\log\frac{1-p}{p}
+\end{align*} Note that $\lim\limits_{p \to 1/2}c(p) = 2$.
+\end{corollary}
+\end{itemize}
+
+\subsection{Gaussian Logarithmic Sobolev Inequality}
+\begin{itemize}
+\item \begin{proposition} (\textbf{Gaussian Logarithmic Sobolev Inequality}). \citep{boucheron2013concentration}\\
+Let $f: \bR^n \to \bR$ be a \textbf{continuous differentiable} function and let $Z = (Z_1 \xdotx{,} Z_n)$ be a vector of $n$ \textbf{independent} \textbf{standard Gaussian} random variables. Then
+\begin{align}
+\text{Ent}(f^2(Z)) &\le 2\E{}{\norm{\nabla f(Z)}{2}^2}.  \label{ineqn: log_sobolev_inequality_gaussian}
+\end{align}
+\end{proposition}
+
+\item \begin{remark} (\textbf{\emph{Gaussian Logarithmic Sobolev Inequality Stronger than Gaussian Poincar{\'e} Inequality}}). \citep{boucheron2013concentration}\\
+Recall that \emph{the Gaussian Poincar{\'e} inequality}
+\begin{align*}
+\text{Var}(f(Z)) &\le \E{}{\norm{\nabla f(Z)}{2}^2}
+\end{align*} We can show that for Gaussian random vectors $Z$,
+\begin{align*}
+2\text{Var}(f(Z)) &\le  \text{Ent}(f^2(Z)).
+\end{align*} Thus \emph{the Gaussian logarithmic Sobolev inequality} implies \emph{the Gaussian Poincar{\'e} inequality}.
+\end{remark}
+\end{itemize}
+
+\subsection{Logarithmic Sobolev Inequality for General Probability Measures}
+\begin{itemize}
+\item \begin{definition} (\textbf{\emph{Logarithmic Sobolev Inequality for General Probability Measure}}). \\
+\emph{A probability measure} $\mu$ on $\bR^n$ is said to satisfy the \underline{\emph{\textbf{logarithmic Sobolev inequality}}}  for some constant $C > 0$ if 
+\begin{align}
+\text{Ent}_{\mu}(f^2) &\le C\, \E{\mu}{\norm{\nabla f}{2}^2} \label{ineqn: log_sobolev_inequality_general}
+\end{align} holds for any \textbf{\emph{continuous differentiable}} function $f: \bR^n \to \bR$.  The left-hand side is called \textbf{\emph{the entropy functional}}, which is defined as
+\begin{align*}
+\text{Ent}(f^2) &:= \E{\mu}{f^2 \log f^2} - \E{\mu}{f^2}\log\E{\mu}{f^2} \\
+&= \int f^2 \log\paren{\frac{f^2}{\int f^2 d\mu}} d\mu.
+\end{align*} The right-hand side is defined as
+\begin{align*}
+\E{\mu}{\norm{\nabla f}{2}^2} &= \int \norm{\nabla f}{2}^2 d\mu.
+\end{align*} Thus we can rewrite \emph{the logarithmic Sobolev inequality} in \emph{functional form}
+\begin{align}
+\int f^2 \log\paren{\frac{f^2}{\int f^2 d\mu}} d\mu &\le C \int \norm{\nabla f}{2}^2 d\mu  \label{ineqn: log_sobolev_inequality_general_functional_form} 
+\end{align}
+\end{definition}
+
+\item \begin{remark}(\textbf{\emph{Modified Logarithmic Sobolev Inequality}})\\
+We can replace $f \to \sqrt{f}$, so that \emph{the logarithmic Sobolev inequality} becomes
+\begin{align}
+\text{Ent}_{\mu}(f) &\le \frac{C}{2}\, \int \frac{\norm{\nabla f}{2}^2}{f} d\mu \label{ineqn: log_sobolev_inequality_general_modified} 
+\end{align} Assume that $\int f d\mu =1$, we have
+\begin{align*}
+\int f \log(f)\,d\mu & \le\frac{C}{2}\, \int \frac{\norm{\nabla f}{2}^2}{f}\,d\mu
+\end{align*}
+\end{remark}
+
+\end{itemize}
 
 
 \section{The Entropy Methods}
+\subsection{Tensorization Property of $\Phi$-Entropy}
+\begin{itemize}
+\item \begin{remark} 
+Recall that the $\Phi$-entropy for $\Phi(x) = x\log(x)$ as
+\begin{align*}
+H_{\Phi}(X) = \text{Ent}(X)&:=  \E{}{X\log X} - \E{}{X}\log\paren{\E{}{X}}. 
+\end{align*}
+The variational formulation of $H_{\Phi}(X)$ is
+\begin{align*}
+\text{Ent}(X)&= \sup_{T}\set{X\paren{\log(T) - \log(\E{}{T})}}
+\end{align*}
+\end{remark}
+
+\item 
+\end{itemize}
 \subsection{Herbst's Argument}
 \subsection{Bounded Difference Inequality}
 \subsection{Modified Logarithmic Sobolev Inequalities}
