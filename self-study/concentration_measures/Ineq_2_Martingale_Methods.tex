@@ -286,7 +286,8 @@ using \emph{the bounded differences assumption}. Thus, the variable $D_k$ lies w
 Let $g: \bR^2 \to \bR$ be a \emph{\textbf{symmetric function}} of its arguments. Given an i.i.d. sequence $\set{X_k, k \ge 1}$, of random variables, the quantity
 \begin{align}
 U&:= \frac{1}{{n \choose 2}}\sum_{j < k}g(X_j, X_k)\label{def: u_stats}
-\end{align} is known as a \underline{\emph{\textbf{pairwise U-statistic}}}. For instance, if $g(s, t) = \abs{s - t}$, then $U$ is an \emph{unbiased estimator} of \emph{the mean absolute pairwise deviation $\E{}{\abs{X_1 − X_2}}$}. Note that, while $U$ is \emph{\textbf{not} a sum of independent random variables}, the \emph{dependence is relatively weak}, and this fact can be revealed by a martingale analysis. 
+\end{align} is known as a \underline{\emph{\textbf{pairwise U-statistic}}}. For instance, if $g(s, t) = \abs{s - t}$, then $U$ is an \emph{unbiased estimator} of \emph{the mean absolute pairwise deviation $\E{}{\abs{X_1 - X_2}}$}. 
+Note that, while $U$ is \emph{\textbf{not} a sum of independent random variables}, the \emph{dependence is relatively weak}, and this fact can be revealed by a martingale analysis. 
 
 If $g$ is bounded (say $\norm{g}{\infty} \le b$), then \emph{the Bounded Difference Inequality} can be used to establish the concentration of $U$ around its mean. Viewing $U$ as a function $f(x) = f(x_1 \xdotx{,} x_n)$, for any given coordinate $k$, we have
 \begin{align*}
@@ -680,28 +681,34 @@ The proof is based on a \emph{double use} of \emph{the Efron-Stein inequality}. 
 \item Now let $\epsilon_1 \xdotx{,} \epsilon_n$ be \emph{independent Rademacher random variables} and introduce
 \begin{align*}
 S_n := \frac{1}{\sqrt{n}}\sum_{j=1}^{n}\epsilon_j.
+\end{align*} 
+Note that $\epsilon_i \in \set{-1, +1}$ with equal probability, thus
+\begin{align*}
+\E{(-i)}{S_n} &= \frac{1}{2}\brac{ \paren{\frac{1}{\sqrt{n}}\sum_{j \neq i}\epsilon_j + \frac{1}{\sqrt{n}}} + \paren{\frac{1}{\sqrt{n}}\sum_{j \neq i}\epsilon_j - \frac{1}{\sqrt{n}}}  } \\
+&= \frac{1}{2}\brac{\paren{S_n + \frac{1 - \epsilon_i}{\sqrt{n}}} + \paren{S_n - \frac{1 + \epsilon_i}{\sqrt{n}}}}
 \end{align*}
+
 Since for every $i$
 \begin{align*}
-\text{Var}_{(-i)}\paren{f(S_n)} &= \frac{1}{4}\paren{f\paren{S_n + \frac{1+ \epsilon_i}{\sqrt{n}} }  - f\paren{S_n - \frac{1+ \epsilon_i}{\sqrt{n}} }}^2,
+\text{Var}_{(-i)}\paren{f(S_n)} &= \frac{1}{4}\paren{f\paren{S_n + \frac{1 - \epsilon_i}{\sqrt{n}} }  - f\paren{S_n - \frac{1+ \epsilon_i}{\sqrt{n}} }}^2,
 \end{align*}
 applying \emph{the Efron-Stein inequality again}, we obtain
 \begin{align}
-\text{Var}(f(S_n)) &\le   \frac{1}{4}\sum_{i=1}^{n}\E{}{\paren{f\paren{S_n + \frac{1+ \epsilon_i}{\sqrt{n}} }  - f\paren{S_n - \frac{1+ \epsilon_i}{\sqrt{n}} }}^2}  \label{ineqn: gaussian_poincare_inequality_step2} 
+\text{Var}(f(S_n)) &\le   \frac{1}{4}\sum_{i=1}^{n}\E{}{\paren{f\paren{S_n + \frac{1- \epsilon_i}{\sqrt{n}} }  - f\paren{S_n - \frac{1+ \epsilon_i}{\sqrt{n}} }}^2}  \label{ineqn: gaussian_poincare_inequality_step2} 
 \end{align}
 \emph{\textbf{The central limit theorem}} implies that $S_n$ converges \emph{in distribution} to $Z$, where $Z$ has \emph{the standard normal law}. Hence $\text{Var}(f(S_n))$ converges to $\text{Var}(f(Z))$.
 
 \item Let $K$ denote the \emph{supremum} of \emph{the absolute value} of \emph{the second derivative} of $f$. \emph{Taylor's theorem} implies that, for every $i$,
 \begin{align*}
-\abs{f\paren{S_n + \frac{1+ \epsilon_i}{\sqrt{n}} }  - f\paren{S_n - \frac{1+ \epsilon_i}{\sqrt{n}} }} &\le \frac{2}{\sqrt{n}}\abs{f'(S_n)} + \frac{2K}{n}
+\abs{f\paren{S_n + \frac{1- \epsilon_i}{\sqrt{n}} }  - f\paren{S_n - \frac{1+ \epsilon_i}{\sqrt{n}} }} &\le \frac{2}{\sqrt{n}}\abs{f'(S_n)} + \frac{2K}{n}
 \end{align*}
 and therefore
 \begin{align*}
-\frac{n}{4}\paren{f\paren{S_n + \frac{1+ \epsilon_i}{\sqrt{n}} }  - f\paren{S_n - \frac{1+ \epsilon_i}{\sqrt{n}} }}^2 &\le \paren{f'(S_n)}^2 +\frac{2K}{\sqrt{n}} \abs{f'(S_n)} + \frac{K^2}{n}
+\frac{n}{4}\paren{f\paren{S_n + \frac{1- \epsilon_i}{\sqrt{n}} }  - f\paren{S_n - \frac{1+ \epsilon_i}{\sqrt{n}} }}^2 &\le \paren{f'(S_n)}^2 +\frac{2K}{\sqrt{n}} \abs{f'(S_n)} + \frac{K^2}{n}
 \end{align*}
 This and \emph{the central limit theorem} imply that
 \begin{align*}
-\limsup\limits_{n\to \infty}\frac{1}{4}\sum_{i=1}^{n}\E{}{\paren{f\paren{S_n + \frac{1+ \epsilon_i}{\sqrt{n}} }  - f\paren{S_n - \frac{1+ \epsilon_i}{\sqrt{n}} }}^2}
+\limsup\limits_{n\to \infty}\frac{1}{4}\sum_{i=1}^{n}\E{}{\paren{f\paren{S_n + \frac{1- \epsilon_i}{\sqrt{n}} }  - f\paren{S_n - \frac{1+ \epsilon_i}{\sqrt{n}} }}^2}
 &= \E{}{(f'(Z))^2},
 \end{align*} which means that \eqref{ineqn: gaussian_poincare_inequality_step2} leads to \eqref{ineqn: gaussian_poincare_inequality_step1} by letting $n$ go to infinity.  \qed
 \end{enumerate}
