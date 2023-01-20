@@ -3,13 +3,17 @@
 \contentsline {subsection}{\numberline {1.2}Gaussian Logarithmic Sobolev Inequality}{4}{}%
 \contentsline {subsection}{\numberline {1.3}Information Theory Interpretation}{6}{}%
 \contentsline {subsection}{\numberline {1.4}Logarithmic Sobolev Inequality for General Probability Measures}{7}{}%
-\contentsline {subsection}{\numberline {1.5}Variants of Logarithmic Sobolev Inequalities}{8}{}%
-\contentsline {subsection}{\numberline {1.6}Poisson Logarithmic Sobolev Inequality}{8}{}%
-\contentsline {subsection}{\numberline {1.7}Applications}{9}{}%
-\contentsline {section}{\numberline {2}The Entropy Methods}{9}{}%
-\contentsline {subsection}{\numberline {2.1}Tensorization Property of $\Phi $-Entropy}{9}{}%
-\contentsline {subsection}{\numberline {2.2}Herbst's Argument}{9}{}%
-\contentsline {subsection}{\numberline {2.3}Bounded Difference Inequality}{9}{}%
-\contentsline {subsection}{\numberline {2.4}Modified Logarithmic Sobolev Inequalities}{9}{}%
-\contentsline {subsection}{\numberline {2.5}Concentration of Convex Lipschitz Functions}{9}{}%
-\contentsline {subsection}{\numberline {2.6}Exponential Tail Bounds for Self-Bounding Functions}{9}{}%
+\contentsline {subsection}{\numberline {1.5}Applications}{8}{}%
+\contentsline {subsubsection}{\numberline {1.5.1}Lipschitz Functions of Gaussian Variables}{8}{}%
+\contentsline {subsubsection}{\numberline {1.5.2}Supremum of Gaussian Process}{8}{}%
+\contentsline {subsubsection}{\numberline {1.5.3}Hypercontractivity for Boolean Polynomials}{8}{}%
+\contentsline {subsubsection}{\numberline {1.5.4}Gaussian Hypercontractivity}{8}{}%
+\contentsline {section}{\numberline {2}The Entropy Methods}{8}{}%
+\contentsline {subsection}{\numberline {2.1}Herbst's Argument}{8}{}%
+\contentsline {subsection}{\numberline {2.2}Bounded Difference Inequality}{10}{}%
+\contentsline {subsection}{\numberline {2.3}Modified Logarithmic Sobolev Inequalities}{10}{}%
+\contentsline {subsection}{\numberline {2.4}Poisson Logarithmic Sobolev Inequality}{11}{}%
+\contentsline {subsection}{\numberline {2.5}Applications}{11}{}%
+\contentsline {subsubsection}{\numberline {2.5.1}The Johnson-Lindenstrauss Lemma}{11}{}%
+\contentsline {subsubsection}{\numberline {2.5.2}Concentration of Convex Lipschitz Functions}{11}{}%
+\contentsline {subsubsection}{\numberline {2.5.3}Exponential Tail Bounds for Self-Bounding Functions}{11}{}%
