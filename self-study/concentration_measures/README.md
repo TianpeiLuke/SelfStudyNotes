@@ -73,14 +73,18 @@
 		- Applications
 			- Lipschitz Function of Gaussian Variables
 			- Supremum of Gaussian Process
-			- Hypercontractivity of Binary Hypercube
+			- Hypercontractivity of Binary Polynomials
 			- Gaussian Hypercontractivity
 
 	- Entropy Methods
 		- Herbst's Argument
 		- Modified Logarithmic Sobolev Inequalities
+		- Poisson Logarithmic Sobolev Inequalities
 		- Applications
+			- Concentration on Hypercube 
 			- Bounded Difference Inequality 
+			- Gaussian Random Projections
+			- 
 
 
 
