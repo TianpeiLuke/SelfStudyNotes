@@ -33,7 +33,7 @@
 \tableofcontents
 \newpage
 \section{Logarithmic Sobolev Inequality}
-\subsection{Logarithmic Sobolev Inequality for Bernoulli Distributions}
+\subsection{Bernoulli Logarithmic Sobolev Inequality}
 \begin{itemize}
 \item \begin{remark} (\emph{Setting})\\
 Consider a \emph{\textbf{uniformly distributed binary vector}} $Z = (Z_1 \xdotx{,} Z_n)$ on the hypercube $\set{-1, +1}^n$. In other words, the components of $X$ are \emph{independent}, \emph{identically distributed} \emph{\textbf{random sign (Rademacher) variables}} with $\bP\set{Z_i = -1} = \bP\set{Z_i = +1} = 1/2$ (i.e. \emph{symmetric Bernoulli random variables}). 
@@ -64,7 +64,7 @@ H_{\Phi}(f(Z)) = \text{Ent}(f)&:=  \E{}{f(Z)\log f(Z)} - \E{}{f(Z)}\log\paren{\E
 \end{align*}
 \end{remark}
 
-\item \begin{proposition} (\textbf{Logarithmic Sobolev Inequality for Function of Rademacher Random Variables}). \citep{boucheron2013concentration}\\
+\item \begin{proposition} (\textbf{Logarithmic Sobolev Inequality for Rademacher Random Variables}). \citep{boucheron2013concentration}\\
 If $f: \set{-1, +1}^n \to \bR$ be an arbitrary real-valued function  defined on the $n$-dimensional \textbf{binary hypercube} and assume that $Z$ is \textbf{uniformly} \textbf{distributed} over $\set{-1, +1}^n$. Then
 \begin{align}
 \text{Ent}(f^2) &\le \cE(f) \label{ineqn: log_sobolev_inequality_binary_cube} \\
@@ -103,7 +103,7 @@ h''(a) &= \log\frac{2a^2}{(a^2 + b^2)} + 1 - \frac{2a^2}{(a^2 + b^2)} \le 0
 \end{align*} due to inequality $\log(x) + 1 \le x$. \qed
 \end{proof}
 
-\item \begin{remark} (\emph{\textbf{Logarithmic Sobolev Inequality Stronger than Efron-Stein Inequality}}). \citep{boucheron2013concentration}\\
+\item \begin{remark} (\emph{\textbf{Logarithmic Sobolev Inequality $\Rightarrow$  Efron-Stein Inequality}}). \citep{boucheron2013concentration}\\
 Note that for $f$ non-negative, 
 \begin{align*}
 \text{Var}(f(Z)) &\le \text{Ent}(f^2(Z)).
@@ -113,10 +113,10 @@ Note that for $f$ non-negative,
 \end{align*} which is \emph{the Efron-Stein inequality}.
 \end{remark}
 
-\item \begin{corollary} (\textbf{Logarithmic Sobolev Inequality for Function of Asymmetric Bernoulli Random Variables}). \citep{boucheron2013concentration}\\
+\item \begin{corollary} (\textbf{Logarithmic Sobolev Inequality for Asymmetric Bernoulli Random Variables}). \citep{boucheron2013concentration}\\
 If $f: \set{-1, +1}^n \to \bR$ be an arbitrary real-valued function and $Z = (Z_1 \xdotx{,} Z_n) \in \set{-1, +1}^n$ with $p= \bP\set{Z_i = +1}$. Then
 \begin{align}
-\text{Ent}(f^2) &\le \frac{1}{2}c(p)\cE(f) \label{ineqn: log_sobolev_inequality_binary_cube_asym}
+\text{Ent}(f^2) &\le c(p)\E{}{\norm{\nabla f(Z)}{2}^2}   \label{ineqn: log_sobolev_inequality_binary_cube_asym}
 \end{align} where 
 \begin{align*}
 c(p) &= \frac{1}{1 - 2p}\log\frac{1-p}{p}
@@ -132,24 +132,127 @@ Let $f: \bR^n \to \bR$ be a \textbf{continuous differentiable} function and let 
 \text{Ent}(f^2(Z)) &\le 2\E{}{\norm{\nabla f(Z)}{2}^2}.  \label{ineqn: log_sobolev_inequality_gaussian}
 \end{align}
 \end{proposition}
+\begin{proof}
+We first prove for $n=1$, where $f: \bR \rightarrow \bR$ is continuous differentiable and $Z$ is standard Gaussian distribution. Without loss of generality, assume that $\E{}{f'(Z)} < \infty$ since it is trivial when  $\E{}{f'(Z)} = \infty$. By density argument, it suffice to prove the proposition when $f$ is \emph{twice differentiable with bounded support}.
 
-\item \begin{remark} (\textbf{\emph{Gaussian Logarithmic Sobolev Inequality Stronger than Gaussian Poincar{\'e} Inequality}}). \citep{boucheron2013concentration}\\
+Now let $\epsilon_1 \xdotx{,} \epsilon_n$ be \emph{independent Rademacher random variables} and introduce
+\begin{align*}
+S_n := \frac{1}{\sqrt{n}}\sum_{j=1}^{n}\epsilon_j.
+\end{align*} 
+Note that $\epsilon_i \in \set{-1, +1}$ with equal probability, thus
+\begin{align*}
+\E{(-i)}{S_n} &= \frac{1}{2}\brac{ \paren{\frac{1}{\sqrt{n}}\sum_{j \neq i}\epsilon_j + \frac{1}{\sqrt{n}}} + \paren{\frac{1}{\sqrt{n}}\sum_{j \neq i}\epsilon_j - \frac{1}{\sqrt{n}}}  } \\
+&= \frac{1}{2}\brac{\paren{S_n + \frac{1 - \epsilon_i}{\sqrt{n}}} + \paren{S_n - \frac{1 + \epsilon_i}{\sqrt{n}}}}.
+\end{align*} In the proof of Gaussian Poincar{\'e} inequality, we show that by \emph{central limit theorem}, 
+\begin{align*}
+\limsup\limits_{n\to \infty}\E{}{\sum_{i=1}^{n}\abs{f\paren{S_n}  - f\paren{S_n - \frac{2\epsilon_i}{\sqrt{n}} }}^2}
+&= 4\E{}{(f'(Z))^2}. 
+\end{align*}
+On the other hands, for any \emph{continuous uniformly bounded function} $f$, by \emph{central limit theorem}, 
+\begin{align*}
+\lim_{n \to \infty}\text{Ent}\paren{f^2(S_n)} = \text{Ent}(f^2(Z))
+\end{align*} The proof is then completed by invoking \emph{the logarithmic Sobolev inequality} for \emph{Rademacher random variables}
+\begin{align*}
+\text{Ent}\paren{f^2(S_n)} &\le \frac{1}{2}\E{}{\sum_{i=1}^{n}\abs{f\paren{S_n}  - f\paren{S_n - \frac{2\epsilon_i}{\sqrt{n}} }}^2} \\
+\Rightarrow  \lim_{n \to \infty}\text{Ent}\paren{f^2(S_n)} &\le \frac{1}{2}\lim_{n \to \infty}\E{}{\sum_{i=1}^{n}\abs{f\paren{S_n}  - f\paren{S_n - \frac{2\epsilon_i}{\sqrt{n}} }}^2} \\
+\Rightarrow  \text{Ent}(f^2(Z))&\le 2 \E{}{(f'(Z))^2}.
+\end{align*} The extension of the result to dimension $n \ge 1$ follows easily from \emph{the sub-additivity of entropy} which states that
+\begin{align*}
+\text{Ent}(f^2) &\le \sum_{i=1}^{n}\E{}{\E{(-i)}{f^2(Z)\log f^2(Z)} -\E{(-i)}{f^2(Z)}\log \E{(-i)}{f^2(Z)} } 
+\end{align*} where $\E{(-i)}{\cdot}$ denotes the integration with respect to $i$-th variable $Z_i$ only. Thus by induction, for all $i$
+\begin{align*}
+\E{(-i)}{f^2(Z)\log f^2(Z)} -\E{(-i)}{f^2(Z)}\log \E{(-i)}{f^2(Z)} &\le 2 \E{(-i)}{(\partial_i f(Z))^2}.
+\end{align*} Thus
+\begin{align*}
+\text{Ent}(f^2) &\le 2  \E{}{\E{(-i)}{\sum_{i=1}^{n}(\partial_i f(Z))^2}} = 2\E{}{\norm{\nabla f(Z)}{2}^2}. \qed
+\end{align*}
+\end{proof}
+
+
+
+\item \begin{remark} (\textbf{\emph{Dimension Free Property}}).\\
+\emph{The Gaussian logarithmic Sobolev inequality} has a constant $C = 2$ that is \emph{\textbf{independent of dimension}} $n$:
+\begin{align*}
+\E{\mu}{f^2} &\le 2\E{\mu}{\norm{\nabla f}{2}^2}.
+\end{align*} This \emph{dimension-free property} is related to \emph{the \textbf{concentration} of \textbf{Gaussian measure} $\mu$}. As a consequence, this inequality can be extended to functions of \emph{Gaussian measure} on \emph{\textbf{infinite dimensional space}}, such as Gibbs measure, \emph{Gaussian process} etc.
+\end{remark}
+
+\item \begin{remark}(\textbf{\emph{Equivalent Form of Gaussian Logarithmic Sobolev Inequality}})\\
+Assume $f: \bR^n \to (0, \infty)$ and $\int_{\bR^n} f d\mu = 1$ under Gaussian measure $\mu$. Substituting $f \to \sqrt{f}$,  \emph{the logarithmic Sobolev inequality} becomes
+\begin{align}
+\text{Ent}_{\mu}(f) = \int f\log f d\mu &\le \frac{1}{2}\, \int \frac{\norm{\nabla f}{2}^2}{f} d\mu \label{ineqn: log_sobolev_inequality_gaussian_v2} 
+\end{align} 
+\end{remark}
+
+\item \begin{remark} (\textbf{\emph{Gaussian Logarithmic Sobolev Inequality $\Rightarrow$  Gaussian Poincar{\'e} Inequality}}). \citep{boucheron2013concentration}\\
 Recall that \emph{the Gaussian Poincar{\'e} inequality}
 \begin{align*}
 \text{Var}(f(Z)) &\le \E{}{\norm{\nabla f(Z)}{2}^2}
-\end{align*} We can show that for Gaussian random vectors $Z$,
+\end{align*} Since
 \begin{align*}
-2\text{Var}(f(Z)) &\le  \text{Ent}(f^2(Z)).
+(1+t)\log(1+t) = t + \frac{t^2}{2} + o(t^2)
+\end{align*} as $t\to 0$, we can get for Gaussian measures,
+\begin{align*}
+\text{Ent}_{\mu}(1+\epsilon h) &= \frac{\epsilon^2}{2}\text{Var}_{\mu}(h) + o(\epsilon^2).
+\end{align*}
+Similarly, 
+\begin{align*}
+\int \frac{\norm{\nabla(1+\epsilon h)}{2}^2}{1+\epsilon h} d\mu &= \epsilon^2 \int \norm{\nabla h}{2}^2 d\mu  + o(\epsilon^2).
+\end{align*}
+Thus from \emph{the Gaussian logarithmic Sobolev inequality},
+\begin{align*}
+\text{Ent}_{\mu}(1+\epsilon h) &\le \frac{1}{2}\int \frac{\norm{\nabla(1+\epsilon h)}{2}^2}{1+\epsilon h} d\mu  \\
+\Leftrightarrow \frac{\epsilon^2}{2}\text{Var}_{\mu}(h) + o(\epsilon^2) &\le \frac{\epsilon^2}{2} \int \norm{\nabla h}{2}^2 d\mu  + o(\epsilon^2)\\
+\Leftrightarrow \text{Var}(f(Z)) &\le \E{}{\norm{\nabla f(Z)}{2}^2} \qquad \text{as } \epsilon \to 0.
 \end{align*} Thus \emph{the Gaussian logarithmic Sobolev inequality} implies \emph{the Gaussian Poincar{\'e} inequality}.
 \end{remark}
 \end{itemize}
 
-\subsection{Logarithmic Sobolev Inequality for Binomial and Poisson Distributions}
+\subsection{Information Theory Interpretation}
+\begin{itemize}
+\item \begin{remark} (\textbf{\emph{Information Interpretation of Gaussian Logarithmic Sobolev Inequality}})\\
+Let $\nu,\mu$ be two \emph{probability measures} on $(\cX, \srF)$ and $\nu \ll \mu$. Define $f:= \frac{d\nu}{d\mu}$ be \emph{the Radon-Nikodym derivative} of $\nu$ with respect to $\mu$ (i.e $f$ is the \emph{probability density function} of $\nu$ with respect to $\mu$). Then the entropy becomes \textbf{\emph{the relative entropy}}
+\begin{align*}
+\text{Ent}_{\mu}(f) &:= \E{\mu}{f \log f} = \kl{\nu}{\mu}
+\end{align*} since $\E{\mu}{f} = \int_{\cX^n} fd\mu = 1$.
+
+On the other hand, \underline{\emph{\textbf{the (relative) Fisher information}}} is defined as 
+\begin{align*}
+I(\nu \,\|\, \mu) &:= \E{\nu}{\norm{\nabla \log f}{2}^2} \\
+&= \int \norm{\frac{\nabla f}{f}}{2}^2  d\nu =  \int \frac{\norm{\nabla f}{2}^2}{f^2}  d\nu \\
+&= \int \frac{\norm{\nabla f}{2}^2}{f}  d\mu
+\end{align*}
+Thus \emph{\textbf{the information interpretation}} of \emph{the Gaussian logarithmic Sobolev inequality} is
+\begin{align}
+\kl{\nu}{\mu} &\le \frac{1}{2}I(\nu \,\|\, \mu) \label{ineqn: log_sobolev_inequality_gaussian_infor} 
+\end{align} Note that \emph{the Fisher information metric is \textbf{the Riemannian metric} induced by the relative entropy}.
+\end{remark}
+\end{itemize}
 
 \subsection{Logarithmic Sobolev Inequality for General Probability Measures}
 \begin{itemize}
+\item 
+\begin{remark} (\emph{\textbf{The Sobolev Inequality}})\\
+\emph{\textbf{The Sobolev inequality}} states for smooth function $f: \bR^n \to \bR$ where $n \ge 3$ and $p = \frac{2n}{n-2} > 2$
+\begin{align*}
+\norm{f}{p}^2 &\le C_n \,\int_{\bR^{n}}\abs{\nabla f}^2 dx
+\end{align*} where the inequality is sharp when the constant
+\begin{align*}
+C_n &:= \frac{1}{\pi n(n-2)}\paren{\frac{\Gamma(n)}{\Gamma(n/2)}}^{2/n}
+\end{align*}
+\end{remark}
+
+\item \begin{proposition} (\textbf{Euclidean Logarithmic Sobolev Inequality}). \\
+Let $f: \bR^n \to \bR$ be a smooth function and $m$ be Lebesgue measure on $\bR^n$, then
+\begin{align}
+\text{Ent}_{m}(f^2) &\le \frac{n}{2}\log\paren{\frac{2}{n \pi e} \E{m}{\norm{\nabla f}{2}^2} } \label{ineqn: log_sobolev_inequality_euclidean} \\
+\Leftrightarrow \int f^2 \log\paren{\frac{f^2}{\int f^2 dx}} dx &\le \frac{n}{2}\log\paren{\frac{2}{n \pi e} \int \abs{\nabla f}^2 dx }
+\nonumber
+\end{align}
+\end{proposition}
+
 \item \begin{definition} (\textbf{\emph{Logarithmic Sobolev Inequality for General Probability Measure}}). \\
-\emph{A probability measure} $\mu$ on $\bR^n$ is said to satisfy the \underline{\emph{\textbf{logarithmic Sobolev inequality}}}  for some constant $C > 0$ if 
+\emph{A probability measure} $\mu$ on $\bR^n$ is said to satisfy the \underline{\emph{\textbf{logarithmic Sobolev inequality}}}  for some constant $C > 0$ if for any smooth function $f$
 \begin{align}
 \text{Ent}_{\mu}(f^2) &\le C\, \E{\mu}{\norm{\nabla f}{2}^2} \label{ineqn: log_sobolev_inequality_general}
 \end{align} holds for any \textbf{\emph{continuous differentiable}} function $f: \bR^n \to \bR$.  The left-hand side is called \textbf{\emph{the entropy functional}}, which is defined as
@@ -166,7 +269,7 @@ Recall that \emph{the Gaussian Poincar{\'e} inequality}
 \end{definition}
 
 \item \begin{remark}(\textbf{\emph{Logarithmic Sobolev Inequality}})\\
-We can replace $f \to \sqrt{f}$, so that \emph{the logarithmic Sobolev inequality} becomes
+For non-negative function $f$, we can replace $f \to \sqrt{f}$, so that \emph{the logarithmic Sobolev inequality} becomes
 \begin{align}
 \text{Ent}_{\mu}(f) &\le \frac{1}{2}\, \int \frac{\norm{\nabla f}{2}^2}{f} d\mu \label{ineqn: log_sobolev_inequality_general_v2} 
 \end{align} 
@@ -182,8 +285,64 @@ Then we can obtain \emph{\textbf{the modified logarithmic Sobolev inequality}}
 \text{Ent}_{\mu}(f) &\le \int f^2\, c^{*}\paren{\frac{\nabla f}{f}} d\mu \label{ineqn: log_sobolev_inequality_general_modified} 
 \end{align} 
 \end{remark}
-
 \end{itemize}
+
+\subsection{Variants of Logarithmic Sobolev Inequalities}
+\begin{itemize}
+\item \begin{proposition} (\textbf{A Modified Logarithmic Sobolev Inequalities for Moment Generating Function}) \citep{boucheron2013concentration}\\
+Consider independent random variables $Z_1 \xdotx{,} Z_n$ taking values in $\cX$, a real-valued function $f: \cX^n \to \bR$ and the random variable $X = f(Z_1 \xdotx{,} Z_n)$. Also denote $Z_{(-i)}= (Z_1 \xdotx{,} Z_{i-1}, Z_{i+1} \xdotx{,} Z_n)$ and $X_{(-i)} = f_i(Z_{(-i)})$ where $f_i: \cX^{n-1} \to \bR$ is an arbitrary function. Let $\phi(x) = e^x -x -1$.
+Then for all $\lambda \in \bR$,
+\begin{align}
+\lambda \E{}{Xe^{\lambda X}} - \E{}{e^{\lambda X}}\log\E{}{e^{\lambda X}} &\le \sum_{i=1}^{n}\E{}{e^{\lambda X}\phi(-\lambda(X - X_{(-i)}))}\label{ineqn: log_sobolev_inequality_mgf}
+\end{align}
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Symmetrized Modified Logarithmic Sobolev Inequalities}) \citep{boucheron2013concentration}\\
+Consider independent random variables $Z_1 \xdotx{,} Z_n$ taking values in $\cX$, a real-valued function $f: \cX^n \to \bR$ and the random variable $X = f(Z_1 \xdotx{,} Z_n)$. Also denote $\widetilde{X}^{(i)} = f(Z_1 \xdotx{,} Z_{i-1}, Z_i', Z_{i+1} \xdotx{,} Z_n)$. Let $\phi(x) = e^x -x -1$.
+Then for all $\lambda \in \bR$,
+\begin{align}
+\lambda \E{}{Xe^{\lambda X}} - \E{}{e^{\lambda X}}\log\E{}{e^{\lambda X}} &\le \sum_{i=1}^{n}\E{}{e^{\lambda X}\phi(-\lambda(X - \widetilde{X}^{(i)}))}\label{ineqn: log_sobolev_inequality_sym_mgf}
+\end{align} Moreover, denoting $\tau(x) = x(e^x - 1)$, for all $\lambda \in \bR$,
+\begin{align*}
+\lambda \E{}{Xe^{\lambda X}} - \E{}{e^{\lambda X}}\log\E{}{e^{\lambda X}} &\le \sum_{i=1}^{n}\E{}{e^{\lambda X}\tau(-\lambda(X - \widetilde{X}^{(i)})_{+})},\\
+\lambda \E{}{Xe^{\lambda X}} - \E{}{e^{\lambda X}}\log\E{}{e^{\lambda X}} &\le \sum_{i=1}^{n}\E{}{e^{\lambda X}\tau(\lambda(\widetilde{X}^{(i)} - X)_{-})}.
+\end{align*}
+\end{proposition}
+\end{itemize}
+
+\subsection{Poisson Logarithmic Sobolev Inequality}
+\begin{itemize}
+\item \begin{proposition} (\textbf{Modified Logarithmic Sobolev Inequality for Bernoulli Random Variable}). \citep{boucheron2013concentration}\\
+Let $f: \set{0, 1} \to (0,\infty)$ be a \textbf{non-negative} real-valued function defined on the binary set $\set{0, 1}$. Define \textbf{the discrete derivative} of $f$ at $x \in \set{0, 1}$ by 
+\begin{align*}
+\nabla f := f(1 - x) - f(x).
+\end{align*} Let $X$ be a Bernoulli random variable with parameter $p \in (0,1)$ (i.e. $\bP\set{X = 1} =p$). Then
+\begin{align}
+\text{Ent}(f(X)) &\le (p(1-p))\E{}{\nabla f(X) \nabla \log f(X)}.  \label{ineqn: log_sobolev_inequality_bernoulli_v0}
+\end{align}
+and
+\begin{align}
+\text{Ent}(f(X)) &\le  (p(1-p))\E{}{\frac{\abs{\nabla f(X)}^2}{f(X)}}.  \label{ineqn: log_sobolev_inequality_bernoulli}
+\end{align}
+\end{proposition}
+
+
+\item \begin{proposition} (\textbf{Poisson Logarithmic Sobolev Inequality}). \citep{boucheron2013concentration}\\
+Let $f: \bN \to (0,\infty)$ be a \textbf{non-negative} real-valued function defined on the set of non-negative integers $\bN$. Define \textbf{the discrete derivative} of $f$ at $x \in \bN$ by 
+\begin{align*}
+\nabla f := f(x + 1) - f(x).
+\end{align*} Let $X$ be a Poisson random variable. Then
+\begin{align}
+\text{Ent}(f(X)) &\le (\E{}{X})\E{}{\nabla f(X) \nabla \log f(X)}.  \label{ineqn: log_sobolev_inequality_poisson_v0}
+\end{align}
+and
+\begin{align}
+\text{Ent}(f(X)) &\le (\E{}{X})\E{}{\frac{\abs{\nabla f(X)}^2}{f(X)}}.  \label{ineqn: log_sobolev_inequality_poisson}
+\end{align}
+\end{proposition}
+\end{itemize}
+
+\subsection{Applications}
 
 
 \section{The Entropy Methods}
