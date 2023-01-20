@@ -144,6 +144,8 @@ Recall that \emph{the Gaussian Poincar{\'e} inequality}
 \end{remark}
 \end{itemize}
 
+\subsection{Logarithmic Sobolev Inequality for Binomial and Poisson Distributions}
+
 \subsection{Logarithmic Sobolev Inequality for General Probability Measures}
 \begin{itemize}
 \item \begin{definition} (\textbf{\emph{Logarithmic Sobolev Inequality for General Probability Measure}}). \\
@@ -163,14 +165,22 @@ Recall that \emph{the Gaussian Poincar{\'e} inequality}
 \end{align}
 \end{definition}
 
-\item \begin{remark}(\textbf{\emph{Modified Logarithmic Sobolev Inequality}})\\
+\item \begin{remark}(\textbf{\emph{Logarithmic Sobolev Inequality}})\\
 We can replace $f \to \sqrt{f}$, so that \emph{the logarithmic Sobolev inequality} becomes
 \begin{align}
-\text{Ent}_{\mu}(f) &\le \frac{C}{2}\, \int \frac{\norm{\nabla f}{2}^2}{f} d\mu \label{ineqn: log_sobolev_inequality_general_modified} 
-\end{align} Assume that $\int f d\mu =1$, we have
+\text{Ent}_{\mu}(f) &\le \frac{1}{2}\, \int \frac{\norm{\nabla f}{2}^2}{f} d\mu \label{ineqn: log_sobolev_inequality_general_v2} 
+\end{align} 
+\end{remark}
+
+\item \begin{remark}(\textbf{\emph{Modified Logarithmic Sobolev Inequality via Convex Cost and Duality}})\\
+For some \emph{\textbf{convex non-negative cost}} $c: \bR^n \to \bR_{+}$, \emph{\textbf{the convex conjugate}} of $c$ (Legendre transform of $c$) is defined as
 \begin{align*}
-\int f \log(f)\,d\mu & \le\frac{C}{2}\, \int \frac{\norm{\nabla f}{2}^2}{f}\,d\mu
+c^{*}(x) := \sup_{y}\set{\inn{x}{y} - c(y) }
 \end{align*}
+Then we can obtain \emph{\textbf{the modified logarithmic Sobolev inequality}}
+\begin{align}
+\text{Ent}_{\mu}(f) &\le \int f^2\, c^{*}\paren{\frac{\nabla f}{f}} d\mu \label{ineqn: log_sobolev_inequality_general_modified} 
+\end{align} 
 \end{remark}
 
 \end{itemize}
