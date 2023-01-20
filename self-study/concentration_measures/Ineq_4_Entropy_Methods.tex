@@ -211,7 +211,7 @@ Thus from \emph{the Gaussian logarithmic Sobolev inequality},
 \subsection{Information Theory Interpretation}
 \begin{itemize}
 \item \begin{remark} (\textbf{\emph{Information Interpretation of Gaussian Logarithmic Sobolev Inequality}})\\
-Let $\nu,\mu$ be two \emph{probability measures} on $(\cX, \srF)$ and $\nu \ll \mu$. Define $f:= \frac{d\nu}{d\mu}$ be \emph{the Radon-Nikodym derivative} of $\nu$ with respect to $\mu$ (i.e $f$ is the \emph{probability density function} of $\nu$ with respect to $\mu$). Then the entropy becomes \textbf{\emph{the relative entropy}}
+Let $\nu,\mu$ be two \emph{probability measures} on $(\cX^n, \srF)$, $\mu = \mu_1 \xdotx{\otimes} \mu_n$ and $\nu \ll \mu$. Define $f:= \frac{d\nu}{d\mu}$ be \emph{the Radon-Nikodym derivative} of $\nu$ with respect to $\mu$ (i.e $f$ is the \emph{probability density function} of $\nu$ with respect to $\mu$). Then the entropy becomes \textbf{\emph{the relative entropy}}
 \begin{align*}
 \text{Ent}_{\mu}(f) &:= \E{\mu}{f \log f} = \kl{\nu}{\mu}
 \end{align*} since $\E{\mu}{f} = \int_{\cX^n} fd\mu = 1$.
@@ -222,10 +222,11 @@ I(\nu \,\|\, \mu) &:= \E{\nu}{\norm{\nabla \log f}{2}^2} \\
 &= \int \norm{\frac{\nabla f}{f}}{2}^2  d\nu =  \int \frac{\norm{\nabla f}{2}^2}{f^2}  d\nu \\
 &= \int \frac{\norm{\nabla f}{2}^2}{f}  d\mu
 \end{align*}
-Thus \emph{\textbf{the information interpretation}} of \emph{the Gaussian logarithmic Sobolev inequality} is
+Thus \underline{\emph{\textbf{the information interpretation}}} of \emph{the Gaussian logarithmic Sobolev inequality} is
 \begin{align}
 \kl{\nu}{\mu} &\le \frac{1}{2}I(\nu \,\|\, \mu) \label{ineqn: log_sobolev_inequality_gaussian_infor} 
-\end{align} Note that \emph{the Fisher information metric is \textbf{the Riemannian metric} induced by the relative entropy}.
+\end{align} where $\mu$ is a \emph{Gaussian measure} and $\nu \ll \mu$ with density function $f$.
+Note that \emph{the Fisher information metric is \textbf{the Riemannian metric} induced by the relative entropy}.
 \end{remark}
 \end{itemize}
 
@@ -271,7 +272,7 @@ Let $f: \bR^n \to \bR$ be a smooth function and $m$ be Lebesgue measure on $\bR^
 \item \begin{remark}(\textbf{\emph{Logarithmic Sobolev Inequality}})\\
 For non-negative function $f$, we can replace $f \to \sqrt{f}$, so that \emph{the logarithmic Sobolev inequality} becomes
 \begin{align}
-\text{Ent}_{\mu}(f) &\le \frac{1}{2}\, \int \frac{\norm{\nabla f}{2}^2}{f} d\mu \label{ineqn: log_sobolev_inequality_general_v2} 
+\text{Ent}_{\mu}(f) &\le C \int \frac{\norm{\nabla f}{2}^2}{f} d\mu \label{ineqn: log_sobolev_inequality_general_v2} 
 \end{align} 
 \end{remark}
 
@@ -287,7 +288,93 @@ Then we can obtain \emph{\textbf{the modified logarithmic Sobolev inequality}}
 \end{remark}
 \end{itemize}
 
-\subsection{Variants of Logarithmic Sobolev Inequalities}
+\subsection{Applications}
+\subsubsection{Lipschitz Functions of Gaussian Variables}
+
+\subsubsection{Supremum of Gaussian Process}
+
+\subsubsection{Hypercontractivity for Boolean Polynomials}
+
+\subsubsection{Gaussian Hypercontractivity}
+
+
+
+
+\section{The Entropy Methods}
+\subsection{Herbst's Argument}
+\begin{itemize}
+\item \begin{remark} 
+Recall that the $\Phi$-entropy for $\Phi(x) = x\log(x)$ as
+\begin{align*}
+H_{\Phi}(X) = \text{Ent}(X)&:=  \E{}{X\log X} - \E{}{X}\log\paren{\E{}{X}}. 
+\end{align*}
+The variational formulation of $H_{\Phi}(X)$ is
+\begin{align*}
+\text{Ent}(X)&= \sup_{T}\set{X\paren{\log(T) - \log(\E{}{T})}}
+\end{align*}
+\end{remark}
+
+\item \begin{remark} (\textbf{\emph{Tensorization Property of Entropy Functional}})\\
+Let $\mu = \mu_1 \xdotx{\otimes} \mu_n$ be the probability distribution for $Z = (Z_1 \xdotx{,} Z_n)$ on $(\cX^n, \srF)$. For any measurable function $f: \cX^n \to \bR$, let $X = f(Z_1 \xdotx{,} Z_n)$ so that $\E{}{X\log X} < \infty$.  The \emph{sub-additivity of entropy function (i.e. the tensorization property)} states that 
+\begin{align*}
+\text{Ent}_{\mu_1 \xdotx{\otimes} \mu_n}(f) &\le \E{\mu_1 \xdotx{\otimes} \mu_n}{\sum_{i=1}^{n}\text{Ent}_{\mu_i}(f)}
+\end{align*} where the subscript $\mu_i$ indicates that the integration concerns the $i$-th variable only.
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Entropy Functional for Moment Generating Function}})\\
+Let $X = e^{\lambda Z}$ where $Z$ is a random variable. The entropy function of $X$ becomes
+\begin{align*}
+\text{Ent}(e^{\lambda Z}) &= \E{}{\lambda Z e^{\lambda Z}} - \E{}{e^{\lambda Z}}\log\paren{\E{}{e^{\lambda Z}}}
+\end{align*} Denote $\psi_{Z - \E{}{Z}}(\lambda) := \log\E{}{e^{\lambda (Z - \E{}{Z})}}$. Then
+\begin{align*}
+\psi_{Z - \E{}{Z}}'(\lambda) &= \frac{d}{d\lambda}\log\E{}{e^{\lambda (Z - \E{}{Z})}}\\
+&= \frac{1}{\E{}{e^{\lambda (Z - \E{}{Z})}}}\E{}{\paren{Z - \E{}{Z}} e^{\lambda (Z - \E{}{Z})}}\\
+&= \frac{1}{\E{}{e^{\lambda Z}}}e^{\lambda \E{}{Z}}\E{}{\paren{Z - \E{}{Z}} e^{\lambda (Z - \E{}{Z})}}\\
+&= \frac{1}{\E{}{e^{\lambda Z}}}\E{}{\paren{Z - \E{}{Z}} e^{\lambda Z}}\\
+&= \frac{1}{\E{}{e^{\lambda Z}}}\E{}{Z e^{\lambda Z}} - \E{}{Z}  \\
+\Rightarrow \lambda\; \psi_{Z - \E{}{Z}}'(\lambda) &= \frac{1}{\E{}{e^{\lambda Z}}}\paren{\E{}{\lambda Z e^{\lambda Z}} - \E{}{\lambda Z} \E{}{e^{\lambda Z}}} \\
+\Rightarrow \lambda\; \psi_{Z - \E{}{Z}}'(\lambda) - \psi_{Z - \E{}{Z}}(\lambda) &= \frac{1}{\E{}{e^{\lambda Z}}}\set{\E{}{\lambda Z e^{\lambda Z}} - \E{}{\lambda Z} \E{}{e^{\lambda Z}} - \E{}{e^{\lambda Z}} \log\E{}{e^{\lambda (Z - \E{}{Z})}}}\\
+&=  \frac{1}{\E{}{e^{\lambda Z}}}\left\{\E{}{\lambda Z e^{\lambda Z}} - \E{}{\lambda Z} \E{}{e^{\lambda Z}} \right. \\
+&\quad \left. + \E{}{e^{\lambda Z}}\E{}{\lambda Z} - \E{}{e^{\lambda Z}} \log\E{}{e^{\lambda Z}}\right\} \\
+&= \frac{1}{\E{}{e^{\lambda Z}}}\set{\E{}{\lambda Z e^{\lambda Z}} - \E{}{e^{\lambda Z}} \log\E{}{e^{\lambda Z}}}\\
+&= \frac{\text{Ent}(e^{\lambda Z})}{\E{}{e^{\lambda Z}}}
+\end{align*} Thus we have
+\begin{align}
+\frac{\text{Ent}(e^{\lambda Z})}{\E{}{e^{\lambda Z}}} &= \lambda\; \psi_{Z - \E{}{Z}}'(\lambda) - \psi_{Z - \E{}{Z}}(\lambda). \label{eqn: entropy_log_mgf_differential}
+\end{align} 
+
+Our strategy is based on using \eqref{eqn: entropy_log_mgf_differential} \emph{the sub-additivity of entropy} and then univariate calculus to derive \emph{\textbf{upper bounds} for the \textbf{derivative} of $\psi(\lambda)$}. By solving the obtained \emph{\textbf{differential inequality}}, we obtain tail bounds via \emph{Chernoff's bounding}.
+\end{remark}
+
+\item \begin{proposition} (\textbf{Herbst's Argument}) \citep{boucheron2013concentration, wainwright2019high}\\
+Let $Z$ be an integrable random variable such that for some $\nu > 0$, we have, for every $\lambda > 0$,
+\begin{align}
+\frac{\text{Ent}(e^{\lambda Z})}{\E{}{e^{\lambda Z}}} &\le \frac{\nu \lambda^2}{2} \label{ineqn: herbst_argument}
+\end{align} Then, for every $\lambda >0$, the logarithmic moment generating function of centered random variable $(Z - \E{}{Z})$ satisfies
+\begin{align*}
+\psi_{Z - \E{}{Z}}(\lambda) := \log\E{}{e^{\lambda (Z - \E{}{Z})}} &\le \frac{\nu \lambda^2}{2} .
+\end{align*}
+\end{proposition}
+\begin{proof}
+The condition of the proposition means, via \eqref{eqn: entropy_log_mgf_differential}, that
+\begin{align*}
+\lambda\; \psi_{Z - \E{}{Z}}'(\lambda) - \psi_{Z - \E{}{Z}}(\lambda) &\le \frac{\nu \lambda^2}{2},
+\end{align*} or equivalently,
+\begin{align*}
+\frac{1}{\lambda}\psi_{Z - \E{}{Z}}'(\lambda) - \frac{1}{\lambda^2}\psi_{Z - \E{}{Z}}(\lambda) &\le \frac{\nu}{2}.
+\end{align*} Setting $G(\lambda) = \lambda^{-1}\psi_{Z - \E{}{Z}}(\lambda)$, we see that the differential inequality becomes
+\begin{align*}
+G'(\lambda) &\le \frac{\nu}{2}.
+\end{align*} Since $G(\lambda) \to 0$ as $\lambda \to 0$, which implies that
+\begin{align*}
+G(\lambda) &\le \frac{\nu \lambda}{2},
+\end{align*} and the result follows. \qed
+\end{proof}
+
+\end{itemize}
+
+\subsection{Bounded Difference Inequality}
+\subsection{Modified Logarithmic Sobolev Inequalities}
 \begin{itemize}
 \item \begin{proposition} (\textbf{A Modified Logarithmic Sobolev Inequalities for Moment Generating Function}) \citep{boucheron2013concentration}\\
 Consider independent random variables $Z_1 \xdotx{,} Z_n$ taking values in $\cX$, a real-valued function $f: \cX^n \to \bR$ and the random variable $X = f(Z_1 \xdotx{,} Z_n)$. Also denote $Z_{(-i)}= (Z_1 \xdotx{,} Z_{i-1}, Z_{i+1} \xdotx{,} Z_n)$ and $X_{(-i)} = f_i(Z_{(-i)})$ where $f_i: \cX^{n-1} \to \bR$ is an arbitrary function. Let $\phi(x) = e^x -x -1$.
@@ -296,6 +383,9 @@ Then for all $\lambda \in \bR$,
 \lambda \E{}{Xe^{\lambda X}} - \E{}{e^{\lambda X}}\log\E{}{e^{\lambda X}} &\le \sum_{i=1}^{n}\E{}{e^{\lambda X}\phi(-\lambda(X - X_{(-i)}))}\label{ineqn: log_sobolev_inequality_mgf}
 \end{align}
 \end{proposition}
+\begin{proof}
+\end{proof}
+
 
 \item \begin{proposition} (\textbf{Symmetrized Modified Logarithmic Sobolev Inequalities}) \citep{boucheron2013concentration}\\
 Consider independent random variables $Z_1 \xdotx{,} Z_n$ taking values in $\cX$, a real-valued function $f: \cX^n \to \bR$ and the random variable $X = f(Z_1 \xdotx{,} Z_n)$. Also denote $\widetilde{X}^{(i)} = f(Z_1 \xdotx{,} Z_{i-1}, Z_i', Z_{i+1} \xdotx{,} Z_n)$. Let $\phi(x) = e^x -x -1$.
@@ -342,30 +432,12 @@ and
 \end{proposition}
 \end{itemize}
 
+
+
 \subsection{Applications}
-
-
-\section{The Entropy Methods}
-\subsection{Tensorization Property of $\Phi$-Entropy}
-\begin{itemize}
-\item \begin{remark} 
-Recall that the $\Phi$-entropy for $\Phi(x) = x\log(x)$ as
-\begin{align*}
-H_{\Phi}(X) = \text{Ent}(X)&:=  \E{}{X\log X} - \E{}{X}\log\paren{\E{}{X}}. 
-\end{align*}
-The variational formulation of $H_{\Phi}(X)$ is
-\begin{align*}
-\text{Ent}(X)&= \sup_{T}\set{X\paren{\log(T) - \log(\E{}{T})}}
-\end{align*}
-\end{remark}
-
-\item 
-\end{itemize}
-\subsection{Herbst's Argument}
-\subsection{Bounded Difference Inequality}
-\subsection{Modified Logarithmic Sobolev Inequalities}
-\subsection{Concentration of Convex Lipschitz Functions}
-\subsection{Exponential Tail Bounds for Self-Bounding Functions}
+\subsubsection{The Johnson-Lindenstrauss Lemma}
+\subsubsection{Concentration of Convex Lipschitz Functions}
+\subsubsection{Exponential Tail Bounds for Self-Bounding Functions}
 
 
 \newpage
