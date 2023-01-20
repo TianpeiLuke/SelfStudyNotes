@@ -7,7 +7,7 @@ This repository is the latex-based notes for self-learning, mainly for math, sta
 ## Table of Contents
 - [Causal Inference](./self-study/causal_inference)
 
-- [Concentration Inequalities](./self-study/concentration_measures)
+- [Concentration Inequalities and Non-Asymptotic Analysis](./self-study/concentration_measures)
 
 - [Deep Learning](./self-study/deep_learning)
 
