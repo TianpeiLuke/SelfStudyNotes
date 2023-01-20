@@ -64,6 +64,23 @@
 		- Pinsker's Inequality
 		- Birge's Inequality and Multiple Testing Problem
 
+- Entropy Methods and Logarithmic Sobolev Inequalities [pdf](./Ineq_4_Entropy_Methods.pdf)
+	- Logarithmic Sobolev Inequalities
+		- Bernoulli Logarithmic Sobolev Inequalities
+		- Gaussian Logarithmic Sobolev Inequalities
+		- Information Thoery Interpretation of Gaussian Logarithmic Sobolev Inequalities
+		- Logarithmic Sobolev Inequalities for General Probability Measure
+		- Applications
+			- Lipschitz Function of Gaussian Variables
+			- Supremum of Gaussian Process
+			- Hypercontractivity of Binary Hypercube
+			- Gaussian Hypercontractivity
+
+	- Entropy Methods
+		- Herbst's Argument
+		- Modified Logarithmic Sobolev Inequalities
+		- Applications
+			- Bounded Difference Inequality 
 
 
 
