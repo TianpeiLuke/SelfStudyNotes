@@ -383,6 +383,23 @@ Then for all $\lambda \in \bR$,
 \end{align}
 \end{proposition}
 \begin{proof}
+Recall the tensorization of entropy
+\begin{align*}
+\text{Ent}_{\mu_1 \xdotx{\otimes} \mu_n}(Y) &\le \E{\mu_1 \xdotx{\otimes} \mu_n}{\sum_{i=1}^{n}\text{Ent}_{\mu_i}(Y)}.
+\end{align*}  We bound each term on the right-hand side by the variational formulation of entropy
+\begin{align*}
+\text{Ent}_{\mu_i}(Y) &\le \E{\mu_i}{Y(\log Y - \log u) - (Y -u)}
+\end{align*} for any $u > 0$. Let $u = Y_{(-i)} = g_i(Z_{(-i)})$. We have
+\begin{align*}
+\text{Ent}_{\mu_i}(Y) &\le \E{\mu_i}{Y(\log Y - \log Y_{(-i)}) - (Y - Y_{(-i)})}.
+\end{align*}Applying above inequality to the variable $Y = e^{\lambda X}$ and $Y_{(-i)} = e^{\lambda X_{(-i)}}$, one obtain
+\begin{align*}
+\text{Ent}_{\mu_i}(e^{\lambda X}) &\le \E{\mu_i}{e^{\lambda X}(\log e^{\lambda X} - \log e^{\lambda X_{(-i)}}) - (e^{\lambda X} - e^{\lambda X_{(-i)}})}\\
+&= \E{\mu_i}{e^{\lambda X}(\lambda (X - X_{(-i)}) - (e^{\lambda X} - e^{\lambda X_{(-i)}})}\\
+&= \E{\mu_i}{e^{\lambda X}\paren{\lambda (X - X_{(-i)}) - e^{-\lambda X}(e^{\lambda X} - e^{\lambda X_{(-i)}})}}\\
+&= \E{\mu_i}{e^{\lambda X}\paren{\lambda (X - X_{(-i)}) + e^{-\lambda (X - X_{(-i)})} -1}}\\
+&= \E{\mu_i}{e^{\lambda X}\phi\paren{-\lambda (X - X_{(-i)})}}
+\end{align*} where $\phi(x) = e^x -x -1$. Thus the proof is completed. \qed
 \end{proof}
 
 
@@ -397,6 +414,18 @@ Then for all $\lambda \in \bR$,
 \lambda \E{}{Xe^{\lambda X}} - \E{}{e^{\lambda X}}\log\E{}{e^{\lambda X}} &\le \sum_{i=1}^{n}\E{}{e^{\lambda X}\tau(\lambda(\widetilde{X}^{(i)} - X)_{-})}.
 \end{align*}
 \end{proposition}
+\begin{proof}
+Note that $X_{(-i)}$ and $\widetilde{X}^{(i)}$ are both independent from $Z_i$. The first inequality is the same as the proposition above. For the second inequality, use the fact that
+\begin{align*}
+\E{\mu_i}{e^{\lambda X}\phi\paren{\lambda (\widetilde{X}^{(i)} - X)_{+}}} &= \E{\mu_i}{e^{\lambda \widetilde{X}^{(i)} }\phi\paren{\lambda (X - \widetilde{X}^{(i)})_{+}}}\\
+&= \E{\mu_i}{e^{\lambda X}e^{-\lambda ( X- \widetilde{X}^{(i)}) }\phi\paren{\lambda (X - \widetilde{X}^{(i)})_{+}}}.
+\end{align*} and
+\begin{align*}
+\E{\mu_i}{e^{\lambda X}\phi\paren{-\lambda (\widetilde{X}^{(i)} - X)}} &= \E{\mu_i}{e^{\lambda X}\phi\paren{-\lambda (\widetilde{X}^{(i)} - X)_{+}}} + \E{\mu_i}{e^{\lambda X}\phi\paren{\lambda (\widetilde{X}^{(i)} - X)_{+}}}\\
+&= \E{\mu_i}{e^{\lambda X}\set{\phi\paren{-\lambda (\widetilde{X}^{(i)} - X)} + e^{-\lambda ( X- \widetilde{X}^{(i)}) }\phi\paren{\lambda (X - \widetilde{X}^{(i)})_{+}}}}.
+\end{align*} Finally note that $\phi(x) + e^x \phi(-x) = \tau(x) = x(e^x - 1)$.\qed
+\end{proof}
+
 \end{itemize}
 
 \subsection{Poisson Logarithmic Sobolev Inequality}

@@ -12,9 +12,9 @@
 \contentsline {subsection}{\numberline {2.1}Herbst's Argument}{8}{}%
 \contentsline {subsection}{\numberline {2.2}Modified Logarithmic Sobolev Inequalities}{10}{}%
 \contentsline {subsection}{\numberline {2.3}Poisson Logarithmic Sobolev Inequality}{11}{}%
-\contentsline {subsection}{\numberline {2.4}Applications}{11}{}%
-\contentsline {subsubsection}{\numberline {2.4.1}Concentration on the Hypercube}{11}{}%
-\contentsline {subsubsection}{\numberline {2.4.2}Bounded Difference Inequality}{11}{}%
-\contentsline {subsubsection}{\numberline {2.4.3}The Johnson-Lindenstrauss Lemma}{11}{}%
-\contentsline {subsubsection}{\numberline {2.4.4}Concentration of Convex Lipschitz Functions}{11}{}%
-\contentsline {subsubsection}{\numberline {2.4.5}Exponential Tail Bounds for Self-Bounding Functions}{11}{}%
+\contentsline {subsection}{\numberline {2.4}Applications}{12}{}%
+\contentsline {subsubsection}{\numberline {2.4.1}Concentration on the Hypercube}{12}{}%
+\contentsline {subsubsection}{\numberline {2.4.2}Bounded Difference Inequality}{12}{}%
+\contentsline {subsubsection}{\numberline {2.4.3}The Johnson-Lindenstrauss Lemma}{12}{}%
+\contentsline {subsubsection}{\numberline {2.4.4}Concentration of Convex Lipschitz Functions}{12}{}%
+\contentsline {subsubsection}{\numberline {2.4.5}Exponential Tail Bounds for Self-Bounding Functions}{12}{}%
