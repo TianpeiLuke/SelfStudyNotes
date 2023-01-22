@@ -85,7 +85,7 @@
 		- Hypercontractivity of Binary Polynomials
 		- Gaussian Hypercontractivity
 
-- Isoperimetry Problem and Geometric Concentration [pdf](./Ineq_5_Concentration_Isoperimetry.pdf)
+- Isoperimetry Problem and Geometric Perspective of Concentration [pdf](./Ineq_5_Concentration_Isoperimetry.pdf)
 	- The Classic Isoperimetry Inequalities
 		- Blowup of Sets and Brunn-Minkowski Inequality
 		- The Classical Isoperimetry Theorem
