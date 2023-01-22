@@ -296,23 +296,19 @@ Then we can obtain \emph{\textbf{the modified logarithmic Sobolev inequality}}
 \section{The Entropy Methods}
 \subsection{Herbst's Argument}
 \begin{itemize}
-\item \begin{remark} 
-Recall that the $\Phi$-entropy for $\Phi(x) = x\log(x)$ as
-\begin{align*}
-H_{\Phi}(X) = \text{Ent}(X)&:=  \E{}{X\log X} - \E{}{X}\log\paren{\E{}{X}}. 
-\end{align*}
-The variational formulation of $H_{\Phi}(X)$ is
-\begin{align*}
-\text{Ent}(X)&= \sup_{T}\set{X\paren{\log(T) - \log(\E{}{T})}}
-\end{align*}
-\end{remark}
+%\item \begin{remark} 
+%Recall that the variational formulation of entropy is
+%\begin{align*}
+%\text{Ent}(X)&= \inf_{u > 0}\E{}{X\paren{\log(X) - \log(u)} - (X - u) }
+%\end{align*}
+%\end{remark}
 
-\item \begin{remark} (\textbf{\emph{Tensorization Property of Entropy Functional}})\\
-Let $\mu = \mu_1 \xdotx{\otimes} \mu_n$ be the probability distribution for $Z = (Z_1 \xdotx{,} Z_n)$ on $(\cX^n, \srF)$. For any measurable function $f: \cX^n \to \bR$, let $X = f(Z_1 \xdotx{,} Z_n)$ so that $\E{}{X\log X} < \infty$.  The \emph{sub-additivity of entropy function (i.e. the tensorization property)} states that 
-\begin{align*}
-\text{Ent}_{\mu_1 \xdotx{\otimes} \mu_n}(f) &\le \E{\mu_1 \xdotx{\otimes} \mu_n}{\sum_{i=1}^{n}\text{Ent}_{\mu_i}(f)}
-\end{align*} where the subscript $\mu_i$ indicates that the integration concerns the $i$-th variable only.
-\end{remark}
+%\item \begin{remark} (\textbf{\emph{Tensorization Property of Entropy Functional}})\\
+%Let $\mu = \mu_1 \xdotx{\otimes} \mu_n$ be the probability distribution for $Z = (Z_1 \xdotx{,} Z_n)$ on $(\cX^n, \srF)$. For any measurable function $f: \cX^n \to \bR$, let $X = f(Z_1 \xdotx{,} Z_n)$ so that $\E{}{X\log X} < \infty$.  The \emph{sub-additivity of entropy function (i.e. the tensorization property)} states that 
+%\begin{align*}
+%\text{Ent}_{\mu_1 \xdotx{\otimes} \mu_n}(f) &\le \E{\mu_1 \xdotx{\otimes} \mu_n}{\sum_{i=1}^{n}\text{Ent}_{\mu_i}(f)}
+%\end{align*} where the subscript $\mu_i$ indicates that the integration concerns the $i$-th variable only.
+%\end{remark}
 
 \item \begin{remark} (\emph{\textbf{Entropy Functional for Moment Generating Function}})\\
 Let $X = e^{\lambda Z}$ where $Z$ is a random variable. The entropy function of $X$ becomes
@@ -324,14 +320,17 @@ Let $X = e^{\lambda Z}$ where $Z$ is a random variable. The entropy function of 
 &= \frac{1}{\E{}{e^{\lambda (Z - \E{}{Z})}}}\E{}{\paren{Z - \E{}{Z}} e^{\lambda (Z - \E{}{Z})}}\\
 &= \frac{1}{\E{}{e^{\lambda Z}}}e^{\lambda \E{}{Z}}\E{}{\paren{Z - \E{}{Z}} e^{\lambda (Z - \E{}{Z})}}\\
 &= \frac{1}{\E{}{e^{\lambda Z}}}\E{}{\paren{Z - \E{}{Z}} e^{\lambda Z}}\\
-&= \frac{1}{\E{}{e^{\lambda Z}}}\E{}{Z e^{\lambda Z}} - \E{}{Z}  \\
-\Rightarrow \lambda\; \psi_{Z - \E{}{Z}}'(\lambda) &= \frac{1}{\E{}{e^{\lambda Z}}}\paren{\E{}{\lambda Z e^{\lambda Z}} - \E{}{\lambda Z} \E{}{e^{\lambda Z}}} \\
+\lambda\; \psi_{Z - \E{}{Z}}'(\lambda) &= \frac{1}{\E{}{e^{\lambda Z}}}\paren{\E{}{\lambda Z e^{\lambda Z}} - \E{}{\lambda Z} \E{}{e^{\lambda Z}}} 
+\end{align*} 
+\begin{align*}
 \Rightarrow \lambda\; \psi_{Z - \E{}{Z}}'(\lambda) - \psi_{Z - \E{}{Z}}(\lambda) &= \frac{1}{\E{}{e^{\lambda Z}}}\set{\E{}{\lambda Z e^{\lambda Z}} - \E{}{\lambda Z} \E{}{e^{\lambda Z}} - \E{}{e^{\lambda Z}} \log\E{}{e^{\lambda (Z - \E{}{Z})}}}\\
 &=  \frac{1}{\E{}{e^{\lambda Z}}}\left\{\E{}{\lambda Z e^{\lambda Z}} - \E{}{\lambda Z} \E{}{e^{\lambda Z}} \right. \\
 &\quad \left. + \E{}{e^{\lambda Z}}\E{}{\lambda Z} - \E{}{e^{\lambda Z}} \log\E{}{e^{\lambda Z}}\right\} \\
 &= \frac{1}{\E{}{e^{\lambda Z}}}\set{\E{}{\lambda Z e^{\lambda Z}} - \E{}{e^{\lambda Z}} \log\E{}{e^{\lambda Z}}}\\
 &= \frac{\text{Ent}(e^{\lambda Z})}{\E{}{e^{\lambda Z}}}
-\end{align*} Thus we have
+\end{align*}
+
+Thus we have
 \begin{align}
 \frac{\text{Ent}(e^{\lambda Z})}{\E{}{e^{\lambda Z}}} &= \lambda\; \psi_{Z - \E{}{Z}}'(\lambda) - \psi_{Z - \E{}{Z}}(\lambda). \label{eqn: entropy_log_mgf_differential}
 \end{align} 
@@ -379,30 +378,35 @@ G(\lambda) &\le \frac{\nu \lambda}{2},
 \item \begin{remark} (\textbf{\emph{Entropy Methods}})\\
 \emph{The \textbf{key} strategy of \textbf{entropy methods}} to prove the concentration of function $f(Z)$ of independent variables $Z$  is as follows
 \begin{enumerate}
+\item First we \emph{\textbf{bound the entropy}} for each individual variables $Z_i$ conditioning on the rest of them, i.e. $Z_{(-i)} := (Z_1 \xdotx{,} Z_{i-1}, Z_{i+1} \xdotx{,} Z_n)$ or  $\widetilde{Z}_{i} := (Z_1 \xdotx{,} Z_{i-1}, Z_{i}', Z_{i+1} \xdotx{,} Z_n)$.  Typically, we use \emph{\textbf{the exponential form}} $e^{\lambda f(Z)}$. The followings are methods that can be used in this step
+\begin{itemize}
+\item If $Z$ is \emph{Gaussian} or \emph{Bernoulli distribution},  we can use \emph{\textbf{the logarithmic Sobolev inequality}} 
+\begin{align*}
+\text{Ent}_{\mu_i}(e^{ \lambda f(Z)}) &\le 2 \E{\mu_i}{\norm{\nabla e^{\lambda f(Z)/2}}{2}^2} = \frac{\lambda^2}{2}\E{\mu_i}{e^{\lambda f(Z)} \norm{\nabla f(Z)}{2}^2}.
+\end{align*}
+\item In general, we can also use \emph{the \textbf{variational formulation of entropy}} 
+\begin{align*}
+\text{Ent}_{\mu_i}(e^{\lambda f(Z)}) &\le  \E{\mu_i}{e^{\lambda f(Z)}(\lambda (f(Z) - f(\widetilde{Z}_{i})) - (e^{\lambda  f(Z)} - e^{\lambda f(\widetilde{Z}_{i})})}
+\end{align*} 
+\item If we can control \emph{\textbf{the Jackknife estimate of variance of $f(Z)$}}
+\begin{align*}
+\sum_{i=1}^{n}\paren{f(Z) - f(\widetilde{Z}_{i})}^2 \le \nu
+\end{align*} then we can bound the above variational formulation since $e^{s} - e^{t} \le e^{t}(s - t)$ where $s > t$.
+\end{itemize}
+
 \item Apply \emph{\textbf{the tensorization of property}} of \emph{\textbf{the entropy functional}} on $f(Z)$ 
 \begin{align*}
-\text{Ent}_{\mu_1 \xdotx{\otimes} \mu_n}(f) &\le \E{\mu_1 \xdotx{\otimes} \mu_n}{\sum_{i=1}^{n}\text{Ent}_{\mu_i}(f)}
-\end{align*} where $\mu := \mu_1 \xdotx{\otimes} \mu_n$ is the distribution of $Z$ and the subscript $\mu_i$ indicates that the integration concerns the $i$-th variable only.
-
-\item Then we \emph{\textbf{bound the entropy}} for each individual variables $Z_i$ conditioning on the rest of them, i.e. $Z_{(-i)} := (Z_1 \xdotx{,} Z_{i-1}, Z_{i} \xdotx{,} Z_n)$.  Typically, we use \emph{\textbf{the Herbst's argument}}, when $f(Z) = e^{\lambda Z}$
+\text{Ent}_{\mu_1 \xdotx{\otimes} \mu_n}(e^{\lambda f(Z)}) &\le \E{\mu_1 \xdotx{\otimes} \mu_n}{\sum_{i=1}^{n}\text{Ent}_{\mu_i}(e^{\lambda f(Z)})}
+\end{align*} where $\mu := \mu_1 \xdotx{\otimes} \mu_n$ is the distribution of $Z$ and the subscript $\mu_i$ indicates that the integration concerns $Z_i$ only.
+\item By \emph{\textbf{the Herbst's argument}}, we obtain a \emph{\textbf{differential inequality}} for \emph{\textbf{the logarithmic moment generating function}} $\psi(\lambda)$
 \begin{align*}
-\text{Ent}_{\mu_i}(e^{\lambda Z}) &\le \phi(\lambda)\, \E{\mu_i}{e^{\lambda Z}}.
-\end{align*} Or, we can use \emph{\textbf{the logarithmic Sobolev inequality}} if $Z$ is \emph{Gaussian} or \emph{Bernoulli distribution}, 
-\begin{align*}
-\text{Ent}_{\mu_i}(e^{ \lambda Z}) &\le 2 \E{\mu_i}{\norm{\nabla e^{\lambda Z/2}}{2}^2} = \frac{\lambda^2}{2}\E{\mu_i}{e^{\lambda Z} \norm{\nabla Z}{2}^2}.
+\frac{\text{Ent}_{\mu_1 \xdotx{\otimes} \mu_n}(e^{\lambda f(Z)})}{\E{\mu_1 \xdotx{\otimes} \mu_n}{e^{\lambda f(Z)}}} = \lambda \psi'(\lambda) - \psi(\lambda) \le \phi(\lambda) \Leftrightarrow \paren{\frac{\psi(\lambda)}{\lambda}}' \le \frac{\phi(\lambda)}{\lambda} \\
+\frac{\psi(\lambda)}{\lambda} \le \lim\limits_{\lambda \to 0}\paren{\frac{\psi(\lambda)}{\lambda}} + \int_{0}^{\lambda} \paren{\frac{\phi(u)}{u}}du = \E{}{f(Z)} + \int_{0}^{\lambda} \frac{\phi(u)}{u}du
 \end{align*}
-\item Then we \emph{\textbf{bound} the entire entropy} 
-\begin{align*}
-\text{Ent}_{\mu_1 \xdotx{\otimes} \mu_n}(e^{\lambda Z}) &\le \phi(\lambda)\,\E{\mu_1 \xdotx{\otimes} \mu_n}{\sum_{i=1}^{n}\E{\mu_i}{e^{\lambda Z}}} = n \phi(\lambda)\,\E{\mu_1 \xdotx{\otimes} \mu_n}{e^{\lambda Z}}
-\end{align*} or
-\begin{align*}
-\text{Ent}_{\mu_1 \xdotx{\otimes} \mu_n}(f) &\le  \frac{\lambda^2}{2}\E{\mu_1 \xdotx{\otimes} \mu_n}{\sum_{i=1}^{n}\E{\mu_i}{e^{\lambda Z} \norm{\nabla Z}{2}^2}}.
-\end{align*}
-\item Apply \emph{the Herbst's argument} to obtain \emph{\textbf{differential inequality}} for \emph{\textbf{the logarithmic moment generating function}} $\psi_{f(Z)}$
 
-\item Obtain concentration results based on \textbf{\emph{Chernoff's inequality}}.
+\item Obtain concentration results based on \textbf{\emph{the Cram{\'e}r-Chernoff Method}}
 \begin{align*}
-\bP\set{f(Z) - \E{}{f(Z)} > t} &\le \inf_{\lambda >0 }\exp\paren{\psi_{f(Z)}(\lambda) - \lambda t} \le \inf_{\lambda >0 }\exp\paren{\phi(\lambda) - \lambda t}
+\bP\set{f(Z) - \E{}{f(Z)} > t} &\le \inf_{\lambda >0 }\exp\paren{\psi(\lambda) - \lambda t} \le \inf_{\lambda >0 }\exp\paren{ \lambda \int_{0}^{\lambda} \frac{\phi(u)}{u}du - \lambda t}
 \end{align*}
 \end{enumerate}
 \end{remark}
@@ -411,10 +415,7 @@ G(\lambda) &\le \frac{\nu \lambda}{2},
 
 \end{itemize}
 
-\subsection{Bounded Difference Inequality via Entropy Methods}
-\begin{itemize}
-\item 
-\end{itemize}
+
 
 
 \subsection{Modified Logarithmic Sobolev Inequalities}
@@ -470,6 +471,91 @@ Note that $X_{(-i)}$ and $\widetilde{X}^{(i)}$ are both independent from $Z_i$. 
 \end{align*} Finally note that $\phi(x) + e^x \phi(-x) = \tau(x) = x(e^x - 1)$.\qed
 \end{proof}
 
+\end{itemize}
+
+\subsection{Bounded Difference Inequality via Entropy Methods}
+\begin{itemize}
+\item \begin{remark}
+Given vectors $x, x' \in \cX^n$ and an index $k \in \set{1, 2 \xdotx{,} n}$, we define a new vector $x^{(-k)} \in \cX^n$ via
+\begin{align*}
+x_j^{(-k)} &= \left\{\begin{array}{cc}
+x_j & j \neq k\\
+x_k'& j = k
+\end{array}
+\right.
+\end{align*}
+With this notation, we say that $f: \cX^n \to \bR$ satisfies \underline{\textbf{\emph{the bounded difference inequality}}} with parameters $(L_1 \xdotx{,} L_n)$ if, for each index $k = 1, 2 \xdotx{,} n$,
+\begin{align}
+\abs{f(x) - f(x^{(-k)})} \le L_k, \quad\text{ for all }x, x' \in \cX^n. \label{eqn: bounded_difference_property}
+\end{align}
+\end{remark}
+
+\item \begin{proposition} (\textbf{McDiarmid's Inequality / Bounded Differences Inequality})\citep{boucheron2013concentration, wainwright2019high}\\
+Suppose that $f$ satisfies \textbf{the bounded difference property} \eqref{eqn: bounded_difference_property} with parameters $(L_1 \xdotx{,} L_n)$ and that the random vector $X = (X_1, X_2 \xdotx{,} X_n)$ has \textbf{independent} components. Denote
+\begin{align*}
+\nu &= \frac{1}{4} \sum_{k=1}^{n}L_k^2
+\end{align*}
+Then
+\begin{align*}
+\bP\set{f(X) - \E{}{f(X)} \ge t } &\le   \exp\paren{- \frac{t^2}{2 \nu}}. 
+\end{align*}
+\end{proposition}
+\begin{proof}
+Recall that for a random variable $Y$ taking its values in $[a, b]$, then we know from \emph{Hoeffding's Lemma} that the logarithmic moment generating functions $\psi(\lambda)$ satisfies
+\begin{align*}
+\psi(\lambda)'' = \text{Var}(Y) \le \frac{(b-a)^2}{4}
+\end{align*} for every $\lambda \in \bR$. Hence, Hoeffding's inequality is obtained since
+\begin{align*}
+\frac{\text{Ent}(e^{\lambda Y})}{\E{}{e^{\lambda Y}}} = \lambda \psi'(\lambda) - \psi(\lambda) = \int_{0}^{\lambda} s \psi''(s) ds \le \frac{(b-a)^2}{4}  \int_{0}^{\lambda} s ds =  \frac{(b-a)^2 \lambda^2}{8},
+\end{align*} Note that by the bounded differences assumption, given $X_{(-i)}$, $f(X)$ is a random variable whose range is in an interval of length at most $L_i$, so 
+\begin{align*}
+\frac{\text{Ent}_{(-i)}(e^{\lambda f(X)})}{\E{(-i)}{e^{\lambda f(X)}}} &\le  \frac{L_i^2 \lambda^2}{8} 
+\end{align*} 
+From the  tensorization property of entropy, we can bound the entropy of total function
+\begin{align*}
+\text{Ent}(e^{\lambda f(X)}) \le \E{}{\sum_{i=1}^{n}\text{Ent}_{(-i)}(e^{\lambda f(X)})} &\le \sum_{i=1}^{n} \frac{L_i^2 \lambda^2}{8} \E{}{\E{(-i)}{e^{\lambda f(X)}}}\\
+\frac{\text{Ent}(e^{\lambda f(X)}) }{ \E{}{e^{\lambda f(X)}} } &\le \frac{\sum_{i=1}^{n}L_i^2 \lambda^2}{8} = \frac{\nu \lambda^2}{2}.
+\end{align*} Using \emph{Herbst's argument}, it leads to the bound of logarithmic moment generating function:
+\begin{align*}
+\psi_{f(X)}(\lambda) &\le \frac{\nu \lambda^2}{2}.
+\end{align*} Finally, we apply \emph{the Chernoff's inequality}
+\begin{align*}
+\bP\set{f(X) - \E{}{f(X)} \ge t } &\le  \inf_{\lambda >0 }\exp\paren{\psi_{f(X)}(\lambda) - \lambda t} \le \exp\paren{- \frac{t^2}{2 \nu}}.  \qed
+\end{align*}
+\end{proof}
+
+\item \begin{remark} (\textbf{\emph{Relaxation of Bounded Difference Conditions}})\\
+Consider $X := f(Z)$ where $Z:= (Z_1 \xdotx{,} Z_{n})$ and let 
+\begin{align*}
+\widetilde{X}_{i} &= \inf_{z_i'} f(Z_1 \xdotx{,} Z_{i-1}, z_{i}', Z_{i+1} \xdotx{,} Z_n)
+\end{align*} We can relax the condition defining \emph{the bounded difference function} by the following \emph{boundedness condition on variance}
+\begin{align}
+&\sum_{i=1}^{n}\paren{X - \widetilde{X}_{i}}^2 \le \nu  \nonumber\\
+&\sum_{i=1}^{n}\paren{f(Z_1 \xdotx{,} Z_{n}) - \inf_{z_i'} f(Z_1 \xdotx{,} Z_{i-1}, z_{i}', Z_{i+1} \xdotx{,} Z_n) }^2 \le \nu  \label{ineqn: bounded_variance_condition}
+\end{align} The quantity $\nu$ may be interpreted as an \emph{\textbf{upper bound}} for \emph{\textbf{the Efron-Stein estimate}} of the \emph{\textbf{variance}} $\text{Var}(f(Z))$. 
+\end{remark}
+
+\item \begin{proposition} \label{prop: bounded_variance_concentration} (\textbf{Concentration with Bounded Variance})\citep{boucheron2013concentration}\\
+Assume that $X$ is such that there exists a constant $\nu > 0$ such that, almost surely,
+\begin{align*}
+\sum_{i=1}^{n}\paren{X - \widetilde{X}_{i}}^2 \le \nu.
+\end{align*} Then for all $t > 0$,
+\begin{align}
+\bP\set{X - \E{}{X} \ge t } &\le   \exp\paren{- \frac{t^2}{2 \nu}}. 
+\end{align}
+\end{proposition}
+\begin{proof}
+The result follows easily from \emph{the modified logarithmic Sobolev inequality} proved in the previous section. Observe that for $x > 0$, 
+\begin{align*}
+\phi(-x) :=e^{-x} + x -1 &\le \frac{x^2}{2},
+\end{align*}
+ and therefore, for all $\lambda > 0$, 
+ \begin{align*}
+\text{Ent}(e^{\lambda X})  =  \lambda \E{}{Xe^{\lambda X}} - \E{}{e^{\lambda X}}\log\E{}{e^{\lambda X}} &\le \sum_{i=1}^{n}\E{}{e^{\lambda X}\phi(-\lambda(X - \widetilde{X}_{i}))}\\
+ &\le \E{}{e^{\lambda X} \sum_{i=1}^{n}\frac{\lambda^2}{2} \paren{X - \widetilde{X}_{i}}^2}\\
+ &\le \frac{\nu \lambda^2}{2} \E{}{e^{\lambda X} }
+ \end{align*} where we used the assumption of the theorem. The obtained inequality has the same form as the one we already faced in the proof of bounded difference inequality and the proof may be finished in an identical way. \qed
+\end{proof}
 \end{itemize}
 
 \subsection{Poisson Logarithmic Sobolev Inequality}
@@ -593,14 +679,39 @@ f(Y) &= \max_{i=1 \xdotx{,} n}\paren{A Y}_{i}
 
 \end{itemize}
 \subsection{Concentration of Convex Lipschitz Functions}
+\begin{itemize}
+\item \begin{theorem} (\textbf{Concentration of Convex Lipschitz Functions on Unit Hypercube}) \citep{boucheron2013concentration}\\
+Let  $Z:= (Z_1 \xdotx{,} Z_{n})$ be independent random variables taking values in the interval $[0, 1]$ and let $f : [0, 1]^n \to \bR$ be a \textbf{separately convex function} (i.e. $f$ is convex in each coordinate while the others are fixed) such that
+\begin{align*}
+\abs{f(x) - f(y)} &\le \norm{x - y}{} \quad \text{for all }x, y \in [0, 1]^n.
+\end{align*}
+Then $X = f(Z_1 \xdotx{,} Z_{n})$ satisfies, for all $t > 0$,
+\begin{align}
+\bP\set{f(Z) - \E{}{f(Z)} \ge t } &\le \exp\paren{- \frac{t^2}{2}}. \label{ineqn: convex_lipschitz_concentration}
+\end{align}
+\end{theorem}
+\begin{proof}
+We may assume without loss of generality that the partial derivatives of $f$ exist. (Otherwise one may \emph{approximate} $f$ by a smooth function via a standard argument.) It suffices to bound the random variable 
+\begin{align*}
+\sum_{i=1}^{n}\paren{X - \widetilde{X}_{i}}^2
+\end{align*}
+where $\widetilde{X}_{i} = \inf_{z_i'} f(Z_1 \xdotx{,} Z_{i-1}, z_{i}', Z_{i+1} \xdotx{,} Z_n)$. Recall that for \emph{separately convex} \emph{differentiable} function $f$ on \emph{compact domain} $[0,1]$, we have
+\begin{align*}
+\sum_{i=1}^{n}\paren{X - \widetilde{X}_{i}}^2 &= \sum_{i=1}^{n}\paren{f(Z) - f(\widetilde{Z}_{i})}^2  && \text{( \emph{by continuity of $f$ on compact domain})} \\
+&\le \sum_{i=1}^{n}\paren{\partdiff{f}{z_i}(Z)}^2\paren{Z - \widetilde{Z}_{i}}^2 && \text{( \emph{by separetely convexity})}\\
+&\le \sum_{i=1}^{n}\paren{\partdiff{f}{z_i}(Z)}^2 && (\text{ by domain $[0,1]$ })\\
+&= \norm{\nabla f(Z)}{2}^2 && \\
+&\le 1 && (\text{\emph{ by Lipschitz property}})
+\end{align*} Therefore, we can apply the Proposition \ref{prop: bounded_variance_concentration} with variance bounded above by $\nu = 1$. \qed
+\end{proof}
+\end{itemize}
 
-
-
-\subsection{Concentration on the Hypercube}
-\subsection{Gaussian Hypercontractivity}
-\subsection{Hypercontractivity for Boolean Polynomials}
-\subsection{The Johnson-Lindenstrauss Lemma}
 \subsection{Exponential Tail Bounds for Self-Bounding Functions}
+
+\subsection{Concentration of Lipschitz Functions on the Hypercube}
+\subsection{Hypercontractivity for Boolean Polynomials}
+\subsection{Gaussian Hypercontractivity}
+
 
 
 \newpage

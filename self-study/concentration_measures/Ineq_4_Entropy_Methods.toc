@@ -5,15 +5,14 @@
 \contentsline {subsection}{\numberline {1.4}Logarithmic Sobolev Inequality for General Probability Measures}{7}
 \contentsline {section}{\numberline {2}The Entropy Methods}{8}
 \contentsline {subsection}{\numberline {2.1}Herbst's Argument}{8}
-\contentsline {subsection}{\numberline {2.2}Bounded Difference Inequality via Entropy Methods}{11}
-\contentsline {subsection}{\numberline {2.3}Modified Logarithmic Sobolev Inequalities}{11}
-\contentsline {subsection}{\numberline {2.4}Poisson Logarithmic Sobolev Inequality}{12}
-\contentsline {section}{\numberline {3}Applications}{13}
-\contentsline {subsection}{\numberline {3.1}Lipschitz Functions of Gaussian Variables}{13}
-\contentsline {subsection}{\numberline {3.2}Suprema of Gaussian Process}{14}
-\contentsline {subsection}{\numberline {3.3}Concentration of Convex Lipschitz Functions}{15}
-\contentsline {subsection}{\numberline {3.4}Concentration on the Hypercube}{15}
-\contentsline {subsection}{\numberline {3.5}Gaussian Hypercontractivity}{15}
-\contentsline {subsection}{\numberline {3.6}Hypercontractivity for Boolean Polynomials}{15}
-\contentsline {subsection}{\numberline {3.7}The Johnson-Lindenstrauss Lemma}{15}
-\contentsline {subsection}{\numberline {3.8}Exponential Tail Bounds for Self-Bounding Functions}{15}
+\contentsline {subsection}{\numberline {2.2}Modified Logarithmic Sobolev Inequalities}{10}
+\contentsline {subsection}{\numberline {2.3}Bounded Difference Inequality via Entropy Methods}{12}
+\contentsline {subsection}{\numberline {2.4}Poisson Logarithmic Sobolev Inequality}{14}
+\contentsline {section}{\numberline {3}Applications}{14}
+\contentsline {subsection}{\numberline {3.1}Lipschitz Functions of Gaussian Variables}{14}
+\contentsline {subsection}{\numberline {3.2}Suprema of Gaussian Process}{16}
+\contentsline {subsection}{\numberline {3.3}Concentration of Convex Lipschitz Functions}{17}
+\contentsline {subsection}{\numberline {3.4}Exponential Tail Bounds for Self-Bounding Functions}{17}
+\contentsline {subsection}{\numberline {3.5}Concentration of Lipschitz Functions on the Hypercube}{17}
+\contentsline {subsection}{\numberline {3.6}Hypercontractivity for Boolean Polynomials}{17}
+\contentsline {subsection}{\numberline {3.7}Gaussian Hypercontractivity}{17}
