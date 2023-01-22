@@ -12,6 +12,6 @@
 \contentsline {subsection}{\numberline {2.3}$\Phi $-Entropy}{9}
 \contentsline {subsection}{\numberline {2.4}Sub-Additivity of $\Phi $-Entropy}{10}
 \contentsline {subsection}{\numberline {2.5}Duality and Variational Formulas}{12}
-\contentsline {subsection}{\numberline {2.6}Wasserstein Distance and Transportation Cost Inequality}{15}
+\contentsline {subsection}{\numberline {2.6}Wasserstein Distance and Transportation Cost Inequality}{16}
 \contentsline {subsection}{\numberline {2.7}Pinsker's Inequality}{17}
 \contentsline {subsection}{\numberline {2.8}Birg{\'e}'s Inequality and Multiple Testing Problem}{18}

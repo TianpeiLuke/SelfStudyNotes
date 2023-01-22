@@ -593,6 +593,65 @@ and
 
 
 \section{Applications}
+\subsection{Concentration of Bounded Difference Functions on the Hypercube}
+\begin{itemize}
+\item \begin{proposition} (\textbf{Bounded Difference Functions of Symmetric Bernoulli Variables}) \citep{boucheron2013concentration} \\
+Let $Z = (Z_1 \xdotx{,} Z_n)$ be a vector of $n$ \textbf{independent} \textbf{symmetric Bernoulli} random variables, i.e. \textbf{uniformly distributed} in binary hypercube $\set{-1, +1}^n$.  Let $f : \set{-1, 1}^n \to \bR$ be an arbitary function.  Let $\nu > 0$ be such that
+\begin{align*}
+\sum_{i=1}^{n}\paren{f(z) - f(\widetilde{z}_{i})}^2 \le \nu.
+\end{align*} for all $z, \widetilde{z}_{i} \in \set{-1, +1}^n$, where $\widetilde{z}_{i} = (z_1 \xdotx{,} z_{i-1}, z_{i}', z_{i+1} \xdotx{,} z_n)$ is obtained by replacing $i$-th component of  $z$  by an independent copy of $z_{i}= -z_i$. Then the random variable $X = f(Z)$ satisfies, for all $t > 0$,
+\begin{align}
+\bP\set{X - \E{}{X} \ge t} &\le \exp\paren{-\frac{t^2}{\nu}} \label{ineqn: fun_sym_bernoulli}\\
+\bP\set{X - \E{}{X} \le -t} &\le \exp\paren{-\frac{t^2}{\nu}} \nonumber
+\end{align}
+\end{proposition}
+\begin{proof}
+Apply the \emph{logarithmic Sobelev inequality} for \emph{symmetric Bernoulli random variable} when $g = e^{\lambda f/2}$
+\begin{align*}
+\text{Ent}(e^{\lambda f(Z)}) &\le \cE(e^{\lambda f/2}) = \frac{1}{2}\sum_{i=1}^{n}\E{}{\paren{e^{\lambda f(Z) /2} - e^{\lambda f(\widetilde{Z}_{i}) /2}}^2} \\
+&= \sum_{i=1}^{n}\E{}{\paren{e^{\lambda f(Z) /2} - e^{\lambda f(\widetilde{Z}_{i}) /2}}_{+}^2} 
+\end{align*} By convexity, $e^{s/2} - e^{t/2} \le e^{t/2}(s - t)/2$ where $s > t$. So
+\begin{align*}
+\text{Ent}(e^{\lambda f(Z)}) &\le \frac{\lambda^2}{4}\sum_{i=1}^{n}\E{}{e^{\lambda f(Z) /2}\paren{f(Z)  - f(\widetilde{Z}_{i})}_{+}^2}\\
+&=  \frac{\lambda^2}{4}\E{}{e^{\lambda f(Z)}\sum_{i=1}^{n}\paren{f(Z)  - f(\widetilde{Z}_{i})}_{+}^2} \\
+&\le \frac{\nu \lambda^2}{4}\E{}{e^{\lambda f(Z) }}
+\end{align*} where the last inequality is from the bounded variance assumption. Thus
+\begin{align*}
+\frac{\text{Ent}(e^{\lambda f(Z)})}{\E{}{e^{\lambda f(Z) }}} &\le \frac{\nu \lambda^2}{4}.
+\end{align*} By \emph{Herbst's argument}, the logarithmic moment generating function 
+\begin{align*}
+\psi(\lambda) = \log \E{}{e^{\lambda (f(Z) - \E{}{f(Z)})}} &\le \frac{\nu \lambda^2}{4}.
+\end{align*} Finally, by Chernoff bound,
+\begin{align*}
+\bP\set{f(Z) - \E{}{f(Z)} \ge t} &\le \inf_{\lambda >0}\exp\paren{ \psi(\lambda) - \lambda t } \le \inf_{\lambda >0}\exp\paren{ \frac{\nu \lambda^2}{4} - \lambda t } = \exp\paren{- \frac{t^2}{\nu}}
+\end{align*} where $\lambda^{*} = \frac{2t}{ \nu}$. \qed
+\end{proof}
+
+\item \begin{remark}
+Recall that by \emph{the Efron-Stein inequality}, $\text{Var}(f(Z)) \le \nu/2$. The theorem states much
+more: \emph{\textbf{tail probabilities} decrease similarly to \textbf{the tail probabilities of a Gaussian random variable} with \textbf{variance} $\nu/2$}.  The price we pay for such an improved inequality is that a \emph{\textbf{pointwise control}} of 
+\begin{align*}
+\sum_{i=1}^{n}\paren{f(z) - f(\widetilde{z}_{i})}^2 \le \nu.
+\end{align*} is required, while to \emph{bound the variance} it suffices to keep its \emph{\textbf{expected value}} under control. 
+\end{remark}
+
+\item \begin{proposition} (\textbf{Functions of Asymmetric Bernoulli Variables}) \citep{boucheron2013concentration} \\
+Let $Z = (Z_1 \xdotx{,} Z_n)$ be a vector of $n$ \textbf{independent} \textbf{Bernoulli} random variables with parameter $p$ (i.e. $\bP\set{Z_i = 1} = p$).  Let $f : \set{-1, 1}^n \to \bR$ be an arbitary function.  Let $\nu > 0$ be such that
+\begin{align*}
+\sum_{i=1}^{n}\paren{f(z) - f(\widetilde{z}_{i})}^2 \le \nu.
+\end{align*} for all $z, \widetilde{z}_{i} \in \set{-1, +1}^n$, where $\widetilde{z}_{i} = (z_1 \xdotx{,} z_{i-1}, z_{i}', z_{i+1} \xdotx{,} z_n)$ is obtained by replacing $i$-th component of  $z$  by an independent copy of $z_{i}' = -z_i$. If $f$ is \textbf{nondecreasing} in all of its components,  then the random variable $X = f(Z)$ satisfies, for all $t > 0$,
+\begin{align}
+\bP\set{X - \E{}{X} \ge t} &\le \exp\paren{-\frac{t^2}{(1-p)c(p)\nu}} \label{ineqn: fun_nonsym_bernoulli_nondecreasing}
+\end{align} If $f$ is \textbf{nonincreasing} in all of its components, 
+\begin{align}
+\bP\set{X - \E{}{X} \ge t} &\le \exp\paren{-\frac{t^2}{pc(p)\nu}} \label{ineqn: fun_nonsym_bernoulli_nonincreasing}
+\end{align} where 
+\begin{align*}
+c(p) := \frac{1}{1 - 2p}\log \frac{1-p}{p}
+\end{align*} and $\lim\limits_{p \to 1/2}c(p) = 2$.
+\end{proposition}
+\end{itemize}
+
 \subsection{Lipschitz Functions of Gaussian Variables}
 \begin{itemize}
 \item \begin{theorem} (\textbf{Rademacher Theorem}).\\
@@ -642,6 +701,8 @@ The previous theorem states that $f(Z)$ is \emph{sub-Gaussian distributed} with 
 \emph{An \textbf{important} feature} of the theorem is that the right-hand side \emph{\textbf{does not depend on the dimension $n$}}. This inequality has served as a benchmark for the development of concentration inequalities during the last three decades. 
 \end{remark}
 \end{itemize}
+
+
 
 \subsection{Suprema of Gaussian Process}
 \begin{itemize}
@@ -708,7 +769,6 @@ where $\widetilde{X}_{i} = \inf_{z_i'} f(Z_1 \xdotx{,} Z_{i-1}, z_{i}', Z_{i+1} 
 
 \subsection{Exponential Tail Bounds for Self-Bounding Functions}
 
-\subsection{Concentration of Lipschitz Functions on the Hypercube}
 \subsection{Hypercontractivity for Boolean Polynomials}
 \subsection{Gaussian Hypercontractivity}
 

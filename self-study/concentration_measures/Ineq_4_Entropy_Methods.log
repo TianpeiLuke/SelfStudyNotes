@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  21 JAN 2023 22:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  22 JAN 2023 09:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -717,23 +717,23 @@ t-is-fies \OT1/cmr/bx/it/10.95 the bounded dif-fer-ence prop-erty [] \OT1/cmr/m
  [] L[]\OT1/cmr/m/n/10.95 )$
  []
 
-[12] [13] [14]
-Overfull \hbox (23.68715pt too wide) in paragraph at lines 625--627
+[12] [13] [14] [15] [16]
+Overfull \hbox (23.68715pt too wide) in paragraph at lines 684--686
 []\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Gaussian Con-cen-tra-tion In-equal-
 ity / The Tsirelson-Ibragimov-Sudakov
  []
 
-[15] [16] [17] (./Ineq_4_Entropy_Methods.bbl) [18]
+[17] [18] [19] (./Ineq_4_Entropy_Methods.bbl) [20]
 (./Ineq_4_Entropy_Methods.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 15920 strings out of 493029
- 315667 string characters out of 6136233
- 368959 words of memory out of 5000000
- 19126 multiletter control sequences out of 15000+600000
+ 15923 strings out of 493029
+ 315779 string characters out of 6136233
+ 368989 words of memory out of 5000000
+ 19129 multiletter control sequences out of 15000+600000
  14610 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,14n,84p,794b,358s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -757,10 +757,10 @@ dist/fonts/type1/public/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/doublestroke/dsrom8.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/rsfs/rsfs10.pfb>
-Output written on Ineq_4_Entropy_Methods.pdf (18 pages, 285551 bytes).
+Output written on Ineq_4_Entropy_Methods.pdf (20 pages, 292097 bytes).
 PDF statistics:
- 150 PDF objects out of 1000 (max. 8388607)
- 107 compressed objects within 2 object streams
+ 157 PDF objects out of 1000 (max. 8388607)
+ 112 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
