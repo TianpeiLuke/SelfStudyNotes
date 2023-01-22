@@ -1,4 +1,4 @@
-\begin{thebibliography}{3}
+\begin{thebibliography}{5}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -16,6 +16,18 @@ St{\'e}phane Boucheron, G{\'a}bor Lugosi, and Pascal Massart.
 Lawrence~C Evans.
 \newblock \emph{Partial differential equations}, volume~19.
 \newblock American Mathematical Soc., 2010.
+
+\bibitem[Gin{\'e} and Nickl(2021)]{gine2021mathematical}
+Evarist Gin{\'e} and Richard Nickl.
+\newblock \emph{Mathematical foundations of infinite-dimensional statistical
+  models}.
+\newblock Cambridge university press, 2021.
+
+\bibitem[Vershynin(2018)]{vershynin2018high}
+Roman Vershynin.
+\newblock \emph{High-dimensional probability: An introduction with applications
+  in data science}, volume~47.
+\newblock Cambridge university press, 2018.
 
 \bibitem[Wainwright(2019)]{wainwright2019high}
 Martin~J Wainwright.

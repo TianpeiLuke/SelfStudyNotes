@@ -1,46 +1,46 @@
-This is BibTeX, Version 0.99d (TeX Live 2021)
-Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Ineq_4_Entropy_Methods.aux
 The style file: plainnat.bst
-Database file #1: reference.bib
-You've used 3 entries,
+Database file #1: reference.bib.bib
+You've used 5 entries,
             2773 wiz_defined-function locations,
-            609 strings with 5273 characters,
-and the built_in function-call counts, 1046 in all, are:
-= -- 76
-> -- 50
-< -- 4
-+ -- 18
-- -- 15
-* -- 72
-:= -- 174
-add.period$ -- 9
-call.type$ -- 3
-change.case$ -- 11
-chr.to.int$ -- 3
-cite$ -- 6
-duplicate$ -- 61
-empty$ -- 98
-format.name$ -- 18
-if$ -- 210
+            619 strings with 5544 characters,
+and the built_in function-call counts, 1706 in all, are:
+= -- 127
+> -- 81
+< -- 7
++ -- 29
+- -- 24
+* -- 113
+:= -- 280
+add.period$ -- 15
+call.type$ -- 5
+change.case$ -- 18
+chr.to.int$ -- 5
+cite$ -- 10
+duplicate$ -- 101
+empty$ -- 162
+format.name$ -- 31
+if$ -- 348
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 6
-newline$ -- 23
-num.names$ -- 12
-pop$ -- 37
+missing$ -- 10
+newline$ -- 33
+num.names$ -- 20
+pop$ -- 61
 preamble$ -- 1
-purify$ -- 11
+purify$ -- 18
 quote$ -- 0
-skip$ -- 41
+skip$ -- 69
 stack$ -- 0
-substring$ -- 6
-swap$ -- 5
-text.length$ -- 2
+substring$ -- 10
+swap$ -- 8
+text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 18
+type$ -- 30
 warning$ -- 0
-while$ -- 9
+while$ -- 15
 width$ -- 0
-write$ -- 45
+write$ -- 70
