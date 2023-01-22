@@ -22,6 +22,7 @@
 		- Hoeffding’s Inequality
 		- Bennett’s Inequality
 		- Bernstein’s Inequality
+		- Gaussian Random Projections
 
 - Martingale-Based Inequalities [pdf](./Ineq_2_Martingale_Methods.pdf)
 	- Martingale-based Methods
@@ -79,8 +80,7 @@
 		- Lipschitz Function of Gaussian Variables
 		- Supremum of Gaussian Process
 		- Concentration of Convex Lipschitz Functions
-		- Concentration on Hypercube 
-		- Gaussian Random Projections
+		- Concentration of Lipschitz Functions on Binary Hypercube 
 		- Exponential Tails for Self-Bounding Functions
 		- Hypercontractivity of Binary Polynomials
 		- Gaussian Hypercontractivity
