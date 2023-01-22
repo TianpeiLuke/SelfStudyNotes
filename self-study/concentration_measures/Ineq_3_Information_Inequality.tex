@@ -654,7 +654,13 @@ Let $\cC$ denote the class of functions $\Phi: [0, \infty) \to \bR$ that are \te
 \begin{align}
 H_{\Phi}(X) &=  \sup_{T \in \text{conv}(L_{1}^{+}), T\neq 0}\set{\E{}{\paren{\Phi'(T) - \Phi'(\E{}{T})}(X-T) + \Phi(T)} - \Phi(\E{}{T})}.  \label{eqn: duality_phi_entropy_general}
 \end{align} The supremum is achieved when $T=X$ (or $T=1$ if $X=0$).
+
+Another variational formulation of $\Phi$-entropy via Bregman divergence is
+\begin{align}
+H_{\Phi}(X) &=  \inf_{u > 0}\E{}{\Phi(X) - \Phi(u) - \Phi'(u)(X - u)}.  \label{eqn: duality_phi_entropy_general_upper}
+\end{align}
 \end{theorem}
+
 \end{itemize}
 
 \subsection{Wasserstein Distance and Transportation Cost Inequality}
