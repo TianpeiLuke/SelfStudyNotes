@@ -70,22 +70,20 @@
 		- Gaussian Logarithmic Sobolev Inequalities
 		- Information Thoery Interpretation of Gaussian Logarithmic Sobolev Inequalities
 		- Logarithmic Sobolev Inequalities for General Probability Measure
-		- Applications
-			- Lipschitz Function of Gaussian Variables
-			- Supremum of Gaussian Process
-			- Hypercontractivity of Binary Polynomials
-			- Gaussian Hypercontractivity
-
 	- Entropy Methods
 		- Herbst's Argument
+		- Bounded Difference Inequality via Entropy Methods
 		- Modified Logarithmic Sobolev Inequalities
 		- Poisson Logarithmic Sobolev Inequalities
-		- Applications
-			- Concentration on Hypercube 
-			- Bounded Difference Inequality 
-			- Gaussian Random Projections
-			- Concentration of Convex Lipschitz Functions
-			- Exponential Tails for Self-Bounding Functions
+	- Applications
+		- Lipschitz Function of Gaussian Variables
+		- Supremum of Gaussian Process
+		- Concentration of Convex Lipschitz Functions
+		- Concentration on Hypercube 
+		- Gaussian Random Projections
+		- Exponential Tails for Self-Bounding Functions
+		- Hypercontractivity of Binary Polynomials
+		- Gaussian Hypercontractivity
 
 
 
