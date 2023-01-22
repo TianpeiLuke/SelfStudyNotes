@@ -85,5 +85,16 @@
 		- Hypercontractivity of Binary Polynomials
 		- Gaussian Hypercontractivity
 
-
+- Isoperimetry Problem and Geometric Perspective of Concentration [pdf](./Ineq_5_Concentration_Isoperimetry.pdf)
+	- The Classic Isoperimetry Inequalities
+		- Blowup of Sets and Brunn-Minkowski Inequality
+		- The Classical Isoperimetry Theorem
+	- Concentration via Isoperimetry
+		- Levy’s Inequalities and Concentration Function 
+		- Gaussian Isoperimetric Inequalities and Gaussian Concentration
+		- Isoperimetric Inequalities on the Unit Sphere
+		- Edge Isoperimetric Inequality on the Binary Hypercube
+		- Vertex Isoperimetric Inequality on the Binary Hypercube
+		- Convex Distance Inequality
+ 
 
