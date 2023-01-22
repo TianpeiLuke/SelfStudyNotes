@@ -288,14 +288,7 @@ Then we can obtain \emph{\textbf{the modified logarithmic Sobolev inequality}}
 \end{remark}
 \end{itemize}
 
-\subsection{Applications}
-\subsubsection{Lipschitz Functions of Gaussian Variables}
 
-\subsubsection{Supremum of Gaussian Process}
-
-\subsubsection{Hypercontractivity for Boolean Polynomials}
-
-\subsubsection{Gaussian Hypercontractivity}
 
 
 
@@ -371,7 +364,58 @@ G(\lambda) &\le \frac{\nu \lambda}{2},
 \end{align*} and the result follows. \qed
 \end{proof}
 
+%\item \begin{remark}
+%If we assume $G(\lambda) = \lambda^{-1}\log \E{}{e^{\lambda Z}}$ we see that by \emph{L' Hopital's rule}, 
+%\begin{align*}
+%G(0) = \lim\limits_{\lambda \to 0}\frac{\psi(\lambda)}{\lambda} &= \psi'(0) = \frac{\frac{d}{d\lambda}\E{}{e^{\lambda Z}}|_{\lambda =0}}{\E{}{e^{\lambda Z}}|_{\lambda =0}} = \E{}{Z}.
+%\end{align*} Thus solving the differential inequality, we have
+%\begin{align*}
+%G(\lambda) = G(0) + \int_{0}^{\lambda}G'(u)du &\le \E{}{Z} + \frac{\nu \lambda}{2}\\
+%\Rightarrow \bP\set{Z - \E{}{Z} \ge t} &\le \frac{e^{\lambda G(\lambda) }}{e^{\lambda(\E{}{Z} + t)}} \le e^{-\lambda t + \frac{\nu \lambda^2}{2}}
+%\end{align*}
+%
+%\end{remark}
+
+\item \begin{remark} (\textbf{\emph{Entropy Methods}})\\
+\emph{The \textbf{key} strategy of \textbf{entropy methods}} to prove the concentration of function $f(Z)$ of independent variables $Z$  is as follows
+\begin{enumerate}
+\item Apply \emph{\textbf{the tensorization of property}} of \emph{\textbf{the entropy functional}} on $f(Z)$ 
+\begin{align*}
+\text{Ent}_{\mu_1 \xdotx{\otimes} \mu_n}(f) &\le \E{\mu_1 \xdotx{\otimes} \mu_n}{\sum_{i=1}^{n}\text{Ent}_{\mu_i}(f)}
+\end{align*} where $\mu := \mu_1 \xdotx{\otimes} \mu_n$ is the distribution of $Z$ and the subscript $\mu_i$ indicates that the integration concerns the $i$-th variable only.
+
+\item Then we \emph{\textbf{bound the entropy}} for each individual variables $Z_i$ conditioning on the rest of them, i.e. $Z_{(-i)} := (Z_1 \xdotx{,} Z_{i-1}, Z_{i} \xdotx{,} Z_n)$.  Typically, we use \emph{\textbf{the Herbst's argument}}, when $f(Z) = e^{\lambda Z}$
+\begin{align*}
+\text{Ent}_{\mu_i}(e^{\lambda Z}) &\le \phi(\lambda)\, \E{\mu_i}{e^{\lambda Z}}.
+\end{align*} Or, we can use \emph{\textbf{the logarithmic Sobolev inequality}} if $Z$ is \emph{Gaussian} or \emph{Bernoulli distribution}, 
+\begin{align*}
+\text{Ent}_{\mu_i}(e^{ \lambda Z}) &\le 2 \E{\mu_i}{\norm{\nabla e^{\lambda Z/2}}{2}^2} = \frac{\lambda^2}{2}\E{\mu_i}{e^{\lambda Z} \norm{\nabla Z}{2}^2}.
+\end{align*}
+\item Then we \emph{\textbf{bound} the entire entropy} 
+\begin{align*}
+\text{Ent}_{\mu_1 \xdotx{\otimes} \mu_n}(e^{\lambda Z}) &\le \phi(\lambda)\,\E{\mu_1 \xdotx{\otimes} \mu_n}{\sum_{i=1}^{n}\E{\mu_i}{e^{\lambda Z}}} = n \phi(\lambda)\,\E{\mu_1 \xdotx{\otimes} \mu_n}{e^{\lambda Z}}
+\end{align*} or
+\begin{align*}
+\text{Ent}_{\mu_1 \xdotx{\otimes} \mu_n}(f) &\le  \frac{\lambda^2}{2}\E{\mu_1 \xdotx{\otimes} \mu_n}{\sum_{i=1}^{n}\E{\mu_i}{e^{\lambda Z} \norm{\nabla Z}{2}^2}}.
+\end{align*}
+\item Apply \emph{the Herbst's argument} to obtain \emph{\textbf{differential inequality}} for \emph{\textbf{the logarithmic moment generating function}} $\psi_{f(Z)}$
+
+\item Obtain concentration results based on \textbf{\emph{Chernoff's inequality}}.
+\begin{align*}
+\bP\set{f(Z) - \E{}{f(Z)} > t} &\le \inf_{\lambda >0 }\exp\paren{\psi_{f(Z)}(\lambda) - \lambda t} \le \inf_{\lambda >0 }\exp\paren{\phi(\lambda) - \lambda t}
+\end{align*}
+\end{enumerate}
+\end{remark}
+
+  
+
 \end{itemize}
+
+\subsection{Bounded Difference Inequality via Entropy Methods}
+\begin{itemize}
+\item 
+\end{itemize}
+
 
 \subsection{Modified Logarithmic Sobolev Inequalities}
 \begin{itemize}
@@ -462,12 +506,101 @@ and
 
 
 
-\subsection{Applications}
-\subsubsection{Concentration on the Hypercube}
-\subsubsection{Bounded Difference Inequality}
-\subsubsection{The Johnson-Lindenstrauss Lemma}
-\subsubsection{Concentration of Convex Lipschitz Functions}
-\subsubsection{Exponential Tail Bounds for Self-Bounding Functions}
+\section{Applications}
+\subsection{Lipschitz Functions of Gaussian Variables}
+\begin{itemize}
+\item \begin{theorem} (\textbf{Rademacher Theorem}).\\
+If $f: U \to \bR$ is a $L$-Lipschitz function where $U \subseteq \bR^n$, then $f$ is \textbf{differentiable almost everywhere} in $U$ and \textbf{the essential supremum} of the \textbf{norm} of its \textbf{derivative}  is \textbf{bounded} by its \textbf{Lipschitz constant}. 
+\end{theorem}
+
+\item \begin{theorem} (\textbf{Lipschitz Functions of Gaussian Variables}) \citep{boucheron2013concentration} \\
+Let $Z = (Z_1 \xdotx{,} Z_n)$ be a vector of $n$ \textbf{independent} \textbf{standard normal} random variables. Let $f : \bR^n \to \bR$ denote an \textbf{$L$-Lipschitz function}, that is, there exists a constant $L > 0$ such that for all $x, y \in \bR^n$,
+\begin{align*}
+\abs{f(x) - f(y)} &\le  L\norm{x - y}{}.
+\end{align*} Then, for all $\lambda \in \bR$,
+\begin{align}
+\psi_{f(Z) - \E{}{f(Z)}}(\lambda) := \log \E{}{e^{\lambda\paren{f(Z) - \E{}{f(Z)}}}} &\le \frac{L^2 \lambda^2}{2} \label{ineqn: lip_fun_gaussian}
+\end{align}
+\end{theorem}
+\begin{proof}
+By a standard density argument we may assume that $f$ is \emph{differentiable} with \emph{gradient uniformly bounded by $L$} according to \emph{Rademacher theorem}. We may also assume, without loss of generality, that $\E{}{f(Z)} = 0$.  Using the \emph{Gaussian logarithmic Sobolev inequality} for the function $e^{\lambda f/2}$, we obtain
+\begin{align*}
+\text{Ent}(e^{\lambda f}) &\le 2 \E{}{\norm{\nabla e^{\lambda f/2}}{2}^2} \\
+&= 2 \E{}{\norm{\frac{\lambda}{2}e^{\lambda f/2}  \nabla f}{2}^2} \\
+&= \frac{\lambda^2}{2} \E{}{e^{\lambda f} \norm{ \nabla f}{2}^2} \\
+&\le  \frac{\lambda^2}{2} \E{}{e^{\lambda f}} L^2 \\
+\Rightarrow  \frac{\text{Ent}(e^{\lambda f}) }{\E{}{e^{\lambda f}}} &\le \frac{L^2 \lambda^2}{2}
+\end{align*} By Herbst's argument, this implies that $\lambda \psi'(\lambda) - \psi(\lambda) \le \frac{L^2 \lambda^2}{2}$. Let $G(\lambda) := \lambda^{-1}\psi(\lambda)$, we have  $G'(\lambda) \le L^2/2$, so we have
+\begin{align*}
+\psi_{f(Z)}(\lambda) &\le   \frac{L^2 \lambda^2}{2} \qed
+\end{align*}
+\end{proof}
+
+\item \begin{theorem}  (\textbf{Gaussian Concentration Inequality / The Tsirelson-Ibragimov-Sudakov Inequality}) \citep{boucheron2013concentration, wainwright2019high} \\
+Let $Z = (Z_1 \xdotx{,} Z_n)$ be a vector of $n$ \textbf{independent} \textbf{standard normal} random variables. Let $f : \bR^n \to \bR$ denote an \textbf{$L$-Lipschitz function}. Then, for all $t > 0$, 
+\begin{align}
+\bP\set{f(Z) - \E{}{f(Z)} \ge t } &\le \exp\paren{- \frac{t^2}{2 L^2}}. \label{ineqn: gaussian_concentration_inequality}
+\end{align}
+\end{theorem}
+\begin{proof}
+The previous theorem states that $f(Z)$ is \emph{sub-Gaussian distributed} with parameter $\nu = L^2$. By Markov's inequality, 
+\begin{align*}
+\bP\set{f(Z) - \E{}{f(Z)} \ge t } = \bP\set{e^{\lambda (f(Z) - \E{}{f(Z)})} \ge e^{\lambda t} }&\le \frac{\E{}{e^{\lambda f(Z) - \E{}{f(Z)}}}}{e^{\lambda t}} \\
+&\le \inf_{\lambda >0}\exp\paren{\psi(\lambda) - \lambda t} \\
+&\le  \inf_{\lambda >0}\exp\paren{\frac{L^2 \lambda^2}{2}  - \lambda t} \\
+&=  \exp\paren{-\frac{t^2}{2L^2}}
+\end{align*} where $\lambda^{*} = \frac{t}{L^2}$. \qed
+\end{proof}
+
+\item \begin{remark} (\textbf{\emph{Dimension-Free Concentration}}) \\
+\emph{An \textbf{important} feature} of the theorem is that the right-hand side \emph{\textbf{does not depend on the dimension $n$}}. This inequality has served as a benchmark for the development of concentration inequalities during the last three decades. 
+\end{remark}
+\end{itemize}
+
+\subsection{Suprema of Gaussian Process}
+\begin{itemize}
+\item \begin{definition} (\textbf{\emph{Gaussian Process}})\\
+Let $T$ be a \emph{metric space}. \emph{A stochastic process} $(X_t)_{t \in T}$ is a \underline{\emph{\textbf{Gaussian process} indexed by $T$}} if for  \emph{any finite collection} $\set{t_1 \xdotx{,}, t_n} \subset T$, the vector $(X_{t_1} \xdotx{,} X_{t_n})$ has a \emph{jointly Gaussian distribution}.
+
+In addition, we assume that $T$ is \emph{\textbf{totally bounded}} (i.e. for every $t > 0$ it can be covered by \emph{finitely many balls} of radius $t$) and that the \emph{Gaussian process} is \emph{\textbf{almost surely continuous}}, that is, with probability $1$, $X_t$ is a \emph{continuous function} of $t$.
+\end{definition} 
+
+\item \begin{theorem} (\textbf{Concentration of Suprema of Gaussian Process}) \citep{boucheron2013concentration, vershynin2018high,  wainwright2019high, gine2021mathematical}\\
+Let  $(X_t)_{t \in T}$ be an \textbf{almost surely continuous} \textbf{centered Gaussian process} indexed by a \textbf{totally bounded} set $T$. If
+\begin{align*}
+\sigma^2 &:= \sup_{t \in T}\E{}{X_t^2},
+\end{align*} then $Z = \sup_{t \in T}X_t$ satisfies $\text{Var}(Z) \le \sigma^2$, and for all $u > 0$,
+\begin{align}
+\bP\set{Z - \E{}{Z} \ge u} &\le  \exp\paren{- \frac{u^2}{2 \sigma^2}}  \label{ineqn: gaussian_process_sup_inquality_upper}
+\end{align} and
+\begin{align}
+\bP\set{\E{}{Z} - Z \ge u} &\le  \exp\paren{- \frac{u^2}{2 \sigma^2}}  \label{ineqn: gaussian_process_sup_inquality_upper}
+\end{align}
+\end{theorem}
+\begin{proof}
+We assume that $T$ is a \emph{\textbf{finite set}}. The extension to arbitrary \emph{totally bounded} $T$ is based on a \emph{\textbf{separability argument}} and \emph{\textbf{monotone convergence}}. We may assume, for simplicity, that $T = \set{1 \xdotx{,} n}$. Let $\Sigma$ be the covariance matrix of the centered Gaussian vector $X = (X_1 \xdotx{,} X_n)$. Denote by $A$ the \textit{square root} of the positive semidefinite matrix $\Gamma$. If $Y = (Y_1 \xdotx{,} Y_n)$ is a
+vector of \emph{independent standard normal random variables}, then 
+\begin{align*}
+f(Y) &= \max_{i=1 \xdotx{,} n}\paren{A Y}_{i}
+\end{align*} has the same distribution as $Z = \max_{i=1 \xdotx{,} n}X_i$.  Hence, we can apply \emph{the Gaussian concentration inequality} by \emph{bounding the Lipschitz constant of $f$}. By \emph{the Cauchy-Schwarz inequality}, for all $u, v \in \bR^n$ and $i = 1 \xdotx{,} n$,
+\begin{align*}
+\abs{(Au)_i - (Av)_i} &\le \norm{A_{i:}}{2} \norm{u  - v}{2}
+\end{align*} Since $\norm{A_{i:}}{2}^2 = \sum_{j}A_{i,j}^2 = \text{Var}(X_i)$, we get
+\begin{align*}
+\abs{f(u) - f(v)} &\le \max_{i=1 \xdotx{,} n}\abs{(Au)_i - (Av)_i} \le \sigma \norm{u  - v}{2}
+\end{align*} Therefore, $f$ is \emph{Lipschitz with constant} $\sigma$ and the tail bounds follow from the Gaussian concentration inequality. The variance bound follows from \emph{the Gaussian Poincar{\'e} inequality}. \qed
+\end{proof}
+
+\end{itemize}
+\subsection{Concentration of Convex Lipschitz Functions}
+
+
+
+\subsection{Concentration on the Hypercube}
+\subsection{Gaussian Hypercontractivity}
+\subsection{Hypercontractivity for Boolean Polynomials}
+\subsection{The Johnson-Lindenstrauss Lemma}
+\subsection{Exponential Tail Bounds for Self-Bounding Functions}
 
 
 \newpage
