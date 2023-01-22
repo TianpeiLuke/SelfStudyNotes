@@ -404,12 +404,12 @@ X(\omega) &:= \left\{ \begin{array}{cc}
 
 \subsection{Sub-Additivity of $\Phi$-Entropy}
 \begin{itemize}
-\item \begin{remark}(\emph{\textbf{Sub-Additivity of Shannon Entropy}})\\
-Let $X_1, X_2 \xdotx{,} X_n$ be drawn according to $p(x_1, x_2 \xdotx{,} x_n)$. Then
-\begin{align*}
-H(X_1, X_2 \xdotx{,} X_n) &\le \sum_{i=1}^{n}H(X_i)  
-\end{align*} with equality if and only if the $X_i$ are independent.
-\end{remark}
+%\item \begin{remark}(\emph{\textbf{Sub-Additivity of Shannon Entropy}})\\
+%Let $X_1, X_2 \xdotx{,} X_n$ be drawn according to $p(x_1, x_2 \xdotx{,} x_n)$. Then
+%\begin{align*}
+%H(X_1, X_2 \xdotx{,} X_n) &\le \sum_{i=1}^{n}H(X_i)  
+%\end{align*} with equality if and only if the $X_i$ are independent.
+%\end{remark}
 
 \item \begin{proposition} (\textbf{Sub-Additivity of The Entropy}) \citep{boucheron2013concentration}\\
 Let $\Phi(x) = x\log x$,  for $x >0$ and $\Phi(0) = 0$. Let $Z_1, Z_2 \xdotx{,} Z_n$ be independent random variables taking values in $\cX$, and let $f: \cX^n \to [0, \infty)$ be a measurable function. Letting $X = f(Z_1, Z_2 \xdotx{,} Z_n)$ such that $\E{}{X\log X} < \infty$, we have 
@@ -564,7 +564,7 @@ Note that for any random variable $U$ such that $\E{}{e^{U}} = 1$, we have
 \Rightarrow \text{Ent}(X) &\ge \E{P}{UX}
 \end{align*}  with equality whenever $e^U = X/\E{P}{X}$. This proves the duality formula. 
 
-Conversely, let $U$ be such that $\E{P}{UX} \le \text{Ent}(X)$ for all non-negative random variables such that $\Phi(X)$ is integrable. If $\E{}{e^{U}} = 0$, then there is nothing to prove Otherwise, given a positive integer $n$ large enough to ensure that $x_n = \E{}{e^{\min\set{U, n}}} >0$, one may define $X_n = e^{\min\set{U, n}}/x_n$, so that $\E{}{X_n} = 1$, which leads to 
+Conversely, let $U$ be such that $\E{P}{UX} \le \text{Ent}(X)$ for all non-negative random variables such that $\Phi(X)$ is integrable. If $\E{}{e^{U}} = 0$, then there is nothing to prove. Otherwise, given a positive integer $n$ large enough to ensure that $x_n = \E{}{e^{\min\set{U, n}}} >0$, one may define $X_n = e^{\min\set{U, n}}/x_n$, so that $\E{}{X_n} = 1$, which leads to 
 \begin{align*}
 \E{}{UX_n} &\le  \text{Ent}(X_n),
 \end{align*} and therefore
@@ -641,6 +641,19 @@ Let $I \subseteq \bR$ be an open interval and let $f: I \to \bR$ be \textbf{conv
 \E{}{f(X) - f(\E{}{X}) } &= \inf_{a \in I}\E{}{f(X) - f(a) - f'(a)(X-a)}\label{eqn: bregmann_inf}
 \end{align}
 \end{theorem}
+\begin{proof}
+Let $a \in I$. The difference between \emph{the expected Bregman divergence} from $a$ and \emph{the expected Bregman divergence} from $\E{}{X}$
+\begin{align*}
+\E{}{f(X) - f(\E{}{X}) - f'(\E{}{X})(X - \E{}{X})} 
+&= \E{}{f(X) - f(\E{}{X}) }
+\end{align*} satisfies
+\begin{align*}
+&\E{}{f(X) - f(a) - f'(a)(X-a)} - \E{}{f(X) - f(\E{}{X}) - f'(\E{}{X})(X - \E{}{X})} \\
+&= \E{}{f(X) - f(a) - f'(a)(X-a)} - \E{}{f(X) - f(\E{}{X}) } \\
+&= \E{}{-(f(a) - f(\E{}{X})) - f'(a)(X-a)} \\
+&= f(\E{}{X}) - f(a) - f'(a)(\E{}{X} - a) 
+\end{align*} The last expression is the Bregman divergence of $f$ from $a$ to $\E{}{X}$. As $f$ is \emph{convex}, it is \emph{nonnegative}. \qed 
+\end{proof}
 
 \item \begin{corollary} (\textbf{Duality Formula of Entropy via Bregman Divergence}) \citep{boucheron2013concentration}\\
 Let $X$ be a non-negative random variable such that $\E{}{\Phi(X)} < \infty$. Then 

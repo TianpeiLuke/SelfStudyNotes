@@ -9,10 +9,10 @@
 \contentsline {subsection}{\numberline {2.3}Bounded Difference Inequality via Entropy Methods}{12}
 \contentsline {subsection}{\numberline {2.4}Poisson Logarithmic Sobolev Inequality}{14}
 \contentsline {section}{\numberline {3}Applications}{14}
-\contentsline {subsection}{\numberline {3.1}Lipschitz Functions of Gaussian Variables}{14}
-\contentsline {subsection}{\numberline {3.2}Suprema of Gaussian Process}{16}
-\contentsline {subsection}{\numberline {3.3}Concentration of Convex Lipschitz Functions}{17}
-\contentsline {subsection}{\numberline {3.4}Exponential Tail Bounds for Self-Bounding Functions}{17}
-\contentsline {subsection}{\numberline {3.5}Concentration of Lipschitz Functions on the Hypercube}{17}
-\contentsline {subsection}{\numberline {3.6}Hypercontractivity for Boolean Polynomials}{17}
-\contentsline {subsection}{\numberline {3.7}Gaussian Hypercontractivity}{17}
+\contentsline {subsection}{\numberline {3.1}Concentration of Bounded Difference Functions on the Hypercube}{14}
+\contentsline {subsection}{\numberline {3.2}Lipschitz Functions of Gaussian Variables}{16}
+\contentsline {subsection}{\numberline {3.3}Suprema of Gaussian Process}{18}
+\contentsline {subsection}{\numberline {3.4}Concentration of Convex Lipschitz Functions}{19}
+\contentsline {subsection}{\numberline {3.5}Exponential Tail Bounds for Self-Bounding Functions}{19}
+\contentsline {subsection}{\numberline {3.6}Hypercontractivity for Boolean Polynomials}{19}
+\contentsline {subsection}{\numberline {3.7}Gaussian Hypercontractivity}{19}

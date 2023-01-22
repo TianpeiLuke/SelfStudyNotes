@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  21 JAN 2023 22:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  22 JAN 2023 09:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -718,21 +718,21 @@ Overfull \hbox (1.47147pt too wide) in paragraph at lines 618--620
 r Di-ver-gence\OT1/cmr/m/it/10.95 ) [Cover and Thomas,
  []
 
-[14]
-Overfull \hbox (31.65656pt too wide) in paragraph at lines 668--670
+[14] [15]
+Overfull \hbox (31.65656pt too wide) in paragraph at lines 681--683
 []\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Wasserstein Dis-tance and Trans-por
 ta-tion Cost In-equal-ity\OT1/cmr/m/it/10.95 ) [Boucheron
  []
 
-[15]
-Overfull \hbox (16.9547pt too wide) in paragraph at lines 675--676
+
+Overfull \hbox (16.9547pt too wide) in paragraph at lines 688--689
 []\OT1/cmr/m/it/10.95 for any prob-a-bil-ity mea-sure $\OML/cmm/m/it/10.95 P$ \
 OT1/cmr/m/it/10.95 ab-so-lutely con-tin-u-ous with re-spect to $\OML/cmm/m/it/1
 0.95 Q$ \OT1/cmr/m/it/10.95 such that $[] [] \OML/cmm/m/it/10.95 <
  []
 
 [16] [17] [18]
-Overfull \hbox (23.92923pt too wide) in paragraph at lines 812--814
+Overfull \hbox (23.92923pt too wide) in paragraph at lines 825--827
 \OT1/cmr/m/it/10.95 Let $\OML/cmm/m/it/10.95 P[]; P[] [] [] [] P[]$ \OT1/cmr/m/
 it/10.95 be prob-a-bil-ity dis-tri-bu-tions on mea-sur-able space $\OT1/cmr/m/n
 /10.95 (
@@ -740,12 +740,12 @@ it/10.95 be prob-a-bil-ity dis-tri-bu-tions on mea-sur-able space $\OT1/cmr/m/n
 .95 and let $\OML/cmm/m/it/10.95 A[]; A[] [] [] [] A[] \OMS/cmsy/m/n/10.95 2
  []
 
-[19] (./Ineq_3_Information_Inequality.bbl) [20]
+[19] [20] (./Ineq_3_Information_Inequality.bbl) [21]
 (./Ineq_3_Information_Inequality.aux) ) 
 Here is how much of TeX's memory you used:
  15929 strings out of 493029
  315886 string characters out of 6136233
- 370062 words of memory out of 5000000
+ 369062 words of memory out of 5000000
  19136 multiletter control sequences out of 15000+600000
  13801 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -770,10 +770,10 @@ m/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
 b></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsrom8.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on Ineq_3_Information_Inequality.pdf (20 pages, 299926 bytes).
+Output written on Ineq_3_Information_Inequality.pdf (21 pages, 301021 bytes).
 PDF statistics:
- 157 PDF objects out of 1000 (max. 8388607)
- 112 compressed objects within 2 object streams
+ 160 PDF objects out of 1000 (max. 8388607)
+ 114 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
