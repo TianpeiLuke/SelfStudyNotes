@@ -2,14 +2,15 @@
 \contentsline {section}{\numberline {2}Basic Inequality}{2}
 \contentsline {subsection}{\numberline {2.1}Basic Quantities associated with Random Variables}{2}
 \contentsline {subsection}{\numberline {2.2}Some Classical Inequalities}{3}
+\contentsline {subsection}{\numberline {2.3}Central Limit Theorem}{5}
 \contentsline {section}{\numberline {3}Sum of Independent Random Variables}{5}
 \contentsline {subsection}{\numberline {3.1}The Cram\'er-Chernoff Method}{6}
-\contentsline {subsection}{\numberline {3.2}Sub-Gaussian Random Variables}{8}
+\contentsline {subsection}{\numberline {3.2}Sub-Gaussian Random Variables}{9}
 \contentsline {subsection}{\numberline {3.3}Sub-Exponential Random Variables}{11}
-\contentsline {subsection}{\numberline {3.4}Sub-Gamma Random Variables}{13}
-\contentsline {subsection}{\numberline {3.5}Orlicz Spaces}{14}
-\contentsline {subsection}{\numberline {3.6}A Maximal Inequality}{15}
-\contentsline {subsection}{\numberline {3.7}Hoeffding's Inequality}{17}
-\contentsline {subsection}{\numberline {3.8}Bennett's Inequality}{19}
-\contentsline {subsection}{\numberline {3.9}Bernstein's Inequality}{20}
-\contentsline {subsection}{\numberline {3.10}The Johnson-Lindenstrauss Lemma}{21}
+\contentsline {subsection}{\numberline {3.4}Sub-Gamma Random Variables}{14}
+\contentsline {subsection}{\numberline {3.5}Orlicz Spaces}{15}
+\contentsline {subsection}{\numberline {3.6}A Maximal Inequality}{16}
+\contentsline {subsection}{\numberline {3.7}Hoeffding's Inequality}{18}
+\contentsline {subsection}{\numberline {3.8}Bennett's Inequality}{20}
+\contentsline {subsection}{\numberline {3.9}Bernstein's Inequality}{21}
+\contentsline {subsection}{\numberline {3.10}The Johnson-Lindenstrauss Lemma}{22}
