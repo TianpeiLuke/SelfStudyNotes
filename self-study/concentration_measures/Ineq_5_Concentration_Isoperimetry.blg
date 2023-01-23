@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Ineq_5_Concentration_Isoperimetry.aux
+The style file: plainnat.bst
+Database file #1: reference.bib.bib
+You've used 3 entries,
+            2773 wiz_defined-function locations,
+            609 strings with 5344 characters,
+and the built_in function-call counts, 1046 in all, are:
+= -- 76
+> -- 50
+< -- 4
++ -- 18
+- -- 15
+* -- 72
+:= -- 174
+add.period$ -- 9
+call.type$ -- 3
+change.case$ -- 11
+chr.to.int$ -- 3
+cite$ -- 6
+duplicate$ -- 61
+empty$ -- 98
+format.name$ -- 18
+if$ -- 210
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 6
+newline$ -- 23
+num.names$ -- 12
+pop$ -- 37
+preamble$ -- 1
+purify$ -- 11
+quote$ -- 0
+skip$ -- 41
+stack$ -- 0
+substring$ -- 6
+swap$ -- 5
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 18
+warning$ -- 0
+while$ -- 9
+width$ -- 0
+write$ -- 45
