@@ -33,14 +33,53 @@
 \tableofcontents
 \newpage
 \section{The Classic Isoperimetry Inequalities}
-\subsection{Blow-Up of Sets}
 \subsection{Brunn-Minkowski Inequality}
+\begin{itemize}
+\item \begin{theorem} (\textbf{Brunn-Minkowski Inequality}) \citep{boucheron2013concentration, vershynin2018high, wainwright2019high}\\
+Let $A, B \subset \bR^n$ be \textbf{non-empty compact sets}. Then for all $\lambda \in [0, 1]$,
+\begin{align}
+\text{Vol}\paren{ \lambda A + (1- \lambda) B }^{\frac{1}{n}} &\ge \lambda\text{Vol}(A)^{\frac{1}{n}} + (1- \lambda)\text{Vol}(B)^{\frac{1}{n}}.   \label{ineqn: brunn_minkowski_inequality}
+\end{align}
+\end{theorem}
+Note:  a convex body in $\bR^n$ is closed and compact set.
+
+\item \begin{theorem} (\textbf{The Pr{\'e}kopa-Leindler Inequality}). \citep{boucheron2013concentration, wainwright2019high} \\
+Let $\lambda \in (0, 1)$, and let $f, g, h : \bR^n \to [0, \infty)$ be \textbf{non-negative measurable functions} such that for all $x, y \in \bR^n$,
+\begin{align*}
+h\paren{\lambda x + (1- \lambda) y} &\ge f(x)^{\lambda}g(y)^{1-\lambda}.
+\end{align*} Then
+\begin{align}
+\int_{\bR^n} h(x) dx &\ge \paren{\int_{\bR^n} f(x) dx }^{\lambda}\paren{\int_{\bR^n} g(x) dx}^{1-\lambda}.   \label{ineqn: prekopa_leindler_inequality}
+\end{align}
+\end{theorem}
+
+\item \begin{corollary} (\textbf{Weaker Brunn-Minkowski Inequality}) \citep{boucheron2013concentration, wainwright2019high}\\
+Let $A, B \subset \bR^n$ be \textbf{non-empty compact sets}. Then for all $\lambda \in [0, 1]$,
+\begin{align}
+\text{Vol}\paren{ \lambda A + (1- \lambda) B } &\ge \text{Vol}(A)^{\lambda}\text{Vol}(B)^{1- \lambda}.   \label{ineqn: brunn_minkowski_inequality_weaker}
+\end{align}
+\end{corollary}
+\end{itemize}
+\subsection{Blow-Up of Sets}
 \subsection{The Classical Isoperimetry Theorem}
 
 \section{Concentration via Isoperimetry}
 \subsection{Levy's Inequalities and Concentration Function}
-\subsection{Gaussian Isoperimetric Inequalities and  Concentration of Gaussian Measure}
 \subsection{Isoperimetric Inequalities on the Unit Sphere}
+\begin{itemize}
+\item \begin{remark} (\emph{\textbf{Volume Ratio of Unit Balls and its Interior}})  \citep{vershynin2018high}\\
+Let $B(0, 1):= \set{x \in \bR^n: \norm{x}{} \le 1}$ be the unit ball in $\bR^n$. The volume ratio between $B(0,1)$ and its $\epsilon$-interior $B(0, 1-\epsilon)$ is
+\begin{align*}
+\frac{\text{Vol}(B(0, 1-\epsilon))}{\text{Vol}(B(0,1))} &= (1 - \epsilon)^n \le \exp\paren{-n \epsilon}
+\end{align*} The inequality is due to $1 - x\le e^{-x}$.  
+
+As $n \to \infty$, the above ratio goes to $0$. In other words, most of volume in $B(0,1)$ is \emph{\textbf{concentrated}} in the \emph{\textbf{boundary}} $\partial B = \bS^{n-1} := \set{x \in \bR^n: \norm{x}{} = 1}$. This phenomenon is called ``\emph{\textbf{the curse of dimensionality}}".
+\end{remark}
+
+\item \begin{definition}
+\end{definition}
+\end{itemize}
+\subsection{Gaussian Isoperimetric Inequalities and  Concentration of Gaussian Measure}
 \subsection{Edge Isoperimetric Inequality on the Binary Hypercube}
 \subsection{Vertex Isoperimetric Inequality on the Binary Hypercube}
 \subsection{Convex Distance Inequality}

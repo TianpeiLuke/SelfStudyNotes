@@ -1,11 +1,11 @@
 \contentsline {section}{\numberline {1}The Classic Isoperimetry Inequalities}{2}
-\contentsline {subsection}{\numberline {1.1}Blow-Up of Sets}{2}
-\contentsline {subsection}{\numberline {1.2}Brunn-Minkowski Inequality}{2}
+\contentsline {subsection}{\numberline {1.1}Brunn-Minkowski Inequality}{2}
+\contentsline {subsection}{\numberline {1.2}Blow-Up of Sets}{2}
 \contentsline {subsection}{\numberline {1.3}The Classical Isoperimetry Theorem}{2}
 \contentsline {section}{\numberline {2}Concentration via Isoperimetry}{2}
 \contentsline {subsection}{\numberline {2.1}Levy's Inequalities and Concentration Function}{2}
-\contentsline {subsection}{\numberline {2.2}Gaussian Isoperimetric Inequalities and Concentration of Gaussian Measure}{2}
-\contentsline {subsection}{\numberline {2.3}Isoperimetric Inequalities on the Unit Sphere}{2}
-\contentsline {subsection}{\numberline {2.4}Edge Isoperimetric Inequality on the Binary Hypercube}{2}
-\contentsline {subsection}{\numberline {2.5}Vertex Isoperimetric Inequality on the Binary Hypercube}{2}
-\contentsline {subsection}{\numberline {2.6}Convex Distance Inequality}{2}
+\contentsline {subsection}{\numberline {2.2}Isoperimetric Inequalities on the Unit Sphere}{2}
+\contentsline {subsection}{\numberline {2.3}Gaussian Isoperimetric Inequalities and Concentration of Gaussian Measure}{3}
+\contentsline {subsection}{\numberline {2.4}Edge Isoperimetric Inequality on the Binary Hypercube}{3}
+\contentsline {subsection}{\numberline {2.5}Vertex Isoperimetric Inequality on the Binary Hypercube}{3}
+\contentsline {subsection}{\numberline {2.6}Convex Distance Inequality}{3}
