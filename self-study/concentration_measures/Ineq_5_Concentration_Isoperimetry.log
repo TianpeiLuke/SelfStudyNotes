@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  22 JAN 2023 16:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  22 JAN 2023 21:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -675,16 +675,33 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 38.
 
-[2] [3] (./Ineq_5_Concentration_Isoperimetry.bbl) [4]
+[2] [3]
+LaTeX Font Info:    Try loading font information for U+dsrom on input line 126.
+
+ (/usr/share/texlive/texmf-dist/tex/latex/doublestroke/Udsrom.fd
+File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
+)
+[4]
+! Misplaced alignment tab character &.
+l.186 ...t \ge 0$. Thus $\text{Vol}(\partial A)  &
+                                                  \ge n\text{Vol}(B)$. The i...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+[5] [6] (./Ineq_5_Concentration_Isoperimetry.bbl) [7]
 (./Ineq_5_Concentration_Isoperimetry.aux) ) 
 Here is how much of TeX's memory you used:
- 15872 strings out of 493029
- 314400 string characters out of 6136233
- 363645 words of memory out of 5000000
- 19086 multiletter control sequences out of 15000+600000
- 13417 words of font info for 51 fonts, out of 8000000 for 9000
+ 15892 strings out of 493029
+ 314786 string characters out of 6136233
+ 368661 words of memory out of 5000000
+ 19098 multiletter control sequences out of 15000+600000
+ 14514 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,11n,84p,529b,261s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,13n,84p,531b,332s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
@@ -698,14 +715,16 @@ exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/symbols/msbm10.pfb>
-Output written on Ineq_5_Concentration_Isoperimetry.pdf (4 pages, 177488 bytes)
+/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke
+/dsrom10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols
+/msbm10.pfb>
+Output written on Ineq_5_Concentration_Isoperimetry.pdf (7 pages, 206173 bytes)
 .
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
- 61 compressed objects within 1 object stream
+ 103 PDF objects out of 1000 (max. 8388607)
+ 75 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

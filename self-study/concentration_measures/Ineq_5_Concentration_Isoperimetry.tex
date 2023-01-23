@@ -35,6 +35,15 @@
 \section{The Classic Isoperimetry Inequalities}
 \subsection{Brunn-Minkowski Inequality}
 \begin{itemize}
+\item \begin{definition} (\textbf{\emph{Minkowski Sum of Sets}})\\
+Consider sets $A, B \subseteq \bR^n$ and define \underline{\emph{\textbf{the Minkowski sum}}} of $A$ and $B$ as the set of all vectors in $\bR^n$ formed by sums of elements of $A$ and $B$:
+\begin{align*}
+A + B &:= \set{x+y: x \in A, y \in B}
+\end{align*} 
+Similarly, for $c \in \bR$, let $c A = \set{cx : x \in A}$. Denote by $\text{Vol}(A)$ the \emph{\textbf{Lebesgue measure}} of a \emph{(measurable) set $A \subset \bR^n$}.
+\end{definition}
+
+
 \item \begin{theorem} (\textbf{Brunn-Minkowski Inequality}) \citep{boucheron2013concentration, vershynin2018high, wainwright2019high}\\
 Let $A, B \subset \bR^n$ be \textbf{non-empty compact sets}. Then for all $\lambda \in [0, 1]$,
 \begin{align}
@@ -42,6 +51,19 @@ Let $A, B \subset \bR^n$ be \textbf{non-empty compact sets}. Then for all $\lamb
 \end{align}
 \end{theorem}
 Note:  a convex body in $\bR^n$ is closed and compact set.
+\begin{proof} (\textbf{\emph{Part 1, $n = 1$}})\\
+Note that if $A \subset \bR$, and $c \ge 0$ then $\text{Vol}(cA) = c\text{Vol}(A)$. Thus it suffice to prove
+\begin{align*}
+\text{Vol}\paren{  A + B } &\ge \text{Vol}(A) + \text{Vol}(B).
+\end{align*} To see this, observe that none of the three volumes involved changes if the sets $A$ and $B$ are \emph{\textbf{translated}} arbitrarily. Since $A, B$ are compact subsets in $\bR$, it is closed and bounded. Let $a = \max\{a': a' \in A\}$ and $b = \min\set{b': b' \in B}$. Let $A' = A +\set{-a}$ and $B' = B + \set{-b}$ so that $A' \subset (-\infty, 0]$ and $B' \subset [0, +\infty)$. Also $\text{Vol}(A') = \text{Vol}(A)$ and $\text{Vol}(B') = \text{Vol}(B)$. 
+However, 
+\begin{align*}
+A' \cup B' &\subset A' + B' \\
+\Rightarrow \text{Vol}(A') + \text{Vol}(B') = \text{Vol}(A' \cup B' ) &\le \text{Vol}(A' + B')
+\end{align*} This prove the $1$-dimensional case for \emph{the Brunn-Minkowski inequality}. \qed
+
+To prove $n > 1$ case, we need the following inequalities: 
+\end{proof}
 
 \item \begin{theorem} (\textbf{The Pr{\'e}kopa-Leindler Inequality}). \citep{boucheron2013concentration, wainwright2019high} \\
 Let $\lambda \in (0, 1)$, and let $f, g, h : \bR^n \to [0, \infty)$ be \textbf{non-negative measurable functions} such that for all $x, y \in \bR^n$,
@@ -52,6 +74,47 @@ h\paren{\lambda x + (1- \lambda) y} &\ge f(x)^{\lambda}g(y)^{1-\lambda}.
 \int_{\bR^n} h(x) dx &\ge \paren{\int_{\bR^n} f(x) dx }^{\lambda}\paren{\int_{\bR^n} g(x) dx}^{1-\lambda}.   \label{ineqn: prekopa_leindler_inequality}
 \end{align}
 \end{theorem}
+\begin{proof}
+The proof goes by induction with respect to the dimension $n$.
+\begin{enumerate}
+\item (\textbf{\emph{$n=1$ case}}). Consider measurable non-negative functions $f, g, h$ satisfying the condition of the theorem. By \emph{the monotone convergence theorem}, it suffices to prove the statement for \emph{\textbf{bounded functions}} $f$ and $g$.  Without loss of generality, assume that  $\sup_{x\in \bR^n} f(x) = \sup_{x\in \bR^n} g(x) = 1$.  Then
+\begin{align*}
+\int_{\bR} f(x) dx &= \int_{0}^{1}\text{Vol}\set{x: f(x) \ge t} dt \\
+\int_{\bR} g(x) dx &= \int_{0}^{1}\text{Vol}\set{x: g(x) \ge t} dt.
+\end{align*} For any fixed $t \in [0, 1]$, if $f(x) \ge t$ and $g(y) \ge t$, then by the hypothesis of the theorem, $h\paren{\lambda x + (1- \lambda) y} \ge t$. This implication may be re-written as
+\begin{align*}
+\lambda\set{x: f(x) \ge t} + (1- \lambda) \set{x: g(x) \ge t} &\subset \set{x: h(x) \ge t}.
+\end{align*} Thus
+\begin{align*}
+\int_{\bR} h(x) dx &= \int_{0}^{\infty}\text{Vol}\set{x: h(x) \ge t} dt \\
+&\ge  \int_{0}^{1}\text{Vol}\set{x: h(x) \ge t} dt \\
+&\ge \int_{0}^{1} \text{Vol}\paren{\lambda\set{x: f(x) \ge t}} + \text{Vol}\paren{(1- \lambda) \set{x: g(x) \ge t}} dt \\
+& (\text{ by $1$-dimensional \emph{Brunn-Minkowski inequality}}) \\
+&\ge \lambda \int_{0}^{1}\text{Vol}\paren{\set{x: f(x) \ge t}}dt + (1- \lambda)\int_{0}^{1}\text{Vol}\paren{ \set{x: g(x) \ge t}}dt \\
+& =\lambda   \int_{\bR} f(x) dx  + (1- \lambda) \int_{\bR} g(x) dx \\
+&\ge \paren{\int_{\bR} f(x) dx }^{\lambda}\paren{\int_{\bR} g(x) dx}^{1-\lambda} \; \text{(by the \emph{arithmetic-geometric mean inequality})}
+\end{align*}
+
+\item For the induction step, assume that the theorem holds for all dimensions $1 \xdotx{,} n - 1$ and let $f, g, h : \bR^n \to [0, \infty)$,  $\lambda \in (0, 1)$ be such that they satisfy the assumption of the theorem.  Now let $x, y \in \bR^{n-1}$ and $a, b \in \bR$. Then
+\begin{align*}
+h\paren{\lambda \paren{x, a} + (1-\lambda)\paren{y, b}} \ge f\paren{(x, a)}^{\lambda} g((y, b))^{1- \lambda}, 
+\end{align*} so by the inductive hypothesis
+\begin{align*}
+\int_{\bR^{n-1}} h\paren{(x, \lambda a + (1-\lambda) b)} dx &\ge \paren{\int_{\bR^{n-1}} f\paren{(x, a)} dx}^{\lambda}\paren{\int_{\bR^{n-1}} g((x, b)) dx }^{1- \lambda} 
+\end{align*} In other words, introducing
+\begin{align*}
+F(a) := \int_{\bR^{n-1}} f\paren{(x, a)} dx, \quad G(b) := \int_{\bR^{n-1}} g((x, b)) dx\\
+H((\lambda a + (1-\lambda) b)) := \int_{\bR^{n-1}} h\paren{(x, \lambda a + (1-\lambda) b)} dx.
+\end{align*} We have
+\begin{align*}
+H((\lambda a + (1-\lambda) b))  &\ge \paren{F(a)}^{\lambda}\paren{G(b)}^{1- \lambda},
+\end{align*} so by \emph{Fubini's theorem} and the one-dimensional inequality, we have
+\begin{align*}
+\int_{\bR^n}h(x) dx =  \int_{\bR} H(a)   da &\ge \paren{\int_{\bR} F(a) da}^{\lambda}\paren{\int_{\bR} G(a) da}^{1 - \lambda} \\
+&= \paren{\int_{\bR^n} f(x) dx}^{\lambda}\paren{\int_{\bR^n} g(x) dx}^{1 - \lambda}.  \qed
+\end{align*}
+\end{enumerate} 
+\end{proof}
 
 \item \begin{corollary} (\textbf{Weaker Brunn-Minkowski Inequality}) \citep{boucheron2013concentration, wainwright2019high}\\
 Let $A, B \subset \bR^n$ be \textbf{non-empty compact sets}. Then for all $\lambda \in [0, 1]$,
@@ -59,9 +122,75 @@ Let $A, B \subset \bR^n$ be \textbf{non-empty compact sets}. Then for all $\lamb
 \text{Vol}\paren{ \lambda A + (1- \lambda) B } &\ge \text{Vol}(A)^{\lambda}\text{Vol}(B)^{1- \lambda}.   \label{ineqn: brunn_minkowski_inequality_weaker}
 \end{align}
 \end{corollary}
+\begin{proof}
+We apply \emph{the Pr{\'e}kopa-Leindler inequality} with $f(x) = \ind{x \in A}$, $g(x) = \ind{x \in B}$ and $h(x) = \ind{x \in \lambda A + (1- \lambda) B}$. We see that 
+\begin{align*}
+h(\lambda x + (1- \lambda) y) &= \ind{\lambda x + (1- \lambda) y \in \lambda A + (1- \lambda) B} \ge \ind{x \in A, y \in B}  = f(x)^{\lambda}g(y)^{1 - \lambda}.
+\end{align*} Thus the hypothesis of \emph{the Pr{\'e}kopa-Leindler inequality} holds. \qed
+\end{proof}
+
+\item \begin{proof}  (\textbf{\emph{$n> 1$ case for Brunn-Minkowski Inequality}}).  First observe that it suffices to prove that for all \emph{nonempty compact sets} $A$ and $B$,
+\begin{align*}
+\text{Vol}\paren{ A + B }^{\frac{1}{n}} &\ge \text{Vol}(A)^{\frac{1}{n}} + \text{Vol}(B)^{\frac{1}{n}}
+\end{align*} since $\text{Vol}\paren{c A}^{1/n} = c \text{Vol}\paren{A}^{1/n}$ for any $c \in \bR$ and $A \subset \bR^n$. Also notice that we may assume that $ \text{Vol}(A),  \text{Vol}(B) > 0$ because otherwise the inequality holds trivially. Defining $A' = \text{Vol}(A)^{-\frac{1}{n}} A$ and $B' =  \text{Vol}(B)^{-\frac{1}{n}}B$, we have $ \text{Vol}(A') = \text{Vol}(B') = 1$. By \emph{weaker Brunn-Minkowski inequality}, for $\lambda \in (0, 1)$,
+\begin{align*}
+\text{Vol}\paren{ \lambda A' + (1- \lambda) B' } &\ge 1.
+\end{align*} Finally, we apply this \emph{inequality} with the choice
+\begin{align*}
+\lambda &= \frac{\text{Vol}(A)^{\frac{1}{n}}}{\text{Vol}(A)^{\frac{1}{n}} + \text{Vol}(B)^{\frac{1}{n}}}
+\end{align*} obtaining
+\begin{align*}
+\text{Vol}\paren{ \frac{\text{Vol}(A)^{\frac{1}{n}}A'}{\text{Vol}(A)^{\frac{1}{n}} + \text{Vol}(B)^{\frac{1}{n}}}  + \frac{\text{Vol}(B)^{\frac{1}{n}}B'}{\text{Vol}(A)^{\frac{1}{n}} + \text{Vol}(B)^{\frac{1}{n}}}  }  &\ge 1\\
+\Rightarrow \text{Vol}\paren{ \frac{A}{\text{Vol}(A)^{\frac{1}{n}} + \text{Vol}(B)^{\frac{1}{n}}}  + \frac{B}{\text{Vol}(A)^{\frac{1}{n}} + \text{Vol}(B)^{\frac{1}{n}}}  }  &\ge 1 \\
+\Rightarrow \text{Vol}\paren{ \frac{A + B}{\text{Vol}(A)^{\frac{1}{n}} + \text{Vol}(B)^{\frac{1}{n}}}    }  &\ge 1 \\
+\Rightarrow \frac{\text{Vol}(A + B)}{\paren{\text{Vol}(A)^{\frac{1}{n}} + \text{Vol}(B)^{\frac{1}{n}}}^n} &\ge 1 
+\end{align*} which proves the theorem. \qed
+\end{proof}
 \end{itemize}
-\subsection{Blow-Up of Sets}
+
 \subsection{The Classical Isoperimetry Theorem}
+\begin{itemize}
+\item \begin{definition} (\textbf{\emph{Blowup of Sets}}) \\
+For any $t > 0$, and any (measurable) sets $A \subset \bR^n$,  \emph{\underline{\textbf{the $t$-blowup}} of $A$} is defined by
+\begin{align*}
+A_t &:= \set{x \in \bR^n: d(x, A) < t} = A + t\,B
+\end{align*} where $B = \set{x \in \bR^n: d(0, x) < 1}$ is an \emph{open unit ball} and $d(x, A) = \inf_{y \in A}d(x, y)$.
+\end{definition}
+
+\item \begin{definition}(\textbf{\emph{Surface Area of Sets}}) \\
+let $A \subset \bR^n$ be a measurable set and denote by $\text{Vol}(A)$ its \emph{Lebesgue measure}. \emph{The  \underline{\textbf{surface area}} of $A$} is
+defined by
+\begin{align*}
+\text{Vol}(\partial A) &= \lim\limits_{t \to 0}\frac{\text{Vol}(A_t) - \text{Vol}(A)}{t}.
+\end{align*} provided that the limit exists. Here $A_t$ denotes \emph{the $t$-blowup} of $A$.
+\end{definition}
+
+\item \begin{theorem} (\textbf{Isoperimetry Theorem}) \citep{boucheron2013concentration, vershynin2018high, wainwright2019high}\\
+Let $A \subset \bR^n$ be such that $\text{Vol}(A) = \text{Vol}(B)$ where $B := \set{x \in \bR^n: d(0, x) < 1}$ is unit ball. Then for any $t > 0$, 
+\begin{align}
+\text{Vol}(A_t) &\ge  \text{Vol}(B_t) \label{ineqn: isoperimetry_inequality_blowup}
+\end{align} Moreover, if $\text{Vol}(\partial A) $ exists, then
+\begin{align}
+\text{Vol}(\partial A)  &\ge \text{Vol}(\partial B).  \label{ineqn: isoperimetry_inequality_surface}
+\end{align}
+\end{theorem}
+\begin{proof}
+By \emph{the Brunn-Minkowski inequality}, 
+\begin{align*}
+\text{Vol}(A_t)^{1/n}  = \text{Vol}(A + tB)^{1/n} &\ge \text{Vol}(A)^{1/n} +  t\text{Vol}(B)^{1/n} \\
+&= (1+t) \text{Vol}(B)^{1/n} \\
+&= \text{Vol}(B_t)^{1/n},
+\end{align*} establishing the first statement. The second follows simply because
+\begin{align*}
+\text{Vol}(A_t) - \text{Vol}(A) &\ge \text{Vol}(B)((1+t)^n -1) \ge nt\text{Vol}(B)
+\end{align*} where $(1+t)^n \ge 1 + nt$ for $t \ge 0$. Thus $\text{Vol}(\partial A)  &\ge n\text{Vol}(B)$. The isoperimetric theorem now follows from the fact that
+$\text{Vol}(\partial B) = n\text{Vol}(B)$. \qed
+\end{proof}
+
+\item \begin{remark}(\textbf{\emph{Isoperimetry Theorem}})\\
+The classical isoperimetric theorem in $\bR^n$ states that, among all sets with \emph{\textbf{a given volume}}, \underline{\emph{\textbf{the Euclidean unit ball minimizes the surface area}}}. 
+\end{remark}
+\end{itemize}
 
 \section{Concentration via Isoperimetry}
 \subsection{Levy's Inequalities and Concentration Function}
