@@ -87,8 +87,8 @@
 
 - Isoperimetry Problem and Concentration of Measure [pdf](./Ineq_5_Concentration_Isoperimetry.pdf)
 	- The Classic Isoperimetry Inequalities
-		- Blowup of Sets and Brunn-Minkowski Inequality
-		- The Classical Isoperimetry Theorem
+		- Brunn-Minkowski Inequality
+		- Blowup of Sets and The Classical Isoperimetry Theorem
 	- Concentration via Isoperimetry
 		- Levy’s Inequalities and Concentration Function 
 		- Gaussian Isoperimetric Inequalities and Gaussian Concentration
