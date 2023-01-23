@@ -4,6 +4,11 @@
 
 This repository is the latex-based notes for self-learning, mainly for math, statistics and machine learning.
 
+## Knowledge Graph
+
+![Knowledge Graph](knowledge_graph.png)
+
+
 ## Table of Contents
 - [Causal Inference](./self-study/causal_inference)
 
