@@ -110,8 +110,6 @@ Then
 \end{align}
 The two sides of this identity are either finite or infinite simultaneously.
 \end{lemma}
-
-
 \end{itemize}
 
 \subsection{Some Classical Inequalities}
@@ -189,6 +187,30 @@ If $\phi$ denotes a \emph{\textbf{nondecreasing} and \textbf{nonnegative} functi
 \bP\set{X \ge t} \le \bP\set{\phi(X) \ge \phi(t)} &\le \frac{\E{}{\phi(X)}}{\phi(t)}  \label{ineqn: generalized_markov_inequality}
 \end{align}
 \end{remark}
+\end{itemize}
+\subsection{Central Limit Theorem}
+\begin{itemize}
+\item \begin{theorem} (\textbf{Central Limit Theorem, Linderberg-Le{\'v}y})\\
+Let $X_1 \xdotx{,} X_n$ be \textbf{independent identically distributed} random variables with mean $\E{}{X_i} = 0$ and variance $\text{Var}(X_i) = 1$. Then 
+\begin{align}
+\frac{1}{\sqrt{n}}\sum_{i=1}^{n}X_i  \stackrel{d}{\rightarrow} N(0, 1) \label{eqn: central_limit_theorem} \\
+\text{i.e. } \lim\limits_{n \to \infty}\sup_{t \in \bR}\abs{\bP\set{\frac{1}{\sqrt{n}}\sum_{i=1}^{n}X_i \le t} - \Phi(t)} &= 0 \nonumber
+\end{align} where $\Phi(t) = \int_{-\infty}^{t}\frac{1}{\sqrt{2\pi}}e^{-u^2/2}du = \bP\set{g \le t}$ for some Gaussian variable $g$.
+\end{theorem}
+
+\item \begin{theorem} (\textbf{Central Limit Theorem, Nonasymptotic, Berry-Esseen})\\
+Let $X_1 \xdotx{,} X_n$ be \textbf{independent identically distributed} random variables with mean $\E{}{X_i} = 0$, variance $\text{Var}(X_i) = \sigma^2$ and $\rho := \E{}{\abs{X_i}^3} <\infty$. Then with some constant $C > 0$, 
+\begin{align}
+\sup_{t \in \bR}\abs{\bP\set{\frac{1}{\sigma \sqrt{n}}\sum_{i=1}^{n}X_i \le t} - \Phi(t)} &\le  \frac{C}{ \sigma^3\sqrt{n}}\rho \label{eqn: central_limit_theorem_nonasym} 
+\end{align} where $\Phi(t) = \int_{-\infty}^{t}\frac{1}{\sqrt{2\pi}}e^{-u^2/2}du = \bP\set{g \le t}$ for some Gaussian variable $g$.
+\end{theorem}
+
+\item \begin{remark} The \emph{Berry-Esseen} version of \emph{central limit theorem} is \emph{\textbf{non-asymptotic}} and it has a bound
+\begin{align*}
+\bP\set{\frac{1}{\sqrt{n}}\sum_{i=1}^{n}X_i \le t} &\le \bP\set{g \le t} + \frac{C}{\sqrt{n}}\rho = \int_{-\infty}^{t}\frac{1}{\sqrt{2\pi}}e^{-u^2/2}du +  \frac{C}{\sqrt{n}}\rho 
+\end{align*} This bound is \emph{\textbf{sharp}}, i.e. the equality is attained when $X_i \sim \text{Bernoulli}(1/2)$.
+\end{remark}
+
 \end{itemize}
 
 \section{Sum of Independent Random Variables}
