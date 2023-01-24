@@ -90,7 +90,7 @@
 		- Brunn-Minkowski Inequality
 		- Blowup of Sets and The Classical Isoperimetry Theorem
 	- Concentration via Isoperimetry
-		- Equivalence of Isoperimetry Problem and Concentration of Lipschitz Functions 
+		- Equivalence of Isoperimetry Problem and Concentration of Lipschitz Functions (Levy's Inequality)
 		- Isoperimetric Inequalities on the Unit Sphere 
 		- Gaussian Isoperimetric Inequalities and Gaussian Concentration
 		- Edge Isoperimetric Inequality on the Binary Hypercube
