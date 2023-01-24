@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  23 JAN 2023 16:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  23 JAN 2023 21:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -700,17 +700,33 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
  [7]
-Underfull \hbox (badness 10000) in paragraph at lines 310--311
-
+Overfull \hbox (40.09377pt too wide) in paragraph at lines 320--321
+\OT1/cmr/m/n/10.95 Taking $\OML/cmm/m/it/10.95 t \OT1/cmr/m/n/10.95 = \U/dsrom/
+m/n/10.95 E[] [] \OT1/cmr/m/n/10.95 = \U/dsrom/m/n/10.95 E[] []$\OT1/cmr/m/n/10
+.95 , the left-hand side be-comes $\U/msb/m/n/10.95 P [] \OT1/cmr/m/n/10.95 = \
+U/msb/m/n/10.95 P [] \OT1/cmr/m/n/10.95 =
  []
 
-[8] [9] (./Ineq_5_Concentration_Isoperimetry.bbl) [10]
+[8] <spherical_cap_blowup.png, id=51, 647.41875pt x 358.33875pt>
+File: spherical_cap_blowup.png Graphic file (type png)
+
+<use spherical_cap_blowup.png>
+Package pdftex.def Info: spherical_cap_blowup.png used on input line 368.
+(pdftex.def)             Requested size: 323.70857pt x 179.16893pt.
+ [9]
+Overfull \hbox (2.9071pt too wide) in paragraph at lines 404--406
+[]\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Isoperimetric In-equal-i-ties for U
+ni-form Dis-tri-bu-tion over Sphere\OT1/cmr/m/it/10.95 )
+ []
+
+[10 <./spherical_cap_blowup.png>] [11] [12]
+(./Ineq_5_Concentration_Isoperimetry.bbl) [13]
 (./Ineq_5_Concentration_Isoperimetry.aux) ) 
 Here is how much of TeX's memory you used:
- 15921 strings out of 493029
- 315247 string characters out of 6136233
- 368693 words of memory out of 5000000
- 19120 multiletter control sequences out of 15000+600000
+ 15931 strings out of 493029
+ 315576 string characters out of 6136233
+ 368740 words of memory out of 5000000
+ 19129 multiletter control sequences out of 15000+600000
  16724 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,13n,84p,596b,458s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -722,22 +738,22 @@ nts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
 i10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsrom1
-0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10
-.pfb>
-Output written on Ineq_5_Concentration_Isoperimetry.pdf (10 pages, 278778 bytes
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Ineq_5_Concentration_Isoperimetry.pdf (13 pages, 343696 bytes
 ).
 PDF statistics:
- 117 PDF objects out of 1000 (max. 8388607)
- 84 compressed objects within 1 object stream
+ 132 PDF objects out of 1000 (max. 8388607)
+ 94 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
