@@ -165,8 +165,22 @@ defined by
 \end{align*} provided that the limit exists. Here $A_t$ denotes \emph{the $t$-blowup} of $A$.
 \end{definition}
 
+\item \begin{remark}(\textbf{\emph{Isoperimetry Theorem}})\\
+The classical isoperimetric theorem in $\bR^n$ states that, among all sets with \emph{\textbf{a given volume}}, \underline{\emph{\textbf{the Euclidean unit ball minimizes the surface area}}}.  This theoerm can be formally stated as below:
+\end{remark}
+
+\begin{figure}
+\begin{minipage}[t]{1\linewidth}
+  \centering
+  \centerline{\includegraphics[scale = 0.4]{isoperimetry_rn.png}}
+\end{minipage}
+\caption{\footnotesize{\textbf{Isoperimetry in $\bR^{n}$  \citep{vershynin2018high}}}}
+\label{fig: isoperimetry_rn}
+\end{figure}
+
+
 \item \begin{theorem} (\textbf{Isoperimetry Theorem}) \citep{boucheron2013concentration, vershynin2018high, wainwright2019high}\\
-Let $A \subset \bR^n$ be such that $\text{Vol}(A) = \text{Vol}(B)$ where $B := \set{x \in \bR^n: d(0, x) < 1}$ is unit ball. Then for any $t > 0$, 
+Let $A \subset \bR^n$ be such that $\text{Vol}(A) = \text{Vol}(B)$ where $B := \set{x \in \bR^n: d(0, x) < 1}$ is an unit ball. Then for any $t > 0$, 
 \begin{align}
 \text{Vol}(A_t) &\ge  \text{Vol}(B_t) \label{ineqn: isoperimetry_inequality_blowup}
 \end{align} Moreover, if $\text{Vol}(\partial A) $ exists, then
@@ -183,17 +197,135 @@ By \emph{the Brunn-Minkowski inequality},
 \end{align*} establishing the first statement. The second follows simply because
 \begin{align*}
 \text{Vol}(A_t) - \text{Vol}(A) &\ge \text{Vol}(B)((1+t)^n -1) \ge nt\text{Vol}(B)
-\end{align*} where $(1+t)^n \ge 1 + nt$ for $t \ge 0$. Thus $\text{Vol}(\partial A)  &\ge n\text{Vol}(B)$. The isoperimetric theorem now follows from the fact that
+\end{align*} where $(1+t)^n \ge 1 + nt$ for $t \ge 0$. Thus $\text{Vol}(\partial A)  \ge n\text{Vol}(B)$. The isoperimetric theorem now follows from the fact that
 $\text{Vol}(\partial B) = n\text{Vol}(B)$. \qed
 \end{proof}
-
-\item \begin{remark}(\textbf{\emph{Isoperimetry Theorem}})\\
-The classical isoperimetric theorem in $\bR^n$ states that, among all sets with \emph{\textbf{a given volume}}, \underline{\emph{\textbf{the Euclidean unit ball minimizes the surface area}}}. 
-\end{remark}
 \end{itemize}
 
 \section{Concentration via Isoperimetry}
-\subsection{Levy's Inequalities and Concentration Function}
+\subsection{Isoperimetry Problem and Levy's Inequalities}
+\begin{itemize}
+\item \begin{remark}
+We can generalize the classical isoperimety problem to a probability space $(\cX, \cB[\cX], \bP)$ where $\cX$ is a \emph{metric space} with metric $d$, $\cB[\cX]$ is the Borel $\sigma$-algrebra and $\bP$ is a probability measure on $\cB[\cX]$. Let  $B := \set{x \in \bR^n: d(0, x) < 1}$. The classical isoperimetry problem aims at finding the set $A^{*} \subset \cX$ that \emph{\textbf{minimizes the surface area}}
+\begin{align*}
+\bP(\partial A) = \lim\limits_{t \to 0}\frac{\bP(A_t) - \bP(A)}{t}
+\end{align*} This is equivalent to find subset $A$ in $\cX$ with \emph{\textbf{minimal $t$-blowup}} for given $p$, and for all $t >0$
+\begin{align*}
+A^{*} := \inf_{A \subset \cX: \bP(A) \ge p}\bP(A_t), \quad \forall t > 0
+\end{align*} where 
+\begin{align*}
+A_t = A + tB = \set{x \in \cX:  \exists y \in A \text{ s.t. } d(x, y) < t} = \set{x \in \cX:  \inf_{y \in A}d(x, y) := d(x, A) < t}.
+\end{align*} We write the definition formally.
+\end{remark}
+
+
+\item \begin{definition} (\emph{\textbf{Isoperimetry Problem}}) \citep{boucheron2013concentration}\\
+Given a \emph{\textbf{metric space}} $\cX$ with corresponding \emph{distance} $d$, consider \emph{\textbf{the measure space}} formed by $\cX$ , \emph{the $\sigma$-algebra} of all \emph{\textbf{Borel sets} of $\cX$}, and a probability measure $\bP$. Let $X$ be a \emph{random variable} taking values in $\cX$, distributed according to $\bP$. 
+
+\underline{\emph{\textbf{The isoperimetric problem}}} in this case is the following: given $p \in (0, 1)$ and $t > 0$, \emph{\textbf{determine the sets}} $A$ with $\bP\brac{X \in A} \ge p$ for which \emph{the measure}
+\begin{align*}
+\bP\brac{d(X, A) \ge t}
+\end{align*}  is \emph{\textbf{maximal}}. 
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Isoperimetry Inequalities}})\\
+Even though the exact solution is only known in a few special cases, useful \emph{bounds} for $\bP\brac{d(X, A) \ge t}$ can be derived under remarkably general circumstances. \emph{Such bounds are usually referred to as} \underline{\emph{\textbf{isoperimetric inequalities}}}.
+\end{remark}
+
+\item \begin{definition} (\textbf{\emph{Concentration Function}}) \citep{boucheron2013concentration, wainwright2019high}\\
+\underline{\emph{\textbf{The concentration function}}} is defined as follows: for all $t > 0$, 
+\begin{align*}
+\alpha(t) &:= \sup_{ A \subset \cX:\, \bP\paren{A} \ge \frac{1}{2}}\bP\brac{d(X, A) \ge t } = \sup_{A \subset \cX: \,\bP\paren{A} \ge \frac{1}{2}}\bP\paren{A_{t}^{c} }
+\end{align*} where $A_t:= A + tB = \set{x \in \cX: d(x, A) < t}$ is \emph{the $t$-blowup} of $A \subset \cX$.
+\end{definition}
+Thus the optimal $A^{*}$ for isoperimetry problem is the one that attains the $\alpha(t) = \bP\paren{A_{t}^{c} }$.
+
+\item \begin{theorem} (\textbf{Levy's Inequalities})\citep{boucheron2013concentration, wainwright2019high}\\
+For any Lipschitz function $f: \cX \to \bR$, 
+\begin{align}
+\bP\set{f(X) \ge  \text{Med}(f(X)) + t } &\le \alpha(t) \label{ineqn: levy_inequality}\\
+\bP\set{f(X)  \le  \text{Med}(f(X))  -  t } &\le \alpha(t).  \nonumber
+\end{align} where $\text{Med}(f(X))$ is \underline{\textbf{the median} of $f(X)$}, i.e.
+\begin{align*}
+\bP\set{f(X) \le \text{Med}(f(X)} \ge  \frac{1}{2}, \;\text{ and }\; \bP\set{f(X) \ge \text{Med}(f(X)} \ge  \frac{1}{2}.
+\end{align*}
+\end{theorem}
+\begin{proof} 
+Consider the set $A = \set{x : f(x) \le \text{Med}(f(X))}$. By the definition of a \emph{median},  $\bP\paren{A} \ge \frac{1}{2}$. On the other hand, by \emph{the Lipschitz property} of $f$, for any $x, y \in \cX$,
+\begin{align*}
+\abs{f(x) - f(y)} \le d(x, y). 
+\end{align*} So for all $y \in A$,  $f(y) \le \text{Med}(f(X))$
+\begin{align*}
+f(x) -  \text{Med}(f(X))  &\le f(x) - f(y) \le d(x, y) \\
+\Rightarrow  f(x) -  \text{Med}(f(X))  &\le \inf_{y \in A}d(x, y) := d(x, A).
+\end{align*} Equivalently, 
+\begin{align*}
+A_t := \set{x \in \cX: d(x, A) < t} &\subseteq \set{x \in \cX:  f(x) < \text{Med}(f(X)) + t } \\
+\bP(A_t^{c}) &\ge \bP\set{ f(X) \ge \text{Med}(f(X)) + t } 
+\end{align*} The first inequality now follows from the definition of the concentration function.  The second inequality follows from the first by considering $–f$.  \qed
+\end{proof}
+
+\item \begin{remark} For $L$-Lipschitz function $f$, the inequality becomes
+\begin{align*}
+\bP\set{f(X) - \text{Med}(f(X)) \ge t } \le  \alpha\paren{\frac{t}{L}}, \quad \bP\set{f(X) - \text{Med}(f(X)) \le -t } &\le \alpha\paren{\frac{t}{L}}.
+\end{align*}
+\end{remark}
+
+\item \begin{theorem}  (\textbf{Converse of Levy's Inequalities})\citep{boucheron2013concentration, wainwright2019high}\\
+If $\beta : \bR_{+} \to [0, 1]$ is a function such that for \textbf{every Lipschitz function} $f : \cX \to \bR$
+\begin{align}
+\bP\set{f(X) - \text{Med}(f(X)) \ge t } &\le \beta(t). \label{ineqn: converse_levy_inequality}
+\end{align} then $\beta(t) \ge \alpha(t)$.
+\end{theorem}
+\begin{proof}
+Note that for any $A \subset \cX$ , the function $f_A$ defined by $f_A(x)= d(x, A)$ is \emph{Lipschitz} since
+\begin{align*}
+\abs{f_A(x) - f_A(y)} = \abs{d(x, A) - d(y, A)} &\le d(x, y).
+\end{align*} Also, if  $P\paren{A} \ge 1/2$, then $0$ is a median of $f_A(X)$, since
+\begin{align*}
+\bP\set{f_A(x) \le 0} = \bP\set{d(X, A) \le 0} = \bP(A) \ge \frac{1}{2}.
+\end{align*}  Therefore
+\begin{align*}
+\alpha(t) := \sup_{A \subset \cX: \bP(A) \ge 1/2}\bP\set{f_A(x) - \text{Med}(f_A(X)) \ge t} \le \beta(t). \qed
+\end{align*}
+\end{proof}
+
+\item \begin{remark} (\emph{\textbf{Isoperimetry Inequalities $\Leftrightarrow$ Concentration of Lipschitz Functions}})\\
+The first result points out that \emph{isoperimetric inequalities} (more precisely, \emph{\textbf{upper bounds} for \textbf{the concentration function}}) imply
+\emph{concentration of Lipschitz functions}. 
+
+\emph{\textbf{The converse}} shows that \emph{concentration of Lipschitz functions} implies an \emph{isoperimetric inequality}. In other word, \emph{among all upper bounds} of $\bP(A_t^c)$ for fixed $A_t$, 
+\end{remark}
+
+\item \begin{corollary} (\textbf{Isoperimetry Inequality for Metric Space by Hamming Distance}) \citep{boucheron2013concentration}\\
+Consider \emph{independent random variables} $Z_1 \xdotx{,} Z_n$ taking their values in a \emph{(measurable) set} $\cX$ and denote the vector of these variables by $Z = (Z_1 \xdotx{,} Z_n)$ taking its value in $\cX^n$.  For an arbitrary (measurable) set $A \subset \cX^n$, we write $\bP\paren{A} = \bP\paren{Z \in A}$.  The \textbf{Hamming distance} $d_{H}(x, y)$ between the vectors $x, y \in \cX^n$ is defined as \textbf{the number of coordinates} in which $x$ and $y$ \textbf{differ}. Then for any $t >0$, 
+\begin{align}
+\bP\set{d_{H}(x, A) \ge \sqrt{\frac{n}{2}\log \frac{1}{\bP(A)}} + t} \le \exp\paren{-\frac{2t^2}{n}}  \label{ineqn: isoperimetry_inequality_hamming_distance}
+\end{align}
+\end{corollary}
+\begin{proof}
+\end{proof}
+
+
+\item \begin{example} (\textbf{\emph{Bounded Difference Inequality as Isoperimetry Inequality}}) \\
+
+
+Note that function with \emph{\textbf{bounded difference property}} is \emph{\textbf{Lipschitz function}} with respect to \emph{\textbf{Hamming distance}}:
+\begin{align*}
+&\sup_{x \in \cX^n, y_i \in \cX}\abs{f(x_1 \xdotx{,} x_n) - f(x_1 \xdotx{,} x_{i-1}, y_i, x_{i+1} \xdotx{,} x_{n})} &\\
+&\le 1 = d_{H}((x_1 \xdotx{,} x_n), (x_1 \xdotx{,} x_{i-1}, y_i, x_{i+1} \xdotx{,} x_{n})), \quad 1\le i \le n\\
+\Rightarrow \abs{f(x) - f(y)} &=  \abs{\sum_{i=1}^{n}(f(x_{(i-1)}) - f(x_{(i)}) )}\\
+&\quad \le  \sum_{i=1}^{n}\abs{f(x_{(i-1)}) - f(x_{(i)}) }\\
+&\quad \le \sum_{i=1}^{n}\ind{x_{(i-1)}[i] \neq x_{(i)}[i]} \\
+&\quad = d_{H}(x, y)
+\end{align*}   where $x_{(i)}$ is replicate of $x_{(i-1)}$ except for $i$-th component, which is replaced by $y_i$. Note that $x_{(0)} = x$ and $x_{(n)} = y$. 
+Therefore, \emph{the bounded difference inequality} can be seen as \emph{an isoperimetry inequality} for \emph{Lipschitz function with respect to Hamming distance}.
+\begin{align*}
+\bP\set{f(Z) - \E{}{f(Z)} \ge t } &\le \exp\paren{-\frac{2t^2}{n}}
+\end{align*}
+\end{example}
+
+\end{itemize}
 \subsection{Isoperimetric Inequalities on the Unit Sphere}
 \begin{itemize}
 \item \begin{remark} (\emph{\textbf{Volume Ratio of Unit Balls and its Interior}})  \citep{vershynin2018high}\\
@@ -205,8 +337,8 @@ Let $B(0, 1):= \set{x \in \bR^n: \norm{x}{} \le 1}$ be the unit ball in $\bR^n$.
 As $n \to \infty$, the above ratio goes to $0$. In other words, most of volume in $B(0,1)$ is \emph{\textbf{concentrated}} in the \emph{\textbf{boundary}} $\partial B = \bS^{n-1} := \set{x \in \bR^n: \norm{x}{} = 1}$. This phenomenon is called ``\emph{\textbf{the curse of dimensionality}}".
 \end{remark}
 
-\item \begin{definition}
-\end{definition}
+
+
 \end{itemize}
 \subsection{Gaussian Isoperimetric Inequalities and  Concentration of Gaussian Measure}
 \subsection{Edge Isoperimetric Inequality on the Binary Hypercube}
