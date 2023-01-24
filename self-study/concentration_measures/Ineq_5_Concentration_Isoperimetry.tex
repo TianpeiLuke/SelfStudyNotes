@@ -402,36 +402,65 @@ Thus $(\bS^{n-1}, \rho)$ is a \emph{\textbf{metric space}}.  Let $\bP$ be unifor
 
 
 \item \begin{proposition} (\textbf{Isoperimetric Inequalities for Uniform Distribution over Sphere})  \citep{boucheron2013concentration, vershynin2018high, wainwright2019high}\\
-Let $\bS^{n - 1} :=  \set{x \in \bR^n: \norm{x}{} = 1}$ be the $(n-1)$-dimensional \textbf{unit sphere}.  For any $t >0$, 
+Let $\bS^{n - 1} :=  \set{x \in \bR^n: \norm{x}{} = 1}$ be the $(n-1)$-dimensional \textbf{unit sphere}.  For any $t\in [0, 1]$, 
 \begin{align}
-\alpha_{\bS^{n-1}}(t) &\le \sqrt{\frac{\pi}{2}}\exp\paren{-\frac{n t^2}{2}} \label{ineqn: isoperimetric_inequality_uniform_unit_sphere}
-\end{align}
+\alpha_{\bS^{n-1}}(t) &\le c \exp\paren{-\frac{n t^2}{2}} \label{ineqn: isoperimetric_inequality_uniform_unit_sphere}
+\end{align} for some constant $c$.
 \end{proposition}
 \begin{proof}
 Consider spherical cap 
 \begin{align*}
-H_y := \set{x \in \bS^{n-1}: \inn{x}{y} \le 0}
+C(y, 0) := \set{x \in \bS^{n-1}: \inn{x}{y} \ge 0}
 \end{align*} and its  \emph{$t$-blowup}
 \begin{align*}
-H_y^{t} := \set{x \in \bS^{n-1}: \inn{x}{y} < \sin(t)}.
+C(y, t) :=  \set{x \in \bS^{n-1}: \inn{x}{y} \ge t}.
 \end{align*} According to \emph{the isoperimetry theorem on unit sphere}, the concentration function for uniform distribution over $\bS^{n-1}$
 \begin{align*}
-\alpha_{\bS^{n-1}}(t) &= 1 - \bP(H_y^{t}).
-\end{align*} Note that $\bP\paren{H_y} \ge 1/2$, so $H_y$ is a feasible set. 
+\alpha_{\bS^{n-1}}(t) &= \bP(C(y, t)).
+\end{align*} 
 
-In order to bound the concentration function from above, we see that $\sin(t) \ge t/2$ for $t \in (0, \pi/2]$. Then the $t$-blowup $H_y^{t}$ must contain set
+\begin{figure}
+\begin{minipage}[t]{0.5\linewidth}
+  \centering
+  \centerline{\includegraphics[scale = 0.4]{spherical_cap_proof.png}}
+\end{minipage}
+\begin{minipage}[t]{0.5\linewidth}
+  \centering
+  \centerline{\includegraphics[scale = 0.4]{spherical_cap_proof_2.png}}
+\end{minipage}
+\caption{\footnotesize{\textbf{proof for upper bound of area of spherical cap (left) for small $t$ (right) for large $t$}}}
+\label{fig: spherical_cap_blowup}
+\end{figure}
+
+
+Note that $\bP\paren{C(y, 0)} \le 1/2$.  In order to bound the concentration function from above, consider for small $t \in [0, 1/\sqrt{2}]$,
 \begin{align*}
-\widetilde{H}_y^{t} := \set{x \in \bS^{n-1}: \inn{x}{y} < \frac{t}{2}},
-\end{align*} hence $\bP(\widetilde{H}_y^{t}) \le \bP(H_y^{t} )$. By geometric calculation, for all $t\in (0, \sqrt{2})$, we have 
-\begin{align*}
-\bP(\widetilde{H}_y^{t}) &\ge 1- \brac{1 - \paren{\frac{t}{2}}^2}^{n/2} \ge 1 - \exp\paren{-\frac{n\,t^2}{8}}
-\end{align*} where the last inequality is due to $(1 - x) \le e^{-x}$. Thus
-\begin{align*}
-\alpha_{\bS^{n-1}}(t) &= 1 - \bP(H_y^{t}) \le \exp\paren{-\frac{n\,t^2}{8}}.
-\end{align*} A similar but more careful approach to bounding $\bP(H_y)$ can be used to establish the sharper upper bound
-\begin{align*}
-\alpha_{\bS^{n-1}}(t) &\le  \sqrt{\frac{\pi}{2}}\exp\paren{-\frac{n t^2}{2}}. \qed
+\alpha_{\bS^{n-1}}(t) = \bP\paren{C(y, t)} &= \frac{\text{Vol}(B^n(0, 1)\cap \text{Cone})}{\text{Vol}(B^{n}(0,1))} \\
+&\le \frac{\text{Vol}(B^n(P,  \sqrt{1 - t^2}))}{\text{Vol}(B^{n}(0,1))}\\
+&= (\sqrt{1 - t^2})^{n} \\
+&\le \exp\paren{-  \frac{nt^2}{2}}
 \end{align*}
+
+For $t \in [1/\sqrt{2}, 1)$, it is enough to consider a different auxiliary ball which includes the set $\text{Cone} \cap B^n(0, 1)$. We obtain
+\begin{align*}
+\alpha_{\bS^{n-1}}(t) = \bP\paren{C(y, t)} & \le \frac{\text{Vol}(B^n(Q,  r))}{\text{Vol}(B^{n}(0,1))}\\
+&= r^n = \paren{\frac{1}{2\epsilon}}^n\\
+&\le \exp\paren{-\frac{n \epsilon^2}{2}}
+\end{align*} where the last inequality is from $e^{x^2/2} \le 2x$ for $x \in [1/\sqrt{2}, 1]$. Due to convexity, this is only to be checked at the boundary of our interval
+$[1/\sqrt{2}, 1]$,  \qed
+%we see that $\sin(t) \ge t/2$ for $t \in (0, \pi/2]$. Then the $t$-blowup $H_y^{t}$ must contain set
+%\begin{align*}
+%\widetilde{H}_y^{t} := \set{x \in \bS^{n-1}: \inn{x}{y} < \frac{t}{2}},
+%\end{align*} hence $\bP(\widetilde{H}_y^{t}) \le \bP(H_y^{t} )$. By geometric calculation, for all $t\in (0, \sqrt{2})$, we have 
+%\begin{align*}
+%\bP(\widetilde{H}_y^{t}) &\ge 1- \brac{1 - \paren{\frac{t}{2}}^2}^{n/2} \ge 1 - \exp\paren{-\frac{n\,t^2}{8}}
+%\end{align*} where the last inequality is due to $(1 - x) \le e^{-x}$. Thus
+%\begin{align*}
+%\alpha_{\bS^{n-1}}(t) &= 1 - \bP(H_y^{t}) \le \exp\paren{-\frac{n\,t^2}{8}}.
+%\end{align*} A similar but more careful approach to bounding $\bP(H_y)$ can be used to establish the sharper upper bound
+%\begin{align*}
+%\alpha_{\bS^{n-1}}(t) &\le  \sqrt{\frac{\pi}{2}}\exp\paren{-\frac{n t^2}{2}}. \qed
+%\end{align*}
 \end{proof}
 
 \item By Levy's inequality, we have the following proposition
