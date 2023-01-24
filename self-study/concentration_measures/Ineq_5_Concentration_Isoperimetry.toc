@@ -1,10 +1,10 @@
 \contentsline {section}{\numberline {1}The Classic Isoperimetry Inequalities}{2}
 \contentsline {subsection}{\numberline {1.1}Brunn-Minkowski Inequality}{2}
 \contentsline {subsection}{\numberline {1.2}The Classical Isoperimetry Theorem}{5}
-\contentsline {section}{\numberline {2}Concentration via Isoperimetry}{5}
-\contentsline {subsection}{\numberline {2.1}Levy's Inequalities and Concentration Function}{5}
-\contentsline {subsection}{\numberline {2.2}Isoperimetric Inequalities on the Unit Sphere}{5}
-\contentsline {subsection}{\numberline {2.3}Gaussian Isoperimetric Inequalities and Concentration of Gaussian Measure}{6}
-\contentsline {subsection}{\numberline {2.4}Edge Isoperimetric Inequality on the Binary Hypercube}{6}
-\contentsline {subsection}{\numberline {2.5}Vertex Isoperimetric Inequality on the Binary Hypercube}{6}
-\contentsline {subsection}{\numberline {2.6}Convex Distance Inequality}{6}
+\contentsline {section}{\numberline {2}Concentration via Isoperimetry}{6}
+\contentsline {subsection}{\numberline {2.1}Isoperimetry Problem and Levy's Inequalities}{6}
+\contentsline {subsection}{\numberline {2.2}Isoperimetric Inequalities on the Unit Sphere}{8}
+\contentsline {subsection}{\numberline {2.3}Gaussian Isoperimetric Inequalities and Concentration of Gaussian Measure}{9}
+\contentsline {subsection}{\numberline {2.4}Edge Isoperimetric Inequality on the Binary Hypercube}{9}
+\contentsline {subsection}{\numberline {2.5}Vertex Isoperimetric Inequality on the Binary Hypercube}{9}
+\contentsline {subsection}{\numberline {2.6}Convex Distance Inequality}{9}
