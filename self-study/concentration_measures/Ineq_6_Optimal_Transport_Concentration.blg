@@ -3,44 +3,46 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Ineq_6_Optimal_Transport_Concentration.aux
 The style file: plainnat.bst
 Database file #1: reference.bib.bib
-You've used 2 entries,
+Warning--can't use both volume and number fields in santambrogio2015optimal
+You've used 5 entries,
             2773 wiz_defined-function locations,
-            603 strings with 5210 characters,
-and the built_in function-call counts, 743 in all, are:
-= -- 53
-> -- 40
-< -- 2
-+ -- 14
-- -- 12
-* -- 54
-:= -- 125
-add.period$ -- 6
-call.type$ -- 2
-change.case$ -- 8
-chr.to.int$ -- 2
-cite$ -- 4
-duplicate$ -- 41
-empty$ -- 66
-format.name$ -- 14
-if$ -- 147
+            625 strings with 5596 characters,
+and the built_in function-call counts, 1813 in all, are:
+= -- 143
+> -- 81
+< -- 7
++ -- 29
+- -- 24
+* -- 130
+:= -- 293
+add.period$ -- 16
+call.type$ -- 5
+change.case$ -- 19
+chr.to.int$ -- 5
+cite$ -- 11
+duplicate$ -- 101
+empty$ -- 170
+format.name$ -- 31
+if$ -- 372
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 4
-newline$ -- 18
-num.names$ -- 8
-pop$ -- 26
+missing$ -- 9
+newline$ -- 34
+num.names$ -- 20
+pop$ -- 54
 preamble$ -- 1
-purify$ -- 8
+purify$ -- 18
 quote$ -- 0
-skip$ -- 28
+skip$ -- 70
 stack$ -- 0
-substring$ -- 4
-swap$ -- 3
-text.length$ -- 1
+substring$ -- 31
+swap$ -- 9
+text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 12
-warning$ -- 0
-while$ -- 6
+type$ -- 35
+warning$ -- 1
+while$ -- 16
 width$ -- 0
-write$ -- 32
+write$ -- 73
+(There was 1 warning)

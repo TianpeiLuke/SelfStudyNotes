@@ -1,4 +1,4 @@
-\begin{thebibliography}{2}
+\begin{thebibliography}{5}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -11,6 +11,23 @@ St{\'e}phane Boucheron, G{\'a}bor Lugosi, and Pascal Massart.
 \newblock \emph{Concentration inequalities: A nonasymptotic theory of
   independence}.
 \newblock Oxford university press, 2013.
+
+\bibitem[Peyré and Cuturi(2019)]{gabriel2019computational}
+Gabriel Peyré and Marco Cuturi.
+\newblock Computational optimal transport: With applications to data science.
+\newblock \emph{Foundations and Trends® in Machine Learning}, 11\penalty0
+  (5-6):\penalty0 355--607, 2019.
+\newblock ISSN 1935-8237.
+
+\bibitem[Santambrogio(2015)]{santambrogio2015optimal}
+Filippo Santambrogio.
+\newblock \emph{Optimal transport for applied mathematicians}, volume~55.
+\newblock Springer, 2015.
+
+\bibitem[Villani(2009)]{villani2009optimal}
+C{\'e}dric Villani.
+\newblock \emph{Optimal transport: old and new}, volume 338.
+\newblock Springer, 2009.
 
 \bibitem[Wainwright(2019)]{wainwright2019high}
 Martin~J Wainwright.
