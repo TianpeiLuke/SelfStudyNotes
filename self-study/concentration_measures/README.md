@@ -93,8 +93,16 @@
 		- Equivalence of Isoperimetric Inequality and Concentration of Lipschitz Functions (Levy's Inequality)
 		- Isoperimetric Inequalities on the Unit Sphere 
 		- Gaussian Isoperimetric Inequalities and Gaussian Concentration
+		- Convex Distance Inequality and Concentration of Convex Lipschitz Function
 		- Edge Isoperimetric Inequality on the Binary Hypercube
 		- Vertex Isoperimetric Inequality on the Binary Hypercube
-		- Convex Distance Inequality
- 
+		
+- Isoperimetric Inequality via Transportation Methods [pdf](./Ineq_6_Optimal_Transport_Concentration.pdf)
+	- Optimal Transport Basis
+		- Optimal Transport Problem and its Dual Problem
+		- Wasserstein Distance
+		- Variational Formulation for Wasserstein Distance
+	- Transportation Methods
+		- Concentration via Transportation Cost Inequality
+
 
