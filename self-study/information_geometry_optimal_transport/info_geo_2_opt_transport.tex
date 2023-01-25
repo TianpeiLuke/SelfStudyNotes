@@ -200,7 +200,7 @@ Note that for any feasilble solution $\mb{P}$ in \eqref{eqn: optimal_transport_l
 
 We can also generalize to  \underline{\textbf{dual problem to arbitrary measures}} as dual problem of \eqref{eqn: optimal_transport_continuous}: 
 \begin{align}
-\cL_{c}(\alpha, \beta) = \max_{(\lambda,  \mu) \in \in \cC(\cX)\times \cC(\cY)} & \int_{\cX}\lambda(x) d\alpha(x) + \int_{\cY}\mu(y) d\beta(y) \label{eqn: optimal_transport_dual_cont} \\
+\cL_{c}(\alpha, \beta) = \max_{(\lambda,  \mu) \in \cC(\cX)\times \cC(\cY)} & \int_{\cX}\lambda(x) d\alpha(x) + \int_{\cY}\mu(y) d\beta(y) \label{eqn: optimal_transport_dual_cont} \\
 \text{s.t. }&  \lambda(x) + \mu(y) \le c(x, y),\quad \forall x\in \cX, y \in \cY, \label{eqn: optimal_transport_dual_cont_constraint}
 \end{align} Here, $(\lambda, \mu)$ is a pair of continuous functions and are also called, as in the discrete case, "\textbf{\emph{Kantorovich potentials}}." The feasible region is 
  \begin{align}
@@ -452,7 +452,7 @@ Note that
 
 In fact, $\cW_{p}$ is a way to quantify the \underline{\emph{\textbf{weak convergence}}} or \emph{convergence in distribution (in law)} \citep{villani2009optimal}: 
 \begin{definition} (\textbf{Weak Convergence or Convergence in distribution})
-On a compact domain $\cX$ , $(\alpha_k)_k$ converges \textbf{weakly} to $\alpha$ in $\cM_{+}^{1}(\cX)$ (denoted $\alpha_{n}\stackrel{d}{\rightarrow} \alpha$) if and only if \emph{for any \textbf{continuous} function} $g \in \cC(\cX)$, $\int_{\cX} g d\alpha_k \rightarrow \int_{\cX} d\alpha$. One needs to add additional decay conditions on $g$ on noncompact domains. 
+On a compact domain $\cX$ , $(\alpha_k)_k$ converges \textbf{weakly} to $\alpha$ in $\cM_{+}^{1}(\cX)$ (denoted $\alpha_{n}\stackrel{d}{\rightarrow} \alpha$) if and only if \emph{for any \textbf{continuous} function} $g \in \cC(\cX)$, $\int_{\cX} g d\alpha_k \rightarrow \int_{\cX} g d\alpha$. One needs to add additional decay conditions on $g$ on noncompact domains. 
 
 This notion of weak convergence corresponds to the \textbf{convergence in the distribution} of random vectors. Note the any random variable $X_{n}$ is a continous function on $\Omega$, and its distribution is the push-forward measure $\alpha_{n} = X_{n\#}\bP$. Therefore, $\alpha_{n}\stackrel{d}{\rightarrow} \alpha$  is equivalent to $X_{n}\stackrel{d}{\rightarrow} X$.
 
@@ -472,12 +472,13 @@ In particular, this implies the nice \textbf{decomposition} of the distance as
 \end{itemize}
 
 
-
 \subsection{Brenier theorem: Monge-Kantorovich equivalence}
+\begin{itemize}
+\item  \begin{remark}
 \emph{\textbf{Brenier theorem}} shows that in $\bR^d$ for $p = 2$, (i.e. $\cW_{2}$) if at least one of the two input measures has a \emph{density}, and for measures with \emph{second order moments}, then the \emph{\textbf{Kantorovich and Monge problems are equivalent}}.  That is the non-convex optimal assignment problem in \eqref{eqn: optimal_assignment_cont} and the convex optimal transport problem in \eqref{eqn: optimal_transport_continuous} have the same optimal solution and the Kantorovich relaxation is \textbf{tight}. Note that we have already shown in section \ref{sec: discrete_tight} that in discrete case, these two problems are equivalent when the permutation matrix is the optimal coupling matrix. Brenier's theorem is for arbitrary measures.
+\end{remark}
 
-
-\begin{theorem} (\textbf{Brenier})\\ 
+\item \begin{theorem} (\textbf{Brenier})\\ 
 In the case $\cX = \cY = \bR^d$ and $c(x, y) = \norm{x -y}{2}^2$, if at least one of the two input measures (denoted $\alpha$) has a density $\rho_{\alpha}$ with respect to
 the Lebesgue measure, then the optimal $\pi$ in the Kantorovich formulation \eqref{eqn: optimal_transport_continuous} is \textbf{unique} and is \textbf{supported} on the graph $(\mb{x}, T(\mb{x}))$ of a "\textbf{Monge map}" $T : \bR^d \rightarrow \bR^d$. This means that $\pi = (\text{Id}, T)_{\#}\alpha$, i.e. 
 \begin{align}
@@ -518,14 +519,35 @@ Since $\phi$ is convex, it is \emph{differentiable} everywhere,  and since $\alp
 \qed
 \end{proof}
 
+\item  \begin{remark}
 Brenier's theorem, stating that an optimal transport map must be the \textbf{gradient of a convex function}, provides a useful generalization of the notion of increasing functions in dimension more than one. This is the main reason why optimal transport can be used to define \textbf{quantile functions} in \emph{arbitrary dimensions}, which is in turn useful for applications to \emph{\textbf{quantile regression} problems}.
+\end{remark}
 
-\subsubsection{Probabilistic interpretation for alternative dual problem}
+\item 
 From the proof, we see that when $\cX = \cY = \bR^d$ and $c(x, y) = \norm{x -y}{2}^2$ there exists an alternative dual problem \eqref{eqn: Brenier_dual}. The probabilistic interpretation for \eqref{eqn: Brenier_dual} is
 \begin{align}
 \min_{\phi\in \cC(\cX)} & \E{X \sim \alpha}{\phi(X)} +  \E{Y \sim \beta}{\phi^{*}(Y)} \label{eqn: Brenier_dual_prob}
 \end{align}
+\end{itemize}
 
+\subsection{Dual Formulation of Wasserstein Distance}
+\begin{itemize}
+\item \begin{theorem} (\textbf{Kantorovich-Rubenstein duality}) \citep{villani2009optimal}\\
+Let $\cX$ be a \textbf{Polish space}, i.e. $\cX$ a complete separable metric space equipped with a Borel $\sigma$-algebra induced by metric $d$, and $\alpha$ and $\beta$ be Borel measures on $\cX$. Let $Lip_1$ be the space of all 
+$1$-\textbf{Lipschitz} functions $f: \cX \to \bR$ with respect to metric $d$  such that
+\begin{align*}
+\norm{f}{L}  := \sup_{x, y \in \cX}\set{\frac{\abs{f(x) - f(y)}}{d(x, y)}} \le 1.
+\end{align*}
+Then the Wasserstein distance between $\alpha$ and $\beta$ induced by $d$ can be obtained by the following optimization problem
+\begin{align}
+\cW_{d}(\alpha, \beta) &= \sup_{f \in Lip_1}\set{\int_{\cX} f d\alpha  - \int_{\cX} f d\beta}. \label{eqn: wass_dist_dual}
+\end{align} 
+\end{theorem}
+
+\item \begin{remark}
+Note here the we use $\mu(y)=\inf_{x}d(x,y) - \lambda(x)$ and since $\norm{\lambda}{L} \le 1$, this implies $g(y)= - f(y)$. This theorem in the basis for Wasserstein GAN algorithm using 1-Wasserstein distance $\cW_1$ \citep{arjovsky2017wasserstein}.
+\end{remark}
+\end{itemize}
 
 \section{Examples of Wasserstein distance}
 \subsection{Wasserstein distance between discrete measures}
@@ -591,9 +613,9 @@ T = F_{\beta}^{-1} \circ  F_{\alpha}    \label{eqn: wass_dist_l1_general_optimal
 \end{align}
 
 \item (\textbf{$p$-Wasserstein distance is related to Lipschitz continous function f})\\
-As a result of \textbf{Proposition} \ref{prop: c_concavity_lipschitz}, The $1$-Wasserstein distance can also be written as 
+As a result of \textbf{Proposition} \ref{prop: c_concavity_lipschitz}, The $p$-Wasserstein distance can also be written as 
 \begin{align}
-\cW_{1}(\alpha, \beta) &:= \inf_{\pi \in U(\alpha, \beta)}\set{\int_{\cX \times \cX}d_{p}(x,y) d\pi(x, y)} \nonumber\\
+\cW_{p}(\alpha, \beta) &:= \inf_{\pi \in U(\alpha, \beta)}\set{\int_{\cX \times \cX}d_{p}(x,y) d\pi(x, y)} \nonumber\\
 &= \sup_{f \in \text{Lip}_1}\set{\int_{M} f(x) d(\alpha - \beta)(x) }  \label{eqn: wass_dist_c_transform_lip1}
 \end{align} This results can be extended to $\cW_{p}$
 \begin{align}
@@ -609,19 +631,7 @@ If $\cX = \cY = \bR^{d}$,  the global Lipschitz constraint appearing in \eqref{e
 &= \inf_{s}\set{\int_{\bR^{d}} \norm{s(x)}{2}dx:  \text{div}(s) = \alpha - \beta }  \label{eqn: wass_dist_beckmann}
 \end{align} The latter is  an optimization problem under fixed \emph{\textbf{divergence}} constraint, which is often called the \textbf{\emph{Beckmann formulation}}. Here the vectorial function $s(\mb{x}) \in \bR^2$ can be interpreted as a flow field, describing locally the movement of mass. Outside the support of the two input measures,  $\text{div}(s) = 0$, which is the conservation of mass constraint. Once properly discretized using finite elements, Problems \eqref{eqn: wass_dist_norm_f} and \eqref{eqn: wass_dist_beckmann} become nonsmooth convex optimization problems. 
 
-
-
-\item (\textbf{Probabilistic interpretation of dual form} of $\cW_1$)\\
-The following theorm is a special caes of general dual representation \eqref{eqn: optimal_transport_dual_c_transform_prob}  and \textbf{Proposition} \ref{prop: c_concavity_lipschitz}
-\begin{theorem} (\textbf{Kantorovich-Rubenstein duality})\\
-When the probability space $\Omega$ is a metric space, and $\alpha$ and $\beta$ are probability measures on $\Omega$,  then for any fixed $K>0$,
-\begin{align}
-\cW_{1}(\alpha, \beta) &= \frac{1}{K}\sup_{\norm{f}{L} \le K}\set{\E{X\sim \alpha}{f(X)} - \E{Y \sim \beta}{f(Y)}} \label{eqn: wass_dist_l1_general_dual_prob}
-\end{align} where $f: \cX \rightarrow \bR$ is \textbf{Lipschitz continous} function with  \textbf{Lipschitz norm} $\norm{f}{L} \le K$.
-\end{theorem}
-Note here the we use $\mu(y)=\inf_{x}d(x,y) - \lambda(x)$ and since $\norm{\lambda}{L} \le 1$, this implies $g(y)= - f(y)$. This theorem in the basis for Wasserstein GAN algorithm using 1-Wasserstein distance $\cW_1$ \citep{arjovsky2017wasserstein}.
-
-\item (\textbf{Concentration inequality of $p$-Wasserstein distance}) \\
+\item (\textbf{Concentration inequality of $p$-Wasserstein distance}) 
 \begin{definition}\citep{wainwright2019high} For a given metric $d$, the \emph{probability measure} $\bP$ is said to satisfy a \textbf{$d$-transportation cost inequality} with parameter $\gamma > 0$ if
 \begin{align}
 \cW_{p}(\bQ, \bP) &\le \sqrt{2 \gamma \kl{\bQ}{\bP}},  \label{eqn: wasserstein_inequality}

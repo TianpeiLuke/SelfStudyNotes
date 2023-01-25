@@ -22,9 +22,9 @@
 \contentsline {subsection}{\numberline {3.1}Definition}{13}
 \contentsline {subsection}{\numberline {3.2}Basic properties of Wasserstein distance}{15}
 \contentsline {subsection}{\numberline {3.3}Brenier theorem: Monge-Kantorovich equivalence}{16}
-\contentsline {subsubsection}{\numberline {3.3.1}Probabilistic interpretation for alternative dual problem}{17}
-\contentsline {section}{\numberline {4}Examples of Wasserstein distance}{17}
-\contentsline {subsection}{\numberline {4.1}Wasserstein distance between discrete measures}{17}
+\contentsline {subsection}{\numberline {3.4}Dual Formulation of Wasserstein Distance}{17}
+\contentsline {section}{\numberline {4}Examples of Wasserstein distance}{18}
+\contentsline {subsection}{\numberline {4.1}Wasserstein distance between discrete measures}{18}
 \contentsline {subsection}{\numberline {4.2}$p$-Wasserstein distance on 1-dimensional real line ${\mathbb R}$}{18}
-\contentsline {subsection}{\numberline {4.3}1-Wasserstein distance ${\mathcal W}_1$}{18}
+\contentsline {subsection}{\numberline {4.3}1-Wasserstein distance ${\mathcal W}_1$}{19}
 \contentsline {subsection}{\numberline {4.4}Wasserstein distance between Gaussian measures}{21}

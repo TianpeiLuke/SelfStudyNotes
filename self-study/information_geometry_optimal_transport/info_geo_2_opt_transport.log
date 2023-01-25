@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  24 AUG 2022 20:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  25 JAN 2023 11:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -442,28 +442,33 @@ Missing character: There is no ù in font cmr10!
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [13]
-[14] [15] [16] [17]
-<1d_wass_dist_opt_map.png, id=81, 1283.79625pt x 742.775pt>
+[14] [15]
+Overfull \hbox (23.95207pt too wide) in paragraph at lines 491--492
+\OT1/cmr/m/n/10.95 There-fore, $[] \OML/cmm/m/it/10.95 c\OT1/cmr/m/n/10.95 (\OM
+L/cmm/m/it/10.95 x; y\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 d^^Y\OT1/cmr/m/n/1
+0.95 (\OML/cmm/m/it/10.95 x; y\OT1/cmr/m/n/10.95 ) = \OML/cmm/m/it/10.95 C[] \O
+MS/cmsy/m/n/10.95 ^^@ \OT1/cmr/m/n/10.95 2 [] [] \OML/cmm/m/it/10.95 d^^Y\OT1/c
+mr/m/n/10.95 (\OML/cmm/m/it/10.95 x; y\OT1/cmr/m/n/10.95 )$ where the con-stant
+ is $\OML/cmm/m/it/10.95 C[] \OT1/cmr/m/n/10.95 = [] [][] \OML/cmm/m/it/10.95 d
+\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x\OT1/cmr/m/n/10.95 ) +
+ []
+
+[16] [17] [18] <1d_wass_dist_opt_map.png, id=84, 1283.79625pt x 742.775pt>
 File: 1d_wass_dist_opt_map.png Graphic file (type png)
 
 <use 1d_wass_dist_opt_map.png>
-Package pdftex.def Info: 1d_wass_dist_opt_map.png used on input line 571.
+Package pdftex.def Info: 1d_wass_dist_opt_map.png used on input line 593.
 (pdftex.def)             Requested size: 385.14185pt x 222.83421pt.
 Missing character: There is no ‚ in font cmbx10!
 Missing character: There is no Ä in font cmbx10!
 Missing character: There is no ô in font cmbx10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 582--583
+Underfull \hbox (badness 10000) in paragraph at lines 604--605
 
  []
 
-[18] [19 <./1d_wass_dist_opt_map.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 624--625
-
- []
-
-[20]
-Overfull \hbox (34.87778pt too wide) in paragraph at lines 672--673
+[19 <./1d_wass_dist_opt_map.png>] [20]
+Overfull \hbox (34.87778pt too wide) in paragraph at lines 682--683
 []\OT1/cmr/m/n/10.95 Also note that $\OML/cmm/m/it/10.95 T$ \OT1/cmr/m/n/10.95 
 is the \OT1/cmr/m/it/10.95 gra-di-ent \OT1/cmr/m/n/10.95 of the \OT1/cmr/m/it/1
 0.95 con-vex \OT1/cmr/m/n/10.95 (quadratic) func-tion $\OML/cmm/m/it/10.95 ^^^\
@@ -474,7 +479,7 @@ OT1/cmr/m/n/10.95 ([]) = [] [][] [] [] +
 File: gaussian_displacement.png Graphic file (type png)
 
 <use gaussian_displacement.png>
-Package pdftex.def Info: gaussian_displacement.png used on input line 695.
+Package pdftex.def Info: gaussian_displacement.png used on input line 705.
 (pdftex.def)             Requested size: 448.28146pt x 194.98135pt.
  [22 <./gaussian_displacement.png>]
 (./info_geo_2_opt_transport.bbl
@@ -488,10 +493,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 5209 strings out of 493029
- 75129 string characters out of 6136233
- 153781 words of memory out of 5000000
- 8629 multiletter control sequences out of 15000+600000
+ 5242 strings out of 493029
+ 75275 string characters out of 6136233
+ 154082 words of memory out of 5000000
+ 8662 multiletter control sequences out of 15000+600000
  19955 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,19n,39p,878b,409s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -516,7 +521,7 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist
 type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/symbols/msbm10.pfb>
-Output written on info_geo_2_opt_transport.pdf (23 pages, 877802 bytes).
+Output written on info_geo_2_opt_transport.pdf (23 pages, 877774 bytes).
 PDF statistics:
  172 PDF objects out of 1000 (max. 8388607)
  118 compressed objects within 2 object streams
