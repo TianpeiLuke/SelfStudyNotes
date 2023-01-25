@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  24 JAN 2023 21:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  25 JAN 2023 11:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -668,60 +668,87 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 43.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 38.
  (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 43.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 38.
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no © in font cmr10!
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no © in font cmr10!
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no © in font cmr10!
+[2]
+LaTeX Font Info:    Try loading font information for U+dsrom on input line 73.
+ (/usr/share/texlive/texmf-dist/tex/latex/doublestroke/Udsrom.fd
+File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
+)
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no © in font cmr10!
 
-Overfull \hbox (23.50636pt too wide) in paragraph at lines 43--45
+Overfull \hbox (1.40257pt too wide) in paragraph at lines 80--82
+[]\OT1/cmr/m/n/10.95 (\OT1/cmr/bx/it/10.95 Dual Prob-lem of Kan-torovich Prob-l
+em\OT1/cmr/m/n/10.95 ) [Vil-lani, 2009, San-tam-bro-gio, 2015,
+ []
+
+[3]
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no © in font cmr10!
+ [4]
+Overfull \hbox (23.50636pt too wide) in paragraph at lines 177--179
 []\OT1/cmr/m/n/10.95 (\OT1/cmr/bx/it/10.95 Equivalence of Trans-porta-tion Cost
  In-equal-ity and Sub-Gaussian\OT1/cmr/m/n/10.95 ) [Boucheron
  []
 
-LaTeX Font Info:    Try loading font information for U+dsrom on input line 49.
-(/usr/share/texlive/texmf-dist/tex/latex/doublestroke/Udsrom.fd
-File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-)
-Overfull \hbox (23.6616pt too wide) in paragraph at lines 50--51
+
+Overfull \hbox (23.6616pt too wide) in paragraph at lines 184--185
 []\OT1/cmr/m/n/10.95 for any prob-a-bil-ity mea-sure $\OML/cmm/m/it/10.95 P$ \O
 T1/cmr/m/n/10.95 ab-so-lutely con-tin-u-ous with re-spect to $\OML/cmm/m/it/10.
 95 Q$ \OT1/cmr/m/n/10.95 such that $[] [] \OML/cmm/m/it/10.95 <
  []
 
-[2] [3] (./Ineq_6_Optimal_Transport_Concentration.bbl) [4]
+[5] [6] (./Ineq_6_Optimal_Transport_Concentration.bbl
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no © in font cmr10!
+Missing character: There is no Â in font cmti10!
+Missing character: There is no ® in font cmti10!
+) [7]
 (./Ineq_6_Optimal_Transport_Concentration.aux) ) 
 Here is how much of TeX's memory you used:
- 15879 strings out of 493029
- 314701 string characters out of 6136233
- 364633 words of memory out of 5000000
- 19089 multiletter control sequences out of 15000+600000
- 13004 words of font info for 52 fonts, out of 8000000 for 9000
+ 15909 strings out of 493029
+ 315278 string characters out of 6136233
+ 366767 words of memory out of 5000000
+ 19111 multiletter control sequences out of 15000+600000
+ 15466 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,11n,84p,632b,336s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,13n,84p,713b,293s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
-0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/doublestroke/dsrom8.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/rsfs/rsfs10.pfb>
-Output written on Ineq_6_Optimal_Transport_Concentration.pdf (4 pages, 172628 b
+cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doubl
+estroke/dsrom10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestr
+oke/dsrom8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbo
+ls/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb
+>
+Output written on Ineq_6_Optimal_Transport_Concentration.pdf (7 pages, 235244 b
 ytes).
 PDF statistics:
- 88 PDF objects out of 1000 (max. 8388607)
- 64 compressed objects within 1 object stream
+ 111 PDF objects out of 1000 (max. 8388607)
+ 81 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

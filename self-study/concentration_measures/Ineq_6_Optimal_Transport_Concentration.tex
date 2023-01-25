@@ -34,8 +34,142 @@
 \newpage
 \section{Optimal Transport Basis}
 \subsection{Optimal Transport Problem and its Dual Problem}
+\begin{itemize}
+\item \begin{definition} (\textbf{\emph{Pushforward Measure}})  \citep{gabriel2019computational} \\
+Let $(\cX, \srB_X)$ and $(\cY, \srB_Y)$ be two topological measurable spaces.  Denote the spaces of  \emph{general (Radon) measures} on $\cX, \cY$  as $\cM(\cX)$ and $\cM(\cY)$. Also let  $\cC(\cX)$ be space of continuous functions on $\cX$. For a \emph{continous} map $T : \cX \rightarrow \cY$,  the \underline{\textbf{\emph{push-forward operator}}} is defined as $T_{\#}: \cM(\cX) \rightarrow \cM(\cY)$ that  satisfies 
+\begin{align}
+\forall\, h\in \cC(\cX), \quad \int_{\cY}h(y)\; d \paren{T_{\#}\alpha}(y) &= \int_{\cX}h(T(x))\; d\alpha(x). \label{eqn: def_push_forward_opt}\\
+\text{or equivalently, } \quad \paren{T_{\#}\alpha}(B)&:= \alpha\paren{\set{x: T(x) \in B \subset \cY }} = \alpha(T^{-1}(B))  \label{eqn: def_push_forward_opt2}
+\end{align} where the \textbf{\emph{push-forward measure}} $\beta := T_{\#}\alpha \in \cM(\cY)$ of some $\alpha \in  \cM(\cX)$, $T^{-1}(\cdot)$ is the pre-image of $T$.
+\end{definition}
+
+\item \begin{remark} (\textbf{\emph{Density Function of Pushforward Measure}})\\
+Assume that $(\alpha, \beta)$ have densities $(\rho_{\alpha}, \rho_{\beta})$ with respect to a fixed measure, and $\beta = T_{\#}\alpha$. We see that $T_{\#}$ acts on a density $\rho_{\alpha}$ linearly to a density $\rho_{\beta}$ as a change of variable, i.e. 
+\begin{align}
+\rho_{\alpha}(\mb{x}) &= \abs{\det(T'(\mb{x}))}\rho_{\beta}(T(\mb{x}))  \label{eqn: density of push-forward distribution}\\
+\abs{\det(T'(\mb{x}))} &= \frac{\rho_{\alpha}(\mb{x}) }{\rho_{\beta}(T(\mb{x})) } \nonumber
+\end{align}
+\end{remark}
+
+
+\item \begin{definition} (\textbf{\emph{Optimal Transport Problem, Monge Problem}}) \citep{villani2009optimal, santambrogio2015optimal, gabriel2019computational} \\
+Let $(\cX, \srB_X)$ and $(\cY, \srB_Y)$ be two measurable spaces, where $\cX$ and $\cY$ are \emph{complete separable metric spaces}. Denote $\cP(\cX)$ and $\cP(\cY)$ as the space of probabiilty measures on $\cX$ and $\cY$. Define a \emph{\textbf{cost function}} $c: \cX \times \cY \to \bR_{+}$ as non-negative real-valued measurable functions on $\cX \times \cY$. \underline{\emph{\textbf{The optimal transport problem}}} by \emph{Monge} (i.e. \underline{\emph{\textbf{Monge Problem}}}) is defined as follows: given two probability measures $\bP \in \cP(\cX)$ and $\bQ \in \cP(\cY)$, find a \emph{continuous measurable map} $T: \cX \to \cY$ so that 
+\begin{align*}
+\inf_{T} & \int_{\cX} c(x, T(x)) d\bP(x) \\
+\text{s.t. }& \bQ = T_{\#}\bP
+\end{align*} The optimal solution $T$ is also called an \emph{\textbf{optimal transportation plan}}.
+\end{definition}
+
+\item \begin{definition} (\textbf{\emph{Optimal Transport Problem, Kantorovich Relaxation}}) \citep{villani2009optimal, santambrogio2015optimal, gabriel2019computational} \\
+ \underline{\emph{\textbf{The optimal transport problem}}} by \emph{Kantorovich} (i.e. \underline{\emph{\textbf{Kantorovich Relxation}}}) is defined as follows: given two probability measures $\bP \in \cP(\cX)$ and $\bQ \in \cP(\cY)$, find a \emph{joint probability measure} $\gamma \in \Pi(\bP, \bQ)$ so that 
+\begin{align*}
+\inf_{\gamma}  & \int_{\cX \times \cY} c(x, y) d\gamma(x, y) \\
+\text{s.t. }&\gamma \in \Pi(\bP, \bQ) := \set{\gamma \in \cP(\cX \times \cY): \pi_{\cX, \#}\gamma = \bP, \; \pi_{\cY, \#}\gamma = \bQ }
+\end{align*} where $\cP(\cX \times \cY)$ is the space of joint probability measure on $\cX \times \cY$, $\pi_{\cX}$ and $\pi_{\cY}$ are the coordinate projection onto $\cX$ and $\cY$. $\pi_{\cX, \#}\gamma = \bP$ means that $\bP$ is the marginal distribution of $\gamma$ on $\cX$. Similarly $\bQ$ is the marginal distribution of $\gamma$ on $\cY$.
+
+Equivalently, let $X$ and $Y$ are \emph{random variables} taking values in $\cX$ and $\cY$. The \emph{joint distribution} of $(X, Y)$ is $\gamma$ with marginal distribution of $X$ and $Y$ being $\bP$ and $\bQ$. Then the problem is
+\begin{align*}
+\min_{\gamma \in \Pi(\bP, \bQ)} \E{\gamma}{c(X, Y)}
+\end{align*} The joint distribution $\gamma \in \Pi(\bP, \bQ)$ such that $X_{\#}\gamma = \bP$ and $Y_{\#}\gamma = \bQ$ is called \emph{\textbf{a coupling}}.
+\end{definition}
+
+\item \begin{proposition} (\textbf{Existance of Solution}) \citep{santambrogio2015optimal}\\
+Let $\cX, \cY$ be \textbf{complete separable spaces}, $\bP \in \cP(\cX)$, $\bQ \in \cP(\cY)$ and $c: \cX \times \cY \to \bR_{+}$ be \textbf{lower semi-continuous function}. Then the Kantorovich relaxation of optimal transport problem \textbf{admits a solution}. 
+\end{proposition}
+
+\item \begin{definition} (\textbf{\emph{Dual Problem of Kantorovich Problem}}) \citep{villani2009optimal, santambrogio2015optimal, gabriel2019computational} \\
+The \underline{\textbf{\emph{dual problem}}} of \emph{Kantorovich problem} is described as below:
+\begin{align*}
+\cL_{c}(\bP, \bQ) = \max_{(\varphi,  \psi) \in \cC(\cX)\times \cC(\cY)} & \int_{\cX}\varphi(x) d\bP(x) + \int_{\cY}\psi(y) d\bQ(y) \\
+\text{s.t. }&  \varphi(x) + \psi(y) \le c(x, y),\quad \forall x\in \cX, y \in \cY, 
+\end{align*} Here, $(\varphi, \psi)$ is a pair of \emph{continuous functions} on $\cX$ and $\cY$ respectively and they are also the \textbf{\emph{Kantorovich potentials}}. The feasible region is 
+ \begin{align*}
+\cR(c) := \set{(\varphi,  \psi) \in  \cC(\cX)\times \cC(\cY): \varphi \oplus \psi \le c} 
+\end{align*} where $( \varphi \oplus \psi)(x, y)=  \varphi(x) + \psi(y)$. 
+
+In other words, the dual optimization problem is
+\begin{align*}
+\max_{(\varphi,  \psi) \in \cR(c)} \E{\bP}{\varphi(X)} + \E{\bQ}{\psi(Y)}
+\end{align*}
+\end{definition}
+
+\item \begin{proposition} (\textbf{Strong Duality})  \citep{santambrogio2015optimal}\\
+Let $\cX, \cY$ be \textbf{complete separable spaces}, and $c: \cX \times \cY \to \bR_{+}$ be \textbf{lower semi-continuous and bounded from below}. Then the optimal value of \emph{primal} and \emph{dual problems} are the same
+\begin{align*}
+\min_{X \sim \bP, Y \sim \bQ} \E{}{c(X, Y)} = \cL_{c}(\bP, \bQ) = \max_{(\varphi,  \psi) \in \cR(c)} \E{\bP}{\varphi(X)} + \E{\bQ}{\psi(Y)}.
+\end{align*}
+\end{proposition}
+\end{itemize}
 \subsection{Wasserstein Distance}
+\begin{itemize}
+\item \begin{definition} (\textbf{\emph{Wasserstein Distance}}) \\
+Let $((\cX, d), \srB)$ be \emph{a metric measurable space} with \emph{Borel $\sigma$-algebra} induced by metric $d$. Let $X, Y$ be two random variables taking values in $\cX$ with distribution $\bP$ and $\bQ$. \emph{\textbf{The $d$-Wasserstein distance}} between \emph{probability distributions} $\bP$ and $\bQ$ is defined as
+\begin{align}
+\cW_d(\bP, \bQ) := \min_{X \sim \bP, Y \sim \bQ} \E{}{d(X, Y)} \label{def: wasserstein_dist}
+\end{align}
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{$d$-Wasserstein Distance is a Metric in $\cP(\cX)$}}) \\
+The \underline{\textbf{\emph{$d$-Wasserstein distance}}} $\cW_d(\bP, \bQ) := \min_{X \sim \bP, Y \sim \bQ} \E{}{d(X, Y)}$ is a well-defined \emph{metric} in $\cP(\cX)$: for all $\bP, \bQ, \bM \in \cP(\cX)$, 
+\begin{enumerate}
+\item (\emph{Non-Negativity}):\; $W_{d}(\bP, \bQ) \ge 0$.
+\item (\emph{Definiteness}):\; $W_{d}(\bP, \bQ) = 0 $ iff $\bP = \bQ$
+\item (\emph{Symmetric}):\; $W_{d}(\bP, \bQ) = W_{d}(\bQ, \bP)$
+\item (\emph{Triangular inequality}): \; $W_{d}(\bP, \bQ)  \le W_{d}(\bP, \bM )  + W_{d}(\bM , \bQ) $
+\end{enumerate}
+\end{remark}
+
+\item \begin{remark}
+\emph{The Wasserstein distance, or Optimal Transport (OT)}, $\cW_{d}(\alpha, \beta)$ depends on the \emph{distance definition} $d$ on the base measurable space $\cX$. In other word, OT can be seen as automatically ``\underline{\textbf{\emph{lifting}}}" a \underline{\emph{ground metric $d$}} in $\cX$ to a \emph{metric} between \textbf{\emph{measures}} on $\cX$
+\end{remark}
+
+\item \begin{remark} (\textbf{\emph{Convergence in Wasserstein Space $\Leftrightarrow$ Weak Convergence}} ) \citep{villani2009optimal, santambrogio2015optimal, gabriel2019computational} \\
+One of most \textbf{\emph{important}} propery of \emph{Wasserstein distance} is that  it is a \emph{\textbf{weak distance}}, i.e. it allows one to compare singular distributions (for instance, discrete ones) whose \textbf{supports \emph{do not overlap}} and to quantify the spatial shift between the supports of two distributions. 
+
+In fact, $\cW_{p}$ is a way to quantify the \underline{\emph{\textbf{weak$^{*}$ convergence}}} or \emph{\textbf{convergence in distribution} (in law)} \citep{villani2009optimal}: 
+\begin{definition}
+On a compact domain $\cX$ , $(\alpha_k)_k$ converges \textbf{\textit{weakly}} to $\alpha$ in $\cM_{+}^{1}(\cX)$ (denoted $\alpha_{n}\stackrel{d}{\rightarrow} \alpha$) if and only if \emph{for any \textbf{continuous} function} $g \in \cC(\cX)$, $\int_{\cX} g d\alpha_k \rightarrow \int_{\cX} g d\alpha$. One needs to add additional decay conditions on $g$ on noncompact domains. 
+\end{definition}
+
+This notion of weak convergence corresponds to the \textbf{convergence in the distribution} of random vectors. Note the any random variable $X_{n}$ is a continous function on $\Omega$, and its distribution is the push-forward measure $\alpha_{n} = X_{n\#}\bP$. Therefore, $\alpha_{n}  \rightharpoonup \alpha$  is equivalent to $X_{n}\stackrel{d}{\rightarrow} X$. This convergence can be shown (see \citep{villani2009optimal, santambrogio2015optimal}) to be equivalent to 
+\begin{align*}
+\alpha_{n} \rightharpoonup \alpha \;\; \Leftrightarrow \;\;\cW_{d}(\alpha_{n}, \alpha) \rightarrow 0.
+\end{align*}
+Thus we can also write the weak convergance as $\alpha_{n}\stackrel{\cW_{d}}{\longrightarrow} \alpha$.
+\end{remark}
+\end{itemize}
 \subsection{Dual Formulation of Wasserstein Distance}
+\begin{itemize}
+\item \begin{theorem} (\textbf{Kantorovich-Rubenstein duality}) \citep{villani2009optimal}\\
+Let $\cX$ be a \textbf{Polish space}, i.e. $\cX$ a complete separable metric space equipped with a Borel $\sigma$-algebra induced by metric $d$, and $\bP$ and $\bQ$ be probability measures on $\cX$. Let $Lip_1$ be the space of all 
+$1$-\textbf{Lipschitz} function with respect to metric $d$  such that
+\begin{align*}
+\norm{f}{L}  := \sup_{x, y \in \cX}\set{\frac{\abs{f(x) - f(y)}}{d(x, y)}} \le 1.
+\end{align*}
+Then 
+\begin{align}
+\cW_{d}(\bP, \bQ) &= \sup_{f \in Lip_1}\set{\E{\bP}{f(X)} - \E{\bQ}{f(Y)}}. \label{eqn: wass_dist_dual}
+\end{align} 
+\end{theorem}
+
+\item \begin{example} (\textbf{\emph{Total Variation as $\cW_d$ with respect to Hamming distance $d_H$}})\\
+When $d(x ,y) = \sum_i \ind{x_i \neq y_i} = d_H(x, y)$ Hamming distance, the $\cW_d$ becomes
+\begin{align*}
+\cW_{d_H}(\bP, \bQ) &= \sup_{f: \cX \to [0, 1]}\int_{\cX} f \paren{d\bP - d\bQ} = \sup_{A \subset \cX}\abs{\bP(A) - \bQ(A)} := \norm{\bP - \bQ}{TV}
+\end{align*}
+\end{example}
+
+\item \begin{example} (\textbf{\emph{$\cW_1$ with respect to $L_1$ Norm}}) \\
+When $d(x, y) = \abs{x - y}$ in $\bR$, and $F_{\alpha}, F_{\beta}$ are cumulative distribution function  of $\alpha, \beta$,    then $\cW_1$ distance becomes
+\begin{align*}
+\cW_{1}(\alpha, \beta) &=  \norm{F_{\alpha} - F_{\beta}}{1} := \int_{-\infty}^{\infty}\norm{F_{\alpha}(x) - F_{\beta}(x)}{1} dx \\
+&=  \int_{-\infty}^{\infty}\abs{\int_{-\infty}^{x}d(\alpha - \beta) }
+\end{align*} which shows that $\cW_1$ on $\bR$ is a \textbf{norm}. An optimal Monge map $T$ such that $T_{\#}\alpha = \beta$ is then defined by
+\begin{align*}
+T = F_{\beta}^{-1} \circ  F_{\alpha}   
+\end{align*} where $F_{\beta}^{-1} = \inf\set{t: F_{\beta} \ge t}$.
+\end{example}
+\end{itemize}
 
 \section{The Transportation Method}
 \subsection{Concentration via Transportation Cost Inequality}
