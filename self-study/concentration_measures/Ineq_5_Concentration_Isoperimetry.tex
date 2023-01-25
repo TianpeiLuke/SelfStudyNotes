@@ -327,10 +327,25 @@ As we shown in previous proof, $f_A(x) = d_{H}(x, A)$ is a Lipschitz function wi
 \end{align*}
 \end{proof}
 
+\item \begin{remark} (\textbf{\emph{Equivalent Form}})\\
+From above isoperimetric inequality, 
+\begin{align*}
+\bP\set{d_{H}(x, A) \ge \sqrt{\frac{n}{2}\log \frac{1}{\bP(A)}} + t} \le \exp\paren{-\frac{2t^2}{n}}
+\end{align*} Denote $u := \sqrt{\frac{n}{2}\log \frac{1}{\bP(A)}}$. By change of variable, for any $t \ge u$, 
+\begin{align*}
+\bP\set{d_{H}(x, A) \ge t} \le \exp\paren{-\frac{2\paren{t - u}^2}{n}}.
+\end{align*} On the one hand, if $t \le 2u = \sqrt{-2 n \log \bP\paren{A}}$, then $\bP\paren{A} \le \exp(-t^2/(2n))$. On the other hand,
+since $(t - u)^2 \ge t^2/4$ for $t \ge 2u =  \sqrt{-2 n \log \bP\paren{A}}$. the inequality above implies
+$\bP\set{d_{H}(x, A) \ge t} \le  \exp(-t^2/(2n))$.
+Thus, for all $t > 0$, we have \textbf{\emph{the concentration of measure in Hamming metric space}}:
+\begin{align}
+\bP(A)\bP\set{d_{H}(x, A) \ge t} \le \min\set{\bP(A), \bP\set{d_{H}(x, A) \ge t}} \le  \exp\paren{-\frac{t^2}{2n}} \label{ineqn: concentration_measure_hamming_distance}
+\end{align}
+\end{remark}
+
 
 \item \begin{remark} (\textbf{\emph{Concentration of Measure}})\\
-To interpret the result in \eqref{ineqn: isoperimetry_inequality_hamming_distance}, we see that on the left-hand side we have the measure of the set of points whose Hamming distance is at least $t + \sqrt{\frac{n}{2}\log \frac{1}{\bP(A)}}$ away from $A$. This inequality means that for $A$ with \emph{\textbf{small measure}} $\bP(A)$, the measure of points whose \emph{\textbf{Hamming distance}} from $A$ is \emph{more than} $O\paren{\sqrt{n}}$ is \emph{\textbf{extremely small}}.
-
+To interpret the result in \eqref{ineqn: isoperimetry_inequality_hamming_distance}, we see that on the left-hand side we have the measure of the set of points whose Hamming distance is at least $t + \sqrt{\frac{n}{2}\log \frac{1}{\bP(A)}}$ away from $A$. This inequality means that for $A$ with \emph{\textbf{small measure}} $\bP(A)$, the measure of points whose \emph{\textbf{Hamming distance}} from $A$ \emph{is less than} $O\paren{\sqrt{n}}$ is \emph{\textbf{extremely large}}.
 In other words, \emph{\textbf{product measure} on Hamming metric space are \textbf{concentrated} on \textbf{extremely small sets}}. This phenonemon is called ``\underline{\textbf{\emph{concentration of measure}}}". 
 \end{remark}
 
@@ -496,9 +511,253 @@ However perplexing this may seem, this is \emph{a typical phenomenon in \textbf{
 \end{remark}
 \end{itemize}
 \subsection{Gaussian Isoperimetric Inequalities and  Concentration of Gaussian Measure}
+\begin{itemize}
+\item \begin{remark} (\textbf{\emph{Gaussian Isoperimetric Problem}})\\
+\underline{\emph{\textbf{The Gaussian isoperimetric problem}}} is to determine which (Borel) sets $A$ have \emph{\textbf{minimal Gaussian boundary measure}} among all sets in $\bR^n$ with a \emph{given probability} $p$. 
+
+\underline{\emph{\textbf{The Gaussian isoperimetric theorem}}} states the beautiful fact that \underline{\emph{\textbf{the extremal sets}}} are \underline{\emph{\textbf{linear half-spaces}}} \emph{in all dimensions} and \emph{for all $p$}.
+\end{remark}
+
+\item \begin{definition} (\textbf{\emph{Gaussian Isoperimetric Function}}) \\
+Denote \emph{the cumulative distribution function of standard Normal distribution}:
+\begin{align*}
+\Phi(x) &= \int_{-\infty}^{x}\frac{1}{\sqrt{2\pi}}e^{-\frac{t^2}{2}}dt := \int_{-\infty}^{x}\varphi(t) dt
+\end{align*} where $\varphi(x) := \frac{1}{\sqrt{2\pi}}e^{-\frac{t^2}{2}} = (\Phi(x))'$ is \emph{the probability density function} of standard normal distribution. $\Phi^{-1}(x)$ is \emph{the quantile function of normal distribution}.
+
+Define \underline{\textbf{\emph{the Gaussian isoperimetric function}}} as 
+\begin{align*}
+\gamma(x) &:= \varphi\paren{\Phi^{-1}(x)}, \quad x \in (0,1). 
+\end{align*} Also we define $\gamma(0) = \gamma(1) = 0$. 
+\end{definition}
+
+\item \begin{remark}
+Note that
+\begin{align*}
+x &= \Phi(\Phi^{-1}(x)) \\
+\Rightarrow 1 &= \varphi(\Phi^{-1}(x))(\Phi^{-1}(x))'  = \gamma(x) (\Phi^{-1}(x))' \\
+\Leftrightarrow 1/\gamma(x) &= (\Phi^{-1}(x))'.
+\end{align*} The quantity $1/\gamma(x) = (\Phi^{-1}(x))'$ is known as \emph{\textbf{quantile-density function} of normal distribution}.
+\end{remark}
+
+\item \begin{proposition}(\textbf{Basic Property of the Gaussian Isoperimetric Function}) \citep{boucheron2013concentration} \\
+The Gaussian isoperimetric function $\gamma$ satisfies:
+\begin{enumerate}
+\item 
+\begin{align*}
+\gamma'(x) &= - \Phi^{-1}(x), \quad \text{ for all }x \in (0,1),
+\end{align*}
+\item 
+\begin{align*}
+\gamma(x)\gamma''(x) &= - 1, \quad \text{ for all }x \in (0,1),
+\end{align*}
+\item $(\gamma')^2$ is convex over $(0, 1).$
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+\begin{enumerate}
+\item See that
+\begin{align*}
+\varphi'(x) &= \frac{1}{\sqrt{2\pi}}(-x)e^{-\frac{x^2}{2}} = (-x)\varphi(x)\\
+\varphi''(x) &= (x^2-1)\varphi(x)
+\end{align*} Thus
+\begin{align*}
+\gamma(x)' &= (\varphi\paren{\Phi^{-1}(x)})^{'} = \frac{d\varphi}{dy}(\Phi^{-1}(x)) \frac{d\Phi^{-1}}{dx}(x) =(-\Phi^{-1}(x)) \paren{\Phi^{-1}(x)}'\gamma(x) = -\Phi^{-1}(x), 
+\end{align*} since $\paren{\Phi^{-1}(x)}'\gamma(x) = 1$, we have the result. 
+
+\item \begin{align*}
+\gamma''(x) = (\gamma'(x))' &= -\paren{\Phi^{-1}(x)}' = - \frac{1}{\gamma(x)}\\
+\gamma(x)\gamma''(x) &= -1
+\end{align*}
+
+\item Since $\gamma > 0$ for $x \in (0, 1)$, 
+\begin{align*}
+\gamma''(x) &= -\frac{1}{\gamma(x)} < 0.
+\end{align*}  Thus $\gamma(x)$ is concave function  in $(0, 1)$. \qed
+\end{enumerate}
+\end{proof}
+
+\item \begin{lemma} (\textbf{Asymptotic Behavior of Gaussian Isoperimetric Function}) \citep{boucheron2013concentration}\\
+For all $x \in [0, 1/2]$, 
+\begin{align*}
+x\sqrt{\frac{1}{2} \log\frac{1}{x}} \le \gamma(x) \le x\sqrt{2 \log \frac{1}{x}}.
+\end{align*} Moreover, 
+\begin{align*}
+\lim\limits_{x \to 0}\frac{\gamma(x)}{x\sqrt{2\log \frac{1}{x}}} = 1
+\end{align*}
+\end{lemma}
+
+\item \begin{proposition} (\textbf{Bobkov's Inequality}) \citep{boucheron2013concentration}\\
+Suppose $Z$ is uniformly distributed over $\set{-1,1}^n$. Then for all $n \ge 1$ and for all functions $f: \set{-1, 1}^n \to [0,1]$,
+\begin{align}
+\gamma\paren{\E{}{f(Z)}} &\le \E{}{\sqrt{\gamma(f(Z))^2 + \norm{\nabla f(Z)}{2}^2 }} \label{ineqn: bobkov_inequality}
+\end{align}
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Bobkov's Gaussian Inequality}) \citep{boucheron2013concentration}\\
+Let $Z := (Z_1 \xdotx{,} Z_n)$ be a vector of \textbf{independent standard Gaussian} random variables. Let $f: \bR^n \to [0, 1]$ be a differentiable function with gradient $\nabla f$. Then
+\begin{align}
+\gamma\paren{\E{}{f(X)}} &\le \E{}{\sqrt{\gamma(f(X))^2 + \norm{\nabla f(X)}{2}^2 }} \label{ineqn: bobkov_gaussian_inequality}
+\end{align} where $\gamma = \varphi \circ \Phi^{-1}$ is \textbf{the Gaussian isoperimetric function}.
+\end{proposition}
+
+
+
+\item \begin{theorem} (\textbf{Gaussian Isoperimetric Theorem}) \citep{boucheron2013concentration} \citep{boucheron2013concentration, vershynin2018high, wainwright2019high}\\
+Let $\bP$ be the \textbf{standard Gaussian measure} on $\bR^n$ and let $A \subset \bR^n$ be a Borel set. Then 
+\begin{align}
+\liminf\limits_{t \to 0}\frac{\bP(A_t) - \bP(A)}{t} &\ge \gamma\paren{\bP(A)}, \label{ineqn: gaussian_isoperimetric_inequality}
+\end{align} where $A_t := \set{x: d(x, A) < t}$ be the $t$-blowup of $A$. Moreover, if $A$ is a \underline{\textbf{half-space}} defined by $A := \set{x \in \bR^n: x_1 \le z}$, then 
+\begin{align}
+\liminf\limits_{t \to 0}\frac{\bP(A_t) - \bP(A)}{t} &= \gamma\paren{\bP(A)} = \varphi(z), \label{ineqn: gaussian_isoperimetric_inequality_half_space}
+\end{align}  where $\gamma := \varphi \circ \Phi^{-1}$ is \textbf{the Gaussian isoperimetric function}.
+\end{theorem}
+
+\item \begin{proposition} \label{prop: diff_t_blowup} (\textbf{Differentiablity of Measure of $t$-Blowup}) \citep{boucheron2013concentration}\\
+If $A$ is a \textbf{finite union} of \textbf{open} balls in $\bR^n$, then $\bP(A_t)$ is a \textbf{differentiable} function of $t > 0$.
+\end{proposition}
+
+\item Next we describe \emph{\textbf{an equivalent version}} of \emph{\textbf{the Gaussian isoperimetric theorem}} in the manner of \emph{measure concentration}:
+\begin{theorem} (\textbf{Gaussian Concentration Theorem}) \citep{boucheron2013concentration} \citep{boucheron2013concentration, vershynin2018high, wainwright2019high}\\
+Let $\bP$ be the \textbf{standard Gaussian measure} on $\bR^n$ and let $A \subset \bR^n$ be a Borel set. Then for all $t \ge 0$, 
+\begin{align}
+\bP(A_t) &\ge \Phi\paren{\Phi^{-1}\paren{\bP(A)} + t}. \label{ineqn: gaussian_concentration_inequality}\\
+\Leftrightarrow \Phi^{-1}(\bP(A_t)) & \ge \Phi^{-1}\paren{\bP(A)} + t \nonumber
+\end{align} Equality holds if $A$ is a \textbf{half-space}.
+\end{theorem}
+\begin{proof}
+We call \emph{a Borel set} $A \subset \bR^n$ \emph{\textbf{smooth}} if $\bP(A_t)$ is a \emph{differentiable function} of $t$ on $(0, \infty)$. 
+\begin{enumerate}
+\item Observe that if $A$ is \emph{smooth}, then
+\begin{align*}
+\frac{d}{dt}\Phi^{-1}(\bP(A_t)) &= \brac{(\Phi^{-1})'(\bP(A_t))} \frac{d}{dt}\bP(A_t) \\
+&= \frac{1}{\gamma(\bP(A_t))}  \frac{d}{dt}\bP(A_t) \\
+& \ge \frac{1}{\frac{d}{dt}\bP(A_t)}\paren{\frac{d}{dt}\bP(A_t) }= 1
+\end{align*} The last inequality is due to \emph{the Gaussian isoperimetric inequality}
+\begin{align*}
+\frac{d}{dt}\bP(A_{t}) \ge \liminf\limits_{s \to 0}\frac{\bP(A_{t+s}) - \bP(A_{t})}{s} \ge \gamma\paren{\bP(A_t)}.
+\end{align*} Therefore, by integration 
+\begin{align*}
+\Phi^{-1}(\bP(A_t))  &= \Phi^{-1}(\bP(A)) + \int_{0}^{t} \frac{d}{ds}\Phi^{-1}(\bP(A_s))  ds \\
+&\ge  \Phi^{-1}(\bP(A)) + \int_{0}^{t}ds = \Phi^{-1}(\bP(A)) + t. 
+\end{align*} Hence, the theorem holds for all smooth sets. The remaining work is to extend this to all \emph{Borel sets}.
+
+
+\item Note first that if $\bP(A) = 0$, the theorem is automatically satisfied and therefore we may focus on Borel sets $A$ with \emph{positive probability}. By Proposition \ref{prop: diff_t_blowup}, the concentration property holds for \emph{\textbf{any finite union of open balls}}.
+
+\item Now let A be \emph{any Borel set} with $\bP(A) > 0$. Let $0 < \epsilon < t$. Then by \textbf{\emph{Vitali's covering theorem}}, there exists a \emph{countable} collection of \emph{disjoint open balls} $\set{B_1, B_2, \ldots}$, all intersecting $A$ and \emph{diameter at most} $\epsilon$, such that $P(A - \bigcup_{n=1}^{\infty}B_n) = 0$. But then
+\begin{align*}
+\bP(A_t) &\ge \bP\paren{\bigcup_{n=1}^{\infty}(B_n)_{t - \epsilon}}\\
+&= \lim\limits_{n \to \infty}\bP\paren{\bigcup_{i=1}^{n}(B_i)_{t - \epsilon}}\\
+&\ge \lim\limits_{n \to \infty}\Phi\paren{\Phi^{-1}\paren{\bP\paren{\bigcup_{i=1}^{n}(B_i)_{t - \epsilon}}} + t - \epsilon}\\
+&= \Phi\paren{\Phi^{-1}\paren{\bP\paren{\bigcup_{i=1}^{\infty}(B_i)_{t - \epsilon}}} + t - \epsilon}\\
+&\ge \Phi\paren{\Phi^{-1}\paren{\bP\paren{A}} + t - \epsilon}
+\end{align*} The argument is completed by taking $\epsilon$ to $0$. \qed
+\end{enumerate}
+\end{proof}
+
+\item \begin{remark} (\emph{\textbf{Gaussian Concentration Theorem} $\equiv$ \textbf{Gaussian Isoperimetric Theorem}}) \\
+\emph{The Gaussian concentration theorem} is equivalent to \emph{the Gaussian isoperimetric theorem} since
+\begin{align*}
+\liminf\limits_{t \to 0}\frac{\bP(A_t) - \bP(A)}{t} &\ge \liminf\limits_{t \to 0}\frac{\Phi\paren{\Phi^{-1}\paren{\bP(A)} + t} - \Phi\paren{\Phi^{-1}\paren{\bP(A)}}}{t} \\
+&= \Phi'(\Phi^{-1}(\bP(A))) \\
+&= \varphi(\Phi^{-1}(\bP(A))) \\
+&= \gamma(\bP(A)).
+\end{align*}
+\end{remark}
+
+\item As a direct consequence of \emph{the Gaussian isoperimetric inequality}, we have the improved result for \emph{Gaussian concentration inequality}:
+ \begin{theorem}  (\textbf{Gaussian Concentration Inequality, Sharp Bound}) \citep{boucheron2013concentration, wainwright2019high} \\
+Let $Z = (Z_1 \xdotx{,} Z_n)$ be a vector of $n$ \textbf{independent} \textbf{standard normal} random variables. Let $f : \bR^n \to \bR$ denote an \textbf{$L$-Lipschitz function}. Then, for all $t > 0$, 
+\begin{align}
+\bP\set{f(Z) - \text{Med}(f(Z)) \ge t } &\le 1 - \Phi\paren{\frac{t}{L}}. \label{ineqn: gaussian_concentration_inequality_improved}
+\end{align} where $\Phi(t)$ is the cumulative distribution function of standard normal random variable.
+\end{theorem}
+
+\item \begin{remark}
+Note that by \emph{\textbf{Gordon's inequality}}
+\begin{align*}
+1 - \Phi(t) &\le \paren{\frac{1}{\sqrt{2\pi}}}\frac{1}{t} e^{-\frac{t^2}{2}} = \frac{1}{t}\varphi(t)
+\end{align*} The Gaussian concentration inequality fails to capture the corrective factor $t^{-1}$. The inequality above cannot be improved in general as for $f(x) = n^{-1/2}\sum_{i=1}^n x_i$, equality is achieved for all $t > 0$.
+\end{remark}
+\end{itemize}
+\subsection{Convex Distance Inequality}
+\begin{itemize}
+\item \begin{definition} (\textbf{\emph{Weighted Hamming Distance}}) \\
+Given $\alpha = (\alpha_1 \xdotx{,} \alpha_n)$, where $\alpha_i  \ge 0$, \emph{\textbf{the weighed Hamming distance}} between $x , y \in \cX^n$ is defined as
+\begin{align*}
+d_{\alpha}(x, y) &= \sum_{i=1}^{n}\alpha_i\ind{x_i \neq y_i}.
+\end{align*}
+\end{definition}
+
+\item \begin{remark} (\textbf{\emph{Measure Concentration  in Weighted Hamming Distance Space}})\\
+Similar to the inequality \eqref{ineqn: isoperimetry_inequality_hamming_distance}, for \emph{metric measure space} $\cX^n$ with respect to \emph{weighted Hamming distance}, we have the measure concentration inequality for $A \subset \cX^n$
+\begin{align*}
+\bP\set{d_{\alpha}(x, A) \ge \sqrt{\frac{\norm{\alpha}{2}}{2}\log \frac{1}{\bP(A)}} + t} \le \exp\paren{-\frac{2t^2}{\norm{\alpha}{2}}}
+\end{align*} where $\norm{\alpha}{2} = \sqrt{\sum_{i=1}^n \alpha_i^2}$.  Assume $\norm{\alpha}{2} = 1$
+\begin{align*}
+\bP\set{d_{\alpha}(x, A) \ge \sqrt{\frac{1}{2}\log \frac{1}{\bP(A)}} + t} \le \exp\paren{-2t^2}
+\end{align*}
+Following the same argument, we can find \emph{an equivalent form} as in \eqref{ineqn: concentration_measure_hamming_distance}
+\begin{align*}
+\sup_{\alpha \in \bR_{+}^{n}: \norm{\alpha}{2} = 1}\bP(A)\bP\set{d_{\alpha}(x, A) \ge t} \le \sup_{\alpha \in \bR_{+}^{n}: \norm{\alpha}{2} = 1}\min\set{\bP(A), \bP\set{d_{\alpha}(x, A) \ge t}} \le  \exp\paren{-\frac{t^2}{2}}
+\end{align*}
+
+A key contribution for \underline{\emph{\textbf{convex distance inequality}}} is that  the above inequality remains true even if the \emph{\textbf{supremum}} is taken \emph{\textbf{within the probability}}; i.e. 
+\begin{align*}
+\bP(A)\bP\set{\sup_{\alpha \in \bR_{+}^{n}: \norm{\alpha}{2} = 1}d_{\alpha}(x, A) \ge t} \le  \exp\paren{-\frac{t^2}{4}}.
+\end{align*}
+\end{remark}
+
+\item \begin{definition}(\textbf{\emph{Convex Distance}})\\
+For any $x = (x_1 \xdotx{,} x_n)  \in \cX^n$, \underline{\emph{\textbf{the convex distance}}} of $x$ from the set $A$ by
+\begin{align*}
+d_{T}(x, A) &:=\sup_{\alpha \in \bR_{+}^{n}: \norm{\alpha}{2} = 1}d_{\alpha}(x, A)
+\end{align*}
+
+\end{definition}
+
+\item \begin{theorem} (\textbf{Convex Distance Inequality}) \citep{boucheron2013concentration}\\
+For any subset $A \subset \cX^n$ and $t > 0$,
+\begin{align}
+\bP(A)\bP\set{d_{T}(X, A)  \ge t} = \bP(A)\bP\set{\sup_{\alpha \in \bR_{+}^{n}: \norm{\alpha}{2} = 1}d_{\alpha}(X, A) \ge t} \le  \exp\paren{-\frac{t^2}{4}}.
+\end{align}
+\end{theorem}
+
+\item With convex distance inequality, we can improve \emph{the  concentration bound} for \emph{convex Lipschitz functions}. First, we relate convex distance with the minimal distance to convex set
+\begin{lemma} \label{lem: convex_dist_bound_dist_convex_set} (\textbf{Convex Distance vs. Distance to Convex Set}) \citep{boucheron2013concentration}\\
+Let $A \subset [0, 1]^n$ be a \textbf{convex set} and let $x = (x_1 \xdotx{,} x_n)  \in [0,1]^n$. Then
+\begin{align}
+ d(x, A):= \inf_{y \in A}\norm{x - y}{2} \le d_{T}(x, A).  \label{ineqn: convex_distance_bound_for_dist_convex_set}
+\end{align}
+\end{lemma}
+
+\item \begin{theorem} (\textbf{Concentration of Convex Lipschitz Functions, Improved}) \citep{boucheron2013concentration}\\
+Let  $Z:= (Z_1 \xdotx{,} Z_{n})$ be independent random variables taking values in the interval $[0, 1]$ and let $f : [0, 1]^n \to \bR$ be a \textbf{quasi-convex function}; that is
+\begin{align*}
+\set{z: f(z) \le s} \text{ is convex set for all }s \in \bR. 
+\end{align*} Moreover, $f$ is Lipschitz function satisfying
+\begin{align*}
+\abs{f(x) - f(y)} &\le \norm{x - y}{} \quad \text{for all }x, y \in [0, 1]^n.
+\end{align*}
+Then $X = f(Z_1 \xdotx{,} Z_{n})$ satisfies, for all $t > 0$,
+\begin{align}
+\bP\set{f(Z)  \ge  \text{Med}(f(Z)) + t } &\le 2\exp\paren{- \frac{t^2}{4}}, \label{ineqn: convex_lipschitz_concentration_med} \\
+\bP\set{f(Z)  \le \text{Med}(f(Z)) -t } &\le 2\exp\paren{- \frac{t^2}{4}}. \nonumber
+\end{align}
+\end{theorem}
+\begin{proof}
+For some $s \in \bR$, define the set $A_s = \set{z : f(z) \le s} \subset [0, 1]^n$.  Because of \emph{quasi-convexity}, $A_s$ is \emph{convex}.  By \emph{the Lipschitz property} and \emph{Lemma} \ref{lem: convex_dist_bound_dist_convex_set}, for all $z \in [0, 1]^n$,
+\begin{align*}
+f(z) \le s +  d(z, A) \le s + d_{T}(z, A).
+\end{align*} So by \emph{convex distance inequality}, 
+\begin{align*}
+\bP\set{f(Z) \le s} \bP\set{f(Z) \ge s + t} &\le \exp\paren{- \frac{t^2}{4}}
+\end{align*} Take $s = \text{Med}(f(Z))$ to get the \emph{upper tail inequality} and $s = \text{Med}(f(Z)) - t$ to get \emph{the lower tail inequality}. \qed
+\end{proof}
+\end{itemize}
+
 \subsection{Edge Isoperimetric Inequality on the Binary Hypercube}
 \subsection{Vertex Isoperimetric Inequality on the Binary Hypercube}
-\subsection{Convex Distance Inequality}
 
 
 %\section{The Classic Isoperimetry Inequalities}

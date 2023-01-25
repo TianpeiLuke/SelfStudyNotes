@@ -1,0 +1,89 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs,  mathtools, dsfont}
+\usepackage{tabularx}
+\usepackage{tikz-cd}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+%\usepackage{tikz-cd}
+
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Lecture 6: Concentration via Optimal Transport}
+\author{ Tianpei Xie}
+\date{Jan. 24th., 2023 }
+\maketitle
+\tableofcontents
+\newpage
+\section{Optimal Transport Basis}
+\subsection{Optimal Transport Problem and its Dual Problem}
+\subsection{Wasserstein Distance}
+\subsection{Dual Formulation of Wasserstein Distance}
+
+\section{The Transportation Method}
+\subsection{Concentration via Transportation Cost Inequality}
+\begin{itemize}
+\item \begin{remark} (\textbf{\emph{Equivalence of Transportation Cost Inequality and Sub-Gaussian}}) \citep{boucheron2013concentration} \\
+Let $X$ be a real-valued integrable random variable. Let $\phi$ be a \textbf{\emph{convex}} and \textbf{\emph{continuously differentiable}} function on a (possibly unbounded) interval $[0, b)$ and assume that $\phi(0) = \phi'(0) = 0$. Define, for every $x \ge 0$, \textbf{\emph{the Legendre transform}} $\phi^{*}(x) = \sup_{\lambda \in (0,b)}(\lambda x - \phi(\lambda))$, and let, for every $t \ge 0$, $\phi^{*-1}(t) = \inf\{x \ge 0: \phi^{*}(x) > t\}$, i.e. the \textbf{\emph{the generalized inverse}} of $\phi^{*}$. Then the following two statements are equivalent:
+\begin{enumerate}
+\item for every $\lambda \in (0,b)$,
+\begin{align*}
+\psi_{X - \E{}{X}}(\lambda) &\le \phi(\lambda)
+\end{align*} where $\psi_{X}(\lambda):= \log\E{Q}{e^{\lambda X}}$ is the logarithm of moment generating function;
+\item for any probability measure $P$ absolutely continuous with respect to $Q$ such that $\kl{P}{Q} < \infty$,
+\begin{align}
+\E{P}{X} - \E{Q}{X} &\le \phi^{*-1}\paren{\kl{P}{Q}}. \label{ineqn: information_inequality_general}
+\end{align} 
+\end{enumerate}
+In particular, given $\nu > 0$, $X$ follows a \emph{\textbf{sub-Gaussian distribution}}, i.e.
+\begin{align*}
+\psi_{X - \E{}{X}}(\lambda) &\le \frac{\nu\lambda^2}{2}
+\end{align*} for every $\lambda >0$ \textbf{\emph{if and only if}} for any probability measure $P$ absolutely continuous with respect to $Q$ and such that $\kl{P}{Q} < \infty$, 
+\begin{align}
+\E{P}{X} - \E{Q}{X} &\le \sqrt{2\nu\kl{P}{Q}}. \label{ineqn: information_inequality_sub_gaussian}
+\end{align}
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{$d$-Transportation Cost Inequality}}) \citep{wainwright2019high}\\
+Let $(\cX, d)$ be a \emph{metric space} with metric $d$,  and $(\cX, \srB)$ be a \emph{measurable space}, where $\srB$ is \emph{the Borel $\sigma$-algebra} induced by metric $d$, \emph{\textbf{the probability measure}} $\bP$ is said to satisfy a \underline{\emph{\textbf{$d$-transportation cost inequality}}} with parameter $\nu > 0$ if
+\begin{align}
+\E{\bQ}{X} - \E{\bP}{X} &\le \sqrt{2\nu\kl{\bQ}{\bP}}  \label{def: transportation_cost_inequality}
+\end{align} for all probability measure $\bQ \ll \bP$ on $\srB$.
+\end{definition}
+
+\item \begin{theorem} (\textbf{Isoperimetric Inequality via Transportation Cost})\citep{wainwright2019high}\\
+Consider a metric measure space $(\cX, \srB, \bP)$ with metric $d$, and suppose that $\bP$ satisfies the \textbf{$d$-transportation cost inequality} 
+\begin{align*}
+\E{\bQ}{X} - \E{\bP}{X} &\le \sqrt{2\nu\kl{\bQ}{\bP}} 
+\end{align*}  for all probability measure $\bQ \ll \bP$ on $\srB$. Then its \textbf{concentration function} satisfies the bound
+\begin{align}
+\alpha_{\bP, (\cX, d)}(t) &\le 2 \exp\paren{- \frac{t^2}{2 \nu}} \label{ineqn: concentration_function_transport_cost}
+\end{align} Moreover, for any $Z \sim \bP$ and any $L$-Lipschitz function $f : \cX \to \bR$, we have the \textbf{concentration inequality}
+\begin{align}
+\bP\set{\abs{f(Z) - \E{}{f(Z)}} \ge t} &\le 2 \exp\paren{- \frac{t^2}{2 \nu L^2}}.  \label{ineqn: lipschitz_concentration_transport_cost}
+\end{align}
+\end{theorem}
+
+\end{itemize}
+
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{reference.bib}
+\end{document}
