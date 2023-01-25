@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  24 JAN 2023 21:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  24 JAN 2023 22:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -699,90 +699,90 @@ y/m/n/10.95 B\OT1/cmr/m/n/10.95 [\OMS/cmsy/m/n/10.95 X\OT1/cmr/m/n/10.95 ]\OML/
 cmm/m/it/10.95 ; \U/msb/m/n/10.95 P\OT1/cmr/m/n/10.95 )$
  []
 
-[6]
+[6] [7]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
- [7]
-Overfull \hbox (40.09377pt too wide) in paragraph at lines 320--321
+ [8]
+Overfull \hbox (40.09377pt too wide) in paragraph at lines 341--342
 \OT1/cmr/m/n/10.95 Taking $\OML/cmm/m/it/10.95 t \OT1/cmr/m/n/10.95 = \U/dsrom/
 m/n/10.95 E[] [] \OT1/cmr/m/n/10.95 = \U/dsrom/m/n/10.95 E[] []$\OT1/cmr/m/n/10
 .95 , the left-hand side be-comes $\U/msb/m/n/10.95 P [] \OT1/cmr/m/n/10.95 = \
 U/msb/m/n/10.95 P [] \OT1/cmr/m/n/10.95 =
  []
 
-[8] [9] <spherical_cap_blowup.png, id=54, 647.41875pt x 358.33875pt>
+[9] <spherical_cap_blowup.png, id=54, 647.41875pt x 358.33875pt>
 File: spherical_cap_blowup.png Graphic file (type png)
 
 <use spherical_cap_blowup.png>
-Package pdftex.def Info: spherical_cap_blowup.png used on input line 383.
+Package pdftex.def Info: spherical_cap_blowup.png used on input line 404.
 (pdftex.def)             Requested size: 323.70857pt x 179.16893pt.
-
-Overfull \hbox (2.9071pt too wide) in paragraph at lines 419--421
+ [10]
+Overfull \hbox (2.9071pt too wide) in paragraph at lines 440--442
 []\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Isoperimetric In-equal-i-ties for U
 ni-form Dis-tri-bu-tion over Sphere\OT1/cmr/m/it/10.95 )
  []
 
-[10 <./spherical_cap_blowup.png>]
-<spherical_cap_proof.png, id=59, 361.35pt x 422.57875pt>
+<spherical_cap_proof.png, id=58, 361.35pt x 422.57875pt>
 File: spherical_cap_proof.png Graphic file (type png)
 
 <use spherical_cap_proof.png>
-Package pdftex.def Info: spherical_cap_proof.png used on input line 440.
+Package pdftex.def Info: spherical_cap_proof.png used on input line 461.
 (pdftex.def)             Requested size: 144.53743pt x 169.0285pt.
 
-<spherical_cap_proof_2.png, id=60, 387.4475pt x 406.51875pt>
+<spherical_cap_proof_2.png, id=59, 387.4475pt x 406.51875pt>
 File: spherical_cap_proof_2.png Graphic file (type png)
 
 <use spherical_cap_proof_2.png>
-Package pdftex.def Info: spherical_cap_proof_2.png used on input line 444.
+Package pdftex.def Info: spherical_cap_proof_2.png used on input line 465.
 (pdftex.def)             Requested size: 154.97624pt x 162.60461pt.
 
-Overfull \hbox (2.43332pt too wide) in paragraph at lines 438--446
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 459--467
 [][] [] 
  []
 
-[11 <./spherical_cap_proof.png> <./spherical_cap_proof_2.png>] [12]
-Overfull \hbox (11.08607pt too wide) in paragraph at lines 542--544
+[11 <./spherical_cap_blowup.png>] [12 <./spherical_cap_proof.png> <./spherical_
+cap_proof_2.png>] [13]
+Overfull \hbox (11.08607pt too wide) in paragraph at lines 563--565
 []\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Basic Prop-erty of the Gaus-sian Is
 operi-met-ric Func-tion\OT1/cmr/m/it/10.95 ) [Boucheron
  []
 
-[13]
-Overfull \hbox (8.06566pt too wide) in paragraph at lines 579--581
+
+Overfull \hbox (8.06566pt too wide) in paragraph at lines 600--602
 []\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Asymptotic Be-hav-ior of Gaus-sian 
 Isoperi-met-ric Func-tion\OT1/cmr/m/it/10.95 ) [Boucheron
  []
 
 [14]
-Overfull \hbox (3.05324pt too wide) in paragraph at lines 620--622
+Overfull \hbox (3.05324pt too wide) in paragraph at lines 641--643
 []\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Gaussian Con-cen-tra-tion The-o-rem
 \OT1/cmr/m/it/10.95 ) [Boucheron et al., 2013] [Boucheron
  []
 
-[15]
-Overfull \hbox (2.37408pt too wide) in paragraph at lines 669--671
+[15] [16]
+Overfull \hbox (2.37408pt too wide) in paragraph at lines 690--692
 []\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Gaussian Con-cen-tra-tion In-equal-
 ity, Sharp Bound\OT1/cmr/m/it/10.95 ) [Boucheron et al.,
  []
 
-[16]
-Overfull \hbox (8.08324pt too wide) in paragraph at lines 734--736
+[17]
+Overfull \hbox (8.08324pt too wide) in paragraph at lines 755--757
 []\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Concentration of Con-vex Lip-s-chit
 z Func-tions, Im-proved\OT1/cmr/m/it/10.95 ) [Boucheron
  []
 
-[17] [18] (./Ineq_5_Concentration_Isoperimetry.bbl) [19]
+[18] [19] (./Ineq_5_Concentration_Isoperimetry.bbl) [20]
 (./Ineq_5_Concentration_Isoperimetry.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 15952 strings out of 493029
- 316304 string characters out of 6136233
- 368892 words of memory out of 5000000
- 19148 multiletter control sequences out of 15000+600000
+ 15953 strings out of 493029
+ 316344 string characters out of 6136233
+ 369902 words of memory out of 5000000
+ 19149 multiletter control sequences out of 15000+600000
  16724 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,13n,84p,624b,475s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -805,11 +805,11 @@ e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf
 onts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/symbols/msbm10.pfb>
-Output written on Ineq_5_Concentration_Isoperimetry.pdf (19 pages, 418950 bytes
+Output written on Ineq_5_Concentration_Isoperimetry.pdf (20 pages, 421047 bytes
 ).
 PDF statistics:
- 154 PDF objects out of 1000 (max. 8388607)
- 107 compressed objects within 2 object streams
+ 157 PDF objects out of 1000 (max. 8388607)
+ 109 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
