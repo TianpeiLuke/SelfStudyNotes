@@ -240,6 +240,27 @@ Even though the exact solution is only known in a few special cases, useful \emp
 \end{definition}
 Thus the optimal $A^{*}$ for isoperimetry problem is the one that attains the $\alpha(t) = \bP\paren{A_{t}^{c} }$.
 
+\item \begin{example} (\textbf{\emph{Concentration Function of Lebesgue Measure in $\bR^n$ and Isoperimetric Inequality}})\\
+Note that the volume of a \emph{$t$-ball in $\bR^n$} is 
+\begin{align*}
+\text{Vol}(tB) =  \frac{\pi^{\frac{n}{2}}}{\Gamma\paren{\frac{n}{2} + 1}}t^n  \equiv c_n t^n 
+\end{align*}  Thus the radius of ball $B$ with the same volume of $A$ is
+\begin{align*}
+r := \paren{\frac{\text{Vol}(A) }{c_n}}^{\frac{1}{n}}.
+\end{align*} \emph{\textbf{The classical isoperimetric inequality}} states that 
+\begin{align}
+ \text{Vol}(A_t)) &\ge \paren{ (r+  t)\text{Vol}(B)^{1/n}}^{n} \nonumber\\
+ \Leftrightarrow  \text{Vol}(A_t) &\ge c_n\paren{\paren{\frac{\text{Vol}(A) }{c_n}}^{\frac{1}{n}} + t}^n \nonumber \\
+  \Leftrightarrow  \paren{\frac{\text{Vol}(A_t) }{c_n}}^{\frac{1}{n}}  &\ge \paren{\frac{\text{Vol}(A) }{c_n}}^{\frac{1}{n}} + t  \label{ineqn: lebesgure_measure_concentration}
+\end{align} Define  \emph{\textbf{the isoperimetric function}} of \emph{the Lebesgue measure space} $(\bR^n, \mu)$ as
+\begin{align*}
+\lambda(u) := \paren{\frac{u}{c_n}}^{\frac{1}{n}}
+\end{align*} so \emph{the classical isoperimetric inequality}  is equivalent to \emph{the concentration of Lebesgue measure}
+\begin{align*}
+\lambda\paren{\mu(A_t)} &\ge \lambda\paren{\mu(A)} + t. 
+\end{align*}
+\end{example}
+
 \item \begin{theorem} (\textbf{Levy's Inequalities})\citep{boucheron2013concentration, wainwright2019high}\\
 For any Lipschitz function $f: \cX \to \bR$, 
 \begin{align}
