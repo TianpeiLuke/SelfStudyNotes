@@ -103,19 +103,30 @@ Let $\cX, \cY$ be \textbf{complete separable spaces}, and $c: \cX \times \cY \to
 \subsection{Wasserstein Distance}
 \begin{itemize}
 \item \begin{definition} (\textbf{\emph{Wasserstein Distance}}) \\
-Let $((\cX, d), \srB)$ be \emph{a metric measurable space} with \emph{Borel $\sigma$-algebra} induced by metric $d$. Let $X, Y$ be two random variables taking values in $\cX$ with distribution $\bP$ and $\bQ$. \emph{\textbf{The $d$-Wasserstein distance}} between \emph{probability distributions} $\bP$ and $\bQ$ is defined as
+Let $((\cX, d), \srB)$ be \emph{a metric measurable space} with \emph{Borel $\sigma$-algebra} induced by metric $d$. Let $X, Y$ be two random variables taking values in $\cX$ with distribution $\bP$ and $\bQ$. \emph{\textbf{The Wasserstein distance}} between \emph{probability distributions} $\bP$ and $\bQ$ induced by $d$ is defined as
 \begin{align}
-\cW_d(\bP, \bQ) := \min_{X \sim \bP, Y \sim \bQ} \E{}{d(X, Y)} \label{def: wasserstein_dist}
+\cW_1(\bP, \bQ)  \equiv  \cW_d(\bP, \bQ) := \min_{X \sim \bP, Y \sim \bQ} \E{}{d(X, Y)} \label{def: wasserstein_dist}
+\end{align} In general, for $p \in [1, \infty)$, we can define \emph{\textbf{Wasserstein $p$-distance}} as
+\begin{align}
+\cW_p(\bP, \bQ)  \equiv \cW_{p,d}(\bP, \bQ)  := \paren{\min_{X \sim \bP, Y \sim \bQ} \E{}{(d(X, Y))^p}}^{1/p}. \label{def: wasserstein_dist_p_norm}
 \end{align}
 \end{definition}
 
-\item \begin{remark} (\emph{\textbf{$d$-Wasserstein Distance is a Metric in $\cP(\cX)$}}) \\
-The \underline{\textbf{\emph{$d$-Wasserstein distance}}} $\cW_d(\bP, \bQ) := \min_{X \sim \bP, Y \sim \bQ} \E{}{d(X, Y)}$ is a well-defined \emph{metric} in $\cP(\cX)$: for all $\bP, \bQ, \bM \in \cP(\cX)$, 
+\item \begin{remark}
+Not to confuse the \emph{\textbf{$2$-Wasserstein distance}} with \emph{\textbf{the Wasserstein distance induced by $L_2$ norm}}:
+\begin{align*}
+\cW_{\norm{\cdot}{2}}(\bP, \bQ) \equiv  \cW_{1, \norm{\cdot}{2}}(\bP, \bQ)  &:= \min_{X \sim \bP, Y \sim \bQ} \E{}{\norm{X - Y}{2}} \\
+\cW_{2}(\bP, \bQ)   \equiv  \cW_{2, d}(\bP, \bQ)  &:= \sqrt{\min_{X \sim \bP, Y \sim \bQ} \E{}{d(X, Y)^2}} 
+\end{align*} 
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Wasserstein $p$-Distance is a Metric in $\cP(\cX)$}}) \\
+The \underline{\textbf{\emph{Wasserstein $p$-distance}}} $\cW_{p,d}(\bP, \bQ)  := \paren{\min_{X \sim \bP, Y \sim \bQ} \E{}{(d(X, Y))^p}}^{1/p}$ is a well-defined \emph{metric} in $\cP(\cX)$: for all $\bP, \bQ, \bM \in \cP(\cX)$, 
 \begin{enumerate}
-\item (\emph{Non-Negativity}):\; $W_{d}(\bP, \bQ) \ge 0$.
-\item (\emph{Definiteness}):\; $W_{d}(\bP, \bQ) = 0 $ iff $\bP = \bQ$
-\item (\emph{Symmetric}):\; $W_{d}(\bP, \bQ) = W_{d}(\bQ, \bP)$
-\item (\emph{Triangular inequality}): \; $W_{d}(\bP, \bQ)  \le W_{d}(\bP, \bM )  + W_{d}(\bM , \bQ) $
+\item (\emph{Non-Negativity}):\; $\cW_{p,d}(\bP, \bQ) \ge 0$.
+\item (\emph{Definiteness}):\; $\cW_{p,d}(\bP, \bQ) = 0 $ iff $\bP = \bQ$
+\item (\emph{Symmetric}):\; $\cW_{p,d}(\bP, \bQ) = \cW_{p,d}(\bQ, \bP)$
+\item (\emph{Triangular inequality}): \; $\cW_{p,d}(\bP, \bQ)  \le \cW_{p,d}(\bP, \bM )  + \cW_{p,d}(\bM , \bQ) $
 \end{enumerate}
 \end{remark}
 
@@ -133,24 +144,28 @@ On a compact domain $\cX$ , $(\alpha_k)_k$ converges \textbf{\textit{weakly}} to
 
 This notion of weak convergence corresponds to the \textbf{convergence in the distribution} of random vectors. Note the any random variable $X_{n}$ is a continous function on $\Omega$, and its distribution is the push-forward measure $\alpha_{n} = X_{n\#}\bP$. Therefore, $\alpha_{n}  \rightharpoonup \alpha$  is equivalent to $X_{n}\stackrel{d}{\rightarrow} X$. This convergence can be shown (see \citep{villani2009optimal, santambrogio2015optimal}) to be equivalent to 
 \begin{align*}
-\alpha_{n} \rightharpoonup \alpha \;\; \Leftrightarrow \;\;\cW_{d}(\alpha_{n}, \alpha) \rightarrow 0.
+\alpha_{n} \rightharpoonup \alpha \;\; \Leftrightarrow \;\;\cW_{p}(\alpha_{n}, \alpha) \rightarrow 0.
 \end{align*}
 Thus we can also write the weak convergance as $\alpha_{n}\stackrel{\cW_{d}}{\longrightarrow} \alpha$.
 \end{remark}
 \end{itemize}
 \subsection{Dual Formulation of Wasserstein Distance}
 \begin{itemize}
-\item \begin{theorem} (\textbf{Kantorovich-Rubenstein duality}) \citep{villani2009optimal}\\
-Let $\cX$ be a \textbf{Polish space}, i.e. $\cX$ a complete separable metric space equipped with a Borel $\sigma$-algebra induced by metric $d$, and $\bP$ and $\bQ$ be probability measures on $\cX$. Let $Lip_1$ be the space of all 
+\item \begin{theorem} (\textbf{Kantorovich-Rubenstein Duality}) \citep{villani2009optimal}\\
+Let $\cX$ be a \textbf{Polish space}, i.e. $\cX$ a complete separable metric space equipped with a Borel $\sigma$-algebra induced by metric $d$, and $\bP$ and $\bQ$ be probability measures on $\cX$. For fixed $p \in [1, \infty)$, let $Lip_1$ be the space of all 
 $1$-\textbf{Lipschitz} function with respect to metric $d$  such that
 \begin{align*}
 \norm{f}{L}  := \sup_{x, y \in \cX}\set{\frac{\abs{f(x) - f(y)}}{d(x, y)}} \le 1.
 \end{align*}
 Then 
 \begin{align}
-\cW_{d}(\bP, \bQ) &= \sup_{f \in Lip_1}\set{\E{\bP}{f(X)} - \E{\bQ}{f(Y)}}. \label{eqn: wass_dist_dual}
+\cW_{d}(\bP, \bQ) \equiv \cW_{1,d}(\bP, \bQ) &= \sup_{f \in Lip_1}\set{\E{\bP}{f(X)} - \E{\bQ}{f(Y)}}. \label{eqn: wass_dist_dual}
 \end{align} 
 \end{theorem}
+
+\item \begin{remark}
+This theorem only applies for \emph{Wasserstein $1$-distance}, i.e. $p = 1$.
+\end{remark}
 
 \item \begin{example} (\textbf{\emph{Total Variation as $\cW_d$ with respect to Hamming distance $d_H$}})\\
 When $d(x ,y) = \sum_i \ind{x_i \neq y_i} = d_H(x, y)$ Hamming distance, the $\cW_d$ becomes
@@ -159,7 +174,7 @@ When $d(x ,y) = \sum_i \ind{x_i \neq y_i} = d_H(x, y)$ Hamming distance, the $\c
 \end{align*}
 \end{example}
 
-\item \begin{example} (\textbf{\emph{$\cW_1$ with respect to $L_1$ Norm}}) \\
+\item \begin{example} (\textbf{\emph{$\cW_1$ in $1$-dimensional space $\bR$}}) \\
 When $d(x, y) = \abs{x - y}$ in $\bR$, and $F_{\alpha}, F_{\beta}$ are cumulative distribution function  of $\alpha, \beta$,    then $\cW_1$ distance becomes
 \begin{align*}
 \cW_{1}(\alpha, \beta) &=  \norm{F_{\alpha} - F_{\beta}}{1} := \int_{-\infty}^{\infty}\norm{F_{\alpha}(x) - F_{\beta}(x)}{1} dx \\
