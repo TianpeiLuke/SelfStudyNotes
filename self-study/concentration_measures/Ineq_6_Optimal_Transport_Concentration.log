@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  24 JAN 2023 20:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  24 JAN 2023 20:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Ineq_5_Concentration_Isoperimetry.tex
-(./Ineq_5_Concentration_Isoperimetry.tex
+**Ineq_6_Optimal_Transport_Concentration.tex
+(./Ineq_6_Optimal_Transport_Concentration.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -536,12 +536,8 @@ LaTeX Info: Redefining \cite on input line 694.
 )
 (../../Tianpei_Report.sty
 \c@theorem=\count129
-) (./Ineq_5_Concentration_Isoperimetry.aux
-
-LaTeX Warning: Label `fig: spherical_cap_blowup' multiply defined.
-
-)
-\openout1 = `Ineq_5_Concentration_Isoperimetry.aux'.
+) (./Ineq_6_Optimal_Transport_Concentration.aux)
+\openout1 = `Ineq_6_Optimal_Transport_Concentration.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
 LaTeX Font Info:    ... okay on input line 28.
@@ -665,151 +661,67 @@ LaTeX Font Info:    Try loading font information for U+rsfs on input line 32.
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-(./Ineq_5_Concentration_Isoperimetry.toc)
+(./Ineq_6_Optimal_Transport_Concentration.toc)
 \tf@toc=\write4
-\openout4 = `Ineq_5_Concentration_Isoperimetry.toc'.
+\openout4 = `Ineq_6_Optimal_Transport_Concentration.toc'.
 
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 38.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 43.
  (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 38.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 43.
 
-[2] [3]
-LaTeX Font Info:    Try loading font information for U+dsrom on input line 126.
+Overfull \hbox (23.50636pt too wide) in paragraph at lines 43--45
+[]\OT1/cmr/m/n/10.95 (\OT1/cmr/bx/it/10.95 Equivalence of Trans-porta-tion Cost
+ In-equal-ity and Sub-Gaussian\OT1/cmr/m/n/10.95 ) [Boucheron
+ []
 
- (/usr/share/texlive/texmf-dist/tex/latex/doublestroke/Udsrom.fd
+LaTeX Font Info:    Try loading font information for U+dsrom on input line 49.
+(/usr/share/texlive/texmf-dist/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 )
-[4] <isoperimetry_rn.png, id=36, 769.87625pt x 288.07625pt>
-File: isoperimetry_rn.png Graphic file (type png)
-
-<use isoperimetry_rn.png>
-Package pdftex.def Info: isoperimetry_rn.png used on input line 175.
-(pdftex.def)             Requested size: 307.94504pt x 115.22844pt.
- [5 <./isoperimetry_rn.png>]
-Overfull \hbox (10.3388pt too wide) in paragraph at lines 209--210
-[]\OT1/cmr/m/n/10.95 We can gen-er-al-ize the clas-si-cal isoperimety prob-lem 
-to a prob-a-bil-ity space $(\OMS/cmsy/m/n/10.95 X\OML/cmm/m/it/10.95 ; \OMS/cms
-y/m/n/10.95 B\OT1/cmr/m/n/10.95 [\OMS/cmsy/m/n/10.95 X\OT1/cmr/m/n/10.95 ]\OML/
-cmm/m/it/10.95 ; \U/msb/m/n/10.95 P\OT1/cmr/m/n/10.95 )$
+Overfull \hbox (23.6616pt too wide) in paragraph at lines 50--51
+[]\OT1/cmr/m/n/10.95 for any prob-a-bil-ity mea-sure $\OML/cmm/m/it/10.95 P$ \O
+T1/cmr/m/n/10.95 ab-so-lutely con-tin-u-ous with re-spect to $\OML/cmm/m/it/10.
+95 Q$ \OT1/cmr/m/n/10.95 such that $[] [] \OML/cmm/m/it/10.95 <
  []
 
-[6]
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no “ in font cmr10!
- [7]
-Overfull \hbox (40.09377pt too wide) in paragraph at lines 320--321
-\OT1/cmr/m/n/10.95 Taking $\OML/cmm/m/it/10.95 t \OT1/cmr/m/n/10.95 = \U/dsrom/
-m/n/10.95 E[] [] \OT1/cmr/m/n/10.95 = \U/dsrom/m/n/10.95 E[] []$\OT1/cmr/m/n/10
-.95 , the left-hand side be-comes $\U/msb/m/n/10.95 P [] \OT1/cmr/m/n/10.95 = \
-U/msb/m/n/10.95 P [] \OT1/cmr/m/n/10.95 =
- []
-
-[8] [9] <spherical_cap_blowup.png, id=54, 647.41875pt x 358.33875pt>
-File: spherical_cap_blowup.png Graphic file (type png)
-
-<use spherical_cap_blowup.png>
-Package pdftex.def Info: spherical_cap_blowup.png used on input line 383.
-(pdftex.def)             Requested size: 323.70857pt x 179.16893pt.
-
-Overfull \hbox (2.9071pt too wide) in paragraph at lines 419--421
-[]\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Isoperimetric In-equal-i-ties for U
-ni-form Dis-tri-bu-tion over Sphere\OT1/cmr/m/it/10.95 )
- []
-
-[10 <./spherical_cap_blowup.png>]
-<spherical_cap_proof.png, id=59, 361.35pt x 422.57875pt>
-File: spherical_cap_proof.png Graphic file (type png)
-
-<use spherical_cap_proof.png>
-Package pdftex.def Info: spherical_cap_proof.png used on input line 440.
-(pdftex.def)             Requested size: 144.53743pt x 169.0285pt.
-
-<spherical_cap_proof_2.png, id=60, 387.4475pt x 406.51875pt>
-File: spherical_cap_proof_2.png Graphic file (type png)
-
-<use spherical_cap_proof_2.png>
-Package pdftex.def Info: spherical_cap_proof_2.png used on input line 444.
-(pdftex.def)             Requested size: 154.97624pt x 162.60461pt.
-
-Overfull \hbox (2.43332pt too wide) in paragraph at lines 438--446
-[][] [] 
- []
-
-[11 <./spherical_cap_proof.png> <./spherical_cap_proof_2.png>] [12]
-Overfull \hbox (11.08607pt too wide) in paragraph at lines 542--544
-[]\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Basic Prop-erty of the Gaus-sian Is
-operi-met-ric Func-tion\OT1/cmr/m/it/10.95 ) [Boucheron
- []
-
-[13]
-Overfull \hbox (8.06566pt too wide) in paragraph at lines 579--581
-[]\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Asymptotic Be-hav-ior of Gaus-sian 
-Isoperi-met-ric Func-tion\OT1/cmr/m/it/10.95 ) [Boucheron
- []
-
-[14]
-Overfull \hbox (3.05324pt too wide) in paragraph at lines 620--622
-[]\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Gaussian Con-cen-tra-tion The-o-rem
-\OT1/cmr/m/it/10.95 ) [Boucheron et al., 2013] [Boucheron
- []
-
-[15]
-Overfull \hbox (2.37408pt too wide) in paragraph at lines 669--671
-[]\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Gaussian Con-cen-tra-tion In-equal-
-ity, Sharp Bound\OT1/cmr/m/it/10.95 ) [Boucheron et al.,
- []
-
-[16]
-Overfull \hbox (8.08324pt too wide) in paragraph at lines 734--736
-[]\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Concentration of Con-vex Lip-s-chit
-z Func-tions, Im-proved\OT1/cmr/m/it/10.95 ) [Boucheron
- []
-
-[17] [18] (./Ineq_5_Concentration_Isoperimetry.bbl) [19]
-(./Ineq_5_Concentration_Isoperimetry.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+[2] [3] (./Ineq_6_Optimal_Transport_Concentration.bbl) [4]
+(./Ineq_6_Optimal_Transport_Concentration.aux) ) 
 Here is how much of TeX's memory you used:
- 15952 strings out of 493029
- 316304 string characters out of 6136233
- 368892 words of memory out of 5000000
- 19148 multiletter control sequences out of 15000+600000
- 16724 words of font info for 68 fonts, out of 8000000 for 9000
+ 15879 strings out of 493029
+ 314701 string characters out of 6136233
+ 364633 words of memory out of 5000000
+ 19089 multiletter control sequences out of 15000+600000
+ 13004 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,13n,84p,624b,475s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/symbols/msbm10.pfb>
-Output written on Ineq_5_Concentration_Isoperimetry.pdf (19 pages, 418882 bytes
-).
+ 61i,11n,84p,632b,336s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
+0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/doublestroke/dsrom8.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/rsfs/rsfs10.pfb>
+Output written on Ineq_6_Optimal_Transport_Concentration.pdf (4 pages, 168616 b
+ytes).
 PDF statistics:
- 154 PDF objects out of 1000 (max. 8388607)
- 107 compressed objects within 2 object streams
+ 88 PDF objects out of 1000 (max. 8388607)
+ 64 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

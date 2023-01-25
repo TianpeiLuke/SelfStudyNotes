@@ -3,8 +3,8 @@
 \contentsline {subsection}{\numberline {1.2}The Blowup of Sets and Classical Isoperimetry Theorem}{5}
 \contentsline {section}{\numberline {2}Concentration via Isoperimetry}{6}
 \contentsline {subsection}{\numberline {2.1}Levy's Inequalities}{6}
-\contentsline {subsection}{\numberline {2.2}Isoperimetric Inequalities on the Unit Sphere}{9}
-\contentsline {subsection}{\numberline {2.3}Gaussian Isoperimetric Inequalities and Concentration of Gaussian Measure}{12}
-\contentsline {subsection}{\numberline {2.4}Edge Isoperimetric Inequality on the Binary Hypercube}{12}
-\contentsline {subsection}{\numberline {2.5}Vertex Isoperimetric Inequality on the Binary Hypercube}{12}
-\contentsline {subsection}{\numberline {2.6}Convex Distance Inequality}{12}
+\contentsline {subsection}{\numberline {2.2}Isoperimetric Inequalities on the Unit Sphere}{10}
+\contentsline {subsection}{\numberline {2.3}Gaussian Isoperimetric Inequalities and Concentration of Gaussian Measure}{13}
+\contentsline {subsection}{\numberline {2.4}Convex Distance Inequality}{17}
+\contentsline {subsection}{\numberline {2.5}Edge Isoperimetric Inequality on the Binary Hypercube}{18}
+\contentsline {subsection}{\numberline {2.6}Vertex Isoperimetric Inequality on the Binary Hypercube}{18}
