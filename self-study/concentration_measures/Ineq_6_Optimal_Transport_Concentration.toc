@@ -1,12 +1,12 @@
 \contentsline {section}{\numberline {1}Optimal Transport Basis}{2}
 \contentsline {subsection}{\numberline {1.1}Optimal Transport Problem and its Dual Problem}{2}
 \contentsline {subsection}{\numberline {1.2}Wasserstein Distance}{3}
-\contentsline {subsection}{\numberline {1.3}Dual Formulation of Wasserstein Distance}{4}
+\contentsline {subsection}{\numberline {1.3}Dual Formulation of Wasserstein Distance}{5}
 \contentsline {section}{\numberline {2}The Transportation Method}{5}
 \contentsline {subsection}{\numberline {2.1}Concentration via Transportation Cost Inequality}{5}
-\contentsline {subsection}{\numberline {2.2}Tensorization for Transportation Cost}{6}
-\contentsline {subsection}{\numberline {2.3}Bounded Difference Inequality via Transportation Methods}{6}
-\contentsline {subsection}{\numberline {2.4}Conditional Transportation Inequality}{6}
-\contentsline {subsection}{\numberline {2.5}Convex Distance Inequality via Conditional Transportation Cost}{6}
-\contentsline {subsection}{\numberline {2.6}Talagrand's Gaussian Transportation Inequality}{6}
-\contentsline {subsection}{\numberline {2.7}Transportation Cost Inequalities for Markov Chains}{6}
+\contentsline {subsection}{\numberline {2.2}Tensorization for Transportation Cost}{7}
+\contentsline {subsection}{\numberline {2.3}Bounded Difference Inequality via Transportation Methods}{7}
+\contentsline {subsection}{\numberline {2.4}Conditional Transportation Inequality}{7}
+\contentsline {subsection}{\numberline {2.5}Convex Distance Inequality via Conditional Transportation Cost}{7}
+\contentsline {subsection}{\numberline {2.6}Talagrand's Gaussian Transportation Inequality}{7}
+\contentsline {subsection}{\numberline {2.7}Transportation Cost Inequalities for Markov Chains}{7}

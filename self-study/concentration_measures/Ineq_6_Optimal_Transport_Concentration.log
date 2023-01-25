@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  25 JAN 2023 11:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  25 JAN 2023 12:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -694,36 +694,42 @@ em\OT1/cmr/m/n/10.95 ) [Vil-lani, 2009, San-tam-bro-gio, 2015,
  []
 
 [3]
+Overfull \hbox (4.34706pt too wide) in paragraph at lines 123--125
+\OT1/cmr/m/n/10.95 The $[]$ $\OMS/cmsy/m/n/10.95 W[]\OT1/cmr/m/n/10.95 (\U/msb/
+m/n/10.95 P\OML/cmm/m/it/10.95 ; \U/msb/m/n/10.95 Q\OT1/cmr/m/n/10.95 ) := [][]
+$ is a well-defined
+ []
+
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no © in font cmr10!
- [4]
-Overfull \hbox (23.50636pt too wide) in paragraph at lines 177--179
+[4]
+Overfull \hbox (23.50636pt too wide) in paragraph at lines 192--194
 []\OT1/cmr/m/n/10.95 (\OT1/cmr/bx/it/10.95 Equivalence of Trans-porta-tion Cost
  In-equal-ity and Sub-Gaussian\OT1/cmr/m/n/10.95 ) [Boucheron
  []
 
-
-Overfull \hbox (23.6616pt too wide) in paragraph at lines 184--185
+[5]
+Overfull \hbox (23.6616pt too wide) in paragraph at lines 199--200
 []\OT1/cmr/m/n/10.95 for any prob-a-bil-ity mea-sure $\OML/cmm/m/it/10.95 P$ \O
 T1/cmr/m/n/10.95 ab-so-lutely con-tin-u-ous with re-spect to $\OML/cmm/m/it/10.
 95 Q$ \OT1/cmr/m/n/10.95 such that $[] [] \OML/cmm/m/it/10.95 <
  []
 
-[5] [6] (./Ineq_6_Optimal_Transport_Concentration.bbl
+[6] [7] (./Ineq_6_Optimal_Transport_Concentration.bbl
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no © in font cmr10!
 Missing character: There is no Â in font cmti10!
 Missing character: There is no ® in font cmti10!
-) [7]
+) [8]
 (./Ineq_6_Optimal_Transport_Concentration.aux) ) 
 Here is how much of TeX's memory you used:
- 15909 strings out of 493029
- 315278 string characters out of 6136233
- 366767 words of memory out of 5000000
- 19111 multiletter control sequences out of 15000+600000
+ 15910 strings out of 493029
+ 315308 string characters out of 6136233
+ 365776 words of memory out of 5000000
+ 19112 multiletter control sequences out of 15000+600000
  15466 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,13n,84p,713b,293s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,13n,84p,713b,302s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
@@ -744,11 +750,11 @@ estroke/dsrom10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestr
 oke/dsrom8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbo
 ls/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb
 >
-Output written on Ineq_6_Optimal_Transport_Concentration.pdf (7 pages, 235244 b
+Output written on Ineq_6_Optimal_Transport_Concentration.pdf (8 pages, 236462 b
 ytes).
 PDF statistics:
- 111 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
+ 114 PDF objects out of 1000 (max. 8388607)
+ 83 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
