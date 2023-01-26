@@ -168,9 +168,11 @@ This theorem only applies for \emph{Wasserstein $1$-distance}, i.e. $p = 1$.
 \end{remark}
 
 \item \begin{example} (\textbf{\emph{Total Variation as $\cW_d$ with respect to Hamming distance $d_H$}})\\
-When $d(x ,y) = \sum_i \ind{x_i \neq y_i} = d_H(x, y)$ Hamming distance, the $\cW_d$ becomes
+When $d(x ,y) = \sum_i \ind{x_i \neq y_i} = d_H(x, y)$ Hamming distance, the $\cW_{1, d}$ becomes
 \begin{align*}
-\cW_{d_H}(\bP, \bQ) &= \sup_{f: \cX \to [0, 1]}\int_{\cX} f \paren{d\bP - d\bQ} = \sup_{A \subset \cX}\abs{\bP(A) - \bQ(A)} := \norm{\bP - \bQ}{TV}
+\cW_{1, d_H}(\bP, \bQ) &= \min_{\gamma \in \Pi(\bP,\bQ)}\gamma\set{X \neq Y } \\
+&= \sup_{f: \cX \to [0, 1]}\int_{\cX} f \paren{d\bP - d\bQ}\\
+& = \sup_{A \subset \cX}\abs{\bP(A) - \bQ(A)} := \norm{\bP - \bQ}{TV}
 \end{align*}
 \end{example}
 
@@ -189,54 +191,211 @@ T = F_{\beta}^{-1} \circ  F_{\alpha}
 \section{The Transportation Method}
 \subsection{Concentration via Transportation Cost Inequality}
 \begin{itemize}
-\item \begin{remark} (\textbf{\emph{Equivalence of Transportation Cost Inequality and Sub-Gaussian}}) \citep{boucheron2013concentration} \\
+\item \begin{lemma} (\textbf{\emph{Transportation Lemma}}) \citep{boucheron2013concentration} \\
 Let $X$ be a real-valued integrable random variable. Let $\phi$ be a \textbf{\emph{convex}} and \textbf{\emph{continuously differentiable}} function on a (possibly unbounded) interval $[0, b)$ and assume that $\phi(0) = \phi'(0) = 0$. Define, for every $x \ge 0$, \textbf{\emph{the Legendre transform}} $\phi^{*}(x) = \sup_{\lambda \in (0,b)}(\lambda x - \phi(\lambda))$, and let, for every $t \ge 0$, $\phi^{*-1}(t) = \inf\{x \ge 0: \phi^{*}(x) > t\}$, i.e. the \textbf{\emph{the generalized inverse}} of $\phi^{*}$. Then the following two statements are equivalent:
 \begin{enumerate}
 \item for every $\lambda \in (0,b)$,
 \begin{align*}
 \psi_{X - \E{}{X}}(\lambda) &\le \phi(\lambda)
-\end{align*} where $\psi_{X}(\lambda):= \log\E{Q}{e^{\lambda X}}$ is the logarithm of moment generating function;
-\item for any probability measure $P$ absolutely continuous with respect to $Q$ such that $\kl{P}{Q} < \infty$,
+\end{align*} where $\psi_{X}(\lambda):= \log\E{\bP}{e^{\lambda X}}$ is the logarithm of moment generating function;
+\item for any probability measure $\bQ$ absolutely continuous with respect to $\bP$ such that $\kl{\bQ}{\bP} < \infty$,
 \begin{align}
-\E{P}{X} - \E{Q}{X} &\le \phi^{*-1}\paren{\kl{P}{Q}}. \label{ineqn: information_inequality_general}
+\E{\bQ}{X} - \E{\bP}{X} &\le \phi^{*-1}\paren{\kl{\bQ}{\bP}}. \label{ineqn: information_inequality_general}
 \end{align} 
 \end{enumerate}
 In particular, given $\nu > 0$, $X$ follows a \emph{\textbf{sub-Gaussian distribution}}, i.e.
 \begin{align*}
 \psi_{X - \E{}{X}}(\lambda) &\le \frac{\nu\lambda^2}{2}
-\end{align*} for every $\lambda >0$ \textbf{\emph{if and only if}} for any probability measure $P$ absolutely continuous with respect to $Q$ and such that $\kl{P}{Q} < \infty$, 
+\end{align*} for every $\lambda >0$ \textbf{\emph{if and only if}} for any probability measure $\bQ$ absolutely continuous with respect to $\bP$ such that $\kl{\bQ}{\bP} < \infty$, 
 \begin{align}
-\E{P}{X} - \E{Q}{X} &\le \sqrt{2\nu\kl{P}{Q}}. \label{ineqn: information_inequality_sub_gaussian}
+\E{\bQ}{X} - \E{\bP}{X} &\le \sqrt{2\nu\kl{\bQ}{\bP}}. \label{ineqn: information_inequality_sub_gaussian}
 \end{align}
+\end{lemma}
+
+\item \begin{remark} (\textbf{\emph{Concentration via Transportation Methods}})\\ 
+Let $\bP = \otimes_{i=1}^{n}\bP_i$ be the product measure for $Z := (Z_1 \xdotx{,} Z_n)$ on $\cX^n$ and $f: \cX^n  \to \bR$ be \emph{$1$-Lipschitz function}.  Consider a probability measure $\bQ$ on $\cX^n$, absolutely continuous with respect to $\bP$ and let $Y$ be a random variable (defined on the same probability space as $\cX$) such that $Y$ has distribution $\bQ$.
+
+The lemma above suggests that one may prove \emph{sub-Gaussian concentration inequalities} for $X = f(Z_1 \xdotx{,} Z_n)$ by proving a ``\emph{transportation}" \emph{inequality} as above. The key to achieving this relies on \emph{coupling}. In particular, \emph{the Kantorovich-Rubenstein duality} for $\cW_{1,d}$  suggests that 
+\begin{align*}
+\E{\bQ}{f(Y)} - \E{\bP}{f(Z)} \le \min_{\gamma \in \Pi (\bQ, \bP)} \E{\gamma}{d(Y, Z)} := \cW_{1,d}( \bQ, \bP)
+\end{align*} Thus, it suffices to \emph{upper bound} the \emph{$1$-Wasserstein distance} between $\bQ$ and $\bP$.
 \end{remark}
 
 \item \begin{definition} (\emph{\textbf{$d$-Transportation Cost Inequality}}) \citep{wainwright2019high}\\
 Let $(\cX, d)$ be a \emph{metric space} with metric $d$,  and $(\cX, \srB)$ be a \emph{measurable space}, where $\srB$ is \emph{the Borel $\sigma$-algebra} induced by metric $d$, \emph{\textbf{the probability measure}} $\bP$ is said to satisfy a \underline{\emph{\textbf{$d$-transportation cost inequality}}} with parameter $\nu > 0$ if
 \begin{align}
-\E{\bQ}{X} - \E{\bP}{X} &\le \sqrt{2\nu\kl{\bQ}{\bP}}  \label{def: transportation_cost_inequality}
+\cW_{1,d}( \bQ, \bP) &\le \sqrt{2\nu\kl{\bQ}{\bP}}  \label{def: transportation_cost_inequality}
 \end{align} for all probability measure $\bQ \ll \bP$ on $\srB$.
 \end{definition}
 
+
 \item \begin{theorem} (\textbf{Isoperimetric Inequality via Transportation Cost})\citep{wainwright2019high}\\
-Consider a metric measure space $(\cX, \srB, \bP)$ with metric $d$, and suppose that $\bP$ satisfies the \textbf{$d$-transportation cost inequality} 
-\begin{align*}
-\E{\bQ}{X} - \E{\bP}{X} &\le \sqrt{2\nu\kl{\bQ}{\bP}} 
-\end{align*}  for all probability measure $\bQ \ll \bP$ on $\srB$. Then its \textbf{concentration function} satisfies the bound
+Consider a metric measure space $(\cX, \srB, \bP)$ with metric $d$, and suppose that $\bP$ satisfies the \textbf{$d$-transportation cost inequality} with parameter $\nu/2 >0$ in \eqref{def: transportation_cost_inequality} Then its \textbf{concentration function} satisfies the bound
 \begin{align}
-\alpha_{\bP, (\cX, d)}(t) &\le 2 \exp\paren{- \frac{t^2}{2 \nu}} \label{ineqn: concentration_function_transport_cost}
-\end{align} Moreover, for any $Z \sim \bP$ and any $L$-Lipschitz function $f : \cX \to \bR$, we have the \textbf{concentration inequality}
+\alpha_{\bP, (\cX, d)}(t) &\le  \exp\paren{- \frac{(t -t_0)_{+}^2}{2 \nu}}, \text{ for }t  \ge t_0 \label{ineqn: concentration_function_transport_cost}
+\end{align} where $t_0 := \sqrt{2\nu \log 2}$.  Moreover, for any $Z \sim \bP$ and any $L$-Lipschitz function $f : \cX \to \bR$, we have the \textbf{concentration inequality}
 \begin{align}
 \bP\set{\abs{f(Z) - \E{}{f(Z)}} \ge t} &\le 2 \exp\paren{- \frac{t^2}{2 \nu L^2}}.  \label{ineqn: lipschitz_concentration_transport_cost}
 \end{align}
 \end{theorem}
+\begin{proof}
+We begin by proving the bound \eqref{ineqn: concentration_function_transport_cost}. For any set $A$ with $\bP(A) \ge 1/2$ and a given $t> 0$, consider the set
+\begin{align*}
+A_t^c = \set{x \in \cX: d(x, A) \ge t}.
+\end{align*} If $\bP(A_t) = 1$, then the proof is complete, so that we may assume that $P(A_t^c) > 0$. By construction, we have $d(A, A_t^c) := \inf_{x\in A_t^c} \inf_{y \in A}d(x, y) \ge t$. On the other hand, let $\bP_A := \bP(\cdot | A)$ and $\bP_{A_t} := \bP(\cdot| A_t^c)$ denote the distributions of $\bP$ conditioned on $A$ and $A_t^c$, and let $\gamma$ denote any \emph{coupling} of this pair. Since the marginals of $\gamma$ are supported on $A$ and $A_t^c$, respectively, we have
+\begin{align*}
+d(A, A_t^c) &\le \int_{\cX \times \cX} d(x, x') d\gamma(x, x').
+\end{align*} Taking the \emph{infimum} over all \emph{couplings}, we conclude that
+\begin{align*}
+t \le d(A, A_t^c)\le \inf_{\gamma \in \Pi(\bP_A, \bP_{A_t^c})}\int_{\cX \times \cX} d(x, x') d\gamma(x, x') := \cW_{1, d}(\bP_A, \bP_{A_t^c})
+\end{align*} Now applying the triangle inequality, we have
+\begin{align*}
+t \le  \cW_{1, d}(\bP_A, \bP_{A_t^c}) &\le  \cW_{1, d}(\bP_A, \bP) + \cW_{1, d}(\bP, \bP_{A_t^c}) \\
+&\le \sqrt{2\nu \kl{\bP_A}{\bP}} + \sqrt{2\nu \kl{\bP_{A_t^c}}{\bP}} %\\
+%&\le \sqrt{2\nu} \paren{ \kl{\bP_A}{\bP} + \kl{\bP_{A_t^c}}{\bP}}^{1/2}
+\end{align*} %The last inequality follows $(a + b)^2 \le 2a^2 + 2b^2 $. 
+It remains to compute the \emph{Kullback-Leibler divergences}. For any measurable set $C$, we
+have 
+\begin{align*}
+\bP_A(C) &= \frac{\bP(C \cap A)}{\bP(A)}\\
+g = \frac{d\bP_A }{d\bP} &= \frac{1}{\bP(A)}\ind{A}\\
+\kl{\bP_A}{\bP} &= \int \log \paren{\frac{d\bP_A }{d\bP}}d\bP_A  =  \log \frac{1}{\bP(A)}
+\end{align*}
+Similarly, we have $\kl{\bP_{A_t^c}}{\bP} = \log \frac{1}{\bP(A_t^c)}$. Combining the pieces, we have
+\begin{align*}
+t \le \cW_{1, d}(\bP_A, \bP_{A_t^c}) &\le \sqrt{2\nu  \log \frac{1}{\bP(A)}} + \sqrt{2\nu  \log \frac{1}{\bP(A_t^c)}} 
+%\\
+%& \le  \sqrt{2\nu  \log 2} + \sqrt{2\nu  \log \frac{1}{\bP(A_t^c)}} \quad \text{since }\bP(A) \ge 1/2\\
+%\Rightarrow  \bP(A_t^c) &\le  \exp\paren{- \frac{\paren{t -t_0}_{+}^2}{2\nu} } , \text{ for }t \ge t_0 = \sqrt{2\nu  \log 2} %\exp\paren{-\frac{(t -  \sqrt{2\nu  \log 2})_{+}^2}{2\nu}}, \text{ for }t > \sqrt{2\nu  \log 2} \\
+\end{align*} 
+Denote $u = \sqrt{2\nu  \log \frac{1}{\bP(A)}}$, we have 
+\begin{align*}
+\paren{t - u}_{+} &\le \sqrt{2\nu  \log \frac{1}{\bP(A_t^c)}} \\
+\bP(A_t^c) &\le \exp\paren{- \frac{\paren{t - u}_{+}^2}{2\nu} } , \text{ for }t \ge u.
+\end{align*} Since $\bP(A) \ge 1/2$ so $u \le \sqrt{2\nu \log 2}$. Thus for $t \ge \sqrt{2\nu  \log 2}$, the concentration function
+\begin{align*}
+\alpha_{\bP, (\cX, d)}(t)  = \sup_{A\subset\cX: \bP(A) \ge 1/2}\bP(A_t^c) \le \exp\paren{- \frac{\paren{t - \sqrt{2\nu  \log 2}}_{+}^2}{2\nu} },
+\end{align*} which proves \eqref{ineqn: concentration_function_transport_cost}.
+
+
+%we conclude that
+%\begin{align*}
+%t^2 \le 2\nu \paren{ \log \frac{1}{\bP(A)} +  \log \frac{1}{\bP(A_t^c)}} = 2\nu \log \frac{1}{\bP(A)\bP(A_t^c)} \\
+%\bP(A)\bP(A_t^c) \le \exp\paren{- \frac{t^2}{2\nu}}
+%\end{align*} Since $\bP(A) \ge 1/2$, we conclude that 
+%\begin{align*}
+%\alpha_{\bP, (\cX, d)}(t)  = \sup_{A\subset\cX: \bP(A) \ge 1/2}\bP(A_t^c) \le 2 \exp\paren{- \frac{t^2}{2\nu}}.
+%\end{align*} Thus proves \eqref{ineqn: concentration_function_transport_cost}.
+
+To show \eqref{ineqn: lipschitz_concentration_transport_cost}, we see that for $L$-Lipschitz function:
+\begin{align*}
+\E{\bQ}{f(Y)} - \E{\bP}{f(Z)} \le L\min_{\gamma \in \Pi (\bQ, \bP)} \E{\gamma}{d(Y, Z)} = L \;\cW(\bQ, \bP) \le \sqrt{2 L^2 \nu \kl{\bQ}{\bP}}
+\end{align*} where the first inequality follows \emph{the Kantorovich-Rubenstein duality} and the second inequality follows the assumption. By \emph{the transportation lemma}, 
+\begin{align*}
+\psi_{f(Z) - \E{}{f(Z)}}(\lambda) = \E{\bP}{e^{\lambda \paren{f(Z) - \E{}{f(Z)}}}} &\le \frac{\nu L^2 \lambda^2}{2}
+\end{align*} The upper tail bound thus follows by the Chernoff bound. The same argument can be applied to  $-f$ , which yields the lower tail bound. \qed
+\end{proof}
 
 \end{itemize}
 \subsection{Tensorization for Transportation Cost}
-\subsection{Bounded Difference Inequality via Transportation Methods}
-\subsection{Conditional Transportation Inequality}
-\subsection{Convex Distance Inequality via Conditional Transportation Cost}
+\begin{itemize}
+\item \begin{proposition} (\textbf{Tensorization for Transportation Cost}) \citep{boucheron2013concentration}\\
+Suppose that, for each $k = 1, 2 \xdotx{,} n$, the univariate distribution $\bP_k$ satisfies a \textbf{$d_k$-transportation cost inequality} with parameter $\nu_k$. Then \textbf{the product distribution} $\bP = \otimes_{k=1}^n \bP_k$ satisfies the transportation cost inequality
+\begin{align}
+\cW_{1, d}(\bQ, \bP) &= \sqrt{2\paren{\sum_{k=1}^n \nu_k} \kl{\bQ}{\bP}}, \quad \text{ for all distributions $\bQ \ll \bP$ } \label{ineqn: tensorization_transport_cost}
+\end{align}  where the Wasserstein metric is defined using the distance $d(x, y) :=  \sum_{k=1}^{n}d_k(x_k, y_k)$.
+\end{proposition}
+\end{itemize}
+
+%\subsection{Bounded Difference Inequality via Transportation Methods}
+\subsection{Marton's Transportation Inequality}
+\begin{itemize}
+\item \begin{theorem} (\textbf{Marton's Transportation Inequality}) \citep{boucheron2013concentration}\\
+Let $\bP = \otimes_{k=1}^n \bP_k$ be a product probability measure on $\cX^n$, and let $\bQ$ be a probability measure absolutely continuous with respect to $\bP$. Define two random vectors $X = (X_1 \xdotx{,} X_n), Y = (Y_1 \xdotx{,} Y_n)$ in $\cX^n$ with distribution $\bP$ and $\bQ$ respectively.  Then
+\begin{align}
+\cW_{2, d_H}(\bQ, \bP) := \sqrt{\min_{\gamma \in \Pi(\bQ, \bP)}\sum_{i=1}^n\gamma^2\set{X_i \neq Y_i}} &\le \sqrt{\frac{1}{2}\kl{\bQ}{\bP}} \label{ineqn: marton_transport_cost_inequality} \\
+\Leftrightarrow  \min_{\gamma \in \Pi(\bQ, \bP)}\sum_{i=1}^n \gamma^2\set{X_i \neq Y_i} &\le \frac{1}{2}\kl{\bQ}{\bP} \nonumber
+\end{align}
+\end{theorem}
+
+\item \begin{theorem} (\textbf{Marton's Conditional Transportation Inequality}) \citep{boucheron2013concentration}\\
+Let $\bP = \otimes_{k=1}^n \bP_k$ be a product probability measure on $\cX^n$, and let $\bQ$ be a probability measure absolutely continuous with respect to $\bP$. Define two random vectors $X = (X_1 \xdotx{,} X_n), Y = (Y_1 \xdotx{,} Y_n)$ in $\cX^n$ with distribution $\bP$ and $\bQ$ respectively.  Then
+\begin{align}
+ \min_{\gamma \in \Pi(\bQ, \bP)}\E{\gamma}{\sum_{i=1}^n(\gamma^2\set{X_i \neq Y_i | X_i} + \gamma^2\set{X_i \neq Y_i | Y_i})} &\le 2\kl{\bQ}{\bP} \label{ineqn: marton_conditional_transport_cost_inequality}
+\end{align}
+\end{theorem}
+
+\item \begin{proposition} (\textbf{Concentration of Lipschitz Function with Function Weighted Hamming Distance}) \citep{boucheron2013concentration}\\
+Let $f: \cX^n \to \bR$ be a measurable function and let $Z_1 \xdotx{,} Z_n$ be independent random variables taking their values in $\cX$. Define $X = f(Z_1 \xdotx{,} Z_n)$. Assume that there exist \textbf{measurable functions} $c_i: \cX_n \to [0, \infty)$ such that for all $x, y \in \cX^n$, 
+\begin{align*}
+f(y) - f(z) \le \sum_{i=1}^{n}c_i(z) \ind{y_i \neq z_i}.
+\end{align*} Setting
+\begin{align*}
+\nu = \E{}{\sum_{i=1}^{n}c_i^2(Z)} \qquad \text{ and }\qquad \nu_{\infty} = \sup_{z \in \cX^n}\sum_{i=1}^{n}c_i^2(z)
+\end{align*} for all $\lambda  > 0$, we have 
+\begin{align*}
+\psi_{X - \E{}{X}}(\lambda) \le \frac{\nu \lambda^2}{2} \qquad \text{ and }\qquad \psi_{- X + \E{}{X}}(\lambda) \le \frac{\nu_{\infty} \lambda^2}{2}
+\end{align*} In particular, for all $t > 0$,
+\begin{align}
+\bP\set{X \ge \E{}{X}  + t} &\le \exp\paren{-\frac{t^2}{2\nu}} \nonumber\\
+\bP\set{X \le \E{}{X}  - t}   &\le \exp\paren{-\frac{t^2}{2\nu_{\infty}}}. \label{ineqn: weakly_self_bounding_sub_gaussian}
+\end{align}
+\end{proposition}
+
+\item \begin{remark}
+The condition in above proposition covers 
+\begin{enumerate}
+\item \emph{Lipschitz functions} such as \emph{functions with bounded difference},  
+\item \emph{\textbf{self-bounding functions}} including \emph{\textbf{configuration functions}}:
+Let $f$ be such a configuration function. For any $z \in \cX^n$, fix a \emph{maximal sub-sequence} $(z_{i,1} \xdotx{,} z_{i,m})$ satisfying property $\Pi$ (so that $f(z) = m$). Let $c_i(z)$ denote \emph{the indicator that $z_i$ belongs to the sub-sequence} $(z_{i,1} \xdotx{,} z_{i,m})$. Thus,
+\begin{align*}
+\sum_{i=1}^n c_i^2(z) = \sum_{i=1}^n c_i(z) = f(z).
+\end{align*} It follows from the definition of a configuration function that for all $z, y \in \cX^n$,
+\begin{align*}
+f(y) \ge f(z) -  \sum_{i=1}^n c_i(z)\ind{z_i \neq y_i}
+\end{align*} So $g = -f$ satisfies the condition in above proposition. 
+\item  \emph{\textbf{weakly self-bounding functions}}
+\item \emph{\textbf{convex distance function}}
+\begin{align*}
+d_{T}(z, A) &:= \sup_{\alpha \in \bR_{+}^{n}: \norm{\alpha}{2} = 1}\inf_{y \in A}\sum_{i=1}^n\alpha_i \ind{z_i \neq y_i}
+\end{align*} Denote by $c(z) = (c_1(z) \xdotx{,} c_n(z)) = \alpha^{*}$ the vector of nonnegative components \emph{in the unit ball} for which \emph{the supremum is achieved}.  Thus
+\begin{align*}
+d_{T}(z, A) - d_{T}(y, A) &\le  \inf_{z' \in A}\sum_{i=1}^n c_i(z) \ind{z_i \neq z_i'} -  \inf_{y' \in A}\sum_{i=1}^n c_i(z) \ind{y_i \neq y_i'}\\
+&\le \sum_{i=1}^n c_i(z) \ind{z_i \neq y_i}
+\end{align*}
+\end{enumerate}
+
+
+\end{remark}
+\end{itemize}
+%\subsection{Convex Distance Inequality via Conditional Transportation Cost}
 \subsection{Talagrand's Gaussian Transportation Inequality}
+\begin{itemize}
+\item \begin{theorem} (\textbf{Talagrand's Gaussian Transportation Inequality}) \citep{boucheron2013concentration}\\
+Let $\bP$ be be the standard Gaussian probability measure on $\bR^n$, and let $\bQ$ be a probability measure absolutely continuous with respect to $\bP$. Define two random vectors $X = (X_1 \xdotx{,} X_n), Y = (Y_1 \xdotx{,} Y_n)$ in $\cX^n$ with distribution $\bP$ and $\bQ$ respectively.  Then
+\begin{align}
+\cW_{2, d}(\bQ, \bP) := \sqrt{\min_{\gamma \in \Pi(\bQ, \bP)}\sum_{i=1}^n\E{\gamma}{(X_i - Y_i)^2}   } &\le \sqrt{2\kl{\bQ}{\bP}} \label{ineqn: talagrand_gaussian_transport_cost_inequality} \\
+\Leftrightarrow  \min_{\gamma \in \Pi(\bQ, \bP)}\sum_{i=1}^n\E{\gamma}{(X_i - Y_i)^2}   &\le 2\kl{\bQ}{\bP} \nonumber
+\end{align}
+\end{theorem}
+
+\item \begin{remark} (\textbf{\emph{Gaussian Transportation Inequality $\Rightarrow$ Gaussian Concentration Inequality}}) \citep{boucheron2013concentration}\\
+\emph{Talagrand's \textbf{Gaussian transportation inequality}} implies \emph{the Tsirelson-Ibragimov-Sudakov inequality} (i.e. \emph{\textbf{the dimension-free concentration}} of \emph{Lipschitz function} of Gaussian vectors), which we proved based on \emph{the Gaussian logarithmic Sobolev inequality} and \emph{Herbst's argument}.
+
+Assume that $f: \bR^n \to \bR$ is a \emph{Lipschitz function} with respect to \emph{Euclidean distance}, that is, for all $x, y \in \bR^n$,
+\begin{align*}
+f(y) - f(x) \le L \sqrt{\sum_{i=1}^n (x_i - y_i)^2}
+\end{align*} Then, by \emph{Jensen's inequality}, for every \emph{coupling} $\gamma \in \Pi(\bP, \bQ)$, one has
+\begin{align*}
+\E{\bQ}{f(Y)} - \E{\bP}{f(X)} &= \E{\gamma}{f(Y) - f(X)} \\
+&\le L \E{\gamma}{\paren{\sum_{i=1}^n (X_i - Y_i)^2}^{1/2}} \\
+&\le L \paren{\sum_{i=1}^n \E{\gamma}{(X_i - Y_i)^2}}^{1/2} = L\; \cW_{2}(\bQ, \bP) \\
+&\le \sqrt{2 L^2 \kl{\bQ}{\bP}} \quad \text{ by Gaussian Transportation Inequality }
+\end{align*} By transportation lemma, we show that $f(X) - \E{}{f(X)}$ is \emph{sub-Gaussian distributed} with parameter $L^2$. This implies \emph{\textbf{the Gaussian concentration inequality}}.
+\end{remark}
+\end{itemize}
 \subsection{Transportation Cost Inequalities for Markov Chains}
+
 \newpage
 \bibliographystyle{plainnat}
 \bibliography{reference.bib}
