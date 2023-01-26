@@ -97,7 +97,7 @@
 		- Edge Isoperimetric Inequality on the Binary Hypercube
 		- Vertex Isoperimetric Inequality on the Binary Hypercube
 		
-- Isoperimetric Inequality via Transportation Methods [pdf](./Ineq_6_Optimal_Transport_Concentration.pdf)
+- Transportation Methods [pdf](./Ineq_6_Optimal_Transport_Concentration.pdf)
 	- Optimal Transport Basis
 		- Optimal Transport Problem and its Dual Problem
 		- Wasserstein Distance
