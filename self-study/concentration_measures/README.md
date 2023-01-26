@@ -104,5 +104,10 @@
 		- Variational Formulation for Wasserstein Distance
 	- Transportation Methods
 		- Concentration via Transportation Cost Inequality
+		- Tensorization for Transportation Cost
+		- Marton’s Transportation Inequality
+		- Talagrand’s Gaussian Transportation Inequality
+		- Transportation Cost Inequalities for Markov Chains
+		
 
 
