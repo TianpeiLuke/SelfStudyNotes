@@ -686,6 +686,16 @@ We call \emph{a Borel set} $A \subset \bR^n$ \emph{\textbf{smooth}} if $\bP(A_t)
 \end{align*}
 \end{remark}
 
+\item \begin{exercise} (\textbf{From Isoperimetry to Concentration}) \citep{boucheron2013concentration}\\
+Assume that a probability distribution $\bP$ on $\bR^n$ satisfies, for all Borel sets $A \subset \bR^n$, 
+\begin{align*}
+\liminf\limits_{t \to 0}\frac{\bP(A_t) - \bP(A)}{t} &\ge c\,f\paren{F^{-1}(\bP(A))},
+\end{align*} where $c \in (0, 1]$ is a constant, $F$ is a continously differentiable distribution function and $f = F'$ is its derivative. Prove that for all Borel set $A$ and all $t \ge 0$, 
+\begin{align*}
+\bP(A_t) \ge F\paren{F^{-1}(\bP(A)) + c\,t}.
+\end{align*}
+\end{exercise}
+
 \item As a direct consequence of \emph{the Gaussian isoperimetric inequality}, we have the improved result for \emph{Gaussian concentration inequality}:
  \begin{theorem}  (\textbf{Gaussian Concentration Inequality, Sharp Bound}) \citep{boucheron2013concentration, wainwright2019high} \\
 Let $Z = (Z_1 \xdotx{,} Z_n)$ be a vector of $n$ \textbf{independent} \textbf{standard normal} random variables. Let $f : \bR^n \to \bR$ denote an \textbf{$L$-Lipschitz function}. Then, for all $t > 0$, 
