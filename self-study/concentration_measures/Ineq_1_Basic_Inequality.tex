@@ -188,9 +188,9 @@ If $\phi$ denotes a \emph{\textbf{nondecreasing} and \textbf{nonnegative} functi
 \end{align}
 \end{remark}
 \end{itemize}
-\subsection{Central Limit Theorem}
+\subsection{Limit Theorems}
 \begin{itemize}
-\item \begin{theorem} (\textbf{Central Limit Theorem, Linderberg-Le{\'v}y})\\
+\item \begin{theorem} (\textbf{Central Limit Theorem, Linderberg-Le{\'v}y})   \citep{vershynin2018high} \\
 Let $X_1 \xdotx{,} X_n$ be \textbf{independent identically distributed} random variables with mean $\E{}{X_i} = 0$ and variance $\text{Var}(X_i) = 1$. Then 
 \begin{align}
 \frac{1}{\sqrt{n}}\sum_{i=1}^{n}X_i  \stackrel{d}{\rightarrow} N(0, 1) \label{eqn: central_limit_theorem} \\
@@ -198,7 +198,7 @@ Let $X_1 \xdotx{,} X_n$ be \textbf{independent identically distributed} random v
 \end{align} where $\Phi(t) = \int_{-\infty}^{t}\frac{1}{\sqrt{2\pi}}e^{-u^2/2}du = \bP\set{g \le t}$ for some Gaussian variable $g$.
 \end{theorem}
 
-\item \begin{theorem} (\textbf{Central Limit Theorem, Nonasymptotic, Berry-Esseen})\\
+\item \begin{theorem} (\textbf{Central Limit Theorem, Nonasymptotic, Berry-Esseen})  \citep{vershynin2018high} \\
 Let $X_1 \xdotx{,} X_n$ be \textbf{independent identically distributed} random variables with mean $\E{}{X_i} = 0$, variance $\text{Var}(X_i) = \sigma^2$ and $\rho := \E{}{\abs{X_i}^3} <\infty$. Then with some constant $C > 0$, 
 \begin{align}
 \sup_{t \in \bR}\abs{\bP\set{\frac{1}{\sigma \sqrt{n}}\sum_{i=1}^{n}X_i \le t} - \Phi(t)} &\le  \frac{C}{ \sigma^3\sqrt{n}}\rho \label{eqn: central_limit_theorem_nonasym} 
@@ -211,6 +211,16 @@ Let $X_1 \xdotx{,} X_n$ be \textbf{independent identically distributed} random v
 \end{align*} This bound is \emph{\textbf{sharp}}, i.e. the equality is attained when $X_i \sim \text{Bernoulli}(1/2)$.
 \end{remark}
 
+\item \begin{theorem} (\textbf{Poisson Limit Theorem}).   \citep{vershynin2018high} \\
+Let $X_{N,i}$, $1 \le i \le N$, be independent random variables $X_{N,i} \sim \text{Ber}(p_{N,i})$, and let $S_N = \sum^{N}_{i=1}X_{N,i}$. Assume that, as $N \to \infty$
+\begin{align*}
+\max_{i\le N}p_{N,i} \rightarrow 0\quad  \text{ and }\quad \E{}{S_N} = \sum^{N}_{i=1}p_{N,i} \rightarrow \lambda < \infty,
+\end{align*}
+Then, as $N \to \infty$,
+\begin{align*}
+S_N =  \sum^{N}_{i=1}X_{N,i} \stackrel{d}{\rightarrow} \text{Pois}(\lambda)
+\end{align*}
+\end{theorem}
 \end{itemize}
 
 \section{Sum of Independent Random Variables}
@@ -940,14 +950,14 @@ and for any $t > 0$,
 where $h(u) = (1 + u) \log(1 + u) - u$ for $u > 0$.
 \end{proposition}
 
-\item \begin{remark}
-Compare \emph{the Bennett's inequality} and \emph{Hoeffding's inequality}:
-\begin{enumerate}
-\item \emph{Hoeffding's inequality} assumes $X_i$ is \emph{\textbf{bounded}} within \emph{a \textbf{closed interval}} $[a_i, b_i]$
-
-\item \emph{Bennett's inequality} assumes $X_i$ is \emph{\textbf{bounded above}} by $b_i$ but need to \emph{\textbf{have finite variance}}. It is seen as a generalization of \emph{Chernoff's inequality}.
-\end{enumerate}
-\end{remark}
+%\item \begin{remark}
+%Compare \emph{the Bennett's inequality} and \emph{Hoeffding's inequality}:
+%\begin{enumerate}
+%\item \emph{Hoeffding's inequality} provides a \emph{\textbf{Gaussian-tail bound}}  $e^{- ct^2/\sigma^2}$ since the variables in closed intervals are sub-Gaussian.
+%
+%\item \emph{Bennett's inequality} provides a \emph{\textbf{Poisson-tail bound}} $e^{- \sigma^2 c_1 h(c_2 t / \sigma^2) }$
+%\end{enumerate}
+%\end{remark}
 
 \item \begin{remark} This bound can be analyzed in two different regimes:
 \begin{enumerate}
@@ -960,6 +970,45 @@ Compare \emph{the Bennett's inequality} and \emph{Hoeffding's inequality}:
 
 \subsection{Bernstein's Inequality}
 \begin{itemize}
+\item \begin{definition} (\textbf{\emph{Bernstein's Condition}}) \\
+Given a \emph{random variable} $X$ with mean $\mu = \E{}{X}$ we say that \underline{\emph{\textbf{Bernstein's condition}}} \emph{with parameter $\nu$, $c$} holds if the \emph{variance} $\text{Var}(X) = \E{}{X^2} - \mu^2 \le \nu$, and
+\begin{align*}
+\sum_{i=1}^{n}\E{}{(X - \mu)_{+}^q} \le \frac{q!}{2} \nu c^{q-2}, \quad \text{ for all integers }q \ge 2,
+\end{align*} where $(x)_{+} = \max\set{x, 0}$. 
+\end{definition}
+
+\item \begin{proposition}  (\textbf{Bernstein's Condition $\Rightarrow$  Sub-Gamma Distribution}).  \citep{boucheron2013concentration}\\
+Let $X_1 \xdotx{,} X_n$ be independent real-valued random variables. Assume that there exist positive numbers  $\nu$ and $c$ such that
+$\sum_{i=1}^{n}\E{}{X_i^2} \le \nu$ and
+\begin{align*}
+\sum_{i=1}^{n}\E{}{(X_i)_{+}^q} \le \frac{q!}{2} \nu c^{q-2}, \quad \text{ for all integers }q \ge 3,
+\end{align*} where $(x)_{+} = \max\set{x, 0}$. If $S = \sum_{i=1}^{n}\paren{X_i - \E{}{X_i}}$, then for all $\lambda \in (0, 1/c)$ and $t > 0$
+\begin{align*}
+\psi_S(\lambda) \le \frac{\lambda^2 \nu}{2(1 - c\lambda)} 
+\end{align*} and
+\begin{align*}
+\psi_S^{*}(t) \ge \frac{\nu}{c^2}h_1\paren{\frac{ct}{\nu}},
+\end{align*} where $h_1(u) = 1+ u - \sqrt{1 + 2u}$ for $u >0$. In particular, for all $t > 0$, 
+\begin{align}
+\bP\set{S \ge \sqrt{2\nu t} + ct } \le e^{-t}. \label{ineqn: bernstein_inequality_gammar_dist_0}
+\end{align}
+\end{proposition}
+
+\item \begin{corollary}(\textbf{Bernstein's Inequality, Sub-Gamma Distribution}).  \citep{boucheron2013concentration}\\
+Let $X_1 \xdotx{,} X_n$ be independent real-valued random variables satisfying the conditions above and let $S = \sum_{i=1}^{n}\paren{X_i - \E{}{X_i}}$. Then for all $t > 0$,
+\begin{align}
+\bP\set{S \ge t } \le \exp\paren{- \frac{t^2}{2(\nu + ct)}}.  \label{ineqn: bernstein_inequality_gammar_dist}
+\end{align}
+\end{corollary}
+
+\item \begin{remark}
+For bounded random variables $X_i \le b$ almost surely for all $i \le n$, then the conditions of above corollary hold with
+\begin{align*}
+\nu = \sum_{i=1}^{n}\E{}{X_i^2}, \quad c = b/3.
+\end{align*}
+\end{remark}
+
+
 \item We are ready to state and prove a concentration inequality for sums of independent sub-exponential random variables.
 \begin{proposition} (\textbf{Bernstein's Inequality}).  \citep{vershynin2018high}\\
 Let $X_1 \xdotx{,} X_n$ be \textbf{independent}, \textbf{mean zero}, \textbf{sub-exponential random variables}. Then, for every $t \ge 0$, we have
@@ -1008,36 +1057,7 @@ Let $X_1 \xdotx{,} X_n$ be \textbf{independent}, \textbf{mean zero} random varia
 Here $\nu = \sum_{i=1}^{n}\E{}{X_i^2}$ is the variance of the sum.
 \end{proposition}
 
-\item \begin{proposition}  \citep{boucheron2013concentration}\\
-Let $X_1 \xdotx{,} X_n$ be independent real-valued random variables. Assume that there exist positive numbers  $\nu$ and $c$ such that
-$\sum_{i=1}^{n}\E{}{X_i^2} \le \nu$ and
-\begin{align*}
-\sum_{i=1}^{n}\E{}{(X_i)_{+}^q} \le \frac{q!}{2} \nu c^{q-2}, \quad \text{ for all integers }q \ge 3,
-\end{align*} where $(x)_{+} = \max\set{x, 0}$. If $S = \sum_{i=1}^{n}\paren{X_i - \E{}{X_i}}$, then for all $\lambda \in (0, 1/c)$ and $t > 0$
-\begin{align*}
-\psi_S(\lambda) \le \frac{\lambda^2 \nu}{2(1 - c\lambda)} 
-\end{align*} and
-\begin{align*}
-\psi_S^{*}(t) \ge \frac{\nu}{c^2}h_1\paren{\frac{ct}{\nu}},
-\end{align*} where $h_1(u) = 1+ u - \sqrt{1 + 2u}$ for $u >0$. In particular, for all $t > 0$, 
-\begin{align}
-\bP\set{S \ge \sqrt{2\nu t} + ct } \le e^{-t}. \label{ineqn: bernstein_inequality_gammar_dist_0}
-\end{align}
-\end{proposition}
 
-\item \begin{corollary}(\textbf{Bernstein's Inequality, Sub-Gamma Distribution}).  \citep{boucheron2013concentration}\\
-Let $X_1 \xdotx{,} X_n$ be independent real-valued random variables satisfying the conditions above and let $S = \sum_{i=1}^{n}\paren{X_i - \E{}{X_i}}$. Then for all $t > 0$,
-\begin{align}
-\bP\set{S \ge t } \le \exp\paren{- \frac{t^2}{2(\nu + ct)}}.  \label{ineqn: bernstein_inequality_gammar_dist}
-\end{align}
-\end{corollary}
-
-\item \begin{remark}
-For bounded random variables $X_i \le b$ almost surely for all $i \le n$, then the conditions of above corollary hold with
-\begin{align*}
-\nu = \sum_{i=1}^{n}\E{}{X_i^2}, \quad c = b/3.
-\end{align*}
-\end{remark}
 \end{itemize}
 
 \subsection{The Johnson-Lindenstrauss Lemma}
