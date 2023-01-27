@@ -40,6 +40,7 @@
 			- Clique Number of Erdos-Renyi Random Graph
 			- Radematcher Complexity
 	- Bounding Variance for Martingale Difference Sequence
+		- Mean-Median Deviation
 		- The Efron-Stein Inequality
 		- Functions with Bounded Difference
 		- Self-Bounding Property
