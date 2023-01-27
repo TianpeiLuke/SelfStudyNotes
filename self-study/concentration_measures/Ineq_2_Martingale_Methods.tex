@@ -346,6 +346,47 @@ Consequently, the bounded difference inequality implies that the random variable
 \end{itemize}
 
 \section{Bounding Variance}
+\subsection{Mean-Median Deviation}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Median of Random Variable}})\\
+\emph{The \textbf{median}} of a random variable $X \in \cX$ with distribution $\bP$ is a constant $m$ such that
+\begin{align*}
+\bP\set{X \ge m } \ge \frac{1}{2} \quad \land \quad \bP\set{X \le m } \ge \frac{1}{2}
+\end{align*}
+\end{definition}
+
+\item \begin{proposition} (\textbf{Mean-Median Deviation, Variance Bound}) \citep{boucheron2013concentration} \\
+Let $X \in \cX$ be a random variable with distribution $\bP$, $m$ be the \textbf{median} of $X$ and $\mu = \E{}{X}$ be the \textbf{mean} of $X$. If $\text{Var}(X) = \sigma^2 < \infty$,  then 
+\begin{align}
+\abs{m - \mu} &\le \sqrt{\text{Var}(X)} = \sigma \label{ineqn: median_mean_variance_bound}
+\end{align}
+\end{proposition} (proof by Jenson's inequality $\abs{m - \mu} = \abs{\E{}{X - m}} \le \E{}{\abs{X - m}} \le \E{}{\abs{X - \mu}} \le \sqrt{\E{}{\abs{X - \mu}^2}}$)
+
+\item \begin{exercise}  (\textbf{Mean-Median Deviation via Concentration Inequality}) \citep{boucheron2013concentration} \\
+Let $X$ be a random variable with \textbf{median} $m$ such that positive constants $a$ and $b$ exist so that for all $t > 0$,
+\begin{align*}
+\bP\set{\abs{X - m} \ge t} \le a \exp\paren{- \frac{t^2}{b}}
+\end{align*} Show that 
+\begin{align*}
+\abs{m - \mu} &\le \min\set{\sqrt{ab}, \;\frac{a}{2}\sqrt{b\pi}}.
+\end{align*}
+\end{exercise}
+
+\item \begin{exercise} (\textbf{Concentration Inequality Around Medians and Means}) \citep{wainwright2019high} \\
+Given a scalar random variable $X$, suppose that there are positive constants $c_1$, $c_2$ such that for all $t \ge 0$, 
+\begin{align}
+\bP\set{\abs{X - \E{}{X}} \ge t} &\le c_1 \exp\paren{- c_2 t^2} \label{exe: mean_concentration_bound}
+\end{align}
+\begin{enumerate}
+\item Prove that $\text{Var}(X) \le \frac{c_1}{c_2}$
+\item Let $m_X$ be the a \textbf{median} of $X$. Show that \textbf{whenever the mean concentration bound \eqref{exe: mean_concentration_bound} holds}, then for \textbf{any median} $m_X$, we have, for all $t \ge 0$, \textbf{the median concentration}
+\begin{align}
+\bP\set{\abs{X -  m_X} \ge t} &\le c_3 \exp\paren{- c_4 t^2} \label{exe: median_concentration_bound}
+\end{align} where $c_3 := 4c_1$ and $c_4 := \frac{c_2}{8}$. 
+\item Conversely, show that \textbf{whenever the median concentration bound \eqref{exe: median_concentration_bound} holds}, then \textbf{mean concentration} \eqref{exe: mean_concentration_bound} holds with $c_1 = 2 c_3$ and $c_2 = \frac{c_4}{4}$.
+\end{enumerate}
+\end{exercise}
+\end{itemize}
 \subsection{The Efron-Stein Inequality}
 \begin{itemize}
 \item \begin{remark}
