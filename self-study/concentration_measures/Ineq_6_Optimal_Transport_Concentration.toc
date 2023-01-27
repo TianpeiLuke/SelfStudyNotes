@@ -6,5 +6,5 @@
 \contentsline {subsection}{\numberline {2.1}Concentration via Transportation Cost Inequality}{5}
 \contentsline {subsection}{\numberline {2.2}Tensorization for Transportation Cost}{8}
 \contentsline {subsection}{\numberline {2.3}Marton's Transportation Inequality}{8}
-\contentsline {subsection}{\numberline {2.4}Talagrand's Gaussian Transportation Inequality}{10}
-\contentsline {subsection}{\numberline {2.5}Transportation Cost Inequalities for Markov Chains}{11}
+\contentsline {subsection}{\numberline {2.4}Talagrand's Gaussian Transportation Inequality}{11}
+\contentsline {subsection}{\numberline {2.5}Transportation Cost Inequalities for Markov Chains}{12}
