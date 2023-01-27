@@ -402,10 +402,27 @@ The main effort is to find a concentration inequality for \emph{\textbf{entropy 
 \phi^{*-1}(s) = \inf\{t \in \text{dom}(\phi^{*}): \phi^{*}(t) > s\}
 \end{align*}  is defined as the \textbf{\emph{the generalized inverse}} of \emph{the Legendre transform} $\phi^{*}= \sup_{\lambda \in (0,b)}(\lambda x - \phi(\lambda))$. 
 
-Based on \emph{the duality of $1$-Wasserstein distance}, this \emph{transportation cost inequality} implies that for any \emph{$1$-Lipschitz function} $f: \cX \to \bR$ with respect to metric $d$
+There are \emph{two ways to proceed}:
+\begin{enumerate}
+\item Based on \emph{the duality of $1$-Wasserstein distance}, this \emph{transportation cost inequality} implies that for any \emph{$1$-Lipschitz function} $f: \cX \to \bR$ with respect to metric $d$
 \begin{align*}
 \E{\bQ}{f(Y)} - \E{\bP}{f(X)} = \E{\gamma}{f(Y) - f(X)} &\le \cW_{1}^{d}(\bQ, \bP)  \le \phi^{*-1}\paren{\kl{\bQ}{\bP}}.
-\end{align*} Then by the \emph{\textbf{transportation lemma}}, we can show that 
+\end{align*} 
+
+\item Or, we use \emph{the Cauchy-Schwartz inequality}
+\begin{align*}
+\E{\bQ}{f(Y)} - \E{\bP}{f(X)} = \E{\gamma}{f(Y) - f(X)} &\le \sum_{i=1}^{n}\alpha_i \E{\gamma}{d(Y_i, X_i)}\\
+&\le \paren{\sum_{i=1}^{n}\alpha_i^2}^{1/2}\paren{ \sum_{i=1}^{n} (\E{\gamma}{d(Y_i, X_i)})^2}^{1/2}
+\end{align*} If we can show that the quadratic of transportation cost
+\begin{align*}
+ \min_{\gamma \in \Pi(\bQ, \bP)} \sum_{i=1}^{n}(\E{\gamma}{d(Y_i, X_i)})^2 \le \varphi\paren{\kl{\bQ}{\bP}}
+\end{align*} Then
+\begin{align*}
+\E{\bQ}{f(Y)} - \E{\bP}{f(X)} \le \paren{ \paren{\sum_{i=1}^{n}\alpha_i^2}\varphi\paren{\kl{\bQ}{\bP}}}^{1/2}
+\end{align*}
+\end{enumerate}
+
+Finally by the \emph{\textbf{transportation lemma}}, we can show that 
 \begin{align*}
 \psi_{f(X)}(\lambda) := \E{\bP}{e^{\lambda (f(X) - \E{}{f(X)})}} &\le \phi(\lambda).
 \end{align*} The concentration follows from \emph{Chernoff bound} with rate function $\phi^{*}(t)$.
@@ -510,6 +527,12 @@ Then $X = f(Z_1 \xdotx{,} Z_{n})$ satisfies, for all $t > 0$,
 \end{align*}
 \end{theorem}
 \end{enumerate}
+\end{remark}
+\end{itemize}
+\newpage
+\section{Comparison: Gaussian Tail Bound vs. Poisson Tail Bound}
+\begin{itemize}
+\item \begin{remark} (\emph{\textbf{Gaussian Tail Bound} vs. \textbf{Poisson Tail Bound}})\\
 \end{remark}
 \end{itemize}
 
@@ -632,9 +655,6 @@ Let $X$ be  a \emph{\textbf{Bernoulli random variable}} with probability of succ
 \bP\set{X \ge t} \le \exp\paren{- \kl{\bP_{p+t}}{\bP_p}}
 \end{align*}
 \end{example}
-
-\item \begin{remark} (\emph{\textbf{Gaussian Tail Bound} vs. \textbf{Poisson Tail Bound}})\\
-\end{remark}
 \end{itemize}
 
 \subsection{Sub-Gaussian Random Variables}
@@ -1227,6 +1247,46 @@ Suppose that $f$ satisfies \textbf{the bounded difference property} \eqref{eqn: 
 
 \section{Bounding Variance}
 \subsection{Mean-Median Deviation}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Median of Random Variable}})\\
+\emph{The \textbf{median}} of a random variable $X \in \cX$ with distribution $\bP$ is a constant $m$ such that
+\begin{align*}
+\bP\set{X \ge m } \ge \frac{1}{2} \quad \land \quad \bP\set{X \le m } \ge \frac{1}{2}
+\end{align*}
+\end{definition}
+
+\item \begin{proposition} (\textbf{Mean-Median Deviation, Variance Bound}) \citep{boucheron2013concentration} \\
+Let $X \in \cX$ be a random variable with distribution $\bP$, $m$ be the \textbf{median} of $X$ and $\mu = \E{}{X}$ be the \textbf{mean} of $X$. If $\text{Var}(X) = \sigma^2 < \infty$,  then 
+\begin{align}
+\abs{m - \mu} &\le \sqrt{\text{Var}(X)} = \sigma \label{ineqn: median_mean_variance_bound}
+\end{align}
+\end{proposition} (proof by Jenson's inequality $\abs{m - \mu} = \abs{\E{}{X - m}} \le \E{}{\abs{X - m}} \le \E{}{\abs{X - \mu}} \le \sqrt{\E{}{\abs{X - \mu}^2}}$)
+
+\item \begin{exercise}  (\textbf{Mean-Median Deviation via Concentration Inequality}) \citep{boucheron2013concentration} \\
+Let $X$ be a random variable with \textbf{median} $m$ such that positive constants $a$ and $b$ exist so that for all $t > 0$,
+\begin{align*}
+\bP\set{\abs{X - m} \ge t} \le a \exp\paren{- \frac{t^2}{b}}
+\end{align*} Show that 
+\begin{align*}
+\abs{m - \mu} &\le \min\set{\sqrt{ab}, \;\frac{a}{2}\sqrt{b\pi}}.
+\end{align*}
+\end{exercise}
+
+\item \begin{exercise} (\textbf{Concentration Inequality Around Medians and Means}) \citep{wainwright2019high} \\
+Given a scalar random variable $X$, suppose that there are positive constants $c_1$, $c_2$ such that for all $t \ge 0$, 
+\begin{align}
+\bP\set{\abs{X - \E{}{X}} \ge t} &\le c_1 \exp\paren{- c_2 t^2} \label{exe: mean_concentration_bound}
+\end{align}
+\begin{enumerate}
+\item Prove that $\text{Var}(X) \le \frac{c_1}{c_2}$
+\item Let $m_X$ be the a \textbf{median} of $X$. Show that \textbf{whenever the mean concentration bound \eqref{exe: mean_concentration_bound} holds}, then for \textbf{any median} $m_X$, we have, for all $t \ge 0$, \textbf{the median concentration}
+\begin{align}
+\bP\set{\abs{X -  m_X} \ge t} &\le c_3 \exp\paren{- c_4 t^2} \label{exe: median_concentration_bound}
+\end{align} where $c_3 := 4c_1$ and $c_4 := \frac{c_2}{8}$. 
+\item Conversely, show that \textbf{whenever the median concentration bound \eqref{exe: median_concentration_bound} holds}, then \textbf{mean concentration} \eqref{exe: mean_concentration_bound} holds with $c_1 = 2 c_3$ and $c_2 = \frac{c_4}{4}$.
+\end{enumerate}
+\end{exercise}
+\end{itemize}
 \subsection{The Efron-Stein Inequality and Jackknife Estimation}
 \begin{itemize}
 \item \begin{remark} (\textbf{\emph{Variance of Smoothing Martingale Difference Sequence}})\\
@@ -1797,11 +1857,183 @@ Let $\bP$ be be the standard Gaussian probability measure on $\bR^n$, and let $\
 \end{theorem}
 \end{itemize}
 \section{Proofs of Bounded Difference Inequality}
+\begin{itemize}
+\item \begin{theorem} (\textbf{McDiarmid's Inequality / Bounded Differences Inequality})\citep{boucheron2013concentration, wainwright2019high}\\
+Suppose that $f$ satisfies \textbf{the bounded difference property} \eqref{eqn: bounded_difference_property} with parameters $(L_1 \xdotx{,} L_n)$ i.e. for each index $k = 1, 2 \xdotx{,} n$,
+\begin{align*}
+\abs{f(x_1 \xdotx{,} x_n) - f(x_1 \xdotx{,} x_{i-1},x'_{i}, x_{i+1} \xdotx{,} x_n)} \le L_k, \quad\text{ for all }x, x' \in \cX^n. 
+\end{align*} Assume that the random vector $X = (X_1, X_2 \xdotx{,} X_n)$ has \textbf{independent} components. Then
+\begin{align*}
+\bP\set{\abs{f(X) - \E{}{f(X)}} \ge t } &\le  2 \exp\paren{- \frac{2 t^2}{ \sum_{k=1}^{n}L_k^2}}. \
+\end{align*}
+\end{theorem}
+\end{itemize}
 \subsection{Martingale Method}
+\begin{itemize}
+\item \begin{proof}
+Consider the associated \emph{martingale difference sequence}
+\begin{align*}
+D_k := \E{}{f(X) | X_1 \xdotx{,} X_k} - \E{}{f(X) | X_1 \xdotx{,} X_{k-1}}.
+\end{align*}
+We claim that $D_k$ lies in \emph{an interval of length at most $L_k$ almost surely}. In order to prove this claim, define the random variables
+\begin{align*}
+A_k &:= \inf_x \set{\E{}{f(X) | X_1 \xdotx{,} X_{k-1}, x}} - \E{}{f(X) | X_1 \xdotx{,} X_{k-1}} \\
+B_k &:= \sup_{x} \set{\E{}{f(X) | X_1 \xdotx{,} X_{k-1}, x}} - \E{}{f(X) | X_1 \xdotx{,} X_{k-1}}.
+\end{align*}
+On one hand, we have
+\begin{align*}
+D_k - A_k &=  \E{}{f(X) | X_1 \xdotx{,} X_k} - \inf_x \set{\E{}{f(X) | X_1 \xdotx{,} X_{k-1}, x}},
+\end{align*}
+so that $D_k \ge  A_k$ \emph{almost surely}. A similar argument shows that $D_k \le B_k$ \emph{almost surely}.
+We now need to show that $B_k - A_k \le L_k$ \emph{almost surely}. Observe that by the independence of $\set{X_k}^n_{k=1}$, we have
+\begin{align*}
+\E{}{f(X) \,|\, x_1 \xdotx{,} x_k } &= \E{(k+1)}{f(x_1 \xdotx{,} x_k, X_{k+1} \xdotx{,} X_n)},\text{ for any }(x_1 \xdotx{,} x_k),
+\end{align*}  where $\E{(k+1)}{\cdot}$ denote the expectation over $(X_{k+1} \xdotx{,} X_n)$.
+Consequently, we have
+\begin{align*}
+B_k - A_k &=  \sup_{x} \E{(k+1)}{f(X_1 \xdotx{,} X_{k-1}, x, X_{k+1} \xdotx{,} X_n)}  \\
+&\quad - \inf_x  \E{(k+1)}{f(X_1 \xdotx{,} X_{k-1}, x, X_{k+1} \xdotx{,} X_n)} \\
+&\le  \sup_{x,y}\set{\E{(k+1)}{f(X_{1:k-1}, x, X_{k+1:n})} - \E{(k+1)}{f(X_{1:k-1}, y, X_{k+1:n})}} \\
+&\le L_k,
+\end{align*}
+using \emph{the bounded differences assumption}. Thus, the variable $D_k$ lies within an interval of length $L_k$ at most surely, so that the claim follows as a corollary of \emph{the Azuma-Hoeffding inequality}. \qed
+\end{proof}
+\end{itemize}
 \subsection{Entropy Method}
+\begin{itemize}
+\item \begin{proof}
+Recall that for a random variable $Y$ taking its values in $[a, b]$, then we know from \emph{Hoeffding's Lemma} that the logarithmic moment generating functions $\psi(\lambda)$ satisfies
+\begin{align*}
+\psi(\lambda)'' = \text{Var}(Y) \le \frac{(b-a)^2}{4}
+\end{align*} for every $\lambda \in \bR$. Hence, Hoeffding's inequality is obtained since
+\begin{align*}
+\frac{\text{Ent}(e^{\lambda Y})}{\E{}{e^{\lambda Y}}} = \lambda \psi'(\lambda) - \psi(\lambda) = \int_{0}^{\lambda} s \psi''(s) ds \le \frac{(b-a)^2}{4}  \int_{0}^{\lambda} s ds =  \frac{(b-a)^2 \lambda^2}{8},
+\end{align*} Note that by the bounded differences assumption, given $X_{(-i)}$, $f(X)$ is a random variable whose range is in an interval of length at most $L_i$, so 
+\begin{align*}
+\frac{\text{Ent}_{(-i)}(e^{\lambda f(X)})}{\E{(-i)}{e^{\lambda f(X)}}} &\le  \frac{L_i^2 \lambda^2}{8} 
+\end{align*} 
+From the  tensorization property of entropy, we can bound the entropy of total function
+\begin{align*}
+\text{Ent}(e^{\lambda f(X)}) \le \E{}{\sum_{i=1}^{n}\text{Ent}_{(-i)}(e^{\lambda f(X)})} &\le \sum_{i=1}^{n} \frac{L_i^2 \lambda^2}{8} \E{}{\E{(-i)}{e^{\lambda f(X)}}}\\
+\frac{\text{Ent}(e^{\lambda f(X)}) }{ \E{}{e^{\lambda f(X)}} } &\le \frac{\sum_{i=1}^{n}L_i^2 \lambda^2}{8} \equiv \frac{\nu \lambda^2}{2}.
+\end{align*} where 
+\begin{align*}
+\nu := \frac{1}{4}\sum_{i=1}^{n}L_i^2
+\end{align*}
+ Using \emph{Herbst's argument}, it leads to the bound of logarithmic moment generating function:
+\begin{align*}
+\psi_{f(X)}(\lambda) &\le \frac{\nu \lambda^2}{2}.
+\end{align*} Finally, we apply \emph{the Chernoff's inequality}
+\begin{align*}
+\bP\set{f(X) - \E{}{f(X)} \ge t } &\le  \inf_{\lambda >0 }\exp\paren{\psi_{f(X)}(\lambda) - \lambda t} \le \exp\paren{- \frac{t^2}{2 \nu}}.  \qed
+\end{align*}
+\end{proof}
+\end{itemize}
 \subsection{Isoperimetric Inequality on Binary Hypercube}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Vertex Boundary of Graph}}) \citep{boucheron2013concentration}\\
+Consider a graph $\cG = (\cV, \cE)$ and let $\cA \subset \cV$ be a set of its vertices. \underline{\emph{\textbf{The vertex boundary}}} of $\cA$ is defined as \emph{the set of those vertices}, \emph{\textbf{not in $\cA$}}, which are \emph{\textbf{connected}} to \emph{some vertex in $\cV$} by \emph{an edge}. We denote \emph{the vertex boundary of $\cA$} by $\partial V(\cA)$.
+\end{definition}
+
+\item \begin{remark} (\textbf{\emph{Binary Hypercube as Nearest Neighbor Graph with Hamming Distance}}) \\
+Consider the graph as binary hypercube $\set{-1, +1}^n$ in which two vertices are connected by an edge if and only if their \emph{\textbf{Hamming distance} equals $1$}.  Define the \emph{norm} as the \emph{Hamming distance} to $-1^n= (-1 \xdotx{,} -1)$
+\begin{align*}
+\norm{x}{H} := \sum_{i=1}^{n}\ind{x_i = 1} = d_{H}(x, -1^n)
+\end{align*}
+\end{remark}
+
+\item \begin{definition} (\textbf{\emph{Simplicial Order}})\\
+We define the so-called \emph{\underline{\textbf{simplicial order}} of the elements} of the binary hypercube. We say that $x = (x_1 \xdotx{,} x_n) \in \set{-1, 1}^n$ \emph{\textbf{precedes}} $y = (y_1 \xdotx{,} y_n) \in \set{-1, 1}^n$  \emph{in the simplicial order} if either $\norm{x}{H} < \norm{y}{H}$ (where $\norm{x}{H} := \sum_{i=1}^{n}\ind{x_i = 1} = d_{H}(x, -1^n)$) or $\norm{x}{H} = \norm{y}{H}$ and $x_i = 1$ and $y_i = -1$ for the smallest $i$ for which $x_i \neq y_i$.  That is
+\begin{align*}
+&x \prec y \\
+\Leftrightarrow &\set{(x,y): \norm{x}{H} < \norm{y}{H} \; \lor (\norm{x}{H} = \norm{y}{H} \, \land (x_i =1 \land y_i = -1, \text{ where }i=\min\set{k: x_k \neq x_k} )) }
+\end{align*} In other words, the vector with \emph{\textbf{less}} $1$'s \emph{\textbf{precedes}} the vector with more $1$'s. If the number of $1$'s are the same, then the first $1$'s on the leftmost position is preferred.
+\end{definition} 
+
+\begin{theorem} (\textbf{Harp's Vertex Isoperimetric Theorem}) \citep{boucheron2013concentration}\\
+For $N = 1 \xdotx{,} 2^n$, let $S_N$ denote the set of \textbf{first $N$ elements} of $\set{-1, +1}^n$ in the \textbf{simplicial order}. For any subset $A \subset \set{-1, +1}^n$, where $\abs{A} = N$, 
+\begin{align*}
+\abs{\partial V(A)} \ge \abs{\partial V(S_N)} 
+\end{align*}
+\end{theorem}
+
+\item \begin{remark}
+Note that if $N = \sum_{i=0}^{k}{n \choose i}$, for $k=0, \xdotx{,} n$, then 
+\begin{align*}
+S_N = \set{x \in \set{-1, +1}^n:  d_{H}(x, -1^n) \le k} = B_{H}(-1^n, k)
+\end{align*} In other words, $S_N$ is a \emph{\textbf{Hamming ball} centered at the vector $-1^n= (-1 \xdotx{,} -1)$}.
+\end{remark}
+
+\item \begin{definition} (\textbf{\emph{$t$-Blowup of Set $A$ in Binary Hypercube}}) \\
+For any $A \subset \set{-1, +1}^n$ and $x \in \set{-1, +1}^n$, let $d_{H}(x, A) = \min_{y \in A} d_{H}(x, y)$ be the \emph{Hamming distance} of $x$ to the set $A$. Also, denote by
+\begin{align*}
+A_t := \set{x \in \set{-1, +1}^n: d_{H}(x, A) < t}
+\end{align*} the \emph{$t$-blowup of the set $A$}, that is, the set of points whose Hamming distance from $A$ is at most $t$.
+\end{definition}
+
+\item \begin{corollary} (\textbf{Isoperimetric Inequality in Binary Hypercube}) \citep{boucheron2013concentration}\\ 
+Let $A \subset \set{-1, +1}^n$ such that $\abs{A} \ge \sum_{i=0}^{k}{n \choose i}$. Then for any $t=1, 2 \xdotx{,} n-k+1$, 
+\begin{align}
+\abs{A_t} \ge  \sum_{i=0}^{k+1 - t}{n \choose i}. \label{ineqn: harp_vertex_isoperimetric_inequality}
+\end{align} In particular, if $\abs{A}/2^n \ge 1/2$ then we may take $k = \floor{n/2}$ in the corollary above and
+\begin{align}
+\frac{\abs{A_t}}{2^n} \ge \bP\set{X  < \E{}{X} + t } \ge 1 - \exp\paren{- \frac{2t^2}{n}}
+\end{align} where $X \sim \text{Ber}(1/2)$ is a symmetric Bernoulli random variable taking values in $\set{-1, +1}$ with $\bP\set{X= 1} = \bP\set{X = -1} = 1/2$.
+\end{corollary}
+
+\item \begin{proof} (\textbf{\emph{Proof of Bounded Difference Inequality on Binary Hypercube}}) \\
+Note that any  function with \emph{\textbf{bounded difference property}} is \emph{\textbf{Lipschitz function}} with respect to \emph{\textbf{Hamming distance}}. 
+\begin{align*}
+&\sup_{x \in \cX^n, y_i \in \cX}\abs{f(x_1 \xdotx{,} x_n) - f(x_1 \xdotx{,} x_{i-1}, y_i, x_{i+1} \xdotx{,} x_{n})} &\\
+&\le c_i = c_i\,d_{H}((x_1 \xdotx{,} x_n), (x_1 \xdotx{,} x_{i-1}, y_i, x_{i+1} \xdotx{,} x_{n})), \quad 1\le i \le n\\
+\Rightarrow \abs{f(x) - f(y)} &=  \abs{\sum_{i=1}^{n}(f(x_{(i-1)}) - f(x_{(i)}) )}\\
+&\quad \le  \sum_{i=1}^{n}\abs{f(x_{(i-1)}) - f(x_{(i)}) }\\
+&\quad \le \sum_{i=1}^{n}L_i \ind{x_{(i-1)}[i] \neq x_{(i)}[i]} \\
+&\quad = d_{H,L}(x, y)
+\end{align*}   where $x_{(i)}$ is replicate of $x_{(i-1)}$ except for $i$-th component, which is replaced by $y_i$. Note that $x_{(0)} = x$ and $x_{(n)} = y$. 
+
+The Harp's isoperimetric theorem suggests that the concentration function 
+\begin{align*}
+\alpha_{\bP, (\set{-1, +1}^n, d_{H, L})}(t) := \sup_{A: \bP\set{A} \ge 1/2}\bP\set{A_t} &\le \exp\paren{- \frac{2t^2}{\sum_i^{n}L_i^2}}
+\end{align*} where $\bP$ is uniform distribution on $\set{-1, +1}^n$. Thus by \emph{Levy's inequality}, we prove that for $Z \in \set{-1, 1}^n$ and Lipschitz function $f: \set{-1, 1}^n \to \bR$ with respect to weighted Hamming distance $d_{H, L}$, 
+\begin{align*}
+\bP\set{\abs{f(Z) - \text{Med}(f(Z))} \ge t} &\le 2 \exp\paren{- \frac{2t^2}{\sum_i^{n}L_i^2}}. \qed
+\end{align*} 
+\end{proof}
+\end{itemize}
 \subsection{Transportation Method}
-\subsection{Comparison of Different Proofs}
+\begin{itemize}
+\item \begin{proof}
+Any  function with \emph{\textbf{bounded difference property}} is \emph{\textbf{Lipschitz function}} with respect to \emph{\textbf{Hamming distance}}. This implies that for all $x, y \in \cX^n$,
+\begin{align*}
+f(y) - f(x) \le \sum_{i=1}^{n}L_i \ind{x_i \neq y_i} \equiv d_{H,L}(x, y).
+\end{align*} Note that for coupling $\gamma \in \Pi(\bQ, \bP)$ where $Y \sim \bQ$ and $X \sim \bP$, 
+\begin{align*}
+\E{\bQ}{f(Y)} - \E{\bP}{f(X)} &= \E{\gamma}{f(Y) - f(X)} \\
+&\le \sum_{i=1}^n L_i \E{\gamma}{\ind{X_i \neq Y_i}} \\
+&\le \paren{\sum_{i=1}^{n}L_i^2}^{1/2}\paren{\sum_{i=1}^{n}(\E{\gamma}{\ind{X_i \neq Y_i}})^2}^{1/2}
+\end{align*}
+
+We want to prove the concentration using transportation cost inequality. That is, to bound the term
+\begin{align*}
+\min_{\gamma \in \Pi(\bQ, \bP)}\sum_{i=1}^{n}(\E{\gamma}{\ind{X_i \neq Y_i}})^2 = \min_{\gamma \in \Pi(\bQ, \bP)}\sum_{i=1}^{n}\gamma^2\set{X_i \neq Y_i}.
+\end{align*} We have shown that 
+\begin{align*}
+\min_{\gamma \in \Pi(\bQ, \bP)}\gamma\set{X \neq Y} = \cW_{1, d_H}(\bQ, \bP) = \sup_{A \in \cX}\abs{\bQ(A) - \bP(A)}  \equiv \norm{\bQ - \bP}{TV}.
+\end{align*}  For each independent variable $X_i, Y_i$, and their marginal distribution $\bP_i, \bQ_i$ where $\bQ_i \ll \bP_i$, by Pinsker's inequality,
+\begin{align*}
+ \min_{\gamma \in \Pi(\bQ_i, \bP_i)}\gamma\set{X_i \neq Y_i}  &\le \sqrt{\frac{1}{2}\kl{\bQ_i}{\bP_i}} \\
+ \min_{\gamma \in \Pi(\bQ_i, \bP_i)}\gamma^2\set{X_i \neq Y_i} &\le \frac{1}{2}\kl{\bQ_i}{\bP_i}
+\end{align*} Thus by induction lemma, 
+\begin{align*}
+\min_{\gamma \in \Pi(\bQ, \bP)}\sum_{i=1}^{n}\gamma^2\set{X_i \neq Y_i} &\le \frac{1}{2}\kl{\bQ}{\bP}
+\end{align*} which is the \emph{Marton's transportation inequality}. Finally, we have
+\begin{align*}
+\E{\bQ}{f(Y)} - \E{\bP}{f(X)} &\le \paren{\sum_{i=1}^{n}L_i^2}^{1/2}\paren{\sum_{i=1}^{n}(\E{\gamma}{\ind{X_i \neq Y_i}})^2}^{1/2} \\
+&\le \sqrt{\frac{\paren{\sum_{i=1}^{n}L_i^2}}{2}\kl{\bQ}{\bP}}.
+\end{align*} Then we can apply the transportation lemma with $\nu := \frac{1}{4}\sum_{i=1}^{n}L_i^2$, which proves the bounded difference inequality. \qed 
+\end{proof}
+\end{itemize}
 
 
 
