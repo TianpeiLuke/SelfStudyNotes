@@ -313,10 +313,40 @@ Suppose that, for each $k = 1, 2 \xdotx{,} n$, the univariate distribution $\bP_
 \item \begin{theorem} (\textbf{Marton's Transportation Inequality}) \citep{boucheron2013concentration}\\
 Let $\bP = \otimes_{k=1}^n \bP_k$ be a product probability measure on $\cX^n$, and let $\bQ$ be a probability measure absolutely continuous with respect to $\bP$. Define two random vectors $X = (X_1 \xdotx{,} X_n), Y = (Y_1 \xdotx{,} Y_n)$ in $\cX^n$ with distribution $\bP$ and $\bQ$ respectively.  Then
 \begin{align}
-\cW_{2, d_H}(\bQ, \bP) := \sqrt{\min_{\gamma \in \Pi(\bQ, \bP)}\sum_{i=1}^n\gamma^2\set{X_i \neq Y_i}} &\le \sqrt{\frac{1}{2}\kl{\bQ}{\bP}} \label{ineqn: marton_transport_cost_inequality} \\
-\Leftrightarrow  \min_{\gamma \in \Pi(\bQ, \bP)}\sum_{i=1}^n \gamma^2\set{X_i \neq Y_i} &\le \frac{1}{2}\kl{\bQ}{\bP} \nonumber
+ \min_{\gamma \in \Pi(\bQ, \bP)}\sum_{i=1}^n \gamma^2\set{X_i \neq Y_i} &\le \frac{1}{2}\kl{\bQ}{\bP} \ \label{ineqn: marton_transport_cost_inequality} 
 \end{align}
 \end{theorem}
+
+\item \begin{proof} (\textbf{\emph{Proof of Bounded Difference Inequality}}) \\
+Any  function with \emph{\textbf{bounded difference property}} is \emph{\textbf{Lipschitz function}} with respect to \emph{\textbf{Hamming distance}}. This implies that for all $x, y \in \cX^n$,
+\begin{align*}
+f(y) - f(x) \le \sum_{i=1}^{n}L_i \ind{x_i \neq y_i} \equiv d_{H,L}(x, y).
+\end{align*} Note that for coupling $\gamma \in \Pi(\bQ, \bP)$ where $Y \sim \bQ$ and $X \sim \bP$, 
+\begin{align*}
+\E{\bQ}{f(Y)} - \E{\bP}{f(X)} &= \E{\gamma}{f(Y) - f(X)} \\
+&\le \sum_{i=1}^n L_i \E{\gamma}{\ind{X_i \neq Y_i}} \\
+&\le \paren{\sum_{i=1}^{n}L_i^2}^{1/2}\paren{\sum_{i=1}^{n}(\E{\gamma}{\ind{X_i \neq Y_i}})^2}^{1/2}
+\end{align*}
+
+We want to prove the concentration using transportation cost inequality. That is, to bound the term
+\begin{align*}
+\min_{\gamma \in \Pi(\bQ, \bP)}\sum_{i=1}^{n}(\E{\gamma}{\ind{X_i \neq Y_i}})^2 = \min_{\gamma \in \Pi(\bQ, \bP)}\sum_{i=1}^{n}\gamma^2\set{X_i \neq Y_i}.
+\end{align*} We have shown that 
+\begin{align*}
+\min_{\gamma \in \Pi(\bQ, \bP)}\gamma\set{X \neq Y} = \cW_{1, d_H}(\bQ, \bP) = \sup_{A \in \cX}\abs{\bQ(A) - \bP(A)}  \equiv \norm{\bQ - \bP}{TV}.
+\end{align*}  For each independent variable $X_i, Y_i$, and their marginal distribution $\bP_i, \bQ_i$ where $\bQ_i \ll \bP_i$, by Pinsker's inequality,
+\begin{align*}
+ \min_{\gamma \in \Pi(\bQ_i, \bP_i)}\gamma\set{X_i \neq Y_i}  &\le \sqrt{\frac{1}{2}\kl{\bQ_i}{\bP_i}} \\
+ \min_{\gamma \in \Pi(\bQ_i, \bP_i)}\gamma^2\set{X_i \neq Y_i} &\le \frac{1}{2}\kl{\bQ_i}{\bP_i}
+\end{align*} Thus by induction lemma, 
+\begin{align*}
+\min_{\gamma \in \Pi(\bQ, \bP)}\sum_{i=1}^{n}\gamma^2\set{X_i \neq Y_i} &\le \frac{1}{2}\kl{\bQ}{\bP}
+\end{align*} which is the \emph{Marton's transportation inequality}. Finally, we have
+\begin{align*}
+\E{\bQ}{f(Y)} - \E{\bP}{f(X)} &\le \paren{\sum_{i=1}^{n}L_i^2}^{1/2}\paren{\sum_{i=1}^{n}(\E{\gamma}{\ind{X_i \neq Y_i}})^2}^{1/2} \\
+&\le \sqrt{\frac{\paren{\sum_{i=1}^{n}L_i^2}}{2}\kl{\bQ}{\bP}}.
+\end{align*} Then we can apply the transportation lemma with $\nu := \frac{1}{4}\sum_{i=1}^{n}L_i^2$, which proves the bounded difference inequality. \qed 
+\end{proof}
 
 \item \begin{theorem} (\textbf{Marton's Conditional Transportation Inequality}) \citep{boucheron2013concentration}\\
 Let $\bP = \otimes_{k=1}^n \bP_k$ be a product probability measure on $\cX^n$, and let $\bQ$ be a probability measure absolutely continuous with respect to $\bP$. Define two random vectors $X = (X_1 \xdotx{,} X_n), Y = (Y_1 \xdotx{,} Y_n)$ in $\cX^n$ with distribution $\bP$ and $\bQ$ respectively.  Then

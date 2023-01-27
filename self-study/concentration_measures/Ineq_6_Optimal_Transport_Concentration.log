@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  25 JAN 2023 21:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  27 JAN 2023 11:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -718,8 +718,8 @@ Overfull \hbox (20.7208pt too wide) in paragraph at lines 302--304
 .95 -transportation
  []
 
-[8] [9]
-Overfull \hbox (6.98401pt too wide) in paragraph at lines 374--376
+[8] [9] [10]
+Overfull \hbox (6.98401pt too wide) in paragraph at lines 404--406
 \OT1/cmr/m/it/10.95 sure ab-so-lutely con-tin-u-ous with re-spect to $\U/msb/m/
 n/10.95 P$\OT1/cmr/m/it/10.95 . De-fine two ran-dom vec-tors $\OML/cmm/m/it/10.
 95 X \OT1/cmr/m/n/10.95 = (\OML/cmm/m/it/10.95 X[] [] [] [] X[]\OT1/cmr/m/n/10.
@@ -727,23 +727,27 @@ n/10.95 P$\OT1/cmr/m/it/10.95 . De-fine two ran-dom vec-tors $\OML/cmm/m/it/10.
  []
 
 
-Overfull \hbox (2.01561pt too wide) in paragraph at lines 382--384
+Overfull \hbox (2.01561pt too wide) in paragraph at lines 412--414
 []\OT1/cmr/m/n/10.95 (\OT1/cmr/bx/it/10.95 Gaussian Trans-porta-tion In-equal-i
 ty $\OMS/cmsy/m/n/10.95 )$ \OT1/cmr/bx/it/10.95 Gaus-sian Con-cen-tra-tion In-e
 qual-
  []
 
-[10] [11] (./Ineq_6_Optimal_Transport_Concentration.bbl
+
+Underfull \vbox (badness 2158) has occurred while \output is active []
+
+ [11]
+[12] (./Ineq_6_Optimal_Transport_Concentration.bbl
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no © in font cmr10!
 Missing character: There is no Â in font cmti10!
 Missing character: There is no ® in font cmti10!
-) [12]
+) [13]
 (./Ineq_6_Optimal_Transport_Concentration.aux) ) 
 Here is how much of TeX's memory you used:
  15926 strings out of 493029
  315643 string characters out of 6136233
- 367822 words of memory out of 5000000
+ 367824 words of memory out of 5000000
  19124 multiletter control sequences out of 15000+600000
  17072 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -768,11 +772,11 @@ ts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke
 /dsrom10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsr
 om8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm
 10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on Ineq_6_Optimal_Transport_Concentration.pdf (12 pages, 269567 
+Output written on Ineq_6_Optimal_Transport_Concentration.pdf (13 pages, 273457 
 bytes).
 PDF statistics:
- 130 PDF objects out of 1000 (max. 8388607)
- 94 compressed objects within 1 object stream
+ 134 PDF objects out of 1000 (max. 8388607)
+ 97 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
