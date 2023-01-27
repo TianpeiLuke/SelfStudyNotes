@@ -34,6 +34,24 @@
 \newpage
 \section{Applications}
 \subsection{U-Statistics}
+\begin{itemize}
+\item \begin{example} (\textbf{\emph{U-Statistics}}) \citep{wainwright2019high}\\
+Let $g: \bR^2 \to \bR$ be a \emph{\textbf{symmetric function}} of its arguments. Given an i.i.d. sequence $\set{X_k, k \ge 1}$, of random variables, the quantity
+\begin{align}
+U&:= \frac{1}{{n \choose 2}}\sum_{j < k}g(X_j, X_k)\label{def: u_stats}
+\end{align} is known as a \underline{\emph{\textbf{pairwise U-statistic}}}. For instance, if $g(s, t) = \abs{s - t}$, then $U$ is an \emph{unbiased estimator} of \emph{the mean absolute pairwise deviation $\E{}{\abs{X_1 - X_2}}$}. 
+Note that, while $U$ is \emph{\textbf{not} a sum of independent random variables}, the \emph{dependence is relatively weak}, and this fact can be revealed by a martingale analysis. 
+
+If $g$ is bounded (say $\norm{g}{\infty} \le b$), then \emph{the Bounded Difference Inequality} can be used to establish the concentration of $U$ around its mean. Viewing $U$ as a function $f(x) = f(x_1 \xdotx{,} x_n)$, for any given coordinate $k$, we have
+\begin{align*}
+\abs{f(x) - f(x^{(-k)})} &\le  \frac{1}{{n \choose 2}}\sum_{j \neq k}\abs{g(x_j, x_k) - g(x_j, x_k')} \\
+&\le \frac{(n-1) 2b }{{n \choose 2}} = \frac{4b}{n},
+\end{align*} so that the bounded differences property holds with parameter $L_k = \frac{4b}{n}$ in each coordinate. Thus, we conclude that
+\begin{align*}
+\bP\set{\abs{U - \E{}{U}} \ge t} &\le 2 \exp\paren{-\frac{n\,t^2}{8 b^2}},
+\end{align*} This tail inequality implies that $U$ is a consistent estimate of $\E{}{U}$, and also yields \emph{finite sample bounds} on its quality as an estimator. Similar techniques can be used to obtain \emph{tail bounds on U-statistics of higher order}, involving sums over $k$-tuples of variables. \qed
+\end{example}
+\end{itemize}
 \subsection{Jackknife Estimation and Boostrapping}
 \subsection{Kernel-Density Estimation}
 \begin{itemize}
@@ -64,8 +82,55 @@ By bounded difference inequality, we have
 \end{example}
 \end{itemize}
 \subsection{Random Graph}
+\begin{itemize}
+\item \begin{example} (\textbf{\emph{Clique Number in Erd{\"o}s-R{\'e}nyi Random Graphs}})  \citep{wainwright2019high}\\
+Let $\cG = (\cV, \cE)$ be an \emph{undirected graph}, where $\cV = \set{1 \xdotx{,} d}$ is the vertex set and $\cE = \set{(i,j), i,j \in \cV}$ is the undirected edge set. \emph{A \underline{\textbf{graph clique} $C$}} is a subset of vertices such that $(i, j) \in \cE$ \emph{for all} $i, j \in C$. \underline{\emph{\textbf{The clique number}} $C(\cG)$} of the graph is \emph{\textbf{the cardinality of the largest clique}}. Note that $C(\cG) \in [1, d]$. When the edges $\cE$ of the graph are drawn according to some random process, then \emph{the clique number} $C(\cG)$ is a \emph{random variable}, and we can study its concentration around its mean $\E{}{C(\cG)}$.
+
+\emph{\textbf{\underline{The Erd{\"o}s-R{\'e}nyi ensemble}} of \textbf{random graphs}} is one of the most well-studied models: it is defined by a parameter $p \in (0, 1)$ that specifies the probability with which each edge $(i, j)$ is \emph{included} in the graph, \emph{\textbf{independently} across all $d \choose 2$ edges}. More formally, for each $i < j$, let us introduce a \emph{\textbf{Bernoulli} \textbf{edge-indicator} variable} $X_{i,j}$ with parameter $p$, where $X_{i,j} = 1$ means that edge $(i, j)$ is \emph{included} in the graph, and $X_{i,j} = 0$ means that it is \emph{not included}.
+
+Note that the $d \choose 2$-dimensional random vector $Z := \set{X_{i,j}}_{i< j}$ specifies the edge set; thus, we may view \emph{the clique number} $C(\cG)$ as a function $Z \to f(Z)$. Based on definition in Section \ref{sec: self_bounding}, we see that $f(Z)$ is a \emph{\textbf{configuration function}} with property of ``\emph{being in a clique}".
+
+Let $Z'$ denote a vector in which a \emph{single coordinate} of $Z$ has been changed, and let $\cG'$ and $\cG$ be the associated graphs. It is easy to see that $C(\cG')$ can differ from $C(\cG)$ by at most $1$, so that 
+\begin{align*}
+\abs{f(Z) - f(Z')} \le 1,
+\end{align*}
+Thus, the function $C(\cG) = f(Z)$ satisfies \emph{the bounded difference property} in each coordinate with parameter $L = 1$, so that
+\begin{align*}
+\bP\set{\frac{1}{n}\abs{C(\cG) - \E{}{C(\cG)}} \ge \delta} &\le 2\exp\paren{- 2 n \delta^2}.
+\end{align*}
+Consequently, we see that the clique number of an \emph{Erd{\"o}s-R{\'e}nyi random graph} is\emph{ very sharply concentrated around its expectation}. \qed
+\end{example}
+\end{itemize}
 \subsection{Minimum Weight Spanning Tree}
 \subsection{Rademacher Complexity}
+\begin{itemize}
+\item \begin{example} (\textbf{\emph{Rademacher Complexity}}) \citep{wainwright2019high}\\
+Let $\set{\epsilon_k}^n_{k=1}$ be an i.i.d. sequence of \emph{Rademacher variables} (i.e., taking the values $\set{-1, +1}$ \emph{equiprobably}). Given a collection of vectors $\cA \subset \bR^n$, define the random variable
+\begin{align}
+Z &:= \sup_{a\in \cA}\sum_{k=1}^{n}\epsilon_k a_k = \sup_{a \in \cA}\inn{a}{\epsilon}. \label{def: radematcher_complexity_1}
+\end{align}
+\emph{The random variable $Z$ measures the \textbf{size} of $\cA$} in a certain sense, and its expectation 
+\begin{align}
+\frR(\cA) := \E{}{Z(\cA)} \label{def: radematcher_complexity_2}
+\end{align} is known as \emph{\underline{\textbf{the Rademacher complexity}} of the set $\cA$}.
+
+Let us now show how the bounded difference inequality can be used to establish that $Z(\cA)$ is \emph{\textbf{sub-Gaussian}}.
+Viewing $Z(\cA)$ as a function $(\epsilon_1 \xdotx{,} \epsilon_n) \to f(\epsilon_1 \xdotx{,} \epsilon_n)$, we need to \emph{bound the maximum change} when coordinate $k$ is changed. Given two Rademacher vectors $\epsilon, \epsilon' \in \set{-1, +1}^n$, recall our definition of the modified vector $\epsilon^{(-k)}$. Since 
+\begin{align*}
+f(\epsilon^{(-k)}) \ge \inn{a}{\epsilon^{(-k)}}, \quad\text{ for any }a \in \cA,
+\end{align*}
+we have
+\begin{align*}
+\inn{a}{\epsilon} - f(\epsilon^{(-k)}) &\le \inn{a}{\epsilon - \epsilon^{(-k)}} = a_k(\epsilon_k - \epsilon_k') \le 2\abs{a_k}.
+\end{align*}
+Taking \emph{the supremum over $\cA$ on both sides}, we obtain the inequality
+\begin{align*}
+f(\epsilon) - f(\epsilon^{(-k)}) &\le 2 \sup_{a \in \cA}\abs{a_k}.
+\end{align*} Since the same argument applies with the roles of $\epsilon$ and $\epsilon^{(-k)}$ \emph{reversed}, we conclude that $f$ satisfies \emph{the bounded difference inequality} in coordinate $k$ with parameter $L_k := 2 \sup_{a \in \cA}\abs{a_k}$. 
+
+Consequently, the bounded difference inequality implies that the random variable $Z(\cA)$ is \emph{sub-Gaussian} with parameter at most $2 \sqrt{\sum_{k=1}^{n}\sup_{a \in \cA}a_k^2}$. This sub-Gaussian parameter can be reduced to the (potentially much) smaller quantity $\sqrt{\sup_{a \in \cA}\sum_{k=1}^{n}a_k^2}$ using alternative techniques. \qed
+\end{example}
+\end{itemize}
 \subsection{Dimensionality Reduction}
 
 \section{Self-Bounding Functions}
@@ -136,6 +201,21 @@ Let $f$ be a \textbf{configuration function}, and let $X = f(Z_1 \xdotx{,} Z_n)$
 \end{corollary}
 \end{itemize}
 \subsection{VC-Dimension and Growth Function}
+\begin{itemize}
+\item \begin{example} (\emph{\textbf{VC Dimension}})\\
+Let $\cH$ be an arbitrary collection of subsets of $\cX$, and let $x = (x_1 \xdotx{,} x_n)$ be a vector of $n$ points of $\cX$. Define the \emph{\textbf{trace}} of $\cH$ on $x$ by
+\begin{align*}
+\tr{x} = \set{A \cap \set{x_1 \xdotx{,} x_n}: A \in \cH}.
+\end{align*}
+\emph{\textbf{The shatter coefficient}}, (or \emph{Vapnik-Chervonenkis \textbf{growth function}}) of $\cH$ in $x$ is $\tau_{\cH}(x) = \abs{\tr{x}}$, \emph{the size of the trace}. $\tau_{\cH}(x)$ is the number of different subsets of the $n$-point set $\set{x_1 \xdotx{,} x_n}$ generated by intersecting it with elements of $\cH$. A subset
+$\set{x_{i_1} \xdotx{,} x_{i_k}}$ of $\set{x_1 \xdotx{,} x_n}$ is said to be \emph{\textbf{shattered}} if $2^k = T(x_{i_1} \xdotx{,} x_{i_k})$. 
+
+\emph{\textbf{The VC dimension} $D(x)$ of $\cH$} (with respect to $x$) is the \emph{cardinality} $k$ of \emph{the largest shattered subset of $x$}. From the definition it is obvious that \underline{$f(x) = D(x)$ is a \emph{\textbf{configuration function}}} (associated with the property of ``\emph{\textbf{shatteredness}}") and therefore if $X_1 \xdotx{,} X_n$ are \emph{independent random variables}, then
+\begin{align*}
+\text{Var}(D(X)) \le \E{}{D(X)}.
+\end{align*}
+\end{example}
+\end{itemize}
 \subsection{Longest Increasing Subsequence}
 \subsection{Weakly Self-Bounding Functions}
 
@@ -150,8 +230,9 @@ Let $f$ be a \textbf{configuration function}, and let $X = f(Z_1 \xdotx{,} Z_n)$
 
 \section{Empirical Process}
 \subsection{Definition}
+\subsection{Tail Bounds for Empirical Processes}
 \subsection{Uniform Law of Large Numbers}
-\subsection{Suprema of Gaussian Process}
+\subsection{Suprema of Empirical Processes}
 \subsection{Covering Number, Packing Number and Metric Entropy}
 \subsection{Chaining}
 \subsection{VC-Dimension}
