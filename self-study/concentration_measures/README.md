@@ -10,6 +10,11 @@
 
 ## Table of Contents
 
+- Summary Part 1: Probabilistic Methods to Prove Concentration  [pdf](./Ineq_0_Summary_1.pdf)
+- Summary Part 2: Functional and Geometric Methods to Prove Concentration  [pdf](./Ineq_0_Summary_2.pdf)
+- Summary Part 3: Applications of Concentration Inequalities  [pdf](./Ineq_0_Summary_3.pdf)
+
+
 - Basic Inequalities  [pdf](./Ineq_1_Basic_Inequality.pdf)
   	- Basic Inequalities in Probability Space and Functional Space
 	- Sum of Independent Random Variables
