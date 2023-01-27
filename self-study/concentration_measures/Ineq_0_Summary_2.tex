@@ -415,6 +415,24 @@ For any subset $A \subset \cX^n$ and $t > 0$,
 \end{itemize}
 \subsection{Concentration of Convex Lipschitz Functions}
 \begin{itemize}
+\item \begin{theorem} (\textbf{Concentration of Separately Convex Lipschitz Functions}) \citep{boucheron2013concentration}\\
+Let  $Z:= (Z_1 \xdotx{,} Z_{n})$ be independent random variables taking values in the interval $[0, 1]$ and let $f : [0, 1]^n \to \bR$ be a \textbf{separately convex function} (i.e. $f$ is convex in each coordinate while the others are fixed) such that
+\begin{align*}
+\abs{f(x) - f(y)} &\le \norm{x - y}{} \quad \text{for all }x, y \in [0, 1]^n.
+\end{align*}
+Then $X = f(Z_1 \xdotx{,} Z_{n})$ satisfies, for all $t > 0$,
+\begin{align}
+\bP\set{f(Z) - \E{}{f(Z)} \ge t } &\le \exp\paren{- \frac{t^2}{2}}. \label{ineqn: convex_lipschitz_concentration}
+\end{align}
+\end{theorem}
+
+\item \begin{remark}
+For $Z_i \in [a_i, b_i]$, and $f$ being $L$-Lipschitz function, we have
+\begin{align*}
+\bP\set{f(Z) - \E{}{f(Z)} \ge t } &\le \exp\paren{- \frac{t^2}{2L^2\sum_{i=1}^n(b_i - a_i)^2}}
+\end{align*}
+\end{remark}
+
 \item With convex distance inequality, we can improve \emph{the  concentration bound} for \emph{convex Lipschitz functions}. First, we relate convex distance with the minimal distance to convex set
 \begin{lemma} \label{lem: convex_dist_bound_dist_convex_set} (\textbf{Convex Distance vs. Distance to Convex Set}) \citep{boucheron2013concentration}\\
 Let $A \subset [0, 1]^n$ be a \textbf{convex set} and let $x = (x_1 \xdotx{,} x_n)  \in [0,1]^n$. Then
@@ -437,6 +455,12 @@ Then $X = f(Z_1 \xdotx{,} Z_{n})$ satisfies, for all $t > 0$,
 \bP\set{f(Z)  \le \text{Med}(f(Z)) -t } &\le 2\exp\paren{- \frac{t^2}{4}}. \nonumber
 \end{align}
 \end{theorem}
+
+
+
+\item \begin{remark}
+This result can be generalized to \emph{\textbf{convex Lipschitz function} of \textbf{sub-Gaussian random variables}}. Note that in above theorems, $Z_i \in [0, 1]$ is \emph{\textbf{sub-Gaussian}} as well. 
+\end{remark}
 \end{itemize}
 
 \section{Concentration of Gaussian Measure}

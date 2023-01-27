@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  26 JAN 2023 17:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  26 JAN 2023 20:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -704,43 +704,49 @@ ni-form Dis-tri-bu-tion over Sphere\OT1/cmr/m/it/10.95 )
  []
 
 [7] [8] [9]
-Overfull \hbox (4.46027pt too wide) in paragraph at lines 443--443
+Overfull \hbox (9.15752pt too wide) in paragraph at lines 418--420
+[]\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Concentration of Sep-a-rately Con-v
+ex Lip-s-chitz Func-tions\OT1/cmr/m/it/10.95 ) [Boucheron
+ []
+
+[10]
+Overfull \hbox (4.46027pt too wide) in paragraph at lines 467--467
 []\OT1/cmr/bx/n/12 Gaussian Isoperi-met-ric The-o-rem and Gaus-sian Con-cen-tra
 -tion The-o-rem 
  []
 
-[10]
-Overfull \hbox (11.08607pt too wide) in paragraph at lines 472--474
+[11]
+Overfull \hbox (11.08607pt too wide) in paragraph at lines 496--498
 []\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Basic Prop-erty of the Gaus-sian Is
 operi-met-ric Func-tion\OT1/cmr/m/it/10.95 ) [Boucheron
  []
 
 
-Overfull \hbox (1.76945pt too wide) in paragraph at lines 488--490
+Overfull \hbox (1.76945pt too wide) in paragraph at lines 512--514
 []\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Asymptotic Be-hav-ior of Gaus-sian 
 Isoperi-met-ric Func-tion\OT1/cmr/m/it/10.95 ) [Boucheron
  []
 
-[11] [12]
-Overfull \hbox (28.76674pt too wide) in paragraph at lines 564--566
+[12]
+Overfull \hbox (28.76674pt too wide) in paragraph at lines 588--590
 []\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Gaussian Con-cen-tra-tion In-equal-
 ity\OT1/cmr/m/it/10.95 ) (\OT1/cmr/bx/it/10.95 The Tsirelson-Ibragimov-Sudakov
  []
 
-
-Overfull \hbox (2.37408pt too wide) in paragraph at lines 572--574
+[13]
+Overfull \hbox (2.37408pt too wide) in paragraph at lines 596--598
 []\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Gaussian Con-cen-tra-tion In-equal-
 ity, Sharp Bound\OT1/cmr/m/it/10.95 ) [Boucheron et al.,
  []
 
-[13]
-Overfull \hbox (2.92638pt too wide) in paragraph at lines 588--590
+
+Overfull \hbox (2.92638pt too wide) in paragraph at lines 612--614
 []\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Gaussian Log-a-rith-mic Sobolev In-
 equal-ity\OT1/cmr/m/it/10.95 ). [Boucheron et al., 2013] 
  []
 
 
-Overfull \hbox (6.98401pt too wide) in paragraph at lines 597--599
+Overfull \hbox (6.98401pt too wide) in paragraph at lines 621--623
 \OT1/cmr/m/it/10.95 sure ab-so-lutely con-tin-u-ous with re-spect to $\U/msb/m/
 n/10.95 P$\OT1/cmr/m/it/10.95 . De-fine two ran-dom vec-tors $\OML/cmm/m/it/10.
 95 X \OT1/cmr/m/n/10.95 = (\OML/cmm/m/it/10.95 X[] [] [] [] X[]\OT1/cmr/m/n/10.
@@ -748,21 +754,21 @@ n/10.95 P$\OT1/cmr/m/it/10.95 . De-fine two ran-dom vec-tors $\OML/cmm/m/it/10.
  []
 
 [14]
-Overfull \hbox (14.1512pt too wide) in paragraph at lines 627--627
+Overfull \hbox (14.1512pt too wide) in paragraph at lines 651--651
 []\OT1/cmr/bx/n/14.4 Concentration of Bernoulli Mea-sure on the Bi-nary Hy-per-
 cube 
  []
 
-[15] (./Ineq_0_Summary_2.bbl) [16] (./Ineq_0_Summary_2.aux)
+[15] [16] (./Ineq_0_Summary_2.bbl) [17] (./Ineq_0_Summary_2.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 15928 strings out of 493029
- 316072 string characters out of 6136233
- 368081 words of memory out of 5000000
- 19135 multiletter control sequences out of 15000+600000
+ 15929 strings out of 493029
+ 316111 string characters out of 6136233
+ 368091 words of memory out of 5000000
+ 19136 multiletter control sequences out of 15000+600000
  13801 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,13n,84p,737b,286s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -784,10 +790,10 @@ e/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/doublestroke/dsrom8.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Ineq_0_Summary_2.pdf (16 pages, 270938 bytes).
+Output written on Ineq_0_Summary_2.pdf (17 pages, 272900 bytes).
 PDF statistics:
- 135 PDF objects out of 1000 (max. 8388607)
- 97 compressed objects within 1 object stream
+ 138 PDF objects out of 1000 (max. 8388607)
+ 99 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

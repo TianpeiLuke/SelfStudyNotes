@@ -301,12 +301,220 @@ H(X_1, X_2 \xdotx{,} X_n) &\le \frac{1}{n-1}\sum_{i=1}^{n}H(X_1 \xdotx{,} X_{i-1
 \end{proposition}
 \end{itemize}
 
+\newpage
 \section{Summary: General Proof Stratgy for Concentration Problem}
+There are many proof techniques introduced. We can summarize them as follows:
+\begin{enumerate}
+\item \emph{\textbf{The Cram{\'e}r-Chernoff Method}}:\\
+This class of methods essentially apply \emph{\textbf{the Markov inequality}} on \emph{\textbf{exponential transform}} $e^{\lambda X}$ with parameter $\lambda$. The key is to \emph{\textbf{bound}} the \emph{\textbf{log-moment generating function}} from above and then use \emph{\textbf{the Legendre transform}} to find the concentration bound. 
 
+Specifically, for a real-valued random variable $X$, any $\lambda \ge 0$, the following inequality holds
+\begin{align*}
+\bP\set{X \ge t} = \bP\set{e^{\lambda X} \ge e^{\lambda t}} &\le e^{-\lambda t} \E{}{e^{\lambda X}} = \exp\paren{-\lambda t + \psi_{X}(\lambda) }
+\end{align*} where $\psi_{X}(\lambda) := \log   \E{}{e^{\lambda X}}$. One can choose optimal $\lambda^{*}$ that \emph{\textbf{minimizes} the upper bound above}.
+Since $\psi_{X}(\lambda)$ is a \emph{\textbf{convex function}}, we can define its \underline{\emph{\textbf{Legendre transform}}}
+\begin{align*}
+\psi^{*}_{X}(t) &:= \sup_{\lambda \in \bR}\set{\lambda\,t - \psi_{X}(\lambda)}.
+\end{align*} The expression of the right-hand side is known as the \textbf{\emph{convex conjugate}} of $\psi_{X}$. The Legendre transform of log-moment generating function is also its \emph{convex conjugate}.  Thus we have
+\begin{align*}
+\bP\set{X \ge t}  &\le \exp\set{- \psi^{*}_{X}(t)}
+\end{align*}
+The lower bound can be found by applying above formula  to $-X$. % Since $e^t$ is monotone convex function, we can obtain the following inequality
+
+In other word, in order to prove concentration around mean 
+\begin{align*}
+\bP\set{f(X) \ge  \E{}{f(X)} + t} \text{ or } \bP\set{f(X) \le  \E{}{f(X)} - t}
+\end{align*}
+using \underline{\textbf{\emph{the Cram\'er-Chernoff Method}}}, we just need to find \underline{\emph{\textbf{the upper bound}}} $\phi(\lambda)$ of \emph{\textbf{the logarithmic moment generating function}} $\psi(\lambda) $
+\begin{align*}
+\psi(\lambda) := \log \E{}{e^{\lambda (f(X) - \E{}{f(X)})}} &\le \phi(\lambda).
+\end{align*}
+
+\begin{remark} (\textbf{\emph{Advantages and Disadvantages of  Cram{\'e}r-Chernoff Method}})\\
+There are several advantages for this method:
+\begin{enumerate}
+\item The derivation is \textbf{\emph{distribution-free}}, since \emph{\textbf{Markov inequality}} is based on fundamental properties of \emph{measure and integration theory}. Moreover, \emph{the bounds on logarithmic moment generating function} $\psi(\lambda)$ can be used to \emph{\textbf{characterize different distributions}} in terms of \emph{their concentration behavior}.
+
+\item This method is \emph{\textbf{widely applicable}}. Most of techniques we learned here is to compute \emph{the upper bound} for $\psi(\lambda)$ and then apply the \emph{Cram{\'e}r-Chernoff method}. 
+
+\item The formula is \emph{\textbf{easy to compute}} if the \emph{\textbf{simple bounds}} on \emph{logarithmic moment generating function} is \emph{computed}. Then it will compute the rate via \emph{\textbf{Legendre transform} of upper bound of $\psi(\lambda)$}.
+
+\item The function $\psi(\lambda)$ easily handles \emph{product measures} $\bP = \otimes_{k=1}^{n}\bP_k$ (i.e. \emph{\textbf{independent variables}}).
+\begin{align*}
+\psi_Z(\lambda) &= \log \E{}{e^{\lambda\sum_{i=1}^{n}X_i}} = \log \prod_{i=1}^{n}\E{}{e^{\lambda X_i}}  = n\, \psi_{X}(\lambda)
+\end{align*} and consequently,
+\begin{align*}
+\psi_Z^{*}(t) &= n\,\psi_{X}^{*}\paren{\frac{t}{n}}.
+\end{align*} For \textbf{\emph{martingale difference sequence}}, we see that by conditioning on previous input
+\begin{align*}
+\E{}{\exp\set{\lambda \paren{\sum_{k=1}^{n}D_k }}} &= \E{}{\E{}{\exp\set{\lambda \paren{\sum_{k=1}^{n}D_k }} \;\Big|\; \srB_{n-1} }} \\
+&= \E{}{\exp\set{\lambda \paren{\sum_{k=1}^{n-1}D_k }} \E{}{\exp\set{\lambda D_n }  \;\Big|\; \srB_{n-1}}}
+\end{align*} If we can control each martingale difference by 
+\begin{align*}
+\log \E{}{\exp\set{\lambda D_n }  \;\Big|\; \srB_{n-1}} \le  \phi(\lambda)
+\end{align*} then we have 
+\begin{align*}
+\psi_Z(\lambda) &\le \log \E{}{\exp\set{\lambda \paren{\sum_{k=1}^{n-1}D_k }}} + \phi(\lambda) \\
+&\le \ldots \\
+&\le n \phi(\lambda).
+\end{align*}
+\end{enumerate}
+
+\emph{\textbf{The main disadvantage}} is that the Chernoff bound is \emph{\textbf{not necessarily sharp}}, since the Markov inequality is not necessarily sharp. 
+\end{remark}
+
+\item \emph{\textbf{Entropy Method}}:\\
+\emph{The entropy method} focus on \emph{the \underline{\textbf{tensorization property}} of the \textbf{entropy functional}} $\text{Ent}(X)$
+\begin{align*}
+\text{Ent}(X)&:=  \E{}{X\log X} - \E{}{X}\log\paren{\E{}{X}}.
+\end{align*}  Specifically,  let $Z_1, Z_2 \xdotx{,} Z_n$ be \emph{independent random variables} taking values in $\cX$, and let $f: \cX^n \to [0, \infty)$ be a measurable function. Letting $X = f(Z_1, Z_2 \xdotx{,} Z_n)$ such that $\E{}{X\log X} < \infty$, we have 
+\begin{align*}
+\text{Ent}(X)  &\le \E{}{\sum_{i=1}^{n} \text{Ent}_{(-i)}(X)}. 
+\end{align*} where  $\E{(-i)}{\cdot}$ is the conditional expectation operator conditioning on $Z_{(-i)}$, which is equal to $Z$ after dropping $i$-component. In other word, the \emph{\textbf{key strategy}} for proving concentration using entropy method is to \emph{find \underline{\textbf{the upper bound}} for each \textbf{\underline{single variable} entropy functional}}
+\begin{align*}
+\text{Ent}_{(-i)}(X)&:=  \E{(-i)}{X\log X} - \E{(-i)}{X}\log\paren{\E{(-i)}{X}} \equiv H_{\Phi}(\bP_i).
+\end{align*} Note that for independent random variables $Z$, this term \emph{\textbf{depends only on distribution of $Z_i$}}, since the rest $Z_{(-i)}$ are \emph{\textbf{controlled}} by the conditioning. 
+
+To obtain \emph{the concentraion bound}, we use \underline{\emph{\textbf{the Herbst's argument}}}; that is, the find the bound 
+\begin{align*}
+\text{Ent}(e^{\lambda X})& \le \E{}{e^{\lambda X}} \phi(\lambda) 
+\end{align*} and using the differential equation for the log-moment generating function $\psi$
+\begin{align*}
+\frac{\text{Ent}(e^{\lambda Z})}{\E{}{e^{\lambda Z}}} &= \lambda\; \psi'(\lambda) - \psi(\lambda) = \lambda^2 \paren{\frac{ \psi(\lambda)}{\lambda}}',
+\end{align*} we can obtain the upper bound for $\psi(\lambda)$:
+\begin{align*}
+ \paren{\frac{ \psi(\lambda)}{\lambda}}' &\le  \lambda^{-2}\phi(\lambda) \\
+ \paren{\frac{ \psi(\lambda)}{\lambda}} &\le \lim\limits_{\lambda \to 0}\paren{\frac{ \psi(\lambda)}{\lambda}} + \int_{0}^{\lambda}s^{-2}\phi(s) ds \\
+ \psi(\lambda) &\le \lambda\paren{\E{}{X} + \int_{0}^{\lambda}s^{-2}\phi(s) ds}. 
+\end{align*} Finally, we apply \emph{the Chernoff bound}.
+ 
+In general, \emph{\textbf{the key advantage}} of the \emph{\textbf{entropy method}} is that the tensorization property allows us to \emph{\underline{\textbf{generalize}} the concentration result from \textbf{$1$-dimensional distribution} to \textbf{$n$-dimensional product distribution}}. 
+
+The main effort is to find a concentration inequality for \emph{\textbf{entropy of single variable distribution}}. One way to find such concentration is to use  \emph{\textbf{the logarithmic Sobelev inequalities}}.
+
+
+\item \emph{\textbf{Transportation Method}}:\\
+\emph{The transportation method} is closed related to various \emph{statistical divergence} esp. \emph{\textbf{the Kullback-Leibler divergence}} and \emph{\textbf{the information inequality}}. The centrial part of the proof is to show that for \emph{given distribution} $\bP$ of concern, \underline{\emph{\textbf{the transportation cost inequality}}} holds:
+\begin{align*}
+\cW_{1}^{d}(\bQ, \bP) := \min_{\gamma \in \Pi(\bQ, \bP)}\E{\gamma}{d(Y, X)} &\le \phi^{*-1}\paren{\kl{\bQ}{\bP}} \quad \forall \text{ distribution } \bQ
+\end{align*} where $\Pi(\bQ, \bP)= \set{ \gamma \in \cP(\cX \times \cX):  Y_{\#}\gamma = \bQ, \; X_{\#}\gamma = \bP }$ i.e. $\gamma$ is a \emph{\textbf{coupling}} of marginal distribution  $\bQ$ and $\bP$. And, for every $s \ge 0$, 
+\begin{align*}
+\phi^{*-1}(s) = \inf\{t \in \text{dom}(\phi^{*}): \phi^{*}(t) > s\}
+\end{align*}  is defined as the \textbf{\emph{the generalized inverse}} of \emph{the Legendre transform} $\phi^{*}= \sup_{\lambda \in (0,b)}(\lambda x - \phi(\lambda))$. 
+
+Based on \emph{the duality of $1$-Wasserstein distance}, this \emph{transportation cost inequality} implies that for any \emph{$1$-Lipschitz function} $f: \cX \to \bR$ with respect to metric $d$
+\begin{align*}
+\E{\bQ}{f(Y)} - \E{\bP}{f(X)} = \E{\gamma}{f(Y) - f(X)} &\le \cW_{1}^{d}(\bQ, \bP)  \le \phi^{*-1}\paren{\kl{\bQ}{\bP}}.
+\end{align*} Then by the \emph{\textbf{transportation lemma}}, we can show that 
+\begin{align*}
+\psi_{f(X)}(\lambda) := \E{\bP}{e^{\lambda (f(X) - \E{}{f(X)})}} &\le \phi(\lambda).
+\end{align*} The concentration follows from \emph{Chernoff bound} with rate function $\phi^{*}(t)$.
+
+Note that the transportation cost inequality has \emph{\textbf{the tensorization property}} as well. This allows us to generalize the the inequality from $1$-dimension distribution to product distributions.
+
+\begin{remark} (\textbf{\emph{Advantages and Disadvantages of  Transportation Method}})\\
+There are several advantages for this method:
+\begin{enumerate}
+\item \emph{The optimal transport problem} and \emph{the Wasserstein distance} is closely related to \emph{\textbf{the information geometry}} of probability space $\cP(\cX)$. In particular, the transportation cost inequality relates the optimal transport cost to the relative entropy:
+\begin{align*}
+\cW_{p}^{d}(\bQ, \bP) &\le \varphi\paren{\kl{\bQ}{\bP}}.
+\end{align*} This provides an alternative \emph{\textbf{information theoretical interpretation}} of the concentration behavior of independent random variables.
+
+\item  \emph{The low optimal transportation cost}  is closely associated with \emph{\textbf{the concentration of measure}} in $\bP \in \cP(\cX)$. In fact, we can bound the concentration function $\alpha_{\bP, (\cX, d)}(t)$ from above by the upper bound of optimal transport cost.
+
+\item \emph{\textbf{The dual formulation}} naturally leads to \emph{the concentration of Lipschitz function} or other \emph{strong uniform continuous functions}.
+
+\item The concept of \emph{\textbf{coupling}} $\gamma \in \Pi(\bQ, \bP)$ allows us to extend the concentration results to \emph{\textbf{dependent variables}}, such as \emph{Markov chains, Markov random field} etc. In those cases, we can separate the conditional distribution $\bP(X_{i} | X_{1:i-1})$  and the marginal distributions $\bP(X_{1:i-1})$.
+\end{enumerate}
+\end{remark}
+\end{enumerate}
+
+
+\newpage
 \section{Summary: Distribution-Free Concentration Inequality}
+\begin{itemize}
+\item \begin{remark} (\textbf{\emph{Distribution-Free Concentration Inequality}}) \\
+Some concentration results are based on \emph{\textbf{assumption} on specific underling distributions} such as \emph{Gaussian, Bernoulli, Poisson, sub-Gaussian, sub-Gamma} etc. On the other hand, some concentration results are based on assumption on specific function class such as \emph{bounded (actually is sub-Gaussian), Lipschitz function, bounded difference, convex function} etc. The latter results do not rely on specific distribution assumption, so it is called \emph{\textbf{the distribution-free concentration inequality}}. 
 
+We list out several important inequalities:
+\begin{enumerate}
+\item \begin{theorem} (\textbf{Markov's Inequality}). \citep{vershynin2018high}\\
+For any \textbf{non-negative} random variable $X$ and $t > 0$, we have
+\begin{align*}
+\bP\set{X \ge t} &\le \frac{\E{}{X}}{t} 
+\end{align*}
+\end{theorem}
 
-\section{The Cram\'er-Chernoff Method}
+\item \begin{theorem} (\textbf{Chebyshev's Inequality}). \citep{vershynin2018high}\\
+Let $X$ be a random variable with mean $\mu$ and variance $\sigma^2$. Then, for any $t > 0$, we have
+\begin{align*}
+\bP\set{\abs{X - \mu} \ge t} &\le \frac{\sigma^2}{t^2}. 
+\end{align*}
+\end{theorem}
+
+\item \begin{theorem} (\textbf{Chernoff's inequality}) \citep{boucheron2013concentration}\\
+Let $X$ be a real-valued random variable. For $\lambda \ge 0$,  $\psi_{X}(\lambda)$ is the \textbf{the logarithm of moment generating function} of $X$ and $\psi^{*}_{X}(t)$ is its \textbf{Legendre (Cram{\'e}r) transform}. Then 
+\begin{align*}
+\bP\set{X \ge t} &\le \exp\paren{-\psi^{*}_{X}(t)}. 
+\end{align*}
+\end{theorem}
+
+\item  \begin{theorem} (\textbf{Hoeffding's inequality}) \citep{boucheron2013concentration} \\
+Let $X_1 \xdotx{,} X_n$ be independent random variables such that $X_i$ takes its values in $[a_i, b_i]$ \textbf{almost surely} for all $i \le n$. 
+Then for every $t > 0$,
+\begin{align*}
+\bP\set{\sum_{i=1}^{n}\paren{X_i - \E{}{X_i}} \ge  t} \le \exp\paren{- \frac{2t^2}{\sum_{i=1}^{n}(b_i - a_i)^2}}. 
+\end{align*}
+\end{theorem}
+
+\item \begin{corollary} (\textbf{Azuma-Hoeffding Inequality})\citep{wainwright2019high}\\
+Let $\set{(D_k, \srB_k), k \ge 1}$ be a \textbf{martingale difference sequence} for which there are constants $\set{(a_k, b_k)}^{n}_{k=1}$ such that $D_k \in [a_k, b_k]$ almost surely for all $k = 1 \xdotx{,} n$. Then, for all $t \ge 0$,
+\begin{align*}
+\bP\set{\abs{\sum_{k=1}^{n}D_k} \ge t } &\le  2 \exp\paren{- \frac{2 t^2}{ \sum_{k=1}^{n}(b_k - a_k)^2}}
+\end{align*}
+\end{corollary}
+
+\item \begin{theorem} (\textbf{McDiarmid's Inequality / Bounded Differences Inequality})\citep{boucheron2013concentration, wainwright2019high}\\
+Suppose that $f$ satisfies \textbf{the bounded difference property} \eqref{eqn: bounded_difference_property} with parameters $(L_1 \xdotx{,} L_n)$ i.e. for each index $k = 1, 2 \xdotx{,} n$,
+\begin{align*}
+\abs{f(x_1 \xdotx{,} x_n) - f(x_1 \xdotx{,} x_{i-1},x'_{i}, x_{i+1} \xdotx{,} x_n)} \le L_k, \quad\text{ for all }x, x' \in \cX^n. 
+\end{align*} Assume that the random vector $X = (X_1, X_2 \xdotx{,} X_n)$ has \textbf{independent} components. Then
+\begin{align*}
+\bP\set{\abs{f(X) - \E{}{f(X)}} \ge t } &\le  2 \exp\paren{- \frac{2 t^2}{ \sum_{k=1}^{n}L_k^2}}. \
+\end{align*}
+\end{theorem} Note that  \emph{functions with bounded difference property} are \emph{\textbf{Lipschitz function} with respect to \textbf{Hamming distance}}.
+
+\item \begin{theorem} (\textbf{Concentration of Separately Convex Lipschitz Functions}) \citep{boucheron2013concentration}\\
+Let  $Z:= (Z_1 \xdotx{,} Z_{n})$ be independent random variables, each taking values in the interval $[a_i, b_i]$ and let $f : \bR^n \to \bR$ be a \textbf{separately convex function} (i.e. $f$ is \textbf{convex in each coordinate} while the \textbf{others} are \textbf{fixed}) such that
+\begin{align*}
+\abs{f(x) - f(y)} &\le L\,\norm{x - y}{} \quad \text{for all }x, y \in [0, 1]^n.
+\end{align*}
+Then $X = f(Z_1 \xdotx{,} Z_{n})$ satisfies, for all $t > 0$,
+\begin{align*}
+\bP\set{f(Z) - \E{}{f(Z)} \ge t } &\le \exp\paren{- \frac{t^2}{2L^2 \sum_{k=1}^{n}(b_k - a_k)^2}}. 
+\end{align*}
+\end{theorem} Convex Lipschitz assumption is \emph{\textbf{stronger}} than bounded difference assumption.
+
+\item \begin{theorem} (\textbf{Concentration of Quasi-Convex Lipschitz Functions}) \citep{boucheron2013concentration}\\
+Let  $Z:= (Z_1 \xdotx{,} Z_{n})$ be independent random variables taking values in the interval $[0, 1]$ and let $f : [0, 1]^n \to \bR$ be a \textbf{quasi-convex function}; that is
+\begin{align*}
+\set{z: f(z) \le s} \text{ is convex set for all }s \in \bR. 
+\end{align*} Moreover, $f$ is Lipschitz function satisfying
+\begin{align*}
+\abs{f(x) - f(y)} &\le \norm{x - y}{} \quad \text{for all }x, y \in [0, 1]^n.
+\end{align*}
+Then $X = f(Z_1 \xdotx{,} Z_{n})$ satisfies, for all $t > 0$,
+\begin{align*}
+\bP\set{f(Z)  \ge  \text{Med}(f(Z)) + t } &\le 2\exp\paren{- \frac{t^2}{4}}, \\
+\bP\set{f(Z)  \le \text{Med}(f(Z)) -t } &\le 2\exp\paren{- \frac{t^2}{4}}. \nonumber
+\end{align*}
+\end{theorem}
+\end{enumerate}
+\end{remark}
+\end{itemize}
+
+\newpage
+\section{The Cram{\'e}r-Chernoff Method}
 \subsection{From Markov Inequality to Cram\'er-Chernoff Method}
 \begin{itemize}
 \item 
@@ -370,7 +578,7 @@ Since $\psi_{X}(0) = 0$, its \emph{Legendre transform} $\psi^{*}_{X}(t)$ is \emp
 The reason why Chernoff's inequality became popular is that it is very simple to use when applied to a sum of independent random
 variables. As an illustration, assume that $Z := X_1 \xdotx{+} X_n$ where $X_1 \xdotx{,} X_n$ are \emph{\textbf{independent} and \textbf{identically distributed} real-valued random variables}.  Denote the logarithm of the moment-generating function of the $X_i$ by $\psi_X(\lambda) = \log \E{}{e^{\lambda X_i}}$, and the corresponding \emph{Legendre transform} by $\psi_X^{*}(t)$. Then, by independence, for all $\lambda$ for which $\psi_X(\lambda) < \infty$,
 \begin{align*}
-\psi_Z(\lambda) &= \log \E{}{e^{\lambda\sum_{i=1^{n}X_i}}} = \log \prod_{i=1}^{n}\E{}{e^{\lambda X_i}}  = n\, \psi_{X}(\lambda)
+\psi_Z(\lambda) &= \log \E{}{e^{\lambda\sum_{i=1}^{n}X_i}} = \log \prod_{i=1}^{n}\E{}{e^{\lambda X_i}}  = n\, \psi_{X}(\lambda)
 \end{align*} and consequently,
 \begin{align*}
 \psi_Z^{*}(t) &= n\,\psi_{X}^{*}\paren{\frac{t}{n}}.
@@ -453,7 +661,7 @@ then for every integer $q \ge 1$,
 \end{align*} then $X \in \cG(4C)$ (and therefore \eqref{eqn: sub_gaussian_even_power_moment} holds with $\nu = 4C$).
 \end{proposition}
 
-\item \begin{proposition} (\textbf{Sub-Gaussian Characterizations}).  \citep{vershynin2018high}\\
+\item \begin{proposition} (\textbf{Equivalent Definitions for Sub-Gaussian Random Variables}).  \citep{vershynin2018high}\\
 Let $X$ be a random variable. Then the following properties are \textbf{equivalent}; the parameters $K_i > 0$ appearing in these
 properties differ from each other by at most an absolute constant factor.
 \begin{enumerate}
@@ -529,6 +737,174 @@ where $C = 1/\sqrt{\log 2}$.
 \end{itemize}
 
 \subsection{Sub-Exponential and Sub-Gamma Random Variables}
+\begin{itemize}
+\item \begin{remark}
+For \emph{exponential distribution} $X \sim \exp(a)$ with \emph{rate} $a$ (\emph{inverse} of \emph{scale parameter}), the p.d.f. and moment generating function
+\begin{align*}
+f_{X}(x) &= a e^{-ax},\quad  x > 0\\
+M_{X}(\lambda) &= \frac{1}{1  - \lambda/a},\quad  0 < \lambda < a
+\end{align*}
+
+For \emph{Gamma distribution} $X \sim \Gamma(a, 1/b)$ with \emph{shape parameter} $a$ and \emph{scale parameter} $b$, the p.d.f. and the moment generating function
+\begin{align*}
+f_{X}(x) &= \frac{1}{\Gamma(a)\,b^a} x^{a-1} e^{-x/b},\quad  x > 0\\
+M_{X}(\lambda) &= \paren{\frac{1}{1  - b \lambda }}^{a},\quad  0 < \lambda < 1/b
+\end{align*}Also $\E{}{X} = ab$ and $\text{Var}(X) = ab^2$.
+\end{remark}
+
+
+
+\item \begin{definition}(\emph{\textbf{Sub-Exponential Random Variables}})\\
+A \emph{\textbf{nonnegative}} random variable $X$ has a \emph{\textbf{sub-exponential distribution}} if there exists a constant $a > 0$ such that
+\begin{align*}
+\E{}{e^{\lambda X}} &\le \frac{1}{1 - \lambda/a} \quad \text{for every $\lambda$ such that $0 < \lambda < a$} \\
+\text{or }\quad \psi_X(\lambda) &\le \log\paren{ \frac{1}{1 - \lambda/a}}
+\end{align*}
+\end{definition}
+
+\item \begin{definition}(\emph{\textbf{Sub-Gamma Random Variables}})\\
+A real-valued \emph{\textbf{centered} random variable} $X$ is said to be \emph{\underline{\textbf{sub-gamma} on \textbf{the right tail}} with \textbf{variance factor} $\nu$ and \textbf{scale parameter} $c$} if
+\begin{align*}
+\psi_X(\lambda)  \le \frac{\lambda^2 \nu}{2(1 - c\lambda)} \quad \text{for every $\lambda$ such that $0 < \lambda < 1/c$} 
+\end{align*} We denote the collection of such random variables by $\Gamma_{+}(\nu, c)$.
+
+Similarlly, a real-valued centered random variable $X$ is said to be \emph{\underline{\textbf{sub-gamma} on \textbf{the left tail}} with \textbf{variance factor} $\nu$ and \textbf{scale parameter} $c$} if $-X$ is \emph{\textbf{sub-gamma on the right tail} with variance factor $\nu$ and tail parameter $c$}. We denote the collection of such random variables by $\Gamma_{-}(\nu, c)$. 
+
+Finally, $X$ is simply said to be \emph{\underline{\textbf{sub-gamma}} with \textbf{variance factor} $\nu$ and \textbf{scale parameter} $c$} if $X$ is \emph{sub-gamma} \emph{\textbf{both}} \emph{on the right and left tails} with \emph{\textbf{the same}} \emph{variance factor} $\nu$ and \emph{scale parameter} $c$. The collection of such random variables is denoted by  $\Gamma(\nu, c)$.
+
+Observe that $\Gamma(\nu, 0)= \cG(\nu)$.
+\end{definition}
+
+\item \begin{remark}
+To derive the definition fo sub-gamma distribution, we see that \emph{the variance factor} $\nu:= ab^2$ and $c:= b$. Also $\E{}{X} = ab$. The logarithmic moment generating function of Gamma distribution $\Gamma(a, 1/b) = \Gamma(\nu/c^2, 1/c)$ is 
+\begin{align*}
+\psi_{X - \E{}{X}}(\lambda) = a\log\paren{\frac{1}{1 - b \lambda}} - \lambda a b  \le  \frac{\lambda^2 b^2 a}{2(1 - b\lambda)} \equiv  \frac{\lambda^2 \nu}{2(1 - c\lambda)}
+\end{align*}
+The last inequality is due to 
+\begin{align*}
+\log \paren{\frac{1}{1 - u}} - u \le \frac{u^2}{2(1 - u)}
+\end{align*}
+\end{remark}
+
+\item \begin{remark}
+Note that the sum of $n$ i.i.d. random variables with exponential distribution $\exp(1/b)$ have the Gamma distribution $\Gamma(n, 1/b)$. So \emph{\textbf{the sub-gamma distributed}} random variable follows  \emph{\textbf{the sub-exponential distribution}} as well (with shape parameter $=1$).
+\end{remark}
+
+\item \begin{proposition} (\textbf{Equivalent Definitions for Sub-Exponential Random Variables}).  \citep{vershynin2018high}\\
+Let $X$ be a random variable. Then the following properties are \textbf{equivalent}; the parameters $K_i > 0$ appearing in these
+properties differ from each other by at most an absolute constant factor.
+\begin{enumerate}
+\item The \textbf{tails} of $X$ satisfy
+\begin{align*}
+\bP\set{\abs{X} \ge t} \le 2 \exp\paren{-t/K_1}\quad\text{ for all }t \ge 0.
+\end{align*}
+
+\item The \textbf{moments} of $X$ satisfy
+\begin{align*}
+\norm{X}{L^p} = \paren{\E{}{\abs{X}^p}}^{1/p} \le K_2\, p\quad \text{ for all }p \ge 1.
+\end{align*}
+
+\item The \textbf{moment-generating function (MGF)} of $\abs{X}$ satisfies
+\begin{align*}
+\E{}{\exp(\lambda \abs{X})} \le \exp(K_3\;\lambda) \quad \text{ for all $\lambda$ such that $0 \le \lambda \le \frac{1}{K_3}$}
+\end{align*}
+
+\item The \textbf{MGF} of $\abs{X}$ is \textbf{bounded} at some point, namely
+\begin{align*}
+\E{}{\exp(\abs{X} / K_4)} \le 2.
+\end{align*}
+Moreover, if $\E{}{X} = 0$ then properties $(1)$-$(4)$ are also \textbf{equivalent} to the following one.
+
+\item The \textbf{MGF} of $X$ satisfies
+\begin{align*}
+\E{}{\exp(\lambda X)} \le  \exp(K_5^2\,\lambda^2)\quad\text{ for all }\lambda \text{ such that } \abs{\lambda} \le \frac{1}{K_5}.
+\end{align*}
+\end{enumerate}
+\end{proposition}
+
+
+
+\item \begin{definition} (\textbf{\emph{Sub-Exponential Norm}}) \\
+The \underline{\emph{\textbf{sub-exponential norm}}} of $X$, denoted $\norm{X}{\psi_1}$, is defined
+to be the \emph{\textbf{smallest}} $K_4$ that satisfies 
+\begin{align*}
+\E{}{\exp(\abs{X} / K_4)} \le 2.
+\end{align*} In other words, we define
+\begin{align}
+\norm{X}{\psi_1}= \inf\set{t > 0: \E{}{\exp(\abs{X} / t)} \le 2}.  \label{eqn: sub_gaussian_norm}
+\end{align}
+\end{definition}
+
+\item \begin{remark}
+Sub-gaussian and sub-exponential distributions are closely related. 
+\begin{enumerate}
+\item First, \emph{any sub-gaussian distribution is clearly sub-exponential}. 
+\item Second, \emph{the \textbf{square} of a \textbf{sub-gaussian random variable} is \textbf{sub-exponential}}:
+\begin{lemma} (\textbf{Sub-exponential is Sub-gaussian Squared}).  \citep{vershynin2018high}\\
+A random variable  $X$ is \textbf{sub-gaussian} if and only if $X^2$ is \textbf{sub-exponential}. Moreover,
+\begin{align*}
+\norm{X^2}{\psi_1} = \norm{X}{\psi_2}^2
+\end{align*}
+\end{lemma}
+
+More generally, \emph{the \textbf{product} of two \textbf{sub-gaussian random variables} is \textbf{sub-exponential}}:
+\begin{lemma} (\textbf{Product of Sub-Gaussians is Sub-Exponential}).  \citep{vershynin2018high}\\
+Let $X$ and $Y$ be \textbf{sub-gaussian random variables}. Then $XY$ is \textbf{sub-exponential}. Moreover,
+\begin{align*}
+\norm{XY}{\psi_1} \le \norm{X}{\psi_2} \norm{Y}{\psi_2}.
+\end{align*}
+\end{lemma}
+\end{enumerate}
+\end{remark}
+
+\item \begin{proposition} (\textbf{Moment Characterization of Sub-Exponential Random Variables})  \citep{boucheron2013concentration}\\
+Let $X$ be a nonnegative random variable. If $X$ is sub-exponential distributed with parameter $a > 0$ 
+then for every integer $q \ge 1$,
+\begin{align}
+\E{}{X^{q}} \le 2^{q+1}\frac{q!}{a^q}. \label{eqn: sub_exponential_power_moment}
+\end{align}
+\textbf{Conversely}, if there exists a constant $a > 0$ in order that for every positive integer $q$,
+\begin{align*}
+\E{}{X^{q}} \le  \frac{q!}{a^q},
+\end{align*} then $X$ is sub-exponential. More precisely, for any $0 < \lambda < a$, 
+\begin{align*}
+\E{}{e^{\lambda X}} \le \frac{1}{1 - \lambda /a}.
+\end{align*}
+\end{proposition}
+
+\item \begin{remark} (\textbf{\emph{Concentration Inequalities for Sub-Gamma Distribution}})\\
+Similarly to the \emph{sub-Gaussian property}, the \emph{\textbf{sub-gamma property}} can be characterized in terms of \emph{tail or moment conditions}. We start by computing \emph{\textbf{the Fenchel-Legendre dual function}} of
+\begin{align*}
+\psi(\lambda) = \frac{\lambda^2 \nu}{2(1 - c\lambda)}.
+\end{align*}
+Setting
+\begin{align*}
+h_1(u) = 1 + u - \sqrt{1 + 2u}\text{ for }u > 0,
+\end{align*}
+it follows by elementary calculation that for every $t > 0$,
+\begin{align*}
+\psi^{*}(t)  = \sup_{\lambda \in (0, 1/c)}\set{t\lambda - \frac{\lambda^2 \nu}{2(1 - c\lambda)}} = \frac{\nu}{c^2}h_1\paren{\frac{c\,t}{\nu}}.
+\end{align*}
+Since $h_1$ is an increasing function from $(0, \infty)$ onto $(0, \infty)$ with \textbf{\emph{inverse function}}
+\begin{align*}
+h^{-1}(u) = u + \sqrt{2u}\text{ for }u > 0,
+\end{align*} we finally get
+\begin{align*}
+\psi^{*-1}(u) = \sqrt{2\nu u} + c u.
+\end{align*}
+Hence, \emph{Chernoff's inequality} implies that whenever $X$ is a \emph{sub-gamma random variable on the right tail} with \emph{variance factor} $\nu$ and \textit{scale parameter} $c$, for every $t > 0$, we have
+\begin{align}
+\bP\set{X > t} \le \exp\paren{– \frac{\nu}{c^2}h_1\paren{\frac{c\,t}{\nu}}}, \label{ineqn: tail_sub_gamma}
+\end{align}
+or equivalently, for every $t > 0$,
+\begin{align}
+\bP\set{X > \sqrt{2\nu t}+ c t} \le e^{-t}.
+\end{align} Therefore, if $X$ belongs to $\Gamma(\nu, c)$, then for every $t > 0$,
+\begin{align*}
+\bP\set{X > \sqrt{2\nu t}+ c t} \lor \bP\set{-X > \sqrt{2\nu t}+ c t}  \le e^{-t}. \qed
+\end{align*}
+\end{remark}
+\end{itemize}
 
 \subsection{Hoeffding's Inequality}
 \begin{itemize}
@@ -1110,6 +1486,7 @@ Let $Z$ be an integrable random variable such that for some $\nu > 0$, we have, 
 \end{align*}
 \end{proposition}
 \end{itemize}
+
 \subsection{Connection to Variance Bounds}
 \begin{itemize}
 \item \begin{proposition} (\textbf{A Modified Logarithmic Sobolev Inequalities for Moment Generating Function}) \citep{boucheron2013concentration}\\
