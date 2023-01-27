@@ -10,8 +10,8 @@
 
 ## Table of Contents
 
-- Summary Part 1: Probabilistic Methods to Prove Concentration  [pdf](./Ineq_0_Summary_1.pdf)
-- Summary Part 2: Functional and Geometric Methods to Prove Concentration  [pdf](./Ineq_0_Summary_2.pdf)
+- Summary Part 1: Probabilistic Methods for Non-Asymptotic Analysis  [pdf](./Ineq_0_Summary_1.pdf)
+- Summary Part 2: Concentration of Measure and Functional Methods for Non-Asymptotic Analysis  [pdf](./Ineq_0_Summary_2.pdf)
 - Summary Part 3: Applications of Concentration Inequalities  [pdf](./Ineq_0_Summary_3.pdf)
 
 
