@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  25 JAN 2023 21:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  26 JAN 2023 20:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -766,23 +766,17 @@ Overfull \hbox (2.37408pt too wide) in paragraph at lines 700--702
 ity, Sharp Bound\OT1/cmr/m/it/10.95 ) [Boucheron et al.,
  []
 
-[17]
-Overfull \hbox (8.08324pt too wide) in paragraph at lines 765--767
-[]\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Concentration of Con-vex Lip-s-chit
-z Func-tions, Im-proved\OT1/cmr/m/it/10.95 ) [Boucheron
- []
-
-[18] [19] (./Ineq_5_Concentration_Isoperimetry.bbl) [20]
+[17] [18] [19] (./Ineq_5_Concentration_Isoperimetry.bbl) [20]
 (./Ineq_5_Concentration_Isoperimetry.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 15953 strings out of 493029
- 316344 string characters out of 6136233
- 369902 words of memory out of 5000000
- 19149 multiletter control sequences out of 15000+600000
+ 15954 strings out of 493029
+ 316375 string characters out of 6136233
+ 369912 words of memory out of 5000000
+ 19150 multiletter control sequences out of 15000+600000
  16724 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,13n,84p,624b,475s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -805,7 +799,7 @@ e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf
 onts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/symbols/msbm10.pfb>
-Output written on Ineq_5_Concentration_Isoperimetry.pdf (20 pages, 421623 bytes
+Output written on Ineq_5_Concentration_Isoperimetry.pdf (20 pages, 421862 bytes
 ).
 PDF statistics:
  157 PDF objects out of 1000 (max. 8388607)

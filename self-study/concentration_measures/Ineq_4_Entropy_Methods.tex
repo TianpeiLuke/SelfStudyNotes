@@ -753,7 +753,7 @@ f(Y) &= \max_{i=1 \xdotx{,} n}\paren{A Y}_{i}
 \end{itemize}
 \subsection{Concentration of Convex Lipschitz Functions}
 \begin{itemize}
-\item \begin{theorem} (\textbf{Concentration of Convex Lipschitz Functions on Unit Hypercube}) \citep{boucheron2013concentration}\\
+\item \begin{theorem} (\textbf{Concentration of Separately Convex Lipschitz Functions}) \citep{boucheron2013concentration}\\
 Let  $Z:= (Z_1 \xdotx{,} Z_{n})$ be independent random variables taking values in the interval $[0, 1]$ and let $f : [0, 1]^n \to \bR$ be a \textbf{separately convex function} (i.e. $f$ is convex in each coordinate while the others are fixed) such that
 \begin{align*}
 \abs{f(x) - f(y)} &\le \norm{x - y}{} \quad \text{for all }x, y \in [0, 1]^n.
@@ -777,6 +777,17 @@ where $\widetilde{X}_{i} = \inf_{z_i'} f(Z_1 \xdotx{,} Z_{i-1}, z_{i}', Z_{i+1} 
 &\le 1 && (\text{\emph{ by Lipschitz property}})
 \end{align*} Therefore, we can apply the Proposition \ref{prop: bounded_variance_concentration} with variance bounded above by $\nu = 1$. \qed
 \end{proof}
+
+\item \begin{remark}
+For $Z_i \in [a_i, b_i]$, and $f$ being $L$-Lipschitz function, we have
+\begin{align*}
+\bP\set{f(Z) - \E{}{f(Z)} \ge t } &\le \exp\paren{- \frac{t^2}{2L^2\sum_{i=1}^n(b_i - a_i)^2}}
+\end{align*}
+\end{remark}
+
+\item \begin{remark}
+This result can be generalized to \emph{\textbf{convex Lipschitz function} of \textbf{sub-Gaussian random variables}}. Note that in above theorems, $Z_i \in [0, 1]$ is \emph{\textbf{sub-Gaussian}} as well. 
+\end{remark}
 \end{itemize}
 
 \subsection{Exponential Tail Bounds for Self-Bounding Functions}

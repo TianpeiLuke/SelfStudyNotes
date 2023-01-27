@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  22 JAN 2023 11:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  26 JAN 2023 20:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -723,8 +723,13 @@ Overfull \hbox (23.68715pt too wide) in paragraph at lines 696--698
 ity / The Tsirelson-Ibragimov-Sudakov
  []
 
-[17] [18] [19] (./Ineq_4_Entropy_Methods.bbl) [20]
-(./Ineq_4_Entropy_Methods.aux)
+[17] [18]
+Overfull \hbox (2.86131pt too wide) in paragraph at lines 756--758
+[]\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Concentration of Sep-a-rately Con-v
+ex Lip-s-chitz Func-tions\OT1/cmr/m/it/10.95 ) [Boucheron
+ []
+
+[19] [20] (./Ineq_4_Entropy_Methods.bbl) [21] (./Ineq_4_Entropy_Methods.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -757,10 +762,10 @@ dist/fonts/type1/public/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/doublestroke/dsrom8.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/rsfs/rsfs10.pfb>
-Output written on Ineq_4_Entropy_Methods.pdf (20 pages, 292979 bytes).
+Output written on Ineq_4_Entropy_Methods.pdf (21 pages, 293475 bytes).
 PDF statistics:
- 157 PDF objects out of 1000 (max. 8388607)
- 112 compressed objects within 2 object streams
+ 160 PDF objects out of 1000 (max. 8388607)
+ 114 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
