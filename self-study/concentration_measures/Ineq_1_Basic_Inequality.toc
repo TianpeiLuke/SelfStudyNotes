@@ -8,9 +8,9 @@
 \contentsline {subsection}{\numberline {3.2}Sub-Gaussian Random Variables}{9}
 \contentsline {subsection}{\numberline {3.3}Sub-Exponential Random Variables}{12}
 \contentsline {subsection}{\numberline {3.4}Sub-Gamma Random Variables}{14}
-\contentsline {subsection}{\numberline {3.5}Orlicz Spaces}{15}
+\contentsline {subsection}{\numberline {3.5}Orlicz Spaces}{16}
 \contentsline {subsection}{\numberline {3.6}A Maximal Inequality}{16}
 \contentsline {subsection}{\numberline {3.7}Hoeffding's Inequality}{18}
-\contentsline {subsection}{\numberline {3.8}Bennett's Inequality}{20}
-\contentsline {subsection}{\numberline {3.9}Bernstein's Inequality}{21}
+\contentsline {subsection}{\numberline {3.8}Bennett's Inequality}{21}
+\contentsline {subsection}{\numberline {3.9}Bernstein's Inequality}{22}
 \contentsline {subsection}{\numberline {3.10}The Johnson-Lindenstrauss Lemma}{23}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  26 JAN 2023 15:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  26 JAN 2023 19:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -728,29 +728,29 @@ Overfull \hbox (14.62032pt too wide) in paragraph at lines 605--608
  []
 
 [13]
-Overfull \hbox (3.91669pt too wide) in paragraph at lines 643--644
+Overfull \hbox (3.91669pt too wide) in paragraph at lines 659--660
 []\OT1/cmr/m/n/10.95 Similarlly, a real-valued cen-tered ran-dom vari-able $\OM
 L/cmm/m/it/10.95 X$ \OT1/cmr/m/n/10.95 is said to be $[]$
  []
 
+[14]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
-[14] [15] [16] [17] [18]
+ [15] [16] [17] [18]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
- [19] [20]
-Overfull \hbox (6.16812pt too wide) in paragraph at lines 997--999
+ [19] [20] [21]
+Overfull \hbox (6.16812pt too wide) in paragraph at lines 1028--1030
 []\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Bernstein's In-equal-ity, Sub-Gamma
  Dis-tri-bu-tion\OT1/cmr/m/it/10.95 ). [Boucheron et al.,
  []
 
-[21] [22] [23] (./Ineq_1_Basic_Inequality.bbl) [24]
-(./Ineq_1_Basic_Inequality.aux)
+[22] [23] (./Ineq_1_Basic_Inequality.bbl) [24] (./Ineq_1_Basic_Inequality.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -783,7 +783,7 @@ dist/fonts/type1/public/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/doublestroke/dsrom8.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/rsfs/rsfs10.pfb>
-Output written on Ineq_1_Basic_Inequality.pdf (24 pages, 305019 bytes).
+Output written on Ineq_1_Basic_Inequality.pdf (24 pages, 306973 bytes).
 PDF statistics:
  169 PDF objects out of 1000 (max. 8388607)
  120 compressed objects within 2 object streams

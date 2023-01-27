@@ -634,6 +634,22 @@ $X$ is a \emph{non-negative random variable} with tails
 
 \subsection{Sub-Gamma Random Variables}
 \begin{itemize}
+\item \begin{remark}
+For \emph{exponential distribution} $X \sim \exp(a)$ with \emph{rate} $a$ (\emph{inverse} of \emph{scale parameter}), the p.d.f. and moment generating function
+\begin{align*}
+f_{X}(x) &= a e^{-ax},\quad  x > 0\\
+M_{X}(\lambda) &= \frac{1}{1  - \lambda/a},\quad  0 < \lambda < a
+\end{align*}
+
+For \emph{Gamma distribution} $X \sim \Gamma(a, 1/b)$ with \emph{shape parameter} $a$ and \emph{scale parameter} $b$, the p.d.f. and the moment generating function
+\begin{align*}
+f_{X}(x) &= \frac{1}{\Gamma(a)\,b^a} x^{a-1} e^{-x/b},\quad  x > 0\\
+M_{X}(\lambda) &= \paren{\frac{1}{1  - b \lambda }}^{a},\quad  0 < \lambda < 1/b
+\end{align*}Also $\E{}{X} = ab$ and $\text{Var}(X) = ab^2$.
+\end{remark}
+
+
+
 \item \begin{definition}(\emph{\textbf{Sub-Gamma Random Variables}})\\
 A real-valued centered random variable $X$ is said to be \emph{\underline{\textbf{sub-gamma} on \textbf{the right tail}} with \textbf{variance factor} $\nu$ and \textbf{scale parameter} $c$} if
 \begin{align*}
@@ -646,6 +662,21 @@ Finally, $X$ is simply said to be \emph{\underline{\textbf{sub-gamma}} with \tex
 
 Observe that $\Gamma(\nu, 0)= \cG(\nu)$.
 \end{definition}
+
+\item \begin{remark}
+To derive the definition fo sub-gamma distribution, we see that \emph{the variance factor} $\nu:= ab^2$ and $c:= b$. Also $\E{}{X} = ab$. The logarithmic moment generating function of Gamma distribution $\Gamma(a, 1/b) = \Gamma(\nu/c^2, 1/c)$ is 
+\begin{align*}
+\psi_{X - \E{}{X}}(\lambda) = a\log\paren{\frac{1}{1 - b \lambda}} - \lambda a b  \le  \frac{\lambda^2 b^2 a}{2(1 - b\lambda)} \equiv  \frac{\lambda^2 \nu}{2(1 - c\lambda)}
+\end{align*}
+The last inequality is due to 
+\begin{align*}
+\log \paren{\frac{1}{1 - u}} - u \le \frac{u^2}{2(1 - u)}
+\end{align*}
+\end{remark}
+
+\item \begin{remark}
+Note that the sum of $n$ i.i.d. random variables with exponential distribution $\exp(1/b)$ have the Gamma distribution $\Gamma(n, 1/b)$. So \emph{\textbf{the sub-gamma distributed}} random variable follows  \emph{\textbf{the sub-exponential distribution}} as well (with shape parameter $=1$).
+\end{remark}
 
 \item \begin{remark} (\textbf{\emph{Characterization}})\\
 Similarly to the \emph{sub-Gaussian property}, the \emph{\textbf{sub-gamma property}} can be characterized in terms of \emph{tail or moment conditions}. We start by computing \emph{\textbf{the Fenchel-Legendre dual function}} of
