@@ -750,7 +750,7 @@ d_{T}(x, A) &:=\sup_{\alpha \in \bR_{+}^{n}: \norm{\alpha}{2} = 1}d_{\alpha}(x, 
 \item \begin{theorem} (\textbf{Convex Distance Inequality}) \citep{boucheron2013concentration}\\
 For any subset $A \subset \cX^n$ and $t > 0$,
 \begin{align}
-\bP(A)\bP\set{d_{T}(X, A)  \ge t} = \bP(A)\bP\set{\sup_{\alpha \in \bR_{+}^{n}: \norm{\alpha}{2} = 1}d_{\alpha}(X, A) \ge t} \le  \exp\paren{-\frac{t^2}{4}}.
+\bP(A)\bP\set{d_{T}(X, A)  \ge t} = \bP(A)\bP\set{\sup_{\alpha \in \bR_{+}^{n}: \norm{\alpha}{2} = 1}d_{\alpha}(X, A) \ge t} \le  \exp\paren{-\frac{t^2}{4}}. \label{ineqn: convex_dist_inequality}
 \end{align}
 \end{theorem}
 
@@ -762,7 +762,7 @@ Let $A \subset [0, 1]^n$ be a \textbf{convex set} and let $x = (x_1 \xdotx{,} x_
 \end{align}
 \end{lemma}
 
-\item \begin{theorem} (\textbf{Concentration of Convex Lipschitz Functions, Improved}) \citep{boucheron2013concentration}\\
+\item \begin{theorem} (\textbf{Concentration of Quasi-Convex Lipschitz Functions}) \citep{boucheron2013concentration}\\
 Let  $Z:= (Z_1 \xdotx{,} Z_{n})$ be independent random variables taking values in the interval $[0, 1]$ and let $f : [0, 1]^n \to \bR$ be a \textbf{quasi-convex function}; that is
 \begin{align*}
 \set{z: f(z) \le s} \text{ is convex set for all }s \in \bR. 
@@ -790,9 +790,6 @@ f(z) \le s +  d(z, A) \le s + d_{T}(z, A).
 \subsection{Edge Isoperimetric Inequality on the Binary Hypercube}
 \subsection{Vertex Isoperimetric Inequality on the Binary Hypercube}
 
-
-%\section{The Classic Isoperimetry Inequalities}
-%\subsection{Concentration of Lipschitz Function for the Sphere}
 
 
 
