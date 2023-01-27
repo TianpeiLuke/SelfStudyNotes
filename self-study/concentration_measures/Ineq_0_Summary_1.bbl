@@ -1,0 +1,55 @@
+\begin{thebibliography}{8}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Boucheron et~al.(2013)Boucheron, Lugosi, and
+  Massart]{boucheron2013concentration}
+St{\'e}phane Boucheron, G{\'a}bor Lugosi, and Pascal Massart.
+\newblock \emph{Concentration inequalities: A nonasymptotic theory of
+  independence}.
+\newblock Oxford university press, 2013.
+
+\bibitem[Cover and Thomas(2006)]{thomas2006elements}
+Thomas~M. Cover and Joy~A. Thomas.
+\newblock \emph{Elements of information theory {(2.} ed.)}.
+\newblock Wiley, 2006.
+\newblock ISBN 978-0-471-24195-9.
+
+\bibitem[Peyré and Cuturi(2019)]{gabriel2019computational}
+Gabriel Peyré and Marco Cuturi.
+\newblock Computational optimal transport: With applications to data science.
+\newblock \emph{Foundations and Trends® in Machine Learning}, 11\penalty0
+  (5-6):\penalty0 355--607, 2019.
+\newblock ISSN 1935-8237.
+
+\bibitem[Resnick(2013)]{resnick2013probability}
+Sidney~I Resnick.
+\newblock \emph{A probability path}.
+\newblock Springer Science \& Business Media, 2013.
+
+\bibitem[Santambrogio(2015)]{santambrogio2015optimal}
+Filippo Santambrogio.
+\newblock \emph{Optimal transport for applied mathematicians}, volume~55.
+\newblock Springer, 2015.
+
+\bibitem[Vershynin(2018)]{vershynin2018high}
+Roman Vershynin.
+\newblock \emph{High-dimensional probability: An introduction with applications
+  in data science}, volume~47.
+\newblock Cambridge university press, 2018.
+
+\bibitem[Villani(2009)]{villani2009optimal}
+C{\'e}dric Villani.
+\newblock \emph{Optimal transport: old and new}, volume 338.
+\newblock Springer, 2009.
+
+\bibitem[Wainwright(2019)]{wainwright2019high}
+Martin~J Wainwright.
+\newblock \emph{High-dimensional statistics: A non-asymptotic viewpoint},
+  volume~48.
+\newblock Cambridge University Press, 2019.
+
+\end{thebibliography}
