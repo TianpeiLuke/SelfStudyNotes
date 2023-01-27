@@ -126,12 +126,12 @@ c(p) &= \frac{1}{1 - 2p}\log\frac{1-p}{p}
 
 \subsection{Gaussian Logarithmic Sobolev Inequality}
 \begin{itemize}
-\item \begin{proposition} (\textbf{Gaussian Logarithmic Sobolev Inequality}). \citep{boucheron2013concentration}\\
+\item \begin{theorem} (\textbf{Gaussian Logarithmic Sobolev Inequality}). \citep{boucheron2013concentration}\\
 Let $f: \bR^n \to \bR$ be a \textbf{continuous differentiable} function and let $Z = (Z_1 \xdotx{,} Z_n)$ be a vector of $n$ \textbf{independent} \textbf{standard Gaussian} random variables. Then
 \begin{align}
 \text{Ent}(f^2(Z)) &\le 2\E{}{\norm{\nabla f(Z)}{2}^2}.  \label{ineqn: log_sobolev_inequality_gaussian}
 \end{align}
-\end{proposition}
+\end{theorem}
 \begin{proof}
 We first prove for $n=1$, where $f: \bR \rightarrow \bR$ is continuous differentiable and $Z$ is standard Gaussian distribution. Without loss of generality, assume that $\E{}{f'(Z)} < \infty$ since it is trivial when  $\E{}{f'(Z)} = \infty$. By density argument, it suffice to prove the proposition when $f$ is \emph{twice differentiable with bounded support}.
 
@@ -792,7 +792,7 @@ This result can be generalized to \emph{\textbf{convex Lipschitz function} of \t
 
 \subsection{Exponential Tail Bounds for Self-Bounding Functions}
 
-\subsection{Hypercontractivity for Boolean Polynomials}
+\subsection{Hypercontractivity: The Bonami-Beckner Inequality}
 \subsection{Gaussian Hypercontractivity}
 
 
