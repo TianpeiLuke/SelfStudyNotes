@@ -15,13 +15,13 @@
 \contentsline {subsection}{\numberline {3.2}Lipschitz Functions of Gaussian Variables}{13}
 \contentsline {subsection}{\numberline {3.3}Gaussian Logarithmic Sobolev Inequality}{14}
 \contentsline {subsection}{\numberline {3.4}Gaussian Transportation Inequality}{14}
-\contentsline {subsection}{\numberline {3.5}Gaussian Hypercontractivity}{14}
-\contentsline {subsection}{\numberline {3.6}Suprema of Gaussian Process}{14}
+\contentsline {subsection}{\numberline {3.5}Gaussian Hypercontractivity}{15}
+\contentsline {subsection}{\numberline {3.6}Suprema of Gaussian Process}{15}
 \contentsline {section}{\numberline {4}Concentration of Bernoulli Measure on the Binary Hypercube}{15}
 \contentsline {subsection}{\numberline {4.1}Edge Isoperimetric Inequality on the Binary Hypercube}{15}
 \contentsline {subsection}{\numberline {4.2}Bobkov's Inequality}{15}
-\contentsline {subsection}{\numberline {4.3}Vertex Isoperimetric Inequality on the Binary Hypercube}{15}
-\contentsline {subsection}{\numberline {4.4}Hypercontractivity: The Bonami-Beckner Inequality}{15}
-\contentsline {subsection}{\numberline {4.5}Influence Function}{15}
-\contentsline {subsection}{\numberline {4.6}Monotone Sets}{15}
-\contentsline {subsection}{\numberline {4.7}Threshold Phenomena}{15}
+\contentsline {subsection}{\numberline {4.3}Vertex Isoperimetric Inequality on the Binary Hypercube}{16}
+\contentsline {subsection}{\numberline {4.4}Hypercontractivity: The Bonami-Beckner Inequality}{16}
+\contentsline {subsection}{\numberline {4.5}Influence Function}{16}
+\contentsline {subsection}{\numberline {4.6}Monotone Sets}{16}
+\contentsline {subsection}{\numberline {4.7}Threshold Phenomena}{16}
