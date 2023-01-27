@@ -1,0 +1,1436 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs,  mathtools, dsfont}
+\usepackage{tabularx}
+\usepackage{tikz-cd}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+%\usepackage{tikz-cd}
+
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Summary: Part 1}
+\author{ Tianpei Xie}
+\date{Jan. 26th., 2023 }
+\maketitle
+\tableofcontents
+\newpage
+\section{Basic Inequalities}
+\subsection{Arithmetic, Calculus and Algebra}
+\begin{itemize}
+\item 
+\end{itemize}
+\subsection{Function Space, Convexity and Duality}
+\begin{itemize}
+\item \begin{proposition} (\textbf{Jensen's inequality}) \citep{vershynin2018high}\\
+Let $(\Omega, \srF, \bP)$ be a probability space. Let $f:\Omega \to \bR$ be a $\bP$-measurable function and  $\varphi: \bR \to \bR$ be \textbf{convex function}. Then
+\begin{align}
+\varphi\paren{\E{}{X}} := \varphi\paren{\int X d\bP} &\le \int \varphi \circ X d\bP := \E{}{\varphi\paren{X}}. \label{ineqn: jensen}
+\end{align}
+\end{proposition}
+
+\item \begin{remark}
+As a simple consequence of Jensen's inequality, $\norm{X}{L^p}$ is an \emph{\textbf{increasing function in $p$}}, that is
+\begin{align}
+\norm{X}{L^p} \le \norm{X}{L^q}\,\quad \text{for any } 1 \le p \le q \le \infty  \label{ineqn: lp_norm}
+\end{align}
+This inequality follows since $\varphi(x) = x^{q/p}$ is a \emph{convex function} if $q/p \ge 1$.
+\end{remark}
+
+\item \begin{proposition} (\textbf{Minkowski's inequality}) \citep{vershynin2018high}\\
+For any $p\in [1, \infty]$, $X, Y \in L^p(\Omega, \bP)$, 
+\begin{align}
+\norm{X+ Y}{L^p} \le \norm{X}{L^p} + \norm{Y}{L^p},  \label{ineqn: norm_triangle_inequality}
+\end{align} which implies that $\norm{\cdot}{L^p}$ is a norm.
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Cauchy-Schwarz inequality}) \citep{vershynin2018high}\\
+For any random variables $X, Y \in L^2(\Omega, \bP)$, the following inequality is satisfied:
+\begin{align}
+\abs{\inn{X}{Y}_{L^2}} := \abs{\E{}{XY}} \le \norm{X}{L^2} \, \norm{Y}{L^2}. \label{ineqn: cauchy_schwarz_inequality}
+\end{align}
+\end{proposition}
+
+This inequalities can be extended to \emph{conjugate spaces} $L^p$ and $L^q$ 
+ \begin{proposition} (\textbf{H\"older's inequality}) \citep{vershynin2018high}\\
+For $p,q \in (1, \infty)$, $1/p + 1/q = 1$, then the random variables $X \in L^p(\Omega, \bP)$, $Y \in L^q(\Omega, \bP)$ satisfy
+\begin{align}
+\abs{\inn{X}{Y}_{L^2}} := \abs{\E{}{XY}}  \le \norm{X}{L^p} \, \norm{Y}{L^q}. \label{ineqn: holder_inequality}
+\end{align}
+\end{proposition}
+
+\end{itemize}
+
+\subsection{Probability Theory}
+\begin{itemize}
+\item Assume a probability space $(\Omega, \srF, \bP)$ and a random variable $X: \Omega \to \bR$ is a real-valued measurable function on $\Omega$.
+
+\item For a random variable $X$, the \emph{\textbf{expectation}} and \emph{\textbf{variance}} are denoted as
+\begin{align*}
+\E{}{X} &= \int X d\bP \\
+Var(X) &= \E{}{\paren{X - \E{}{X}}^2}
+\end{align*}
+
+\item The \emph{\textbf{moment generating function}} of $X$ and its \emph{\textbf{logarithm}} are denoted as
+\begin{align*}
+M_{X}(\lambda) &:= \E{}{e^{\lambda X}} \\
+\psi_{X}(\lambda) &:= \log   \E{}{e^{\lambda X}}
+\end{align*}
+
+\item For $p > 0$, \emph{\textbf{the $p$-th moment} of $X$} is defined as $\E{}{X^p}$, and the \emph{\textbf{$p$-th absolute moment}} is $\E{}{\abs{X}^p}$.
+
+\item The \emph{\textbf{$L^p$ norm}} of $X$ is
+\begin{align*}
+\norm{X}{L^p} &:= \E{}{\abs{X}^p}^{1/p}
+\end{align*} where $1 \le p  < \infty$. Note that the $L^p$ space is a \emph{Banach space}, which is defined as
+\begin{align*}
+L^{p}(\Omega, \bP) := \set{X: \norm{X}{L^p} < \infty }.
+\end{align*}
+
+\item \emph{The \textbf{essential supremum}} of $\abs{X}$ is the \emph{\textbf{$L^\infty$ norm}} of $X$
+\begin{align*}
+\norm{X}{L^\infty} &:= \text{ess sup}\abs{X}
+\end{align*} Similarly, $L^{\infty}$ is a Banach space as well
+\begin{align*}
+L^{\infty}(\Omega, \bP) := \set{X: \norm{X}{L^\infty} < \infty }.
+\end{align*}
+
+\item For $p=2$, $L^2$ space is a \emph{Hilbert space} with inner product between random variables $X, Y \in L^2(\Omega, \bP)$
+\begin{align*}
+\inn{X}{Y}_{L^2} &:= \E{}{XY} = \int X Y d\bP
+\end{align*} The \emph{\textbf{standard deviation}} is 
+\begin{align*}
+\sigma(X) &= \paren{Var(X) }^{1/2} = \norm{X - \E{}{X}}{L^2}.
+\end{align*} The \emph{\textbf{covariance}} is defined as 
+\begin{align*}
+cov(X, Y) &:= \inn{X- \E{}{X}}{Y - \E{}{Y}} \\
+&= \E{}{\paren{X- \E{}{X}}\paren{Y - \E{}{Y}}}
+\end{align*} When we consider random variables as vectors in the Hilbert space $L^2$, the identity above gives a \emph{\textbf{geometric interpretation} of the notion of covariance}. The more the vectors $X - \E{}{X}$ and $Y - \E{}{Y}$ are aligned with each other, the bigger their inner product and covariance are.
+
+\item The \emph{\textbf{cumulative distribution function (CDF)}} is defined as
+\begin{align*}
+F_{X}(t) &:= \bP\brac{X \le t}, \quad t\in \bR.
+\end{align*}
+
+The following result is important 
+\begin{lemma} (\textbf{Integral Identity}).  \citep{vershynin2018high}\\
+Let $X$ be a \textbf{non-negative} random variable.
+Then
+\begin{align}
+\E{}{X} &= \int_{0}^{\infty}\bP\brac{X > t} dt. \label{eqn: integral_identity}
+\end{align}
+The two sides of this identity are either finite or infinite simultaneously.
+\end{lemma}
+
+\item \begin{theorem} (\textbf{Central Limit Theorem, Linderberg-Le{\'v}y})\\
+Let $X_1 \xdotx{,} X_n$ be \textbf{independent identically distributed} random variables with mean $\E{}{X_i} = 0$ and variance $\text{Var}(X_i) = 1$. Then 
+\begin{align}
+\frac{1}{\sqrt{n}}\sum_{i=1}^{n}X_i  \stackrel{d}{\rightarrow} N(0, 1) \label{eqn: central_limit_theorem} \\
+\text{i.e. } \lim\limits_{n \to \infty}\sup_{t \in \bR}\abs{\bP\set{\frac{1}{\sqrt{n}}\sum_{i=1}^{n}X_i \le t} - \Phi(t)} &= 0 \nonumber
+\end{align} where $\Phi(t) = \int_{-\infty}^{t}\frac{1}{\sqrt{2\pi}}e^{-u^2/2}du = \bP\set{g \le t}$ for some Gaussian variable $g$.
+\end{theorem}
+
+\item \begin{theorem} (\textbf{Central Limit Theorem, Nonasymptotic, Berry-Esseen}) \citep{vershynin2018high} \\
+Let $X_1 \xdotx{,} X_n$ be \textbf{independent identically distributed} random variables with mean $\E{}{X_i} = 0$, variance $\text{Var}(X_i) = \sigma^2$ and $\rho := \E{}{\abs{X_i}^3} <\infty$. Then with some constant $C > 0$, 
+\begin{align}
+\sup_{t \in \bR}\abs{\bP\set{\frac{1}{\sigma \sqrt{n}}\sum_{i=1}^{n}X_i \le t} - \Phi(t)} &\le  \frac{C}{ \sigma^3\sqrt{n}}\rho \label{eqn: central_limit_theorem_nonasym} 
+\end{align} where $\Phi(t) = \int_{-\infty}^{t}\frac{1}{\sqrt{2\pi}}e^{-u^2/2}du = \bP\set{g \le t}$ for some Gaussian variable $g$.
+\end{theorem}
+
+\item \begin{remark} The \emph{Berry-Esseen} version of \emph{central limit theorem} is \emph{\textbf{non-asymptotic}} and it has a bound
+\begin{align*}
+\bP\set{\frac{1}{\sqrt{n}}\sum_{i=1}^{n}X_i \le t} &\le \bP\set{g \le t} + \frac{C}{\sqrt{n}}\rho = \int_{-\infty}^{t}\frac{1}{\sqrt{2\pi}}e^{-u^2/2}du +  \frac{C}{\sqrt{n}}\rho 
+\end{align*} This bound is \emph{\textbf{sharp}}, i.e. the equality is attained when $X_i \sim \text{Bernoulli}(1/2)$.
+\end{remark}
+
+\item \begin{theorem} (\textbf{Poisson Limit Theorem}).   \citep{vershynin2018high} \\
+Let $X_{N,i}$, $1 \le i \le N$, be independent random variables $X_{N,i} \sim \text{Ber}(p_{N,i})$, and let $S_N = \sum^{N}_{i=1}X_{N,i}$. Assume that, as $N \to \infty$
+\begin{align*}
+\max_{i\le N}p_{N,i} \rightarrow 0\quad  \text{ and }\quad \E{}{S_N} = \sum^{N}_{i=1}p_{N,i} \rightarrow \lambda < \infty,
+\end{align*}
+Then, as $N \to \infty$,
+\begin{align*}
+S_N =  \sum^{N}_{i=1}X_{N,i} \stackrel{d}{\rightarrow} \text{Pois}(\lambda)
+\end{align*}
+\end{theorem}
+\end{itemize}
+
+
+\subsection{Information Theory}
+\begin{itemize}
+\item \begin{definition} (\textbf{\emph{Shannon Entropy}}) \citep{thomas2006elements}\\
+Let $(\Omega, \srF, \bP)$ be a probability space and $X: \bR \to \cX$ be a random variable. Define $p(x)$ as \emph{the probability density function} of $X$ with respect to a base measure $\mu$ on $\cX$. \underline{\emph{\textbf{The Shannon Entropy}}} is defined as 
+\begin{align*}
+H(X) &:= \E{p}{-\log p(X)} \\
+&= \int_{\Omega} -\log p(X(\omega)) d\bP(\omega) \\
+&= - \int_{\cX} p(x)  \log p(x) d\mu(x)
+\end{align*}
+\end{definition}
+
+\item \begin{definition} (\textbf{\emph{Conditional Entropy}}) \citep{thomas2006elements}\\
+If a pair of random variables $(X, Y)$ follows the joint probability density function $p(x, y)$ with respect to a base product measure $\mu$ on $\cX \times \cY$. Then \emph{\textbf{the joint entropy}} of $(X, Y)$, denoted as $H(X, Y)$, is defined as
+\begin{align*}
+H(X, Y) &:=  \E{X, Y}{-\log p(X, Y)} = - \int_{\cX \times \cY} p(x, y)  \log p(x, y) d\mu(x, y)
+\end{align*} Then \emph{\textbf{the conditional entropy}} $H(Y | X)$ is defined as
+\begin{align*}
+H(Y | X) &:= \E{X, Y}{-\log p(Y|X)}  = -\int_{\cX \times \cY} p(x, y)  \log p(y | x) d\mu(x, y) \\
+&=  \E{X}{\E{Y}{-\log p(Y|X)}} = \int_{\cX}p(x) \paren{-\int_{\cY}p(y|x) \log p(y|x) d\mu(y)}d\mu(x)
+\end{align*}
+\end{definition}
+
+\item \begin{proposition}(\textbf{Properties of Shannon Entropy})  \citep{thomas2006elements}\\
+Let $X, Y, Z$ be random variables. 
+\begin{enumerate}
+\item (\textbf{Non-negativity}) $H(X) \ge 0$;
+\item (\textbf{Concavity}) $H(p) := \E{p}{-\log p(X)}$ is a concave function in terms of p.d.f. $p$, i.e.
+\begin{align*}
+H(\lambda p_1 + (1- \lambda) p_2) \ge \lambda H(p_1) + (1- \lambda) H(p_2)
+\end{align*} for any two p.d.fs $p_1, p_2$ on $\cX$ and any $\lambda \in [0,1]$.
+\end{enumerate}
+\end{proposition}
+
+\item \begin{definition} (\textbf{\emph{Relative Entropy / Kullback-Leibler Divergence}}) \citep{thomas2006elements}\\
+Suppose that $P$ and $Q$ are \emph{probability measures} on a measurable space $\cX$, and $P$ is \emph{absolutely continuous} with respect to $Q$, then \underline{\emph{\textbf{the relative entropy}}} or \underline{\emph{\textbf{the Kullback-Leibler divergence}}} is defined as
+\begin{align*}
+\kl{P}{Q} &:=\E{P}{\log\paren{\frac{dP}{dQ}}} = \int_{\cX} \log\paren{\frac{dP(x)}{dQ(x)}} dP(x)
+\end{align*} where $\frac{dP}{dQ}$ is \emph{the Radon-Nikodym derivative} of $P$ with respect to $Q$. Equivalently, the KL-divergence can be written as
+\begin{align*}
+\kl{P}{Q} &= \int_{\cX} \paren{\frac{dP(x)}{dQ(x)}} \log\paren{\frac{dP(x)}{dQ(x)}} dQ(x) 
+\end{align*} which is \emph{the entropy of $P$ relative to $Q$}. Furthermore, if $\mu$ is a base measure on $\cX$ for which densities $p$ and $q$ with $dP = p(x)d\mu$ and $dQ = q(x) d\mu$ exist, then 
+\begin{align*}
+\kl{P}{Q} &= \int_{\cX} p(x)\log\paren{\frac{p(x)}{q(x)}} d\mu(x)
+\end{align*}
+\end{definition}
+
+\item \begin{definition}(\textbf{\emph{Mutual Information}}) \citep{thomas2006elements}\\
+Consider two random variables $X, Y$ on $\cX \times \cY$ with joint probability distribution $P_{(X, Y)}$ and marginal distribution $P_{X}$ and $P_{Y}$. \underline{\emph{\textbf{The mutual information $I(X; Y)$}}} is \emph{the relative entropy} between \emph{the joint distribution} $P_{(X, Y)}$ and \emph{the product distribution} $P_{X}\otimes P_{Y}$:
+\begin{align*}
+I(X; Y) &= \kl{P_{(X, Y)}}{P_{X}\otimes P_{Y}} = \E{P_{(X, Y)}}{\log \frac{dP_{(X,Y)}}{dP_{X} \otimes dP_{Y}}}
+\end{align*} If $P_{(X, Y)}$ has a probability density function $p(x,y)$ with respect to a base measure $\mu$ on $\cX \times \cY$, then 
+\begin{align*}
+I(X; Y) &=\int_{\cX \times \cY} p(x, y)\log\paren{\frac{p(x, y)}{p_{X}(x)p_{Y}(y)}} d\mu(x, y)
+\end{align*}
+\end{definition}
+
+\item \begin{proposition} (\textbf{Properties of Relative Entropy and Mutual Information})  \citep{thomas2006elements}\\
+Let $X, Y$ be random variables.
+\begin{enumerate}
+\item (\textbf{Non-negativity})  Let $p(x), q(x)$ be probability density function of $P ,Q$.
+\begin{align*}
+\kl{P}{Q} \ge 0
+\end{align*} with equality if and only if $p(x) = q(x)$ almost surely. Therefore, the mutual information is non-negative as well:
+\begin{align*}
+I(X; Y) \ge 0
+\end{align*} with equality if and only if $X$ and $Y$ are independent.
+\item (\textbf{Symmetry})  $I(X; Y) = I(Y; X)$
+\item (\textbf{Information Gain via Conditioning}) The mutual information $I(X; Y)$ is the reduction in the uncertainty of $X$ due to the knowledge of $Y$ (and vice versa)
+\begin{align}
+I(X; Y) &= H(X) - H(X | Y) \label{eqn: mutual_information_gain}\\
+&= H(Y) - H(Y | X) \nonumber\\
+&= H(X) + H(Y) - H(X, Y) \nonumber
+\end{align}
+\item (\textbf{Shannon Entropy as Self-Information})  $I(X; X) = H(X)$
+\item (\textbf{Joint Convexity of Relative Entropy}) The relative entropy $\kl{p}{q}$ is \textbf{convex} in the pair $(p, q)$; that is, if $(p_1, q_1)$ and $(p_2, q_2)$ are two pairs of probability density functions, then for $\lambda \in [0, 1]$,  
+\begin{align}
+\kl{\lambda p_1 + (1- \lambda) p_2}{\lambda q_1 + (1- \lambda) q_2} &\le \lambda \kl{p_1}{q_1} + (1- \lambda) \kl{p_2}{q_2} \label{ineqn: kl_divergence_joint_convex}
+\end{align}
+\end{enumerate}
+\end{proposition}
+
+
+
+\item \begin{proposition} (\textbf{Conditioning Reduces Entropy}) \citep{thomas2006elements}\\
+From non-negativity of mutual information, we see that the entropy of $X$ is non-increasing when conditioning on $Y$
+\begin{align}
+H(X | Y) \le  H(X)  \label{ineqn: conditional_entropy}
+\end{align} where equality holds if and only if $X$ and $Y$ are independent.
+\end{proposition}
+
+
+\item \begin{proposition} (\textbf{Chain Rule for Entropy}) \citep{thomas2006elements}\\
+Let $X_1, X_2 \xdotx{,} X_n$ be drawn according to $p(x_1, x_2 \xdotx{,} x_n)$. Then
+\begin{align}
+H(X_1, X_2 \xdotx{,} X_n) &= \sum_{i=1}^{n}H(X_i | X_{i-1} \xdotx{,} X_1) \label{eqn: chain_rule_entropy}
+\end{align}
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Sub-Additivity of Entropy}) \citep{thomas2006elements}\\
+Let $X_1, X_2 \xdotx{,} X_n$ be drawn according to $p(x_1, x_2 \xdotx{,} x_n)$. Then
+\begin{align}
+H(X_1, X_2 \xdotx{,} X_n) &\le \sum_{i=1}^{n}H(X_i)  \label{ineqn: sub_additivity_entropy}
+\end{align} with equality if and only if the $X_i$ are independent.
+\end{proposition}
+
+
+\item \begin{proposition} (\textbf{Chain Rule for Relative Entropy}) \citep{thomas2006elements}\\
+Let $P_{(X, Y)}$ and $Q_{(X, Y)}$ be two probability measures on product space $\cX \times \cY$ and $P \ll Q$. Denote the marginal distributions $P_X, Q_X$ and $P_Y$, $Q_Y$ on $\cX$ and $\cY$, respectively. $P_{Y|X}$ and $Q_{Y|X}$ are conditional distributions (Note that $P_{Y|X} \ll Q_{Y|X}$).  Define \textbf{the conditional relative entropy} as
+\begin{align*}
+\E{X}{\kl{P_{Y | X}}{Q_{Y | X}}} := \E{X}{\E{P_{Y|X}}{\log \paren{\frac{dP_{Y| X}}{dQ_{Y | X}}}}}. 
+\end{align*} Then the relative entropy of joint distribution $P_{(X, Y)}$ with respect to $Q_{(X, Y)}$ is 
+\begin{align}
+\kl{P_{(X, Y)}}{Q_{(X, Y)}} &= \kl{P_{X}}{Q_{X}} + \E{X}{\kl{P_{Y | X}}{Q_{Y | X}}} \label{eqn: chain_rule_kl}
+\end{align} In addition, let $P$ and $Q$ denote two joint distributions for $X_1, X_2 \xdotx{,} X_n$, let $P_{1:i}$ and $Q_{1:i}$ denote the marginal distributions of $X_1, X_2 \xdotx{,} X_i$ under $P$ and $Q$, respectively. Let $P_{X_i | 1 \ldots i-1}$ and $Q_{X_i | 1 \ldots i-1}$ denote the conditional distribution of $X_i$ with respect to $X_1, X_2 \xdotx{,} X_{i-1}$ under $P$ and under $Q$.
+\begin{align}
+\kl{P}{Q} &= \sum_{i=1}^{n}\E{P_{1:i-1}}{\kl{P_{X_i | 1 \ldots i-1}}{Q_{X_i | 1 \ldots i-1}}} \label{eqn: chain_rule_kl_k}
+\end{align} 
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Han's Inequality}) \citep{thomas2006elements, boucheron2013concentration}\\
+Let $X_1, X_2 \xdotx{,} X_n$ be random variables. Then
+\begin{align}
+H(X_1, X_2 \xdotx{,} X_n) &\le \frac{1}{n-1}\sum_{i=1}^{n}H(X_1 \xdotx{,} X_{i-1}, X_{i+1} \xdotx{,} X_n) \label{ineqn: han_inequality} \\
+\Leftrightarrow H(X) &\le \frac{1}{n-1}\sum_{i=1}^{n}H(X_{(-i)}) \nonumber
+\end{align}
+\end{proposition}
+\end{itemize}
+
+\section{Summary: General Proof Stratgy for Concentration Problem}
+
+\section{Summary: Distribution-Free Concentration Inequality}
+
+
+\section{The Cram\'er-Chernoff Method}
+\subsection{From Markov Inequality to Cram\'er-Chernoff Method}
+\begin{itemize}
+\item 
+\begin{proposition} (\textbf{Markov's Inequality}). \citep{vershynin2018high}\\
+For any \textbf{non-negative} random variable $X$ and $t > 0$, we have
+\begin{align}
+\bP\set{X \ge t} &\le \frac{\E{}{X}}{t} \label{ineqn: markov_inequality}
+\end{align}
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Chebyshev's Inequality}). \citep{vershynin2018high}\\
+Let $X$ be a random variable with mean $\mu$ and variance $\sigma^2$. Then, for any $t > 0$, we have
+\begin{align}
+\bP\set{\abs{X - \mu} \ge t} &\le \frac{\sigma^2}{t^2}. \label{ineqn: chebyshev_inequality}
+\end{align}
+\end{proposition}
+
+\item \begin{remark}(\textbf{\emph{Cram\'er-Chernoff Method}})\\
+In this section we describe and formalize the Cram{\'e}r-Chernoff bounding method. This method determines \emph{the best possible bound} for a \emph{\textbf{tail probability}} that one can possibly obtain using \emph{Markov's inequality} with an exponential function $\phi(t) = e^{\lambda t}$.
+
+Recall that for a real-valued random variable $X$, any $\lambda \ge 0$, the following inequality holds
+\begin{align*}
+\bP\set{X \ge t} &\le e^{-\lambda t} \E{}{e^{\lambda X}} = \exp\paren{-\lambda t + \psi_{X}(\lambda) }
+\end{align*} where $\psi_{X}(\lambda) := \log   \E{}{e^{\lambda X}}$. One can choose optimal $\lambda^{*}$ that \emph{\textbf{minimizes} the upper bound above}.
+Since $\psi_{X}(\lambda)$ is a \emph{\textbf{convex function}}, we can define its \underline{\emph{\textbf{Legendre transform}}}
+\begin{align*}
+\psi^{*}_{X}(t) &:= \sup_{\lambda \in \bR}\set{\lambda\,t - \psi_{X}(\lambda)}.
+\end{align*} The expression of the right-hand side is known as the \underline{\emph{\textbf{Fenchel-Legendre dual function}}} (or the \textbf{\emph{convex conjugate}}) of $\psi_{X}$. The Legendre transform of log-moment generating function is also its convex conjugate. % Since $e^t$ is monotone convex function, we can obtain the following inequality
+
+In other word, in order to prove concentration around mean 
+\begin{align*}
+\bP\set{f(X) \ge  \E{}{f(X)} + t} \text{ or } \bP\set{f(X) \le  \E{}{f(X)} - t}
+\end{align*}
+using \underline{\textbf{\emph{the Cram\'er-Chernoff Method}}}, we just need to find \underline{\emph{the upper bound}} of \emph{the logarithmic moment generating function}
+\begin{align*}
+\psi(\lambda) := \log \E{}{e^{\lambda (f(X) - \E{}{f(X)})}} &\le \phi(\lambda)
+\end{align*}
+\end{remark}
+
+\item \begin{proposition} (\textbf{Chernoff's inequality}) \citep{boucheron2013concentration}\\
+Let $X$ be a real-valued random variable. For $\lambda \ge 0$,  $\psi_{X}(\lambda)$ is the \textbf{the logarithm of moment generating function} of $X$ and $\psi^{*}_{X}(t)$ is its \textbf{Legendre (Cram{\'e}r) transform}. Then 
+\begin{align}
+\bP\set{X \ge t} &\le \exp\paren{-\psi^{*}_{X}(t)}. \label{ineqn: chernoff_inequality}
+\end{align}
+\end{proposition}
+
+\item \begin{remark}
+The \textbf{\emph{Legendre transform}} is also called \emph{\textbf{the Cram{\'e}r transform}} \citep{boucheron2013concentration}.
+
+Since $\psi_{X}(0) = 0$, its \emph{Legendre transform} $\psi^{*}_{X}(t)$ is \emph{\textbf{nonnegative}}.
+\end{remark}
+
+\item \begin{definition} (\textbf{\emph{The Rate Function}})\\
+\underline{\emph{\textbf{The rate function}}} is defined as \emph{\textbf{the Legendre transformation}} of \emph{the logarithm of the moment generating function} of a random variable. That is, 
+\begin{align}
+\psi^{*}_{X}(t) &:= \sup_{\lambda \in \bR}\set{\lambda\,t - \psi_{X}(\lambda)}, \label{eqn: rate_function}
+\end{align} where $\psi_{X}(\lambda) := \log   \E{}{e^{\lambda X}}$. Thus, by \emph{Chernoff's inequality}, we can bound \emph{the tail probabilities} of random variables via \emph{its rate function}.
+\end{definition}
+
+\item \begin{remark}(\emph{\textbf{Sums of independent random variables}})\\
+The reason why Chernoff's inequality became popular is that it is very simple to use when applied to a sum of independent random
+variables. As an illustration, assume that $Z := X_1 \xdotx{+} X_n$ where $X_1 \xdotx{,} X_n$ are \emph{\textbf{independent} and \textbf{identically distributed} real-valued random variables}.  Denote the logarithm of the moment-generating function of the $X_i$ by $\psi_X(\lambda) = \log \E{}{e^{\lambda X_i}}$, and the corresponding \emph{Legendre transform} by $\psi_X^{*}(t)$. Then, by independence, for all $\lambda$ for which $\psi_X(\lambda) < \infty$,
+\begin{align*}
+\psi_Z(\lambda) &= \log \E{}{e^{\lambda\sum_{i=1^{n}X_i}}} = \log \prod_{i=1}^{n}\E{}{e^{\lambda X_i}}  = n\, \psi_{X}(\lambda)
+\end{align*} and consequently,
+\begin{align*}
+\psi_Z^{*}(t) &= n\,\psi_{X}^{*}\paren{\frac{t}{n}}.
+\end{align*} Thus \emph{the Chernoff's inequality} states that 
+\begin{align*}
+\bP\set{Z \ge t} &\le \exp\paren{-\psi^{*}_{Z}(t)} = \exp\paren{-n\,\psi_{X}^{*}\paren{\frac{t}{n}}}.
+\end{align*}
+\end{remark}
+
+\item \begin{example} (\emph{\textbf{Normal Distribution}})\\
+Let $X$ be a \emph{\textbf{centered normal random variable}} with variance $\sigma^2$. Then
+\begin{align*}
+\psi_X(\lambda) = \frac{\lambda^2 \sigma^2}{2},\, \quad \lambda_t = \frac{t}{\sigma^2}
+\end{align*} and, therefore for every $t > 0$, 
+\begin{align*}
+\psi_{X}^{*}(t) &= \frac{t^2}{2\sigma^2}.
+\end{align*} Hence, \emph{Chernoff's inequality} implies, for all $t > 0$,
+\begin{align*}
+\bP\set{X \ge t} &\le \exp\paren{-\frac{t^2}{2\sigma^2}}.
+\end{align*} \emph{Chernoff's inequality} appears to be quite sharp in this case. In fact, one can show that it cannot be improved uniformly by more than a factor of $1/2$. \qed
+\end{example}
+
+
+\item \begin{example} (\emph{\textbf{Poisson Distribution}})\\
+Let $X$ be a \emph{\textbf{Poisson random variable}} with parameter $\nu$, that is, $\bP\set{X = k} = \frac{1}{k!}e^{–\nu}\nu^k$ for all $k = 0, 1, 2, \ldots$ Let $Z = X - \nu$ be the \emph{corresponding centered variable}. Then by direct calculation,
+\begin{align*}
+\psi_Z(\lambda) = \nu\paren{e^{\lambda} - \lambda - 1 },\, \quad \lambda_t = \log\paren{1 + \frac{t}{\nu}}
+\end{align*} Therefore \emph{the Legendre transform} equals, for every $t > 0$,
+\begin{align*}
+\psi_{Z}^{*}(t) &= \nu h\paren{\frac{t}{\nu}}.
+\end{align*} where the function $h$ is defined, for all  $x \ge -1$, by $h(x) = (1 + x) \log(1 + x) - x$. Similarly,
+for every $t \le \nu$,
+\begin{align*}
+\psi_{-Z}^{*}(t) &= \nu h\paren{-\frac{t}{\nu}}.
+\end{align*} 
+\end{example}
+
+
+\item \begin{example} (\emph{\textbf{Bernoulli Distribution}})\\
+Let $X$ be  a \emph{\textbf{Bernoulli random variable}} with probability of success $p$, that is, $\bP\set{X = 1} = 1- \bP\set{X =0} = p$. Let $Z = X -  p$ be the \emph{corresponding centered variable}. If $0 < t < 1 - p$, we have
+\begin{align*}
+\psi_Z(\lambda) = \log\paren{p e^{\lambda} + 1 - p } - p \,\lambda ,\, \quad \lambda_t = \log \frac{(1-p)(p + t)}{p(1 - p - t)}
+\end{align*} and therefore, for every $t \in (0, 1 - p)$,
+\begin{align*}
+\psi_{Z}^{*}(t) &= (1-p-t)\log\frac{1 - p - t}{1 - p} + (p + t)\log \frac{p + t}{p}.
+\end{align*} Equivalently, setting $a = t + p$ for every $a \in (p, 1)$,
+\begin{align*}
+\psi_{Z}^{*}(t) = h_p(a)&= (1- a)\log\frac{1- a}{1 - p} + a \log\frac{a}{p}.
+\end{align*}  We note here that $h_p(a)$ is just the \emph{\textbf{Kullback-Leibler divergence}} $\kl{\bP_a}{\bP_p}$ between a Bernoulli distribution $\bP_a$ of parameter $a$ and a Bernoulli distribution $\bP_p$ of parameter $p$. 
+\begin{align*}
+\bP\set{X \ge t} \le \exp\paren{- \kl{\bP_{p+t}}{\bP_p}}
+\end{align*}
+\end{example}
+
+\item \begin{remark} (\emph{\textbf{Gaussian Tail Bound} vs. \textbf{Poisson Tail Bound}})\\
+\end{remark}
+\end{itemize}
+
+\subsection{Sub-Gaussian Random Variables}
+\begin{itemize}
+\item \begin{definition}(\textbf{\emph{Sub-Gaussian Random Variable}})\\
+A \emph{\textbf{centered}} random variable $X$ is said to be \underline{\emph{\textbf{sub-Gaussian} with \textbf{variance factor} $\nu$}} if
+\begin{align}
+\psi_X(\lambda) &\le  \frac{\lambda^2 \nu}{2}, \quad \text{ for every }\lambda \in \bR. \label{eqn: sub_gaussian_def_1}
+\end{align} We denote the collection of such random variables by $\cG(\nu)$.
+\end{definition}
+
+\item \begin{proposition} (\textbf{Moment Characterization of Sub-Gaussian Random Variables})  \citep{boucheron2013concentration}\\
+Let $X$ be a random variable with $\E{}{X} = 0$. If for some $\nu > 0$
+\begin{align}
+\bP\set{X > t} \lor  \bP\set{-X > t} \le \exp\paren{-\frac{t^2}{2\nu}}, \quad \text{ for all } t > 0   \label{eqn: sub_gaussian_def_2}
+\end{align}
+then for every integer $q \ge 1$,
+\begin{align}
+\E{}{X^{2q}} \le 2q! (2\nu)^q \le q! (4\nu)^q. \label{eqn: sub_gaussian_even_power_moment}
+\end{align}
+\textbf{Conversely}, if for some positive constant $C$
+\begin{align*}
+\E{}{X^{2q}} \le  q! C^q,
+\end{align*} then $X \in \cG(4C)$ (and therefore \eqref{eqn: sub_gaussian_even_power_moment} holds with $\nu = 4C$).
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Sub-Gaussian Characterizations}).  \citep{vershynin2018high}\\
+Let $X$ be a random variable. Then the following properties are \textbf{equivalent}; the parameters $K_i > 0$ appearing in these
+properties differ from each other by at most an absolute constant factor.
+\begin{enumerate}
+\item The \textbf{tails} of $X$ satisfy
+\begin{align*}
+\bP\set{\abs{X} \ge t} \le 2 \exp\paren{-t^2/K_1^2}\quad\text{ for all }t \ge 0.
+\end{align*}
+
+\item The \textbf{moments} of $X$ satisfy
+\begin{align*}
+\norm{X}{L^p} = \paren{\E{}{\abs{X}^p}}^{1/p} \le K_2 \sqrt{p}\quad \text{ for all }p \ge 1.
+\end{align*}
+
+\item The \textbf{moment-generating function (MGF)} of $X^2$ satisfies
+\begin{align*}
+\E{}{\exp(\lambda^2 X^2)} \le \exp(K_3^2 \;\lambda^2) \quad \text{ for all $\lambda$ such that $\abs{\lambda} \le \frac{1}{K_3}$}
+\end{align*}
+
+\item The \textbf{MGF} of $X^2$ is \textbf{bounded} at some point, namely
+\begin{align*}
+\E{}{\exp(X^2 / K_4^2)} \le 2.
+\end{align*}
+Moreover, if $\E{}{X} = 0$ then properties $(1)$-$(4)$ are also \textbf{equivalent} to the following one.
+
+\item The \textbf{MGF} of $X$ satisfies
+\begin{align*}
+\E{}{\exp(\lambda X)} \le  \exp(K_5^2\,\lambda^2)\quad\text{ for all }\lambda \in \bR.
+\end{align*}
+\end{enumerate}
+\end{proposition}
+
+\item \begin{definition} (\textbf{\emph{Sub-Gaussian Norm}}) \\
+The \underline{\emph{\textbf{sub-gaussian norm}}} of $X$, denoted $\norm{X}{\psi_2}$, is defined
+to be the \emph{\textbf{smallest}} $K_4$ that satisfies 
+\begin{align*}
+\E{}{\exp(X^2 / K_4^2)} \le 2.
+\end{align*} In other words, we define
+\begin{align}
+\norm{X}{\psi_2}= \inf\set{t > 0: \E{}{\exp(X^2 / t^2)} \le 2}.  \label{eqn: sub_gaussian_norm}
+\end{align}
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Sub-Gaussian  Characterizations via Sub-Gaussian Norm}})\\
+We can restate the properties of sub-gaussian random variables in terms of sub-gaussian norm:
+\begin{align*}
+\bP\set{\abs{X} \ge t} &\le 2 \exp\paren{-c t^2/\norm{X}{\psi_2}^2}\quad\text{ for all }t \ge 0; \\
+\norm{X}{L^p} &\le C \norm{X}{\psi_2} \sqrt{p}\quad \text{ for all }p \ge 1; \\
+\E{}{\exp(X^2 / \norm{X}{\psi_2}^2)} &\le 2; \\
+\text{ if }\E{}{X} = 0, \;\;\text{ then } \E{}{\exp(\lambda X)} &\le  \exp(C \lambda^2 \norm{X}{\psi_2}^2)\quad\text{ for all }\lambda \in \bR.
+\end{align*}
+\end{remark}
+
+\item \begin{example}
+Here are some classical examples of sub-gaussian distributions.
+\begin{enumerate}
+\item  (\textbf{\emph{Gaussian}}): As we already noted, $X \sim N(0, 1)$ is a sub-gaussian random
+variable with $\norm{X}{\psi_2} \le C$, where $C$ is an absolute constant. More generally, if $X \sim N(0, \sigma^2)$ then $X$ is sub-gaussian with
+\begin{align}
+\norm{X}{\psi_2} \le C\sigma \label{eqn: gaussian_sub_guassian_norm}
+\end{align}
+\item  (\emph{\textbf{Bernoulli}}): Let $X$ be a random variable with \emph{\textbf{symmetric Bernoulli distribution}}. Since $\abs{X} = 1$, it follows that X is a
+sub-gaussian random variable with
+\begin{align}
+\norm{X}{\psi_2} \le \frac{1}{\sqrt{\log 2}} \label{eqn: sym_bernoulli_sub_guassian_norm}
+\end{align}
+\item (\emph{\textbf{Bounded}}): More generally, any \emph{\textbf{bounded random variable}} $X$ is sub-gaussian with
+\begin{align}
+\norm{X}{\psi_2} \le C\norm{X}{\infty} \label{eqn: bounded_sub_guassian_norm}
+\end{align}
+where $C = 1/\sqrt{\log 2}$.
+\end{enumerate}
+\end{example}
+\end{itemize}
+
+\subsection{Sub-Exponential and Sub-Gamma Random Variables}
+
+\subsection{Hoeffding's Inequality}
+\begin{itemize}
+\item \begin{remark} (\textbf{\emph{Bounded Variables}})\\
+Bounded variables are an important class of \emph{sub-Gaussian random variables}. The \emph{sub-Gaussian property} of \emph{bounded random variables} is established by the
+following lemma:
+\end{remark}
+
+\item \begin{lemma} (\textbf{Hoeffding's Lemma}) \citep{boucheron2013concentration} \\
+Let $X$ be a random variable with $\E{}{X} = 0$, taking values in a \textbf{bounded interval} $[a, b]$ and let $\psi_{X}(\lambda) := \log  \E{}{e^{\lambda X}}$. Then
+\begin{align*}
+\psi_{X}''(\lambda) \le \frac{(b - a)^2}{4}
+\end{align*}
+and $X \in \cG((b - a)^2/4)$.
+\end{lemma}
+
+\item \begin{proposition} (\textbf{Hoeffding's inequality}) \citep{boucheron2013concentration} \\
+Let $X_1 \xdotx{,} X_n$ be independent random variables such that $X_i$ takes its values in $[a_i, b_i]$ \textbf{almost surely} for all $i \le n$. Let
+\begin{align*}
+S &= \sum_{i=1}^{n}\paren{X_i - \E{}{X_i}}.
+\end{align*}
+Then for every $t > 0$,
+\begin{align}
+\bP\set{S \ge  t} \le \exp\paren{- \frac{2t^2}{\sum_{i=1}^{n}(b_i - a_i)^2}}. \label{ineqn: hoeffding_inequality}
+\end{align}
+\end{proposition}
+
+\item 
+ \begin{proposition} (\textbf{General Hoeffding's inequality}) \citep{vershynin2018high} \\
+Let $X_1 \xdotx{,} X_n$ be \textbf{independent} \textbf{sub-gaussian} random variables. Let
+\begin{align*}
+S &= \sum_{i=1}^{n}\paren{X_i - \E{}{X_i}}.
+\end{align*}
+Then for every $t > 0$,
+\begin{align}
+\bP\set{S \ge  t}  \le \exp\paren{- \frac{c\,t^2}{\sum_{i=1}^{n}\norm{X_i}{\psi_2}}}. \label{ineqn: general_hoeffding_inequality}
+\end{align}
+\end{proposition}
+\end{itemize}
+
+\subsection{Bernstein's Inequality}
+\begin{itemize}
+\item \begin{definition} (\textbf{\emph{Bernstein's Condition}}) \\
+Given a \emph{random variable} $X$ with mean $\mu = \E{}{X}$ we say that \underline{\emph{\textbf{Bernstein's condition}}} \emph{with parameter $\nu$, $c$} holds if the \emph{variance} $\text{Var}(X) = \E{}{X^2} - \mu^2 \le \nu$, and
+\begin{align*}
+\sum_{i=1}^{n}\E{}{(X - \mu)_{+}^q} \le \frac{q!}{2} \nu c^{q-2}, \quad \text{ for all integers }q \ge 2,
+\end{align*} where $(x)_{+} = \max\set{x, 0}$. 
+\end{definition}
+
+\item \begin{remark}
+If $X$ is \emph{bounded}, then it satisfies \emph{the Bernstein's condition}.
+
+If $X$ satisfies \emph{the Bernstein's condition}, $X$ follows a \emph{\textbf{sub-gamma distribution}}. 
+\end{remark}
+
+
+\item \begin{proposition} (\textbf{Bernstein's Condition $\Rightarrow$  Sub-Gamma Distribution}). \citep{boucheron2013concentration}\\
+Let $X_1 \xdotx{,} X_n$ be independent real-valued random variables and each $X_i$ satisfies \textbf{the Bernstein's condition} with parameter $\nu$ and $c$.  If $S = \sum_{i=1}^{n}\paren{X_i - \E{}{X_i}}$, then for all $\lambda \in (0, 1/c)$ and $t > 0$
+\begin{align*}
+\psi_S(\lambda) \le \frac{\lambda^2 \nu}{2(1 - c\lambda)} 
+\end{align*} and
+\begin{align*}
+\psi_S^{*}(t) \ge \frac{\nu}{c^2}h_1\paren{\frac{ct}{\nu}},
+\end{align*} where $h_1(u) = 1+ u - \sqrt{1 + 2u}$ for $u >0$. In particular, for all $t > 0$, 
+\begin{align}
+\bP\set{S \ge \sqrt{2\nu t} + ct } \le e^{-t}. \label{ineqn: bernstein_inequality_gammar_dist_0}
+\end{align}
+\end{proposition}
+
+\item \begin{proposition}(\textbf{Bernstein's Inequality}).  \citep{boucheron2013concentration}\\
+Let $X_1 \xdotx{,} X_n$ be independent real-valued random variables satisfying \textbf{the Bernstein's conditions} above and let $S = \sum_{i=1}^{n}\paren{X_i - \E{}{X_i}}$. Then for all $t > 0$,
+\begin{align}
+\bP\set{S \ge t } \le \exp\paren{- \frac{t^2}{2(\nu + ct)}}.  \label{ineqn: bernstein_inequality_gammar_dist}
+\end{align}
+\end{proposition}
+
+\item \begin{corollary} (\textbf{Bernstein's Inequality for Bounded Distributions}).  \citep{vershynin2018high}\\
+Let $X_1 \xdotx{,} X_n$ be \textbf{independent}, \textbf{mean zero} random variables, such that $\abs{X_i} \le b$ all $i$. Then, for every $t \ge 0$, we have
+\begin{align}
+\bP\set{\abs{\frac{1}{n}\sum_{i=1}^{n}X_i} \ge t} \le 2\exp\paren{- \frac{t^2}{2(\nu + bt/3)}}. \label{ineqn: bernstein_inequality_bounded}
+\end{align}
+Here $\nu = \sum_{i=1}^{n}\E{}{X_i^2}$ is the variance of the sum.
+\end{corollary}
+
+
+\item \begin{corollary} (\textbf{Bernstein's Inequality}).  \citep{vershynin2018high}\\
+Let $X_1 \xdotx{,} X_n$ be \textbf{independent}, \textbf{mean zero}, \textbf{sub-exponential random variables}. Then, for every $t \ge 0$, we have
+\begin{align}
+\bP\set{\abs{\sum_{i=1}^{n}X_i} \ge t} \le 2 \exp\brac{- c \min\set{\frac{t^2}{\sum_{i=1}^{n}\norm{X_i}{\psi_2}^2},  \frac{t}{\max_i \norm{X_i}{\psi_1}}}} \label{ineqn: bernstein_inequality}
+\end{align}
+where $c > 0$ is an absolute constant.
+\end{corollary}
+
+\item 
+\begin{proposition} (\textbf{Bernstein's Inequality, Linear Combination Form}).  \citep{vershynin2018high}\\
+Let $X_1 \xdotx{,} X_n$ be \textbf{independent}, \textbf{mean zero}, \textbf{sub-exponential random variables}, and $a = (a_1 \xdotx{,} a_n) \in \bR^n$. Then, for every $t \ge 0$, we have
+\begin{align}
+\bP\set{\abs{\sum_{i=1}^{n}a_i X_i} \ge t} \le 2 \exp\brac{- c \min\set{\frac{t^2}{K^2\, \norm{a}{2}^2},  \frac{t}{K \norm{a}{\infty}}}} \label{ineqn: bernstein_inequality_linear_comb}
+\end{align}
+where $c > 0$ is an absolute constant and $K = \max_i \norm{X_i}{\psi_1}$.
+\end{proposition}
+
+\item \begin{corollary}(\textbf{Bernstein's Inequality, Average Form}).  \citep{vershynin2018high}\\
+Let $X_1 \xdotx{,} X_n$ be \textbf{independent}, \textbf{mean zero}, \textbf{sub-exponential random variables}. Then, for every $t \ge 0$, we have
+\begin{align}
+\bP\set{\abs{\frac{1}{n}\sum_{i=1}^{n}X_i} \ge t} \le 2 \exp\brac{- c \min\set{\frac{t^2}{K^2},  \frac{t}{K}}n} \label{ineqn: bernstein_inequality_average}
+\end{align} where $K = \max_i \norm{X_i}{\psi_1}$.
+\end{corollary}
+
+\end{itemize}
+\subsection{Bennett's Inequality}
+\begin{itemize}
+\item \begin{remark}
+Our starting point is the fact that  \emph{the logarithmic moment-generating function} of an \emph{independent sum} equals \emph{the sum of the logarithmic moment-generating functions of the centered summands}, that is,
+\begin{align*}
+\psi_{S}(\lambda) &=  \sum_{i=1}^{n}\paren{\log\E{}{e^{\lambda X_i}} - \lambda \E{}{X_i}}.
+\end{align*}
+Using $\log u \le u - 1$ for $u > 0$,
+\begin{align}
+\psi_{S}(\lambda) &\le \sum_{i=1}^{n}\E{}{e^{\lambda X_i} - \lambda X_i - 1}. \label{ineqn: log_mgf_bound}
+\end{align}
+Both Bennett's and Bernstein's inequalities may be derived from this bound, under different integrability conditions for the $X_i$.
+\end{remark}
+
+\item \begin{proposition} (\textbf{Bennett's Inequality}) \citep{boucheron2013concentration}\\
+Let $X_1 \xdotx{,} X_n$ be independent random variables with \textbf{finite variance} such that $X_i \le b$ for some $b > 0$ \textbf{almost surely} for all $i \le n$. Let
+\begin{align*}
+S &= \sum_{i=1}^{n}\paren{X_i - \E{}{X_i}}
+\end{align*} and $\nu = \sum_{i=1}^{n}\E{}{X_i^2}$. If we write $\phi(u) = e^u - u - 1$ for $u \in \bR$, then, for all $\lambda > 0$,
+\begin{align*}
+\log \E{}{e^{\lambda S}} \le n \log\paren{1 + \frac{\nu}{n b^2}\phi(b \lambda)} \le \frac{\nu}{b^2}\,\phi(b\lambda),
+\end{align*}
+and for any $t > 0$,
+\begin{align}
+\bP\set{S \ge t} \le \exp\paren{-\frac{\nu}{b^2}h\paren{\frac{b\,t}{\nu}}} \label{ineqn: bennett_inequality}
+\end{align}
+where $h(u) = (1 + u) \log(1 + u) - u$ for $u > 0$.
+\end{proposition}
+
+
+\item \begin{remark} This bound can be analyzed in two different regimes:
+\begin{enumerate}
+\item \emph{In the \textbf{small deviation regime}}, where $u := b t/ \nu \ll 1$, we have \emph{asymptotically} $h(u) \approx u^2$ and \emph{Bennett's inequality} gives \emph{approximately the Gaussian tail bound} $\approx \exp(-t^2/\nu)$. 
+
+\item \emph{In the \textbf{large deviations regime}}, say where $u := b t/ \nu \ge 2$, we have $h(u) \ge \frac{1}{2}u \log u$, and \emph{Bennett's inequality} gives a \emph{\textbf{Poisson-like tail}} $(\nu/bt)^{t/2 b}$.
+\end{enumerate}
+\end{remark}
+\end{itemize}
+
+\subsection{The Johnson-Lindenstrauss Lemma}
+
+
+\section{Martingale Method}
+\subsection{Martingale and Martingale Difference Sequence}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Martingale}}) \citep{resnick2013probability}\\
+Let $\set{X_n, n \ge 0}$ be a stochastic process on $(\Omega, \srF)$ and $\set{\srF_n, n \ge 0}$ be a \underline{\textbf{\emph{filtration}}}; that is, $\set{\srF_n, n \ge 0}$ is an \emph{increasing sub $\sigma$-fields} of $\srF$
+\begin{align*}
+\srF_0 \subseteq \srF_1 \subseteq \srF_2 \xdotx{\subseteq} \srF.
+\end{align*} Then $\set{ (X_n, \srF_n),  n \ge 0}$ is a \underline{\emph{\textbf{martingale (mg)}}} if
+\begin{enumerate}
+\item  $X_n$ is \emph{\textbf{adapted}} in the sense that for each $n$, $X_n \in \srF_n$; that is, $X_n$ is $\srF_n$-measurable.
+\item  $X_n \in L_1$; that is $\E{}{\abs{X_n}} < \infty$ for $n \ge 0$.
+\item For $0 \le m < n$
+\begin{align}
+\E{}{X_n \;|\; \srF_m} &= X_m, \quad \text{a.s.} \label{def: martingale}
+\end{align}
+\end{enumerate}
+If the equality of \eqref{def: martingale} is replaced by $\ge$; that is, things are getting better on the average:
+\begin{align}
+\E{}{X_n \;|\; \srF_m} &\ge X_m, \quad \text{a.s.} \label{def: sub_martingale}
+\end{align} then $\set{X_n}$ is called a \underline{\emph{\textbf{sub-martingale (submg)}}} while if things are getting worse on
+the average
+\begin{align}
+\E{}{X_n \;|\; \srF_m} &\le X_m, \quad \text{a.s.} \label{def: sup_martingale}
+\end{align}  $\set{X_n}$ is called a \underline{\emph{\textbf{super-martingale (supermg)}}}.
+\end{definition}
+
+\item \begin{remark}
+$\set{X_n}$ is \emph{\textbf{martingale}} if it is \emph{both} a \emph{\textbf{sub}} and \emph{\textbf{supermartingale}}. $\set{X_n}$ is a \emph{\textbf{supermartingale}} if and only if $\set{-X_n}$ is a \emph{\textbf{submartingale}}.
+\end{remark}
+
+\item \begin{remark}
+If $\set{X_n}$ is a \emph{\textbf{martingale}}, then $\E{}{X_n}$ is \emph{constant}. In the case of a \emph{\textbf{submartingale}}, \emph{the mean increases} and for a \emph{\textbf{supermartingale}}, \emph{the mean decreases}.
+\end{remark}
+
+\item \begin{proposition} \citep{resnick2013probability}\\
+If  $\set{ (X_n, \srF_n),  n \ge 0}$ is a \textbf{(sub, super) martingale}, then 
+\begin{align*}
+\set{ (X_n, \sigma\paren{X_0, X_1 \xdotx{,} X_n}),  n \ge 0}
+\end{align*} is also a \textbf{(sub, super) martingale}.
+\end{proposition}
+
+\item \begin{definition} (\textbf{\emph{Martingale Differences}}).  \citep{resnick2013probability}\\
+$\set{(d_j, \srB_j), j \ge 0}$ is a \underline{\emph{\textbf{(sub, super) martingale difference sequence}}} or a \textit{\textbf{(sub, super) fair sequence}} if
+\begin{enumerate}
+\item For $j \ge 0$,  $\srB_j \subset \srB_{j+1}$.
+\item For $j \ge 0$,  $d_j \in L_1$,  $d_j \in \srB_j$; that is, $d_j$ is \emph{absolutely integrable} and \emph{$\srB_j$-measurable}.
+\item For $j \ge 0$,
+\begin{align*}
+\E{}{d_{j+1} | \srB_j} &= 0, && \text{(\emph{martingale difference / fair sequence})};\\
+& \ge 0, && \text{(\emph{submartingale difference / subfair sequence})};\\
+& \le 0, && \text{(\emph{supmartingale difference / supfair sequence})}
+\end{align*}
+\end{enumerate}
+\end{definition}
+
+\item \begin{proposition} (\textbf{Construction of Martingale From Martingale Difference})\citep{resnick2013probability}\\
+If $\set{(d_j, \srB_j), j \ge 0}$ is \textbf{(sub, super) martingale difference sequence}, and
+\begin{align*}
+X_n = \sum_{j=0}^{n} d_j, 
+\end{align*} then $\set{(X_n, \srB_n), n \ge 0}$ is a \textbf{(sub, super) martingale}.
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Construction of Martingale Difference From Martingale}) \citep{resnick2013probability}\\
+Suppose $\set{(X_n, \srB_n), n \ge 0}$ is a \textbf{(sub, super) martingale}. Define
+\begin{align*}
+d_0&:= X_0 - \E{}{X_0}\\
+d_j &:= X_j - X_{j-1}, \quad j\ge 1.
+\end{align*}
+Then $\set{(d_j, \srB_j), j \ge 0}$ is a \textbf{(sub, super) martingale difference sequence}.
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Orthogonality of Martingale Differences}). \citep{resnick2013probability}\\
+If $\set{(X_n, \srB_n), n \ge 0}$ is a \textbf{martingale} where $X_n$ can be decomposed as
+\begin{align*}
+X_n = \sum_{j=0}^{n} d_j, 
+\end{align*}  $d_j$ is $\srB_j$-measurable and  $\mathds{E}[d_j^2] < \infty$ for $j \ge 0$, then $\set{d_j}$ are \textbf{orthogonal}:
+\begin{align*}
+\E{}{d_i\,d_j} = 0 \quad i \neq j.
+\end{align*}
+\end{proposition}
+
+\item \begin{example} (\textbf{\emph{Smoothing as Martingale}})\\
+Suppose $X \in L_1$ and $\set{\srB_n, n \ge 0}$ is an increasing family of sub $\sigma$-algebra of $\srB$. Define for $n \ge 0$
+\begin{align*}
+X_n &:= \E{}{X | \srB_n}.
+\end{align*}
+Then $(X_n, \srB_n)$ is a \emph{\textbf{martingale}}. From this result, we see that $\set{(d_n, \srB_n), n \ge 0}$ is a \emph{\textbf{martingale difference sequence}} when 
+\begin{align}
+d_n &:= \E{}{X | \srB_n} - \E{}{X | \srB_{n-1}}, \quad n\ge 1. \label{eqn: smoothing_martingale_difference}
+\end{align}
+\end{example}
+
+\item \begin{example}(\emph{\textbf{Sums of Independent Random Variables}}) \\
+Suppose that $\set{Z_n, n \ge 0}$ is an \emph{\textbf{independent} sequence of integrable random variables} satisfying for $n \ge 0$, 
+$\E{}{Z_n} = 0$.  Set
+\begin{align*}
+X_0 &:= 0,\\
+X_n &:= \sum_{i=1}^{n}Z_i, \quad n \ge 1 \\
+\srB_n &:= \sigma\paren{Z_0 \xdotx{,} Z_n}.
+\end{align*} Then $\set{(X_n, \srB_n), n \ge 0}$ is a \emph{\textbf{martingale}} since $\set{(Z_n, \srB_n), n \ge 0}$ is a \emph{\textbf{martingale difference sequence}}.
+\end{example}
+
+\item \begin{example} (\emph{\textbf{Likelihood Ratios}}).\\ 
+Suppose $\set{Y_n, n \ge 0}$ are \emph{\textbf{independent identically distributed}} random variables and suppose \emph{the true density} of $Y_n$ is $f_0$· (The word ``\emph{density}" can be understood with respect to some fixed reference measure $\mu$.)  Let $f_1$ be \emph{some other probability density}. For simplicity suppose $f_0(y) > 0$, for all $y$.  For $n \ge 0$, define the likelihood ratio
+\begin{align*}
+X_n &:= \frac{\prod_{i=0}^{n}f_1(Y_i)}{\prod_{i=0}^{n}f_0(Y_i)}\\
+\srB_n &:= \sigma\paren{Y_0 \xdotx{,} Y_n}
+\end{align*} Then $(X_n, \srB_n)$ is a \emph{\textbf{martingale}}.
+\end{example}
+\end{itemize}
+\subsection{Bernstein Inequality for Martingale Difference Sequence}
+\begin{itemize}
+\item \begin{proposition} (\textbf{Bernstein Inequality, Martingale Difference Sequence Version}) \citep{wainwright2019high}\\
+Let $\set{(D_k, \srB_k), k \ge 1}$ be a \textbf{martingale difference sequence}, and suppose that 
+\begin{align*}
+\E{}{\exp\paren{\lambda D_k} | \srB_{k-1}} \le \exp\paren{\frac{\lambda^2 \nu_k^2}{2} }
+\end{align*} almost surely for any $\abs{\lambda} < 1/\alpha_k$. Then the following hold:
+\begin{enumerate}
+\item The sum $\sum_{k=1}^{n}D_k$ is \textbf{sub-exponential} with \textbf{parameters} $\paren{\sqrt{\sum_{k=1}^{n}\nu_k^2}\;  , \;\alpha_{*}}$ where $\alpha_{*} := \max_{k=1 \xdotx{,} n} \alpha_k$. That is, for any $\abs{\lambda} < 1/\alpha_{*}$, 
+\begin{align*}
+\E{}{\exp\set{\lambda \paren{\sum_{k=1}^{n}D_k}}} \le \exp\paren{\frac{\lambda^2\sum_{k=1}^{n}\nu_k^2}{2} }
+\end{align*}
+\item The sum satisfies \textbf{the concentration inequality}
+\begin{align}
+\bP\set{\abs{\sum_{k=1}^{n}D_k} \ge t } &\le \left\{ \begin{array}{cc}
+2 \exp\paren{- \frac{t^2}{2 \sum_{k=1}^{n}\nu_k^2}} & \text{ if } 0 \le t \le \frac{\sum_{k=1}^{n}\nu_k^2}{\alpha_{*}} \\[15pt]
+2 \exp\paren{- \frac{t}{\alpha_{*}}} &\text{ if } t > \frac{\sum_{k=1}^{n}\nu_k^2}{\alpha_{*}}.
+\end{array}\right. \label{ineqn: bernstein_inequality_martingale}
+\end{align}
+\end{enumerate}
+\end{proposition}
+\end{itemize}
+\subsection{Azuma-Hoeffding Inequality}
+\begin{itemize}
+\item \begin{corollary} (\textbf{Azuma-Hoeffding Inequality})\citep{wainwright2019high}\\
+Let $\set{(D_k, \srB_k), k \ge 1}$ be a \textbf{martingale difference sequence} for which there are constants $\set{(a_k, b_k)}^{n}_{k=1}$ such that $D_k \in [a_k, b_k]$ almost surely for all $k = 1 \xdotx{,} n$. Then, for all $t \ge 0$,
+\begin{align}
+\bP\set{\abs{\sum_{k=1}^{n}D_k} \ge t } &\le  2 \exp\paren{- \frac{2 t^2}{ \sum_{k=1}^{n}(b_k - a_k)^2}} \label{ineqn: hoeffding_inequality_martingale}
+\end{align}
+\end{corollary}
+\end{itemize}
+\subsection{Bounded Difference Inequality}
+\begin{itemize}
+\item An important application of \emph{Azuma-Hoeffding Inequality} concerns functions that satisfy a \emph{bounded difference property}. 
+\begin{definition} (\textbf{\emph{Functions with Bounded Difference Property}})\\
+Given vectors $x, x' \in \cX^n$ and an index $k \in \set{1, 2 \xdotx{,} n}$, we define a new vector $x^{(-k)} \in \cX^n$ via
+\begin{align*}
+x_j^{(-k)} &= \left\{\begin{array}{cc}
+x_j & j \neq k\\
+x_k'& j = k
+\end{array}
+\right.
+\end{align*}
+With this notation, we say that $f: \cX^n \to \bR$ satisfies \underline{\textbf{\emph{the bounded difference inequality}}} with parameters $(L_1 \xdotx{,} L_n)$ if, for each index $k = 1, 2 \xdotx{,} n$,
+\begin{align}
+\abs{f(x) - f(x^{(-k)})} \le L_k, \quad\text{ for all }x, x' \in \cX^n. \label{eqn: bounded_difference_property}
+\end{align}
+\end{definition}
+
+
+\item \begin{corollary} (\textbf{McDiarmid's Inequality / Bounded Differences Inequality})\citep{wainwright2019high}\\
+Suppose that $f$ satisfies \textbf{the bounded difference property} \eqref{eqn: bounded_difference_property} with parameters $(L_1 \xdotx{,} L_n)$ and that the random vector $X = (X_1, X_2 \xdotx{,} X_n)$ has \textbf{independent} components. Then
+\begin{align}
+\bP\set{\abs{f(X) - \E{}{f(X)}} \ge t } &\le  2 \exp\paren{- \frac{2 t^2}{ \sum_{k=1}^{n}L_k^2}}. \label{ineqn: macdiarmid_bounded_difference_inequality}
+\end{align}
+\end{corollary}
+\end{itemize}
+
+\section{Bounding Variance}
+\subsection{Mean-Median Deviation}
+\subsection{The Efron-Stein Inequality and Jackknife Estimation}
+\begin{itemize}
+\item \begin{remark} (\textbf{\emph{Variance of Smoothing Martingale Difference Sequence}})\\
+Suppose $X \in L_1$ and $\set{\srB_n, n \ge 0}$ is an increasing family of sub $\sigma$-algebra of $\srB$ formed by 
+\begin{align*}
+\srB_n &:= \sigma\paren{Z_1 \xdotx{,} Z_n}.
+\end{align*} For $n \ge 1$, define 
+\begin{align*}
+d_0 &:= \E{}{X} \\ 
+d_n &:= \E{}{X | \srB_n} - \E{}{X | \srB_{n-1}} \\
+&= \E{}{X | Z_1 \xdotx{,} Z_n} -  \E{}{X | Z_1 \xdotx{,} Z_{n-1}}.
+\end{align*} From \eqref{eqn: smoothing_martingale_difference} we see that $(d_n, \srB_n)$ is a martingale difference sequence. By \emph{orthogonality of martingale difference}, we see that 
+\begin{align*}
+\E{}{d_i\, d_j} =0 \quad i\neq j.
+\end{align*} Therefore, based on the decomposition
+\begin{align*}
+X - E{}{X} &= \sum_{i=1}^{n}d_i
+\end{align*}
+we have 
+\begin{align}
+\text{Var}(X) &= \E{}{\paren{\sum_{i=1}^{n}d_i}^2} = \sum_{i=1}^{n}\E{}{d_i^2} + 2 \sum_{i > j}\E{}{d_i\,d_j}\nonumber\\
+&=  \sum_{i=1}^{n}\E{}{d_i^2}. \label{eqn: martingale_smoothing}
+\end{align}
+\end{remark}
+
+\item \begin{remark}(\textbf{\emph{Variance of General Functions of Independent Random Variables}})\\
+Then above formula \eqref{eqn: martingale_smoothing} holds when $X = f\paren{Z_1 \xdotx{,} Z_n}$ for general function $f: \bR^n \to \bR$ with $n$ independent random variables $(Z_1 \xdotx{,} Z_n)$. By \emph{Fubini's theorem},
+\begin{align*}
+ \E{}{X | Z_1 \xdotx{,} Z_i} &= \int_{\cZ^{n-i}} f(Z_1 \xdotx{,} Z_i, z_{i+1} \xdotx{,} z_n) \;\;d\mu_{i+1}(z_{i+1})  \xdotx{} d\mu_{n}(z_{n})
+\end{align*} where $\mu_j$ is the probability distribution of $Z_j$ for $j \ge 1$. 
+
+Let $Z_{(-i)} := (Z_1 \xdotx{,} Z_{i-1}, Z_{i+1} \xdotx{,} Z_n)$ be all random variables $(Z_1 \xdotx{,} Z_n)$ \emph{\textbf{except for}} $Z_i$ . Denote $\E{(-i)}{\cdot}$ as the conditional expectation of $X$ given $Z_{(-i)}$
+\begin{align*}
+ \E{(-i)}{X} &:= \E{}{X | Z_1 \xdotx{,} Z_{i-1}, Z_{i+1} \xdotx{,} Z_n} \\
+ &= \int_{\cZ} f(Z_1 \xdotx{,} Z_{i-1}, z_{i}, Z_{i+1} \xdotx{,} Z_n) \;\;d\mu_{i}(z_{i}).
+\end{align*} Then, again by \emph{Fubini's theorem} (\emph{smoothing properties of conditional expectation}),
+\begin{align}
+\E{}{ \E{(-i)}{X} | Z_1 \xdotx{,} Z_i} &= \E{}{X | Z_1 \xdotx{,} Z_{i-1}} \label{eqn: martingale_smoothing_expectation}
+\end{align} 
+\end{remark}
+
+\item \begin{proposition}(\textbf{Efron-Stein Inequality}) \citep{boucheron2013concentration} \\
+Let $Z_1 \xdotx{,} Z_n$ be \textbf{independent random variables} and let $X = f(Z)$ be a square-integrable function of $Z = (Z_1 \xdotx{,} Z_n)$. Then
+\begin{align}
+\text{Var}(X) &\le  \sum_{i=1}^{n}\E{}{\paren{X - \E{(-i)}{X}}^2} := \nu.  \label{ineqn: efron_stein_inequality}
+\end{align}
+Moreover, if $Z_1' \xdotx{,} Z_n'$ are \textbf{independent} copies of $Z_1 \xdotx{,} Z_n$ and if we define, for every $i = 1 \xdotx{,} n$,
+\begin{align*}
+X_i' &:= f\paren{Z_1 \xdotx{,} Z_{i-1}, Z_{i}' ,Z_{i+1} \xdotx{,} Z_n},
+\end{align*}
+then
+\begin{align*}
+\nu &= \frac{1}{2}\sum_{i=1}^{n}\E{}{\paren{X -  X_i'}^2} = \sum_{i=1}^{n}\E{}{\paren{X -  X_i'}_{+}^2} = \sum_{i=1}^{n}\E{}{\paren{X -  X_i'}_{-}^2}
+\end{align*}
+where $x_{+} = \max\set{x, 0}$ and $x_{-} = \max\set{-x, 0}$ denote the \textbf{positive} and \textbf{negative} parts of a real number $x$. Also,
+\begin{align*}
+\nu &= \inf_{X_i}\;\sum_{i=1}^{n}\E{}{\paren{X -  X_i}^2},
+\end{align*}
+where the infimum is taken over the class of all $Z_{(-i)}$-measurable and square-integrable variables $X_i$, $i = 1 \xdotx{,} n$.
+\end{proposition}
+
+
+\item \begin{example} (\textbf{\emph{The Jackknife Estimate}}) \\
+We should note here that the Efron-Stein inequality was first motivated by the study of the so-called \underline{\emph{\textbf{jackknife estimate} of \textbf{statistics}}}. 
+
+To describe this estimate, assume that $Z_1 \xdotx{,} Z_n$ are i.i.d. random variables and one wishes to\emph{ estimate a functional $\theta$ of the distribution} of the $Z_i$ by a function $X = f(Z_1 \xdotx{,} Z_n)$ of the data. The quality of the estimate is often measured by its bias $\E{}{X} - \theta$ and its variance $\text{Var}(X)$. Since the distribution of the $Z_i$'s is unknown, one needs to \emph{estimate} the bias and variance \emph{\textbf{from the same sample}}. \underline{\emph{\textbf{The jackknife estimate}} of \emph{\textbf{the bias}}} is defined by
+\begin{align}
+(n-1)\paren{\frac{1}{n}\sum_{i=1}^{n}X_i - X} \label{eqn: jackknive_estimate_bias}
+\end{align} where $X_i$ is an appropriately defined function of $Z_{(-i)} := (Z_1 \xdotx{,} Z_{i-1}, Z_{i+1} \xdotx{,} Z_n)$. $Z_{(-i)}$ is often called \emph{\textbf{the $i$-th jackknife sample}} while $X_i$ is the so-called \emph{\textbf{jackknife replication} of $X$}. In an analogous way, \underline{\emph{\textbf{the jackknife estimate} of the \textbf{variance}}} is defined by
+\begin{align}
+\sum_{i=1}^{n}\paren{X - X_i}^2 \label{eqn: jackknive_estimate_bias}
+\end{align}
+Using this language, \emph{\textbf{the Efron-Stein inequality}} simply states that \emph{\textbf{the jackknife estimate of the variance} is \underline{\textbf{always positively biased}}}. In fact, this is how Efron and Stein originally formulated their inequality.
+\end{example}
+\end{itemize}
+\subsection{Functions with Bounded Differences}
+\begin{itemize}
+\item \begin{corollary} \citep{boucheron2013concentration}\\
+If $f$ has the \textbf{bounded differences property} with parameters $(L_1 \xdotx{,} L_n)$, then
+\begin{align*}
+\text{Var}(f(Z)) &\le \frac{1}{4}\sum_{i=1}^{n}L_i^2.
+\end{align*}
+\end{corollary}
+\end{itemize}
+\subsection{Convex Poincar{\'e} Inequality}
+\begin{itemize}
+\item \begin{theorem} (\textbf{Convex Poincar{\'e} Inequality}) \citep{boucheron2013concentration} \\
+Let $Z_1 \xdotx{,} Z_n$ be \textbf{independent} random variables taking values in the interval $[0, 1]$ and let $f : [0, 1]^n \to \bR$ be a \textbf{separately convex function} whose partial derivatives exist; that is, for every $i = 1 \xdotx{,} n$ and fixed $z_1 \xdotx{,} z_{i-1}, z_{i+1} \xdotx{,} z_n$,  $f$ is a convex function of its $i$-th variable. Then $f(Z) = f(Z_1 \xdotx{,} Z_n)$ satisfies
+\begin{align}
+\text{Var}(f(Z)) &\le \E{}{\norm{\nabla f(Z)}{2}^2}. \label{ineqn: convex_poincare_inequality}
+\end{align}
+\end{theorem}
+\end{itemize}
+\subsection{Gaussian Poincar{\'e} Inequality}
+\begin{itemize}
+\item \begin{theorem} (\textbf{Gaussian Poincar{\'e} Inequality}) \citep{boucheron2013concentration} \\
+Let $Z = (Z_1 \xdotx{,} Z_n)$ be a vector of \textbf{i.i.d. standard Gaussian} random variables (i.e. $Z$ is a Gaussian vector with \textbf{zero mean} vector and \textbf{identity covariance matrix}). Let $f : \bR^n \to \bR$ be any \textbf{continuously differentiable} function. Then
+\begin{align}
+\text{Var}(f(Z)) &\le \E{}{\norm{\nabla f(Z)}{2}^2}. \label{ineqn: gaussian_poincare_inequality}
+\end{align}
+\end{theorem}
+\end{itemize}
+
+
+\section{Entropy Method}
+\subsection{Entropy Functional and $\Phi$-Entropy}
+\begin{itemize}
+\item \begin{definition}(\textbf{\emph{$\Phi$-Entropy}})\citep{boucheron2013concentration}\\
+Let $\Phi: [0, \infty) \rightarrow \bR$ be a \textbf{\emph{convex}} function, and assign, to every \emph{\textbf{non-negative} integrable random variable} $X$, \underline{\textbf{\emph{the $\Phi$-entropy}}} of $X$ is defined as 
+\begin{align}
+H_{\Phi}(X) &= \E{}{\Phi(X)} - \Phi(\E{}{X}). \label{def: phi_entropy}
+\end{align}
+\end{definition}
+
+\item \begin{remark}
+The $\Phi$-entropy is a \emph{\textbf{functional}} of \emph{distribution} $P_{X}$ instead of a function of $X$.
+\end{remark}
+
+\item \begin{remark}
+By Jenson's inequality, the $\Phi$-entropy is \emph{non-negative}
+\begin{align*}
+\Phi(\E{}{X}) &\le \E{}{\Phi(X)}\\
+\Rightarrow H_{\Phi}(X) &= \E{}{\Phi(X)} - \Phi(\E{}{X}) \ge 0.
+\end{align*} 
+\end{remark}
+
+\item \begin{example} (\emph{\textbf{Special Examples for $\Phi$-Entropy}})
+\begin{enumerate}
+\item For $\Phi(x) = x^2$, \emph{the $\Phi$-entropy} of $X$ is \emph{the \textbf{variance}} of $X$:
+\begin{align*}
+H_{\Phi}(X) &= \E{}{X^2} - (\E{}{X})^2 = \text{Var}(X).
+\end{align*}
+\item For $\Phi(x) = -\log(x)$, \emph{the $\Phi$-entropy} of $Y=e^{\lambda X}$ is \emph{the \textbf{logarithm of moment generating function}} of $X - \E{}{X}$:
+\begin{align}
+H_{\Phi}(e^{\lambda X}) &= -\lambda \E{}{X} + \log\paren{\E{}{e^{\lambda X}}} = \log\E{}{e^{\lambda(X - \E{}{X})}} := \psi_{X- \E{}{X}}(\lambda). \label{eqn: phi_entropy_log_mgf}
+\end{align}
+\item For $\Phi(x) = x\log x$, \emph{the $\Phi$-entropy} of $X$ is defined as the \underline{\emph{\textbf{entropy functional}} of $X$}
+\begin{align}
+H_{\Phi}(X) = \text{Ent}(X)&:=  \E{}{X\log X} - \E{}{X}\log\paren{\E{}{X}}. \label{def: phi_entropy_kl}
+\end{align} Let $(\Omega, \srB)$ be measurable space, and $P$ and $Q$ are probability measures on $\Omega$ with $P \ll Q$. Define a random variable $X$ by the \emph{Radon-Nikodym derivative} of $P$ with respect to $Q$; that is,
+\begin{align*}
+X(\omega) &:= \left\{ \begin{array}{cc}
+\frac{dP}{dQ}(\omega) & Q(\omega) > 0\\
+0 &\text{o.w.}
+\end{array}
+\right. .
+\end{align*} We see that $X$ is $Q$-measurable and $dP = X\,dQ$ with $\E{Q}{X} = 1$. Then the entropy of $X$ is the relative entropy of $P$ with respect to $Q$.
+\begin{align}
+\text{Ent}(X)&= \kl{P}{Q} \label{eqn: phi_entropy_kl_divg}
+\end{align}
+\end{enumerate}
+\end{example}
+\end{itemize}
+\subsection{Dual Formulation}
+\begin{itemize}
+\item \begin{lemma}
+The \textbf{Legendre transform} (or \textbf{convex conjugate}) of $\Phi(x) = x\log(x)$ is $e^{u-1}$. That is,
+\begin{align*}
+\sup_{x > 0}\set{u\,x - x\log(x)} &= e^{u-1}
+\end{align*}
+\end{lemma}
+
+\item \begin{proposition}(\textbf{Duality Formula of Entropy}) \citep{boucheron2013concentration}\\
+Let $X$ be a non-negative random variable defined on a probability space $(\Omega, \srA, P)$ such that $\E{}{\Phi(X)} < \infty$. Then we have \textbf{the duality formula}
+\begin{align}
+\text{Ent}(X) &= \sup_{U \in \cU}\E{}{U\,X}  \label{eqn: duality_entropy}
+\end{align} where the supremum is taken over the set $\cU$ of all random variables $U: \Omega \to \bR \cup \set{\infty}$ with $\E{}{e^{U}} = 1$. Moreover, if $U$ is such that $\E{}{U X} \le \text{Ent}(X)$ for all non-negative random variable $X$ such that $\Phi(X)$ is integrable and $\E{}{X} = 1$, then $\E{}{e^{U}} \le 1$. 
+\end{proposition}
+
+\item  \begin{corollary} \label{thm: duality_entropy_2}(\textbf{Alternative Duality Formula of Entropy}) \citep{boucheron2013concentration}
+\begin{align}
+\text{Ent}(X) &= \sup_{T}\E{}{X\paren{\log(T) - \log\paren{\E{}{T}}}}  \label{eqn: duality_entropy_2}
+\end{align} where the supremum is taken over all non-negative and integrable random variables.
+\end{corollary}
+
+\item \begin{corollary} \label{coro: dual_log_mgf}  (\textbf{Duality Formula of Log-MGF}) \citep{thomas2006elements, boucheron2013concentration}\\
+Let $X$ be a real-valued integrable random variable. Then for every $\lambda \in \bR$, 
+\begin{align}
+\log \E{\bP}{e^{\lambda\paren{X - \E{}{X}}}} &= \sup_{\bQ \ll \bP}\set{\lambda\paren{\E{\bQ}{X} - \E{\bP}{X}} - \kl{\bQ}{\bP} }, \label{eqn: duality_log_mgf}
+\end{align} where the supremum is taken over all probability measures $\bQ$ absolutely continuous with respect to $\bP$.
+\end{corollary}
+
+\item \begin{corollary}  (\textbf{Duality Formula of Kullback-Leibler Divergence}) \citep{thomas2006elements, boucheron2013concentration}\\
+Let $\bP$ and $\bQ$ be two probability distributions on the same space.Then
+\begin{align}
+\kl{\bQ}{\bP} &= \sup_{X}\set{\E{\bQ}{X} - \log \E{\bP}{e^{X}} }, \label{eqn: duality_kl_divg}
+\end{align} where the supremum is taken over all random variables such that $\E{\bP}{\exp\paren{X}} < \infty$.
+\end{corollary}
+
+\item \begin{definition} (\textbf{\emph{Bregman Divergence}}) \\
+Let $F: \cX \rightarrow \bR$ be a \emph{continuously-differentiable}, \emph{\textbf{strictly convex}} function defined on a convex set $\cX$. The \underline{\textbf{\emph{Bregman divergence}}} associated with $F$ for points $p,q \in \cX$ is the difference between the value of $F$ at point $p$ and the value of the \emph{first-order Taylor expansion} of F around point $q$ evaluated at point $p$:
+\begin{align}
+\divg{F}{p}{q} &= F(p) - F(q) - \inn{\grad{}{F}(q)}{p - q} \label{eqn: bregman_divg}
+\end{align}
+\end{definition}
+
+\item \begin{theorem} (\textbf{The Expected Value Minimizes Expected Bregman Divergence}) \citep{boucheron2013concentration} \\
+Let $I \subseteq \bR$ be an open interval and let $f: I \to \bR$ be \textbf{convex} and \textbf{differentiable}. For any $x,y \in I$, \textbf{the Bregman divergence} of $f$ from $x$ to $y$ is $f(y) - f(x) - f'(x)(y-x)$. Let $X$ be an $I$-valued random variable. Then
+\begin{align}
+\E{}{f(X) - f(\E{}{X}) } &= \inf_{a \in I}\E{}{f(X) - f(a) - f'(a)(X-a)}\label{eqn: bregmann_inf}
+\end{align}
+\end{theorem}
+
+\item \begin{corollary} (\textbf{Duality Formula of Entropy via Bregman Divergence}) \citep{boucheron2013concentration}\\
+Let $X$ be a non-negative random variable such that $\E{}{\Phi(X)} < \infty$. Then 
+\begin{align}
+\text{Ent}(X) &= \inf_{u > 0}\E{}{X\paren{\log(X) - \log(u)} - (X - u) } \label{eqn: duality_entropy_3_breg}
+\end{align}
+\end{corollary}
+\end{itemize}
+\subsection{Tensorization Property}
+\begin{itemize}
+\item \begin{proposition} (\textbf{Sub-Additivity of The Entropy / Tensorization Property}) \citep{boucheron2013concentration}\\
+Let $\Phi(x) = x\log x$,  for $x >0$ and $\Phi(0) = 0$. Let $Z_1, Z_2 \xdotx{,} Z_n$ be independent random variables taking values in $\cX$, and let $f: \cX^n \to [0, \infty)$ be a measurable function. Letting $X = f(Z_1, Z_2 \xdotx{,} Z_n)$ such that $\E{}{X\log X} < \infty$, we have 
+\begin{align}
+\text{Ent}(X) := \E{}{\Phi(X)} - \Phi(\E{}{X}) &\le \sum_{i=1}^{n}\E{}{\E{(-i)}{\Phi(X)} - \Phi(\E{(-i)}{X})}, \label{ineqn: sub_additivity_phi_entropy}
+\end{align} where $\E{(-i)}{\cdot}$ is the conditional expectation operator conditioning on $Z_{(-i)}$. Introducing the notation $\text{Ent}_{(-i)}(X) = \E{(-i)}{\Phi(X)} - \Phi(\E{(-i)}{X})$, this can be re-written as
+\begin{align}
+\text{Ent}(X)  &\le \E{}{\sum_{i=1}^{n} \text{Ent}_{(-i)}(X)}. \label{ineqn: sub_additivity_phi_entropy_2}
+\end{align}
+\end{proposition}
+\end{itemize}
+\subsection{Herbst's Argument}
+\begin{itemize}
+\item \begin{remark} (\emph{\textbf{Entropy Functional for Moment Generating Function}})\\
+Let $X = e^{\lambda Z}$ where $Z$ is a random variable. The entropy function of $X$ becomes
+\begin{align*}
+\text{Ent}(e^{\lambda Z}) &= \E{}{\lambda Z e^{\lambda Z}} - \E{}{e^{\lambda Z}}\log\paren{\E{}{e^{\lambda Z}}}
+\end{align*} Denote $\psi_{Z - \E{}{Z}}(\lambda) := \log\E{}{e^{\lambda (Z - \E{}{Z})}}$. Then we have
+\begin{align}
+\frac{\text{Ent}(e^{\lambda Z})}{\E{}{e^{\lambda Z}}} &= \lambda\; \psi_{Z - \E{}{Z}}'(\lambda) - \psi_{Z - \E{}{Z}}(\lambda). \label{eqn: entropy_log_mgf_differential}
+\end{align} 
+
+Our strategy is based on using \eqref{eqn: entropy_log_mgf_differential} \emph{\textbf{the sub-additivity of entropy}} and then univariate calculus to derive \emph{\textbf{upper bounds} for the \textbf{derivative} of $\psi(\lambda)$}. By solving the obtained \emph{\textbf{differential inequality}}, we obtain tail bounds via \emph{Chernoff's bounding}.
+
+For example, if
+\begin{align*}
+\frac{\text{Ent}(e^{\lambda Z})}{\E{}{e^{\lambda Z}}} &\le \frac{\nu \lambda^2}{2}  \\
+\Leftrightarrow  \lambda\; \psi_{Z - \E{}{Z}}'(\lambda) - \psi_{Z - \E{}{Z}}(\lambda) &\le \frac{\nu \lambda^2}{2},\\
+\Leftrightarrow \frac{1}{\lambda}\psi_{Z - \E{}{Z}}'(\lambda) - \frac{1}{\lambda^2}\psi_{Z - \E{}{Z}}(\lambda) &\le \frac{\nu}{2}.
+\end{align*}  Setting $G(\lambda) = \lambda^{-1}\psi_{Z - \E{}{Z}}(\lambda)$, we see that the differential inequality becomes
+\begin{align*}
+G'(\lambda) &\le \frac{\nu}{2}.
+\end{align*} Since $G(\lambda) \to 0$ as $\lambda \to 0$, which implies that
+\begin{align*}
+G(\lambda) &\le \frac{\nu \lambda}{2},
+\end{align*} and the result follows. 
+\end{remark}
+
+\item \begin{proposition} (\textbf{Herbst's Argument}) \citep{boucheron2013concentration, wainwright2019high}\\
+Let $Z$ be an integrable random variable such that for some $\nu > 0$, we have, for every $\lambda > 0$,
+\begin{align}
+\frac{\text{Ent}(e^{\lambda Z})}{\E{}{e^{\lambda Z}}} &\le \frac{\nu \lambda^2}{2} \label{ineqn: herbst_argument}
+\end{align} Then, for every $\lambda >0$, the logarithmic moment generating function of centered random variable $(Z - \E{}{Z})$ satisfies
+\begin{align*}
+\psi_{Z - \E{}{Z}}(\lambda) := \log\E{}{e^{\lambda (Z - \E{}{Z})}} &\le \frac{\nu \lambda^2}{2} .
+\end{align*}
+\end{proposition}
+\end{itemize}
+\subsection{Connection to Variance Bounds}
+\begin{itemize}
+\item \begin{proposition} (\textbf{A Modified Logarithmic Sobolev Inequalities for Moment Generating Function}) \citep{boucheron2013concentration}\\
+Consider independent random variables $Z_1 \xdotx{,} Z_n$ taking values in $\cX$, a real-valued function $f: \cX^n \to \bR$ and the random variable $X = f(Z_1 \xdotx{,} Z_n)$. Also denote $Z_{(-i)}= (Z_1 \xdotx{,} Z_{i-1}, Z_{i+1} \xdotx{,} Z_n)$ and $X_{(-i)} = f_i(Z_{(-i)})$ where $f_i: \cX^{n-1} \to \bR$ is an arbitrary function. Let $\phi(x) = e^x -x -1$.
+Then for all $\lambda \in \bR$,
+\begin{align}
+\text{Ent}(e^{\lambda X}) := \E{}{\lambda Xe^{\lambda X}} - \E{}{e^{\lambda X}}\log\E{}{e^{\lambda X}} &\le \sum_{i=1}^{n}\E{}{e^{\lambda X}\phi(-\lambda(X - X_{(-i)}))}\label{ineqn: log_sobolev_inequality_mgf}
+\end{align}
+\end{proposition}
+
+
+\item \begin{proposition} (\textbf{Symmetrized Modified Logarithmic Sobolev Inequalities}) \citep{boucheron2013concentration}\\
+Consider independent random variables $Z_1 \xdotx{,} Z_n$ taking values in $\cX$, a real-valued function $f: \cX^n \to \bR$ and the random variable $X = f(Z_1 \xdotx{,} Z_n)$. Also denote $\widetilde{X}^{(i)} = f(Z_1 \xdotx{,} Z_{i-1}, Z_i', Z_{i+1} \xdotx{,} Z_n)$. Let $\phi(x) = e^x -x -1$.
+Then for all $\lambda \in \bR$,
+\begin{align}
+\lambda \E{}{Xe^{\lambda X}} - \E{}{e^{\lambda X}}\log\E{}{e^{\lambda X}} &\le \sum_{i=1}^{n}\E{}{e^{\lambda X}\phi(-\lambda(X - \widetilde{X}^{(i)}))}\label{ineqn: log_sobolev_inequality_sym_mgf}
+\end{align} Moreover, denoting $\tau(x) = x(e^x - 1)$, for all $\lambda \in \bR$,
+\begin{align*}
+\lambda \E{}{Xe^{\lambda X}} - \E{}{e^{\lambda X}}\log\E{}{e^{\lambda X}} &\le \sum_{i=1}^{n}\E{}{e^{\lambda X}\tau(-\lambda(X - \widetilde{X}^{(i)})_{+})},\\
+\lambda \E{}{Xe^{\lambda X}} - \E{}{e^{\lambda X}}\log\E{}{e^{\lambda X}} &\le \sum_{i=1}^{n}\E{}{e^{\lambda X}\tau(\lambda(\widetilde{X}^{(i)} - X)_{-})}.
+\end{align*}
+\end{proposition}
+
+\item \begin{remark}
+In the proof, we have 
+\begin{align*}
+\text{Ent}_{\mu_i}(e^{\lambda X}) &\le \E{\mu_i}{e^{\lambda X}(\log e^{\lambda X} - \log e^{\lambda X_i'}) - (e^{\lambda X} - e^{\lambda X_i'})}\\
+&= \E{\mu_i}{e^{\lambda X}(\lambda (X - X_i') - (e^{\lambda X} - e^{\lambda X_i'})}\\
+&\le \E{\mu_i}{(e^{\lambda X} - e^{\lambda X_i'})(\lambda (X - X_i')_{+}) } \\
+&\le \lambda^2 \E{\mu_i}{(X - X_i')_{+}^2 } 
+\end{align*}
+Using the convexity of $e^x$, we have $e^s - e^t \le e^t(s- t)$ if $s > t$. Thus
+\begin{align*}
+\text{Ent}_{}(e^{\lambda X}) &\le \lambda^2 \sum_{i=1}^{n} \E{}{ \paren{X - X_i'}_{+}^2 }.
+\end{align*}  From Efron-Stein inequality, if we can bound
+\begin{align*}
+  \sum_{i=1}^{n}\E{}{\paren{X -  X_i'}_{+}^2} \le \nu,
+\end{align*} then we can bound both the variance $\text{Var}(X)$ and entropy $\text{Ent}_{}(e^{\lambda X})$.
+\end{remark}
+\end{itemize}
+
+
+\section{Transportation Method}
+\subsection{Optimal Transport, Wasserstein Distance and its Dual}
+\begin{itemize}
+\item \begin{definition} (\textbf{\emph{Pushforward Measure}})  \citep{gabriel2019computational} \\
+Let $(\cX, \srB_X)$ and $(\cY, \srB_Y)$ be two topological measurable spaces.  Denote the spaces of  \emph{general (Radon) measures} on $\cX, \cY$  as $\cM(\cX)$ and $\cM(\cY)$. Also let  $\cC(\cX)$ be space of continuous functions on $\cX$. For a \emph{continous} map $T : \cX \rightarrow \cY$,  the \underline{\textbf{\emph{push-forward operator}}} is defined as $T_{\#}: \cM(\cX) \rightarrow \cM(\cY)$ that  satisfies 
+\begin{align}
+\forall\, h\in \cC(\cX), \quad \int_{\cY}h(y)\; d \paren{T_{\#}\alpha}(y) &= \int_{\cX}h(T(x))\; d\alpha(x). \label{eqn: def_push_forward_opt}\\
+\text{or equivalently, } \quad \paren{T_{\#}\alpha}(B)&:= \alpha\paren{\set{x: T(x) \in B \subset \cY }} = \alpha(T^{-1}(B))  \label{eqn: def_push_forward_opt2}
+\end{align} where the \textbf{\emph{push-forward measure}} $\beta := T_{\#}\alpha \in \cM(\cY)$ of some $\alpha \in  \cM(\cX)$, $T^{-1}(\cdot)$ is the pre-image of $T$.
+\end{definition}
+
+\item \begin{remark} (\textbf{\emph{Density Function of Pushforward Measure}})\\
+Assume that $(\alpha, \beta)$ have densities $(\rho_{\alpha}, \rho_{\beta})$ with respect to a fixed measure, and $\beta = T_{\#}\alpha$. We see that $T_{\#}$ acts on a density $\rho_{\alpha}$ linearly to a density $\rho_{\beta}$ as a change of variable, i.e. 
+\begin{align}
+\rho_{\alpha}(\mb{x}) &= \abs{\det(T'(\mb{x}))}\rho_{\beta}(T(\mb{x}))  \label{eqn: density of push-forward distribution}\\
+\abs{\det(T'(\mb{x}))} &= \frac{\rho_{\alpha}(\mb{x}) }{\rho_{\beta}(T(\mb{x})) } \nonumber
+\end{align}
+\end{remark}
+
+
+\item \begin{definition} (\textbf{\emph{Optimal Transport Problem, Monge Problem}}) \citep{villani2009optimal, santambrogio2015optimal, gabriel2019computational} \\
+Let $(\cX, \srB_X)$ and $(\cY, \srB_Y)$ be two measurable spaces, where $\cX$ and $\cY$ are \emph{complete separable metric spaces}. Denote $\cP(\cX)$ and $\cP(\cY)$ as the space of probabiilty measures on $\cX$ and $\cY$. Define a \emph{\textbf{cost function}} $c: \cX \times \cY \to \bR_{+}$ as non-negative real-valued measurable functions on $\cX \times \cY$. \underline{\emph{\textbf{The optimal transport problem}}} by \emph{Monge} (i.e. \underline{\emph{\textbf{Monge Problem}}}) is defined as follows: given two probability measures $\bP \in \cP(\cX)$ and $\bQ \in \cP(\cY)$, find a \emph{continuous measurable map} $T: \cX \to \cY$ so that 
+\begin{align*}
+\inf_{T} & \int_{\cX} c(x, T(x)) d\bP(x) \\
+\text{s.t. }& \bQ = T_{\#}\bP
+\end{align*} The optimal solution $T$ is also called an \emph{\textbf{optimal transportation plan}}.
+\end{definition}
+
+\item \begin{definition} (\textbf{\emph{Optimal Transport Problem, Kantorovich Relaxation}}) \citep{villani2009optimal, santambrogio2015optimal, gabriel2019computational} \\
+ \underline{\emph{\textbf{The optimal transport problem}}} by \emph{Kantorovich} (i.e. \underline{\emph{\textbf{Kantorovich Relxation}}}) is defined as follows: given two probability measures $\bP \in \cP(\cX)$ and $\bQ \in \cP(\cY)$, find a \emph{joint probability measure} $\gamma \in \Pi(\bP, \bQ)$ so that 
+\begin{align*}
+\inf_{\gamma}  & \int_{\cX \times \cY} c(x, y) d\gamma(x, y) \\
+\text{s.t. }&\gamma \in \Pi(\bP, \bQ) := \set{\gamma \in \cP(\cX \times \cY): \pi_{\cX, \#}\gamma = \bP, \; \pi_{\cY, \#}\gamma = \bQ }
+\end{align*} where $\cP(\cX \times \cY)$ is the space of joint probability measure on $\cX \times \cY$, $\pi_{\cX}$ and $\pi_{\cY}$ are the coordinate projection onto $\cX$ and $\cY$. $\pi_{\cX, \#}\gamma = \bP$ means that $\bP$ is the marginal distribution of $\gamma$ on $\cX$. Similarly $\bQ$ is the marginal distribution of $\gamma$ on $\cY$.
+
+Equivalently, let $X$ and $Y$ are \emph{random variables} taking values in $\cX$ and $\cY$. The \emph{joint distribution} of $(X, Y)$ is $\gamma$ with marginal distribution of $X$ and $Y$ being $\bP$ and $\bQ$. Then the problem is
+\begin{align*}
+\min_{\gamma \in \Pi(\bP, \bQ)} \E{\gamma}{c(X, Y)}
+\end{align*} The joint distribution $\gamma \in \Pi(\bP, \bQ)$ such that $X_{\#}\gamma = \bP$ and $Y_{\#}\gamma = \bQ$ is called \emph{\textbf{a coupling}}.
+\end{definition}
+
+\item \begin{definition} (\textbf{\emph{Dual Problem of Kantorovich Problem}}) \citep{villani2009optimal, santambrogio2015optimal, gabriel2019computational} \\
+The \underline{\textbf{\emph{dual problem}}} of \emph{Kantorovich problem} is described as below:
+\begin{align*}
+\cL_{c}(\bP, \bQ) = \max_{(\varphi,  \psi) \in \cC(\cX)\times \cC(\cY)} & \int_{\cX}\varphi(x) d\bP(x) + \int_{\cY}\psi(y) d\bQ(y) \\
+\text{s.t. }&  \varphi(x) + \psi(y) \le c(x, y),\quad \forall x\in \cX, y \in \cY, 
+\end{align*} Here, $(\varphi, \psi)$ is a pair of \emph{continuous functions} on $\cX$ and $\cY$ respectively and they are also the \textbf{\emph{Kantorovich potentials}}. The feasible region is 
+ \begin{align*}
+\cR(c) := \set{(\varphi,  \psi) \in  \cC(\cX)\times \cC(\cY): \varphi \oplus \psi \le c} 
+\end{align*} where $( \varphi \oplus \psi)(x, y)=  \varphi(x) + \psi(y)$. 
+
+In other words, the dual optimization problem is
+\begin{align*}
+\max_{(\varphi,  \psi) \in \cR(c)} \E{\bP}{\varphi(X)} + \E{\bQ}{\psi(Y)}
+\end{align*}
+\end{definition}
+
+\item \begin{proposition} (\textbf{Strong Duality})  \citep{santambrogio2015optimal}\\
+Let $\cX, \cY$ be \textbf{complete separable spaces}, and $c: \cX \times \cY \to \bR_{+}$ be \textbf{lower semi-continuous and bounded from below}. Then the optimal value of \emph{primal} and \emph{dual problems} are the same
+\begin{align*}
+\min_{X \sim \bP, Y \sim \bQ} \E{}{c(X, Y)} = \cL_{c}(\bP, \bQ) = \max_{(\varphi,  \psi) \in \cR(c)} \E{\bP}{\varphi(X)} + \E{\bQ}{\psi(Y)}.
+\end{align*}
+\end{proposition}
+
+\item \begin{definition} (\textbf{\emph{Wasserstein Distance}}) \\
+Let $((\cX, d), \srB)$ be \emph{a metric measurable space} with \emph{Borel $\sigma$-algebra} induced by metric $d$. Let $X, Y$ be two random variables taking values in $\cX$ with distribution $\bP$ and $\bQ$. \emph{\textbf{The Wasserstein distance}} between \emph{probability distributions} $\bP$ and $\bQ$ induced by $d$ is defined as
+\begin{align}
+\cW_1(\bP, \bQ)  \equiv  \cW_d(\bP, \bQ) := \min_{X \sim \bP, Y \sim \bQ} \E{}{d(X, Y)} \label{def: wasserstein_dist}
+\end{align} In general, for $p \in [1, \infty)$, we can define \emph{\textbf{Wasserstein $p$-distance}} as
+\begin{align}
+\cW_p(\bP, \bQ)  \equiv \cW_{p,d}(\bP, \bQ)  := \paren{\min_{X \sim \bP, Y \sim \bQ} \E{}{(d(X, Y))^p}}^{1/p}. \label{def: wasserstein_dist_p_norm}
+\end{align}
+\end{definition}
+
+\item \begin{remark}
+Not to confuse the \emph{\textbf{$2$-Wasserstein distance}} with \emph{\textbf{the Wasserstein distance induced by $L_2$ norm}}:
+\begin{align*}
+\cW_{\norm{\cdot}{2}}(\bP, \bQ) \equiv  \cW_{1, \norm{\cdot}{2}}(\bP, \bQ)  &:= \min_{X \sim \bP, Y \sim \bQ} \E{}{\norm{X - Y}{2}} \\
+\cW_{2}(\bP, \bQ)   \equiv  \cW_{2, d}(\bP, \bQ)  &:= \sqrt{\min_{X \sim \bP, Y \sim \bQ} \E{}{d(X, Y)^2}} 
+\end{align*} 
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Wasserstein $p$-Distance is a Metric in $\cP(\cX)$}}) \\
+The \underline{\textbf{\emph{Wasserstein $p$-distance}}} $\cW_{p,d}(\bP, \bQ)  := \paren{\min_{X \sim \bP, Y \sim \bQ} \E{}{(d(X, Y))^p}}^{1/p}$ is a well-defined \emph{metric} in $\cP(\cX)$: for all $\bP, \bQ, \bM \in \cP(\cX)$, 
+\begin{enumerate}
+\item (\emph{Non-Negativity}):\; $\cW_{p,d}(\bP, \bQ) \ge 0$.
+\item (\emph{Definiteness}):\; $\cW_{p,d}(\bP, \bQ) = 0 $ iff $\bP = \bQ$
+\item (\emph{Symmetric}):\; $\cW_{p,d}(\bP, \bQ) = \cW_{p,d}(\bQ, \bP)$
+\item (\emph{Triangular inequality}): \; $\cW_{p,d}(\bP, \bQ)  \le \cW_{p,d}(\bP, \bM )  + \cW_{p,d}(\bM , \bQ) $
+\end{enumerate}
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{Total Variation / Variational Distance}})\\
+Let $P, Q$ be two probability measures on measurable space $(\Omega, \srF)$. The \underline{\emph{\textbf{total variation}}} or \underline{\emph{\textbf{variational distance}}} between $P$ and $Q$ is defined by
+\begin{align}
+V(P,Q) &:= \sup_{A \in \srF}\abs{P(A) - Q(A)} \label{def: total_variation_prob}
+\end{align}
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Equivalent Formulation of Total Variation}})\\
+It is a well-known and simple fact that the total variation is half the $L_1$-distance, that is, if $\mu$ is a \emph{common dominating measure} of $P$ and $Q$ and $p(x) = dP/d\mu$ and $q(x) = dQ /d\mu$ denote their respective densities, then
+\begin{align}
+V(P,Q) &:= P(A^{*}) - Q(A^{*}) = \frac{1}{2}\int_{\Omega}\abs{p(x) - q(x)} d\mu(x), \label{def: total_variation_l1}
+\end{align} where $A^{*} = \set{x: p(x) \ge q(x)}$.
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Total Variation via Optimal Coupling of Two Measures}})\\
+We note that another important interpretation of \emph{the variational distance} is related to \emph{the best coupling of the two measures}
+\begin{align}
+V(P,Q) &= \min P\set{X \neq Y}
+\end{align} where the minimum is taken over \emph{all pairs of joint distributions} for the random variables $(X, Y)$ whose marginal distributions are $X \sim P$ and $Y \sim Q$. 
+\end{remark}
+
+\item \begin{proposition} (\textbf{Pinsker's Inequality}) \citep{thomas2006elements, boucheron2013concentration} \\
+Let $P, Q$ be two probability distributions on measurable space $(\Omega, \srF)$ such that $P \ll Q$. Then
+\begin{align}
+V(P, Q)^2 &\le \frac{1}{2}\kl{P}{Q}. \label{ineqn: pinsker_inequality}
+\end{align}
+\end{proposition}
+
+\item \begin{remark} (\textbf{\emph{Total Variation as $1$-Wasserstein Distance}})\\
+\emph{The total variation} between $P$ and $Q$ is \emph{\textbf{the Wasserstein distance}} induced by \emph{\textbf{the Hamming distance}} $d(x, y) = \#\set{i: x_i \neq y_i}$.
+\begin{align*}
+V(P, Q) &= \cW_1(P, Q).
+\end{align*} Thus \emph{the Pinsker's inequality} \eqref{ineqn: pinsker_inequality} is the special case of \emph{transportation cost inequality} \eqref{ineqn: information_inequality_general}.
+\end{remark}
+
+\item \begin{theorem} (\textbf{Kantorovich-Rubenstein Duality}) \citep{villani2009optimal}\\
+Let $\cX$ be a \textbf{Polish space}, i.e. $\cX$ a \textbf{complete separable} \textbf{metric} space equipped with a Borel $\sigma$-algebra induced by metric $d$, and $\bP$ and $\bQ$ be probability measures on $\cX$. For fixed $p \in [1, \infty)$, let $Lip_1$ be the space of all 
+$1$-\textbf{Lipschitz} function with respect to metric $d$  such that
+\begin{align*}
+\norm{f}{L}  := \sup_{x, y \in \cX}\set{\frac{\abs{f(x) - f(y)}}{d(x, y)}} \le 1.
+\end{align*}
+Then 
+\begin{align}
+\cW_{d}(\bP, \bQ) \equiv \cW_{1,d}(\bP, \bQ) &= \sup_{f \in Lip_1}\set{\E{\bP}{f(X)} - \E{\bQ}{f(Y)}}. \label{eqn: wass_dist_dual}
+\end{align} 
+\end{theorem}
+\end{itemize}
+\subsection{Concentration via Transportation Cost}
+\begin{itemize}
+\item \begin{lemma} (\textbf{Transportation Lemma}) \citep{boucheron2013concentration}\\
+Let $X$ be a real-valued integrable random variable. Let $\phi$ be a \textbf{convex} and \textbf{continuously differentiable} function on a (possibly unbounded) interval $[0, b)$ and assume that $\phi(0) = \phi'(0) = 0$. Define, for every $x \ge 0$, \textbf{the Legendre transform} $\phi^{*}(x) = \sup_{\lambda \in (0,b)}(\lambda x - \phi(\lambda))$, and let, for every $t \ge 0$, $\phi^{*-1}(t) = \inf\{x \ge 0: \phi^{*}(x) > t\}$, i.e. the \textbf{the generalized inverse} of $\phi^{*}$. Then the following two statements are equivalent:
+\begin{enumerate}
+\item for every $\lambda \in (0,b)$,
+\begin{align*}
+\psi_{X - \E{}{X}}(\lambda) &\le \phi(\lambda)
+\end{align*} where $\psi_{X}(\lambda):= \log\E{Q}{e^{\lambda X}}$ is the logarithm of moment generating function;
+\item for any probability measure $P$ absolutely continuous with respect to $Q$ such that $\kl{P}{Q} < \infty$,
+\begin{align}
+\E{P}{X} - \E{Q}{X} &\le \phi^{*-1}\paren{\kl{P}{Q}}. \label{ineqn: information_inequality_general}
+\end{align} 
+\end{enumerate}
+In particular, given $\nu > 0$, $X$ follows a sub-Gaussian distribution, i.e.
+\begin{align*}
+\psi_{X - \E{}{X}}(\lambda) &\le \frac{\nu\lambda^2}{2}
+\end{align*} for every $\lambda >0$ \textbf{if and only if} for any probability measure $P$ absolutely continuous with respect to $Q$ and such that $\kl{P}{Q} < \infty$, 
+\begin{align}
+\E{P}{X} - \E{Q}{X} &\le \sqrt{2\nu\kl{P}{Q}}. \label{ineqn: information_inequality_sub_gaussian}
+\end{align}
+\end{lemma}
+
+\item \begin{remark} (\textbf{\emph{Transportation Method}})\\ 
+Let $\bP = \otimes_{i=1}^{n}\bP_i$ be the product measure for $Z := (Z_1 \xdotx{,} Z_n)$ on $\cX^n$ and $f: \cX^n  \to \bR$ be \emph{$1$-Lipschitz function}.  Consider a probability measure $\bQ$ on $\cX^n$, absolutely continuous with respect to $\bP$ and let $Y$ be a random variable (defined on the same probability space as $\cX$) such that $Y$ has distribution $\bQ$.
+
+The lemma above suggests that one may prove \emph{sub-Gaussian concentration inequalities} for $X = f(Z_1 \xdotx{,} Z_n)$ by proving a ``\emph{transportation}" \emph{inequality} as above. The key to achieving this relies on \emph{coupling}. In particular, \emph{the Kantorovich-Rubenstein duality} for $\cW_{1,d}$  suggests that 
+\begin{align*}
+\E{\bQ}{f(Y)} - \E{\bP}{f(Z)} \le \min_{\gamma \in \Pi (\bQ, \bP)} \E{\gamma}{d(Y, Z)} := \cW_{1,d}( \bQ, \bP)
+\end{align*} Thus, it suffices to \emph{upper bound} the \emph{$1$-Wasserstein distance} between $\bQ$ and $\bP$.
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{$d$-Transportation Cost Inequality}}) \citep{wainwright2019high}\\
+Let $(\cX, d)$ be a \emph{metric space} with metric $d$,  and $(\cX, \srB)$ be a \emph{measurable space}, where $\srB$ is \emph{the Borel $\sigma$-algebra} induced by metric $d$, \emph{\textbf{the probability measure}} $\bP$ is said to satisfy a \underline{\emph{\textbf{$d$-transportation cost inequality}}} with parameter $\nu > 0$ if
+\begin{align}
+\cW_{1,d}( \bQ, \bP) &\le \sqrt{2\nu\kl{\bQ}{\bP}}  \label{def: transportation_cost_inequality}
+\end{align} for all probability measure $\bQ \ll \bP$ on $\srB$.
+\end{definition}
+
+\item \begin{theorem} (\textbf{Isoperimetric Inequality via Transportation Cost})\citep{wainwright2019high}\\
+Consider a metric measure space $(\cX, \srB, \bP)$ with metric $d$, and suppose that $\bP$ satisfies the \textbf{$d$-transportation cost inequality} in \eqref{def: transportation_cost_inequality} Then its \textbf{concentration function} satisfies the bound
+\begin{align}
+\alpha_{\bP, (\cX, d)}(t) &\le  \exp\paren{- \frac{(t -t_0)_{+}^2}{2 \nu}}, \text{ for }t  \ge t_0 \label{ineqn: concentration_function_transport_cost}
+\end{align} where $t_0 := \sqrt{2\nu \log 2}$.  Moreover, for any $Z \sim \bP$ and any $L$-Lipschitz function $f : \cX \to \bR$, we have the \textbf{concentration inequality}
+\begin{align}
+\bP\set{\abs{f(Z) - \E{}{f(Z)}} \ge t} &\le 2 \exp\paren{- \frac{t^2}{2 \nu L^2}}.  \label{ineqn: lipschitz_concentration_transport_cost}
+\end{align}
+\end{theorem}
+\end{itemize}
+\subsection{Tensorization for Transportation Cost}
+\begin{itemize}
+\item \begin{proposition} (\textbf{Tensorization for Transportation Cost}) \citep{boucheron2013concentration}\\
+Suppose that, for each $k = 1, 2 \xdotx{,} n$, the univariate distribution $\bP_k$ satisfies a \textbf{$d_k$-transportation cost inequality} with parameter $\nu_k$. Then \textbf{the product distribution} $\bP = \otimes_{k=1}^n \bP_k$ satisfies the transportation cost inequality
+\begin{align}
+\cW_{1, d}(\bQ, \bP) &= \sqrt{2\paren{\sum_{k=1}^n \nu_k} \kl{\bQ}{\bP}}, \quad \text{ for all distributions $\bQ \ll \bP$ } \label{ineqn: tensorization_transport_cost}
+\end{align}  where the Wasserstein metric is defined using the distance $d(x, y) :=  \sum_{k=1}^{n}d_k(x_k, y_k)$.
+\end{proposition}
+\end{itemize}
+
+\subsection{Induction Lemma}
+\subsection{Marton's Transportation Inequality}
+\begin{itemize}
+\item \begin{theorem} (\textbf{Marton's Transportation Inequality}) \citep{boucheron2013concentration}\\
+Let $\bP = \otimes_{k=1}^n \bP_k$ be a product probability measure on $\cX^n$, and let $\bQ$ be a probability measure absolutely continuous with respect to $\bP$. Define two random vectors $X = (X_1 \xdotx{,} X_n), Y = (Y_1 \xdotx{,} Y_n)$ in $\cX^n$ with distribution $\bP$ and $\bQ$ respectively.  Then
+\begin{align}
+\cW_{2, d_H}(\bQ, \bP) := \sqrt{\min_{\gamma \in \Pi(\bQ, \bP)}\sum_{i=1}^n\gamma^2\set{X_i \neq Y_i}} &\le \sqrt{\frac{1}{2}\kl{\bQ}{\bP}} \label{ineqn: marton_transport_cost_inequality} \\
+\Leftrightarrow  \min_{\gamma \in \Pi(\bQ, \bP)}\sum_{i=1}^n \gamma^2\set{X_i \neq Y_i} &\le \frac{1}{2}\kl{\bQ}{\bP} \nonumber
+\end{align}
+\end{theorem}
+
+\item \begin{theorem} (\textbf{Marton's Conditional Transportation Inequality}) \citep{boucheron2013concentration}\\
+Let $\bP = \otimes_{k=1}^n \bP_k$ be a product probability measure on $\cX^n$, and let $\bQ$ be a probability measure absolutely continuous with respect to $\bP$. Define two random vectors $X = (X_1 \xdotx{,} X_n), Y = (Y_1 \xdotx{,} Y_n)$ in $\cX^n$ with distribution $\bP$ and $\bQ$ respectively.  Then
+\begin{align}
+ \min_{\gamma \in \Pi(\bQ, \bP)}\E{\gamma}{\sum_{i=1}^n(\gamma^2\set{X_i \neq Y_i | X_i} + \gamma^2\set{X_i \neq Y_i | Y_i})} &\le 2\kl{\bQ}{\bP} \label{ineqn: marton_conditional_transport_cost_inequality}
+\end{align}
+\end{theorem}
+
+\item \begin{proposition} (\textbf{Concentration of Lipschitz Function with Function Weighted Hamming Distance}) \citep{boucheron2013concentration}\\
+Let $f: \cX^n \to \bR$ be a measurable function and let $Z_1 \xdotx{,} Z_n$ be independent random variables taking their values in $\cX$. Define $X = f(Z_1 \xdotx{,} Z_n)$. Assume that there exist \textbf{measurable functions} $c_i: \cX_n \to [0, \infty)$ such that for all $x, y \in \cX^n$, 
+\begin{align*}
+f(y) - f(z) \le \sum_{i=1}^{n}c_i(z) \ind{y_i \neq z_i}.
+\end{align*} Setting
+\begin{align*}
+\nu = \E{}{\sum_{i=1}^{n}c_i^2(Z)} \qquad \text{ and }\qquad \nu_{\infty} = \sup_{z \in \cX^n}\sum_{i=1}^{n}c_i^2(z)
+\end{align*} for all $\lambda  > 0$, we have 
+\begin{align*}
+\psi_{X - \E{}{X}}(\lambda) \le \frac{\nu \lambda^2}{2} \qquad \text{ and }\qquad \psi_{- X + \E{}{X}}(\lambda) \le \frac{\nu_{\infty} \lambda^2}{2}
+\end{align*} In particular, for all $t > 0$,
+\begin{align}
+\bP\set{X \ge \E{}{X}  + t} &\le \exp\paren{-\frac{t^2}{2\nu}} \nonumber\\
+\bP\set{X \le \E{}{X}  - t}   &\le \exp\paren{-\frac{t^2}{2\nu_{\infty}}}. \label{ineqn: weakly_self_bounding_sub_gaussian}
+\end{align}
+\end{proposition}
+
+\item \begin{remark}
+The condition in above proposition covers 
+\begin{enumerate}
+\item \emph{Lipschitz functions} such as \emph{functions with bounded difference},  
+\item \emph{\textbf{self-bounding functions}} including \emph{\textbf{configuration functions}}:
+Let $f$ be such a configuration function. For any $z \in \cX^n$, fix a \emph{maximal sub-sequence} $(z_{i,1} \xdotx{,} z_{i,m})$ satisfying property $\Pi$ (so that $f(z) = m$). Let $c_i(z)$ denote \emph{the indicator that $z_i$ belongs to the sub-sequence} $(z_{i,1} \xdotx{,} z_{i,m})$. Thus,
+\begin{align*}
+\sum_{i=1}^n c_i^2(z) = \sum_{i=1}^n c_i(z) = f(z).
+\end{align*} It follows from the definition of a configuration function that for all $z, y \in \cX^n$,
+\begin{align*}
+f(y) \ge f(z) -  \sum_{i=1}^n c_i(z)\ind{z_i \neq y_i}
+\end{align*} So $g = -f$ satisfies the condition in above proposition. 
+\item  \emph{\textbf{weakly self-bounding functions}}
+\item \emph{\textbf{convex distance function}}
+\begin{align*}
+d_{T}(z, A) &:= \sup_{\alpha \in \bR_{+}^{n}: \norm{\alpha}{2} = 1}\inf_{y \in A}\sum_{i=1}^n\alpha_i \ind{z_i \neq y_i}
+\end{align*} Denote by $c(z) = (c_1(z) \xdotx{,} c_n(z)) = \alpha^{*}$ the vector of nonnegative components \emph{in the unit ball} for which \emph{the supremum is achieved}.  Thus
+\begin{align*}
+d_{T}(z, A) - d_{T}(y, A) &\le  \inf_{z' \in A}\sum_{i=1}^n c_i(z) \ind{z_i \neq z_i'} -  \inf_{y' \in A}\sum_{i=1}^n c_i(z) \ind{y_i \neq y_i'}\\
+&\le \sum_{i=1}^n c_i(z) \ind{z_i \neq y_i}
+\end{align*}
+\end{enumerate}
+\end{remark}
+\end{itemize}
+\subsection{Talagrand's Gaussian Transportation Inequality}
+\begin{itemize}
+\item \begin{theorem} (\textbf{Talagrand's Gaussian Transportation Inequality}) \citep{boucheron2013concentration}\\
+Let $\bP$ be be the standard Gaussian probability measure on $\bR^n$, and let $\bQ$ be a probability measure absolutely continuous with respect to $\bP$. Define two random vectors $X = (X_1 \xdotx{,} X_n), Y = (Y_1 \xdotx{,} Y_n)$ in $\cX^n$ with distribution $\bP$ and $\bQ$ respectively.  Then
+\begin{align}
+\cW_{2, d}(\bQ, \bP) := \sqrt{\min_{\gamma \in \Pi(\bQ, \bP)}\sum_{i=1}^n\E{\gamma}{(X_i - Y_i)^2}   } &\le \sqrt{2\kl{\bQ}{\bP}} \label{ineqn: talagrand_gaussian_transport_cost_inequality} \\
+\Leftrightarrow  \min_{\gamma \in \Pi(\bQ, \bP)}\sum_{i=1}^n\E{\gamma}{(X_i - Y_i)^2}   &\le 2\kl{\bQ}{\bP} \nonumber
+\end{align}
+\end{theorem}
+\end{itemize}
+\section{Proofs of Bounded Difference Inequality}
+\subsection{Martingale Method}
+\subsection{Entropy Method}
+\subsection{Isoperimetric Inequality on Binary Hypercube}
+\subsection{Transportation Method}
+\subsection{Comparison of Different Proofs}
+
+
+
+
+
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{reference.bib}
+\end{document}

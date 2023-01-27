@@ -1,0 +1,357 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs,  mathtools, dsfont}
+\usepackage{tabularx}
+\usepackage{tikz-cd}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+%\usepackage{tikz-cd}
+
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Summary: Part 2}
+\author{ Tianpei Xie}
+\date{Jan. 26th., 2023 }
+\maketitle
+\tableofcontents
+\newpage
+\section{Logarithmic Sobolev Inequality}
+\subsection{Functional Form of Logarithmic Sobolev Inequality}
+\begin{itemize}
+\item From functional analysis, we have \emph{the Sobolev inequality}, 
+\begin{remark} (\emph{\textbf{The Sobolev Inequality}}) \citep{evans2010partial}\\
+\emph{\textbf{The Sobolev inequality}} states for smooth function $f: \bR^n \to \bR$ in \emph{Sobolev space} where $n \ge 3$ and $p = \frac{2n}{n-2} > 2$
+\begin{align*}
+\norm{f}{p}^2 &\le C_n \,\int_{\bR^{n}}\abs{\nabla f}^2 dx.
+\end{align*} The inequality is sharp when the constant
+\begin{align*}
+C_n &:= \frac{1}{\pi n(n-2)}\paren{\frac{\Gamma(n)}{\Gamma(n/2)}}^{2/n}
+\end{align*}
+\end{remark}
+
+\item \begin{proposition} (\textbf{Euclidean Logarithmic Sobolev Inequality}). \\
+Let $f: \bR^n \to \bR$ be a smooth function and $m$ be Lebesgue measure on $\bR^n$, then
+\begin{align}
+\text{Ent}_{m}(f^2) &\le \frac{n}{2}\log\paren{\frac{2}{n \pi e} \E{m}{\norm{\nabla f}{2}^2} } \label{ineqn: log_sobolev_inequality_euclidean} \\
+\Leftrightarrow \int f^2 \log\paren{\frac{f^2}{\int f^2 dx}} dx &\le \frac{n}{2}\log\paren{\frac{2}{n \pi e} \int \abs{\nabla f}^2 dx }
+\nonumber
+\end{align}
+\end{proposition}
+
+\item \begin{definition} (\textbf{\emph{Logarithmic Sobolev Inequality for General Probability Measure}}). \\
+\emph{A probability measure} $\mu$ on $\bR^n$ is said to satisfy the \underline{\emph{\textbf{logarithmic Sobolev inequality}}}  for some constant $C > 0$ if for any smooth function $f$
+\begin{align}
+\text{Ent}_{\mu}(f^2) &\le C\, \E{\mu}{\norm{\nabla f}{2}^2} \label{ineqn: log_sobolev_inequality_general}
+\end{align} holds for any \textbf{\emph{continuous differentiable}} function $f: \bR^n \to \bR$.  The left-hand side is called \textbf{\emph{the entropy functional}}, which is defined as
+\begin{align*}
+\text{Ent}(f^2) &:= \E{\mu}{f^2 \log f^2} - \E{\mu}{f^2}\log\E{\mu}{f^2} \\
+&= \int f^2 \log\paren{\frac{f^2}{\int f^2 d\mu}} d\mu.
+\end{align*} The right-hand side is defined as
+\begin{align*}
+\E{\mu}{\norm{\nabla f}{2}^2} &= \int \norm{\nabla f}{2}^2 d\mu.
+\end{align*} Thus we can rewrite \emph{the logarithmic Sobolev inequality} in \emph{functional form}
+\begin{align}
+\int f^2 \log\paren{\frac{f^2}{\int f^2 d\mu}} d\mu &\le C \int \norm{\nabla f}{2}^2 d\mu  \label{ineqn: log_sobolev_inequality_general_functional_form} 
+\end{align}
+\end{definition}
+
+\item \begin{remark}(\textbf{\emph{Logarithmic Sobolev Inequality}})\\
+For non-negative function $f$, we can replace $f \to \sqrt{f}$, so that \emph{the logarithmic Sobolev inequality} becomes
+\begin{align}
+\text{Ent}_{\mu}(f) &\le C \int \frac{\norm{\nabla f}{2}^2}{f} d\mu \label{ineqn: log_sobolev_inequality_general_v2} 
+\end{align} 
+\end{remark}
+
+\item \begin{remark}(\textbf{\emph{Modified Logarithmic Sobolev Inequality via Convex Cost and Duality}})\\
+For some \emph{\textbf{convex non-negative cost}} $c: \bR^n \to \bR_{+}$, \emph{\textbf{the convex conjugate}} of $c$ (Legendre transform of $c$) is defined as
+\begin{align*}
+c^{*}(x) := \sup_{y}\set{\inn{x}{y} - c(y) }
+\end{align*}
+Then we can obtain \emph{\textbf{the modified logarithmic Sobolev inequality}}
+\begin{align}
+\text{Ent}_{\mu}(f) &\le \int f^2\, c^{*}\paren{\frac{\nabla f}{f}} d\mu \label{ineqn: log_sobolev_inequality_general_modified} 
+\end{align} 
+\end{remark}
+\end{itemize}
+\subsection{Bernoulli Logarithmic Sobolev Inequality}
+\begin{itemize}
+\item \begin{remark} (\emph{Setting})\\
+Consider a \emph{\textbf{uniformly distributed binary vector}} $Z = (Z_1 \xdotx{,} Z_n)$ on the hypercube $\set{-1, +1}^n$. In other words, the components of $X$ are \emph{independent}, \emph{identically distributed} \emph{\textbf{random sign (Rademacher) variables}} with $\bP\set{Z_i = -1} = \bP\set{Z_i = +1} = 1/2$ (i.e. \emph{symmetric Bernoulli random variables}). 
+
+Let $f: \set{-1, +1}^n \to \bR$ be a real-valued function on \emph{\textbf{binary hypercube}}. $X := f(Z)$ is an induced real-valued random variable. Define $\widetilde{Z}^{(i)} = (Z_1 \xdotx{,} Z_{i-1}, Z_{i}', Z_{i+1} \xdotx{,} Z_n)$ be the sample $Z$ with $i$-th component replaced by an \emph{independent copy} $Z_{i}'$. Since $Z, \widetilde{Z}^{(i)} \in \set{-1, +1}^n$, $\widetilde{Z}^{(i)} = (Z_1 \xdotx{,} Z_{i-1}, -Z_{i}, Z_{i+1} \xdotx{,} Z_n)$, i.e. \emph{the $i$-th sign is \textbf{flipped}}. Also denote the $i$-th \emph{Jackknife sample} as $Z_{(i)} = (Z_1 \xdotx{,} Z_{i-1},  Z_{i+1} \xdotx{,} Z_n)$ by \emph{leaving out} the $i$-th component. $\E{(-i)}{X} := \E{}{X | Z_{(i)}}$.
+
+Denote the $i$-th component of \emph{\textbf{discrete gradient}} of $f$ as
+\begin{align*}
+\nabla_{i}f(z) &:= \frac{1}{2}\paren{f(z) - f(\widetilde{z}^{(i)})}
+\end{align*} and $\nabla f(z) = (\nabla_{1}f(z) \xdotx{,} \nabla_{n}f(z) )$
+\end{remark}
+
+\item \begin{proposition} (\textbf{Logarithmic Sobolev Inequality for Rademacher Random Variables}). \citep{boucheron2013concentration}\\
+If $f: \set{-1, +1}^n \to \bR$ be an arbitrary real-valued function  defined on the $n$-dimensional \textbf{binary hypercube} and assume that $Z$ is \textbf{uniformly} \textbf{distributed} over $\set{-1, +1}^n$. Then
+\begin{align}
+\text{Ent}(f^2) &\le \cE(f) \label{ineqn: log_sobolev_inequality_binary_cube} \\
+\Leftrightarrow \text{Ent}(f^2(Z)) &\le 2\E{}{\norm{\nabla f(Z)}{2}^2}  \label{ineqn: log_sobolev_inequality_binary_cube_2}
+\end{align}
+\end{proposition}
+
+\item \begin{remark} (\emph{\textbf{Logarithmic Sobolev Inequality $\Rightarrow$  Efron-Stein Inequality}}). \citep{boucheron2013concentration}\\
+Note that for $f$ non-negative, 
+\begin{align*}
+\text{Var}(f(Z)) &\le \text{Ent}(f^2(Z)).
+\end{align*} Thus \emph{logarithmic Sobolev inequality} \eqref{ineqn: log_sobolev_inequality_binary_cube} implies
+\begin{align*}
+\text{Var}(f(Z)) &\le  \cE(f) 
+\end{align*} which is \emph{the Efron-Stein inequality}.
+\end{remark}
+
+\item \begin{corollary} (\textbf{Logarithmic Sobolev Inequality for Asymmetric Bernoulli Random Variables}). \citep{boucheron2013concentration}\\
+If $f: \set{-1, +1}^n \to \bR$ be an arbitrary real-valued function and $Z = (Z_1 \xdotx{,} Z_n) \in \set{-1, +1}^n$ with $p= \bP\set{Z_i = +1}$. Then
+\begin{align}
+\text{Ent}(f^2) &\le c(p)\E{}{\norm{\nabla f(Z)}{2}^2}   \label{ineqn: log_sobolev_inequality_binary_cube_asym}
+\end{align} where 
+\begin{align*}
+c(p) &= \frac{1}{1 - 2p}\log\frac{1-p}{p}
+\end{align*} Note that $\lim\limits_{p \to 1/2}c(p) = 2$.
+\end{corollary}
+\end{itemize}
+\subsection{Gaussian Logarithmic Sobolev Inequality}
+\begin{itemize}
+\item \begin{proposition} (\textbf{Gaussian Logarithmic Sobolev Inequality}). \citep{boucheron2013concentration}\\
+Let $f: \bR^n \to \bR$ be a \textbf{continuous differentiable} function and let $Z = (Z_1 \xdotx{,} Z_n)$ be a vector of $n$ \textbf{independent} \textbf{standard Gaussian} random variables. Then
+\begin{align}
+\text{Ent}(f^2(Z)) &\le 2\E{}{\norm{\nabla f(Z)}{2}^2}.  \label{ineqn: log_sobolev_inequality_gaussian}
+\end{align}
+\end{proposition}
+\end{itemize}
+\subsection{Modified Logarithmic Sobolev Inequalities}
+\begin{itemize}
+\item \begin{proposition} (\textbf{A Modified Logarithmic Sobolev Inequalities for Moment Generating Function}) \citep{boucheron2013concentration}\\
+Consider independent random variables $Z_1 \xdotx{,} Z_n$ taking values in $\cX$, a real-valued function $f: \cX^n \to \bR$ and the random variable $X = f(Z_1 \xdotx{,} Z_n)$. Also denote $Z_{(-i)}= (Z_1 \xdotx{,} Z_{i-1}, Z_{i+1} \xdotx{,} Z_n)$ and $X_{(-i)} = f_i(Z_{(-i)})$ where $f_i: \cX^{n-1} \to \bR$ is an arbitrary function. Let $\phi(x) = e^x -x -1$.
+Then for all $\lambda \in \bR$,
+\begin{align}
+\text{Ent}(e^{\lambda X}) := \E{}{\lambda Xe^{\lambda X}} - \E{}{e^{\lambda X}}\log\E{}{e^{\lambda X}} &\le \sum_{i=1}^{n}\E{}{e^{\lambda X}\phi(-\lambda(X - X_{(-i)}))}\label{ineqn: log_sobolev_inequality_mgf}
+\end{align}
+\end{proposition}
+
+
+\item \begin{proposition} (\textbf{Symmetrized Modified Logarithmic Sobolev Inequalities}) \citep{boucheron2013concentration}\\
+Consider independent random variables $Z_1 \xdotx{,} Z_n$ taking values in $\cX$, a real-valued function $f: \cX^n \to \bR$ and the random variable $X = f(Z_1 \xdotx{,} Z_n)$. Also denote $\widetilde{X}^{(i)} = f(Z_1 \xdotx{,} Z_{i-1}, Z_i', Z_{i+1} \xdotx{,} Z_n)$. Let $\phi(x) = e^x -x -1$.
+Then for all $\lambda \in \bR$,
+\begin{align}
+\lambda \E{}{Xe^{\lambda X}} - \E{}{e^{\lambda X}}\log\E{}{e^{\lambda X}} &\le \sum_{i=1}^{n}\E{}{e^{\lambda X}\phi(-\lambda(X - \widetilde{X}^{(i)}))}\label{ineqn: log_sobolev_inequality_sym_mgf}
+\end{align} Moreover, denoting $\tau(x) = x(e^x - 1)$, for all $\lambda \in \bR$,
+\begin{align*}
+\lambda \E{}{Xe^{\lambda X}} - \E{}{e^{\lambda X}}\log\E{}{e^{\lambda X}} &\le \sum_{i=1}^{n}\E{}{e^{\lambda X}\tau(-\lambda(X - \widetilde{X}^{(i)})_{+})},\\
+\lambda \E{}{Xe^{\lambda X}} - \E{}{e^{\lambda X}}\log\E{}{e^{\lambda X}} &\le \sum_{i=1}^{n}\E{}{e^{\lambda X}\tau(\lambda(\widetilde{X}^{(i)} - X)_{-})}.
+\end{align*}
+\end{proposition}
+\end{itemize}
+
+\section{Isoperimetric Inequalities and Concentration of Measure}
+\subsection{Brunn-Minkowski Inequality}
+\begin{itemize}
+\item \begin{definition} (\textbf{\emph{Minkowski Sum of Sets}})\\
+Consider sets $A, B \subseteq \bR^n$ and define \underline{\emph{\textbf{the Minkowski sum}}} of $A$ and $B$ as the set of all vectors in $\bR^n$ formed by sums of elements of $A$ and $B$:
+\begin{align*}
+A + B &:= \set{x+y: x \in A, y \in B}
+\end{align*} 
+Similarly, for $c \in \bR$, let $c A = \set{cx : x \in A}$. Denote by $\text{Vol}(A)$ the \emph{\textbf{Lebesgue measure}} of a \emph{(measurable) set $A \subset \bR^n$}.
+\end{definition}
+
+\item \begin{theorem} (\textbf{The Pr{\'e}kopa-Leindler Inequality}). \citep{boucheron2013concentration, wainwright2019high} \\
+Let $\lambda \in (0, 1)$, and let $f, g, h : \bR^n \to [0, \infty)$ be \textbf{non-negative measurable functions} such that for all $x, y \in \bR^n$,
+\begin{align*}
+h\paren{\lambda x + (1- \lambda) y} &\ge f(x)^{\lambda}g(y)^{1-\lambda}.
+\end{align*} Then
+\begin{align}
+\int_{\bR^n} h(x) dx &\ge \paren{\int_{\bR^n} f(x) dx }^{\lambda}\paren{\int_{\bR^n} g(x) dx}^{1-\lambda}.   \label{ineqn: prekopa_leindler_inequality}
+\end{align}
+\end{theorem}
+
+\item \begin{corollary} (\textbf{Weaker Brunn-Minkowski Inequality}) \citep{boucheron2013concentration, wainwright2019high}\\
+Let $A, B \subset \bR^n$ be \textbf{non-empty compact sets}. Then for all $\lambda \in [0, 1]$,
+\begin{align}
+\text{Vol}\paren{ \lambda A + (1- \lambda) B } &\ge \text{Vol}(A)^{\lambda}\text{Vol}(B)^{1- \lambda}.   \label{ineqn: brunn_minkowski_inequality_weaker}
+\end{align}
+\end{corollary}
+
+\item \begin{theorem} (\textbf{Brunn-Minkowski Inequality}) \citep{boucheron2013concentration, vershynin2018high, wainwright2019high}\\
+Let $A, B \subset \bR^n$ be \textbf{non-empty compact sets}. Then for all $\lambda \in [0, 1]$,
+\begin{align}
+\text{Vol}\paren{ \lambda A + (1- \lambda) B }^{\frac{1}{n}} &\ge \lambda\text{Vol}(A)^{\frac{1}{n}} + (1- \lambda)\text{Vol}(B)^{\frac{1}{n}}.   \label{ineqn: brunn_minkowski_inequality}
+\end{align}
+\end{theorem}
+\end{itemize}
+\subsection{Classical Isoperimetric Problem on Euclidean Space $\bR^n$}
+\begin{itemize}
+\item \begin{definition} (\textbf{\emph{Blowup of Sets}}) \\
+For any $t > 0$, and any (measurable) sets $A \subset \bR^n$,  \emph{\underline{\textbf{the $t$-blowup (or, $t$-enlargement)}} of $A$} is defined by
+\begin{align*}
+A_t &:= \set{x \in \bR^n: d(x, A) < t} = A + t\,B
+\end{align*} where $B = \set{x \in \bR^n: d(0, x) < 1}$ is an \emph{open unit ball} and $d(x, A) = \inf_{y \in A}d(x, y)$.
+\end{definition}
+
+\item \begin{definition}(\textbf{\emph{Surface Area of Sets}}) \\
+let $A \subset \bR^n$ be a measurable set and denote by $\text{Vol}(A)$ its \emph{Lebesgue measure}. \emph{The  \underline{\textbf{surface area}} of $A$} is
+defined by
+\begin{align*}
+\text{Vol}(\partial A) &= \lim\limits_{t \to 0}\frac{\text{Vol}(A_t) - \text{Vol}(A)}{t}.
+\end{align*} provided that the limit exists. Here $A_t$ denotes \emph{the $t$-blowup} of $A$.
+\end{definition}
+
+\item \begin{remark}(\textbf{\emph{Isoperimetry Theorem}})\\
+The classical isoperimetric theorem in $\bR^n$ states that, among all sets with \emph{\textbf{a given volume}}, \underline{\emph{\textbf{the Euclidean unit ball minimizes the surface area}}}.  This theoerm can be formally stated as below:
+\end{remark}
+
+\item \begin{theorem} (\textbf{Isoperimetry Theorem}) \citep{boucheron2013concentration, vershynin2018high, wainwright2019high}\\
+Let $A \subset \bR^n$ be such that $\text{Vol}(A) = \text{Vol}(B)$ where $B := \set{x \in \bR^n: d(0, x) < 1}$ is an unit ball. Then for any $t > 0$, 
+\begin{align}
+\text{Vol}(A_t) &\ge  \text{Vol}(B_t) \label{ineqn: isoperimetry_inequality_blowup}
+\end{align} Moreover, if $\text{Vol}(\partial A) $ exists, then
+\begin{align}
+\text{Vol}(\partial A)  &\ge \text{Vol}(\partial B).  \label{ineqn: isoperimetry_inequality_surface}
+\end{align}
+\end{theorem}
+
+\item \begin{example} (\textbf{\emph{Concentration of Lebesgue Measure in $\bR^n$ and Isoperimetric Inequality}})\\
+Note that the volume of a \emph{$t$-ball in $\bR^n$} is 
+\begin{align*}
+\text{Vol}(tB) =  \frac{\pi^{\frac{n}{2}}}{\Gamma\paren{\frac{n}{2} + 1}}t^n  \equiv c_n t^n 
+\end{align*}  Thus the radius of ball $B$ with the same volume of $A$ is
+\begin{align*}
+r := \paren{\frac{\text{Vol}(A) }{c_n}}^{\frac{1}{n}}.
+\end{align*} \emph{\textbf{The classical isoperimetric inequality}} states that 
+\begin{align}
+ \text{Vol}(A_t)) &\ge \paren{ (r+  t)\text{Vol}(B)^{1/n}}^{n} \nonumber\\
+ \Leftrightarrow  \text{Vol}(A_t) &\ge c_n\paren{\paren{\frac{\text{Vol}(A) }{c_n}}^{\frac{1}{n}} + t}^n \nonumber \\
+  \Leftrightarrow  \paren{\frac{\text{Vol}(A_t) }{c_n}}^{\frac{1}{n}}  &\ge \paren{\frac{\text{Vol}(A) }{c_n}}^{\frac{1}{n}} + t  \label{ineqn: lebesgure_measure_concentration}
+\end{align}
+\end{example}
+
+\item \begin{definition} (\emph{\textbf{Isoperimetric Function of Probability Measure}}) \\
+Define  \emph{\textbf{the isoperimetric function}} of \emph{the Lebesgue measure space} $(\bR^n, \mu)$ as
+\begin{align*}
+\lambda(u) := \paren{\frac{u}{c_n}}^{\frac{1}{n}}
+\end{align*} so \emph{the classical isoperimetric inequality}  is equivalent to \emph{the concentration of Lebesgue measure}
+\begin{align*}
+\lambda\paren{\mu(A_t)} &\ge \lambda\paren{\mu(A)} + t. 
+\end{align*}
+\end{definition}
+\end{itemize}
+
+\subsection{Isoperimetric Problem on Unit Sphere}
+\begin{itemize}
+\item \begin{definition} (\textbf{\emph{Spherical Cap and its $t$-Blowup}}) \\
+Let $\bS^{n - 1} :=  \set{x \in \bR^n: \norm{x}{} = 1}$ be the \emph{$(n-1)$-dimensional \textbf{unit sphere}}. The \emph{\textbf{intersection}} of a \emph{\textbf{half-space}} and $\bS^{n-1}$ is called a \emph{\textbf{spherical cap}}. In particular, for some $y \in \bR^n$, denote the associated spherical cap as
+\begin{align*}
+H_y := \set{x \in \bS^{n-1}: \inn{x}{y} \le 0}
+\end{align*} With some simple geometry, it can be shown that its  \emph{$t$-blowup}  corresponds to the set
+\begin{align*}
+H_y^{t} := \set{x \in \bS^{n-1}: \inn{x}{y} < \sin(t)}
+\end{align*}
+\end{definition}
+
+\item \begin{theorem} (\textbf{Isoperimetry Theorem on Unit Sphere}) \citep{boucheron2013concentration, vershynin2018high, wainwright2019high}\\
+Let $A$ be a subset of the sphere $\bS^{n-1}$, and let $\sigma$ denote the \textbf{normalized area} on that sphere. Let $t > 0$. Then,
+among all sets $A \subset \bS^{n-1}$ with given area $\sigma(A)$, the \underline{\textbf{spherical caps}} \textbf{minimize}
+\textbf{the area of the neighborhood} $\sigma(A_t)$, where
+\begin{align*}
+A_t := \set{x \in \bS^{n-1}: \exists y \in A \text{ such that } \norm{x - y}{} < t}
+\end{align*}
+\end{theorem}
+
+\item \begin{remark}
+Define a \emph{metric} $\rho$ on sphere $\bS^{n-1}$ as 
+\begin{align*}
+\rho(x, y) := \arccos(\inn{x}{y})
+\end{align*}
+Thus $(\bS^{n-1}, \rho)$ is a \emph{\textbf{metric space}}.  Let $\bP$ be uniform distribution on $\bS^{n-1}$ so that $((\bS^{n-1}, \rho), \bP)$ is a probability space. 
+\end{remark}
+
+\item \begin{proposition} (\textbf{Isoperimetric Inequalities for Uniform Distribution over Sphere})  \citep{boucheron2013concentration, vershynin2018high, wainwright2019high}\\
+Let $\bS^{n - 1} :=  \set{x \in \bR^n: \norm{x}{} = 1}$ be the $(n-1)$-dimensional \textbf{unit sphere}.  For any $t\in [0, 1]$, 
+\begin{align}
+\alpha_{\bS^{n-1}}(t) &\le c \exp\paren{-\frac{n t^2}{2}} \label{ineqn: isoperimetric_inequality_uniform_unit_sphere}
+\end{align} for some constant $c$.
+\end{proposition}
+\end{itemize}
+\subsection{Concentration via Isoperimetric Inequalities}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Isoperimetry Problem}}) \citep{boucheron2013concentration}\\
+Given a \emph{\textbf{metric space}} $\cX$ with corresponding \emph{distance} $d$, consider \emph{\textbf{the measure space}} formed by $\cX$ , \emph{the $\sigma$-algebra} of all \emph{\textbf{Borel sets} of $\cX$}, and a probability measure $\bP$. Let $X$ be a \emph{random variable} taking values in $\cX$, distributed according to $\bP$. 
+
+\underline{\emph{\textbf{The isoperimetric problem}}} in this case is the following: given $p \in (0, 1)$ and $t > 0$, \emph{\textbf{determine the sets}} $A$ with $\bP\brac{X \in A} \ge p$ for which \emph{the measure}
+\begin{align*}
+\bP\brac{d(X, A) \ge t}
+\end{align*}  is \emph{\textbf{maximal}}. 
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Isoperimetric Inequalities}})\\
+Even though the exact solution is only known in a few special cases, useful \emph{bounds} for $\bP\brac{d(X, A) \ge t}$ can be derived under remarkably general circumstances. \emph{Such bounds are usually referred to as} \underline{\emph{\textbf{isoperimetric inequalities}}}.
+\end{remark}
+
+\item \begin{definition} (\textbf{\emph{Concentration Function}}) \citep{boucheron2013concentration, wainwright2019high}\\
+\underline{\emph{\textbf{The concentration function}}} $\alpha: [0, \infty) \to \bR_{+}$  associated with \emph{\textbf{metric measure space}} $((\cX, d), \bP)$ is given by
+\begin{align*}
+\alpha_{\bP, (\cX, d)}(t) &:= \sup_{ A \subset \cX:\, \bP\paren{A} \ge \frac{1}{2}}\bP\brac{d(X, A) \ge t } = \sup_{A \subset \cX: \,\bP\paren{A} \ge \frac{1}{2}}\bP\paren{A_{t}^{c} }
+\end{align*} where $A_t:= A + tB = \set{x \in \cX: d(x, A) < t}$ is \emph{the $t$-blowup} of $A \subset \cX$. We simply denote it as $\alpha(t)$.
+\end{definition}
+Thus the optimal $A^{*}$ for isoperimetry problem is the one that attains the $\alpha(t) = \bP\paren{A_{t}^{c} }$.
+
+
+\item \begin{theorem} (\textbf{Levy's Inequalities})\citep{boucheron2013concentration, wainwright2019high}\\
+For any Lipschitz function $f: \cX \to \bR$, 
+\begin{align}
+\bP\set{f(X) \ge  \text{Med}(f(X)) + t } &\le \alpha_{\bP}(t) \label{ineqn: levy_inequality}\\
+\bP\set{f(X)  \le  \text{Med}(f(X))  -  t } &\le \alpha_{\bP}(t).  \nonumber
+\end{align} where $\text{Med}(f(X))$ is \underline{\textbf{the median} of $f(X)$}, i.e.
+\begin{align*}
+\bP\set{f(X) \le \text{Med}(f(X)} \ge  \frac{1}{2}, \;\text{ and }\; \bP\set{f(X) \ge \text{Med}(f(X)} \ge  \frac{1}{2}.
+\end{align*}
+\end{theorem}
+\end{itemize}
+\subsection{Convex Distance Inequality}
+\subsection{Concentration of Convex Lipschitz Functions}
+
+\section{Concentration of Gaussian Measure}
+\subsection{Gaussian Isoperimetric Theorem and Gaussian Concentration Theorem}
+\subsection{Lipschitz Functions of Gaussian Variables}
+\subsection{Gaussian Logarithmic Sobolev Inequality}
+\subsection{Gaussian Transportation Inequality}
+\subsection{Gaussian Hypercontractivity}
+\subsection{Suprema of Gaussian Process}
+
+\section{Concentration of Bernoulli Measure on the Binary Hypercube}
+\subsection{Edge Isoperimetric Inequality on the Binary Hypercube}
+\subsection{Bobkov's Inequality}
+\subsection{Vertex Isoperimetric Inequality on the Binary Hypercube}
+\subsection{Hypercontractivity: The Bonami-Beckner Inequality}
+\subsection{Influence Function}
+\subsection{Monotone Sets}
+\subsection{Thresholding Phenonemon}
+
+
+
+
+
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{reference.bib}
+\end{document}
