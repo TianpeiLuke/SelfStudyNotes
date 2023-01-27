@@ -26,7 +26,7 @@
 
 
 \begin{document}
-\title{Summary: Part 3}
+\title{Summary Part 3: Applications of Concentration Inequalities}
 \author{ Tianpei Xie}
 \date{Jan. 26th., 2023 }
 \maketitle
@@ -34,7 +34,35 @@
 \newpage
 \section{Applications}
 \subsection{U-Statistics}
+\subsection{Jackknife Estimation and Boostrapping}
 \subsection{Kernel-Density Estimation}
+\begin{itemize}
+\item \begin{example} (\emph{\textbf{Kernel Density Estimation}})\\
+Let $Z_1 \xdotx{,} Z_n$ be i.i.d. samples drawn according to some (unknown) density $\phi$ on the real line. The density is estimated by the kernel estimate
+\begin{align*}
+\phi_n(z) &=\frac{1}{n\, h_n} \sum_{i=1}^{n}K\paren{\frac{z - Z_i}{h_n}},
+\end{align*} where $h_n > 0$ is a \emph{smoothing parameter}, and $K$ is a nonnegative function with $\int K(z) = 1$. The performance of the estimate is typically measured by \emph{\textbf{the $L_1$ error}}:
+\begin{align*}
+X(n) &:= f(Z_1 \xdotx{,} Z_n) = \int \abs{\phi(z) - \phi_n(z)} d z.
+\end{align*} It is easy to see that
+\begin{align*}
+\abs{f(z_1 \xdotx{,} z_n) - f_i(z_1 \xdotx{,} z_{i-1}, z_i', z_{i+1} \xdotx{,} z_n)} &\le \frac{1}{n h_n}\int \abs{K\paren{\frac{z - z_i}{h_n}} - K\paren{\frac{z - z_i'}{h_n}}} d z\\
+&\le \frac{2}{n},
+\end{align*} so without further work we obtain
+\begin{align*}
+\text{Var}\paren{X(n)} \le \frac{1}{n}
+\end{align*}
+It is known that for every $\phi$, $\sqrt{n} \E{}{X(n)} \to \infty$, which implies, by \emph{Chebyshev's inequality}, that for every $\epsilon > 0$
+\begin{align*}
+\bP\set{\abs{\frac{X(n)}{\E{}{X(n)}} - 1} > \epsilon} = \bP\set{\abs{X(n) -\E{}{X(n)}} > \epsilon \E{}{X(n)} } &\le \frac{\text{Var}(X(n))}{\epsilon^2 (\E{}{X(n)})^2}  \to 0
+\end{align*} as $n \to \infty$. That is, $\frac{X(n)}{\E{}{X(n)}} \to 1$ \emph{\textbf{in probability}}, or in other words, $X(n)$ is \emph{\textbf{relatively stable}}. This means that \emph{\textbf{the random $L_1$-error}} essentially \emph{behaves like \textbf{its expected value}}.
+
+By bounded difference inequality, we have
+\begin{align*}
+\bP\set{\abs{X(n) - \E{}{X(n)}} \ge t} &\le 2 \exp\paren{- \frac{n t^2}{2}}  \qed
+\end{align*}
+\end{example}
+\end{itemize}
 \subsection{Random Graph}
 \subsection{Minimum Weight Spanning Tree}
 \subsection{Rademacher Complexity}
@@ -42,7 +70,71 @@
 
 \section{Self-Bounding Functions}
 \subsection{Definitions, Variance Bounds and Concentration}
+\begin{itemize}
+\item Another simple property which is satisfied for many important examples is the so-called \emph{self-bounding property}. 
+\begin{definition} (\emph{\textbf{Self-Bounding Property}})\\
+A \emph{\textbf{nonnegative} function} $f: \cX^n  \to [0, \infty)$ has the \underline{\emph{\textbf{self-bounding property}}} if \emph{there exist} functions $f_i: \cX^{n-1} \to \bR$ such that for all $z_1 \xdotx{,} z_n \in \cX$ and all $i = 1 \xdotx{,} n$,
+\begin{align}
+0 \le  f(z_1 \xdotx{,} z_n) - f_i(z_1 \xdotx{,} z_{i-1}, z_{i+1} \xdotx{,} z_n) \le 1 \label{eqn: self_bounding_1}
+\end{align}
+and also
+\begin{align}
+\sum_{i=1}^{n}\paren{f(z_1 \xdotx{,} z_n) - f_i(z_1 \xdotx{,} z_{i-1}, z_{i+1} \xdotx{,} z_n)}  \le  f(z_1 \xdotx{,} z_n). \label{eqn: self_bounding_2}
+\end{align}
+\end{definition}
+
+\item \begin{remark}
+Clearly if $f$ has the \textbf{\emph{self-bounding property}}, 
+\begin{align}
+\sum_{i=1}^{n}\paren{f(z_1 \xdotx{,} z_n) - f_i(z_1 \xdotx{,} z_{i-1}, z_{i+1} \xdotx{,} z_n)}^2  \le  f(z_1 \xdotx{,} z_n) \label{eqn: self_bounding_3}
+\end{align} Taking expectation on both sides, we have the following inequality
+\end{remark}
+
+\item \begin{corollary} \citep{boucheron2013concentration}\\
+If $f$ has the \textbf{self-bounding property}, then
+\begin{align*}
+\text{Var}(f(Z)) &\le \E{}{f(Z)}.
+\end{align*}
+\end{corollary}
+
+\item \begin{remark} (\emph{\textbf{Relative Stability}}) \citep{boucheron2013concentration}\\
+A sequence of nonnegative random variables $(Z_n)_{n\in \bN}$ is said to be \underline{\emph{\textbf{relatively stable}}} if 
+\begin{align*}
+\frac{Z_n}{\E{}{Z_n}} \stackrel{\bP}{\rightarrow} 1.
+\end{align*}
+This property guarantees that \emph{\textbf{the random fluctuations} of $Z_n$ around its \textbf{expectation} are \textbf{of negligible size} when compared to the expectation}, and therefore \emph{\textbf{most information about the size of $Z_n$ is given by $\E{}{Z_n}$}}. 
+
+\emph{\textbf{Bounding the variance of $Z_n$ by its expected value} implies, in many cases, \textbf{the relative stability} of $(Z_n)_{n\in \bN}$}. If $Z_n$ has the
+\emph{\textbf{self-bounding property}}, then, by \emph{Chebyshev's inequality}, for all $\epsilon > 0$,
+\begin{align*}
+\bP\set{\abs{\frac{Z_n}{\E{}{Z_n}} - 1} > \epsilon} &\le \frac{\text{Var}(Z_n)}{\epsilon^2 (\E{}{Z_n})^2} \le \frac{1}{\epsilon^2 \E{}{Z_n}}.
+\end{align*}
+Thus, for relative stability, it suffices to have $\E{}{Z_n} \to \infty$.
+\end{remark}
+
+
+\end{itemize}
 \subsection{Configuration Function}
+\begin{itemize}
+\item An important class of functions satisfying \emph{the self-bounding property} consists of the so-called \emph{\textbf{configuration functions}}.
+\begin{definition} (\emph{\textbf{Configuration Function}})\\
+Assume that we have a property $\Pi$ \emph{\textbf{defined over the union of finite products}} of a set $\cX$, that is, a sequence of sets 
+\begin{align*}
+\Pi_1 \subset \cX,\;  \Pi_2 \subset \cX \times \cX, \;\;\ldots,\;\; \Pi_n \subset \cX^n.
+\end{align*} We say that $(z_1 \xdotx{,} z_m) \in \cX^m$ \emph{\textbf{satisfies the property}} $\Pi$ if $(z_1 \xdotx{,} z_m) \in \Pi_m$. 
+
+We assume that $\Pi$ is \underline{\emph{\textbf{hereditary}}} in the sense that if $(z_1 \xdotx{,} z_m)$ satisfies $\Pi$ then so does \emph{\textbf{any sub-sequence}} $\set{z_{i_1} \xdotx{,} z_{i_k}}$ of $(z_1 \xdotx{,} z_m)$. 
+
+The function $f$ that maps any vector $z = (z_1 \xdotx{,} z_n)$  to \emph{\textbf{the size} of a \textbf{largest sub-sequence} satisfying} $\Pi$ is \underline{\emph{\textbf{the configuration function}}} \emph{associated with property} $\Pi$.
+\end{definition}
+
+\item \begin{corollary} \citep{boucheron2013concentration}\\
+Let $f$ be a \textbf{configuration function}, and let $X = f(Z_1 \xdotx{,} Z_n)$, where $Z_1 \xdotx{,} Z_n$ are \textbf{independent} random variables. Then
+\begin{align*}
+\text{Var}(f(Z)) &\le \E{}{f(Z)}.
+\end{align*}
+\end{corollary}
+\end{itemize}
 \subsection{VC-Dimension and Growth Function}
 \subsection{Longest Increasing Subsequence}
 \subsection{Weakly Self-Bounding Functions}
