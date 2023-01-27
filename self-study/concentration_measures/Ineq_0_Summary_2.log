@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  26 JAN 2023 16:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  26 JAN 2023 17:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -536,7 +536,20 @@ LaTeX Info: Redefining \cite on input line 694.
 )
 (../../Tianpei_Report.sty
 \c@theorem=\count129
-) (./Ineq_0_Summary_2.aux)
+) (./Ineq_0_Summary_2.aux
+
+LaTeX Warning: Label `ineqn: gaussian_concentration_inequality' multiply define
+d.
+
+
+LaTeX Warning: Label `ineqn: log_sobolev_inequality_gaussian' multiply defined.
+
+
+
+LaTeX Warning: Label `ineqn: gaussian_process_sup_inquality_upper' multiply def
+ined.
+
+)
 \openout1 = `Ineq_0_Summary_2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
@@ -690,53 +703,91 @@ Overfull \hbox (2.9071pt too wide) in paragraph at lines 288--290
 ni-form Dis-tri-bu-tion over Sphere\OT1/cmr/m/it/10.95 )
  []
 
-[7]
-Overfull \hbox (4.46027pt too wide) in paragraph at lines 334--334
+[7] [8] [9]
+Overfull \hbox (4.46027pt too wide) in paragraph at lines 443--443
 []\OT1/cmr/bx/n/12 Gaussian Isoperi-met-ric The-o-rem and Gaus-sian Con-cen-tra
 -tion The-o-rem 
  []
 
+[10]
+Overfull \hbox (11.08607pt too wide) in paragraph at lines 472--474
+[]\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Basic Prop-erty of the Gaus-sian Is
+operi-met-ric Func-tion\OT1/cmr/m/it/10.95 ) [Boucheron
+ []
 
-Overfull \hbox (14.1512pt too wide) in paragraph at lines 341--341
+
+Overfull \hbox (1.76945pt too wide) in paragraph at lines 488--490
+[]\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Asymptotic Be-hav-ior of Gaus-sian 
+Isoperi-met-ric Func-tion\OT1/cmr/m/it/10.95 ) [Boucheron
+ []
+
+[11] [12]
+Overfull \hbox (28.76674pt too wide) in paragraph at lines 564--566
+[]\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Gaussian Con-cen-tra-tion In-equal-
+ity\OT1/cmr/m/it/10.95 ) (\OT1/cmr/bx/it/10.95 The Tsirelson-Ibragimov-Sudakov
+ []
+
+
+Overfull \hbox (2.37408pt too wide) in paragraph at lines 572--574
+[]\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Gaussian Con-cen-tra-tion In-equal-
+ity, Sharp Bound\OT1/cmr/m/it/10.95 ) [Boucheron et al.,
+ []
+
+[13]
+Overfull \hbox (2.92638pt too wide) in paragraph at lines 588--590
+[]\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Gaussian Log-a-rith-mic Sobolev In-
+equal-ity\OT1/cmr/m/it/10.95 ). [Boucheron et al., 2013] 
+ []
+
+
+Overfull \hbox (6.98401pt too wide) in paragraph at lines 597--599
+\OT1/cmr/m/it/10.95 sure ab-so-lutely con-tin-u-ous with re-spect to $\U/msb/m/
+n/10.95 P$\OT1/cmr/m/it/10.95 . De-fine two ran-dom vec-tors $\OML/cmm/m/it/10.
+95 X \OT1/cmr/m/n/10.95 = (\OML/cmm/m/it/10.95 X[] [] [] [] X[]\OT1/cmr/m/n/10.
+95 )\OML/cmm/m/it/10.95 ; Y \OT1/cmr/m/n/10.95 =
+ []
+
+[14]
+Overfull \hbox (14.1512pt too wide) in paragraph at lines 627--627
 []\OT1/cmr/bx/n/14.4 Concentration of Bernoulli Mea-sure on the Bi-nary Hy-per-
 cube 
  []
 
+[15] (./Ineq_0_Summary_2.bbl) [16] (./Ineq_0_Summary_2.aux)
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: There were multiply-defined labels.
 
- [8]
-[9] (./Ineq_0_Summary_2.bbl) [10] (./Ineq_0_Summary_2.aux) ) 
+ ) 
 Here is how much of TeX's memory you used:
- 15905 strings out of 493029
- 315192 string characters out of 6136233
- 367807 words of memory out of 5000000
- 19112 multiletter control sequences out of 15000+600000
+ 15928 strings out of 493029
+ 316072 string characters out of 6136233
+ 368081 words of memory out of 5000000
+ 19135 multiletter control sequences out of 15000+600000
  13801 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,13n,84p,737b,286s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/symbols/msbm10.pfb>
-Output written on Ineq_0_Summary_2.pdf (10 pages, 232442 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/doublestroke/dsrom8.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Ineq_0_Summary_2.pdf (16 pages, 270938 bytes).
 PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
+ 135 PDF objects out of 1000 (max. 8388607)
+ 97 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

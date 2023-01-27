@@ -26,7 +26,7 @@
 
 
 \begin{document}
-\title{Summary: Part 2}
+\title{Summary Part 2: Concentration of Measure and Functional Methods}
 \author{ Tianpei Xie}
 \date{Jan. 26th., 2023 }
 \maketitle
@@ -291,6 +291,31 @@ Let $\bS^{n - 1} :=  \set{x \in \bR^n: \norm{x}{} = 1}$ be the $(n-1)$-dimension
 \alpha_{\bS^{n-1}}(t) &\le c \exp\paren{-\frac{n t^2}{2}} \label{ineqn: isoperimetric_inequality_uniform_unit_sphere}
 \end{align} for some constant $c$.
 \end{proposition}
+
+\item By Levy's inequality, we have the following proposition
+\begin{proposition} (\textbf{Lipschitz Function on $\bS^{n-1}$}) \citep{wainwright2019high}\\
+For any $1$-Lipschitz function $f$ defined on the sphere $\bS^{n-1}$, we have the two-sided bound
+\begin{align}
+\bP\set{\abs{f(Z) - \text{Med}(f(Z))} \ge t} &\le \sqrt{2\pi}\exp\paren{-\frac{n t^2}{2}} \label{ineqn: lipschitz_unit_sphere_median}
+\end{align} Moreover, replacing median by the mean, we have 
+\begin{align}
+\bP\set{\abs{f(Z) - \E{}{f(Z)} } \ge t} &\le 2\sqrt{2\pi}\exp\paren{-\frac{n t^2}{8}} \label{ineqn: lipschitz_unit_sphere_mean}
+\end{align}
+\end{proposition}
+
+\item \begin{exercise} \textbf{(The Blow-Up Phenomenon)}\\
+Let $A$ be a subset of the sphere $\sqrt{n} \bS^{n-1}$ such that
+\begin{align*}
+\bP\paren{A} > 2 \exp\paren{-c s^2} \text{ for some }s > 0;
+\end{align*}
+\begin{enumerate}
+\item Prove that $\bP(A_s) > 1/2$.
+\item Deduce from this that for any $t \ge s$,
+\begin{align*}
+\bP\paren{A_{2t}} > 1 - 2 \exp\paren{-c t^2}.
+\end{align*} Here $c > 0$ is the absolute constant in upper bound of concentration function.
+\end{enumerate}
+\end{exercise}
 \end{itemize}
 \subsection{Concentration via Isoperimetric Inequalities}
 \begin{itemize}
@@ -324,28 +349,297 @@ For any Lipschitz function $f: \cX \to \bR$,
 \end{align} where $\text{Med}(f(X))$ is \underline{\textbf{the median} of $f(X)$}, i.e.
 \begin{align*}
 \bP\set{f(X) \le \text{Med}(f(X)} \ge  \frac{1}{2}, \;\text{ and }\; \bP\set{f(X) \ge \text{Med}(f(X)} \ge  \frac{1}{2}.
-\end{align*}
+\end{align*} \textbf{Conversely}, if $\beta : \bR_{+} \to [0, 1]$ is a function such that for \textbf{every Lipschitz function} $f : \cX \to \bR$
+\begin{align}
+\bP\set{f(X) - \text{Med}(f(X)) \ge t } &\le \beta(t). \label{ineqn: converse_levy_inequality}
+\end{align} \textbf{then} $\beta(t) \ge \alpha_{\bP}(t)$.
 \end{theorem}
+
+
+
+\item \begin{corollary} (\textbf{Concentration of  Measure on Hamming Metric Space}) \citep{boucheron2013concentration}\\
+Consider \emph{independent random variables} $Z_1 \xdotx{,} Z_n$ taking their values in a \emph{(measurable) set} $\cX$ and denote the vector of these variables by $Z = (Z_1 \xdotx{,} Z_n)$ taking its value in $\cX^n$.  For an arbitrary (measurable) set $A \subset \cX^n$, we write $\bP\paren{A} = \bP\paren{Z \in A}$.  The \textbf{Hamming distance} $d_{H}(x, y)$ between the vectors $x, y \in \cX^n$ is defined as \textbf{the number of coordinates} in which $x$ and $y$ \textbf{differ}. Then for any $t >0$, 
+\begin{align}
+\bP\set{d_{H}(x, A) \ge \sqrt{\frac{n}{2}\log \frac{1}{\bP(A)}} + t} \le \exp\paren{-\frac{2t^2}{n}}  \label{ineqn: isoperimetry_inequality_hamming_distance}
+\end{align}
+\end{corollary}
+
+\item \begin{remark} (\textbf{\emph{Equivalent Form}})\\
+From above isoperimetric inequality, 
+\begin{align*}
+\bP\set{d_{H}(x, A) \ge \sqrt{\frac{n}{2}\log \frac{1}{\bP(A)}} + t} \le \exp\paren{-\frac{2t^2}{n}}
+\end{align*} Denote $u := \sqrt{\frac{n}{2}\log \frac{1}{\bP(A)}}$. By change of variable, for any $t \ge u$, 
+\begin{align*}
+\bP\set{d_{H}(x, A) \ge t} \le \exp\paren{-\frac{2\paren{t - u}^2}{n}}.
+\end{align*} On the one hand, if $t \le 2u = \sqrt{-2 n \log \bP\paren{A}}$, then $\bP\paren{A} \le \exp(-t^2/(2n))$. On the other hand,
+since $(t - u)^2 \ge t^2/4$ for $t \ge 2u =  \sqrt{-2 n \log \bP\paren{A}}$. the inequality above implies
+$\bP\set{d_{H}(x, A) \ge t} \le  \exp(-t^2/(2n))$.
+Thus, for all $t > 0$, we have \textbf{\emph{the concentration of measure in Hamming metric space}}:
+\begin{align}
+\bP(A)\bP\set{d_{H}(x, A) \ge t} \le \min\set{\bP(A), \bP\set{d_{H}(x, A) \ge t}} \le  \exp\paren{-\frac{t^2}{2n}} \label{ineqn: concentration_measure_hamming_distance}
+\end{align}
+\end{remark}
+
+\item \begin{proposition} (\textbf{Levy's Inequalities for Mean})\citep{boucheron2013concentration, wainwright2019high}\\
+If $\beta: \bR_{+} \to [0,1]$ is a  function such that for \textbf{every Lipschitz function} $f : \cX \to \bR$
+\begin{align}
+\bP\set{f(X) - \E{}{f(X)} \ge t } &\le \beta(t). \label{ineqn: converse_levy_inequality_mean}
+\end{align} then $\beta(t) \ge \alpha_{\bP}(t/2)$.
+\end{proposition}
 \end{itemize}
 \subsection{Convex Distance Inequality}
+\begin{itemize}
+\item \begin{definition} (\textbf{\emph{Weighted Hamming Distance}}) \\
+Given $\alpha = (\alpha_1 \xdotx{,} \alpha_n)$, where $\alpha_i  \ge 0$, \emph{\textbf{the weighed Hamming distance}} between $x , y \in \cX^n$ is defined as
+\begin{align*}
+d_{\alpha}(x, y) &= \sum_{i=1}^{n}\alpha_i\ind{x_i \neq y_i}.
+\end{align*}
+\end{definition}
+
+
+\item \begin{definition}(\textbf{\emph{Convex Distance}})\\
+For any $x = (x_1 \xdotx{,} x_n)  \in \cX^n$, \underline{\emph{\textbf{the convex distance}}} of $x$ from the set $A$ by
+\begin{align*}
+d_{T}(x, A) &:=\sup_{\alpha \in \bR_{+}^{n}: \norm{\alpha}{2} = 1}d_{\alpha}(x, A)
+\end{align*}
+
+\end{definition}
+
+\item \begin{theorem} (\textbf{Convex Distance Inequality}) \citep{boucheron2013concentration}\\
+For any subset $A \subset \cX^n$ and $t > 0$,
+\begin{align}
+\bP(A)\bP\set{d_{T}(X, A)  \ge t}  \le  \exp\paren{-\frac{t^2}{4}}. \label{ineqn: convex_dist_inequality} \\
+\Leftrightarrow  \bP(A)\bP\set{\sup_{\alpha \in \bR_{+}^{n}: \norm{\alpha}{2} = 1}\inf_{y\in A} \sum_{i=1}^{n}\alpha_i\ind{x_i \neq y_i} \ge t} \le  \exp\paren{-\frac{t^2}{4}}. \nonumber
+\end{align}
+\end{theorem}
+\end{itemize}
 \subsection{Concentration of Convex Lipschitz Functions}
+\begin{itemize}
+\item With convex distance inequality, we can improve \emph{the  concentration bound} for \emph{convex Lipschitz functions}. First, we relate convex distance with the minimal distance to convex set
+\begin{lemma} \label{lem: convex_dist_bound_dist_convex_set} (\textbf{Convex Distance vs. Distance to Convex Set}) \citep{boucheron2013concentration}\\
+Let $A \subset [0, 1]^n$ be a \textbf{convex set} and let $x = (x_1 \xdotx{,} x_n)  \in [0,1]^n$. Then
+\begin{align}
+ d(x, A):= \inf_{y \in A}\norm{x - y}{2} \le d_{T}(x, A).  \label{ineqn: convex_distance_bound_for_dist_convex_set}
+\end{align}
+\end{lemma}
+
+\item \begin{theorem} (\textbf{Concentration of Convex Lipschitz Functions}) \citep{boucheron2013concentration}\\
+Let  $Z:= (Z_1 \xdotx{,} Z_{n})$ be independent random variables taking values in the interval $[0, 1]$ and let $f : [0, 1]^n \to \bR$ be a \textbf{quasi-convex function}; that is
+\begin{align*}
+\set{z: f(z) \le s} \text{ is convex set for all }s \in \bR. 
+\end{align*} Moreover, $f$ is Lipschitz function satisfying
+\begin{align*}
+\abs{f(x) - f(y)} &\le \norm{x - y}{} \quad \text{for all }x, y \in [0, 1]^n.
+\end{align*}
+Then $X = f(Z_1 \xdotx{,} Z_{n})$ satisfies, for all $t > 0$,
+\begin{align}
+\bP\set{f(Z)  \ge  \text{Med}(f(Z)) + t } &\le 2\exp\paren{- \frac{t^2}{4}}, \label{ineqn: convex_lipschitz_concentration_med} \\
+\bP\set{f(Z)  \le \text{Med}(f(Z)) -t } &\le 2\exp\paren{- \frac{t^2}{4}}. \nonumber
+\end{align}
+\end{theorem}
+\end{itemize}
 
 \section{Concentration of Gaussian Measure}
 \subsection{Gaussian Isoperimetric Theorem and Gaussian Concentration Theorem}
+\begin{itemize}
+\item \begin{remark} (\textbf{\emph{Gaussian Isoperimetric Problem}})\\
+\underline{\emph{\textbf{The Gaussian isoperimetric problem}}} is to determine which (Borel) sets $A$ have \emph{\textbf{minimal Gaussian boundary measure}} among all sets in $\bR^n$ with a \emph{given probability} $p$. 
+
+\underline{\emph{\textbf{The Gaussian isoperimetric theorem}}} states the beautiful fact that \underline{\emph{\textbf{the extremal sets}}} are \underline{\emph{\textbf{linear half-spaces}}} \emph{in all dimensions} and \emph{for all $p$}.
+\end{remark}
+
+\item \begin{definition} (\textbf{\emph{Gaussian Isoperimetric Function}}) \\
+Denote \emph{the cumulative distribution function of standard Normal distribution}:
+\begin{align*}
+\Phi(x) &= \int_{-\infty}^{x}\frac{1}{\sqrt{2\pi}}e^{-\frac{t^2}{2}}dt := \int_{-\infty}^{x}\varphi(t) dt
+\end{align*} where $\varphi(x) := \frac{1}{\sqrt{2\pi}}e^{-\frac{t^2}{2}} = (\Phi(x))'$ is \emph{the probability density function} of standard normal distribution. $\Phi^{-1}(x)$ is \emph{the quantile function of normal distribution}.
+
+Define \underline{\textbf{\emph{the Gaussian isoperimetric function}}} as 
+\begin{align*}
+\gamma(x) &:= \varphi\paren{\Phi^{-1}(x)}, \quad x \in (0,1). 
+\end{align*} Also we define $\gamma(0) = \gamma(1) = 0$. 
+\end{definition}
+
+\item \begin{remark}
+Note that
+\begin{align*}
+x &= \Phi(\Phi^{-1}(x)) \\
+\Rightarrow 1 &= \varphi(\Phi^{-1}(x))(\Phi^{-1}(x))'  = \gamma(x) (\Phi^{-1}(x))' \\
+\Leftrightarrow 1/\gamma(x) &= (\Phi^{-1}(x))'.
+\end{align*} The quantity $1/\gamma(x) = (\Phi^{-1}(x))'$ is known as \emph{\textbf{quantile-density function} of normal distribution}.
+\end{remark}
+
+\item \begin{proposition}(\textbf{Basic Property of the Gaussian Isoperimetric Function}) \citep{boucheron2013concentration} \\
+The Gaussian isoperimetric function $\gamma$ satisfies:
+\begin{enumerate}
+\item 
+\begin{align*}
+\gamma'(x) &= - \Phi^{-1}(x), \quad \text{ for all }x \in (0,1),
+\end{align*}
+\item 
+\begin{align*}
+\gamma(x)\gamma''(x) &= - 1, \quad \text{ for all }x \in (0,1),
+\end{align*}
+\item $(\gamma')^2$ is convex over $(0, 1).$
+\end{enumerate}
+\end{proposition}
+
+
+\item \begin{lemma} (\textbf{Asymptotic Behavior of Gaussian Isoperimetric Function}) \citep{boucheron2013concentration}\\
+For all $x \in [0, 1/2]$, 
+\begin{align*}
+x\sqrt{\frac{1}{2} \log\frac{1}{x}} \le \gamma(x) \le x\sqrt{2 \log \frac{1}{x}}.
+\end{align*} Moreover, 
+\begin{align*}
+\lim\limits_{x \to 0}\frac{\gamma(x)}{x\sqrt{2\log \frac{1}{x}}} = 1
+\end{align*}
+\end{lemma}
+
+\item \begin{proposition} (\textbf{Bobkov's Gaussian Inequality}) \citep{boucheron2013concentration}\\
+Let $Z := (Z_1 \xdotx{,} Z_n)$ be a vector of \textbf{independent standard Gaussian} random variables. Let $f: \bR^n \to [0, 1]$ be a differentiable function with gradient $\nabla f$. Then
+\begin{align}
+\gamma\paren{\E{}{f(X)}} &\le \E{}{\sqrt{\gamma(f(X))^2 + \norm{\nabla f(X)}{2}^2 }} \label{ineqn: bobkov_gaussian_inequality}
+\end{align} where $\gamma = \varphi \circ \Phi^{-1}$ is \textbf{the Gaussian isoperimetric function}.
+\end{proposition}
+
+\item \begin{theorem} (\textbf{Gaussian Isoperimetric Theorem}) \citep{boucheron2013concentration} \citep{boucheron2013concentration, vershynin2018high, wainwright2019high}\\
+Let $\bP$ be the \textbf{standard Gaussian measure} on $\bR^n$ and let $A \subset \bR^n$ be a Borel set. Then 
+\begin{align}
+\liminf\limits_{t \to 0}\frac{\bP(A_t) - \bP(A)}{t} &\ge \gamma\paren{\bP(A)}, \label{ineqn: gaussian_isoperimetric_inequality}
+\end{align} where $A_t := \set{x: d(x, A) < t}$ be the $t$-blowup of $A$. Moreover, if $A$ is a \underline{\textbf{half-space}} defined by $A := \set{x \in \bR^n: x_1 \le z}$, then 
+\begin{align}
+\liminf\limits_{t \to 0}\frac{\bP(A_t) - \bP(A)}{t} &= \gamma\paren{\bP(A)} = \varphi(z), \label{ineqn: gaussian_isoperimetric_inequality_half_space}
+\end{align}  where $\gamma := \varphi \circ \Phi^{-1}$ is \textbf{the Gaussian isoperimetric function}.
+\end{theorem}
+
+\item \begin{proposition} \label{prop: diff_t_blowup} (\textbf{Differentiablity of Measure of $t$-Blowup}) \citep{boucheron2013concentration}\\
+If $A$ is a \textbf{finite union} of \textbf{open} balls in $\bR^n$, then $\bP(A_t)$ is a \textbf{differentiable} function of $t > 0$.
+\end{proposition}
+
+\item Next we describe \emph{\textbf{an equivalent version}} of \emph{\textbf{the Gaussian isoperimetric theorem}} in the manner of \emph{measure concentration}:
+\begin{theorem} (\textbf{Gaussian Concentration Theorem}) \citep{boucheron2013concentration} \citep{boucheron2013concentration, vershynin2018high, wainwright2019high}\\
+Let $\bP$ be the \textbf{standard Gaussian measure} on $\bR^n$ and let $A \subset \bR^n$ be a Borel set. Then for all $t \ge 0$, 
+\begin{align}
+\bP(A_t) &\ge \Phi\paren{\Phi^{-1}\paren{\bP(A)} + t}. \label{ineqn: gaussian_concentration_inequality}\\
+\Leftrightarrow \Phi^{-1}(\bP(A_t)) & \ge \Phi^{-1}\paren{\bP(A)} + t \nonumber
+\end{align} Equality holds if $A$ is a \textbf{half-space}.
+\end{theorem}
+
+\item \begin{remark} (\emph{\textbf{Gaussian Concentration Theorem} $\equiv$ \textbf{Gaussian Isoperimetric Theorem}}) \\
+\emph{The Gaussian concentration theorem} is equivalent to \emph{the Gaussian isoperimetric theorem} since
+\begin{align*}
+\liminf\limits_{t \to 0}\frac{\bP(A_t) - \bP(A)}{t} &\ge \liminf\limits_{t \to 0}\frac{\Phi\paren{\Phi^{-1}\paren{\bP(A)} + t} - \Phi\paren{\Phi^{-1}\paren{\bP(A)}}}{t} \\
+&= \Phi'(\Phi^{-1}(\bP(A))) \\
+&= \varphi(\Phi^{-1}(\bP(A))) \\
+&= \gamma(\bP(A)).
+\end{align*}
+\end{remark}
+
+\item \begin{exercise} (\textbf{From Isoperimetry to Concentration}) \citep{boucheron2013concentration}\\
+Assume that a probability distribution $\bP$ on $\bR^n$ satisfies, for all Borel sets $A \subset \bR^n$, 
+\begin{align*}
+\liminf\limits_{t \to 0}\frac{\bP(A_t) - \bP(A)}{t} &\ge c\,f\paren{F^{-1}(\bP(A))},
+\end{align*} where $c \in (0, 1]$ is a constant, $F$ is a continously differentiable distribution function and $f = F'$ is its derivative. Prove that for all Borel set $A$ and all $t \ge 0$, 
+\begin{align*}
+\bP(A_t) \ge F\paren{F^{-1}(\bP(A)) + c\,t}.
+\end{align*}
+\end{exercise}
+\end{itemize}
 \subsection{Lipschitz Functions of Gaussian Variables}
+\begin{itemize}
+\item \begin{theorem} (\textbf{Rademacher Theorem}).\\
+If $f: U \to \bR$ is a $L$-Lipschitz function where $U \subseteq \bR^n$, then $f$ is \textbf{differentiable almost everywhere} in $U$ and \textbf{the essential supremum} of the \textbf{norm} of its \textbf{derivative}  is \textbf{bounded} by its \textbf{Lipschitz constant}. 
+\end{theorem}
+
+\item \begin{theorem} (\textbf{Lipschitz Functions of Gaussian Variables}) \citep{boucheron2013concentration} \\
+Let $Z = (Z_1 \xdotx{,} Z_n)$ be a vector of $n$ \textbf{independent} \textbf{standard normal} random variables. Let $f : \bR^n \to \bR$ denote an \textbf{$L$-Lipschitz function}, that is, there exists a constant $L > 0$ such that for all $x, y \in \bR^n$,
+\begin{align*}
+\abs{f(x) - f(y)} &\le  L\norm{x - y}{}.
+\end{align*} Then, for all $\lambda \in \bR$,
+\begin{align}
+\psi_{f(Z) - \E{}{f(Z)}}(\lambda) := \log \E{}{e^{\lambda\paren{f(Z) - \E{}{f(Z)}}}} &\le \frac{L^2 \lambda^2}{2} \label{ineqn: lip_fun_gaussian}
+\end{align}
+\end{theorem}
+
+\item \begin{theorem}  (\textbf{Gaussian Concentration Inequality}) (\textbf{The Tsirelson-Ibragimov-Sudakov Inequality}) \citep{boucheron2013concentration, wainwright2019high} \\
+Let $Z = (Z_1 \xdotx{,} Z_n)$ be a vector of $n$ \textbf{independent} \textbf{standard normal} random variables. Let $f : \bR^n \to \bR$ denote an \textbf{$L$-Lipschitz function}. Then, for all $t > 0$, 
+\begin{align}
+\bP\set{f(Z) - \E{}{f(Z)} \ge t } &\le \exp\paren{- \frac{t^2}{2 L^2}}. \label{ineqn: gaussian_concentration_inequality}
+\end{align}
+\end{theorem}
+
+\item As a direct consequence of \emph{the Gaussian isoperimetric inequality}, we have the improved result for \emph{Gaussian concentration inequality}:
+ \begin{theorem}  (\textbf{Gaussian Concentration Inequality, Sharp Bound}) \citep{boucheron2013concentration, wainwright2019high} \\
+Let $Z = (Z_1 \xdotx{,} Z_n)$ be a vector of $n$ \textbf{independent} \textbf{standard normal} random variables. Let $f : \bR^n \to \bR$ denote an \textbf{$L$-Lipschitz function}. Then, for all $t > 0$, 
+\begin{align}
+\bP\set{f(Z) - \text{Med}(f(Z)) \ge t } &\le 1 - \Phi\paren{\frac{t}{L}}. \label{ineqn: gaussian_concentration_inequality_improved}
+\end{align} where $\Phi(t)$ is the cumulative distribution function of standard normal random variable.
+\end{theorem}
+
+\item \begin{remark}
+Note that by \emph{\textbf{Gordon's inequality}}
+\begin{align*}
+1 - \Phi(t) &\le \paren{\frac{1}{\sqrt{2\pi}}}\frac{1}{t} e^{-\frac{t^2}{2}} = \frac{1}{t}\varphi(t)
+\end{align*} The Gaussian concentration inequality fails to capture the corrective factor $t^{-1}$. The inequality above cannot be improved in general as for $f(x) = n^{-1/2}\sum_{i=1}^n x_i$, equality is achieved for all $t > 0$.
+\end{remark}
+\end{itemize}
 \subsection{Gaussian Logarithmic Sobolev Inequality}
+\begin{itemize}
+\item \begin{proposition} (\textbf{Gaussian Logarithmic Sobolev Inequality}). \citep{boucheron2013concentration}\\
+Let $f: \bR^n \to \bR$ be a \textbf{continuous differentiable} function and let $Z = (Z_1 \xdotx{,} Z_n)$ be a vector of $n$ \textbf{independent} \textbf{standard Gaussian} random variables. Then
+\begin{align}
+\text{Ent}(f^2(Z)) &\le 2\E{}{\norm{\nabla f(Z)}{2}^2}.  \label{ineqn: log_sobolev_inequality_gaussian}
+\end{align}
+\end{proposition}
+\end{itemize}
 \subsection{Gaussian Transportation Inequality}
+\begin{itemize}
+\item \begin{theorem} (\textbf{Talagrand's Gaussian Transportation Inequality}) \citep{boucheron2013concentration}\\
+Let $\bP$ be be the standard Gaussian probability measure on $\bR^n$, and let $\bQ$ be a probability measure absolutely continuous with respect to $\bP$. Define two random vectors $X = (X_1 \xdotx{,} X_n), Y = (Y_1 \xdotx{,} Y_n)$ in $\cX^n$ with distribution $\bP$ and $\bQ$ respectively.  Then
+\begin{align}
+\cW_{2, d}(\bQ, \bP) := \sqrt{\min_{\gamma \in \Pi(\bQ, \bP)}\sum_{i=1}^n\E{\gamma}{(X_i - Y_i)^2}   } &\le \sqrt{2\kl{\bQ}{\bP}} \label{ineqn: talagrand_gaussian_transport_cost_inequality} \\
+\Leftrightarrow  \min_{\gamma \in \Pi(\bQ, \bP)}\sum_{i=1}^n\E{\gamma}{(X_i - Y_i)^2}   &\le 2\kl{\bQ}{\bP} \nonumber
+\end{align}
+\end{theorem}
+\end{itemize}
 \subsection{Gaussian Hypercontractivity}
 \subsection{Suprema of Gaussian Process}
+\begin{itemize}
+\item \begin{definition} (\textbf{\emph{Gaussian Process}})\\
+Let $T$ be a \emph{metric space}. \emph{A stochastic process} $(X_t)_{t \in T}$ is a \underline{\emph{\textbf{Gaussian process} indexed by $T$}} if for  \emph{any finite collection} $\set{t_1 \xdotx{,}, t_n} \subset T$, the vector $(X_{t_1} \xdotx{,} X_{t_n})$ has a \emph{jointly Gaussian distribution}.
 
+In addition, we assume that $T$ is \emph{\textbf{totally bounded}} (i.e. for every $t > 0$ it can be covered by \emph{finitely many balls} of radius $t$) and that the \emph{Gaussian process} is \emph{\textbf{almost surely continuous}}, that is, with probability $1$, $X_t$ is a \emph{continuous function} of $t$.
+\end{definition} 
+
+\item \begin{theorem} (\textbf{Concentration of Suprema of Gaussian Process}) \citep{boucheron2013concentration, vershynin2018high,  wainwright2019high, gine2021mathematical}\\
+Let  $(X_t)_{t \in T}$ be an \textbf{almost surely continuous} \textbf{centered Gaussian process} indexed by a \textbf{totally bounded} set $T$. If
+\begin{align*}
+\sigma^2 &:= \sup_{t \in T}\E{}{X_t^2},
+\end{align*} then $Z = \sup_{t \in T}X_t$ satisfies $\text{Var}(Z) \le \sigma^2$, and for all $u > 0$,
+\begin{align}
+\bP\set{Z - \E{}{Z} \ge u} &\le  \exp\paren{- \frac{u^2}{2 \sigma^2}}  \label{ineqn: gaussian_process_sup_inquality_upper}
+\end{align} and
+\begin{align}
+\bP\set{\E{}{Z} - Z \ge u} &\le  \exp\paren{- \frac{u^2}{2 \sigma^2}}  \label{ineqn: gaussian_process_sup_inquality_upper}
+\end{align}
+\end{theorem}
+\end{itemize}
 \section{Concentration of Bernoulli Measure on the Binary Hypercube}
 \subsection{Edge Isoperimetric Inequality on the Binary Hypercube}
 \subsection{Bobkov's Inequality}
+\begin{itemize}
+\item \begin{proposition} (\textbf{Bobkov's Inequality}) \citep{boucheron2013concentration}\\
+Suppose $Z$ is uniformly distributed over $\set{-1,1}^n$. Then for all $n \ge 1$ and for all functions $f: \set{-1, 1}^n \to [0,1]$,
+\begin{align}
+\gamma\paren{\E{}{f(Z)}} &\le \E{}{\sqrt{\gamma(f(Z))^2 + \norm{\nabla f(Z)}{2}^2 }} \label{ineqn: bobkov_inequality}
+\end{align}
+\end{proposition}
+\end{itemize}
 \subsection{Vertex Isoperimetric Inequality on the Binary Hypercube}
 \subsection{Hypercontractivity: The Bonami-Beckner Inequality}
 \subsection{Influence Function}
 \subsection{Monotone Sets}
-\subsection{Thresholding Phenonemon}
+\subsection{Threshold Phenomena}
 
 
 
