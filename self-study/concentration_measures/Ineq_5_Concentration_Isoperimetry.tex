@@ -789,6 +789,95 @@ f(z) \le s +  d(z, A) \le s + d_{T}(z, A).
 
 \subsection{Edge Isoperimetric Inequality on the Binary Hypercube}
 \subsection{Vertex Isoperimetric Inequality on the Binary Hypercube}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Vertex Boundary of Graph}}) \citep{boucheron2013concentration}\\
+Consider a graph $\cG = (\cV, \cE)$ and let $A \subset \cV$ be a set of its vertices. \underline{\emph{\textbf{The vertex boundary}}} of $A$ is defined as \emph{the set of those vertices}, \emph{\textbf{not in $A$}}, which are \emph{\textbf{connected}} to \emph{some vertex in $\cV$} by \emph{an edge}. We denote \emph{the vertex boundary of $A$} by $\partial V(A)$.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Vertex Isoperimetric Problem of Graph}}) \citep{boucheron2013concentration}\\
+\underline{\emph{\textbf{The vertex isoperimetric problem}}} in a graph $\cG = (\cV, \cE)$ is to determine \emph{the sets $\cA \subset \cV$ of \textbf{a given cardinality}} whose \emph{\textbf{vertex boundary}} contains a \emph{\textbf{minimal number of vertices}}. 
+\end{definition}
+
+\item \begin{remark} (\textbf{\emph{Binary Hypercube as Nearest Neighbor Graph with Hamming Distance}}) \\
+Consider the graph as binary hypercube $\set{-1, +1}^n$ in which two vertices are connected by an edge if and only if their \emph{\textbf{Hamming distance} equals $1$}.  Define the norm as the Hamming distance to $-1^n= (-1 \xdotx{,} -1)$
+\begin{align*}
+\norm{x}{H} := \sum_{i=1}^{n}\ind{x_i = 1} = d_{H}(x, -1^n)
+\end{align*}
+\end{remark}
+
+\item \begin{definition} (\textbf{\emph{Simplicial Order}})\\
+We define the so-called \emph{\underline{\textbf{simplicial order}} of the elements} of the binary hypercube. We say that $x = (x_1 \xdotx{,} x_n) \in \set{-1, 1}^n$ \emph{\textbf{precedes}} $y = (y_1 \xdotx{,} y_n) \in \set{-1, 1}^n$  \emph{in the simplicial order} if either $\norm{x}{H} < \norm{y}{H}$ (where $\norm{x}{H} := \sum_{i=1}^{n}\ind{x_i = 1} = d_{H}(x, -1^n)$) or $\norm{x}{H} = \norm{y}{H}$ and $x_i = 1$ and $y_i = -1$ for the smallest $i$ for which $x_i \neq y_i$.  That is
+\begin{align*}
+&x \prec y \\
+\Leftrightarrow &\set{(x,y): \norm{x}{H} < \norm{y}{H} \; \lor (\norm{x}{H} = \norm{y}{H} \, \land (x_i =1 \land y_i = -1, \text{ where }i=\min\set{k: x_k \neq x_k} )) }
+\end{align*} In other words, the vector with \emph{\textbf{less}} $1$'s \emph{\textbf{precedes}} the vector with more $1$'s. If the number of $1$'s are the same, then the first $1$'s on the leftmost position is preferred.
+\end{definition} 
+
+\item \begin{example}
+For $n=3$, $(-1, -1, -1) \prec (1, -1, -1) \prec (-1, 1, -1) \prec (-1, -1, 1) \prec (1, 1, -1) \prec (1, -1, 1) \prec (-1, 1, 1) \prec (1, 1, 1)$
+\end{example}
+
+
+\begin{theorem} (\textbf{Harp's Vertex Isoperimetric Theorem}) \citep{boucheron2013concentration}\\
+For $N = 1 \xdotx{,} 2^n$, let $S_N$ denote the set of \textbf{first $N$ elements} of $\set{-1, +1}^n$ in the \textbf{simplicial order}. For any subset $A \subset \set{-1, +1}^n$, where $\abs{A} = N$, 
+\begin{align*}
+\abs{\partial V(A)} \ge \abs{\partial V(S_N)} 
+\end{align*}
+\end{theorem}
+
+\item \begin{remark}
+Note that if $N = \sum_{i=0}^{k}{n \choose i}$, for $k=0, \xdotx{,} n$, then 
+\begin{align*}
+S_N = \set{x \in \set{-1, +1}^n:  d_{H}(x, -1^n) \le k} = B_{H}(-1^n, k)
+\end{align*} In other words, $S_N$ is a \emph{\textbf{Hamming ball} centered at the vector $-1^n= (-1 \xdotx{,} -1)$}.
+\end{remark}
+
+\item \begin{definition} (\textbf{\emph{$t$-Blowup of Set $A$ in Binary Hypercube}}) \\
+For any $A \subset \set{-1, +1}^n$ and $x \in \set{-1, +1}^n$, let $d_{H}(x, A) = \min_{y \in A} d_{H}(x, y)$ be the \emph{Hamming distance} of $x$ to the set $A$. Also, denote by
+\begin{align*}
+A_t := \set{x \in \set{-1, +1}^n: d_{H}(x, A) < t}
+\end{align*} the \emph{$t$-blowup of the set $A$}, that is, the set of points whose Hamming distance from $A$ is at most $t$.
+\end{definition}
+
+\item \begin{remark} (\textbf{\emph{Harp's Vertex Isoperimetric Theorem $\Leftrightarrow$ Classical Isoperimetric Theorem in $\set{-1, 1}^n$}}) \\
+The fact that among all sets with \emph{a \textbf{given volume}}, \emph{\textbf{balls}} \emph{\textbf{minimize the surface area}} is in close analogy with \emph{the classical isoperimetric theorem}. 
+
+Observe that if $S_N$ is a \emph{Hamming ball with radius $k$}, i.e. $N = \sum_{i=0}^{k}{n \choose i}$, then $S_N \cup \partial V(S_N)$ is \emph{the Hamming ball of radius} $k + 1$. This implies that for any set $A \subset \set{-1, +1}^n$ with $\abs{A} \ge \sum_{i=0}^{k}{n \choose i}$, we have
+\begin{align*}
+\abs{A \cup \partial V(A)} \ge  \sum_{i=0}^{k+1}{n \choose i}. 
+\end{align*}
+By iterating this argument, we obtain the following simple \emph{consequence of Harper's theorem}. 
+\end{remark}
+
+\begin{corollary} (\textbf{Isoperimetric Inequality in Binary Hypercube}) \citep{boucheron2013concentration}\\ 
+Let $A \subset \set{-1, +1}^n$ such that $\abs{A} \ge \sum_{i=0}^{k}{n \choose i}$. Then for any $t=1, 2 \xdotx{,} n-k+1$, 
+\begin{align}
+\abs{A_t} \ge  \sum_{i=0}^{k+1 - t}{n \choose i}. \label{ineqn: harp_vertex_isoperimetric_inequality}
+\end{align} In particular, if $\abs{A}/2^n \ge 1/2$ then we may take $k = \floor{n/2}$ in the corollary above and
+\begin{align}
+\frac{\abs{A_t}}{2^n} \ge \bP\set{X  < \E{}{X} + t } \ge 1 - \exp\paren{- \frac{2t^2}{n}}
+\end{align} where $X \sim \text{Ber}(1/2)$ is a \textbf{symmetric Bernoulli} random variable taking values in $\set{-1, +1}$ with $\bP\set{X= 1} = \bP\set{X = -1} = 1/2$. The last inequality comes from Hoeffding's inequality.
+\end{corollary}
+
+\item \begin{remark} (\textbf{\emph{Concentration of Uniform Measure on Binary Hypercube}})\\
+Consider any set $A$ containing at least half of the points of $\set{-1, +1}^n$. According to the corollary above, \emph{the fraction of those points} which \emph{\textbf{cannot be obtained}} by \emph{changing \textbf{at most}} $c\sqrt{n}$ bits of some point in $A$ is \emph{\textbf{at most}} $e^{–2c^2}$. In other words, \emph{\textbf{an immense majority} of the points in $\set{-1, +1}^n$ is \textbf{within Hamming distance of the order of $\sqrt{n}$ of $A$}}
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{Monotone Set}})\\
+A set $A \subset \set{-1, +1}^n$  is \emph{\textbf{monotone}} if $\ind{x \in A} \ge \ind{y \in A}$ for all $x = (x_1 \xdotx{,} x_n)$ and $y = (y_1 \xdotx{,} y_n)$ in $\set{-1, +1}^n$ such that $x_i \ge y_i$ \emph{\textbf{for all} $i$}. 
+\end{definition}
+
+\item \begin{theorem}  (\textbf{Isoperimetric Theorem for Bernoulli Distribution}) \citep{boucheron2013concentration}\\
+Let $k \in \set{0 \xdotx{,} n}$ and let $S = \set{x \in \set{-1, +1}^n:  \norm{x}{} < t}$ be a \textbf{Hamming ball of radius $k$}. $\bP$ is Bernoulli distribution on $\set{-1, 1}^n$ with parameter $p$ such that 
+\begin{align*}
+\bP(x) := p^{\norm{x}{}}(1- p)^{1- \norm{x}{}}.
+\end{align*}
+If $A \subset \set{-1, +1}^n$ is a \textbf{monotone set} such that $\bP\paren{A} \ge \bP\paren{S}$ then
+\begin{align*}
+\bP\paren{\partial V(A)}\ge \bP\paren{\partial V(S)}.
+\end{align*}
+\end{theorem}
+\end{itemize}
 
 
 

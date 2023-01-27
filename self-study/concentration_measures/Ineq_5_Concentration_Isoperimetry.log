@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  26 JAN 2023 20:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  27 JAN 2023 10:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -766,17 +766,33 @@ Overfull \hbox (2.37408pt too wide) in paragraph at lines 700--702
 ity, Sharp Bound\OT1/cmr/m/it/10.95 ) [Boucheron et al.,
  []
 
-[17] [18] [19] (./Ineq_5_Concentration_Isoperimetry.bbl) [20]
+[17] [18] [19]
+
+Package amsmath Warning: Foreign command \atopwithdelims;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 829.
+
+[20]
+Missing character: There is no â in font cmr8!
+Missing character: There is no € in font cmr8!
+Missing character: There is no “ in font cmr8!
+
+Overfull \hbox (3.34215pt too wide) in paragraph at lines 870--872
+[]\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Isoperimetric The-o-rem for Bernoul
+li Dis-tri-bu-tion\OT1/cmr/m/it/10.95 ) [Boucheron et al.,
+ []
+
+[21] (./Ineq_5_Concentration_Isoperimetry.bbl) [22]
 (./Ineq_5_Concentration_Isoperimetry.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 15954 strings out of 493029
- 316375 string characters out of 6136233
- 369912 words of memory out of 5000000
- 19150 multiletter control sequences out of 15000+600000
+ 15955 strings out of 493029
+ 316420 string characters out of 6136233
+ 369922 words of memory out of 5000000
+ 19151 multiletter control sequences out of 15000+600000
  16724 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,13n,84p,624b,475s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -799,11 +815,11 @@ e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf
 onts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/symbols/msbm10.pfb>
-Output written on Ineq_5_Concentration_Isoperimetry.pdf (20 pages, 421862 bytes
+Output written on Ineq_5_Concentration_Isoperimetry.pdf (22 pages, 434382 bytes
 ).
 PDF statistics:
- 157 PDF objects out of 1000 (max. 8388607)
- 109 compressed objects within 2 object streams
+ 163 PDF objects out of 1000 (max. 8388607)
+ 113 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
