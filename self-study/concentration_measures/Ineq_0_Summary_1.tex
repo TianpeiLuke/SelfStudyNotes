@@ -373,7 +373,7 @@ There are several advantages for this method:
 \end{align*} where  $\E{(-i)}{\cdot}$ is the conditional expectation operator conditioning on $Z_{(-i)}$, which is equal to $Z$ after dropping $i$-component. In other word, the \emph{\textbf{key strategy}} for proving concentration using entropy method is to \emph{find \underline{\textbf{the upper bound}} for each \textbf{\underline{single variable} entropy functional}}
 \begin{align*}
 \text{Ent}_{(-i)}(X)&:=  \E{(-i)}{X\log X} - \E{(-i)}{X}\log\paren{\E{(-i)}{X}} \equiv H_{\Phi}(\bP_i).
-\end{align*} Note that for independent random variables $Z$, this term \emph{\textbf{depends only on distribution of $Z_i$}}, since the rest $Z_{(-i)}$ are \emph{\textbf{controlled}} by the conditioning. 
+\end{align*} Note that for independent random variables $Z$, this term \emph{\textbf{depends only on distribution of $Z_i$}}, since the rest $Z_{(-i)}$ are \emph{\textbf{controlled}} by the conditioning. For distributions such as \emph{Gaussian, Bernoulli and Poisson}, one can use \underline{\emph{\textbf{the logarithmic Sobolev inequalities}}} to derive \emph{the upper bound of the entropy functional} via \emph{\textbf{norm of gradients}}.
 
 To obtain \emph{the concentraion bound}, we use \underline{\emph{\textbf{the Herbst's argument}}}; that is, the find the bound 
 \begin{align*}
@@ -444,6 +444,39 @@ There are several advantages for this method:
 \item The concept of \emph{\textbf{coupling}} $\gamma \in \Pi(\bQ, \bP)$ allows us to extend the concentration results to \emph{\textbf{dependent variables}}, such as \emph{Markov chains, Markov random field} etc. In those cases, we can separate the conditional distribution $\bP(X_{i} | X_{1:i-1})$  and the marginal distributions $\bP(X_{1:i-1})$.
 \end{enumerate}
 \end{remark}
+
+\item \emph{\textbf{Concentration of Measure and Isoperimetric Inequalities}}:\\
+The applicablity of \emph{\textbf{isoperimetric Inequalities}} are \emph{limited} to a few cases such as \emph{\textbf{Gaussian measure}}, \emph{\textbf{Bernoulli measure}} (or \emph{the uniform distribution on \textbf{binary hypercube}}, \emph{compact manifolds}, \emph{Lebesgue measure} on $\bR^n$, \emph{graph vertex and edge boundaries} etc.). 
+
+The key is to derive the upper bound for \emph{\textbf{the concentration function}}: 
+\begin{align*}
+\alpha_{\bP, (\cX, d)} := \sup\set{ \bP\set{A_t^c}:  A \subset \cX, \bP(A) \ge \frac{1}{2}  }.
+\end{align*} Note that for $d(x, A) := \inf_{y\in A}d(x, y)$,  the \emph{$t$-blowup of $A$} is defined as  
+\begin{align*}
+\bP\set{A_t^c} := \bP\set{d(X, A) \ge t}.
+\end{align*} Then the goal is to find \emph{\textbf{the  isopermetric inequality}}
+\begin{align*}
+\alpha_{\bP, (\cX, d)} \le \exp\paren{- \phi(t)} \quad \Leftrightarrow  \quad \bP(A)\bP\paren{A_t^c} := \bP(A)\bP\set{d(X, A) \ge t} \le \exp\paren{- \phi(t)}.
+\end{align*} By Levy's inequality,  for \emph{Lipschitz function} $f: \cX \to \bR$,   let $A:=\set{x: f(x) \le \text{Med}(f(X))}$, so that $\bP(A) \ge 1/2$, and the complement of $t$-blowup of $A$ becomes
+\begin{align*}
+\bP\paren{A_t^c}  = \bP\set{f(X) \ge \text{Med}(f(X)) + t}
+\end{align*} Then the above isopermetric inequality is equivalent to 
+\begin{align*}
+ \bP\set{f(X) \ge \text{Med}(f(X)) + t} \le 2\exp\paren{- \phi(t)}\\
+  \bP\set{f(X) \le \text{Med}(f(X)) - t} \le 2\exp\paren{- \phi(t)}.
+\end{align*}
+Besides the existing result for \emph{Gaussian and Bernoulli random variables}, the Talagrand's \emph{\textbf{convex distance inequality}} is very useful to derive such isopermetric inequality based on \emph{weighted Hamming distance}.
+\begin{align*}
+\bP(A)\bP\set{\sup_{\alpha \in \bR_{+}^{n}: \norm{\alpha}{2} = 1}\inf_{y\in A} \sum_{i=1}^{n}\alpha_i\ind{x_i \neq y_i} \ge t} \le  \exp\paren{-\frac{t^2}{4}}. \nonumber
+\end{align*} Note that if $A$ is a convex set,
+\begin{align*}
+d(x, A):= \inf_{y \in A}\norm{x - y}{2} \le d_{T}(x, A) := \sup_{\alpha \in \bR_{+}^{n}: \norm{\alpha}{2} = 1}\inf_{y\in A} \sum_{i: x_i \neq y_i}\alpha_i
+\end{align*}
+
+If \emph{\textbf{isoperimetric theorem}} exists \emph{\textbf{for given distribution or space}}, then the derived concentration bound is known to be \emph{\textbf{sharp}} due to \emph{\textbf{the concentration of measure phenomenon}}. This is the main \emph{\textbf{advantage}} of using isoperimetric inequalities. However, proving \emph{\textbf{isoperimetric theorem}} is extremely hard and thus is not widely available. 
+
+\emph{Transportation methods} and \emph{logarithmic Sobolev inequalities} can also use to show \emph{isoperimetric inequalities}.
+
 \end{enumerate}
 
 
@@ -533,6 +566,32 @@ Then $X = f(Z_1 \xdotx{,} Z_{n})$ satisfies, for all $t > 0$,
 \section{Comparison: Gaussian Tail Bound vs. Poisson Tail Bound}
 \begin{itemize}
 \item \begin{remark} (\emph{\textbf{Gaussian Tail Bound} vs. \textbf{Poisson Tail Bound}})\\
+Based on Chernoff bound, we can derive the tail bound for two important class of distributions: 
+\begin{enumerate}
+\item \emph{\textbf{Gaussian tail bound}}: for any $t > 0$, 
+\begin{align*}
+\bP\set{X \ge t} &\le \exp\paren{-\frac{t^2}{2 \nu}},
+\end{align*} where $\nu >0$.
+\item \emph{\textbf{Poisson tail bound}}:  for any $t > \E{}{X} = \nu$,
+\begin{align*}
+\bP\set{X \ge t} &\le \exp\paren{-  \nu h\paren{\frac{t}{\nu}}} = e^{-\nu}\paren{\frac{e \nu}{t + \nu}}^{t+\nu}
+\end{align*} where $h(x) = (1 + x) \log(1 + x) - x$ for all  $x \ge -1$ and $\nu >0$.
+
+Note that for \emph{\textbf{small deviation} around the mean}, the \emph{tail of Poisson distribution} $\text{Pois}(\nu)$ behaves like \emph{Gaussian} $\cN(\nu, \nu)$:
+\begin{align*}
+\bP\set{\abs{X - \nu} \ge t}& \le 2\exp\paren{- \frac{c t^2}{\nu}}
+\end{align*}
+But in \emph{the \textbf{large deviation} regime}, the Poisson tail is \emph{\textbf{heavier} than Gaussian}. Such distribution is a \emph{\textbf{sub-Gamma distribution}}. 
+\end{enumerate}
+\end{remark}
+
+\item \begin{remark}
+\emph{\textbf{The Bennet inequality}} captures \emph{\textbf{the Poisson tail bevarior}}:  for sum of  $n$ independent random variables $X_i$ such that $X_i \le b$ almost surely with zero mean, finite variance $\nu = \sum_{i=1}^n \E{}{X_i^2}$.  The Bennet inequality provides a tail bound as
+\begin{align*}
+\bP\set{\sum_{i=1}^n X_i \ge t} &\le \exp\paren{-  \frac{\nu}{b^2} h\paren{\frac{b t}{\nu}}}
+\end{align*} In small deviation regime, where $u:= bt/\nu \ll 1$, $h(u) \approx u^2$, the Bennet inequality gives a Gaussian tail bound $\approx \exp\paren{- t^2/\nu}$.
+
+In large deviation regime, $u \gg bt/\nu \ge 2$, $h(u) \ge \frac{1}{2}u \log(u)$, thus the Bennet inequality gives a Poisson tail bound $\approx (\nu/b^2t)^{t /(2 b^2)}$
 \end{remark}
 \end{itemize}
 
