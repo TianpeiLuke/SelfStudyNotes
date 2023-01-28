@@ -35,7 +35,41 @@
 \section{Basic Inequalities}
 \subsection{Arithmetic, Calculus and Algebra}
 \begin{itemize}
-\item 
+\item \begin{remark} (\textbf{\emph{Basic Inequalities}}) 
+\begin{enumerate}
+\item \textbf{\emph{Arithmetic Mean-Geometric Mean Inequality}}:
+\begin{align*}
+\sum_{i=1}^n \alpha_i x_i &\ge \prod_{i=1}^{n}x_i^{\alpha_i}
+\end{align*} where $\sum_{i=1}^{n}\alpha_i = 1$ and $\alpha_i \ge 0$. Simple case, $\frac{a + b}{2} \ge \sqrt{ab}$
+
+\item $a^2 + b^2 \ge \pm 2ab$; Also $a + b \ge 2\sqrt{ab}$
+\item  $(a + b)^2 \le 2(a^2 + b^2)$; Also $(\sqrt{a} + \sqrt{b})^2 \le 2(a + b)$
+\item $x + 1 \le e^x$ 
+\item $\log x \le x - 1$ for $x > 0$ 
+\item $e^s - e^t \le e^t(s - t)$  for $s \ge t$
+\item \begin{align*}
+h(x) := (x + 1)\log(x + 1) - x &\ge \frac{x^2}{2(1 + x/3)}, \quad \text{ for }x >0 
+\end{align*} 
+\item \begin{align*}
+-\log(1- x) - x &\le \frac{x^2}{2(1 - x)}, \quad \text{ for }x \in (0, 1) 
+\end{align*}
+\item \begin{align*}
+h_1(x) := 1 + x - \sqrt{1 + 2x} &\ge \frac{x^2}{2(1 + x)}, \quad \text{ for }x > 0.
+\end{align*}
+\item \textbf{\emph{Log-Sum Inequality}}:\\
+ For non-negative numbers $a_1 \xdotx{,} a_n$ and $b_1 \xdotx{,} b_n$,
+\begin{align*}
+\sum_{i=1}^{n}a_i \log\frac{a_i}{b_i} \ge \paren{\sum_{i=1}^{n}a_i} \log\frac{\sum_{i=1}^{n}a_i}{\sum_{i=1}^{n}b_i} 
+\end{align*} with equality if and only if $\frac{a_i}{b_i}$ is constant.
+\item Taylor series: 
+\begin{align*}
+e^x &:= \sum_{n=0}^{\infty} \frac{x^n}{n!} = 1+ x + \frac{x^2}{2} + \ldots, \quad \forall x \\
+\log(1 + x) &:= \sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n}x^n = x - \frac{x^2}{2} + \ldots, \quad \abs{x} < 1\\
+\frac{1}{1 - x}&:=  \sum_{n=0}^{\infty} x^n = 1 + x + x^2 + \ldots, \quad \abs{x} < 1\\
+(1 + x)^{\alpha} &:= \sum_{n=0}^{\infty}{\alpha \choose n} x^n
+\end{align*}
+\end{enumerate}
+\end{remark}
 \end{itemize}
 \subsection{Function Space, Convexity and Duality}
 \begin{itemize}
@@ -76,6 +110,34 @@ For $p,q \in (1, \infty)$, $1/p + 1/q = 1$, then the random variables $X \in L^p
 \end{align}
 \end{proposition}
 
+\item \begin{definition}(\textbf{\emph{Legendre Transform}}) \\
+Let $\cX \subset \bR^n$ be a \emph{\textbf{convex set}}, and $f: \cX \to \bR$ a \textbf{\emph{convex}} function; then its \underline{\emph{\textbf{Legendre transform}}} is the function  $f^{*}: \cX^{*}\to \bR$ defined by
+\begin{align*}
+f^{*}(x^{*}) &= \sup _{x\in \cX}(\inn{x^{*}}{x} - f(x)), \quad x^{*}\in \cX^{*}
+\end{align*}
+where $\sup$ denotes the supremum, and the domain $\cX^{*}$  is
+\begin{align*}
+\cX^{*} &= \set{x^{*}\in \bR^n: \sup _{x\in \cX}(\inn{x^{*}}{x}-f(x))<\infty }.
+\end{align*} The function $f^{*}$ is called \underline{\emph{the \textbf{convex conjugate function}}} of $f$.
+\end{definition}
+
+\item \begin{theorem} (\textbf{Fenchel's Inequality / Fenchel-Young Inequality})\\
+Suppose $f^{*}: \cX^{*} \to \bR$ is the  convex conjugate of function $f: \cX \to \bR$. For every $x \in \cX$ and $p \in \cX^{*}$, i.e., independent $(x, p)$ pairs,
+\begin{align}
+\inn{p}{x} &\le f(x) + f^{*}(p). \label{ineqn: fenchel_inequality}
+\end{align}
+\end{theorem}
+
+\item \begin{theorem} (\textbf{Young's Convolution Inequality})\\
+Suppose  $f$ is in the Lebesgue space $L^{p}(\bR^{d})$ and $g$ is in $L^{q}(\bR^{d})$ and $1/p + 1/q = 1/r + 1$ with $ 1 \leq p,q,r \leq \infty$. Then
+\begin{align}
+\norm{f * g}{r} \le \norm{f}{p} \norm{g}{q}. \label{ineqn: fenchel_convolution_inequality}
+\end{align}
+Here the star denotes \textbf{convolution}:
+\begin{align*}
+(f*g)(t) &= \int_{\bR^{d}} f(t - \tau)g(\tau) d\tau
+\end{align*}
+\end{theorem}
 \end{itemize}
 
 \subsection{Probability Theory}
@@ -1606,6 +1668,29 @@ Let $Z$ be an integrable random variable such that for some $\nu > 0$, we have, 
 \end{proposition}
 \end{itemize}
 
+\subsection{Association Inequalities}
+\begin{itemize}
+\item \begin{proposition} (\textbf{Chebyshev's Association Inequalities}) \citep{boucheron2013concentration}\\
+Let $f$ and $g$ be \textbf{nondecreasing} real-valued functions defined on the real line. If $X$ is a real-valued random variable and $Y$ is a \textbf{nonnegative} random variable, then
+\begin{align}
+\E{}{Y}\E{}{Yf(X)g(X)} \ge \E{}{Yf(X)}\E{}{Yg(X)}\label{ineqn: cheby_association_inequality_nondecreasing}
+\end{align} If $f$ is \textbf{nonincreasing} and $g$ is \textbf{nondecreasing} then
+\begin{align}
+\E{}{Y}\E{}{Yf(X)g(X)} \le \E{}{Yf(X)}\E{}{Yg(X)}\label{ineqn: cheby_association_inequality_nonincreasing_nondecreasing}
+\end{align}
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Harris's Inequalities}) \citep{boucheron2013concentration}\\
+Let $f, g: \bR^n \to \bR$ be \textbf{nondecreasing} functions. Let $Z_1 \xdotx{,} Z_n$ be \textbf{independent} real-valued random variables and define the random vector $Z = (Z_1 \xdotx{,} Z_n)$ taking values in $\bR^n$. Then
+\begin{align}
+\E{}{f(X)g(X)} \ge \E{}{f(X)}\E{}{g(X)}\label{ineqn: harris_inequality_nondecreasing}
+\end{align} If $f$ is \textbf{nonincreasing} and $g$ is \textbf{nondecreasing} then
+\begin{align}
+\E{}{f(X)g(X)} \le \E{}{f(X)}\E{}{g(X)}\label{ineqn: harris_inequality_nonincreasing_nondecreasing}
+\end{align}
+\end{proposition}
+\end{itemize}
+
 \subsection{Connection to Variance Bounds}
 \begin{itemize}
 \item \begin{proposition} (\textbf{A Modified Logarithmic Sobolev Inequalities for Moment Generating Function}) \citep{boucheron2013concentration}\\
@@ -1974,12 +2059,8 @@ Recall that for a random variable $Y$ taking its values in $[a, b]$, then we kno
 From the  tensorization property of entropy, we can bound the entropy of total function
 \begin{align*}
 \text{Ent}(e^{\lambda f(X)}) \le \E{}{\sum_{i=1}^{n}\text{Ent}_{(-i)}(e^{\lambda f(X)})} &\le \sum_{i=1}^{n} \frac{L_i^2 \lambda^2}{8} \E{}{\E{(-i)}{e^{\lambda f(X)}}}\\
-\frac{\text{Ent}(e^{\lambda f(X)}) }{ \E{}{e^{\lambda f(X)}} } &\le \frac{\sum_{i=1}^{n}L_i^2 \lambda^2}{8} \equiv \frac{\nu \lambda^2}{2}.
-\end{align*} where 
-\begin{align*}
-\nu := \frac{1}{4}\sum_{i=1}^{n}L_i^2
-\end{align*}
- Using \emph{Herbst's argument}, it leads to the bound of logarithmic moment generating function:
+\frac{\text{Ent}(e^{\lambda f(X)}) }{ \E{}{e^{\lambda f(X)}} } &\le \frac{\sum_{i=1}^{n}L_i^2 \lambda^2}{8} \equiv \frac{\nu \lambda^2}{2},
+\end{align*} where  $\nu := \frac{1}{4}\sum_{i=1}^{n}L_i^2$.  Using \emph{Herbst's argument}, it leads to the bound of logarithmic moment generating function:
 \begin{align*}
 \psi_{f(X)}(\lambda) &\le \frac{\nu \lambda^2}{2}.
 \end{align*} Finally, we apply \emph{the Chernoff's inequality}
@@ -2048,7 +2129,7 @@ Note that any  function with \emph{\textbf{bounded difference property}} is \emp
 \Rightarrow \abs{f(x) - f(y)} &=  \abs{\sum_{i=1}^{n}(f(x_{(i-1)}) - f(x_{(i)}) )}\\
 &\quad \le  \sum_{i=1}^{n}\abs{f(x_{(i-1)}) - f(x_{(i)}) }\\
 &\quad \le \sum_{i=1}^{n}L_i \ind{x_{(i-1)}[i] \neq x_{(i)}[i]} \\
-&\quad = d_{H,L}(x, y)
+&\quad \le \paren{\sum_i^{n}L_i^2}^{1/2} d_{H}(x, y)
 \end{align*}   where $x_{(i)}$ is replicate of $x_{(i-1)}$ except for $i$-th component, which is replaced by $y_i$. Note that $x_{(0)} = x$ and $x_{(n)} = y$. 
 
 The Harp's isoperimetric theorem suggests that the concentration function 
@@ -2081,8 +2162,8 @@ We want to prove the concentration using transportation cost inequality. That is
 \min_{\gamma \in \Pi(\bQ, \bP)}\gamma\set{X \neq Y} = \cW_{1, d_H}(\bQ, \bP) = \sup_{A \in \cX}\abs{\bQ(A) - \bP(A)}  \equiv \norm{\bQ - \bP}{TV}.
 \end{align*}  For each independent variable $X_i, Y_i$, and their marginal distribution $\bP_i, \bQ_i$ where $\bQ_i \ll \bP_i$, by Pinsker's inequality,
 \begin{align*}
- \min_{\gamma \in \Pi(\bQ_i, \bP_i)}\gamma\set{X_i \neq Y_i}  &\le \sqrt{\frac{1}{2}\kl{\bQ_i}{\bP_i}} \\
- \min_{\gamma \in \Pi(\bQ_i, \bP_i)}\gamma^2\set{X_i \neq Y_i} &\le \frac{1}{2}\kl{\bQ_i}{\bP_i}
+ \brac{\min_{\gamma \in \Pi(\bQ, \bP)}\gamma\set{X_i \neq Y_i}}^2 = \norm{\bQ - \bP}{TV}^2 &\le \frac{1}{2}\kl{\bQ_i}{\bP_i} \\
+\min_{\gamma \in \Pi(\bQ, \bP)} \gamma^2\set{X_i \neq Y_i} \le \brac{\min_{\gamma \in \Pi(\bQ, \bP)}\gamma\set{X_i \neq Y_i}}^2 &\le \frac{1}{2}\kl{\bQ_i}{\bP_i}
 \end{align*} Thus by induction lemma, 
 \begin{align*}
 \min_{\gamma \in \Pi(\bQ, \bP)}\sum_{i=1}^{n}\gamma^2\set{X_i \neq Y_i} &\le \frac{1}{2}\kl{\bQ}{\bP}
