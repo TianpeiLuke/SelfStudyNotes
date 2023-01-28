@@ -708,16 +708,16 @@ By taking real and imaginary parts we may assume without loss of generality that
 
 If we apply Fatou's lemma  to the unsigned functions $f_n + G$, we see that
 \begin{align*}
-\int_{X}\paren{\liminf\limits_{n\rightarrow \infty}f_n + G}d\mu &\le \liminf\limits_{n\rightarrow \infty}\int_{X}\paren{f_{n}+ G}dx\\
-\Rightarrow \int_{X}\paren{f + G}d\mu &\le \liminf\limits_{n\rightarrow \infty}\int_{X}\paren{f_{n}+ G}dx\\
-\int_{X}fd\mu &\le \liminf\limits_{n\rightarrow \infty }\int_{X}f_{n}dx \quad (\text{since } \int_{X}G dx < \infty )
+\int_{X}\paren{\liminf\limits_{n\rightarrow \infty}f_n + G}d\mu &\le \liminf\limits_{n\rightarrow \infty}\int_{X}\paren{f_{n}+ G}d\mu\\
+\Rightarrow \int_{X}\paren{f + G}d\mu &\le \liminf\limits_{n\rightarrow \infty}\int_{X}\paren{f_{n}+ G}d\mu\\
+\int_{X}fd\mu &\le \liminf\limits_{n\rightarrow \infty }\int_{X}f_{n}d\mu \quad (\text{since } \int_{X}G d\mu < \infty )
 \end{align*}
 Similarly, if we apply that lemma to the unsigned functions $G - f_n$, we obtain
 \begin{align*}
--\int_{X}fd\mu &\le \liminf\limits_{n\rightarrow \infty }-\int_{X}f_{n}dx \quad (\text{since } \int_{X}G dx < \infty )\\
-\Rightarrow \int_{X}fd\mu &\ge \limsup\limits_{n\rightarrow \infty }\int_{X}f_{n}dx 
+-\int_{X}fd\mu &\le \liminf\limits_{n\rightarrow \infty }-\int_{X}f_{n}d\mu \quad (\text{since } \int_{X}G d\mu < \infty )\\
+\Rightarrow \int_{X}fd\mu &\ge \limsup\limits_{n\rightarrow \infty }\int_{X}f_{n}d\mu 
 \end{align*}
-It concludes that $ \limsup\limits_{n\rightarrow \infty }\int_{X}f_{n}dx$ $=\liminf\limits_{n\rightarrow \infty }\int_{X}f_{n}dx$ $=\lim\limits_{n\rightarrow \infty }\int_{X}f_{n}dx=\int_{X}fd\mu$.\qed
+It concludes that $ \limsup\limits_{n\rightarrow \infty }\int_{X}f_{n}d\mu$ $=\liminf\limits_{n\rightarrow \infty }\int_{X}f_{n}d\mu$ $=\lim\limits_{n\rightarrow \infty }\int_{X}f_{n}d\mu=\int_{X}fd\mu$.\qed
 \end{proof}
 
 \item \begin{remark}
