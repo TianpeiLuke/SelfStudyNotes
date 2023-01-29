@@ -307,6 +307,19 @@ Suppose that, for each $k = 1, 2 \xdotx{,} n$, the univariate distribution $\bP_
 \end{proposition}
 \end{itemize}
 
+\subsection{Induction Lemma}
+\begin{itemize}
+\item \begin{lemma} \citep{boucheron2013concentration}\\
+Let $\bP = \otimes_{i=1}^{n}\bP_i$ be a \textbf{product probability measure} on a product measurable space $\cX^n$ and let $\bQ$ be a probability measure absolutely continuous with respect to $\bP$ (i.e. $\bQ \ll \bP$). Let $w : \cX \times \cX \to [0, \infty)$ be a measurable function and let $\phi : [0, \infty) \to [0, \infty)$ be a \textbf{convex function}. Suppose that for every $i = 1 \xdotx{,} n$ and for every probability measure $\nu \ll \bP_i$ which is absolutely continuous with respect to $\bP_i$,
+\begin{align*}
+\min_{\gamma \in \Pi( \bP_i, \nu)}\phi\paren{\E{\gamma}{w(X_i, Y_i)}} \le \kl{\nu}{\bP_i}
+\end{align*} Then
+\begin{align*}
+\min_{\gamma \in \Pi( \bP, \bQ)} \sum_{i=1}^{n}\phi\paren{\E{\gamma}{w(X_i, Y_i)}} \le \kl{\bQ}{\bP}.
+\end{align*}
+\end{lemma}
+\end{itemize}
+
 %\subsection{Bounded Difference Inequality via Transportation Methods}
 \subsection{Marton's Transportation Inequality}
 \begin{itemize}
@@ -337,7 +350,7 @@ We want to prove the concentration using transportation cost inequality. That is
 \end{align*}  For each independent variable $X_i, Y_i$, and their marginal distribution $\bP_i, \bQ_i$ where $\bQ_i \ll \bP_i$, by Pinsker's inequality,
 \begin{align*}
  \min_{\gamma \in \Pi(\bQ_i, \bP_i)}\gamma\set{X_i \neq Y_i}  &\le \sqrt{\frac{1}{2}\kl{\bQ_i}{\bP_i}} \\
- \min_{\gamma \in \Pi(\bQ_i, \bP_i)}\gamma^2\set{X_i \neq Y_i} &\le \frac{1}{2}\kl{\bQ_i}{\bP_i}
+\min_{\gamma \in \Pi(\bQ, \bP)} \gamma^2\set{X_i \neq Y_i} &\le \brac{\min_{\gamma \in \Pi(\bQ, \bP)}\gamma\set{X_i \neq Y_i}}^2 \le \frac{1}{2}\kl{\bQ_i}{\bP_i}
 \end{align*} Thus by induction lemma, 
 \begin{align*}
 \min_{\gamma \in \Pi(\bQ, \bP)}\sum_{i=1}^{n}\gamma^2\set{X_i \neq Y_i} &\le \frac{1}{2}\kl{\bQ}{\bP}
