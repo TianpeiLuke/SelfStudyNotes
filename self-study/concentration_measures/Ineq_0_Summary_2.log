@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  27 JAN 2023 10:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  29 JAN 2023 13:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -748,31 +748,31 @@ n/10.95 P$\OT1/cmr/m/it/10.95 . De-fine two ran-dom vec-tors $\OML/cmm/m/it/10.
  []
 
 [14]
-Overfull \hbox (14.1512pt too wide) in paragraph at lines 651--651
+Overfull \hbox (14.1512pt too wide) in paragraph at lines 652--652
 []\OT1/cmr/bx/n/14.4 Concentration of Bernoulli Mea-sure on the Bi-nary Hy-per-
 cube 
  []
 
-[15]
+[15] [16] [17]
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 691.
+(amsmath)                 on input line 745.
 
-[16]
+[18]
 Missing character: There is no â in font cmr8!
 Missing character: There is no € in font cmr8!
 Missing character: There is no “ in font cmr8!
- [17] [18] (./Ineq_0_Summary_2.bbl) [19] (./Ineq_0_Summary_2.aux)
+ [19] (./Ineq_0_Summary_2.bbl) [20] (./Ineq_0_Summary_2.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 15930 strings out of 493029
- 316156 string characters out of 6136233
- 369101 words of memory out of 5000000
- 19137 multiletter control sequences out of 15000+600000
+ 15933 strings out of 493029
+ 316242 string characters out of 6136233
+ 369131 words of memory out of 5000000
+ 19140 multiletter control sequences out of 15000+600000
  13801 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,13n,84p,737b,286s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -794,10 +794,10 @@ e/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/doublestroke/dsrom8.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Ineq_0_Summary_2.pdf (19 pages, 288120 bytes).
+Output written on Ineq_0_Summary_2.pdf (20 pages, 294954 bytes).
 PDF statistics:
- 146 PDF objects out of 1000 (max. 8388607)
- 104 compressed objects within 2 object streams
+ 149 PDF objects out of 1000 (max. 8388607)
+ 106 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
