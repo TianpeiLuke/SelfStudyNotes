@@ -318,7 +318,7 @@ The optimal $\lambda^{*}:= \lambda_t$ that attains the maximum on the right hand
 The reason why Chernoff's inequality became popular is that it is very simple to use when applied to a sum of independent random
 variables. As an illustration, assume that $Z := X_1 \xdotx{+} X_n$ where $X_1 \xdotx{,} X_n$ are \emph{\textbf{independent} and \textbf{identically distributed} real-valued random variables}.  Denote the logarithm of the moment-generating function of the $X_i$ by $\psi_X(\lambda) = \log \E{}{e^{\lambda X_i}}$, and the corresponding \emph{Legendre transform} by $\psi_X^{*}(t)$. Then, by independence, for all $\lambda$ for which $\psi_X(\lambda) < \infty$,
 \begin{align*}
-\psi_Z(\lambda) &= \log \E{}{e^{\lambda\sum_{i=1^{n}X_i}}} = \log \prod_{i=1}^{n}\E{}{e^{\lambda X_i}}  = n\, \psi_{X}(\lambda)
+\psi_Z(\lambda) &= \log \E{}{e^{\lambda\sum_{i=1}^{n}X_i}} = \log \prod_{i=1}^{n}\E{}{e^{\lambda X_i}}  = n\, \psi_{X}(\lambda)
 \end{align*} and consequently,
 \begin{align*}
 \psi_Z^{*}(t) &= n\,\psi_{X}^{*}\paren{\frac{t}{n}}.
@@ -1092,7 +1092,22 @@ Here $\nu = \sum_{i=1}^{n}\E{}{X_i^2}$ is the variance of the sum.
 \end{itemize}
 
 \subsection{The Johnson-Lindenstrauss Lemma}
+\begin{itemize}
+\item \begin{remark} (\textbf{\emph{Overview of The Johnson-Lindenstrauss Lemma}})\\
+The celebrated \emph{\textbf{Johnson-Lindenstrauss lemma}} states roughly that, given an arbitrary set of \emph{$n$ points} in a (high-dimensional) Euclidean space, there exists a \emph{\textbf{linear embedding}} of these points in a \emph{$d$-dimensional Euclidean space} such that \emph{\textbf{all pairwise distances are preserved}} within a factor of $1 \pm \epsilon$  if $d$ is proportional to $(\log n)/\epsilon^2$. It is remarkable that \underline{\emph{this result \textbf{does not involve the dimension of the space}}} to which the $n$ points belong. In fact, the dimension of this space may even be \emph{infinite}.
+\end{remark}
 
+\item \begin{definition}(\textbf{\emph{$\epsilon$-Isometry}})\\
+Consider an arbitrary set  $A \subset \bR^D$ or $A \subset \cH$ for \emph{separable Hilbert space} $\cH$.  Given $\epsilon \in (0, 1)$, a map $f : \bR^D \to \bR^d$ is called an \underline{\emph{\textbf{$\epsilon$-isometry on $A$}}} if for every pair $a, a' \in A$, we have
+\begin{align*}
+(1 - \epsilon)\norm{a - a'}{2}^2 \le \norm{f(a) - f(a')}{2}^2 \le (1 + \epsilon)\norm{a - a'}{2}^2.
+\end{align*}
+\end{definition}
+
+\item \begin{remark} (\emph{\textbf{Problem Statement}})\\
+A natural question is to find \emph{\textbf{the smallest possible value of $d$}} for which \emph{a linear $\epsilon$-isometry exists on $A$}. \emph{The Johnson-Lindenstrauss lemma}, stated and proved below, ensures that when $A$ is a \emph{\textbf{finite set}} with cardinality $n$, a \emph{linear $\epsilon$-isometry} exists whenever $d \ge \kappa \epsilon^{-2} \log(n)$, where $\kappa$ is an absolute constant. 
+\end{remark}
+\end{itemize}
 
 \newpage
 \bibliographystyle{plainnat}
