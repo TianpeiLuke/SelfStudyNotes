@@ -27,7 +27,7 @@
 		- Hoeffding’s Inequality
 		- Bennett’s Inequality
 		- Bernstein’s Inequality
-		- Gaussian Random Projections
+		- Gaussian Random Projections: Johnson-Linderstrauss Lemma
 
 - Martingale-Based Inequalities [pdf](./Ineq_2_Martingale_Methods.pdf)
 	- Martingale-based Methods
