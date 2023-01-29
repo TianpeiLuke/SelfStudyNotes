@@ -348,7 +348,95 @@ From Han's inequality, we have
 \subsubsection{Combinatorial Entropies}
 \subsubsection{Edge Isoperimetric Inequality on the Binary Hypercube}
 \begin{itemize}
-\item
+\item \begin{remark} (\textbf{\emph{Binary Hypercube as Nearest Neighbor Graph with respect to Hamming Distance}})\\
+Consider binary hypercube $\set{-1, 1}^n$ with \emph{Hamming distance metric}
+\begin{align*}
+d_H(x, y) = \sum_{i=1}^{n}\ind{x_i \neq y_i} 
+\end{align*} The elements $x$ of the binary $n$-cube may be considered as \emph{\textbf{vertices} of a graph $\cG := (\cV, \cE)$} in which two elements $x$ and $x'$ of  $\set{-1, 1}^n$ are \emph{\textbf{adjacent}} \emph{if and only if \textbf{their Hamming distance is $1$}}; i.e.
+\begin{align*}
+\cE = \set{(x,y) \in \set{-1, 1}^n \times \set{-1, 1}^n: d_H(x, y) = 1 }.
+\end{align*} The graph structure has $\abs{\cV} := N = 2^n$ \emph{vertices} and $\abs{\cE} = n2^{n-1}$ \emph{undirected edges}. Its \emph{\textbf{density}} (the ratio between the number of edges and the number of vertices) is thus $n/2 = (\log_2 N)/2$.
+\end{remark}
+
+\item \begin{remark} (\textbf{\emph{Maximum Density of Subgraph}})\\
+A remarkable property of the binary n-cube is that \emph{for any subset $A \subseteq \set{-1, 1}^n$, the \textbf{density} of the subgraph induced by $A$ is at most $(\log_2 \abs{A})/2$}.  Note that \emph{\textbf{equality}} is achieved if the graph induced by $A$ is a \emph{\textbf{lower-dimensional hypercube}}, since if $A$ is a hypercube of dimension $d \le n$, then the subgraph induced by $A$ has $2^d$ vertices and $\cE(A) = d2^{d-1}$ edges.
+\end{remark}
+
+\begin{theorem} (\textbf{Maximum Density of Subgraph}) \citep{boucheron2013concentration}\\
+Let $A$ be a subset of $\set{-1, 1}^n$. Let $\cE(A)$ denote the set of edges of the subgraph induced by $A$, that is, the collection of (unordered) pairs $(x, x')$ with $x, x' \in A$ such that $d_H(x, x') = 1$. Then
+\begin{align}
+\abs{\cE(A)} &\le \frac{\abs{A}}{2} \log_2(\abs{A}). \label{ineqn: max_density_subgraph}
+\end{align}
+\end{theorem}
+\begin{proof}
+Define the random vector $X = (X_1 \xdotx{,} X_n)$ taking values in $\set{-1, 1}^n$  such that $X$ has \emph{\textbf{the uniform distribution over $A$}}. Denote by $\cP$ the probability mass function of $X$. The Shannon entropy of $X$ is clearly $\log_{2}\abs{A}$.  Writing $X_{(-i)} = (X_1 \xdotx{,} X_{i-1}, X_{i+1} \xdotx{,} X_{n})$, and using the definition of \emph{conditional entropy}, we have
+\begin{align*}
+H(X | X_{(-i)}) = H(X) - H(X_{(-i)}) = H(X_i | X_{(-i)}) = - \sum_{x\in A} \cP(x) \log(\cP(x_i | x_{(-i)})) 
+\end{align*} By definition $\cP(x) =1/\abs{A}$ for $x \in A$ and 
+\begin{align*}
+\cP(x_i | x_{(-i)}) &= \left\{ \begin{array}{cc}
+\frac{1}{2} & \widetilde{x}^{(i)}  \in A \\
+1 & \text{o.w.}
+\end{array}
+\right.
+\end{align*} where $\widetilde{x}^{(i)} = (x_1 \xdotx{,} x_{i-1}, -x_i,  x_{i+1} \xdotx{,} x_{n})$. Thus
+\begin{align*}
+H(X) - H(X_{(-i)}) &=  - \sum_{x\in A} \cP(x) \log(\cP(x_i | x_{(-i)})) \\
+ &= - \frac{1}{\abs{A}}\set{ \sum_{x\in A, \widetilde{x}^{(i)}  \in A} \log_2\paren{\frac{1}{2}} + \sum_{x\in A, \widetilde{x}^{(i)}  \not\in A} \log_2(1)}\\
+ &= \frac{\log_2(2)}{\abs{A}} \sum_{x \in A}\ind{x\in A, \widetilde{x}^{(i)}  \in A}
+\end{align*} and therefore
+\begin{align*}
+\sum_{i=1}^{n}\paren{H(X) - H(X_{(-i)})} &\le \frac{\log_2(2)}{\abs{A}} \sum_{i=1}^{n}\sum_{x \in A}\ind{x\in A, \widetilde{x}^{(i)}  \in A} = \frac{\log_2(2) 2 \abs{\cE(A)}}{\abs{A}}
+\end{align*} Thus, \emph{Han's inequality} implies
+\begin{align*}
+H(X) = \log_{2}\abs{A} &\ge \sum_{i=1}^{n}\paren{H(X) - H(X_{(-i)})} =  \frac{2 \abs{\cE(A)}}{\abs{A}}. \qed
+\end{align*}
+\end{proof}
+
+\item \begin{definition} (\emph{\textbf{Influence of Binary Variable with respect to Set}})\\
+Let the binary random vector $X = (X_1 \xdotx{,} X_n)$ be \emph{uniformly distributed} over $\set{-1, 1}^n$ and denote by $\widetilde{X}^{(i)} = (X_1 \xdotx{,} X_{i-1}, -X_i,  X_{i+1} \xdotx{,} X_{n})$ the vector obtained by \emph{\textbf{flipping the $i$-th bit} of X}. For any $A \subseteq \set{-1, 1}^n$, \emph{\textbf{\underline{the influence of the $i$-th variable}}} is defined by
+\begin{align*}
+I_i(A) &= \bP\set{\ind{X \in A} \neq \ind{\widetilde{X}^{(i)} \in A}} \\
+&= \bP\set{(X \in A \land \widetilde{X}^{(i)} \not\in A) \lor (X \not\in A \land \widetilde{X}^{(i)} \in A)}
+\end{align*} If  $\ind{X \in A} \neq \ind{\widetilde{X}^{(i)} \in A}$, then the $i$-th variable is said to be \emph{\textbf{pivotal}} for $A$. Thus, the influence
+$I_i(A)$ is just \textit{\textbf{the probability that the $i$-th variable is pivotal for $A$}}. 
+
+\underline{\textit{\textbf{The total influence}}} is defined by the \emph{sum} of \emph{individual influences}
+\begin{align*}
+I(A) &:= \sum_{i=1}^{n}I_i(A)
+\end{align*}
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Edge Boundary of  Subset}})\\
+Let $A$ be a subset of $\set{-1, 1}^n$. Let $\cE(A)$ denote the set of edges of the subgraph induced by $A$. \underline{\emph{\textbf{The edge boundary}} of $A$}, $\partial \cE(A)$, is define as 
+\begin{align*}
+\partial \cE(A) := \set{(x,y): x \in A, y \in A^{c} , d_H(x, y) = 1}.
+\end{align*} Thus \emph{the total number of edges connects to all of vertices in $A$} can be computed as 
+\begin{align}
+n\abs{A} &= 2\abs{\cE(A)} + \abs{\partial \cE(A)} \label{eqn: hand_shaking}
+\end{align} where each vertex connects to exactly $n$ edges, and every edge with both endpoints in $A$ is counted twice. Also we have that 
+\begin{align*}
+I(A) &:= \frac{2 \abs{\partial \cE(A)}}{2^n}.
+\end{align*}
+\end{definition}
+
+\item \begin{theorem} (\textbf{Edge Isoperimetric Theorem of Binary Hypercube}) \citep{boucheron2013concentration}\\
+For any $A \subset \set{-1, 1}^n$, let $\bP(A)$ denote $\bP\set{X \in A} = \abs{A}/2^n$. Then
+\begin{align}
+I(A) &\ge 2 \bP(A)\log_2\paren{\frac{1}{\bP(A)}} \label{ineqn: edge_isoperimetric_inequality}
+\end{align}
+\end{theorem} By theorem on maximum density of subgraph, we see that 
+\begin{align*}
+\abs{\cE(A)} &\le \frac{\abs{A}}{2} \log_2(\abs{A}).
+\end{align*} Using the formula \eqref{eqn: hand_shaking}, we have inequality:
+\begin{align*}
+n\abs{A} - \abs{\partial \cE(A)} &\le \abs{A}  \log_2(\abs{A}) \\
+\Rightarrow \abs{\partial \cE(A)} &\ge \abs{A} (n -  \log_2(\abs{A})) \\
+&= 2^n \bP(A) (n - \log_2(2^n \bP(A))) = 2^n \bP(A) (- \log \bP(A))
+\end{align*} Finally, note that 
+\begin{align*}
+I(A) &:= \frac{2 \abs{\partial \cE(A)}}{2^n} \ge 2 \bP(A) (- \log \bP(A)) \qed
+\end{align*}
 \end{itemize}
 
 

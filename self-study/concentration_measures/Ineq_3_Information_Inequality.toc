@@ -9,9 +9,9 @@
 \contentsline {subsection}{\numberline {2.2}Applications of Han's Inequality}{9}
 \contentsline {subsubsection}{\numberline {2.2.1}Combinatorial Entropies}{9}
 \contentsline {subsubsection}{\numberline {2.2.2}Edge Isoperimetric Inequality on the Binary Hypercube}{9}
-\contentsline {subsection}{\numberline {2.3}$\Phi $-Entropy}{9}
-\contentsline {subsection}{\numberline {2.4}Sub-Additivity of $\Phi $-Entropy}{10}
-\contentsline {subsection}{\numberline {2.5}Duality and Variational Formulas}{12}
-\contentsline {subsection}{\numberline {2.6}Wasserstein Distance and Transportation Cost Inequality}{16}
-\contentsline {subsection}{\numberline {2.7}Pinsker's Inequality}{17}
-\contentsline {subsection}{\numberline {2.8}Birg{\'e}'s Inequality and Multiple Testing Problem}{18}
+\contentsline {subsection}{\numberline {2.3}$\Phi $-Entropy}{11}
+\contentsline {subsection}{\numberline {2.4}Sub-Additivity of $\Phi $-Entropy}{12}
+\contentsline {subsection}{\numberline {2.5}Duality and Variational Formulas}{15}
+\contentsline {subsection}{\numberline {2.6}Wasserstein Distance and Transportation Cost Inequality}{18}
+\contentsline {subsection}{\numberline {2.7}Pinsker's Inequality}{19}
+\contentsline {subsection}{\numberline {2.8}Birg{\'e}'s Inequality and Multiple Testing Problem}{21}
