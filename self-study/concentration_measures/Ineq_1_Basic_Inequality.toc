@@ -13,4 +13,4 @@
 \contentsline {subsection}{\numberline {3.7}Hoeffding's Inequality}{18}
 \contentsline {subsection}{\numberline {3.8}Bennett's Inequality}{21}
 \contentsline {subsection}{\numberline {3.9}Bernstein's Inequality}{22}
-\contentsline {subsection}{\numberline {3.10}The Johnson-Lindenstrauss Lemma}{23}
+\contentsline {subsection}{\numberline {3.10}The Johnson-Lindenstrauss Lemma}{24}
