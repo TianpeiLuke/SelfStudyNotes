@@ -16,31 +16,31 @@
 \contentsline {subsection}{\numberline {5.7}The Johnson-Lindenstrauss Lemma}{30}
 \contentsline {section}{\numberline {6}Martingale Method}{30}
 \contentsline {subsection}{\numberline {6.1}Martingale and Martingale Difference Sequence}{30}
-\contentsline {subsection}{\numberline {6.2}Bernstein Inequality for Martingale Difference Sequence}{32}
+\contentsline {subsection}{\numberline {6.2}Bernstein Inequality for Martingale Difference Sequence}{33}
 \contentsline {subsection}{\numberline {6.3}Azuma-Hoeffding Inequality}{33}
 \contentsline {subsection}{\numberline {6.4}Bounded Difference Inequality}{33}
-\contentsline {section}{\numberline {7}Bounding Variance}{33}
-\contentsline {subsection}{\numberline {7.1}Mean-Median Deviation}{33}
-\contentsline {subsection}{\numberline {7.2}The Efron-Stein Inequality and Jackknife Estimation}{34}
-\contentsline {subsection}{\numberline {7.3}Functions with Bounded Differences}{36}
-\contentsline {subsection}{\numberline {7.4}Convex Poincar{\'e} Inequality}{36}
+\contentsline {section}{\numberline {7}Bounding Variance}{34}
+\contentsline {subsection}{\numberline {7.1}Mean-Median Deviation}{34}
+\contentsline {subsection}{\numberline {7.2}The Efron-Stein Inequality and Jackknife Estimation}{35}
+\contentsline {subsection}{\numberline {7.3}Functions with Bounded Differences}{37}
+\contentsline {subsection}{\numberline {7.4}Convex Poincar{\'e} Inequality}{37}
 \contentsline {subsection}{\numberline {7.5}Gaussian Poincar{\'e} Inequality}{37}
 \contentsline {section}{\numberline {8}Entropy Method}{37}
 \contentsline {subsection}{\numberline {8.1}Entropy Functional and $\Phi $-Entropy}{37}
 \contentsline {subsection}{\numberline {8.2}Dual Formulation}{38}
-\contentsline {subsection}{\numberline {8.3}Tensorization Property}{39}
-\contentsline {subsection}{\numberline {8.4}Herbst's Argument}{39}
-\contentsline {subsection}{\numberline {8.5}Association Inequalities}{40}
+\contentsline {subsection}{\numberline {8.3}Tensorization Property}{40}
+\contentsline {subsection}{\numberline {8.4}Herbst's Argument}{40}
+\contentsline {subsection}{\numberline {8.5}Association Inequalities}{41}
 \contentsline {subsection}{\numberline {8.6}Connection to Variance Bounds}{41}
 \contentsline {section}{\numberline {9}Transportation Method}{42}
 \contentsline {subsection}{\numberline {9.1}Optimal Transport, Wasserstein Distance and its Dual}{42}
-\contentsline {subsection}{\numberline {9.2}Concentration via Transportation Cost}{45}
-\contentsline {subsection}{\numberline {9.3}Tensorization for Transportation Cost}{46}
+\contentsline {subsection}{\numberline {9.2}Concentration via Transportation Cost}{46}
+\contentsline {subsection}{\numberline {9.3}Tensorization for Transportation Cost}{47}
 \contentsline {subsection}{\numberline {9.4}Induction Lemma}{47}
 \contentsline {subsection}{\numberline {9.5}Marton's Transportation Inequality}{47}
-\contentsline {subsection}{\numberline {9.6}Talagrand's Gaussian Transportation Inequality}{48}
+\contentsline {subsection}{\numberline {9.6}Talagrand's Gaussian Transportation Inequality}{49}
 \contentsline {section}{\numberline {10}Proofs of Bounded Difference Inequality}{49}
 \contentsline {subsection}{\numberline {10.1}Martingale Method}{49}
 \contentsline {subsection}{\numberline {10.2}Entropy Method}{50}
-\contentsline {subsection}{\numberline {10.3}Isoperimetric Inequality on Binary Hypercube}{50}
-\contentsline {subsection}{\numberline {10.4}Transportation Method}{52}
+\contentsline {subsection}{\numberline {10.3}Isoperimetric Inequality on Binary Hypercube}{51}
+\contentsline {subsection}{\numberline {10.4}Transportation Method}{53}

@@ -1196,7 +1196,18 @@ where $h(u) = (1 + u) \log(1 + u) - u$ for $u > 0$.
 \end{itemize}
 
 \subsection{The Johnson-Lindenstrauss Lemma}
+\begin{itemize}
+\item \begin{remark} (\textbf{\emph{Overview of The Johnson-Lindenstrauss Lemma}})\\
+The celebrated \emph{\textbf{Johnson-Lindenstrauss lemma}} states roughly that, given an arbitrary set of \emph{$n$ points} in a (high-dimensional) Euclidean space, there exists a \emph{\textbf{linear embedding}} of these points in a \emph{$d$-dimensional Euclidean space} such that \emph{\textbf{all pairwise distances are preserved}} within a factor of $1 \pm \epsilon$  if $d$ is proportional to $(\log n)/\epsilon^2$. It is remarkable that \underline{\emph{this result \textbf{does not involve the dimension of the space}}} to which the $n$ points belong. In fact, the dimension of this space may even be \emph{infinite}.
+\end{remark}
 
+\item \begin{definition}(\textbf{\emph{$\epsilon$-Isometry}})\\
+Consider an arbitrary set  $A \subset \bR^D$ or $A \subset \cH$ for \emph{separable Hilbert space} $\cH$. Given $\epsilon \in (0, 1)$, a map $f : \bR^D \to \bR^d$ is called an \underline{\emph{\textbf{$\epsilon$-isometry on $A$}}} if for every pair $a, a' \in A$, we have
+\begin{align*}
+(1 - \epsilon)\norm{a - a'}{2}^2 \le \norm{f(a) - f(a')}{2}^2 \le (1 + \epsilon)\norm{a - a'}{2}^2.
+\end{align*}
+\end{definition}
+\end{itemize}
 
 \section{Martingale Method}
 \subsection{Martingale and Martingale Difference Sequence}

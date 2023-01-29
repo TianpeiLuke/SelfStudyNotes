@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  27 JAN 2023 21:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  28 JAN 2023 16:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -818,13 +818,13 @@ d Dis-tri-bu-tions\OT1/cmr/m/it/10.95 ). [Ver-shynin, 2018]
  []
 
 [28] [29] [30]
-Overfull \hbox (4.24231pt too wide) in paragraph at lines 1256--1258
+Overfull \hbox (4.24231pt too wide) in paragraph at lines 1267--1269
 []\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Construction of Mar-tin-gale From M
 ar-tin-gale Dif-fer-ence\OT1/cmr/m/it/10.95 )[Resnick,
  []
 
 
-Overfull \hbox (7.04062pt too wide) in paragraph at lines 1263--1265
+Overfull \hbox (7.04062pt too wide) in paragraph at lines 1274--1276
 []\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Construction of Mar-tin-gale Dif-fe
 r-ence From Mar-tin-gale\OT1/cmr/m/it/10.95 ) [Resnick,
  []
@@ -832,91 +832,91 @@ r-ence From Mar-tin-gale\OT1/cmr/m/it/10.95 ) [Resnick,
 [31]
 Missing character: There is no Â in font cmr10!
 Missing character: There is no · in font cmr10!
-
-Overfull \hbox (1.60684pt too wide) in paragraph at lines 1319--1320
+ [32]
+Overfull \hbox (1.60684pt too wide) in paragraph at lines 1330--1331
 []\OT1/cmr/m/it/10.95 The sum $[][] \OML/cmm/m/it/10.95 D[]$ \OT1/cmr/m/it/10.9
 5 is \OT1/cmr/bx/it/10.95 sub-exponential \OT1/cmr/m/it/10.95 with \OT1/cmr/bx/
 it/10.95 pa-ram-e-ters $[]$ \OT1/cmr/m/it/10.95 where $\OML/cmm/m/it/10.95 [] 
 \OT1/cmr/m/n/10.95 :=
  []
 
-[32]
-Overfull \hbox (19.59953pt too wide) in paragraph at lines 1361--1363
+
+Overfull \hbox (19.59953pt too wide) in paragraph at lines 1372--1374
 []\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 McDiarmid's In-equal-ity / Bounded 
 Dif-fer-ences In-equal-ity\OT1/cmr/m/it/10.95 )[Wainwright,
  []
 
 
-Overfull \hbox (1.06664pt too wide) in paragraph at lines 1361--1363
+Overfull \hbox (1.06664pt too wide) in paragraph at lines 1372--1374
 \OT1/cmr/m/it/10.95 Suppose that $\OML/cmm/m/it/10.95 f$ \OT1/cmr/m/it/10.95 sa
 t-is-fies \OT1/cmr/bx/it/10.95 the bounded dif-fer-ence prop-erty [] \OT1/cmr/m
 /it/10.95 with pa-ram-e-ters $\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 L[] [] []
  [] L[]\OT1/cmr/m/n/10.95 )$
  []
 
-
-Overfull \hbox (29.2886pt too wide) in paragraph at lines 1384--1385
+[33]
+Overfull \hbox (29.2886pt too wide) in paragraph at lines 1395--1396
 []\OT1/cmr/m/n/10.95 (proof by Jen-son's in-equal-ity $[] = [] \OMS/cmsy/m/n/10
 .95 ^^T \U/dsrom/m/n/10.95 E[] [] \OMS/cmsy/m/n/10.95 ^^T \U/dsrom/m/n/10.95 E[
 ] [] \OMS/cmsy/m/n/10.95 ^^T []$\OT1/cmr/m/n/10.95 ) 
  []
 
-[33] [34] [35] [36] [37]
-Overfull \hbox (1.47147pt too wide) in paragraph at lines 1593--1595
+[34] [35] [36] [37] [38]
+Overfull \hbox (1.47147pt too wide) in paragraph at lines 1604--1606
 []\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Duality For-mula of Kullback-Leible
 r Di-ver-gence\OT1/cmr/m/it/10.95 ) [Cover and Thomas,
  []
 
 
-Overfull \hbox (29.97743pt too wide) in paragraph at lines 1607--1609
+Overfull \hbox (29.97743pt too wide) in paragraph at lines 1618--1620
 []\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 The Ex-pected Value Min-i-mizes Ex-
 pected Breg-man Di-ver-gence\OT1/cmr/m/it/10.95 ) [Boucheron
  []
 
-[38]
-Overfull \hbox (15.46594pt too wide) in paragraph at lines 1623--1625
+
+Overfull \hbox (15.46594pt too wide) in paragraph at lines 1634--1636
 []\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Sub-Additivity of The En-tropy / Te
 n-soriza-tion Prop-erty\OT1/cmr/m/it/10.95 ) [Boucheron
  []
 
 [39] [40]
-Overfull \hbox (18.09996pt too wide) in paragraph at lines 1705--1708
+Overfull \hbox (18.09996pt too wide) in paragraph at lines 1716--1719
 []\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Symmetrized Mod-i-fied Log-a-rith-m
 ic Sobolev In-equal-i-ties\OT1/cmr/m/it/10.95 ) [Boucheron
  []
 
-Missing character: There is no Ã in font cmr10!
-Missing character: There is no © in font cmr10!
 [41]
-Missing character: There is no Ã in font cmr10!
-Missing character: There is no © in font cmr10!
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no © in font cmr10!
  [42]
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no © in font cmr10!
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no © in font cmr10!
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no © in font cmr10!
 
-Overfull \hbox (1.40257pt too wide) in paragraph at lines 1777--1779
+Overfull \hbox (1.40257pt too wide) in paragraph at lines 1788--1790
 []\OT1/cmr/m/n/10.95 (\OT1/cmr/bx/it/10.95 Dual Prob-lem of Kan-torovich Prob-l
 em\OT1/cmr/m/n/10.95 ) [Vil-lani, 2009, San-tam-bro-gio, 2015,
  []
 
 [43]
-Overfull \hbox (4.34706pt too wide) in paragraph at lines 1818--1820
+Overfull \hbox (4.34706pt too wide) in paragraph at lines 1829--1831
 \OT1/cmr/m/n/10.95 The $[]$ $\OMS/cmsy/m/n/10.95 W[]\OT1/cmr/m/n/10.95 (\U/msb/
 m/n/10.95 P\OML/cmm/m/it/10.95 ; \U/msb/m/n/10.95 Q\OT1/cmr/m/n/10.95 ) := [][]
 $ is a well-defined
  []
 
-[44]
-Overfull \hbox (16.9547pt too wide) in paragraph at lines 1884--1885
+[44] [45]
+Overfull \hbox (16.9547pt too wide) in paragraph at lines 1895--1896
 []\OT1/cmr/m/it/10.95 for any prob-a-bil-ity mea-sure $\OML/cmm/m/it/10.95 P$ \
 OT1/cmr/m/it/10.95 ab-so-lutely con-tin-u-ous with re-spect to $\OML/cmm/m/it/1
 0.95 Q$ \OT1/cmr/m/it/10.95 such that $[] [] \OML/cmm/m/it/10.95 <
  []
 
-[45]
-Overfull \hbox (20.7208pt too wide) in paragraph at lines 1926--1928
+[46]
+Overfull \hbox (20.7208pt too wide) in paragraph at lines 1937--1939
 \OT1/cmr/m/it/10.95 Suppose that, for each $\OML/cmm/m/it/10.95 k \OT1/cmr/m/n/
 10.95 = 1\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 2 [] [] [] \OML/cmm/m/it/10.9
 5 n$\OT1/cmr/m/it/10.95 , the uni-vari-ate dis-tri-bu-tion $\U/msb/m/n/10.95 P[
@@ -924,8 +924,8 @@ Overfull \hbox (20.7208pt too wide) in paragraph at lines 1926--1928
 .95 -transportation
  []
 
-[46] [47]
-Overfull \hbox (6.98401pt too wide) in paragraph at lines 1995--1997
+[47] [48]
+Overfull \hbox (6.98401pt too wide) in paragraph at lines 2006--2008
 \OT1/cmr/m/it/10.95 sure ab-so-lutely con-tin-u-ous with re-spect to $\U/msb/m/
 n/10.95 P$\OT1/cmr/m/it/10.95 . De-fine two ran-dom vec-tors $\OML/cmm/m/it/10.
 95 X \OT1/cmr/m/n/10.95 = (\OML/cmm/m/it/10.95 X[] [] [] [] X[]\OT1/cmr/m/n/10.
@@ -933,25 +933,25 @@ n/10.95 P$\OT1/cmr/m/it/10.95 . De-fine two ran-dom vec-tors $\OML/cmm/m/it/10.
  []
 
 
-Overfull \hbox (14.90628pt too wide) in paragraph at lines 2005--2007
+Overfull \hbox (14.90628pt too wide) in paragraph at lines 2016--2018
 []\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 McDiarmid's In-equal-ity / Bounded 
 Dif-fer-ences In-equal-ity\OT1/cmr/m/it/10.95 )[Boucheron
  []
 
 
-Overfull \hbox (1.06664pt too wide) in paragraph at lines 2005--2007
+Overfull \hbox (1.06664pt too wide) in paragraph at lines 2016--2018
 \OT1/cmr/m/it/10.95 Suppose that $\OML/cmm/m/it/10.95 f$ \OT1/cmr/m/it/10.95 sa
 t-is-fies \OT1/cmr/bx/it/10.95 the bounded dif-fer-ence prop-erty [] \OT1/cmr/m
 /it/10.95 with pa-ram-e-ters $\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 L[] [] []
  [] L[]\OT1/cmr/m/n/10.95 )$
  []
 
-[48] [49] [50] [51] [52] [53] (./Ineq_0_Summary_1.bbl
+[49] [50] [51] [52] [53] [54] (./Ineq_0_Summary_1.bbl
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no © in font cmr10!
 Missing character: There is no Â in font cmti10!
 Missing character: There is no ® in font cmti10!
-) [54]
+) [55]
 (./Ineq_0_Summary_1.aux)
 
 LaTeX Warning: There were multiply-defined labels.
@@ -960,7 +960,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  16024 strings out of 493029
  318236 string characters out of 6136233
- 371808 words of memory out of 5000000
+ 368808 words of memory out of 5000000
  19221 multiletter control sequences out of 15000+600000
  17168 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -986,10 +986,10 @@ fonts/type1/public/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/doublestroke/dsrom8.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/rsfs/rsfs10.pfb>
-Output written on Ineq_0_Summary_1.pdf (54 pages, 447232 bytes).
+Output written on Ineq_0_Summary_1.pdf (55 pages, 450332 bytes).
 PDF statistics:
- 270 PDF objects out of 1000 (max. 8388607)
- 190 compressed objects within 2 object streams
+ 274 PDF objects out of 1000 (max. 8388607)
+ 193 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
