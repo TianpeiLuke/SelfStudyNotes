@@ -13,6 +13,7 @@
 \contentsline {subsection}{\numberline {3.2}Lipschitz Functions of Gaussian Variables}{16}
 \contentsline {subsection}{\numberline {3.3}Suprema of Gaussian Process}{18}
 \contentsline {subsection}{\numberline {3.4}Concentration of Convex Lipschitz Functions}{19}
-\contentsline {subsection}{\numberline {3.5}Exponential Tail Bounds for Self-Bounding Functions}{20}
-\contentsline {subsection}{\numberline {3.6}Hypercontractivity: The Bonami-Beckner Inequality}{20}
-\contentsline {subsection}{\numberline {3.7}Gaussian Hypercontractivity}{20}
+\contentsline {subsection}{\numberline {3.5}Extension of Johnson-Lindenstrauss Lemma to Infinite Set}{20}
+\contentsline {subsection}{\numberline {3.6}Exponential Tail Bounds for Self-Bounding Functions}{20}
+\contentsline {subsection}{\numberline {3.7}Hypercontractivity: The Bonami-Beckner Inequality}{20}
+\contentsline {subsection}{\numberline {3.8}Gaussian Hypercontractivity}{20}
