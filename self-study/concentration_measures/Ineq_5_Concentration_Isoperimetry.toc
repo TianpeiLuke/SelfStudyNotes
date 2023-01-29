@@ -7,4 +7,4 @@
 \contentsline {subsection}{\numberline {2.3}Gaussian Isoperimetric Inequalities and Concentration of Gaussian Measure}{13}
 \contentsline {subsection}{\numberline {2.4}Convex Distance Inequality}{17}
 \contentsline {subsection}{\numberline {2.5}Edge Isoperimetric Inequality on the Binary Hypercube}{19}
-\contentsline {subsection}{\numberline {2.6}Vertex Isoperimetric Inequality on the Binary Hypercube}{19}
+\contentsline {subsection}{\numberline {2.6}Vertex Isoperimetric Inequality on the Binary Hypercube}{22}
