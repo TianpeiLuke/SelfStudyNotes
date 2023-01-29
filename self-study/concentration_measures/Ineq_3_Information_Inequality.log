@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  28 JAN 2023 16:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  29 JAN 2023 14:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -703,8 +703,8 @@ Overfull \hbox (8.66808pt too wide) in paragraph at lines 268--270
 Rel-a-tive En-tropy\OT1/cmr/m/it/10.95 ) [Cover and Thomas,
  []
 
-[7] [8] [9] [10] [11]
-Overfull \hbox (0.43044pt too wide) in paragraph at lines 485--486
+[7] [8] [9] [10] [11] [12] [13]
+Overfull \hbox (0.43044pt too wide) in paragraph at lines 573--574
 \OT1/cmr/m/it/10.95 con-di-tional ex-pec-ta-tion con-di-tioned on the $\OT1/cmr
 /m/n/10.95 (\OML/cmm/m/it/10.95 n \OMS/cmsy/m/n/10.95 ^^@ \OT1/cmr/m/n/10.95 1)
 $\OT1/cmr/m/it/10.95 -vector $\OML/cmm/m/it/10.95 Z[] \OT1/cmr/m/n/10.95 := (\O
@@ -712,27 +712,27 @@ ML/cmm/m/it/10.95 Z[] [] [] [] Z[]; Z[] [] [] [] Z[]\OT1/cmr/m/n/10.95 )$\OT1/c
 mr/m/it/10.95 . 
  []
 
-[12] [13]
-Overfull \hbox (1.47147pt too wide) in paragraph at lines 621--623
+[14] [15] [16]
+Overfull \hbox (7.76767pt too wide) in paragraph at lines 709--711
 []\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Duality For-mula of Kullback-Leible
 r Di-ver-gence\OT1/cmr/m/it/10.95 ) [Cover and Thomas,
  []
 
-[14] [15]
-Overfull \hbox (31.65656pt too wide) in paragraph at lines 684--686
+[17]
+Overfull \hbox (31.65656pt too wide) in paragraph at lines 772--774
 []\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Wasserstein Dis-tance and Trans-por
 ta-tion Cost In-equal-ity\OT1/cmr/m/it/10.95 ) [Boucheron
  []
 
 
-Overfull \hbox (16.9547pt too wide) in paragraph at lines 691--692
+Overfull \hbox (16.9547pt too wide) in paragraph at lines 779--780
 []\OT1/cmr/m/it/10.95 for any prob-a-bil-ity mea-sure $\OML/cmm/m/it/10.95 P$ \
 OT1/cmr/m/it/10.95 ab-so-lutely con-tin-u-ous with re-spect to $\OML/cmm/m/it/1
 0.95 Q$ \OT1/cmr/m/it/10.95 such that $[] [] \OML/cmm/m/it/10.95 <
  []
 
-[16] [17] [18]
-Overfull \hbox (23.92923pt too wide) in paragraph at lines 828--830
+[18] [19] [20]
+Overfull \hbox (23.92923pt too wide) in paragraph at lines 916--918
 \OT1/cmr/m/it/10.95 Let $\OML/cmm/m/it/10.95 P[]; P[] [] [] [] P[]$ \OT1/cmr/m/
 it/10.95 be prob-a-bil-ity dis-tri-bu-tions on mea-sur-able space $\OT1/cmr/m/n
 /10.95 (
@@ -740,44 +740,41 @@ it/10.95 be prob-a-bil-ity dis-tri-bu-tions on mea-sur-able space $\OT1/cmr/m/n
 .95 and let $\OML/cmm/m/it/10.95 A[]; A[] [] [] [] A[] \OMS/cmsy/m/n/10.95 2
  []
 
-[19] [20] (./Ineq_3_Information_Inequality.bbl) [21]
-(./Ineq_3_Information_Inequality.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+[21] [22] (./Ineq_3_Information_Inequality.bbl) [23]
+(./Ineq_3_Information_Inequality.aux) ) 
 Here is how much of TeX's memory you used:
- 15929 strings out of 493029
- 315886 string characters out of 6136233
- 370062 words of memory out of 5000000
- 19136 multiletter control sequences out of 15000+600000
+ 15932 strings out of 493029
+ 315972 string characters out of 6136233
+ 369095 words of memory out of 5000000
+ 19139 multiletter control sequences out of 15000+600000
  13801 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,16n,84p,687b,346s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/doublestroke/dsrom8.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/rsfs/rsfs10.pfb>
-Output written on Ineq_3_Information_Inequality.pdf (21 pages, 301010 bytes).
+</usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cme
+xtra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsrom8.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
+Output written on Ineq_3_Information_Inequality.pdf (23 pages, 319991 bytes).
 PDF statistics:
- 160 PDF objects out of 1000 (max. 8388607)
- 114 compressed objects within 2 object streams
+ 170 PDF objects out of 1000 (max. 8388607)
+ 121 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
