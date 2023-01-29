@@ -6,6 +6,7 @@
 \contentsline {subsection}{\numberline {1.5}Minimum Weight Spanning Tree}{4}
 \contentsline {subsection}{\numberline {1.6}Rademacher Complexity}{4}
 \contentsline {subsection}{\numberline {1.7}Dimensionality Reduction}{5}
+\contentsline {subsection}{\numberline {1.8}Extension of Johnson-Lindenstrauss Lemma to Infinite Set}{5}
 \contentsline {section}{\numberline {2}Self-Bounding Functions}{5}
 \contentsline {subsection}{\numberline {2.1}Definitions, Variance Bounds and Concentration}{5}
 \contentsline {subsection}{\numberline {2.2}Configuration Function}{6}
