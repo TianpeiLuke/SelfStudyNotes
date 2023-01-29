@@ -1025,6 +1025,13 @@ $\sum_{i=1}^{n}\E{}{X_i^2} \le \nu$ and
 \end{align}
 \end{proposition}
 
+\begin{remark} Note that 
+\begin{align*}
+h_1(u) = 1+ u - \sqrt{1 + 2u} = \frac{1}{2}\paren{\sqrt{1 + 2u} - 1}^2; \\
+h_1^{-1}(s) = \frac{1}{2}(\sqrt{2s} + 1)^2 - 1 = s + \sqrt{2s}
+\end{align*}
+\end{remark}
+
 \item \begin{corollary}(\textbf{Bernstein's Inequality, Sub-Gamma Distribution}).  \citep{boucheron2013concentration}\\
 Let $X_1 \xdotx{,} X_n$ be independent real-valued random variables satisfying the conditions above and let $S = \sum_{i=1}^{n}\paren{X_i - \E{}{X_i}}$. Then for all $t > 0$,
 \begin{align}
@@ -1107,6 +1114,78 @@ Consider an arbitrary set  $A \subset \bR^D$ or $A \subset \cH$ for \emph{separa
 \item \begin{remark} (\emph{\textbf{Problem Statement}})\\
 A natural question is to find \emph{\textbf{the smallest possible value of $d$}} for which \emph{a linear $\epsilon$-isometry exists on $A$}. \emph{The Johnson-Lindenstrauss lemma}, stated and proved below, ensures that when $A$ is a \emph{\textbf{finite set}} with cardinality $n$, a \emph{linear $\epsilon$-isometry} exists whenever $d \ge \kappa \epsilon^{-2} \log(n)$, where $\kappa$ is an absolute constant. 
 \end{remark}
+
+\item \begin{remark} (\emph{\textbf{Gaussian Random Projection}})\\
+The basic idea is to construct a \emph{\textbf{random projection}} $W : \bR^D \to \bR^d$ (i.e. a \emph{linear mapping}) that is an exact \emph{\textbf{isometry}} ``\emph{\textbf{in expectation}}," that is, for every $\alpha \in \bR^D$,
+\begin{align*}
+\E{}{\norm{W(\alpha)}{2}^2} = \E{}{\norm{\alpha}{2}^2}.
+\end{align*} In other words, denoting by $L^{2,d}$ the space of \emph{square-integrable $\bR^d$-valued random vectors}, $W$ is an \emph{\textbf{isometry}} from $\bR^D$ into $L^{2,d}$.
+
+To construct $W$, let $X_{i,j}$, $i = 1 \xdotx{,} d$,  $j = 1 \xdotx{,} D$ be \emph{independent and identically distributed} real-valued random variables such that $\E{}{X_{i,j}} = 0$ and $\text{Var}(X_{i,j}) = 1$. For every $\alpha = (\alpha_1 \xdotx{,} \alpha_D) \in \bR^D$ and $i \in \set{1 \xdotx{,} d}$, define
+\begin{align*}
+W_i(\alpha)  &:= \sum_{j=1}^{D}\alpha_{j}X_{i,j} 
+\end{align*} $W_i(\alpha)/\sqrt{d}$ is the $i$-th component of the random vector $W(\alpha)$, that is, $W$ is defined by
+\begin{align*}
+W(\alpha) &:= \paren{\frac{1}{\sqrt{d}}\sum_{j=1}^{D}\alpha_{j}X_{i,j}}_{i=1}^{d} \\
+\Rightarrow  W(\alpha) &:= \frac{1}{\sqrt{d}} X \alpha^{T}.
+\end{align*} Observe that by independence of the $X_{i,j}$, for every $i = 1 \xdotx{,} d$,  
+\begin{align*}
+\E{}{W_i(\alpha)^2} &= \E{}{\paren{\sum_{j=1}^{D}\alpha_{j}X_{i,j} }^2} = \sum_{j=1}^{D}\alpha_i^2\E{}{X_{i,j}^2} = \E{}{\norm{\alpha}{2}^2}.
+\end{align*} Therefore, for every $\alpha \in \bR^D$,
+\begin{align*}
+\E{}{\norm{W(\alpha)}{2}^2} &= \frac{1}{d}\sum_{i=1}^d\E{}{W_i(\alpha)^2} =  \E{}{\norm{\alpha}{2}^2}.
+\end{align*} and indeed, $W$ is an \emph{isometry} from $\bR^D$ into $L^{2,d}$.
+\end{remark}
+
+\item \begin{theorem} (\textbf{The Johnson-Lindenstrauss Lemma}) \citep{boucheron2013concentration} \\
+Let $A$ be a \textbf{finite subset} of $\bR^D$ with cardinality $n$. Assume that for some $\nu \ge 1$,  $X_{i,j} \in \cG(\nu)$ and let $\epsilon, \delta \in (0, 1)$. If
+\begin{align*}
+d \ge 100 \frac{\nu^2  \log \paren{\frac{n}{\sqrt{\delta}}}}{\epsilon^2},
+\end{align*} then with probability at least $1 - \delta$,  $W$ is an \textbf{$\epsilon$-isometry} on $A$. That is, for every pair $a, a' \in A$, with probability $1- \delta$ we have 
+\begin{align*}
+(1 - \epsilon)\norm{a - a'}{2}^2 \le \norm{\frac{1}{\sqrt{d}} Xa^{T} - \frac{1}{\sqrt{d}} X(a')^{T}}{2}^2 \le (1 + \epsilon)\norm{a - a'}{2}^2.
+\end{align*}
+\end{theorem}
+\begin{proof}
+Denote by $\bS$ the unit sphere of $\bR^D$ and let $T$ be the subset of $\bS$ defined by
+\begin{align*}
+T := \set{\frac{a - a'}{\norm{a - a'}{2}}:  a, a' \in A, a \neq a'}
+\end{align*} Then $T$ has cardinality $N \le n(n - 1)/2.$ We need to show that, under the stated condition for $d$,
+\begin{align*}
+\sup_{\alpha \in T}\abs{\norm{W(\alpha)}{}^2 - 1} \le \epsilon.
+\end{align*} First note that for all $\alpha \in \bS$ and $i \le d$, using the fact that the $X_{i,j}$ are \emph{sub-Gaussian},
+\begin{align*}
+\E{}{\exp\paren{\lambda W_i(\alpha)}} &= \E{}{\exp\paren{\lambda \sum_{j=1}^{D}\alpha_{j}X_{i,j} }}\\
+&= \prod_{j=1}^D\E{}{\exp\paren{\lambda\alpha_j X_{i,j} }} \\
+&\le  \E{}{\exp\paren{\frac{\nu\lambda^2\sum_{j=1}^{D}\alpha_j^{2}}{2}  }} \\
+&= \E{}{\exp\paren{\frac{\nu\lambda^2}{2}  }}, \qquad (\text{since }\alpha \in \bS, \;\norm{\alpha}{}^2 =1)
+\end{align*} and therefore $W_i(\alpha) \in \cG(\nu)$. Thus, by moment characterization of sub-Gaussian random variable, for every integer $q \ge 2$,
+\begin{align*}
+\E{}{W_i(\alpha)^{2q}} &\le \frac{q!}{2}  \times 4(2\nu)^{q} \le \frac{1}{2}q! (4\nu)^q.
+\end{align*} Hence, since for each $\alpha$ the random variables $W_i(\alpha)$, $i = 1 \xdotx{,} d$ are \emph{independent}, we may use \emph{Bernstein's inequality} for $\sum_{i=1}^d W_i(\alpha)^2$ with $d(4\nu) \to \nu$ and $d\nu \to c$ to obtain, for every $\alpha \in T$ and $t > 0$, 
+\begin{align*}
+\bP\set{\abs{\sum_{i=1}^d \paren{W_i(\alpha)^2 - 1} } \ge  4\nu\sqrt{2 d t} + d\nu t } \le 2 e^{-t}
+\end{align*} This implies, by the union bound,
+\begin{align*}
+\bP\set{\sup_{\alpha \in T}\abs{\sum_{i=1}^d \paren{W_i(\alpha)^2 - 1} } \ge 4\nu\paren{\sqrt{2 d t} + d t} } \le 2 N e^{-t} \le n^2 e^{-t}
+\end{align*} Setting $t = \log (n^2/\delta)= 2\log(n/\sqrt{\delta})$, 
+\begin{align*}
+4\nu\paren{\sqrt{2 d t} + d t}  &= 8\nu\paren{\sqrt{d \log\paren{n/\sqrt{\delta}}} + d\log\paren{n/\sqrt{\delta}} } \ge 8\nu\sqrt{d \log\paren{n/\sqrt{\delta}}}
+\end{align*}
+we have
+\begin{align*}
+\bP\set{\sup_{\alpha \in T}\abs{\sum_{i=1}^d \paren{W_i(\alpha)^2 - 1} } \ge 8\nu\sqrt{d \log\paren{n/\sqrt{\delta}}}} \le \delta
+\end{align*} or, equivalently,
+\begin{align*}
+\bP\set{\sup_{\alpha \in T}\abs{\norm{W(\alpha)}{}^2 - 1} \ge \sqrt{\frac{ 8\nu\log\paren{n/\sqrt{\delta}}}{d}} + \frac{ 8\nu\log\paren{n/\sqrt{\delta}}}{d} } \le \delta
+\end{align*} Finally, we see that $d \ge 100 \frac{\nu^2  \log \paren{\frac{n}{\sqrt{\delta}}}}{\epsilon^2}$ implies that
+\begin{align*}
+\sqrt{\frac{ 8\nu\log\paren{n/\sqrt{\delta}}}{d}} + \frac{ 8\nu\log\paren{n/\sqrt{\delta}}}{d} \le \frac{4\epsilon}{5} + \frac{2\epsilon^2}{25 \nu} \le \epsilon
+\end{align*} and therefore, with probability at least $1 - \delta$:
+\begin{align*}
+\sup_{\alpha \in T}\abs{\norm{W(\alpha)}{}^2 - 1} \le \epsilon \qed
+\end{align*}
+\end{proof}
 \end{itemize}
 
 \newpage
