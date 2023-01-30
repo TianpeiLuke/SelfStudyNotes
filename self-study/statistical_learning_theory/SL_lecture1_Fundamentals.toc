@@ -1,6 +1,12 @@
-\contentsline {section}{\numberline {1}Fundamental Concepts}{2}
-\contentsline {subsection}{\numberline {1.1}Definitions}{2}
-\contentsline {subsection}{\numberline {1.2}Bayes Error}{4}
-\contentsline {subsection}{\numberline {1.3}Consistency}{8}
-\contentsline {subsection}{\numberline {1.4}No Free Lunch}{10}
-\contentsline {subsection}{\numberline {1.5}Empirical Risk Minimization}{11}
+\contentsline {section}{\numberline {1}Fundamental Concepts and Assumptions}{2}
+\contentsline {subsection}{\numberline {1.1}Categories of Machine Learning}{2}
+\contentsline {subsection}{\numberline {1.2}Data, Concept and Hypotheses}{2}
+\contentsline {subsection}{\numberline {1.3}Deterministic and Stochastic Scenario}{3}
+\contentsline {subsection}{\numberline {1.4}Generalization Error}{4}
+\contentsline {subsection}{\numberline {1.5}Empirical Risk Minimization}{5}
+\contentsline {subsection}{\numberline {1.6}Bayes Error}{5}
+\contentsline {subsection}{\numberline {1.7}Approximation Error and Estimation Error}{9}
+\contentsline {section}{\numberline {2}Analysis of Learning Algorithm}{11}
+\contentsline {subsection}{\numberline {2.1}Consistency and Asymptotic Analysis}{11}
+\contentsline {subsection}{\numberline {2.2}No Free Lunch}{13}
+\contentsline {section}{\numberline {3}Development Paths of Learning Algorithms}{14}
