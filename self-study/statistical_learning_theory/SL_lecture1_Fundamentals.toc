@@ -6,7 +6,8 @@
 \contentsline {subsection}{\numberline {1.5}Empirical Risk Minimization}{5}
 \contentsline {subsection}{\numberline {1.6}Bayes Error}{5}
 \contentsline {subsection}{\numberline {1.7}Approximation Error and Estimation Error}{9}
-\contentsline {section}{\numberline {2}Analysis of Learning Algorithm}{11}
-\contentsline {subsection}{\numberline {2.1}Consistency and Asymptotic Analysis}{11}
-\contentsline {subsection}{\numberline {2.2}No Free Lunch}{13}
-\contentsline {section}{\numberline {3}Development Paths of Learning Algorithms}{14}
+\contentsline {subsection}{\numberline {1.8}Realizability Assumptions}{11}
+\contentsline {section}{\numberline {2}Asymptotic Analysis of Learning Algorithm}{12}
+\contentsline {subsection}{\numberline {2.1}Consistency Definitions}{12}
+\contentsline {subsection}{\numberline {2.2}No Free Lunch}{14}
+\contentsline {section}{\numberline {3}Development Paths of Learning Algorithms}{15}
