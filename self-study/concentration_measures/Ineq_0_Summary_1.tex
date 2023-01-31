@@ -42,7 +42,7 @@
 \sum_{i=1}^n \alpha_i x_i &\ge \prod_{i=1}^{n}x_i^{\alpha_i}
 \end{align*} where $\sum_{i=1}^{n}\alpha_i = 1$ and $\alpha_i \ge 0$. Simple case, $\frac{a + b}{2} \ge \sqrt{ab}$
 
-\item $a^2 + b^2 \ge \pm 2ab$; Also $a + b \ge 2\sqrt{ab}$
+\item $a^2 + b^2 \ge \pm 2ab$; Also $a + b \ge 2\sqrt{ab}$. Similarly, $\frac{a}{x} + bx \ge 2\sqrt{ab}$
 \item  $(a + b)^2 \le 2(a^2 + b^2)$; Also $(\sqrt{a} + \sqrt{b})^2 \le 2(a + b)$
 \item $x + 1 \le e^x$ 
 \item $\log x \le x - 1$ for $x > 0$ 
@@ -61,6 +61,14 @@ h_1(x) := 1 + x - \sqrt{1 + 2x} &\ge \frac{x^2}{2(1 + x)}, \quad \text{ for }x >
 \begin{align*}
 \sum_{i=1}^{n}a_i \log\frac{a_i}{b_i} \ge \paren{\sum_{i=1}^{n}a_i} \log\frac{\sum_{i=1}^{n}a_i}{\sum_{i=1}^{n}b_i} 
 \end{align*} with equality if and only if $\frac{a_i}{b_i}$ is constant.
+\item (Le Cam) For positive sequences $a_i$ and $b_i$, such that $\sum_i a_i = \sum_i b_i = 1$,
+\begin{align*}
+\sum_i \min\set{a_i, b_i} \ge \frac{1}{2}\paren{\sum_i\sqrt{a_i b_i}}^2
+\end{align*}
+\item (Devorye and Gyorfi) For non-negative sequences $a_i$ and $b_i$, such that $\sum_i a_i = \sum_i b_i = 1$,
+\begin{align*}
+\sum_i \sqrt{a_i b_i} \le 1 - \frac{\paren{\sum_i \abs{a_i - b_i}}^2}{8}
+\end{align*}
 \item Taylor series: 
 \begin{align*}
 e^x &:= \sum_{n=0}^{\infty} \frac{x^n}{n!} = 1+ x + \frac{x^2}{2} + \ldots, \quad \forall x \\
