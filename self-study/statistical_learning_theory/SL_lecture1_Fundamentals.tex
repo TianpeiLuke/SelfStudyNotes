@@ -405,7 +405,7 @@ The difference between \emph{\textbf{the generalization error}} for the \emph{op
 L(h_{\cD}^{*}) - L &:= L(g_n^{*}) - \inf_{h \in \cH}L(h)
 \end{align*} Note that \emph{both} quantites are \emph{\textbf{generalization error not training error}}. To compare with \emph{Bayes error}, we have the following decomposition
 \begin{align*}
-L(h_{\cD}^{*}) - L^{*} &= \paren{L(h_{\cD}^{*}) - \inf_{h \in \cH}L(h)} + \paren{\inf_{h \in \cH}L(h) - L^{*}}.
+L(h_{\cD}^{*})  - L^{*} &=\underbrace{\paren{L(h_{\cD}^{*})  - \inf_{h \in \cH}L(h)}}_{\text{\emph{estimation error}}} + \underbrace{\paren{\inf_{h \in \cH}L(h) - L^{*}}}_{\text{\emph{approximation error}}}.
 \end{align*} 
 \begin{enumerate}
 \item The first difference term is called \underline{\emph{\textbf{the estimation error}}};
@@ -429,9 +429,33 @@ Y_i & x = X_1 \xdotx{,} X_n\\
 \right.
 \end{align*} This is clearly not what we are looking for. This phenomenon is called \emph{\textbf{overfitting}}, as the overly large class $\cH$ \emph{overfits} the data. 
 \end{remark}
+\end{itemize}
 
-\item \begin{remark}: (\emph{\textbf{Statistical Decision}}) \citep{berger2013statistical}\\
-The \emph{statistical learning theory} is closely related to the \emph{statistical decision theory} in which the terms such as  \emph{(Empirical) Risk/Utility}, \emph{decision function} are used as an alternative to the terms like \emph{(Empirical) Error}, \emph{hypothesis/classifier}. 
+\subsection{Bias-Complexity Tradeoff}
+\begin{itemize}
+\item \begin{remark}(\textbf{\emph{Bias-Complexity Tradeoff}})\\
+The decomposition of error reveals a tradeoff, called \underline{\emph{\textbf{the bias-complexity tradeoff}}}. 
+\begin{enumerate}
+\item On one hand, choosing $\cH$ to be a \emph{\textbf{very rich class}} \emph{decreases the approximation error} but at the same time might \emph{increase the estimation error}, as a rich $\cH$ might lead to \underline{\emph{\textbf{overfitting}}}.
+\item On the other hand, choosing $\cH$ to be a \emph{\textbf{very small set}} \emph{reduces the estimation error} but might \emph{increase the approximation error} or, in other words, might lead to \underline{\emph{\textbf{underfitting}}}.
+\end{enumerate}
+%the  benefits and pitfalls of \emph{\textbf{using a hypothesis class} as a means of \textbf{formalizing prior knowledge}}.
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Balance the Bias-Complexity Tradeoff}})\\
+\textit{\textbf{Learning theory}} studies \emph{\textbf{how rich} we can make $\cH$ while still \textbf{maintaining reasonable estimation error}}. In many cases, \emph{\textbf{domain knowledge}} helps us to design a hypothesis class $\cH$ \emph{\textbf{for certain domain}} that has low estimation error while the approximation error would not be excessively high.
+\end{remark}
+
+\item \begin{remark} (\textbf{\emph{Bias-Variance Tradeoff}}) \citep{hastie2009elements} \\
+\underline{\emph{\textbf{The bias-variance tradeoff}}} is a classical trade-off in \emph{\textbf{statistical estimation}}. It is based on the error decomposition on mean-square error
+\begin{align*}
+\E{}{\norm{Y- f(X)}{2}^2 \Big| X = x_0} &= \E{}{\norm{Y - \E{}{f(X)} + \E{}{f(X)} - f(X)}{2}^2  \Big| X = x_0} \\
+&= \E{}{\norm{Y - \E{}{f(X)}}{2}^2  \Big| X = x_0} + \E{}{\norm{\E{}{f(X)} - f(X)}{2}^2  \Big| X = x_0}\\
+&= \text{Bias}^2 + \text{Var}(f(X))
+\end{align*} The second last equality is due to orthogonality 
+\begin{align*}
+\E{}{\paren{Y - \E{}{f(X)}}^T\paren{\E{}{f(X)} - f(X)}} &= \paren{Y - \E{}{f(X)}}^T\E{}{\paren{\E{}{f(X)} - f(X)}} = 0.
+\end{align*} It is easy to see that \emph{\textbf{the bias-variance tradeoff}} is a \emph{version} of \emph{\textbf{bias-complexity tradeoff}}. \emph{\textbf{The bias term}} corresponds to \emph{\textbf{the approximation error}} for the model (e.g. least square model) and \emph{\textbf{the variance term}} corresponds to the \emph{\textbf{estimation error}}.
 \end{remark}
 \end{itemize}
 
@@ -476,17 +500,38 @@ Under \emph{\textbf{the stochastic scenario}}, when the Bayes error $L^{*} > \ep
 \end{itemize}
 
 \section{Asymptotic Analysis of Learning Algorithm}
- \begin{remark}[\textbf{Question}] (\textbf{\emph{Low Training Error $\Rightarrow$ Low Generalization Error ?}}) \\
- For a given sequence of data $\cD$, the optimal solution $h^{*}_{\cD}$ from ERM minimizes \emph{\textbf{the empirical error}}, but does it minimize \emph{\textbf{the generalization error}} ? 
+ \begin{remark}[\textbf{Question}] (\textbf{\emph{ERM $\Rightarrow$ Optimal Generalization Error in $\cH$?}}) \\
+ For a given sequence of data $\cD$, the optimal solution $h^{*}_{\cD}$ from ERM minimizes \emph{\textbf{the empirical error}}, but does it minimize \emph{\textbf{the generalization error}} ? Moreover, is the optimal solution from ERM able to minimize the generalization error within a hypotheses class $\cH$ ?
 
-The answer to this question is the motivation behind the analysis of \emph{learning algorithms} and \emph{learning paradigm}. To see why this is complicated, we note that for fixed hypothesis $h$
+The answer to this question is the motivation behind the analysis of \emph{learning algorithms} and \emph{learning paradigm}. To see why this is non-trival, we note that 
 \begin{align*}
-\widehat{L}_{\cD_n}(h) &:=  \frac{1}{n}\sum_{i=1}^{n}\ind{h(X_i)\neq Y_i} := \frac{1}{n}\sum_{i=1}^n f_h(X_i) \\
-L_{\cP, c}(h)  &=  \E{\cP}{\ind{h(X)\neq c(X)}} := \E{}{f_h(X)}
-\end{align*} Then the absolute deviation of empirical error from generalization error, uniformly over a class of functions $f_h \in \cF$ can be formulated as 
+\widehat{L}_{\cD_n}(h) &:=  \frac{1}{n}\sum_{i=1}^{n}\ind{h(X_i)\neq Y_i}  \\
+L_{\cP, c}(h)  &=  \E{\cP}{\ind{h(X)\neq c(X)}} 
+\end{align*} For $h \in \cH$ fixed,  $\E{}{\widehat{L}_{\cD_n}(h)} = L_{\cP, c}(h)$ is a constant,  so by the strong law of large numbers, 
 \begin{align*}
-\norm{\widehat{\cP} - \cP}{\infty} &:= \sup_{f_h \in \cF}\abs{\frac{1}{n}\sum_{i=1}^n f_h(X_i) - \E{}{f_h(X)} }.
-\end{align*} The answer of our question is equivalent to ask when $n \to \infty$, if $\norm{\widehat{\cP} - \cP}{\infty} \to 0$  \emph{in probability}. This is so-called \emph{\textbf{asymptotic analysis}}. 
+\abs{\widehat{L}_{\cD_n}(h) - L_{\cP, c}(h)} \to 0 \text{ a.s. }.
+\end{align*} \emph{However}, $h_n \in \text{ERM}(\cD_n)$ depends on the random vector $\cD_n$ of $n$ i.i.d. random variables, so $L_{\cP, c}(h_n)$ is a \textbf{\emph{random variable}} as well. Thus we cannot directly use the law of large numbers to approximate the deviations.
+
+In learning theory, our goal is to \emph{show that \textbf{the estimation error}} is a small for classifier $h_{\cD}^{*}$ returned by some learning algorithm
+\begin{align*}
+\paren{L(h_{\cD}^{*})  - \inf_{h \in \cH}L(h)}.
+\end{align*} 
+\begin{enumerate}
+\item \emph{\textbf{In asymptotic analysis}}, we consider \emph{\textbf{infinite sample regime}} when $n \to \infty$. If the esimation error approaches to zero when $n \to \infty$, we can confirm that the learning algorithm at least ``\emph{points to the right direction}" and can reach to \emph{optimal solution within the given class} $\cH$ \emph{eventually}, which corresponds to the ``\emph{true}" solution if the realizability assumption holds. In other word, the learner is \emph{\textbf{consistent}}. 
+
+On the other hand, \textbf{however}, \emph{\textbf{consistency}} (even \emph{\textbf{universal consistency}}) does not guarantee that the learning algorithm is \emph{\textbf{sample efficient}} since it does not reveal the \emph{how fast} the estimation error is shrinking when the sample size is \emph{\textbf{finite}}. This motivates the development of \emph{\textbf{non-asymptotic framework}} such as the \emph{Probable Approximatly Correct (PAC) Learning framework}. 
+
+\item In \emph{\textbf{non-asymptotic analysis}}, the estimation error is bounded uniformly by  
+\begin{align*}
+\paren{L(h_{\cD}^{*})  - \inf_{h \in \cH}L(h)} &\le 2 \sup_{h \in \cH}\abs{\widehat{L}_{\cD_n}(h) - L(h)}
+\end{align*} This derivation demonstrates that \emph{\textbf{the central challenge}} in analyzing estimators based on \emph{\textbf{ERM}} is to establish a \underline{\emph{\textbf{uniform law of large numbers}}} for \emph{\textbf{the hypothese class}} $\cH$. We explore various concrete examples of this procedure in future.
+\end{enumerate}
+
+%and it can be seen that the estimation error is \emph{\textbf{uniformly bounded}} by maximum deviation between training error and generalization error %
+%Then the absolute deviation of empirical error from generalization error, uniformly over a class of functions $f_h \in \cF$ can be formulated as 
+%\begin{align*}
+%\norm{\widehat{\cP} - \cP}{\infty} &:= \sup_{f_h \in \cF}\abs{\frac{1}{n}\sum_{i=1}^n f_h(X_i) - \E{}{f_h(X)} }.
+%\end{align*} The answer of our question is equivalent to ask when $n \to \infty$, if $\norm{\widehat{\cP} - \cP}{\infty} \to 0$  \emph{in probability}. This is so-called \emph{\textbf{asymptotic analysis}}. 
 \end{remark}
 \subsection{Consistency Definitions}
 \begin{itemize}
@@ -578,19 +623,19 @@ L(h_n) - L^{*} &\le 2 \int \abs{\eta(x) - \eta_n(x)} \mu(dx) =2 \E{}{\abs{\eta(X
 \end{remark}
 
 By Cauchy-Schwartz inequality, we have
-\begin{corollary}(\textbf{Error Estimate of Plug-In Rule, $L^2$ norm}) \citep{devroye2013probabilistic} \\
+\begin{exercise}(\textbf{Error Estimate of Plug-In Rule, $L^2$ norm}) \citep{devroye2013probabilistic} \\
 If \begin{align*}
 h_n(x) &= \left\{ \begin{array}{cc}
 0 & \eta_n(x) \le \frac{1}{2}\\
 1 & \text{o.w.}
 \end{array}
 \right.
-\end{align*} then its \textbf{error probability} satisfies
+\end{align*} then its error probability satisfies
 \begin{align}
 L(h_n) - L^{*}:= \cP_{X,Y}\set{h_n(X) \neq Y | \cD_n} - L^{*} &\le 2 \sqrt{\int \abs{\eta(x) - \eta_n(x)}^2 \mu(dx)} \nonumber\\
 &=2\sqrt{\E{}{\abs{\eta(X) - \eta_n(X)}^2 | \cD_n}} \label{eqn: plug_in_error_estimate_l1}
 \end{align}
-\end{corollary}
+\end{exercise}
 
 Thus if we can show that under any distribution $\cP_{X,Y}$, $\eta_n \rightarrow \eta$, i.e.
 \begin{align*}
@@ -610,23 +655,34 @@ Thus if we can show that under any distribution $\cP_{X,Y}$, $\eta_n \rightarrow
 \end{itemize}
 
 \subsection{No Free Lunch}
-\begin{itemize}
-\item \begin{remark} 
 There are some significant results known to the learning community
 \begin{itemize}
-\item \emph{\textbf{For every fixed $n$ \underline{there exists a distribution} where the classifier is \underline{arbitrarily bad}}}. For any $\epsilon > 0$ and any integer $n$ and classification rule $h_n$, there exists a distribution of $(X, Y)$ with Bayes risk $L^{*} = 0$ such that
+\item  \begin{theorem} (\textbf{No-Free-Lunch}) \citep{shalev2014understanding}\\
+Let $\cA$ be any learning algorithm for the task of binary classification with respect to the $0$-$1$ loss over a domain $\cX$. Let $n$ be any number smaller than $\abs{\cX}/2$, representing a training set size. Then, there \textbf{exists a distribution} $\cP$ over $\cX \times \set{0,1}$ such that:
+\begin{enumerate}
+\item There \textbf{exists a function} $h: \cX \to \set{0,1}$ with $L_{\cP}(h) = 0$; (\textbf{Realizable})
+\item With probability of at least $1/7$ over the choice of  $\cD_n \sim \cP^n$ we have that
 \begin{align*}
-\E{}{L(h_n(\cdot|\cD_n))} \ge \frac{1}{2}.
+L_{\cP}(\cA(\cD_n)) \ge 1/8.
 \end{align*}
+\end{enumerate}
+\end{theorem}
 
+\item \begin{remark} (\textbf{\emph{Variants of No-Free-Lunch Thereom}})\\
+The followings are some variants of \emph{\textbf{No-Free-Lunch Theorems}}:
+\begin{itemize}
+%\item \emph{\textbf{For every fixed $n$ \underline{there exists a distribution} where the classifier is \underline{arbitrarily bad}}}. For any $\epsilon > 0$ and any integer $n$ and classification rule $h_n$, there exists a distribution of $(X, Y)$ with Bayes risk $L^{*} = 0$ such that
+%\begin{align*}
+%\E{}{L(h_n(\cdot|\cD_n))} \ge \frac{1}{2}.
+%\end{align*}
 \item \emph{\textbf{\underline{Universal rate} of convergence guarantees do not exist}}. 
-That is, for any rule,
+That is, for any \emph{rule},
 \begin{align*}
-\liminf\limits_{n \rightarrow \infty} \sup_{\forall \cP_{X, Y}: L^{*} + \epsilon < 1/2}\cP\set{L_n \ge L + \epsilon} > 0
+\liminf\limits_{n \rightarrow \infty} \sup_{\forall \cP: L^{*} + \epsilon < 1/2}\cP^{n}\set{L_n \ge L + \epsilon} > 0
 \end{align*} 
-Rate of convergence studies must involve certain subclasses of distributions of $(X, Y)$. 
+This means that \emph{the rate of convergence} studies must involve certain \emph{\textbf{subclasses of distributions}} of $(X, Y)$. 
 
-Moreover, \emph{there exists \textbf{no universally consistent learning algorithm}} such that $L(h_n)$ converges \underline{\emph{\textbf{uniformly}} over \emph{\textbf{all distributions}}} to $L^{*}$.
+\item \emph{There exists \textbf{no universally consistent learning algorithm}} such that $L(h_n)$ converges \underline{\emph{\textbf{uniformly}} over \emph{\textbf{all distributions}}} to $L^{*}$.
 
 \item \emph{\textbf{There exists no universally superior learning algorithm}}. For every sequence of classification rules $f_n$, there is a \emph{universally consistent
 sequence of classification rules} $h_n$ such that for \underline{\emph{\textbf{some distribution}}} on $\cX \times \cY$
@@ -678,15 +734,6 @@ Depending on the distribution of concern is \emph{\textbf{the joint distribution
 ``\emph{Our goal is to learn an optimal classifier from \textbf{a given class  of functions} that is \textbf{universially} good for all possible distributions}"
 
 In this setting, we \emph{\textbf{assume}} that $\cH$ is \emph{\underline{\textbf{a class of functions that are not ``too large"}}}, i.e. \emph{\textbf{its expressive power is limited}} so that inference from finite number of samples is possible. 
-
-%The path of \emph{\textbf{discriminative learning}} suggests one focus on \emph{\textbf{learning the function relationship}} between sample and label. 
-
-
-%The learning task in \emph{\textbf{derministic scenario}} is to \emph{\textbf{approximate}} $c \in \cC$ with $g \in \cH \subset \cC$ given samples $\cD$. The \emph{\textbf{function approximator}} $g$ should be ``\emph{\textbf{close}}" to the unknown $c$ \emph{under the unknown distribution} $P_{X}$.
-
-%The theorectial analysis concerns that under \emph{\textbf{the worst case scenario}}, if it is possible for a function $g$ in function class $\cH$ to approximate $c$ so that the generation error approaches to zero.
-
-
 \end{enumerate}
 \end{remark}
 
@@ -697,7 +744,7 @@ In stochastic scenario, following the proposition above, we have two \emph{\text
 
 \item  A \underline{\emph{\textbf{deterministic model}}} $h: \cX \rightarrow \cY$ is a function (hypothesis) in $\cH$ from input to output. The task of learner is to find $h \in \cH$ so that the generalization error is minimized; 
 
-In \emph{probabilistic graphical models} and \emph{Bayesian learning}, e.g. \citep{koller2009probabilistic, murphy2012machine}, a deterministic model is interpreted as an \emph{\textbf{estimate}} $\widehat{\cP}(Y| X=x)$ of $\cP(Y| X=x)$, \emph{the conditional distribution} of $Y$ given the observations $X=x$, so that  
+In \emph{probabilistic graphical models} and \emph{Bayesian learning}, e.g. \citep{koller2009probabilistic, murphy2012machine}, a deterministic model is interpreted as an estimate $\widehat{\cP}(Y| X=x)$ of $\cP(Y| X=x)$, the conditional distribution of $Y$ given the observations $X=x$, so that  
 \begin{align*}
 h(x) &= \ind{\widehat{\cP}(Y=1| X=x)>1/2}\\
 &=  \ind{\E{\widehat{\cP}(y|x)}{y\big|\,X=x}>1/2}
@@ -708,85 +755,15 @@ h^{*}(x)&= \ind{\eta(x)>1/2}\\
 \end{align*} $\cP(Y| X=x)$ is easier to estimate than $\cP_{X,Y}$ since $Y$ is of lower dimensionality.
 \end{itemize}
 \end{definition}
+
+\item \begin{remark}: (\emph{\textbf{Statistical Decision}}) \citep{berger2013statistical}\\
+The \emph{statistical learning theory} is closely related to the \emph{statistical decision theory} in which the terms such as  \emph{(Empirical) Risk/Utility}, \emph{decision function} are used as an alternative to the terms like \emph{(Empirical) Error}, \emph{hypothesis/classifier}. 
+\end{remark}
 \end{itemize}
 
-%\item \begin{remark} (\emph{\textbf{Learning in Deterministic} vs. \textbf{Stochastic}})
-
-%\end{remark}
 
 
 
-
-
-%\subsection{Alternative Distance Measures}
-%\begin{itemize}
-%\item \begin{remark} (\emph{\textbf{Surrogate Estimation of Generalization Error}})\\
-%\emph{The empirical error estimator} is not efficient to estimate \emph{the generalization error}. In practice, there are many other ways to approximate the generalization error
-%\end{remark}
-%
-%\item  \begin{definition}
-%The \emph{\textbf{$f$-divergence}} between two density functions $p= d\lambda/d\mu,\; q= d\nu/d\mu$ w.r.t. measure $\mu$ is %the conditional distribution (density) $p_{0}(x)= p(x| Y=0)$ and $p_{1}(x)= p(x| Y=1)$ as 
-%\begin{align*}
-%\divg{f}{p}{q} &= \int q(x) f\paren{\frac{p(x)}{q(x)}}\mu(dx)\\
-%&=  \sup\limits_{\srA = \set{A_{i}}_{i\in I}}\sum_{i}\nu(A_{i})f\paren{\frac{\lambda(A_{i})}{\nu(A_{i})}}
-%\end{align*} where $f: [0,+\infty) \rightarrow [-\infty, +\infty]$ is convex with $f(1)=0$. 
-% \end{definition}
-% \begin{definition}
-%As a special case, when $f = \abs{x-1}$, the \emph{total variation} btw two measures $\lambda$ and $\nu$ dominated by $\mu$ is defined as 
-%\begin{align*}
-%V(p, q) &= \sup\limits_{\srA = \set{A_{i}}_{i\in I}}\sum_{i}\abs{\lambda(A_{i})- \nu(A_{i})}\\
-%&= 2\sup\limits_{A\in \cB}\abs{\lambda(A)- \nu(A)}\\
-%&= \int\abs{p(x)- q(x)}\mu(dx)
-%\end{align*} where  $\srA$ is a finite measureable partition of $\cX$.
-% \end{definition}
-%
-%
-%Then the Bayes risk under equal probable prior $p(Y=1)=1/2$ is 
-%\begin{align}
-%L^{*} &= \frac{1}{2}\paren{1- \frac{1}{2}V(p_{0}, p_{1}) } \label{expr:  Bayes_err_4}
-%\end{align}
-%where $p_{0}$ and $p_{1}$ are conditional distribution of $X$ given $\set{Y=0}$ and $\set{Y=1}$, respectively.  \\[10pt]
-%
-%\item  \begin{definition}
-%Given the function $\eta(X) = \cP\set{Y=1| X}$, define $F$ is a concave function on $[0,1]$, then the \emph{F-error} corresponding to $(X,Y)$ is
-%\begin{align*}
-%d_{F}(X,Y) &= \E{p(X)}{F\paren{\eta(X)}}.
-%\end{align*}
-% \end{definition}
-%
-%\item For example, 
-%\begin{enumerate}
-%\item the Bayes error $L^{*}: F(x)= \min\set{x, 1-x}$; 
-%\item the Bhattacharyya coefficient: $F(x)= \frac{1}{2}\sqrt{x(1-x)}$;
-%\item the expected binary cross entropy: $F(x)= -x\log x - (1-x)\log (1-x) $\\ 
-%\end{enumerate}
-%
-%\item $d_{F}(X,Y)= F\paren{\frac{1}{2}}- \divg{f}{p_{0}}{p_{1}}$, where
-%\begin{align*}
-%f(x) &= -\frac{1}{2}F\paren{\frac{x}{1+x}}(1+x) + F\paren{\frac{1}{2}}.
-%\end{align*}
-%
-%
-%\item \begin{proposition} \citep{devroye2013probabilistic}\\
-%Let $T: \bR^{d} \rightarrow \bR^{d}$ be an arbitrary measureable function. Then for any distribution of $(X,Y)$, the F-error increases after transformation, i.e.,
-%\begin{align*}
-%d_{F}(X,Y) &\le d_{F}(T(X),Y).
-%\end{align*}
-%\end{proposition}
-%\begin{proof}
-%Let $\eta_{T}: \bR^{d}\rightarrow [0,1]$ by $\eta_{T}(t) =\cP\set{Y=1| T(X)=t}$, and observe that 
-%\begin{align*}
-%\eta_{T}(T(X)) &= \E{}{\eta(X)| T(X)}.
-%\end{align*}
-%Thus
-%\begin{align*}
-% d_{F}(T(X),Y)&= \E{p(X)}{F\paren{\eta_{T}(T(X)) }}\\
-% &= \E{p(X)}{F\paren{\E{}{\eta(X)| T(X)}}}\\
-% &\ge \E{p(X)}{\E{}{F\paren{\eta(X)}| T(X)}}\quad (\text{Jenson's inequality})\\
-% &= \E{p(X)}{ F\paren{\eta(X)} } = d_{F}(X,Y). \qed
-%\end{align*}
-%\end{proof}
-%\end{itemize}
 
 \newpage
 \bibliographystyle{plainnat}
