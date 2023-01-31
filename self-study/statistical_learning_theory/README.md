@@ -31,8 +31,9 @@
     - Data, Loss, Hypothesis Class
     - Deterministic and Stochastic Scenario
     - Generalization Error
+    - Empirical Risk Minimization
     - Bayes Error
-  - Empirical Risk
+    - Approximation Error, Estimation Error and Bias-Complexity Tradeoff
   - Consistency, Universal Consistency
   - No-Free-Lunch Theorem
 
