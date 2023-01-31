@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  30 JAN 2023 11:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  30 JAN 2023 20:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -701,30 +701,24 @@ File: est_app_error.png Graphic file (type png)
 Package pdftex.def Info: est_app_error.png used on input line 396.
 (pdftex.def)             Requested size: 273.01933pt x 253.44626pt.
 
-[9] [10 <./est_app_error.png>] [11] [12] [13]
-Overfull \hbox (20.07982pt too wide) in paragraph at lines 617--618
-[]\OT1/cmr/bx/it/10.95 For ev-ery fixed $\OML/cmm/m/it/10.95 n$ $[]$ \OT1/cmr/b
-x/it/10.95 where the clas-si-fier is $[]$\OT1/cmr/m/n/10.95 .
- []
-
-[14]
+[9] [10 <./est_app_error.png>] [11] [12] [13] [14] [15]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [15]
-Overfull \hbox (1.49397pt too wide) in paragraph at lines 680--681
+ [16]
+Overfull \hbox (1.49397pt too wide) in paragraph at lines 736--737
 []\OT1/cmr/m/n/10.95 In this set-ting, we \OT1/cmr/bx/it/10.95 as-sume \OT1/cmr
 /m/n/10.95 that $\OMS/cmsy/m/n/10.95 H$ \OT1/cmr/m/n/10.95 is $[]$,
  []
 
-[16] (./SL_lecture1_Fundamentals.bbl) [17] (./SL_lecture1_Fundamentals.aux) ) 
+[17] (./SL_lecture1_Fundamentals.bbl) [18] (./SL_lecture1_Fundamentals.aux) ) 
 Here is how much of TeX's memory you used:
- 15915 strings out of 493029
- 315106 string characters out of 6136233
- 368808 words of memory out of 5000000
- 19119 multiletter control sequences out of 15000+600000
+ 15921 strings out of 493029
+ 315277 string characters out of 6136233
+ 368919 words of memory out of 5000000
+ 19125 multiletter control sequences out of 15000+600000
  15030 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,16n,84p,870b,447s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,18n,84p,870b,447s stack positions out of 5000i,500n,10000p,200000b,80000s
 </
 usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/te
@@ -743,13 +737,14 @@ sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/rsfs/rsfs10.pfb>
-Output written on SL_lecture1_Fundamentals.pdf (17 pages, 329928 bytes).
+type1/public/amsfonts/cm/cmti8.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/rsfs/rsfs10.pfb>
+Output written on SL_lecture1_Fundamentals.pdf (18 pages, 346608 bytes).
 PDF statistics:
- 148 PDF objects out of 1000 (max. 8388607)
- 105 compressed objects within 2 object streams
+ 155 PDF objects out of 1000 (max. 8388607)
+ 110 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
