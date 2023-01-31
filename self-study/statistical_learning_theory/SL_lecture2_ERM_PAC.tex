@@ -227,7 +227,7 @@ for all distributions $\cP$ over $\cX \times \cY$, the following holds for any s
 %\end{align} where the infimum is with respect to \emph{all measureable function} $g: \cX \rightarrow \cY$. And the \emph{hypothesis} $g^{*}$ such that $L(h^{*})= L^{*}$ is called the \underline{\emph{\textbf{Bayes classifier}}}.
 %\end{definition}
 
-\item \begin{remark} (\emph{\textbf{Agnostic PAC-Learning $\Leftarrow$ Uniformly Control of the Estimation Error}})\\
+\item \begin{remark} (\emph{\textbf{Bounding Excess Risk via Uniformly Deviation}})\\
 The difference between \emph{the error of a hypothesis} $h \in \cH$ and \emph{the Bayes error} can be decomposed as:
 \begin{align*}
 L(h) - L^{*} &=\underbrace{\paren{L(h) - \inf_{h \in \cH}L(h)}}_{\text{\emph{estimation error}}} + \underbrace{\paren{\inf_{h \in \cH}L(h) - L^{*}}}_{\text{\emph{approximation error}}}.
@@ -245,14 +245,18 @@ L(h_n) - \inf_{h \in \cH}L(h) &= L(h_n) - \widehat{L}(h_n) + \widehat{L}(h_n) - 
 \end{itemize}
 \end{remark} 
 
-\item \begin{remark}
-From the inequality \eqref{ineqn: excess_risk_bound}, we see that \emph{the excess risk} is \emph{\textbf{uniformly bounded}} by the deviation of generation error from the training error.
+\item \begin{remark} (\textbf{\emph{Empirical Process}}) \\
+From the inequality \eqref{ineqn: excess_risk_bound}, we see that \emph{\textbf{the excess risk}} (estimation error) is \emph{\textbf{uniformly bounded}} by the deviation of generation error from the training error.
 \begin{align*}
 \sup_{h\in \cH}\abs{\widehat{L}(h) - L(h)} := \norm{\widehat{\cP}_n - \cP}{\cH}
 \end{align*}
 \begin{definition} (\textbf{\emph{Glivenko-Cantelli Class}}) \citep{wainwright2019high, gine2021mathematical}\\
 We say that $\cH$ is a \underline{\textit{\textbf{Glivenko–Cantelli class}}} for $\cP$ if $\|\widehat{\cP}_n - \cP\|_{\cH}$ converges to zero in probability as $n \to \infty$.
 \end{definition}
+We can define \emph{\textbf{an empirical process}} $X_{f_h}$ indexed by $\cF$ as
+\begin{align*}
+X_{f_h} := \frac{1}{n}\sum_{i=1}^{n}f_h(X_i) - \E{}{f_h(X)}
+\end{align*} where $f_h(x) = \ind{h(x) \neq c(x)} \in \cF$.
 \end{remark}
 
 \end{itemize}
