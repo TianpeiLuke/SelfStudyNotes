@@ -47,6 +47,7 @@
   - Agnostic PAC Learning
     - Definitions
     - Uniform Convergence
+  - PAC Learning vs. Universal Consistency
   
 
 - Radmatcher Complexity and VC-Dimension [pdf](./SL_lecture3_VC_Dimension.pdf)
