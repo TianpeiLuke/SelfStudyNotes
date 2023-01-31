@@ -26,7 +26,7 @@
 
 ### Statistical Learning Theory
 
-- Basic Concepts of Statistical Learning
+- Basic Concepts of Statistical Learning [pdf](./SL_lecture1_Fundamentals.pdf)
   - Concepts, Definitions and Assumptions
     - Data, Loss, Hypothesis Class
     - Deterministic and Stochastic Scenario
@@ -39,7 +39,7 @@
   - No-Free-Lunch Theorem
   - Development Paths of Learning Algorithms
 
-- Probably Approximately Correct (PAC) Learning 
+- Probably Approximately Correct (PAC) Learning [pdf](./SL_lecture2_ERM_PAC.pdf)
   - PAC Learning
     - Definitions
     - Generalization Bound for Finite Hypothesis Class
@@ -48,13 +48,13 @@
     - Uniform Convergence
   
 
-- Radmatcher Complexity and VC-Dimension
+- Radmatcher Complexity and VC-Dimension [pdf](./SL_lecture3_VC_Dimension.pdf)
   - Radmatcher Complexity
   - VC-Dimension
   - Growth Number, Sauer's Lemma
   - Generalization Bound via Radmatcher Complexity, Growth Number and VC-Dimension
 
-- Non-Uniform Learning and Structural Risk Minimization
+- Non-Uniform Learning and Structural Risk Minimization [pdf](./SL_lecture4_Nonuniform_PAC.pdf)
   - Non-Uniform Learning
   - Characterization of Non-Uniform Learning
   - Strctural Risk Minimization
