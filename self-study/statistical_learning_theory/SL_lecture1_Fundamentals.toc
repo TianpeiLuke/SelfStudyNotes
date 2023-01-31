@@ -10,5 +10,5 @@
 \contentsline {subsection}{\numberline {1.9}Realizability Assumptions}{11}
 \contentsline {section}{\numberline {2}Asymptotic Analysis of Learning Algorithm}{12}
 \contentsline {subsection}{\numberline {2.1}Consistency Definitions}{13}
-\contentsline {subsection}{\numberline {2.2}No Free Lunch}{15}
-\contentsline {section}{\numberline {3}Development Paths of Learning Algorithms}{16}
+\contentsline {section}{\numberline {3}No Free Lunch Theorems}{15}
+\contentsline {section}{\numberline {4}Development Paths of Learning Algorithms}{16}
