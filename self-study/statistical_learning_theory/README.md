@@ -62,7 +62,7 @@
   - Minimal Description Length
 
 ### Machine Learning Models
-- k-Nearest Neighbor
+- k-Nearest Neighbor [pdf](./AL_kNN.pdf)
   - The Classification Rule
   - Asymptotic Analysis
     - Asymptotic Convergence of K-Nearest Neigbhor Distance 
@@ -72,7 +72,7 @@
     - Generalization Bounds for k-NN Rules
     - Curse of Dimensionality  
 
-- Reproducing Kernel Hilbert Space
+- Reproducing Kernel Hilbert Space [pdf](./AL_reproducing_kernel.pdf)
   - Reproducing Kernel Hilbert Space
     - Definition vis Evaluation Functional
     - Construction via Positive Definite Kernel
