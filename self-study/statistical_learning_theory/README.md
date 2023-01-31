@@ -28,6 +28,7 @@
 
 - Basic Concepts of Statistical Learning [pdf](./SL_lecture1_Fundamentals.pdf)
   - Concepts, Definitions and Assumptions
+    - Categories of Machine Learning Fields 
     - Data, Loss, Hypothesis Class
     - Deterministic and Stochastic Scenario
     - Generalization Error
