@@ -75,7 +75,7 @@
 
 - Reproducing Kernel Hilbert Space [pdf](./AL_reproducing_kernel.pdf)
   - Reproducing Kernel Hilbert Space
-    - Definition vis Evaluation Functional
+    - Definition via Evaluation Functional
     - Construction via Positive Definite Kernel
     - Construction via Kernel Integral Operator
     - Construction via Feature Map
