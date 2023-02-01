@@ -171,7 +171,66 @@ M = \bigcup_{h \in \cH_B}\set{\cD_n \sim \cP^n:  \widehat{L}(h) = 0}
 \end{align*} Setting the right-hand side to be equal to $\delta$ and solving for $\epsilon$ concludes the proof. \qed
 \end{proof}
 
+\begin{figure}
+\begin{minipage}[t]{1\linewidth}
+  \centering
+  \centerline{\includegraphics[scale = 0.6]{conjunction_boolean_literals.png}}
+\end{minipage}
+\caption{\footnotesize{\textbf{Algorithm to find concept behind the conjunction of boolean literals under realizability assumption \citep{mohri2018foundations}}}}
+\label{fig: conjunction_boolean_literals}
+\end{figure}
+
+
 \item \begin{example}(\emph{\textbf{Conjunction of Boolean Literals}}) \citep{mohri2018foundations}\\
+Consider learning the concept class $\cC_n$ of \underline{\emph{\textbf{conjunctions of at most $n$ Boolean literals}}} $x_1 \xdotx{,} x_n$. \underline{\emph{\textbf{A Boolean literal}}} is either a variable $x_i, i \in [1, n]$, or its \emph{negation} $\neg x_i$. For $n = 4$, an example is the conjunction: $x_1 \land \neg x_2 \land x_4$, where $\neg x_2$ denotes the negation of the Boolean literal $x_2$.  $(1, 0, 0, 1)$ is a \emph{positive example} for this concept ($1 \land \neg 0 \land 1 = 1$) while $(1, 0, 0, 0)$ is a \emph{negative} example ($1 \land \neg 0 \land 0 = 0 $).
+
+\begin{remark}[\textit{\textbf{Algorithm}}] For each \emph{\textbf{positive example}} $(b_1 \xdotx{,} b_n)$and $i \in [1, n]$, if $b_i = 1$ then $\neg x_i$ is \emph{\textbf{ruled out}} as a possible literal in the concept class and if $b_i = 0$ then $x_i$ is ruled out. The conjunction of all the literals \emph{\textbf{not ruled out}} is thus \emph{a hypothesis \textbf{consistent with the target}}. 
+\end{remark}
+
+Figure \ref{fig: conjunction_boolean_literals} shows an example when $n = 6$. Each of the first six rows of the table represents a \emph{training example} with
+its label, $+$ or $-$, indicated in the last column. The last row contains $0$ (respectively $1$) in column $i \in [1, 6]$ if the $i$-th entry is $0$ (respectively $1$) for all the positive examples. It contains ``?" if both $0$ and $1$ appear as an $i$-th entry for some positive example. Thus, for this training sample, the hypothesis returned by the consistent algorithm described in the text is $\neg x_1 \land x_2 \land x_5 \land x_6$.
+
+We have $\abs{\cH} = \abs{\cC_n} = 3^n$, since each literal can be included \emph{positively}, \emph{with negation}, or \emph{not included}. Using the result of PAC Learning with realizability assumption, we see that for any $\epsilon > 0, \delta >0$, 
+\begin{align*}
+n \ge  \frac{1}{\epsilon}\log\paren{\frac{\abs{\cH}}{\delta}} =  \frac{1}{\epsilon}\paren{n\log3 - \log\delta} 
+\end{align*} Thus, \emph{\textbf{the class of conjunctions of at most $n$ Boolean literals}} is \emph{\textbf{PAC-learnable}}. Note that the computational complexity is also polynomial, since the training cost per example is in $\cO(n)$
+\end{example}
+
+
+
+\item \begin{example}(\emph{\textbf{k-term DNF Formulae}})  \citep{mohri2018foundations}\\
+A \underline{\emph{\textbf{disjunctive normal form (DNF) formula}}} is a formula written as \textit{the \textbf{disjunction} of
+several terms}, \emph{each term} being \emph{a conjunction of Boolean literals}. \underline{\emph{\textbf{A $k$-term DNF}}} is a \emph{DNF formula} defined by \emph{the disjunction of $k$ terms}, each term being \emph{a conjunction of at most $n$ Boolean literals}. Thus, for $k = 2$ and $n = 3$, an example of a $k$-term DNF is $(x_1 \land \neg x_2 \land x_3) \lor (x_1 \land x_3)$.
+
+The cardinality of the class is $3^{nk}$, since \emph{each term} is a conjunction of at most $n$ variables and there are $3^n$ such conjunctions, as seen previously. 
+
+Is the class $\cC$ of \emph{$k$-term DNF formulae} is \emph{\textbf{PAC-learnable}}? The hypothesis set $\cH$ must contain $\cC$ for realizability assumption to hold, thus $\abs{\cH} \ge 3^{nk}$. The generalization bound gives the sample complexity as 
+\begin{align*}
+n \ge   \frac{1}{\epsilon}\paren{nk \log3 - \log\delta} 
+\end{align*} which is \emph{\textbf{polynomial}}. \textbf{\emph{However}}, it can be shown that \emph{the problem of learning $k$-term DNF is in \underline{\textbf{RP}}}, \emph{the complexity class of problems} that \emph{\textbf{admit a \underline{randomized polynomial-time} decision solution}}. The problem is therefore \emph{\textbf{computationally intractable} unless $\text{RP }= \text{ NP}$}, which is commonly conjectured not to be the case. Thus,
+while the\emph{ sample size needed for learning $k$-term DNF formulae is only polynomial}, \emph{\textbf{efficient PAC-learning} of this class is \textbf{not possible} unless $\text{RP }= \text{ NP}$}.
+\end{example}
+
+
+\item \begin{example}(\emph{\textbf{k-CNF Formulae}})  \citep{mohri2018foundations}\\
+A \underline{\emph{\textbf{conjunctive normal form (CNF) formula}}} is a \emph{\textbf{conjunction of disjunctions}}. A \underline{\emph{\textbf{$k$-CNF formula}}} is an \textit{expression} of the \textit{form} $T_1 \xdotx{\land} T_j$ with arbitrary length $j \in \bN$ and with each term $T_i$ being a \emph{disjunction of at most $k$ Boolean attributes}.
+
+The problem of \emph{\textbf{learning}} \emph{\textbf{$k$-CNF formulae}} can be \emph{reduced} to that of \emph{\textbf{learning}} \emph{\textbf{conjunctions of Boolean literals}}, which, as seen previously, is a \emph{PAC-learnable concept class}.  To do so, it suffices to \emph{\textbf{associate to each term $T_i$ a new variable}}.
+Then, this can be done with the following bijection:
+\begin{align*}
+a_i(x_1) \xdotx{\land} a_i(x_n) \rightarrow Y_{a_i(x_1) \xdotx{,} a_i(x_n)}
+\end{align*} where $a_i(x_j)$ denotes the assignment to $x_j$ in term $T_i$. Thus, \emph{\textbf{the PAC-learnability} of conjunctions of Boolean literals} implies
+that of \emph{$k$-CNF formulae}.
+
+This is a surprising result, however, since \emph{any \textbf{$k$-term DNF formula} can be written as a \textbf{$k$-CNF formula}}. 
+\begin{align*}
+\bigvee_{i=1}^k a_i(x_1) \xdotx{\land} a_i(x_n) &= \bigwedge_{i_1 \xdotx{,} i_k = 1}^{n}a_i(x_{i_1}) \xdotx{\land} a_k(x_{i_k}). 
+\end{align*} But, as we previously saw, \emph{$k$-term DNF formula} are \emph{not efficiently PAC-learnable}. 
+
+What can explain this apparent inconsistency? Observe that \emph{\textbf{the number of new variables}} needed to write a \emph{$k$-term DNF} as a \emph{$k$-CNF  formula} via the transformation just described is \emph{\textbf{exponential in $k$}}, it is in $\cO(n^k)$. The discrepancy comes from \emph{\textbf{the size
+of the representation} of a concept}.  A \emph{$k$-term DNF formula} can be an \emph{\textbf{exponentially more compact representation}}, and \emph{efficient PAC-learning is \textbf{intractable}} if a \emph{time-complexity polynomial} in that size is required.
+
+Thus, this apparent paradox deals with \emph{\textbf{key aspects of PAC-learning}}, which include \emph{\textbf{\underline{the cost of the representation}} of a concept} and the \emph{choice of the hypothesis set.}
 \end{example}
 \end{itemize}
 
@@ -203,7 +262,6 @@ Let $\cH$ be the class of \textbf{thresholds} as defined earlier. Then, $\cH$ is
 m_{\cH}(\epsilon, \delta) \le \ceil{\log\paren{\frac{2/\delta}{\epsilon}}}.
 \end{align*}
 \end{lemma}
-
 \end{example}
 \end{itemize}
 
@@ -306,7 +364,7 @@ If we drop the  realizability assumption, the task becomes to find a solution th
 \end{remark}
 
 
-\item To prove the general case, we use a bound from \emph{Hoeffding's inequality}:
+\item To prove the general case, we use a bound from \emph{\textbf{Hoeffding's inequality}}:
 \begin{proposition}
 Fix $\epsilon > 0$ and let $\cD_{n}$ denote an i.i.d. sample of size $n$. Then, for any hypothesis $h: \cX \to \set{0, 1}$, the following inequalities hold:
 \begin{align}
@@ -320,7 +378,7 @@ By the union bound, this implies the following two-sided inequality:
 \end{proposition}
 Setting the right-hand side of \eqref{eqn: hoeffding_binary_bound_union} to be equal to $\delta$ and solving for $\epsilon$ yields immediately the following bound for \emph{a single hypothesis}
 
-\begin{corollary} (\textbf{Generalization bound for Single Hypothesis})  \citep{mohri2018foundations}\\
+\begin{corollary} \label{coro: generalization_bound_fixed_h} (\textbf{Generalization bound for Single Hypothesis})  \citep{mohri2018foundations}\\
 Fix a hypothesis $h: \cX \to \set{0, 1}$. Then, for any $\delta > 0$, the following inequality holds with probability at least $1 - \delta$:
 \begin{align}
  L(h) \le  \widehat{L}(h) + \sqrt{\frac{\log\frac{2}{\delta}}{2n}}  \label{eqn: pac_one_hypothesis}
@@ -336,6 +394,13 @@ Let $\cH$ be a \textbf{finite} set of functions mapping from $\cX$ to $\cY$.  Th
  L(h) \le  \widehat{L}(h) + O\paren{\sqrt{\frac{\log\abs{\cH}}{m}}}  \label{eqn: pac_finite_case_consistency_bigO}
 \end{align}
 \end{proposition}
+\begin{proof}
+Let $h_1 \xdotx{,} h_{\abs{\cH}}$ be the elements of $\cH$. Using the union bound and applying Corollary \ref{coro: generalization_bound_fixed_h} to each hypothesis yield:
+\begin{align*}
+\cP^n\set{\cD_n: \exists h\in \cH,  \abs{L(h) - \widehat{L}_{\cD_n}(h)} > \epsilon } &\le \sum_{h \in \cH}\cP^n\set{\abs{L(h) - \widehat{L}_{\cD_n}(h)} > \epsilon}\\
+&\le 2\abs{\cH} \exp\paren{-2n\epsilon^2} 
+\end{align*} Setting the right-hand side to be equal to $\delta$ completes the proof. \qed
+\end{proof}
 
 \item \begin{remark} (\emph{\textbf{Sample Efficiency $\Leftarrow$ Representation Efficiency of Hypothesis Class}})\\
 As already pointed out, $\log\abs{\cH}$ can be interpreted as \emph{\textbf{the number of bits} needed to \textbf{represent} $\cH$}. Several other remarks similar to those made on the generalization bound in the consistent case can be made here: 
@@ -344,14 +409,6 @@ As already pointed out, $\log\abs{\cH}$ can be interpreted as \emph{\textbf{the 
 
 But, here, the bound is a less favorable function of $\log\abs{\cH}/m$; it varies as \emph{\textbf{the square root} of this term}. This is not a minor price to pay: for a \emph{fixed} $\abs{\cH}$, to attain the \emph{same guarantee} as \emph{in the \textbf{consistent case}}, \emph{a \textbf{quadratically larger} \textbf{labeled} sample is needed}.
 \end{remark}
-
-
-
-\item \begin{example}(\emph{\textbf{k-term DNF Formulae}})  \citep{mohri2018foundations}\\
-\end{example}
-
-\item \begin{example}(\emph{\textbf{k-CNF Formulae}})  \citep{mohri2018foundations}\\
-\end{example}
 \end{itemize}
 
 \section{PAC Learning vs. Universal Consistency}
