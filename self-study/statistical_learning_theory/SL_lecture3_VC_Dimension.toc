@@ -2,8 +2,8 @@
 \contentsline {section}{\numberline {2}Rademacher complexity}{2}
 \contentsline {section}{\numberline {3}VC-Dimension}{5}
 \contentsline {subsection}{\numberline {3.1}Definition of VC-Dimension}{5}
-\contentsline {subsection}{\numberline {3.2}Growth Function}{6}
+\contentsline {subsection}{\numberline {3.2}Growth Function}{7}
 \contentsline {subsection}{\numberline {3.3}Relate Growth Function to Radmatcher Complexity}{8}
 \contentsline {subsection}{\numberline {3.4}Generalization Bounds via Growth Function and VC-Dimension}{9}
-\contentsline {subsection}{\numberline {3.5}Examples}{9}
-\contentsline {subsection}{\numberline {3.6}Lower Bounds}{9}
+\contentsline {subsection}{\numberline {3.5}Examples}{10}
+\contentsline {subsection}{\numberline {3.6}Lower Bounds}{10}

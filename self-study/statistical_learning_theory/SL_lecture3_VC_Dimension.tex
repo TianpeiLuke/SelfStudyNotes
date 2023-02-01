@@ -34,6 +34,20 @@
 \newpage
 \section{PAC Learnability for Infinite Hypothese Set}
 \begin{itemize}
+\item \begin{remark} (\emph{\textbf{Bounding Excess Risk via Uniform Deviation}})\\
+\item The definition of \emph{\textbf{agnostic PAC learnability}} requires that \emph{\textbf{the excess risk}} would be \underline{\emph{bounded above} \emph{\textbf{uniformly} over \textbf{all distributions}}}.
+\begin{align}
+L(h_n) - \inf_{h \in \cH}L(h) &= L(h_n) - \widehat{L}(h_n) + \widehat{L}(h_n) - L(h^{*}) \nonumber\\
+&\le  L(h_n) - \widehat{L}(h_n) +\widehat{L}(h^{*}) - L(h^{*}) \nonumber\\
+&\le  2 \sup_{h\in \cH}\abs{L(h) - \widehat{L}(h)} \label{ineqn: excess_risk_bound}
+\end{align} where $h^{*} = \argmin_{h\in \cH}L(h)$ and $\widehat{L}(h)$ is the training error of $g$. The second last inequality is due to the fac that $h_n$ minimizes the training error.  Thus \emph{the estimation error} can be bounded uniformly by \emph{the generalization error bound} $|L(h) - \widehat{L}(h)|$ for any $h \in \cH$.
+
+In this chapter, we discuss various ways to bound the uniform deviation:
+\begin{align*}
+\sup_{h\in \cH}\abs{\widehat{L}(h) - L(h)} := \norm{\widehat{\cP}_n - \cP}{\cH}
+\end{align*}
+\end{remark} 
+
 \item \begin{remark} (\emph{\textbf{Universal Consistency for Infinite Hypothesis Set}})\\
 When $\abs{\cH} < \infty$, we can use sample complexity bounds that involve $\log \abs{\cH}$ for \emph{universal consistency} of ERM. Obviously, we cannod do so when $\abs{\cH} = \infty$. A general idea of analyzing infinite hypothesis set consists of \emph{\textbf{reducing the infinite case to the analysis of finite sets of hypotheses}} and then proceed as in the previous chapter. 
 
@@ -47,12 +61,12 @@ There are different techniques for that reduction, each relying on \emph{a diffe
 We will continue to use $\cH$ to denote a \emph{hypothesis set} as in the previous chapters, and $h \in \cH$ an \emph{element} of $\cH$. Many of the results of this section are general and hold for an arbitrary \emph{loss function} $L: \cY \times \cY \to \bR$. To each $h: \cX \to \cY$, we can associate a function $g$:
 \begin{align*}
 g: (x, y) \in \cX \times \cY \to L(h(x), y)
-\end{align*} without explicitly describing the specific loss $L$ used. In what follows $\cG$ will generally be interpreted as \emph{\textbf{the family of loss functions} associated to $\cH$}.
+\end{align*} without explicitly describing the specific loss $L$ used. In what follows $\cG$ will generally be interpreted as \emph{\textbf{the family of loss functions} associated to $\cH$}. 
 \end{remark}
 
 
 \item \begin{definition} (\emph{\textbf{Empirical Rademacher Complexity}})\\
-Let $\cG$ be a family of functions mapping from $\cZ$ to $[a, b]$ and $\cD_{m} = (z_1 \xdotx{,} z_m)$ a fixed \emph{sample} of size $m$ with elements in $\cZ$. Then, \underline{\emph{\textbf{the empirical Rademacher complexity}}} of $\cG$ \emph{with respect to the sample $\cD$} is defined as:
+Let $\cG$ be a family of functions mapping from $\cZ := \cX \times \cY$ to $[a, b]$ and $\cD_{n} = (z_1 \xdotx{,} z_n)$ a fixed \emph{sample} of size $n$ with elements in $\cZ$. Then, \underline{\emph{\textbf{the empirical Rademacher complexity}}} of $\cG$ \emph{with respect to the sample $\cD$} is defined as:
 \begin{align}
 \widehat{\mathfrak{R}}_{\cD}(\cG)&= \E{\sigma}{\sup_{g \in \cG}\frac{1}{m}\sum_{i=1}^{m}\sigma_{i}g(z_i)}   \label{eqn: rademacher_complexity}
 \end{align}
@@ -60,15 +74,15 @@ where $\sigma := (\sigma_1 \xdotx{,} \sigma_m)$, with $\sigma_i$s \textbf{\emph{
 \end{definition}
 
 \item \begin{remark} (\emph{\textbf{How Well to Fit Random Noise}})\\
-\emph{The Rademacher complexity} captures the richness of a family of functions by measuring \emph{\textbf{the degree} to which \textbf{a hypothesis set} can \textbf{fit random noise}}. The \emph{richer or more complex families} $\cG$ can generate \emph{more vectors} $g_{\cD}$ and thus \emph{better correlate with random noise}, on $\cD_m$.
+\emph{The Rademacher complexity} captures the richness of a family of functions by measuring \emph{\textbf{the degree} to which \textbf{a hypothesis set} can \textbf{fit random noise}}. The \emph{richer or more complex families} $\cH$ can generate \emph{more vectors} $h_{\cD}$ and thus \emph{better correlate with random noise}, on $\cD_n$.
 
 The intuition is that if a hypothesis set can fit arbitrary noise, then it is too large to bound the performance of ERM, i.e. it is very likely to have overfitting (zero empirical error but arbitrary bad generalization error).
 \end{remark}
 
 \item \begin{remark}
 \begin{align*}
-\widehat{\mathfrak{R}}_{\cD}(\cG)&= \E{\sigma}{\sup_{g \in \cG}\frac{\inn{\sigma_m}{g_{\cD_m}}}{m}}
-\end{align*} which measures the correlation between the random noise $\sigma_m := \set{\sigma_i}$ and $g_{\cD_m} := \set{g(Z_i)}_{i=1}^{m}$. The supremum $\sup_{g \in \cG} \inn{\sigma_m}{g_{\cD_m}}/m$ is a measure of how well the function class $\cG$ correlates with $\sigma$ over the sample $\cD_m$. Thus, \emph{\textbf{the empirical Rademacher complexity}} measures \emph{on average} how well \emph{\textbf{the function class}} $\cG$ \emph{\textbf{correlates with random noise}} on $\cD_m$. 
+\widehat{\mathfrak{R}}_{\cD}(\cG)&= \E{\sigma}{\sup_{g \in \cG}\frac{\inn{\sigma_n}{g_{\cD_n}}}{n}}
+\end{align*} which measures the correlation between the random noise $\sigma_m := \set{\sigma_i}$ and $g_{\cD_n} := \set{g(X_i, Y_i)}_{i=1}^{n}$. The supremum $\sup_{g \in \cG} \inn{\sigma_n}{g_{\cD_n}}/n$ is a measure of how well the function class $\cH$ correlates with $\sigma$ over the sample $\cD_n$. Thus, \emph{\textbf{the empirical Rademacher complexity}} measures \emph{on average} how well \emph{\textbf{the function class}} $\cH$ \emph{\textbf{correlates with random noise}} on $\cD_n$. 
 \end{remark}
 
 \item \begin{remark} (\emph{\textbf{Rademacher Variables $=$ Symmetric Bernoulli Random Variable}})\\
@@ -79,44 +93,42 @@ The intuition is that if a hypothesis set can fit arbitrary noise, then it is to
 
 
 \item \begin{definition} (\emph{\textbf{Rademacher Complexity}})\\
-Let $\cP_{X, Y}$ denote the distribution according to which samples $\cD_m = \{(X_i, Y_i), 1\le i\le m\}$ are drawn, $\cH \subset \cC$ be a hypthesis class where $h \in \cH$ is a function from $\cX$ to $\cY$,  $\cG$ be a family of loss functions associated to $\cH$. 
-
-For any integer $m \ge 1$, \underline{\emph{\textbf{the Rademacher complexity}}} of $\cG$ is defined as the \emph{expectation} of \emph{the empirical
-Rademacher complexity} over \emph{all samples of size $m$} drawn according to $\cP_{X, Y}$:
+Let $\cP$ denote the distribution according to which samples are drawn. For any integer $n \ge 1$, \underline{\emph{\textbf{the Rademacher complexity}}} of $\cG$ is defined as the \emph{expectation} of \emph{the empirical
+Rademacher complexity} over \emph{all samples of size $n$} drawn according to $\cP$:
 \begin{align*}
-\frR_{m}(\cG) &= \E{\cP_{X,Y}^{m}}{\widehat{\mathfrak{R}}_{\cD_m}(\cG)}.
+\frR_{n}(\cG) &= \E{\cP^{n}}{\widehat{\mathfrak{R}}_{\cD_n}(\cG)}.
 \end{align*}
 \end{definition}
 
 \item \begin{proposition} (\textbf{Consistency Bound with respect to Rademacher Complexity}) \citep{mohri2018foundations}\\
 Let $\cG$ be a family of functions mapping from $\cZ$ to $[0, 1]$. Then, for any $\delta > 0$, \textbf{with probability at least} $1 - \delta$, each of the following holds for all $g \in \cG$:
 \begin{align}
-\E{}{g(Z)} &\le \frac{1}{m}\sum_{i=1}^{m}g(Z_i) + 2 \frR_{m}(\cG)  + \sqrt{\frac{\log(1 / \delta)}{2m}} \label{eqn: radmatcher_bound_1}
+\E{}{g(Z)} &\le \frac{1}{n}\sum_{i=1}^{n}g(Z_i) + 2 \frR_{n}(\cG)  + \sqrt{\frac{\log(1 / \delta)}{2n}} \label{eqn: radmatcher_bound_1}
 \end{align}
 and
 \begin{align}
-\E{}{g(Z)} &\le \frac{1}{m}\sum_{i=1}^{m}g(Z_i) + 2 \widehat{\mathfrak{R}}_{\cD_m}(\cG) + 3\sqrt{\frac{\log(2 / \delta)}{2m}} \label{eqn: radmatcher_bound_2}
+\E{}{g(Z)} &\le \frac{1}{n}\sum_{i=1}^{n}g(Z_i) + 2 \widehat{\mathfrak{R}}_{n}(\cG) + 3\sqrt{\frac{\log(2 / \delta)}{2n}} \label{eqn: radmatcher_bound_2}
 \end{align}
 \end{proposition}
 
 \item \begin{remark} 
-Define a function $\Phi$ on $\cD_m$ by
+Define a function $\Phi$ on $\cD_n$ by
 \begin{align*}
-\Phi(\cD_m) &:= \sup_{g \in \cG}\set{\E{}{g(Z)} - \Em{\cD_{m}}{g(Z)}},
-\end{align*} where $\Em{\cD_{m}}{g(Z)} = \frac{1}{m}\sum_{i=1}^{m}g(Z_i)$. This function has \emph{bounded difference} if \emph{only one sample makes changes}. The proof consists of three parts:
+\Phi(\cD_n) &:= \sup_{g \in \cG}\abs{\frac{1}{n}\sum_{i=1}^{n}g(Z_i) - \E{}{g(Z)}}.
+\end{align*}This function has \emph{bounded difference} if \emph{only one sample makes changes}. The proof consists of three parts:
 \begin{enumerate}
 \item Bound \emph{the probability} of \emph{tail event} of $\Phi$
 \begin{align*}
-\Phi(\cD_m) - \E{\cP_{Z}^{m}}{\Phi(\cD_m)}
+\Phi(\cD_n) - \E{\cP^{n}}{\Phi(\cD_n)}
 \end{align*}
-\item Bound the expectation $\E{\cP_{Z}^{m}}{\Phi(\cD_m)}$ by \emph{Radmatcher complexity on $\cG$}
+\item Bound the expectation $\E{\cP^{n}}{\Phi(\cD_n)}$ by \emph{Radmatcher complexity on $\cG$}
 \begin{align*}
-\E{\cP_{Z}^{m}}{\Phi(\cD_m)} &\le 2   \frR_{m}(\cG).
+\E{\cP^{n}}{\Phi(\cD_n)} &\le 2   \frR_{n}(\cG).
 \end{align*} This obtain the inequality \eqref{eqn: radmatcher_bound_1}.
 
 \item Bound \emph{the probability} of \emph{tail events} for \emph{empircal Radmatcher complexity}:
 \begin{align*}
-\frR_{m}(\cG)  - \widehat{\mathfrak{R}}_{\cD_m}(\cG)
+\frR_{n}(\cG)  - \widehat{\mathfrak{R}}_{\cD_n}(\cG)
 \end{align*}
 \end{enumerate}
 Combines the difference in (1) and (3) using union bounds. 
@@ -127,29 +139,29 @@ Let $\cH$ be a family of functions taking values in $\{-1, +1\}$ and let $\cG$ b
 \begin{align*}
 \cG := \set{(x,y) \mapsto \mathds{1}_{h(x) \neq y}:  h \in \cH}.
 \end{align*}
-For any sample $\cD = ((X_1, Y_1) \xdotx{,} (X_m, Y_m))$ of elements in $\cX \times \{-1, +1\}$, let $\cD_{\cX} := (X_1 \xdotx{,} X_m)$. Then, the following relation holds between \textbf{the empirical Rademacher complexities} of $\cG$ and $\cH$:
+For any sample $\cD = ((X_1, Y_1) \xdotx{,} (X_n, Y_n))$ of elements in $\cX \times \{-1, +1\}$, let $\cD_{\cX} := (X_1 \xdotx{,} X_n)$. Then, the following relation holds between \textbf{the empirical Rademacher complexities} of $\cG$ and $\cH$:
 \begin{align*}
 \widehat{\frR}_{\cD}(\cG) &\le \frac{1}{2}\widehat{\frR}_{\cD_{\cX}}(\cH)
 \end{align*}
 \end{lemma}
 
 \item \begin{proposition} \label{prop: generalization_bound_radmatcher} (\textbf{Rademacher Complexity Generalization Bounds})\citep{mohri2018foundations}\\
-Let $\cH$ be a family of functions taking values in $\{-1, +1\}$  and let $\cP_{X}$ be the distribution over the input space $\cX$. Then, for any $\delta > 0$, \textbf{with probability at least} $1 - \delta$ over a sample $\cD_{m}$ of size $m$ drawn according to $\cP_{X}$, each of the following holds for \textbf{any} $h \in \cH$:
+Let $\cH$ be a family of functions taking values in $\{-1, +1\}$  and let $\cP_{X}$ be the distribution over the input space $\cX$. Then, for any $\delta > 0$, \textbf{with probability at least} $1 - \delta$ over a sample $\cD_{n}$ of size $n$ drawn according to $\cP_{X}$, each of the following holds for \textbf{any} $h \in \cH$:
 \begin{align}
-L(h) &\le \widehat{L}_{m}(h) + \frR_{m}(\cH) + \sqrt{\frac{\log(1 / \delta)}{2m}}  \label{eqn: radmatcher_binary_loss_bound_1}
+L(h) &\le \widehat{L}_{n}(h) + \frR_{n}(\cH) + \sqrt{\frac{\log(1 / \delta)}{2n}}  \label{eqn: radmatcher_binary_loss_bound_1}
 \end{align} and
 \begin{align}
-L(h) &\le \widehat{L}_{m}(h) + \widehat{\frR}_{\cD_{m}}(\cH) +  3\sqrt{\frac{\log(2 / \delta)}{2m}}.  \label{eqn: radmatcher_binary_loss_bound_2}
+L(h) &\le \widehat{L}_{n}(h) + \widehat{\frR}_{\cD_{n}}(\cH) +  3\sqrt{\frac{\log(2 / \delta)}{2n}}.  \label{eqn: radmatcher_binary_loss_bound_2}
 \end{align}
 \end{proposition}
 
 \item \begin{remark} (\emph{\textbf{Compute Emipirical Radmatcher Complexity}})\\
 Note that the Radmatcher variable $\sigma_i$ and $-\sigma_i$ have the same distribution. So
 \begin{align*}
-\widehat{\frR}_{\cD}(\cH)&= \E{\sigma}{\sup_{h \in \cH}\frac{1}{m}\sum_{i=1}^{m}(-\sigma_{i}h(X_i))} = -\E{\sigma}{\inf_{h \in \cH}\frac{1}{m}\sum_{i=1}^{m}\sigma_{i}h(X_i)}
+\widehat{\frR}_{\cD}(\cH)&= \E{\sigma}{\sup_{h \in \cH}\frac{1}{n}\sum_{i=1}^{n}(-\sigma_{i}h(X_i))} = -\E{\sigma}{\inf_{h \in \cH}\frac{1}{n}\sum_{i=1}^{n}\sigma_{i}h(X_i)}
 \end{align*} Now, for \emph{a fixed value of $\sigma$}, computing 
 \begin{align*}
-\inf_{h \in \cH}\frac{1}{m}\sum_{i=1}^{m}\sigma_{i}h(X_i)
+\inf_{h \in \cH}\frac{1}{n}\sum_{i=1}^{n}\sigma_{i}h(X_i)
 \end{align*} is equivalent to an \emph{\textbf{empirical risk minimization problem}}, which is known to be \emph{\textbf{computationally hard}} for some hypothesis sets. Thus, in some cases, computing $\widehat{\frR}_{\cD}(\cH)$ could be computationally hard. 
 \end{remark}
 \end{itemize}
@@ -175,11 +187,11 @@ When considering \emph{PAC learnability of a hypothesis class $\cH$}, the advers
 \end{remark}
 
 \item \begin{definition} (\emph{\textbf{Restriction of $\cH$ to $\cD$}}). \\
-Let $\cH$ be a class of functions from $\cX$ to $\set{0,1}$ and let $\cD = \set{x_1 \xdotx{,} x_m} \subset \cX$. 
+Let $\cH$ be a class of functions from $\cX$ to $\set{0,1}$ and let $\cD = \set{x_1 \xdotx{,} x_n} \subset \cX$. 
 
 \underline{\emph{\textbf{The restriction of $\cH$ to $\cD$}}} is \emph{the set of functions} from $\cD$ to $\set{0,1}$ that can be \emph{derived from} $\cH$. That is,
 \begin{align*}
-\cH_{\cD} := \set{(h(x_1) \xdotx{,} h(x_m)): h \in \cH},
+\cH_{\cD} := \set{(h(x_1) \xdotx{,} h(x_n)): h \in \cH},
 \end{align*}
 where we \emph{\textbf{represent}} each function from $\cX$ to $\set{0,1}$ as a \emph{\textbf{vector}} in $\set{0,1}^{\abs{\cD}}$.
 \end{definition}
@@ -205,14 +217,14 @@ Whenever some set $\cD$ is \emph{\textbf{shattered}} by $\cH$, the \emph{\textbf
 
 \item The following is the corollary of \emph{the No Free Lunch Theorem}:
 \begin{corollary} \citep{shalev2014understanding}\\
-Let $\cH$ be a hypothesis class of functions from $\cX$ to $\set{0,1}$. Let $m$ be a training set size. Assume that there exists a set $\cD \subset X$ of size $2m$ that is \textbf{shattered} by $\cH$. Then, for any learning algorithm, $\cA$, there exist a \textbf{distribution} $\cP$ over $\cX \times \set{0,1}$
+Let $\cH$ be a hypothesis class of functions from $\cX$ to $\set{0,1}$. Let $n$ be a training set size. Assume that there exists a set $\cD \subset X$ of size $2n$ that is \textbf{shattered} by $\cH$. Then, for any learning algorithm, $\cA$, there exist a \textbf{distribution} $\cP$ over $\cX \times \set{0,1}$
 and a predictor $h \in \cH$ such that 
 \begin{align*}
 L_{\cP}(h) = 0
 \end{align*}
-but \textbf{with probability of at least} $1/7$ over the choice of $\cS \sim \cP^m$ we have that 
+but \textbf{with probability of at least} $1/7$ over the choice of $\cD \sim \cP^n$ we have that 
 \begin{align*}
-L_{\cP}(\cA(\cS)) \ge 1/8.
+L_{\cP}(\cA(\cD)) \ge 1/8.
 \end{align*}
 \end{corollary}
 
@@ -241,29 +253,29 @@ Let $\cH$ be a class of \textbf{infinite VC-dimension}. Then, $\cH$ is \textbf{n
 \subsection{Growth Function}
 \begin{itemize}
 \item \begin{remark}
-We defined the notion of \emph{\textbf{shattering}}, by considering \emph{\textbf{the restriction of $\cH$} to a finite set of instances}. The \emph{growth function} measures the \emph{maximal ``\textbf{effective}" size of $\cH$ on a set of $m$ examples}. Formally:
+We defined the notion of \emph{\textbf{shattering}}, by considering \emph{\textbf{the restriction of $\cH$} to a finite set of instances}. The \emph{growth function} measures the \emph{maximal ``\textbf{effective}" size of $\cH$ on a set of $n$ examples}. Formally:
 \end{remark}
 
 \item \begin{definition} (\emph{\textbf{Growth Function}}). \\
 Let $\cH$ be a hypothesis class. Then \underline{\emph{\textbf{the growth function of $\cH$}}}, denoted $\tau_{\cH}: \bN \to \cN$, is defined as
 \begin{align*}
-\tau_{\cH}(m) &:= \max_{\cD \subset \cX: \abs{\cD} = m}\abs{\cH_{\cD}}.
+\tau_{\cH}(m) &:= \max_{\cD \subset \cX: \abs{\cD} = n}\abs{\cH_{\cD}}.
 \end{align*}
-In words, $\tau_{\cH}(m)$ is \textbf{\emph{the number of different functions}} from a set $\cD$ of \emph{\textbf{size $m$}} to $\set{0,1}$ that can be obtained by \emph{\textbf{restricting $\cH$ to $\cD$}}.
+In words, $\tau_{\cH}(m)$ is \textbf{\emph{the number of different functions}} from a set $\cD$ of \emph{\textbf{size $n$}} to $\set{0,1}$ that can be obtained by \emph{\textbf{restricting $\cH$ to $\cD$}}.
 \end{definition}
 
 \item \begin{remark}
-if $VCdim(\cH) = d$ then for any $m \le d$ we have $\tau_{\cH}(m) = 2^m$. In such cases, $\cH$ induces \emph{all possible functions from} $\cD$ to $\set{0,1}$. 
+if $VCdim(\cH) = d$ then for any $n \le d$ we have $\tau_{\cH}(n) = 2^n$. In such cases, $\cH$ induces \emph{all possible functions from} $\cD$ to $\set{0,1}$. 
 \end{remark}
 
 \item \begin{lemma} (\textbf{Sauer's Lemma}). \citep{shalev2014understanding, mohri2018foundations}\\
-Let $\cH$ be a hypothesis class with $VCdim(\cH) \le d < \infty$. Then, for all $m$, 
+Let $\cH$ be a hypothesis class with $VCdim(\cH) \le d < \infty$. Then, for all $n$, 
 \begin{align}
-\tau_{\cH}(m) &\le \sum_{i=0}^{d}{{m}\choose{i}} \label{eqn: sauer_lemma_1}
+\tau_{\cH}(n) &\le \sum_{i=0}^{d}{{n}\choose{i}} \label{eqn: sauer_lemma_1}
 \end{align}
-In particular, if $m > d + 1$ then
+In particular, if $n > d + 1$ then
 \begin{align}
-\tau_{\cH}(m) &\le \paren{\frac{e\,m}{d}}^{d}. \label{eqn: sauer_lemma_2}
+\tau_{\cH}(n) &\le \paren{\frac{e\,n}{d}}^{d}. \label{eqn: sauer_lemma_2}
 \end{align}
 \end{lemma}
 \begin{proof}
@@ -273,24 +285,24 @@ To prove the lemma it suffices to prove the following \emph{stronger claim}: For
 \end{align} The reason why Equation \eqref{eqn: sauer_lemma_3} is sufficient to prove the lemma is that if
 $VCdim(\cH) \le d$ then no set whose size is \emph{larger than} $d$ is \emph{shattered} by $\cH$ and therefore
 \begin{align*}
-\abs{\set{\cB \subseteq \cD: \cH\text{ shatters }\cB}} \le  \sum_{i=0}^{d}{{m}\choose{i}}.
+\abs{\set{\cB \subseteq \cD: \cH\text{ shatters }\cB}} \le  \sum_{i=0}^{d}{{n}\choose{i}}.
 \end{align*}
-When $m > d + 1$ the right-hand side of the preceding is \emph{at most} $\paren{\frac{e\,m}{d}}^{d}$.
+When $n > d + 1$ the right-hand side of the preceding is \emph{at most} $\paren{\frac{e\,n}{d}}^{d}$.
 
 We are left with proving Equation \eqref{eqn: sauer_lemma_3} and we do it using an \emph{\textbf{inductive argument}}. 
 \begin{enumerate}
-\item For $m = 1$, no matter what $\cH$ is, either both sides of Equation \eqref{eqn: sauer_lemma_3} equal $1$ or both sides equal $2$ (\emph{the empty set} is always considered to be shattered by $\cH$).
+\item For $n = 1$, no matter what $\cH$ is, either both sides of Equation \eqref{eqn: sauer_lemma_3} equal $1$ or both sides equal $2$ (\emph{the empty set} is always considered to be shattered by $\cH$).
 
-\item  \emph{Assume} Equation \eqref{eqn: sauer_lemma_3} holds for sets of size $k < m$ and let us prove it for sets of size $m$. 
+\item  \emph{Assume} Equation \eqref{eqn: sauer_lemma_3} holds for sets of size $k < n$ and let us prove it for sets of size $m$. 
 
-Fix $\cH$ and $\cD = \set{x_1 \xdotx{,} x_m}$. Denote $\cD_{-1} = \set{x_2 \xdotx{,} x_m}$ and in addition, define the
+Fix $\cH$ and $\cD = \set{x_1 \xdotx{,} x_n}$. Denote $\cD_{-1} = \set{x_2 \xdotx{,} x_n}$ and in addition, define the
 following two sets:
 \begin{align*}
-Y_{0} = \set{(y_2 \xdotx{,} y_m): (0, y_2 \xdotx{,} y_m) \in \cH_{\cD} \lor  (1, y_2 \xdotx{,} y_m) \in \cH_{\cD}},
+Y_{0} = \set{(y_2 \xdotx{,} y_n): (0, y_2 \xdotx{,} y_n) \in \cH_{\cD} \lor  (1, y_2 \xdotx{,} y_n) \in \cH_{\cD}},
 \end{align*}
 and
 \begin{align*}
-Y_{1} = \set{(y_2 \xdotx{,} y_m): (0, y_2 \xdotx{,} y_m) \in \cH_{\cD} \land  (1, y_2 \xdotx{,} y_m) \in \cH_{\cD}}.
+Y_{1} = \set{(y_2 \xdotx{,} y_n): (0, y_2 \xdotx{,} y_n) \in \cH_{\cD} \land  (1, y_2 \xdotx{,} y_n) \in \cH_{\cD}}.
 \end{align*}
 It is easy to verify that $\abs{\cH_{\cD}} = \abs{Y_0} + \abs{Y_1}$. Additionally, since $Y_0 = \cH_{\cD_{-1}}$, using \emph{the induction assumption} (applied on $\cH$ and $\cD_{-1}$) we have that
 \begin{align*}
@@ -299,7 +311,7 @@ It is easy to verify that $\abs{\cH_{\cD}} = \abs{Y_0} + \abs{Y_1}$. Additionall
 \end{align*}
 Next, define $\cH' \subseteq \cH$ to be
 \begin{align*}
-\cH'  &= \set{h \in \cH : \exists\,h' \in \cH\text{ s.t. }(1 - h'(x_1), h'(x_2) \xdotx{,} h'(x_m)) = (h(x_1), h(x_2)  \xdotx{,} h(x_m)) },
+\cH'  &= \set{h \in \cH : \exists\,h' \in \cH\text{ s.t. }(1 - h'(x_1), h'(x_2) \xdotx{,} h'(x_n)) = (h(x_1), h(x_2)  \xdotx{,} h(x_n)) },
 \end{align*}
 namely, $\cH'$ contains pairs of hypotheses $(h, h')$ that \emph{agree on $\cD_{-1}$ and differ on $x_1$}. Using this definition, it is clear that if $\cH'$ \emph{shatters} a set $\cB \subseteq \cD$ then it \emph{also shatters} the set $\cB \cup \set{x_1}$ and \emph{vice versa}. 
 
@@ -323,28 +335,28 @@ which concludes our proof. \qed
 \subsection{Relate Growth Function to Radmatcher Complexity}
 \begin{itemize}
 \item \begin{lemma}(\textbf{Massart's Lemma}) \citep{mohri2018foundations}\\
-Let $A \subseteq \bR^m$ be a finite set, with $r = \max_{x \in A}\norm{x}{2}$, then the following holds:
+Let $A \subseteq \bR^n$ be \textbf{a finite set}, with $r = \max_{x \in A}\norm{x}{2}$, then the following holds:
 \begin{align}
-\E{\sigma}{\frac{1}{m}\sup_{x \in A}\sum_{i=1}^{m}\sigma_i\,x_i} \le \frac{r\sqrt{2 \log\abs{A}}}{m} \label{eqn: massart_lemma}
+\E{\sigma}{\frac{1}{n}\sup_{x \in A}\sum_{i=1}^{n}\sigma_i\,x_i} \le \frac{r\sqrt{2 \log\abs{A}}}{n} \label{eqn: massart_lemma}
 \end{align}
-where $\sigma_i$'s are \textbf{independent uniform random variables} taking values in $\set{-1, +1}$ and $x_1 \xdotx{,} x_m$ are the components of vector $x$.
+where $\sigma_i$'s are \textbf{independent uniform random variables} taking values in $\set{-1, +1}$ and $x_1 \xdotx{,} x_n$ are the components of vector $x$.
 \end{lemma}
 
 \item \begin{corollary} \label{cor: radmatcher_growth} (\textbf{Radmatcher Complexity Bounds by Growth Number}) \citep{mohri2018foundations}\\
 Let $\cH$ be a family of functions taking values in $\set{-1, +1}$. Then the following holds:
 \begin{align}
-\frR_{m}(\cH) &\le \sqrt{\frac{2 \log \tau_{\cH}(m)}{m}} \label{eqn: growth_number_radmatcher_comp}
+\frR_{n}(\cH) &\le \sqrt{\frac{2 \log \tau_{\cH}(n)}{n}} \label{eqn: growth_number_radmatcher_comp}
 \end{align}
 \end{corollary}
 \begin{proof}
-For a fixed sample $\cD = (x_1 \xdotx{,} x_m)$, we denote by $\cH_{\cD} \subset \{-1, +1\}^{m}$ the set of vectors of function values $(h(x_1) \xdotx{,} h(x_m))$ where $h$ is in $\cH$. Since $h\in \cH$ takes values in $\set{-1, +1}$, the \emph{norm} of these vectors is bounded by $\sqrt{m}$. We can then apply
+For a fixed sample $\cD = (x_1 \xdotx{,} x_n)$, we denote by $\cH_{\cD} \subset \{-1, +1\}^{m}$ the set of vectors of function values $(h(x_1) \xdotx{,} h(x_n))$ where $h$ is in $\cH$. Since $h\in \cH$ takes values in $\set{-1, +1}$, the \emph{norm} of these vectors is bounded by $\sqrt{n}$. We can then apply
 \emph{Massart's lemma} as follows:
 \begin{align*}
-\frR_{m}(\cH) &= \E{\cD}{\E{\sigma}{\sup_{u \in \cH_{\cD}}\frac{1}{m}\sum_{i=1}^{m}\sigma_i u_i \Big| \cD}} \le  \E{\cD}{\frac{\sqrt{m}\,\sqrt{2 \log\abs{\cH_{\cD}}}}{m}}
+\frR_{n}(\cH) &= \E{\cD}{\E{\sigma}{\sup_{u \in \cH_{\cD}}\frac{1}{n}\sum_{i=1}^{n}\sigma_i u_i \Big| \cD}} \le  \E{\cD}{\frac{\sqrt{n}\,\sqrt{2 \log\abs{\cH_{\cD}}}}{n}}
 \end{align*}
 By definition, $\abs{\cH_{\cD}}$ is bounded by \emph{the growth function}, thus,
 \begin{align*}
-\frR_{m}(\cH)  &\le  \E{\cD}{\frac{\sqrt{m}\,\sqrt{2 \log \tau_{\cH}(m)}}{m}} = \sqrt{\frac{2 \log \tau_{\cH}(m)}{m}},
+\frR_{n}(\cH)  &\le  \E{\cD}{\frac{\sqrt{n}\,\sqrt{2 \log \tau_{\cH}(n)}}{n}} = \sqrt{\frac{2 \log \tau_{\cH}(n)}{n}},
 \end{align*}
 which concludes the proof. \qed
 \end{proof}
@@ -355,12 +367,12 @@ which concludes the proof. \qed
 \begin{corollary} \label{cor: generalization_bound_growth}   (\textbf{Growth Function Generalization Bound})  \citep{mohri2018foundations}\\
 Let $\cH$ be a family of functions taking values in $\set{-1, +1}$.  Then, for any $\delta > 0$, with probability at least $1 - \delta$, for any $h \in \cH$,
 \begin{align}
-L(h) \le \widehat{L}_{m}(h) + \sqrt{\frac{2 \log \tau_{\cH}(m)}{m}} +\sqrt{\frac{\log(1/\delta)}{2m}} \label{eqn: generalization_bound_growth_number}
+L(h) \le \widehat{L}_{n}(h) + \sqrt{\frac{2 \log \tau_{\cH}(n)}{n}} +\sqrt{\frac{\log(1/\delta)}{2n}} \label{eqn: generalization_bound_growth_number}
 \end{align}
 
 Growth function bounds can be also derived directly (without using Rademacher complexity bounds first). The resulting bound is then the following:
 \begin{align}
-\cP\set{\abs{L(h) - \widehat{L}_{m}(h)} > \epsilon }  \le 4\tau_{\cH}(2m)\;\exp\paren{-\frac{m\epsilon^2}{8}} \label{eqn: generalization_bound_growth_number_2}
+\cP\set{\abs{L(h) - \widehat{L}_{n}(h)} > \epsilon }  \le 4\tau_{\cH}(2n)\;\exp\paren{-\frac{n\epsilon^2}{8}} \label{eqn: generalization_bound_growth_number_2}
 \end{align}
 which only differs from \eqref{eqn: generalization_bound_growth_number} by constants.
 \end{corollary}
@@ -369,13 +381,13 @@ which only differs from \eqref{eqn: generalization_bound_growth_number} by const
 \begin{corollary} \label{cor: generalization_bound_vc} (\textbf{VC-Dimension Generalization Bounds}) \citep{mohri2018foundations}\\
 Let $\cH$ be a family of functions taking values in $\set{-1, +1}$ with \textbf{VC-dimension} $d$. Then, for any $\delta > 0$, with probability at least $1 - \delta$, the following holds for all $h \in \cH$:
 \begin{align}
-L(h) \le \widehat{L}_{m}(h) + \sqrt{\frac{2d \log(em /d)}{m}} +\sqrt{\frac{\log(1/\delta)}{2m}} \label{eqn: generalization_bound_vc_dim}
+L(h) \le \widehat{L}_{n}(h) + \sqrt{\frac{2d \log(en /d)}{n}} +\sqrt{\frac{\log(1/\delta)}{2n}} \label{eqn: generalization_bound_vc_dim}
 \end{align}
 Thus, the form of this generalization bound is
 \begin{align}
-L(h) \le \widehat{L}_{m}(h) + O\paren{\sqrt{\frac{\log(m /d)}{(m/d)}}},  \label{eqn: generalization_bound_vc_dim2}
+L(h) \le \widehat{L}_{n}(h) + O\paren{\sqrt{\frac{\log(n /d)}{(n/d)}}},  \label{eqn: generalization_bound_vc_dim2}
 \end{align}
-which emphasizes \textbf{the importance of the ratio $m/d$} for generalization. 
+which emphasizes \textbf{the importance of the ratio $n/d$} for generalization. 
 \end{corollary}
 
 \item \begin{remark}
@@ -383,7 +395,7 @@ The theorem provides another instance of \underline{\emph{\textbf{Occam's razor 
 
 \emph{VC-dimension bounds} can be derived directly \emph{without using an intermediate Rademacher complexity bound}: combining \emph{Sauer’s lemma} with \eqref{eqn: generalization_bound_growth_number_2} leads to the following high-probability bound
 \begin{align}
-L(h) \le \widehat{L}_{m}(h) + \sqrt{\frac{8d\log(2em /d) + 8\log(4/\delta)}{m}},  \label{eqn: generalization_bound_vc_dim3}
+L(h) \le \widehat{L}_{n}(h) + \sqrt{\frac{8d\log(2en /d) + 8\log(4/\delta)}{n}},  \label{eqn: generalization_bound_vc_dim3}
 \end{align}
 which has the general form of \eqref{eqn: generalization_bound_vc_dim2}. \emph{The log factor plays only a minor role in these bounds}. A finer analysis can be used in fact to eliminate that factor.
 \end{remark}
@@ -407,27 +419,27 @@ In the context of the following proofs,
 \end{enumerate}
 \end{remark}
 
-\item \begin{proposition} (\textbf{Lower Bound, Deterministic Case}) \citep{mohri2018foundations}\\
-Let $\cH$ be a hypothesis set with \textbf{VC-dimension} $d > 1$. Then, for \textbf{any} learning algorithm $\cA$, there \textbf{exist} a \textbf{distribution} $\cP$ over $\cX$ and a \textbf{target function} $f \in \cH$ such that
+\item \begin{proposition} (\textbf{Lower Bound, Realizable Case}) \citep{mohri2018foundations}\\
+Let $\cH$ be a hypothesis set with \textbf{VC-dimension} $d > 1$. Then, for \textbf{any} learning algorithm $\cA$, there \textbf{exist} a \textbf{distribution} $\cP$ over $\cX$ and a \textbf{target function} $c \in \cH$ such that
 \begin{align*}
-\cP_{\cD_m}\set{L_{\cP}(g_{m}, f) > \frac{d-1}{32 m}} \ge \frac{1}{100}
+\cP^n\set{L_{\cP, c}(\cA_{\cH}(\cD_n)) > \frac{d-1}{32 n}} \ge \frac{1}{100}
 \end{align*}
 \end{proposition}
 
 \item \begin{remark} (\emph{\textbf{Infinite VC-dimension $\Rightarrow$ Non PAC-learnable}})\\
 The theorem shows that for any algorithm $\cA$, there exists a `\emph{bad}' distribution over $\cX$ and a target function $f$ for which the error of the hypothesis returned by $\cA$ is
 \begin{align*}
-\Omega\paren{\frac{d}{m}}
+\Omega\paren{\frac{d}{n}}
 \end{align*} with some constant probability. This further demonstrates the key role played by the VC-dimension in learning. The result implies in particular that \emph{\textbf{PAC-learning in the non-realizable case} is \textbf{not possible} when the \textbf{VC-dimension} is \textbf{infinite}}.
 \end{remark}
 
-\item \begin{proposition} (\textbf{Lower Bound, Non-Realizable (Stochastic) Case}) \citep{mohri2018foundations} \\
+\item \begin{proposition} (\textbf{Lower Bound, Non-Realizable Case}) \citep{mohri2018foundations} \\
 Let $\cH$ be a hypothesis set with \textbf{VC-dimension} $d > 1$. Then, for any learning algorithm $\cA$, there exists a distribution $\cP$ over $\cX \times \set{0, 1}$ such that:
 \begin{align*}
-\cP_{\cD_m}\set{L_{\cP}(g_{m}(\cdot| \cD_m)) - \inf_{g \in \cH}L_{\cP}(g)  > \sqrt{\frac{d}{320 m}}} \ge \frac{1}{64}
+\cP^{n}\set{L_{\cP}(\cA_{\cH}(\cD_n)) - \inf_{h  \in \cH}L_{\cP}(h)  > \sqrt{\frac{d}{320 n}}} \ge \frac{1}{64}
 \end{align*} Equivalently, for any learning algorithm, \textbf{the sample complexity} verifies
 \begin{align*}
-m &\ge \frac{d}{320 \epsilon^2}.
+n &\ge \frac{d}{320 \epsilon^2}.
 \end{align*}
 \end{proposition}
 
@@ -435,7 +447,7 @@ m &\ge \frac{d}{320 \epsilon^2}.
 The theorem shows that \emph{for any algorithm} $\cA$, \emph{\textbf{in the non-realizable case}} (i.e. the Bayes classifier is not in $\cH$), there exists
 a `\emph{bad}' distribution over $\cX \times \set{0, 1}$ such that the error of the hypothesis returned by $\cA$ is
 \begin{align*}
-\Omega\paren{\sqrt{\frac{d}{m}}}
+\Omega\paren{\sqrt{\frac{d}{n}}}
 \end{align*} with some constant probability. The \emph{VC-dimension} appears as a critical quantity in learning in \emph{this general setting} as well. In particular, \emph{with an \textbf{infinite VC-dimension}, \textbf{agnostic PAC-learning is not possible}}.
 \end{remark}
 \end{itemize}
