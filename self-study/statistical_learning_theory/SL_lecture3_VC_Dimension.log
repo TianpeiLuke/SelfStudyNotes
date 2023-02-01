@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  31 JAN 2023 22:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  1 FEB 2023 11:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -674,52 +674,67 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 37.
+LaTeX Font Info:    Try loading font information for U+euf on input line 70.
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--38
-
- []
-
-LaTeX Font Info:    Try loading font information for U+euf on input line 72.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-LaTeX Font Info:    Try loading font information for U+dsrom on input line 72.
+LaTeX Font Info:    Try loading font information for U+dsrom on input line 70.
 
 (/usr/share/texlive/texmf-dist/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 ) [2]
-Overfull \hbox (8.17836pt too wide) in paragraph at lines 85--86
-\OT1/cmr/m/n/10.95 which mea-sures the cor-re-la-tion be-tween the ran-dom nois
-e $\OML/cmm/m/it/10.95 ^^[[] \OT1/cmr/m/n/10.95 := []$ and $\OML/cmm/m/it/10.95
- g[] \OT1/cmr/m/n/10.95 := [][]$.
+Overfull \hbox (6.24019pt too wide) in paragraph at lines 92--93
+\OT1/cmr/m/n/10.95 which mea-sures the \OT1/cmr/bx/it/10.95 cor-re-la-tion \OT1
+/cmr/m/n/10.95 be-tween \OT1/cmr/m/it/10.95 the ran-dom noise $\OML/cmm/m/it/10
+.95 ^^[[] \OT1/cmr/m/n/10.95 := []$ and $\OML/cmm/m/it/10.95 g[] \OMS/cmsy/m/n/
+10.95 ^^Q [][]$\OT1/cmr/m/n/10.95 .
  []
 
-[3]
-Overfull \hbox (7.73718pt too wide) in paragraph at lines 155--157
-[]\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Rademacher Com-plex-ity Gen-er-al-i
-za-tion Bounds\OT1/cmr/m/it/10.95 )[Mohri et al., 2018] 
+[3] [4] [5] [6] [7]
+Overfull \hbox (3.82013pt too wide) in paragraph at lines 296--298
+[]$ \OT1/cmr/m/n/10.95 of a hy-poth-e-sis class $\OMS/cmsy/m/n/10.95 H$\OT1/cmr
+/m/n/10.95 , de-noted $\OML/cmm/m/it/10.95 VCdim\OT1/cmr/m/n/10.95 (\OMS/cmsy/m
+/n/10.95 H\OT1/cmr/m/n/10.95 )$
  []
 
-[4] [5] [6]
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 282.
+(amsmath)                 on input line 330.
 
-[7] [8] [9]
+[8] [9]
+Missing character: There is no Ï in font cmr10!
+Missing character: There is no ƒ in font cmr10!
+ [10] [11]
 Missing character: There is no â in font cmti10!
 Missing character: There is no € in font cmti10!
 Missing character: There is no ™ in font cmti10!
- [10] [11] (./SL_lecture3_VC_Dimension.bbl) [12]
+
+Underfull \hbox (badness 10000) in paragraph at lines 489--490
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 492--493
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 495--496
+
+ []
+
+[12] [13] [14] (./SL_lecture3_VC_Dimension.bbl) [15]
 (./SL_lecture3_VC_Dimension.aux) ) 
 Here is how much of TeX's memory you used:
- 15909 strings out of 493029
- 315180 string characters out of 6136233
- 368788 words of memory out of 5000000
- 19112 multiletter control sequences out of 15000+600000
- 14413 words of font info for 57 fonts, out of 8000000 for 9000
+ 15920 strings out of 493029
+ 315364 string characters out of 6136233
+ 368856 words of memory out of 5000000
+ 19122 multiletter control sequences out of 15000+600000
+ 14853 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,18n,84p,552b,291s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,14n,84p,566b,341s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
@@ -735,14 +750,14 @@ type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
-i10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on SL_lecture3_VC_Dimension.pdf (12 pages, 262117 bytes).
+i10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsrom10.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+
+Output written on SL_lecture3_VC_Dimension.pdf (15 pages, 266587 bytes).
 PDF statistics:
- 126 PDF objects out of 1000 (max. 8388607)
- 91 compressed objects within 1 object stream
+ 132 PDF objects out of 1000 (max. 8388607)
+ 95 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

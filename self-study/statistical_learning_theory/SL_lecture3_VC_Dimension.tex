@@ -26,7 +26,7 @@
 
 
 \begin{document}
-\title{Lecture 3: Rademacher Complexity and VC-Dimension}
+\title{Lecture 3: Rademacher Complexity and Vapnik-Chervonenkis Dimension}
 \author{ Tianpei Xie}
 \date{ Dec. 18th., 2022 }
 \maketitle
@@ -35,11 +35,9 @@
 \section{PAC Learnability for Infinite Hypothese Set}
 \begin{itemize}
 \item \begin{remark} (\emph{\textbf{Bounding Excess Risk via Uniform Deviation}})\\
-\item The definition of \emph{\textbf{agnostic PAC learnability}} requires that \emph{\textbf{the excess risk}} would be \underline{\emph{bounded above} \emph{\textbf{uniformly} over \textbf{all distributions}}}.
+The definition of \emph{\textbf{agnostic PAC learnability}} requires that \emph{\textbf{the excess risk}} would be \underline{\emph{bounded above} \emph{\textbf{uniformly} over \textbf{all distributions}}}.
 \begin{align}
-L(h_n) - \inf_{h \in \cH}L(h) &= L(h_n) - \widehat{L}(h_n) + \widehat{L}(h_n) - L(h^{*}) \nonumber\\
-&\le  L(h_n) - \widehat{L}(h_n) +\widehat{L}(h^{*}) - L(h^{*}) \nonumber\\
-&\le  2 \sup_{h\in \cH}\abs{L(h) - \widehat{L}(h)} \label{ineqn: excess_risk_bound}
+L(h_n) - \inf_{h \in \cH}L(h)  &\le  2 \sup_{h\in \cH}\abs{L(h) - \widehat{L}(h)} \label{ineqn: excess_risk_bound}
 \end{align} where $h^{*} = \argmin_{h\in \cH}L(h)$ and $\widehat{L}(h)$ is the training error of $g$. The second last inequality is due to the fac that $h_n$ minimizes the training error.  Thus \emph{the estimation error} can be bounded uniformly by \emph{the generalization error bound} $|L(h) - \widehat{L}(h)|$ for any $h \in \cH$.
 
 In this chapter, we discuss various ways to bound the uniform deviation:
@@ -55,9 +53,9 @@ There are different techniques for that reduction, each relying on \emph{a diffe
 \end{remark}
 \end{itemize}
 
-\section{Rademacher complexity}
+\section{Rademacher Complexity}
 \begin{itemize}
-\item \begin{remark} (Notations)\\
+\item \begin{remark} (\emph{Notations})\\
 We will continue to use $\cH$ to denote a \emph{hypothesis set} as in the previous chapters, and $h \in \cH$ an \emph{element} of $\cH$. Many of the results of this section are general and hold for an arbitrary \emph{loss function} $L: \cY \times \cY \to \bR$. To each $h: \cX \to \cY$, we can associate a function $g$:
 \begin{align*}
 g: (x, y) \in \cX \times \cY \to L(h(x), y)
@@ -66,11 +64,20 @@ g: (x, y) \in \cX \times \cY \to L(h(x), y)
 
 
 \item \begin{definition} (\emph{\textbf{Empirical Rademacher Complexity}})\\
-Let $\cG$ be a family of functions mapping from $\cZ := \cX \times \cY$ to $[a, b]$ and $\cD_{n} = (z_1 \xdotx{,} z_n)$ a fixed \emph{sample} of size $n$ with elements in $\cZ$. Then, \underline{\emph{\textbf{the empirical Rademacher complexity}}} of $\cG$ \emph{with respect to the sample $\cD$} is defined as:
+Let $\cG$ be a family of functions mapping from $\cZ := \cX \times \cY$ to $[a, b]$ and $\cD = (z_1 \xdotx{,} z_n)$ a fixed \emph{sample} of size $n$ with elements in $\cZ$. Then, \underline{\emph{\textbf{the empirical Rademacher complexity}}} of $\cG$ \emph{with respect to the sample $\cD$} is defined as:
 \begin{align}
-\widehat{\mathfrak{R}}_{\cD}(\cG)&= \E{\sigma}{\sup_{g \in \cG}\frac{1}{m}\sum_{i=1}^{m}\sigma_{i}g(z_i)}   \label{eqn: rademacher_complexity}
+\widehat{\mathfrak{R}}_{\cD}(\cG)&= \E{\sigma}{\sup_{g \in \cG}\frac{1}{n}\sum_{i=1}^{n}\sigma_{i}g(z_i)}   \label{eqn: rademacher_complexity}
 \end{align}
-where $\sigma := (\sigma_1 \xdotx{,} \sigma_m)$, with $\sigma_i$s \textbf{\emph{independent uniform random variables}} taking values in $\set{-1, +1}$. The random variables $\sigma_i$ are called \underline{\emph{\textbf{Rademacher variables}}}.
+where $\sigma := (\sigma_1 \xdotx{,} \sigma_n)$ are  \textbf{\emph{independent uniform random variables}} taking values in $\set{-1, +1}$. The random variables $\sigma_i$ are called \underline{\emph{\textbf{Rademacher variables}}}.
+\end{definition}
+
+\item \begin{definition}(\emph{\textbf{Rademacher Random Variable} and \textbf{Rademacher Process}})\\
+\underline{\emph{A \textbf{Rademacher variables}}} is a \emph{\textbf{symmetric Bernoulli} random variable} on $\set{-1, +1}$ with \emph{equal probability} $P(\sigma_i = +1) = P(\sigma_i = -1)= \frac{1}{2}$.  \emph{A \textbf{Rademacher sequence}} $\sigma := (\sigma_1 \xdotx{,} \sigma_n)$ is seen as a \emph{uniform distribution} on binary hypercube $\set{-1, 1}^n$.
+
+\underline{\emph{\textbf{A Rademacher process}}} indexed by the function class $\cG$ is defined as
+\begin{align*}
+\frR_n &:= \sum_{i=1}^n\sigma_i \delta_{g(Z_i)},
+\end{align*} where $\sigma$ is a \emph{Rademacher sequence} and is independent from $Z$. It  is a \emph{\textbf{sub-gaussian} stochastic process}. $\set{\sigma_i g(Z_i)}$ \emph{\textbf{conditioning}} on $\set{Z_i}$ is a \emph{Rademacher process}.
 \end{definition}
 
 \item \begin{remark} (\emph{\textbf{How Well to Fit Random Noise}})\\
@@ -81,15 +88,11 @@ The intuition is that if a hypothesis set can fit arbitrary noise, then it is to
 
 \item \begin{remark}
 \begin{align*}
-\widehat{\mathfrak{R}}_{\cD}(\cG)&= \E{\sigma}{\sup_{g \in \cG}\frac{\inn{\sigma_n}{g_{\cD_n}}}{n}}
-\end{align*} which measures the correlation between the random noise $\sigma_m := \set{\sigma_i}$ and $g_{\cD_n} := \set{g(X_i, Y_i)}_{i=1}^{n}$. The supremum $\sup_{g \in \cG} \inn{\sigma_n}{g_{\cD_n}}/n$ is a measure of how well the function class $\cH$ correlates with $\sigma$ over the sample $\cD_n$. Thus, \emph{\textbf{the empirical Rademacher complexity}} measures \emph{on average} how well \emph{\textbf{the function class}} $\cH$ \emph{\textbf{correlates with random noise}} on $\cD_n$. 
+\widehat{\mathfrak{R}}_{n}(\cG)&= \E{\sigma}{\sup_{g \in \cG}\frac{\inn{\sigma_n}{g_{n}}}{n}}
+\end{align*} which measures the \emph{\textbf{correlation}} between \emph{the random noise} $\sigma_n := \set{\sigma_i}$ and $g_n \equiv  \set{g(X_i, Y_i)}_{i=1}^{n}$. The supremum $\sup_{g \in \cG} \inn{\sigma_n}{g_{n}}/n$ is a measure of how well the function class $\cH$ correlates with $\sigma$ over the sample $\cD_n$. Thus, \emph{\textbf{the empirical Rademacher complexity}} measures \emph{on average} how well \emph{\textbf{the function class}} $\cH$ \emph{\textbf{correlates with random noise}} on $\cD_n$. 
 \end{remark}
 
-\item \begin{remark} (\emph{\textbf{Rademacher Variables $=$ Symmetric Bernoulli Random Variable}})\\
-\emph{A Rademacher variables} is a \emph{random variable} on $\set{-1, +1}$ with \emph{\textbf{symmetric probability}} $P(\sigma_i = +1) = P(\sigma_i = -1)= \frac{1}{2}$, i.e. a set of i.i.d. symmetric Bernoulli random variables.
 
-\emph{A Rademacher proces}s is a stochastic process $\set{\sigma_i g(X_i)}$ conditioning on $\set{X_i}$, which is sub-gaussian process.
-\end{remark}
 
 
 \item \begin{definition} (\emph{\textbf{Rademacher Complexity}})\\
@@ -100,48 +103,93 @@ Rademacher complexity} over \emph{all samples of size $n$} drawn according to $\
 \end{align*}
 \end{definition}
 
-\item \begin{proposition} (\textbf{Consistency Bound with respect to Rademacher Complexity}) \citep{mohri2018foundations}\\
+\item \begin{proposition} (\textbf{Uniform Bound via Rademacher Complexity}) \citep{mohri2018foundations}\\
 Let $\cG$ be a family of functions mapping from $\cZ$ to $[0, 1]$. Then, for any $\delta > 0$, \textbf{with probability at least} $1 - \delta$, each of the following holds for all $g \in \cG$:
 \begin{align}
-\E{}{g(Z)} &\le \frac{1}{n}\sum_{i=1}^{n}g(Z_i) + 2 \frR_{n}(\cG)  + \sqrt{\frac{\log(1 / \delta)}{2n}} \label{eqn: radmatcher_bound_1}
+\E{}{g(Z)} &\le \frac{1}{n}\sum_{i=1}^{n}g(Z_i) + 2 \frR_{n}(\cG)  + \sqrt{\frac{\log(1 / \delta)}{2n}} \label{eqn: Rademacher_bound_1}
 \end{align}
 and
 \begin{align}
-\E{}{g(Z)} &\le \frac{1}{n}\sum_{i=1}^{n}g(Z_i) + 2 \widehat{\mathfrak{R}}_{n}(\cG) + 3\sqrt{\frac{\log(2 / \delta)}{2n}} \label{eqn: radmatcher_bound_2}
+\E{}{g(Z)} &\le \frac{1}{n}\sum_{i=1}^{n}g(Z_i) + 2 \widehat{\mathfrak{R}}_{n}(\cG) + 3\sqrt{\frac{\log(2 / \delta)}{2n}} \label{eqn: Rademacher_bound_2}
 \end{align}
 \end{proposition}
 
-\item \begin{remark} 
+\item \begin{proof}
 Define a function $\Phi$ on $\cD_n$ by
 \begin{align*}
-\Phi(\cD_n) &:= \sup_{g \in \cG}\abs{\frac{1}{n}\sum_{i=1}^{n}g(Z_i) - \E{}{g(Z)}}.
-\end{align*} Note that $\Phi(\cD_n)$ is a \emph{random variable}. This function has \emph{bounded difference} if \emph{only one sample makes changes}. The proof consists of three parts:
+\Phi(\cD_n) &:= \sup_{g \in \cG}\brac{\frac{1}{n}\sum_{i=1}^{n}g(Z_i) - \E{}{g(Z)}}.
+\end{align*} This function has \emph{bounded difference} if \emph{only one sample makes changes}. In particular, let $\cD_n \equiv (Z_1 \xdotx{,} Z_n)$ and $\widetilde{\cD}_n^{(i)} \equiv (Z_1 \xdotx{,} Z_{i-1}, Z_i', Z_{i+1} \xdotx{,} Z_n)$. Then
+\begin{align*}
+\abs{\Phi(\cD_n) - \Phi(\widetilde{\cD}_n^{(i)})} &\le \frac{1}{n}\sup_{g \in \cG}\abs{g(Z_i) - g(Z_i')} \le \frac{1}{n}.
+\end{align*}
+%Note that $\Phi(\cD_n)$ is a \emph{random variable} taking values in $[-1, 1]$. 
+The proof consists of three parts:
 \begin{enumerate}
-\item Bound \emph{the probability} of \emph{tail event} of $\Phi$
+\item Bound \emph{the probability} of \emph{\textbf{tail event of $\Phi$}} 
 \begin{align*}
 \Phi(\cD_n) - \E{\cP^{n}}{\Phi(\cD_n)}
-\end{align*}
-\item Bound the expectation $\E{\cP^{n}}{\Phi(\cD_n)}$ by \emph{Radmatcher complexity on $\cG$}
+\end{align*} This part follows from \emph{the bounded difference inequality}: for any $\delta > 0$, with probability at least $1 - \delta/2$, 
+\begin{align}
+\Phi(\cD_n) - \E{\cP^{n}}{\Phi(\cD_n)} \le \sqrt{\frac{\log(2/\delta)}{2n}} \label{pf: rad_comp_bound_1}
+\end{align}
+
+
+\item Bound the \emph{expectation} $\E{\cP^{n}}{\Phi(\cD_n)}$ by \emph{Rademacher complexity on $\cG$}
 \begin{align*}
 \E{\cP^{n}}{\Phi(\cD_n)} &\le 2   \frR_{n}(\cG).
-\end{align*} This obtain the inequality \eqref{eqn: radmatcher_bound_1}.
+\end{align*} Recall that $Z'  = (Z_1 \xdotx{,} Z_{i-1}, Z_i', Z_{i+1} \xdotx{,} Z_n)$ and $Z = (Z_1 \xdotx{,} Z_n)$. We know that $\E{Z'}{\frac{1}{n}\sum_{i=1}^{n}g(Z_i')} =  \E{}{g(Z)}$ since $Z'$ and $Z$ are independent identically distributed.
+\begin{align}
+\E{\cP^{n}}{\Phi(\cD_n)} &= \E{Z}{\sup_{g \in \cG}\brac{\frac{1}{n}\sum_{i=1}^{n}g(Z_i) - \E{}{g(Z)}}} \nonumber\\
+&= \E{Z}{\sup_{g \in \cG}\E{Z'}{ \frac{1}{n}\sum_{i=1}^{n}g(Z_i) - \frac{1}{n}\sum_{i=1}^{n}g(Z_i') }} \nonumber\\
+& \;\;(\text{Jenson's inequality and convexity of $\sup$}) \nonumber\\
+&\le \E{Z, Z'}{\sup_{g \in \cG}\brac{ \frac{1}{n}\sum_{i=1}^{n}g(Z_i) - \frac{1}{n}\sum_{i=1}^{n}g(Z_i') }} \nonumber\\
+& \;\; (\text{symmetrization}) \nonumber\\
+& =\E{Z, Z', \sigma}{\sup_{g \in \cG}\brac{\frac{1}{n}\sum_{i=1}^{n}\sigma_i\paren{g(Z_i) - g(Z_i')}}} \nonumber\\
+& \;\; (\text{sub-additivy of $\sup$}) \nonumber\\
+&\le \E{Z, \sigma}{\sup_{g \in \cG}\brac{\frac{1}{n}\sum_{i=1}^{n}\sigma_i g(Z_i) }}+ \E{Z', \sigma}{\sup_{g \in \cG}\brac{\frac{1}{n}\sum_{i=1}^{n}-\sigma_i g(Z_i')}} \nonumber\\
+&= 2 \E{Z, \sigma}{\sup_{g \in \cG}\brac{\frac{1}{n}\sum_{i=1}^{n}\sigma_i g(Z_i) }} := 2\frR_n(\cG) \label{pf: rad_comp_bound_2}
+\end{align}
+The \emph{\textbf{symmetrization step}} works since $\sigma_i = \pm 1$ with equal probability. If $\sigma_i = +1$, then the summand is unchanged. If $\sigma_i = -1$, the summand is swapped but the distribution  is unchanged as well since  $Z'$ and $Z$ are independent identically distributed.
+The last equality follows from the definition of Rademacher complexity and the fact that $\sigma_i$ and $-\sigma_i$ follow the same distribution since they are symmetric Bernoulli random variables. Finally, replacing $\E{\cP^{n}}{\Phi(\cD_n)}$ by its upper bound $2\frR_n(\cG)$ and $\delta/2 \to \delta$ gives us  inequality \eqref{eqn: Rademacher_bound_1}.
+Thus we show the
 
-\item Bound \emph{the probability} of \emph{tail events} for \emph{empircal Radmatcher complexity}:
+\item Bound \emph{the probability} of \emph{tail events} for \emph{empircal Rademacher complexity}:
 \begin{align*}
-\frR_{n}(\cG)  - \widehat{\mathfrak{R}}_{\cD_n}(\cG)
-\end{align*}
+\frR_{n}(\cG)  - \widehat{\mathfrak{R}}_{n}(\cG)
+\end{align*} In this part, we use \emph{the bounded difference inequality} again, noticing that \emph{the empirical Rademacher complexity} is function with bounded difference $1/n$. Therefore, 
+\begin{align}
+\frR_{n}(\cG)  &\le \widehat{\mathfrak{R}}_{n}(\cG) + \sqrt{\frac{\log(2/\delta)}{2n}} \label{pf: rad_comp_bound_3}
+\end{align}
+Finally, we combines the inequalities in \eqref{eqn: Rademacher_bound_1} and \eqref{pf: rad_comp_bound_3} using union bounds to obtain the final result. \qed
 \end{enumerate}
-Combines the difference in (1) and (3) using union bounds. 
-\end{remark}
+\end{proof} 
 
-\item \begin{remark}
+\item \begin{remark}(\textbf{\emph{Rademacher Complexity as Uniform Bound}}) \\
 The above proposition states that any positive integer $n \ge 1$ and any scalar $\delta \ge 0$, with probability at least $1 - \delta$, we have
 \begin{align*}
 \sup_{g \in \cG}\abs{\frac{1}{n}\sum_{i=1}^{n}g(Z_i)  - \E{}{g(Z)}} \le 2 \frR_{n}(\cG)  + \sqrt{\frac{\log(1 / \delta)}{2n}}
 \end{align*}
 \end{remark}
 
-\item \begin{lemma} (\textbf{Radmatcher Complexity for 0-1 Loss}) \citep{mohri2018foundations}\\
+\item \begin{remark}(\textbf{\emph{Symmetrization}}) \\
+The techinque that develops the uniform deviation bound via \emph{Rademacher complexity} is called \emph{\textbf{symmetrization}}. Consider \emph{\textbf{the empirical process}}
+\begin{align*}
+g \to \paren{\widehat{\cP}_n - \cP}g = \frac{1}{n}\sum_{i=1}^{n}(g(Z_i)  - \cP g)
+\end{align*} where $\cP g := \int g d\cP = \E{\cP}{g(Z)}$ is seen as an \emph{operator} on function (by identification of the measure and functional). The \emph{symmetrization} refer to the idea to replace \emph{the empirical process} with \emph{\textbf{a symmetrized process}}
+\begin{align*}
+g \to \widehat{\cP}_n^{\epsilon}g := \frac{1}{n}\sum_{i=1}^{n}\epsilon_i g(Z_i)
+\end{align*} where $\epsilon := (\epsilon_1 \xdotx{,} \epsilon_n)$ are \emph{\textbf{i.i.d. Rademacher random variables}} (symmetric Bernoulli random variable on $\set{-1, 1}$) and they are  \emph{\textbf{independent}} of $(Z_1 \xdotx{,} Z_n)$. The idea is that, for fixed $(Z_1 \xdotx{,} Z_n)$, the symmetrized empirical measure is a \emph{Rademacher process}, hence a \emph{sub-Gaussian process}.
+
+\begin{lemma} (\textbf{Symmetrization}). \citep{wellner2013weak}\\
+For every \textbf{nondecreasing}, \textbf{convex} $\Phi: \bR \to \bR$ and class of measurable functions $\cG$,
+\begin{align*}
+\E{}{\Phi\paren{\norm{\widehat{\cP}_n - \cP}{\cG}}} &\le \E{}{\Phi\paren{2\norm{\widehat{\cP}_n^{\epsilon}}{\cG}}}
+\end{align*}
+\end{lemma}
+
+\end{remark}
+
+\item \begin{lemma} (\textbf{Rademacher Complexity for 0-1 Loss}) \citep{mohri2018foundations}\\
 Let $\cH$ be a family of functions taking values in $\{-1, +1\}$ and let $\cG$ be the family of loss functions associated to $\cH$ for \textbf{the zero-one loss}: 
 \begin{align*}
 \cG := \set{(x,y) \mapsto \mathds{1}_{h(x) \neq y}:  h \in \cH}.
@@ -149,21 +197,22 @@ Let $\cH$ be a family of functions taking values in $\{-1, +1\}$ and let $\cG$ b
 For any sample $\cD = ((X_1, Y_1) \xdotx{,} (X_n, Y_n))$ of elements in $\cX \times \{-1, +1\}$, let $\cD_{\cX} := (X_1 \xdotx{,} X_n)$. Then, the following relation holds between \textbf{the empirical Rademacher complexities} of $\cG$ and $\cH$:
 \begin{align*}
 \widehat{\frR}_{\cD}(\cG) &\le \frac{1}{2}\widehat{\frR}_{\cD_{\cX}}(\cH)
-\end{align*}
-\end{lemma}
+\end{align*} This implies that $\frR(\cG) = \frac{1}{2}\frR(\cH)$. 
+\end{lemma} (Hint: $ \mathds{1}_{h(x) \neq y} := \frac{1}{2}(1 - y h(x))$. Also $\sigma$ and $-\sigma y$ have the same distribution.)
 
-\item \begin{proposition} \label{prop: generalization_bound_radmatcher} (\textbf{Rademacher Complexity Generalization Bounds})\citep{mohri2018foundations}\\
-Let $\cH$ be a family of functions taking values in $\{-1, +1\}$  and let $\cP_{X}$ be the distribution over the input space $\cX$. Then, for any $\delta > 0$, \textbf{with probability at least} $1 - \delta$ over a sample $\cD_{n}$ of size $n$ drawn according to $\cP_{X}$, each of the following holds for \textbf{any} $h \in \cH$:
+\item This immediately gives us the result below:
+\begin{proposition} \label{prop: generalization_bound_Rademacher} (\textbf{Rademacher Complexity Bound for Binary Classification})\citep{mohri2018foundations}\\
+Let $\cH$ be a family of functions taking values in $\{-1, +1\}$  and let $\cP$ be the distribution over the input space $\cX$. Then, for any $\delta > 0$, \textbf{with probability at least} $1 - \delta$ over a sample $\cD_{n}$ of size $n$ drawn according to $\cP_{X}$, each of the following holds for \textbf{any} $h \in \cH$:
 \begin{align}
-L(h) &\le \widehat{L}_{n}(h) + \frR_{n}(\cH) + \sqrt{\frac{\log(1 / \delta)}{2n}}  \label{eqn: radmatcher_binary_loss_bound_1}
+L(h) &\le \widehat{L}_{n}(h) + \frR_{n}(\cH) + \sqrt{\frac{\log(1 / \delta)}{2n}}  \label{eqn: Rademacher_binary_loss_bound_1}
 \end{align} and
 \begin{align}
-L(h) &\le \widehat{L}_{n}(h) + \widehat{\frR}_{\cD_{n}}(\cH) +  3\sqrt{\frac{\log(2 / \delta)}{2n}}.  \label{eqn: radmatcher_binary_loss_bound_2}
+L(h) &\le \widehat{L}_{n}(h) + \widehat{\frR}_{n}(\cH) +  3\sqrt{\frac{\log(2 / \delta)}{2n}}.  \label{eqn: Rademacher_binary_loss_bound_2}
 \end{align}
 \end{proposition}
 
-\item \begin{remark} (\emph{\textbf{Compute Emipirical Radmatcher Complexity}})\\
-Note that the Radmatcher variable $\sigma_i$ and $-\sigma_i$ have the same distribution. So
+\item \begin{remark} (\emph{\textbf{Compute Empirical Rademacher Complexity}})\\
+Note that the \emph{Rademacher variable} $\sigma_i$ and $-\sigma_i$ have the same distribution. So
 \begin{align*}
 \widehat{\frR}_{\cD}(\cH)&= \E{\sigma}{\sup_{h \in \cH}\frac{1}{n}\sum_{i=1}^{n}(-\sigma_{i}h(X_i))} = -\E{\sigma}{\inf_{h \in \cH}\frac{1}{n}\sum_{i=1}^{n}\sigma_{i}h(X_i)}
 \end{align*} Now, for \emph{a fixed value of $\sigma$}, computing 
@@ -173,19 +222,18 @@ Note that the Radmatcher variable $\sigma_i$ and $-\sigma_i$ have the same distr
 \end{remark}
 \end{itemize}
 
-\section{VC-Dimension}
-\subsection{Definition of VC-Dimension}
+\section{Vapnik-Chervonenkis Dimension}
+\subsection{Definition of Vapnik-Chervonenkis Dimension}
 \begin{itemize}
-\item \begin{remark}
-Recall the decomposition of generalization error:
-\begin{align*}
-L(g_n^{*}) - L^{*} &=\underbrace{\paren{L(g_n^{*}) - \inf_{g \in \cH}L(g)}}_{\text{\emph{estimation error}}} + \underbrace{\paren{\inf_{g \in \cH}L(g) - L^{*}}}_{\text{\emph{approximation error}}}.
-\end{align*} 
-where the first term is called \emph{estimation error} and the second term is called approximation error.  The definition of \emph{\textbf{PAC learnability}} requires that \emph{the estimation error} would be bounded \emph{\textbf{uniformly} over \textbf{all distributions}}.
-
-Can \emph{infinite-size classes} be learnable, and, if so, what determines their \emph{sample complexity} ?
-\end{remark}
-
+%\item \begin{remark}
+%%Recall the decomposition of generalization error:
+%%\begin{align*}
+%%L(g_n^{*}) - L^{*} &=\underbrace{\paren{L(g_n^{*}) - \inf_{g \in \cH}L(g)}}_{\text{\emph{estimation error}}} + \underbrace{\paren{\inf_{g \in \cH}L(g) - L^{*}}}_{\text{\emph{approximation error}}}.
+%%\end{align*} 
+%%where the first term is called \emph{estimation error} and the second term is called approximation error.  
+%The definition of \emph{\textbf{PAC learnability}} requires that \emph{the estimation error} would be bounded \emph{\textbf{uniformly} over \textbf{all distributions}}.
+%Can \emph{infinite-size classes} be learnable, and, if so, what determines their \emph{sample complexity} ?
+%\end{remark}
 \item \begin{remark} (\emph{\textbf{Restriction based on Behavior of Functions on Data $\cD$}})\\
 Recall the No-Free-Lunch theorem and its proof \citep{shalev2014understanding}. There, we have shown that \emph{without restricting the hypothesis class}, for any learning algorithm, \emph{an adversary can construct a distribution} for which \emph{the learning algorithm will perform poorly}, while there is \emph{another learning algorithm that will succeed on the same distribution}. To do so, the adversary used a finite set $\cD \subset \cX$ and considered a family of distributions that are
 \emph{\textbf{concentrated on elements of $\cD$}}. Each distribution was \emph{derived from a ``true" target function} from $\cD$ to $\set{0,1}$. To make any algorithm fail, the adversary used the power of choosing a target function from the set of \emph{all possible functions} from $\cD$ to $\set{0,1}$.
@@ -246,7 +294,7 @@ Philosophically,
 \end{remark}
 
 \item \begin{definition} (\emph{\textbf{VC-Dimension}}). \\
-\underline{\emph{\textbf{The VC-dimension}}} of a hypothesis class $\cH$, denoted $VCdim(\cH)$ or simply $v(\cH)$, is \emph{\textbf{the \underline{maximal size}} of a set $\cD \subset \cX$ that can be \textbf{shattered} by $\cH$}.
+\underline{\emph{\textbf{The Vapnik-Chervonenkis (VC) dimension}}} of a hypothesis class $\cH$, denoted $VCdim(\cH)$ or simply $v(\cH)$, is \emph{\textbf{the \underline{maximal size}} of a set $\cD \subset \cX$ that can be \textbf{shattered} by $\cH$}.
 
 If $\cH$ can shatter sets of \emph{\textbf{arbitrarily large size}} we say that $\cH$ has \underline{\emph{\textbf{infinite VC-dimension}}}.
 \end{definition}
@@ -282,11 +330,11 @@ Let $\cH$ be a hypothesis class with $VCdim(\cH) \le d < \infty$. Then, for all 
 \end{align}
 In particular, if $n > d + 1$ then
 \begin{align}
-\tau_{\cH}(n) &\le \paren{\frac{e\,n}{d}}^{d}. \label{eqn: sauer_lemma_2}
+\tau_{\cH}(n) &\le \paren{\frac{en}{d}}^{d}. \label{eqn: sauer_lemma_2}
 \end{align}
 \end{lemma}
 \begin{proof}
-To prove the lemma it suffices to prove the following \emph{stronger claim}: For any $\cD = \set{x_1 \xdotx{,} x_m}$ we have
+To prove the lemma it suffices to prove the following \emph{stronger claim}: For any $\cD = \set{x_1 \xdotx{,} x_n}$ we have
 \begin{align}
 \forall\, \cH, \; \abs{\cH_{\cD}} \le  \abs{\set{\cB \subseteq \cD: \cH\text{ shatters }\cB}}\label{eqn: sauer_lemma_3}
 \end{align} The reason why Equation \eqref{eqn: sauer_lemma_3} is sufficient to prove the lemma is that if
@@ -294,7 +342,13 @@ $VCdim(\cH) \le d$ then no set whose size is \emph{larger than} $d$ is \emph{sha
 \begin{align*}
 \abs{\set{\cB \subseteq \cD: \cH\text{ shatters }\cB}} \le  \sum_{i=0}^{d}{{n}\choose{i}}.
 \end{align*}
-When $n > d + 1$ the right-hand side of the preceding is \emph{at most} $\paren{\frac{e\,n}{d}}^{d}$.
+When $n > d + 1$ the right-hand side of the preceding is \emph{at most} $\paren{\frac{en}{d}}^{d}$ since
+\begin{align*}
+ \sum_{i=0}^{d}{{n}\choose{i}}1^{d- i} &\le  \sum_{i=0}^{d}{{n}\choose{i}}\paren{\frac{n}{d}}^{d - i}\\
+ &\le  \sum_{i=0}^{n}{{n}\choose{i}}\paren{\frac{n}{d}}^{d - i} \\
+ &= \paren{\frac{n}{d}}^{d} \sum_{i=0}^{n}{{n}\choose{i}}\paren{\frac{d}{n}}^{i} \\
+ &= \paren{\frac{n}{d}}^{d}\paren{1 + \frac{d}{n}}^n \le \paren{\frac{n}{d}}^{d}e^{d}
+\end{align*} where $1+x \le e^x$.
 
 We are left with proving Equation \eqref{eqn: sauer_lemma_3} and we do it using an \emph{\textbf{inductive argument}}. 
 \begin{enumerate}
@@ -339,7 +393,7 @@ which concludes our proof. \qed
 \end{enumerate}
 \end{proof}
 \end{itemize}
-\subsection{Relate Growth Function to Radmatcher Complexity}
+\subsection{Relate Growth Function to Rademacher Complexity}
 \begin{itemize}
 \item \begin{lemma}(\textbf{Massart's Lemma}) \citep{mohri2018foundations}\\
 Let $A \subseteq \bR^n$ be \textbf{a finite set}, with $r = \max_{x \in A}\norm{x}{2}$, then the following holds:
@@ -348,11 +402,32 @@ Let $A \subseteq \bR^n$ be \textbf{a finite set}, with $r = \max_{x \in A}\norm{
 \end{align}
 where $\sigma_i$'s are \textbf{independent uniform random variables} taking values in $\set{-1, +1}$ and $x_1 \xdotx{,} x_n$ are the components of vector $x$.
 \end{lemma}
+\begin{proof} By Jenson's inequality
+\begin{align*}
+\exp\paren{\lambda \E{\sigma}{\sup_{x \in A}\sum_{i=1}^{n}\sigma_i\,x_i}} &\le \E{\sigma}{\exp\paren{\lambda \sup_{x \in A}\sum_{i=1}^{n}\sigma_i\,x_i}}\\
+&\le \E{\sigma}{\sup_{x \in A}\exp\paren{\lambda \sum_{i=1}^{n}\sigma_i\,x_i}}\\
+&\le \sum_{x \in A}\E{\sigma}{\exp\paren{\lambda \sum_{i=1}^{n}\sigma_i\,x_i}} \\
+&\le  \sum_{x \in A}\prod_{i=1}^n\E{\sigma}{\exp\paren{\lambda \sigma_i\,x_i}}
+\end{align*} We next use the independence of the σis, then apply \emph{Hoeffding's lemma} since $\epsilon_i x_i$ are independent taking values in $[-x_i, x_i]$. And then apply the bound $r$ on the norm $\norm{x}{2}$.
+\begin{align*}
+\E{\sigma}{\exp\paren{\lambda \sigma_i\,x_i}} &\le \exp\paren{\frac{\lambda^2 (2x_i)^2}{8}} = \exp\paren{\frac{\lambda^2 x_i^2}{2}}
+\end{align*} Thus
+\begin{align*}
+\exp\paren{\lambda \E{\sigma}{\sup_{x \in A}\sum_{i=1}^{n}\sigma_i\,x_i}} &\le  \sum_{x \in A}\exp\paren{\frac{\lambda^2 \sum_{i=1}^n (x_i)^2}{2}} =  \sum_{x \in A}\exp\paren{\frac{\lambda^2 \norm{x}{2}^2}{2}} \\
+&\le \sum_{x \in A}\exp\paren{\frac{\lambda^2 r^2}{2}} = \abs{A}\exp\paren{\frac{\lambda^2 r^2}{2}}
+\end{align*} Taking the log of both sides and dividing by $\lambda$ gives us:
+\begin{align*}
+\E{\sigma}{\sup_{x \in A}\sum_{i=1}^{n}\sigma_i\,x_i} &\le \frac{\log\abs{A}}{\lambda} + \frac{\lambda r^2}{2}.
+\end{align*} Choosing optimal $\lambda^{*} = \sqrt{2\log\abs{A}}/r$, we have the Chernoff bound
+\begin{align*}
+\E{\sigma}{\sup_{x \in A}\sum_{i=1}^{n}\sigma_i\,x_i} &\le r\sqrt{2 \log\abs{A}}.
+\end{align*}Dividing both by $n$ gives us the result. \qed
+\end{proof}
 
-\item \begin{corollary} \label{cor: radmatcher_growth} (\textbf{Radmatcher Complexity Bounds by Growth Number}) \citep{mohri2018foundations}\\
+\item \begin{corollary} \label{cor: Rademacher_growth} (\textbf{Rademacher Complexity Bounds by Growth Number}) \citep{mohri2018foundations}\\
 Let $\cH$ be a family of functions taking values in $\set{-1, +1}$. Then the following holds:
 \begin{align}
-\frR_{n}(\cH) &\le \sqrt{\frac{2 \log \tau_{\cH}(n)}{n}} \label{eqn: growth_number_radmatcher_comp}
+\frR_{n}(\cH) &\le \sqrt{\frac{2 \log \tau_{\cH}(n)}{n}} \label{eqn: growth_number_Rademacher_comp}
 \end{align}
 \end{corollary}
 \begin{proof}
@@ -370,7 +445,7 @@ which concludes the proof. \qed
 \end{itemize}
 \subsection{Generalization Bounds via Growth Function and VC-Dimension}
 \begin{itemize}
-\item Combining Proposition \ref{prop: generalization_bound_radmatcher} to Corollary \ref{cor: radmatcher_growth}, we have:
+\item Combining Proposition \ref{prop: generalization_bound_Rademacher} to Corollary \ref{cor: Rademacher_growth}, we have:
 \begin{corollary} \label{cor: generalization_bound_growth}   (\textbf{Growth Function Generalization Bound})  \citep{mohri2018foundations}\\
 Let $\cH$ be a family of functions taking values in $\set{-1, +1}$.  Then, for any $\delta > 0$, with probability at least $1 - \delta$, for any $h \in \cH$,
 \begin{align}
@@ -379,7 +454,7 @@ L(h) \le \widehat{L}_{n}(h) + \sqrt{\frac{2 \log \tau_{\cH}(n)}{n}} +\sqrt{\frac
 
 Growth function bounds can be also derived directly (without using Rademacher complexity bounds first). The resulting bound is then the following:
 \begin{align}
-\cP\set{\abs{L(h) - \widehat{L}_{n}(h)} > \epsilon }  \le 4\tau_{\cH}(2n)\;\exp\paren{-\frac{n\epsilon^2}{8}} \label{eqn: generalization_bound_growth_number_2}
+\cP\set{\exists h\in \cH, \abs{L(h) - \widehat{L}_{n}(h)} > \epsilon }  \le 4\tau_{\cH}(2n)\;\exp\paren{-\frac{n\epsilon^2}{8}} \label{eqn: generalization_bound_growth_number_2}
 \end{align}
 which only differs from \eqref{eqn: generalization_bound_growth_number} by constants.
 \end{corollary}
@@ -410,6 +485,19 @@ which has the general form of \eqref{eqn: generalization_bound_vc_dim2}. \emph{T
 \end{itemize}
 
 \subsection{Examples}
+\begin{itemize}
+\item \begin{example}(\textbf{\emph{Intervals}})\\
+\end{example}
+
+\item \begin{example}(\textbf{\emph{Axis Aligned Rectangles}})\\
+\end{example}
+
+\item \begin{example}(\textbf{\emph{Subspace in $\bR^d$}})\\
+\end{example}
+
+\item \begin{example}(\textbf{\emph{Convex $d$-gons in $\bR^d$}})
+\end{example}
+\end{itemize}
 
 \subsection{Lower Bounds}
 \begin{itemize}
