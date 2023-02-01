@@ -115,7 +115,7 @@ and
 Define a function $\Phi$ on $\cD_n$ by
 \begin{align*}
 \Phi(\cD_n) &:= \sup_{g \in \cG}\abs{\frac{1}{n}\sum_{i=1}^{n}g(Z_i) - \E{}{g(Z)}}.
-\end{align*}This function has \emph{bounded difference} if \emph{only one sample makes changes}. The proof consists of three parts:
+\end{align*} Note that $\Phi(\cD_n)$ is a \emph{random variable}. This function has \emph{bounded difference} if \emph{only one sample makes changes}. The proof consists of three parts:
 \begin{enumerate}
 \item Bound \emph{the probability} of \emph{tail event} of $\Phi$
 \begin{align*}
@@ -132,6 +132,13 @@ Define a function $\Phi$ on $\cD_n$ by
 \end{align*}
 \end{enumerate}
 Combines the difference in (1) and (3) using union bounds. 
+\end{remark}
+
+\item \begin{remark}
+The above proposition states that any positive integer $n \ge 1$ and any scalar $\delta \ge 0$, with probability at least $1 - \delta$, we have
+\begin{align*}
+\sup_{g \in \cG}\abs{\frac{1}{n}\sum_{i=1}^{n}g(Z_i)  - \E{}{g(Z)}} \le 2 \frR_{n}(\cG)  + \sqrt{\frac{\log(1 / \delta)}{2n}}
+\end{align*}
 \end{remark}
 
 \item \begin{lemma} (\textbf{Radmatcher Complexity for 0-1 Loss}) \citep{mohri2018foundations}\\
@@ -293,7 +300,7 @@ We are left with proving Equation \eqref{eqn: sauer_lemma_3} and we do it using 
 \begin{enumerate}
 \item For $n = 1$, no matter what $\cH$ is, either both sides of Equation \eqref{eqn: sauer_lemma_3} equal $1$ or both sides equal $2$ (\emph{the empty set} is always considered to be shattered by $\cH$).
 
-\item  \emph{Assume} Equation \eqref{eqn: sauer_lemma_3} holds for sets of size $k < n$ and let us prove it for sets of size $m$. 
+\item  \emph{Assume} Equation \eqref{eqn: sauer_lemma_3} holds for sets of size $k < n$ and let us prove it for sets of size $n$. 
 
 Fix $\cH$ and $\cD = \set{x_1 \xdotx{,} x_n}$. Denote $\cD_{-1} = \set{x_2 \xdotx{,} x_n}$ and in addition, define the
 following two sets:
