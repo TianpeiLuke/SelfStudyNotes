@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  31 JAN 2023 21:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  31 JAN 2023 22:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -695,7 +695,7 @@ e $\OML/cmm/m/it/10.95 ^^[[] \OT1/cmr/m/n/10.95 := []$ and $\OML/cmm/m/it/10.95
  []
 
 [3]
-Overfull \hbox (7.73718pt too wide) in paragraph at lines 148--150
+Overfull \hbox (7.73718pt too wide) in paragraph at lines 155--157
 []\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Rademacher Com-plex-ity Gen-er-al-i
 za-tion Bounds\OT1/cmr/m/it/10.95 )[Mohri et al., 2018] 
  []
@@ -704,22 +704,22 @@ za-tion Bounds\OT1/cmr/m/it/10.95 )[Mohri et al., 2018]
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 275.
+(amsmath)                 on input line 282.
 
-[7] [8]
+[7] [8] [9]
 Missing character: There is no â in font cmti10!
 Missing character: There is no € in font cmti10!
 Missing character: There is no ™ in font cmti10!
- [9] [10] [11] (./SL_lecture3_VC_Dimension.bbl) [12]
+ [10] [11] (./SL_lecture3_VC_Dimension.bbl) [12]
 (./SL_lecture3_VC_Dimension.aux) ) 
 Here is how much of TeX's memory you used:
  15909 strings out of 493029
  315180 string characters out of 6136233
- 367787 words of memory out of 5000000
+ 368788 words of memory out of 5000000
  19112 multiletter control sequences out of 15000+600000
  14413 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,18n,84p,552b,302s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,18n,84p,552b,291s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
@@ -739,7 +739,7 @@ i10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on SL_lecture3_VC_Dimension.pdf (12 pages, 261897 bytes).
+Output written on SL_lecture3_VC_Dimension.pdf (12 pages, 262117 bytes).
 PDF statistics:
  126 PDF objects out of 1000 (max. 8388607)
  91 compressed objects within 1 object stream
