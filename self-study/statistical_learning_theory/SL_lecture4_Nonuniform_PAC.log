@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  20 DEC 2022 21:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  31 JAN 2023 21:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -480,11 +480,11 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 38.
 
-Overfull \hbox (1.87668pt too wide) in paragraph at lines 66--67
+Overfull \hbox (4.82556pt too wide) in paragraph at lines 66--67
 \OT1/cmr/m/n/10.95 If $\OMS/cmsy/m/n/10.95 A$ \OT1/cmr/m/n/10.95 fur-ther runs 
 in $[](1\OML/cmm/m/it/10.95 =^^O; \OT1/cmr/m/n/10.95 1\OML/cmm/m/it/10.95 =^^N;
  h; d; []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 c\OT1/cmr/m/n/10.95 ))$, then 
-$\OMS/cmsy/m/n/10.95 C$ \OT1/cmr/m/n/10.95 is said to be $[]$. 
+$\OMS/cmsy/m/n/10.95 H$ \OT1/cmr/m/n/10.95 is said to be $[]$. 
  []
 
 [2]
@@ -526,7 +526,7 @@ b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on SL_lecture4_Nonuniform_PAC.pdf (8 pages, 212613 bytes).
+Output written on SL_lecture4_Nonuniform_PAC.pdf (8 pages, 211892 bytes).
 PDF statistics:
  95 PDF objects out of 1000 (max. 8388607)
  68 compressed objects within 1 object stream

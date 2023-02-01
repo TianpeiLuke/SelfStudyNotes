@@ -45,8 +45,8 @@ Let $\cH$ be a hypothesis set. $\cA$ is an \underline{\emph{\textbf{agnostic PAC
 exists a \emph{\textbf{polynomial function}} $\text{poly}(\cdot, \cdot, \cdot, \cdot)$  such that for any $\epsilon > 0$ and $\delta > 0$,
 for all distributions $\cP$ over $\cX \times \cY$, the following holds for any sample size $m \ge \text{poly}(1/\epsilon, 1/\delta, d, \text{size}(c))$:
 \begin{align}
-\cP_{\cD_m}\set{L(g_m(\cdot| \cD_{m})) - \inf_{g \in \cH}L(g)  \le \epsilon } \ge 1 - \delta. \label{eqn: agnostic_pac_definition}
-\end{align} If $\cA$ further runs in $\text{poly}(1/\epsilon, 1/\delta, d, \text{size}(c))$, then $\cC$ is said to be \emph{\textbf{\underline{efficiently agnostic} \underline{PAC-learnable}}}. 
+\cP^m\set{L(\cA(\cD_{m})) - \inf_{h \in \cH}L_{\cP}(h)  \le \epsilon } \ge 1 - \delta. \label{eqn: agnostic_pac_definition}
+\end{align} If $\cA$ further runs in $\text{poly}(1/\epsilon, 1/\delta, d, \text{size}(c))$, then $\cH$ is said to be \emph{\textbf{\underline{efficiently agnostic} \underline{PAC-learnable}}}. 
 \end{definition}
 
 \item We now introduce the concept of competitivity:
@@ -62,8 +62,8 @@ Let $\cH$ be a hypothesis set. $\cA$ is an \underline{\emph{\textbf{non-uniform 
 exists a \emph{\textbf{polynomial function}} $\text{poly}(\cdot, \cdot, \cdot, \cdot, \cdot)$  such that for any $\epsilon > 0$ and $\delta > 0$,
 for all distributions $\cP$ over $\cX \times \cY$, the following holds \underline{for \textbf{\emph{any}} $h \in \cH$}, any sample size $m \ge \text{poly}(1/\epsilon, 1/\delta, h, d, \text{size}(c))$:
 \begin{align}
-\cP_{\cD_m}\set{L(g_m(\cdot| \cD_{m})) - L(h)  \le \epsilon } \ge 1 - \delta. \label{eqn: agnostic_pac_definition}
-\end{align} If $\cA$ further runs in $\text{poly}(1/\epsilon, 1/\delta, h, d, \text{size}(c))$, then $\cC$ is said to be \emph{\textbf{\underline{non-uniformly learnable}}}. 
+\cP^{m}\set{L_{\cP}(\cA(\cD_{m})) - L_{\cP}(h)  \le \epsilon } \ge 1 - \delta. \label{eqn: agnostic_pac_definition}
+\end{align} If $\cA$ further runs in $\text{poly}(1/\epsilon, 1/\delta, h, d, \text{size}(c))$, then $\cH$ is said to be \emph{\textbf{\underline{non-uniformly learnable}}}. 
 \end{definition}
 
 \item \begin{remark}
