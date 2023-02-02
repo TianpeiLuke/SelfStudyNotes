@@ -1,0 +1,587 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs,  mathtools, dsfont}
+\usepackage{tabularx}
+\usepackage{tikz-cd}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Lecture 2: Markov Chains}
+\author{ Tianpei Xie}
+\date{ Feb. 1st., 2023 }
+\maketitle
+\tableofcontents
+\newpage
+\section{Markov Chain}
+\subsection{Basic Concepts}
+\begin{itemize}
+\item \emph{\textbf{Markov Chain}} $(X_t)_t$ is a \emph{\textbf{probabilistic graphical model}} over a chain graph $\cG=(\cV, \cE_{C})$, where each random variable $X_t$ only has exactly one children $X_{t+1}$ and one parent $X_{t-1}$. Denote the index of variable $t$ as the time. Markov chain  $(X_t)_t$ is also a \emph{\textbf{stochastic process}}. 
+
+\item By Markov property, 
+\begin{align*}
+P(X_{t+1} | X_t, X_{t-1}, \ldots, X_1) &= P(X_{t+1} | X_t) .
+\end{align*} It is seen that the transition probability does not depend on the time $t$, i.e. Markov chain is \textbf{time-invariant}.
+
+\item We can see that the joint distribution on $\mb{X}_{0:t} = [X_0, \ldots, X_t]$ can be factorized by transition probabilities
+\begin{align*}
+P(\mb{X}_{1:t} ) &= P(X_0)\prod_{s=1}^{t}P(X_s| X_{s-1})
+\end{align*} by Markov property. Denote $\pi_{0}(i) := P(X_0 = i)$ as the \emph{\textbf{initial probability}}.
+
+
+\item Define the \emph{\textbf{transition kernel}} of Markov Chain as the \emph{time-invariant} \emph{\textbf{transition probability}}
+\begin{align}
+K(x, y)  = p(x, y) &:= P(X_{t+1} = y | X_t = x).  \label{eqn: mc_kernel}
+\end{align} Then the \emph{\textbf{$m$-step transition probability}} is defined as
+\begin{align}
+K^{m}(x, y) &= P(X_{t+m} = y | X_t = x). \label{eqn: mc_kernel_m}
+\end{align}
+
+\item In \emph{general setting} \citep{robert1999monte}, $K: \cX \times \cB(\cX) \rightarrow \bR$ is a function so that $K(x, \cdot)$ is a \emph{\textbf{probability measure}} for all $x\in \cX$ and $K(\cdot, A)$ is a \emph{\textbf{measurable function}} for all $A\in \cB(\cX)$. $K$ can also be considered as a \emph{\textbf{functional}} such that
+\begin{align*}
+K\,(h(x)) &= \int h(y) K(x, dy), \quad h \in L_1(\lambda).
+\end{align*} where $\lambda$ is the dominated measure.
+
+
+\item For $X_t \in \cX:= \set{1, \ldots, n}$ as discrete random variable with $\abs{\cX} = n$, we can define the \textbf{\emph{transition matrix}}
+\begin{align}
+\mb{K} &= \brac{K(i,j)}_{n\times n} \label{eqn: mc_kernel_mat}
+\end{align}
+
+\item We can see that $\mb{X}_{(t+1):(t+m-1)} := [X_{t+1}, \ldots, X_{t+m-1}]$, the $m$-step transition can be computed using transition kernel
+\begin{align}
+P(X_{t+m}| X_t) &= \sum_{\mb{X}_{(t+1):(t+m-1)}}\,P(X_{t+m} |\mb{X}_{(t+1):(t+m-1)} , X_t)P(\mb{X}_{(t+1):(t+m-1)}) \nonumber\\
+&= \sum_{\mb{X}_{(t+1):(t+m-1)}}\,P(X_{t+m} |X_{t+m-1})P(\mb{X}_{(t+1):(t+m-1)}) \nonumber\\
+&= \ldots \nonumber\\
+&= \sum_{\mb{X}_{(t+1):(t+m-1)}}\prod_{i=0}^{m-1}P(X_{t+i+1}|X_{t+i}) \label{eqn: mc_kernel_m_kernel_prod}\\
+\Rightarrow \brac{K^{m}(i, j)} &= \brac{K(l, m)}^{m} = \mb{K}^{m}  \label{eqn: mc_kernel_m_kernel_prod_mat}
+\end{align}
+
+\item We have the \emph{\textbf{Chapman-Kolmogorov equation}} \citep{ross2014introduction}:
+\begin{align}
+K^{m+n}(x, y)  &= \sum_{z}K^{m}(x, z)K^{n}(z, y), \quad \forall x,y \in \cX \label{eqn: mc_ck_eqn}\\
+\Rightarrow \mb{K}^{m+n} &= \mb{K}^{m}\mb{K}^{n} \nonumber
+\end{align} That is, we split the  $(m+n)$-step path from $x\rightarrow y$ into all possible combination of a $m$-step path from $x\rightarrow z$ and a $n$-step path from $z \rightarrow y$ for some intermediate state $z$.
+
+\item And the marginal distribution on state $X_t$ can be computed as
+\begin{align}
+P(X_t) &= \sum_{X_{t-1}\in \cX}P(X_t|X_{t-1})P(X_{t-1}) \nonumber\\
+\Rightarrow \mb{\pi}_{t} &= \mb{K}\mb{\pi}_{t-1} \label{eqn: mc_marginal_kernel}
+\end{align} where $\mb{\pi}_{t}:= [P(X_t = i)]$
+\end{itemize}
+\subsection{Hitting time}
+\begin{itemize}
+\item \begin{definition}
+Define $T_{j} = \min\set{t\ge 1: X_{t} = j}$ as the time steps for Markov Chain $(X_t)_t$ to \emph{hit} state $j$ for the \emph{\textbf{first time}}. $T_j$ is called the state $j$'s \underline{\textbf{\emph{first hitting time}}}.
+
+
+Denote $f_{i,j}$ be the \emph{\textbf{probability of ever hitting state}} $j$ (\emph{\textbf{within finite time}}) \emph{\textbf{starting from state}} $i$. That is
+\begin{align}
+f_{i,j} &:= P(T_{j} < \infty | X_{0} = i)\label{eqn: mc_hit_time_prob}
+\end{align} Denote $f_{i,j}^{(m)}$ be the \emph{probability of hitting at state $j$ at time $m$} starting from state $i$
+\begin{align}
+f_{i,j}^{(m)} &:= P(T_{j} = m | X_{0} = i)\label{eqn: mc_hit_time_prob_m}
+\end{align}
+
+We can generalize the hitting time for a set of states $T_{A} := \min\set{t\ge 1: X_{t} \in A}$.
+\end{definition}
+
+\item We can the following the \emph{\textbf{kernel recursion formula}}
+\begin{align}
+K^{m}(x, y)&= \sum_{n=1}^{m} P(T_{y} = n | X_{0} = x)K^{m-n}(y, y) \label{eqn: mc_hitting_time_kernel}\\
+&:= \sum_{n=1}^{m}f_{x,y}^{(n)}\,K^{m-n}(y, y). \nonumber 
+\end{align} That is, we \emph{categorize} all possible $m$-step path from $x\rightarrow y$ according to the first time the path visiting $y$. (This is called the \underline{\emph{\textbf{First-Step analysis}}})
+
+\item Similarly, we have the \textbf{\emph{hitting time recursion formula}}:
+\begin{align}
+f_{x,y}^{(m)} := P(T_{y} = m | X_{0} = x)&= \sum_{z \neq i}\,P(T_{y} = m - 1 | X_{0} = z)\,K(x, z) \label{eqn: mc_hitting_time_recursion}. \\
+&:= \sum_{z \neq i}\,f_{z,y}^{(m-1)}\,K(x, z).\nonumber
+\end{align} This formula break down the $m$-step path from $x\rightarrow y$ into two parts: a path from $x\rightarrow z$ and a $(m-1)$-step path from intermediate state $z\rightarrow y$ (This is also the \emph{First-Step analysis}).
+
+\item Define $N(y):= \sum_{t=0}^{\infty}\ind{X_{t} = y}$ is the \emph{\textbf{total number of times hitting the state}} $y$.
+\begin{align}
+P(N(y) \ge 1 |\, X_{0} = x) &= P(T_{y} < \infty | X_{0} = x) = f_{x,y} \label{eqn: mc_hit_times} \\
+P(N(y) \ge m |\, X_{0} = x) &= P(N(y) \ge 1 |\, X_{0} = x)P^{m-1}(N(y) \ge 1 |\, X_{0} = y) \label{eqn: mc_hit_times_hitting_time_recusion} \\
+&=f_{x,y}\, f^{m-1}_{y,y}\nonumber
+\end{align} Note that in order to visit $y$ at least $m$ times, we need to visit $y$ first time and stating from $y$ recurrently visit $y$ $(m-1)$ times.
+
+The random variable $N(x)|X_0 = x$ follows a \underline{\textbf{\emph{geometric distribution}}} with mean $1/(1- f_{x,x})$.
+\begin{align}
+P(N(x) = m |\, X_{0} = x) &= (1- f_{x,x})f^{m-1}_{x,x} \label{eqn: mc_hit_times_m_times_recurrent}
+\end{align}
+
+\item Define $G(x, y) := \E{}{N(y) | X_{0} = x}$ as the \emph{\textbf{expected number of \textbf{total visits}}} of $y$ starting from $x$.
+\begin{align}
+G(x, y) &:= \E{}{N(y) | X_{0} = x} \nonumber\\
+&=\E{}{\sum_{t=0}^{\infty}\ind{X_{t} = y} | X_{0} = x}  \nonumber\\
+&= \sum_{t=0}^{\infty}\E{}{\ind{X_{t} = y}| X_{0} = x} =\sum_{t=0}^{\infty}K^{t}(x, y) \label{eqn: mc_expect_hit_times}
+\end{align} Note that $\E{}{\sum_{t=0}^{\infty}\ind{X_{t} = y} | X_{0} = x} = \sum_{t=0}^{\infty}\E{}{\ind{X_{t} = y}| X_{0} = x}$ is true since $Z_{t} := \ind{X_{t} = y}$ is non-negative random variable.
+
+Since $N(y)$ is geometric distributed, we can compute $G(x, y)$ via 
+\begin{align}
+G(x, y) &= \frac{f_{x,y}}{1- f_{y,y}} \label{eqn: mc_expect_hit_times_2}
+\end{align}
+
+\item Define $G(x,x) = \E{}{N(x) | X_{0} = x}$ as the \emph{expected number of \textbf{total returns}} starting from state $x$.
+\end{itemize}
+
+
+\section{Classification of States}
+\subsection{Equivalence class by communication}
+\begin{itemize}
+\item \begin{definition}
+For any pair $x, y \in \cX$, if there exists $n \in \bN_{+}$ so that $K^{n}(x, y) > 0$, then the state $y$ is \emph{\textbf{accessible}} from state $x$. This is equivalent to say that the probability of hitting time of $y$ being finite starting from $x$ is above zero, i.e. \underline{$f_{x,y} >0$}.
+\end{definition}
+
+\item If $x$ is accessible from $y$, and $y$ is accessible from $x$, then we say that $x$ and $y$ \underline{\emph{\textbf{coummunicate}}},
+$x \leftrightarrow y$. It is easy to check that this is an \underline{\emph{\textbf{equivalence relation}}}:
+\begin{enumerate}
+\item $x \leftrightarrow x$;
+\item If $x \leftrightarrow y$, then $y \leftrightarrow x$;
+\item If $x \leftrightarrow z$ and $z \leftrightarrow y$, then $x \leftrightarrow y$ 
+\end{enumerate}
+
+\item Thus we can partition the state space $\cX$ into several \emph{\textbf{equivalence classes}} $\cX= \bigcup_{k}\cX^{k}$ and within each class, all states communicate to each other. 
+
+Equivalently, it means that the kernel $\mb{K}$ can be \emph{rearranged} into a \textbf{\emph{block-diagonal matrix}}.
+
+
+\item 
+ \begin{definition}
+A Markov Chain is \underline{\emph{\textbf{irreducible}}} if \underline{it has \textbf{only one equivalence class}}, i.e. all states in $\cX$ communicate to each other.
+\end{definition}
+
+
+\item Based on hitting time, we can categorize states into two groups:
+ 
+\begin{itemize}
+\item \begin{definition} A state $i$ is \underline{\emph{\textbf{recurrent}}} if and only if \underline{$f_{i,i} =  P(T_{i} < \infty | X_{0} = i) = 1$}, i.e. the Markov Chain will definitely revisit the state $i$ after stating from $i$.
+\end{definition}
+
+Note that it follows from \eqref{eqn: mc_expect_hit_times} that 
+\begin{proposition} (Characterization of recurrence via \textbf{$n$-step return probabilities})\\
+A state $i$ is recurrent if and only if $\sum_{t=0}^{\infty}K^{t}(i, i) = \infty$.
+\end{proposition}
+
+\item \begin{definition} A recurrent state $i$ is \emph{\textbf{positive recurrent}} if the \emph{expected returning time} $\E{}{T_{i} | X_0 = i} < \infty$; otherwise we say it is \emph{\textbf{null recurrent}}.
+\end{definition}
+
+\item \begin{definition}  A state $i$ is called \emph{\textbf{transient}} if $f_{i,i} < 1$.
+\end{definition}
+\end{itemize}
+
+
+\item 
+\begin{proposition}
+The following conditions are \emph{\textbf{equivalent}}:
+\begin{enumerate}
+\item state $i$ is recurrent state;
+\item The ever returning probability $f_{i,i} = 1$;
+\item The probability of total number of visiting is $P(N(i) = \infty |\, X_{0} = j) = f_{j,i}$ and $P(N(i) = \infty |\, X_{0} = i) = 1$;
+\item The expected total number of returning is infinite $G(i, i) = \infty$;
+\item The sum of all $n$-step return probabilities $\sum_{t=0}^{\infty}K^{t}(i, i) = \infty$.
+\end{enumerate}
+\end{proposition}
+
+
+\item 
+\begin{proposition}
+If $i$ is recurrent, and $i \rightarrow j$, then also $j \rightarrow i$.
+\end{proposition}
+
+\item 
+\begin{proposition}
+If $i$ is positive recurrent, and $i \leftrightarrow j$, then $j$ is also positive recurrent.
+\end{proposition}
+
+\item
+\begin{proposition}
+If $i$ is recurrent, and $i \rightarrow j$, then $j$ is also recurrent. Therefore, in any \textbf{equivalent class}, \textbf{either all states are recurrent} or \textbf{all are transient}. In particular, if the chain is \emph{\textbf{irreducible}}, then either all states are recurrent or all are transient.
+\end{proposition}
+Based above proposition, we can classify \emph{\textbf{each class}, and \textbf{an irreducible Markov Chain} as recurrent or transient}. 
+
+\item 
+\begin{proposition}
+If a closed subset $S_0 \subset \cX$ only has finitely many states, then there must be at least one recurrent state. In particular any finite Markov chain must contain at least one positive recurrent state. 
+\end{proposition}
+
+\begin{proposition}
+An \textbf{irreducible finite state Markov chain} must be \textbf{positive recurrent}. 
+\end{proposition}
+
+
+\item 
+\begin{proposition}
+Any recurrent class is a \textbf{closed} subset of states.
+\end{proposition}
+
+\item Let $S_{T}$ be a set of \emph{\textbf{transient} states} and $C$ be a closed set of \emph{\textbf{irreducible}}, \emph{\textbf{recurrent} state}, the \emph{\textbf{absorption probability}} is defined as
+\begin{align}
+p_{C}(x) &= P(T_{C} < \infty | X_{0} = x), \quad \forall x\in S_{T}.
+\end{align} It is the probability of hitting recurrent state set starting from a transient state.
+
+\item \begin{theorem}
+Suppose  $S_{T}$ is a set of \textbf{transient} states and $C$ is a closed irreducible set of \textbf{recurrent} state, then the following system of equations has \textbf{unique} solution,
+\begin{align}
+f(x) &= \sum_{y \in C}K(x, y) + \sum_{y \in S_{T}}K(x, y)f(y), \quad \forall\, x \in S_{T} \label{eqn: trans_recur_eqn_unique_sol}
+\end{align} and the unique solution is the absorption probability $f(x) = p_{C}(x)$.
+\end{theorem}
+
+\item The recurrence definition ("with \emph{infinite number of visits}") can be generalized as the \emph{\textbf{Harris recurrence}} in general theory \citep{robert1999monte}.
+ \begin{definition}
+A set $A$ is \emph{\textbf{Harris recurrent}} if $P(N_{A} = \infty | X_0 = x) = 1$ for all $x \in A$, where $N_A := \sum_{t=0}^{\infty}\ind{X_{t} \in A}$. The chain $(X_t)_t$ is \emph{\textbf{Harris recurrent}} if there exists a measure $p$ such that $(X_t)_t$ is $p$-\emph{irreducible} and for every set $A$ with $p(A) > 0$, $A$ is \emph{Harris recurrent}.
+\end{definition}
+
+\end{itemize}
+
+\subsection{Foster's theorem and Poke's lemma}
+\begin{itemize}
+\item \begin{theorem}(\textbf{Foster's theorem})\\
+Consider an irreducible Markov chain $(X_t)_t$ with state space $\cX=\set{0,1,\ldots}$ and transition matrix $\mb{K}$ and suppose there exists a function $h: \cX \rightarrow \bR$ such that
+\begin{flalign*}
+(1)\quad & \inf_{x\in \cX}h(x) > -\infty  &\\
+(2)\quad & \sum_{y\in \cX}K(x, y)\,h(y) < \infty  \quad \forall x \in \cS &\\
+(3)\quad & \sum_{y\in \cX}K(x, y)\,h(y) < h(x)  - \epsilon  \quad \forall x \not\in \cS &
+\end{flalign*} for some finite set $\cS \subset \cX$ and some $\epsilon >0$, then the Markov chain $(X_t)_t$ is \textbf{positive recurrent}.
+\end{theorem}  
+
+\item \begin{lemma} (\textbf{Poke's lemma})\\
+Consider an irreducible Markov chain $(X_t)_t$ with state space $\cX=\set{0,1,\ldots}$ and transition matrix $\mb{K}$. Assume that for all $x\in \cX$ and all $t\ge 0$, $\E{}{X_{t+1} | X_t = x} < \infty$ and $\lim_{i\rightarrow \infty}\sup_{j \ge i}\E{}{ X_{t+1} - X_{t} | X_t = j} < 0$. Then the Markov chain $(X_t)_t$ is \textbf{positive recurrent}.
+\end{lemma}
+\end{itemize}
+
+\section{Limiting and stationary distribution}
+\subsection{Property of limiting distributions}
+\begin{itemize}
+\item \begin{definition}
+The probability of states $\set{\pi(x), \forall x\in \cX}$ is a \underline{\textbf{\emph{stationary distribution}}} if and only if 
+\begin{align}
+\pi(y) &= \sum_{x \in X}K(x, y)\pi(x), \forall y \in \cX \label{eqn: mc_stationary}\\
+\mb{\pi}^{T} &= \mb{\pi}^{T}\,\mb{K}  \label{eqn: mc_stationary_mat}
+\end{align} That is, $\mb{\pi}$ is the eigenvector of stochastic matrix $\mb{K}$ corresponding to eigenvalue $\lambda_0 = 1$.
+\end{definition}
+
+
+\item A stationary distribution is also called an \emph{\textbf{invariant distribution}} \citep{robert1999monte, liu2001monte}, \emph{\textbf{steady-state distribution}} \citep{ross2014introduction} or \emph{\textbf{equilibrium distribution}} \citep{brooks2011handbook, ross2014introduction}. This is due to its \emph{time invariant property} or \emph{the global balance equation} \eqref{eqn: mc_global_balance_eqn}.
+
+\item Let the initial distribution be the stationary distribution $P(X_0 = x)= \pi(x)$. Note that 
+\begin{align}
+\pi_1(y) = P(X_1 = y) &= \sum_{x}K(x, y)\pi(x) = \pi(y), \forall y \in \cX.
+\end{align} In other word, \emph{\textbf{the stationary distribution does not change over time}}. 
+
+In measure theory, the invariant measure $\pi$ satisfies:
+\begin{align*}
+\pi(B) &= \int_{\cX} K(x, B)\pi(dx), \quad \forall B\in \cB(\cX).
+\end{align*}
+
+
+\item \begin{proposition}\label{thm: limit_stationary}
+Suppose that the \textbf{limiting distribution} $\lim_{t\rightarrow \infty}P(X_t = y)$ exists, and 
+\begin{align*}
+\lim_{t\rightarrow \infty}K^{t}(x, y) &= \pi(y), \quad \forall x, y\in \cX
+\end{align*} which is independent of where it starts from, then the Markov Chain has a \textbf{unique stationary distribution} and 
+\begin{align}
+\lim_{t\rightarrow \infty}P(X_t = y) &= \pi(y), \quad \forall y \in \cX
+\end{align} i.e. the limit distribution is stationary distribution.
+\end{proposition} Note that $P(X_t = y) = \sum_{x\in \cX}K^{t}(x, y)\pi_0(x)$.
+
+\item \begin{proposition} (\textbf{Global Balance Equation})\\
+The stationary distribution $\set{\pi(x), \forall x\in \cX}$ satisfies the following \textbf{global balance equation}:
+\begin{align}
+\sum_{j \in \cX}\pi(i)K(i, j) &=  \sum_{j \in \cX}\pi(j)K(j, i).  \label{eqn: mc_global_balance_eqn}
+\end{align} This means the total flow out of $i$ (LHS) is equal to the total flow into $i$ (RHS) in steady state.
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Detailed Balance Equation})\\
+For distribution $\set{\pi(x), \forall x\in \cX}$, if the following \textbf{detailed balance equation} is satisfied
+\begin{align}
+\pi(i)K(i, j) &=  \pi(j)K(j, i),\quad \forall i, j\in \cX  \label{eqn: mc_detailed_balance_eqn}
+\end{align} then $\set{\pi(x), \forall x\in \cX}$ is a stationary distribution.
+\end{proposition}
+
+\item \begin{definition}
+Define $\mu_{i} := \E{}{T_{i} | X_{0} = i}$ as the \underline{\emph{\textbf{expected first return time}}}, i.e. the number of transition that it takes for Markov chain  when starting from state $i$ and returning to that state.
+\end{definition}
+
+
+\item Let $G^{(n)}(x, y) = \E{}{N^{(n)}(y) | X_{0} = x}$ where $N^{(n)}(y) = \sum_{t=0}^{n}\ind{X_{t} = y}$. $N^{(n)}(y)$ is the total amount of time staying at state $y$ within $n$ transitions. Then
+\begin{itemize}
+\item \begin{theorem}
+For \textbf{transient state} $y$
+\begin{align*}
+&\lim_{n\rightarrow \infty}N^{(n)} < \infty, \quad (\text{w.p.1})\\
+ \Rightarrow &\lim_{n\rightarrow \infty}\frac{N^{(n)}}{n} = 0, \quad (\text{w.p.1})\\
+&\lim_{n\rightarrow \infty}G^{(n)}(x, y) = \frac{f_{x,y}}{1 - f_{y,y}} < \infty\\
+\Rightarrow &\lim_{n\rightarrow \infty}\frac{G^{(n)}(x, y)}{n} = 0, \quad \forall x\in \cX
+\end{align*} That is, the frequency of visiting transient state $y$ goes to $0$ as $n\rightarrow \infty$. 
+\end{theorem}
+
+\item \begin{theorem}
+For \textbf{recurrent state} $y$
+\begin{align*}
+&\lim_{n\rightarrow \infty}\frac{N^{(n)}}{n} = \frac{\ind{T_{y} < \infty}}{\mu_{y}}, \quad (\text{w.p.1})\\
+&\lim_{n\rightarrow \infty}\frac{G^{(n)}(x, y)}{n} = \frac{f_{x,y}}{\mu_{y}}, \quad \forall x\in \cX
+\end{align*} where $\mu_{y} := \E{}{T_{y} | X_{0} = y}$  is the \underline{\textbf{expected first return time}} of state $y$.
+That is, the frequency of visiting \textbf{positive recurrent} state $y$ converge to $\frac{1}{\mu_{y}}$ as $n\rightarrow \infty$; otherwise for \textbf{null recurrent state} $y$, it converges to zero.
+\end{theorem}
+\end{itemize}
+
+\item 
+\begin{theorem} (Stationary distribution for transient and null recurrent states)\\
+Let $\set{\pi(x), \forall x\in \cX}$  be stationary distribution. If $x \in \cX$ is \textbf{transient} or \textbf{null recurrent} state, then 
+\begin{align*}
+\pi(x) = 0.
+\end{align*} 
+\end{theorem}
+
+\item \begin{theorem} (\textbf{Kac's Theorem})\citep{ross2014introduction}\\
+An \underline{\textbf{irreducible recurrent}} Markov Chain has a \textbf{unique} \textbf{stationary distribution} $\set{\pi(x)}$, given 
+\begin{align}
+\pi(x) &= \frac{1}{\mu_x}, \quad \forall x\in \cX
+\end{align} where $\mu_{x} := \E{}{T_{x} | X_{0} = x}$  is the \textbf{expected first return time} of state $x$.
+\end{theorem} It implies that as $n\rightarrow \infty$, for any state $x\in \cX$, the fraction of time that Markov Chain stays at $x$ is unchanged and is the reciprocal of the expected first return time.
+\end{itemize}
+
+\subsection{Ergodicity}
+\begin{itemize}
+\item Under what condition we have $\forall y \in \cX$,
+\begin{align}
+\lim_{t\rightarrow \infty}P(X_t = y) &= \pi(y) ?
+\end{align} This is the question that ergodicity property tries to answer.
+
+\item \begin{definition}
+The \underline{\textbf{\emph{periodicity}}} of a state $x \in \cX$ is defined as 
+\begin{align}
+d(x) &= \text{g.c.d.}\set{t\ge 0: K^{t}(x, x) > 0}
+\end{align} where $\text{g.c.d.}$ is the \emph{\textbf{greatest common divisor}}. 
+\end{definition}
+
+\item \begin{theorem}
+If $x\leftrightarrow y$ (i.e. $f_{x,y} > 0$ and $f_{y,x} > 0$), then $d(x) = d(y)$.
+\end{theorem}
+
+\item \begin{definition}
+If $d(x) \ge 2$, then state $x$ is \emph{\textbf{periodic}}. If $d(x) = 1$, then state $x$ is \underline{\emph{\textbf{aperiodic}}}
+\end{definition}
+Based on above theorem, the periodicity property is \emph{closed} under the equivalence class $C$.
+
+\item \begin{definition}
+A Markov Chain is  \underline{\emph{\textbf{irreducible}}, \emph{\textbf{positive recurrent}} and \emph{\textbf{aperiodic}}}, then it is called \underline{\emph{\textbf{ergodic}}}.
+\end{definition}
+
+\item \begin{theorem}\label{thm: ergodic}
+A Markov Chain is \textbf{irreducible and positive recurrent} having stationary distribution $\mb{\pi}$. 
+\begin{itemize}
+\item If the Markov Chain is also \textbf{aperiodic}, then 
+\begin{align}
+\lim_{t\rightarrow \infty}K^{t}(x, y) &= \pi(y), \quad \forall x, y\in \cX \label{eqn: mc_ergodic}
+\end{align} 
+
+\item If the Markov chain is \textbf{periodic} with period $d$, then there exists $r \in \bN_{+}$,  $0\le r\le d-1$ such that
+\begin{align}
+K^{t}(x, y) &= 0, \quad \forall x, y\in \cX \label{eqn: mc_periodic}
+\end{align} \textbf{unless} $t = m\,d + r$ for some $m\in \bN_{+}$ and
+\begin{align}
+\lim_{m\rightarrow \infty}K^{m\,d + r}(x, y) &= d\,\pi(y), \quad \forall x, y\in \cX \label{eqn: mc_periodic_2}
+\end{align} Note that periodicity only appears on discrete time Markov chain.
+\end{itemize}
+\end{theorem}
+Based on the Theorem \ref{thm: ergodic} and Proposition \ref{thm: limit_stationary}, when a Markov chain is ergodic, its marginal state distribution will converge to the stationary distribution.
+\end{itemize}
+
+\subsection{Mean hitting time formula}
+\begin{itemize}
+\item \begin{definition}
+Let $(X_t)_t$ be a stochastic process and let $\set{\cF_{t}, t\ge 0}$ be an increasing family of $\sigma$-field. 
+
+A random variable $T: (\Omega, \cF) \rightarrow (\bN_{+}\cup\set{+\infty}, 2^{\bN_{+}\cup\set{+\infty}})$ is called a \underline{\textbf{\emph{stopping time}}} with respect to $\set{\cF_{t}, t\ge 0}$, if $\forall k \ge 0$, $\ind{T = k}$ is \textbf{$\cF_{t}$-measurable} (i.e. $\set{T = k} \in \cF_{t}$ and $\cF = \bigcup_{t\ge 0} \cF_t$.)
+\end{definition}
+
+For Markov chain $(X_t)_t$, the \emph{\textbf{first hitting time}} is defined as $T_{A}^{(1)} = \min\set{t > 0: X_t \in A}$. Also we can define n-th hitting time as $T_{A}^{(n)} = \min\set{t > T_{A}^{(n-1)}: X_t \in A}$. All of these $\set{T_{A}^{(1)}, \ldots, T_{A}^{(n)}, \ldots }$ are all \emph{\textbf{stopping time}}. 
+
+\item \begin{theorem}(\textbf{Strong Markov property}) \citep{robert1999monte}\\
+For every initial distribution $\mb{\pi}$ and every stopping time $\tau$ which is almost surely finite,
+\begin{align}
+\E{}{h(X_{\tau+1},X_{\tau+2},\ldots)\,|\,x_{1}\ldots,x_{\tau}} &= \E{}{h(X_1 ,X_2, \ldots )}, \label{eqn: mc_strong_markov}
+\end{align} provided the expectations exist.
+\end{theorem} We can thus condition on a random number of instants while keeping the fundamental properties of a Markov chain.
+We can proof that for the intervals $\tau_1 = T_{x}^{(1)}$, $\tau_{i} := \tau_{x}^{(i)} - \tau_{x}^{(i-1)}$, $i=2,\ldots,$, then $\set{\tau_1,\ldots, \tau_n,\ldots}$ are i.i.d.
+\item 
+\begin{theorem}
+Let $(X_t)_t$ be a \textbf{positive recurrent} Markov chain with state space $\cX$ and stationary distribution $\mb{\pi}$. Let $T$ be any \textbf{stopping time} of $(X_t)_t$ such that for arbitrary $x \in \cX$, $X_{T} = x$. Then for all $y \in \cX$, 
+\begin{align}
+\E{T}{\sum_{t=0}^{T-1}K^{t}(x,y)\,|\,x} = \E{}{\sum_{t=0}^{T-1}\ind{X_{t} = y}\,|\,X_0 = x} &= \pi(y)\,\E{}{T | X_{0} = x}. \label{eqn: stopping_time_pos_recur}
+\end{align}
+\end{theorem}
+%That is, the expected number of times visiting $y$ before stopping time $T$ is equal to $\pi(y)$ times the expected stopping time $T$. Therefore, 
+%\begin{align*}
+%\mu_x = \E{}{T | X_{0} = x}&= \frac{\E{T}{\sum_{t=0}^{T-1}K^{t}(x,y)\,|\,X_0 = x} }{\pi(y) }
+%\end{align*}
+
+\item \begin{theorem}
+Let $i \neq j$ and $T$ be the first time returning $i$ after visiting $j$, $T = \min\{t > \tau_{j}, X_t = i| X_0 = i\}$, $\tau_j = \min\set{t > 0: X_t = j}$ and $\tau_i = \min\set{t > 0: X_t = i}$. Then
+\begin{flalign*}
+(1)\quad &\E{}{T | X_0 = i} = \E{}{\tau_i | X_0 = i} + \E{}{\tau_j | X_0 = i}&\\
+(2)\quad &\E{}{\sum_{t=0}^{T-1}\ind{X_t = j}\,|\,X_0 = i} = \E{}{\sum_{t=\tau_j}^{T-1}\ind{X_t = j}\,|\,X_0 = i} + \E{}{\sum_{t=0}^{\tau_i-1}\ind{X_t = j}\,|\,X_0 = j}&\\
+(3)\quad &\E{}{\sum_{t=0}^{\tau_i-1}\ind{X_t = j}\,|\,X_0 = j} = \pi(j)\paren{\E{}{\tau_j\,|\,X_0 = i} + \E{}{\tau_i\,|\,X_0 = j} }&
+\end{flalign*}
+\end{theorem} The "\emph{number of visits to $j$ before first returning to $i$}" is geometric distributed with mean $p:=P(\tau_j > \tau_i | X_0 = i)$, thus (3) can be computed as 
+\begin{align*}
+\E{}{\sum_{t=0}^{\tau_i-1}\ind{X_t = j}\,|\,X_0 = j}&= \frac{1}{P(\tau_j > \tau_i | X_0 = i)}.
+\end{align*}  
+
+
+
+\item \begin{definition}
+For finite state, ergodic Markov chain $(X_t)_t$ with stationary distribution $\mb{\pi}$, define the \underline{\textbf{\emph{fundamental matrix}}} as
+\begin{align}
+\mb{Z} &:= \paren{\mb{I} - \paren{\mb{K} - \mb{1}\mb{\pi}^{T}}}^{-1}  \label{eqn: mc_fundamental_mat}\\
+&= \mb{I} + \sum_{t\ge 0}\paren{\mb{K}^t - \mb{1}\mb{\pi}^{T}}\nonumber
+\end{align} and its $(i,j)$ element is 
+\begin{align}
+Z_{i,j} &= \sum_{t=0}^{\infty}(K^{t}(i, j) - \pi_{j}) \label{eqn: mc_fundamental_mat_elem}
+\end{align}
+\end{definition} Note that $\mb{Z} = \paren{\mb{I} - \mb{Q}}^{-1} = \sum_{t=0}^{\infty}\mb{Q}^{t}$, where $\mb{Q}:= \paren{\mb{K} - \mb{1}\mb{\pi}^{T}}$.
+
+\item 
+\begin{theorem} (\textbf{Mean hitting time formula})\\
+For finite state, ergodic Markov chain $(X_t)_t$ with stationary distribution $\mb{\pi}$, and $Z_{i,j}$ is defined as \eqref{eqn: mc_fundamental_mat_elem}, then 
+\begin{align}
+Z_{i,i} &= \pi(i)\,\E{}{\tau_i | X_0\sim \mb{\pi}}, \quad i\in \cX, \label{eqn: mc_mean_hitting_time}\\
+Z_{j,j} - Z_{i,j} &= \pi(j)\,\E{}{\tau_j | X_0 = i}, \quad i, j \in \cX, \label{eqn: mc_mean_hitting_time_2}
+\end{align} where $\tau_i:= \min\set{t\ge 0: X_{t} = i}$ is the stopping time/first hitting time.
+Thus 
+\begin{align*}
+\E{}{\tau_i | X_0\sim \mb{\pi}} &= \frac{Z_{i,i}}{\pi(i)} \\
+\E{}{\tau_j | X_0 = i} &= \frac{\paren{Z_{j,j} - Z_{i,j}}}{\pi(j)}
+\end{align*}
+\end{theorem}
+\end{itemize}
+
+\section{Time-reversible Markov Chain}
+\begin{itemize}
+\item \begin{definition}
+A Markov chain $(X_t)_t$ is called \underline{\emph{\textbf{time-reversible}}}, if it has stationary distribution $\mb{\pi}$ and the detailed balance equation is satisfied:
+\begin{align}
+\pi(i)K(i, j) &=  \pi(j)K(j, i),\quad \forall i, j\in \cX.  \label{eqn: mc_detailed_balance_eqn_time_rev}
+\end{align}
+\end{definition}
+
+\item From this definition, we can see that reversibility implies that the stationary distribution exists, but not \emph{vice versa}. 
+
+\item The reversed process $(Y_{k})_k := (X_{t-k})_{k}$ is a Markov chain and its transition probability 
+\begin{align}
+Q(i,j) &= \frac{\pi(j)K(j,i)}{\pi(i)} \label{eqn: mc_rev_kernel}
+\end{align} Note that $(Y_{k})_k$ and $(X_t)_t$ are statistically equivalent since $Q(i,j) = K(i,j)$.
+
+\item 
+\begin{theorem}
+An ergodic Markov chain $(X_t)_t$ for which $K(i,j) =0$ whenever $K(j, i) = 0$ is \textbf{time-reversible} if and only if starting from any state $i$, any path back to $i$ has the \textbf{same probability} as its reverse path. That is, for path $i \rightarrow i_1\rightarrow i_2 \rightarrow \ldots \rightarrow i_k \rightarrow i$ and its reverse path $i \leftarrow i_1 \leftarrow i_2 \leftarrow \ldots  \leftarrow i_k \leftarrow i$
+\begin{align}
+K(i, i_1)\,K(i_1, i_2)\,\ldots\,K(i_k, i) &= K(i, i_k)\,\ldots\,K(i_2, i_{1})\,K(i_1, i), \quad \forall i,i_1,\ldots, i_k\in \cX \label{eqn: mc_path_rev}
+\end{align} 
+\end{theorem}
+
+\item 
+\begin{theorem} (\textbf{Reversal Test})\\
+Let $\mb{K}$ be a stochastic matrix indexed by a countable set $\cX$ and let $\mb{\pi}$ be a probability distribution on $\cX$. Let $\mb{Q}$ be a stochastic matrix indexed by $\cX$ such that
+\begin{align}
+\pi(i)Q(i, j) &=  \pi(j)K(j, i),\quad \forall i, j\in \cX.  \label{eqn: mc_time_rev_test}
+\end{align}  Then $\mb{\pi}$ is a stationary distribution of $\mb{K}$
+\end{theorem}
+
+\item 
+\begin{proposition}
+For finite state, ergodic Markov chain $(X_t)_t$ with stationary distribution $\mb{\pi}$, and $Z_{i,j}$ is defined as \eqref{eqn: mc_fundamental_mat_elem}, then $(X_t)_t$ is time-reversible if and only if
+\begin{align}
+\pi(i)Z_{i,j} &=  \pi(j)Z_{j,i},\quad \forall i, j\in \cX.  \label{eqn: mc_rev_fundamental_mat}
+\end{align}
+\end{proposition}
+Note that $\pi(i)\E{}{\tau_{j} | X_0 = i}  \neq  \pi(j)\E{}{\tau_{i} | X_0 = j}$.
+
+\item \begin{theorem} (\textbf{Cycle-tour property})\\
+For states $(i_0,i_1,\ldots, i_{m}) \subset \cX$ of a time-reversible Markov chain, 
+\begin{align}
+&\E{}{\tau_{i_1} | X_0 = i_0} + \E{}{\tau_{i_2} | X_0 = i_1} + \ldots + \E{}{\tau_{i_0} | X_0 = i_{m}} \nonumber \\
+&= \E{}{\tau_{i_m} | X_0 = i_{0}} + \E{}{\tau_{i_{m-1}} | X_0 = i_m} + \ldots +  \E{}{\tau_{i_0} | X_0 = i_1}\label{eqn: mc_cycle_tour}
+\end{align}
+\end{theorem}
+\end{itemize}
+
+\section{Ergodic Theorem and Central Limit Theorem}
+\begin{itemize}
+\item Consider the empirical mean of samples generated by Markov Chain
+\begin{align}
+S_T(h) &= \frac{1}{T}\sum_{t=1}^{T}h(X_t).  \label{eqn: mc_sample_mean}
+\end{align} We are considering the limit behavior of \eqref{eqn: mc_sample_mean}. 
+
+\item 
+\begin{theorem} (\textbf{Ergodic Theorem})  \citep{robert1999monte} \\
+If $(X_t)_t$ is Harris recurrent with a $\sigma$-finite invariant measure $\pi$, then for any $f, g \in L_1(\pi)$ with $\E{\pi}{g} \neq 0$, 
+\begin{align}
+\lim_{T\rightarrow \infty}\frac{S_T(f)}{S_T(g)} &= \frac{\E{\pi}{f}}{\E{\pi}{g}} = \frac{\int f(x)d\pi(x)}{\int g(x)d\pi(x)} \label{eqn: ergodic theorem}
+\end{align}
+\end{theorem}
+It can be shown that if $(X_t)_t$  is \emph{\textbf{Harris positive}} with \textbf{stationary distribution} $\pi$ and if $S_T(h)$ \emph{converges} $\mu_0$-almost surely ($\mu_0$ a.s.) to $\E{\pi}{h}$, for an initial distribution $\mu_0$, this convergence occurs for \emph{\textbf{every initial distribution}} $\mu$·
+
+\begin{corollary}\citep{liu2001monte}\\
+If a \textbf{finite state-space} Markov chain $(X_t)_t$ is irreducible and aperiodic with stationary distribution $\pi$, then $S_T(h)$ converges to $\E{\pi}{h}$ \textbf{almost surely} for any initial distribution $\mu$.
+\end{corollary}
+
+
+\item \begin{theorem}(\textbf{Central Limit Theorem for discrete atoms})\\
+If $(X_t)_t$ is Harris positive recurrent with an atom $\alpha$ such that
+\begin{align*}
+\E{}{T^2_{\alpha} | X_0 \in \alpha} < \infty, \qquad \E{}{\paren{\sum_{t=1}^{T_{\alpha}}\abs{h(X_t)}}^2 \,|\, X_0 \in \alpha} < \infty, \\
+\text{and the variance }\sigma_{h}^2:= \pi(\alpha)\;\E{}{\paren{\sum_{t=1}^{T_{\alpha}}\set{h(X_t) - \E{\mb{\pi}}{h(X)}}}^2 \,|\, X_0\in \alpha} > 0,
+\end{align*}
+then the \textbf{Central Limit Theorem} applies:
+\begin{align}
+\sqrt{T}\paren{S_T(h) - \E{\pi}{h}} \stackrel{\cL}{\sim} \cN(0, \sigma_{h}^2) \label{eqn: mc_clt_discrete}
+\end{align} 
+\end{theorem}
+
+\begin{corollary}\citep{liu2001monte}\\
+For \textbf{finite state-space}, irreducible and aperiodic Markov chain $(X_t)_t$, the Central Limit Theorem holds, i.e. $\sqrt{T}\paren{S_T(h) - \E{\pi}{h}} \stackrel{\cL}{\sim} \cN(0, \sigma_{h}^2)$ for any initial distribution $\mu$.
+\end{corollary}
+
+\item \begin{theorem} (\textbf{Central Limit Theorem for reversible chains})\\
+If $(X_t)_t$ is \underline{\textbf{aperiodic, irreducible, and reversible}} with stationary distribution $\mb{\pi}$, the \textbf{Central Limit Theorem} applies when
+\begin{align}
+0< \sigma_{h}^2 &= \E{\mb{\pi}}{h^2(X_t)} + 2\sum_{s=1}^{\infty}\E{\mb{\pi}}{h(X_t)\, h(X_{t+s})} < \infty. \label{eqn: mc_asym_variance}
+\end{align}
+\end{theorem}
+
+%
+%\item \begin{theorem} \citep{robert1999monte}\\
+%If $(X_t)_t$ is \underline{\textbf{aperiodic, irreducible, positive Harris recurrent}} with invariant distribution $\mb{\pi}$ and \underline{\textbf{geometrically ergodic}}, and if, in addition,
+%\begin{align*}
+%\E{\mb{\pi}}{\abs{h(X)}^{2+\epsilon}} < \infty
+%\end{align*} for some $\epsilon >0$, then 
+%\begin{align*}
+%\sqrt{n}\paren{S_{n}(h)/n - \E{\mb{\pi}}{h(X)}} \stackrel{\cL}{\sim} \cN(0, \sigma^2)
+%\end{align*} where $\sigma$ is given in \eqref{eqn: mc_asym_variance}.
+%\end{theorem}
+\end{itemize}
+
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{reference.bib}
+\end{document}
