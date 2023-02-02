@@ -49,7 +49,7 @@ for all distributions $\cP$ over $\cX \times \cY$, the following holds for any s
 \end{align} If $\cA$ further runs in $\text{poly}(1/\epsilon, 1/\delta, d, \text{size}(c))$, then $\cH$ is said to be \emph{\textbf{\underline{efficiently agnostic} \underline{PAC-learnable}}}. 
 \end{definition}
 
-\item We now introduce the concept of competitivity:
+\item We now introduce the concept of \emph{\textbf{competitivity}}:
 \begin{definition} (\emph{\textbf{Competitiveness}}) \\
 A hypothesis $g$ is \underline{\emph{\textbf{$(\epsilon, \delta)$-competitive}}} with another hypothesis $g'$ if, \emph{with probability higher than} $(1 - \delta)$,
 \begin{align*}
@@ -60,16 +60,16 @@ L(g) \le L(g') + \epsilon.
 \item  \begin{definition} (\emph{\textbf{Non-Uniform Learning}})\\
 Let $\cH$ be a hypothesis set. $\cA$ is an \underline{\emph{\textbf{non-uniform learning algorithm}}} if there
 exists a \emph{\textbf{polynomial function}} $\text{poly}(\cdot, \cdot, \cdot, \cdot, \cdot)$  such that for any $\epsilon > 0$ and $\delta > 0$,
-for all distributions $\cP$ over $\cX \times \cY$, the following holds \underline{for \textbf{\emph{any}} $h \in \cH$}, any sample size $m \ge \text{poly}(1/\epsilon, 1/\delta, h, d, \text{size}(c))$:
+for all distributions $\cP$ over $\cX \times \cY$, the following holds for \textbf{\emph{any}} $h \in \cH$, any sample size $m \ge \text{poly}(1/\epsilon, 1/\delta, \underline{h}, d)$:
 \begin{align}
 \cP^{m}\set{L_{\cP}(\cA(\cD_{m})) - L_{\cP}(h)  \le \epsilon } \ge 1 - \delta. \label{eqn: agnostic_pac_definition}
-\end{align} If $\cA$ further runs in $\text{poly}(1/\epsilon, 1/\delta, h, d, \text{size}(c))$, then $\cH$ is said to be \emph{\textbf{\underline{non-uniformly learnable}}}. 
+\end{align} If $\cA$ further runs in $\text{poly}(1/\epsilon, 1/\delta, h, d)$, then $\cH$ is said to be \emph{\textbf{\underline{non-uniformly learnable}}}. 
 \end{definition}
 
-\item \begin{remark}
-From the definition of \emph{non-uniform learning}, we see that \emph{\textbf{the sample size}} $m \ge m(\epsilon, \delta, h)$, which \emph{\textbf{depends on other hypothesis}} $h \in \cH$, while for agnostic PAC learning, the sample size $m \ge m(\epsilon, \delta)$ is chosen uniformly over $\cH$. 
+\item \begin{remark} (\textbf{\emph{Compare with Agnostic PAC Learning}})\\
+Both \emph{\textbf{agnostic PAC learning}} and \emph{\textbf{non-uniform learning}} require that the output hypothesis will be \emph{\textbf{$(\epsilon, \delta)$-competitive}} with \emph{\textbf{every other hypothesis} in the class}. 
 
-It is easy to see that an \emph{agnostic PAC learnable} class is also \emph{non-uniformly learnable}.
+From the definition of \emph{\textbf{non-uniform learning}}, we see that \emph{\textbf{the sample complexity}} $m \ge m(\epsilon, \delta, h)$, which \underline{\emph{\textbf{depends on other hypothesis}} $h \in \cH$}, while for agnostic PAC learning, the sample size $m \ge m(\epsilon, \delta)$ is chosen \emph{uniformly} over $\cH$.  It is easy to see that an \textbf{\emph{agnostic PAC learnable} class is also \emph{non-uniformly learnable}}.
 \end{remark}
 \end{itemize}
 
