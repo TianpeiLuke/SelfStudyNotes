@@ -147,4 +147,8 @@
   - Conditional Expectation
     - Definitions and Properties 
 
+- Martingale
+  - Marginale, Sub-Martingale, Super-Martingale
+  - Marginale Difference Sequence
+  - Marginale Inequalties
 - Posterior Distributions
