@@ -51,10 +51,12 @@
   
 
 - Radmatcher Complexity and VC-Dimension [pdf](./SL_lecture3_VC_Dimension.pdf)
-  - Radmatcher Complexity
+  - Radmatcher Complexity, Symmetrization
   - VC-Dimension
   - Growth Number, Sauer's Lemma
   - Generalization Bound via Radmatcher Complexity, Growth Number and VC-Dimension
+  - Fundamental Theorem of PAC Learning
+  - Examples of Hypothese Class with Finite or Infinite VC Dimension
 
 - Non-Uniform Learning and Structural Risk Minimization [pdf](./SL_lecture4_Nonuniform_PAC.pdf)
   - Non-Uniform Learning
