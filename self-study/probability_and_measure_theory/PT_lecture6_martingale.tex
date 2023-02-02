@@ -178,8 +178,201 @@ Moreover
 \end{itemize}
 
 \section{Martingale}
+\subsection{Martingale, Sub-Martingale, Super-Martingale}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Martingale}}) \citep{resnick2013probability}\\
+Let $\set{X_n, n \ge 0}$ be a stochastic process on $(\Omega, \srF)$ and $\set{\srF_n, n \ge 0}$ be a \underline{\textbf{\emph{filtration}}}; that is, $\set{\srF_n, n \ge 0}$ is an \emph{increasing sub $\sigma$-fields} of $\srF$
+\begin{align*}
+\srF_0 \subseteq \srF_1 \subseteq \srF_2 \xdotx{\subseteq} \srF.
+\end{align*} Then $\set{ (X_n, \srF_n),  n \ge 0}$ is a \underline{\emph{\textbf{martingale (mg)}}} if
+\begin{enumerate}
+\item  $X_n$ is \emph{\textbf{adapted}} in the sense that for each $n$, $X_n \in \srF_n$; that is, $X_n$ is $\srF_n$-measurable.
+\item  $X_n \in L_1$; that is $\E{}{\abs{X_n}} < \infty$ for $n \ge 0$.
+\item For $0 \le m < n$
+\begin{align}
+\E{}{X_n \;|\; \srF_m} &= X_m, \quad \text{a.s.} \label{def: martingale}
+\end{align}
+\end{enumerate}
+If the equality of \eqref{def: martingale} is replaced by $\ge$; that is, things are getting better on the average:
+\begin{align}
+\E{}{X_n \;|\; \srF_m} &\ge X_m, \quad \text{a.s.} \label{def: sub_martingale}
+\end{align} then $\set{X_n}$ is called a \underline{\emph{\textbf{sub-martingale (submg)}}} while if things are getting worse on
+the average
+\begin{align}
+\E{}{X_n \;|\; \srF_m} &\le X_m, \quad \text{a.s.} \label{def: sup_martingale}
+\end{align}  $\set{X_n}$ is called a \underline{\emph{\textbf{super-martingale (supermg)}}}.
+\end{definition}
+
+\item \begin{remark}
+$\set{X_n}$ is \emph{\textbf{martingale}} if it is \emph{both} a \emph{\textbf{sub}} and \emph{\textbf{supermartingale}}. $\set{X_n}$ is a \emph{\textbf{supermartingale}} if and only if $\set{-X_n}$ is a \emph{\textbf{submartingale}}.
+\end{remark}
+
+\item \begin{remark}
+If $\set{X_n}$ is a \emph{\textbf{martingale}}, then $\E{}{X_n}$ is \emph{constant}. In the case of a \emph{\textbf{submartingale}}, \emph{the mean increases} and for a \emph{\textbf{supermartingale}}, \emph{the mean decreases}.
+\end{remark}
+
+\item \begin{proposition} \citep{resnick2013probability}\\
+If  $\set{ (X_n, \srF_n),  n \ge 0}$ is a \textbf{(sub, super) martingale}, then 
+\begin{align*}
+\set{ (X_n, \sigma\paren{X_0, X_1 \xdotx{,} X_n}),  n \ge 0}
+\end{align*} is also a \textbf{(sub, super) martingale}.
+\end{proposition}
+\end{itemize}
+
+\subsection{Martingale Difference Sequence}
+\begin{itemize}
+\item \begin{definition} (\textbf{\emph{Martingale Differences}}).  \citep{resnick2013probability}\\
+$\set{(d_j, \srB_j), j \ge 0}$ is a \underline{\emph{\textbf{(sub, super) martingale difference sequence}}} or a \textit{\textbf{(sub, super) fair sequence}} if
+\begin{enumerate}
+\item For $j \ge 0$,  $\srB_j \subset \srB_{j+1}$.
+\item For $j \ge 0$,  $d_j \in L_1$,  $d_j \in \srB_j$; that is, $d_j$ is \emph{absolutely integrable} and \emph{$\srB_j$-measurable}.
+\item For $j \ge 0$,
+\begin{align*}
+\E{}{d_{j+1} | \srB_j} &= 0, && \text{(\emph{martingale difference / fair sequence})};\\
+& \ge 0, && \text{(\emph{submartingale difference / subfair sequence})};\\
+& \le 0, && \text{(\emph{supmartingale difference / supfair sequence})}
+\end{align*}
+\end{enumerate}
+\end{definition}
+
+\item \begin{proposition} (\textbf{Construction of Martingale From Martingale Difference})\citep{resnick2013probability}\\
+If $\set{(d_j, \srB_j), j \ge 0}$ is \textbf{(sub, super) martingale difference sequence}, and
+\begin{align*}
+X_n = \sum_{j=0}^{n} d_j, 
+\end{align*} then $\set{(X_n, \srB_n), n \ge 0}$ is a \textbf{(sub, super) martingale}.
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Construction of Martingale Difference From Martingale}) \citep{resnick2013probability}\\
+Suppose $\set{(X_n, \srB_n), n \ge 0}$ is a \textbf{(sub, super) martingale}. Define
+\begin{align*}
+d_0&:= X_0 - \E{}{X_0}\\
+d_j &:= X_j - X_{j-1}, \quad j\ge 1.
+\end{align*}
+Then $\set{(d_j, \srB_j), j \ge 0}$ is a \textbf{(sub, super) martingale difference sequence}.
+\end{proposition}
+
+\item \begin{proposition} (\textbf{Orthogonality of Martingale Differences}). \citep{resnick2013probability}\\
+If $\set{(X_n, \srB_n), n \ge 0}$ is a \textbf{martingale} where $X_n$ can be decomposed as
+\begin{align*}
+X_n = \sum_{j=0}^{n} d_j, 
+\end{align*}  $d_j$ is $\srB_j$-measurable and  $\mathds{E}[d_j^2] < \infty$ for $j \ge 0$, then $\set{d_j}$ are \textbf{orthogonal}:
+\begin{align*}
+\E{}{d_i\,d_j} = 0 \quad i \neq j.
+\end{align*}
+\end{proposition}
+\begin{proof}
+This is an easy verification: If $j > i$, then
+\begin{align*}
+\E{}{d_i\, d_j} &= \E{}{\E{}{d_i\, d_j \,|\, \srB_i}}\\
+&= \E{}{d_i \E{}{d_j \,|\, \srB_i}} = 0. \qed
+\end{align*}
+A consequence is that
+\begin{align*}
+\E{}{X_n^2} &= \E{}{\sum_{i=1}^{n}d_i^2} + 2\sum_{0 \le i < j \le n}\E{}{d_i\,d_j} = \E{}{\sum_{i=1}^{n}d_i^2},
+\end{align*}
+which is \textbf{\emph{non-decreasing}}. From this, it seems likely (and turns out to be true) that $\set{X_n^2}$ is a \emph{\textbf{sub-martingale}}. 
+\end{proof}
+
+\item \begin{example} (\textbf{\emph{Smoothing as Martingale}})\\
+Suppose $X \in L_1$ and $\set{\srB_n, n \ge 0}$ is an increasing family of sub $\sigma$-algebra of $\srB$. Define for $n \ge 0$
+\begin{align*}
+X_n &:= \E{}{X | \srB_n}.
+\end{align*}
+Then $(X_n, \srB_n)$ is a \emph{\textbf{martingale}}. From this result, we see that $\set{(d_n, \srB_n), n \ge 0}$ is a \emph{\textbf{martingale difference sequence}} when 
+\begin{align}
+d_n &:= \E{}{X | \srB_n} - \E{}{X | \srB_{n-1}}, \quad n\ge 1. \label{eqn: smoothing_martingale_difference}
+\end{align}
+\end{example}
+\begin{proof}
+See that 
+\begin{align*}
+\E{}{X_{n+1} | \srB_{n}} &= \E{}{ \E{}{X | \srB_{n+1}} | \srB_n} \\
+&= \E{}{X | \srB_{n}}  \qquad \text{(Smoothing property of conditional expectation)}\\
+&= X_n \qed
+\end{align*} 
+\end{proof}
+
+\item \begin{example}(\emph{\textbf{Sums of Independent Random Variables}}) \\
+Suppose that $\set{Z_n, n \ge 0}$ is an \emph{\textbf{independent} sequence of integrable random variables} satisfying for $n \ge 0$, 
+$\E{}{Z_n} = 0$.  Set
+\begin{align*}
+X_0 &:= 0,\\
+X_n &:= \sum_{i=1}^{n}Z_i, \quad n \ge 1 \\
+\srB_n &:= \sigma\paren{Z_0 \xdotx{,} Z_n}.
+\end{align*} Then $\set{(X_n, \srB_n), n \ge 0}$ is a \emph{\textbf{martingale}} since $\set{(Z_n, \srB_n), n \ge 0}$ is a \emph{\textbf{martingale difference sequence}}.
+\end{example}
 
 
+\item \begin{example} (\emph{\textbf{Likelihood Ratios}}).\\ 
+Suppose $\set{Y_n, n \ge 0}$ are \emph{\textbf{independent identically distributed}} random variables and suppose \emph{the true density} of $Y_n$ is $f_0$· (The word ``\emph{density}" can be understood with respect to some fixed reference measure $\mu$.)  Let $f_1$ be \emph{some other probability density}. For simplicity suppose $f_0(y) > 0$, for all $y$.  For $n \ge 0$, define the likelihood ratio
+\begin{align*}
+X_n &:= \frac{\prod_{i=0}^{n}f_1(Y_i)}{\prod_{i=0}^{n}f_0(Y_i)}\\
+\srB_n &:= \sigma\paren{Y_0 \xdotx{,} Y_n}
+\end{align*} Then $(X_n, \srB_n)$ is a \emph{\textbf{martingale}}.
+\end{example}
+\begin{proof}
+See that
+\begin{align*}
+\E{}{X_{n+1} | \srB_n} &= \E{}{ \paren{\frac{\prod_{i=0}^{n}f_1(Y_i)}{\prod_{i=0}^{n}f_0(Y_i)}}\frac{f_1(Y_{n+1})}{f_0(Y_{n+1})} \;  \Big| \; Y_0 \xdotx{,} Y_{n}}\\
+&= X_n \E{}{\frac{f_1(Y_{n+1})}{f_0(Y_{n+1})} \;  \big| \; Y_0 \xdotx{,} Y_{n}} \\
+&= X_n \E{}{\frac{f_1(Y_{n+1})}{f_0(Y_{n+1})}} \quad (\text{by independence})\\
+&:= X_n \int \frac{f_1(y_{n+1})}{f_0(y_{n+1})} f_0(y_{n+1}) d\mu(y_{n+1}) = X_n. \qed
+\end{align*}
+\end{proof}
+\end{itemize}
+
+\subsection{Martingale Inequalities}
+\begin{itemize}
+\item \begin{proposition} (\textbf{Bernstein Inequality, Martingale Difference Sequence Version}) \citep{wainwright2019high}\\
+Let $\set{(D_k, \srB_k), k \ge 1}$ be a \textbf{martingale difference sequence}, and suppose that 
+\begin{align*}
+\E{}{\exp\paren{\lambda D_k} | \srB_{k-1}} \le \exp\paren{\frac{\lambda^2 \nu_k^2}{2} }
+\end{align*} almost surely for any $\abs{\lambda} < 1/\alpha_k$. Then the following hold:
+\begin{enumerate}
+\item The sum $\sum_{k=1}^{n}D_k$ is \textbf{sub-exponential} with \textbf{parameters} $\paren{\sqrt{\sum_{k=1}^{n}\nu_k^2}\;  , \;\alpha_{*}}$ where $\alpha_{*} := \max_{k=1 \xdotx{,} n} \alpha_k$. That is, for any $\abs{\lambda} < 1/\alpha_{*}$, 
+\begin{align*}
+\E{}{\exp\set{\lambda \paren{\sum_{k=1}^{n}D_k}}} \le \exp\paren{\frac{\lambda^2\sum_{k=1}^{n}\nu_k^2}{2} }
+\end{align*}
+\item The sum satisfies \textbf{the concentration inequality}
+\begin{align}
+\bP\set{\abs{\sum_{k=1}^{n}D_k} \ge t } &\le \left\{ \begin{array}{cc}
+2 \exp\paren{- \frac{t^2}{2 \sum_{k=1}^{n}\nu_k^2}} & \text{ if } 0 \le t \le \frac{\sum_{k=1}^{n}\nu_k^2}{\alpha_{*}} \\[15pt]
+2 \exp\paren{- \frac{t}{\alpha_{*}}} &\text{ if } t > \frac{\sum_{k=1}^{n}\nu_k^2}{\alpha_{*}}.
+\end{array}\right. \label{ineqn: bernstein_inequality_martingale}
+\end{align}
+\end{enumerate}
+\end{proposition}
+
+\item \begin{corollary} (\textbf{Azuma-Hoeffding Inequality, Martingale Difference})\citep{wainwright2019high}\\
+Let $\set{(D_k, \srB_k), k \ge 1}$ be a \textbf{martingale difference sequence} for which there are constants $\set{(a_k, b_k)}^{n}_{k=1}$ such that $D_k \in [a_k, b_k]$ almost surely for all $k = 1 \xdotx{,} n$. Then, for all $t \ge 0$,
+\begin{align}
+\bP\set{\abs{\sum_{k=1}^{n}D_k} \ge t } &\le  2 \exp\paren{- \frac{2 t^2}{ \sum_{k=1}^{n}(b_k - a_k)^2}} \label{ineqn: hoeffding_inequality_martingale}
+\end{align}
+\end{corollary}
+
+\item An important application of \emph{Azuma-Hoeffding Inequality} concerns functions that satisfy a \emph{bounded difference property}. 
+\begin{definition} (\textbf{\emph{Functions with Bounded Difference Property}})\\
+Given vectors $x, x' \in \cX^n$ and an index $k \in \set{1, 2 \xdotx{,} n}$, we define a new vector $x^{(-k)} \in \cX^n$ via
+\begin{align*}
+x_j^{(-k)} &= \left\{\begin{array}{cc}
+x_j & j \neq k\\
+x_k'& j = k
+\end{array}
+\right.
+\end{align*}
+With this notation, we say that $f: \cX^n \to \bR$ satisfies \underline{\textbf{\emph{the bounded difference inequality}}} with parameters $(L_1 \xdotx{,} L_n)$ if, for each index $k = 1, 2 \xdotx{,} n$,
+\begin{align}
+\abs{f(x) - f(x^{(-k)})} \le L_k, \quad\text{ for all }x, x' \in \cX^n. \label{eqn: bounded_difference_property}
+\end{align}
+\end{definition}
+
+\item \begin{corollary} (\textbf{McDiarmid's Inequality / Bounded Differences Inequality})\citep{wainwright2019high}\\
+Suppose that $f$ satisfies \textbf{the bounded difference property} \eqref{eqn: bounded_difference_property} with parameters $(L_1 \xdotx{,} L_n)$ and that the random vector $X = (X_1, X_2 \xdotx{,} X_n)$ has \textbf{independent} components. Then
+\begin{align}
+\bP\set{\abs{f(X) - \E{}{f(X)}} \ge t } &\le  2 \exp\paren{- \frac{2 t^2}{ \sum_{k=1}^{n}L_k^2}}. \label{ineqn: macdiarmid_bounded_difference_inequality}
+\end{align}
+\end{corollary}
+\end{itemize}
 
 
 \newpage
