@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  2 FEB 2023 11:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  2 FEB 2023 12:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -792,38 +792,74 @@ Package amsmath Warning: Foreign command \atop;
 (amsmath)                \frac or \genfrac should be used instead
 (amsmath)                 on input line 125.
 
-[3] [4] (./PT_lecture6_martingale.bbl) [5] (./PT_lecture6_martingale.aux) ) 
+[3] [4]
+Overfull \hbox (4.24231pt too wide) in paragraph at lines 238--240
+[]\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Construction of Mar-tin-gale From M
+ar-tin-gale Dif-fer-ence\OT1/cmr/m/it/10.95 )[Resnick,
+ []
+
+
+Overfull \hbox (7.04062pt too wide) in paragraph at lines 245--247
+[]\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Construction of Mar-tin-gale Dif-fe
+r-ence From Mar-tin-gale\OT1/cmr/m/it/10.95 ) [Resnick,
+ []
+
+[5] [6]
+Missing character: There is no Â in font cmr10!
+Missing character: There is no · in font cmr10!
+
+Overfull \hbox (1.60684pt too wide) in paragraph at lines 332--333
+[]\OT1/cmr/m/it/10.95 The sum $[][] \OML/cmm/m/it/10.95 D[]$ \OT1/cmr/m/it/10.9
+5 is \OT1/cmr/bx/it/10.95 sub-exponential \OT1/cmr/m/it/10.95 with \OT1/cmr/bx/
+it/10.95 pa-ram-e-ters $[]$ \OT1/cmr/m/it/10.95 where $\OML/cmm/m/it/10.95 [] 
+\OT1/cmr/m/n/10.95 :=
+ []
+
+[7]
+Overfull \hbox (15.87915pt too wide) in paragraph at lines 346--348
+[]\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Azuma-Hoeffding In-equal-ity, Mar-t
+in-gale Dif-fer-ence\OT1/cmr/m/it/10.95 )[Wainwright, 2019] 
+ []
+
+
+Overfull \hbox (19.59953pt too wide) in paragraph at lines 369--371
+[]\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 McDiarmid's In-equal-ity / Bounded 
+Dif-fer-ences In-equal-ity\OT1/cmr/m/it/10.95 )[Wainwright,
+ []
+
+[8] (./PT_lecture6_martingale.bbl) [9] (./PT_lecture6_martingale.aux) ) 
 Here is how much of TeX's memory you used:
- 18016 strings out of 493029
- 337689 string characters out of 6136233
- 434416 words of memory out of 5000000
- 21160 multiletter control sequences out of 15000+600000
- 14847 words of font info for 62 fonts, out of 8000000 for 9000
+ 18028 strings out of 493029
+ 338042 string characters out of 6136233
+ 436509 words of memory out of 5000000
+ 21172 multiletter control sequences out of 15000+600000
+ 15154 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,13n,84p,3253b,318s stack positions out of 5000i,500n,10000p,200000b,80000s
-</us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/rsfs/rsfs10.pfb>
-Output written on PT_lecture6_martingale.pdf (5 pages, 197381 bytes).
+ 61i,16n,84p,3253b,340s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
+7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/rsfs/rsfs10.pfb>
+Output written on PT_lecture6_martingale.pdf (9 pages, 237183 bytes).
 PDF statistics:
- 99 PDF objects out of 1000 (max. 8388607)
- 72 compressed objects within 1 object stream
+ 117 PDF objects out of 1000 (max. 8388607)
+ 85 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

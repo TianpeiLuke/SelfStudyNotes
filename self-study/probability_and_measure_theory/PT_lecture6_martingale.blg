@@ -3,44 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: PT_lecture6_martingale.aux
 The style file: plainnat.bst
 Database file #1: reference.bib.bib
-You've used 1 entry,
+You've used 2 entries,
             2773 wiz_defined-function locations,
-            597 strings with 4964 characters,
-and the built_in function-call counts, 325 in all, are:
-= -- 22
-> -- 10
-< -- 1
-+ -- 4
-- -- 3
-* -- 17
-:= -- 58
-add.period$ -- 3
-call.type$ -- 1
-change.case$ -- 3
-chr.to.int$ -- 1
-cite$ -- 2
-duplicate$ -- 20
-empty$ -- 33
-format.name$ -- 4
-if$ -- 62
+            603 strings with 5089 characters,
+and the built_in function-call counts, 628 in all, are:
+= -- 45
+> -- 20
+< -- 3
++ -- 8
+- -- 6
+* -- 35
+:= -- 107
+add.period$ -- 6
+call.type$ -- 2
+change.case$ -- 6
+chr.to.int$ -- 2
+cite$ -- 4
+duplicate$ -- 40
+empty$ -- 65
+format.name$ -- 8
+if$ -- 125
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 2
-newline$ -- 13
-num.names$ -- 4
-pop$ -- 12
+missing$ -- 4
+newline$ -- 18
+num.names$ -- 8
+pop$ -- 23
 preamble$ -- 1
-purify$ -- 3
+purify$ -- 6
 quote$ -- 0
-skip$ -- 13
+skip$ -- 26
 stack$ -- 0
-substring$ -- 2
-swap$ -- 1
-text.length$ -- 0
+substring$ -- 4
+swap$ -- 3
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 6
+type$ -- 12
 warning$ -- 0
-while$ -- 3
+while$ -- 6
 width$ -- 0
-write$ -- 19
+write$ -- 32
