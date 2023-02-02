@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  31 JAN 2023 21:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  1 FEB 2023 21:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -479,15 +479,7 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 38.
-
-Overfull \hbox (4.82556pt too wide) in paragraph at lines 66--67
-\OT1/cmr/m/n/10.95 If $\OMS/cmsy/m/n/10.95 A$ \OT1/cmr/m/n/10.95 fur-ther runs 
-in $[](1\OML/cmm/m/it/10.95 =^^O; \OT1/cmr/m/n/10.95 1\OML/cmm/m/it/10.95 =^^N;
- h; d; []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 c\OT1/cmr/m/n/10.95 ))$, then 
-$\OMS/cmsy/m/n/10.95 H$ \OT1/cmr/m/n/10.95 is said to be $[]$. 
- []
-
-[2]
+ [2]
 Overfull \hbox (7.1989pt too wide) in paragraph at lines 86--88
 []\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Characterization of Non-Uniform Lea
 rn-able Class\OT1/cmr/m/it/10.95 ) [Shalev-Shwartz
@@ -506,7 +498,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  7704 strings out of 493029
  103394 string characters out of 6136233
- 223328 words of memory out of 5000000
+ 224328 words of memory out of 5000000
  11079 multiletter control sequences out of 15000+600000
  14165 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -526,7 +518,7 @@ b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on SL_lecture4_Nonuniform_PAC.pdf (8 pages, 211892 bytes).
+Output written on SL_lecture4_Nonuniform_PAC.pdf (8 pages, 212085 bytes).
 PDF statistics:
  95 PDF objects out of 1000 (max. 8388607)
  68 compressed objects within 1 object stream
