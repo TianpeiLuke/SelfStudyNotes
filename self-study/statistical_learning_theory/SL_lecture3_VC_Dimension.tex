@@ -314,9 +314,9 @@ We defined the notion of \emph{\textbf{shattering}}, by considering \emph{\textb
 \item \begin{definition} (\emph{\textbf{Growth Function}}). \\
 Let $\cH$ be a hypothesis class. Then \underline{\emph{\textbf{the growth function of $\cH$}}}, denoted $\tau_{\cH}: \bN \to \cN$, is defined as
 \begin{align*}
-\tau_{\cH}(m) &:= \max_{\cD \subset \cX: \abs{\cD} = n}\abs{\cH_{\cD}}.
+\tau_{\cH}(n) &:= \max_{\cD \subset \cX: \abs{\cD} = n}\abs{\cH_{\cD}}.
 \end{align*}
-In words, $\tau_{\cH}(m)$ is \textbf{\emph{the number of different functions}} from a set $\cD$ of \emph{\textbf{size $n$}} to $\set{0,1}$ that can be obtained by \emph{\textbf{restricting $\cH$ to $\cD$}}.
+In words, $\tau_{\cH}(n)$ is \textbf{\emph{the number of different functions}} from a set $\cD$ of \emph{\textbf{size $n$}} to $\set{0,1}$ that can be obtained by \emph{\textbf{restricting $\cH$ to $\cD$}}.
 \end{definition}
 
 \item \begin{remark}
@@ -356,12 +356,7 @@ We are left with proving Equation \eqref{eqn: sauer_lemma_3} and we do it using 
 \begin{enumerate}
 \item For $n = 1$, no matter what $\cH$ is, either both sides of Equation \eqref{eqn: sauer_lemma_3} equal $1$ or both sides equal $2$ (\emph{the empty set} is always considered to be shattered by $\cH$).
 
-
-
-
-
 \item  \emph{Assume} Equation \eqref{eqn: sauer_lemma_3} holds for sets of size $k < n$ and let us prove it for sets of size $n$. 
-
 Fix $\cH$ and $\cD = \set{x_1 \xdotx{,} x_n}$. Denote $\cD_{-1} = \set{x_2 \xdotx{,} x_n}$ and in addition, define the
 following two sets:
 \begin{align*}
@@ -446,7 +441,7 @@ Let $\cH$ be a family of functions taking values in $\set{-1, +1}$. Then the fol
 \end{align}
 \end{corollary}
 \begin{proof}
-For a fixed sample $\cD = (x_1 \xdotx{,} x_n)$, we denote by $\cH_{\cD} \subset \{-1, +1\}^{m}$ the set of vectors of function values $(h(x_1) \xdotx{,} h(x_n))$ where $h$ is in $\cH$. Since $h\in \cH$ takes values in $\set{-1, +1}$, the \emph{norm} of these vectors is bounded by $\sqrt{n}$. We can then apply
+For a fixed sample $\cD = (x_1 \xdotx{,} x_n)$, we denote by $\cH_{\cD} \subset \{-1, +1\}^{n}$ the set of vectors of function values $(h(x_1) \xdotx{,} h(x_n))$ where $h$ is in $\cH$. Since $h\in \cH$ takes values in $\set{-1, +1}$, the \emph{norm} of these vectors is bounded by $\sqrt{n}$. We can then apply
 \emph{Massart's lemma} as follows:
 \begin{align*}
 \frR_{n}(\cH) &= \E{\cD}{\E{\sigma}{\sup_{u \in \cH_{\cD}}\frac{1}{n}\sum_{i=1}^{n}\sigma_i u_i \Big| \cD}} \le  \E{\cD}{\frac{\sqrt{n}\,\sqrt{2 \log\abs{\cH_{\cD}}}}{n}}
@@ -457,6 +452,14 @@ By definition, $\abs{\cH_{\cD}}$ is bounded by \emph{the growth function}, thus,
 \end{align*}
 which concludes the proof. \qed
 \end{proof}
+
+\item \begin{definition}(\textbf{\emph{VC-Entropy}})\\
+Let $\cH$ be an aribitray collection of subsets in $\cY$. The quantity 
+\begin{align*}
+h_{\cH}(y_1 \xdotx{,} y_n) &= \log \abs{H \cap \set{y_1 \xdotx{,} y_n}: H \in \cH}
+\end{align*}
+ is called \textbf{\emph{the Vapnik-Chervonenkis (or VC) entropy}}. It is equal to $\log \tau_{\cH}(n)$.
+\end{definition}
 \end{itemize}
 \subsection{Generalization Bounds via Growth Function and VC-Dimension}
 \begin{itemize}
@@ -499,18 +502,180 @@ which has the general form of \eqref{eqn: generalization_bound_vc_dim2}. \emph{T
 
 \end{itemize}
 
+\subsection{Fundamental Theorem of PAC Learning}
+\begin{itemize}
+\item \begin{theorem} (\textbf{The Fundamental Theorem of Statistical Learning}). \citep{shalev2014understanding}\\
+Let $\cH$ be a hypothesis class of functions from a domain $\cX$ to $\set{0,1}$ and let the loss function be the $0$-$1$ loss. Then, the following are \textbf{equivalent}:
+\begin{enumerate}
+\item $\cH$ has the \textbf{uniform convergence property}.
+\item Any \textbf{ERM} rule is a successful \textbf{agnostic PAC learner} for $\cH$.
+\item $\cH$ is \textbf{agnostic PAC learnable}.
+\item $\cH$ is \textbf{PAC learnable}.
+\item Any ERM rule is a successful PAC learner for $\cH$.
+\item $\cH$ has a \textbf{finite VC-dimension}.
+\end{enumerate}
+\end{theorem}
+
+\item \begin{remark}
+From the above theorem, we see that $\cH$ is \emph{PAC learnable} $\Leftarrow$ $\cH$ is \emph{agnostic PAC learnable}.
+
+If $\cH$ is (agnostic) PAC learnable, then the ERM rule is a successful (agnostic) PAC learner for $\cH$. 
+\end{remark}
+
+\item \begin{theorem} (\textbf{The Fundamental Theorem of Statistical Learning, Quantitative Version}). \citep{shalev2014understanding}\\
+Let $\cH$ be a hypothesis class of functions from a domain $\cX$ to $\set{0,1}$ and let the loss function be the $0$-$1$ loss. Assume that $\text{VCdim}(\cH) = d < \infty$. Then, there are absolute constants $C_1, C_2$ such that
+\begin{enumerate}
+\item $\cH$ has the \textbf{uniform convergence property} with sample complexity
+\begin{align*}
+C_1\frac{d + \log(1/\delta)}{\epsilon^2} \le n^{UC}_{\cH}(\epsilon, \delta) \le C_2\frac{d + \log(1/\delta)}{\epsilon^2}
+\end{align*}
+\item $\cH$ is \textbf{agnostic PAC learnable} with sample complexity
+\begin{align*}
+C_1\frac{d + \log(1/\delta)}{\epsilon^2} \le n_{\cH}(\epsilon, \delta) \le C_2\frac{d + \log(1/\delta)}{\epsilon^2}
+\end{align*}
+\item $\cH$ is \textbf{PAC learnable} with sample complexity
+\begin{align*}
+C_1\frac{d + \log(1/\delta)}{\epsilon^2} \le n_{\cH}(\epsilon, \delta) \le C_2\frac{d\log(1/\epsilon) + \log(1/\delta)}{\epsilon^2}
+\end{align*}
+\end{enumerate}
+\end{theorem}
+\end{itemize}
+
 \subsection{Examples}
 \begin{itemize}
-\item \begin{example}(\textbf{\emph{Intervals}})\\
+\item \begin{example}(\textbf{\emph{Threshold Functions over $\bR$}})\\
+Let $\cH$ be the \textbf{class of \emph{threshold functions}} over $\bR$; i.e. $h_a(x) := \ind{x \le a}$.   We claim that \underline{$\text{VCdim}(\cH) = 1$}.
+
+Take a set $\cD = \set{x_1}$. Now, if we take $a = x_1 + 1$, then we have $h_a(x_1) = \ind{x_1 \le a} = 1$, and if we take $a = x_1 - 1$, then we have $h_a(x_1) =  \ind{x_1 \le a} = 0$. Therefore, $\cH_{\cD}$ is the set of all functions from $\cD$ to $\set{0,1}$, and $\cH$ \emph{shatters} $\cD$. 
+
+Now take a set $\cD = \set{x_1, x_2}$, where $x_1 \le x_2$. No $h \in \cH$ can account for the labeling $(0, 1)$, because any threshold that assigns the label $0$ to $x_1$ must assign the label $0$ to $x_2$ as well. Therefore not all functions from $\cD$ to $\set{0,1}$ are included in $\cH_{\cD}$; hence $\cD$ is \emph{not shattered} by $\cH$. By definition, \emph{\textbf{VC dimension of $\cH$ is equal to $1$} and \textbf{$\cH$ is PAC learnable}}.
 \end{example}
+
+\item \begin{example}(\textbf{\emph{Intervals over $\bR$}})\\
+Let $\cH$ be the hypothesis class of \emph{\textbf{intervals over $\bR$}}, namely, $\cH = \set{h_{a,b}: a,b \in \bR, a < b}$, where $h_{a,b} :
+\bR \to \set{0,1}$ is a function such that $h_{a,b}(x) = \ind{x \in (a,b)}$. We claim that \underline{$\text{VCdim}(\cH) = 2$}.
+
+It is clear that the VC-dimension is \emph{at least two}, since \emph{all four dichotomies} $(0,0), (0, 1), (1, 0), (1, 1)$ can be realized. Now take
+an arbitrary set $\cD = \set{x_1, x_2, x_3}$ and assume without loss of generality that $x_1 \le x_2 \le x_3$. Then, the labeling $(1,0,1)$ cannot be obtained by an interval and therefore $\cH$ does not shatter $\cD$. 
+\end{example}
+
+\begin{figure}
+\begin{minipage}[t]{1\linewidth}
+  \centering
+  \centerline{\includegraphics[scale = 0.5]{axis_aligned_rectangle.png}}
+\end{minipage}
+\caption{\footnotesize{\textbf{(left) There exists a $4$-point set that can be shattered by axis aligned rectangle. (right). Any $5$ point set cannot be shattered.   \citep{shalev2014understanding}}}}
+\label{fig: axis_aligned_rectangle}
+\end{figure}
 
 \item \begin{example}(\textbf{\emph{Axis Aligned Rectangles}})\\
+Let $\cH$ be the class of \emph{\textbf{axis aligned rectangles}}, formally:
+\begin{align*}
+\cH := \set{h_{(a_1, a_2, b_1, b_2)}: a_1 \le a_2 \land b_1 \le b_2},
+\end{align*} where $h_{(a_1, a_2, b_1, b_2)}(x_1, x_2) := \ind{(x_1, x_2) \in [a_1, a_2] \times [b_1, b_2]}$. We shall show in the following that \underline{$\text{VCdim}(\cH) = 4$}.
+
+To prove this we need to \emph{find a set of $4$ points that are shattered by $\cH$}, and show that \emph{\textbf{no set of $5$ points can be shattered by $\cH$}}. Finding a set of $4$ points that are shattered is easy (see Figure \ref{fig: axis_aligned_rectangle}).
+
+Now, consider any set $\cD \subset \bR^2$ of $5$ points. In $\cD$, take a \textit{\textbf{leftmost point}} (whose first coordinate is the smallest in $\cD$), a \emph{\textbf{rightmost point}} (first coordinate is the largest), a \emph{\textbf{lowest point}} (second coordinate is the smallest), and a \emph{\textbf{highest point}} (second coordinate is the largest). Without loss of generality, denote $\cD = \set{x_1 \xdotx{,} x_5}$ and let $x_5$ be the point that \emph{was not selected}. Now, define the labeling $(1,1,1,1,0)$. It is \emph{impossible to obtain this labeling} by an \emph{axis aligned rectangle}. Indeed, such a rectangle must contain $x_1 \xdotx{,} x_4$; but in this case the rectangle contains $x_5$ as well, because its coordinates are within the intervals defined by the selected points. So, $\cD$ is not shattered by $\cH$.
 \end{example}
 
-\item \begin{example}(\textbf{\emph{Subspace in $\bR^d$}})\\
+
+
+\item \begin{example}(\textbf{\emph{Hyperplanes in $\bR^d$}})\\
+Consider the set of \emph{\textbf{hyperplanes}} in $\bR^d$. A hyperplane can be represented as $\inn{w}{x} + b$. Let $\cH$ be set of functions $\sgn{\inn{w}{x} + b}$ for all $w \in \bR^d$ and $b \in \bR$. We claim that \underline{$\text{VCdim}(\cH) = d + 1$}, that is \emph{\textbf{the dimension of parameter set} for hyperplane}.
+
+We derive \emph{a \textbf{lower bound}} by starting with a set of $d + 1$ points in $\bR^d$, setting $x_0$ to be the \emph{origin} and defining $x_i$, for $i \in \set{1 \xdotx{,} d}$, as the point whose $i$-th coordinate is $1$ and all others are $0$. Let $y_0, y_1 \xdotx{,} y_d \in \set{-1,+1}$ be an arbitrary set of labels for $x_0, x_1  \xdotx{,} x_d$. Let $w$ be the vector whose $i$-th coordinate is $y_i$ and $b = y_0/2$. Then the classifier defined by the hyperplane of equation $\inn{w}{x} + y_0/2 = 0$ \emph{shatters}
+$x_0, x_1  \xdotx{,} x_d$ since for any $i \in [0, d]$,
+\begin{align*}
+\sgn{\inn{w}{x_i} +  \frac{y_0}{2}} = \sgn{y_i +  \frac{y_0}{2}} = y_i.
+\end{align*}
+
+To obtain \emph{an \textbf{upper bound}}, it suffices to show that \emph{\textbf{no set of $d + 2$ points can be shattered by halfspaces}}. We have the following \emph{\textbf{Radon's theorem}}, which confirms that $\cD$ with $d+2$ points can be \emph{partitioned into two subsets} $\cD_1$ and $\cD_2$ whose \emph{\textbf{convex hull} \textbf{interset}}. Observe that when two sets of points $\cD_1$ and $\cD_2$ are \emph{\textbf{separated by a hyperplane}}, \emph{their convex hulls are also separated by that hyperplane}.  Thus,  $\cD_1$ and $\cD_2$  \emph{\textbf{cannot be separated by a hyperplane}} and $\cD$ is not \emph{shattered}.  Combining our lower and upper bounds, we have proven that the VC-dimenson of hyperplanes in $\bR^d$ is equal to $d+1$.
+
+\begin{theorem} (\textbf{Radon's Theorem}) \citep{mohri2018foundations}\\
+Any set $\cX$ of $d+2$ points in $\bR^d$ can be partitioned into two subsets $\cX_1$ and $\cX_2$ such that \textbf{the convex hulls} of $\cX_1$ and $\cX_2$ intersect.
+\end{theorem}
 \end{example}
 
-\item \begin{example}(\textbf{\emph{Convex $d$-gons in $\bR^d$}})
+
+\begin{figure}
+\begin{minipage}[hb]{1\linewidth}
+  \centering
+  \centerline{\includegraphics[scale = 0.6]{convex_d_gon_vc_dim.png}}
+\end{minipage}
+\caption{\footnotesize{\textbf{ Convex d-gons in the plane can shatter $2d + 1$ points. \citep{mohri2018foundations}}}}
+\label{fig: convex_d_gon_vc_dim}
+\end{figure}
+
+
+
+\item \begin{example}(\textbf{\emph{Finite Dimensional Vector Space of Real Functions on $\bR^d$}})\\
+Let $\cF$ be a \emph{finite-dimensional vector space} of \emph{real functions} on $\bR^d$, $\text{dim}(\cF) = r < \infty$. Let $\cH$ be the set of
+hypotheses,  which we refer to as \emph{\textbf{the subgraph class}} of $\cF$.
+\begin{align*}
+\cG(\cF) := \set{\set{x \in \bR^d: f(x) \le 0}: f\in \cF}.
+\end{align*} We claim that  \underline{$\text{VCdim}(\cG(\cF)) \le r$}.
+ (Hint: select an arbitrary set of $m = r + 1$ points and consider linear mapping $u: \cF \to \bR^m$ defined by: $u(f) = (f(x_1) \xdotx{,} f(x_m))$.)
+ 
+We summarize the result in the following proposition
+\begin{proposition}(\textbf{Finite-Dimensional Vector Spaces})  \citep{mohri2018foundations, wainwright2019high}\\
+Let $\cF$ be a vector space of functions $f: \bR^d \to \bR$ with dimension $\text{dim}(\cF)  = r < \infty$. Then the subgraph class $\cG(\cF)$ has VC
+dimension \textbf{at most} $r$.
+\end{proposition}
+\begin{proof}
+Let $x := (x_1 \xdotx{,} x_{m})$ where $m = r + 1$. Consider linear mapping $u_x: \cF \to \bR^m$ induced by $x$ as $u_{x}(f) = (f(x_1) \xdotx{,} f(x_m))$. By construction, the \emph{\textbf{range} of the mapping} $u_x$ is a \emph{linear subspace} of $\bR^m$ with dimension at most $\text{dim}(\cF) = r = m - 1 < m$. Therefore, there must exist a \emph{non-zero vector} $\gamma \in \bR^m$ such that $\inn{\gamma}{u_x(f)} = 0$ for all $f \in  \cF$.  We may assume without loss of generality that at least one coordinate is positive, and then write
+\begin{align}
+\sum_{i: \gamma_i >0}\gamma_i f(x_i) &= \sum_{j: \gamma_j \le 0}(-\gamma_j) f(x_j), \quad \forall f \in \cF. \label{pf: finite_dim_fun_space_vc_dim}
+\end{align} 
+Proceeding via proof by \emph{contradiction}, suppose that there were to exist some $f \in  \cF$ such that the associated subgraph set $\set{x \in \bR^d: f(x) \le 0}$ included only the subset samples $\set{x_j:  \gamma_j \le 0}$. For such a function $f$, the left-hand side of equation \eqref{pf: finite_dim_fun_space_vc_dim} would be \emph{strictly positive} while the right-hand side would be \emph{non-positive}, which is a \emph{contradiction}. We conclude that
+$\cH(\cF)$ fails to shatter the set $\set{x_1 \xdotx{,} x_{m}}$, as claimed. \qed
+\end{proof}
+\end{example}
+
+
+
+\item \begin{example}(\textbf{\emph{Convex $d$-gons in $\bR^2$}})\\
+Consider $\cH$ the class of \textbf{\emph{convex $d$-gons in the plane}}. We claim that \underline{$\text{VCdim}(\cH) = 2d + 1$}, 
+
+To get a lower bound, we show that \emph{\textbf{any set of $2d + 1$ points can be fully shattered}}. To do this, we select $2d + 1$ points that \emph{lie \textbf{on a circle}}, and for a particular labeling, if there are \emph{more negative than positive labels}, then \emph{the \textbf{points} with \textbf{the positive labels} are used as
+\textbf{the polygon's vertices}}, as in Figure \ref{fig: convex_d_gon_vc_dim} (a). Otherwise, \emph{the \textbf{tangents} of the \textbf{negative points}} serve as the \emph{\textbf{edges} of the polygon}, as shown in Figure \ref{fig: convex_d_gon_vc_dim} (b).
+
+To derive an upper bound, it can be shown that \emph{choosing \textbf{points on the circle} \textbf{maximizes} \textbf{the number of possible dichotomies}}, and thus $\text{VCdim}(\cH) = 2d + 1$. 
+
+Note also that if $\cH$ is the set of \underline{\emph{\textbf{all convex polygons}}}, then \underline{$\text{VCdim}(\cH) = \infty$}.
+\end{example}
+
+\item \begin{example}(\textbf{\emph{Spheres in $\bR^d$}})\\
+Consider the space of all $d-1$ dimensional sphere $\cS^{d}$, with sphere $\bS_{a, b} := \set{x \in \bR^d: \norm{x - a}{2} \le b }$. Note that 
+\begin{align*}
+x \in \bS_{a, b} \Leftrightarrow  f_{a, b}(x) := \norm{x}{2}^2 - 2 \inn{a}{x} +  \norm{a}{2}^2 - b^2 \le 0.
+\end{align*} so that the sphere  $\bS_{a,b}$ is a \emph{\textbf{subgraph}} of the function $f_{a,b}$. 
+
+In order to compute the VC dimension of $\cS^{d}$, we first define a feature map $\varphi: \bR^d \to \bR^{d+2}$ via
+\begin{align*}
+\varphi(x) := (1, x_1 \xdotx{,} x_d, \norm{x}{2}^2)
+\end{align*}  and then consider functions of the form
+\begin{align*}
+g_c(x) := \inn{c}{\varphi(x)}, \quad c\in \bR^{d+2}
+\end{align*} The family of functions $\set{g_c, c \in \bR^{d+1}}$ is a vector space of dimension $d + 2$, and it contains the function class $\set{ f_{a,b}, (a, b) \in \bR^d \times \bR_{+}}$. Consequently, by applying Proposition on vector space of real-valued functions  to this larger vector space, we conclude that \underline{$\text{VCdim}(\cS^{d}) \le d+ 2$}. \emph{This bound} is adequate for many purposes, but is \emph{\textbf{not sharp}}: a more careful analysis shows that \underline{\emph{\textbf{the VC dimension} of \textbf{spheres} in $\bR^d$ is actually $d + 1$}}.
+\end{example}
+
+
+\begin{figure}
+\begin{minipage}[t]{1\linewidth}
+  \centering
+  \centerline{\includegraphics[scale = 0.6]{sine_vc_dim.png}}
+\end{minipage}
+\caption{\footnotesize{\textbf{The class of sine functions has infinity VC dimension. \citep{mohri2018foundations}}}}
+\label{fig: sine_vc_dim}
+\end{figure}
+
+\item \begin{example}(\textbf{\emph{Sine Functions}})\\
+The previous examples could suggest that \emph{\textbf{the VC-dimension} of $\cH$ coincides with} \emph{\textbf{the number of free parameters} defining $\cH$}.  \underline{\emph{\textbf{However, this does not hold in general}}}. 
+
+The following provides a striking example from this point of view. Consider the following \emph{\textbf{family of sine functions}}: $\cH := \set{t\to \sin(\omega t): \omega \in \bR}$.  One instance of this function class is shown in Figure \ref{fig: sine_vc_dim}. These sine functions can be used to \emph{classify the points on the real line}: a point is labeled \emph{\textbf{positively}} if it is \emph{\textbf{above the curve}}, \emph{negatively} \emph{otherwise}. 
+
+Although this family of sine function is defined via \emph{a single parameter}, $\omega$, it can be shown that \underline{$\text{VCdim}(\cH) = \infty$}.
 \end{example}
 \end{itemize}
 
