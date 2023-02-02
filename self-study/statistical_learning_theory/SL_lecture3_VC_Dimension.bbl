@@ -1,4 +1,4 @@
-\begin{thebibliography}{3}
+\begin{thebibliography}{4}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -15,6 +15,12 @@ Mehryar Mohri, Afshin Rostamizadeh, and Ameet Talwalkar.
 Shai Shalev-Shwartz and Shai Ben-David.
 \newblock \emph{Understanding machine learning: From theory to algorithms}.
 \newblock Cambridge university press, 2014.
+
+\bibitem[Wainwright(2019)]{wainwright2019high}
+Martin~J Wainwright.
+\newblock \emph{High-dimensional statistics: A non-asymptotic viewpoint},
+  volume~48.
+\newblock Cambridge University Press, 2019.
 
 \bibitem[Wellner et~al.(2013)]{wellner2013weak}
 Jon Wellner et~al.

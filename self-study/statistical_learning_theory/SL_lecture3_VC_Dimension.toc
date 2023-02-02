@@ -5,5 +5,6 @@
 \contentsline {subsection}{\numberline {3.2}Growth Function}{8}
 \contentsline {subsection}{\numberline {3.3}Relate Growth Function to Rademacher Complexity}{10}
 \contentsline {subsection}{\numberline {3.4}Generalization Bounds via Growth Function and VC-Dimension}{12}
-\contentsline {subsection}{\numberline {3.5}Examples}{13}
-\contentsline {subsection}{\numberline {3.6}Lower Bounds}{13}
+\contentsline {subsection}{\numberline {3.5}Fundamental Theorem of PAC Learning}{13}
+\contentsline {subsection}{\numberline {3.6}Examples}{14}
+\contentsline {subsection}{\numberline {3.7}Lower Bounds}{17}
