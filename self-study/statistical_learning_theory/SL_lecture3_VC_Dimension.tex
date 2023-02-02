@@ -350,9 +350,15 @@ When $n > d + 1$ the right-hand side of the preceding is \emph{at most} $\paren{
  &= \paren{\frac{n}{d}}^{d}\paren{1 + \frac{d}{n}}^n \le \paren{\frac{n}{d}}^{d}e^{d}
 \end{align*} where $1+x \le e^x$.
 
+
+
 We are left with proving Equation \eqref{eqn: sauer_lemma_3} and we do it using an \emph{\textbf{inductive argument}}. 
 \begin{enumerate}
 \item For $n = 1$, no matter what $\cH$ is, either both sides of Equation \eqref{eqn: sauer_lemma_3} equal $1$ or both sides equal $2$ (\emph{the empty set} is always considered to be shattered by $\cH$).
+
+
+
+
 
 \item  \emph{Assume} Equation \eqref{eqn: sauer_lemma_3} holds for sets of size $k < n$ and let us prove it for sets of size $n$. 
 
@@ -365,7 +371,7 @@ and
 \begin{align*}
 Y_{1} = \set{(y_2 \xdotx{,} y_n): (0, y_2 \xdotx{,} y_n) \in \cH_{\cD} \land  (1, y_2 \xdotx{,} y_n) \in \cH_{\cD}}.
 \end{align*}
-It is easy to verify that $\abs{\cH_{\cD}} = \abs{Y_0} + \abs{Y_1}$. Additionally, since $Y_0 = \cH_{\cD_{-1}}$, using \emph{the induction assumption} (applied on $\cH$ and $\cD_{-1}$) we have that
+It is easy to verify that $\abs{\cH_{\cD}} = \abs{Y_0} + \abs{Y_1}$ (See Figure \ref{fig: proof_sauer_lemma}). Additionally, since $Y_0 = \cH_{\cD_{-1}}$, using \emph{the induction assumption} (applied on $\cH$ and $\cD_{-1}$) we have that
 \begin{align*}
 \abs{Y_0} = \abs{\cH_{\cD_{-1}}} &\le \abs{\set{\cB \subseteq \cD_{-1}: \cH\text{ shatters }\cB}} \\
 &=  \abs{\set{\cB \subseteq \cD: x_1 \not\in \cB \land \cH\text{ shatters }\cB}}.
@@ -375,6 +381,15 @@ Next, define $\cH' \subseteq \cH$ to be
 \cH'  &= \set{h \in \cH : \exists\,h' \in \cH\text{ s.t. }(1 - h'(x_1), h'(x_2) \xdotx{,} h'(x_n)) = (h(x_1), h(x_2)  \xdotx{,} h(x_n)) },
 \end{align*}
 namely, $\cH'$ contains pairs of hypotheses $(h, h')$ that \emph{agree on $\cD_{-1}$ and differ on $x_1$}. Using this definition, it is clear that if $\cH'$ \emph{shatters} a set $\cB \subseteq \cD$ then it \emph{also shatters} the set $\cB \cup \set{x_1}$ and \emph{vice versa}. 
+
+\begin{figure}
+\begin{minipage}[t]{1\linewidth}
+  \centering
+  \centerline{\includegraphics[scale = 0.4]{proof_sauer_lemma.png}}
+\end{minipage}
+\caption{\footnotesize{\textbf{Proof of Sauer's lemma. $Y_0 = \cH_{\cD\setminus \set{x_1}}$ (blue) and $Y_1 = \cH'_{\cD\setminus \set{x_1}}$ (red) where $\cH'$ are hypotheses $h'\in \cH$ so that there exists $h\in \cH$ with opposite labeling at $x_1$.   \citep{shalev2014understanding}}}}
+\label{fig: proof_sauer_lemma}
+\end{figure}
 
 Combining this with the fact that $Y_1 = \cH'_{\cD_{-1}}$ and using the inductive assumption (now applied on $\cH'$ and $\cD_{-1}$ ) we obtain that
 \begin{align*}
