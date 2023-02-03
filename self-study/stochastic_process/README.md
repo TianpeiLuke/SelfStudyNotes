@@ -56,4 +56,4 @@
     - Lebesgue-Stieltjes Integration
     - Connection with Riemann-Stieltjes Integration
 
-- Brownian Motion
+- Brownian Motion / Wiener Process
