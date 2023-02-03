@@ -16,7 +16,7 @@
 
 ## Table of Contents
 
-- Gaussian Process
+- Gaussian Process [pdf](./RP_lecture1_Gaussian_random_process.pdf)
   - Gaussian Vector and its Distribution
     - Univariate Case
     - Multivariate Case
@@ -29,6 +29,21 @@
   - Reproducing Kernel Hilbert Space of Gaussian Process
   - Concentration Inequality and Isoperimetry of Gaussian Process
 
-- Markov Random Process
+- Markov Random Process [pdf](./RP_lecture2_markov_chains.pdf)
+  - Markov Chain 
+    - Definitions, Kernel
+    - First Hitting Time 
+  - Classification of States
+    - Equivalence Relation via Communication
+    - Foster’s Theorem and Poke’s Lemma 
+  - Limiting and stationary Distribution
+    - Invariant Measure
+    - Ergodicity
+    - Mean Hitting Time Formula 
+  - Time-Reversible Markov Chain
+  - Ergodic Theorem 
+  - Central Limit Theorem
 
-- Empirical Process
+- Empirical Process [pdf](./RP_lecture3_empirical_process.pdf)
+
+- Probability Theory on Infinite Dimensional Space [pdf](./RP_lecture4_prob_infinite_prod_sp.pdf)
