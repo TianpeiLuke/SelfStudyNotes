@@ -25,6 +25,9 @@
     - Examples of Gaussian Random Elements
     - Gaussian Random Process
     - Examples of Gaussian Random Processes 
+  - Integral Representation of Gaussian Process
+  - Reproducing Kernel Hilbert Space of Gaussian Process
+  - Concentration Inequality and Isoperimetry of Gaussian Process
 
 - Markov Random Process
 
