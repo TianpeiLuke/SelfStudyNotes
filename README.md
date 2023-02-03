@@ -32,7 +32,7 @@ This repository is the latex-based notes for self-learning, mainly for math, sta
 
 - [Reinforcement Learning](./self-study/reinforcement_learning/README.md)
 
-- [Stochastic Process and Statistical Analysis in Infinite Dimensional Space](./self-study/stochastic_process)
+- [Stochastic Process and Statistical Analysis in Infinite Dimensional Space](./self-study/stochastic_process/README.md)
 
 - [Statistical Learning Theory](./self-study/statistical_learning_theory/README.md)
 
