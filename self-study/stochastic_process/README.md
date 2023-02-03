@@ -2,17 +2,26 @@
 
 ## Books
 
+### Gaussian Process
 ***Lectures on Gaussian process***, M A Lifshift
 
 ***Gaussian Random Function***, M.A. Lifshits
+
+### Markov Process and Markov Chains
+
+***Introduction To Probability Models***, Sheldon M ross, 12th Ed
+
+***An Introduction to Markov Processes***, Stroock,.D.W
+
+### Gaussian Process and Empirical Process
 
 ***Mathematical Foundations Of Infinite-dimensional Statistical Models***, Evarist Giné, Richard Nickl
 
 ***Functional Analysis For Probability And Stochastic Processes: An Introduction***, Adam Bobrowski
 
-***Introduction To Probability Models***, Sheldon M ross, 12th Ed
+### Brownian Motion and Stochastic Differential Equation
 
-***An Introduction to Markov Processes***, Stroock,.D.W
+***An Introduction To Stochastic Differential Equations***, Lawrence C. Evans
 
 ## Table of Contents
 
