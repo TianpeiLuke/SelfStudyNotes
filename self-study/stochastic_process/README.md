@@ -17,11 +17,16 @@
 
 ***Mathematical Foundations Of Infinite-dimensional Statistical Models***, Evarist Giné, Richard Nickl
 
-***Functional Analysis For Probability And Stochastic Processes: An Introduction***, Adam Bobrowski
+***High-Dimensional Probability: An Introduction with Applications in Data Science***, Roman Vershynin
+
+***High-Dimensional Statistics: A Non-Asymptotic Viewpoint***, Martin J Wainwright
 
 ### Brownian Motion and Stochastic Differential Equation
 
 ***An Introduction To Stochastic Differential Equations***, Lawrence C. Evans
+
+***Functional Analysis For Probability And Stochastic Processes: An Introduction***, Adam Bobrowski
+
 
 ## Table of Contents
 
