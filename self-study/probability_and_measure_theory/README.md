@@ -165,7 +165,7 @@
     - Doob's Optional Sampling Theorem
     - Wald's Identity
     - Wald's Equation
-  - Marginale Inequalties
+  - Martingale Inequalties
     - Doob's Maximal Inequality
     - Upcrossing Inequality 
     - Bernstein's Inequality for Martingale Difference Sequence 
