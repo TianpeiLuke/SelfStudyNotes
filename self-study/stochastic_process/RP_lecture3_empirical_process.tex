@@ -30,8 +30,133 @@
 \maketitle
 \tableofcontents
 \newpage
-\section{Empirical Processes}
+\section{Uniform Law of Large Numbers}
+\subsection{Functional of Cumulative Distribution Function}
+\subsection{Glivenko-Cantelli Theorem}
+\subsection{Glivenko-Cantelli Class}
 
+
+\section{Empirical Processes}
+\subsection{Definitions}
+\begin{itemize}
+\item \begin{definition}(\textbf{\emph{Empirical Measure}})  \citep{wellner2013weak, gine2021mathematical} \\
+Let $(\cX, \srF, \cP)$ be a \emph{probability space}, and let $X_i, i \in \bN$, be the \emph{coordinate functions} of \emph{the \textbf{infinite product probability space}} $(\Omega, \srB,  \bP) := (\cX^{\infty}, \srF^{\infty}, \cP^{\infty})$,  $X_i :  \cX^{\infty} \to \cX$, which are \emph{\textbf{independent} identically distributed} $\cX$-valued random variables with law $\cP$. %In fact, we will always take \emph{independent variables} (equally distributed or not) to be \emph{the coordinate functions} on \emph{product probability spaces}.
+
+\underline{\emph{\textbf{The empirical measure}}} corresponding to the `\emph{observations}' $X_1 \xdotx{,} X_n$, for any $n \in \bN$, is defined as \emph{\textbf{the \underline{random} discrete probability measure}}
+\begin{align}
+\cP_n &:= \frac{1}{n}\sum_{i=1}^{n}\delta_{X_i} \label{def: empirical_measure}
+\end{align} where $\delta_x$ is \emph{Dirac measure} at $x$, that is, unit mass at the point $x$.  In other words, for each event $A$,  $\cP_n(A)$ is \emph{the \textbf{proportion} of \textbf{observations} $X_i$,  $i = 1 \xdotx{,} n$, that fall in $A$}; that is,
+\begin{align*}
+\cP(A) &= \frac{1}{n}\sum_{i=1}^{n}\delta_{X_i}(A) = \frac{1}{n}\sum_{i=1}^{n}\ind{X_i \in A}, \quad A \in \srF.
+\end{align*}
+\end{definition}
+
+\item \begin{remark}(\textbf{\emph{Probability Measure with Operator Notation}}) \citep{wellner2013weak, gine2021mathematical} \\
+For any measure $\mu$ and $\mu$-integrable function $f$, we will use the following \underline{\textbf{\emph{operator notation}}} for the integral of $f$ with respect to $\mu$:
+\begin{align*}
+\mu f \equiv \mu(f) =  \int_{\Omega} f d\mu.
+\end{align*} This is valid since there exists an isomorphism between \emph{the space of probability measure} and \emph{the space of bounded linear functional} on $\cC_{0}(\Omega)$ by Riesz-Markov representation theorem (assuming $\Omega$ is \emph{locally compact}). By this notion the expectation $ \cP f = \E{\cP}{f}$.
+\end{remark}
+
+\item \begin{definition} (\textbf{\emph{Empirical Process}})  \citep{wellner2013weak, gine2021mathematical} \\
+Let $\cF$ be a \emph{collection of $\cP$-integrable functions} $f: \cX \to \bR$, usually infinite. For any such class of functions $\cF$, \underline{\emph{\textbf{the empirical measure}}} defines a \emph{\textbf{stochastic process}}
+\begin{align}
+f \rightarrow \cP_{n}f, \quad f\in \cF \label{def: empirical_process}
+\end{align} which we may call  \underline{\emph{\textbf{the empirical process indexed by $\cF$}}}, although we prefer to reserve the
+notation `\emph{empirical process}' for \emph{the \textbf{centred} and \textbf{normalised} process}
+\begin{align}
+f \rightarrow \nu_{n}(f) :=\sqrt{n} \paren{\cP_n f - \cP f}, \quad f\in \cF. \label{def: centered_empirical_process}
+\end{align}
+\end{definition}
+
+\item \begin{remark}
+An explicit notion of \emph{(centered and normalized) empirical process} is
+\begin{align*}
+\sqrt{n} \paren{\cP_n f - \cP f} \equiv \frac{1}{\sqrt{n}}\sum_{i=1}^n\paren{f(X_i) - \E{\cP}{f(X)}}, \quad f\in \cF.
+\end{align*} where $X_1 \xdotx{,} X_n \sim \cP$ are i.i.d random variables. Note that it is a stochastic process since \emph{the function $f$ is changing} in $\cF$, i.e. the process $\paren{\cP_n  - \cP}f$ is indexed by function $f \in \cF$ not finite dimensional variable.
+\end{remark}
+
+\item \begin{remark}(\textbf{\emph{Random Measure}})\\
+Normally we assume that data are sampled from some distribution $\cP$ and the data itself is random. However, the empirical measure 
+\begin{align*}
+\cP_n &:= \frac{1}{n}\sum_{i=1}^{n}\delta_{X_i}
+\end{align*} itself is considered as a \emph{\textbf{random}} probability measure. That is, \emph{the sampling mechanism itself contains randomness} and it is not sampling from one distribution but \emph{\textbf{a system of distributions depending on the choice of dataset $X_1 \xdotx{,} X_n$ }}, which in turn were sampled from some \emph{prior} $\cP$. Due to this randomness, $\cP_n f = \E{\cP_n}{f}$ is not a fixed expectation number but a random variable. In fact, this is the empirical mean (i.e. sample mean)
+\begin{align*}
+\cP_n f = \E{\cP_n}{f} = \frac{1}{n}\sum_{i=1}^n f(X_i).
+\end{align*} \emph{\textbf{The critical difference}} between mean of empirical measure vs. sample mean is that we now assume that $f$ is \emph{\textbf{not fixed}}.
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Object of Empirical Process Theory}}) \\
+\emph{The \textbf{object} of empirical process theory} is to study \emph{the \textbf{properties} of the \textbf{approximation}} of $\cP f$ by $\cP_n f$, \emph{\textbf{uniformly in $\cF$}}, concretely, to obtain both \emph{\textbf{probability estimates} for the random quantities}
+\begin{align*}
+\norm{\cP_n  - \cP}{\cF} &:= \sup_{f \in \cF}\abs{\cP_n f - \cP f}
+\end{align*}
+and \emph{\textbf{probabilistic limit theorems}} for the processes $\set{ (\cP_n - \cP)(f) : f \in \cF}$.
+
+Note that the quantity $\norm{\cP_n  - \cP}{\cF}$ is a \emph{\textbf{random variable}} since $\cP_n$ is a \emph{\textbf{random measure}}.
+\end{remark}
+
+\item \begin{remark} (\textbf{\emph{Measurability Problem}})\\
+There may be a \emph{\textbf{measurability problem}} for 
+\begin{align*}
+\norm{\cP_n  - \cP}{\cF} &:= \sup_{f \in \cF}\abs{\cP_n f - \cP f}
+\end{align*}  since \emph{the \textbf{uncountable} suprema} of measurable functions \emph{may not be measurable}. 
+
+However, there are many situations where this is actually a \emph{\textbf{countable supremum}}. For instance, for probability distribution on $\bR$
+\begin{align*}
+\norm{\cP_n  - \cP}{\infty} &:= \sup_{t \in \bR}\abs{\paren{\cP_n - \cP}(-\infty, t)} =  \sup_{t \in \bQ}\abs{F_n(t) - F(t)} =  \sup_{t \in \bQ}\abs{\paren{\cP_n - \cP}(-\infty, t)}
+\end{align*} where $F(t) = \cP\paren{-\infty, t}$ is the cumulative distribution function. If $\cF$ is \emph{countable} or if there exists $\cF_0$ \emph{countable} such that
+\begin{align*}
+\norm{\cP_n  - \cP}{\cF}  = \norm{\cP_n  - \cP}{\cF_0}, \quad \text{a.s.} 
+\end{align*} then the measurability problem disappears.
+
+For the next few sections we will simply assume that the class $\cF$ is \emph{countable}.
+\end{remark}
+
+\item \begin{remark} (\textbf{\emph{Bounded Assumption}})\\
+If we assume that
+\begin{align}
+\sup_{f \in \cF}\abs{f(x) - \cP f} < \infty, \quad \forall x \in \cX, \label{def: empirical_process_bounded}
+\end{align}
+then the maps from $\cF$ to $\bR$,
+\begin{align*}
+f \rightarrow f(x) - \cP f, \quad x\in \cX,
+\end{align*} are \emph{\textbf{bounded functionals}} over $\cF$, and therefore, so is $f \to  (\cP_n - \cP)(f)$. That is,
+\begin{align*}
+\cP_n - \cP \in \ell_{\infty}(\cF),
+\end{align*}
+where  $\ell_{\infty}(\cF)$ is \emph{\textbf{the space of bounded real functionals} on $\cF$}, a \emph{Banach space} if we equip it with the supremum norm $\norm{\cdot}{\cF}$. 
+
+A large literature is available on \emph{probability in \textbf{separable Banach spaces}}, but unfortunately, $\ell_{\infty}(\cF)$ is \emph{\textbf{only}} \emph{\textbf{separable}} when the class $\cF$ is \emph{\textbf{finite}}, and \emph{\textbf{measurability problems}} arise because \emph{the probability law} of the process $\set{ (\cP_n - \cP)(f) : f \in \cF}$ \emph{\textbf{does not extend} to the Borel $\sigma$-algebra of $\ell_{\infty}(\cF)$} even in simple situations.
+\end{remark}
+
+\item \begin{remark}
+This chapter addresses \emph{\textbf{three main questions}} about the empirical process:
+\begin{enumerate}
+\item The first question has to do with \underline{\emph{\textbf{concentration}} of $\norm{\cP_n  - \cP}{\cF}$ about \emph{its \textbf{mean}}} when \underline{$\cF$ is \emph{\textbf{uniformly bounded}}}. Recall that $\norm{\cP_n  - \cP}{\cF}$ is a random variable itself, due to randomness of the empirical measure. We mainly use the \emph{non-asymptotic analysis} to obtain \emph{the exponential bound for concentration}.
+
+\item The second question is do \underline{\emph{\textbf{good estimates}} for \emph{\textbf{mean}} $\E{}{\norm{\cP_n  - \cP}{\cF}}$} exist? We will examine two main techniques that give answers to this question, both related to \emph{\textbf{metric entropy}} and \emph{\textbf{chaining}}. One of them, called \emph{\textbf{bracketing}}, uses \emph{chaining} in combination with \emph{truncation} and \emph{Bernstein's inequality}. The other one applies to \emph{\textbf{Vapnik-Cervonenkis (VC) classes of functions}}.
+
+\item Finally, the last question about the empirical process refers to \underline{\emph{\textbf{limit theorems}}}, mainly \underline{\emph{\textbf{the uniform law of large numbers}}} and the \underline{\emph{\textbf{central limit theorem}}}, in fact, the analogues of \emph{\textbf{the classical Glivenko-Cantelli}} and \emph{Donsker theorems} for the empirical distribution function.
+
+Formulation of \emph{the central limit theorem} will require some more \emph{measurability} because we will be considering \emph{\textbf{convergence in law}} of random elements in \emph{\textbf{not necessarily separable} \textbf{Banach spaces}}.
+\end{enumerate}
+\end{remark}
+\end{itemize}
+\subsection{Tail bounds for Empirical Processes}
+\subsection{Maximal Inequalities}
+%\subsection{Suprema of Empirical Process}
+\subsection{Symmetrization}
+\subsection{Uniform Convergence via Rademacher Complexity}
+
+
+
+\section{Expected Value of Suprema of Empirical Process}
+\subsection{Metric Entropy}
+\subsection{Chaining and Dudley's Entropy Integral}
+\subsection{Contraction Inequality}
+\subsection{Vapnik-Chervonenkis Class}
+\subsection{Comparison Theorems}
 
 
 
