@@ -85,4 +85,6 @@
     - Empirical Risk Minimization with Regularization in RKHS
     - Representer Theorem
 
+- Gradient Boost Trees [pdf](../gradient_boost_trees/gradient_boosting_tree.pdf)
+
 - Gaussian Process for Machine Learning
