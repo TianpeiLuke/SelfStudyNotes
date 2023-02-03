@@ -59,6 +59,20 @@
   - Central Limit Theorem
 
 - Empirical Process [pdf](./RP_lecture3_empirical_process.pdf)
+  - Empirical Process
+    - Definitions
+    - Tail Bound for Empirical Process
+    - Maximal Inequality
+    - Symmetrization
+    - Uniform Convergence vis Rademacher Complexity
+  - Uniform Law of Large Numbers
+    - Glivenko-Cantelli Theorem
+    - Glivenko-Cantelli Class
+  - Expected Value of Suprema of Empirical Process
+    - Metric Entropy
+    - Chaining and Duley's Entropy Integral
+    - Contraction Inequality
+    - VC Class
 
 - Probability Theory on Infinite Dimensional Space [pdf](./RP_lecture4_prob_infinite_prod_sp.pdf)
   - Product Measure on Infinite Dimensional Space
