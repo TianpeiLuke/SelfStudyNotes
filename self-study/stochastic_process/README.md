@@ -70,7 +70,7 @@
     - Lebesgue-Stieltjes Integration
     - Connection with Riemann-Stieltjes Integration
 
-- Brownian Motion / Wiener Process [pdf](./RP_lecture5_brownian_motion.pdf)
+- Brownian Motion and Stochastic Differential Equations [pdf](./RP_lecture5_brownian_motion.pdf)
   - Brownian Motion
     - Definitions
     - Construction of Brownian Motion
