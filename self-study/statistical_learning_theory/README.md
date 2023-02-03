@@ -4,9 +4,9 @@
 
 ### Statistical Learning Theory
 
-***Foundations_of_Machine_Learning***, Mehryar Mohri, Afshin Rostamizadeh, Ameet Talwalkar
-
 ***Understanding Machine Learning: From Theory To Algorithms***, Shalev-Shwartz S., Ben-David S.
+
+***Foundations of Machine Learning***, Mehryar Mohri, Afshin Rostamizadeh, Ameet Talwalkar
 
 ***A Probabilistic Theory of Pattern Recognition***, Devroye, Gyorfi, Lugosi
 
