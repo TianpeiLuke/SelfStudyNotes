@@ -148,7 +148,19 @@
     - Definitions and Properties 
 
 - Martingale
-  - Marginale, Sub-Martingale, Super-Martingale
-  - Marginale Difference Sequence
+  - Defintions
+    - Marginale, Sub-Martingale, Super-Martingale
+    - Marginale Difference Sequence
+  - Examples
+  - Doob Decomposition
+  - Stopping Time and Optional Sampling Theorem
+    - Stopping Time
+    - Doob's Optional Sampling Theorem
+    - Wald's Identity
+    - Wald's Equation
   - Marginale Inequalties
+    - Doob's Maximal Inequality
+    - Upcrossing Inequality 
+    - Bernstein's Inequality for Martingale Difference Sequence 
+  - Martingale Convergence Theorem 
 - Posterior Distributions
