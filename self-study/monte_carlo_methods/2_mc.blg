@@ -1,8 +1,8 @@
-This is BibTeX, Version 0.99d (TeX Live 2021)
-Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: 2_mc.aux
 The style file: plainnat.bst
-Database file #1: book_reference.bib
+Database file #1: book_reference.bib.bib
 You've used 4 entries,
             2773 wiz_defined-function locations,
             612 strings with 5230 characters,

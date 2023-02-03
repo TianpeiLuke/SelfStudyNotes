@@ -411,7 +411,7 @@ Based on the Theorem \ref{thm: ergodic} and Proposition \ref{thm: limit_stationa
 \item \begin{definition}
 Let $(X_t)_t$ be a stochastic process and let $\set{\cF_{t}, t\ge 0}$ be an increasing family of $\sigma$-field. 
 
-A random variable $T: (\Omega, \cF) \rightarrow (\bN_{+}\cup\set{+\infty}, 2^{\bN_{+}\cup\set{+\infty}})$ is called a \underline{\textbf{\emph{stopping time}}} with respect to $\set{\cF_{t}, t\ge 0}$, if $\forall k \ge 0$, $\ind{T = k}$ is \textbf{$\cF_{t}$-measurable} (i.e. $\set{T = k} \in \cF_{t}$ and $\cF = \bigcup_{t\ge 0} \cF_t$.)
+A random variable $T: (\Omega, \cF) \rightarrow (\bN_{+}\cup\set{+\infty}, 2^{\bN_{+}\cup\set{+\infty}})$ is called a \underline{\textbf{\emph{stopping time}}} with respect to $\set{\cF_{t}, t\ge 0}$, if $\forall k \ge 0$, $\ind{T = k}$ is \textbf{$\cF_{k}$-measurable} (i.e. $\set{T = k} \in \cF_{k}$ and $\cF = \bigcup_{t\ge 0} \cF_t$.)
 \end{definition}
 
 For Markov chain $(X_t)_t$, the \emph{\textbf{first hitting time}} is defined as $T_{A}^{(1)} = \min\set{t > 0: X_t \in A}$. Also we can define n-th hitting time as $T_{A}^{(n)} = \min\set{t > T_{A}^{(n-1)}: X_t \in A}$. All of these $\set{T_{A}^{(1)}, \ldots, T_{A}^{(n)}, \ldots }$ are all \emph{\textbf{stopping time}}. 
