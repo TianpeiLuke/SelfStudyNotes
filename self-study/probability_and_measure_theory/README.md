@@ -140,14 +140,14 @@
 
 - Modes of Convergence and Statistical Consistency
 
-- Conditional Probability and Conditional Expectation
+- Conditional Probability and Conditional Expectation [pdf](./PT_lecture5_cond_expectation.pdf)
   - Conditional Probability
     - Definitions and Properties
     - Conditional Probability Distribution   
   - Conditional Expectation
     - Definitions and Properties 
 
-- Martingale
+- Martingale [pdf](./PT_lecture6_martingale.pdf)
   - Defintions
     - Marginale, Sub-Martingale, Super-Martingale
     - Marginale Difference Sequence
@@ -163,4 +163,5 @@
     - Upcrossing Inequality 
     - Bernstein's Inequality for Martingale Difference Sequence 
   - Martingale Convergence Theorem 
+  
 - Posterior Distributions
