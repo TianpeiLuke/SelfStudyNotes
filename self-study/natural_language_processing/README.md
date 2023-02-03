@@ -7,14 +7,14 @@
 
 ## Table of Contents
 
-- Basics of Linguistics
+- Basics of Linguistics [pdf](./NLP_1_grammar.pdf)
 
-- Constituency Parsing
+- Constituency Parsing [pdf](./NLP_2_parsing.pdf)
 
-- Part-Of-Speech Tagging and Name Entity Recognition
+- Part-Of-Speech Tagging and Name Entity Recognition [pdf](./NLP_3_pos_tagging.pdf)
 
-- Sequence Modeling
+- Sequence Modeling [pdf](./NLP_4_seq_labeling.pdf)
 
-- Dependency Parsing
+- Dependency Parsing [pdf](./NLP_5_dep_parsing.pdf)
 
-- Machine Translation
+- Machine Translation [pdf](./NLP_6_mach_translation.pdf)
