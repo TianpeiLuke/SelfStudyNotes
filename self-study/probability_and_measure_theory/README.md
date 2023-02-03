@@ -156,8 +156,8 @@
 
 - Martingale [pdf](./PT_lecture6_martingale.pdf)
   - Defintions
-    - Marginale, Sub-Martingale, Super-Martingale
-    - Marginale Difference Sequence
+    - Martingale, Sub-Martingale, Super-Martingale
+    - Martingale Difference Sequence
   - Examples
   - Doob Decomposition
   - Stopping Time and Optional Sampling Theorem
