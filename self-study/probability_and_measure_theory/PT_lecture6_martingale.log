@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  2 FEB 2023 20:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  2 FEB 2023 22:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -810,15 +810,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 333--334
 
  []
 
-[7] [8]
-Overfull \hbox (17.54427pt too wide) in paragraph at lines 420--422
+[7]
+! Misplaced alignment tab character &.
+l.385 Then $\E{}{\abs{X_{\tau}}} &
+                                  < \infty$ and
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+[8]
+Overfull \hbox (17.54427pt too wide) in paragraph at lines 419--421
 \OT1/cmr/m/it/10.95 Let $[]$ be a \OT1/cmr/bx/it/10.95 mar-tin-gale \OT1/cmr/m/
 it/10.95 and let $\OML/cmm/m/it/10.95 ^^\$ \OT1/cmr/m/it/10.95 be a \OT1/cmr/bx
 /it/10.95 stop-ping time \OT1/cmr/m/it/10.95 with re-spect to $[]$.
  []
 
 [9]
-Overfull \hbox (1.60684pt too wide) in paragraph at lines 473--474
+Overfull \hbox (1.60684pt too wide) in paragraph at lines 472--473
 []\OT1/cmr/m/it/10.95 The sum $[][] \OML/cmm/m/it/10.95 D[]$ \OT1/cmr/m/it/10.9
 5 is \OT1/cmr/bx/it/10.95 sub-exponential \OT1/cmr/m/it/10.95 with \OT1/cmr/bx/
 it/10.95 pa-ram-e-ters $[]$ \OT1/cmr/m/it/10.95 where $\OML/cmm/m/it/10.95 [] 
@@ -826,13 +837,13 @@ it/10.95 pa-ram-e-ters $[]$ \OT1/cmr/m/it/10.95 where $\OML/cmm/m/it/10.95 []
  []
 
 [10]
-Overfull \hbox (25.89574pt too wide) in paragraph at lines 510--512
+Overfull \hbox (25.89574pt too wide) in paragraph at lines 509--511
 []\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 McDiarmid's In-equal-ity / Bounded 
 Dif-fer-ences In-equal-ity\OT1/cmr/m/it/10.95 )[Wainwright,
  []
 
 
-Overfull \hbox (1.06664pt too wide) in paragraph at lines 510--512
+Overfull \hbox (1.06664pt too wide) in paragraph at lines 509--511
 \OT1/cmr/m/it/10.95 Suppose that $\OML/cmm/m/it/10.95 f$ \OT1/cmr/m/it/10.95 sa
 t-is-fies \OT1/cmr/bx/it/10.95 the bounded dif-fer-ence prop-erty [] \OT1/cmr/m
 /it/10.95 with pa-ram-e-ters $\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 L[] [] []
@@ -868,7 +879,7 @@ st/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/public/rsfs/rsfs10.pfb>
-Output written on PT_lecture6_martingale.pdf (12 pages, 257130 bytes).
+Output written on PT_lecture6_martingale.pdf (12 pages, 257141 bytes).
 PDF statistics:
  126 PDF objects out of 1000 (max. 8388607)
  91 compressed objects within 1 object stream

@@ -354,7 +354,7 @@ X_n &= M_n + A_n, \quad n\ge 0, \quad \text{a.s.}
 \end{theorem}
 \end{itemize}
 
-\subsection{Stopping Times and Optional Sampling Theorem}
+\subsection{Stopping Time and Optional Sampling Theorem}
 \begin{itemize}
 \item \begin{definition}
 Let $(X_t)_t$ be a stochastic process and let $\set{\srB_t, n\ge 0}$ be an increasing family of $\sigma$-algebras. Denote $\srB = \bigcup_{t\ge 0} \srB_t$.
@@ -380,12 +380,11 @@ Let $\set{(X_n, \srB_n), n \ge 0}$ be a \textbf{martingale} where $\srB_n = \sig
 \item \begin{theorem}(\textbf{Weak Version of Optional Sampling Theorem, again}) \citep{billingsley2008probability}\\
 Let $\set{(X_n, \srB_n), n \ge 0}$ be a \textbf{martingale} where $\srB_n = \sigma\paren{X_1 \xdotx{,} X_n}$ and let $\tau$ be \textbf{stopping time} with respect to $\set{\srB_n, n \ge 0}$. Suppose $\E{}{\tau} < \infty$, and there exists $n \ge 0$ and some constant $c$ such that 
 \begin{align*}
-\E{}{\abs{X_{n+1} - X_n} | \srB_n} \le c, \quad \text{a.s.} \; \text{ on }\set{\tau \ge n}
+\E{}{\abs{X_{n+1} - X_n} | \srB_n} \le c, \quad \text{a.s.} \; \text{ on }\set{\tau \ge n}.
 \end{align*}
- then 
+Then $\E{}{\abs{X_{\tau}}} &< \infty$ and
 \begin{align*}
-\E{}{\abs{X_{\tau}}} &< \infty\\
-\text{and }\E{}{X_\tau} &= \E{}{X_0}.
+\E{}{X_\tau} &= \E{}{X_0}.
 \end{align*} 
 \end{theorem}
 
@@ -404,7 +403,7 @@ $S \le T \le c, \;\text{a.s.}$, then
 
 
 \item \begin{theorem}(\textbf{Wald's Identity}) \citep{billingsley2008probability, resnick2013probability}\\
-Consider random walk $S_n = X_0 + \xi_1 + \xi_2 \xdotx{+} \xi_n$, $n = 0,1,2,\ldots$, where $\xi_1 \xdotx{,} \xi_n$ are i.i.d. random variables such that $\E{}{\abs{\xi_i}} < \infty$ and $\E{}{\xi_i} = \mu$. Let $\tau$ be a $\set{\sigma(S_0, S_1 \xdotx{,} S_n), n\ge 0}$-\textbf{stopping time} and $\E{}{\tau} < \infty$. Then 
+Consider random walk $S_0 = X_0$ and $S_n = X_0 + \xi_1 + \xi_2 \xdotx{+} \xi_n$, $n = 1,2,\ldots$, where $\xi_1 \xdotx{,} \xi_n$ are i.i.d. random variables such that $\E{}{\abs{\xi_i}} < \infty$ and $\E{}{\xi_i} = \mu$. Let $\tau$ be a \textbf{stopping time} with respect to $\set{\sigma(S_0, S_1 \xdotx{,} S_n), n\ge 0}$ and $\E{}{\tau} < \infty$. Then 
 \begin{align*}
 \E{}{S_{\tau} - S_0} = \mu \E{}{\tau}
 \end{align*}

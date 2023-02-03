@@ -4,6 +4,6 @@
 \contentsline {subsection}{\numberline {2.2}Martingale Difference Sequence}{5}
 \contentsline {subsection}{\numberline {2.3}Examples of Martingales}{6}
 \contentsline {subsection}{\numberline {2.4}Doob's Decomposition}{7}
-\contentsline {subsection}{\numberline {2.5}Stopping Times and Optional Sampling Theorem}{8}
+\contentsline {subsection}{\numberline {2.5}Stopping Time and Optional Sampling Theorem}{8}
 \contentsline {subsection}{\numberline {2.6}Martingale Inequalities}{9}
 \contentsline {subsection}{\numberline {2.7}Convergence Theorem}{11}
