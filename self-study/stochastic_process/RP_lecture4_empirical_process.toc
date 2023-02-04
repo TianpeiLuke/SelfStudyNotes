@@ -5,14 +5,14 @@
 \contentsline {subsection}{\numberline {2.1}Definitions}{3}
 \contentsline {subsection}{\numberline {2.2}Glivenko-Cantelli Class}{6}
 \contentsline {subsection}{\numberline {2.3}Tail bounds for Empirical Processes}{7}
-\contentsline {subsection}{\numberline {2.4}Maximal Inequalities}{8}
-\contentsline {section}{\numberline {3}Variance of Suprema of Empirical Process}{8}
-\contentsline {subsection}{\numberline {3.1}General Upper Bounds for the Variance}{8}
-\contentsline {subsection}{\numberline {3.2}Symmetrization and Contraction Principle}{9}
-\contentsline {subsection}{\numberline {3.3}Bounding the Weak Variance via Wimpy Variance}{10}
-\contentsline {subsection}{\numberline {3.4}Rademacher Complexity and Gaussian Complexity}{10}
-\contentsline {section}{\numberline {4}Expected Value of Suprema of Empirical Process}{11}
-\contentsline {subsection}{\numberline {4.1}Covering Number, Packing Number and Metric Entropy}{11}
-\contentsline {subsection}{\numberline {4.2}Chaining and Dudley's Entropy Integral}{11}
-\contentsline {subsection}{\numberline {4.3}Vapnik-Chervonenkis Class}{11}
-\contentsline {subsection}{\numberline {4.4}Comparison Theorems}{11}
+\contentsline {subsection}{\numberline {2.4}Symmetrization and Contraction Principle}{8}
+\contentsline {subsection}{\numberline {2.5}Rademacher Complexity and Gaussian Complexity}{13}
+\contentsline {section}{\numberline {3}Variance of Suprema of Empirical Process}{14}
+\contentsline {subsection}{\numberline {3.1}General Upper Bounds for the Variance}{14}
+\contentsline {subsection}{\numberline {3.2}Bounding the Weak Variance via Wimpy Variance}{15}
+\contentsline {subsection}{\numberline {3.3}Maximal Inequalities}{15}
+\contentsline {section}{\numberline {4}Expected Value of Suprema of Empirical Process}{15}
+\contentsline {subsection}{\numberline {4.1}Covering Number, Packing Number and Metric Entropy}{15}
+\contentsline {subsection}{\numberline {4.2}Chaining and Dudley's Entropy Integral}{15}
+\contentsline {subsection}{\numberline {4.3}Vapnik-Chervonenkis Class}{15}
+\contentsline {subsection}{\numberline {4.4}Comparison Theorems}{15}

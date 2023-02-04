@@ -1,4 +1,4 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{6}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -17,6 +17,18 @@ Evarist Gin{\'e} and Richard Nickl.
 \newblock \emph{Mathematical foundations of infinite-dimensional statistical
   models}.
 \newblock Cambridge university press, 2021.
+
+\bibitem[Mohri et~al.(2012)Mohri, Rostamizadeh, and
+  Talwalkar]{mohri2012foundations}
+Mehryar Mohri, Afshin Rostamizadeh, and Ameet Talwalkar.
+\newblock \emph{Foundations of machine learning}.
+\newblock MIT press, 2012.
+
+\bibitem[Vershynin(2018)]{vershynin2018high}
+Roman Vershynin.
+\newblock \emph{High-dimensional probability: An introduction with applications
+  in data science}, volume~47.
+\newblock Cambridge university press, 2018.
 
 \bibitem[Wainwright(2019)]{wainwright2019high}
 Martin~J Wainwright.
