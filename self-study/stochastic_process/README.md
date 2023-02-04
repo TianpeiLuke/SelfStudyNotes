@@ -96,12 +96,12 @@
       - Functional Hoeffding's Inequality
       - Functional Bernstein's Inequality (Talagrand)
       - Bousquet Inequality (Functional Bennet's Inequality) 
-    - Maximal Inequality
+    - Symmetrization and Contraction Principle
+    - Rademacher Complexity and Gaussian Complexity
   - Variance of Suprema of Empirical Process
     - General Bound for Variance
-    - Symmetrization and Contraction Principle
     - Bounding Variance via Wimpy Variance
-    - Rademacher Complexity and Gaussian Complexity
+    - Maximal Inequality
   - Expected Value of Suprema of Empirical Process
     - Metric Entropy
     - Chaining and Duley's Entropy Integral
