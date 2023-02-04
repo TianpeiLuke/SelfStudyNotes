@@ -141,14 +141,14 @@ An explicit notion of \emph{(centered and normalized) empirical process} is
 
 
 
-\item \begin{remark}(\textbf{\emph{Random Measure}})\\
+\item \begin{remark}(\textbf{\emph{Random Measure on Function Space $\cF$}})\\
 Normally we assume that data are sampled from some distribution $\cP$ and the data itself is random. However, the empirical measure 
 \begin{align*}
 \cP_n &:= \frac{1}{n}\sum_{i=1}^{n}\delta_{X_i}
-\end{align*} itself is considered as a \emph{\textbf{random}} probability measure. That is, \emph{the sampling mechanism itself contains randomness} and it is not sampling from one distribution but \emph{\textbf{a system of distributions depending on the choice of dataset $X_1 \xdotx{,} X_n$ }}, which in turn were sampled from some \emph{prior} $\cP$. Due to this randomness, $\cP_n f = \E{\cP_n}{f}$ is not a fixed expectation number but a random variable. In fact, this is the empirical mean (i.e. sample mean)
+\end{align*} itself is considered as a \emph{\textbf{random}} probability measure. That is, \emph{the sampling mechanism itself contains randomness} and it is not sampling from one distribution but \emph{\textbf{a system of distributions depending on the choice of dataset $X_1 \xdotx{,} X_n$ }}, which in turn were sampled from some \emph{prior} $\cP$. Due to this randomness, $\cP_n f = \E{\cP_n}{f}$ is not a fixed expectation number but a random variable. For given $f\in \cF$, this is the empirical mean (i.e. sample mean)
 \begin{align*}
 \cP_n f = \E{\cP_n}{f} = \frac{1}{n}\sum_{i=1}^n f(X_i).
-\end{align*} \emph{\textbf{The critical difference}} between mean of empirical measure vs. sample mean is that we now assume that $f$ is \emph{\textbf{not fixed}}.
+\end{align*} \emph{\textbf{The critical difference}} between \emph{empirical process} vs. \emph{sample mean} is that the \emph{\textbf{latter}} assume that  $f$ is \emph{\textbf{fixed}}, while the former is defined with respect to \emph{\textbf{a class of functions}} $\cF$.
 \end{remark}
 
 \item \begin{remark}
@@ -321,9 +321,74 @@ By Jensen's inequality,
 \end{definition}
 \end{itemize}
 \subsection{Symmetrization and Contraction Principle}
-%\subsection{Uniform Convergence via Rademacher Complexity}
+\begin{itemize}
+\item \begin{definition}(\emph{\textbf{Symmetrized Empirical Process}})\\
+Let $X_1 \xdotx{,} X_n$ be independent random variables on $\cX$ and $\cF$ be a class of measurable functions on $\cX$. Consider \underline{\emph{\textbf{the symmetrized process}}}
+\begin{align}
+f \to \cP_n^{\epsilon}f := \frac{1}{n}\sum_{i=1}^{n}\epsilon_i f(X_i),  \quad  \forall f \in \cF\label{def: symmetrized_emp_process}
+\end{align} where $\epsilon := (\epsilon_1 \xdotx{,} \epsilon_n)$ are  \textbf{\emph{independent Rademacher random variables}} taking values in $\set{-1, +1}$ with equal probability and $\sigma_i$'s are independent from $X  = (X_1 \xdotx{,} X_n)$. \emph{\textbf{The supremum norm} of symmetrized process} is defined as
+\begin{align*}
+\norm{\cP_n^{\epsilon}}{\cF} := \sup_{f \in \cF}\abs{\frac{1}{n}\sum_{i=1}^{n}\epsilon_i f(X_i)}
+\end{align*}
+\end{definition}
+
+\item \begin{definition}(\emph{\textbf{Radematcher Process}})\\
+Let $\epsilon := (\epsilon_1 \xdotx{,} \epsilon_n)$ be  \textbf{\emph{independent Rademacher random variables}} taking values in $\set{-1, +1}$ with equal probability. \underline{\emph{\textbf{The Radematcher process}}} is defined as 
+\begin{align}
+t \to \frac{1}{n}\sum_{i=1}^{n}\epsilon_i  t_i, \quad (t_1 \xdotx{,} t_n) \in T \subset \bR^n. \label{def: Radematcher_emp_process}
+\end{align} So the symmetrized empirical process \eqref{def: symmetrized_emp_process} is a Radematcher process conditioning on $X = (X_1 \xdotx{,} X_n)$.
+\end{definition}
+
+\item \begin{remark}(\textbf{\emph{Symmetrization}}) \\
+The techinque that replaces the empirical process $\paren{\cP_n - \cP}f$ by the symmetrized version $\cP_n^{\epsilon}f $  is called \emph{\textbf{symmetrization}}. The idea is that, for fixed $(X_1 \xdotx{,} X_n)$, the symmetrized empirical measure \eqref{def: symmetrized_emp_process} is a \emph{Rademacher process}, hence a \emph{\textbf{sub-Gaussian process}}.
+\end{remark}
+
+\begin{proposition} (\textbf{Symmetrization}). \citep{wellner2013weak, boucheron2013concentration, wainwright2019high}\\
+For every \textbf{nondecreasing}, \textbf{convex} $\Phi: \bR \to \bR$ and class of measurable functions $\cF$,
+\begin{align*}
+\E{X, \epsilon}{\Phi\paren{\frac{1}{2}\norm{\cP_n^{\epsilon}}{\overline{\cF}}}} \le \E{X}{\Phi\paren{\norm{\cP_n - \cP}{\cF}}} \le \E{X, \epsilon}{\Phi\paren{2\norm{\cP_n^{\epsilon}}{\cF}}}
+\end{align*} where $\overline{\cF} := \set{f - \E{\cP}{f}: f\in \cF}$ is the \textbf{recentered function class}.
+\end{proposition}
+
+
+\end{itemize}
 \subsection{Bounding the Weak Variance via Wimpy Variance}
 \subsection{Rademacher Complexity and Gaussian Complexity}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Empirical Rademacher Complexity}})\\
+Let $\cF$ be a family of functions on $\cX$ and $\cD = (X_1 \xdotx{,} X_n)$ a fixed \emph{sample} of size $n$ with elements in $\cX$. Then, \underline{\emph{\textbf{the empirical Rademacher complexity}}} of $\cF$ \emph{with respect to the sample $\cD$} is defined as:
+\begin{align}
+\widehat{\mathfrak{R}}_{\cD}(\cF)&= \E{\sigma}{\sup_{f \in \cF}\frac{1}{n}\sum_{i=1}^{n}\sigma_{i}f(X_i)}   \label{eqn: rademacher_complexity}
+\end{align}
+where $\sigma := (\sigma_1 \xdotx{,} \sigma_n)$ are  \textbf{\emph{independent uniform random variables}} taking values in $\set{-1, +1}$. The random variables $\sigma_i$ are called \underline{\emph{\textbf{Rademacher variables}}}.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Rademacher Complexity}})\\
+For any integer $n \ge 1$, \underline{\emph{\textbf{the Rademacher complexity}}} of $\cF$ is defined as the \emph{\textbf{expectation}} of \emph{\textbf{the empirical Rademacher complexity}} over \emph{all samples $\cD_n$ of size $n$} drawn according to $\cP = \otimes_{i=1}^n\cP_i$:
+\begin{align*}
+\frR_{n}(\cF) &= \E{\cP}{\widehat{\mathfrak{R}}_{\cD_n}(\cF)}.
+\end{align*}
+\end{definition}
+
+\item \begin{proposition} \label{prop: radematcher_upper_bound} (\textbf{Uniform Upper Bound via Rademacher Complexity}) \citep{wainwright2019high}\\
+Let $\cF$ be a class of \textbf{$b$-uniformly bounded functions}, i.e. $\norm{f}{\infty} \le b$ for all $f \in \cF$. Then, for any positive $n \ge 1$, any $\delta > 0$, \textbf{with $\cP$-probability at least} $1 - \delta$:
+\begin{align}
+\norm{\cP_n - \cP}{\cF} &\le  2 \frR_{n}(\cF)  + \sqrt{\frac{2 b^2 \log(1 / \delta)}{n}} \label{eqn: Rademacher_upper_bound}
+\end{align} Consequently, as long as $\frR_n(\cF) = o(1)$, we have $\norm{\cP_n - \cP}{\cF} \stackrel{a.s.}{\to} 0$.
+\end{proposition}
+
+\item \begin{proposition}\label{prop: radematcher_lower_bound}  (\textbf{Uniform Lower Bound via Rademacher Complexity}) \citep{wainwright2019high}\\
+Let $\cF$ be a class of \textbf{$b$-uniformly bounded functions}, i.e. $\norm{f}{\infty} \le b$ for all $f \in \cF$. Then, for any positive $n \ge 1$, any $\delta > 0$, with $\cP$-probability at least $1 - \delta$:
+\begin{align}
+\norm{\cP_n - \cP}{\cF} &\ge  \frac{1}{2} \frR_{n}(\cF)  - \frac{\sup_{f \in \cF}\abs{\E{\cP}{f}}}{2\sqrt{n}} - \sqrt{\frac{2 b^2 \log(1 / \delta)}{n}} \label{eqn: Rademacher_lower_bound}
+\end{align} As a consequence, if the Rademacher complexity $\frR_n(\cF)$ remains \textbf{bounded away from zero}, then $\norm{\cP_n - \cP}{\cF}$ cannot
+converge to zero in probability. 
+\end{proposition}
+
+\item \begin{remark} 
+From both Proposition \ref{prop: radematcher_upper_bound} and Proposition \ref{prop: radematcher_lower_bound},  we have shown that \emph{the Rademacher complexity} provides a \underline{\emph{\textbf{necessary and sufficient condition}}} for a \emph{\textbf{\underline{uniformly bounded} function class} $\cF$}  to be \emph{\textbf{Glivenko-Cantelli}}.
+\end{remark}
+\end{itemize}
 
 \section{Expected Value of Suprema of Empirical Process}
 \subsection{Covering Number, Packing Number and Metric Entropy}

@@ -9,10 +9,10 @@
 \contentsline {section}{\numberline {3}Variance of Suprema of Empirical Process}{8}
 \contentsline {subsection}{\numberline {3.1}General Upper Bounds for the Variance}{8}
 \contentsline {subsection}{\numberline {3.2}Symmetrization and Contraction Principle}{9}
-\contentsline {subsection}{\numberline {3.3}Bounding the Weak Variance via Wimpy Variance}{9}
-\contentsline {subsection}{\numberline {3.4}Rademacher Complexity and Gaussian Complexity}{9}
-\contentsline {section}{\numberline {4}Expected Value of Suprema of Empirical Process}{9}
-\contentsline {subsection}{\numberline {4.1}Covering Number, Packing Number and Metric Entropy}{9}
-\contentsline {subsection}{\numberline {4.2}Chaining and Dudley's Entropy Integral}{9}
-\contentsline {subsection}{\numberline {4.3}Vapnik-Chervonenkis Class}{9}
-\contentsline {subsection}{\numberline {4.4}Comparison Theorems}{9}
+\contentsline {subsection}{\numberline {3.3}Bounding the Weak Variance via Wimpy Variance}{10}
+\contentsline {subsection}{\numberline {3.4}Rademacher Complexity and Gaussian Complexity}{10}
+\contentsline {section}{\numberline {4}Expected Value of Suprema of Empirical Process}{11}
+\contentsline {subsection}{\numberline {4.1}Covering Number, Packing Number and Metric Entropy}{11}
+\contentsline {subsection}{\numberline {4.2}Chaining and Dudley's Entropy Integral}{11}
+\contentsline {subsection}{\numberline {4.3}Vapnik-Chervonenkis Class}{11}
+\contentsline {subsection}{\numberline {4.4}Comparison Theorems}{11}
