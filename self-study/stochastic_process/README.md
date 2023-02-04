@@ -13,13 +13,15 @@
 
 ***An Introduction to Markov Processes***, Stroock,.D.W
 
-### Gaussian Process and Empirical Process
+### Empirical Process
 
-***Mathematical Foundations Of Infinite-dimensional Statistical Models***, Evarist Giné, Richard Nickl
+***Concentration Inequalities: A Nonasymptotic Theory of Independence***, Stephane Boucheron, Gabor Lugosi, Pascal Massart
+
+***High-Dimensional Statistics: A Non-Asymptotic Viewpoint***, Martin J Wainwright
 
 ***High-Dimensional Probability: An Introduction with Applications in Data Science***, Roman Vershynin
 
-***High-Dimensional Statistics: A Non-Asymptotic Viewpoint***, Martin J Wainwright
+***Mathematical Foundations Of Infinite-dimensional Statistical Models***, Evarist Giné, Richard Nickl
 
 ### Measure Theory, Probability Theory, Stochastic Process and Martingale
 
