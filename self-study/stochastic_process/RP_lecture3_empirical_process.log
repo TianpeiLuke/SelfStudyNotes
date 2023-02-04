@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  3 FEB 2023 12:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  3 FEB 2023 16:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -668,27 +668,40 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 42.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 36.
  (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 42.
-LaTeX Font Info:    Try loading font information for U+dsrom on input line 51.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 36.
+LaTeX Font Info:    Try loading font information for U+dsrom on input line 40.
 
 (/usr/share/texlive/texmf-dist/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 ) [2] [3]
-[4] [5] (./RP_lecture3_empirical_process.bbl) [6]
+[4] [5] [6]
+Overfull \hbox (9.7318pt too wide) in paragraph at lines 266--269
+[]\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Bousquet's In-equal-ity, Func-tiona
+l Ben-net In-equal-ity\OT1/cmr/m/it/10.95 ) [Boucheron et al.,
+ []
+
+
+Overfull \hbox (5.01822pt too wide) in paragraph at lines 266--269
+\OT1/cmr/m/it/10.95 Let $\OML/cmm/m/it/10.95 X[] [] [] [] X[]$ \OT1/cmr/m/it/10
+.95 be in-de-pen-dent iden-ti-cally dis-tributed ran-dom vec-tors. As-sume that
+ $\U/dsrom/m/n/10.95 E[] [] \OT1/cmr/m/n/10.95 =
+ []
+
+[7] [8] (./RP_lecture3_empirical_process.bbl) [9]
 (./RP_lecture3_empirical_process.aux) ) 
 Here is how much of TeX's memory you used:
- 15877 strings out of 493029
- 314449 string characters out of 6136233
- 364600 words of memory out of 5000000
- 19087 multiletter control sequences out of 15000+600000
- 13004 words of font info for 52 fonts, out of 8000000 for 9000
+ 15900 strings out of 493029
+ 315057 string characters out of 6136233
+ 367797 words of memory out of 5000000
+ 19108 multiletter control sequences out of 15000+600000
+ 13705 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,11n,84p,603b,278s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,11n,84p,603b,275s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
@@ -704,13 +717,13 @@ onts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestr
-oke/dsrom10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symb
-ols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pf
-b>
-Output written on RP_lecture3_empirical_process.pdf (6 pages, 196933 bytes).
+oke/dsrom10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/
+dsrom8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/m
+sbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
+Output written on RP_lecture3_empirical_process.pdf (9 pages, 227405 bytes).
 PDF statistics:
- 98 PDF objects out of 1000 (max. 8388607)
- 71 compressed objects within 1 object stream
+ 113 PDF objects out of 1000 (max. 8388607)
+ 82 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
