@@ -225,7 +225,7 @@ where $\mathds{1}_{(-\infty, t]}$ is the \emph{$\set{0, 1}$-valued indicator fun
 \subsection{Tail bounds for Empirical Processes}
 \begin{itemize}
 \item \begin{remark}
-Consider \emph{the \textbf{suprema} of \textbf{empirical process}}:
+Consider \underline{\emph{the \textbf{suprema} of \textbf{empirical process}}}:
 \begin{align}
 Z := \sup_{f \in \cF}\set{\cP_n f} =  \sup_{f \in \cF}\set{ \frac{1}{n}\sum_{i=1}^n f(X_i)} \label{def: suprema_emp_process}
 \end{align} where $(X_1 \xdotx{,} X_n)$ are independent random variables drawn from $\cP := \otimes_{i=1}^{n}\cP_i$,  each $\cP_i$ is supported on some set $\cX_i \subseteq \cX$.  $\cF$ is a family of real-valued functions $f: \cX \to \bR$. The primary goal of this section is to derive a number of \emph{upper bounds} on \emph{the tail event} $\set{Z \ge \E{}{Z} + t}$.
@@ -240,10 +240,10 @@ Then for all $t \ge 0$, we have
 \end{theorem}
 
 \item \begin{theorem}(\textbf{Functional Bernstein Inequality, Talagrand Concentration for Empirical Processes})  \citep{wainwright2019high, boucheron2013concentration}\\
-Consider a \textbf{countable} class of functions $\cF$ \textbf{uniformly bounded} by $b$. Then for all  $t > 0$, the suprema of empirical process $Z$ as defined in \ref{def: suprema_emp_process} satisfies the upper tail bound
+Consider a \textbf{countable} class of functions $\cF$ \textbf{uniformly bounded} by $b$. Then for all  $t > 0$, the suprema of empirical process $Z$ as defined in \eqref{def: suprema_emp_process} satisfies the upper tail bound
 \begin{align}
-\cP\set{Z \ge \E{}{Z} + t} \le 2\exp\paren{-\frac{n t^2}{8e\E{}{\Sigma^2} + 4bt}} \label{ineqn: bernstein_inequality_functional}
-\end{align} where $\Sigma^2 := \sup_{f \in \cF}\set{\frac{1}{n}\sum_{i=1}^{n}f^2(X_i)}$.
+\cP\set{Z \ge \E{}{Z} + t} \le \exp\paren{-\frac{n t^2}{8e\Sigma^2 + 4bt}} \label{ineqn: bernstein_inequality_functional}
+\end{align} where $\Sigma^2 := \E{}{\sup_{f \in \cF}\set{\frac{1}{n}\sum_{i=1}^{n}f^2(X_i)}}$ is \textbf{the weak variance}.
 \end{theorem}
 
 \item \begin{remark}
@@ -251,9 +251,9 @@ As opposed to control only in terms of \emph{\textbf{bounds} on the \textbf{func
 \end{remark}
 
 \item \begin{remark}
-We can prove the bound:
+We will prove the bound in next section:
 \begin{align*}
-\E{}{\Sigma^2} \le \sigma^2 + 2b\E{}{Z}
+\Sigma^2 \le \sigma^2 + 2b\E{}{Z}
 \end{align*} where $\sigma^2 := \sup_{f\in \cF}\E{}{f^2(X)}$. Then, the functional Bernstein inequality \eqref{ineqn: bernstein_inequality_functional} can be formulated as
 \begin{align}
 \cP\set{Z \ge \E{}{Z} +c_0 \gamma \sqrt{t} + c_1 bt} \le  e^{- n t}  \label{ineqn: bernstein_inequality_functional_2}
@@ -264,26 +264,56 @@ We can prove the bound:
 \end{remark}
 
 \item \begin{theorem} (\textbf{Bousquet's Inequality, Functional Bennet Inequality})  \citep{boucheron2013concentration}\\
-Let $X_1 \xdotx{,} X_n$ be independent identically distributed random vectors. Assume that $\E{}{f(X_i)} = 0$, and that $f(X_i) \le 1$ for all $f \in \cF$.
-Let $\gamma^2= \sigma^2 + 2\E{}{Z}$ (where $\sigma^2 := \sup_{f\in \cF}\frac{1}{n}\sum_{i=1}^n\E{}{f^2(X_i)}$ is the wimpy variance). Let $\phi(u) = e^u - u - 1$ and $h(u) = (1 + u) \log(1 + u) - u$, for $u \ge -1$. Then for all $\lambda \ge 0$,
+Let $X_1 \xdotx{,} X_n$ be \textbf{independent} \textbf{identically distributed} random vectors. Assume that $\E{}{f(X_i)} = 0$, and that $f(X_i) \le 1$ for all $f \in \cF$.
+Let
 \begin{align*}
-\log \E{}{e^{\lambda\paren{Z - \E{}{Z}}}} \le \gamma \phi(\lambda).
+\gamma^2= \sigma^2 + 2\E{}{Z},
+\end{align*} where $\sigma^2 := \sup_{f\in \cF}\set{\frac{1}{n}\sum_{i=1}^n\E{}{f^2(X_i)}}$ is \textbf{the wimpy variance}. Let $\phi(u) = e^u - u - 1$ and $h(u) = (1 + u) \log(1 + u) - u$, for $u \ge -1$. Then for all $\lambda \ge 0$,
+\begin{align*}
+\log \E{}{e^{\lambda\paren{Z - \E{}{Z}}}} \le n\gamma^2 \phi(\lambda).
 \end{align*}
 Also, for all $t \ge 0$,
 \begin{align}
-\cP\set{Z \ge \E{}{Z} + t} \le \exp\paren{- \gamma^2 \, h\paren{\frac{t}{\gamma^2}}}. \label{ineqn: bousquet_inequality_bennet_functional}
+\cP\set{Z \ge \E{}{Z} + t} \le \exp\paren{- n\gamma^2 \, h\paren{\frac{t}{\gamma^2}}}. \label{ineqn: bousquet_inequality_bennet_functional}
 \end{align}
 \end{theorem}
 \end{itemize}
 \subsection{Maximal Inequalities}
-%\subsection{Suprema of Empirical Process}
+
 
 
 \section{Variance of Suprema of Empirical Process}
 \subsection{General Upper Bounds for the Variance}
+\begin{itemize}
+\item \begin{definition}(\textbf{\emph{Variances of Empirical Process}})\\
+Let $X_1 \xdotx{,} X_n$ be independent random variables taking values in $\cX$.  Depending on \emph{\textbf{ordering}} of the \emph{\textbf{expectation}}, \emph{\textbf{suprema}} and \emph{\textbf{summation}} operator, we define \emph{three different types of \textbf{variance}} associated with empirical process
+\begin{align*}
+\cP_n f = \E{\cP_n}{f} = \frac{1}{n}\sum_{i=1}^n f(X_i).
+\end{align*}
+\begin{enumerate}
+\item \emph{\textbf{The strong variance}} is defined as
+\begin{align}
+V &:= \frac{1}{n}\sum_{i=1}^n \E{}{\sup_{f\in \cF}f^2(X_i)}  \label{def: strong_variance_emp_process}
+\end{align}
+\item  \emph{\textbf{The weak variance}} is defined as
+\begin{align}
+\Sigma^2 &:= \E{}{\sup_{f \in \cF}\set{\frac{1}{n}\sum_{i=1}^{n}f^2(X_i)}}  \label{def: weak_variance_emp_process}
+\end{align}
+\item  \emph{\textbf{The wimpy variance}} is defined as
+\begin{align}
+\sigma^2 &:= \sup_{f\in \cF}\set{\frac{1}{n}\sum_{i=1}^n \E{}{f^2(X_i)}} \label{def: wimpy_variance_emp_process}
+\end{align}
+\end{enumerate} 
+By Jensen's inequality, 
+\begin{align*}
+\sigma^2 \le \Sigma^2 \le V
+\end{align*} In general, there may be \emph{significant gaps between any two of these quantities}. A notable difference is the case of \emph{\textbf{Rademacher averages}} when $\sigma^2 = \Sigma^2$.
+\end{definition}
+\end{itemize}
 \subsection{Symmetrization and Contraction Principle}
 %\subsection{Uniform Convergence via Rademacher Complexity}
-\subsection{Bounding the Variance of Suprema of Empirical Process}
+\subsection{Bounding the Weak Variance via Wimpy Variance}
+\subsection{Rademacher Complexity and Gaussian Complexity}
 
 \section{Expected Value of Suprema of Empirical Process}
 \subsection{Covering Number, Packing Number and Metric Entropy}
