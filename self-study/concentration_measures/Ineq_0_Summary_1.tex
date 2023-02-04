@@ -656,12 +656,25 @@ But in \emph{the \textbf{large deviation} regime}, the Poisson tail is \emph{\te
 \end{remark}
 
 \item \begin{remark}
-\emph{\textbf{The Bennet inequality}} captures \emph{\textbf{the Poisson tail bevarior}}:  for sum of  $n$ independent random variables $X_i$ such that $X_i \le b$ almost surely with zero mean, finite variance $\nu = \sum_{i=1}^n \E{}{X_i^2}$.  The Bennet inequality provides a tail bound as
+\begin{enumerate}
+\item \emph{\textbf{The Bennet inequality}} captures \emph{\textbf{the Poisson tail bevarior}}:  for sum of  $n$ independent random variables $X_i$ such that $X_i \le b$ almost surely with zero mean, finite variance $\nu = \sum_{i=1}^n \E{}{X_i^2}$.  The Bennet inequality provides a tail bound as
 \begin{align*}
 \bP\set{\sum_{i=1}^n X_i \ge t} &\le \exp\paren{-  \frac{\nu}{b^2} h\paren{\frac{b t}{\nu}}}
 \end{align*} In small deviation regime, where $u:= bt/\nu \ll 1$, $h(u) \approx u^2$, the Bennet inequality gives a Gaussian tail bound $\approx \exp\paren{- t^2/\nu}$.
 
 In large deviation regime, $u \gg bt/\nu \ge 2$, $h(u) \ge \frac{1}{2}u \log(u)$, thus the Bennet inequality gives a Poisson tail bound $\approx (\nu/b^2t)^{t /(2 b^2)}$
+
+\item \emph{\textbf{The Bernstein inequality}} captures \emph{\textbf{the Exponential tail bevarior}}
+
+\item Let $X_i$, $1 \le i \le n$, be \emph{independent centred random variables} \emph{a.s. \textbf{bounded}} by $c < \infty$ in absolute value. Set
+$\sigma^2 = 1/n\sum^n_{i=1}\E{}{X_i^2}$ and $S_n = \sum^n_{i=1}X_i$. Then, for all $t \ge 0$,
+\begin{align*}
+\bP\set{S_n \ge  t} &\le \exp\paren{-\frac{n\sigma^2}{c^2}h\paren{\frac{ct}{n\sigma^2}}} \quad (\text{\emph{Bennett inequality}})\\
+&\le \exp\paren{-\frac{3t}{4c}\log\paren{1+ \frac{2ct}{3n\sigma^2}}}  \quad (\text{\emph{Prokhorov inequality}})\\ 
+&\le  \exp\paren{-\frac{t^2}{2n\sigma^2 + 2ct/3}}  \quad (\text{\emph{Bernstein inequality}})\\ 
+\end{align*} 
+\end{enumerate}
+
 \end{remark}
 \end{itemize}
 
