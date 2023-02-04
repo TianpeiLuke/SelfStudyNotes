@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  3 FEB 2023 18:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  3 FEB 2023 19:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -679,13 +679,13 @@ LaTeX Font Info:    Try loading font information for U+dsrom on input line 40.
 (/usr/share/texlive/texmf-dist/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 ) [2] [3]
-[4] [5] [6]
-Overfull \hbox (9.7318pt too wide) in paragraph at lines 266--269
+[4] [5] [6] [7]
+Overfull \hbox (9.7318pt too wide) in paragraph at lines 276--279
 []\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Bousquet's In-equal-ity, Func-tiona
 l Ben-net In-equal-ity\OT1/cmr/m/it/10.95 ) [Boucheron et al.,
  []
 
-[7] [8] [9] (./RP_lecture4_empirical_process.bbl) [10]
+[8] [9] (./RP_lecture4_empirical_process.bbl) [10]
 (./RP_lecture4_empirical_process.aux) ) 
 Here is how much of TeX's memory you used:
  15903 strings out of 493029
@@ -713,7 +713,7 @@ fonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestr
 oke/dsrom10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/
 dsrom8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/m
 sbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on RP_lecture4_empirical_process.pdf (10 pages, 230789 bytes).
+Output written on RP_lecture4_empirical_process.pdf (10 pages, 232670 bytes).
 PDF statistics:
  116 PDF objects out of 1000 (max. 8388607)
  84 compressed objects within 1 object stream
