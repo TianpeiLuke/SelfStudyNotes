@@ -92,6 +92,10 @@ For any distribution, the empirical CDF
 \norm{\widehat{F}_n - F}{\infty} := \sup_{t\in \bR}\abs{\widehat{F}_n(t) - F(t)} \rightarrow 0, \text{ a.s. } \label{eqn: gilvenko_cantelli}
 \end{align}
 \end{theorem}
+
+\item \begin{remark}(\textbf{\emph{Uniform Law of Large Numbers}})\\
+\emph{\textbf{The Glivenko-Cantelli theorem}} \emph{generalizes} \emph{\textbf{the strong law of large numbers}} to \emph{stochastic process}. It confirms that the \emph{convergence} of sample mean $\cP_n f$ to its expectation $\cP f$ is true in function space $\cF$ not only \emph{in \textbf{pointwise topology}} but also \emph{in \textbf{uniform topology}}. Thus,  \emph{the Glivenko-Cantelli theorem} is also called \emph{\textbf{the uniform law of large numbers}}.
+\end{remark}
 \end{itemize}
 
 
@@ -135,6 +139,8 @@ An explicit notion of \emph{(centered and normalized) empirical process} is
 \end{align*} where $X_1 \xdotx{,} X_n \sim \cP$ are i.i.d random variables. Note that it is a stochastic process since \emph{the function $f$ is changing} in $\cF$, i.e. the process $\paren{\cP_n  - \cP}f$ is indexed by function $f \in \cF$ not finite dimensional variable.
 \end{remark}
 
+
+
 \item \begin{remark}(\textbf{\emph{Random Measure}})\\
 Normally we assume that data are sampled from some distribution $\cP$ and the data itself is random. However, the empirical measure 
 \begin{align*}
@@ -143,6 +149,10 @@ Normally we assume that data are sampled from some distribution $\cP$ and the da
 \begin{align*}
 \cP_n f = \E{\cP_n}{f} = \frac{1}{n}\sum_{i=1}^n f(X_i).
 \end{align*} \emph{\textbf{The critical difference}} between mean of empirical measure vs. sample mean is that we now assume that $f$ is \emph{\textbf{not fixed}}.
+\end{remark}
+
+\item \begin{remark}
+\emph{In probability theory}, an \emph{\textbf{empirical process}} is a \underline{\emph{\textbf{stochastic process}}} that \emph{describes \underline{the \textbf{proportion} of objects in a system \textbf{in a given state}}}.  Applications of the theory of empirical processes arise in \emph{\textbf{non-parametric statistics}}.
 \end{remark}
 
 \item \begin{remark} (\emph{\textbf{Object of Empirical Process Theory}}) \\
