@@ -58,7 +58,7 @@
   - Ergodic Theorem 
   - Central Limit Theorem
 
-- Martingale [pdf](./PT_lecture6_martingale.pdf)
+- Martingale [pdf](./RP_lecture3_martingale.pdf)
   - Defintions
     - Martingale, Sub-Martingale, Super-Martingale
     - Martingale Difference Sequence
@@ -75,7 +75,7 @@
     - Bernstein's Inequality for Martingale Difference Sequence 
   - Martingale Convergence Theorem 
 
-- Empirical Process [pdf](./RP_lecture3_empirical_process.pdf)
+- Empirical Process [pdf](./RP_lecture4_empirical_process.pdf)
   - Uniform Law of Large Numbers
     - Motivations 
     - Glivenko-Cantelli Theorem
@@ -98,7 +98,7 @@
     - Contraction Inequality
     - VC Class
 
-- Probability Theory on Infinite Dimensional Space [pdf](./RP_lecture4_prob_infinite_prod_sp.pdf)
+- Probability Theory on Infinite Dimensional Space [pdf](./RP_lecture5_prob_infinite_prod_sp.pdf)
   - Product Measure on Infinite Dimensional Space
     - Product Measure, Pre-Measure, Hahn-Kolmogorov Theorem 
     - Kolmogorov Extension Theorem
@@ -108,7 +108,7 @@
     - Lebesgue-Stieltjes Integration
     - Connection with Riemann-Stieltjes Integration
 
-- Brownian Motion and Stochastic Differential Equations [pdf](./RP_lecture5_brownian_motion.pdf)
+- Brownian Motion and Stochastic Differential Equations [pdf](./RP_lecture6_brownian_motion.pdf)
   - Brownian Motion
     - Definitions
     - Construction of Brownian Motion
