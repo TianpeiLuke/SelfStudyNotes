@@ -177,9 +177,7 @@ However, there are many situations where this is actually a \emph{\textbf{counta
 \end{align*} where $F(t) = \cP\paren{-\infty, t}$ is the cumulative distribution function. If $\cF$ is \emph{countable} or if there exists $\cF_0$ \emph{countable} such that
 \begin{align*}
 \norm{\cP_n  - \cP}{\cF}  = \norm{\cP_n  - \cP}{\cF_0}, \quad \text{a.s.} 
-\end{align*} then the measurability problem disappears.
-
-For the next few sections we will simply assume that the class $\cF$ is \emph{countable}.
+\end{align*} then the measurability problem disappears. For the next few sections we will simply \emph{\textbf{assume}} that the class $\cF$ is \emph{\textbf{countable}}.
 \end{remark}
 
 \item \begin{remark} (\textbf{\emph{Bounded Assumption}})\\
@@ -288,9 +286,201 @@ Also, for all $t \ge 0$,
 \end{align}
 \end{theorem}
 \end{itemize}
-\subsection{Maximal Inequalities}
+
+\subsection{Symmetrization and Contraction Principle}
+\begin{itemize}
+\item \begin{definition}(\emph{\textbf{Symmetrized Empirical Process}})\\
+Let $X_1 \xdotx{,} X_n$ be independent random variables on $\cX$ and $\cF$ be a class of measurable functions on $\cX$. Consider \underline{\emph{\textbf{the symmetrized process}}}
+\begin{align}
+f \to \cP_n^{\epsilon}f := \frac{1}{n}\sum_{i=1}^{n}\epsilon_i f(X_i),  \quad  \forall f \in \cF\label{def: symmetrized_emp_process}
+\end{align} where $\epsilon := (\epsilon_1 \xdotx{,} \epsilon_n)$ are  \textbf{\emph{independent Rademacher random variables}} taking values in $\set{-1, +1}$ with equal probability and $\sigma_i$'s are independent from $X  = (X_1 \xdotx{,} X_n)$. \emph{\textbf{The supremum norm} of symmetrized process} is defined as
+\begin{align*}
+\norm{\cP_n^{\epsilon}}{\cF} := \sup_{f \in \cF}\abs{\frac{1}{n}\sum_{i=1}^{n}\epsilon_i f(X_i)}
+\end{align*}
+\end{definition}
+
+\item \begin{definition}(\emph{\textbf{Rademacher Process}})\\
+Let $\epsilon := (\epsilon_1 \xdotx{,} \epsilon_n)$ be  \textbf{\emph{independent Rademacher random variables}} taking values in $\set{-1, +1}$ with equal probability. \underline{\emph{\textbf{The Rademacher process}}} is defined as 
+\begin{align}
+t \to \frac{1}{n}\sum_{i=1}^{n}\epsilon_i  t_i, \quad t := (t_1 \xdotx{,} t_n) \in T \subset \bR^n. \label{def: Rademacher_emp_process}
+\end{align} So the symmetrized empirical process \eqref{def: symmetrized_emp_process} is a Rademacher process conditioning on $X = (X_1 \xdotx{,} X_n)$.
+\end{definition}
+
+\item \begin{remark}(\textbf{\emph{Symmetrization}}) \\
+The techinque that replaces the empirical process $\paren{\cP_n - \cP}f$ by the symmetrized version $\cP_n^{\epsilon}f $  is called \emph{\textbf{symmetrization}}. The idea is that, for fixed $(X_1 \xdotx{,} X_n)$, the symmetrized empirical measure \eqref{def: symmetrized_emp_process} is a \emph{Rademacher process}, hence a \emph{\textbf{sub-Gaussian process}}.
+\end{remark}
+
+\begin{proposition} (\textbf{Symmetrization Inequalities}). \citep{wellner2013weak, boucheron2013concentration, vershynin2018high, wainwright2019high}\\
+For every \textbf{nondecreasing}, \textbf{convex} $\Phi: \bR \to \bR$ and class of measurable functions $\cF$,
+\begin{align}
+\E{X, \epsilon}{\Phi\paren{\frac{1}{2}\norm{\cP_n^{\epsilon}}{\overline{\cF}}}} \le \E{X}{\Phi\paren{\norm{\cP_n - \cP}{\cF}}} \le \E{X, \epsilon}{\Phi\paren{2\norm{\cP_n^{\epsilon}}{\cF}}} \label{ineqn: symmetrization_inequality}
+\end{align} where $\overline{\cF} := \set{f - \E{\cP}{f}: f\in \cF}$ is the \textbf{recentered function class}.
+\end{proposition}
+\begin{proof}
+We first prove the upper bound. Let $Y$ be i.i.d. samples with the same distribution as $X$. For fixed $f$, $\E{X}{f(X)} = \E{Y}{\frac{1}{n}\sum_{i=1}^nf(Y_i)}$.
+\begin{align*}
+\E{X}{\Phi\paren{\norm{\cP_n - \cP}{\cF}}} &= \E{X}{\Phi\paren{\sup_{f\in \cF}\abs{\frac{1}{n}\sum_{i=1}^n (f(X_i) - \E{X}{f(X)})}}}\\
+&= \E{X}{\Phi\paren{\sup_{f\in \cF}\abs{\E{Y}{\frac{1}{n}\sum_{i=1}^n (f(X_i) - f(Y_i))}}}}\\
+&\le \E{X, Y}{\Phi\paren{\sup_{f\in \cF}\abs{\frac{1}{n}\sum_{i=1}^n (f(X_i) - f(Y_i))} }}\\
+&= \E{X, Y, \epsilon}{\Phi\paren{\sup_{f\in \cF}\abs{ \frac{1}{n}\sum_{i=1}^n \epsilon_i (f(X_i) - f(Y_i))}}}
+\end{align*} The first inequality is due to Jenson's inquality since $\Phi$ is non-decreasing and convex. The last equality is due to the fact that $\epsilon_i(f(X_i) - f(Y_i))$ and $f(X_i) - f(Y_i)$ have the same joint distribution. Next by triangle inequality and Jenson's inequality  we have
+\begin{align*}
+\ldots & \le \E{X, Y, \epsilon}{\Phi\paren{\sup_{f\in \cF}\abs{ \frac{1}{n}\sum_{i=1}^n \epsilon_i f(X_i)} +\sup_{f\in \cF} \abs{- \frac{1}{n}\sum_{i=1}^n \epsilon_i f(Y_i))}}}\\
+&\le  \frac{1}{2}\E{X, \epsilon}{\Phi\paren{2\sup_{f\in \cF}\abs{ \frac{1}{n}\sum_{i=1}^n \epsilon_i f(X_i) }}} +   \frac{1}{2}\E{Y, \epsilon}{\Phi\paren{2\sup_{f\in \cF}\abs{ \frac{1}{n}\sum_{i=1}^n \epsilon_i f(Y_i)}}} \\
+&= \E{X, \epsilon}{\Phi\paren{2\sup_{f\in \cF}\abs{ \frac{1}{n}\sum_{i=1}^n \epsilon_i f(X_i) }}}
+\end{align*} which proves the upper bound. To prove the lower bound, we have
+\begin{align*}
+\E{X, \epsilon}{\Phi\paren{\frac{1}{2}\norm{\cP_n^{\epsilon}}{\overline{\cF}}}} &=  \E{X, \epsilon}{\Phi\paren{\frac{1}{2}\sup_{f\in \cF}\abs{ \frac{1}{n}\sum_{i=1}^n \epsilon_i \paren{f(X_i)  - \E{Y_i}{f(Y_i)} }}}}\\
+&\le  \E{X, Y, \epsilon}{\Phi\paren{\frac{1}{2}\sup_{f\in \cF}\abs{ \frac{1}{n}\sum_{i=1}^n \epsilon_i \paren{f(X_i)  - f(Y_i) }}}}\\
+&=  \E{X, Y}{\Phi\paren{\frac{1}{2}\sup_{f\in \cF}\abs{ \frac{1}{n}\sum_{i=1}^n \paren{f(X_i)  - f(Y_i) }}}}
+\end{align*} where the first inequality is due to convexity of $\Phi$ and Jenson's inequality and equality follows since $\epsilon_i(f(X_i) - f(Y_i))$ and $f(X_i) - f(Y_i)$ have the same joint distribution. Note that by triangle inequality
+\begin{align*}
+\frac{1}{2}\sup_{f\in \cF}\abs{ \frac{1}{n}\sum_{i=1}^n \paren{f(X_i)  - f(Y_i) }} &= \frac{1}{2}\sup_{f\in \cF}\abs{ \frac{1}{n}\sum_{i=1}^n \paren{f(X_i)  + \E{X}{f(X)} - \E{Y}{f(Y)} - f(Y_i) }} \\
+&\le \frac{1}{2}\sup_{f\in \cF}\abs{\frac{1}{n}\sum_{i=1}^n \paren{f(X_i)  + \E{X}{f(X)}}} + \frac{1}{2}\sup_{f\in \cF}\abs{\frac{1}{n}\sum_{i=1}^n \paren{f(Y_i)  + \E{X}{f(Y)}}} 
+\end{align*} Since $\Phi$ is convex and non-decreasing, 
+\begin{align*}
+\Phi\paren{\frac{1}{2}\sup_{f\in \cF}\abs{ \frac{1}{n}\sum_{i=1}^n \paren{f(X_i)  - f(Y_i) }}} &\le\frac{1}{2} \Phi\paren{\sup_{f\in \cF}\abs{\frac{1}{n}\sum_{i=1}^n \paren{f(X_i) + \E{X}{f(X)}}}} \\
+&\quad  + \frac{1}{2} \Phi\paren{\sup_{f\in \cF}\abs{\frac{1}{n}\sum_{i=1}^n \paren{f(Y_i)  + \E{X}{f(Y)}}} }
+\end{align*} The claim follows by taking expectations and using the fact that $X$ and $Y$ are identically distributed. \qed
+\end{proof}
 
 
+\item \begin{proposition}(\textbf{Contraction Principle, Simple Version}) \citep{boucheron2013concentration, vershynin2018high}\\
+Let $x_1 \xdotx{,} x_n$ be vectors whose real-valued components are indexed by $T$, that is, $x_i = (x_{i,s})_{s \in T}$. Let $\alpha_i \in [0, 1]$ for $i = 1 \xdotx{,} n$. Let $\epsilon_1 \xdotx{,} \epsilon_n$ be independent Rademacher random variables. Then
+\begin{align}
+\E{}{\sup_{s\in T}\sum_{i=1}^n \epsilon_i \alpha_i x_{i,s}} \le \E{}{\sup_{s\in T}\sum_{i=1}^n \epsilon_i  x_{i,s}}\label{ineqn: contraction_rademacher}
+\end{align}
+\end{proposition}
+\begin{proof}
+Define $\Psi: (\bR^{T})^n \to \bR$ as the right hand side:
+\begin{align*}
+\Psi(x_1 \xdotx{,} x_n) &= \E{}{\sup_{s \in T}\sum_{i=1}^n \epsilon_i  x_{i,s}}.
+\end{align*} The function $\Psi$ is \emph{\textbf{convex}} since it is \emph{a linear combination of suprema of linear functions}. It is also \emph{invariant} under sign change in the sense that for all $(\eta_1 \xdotx{,} \eta_n) \in \set{-1, 1}^n$,
+\begin{align*}
+\Psi(\eta_1 x_1 \xdotx{,} \eta_n x_n) &= \E{}{\sup_{s \in T}\sum_{i=1}^n \epsilon_i  \eta_i x_{i,s}} = \E{}{\sup_{s \in T}\sum_{i=1}^n \epsilon_i  x_{i,s}} = \Psi(x_1 \xdotx{,} x_n).
+\end{align*} Fix $(x_1 \xdotx{,} x_n) \in (\bR^{T})^n$. Consider the restriction of $\Psi$ to the \emph{\textbf{convex hull} of the $2^n$ points} of the form $(\eta_1 x_1 \xdotx{,} \eta_n x_n)$, with $(\eta_1 \xdotx{,} \eta_n) \in \set{-1, 1}^n$. The \emph{\textbf{supremum}} of $\Psi$ is \emph{achieved} at one of the \emph{\textbf{vertices}} $(\eta_1 x_1 \xdotx{,} \eta_n x_n)$. The sequence of vectors $(\alpha_1 x_1 \xdotx{,} \alpha_n x_n)$ lies inside the convex hull of $(\eta_1 x_1 \xdotx{,} \eta_n x_n)$ and therefore
+\begin{align*}
+\E{}{\sup_{s\in T}\sum_{i=1}^n \epsilon_i \alpha_i x_{i,s}}   &= \Psi(\alpha_1 x_1 \xdotx{,} \alpha_n x_n) \\
+ & \le \Psi(\eta_1 x_1 \xdotx{,} \eta_n x_n) =  \Psi(x_1 \xdotx{,} x_n)\\
+ &= \E{}{\sup_{s \in T}\sum_{i=1}^n \epsilon_i  x_{i,s}}. \qed
+\end{align*}
+\end{proof}
+
+\item \begin{remark}
+For arbitrary $\alpha = (\alpha_1 \xdotx{,} \alpha_n) \in \bR^n$, the contraction principle becomes \citep{vershynin2018high} 
+\begin{align}
+\E{}{\sup_{s\in T}\sum_{i=1}^n \epsilon_i \alpha_i x_{i,s}} \le \norm{\alpha}{\infty} \E{}{\sup_{s\in T}\sum_{i=1}^n \epsilon_i  x_{i,s}}\label{ineqn: contraction_rademacher_general}
+\end{align}
+\end{remark}
+
+\item To prove the following general contration principle, we need the following lemma
+\begin{lemma}\citep{boucheron2013concentration, vershynin2018high}\\
+Let $\Psi : \bR\to \bR$ denote a \textbf{convex non-decreasing function}. Let $\varphi: \bR \to \bR$ be a $1$-Lipschitz function such that $\varphi_i(0) = 0$. Let $T \subset \bR^2$. Then
+\begin{align*}
+\Psi\paren{\sup_{s \in T}\set{s_1 + \varphi(s_2)}} + \Psi\paren{\sup_{s \in T}\set{s_1 - \varphi(s_2)}} &\le \Psi\paren{\sup_{s \in T}\set{s_1 + s_2}} + \Psi\paren{\sup_{s \in T}\set{s_1 - s_2}}
+\end{align*}
+\end{lemma} (\emph{Hinit}: For \emph{non-decreasing convex} function $\Psi$,  we have
+\begin{align*}
+\Psi(d) - \Psi(c) \le \Psi(b) - \Psi(a)
+\end{align*} for $0 \le d- c \le b- a$ and $c\le a$. It suffice to show that 
+\begin{align*}
+\Psi\paren{s_1^{*} + \varphi(s_2^{*})} + \Psi\paren{t_1^{*} - \varphi(t_2^{*})} &\le \Psi\paren{s_1^{*} + s_2^{*}} + \Psi\paren{t_1^{*} - t_2^{*}}\\
+\Rightarrow   \Psi\paren{t_1^{*} - \varphi(t_2^{*})}  - \Psi\paren{t_1^{*} - t_2^{*}} &\le \Psi\paren{s_1^{*} + s_2^{*}} - \Psi\paren{s_1^{*} + \varphi(s_2^{*})} 
+\end{align*} where $s^{*} = (s_1^{*}, s_2^{*})$ and $t^{*} = (t_1^{*}, t_2^{*})$ are optimal solution for the first and second term on the left-hand side of inequality. )
+
+\item \begin{proposition}(\textbf{Talagrand's Contraction Principle}) \citep{boucheron2013concentration, vershynin2018high}\\
+Let $x_1 \xdotx{,} x_n$ be vectors whose real-valued components are indexed by $T$, that is, $x_i = (x_{i,s})_{s \in T}$. For each $i = 1 \xdotx{,} n$, let $\varphi_i : \bR \to \bR$ be a \textbf{$1$-Lipschitz function} such that $\varphi_i(0) = 0$. Let $\epsilon_1 \xdotx{,} \epsilon_n$ be independent Rademacher random variables, and let $\Psi: [0, \infty) \to \bR$ be a \textbf{non-decreasing convex} function.  Then
+\begin{align}
+\E{}{\Psi\paren{\sup_{s\in T}\sum_{i=1}^n \epsilon_i \varphi_i(x_{i,s})}} \le \E{}{\Psi\paren{\sup_{s\in T}\sum_{i=1}^n \epsilon_i  x_{i,s}}}\label{ineqn: contraction_principle_1}
+\end{align} and
+\begin{align}
+\E{}{\Psi\paren{\frac{1}{2}\sup_{s\in T}\abs{\sum_{i=1}^n \epsilon_i \varphi_i(x_{i,s})}}} \le \E{}{\Psi\paren{\sup_{s\in T}\abs{\sum_{i=1}^n \epsilon_i  x_{i,s}}}}.\label{ineqn: contraction_principle_2}
+\end{align}
+\end{proposition}
+\begin{proof}
+We show the first inequality.  It suffices to prove that, if $T \subset \bR^n$ is a \emph{finite set of vectors} $s = (s_1 \xdotx{,} s_n)$, then
+\begin{align*}
+\E{}{\Psi\paren{\sup_{s\in T}\sum_{i=1}^n \epsilon_i \varphi_i(s_i)}} \le \E{}{\Psi\paren{\sup_{s\in T}\sum_{i=1}^n \epsilon_i s_i}}
+\end{align*} The key step is that for an arbitrary function $A : T \to \bR$
+\begin{align*}
+\E{}{\Psi\paren{\sup_{s\in T}\set{A(s) + \sum_{i=1}^n \epsilon_i \varphi_i(s_i)}}} \le \E{}{\Psi\paren{\sup_{s\in T}\set{A(s) + \sum_{i=1}^n \epsilon_i s_i}}}
+\end{align*} For $n=1$, using the above lemma
+\begin{align*}
+\E{}{\Psi\paren{\sup_{u \in U}\set{u_1 + \epsilon \varphi(u_2)}}} &\le \E{}{\Psi\paren{\sup_{u \in U}\set{u_1 + \epsilon u_2}} }
+\end{align*} where $U = \set{(A(s), s), s\in T}$. 
+
+We prove by induction on $n$. Assume that the hypothesis hold true for all $1 \xdotx{,} n-1$. Then
+\begin{align*}
+&\E{}{\Psi\paren{\sup_{s\in T}\set{A(s) + \sum_{i=1}^n \epsilon_i \varphi_i(s_i)}}}\\
+&= \E{\epsilon_1 \xdotx{,} \epsilon_{n-1}}{\E{\epsilon_n}{\Psi\paren{\sup_{s\in T}\set{A(s) + \sum_{i=1}^{n-1} \epsilon_i \varphi_i(s_i) + \epsilon_n \varphi_i(s_n)}} \Big| \epsilon_1 \xdotx{,} \epsilon_{n-1}}}\\
+&\text{ by hypothesis on $n=1$}\\
+&\le \E{\epsilon_1 \xdotx{,} \epsilon_{n-1}}{\E{\epsilon_n}{\Psi\paren{\sup_{s\in T}\set{A(s) + \sum_{i=1}^{n-1} \epsilon_i \varphi_i(s_i) + \epsilon_n s_n}} \Big| \epsilon_1 \xdotx{,} \epsilon_{n-1}}} \\
+&= \E{\epsilon_n}{\E{\epsilon_1 \xdotx{,} \epsilon_{n-1}}{\Psi\paren{\sup_{s\in T}\set{A(s) + \sum_{i=1}^{n-1} \epsilon_i \varphi_i(s_i) + \epsilon_n s_n}} \Big| \epsilon_n }} \\
+&\text{ by hypothesis on $n-1$}\\
+&\le \E{\epsilon_n}{\E{\epsilon_1 \xdotx{,} \epsilon_{n-1}}{\Psi\paren{\sup_{s\in T}\set{A(s) + \sum_{i=1}^{n-1} \epsilon_i s_i + \epsilon_n s_n}} \Big| \epsilon_n }} \\
+&= \E{}{\Psi\paren{\sup_{s\in T}\set{A(s) + \sum_{i=1}^{n} \epsilon_i s_i }}}
+\end{align*} which proves the first inequality. For the second inequality, we see that 
+\begin{align*}
+\E{}{\Psi\paren{\frac{1}{2}\sup_{s\in T}\abs{\sum_{i=1}^n \epsilon_i \varphi_i(x_{i,s})}}} &= \E{}{\Psi\paren{\frac{1}{2}\sup_{s\in T}\paren{\sum_{i=1}^n \epsilon_i \varphi_i(x_{i,s})}_{+} + \frac{1}{2}\sup_{s\in T}\paren{\sum_{i=1}^n - \epsilon_i \varphi_i(x_{i,s})}_{+}}}\\
+&\le \frac{1}{2} \E{}{\Psi\paren{\sup_{s\in T}\paren{\sum_{i=1}^n \epsilon_i \varphi_i(x_{i,s})}_{+} }} \\
+&\quad  + \frac{1}{2} \E{}{\Psi\paren{\sup_{s\in T}\paren{\sum_{i=1}^n -\epsilon_i \varphi_i(x_{i,s})}_{+} }}
+\end{align*} The second inequality in the theorem now follows by invoking twice the first inequality and noting that the function $\Psi((x)_{+})$ is \emph{convex and non-decreasing}. \qed
+\end{proof}
+
+\item \begin{remark}
+Let $\varphi_i = \varphi$ for all $i$ and replace $x_{i,s} \to f(X_i)$ and $s\in T \to f\in \cF$. We obtain the contraction principle for symmetrized empirical process indexed by function class $\cF$.
+\begin{align}
+\E{}{\Psi\paren{\sup_{g \in \varphi \circ \cF} \cP_n^{\epsilon} g}} &\le \E{}{\Psi\paren{\sup_{f \in \cF} \cP_n^{\epsilon}f}} \label{ineqn: contraction_principle_3} \\
+\text{ and }  \quad \E{}{\Psi\paren{\frac{1}{2}\norm{\cP_n^{\epsilon}}{\varphi \circ \cF}}} &\le \E{}{\Psi\paren{\norm{\cP_n^{\epsilon}}{\cF}}}. \nonumber
+\end{align}
+\end{remark}
+\end{itemize}
+
+\subsection{Rademacher Complexity and Gaussian Complexity}
+\begin{itemize}
+\item \begin{definition} (\emph{\textbf{Empirical Rademacher Complexity}})\\
+Let $\cF$ be a family of functions on $\cX$ and $\cD = (X_1 \xdotx{,} X_n)$ a fixed \emph{sample} of size $n$ with elements in $\cX$. Then, \underline{\emph{\textbf{the empirical Rademacher complexity}}} of $\cF$ \emph{with respect to the sample $\cD$} is defined as:
+\begin{align}
+\widehat{\mathfrak{R}}_{\cD}(\cF)&= \E{\epsilon}{\sup_{f \in \cF}\frac{1}{n}\sum_{i=1}^{n}\epsilon_{i}f(X_i)} = \E{\epsilon}{\sup_{f \in \cF} \cP_n^{\epsilon}f}  \label{eqn: rademacher_complexity}
+\end{align}
+where $\epsilon := (\epsilon_1 \xdotx{,} \epsilon_n)$ are  \textbf{\emph{independent uniform random variables}} taking values in $\set{-1, +1}$. The random variables $\epsilon_i$ are called \underline{\emph{\textbf{Rademacher variables}}}.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Rademacher Complexity}})\\
+For any integer $n \ge 1$, \underline{\emph{\textbf{the Rademacher complexity}}} of $\cF$ is defined as the \emph{\textbf{expectation}} of \emph{\textbf{the empirical Rademacher complexity}} over \emph{all samples $\cD_n$ of size $n$} drawn according to $\cP = \otimes_{i=1}^n\cP_i$:
+\begin{align*}
+\frR_{n}(\cF) &= \E{\cD_n \sim \cP}{\widehat{\mathfrak{R}}_{\cD_n}(\cF)}.
+\end{align*}
+\end{definition}
+
+\item By \emph{symmetrization inequality} \eqref{ineqn: symmetrization_inequality} and \emph{bounded difference inequality}, we can obtain the following upper and lower bounds on \emph{supremum norm of centered empirical process}
+ \begin{proposition} \label{prop: radematcher_upper_bound} (\textbf{Uniform Upper Bound via Rademacher Complexity}) \citep{wainwright2019high}\\
+Let $\cF$ be a class of \textbf{$b$-uniformly bounded functions}, i.e. $\norm{f}{\infty} \le b$ for all $f \in \cF$. Then, for any positive $n \ge 1$, any $\delta > 0$, \textbf{with $\cP$-probability at least} $1 - \delta$:
+\begin{align}
+\norm{\cP_n - \cP}{\cF} &\le  2 \frR_{n}(\cF)  + \sqrt{\frac{2 b^2 \log(1 / \delta)}{n}} \label{eqn: Rademacher_upper_bound}
+\end{align} Consequently, as long as $\frR_n(\cF) = o(1)$, we have $\norm{\cP_n - \cP}{\cF} \stackrel{a.s.}{\to} 0$.
+\end{proposition}
+
+\item \begin{proposition}\label{prop: radematcher_lower_bound}  (\textbf{Uniform Lower Bound via Rademacher Complexity}) \citep{wainwright2019high}\\
+Let $\cF$ be a class of \textbf{$b$-uniformly bounded functions}, i.e. $\norm{f}{\infty} \le b$ for all $f \in \cF$. Then, for any positive $n \ge 1$, any $\delta > 0$, with $\cP$-probability at least $1 - \delta$:
+\begin{align}
+\norm{\cP_n - \cP}{\cF} &\ge  \frac{1}{2} \frR_{n}(\cF)  - \frac{\sup_{f \in \cF}\abs{\E{\cP}{f}}}{2\sqrt{n}} - \sqrt{\frac{2 b^2 \log(1 / \delta)}{n}} \label{eqn: Rademacher_lower_bound}
+\end{align} As a consequence, if the Rademacher complexity $\frR_n(\cF)$ remains \textbf{bounded away from zero}, then $\norm{\cP_n - \cP}{\cF}$ cannot
+converge to zero in probability. 
+\end{proposition}
+
+\item \begin{remark} 
+From both Proposition \ref{prop: radematcher_upper_bound} and Proposition \ref{prop: radematcher_lower_bound},  we have shown that \emph{the Rademacher complexity} provides a \underline{\emph{\textbf{necessary and sufficient condition}}} for a \emph{\textbf{\underline{uniformly bounded} function class} $\cF$}  to be \emph{\textbf{Glivenko-Cantelli}}.
+\end{remark}
+
+\item The following result follows from the \emph{Talagrand's contraction principle} \eqref{ineqn: contraction_principle_3}
+\begin{lemma} (\textbf{Talagrand's Lemma}) \citep{mohri2012foundations}\\
+Let $\varphi: \bR \to \bR$ be an $L$-Lipschitz. Then, for any hypothesis set $\cF$ of real-valued functions, the following inequality holds:
+\begin{align}
+\widehat{\frR}_{\cD}(\varphi \circ \cF) \le L \;\widehat{\frR}_{\cD}(\cF). \label{ineqn: rademacher_complexity_contraction_lip}
+\end{align}
+\end{lemma}
+\end{itemize}
 
 \section{Variance of Suprema of Empirical Process}
 \subsection{General Upper Bounds for the Variance}
@@ -320,75 +510,10 @@ By Jensen's inequality,
 \end{align*} In general, there may be \emph{significant gaps between any two of these quantities}. A notable difference is the case of \emph{\textbf{Rademacher averages}} when $\sigma^2 = \Sigma^2$.
 \end{definition}
 \end{itemize}
-\subsection{Symmetrization and Contraction Principle}
-\begin{itemize}
-\item \begin{definition}(\emph{\textbf{Symmetrized Empirical Process}})\\
-Let $X_1 \xdotx{,} X_n$ be independent random variables on $\cX$ and $\cF$ be a class of measurable functions on $\cX$. Consider \underline{\emph{\textbf{the symmetrized process}}}
-\begin{align}
-f \to \cP_n^{\epsilon}f := \frac{1}{n}\sum_{i=1}^{n}\epsilon_i f(X_i),  \quad  \forall f \in \cF\label{def: symmetrized_emp_process}
-\end{align} where $\epsilon := (\epsilon_1 \xdotx{,} \epsilon_n)$ are  \textbf{\emph{independent Rademacher random variables}} taking values in $\set{-1, +1}$ with equal probability and $\sigma_i$'s are independent from $X  = (X_1 \xdotx{,} X_n)$. \emph{\textbf{The supremum norm} of symmetrized process} is defined as
-\begin{align*}
-\norm{\cP_n^{\epsilon}}{\cF} := \sup_{f \in \cF}\abs{\frac{1}{n}\sum_{i=1}^{n}\epsilon_i f(X_i)}
-\end{align*}
-\end{definition}
 
-\item \begin{definition}(\emph{\textbf{Radematcher Process}})\\
-Let $\epsilon := (\epsilon_1 \xdotx{,} \epsilon_n)$ be  \textbf{\emph{independent Rademacher random variables}} taking values in $\set{-1, +1}$ with equal probability. \underline{\emph{\textbf{The Radematcher process}}} is defined as 
-\begin{align}
-t \to \frac{1}{n}\sum_{i=1}^{n}\epsilon_i  t_i, \quad (t_1 \xdotx{,} t_n) \in T \subset \bR^n. \label{def: Radematcher_emp_process}
-\end{align} So the symmetrized empirical process \eqref{def: symmetrized_emp_process} is a Radematcher process conditioning on $X = (X_1 \xdotx{,} X_n)$.
-\end{definition}
-
-\item \begin{remark}(\textbf{\emph{Symmetrization}}) \\
-The techinque that replaces the empirical process $\paren{\cP_n - \cP}f$ by the symmetrized version $\cP_n^{\epsilon}f $  is called \emph{\textbf{symmetrization}}. The idea is that, for fixed $(X_1 \xdotx{,} X_n)$, the symmetrized empirical measure \eqref{def: symmetrized_emp_process} is a \emph{Rademacher process}, hence a \emph{\textbf{sub-Gaussian process}}.
-\end{remark}
-
-\begin{proposition} (\textbf{Symmetrization}). \citep{wellner2013weak, boucheron2013concentration, wainwright2019high}\\
-For every \textbf{nondecreasing}, \textbf{convex} $\Phi: \bR \to \bR$ and class of measurable functions $\cF$,
-\begin{align*}
-\E{X, \epsilon}{\Phi\paren{\frac{1}{2}\norm{\cP_n^{\epsilon}}{\overline{\cF}}}} \le \E{X}{\Phi\paren{\norm{\cP_n - \cP}{\cF}}} \le \E{X, \epsilon}{\Phi\paren{2\norm{\cP_n^{\epsilon}}{\cF}}}
-\end{align*} where $\overline{\cF} := \set{f - \E{\cP}{f}: f\in \cF}$ is the \textbf{recentered function class}.
-\end{proposition}
-
-
-\end{itemize}
 \subsection{Bounding the Weak Variance via Wimpy Variance}
-\subsection{Rademacher Complexity and Gaussian Complexity}
-\begin{itemize}
-\item \begin{definition} (\emph{\textbf{Empirical Rademacher Complexity}})\\
-Let $\cF$ be a family of functions on $\cX$ and $\cD = (X_1 \xdotx{,} X_n)$ a fixed \emph{sample} of size $n$ with elements in $\cX$. Then, \underline{\emph{\textbf{the empirical Rademacher complexity}}} of $\cF$ \emph{with respect to the sample $\cD$} is defined as:
-\begin{align}
-\widehat{\mathfrak{R}}_{\cD}(\cF)&= \E{\sigma}{\sup_{f \in \cF}\frac{1}{n}\sum_{i=1}^{n}\sigma_{i}f(X_i)}   \label{eqn: rademacher_complexity}
-\end{align}
-where $\sigma := (\sigma_1 \xdotx{,} \sigma_n)$ are  \textbf{\emph{independent uniform random variables}} taking values in $\set{-1, +1}$. The random variables $\sigma_i$ are called \underline{\emph{\textbf{Rademacher variables}}}.
-\end{definition}
+\subsection{Maximal Inequalities}
 
-\item \begin{definition} (\emph{\textbf{Rademacher Complexity}})\\
-For any integer $n \ge 1$, \underline{\emph{\textbf{the Rademacher complexity}}} of $\cF$ is defined as the \emph{\textbf{expectation}} of \emph{\textbf{the empirical Rademacher complexity}} over \emph{all samples $\cD_n$ of size $n$} drawn according to $\cP = \otimes_{i=1}^n\cP_i$:
-\begin{align*}
-\frR_{n}(\cF) &= \E{\cP}{\widehat{\mathfrak{R}}_{\cD_n}(\cF)}.
-\end{align*}
-\end{definition}
-
-\item \begin{proposition} \label{prop: radematcher_upper_bound} (\textbf{Uniform Upper Bound via Rademacher Complexity}) \citep{wainwright2019high}\\
-Let $\cF$ be a class of \textbf{$b$-uniformly bounded functions}, i.e. $\norm{f}{\infty} \le b$ for all $f \in \cF$. Then, for any positive $n \ge 1$, any $\delta > 0$, \textbf{with $\cP$-probability at least} $1 - \delta$:
-\begin{align}
-\norm{\cP_n - \cP}{\cF} &\le  2 \frR_{n}(\cF)  + \sqrt{\frac{2 b^2 \log(1 / \delta)}{n}} \label{eqn: Rademacher_upper_bound}
-\end{align} Consequently, as long as $\frR_n(\cF) = o(1)$, we have $\norm{\cP_n - \cP}{\cF} \stackrel{a.s.}{\to} 0$.
-\end{proposition}
-
-\item \begin{proposition}\label{prop: radematcher_lower_bound}  (\textbf{Uniform Lower Bound via Rademacher Complexity}) \citep{wainwright2019high}\\
-Let $\cF$ be a class of \textbf{$b$-uniformly bounded functions}, i.e. $\norm{f}{\infty} \le b$ for all $f \in \cF$. Then, for any positive $n \ge 1$, any $\delta > 0$, with $\cP$-probability at least $1 - \delta$:
-\begin{align}
-\norm{\cP_n - \cP}{\cF} &\ge  \frac{1}{2} \frR_{n}(\cF)  - \frac{\sup_{f \in \cF}\abs{\E{\cP}{f}}}{2\sqrt{n}} - \sqrt{\frac{2 b^2 \log(1 / \delta)}{n}} \label{eqn: Rademacher_lower_bound}
-\end{align} As a consequence, if the Rademacher complexity $\frR_n(\cF)$ remains \textbf{bounded away from zero}, then $\norm{\cP_n - \cP}{\cF}$ cannot
-converge to zero in probability. 
-\end{proposition}
-
-\item \begin{remark} 
-From both Proposition \ref{prop: radematcher_upper_bound} and Proposition \ref{prop: radematcher_lower_bound},  we have shown that \emph{the Rademacher complexity} provides a \underline{\emph{\textbf{necessary and sufficient condition}}} for a \emph{\textbf{\underline{uniformly bounded} function class} $\cF$}  to be \emph{\textbf{Glivenko-Cantelli}}.
-\end{remark}
-\end{itemize}
 
 \section{Expected Value of Suprema of Empirical Process}
 \subsection{Covering Number, Packing Number and Metric Entropy}
