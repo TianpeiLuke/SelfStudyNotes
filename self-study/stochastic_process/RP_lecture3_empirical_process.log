@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  3 FEB 2023 16:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  3 FEB 2023 18:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -685,23 +685,16 @@ Overfull \hbox (9.7318pt too wide) in paragraph at lines 266--269
 l Ben-net In-equal-ity\OT1/cmr/m/it/10.95 ) [Boucheron et al.,
  []
 
-
-Overfull \hbox (5.01822pt too wide) in paragraph at lines 266--269
-\OT1/cmr/m/it/10.95 Let $\OML/cmm/m/it/10.95 X[] [] [] [] X[]$ \OT1/cmr/m/it/10
-.95 be in-de-pen-dent iden-ti-cally dis-tributed ran-dom vec-tors. As-sume that
- $\U/dsrom/m/n/10.95 E[] [] \OT1/cmr/m/n/10.95 =
- []
-
-[7] [8] (./RP_lecture3_empirical_process.bbl) [9]
+[7] [8] [9] (./RP_lecture3_empirical_process.bbl) [10]
 (./RP_lecture3_empirical_process.aux) ) 
 Here is how much of TeX's memory you used:
- 15900 strings out of 493029
- 315057 string characters out of 6136233
- 367797 words of memory out of 5000000
- 19108 multiletter control sequences out of 15000+600000
+ 15903 strings out of 493029
+ 315156 string characters out of 6136233
+ 366824 words of memory out of 5000000
+ 19111 multiletter control sequences out of 15000+600000
  13705 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,11n,84p,603b,275s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,11n,84p,603b,292s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
@@ -720,10 +713,10 @@ fonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestr
 oke/dsrom10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/
 dsrom8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/m
 sbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on RP_lecture3_empirical_process.pdf (9 pages, 227405 bytes).
+Output written on RP_lecture3_empirical_process.pdf (10 pages, 230855 bytes).
 PDF statistics:
- 113 PDF objects out of 1000 (max. 8388607)
- 82 compressed objects within 1 object stream
+ 116 PDF objects out of 1000 (max. 8388607)
+ 84 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
