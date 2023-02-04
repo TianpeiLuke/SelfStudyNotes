@@ -66,6 +66,9 @@
     - Definitions
     - Glivenko-Cantelli Class
     - Tail Bound for Empirical Process
+      - Functional Hoeffding's Inequality
+      - Functional Bernstein's Inequality (Talagrand)
+      - Bousquet Inequality (Functional Bennet's Inequality) 
     - Maximal Inequality
   - Variance of Suprema of Empirical Process
     - General Bound for Variance
