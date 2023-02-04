@@ -58,6 +58,23 @@
   - Ergodic Theorem 
   - Central Limit Theorem
 
+- Martingale [pdf](./PT_lecture6_martingale.pdf)
+  - Defintions
+    - Martingale, Sub-Martingale, Super-Martingale
+    - Martingale Difference Sequence
+  - Examples
+  - Doob Decomposition
+  - Stopping Time and Optional Sampling Theorem
+    - Stopping Time
+    - Doob's Optional Sampling Theorem
+    - Wald's Identity
+    - Wald's Equation
+  - Martingale Inequalties
+    - Doob's Maximal Inequality
+    - Upcrossing Inequality 
+    - Bernstein's Inequality for Martingale Difference Sequence 
+  - Martingale Convergence Theorem 
+
 - Empirical Process [pdf](./RP_lecture3_empirical_process.pdf)
   - Uniform Law of Large Numbers
     - Motivations 
