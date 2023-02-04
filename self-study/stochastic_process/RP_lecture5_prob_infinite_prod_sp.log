@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  2 FEB 2023 21:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  3 FEB 2023 18:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**RP_lecture5_brownian_motion.tex
-(./RP_lecture5_brownian_motion.tex
+**RP_lecture5_prob_infinite_prod_sp.tex
+(./RP_lecture5_prob_infinite_prod_sp.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -536,8 +536,8 @@ LaTeX Info: Redefining \cite on input line 694.
 )
 (../../Tianpei_Report.sty
 \c@theorem=\count129
-) (./RP_lecture5_brownian_motion.aux)
-\openout1 = `RP_lecture5_brownian_motion.aux'.
+) (./RP_lecture5_prob_infinite_prod_sp.aux)
+\openout1 = `RP_lecture5_prob_infinite_prod_sp.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
 LaTeX Font Info:    ... okay on input line 26.
@@ -661,33 +661,39 @@ LaTeX Font Info:    Try loading font information for U+rsfs on input line 30.
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-(./RP_lecture5_brownian_motion.toc)
+(./RP_lecture5_prob_infinite_prod_sp.toc)
 \tf@toc=\write4
-\openout4 = `RP_lecture5_brownian_motion.toc'.
+\openout4 = `RP_lecture5_prob_infinite_prod_sp.toc'.
 
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-No file RP_lecture5_brownian_motion.bbl.
-(./RP_lecture5_brownian_motion.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] (./RP_lecture5_prob_in
+finite_prod_sp.bbl
+
+Package natbib Warning: Empty `thebibliography' environment on input line 8.
+
+) [3] (./RP_lecture5_prob_infinite_prod_sp.aux) ) 
 Here is how much of TeX's memory you used:
- 15828 strings out of 493029
- 313476 string characters out of 6136233
- 359499 words of memory out of 5000000
- 19051 multiletter control sequences out of 15000+600000
+ 15833 strings out of 493029
+ 313632 string characters out of 6136233
+ 358499 words of memory out of 5000000
+ 19054 multiletter control sequences out of 15000+600000
  12011 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,6n,84p,523b,196s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+ 61i,6n,84p,529b,196s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.
 pfb>
-Output written on RP_lecture5_brownian_motion.pdf (2 pages, 70334 bytes).
+Output written on RP_lecture5_prob_infinite_prod_sp.pdf (3 pages, 85659 bytes).
+
 PDF statistics:
- 34 PDF objects out of 1000 (max. 8388607)
- 24 compressed objects within 1 object stream
+ 45 PDF objects out of 1000 (max. 8388607)
+ 32 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
