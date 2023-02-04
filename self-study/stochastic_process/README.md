@@ -59,15 +59,19 @@
   - Central Limit Theorem
 
 - Empirical Process [pdf](./RP_lecture3_empirical_process.pdf)
+  - Uniform Law of Large Numbers
+    - Motivations 
+    - Glivenko-Cantelli Theorem
   - Empirical Process
     - Definitions
+    - Glivenko-Cantelli Class
     - Tail Bound for Empirical Process
     - Maximal Inequality
-    - Symmetrization
-    - Uniform Convergence vis Rademacher Complexity
-  - Uniform Law of Large Numbers
-    - Glivenko-Cantelli Theorem
-    - Glivenko-Cantelli Class
+  - Variance of Suprema of Empirical Process
+    - General Bound for Variance
+    - Symmetrization and Contraction Principle
+    - Bounding Variance via Wimpy Variance
+    - Rademacher Complexity and Gaussian Complexity
   - Expected Value of Suprema of Empirical Process
     - Metric Entropy
     - Chaining and Duley's Entropy Integral
