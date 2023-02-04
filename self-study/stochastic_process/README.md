@@ -21,7 +21,10 @@
 
 ***High-Dimensional Statistics: A Non-Asymptotic Viewpoint***, Martin J Wainwright
 
-### Martingale Theory and Stochastic Process
+### Measure Theory, Probability Theory, Stochastic Process and Martingale
+
+***An introduction to measure theory***, Terence Tao
+
 ***A Probability Path***, Resnick S.I., Birkhauser, 1999
 
 ***Probability and Measure***, Patrick Billingsley, 3rd Ed, Wiley
