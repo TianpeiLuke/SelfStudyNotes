@@ -3,49 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: RP_lecture3_empirical_process.aux
 The style file: plainnat.bst
 Database file #1: reference.bib.bib
-Repeated entry---line 166 of file reference.bib.bib
- : @book{wellner2013weak
- :                      ,
-I'm skipping whatever remains of this entry
-You've used 2 entries,
+You've used 4 entries,
             2773 wiz_defined-function locations,
-            602 strings with 5185 characters,
-and the built_in function-call counts, 735 in all, are:
-= -- 55
-> -- 41
-< -- 2
-+ -- 14
-- -- 12
-* -- 45
-:= -- 124
-add.period$ -- 6
-call.type$ -- 2
-change.case$ -- 7
-chr.to.int$ -- 2
-cite$ -- 4
-duplicate$ -- 40
-empty$ -- 65
-format.name$ -- 17
-if$ -- 149
+            612 strings with 5490 characters,
+and the built_in function-call counts, 1445 in all, are:
+= -- 108
+> -- 81
+< -- 4
++ -- 28
+- -- 24
+* -- 97
+:= -- 239
+add.period$ -- 12
+call.type$ -- 4
+change.case$ -- 15
+chr.to.int$ -- 4
+cite$ -- 8
+duplicate$ -- 81
+empty$ -- 130
+format.name$ -- 31
+if$ -- 295
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 4
-newline$ -- 18
-num.names$ -- 8
-pop$ -- 25
+missing$ -- 8
+newline$ -- 28
+num.names$ -- 16
+pop$ -- 51
 preamble$ -- 1
-purify$ -- 7
+purify$ -- 15
 quote$ -- 0
-skip$ -- 30
+skip$ -- 57
 stack$ -- 0
-substring$ -- 4
-swap$ -- 2
-text.length$ -- 0
+substring$ -- 8
+swap$ -- 5
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 12
+type$ -- 24
 warning$ -- 0
-while$ -- 6
+while$ -- 12
 width$ -- 0
-write$ -- 31
-(There was 1 error message)
+write$ -- 56

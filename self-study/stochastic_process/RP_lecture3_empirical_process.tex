@@ -31,9 +31,68 @@
 \tableofcontents
 \newpage
 \section{Uniform Law of Large Numbers}
-\subsection{Functional of Cumulative Distribution Function}
+\subsection{Motivations}
+\begin{itemize}
+\item \begin{remark}(\textbf{\emph{Unbiased Estimator of Cumulative Distribution Function}})\\
+The law of any scalar random variable $X$ can be fully specified by its \emph{\textbf{cumulative distribution function (CDF)}}, whose value at any point $t \in \bR$ is given by $F(t) := \cP[X \le t]$. Now suppose that we are given a collection $\set{X_i}^{n}_{i=1}$ of $n$ i.i.d. samples, each drawn according to the law specified by $F$. A natural \emph{estimate} of $F$ is \emph{\textbf{the empirical CDF}} given by
+\begin{align}
+\widehat{F}_n(t) &:=\frac{1}{n}\sum^{n}_{i=1}\mathds{1}_{(-\infty, t]}(X_i),\label{def: empirical_cdf}
+\end{align} where $\mathds{1}_{(-\infty, t]}(x)$ is a $\set{0, 1}$-valued indicator function for the event $\set{x \le t}$. Since \emph{\textbf{the population CDF}} can be written as $F(t) = \E{}{\mathds{1}_{(-\infty, t]}(X)}$, the empirical CDF is an \emph{\textbf{unbiased estimate}}.
+
+For each $t \in \bR$, \emph{\textbf{the strong law of large numbers}} suggests that 
+\begin{align*}
+\widehat{F}_n(t) \rightarrow F(t), \quad \text{ a.s.}
+\end{align*} A natural goal is to strengthen\emph{ this pointwise convergence} to a form of \emph{\textbf{uniform convergence}}. The reason why uniform convergence of $\widehat{F}_n(t)$ to $F(t)$ is important is that it can be used to prove the \emph{\textbf{consistency}} of \emph{\textbf{plug-in estimator}} for \emph{functionals of distribution function}.
+\end{remark}
+
+\item \begin{example} (\textbf{\emph{Expectation Functionals}}) \\
+Given some integrable function $g$, we may define \underline{\textbf{\emph{the expectation functional}}} $\gamma_g$ via
+\begin{align}
+\gamma_{g}(F) &:= \int g(x) dF(x). \label{def: exp_functional}
+\end{align} For any g, \emph{the plug-in estimate} is given by $\gamma_g(\widehat{F}_n) = \frac{1}{n}\sum^{n}_{i=1}g(X_i)$, corresponding to \emph{\textbf{the sample mean}} of $g(X)$. 
+\end{example}
+
+\item \begin{example} (\textbf{\emph{Quantile Functionals}}) \\
+For any $\alpha \in [0, 1]$, \underline{\textbf{\emph{the quantile functional}}} $Q_{\alpha}$ is given by
+\begin{align}
+Q_{\alpha}(F) &:= \inf\set{t \in \bR: F(t) \ge \alpha}. \label{def: quantile_functional}
+\end{align} The \emph{\textbf{median}} corresponds to the special case  $\alpha= 0.5$. \emph{The plug-in estimate} is given by
+\begin{align}
+Q_{\alpha}(\widehat{F}_n) &:= \inf\set{t \in \bR: \frac{1}{n}\sum^{n}_{i=1}\mathds{1}_{(-\infty, t]}(X_i) \ge \alpha}  \label{def: quantile_functional_estimate}
+\end{align} and corresponds to estimating the $\alpha$-th quantile of the distribution by \emph{the $\alpha$-th \textbf{sample quantile}}. In the special case $\alpha= 0.5$, this estimate corresponds to \emph{the sample median}.  In this case, $Q_{\alpha}(\widehat{F}_n)$ is a fairly complicated, \emph{nonlinear function of all the
+variables}, so that this convergence does not follow immediately by a classical result such as the law of large numbers.
+\end{example}
+
+\item \begin{example}(\emph{\textbf{Goodness-of-fit Functionals}})\\
+It is frequently of interest to test the hypothesis of whether or not a given set of data has been drawn from a known distribution $F_0$. Such tests can
+be performed using \emph{functionals that \textbf{measure the distance} between $F$ and the target CDF $F_0$}, including \emph{the sup-norm distance} $\norm{F - F_0}{\infty}$, or other distances such as \emph{\textbf{the Cramer-von Mises criterion}} based on the functional 
+\begin{align*}
+\gamma_{g}(F) &:= \int_{-\infty}^{+\infty} \paren{F(x) - F_0(x)}^2 dF_0(x)
+\end{align*}
+\end{example}
+
+\item \begin{remark} (\emph{\textbf{Consistency of Plug-In Estimate}})\\
+For any \emph{\textbf{plug-in estimator}} $\gamma_g(\widehat{F}_n)$, an important question is to understand when it is \emph{\textbf{consistent}} -- that is, when does $\gamma_g(\widehat{F}_n)$ converge to $\gamma_{g}(F)$ in \emph{probability} (or \emph{almost surely})?
+
+We can define \emph{the \textbf{continuity} of a \textbf{functional}} $\gamma$ with respect to \emph{the supremum norm}: more precisely, we say that the functional $\gamma$ is \emph{\textbf{continuous} at $F$ in the \textbf{sup-norm}} if, for all $\epsilon > 0$, there exists a $\delta > 0$ such that 
+\begin{align*}
+\norm{G - F}{\infty} := \sup_{t\in \bR}\abs{G(t) - F(t)} \le \delta  \quad \text{ implies that }\quad \abs{\gamma(G) - \gamma(F)} \le \epsilon.
+\end{align*} 
+Thus for any \emph{\textbf{continuous functional}}, it reduces the \emph{\textbf{consistency}} question for \emph{the plug-in estimator} $\gamma_g(\widehat{F}_n)$ to the issue of whether or not the random variable $\|\widehat{F}_n - F\|_{\infty}$ \emph{\textbf{converges to zero}}. 
+\end{remark}
+\end{itemize}
 \subsection{Glivenko-Cantelli Theorem}
-\subsection{Glivenko-Cantelli Class}
+\begin{itemize}
+\item \begin{theorem} (\textbf{Glivenko-Cantelli Theorem})  \citep{wellner2013weak, wainwright2019high, gine2021mathematical} \\ 
+For any distribution, the empirical CDF 
+\begin{align*}
+\widehat{F}_n(t) &:=\frac{1}{n}\sum^{n}_{i=1}\mathds{1}_{(-\infty, t]}(X_i)
+\end{align*}  is a \textbf{strongly consistent estimator} of the population CDF in \textbf{the uniform norm}, meaning that
+\begin{align}
+\norm{\widehat{F}_n - F}{\infty} := \sup_{t\in \bR}\abs{\widehat{F}_n(t) - F(t)} \rightarrow 0, \text{ a.s. } \label{eqn: gilvenko_cantelli}
+\end{align}
+\end{theorem}
+\end{itemize}
 
 
 \section{Empirical Processes}
@@ -143,18 +202,92 @@ Formulation of \emph{the central limit theorem} will require some more \emph{mea
 \end{enumerate}
 \end{remark}
 \end{itemize}
+\subsection{Glivenko-Cantelli Class}
+\begin{itemize}
+\item \begin{definition} (\textbf{\emph{Glivenko-Cantelli Class}}) \citep{wellner2013weak, wainwright2019high, gine2021mathematical}\\
+We say that $\cF$ is a \underline{\emph{\textbf{Glivenko-Cantelli class}}} for $\cP$ if 
+\begin{align*}
+\norm{\cP_n  - \cP}{\cF} &:= \sup_{f \in \cF}\abs{\cP_n f - \cP f} \to 0
+\end{align*}  \emph{\textbf{in probability}} as $n \to \infty$. 
+
+This notion can also be defined in a \emph{stronger} sense, requiring \emph{\textbf{almost sure convergence}} of $\norm{\cP_n  - \cP}{\cF}$, in which case we say that $\cF$ satisfies a \underline{\emph{\textbf{strong Glivenko-Cantelli law}}}.
+\end{definition}
+
+\item \begin{example} (\textbf{\emph{Empirical CDFs and Indicator Functions}}) \\
+Consider the function class
+\begin{align}
+\cF := \set{\mathds{1}_{(-\infty, t]}(\cdot), t \in \bR}  \label{def: emp_cdf_class}
+\end{align}
+where $\mathds{1}_{(-\infty, t]}$ is the \emph{$\set{0, 1}$-valued indicator function} of the interval $(-\infty, t]$. For each fixed $t \in \bR$, we have the equality $ \E{}{\mathds{1}_{(-\infty, t]}(X)} = \cP[X \le t] = F(t)$, so that the classical \emph{Glivenko-Cantelli theorem} is equivalent to a \emph{\textbf{strong uniform law} for the class} \eqref{def: emp_cdf_class},
+\end{example}
+\end{itemize}
+
 \subsection{Tail bounds for Empirical Processes}
+\begin{itemize}
+\item \begin{remark}
+Consider \emph{the \textbf{suprema} of \textbf{empirical process}}:
+\begin{align}
+Z := \sup_{f \in \cF}\set{\cP_n f} =  \sup_{f \in \cF}\set{ \frac{1}{n}\sum_{i=1}^n f(X_i)} \label{def: suprema_emp_process}
+\end{align} where $(X_1 \xdotx{,} X_n)$ are independent random variables drawn from $\cP := \otimes_{i=1}^{n}\cP_i$,  each $\cP_i$ is supported on some set $\cX_i \subseteq \cX$.  $\cF$ is a family of real-valued functions $f: \cX \to \bR$. The primary goal of this section is to derive a number of \emph{upper bounds} on \emph{the tail event} $\set{Z \ge \E{}{Z} + t}$.
+\end{remark}
+
+\item \begin{theorem}  (\textbf{Functional Hoeffding Inequality}) \citep{wainwright2019high, boucheron2013concentration}\\
+For each $f \in \cF$ and $i = 1 \xdotx{,} n$, assume that there are real numbers $a_{i,f} \le b_{i,f}$ such that $f(x) \in [a_{i,f},  b_{i,f}]$ for all $x \in \cX_i$.
+Then for all $t \ge 0$, we have
+\begin{align}
+\cP\set{Z \ge \E{}{Z} + t} \le \exp\paren{-\frac{n t^2}{4 L^2}} \label{ineqn: hoeffding_inequality_functional}
+\end{align} where $Z :=\sup_{f \in \cF}\set{ \frac{1}{n}\sum_{i=1}^n f(X_i)}$, and $L^2 := \sup_{f \in \cF}\set{\frac{1}{n}\sum_{i=1}^{n}\paren{a_{i,f} - b_{i,f}}^2}$.
+\end{theorem}
+
+\item \begin{theorem}(\textbf{Functional Bernstein Inequality, Talagrand Concentration for Empirical Processes})  \citep{wainwright2019high, boucheron2013concentration}\\
+Consider a \textbf{countable} class of functions $\cF$ \textbf{uniformly bounded} by $b$. Then for all  $t > 0$, the suprema of empirical process $Z$ as defined in \ref{def: suprema_emp_process} satisfies the upper tail bound
+\begin{align}
+\cP\set{Z \ge \E{}{Z} + t} \le 2\exp\paren{-\frac{n t^2}{8e\E{}{\Sigma^2} + 4bt}} \label{ineqn: bernstein_inequality_functional}
+\end{align} where $\Sigma^2 := \sup_{f \in \cF}\set{\frac{1}{n}\sum_{i=1}^{n}f^2(X_i)}$.
+\end{theorem}
+
+\item \begin{remark}
+As opposed to control only in terms of \emph{\textbf{bounds} on the \textbf{function values}}, the inequality \eqref{ineqn: bernstein_inequality_functional} \textbf{\emph{also}} brings a notion of \emph{\textbf{variance}} into play. 
+\end{remark}
+
+\item \begin{remark}
+We can prove the bound:
+\begin{align*}
+\E{}{\Sigma^2} \le \sigma^2 + 2b\E{}{Z}
+\end{align*} where $\sigma^2 := \sup_{f\in \cF}\E{}{f^2(X)}$. Then, the functional Bernstein inequality \eqref{ineqn: bernstein_inequality_functional} can be formulated as
+\begin{align}
+\cP\set{Z \ge \E{}{Z} +c_0 \gamma \sqrt{t} + c_1 bt} \le  e^{- n t}  \label{ineqn: bernstein_inequality_functional_2}
+\end{align} for some constant $c_0, c_1$ and $\gamma^2 := \sigma^2 + 2b\E{}{Z}$. We can have an alternative form of this bound \eqref{ineqn: bernstein_inequality_functional_2} for any $\epsilon > 0$, 
+\begin{align}
+\cP\set{Z \ge (1+\epsilon)\E{}{Z} +c_0 \sigma \sqrt{t} + (c_1 + c_0^2/\epsilon)bt} \le  e^{- n t}.  \label{ineqn: bernstein_inequality_functional_3}
+\end{align}
+\end{remark}
+
+\item \begin{theorem} (\textbf{Bousquet's Inequality, Functional Bennet Inequality})  \citep{boucheron2013concentration}\\
+Let $X_1 \xdotx{,} X_n$ be independent identically distributed random vectors. Assume that $\E{}{f(X_i)} = 0$, and that $f(X_i) \le 1$ for all $f \in \cF$.
+Let $\gamma^2= \sigma^2 + 2\E{}{Z}$ (where $\sigma^2 := \sup_{f\in \cF}\frac{1}{n}\sum_{i=1}^n\E{}{f^2(X_i)}$ is the wimpy variance). Let $\phi(u) = e^u - u - 1$ and $h(u) = (1 + u) \log(1 + u) - u$, for $u \ge -1$. Then for all $\lambda \ge 0$,
+\begin{align*}
+\log \E{}{e^{\lambda\paren{Z - \E{}{Z}}}} \le \gamma \phi(\lambda).
+\end{align*}
+Also, for all $t \ge 0$,
+\begin{align}
+\cP\set{Z \ge \E{}{Z} + t} \le \exp\paren{- \gamma^2 \, h\paren{\frac{t}{\gamma^2}}}. \label{ineqn: bousquet_inequality_bennet_functional}
+\end{align}
+\end{theorem}
+\end{itemize}
 \subsection{Maximal Inequalities}
 %\subsection{Suprema of Empirical Process}
-\subsection{Symmetrization}
-\subsection{Uniform Convergence via Rademacher Complexity}
 
 
+\section{Variance of Suprema of Empirical Process}
+\subsection{General Upper Bounds for the Variance}
+\subsection{Symmetrization and Contraction Principle}
+%\subsection{Uniform Convergence via Rademacher Complexity}
+\subsection{Bounding the Variance of Suprema of Empirical Process}
 
 \section{Expected Value of Suprema of Empirical Process}
-\subsection{Metric Entropy}
+\subsection{Covering Number, Packing Number and Metric Entropy}
 \subsection{Chaining and Dudley's Entropy Integral}
-\subsection{Contraction Inequality}
 \subsection{Vapnik-Chervonenkis Class}
 \subsection{Comparison Theorems}
 
