@@ -152,7 +152,12 @@ Normally we assume that data are sampled from some distribution $\cP$ and the da
 \end{remark}
 
 \item \begin{remark}
-\emph{In probability theory}, an \emph{\textbf{empirical process}} is a \underline{\emph{\textbf{stochastic process}}} that \emph{describes \underline{the \textbf{proportion} of objects in a system \textbf{in a given state}}}.  Applications of the theory of empirical processes arise in \emph{\textbf{non-parametric statistics}}.
+Note that we can always associated a stochastic process $(X_t)_{t\in T}$ with a function class $\cF$ indexed by $T$ as
+\begin{align*}
+X_t = f_t(Z), \quad f_t \in \cF, t \in T \quad &\Rightarrow  \quad \sum_{i=1}^n X_{i,t} = \sum_{i=1}^n f_t(Z_i) = \cP_n f_t,  \quad t\in T
+\end{align*} where $Z_i$ is the \emph{\textbf{state}} of  stochastic process $(X_{i,t})_{t\in T}$. Thus an empirical process $\cP_n f_t$ can be seen as the \emph{\textbf{sum}} of $n$ \emph{\textbf{independent stochastic processes}} $\set{(X_{i,t})_{t\in T}}_{i =1}^{n}$. 
+
+An \emph{\textbf{empirical process}} is a \underline{\emph{\textbf{stochastic process}}} that \emph{describes \underline{the \textbf{proportion} of objects} in a system \underline{\textbf{in a given state}}}.  Applications of the theory of empirical processes arise in \emph{\textbf{non-parametric statistics}}.
 \end{remark}
 
 \item \begin{remark} (\emph{\textbf{Object of Empirical Process Theory}}) \\
@@ -272,13 +277,13 @@ We will prove the bound in next section:
 \end{remark}
 
 \item \begin{theorem} (\textbf{Bousquet's Inequality, Functional Bennet Inequality})  \citep{boucheron2013concentration}\\
-Let $X_1 \xdotx{,} X_n$ be \textbf{independent} \textbf{identically distributed} random vectors. Assume that $\E{}{f(X_i)} = 0$, and that $f(X_i) \le 1$ for all $f \in \cF$.
+Let $X_1 \xdotx{,} X_n$ be \textbf{independent} \textbf{identically distributed} random vectors. Assume that $\E{}{f(X_i)} = 0$, and $\norm{f}{\infty} \le 1$ for all $i = 1 \xdotx{,} n$ and $f \in \cF$.
 Let
 \begin{align*}
 \gamma^2= \sigma^2 + 2\E{}{Z},
 \end{align*} where $\sigma^2 := \sup_{f\in \cF}\set{\frac{1}{n}\sum_{i=1}^n\E{}{f^2(X_i)}}$ is \textbf{the wimpy variance}. Let $\phi(u) = e^u - u - 1$ and $h(u) = (1 + u) \log(1 + u) - u$, for $u \ge -1$. Then for all $\lambda \ge 0$,
 \begin{align*}
-\log \E{}{e^{\lambda\paren{Z - \E{}{Z}}}} \le n\gamma^2 \phi(\lambda).
+\log \E{}{e^{\lambda\paren{Z - \E{}{Z}}}} \le n\gamma^2 \phi\paren{\frac{\lambda}{n}}.
 \end{align*}
 Also, for all $t \ge 0$,
 \begin{align}
@@ -483,7 +488,7 @@ Let $\varphi: \bR \to \bR$ be an $L$-Lipschitz. Then, for any hypothesis set $\c
 \end{itemize}
 
 \section{Variance of Suprema of Empirical Process}
-\subsection{Variance Bound via Efron-Stein Inequality }
+\subsection{General Variance Bound via Efron-Stein Inequality }
 \begin{itemize}
 \item \begin{definition}(\textbf{\emph{Variances of Empirical Process}})\\
 Let $X_1 \xdotx{,} X_n$ be independent random variables taking values in $\cX$.  Depending on \emph{\textbf{ordering}} of the \emph{\textbf{expectation}}, \emph{\textbf{suprema}} and \emph{\textbf{summation}} operator, we define \emph{three different types of \textbf{variance}} associated with the unscaled empirical process
@@ -617,34 +622,235 @@ where $\E{(-i)}{\cdot}$ denotes the conditional expectation given $X_{(-i)}$, an
 If $Y_i \equiv 0$, then we have the normal conditions for self-bounding property.
 \end{remark}
 
-\item \begin{proposition}(\textbf{Self-Bounding Property, Identically Distributed and Uniformly Bounded Case})\citep{boucheron2013concentration}\\
-Let $Z =  \sup_{f \in \cF}\set{\sum_{i=1}^n f(X_i)}$  be the supremum of an empirical process such that $X_1 \xdotx{,} X_n$ are \textbf{independent  and identically distributed} and $\E{}{f(X_i)} =0$  and $\norm{f}{\infty} \le 1$ for all $i = 1 \xdotx{,} n$ and $f \in \cF$. Then $Z$ satisfies \textbf{the self-bounding property}.
+\item \begin{proposition}(\textbf{Self-Bounding Property, Uniformly Bounded Case})\citep{boucheron2013concentration}\\
+Let $Z =  \sup_{f \in \cF}\set{\sum_{i=1}^n f(X_i)}$  be the supremum of an empirical process such that $X_1 \xdotx{,} X_n$ are \textbf{independent} and $\E{}{f(X_i)} =0$  and $\norm{f}{\infty} \le 1$ for all $i = 1 \xdotx{,} n$ and $f \in \cF$. Then $Z$ satisfies the assumptions for \textbf{the self-bounding property}.
 \end{proposition}
 \begin{proof}
 Assume that $f^{*} \in \cF$ attains the supremum of $Z =  \sup_{f \in \cF}\set{\sum_{i=1}^n f(X_i)}$ and that  $\hat{f}_i$ attains the supremum of $Z_{(-i)} = \sup_{f \in \cF}\set{\sum_{j: j\neq i}^n f(X_j)}$.
 \begin{align*}
 \hat{f}_i(X_i) = \sum_{i=1}^n \hat{f}_i(X_i) - \sum_{j: j\neq i}^n \hat{f}_i(X_j)  \le Z - Z_{(-i)} \le \sum_{i=1}^n f^{*}(X_i) - \sum_{j: j\neq i}^n f^{*}(X_j) = f^{*}(X_i).
-\end{align*} Defining  $Y_i \equiv \hat{f}_i(X_i)$. Since $\norm{f}{\infty} = \sup_{x} \abs{f(x)} \le 1$ for all $f \in \cF$, we have $f^{*}(X_i) \le 1$ and $Y_i \equiv \hat{f}_i(X_i) \le 1$ almost surely. And $\E{(-i)}{Y_i} = \E{(-i)}{\hat{f}_i(X_i) } = \E{}{\hat{f}_i(X_i)} = 0$. Finally, 
+\end{align*} Let  $Y_i \equiv \hat{f}_i(X_i)$. Since $\norm{f}{\infty} = \sup_{x} \abs{f(x)} \le 1$ for all $f \in \cF$, we have $f^{*}(X_i) \le 1$ and $Y_i \equiv \hat{f}_i(X_i) \le 1$ almost surely. And $\E{(-i)}{Y_i} = \E{(-i)}{\hat{f}_i(X_i) } = \E{}{\hat{f}_i(X_i)} = 0$. Finally, 
 \begin{align*}
 \sum_{i=1}^n\paren{Z - Z_{(-i)}} &\le \sum_{i=1}^n f^{*}(X_i) = \sup_{f \in \cF}\set{\sum_{i=1}^n f(X_i)} = Z.
-\end{align*} Thus the conditions  \eqref{def: self_bounding_1} and \eqref{def: self_bounding_2} for self-bounding property are satisfied. \qed
+\end{align*} Thus the assumptions  \eqref{def: self_bounding_1} and \eqref{def: self_bounding_2} for self-bounding property are satisfied. \qed
+\end{proof}
+
+\item \begin{remark}
+Note that if these assumptions  \eqref{def: self_bounding_1}  are satisfied, then
+\begin{align*}
+Z_{(-i)} &\le \E{(-i)}{Z}
+\end{align*} as
+\begin{align*}
+ \E{(-i)}{Z} - Z_{(-i)} =  \E{(-i)}{Z - Z_{(-i)}} \ge   \E{(-i)}{Y_i}  \ge 0.
+\end{align*}
+\end{remark}
+
+\item In order to prove the imporved variance bound, we have the following lemma
+\begin{lemma}\citep{boucheron2013concentration}\\
+Let $Z$ be a real-valued function of the \textbf{independent} random variables $X_1 \xdotx{,} X_n$ satisfying assumptions \eqref{def: self_bounding_1} and \eqref{def: self_bounding_2}. Then for every $i = 1 \xdotx{,} n$,
+\begin{align}
+\E{(-i)}{\paren{Z- \E{(-i)}{Z}}^2} \le \E{(-i)}{\paren{Z - Z_{(-i)}}^2} \le (1 + a) \E{(-i)}{Z - Z_{(-i)}} + \E{(-i)}{Y_i^2} \label{lemma: variance_bound_inequality}
+\end{align}
+\end{lemma}
+\begin{proof}
+The first inequality follows from the fact that $Z_{(-i)} \le \E{(-i)}{Z}$ based on assumption of self-bounding property on $Z$. We show the second inequality.
+
+Consider $\varphi(x) = x^2 - (1+a)x$. Then since $(Z - Z_{(-i)}) - Y_i  \ge 0$, and $(Z - Z_{(-i)} - 1) + (Y_i - a) \le 0$, we have
+\begin{align*}
+\varphi(Z - Z_{(-i)}) - \varphi(Y_i) = \brac{(Z - Z_{(-i)}) - Y_i}\brac{(Z - Z_{(-i)} - 1) + (Y_i - a)} \le 0.
+\end{align*} Hence,
+\begin{align*}
+\E{(-i)}{\varphi(Z - Z_{(-i)})} \le \E{(-i)}{\varphi(Y_i)},
+\end{align*} and therefore
+\begin{align*}
+\E{(-i)}{\paren{Z - Z_{(-i)}}^2} - (1 + a) \E{(-i)}{Z - Z_{(-i)}} \le \E{(-i)}{Y_i^2} - (1+a)\E{(-i)}{Y_i} \le \E{(-i)}{Y_i^2} 
+\end{align*} The last inequality is due to $\E{(-i)}{Y_i} \ge  0$. Thus the proof  is completed. \qed
 \end{proof}
 
 \item By Efron-Stein inequality for self-bounding functions, 
-\begin{theorem} (\textbf{Identically Distributed and Uniformly Bounded Case}) \citep{boucheron2013concentration}\\
+\begin{theorem} (\textbf{Improved Variance Bound for Uniformly Bounded Function Class}) \citep{boucheron2013concentration}\\
 Let $Z =  \sup_{f \in \cF}\set{\sum_{i=1}^n f(X_i)}$  be the supremum of an empirical process such that $X_1 \xdotx{,} X_n$ are \textbf{independent and identically distributed} and $\E{}{f(X_i)} =0$  and $\norm{f}{\infty} \le 1$ for all $i = 1 \xdotx{,} n$ and $f \in \cF$. Then
 \begin{align}
 \text{Var}(Z) &\le  2\E{}{Z} +\sigma^2. \label{ineqn: variance_bound_by_weak_2}
 \end{align}
 \end{theorem}
+\begin{proof}
+By Efron-Stein inequality
+\begin{align*}
+\text{Var}(Z) &\le \sum_{i=1}^{n}\E{}{\E{(-i)}{\paren{Z- \E{(-i)}{Z}}^2}}\\
+&\le \E{}{\sum_{i=1}^{n}\set{(1 + a) \E{(-i)}{Z - Z_{(-i)}} + \E{(-i)}{Y_i^2}}}\\
+&= (1 + a)\E{}{\E{(-i)}{\sum_{i=1}^{n}\paren{Z - Z_{(-i)}}}} + \E{}{\E{(-i)}{\sum_{i=1}^{n}Y_i^2}}
+\end{align*} The second inequality holds since under the conditions above $Z = \sup_{f \in \cF}\set{\sum_{i=1}^n f(X_i)}$ satisfies the assumptions for self-bounding property.  Assume that  $\hat{f}_i$ attains the supremum of $Z_{(-i)} = \sup_{f \in \cF}\set{\sum_{j: j\neq i}^n f(X_j)}$. Substituting $Y_i \equiv \hat{f}_i(X_i)$ and $a = 1$ into the above equation, we have
+\begin{align*}
+\text{Var}(Z) &\le 2\E{}{\sum_{i=1}^{n}\paren{Z - Z_{(-i)}}} + \sum_{i=1}^{n}\E{}{\hat{f}_i^2 (X_i)} \\
+&\le 2\E{}{Z} + \sup_{f \in \cF}\set{\sum_{i=1}^{n}\E{}{f^2 (X_i)}} = 2\E{}{Z} + \sigma^2. \qed
+\end{align*}
+\end{proof}
 \end{itemize}
 \subsection{Maximal Inequalities}
 
+\section{Metric Entropy}
+\subsection{Covering Number, Packing Number and Metric Entropy}
+\begin{itemize}
+\item \begin{definition}(\emph{\textbf{$\epsilon$-Cover / $\epsilon$-Net}}) \citep{vershynin2018high} \\
+Let $(T, d)$ be a metric space and  $K \subset T$ is a subset of $T$. Let $\epsilon > 0$.  \emph{An \underline{\textbf{$\epsilon$-cover ($\epsilon$-net)}} of a set $K$ with respect to a metric $d$} is a subset $\cN \subset K$ such that \emph{\textbf{every point} in $K$ is \textbf{within distance} $\epsilon$ of \textbf{some point} of $\cN$}, i.e.
+\begin{align*}
+\forall x \in K, \; \exists x_0 \in \cN, \text{ s.t. }d(x, x_0) \le \epsilon.
+\end{align*} Equivalently, $\cN$ is an \emph{\textbf{$\epsilon$-cover ($\epsilon$-net)}} of $K$ if and only if $K$ can be \emph{\textbf{covered}} by \emph{balls with centers in $\cN$ and radii $\epsilon$.}
+\end{definition}
+
+\begin{figure}
+\begin{minipage}[t]{1\linewidth}
+  \centering
+  \centerline{\includegraphics[scale = 0.4]{epsilon_net_covering_packing_number.png}}
+\end{minipage}
+\caption{\footnotesize{\textbf{The $\epsilon$-net and its associated covering number (a) and packing number (b).  \citep{wainwright2019high}}}}
+\label{fig: epsilon_net_covering_packing_number}
+\end{figure}
+
+\item \begin{definition} (\textbf{\emph{Covering Numbers}}). \citep{vershynin2018high} \\
+\emph{The \textbf{smallest possible cardinality}} of an \emph{$\epsilon$-net} of $K$ is called  \underline{\textbf{\emph{the covering number of $K$}}} and is denoted $\cN(K, d, \epsilon)$. Equivalently, $\cN(K, d, \epsilon)$ is \emph{\textbf{the smallest number} of \textbf{closed balls}} with centers in $K$ and radii $\epsilon$ whose \textbf{\emph{union}} \emph{covers} $K$.
+\end{definition}
+
+\item \begin{remark}(\emph{\textbf{Compactness / Precompactness}})\\
+An important result in real analysis states that a subset $K$ of a \emph{\textbf{complete metric space}} $(T, d)$ is \underline{\emph{\textbf{precompact}}} (i.e. \emph{the closure of $K$ is compact}) if and only if
+\begin{align*}
+\cN(K, d, \epsilon) < \infty, \quad \text{ for every }\epsilon > 0.
+\end{align*}
+Thus we can think about the magnitude $\cN(K, d, \epsilon)$ as \emph{a  \textbf{quantitative measure of compactness} of $K$}.
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{Packing Numbers}}). \citep{vershynin2018high} \\
+A subset $\cN$ of a metric space $(T, d)$ is \underline{\emph{\textbf{$\epsilon$-separated}}} if 
+\begin{align*}
+d(x, y) > \epsilon, \quad \text{ for all distinct }x, y \in \cN.
+\end{align*}
+\emph{The \textbf{largest possible cardinality}} of an \emph{$\epsilon$-separated} subset of a given set $K \subset T$ is called  \underline{\emph{\textbf{the packing
+number of $K$}}} and is denoted $\cP(K, d,  \epsilon)$.
+\end{definition}
+
+\item \begin{remark}(\textbf{\emph{Property of Covering Number}})\\
+It is easy to see that \emph{the covering number} is \emph{\textbf{non-increasing}} in $\epsilon$, meaning that 
+\begin{align*}
+\cN(K, d, \epsilon) \ge \cN(K, d, \epsilon'), \quad \text{ whenever } \epsilon \le \epsilon'.
+\end{align*} Typically, the covering number \emph{diverges} as $\epsilon \to 0_{+}$, and of interest to us is the
+\emph{\textbf{growth rate} of covering number on a \textbf{logarithmic scale}}.
+\end{remark}
+
+\item \begin{lemma} \label{lem: covering_maximal}\citep{vershynin2018high}\\
+Let $\cN$ be a \textbf{maximal} \textbf{$\epsilon$-separated} subset of $K$, that is, adding more points in $\cN$ will violate the $\epsilon$-separation property. Then $\cN$ is an \textbf{$\epsilon$-net} of $K$.
+\end{lemma}
+\begin{proof} 
+Let $x \in K$; we want to show that there exists $x_0 \in \cN$ such that $d(x, x_0) \le \epsilon$.
+
+If $x \in \cN$, the conclusion is trivial by choosing $x_0 = x$. Suppose now $x \not\in \cN$. The maximality assumption implies that  $\cN \cup \set{x}$ is not $\epsilon$-separated. But this means precisely that 
+\begin{align*}
+d(x, x_0) \le \epsilon \text{ for some }x_0 \in \cN. \qed
+\end{align*}
+\end{proof}
+
+\item \begin{remark} (\textbf{\emph{Constructing a Net}}). \citep{vershynin2018high}\\
+Lemma above leads to the following  \emph{algorithm} for \emph{constructing an $\epsilon$-net of a given set $K$}:
+
+Choose a point $x_1 \in K$ arbitrarily, choose a point $x_2 \in K$ which is \emph{\textbf{further than $\epsilon$ from $x_1$}}, choose $x_3$ so
+that it is \emph{\textbf{further} than $\epsilon$ from \textbf{both} $x_1$ and $x_2$}, and so on. If $K$ is \emph{\textbf{compact}}, the algorithm terminates in \emph{finite time} and gives an $\epsilon$-net of $K$.
+\end{remark}
+
+\item \begin{lemma} (\textbf{Equivalence of Covering and Packing Numbers}). \citep{vershynin2018high, wainwright2019high}\\
+For any set $K \subset T$ and any  $\epsilon > 0$, we have
+\begin{align}
+\cP(K, d,  2\epsilon) \le \cN(K, d, \epsilon) \le \cP(K, d,  \epsilon)\label{ineqn: covering_number_packing_number}
+\end{align}
+\end{lemma}
+\begin{proof} The upper bound follows from Lemma \ref{lem: covering_maximal}. For any packing $\cP$ with cardinality $\abs{\cP} = \cP(K, d,  \epsilon)$, $\cP$ is a maximal $\epsilon$-separated set. From Lemma \ref{lem: covering_maximal}, $\cP$ is a \emph{$\epsilon$-net} as well. Then by definition of covering number, $\abs{\cP} \ge \cN(K, d, \epsilon)$.
+
+To prove the lower bound, choose an $2\epsilon$-separated subset $\cP = \set{x_i}_i$ in $K$ and an $\epsilon$-net $\cN = \set{y_j}_j$ of $K$. By the definition of a net, each point $x_i$ belongs \emph{a closed $\epsilon$-ball centered at some point $y_j$}. Moreover, since any closed $\epsilon$-ball can not contain a pair of $2\epsilon$-separated points, \emph{each $\epsilon$-ball centered at $y_j$ may contain \textbf{at most one point} $x_i$}. The \emph{\textbf{pigeonhole principle}} then yields 
+\begin{align*}
+\abs{\cP} \le \abs{\cN}.
+\end{align*}  Since this happens for arbitrary packing $\cP$ and covering $\cN$, the lower bound in the lemma is proved. \qed
+\end{proof}
+
+\item \begin{definition} (\textbf{\emph{Metric Entropy}}) \\
+\emph{The \textbf{logarithm} of \textbf{the covering numbers}} 
+\begin{align*}
+\log \cN(K, d, \epsilon)
+\end{align*}  is often called \underline{\emph{\textbf{the metric entropy}}} of $K$.
+\end{definition}
+
+\item \begin{remark}
+When discussing metric entropy, we restrict our attention to subset $K$ of metric spaces $K \subset (T, d)$ that are \emph{\textbf{totally bounded}}, meaning that the covering number $\cN(K, d, \epsilon)$ is \emph{\textbf{finite}} for all $\epsilon > 0$. 
+
+Note that  a \emph{metric space} that is \emph{compact} if and only if it is  \emph{totally bounded} and \emph{complete}. So we can instead assume that $K$ of interest is \emph{compact}.
+\end{remark}
+\end{itemize}
+\subsection{Covering Numbers and Volume}
+
+\subsection{Metric Entropy and Complexity}
 
 \section{Expected Value of Suprema of Empirical Process}
-\subsection{Covering Number, Packing Number and Metric Entropy}
+\subsection{Metric Entropy and Sub-Gaussian Processes}
 \subsection{Chaining and Dudley's Entropy Integral}
+\begin{itemize}
+\item \begin{theorem} (\textbf{Dudley's Entropy Integral Inequality}) \citep{vershynin2018high, wainwright2019high}\\
+Let $\set{X_{t}, t \in T}$ be a \textbf{zero-mean sub-Gaussian process} with respect to the induced pseudo-metric $d_X$. Then for any $\epsilon \in [0, D]$, where $D  = \sup_{t, t'\in T}d_{X}(t, t')$ we have
+\begin{align}
+\E{}{\sup_{t, t' \in T}\set{X_t - X_{t'}}} &\le 2\E{}{\sup_{s, s' \in T: d_X(s, s') \le \epsilon}\set{X_s - X_{s'}}} + 32 \int_{\epsilon/4}^{D}\sqrt{\log \cN(T, d_{X}, u)} du \label{ineqn: dudley_metric_entropy_integral_inequality}
+\end{align}
+\end{theorem}
+
+\item \begin{remark} (\textbf{\emph{Dudley's Entropy Integral Inequality for Symmetrized Empirical Process}}) \\
+Define \emph{the zero-mean random variable} 
+\begin{align*}
+Z_f &:= \frac{1}{\sqrt{n}}\sum_{i=1}^n \epsilon_i f(x_i),
+\end{align*} where $\epsilon_i$ are i.i.d. Rademacher random variables and consider the \emph{stochastic process} $\set{Z_f}_{ f \in \cF}$ for $b$-uniformly bounded function class $\cF$, i.e. $\norm{f}{\infty} \le b$ for all $f \in \cF$.
+
+It is straightforward to verify that \emph{the increment} $Z_f - Z_g$ is \emph{\textbf{sub-Gaussian}} with parameter
+\begin{align*}
+\norm{f - g}{\cP_n}^2 := \frac{1}{n}\sum_{i=1}^n\paren{f(x_i) - g(x_i)}^2.
+\end{align*}
+Consequently, by \emph{Dudley's entropy integral}, we have
+\begin{align}
+\E{\epsilon}{\sup_{f\in \cF}\abs{\frac{1}{n}\sum_{i=1}^n \epsilon_i f(x_i) }} &\le \frac{24}{\sqrt{n}}\int_{0}^{2b}\sqrt{\log \cN(\cF, \norm{\cdot}{\cP_n}, t)} dt, \label{ineqn: dudley_metric_entropy_Rademacher_process}
+\end{align}
+where we have used the fact that $\sup_{f, g \in \cF}\norm{f - g}{\cP_n} \le 2b$. Finally, by \emph{symmetrization}, 
+\begin{align*}
+\E{X}{\sup_{f \in \cF}\abs{\frac{1}{n}\sum_{i=1}^{n}f(X_i) - \E{}{f(X)}}} &\le 2 \E{X}{\E{\epsilon}{\sup_{f\in \cF}\abs{\frac{1}{n}\sum_{i=1}^n \epsilon_i f(X_i) }| X_1 \xdotx{,} X_n}}\\
+&\le \frac{48}{\sqrt{n}}\int_{0}^{2b}\sqrt{\log \cN(\cF, \norm{\cdot}{\cP_n}, t)} dt.
+\end{align*}
+\end{remark}
+\end{itemize}
 \subsection{Vapnik-Chervonenkis Class}
+\begin{itemize}
+\item \begin{theorem} (\textbf{Covering Numbers via VC Dimension}).  \citep{vershynin2018high}\\
+Let $\cF$ be a class of \textbf{binary} functions  on a probability space $(\cX, \srF, \cP)$. Then, for every $\epsilon \in (0, 1)$, we
+have
+\begin{align}
+\cN(\cF, L_2(\cP), \epsilon) &\le \paren{\frac{2}{\epsilon}}^{Cd}, \label{ineqn: covering_number_bound_vc_dimension}
+\end{align} where $d = \text{VC-Dim}(\cF)$.
+\end{theorem}
+
+\item  \begin{theorem} (\textbf{Empirical Processes via VC dimension}).  \citep{vershynin2018high}\\
+Let $\cF$ be a class of \textbf{binary} functions  on a probability space $(\cX, \srF, \cP)$ with \textbf{finite VC dimension} $d \ge 1$. Let $X, X_1 \xdotx{,} X_n$ be \textbf{independent} random variables in $\cX$ distributed according to the law $\cP$. Then 
+\begin{align}
+\E{}{\sup_{f \in \cF}\abs{\frac{1}{n}\sum_{i=1}^{n}f(X_i) - \E{}{f(X)}}} &\le C\sqrt{\frac{d}{n}}, \label{ineqn: expected_emp_process_vc_dimension}
+\end{align} where $d = \text{VC-Dim}(\cF)$.
+\end{theorem}
+
+
+\item \begin{remark} (\textbf{\emph{The Classical Glivenko-Cantelli Theorem, Non-Asymptotic Version}})\\
+Consider the \emph{classical Glivenko-Cantelli theorem} \eqref{eqn: gilvenko_cantelli}, which amounts to bounding
+\begin{align*}
+\norm{\widehat{F}_n - F}{\infty} :=  \sup_{t\in \bR}\abs{\widehat{F}_n(t) - F(t)}.
+\end{align*}
+Since \emph{the set of indicator functions has VC dimension} $d = 1$, apply inequality \eqref{ineqn: expected_emp_process_vc_dimension} above, we have
+\begin{align}
+\E{}{ \sup_{t\in \bR}\abs{\widehat{F}_n(t) - F(t)}} &\le C\sqrt{\frac{1}{n}} \label{ineqn: gilvenko_cantelli_expected_value}
+\end{align} Thus combing with  \emph{the functional Hoeffding inequality} \eqref{ineqn: hoeffding_inequality_functional}, we conclude that for any $\delta >0$, with probabilty at least $1-\delta$, 
+\begin{align}
+ \sup_{t\in \bR}\abs{\widehat{F}_n(t) - F(t)} &\le  \frac{c + \sqrt{8 \log(2/\delta)}}{\sqrt{n}}  \label{ineqn: gilvenko_cantelli}
+\end{align} where $c$ is a universal constant. Apart from better constants, this bound is \emph{unimprovable}.
+\end{remark}
+\end{itemize}
 \subsection{Comparison Theorems}
 
 
