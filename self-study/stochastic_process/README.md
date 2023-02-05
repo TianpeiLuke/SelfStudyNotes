@@ -99,8 +99,9 @@
     - Symmetrization and Contraction Principle
     - Rademacher Complexity
   - Variance of Suprema of Empirical Process
-    - General Bound for Variance
-    - Bounding Variance via Wimpy Variance
+    - General Bound for Variance of Suprema of Empirical Process
+    - Self-Bounding Property
+    - Bounding Variance for Uniformly Bounded Function Class
     - Maximal Inequality
   - Metric Entropy
     - Covering Number, Packing Number and Metric Entropy
