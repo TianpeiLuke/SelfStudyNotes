@@ -293,7 +293,7 @@ Also, for all $t \ge 0$,
 Let $X_1 \xdotx{,} X_n$ be independent random variables on $\cX$ and $\cF$ be a class of measurable functions on $\cX$. Consider \underline{\emph{\textbf{the symmetrized process}}}
 \begin{align}
 f \to \cP_n^{\epsilon}f := \frac{1}{n}\sum_{i=1}^{n}\epsilon_i f(X_i),  \quad  \forall f \in \cF\label{def: symmetrized_emp_process}
-\end{align} where $\epsilon := (\epsilon_1 \xdotx{,} \epsilon_n)$ are  \textbf{\emph{independent Rademacher random variables}} taking values in $\set{-1, +1}$ with equal probability and $\sigma_i$'s are independent from $X  = (X_1 \xdotx{,} X_n)$. \emph{\textbf{The supremum norm} of symmetrized process} is defined as
+\end{align} where $\epsilon := (\epsilon_1 \xdotx{,} \epsilon_n)$ are  \textbf{\emph{independent Rademacher random variables}} taking values in $\set{-1, +1}$ with equal probability and $\epsilon_i$'s are independent from $X  = (X_1 \xdotx{,} X_n)$. \emph{\textbf{The supremum norm} of symmetrized process} is defined as
 \begin{align*}
 \norm{\cP_n^{\epsilon}}{\cF} := \sup_{f \in \cF}\abs{\frac{1}{n}\sum_{i=1}^{n}\epsilon_i f(X_i)}
 \end{align*}
@@ -483,25 +483,25 @@ Let $\varphi: \bR \to \bR$ be an $L$-Lipschitz. Then, for any hypothesis set $\c
 \end{itemize}
 
 \section{Variance of Suprema of Empirical Process}
-\subsection{General Upper Bounds for the Variance}
+\subsection{Variance Bound via Efron-Stein Inequality }
 \begin{itemize}
 \item \begin{definition}(\textbf{\emph{Variances of Empirical Process}})\\
-Let $X_1 \xdotx{,} X_n$ be independent random variables taking values in $\cX$.  Depending on \emph{\textbf{ordering}} of the \emph{\textbf{expectation}}, \emph{\textbf{suprema}} and \emph{\textbf{summation}} operator, we define \emph{three different types of \textbf{variance}} associated with empirical process
+Let $X_1 \xdotx{,} X_n$ be independent random variables taking values in $\cX$.  Depending on \emph{\textbf{ordering}} of the \emph{\textbf{expectation}}, \emph{\textbf{suprema}} and \emph{\textbf{summation}} operator, we define \emph{three different types of \textbf{variance}} associated with the unscaled empirical process
 \begin{align*}
-\cP_n f = \E{\cP_n}{f} = \frac{1}{n}\sum_{i=1}^n f(X_i).
+\cP_n f  =  \sum_{i=1}^n f(X_i).
 \end{align*}
 \begin{enumerate}
 \item \emph{\textbf{The strong variance}} is defined as
 \begin{align}
-V &:= \frac{1}{n}\sum_{i=1}^n \E{}{\sup_{f\in \cF}f^2(X_i)}  \label{def: strong_variance_emp_process}
+V &:= \sum_{i=1}^n \E{}{\sup_{f\in \cF}f^2(X_i)}  \label{def: strong_variance_emp_process}
 \end{align}
 \item  \emph{\textbf{The weak variance}} is defined as
 \begin{align}
-\Sigma^2 &:= \E{}{\sup_{f \in \cF}\set{\frac{1}{n}\sum_{i=1}^{n}f^2(X_i)}}  \label{def: weak_variance_emp_process}
+\Sigma^2 &:= \E{}{\sup_{f \in \cF}\set{\sum_{i=1}^{n}f^2(X_i)}}  \label{def: weak_variance_emp_process}
 \end{align}
 \item  \emph{\textbf{The wimpy variance}} is defined as
 \begin{align}
-\sigma^2 &:= \sup_{f\in \cF}\set{\frac{1}{n}\sum_{i=1}^n \E{}{f^2(X_i)}} \label{def: wimpy_variance_emp_process}
+\sigma^2 &:= \sup_{f\in \cF}\set{\sum_{i=1}^n \E{}{f^2(X_i)}} \label{def: wimpy_variance_emp_process}
 \end{align}
 \end{enumerate} 
 By Jensen's inequality, 
@@ -509,9 +509,135 @@ By Jensen's inequality,
 \sigma^2 \le \Sigma^2 \le V
 \end{align*} In general, there may be \emph{significant gaps between any two of these quantities}. A notable difference is the case of \emph{\textbf{Rademacher averages}} when $\sigma^2 = \Sigma^2$.
 \end{definition}
-\end{itemize}
 
-\subsection{Bounding the Weak Variance via Wimpy Variance}
+\item \begin{theorem} (\textbf{Variance Bound of Suprema of Empirical Process}) \citep{boucheron2013concentration}\\
+Let $Z =  \sup_{f \in \cF}\set{\sum_{i=1}^n f(X_i)}$ be the supremum of an empirical process as defined above. Then
+\begin{align}
+\text{Var}(Z) &\le V. \label{ineqn: strong_variance_bound_sup_emp_process}
+\end{align}
+If $\E{}{f(X_i)} =0$ for all $i = 1 \xdotx{,} n$ and for all $f \in \cF$, then
+\begin{align}
+\text{Var}(Z) &\le \Sigma^2 + \sigma^2. \label{ineqn: weak_wimpy_variance_bound_sup_emp_process}
+\end{align}
+\end{theorem}
+\begin{proof}
+To prove the first inequality, introduce 
+\begin{align*}
+Z_{(-i)} &:= \sup_{f \in \cF}\set{\sum_{j: j\neq i}^n f(X_j)}.
+\end{align*} Let $f^{*} \in \cF$ be such that $Z =\sum_{i=1}^n f^{*}(X_i)$ and let $\hat{f}_i$ be such that $Z_{(-i)} = \sum_{j: j\neq i}^n \hat{f}_i(X_j)$. (We implicitly assume here that the suprema in the definition of $Z$ and $Z_{(-i)}$ are achieved. This is not necessarily the case if $\cF$ is not a finite set. In that case one can define  $f^{*}$ and $\hat{f}_i$ as appropriate approximate minimizers and the argument carries over.) 
+
+Then
+\begin{align*}
+\paren{Z - Z_{(-i)}}_{+} \le  \paren{\hat{f}_i(X_i)}_{+} \le \sup_{f \in \cF}\abs{f(X_i)}\\
+\paren{Z - Z_{(-i)}}_{-} \le  \paren{\hat{f}_i(X_i)}_{-} \le \sup_{f \in \cF}\abs{f(X_i)}
+\end{align*} so
+\begin{align*}
+\sum_{i=1}^{n}\paren{Z - Z_{(-i)}}^2 \le \sum_{i=1}^{n}\sup_{f \in \cF}f^2(X_i). 
+\end{align*} By \emph{Efron-Stein inequality}, we show the first inequality
+\begin{align*}
+\text{Var}(Z) &\le \sum_{i=1}^{n}\E{}{\paren{Z - Z_{(-i)}}^2} \le \sum_{i=1}^{n}\E{}{\sup_{f \in \cF}f^2(X_i)} := V.
+\end{align*}
+To prove the second, for each  $i = 1 \xdotx{,} n$, let
+\begin{align*}
+Z_{i}' &:= \sup_{f \in \cF}\set{\sum_{j: j\neq i}^n f(X_j) + f(X_i')}.
+\end{align*} where $X_i'$ is an independent copy of $X_i$. Note that
+\begin{align*}
+\paren{Z - Z_{i}'}_{+}^2 \le \paren{f^{*}(X_i) - f^{*} (X_i')}^2.
+\end{align*} By \emph{Efron-Stein inequality}, 
+\begin{align*}
+\text{Var}(Z) &\le \sum_{i=1}^n\E{}{\paren{Z - Z_{i}'}_{+}^2}\\
+&\le   \E{}{\sum_{i=1}^n\E{X_1' \xdotx{,} X_n'}{\paren{f^{*}(X_i) - f^{*} (X_i')}^2}}\\
+&\le  \E{}{\sum_{i=1}^n\paren{ (f^{*}(X_i))^2 + \E{X_i'}{(f^{*} (X_i'))^2}}} = \E{}{\sum_{i=1}^n(f^{*}(X_i))^2} +  \sum_{i=1}^n\E{X_i'}{(f^{*} (X_i'))^2} \\
+&\le  \E{}{\sup_{f \in \cF}\set{\sum_{i=1}^n f^2(X_i)}} + \sup_{f \in \cF}\set{ \sum_{i=1}^n\E{X_i}{f^{2} (X_i)}} := \Sigma^2 + \sigma^2
+\end{align*} The second inequality is because $\E{}{f(X_i)} =0$ for all $i$ and $f \in \cF$ and $X_i$ and $X_i'$ are independent. Thus the proof of second inequality is complete. \qed 
+\end{proof}
+\end{itemize}
+%\subsection{Self-Bounding Property}
+
+\subsection{Variance Bound for Uniformly Bounded Function Class}
+\begin{itemize}
+\item \begin{lemma}(\textbf{Variance Bound via Symmetrized Process}) \citep{boucheron2013concentration}\\
+Define $Z =  \sup_{f \in \cF}\set{\sum_{i=1}^n f(X_i)}$  where $\E{}{f(X_i)} =0$  and $\norm{f}{\infty} \le 1$ for all $i = 1 \xdotx{,} n$ and $f \in \cF$. Then
+\begin{align}
+\Sigma^2 &\le \sigma^2 + 2 \E{}{\sup_{f \in \cF}\sum_{i=1}^{n}\epsilon_i f^2(X_i)}\label{ineqn: weak_variance_bound}
+\end{align} where $\epsilon := (\epsilon_1 \xdotx{,} \epsilon_n)$ are  independent Rademacher random variables.
+\end{lemma}
+\begin{proof}
+See that 
+\begin{align*}
+\Sigma^2 &= \E{}{\sup_{f \in \cF}\set{\sum_{i=1}^{n}f^2(X_i)}} \\
+&= \E{}{\sup_{f \in \cF}\set{\sum_{i=1}^{n}\paren{f^2(X_i) - \E{}{f^2(X_i)}} + \sum_{i=1}^{n}\E{}{f^2(X_i)} }}\\
+&\le   \E{}{\sup_{f \in \cF}\set{\sum_{i=1}^{n}\paren{f^2(X_i) - \E{}{f^2(X_i)}}} + \sup_{f\in \cF}\sum_{i=1}^{n}\E{}{f^2(X_i)}  } \\
+&= \E{}{\sup_{f \in \cF}\set{\sum_{i=1}^{n}\paren{f^2(X_i) - \E{}{f^2(X_i)}}}} + \sigma^2.
+\end{align*} By \emph{symmetrization}, the first term is bounded above by the symmetrized process
+\begin{align*}
+\E{}{\sup_{f \in \cF}\set{\sum_{i=1}^{n}\paren{f^2(X_i) - \E{}{f^2(X_i)}}}}& \le 2 \E{}{\sup_{f \in \cF}\sum_{i=1}^{n}\epsilon_i f^2(X_i)}. \qed
+\end{align*}
+\end{proof}
+
+\item \begin{theorem} (\textbf{Variance Bound for Uniformly Bounded Function Class}) \citep{boucheron2013concentration}\\
+Define $Z =  \sup_{f \in \cF}\set{\sum_{i=1}^n f(X_i)}$  where $\E{}{f(X_i)} =0$  and $\norm{f}{\infty} \le 1$ for all $i = 1 \xdotx{,} n$ and $f \in \cF$. Then
+\begin{align}
+\text{Var}(Z) &\le \Sigma^2 + \sigma^2 \le 8 \E{}{Z} + 2\sigma^2. \label{ineqn: variance_bound_by_weak_1}
+\end{align}
+\end{theorem}
+\begin{proof} 
+It suffice to show that $\Sigma^2 \le 8 \E{}{Z} + \sigma^2$. But by inequality \eqref{ineqn: weak_variance_bound}, it suffice to show that 
+\begin{align*}
+ \E{}{\sup_{f \in \cF}\sum_{i=1}^{n}\epsilon_i f^2(X_i)} \le 4\E{}{Z} = 4\E{}{\sup_{f \in \cF}\set{\sum_{i=1}^n f(X_i)}}.
+\end{align*} As $\varphi(x) = x^2$ is \emph{$2$-Lipschitz} on $[-1, 1]$, by \emph{Talagrand's Contraction Principle} \eqref{ineqn: contraction_principle_1}, 
+\begin{align*}
+ \E{}{\sup_{f \in \cF}\sum_{i=1}^{n}\epsilon_i f^2(X_i)} = \E{}{\sup_{f \in \cF}\sum_{i=1}^{n}\epsilon_i \varphi(f(X_i))}   \le 2\E{}{\sup_{f \in \cF}\sum_{i=1}^{n}\epsilon_i f(X_i)}
+\end{align*} Finally, as each $f(X_i)$ is \emph{centered}, by the lower bound of \emph{the symmetrization inequalities} \eqref{ineqn: symmetrization_inequality},
+\begin{align*}
+ \E{}{\sup_{f \in \cF}\sum_{i=1}^{n}\epsilon_i f^2(X_i)}  \le 2\E{}{\sup_{f \in \cF}\sum_{i=1}^{n}\epsilon_i f(X_i)} \le 4\E{}{\sup_{f \in \cF}\sum_{i=1}^{n} f(X_i)}. \qed
+\end{align*} 
+\end{proof}
+\end{itemize}
+\subsection{Self-Bounding Property}
+\begin{itemize}
+\item \begin{definition}(\textbf{\emph{Generalized Self-Bounding Property}})\\
+Consider a random variable $Z$ that is a function of independent random variables $X_1 \xdotx{,} X_n$. $Z$ is said to have \underline{\emph{\textbf{the self-bounding property}}} if the following assumptions hold: for every $i = 1 \xdotx{,} n$, there exists a measurable function $Z_{(-i)}$ of $X_{(-i)} = (X_1 \xdotx{,} X_{i-1}, X_{i+1} \xdotx{,} X_{n})$ and a random variable $Y_i$ such that for some constant $a \in [0, 1]$,
+\begin{enumerate}
+\item \begin{align}
+& Y_i \le  Z - Z_{(-i)} \le  1  \quad  \text{ a.s.}, \nonumber\\
+ &\E{(-i)}{Y_i} \ge  0, \nonumber\\
+&Y_i \le  a \quad  \text{ a.s.}, \label{def: self_bounding_1}
+\end{align}
+where $\E{(-i)}{\cdot}$ denotes the conditional expectation given $X_{(-i)}$, and
+
+\item 
+\begin{align}
+\sum_{i=1}^n\paren{Z - Z_{(-i)}} \le Z\label{def: self_bounding_2}
+\end{align}
+\end{enumerate} 
+\end{definition}
+
+\item \begin{remark}
+If $Y_i \equiv 0$, then we have the normal conditions for self-bounding property.
+\end{remark}
+
+\item \begin{proposition}(\textbf{Self-Bounding Property, Identically Distributed and Uniformly Bounded Case})\citep{boucheron2013concentration}\\
+Let $Z =  \sup_{f \in \cF}\set{\sum_{i=1}^n f(X_i)}$  be the supremum of an empirical process such that $X_1 \xdotx{,} X_n$ are \textbf{independent  and identically distributed} and $\E{}{f(X_i)} =0$  and $\norm{f}{\infty} \le 1$ for all $i = 1 \xdotx{,} n$ and $f \in \cF$. Then $Z$ satisfies \textbf{the self-bounding property}.
+\end{proposition}
+\begin{proof}
+Assume that $f^{*} \in \cF$ attains the supremum of $Z =  \sup_{f \in \cF}\set{\sum_{i=1}^n f(X_i)}$ and that  $\hat{f}_i$ attains the supremum of $Z_{(-i)} = \sup_{f \in \cF}\set{\sum_{j: j\neq i}^n f(X_j)}$.
+\begin{align*}
+\hat{f}_i(X_i) = \sum_{i=1}^n \hat{f}_i(X_i) - \sum_{j: j\neq i}^n \hat{f}_i(X_j)  \le Z - Z_{(-i)} \le \sum_{i=1}^n f^{*}(X_i) - \sum_{j: j\neq i}^n f^{*}(X_j) = f^{*}(X_i).
+\end{align*} Defining  $Y_i \equiv \hat{f}_i(X_i)$. Since $\norm{f}{\infty} = \sup_{x} \abs{f(x)} \le 1$ for all $f \in \cF$, we have $f^{*}(X_i) \le 1$ and $Y_i \equiv \hat{f}_i(X_i) \le 1$ almost surely. And $\E{(-i)}{Y_i} = \E{(-i)}{\hat{f}_i(X_i) } = \E{}{\hat{f}_i(X_i)} = 0$. Finally, 
+\begin{align*}
+\sum_{i=1}^n\paren{Z - Z_{(-i)}} &\le \sum_{i=1}^n f^{*}(X_i) = \sup_{f \in \cF}\set{\sum_{i=1}^n f(X_i)} = Z.
+\end{align*} Thus the conditions  \eqref{def: self_bounding_1} and \eqref{def: self_bounding_2} for self-bounding property are satisfied. \qed
+\end{proof}
+
+\item By Efron-Stein inequality for self-bounding functions, 
+\begin{theorem} (\textbf{Identically Distributed and Uniformly Bounded Case}) \citep{boucheron2013concentration}\\
+Let $Z =  \sup_{f \in \cF}\set{\sum_{i=1}^n f(X_i)}$  be the supremum of an empirical process such that $X_1 \xdotx{,} X_n$ are \textbf{independent and identically distributed} and $\E{}{f(X_i)} =0$  and $\norm{f}{\infty} \le 1$ for all $i = 1 \xdotx{,} n$ and $f \in \cF$. Then
+\begin{align}
+\text{Var}(Z) &\le  2\E{}{Z} +\sigma^2. \label{ineqn: variance_bound_by_weak_2}
+\end{align}
+\end{theorem}
+\end{itemize}
 \subsection{Maximal Inequalities}
 
 

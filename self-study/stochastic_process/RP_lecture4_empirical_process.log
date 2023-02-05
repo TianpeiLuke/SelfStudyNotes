@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  4 FEB 2023 17:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  5 FEB 2023 00:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -700,20 +700,30 @@ Overfull \hbox (8.8534pt too wide) in paragraph at lines 473--474
  \OT1/cmr/bx/it/10.95 func-
  []
 
-[13]
-Underfull \vbox (badness 1297) has occurred while \output is active []
+[13] [14] [15]
+Overfull \hbox (1.10634pt too wide) in paragraph at lines 578--580
+[]\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Variance Bound for Uni-formly Bound
+ed Func-tion Class\OT1/cmr/m/it/10.95 ) [Boucheron
+ []
 
- [14]
-[15] (./RP_lecture4_empirical_process.bbl) [16]
+
+Overfull \hbox (0.33989pt too wide) in paragraph at lines 599--601
+\OML/cmm/m/it/10.95 i \OT1/cmr/m/n/10.95 = 1 [] [] [] \OML/cmm/m/it/10.95 n$\OT
+1/cmr/m/n/10.95 , there ex-ists a mea-sur-able func-tion $\OML/cmm/m/it/10.95 Z
+[]$ \OT1/cmr/m/n/10.95 of $\OML/cmm/m/it/10.95 X[] \OT1/cmr/m/n/10.95 = (\OML/c
+mm/m/it/10.95 X[] [] [] [] X[]; X[] [] [] [] X[]\OT1/cmr/m/n/10.95 )$
+ []
+
+[16] [17] [18] (./RP_lecture4_empirical_process.bbl) [19]
 (./RP_lecture4_empirical_process.aux) ) 
 Here is how much of TeX's memory you used:
- 15942 strings out of 493029
- 316077 string characters out of 6136233
- 370070 words of memory out of 5000000
- 19143 multiletter control sequences out of 15000+600000
+ 15949 strings out of 493029
+ 316311 string characters out of 6136233
+ 371138 words of memory out of 5000000
+ 19150 multiletter control sequences out of 15000+600000
  15318 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,14n,84p,603b,292s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,14n,84p,603b,297s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
@@ -734,10 +744,10 @@ om10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsrom8.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on RP_lecture4_empirical_process.pdf (16 pages, 272654 bytes).
+Output written on RP_lecture4_empirical_process.pdf (19 pages, 285584 bytes).
 PDF statistics:
- 144 PDF objects out of 1000 (max. 8388607)
- 103 compressed objects within 2 object streams
+ 154 PDF objects out of 1000 (max. 8388607)
+ 110 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

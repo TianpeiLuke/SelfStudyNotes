@@ -8,11 +8,12 @@
 \contentsline {subsection}{\numberline {2.4}Symmetrization and Contraction Principle}{8}
 \contentsline {subsection}{\numberline {2.5}Rademacher Complexity}{13}
 \contentsline {section}{\numberline {3}Variance of Suprema of Empirical Process}{14}
-\contentsline {subsection}{\numberline {3.1}General Upper Bounds for the Variance}{14}
-\contentsline {subsection}{\numberline {3.2}Bounding the Weak Variance via Wimpy Variance}{15}
-\contentsline {subsection}{\numberline {3.3}Maximal Inequalities}{15}
-\contentsline {section}{\numberline {4}Expected Value of Suprema of Empirical Process}{15}
-\contentsline {subsection}{\numberline {4.1}Covering Number, Packing Number and Metric Entropy}{15}
-\contentsline {subsection}{\numberline {4.2}Chaining and Dudley's Entropy Integral}{15}
-\contentsline {subsection}{\numberline {4.3}Vapnik-Chervonenkis Class}{15}
-\contentsline {subsection}{\numberline {4.4}Comparison Theorems}{15}
+\contentsline {subsection}{\numberline {3.1}Variance Bound via Efron-Stein Inequality }{14}
+\contentsline {subsection}{\numberline {3.2}Variance Bound for Uniformly Bounded Function Class}{16}
+\contentsline {subsection}{\numberline {3.3}Self-Bounding Property}{17}
+\contentsline {subsection}{\numberline {3.4}Maximal Inequalities}{18}
+\contentsline {section}{\numberline {4}Expected Value of Suprema of Empirical Process}{18}
+\contentsline {subsection}{\numberline {4.1}Covering Number, Packing Number and Metric Entropy}{18}
+\contentsline {subsection}{\numberline {4.2}Chaining and Dudley's Entropy Integral}{18}
+\contentsline {subsection}{\numberline {4.3}Vapnik-Chervonenkis Class}{18}
+\contentsline {subsection}{\numberline {4.4}Comparison Theorems}{18}
