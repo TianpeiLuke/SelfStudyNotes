@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  5 FEB 2023 00:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  5 FEB 2023 13:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -680,74 +680,91 @@ LaTeX Font Info:    Try loading font information for U+dsrom on input line 40.
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 ) [2] [3]
 [4] [5] [6] [7]
-Overfull \hbox (9.7318pt too wide) in paragraph at lines 274--277
+Overfull \hbox (9.7318pt too wide) in paragraph at lines 279--282
 []\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Bousquet's In-equal-ity, Func-tiona
 l Ben-net In-equal-ity\OT1/cmr/m/it/10.95 ) [Boucheron et al.,
  []
 
 [8] [9]
-Overfull \hbox (19.88193pt too wide) in paragraph at lines 340--340
+Overfull \hbox (19.88193pt too wide) in paragraph at lines 345--345
 [] 
  []
 
 [10] [11] [12]
-LaTeX Font Info:    Try loading font information for U+euf on input line 445.
+LaTeX Font Info:    Try loading font information for U+euf on input line 450.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-Overfull \hbox (8.8534pt too wide) in paragraph at lines 473--474
+Overfull \hbox (8.8534pt too wide) in paragraph at lines 478--479
 \OT1/cmr/m/it/10.95 com-plex-ity \OT1/cmr/m/n/10.95 pro-vides a $[]$ for a $[]$
  \OT1/cmr/bx/it/10.95 func-
  []
 
 [13] [14] [15]
-Overfull \hbox (1.10634pt too wide) in paragraph at lines 578--580
+Overfull \hbox (1.10634pt too wide) in paragraph at lines 583--585
 []\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Variance Bound for Uni-formly Bound
 ed Func-tion Class\OT1/cmr/m/it/10.95 ) [Boucheron
  []
 
 
-Overfull \hbox (0.33989pt too wide) in paragraph at lines 599--601
+Overfull \hbox (0.33989pt too wide) in paragraph at lines 604--606
 \OML/cmm/m/it/10.95 i \OT1/cmr/m/n/10.95 = 1 [] [] [] \OML/cmm/m/it/10.95 n$\OT
 1/cmr/m/n/10.95 , there ex-ists a mea-sur-able func-tion $\OML/cmm/m/it/10.95 Z
 []$ \OT1/cmr/m/n/10.95 of $\OML/cmm/m/it/10.95 X[] \OT1/cmr/m/n/10.95 = (\OML/c
 mm/m/it/10.95 X[] [] [] [] X[]; X[] [] [] [] X[]\OT1/cmr/m/n/10.95 )$
  []
 
-[16] [17] [18] (./RP_lecture4_empirical_process.bbl) [19]
-(./RP_lecture4_empirical_process.aux) ) 
+[16]
+Overfull \hbox (12.85567pt too wide) in paragraph at lines 625--627
+[]\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Self-Bounding Prop-erty, Uni-formly
+ Bounded Case\OT1/cmr/m/it/10.95 )[Boucheron et al.,
+ []
+
+[17] [18]
+<epsilon_net_covering_packing_number.png, id=83, 901.3675pt x 711.65875pt>
+File: epsilon_net_covering_packing_number.png Graphic file (type png)
+
+<use epsilon_net_covering_packing_number.png>
+Package pdftex.def Info: epsilon_net_covering_packing_number.png used on input 
+line 705.
+(pdftex.def)             Requested size: 360.5406pt x 284.65845pt.
+ [19] [20 <./epsilon_net_covering_packing_number.png>] [21] [22] [23] (./RP_lec
+ture4_empirical_process.bbl)
+[24] (./RP_lecture4_empirical_process.aux) ) 
 Here is how much of TeX's memory you used:
- 15949 strings out of 493029
- 316311 string characters out of 6136233
- 371138 words of memory out of 5000000
- 19150 multiletter control sequences out of 15000+600000
- 15318 words of font info for 62 fonts, out of 8000000 for 9000
+ 15986 strings out of 493029
+ 317147 string characters out of 6136233
+ 371240 words of memory out of 5000000
+ 19179 multiletter control sequences out of 15000+600000
+ 17904 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,14n,84p,603b,297s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsr
-om10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsrom8.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on RP_lecture4_empirical_process.pdf (19 pages, 285584 bytes).
+ 61i,14n,84p,642b,457s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsrom8.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
+Output written on RP_lecture4_empirical_process.pdf (24 pages, 484285 bytes).
 PDF statistics:
- 154 PDF objects out of 1000 (max. 8388607)
- 110 compressed objects within 2 object streams
+ 178 PDF objects out of 1000 (max. 8388607)
+ 126 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
