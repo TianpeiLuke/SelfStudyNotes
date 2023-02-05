@@ -97,7 +97,7 @@
       - Functional Bernstein's Inequality (Talagrand)
       - Bousquet Inequality (Functional Bennet's Inequality) 
     - Symmetrization and Contraction Principle
-    - Rademacher Complexity and Gaussian Complexity
+    - Rademacher Complexity
   - Variance of Suprema of Empirical Process
     - General Bound for Variance
     - Bounding Variance via Wimpy Variance
