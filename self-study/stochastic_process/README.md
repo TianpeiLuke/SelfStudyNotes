@@ -102,10 +102,13 @@
     - General Bound for Variance
     - Bounding Variance via Wimpy Variance
     - Maximal Inequality
+  - Metric Entropy
+    - Covering Number, Packing Number and Metric Entropy
+    - Covering Number and Volume
+    - Metric Entropy and Complexity
   - Expected Value of Suprema of Empirical Process
-    - Metric Entropy
+    - Metric Entropy and Sub-Gaussian Process
     - Chaining and Duley's Entropy Integral
-    - Contraction Inequality
     - VC Class
 
 - Probability Theory on Infinite Dimensional Space [pdf](./RP_lecture5_prob_infinite_prod_sp.pdf)
