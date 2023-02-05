@@ -4,9 +4,9 @@
 \contentsline {section}{\numberline {2}Empirical Processes}{3}
 \contentsline {subsection}{\numberline {2.1}Definitions}{3}
 \contentsline {subsection}{\numberline {2.2}Glivenko-Cantelli Class}{6}
-\contentsline {subsection}{\numberline {2.3}Tail bounds for Empirical Processes}{7}
+\contentsline {subsection}{\numberline {2.3}Tail Bounds for Empirical Processes}{7}
 \contentsline {subsection}{\numberline {2.4}Symmetrization and Contraction Principle}{8}
-\contentsline {subsection}{\numberline {2.5}Rademacher Complexity and Gaussian Complexity}{13}
+\contentsline {subsection}{\numberline {2.5}Rademacher Complexity}{13}
 \contentsline {section}{\numberline {3}Variance of Suprema of Empirical Process}{14}
 \contentsline {subsection}{\numberline {3.1}General Upper Bounds for the Variance}{14}
 \contentsline {subsection}{\numberline {3.2}Bounding the Weak Variance via Wimpy Variance}{15}
