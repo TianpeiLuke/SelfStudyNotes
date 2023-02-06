@@ -110,7 +110,7 @@
   - Expected Value of Suprema of Empirical Process
     - Metric Entropy and Sub-Gaussian Process
     - Chaining and Duley's Entropy Integral
-    - VC Class
+    - VC Class and Metric Entropy
 
 - Probability Theory on Infinite Dimensional Space [pdf](./RP_lecture5_prob_infinite_prod_sp.pdf)
   - Product Measure on Infinite Dimensional Space
