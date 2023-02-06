@@ -1088,34 +1088,6 @@ Let $\set{X_{t}, t \in T}$ be a \textbf{zero-mean sub-Gaussian process}  with re
 \E{}{\sup_{t, t' \in T}\set{X_t - X_{t'}}} &\le 2\E{}{\sup_{s, s' \in T: d_X(s, s') \le \epsilon}\set{X_s - X_{s'}}} + 32 \int_{\epsilon/4}^{D}\sqrt{\log \cN(T, d_{X}, u)} du, \label{ineqn: dudley_metric_entropy_integral_inequality_tail_difference_general}
 \end{align} where $D  = \sup_{t, t'\in T}d_{X}(t, t')$ is the \textbf{diameter} of metric space $T$.
 \end{theorem}
-
-\item \begin{remark} (\textbf{\emph{Dudley's Entropy Integral Inequality for Centered Empirical Process}}) \\
-Consider function class $\cF$ with domain $\cX$, let  $\cD_n := \set{x_1 \xdotx{,} x_n}$ be a collection of $n$ points within the domain, known as \emph{the design points}. We can then define the set
-\begin{align*}
-\cF_{\cD} := \set{(f(x_1) \xdotx{,} f(x_n)): f \in \cF},
-\end{align*} as \emph{the restriction} of $\cF$ on $\cD$. With samples $\cD$, \underline{\emph{\textbf{the empirical $L^2(\cP_n)$ metric}}}  is defined as an induced metrc on $\cF$; that is, for any $f, g \in \cF$,
-\begin{align}
-\norm{f - g}{\cP_n} := \norm{f - g}{L^2(\cP_n)} := \sqrt{\frac{1}{n}\sum_{i=1}^n\paren{f(x_i) - g(x_i)}^2}.
-\label{def: emp_distance}
-\end{align} Note that, if the function class $\cF$ is \emph{uniformly bounded} (i.e.,  $\norm{f}{\infty} \le b$ for all $f \in \cF$), then we also have $\norm{f}{\cP_n} \le b$ for all $f \in \cF$. 
-
-Now define \emph{the zero-mean random variable} 
-\begin{align*}
-Z_f &:= \frac{1}{\sqrt{n}}\sum_{i=1}^n \epsilon_i f(x_i),
-\end{align*} where $\epsilon_i$ are i.i.d. Rademacher random variables and consider the \emph{stochastic process} $\set{Z_f}_{ f \in \cF}$ for $b$-uniformly bounded function class $\cF$, i.e. $\norm{f}{\infty} \le b$ for all $f \in \cF$. It is straightforward to verify that \emph{the increment} $Z_f - Z_g$ is \emph{\textbf{sub-Gaussian}} with parameter
-\begin{align*}
-\norm{f - g}{\cP_n}^2 := \frac{1}{n}\sum_{i=1}^n\paren{f(x_i) - g(x_i)}^2.
-\end{align*}
-Consequently, by \emph{Dudley's entropy integral}, we have
-\begin{align}
-\E{\epsilon}{\sup_{f\in \cF}\abs{\frac{1}{n}\sum_{i=1}^n \epsilon_i f(x_i) }} &\le \frac{24}{\sqrt{n}}\int_{0}^{2b}\sqrt{\log \cN(\cF, \norm{\cdot}{\cP_n}, t)} dt, \label{ineqn: dudley_metric_entropy_Rademacher_process}
-\end{align}
-where we have used the fact that $\sup_{f, g \in \cF}\norm{f - g}{\cP_n} \le 2b$. Finally, by \emph{symmetrization}, 
-\begin{align}
-\E{}{\sup_{f \in \cF}\abs{\frac{1}{n}\sum_{i=1}^{n}f(X_i) - \E{}{f(X)}}} &\le 2 \E{X}{\E{\epsilon}{\sup_{f\in \cF}\abs{\frac{1}{n}\sum_{i=1}^n \epsilon_i f(X_i) }| X_1 \xdotx{,} X_n}} \nonumber\\
-&\le \frac{48}{\sqrt{n}}\int_{0}^{2b}\sqrt{\log \cN(\cF, \norm{\cdot}{\cP_n}, t)} dt. \label{ineqn: dudley_metric_entropy_emp_process}
-\end{align}
-\end{remark}
 \end{itemize}
 \subsection{Vapnik-Chervonenkis Class}
 \begin{itemize}
@@ -1155,6 +1127,23 @@ Let $\cF$ be a class of \textbf{Boolean} functions with finite VC dimension $v(\
 \tau_{\cF}(n) &\le \sum_{i=0}^{d}{{n}\choose{i}}\le \paren{\frac{en}{d}}^{d} \label{eqn: sauer_lemma}
 \end{align}
 \end{lemma}
+
+
+\item \begin{definition}(\textbf{\emph{Vapnik-Chervonenkis Class}})  \citep{gine2021mathematical} \\
+A collection of sets $\cC$ is a \underline{\emph{\textbf{Vapnik-Cervonenkis class}}} ($\cC$ is $VC$) if its \emph{VC dimension} $\nu(\cC) < \infty$ is \emph{finite}.
+\end{definition}
+
+\item \begin{remark} 
+\emph{The Sauer-Shelah lemma} shows that \emph{the \textbf{growth rate} of VC class of functions} is either \emph{\textbf{exponential}} when \emph{the VC dimension} is \emph{\textbf{infinite}} or \emph{\textbf{polynomial}} up to \emph{the degree of VC dimension}.
+\end{remark}
+
+\item \begin{definition}(\textbf{\emph{Vapnik-Chervonenkis Subgraph}})  \citep{gine2021mathematical} \\
+The \underline{\emph{\textbf{subgraph}}} of a real function $f$ on $\cX$ is the set
+\begin{align*}
+G_f := \set{(x, t): s\in \cX, t\in \bR, t\le f(x) }.
+\end{align*}
+A class of functions $\cF$ is \underline{\emph{\textbf{VC subgraph}}} if the class of sets $\cC = \set{G_f : f \in \cF}$ is \emph{VC class}.
+\end{definition}
 \end{itemize}
 
 \subsection{Metric Entropy and VC Dimension}
@@ -1173,12 +1162,43 @@ Let $\cF$ be a class of \textbf{Boolean} functions  on a probability space $(\cX
 \E{}{\sup_{f \in \cF}\abs{\frac{1}{n}\sum_{i=1}^{n}f(X_i) - \E{}{f(X)}}} &\le C\sqrt{\frac{d}{n}}, \label{ineqn: expected_emp_process_vc_dimension}
 \end{align} where $d = v(\cF)$ is the VC-dimension of $\cF$.
 \end{theorem}
+\begin{proof}
+Let $\cF$ be a $b$-uniformly bounded class of functions with finite VC dimension $d$. Note that $b = 1$ for the class of Boolean functions.  Also let $\cD_n := \set{x_1 \xdotx{,} x_n}$ be a collection of $n$ points within the domain, known as \emph{the design points}. We can then define the set
+\begin{align*}
+\cF_{\cD} := \set{(f(x_1) \xdotx{,} f(x_n)): f \in \cF},
+\end{align*} as \emph{the restriction} of $\cF$ on $\cD$. With samples $\cD$, \underline{\emph{\textbf{the empirical $L^2(\cP_n)$ metric}}}  is defined as an induced metrc on $\cF$; that is, for any $f, g \in \cF$,
+\begin{align}
+\norm{f - g}{\cP_n} := \norm{f - g}{L^2(\cP_n)} := \sqrt{\frac{1}{n}\sum_{i=1}^n\paren{f(x_i) - g(x_i)}^2}.
+\label{def: emp_distance}
+\end{align} Note that, if the function class $\cF$ is \emph{uniformly bounded} (i.e.,  $\norm{f}{\infty} \le b$ for all $f \in \cF$), then we also have $\norm{f}{\cP_n} \le b$ for all $f \in \cF$. 
+
+Now define \emph{the zero-mean random variable} 
+\begin{align*}
+Z_f &:= \frac{1}{\sqrt{n}}\sum_{i=1}^n \epsilon_i f(x_i),
+\end{align*} where $\epsilon_i$ are i.i.d. Rademacher random variables and consider the \emph{stochastic process} $\set{Z_f}_{ f \in \cF}$ for $b$-uniformly bounded function class $\cF$, i.e. $\norm{f}{\infty} \le b$ for all $f \in \cF$. It is straightforward to verify that \emph{the increment} $Z_f - Z_g$ is \emph{\textbf{sub-Gaussian}} with parameter
+\begin{align*}
+\norm{f - g}{\cP_n}^2 := \frac{1}{n}\sum_{i=1}^n\paren{f(x_i) - g(x_i)}^2.
+\end{align*}
+Consequently, by \emph{Dudley's entropy integral}, we have
+\begin{align}
+\E{\epsilon}{\sup_{f\in \cF}\abs{\frac{1}{n}\sum_{i=1}^n \epsilon_i f(x_i) }} &\le \frac{24}{\sqrt{n}}\int_{0}^{2b}\sqrt{\log \cN(\cF, \norm{\cdot}{\cP_n}, t)} dt, \label{ineqn: dudley_metric_entropy_Rademacher_process}
+\end{align}
+where we have used the fact that $\sup_{f, g \in \cF}\norm{f - g}{\cP_n} \le 2b$. Then substituting the metric entropy bound for finite VC dimension class \eqref{ineqn: covering_number_bound_vc_dimension}, we have
+\begin{align}
+\E{\epsilon}{\sup_{f\in \cF}\abs{\frac{1}{n}\sum_{i=1}^n \epsilon_i f(x_i) }} &\le C_0\sqrt{\frac{d}{n}}\brac{1 + \int_{0}^{2b}\sqrt{\log(2b/t)}dt} = C_1 \sqrt{\frac{d}{n}} \label{ineqn: dudley_metric_entropy_Rademacher_process_vc_dim}
+\end{align}
+Finally, by \emph{symmetrization}, 
+\begin{align*}
+\E{}{\sup_{f \in \cF}\abs{\frac{1}{n}\sum_{i=1}^{n}f(X_i) - \E{}{f(X)}}} &\le 2 \E{X}{\E{\epsilon}{\sup_{f\in \cF}\abs{\frac{1}{n}\sum_{i=1}^n \epsilon_i f(X_i) }| X_1 \xdotx{,} X_n}} \nonumber\\
+&\le C \sqrt{\frac{d}{n}}. \qed
+\end{align*} 
+\end{proof}
 
 \item \begin{remark}
-The inequality \eqref{ineqn: expected_emp_process_vc_dimension} can be used to obtain a better bound for \emph{the generalization error} of \emph{ERM} algorithm in \emph{statistical learning} (vs. $\cO(\sqrt{d\log(en/d) / n})$)
+The inequality \eqref{ineqn: expected_emp_process_vc_dimension} provides a \emph{tighter} bound for \emph{the generalization error} in \emph{statistical learning}; i.e. with high probability
 \begin{align*}
 L(h) \le \widehat{L}_{n}(h) + C\sqrt{\frac{d}{n}}, 
-\end{align*}
+\end{align*} as compared to the bound we obtain via \emph{Sauer-Shelah lemma}, which is $\cO(\sqrt{d\log(en/d) / n})$.
 \end{remark}
 
 \item \begin{remark} (\textbf{\emph{The Classical Glivenko-Cantelli Theorem, Non-Asymptotic Version}})\\
