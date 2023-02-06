@@ -281,13 +281,13 @@ Let $X_1 \xdotx{,} X_n$ be \textbf{independent} \textbf{identically distributed}
 Let
 \begin{align*}
 \gamma^2= \sigma^2 + 2\E{}{Z},
-\end{align*} where $\sigma^2 := \sup_{f\in \cF}\set{\frac{1}{n}\sum_{i=1}^n\E{}{f^2(X_i)}}$ is \textbf{the wimpy variance}. Let $\phi(u) = e^u - u - 1$ and $h(u) = (1 + u) \log(1 + u) - u$, for $u \ge -1$. Then for all $\lambda \ge 0$,
+\end{align*} where $Z = \sup_{f \in \cF}\set{\sum_{i=1}^n f(X_i)}$, $\sigma^2 := \sup_{f\in \cF}\set{\sum_{i=1}^n\E{}{f^2(X_i)}}$ is \textbf{the wimpy variance}. Let $\phi(u) = e^u - u - 1$ and $h(u) = (1 + u) \log(1 + u) - u$, for $u \ge -1$. Then for all $\lambda \ge 0$,
 \begin{align*}
-\log \E{}{e^{\lambda\paren{Z - \E{}{Z}}}} \le n\gamma^2 \phi\paren{\frac{\lambda}{n}}.
+\log \E{}{e^{\lambda\paren{Z - \E{}{Z}}}} \le \gamma^2 \phi\paren{\lambda}.
 \end{align*}
 Also, for all $t \ge 0$,
 \begin{align}
-\cP\set{Z \ge \E{}{Z} + t} \le \exp\paren{- n\gamma^2 \, h\paren{\frac{t}{\gamma^2}}}. \label{ineqn: bousquet_inequality_bennet_functional}
+\cP\set{Z \ge \E{}{Z} + t} \le \exp\paren{- \gamma^2 \, h\paren{\frac{t}{\gamma^2}}}. \label{ineqn: bousquet_inequality_bennet_functional}
 \end{align}
 \end{theorem}
 \end{itemize}
@@ -786,16 +786,127 @@ Note that  a \emph{metric space} that is \emph{compact} if and only if it is  \e
 \subsection{Covering Numbers and Volume}
 
 \subsection{Metric Entropy and Complexity}
+\begin{itemize}
+\item \begin{remark}(\textbf{\emph{$\epsilon$-Net as Vector Quantization of Set with $\epsilon$ Accuracy}})\\
+The concept of \emph{\textbf{$\epsilon$-net}}, i.e. a \emph{\textbf{dense subset}} $\cN \subset K$ such that every element in $K$ is $\epsilon$-close to at least of one of element in $\cN$, can be seen as a \emph{\textbf{vector quantization or clustering}} of the set $K$.  In particular, assume that $\cN$ is a maximal $\epsilon$-separated set. By Lemma \ref{lem: covering_maximal}, it is an $\epsilon$-net. Note that  \emph{each element} $x \in K$ can be represented by \emph{its \textbf{nearest neighbor}} $x_0 \in \cN$ within $\epsilon$-neighorhood. The smallest lengh of repesenation for $x_0 \in \cN$ is $k =  \log_{2} \cN(K, d, \epsilon)$. Since all elements within the $\epsilon$-neighorhood of $x_0$ \emph{\textbf{shares the same representation}}, it needs \emph{\textbf{at least}} $\log_{2} \cN(K, d, \epsilon)$ to encode every element in $K$ \emph{\textbf{with at most $\epsilon$ error rate}}.
+
+Moreover, as $\epsilon \to 0$, \emph{the quantization becomes \textbf{finer}} but \emph{the \textbf{dimension} of \textbf{representation} \textbf{increases}}. This shows the \emph{\textbf{tradeoff}} between \emph{the \textbf{granularity} of representation} and the  \emph{\textbf{encoding efficiency}}. As we shall show that \emph{\textbf{the metric entropy}} $\log_{2} \cN(K, d, \epsilon)$ describes the \emph{\textbf{complexity}} of set \emph{\textbf{quantitatively}}.
+
+We will see that the idea of \emph{\textbf{chaining}} is based on \emph{\textbf{a hierachy of  $\epsilon$-net representations} with increasing granularity i.e. $\epsilon_j \to 0$.} 
+\end{remark}
+
+\item \begin{theorem} (\textbf{Metric Entropy and Coding}).  \citep{vershynin2018high}\\
+Let $(T, d)$ be a metric space, and consider a subset $K \subset T$. Let $\cC(K, d,  \epsilon)$ denote \textbf{the \underline{smallest} number of bits} sufficient to \textbf{specify every point} $x \in K$ \underline{\textbf{with accuracy} $\epsilon$} in the metric $d$. Then
+\begin{align}
+\log_2 \cN(K, d, \epsilon) \le  \cC(K, d,  \epsilon) \le \log_2 \cN(K, d, \epsilon/2). \label{ineqn: metric_entropy_coding_set}
+\end{align} 
+\end{theorem}
+
+\item \begin{definition} (\textbf{\emph{Error Correcting Code}}).  \citep{vershynin2018high}\\
+Fix integers $k$, $n$ and $r$. Two maps
+\begin{align*}
+E : \set{0, 1}^k \to \set{0, 1}^n \quad \text{ and } \quad D: \set{0, 1}^n \to \set{0, 1}^k
+\end{align*} are called \underline{\emph{\textbf{encoding}} and \emph{\textbf{decoding maps}}} that \emph{\textbf{can correct $r$ errors}} if we have
+\begin{align*}
+D(y) = x
+\end{align*} for every word $x \in  \set{0, 1}^k$ and every string $y \in  \set{0, 1}^n$ that \textbf{\emph{differs from}} $E(x)$ \emph{in at most $r$ bits}. \emph{The encoding map} $E$ is called an \underline{\emph{\textbf{error correcting code}}}; its image $E(\set{0, 1}^k)$ is called a \emph{\textbf{codebook}} (and very often the image itself is called \emph{the error correcting code}); the elements $E(x)$ of the image are called \emph{\textbf{codewords}}.
+\end{definition}
+
+\item \begin{lemma}(\textbf{Error Correction and Packing}). \citep{vershynin2018high}\\
+Assume that positive integers $k$, $n$ and $r$ are such that
+\begin{align}
+\log_2 \cP(\set{0, 1}^n, d_H, 2r) \ge k. \label{ineqn: error_coding_packing_number}
+\end{align} where $d_H$ is the Hamming distance. Then there exists an \textbf{error correcting code} that encodes $k$-bit strings into $n$-bit
+strings and \textbf{can correct $r$ errors}.
+\end{lemma}
+
+\item \begin{theorem} (\textbf{Guarantees for an Error Correcting Code}). \citep{vershynin2018high}\\
+Assume that positive integers $k$, $n$ and $r$ are such that
+\begin{align}
+n \ge k + 2r\log_2\paren{\frac{en}{2r}}. \label{ineqn: error_corresting_coding}
+\end{align}
+Then there exists an error correcting code that \textbf{encodes} \textbf{$k$-bit strings} into \textbf{$n$-bit strings} and \textbf{can correct $r$ errors}.
+\end{theorem}
+\end{itemize}
 
 \section{Expected Value of Suprema of Empirical Process}
 \subsection{Metric Entropy and Sub-Gaussian Processes}
+\begin{itemize}
+\item \begin{definition} (\textbf{\emph{Sub-Gaussian Process}})  \citep{wainwright2019high}\\
+A collection of \emph{\textbf{zero-mean}} random variables $(X_t)_{t\in T}$ is a \underline{\emph{\textbf{sub-Gaussian process}}} \emph{with respect to a metric} $d$ on $T$ if for all $s, t \in T$, and $\lambda \in \bR$
+\begin{align}
+\E{}{\exp\paren{\lambda\paren{X_t - X_{s}}}} &\le \exp\paren{\frac{\lambda^2 d^2(t, s) }{2}} \label{def: sub_gaussian_process_1}
+\end{align}
+\end{definition}
+
+\item Recall the sub-Gaussian norm:
+\item \begin{definition} (\textbf{\emph{Sub-Gaussian Norm}}) \\
+The \underline{\emph{\textbf{sub-gaussian norm}}} of $X$, denoted $\norm{X}{\psi_2}$, is defined
+to be the \emph{\textbf{smallest}} $K_4$ that satisfies 
+\begin{align*}
+\E{}{\exp(X^2 / K_4^2)} \le 2.
+\end{align*} In other words, we define
+\begin{align}
+\norm{X}{\psi_2}= \inf\set{t > 0: \E{}{\exp(X^2 / t^2)} \le 2}.  \label{def: sub_gaussian_norm}
+\end{align}
+\end{definition}
+
+\item \begin{definition}(\textbf{\emph{Sub-Gaussian Process via Sub-Gaussian Norm}})  \citep{vershynin2018high}\\
+Consider a random process $(X_t)_{t\in T}$ on a metric space $(T, d)$. We say that the process has \underline{\emph{\textbf{sub-gaussian increments}}} if
+there exists $K \ge 0$ such that
+\begin{align}
+\norm{X_t - X_{s}}{\psi_2} &\le K d(t, s)  \label{def: sub_gaussian_process_2}
+\end{align}
+\end{definition}
+
+\item \begin{remark}
+Using definition \eqref{def: sub_gaussian_norm} and \eqref{def: sub_gaussian_process_1}, we have
+\begin{align*}
+K &= \frac{1}{\sqrt{2 \log 2}}
+\end{align*}
+\end{remark}
+
+\end{itemize}
 \subsection{Chaining and Dudley's Entropy Integral}
 \begin{itemize}
-\item \begin{theorem} (\textbf{Dudley's Entropy Integral Inequality}) \citep{vershynin2018high, wainwright2019high}\\
-Let $\set{X_{t}, t \in T}$ be a \textbf{zero-mean sub-Gaussian process} with respect to the induced pseudo-metric $d_X$. Then for any $\epsilon \in [0, D]$, where $D  = \sup_{t, t'\in T}d_{X}(t, t')$ we have
+\item \begin{theorem} (\textbf{Dudley's Entropy Integral Inequality}). \citep{vershynin2018high}\\
+Let $\set{X_{t}, t \in T}$ be a \textbf{zero-mean} random process on a metric space $(T, d)$ with \textbf{sub-gaussian increments} with constant $K$ as in \eqref{def: sub_gaussian_process_2}.
+Then
 \begin{align}
-\E{}{\sup_{t, t' \in T}\set{X_t - X_{t'}}} &\le 2\E{}{\sup_{s, s' \in T: d_X(s, s') \le \epsilon}\set{X_s - X_{s'}}} + 32 \int_{\epsilon/4}^{D}\sqrt{\log \cN(T, d_{X}, u)} du \label{ineqn: dudley_metric_entropy_integral_inequality}
+\E{}{\sup_{t\in T}X_t } \le C\,K\int_{0}^{\infty} \sqrt{\log \cN(T, d, \epsilon)} d\epsilon. \label{ineqn: dudley_metric_entropy_integral_inequality_exp_sup_norm}
 \end{align}
+\end{theorem}
+
+\begin{figure}
+\begin{minipage}[t]{1\linewidth}
+  \centering
+  \centerline{\includegraphics[scale = 0.45]{dudley_inequality.png}}
+\end{minipage}
+\caption{\footnotesize{\textbf{Dudley's inequality bounds $\E{}{\sup_{t\in T}X_t }$ by the area under the curve.   \citep{vershynin2018high}}}}
+\label{fig: dudley_inequality}
+\end{figure}
+
+
+\item \begin{theorem} (\textbf{Discrete Dudley's Inequality}). \citep{vershynin2018high}\\
+Let $\set{X_{t}, t \in T}$ be a \textbf{zero-mean} random process on a metric space $(T, d)$ with \textbf{sub-gaussian increments} with constant $K$ as in \eqref{def: sub_gaussian_process_2}.
+Then
+\begin{align}
+\E{}{\sup_{t\in T}X_t } \le C\,K \sum_{k=1}^{\infty}2^{-k}\sqrt{\log \cN(T, d, 2^{-k})}. \label{ineqn: dudley_metric_entropy_integral_inequality_discrete}
+\end{align}
+\end{theorem}
+
+\item \begin{theorem} (\textbf{Dudley's Entropy Integral Inequality, Tail Bound}) \citep{boucheron2013concentration}\\
+Let $\set{X_{t}, t \in T}$ be a \textbf{zero-mean sub-Gaussian process}  with respect to the induced pseudo-metric $d_X$ from \eqref{def: sub_gaussian_process_1}. Then for any $s \in T$,  we have
+\begin{align}
+\E{}{\sup_{t, s \in T}\set{X_t - X_{s}}} &\le  12 \int_{0}^{D/2}\sqrt{\log \cN(T, d_{X}, u)} du, \label{ineqn: dudley_metric_entropy_integral_inequality_tail_difference}
+\end{align} where $D  = \sup_{t, s\in T}d_{X}(t, s)$ is the \textbf{diameter} of metric space $T$
+\end{theorem}
+
+\item \begin{theorem} (\textbf{Dudley's Entropy Integral Inequality, General Tail Bound}) \citep{wainwright2019high}\\
+Let $\set{X_{t}, t \in T}$ be a \textbf{zero-mean sub-Gaussian process}  with respect to the induced pseudo-metric $d_X$ from \eqref{def: sub_gaussian_process_1}. Then for any $\epsilon \in [0, D]$,  we have
+\begin{align}
+\E{}{\sup_{t, t' \in T}\set{X_t - X_{t'}}} &\le 2\E{}{\sup_{s, s' \in T: d_X(s, s') \le \epsilon}\set{X_s - X_{s'}}} + 32 \int_{\epsilon/4}^{D}\sqrt{\log \cN(T, d_{X}, u)} du, \label{ineqn: dudley_metric_entropy_integral_inequality_tail_difference_general}
+\end{align} where $D  = \sup_{t, t'\in T}d_{X}(t, t')$ is the \textbf{diameter} of metric space $T$.
 \end{theorem}
 
 \item \begin{remark} (\textbf{\emph{Dudley's Entropy Integral Inequality for Symmetrized Empirical Process}}) \\
@@ -821,21 +932,67 @@ where we have used the fact that $\sup_{f, g \in \cF}\norm{f - g}{\cP_n} \le 2b$
 \end{itemize}
 \subsection{Vapnik-Chervonenkis Class}
 \begin{itemize}
+\item \begin{definition} (\emph{\textbf{Restriction of $\cF$ to $\cD$}}). \\
+Let $\cF$ be a class of \emph{Boolean functions} from $\cX$ to $\set{0,1}$ and let $\cD = \set{x_1 \xdotx{,} x_n} \subset \cX$. 
+\underline{\emph{\textbf{The restriction of $\cF$ to $\cD$}}} is \emph{the set of functions} from $\cD$ to $\set{0,1}$ that can be \emph{derived from} $\cH$. That is,
+\begin{align*}
+\cF_{\cD} := \set{(f(x_1) \xdotx{,} f(x_n)): f \in \cF},
+\end{align*}
+where we \emph{\textbf{represent}} each function from $\cX$ to $\set{0,1}$ as a \emph{\textbf{vector}} in $\set{0,1}^{\abs{\cD}}$.
+\end{definition}
+
+\item \begin{definition}(\emph{\textbf{Shattering}}). \\
+A hypothesis class $\cF$ \underline{\emph{\textbf{shatters}} a finite set $\cD \subset \cX$} if \emph{\textbf{the restriction of $\cF$ to $\cD$}} is the set of \emph{\textbf{all functions}} from $\cD$ to $\set{0,1}$. That is, 
+\begin{align*}
+\abs{\cF_{\cD}} &= 2^{\abs{\cD}}.
+\end{align*}
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{VC-Dimension}}). \\
+\underline{\emph{\textbf{The Vapnik-Chervonenkis (VC) dimension}}} of a hypothesis class $\cF$, denoted $VCdim(\cF)$ or simply $v(\cF)$, is \emph{\textbf{the \underline{maximal size}} of a set $\cD \subset \cX$ that can be \textbf{shattered} by $\cF$}.
+
+If $\cF$ can shatter sets of \emph{\textbf{arbitrarily large size}} we say that $\cF$ has \underline{\emph{\textbf{infinite VC-dimension}}}.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Growth Function}}). \\
+Let $\cF$ be a class of Boolean functions. Then \underline{\emph{\textbf{the growth function of $\cF$}}}, denoted $\tau_{\cF}: \bN \to \cN$, is defined as
+\begin{align*}
+\tau_{\cF}(n) &:= \max_{\cD \subset \cX: \abs{\cD} = n}\abs{\cF_{\cD}}.
+\end{align*}
+In words, $\tau_{\cF}(n)$ is \textbf{\emph{the number of different functions}} from a set $\cD$ of \emph{\textbf{size $n$}} to $\set{0,1}$ that can be obtained by \emph{\textbf{restricting $\cF$ to $\cD$}}.
+\end{definition}
+
+\item \begin{lemma} (\textbf{Sauer-Shelah Lemma}). \citep{vershynin2018high, wainwright2019high}\\
+Let $\cF$ be a class of \textbf{Boolean} functions with finite VC dimension $v(\cF) \le d < \infty$. Then, for all $n > d+1$, 
+\begin{align}
+\tau_{\cF}(n) &\le \sum_{i=0}^{d}{{n}\choose{i}}\le \paren{\frac{en}{d}}^{d} \label{eqn: sauer_lemma}
+\end{align}
+\end{lemma}
+\end{itemize}
+
+\subsection{Metric Entropy and VC Dimension}
+\begin{itemize}
 \item \begin{theorem} (\textbf{Covering Numbers via VC Dimension}).  \citep{vershynin2018high}\\
-Let $\cF$ be a class of \textbf{binary} functions  on a probability space $(\cX, \srF, \cP)$. Then, for every $\epsilon \in (0, 1)$, we
+Let $\cF$ be a class of \textbf{Boolean} functions  on a probability space $(\cX, \srF, \cP)$. Then, for every $\epsilon \in (0, 1)$, we
 have
 \begin{align}
 \cN(\cF, L_2(\cP), \epsilon) &\le \paren{\frac{2}{\epsilon}}^{Cd}, \label{ineqn: covering_number_bound_vc_dimension}
-\end{align} where $d = \text{VC-Dim}(\cF)$.
+\end{align} where $d =v(\cF)$ is the VC dimension of $\cF$.
 \end{theorem}
 
 \item  \begin{theorem} (\textbf{Empirical Processes via VC dimension}).  \citep{vershynin2018high}\\
-Let $\cF$ be a class of \textbf{binary} functions  on a probability space $(\cX, \srF, \cP)$ with \textbf{finite VC dimension} $d \ge 1$. Let $X, X_1 \xdotx{,} X_n$ be \textbf{independent} random variables in $\cX$ distributed according to the law $\cP$. Then 
+Let $\cF$ be a class of \textbf{Boolean} functions  on a probability space $(\cX, \srF, \cP)$ with \textbf{finite VC dimension} $d \ge 1$. Let $X, X_1 \xdotx{,} X_n$ be \textbf{independent} random variables in $\cX$ distributed according to the law $\cP$. Then 
 \begin{align}
 \E{}{\sup_{f \in \cF}\abs{\frac{1}{n}\sum_{i=1}^{n}f(X_i) - \E{}{f(X)}}} &\le C\sqrt{\frac{d}{n}}, \label{ineqn: expected_emp_process_vc_dimension}
-\end{align} where $d = \text{VC-Dim}(\cF)$.
+\end{align} where $d = v(\cF)$ is the VC-dimension of $\cF$.
 \end{theorem}
 
+\item \begin{remark}
+The inequality \eqref{ineqn: expected_emp_process_vc_dimension} can be used to obtain a better bound for \emph{the generalization error} of \emph{ERM} algorithm in \emph{statistical learning} (vs. $\cO(\sqrt{d\log(en/d) / n})$)
+\begin{align*}
+L(h) \le \widehat{L}_{n}(h) + C\sqrt{\frac{d}{n}}, 
+\end{align*}
+\end{remark}
 
 \item \begin{remark} (\textbf{\emph{The Classical Glivenko-Cantelli Theorem, Non-Asymptotic Version}})\\
 Consider the \emph{classical Glivenko-Cantelli theorem} \eqref{eqn: gilvenko_cantelli}, which amounts to bounding
@@ -851,7 +1008,7 @@ Since \emph{the set of indicator functions has VC dimension} $d = 1$, apply ineq
 \end{align} where $c$ is a universal constant. Apart from better constants, this bound is \emph{unimprovable}.
 \end{remark}
 \end{itemize}
-\subsection{Comparison Theorems}
+%\subsection{Comparison Theorems}
 
 
 

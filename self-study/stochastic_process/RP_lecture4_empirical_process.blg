@@ -3,9 +3,11 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: RP_lecture4_empirical_process.aux
 The style file: plainnat.bst
 Database file #1: reference.bib.bib
+Warning--I didn't find a database entry for "shalev2014understanding"
+Warning--I didn't find a database entry for "mohri2018foundations"
 You've used 6 entries,
             2773 wiz_defined-function locations,
-            622 strings with 5746 characters,
+            624 strings with 5789 characters,
 and the built_in function-call counts, 2167 in all, are:
 = -- 162
 > -- 122
@@ -44,3 +46,4 @@ warning$ -- 0
 while$ -- 18
 width$ -- 0
 write$ -- 81
+(There were 2 warnings)
