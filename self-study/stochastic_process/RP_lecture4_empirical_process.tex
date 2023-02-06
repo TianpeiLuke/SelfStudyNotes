@@ -790,7 +790,7 @@ Let $K$ be a subset of $\bR^n$ and  $\epsilon > 0$. Then
 \begin{align}
 \frac{m(K)}{m(\epsilon B_2^n)} \le \cN(K, \epsilon) \le \cP(K, \epsilon) \le \frac{m(K + (\epsilon/2) B_2^n)}{m((\epsilon/2) B_2^n)}  \label{ineqn: cover_num_vol_rn}
 \end{align}
-Here $m(\cdot)$ denotes \emph{the Lebesgue measure} $\bR^n$ (i.e. the volume), $B_2^n$ denotes the unit Euclidean ball $\set{x \in \bR^n: \norm{x}{2} \le 1}$ in $\bR^n$, so $\epsilon B_2^n$  is a Euclidean ball with radius $\epsilon$.
+Here $m(\cdot)$ denotes \emph{the Lebesgue measure} on $\bR^n$ (i.e. the volume), $B_2^n$ denotes the unit Euclidean ball $\set{x \in \bR^n: \norm{x}{2} \le 1}$ in $\bR^n$, so $\epsilon B_2^n$  is a Euclidean ball with radius $\epsilon$.
 \end{theorem}
 \begin{proof}
 Consider a $\epsilon$-net $\cN \subset K$, with $\abs{\cN} = \cN(K, \epsilon)$. By definition, 
@@ -1052,7 +1052,7 @@ X_t - X_{t_0} = \sum_{k=\kappa+1}^{K}\paren{X_{\pi_k(t)} - X_{\pi_{k-1}(t)}}.
 \E{}{\sup_{t\in T}X_t} &\le \sum_{k=\kappa+1}^{K}C \epsilon_{k-1} \sqrt{\log \abs{T_k }} \label{pf: bound_increment_2}
 \end{align} Substituting $\epsilon_k = 2^{-k}$ and $\abs{T_k} = \cN(T, d, 2^{-k}) $, we have
 \begin{align*}
-\E{}{\sup_{t\in T}X_t} &\le \sum_{k=\kappa+1}^{K}C_1 2^{-k} \sqrt{\log \cN(T, d, 2^{-k}) } \le  \sum_{k=0}^{\infty}C_1 2^{-k} \sqrt{\log \cN(T, d, 2^{-k}) }. \qed
+\E{}{\sup_{t\in T}X_t} &\le \sum_{k=\kappa+1}^{K}C_1 2^{-k} \sqrt{\log \cN(T, d, 2^{-k}) } \le  \sum_{k=1}^{\infty}C_1 2^{-k} \sqrt{\log \cN(T, d, 2^{-k}) }. \qed
 \end{align*}
 \end{enumerate}
 \end{proof}
@@ -1060,17 +1060,17 @@ X_t - X_{t_0} = \sum_{k=\kappa+1}^{K}\paren{X_{\pi_k(t)} - X_{\pi_{k-1}(t)}}.
 \item \begin{proof} (\emph{Proof of Integral form} \eqref{ineqn: dudley_metric_entropy_integral_inequality_exp_sup_norm})\\
 Note that 
 \begin{align*}
-\sum_{k=0}^{\infty} 2^{-k} \sqrt{\log \cN(T, d, 2^{-k}) } = 2\sum_{k=0}^{\infty} \int_{2^{-k-1}}^{2^{-k}} \sqrt{\log \cN(T, d, 2^{-k}) }
+\sum_{k=1}^{\infty} 2^{-k} \sqrt{\log \cN(T, d, 2^{-k}) } = 2\sum_{k=1}^{\infty} \int_{2^{-k-1}}^{2^{-k}} \sqrt{\log \cN(T, d, 2^{-k}) }
 \end{align*} Choose $\epsilon \le 2^{-k}$, we have $\log \cN(T, d, 2^{-k}) \le \log \cN(T, d, \epsilon)$.
 \begin{align*}
-2\sum_{k=0}^{\infty} \int_{2^{-k-1}}^{2^{-k}} \sqrt{\log \cN(T, d, 2^{-k}) } &\le 2\sum_{k=0}^{\infty} \int_{2^{-k-1}}^{2^{-k}} \sqrt{\log \cN(T, d, \epsilon) } d\epsilon \le  2 \int_{0}^{\infty}\sqrt{\log \cN(T, d, \epsilon) } d\epsilon.
+2\sum_{k=1}^{\infty} \int_{2^{-k-1}}^{2^{-k}} \sqrt{\log \cN(T, d, 2^{-k}) } &\le 2\sum_{k=1}^{\infty} \int_{2^{-k-1}}^{2^{-k}} \sqrt{\log \cN(T, d, \epsilon) } d\epsilon =  2 \int_{0}^{1/2}\sqrt{\log \cN(T, d, \epsilon) } d\epsilon.
 \end{align*} Thus the proof is complete. \qed
 \end{proof}
 
 \item \begin{remark} (\textbf{\emph{Upper Limit of Integral}})\\
 Note that if $\epsilon > D := \text{diam}(T) = \sup_{t, s\in T}d(t, s)$ then a single point (any point in $T$) is an $\epsilon$-net of $T$, which shows that $\log \cN(T, d, \epsilon) = 0$ for such $\epsilon$. Thus the inequality \eqref{ineqn: dudley_metric_entropy_integral_inequality_exp_sup_norm} is 
 \begin{align*}
-\E{}{\sup_{t\in T}X_t } \le C\,K\int_{0}^{D} \sqrt{\log \cN(T, d, \epsilon)} d\epsilon.
+\E{}{\sup_{t\in T}X_t } \le C\,K\int_{0}^{D/2} \sqrt{\log \cN(T, d, \epsilon)} d\epsilon.
 \end{align*}
 \end{remark}
 
@@ -1078,7 +1078,7 @@ Note that if $\epsilon > D := \text{diam}(T) = \sup_{t, s\in T}d(t, s)$ then a s
 \begin{theorem} (\textbf{Dudley's Entropy Integral Inequality, Tail Bound}) \citep{boucheron2013concentration}\\
 Let $\set{X_{t}, t \in T}$ be a \textbf{zero-mean sub-Gaussian process}  with respect to the induced pseudo-metric $d$ from \eqref{def: sub_gaussian_process_1}. Then for any $s \in T$,  we have
 \begin{align}
-\E{}{\sup_{t, s \in T}\set{X_t - X_{s}}} &\le  12 \int_{0}^{D/2}\sqrt{\log \cN(T, d, u)} du, \label{ineqn: dudley_metric_entropy_integral_inequality_tail_difference}
+\E{}{\sup_{t, s \in T}\set{X_t - X_{s}}} &\le  12 \int_{0}^{D/2}\sqrt{\log \cN(T, d, \epsilon)} d\epsilon, \label{ineqn: dudley_metric_entropy_integral_inequality_tail_difference}
 \end{align} where $D  = \sup_{t, s\in T}d(t, s)$ is the \textbf{diameter} of metric space $T$
 \end{theorem}
 
