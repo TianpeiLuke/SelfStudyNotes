@@ -783,7 +783,71 @@ When discussing metric entropy, we restrict our attention to subset $K$ of metri
 Note that  a \emph{metric space} that is \emph{compact} if and only if it is  \emph{totally bounded} and \emph{complete}. So we can instead assume that $K$ of interest is \emph{compact}.
 \end{remark}
 \end{itemize}
-\subsection{Covering Numbers and Volume}
+\subsection{Covering Numbers for Important Sets}
+\begin{itemize}
+\item \begin{theorem} (\textbf{Covering Numbers and Volume in $\bR^n$}). \citep{vershynin2018high}\\
+Let $K$ be a subset of $\bR^n$ and  $\epsilon > 0$. Then
+\begin{align}
+\frac{m(K)}{m(\epsilon B_2^n)} \le \cN(K, \epsilon) \le \cP(K, \epsilon) \le \frac{m(K + (\epsilon/2) B_2^n)}{m((\epsilon/2) B_2^n)}  \label{ineqn: cover_num_vol_rn}
+\end{align}
+Here $m(\cdot)$ denotes \emph{the Lebesgue measure} $\bR^n$ (i.e. the volume), $B_2^n$ denotes the unit Euclidean ball $\set{x \in \bR^n: \norm{x}{2} \le 1}$ in $\bR^n$, so $\epsilon B_2^n$  is a Euclidean ball with radius $\epsilon$.
+\end{theorem}
+\begin{proof}
+Consider a $\epsilon$-net $\cN \subset K$, with $\abs{\cN} = \cN(K, \epsilon)$. By definition, 
+\begin{align*}
+K &\subset \bigcup_{y \in \cN}(\epsilon B_2^n+\set{y}) \\
+m(K) &\le m\paren{\bigcup_{y \in \cN}(\epsilon B_2^n+\set{y})} = \sum_{y \in \cN}m\paren{\epsilon B_2^n+\set{y}} = \abs{\cN}m(\epsilon B_2^n)
+\end{align*} Thus the left inequality is proved. To show the right hand side, let $\cP \subset K$ be a \emph{$\epsilon$-separated set} with $\abs{\cP} = \cP(K, \epsilon)$. With points in $\cP$ as centers, one can construct  $\abs{\cP}$ disjoint closed $\epsilon/2$-ball that lie completely inside $K + (\epsilon/2) B_2^n$. Thus
+\begin{align*}
+m\paren{K + (\epsilon/2) B_2^n} &\ge m\paren{\bigcup_{y \in \cP}(\epsilon/2 B_2^n+\set{y})} = \abs{\cP}m\paren{(\epsilon/2) B_2^n},
+\end{align*} which completes the proof. \qed
+\end{proof}
+
+\item \begin{corollary} (\textbf{Covering Numbers of the Euclidean Ball}). \citep{vershynin2018high}\\
+The covering numbers of \textbf{the unit Euclidean ball} $B_2^n$ satisfy the following for any $\epsilon > 0$:
+\begin{align}
+\paren{\frac{1}{\epsilon}}^n \le \cN(B_2^n, \norm{\cdot}{2}, \epsilon)  \le \paren{1+ \frac{2}{\epsilon}}^n  \label{ineqn: cover_num_vol_rn_unit_ball}
+\end{align}
+The same upper bound is true for \textbf{the unit Euclidean sphere} $\bS^{n-1}$.
+\end{corollary}
+\begin{proof}
+Note that
+\begin{align*}
+m(\epsilon B_2^n) = \epsilon^n m(B_2^n)
+\end{align*} Thus
+\begin{align*}
+\frac{m(B_2^n)}{m(\epsilon B_2^n)} = \paren{\frac{1}{\epsilon}}^n; \quad \frac{m(K + (\epsilon/2) B_2^n)}{m((\epsilon/2) B_2^n)} = \frac{m((1+ \epsilon/2) B_2^n)}{m((\epsilon/2) B_2^n)} = \paren{\frac{1+ \epsilon/2}{\epsilon/2}}^n \qed
+\end{align*}
+\end{proof}
+
+\item \begin{proposition}(\textbf{Covering and Packing Numbers of the Hamming Cube}). \citep{vershynin2018high}\\
+Let $K = \set{0, 1}^n$. Prove that for every integer $m \in [0, n]$, we have
+\begin{align}
+\frac{2^n}{\sum_{k=0}^m{n \choose k}}  \le \cN(K, d_{H}, m) \le \cP(K, d_H, m) \le \frac{2^n}{\sum_{k=0}^{\floor{m/2}}{n \choose k}}  \label{ineqn: cover_num_vol_hamming_ball}
+\end{align}
+\end{proposition}
+
+\item \begin{proposition}(\textbf{Lipschitz Functions on the Unit Interval}) \citep{wainwright2019high}\\
+Consider the class of real-valued \textbf{Lipschitz functions} on unit interval $[0, 1]$
+\begin{align*}
+\cF_L := \set{g: [0, 1] \to \bR:  g(0) = 0,\text{ and }\abs{g(x) - g(y)} \le L \abs{x -y}, \forall x, y \in  [0, 1]}.
+\end{align*}
+ Here $L > 0$ is a fixed constant, and all of the functions in the class obey the Lipschitz bound, uniformly over all of $[0, 1]$.  Then \textbf{the covering number} of $\cF_L$ with respect to \textbf{supremum norm} $\norm{\cdot}{\infty}$ satisfies the following inequalities:
+ \begin{align}
+ c \exp\paren{\frac{L}{\epsilon}} \le  \cN(\cF_L,  \norm{\cdot}{\infty}, \epsilon)  \le C \exp\paren{\frac{L}{\epsilon}}, \label{ineqn: cover_num_vol_lipschitz_sup_norm}
+ \end{align} for suitably small $\epsilon >0$. In other word, the metric entropy $\log \cN(\cF_L,  \norm{\cdot}{\infty}, \epsilon) \asymp (L/\epsilon)$.
+ \end{proposition}
+ 
+ \item \begin{remark}(\textbf{\emph{The Curse of Dimensionality}})\\
+ The preceding example can be extended to \emph{Lipschitz functions} on the unit cube in higher dimensions, meaning real-valued functions on $[0, 1]^n$ such that 
+ \begin{align*}
+ \abs{f(x) - f(y)} \le L \norm{x -y}{\infty}.
+ \end{align*} Denote this class as $\cF_{L}([0,1]^n)$. The metric entropy of $\cF_{L}([0,1]^n)$ 
+ \begin{align}
+\log  \cN(\cF_L([0,1]^n),  \norm{\cdot}{\infty}, \epsilon) \asymp \paren{\frac{L}{\epsilon}}^n \label{ineqn: cover_num_vol_lipschitz_sup_norm_high_dim}
+ \end{align} It is worth contrasting \emph{\underline{\textbf{the exponential dependence} of \textbf{metric entropy}} on the dimension $n$}, as opposed to\emph{ the linear dependence} that we saw earlier for simpler sets (e.g., such as \emph{$n$-dimensional unit balls}). This is a dramatic manifestation of \emph{\textbf{the curse of dimensionality}}.
+ \end{remark}
+\end{itemize}
 
 \subsection{Metric Entropy and Complexity}
 \begin{itemize}
@@ -869,6 +933,51 @@ K &= \frac{1}{\sqrt{2 \log 2}}
 \end{itemize}
 \subsection{Chaining and Dudley's Entropy Integral}
 \begin{itemize}
+\item \begin{remark}(\textbf{\emph{Chaining Techinque to Prove Dudley's Entropy Integral Inequalities}}) \citep{vershynin2018high}\\
+Our proof of \emph{the Dudley's entropy integral inequality} will be based on the important technique of \underline{\emph{\textbf{chaining}}}, which can be useful in many other problems. 
+
+\underline{\emph{\textbf{Chaining}} is a \emph{\textbf{multi-scale version} of \textbf{the $\epsilon$-net argument}}} that we used successfully in the past. In the familiar, single-scale $\epsilon$-net argument, we \emph{\textbf{discretize}} $T$ by choosing an $\epsilon$-net $\cN$ of $T$ . Then every point $t \in T$ can be \emph{\textbf{approximated}} by a \emph{\textbf{closest point}} from the net $\pi(t) \in \cN$ with accuracy $\epsilon$, so that 
+\begin{align*}
+d(t, \pi(t)) \le \epsilon. 
+\end{align*} \emph{The sub-Gaussian increment condition} \eqref{def: sub_gaussian_process_2}  yields
+\begin{align}
+\norm{X_t - X_{\pi(t)}}{\psi_2} &\le K \epsilon  \label{arg: chaining_argument_sub_gaussian}
+\end{align}
+This gives
+\begin{align*}
+\E{}{\sup_{t \in T} X_t} \le   \E{}{\sup_{t\in T}X_{\pi(t)}} +  \E{}{\sup_{t \in T}\set{X_t - X_{\pi(t)}}}
+\end{align*}
+The first term can be controlled by a \emph{union bound} over $\abs{N} = \cN(T, d, \epsilon)$ points $\pi(t)$. That is, the key point to use $\epsilon$-net instead of original $T$ is that $\epsilon$-net is a finite set. 
+
+
+\begin{figure}
+\begin{minipage}[t]{1\linewidth}
+  \centering
+  \centerline{\includegraphics[scale = 0.4]{chaining.png}}
+\end{minipage}
+\caption{\footnotesize{\textbf{The chaining technique by refinement of $\epsilon$-nets and decrease the increments   \citep{vershynin2018high}}}}
+\label{fig: chaining}
+\end{figure}
+
+To bound the second term, we would like to use \eqref{arg: chaining_argument_sub_gaussian}. But it only holds for \emph{\textbf{fixed}} $t \in T$, and it is not clear how to \emph{control the supremum over} $t \in T$. To overcome this difficulty, we do not stop here but \emph{\textbf{continue to run the $\epsilon$-net argument further}},
+\emph{building \textbf{progressively finer approximations}} $\pi_1(t), \pi_2(t), \ldots$ to $t$ with \emph{finer} nets. Note that for $t_0 = \pi_k(t)$
+\begin{align*}
+X_t - X_{t_0} = \sum_{k=\kappa+1}^{K}\paren{X_{\pi_k(t)} - X_{\pi_{k-1}(t)}}
+\end{align*} and we can \emph{\textbf{bound}} \emph{the \textbf{suprema} of empirical process} by \emph{\textbf{suprema of increments}} between \emph{\textbf{two $\epsilon$-net approximations}} via the \emph{\textbf{sub-additivity of supremum}} 
+\begin{align}
+\E{}{\sup_{t\in T}X_t} = \E{}{\sup_{t\in T}\paren{X_t - X_{t_0}}} \le \sum_{k=\kappa+1}^{K} \E{}{\sup_{t\in T}\paren{X_{\pi_k(t)} - X_{\pi_{k-1}(t)}}} \label{arg: chaining_argument_subadditivity}
+\end{align} 
+
+Finally we notice that there are only \underline{\emph{\textbf{finite number of pairs}}} $(\pi_k(t), \pi_{k-1}(t))$. So the supremum is actually a \emph{maximization over a finite set}. For each pair $(\pi_k(t), \pi_{k-1}(t)) \in \cN_{\epsilon_k} \times \cN_{\epsilon_{k-1}}$, \emph{the expected value of increments is bounded} by $\epsilon_k + \epsilon_{k-1}$ based on \emph{\textbf{the sub-Gaussian norm} condition} \eqref{arg: chaining_argument_sub_gaussian} of $\epsilon$-net. Then we have the following inequality:
+if the $X_i$ are \textbf{\emph{sub-Gaussian with variance factor $\nu$}}, that is, $\psi_{X_i}(\lambda) \le \lambda^2 \nu/2$ for
+every $\lambda \in (0, \infty)$, then
+\begin{align*}
+\E{}{\max\limits_{i=1 \xdotx{,} \abs{\cN}} X_i} &\le \sqrt{2 \nu \log \abs{\cN}}.
+\end{align*} Then we let $\nu := C \epsilon_k^2$, we will have the bound on the expected value of supremum of increment. Then we use the subadditivity to obtain proof.  \qed
+\end{remark}
+
+
+
 \item \begin{theorem} (\textbf{Dudley's Entropy Integral Inequality}). \citep{vershynin2018high}\\
 Let $\set{X_{t}, t \in T}$ be a \textbf{zero-mean} random process on a metric space $(T, d)$ with \textbf{sub-gaussian increments} with constant $K$ as in \eqref{def: sub_gaussian_process_2}.
 Then
@@ -894,12 +1003,83 @@ Then
 \E{}{\sup_{t\in T}X_t } \le C\,K \sum_{k=1}^{\infty}2^{-k}\sqrt{\log \cN(T, d, 2^{-k})}. \label{ineqn: dudley_metric_entropy_integral_inequality_discrete}
 \end{align}
 \end{theorem}
-
-\item \begin{theorem} (\textbf{Dudley's Entropy Integral Inequality, Tail Bound}) \citep{boucheron2013concentration}\\
-Let $\set{X_{t}, t \in T}$ be a \textbf{zero-mean sub-Gaussian process}  with respect to the induced pseudo-metric $d_X$ from \eqref{def: sub_gaussian_process_1}. Then for any $s \in T$,  we have
+\begin{proof}
+We divide the proof in three parts using \emph{the chaining method}.
+\begin{enumerate}
+\item \emph{\textbf{Chaining set-up}}. Without loss of generality, we may assume that $K = 1$ and that $T$ is finite. Let us set the dyadic
+scale
+\begin{align*}
+\epsilon_k &= \frac{1}{2^k}, \quad k=1, 2, \ldots
+\end{align*} and choose $\epsilon_k$-nets $T_k$ of $T$ so that
 \begin{align}
-\E{}{\sup_{t, s \in T}\set{X_t - X_{s}}} &\le  12 \int_{0}^{D/2}\sqrt{\log \cN(T, d_{X}, u)} du, \label{ineqn: dudley_metric_entropy_integral_inequality_tail_difference}
-\end{align} where $D  = \sup_{t, s\in T}d_{X}(t, s)$ is the \textbf{diameter} of metric space $T$
+\abs{T_k} = \cN(T, d, \epsilon_k) \label{pf: dudley_discrete_eps_net_setup}
+\end{align} Since $T$ is finite, there exists a small enough number $\kappa \in \bZ$ (defining \emph{the coarsest net}) and a large enough number $K \in \bZ$ (defining the \emph{finest net}), such that
+\begin{align*}
+ T_\kappa= \set{t_0}, \text{ for some } t_0 \in T, \quad T_K = T
+\end{align*} For a point $t \in T$, let $\pi_k(t)$ denote a \emph{\textbf{closest point}} in $T_k$, so we have
+\begin{align}
+d(t, \pi_k(t)) \le \epsilon_k  \label{pf: dudley_discrete_eps_net_dist}
+\end{align} Since $\E{}{X_{t_0}} = 0$, we have
+\begin{align*}
+\E{}{\sup_{t\in T}X_t} = \E{}{\sup_{t\in T}\paren{X_t - X_{t_0}}}
+\end{align*}  We can express $X_t - X_{t_0}$ as a \emph{\textbf{telescoping sum}}; think about walking from $t_0$ to $t$ along a chain of points $\pi_k(t)$ that mark \emph{\textbf{progressively finer approximations}} to $t$:
+\begin{align*}
+X_t - X_{t_0} = \sum_{k=\kappa+1}^{K}\paren{X_{\pi_k(t)} - X_{\pi_{k-1}(t)}}.
+\end{align*} By the sub-additivity of supremum, this yields
+\begin{align}
+\E{}{\sup_{t\in T}X_t} = \E{}{\sup_{t\in T}\paren{X_t - X_{t_0}}} \le \sum_{k=\kappa+1}^{K} \E{}{\sup_{t\in T}\paren{X_{\pi_k(t)} - X_{\pi_{k-1}(t)}}} \label{pf: chaining_argument_subadditivity}
+\end{align} 
+
+\item \textbf{\emph{Controlling the increments}}. The supremum over $t\in T$ in right hand side of \eqref{pf: chaining_argument_subadditivity} is actually \textbf{\emph{maximization over a finite set}}; that is \emph{the set of all pairs} $(\pi_k(t), \pi_{k-1}(t)) \in T_{k} \times T_{k-1}$. The number of such pairs is
+\begin{align*}
+\abs{T_k} \abs{T_{k-1}} \le \abs{T_k}^2 = \abs{ \cN(T, d, \epsilon_k)}^2.
+\end{align*} Next, for a fixed $t$, the sub-Gaussian norm of increments in \eqref{pf: chaining_argument_subadditivity}  can be bounded as follows:
+\begin{align*}
+ \norm{X_{\pi_k(t)} - X_{\pi_{k-1}(t)}}{\psi_2} &\le d(\pi_k(t), \pi_{k-1}(t)) \quad (\text{\emph{sub-Gaussian increment definition}})\\
+&\le d(\pi_k(t), t) + d(t, \pi_{k-1}(t)) \quad (\text{\emph{triangle inequality}})\\
+&\le \epsilon_k + \epsilon_{k-1} \le 2\epsilon_{k-1}
+\end{align*} Recall that the expected value of maximum over a finite set of sub-Gaussian random variables have the inequality 
+\begin{align*}
+\E{}{\max\limits_{i=1 \xdotx{,} \abs{\cN}} X_i} &\le C \norm{X_i}{\psi_2}\sqrt{\log \abs{\cN}}.
+\end{align*} Thus each term in right hand side of \eqref{pf: chaining_argument_subadditivity} is bounded as
+\begin{align}
+\E{}{\sup_{t\in T}\paren{X_{\pi_k(t)} - X_{\pi_{k-1}(t)}}} &\le C  \norm{X_{\pi_k(t)} - X_{\pi_{k-1}(t)}}{\psi_2}\sqrt{\log \abs{\abs{T_k} \abs{T_{k-1}}}} \nonumber\\
+&\le C \epsilon_{k-1} \sqrt{\log \abs{T_k }} \label{pf: bound_increment}
+\end{align}
+
+\item \textbf{\emph{Summing up the increments}}. Substituting the bound \eqref{pf: bound_increment} in \eqref{pf: chaining_argument_subadditivity}, we have
+\begin{align}
+\E{}{\sup_{t\in T}X_t} &\le \sum_{k=\kappa+1}^{K}C \epsilon_{k-1} \sqrt{\log \abs{T_k }} \label{pf: bound_increment_2}
+\end{align} Substituting $\epsilon_k = 2^{-k}$ and $\abs{T_k} = \cN(T, d, 2^{-k}) $, we have
+\begin{align*}
+\E{}{\sup_{t\in T}X_t} &\le \sum_{k=\kappa+1}^{K}C_1 2^{-k} \sqrt{\log \cN(T, d, 2^{-k}) } \le  \sum_{k=0}^{\infty}C_1 2^{-k} \sqrt{\log \cN(T, d, 2^{-k}) }. \qed
+\end{align*}
+\end{enumerate}
+\end{proof}
+
+\item \begin{proof} (\emph{Proof of Integral form} \eqref{ineqn: dudley_metric_entropy_integral_inequality_exp_sup_norm})\\
+Note that 
+\begin{align*}
+\sum_{k=0}^{\infty} 2^{-k} \sqrt{\log \cN(T, d, 2^{-k}) } = 2\sum_{k=0}^{\infty} \int_{2^{-k-1}}^{2^{-k}} \sqrt{\log \cN(T, d, 2^{-k}) }
+\end{align*} Choose $\epsilon \le 2^{-k}$, we have $\log \cN(T, d, 2^{-k}) \le \log \cN(T, d, \epsilon)$.
+\begin{align*}
+2\sum_{k=0}^{\infty} \int_{2^{-k-1}}^{2^{-k}} \sqrt{\log \cN(T, d, 2^{-k}) } &\le 2\sum_{k=0}^{\infty} \int_{2^{-k-1}}^{2^{-k}} \sqrt{\log \cN(T, d, \epsilon) } d\epsilon \le  2 \int_{0}^{\infty}\sqrt{\log \cN(T, d, \epsilon) } d\epsilon.
+\end{align*} Thus the proof is complete. \qed
+\end{proof}
+
+\item \begin{remark} (\textbf{\emph{Upper Limit of Integral}})\\
+Note that if $\epsilon > D := \text{diam}(T) = \sup_{t, s\in T}d(t, s)$ then a single point (any point in $T$) is an $\epsilon$-net of $T$, which shows that $\log \cN(T, d, \epsilon) = 0$ for such $\epsilon$. Thus the inequality \eqref{ineqn: dudley_metric_entropy_integral_inequality_exp_sup_norm} is 
+\begin{align*}
+\E{}{\sup_{t\in T}X_t } \le C\,K\int_{0}^{D} \sqrt{\log \cN(T, d, \epsilon)} d\epsilon.
+\end{align*}
+\end{remark}
+
+\item The following theorem follows the same argument:
+\begin{theorem} (\textbf{Dudley's Entropy Integral Inequality, Tail Bound}) \citep{boucheron2013concentration}\\
+Let $\set{X_{t}, t \in T}$ be a \textbf{zero-mean sub-Gaussian process}  with respect to the induced pseudo-metric $d$ from \eqref{def: sub_gaussian_process_1}. Then for any $s \in T$,  we have
+\begin{align}
+\E{}{\sup_{t, s \in T}\set{X_t - X_{s}}} &\le  12 \int_{0}^{D/2}\sqrt{\log \cN(T, d, u)} du, \label{ineqn: dudley_metric_entropy_integral_inequality_tail_difference}
+\end{align} where $D  = \sup_{t, s\in T}d(t, s)$ is the \textbf{diameter} of metric space $T$
 \end{theorem}
 
 \item \begin{theorem} (\textbf{Dudley's Entropy Integral Inequality, General Tail Bound}) \citep{wainwright2019high}\\
@@ -909,13 +1089,20 @@ Let $\set{X_{t}, t \in T}$ be a \textbf{zero-mean sub-Gaussian process}  with re
 \end{align} where $D  = \sup_{t, t'\in T}d_{X}(t, t')$ is the \textbf{diameter} of metric space $T$.
 \end{theorem}
 
-\item \begin{remark} (\textbf{\emph{Dudley's Entropy Integral Inequality for Symmetrized Empirical Process}}) \\
-Define \emph{the zero-mean random variable} 
+\item \begin{remark} (\textbf{\emph{Dudley's Entropy Integral Inequality for Centered Empirical Process}}) \\
+Consider function class $\cF$ with domain $\cX$, let  $\cD_n := \set{x_1 \xdotx{,} x_n}$ be a collection of $n$ points within the domain, known as \emph{the design points}. We can then define the set
+\begin{align*}
+\cF_{\cD} := \set{(f(x_1) \xdotx{,} f(x_n)): f \in \cF},
+\end{align*} as \emph{the restriction} of $\cF$ on $\cD$. With samples $\cD$, \underline{\emph{\textbf{the empirical $L^2(\cP_n)$ metric}}}  is defined as an induced metrc on $\cF$; that is, for any $f, g \in \cF$,
+\begin{align}
+\norm{f - g}{\cP_n} := \norm{f - g}{L^2(\cP_n)} := \sqrt{\frac{1}{n}\sum_{i=1}^n\paren{f(x_i) - g(x_i)}^2}.
+\label{def: emp_distance}
+\end{align} Note that, if the function class $\cF$ is \emph{uniformly bounded} (i.e.,  $\norm{f}{\infty} \le b$ for all $f \in \cF$), then we also have $\norm{f}{\cP_n} \le b$ for all $f \in \cF$. 
+
+Now define \emph{the zero-mean random variable} 
 \begin{align*}
 Z_f &:= \frac{1}{\sqrt{n}}\sum_{i=1}^n \epsilon_i f(x_i),
-\end{align*} where $\epsilon_i$ are i.i.d. Rademacher random variables and consider the \emph{stochastic process} $\set{Z_f}_{ f \in \cF}$ for $b$-uniformly bounded function class $\cF$, i.e. $\norm{f}{\infty} \le b$ for all $f \in \cF$.
-
-It is straightforward to verify that \emph{the increment} $Z_f - Z_g$ is \emph{\textbf{sub-Gaussian}} with parameter
+\end{align*} where $\epsilon_i$ are i.i.d. Rademacher random variables and consider the \emph{stochastic process} $\set{Z_f}_{ f \in \cF}$ for $b$-uniformly bounded function class $\cF$, i.e. $\norm{f}{\infty} \le b$ for all $f \in \cF$. It is straightforward to verify that \emph{the increment} $Z_f - Z_g$ is \emph{\textbf{sub-Gaussian}} with parameter
 \begin{align*}
 \norm{f - g}{\cP_n}^2 := \frac{1}{n}\sum_{i=1}^n\paren{f(x_i) - g(x_i)}^2.
 \end{align*}
@@ -924,10 +1111,10 @@ Consequently, by \emph{Dudley's entropy integral}, we have
 \E{\epsilon}{\sup_{f\in \cF}\abs{\frac{1}{n}\sum_{i=1}^n \epsilon_i f(x_i) }} &\le \frac{24}{\sqrt{n}}\int_{0}^{2b}\sqrt{\log \cN(\cF, \norm{\cdot}{\cP_n}, t)} dt, \label{ineqn: dudley_metric_entropy_Rademacher_process}
 \end{align}
 where we have used the fact that $\sup_{f, g \in \cF}\norm{f - g}{\cP_n} \le 2b$. Finally, by \emph{symmetrization}, 
-\begin{align*}
-\E{X}{\sup_{f \in \cF}\abs{\frac{1}{n}\sum_{i=1}^{n}f(X_i) - \E{}{f(X)}}} &\le 2 \E{X}{\E{\epsilon}{\sup_{f\in \cF}\abs{\frac{1}{n}\sum_{i=1}^n \epsilon_i f(X_i) }| X_1 \xdotx{,} X_n}}\\
-&\le \frac{48}{\sqrt{n}}\int_{0}^{2b}\sqrt{\log \cN(\cF, \norm{\cdot}{\cP_n}, t)} dt.
-\end{align*}
+\begin{align}
+\E{}{\sup_{f \in \cF}\abs{\frac{1}{n}\sum_{i=1}^{n}f(X_i) - \E{}{f(X)}}} &\le 2 \E{X}{\E{\epsilon}{\sup_{f\in \cF}\abs{\frac{1}{n}\sum_{i=1}^n \epsilon_i f(X_i) }| X_1 \xdotx{,} X_n}} \nonumber\\
+&\le \frac{48}{\sqrt{n}}\int_{0}^{2b}\sqrt{\log \cN(\cF, \norm{\cdot}{\cP_n}, t)} dt. \label{ineqn: dudley_metric_entropy_emp_process}
+\end{align}
 \end{remark}
 \end{itemize}
 \subsection{Vapnik-Chervonenkis Class}

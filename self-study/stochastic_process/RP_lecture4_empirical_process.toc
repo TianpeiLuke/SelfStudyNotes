@@ -14,10 +14,10 @@
 \contentsline {subsection}{\numberline {3.4}Maximal Inequalities}{19}
 \contentsline {section}{\numberline {4}Metric Entropy}{19}
 \contentsline {subsection}{\numberline {4.1}Covering Number, Packing Number and Metric Entropy}{19}
-\contentsline {subsection}{\numberline {4.2}Covering Numbers and Volume}{21}
-\contentsline {subsection}{\numberline {4.3}Metric Entropy and Complexity}{21}
-\contentsline {section}{\numberline {5}Expected Value of Suprema of Empirical Process}{22}
-\contentsline {subsection}{\numberline {5.1}Metric Entropy and Sub-Gaussian Processes}{22}
-\contentsline {subsection}{\numberline {5.2}Chaining and Dudley's Entropy Integral}{23}
-\contentsline {subsection}{\numberline {5.3}Vapnik-Chervonenkis Class}{25}
-\contentsline {subsection}{\numberline {5.4}Metric Entropy and VC Dimension}{26}
+\contentsline {subsection}{\numberline {4.2}Covering Numbers for Important Sets}{21}
+\contentsline {subsection}{\numberline {4.3}Metric Entropy and Complexity}{23}
+\contentsline {section}{\numberline {5}Expected Value of Suprema of Empirical Process}{24}
+\contentsline {subsection}{\numberline {5.1}Metric Entropy and Sub-Gaussian Processes}{24}
+\contentsline {subsection}{\numberline {5.2}Chaining and Dudley's Entropy Integral}{24}
+\contentsline {subsection}{\numberline {5.3}Vapnik-Chervonenkis Class}{29}
+\contentsline {subsection}{\numberline {5.4}Metric Entropy and VC Dimension}{30}
