@@ -85,6 +85,20 @@
     - Empirical Risk Minimization with Regularization in RKHS
     - Representer Theorem
 
-- Gradient Boost Trees [pdf](../gradient_boost_trees/gradient_boosting_tree.pdf)
+- Boost Methods [pdf](./AL_boosting_theory.pdf)
+  - Algorithms
+    - AdaBoost
+    - Gradient Boost
+  - Theoretical Guarantee for Boosting
+    - Settings
+    - Training Error Bound
+    - Generalization Error Bounds via VC Dimension
+    - Generalization Error Bounds via Margin Theory
+    - Generalization Error Bounds via Compression
+  - Fundamental Perspectives
+    - Game Theory
+    - Online Learning
+    - Maximum Entropy Learning
+    - Iterative Projection Algorithm and Convergence Analysis
 
 - Gaussian Process for Machine Learning
