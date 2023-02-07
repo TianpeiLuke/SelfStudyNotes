@@ -40,7 +40,7 @@
 
 ## Table of Contents
 
-- Gaussian Process [pdf](./RP_lecture1_Gaussian_random_process.pdf)
+- Gaussian Process Part 1: Representation and Construction [pdf](./RP_lecture1_1_Gaussian_process.pdf)
   - Gaussian Vector and its Distribution
     - Univariate Case
     - Multivariate Case
@@ -51,7 +51,29 @@
     - Examples of Gaussian Random Processes 
   - Integral Representation of Gaussian Process
   - Reproducing Kernel Hilbert Space of Gaussian Process
+  
+- Gaussian Process Part 2: Statistical Analysis [pdf](./RP_lecture1_2_Gaussian_process_stats_analysis.pdf)
   - Concentration Inequality and Isoperimetry of Gaussian Process
+    - Gausisan Isoperimetry Theorem
+    - Gaussian Concentration Inequality
+    - Gaussian Log-Sobolev Inequality
+  - Suprema of Gaussian Process
+    - Tail Bounds
+    - Sub-Gaussian Process
+    - Metric Entropy and Dudley's Entropy Integral Inequality
+    - Comparison Theorems
+      - General Comparison Theorems
+      - Slepian’s Inequality
+      - Sudakov’s Minorization Inequality
+      - Gaussian Contraction Inequality
+    - Sudakov’s Lower Bound
+  - Asymptotic Analysis
+    - Functional Law of the Iterated Logarithm
+  - Geometric Analysis
+    - Gaussian Width
+    - Stable Dimension, Stable Rank and Gaussian Complexity
+    - Random Projections
+    - Chevet’s Inequality
 
 - Markov Random Process [pdf](./RP_lecture2_markov_chains.pdf)
   - Markov Chain 
