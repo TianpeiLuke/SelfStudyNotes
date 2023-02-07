@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  6 FEB 2023 19:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  6 FEB 2023 20:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**AL_kNN.tex
-(./AL_kNN.tex
+**AL_boosting_theory.tex
+(./AL_boosting_theory.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -536,8 +536,8 @@ LaTeX Info: Redefining \cite on input line 694.
 )
 (../../Tianpei_Report.sty
 \c@theorem=\count129
-) (./AL_kNN.aux)
-\openout1 = `AL_kNN.aux'.
+) (./AL_boosting_theory.aux)
+\openout1 = `AL_boosting_theory.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
 LaTeX Font Info:    ... okay on input line 28.
@@ -660,70 +660,33 @@ LaTeX Font Info:    Try loading font information for U+rsfs on input line 32.
 
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-) (./AL_kNN.toc)
+)
+(./AL_boosting_theory.toc)
 \tf@toc=\write4
-\openout4 = `AL_kNN.toc'.
+\openout4 = `AL_boosting_theory.toc'.
 
+ [1
 
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 38.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 38.
-LaTeX Font Info:    Try loading font information for U+dsrom on input line 53.
-
-(/usr/share/texlive/texmf-dist/tex/latex/doublestroke/Udsrom.fd
-File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-)
-<knn_voronoi_set.png, id=16, 373.395pt x 296.10625pt>
-File: knn_voronoi_set.png Graphic file (type png)
-
-<use knn_voronoi_set.png>
-Package pdftex.def Info: knn_voronoi_set.png used on input line 66.
-(pdftex.def)             Requested size: 224.03873pt x 177.66512pt.
- [2 <./knn_voronoi_set.png>] [3] [4] [5]
-Overfull \hbox (15.95981pt too wide) in paragraph at lines 240--242
-\OT1/cmr/m/it/10.95 The \OT1/cmr/bx/it/10.95 ex-po-nen-tial de-pen-dence on the
- di-men-sion \OT1/cmr/m/n/10.95 is known as $[]$. 
- []
-
-[6] (./AL_kNN.bbl) [7] (./AL_kNN.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
+No file AL_boosting_theory.bbl.
+(./AL_boosting_theory.aux) ) 
 Here is how much of TeX's memory you used:
- 15906 strings out of 493029
- 314541 string characters out of 6136233
- 365625 words of memory out of 5000000
- 19109 multiletter control sequences out of 15000+600000
- 16393 words of font info for 66 fonts, out of 8000000 for 9000
+ 15828 strings out of 493029
+ 313377 string characters out of 6136233
+ 359499 words of memory out of 5000000
+ 19051 multiletter control sequences out of 15000+600000
+ 12011 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,16n,84p,586b,449s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
-10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsrom10.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pf
-b>
-Output written on AL_kNN.pdf (7 pages, 240444 bytes).
+ 61i,6n,84p,514b,196s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on AL_boosting_theory.pdf (2 pages, 69365 bytes).
 PDF statistics:
- 108 PDF objects out of 1000 (max. 8388607)
- 78 compressed objects within 1 object stream
+ 34 PDF objects out of 1000 (max. 8388607)
+ 24 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
