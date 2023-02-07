@@ -2,7 +2,7 @@
 
 ## Books
 
-***Boosting: Foundations and Algorithms***, Robert E Schapire Yoav Freund
+***Boosting: Foundations and Algorithms***, Robert E Schapire, Yoav Freund
 
 
 ## Table of Contents
