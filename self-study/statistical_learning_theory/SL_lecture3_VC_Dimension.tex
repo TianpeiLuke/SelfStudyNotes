@@ -151,7 +151,6 @@ The proof consists of three parts:
 \end{align}
 The \emph{\textbf{symmetrization step}} works since $\sigma_i = \pm 1$ with equal probability. If $\sigma_i = +1$, then the summand is unchanged. If $\sigma_i = -1$, the summand is swapped but the distribution  is unchanged as well since  $Z'$ and $Z$ are independent identically distributed.
 The last equality follows from the definition of Rademacher complexity and the fact that $\sigma_i$ and $-\sigma_i$ follow the same distribution since they are symmetric Bernoulli random variables. Finally, replacing $\E{\cP^{n}}{\Phi(\cD_n)}$ by its upper bound $2\frR_n(\cG)$ and $\delta/2 \to \delta$ gives us  inequality \eqref{eqn: Rademacher_bound_1}.
-Thus we show the
 
 \item Bound \emph{the probability} of \emph{tail events} for \emph{empircal Rademacher complexity}:
 \begin{align*}
@@ -220,6 +219,52 @@ Note that the \emph{Rademacher variable} $\sigma_i$ and $-\sigma_i$ have the sam
 \inf_{h \in \cH}\frac{1}{n}\sum_{i=1}^{n}\sigma_{i}h(X_i)
 \end{align*} is equivalent to an \emph{\textbf{empirical risk minimization problem}}, which is known to be \emph{\textbf{computationally hard}} for some hypothesis sets. Thus, in some cases, computing $\widehat{\frR}_{\cD}(\cH)$ could be computationally hard. 
 \end{remark}
+
+\item \begin{proposition}(\textbf{Talagrand's Contraction Principle}) \citep{boucheron2013concentration, vershynin2018high}\\
+Let $x_1 \xdotx{,} x_n$ be vectors whose real-valued components are indexed by $T$, that is, $x_i = (x_{i,s})_{s \in T}$. For each $i = 1 \xdotx{,} n$, let $\varphi_i : \bR \to \bR$ be a \textbf{$1$-Lipschitz function} such that $\varphi_i(0) = 0$. Let $\epsilon_1 \xdotx{,} \epsilon_n$ be independent Rademacher random variables, and let $\Psi: [0, \infty) \to \bR$ be a \textbf{non-decreasing convex} function.  Then
+\begin{align}
+\E{}{\Psi\paren{\sup_{s\in T}\sum_{i=1}^n \epsilon_i \varphi_i(x_{i,s})}} \le \E{}{\Psi\paren{\sup_{s\in T}\sum_{i=1}^n \epsilon_i  x_{i,s}}}\label{ineqn: contraction_principle_1}
+\end{align} and
+\begin{align}
+\E{}{\Psi\paren{\frac{1}{2}\sup_{s\in T}\abs{\sum_{i=1}^n \epsilon_i \varphi_i(x_{i,s})}}} \le \E{}{\Psi\paren{\sup_{s\in T}\abs{\sum_{i=1}^n \epsilon_i  x_{i,s}}}}.\label{ineqn: contraction_principle_2}
+\end{align}
+\end{proposition}
+
+The proof of this result need  the following lemma
+\begin{lemma}\citep{boucheron2013concentration, vershynin2018high}\\
+Let $\Psi : \bR\to \bR$ denote a \textbf{convex non-decreasing function}. Let $\varphi: \bR \to \bR$ be a $1$-Lipschitz function such that $\varphi_i(0) = 0$. Let $T \subset \bR^2$. Then
+\begin{align*}
+\Psi\paren{\sup_{s \in T}\set{s_1 + \varphi(s_2)}} + \Psi\paren{\sup_{s \in T}\set{s_1 - \varphi(s_2)}} &\le \Psi\paren{\sup_{s \in T}\set{s_1 + s_2}} + \Psi\paren{\sup_{s \in T}\set{s_1 - s_2}}
+\end{align*}
+\end{lemma}
+
+\item \begin{corollary} (\textbf{Talagrand's Lemma}) \citep{mohri2018foundations}\\
+Let $\varphi: \bR \to \bR$ be an $L$-Lipschitz. Then, for any hypothesis set $\cH$ of real-valued functions, the following inequality holds:
+\begin{align}
+\widehat{\frR}_{\cD}(\varphi \circ \cH)  \le L\, \widehat{\frR}_{\cD}(\cH) \label{ineqn: rademacher_complexity_contraction}
+\end{align}
+\end{corollary}
+
+\item \begin{proposition}(\textbf{Rademacher Complexity of a Convex Hull of Function Class}\\
+Let $\cH$ be a set of functions mapping from $\cX$ to $\bR$. Then, for any sample $\cD$, we have
+\begin{align}
+\widehat{\frR}_{\cD}(\text{conv}(\cH))  = \widehat{\frR}_{\cD}(\cH) \label{eqn: rademacher_complexity_convex_hull}
+\end{align} where $\text{conv}(\cH)$ is \textbf{the convex hull} of set $\cH$
+\begin{align*}
+\text{conv}(\cH) := \set{\sum_{k=1}^{p}\lambda_k h_k:  p \ge 1, \forall k \in [1, p], \lambda_k \ge 0, h_k \in \cH, \sum_{k=1}^{p}\lambda_k \le 1}.
+\end{align*}
+\end{proposition}
+\begin{proof}
+\begin{align*}
+\widehat{\frR}_{\cD}(\text{conv}(\cH))  &= \E{\sigma}{\sup_{g \in \text{conv}(\cH)}\frac{1}{n}\sum_{i=1}^{n}\sigma_i g(X_i) }\\
+&= \frac{1}{n}\E{\sigma}{\sup_{h_{1} \xdotx{,} h_{p} \in \cH}\;\sup_{ \set{\lambda_k} \in \Delta_{p} }\sum_{i=1}^{n}\sigma_i \sum_{k=1}^{p}\lambda_k h_{k}(X_i)}\\
+&= \frac{1}{n}\E{\sigma}{\sup_{h_{1} \xdotx{,} h_{p} \in \cH}\;\sup_{ \set{\lambda_k} \in \Delta_{p} }\sum_{k=1}^{p}\lambda_k\sum_{i=1}^{n}\sigma_i  h_{k}(X_i)}
+\end{align*} Note that extreme point of a convex hull is its vertex, so the supremum of $\sum_{k=1}^{p}\lambda_k (\sum_{i=1}^{n}\sigma_i  h_k(X_i))$ over $\lambda$ can only be reached at one of $\set{\sum_{i=1}^{n}\sigma_i  h_{k}(X_i)}_{k=1}^{p}$. Thus above equality becomes
+\begin{align*}
+\widehat{\frR}_{\cD}(\text{conv}(\cH))  &= \frac{1}{n}\E{\sigma}{\sup_{h_{1} \xdotx{,} h_{p} \in \cH}\max_{k \in [1,p]}\sum_{i=1}^{n}\sigma_i  h_{k}(X_i)}\\
+&= \frac{1}{n}\E{\sigma}{\sup_{h \in \cH}\sum_{i=1}^{n}\sigma_i  h(X_i)} = \widehat{\frR}_{\cD}(\cH). \qed
+\end{align*}
+\end{proof}
 \end{itemize}
 
 \section{Vapnik-Chervonenkis Dimension}
@@ -497,49 +542,12 @@ The theorem provides another instance of \underline{\emph{\textbf{Occam's razor 
 \begin{align}
 L(h) \le \widehat{L}_{n}(h) + \sqrt{\frac{8d\log(2en /d) + 8\log(4/\delta)}{n}},  \label{eqn: generalization_bound_vc_dim3}
 \end{align}
-which has the general form of \eqref{eqn: generalization_bound_vc_dim2}. \emph{The log factor plays only a minor role in these bounds}. A finer analysis can be used in fact to eliminate that factor.
+which has the general form of \eqref{eqn: generalization_bound_vc_dim2}. \emph{The log factor plays only a minor role in these bounds}. A finer analysis via \emph{metric entropy and Dudley's entropy integral} can be used  to eliminate that factor.
 \end{remark}
 
 \end{itemize}
 
-\subsection{Fundamental Theorem of PAC Learning}
-\begin{itemize}
-\item \begin{theorem} (\textbf{The Fundamental Theorem of Statistical Learning}). \citep{shalev2014understanding}\\
-Let $\cH$ be a hypothesis class of functions from a domain $\cX$ to $\set{0,1}$ and let the loss function be the $0$-$1$ loss. Then, the following are \textbf{equivalent}:
-\begin{enumerate}
-\item $\cH$ has the \textbf{uniform convergence property}.
-\item Any \textbf{ERM} rule is a successful \textbf{agnostic PAC learner} for $\cH$.
-\item $\cH$ is \textbf{agnostic PAC learnable}.
-\item $\cH$ is \textbf{PAC learnable}.
-\item Any ERM rule is a successful PAC learner for $\cH$.
-\item $\cH$ has a \textbf{finite VC-dimension}.
-\end{enumerate}
-\end{theorem}
 
-\item \begin{remark}
-From the above theorem, we see that $\cH$ is \emph{PAC learnable} $\Leftarrow$ $\cH$ is \emph{agnostic PAC learnable}.
-
-If $\cH$ is (agnostic) PAC learnable, then the ERM rule is a successful (agnostic) PAC learner for $\cH$. 
-\end{remark}
-
-\item \begin{theorem} (\textbf{The Fundamental Theorem of Statistical Learning, Quantitative Version}). \citep{shalev2014understanding}\\
-Let $\cH$ be a hypothesis class of functions from a domain $\cX$ to $\set{0,1}$ and let the loss function be the $0$-$1$ loss. Assume that $\text{VCdim}(\cH) = d < \infty$. Then, there are absolute constants $C_1, C_2$ such that
-\begin{enumerate}
-\item $\cH$ has the \textbf{uniform convergence property} with sample complexity
-\begin{align*}
-C_1\frac{d + \log(1/\delta)}{\epsilon^2} \le n^{UC}_{\cH}(\epsilon, \delta) \le C_2\frac{d + \log(1/\delta)}{\epsilon^2}
-\end{align*}
-\item $\cH$ is \textbf{agnostic PAC learnable} with sample complexity
-\begin{align*}
-C_1\frac{d + \log(1/\delta)}{\epsilon^2} \le n_{\cH}(\epsilon, \delta) \le C_2\frac{d + \log(1/\delta)}{\epsilon^2}
-\end{align*}
-\item $\cH$ is \textbf{PAC learnable} with sample complexity
-\begin{align*}
-C_1\frac{d + \log(1/\delta)}{\epsilon^2} \le n_{\cH}(\epsilon, \delta) \le C_2\frac{d\log(1/\epsilon) + \log(1/\delta)}{\epsilon^2}
-\end{align*}
-\end{enumerate}
-\end{theorem}
-\end{itemize}
 
 \subsection{Examples}
 \begin{itemize}
@@ -723,11 +731,50 @@ The theorem shows that \emph{for any algorithm} $\cA$, \emph{\textbf{in the non-
 a `\emph{bad}' distribution over $\cX \times \set{0, 1}$ such that the error of the hypothesis returned by $\cA$ is
 \begin{align*}
 \Omega\paren{\sqrt{\frac{d}{n}}}
-\end{align*} with some constant probability. The \emph{VC-dimension} appears as a critical quantity in learning in \emph{this general setting} as well. In particular, \emph{with an \textbf{infinite VC-dimension}, \textbf{agnostic PAC-learning is not possible}}.
+\end{align*} with some constant probability. This coincides with the upper bound $\cO(\sqrt{d/n})$, which means that it is both \emph{necessary and sufficient condition} for PAC learnablity in agnostic setting.
+
+The \emph{VC-dimension} appears as a critical quantity in learning in \emph{this general setting} as well. In particular, \emph{with an \textbf{infinite VC-dimension}, \textbf{agnostic PAC-learning is not possible}}.
 \end{remark}
 \end{itemize}
 
+\subsection{Fundamental Theorem of PAC Learning}
+\begin{itemize}
+\item \begin{theorem} (\textbf{The Fundamental Theorem of Statistical Learning}). \citep{shalev2014understanding}\\
+Let $\cH$ be a hypothesis class of functions from a domain $\cX$ to $\set{0,1}$ and let the loss function be the $0$-$1$ loss. Then, the following are \textbf{equivalent}:
+\begin{enumerate}
+\item $\cH$ has the \textbf{uniform convergence property}.
+\item Any \textbf{ERM} rule is a successful \textbf{agnostic PAC learner} for $\cH$.
+\item $\cH$ is \textbf{agnostic PAC learnable}.
+\item $\cH$ is \textbf{PAC learnable}.
+\item Any ERM rule is a successful PAC learner for $\cH$.
+\item $\cH$ has a \textbf{finite VC-dimension}.
+\end{enumerate}
+\end{theorem}
 
+\item \begin{remark}
+From the above theorem, we see that $\cH$ is \emph{PAC learnable} $\Leftarrow$ $\cH$ is \emph{agnostic PAC learnable}.
+
+If $\cH$ is (agnostic) PAC learnable, then the ERM rule is a successful (agnostic) PAC learner for $\cH$. 
+\end{remark}
+
+\item \begin{theorem} (\textbf{The Fundamental Theorem of Statistical Learning, Quantitative Version}). \citep{shalev2014understanding}\\
+Let $\cH$ be a hypothesis class of functions from a domain $\cX$ to $\set{0,1}$ and let the loss function be the $0$-$1$ loss. Assume that $\text{VCdim}(\cH) = d < \infty$. Then, there are absolute constants $C_1, C_2$ such that
+\begin{enumerate}
+\item $\cH$ has the \textbf{uniform convergence property} with sample complexity
+\begin{align*}
+C_1\frac{d + \log(1/\delta)}{\epsilon^2} \le n^{UC}_{\cH}(\epsilon, \delta) \le C_2\frac{d + \log(1/\delta)}{\epsilon^2}
+\end{align*}
+\item $\cH$ is \textbf{agnostic PAC learnable} with sample complexity
+\begin{align*}
+C_1\frac{d + \log(1/\delta)}{\epsilon^2} \le n_{\cH}(\epsilon, \delta) \le C_2\frac{d + \log(1/\delta)}{\epsilon^2}
+\end{align*}
+\item $\cH$ is \textbf{PAC learnable} with sample complexity
+\begin{align*}
+C_1\frac{d + \log(1/\delta)}{\epsilon^2} \le n_{\cH}(\epsilon, \delta) \le C_2\frac{d\log(1/\epsilon) + \log(1/\delta)}{\epsilon^2}
+\end{align*}
+\end{enumerate}
+\end{theorem}
+\end{itemize}
 \newpage
 \bibliographystyle{plainnat}
 \bibliography{reference.bib}
