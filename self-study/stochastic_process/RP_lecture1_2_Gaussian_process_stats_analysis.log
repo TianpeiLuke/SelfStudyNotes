@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  28 JAN 2023 09:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  6 FEB 2023 21:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**RP_lecture1_Gaussian_random_process.tex
-(./RP_lecture1_Gaussian_random_process.tex
+**RP_lecture1_Gaussian_random_process_stats_analysis.tex
+(./RP_lecture1_Gaussian_random_process_stats_analysis.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -536,12 +536,9 @@ LaTeX Info: Redefining \cite on input line 694.
 )
 (../../Tianpei_Report.sty
 \c@theorem=\count129
-) (./RP_lecture1_Gaussian_random_process.aux
-
-LaTeX Warning: Label `expr: mul_Normal_density' multiply defined.
-
 )
-\openout1 = `RP_lecture1_Gaussian_random_process.aux'.
+(./RP_lecture1_Gaussian_random_process_stats_analysis.aux)
+\openout1 = `RP_lecture1_Gaussian_random_process_stats_analysis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
 LaTeX Font Info:    ... okay on input line 26.
@@ -665,95 +662,40 @@ LaTeX Font Info:    Try loading font information for U+rsfs on input line 30.
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-(./RP_lecture1_Gaussian_random_process.toc)
+(./RP_lecture1_Gaussian_random_process_stats_analysis.toc)
 \tf@toc=\write4
-\openout4 = `RP_lecture1_Gaussian_random_process.toc'.
+\openout4 = `RP_lecture1_Gaussian_random_process_stats_analysis.toc'.
 
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 36.
- (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 36.
-
-Overfull \hbox (3.8473pt too wide) in paragraph at lines 60--61
-[]\OT1/cmr/m/n/10.95 The \OT1/cmr/bx/it/10.95 char-ac-ter-is-tic func-tion (Fou
-rier trans-forms) \OT1/cmr/m/n/10.95 and \OT1/cmr/bx/it/10.95 mo-ment gen-er-at
--ing func-
- []
-
-LaTeX Font Info:    Try loading font information for U+dsrom on input line 64.
-(/usr/share/texlive/texmf-dist/tex/latex/doublestroke/Udsrom.fd
-File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-) [2] [3]
-Overfull \hbox (6.259pt too wide) in paragraph at lines 154--156
-[]\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Existence and Unique-ness of Gaus-s
-ian Dis-tri-bu-tion\OT1/cmr/m/it/10.95 )[Lifshits, 2013] 
- []
-
-[4] [5]
-Overfull \hbox (0.83241pt too wide) in paragraph at lines 240--242
-[]\OT1/cmr/m/n/10.95 (\OT1/cmr/bx/it/10.95 Distribution and Char-ac-ter-is-tic 
-Func-tion of Gaus-san Ran-dom El-e-ment\OT1/cmr/m/n/10.95 ) 
- []
-
-[6]
-Overfull \hbox (6.39444pt too wide) in paragraph at lines 314--315
-[][]$\OT1/cmr/m/n/10.95 , and a se-quence of \OT1/cmr/bx/it/10.95 non-negative 
-num-bers $[][]$ \OT1/cmr/m/n/10.95 sat-is-fy-ing as-sump-tion $[][] \OML/cmm/m/
-it/10.95 ^^[[] <
- []
-
-[7] [8] [9] [10]
-Overfull \hbox (4.46027pt too wide) in paragraph at lines 495--495
+Overfull \hbox (4.46027pt too wide) in paragraph at lines 34--34
 []\OT1/cmr/bx/n/12 Gaussian Isoperi-met-ric The-o-rem and Gaus-sian Con-cen-tra
 -tion The-o-rem 
  []
 
-
-Underfull \vbox (badness 4096) has occurred while \output is active []
-
- [11]
-[12] (./RP_lecture1_Gaussian_random_process.bbl) [13]
-(./RP_lecture1_Gaussian_random_process.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+[2]
+No file RP_lecture1_Gaussian_random_process_stats_analysis.bbl.
+(./RP_lecture1_Gaussian_random_process_stats_analysis.aux) ) 
 Here is how much of TeX's memory you used:
- 15908 strings out of 493029
- 314954 string characters out of 6136233
- 367641 words of memory out of 5000000
- 19105 multiletter control sequences out of 15000+600000
- 17287 words of font info for 68 fonts, out of 8000000 for 9000
+ 15828 strings out of 493029
+ 313729 string characters out of 6136233
+ 361499 words of memory out of 5000000
+ 19051 multiletter control sequences out of 15000+600000
+ 12011 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,18n,84p,685b,331s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cmextra/cmmib8.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on RP_lecture1_Gaussian_random_process.pdf (13 pages, 254739 byt
-es).
+ 61i,6n,84p,546b,196s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr17.pfb>
+Output written on RP_lecture1_Gaussian_random_process_stats_analysis.pdf (2 pag
+es, 74734 bytes).
 PDF statistics:
- 126 PDF objects out of 1000 (max. 8388607)
- 91 compressed objects within 1 object stream
+ 34 PDF objects out of 1000 (max. 8388607)
+ 24 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
