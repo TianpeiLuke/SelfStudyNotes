@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  1 FEB 2023 20:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  6 FEB 2023 18:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -691,8 +691,16 @@ Overfull \hbox (6.24019pt too wide) in paragraph at lines 92--93
 10.95 ^^Q [][]$\OT1/cmr/m/n/10.95 .
  []
 
-[3] [4] [5] [6] [7]
-Overfull \hbox (3.82013pt too wide) in paragraph at lines 296--298
+[3] [4] [5] [6]
+Overfull \hbox (18.92403pt too wide) in paragraph at lines 262--263
+\OT1/cmr/m/n/10.95 Note that ex-treme point of a con-vex hull is its ver-tex, s
+o the supre-mum of $[][] \OML/cmm/m/it/10.95 ^^U[]\OT1/cmr/m/n/10.95 ([][] \OML
+/cmm/m/it/10.95 ^^[[]h[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 X[]\OT1/cmr/m/n
+/10.95 ))$
+ []
+
+[7] [8]
+Overfull \hbox (3.82013pt too wide) in paragraph at lines 341--343
 []$ \OT1/cmr/m/n/10.95 of a hy-poth-e-sis class $\OMS/cmsy/m/n/10.95 H$\OT1/cmr
 /m/n/10.95 , de-noted $\OML/cmm/m/it/10.95 VCdim\OT1/cmr/m/n/10.95 (\OMS/cmsy/m
 /n/10.95 H\OT1/cmr/m/n/10.95 )$
@@ -701,24 +709,26 @@ Overfull \hbox (3.82013pt too wide) in paragraph at lines 296--298
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 330.
+(amsmath)                 on input line 375.
 
-[8] <proof_sauer_lemma.png, id=49, 963.6pt x 542.025pt>
+[9] <proof_sauer_lemma.png, id=53, 963.6pt x 542.025pt>
 File: proof_sauer_lemma.png Graphic file (type png)
 
 <use proof_sauer_lemma.png>
-Package pdftex.def Info: proof_sauer_lemma.png used on input line 383.
+Package pdftex.def Info: proof_sauer_lemma.png used on input line 428.
 (pdftex.def)             Requested size: 385.43317pt x 216.80615pt.
- [9] [10 <./proof_sauer_lemma.png (PNG copy)>]
+ [10]
+Underfull \vbox (badness 3907) has occurred while \output is active []
+
+ [11 <./proof_sauer_lemma.png (PNG copy)>]
 Missing character: There is no Ï in font cmr10!
 Missing character: There is no ƒ in font cmr10!
-
-[11]
+ [12] [13]
 Missing character: There is no â in font cmti10!
 Missing character: There is no € in font cmti10!
 Missing character: There is no ™ in font cmti10!
- [12] [13]
-Overfull \hbox (14.96265pt too wide) in paragraph at lines 558--560
+
+Overfull \hbox (14.96265pt too wide) in paragraph at lines 566--568
 []\OT1/cmr/m/n/10.95 It is clear that the VC-dimension is \OT1/cmr/m/it/10.95 a
 t least two\OT1/cmr/m/n/10.95 , since \OT1/cmr/m/it/10.95 all four di-chotomies
  $\OT1/cmr/m/n/10.95 (0\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0)\OML/cmm/m/it
@@ -732,79 +742,78 @@ mm/m/it/10.95 ; \OT1/cmr/m/n/10.95 (1\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0
 File: axis_aligned_rectangle.png Graphic file (type png)
 
 <use axis_aligned_rectangle.png>
-Package pdftex.def Info: axis_aligned_rectangle.png used on input line 565.
+Package pdftex.def Info: axis_aligned_rectangle.png used on input line 573.
 (pdftex.def)             Requested size: 374.39783pt x 105.3935pt.
- [14 <./axis_aligned_rectangle.png>]
-<convex_d_gon_vc_dim.png, id=76, 644.4075pt x 296.10625pt>
+ [14] [15 <./axis_aligned_rectangle.png>]
+<convex_d_gon_vc_dim.png, id=79, 644.4075pt x 296.10625pt>
 File: convex_d_gon_vc_dim.png Graphic file (type png)
 
 <use convex_d_gon_vc_dim.png>
-Package pdftex.def Info: convex_d_gon_vc_dim.png used on input line 604.
+Package pdftex.def Info: convex_d_gon_vc_dim.png used on input line 612.
 (pdftex.def)             Requested size: 386.64748pt x 177.66512pt.
 
-Overfull \hbox (2.02513pt too wide) in paragraph at lines 621--624
-[]\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Finite-Dimensional Vec-tor Spaces\O
-T1/cmr/m/it/10.95 ) [Mohri et al., 2018, Wain-wright,
- []
-
-[15]
-Overfull \hbox (5.50804pt too wide) in paragraph at lines 629--632
+Overfull \hbox (5.50804pt too wide) in paragraph at lines 637--640
 \OT1/cmr/m/n/10.95 the as-so-ci-ated sub-graph set $[]$ in-cluded only the sub-
 set sam-ples $[]$.
  []
 
-
-Overfull \hbox (14.42775pt too wide) in paragraph at lines 648--650
+[16 <./convex_d_gon_vc_dim.png>]
+Overfull \hbox (14.42775pt too wide) in paragraph at lines 656--658
 \OT1/cmr/m/n/10.95 Consider the space of all $\OML/cmm/m/it/10.95 d \OMS/cmsy/m
 /n/10.95 ^^@ \OT1/cmr/m/n/10.95 1$ di-men-sional sphere $\OMS/cmsy/m/n/10.95 S[
 ]$\OT1/cmr/m/n/10.95 , with sphere $\U/msb/m/n/10.95 S[] \OT1/cmr/m/n/10.95 := 
 []$.
  []
 
-[16 <./convex_d_gon_vc_dim.png>]
 <sine_vc_dim.png, id=83, 628.3475pt x 274.02374pt>
 File: sine_vc_dim.png Graphic file (type png)
  <use sine_vc_dim.png>
-Package pdftex.def Info: sine_vc_dim.png used on input line 667.
+Package pdftex.def Info: sine_vc_dim.png used on input line 675.
 (pdftex.def)             Requested size: 377.0114pt x 164.41551pt.
 
-[17 <./sine_vc_dim.png>] [18] (./SL_lecture3_VC_Dimension.bbl) [19]
-(./SL_lecture3_VC_Dimension.aux) ) 
+[17] [18 <./sine_vc_dim.png>]
+Overfull \hbox (0.19788pt too wide) in paragraph at lines 742--744
+[]\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 The Fun-da-men-tal The-o-rem of Sta
+-tis-ti-cal Learn-ing\OT1/cmr/m/it/10.95 ). [Shalev-Shwartz
+ []
+
+[19] [20] (./SL_lecture3_VC_Dimension.bbl) [21] (./SL_lecture3_VC_Dimension.aux
+) ) 
 Here is how much of TeX's memory you used:
- 15972 strings out of 493029
- 316328 string characters out of 6136233
- 369931 words of memory out of 5000000
- 19162 multiletter control sequences out of 15000+600000
+ 15984 strings out of 493029
+ 316667 string characters out of 6136233
+ 370062 words of memory out of 5000000
+ 19174 multiletter control sequences out of 15000+600000
  17904 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,14n,84p,898b,564s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-bxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on SL_lecture3_VC_Dimension.pdf (19 pages, 446832 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestro
+ke/dsrom10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler
+/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/
+msbm10.pfb>
+Output written on SL_lecture3_VC_Dimension.pdf (21 pages, 457045 bytes).
 PDF statistics:
- 170 PDF objects out of 1000 (max. 8388607)
- 119 compressed objects within 2 object streams
+ 176 PDF objects out of 1000 (max. 8388607)
+ 123 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
