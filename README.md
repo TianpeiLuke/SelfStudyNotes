@@ -10,6 +10,8 @@ This repository is the latex-based notes for self-learning, mainly for math, sta
 
 
 ## Table of Contents
+- [Boosting Methods](./self-study/boost_methods/README.md)
+
 - [Causal Inference](./self-study/causal_inference/README.md)
 
 - [Concentration Inequalities and Non-Asymptotic Analysis](./self-study/concentration_measures/README.md)
