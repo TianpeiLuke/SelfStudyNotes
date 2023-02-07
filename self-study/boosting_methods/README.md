@@ -7,8 +7,8 @@
 
 ## Table of Contents
 - Boosting Methods 
-	- 
-	- 
+	- Algorithms
+	- Theorectical Guarantee
 
 - Gradient Boosting Tree [pdf](./gradient_boosting_tree.pdf)
 	- Tree-based Model
