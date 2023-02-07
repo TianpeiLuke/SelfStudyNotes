@@ -10,7 +10,7 @@
 	- 
 	- 
 
-- Gradient Boosting Tree [pdf](./CI_1_causal_inference.pdf)
+- Gradient Boosting Tree [pdf](./gradient_boosting_tree.pdf)
 	- Tree-based Model
 	- Gradient Boost Tree
 	- XGBoost
