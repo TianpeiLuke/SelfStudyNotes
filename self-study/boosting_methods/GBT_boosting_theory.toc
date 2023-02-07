@@ -1,0 +1,13 @@
+\contentsline {section}{\numberline {1}Boosting Algorithm}{2}
+\contentsline {subsection}{\numberline {1.1}AdaBoost}{2}
+\contentsline {subsection}{\numberline {1.2}Gradient Boost}{2}
+\contentsline {section}{\numberline {2}Theoretical Guarantee for Boosting}{2}
+\contentsline {subsection}{\numberline {2.1}Settings}{2}
+\contentsline {subsection}{\numberline {2.2}Training Error Bounds}{2}
+\contentsline {subsection}{\numberline {2.3}Generalization Error Bounds via VC Dimension}{2}
+\contentsline {subsection}{\numberline {2.4}Generalization Error Bounds via Large Margin Theory}{2}
+\contentsline {section}{\numberline {3}Fundamental Perspectives}{2}
+\contentsline {subsection}{\numberline {3.1}Game Theory}{2}
+\contentsline {subsection}{\numberline {3.2}Online Learning}{2}
+\contentsline {subsection}{\numberline {3.3}Maximum Entropy Estimation}{2}
+\contentsline {subsection}{\numberline {3.4}Iterative Projection Algorithms and Convergence Analysis}{2}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  1 AUG 2022 21:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  6 FEB 2023 20:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -348,56 +348,58 @@ LaTeX Font Info:    Try loading font information for U+rsfs on input line 28.
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Try loading font information for U+dsrom on input line 41.
+(./gradient_boosting_tree.toc)
+\tf@toc=\write3
+\openout3 = `gradient_boosting_tree.toc'.
 
-(/usr/share/texlive/texmf-dist/tex/latex/doublestroke/Udsrom.fd
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Try loading font information for U+dsrom on input line 36.
+ (/usr/share/texlive/texmf-dist/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 )
-Overfull \hbox (10.6624pt too wide) in paragraph at lines 41--42
+Overfull \hbox (10.6624pt too wide) in paragraph at lines 36--37
 \OT1/cmr/m/n/10.95 where $\OMS/cmsy/m/n/10.95 R[]$ \OT1/cmr/m/n/10.95 is the re
 -gion in $\OMS/cmsy/m/n/10.95 R[]$ \OT1/cmr/m/n/10.95 par-tioned ac-cord-ing to
  a bi-nary tree $\OMS/cmsy/m/n/10.95 T$\OT1/cmr/m/n/10.95 .The par-ti-tion $[]$
 
  []
 
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 48.
-
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 43.
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 48.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 43.
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
  [2] [3] [4] [5]
-<split_algo.png, id=38, 617.30624pt x 701.62125pt>
+[6] <split_algo.png, id=41, 617.30624pt x 701.62125pt>
 File: split_algo.png Graphic file (type png)
  <use split_algo.png>
 Package pdftex.def Info: split_algo.png used on input line 170.
 (pdftex.def)             Requested size: 308.65236pt x 350.80975pt.
 
-[6] [7 <./split_algo.png>] [8]
+[7] [8 <./split_algo.png>]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
-
-<sparsity_split.png, id=51, 560.0925pt x 643.40375pt>
+ [9]
+<sparsity_split.png, id=54, 560.0925pt x 643.40375pt>
 File: sparsity_split.png Graphic file (type png)
  <use sparsity_split.png>
-Package pdftex.def Info: sparsity_split.png used on input line 207.
+Package pdftex.def Info: sparsity_split.png used on input line 208.
 (pdftex.def)             Requested size: 280.04556pt x 321.70108pt.
 
-[9 <./sparsity_split.png>] (./gradient_boosting_tree.bbl) [10]
+[10 <./sparsity_split.png>] (./gradient_boosting_tree.bbl) [11]
 (./gradient_boosting_tree.aux) ) 
 Here is how much of TeX's memory you used:
- 5065 strings out of 493029
- 71441 string characters out of 6136233
- 146649 words of memory out of 5000000
- 8495 multiletter control sequences out of 15000+600000
+ 5114 strings out of 493029
+ 71731 string characters out of 6136233
+ 146165 words of memory out of 5000000
+ 8541 multiletter control sequences out of 15000+600000
  16073 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,15n,43p,1083b,377s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -422,10 +424,10 @@ usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on gradient_boosting_tree.pdf (10 pages, 424838 bytes).
+Output written on gradient_boosting_tree.pdf (11 pages, 426923 bytes).
 PDF statistics:
- 127 PDF objects out of 1000 (max. 8388607)
- 90 compressed objects within 1 object stream
+ 130 PDF objects out of 1000 (max. 8388607)
+ 92 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

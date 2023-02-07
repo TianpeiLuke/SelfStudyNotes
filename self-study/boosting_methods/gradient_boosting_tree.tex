@@ -26,14 +26,9 @@
 \author{ Tianpei Xie}
 \date{ Jun. 24th., 2022 }
 \maketitle
+\tableofcontents
+\newpage
 \allowdisplaybreaks
-\section{Boosting}
-The basic idea of \emph{\textbf{boosting}} is to combine multiple \textit{weak} learners in sequential manner in order to boost the performance of joint model. Boosting belongs to Generalized Additive Models
-
-\begin{align*}
-y &= \sum_{j=1}^{p}f_j(\mb{x}_{i}) + \epsilon
-\end{align*} where $f_{j}: \bR^{d} \rightarrow \bR$ or $f_{j}: \bR^{d} \rightarrow \set{0, 1}$ are classifiers belong to a family of simple functions $\cF$. Similar to classical Fourier transform, each $f_{j}$ are able to capure a simple relationship between covariate variables and the response variables, but combining them together, the model is expected to cover both broad and detailed aspects of the target distribution. Boosting belongs to \textit{Ensemble Methods}, which all seeks to improve the performance of machine learning model by joining multiple models together. 
-
 \section{Tree-based methods}
 In most of applications for boosting methods, the basis function class $\cF$ is the family of \textbf{tree-based models}.  A tree-based model can be represented as weighted sum of region indicators: 
 \begin{align*}
@@ -93,8 +88,13 @@ Tree-based methods can handle \emph{missing value} more flexibly. First, it can 
 
 Tree-based methods are known to be of \textbf{higher variance} due to the greedy splits it generates. A small change of data will result in a  different series of splits, making interpretation more precautious. The major reason is due ot the hierarchical nature of the tree-building process: the effect of error in root split will be propagated to all splits below.  Ensemble methods such as boosting will help to reduce the variance for tree-based model. 
 
+\section{Boosting}
+The basic idea of \emph{\textbf{boosting}} is to combine multiple \textit{weak} learners in sequential manner in order to boost the performance of joint model. Boosting belongs to Generalized Additive Models
+\begin{align*}
+y &= \sum_{j=1}^{p}f_j(\mb{x}_{i}) + \epsilon
+\end{align*} where $f_{j}: \bR^{d} \rightarrow \bR$ or $f_{j}: \bR^{d} \rightarrow \set{0, 1}$ are classifiers belong to a family of simple functions $\cF$. Similar to classical Fourier transform, each $f_{j}$ are able to capure a simple relationship between covariate variables and the response variables, but combining them together, the model is expected to cover both broad and detailed aspects of the target distribution. Boosting belongs to \textit{Ensemble Methods}, which all seeks to improve the performance of machine learning model by joining multiple models together. 
 
-\section{Boosting as Forward Stagewise Additive Modeling}
+\subsection{Boosting as Forward Stagewise Additive Modeling}
 Learning in boosting is done stagewise sequentially. At each stage, a new model $f_{j}$ is learned and added to the ensemble, so that the overall objective is minimized. We can use the following function to define the objective of boosting model:
  \begin{align*}
 \cL(f) &:= \sum_{i}\cL\paren{y_i, \hat{y}_{i}} +\gamma  \sum_{j}\Omega(\cT_{j}) + \frac{\alpha}{2} \sum_{j}\norm{\mb{w}_{j}}{2}^{2} \\
@@ -126,7 +126,7 @@ For tree-based model $f$, we can further decompose the equation \eqref{eqn: forw
 \end{align} Note that the continuous score $\theta_{k,m}$ can be learned by minimizing $$\sum_{i: \mb{x}_{i} \in \cR_{m}}\cL\paren{y_i, f^{k-1}(\mb{x}_{i}) +\theta_{k,m} }$$ within each region $\cR_{m}$. We can choose $\beta_{k} = \beta$ and call it the \textbf{\emph{learning rate}} of boosting algorithm.
 
 
-\section{Gradient Boost Trees}
+\subsection{Gradient Boost Trees}
 The objective function \eqref{eqn: forward_objective} can be \emph{approximated} via its first and second order approximation at $f^{k-1}$. 
 \begin{align}
 \cL_{k}(f_{k} | f^{k-1}) = \cL_{k}(f) &:\approx  \cL_{k}(f^{k-1}) + \grad{\cL}|_{f^{k-1}}^{T}\;\Delta f + \frac{1}{2}H_{\cL}|_{f^{k-1}} \norm{\Delta f}{2}^2  \nonumber\\
@@ -172,6 +172,7 @@ Gradient boost methods can be seen as searching for \emph{\textbf{gradients in f
 \caption{\footnotesize{\textbf{Split finding algorithm}. The exact split finding algorithm search all featues and sort the data according to feature value. It then accumulate gradient statistics for the structure score in \eqref{eqn: split_find_criteria}. \citep{chen2016xgboost}}}
 \label{fig: split}
 \end{figure}
+
 \subsection{Split finding algorithm}
 One of the key problems in tree learning is to find the best split as indicated in \eqref{eqn: split_find_criteria}. There are two ways to find it: the \textbf{exact greedy search} and the \textbf{approximate greedy search}. In exact greedy search, one enumerates all possible split for all continous features. In order to do so efficiently, the algorithm must first \emph{\textbf{sort}} the data according to feature values and visit the data in sorted order to \emph{accumulate} the gradient statistics for the structure score in \eqref{eqn: split_find_criteria}. The drawbacks for exact greedy search is that it needs to fit all data into the memory. It is not efficient for distributed computing as well. In order to support these two settings, the appoximate greedy search is proposed. See figure \ref{fig: split} for descriptions of the algorithms.
 
@@ -212,5 +213,5 @@ a value is missing in the sparse matrix $X$, the instance is classified into the
 
 \newpage
 \bibliographystyle{plainnat}
-\bibliography{book_reference.bib}
+\bibliography{reference.bib}
 \end{document}

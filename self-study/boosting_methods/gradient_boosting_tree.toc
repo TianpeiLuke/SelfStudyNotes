@@ -1,0 +1,6 @@
+\contentsline {section}{\numberline {1}Tree-based methods}{2}
+\contentsline {section}{\numberline {2}Boosting}{4}
+\contentsline {subsection}{\numberline {2.1}Boosting as Forward Stagewise Additive Modeling}{4}
+\contentsline {subsection}{\numberline {2.2}Gradient Boost Trees}{5}
+\contentsline {subsection}{\numberline {2.3}Split finding algorithm}{7}
+\contentsline {section}{\numberline {3}XGBoost}{9}
