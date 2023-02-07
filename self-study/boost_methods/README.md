@@ -8,6 +8,9 @@
 ## Table of Contents
 - Boosting Methods 
 	- 
-
+	- 
 
 - Gradient Boosting Tree [pdf](./CI_1_causal_inference.pdf)
+	- Tree-based Model
+	- Gradient Boost Tree
+	- XGBoost
