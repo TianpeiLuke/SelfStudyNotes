@@ -48,17 +48,35 @@
 
 
 \end{itemize}
+
+\subsection{Functional Gradient Descent}
+\begin{figure}
+\begin{minipage}[h!]{1\linewidth}
+  \centering
+  \centerline{\includegraphics[scale = 0.4]{anyboost.png}}
+\end{minipage}
+\caption{\footnotesize{\textbf{Gradient Boost Tree Algorithm \citep{hastie2009elements}}}}
+\label{fig: grad_boost}
+\end{figure}
+\begin{itemize}
+\item 
+\end{itemize}
+
 \subsection{Gradient Boost}
 \begin{figure}
 \begin{minipage}[t]{1\linewidth}
   \centering
   \centerline{\includegraphics[scale = 0.5]{grad_boost.png}}
 \end{minipage}
-\caption{\footnotesize{\textbf{Gradient Boost Algorithm \citep{hastie2009elements}}}}
+\caption{\footnotesize{\textbf{Gradient Boost Tree Algorithm \citep{hastie2009elements}}}}
 \label{fig: grad_boost}
 \end{figure}
+
+
 \begin{itemize}
 \item 
+
+
 \end{itemize}
 
 \section{Theoretical Guarantee for Boosting}
@@ -190,7 +208,7 @@ Let $\cH$ be a hypothesis class with $VCdim(\cH) \le d < \infty$. Then, for all 
 \end{lemma}
 
 \item 
-\begin{proposition} \label{cor: generalization_bound_growth}   (\textbf{Growth Function Generalization Bound})  \citep{mohri2018foundations}\\
+\begin{proposition} \label{cor: generalization_bound_growth}   (\textbf{Generalization Bound via Growth Function})  \citep{mohri2018foundations}\\
 Let $\cH$ be a family of functions taking values in $\set{-1, +1}$.  Then, for any $\delta > 0$, with probability at least $1 - \delta$, for any $h \in \cH$,
 \begin{align}
 L(h) \le \widehat{L}_{m}(h) + \sqrt{\frac{2 \log \tau_{\cH}(m)}{m}} +\sqrt{\frac{\log(1/\delta)}{2m}} \label{ineqn: generalization_bound_growth_number}
@@ -199,7 +217,7 @@ Growth function bounds can be also derived directly (without using Rademacher co
 \begin{align}
 \cP\set{\exists h\in \cH, \abs{L(h) - \widehat{L}_{m}(h)} > \epsilon }  \le 4\tau_{\cH}(2m)\;\exp\paren{-\frac{m\epsilon^2}{8}} \label{ineqn: generalization_bound_growth_number_2}
 \end{align}
-which only differs from \eqref{eqn: generalization_bound_growth_number} by constants.
+which only differs from \eqref{ineqn: generalization_bound_growth_number} by constants.
 \end{proposition}
 
 
@@ -216,7 +234,7 @@ Assume $\cH$ is \textbf{finite}. Let $m \ge T \ge 1$. For any set $\cD$ of $m$ p
 \end{align}
 \end{lemma}
 
-\item \begin{theorem}  (\textbf{Growth Function Generalization Bound for AdaBoost, Finite Hypothesis}) \citep{schapire2012boosting}\\
+\item \begin{theorem}  (\textbf{Generalization Bound for AdaBoost, Finite Hypothesis}) \citep{schapire2012boosting}\\
 Suppose \textbf{AdaBoost} is run for $T$ rounds on $m \ge T$ random examples, using base classifiers from a \textbf{finite space} $\cH$. Then, with probability at least $1 - \delta$, the combined classifier $H$ satisfies
 \begin{align}
 L_{\cP, c}(H) \le \widehat{L}_{m}(H) + \sqrt{\frac{2 T\paren{ \log \abs{\cH} + \log(em/T) }}{m}} +\sqrt{\frac{\log(1/\delta)}{2m}} \label{eqn: generalization_bound_growth_number_adaboost_finite}
@@ -238,7 +256,7 @@ Assume $\cH$ has \textbf{finite VC-dimension} $d \ge 1$. Let $m \ge \max\{T, d\}
 \item \begin{lemma} (\textbf{VC-Dimension of Combined Hypothesis Class, VC Class}). \citep{schapire2012boosting, shalev2014understanding}\\
 Assume $\cH$ has \textbf{finite VC-dimension} $\nu(\cH) = d$ and $\min\set{T, d} \ge 3$. Then the VC dimension of combined hypothesis class is bounded by
 \begin{align}
-\nu(L(\cH, T)) \le T\paren{d + 1}\paren{3\log\paren{T(d+1)} + 2} = \cO(dT \log(dT)).  \label{ineqn: vc_dim_ensemble_infinite}
+\nu(L(\cH, T)) \le T\paren{d + 1}\paren{3\log\paren{T(d+1)} + 2} = \cO(Td \log(Td)).  \label{ineqn: vc_dim_ensemble_infinite}
 \end{align}
 \end{lemma}
 
@@ -249,7 +267,7 @@ For some base hypothesis class $\cH$, the VC-dimension of ensemble is at least $
 \end{align*} 
 \end{remark}
 
-\item \begin{theorem} \label{thm: growth_fun_adaboost}  (\textbf{Growth Function Generalization Bound for AdaBoost}). \citep{schapire2012boosting}\\
+\item \begin{theorem} \label{thm: growth_fun_adaboost}  (\textbf{Generalization Bound for AdaBoost via VC Dimension}). \citep{schapire2012boosting}\\
 Suppose \textbf{AdaBoost} is run for $T$ rounds on $m \ge \max\{T, d\}$ random examples, using base classifiers from a \textbf{finite space} $\cH$. Then, with probability at least $1 - \delta$, the combined classifier $H$ satisfies
 \begin{align}
 L_{\cP, c}(H) \le \widehat{L}_{m}(H) + \sqrt{\frac{2 T\paren{ d\log(em/d) + \log(em/T) }}{m}} +\sqrt{\frac{\log(1/\delta)}{2m}} \label{ineqn: generalization_bound_growth_number_adaboost}
@@ -284,7 +302,47 @@ A target class $\cH$ is (efficiently) \textbf{weakly} PAC learnable \textbf{if a
 \end{itemize}
 
 \subsection{Generalization Error Bounds via Large Margin Theory}
+\begin{itemize}
+\item \begin{remark}(\emph{\textbf{Limit of VC Dimension Analysis}})\\
+The upper bound grows as $\cO(dT \log(dT))$, thus the bound suggests that \emph{\textbf{AdaBoost} could \textbf{overfit} for \textbf{large values of $T$}}, and indeed this can occur. However, in many cases, it has been observed empirically that \emph{the generalization error of AdaBoost \textbf{decreases}} as a function of \emph{the number of rounds} of boosting $T$.
+\end{remark}
 
+\item \begin{definition} (\textbf{\emph{$L_1$-Margin}}) \citep{mohri2018foundations, schapire2012boosting}\\
+\underline{\emph{\textbf{The $L_1$-margin}}} $\rho(x)$ of a point $x \in \cX$ with label $y \in \set{-1, +1}$ for \emph{a linear combination of base classifiers} $g = \sum_{t=1}^{T}\alpha_t h_t = \inn{\alpha}{h}$ with $\alpha \neq 0$ and $h_t \in \cH$ for all $t \in [1, T]$ is defined as
+\begin{align}
+\rho(x) := y \frac{\inn{\alpha}{h(x)}}{\norm{\alpha}{1}} = y \frac{\sum_{t=1}^{T}\alpha_t h_t(x)}{\norm{\alpha}{1}} \label{def: l1_margin}
+\end{align} \underline{\emph{\textbf{The $L_1$-margin}}} of a linear combination classifier $g$ \emph{\textbf{with respect to a sample}} $\cD$ is \emph{\textbf{the minimum margin} of the points within the sample}:
+\begin{align}
+\rho := \min_{i=1\xdotx{,} m}y_i \frac{\inn{\alpha}{h(x_i)}}{\norm{\alpha}{1}} = \min_{i=1\xdotx{,} m} \frac{\sum_{t=1}^{T}\alpha_t y_i  h_t(x_i)}{\norm{\alpha}{1}} \label{def: l1_margin_sample}
+\end{align}
+\end{definition}
+
+\item \begin{remark}
+When the coefficients $\alpha_t$ are \emph{\textbf{non-negative}}, as in the case of \emph{AdaBoost}, $\rho(x)$ is \emph{\textbf{a convex combination}} of the base classifier values $h_t(x)$. In particular, if the base classifiers $h_t$ take values in $[-1, +1]$, then $\rho(x)$ is in $[-1, +1]$. \emph{The absolute value} $\abs{\rho(x)}$ can be interpreted as \emph{\textbf{the confidence} of the classifier} $g$ in that label.
+\end{remark}
+
+\item \begin{definition}(\emph{\textbf{Convex Hull of Hypothesis Class}})\\
+For any hypothesis class $\cH$, \underline{\textbf{\emph{the convex hull}}} of set $\cH$, denoted as $\text{conv}(\cH)$, is defined as 
+\begin{align*}
+\text{conv}(\cH) := \set{\sum_{k=1}^{T}\lambda_k h_k(\cdot):  T \ge 1, \forall k \in [1, T], \lambda_k \ge 0, h_k \in \cH, \sum_{k=1}^{T}\lambda_k \le 1}.
+\end{align*}
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Empirical Rademacher Complexity}})\\
+Let $\cG$ be a family of functions mapping from $\cZ := \cX \times \cY$ to $[a, b]$ and $\cD = (z_1 \xdotx{,} z_n)$ a fixed \emph{sample} of size $n$ with elements in $\cZ$. Then, \underline{\emph{\textbf{the empirical Rademacher complexity}}} of $\cG$ \emph{with respect to the sample $\cD$} is defined as:
+\begin{align}
+\widehat{\mathfrak{R}}_{\cD}(\cG)&= \E{\sigma}{\sup_{g \in \cG}\frac{1}{n}\sum_{i=1}^{n}\sigma_{i}g(z_i)}   \label{eqn: rademacher_complexity}
+\end{align}
+where $\sigma := (\sigma_1 \xdotx{,} \sigma_n)$ are  \textbf{\emph{independent uniform random variables}} taking values in $\set{-1, +1}$. The random variables $\sigma_i$ are called \underline{\emph{\textbf{Rademacher variables}}}.
+\end{definition}
+
+\item \begin{proposition}(\textbf{Empirical Rademacher Complexity of a Convex Hull of Function Class}\\
+Let $\cH$ be a set of functions mapping from $\cX$ to $\bR$. Then, for any sample $\cD$, the empirical Rademacher complexity 
+\begin{align}
+\widehat{\frR}_{\cD}(\text{conv}(\cH))  = \widehat{\frR}_{\cD}(\cH) \label{eqn: rademacher_complexity_convex_hull}
+\end{align} where $\text{conv}(\cH)$ is \textbf{the convex hull} of set $\cH$.
+\end{proposition}
+\end{itemize}
 \section{Fundamental Perspectives}
 \subsection{Game Theory}
 \subsection{Online Learning}
