@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  7 FEB 2023 17:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  7 FEB 2023 19:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -536,7 +536,11 @@ LaTeX Info: Redefining \cite on input line 694.
 )
 (../../Tianpei_Report.sty
 \c@theorem=\count129
-) (./AL_boosting_theory.aux)
+) (./AL_boosting_theory.aux
+
+LaTeX Warning: Label `fig: grad_boost' multiply defined.
+
+)
 \openout1 = `AL_boosting_theory.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
@@ -681,38 +685,47 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 48.
 
-<grad_boost.png, id=15, 637.38126pt x 569.12625pt>
+<anyboost.png, id=15, 897.3525pt x 404.51125pt>
+File: anyboost.png Graphic file (type png)
+ <use anyboost.png>
+Package pdftex.def Info: anyboost.png used on input line 56.
+(pdftex.def)             Requested size: 358.93463pt x 161.80162pt.
+
+<grad_boost.png, id=16, 637.38126pt x 569.12625pt>
 File: grad_boost.png Graphic file (type png)
  <use grad_boost.png>
-Package pdftex.def Info: grad_boost.png used on input line 55.
+Package pdftex.def Info: grad_boost.png used on input line 69.
 (pdftex.def)             Requested size: 318.68985pt x 284.56242pt.
 
-[2 <./adaboost.png>]
-LaTeX Font Info:    Try loading font information for U+dsrom on input line 77.
+Underfull \vbox (badness 7273) has occurred while \output is active []
+
+ [2 <./adaboost.png>] [3 <./anyboost.png> <./grad_boost.png>]
+LaTeX Font Info:    Try loading font information for U+dsrom on input line 95.
 
 (/usr/share/texlive/texmf-dist/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-) [3 <./grad_boost.png>] [4] [5]
+) [4] [5]
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 189.
+(amsmath)                 on input line 207.
 
+[6] [7] [8]
+LaTeX Font Info:    Try loading font information for U+euf on input line 335.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+) [9]
+[10] (./AL_boosting_theory.bbl) [11] (./AL_boosting_theory.aux)
 
-LaTeX Warning: Reference `eqn: generalization_bound_growth_number' on page 6 un
-defined on input line 202.
-
-[6] [7] [8] (./AL_boosting_theory.bbl) [9] (./AL_boosting_theory.aux)
-
-LaTeX Warning: There were undefined references.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 15915 strings out of 493029
- 315278 string characters out of 6136233
- 366857 words of memory out of 5000000
- 19120 multiletter control sequences out of 15000+600000
- 13611 words of font info for 54 fonts, out of 8000000 for 9000
+ 15939 strings out of 493029
+ 315699 string characters out of 6136233
+ 366932 words of memory out of 5000000
+ 19136 multiletter control sequences out of 15000+600000
+ 15020 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,13n,84p,1154b,395s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
@@ -730,11 +743,12 @@ b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on AL_boosting_theory.pdf (9 pages, 358011 bytes).
+exmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on AL_boosting_theory.pdf (11 pages, 401377 bytes).
 PDF statistics:
- 107 PDF objects out of 1000 (max. 8388607)
- 76 compressed objects within 1 object stream
+ 118 PDF objects out of 1000 (max. 8388607)
+ 83 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 23 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 28 words of extra memory for PDF output out of 10000 (max. 10000000)
 
