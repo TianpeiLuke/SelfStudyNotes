@@ -7,9 +7,9 @@
 \contentsline {subsection}{\numberline {2.2}Training Error Bounds}{5}
 \contentsline {subsection}{\numberline {2.3}Generalization Error Bounds for Finite Hypothesis Class}{6}
 \contentsline {subsection}{\numberline {2.4}Generalization Error Bounds via VC Dimension}{7}
-\contentsline {subsection}{\numberline {2.5}Generalization Error Bounds via Large Margin Theory}{9}
-\contentsline {section}{\numberline {3}Fundamental Perspectives}{10}
-\contentsline {subsection}{\numberline {3.1}Game Theory}{10}
-\contentsline {subsection}{\numberline {3.2}Online Learning}{10}
-\contentsline {subsection}{\numberline {3.3}Maximum Entropy Estimation}{10}
-\contentsline {subsection}{\numberline {3.4}Iterative Projection Algorithms and Convergence Analysis}{10}
+\contentsline {subsection}{\numberline {2.5}Generalization Error Bounds via Margin Theory}{9}
+\contentsline {section}{\numberline {3}Fundamental Perspectives}{13}
+\contentsline {subsection}{\numberline {3.1}Game Theory}{13}
+\contentsline {subsection}{\numberline {3.2}Online Learning}{13}
+\contentsline {subsection}{\numberline {3.3}Maximum Entropy Estimation}{13}
+\contentsline {subsection}{\numberline {3.4}Iterative Projection Algorithms and Convergence Analysis}{13}
