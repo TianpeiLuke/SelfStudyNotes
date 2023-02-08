@@ -166,12 +166,40 @@ Define $\Sigma_n$  as the space of all \underline{\textbf{\emph{linear threshold
 
 
 
-\item \begin{proposition} (\textbf{Training Error Bound for AdaBoost}) \citep{schapire2012boosting}\\
+\item \begin{proposition}\label{prop: training_error_bound} (\textbf{Training Error Bound for AdaBoost}) \citep{schapire2012boosting}\\
 Given the notation of Adaboost algorithm, let $\gamma_t = 1/2 - \epsilon_t$, and let $\cD_1$ be an arbitrary initial distribution over the training set. Then \textbf{the weighted training error} of the combined classifier $\cH$ with respect to $\cD_1$ is bounded as
 \begin{align}
 \widehat{L}_{\cD_1}(H) \le \prod_{t=1}^{T} \sqrt{1 - 4 \gamma_t^2} \le \exp\paren{- 2 \sum_{t=1}^{T}\gamma_t^2}. \label{ineqn: boosting_training_error_bound}
 \end{align} 
 \end{proposition}
+\begin{proof}
+Consider the linear combination of base classifiers:
+\begin{align*}
+f(x) := \sum_{t=1}^{T}\alpha_t h_t(x).
+\end{align*} By definition of distribution $\cD_T$ via $\cD_{T-1}$ we have
+\begin{align*}
+\cD_{T+1}(i) &= \frac{ \exp\paren{-\alpha_T y_i h_T(x_i)}}{Z_T}\cD_{T-1}(i)  \\
+&= \ldots\\
+&= \frac{ \exp\paren{-\sum_{t=1}^{T}\alpha_t y_i h_t(x_i)}}{\prod_{t=1}^{T}Z_t}\cD_{1}(i) = \frac{ \exp\paren{- y_i f(x_i)}}{\prod_{t=1}^{T}Z_t} \cD_{1}(i)
+\end{align*} Note that $H(x) \neq y$ if and only if $y f(x) < 0$, and $\mathds{1}_{(-\infty, 0]}(x) \le \exp(-x)$ so
+\begin{align*}
+\ind{H(x_i) \neq y_i} = \mathds{1}_{(-\infty, 0]}(y_i f(x_i)) \le \exp\paren{- y_i f(x_i)}.
+\end{align*} By definition of training error, 
+\begin{align}
+\widehat{L}_{\cD_1}(H) &= \sum_{i=1}^{m}\ind{H(x_i) \neq y_i} \cD_1(i) \nonumber\\
+&\le \sum_{i=1}^{m} \exp\paren{- y_i f(x_i)} \cD_1(i)  \nonumber\\
+&=  \paren{\sum_{i=1}^{m} \cD_{T+1}(i)}\prod_{t=1}^{T}Z_t  \nonumber\\
+&= \prod_{t=1}^{T}Z_t \label{pf: training_error_bound_1}
+\end{align} Finally, by our choice of $\alpha_t = \frac{1}{2}\log\frac{1 - \epsilon_t}{\epsilon_t} = \frac{1}{2}\log\frac{1/2 + \gamma_t}{1/2 - \gamma_t}$, we have that
+\begin{align}
+Z_t &= \sum_{i=1}^{m}\cD_t(i)\exp\paren{-\alpha_t y_i h_t(x_i)} \nonumber\\
+&= \exp\paren{-\alpha_t}\sum_{i: H(x_i) = y_i}\cD_t(i)  + \exp\paren{\alpha_t}\sum_{i: H(x_i) \neq y_i}\cD_t(i)  \nonumber\\
+&= \exp\paren{-\alpha_t}(1 - \epsilon_t) + \exp\paren{\alpha_t}\epsilon_t \qquad (\text{by definition of error }\epsilon_t)  \nonumber\\
+&= \exp\paren{-\alpha_t}(1/2 + \gamma_t) + \exp\paren{\alpha_t}(1/2 - \gamma_t) \qquad (\text{substitute }\alpha_t) \nonumber\\
+&=\sqrt{\paren{1 - 2\gamma_t}\paren{1 +2 \gamma_t}} \label{pf: partition_fun_train_error}
+\end{align} Substituting \eqref{pf: partition_fun_train_error} into \eqref{pf: training_error_bound_1}, we have the result. \qed
+\end{proof}
+
 \end{itemize}
 \subsection{Generalization Error Bounds for Finite Hypothesis Class}
 \begin{itemize}
@@ -223,16 +251,33 @@ which only differs from \eqref{ineqn: generalization_bound_growth_number} by con
 
 
 \item The following lemma shows that the VC dimension of $\Sigma_T$ is $T$.
-\begin{lemma} \citep{schapire2012boosting}\\
-The space $\Sigma_n$ of \textbf{linear threshold functions} over $\bR^n$ has \textbf{VC-dimension} $n$.
+\begin{lemma} \citep{schapire2012boosting, mohri2018foundations}\\
+The space $\Sigma_n$ of \textbf{linear threshold functions} over $\bR^n$ 
+\begin{align*}
+\Sigma_n := \set{\sgn{\inn{w}{x}}:  w \in \bR^n}
+\end{align*}
+has \textbf{VC-dimension} $n$.
 \end{lemma}
+
+\item \begin{remark}
+Note that the class $\Sigma_n$ is  \textbf{\emph{the class of half-spaces}} $\{\inn{w}{x}: w \in \bR^n\}$ whose VC dimension is $n$. 
+\end{remark}
 
 \item \begin{lemma} (\textbf{Growth Number of Ensemble Hypothesis Class, Finite Hypothesis Class}) \citep{schapire2012boosting, shalev2014understanding} \\
 Assume $\cH$ is \textbf{finite}. Let $m \ge T \ge 1$. For any set $\cD$ of $m$ points, the number of dichotomies realizable by $L(\cH, T)$ is bounded as follows:
 \begin{align}
-\abs{L(\cH, T)} \le \tau_{L(\cH, T)}(m) \le \paren{\frac{em}{T}}^T \abs{\cH}^T.  \label{ineqn: growth_fun_ensemble_finite}
+\abs{L(\cH, T)_{\cD}} \le \tau_{L(\cH, T)}(m) \le \paren{\frac{em}{T}}^T \abs{\cH}^T.  \label{ineqn: growth_fun_ensemble_finite}
 \end{align}
 \end{lemma}
+\begin{proof}
+Consider a new sample $\cD' := \set{Z_1 \xdotx{,} Z_m}$ where
+\begin{align*}
+Z_i := \paren{h_1(X_i) \xdotx{,} h_T(X_i)}.
+\end{align*} Given that the VC dimension of $\Sigma_T$ is $T$, the bound on the growth number becomes
+\begin{align}
+\abs{L(\cH, T)_{\cD'}} \le \paren{\frac{em}{T}}^T. \label{pf: growth_fun_finite_1}
+\end{align} That is, for \emph{fixed} $h_1 \xdotx{,} h_T$, \emph{the number of dichotomies} defined by functions of the form $\sigma(h_1(x) \xdotx{,} h_T(x))$ for $\sigma \in T$ is bounded as in equation \eqref{pf: growth_fun_finite_1}. Since the number of choices for $h_1 \xdotx{,} h_T$ is equal to $\abs{\cH}^T$, and since for each one of these, the number of dichotomies is as in equation \eqref{pf: growth_fun_finite_1}, we thus obtain the bound stated in the lemma. \qed
+\end{proof}
 
 \item \begin{theorem}  (\textbf{Generalization Bound for AdaBoost, Finite Hypothesis}) \citep{schapire2012boosting}\\
 Suppose \textbf{AdaBoost} is run for $T$ rounds on $m \ge T$ random examples, using base classifiers from a \textbf{finite space} $\cH$. Then, with probability at least $1 - \delta$, the combined classifier $H$ satisfies
@@ -249,7 +294,7 @@ L_{\cP, c}(H) &\le \frac{2 T\paren{ \log \abs{\cH} + \log(2em/T) } + 2\log(2/\de
 \item \begin{lemma} (\textbf{Growth Number of Ensemble Hypothesis Class, VC Class}). \citep{schapire2012boosting}\\
 Assume $\cH$ has \textbf{finite VC-dimension} $d \ge 1$. Let $m \ge \max\{T, d\} \ge 1$. For any set $\cD$ of $m$ points, the number of dichotomies realizable by $L(\cH, T)$ is bounded as follows:
 \begin{align}
-\abs{L(\cH, T)} \le \tau_{L(\cH, T)}(m) \le \paren{\frac{em}{T}}^T \paren{\frac{em}{d}}^{dT}.  \label{ineqn: growth_fun_ensemble_infinite}
+\abs{L(\cH, T)_{\cD}} \le \tau_{L(\cH, T)}(m) \le \paren{\frac{em}{T}}^T \paren{\frac{em}{d}}^{dT}.  \label{ineqn: growth_fun_ensemble_infinite}
 \end{align}
 \end{lemma}
 
@@ -278,9 +323,17 @@ L_{\cP, c}(H) &\le \frac{2 T\paren{ d\log(2em/d) + \log(2em/T) } + 2\log(2/\delt
 \end{theorem}
 
 \item \begin{remark}(\emph{\textbf{Limit of VC Dimension Analysis}})\\
-The upper bound grows as $\cO(dT \log(dT))$, thus the bound suggests that \emph{\textbf{AdaBoost} could \textbf{overfit} for \textbf{large values of $T$}}, and indeed this can occur. However, in many cases, it has been observed empirically that \emph{the generalization error of AdaBoost \textbf{decreases}} as a function of \emph{the number of rounds} of boosting $T$.
+The upper bound grows as $\cO(dT \log(dT))$, thus the bound suggests that \emph{\textbf{AdaBoost} could \textbf{overfit} for \textbf{large values of $T$}}, and indeed this can occur. See Figure \ref{fig: overfitting_adaboost}. However, in many cases, it has been observed empirically that \emph{the generalization error of AdaBoost \textbf{decreases}} as a function of \emph{the number of rounds} of boosting $T$.
 \end{remark}
 
+\begin{figure}
+\begin{minipage}[t]{1\linewidth}
+  \centering
+  \centerline{\includegraphics[scale = 0.4]{overfitting_adaboost.png}}
+\end{minipage}
+\caption{\footnotesize{\textbf{AdaBoost may overfit if the number of rounds $T$ is too large. \citep{schapire2012boosting}}}}
+\label{fig: overfitting_adaboost}
+\end{figure}
 
 
 \item \begin{corollary}  \citep{schapire2012boosting}\\
@@ -404,7 +457,6 @@ and
 \end{theorem}
 
 
-
 \item Based on the theorem above, we can have the generalization error bound via margin:
 \begin{theorem} (\textbf{Ensemble Rademacher Margin Bound})  \citep{schapire2012boosting, mohri2018foundations} \\
 Let $\cH$ denote a set of real-valued functions. Fix $\rho > 0$. Then, for any $\delta > 0$, with
@@ -418,7 +470,7 @@ L(h) &\le \widehat{L}_{m, \rho}(h)  +  \frac{2}{\rho} \widehat{\mathfrak{R}}_{m}
 Consider the family of functions taking values in $[0, 1]$:
 \begin{align*}
 \varphi_{\rho} \circ \cM := \set{\varphi_{\rho} \circ f:  f\in \cM}
-\end{align*} where $\cM := \set{(x,y) \to yf(x): f \in  \text{conv}(\cH)}$. By the generalization bound via Rademacher complexity,
+\end{align*} where $\cM := \set{(x,y) \to yh(x): h \in  \text{conv}(\cH)}$. By the generalization bound via Rademacher complexity,
 \begin{align*}
 \E{}{\varphi_{\rho}(Y h(X))} &\le \frac{1}{m}\sum_{i=1}^{m}\varphi_{\rho}\paren{Y_i h(X_i)} + 2 \frR_{m}(\varphi_{\rho} \circ \cM )  + \sqrt{\frac{\log(1 / \delta)}{2m}}
 \end{align*} By inequality \eqref{eqn: emp_margin_loss_bound}
@@ -456,15 +508,45 @@ Remarkably, \emph{\textbf{the number of rounds of boosting} $T$ \textbf{does not
 $\rho$. 
 \end{remark}
 
+
+\begin{figure}
+\begin{minipage}[t]{1\linewidth}
+  \centering
+  \centerline{\includegraphics[scale = 0.4]{dist_margin.png}}
+\end{minipage}
+\caption{\footnotesize{\textbf{Distribution of margin for AdaBoost on one example dataset. \citep{schapire2012boosting}}}}
+\label{fig: dist_margin}
+\end{figure}
+
 \item \begin{proposition} (\textbf{Empirical Margin Loss Bound for AdaBoost})  \citep{schapire2012boosting, mohri2018foundations} \\
-Let $g =\sum^T_{t=1}\alpha_t h_t$ denote the function defining the classifier returned by AdaBoost after $T$ rounds of boosting and assume for all $t \in [1, T]$ that $\epsilon_t < 1/2$, which implies $\alpha_t > 0$. Then, for any $\rho > 0$, the following holds:
+Let $f =\sum^T_{t=1}\alpha_t h_t$ denote the function defining the classifier returned by AdaBoost after $T$ rounds of boosting and assume for all $t \in [1, T]$ that $\epsilon_t < 1/2$, which implies $\alpha_t > 0$. Then, for any $\rho > 0$, the following holds:
 \begin{align}
-\widehat{L}_{m, \rho}(g/\norm{\alpha}{1})  &\le  2^T\prod_{t=1}^{T}\sqrt{\epsilon_t^{1-\rho}(1 - \epsilon_t)^{1 + \rho}} \le \brac{(1- 2\gamma)^{1-\rho}(1+2\gamma)^{1+\rho}}^{T/2} \label{ineqn: emp_margin_loss_bound}
-\end{align} where $\epsilon_t \le 1/2 - \gamma$. Note $\brac{(1- 2\gamma)^{1-\rho}(1+2\gamma)^{1+\rho}} < 1$.
+\widehat{L}_{m, \rho}(f)  &\le  2^T\prod_{t=1}^{T}\sqrt{\epsilon_t^{1-\rho}(1 - \epsilon_t)^{1 + \rho}} \le \brac{(1- 2\gamma)^{1-\rho}(1+2\gamma)^{1+\rho}}^{T/2} \label{ineqn: emp_margin_loss_bound}
+\end{align} where $ \gamma \le 1/2 - \epsilon_t$ for all $t$. Note that $\gamma > 0$ so $\brac{(1- 2\gamma)^{1-\rho}(1+2\gamma)^{1+\rho}} < 1$.
 \end{proposition}
+\begin{proof}
+Consider the linear combination of base classifiers:
+\begin{align*}
+f(x) := \sum_{t=1}^{T}\alpha_t h_t(x).
+\end{align*} Note that $y f(x) \le \rho$ if and only if
+\begin{align*}
+y \sum_{t=1}^{T}\alpha_t h_t(x) \le \rho \sum_{t=1}^{T}\alpha_t.
+\end{align*} This implies that 
+\begin{align*}
+\exp\paren{- y \sum_{t=1}^{T}\alpha_t h_t(x) + \rho \sum_{t=1}^{T}\alpha_t} \ge 1 \ge \ind{y f(x) \le \rho}
+\end{align*} Thus
+\begin{align*}
+\widehat{L}_{m, \rho}(f) = \frac{1}{m}\sum_{i=1}^{m}\ind{y_i f(x_i) \le \rho} &\le \exp\paren{\rho \sum_{t=1}^{T}\alpha_t}\brac{\frac{1}{m}\sum_{i=1}^{m}\exp\paren{- y_i \sum_{t=1}^{T}\alpha_t h_t(x_i)}}\\
+&= \exp\paren{\rho \sum_{t=1}^{T}\alpha_t} \paren{\prod_{t=1}^{T}Z_t}  \quad \text{(See proof in Proposition \ref{prop: training_error_bound})}
+\end{align*} Plugging in the values of $\alpha_t = \frac{1}{2}\log\frac{1- \epsilon_t}{\epsilon_t}$ and $Z_t = 2\sqrt{\epsilon_t(1-\epsilon_t)}$ and the derivation follows the same as in Proposition \ref{prop: training_error_bound}, which gives the final result. \qed
+\end{proof} 
+
+\item \begin{remark}
+This bound implies that the fraction of training examples with $yf(x) \le \rho$ decreases to zero \emph{\textbf{exponentially fast}} with $T$, and must actually be equal to zero at some point since this fraction must always be a multiple of $1/m$.
+\end{remark}
 
 \item \begin{remark} (\emph{\textbf{AdaBoost Maximize the Margin? }})\\
-The margin bounds combined with the bound on the empirical margin loss suggest that under some conditions, \emph{AdaBoost can achieve \textbf{a large margin on the training sample}}. They could also serve as a theoretical explanation of the empirical observation that \emph{in some tasks \textbf{the generalization error decreases} as a function of $T$ even after the error on the training sample is zero}: \emph{the margin would continue to increase}. 
+The margin bounds combined with the bound on the empirical margin loss suggest that under some conditions, \emph{\textbf{AdaBoost} can achieve \textbf{a large margin on the training sample}}. They could also serve as a theoretical explanation of the empirical observation that \emph{in some tasks \textbf{the generalization error decreases} as a function of $T$ even after the error on the training sample is zero}: \emph{the margin would continue to increase}. 
 
 But does \emph{AdaBoost} maximize the $L_1$-margin? \emph{\textbf{No}}. It has been shown that \emph{AdaBoost may \textbf{converge to a margin} that is \textbf{significantly smaller than the maximum margin}}. However, under some general assumptions, when the data is \emph{separable} and \emph{the base learners satisfy particular conditions}, it has been proven that \emph{AdaBoost} can \emph{\textbf{asymptotically} achieve \textbf{a margin} that is \textbf{at least half the maximum margin}}, $\rho_{max}/2$.
 \end{remark}
