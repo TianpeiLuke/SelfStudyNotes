@@ -150,7 +150,7 @@ H(x) := \sgn{\sum_{t=1}^{T}\alpha_t h_t(x)}
 \end{remark}
 
 \item The space of all such combined classifiers is defined as below:
-\begin{definition}(\textbf{\emph{Class of Linear Combination of Base Hypothese}})\\
+\begin{definition}(\textbf{\emph{Ensemble Hypothsis Class}})\\
 Define the class of $T$ \emph{\textbf{linear combinations of base hypotheses}} from $\cH$ as
 \begin{align}
 L(\cH, T) &:=  \set{\sgn{\sum_{t=1}^{T}\alpha_t h_t(\cdot )}:  \alpha \in \bR^{T},  h_t \in \cH,  t = 1\xdotx{,} T }  \label{def: linear_ensemble_class}
@@ -227,7 +227,7 @@ which only differs from \eqref{ineqn: generalization_bound_growth_number} by con
 The space $\Sigma_n$ of \textbf{linear threshold functions} over $\bR^n$ has \textbf{VC-dimension} $n$.
 \end{lemma}
 
-\item \begin{lemma} (\textbf{Growth Number of Combined Hypothesis Class, Finite Hypothesis Class}) \citep{schapire2012boosting, shalev2014understanding} \\
+\item \begin{lemma} (\textbf{Growth Number of Ensemble Hypothesis Class, Finite Hypothesis Class}) \citep{schapire2012boosting, shalev2014understanding} \\
 Assume $\cH$ is \textbf{finite}. Let $m \ge T \ge 1$. For any set $\cD$ of $m$ points, the number of dichotomies realizable by $L(\cH, T)$ is bounded as follows:
 \begin{align}
 \abs{L(\cH, T)} \le \tau_{L(\cH, T)}(m) \le \paren{\frac{em}{T}}^T \abs{\cH}^T.  \label{ineqn: growth_fun_ensemble_finite}
@@ -246,14 +246,14 @@ L_{\cP, c}(H) &\le \frac{2 T\paren{ \log \abs{\cH} + \log(2em/T) } + 2\log(2/\de
 \end{itemize}
 \subsection{Generalization Error Bounds via VC Dimension}
 \begin{itemize}
-\item \begin{lemma} (\textbf{Growth Number of Combined Hypothesis Class, VC Class}). \citep{schapire2012boosting}\\
+\item \begin{lemma} (\textbf{Growth Number of Ensemble Hypothesis Class, VC Class}). \citep{schapire2012boosting}\\
 Assume $\cH$ has \textbf{finite VC-dimension} $d \ge 1$. Let $m \ge \max\{T, d\} \ge 1$. For any set $\cD$ of $m$ points, the number of dichotomies realizable by $L(\cH, T)$ is bounded as follows:
 \begin{align}
 \abs{L(\cH, T)} \le \tau_{L(\cH, T)}(m) \le \paren{\frac{em}{T}}^T \paren{\frac{em}{d}}^{dT}.  \label{ineqn: growth_fun_ensemble_infinite}
 \end{align}
 \end{lemma}
 
-\item \begin{lemma} (\textbf{VC-Dimension of Combined Hypothesis Class, VC Class}). \citep{schapire2012boosting, shalev2014understanding}\\
+\item \begin{lemma} (\textbf{VC-Dimension of Ensemble Hypothesis Class, VC Class}). \citep{schapire2012boosting, shalev2014understanding}\\
 Assume $\cH$ has \textbf{finite VC-dimension} $\nu(\cH) = d$ and $\min\set{T, d} \ge 3$. Then the VC dimension of combined hypothesis class is bounded by
 \begin{align}
 \nu(L(\cH, T)) \le T\paren{d + 1}\paren{3\log\paren{T(d+1)} + 2} = \cO(Td \log(Td)).  \label{ineqn: vc_dim_ensemble_infinite}
@@ -282,10 +282,10 @@ L_{\cP, c}(H) &\le \frac{2 T\paren{ d\log(2em/d) + \log(2em/T) } + 2\log(2/\delt
 \item \begin{corollary}  \citep{schapire2012boosting}\\
 Assume, in addition to the assumptions of theorem \ref{thm: growth_fun_adaboost}, that each base classifier has weighted error $\epsilon_t \le 1/2 - \gamma$ for some $\gamma > 0$. Let the number of rounds $T$ be equal to
 \begin{align*}
-\inf\set{t \in \bN: t \ge \frac{\log(m)}{2\gamma^2}}
+\inf\set{T \in \bN: T \ge \frac{\log(m)}{2\gamma^2}}
 \end{align*} Then, with probability at least $1 - \delta$, the generalization error of the combined classifier $H$ will be at most
 \begin{align*}
-\cO\paren{\frac{1}{m}\brac{\frac{\log(m)}{\gamma^2}\paren{\log(m) + d\log\paren{\frac{m}{d}}} + \frac{1}{\delta}}}
+\cO\paren{\frac{1}{m}\brac{\frac{\log(m)}{\gamma^2}\paren{\log(m) + d\log\paren{\frac{m}{d}}} + \log\paren{\frac{1}{\delta}}}}
 \end{align*}
 \end{corollary}
 
@@ -296,7 +296,7 @@ L_{\cP, c}(H) \le \widehat{L}_{m}(H) + \cO\paren{\sqrt{\frac{T \cC_{\cH}}{m}}}
 \end{align*} where $\cC_{\cH}$ is some complexity measure of base class $\cH$.
 \end{remark}
 
-\item \begin{theorem} (\textbf{Strong Learnable $=$ Weak Learnable})  \citep{schapire2012boosting}\\
+\item \begin{theorem} (\textbf{Strong Learnable $\Leftrightarrow$ Weak Learnable})  \citep{schapire2012boosting}\\
 A target class $\cH$ is (efficiently) \textbf{weakly} PAC learnable \textbf{if and only if} it is (efficiently) \textbf{strongly} PAC learnable.
 \end{theorem}
 \end{itemize}
@@ -310,7 +310,7 @@ The upper bound grows as $\cO(dT \log(dT))$, thus the bound suggests that \emph{
 \item \begin{definition} (\textbf{\emph{$L_1$-Margin}}) \citep{mohri2018foundations, schapire2012boosting}\\
 \underline{\emph{\textbf{The $L_1$-margin}}} $\rho(x)$ of a point $x \in \cX$ with label $y \in \set{-1, +1}$ for \emph{a linear combination of base classifiers} $g = \sum_{t=1}^{T}\alpha_t h_t = \inn{\alpha}{h}$ with $\alpha \neq 0$ and $h_t \in \cH$ for all $t \in [1, T]$ is defined as
 \begin{align}
-\rho(x) := y \frac{\inn{\alpha}{h(x)}}{\norm{\alpha}{1}} = y \frac{\sum_{t=1}^{T}\alpha_t h_t(x)}{\norm{\alpha}{1}} \label{def: l1_margin}
+\rho(x) := y \frac{\inn{\alpha}{h(x)}}{\norm{\alpha}{1}} =  \frac{\sum_{t=1}^{T}\alpha_t y h_t(x)}{\norm{\alpha}{1}} \label{def: l1_margin}
 \end{align} \underline{\emph{\textbf{The $L_1$-margin}}} of a linear combination classifier $g$ \emph{\textbf{with respect to a sample}} $\cD$ is \emph{\textbf{the minimum margin} of the points within the sample}:
 \begin{align}
 \rho := \min_{i=1\xdotx{,} m}y_i \frac{\inn{\alpha}{h(x_i)}}{\norm{\alpha}{1}} = \min_{i=1\xdotx{,} m} \frac{\sum_{t=1}^{T}\alpha_t y_i  h_t(x_i)}{\norm{\alpha}{1}} \label{def: l1_margin_sample}
