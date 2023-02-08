@@ -157,8 +157,8 @@ L(\cH, T) &:=  \set{\sgn{\sum_{t=1}^{T}\alpha_t h_t(\cdot )}:  \alpha \in \bR^{T
 \end{align}
 \end{definition}
 
-\item \begin{definition}
-Define $\Sigma_n$  as the space of all \textbf{\emph{linear threshold functions}}
+\item \begin{definition}(\textbf{\emph{Linear Threshold Functions}})\\
+Define $\Sigma_n$  as the space of all \underline{\textbf{\emph{linear threshold functions}}}
 \begin{align*}
 \Sigma_n := \set{\sgn{\inn{w}{x}}:  w \in \bR^n}.
 \end{align*} Thus $L(\cH, T) = \set{\sigma\paren{h_1(x) \xdotx{,} h_{T}(x)} : \sigma \in \Sigma_{T}}$
@@ -277,6 +277,10 @@ L_{\cP, c}(H) &\le \frac{2 T\paren{ d\log(2em/d) + \log(2em/T) } + 2\log(2/\delt
 \end{align}
 \end{theorem}
 
+\item \begin{remark}(\emph{\textbf{Limit of VC Dimension Analysis}})\\
+The upper bound grows as $\cO(dT \log(dT))$, thus the bound suggests that \emph{\textbf{AdaBoost} could \textbf{overfit} for \textbf{large values of $T$}}, and indeed this can occur. However, in many cases, it has been observed empirically that \emph{the generalization error of AdaBoost \textbf{decreases}} as a function of \emph{the number of rounds} of boosting $T$.
+\end{remark}
+
 
 
 \item \begin{corollary}  \citep{schapire2012boosting}\\
@@ -301,11 +305,8 @@ A target class $\cH$ is (efficiently) \textbf{weakly} PAC learnable \textbf{if a
 \end{theorem}
 \end{itemize}
 
-\subsection{Generalization Error Bounds via Large Margin Theory}
+\subsection{Generalization Error Bounds via  Margin Theory}
 \begin{itemize}
-\item \begin{remark}(\emph{\textbf{Limit of VC Dimension Analysis}})\\
-The upper bound grows as $\cO(dT \log(dT))$, thus the bound suggests that \emph{\textbf{AdaBoost} could \textbf{overfit} for \textbf{large values of $T$}}, and indeed this can occur. However, in many cases, it has been observed empirically that \emph{the generalization error of AdaBoost \textbf{decreases}} as a function of \emph{the number of rounds} of boosting $T$.
-\end{remark}
 
 \item \begin{definition} (\textbf{\emph{$L_1$-Margin}}) \citep{mohri2018foundations, schapire2012boosting}\\
 \underline{\emph{\textbf{The $L_1$-margin}}} $\rho(x)$ of a point $x \in \cX$ with label $y \in \set{-1, +1}$ for \emph{a linear combination of base classifiers} $g = \sum_{t=1}^{T}\alpha_t h_t = \inn{\alpha}{h}$ with $\alpha \neq 0$ and $h_t \in \cH$ for all $t \in [1, T]$ is defined as
@@ -317,6 +318,44 @@ The upper bound grows as $\cO(dT \log(dT))$, thus the bound suggests that \emph{
 \end{align}
 \end{definition}
 
+\item \begin{definition}(\textbf{\emph{Margin Loss Function}})  \citep{mohri2018foundations, schapire2012boosting}\\
+For any $\rho > 0$,  \underline{\emph{\textbf{the $\rho$-margin loss}}} $L_{\rho}: \bR \times \bR \to \bR_{+}$ is defined for all $y, y' \in \bR$ by  $L_{\rho}(y,y') = \varphi_{\rho}(yy')$ where $\varphi$ is defined as a piecewise-linear function,
+\begin{align*}
+\varphi_{\rho}(x) &:= \left\{ \begin{array}{cc}
+1 &\text{if } x\le 0\\
+1 - x/\rho &\text{if } 0 \le x \le \rho\\
+0 &\text{if } x \ge \rho
+\end{array}
+\right.
+\end{align*} This function is \textbf{\emph{Lipschitz}} with $L_{\varphi} = 1/\rho$.
+\end{definition}
+
+\begin{figure}
+\begin{minipage}[t]{1\linewidth}
+  \centering
+  \centerline{\includegraphics[scale = 0.4]{piecewise_linear.png}}
+\end{minipage}
+\caption{\footnotesize{\textbf{The piecewise linear function $\varphi_{\phi}$. \citep{schapire2012boosting}}}}
+\label{fig: piecewise_linear}
+\end{figure}
+
+
+\item \begin{definition}(\textbf{\emph{Empirical Margin Loss}}) \citep{schapire2012boosting, mohri2018foundations}
+Given a sample $\cD_m$ and a hypothesis $h$, \underline{\emph{\textbf{the empirical margin loss}}} is defined by
+\begin{align}
+\widehat{L}_{m, \rho}(h)&=  \frac{1}{m}\sum_{i=1}^{m}\varphi_{\rho}\paren{Y_i h(X_i)}  \label{eqn: emp_margin_loss}
+\end{align} Note that for any $i \in [1, m]$, $\ind{y_i h(x_i) \le 0}\le \varphi_{\rho}\paren{y_i h(x_i)} \le \ind{y_i h(x_i) \le \rho}$. Thus, the empirical margin
+loss can be bounded as follows:
+\begin{align}
+\widehat{L}(h) &= \frac{1}{m}\sum_{i=1}^{m}\ind{h(X_i)\neq Y_i}  = \frac{1}{m}\sum_{i=1}^{m}\ind{Y_i h(X_i) \le 0} \nonumber \\
+&\le \widehat{L}_{m, \rho}(h) \le  \frac{1}{m}\sum_{i=1}^{m}\ind{Y_i h(X_i) \le \rho}. \label{eqn: emp_margin_loss_bound}
+\end{align}
+\end{definition}
+
+\item \begin{remark}
+In all the results that follow, the empirical margin loss can be replaced by this upper bound, which admits a simple interpretation: it is \emph{the fraction of the points in the training sample $\cD$ that have been \textbf{misclassified} or classified \textbf{with confidence less than} $\rho$}. 
+\end{remark}
+
 \item \begin{remark}
 When the coefficients $\alpha_t$ are \emph{\textbf{non-negative}}, as in the case of \emph{AdaBoost}, $\rho(x)$ is \emph{\textbf{a convex combination}} of the base classifier values $h_t(x)$. In particular, if the base classifiers $h_t$ take values in $[-1, +1]$, then $\rho(x)$ is in $[-1, +1]$. \emph{The absolute value} $\abs{\rho(x)}$ can be interpreted as \emph{\textbf{the confidence} of the classifier} $g$ in that label.
 \end{remark}
@@ -324,9 +363,16 @@ When the coefficients $\alpha_t$ are \emph{\textbf{non-negative}}, as in the cas
 \item \begin{definition}(\emph{\textbf{Convex Hull of Hypothesis Class}})\\
 For any hypothesis class $\cH$, \underline{\textbf{\emph{the convex hull}}} of set $\cH$, denoted as $\text{conv}(\cH)$, is defined as 
 \begin{align*}
-\text{conv}(\cH) := \set{\sum_{k=1}^{T}\lambda_k h_k(\cdot):  T \ge 1, \forall k \in [1, T], \lambda_k \ge 0, h_k \in \cH, \sum_{k=1}^{T}\lambda_k \le 1}.
+\text{conv}(\cH) := \set{\sum_{k=1}^{T}\lambda_k h_k(\cdot):  T \ge 1, \forall k \in [1, T], \lambda_k \ge 0, h_k \in \cH, \sum_{k=1}^{T}\lambda_k = 1}.
 \end{align*}
 \end{definition}
+
+\item \begin{remark}
+Let $\cH$ be our space of base classifiers, and let $\cM$ be the space of all ``\emph{\textbf{margin functions}}" of the form $yf(x)$ where $f$ is any convex combination of base classifiers:
+\begin{align*}
+\cM := \set{(x,y) \to yf(x): f \in  \text{conv}(\cH)}
+\end{align*} Note that $\widehat{\frR}_{\cD}(\cM)  = \widehat{\frR}_{\cD}(\text{conv}(\cH))$ since $y_i \sigma_i$ has the same distribution as $\sigma_i$.
+\end{remark}
 
 \item \begin{definition} (\emph{\textbf{Empirical Rademacher Complexity}})\\
 Let $\cG$ be a family of functions mapping from $\cZ := \cX \times \cY$ to $[a, b]$ and $\cD = (z_1 \xdotx{,} z_n)$ a fixed \emph{sample} of size $n$ with elements in $\cZ$. Then, \underline{\emph{\textbf{the empirical Rademacher complexity}}} of $\cG$ \emph{with respect to the sample $\cD$} is defined as:
@@ -336,12 +382,96 @@ Let $\cG$ be a family of functions mapping from $\cZ := \cX \times \cY$ to $[a, 
 where $\sigma := (\sigma_1 \xdotx{,} \sigma_n)$ are  \textbf{\emph{independent uniform random variables}} taking values in $\set{-1, +1}$. The random variables $\sigma_i$ are called \underline{\emph{\textbf{Rademacher variables}}}.
 \end{definition}
 
+
+
+
 \item \begin{proposition}(\textbf{Empirical Rademacher Complexity of a Convex Hull of Function Class}\\
 Let $\cH$ be a set of functions mapping from $\cX$ to $\bR$. Then, for any sample $\cD$, the empirical Rademacher complexity 
 \begin{align}
 \widehat{\frR}_{\cD}(\text{conv}(\cH))  = \widehat{\frR}_{\cD}(\cH) \label{eqn: rademacher_complexity_convex_hull}
 \end{align} where $\text{conv}(\cH)$ is \textbf{the convex hull} of set $\cH$.
 \end{proposition}
+
+\item \begin{theorem} (\textbf{Uniform Bound via Rademacher Complexity}) \citep{mohri2018foundations}\\
+Let $\cG$ be a family of functions mapping from $\cZ$ to $[0, 1]$. Then, for any $\delta > 0$, \textbf{with probability at least} $1 - \delta$, each of the following holds for all $g \in \cG$:
+\begin{align}
+\E{}{g(Z)} &\le \frac{1}{m}\sum_{i=1}^{m}g(Z_i) + 2 \frR_{m}(\cG)  + \sqrt{\frac{\log(1 / \delta)}{2m}} \label{ineqn: Rademacher_bound_1}
+\end{align}
+and
+\begin{align}
+\E{}{g(Z)} &\le \frac{1}{m}\sum_{i=1}^{m}g(Z_i) + 2 \widehat{\mathfrak{R}}_{m}(\cG) + 3\sqrt{\frac{\log(2 / \delta)}{2m}} \label{ineqn: Rademacher_bound_2}
+\end{align}
+\end{theorem}
+
+
+
+\item Based on the theorem above, we can have the generalization error bound via margin:
+\begin{theorem} (\textbf{Ensemble Rademacher Margin Bound})  \citep{schapire2012boosting, mohri2018foundations} \\
+Let $\cH$ denote a set of real-valued functions. Fix $\rho > 0$. Then, for any $\delta > 0$, with
+probability at least $1 - \delta$, each of the following holds for all $h \in \text{conv}(\cH)$:
+\begin{align}
+L(h) &\le \widehat{L}_{m, \rho}(h) + \frac{2}{\rho} \frR_{m}(\cH)  + \sqrt{\frac{\log(1 / \delta)}{2m}} \label{ineqn: Rademacher_margin_bound}\\
+L(h) &\le \widehat{L}_{m, \rho}(h)  +  \frac{2}{\rho} \widehat{\mathfrak{R}}_{m}(\cH) + 3\sqrt{\frac{\log(2 / \delta)}{2m}}  \label{ineqn: Rademacher_margin_bound_2}
+\end{align}
+\end{theorem}
+\begin{proof}
+Consider the family of functions taking values in $[0, 1]$:
+\begin{align*}
+\varphi_{\rho} \circ \cM := \set{\varphi_{\rho} \circ f:  f\in \cM}
+\end{align*} where $\cM := \set{(x,y) \to yf(x): f \in  \text{conv}(\cH)}$. By the generalization bound via Rademacher complexity,
+\begin{align*}
+\E{}{\varphi_{\rho}(Y h(X))} &\le \frac{1}{m}\sum_{i=1}^{m}\varphi_{\rho}\paren{Y_i h(X_i)} + 2 \frR_{m}(\varphi_{\rho} \circ \cM )  + \sqrt{\frac{\log(1 / \delta)}{2m}}
+\end{align*} By inequality \eqref{eqn: emp_margin_loss_bound}
+\begin{align*}
+L(h) =\E{}{\ind{Y \neq h(X)}} \le \E{}{\varphi_{\rho}(Y h(X))}
+\end{align*} thus
+\begin{align*}
+L(h)  &\le \widehat{L}_{m, \rho}(h) + 2 \frR_{m}(\varphi_{\rho} \circ \cM )  + \sqrt{\frac{\log(1 / \delta)}{2m}}
+\end{align*}
+Note that $\varphi_{\rho}$ is $(\frac{1}{\rho})$-Lipschitz function. 
+\begin{align*}
+\frR_{m}(\varphi_{\rho} \circ \cM ) &\le  \frac{1}{\rho}\frR_{m}( \cM ) &&\quad  (\text{ by contraction principle})\\
+&= \frac{1}{\rho}\frR_{m}(\text{conv}(\cH) ) &&\quad  (\text{ since $y_i$ is absorbed by $\sigma_i$})\\
+&= \frac{1}{\rho}\frR_{m}(\cH). &&\quad  (\text{ by \eqref{eqn: rademacher_complexity_convex_hull}})
+\end{align*} This complete the proof. \qed
+\end{proof}
+
+\item \begin{theorem} (\textbf{Ensemble VC-Dimension Margin Bound}) \citep{schapire2012boosting, mohri2018foundations} \\
+Let $\cH$ be a family of functions taking values in $\set{+1, -1}$ with VC-dimension $d$. Fix $\rho > 0$. Then, for any $\delta > 0$, with probability at least $1 - \delta$,  the following holds for all $h \in \text{conv}(\cH)$:
+\begin{align}
+L(h) &\le \widehat{L}_{m, \rho}(h) + \frac{2}{\rho}\sqrt{\frac{2d \log(em/d)}{m}}   + \sqrt{\frac{\log(1 / \delta)}{2m}} \label{eqn: Rademacher_margin_bound_vc_dim}
+\end{align}
+\end{theorem}
+
+\item \begin{remark}
+Note that from the point of view of binary classification, $g$ and $g/\norm{\alpha}{1}$ are equivalent since $\sgn{g} = \sgn{g/\norm{\alpha}{1}}$, thus $L(g) = L(g/\norm{\alpha}{1})$, but their empirical margin loss are distinct. Let $g =\sum^T_{t=1}\alpha_t h_t$ denote the function defining the classifier returned by AdaBoost after $T$ rounds of boosting when trained on sample $\cD$. Then, in view of \eqref{ineqn: Rademacher_margin_bound},  for any $\delta > 0$, with
+probability at least $1 - \delta$
+\begin{align}
+L(g) &\le \widehat{L}_{m, \rho}(g/\norm{\alpha}{1}) + \frac{2}{\rho} \frR_{m}(\cH)  + \sqrt{\frac{\log(1 / \delta)}{2m}}  \label{ineqn: Rademacher_margin_bound_norm_l1}
+\end{align}
+\end{remark}
+
+\item \begin{remark}(\textbf{\emph{Generalization Guarantee by Large Margin Only}})\\
+Remarkably, \emph{\textbf{the number of rounds of boosting} $T$ \textbf{does not appear} in the generalization bound} \eqref{ineqn: Rademacher_margin_bound_norm_l1}. The bound depends only on \emph{the margin $\rho$, the sample size $m$, and the Rademacher complexity of the family of base classifiers $\cH$}. Thus, the bound guarantees an effective generalization if the margin loss $\widehat{L}_{m, \rho}(g/\norm{\alpha}{1})$ is small for a relatively large
+$\rho$. 
+\end{remark}
+
+\item \begin{proposition} (\textbf{Empirical Margin Loss Bound for AdaBoost})  \citep{schapire2012boosting, mohri2018foundations} \\
+Let $g =\sum^T_{t=1}\alpha_t h_t$ denote the function defining the classifier returned by AdaBoost after $T$ rounds of boosting and assume for all $t \in [1, T]$ that $\epsilon_t < 1/2$, which implies $\alpha_t > 0$. Then, for any $\rho > 0$, the following holds:
+\begin{align}
+\widehat{L}_{m, \rho}(g/\norm{\alpha}{1})  &\le  2^T\prod_{t=1}^{T}\sqrt{\epsilon_t^{1-\rho}(1 - \epsilon_t)^{1 + \rho}} \le \brac{(1- 2\gamma)^{1-\rho}(1+2\gamma)^{1+\rho}}^{T/2} \label{ineqn: emp_margin_loss_bound}
+\end{align} where $\epsilon_t \le 1/2 - \gamma$. Note $\brac{(1- 2\gamma)^{1-\rho}(1+2\gamma)^{1+\rho}} < 1$.
+\end{proposition}
+
+\item \begin{remark} (\emph{\textbf{AdaBoost Maximize the Margin? }})\\
+The margin bounds combined with the bound on the empirical margin loss suggest that under some conditions, \emph{AdaBoost can achieve \textbf{a large margin on the training sample}}. They could also serve as a theoretical explanation of the empirical observation that \emph{in some tasks \textbf{the generalization error decreases} as a function of $T$ even after the error on the training sample is zero}: \emph{the margin would continue to increase}. 
+
+But does \emph{AdaBoost} maximize the $L_1$-margin? \emph{\textbf{No}}. It has been shown that \emph{AdaBoost may \textbf{converge to a margin} that is \textbf{significantly smaller than the maximum margin}}. However, under some general assumptions, when the data is \emph{separable} and \emph{the base learners satisfy particular conditions}, it has been proven that \emph{AdaBoost} can \emph{\textbf{asymptotically} achieve \textbf{a margin} that is \textbf{at least half the maximum margin}}, $\rho_{max}/2$.
+\end{remark}
+
+\item \begin{remark} (\emph{\textbf{Limit for Margin Theory}})\\
+We can directly maximize the $L_1$-margin by solving a \emph{Linear Programming (LP) problem}. By definition, the solution of the LP just described admits an $L_1$-margin that is larger or equal to that of the \emph{AdaBoost} solution. However, empirical results do not show a systematic benefit for the solution of the LP. In fact, it appears that in many cases, \emph{AdaBoost} \emph{outperforms that algorithm}.  \emph{\textbf{The margin theory}} described \emph{\textbf{does not seem sufficient}} to explain that performance.
+\end{remark}
 \end{itemize}
 \section{Fundamental Perspectives}
 \subsection{Game Theory}

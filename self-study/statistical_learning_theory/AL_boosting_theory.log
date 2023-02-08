@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  7 FEB 2023 21:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  8 FEB 2023 11:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -710,45 +710,59 @@ Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
 (amsmath)                 on input line 207.
 
-[6] [7] [8]
-LaTeX Font Info:    Try loading font information for U+euf on input line 335.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
+[6] [7] [8] <piecewise_linear.png, id=51, 518.93875pt x 470.75874pt>
+File: piecewise_linear.png Graphic file (type png)
+
+<use piecewise_linear.png>
+Package pdftex.def Info: piecewise_linear.png used on input line 336.
+(pdftex.def)             Requested size: 207.57182pt x 188.30016pt.
+ [9 <./piecewise_linear.png>]
+LaTeX Font Info:    Try loading font information for U+euf on input line 374.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [9]
-[10] (./AL_boosting_theory.bbl) [11] (./AL_boosting_theory.aux)
+) [10] [11]
+Overfull \hbox (1.96722pt too wide) in paragraph at lines 439--441
+[]\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Ensemble VC-Dimension Mar-gin Bound
+\OT1/cmr/m/it/10.95 ) [Schapire and Fre-und, 2012,
+ []
+
+[12] [13] (./AL_boosting_theory.bbl) [14] (./AL_boosting_theory.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 15939 strings out of 493029
- 315699 string characters out of 6136233
- 366932 words of memory out of 5000000
- 19136 multiletter control sequences out of 15000+600000
- 15020 words of font info for 59 fonts, out of 8000000 for 9000
+ 15973 strings out of 493029
+ 316309 string characters out of 6136233
+ 368032 words of memory out of 5000000
+ 19163 multiletter control sequences out of 15000+600000
+ 17668 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,13n,84p,1154b,395s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,16n,84p,1154b,463s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on AL_boosting_theory.pdf (11 pages, 401715 bytes).
+nts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/symbols/msbm10.pfb>
+Output written on AL_boosting_theory.pdf (14 pages, 445045 bytes).
 PDF statistics:
- 118 PDF objects out of 1000 (max. 8388607)
- 83 compressed objects within 1 object stream
+ 137 PDF objects out of 1000 (max. 8388607)
+ 96 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 28 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 

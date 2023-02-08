@@ -3,10 +3,9 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: AL_boosting_theory.aux
 The style file: plainnat.bst
 Database file #1: reference.bib.bib
-Warning--I didn't find a database entry for "mohri2012foundations"
 You've used 4 entries,
             2773 wiz_defined-function locations,
-            614 strings with 5440 characters,
+            613 strings with 5420 characters,
 and the built_in function-call counts, 1585 in all, are:
 = -- 120
 > -- 102
@@ -45,4 +44,3 @@ warning$ -- 0
 while$ -- 12
 width$ -- 0
 write$ -- 58
-(There was 1 warning)
