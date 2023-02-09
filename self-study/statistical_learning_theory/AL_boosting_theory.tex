@@ -166,7 +166,7 @@ L(F)  \equiv L(y, F) := \exp\paren{- y F(x)} \label{def: exp_loss}
 \begin{figure}
 \begin{minipage}[t]{1\linewidth}
   \centering
-  \centerline{\includegraphics[scale = 0.5]{grad_boost.png}}
+  \centerline{\includegraphics[scale = 0.4]{grad_boost.png}}
 \end{minipage}
 \caption{\footnotesize{\textbf{Gradient Boost Tree Algorithm \citep{hastie2009elements}}}}
 \label{fig: grad_boost}
@@ -174,8 +174,7 @@ L(F)  \equiv L(y, F) := \exp\paren{- y F(x)} \label{def: exp_loss}
 
 
 \begin{itemize}
-\item The interpretation of functional gradient descent can be used to develop a series of new boosting algorithms with different loss $L$ than exponential loss.
-
+%\item The interpretation of functional gradient descent can be used to develop a series of new boosting algorithms with different loss $L$ than exponential loss.
 \item The \emph{\textbf{gradient boosting methods}} uses the negative functional gradient on samples $\cD$ as  
 \begin{align}
 -\nabla L_{\cD}(F_{t-1}) := -\brac{\partdiff{L(y, h)}{h_t(x_i)}\Bigr|_{h = F_{t-1}}}_{i=1\xdotx{,}m} \equiv \brac{r_{i,t}}_{i=1\xdotx{,}m} \label{eqn: grad_boost}
@@ -185,6 +184,10 @@ L(F)  \equiv L(y, F) := \exp\paren{- y F(x)} \label{def: exp_loss}
 \begin{align}
 \min_{h_t \in \cH} \sum_{i=1}^{m}\paren{r_{i,t} - h_t(x_i)}^2 = \min_{h_t \in \cH} \sum_{i=1}^{m}\norm{-\nabla L_{\cD}(F_{t-1}) - h_t}{2}^2 \label{eqn: grad_boost_regression_task}
 \end{align}
+Finally, choose $\alpha_t$ that minimize the loss function $L$:
+\begin{align*}
+\alpha_t := \sum_{i=1}^{m}r_{i,t} \frac{h_t(x_i)}{\norm{h_t}{2}^2}
+\end{align*}
 
 \item Equivalently,  \emph{\textbf{the negative functional gradient}} becomes \emph{\textbf{the pseudo-label}} for the new hypothesis during the learning. 
 
