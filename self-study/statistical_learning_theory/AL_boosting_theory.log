@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  8 FEB 2023 15:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  8 FEB 2023 22:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -677,87 +677,101 @@ File: adaboost.png Graphic file (type png)
  <use adaboost.png>
 Package pdftex.def Info: adaboost.png used on input line 40.
 (pdftex.def)             Requested size: 356.52568pt x 346.08687pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 48.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 47.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 48.
-
-<anyboost.png, id=15, 897.3525pt x 404.51125pt>
-File: anyboost.png Graphic file (type png)
- <use anyboost.png>
-Package pdftex.def Info: anyboost.png used on input line 56.
-(pdftex.def)             Requested size: 358.93463pt x 161.80162pt.
-
-<grad_boost.png, id=16, 637.38126pt x 569.12625pt>
-File: grad_boost.png Graphic file (type png)
- <use grad_boost.png>
-Package pdftex.def Info: grad_boost.png used on input line 69.
-(pdftex.def)             Requested size: 318.68985pt x 284.56242pt.
-
-Underfull \vbox (badness 7273) has occurred while \output is active []
-
- [2 <./adaboost.png>] [3 <./anyboost.png> <./grad_boost.png>]
-LaTeX Font Info:    Try loading font information for U+dsrom on input line 95.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 47.
+ [2 <./adaboost.png>]
+LaTeX Font Info:    Try loading font information for U+dsrom on input line 67.
 
 (/usr/share/texlive/texmf-dist/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-) [4] [5]
-[6]
+) [3]
+Overfull \hbox (20.05167pt too wide) in paragraph at lines 95--96
+[]\OT1/cmr/m/it/10.95 One of main rea-son be-hind the \OT1/cmr/bx/it/10.95 pop-
+u-lar-ity \OT1/cmr/m/it/10.95 of boost-ing \OT1/cmr/m/n/10.95 is \OT1/cmr/m/it/
+10.95 its high $[]$\OT1/cmr/m/n/10.95 .
+ []
+
+[4]
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no © in font cmr10!
+ <anyboost.png, id=35, 897.3525pt x 404.51125pt>
+File: anyboost.png Graphic file (type png)
+ <use anyboost.png>
+Package pdftex.def Info: anyboost.png used on input line 140.
+(pdftex.def)             Requested size: 358.93463pt x 161.80162pt.
+ [5]
+<grad_boost.png, id=42, 637.38126pt x 569.12625pt>
+File: grad_boost.png Graphic file (type png)
+ <use grad_boost.png>
+Package pdftex.def Info: grad_boost.png used on input line 169.
+(pdftex.def)             Requested size: 318.68985pt x 284.56242pt.
+
+[6 <./anyboost.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7 <./grad_boost.png>] [8] [9] [10]
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 235.
+(amsmath)                 on input line 358.
 
-[7] [8] <overfitting_adaboost.png, id=53, 842.14626pt x 540.0175pt>
+[11] [12] <overfitting_adaboost.png, id=65, 842.14626pt x 540.0175pt>
 File: overfitting_adaboost.png Graphic file (type png)
 
 <use overfitting_adaboost.png>
-Package pdftex.def Info: overfitting_adaboost.png used on input line 332.
+Package pdftex.def Info: overfitting_adaboost.png used on input line 455.
 (pdftex.def)             Requested size: 336.85254pt x 216.00316pt.
- [9] [10 <./overfitting_adaboost.png>]
-<piecewise_linear.png, id=61, 518.93875pt x 470.75874pt>
+ [13] [14 <./overfitting_adaboost.png>]
+<piecewise_linear.png, id=74, 518.93875pt x 470.75874pt>
 File: piecewise_linear.png Graphic file (type png)
 
 <use piecewise_linear.png>
-Package pdftex.def Info: piecewise_linear.png used on input line 389.
+Package pdftex.def Info: piecewise_linear.png used on input line 512.
 (pdftex.def)             Requested size: 207.57182pt x 188.30016pt.
- [11 <./piecewise_linear.png>]
-LaTeX Font Info:    Try loading font information for U+euf on input line 427.
+ [15 <./piecewise_linear.png>]
+LaTeX Font Info:    Try loading font information for U+euf on input line 550.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [12]
-Overfull \hbox (1.96722pt too wide) in paragraph at lines 491--493
+) [16]
+Overfull \hbox (1.96722pt too wide) in paragraph at lines 614--616
 []\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Ensemble VC-Dimension Mar-gin Bound
 \OT1/cmr/m/it/10.95 ) [Schapire and Fre-und, 2012,
  []
 
-[13] <dist_margin.png, id=73, 836.12375pt x 553.06625pt>
+[17] <dist_margin.png, id=85, 836.12375pt x 553.06625pt>
 File: dist_margin.png Graphic file (type png)
  <use dist_margin.png>
-Package pdftex.def Info: dist_margin.png used on input line 515.
+Package pdftex.def Info: dist_margin.png used on input line 638.
 (pdftex.def)             Requested size: 334.44357pt x 221.22258pt.
 
-[14 <./dist_margin.png>]
+[18 <./dist_margin.png>]
 Underfull \vbox (badness 4779) has occurred while \output is active []
 
- [15]
-[16] (./AL_boosting_theory.bbl) [17] (./AL_boosting_theory.aux)
+ [19]
+[20] (./AL_boosting_theory.bbl
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no © in font cmr10!
+Missing character: There is no Â in font cmti10!
+Missing character: There is no ® in font cmti10!
+) [21] (./AL_boosting_theory.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 15989 strings out of 493029
- 316699 string characters out of 6136233
- 369090 words of memory out of 5000000
- 19177 multiletter control sequences out of 15000+600000
+ 16005 strings out of 493029
+ 317141 string characters out of 6136233
+ 369274 words of memory out of 5000000
+ 19193 multiletter control sequences out of 15000+600000
  17668 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,16n,84p,1154b,461s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,16n,84p,1244b,461s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
@@ -778,10 +792,10 @@ onts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/symbols/msbm10.pfb>
-Output written on AL_boosting_theory.pdf (17 pages, 539466 bytes).
+Output written on AL_boosting_theory.pdf (21 pages, 562941 bytes).
 PDF statistics:
- 153 PDF objects out of 1000 (max. 8388607)
- 105 compressed objects within 2 object streams
+ 166 PDF objects out of 1000 (max. 8388607)
+ 114 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  43 words of extra memory for PDF output out of 10000 (max. 10000000)
 

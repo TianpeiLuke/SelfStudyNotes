@@ -44,22 +44,122 @@
 \end{figure}
 
 \begin{itemize}
-\item 
+\item \emph{\textbf{The AdaBoost algorithm}} is the first boosting algorithms proposed by Freund and Schapire \citep{schapire2012boosting}. Its basic idea is to combine multiple \emph{weak learners} to form a \emph{strong learner}. This strategy is called \emph{\textbf{ensemble learning}}. Let $h_t \in \cH$ be base hypothesis, and $\alpha_t$ be the corresponding weight at iteration $t \in [1,T]$. The \emph{combined learner} after $T$ iteration is
+\begin{align*}
+H(x) := \sgn{\sum_{t=1}^{T}\alpha_t h_t(x)}
+\end{align*}
+
+\item \begin{remark}
+There are several other \emph{ensemble learning algorithms} such that \emph{\textbf{bagging algorithms}}, which is based on \emph{\textbf{boostrap resampling stretegy}}. The idea is to \emph{sample with replacement} on the existing dataset to create \emph{duplicated records}. The most frequent seen records in the existing data are more likely be sampled thus this idea is equivalent to \emph{\textbf{Monte Carlo sampling}} according to the empirical distribution. For each resampled dataset, we can train a classifier that reflect our understanding on the duplicated sample. Then we combine multiple classifier to build a single classifier via \emph{\textbf{decision fusion}}. The typical bagging-based algorithm is \emph{\textbf{the random forest algorithm}}, which build decision trees for each boostrapped dataset and combine them.
+\end{remark}
+
+\item \begin{remark}(\textbf{\emph{Characteristic of AdaBoost}}) \\
+\emph{AdaBoost} is an \emph{ensemble learning method}. The followings are several key characteristics:
+\begin{enumerate}
+\item  \emph{\textbf{AdaBoost}}  trains \emph{\textbf{multiple weak learners}} in \underline{\emph{\textbf{sequential manner}}}. Unlike \emph{bagging methods}, \emph{boosting methods} build weak learners \emph{sequentially}. \emph{\textbf{The performance of the previous learners} will \textbf{affect} \textbf{how the new weak-learner is trained}}. In the case of AdaBoost, it will be reflected in \emph{the sample weights}, with misclassified samples having increased weight. 
+
+In this way, it is described as a \underline{\emph{\textbf{functional gradient descent algorithm}}} which \emph{instead of computing the gradient}, it \emph{learns \textbf{a new base hypothesis} that \textbf{resembles} \textbf{the gradient of functional}}.
 
 
+\item \emph{\textbf{The performance measure}} in each step of \emph{\textbf{AdaBoost}} is \emph{\textbf{the training error rate}} of new base learner relative to \emph{\textbf{a weighted sample distribution}}; i.e.
+\begin{align*}
+\epsilon_t := \Em{\cD_t}{h_t(X) \neq Y} = \sum_{i=1}^{m}\cD_t(i) \ind{h_t(X_i)}
+\end{align*} The training error rate under $\cD_t$ has two roles:
+\begin{enumerate}
+\item it deterime \emph{the \textbf{weight} $\alpha_t$ for the base hypothesis $h_t$.} In AdaBoost, 
+\begin{align*}
+\alpha_t = \frac{1}{2}\log\paren{\frac{1 - \epsilon_t}{\epsilon_t}}.
+\end{align*} It is clear that when the classifier $h_t$ is no more than a random guess with $\epsilon_t = 1/2$, the corresponding weight $\alpha_t = 0$. In other situation, the \emph{smaller} the $\epsilon_t$ the \emph{larger} the $\alpha_t$. Note that $\alpha_t >0$ \emph{\textbf{if and only if}} $\epsilon_t < 1/2$ meaning that the learned hypothesis $h_t$ is a \emph{weak-learner}.
+
+\item it determines \emph{\textbf{the multiplicative factor} in the exponential reweight strategy for each sample}. In particular, the factor is $\exp\paren{-\alpha_t y_i h_t(x_i)}$.
+\end{enumerate}
+
+\item \emph{\textbf{AdaBoost} apply an \textbf{\underline{exponential reweighting strategy}} at each iteration}. In particular, 
+\begin{align*}
+\cD_{t+1}(i) &= \frac{\cD_t}{Z_t} \times \left\{\begin{array}{cc}
+e^{-\alpha_t} &\text{if }h_t(x_i) = y_i \\
+e^{\alpha_t} &\text{if }h_t(x_i) \neq y_i 
+\end{array}
+\right.
+\end{align*} where $Z_t := \sum_{i=1}^{m}\cD_t(i)\exp\paren{-\alpha_t y_i h_t(x_i)}$ is the partition function that normalized the sample distribution $\cD_{t+1}$. The exponential reweighting strategy \emph{\textbf{shrinks}} the weight by $e^{-\alpha_t} < 1$ when \emph{the sample is correctly labeled}, while \emph{\textbf{enlarges}} the weight by $e^{\alpha_t} > 1$ when \emph{the sample is \textbf{incorrectly labeled}}. This means that \emph{misclassified samples will have \textbf{higher weights}} in next iteration.
+
+\item \emph{AdaBoost} promote the idea of \underline{\emph{\textbf{adversarial learning}}} that is shown great success in deep learning models such as \emph{Generative Adversarial Network (GAN)}. The key idea comes from the \underline{\emph{\textbf{two player zero-sum game}}}. Unlike GAN, AdaBoost did not continually re-train the same hypothesis but instead move on to build a new hypothesis for a few misclassified samples.
+
+The change of sample distribution $\cD_t \to \cD_{t+1}$ helps the AdaBoost to \emph{\textbf{boost the impact} of} \underline{\emph{\textbf{adversarial samples}}} for the \emph{new} learner so that it will \emph{\textbf{overemphasize on the past mistakes}}. The consequence is that \emph{\textbf{the later learned} base hypothesis} is \emph{\textbf{more specialized} on a few \textbf{difficult samples}} while \emph{\textbf{the early learned} base hypothesis} is \emph{more generalized for a majority of easy samples}.
+
+In the end, when \emph{the error rate} of new classifier \emph{decreased}, the corresponding \emph{hypothesis weight} $\alpha_t$ will \emph{decrease} and the multiplicative factor will \emph{tends to} $1$, which leades to the sample distribution \emph{\textbf{converge to some stationary distribution}}.
+\begin{align*}
+h_t \to \epsilon_t \downarrow \qquad \Rightarrow e^{\alpha_t} \to 1 \qquad  \Rightarrow \cD_t \approx \cD_{t+1}
+\end{align*}
+
+\item \emph{One of main reason behind the \textbf{popularity} of boosting} is \emph{its high \textbf{\underline{computational  efficiency}}}. Boosting methods are highly \emph{\textbf{scalable}} for large dataset with high dimensions. \emph{AdaBoost} provides \emph{\textbf{performance guarantee} both \textbf{theorectically} and \textbf{practically}} when the base learner is implemented with simple learning algorithm such as \emph{\textbf{decision trees}}. Specifically, when using decision stumps ($1$-layer decision tree), the time complexity of each round of boosting is in $\cO(m n)$ where $n$ is the feature dimension and $m$ is the sample size.
+\end{enumerate}
+\end{remark}
+
+\item \begin{remark}
+\emph{AdaBoost} is a well-studied algorithm and it provides \emph{\textbf{theorectical guarantee}} based on\emph{ statistical learning theory}. This chapter focus on various aspects of theorectial guarantee of AdaBoost algorithm and its \emph{\textbf{connections}} to other algorithms. In particular, we focus on following aspects:
+\begin{enumerate}
+\item We show that \emph{\textbf{the training error}} of AdaBoost \emph{\textbf{will converge to zero}} as iteration $T$ increases, even if each single hypothesis only slightly better than random guess with error rate $\epsilon_t = \frac{1}{2} - \gamma_t$.
+
+\item We develop \emph{\textbf{the generalization error bound}} for AdaBoost using \emph{\textbf{VC dimension} of base hypothesis class $\cH$}. This allows us to provides \emph{\textbf{Probably Approximately Correct (PAC) learnablity}} guarantee for given hypothesis class $\cH$ and it helps to \emph{quantitatively} describe the \emph{\textbf{sample complexity}} of the algorithm. VC dimension theory also helps us to build intuition on the \emph{\textbf{tradeoff}} between lower training error and overfitting as the number of iterations increases (i.e. \emph{\textbf{the Bias-Complexity tradeoff}}).
+
+\item The VC dimension theory is not sufficient to explain the performance of AdaBoost, esp. when the generalization error continues to improve even if the training error is zero. An alterinative theory in statistical learning is called \emph{\textbf{the large margin theory}}. In particular, it associated the performance of classifier with the \emph{\textbf{margin}} between \emph{the decision boundary and samples}. The idea is that for binary classification, a good classifier not only make correct decision but also make decision that is \emph{\textbf{robust to small perturbation}} of  samples. Leaving a margin between decision boundary and samples allows the classifier to  \emph{\textbf{avoid making mistakes with highly confidence}}. The idea of learning with maximal margin motivates the development of \emph{support vector machines (SVM)}. Boosting and SVM do share some similarities here. However, \emph{\textbf{boosting is not directly optimizing the margin}}. Although in practice and theory, it is observed that the learned hypothesis from AdaBoost do have a large margin, it can also be shown that \emph{AdaBoost's success cannot be \textbf{fully explained by large margin}} either.
+
+\item One important aspect for AdaBoost is its connection to \emph{\textbf{game theory}} via its \emph{\textbf{adversarial training style}}. \emph{The min-max theorem} helps us to understand that \emph{\textbf{the weak learnablity assumption}} implies \emph{a \textbf{strong assumption} that \textbf{the dataset is linearly separable with a margin}}.
+
+\item Other algorithms have connections with AdaBoost include 
+\begin{enumerate}
+\item \emph{\textbf{online learning}} \citep{cesa2006prediction}, esp. when \emph{\textbf{the exponential reweighting strategy}} is used; and
+\item \emph{\textbf{Bregman iterative projections}} \citep{gabriel2019computational}, a generic algorithms that at each iteration projects to a subspace that is closer to the target by minimizing the \emph{\textbf{Bregman divergence}}.
+\item The way when the sample distribution is optimized is also close to \emph{\textbf{maximum entropy learning}} \citep{thomas2006elements}.
+\end{enumerate}
+\end{enumerate}
+\end{remark}
 \end{itemize}
 
 \subsection{Functional Gradient Descent}
+\begin{itemize}
+\item The boosting models are summarized as a \emph{\textbf{stage-wise additive model}} \citep{hastie2009elements}, 
+\begin{align*}
+F_{M}(x) &:= \sum_{t=1}^{M}\alpha_t h_t(x).
+\end{align*}
+
+\item The learning algorithm, at each iteration $t$, choose a base hypothesis $h_t \in \cH$ and its weight $\alpha_t \in \bR$ that \emph{minimizes} the loss, given \emph{the additive model in previous iterations}:
+\begin{align*}
+\min_{h_t \in \cH, \alpha_t \in \bR}\sum_{i=1}^{m}L(y_i, F_{t-1}(x_i) + \alpha_t h_t(x_i))
+\end{align*} After $(h_t, \alpha_t)$ is selected, it \emph{merges} with existing additive model $F_{t}(x)  = F_{t-1}(x) + \alpha_t h_{t}$.
+
+\item Given sample $\cD$, we treat $h_t \in \cH$ on $\cD$ as a vector $h_{\cD} := (h_t(x_1) \xdotx{,} h_t(x_m))$. Then we can find the gradient of loss function with respect to the vector $h_{\cD}$ evaluated at $F_{t-1}$
+\begin{align}
+\nabla L_{\cD}(F_{t-1}) := \brac{\partdiff{L(y, h)}{h_t(x_i)}\Bigr|_{h = F_{t-1}}}_{i=1\xdotx{,}m} \label{eqn: functional_gradient_on_samples}
+\end{align} 
+
 \begin{figure}
 \begin{minipage}[h!]{1\linewidth}
   \centering
   \centerline{\includegraphics[scale = 0.4]{anyboost.png}}
 \end{minipage}
-\caption{\footnotesize{\textbf{Gradient Boost Tree Algorithm \citep{hastie2009elements}}}}
+\caption{\footnotesize{\textbf{A generic boosting algorithm based on functional gradient descent \citep{hastie2009elements}}}}
 \label{fig: grad_boost}
 \end{figure}
-\begin{itemize}
-\item 
+
+\item This step is close to the classical \emph{gradient descent algorithm} for \emph{(unconstrained) optimization}. \emph{\textbf{The major difference}} is that instead of computing \emph{the numerical gradient} $\nabla L$, we choose to \emph{\textbf{learn a new base hypothesis}} $h_t \in \cH$ that \emph{\textbf{matches}} the \emph{\textbf{negative functional gradient}}
+\begin{align}
+h_t := \arg\min_{h \in \cH}Diss(h_{\cD}, -\nabla L_{\cD}(F_{t-1}) ),  \label{eqn: functional_gradient_descent}
+\end{align} where $Diss$ is some \emph{\textbf{distance/dissimilarity measure}} between two functions on given data set $\cD$. Thus the new base hypothesis $h_t$ plays role of $-\nabla L(F_{t-1})$ and it is then merging with existing function $F_{t-1}$ to \emph{make corrections}.
+
+\item It can be shown that for AdaBoost, the loss functional is the exponential loss:
+\begin{align}
+L(F)  \equiv L(y, F) := \exp\paren{- y F(x)} \label{def: exp_loss}
+\end{align} and the functional gradient 
+\begin{align}
+\nabla L_{\cD}(F_{t-1}) := \brac{\frac{-y_i \exp\paren{-y_i F_{t-1}(x_i)} }{m}}_{i=1\xdotx{,}m}. \label{eqn: adaboost_functional_gradient_on_samples}
+\end{align} Choose similarity measure as \emph{the  cosine similarity}, which means that the goal is to optimize 
+\begin{align*}
+\max_{h \in \cH} S(h_{\cD}, -\nabla L_{\cD}(F_{t-1}) ) &= \max_{h \in \cH} \frac{1}{m}\sum_{i=1}^{m} y_i h_t(x_i)\exp\paren{-y_i F_{t-1}(x_i)} \\
+&= \max_{h \in \cH}\sum_{i=1}^{m}D_{t}(i) y_i h_t(x_i) := 1- 2\epsilon_t
+\end{align*} So the goal of the maximizing the cosine similarity is equivalent to minimizing the error rate $\epsilon_t$ on weighted sample distribution $\cD_t$. The hypothesis weight $\alpha_t$ is chosen to minimize the exponential loss \eqref{def: exp_loss}.
+
 \end{itemize}
 
 \subsection{Gradient Boost}
@@ -74,9 +174,32 @@
 
 
 \begin{itemize}
-\item 
+\item The interpretation of functional gradient descent can be used to develop a series of new boosting algorithms with different loss $L$ than exponential loss.
 
+\item The \emph{\textbf{gradient boosting methods}} uses the negative functional gradient on samples $\cD$ as  
+\begin{align}
+-\nabla L_{\cD}(F_{t-1}) := -\brac{\partdiff{L(y, h)}{h_t(x_i)}\Bigr|_{h = F_{t-1}}}_{i=1\xdotx{,}m} \equiv \brac{r_{i,t}}_{i=1\xdotx{,}m} \label{eqn: grad_boost}
+\end{align} 
 
+\item At each iteration, it learns a base hypothesis that minimize \emph{the mean squared error loss}. In other word, it treats \emph{the negative functional gradient vector} $\brac{r_{i,t}}_{i=1}^{m}$ as \emph{the \underline{\textbf{residual}} and perform \underline{\textbf{regression tasks iteratively}}}. That is,
+\begin{align}
+\min_{h_t \in \cH} \sum_{i=1}^{m}\paren{r_{i,t} - h_t(x_i)}^2 = \min_{h_t \in \cH} \sum_{i=1}^{m}\norm{-\nabla L_{\cD}(F_{t-1}) - h_t}{2}^2 \label{eqn: grad_boost_regression_task}
+\end{align}
+
+\item Equivalently,  \emph{\textbf{the negative functional gradient}} becomes \emph{\textbf{the pseudo-label}} for the new hypothesis during the learning. 
+
+\item Compared to \emph{AdaBoost}, \emph{\textbf{the Gradient Boost}} has several differences:
+\begin{enumerate}
+\item Gradient boost generalized the AdaBoost by \emph{choosing a \textbf{general loss function}} in the learning task, which could be more efficient and more \emph{\textbf{flexible}} for some tasks. 
+
+\item Unlike AdaBoost, \underline{\emph{\textbf{no sample reweighting is needed for Gradient Boost}}} since the role of error rate $\epsilon_t$ and sample distribution $\cD_t$ is fulfilled by \emph{the functional gradient} $\nabla L_{\cD}(F_{t-1})$. In particular, \emph{\textbf{correctly labeled samples}} have \emph{\textbf{smaller functional gradients}} while \emph{\underline{\textbf{misclassified} samples have \textbf{larger functional gradients}}}.
+
+In Gradient Boosting, `\emph{shortcomings}' (of existing weak learners) are identified by \emph{\textbf{gradients}}. In \emph{AdaBoost}, `\emph{shortcomings}' are identified by \emph{high-weight data points}.
+\end{enumerate}
+
+\item It tends to say that the main differences are that \emph{Gradient Boosting is a \underline{\textbf{generic algorithm}} to \textbf{find approximate solutions} to \textbf{the additive modeling problem}}, while AdaBoost can be seen as a special case with a particular loss function. Hence, \emph{Gradient Boosting is \textbf{much more flexible}}.
+
+However, as pointed by Freund and Schapire \citep{schapire2012boosting}, \emph{\textbf{optimizing the exponential loss alone cannot explain the performance of AdaBoost}} and is not sufficient to obtain good performance. It is likely due to \emph{\textbf{large margin property}} and \emph{\textbf{the adversarial training procedure}} that the AdaBoost outperforms its counterpart in optimization only approach.
 \end{itemize}
 
 \section{Theoretical Guarantee for Boosting}
@@ -558,8 +681,8 @@ We can directly maximize the $L_1$-margin by solving a \emph{Linear Programming 
 \section{Fundamental Perspectives}
 \subsection{Game Theory}
 \subsection{Online Learning}
-\subsection{Maximum Entropy Estimation}
-\subsection{Iterative Projection Algorithms and Convergence Analysis}
+\subsection{Maximum Entropy Learning}
+\subsection{Bregman Iterative Projection Algorithms}
 
 
 \newpage

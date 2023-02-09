@@ -1,9 +1,20 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{7}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Cesa-Bianchi and Lugosi(2006)]{cesa2006prediction}
+Nicolo Cesa-Bianchi and G{\'a}bor Lugosi.
+\newblock \emph{Prediction, learning, and games}.
+\newblock Cambridge university press, 2006.
+
+\bibitem[Cover and Thomas(2006)]{thomas2006elements}
+Thomas~M. Cover and Joy~A. Thomas.
+\newblock \emph{Elements of information theory {(2.} ed.)}.
+\newblock Wiley, 2006.
+\newblock ISBN 978-0-471-24195-9.
 
 \bibitem[Hastie et~al.(2009)Hastie, Tibshirani, and
   Friedman]{hastie2009elements}
@@ -17,6 +28,13 @@ Trevor Hastie, Robert Tibshirani, and Jerome~H Friedman.
 Mehryar Mohri, Afshin Rostamizadeh, and Ameet Talwalkar.
 \newblock \emph{Foundations of machine learning}.
 \newblock MIT press, 2018.
+
+\bibitem[Peyré and Cuturi(2019)]{gabriel2019computational}
+Gabriel Peyré and Marco Cuturi.
+\newblock Computational optimal transport: With applications to data science.
+\newblock \emph{Foundations and Trends® in Machine Learning}, 11\penalty0
+  (5-6):\penalty0 355--607, 2019.
+\newblock ISSN 1935-8237.
 
 \bibitem[Schapire and Freund(2012)]{schapire2012boosting}
 Robert~E. Schapire and Yoav Freund.

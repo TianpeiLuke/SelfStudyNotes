@@ -1,15 +1,15 @@
 \contentsline {section}{\numberline {1}Boosting Algorithm}{2}
 \contentsline {subsection}{\numberline {1.1}AdaBoost}{2}
-\contentsline {subsection}{\numberline {1.2}Functional Gradient Descent}{2}
-\contentsline {subsection}{\numberline {1.3}Gradient Boost}{2}
-\contentsline {section}{\numberline {2}Theoretical Guarantee for Boosting}{4}
-\contentsline {subsection}{\numberline {2.1}Weak Learner}{4}
-\contentsline {subsection}{\numberline {2.2}Training Error Bounds}{5}
-\contentsline {subsection}{\numberline {2.3}Generalization Error Bounds for Finite Hypothesis Class}{7}
-\contentsline {subsection}{\numberline {2.4}Generalization Error Bounds via VC Dimension}{9}
-\contentsline {subsection}{\numberline {2.5}Generalization Error Bounds via Margin Theory}{10}
-\contentsline {section}{\numberline {3}Fundamental Perspectives}{16}
-\contentsline {subsection}{\numberline {3.1}Game Theory}{16}
-\contentsline {subsection}{\numberline {3.2}Online Learning}{16}
-\contentsline {subsection}{\numberline {3.3}Maximum Entropy Estimation}{16}
-\contentsline {subsection}{\numberline {3.4}Iterative Projection Algorithms and Convergence Analysis}{16}
+\contentsline {subsection}{\numberline {1.2}Functional Gradient Descent}{5}
+\contentsline {subsection}{\numberline {1.3}Gradient Boost}{6}
+\contentsline {section}{\numberline {2}Theoretical Guarantee for Boosting}{8}
+\contentsline {subsection}{\numberline {2.1}Weak Learner}{8}
+\contentsline {subsection}{\numberline {2.2}Training Error Bounds}{9}
+\contentsline {subsection}{\numberline {2.3}Generalization Error Bounds for Finite Hypothesis Class}{11}
+\contentsline {subsection}{\numberline {2.4}Generalization Error Bounds via VC Dimension}{13}
+\contentsline {subsection}{\numberline {2.5}Generalization Error Bounds via Margin Theory}{14}
+\contentsline {section}{\numberline {3}Fundamental Perspectives}{20}
+\contentsline {subsection}{\numberline {3.1}Game Theory}{20}
+\contentsline {subsection}{\numberline {3.2}Online Learning}{20}
+\contentsline {subsection}{\numberline {3.3}Maximum Entropy Learning}{20}
+\contentsline {subsection}{\numberline {3.4}Bregman Iterative Projection Algorithms}{20}
