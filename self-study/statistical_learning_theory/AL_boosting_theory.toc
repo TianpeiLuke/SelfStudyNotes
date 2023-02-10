@@ -9,8 +9,7 @@
 \contentsline {subsection}{\numberline {2.4}Generalization Error Bounds via VC Dimension}{13}
 \contentsline {subsection}{\numberline {2.5}Generalization Error Bounds via Margin Theory}{14}
 \contentsline {section}{\numberline {3}Fundamental Perspectives}{20}
-\contentsline {subsection}{\numberline {3.1}Game Theory and Online Learning}{20}
-\contentsline {subsubsection}{\numberline {3.1.1}Game Theory}{20}
-\contentsline {subsubsection}{\numberline {3.1.2}Online Prediction}{23}
-\contentsline {subsubsection}{\numberline {3.1.3}AdaBoost as Sequential Two-player Zero-Sum Game}{25}
-\contentsline {subsection}{\numberline {3.2}Maximum Entropy Learning and Bregman Iterative Projection}{27}
+\contentsline {subsection}{\numberline {3.1}Game Theory}{20}
+\contentsline {subsection}{\numberline {3.2}Online Prediction}{22}
+\contentsline {subsection}{\numberline {3.3}AdaBoost as Repeated Zero-Sum Game}{25}
+\contentsline {subsection}{\numberline {3.4}Maximum Entropy Learning and Bregman Iterative Projection}{27}
