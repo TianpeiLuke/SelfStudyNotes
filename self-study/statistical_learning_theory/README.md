@@ -88,6 +88,7 @@
 - Boost Methods [pdf](./AL_boosting_theory.pdf)
   - Algorithms
     - AdaBoost
+    - Functional Gradient Descent
     - Gradient Boost
   - Theoretical Guarantee for Boosting
     - Settings
