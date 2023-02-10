@@ -94,11 +94,14 @@
     - Training Error Bound
     - Generalization Error Bounds via VC Dimension
     - Generalization Error Bounds via Margin Theory
-    - Generalization Error Bounds via Compression
   - Fundamental Perspectives
-    - Game Theory
-    - Online Learning
-    - Maximum Entropy Learning
-    - Iterative Projection Algorithm and Convergence Analysis
+    - Game Theory and Online Prediction
+      - Sequential Two-Player Game
+      - An Online Prediction Framework
+      - AdaBoost as Dual of Online Prediction
+    - Maximum Entropy Learning and Bregman Iterative Projection Algorithm
+      - Maximum Entropy and Bregman Iterative Projection
+      - Infeasibility for Weak Learnable Class
+      - Non-normalized Maximum Entropy Learning
 
 - Gaussian Process for Machine Learning
