@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: GBT_boosting_theory.aux
+The style file: plainnat.bst
+Database file #1: reference.bib.bib
+You've used 7 entries,
+            2773 wiz_defined-function locations,
+            631 strings with 5844 characters,
+and the built_in function-call counts, 2821 in all, are:
+= -- 226
+> -- 174
+< -- 6
++ -- 58
+- -- 51
+* -- 210
+:= -- 456
+add.period$ -- 24
+call.type$ -- 7
+change.case$ -- 32
+chr.to.int$ -- 7
+cite$ -- 14
+duplicate$ -- 142
+empty$ -- 235
+format.name$ -- 68
+if$ -- 583
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 13
+newline$ -- 46
+num.names$ -- 28
+pop$ -- 88
+preamble$ -- 1
+purify$ -- 31
+quote$ -- 0
+skip$ -- 107
+stack$ -- 0
+substring$ -- 35
+swap$ -- 8
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 47
+warning$ -- 0
+while$ -- 22
+width$ -- 0
+write$ -- 99
