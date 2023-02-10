@@ -6,7 +6,7 @@
 
 
 ## Table of Contents
-- Boosting Methods 
+- Boosting Methods [pdf](./GBT_boosting_theory.pdf)
   - Algorithms
     - AdaBoost
     - Gradient Boost
