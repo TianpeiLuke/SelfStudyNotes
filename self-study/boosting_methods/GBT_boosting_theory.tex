@@ -26,7 +26,7 @@
 
 
 \begin{document}
-\title{Lecture 3:  Theoretical Analysis of Boosting Methods}
+\title{Lecture 1:  Theoretical Analysis of Boosting Methods}
 \author{ Tianpei Xie}
 \date{Feb. 6th., 2023}
 \maketitle
@@ -217,7 +217,7 @@ Define an \emph{\textbf{observation}} as a $d$-dimensional vector $x$. The \emph
 \item \begin{definition} (\emph{\textbf{Generalization Error in Deterministic Scenario}})  \citep{mohri2018foundations}\\
 Under \emph{a deterministic scenario}, \underline{\emph{\textbf{generalization error}}} or the \underline{\emph{\textbf{risk}}} or simply \underline{\emph{\textbf{error}}} for the \emph{classifier} $h \in \cH$ is defined as
 \begin{align}
-L(h) \equiv L_{\cP, c}(h)  &= \cP\set{h(X) \neq c(X)} \equiv \E{X}{\ind{h(X)\neq c(X)}}\label{expr: gen_err_determin}
+L(h) \equiv L_{\cP, c}(h)  &= \cP\set{h(X) \neq c(X)} \equiv \E{X}{\ind{h(X)\neq Y}}\label{expr: gen_err_determin}
 \end{align}
 with respect to the concept $c \in \cC$ and \emph{the feature distribution} $\cP \equiv \cP_X$.
 \end{definition}
@@ -682,14 +682,8 @@ We can directly maximize the $L_1$-margin by solving a \emph{Linear Programming 
 \end{remark}
 \end{itemize}
 \section{Fundamental Perspectives}
-\subsection{Game Theory and Online Learning}
-\subsubsection{Game Theory}
+\subsection{Game Theory}
 \begin{itemize}
-%\item \begin{remark}(\textbf{\emph{Two-Player Zero-Sum Game in Normal Form}})\\
-%We study \emph{two-person games in \textbf{normal form}}. Such a game is defined by a matrix $M$. There are two players, \emph{\textbf{the row player}} and \emph{\textbf{the column player}}. To play the game, the row player chooses a row $i$ and, simultaneously, the column player chooses a column $j$. The selected entry $M(i, j)$ is \emph{\textbf{the loss} suffered by the \textbf{row player}}.
-%
-%The \emph{\textbf{row} player's goal} is to \emph{\textbf{minimize its loss}}, and we will generally focus mainly on this player's perspective of the game. Often, \emph{the goal of the \textbf{column} player} is to \emph{\textbf{maximize this loss}}, in which case the game is said to be \emph{\textbf{zero-sum}}, so named because the column player's loss can be viewed as the negative of the row player's, so that the losses of the two players always add up to exactly zero. 
-%\end{remark}
 \item \begin{definition}(\textbf{\emph{Two-Player Zero-Sum Game in Normal Form}})  \citep{schapire2012boosting, mohri2018foundations} \\
 A \underline{\emph{\textbf{two-person zero-sum game}}} consists of a loss matrix $M \in \bR^{m\times n}$, where $m$ is\emph{ the number of possible actions (or \underline{\textbf{pure strategies}}) for the row player} and $n$ the \emph{number of possible actions for the column player}. The entry $M_{i,j}$ is the \emph{\textbf{loss}} for the \emph{\textbf{row player}} (or equivalently the \emph{\textbf{payoff}} for \emph{the \textbf{column payer}}) when \emph{the row player takes action $i$} and \emph{the column player takes action $j$}.
 \end{definition}
@@ -742,35 +736,35 @@ The common value $v$ in \eqref{eqn: minmax_theorem} is called \underline{\emph{\
 The theorem states that for \emph{any two-person zero-sum game}, there exists a \emph{\textbf{mixed strategy}} for each player such that \emph{\textbf{the expected loss} for one is the \textbf{same} as \textbf{the expected payoff} for the other}, both of which are \emph{\textbf{equal to} the \textbf{value of the game}}.
 \end{remark}
 
+\item \begin{remark}(\textbf{\emph{Approximate Minmax/Maxmin Strategy}}) \\
+Consider \emph{\textbf{the average strategy}} over $T$ rounds of game
+\begin{align*}
+\overline{P} := \frac{1}{T}\sum_{t=1}^{T}P_t, \quad \overline{	Q} := \frac{1}{T}\sum_{t=1}^{T}Q_t.
+\end{align*} The proof of minmax theorem shows that
+\begin{align*}
+\max_{Q \in \Delta_{n}}M(\overline{P}, Q) \le \min_{P \in \Delta_{m}}\max_{Q \in \Delta_{n}}M(P, Q) + \Delta_{T} = v + \Delta_{T}
+\end{align*} Thus, the mixed strategy $\overline{P}$ is an \underline{\emph{\textbf{approximate minmax strategy}}} in the sense that for all column strategies $Q$, $M(\overline{P}, Q)$ does not exceed the game value $v$ by more than $ \Delta_{T}$.  Similarly, we have
+\begin{align*}
+\min_{P \in \Delta_{m}}M(P, \overline{	Q} ) \ge v - \Delta_{T},
+\end{align*} so $\overline{Q}$ is an \underline{\emph{\textbf{approximate maxmin strategy}}}.
+\end{remark}
+\end{itemize}
+\subsection{Online Prediction}
+\begin{itemize}
 \item \begin{remark}(\textbf{\emph{Excess Risk for Repeated Game}})\\
-To emphasize the roles of the two players, we here refer to \emph{the \textbf{row} player} as \emph{the \textbf{learner}}, and \emph{the \textbf{column} player} as \emph{the \textbf{environment}}. As before, $M$ is a \emph{game matrix}, possibly \emph{unknown} to \emph{the learner}. Assume that the game is \emph{\textbf{repeated}} $T$ rounds. At each iteration $t \in [1, T]$, the \emph{\textbf{learner}} chooses \emph{mixed strategy} $P_t$; and then the \emph{\textbf{environment}} chooses \emph{mixed strategy} $Q_t$.
-%Consider \emph{\textbf{the sequential two-player zero-sum game}} as an \emph{online learning}.
-%
-%This game is played \emph{\textbf{repeatedly} in a sequence of rounds}. On round $t = 1 \xdotx{,} T$:
-%\begin{enumerate}
-%\item the \emph{\textbf{learner}} chooses \emph{mixed strategy} $P_t$;
-%\item the \emph{\textbf{environment}} chooses \emph{mixed strategy} $Q_t$ (which may be chosen \emph{\textbf{with knowledge} of $P_t$});
-%\item the \emph{learner} is permitted to \emph{\textbf{observe the loss}} 
-%\begin{align*}
-%M(i, Q_t) := \sum_{j=1}^{n}M_{i,j}Q_t(j)
-%\end{align*} for each row $i$; this is the \emph{loss} it \emph{\textbf{would have} suffered} \emph{had it played using \textbf{pure strategy}} $i$ (i.e. \emph{the \textbf{potential outcomes}});
-%\item the \emph{learner} suffers loss 
-%\begin{align*}
-% M(P_t, Q_t) = \sum_{i = 1}^{m}\sum_{j=1}^{n}P_{t}(i)M_{i,j}Q_{t}(j).
-%\end{align*} 
-%\end{enumerate}
-
-The basic goal of the learner is to \emph{\textbf{minimize} its \textbf{total cumulative loss}}:
+To emphasize the roles of the two players, we here refer to \emph{the \textbf{row} player} as \emph{the \textbf{learner}}, and \emph{the \textbf{column} player} as \emph{the \textbf{environment}}. As before, $M$ is a \emph{game matrix}, possibly \emph{unknown} to \emph{the learner}. Assume that the game is \emph{\textbf{repeated}} $T$ rounds. At each iteration $t \in [1, T]$, the \emph{\textbf{learner}} chooses \emph{mixed strategy} $P_t$; and then the \emph{\textbf{environment}} chooses \emph{mixed strategy} $Q_t$. Define the \emph{\textbf{total cumulative loss}} as
 \begin{align*}
  \sum_{t=1}^{T}M(P_t, Q_t) 
-\end{align*} Depending on the mixed strategy $Q_1 \xdotx{,} Q_T$, this goal is changing. Therefore, a more appropriate goal is to \underline{\emph{\textbf{minimize the excess risk}}} relative to the \emph{best fixed strategy}  over $T$ rounds
+\end{align*} 
+The \emph{\textbf{goal}} of the learner is to \emph{do almost as well as \textbf{the best strategy}} against the actual sequence of plays $Q_1 \xdotx{,} Q_T$ which were chosen by the environment. That is, the learner's goal is to suffer cumulative loss which is ``\emph{\textbf{not much worse}}" than the cumulative loss of \emph{\textbf{the best (fixed) strategy in hindsight}}; i.e. the learner need to minimize \emph{\textbf{the excess risk}}
 \begin{align}
 \sum_{t=1}^{T}M(P_t, Q_t)  - \min_{P \in \Delta_m}\sum_{t=1}^{T}M(P, Q_t) \label{def: excess_risk_two_player_seq_game}
-\end{align} That is, the learner's goal is to suffer cumulative loss which is ``\emph{\textbf{not much worse}}" than the cumulative loss of \emph{\textbf{the best (fixed) strategy in hindsight}}.
+\end{align} 
 \end{remark}
 
-\item \begin{remark}(\textbf{\emph{Exponential Weighted Average Strategy}}) \citep{cesa2006prediction} \\
-Consider the \underline{\emph{\textbf{exponential weighted average (EWA) strategy}}}: at round $t$, the learner choose a new mixed strategy $P_{t+1}$ as
+
+\item \begin{remark}(\textbf{\emph{Exponential Weighted Average Strategy}}) \citep{cesa2006prediction, schapire2012boosting} \\
+Consider an \underline{\emph{\textbf{exponential weighted average (EWA) strategy}}} for repeated games: at round $t$, the learner choose a new mixed strategy $P_{t+1}$ as
 \begin{align*}
 P_{t+1}(i) := \frac{P_{t}(i) \exp\paren{- \eta M(i, Q_t)}}{Z_t}
 \end{align*} where $Z_t$ is a normalization factor
@@ -779,11 +773,12 @@ Z_t := \sum_{i=1}^{m}P_{t}(i) \exp\paren{- \eta M(i, Q_t)}; \text{ and } M(i, Q_
 \end{align*}
 \end{remark}
 
-\item \emph{The EWA algorithm} has a performance guarantee:
+\item \emph{The EWA algorithm} has a performance guarantee in terms of excess risk:
 \begin{theorem} (\textbf{Excess Risk Bound of Exponential Weighted Average})  \citep{schapire2012boosting}\\
 For any matrix $M$ with $m$ rows and entries in $[0, 1]$, and for any sequence of mixed strategies $Q_1 \xdotx{,} Q_T$ played by the environment, the sequence of mixed strategies $P_1 \xdotx{,} P_T$ produced by the exponential weighted average algorithm  with parameter $\eta$ satisfies
 \begin{align}
-\sum_{t=1}^{T}M(P_t, Q_t) \le \min_{P \in \Delta_m}\brac{a_{\eta}\sum_{t=1}^{T}M(P, Q_t) + c_{\eta} \kl{P}{P_1}  } \label{ineqn: excess_risk_bound_exp_weight_avg}
+\sum_{t=1}^{T}M(P_t, Q_t) &\le \min_{P \in \Delta_m}\brac{a_{\eta}\sum_{t=1}^{T}M(P, Q_t) + c_{\eta} \kl{P}{P_1}  } \label{ineqn: excess_risk_bound_exp_weight_avg}\\
+&= a_{\eta}\min_{P \in \Delta_m}\sum_{t=1}^{T}M(P, Q_t) + c_{\eta}\log(m) \quad (\text{assume $P_1$ uniform}) \nonumber
 \end{align} 
 where
 \begin{align*}
@@ -803,11 +798,9 @@ Under the same condition above, and set
  \Delta_T := \sqrt{\frac{2\log m}{T}} + \frac{\log m}{T} = \cO\paren{\sqrt{\frac{\log m}{T}}}.
 \end{align*}
 \end{corollary}
-\end{itemize}
-\subsubsection{Online Prediction}
-\begin{itemize}
-\item \begin{remark}(\textbf{\emph{Online Learning via Exponential Weighted Average}}) \citep{schapire2012boosting, mohri2018foundations} \\
-Based on EWA strategy, we can develop a general \emph{\textbf{online prediction}} framework. The loss matrix $M \in \bR^{\abs{\cH} \times \abs{\cX}}$ is defined as \emph{the mistake matrix}
+
+\item \begin{remark}[Algorithm](\textbf{\emph{Online Learning via Exponential Weighted Average}}) \citep{cesa2006prediction, schapire2012boosting, mohri2018foundations} \\
+Based on EWA, we can develop a general framework to solve the \emph{\textbf{online prediction}} problem. Define the loss matrix $M \in \bR^{\abs{\cH} \times \abs{\cX}}$ as \emph{the mistake matrix}
 \begin{align*}
 M_{i,j} := M(h_i, x_j) :=  1 - y_j h_i(x_j) = \left\{ \begin{array}{cc}
 1 &\text{ if }h_i(x_j) \neq y_j \\
@@ -821,7 +814,7 @@ M_{i,j} := M(h_i, x_j) :=  1 - y_j h_i(x_j) = \left\{ \begin{array}{cc}
   \centering
   \centerline{\includegraphics[scale = 0.5]{online_learning_boost.png}}
 \end{minipage}
-\caption{\footnotesize{\textbf{A generic online learning algorithm from boosting \citep{schapire2012boosting}}}}
+\caption{\footnotesize{\textbf{A generic online prediction algorithm \citep{schapire2012boosting}}}}
 \label{fig: online_learning_boost}
 \end{figure}
 
@@ -829,10 +822,10 @@ On round $t = 1 \xdotx{,} T$:
 \begin{enumerate}
 \item the \emph{\textbf{environment}} chooses \emph{an instance} $x_t \in \cX$; 
 \item the \emph{\textbf{learner}} chooses a new base hypothesis $h_t$ according to the distribution $P_{t}$ on $\cH$; 
-\item the hypothesis \emph{\textbf{predict}} $\hat{y}_t = h_t(x_t)$; and \emph{\textbf{receive feedback}} (true label $y_t$)
+\item the hypothesis \emph{\textbf{predict}} $\hat{y}_t = h_t(x_t)$; and \emph{\textbf{receive feedback}} (true label $y_t = c(x_t)$)
 \item Let $Q_t$ be a \emph{\textbf{pure strategy}}  concentrated on $x_t$ for  \emph{\textbf{environment}}
 \begin{align*}
-M(h, Q_t) := 1 - y_t h(x_t) = \ind{h(x_t) \neq y_t},  \quad \forall h\in \cH
+M(h, Q_t) :=  \ind{h(x_t) \neq y_t},  \quad \forall h\in \cH
 \end{align*}
 \item the \emph{\textbf{learner}} computes distribution $P_{t+1}$ using \emph{exponential weighted average algorithm}; this reduces to the following \emph{\textbf{update rule}} for all $h \in \cH$:
 \begin{align*}
@@ -891,10 +884,10 @@ c(x) &= \sgn{\sum_{h\in \cH}P^{*}(h)\; h(x)}.
 \end{align*} In other word, \underline{\emph{\textbf{the empirical $\gamma$-weak learnability}}} is \emph{\textbf{equivalent}} to \underline{\emph{\textbf{linear separability}}} \emph{\textbf{with margin $2\gamma$}}.
 \end{remark}
 \end{itemize}
-\subsubsection{AdaBoost as Sequential Two-player Zero-Sum Game}
+\subsection{AdaBoost as Repeated Zero-Sum Game}
 \begin{itemize}
-\item \begin{remark}(\textbf{\emph{AdaBoost as Dual Problem of Online Prediction}}) \citep{schapire2012boosting, mohri2018foundations} \\
-\emph{\textbf{AdaBoost}} is a \emph{\textbf{dual}} problem to \emph{the online learning algorithm} introduced in last section. In particular, define the loss matrix $M \in \bR^{\abs{\cX} \times \abs{\cH}}$ as the accuracy matrix
+\item \begin{remark}[Algorithm](\textbf{\emph{AdaBoost as Dual Problem of Online Prediction}}) \citep{schapire2012boosting, mohri2018foundations} \\
+\emph{\textbf{AdaBoost}} is a \emph{\textbf{dual}} problem to \emph{the online learning algorithm} above. In particular, define the loss matrix $M \in \bR^{\abs{\cX} \times \abs{\cH}}$ as \emph{the accuracy matrix}
 \begin{align*}
 M_{i,j} := M(x_i, h_j) :=  y_i h_j(x_i) = \left\{ \begin{array}{cc}
 1 &\text{ if }h_j(x_i) = y_i \\
@@ -902,6 +895,15 @@ M_{i,j} := M(x_i, h_j) :=  y_i h_j(x_i) = \left\{ \begin{array}{cc}
 \end{array}
 \right. ,
 \end{align*} See that $M_{boost} = 1 - M_{online}^{T}$. In this game, \emph{\textbf{the booster} (\textbf{environment})} is \emph{the \textbf{row} player} and \emph{the \textbf{(weak) learner} is the \textbf{column} player}. 
+
+\begin{figure}
+\begin{minipage}[h!]{1\linewidth}
+  \centering
+  \centerline{\includegraphics[scale = 0.5]{online_learning_boost_2.png}}
+\end{minipage}
+\caption{\footnotesize{\textbf{AdaBoost as the dual algorithm to online prediction \citep{schapire2012boosting}}}}
+\label{fig: online_learning_boost_2}
+\end{figure}
 
  On round $t = 1 \xdotx{,} T$:
 \begin{enumerate}
@@ -957,7 +959,7 @@ The minmax theorem states that
 \end{align} Note that for all $t$, by $\gamma$-weak leanability
 \begin{align*}
 M(P_t, h_t) := \E{X\sim\cD_t}{\ind{h_t(X) = c(X)}} \ge \frac{1}{2} + \gamma
-\end{align*} From the excess risk bound \eqref{ineqn: excess_risk_bound_exp_weight_avg}, for an appropriate choice of $\eta$, this implies that
+\end{align*} From the excess risk bound \eqref{ineqn: excess_risk_bound_exp_weight_avg_delta}, for an appropriate choice of $\eta$, this implies that
 \begin{align}
  \frac{1}{2} + \gamma \le \frac{1}{T}\sum_{t=1}^{T}M(P_t, h_t)  \le \min_{x \in \cX}\frac{1}{T}\sum_{t=1}^{T}M(x, h_t) + \Delta_T  \label{ineqn: excess_risk_bound_adaboost}
 \end{align} where $\Delta_T = \cO(\sqrt{\frac{\log (\abs{\cX})}{T}})$ and so, for all $x$,
@@ -978,24 +980,24 @@ T = \Omega\paren{\frac{\log \abs{\cX}}{\gamma^2}}.
 \subsection{Maximum Entropy Learning and Bregman Iterative Projection}
 \begin{itemize}
 \item \begin{remark}
-Recall that for AdaBoost, 
+We focus now on the learning of distribution $\cD$ in AdaBoost. By construction of $\cD_{t+1}$, the following equation holds
 \begin{align*}
 \sum_{i=1}^{m}\cD_{t+1}(i)y_i h_j(x_i) &= \frac{1}{Z_t}\sum_{i=1}^{m}\cD_{t}(i) e^{-\alpha_t y_i h_j(x_i) } y_i h_j(x_i) \\
 &= -  \frac{1}{Z_t} \frac{d Z_t}{d \alpha_t} = 0
 \end{align*} In other word, the booster aims at find a distribution $\cD$ in region
 \begin{align}
-\cR = \set{D \in \Delta_{n}: \sum_{i=1}^{m}\cD(i)y_i h(x_i) = 0, \quad \forall h \in \cH} \label{def: feasible_region_max_ent}
+\cR = \set{D \in \Delta_{m}: \sum_{i=1}^{m}\cD(i)y_i h(x_i) = 0, \quad \forall h \in \cH} \label{def: feasible_region_max_ent}
 \end{align} that is, a distribution $\cD$ that is so \emph{\textbf{hard}} that \emph{\textbf{no weak classifier} $h_j \in \cH$ is at all \textbf{correlated}} under $\cD$ \emph{\textbf{with the labels}} $y_i$. For $\cD$, the feasible region $\cR$ is a \emph{linear}.
 \end{remark}
 
 \item \begin{remark}(\textbf{\emph{Maximum Entropy Learning}})\\
-\emph{AdaBoost} aims at \emph{\textbf{finding the distribution}} in $\cD$ that \emph{is closest to \textbf{uniform}} $U$ in terms of relative entropy. That is, we reach the following \emph{optimization program}:
+From \emph{\textbf{booster perspective}}, the goal is to \emph{\textbf{find the distribution}} in $\cD$ that \emph{is closest to \textbf{uniform}} $U$ in terms of relative entropy. That is, we reach the following \emph{optimization program}:
 \begin{align}
 &\min_{\cD} \kl{\cD}{U} \label{eqn: max_ent_boost}\\
-\text{s.t. }& \sum_{i=1}^{m}\cD(i)y_i h_j(x_i) = 0, \quad j=1 \xdotx{,} N \label{eqn: max_ent_condition_1}\\
+\text{s.t. }& \sum_{i=1}^{m}\cD(i)y_i h_j(x_i) = 0, \quad j=1 \xdotx{,} N; \quad (\text{i.e. }\cD \in \cR) \label{eqn: max_ent_condition_1}\\
 &\cD(i) \ge 0, \quad i=1 \xdotx{,} m \nonumber\\
 &\sum_{i=1}^{m}\cD(i) = 1. \nonumber
-\end{align} This formulation is called \underline{\emph{\textbf{the maximum entropy learning}}}. Note that the condition \eqref{eqn: max_ent_condition_1} corresponds to $N = \abs{\cH}$ linear constraints since it is satisfied by all $h \in \cH$ 
+\end{align} This formulation is called \underline{\emph{\textbf{the maximum entropy learning}}} where the goal is to minimize the ``relative distance" between distribution $\cD$ to a reference distribution $U$. Note that the condition \eqref{eqn: max_ent_condition_1} corresponds to $N = \abs{\cH}$ linear constraints since it is satisfied by all $h \in \cH$ 
 \end{remark}
 
 
@@ -1010,9 +1012,9 @@ Recall that for AdaBoost,
 \end{figure}
 
 \item \begin{remark}(\textbf{\emph{AdaBoost as Bregman Iterative Projection Algorithm}})\\
-When $N$ is large, solving the maximum entropy problem with $N$ linear constraints can be complex.  One way to solve \eqref{eqn: max_ent_boost} is by iteratively projecting the solution onto the subspace defined by one linear constraint. Since the optimization problem is convex, it is expected that this \emph{iterative projection} will converge to \emph{\textbf{the intersection of all linear subspaces}}. Figure \ref{fig: iterative_projection} illustrates the idea of iterative projection.
+When $N$ is large, solving the \emph{maximum entropy problem} with $N$ linear constraints can be complex.  One way to solve \eqref{eqn: max_ent_boost} is to construct \emph{a \textbf{trajectory} towards the optimal solution} by \emph{iteratively projecting onto one individual constraint}. This trajectory will eventually \emph{\textbf{enter the feasible region}} $\cR$ \emph{\textbf{if it is not empty}}. Then we have the optimal solution. Figure \ref{fig: iterative_projection} illustrates the idea of iterative projection.
 
-\emph{\textbf{AdaBoost}} can be seen to be an \underline{\emph{\textbf{iterative projection algorithm}}} that operates in \emph{\textbf{the space of probability distributions}} over \emph{\textbf{training examples}}.  For $t= 1 \xdotx{,} T$, the booster find  $\cD_{t+1}$ by minimizing the relative entropy with respect to $\cD_{t}$
+Specifically, \emph{\textbf{AdaBoost}} can be seen to be an \underline{\emph{\textbf{iterative projection algorithm}}} that operates in \emph{\textbf{the space of probability distributions}} over \emph{\textbf{training examples}}.  For $t= 1 \xdotx{,} T$, the booster find  $\cD_{t+1}$ by minimizing the relative entropy with respect to $\cD_{t}$
 \begin{align*}
 &\min_{\cD} \kl{\cD}{\cD_t}\\
 \text{s.t. }& \sum_{i=1}^{m}\cD(i)y_i h_t(x_i) = 0, \\
@@ -1056,6 +1058,33 @@ Based on AdaBoost, the optimal value of maximum entropy problem at each iteratio
 In other word,  if the data is \emph{\textbf{weakly learnable}}, then \emph{the distributions computed by AdaBoost can \textbf{\underline{never converge to a single distribution}}} since, in this case, the distance between $\cD_t$ and $\cD_{t+1}$ must be \emph{\textbf{lower bounded by a constant}}. 
 \end{remark}
 
+
+
+
+\item \begin{remark}(\textbf{\emph{Unnormalized Maximum Entropy Problem}})\\
+One way to mitigate this issue is to \emph{\textbf{drop the normalization constration}}. That is, we iteratively solve the following optimization problem
+\begin{align}
+&\min_{d} \kl{d}{d_t} + \sum_{i=1}^{m}\paren{d_t(i) - d(i)} \label{eqn: max_ent_unnormalized}\\
+\text{s.t. }& \sum_{i=1}^{m}d(i)y_i h_t(x_i) = 0,  \quad (\text{i.e. }d \in \cR')\nonumber\\
+&d(i) \ge 0, \quad i=1 \xdotx{,} m. \nonumber
+\end{align} Earlier, we faced the problem that there might be no distributions satisfying all the constraints. Now that difficulty is entirely erased: The set $\cR'$ cannot be empty since all the constraints are trivially satisfied when $d = 0$, the all $0$'s vector. 
+
+We can compute the optimal value at iteration $t$ for AdaBoost algorithm:
+\begin{align*}
+\kl{d_{t+1}}{d_t} + \sum_{i=1}^{m}\paren{d_t(i) - d_{t+1}(i)}
+&= -\alpha_t  \paren{ \sum_{i=1}^{m}d_{t+1}(i) y_i h_t(x_i)} + \sum_{i=1}^{m}\paren{d_t(i) - d_{t+1}(i)}\\
+&= \paren{\sum_{i=1}^{m}d_t(i)}  \paren{1 - Z_t}.
+\end{align*} Moreover, since this problem is a \emph{convex optimization} with \emph{linear constraint}, this problem  has a \emph{\textbf{unique solution}}
+\begin{align}
+d(i) := \exp\paren{-\sum_{t=1}^{T}\lambda_t y_i h_t(x_i)},  \label{eqn: max_ent_unnormalized_sol}
+\end{align} where the parameter $(\lambda_1 \xdotx{,} \lambda_T) \in \bR^{T}$ can be obtained by solving
+\begin{align}
+(\lambda_1 \xdotx{,} \lambda_T) = \arg\min_{\lambda \in \bR^{T}}\sum_{i=1}^{m}\exp\paren{-\sum_{t=1}^{T}\lambda_t y_i h_t(x_i)}.  \label{eqn: max_ent_unnormalized_sol_param}
+\end{align}
+
+
+\end{remark}
+
 \begin{figure}
 \begin{minipage}[h!]{1\linewidth}
   \centering
@@ -1065,27 +1094,8 @@ In other word,  if the data is \emph{\textbf{weakly learnable}}, then \emph{the 
 \label{fig: max_ent_boost_unique}
 \end{figure}
 
-
-\item \begin{remark}(\textbf{\emph{Unnormalized Maximum Entropy Problem}})\\
-One way to mitigate this issue is to \emph{\textbf{drop the normalization constration}}. That is, we iteratively solve the following optimization problem
-\begin{align}
-&\min_{d} \kl{d}{d_t} + \sum_{i=1}^{m}\paren{d_t(i) - d(i)} \label{eqn: max_ent_unnormalized}\\
-\text{s.t. }& \sum_{i=1}^{m}d(i)y_i h_t(x_i) = 0,  \quad (\cR')\nonumber\\
-&d(i) \ge 0, \quad i=1 \xdotx{,} m. \nonumber
-\end{align} Earlier, we faced the problem that there might be no distributions satisfying all the constraints. Now that difficulty is entirely erased: The set $\cR'$ cannot be empty since all the constraints are trivially satisfied when $d = 0$, the all $0$'s vector. 
-
-We can compute the optimal value at iteration $t$ for AdaBoost algorithm:
-\begin{align*}
-\kl{d_{t+1}}{d_t} + \sum_{i=1}^{m}\paren{d_t(i) - d_{t+1}(i)}
-&= -\alpha_t  \paren{ \sum_{i=1}^{m}d_{t+1}(i) y_i h_t(x_i)} + \sum_{i=1}^{m}\paren{d_t(i) - d_{t+1}(i)}\\
-&= \paren{\sum_{i=1}^{m}d_t(i)}  \paren{1 - Z_t}.
-\end{align*} Moreover, since this problem is a \emph{convex optimization} on \emph{closed linear region}, this algorithm  has a \emph{\textbf{unique solution}} under the \emph{\textbf{$\gamma$-weak learnability}} assumption
-\begin{align}
-d(i) := \exp\paren{-\sum_{t=1}^{T}\lambda_t y_i h_t(x_i)},  \label{eqn: max_ent_unnormalized_sol}
-\end{align} where the parameter $(\lambda_1 \xdotx{,} \lambda_T) \in \bR^{T}$ can be obtained by solving
-\begin{align}
-(\lambda_1 \xdotx{,} \lambda_T) = \arg\min_{\lambda \in \bR^{T}}\sum_{i=1}^{m}\exp\paren{-\sum_{t=1}^{T}\lambda_t y_i h_t(x_i)}.  \label{eqn: max_ent_unnormalized_sol_param}
-\end{align}
+\item \begin{remark}(\textbf{\emph{Duality}})\\
+It turns out that finding the optimal distribution $d \in \cR'$ in \eqref{eqn: max_ent_unnormalized}  and finding the optimal weight $\lambda \in \bR^{T}$ in \eqref{eqn: max_ent_unnormalized_sol_param} are \emph{\textbf{dual problems}} to each other. This is a classical result in maximum entropy optimization, where the objective function in \eqref{eqn: max_ent_unnormalized_sol_param} is \emph{the log-partition function}.
 \end{remark}
 \end{itemize}
 
