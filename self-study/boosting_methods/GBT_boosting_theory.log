@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  9 FEB 2023 16:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  9 FEB 2023 22:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -751,18 +751,23 @@ Package pdftex.def Info: dist_margin.png used on input line 641.
 Underfull \vbox (badness 4779) has occurred while \output is active []
 
  [19]
-[20]
 Missing character: There is no â in font cmti10!
 Missing character: There is no € in font cmti10!
 Missing character: There is no ™ in font cmti10!
 
-Overfull \hbox (3.82376pt too wide) in paragraph at lines 732--734
+[20]
+Overfull \hbox (3.82376pt too wide) in paragraph at lines 726--728
 []\OT1/cmr/m/it/10.95 (\OT1/cmr/bx/it/10.95 Von Neu-mann's Min-i-max The-o-rem\
 OT1/cmr/m/it/10.95 ). [Schapire and Fre-und, 2012, Mohri
  []
 
-[21] [22]
-Overfull \hbox (5.83972pt too wide) in paragraph at lines 817--818
+[21]
+Overfull \hbox (5.32976pt too wide) in paragraph at lines 766--768
+\OT1/cmr/m/n/10.95 Consider an $[]$ for re-peated games: at round
+ []
+
+[22]
+Overfull \hbox (5.83972pt too wide) in paragraph at lines 810--811
 \OT1/cmr/m/n/10.95 where $[]$ of a \OT1/cmr/bx/it/10.95 col-umn \OT1/cmr/m/n/10
 .95 will cor-re-spond to $[]$
  []
@@ -771,49 +776,58 @@ Overfull \hbox (5.83972pt too wide) in paragraph at lines 817--818
 File: online_learning_boost.png Graphic file (type png)
 
 <use online_learning_boost.png>
-Package pdftex.def Info: online_learning_boost.png used on input line 822.
+Package pdftex.def Info: online_learning_boost.png used on input line 815.
 (pdftex.def)             Requested size: 391.46155pt x 181.17642pt.
  [23 <./online_learning_boost.png>] [24]
-[25] [26] <iterative_projection.png, id=116, 837.1275pt x 456.70625pt>
+<online_learning_boost_2.png, id=109, 758.835pt x 354.32375pt>
+File: online_learning_boost_2.png Graphic file (type png)
+
+<use online_learning_boost_2.png>
+Package pdftex.def Info: online_learning_boost_2.png used on input line 902.
+(pdftex.def)             Requested size: 379.41658pt x 177.16144pt.
+ [25] [26 <./online_learning_boost_2.png>]
+[27] <iterative_projection.png, id=120, 837.1275pt x 456.70625pt>
 File: iterative_projection.png Graphic file (type png)
 
 <use iterative_projection.png>
-Package pdftex.def Info: iterative_projection.png used on input line 1006.
+Package pdftex.def Info: iterative_projection.png used on input line 1008.
 (pdftex.def)             Requested size: 292.99901pt x 159.84958pt.
- [27]
-<bregman_iter_proj_algo.png, id=120, 897.3525pt x 425.59pt>
+ [28 <./iterative_projection.png>]
+<bregman_iter_proj_algo.png, id=124, 897.3525pt x 425.59pt>
 File: bregman_iter_proj_algo.png Graphic file (type png)
 
 <use bregman_iter_proj_algo.png>
-Package pdftex.def Info: bregman_iter_proj_algo.png used on input line 1027.
+Package pdftex.def Info: bregman_iter_proj_algo.png used on input line 1029.
 (pdftex.def)             Requested size: 358.93463pt x 170.23297pt.
- [28 <./iterative_projection.png>]
-<max_ent_boost_unique.png, id=124, 850.17625pt x 601.24625pt>
+
+Underfull \vbox (badness 3780) has occurred while \output is active []
+
+ [29 <./bregman_iter_proj_algo.png>]
+<max_ent_boost_unique.png, id=128, 850.17625pt x 601.24625pt>
 File: max_ent_boost_unique.png Graphic file (type png)
 
 <use max_ent_boost_unique.png>
-Package pdftex.def Info: max_ent_boost_unique.png used on input line 1062.
+Package pdftex.def Info: max_ent_boost_unique.png used on input line 1091.
 (pdftex.def)             Requested size: 297.56615pt x 210.43933pt.
- [29 <./bregman_iter_proj_algo.png>] [30 <./max_ent_boost_unique.png>] (./GBT_b
-oosting_theory.bbl
+ [30] [31 <./max_ent_boost_unique.png>]
+(./GBT_boosting_theory.bbl
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no © in font cmr10!
 Missing character: There is no Â in font cmti10!
 Missing character: There is no ® in font cmti10!
-) [31]
-(./GBT_boosting_theory.aux)
+) [32] (./GBT_boosting_theory.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 16047 strings out of 493029
- 318373 string characters out of 6136233
- 369501 words of memory out of 5000000
- 19231 multiletter control sequences out of 15000+600000
+ 16053 strings out of 493029
+ 318557 string characters out of 6136233
+ 369511 words of memory out of 5000000
+ 19236 multiletter control sequences out of 15000+600000
  17668 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,16n,84p,1245b,509s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,16n,84p,1245b,511s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
@@ -834,10 +848,10 @@ onts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/symbols/msbm10.pfb>
-Output written on GBT_boosting_theory.pdf (31 pages, 757232 bytes).
+Output written on GBT_boosting_theory.pdf (32 pages, 791148 bytes).
 PDF statistics:
- 202 PDF objects out of 1000 (max. 8388607)
- 136 compressed objects within 2 object streams
+ 206 PDF objects out of 1000 (max. 8388607)
+ 138 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 63 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 68 words of extra memory for PDF output out of 10000 (max. 10000000)
 
