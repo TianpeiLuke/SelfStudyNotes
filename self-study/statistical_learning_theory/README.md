@@ -63,6 +63,19 @@
   - Characterization of Non-Uniform Learning
   - Strctural Risk Minimization
   - Minimal Description Length
+  
+- Convex Learning Problem and Regularization [pdf](./SL_lecture5_Regularization.pdf)
+  - Convex Learning Problem
+    - Convexity, Lipschitzness and Smoothness
+    - Convex Learning Problem
+    - Surrogate Loss Function
+  - Regularization
+    - Regularized Loss Minimization
+    - Stability Leads to Generalization
+    - Tikhonov Regularization and Stability
+      - Convex-Lipschitz-Bounded Problem is Stable
+      - Convex-Smooth-Bounded Problem is Stable
+    - PAC Learnability for Convex Learning Problem
 
 ### Machine Learning Models
 - k-Nearest Neighbor [pdf](./AL_kNN.pdf)
