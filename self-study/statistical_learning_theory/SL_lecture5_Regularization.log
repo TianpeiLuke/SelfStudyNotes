@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  10 FEB 2023 17:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  10 FEB 2023 19:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -485,10 +485,10 @@ File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 [5] [6] [7] [8] [9] [10] (./SL_lecture5_Regularization.bbl) [11]
 (./SL_lecture5_Regularization.aux) ) 
 Here is how much of TeX's memory you used:
- 7735 strings out of 493029
- 103979 string characters out of 6136233
- 228391 words of memory out of 5000000
- 11100 multiletter control sequences out of 15000+600000
+ 7736 strings out of 493029
+ 104004 string characters out of 6136233
+ 228400 words of memory out of 5000000
+ 11101 multiletter control sequences out of 15000+600000
  15775 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,18n,38p,3289b,301s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -511,7 +511,7 @@ sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 y8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on SL_lecture5_Regularization.pdf (11 pages, 254673 bytes).
+Output written on SL_lecture5_Regularization.pdf (11 pages, 254407 bytes).
 PDF statistics:
  120 PDF objects out of 1000 (max. 8388607)
  86 compressed objects within 1 object stream
