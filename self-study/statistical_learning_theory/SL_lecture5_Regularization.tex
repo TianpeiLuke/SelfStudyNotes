@@ -1,0 +1,415 @@
+\documentclass[11pt]{article}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent %\usepackage{graphicx}
+\usepackage{amsmath,amssymb, mathrsfs, dsfont}
+\usepackage{tabularx}
+\usepackage[all,cmtip]{xy}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[linkbordercolor ={1 1 1} ]{hyperref}
+%\usepackage[sf]{titlesec}
+\usepackage{natbib}
+%\usepackage{tikz-cd}
+
+\usepackage{../../Tianpei_Report}
+
+%\usepackage{appendix}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+
+\begin{document}
+\title{Lecture 5: Convex Learning and Regularization}
+\author{ Tianpei Xie}
+\date{Feb. 10th., 2023}
+\maketitle
+\tableofcontents
+\newpage
+\section{Convex Learning}
+\subsection{Convexity, Lipschitzness and Smoothness}
+\begin{itemize}
+\item \begin{definition}(\textbf{\emph{Convex Set}})\\
+A set $C$ in a vector space is \underline{\emph{\textbf{convex}}} if for any two vectors $u,v$ in $C$, \emph{\textbf{the line segment}} between $u$ and $v$ is \emph{\textbf{contained}} in $C$. That is, for any $\alpha \in [0,1]$ we have that $\alpha u+ (1 - \alpha) v \in C$.
+\end{definition}
+
+\item \begin{definition}(\textbf{\emph{Convex Function}})\\
+Let $C$ be a \emph{\textbf{convex set}}. A function $f : C \to \bR$ is \underline{\emph{\textbf{convex}}} if for every $u,v \in C$ and  $\alpha \in [0,1]$,
+\begin{align*}
+f(\alpha u+ (1 - \alpha) v ) &\le \alpha f(u)+ (1 - \alpha) f(v). 
+\end{align*} A function $f$ is \emph{\textbf{convex}} if and only if its \underline{\emph{\textbf{epigraph}}}
+\begin{align*}
+\text{epi}(f) := \set{(x, t):  t \ge f(x) }
+\end{align*}  is a \emph{\textbf{convex set}}.
+\end{definition}
+
+\item \begin{remark}(\textbf{\emph{Properties of Convex Function}})\\
+The important properties of convex function are as below:
+\begin{enumerate}
+\item \emph{Every \textbf{local minimum} of the function is also a \textbf{global minimum}}.  Formally, $f(u)$ is a \underline{\emph{\textbf{local minimum}}} of $f$ at
+$u$ if there exists some $r > 0$ such that for all $v \in B(u,r):= \set{x: \norm{x - u}{} < r}$ we have $f(v) \ge f (u)$. It shows that if $u$ is a local minima, then for every $v \in C$, $f(v) \ge f (u)$
+
+\item \emph{Every $w$ we can construct a \textbf{tangent} to $f$ at $w$ that \textbf{lies below $f$ everywhere}}. That is,
+\begin{align*}
+f(u) &\ge f(w) +\inn{\nabla f(w)}{u - w}, \quad \forall u \in C
+\end{align*}
+
+\item If $f$ is second-order differentiable, then its Hessian matrix is \emph{\textbf{positive semi-definite}} $\nabla^2 f \succeq 0$.
+\end{enumerate}
+\end{remark}
+
+\item \begin{definition}(\textbf{\emph{Lipschitz Function}})\\
+Let $C \subset \bR^d$. A function $f : C \to \bR^k$ is \underline{\emph{\textbf{$\rho$-Lipschitz}}} if there exists a constant $L > 0$ such that  for every $u,v \in C$,
+\begin{align*}
+\norm{f(u) - f(v)}{} \le \rho \norm{u - v}{}.
+\end{align*}  Intuitively, a \emph{Lipschitz function cannot change too fast}.
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Smoothness}}). \\
+A \emph{\textbf{differentiable}} function $f : \bR^d \to \bR$ is \underline{\emph{\textbf{$\beta$-smooth}}} if its \emph{\textbf{gradient}} is \emph{$\beta$-Lipschitz}; namely, for all $u,v$ we have 
+\begin{align*}
+\norm{\nabla f(u) - \nabla f(v)}{} \le \beta \norm{u - v}{}.
+\end{align*} 
+\end{definition}
+
+\item \begin{remark}
+It is possible to show that if $f$ is \emph{$\beta$-smooth}, then for any $u, v$
+\begin{align*}
+f(u) \le f(v) + \nabla f(v) (u - v)  + \frac{\beta}{2}\norm{u -v}{}^2
+\end{align*} Recall that \emph{convexity} of $f$ implies that 
+\begin{align*}
+f(u) \ge f(v) + \nabla f(v) (u - v).
+\end{align*}
+Therefore, when a function is \emph{\textbf{both convex and smooth}}, we have both \emph{upper and lower bounds} on the difference between the function and its \emph{first order approximation}.
+\end{remark}
+
+\item \begin{definition} (\emph{\textbf{Self-Boundedness}}). \\
+A \emph{\textbf{differentiable}} function $f : \bR^d \to \bR$ is \underline{\emph{\textbf{self-bounded}}} if the norm of its \emph{\textbf{gradient}} is bounded by the function itself; namely, for all $u$ we have
+\begin{align*}
+\norm{\nabla f(u)}{}^2 \le \gamma f(u).
+\end{align*} Note that a \emph{$\beta$-smooth} \emph{non-negative function} is \emph{self-bounded}.
+\end{definition}
+\end{itemize}
+\subsection{Convex Learning Problem}
+\begin{itemize}
+\item \begin{definition}(\textbf{\emph{Convex Learning Problem}})\\
+\emph{\textbf{A learning problem}},  $(\cH, \cZ, \ell)$, is called \underline{\textbf{\emph{convex}}} if \emph{the \underline{\textbf{hypothesis class}} $\cH$ is a \textbf{convex set}} and  \underline{\emph{\textbf{the loss function}}}, $\ell: \cH \times \cZ \to \bR_{+}$, is a \textbf{\emph{convex function}} \emph{in its first argument} (where, for any $z$,  the function $f: \cH \to \bR_{+}$ defined by $f(w) = \ell(w,z)$ is convex).
+\end{definition}
+
+\item \begin{lemma} (\textbf{ERM of Convex Learning Problem is Convex}) \citep{shalev2014understanding}\\
+If $\ell$ is a convex loss function and the class $\cH$ is convex, then the $\text{ERM}_{\cH}$ problem, of minimizing \textbf{the empirical loss} over $\cH$, is a \textbf{convex optimization problem} (that is, a problem of minimizing a convex function over a convex set)
+\end{lemma}
+\begin{proof}
+Note that $ERM_{\cH}$ find optimal hypothesis $h \in \cH$ by minimizing the empirical loss
+\begin{align*}
+h = \arg\min_{h \in \cH}\frac{1}{m}\sum_{i=1}^{m}\ell(h, z_i)
+\end{align*} By definition, $\ell(h, z_i)$ is a  convex function in first argument and $\cH$ is convex set, so the $ERM_{\cH}$ is convex programming. \qed
+\end{proof}
+
+\item \begin{remark}
+\emph{Note that \textbf{not all of convex learning problems} in $\bR^n$ is \textbf{learnable}} even when $n$ is low. That is, there exists some distribution $\cP$ so that the generalization error is unbounded.
+\end{remark}
+
+\item \begin{definition}(\textbf{\emph{Convex-Lipschitz-Bounded Learning Problem}}). \\
+A learning problem, $(\cH, \cZ, \ell)$, is called \underline{\textbf{\emph{Convex-Lipschitz-Bounded}}}, with parameters $\rho$,  $B$ if the
+following holds:
+\begin{enumerate}
+\item  The hypothesis class $\cH$ is a \emph{\textbf{convex set}} and for all $w \in \cH$ we have 
+\begin{align*}
+\norm{w}{\cH} \le B.
+\end{align*}
+\item For all $z \in \cZ$, the loss function, $\ell(\cdot, z)$, is a \textbf{\emph{convex}} and \emph{\textbf{$\rho$-Lipschitz function}}:
+\begin{align*}
+\abs{\ell(w, z) - \ell(v, z)} \le \rho \norm{w  - v}{\cH}.
+\end{align*}
+\end{enumerate}
+\end{definition}
+
+\item \begin{definition}(\textbf{\emph{Convex-Smooth-Bounded Learning Problem}}). \\
+A learning problem, $(\cH, \cZ, \ell)$, is called \underline{\textbf{\emph{Convex-Smooth-Bounded}}}, with parameters $\beta$,  $B$ if the
+following holds:
+\begin{enumerate}
+\item  The hypothesis class $\cH$ is a \emph{\textbf{convex set}} and for all $w \in \cH$ we have 
+\begin{align*}
+\norm{w}{\cH} \le B.
+\end{align*}
+\item For all $z \in \cZ$, the loss function, $\ell(\cdot, z)$, is a \textbf{\emph{convex, non-negative}} and \emph{\textbf{$\beta$-smooth function}}:
+\begin{align*}
+\abs{\nabla \ell(w, z) - \nabla \ell(v, z)} \le \beta \norm{w  - v}{\cH}.
+\end{align*} Note that we also required that the loss function is \emph{\textbf{non-negative}}. This is needed to ensure that \emph{\textbf{the loss function} is \textbf{self-bounded}}.
+\end{enumerate}
+\end{definition}
+\end{itemize}
+\subsection{Surrogate Loss Function}
+\begin{itemize}
+\item \begin{remark}
+Convex problems can be learned effficiently. However, in many cases, the natural loss function is not convex and, in particular, implementing the ERM rule is hard.
+
+For instance, the $0$-$1$ loss is \emph{non-convex}:
+\begin{align*}
+\ell^{0-1}(h, (X, Y)) :=\ind{h(X) \neq Y} = \ind{Yh(X) \le 0}.
+\end{align*} To circumvent the hardness result, one popular approach is to \emph{\textbf{upper bound} the nonconvex loss function by a \underline{\textbf{convex surrogate loss function}}}. As its name indicates, the requirements from a convex surrogate loss are as follows:
+\begin{enumerate}
+\item It should be \textbf{\emph{convex}};
+\item It should \emph{\textbf{upper bound}} the original loss.
+\end{enumerate}
+\end{remark}
+
+\item \begin{example}(\textbf{\emph{Hinge Loss}})\\
+An example of convex surrogate function is \emph{\textbf{the hinge loss}}:
+\begin{align*}
+\ell^{hinge}(w, z) := \max\set{0, 1- y\inn{w}{x}}.
+\end{align*} Clearly $\ell^{hinge}(w, z) := \max\set{0, 1- y\inn{w}{x}} \ge \ind{y\inn{w}{x} \le 0} := \ell^{0-1}(w, z)$.
+\end{example}
+
+\item \begin{remark}(\textbf{\emph{Decomposition of Loss}})\\
+Given the surrogate loss $L_{\cP}^{s}(h) = \E{Z \sim \cP}{\ell^{s}(h, Z)}$, we have decomposition of error
+\begin{align*}
+ \underbrace{\paren{L^{s}_{\cP}(h_{\cD}) - \min_{h \in \cH}L^{s}_{\cP}(h)}}_{\text{estimation error}} +\underbrace{\paren{\min_{h \in \cH}L^{s}_{\cP}(h) - \min_{h \in \cH}L^{0-1}_{\cP}(h)}}_{\text{\textbf{optimization error}}}  +\underbrace{\paren{\min_{h \in \cH}L^{0-1}_{\cP}(h) - L^{*}}}_{\text{approximation error}}  
+\end{align*} where $L^{*}$ is Bayes error and  $h_{\cD} = \cA(\cD)$ is the hypothesis returned by learning algorithm.
+
+\emph{\textbf{The optimization error}} is a result of our inability to minimize the training loss with respect to the original loss. The size of this error depends on the specific distribution of the data and on the specific surrogate loss we are using.
+\end{remark}
+\end{itemize}
+
+\section{Regularization}
+\subsection{Regularized Loss Minimization}
+\begin{itemize}
+\item \begin{definition}(\emph{Regularized Loss Minimization (RLM)})\\
+\underline{\textbf{\emph{Regularized Loss Minimization (RLM)}}} is a learning rule in which we jointly minimize \emph{\textbf{the empirical risk} and a \textbf{regularization} function}. Formally, a \underline{\textbf{\emph{regularization}}} \textbf{\emph{function}} is a mapping $R: \cH \to \bR_{+}$, and the regularized loss minimization rule outputs a hypothesis in
+\begin{align}
+h \in \arg\min_{h \in \cH}\set{ L_{\cD}(h) + R(h)}. \label{def: rlm}
+\end{align} 
+\end{definition}
+
+\item \begin{remark} (\textbf{\emph{Regularized Loss Minimization $\Rightarrow$ Structured Risk Minimization}})\\
+\emph{\textbf{Regularized loss minimization}} shares similarities with \emph{\textbf{minimum description length} algorithms} and \emph{\textbf{structural risk minimization}}. Intuitively, the ``\emph{\textbf{complexity}}" of hypotheses is measured by \emph{the value of the regularization function}, and the algorithm balances between low empirical risk and ``\emph{simpler}," or ``\emph{less complex}," hypotheses.
+\end{remark}
+
+\item \begin{definition}(\textbf{\emph{Tikhonov Regularization}})\\
+Throughout this section we will focus on one of the most simple regularization functions: $R(w)=\lambda \norm{w}{2}^2$, where $\lambda > 0$ is a scalar and the norm is the $\ell_2$ norm. The regualarized loss minimization problem becomes:
+\begin{align}
+\cA(\cD) = \arg\min_{w \in C}\set{ L_{\cD}(w) + \lambda \norm{w}{2}^2}. \label{def: tikhonov}
+\end{align}  This type of regularization function is often called \underline{\textbf{\emph{Tikhonov regularization}}}.
+\end{definition}
+
+\item \begin{remark}
+Recall that in the previous section we introduced the notion of \emph{\textbf{bounded hypothesis classes}}. Therefore, we can define a sequence of hypothesis classes, $\cH_1 \subset \cH_2 \subset \cH_3 \ldots$, where $\cH_i = \set{w : \norm{w}{2} \le i}$. If the \emph{sample complexity} of each $\cH_i$ depends on $i$ then \emph{the RLM rule} is similar to \emph{the SRM rule} for this sequence of nested classes.
+\end{remark}
+\end{itemize}
+\subsection{Stable Rules Do Not Overfit}
+\begin{itemize}
+\item \begin{remark}(\textbf{\emph{Stability}})\\
+Intuitively, a learning algorithm is \emph{\textbf{stable}} if a small change of the input to the algorithm does not change the output of the algorithm much.
+
+Let $\cA$ be a learning algorithm, let $\cD = (z_1 \xdotx{,} z_m)$ be a training set of $m$ examples, and let $\cA(\cD)$ denote the output of $\cA$. Let $\widetilde{\cD}^{(i)}$ be the training set obtained by replacing the $i$'th example of $\cD$ with an i.i.d. copy $z'_i \neq z_i$, i.e.
+\begin{align*}
+\widetilde{\cD}^{(i)} = \paren{z_1 \xdotx{,} z_{i-1},z_{i}', z_{i+1} \xdotx{,} z_m}.
+\end{align*} The algorithm $\cA$ is \underline{\emph{\textbf{stable}}} if for any $z_i \in \cZ$,
+\begin{align}
+0 \le \ell\paren{\cA(\widetilde{\cD}^{(i)}), z_i} - \ell\paren{\cA(\cD), z_i} \le \epsilon_i  \label{def: stable_alg}
+\end{align} That is, replacing any training sample will not cause significant increase of training loss.
+\end{remark}
+
+\item \begin{theorem}\label{thm: stability_learnability} (\textbf{Stability Implies Learnability}) \citep{shalev2014understanding} \\
+Let $\cP$ be a distribution. Let $\cD = (z_1 \xdotx{,} z_m)$ be an i.i.d. sequence of examples and let $z'$ be another i.i.d. example. Then, for any learning algorithm,
+\begin{align}
+\E{\cD}{L_{\cP}(\cA(\cD)) - L_{\cD}(\cA(\cD)) } = \E{(\cD, z')}{\frac{1}{m}\sum_{i=1}^{m}\set{\ell\paren{\cA(\widetilde{\cD}^{(i)}), z_i} - \ell\paren{\cA(\cD), z_i}}} \label{prop: stable_alg}
+\end{align}
+\end{theorem}
+\begin{proof}
+The expected generalization loss can be rewritten as
+\begin{align*}
+\E{\cD}{L_{\cP}(\cA(\cD))} &:= \E{\cD}{\E{Z \sim \cP}{\ell(w_{\cD}, Z)}}\\
+&= \E{\cD}{\E{Z' \sim \cP}{\frac{1}{m}\sum_{i=1}^{m}\ell(w_{\cD}, Z_i')}}\\
+&= \E{\cD}{\E{Z' \sim \cP}{\frac{1}{m}\sum_{i=1}^{m}\ell(w_{\widetilde{\cD}^{(i)}}, Z_i)}}\\
+&:= \E{\cD, Z'}{\frac{1}{m}\sum_{i=1}^{m}\ell\paren{\cA(\widetilde{\cD}^{(i)}), Z_i}}
+\end{align*} The last equality holds since $w_{\cD}, Z_i'$ are independent and $Z_i$ and $Z_{i}'$ are i.i.d. which means that exchanging $Z_i$ with $Z_{i}'$ will not change the expectation value. Moreover, the training loss can be written as
+\begin{align*}
+\E{\cD}{L_{\cD}(\cA(\cD))} &:= \E{\cD}{\frac{1}{m}\sum_{i=1}^{m} \ell\paren{\cA(\cD), Z_i}}.
+\end{align*} Thus proof the result. \qed
+\end{proof}
+
+\item \begin{definition}(\textbf{\emph{On-Average-Replace-One-Stable}}).  \citep{shalev2014understanding} \\
+Let $\epsilon: \bN \to \bR$ be a monotonically decreasing function. We say that a learning algorithm $\cA$ is \underline{\textbf{\emph{on-average-replaceone-stable}}} with rate $\epsilon(m)$ if for every distribution $\cP$
+\begin{align}
+ \E{(\cD, z')}{\frac{1}{m}\sum_{i=1}^{m}\set{\ell\paren{\cA(\widetilde{\cD}^{(i)}), z_i} - \ell\paren{\cA(\cD), z_i}}} \le \epsilon(m) \label{def: stable_alg_epsilon}
+\end{align}
+\end{definition}
+\end{itemize}
+\subsection{Tikhonov Regularization and Stability}
+\begin{itemize}
+\item The main property of \emph{the Tikhonov regularization} that we rely on is that it makes \emph{the objective of RLM} \emph{\textbf{strongly convex}}
+\begin{definition} (\textbf{\emph{Strongly Convex Functions}}). \\
+A function $f$ is \underline{\textbf{\emph{$\lambda$-strongly convex}}} if for all $w, u$, and  $\alpha \in (0, 1)$ we have
+\begin{align*}
+f(\alpha w+ (1 - \alpha) u ) &\le \alpha f(w)+ (1 - \alpha) f(u) - \frac{\lambda}{2} \alpha(1-\alpha)\norm{w - u}{2}^2.
+\end{align*}
+\end{definition}
+
+\item \begin{lemma}(\textbf{RLM is $2\lambda$-Strongly Convex})  \citep{shalev2014understanding}
+\begin{enumerate}
+\item The function $f(w) = \lambda\norm{w}{2}^2$ is \textbf{$2\lambda$-strongly convex}.
+\item If $f$ is \textbf{$\lambda$-strongly convex} and \textbf{$g$ is convex}, then $f + g$ is \textbf{$\lambda$-strongly convex}.
+\item If $f$ is \textbf{$\lambda$-strongly convex} and $u$ is a \textbf{minimizer} of $f$, then, for any $w$,
+\begin{align*}
+\abs{f(w) - f(u)} \ge \frac{\lambda}{2}\norm{w - u}{2}^2.
+\end{align*}
+\end{enumerate} 
+\end{lemma}
+\begin{proof}
+We only prove the last part. By $\lambda$-strong-convexity of $f$
+\begin{align*}
+\frac{f\paren{u + \alpha(w - u)} - f(u)}{\alpha} \le \paren{f(w) - f(u)} - \frac{\lambda}{2}(1- \alpha)\norm{w - u}{}^2
+\end{align*} Take limit as $\alpha \to 0$, the LHS becomes
+\begin{align*}
+\lim\limits_{\alpha \to 0}\frac{f\paren{u + \alpha(w - u)} - f(u)}{\alpha} = \nabla f(u)
+\end{align*} Since $u$ is the minimizer of $f$, $\nabla f(u) = 0$. The RHS becomes $\paren{f(w) - f(u)} - \frac{\lambda}{2}\norm{w - u}{}^2$. So the inequality becomes
+\begin{align*}
+\paren{f(w) - f(u)} - \frac{\lambda}{2}\norm{w - u}{}^2 \ge 0. \qed
+\end{align*}
+\end{proof}
+
+
+
+\item \begin{corollary}(\textbf{RLM with Convex-Lipschitz is Stable}) \citep{shalev2014understanding}\\
+Assume that the loss function is \textbf{convex} and \textbf{$\rho$-Lipschitz}. Then, the RLM rule with the regularizer $\lambda\norm{w}{2}^2$ is \textbf{on-average-replace-one-stable} with rate $2\rho^2/(\lambda m)$. Then
+\begin{align}
+\E{}{L_{\cP}(\cA(\cD)) - L_{\cD}(\cA(\cD)) } \le \frac{2\rho^2}{\lambda m}. \label{def: convex_lip_stable}
+\end{align}
+\end{corollary}
+\begin{proof}
+Consider $\widetilde{\cD}^{(i)} = \paren{z_1 \xdotx{,} z_{i-1},z_{i}', z_{i+1} \xdotx{,} z_m}$ with $z_i'$ is an i.i.d. copy of $z_i$. Let 
+\begin{align*}
+\cA(\cD) := \arg\min_{w}\set{ L_{\cD}(w) + \lambda \norm{w}{2}^2}.
+\end{align*} Denote $f_{\cD}(w) = L_{\cD}(w) + \lambda \norm{w}{2}^2$. Since $L_{\cD}(w)$ is convex function and $\lambda \norm{w}{2}^2$ is $2\lambda$-strongly convex, so $f_{\cD}(w)$ is $2\lambda$-strongly convex. Thus by \emph{Lemma} above, for any $w$,
+\begin{align}
+\abs{f_{\cD}(w) - f_{\cD}(\cA(\cD))} \ge \lambda \norm{w - \cA(\cD)}{}^2. \label{pf: convex_lip_stable_1}
+\end{align}
+ On the other hand, for any $v$ and $u$, and for all $i$, we have
+\begin{align*}
+f_{\cD}(w) - f_{\cD}(u) &= L_{\cD}(w) + \lambda \norm{w}{2}^2 - L_{\cD}(u) - \lambda \norm{u}{2}^2\\
+&= L_{\widetilde{\cD}^{(i)}}(w) -  L_{\widetilde{\cD}^{(i)}}(u)  + \lambda \paren{\norm{w}{2}^2 - \norm{u}{2}^2} + \frac{\ell(w, z_i) - \ell(u, z_i)}{m} - \frac{\ell(w, z_i') - \ell(u, z_i')}{m}
+\end{align*} In particular, choosing $w = \cA(\widetilde{\cD}^{(i)})$, $u = \cA(\cD)$, and using the fact that $w$ minimizes
+$L_{\widetilde{\cD}^{(i)}}(w)+ \lambda \norm{w}{2}^2$, we obtain that
+\begin{align}
+f_{\cD}(\cA(\widetilde{\cD}^{(i)})) - f_{\cD}( \cA(\cD)) &\le  \frac{\ell(\cA(\widetilde{\cD}^{(i)}), z_i) - \ell(\cA(\cD), z_i)}{m} - \frac{\ell(\cA(\widetilde{\cD}^{(i)}), z_i') - \ell(\cA(\cD), z_i')}{m} \label{pf: convex_lip_stable_2}
+\end{align} Combining with \eqref{pf: convex_lip_stable_1}, we have
+\begin{align}
+ \lambda \norm{\cA(\widetilde{\cD}^{(i)}) - \cA(\cD)}{}^2 &\le  \frac{\ell(\cA(\widetilde{\cD}^{(i)}), z_i) - \ell(\cA(\cD), z_i)}{m} + \frac{\ell(\cA(\cD), z_i') - \ell(\cA(\widetilde{\cD}^{(i)}), z_i') }{m}   \label{pf: convex_lip_stable_3}
+\end{align} Since $\ell$ is $\rho$-Lipschitz function, we have
+\begin{align}
+\abs{\ell(\cA(\widetilde{\cD}^{(i)}), z_i) - \ell(\cA(\cD), z_i)} \le \rho \norm{\cA(\widetilde{\cD}^{(i)}) - \cA(\cD)}{} \label{pf: convex_lip_stable_4}
+\end{align} Similarly the above inequality holds for $z_{i}'$. Substituting \eqref{pf: convex_lip_stable_4} into \eqref{pf: convex_lip_stable_3} we have 
+\begin{align*}
+ \lambda \norm{\cA(\widetilde{\cD}^{(i)}) - \cA(\cD)}{}^2 &\le 2\rho \frac{\norm{\cA(\widetilde{\cD}^{(i)}) - \cA(\cD)}{} }{m}\\
+ \Rightarrow \norm{\cA(\widetilde{\cD}^{(i)}) - \cA(\cD)}{} &\le \frac{2\rho}{\lambda m}
+\end{align*} Plugging back into \eqref{pf: convex_lip_stable_4}, we have for all $z_i$,
+\begin{align*}
+\abs{\ell(\cA(\widetilde{\cD}^{(i)}), z_i) - \ell(\cA(\cD), z_i)} \le \frac{2 \rho^2}{\lambda m}.
+\end{align*} By Theorem \ref{thm: stability_learnability}, we have the result. \qed
+\end{proof}
+
+\item \begin{corollary}(\textbf{RLM with Convex-Smooth is Stable}) \citep{shalev2014understanding}\\
+Assume that the loss function is \textbf{$\beta$-smooth} and \textbf{nonnegative}. Then, the RLM rule with the regularizer $\lambda\norm{w}{2}^2$, where $\lambda \ge 2\beta/m$, satisfies
+\begin{align}
+\E{}{\frac{1}{m}\sum_{i=1}^{m}\set{\ell\paren{\cA(\widetilde{\cD}^{(i)}), z_i} - \ell\paren{\cA(\cD), z_i}}} \le \frac{32 \beta}{\lambda m}\E{}{L_{\cD}(\cA(\cD))}. \label{def: convex_smooth_stable}
+\end{align}
+Note that if for all $z$ we have $\ell(0, z) \le B$, for some scalar $B > 0$, then for every $\cD$,
+\begin{align*} 
+L_{\cD}(\cA(\cD)) \le L_{\cD}(\cA(\cD))+ \lambda\norm{\cA(\cD)}{2}^2 \le L_{\cD}(0) +\lambda\norm{0}{2}^2 = L_{\cD}(0) \le B. 
+\end{align*} 
+\end{corollary}
+\begin{proof} 
+Define $f_{\cD}(w) = L_{\cD}(w) + \lambda \norm{w}{2}^2$. Following the same argument as previous proof, we have
+\begin{align}
+ \lambda \norm{\cA(\widetilde{\cD}^{(i)}) - \cA(\cD)}{}^2 &\le  \frac{\ell(\cA(\widetilde{\cD}^{(i)}), z_i) - \ell(\cA(\cD), z_i)}{m} + \frac{\ell(\cA(\cD), z_i') - \ell(\cA(\widetilde{\cD}^{(i)}), z_i') }{m}  \label{pf: convex_smooth_stable_0}
+\end{align} We need to bound \emph{the RHS}.
+Note that $\beta$-smooth and non-negative function are $2\beta$-self-bounded
+\begin{align*}
+\norm{\nabla f(w)}{}^2 \le 2\beta f(w).
+\end{align*} For $\lambda \ge 2\beta/m$, that is $\beta \le \frac{m \lambda}{2}$. By smoothness assumption, 
+\begin{align}
+\ell(\cA(\widetilde{\cD}^{(i)}), z_i) - \ell(\cA(\cD), z_i) \le \inn{\nabla  \ell(\cA(\cD), z_i)}{\cA(\widetilde{\cD}^{(i)}) - \cA(\cD)} + \frac{\beta}{2} \norm{\cA(\widetilde{\cD}^{(i)}) - \cA(\cD)}{}^2 \label{pf: convex_smooth_stable_1}
+\end{align} By Cauchy-Schwartz inequality,
+\begin{align*}
+\ell(\cA(\widetilde{\cD}^{(i)}), z_i) - \ell(\cA(\cD), z_i) \le \norm{\nabla  \ell(\cA(\cD), z_i)}{}\norm{\cA(\widetilde{\cD}^{(i)}) - \cA(\cD)}{} +  \frac{\beta}{2} \norm{\cA(\widetilde{\cD}^{(i)}) - \cA(\cD)}{}^2 
+\end{align*} By self-boundedness, 
+\begin{align*}
+ \norm{\nabla  \ell(\cA(\cD), z_i)}{}^2 \le 2\beta \ell(\cA(\cD), z_i).
+\end{align*} So
+\begin{align}
+\ell(\cA(\widetilde{\cD}^{(i)}), z_i) - \ell(\cA(\cD), z_i) \le \sqrt{2\beta \ell(\cA(\cD), z_i)}\norm{\cA(\widetilde{\cD}^{(i)}) - \cA(\cD)}{} +  \frac{\beta}{2} \norm{\cA(\widetilde{\cD}^{(i)}) - \cA(\cD)}{}^2  \label{pf: convex_smooth_stable_2}
+\end{align} By a symmetric argument it holds that
+\begin{align*}
+\ell(\cA(\cD), z_i') - \ell(\cA(\widetilde{\cD}^{(i)}), z_i') \le \sqrt{2\beta \ell(\cA(\widetilde{\cD}^{(i)}), z_i')}\norm{\cA(\widetilde{\cD}^{(i)}) - \cA(\cD)}{} +  \frac{\beta}{2} \norm{\cA(\widetilde{\cD}^{(i)}) - \cA(\cD)}{}^2 
+\end{align*} Plugging these inequalities into Equation \eqref{pf: convex_smooth_stable_0} and rearranging terms we obtain
+that
+\begin{align*}
+ \norm{\cA(\widetilde{\cD}^{(i)}) - \cA(\cD)}{} &\le \frac{\sqrt{2\beta}}{m \lambda - \beta }\brac{\sqrt{ \ell(\cA(\cD), z_i)} + \sqrt{\ell(\cA(\widetilde{\cD}^{(i)}), z_i')}}
+\end{align*} Since $\beta \le \frac{m \lambda}{2}$,
+\begin{align}
+ \norm{\cA(\widetilde{\cD}^{(i)}) - \cA(\cD)}{} &\le \frac{\sqrt{8\beta}}{m \lambda}\brac{\sqrt{ \ell(\cA(\cD), z_i)} + \sqrt{\ell(\cA(\widetilde{\cD}^{(i)}), z_i')}} \label{pf: convex_smooth_stable_3}
+\end{align} Combing \eqref{pf: convex_smooth_stable_3} with \eqref{pf: convex_smooth_stable_2}, we have
+\begin{align*}
+\ell(\cA(\widetilde{\cD}^{(i)}), z_i) - \ell(\cA(\cD), z_i) &\le \sqrt{2\beta \ell(\cA(\cD), z_i)}\norm{\cA(\widetilde{\cD}^{(i)}) - \cA(\cD)}{} \\
+&\quad +  \frac{\beta}{2} \norm{\cA(\widetilde{\cD}^{(i)}) - \cA(\cD)}{}^2 \\
+&\le \paren{\frac{4 \beta}{m \lambda} + \frac{8\beta^2}{(m \lambda)^2}} \paren{\sqrt{ \ell(\cA(\cD), z_i)} + \sqrt{\ell(\cA(\widetilde{\cD}^{(i)}), z_i')}}^2\\
+&\le  \frac{8 \beta}{m \lambda} \paren{\sqrt{ \ell(\cA(\cD), z_i)} + \sqrt{\ell(\cA(\widetilde{\cD}^{(i)}), z_i')}}^2 \\
+&\le \frac{16 \beta}{m \lambda} \paren{ \ell(\cA(\cD), z_i) + \ell(\cA(\widetilde{\cD}^{(i)}), z_i')}
+\end{align*} where in the last inequality we use $(a+b)^2 \le 2(a^2 + b^2)$. Taking expectation on both sides and noting that $\E{}{\ell(\cA(\cD), z_i)} = \E{}{\ell(\cA(\widetilde{\cD}^{(i)}), z_i')} = \E{}{L_{\cD}(\cA(\cD))}$, we have the result. \qed
+\end{proof}
+\end{itemize}
+
+\subsection{PAC Learnability for Convex Learning Problem}
+\begin{itemize}
+\item Note that 
+\begin{align*}
+\E{\cD}{L_{\cP}(\cA(\cD))} = \E{\cD}{L_{\cD}(\cA(\cD))} + \E{\cD}{L_{\cP}(\cA(\cD)) - L_{\cD}(\cA(\cD)) }.
+\end{align*} So the stability result will lead to learnability result.
+
+\begin{corollary} (\textbf{Oracle Inequality of RLM for Convex-Lipschitz-Bounded Problem}) \citep{shalev2014understanding}\\
+Assume that the loss function is \textbf{convex} and \textbf{$\rho$-Lipschitz}. Then, the \textbf{RLM rule} with the regularizer $\lambda\norm{h}{}^2$  satisfies
+\begin{align}
+\E{}{L_{\cP}(\cA(\cD))} \le L_{\cD}(h^{*}) + \lambda\norm{h^{*}}{}^2 + \frac{2\rho^2}{\lambda m}. \label{def: convex_lip_learnable_oracle}
+\end{align} for some fixed arbitrary rule $h^{*}$. This inequality is called \textbf{the oracle inequality}, since $h^{*}$ is thought as a hypothesis
+with low risk.
+\end{corollary}
+
+\item We can also easily derive a \emph{PAC-like guarantee} for \emph{convex-Lipschitz-bounded learning problems}:
+\begin{corollary}(\textbf{PAC Learnability of Convex-Lipschitz-Bounded Problem}) \citep{shalev2014understanding}\\
+Let  $(\cH, \cZ, \ell)$ be a \textbf{convex-Lipschitz-bounded} learning problem with parameters $\rho$, $B$. For any training set size $m$, let 
+\begin{align*}
+\lambda = \sqrt{\frac{2\rho^2}{B^2 m}}.
+\end{align*} Then, the \textbf{RLM rule} with the regularizer $\lambda\norm{h}{}^2$ satisfies
+\begin{align}
+\E{}{L_{\cP}(\cA(\cD))} \le \min_{h \in \cH}L_{\cD}(h) + \sqrt{\frac{8B^2 \rho^2}{m}}\label{def: convex_lip_learnable}
+\end{align}
+In particular, for every $\epsilon > 0$, if $m \ge \frac{8 \rho^2 B^2}{\epsilon^2}$ then for every distribution $\cP$, $\E{}{L_{\cP}(\cA(\cD))} \le \min_{h \in \cH}L_{\cD}(h) + \epsilon$.
+\end{corollary}
+
+\item \begin{corollary}(\textbf{Oracle Inequality of RLM for Convex-Smooth-Bounded Problem}) \citep{shalev2014understanding}\\
+Assume that the loss function is \textbf{convex, $\beta$-smooth, and nonnegative}. Then, the \textbf{RLM rule} with the regularizer $\lambda\norm{h}{}^2$, for $\lambda \ge \frac{2\beta}{m}$, satisfies the following for all $h^{*}$
+\begin{align}
+\E{}{L_{\cP}(\cA(\cD))} \le \paren{1+ \frac{32 \beta}{\lambda m}}\E{}{L_{\cD}(\cA(\cD))} \le \paren{1+ \frac{32 \beta}{\lambda m}}\paren{L_{\cD}(h^{*}) + \lambda \norm{h^{*}}{2}^2}.  \label{def: convex_smooth_learnable_oracle}
+\end{align}
+\end{corollary}
+
+\item \begin{corollary}(\textbf{PAC Learnability of Convex-Smooth-Bounded Problem}) \citep{shalev2014understanding}\\
+Let  $(\cH, \cZ, \ell)$ be a \textbf{convex-smooth-bounded} learning problem with parameters $\beta$, $B$. Assume in addition that $\ell(0,z) \le 1$ for all $z \in \cZ$. For any $\epsilon \in (0,1)$ let 
+\begin{align*}
+m \ge \frac{150 \beta B^2}{\epsilon^2}, \quad \text{and} \quad \lambda = \frac{\epsilon}{3B^2},
+\end{align*} then for every distribution $\cP$, $\E{}{L_{\cP}(\cA(\cD))} \le \min_{h \in \cH}L_{\cD}(h) + \epsilon$.
+\end{corollary}
+\end{itemize}
+
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{reference.bib}
+\end{document}
