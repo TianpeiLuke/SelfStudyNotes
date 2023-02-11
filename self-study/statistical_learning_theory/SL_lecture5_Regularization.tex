@@ -80,20 +80,20 @@ A \emph{\textbf{differentiable}} function $f : \bR^d \to \bR$ is \underline{\emp
 
 \item \begin{remark}
 It is possible to show that if $f$ is \emph{$\beta$-smooth}, then for any $u, v$
+\begin{align}
+f(u) \le f(v) + \inn{\nabla f(v)}{u - v}  + \frac{\beta}{2}\norm{u -v}{}^2 \label{ineqn: smooth_fun_bound}
+\end{align} Recall that \emph{convexity} of $f$ implies that 
 \begin{align*}
-f(u) \le f(v) + \nabla f(v) (u - v)  + \frac{\beta}{2}\norm{u -v}{}^2
-\end{align*} Recall that \emph{convexity} of $f$ implies that 
-\begin{align*}
-f(u) \ge f(v) + \nabla f(v) (u - v).
+f(u) \ge f(v) + \inn{\nabla f(v)}{u - v}.
 \end{align*}
 Therefore, when a function is \emph{\textbf{both convex and smooth}}, we have both \emph{upper and lower bounds} on the difference between the function and its \emph{first order approximation}.
 \end{remark}
 
 \item \begin{definition} (\emph{\textbf{Self-Boundedness}}). \\
-A \emph{\textbf{differentiable}} function $f : \bR^d \to \bR$ is \underline{\emph{\textbf{self-bounded}}} if the norm of its \emph{\textbf{gradient}} is bounded by the function itself; namely, for all $u$ we have
+A \emph{\textbf{non-negative differentiable}} function $f : \bR^d \to \bR_{+}$ is \underline{\emph{\textbf{self-bounded}}} if 
 \begin{align*}
-\norm{\nabla f(u)}{}^2 \le \gamma f(u).
-\end{align*} Note that a \emph{$\beta$-smooth} \emph{non-negative function} is \emph{self-bounded}.
+\norm{\nabla f(v)}{}^2 \le 2 \beta f(v).
+\end{align*} Note that a \emph{$\beta$-smooth} \emph{non-negative function} is \emph{self-bounded} (let $u= v - \frac{1}{\beta}\norm{\nabla f(v)}{}$ in \eqref{ineqn: smooth_fun_bound}).
 \end{definition}
 \end{itemize}
 \subsection{Convex Learning Problem}
