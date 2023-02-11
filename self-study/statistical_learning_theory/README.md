@@ -73,8 +73,8 @@
     - Regularized Loss Minimization
     - Stability Leads to Generalization
     - Tikhonov Regularization and Stability
-      - Convex-Lipschitz-Bounded Problem is Stable
-      - Convex-Smooth-Bounded Problem is Stable
+      - RLM with Convex-Lipschitz Loss is Stable
+      - RLM with Convex-Smooth Loss is Stable
     - PAC Learnability for Convex Learning Problem
 
 ### Machine Learning Models
