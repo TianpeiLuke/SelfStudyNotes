@@ -77,6 +77,15 @@
       - RLM with Convex-Smooth Loss is Stable
     - PAC Learnability for Convex Learning Problem
 
+- PAC Bayesian Theory [pdf](./SL_lecture6_PAC_Bayes.pdf)
+  - Bayesian Learning
+    - Bayesian Predictor
+    - Generalized Bayesian Posterior
+    - Gibbs Measure 
+  - PAC Bayesian Theory 
+    - PAC Bayesian Inequalities
+    - PAC Bayesian Inequalities for Other Statistical Divergence 
+
 ### Machine Learning Models
 - k-Nearest Neighbor [pdf](./AL_kNN.pdf)
   - The Classification Rule
