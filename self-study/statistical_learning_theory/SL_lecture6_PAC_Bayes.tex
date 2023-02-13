@@ -216,8 +216,8 @@ The advantage of the expression on the right-hand side stems from the fact that 
 \end{enumerate}
 \end{proof}
 
-\item \begin{remark}
-The inequality \eqref{ineqn: catoni_pac_bayes_kl} can be reformulated as
+\item \begin{remark} (\textbf{\emph{Catoni's Oracle PAC Bayesian Inequality}})\citep{catoni2003pac, alquier2021user}\\
+\emph{An \textbf{oracle inequality}}  can be reformulated in similar form as \eqref{ineqn: catoni_pac_bayes_kl}:
 \begin{align}
 \cP_{\cD}\brac{ \E{h \sim \bP_{\lambda}(h|\cD)}{L_{\cP}(h)}  \le \inf_{\bQ \in \cM_{\bP}(\cH, \srH)}\set{\E{h \sim \bQ}{L_{\cP}(h)} + \frac{\kl{\bQ}{\bP}  + \log(1/\delta) }{\lambda} +  \frac{\lambda }{8m} }} \ge 1 - \delta. \label{ineqn: catoni_pac_bayes_kl_version_2}\\
 \Rightarrow \cP_{\cD}\brac{L_{\cP}(\bP_{\lambda}(h|\cD)) \le \inf_{\bQ \in \cM_{\bP}(\cH, \srH)}\set{L_{\cP}(\bQ) + \sqrt{\frac{\kl{\bQ}{\bP}  + \log(1/\delta) }{2m}} }} \ge 1 - \delta. \nonumber
