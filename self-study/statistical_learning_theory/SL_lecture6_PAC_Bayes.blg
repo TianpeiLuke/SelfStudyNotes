@@ -3,44 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: SL_lecture6_PAC_Bayes.aux
 The style file: plainnat.bst
 Database file #1: reference.bib.bib
-You've used 7 entries,
+You've used 8 entries,
             2773 wiz_defined-function locations,
-            633 strings with 5782 characters,
-and the built_in function-call counts, 2413 in all, are:
-= -- 211
-> -- 92
-< -- 7
-+ -- 34
-- -- 27
-* -- 150
-:= -- 390
-add.period$ -- 22
-call.type$ -- 7
-change.case$ -- 28
-chr.to.int$ -- 7
-cite$ -- 14
-duplicate$ -- 137
-empty$ -- 232
-format.name$ -- 38
-if$ -- 499
+            638 strings with 5884 characters,
+and the built_in function-call counts, 2711 in all, are:
+= -- 237
+> -- 102
+< -- 8
++ -- 38
+- -- 30
+* -- 165
+:= -- 439
+add.period$ -- 25
+call.type$ -- 8
+change.case$ -- 32
+chr.to.int$ -- 8
+cite$ -- 16
+duplicate$ -- 156
+empty$ -- 262
+format.name$ -- 42
+if$ -- 561
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 9
-newline$ -- 44
-num.names$ -- 28
-pop$ -- 64
+missing$ -- 10
+newline$ -- 49
+num.names$ -- 32
+pop$ -- 73
 preamble$ -- 1
-purify$ -- 23
+purify$ -- 26
 quote$ -- 0
-skip$ -- 97
+skip$ -- 110
 stack$ -- 0
-substring$ -- 55
-swap$ -- 7
+substring$ -- 57
+swap$ -- 8
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 67
+type$ -- 78
 warning$ -- 0
-while$ -- 25
+while$ -- 28
 width$ -- 0
-write$ -- 96
+write$ -- 108

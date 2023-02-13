@@ -73,9 +73,99 @@ L_{\cP}(\bQ)& := \E{h \sim \bQ}{L_{\cP}(h)} =  \E{h \sim \bQ}{\E{Z \sim \cP}{\el
 L_{\cD}(\bQ)& :=\E{h \sim \bQ}{L_{\cD}(h)} =  \E{h \sim \bQ}{\frac{1}{m}\sum_{i=1}^{m}\ell(h, Z_i)} =  \frac{1}{m}\sum_{i=1}^{m}L(\bQ, Z_i) \label{def: bayesian_hypothesis_training_error}
 \end{align}
 \end{definition}
+
+\item \begin{remark}
+In Bayesian statistics, \emph{\textbf{posterior distribution}} can be formulated given the prior distribution $\bP(h)$ and likelihood function $\cL(\cD_m | h)$ as
+\begin{align}
+\bQ(h) := \bP(h | \cD_m) \propto \cL(\cD_m | h) \times \bP(h) \label{eqn: posterior_dist}
+\end{align} Several inference techniques could then be derived from the posterior. For instance, \emph{the \textbf{mean} of the posterior}
+\begin{align*}
+\widehat{h}_{mean} := \int_{\cH} h  \bQ(dh),
+\end{align*} \emph{\textbf{the maximum a posteriori (MAP)}}
+\begin{align*}
+\widehat{h}_{map} \in \arg\max_{h\in \cH}\bQ(h)
+\end{align*} and a single draw
+\begin{align*}
+\widehat{h}_{draw} \sim \bQ(h)
+\end{align*} are all popular choices.
+\end{remark}
 \end{itemize}
 \subsection{Generalized Bayesian Learning}
+\begin{itemize}
+\item \begin{remark}(\textbf{\emph{Tempered Posterior}}) \citep{guedj2019primer}\\
+\emph{\textbf{A first strategy}} consists in modulating \emph{the influence of the likelihood term}, by considering a \emph{\underline{\textbf{tempered}} version} of it: from \eqref{eqn: posterior_dist}, the posterior now becomes \emph{\underline{\textbf{the tempered posterior $\bQ_{\lambda}$}}}:
+\begin{align}
+\bQ_{\lambda}(h) := \bP_{\lambda}(h | \cD_m) \propto \cL(\cD_m | h)^{\lambda} \times \bP(h) \label{eqn: tempered_posterior_dist}
+\end{align} where $\lambda \ge 0$. The former Bayesian model is now a particular case ($\lambda = 1$) of a continuum of distributions. Different values for $\lambda$ will achieve different \emph{\textbf{tradeoffs}} between the \emph{\textbf{prior}} $\bP$ and the \underline{\emph{\textbf{tempered likelihood}} $\cL^{\lambda}$}. Let us stress here that $\cL_{\lambda}$ may no longer explicitly refer to a canonical probabilistic model.
+
+This notion of tempered likelihood has been investigated, among others, by a striking series of paper (Grünwald, 2011, 2012, 2018; Grünwald and Van Ommen, 2017)
+which develop a ``\emph{\textbf{safe Bayesian}}" framework. These papers prove that \emph{the tempered posterior} \emph{\textbf{concentrates}} to the best \emph{approximation of the truth} in the set of predictors $\cH$, while this might not be the case for the non-tempered posterior: as such, tempering provides \emph{\textbf{robustness guarantees}} when the chosen predictor, while being wrong, still captures some aspects of the truth.
+\end{remark}
+
+\item \begin{remark}(\textbf{\emph{Generalized Posterior}}) \citep{guedj2019primer}\\
+\emph{\textbf{A second strategy}} within generalised Bayes an information-theoretic framework (see Csiszár and Shields, 2004, for an introduction) in which the ``likelihood" of a predictor $h$ is no longer assessed by the probability mass from some specified model, but rather by \emph{\textbf{the loss}} encountered when
+predicting $h(X)$ instead of $Y$, the actual output value we wish to predict.
+
+In other words, the posterior from \eqref{eqn: posterior_dist} or the tempered posterior from \eqref{eqn: tempered_posterior_dist} are replaced with \underline{\emph{\textbf{the generalised posterior}}}
+\begin{align}
+\bQ_{\lambda}(h) := \bP_{\lambda}(h | \cD_m) \propto \ell_{\lambda, m}(h)  \times \bP(h) \label{eqn: generalized_posterior_dist}
+\end{align} where $\lambda \ge 0$ and $\ell_{\lambda, m}(h)$ is a \emph{\textbf{loss term} measuring the quality of the predictor $h$ on the collected
+data $\cD_{m}$} (the training data, on which $h$ is built upon). To set ideas, one could think of $\ell_{\lambda, m}(\cdot)$ as a \emph{\textbf{functional} of the empirical risk $L_{\cD}(h)$.}
+\begin{align*}
+\ell_{\lambda, m}(h) = F_{\lambda}(L_{\cD_{m}}(h)).
+\end{align*}  
+As \emph{the loss term is merely an \textbf{instrument}} to guide oneself towards better performing algorithms but is \emph{\textbf{no longer explicitly motivated by statistical modelling}}, the \underline{\emph{\textbf{generalised}}} \underline{\emph{\textbf{Bayesian framework}}} may be described as \emph{model-free}, as no such assumption is required. Other terms appear in the statistical and machine learning literature, with  occurrences of ``\emph{generalised posterior}", ``\emph{pseudo-posterior}" or ``\emph{quasi-posterior}" succeeding one another. Similarly, the terms ``\emph{prior}" and ``\emph{posterior}" have been consistently used as they ``\emph{surcharge}" the existing terms in \emph{Bayesian statistics}, however the distributions in \eqref{eqn: generalized_posterior_dist} are now \textbf{\emph{different objects}}.
+
+Consider for example the \emph{\textbf{prior}} $\bP$: rather than \emph{incorporating prior knowledge} (which might not be available), $\bP$ serves as a way to \emph{\textbf{structure the set of predictors} $\cH$}, by putting more mass towards predictors enjoying any other \emph{desirable propert}y (suggested by the context, CPU / storage resources, etc.) such as \emph{sparsity}.
+\end{remark}
+\end{itemize}
 \subsection{Gibbs Posterior}
+\begin{itemize}
+\item 
+Among all possible loss functions $\ell_{\lambda, m}(\cdot)$, a most typical choice is the so-called \emph{Gibbs posterior (or measure)}:
+\begin{definition}\emph{\textbf{(Gibbs posterior (or measure))}}
+\begin{align}
+\bQ_{\lambda}(h) :=\bP_{\lambda}(h | \cD_m) \propto e^{-\lambda L_{\cD_{m}}(h)}  \times \bP(h) \label{eqn: gibbs_posterior_dist}
+\end{align} In Gibbs posterior, the \emph{loss} term \emph{\textbf{exponentially penalises} the performance of a predictor} $h$ on the training data, and the parameter $\lambda \ge 0$ (often referred to as an \emph{\textbf{inverse temperature}}, by analogy with \emph{the Boltzmann distribution} in \emph{statistical mechanics}) controls the \emph{\textbf{tradeoff}} between \emph{the prior term} and \emph{the loss term}.
+\end{definition}
+
+\item \begin{remark}
+Let us examine both extremes cases:
+\begin{enumerate}
+\item  when $\lambda = 0$, the loss term \emph{vanishes} and \emph{the generalised posterior amounts to the prior}: the
+predictor is blind to data. 
+\item When $\lambda \to \infty$, \emph{\textbf{the influence of data} becomes \textbf{overwhelming}} and the probability mass accumulates around the predictor  which achieves \emph{the best empirical error}, i.e., \emph{the generalised Bayesian predictor} reduces to \emph{the celebrated \textbf{empirical risk minimiser (ERM)}}.
+\end{enumerate}
+\end{remark}
+
+\item \begin{remark}(\emph{\textbf{Gibbs Measure} as Solution of \textbf{Maximum Entropy Optimization}})\\
+Let $(\cH, \srH)$ denote a \emph{measurable space} and consider $\mu, \nu$ two probability measures on $(\cH, \srH)$. We note $\bQ \ll \bP$ when $\bQ$ is absolutely continuous with respect to $\bP$, and we let $\cM_{\bP}(\cH, \srH)$ denote the space of probability measures on $(\cH, \srH)$ which are absolutely continuous with respect to $\bP$:
+\begin{align*}
+\cM_{\bP}(\cH, \srH)= \set{\bQ: \bQ \ll \bP}.
+\end{align*} \emph{The Kullback-Leibler divergence} is defined as
+\begin{align*}
+\kl{\bQ}{\bP} &= \left\{\begin{array}{cc}
+\int_{\cH}\log\paren{\frac{d\bQ}{d\bP}}d\bQ & \text{ when }\bQ \ll \bP\\
+\infty &\text{o.w.}
+\end{array}
+\right.
+\end{align*} Let us consider the maximum entropy optimization problem
+\begin{align}
+\inf_{\bQ \in \cM_{\bP}(\cH, \srH)} & \frac{1}{\lambda}\kl{\bQ}{\bP} + \int_{\cH}L_{\cD_{m}}(h) \bQ(dh)  \label{eqn: max_ent}
+\end{align} This problem amounts to minimising the integrated (with respect to any measure $\bQ$) \emph{empirical risk} plus a \emph{divergence term} between the \emph{generalised posterior} and the \emph{prior}. In other words, minimising a criterion of performance plus a divergence from the initial distribution, which is the analogous of \emph{penalised regression} (such as Lasso).
+
+The optimization problem has an \emph{\textbf{unique solution}} if $\cM_{\bP}(\cH, \srH)$ is non-empty. The solution is attained when $\bQ$ is a \emph{\textbf{Gibbs measure}}:
+\begin{align}
+\frac{d\bQ}{d\bP}(h) &= \frac{1}{Z_{\lambda, m}}\exp\paren{- \lambda L_{\cD_{m}}(h)} \label{eqn: gibbs_max_ent}
+\end{align} where 
+\begin{align*}
+Z_{\lambda, m} = \int_{\cH}\exp\paren{- \lambda L_{\cD_{m}}(h)} d\bP(h)
+\end{align*} And the optimial value 
+\begin{align}
+\inf_{\bQ \in \cM_{\bP}(\cH, \srH)}\set{\frac{1}{\lambda}\kl{\bQ}{\bP} + \int_{\cH}L_{\cD_{m}}(h) \bQ(dh) } = -\frac{1}{\lambda}\log \int_{\cH}\exp\paren{- \lambda L_{\cD_{m}}(h)} d\bP(h). \label{eqn: gibbs_max_ent_opt_value}
+\end{align}
+\end{remark}
+\end{itemize}
 
 \section{PAC Bayesian Theory}
 \subsection{PAC Bayesian Inequalities}
@@ -125,6 +215,14 @@ The advantage of the expression on the right-hand side stems from the fact that 
 \end{align*} 
 \end{enumerate}
 \end{proof}
+
+\item \begin{remark}
+The inequality \eqref{ineqn: catoni_pac_bayes_kl} can be reformulated as
+\begin{align}
+\cP_{\cD}\brac{ \E{h \sim \bP_{\lambda}(h|\cD)}{L_{\cP}(h)}  \le \inf_{\bQ \in \cM_{\bP}(\cH, \srH)}\set{\E{h \sim \bQ}{L_{\cP}(h)} + \frac{\kl{\bQ}{\bP}  + \log(1/\delta) }{\lambda} +  \frac{\lambda }{8m} }} \ge 1 - \delta. \label{ineqn: catoni_pac_bayes_kl_version_2}\\
+\Rightarrow \cP_{\cD}\brac{L_{\cP}(\bP_{\lambda}(h|\cD)) \le \inf_{\bQ \in \cM_{\bP}(\cH, \srH)}\set{L_{\cP}(\bQ) + \sqrt{\frac{\kl{\bQ}{\bP}  + \log(1/\delta) }{2m}} }} \ge 1 - \delta. \nonumber
+\end{align}
+\end{remark}
 
 \item The first PAC-Bayesian Inequality is from McAllester \citep{mcallester2003pac}.
 \begin{theorem} (\textbf{McAllester's PAC Bayesian Inequality})\citep{mcallester2003pac, shalev2014understanding, rasmussen2006gaussian, alquier2021user}\\
@@ -177,7 +275,7 @@ An alternative way to prove inequality \eqref{pf: mcallester_pac_bayes_kl_1} is 
 \end{align*} Then multiplying both sides by $\exp\paren{-\frac{\lambda^2}{8m s}}$ where $s \in (0,1)$
 \begin{align*}
 \E{\cD}{e^{\lambda  \Delta(h) -\frac{\lambda^2}{8m s} }} &\le \exp\paren{\frac{\lambda^2(s-1)}{8ms}}, \forall \lambda.
-\end{align*} This inequality holds for all $\lambda$, so integrating with respect to $\lambda$ and use Fubini's theorem, we have the LHS
+\end{align*} This inequality holds for all $\lambda$. After integrating with respect to $\lambda$ and using Fubini's theorem, we have the LHS
 \begin{align*}
 \int_{-\infty}^{\infty}\exp\paren{\frac{\lambda^2(s-1)}{8ms}}d\lambda = \sqrt{\frac{8ms \pi}{1-s}}.
 \end{align*} And the RHS, for each $x:=\Delta(h)$
