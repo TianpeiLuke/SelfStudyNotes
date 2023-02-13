@@ -1,4 +1,4 @@
-\begin{thebibliography}{7}
+\begin{thebibliography}{8}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -14,6 +14,11 @@ Pierre Alquier.
 Olivier Catoni.
 \newblock A {PAC}-{B}ayesian approach to adaptive classification.
 \newblock \emph{preprint}, 840, 2003.
+
+\bibitem[Guedj(2019)]{guedj2019primer}
+Benjamin Guedj.
+\newblock A primer on {PAC}-{B}ayesian learning.
+\newblock \emph{arXiv preprint arXiv:1901.05353}, 2019.
 
 \bibitem[Maurer(2004)]{maurer2004note}
 Andreas Maurer.
