@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: SL_lecture6_PAC_Bayes.aux
+The style file: plainnat.bst
+Database file #1: reference.bib.bib
+You've used 7 entries,
+            2773 wiz_defined-function locations,
+            633 strings with 5782 characters,
+and the built_in function-call counts, 2413 in all, are:
+= -- 211
+> -- 92
+< -- 7
++ -- 34
+- -- 27
+* -- 150
+:= -- 390
+add.period$ -- 22
+call.type$ -- 7
+change.case$ -- 28
+chr.to.int$ -- 7
+cite$ -- 14
+duplicate$ -- 137
+empty$ -- 232
+format.name$ -- 38
+if$ -- 499
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 9
+newline$ -- 44
+num.names$ -- 28
+pop$ -- 64
+preamble$ -- 1
+purify$ -- 23
+quote$ -- 0
+skip$ -- 97
+stack$ -- 0
+substring$ -- 55
+swap$ -- 7
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 67
+warning$ -- 0
+while$ -- 25
+width$ -- 0
+write$ -- 96

@@ -34,11 +34,224 @@
 \newpage
 \section{Bayesian Learning}
 \subsection{Bayesian Predictor}
+\begin{itemize}
+\item \begin{remark} (\emph{\textbf{Data}})\\
+Define an \emph{\textbf{observation}} as a $d$-dimensional vector $x$. The \emph{unknown} nature of the observation is called a \emph{\textbf{class}}, denoted as $y$. The domain of observation is called an \emph{\textbf{input space} or \textbf{feature space}}, denoted as $\cX\subset \bR^{d}$, whereas the domain of class is called the \emph{\textbf{target space}}, denoted as $\cY$. For \emph{\textbf{classification task}}, $\cY= \set{1,\ldots, M}$; and for \emph{\textbf{regression task}}, $\cY = \bR$. 
+Denote a collection of $n$ \emph{\textbf{samples}} as 
+\begin{align*}
+\cD \equiv \cD_n = \paren{(X_1, Y_1) \xdotx{,} (X_n, Y_n)}.
+\end{align*} Note that $\cD_n$ is a finite \emph{\textbf{sub-sequence}} in $(\cX \times \cY)^n$.
+\end{remark}
+
+
+\item \begin{definition} (\emph{\textbf{Concept Class as a Function Class}})\\
+ A \underline{\emph{\textbf{concept}}} $c: \cX \rightarrow \cY$ is the \emph{input-output association} from the nature and is \emph{to be learned} by \emph{\textbf{a learning algorithm}}.  Denote $\cC$ as \emph{the set of all concepts} we wish to learn as the \underline{\emph{\textbf{concept class}}}. That is, $\cC \subseteq \set{c: \cX \rightarrow \cY } =\cY^{\cX}.$ Concept class $\cC$ is a \emph{function class}. 
+\end{definition}
+
+\item \begin{definition} (\emph{\textbf{Hypothesis and Hypothesis Class}})\\
+The learner is requested to output a \emph{prediction rule}, $h : \cX \to \cY$. This function is also called a \emph{\textbf{predictor}}, a \emph{\textbf{hypothesis}}, or a \emph{\textbf{classifier}}. The predictor can be used to predict the label of new domain points. 
+
+Note that $\cH$ and $\cC$ may not overlap, since the concept class is unknown to learner. 
+\end{definition}
+
+\item  \begin{definition} (\emph{\textbf{Bayesian Hypothesis}})\\
+Assume instead that the hypothesis $h$ is \emph{random}. That is, let $(\cH, \srH, \bP)$ be a probability space with probability measure $\bP$. We refer $\bP$ as \emph{the \textbf{\underline{prior distribution} of hypothesis}} $h \in \cH$. The corresponding \emph{\textbf{randomized hypothesis}} $h$ is called \underline{\emph{\textbf{Bayesian hypothesis}}}.
+\end{definition}
+
+
+
+\item \begin{definition}(\textbf{\emph{Bayesian Learning and Generalization Error}})\\
+Following the Bayesian reasoning approach, \emph{the output of the learning algorithm} is \emph{not necessarily a single hypothesis}. Instead, the learning
+process defines \emph{a \textbf{\underline{posterior probability}} over $\cH$}, which we denote by $\bQ$. Note that the posterior distribution is absolutely continuous with respect to prior $\bP$, i.e. $\bQ \ll \bP$. 
+
+In the context of a \emph{supervised learning problem}, where $\cH$ contains functions from $\cX$ to $\cY$, one can think of $\bQ$ as defining a randomized prediction rule as follows.  Whenever we get a new instance $x$, we \emph{\textbf{randomly}} pick a hypothesis $h \in \cH$ according to $\bQ$ and predict $h(x)$. We define \emph{the \textbf{loss} of} $\bQ$ on an example $z$ to be
+\begin{align}
+L(\bQ, z) := \E{h \sim \bQ}{\ell(h, z)} \label{def: bayesian_hypothesis_loss}
+\end{align} where $\ell: \cH \times \cZ \to \bR_{+}$ is a loss function. \underline{\emph{\textbf{The generalization loss}}} and \underline{\emph{\textbf{training loss of $\bQ$}}} can be written as
+\begin{align}
+L_{\cP}(\bQ)& := \E{h \sim \bQ}{L_{\cP}(h)} =  \E{h \sim \bQ}{\E{Z \sim \cP}{\ell(h, Z)}}  = \E{Z \sim \cP}{L(\bQ, Z)}\label{def: bayesian_hypothesis_generalization_error}\\
+L_{\cD}(\bQ)& :=\E{h \sim \bQ}{L_{\cD}(h)} =  \E{h \sim \bQ}{\frac{1}{m}\sum_{i=1}^{m}\ell(h, Z_i)} =  \frac{1}{m}\sum_{i=1}^{m}L(\bQ, Z_i) \label{def: bayesian_hypothesis_training_error}
+\end{align}
+\end{definition}
+\end{itemize}
 \subsection{Generalized Bayesian Learning}
 \subsection{Gibbs Posterior}
 
 \section{PAC Bayesian Theory}
 \subsection{PAC Bayesian Inequalities}
+\begin{itemize}
+\item \begin{theorem} (\textbf{Catoni's PAC Bayesian Inequality})\citep{catoni2003pac, alquier2021user}\\
+Let $\cP$ be an arbitrary distribution over an example domain $\cZ$. Let $\cH$ be a hypothesis class and let $\ell: \cH \times \cZ \to [0,1]$ be a loss function. Let $\bP$ be a prior distribution over $\cH$ and let $\delta \in (0,1)$. Then, with probability of at least $1 - \delta$ over
+the choice of an i.i.d. training set $\cD = \set{z_1 \xdotx{,} z_m}$ sampled according to $\cP$, for all distributions $\bQ$ over $\cH$ (even such that depend on $\cD$) and for all $\lambda >0$, we have
+\begin{align}
+L_{\cP}(\bQ) \le L_{\cD}(\bQ) + \frac{\kl{\bQ}{\bP}  + \log(1/\delta) }{\lambda} +  \frac{\lambda }{8m}  \label{ineqn: catoni_pac_bayes_kl}
+\end{align} where $\kl{\bQ}{\bP} = \E{\bQ}{\log \paren{\bQ / \bP}}$ is the Kullback-Leibler divergence.
+\end{theorem}
+\begin{proof}
+\begin{enumerate}
+\item Recall \textit{\textbf{the duality formulation}} of \emph{logarithmic moment generating function} for random variable $M$:
+\begin{align*}
+\log \E{\bP}{e^{\lambda M}} &= \sup_{\bQ \ll \bP}\set{ \lambda \E{\bQ}{M} - \kl{\bQ}{\bP} }
+\end{align*} Let $M := \Delta(h)$ where $\Delta(h) := \paren{L_{\cP}(h) - L_{\cD}(h)}$. For all $\bQ \ll \bP$, we have
+\begin{align}
+\log \E{\bP}{e^{\lambda \Delta(h)}} &\ge \set{ \lambda \E{\bQ}{\Delta(h)} - \kl{\bQ}{\bP} }. \label{pf: catoni_pac_bayes_kl_1}
+\end{align} It follows that $\Delta(h) := \paren{L_{\cP}(h) - L_{\cD}(h)} \equiv \Delta(h, \cD)$. Taking exponential and expectation with respect to sample $\cD$ on both sides of inequality yields
+\begin{align}
+\E{\cD}{e^{\sup_{\bQ \ll \bP}\set{\lambda\E{\bQ}{\Delta(h)} - \kl{\bQ}{\bP} }}} &\le \E{\cD}{\E{\bP}{e^{\lambda \Delta(h)}}} \label{pf: catoni_pac_bayes_kl_2}
+\end{align}
+The advantage of the expression on the right-hand side stems from the fact that we can switch the order of expectations (because $\bP$ is a prior that \emph{\textbf{does not depend on sample}} $\cD$), which yields
+\begin{align}
+\E{\cD}{e^{\sup_{\bQ \ll \bP}\set{\lambda\E{\bQ}{\Delta(h)} - \kl{\bQ}{\bP} }}} &\le \E{\bP}{\E{\cD}{e^{\lambda \Delta(h)}}} \label{pf: catoni_pac_bayes_kl_3}
+\end{align}
+
+\item Next, \emph{\textbf{for any hypothesis}} $h\in \cH$, we bound the expecation term $\E{\cD}{e^{\lambda \Delta(h)}}$. Since $L_{\cD}(h) = \frac{1}{m}\sum_{i=1}^{m}\ell(h, z_i) \in [0,1], a.s.$,  from \emph{Hoeffding's lemma}  
+\begin{align}
+\E{\cD}{e^{\lambda m \Delta(h)}} &\le \exp\paren{\frac{ m \lambda^2 }{8}} \nonumber\\
+\Rightarrow \E{\cD}{e^{\lambda  \Delta(h)}} &\le \exp\paren{\frac{\lambda^2}{8m}} \label{pf: catoni_pac_bayes_kl_4}
+\end{align} Combining \eqref{pf: catoni_pac_bayes_kl_4} with Equation \eqref{pf: catoni_pac_bayes_kl_3}, we have
+\begin{align}
+\E{\cD}{e^{\sup_{\bQ \ll \bP}\set{\lambda\E{\bQ}{\Delta(h)} - \kl{\bQ}{\bP}  }}}  \le  \exp\paren{\frac{\lambda^2 }{8m}} \nonumber\\
+\Rightarrow \E{\cD}{\exp\paren{\sup_{\bQ \ll \bP}\set{\lambda\E{\bQ}{\Delta(h)} - \kl{\bQ}{\bP} - \frac{\lambda^2 }{8m}  }}} \le 1  \label{pf: catoni_pac_bayes_kl_5}
+\end{align}
+
+\item  Finally, we  obtain the result by applying \emph{Chernoff's method}. Specifically, by \emph{Markov's inequality}, 
+\begin{align}
+&\cP_{\cD}\set{\sup_{\bQ \ll \bP}\set{\lambda  \E{\bQ}{\Delta(h)}  - \kl{\bQ}{\bP} - \frac{\lambda^2 }{8m}  } \ge \epsilon} \nonumber\\
+&\le e^{-\epsilon}\E{\cD}{\exp\paren{\sup_{\bQ \ll \bP}\set{\lambda\E{\bQ}{\Delta(h)} - \kl{\bQ}{\bP} - \frac{\lambda^2 }{8m}  }}} \nonumber\\
+&\le e^{-\epsilon}  \label{pf: catoni_pac_bayes_kl_6}
+\end{align} Denote the right-hand side of the above $\delta$, thus $\epsilon = \log(1/\delta)$. After rearranging the term, we therefore obtain that with probability of at least $1 - \delta$ we have that for all $\bQ \ll \bP$, and for all $\lambda$
+\begin{align*}
+ \E{\bQ}{\Delta(h)} \le \frac{\kl{\bQ}{\bP}  + \log(1/\delta) }{\lambda} +  \frac{\lambda }{8m}. \qed
+\end{align*} 
+\end{enumerate}
+\end{proof}
+
+\item The first PAC-Bayesian Inequality is from McAllester \citep{mcallester2003pac}.
+\begin{theorem} (\textbf{McAllester's PAC Bayesian Inequality})\citep{mcallester2003pac, shalev2014understanding, rasmussen2006gaussian, alquier2021user}\\
+Under the same condition as in \eqref{ineqn: catoni_pac_bayes_kl}, then, with probability of at least $1 - \delta$, for all distributions $\bQ \ll \bP$ over $\cH$, we have
+\begin{align}
+\E{h \sim \bQ}{L_{\cP}(h)} &\le \E{h \sim \bQ}{L_{\cD}(h)} + \sqrt{\frac{ \kl{\bQ}{\bP}  + \log(1/\delta) + \log(m) + 2}{2m - 1}} \label{ineqn: mcallester_pac_bayes_kl}
+\end{align} 
+\end{theorem}
+\begin{proof}
+The proof is similar to above. In this time, we want to show that 
+\begin{align}
+\E{\cD}{e^{(2m-1) \Delta(h)^2}} &\le 4m, \label{pf: mcallester_pac_bayes_kl_1}
+\end{align} where $\Delta(h) := \abs{L_{\cP}(h) - L_{\cD}(h)}$. Since the loss function is bounded within $[0,1]$ almost surely, by \emph{Hoedffing's inequality}
+\begin{align*}
+\cP_{\cD}\set{\Delta(h) \ge x} &\le 2\exp\paren{-2m x^2}.
+\end{align*} Note that $\cP_{\cD}\set{\Delta \ge x} = \int_{x}^{\infty}f(\Delta) d\Delta$ where $f(\Delta) \equiv \frac{d\cP_{\cD}(\Delta)}{d\Delta}$ is the density function. Since the tail is dominated by Gaussian tail, the density function is also dominated by Gaussian density
+\begin{align*}
+ \int_{x}^{\infty}f(\Delta)  d\Delta &\le 2e^{-2m x^2}\\
+ \Rightarrow f(\Delta) &\le 8m \Delta e^{-2m \Delta^2}.
+\end{align*} Therefore, the expectation
+\begin{align*}
+\E{\cD}{e^{(2m-1) \Delta(h)^2}} &= \int_{0}^{\infty}e^{(2m-1) \Delta^2} f(\Delta) d\Delta\\
+&\le  \int_{0}^{\infty}e^{(2m-1) \Delta^2} 8m \Delta e^{-2m \Delta^2}d\Delta \\
+&= 8m  \int_{0}^{\infty}e^{- \Delta^2}  \Delta d\Delta\\
+&= 4m.
+\end{align*} With inequality \eqref{pf: mcallester_pac_bayes_kl_1}, we use the dual formulation of log-MGF, 
+\begin{align*}
+\log \E{\bP}{e^{\lambda M}} &= \sup_{\bQ \ll \bP}\set{\E{\bQ}{ \lambda M} - \kl{\bQ}{\bP} }
+\end{align*} and let $M:= \Delta^2$ and $\lambda := (2m-1)$, so that  we have
+\begin{align}
+\E{\cD}{e^{ \sup_{\bQ \ll \bP}\set{\E{\bQ}{ (2m-1) \Delta^2} - \kl{\bQ}{\bP}}}}  &\le \E{\cD}{\E{\bP}{e^{(2m-1) \Delta(h)^2}}} \nonumber \\
+&\le \E{\bP}{\E{\cD}{e^{(2m-1) \Delta(h)^2}}} \nonumber\\
+&\le 4m  \quad \text{(by bound \eqref{pf: mcallester_pac_bayes_kl_1})}.  \label{pf: mcallester_pac_bayes_kl_2}
+\end{align} By Markov's inequality
+\begin{align*}
+&\cP\set{\sup_{\bQ \ll \bP}\set{\E{\bQ}{ (2m-1) \Delta^2} - \kl{\bQ}{\bP}} \ge \epsilon} \\
+&\le e^{-\epsilon} \E{\cD}{e^{ \sup_{\bQ \ll \bP}\set{\E{\bQ}{ (2m-1) \Delta^2} - \kl{\bQ}{\bP}}}}\\
+&\le 4m e^{-\epsilon}.
+\end{align*} Denote the RHS as $\delta$, so $\epsilon = \log(4m/\delta)$. We have with probability as least $1-\delta$, for all $\bQ \ll \bP$,
+\begin{align*}
+(2m-1) \E{\bQ}{\Delta^2} - \kl{\bQ}{\bP} \le \log\frac{4m}{\delta}\\
+\Rightarrow \paren{\E{\bQ}{\Delta}}^2 \le \E{\bQ}{\Delta^2} \le \frac{\kl{\bQ}{\bP} + \log(1/\delta) + \log(m) + 2}{2m-1}
+\end{align*} The leftmost inequality is due to Jenson's inequality on $\phi(x) := x^2$. We have proved the result. \qed
+\end{proof}
+
+\item \begin{remark}
+Note that this bound  \eqref{ineqn: mcallester_pac_bayes_kl} cannot be obtained from \eqref{ineqn: catoni_pac_bayes_kl} by minimizing $\lambda$ since the optimal $\lambda^{*}= \sqrt{(\kl{\bQ}{\bP}  + \log(1/\delta)) 8m}$ depends on $\bQ$, which is not allowed. 
+
+A natural idea is to propose \emph{a finite grid} $\Lambda \subset (0, +\infty)$ and to minimize over this grid, which can be justified by a union bound argument. This way we pay the rise for an additional term $\log(m)$ in the boun, i.e. $\sqrt{\frac{ \kl{\bQ}{\bP}  + \log(1/\delta)}{2m }}  \to \sqrt{\frac{ \kl{\bQ}{\bP}  + \log(1/\delta) + \log(m)}{2m - 1}}$ .
+\end{remark}
+
+
+\item \begin{remark}(\textbf{\emph{Generalization Error Bound of Posterior by KL Divergence}})\\
+\emph{The McAllester's PAC Bayesian theorem} tells us that \emph{the difference} between \emph{the generalization loss} and \emph{the empirical loss} of a \emph{\textbf{posterior}} $\bQ$ is bounded by an expression that depends on \emph{\textbf{the Kullback-Leibler divergence}} between $\bQ$ and the prior distribution $\bP$.
+\end{remark}
+
+\item \begin{remark}(\textbf{\emph{Agnostic PAC Bound vs. PAC Bayesian Bound}})\\
+We can compare the PAC bound and PAC-Bayeisan bound. With probability at least $1-\delta$,
+\begin{align*}
+(\text{Agnostic PAC Bound}) && L_{\cP}(h) &\le L_{\cD}(h) + \sqrt{\frac{\log\abs{\cH} + \log(1/\delta)}{2m}} \\
+(\text{PAC-Bayesian Bound}) &&\E{h \sim \bQ}{L_{\cP}(h)} &\le \E{h \sim \bQ}{L_{\cD}(h)} + \sqrt{\frac{ \kl{\bQ}{\bP}  + \log(m/\delta)}{2m}}
+\end{align*}
+\end{remark}
+
+
+\item \begin{remark}(\textbf{\emph{Bayesian Learning as Minimum Description Length}})\\
+As in \underline{\emph{\textbf{the MDL paradigm}}}, we define a \emph{\textbf{hierarchy}} over hypotheses in our class $\cH$. Now, \emph{the hierarchy takes the form of a prior distribution over $\cH$} so that the preferred hypothesis has higher chance being selected.  
+
+The \emph{McAllester's PAC Bayesian bound} is like the MDL paradigm with the \underline{\emph{\textbf{complexity}}} of hypothesis encoded by \underline{\emph{\textbf{the KL-divergence}}}. 
+\end{remark}
+
+\item \begin{remark} (\textbf{\emph{Regularization}}). \\
+The \emph{\textbf{PAC-Bayes bound}} leads to the following learning rule:
+
+Given a prior $\bP$, return a posterior $\bQ$ that minimizes the function
+\begin{align}
+ \E{h \sim \bQ}{L_{\cD}(h)} + \sqrt{\frac{ \kl{\bQ}{\bP}  + \log(m/\delta)}{2m-1}} \label{eqn: pac_bayes_learning}
+\end{align}
+This rule is similar to \emph{\textbf{\underline{the regularized risk minimization}} principle}. That is, we \emph{jointly minimize the empirical loss} of $\bQ$ on the sample \emph{and the Kullback-Leibler ``distance"} between $\bQ$ and $\bP$.
+\end{remark}
+
+
+\item For the special case of $0$-$1$ loss, we can the following improved bound:
+\begin{theorem}(\textbf{Seeger's PAC Bayesian Inequality})\citep{seeger2002pac, maurer2004note, rasmussen2006gaussian, alquier2021user}\\
+Let $\cP$ be an arbitrary distribution over an example domain $\cZ$. Let $\cH$ be a hypothesis class and let $\ell: \cH \times \cZ \to \set{0,1}$ be a loss function. Let $\bP$ be a prior distribution over $\cH$ and let $\delta \in (0,1)$. Then, with probability of at least $1 - \delta$ over $\cD$, for all distributions $\bQ \ll \bP$ over $\cH$, we have
+\begin{align}
+\mathds{KL}_{Ber}\paren{L_{\cD}(\bQ) \;\|\; L_{\cP}(\bQ)} \le   \frac{\kl{\bQ}{\bP} + \log\paren{1/\delta} + \log\paren{2\sqrt{m}}}{m} \label{ineqn: seeger_pac_bayes_kl}
+\end{align} where $\mathds{KL}_{Ber}\paren{p \;\|\; q}$ is  the Kullback-Leibler divergence for Bernoulli random variable
+\begin{align*}
+\mathds{KL}_{Ber}\paren{p \;\|\; q} = p \log\frac{p}{q} + (1-p)\log\frac{1-p}{1- q}.
+\end{align*}
+\end{theorem}
+
+\item \begin{remark}
+This bound is based on the following inequality (see \citep{maurer2004note}):
+\begin{align}
+\E{\cD}{e^{m\mathds{KL}_{Ber}\paren{\hat{\mu}_m \;\|\; \mu} }} &\le 2\sqrt{m}, \label{pf: seeger_pac_bayes_kl_1}
+\end{align} where $\hat{\mu}_m = \frac{1}{m}\sum_{i=1}^{m}X_i$ where $X_i \in  [0,1]$ almost surely and $X_1 \xdotx{,} X_m$ are i.i.d. random variables with mean $\E{}{X_i} = \mu$. The inequality is sharp since the equality is attained by Bernoulli random variable. The original inequality in \citep{seeger2002pac} is 
+\begin{align*}
+\E{\cD}{e^{m\mathds{KL}_{Ber}\paren{\hat{\mu}_m \;\|\; \mu} }} &\le m + 1.
+\end{align*}
+\end{remark}
+
+\item \begin{remark}
+By \emph{Pinsker's inequality},
+\begin{align*}
+\paren{L_{\cP}(\bQ) - L_{\cD}(\bQ) }^2  \le  \mathds{KL}_{Ber}\paren{L_{\cD}(\bQ) \;\|\; L_{\cP}(\bQ)} 
+\end{align*} which recovers the inequality \eqref{ineqn: mcallester_pac_bayes_kl}.
+\end{remark}
+
+\item \begin{remark}
+We can rewrite \eqref{ineqn: seeger_pac_bayes_kl} explicitly as
+\begin{align}
+\cP_{\cD}\set{L_{\cP}(\bQ) \le \mathds{KL}_{Ber}^{-1}\paren{L_{\cD}(\bQ) \Bigr\|\; \frac{\kl{\bQ}{\bP} + \log\paren{2\sqrt{m}/\delta}}{m}}} \ge 1 - \delta  \label{ineqn: seeger_pac_bayes_kl_2}
+\end{align} where 
+\begin{align*}
+ \mathds{KL}_{Ber}^{-1}(q \| b) = \sup\set{p \in [0, 1]: \mathds{KL}_{Ber}(p \| q) \le b}.
+\end{align*}
+\end{remark}
+
+\item \begin{corollary}\citep{alquier2021user}\\
+For any $\delta >0$, any $\lambda \in (0, 2)$, with probability at least $1- \delta$,
+\begin{align}
+L_{\cP}(\bQ) \le \paren{1 - \frac{\lambda}{2}}^{-1}L_{\cD}(\bQ) + \brac{\lambda\paren{1 - \frac{\lambda}{2}}}^{-1}\frac{\kl{\bQ}{\bP} + \log\paren{2\sqrt{m}/\delta}}{m} \label{ineqn: seeger_pac_bayes_kl_modified}
+\end{align}
+\end{corollary}
+\end{itemize}
 \subsection{PAC Bayesian Inequalities for Other Divergences}
 
 
