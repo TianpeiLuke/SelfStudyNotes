@@ -171,6 +171,29 @@ The proof is similar to above. In this time, we want to show that
 \end{proof}
 
 \item \begin{remark}
+An alternative way to prove inequality \eqref{pf: mcallester_pac_bayes_kl_1} is by Hoeffding's lemma \eqref{pf: catoni_pac_bayes_kl_4}
+\begin{align*}
+\E{\cD}{e^{\lambda  \Delta(h)}} &\le \exp\paren{\frac{\lambda^2}{8m}}
+\end{align*} Then multiplying both sides by $\exp\paren{-\frac{\lambda^2}{8m s}}$ where $s \in (0,1)$
+\begin{align*}
+\E{\cD}{e^{\lambda  \Delta(h) -\frac{\lambda^2}{8m s} }} &\le \exp\paren{\frac{\lambda^2(s-1)}{8ms}}, \forall \lambda.
+\end{align*} This inequality holds for all $\lambda$, so integrating with respect to $\lambda$ and use Fubini's theorem, we have the LHS
+\begin{align*}
+\int_{-\infty}^{\infty}\exp\paren{\frac{\lambda^2(s-1)}{8ms}}d\lambda = \sqrt{\frac{8ms \pi}{1-s}}.
+\end{align*} And the RHS, for each $x:=\Delta(h)$
+\begin{align*}
+\int_{-\infty}^{\infty}\exp\paren{\lambda x -\frac{\lambda^2}{8m s} }d\lambda = \sqrt{8ms \pi}\exp\paren{2m s x^2}
+\end{align*} Taking expectation with respect to $X := \Delta(h)$,
+\begin{align}
+\int_{-\infty}^{\infty}\E{\cD}{e^{\lambda  \Delta(h) -\frac{\lambda^2}{8m s} }} d\lambda &= \sqrt{8ms \pi}\E{\cD}{\exp\paren{2m s\Delta^2}} \le \sqrt{\frac{8ms \pi}{1-s}} \\
+\Rightarrow \E{\cD}{\exp\paren{2m s\Delta^2}} &\le \frac{1}{\sqrt{1 - s}} \label{ineqn: sub_gaussian_pac_bayes}
+\end{align} Let $s = \frac{2m - 1}{2m}= 1 - \frac{1}{2m}$. We have
+\begin{align*}
+\E{\cD}{e^{(2m -1)\Delta^2}} \le \frac{1}{\sqrt{1 - s}} = \sqrt{2m} \le 4m. \qed
+\end{align*} Note that \eqref{ineqn: sub_gaussian_pac_bayes} holds \emph{\textbf{for all sub-Gaussian loss}}.
+\end{remark}
+
+\item \begin{remark}
 Note that this bound  \eqref{ineqn: mcallester_pac_bayes_kl} cannot be obtained from \eqref{ineqn: catoni_pac_bayes_kl} by minimizing $\lambda$ since the optimal $\lambda^{*}= \sqrt{(\kl{\bQ}{\bP}  + \log(1/\delta)) 8m}$ depends on $\bQ$, which is not allowed. 
 
 A natural idea is to propose \emph{a finite grid} $\Lambda \subset (0, +\infty)$ and to minimize over this grid, which can be justified by a union bound argument. This way we pay the rise for an additional term $\log(m)$ in the boun, i.e. $\sqrt{\frac{ \kl{\bQ}{\bP}  + \log(1/\delta)}{2m }}  \to \sqrt{\frac{ \kl{\bQ}{\bP}  + \log(1/\delta) + \log(m)}{2m - 1}}$ .
@@ -185,7 +208,7 @@ A natural idea is to propose \emph{a finite grid} $\Lambda \subset (0, +\infty)$
 We can compare the PAC bound and PAC-Bayeisan bound. With probability at least $1-\delta$,
 \begin{align*}
 (\text{Agnostic PAC Bound}) && L_{\cP}(h) &\le L_{\cD}(h) + \sqrt{\frac{\log\abs{\cH} + \log(1/\delta)}{2m}} \\
-(\text{PAC-Bayesian Bound}) &&\E{h \sim \bQ}{L_{\cP}(h)} &\le \E{h \sim \bQ}{L_{\cD}(h)} + \sqrt{\frac{ \kl{\bQ}{\bP}  + \log(m/\delta)}{2m}}
+(\text{PAC-Bayesian Bound}) &&\E{h \sim \bQ}{L_{\cP}(h)} &\le \E{h \sim \bQ}{L_{\cD}(h)} + \sqrt{\frac{ \kl{\bQ}{\bP}  + \log(m/\delta)}{2m -1}}
 \end{align*}
 \end{remark}
 

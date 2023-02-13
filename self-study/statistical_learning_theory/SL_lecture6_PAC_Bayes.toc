@@ -4,4 +4,4 @@
 \contentsline {subsection}{\numberline {1.3}Gibbs Posterior}{3}
 \contentsline {section}{\numberline {2}PAC Bayesian Theory}{3}
 \contentsline {subsection}{\numberline {2.1}PAC Bayesian Inequalities}{3}
-\contentsline {subsection}{\numberline {2.2}PAC Bayesian Inequalities for Other Divergences}{7}
+\contentsline {subsection}{\numberline {2.2}PAC Bayesian Inequalities for Other Divergences}{8}
