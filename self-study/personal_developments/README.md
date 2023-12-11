@@ -21,6 +21,14 @@ This section address my learning on various books for personal development and e
 
 - The 7 Habits of Highly Effective People
 
+    - Paradigms and Principles
+
+    - Private Victory
+
+		- Public Victory
+
+		- Renewal
+
 
 
 - Getting to Yes
