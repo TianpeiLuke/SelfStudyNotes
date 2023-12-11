@@ -28,19 +28,26 @@ This section address my learning on various books for personal development and e
 
     - Private Victory
 
-        - Habit 1: Principles of Personal Vision (Be Proactive)
-        - Habit 2: Principles of Personal Leadership (Begin with the End in Mind)
-        - Habit 3: Principles of Personal Management (Put First Things First)
+        - Principles of Personal Vision
+              Habit 1: Be Proactive
+        - Principles of Personal Leadership
+              Habit 2: Begin with the End in Mind
+        - Principles of Personal Management
+              Habit 3: Put First Things First
 
 
     - Public Victory
         - Paradigms of Interdependence
-        - Principles of Interpersonal Leadership (Habit 4: Think Win/Win)
-        - Principles of Empathic Communication (Habit 5: Seek First to Understand, Then to Be Understood)
-        - Principles of Creative Cooperation (Habit 6: Synergize)
+        - Principles of Interpersonal Leadership
+              Habit 4: Think Win/Win
+        - Principles of Empathic Communication
+              Habit 5: Seek First to Understand, Then to Be Understood
+        - Principles of Creative Cooperation
+              Habit 6: Synergize
 
     - Renewal
-        - Principles of Balanced Self-Renewal (Habit 7: Sharpen the Saw)
+        - Principles of Balanced Self-Renewal
+              Habit 7: Sharpen the Saw
 
 
 
