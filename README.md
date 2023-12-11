@@ -30,6 +30,8 @@ This repository is the latex-based notes for self-learning, mainly for math, sta
 
 - [Natural Language Processing](./self-study/natural_language_processing/README.md)
 
+- [Peronsal Development](./self-study/personal_developments/README.md)
+
 - [Probabilistic Graphical Models](./self-study/probabilistic_graphical_model/README.md)
 
 - [Reinforcement Learning](./self-study/reinforcement_learning/README.md)
