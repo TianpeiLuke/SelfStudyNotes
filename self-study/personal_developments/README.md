@@ -52,6 +52,14 @@ This section address my learning on various books for personal development and e
         - Principles of **Balanced Self-Renewal**
               (Habit 7: _Sharpen the Saw_)
 
+- The 5 Elements of Effective Thinking
 
+- Getting Things Done
 
 - Getting to Yes
+
+- Emotional Intelligence
+
+- The Craft of Research
+
+- Where Research Begins
