@@ -20,6 +20,8 @@ This section address my learning on various books for personal development and e
 
 ***Where Research Begins: choosing a research topic that matters to you (and the world)***, Thomas S. Mullaney, Christopher Rea
 
+***Speed Reading: Learn to Read a 200+ Page Book in 1 Hour (Mental Performance)***, Kam Knight
+
 ## Tables of Contents
 
 - The 7 Habits of Highly Effective People [pdf](./PD_1_7_habit_high_effective.pdf)
