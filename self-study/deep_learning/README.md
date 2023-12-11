@@ -10,7 +10,7 @@
 
 ## Table of Content
 
-- Back-Propagation and Auto-differentiation
+- Back-Propagation and Auto-Differentiation
 
 - Bias-Variance Tradeoff, Regularization and Double Descent Phenomenon
 
