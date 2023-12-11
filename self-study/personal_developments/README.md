@@ -19,7 +19,7 @@ This section address my learning on various books for personal development and e
 
 ## Tables of Contents
 
-- The 7 Habits of Highly Effective People
+- The 7 Habits of Highly Effective People [pdf](./PD_1_7_habit_high_effective.pdf)
 
     - Paradigms and Principles
 
