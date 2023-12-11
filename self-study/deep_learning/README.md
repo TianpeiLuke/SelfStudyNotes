@@ -10,7 +10,7 @@
 
 - Back-Propagation and Auto-differentiation
 
-- Regularization, Bias-Variance Tradeoff and Double Descent Phenomenon
+- Bias-Variance Tradeoff, Regularization and Double Descent Phenomenon
 
 - Optimization Methods in Deep Learning
 
