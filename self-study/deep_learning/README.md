@@ -2,9 +2,11 @@
 
 ## Books
 
-***Deep Learning***, Ian Goodfellow, Yoshua Bengio and Aaron Courville
+***Deep Learning***, Ian Goodfellow, Yoshua Bengio and Aaron Courville, _Adaptive Computation and Machine Learning series_
 
 ***Probabilistic Machine Learning: Advanced Topics***, Kevin P. Murphy, _Adaptive Computation and Machine Learning series_
+
+***Machine Learning: A Probabilistic Perspective***, Kevin P. Murphy, _Adaptive Computation and Machine Learning series_
 
 ## Table of Content
 
