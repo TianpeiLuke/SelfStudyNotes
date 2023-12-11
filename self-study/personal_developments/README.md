@@ -16,6 +16,7 @@ This section address my learning on various books for personal development and e
 
 ***Getting to Yes: Negotiating Agreement Without Giving In***, Roger Fisher, William Ury
 
+***The Craft of Research***,  Wayne C. Booth, Gregory G. Colomb, Joseph M. Williams, Joseph Bizup, William T. FitzGerald, Fifth Edition (Chicago Guides to Writing, Editing, and Publishing)，
 
 ## Tables of Contents
 
