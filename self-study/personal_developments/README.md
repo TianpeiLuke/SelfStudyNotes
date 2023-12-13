@@ -108,13 +108,13 @@ This section address my learning on various books for personal development and e
 
 - Getting to Yes
     - The Problem
-        - Don't Bargain Over Positions
+        - ***Don't Bargain Over Positions***
 
     - The Method
-        - Separate the People from the Problem
-        - Focus on Interests, Not Positions
-        - Invent Options for Mutual Gain
-        - Insist on Using Objective Criteria
+        - ***Separate the People from the Problem***
+        - ***Focus on Interests, Not Positions***
+        - ***Invent Options for Mutual Gain***
+        - ***Insist on Using Objective Criteria***
 
     - Yes, But ...
         - What If They Are More Powerful
@@ -131,14 +131,14 @@ This section address my learning on various books for personal development and e
 - Emotional Intelligence 2.0
     - The Big Picture
     - What Emontional Intelligence Looks Like: Understanding the Four Skills
-    - Self-Awareness Strategies
-    - Self-Management Strategies
-    - Social Awareness Strategies
-    - Relationship Management Strategies
+    - ***Self-Awareness*** Strategies
+    - ***Self-Management*** Strategies
+    - ***Social Awareness*** Strategies
+    - ***Relationship Management*** Strategies
 
 - Where Research Begins
     - Introduction
-        - Self-Centered Research
+        - ***Self-Centered Research***
         - Introversion, First. Extroversion Second
 
     - Become a Self-Centered Researcher
