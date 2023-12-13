@@ -92,11 +92,11 @@ This section address my learning on various books for personal development and e
 
     - Practicing Stree-Free Productivity
         - ***Getting Started***: Setting Up the Time, Space and Tools
-        - ***Collection***: Corralling Your ``Stuff"
-        - ***Processing***: Getting ``In" to Empty
+        - ***Capturing***: Corralling Your ``Stuff"
+        - ***Clarifying***: Getting ``In" to Empty
         - ***Organizing***: Setting Up the Right Buckets
-        - ***Reviewing***: Keeping Your System Functional
-        - ***Doing***: Making the Best Action Choices
+        - ***Reflecting**: Keeping Your System Functional
+        - ***Engaging***: Making the Best Action Choices
         - Getting Projects Under Control
 
     - The Power of Key Principles
