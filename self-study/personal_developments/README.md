@@ -4,21 +4,29 @@ This section address my learning on various books for personal development and e
 
 ## Books
 
-***The Five Elements of Effective Thinking***, Edward B. Burger, Michael Starbird
-
-***Getting Things Done: The Art of Stress-Free Productivity***, David Allen
+- Being Effective
 
 ***The 7 Habits of Highly Effective People: 30th Anniversary Edition***, Sean Covey, Jim Collins
 
-***Emotional Intelligence 2.0***, Travis Bradberry, Jean Greaves
+***Getting Things Done: The Art of Stress-Free Productivity***, David Allen
 
 ***Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones***, James Clear
 
-***Getting to Yes: Negotiating Agreement Without Giving In***, Roger Fisher, William Ury
+- Be Curious
+
+***The Five Elements of Effective Thinking***, Edward B. Burger, Michael Starbird
+
+***Where Research Begins: choosing a research topic that matters to you (and the world)***, Thomas S. Mullaney, Christopher Rea
 
 ***The Craft of Research***,  Wayne C. Booth, Gregory G. Colomb, Joseph M. Williams, Joseph Bizup, William T. FitzGerald, _Chicago Guides to Writing, Editing, and Publishing_，5th Edition
 
-***Where Research Begins: choosing a research topic that matters to you (and the world)***, Thomas S. Mullaney, Christopher Rea
+- Emotional Intelligence
+
+***Emotional Intelligence 2.0***, Travis Bradberry, Jean Greaves
+
+***Getting to Yes: Negotiating Agreement Without Giving In***, Roger Fisher, William Ury
+
+- Reading and Writting
 
 ***Speed Reading: Learn to Read a 200+ Page Book in 1 Hour (Mental Performance)***, Kam Knight
 
@@ -62,6 +70,21 @@ This section address my learning on various books for personal development and e
 
 - Emotional Intelligence
 
-- The Craft of Research
-
 - Where Research Begins
+    - Introduction
+        - Self-Centered Research
+        - Introversion, First. Extroversion Second
+
+    - Become a Self-Centered Researcher
+        - Questions
+        - What's Your Problem?
+        - Designing a Project that Works
+
+    - Get Over Yourself
+        - How to Find Your Problem Collective
+        - How to Navigate Your Field
+        - How to Begin
+
+    - What's Next in Your Research Journey?
+
+- The Craft of Research
