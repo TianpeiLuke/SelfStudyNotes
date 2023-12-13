@@ -156,7 +156,7 @@ This section address my learning on various books for personal development and e
 - The Craft of Research
     - Research, Researchers, and Readers -- Become a Researcher
         - Thinking in Print: The Use of Research, Public and Private
-        - Connecting with Your Reader: Creating a Role for Yourself and Your Readers
+        - Connecting with Your Reader: Creating a ***Role*** for ***Yourself*** and ***Your Readers***
 
     - Asking ***Questions***, Finding Answers -- ***Planning*** Your Project
         - From Topics to ***Questions***
