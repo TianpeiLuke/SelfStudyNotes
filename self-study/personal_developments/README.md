@@ -1,4 +1,4 @@
-# Self Personal Development and Emotional Intelligence
+# Personal Development and Emotional Intelligence
 
 This section address my learning on various books for personal development and emotional intelligence
 
@@ -100,9 +100,9 @@ This section address my learning on various books for personal development and e
         - Getting Projects Under Control
 
     - The Power of Key Principles
-        - The Power of the *Collection* Habit
-        - The Power of the *Next-Action* Decision
-        - The Power of Outcome Focusing
+        - The Power of the ***Collection Habit***
+        - The Power of the ***Next-Action Decision***
+        - The Power of ***Outcome Focusing***
 
     - Conclusion
 
