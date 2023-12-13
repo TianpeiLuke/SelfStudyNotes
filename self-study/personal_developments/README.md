@@ -36,31 +36,31 @@ This section address my learning on various books for personal development and e
 
     - Paradigms and Principles
 
-        - Inside-Out
+        - ***Inside-Out***
         - The Seven Habits An Overview
 
     - Private Victory
 
         - Principles of **Personal Vision**
-              (Habit 1: _Be Proactive_)
+              -- Habit 1: ***Be Proactive***
         - Principles of **Personal Leadership**
-              (Habit 2: _Begin with the End in Mind_)
+              -- Habit 2: ***Begin with the End in Mind***
         - Principles of **Personal Management**
-              (Habit 3: _Put First Things First_)
+              -- Habit 3: ***Put First Things First***
 
 
     - Public Victory
         - Paradigms of Interdependence
         - Principles of **Interpersonal Leadership**
-              (Habit 4: _Think Win/Win_)
+              -- Habit 4: ***Think Win/Win***
         - Principles of **Empathic Communication**
-              (Habit 5: _Seek First to Understand, Then to Be Understood_)
+              -- Habit 5: ***Seek First to Understand, Then to Be Understood***
         - Principles of **Creative Cooperation**
-              (Habit 6: _Synergize_)
+              -- Habit 6: ***Synergize***
 
     - Renewal
         - Principles of **Balanced Self-Renewal**
-              (Habit 7: _Sharpen the Saw_)
+              -- Habit 7: ***Sharpen the Saw***
 
 - The 5 Elements of Effective Thinking
     - Introduction
@@ -100,8 +100,8 @@ This section address my learning on various books for personal development and e
         - Getting Projects Under Control
 
     - The Power of Key Principles
-        - The Power of the Collection Habit
-        - The Power of the Next-Action Decision
+        - The Power of the *Collection* Habit
+        - The Power of the *Next-Action* Decision
         - The Power of Outcome Focusing
 
     - Conclusion
@@ -154,3 +154,29 @@ This section address my learning on various books for personal development and e
     - What's Next in Your Research Journey?
 
 - The Craft of Research
+    - Research, Researchers, and Readers -- Become a Researcher
+        - Thinking in Print: The Use of Research, Public and Private
+        - Connecting with Your Reader: Creating a Role for Yourself and Your Readers
+
+    - Asking ***Questions***, Finding Answers -- ***Planning*** Your Project
+        - From Topics to ***Questions***
+        - From Questions to a ***Problem***
+        - From Problems to ***Sources***
+        - ***Engaging Sources***
+
+    - Making an ***Argument*** -- Assembling a Research Argument
+        - Making Good Arguments: An Overview
+        - Making ***Claims***
+        - Assembling ***Reasons*** and ***Evidence***
+        - ***Acknowledgements*** and ***Responses***
+        - ***Warrants***
+
+    - ***Writting*** Your Argument -- Planning Again
+        - Planning and ***Drafting***
+        - Organizing Your Argument
+        - Incorporating Sources
+        - ***Communicating*** Evidence ***Visually***
+        - ***Introductions*** and ***Conclusions***
+        - Revising ***Style***: Telling Your Story ***Clearly***
+
+    - Some Last Considerations -- Ethics
