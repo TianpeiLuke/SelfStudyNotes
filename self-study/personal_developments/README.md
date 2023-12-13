@@ -63,12 +63,57 @@ This section address my learning on various books for personal development and e
               (Habit 7: _Sharpen the Saw_)
 
 - The 5 Elements of Effective Thinking
+    - Introduction
+      Elements of Effective Thinking, Learning and Creating
 
+    - Ground Your Thinking 
+      **Understand Deeply**
+
+    - Igniting Insights through Mistakes 
+      **Fail to Succeed**
+
+    - Creating Questions out of Thin Air
+      **Be Your Own Socrates**
+
+    - Seeing the Flow of Ideas
+      **Look Back, Look Forward**
+
+    - Engaging Change
+      **Transform Yourself**
+
+    - A Way to Provoke Effective Thinking (Review)
+ 
 - Getting Things Done
 
 - Getting to Yes
+    - The Problem
+        - Don't Bargain Over Positions
 
-- Emotional Intelligence
+    - The Method
+        - Separate the People from the Problem
+        - Focus on Interests, Not Positions
+        - Invent Options for Mutual Gain
+        - Insist on Using Objective Criteria
+
+    - Yes, But ...
+        - What If They Are More Powerful
+          (Develop Your BATNA --  Best Alternative To A Negotiated Agreement)
+
+        - What If They Won't Play
+          (Use Negotiation Jujitsu)
+
+        - What If They Use Dirty Tricks?
+          (Taming The Hard Bargainer)
+
+    - In Conclusion
+
+- Emotional Intelligence 2.0
+    - The Big Picture
+    - What Emontional Intelligence Looks Like: Understanding the Four Skills
+    - Self-Awareness Strategies
+    - Self-Management Strategies
+    - Social Awareness Strategies
+    - Relationship Management Strategies
 
 - Where Research Begins
     - Introduction
