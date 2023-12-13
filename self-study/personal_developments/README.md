@@ -95,7 +95,7 @@ This section address my learning on various books for personal development and e
         - ***Capturing***: Corralling Your ``Stuff"
         - ***Clarifying***: Getting ``In" to Empty
         - ***Organizing***: Setting Up the Right Buckets
-        - ***Reflecting**: Keeping Your System Functional
+        - ***Reflecting***: Keeping Your System Functional
         - ***Engaging***: Making the Best Action Choices
         - Getting Projects Under Control
 
