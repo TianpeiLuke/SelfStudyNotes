@@ -64,26 +64,47 @@ This section address my learning on various books for personal development and e
 
 - The 5 Elements of Effective Thinking
     - Introduction
-      Elements of Effective Thinking, Learning and Creating
+      -- Elements of Effective Thinking, Learning and Creating
 
     - Ground Your Thinking 
-      **Understand Deeply**
+      -- **Understand Deeply**
 
     - Igniting Insights through Mistakes 
-      **Fail to Succeed**
+      -- **Fail to Succeed**
 
     - Creating Questions out of Thin Air
-      **Be Your Own Socrates**
+      -- **Be Your Own Socrates**
 
     - Seeing the Flow of Ideas
-      **Look Back, Look Forward**
+      -- **Look Back, Look Forward**
 
     - Engaging Change
-      **Transform Yourself**
+      -- **Transform Yourself**
 
-    - A Way to Provoke Effective Thinking (Review)
+    - A Way to Provoke Effective Thinking --Review
  
 - Getting Things Done
+
+    - The Art of Getting Things Done
+        - A New Practice for a New Reality
+        - The Five Stages of Mastering Workflow
+        - The Five Phases of Project Planning
+
+    - Practicing Stree-Free Productivity
+        - Getting Started: Setting Up the Time, Space and Tools
+        - Collection: Corralling Your ``Stuff"
+        - Processing: Getting ``In" to Empty
+        - Organizing: Setting Up the Right Buckets
+        - Reviewing: Keeping Your System Functional
+        - Doing: Making the Best Action Choices
+        - Getting Projects Under Control
+
+    - The Power of Key Principles
+        - The Power of the Collection Habit
+        - The Power of the Next-Action Decision
+        - The Power of Outcome Focusing
+
+    - Conclusion
 
 - Getting to Yes
     - The Problem
