@@ -1,0 +1,12 @@
+\contentsline {section}{\numberline {1}Introduction}{2}{}%
+\contentsline {subsection}{\numberline {1.1}Self-Centered Research}{2}{}%
+\contentsline {subsection}{\numberline {1.2}Introversion, First. Extroversion Second}{2}{}%
+\contentsline {section}{\numberline {2}Become a Self-Centered Researcher}{2}{}%
+\contentsline {subsection}{\numberline {2.1}Questions}{2}{}%
+\contentsline {subsection}{\numberline {2.2}What's Your Problem?}{2}{}%
+\contentsline {subsection}{\numberline {2.3}Designing a Project that Works}{2}{}%
+\contentsline {section}{\numberline {3}Get Over Yourself}{2}{}%
+\contentsline {subsection}{\numberline {3.1}How to Find Your Problem Collective}{2}{}%
+\contentsline {subsection}{\numberline {3.2}How to Navigate Your Field}{2}{}%
+\contentsline {subsection}{\numberline {3.3}How to Begin}{2}{}%
+\contentsline {section}{\numberline {4}What's Next in Your Research Journey?}{2}{}%

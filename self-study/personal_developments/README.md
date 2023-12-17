@@ -83,7 +83,7 @@ This section address my learning on various books for personal development and e
 
     - A Way to Provoke Effective Thinking --Review
  
-- Getting Things Done
+- Getting Things Done: The Art of Stress-Free Productivity
 
     - The Art of Getting Things Done
         - A New Practice for a New Reality
@@ -106,7 +106,7 @@ This section address my learning on various books for personal development and e
 
     - Conclusion
 
-- Getting to Yes
+- Getting to Yes: Negotiating Agreements without Giving In
     - The Problem
         - ***Don't Bargain Over Positions***
 
@@ -136,7 +136,7 @@ This section address my learning on various books for personal development and e
     - ***Social Awareness*** Strategies
     - ***Relationship Management*** Strategies
 
-- Where Research Begins
+- Where Research Begins: Choosing a Research Topics that Matters to you [pdf](./PD_6_where_research_begins.pdf)
     - Introduction
         - ***Self-Centered Research***
         - Introversion, First. Extroversion Second
