@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.10.29)  23 DEC 2023 12:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.10.29)  23 DEC 2023 15:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -699,7 +699,20 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [27]
-[28] [29] [30] [31] [32]
+Overfull \hbox (6.7376pt too wide) in paragraph at lines 993--994
+[]\OT1/cmr/m/n/10.95 My own maxim of per-sonal ef-fec-tive-ness is this: \OT1/c
+mr/bx/it/10.95 Man-age from the left\OT1/cmr/m/it/10.95 ; \OT1/cmr/bx/it/10.95 
+lead from the right\OT1/cmr/m/n/10.95 . 
+ []
+
+[28]
+Underfull \vbox (badness 1859) has occurred while \output is active []
+
+ [29]
+Underfull \vbox (badness 1859) has occurred while \output is active []
+
+ [30]
+[31] [32] [33] [34] [35] [36]
 No file PD_1_7_habit_high_effective.bbl.
 (./PD_1_7_habit_high_effective.aux) ) 
 Here is how much of TeX's memory you used:
@@ -709,7 +722,7 @@ Here is how much of TeX's memory you used:
  35677 multiletter control sequences out of 15000+600000
  478676 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 114i,6n,118p,578b,334s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 114i,6n,118p,726b,334s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super
 /cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx1
@@ -719,10 +732,10 @@ b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
 texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf/fonts/t
 ype1/public/cm-super/sfrm1095.pfb>
-Output written on PD_1_7_habit_high_effective.pdf (32 pages, 222723 bytes).
+Output written on PD_1_7_habit_high_effective.pdf (36 pages, 237303 bytes).
 PDF statistics:
- 151 PDF objects out of 1000 (max. 8388607)
- 100 compressed objects within 1 object stream
+ 164 PDF objects out of 1000 (max. 8388607)
+ 108 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
