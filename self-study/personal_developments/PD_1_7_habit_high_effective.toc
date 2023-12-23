@@ -44,8 +44,8 @@
 \contentsline {subsubsection}{\numberline {3.2.4}Leadership And Management -- the Two Creations}{17}{}%
 \contentsline {subsubsection}{\numberline {3.2.5}Rescripting: Become Your Own First Creator}{18}{}%
 \contentsline {subsubsection}{\numberline {3.2.6}A Personal Mission Statement}{18}{}%
-\contentsline {subsubsection}{\numberline {3.2.7}At The Center}{18}{}%
-\contentsline {subsubsection}{\numberline {3.2.8}Alterative Centers}{18}{}%
+\contentsline {subsubsection}{\numberline {3.2.7}At The Center}{19}{}%
+\contentsline {subsubsection}{\numberline {3.2.8}Alterative Centers}{19}{}%
 \contentsline {subsubsection}{\numberline {3.2.9}Identify Your Center}{19}{}%
 \contentsline {subsubsection}{\numberline {3.2.10}A Principle Center}{19}{}%
 \contentsline {subsubsection}{\numberline {3.2.11}Writing and Using a Personal Mission Statement}{19}{}%
@@ -54,12 +54,12 @@
 \contentsline {subsubsection}{\numberline {3.2.14}Expand Perspective}{19}{}%
 \contentsline {subsubsection}{\numberline {3.2.15}Visualization and Affirmation}{19}{}%
 \contentsline {subsubsection}{\numberline {3.2.16}Identifying Roles and Goals}{19}{}%
-\contentsline {subsubsection}{\numberline {3.2.17}Organizational Mission Statements}{19}{}%
-\contentsline {subsection}{\numberline {3.3}Habit 3: Put First Things First -- Principles of Personal Management}{19}{}%
-\contentsline {subsubsection}{\numberline {3.3.1}The Power of Independent Will}{19}{}%
-\contentsline {subsubsection}{\numberline {3.3.2}Four Generations of Time Management}{19}{}%
-\contentsline {subsubsection}{\numberline {3.3.3}Quadrant II}{19}{}%
-\contentsline {subsubsection}{\numberline {3.3.4}What It Takes to say ``No"}{19}{}%
+\contentsline {subsubsection}{\numberline {3.2.17}Organizational Mission Statements}{20}{}%
+\contentsline {subsection}{\numberline {3.3}Habit 3: Put First Things First -- Principles of Personal Management}{20}{}%
+\contentsline {subsubsection}{\numberline {3.3.1}The Power of Independent Will}{20}{}%
+\contentsline {subsubsection}{\numberline {3.3.2}Four Generations of Time Management}{20}{}%
+\contentsline {subsubsection}{\numberline {3.3.3}Quadrant II}{20}{}%
+\contentsline {subsubsection}{\numberline {3.3.4}What It Takes to say ``No"}{20}{}%
 \contentsline {subsubsection}{\numberline {3.3.5}Moving into Quadrant II}{20}{}%
 \contentsline {subsubsection}{\numberline {3.3.6}The Quadrant II Tool}{20}{}%
 \contentsline {subsubsection}{\numberline {3.3.7}Becoming A Quadrant II Self-Manager}{20}{}%
@@ -68,12 +68,12 @@
 \contentsline {subsubsection}{\numberline {3.3.10}Delegation: Increasing P and PC}{20}{}%
 \contentsline {subsubsection}{\numberline {3.3.11}Gofer Delegation}{20}{}%
 \contentsline {subsubsection}{\numberline {3.3.12}Stewardship Delegation}{20}{}%
-\contentsline {subsubsection}{\numberline {3.3.13}The Quadrant II Paradigm}{20}{}%
-\contentsline {section}{\numberline {4}Public Victory}{20}{}%
-\contentsline {subsection}{\numberline {4.1}Paradigms of Interdependence}{20}{}%
-\contentsline {subsubsection}{\numberline {4.1.1}The Emotional Bank Account}{20}{}%
-\contentsline {subsubsection}{\numberline {4.1.2}Six Major Deposits}{20}{}%
-\contentsline {subsubsection}{\numberline {4.1.3}Attending to the Little Things}{20}{}%
+\contentsline {subsubsection}{\numberline {3.3.13}The Quadrant II Paradigm}{21}{}%
+\contentsline {section}{\numberline {4}Public Victory}{21}{}%
+\contentsline {subsection}{\numberline {4.1}Paradigms of Interdependence}{21}{}%
+\contentsline {subsubsection}{\numberline {4.1.1}The Emotional Bank Account}{21}{}%
+\contentsline {subsubsection}{\numberline {4.1.2}Six Major Deposits}{21}{}%
+\contentsline {subsubsection}{\numberline {4.1.3}Attending to the Little Things}{21}{}%
 \contentsline {subsubsection}{\numberline {4.1.4}Keeping Commitments}{21}{}%
 \contentsline {subsubsection}{\numberline {4.1.5}Clarifying Expectations}{21}{}%
 \contentsline {subsubsection}{\numberline {4.1.6}Showing Personal Integrity}{21}{}%
@@ -83,11 +83,11 @@
 \contentsline {subsubsection}{\numberline {4.1.10}The Habits of Interdependence}{21}{}%
 \contentsline {subsection}{\numberline {4.2}Habit 4: Think Win/Win -- Principles of Interpersonal Leadership}{21}{}%
 \contentsline {subsubsection}{\numberline {4.2.1}Six Paradigms of Human Interaction}{21}{}%
-\contentsline {subsubsection}{\numberline {4.2.2}Win/Win or No Deal}{21}{}%
-\contentsline {subsubsection}{\numberline {4.2.3}Five Dimensions of Win/Win}{21}{}%
-\contentsline {subsubsection}{\numberline {4.2.4}Charater}{21}{}%
-\contentsline {subsubsection}{\numberline {4.2.5}Relationships}{21}{}%
-\contentsline {subsubsection}{\numberline {4.2.6}Agreements}{21}{}%
+\contentsline {subsubsection}{\numberline {4.2.2}Win/Win or No Deal}{22}{}%
+\contentsline {subsubsection}{\numberline {4.2.3}Five Dimensions of Win/Win}{22}{}%
+\contentsline {subsubsection}{\numberline {4.2.4}Charater}{22}{}%
+\contentsline {subsubsection}{\numberline {4.2.5}Relationships}{22}{}%
+\contentsline {subsubsection}{\numberline {4.2.6}Agreements}{22}{}%
 \contentsline {subsubsection}{\numberline {4.2.7}Win/Win Performance Agreements}{22}{}%
 \contentsline {subsubsection}{\numberline {4.2.8}Systems}{22}{}%
 \contentsline {subsubsection}{\numberline {4.2.9}Processes}{22}{}%
@@ -96,12 +96,12 @@
 \contentsline {subsubsection}{\numberline {4.3.2}Empathic Listening}{22}{}%
 \contentsline {subsubsection}{\numberline {4.3.3}Diagnose Before You Prescribe}{22}{}%
 \contentsline {subsubsection}{\numberline {4.3.4}Four Autobiographical Responses}{22}{}%
-\contentsline {subsubsection}{\numberline {4.3.5}Understanding and Perception}{22}{}%
-\contentsline {subsubsection}{\numberline {4.3.6}Then Seek to Be Understood}{22}{}%
-\contentsline {subsubsection}{\numberline {4.3.7}One on One}{22}{}%
-\contentsline {subsection}{\numberline {4.4}Habit 6: Synergize -- Principles of Creative Cooperation}{22}{}%
-\contentsline {subsubsection}{\numberline {4.4.1}Synergistic Communication}{22}{}%
-\contentsline {subsubsection}{\numberline {4.4.2}Levels of Communication}{22}{}%
+\contentsline {subsubsection}{\numberline {4.3.5}Understanding and Perception}{23}{}%
+\contentsline {subsubsection}{\numberline {4.3.6}Then Seek to Be Understood}{23}{}%
+\contentsline {subsubsection}{\numberline {4.3.7}One on One}{23}{}%
+\contentsline {subsection}{\numberline {4.4}Habit 6: Synergize -- Principles of Creative Cooperation}{23}{}%
+\contentsline {subsubsection}{\numberline {4.4.1}Synergistic Communication}{23}{}%
+\contentsline {subsubsection}{\numberline {4.4.2}Levels of Communication}{23}{}%
 \contentsline {subsubsection}{\numberline {4.4.3}Negative Synergy}{23}{}%
 \contentsline {subsubsection}{\numberline {4.4.4}Valuing the Differences}{23}{}%
 \contentsline {subsubsection}{\numberline {4.4.5}All Nature is Synergistic}{23}{}%
@@ -111,11 +111,11 @@
 \contentsline {subsubsection}{\numberline {5.1.2}The Physical Dimension}{23}{}%
 \contentsline {subsubsection}{\numberline {5.1.3}The Spiritual Dimension}{23}{}%
 \contentsline {subsubsection}{\numberline {5.1.4}The Mental Dimension}{23}{}%
-\contentsline {subsubsection}{\numberline {5.1.5}The Social/Emotional Dimension}{23}{}%
-\contentsline {subsubsection}{\numberline {5.1.6}Scripting Others}{23}{}%
-\contentsline {subsubsection}{\numberline {5.1.7}Balance in Renewal}{23}{}%
-\contentsline {subsubsection}{\numberline {5.1.8}Synergy in Renewal}{23}{}%
-\contentsline {subsubsection}{\numberline {5.1.9}The Upward Spiral}{23}{}%
+\contentsline {subsubsection}{\numberline {5.1.5}The Social/Emotional Dimension}{24}{}%
+\contentsline {subsubsection}{\numberline {5.1.6}Scripting Others}{24}{}%
+\contentsline {subsubsection}{\numberline {5.1.7}Balance in Renewal}{24}{}%
+\contentsline {subsubsection}{\numberline {5.1.8}Synergy in Renewal}{24}{}%
+\contentsline {subsubsection}{\numberline {5.1.9}The Upward Spiral}{24}{}%
 \contentsline {subsection}{\numberline {5.2}Inside-Out Again}{24}{}%
 \contentsline {subsubsection}{\numberline {5.2.1}Intergenerational Living}{24}{}%
 \contentsline {subsubsection}{\numberline {5.2.2}Becoming a Transition Person}{24}{}%
