@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.10.29)  22 DEC 2023 22:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.10.29)  23 DEC 2023 12:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -677,17 +677,39 @@ Overfull \hbox (17.58498pt too wide) in paragraph at lines 270--271
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [10]
-[11] [12] [13] [14] [15] [16] [17] [18] [19] [20] [21] [22] [23] [24]
+[11] [12] [13] [14] [15] [16] [17] [18] [19] [20]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22]
+[23]
+Overfull \hbox (3.44598pt too wide) in paragraph at lines 833--834
+[]\OT1/cmr/m/n/10.95 By cen-ter-ing our lives on \OT1/cmr/m/it/10.95 time-less,
+ un-chang-ing prin-ci-ples\OT1/cmr/m/n/10.95 , we cre-ate a \OT1/cmr/bx/it/10.9
+5 fun-da-men-tal paradigm
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [24]
+[25] [26]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [27]
+[28] [29] [30] [31] [32]
 No file PD_1_7_habit_high_effective.bbl.
 (./PD_1_7_habit_high_effective.aux) ) 
 Here is how much of TeX's memory you used:
- 17792 strings out of 478287
- 358718 string characters out of 5849288
+ 17793 strings out of 478287
+ 358742 string characters out of 5849288
  638642 words of memory out of 5000000
- 35676 multiletter control sequences out of 15000+600000
+ 35677 multiletter control sequences out of 15000+600000
  478676 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 114i,6n,118p,578b,230s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 114i,6n,118p,578b,334s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super
 /cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx1
@@ -697,10 +719,10 @@ b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
 texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf/fonts/t
 ype1/public/cm-super/sfrm1095.pfb>
-Output written on PD_1_7_habit_high_effective.pdf (24 pages, 198063 bytes).
+Output written on PD_1_7_habit_high_effective.pdf (32 pages, 222723 bytes).
 PDF statistics:
- 125 PDF objects out of 1000 (max. 8388607)
- 82 compressed objects within 1 object stream
+ 151 PDF objects out of 1000 (max. 8388607)
+ 100 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
