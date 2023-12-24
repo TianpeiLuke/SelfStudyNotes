@@ -83,39 +83,39 @@
 \contentsline {subsubsection}{\numberline {4.1.9}P Problems are PC Opportunities}{39}{}%
 \contentsline {subsection}{\numberline {4.2}Habit 4: Think Win/Win -- Principles of Interpersonal Leadership}{39}{}%
 \contentsline {subsubsection}{\numberline {4.2.1}Six Paradigms of Human Interaction}{39}{}%
-\contentsline {subsubsection}{\numberline {4.2.2}Win/Win or No Deal}{39}{}%
-\contentsline {subsubsection}{\numberline {4.2.3}Five Dimensions of Win/Win}{40}{}%
-\contentsline {subsubsection}{\numberline {4.2.4}Charater}{40}{}%
-\contentsline {subsubsection}{\numberline {4.2.5}Relationships}{40}{}%
-\contentsline {subsubsection}{\numberline {4.2.6}Agreements}{40}{}%
-\contentsline {subsubsection}{\numberline {4.2.7}Win/Win Performance Agreements}{40}{}%
-\contentsline {subsubsection}{\numberline {4.2.8}Systems}{40}{}%
-\contentsline {subsubsection}{\numberline {4.2.9}Processes}{40}{}%
-\contentsline {subsection}{\numberline {4.3}Habit 5: Seek First to Understand, Then to Be Understood -- Principles of Empathic Communication}{40}{}%
-\contentsline {subsubsection}{\numberline {4.3.1}Charater and Communication}{40}{}%
-\contentsline {subsubsection}{\numberline {4.3.2}Empathic Listening}{40}{}%
-\contentsline {subsubsection}{\numberline {4.3.3}Diagnose Before You Prescribe}{40}{}%
-\contentsline {subsubsection}{\numberline {4.3.4}Four Autobiographical Responses}{40}{}%
-\contentsline {subsubsection}{\numberline {4.3.5}Understanding and Perception}{40}{}%
-\contentsline {subsubsection}{\numberline {4.3.6}Then Seek to Be Understood}{41}{}%
-\contentsline {subsubsection}{\numberline {4.3.7}One on One}{41}{}%
-\contentsline {subsection}{\numberline {4.4}Habit 6: Synergize -- Principles of Creative Cooperation}{41}{}%
-\contentsline {subsubsection}{\numberline {4.4.1}Synergistic Communication}{41}{}%
-\contentsline {subsubsection}{\numberline {4.4.2}Levels of Communication}{41}{}%
-\contentsline {subsubsection}{\numberline {4.4.3}Negative Synergy}{41}{}%
-\contentsline {subsubsection}{\numberline {4.4.4}Valuing the Differences}{41}{}%
-\contentsline {subsubsection}{\numberline {4.4.5}All Nature is Synergistic}{41}{}%
-\contentsline {section}{\numberline {5}Renewal}{41}{}%
-\contentsline {subsection}{\numberline {5.1}Habit 7: Sharpen the Saw -- Principles of Balanced Self-Renewal}{41}{}%
-\contentsline {subsubsection}{\numberline {5.1.1}Four Dimensions of Renewal}{41}{}%
-\contentsline {subsubsection}{\numberline {5.1.2}The Physical Dimension}{41}{}%
-\contentsline {subsubsection}{\numberline {5.1.3}The Spiritual Dimension}{41}{}%
-\contentsline {subsubsection}{\numberline {5.1.4}The Mental Dimension}{41}{}%
-\contentsline {subsubsection}{\numberline {5.1.5}The Social/Emotional Dimension}{41}{}%
-\contentsline {subsubsection}{\numberline {5.1.6}Scripting Others}{42}{}%
-\contentsline {subsubsection}{\numberline {5.1.7}Balance in Renewal}{42}{}%
-\contentsline {subsubsection}{\numberline {5.1.8}Synergy in Renewal}{42}{}%
-\contentsline {subsubsection}{\numberline {5.1.9}The Upward Spiral}{42}{}%
-\contentsline {subsection}{\numberline {5.2}Inside-Out Again}{42}{}%
-\contentsline {subsubsection}{\numberline {5.2.1}Intergenerational Living}{42}{}%
-\contentsline {subsubsection}{\numberline {5.2.2}Becoming a Transition Person}{42}{}%
+\contentsline {subsubsection}{\numberline {4.2.2}Win/Win or No Deal}{41}{}%
+\contentsline {subsubsection}{\numberline {4.2.3}Five Dimensions of Win/Win}{41}{}%
+\contentsline {subsubsection}{\numberline {4.2.4}Charater}{41}{}%
+\contentsline {subsubsection}{\numberline {4.2.5}Relationships}{41}{}%
+\contentsline {subsubsection}{\numberline {4.2.6}Agreements}{41}{}%
+\contentsline {subsubsection}{\numberline {4.2.7}Win/Win Performance Agreements}{41}{}%
+\contentsline {subsubsection}{\numberline {4.2.8}Systems}{41}{}%
+\contentsline {subsubsection}{\numberline {4.2.9}Processes}{42}{}%
+\contentsline {subsection}{\numberline {4.3}Habit 5: Seek First to Understand, Then to Be Understood -- Principles of Empathic Communication}{42}{}%
+\contentsline {subsubsection}{\numberline {4.3.1}Charater and Communication}{42}{}%
+\contentsline {subsubsection}{\numberline {4.3.2}Empathic Listening}{42}{}%
+\contentsline {subsubsection}{\numberline {4.3.3}Diagnose Before You Prescribe}{42}{}%
+\contentsline {subsubsection}{\numberline {4.3.4}Four Autobiographical Responses}{42}{}%
+\contentsline {subsubsection}{\numberline {4.3.5}Understanding and Perception}{42}{}%
+\contentsline {subsubsection}{\numberline {4.3.6}Then Seek to Be Understood}{42}{}%
+\contentsline {subsubsection}{\numberline {4.3.7}One on One}{42}{}%
+\contentsline {subsection}{\numberline {4.4}Habit 6: Synergize -- Principles of Creative Cooperation}{42}{}%
+\contentsline {subsubsection}{\numberline {4.4.1}Synergistic Communication}{42}{}%
+\contentsline {subsubsection}{\numberline {4.4.2}Levels of Communication}{42}{}%
+\contentsline {subsubsection}{\numberline {4.4.3}Negative Synergy}{42}{}%
+\contentsline {subsubsection}{\numberline {4.4.4}Valuing the Differences}{42}{}%
+\contentsline {subsubsection}{\numberline {4.4.5}All Nature is Synergistic}{43}{}%
+\contentsline {section}{\numberline {5}Renewal}{43}{}%
+\contentsline {subsection}{\numberline {5.1}Habit 7: Sharpen the Saw -- Principles of Balanced Self-Renewal}{43}{}%
+\contentsline {subsubsection}{\numberline {5.1.1}Four Dimensions of Renewal}{43}{}%
+\contentsline {subsubsection}{\numberline {5.1.2}The Physical Dimension}{43}{}%
+\contentsline {subsubsection}{\numberline {5.1.3}The Spiritual Dimension}{43}{}%
+\contentsline {subsubsection}{\numberline {5.1.4}The Mental Dimension}{43}{}%
+\contentsline {subsubsection}{\numberline {5.1.5}The Social/Emotional Dimension}{43}{}%
+\contentsline {subsubsection}{\numberline {5.1.6}Scripting Others}{43}{}%
+\contentsline {subsubsection}{\numberline {5.1.7}Balance in Renewal}{43}{}%
+\contentsline {subsubsection}{\numberline {5.1.8}Synergy in Renewal}{43}{}%
+\contentsline {subsubsection}{\numberline {5.1.9}The Upward Spiral}{43}{}%
+\contentsline {subsection}{\numberline {5.2}Inside-Out Again}{43}{}%
+\contentsline {subsubsection}{\numberline {5.2.1}Intergenerational Living}{43}{}%
+\contentsline {subsubsection}{\numberline {5.2.2}Becoming a Transition Person}{43}{}%
