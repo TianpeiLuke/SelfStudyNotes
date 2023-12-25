@@ -29,11 +29,11 @@
 \contentsline {subsubsection}{\numberline {3.1.2}Between Stimulus and Response}{13}{}%
 \contentsline {subsubsection}{\numberline {3.1.3}``Proactivity" Defined}{13}{}%
 \contentsline {subsubsection}{\numberline {3.1.4}Taking the Initiative}{14}{}%
-\contentsline {subsubsection}{\numberline {3.1.5}Act or Be Acted Upon}{14}{}%
+\contentsline {subsubsection}{\numberline {3.1.5}Act or Be Acted Upon}{15}{}%
 \contentsline {subsubsection}{\numberline {3.1.6}Listening to Our Language}{15}{}%
 \contentsline {subsubsection}{\numberline {3.1.7}Circle of Concern or Circle of Influence}{15}{}%
 \contentsline {subsubsection}{\numberline {3.1.8}Direct, Indirect, and No Control}{16}{}%
-\contentsline {subsubsection}{\numberline {3.1.9}Expanding Circle of Influence}{16}{}%
+\contentsline {subsubsection}{\numberline {3.1.9}Expanding Circle of Influence}{17}{}%
 \contentsline {subsubsection}{\numberline {3.1.10}The ``Have's" and the ``Be's"}{17}{}%
 \contentsline {subsubsection}{\numberline {3.1.11}The Other End of the Stick}{17}{}%
 \contentsline {subsubsection}{\numberline {3.1.12}Making and Keeping Commitments}{18}{}%
@@ -45,13 +45,13 @@
 \contentsline {subsubsection}{\numberline {3.2.4}Leadership And Management -- the Two Creations}{20}{}%
 \contentsline {subsubsection}{\numberline {3.2.5}Rescripting: Become Your Own First Creator}{20}{}%
 \contentsline {subsubsection}{\numberline {3.2.6}A Personal Mission Statement}{21}{}%
-\contentsline {subsubsection}{\numberline {3.2.7}At The Center}{21}{}%
-\contentsline {subsubsection}{\numberline {3.2.8}Alterative Centers}{22}{}%
-\contentsline {subsubsection}{\numberline {3.2.9}Identify Your Center}{25}{}%
+\contentsline {subsubsection}{\numberline {3.2.7}At The Center}{22}{}%
+\contentsline {subsubsection}{\numberline {3.2.8}Alterative Centers}{23}{}%
+\contentsline {subsubsection}{\numberline {3.2.9}Identify Your Center}{26}{}%
 \contentsline {subsubsection}{\numberline {3.2.10}A Principle Center}{26}{}%
 \contentsline {subsubsection}{\numberline {3.2.11}Writing and Using a Personal Mission Statement}{28}{}%
 \contentsline {subsubsection}{\numberline {3.2.12}Using Your Whole Brain}{28}{}%
-\contentsline {subsubsection}{\numberline {3.2.13}Two Ways to Tap the Right Brain}{28}{}%
+\contentsline {subsubsection}{\numberline {3.2.13}Two Ways to Tap the Right Brain}{29}{}%
 \contentsline {subsubsection}{\numberline {3.2.14}Expand Perspective}{29}{}%
 \contentsline {subsubsection}{\numberline {3.2.15}Visualization and Affirmation}{29}{}%
 \contentsline {subsubsection}{\numberline {3.2.16}Identifying Roles and Goals}{30}{}%
