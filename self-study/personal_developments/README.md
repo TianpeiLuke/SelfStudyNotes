@@ -67,7 +67,7 @@ This section address my learning on various books for personal development and e
         - Principles of **Balanced Self-Renewal**
               -- Habit 7: ***Sharpen the Saw***
 
-- The 5 Elements of Effective Thinking
+- The 5 Elements of Effective Thinking [pdf](./PD_2_5_element_effective_thinking.pdf)
     - Introduction
       -- Elements of Effective Thinking, Learning and Creating
 
