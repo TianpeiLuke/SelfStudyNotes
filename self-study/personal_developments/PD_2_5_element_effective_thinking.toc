@@ -1,0 +1,26 @@
+\contentsline {section}{\numberline {1}Reading Summary}{2}{}%
+\contentsline {section}{\numberline {2}Introduction -- Elements of Effective Thinking, Learning and Creating}{3}{}%
+\contentsline {section}{\numberline {3}Ground Your Thinking -- Understand Deeply}{3}{}%
+\contentsline {subsection}{\numberline {3.1}Understand simple things deeply}{3}{}%
+\contentsline {subsection}{\numberline {3.2}Clear the clutter -- seak the essential}{3}{}%
+\contentsline {subsection}{\numberline {3.3}See what's there}{3}{}%
+\contentsline {subsection}{\numberline {3.4}See what's missing}{3}{}%
+\contentsline {subsection}{\numberline {3.5}Final thoughts: Deeper is better}{3}{}%
+\contentsline {section}{\numberline {4}Igniting Insights through Mistakes -- Fail to Succeed}{3}{}%
+\contentsline {subsection}{\numberline {4.1}Welcome accidental missteps -- let your errors be your guide}{3}{}%
+\contentsline {subsection}{\numberline {4.2}Finding the right question to the wrong answer}{3}{}%
+\contentsline {subsection}{\numberline {4.3}Failing by intent}{3}{}%
+\contentsline {subsection}{\numberline {4.4}Final thoughts: A modified mind-set}{3}{}%
+\contentsline {section}{\numberline {5}Creating Questions out of Thin Air -- Be Your Own Socrates}{4}{}%
+\contentsline {subsection}{\numberline {5.1}How answers can lead to questions}{4}{}%
+\contentsline {subsection}{\numberline {5.2}Creating questions enlivens your curiosity}{4}{}%
+\contentsline {subsection}{\numberline {5.3}What's the real question?}{4}{}%
+\contentsline {subsection}{\numberline {5.4}Final thoughts: The art of creating questions and active listening}{4}{}%
+\contentsline {section}{\numberline {6}Seeing the Flow of Ideas -- Look Back, Look Forward}{4}{}%
+\contentsline {subsection}{\numberline {6.1}Understanding current ideas through the flow of ideas}{4}{}%
+\contentsline {subsection}{\numberline {6.2}Creating new ideas from old ones}{4}{}%
+\contentsline {subsection}{\numberline {6.3}Final thoughts: ``Under construction" is the norm}{4}{}%
+\contentsline {section}{\numberline {7}Engaging Change -- Transform Yourself}{4}{}%
+\contentsline {subsection}{\numberline {7.1}You can do it}{4}{}%
+\contentsline {subsection}{\numberline {7.2}Final thoughts: Becoming the quintessential you}{4}{}%
+\contentsline {section}{\numberline {8}A Way to Provoke Effective Thinking -- A Brief Review}{4}{}%
