@@ -32,7 +32,7 @@ This section address my learning on various books for personal development and e
 
 ***Speed Reading: Learn to Read a 200+ Page Book in 1 Hour (Mental Performance)***, Kam Knight
 
-***On Writing Well: The Classic Guide to Writing Nonfiction***, William Zinsser，2016
+***On Writing Well: The Classic Guide to Writing Nonfiction***, William Zinsser, 2016
 
 
 ## Tables of Contents
