@@ -1,4 +1,4 @@
-# Personal Development and Emotional Intelligence
+# Personal Development, Relationship Management and Emotional Intelligence
 
 This section address my learning on various books for personal development and emotional intelligence
 
