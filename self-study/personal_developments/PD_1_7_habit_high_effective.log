@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.10.29)  25 DEC 2023 16:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.10.29)  25 DEC 2023 18:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -684,13 +684,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [9]
 [10] [11]
-Overfull \hbox (7.08775pt too wide) in paragraph at lines 254--255
+Overfull \hbox (7.08775pt too wide) in paragraph at lines 259--260
 []\OT1/cmr/m/n/10.95 Many peo-ple ex-pe-ri-ence a sim-i-lar fun-da-men-tal shif
 t in think-ing when they face a life-threatening
  []
 
 [12] [13] [14] [15]
-Overfull \hbox (17.58498pt too wide) in paragraph at lines 426--427
+Overfull \hbox (17.58498pt too wide) in paragraph at lines 431--432
 []\OT1/cmr/m/n/10.95 As you live your val-ues, your sense of \OT1/cmr/bx/it/10.
 95 iden-tity\OT1/cmr/m/n/10.95 , \OT1/cmr/bx/it/10.95 in-tegrity\OT1/cmr/m/n/10
 .95 , \OT1/cmr/bx/it/10.95 con-trol\OT1/cmr/m/n/10.95 , and \OT1/cmr/bx/it/10.9
@@ -709,7 +709,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [29]
 [30]
-Overfull \hbox (3.44598pt too wide) in paragraph at lines 1000--1001
+Overfull \hbox (3.44598pt too wide) in paragraph at lines 1005--1006
 []\OT1/cmr/m/n/10.95 By cen-ter-ing our lives on \OT1/cmr/m/it/10.95 time-less,
  un-chang-ing prin-ci-ples\OT1/cmr/m/n/10.95 , we cre-ate a \OT1/cmr/bx/it/10.9
 5 fun-da-men-tal paradigm
@@ -723,7 +723,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [34]
-Overfull \hbox (6.7376pt too wide) in paragraph at lines 1160--1161
+Overfull \hbox (6.7376pt too wide) in paragraph at lines 1165--1166
 []\OT1/cmr/m/n/10.95 My own maxim of per-sonal ef-fec-tive-ness is this: \OT1/c
 mr/bx/it/10.95 Man-age from the left\OT1/cmr/m/it/10.95 ; \OT1/cmr/bx/it/10.95 
 lead from the right\OT1/cmr/m/n/10.95 . 
@@ -741,7 +741,7 @@ Underfull \vbox (badness 1859) has occurred while \output is active []
 
  [39]
 [40] [41] [42] [43] [44] [45] [46]
-Overfull \hbox (25.16316pt too wide) in paragraph at lines 1568--1569
+Overfull \hbox (25.16316pt too wide) in paragraph at lines 1573--1574
 []\OT1/cmr/m/n/10.95 It is a deep em-bod-i-ment of \OT1/cmr/m/it/10.95 the P/PC
  Bal-ance\OT1/cmr/m/n/10.95 . Whether it's called the \OT1/cmr/bx/it/10.95 ego 
 strength/empathy
@@ -790,7 +790,7 @@ r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf/fonts/
 type1/public/cm-super/sfrm1095.pfb>
-Output written on PD_1_7_habit_high_effective.pdf (65 pages, 342484 bytes).
+Output written on PD_1_7_habit_high_effective.pdf (65 pages, 343169 bytes).
 PDF statistics:
  263 PDF objects out of 1000 (max. 8388607)
  176 compressed objects within 2 object streams
