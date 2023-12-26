@@ -83,9 +83,7 @@ This section address my learning on various books for personal development and e
 
     - A Way to Provoke Effective Thinking --Review
  
-- Getting Things Done: The Art of Stress-Free Productivity
-
-(_Build yourself a workflow._)
+- Getting Things Done: The Art of Stress-Free Productivity (_Build yourself a workflow._)
 
     - The Art of Getting Things Done
         - A New Practice for a New Reality
