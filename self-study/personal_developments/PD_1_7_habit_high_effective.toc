@@ -1,124 +1,120 @@
 \contentsline {section}{\numberline {1}Learning Summary}{4}{}%
 \contentsline {subsection}{\numberline {1.1}Keywords}{4}{}%
 \contentsline {subsection}{\numberline {1.2}Summary}{7}{}%
-\contentsline {subsection}{\numberline {1.3}Principle-Centered Paradigm}{11}{}%
-\contentsline {subsection}{\numberline {1.4}From Independence to Interdependence}{11}{}%
-\contentsline {subsection}{\numberline {1.5}Seven Habits and Seven Principles}{11}{}%
-\contentsline {subsection}{\numberline {1.6}Balanced Self-Renewal}{11}{}%
-\contentsline {section}{\numberline {2}Paradigms and Principles}{12}{}%
-\contentsline {subsection}{\numberline {2.1}Inside-Out}{12}{}%
-\contentsline {subsubsection}{\numberline {2.1.1}Peronality and Character Ethics}{12}{}%
-\contentsline {subsubsection}{\numberline {2.1.2}Primary and Secondary Greatness}{12}{}%
-\contentsline {subsubsection}{\numberline {2.1.3}The Power of A Paradigm}{12}{}%
-\contentsline {subsubsection}{\numberline {2.1.4}The Power of A Paradigm Shift}{13}{}%
-\contentsline {subsubsection}{\numberline {2.1.5}Seeing and Being}{13}{}%
-\contentsline {subsubsection}{\numberline {2.1.6}The Principle-Centered Paradigm}{14}{}%
-\contentsline {subsubsection}{\numberline {2.1.7}Principles of Growth and Change}{14}{}%
-\contentsline {subsubsection}{\numberline {2.1.8}The Way we See the Problem Is the Problem}{14}{}%
-\contentsline {subsubsection}{\numberline {2.1.9}A New Level of Thinking}{14}{}%
-\contentsline {subsection}{\numberline {2.2}The Seven Habits -- An Overview}{15}{}%
-\contentsline {subsubsection}{\numberline {2.2.1}``Habits" Defined}{15}{}%
-\contentsline {subsubsection}{\numberline {2.2.2}The Maturity Continuum}{15}{}%
-\contentsline {subsubsection}{\numberline {2.2.3}Effectiveness Defined}{16}{}%
-\contentsline {subsubsection}{\numberline {2.2.4}Three Kinds of Assets}{16}{}%
-\contentsline {subsubsection}{\numberline {2.2.5}Organizational PC}{16}{}%
-\contentsline {subsubsection}{\numberline {2.2.6}How to Use This Book and What You Can Expect}{17}{}%
-\contentsline {section}{\numberline {3}Private Victory}{18}{}%
-\contentsline {subsection}{\numberline {3.1}Habit 1: Be Proactive -- Principles of Personal Vision}{18}{}%
-\contentsline {subsubsection}{\numberline {3.1.1}The Social Mirror}{18}{}%
-\contentsline {subsubsection}{\numberline {3.1.2}Between Stimulus and Response}{18}{}%
-\contentsline {subsubsection}{\numberline {3.1.3}``Proactivity" Defined}{19}{}%
-\contentsline {subsubsection}{\numberline {3.1.4}Taking the Initiative}{20}{}%
-\contentsline {subsubsection}{\numberline {3.1.5}Act or Be Acted Upon}{20}{}%
-\contentsline {subsubsection}{\numberline {3.1.6}Listening to Our Language}{20}{}%
-\contentsline {subsubsection}{\numberline {3.1.7}Circle of Concern or Circle of Influence}{21}{}%
-\contentsline {subsubsection}{\numberline {3.1.8}Direct, Indirect, and No Control}{21}{}%
-\contentsline {subsubsection}{\numberline {3.1.9}Expanding Circle of Influence}{22}{}%
-\contentsline {subsubsection}{\numberline {3.1.10}The ``Have's" and the ``Be's"}{22}{}%
-\contentsline {subsubsection}{\numberline {3.1.11}The Other End of the Stick}{23}{}%
-\contentsline {subsubsection}{\numberline {3.1.12}Making and Keeping Commitments}{23}{}%
-\contentsline {subsubsection}{\numberline {3.1.13}Proactivity: the Thirty-Day Test}{24}{}%
-\contentsline {subsection}{\numberline {3.2}Habit 2: Begin with the End in Mind -- Principles of Personal Leadership}{24}{}%
-\contentsline {subsubsection}{\numberline {3.2.1}What It Means}{24}{}%
-\contentsline {subsubsection}{\numberline {3.2.2}All Things are Created Twice}{24}{}%
-\contentsline {subsubsection}{\numberline {3.2.3}By Design Or Default}{25}{}%
-\contentsline {subsubsection}{\numberline {3.2.4}Leadership And Management -- the Two Creations}{25}{}%
-\contentsline {subsubsection}{\numberline {3.2.5}Rescripting: Become Your Own First Creator}{26}{}%
-\contentsline {subsubsection}{\numberline {3.2.6}A Personal Mission Statement}{26}{}%
-\contentsline {subsubsection}{\numberline {3.2.7}At The Center}{27}{}%
-\contentsline {subsubsection}{\numberline {3.2.8}Alterative Centers}{28}{}%
-\contentsline {subsubsection}{\numberline {3.2.9}Identify Your Center}{31}{}%
-\contentsline {subsubsection}{\numberline {3.2.10}A Principle Center}{31}{}%
-\contentsline {subsubsection}{\numberline {3.2.11}Writing and Using a Personal Mission Statement}{33}{}%
-\contentsline {subsubsection}{\numberline {3.2.12}Using Your Whole Brain}{34}{}%
-\contentsline {subsubsection}{\numberline {3.2.13}Two Ways to Tap the Right Brain}{34}{}%
-\contentsline {subsubsection}{\numberline {3.2.14}Expand Perspective}{34}{}%
-\contentsline {subsubsection}{\numberline {3.2.15}Visualization and Affirmation}{34}{}%
-\contentsline {subsubsection}{\numberline {3.2.16}Identifying Roles and Goals}{35}{}%
-\contentsline {subsubsection}{\numberline {3.2.17}Organizational Mission Statements}{36}{}%
-\contentsline {subsection}{\numberline {3.3}Habit 3: Put First Things First -- Principles of Personal Management}{36}{}%
-\contentsline {subsubsection}{\numberline {3.3.1}The Power of Independent Will}{36}{}%
-\contentsline {subsubsection}{\numberline {3.3.2}Four Generations of Time Management}{36}{}%
-\contentsline {subsubsection}{\numberline {3.3.3}Quadrant II}{37}{}%
-\contentsline {subsubsection}{\numberline {3.3.4}What It Takes to say ``No"}{38}{}%
-\contentsline {subsubsection}{\numberline {3.3.5}Moving into Quadrant II}{39}{}%
-\contentsline {subsubsection}{\numberline {3.3.6}The Quadrant II Tool}{39}{}%
-\contentsline {subsubsection}{\numberline {3.3.7}Becoming A Quadrant II Self-Manager}{40}{}%
-\contentsline {subsubsection}{\numberline {3.3.8}Living It}{41}{}%
-\contentsline {subsubsection}{\numberline {3.3.9}Advances of the Fourth Generation}{41}{}%
-\contentsline {subsubsection}{\numberline {3.3.10}Delegation: Increasing P and PC}{42}{}%
-\contentsline {subsubsection}{\numberline {3.3.11}Gofer Delegation}{42}{}%
-\contentsline {subsubsection}{\numberline {3.3.12}Stewardship Delegation}{42}{}%
-\contentsline {subsubsection}{\numberline {3.3.13}The Quadrant II Paradigm}{43}{}%
-\contentsline {section}{\numberline {4}Public Victory}{43}{}%
-\contentsline {subsection}{\numberline {4.1}Paradigms of Interdependence}{43}{}%
-\contentsline {subsubsection}{\numberline {4.1.1}The Emotional Bank Account}{43}{}%
-\contentsline {subsubsection}{\numberline {4.1.2}Six Major Deposits}{43}{}%
-\contentsline {subsubsection}{\numberline {4.1.3}Attending to the Little Things}{44}{}%
-\contentsline {subsubsection}{\numberline {4.1.4}Keeping Commitments}{44}{}%
-\contentsline {subsubsection}{\numberline {4.1.5}Clarifying Expectations}{44}{}%
-\contentsline {subsubsection}{\numberline {4.1.6}Showing Personal Integrity}{45}{}%
-\contentsline {subsubsection}{\numberline {4.1.7}Apologizing Sincerely When You Make a Withdrawal}{45}{}%
-\contentsline {subsubsection}{\numberline {4.1.8}The Laws of Love and the Laws of Life}{45}{}%
-\contentsline {subsubsection}{\numberline {4.1.9}P Problems are PC Opportunities}{45}{}%
-\contentsline {subsection}{\numberline {4.2}Habit 4: Think Win/Win -- Principles of Interpersonal Leadership}{46}{}%
-\contentsline {subsubsection}{\numberline {4.2.1}Six Paradigms of Human Interaction}{46}{}%
-\contentsline {subsubsection}{\numberline {4.2.2}Win/Win or No Deal}{47}{}%
-\contentsline {subsubsection}{\numberline {4.2.3}Five Dimensions of Win/Win}{47}{}%
-\contentsline {subsubsection}{\numberline {4.2.4}Charater}{48}{}%
-\contentsline {subsubsection}{\numberline {4.2.5}Relationships}{49}{}%
-\contentsline {subsubsection}{\numberline {4.2.6}Agreements}{50}{}%
-\contentsline {subsubsection}{\numberline {4.2.7}Win/Win Performance Agreements}{50}{}%
-\contentsline {subsubsection}{\numberline {4.2.8}Systems}{51}{}%
-\contentsline {subsubsection}{\numberline {4.2.9}Processes}{51}{}%
-\contentsline {subsection}{\numberline {4.3}Habit 5: Seek First to Understand, Then to Be Understood -- Principles of Empathic Communication}{52}{}%
-\contentsline {subsubsection}{\numberline {4.3.1}Charater and Communication}{52}{}%
-\contentsline {subsubsection}{\numberline {4.3.2}Empathic Listening}{52}{}%
-\contentsline {subsubsection}{\numberline {4.3.3}Diagnose Before You Prescribe}{54}{}%
-\contentsline {subsubsection}{\numberline {4.3.4}Four Autobiographical Responses}{54}{}%
-\contentsline {subsubsection}{\numberline {4.3.5}Understanding and Perception}{56}{}%
-\contentsline {subsubsection}{\numberline {4.3.6}Then Seek to Be Understood}{56}{}%
-\contentsline {subsubsection}{\numberline {4.3.7}One on One}{56}{}%
-\contentsline {subsection}{\numberline {4.4}Habit 6: Synergize -- Principles of Creative Cooperation}{57}{}%
-\contentsline {subsubsection}{\numberline {4.4.1}Synergistic Communication}{58}{}%
-\contentsline {subsubsection}{\numberline {4.4.2}Synergy in Classroom}{58}{}%
-\contentsline {subsubsection}{\numberline {4.4.3}Synergy in Business}{58}{}%
-\contentsline {subsubsection}{\numberline {4.4.4}Synergy and Communication}{59}{}%
-\contentsline {subsubsection}{\numberline {4.4.5}Fishing for the Third Alternative}{59}{}%
-\contentsline {subsubsection}{\numberline {4.4.6}Negative Synergy}{59}{}%
-\contentsline {subsubsection}{\numberline {4.4.7}Valuing the Differences}{60}{}%
-\contentsline {subsubsection}{\numberline {4.4.8}All Nature is Synergistic}{60}{}%
-\contentsline {section}{\numberline {5}Renewal}{61}{}%
-\contentsline {subsection}{\numberline {5.1}Habit 7: Sharpen the Saw -- Principles of Balanced Self-Renewal}{61}{}%
-\contentsline {subsubsection}{\numberline {5.1.1}Four Dimensions of Renewal}{61}{}%
-\contentsline {subsubsection}{\numberline {5.1.2}The Physical Dimension}{61}{}%
-\contentsline {subsubsection}{\numberline {5.1.3}The Spiritual Dimension}{61}{}%
-\contentsline {subsubsection}{\numberline {5.1.4}The Mental Dimension}{62}{}%
-\contentsline {subsubsection}{\numberline {5.1.5}The Social/Emotional Dimension}{63}{}%
-\contentsline {subsubsection}{\numberline {5.1.6}Scripting Others}{63}{}%
-\contentsline {subsubsection}{\numberline {5.1.7}Balance in Renewal}{64}{}%
-\contentsline {subsubsection}{\numberline {5.1.8}Synergy in Renewal}{64}{}%
-\contentsline {subsubsection}{\numberline {5.1.9}The Upward Spiral}{65}{}%
-\contentsline {subsection}{\numberline {5.2}Inside-Out Again}{65}{}%
-\contentsline {subsubsection}{\numberline {5.2.1}Intergenerational Living}{65}{}%
-\contentsline {subsubsection}{\numberline {5.2.2}Becoming a Transition Person}{65}{}%
+\contentsline {section}{\numberline {2}Paradigms and Principles}{13}{}%
+\contentsline {subsection}{\numberline {2.1}Inside-Out}{13}{}%
+\contentsline {subsubsection}{\numberline {2.1.1}Peronality and Character Ethics}{13}{}%
+\contentsline {subsubsection}{\numberline {2.1.2}Primary and Secondary Greatness}{13}{}%
+\contentsline {subsubsection}{\numberline {2.1.3}The Power of A Paradigm}{13}{}%
+\contentsline {subsubsection}{\numberline {2.1.4}The Power of A Paradigm Shift}{14}{}%
+\contentsline {subsubsection}{\numberline {2.1.5}Seeing and Being}{14}{}%
+\contentsline {subsubsection}{\numberline {2.1.6}The Principle-Centered Paradigm}{15}{}%
+\contentsline {subsubsection}{\numberline {2.1.7}Principles of Growth and Change}{15}{}%
+\contentsline {subsubsection}{\numberline {2.1.8}The Way we See the Problem Is the Problem}{15}{}%
+\contentsline {subsubsection}{\numberline {2.1.9}A New Level of Thinking}{15}{}%
+\contentsline {subsection}{\numberline {2.2}The Seven Habits -- An Overview}{16}{}%
+\contentsline {subsubsection}{\numberline {2.2.1}``Habits" Defined}{16}{}%
+\contentsline {subsubsection}{\numberline {2.2.2}The Maturity Continuum}{16}{}%
+\contentsline {subsubsection}{\numberline {2.2.3}Effectiveness Defined}{17}{}%
+\contentsline {subsubsection}{\numberline {2.2.4}Three Kinds of Assets}{17}{}%
+\contentsline {subsubsection}{\numberline {2.2.5}Organizational PC}{17}{}%
+\contentsline {subsubsection}{\numberline {2.2.6}How to Use This Book and What You Can Expect}{18}{}%
+\contentsline {section}{\numberline {3}Private Victory}{19}{}%
+\contentsline {subsection}{\numberline {3.1}Habit 1: Be Proactive -- Principles of Personal Vision}{19}{}%
+\contentsline {subsubsection}{\numberline {3.1.1}The Social Mirror}{19}{}%
+\contentsline {subsubsection}{\numberline {3.1.2}Between Stimulus and Response}{19}{}%
+\contentsline {subsubsection}{\numberline {3.1.3}``Proactivity" Defined}{20}{}%
+\contentsline {subsubsection}{\numberline {3.1.4}Taking the Initiative}{21}{}%
+\contentsline {subsubsection}{\numberline {3.1.5}Act or Be Acted Upon}{21}{}%
+\contentsline {subsubsection}{\numberline {3.1.6}Listening to Our Language}{21}{}%
+\contentsline {subsubsection}{\numberline {3.1.7}Circle of Concern or Circle of Influence}{22}{}%
+\contentsline {subsubsection}{\numberline {3.1.8}Direct, Indirect, and No Control}{22}{}%
+\contentsline {subsubsection}{\numberline {3.1.9}Expanding Circle of Influence}{23}{}%
+\contentsline {subsubsection}{\numberline {3.1.10}The ``Have's" and the ``Be's"}{23}{}%
+\contentsline {subsubsection}{\numberline {3.1.11}The Other End of the Stick}{24}{}%
+\contentsline {subsubsection}{\numberline {3.1.12}Making and Keeping Commitments}{24}{}%
+\contentsline {subsubsection}{\numberline {3.1.13}Proactivity: the Thirty-Day Test}{25}{}%
+\contentsline {subsection}{\numberline {3.2}Habit 2: Begin with the End in Mind -- Principles of Personal Leadership}{25}{}%
+\contentsline {subsubsection}{\numberline {3.2.1}What It Means}{25}{}%
+\contentsline {subsubsection}{\numberline {3.2.2}All Things are Created Twice}{25}{}%
+\contentsline {subsubsection}{\numberline {3.2.3}By Design Or Default}{26}{}%
+\contentsline {subsubsection}{\numberline {3.2.4}Leadership And Management -- the Two Creations}{26}{}%
+\contentsline {subsubsection}{\numberline {3.2.5}Rescripting: Become Your Own First Creator}{27}{}%
+\contentsline {subsubsection}{\numberline {3.2.6}A Personal Mission Statement}{27}{}%
+\contentsline {subsubsection}{\numberline {3.2.7}At The Center}{28}{}%
+\contentsline {subsubsection}{\numberline {3.2.8}Alterative Centers}{29}{}%
+\contentsline {subsubsection}{\numberline {3.2.9}Identify Your Center}{32}{}%
+\contentsline {subsubsection}{\numberline {3.2.10}A Principle Center}{32}{}%
+\contentsline {subsubsection}{\numberline {3.2.11}Writing and Using a Personal Mission Statement}{34}{}%
+\contentsline {subsubsection}{\numberline {3.2.12}Using Your Whole Brain}{35}{}%
+\contentsline {subsubsection}{\numberline {3.2.13}Two Ways to Tap the Right Brain}{35}{}%
+\contentsline {subsubsection}{\numberline {3.2.14}Expand Perspective}{35}{}%
+\contentsline {subsubsection}{\numberline {3.2.15}Visualization and Affirmation}{35}{}%
+\contentsline {subsubsection}{\numberline {3.2.16}Identifying Roles and Goals}{36}{}%
+\contentsline {subsubsection}{\numberline {3.2.17}Organizational Mission Statements}{37}{}%
+\contentsline {subsection}{\numberline {3.3}Habit 3: Put First Things First -- Principles of Personal Management}{37}{}%
+\contentsline {subsubsection}{\numberline {3.3.1}The Power of Independent Will}{37}{}%
+\contentsline {subsubsection}{\numberline {3.3.2}Four Generations of Time Management}{37}{}%
+\contentsline {subsubsection}{\numberline {3.3.3}Quadrant II}{38}{}%
+\contentsline {subsubsection}{\numberline {3.3.4}What It Takes to say ``No"}{39}{}%
+\contentsline {subsubsection}{\numberline {3.3.5}Moving into Quadrant II}{40}{}%
+\contentsline {subsubsection}{\numberline {3.3.6}The Quadrant II Tool}{40}{}%
+\contentsline {subsubsection}{\numberline {3.3.7}Becoming A Quadrant II Self-Manager}{41}{}%
+\contentsline {subsubsection}{\numberline {3.3.8}Living It}{42}{}%
+\contentsline {subsubsection}{\numberline {3.3.9}Advances of the Fourth Generation}{42}{}%
+\contentsline {subsubsection}{\numberline {3.3.10}Delegation: Increasing P and PC}{43}{}%
+\contentsline {subsubsection}{\numberline {3.3.11}Gofer Delegation}{43}{}%
+\contentsline {subsubsection}{\numberline {3.3.12}Stewardship Delegation}{43}{}%
+\contentsline {subsubsection}{\numberline {3.3.13}The Quadrant II Paradigm}{44}{}%
+\contentsline {section}{\numberline {4}Public Victory}{44}{}%
+\contentsline {subsection}{\numberline {4.1}Paradigms of Interdependence}{44}{}%
+\contentsline {subsubsection}{\numberline {4.1.1}The Emotional Bank Account}{44}{}%
+\contentsline {subsubsection}{\numberline {4.1.2}Six Major Deposits}{44}{}%
+\contentsline {subsubsection}{\numberline {4.1.3}Attending to the Little Things}{45}{}%
+\contentsline {subsubsection}{\numberline {4.1.4}Keeping Commitments}{45}{}%
+\contentsline {subsubsection}{\numberline {4.1.5}Clarifying Expectations}{45}{}%
+\contentsline {subsubsection}{\numberline {4.1.6}Showing Personal Integrity}{46}{}%
+\contentsline {subsubsection}{\numberline {4.1.7}Apologizing Sincerely When You Make a Withdrawal}{46}{}%
+\contentsline {subsubsection}{\numberline {4.1.8}The Laws of Love and the Laws of Life}{46}{}%
+\contentsline {subsubsection}{\numberline {4.1.9}P Problems are PC Opportunities}{46}{}%
+\contentsline {subsection}{\numberline {4.2}Habit 4: Think Win/Win -- Principles of Interpersonal Leadership}{47}{}%
+\contentsline {subsubsection}{\numberline {4.2.1}Six Paradigms of Human Interaction}{47}{}%
+\contentsline {subsubsection}{\numberline {4.2.2}Win/Win or No Deal}{48}{}%
+\contentsline {subsubsection}{\numberline {4.2.3}Five Dimensions of Win/Win}{48}{}%
+\contentsline {subsubsection}{\numberline {4.2.4}Charater}{49}{}%
+\contentsline {subsubsection}{\numberline {4.2.5}Relationships}{50}{}%
+\contentsline {subsubsection}{\numberline {4.2.6}Agreements}{51}{}%
+\contentsline {subsubsection}{\numberline {4.2.7}Win/Win Performance Agreements}{51}{}%
+\contentsline {subsubsection}{\numberline {4.2.8}Systems}{52}{}%
+\contentsline {subsubsection}{\numberline {4.2.9}Processes}{52}{}%
+\contentsline {subsection}{\numberline {4.3}Habit 5: Seek First to Understand, Then to Be Understood -- Principles of Empathic Communication}{53}{}%
+\contentsline {subsubsection}{\numberline {4.3.1}Charater and Communication}{53}{}%
+\contentsline {subsubsection}{\numberline {4.3.2}Empathic Listening}{53}{}%
+\contentsline {subsubsection}{\numberline {4.3.3}Diagnose Before You Prescribe}{55}{}%
+\contentsline {subsubsection}{\numberline {4.3.4}Four Autobiographical Responses}{55}{}%
+\contentsline {subsubsection}{\numberline {4.3.5}Understanding and Perception}{57}{}%
+\contentsline {subsubsection}{\numberline {4.3.6}Then Seek to Be Understood}{57}{}%
+\contentsline {subsubsection}{\numberline {4.3.7}One on One}{58}{}%
+\contentsline {subsection}{\numberline {4.4}Habit 6: Synergize -- Principles of Creative Cooperation}{58}{}%
+\contentsline {subsubsection}{\numberline {4.4.1}Synergistic Communication}{59}{}%
+\contentsline {subsubsection}{\numberline {4.4.2}Synergy in Classroom}{59}{}%
+\contentsline {subsubsection}{\numberline {4.4.3}Synergy in Business}{60}{}%
+\contentsline {subsubsection}{\numberline {4.4.4}Synergy and Communication}{60}{}%
+\contentsline {subsubsection}{\numberline {4.4.5}Fishing for the Third Alternative}{60}{}%
+\contentsline {subsubsection}{\numberline {4.4.6}Negative Synergy}{61}{}%
+\contentsline {subsubsection}{\numberline {4.4.7}Valuing the Differences}{61}{}%
+\contentsline {subsubsection}{\numberline {4.4.8}All Nature is Synergistic}{61}{}%
+\contentsline {section}{\numberline {5}Renewal}{62}{}%
+\contentsline {subsection}{\numberline {5.1}Habit 7: Sharpen the Saw -- Principles of Balanced Self-Renewal}{62}{}%
+\contentsline {subsubsection}{\numberline {5.1.1}Four Dimensions of Renewal}{62}{}%
+\contentsline {subsubsection}{\numberline {5.1.2}The Physical Dimension}{62}{}%
+\contentsline {subsubsection}{\numberline {5.1.3}The Spiritual Dimension}{62}{}%
+\contentsline {subsubsection}{\numberline {5.1.4}The Mental Dimension}{63}{}%
+\contentsline {subsubsection}{\numberline {5.1.5}The Social/Emotional Dimension}{64}{}%
+\contentsline {subsubsection}{\numberline {5.1.6}Scripting Others}{64}{}%
+\contentsline {subsubsection}{\numberline {5.1.7}Balance in Renewal}{65}{}%
+\contentsline {subsubsection}{\numberline {5.1.8}Synergy in Renewal}{65}{}%
+\contentsline {subsubsection}{\numberline {5.1.9}The Upward Spiral}{66}{}%
+\contentsline {subsection}{\numberline {5.2}Inside-Out Again}{66}{}%
+\contentsline {subsubsection}{\numberline {5.2.1}Intergenerational Living}{66}{}%
+\contentsline {subsubsection}{\numberline {5.2.2}Becoming a Transition Person}{66}{}%
