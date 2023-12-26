@@ -26,9 +26,14 @@ This section address my learning on various books for personal development and e
 
 ***Getting to Yes: Negotiating Agreement Without Giving In***, Roger Fisher, William Ury
 
+***Dating Sucks, but You Don't: The Modern Guy's Guide to Total Confidence, Romantic Connection, and Finding the Perfect Partner***，Connell Barrett
+
 - Reading and Writting
 
 ***Speed Reading: Learn to Read a 200+ Page Book in 1 Hour (Mental Performance)***, Kam Knight
+
+***On Writing Well: The Classic Guide to Writing Nonfiction***, William Zinsser，2016
+
 
 ## Tables of Contents
 
