@@ -69,19 +69,31 @@ This section address my learning on various books for personal development and e
     - Ground Your Thinking 
       -- **Understand Deeply**
         - Understand simple things deeply
-        - Clear the clutter - seak the essential
+        - Clear the clutter -- seak the essential
         - See what's there
         - See what's missing
         - Final thoughts: Deeper is better
 
     - Igniting Insights through Mistakes 
       -- **Fail to Succeed**
+        - Welcome accidental missteps -- let your errors be your guide
+        - Finding the right question to the wrong answer
+        - Failing by intent
+        - Final thoughts: A modified mind-set
 
     - Creating Questions out of Thin Air
       -- **Be Your Own Socrates**
+        - How answers can lead to questions
+        - Creating questions enlivens your curiosity
+        - What's the real question?
+        - Effective questions expose the real issue
+        - Final thoughts: The art of creating questions and active listening
 
     - Seeing the Flow of Ideas
       -- **Look Back, Look Forward**
+        - Understanding current ideas through the flow of ideas
+        - Creating new ideas from old ones
+        - Final thoughts: ``Under construction" is the norm
 
     - Engaging Change
       -- **Transform Yourself**
