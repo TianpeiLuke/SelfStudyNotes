@@ -34,7 +34,7 @@ This section address my learning on various books for personal development and e
 
 - The 7 Habits of Highly Effective People [pdf](./PD_1_7_habit_high_effective.pdf)
 
-"Identify your core, then organize and execute around it."
+(_Identify your core, then organize and execute around it._)
 
     - Paradigms and Principles
 
@@ -87,7 +87,7 @@ This section address my learning on various books for personal development and e
  
 - Getting Things Done: The Art of Stress-Free Productivity
 
-"Build yourself a workflow."
+(_Build yourself a workflow._)
 
     - The Art of Getting Things Done
         - A New Practice for a New Reality
