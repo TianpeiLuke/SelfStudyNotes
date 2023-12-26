@@ -4,7 +4,7 @@ This section address my learning on various books for personal development and e
 
 ## Books
 
-- Being Effective
+- Being Effective and Efficient
 
 ***The 7 Habits of Highly Effective People: 30th Anniversary Edition***, Sean Covey, Jim Collins
 
