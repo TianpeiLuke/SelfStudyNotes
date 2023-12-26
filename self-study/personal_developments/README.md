@@ -86,17 +86,18 @@ This section address my learning on various books for personal development and e
         - How answers can lead to questions
         - Creating questions enlivens your curiosity
         - What's the real question?
-        - Effective questions expose the real issue
         - Final thoughts: The art of creating questions and active listening
 
     - Seeing the Flow of Ideas
       -- **Look Back, Look Forward**
         - Understanding current ideas through the flow of ideas
         - Creating new ideas from old ones
-        - Final thoughts: ``Under construction" is the norm
+        - Final thoughts: "Under construction" is the norm
 
     - Engaging Change
       -- **Transform Yourself**
+        - You can do it
+        - Final thoughts: Becoming the quintessential you
 
     - A Way to Provoke Effective Thinking --Review
  
