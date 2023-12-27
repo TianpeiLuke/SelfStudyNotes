@@ -1,31 +1,29 @@
-\contentsline {section}{\numberline {1}Summary of Advices}{3}{}%
-\contentsline {subsection}{\numberline {1.1}Understand deeply}{3}{}%
-\contentsline {subsection}{\numberline {1.2}Make mistakes}{4}{}%
-\contentsline {subsection}{\numberline {1.3}Raise questions}{5}{}%
-\contentsline {subsection}{\numberline {1.4}Follow the flow of ideas}{5}{}%
-\contentsline {subsection}{\numberline {1.5}Change}{6}{}%
-\contentsline {section}{\numberline {2}Introduction -- Elements of Effective Thinking, Learning and Creating}{7}{}%
-\contentsline {section}{\numberline {3}Ground Your Thinking -- Understand Deeply}{8}{}%
-\contentsline {subsection}{\numberline {3.1}Understand simple things deeply}{8}{}%
-\contentsline {subsection}{\numberline {3.2}Clear the clutter -- seak the essential}{10}{}%
-\contentsline {subsection}{\numberline {3.3}See what's there}{10}{}%
-\contentsline {subsection}{\numberline {3.4}See what's missing}{12}{}%
-\contentsline {subsection}{\numberline {3.5}Final thoughts: Deeper is better}{13}{}%
-\contentsline {section}{\numberline {4}Igniting Insights through Mistakes -- Fail to Succeed}{13}{}%
-\contentsline {subsection}{\numberline {4.1}Welcome accidental missteps -- let your errors be your guide}{15}{}%
-\contentsline {subsection}{\numberline {4.2}Finding the right question to the wrong answer}{17}{}%
-\contentsline {subsection}{\numberline {4.3}Failing by intent}{17}{}%
-\contentsline {subsection}{\numberline {4.4}Final thoughts: A modified mind-set}{18}{}%
-\contentsline {section}{\numberline {5}Creating Questions out of Thin Air -- Be Your Own Socrates}{18}{}%
-\contentsline {subsection}{\numberline {5.1}How answers can lead to questions}{19}{}%
-\contentsline {subsection}{\numberline {5.2}Creating questions enlivens your curiosity}{20}{}%
-\contentsline {subsection}{\numberline {5.3}What's the real question?}{21}{}%
-\contentsline {subsection}{\numberline {5.4}Final thoughts: The art of creating questions and active listening}{22}{}%
-\contentsline {section}{\numberline {6}Seeing the Flow of Ideas -- Look Back, Look Forward}{22}{}%
-\contentsline {subsection}{\numberline {6.1}Understanding current ideas through the flow of ideas}{23}{}%
-\contentsline {subsection}{\numberline {6.2}Creating new ideas from old ones}{24}{}%
-\contentsline {subsection}{\numberline {6.3}Final thoughts: ``Under construction" is the norm}{26}{}%
-\contentsline {section}{\numberline {7}Engaging Change -- Transform Yourself}{26}{}%
-\contentsline {subsection}{\numberline {7.1}You can do it}{26}{}%
-\contentsline {subsection}{\numberline {7.2}Final thoughts: Becoming the quintessential you}{26}{}%
-\contentsline {section}{\numberline {8}A Way to Provoke Effective Thinking -- A Brief Review}{26}{}%
+\contentsline {section}{\numberline {1}Summary of Advices}{2}{}%
+\contentsline {subsection}{\numberline {1.1}Understand deeply}{2}{}%
+\contentsline {subsection}{\numberline {1.2}Make mistakes}{3}{}%
+\contentsline {subsection}{\numberline {1.3}Raise questions}{4}{}%
+\contentsline {subsection}{\numberline {1.4}Follow the flow of ideas}{4}{}%
+\contentsline {subsection}{\numberline {1.5}Change}{5}{}%
+\contentsline {section}{\numberline {2}Introduction -- Elements of Effective Thinking, Learning and Creating}{6}{}%
+\contentsline {section}{\numberline {3}Ground Your Thinking -- Understand Deeply}{7}{}%
+\contentsline {subsection}{\numberline {3.1}Understand simple things deeply}{7}{}%
+\contentsline {subsection}{\numberline {3.2}Clear the clutter -- seak the essential}{9}{}%
+\contentsline {subsection}{\numberline {3.3}See what's there}{9}{}%
+\contentsline {subsection}{\numberline {3.4}See what's missing}{11}{}%
+\contentsline {subsection}{\numberline {3.5}Final thoughts: Deeper is better}{12}{}%
+\contentsline {section}{\numberline {4}Igniting Insights through Mistakes -- Fail to Succeed}{12}{}%
+\contentsline {subsection}{\numberline {4.1}Welcome accidental missteps -- let your errors be your guide}{14}{}%
+\contentsline {subsection}{\numberline {4.2}Finding the right question to the wrong answer}{16}{}%
+\contentsline {subsection}{\numberline {4.3}Failing by intent}{16}{}%
+\contentsline {subsection}{\numberline {4.4}Final thoughts: A modified mind-set}{17}{}%
+\contentsline {section}{\numberline {5}Creating Questions out of Thin Air -- Be Your Own Socrates}{17}{}%
+\contentsline {subsection}{\numberline {5.1}How answers can lead to questions}{18}{}%
+\contentsline {subsection}{\numberline {5.2}Creating questions enlivens your curiosity}{19}{}%
+\contentsline {subsection}{\numberline {5.3}What's the real question?}{20}{}%
+\contentsline {subsection}{\numberline {5.4}Final thoughts: The art of creating questions and active listening}{21}{}%
+\contentsline {section}{\numberline {6}Seeing the Flow of Ideas -- Look Back, Look Forward}{21}{}%
+\contentsline {subsection}{\numberline {6.1}Understanding current ideas through the flow of ideas}{22}{}%
+\contentsline {subsection}{\numberline {6.2}Creating new ideas from old ones}{23}{}%
+\contentsline {subsection}{\numberline {6.3}Final thoughts: ``Under construction" is the norm}{25}{}%
+\contentsline {section}{\numberline {7}Engaging Change -- Transform Yourself}{25}{}%
+\contentsline {subsection}{\numberline {7.1}Final thoughts: Becoming the quintessential you}{27}{}%
