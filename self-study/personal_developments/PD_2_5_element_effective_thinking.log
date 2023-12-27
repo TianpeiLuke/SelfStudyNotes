@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.10.29)  27 DEC 2023 13:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.10.29)  27 DEC 2023 15:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -646,69 +646,73 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 32
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-(./PD_2_5_element_effective_thinking.toc [1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
+(./PD_2_5_element_effective_thinking.toc)
 \tf@toc=\write4
 \openout4 = `PD_2_5_element_effective_thinking.toc'.
+
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [3]
+[4] [5]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [4]
-[5] [6]
+ [6]
+[7]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [7]
-[8]
+ [8]
+[9]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9]
-[10]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [11]
-Overfull \hbox (4.2052pt too wide) in paragraph at lines 407--408
+ [10]
+Overfull \hbox (4.2052pt too wide) in paragraph at lines 423--424
 []\OT1/cmr/m/it/10.95 Take some opin-ion that you hold
  []
 
 
 Underfull \vbox (badness 2065) has occurred while \output is active []
 
- [12]
-[13]
+ [11]
+[12]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [14]
+ [13]
 Underfull \vbox (badness 1354) has occurred while \output is active []
 
- [15]
+ [14]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [16]
-[17] [18]
+ [15]
+[16] [17]
 Underfull \vbox (badness 1067) has occurred while \output is active []
 
- [19]
+ [18]
 Underfull \vbox (badness 5203) has occurred while \output is active []
 
- [20]
-[21] [22] [23]
+ [19]
+[20] [21] [22]
 Underfull \vbox (badness 1067) has occurred while \output is active []
 
- [24]
-Overfull \hbox (3.28654pt too wide) in paragraph at lines 966--967
+ [23]
+Overfull \hbox (3.28654pt too wide) in paragraph at lines 982--983
 []\OT1/cmr/m/it/10.95 Take an es-say you've writ-
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [25]
-[26]
+ [24]
+[25]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [26]
+[27]
 No file PD_2_5_element_effective_thinking.bbl.
 (./PD_2_5_element_effective_thinking.aux) ) 
 Here is how much of TeX's memory you used:
@@ -718,7 +722,7 @@ Here is how much of TeX's memory you used:
  35677 multiletter control sequences out of 15000+600000
  478676 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 114i,6n,118p,701b,288s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 114i,6n,118p,701b,290s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm
 -super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
@@ -728,11 +732,11 @@ i10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf/f
 onts/type1/public/cm-super/sfrm1095.pfb>
-Output written on PD_2_5_element_effective_thinking.pdf (26 pages, 218309 bytes
+Output written on PD_2_5_element_effective_thinking.pdf (27 pages, 223977 bytes
 ).
 PDF statistics:
- 132 PDF objects out of 1000 (max. 8388607)
- 87 compressed objects within 1 object stream
+ 135 PDF objects out of 1000 (max. 8388607)
+ 89 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
