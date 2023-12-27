@@ -18,8 +18,8 @@
 \contentsline {section}{\numberline {5}Seeing the Flow of Ideas -- Look Back, Look Forward}{13}{}%
 \contentsline {subsection}{\numberline {5.1}Understanding current ideas through the flow of ideas}{13}{}%
 \contentsline {subsection}{\numberline {5.2}Creating new ideas from old ones}{13}{}%
-\contentsline {subsection}{\numberline {5.3}Final thoughts: ``Under construction" is the norm}{13}{}%
-\contentsline {section}{\numberline {6}Engaging Change -- Transform Yourself}{13}{}%
-\contentsline {subsection}{\numberline {6.1}You can do it}{13}{}%
+\contentsline {subsection}{\numberline {5.3}Final thoughts: ``Under construction" is the norm}{14}{}%
+\contentsline {section}{\numberline {6}Engaging Change -- Transform Yourself}{14}{}%
+\contentsline {subsection}{\numberline {6.1}You can do it}{14}{}%
 \contentsline {subsection}{\numberline {6.2}Final thoughts: Becoming the quintessential you}{14}{}%
 \contentsline {section}{\numberline {7}A Way to Provoke Effective Thinking -- A Brief Review}{14}{}%
