@@ -12,7 +12,7 @@ This section address my learning on various books for personal development and e
 
 ***Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones***, James Clear
 
-- Be Curious
+- Critical Thinking, Creative Thinking and Research
 
 ***The Five Elements of Effective Thinking***, Edward B. Burger, Michael Starbird, 2012
 
