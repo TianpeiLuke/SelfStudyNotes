@@ -14,11 +14,13 @@ This section address my learning on various books for personal development and e
 
 - Be Curious
 
-***The Five Elements of Effective Thinking***, Edward B. Burger, Michael Starbird
+***The Five Elements of Effective Thinking***, Edward B. Burger, Michael Starbird, 2012
 
 ***Where Research Begins: choosing a research topic that matters to you (and the world)***, Thomas S. Mullaney, Christopher Rea
 
 ***The Craft of Research***,  Wayne C. Booth, Gregory G. Colomb, Joseph M. Williams, Joseph Bizup, William T. FitzGerald, _Chicago Guides to Writing, Editing, and Publishing_，5th Edition
+
+***Where Good Ideas Come From: The Natural History of Innovation***, Steven Johnson, 2010
 
 - Emotional Intelligence
 
