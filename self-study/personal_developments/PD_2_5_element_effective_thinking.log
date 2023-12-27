@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.10.29)  26 DEC 2023 15:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.10.29)  26 DEC 2023 19:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -652,29 +652,51 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3]
+[4]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5]
+[6]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7]
+Overfull \hbox (4.2052pt too wide) in paragraph at lines 219--220
+[]\OT1/cmr/m/it/10.95 Take some opin-ion that you hold
+ []
+
+[8]
+Underfull \vbox (badness 1168) has occurred while \output is active []
+
+ [9]
+[10] [11]
 No file PD_2_5_element_effective_thinking.bbl.
 (./PD_2_5_element_effective_thinking.aux) ) 
 Here is how much of TeX's memory you used:
- 17787 strings out of 478287
- 358747 string characters out of 5849288
- 631652 words of memory out of 5000000
- 35673 multiletter control sequences out of 15000+600000
- 477971 words of font info for 62 fonts, out of 8000000 for 9000
+ 17792 strings out of 478287
+ 358810 string characters out of 5849288
+ 631654 words of memory out of 5000000
+ 35676 multiletter control sequences out of 15000+600000
+ 478676 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 114i,6n,118p,584b,216s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 114i,6n,118p,611b,236s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm
 -super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/sha
-re/texmf/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on PD_2_5_element_effective_thinking.pdf (4 pages, 96479 bytes).
-
+/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxt
+i10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf/f
+onts/type1/public/cm-super/sfrm1095.pfb>
+Output written on PD_2_5_element_effective_thinking.pdf (11 pages, 164479 bytes
+).
 PDF statistics:
- 51 PDF objects out of 1000 (max. 8388607)
- 32 compressed objects within 1 object stream
+ 84 PDF objects out of 1000 (max. 8388607)
+ 54 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
