@@ -10,7 +10,7 @@
 \contentsline {subsubsection}{\numberline {1.2.7}Rewriting for Your Field}{3}{}%
 \contentsline {subsubsection}{\numberline {1.2.8}Formal Drafting and Revision}{4}{}%
 \contentsline {subsubsection}{\numberline {1.2.9}What is Next?}{4}{}%
-\contentsline {subsection}{\numberline {1.3}Research Community and Network}{4}{}%
+\contentsline {subsection}{\numberline {1.3}Sounding Board and Research Network}{4}{}%
 \contentsline {subsubsection}{\numberline {1.3.1}Building Research Network}{4}{}%
 \contentsline {subsubsection}{\numberline {1.3.2}Identifying Primary Sources}{4}{}%
 \contentsline {subsubsection}{\numberline {1.3.3}Decision Consulting and Proposal Sharing}{4}{}%
