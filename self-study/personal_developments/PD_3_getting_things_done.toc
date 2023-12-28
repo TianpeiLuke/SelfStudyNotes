@@ -1,0 +1,15 @@
+\contentsline {section}{\numberline {1}Summary}{2}{}%
+\contentsline {section}{\numberline {2}A New Practice for a New Reality}{3}{}%
+\contentsline {section}{\numberline {3}Getting Control of Your Life: The Five Stages of Mastering Workflow}{3}{}%
+\contentsline {section}{\numberline {4}Getting Projects Creatively Under Way: The Five Phases of Project Planning}{3}{}%
+\contentsline {section}{\numberline {5}Getting Started: Setting Up the Time, Space, and Tools}{3}{}%
+\contentsline {section}{\numberline {6}Collection: Corralling Your ``Stuff"}{3}{}%
+\contentsline {section}{\numberline {7}Processing: Getting ``In" to Empty}{3}{}%
+\contentsline {section}{\numberline {8}Organizing: Setting Up the Right Buckets}{3}{}%
+\contentsline {section}{\numberline {9}Reviewing: Keeping Your System Functional}{3}{}%
+\contentsline {section}{\numberline {10}Doing: Making the Best Action Choices}{3}{}%
+\contentsline {section}{\numberline {11}Getting Projects Under Control}{3}{}%
+\contentsline {section}{\numberline {12}The Power of the Collection Habit}{3}{}%
+\contentsline {section}{\numberline {13}The Power of the Next-Action Decision}{3}{}%
+\contentsline {section}{\numberline {14}The Power of Outcome Focusing}{3}{}%
+\contentsline {section}{\numberline {15}Conclusion}{3}{}%
