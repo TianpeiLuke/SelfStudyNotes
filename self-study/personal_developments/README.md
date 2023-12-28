@@ -39,7 +39,7 @@ This section address my learning on various books for personal development and e
 
 ## Tables of Contents
 
-- The 7 Habits of Highly Effective People [pdf](./PD_1_7_habit_high_effective.pdf) (_Identify your core, then organize and execute around it._)
+- **The 7 Habits of Highly Effective People** [pdf](./PD_1_7_habit_high_effective.pdf) (_Identify your core, then organize and execute around it._)
 
     - Paradigms and Principles
 
@@ -69,7 +69,7 @@ This section address my learning on various books for personal development and e
         - Principles of **Balanced Self-Renewal**
               -- Habit 7: ***Sharpen the Saw***
 
-- The 5 Elements of Effective Thinking [pdf](./PD_2_5_element_effective_thinking.pdf)
+- **The 5 Elements of Effective Thinking** [pdf](./PD_2_5_element_effective_thinking.pdf)
     - Introduction
       -- Elements of Effective Thinking, Learning and Creating
 
@@ -108,7 +108,7 @@ This section address my learning on various books for personal development and e
 
     - A Way to Provoke Effective Thinking --Review
  
-- Getting Things Done: The Art of Stress-Free Productivity [pdf](./PD_3_getting_things_done.pdf) (_Build yourself a workflow._)
+- **Getting Things Done: The Art of Stress-Free Productivity** [pdf](./PD_3_getting_things_done.pdf) (_Build yourself a workflow._)
 
     - The Art of Getting Things Done
         - A New Practice for a New Reality
@@ -131,7 +131,7 @@ This section address my learning on various books for personal development and e
 
     - Conclusion
 
-- Getting to Yes: Negotiating Agreements without Giving In
+- **Getting to Yes: Negotiating Agreements without Giving In**
     - The Problem
         - ***Don't Bargain Over Positions***
 
@@ -153,7 +153,7 @@ This section address my learning on various books for personal development and e
 
     - In Conclusion
 
-- Emotional Intelligence 2.0
+- **Emotional Intelligence 2.0**
     - The Big Picture
     - What Emontional Intelligence Looks Like: Understanding the Four Skills
     - ***Self-Awareness*** Strategies
@@ -161,7 +161,7 @@ This section address my learning on various books for personal development and e
     - ***Social Awareness*** Strategies
     - ***Relationship Management*** Strategies
 
-- Where Research Begins: Choosing a Research Topics that Matters to you [pdf](./PD_6_where_research_begins.pdf)
+- **Where Research Begins: Choosing a Research Topics that Matters to you** [pdf](./PD_6_where_research_begins.pdf)
     - Introduction
         - ***Self-Centered Research***
         - Introversion, First. Extroversion Second
@@ -178,7 +178,7 @@ This section address my learning on various books for personal development and e
 
     - What's Next in Your Research Journey?
 
-- The Craft of Research
+- **The Craft of Research**
     - Research, Researchers, and Readers -- Become a Researcher
         - Thinking in Print: The Use of Research, Public and Private
         - Connecting with Your Reader: Creating a ***Role*** for ***Yourself*** and ***Your Readers***
