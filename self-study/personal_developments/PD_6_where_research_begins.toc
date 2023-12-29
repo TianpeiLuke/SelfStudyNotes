@@ -2,15 +2,17 @@
 \contentsline {subsection}{\numberline {1.1}Research Phases: Inside-Out Self-Centered Approach}{3}{}%
 \contentsline {subsection}{\numberline {1.2}Summary of Chapters}{4}{}%
 \contentsline {section}{\numberline {2}Try This Now}{6}{}%
-\contentsline {subsection}{\numberline {2.1}Brainstorming Questions}{6}{}%
+\contentsline {subsection}{\numberline {2.1}From Topics to Questions}{6}{}%
 \contentsline {subsection}{\numberline {2.2}From Questions to Problems}{8}{}%
-\contentsline {subsection}{\numberline {2.3}From Problems to Research Projects}{8}{}%
-\contentsline {subsection}{\numberline {2.4}Identifying Your Problem Collective}{9}{}%
-\contentsline {subsection}{\numberline {2.5}Rewriting for Your Collective}{9}{}%
-\contentsline {subsection}{\numberline {2.6}Organizing Your Field into Problem Collectives}{9}{}%
-\contentsline {subsection}{\numberline {2.7}Rewriting for Your Field}{9}{}%
-\contentsline {subsection}{\numberline {2.8}Formal Drafting and Revision}{9}{}%
-\contentsline {subsection}{\numberline {2.9}What is Next?}{9}{}%
+\contentsline {subsection}{\numberline {2.3}Engaging Primary Sources}{8}{}%
+\contentsline {subsection}{\numberline {2.4}Assembling Arguments}{9}{}%
+\contentsline {subsection}{\numberline {2.5}Planning Research Projects}{9}{}%
+\contentsline {subsection}{\numberline {2.6}Identifying Your Problem Collective}{9}{}%
+\contentsline {subsection}{\numberline {2.7}Rewriting for Your Collective}{9}{}%
+\contentsline {subsection}{\numberline {2.8}Organizing Your Field into Problem Collectives}{9}{}%
+\contentsline {subsection}{\numberline {2.9}Rewriting for Your Field}{9}{}%
+\contentsline {subsection}{\numberline {2.10}Formal Drafting and Revision}{9}{}%
+\contentsline {subsection}{\numberline {2.11}What is Next?}{9}{}%
 \contentsline {section}{\numberline {3}Sounding Board and Research Network}{9}{}%
 \contentsline {subsection}{\numberline {3.1}Building Research Network}{9}{}%
 \contentsline {subsection}{\numberline {3.2}Identifying Primary Sources}{10}{}%
