@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.10.29)  29 DEC 2023 21:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.10.29)  29 DEC 2023 21:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -707,23 +707,25 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [14]
-[15]
-Overfull \hbox (8.75546pt too wide) in paragraph at lines 620--621
+Underfull \vbox (badness 7576) has occurred while \output is active []
+
+ [15]
+Overfull \hbox (8.75546pt too wide) in paragraph at lines 654--655
 []\OT1/cmr/m/it/10.95 Start build-ing your re-search net-
  []
 
-
-Overfull \hbox (143.718pt too wide) in paragraph at lines 660--660
+[16]
+Overfull \hbox (143.718pt too wide) in paragraph at lines 694--694
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 660--660
+Underfull \hbox (badness 10000) in paragraph at lines 694--694
 
  []
 
-[16] [17]
-Overfull \hbox (3.64012pt too wide) in paragraph at lines 698--699
+[17]
+Overfull \hbox (3.64012pt too wide) in paragraph at lines 732--733
 []\OT1/cmr/m/n/10.95 Quite the op-po-site: self-centered re-searchers are \OT1/
 cmr/bx/it/10.95 self-reflexive\OT1/cmr/m/n/10.95 , and al-ways \OT1/cmr/bx/it/1
 0.95 self-critical\OT1/cmr/m/n/10.95 ;
@@ -759,7 +761,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [31]
-Overfull \hbox (4.13689pt too wide) in paragraph at lines 1252--1253
+Overfull \hbox (4.13689pt too wide) in paragraph at lines 1286--1287
 []\OT1/cmr/m/it/10.95 The \OT1/cmr/bx/it/10.95 goal\OT1/cmr/m/it/10.95 :
  []
 
@@ -767,7 +769,20 @@ Overfull \hbox (4.13689pt too wide) in paragraph at lines 1252--1253
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [34]
-[35] [36] [37] [38]
+[35] [36]
+Overfull \hbox (2.12784pt too wide) in paragraph at lines 1522--1523
+[]\OT1/cmr/m/it/10.95 The \OT1/cmr/bx/it/10.95 goal\OT1/cmr/m/it/10.95 : To sta
+rt think-
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [37]
+Underfull \vbox (badness 5817) has occurred while \output is active []
+
+ [38]
+[39]
 No file PD_6_where_research_begins.bbl.
 (./PD_6_where_research_begins.aux) ) 
 Here is how much of TeX's memory you used:
@@ -787,10 +802,10 @@ share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf/fonts/ty
 pe1/public/cm-super/sfrm1095.pfb>
-Output written on PD_6_where_research_begins.pdf (38 pages, 248539 bytes).
+Output written on PD_6_where_research_begins.pdf (39 pages, 251430 bytes).
 PDF statistics:
- 173 PDF objects out of 1000 (max. 8388607)
- 115 compressed objects within 2 object streams
+ 176 PDF objects out of 1000 (max. 8388607)
+ 117 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
