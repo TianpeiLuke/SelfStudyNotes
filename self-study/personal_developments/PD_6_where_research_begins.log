@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.10.29)  29 DEC 2023 19:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.10.29)  29 DEC 2023 20:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -653,12 +653,14 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 \openout4 = `PD_6_where_research_begins.toc'.
 
  [2]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \hbox (15.80103pt too wide) in paragraph at lines 60--61
+[]\OT1/cmr/m/n/10.95 from \OT1/cmr/bx/n/10.95 top-ics \OT1/cmr/m/n/10.95 into \
+OT1/cmr/bx/n/10.95 ques-tions\OT1/cmr/m/n/10.95 : in-clud-ing \OT1/cmr/m/it/10.
+95 ques-tion brain-storm-ing\OT1/cmr/m/n/10.95 , \OT1/cmr/m/it/10.95 in-ter-est
+ self-observation\OT1/cmr/m/n/10.95 ,
+ []
 
- [3]
-Underfull \vbox (badness 1067) has occurred while \output is active []
-
- [4]
+[3] [4]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [5]
@@ -672,13 +674,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 1057) has occurred while \output is active []
 
  [9]
-Overfull \hbox (1.7088pt too wide) in paragraph at lines 326--327
+Overfull \hbox (1.7088pt too wide) in paragraph at lines 349--350
 []\OT1/cmr/m/n/10.95 Asking \OT1/cmr/bx/it/10.95 ad-vo-cacy ques-tions\OT1/cmr/
 m/n/10.95 , which pro-mote a cer-tain ide-ol-ogy (taken-for-granted world-
  []
 
 
-Overfull \hbox (2.3999pt too wide) in paragraph at lines 336--338
+Overfull \hbox (2.3999pt too wide) in paragraph at lines 359--361
 []\OT1/cmr/m/it/10.95 The \OT1/cmr/bx/it/10.95 goal\OT1/cmr/m/it/10.95 : To lea
 rn
  []
@@ -690,7 +692,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11]
-Overfull \hbox (13.56282pt too wide) in paragraph at lines 434--435
+Overfull \hbox (13.56282pt too wide) in paragraph at lines 457--458
 []\OT1/cmr/m/it/10.95 If nec-es-sary, \OT1/cmr/bx/it/10.95 pri-or-i-tize \OT1/c
 mr/m/it/10.95 your ques-tions by de-gree of \OT1/cmr/bx/it/10.95 speci-ficity \
 OT1/cmr/m/it/10.95 or \OT1/cmr/bx/it/10.95 gen-er-al-ity\OT1/cmr/m/it/10.95 , a
@@ -702,22 +704,22 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12]
 [13]
-Overfull \hbox (8.75546pt too wide) in paragraph at lines 526--527
+Overfull \hbox (8.75546pt too wide) in paragraph at lines 549--550
 []\OT1/cmr/m/it/10.95 Start build-ing your re-search net-
  []
 
 [14]
-Overfull \hbox (143.718pt too wide) in paragraph at lines 566--566
+Overfull \hbox (143.718pt too wide) in paragraph at lines 589--589
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 566--566
+Underfull \hbox (badness 10000) in paragraph at lines 589--589
 
  []
 
 [15]
-Overfull \hbox (3.64012pt too wide) in paragraph at lines 604--605
+Overfull \hbox (3.64012pt too wide) in paragraph at lines 627--628
 []\OT1/cmr/m/n/10.95 Quite the op-po-site: self-centered re-searchers are \OT1/
 cmr/bx/it/10.95 self-reflexive\OT1/cmr/m/n/10.95 , and al-ways \OT1/cmr/bx/it/1
 0.95 self-critical\OT1/cmr/m/n/10.95 ;
@@ -756,7 +758,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [29]
-Overfull \hbox (4.13689pt too wide) in paragraph at lines 1156--1157
+Overfull \hbox (4.13689pt too wide) in paragraph at lines 1179--1180
 []\OT1/cmr/m/it/10.95 The \OT1/cmr/bx/it/10.95 goal\OT1/cmr/m/it/10.95 :
  []
 
@@ -764,7 +766,7 @@ Overfull \hbox (4.13689pt too wide) in paragraph at lines 1156--1157
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [30]
-[31] [32]
+[31] [32] [33]
 No file PD_6_where_research_begins.bbl.
 (./PD_6_where_research_begins.aux) ) 
 Here is how much of TeX's memory you used:
@@ -774,7 +776,7 @@ Here is how much of TeX's memory you used:
  35677 multiletter control sequences out of 15000+600000
  478676 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 114i,6n,118p,601b,356s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 114i,6n,118p,601b,342s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/
 cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12
@@ -784,10 +786,10 @@ share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf/fonts/ty
 pe1/public/cm-super/sfrm1095.pfb>
-Output written on PD_6_where_research_begins.pdf (32 pages, 229170 bytes).
+Output written on PD_6_where_research_begins.pdf (33 pages, 235059 bytes).
 PDF statistics:
- 151 PDF objects out of 1000 (max. 8388607)
- 100 compressed objects within 1 object stream
+ 155 PDF objects out of 1000 (max. 8388607)
+ 102 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
