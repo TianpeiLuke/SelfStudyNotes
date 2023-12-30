@@ -32,8 +32,9 @@
 \contentsline {subsubsection}{\numberline {5.2.1}Don’t Jump to a Question (or You’ll Miss Your Problem)}{26}{}%
 \contentsline {subsubsection}{\numberline {5.2.2}Stress-Testing Your Questions}{27}{}%
 \contentsline {subsection}{\numberline {5.3}Designing a Project that Works}{31}{}%
-\contentsline {section}{\numberline {6}Get Over Yourself}{31}{}%
-\contentsline {subsection}{\numberline {6.1}How to Find Your Problem Collective}{32}{}%
-\contentsline {subsection}{\numberline {6.2}How to Navigate Your Field}{32}{}%
-\contentsline {subsection}{\numberline {6.3}How to Begin}{32}{}%
-\contentsline {section}{\numberline {7}What's Next in Your Research Journey?}{32}{}%
+\contentsline {subsubsection}{\numberline {5.3.1}Primary Sources and How to Use Them}{31}{}%
+\contentsline {section}{\numberline {6}Get Over Yourself}{32}{}%
+\contentsline {subsection}{\numberline {6.1}How to Find Your Problem Collective}{33}{}%
+\contentsline {subsection}{\numberline {6.2}How to Navigate Your Field}{33}{}%
+\contentsline {subsection}{\numberline {6.3}How to Begin}{33}{}%
+\contentsline {section}{\numberline {7}What's Next in Your Research Journey?}{33}{}%
