@@ -16,7 +16,7 @@
 \contentsline {section}{\numberline {3}Sounding Board and Research Network}{16}{}%
 \contentsline {subsection}{\numberline {3.1}Building Research Network}{16}{}%
 \contentsline {subsection}{\numberline {3.2}Identifying Primary Sources}{17}{}%
-\contentsline {subsection}{\numberline {3.3}Decision Consulting and Proposal Sharing}{17}{}%
+\contentsline {subsection}{\numberline {3.3}Project Planning Consulting and Proposal Sharing}{17}{}%
 \contentsline {subsection}{\numberline {3.4}Evaluation of Proposal from Outsider}{17}{}%
 \contentsline {subsection}{\numberline {3.5}Finding a Sounding Board in Your Field}{17}{}%
 \contentsline {subsection}{\numberline {3.6}Being Your Own Sounding Board}{17}{}%
