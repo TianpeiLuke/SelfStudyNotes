@@ -1,37 +1,39 @@
 \contentsline {section}{\numberline {1}Summary}{3}{}%
 \contentsline {subsection}{\numberline {1.1}Research Phases: Inside-Out Self-Centered Approach}{3}{}%
 \contentsline {subsection}{\numberline {1.2}Summary of Chapters}{4}{}%
-\contentsline {section}{\numberline {2}Try This Now}{6}{}%
-\contentsline {subsection}{\numberline {2.1}From Topics to Questions}{6}{}%
-\contentsline {subsection}{\numberline {2.2}From Questions to Problems}{8}{}%
-\contentsline {subsection}{\numberline {2.3}Engaging Primary Sources}{8}{}%
-\contentsline {subsection}{\numberline {2.4}Assembling Arguments}{9}{}%
-\contentsline {subsection}{\numberline {2.5}Planning Research Projects}{9}{}%
-\contentsline {subsection}{\numberline {2.6}Identifying Your Problem Collective}{9}{}%
-\contentsline {subsection}{\numberline {2.7}Rewriting for Your Collective}{9}{}%
-\contentsline {subsection}{\numberline {2.8}Organizing Your Field into Problem Collectives}{9}{}%
-\contentsline {subsection}{\numberline {2.9}Rewriting for Your Field}{9}{}%
-\contentsline {subsection}{\numberline {2.10}Formal Drafting and Revision}{9}{}%
-\contentsline {subsection}{\numberline {2.11}What is Next?}{9}{}%
-\contentsline {section}{\numberline {3}Sounding Board and Research Network}{9}{}%
-\contentsline {subsection}{\numberline {3.1}Building Research Network}{9}{}%
-\contentsline {subsection}{\numberline {3.2}Identifying Primary Sources}{10}{}%
-\contentsline {subsection}{\numberline {3.3}Decision Consulting and Proposal Sharing}{10}{}%
-\contentsline {subsection}{\numberline {3.4}Evaluation of Proposal from Outsider}{10}{}%
-\contentsline {subsection}{\numberline {3.5}Finding a Sounding Board in Your Field}{10}{}%
-\contentsline {subsection}{\numberline {3.6}Being Your Own Sounding Board}{10}{}%
-\contentsline {section}{\numberline {4}Introduction}{11}{}%
-\contentsline {subsection}{\numberline {4.1}Self-Centered Research: A Manifesto}{11}{}%
-\contentsline {subsection}{\numberline {4.2}Centered Research Is the Best Research}{12}{}%
-\contentsline {subsection}{\numberline {4.3}How to Use this Book}{12}{}%
-\contentsline {subsection}{\numberline {4.4}Introversion, First. Extroversion Second}{14}{}%
-\contentsline {section}{\numberline {5}Become a Self-Centered Researcher}{15}{}%
-\contentsline {subsection}{\numberline {5.1}Questions}{15}{}%
-\contentsline {subsubsection}{\numberline {5.1.1}A Topic Is Not a Question}{15}{}%
-\contentsline {subsection}{\numberline {5.2}What's Your Problem?}{21}{}%
-\contentsline {subsection}{\numberline {5.3}Designing a Project that Works}{21}{}%
-\contentsline {section}{\numberline {6}Get Over Yourself}{21}{}%
-\contentsline {subsection}{\numberline {6.1}How to Find Your Problem Collective}{21}{}%
-\contentsline {subsection}{\numberline {6.2}How to Navigate Your Field}{21}{}%
-\contentsline {subsection}{\numberline {6.3}How to Begin}{21}{}%
-\contentsline {section}{\numberline {7}What's Next in Your Research Journey?}{21}{}%
+\contentsline {section}{\numberline {2}Try This Now}{7}{}%
+\contentsline {subsection}{\numberline {2.1}From Topics to Questions}{7}{}%
+\contentsline {subsection}{\numberline {2.2}From Questions to Problems}{9}{}%
+\contentsline {subsection}{\numberline {2.3}Engaging Primary Sources}{13}{}%
+\contentsline {subsection}{\numberline {2.4}Assembling Arguments}{13}{}%
+\contentsline {subsection}{\numberline {2.5}Planning Research Projects}{13}{}%
+\contentsline {subsection}{\numberline {2.6}Identifying Your Problem Collective}{13}{}%
+\contentsline {subsection}{\numberline {2.7}Rewriting for Your Collective}{13}{}%
+\contentsline {subsection}{\numberline {2.8}Organizing Your Field into Problem Collectives}{13}{}%
+\contentsline {subsection}{\numberline {2.9}Rewriting for Your Field}{14}{}%
+\contentsline {subsection}{\numberline {2.10}Formal Drafting and Revision}{14}{}%
+\contentsline {subsection}{\numberline {2.11}What is Next?}{14}{}%
+\contentsline {section}{\numberline {3}Sounding Board and Research Network}{14}{}%
+\contentsline {subsection}{\numberline {3.1}Building Research Network}{14}{}%
+\contentsline {subsection}{\numberline {3.2}Identifying Primary Sources}{14}{}%
+\contentsline {subsection}{\numberline {3.3}Decision Consulting and Proposal Sharing}{15}{}%
+\contentsline {subsection}{\numberline {3.4}Evaluation of Proposal from Outsider}{15}{}%
+\contentsline {subsection}{\numberline {3.5}Finding a Sounding Board in Your Field}{15}{}%
+\contentsline {subsection}{\numberline {3.6}Being Your Own Sounding Board}{15}{}%
+\contentsline {section}{\numberline {4}Introduction}{16}{}%
+\contentsline {subsection}{\numberline {4.1}Self-Centered Research: A Manifesto}{16}{}%
+\contentsline {subsection}{\numberline {4.2}Centered Research Is the Best Research}{17}{}%
+\contentsline {subsection}{\numberline {4.3}How to Use this Book}{17}{}%
+\contentsline {subsection}{\numberline {4.4}Introversion, First. Extroversion Second}{19}{}%
+\contentsline {section}{\numberline {5}Become a Self-Centered Researcher}{20}{}%
+\contentsline {subsection}{\numberline {5.1}Questions}{20}{}%
+\contentsline {subsubsection}{\numberline {5.1.1}A Topic Is Not a Question}{20}{}%
+\contentsline {subsection}{\numberline {5.2}What's Your Problem?}{26}{}%
+\contentsline {subsubsection}{\numberline {5.2.1}Don’t Jump to a Question (or You’ll Miss Your Problem)}{26}{}%
+\contentsline {subsubsection}{\numberline {5.2.2}Stress-Testing Your Questions}{27}{}%
+\contentsline {subsection}{\numberline {5.3}Designing a Project that Works}{31}{}%
+\contentsline {section}{\numberline {6}Get Over Yourself}{31}{}%
+\contentsline {subsection}{\numberline {6.1}How to Find Your Problem Collective}{32}{}%
+\contentsline {subsection}{\numberline {6.2}How to Navigate Your Field}{32}{}%
+\contentsline {subsection}{\numberline {6.3}How to Begin}{32}{}%
+\contentsline {section}{\numberline {7}What's Next in Your Research Journey?}{32}{}%
