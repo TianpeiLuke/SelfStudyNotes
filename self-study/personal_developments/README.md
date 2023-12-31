@@ -205,3 +205,19 @@ This section address my learning on various books for personal development and e
         - Revising ***Style***: Telling Your Story ***Clearly***
 
     - Some Last Considerations -- Ethics
+
+- **Leadership Principles from Amazon**
+    - Customer Obsession
+    - Ownership
+    - Are Right, A Lot
+    - Think Big
+    - Bias for Action
+    - Earn Trust
+    - Deliver Results
+    - Deep Dive
+    - Have Backbone; Disagree and Commit
+    - Insist on the Highest Standards
+    - Invent and Simplify
+    - Learn and Be Curious
+    - Hire and Develop the Best
+    - Frugality
