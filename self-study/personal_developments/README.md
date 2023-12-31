@@ -208,16 +208,36 @@ This section address my learning on various books for personal development and e
 
 - **Leadership Principles from Amazon**
     - Customer Obsession
-    - ***Ownership***
-    - ***Are Right, A Lot***
-    - ***Think Big***
-    - ***Bias for Action***
-    - ***Earn Trust***
+    - ***Ownership*** 
+        - Be Proactive
+        - Be Responsible
+    - ***Are Right, A Lot*** 
+        - Have a Principled-Center
+    - ***Think Big*** 
+        - Use Imagination and Conscience
+        - Begin with End in Mind
+    - ***Bias for Action*** 
+        - Fail in order to Succeed
+        - Put First Things First
+        - Quadrant II Focus
+    - ***Earn Trust*** 
+        - Take Deposit in Emotional Bank Account
+        - Think of Win/Win
+        - Seek to Understand, then to Be Understood
     - ***Deliver Results***
-    - *Deep Dive*
-    - *Have Backbone; Disagree and Commit*
+    - *Deep Dive* 
+        - Understand Fundamentals Deeply; 
+        - See What is There?
+        - See What is Missing?
+    - *Have Backbone; Disagree and Commit* 
+        - Critical Thinking
+        - Challenge Authorities
     - *Insist on the Highest Standards*
     - *Invent and Simplify*
-    - ***Learn and Be Curious***
+        - Look Forward, Look Backward
+    - ***Learn and Be Curious*** 
+        - Raise Effective Questions
+        - See Flow of Ideas
+        - Introversion First, Extroversion Second
     - Hire and Develop the Best
     - Frugality
