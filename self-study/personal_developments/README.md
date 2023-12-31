@@ -224,14 +224,16 @@ This section address my learning on various books for personal development and e
         - Take Deposit in Emotional Bank Account
         - Think of Win/Win
         - Seek to Understand, then to Be Understood
+        - Get Things Done
     - ***Deliver Results***
+        - Have a Productive, Stress-Free Workflow
     - *Deep Dive* 
         - Understand Fundamentals Deeply; 
-        - See What is There?
-        - See What is Missing?
+        - See What is There
+        - See What is Missing
     - *Have Backbone; Disagree and Commit* 
         - Critical Thinking
-        - Challenge Authorities
+        - Focus on Interests, Not Positions
     - *Insist on the Highest Standards*
     - *Invent and Simplify*
         - Look Forward, Look Backward
