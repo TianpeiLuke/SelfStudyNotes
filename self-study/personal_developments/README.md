@@ -228,7 +228,8 @@ This section address my learning on various books for personal development and e
     - ***Deliver Results***
         - Have a Productive, Stress-Free Workflow
     - *Deep Dive* 
-        - Understand Fundamentals Deeply; 
+        - Understand Fundamentals Deeply
+        - Clear the Clutter 
         - See What is There
         - See What is Missing
     - *Have Backbone; Disagree and Commit* 
