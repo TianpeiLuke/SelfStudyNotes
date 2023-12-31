@@ -227,18 +227,18 @@ This section address my learning on various books for personal development and e
         - Get Things Done
     - ***Deliver Results***
         - Have a Productive, Stress-Free Workflow
-    - *Deep Dive* 
+    - ***Deep Dive***
         - Understand Fundamentals Deeply
-        - Clear the Clutter 
+        - Clear the Clutter
         - See What is There
         - See What is Missing
-    - *Have Backbone; Disagree and Commit* 
+    - *Have Backbone; Disagree and Commit*
         - Critical Thinking
         - Focus on Interests, Not Positions
     - *Insist on the Highest Standards*
     - *Invent and Simplify*
         - Look Forward, Look Backward
-    - ***Learn and Be Curious*** 
+    - ***Learn and Be Curious***
         - Raise Effective Questions
         - See Flow of Ideas
         - Introversion First, Extroversion Second
