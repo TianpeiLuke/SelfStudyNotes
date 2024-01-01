@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.10.29)  30 DEC 2023 19:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.10.29)  31 DEC 2023 23:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -677,23 +677,32 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7]
-[8]
+Overfull \hbox (12.98584pt too wide) in paragraph at lines 244--245
+[]\OT1/cmr/m/n/10.95 These jar-gons in-clude \OT1/cmr/m/it/10.95 terms, in-di-v
+id-ual, or-ga-ni-za-tion, nouns, ad-jec-tives/adverbs, acronyms,
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9]
+ [8]
+[9]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [10]
-Underfull \vbox (badness 1057) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11]
-Overfull \hbox (1.7088pt too wide) in paragraph at lines 378--379
+Underfull \vbox (badness 1057) has occurred while \output is active []
+
+ [12]
+Overfull \hbox (1.7088pt too wide) in paragraph at lines 421--422
 []\OT1/cmr/m/n/10.95 Asking \OT1/cmr/bx/it/10.95 ad-vo-cacy ques-tions\OT1/cmr/
 m/n/10.95 , which pro-mote a cer-tain ide-ol-ogy (taken-for-granted world-
  []
 
 
-Overfull \hbox (2.3999pt too wide) in paragraph at lines 388--390
+Overfull \hbox (2.3999pt too wide) in paragraph at lines 431--433
 []\OT1/cmr/m/it/10.95 The \OT1/cmr/bx/it/10.95 goal\OT1/cmr/m/it/10.95 : To lea
 rn
  []
@@ -701,11 +710,11 @@ rn
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [12]
+ [13]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13]
-Overfull \hbox (13.56282pt too wide) in paragraph at lines 486--487
+ [14]
+Overfull \hbox (13.56282pt too wide) in paragraph at lines 529--530
 []\OT1/cmr/m/it/10.95 If nec-es-sary, \OT1/cmr/bx/it/10.95 pri-or-i-tize \OT1/c
 mr/m/it/10.95 your ques-tions by de-gree of \OT1/cmr/bx/it/10.95 speci-ficity \
 OT1/cmr/m/it/10.95 or \OT1/cmr/bx/it/10.95 gen-er-al-ity\OT1/cmr/m/it/10.95 , a
@@ -715,13 +724,13 @@ s \OT1/cmr/bx/it/10.95 medium-
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [14]
-[15]
+ [15]
+[16]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [16]
-[17]
-Overfull \hbox (2.62192pt too wide) in paragraph at lines 669--670
+ [17]
+[18]
+Overfull \hbox (2.62192pt too wide) in paragraph at lines 712--713
 \OT1/cmr/m/it/10.95 namely, by writ-ing a \OT1/cmr/bx/it/10.95 for-mal\OT1/cmr/
 m/it/10.95 , \OT1/cmr/bx/it/10.95 forward-looking prospec-tus \OT1/cmr/m/it/10.
 95 about your project-in-the-making,
@@ -730,48 +739,65 @@ m/it/10.95 , \OT1/cmr/bx/it/10.95 forward-looking prospec-tus \OT1/cmr/m/it/10.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [18]
-Underfull \vbox (badness 3668) has occurred while \output is active []
-
  [19]
-Overfull \hbox (8.75546pt too wide) in paragraph at lines 768--769
+[20]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22]
+Overfull \hbox (4.78459pt too wide) in paragraph at lines 872--873
+[]\OT1/cmr/m/it/10.95 The \OT1/cmr/bx/it/10.95 goal\OT1/cmr/m/it/10.95 : To
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [23]
+Overfull \hbox (7.45815pt too wide) in paragraph at lines 908--909
+[]\OT1/cmr/m/it/10.95 The \OT1/cmr/bx/it/10.95 goals\OT1/cmr/m/it/10.95 : To id
+en-tify lan-
+ []
+
+
+Underfull \vbox (badness 5203) has occurred while \output is active []
+
+ [24]
+[25]
+Overfull \hbox (8.75546pt too wide) in paragraph at lines 976--977
 []\OT1/cmr/m/it/10.95 Start build-ing your re-search net-
  []
 
-[20]
-Overfull \hbox (1.87387pt too wide) in paragraph at lines 816--817
+
+Overfull \hbox (1.87387pt too wide) in paragraph at lines 1024--1025
 []\OT1/cmr/bx/it/10.95 Read \OT1/cmr/m/it/10.95 through your
  []
 
-[21] [22]
-Overfull \hbox (3.64012pt too wide) in paragraph at lines 868--869
+[26]
+Overfull \hbox (25.58815pt too wide) in paragraph at lines 1044--1046
+[]\OT1/cmr/m/it/10.95 Now that you've
+ []
+
+[27]
+Overfull \hbox (3.64012pt too wide) in paragraph at lines 1092--1093
 []\OT1/cmr/m/n/10.95 Quite the op-po-site: self-centered re-searchers are \OT1/
 cmr/bx/it/10.95 self-reflexive\OT1/cmr/m/n/10.95 , and al-ways \OT1/cmr/bx/it/1
 0.95 self-critical\OT1/cmr/m/n/10.95 ;
  []
 
-[23] [24]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [25]
-Underfull \vbox (badness 1354) has occurred while \output is active []
-
- [26]
-[27]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [28]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [29]
+[28] [29]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [30]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1354) has occurred while \output is active []
 
  [31]
-[32] [33]
-Underfull \vbox (badness 1502) has occurred while \output is active []
+[32]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [33]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [34]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -780,16 +806,26 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [36]
-Overfull \hbox (4.13689pt too wide) in paragraph at lines 1422--1423
+[37] [38]
+Underfull \vbox (badness 1502) has occurred while \output is active []
+
+ [39]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [40]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [41]
+Overfull \hbox (4.13689pt too wide) in paragraph at lines 1646--1647
 []\OT1/cmr/m/it/10.95 The \OT1/cmr/bx/it/10.95 goal\OT1/cmr/m/it/10.95 :
  []
 
-[37] [38]
+[42] [43]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [39]
-[40] [41]
-Overfull \hbox (2.12784pt too wide) in paragraph at lines 1658--1659
+ [44]
+[45] [46]
+Overfull \hbox (2.12784pt too wide) in paragraph at lines 1882--1883
 []\OT1/cmr/m/it/10.95 The \OT1/cmr/bx/it/10.95 goal\OT1/cmr/m/it/10.95 : To sta
 rt think-
  []
@@ -797,18 +833,37 @@ rt think-
 
 Underfull \vbox (badness 1194) has occurred while \output is active []
 
- [42]
+ [47]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [43]
-[44]
+ [48]
+[49]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [45]
+ [50]
 Underfull \vbox (badness 5563) has occurred while \output is active []
 
- [46]
-[47] [48]
+ [51]
+[52] [53]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [54]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [55]
+Overfull \hbox (5.5087pt too wide) in paragraph at lines 2243--2244
+[]\OT1/cmr/m/it/10.95 The \OT1/cmr/bx/it/10.95 goal\OT1/cmr/m/it/10.95 :
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [56]
+[57]
+Underfull \vbox (badness 1502) has occurred while \output is active []
+
+ [58]
+[59]
 No file PD_6_where_research_begins.bbl.
 (./PD_6_where_research_begins.aux) ) 
 Here is how much of TeX's memory you used:
@@ -818,7 +873,7 @@ Here is how much of TeX's memory you used:
  35678 multiletter control sequences out of 15000+600000
  478676 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 114i,6n,118p,605b,352s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 114i,6n,118p,605b,356s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/
 cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12
@@ -828,10 +883,10 @@ share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf/fonts/ty
 pe1/public/cm-super/sfrm1095.pfb>
-Output written on PD_6_where_research_begins.pdf (48 pages, 281744 bytes).
+Output written on PD_6_where_research_begins.pdf (59 pages, 315617 bytes).
 PDF statistics:
- 204 PDF objects out of 1000 (max. 8388607)
- 136 compressed objects within 2 object streams
+ 239 PDF objects out of 1000 (max. 8388607)
+ 160 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
