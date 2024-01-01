@@ -50,7 +50,7 @@
 \contentsline {subsubsection}{\numberline {6.2.1}Find the Problems within Your Field}{65}{}%
 \contentsline {subsubsection}{\numberline {6.2.2}Read Your Field for Their Problems}{66}{}%
 \contentsline {subsubsection}{\numberline {6.2.3}Welcome to Your Field}{70}{}%
-\contentsline {subsection}{\numberline {6.3}How to Begin}{71}{}%
+\contentsline {subsection}{\numberline {6.3}How to Begin}{70}{}%
 \contentsline {subsubsection}{\numberline {6.3.1}Don’t Worry. It’s All Writing.}{71}{}%
 \contentsline {subsubsection}{\numberline {6.3.2}See What You Mean: Writing Draft 1}{71}{}%
 \contentsline {subsubsection}{\numberline {6.3.3}Perfection Is Boring}{71}{}%
