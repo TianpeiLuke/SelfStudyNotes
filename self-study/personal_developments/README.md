@@ -39,7 +39,7 @@ This section address my learning on various books for personal development and e
 
 ## Tables of Contents
 
-- **The 7 Habits of Highly Effective People** [pdf](./PD_1_7_habit_high_effective.pdf) (_Identify your core, then organize and execute around it._)
+- **The 7 Habits of Highly Effective People** [pdf](./PD_1_7_habit_high_effective.pdf) (_Top-down approach: Identify your core, then organize and execute around it._)
 
     - Paradigms and Principles
 
@@ -108,7 +108,7 @@ This section address my learning on various books for personal development and e
 
     - A Way to Provoke Effective Thinking --Review
  
-- **Getting Things Done: The Art of Stress-Free Productivity** [pdf](./PD_3_getting_things_done.pdf) (_Build yourself a workflow._)
+- **Getting Things Done: The Art of Stress-Free Productivity** [pdf](./PD_3_getting_things_done.pdf) (_Bottom-up approach: Build yourself a workflow._)
 
     - The Art of Getting Things Done
         - A New Practice for a New Reality
