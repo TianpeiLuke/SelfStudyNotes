@@ -251,8 +251,17 @@ This section address my learning on various books for personal development and e
     - Consent Is Sexy: How to Date in the #MeToo Era
     - The Secret to Total Confidence & Romantic Connection
 
+- **Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones**
+    - The Fundamentals: Why Tiny Changes Make a Big Difference
+    - The 1st Law: Make It Obvious
+    - The 2nd Law: Make It Attractive
+    - The 3rd Law: Make It Easy
+    - The 4th Law: Make It Satisfying
+    - Advanced Tactics: How to Go from Being Merely Good to Being Truely Great
+
 - **Leadership Principles from Amazon**
     - Customer Obsession
+        - Value Proposition
     - ***Ownership*** 
         - Be Proactive
         - Be Responsible
