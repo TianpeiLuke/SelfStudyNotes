@@ -208,7 +208,7 @@ This section address my learning on various books for personal development and e
 
     - Some Last Considerations -- Ethics
 
-- **Speed Reading: Learn to Read a 200+ Page Book in 1 Hour**
+- **Speed Reading: Learn to Read a 200+ Page Book in 1 Hour**  [pdf](./PD_8_speed_reading.pdf)
     - Pre-Reading
         - ***Purpose***
         - Power of ***Preview***
