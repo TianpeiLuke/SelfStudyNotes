@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.10.29)  22 JAN 2024 21:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.10.29)  22 JAN 2024 21:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -656,11 +656,11 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 No file PD_8_speed_reading.bbl.
 (./PD_8_speed_reading.aux) ) 
 Here is how much of TeX's memory you used:
- 17777 strings out of 478287
- 358338 string characters out of 5849288
- 622622 words of memory out of 5000000
- 35664 multiletter control sequences out of 15000+600000
- 475910 words of font info for 54 fonts, out of 8000000 for 9000
+ 17784 strings out of 478287
+ 358453 string characters out of 5849288
+ 628622 words of memory out of 5000000
+ 35671 multiletter control sequences out of 15000+600000
+ 477630 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  114i,6n,118p,569b,216s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/a
@@ -668,7 +668,7 @@ msfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on PD_8_speed_reading.pdf (3 pages, 64449 bytes).
+Output written on PD_8_speed_reading.pdf (3 pages, 78467 bytes).
 PDF statistics:
  42 PDF objects out of 1000 (max. 8388607)
  26 compressed objects within 1 object stream

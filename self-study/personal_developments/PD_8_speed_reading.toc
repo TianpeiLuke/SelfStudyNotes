@@ -1,6 +1,21 @@
 \contentsline {section}{\numberline {1}Reading Summary}{2}{}%
 \contentsline {section}{\numberline {2}Pre-Reading}{3}{}%
+\contentsline {subsection}{\numberline {2.1}Purpose}{3}{}%
+\contentsline {subsection}{\numberline {2.2}Power of Preview}{3}{}%
+\contentsline {subsection}{\numberline {2.3}Changes Styles}{3}{}%
 \contentsline {section}{\numberline {3}Speed Reading Techniques}{3}{}%
+\contentsline {subsection}{\numberline {3.1}Space Reading}{3}{}%
+\contentsline {subsection}{\numberline {3.2}Chunking}{3}{}%
+\contentsline {subsection}{\numberline {3.3}Subvocalization}{3}{}%
 \contentsline {section}{\numberline {4}Enhancing the Techniques}{3}{}%
+\contentsline {subsection}{\numberline {4.1}Fixation}{3}{}%
+\contentsline {subsection}{\numberline {4.2}Regression}{3}{}%
+\contentsline {subsection}{\numberline {4.3}Visual Range}{3}{}%
 \contentsline {section}{\numberline {5}Improving Comprehension}{3}{}%
+\contentsline {subsection}{\numberline {5.1}Ideas and Main Points}{3}{}%
+\contentsline {subsection}{\numberline {5.2}Topic Sentences}{3}{}%
+\contentsline {subsection}{\numberline {5.3}Vocabulary}{3}{}%
 \contentsline {section}{\numberline {6}Additional Tips}{3}{}%
+\contentsline {subsection}{\numberline {6.1}Remembering What You Read}{3}{}%
+\contentsline {subsection}{\numberline {6.2}Visualize}{3}{}%
+\contentsline {subsection}{\numberline {6.3}Eye Health}{3}{}%
