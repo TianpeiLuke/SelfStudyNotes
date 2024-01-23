@@ -1,0 +1,7 @@
+\contentsline {section}{\numberline {1}Reading Summary}{2}{}%
+\contentsline {section}{\numberline {2}The Fundamentals: Why Tiny Changes Make a Big Difference}{3}{}%
+\contentsline {section}{\numberline {3}The 1st Law: Make It Obvious}{3}{}%
+\contentsline {section}{\numberline {4}The 2nd Law: Make It Attractive}{3}{}%
+\contentsline {section}{\numberline {5}The 3rd Law: Make It Easy}{3}{}%
+\contentsline {section}{\numberline {6}The 4th Law: Make It Satisfying}{3}{}%
+\contentsline {section}{\numberline {7}Advanced Tactics: How to Go from Being Merely Good to Being Truely Great}{3}{}%
