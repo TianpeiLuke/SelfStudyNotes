@@ -251,7 +251,7 @@ This section address my learning on various books for personal development and e
     - Consent Is Sexy: How to Date in the #MeToo Era
     - The Secret to Total Confidence & Romantic Connection
 
-- **Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones**
+- **Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones** [pdf](./PD_10_atomic_habits.pdf)
     - The Fundamentals: Why Tiny Changes Make a Big Difference
     - The 1st Law: Make It Obvious
     - The 2nd Law: Make It Attractive
