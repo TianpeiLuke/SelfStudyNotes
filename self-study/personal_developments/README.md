@@ -208,6 +208,33 @@ This section address my learning on various books for personal development and e
 
     - Some Last Considerations -- Ethics
 
+- **Speed Reading: Learn to Read a 200+ Page Book in 1 Hour**
+    - Pre-Reading
+        - ***Purpose***
+        - Power of ***Preview***
+        - Changes ***Styles***
+
+    - Speed Reading Techniques
+        - Space Reading
+        - Chunking
+        - ***Subvocalization***
+
+    - Enhancing the Techniques
+        - ***Fixation***
+        - ***Regression***
+        - ***Visual Range***
+
+    - Improving Comprehension
+        - *Ideas* and ***Main Points***
+        - ***Topic Sentences***
+        - *Vocabulary*
+
+    - Additional Tips
+        - Remembering What You Read
+        - *Visualize*
+        - *Eye Health*
+
+
 - **Leadership Principles from Amazon**
     - Customer Obsession
     - ***Ownership*** 
