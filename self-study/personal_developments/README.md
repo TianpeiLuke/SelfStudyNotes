@@ -41,7 +41,7 @@ This section address my learning on various books for personal development and e
 
 ## Tables of Contents
 
-- **The 7 Habits of Highly Effective People** [pdf](./PD_1_7_habit_high_effective.pdf) (_Top-down approach: Identify your core, then organize and execute around it._)
+- **The 7 Habits of Highly Effective People** [pdf](./PD_01_7_habit_high_effective.pdf) (_Top-down approach: Identify your core, then organize and execute around it._)
 
     - Paradigms and Principles
 
@@ -71,7 +71,7 @@ This section address my learning on various books for personal development and e
         - Principles of **Balanced Self-Renewal**
               -- Habit 7: ***Sharpen the Saw***
 
-- **The 5 Elements of Effective Thinking** [pdf](./PD_2_5_element_effective_thinking.pdf)
+- **The 5 Elements of Effective Thinking** [pdf](./PD_02_5_element_effective_thinking.pdf)
     - Introduction
       -- Elements of Effective Thinking, Learning and Creating
 
@@ -110,7 +110,7 @@ This section address my learning on various books for personal development and e
 
     - A Way to Provoke Effective Thinking --Review
  
-- **Getting Things Done: The Art of Stress-Free Productivity** [pdf](./PD_3_getting_things_done.pdf) (_Bottom-up approach: Build yourself a workflow._)
+- **Getting Things Done: The Art of Stress-Free Productivity** [pdf](./PD_03_getting_things_done.pdf) (_Bottom-up approach: Build yourself a workflow._)
 
     - The Art of Getting Things Done
         - A New Practice for a New Reality
@@ -163,7 +163,7 @@ This section address my learning on various books for personal development and e
     - ***Social Awareness*** Strategies
     - ***Relationship Management*** Strategies
 
-- **Where Research Begins: Choosing a Research Topics that Matters to you** [pdf](./PD_6_where_research_begins.pdf)
+- **Where Research Begins: Choosing a Research Topics that Matters to you** [pdf](./PD_06_where_research_begins.pdf)
     - Introduction
         - ***Self-Centered Research***
         - Introversion, First. Extroversion Second
@@ -208,7 +208,7 @@ This section address my learning on various books for personal development and e
 
     - Some Last Considerations -- Ethics
 
-- **Speed Reading: Learn to Read a 200+ Page Book in 1 Hour**  [pdf](./PD_8_speed_reading.pdf)
+- **Speed Reading: Learn to Read a 200+ Page Book in 1 Hour**  [pdf](./PD_08_speed_reading.pdf)
     - Pre-Reading
         - ***Purpose***
         - Power of ***Preview***
@@ -234,6 +234,22 @@ This section address my learning on various books for personal development and e
         - *Visualize*
         - *Eye Health*
 
+- **Dating Sucks, But You Don't**
+    - What Women *Really* Want
+    - Keep It Really Real: Radical Authenticity
+    - "Your Looks Matter" & Other Dating Myths
+    - Your Sucky Love Life Is Your Fault: Building Core Confidence
+    - For Added Value, Add Some Values
+    - How to Ignite Romantic Connection
+    - Are You Manly Enough to Be Feminine?
+    - How to Get Good at Online Dating
+    - You Had Me at Hello: Great First Dates
+    - Get Your Head Out of Your Apps: How to Approach and Connect (Part 1)
+    - Tools & Techniques: How to Approach and Connect (Part 2)
+    - Advanced Ninja Moves
+    - You Found That Lovin's Feelin'
+    - Consent Is Sexy: How to Date in the #MeToo Era
+    - The Secret to Total Confidence & Romantic Connection
 
 - **Leadership Principles from Amazon**
     - Customer Obsession
