@@ -144,9 +144,12 @@ This section address my learning on various books for personal development and e
         - ***Insist on Using Objective Criteria***
 
     - Yes, But ...
-        - What If They Are More Powerful (Develop Your BATNA --  Best Alternative To A Negotiated Agreement)
-        - What If They Won't Play (Use Negotiation Jujitsu)
-        - What If They Use Dirty Tricks? (Taming The Hard Bargainer)
+        - What If They Are More Powerful 
+            (Develop Your BATNA --  Best Alternative To A Negotiated Agreement)
+        - What If They Won't Play 
+            (Use Negotiation Jujitsu)
+        - What If They Use Dirty Tricks? 
+            (Taming The Hard Bargainer)
 
     - In Conclusion
 
