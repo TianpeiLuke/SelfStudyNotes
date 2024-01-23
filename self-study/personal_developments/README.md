@@ -4,13 +4,15 @@ This section address my learning on various books for personal development and e
 
 ## Books
 
-- Being Effective and Efficient
+- Being Productive and Effective
 
 ***The 7 Habits of Highly Effective People: 30th Anniversary Edition***, Sean Covey, Jim Collins
 
 ***Getting Things Done: The Art of Stress-Free Productivity***, David Allen
 
 ***Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones***, James Clear
+
+***How to Win Friends and Influence People: Updated For the Next Generation of Leaders***, Dale Carnegie
 
 - Critical Thinking, Creative Thinking and Research
 
