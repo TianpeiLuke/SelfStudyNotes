@@ -234,7 +234,7 @@ This section address my learning on various books for personal development and e
         - *Visualize*
         - *Eye Health*
 
-- **Dating Sucks, But You Don't**
+- **Dating Sucks, But You Don't** [pdf](./PD_09_dating_sucks.pdf)
     - What Women *Really* Want
     - Keep It Really Real: Radical Authenticity
     - "Your Looks Matter" & Other Dating Myths
