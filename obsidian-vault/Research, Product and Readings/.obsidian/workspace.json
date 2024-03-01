@@ -1,0 +1,221 @@
+{
+  "main": {
+    "id": "0c9df563bfc3bf94",
+    "type": "split",
+    "children": [
+      {
+        "id": "a5f6cb4794e20d7e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7591d571a2287b1b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Project Abuse Slip Box/Thoughts/Unified Note Template.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "34dc4ae190235dbf",
+    "type": "split",
+    "children": [
+      {
+        "id": "1b2cba6c1fddc4b9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "875682b5b9c274b8",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "e4f23bcc7acfe94e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "[\"keywords\"]",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "afb2c771181377c4",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 571.5
+  },
+  "right": {
+    "id": "dd847bcf28148492",
+    "type": "split",
+    "children": [
+      {
+        "id": "381d1b66f2812b26",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7426d6342df2f9a2",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Project Abuse Slip Box/Thoughts/Unified Note Template.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "eec119a2ed0f3cbb",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Project Abuse Slip Box/Thoughts/Unified Note Template.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b6f37a3e66e6e317",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          },
+          {
+            "id": "d85faaaaa4f7cd18",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "eba561f01cf33c22",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Project Abuse Slip Box/Thoughts/Unified Note Template.md"
+              }
+            }
+          },
+          {
+            "id": "1adf47c1292db421",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 572.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "templater-obsidian:Templater": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "obsidian-importer:Open Importer": false
+    }
+  },
+  "active": "7591d571a2287b1b",
+  "lastOpenFiles": [
+    "Project Abuse Slip Box/Thoughts/Graph-based Information Retrieval and Aggregation for Prompt Engineering.md",
+    "Project Abuse Slip Box/Thoughts/Comparison of Abuse Slip box to existing Systems.md",
+    "Area Context-Enhanced BAP (COAP)/VoC Projects/Overview/Abuse Reversal and Reclassification (RnR).md",
+    "Project Abuse Slip Box/Thoughts/Value Proposition - Who can benefit from this system.md",
+    "Project Abuse Slip Box/Thoughts/Unified Note Template.md",
+    "Project Abuse Slip Box/Thoughts/Abuse Slip Box features.md",
+    "Project Abuse Slip Box/Thoughts/Abuse Slip box contribution.md",
+    "Project Abuse Slip Box/Project Entry Point/Abuse Slip Box Project Proposal Draft.md",
+    "Project Abuse Slip Box/Project Entry Point/Abuse Slip Box Project Planning Entry Point.md",
+    "Area Context-Enhanced BAP (COAP)/VoC Projects/Overview/Chat MO detection.md",
+    "Area Context-Enhanced BAP (COAP)/VoC Projects/Overview/Threat Abuse Detection in BSM.md",
+    "Reading Literature Notes/Self-Education, Learning, Reading, Writing, Listening/How to Take Smart Note Chapter Part 3.md",
+    "Reading Literature Notes/Self-Education, Learning, Reading, Writing, Listening/How to Take Smart Note Workflow.md",
+    "References in BAP/0 Entry Points/URES workflow.md",
+    "References in BAP/0 Entry Points/Patronus System Entry Point.md",
+    "References in BAP/0 Entry Points/Buyer Abuse Prevention System - Data.md",
+    "Area Context-Enhanced BAP (COAP)/VoC Projects/Overview/Context-Enhanced BAP using CS Contact data.md",
+    "Area Context-Enhanced BAP (COAP)/VoC Projects/Overview/Abuse Polygraph.md",
+    "Area Context-Enhanced BAP (COAP)/Customer Service Transcript/CS Digestion Plan.md",
+    "Area Context-Enhanced BAP (COAP)/VoC Projects/Project Abuse Polygraph/polygraph.jpg",
+    "Area Context-Enhanced BAP (COAP)/VoC Projects/Project Abuse Polygraph",
+    "Area Context-Enhanced BAP (COAP)/VoC Projects/Overview",
+    "Area Context-Enhanced BAP (COAP)/VoC Projects",
+    "Area Context-Enhanced BAP (COAP)/Customer Service Transcript/Legal Document DPIA/3.4 Access Right.md",
+    "Area Context-Enhanced BAP (COAP)/Customer Service Transcript/Legal Document DPIA/5.1 Right and Freedom of Data Access.md",
+    "Area Context-Enhanced BAP (COAP)/Customer Service Transcript/Legal Document DPIA/2 DPIA Purposes of the processing.md",
+    "Area Context-Enhanced BAP (COAP)/Customer Service Transcript/Legal Document DPIA/1 DPIA Overview..md",
+    "Area Context-Enhanced BAP (COAP)/Customer Service Transcript/Legal Document DPIA/3 DPIA Customer Experience and Data Handling.md",
+    "Area Context-Enhanced BAP (COAP)/Customer Service Transcript/Legal Document DPIA/SideNote 1.md",
+    "Area Context-Enhanced BAP (COAP)/Customer Service Transcript/Legal Document DPIA/4. Data protection impact assessment.md",
+    "Area Context-Enhanced BAP (COAP)/Customer Service Transcript/Legal Document DPIA",
+    "Area Context-Enhanced BAP (COAP)/Customer Service Transcript",
+    "Area Context-Enhanced BAP (COAP)",
+    "References in BAP/0 Entry Points",
+    "0 Entry Points",
+    "References in BAP/URES/URES_GMR_Architecture.png",
+    "References in BAP/URES/URES_Architecture.png",
+    "References in BAP/Patronus/Patronus_pipeline_2.png",
+    "References in BAP/URES",
+    "References in BAP/Entry Points",
+    "References in BAP/Patronus/Patronus_pipeline_1.png",
+    "Untitled.canvas",
+    "Reading Literature Notes/Self-Education, Learning, Reading, Writing, Listening/How to Take Smart Note Figures/zettelkasten method shelf.jpg",
+    "Reading Literature Notes/Self-Education, Learning, Reading, Writing, Listening/How to Take Smart Note Figures/luhmanns-notes.png",
+    "Untitled 1.canvas"
+  ]
+}

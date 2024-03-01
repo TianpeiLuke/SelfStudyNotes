@@ -1,0 +1,15 @@
+{
+  "types": {
+    "aliases": "aliases",
+    "cssclasses": "multitext",
+    "tags": "tags",
+    "keywords": "multitext",
+    "topics": "multitext",
+    "event date": "date",
+    "marketplace id": "multitext",
+    "order id": "multitext",
+    "customer id": "multitext",
+    "proprietary?": "checkbox",
+    "author": "multitext"
+  }
+}
