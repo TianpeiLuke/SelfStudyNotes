@@ -5,11 +5,11 @@ tags:
 aliases: 
 date of note: 2024-02-22
 ---
-Slip-box [^1] as a personal knowledge management system provides a complementary view on how we can organize the various form of text information available in the team. 
+***Slip-box (Zettelkasten)*** as a personal knowledge management system provides a complementary view on how we can organize the various form of text information available in the team. 
 
 - Compare to the BAP knowledge management system [[Issues of BAP data management system]]
 
-The proposed **Abuse Slip box** would thus mitigate above issues by borrowing the main features from the *Zettelkasten method* [^1] :  
+The proposed **Abuse Slip box** would thus mitigate above issues by borrowing the main features from the *Zettelkasten method*: 
 
 - **No raw data is stored in abuse slip box**. We need to **_paraphrase_** _and_ **_summarize_** the original text/tabular data into **atomic** notes following a **standardized** format. The process of summarization and paraphrasing allows us to remove redundant, irrelevant information for original text. It also reduces the cost due to inconsistent format when merging information from multiple sources. From higher perspectives, the dialogues from Customer Service Contacts or BSM, the annotations from human investigators, the procedures and descriptions in SOPs are treated the same way as an atomic piece of information related to the investigation of concession.
   
@@ -21,15 +21,11 @@ The proposed **Abuse Slip box** would thus mitigate above issues by borrowing 
 	  
 	- “_treatment_” describes the output of an abuse evaluation system including the actions taken on the customer and the human (ARI, CReturn, CS agents, Seller etc.) annotations on the action. Text output may also be available describing the treatment, e.g. in email referral workflow. The idea of slip box in abuse prevention is to keep all relevant information in one place so that at inference time model do not need to search externally.  
 	
-- **Notes in abuse slip box are connected** by **comparing** their _contents_, their _topics_, their customer/order ids, and their evaluation workflows. When a new note is created, we search notes with same order_id/customer_id, notes with similar context, notes with same workflow. Then we connect new notes with old ones accordingly. [^2]
-
-
-
-
+- **Notes in abuse slip box are connected** by **comparing** their _contents_, their _topics_, their customer/order ids, and their evaluation workflows. When a new note is created, we search notes with same order_id/customer_id, notes with similar context, notes with same workflow. Then we connect new notes with old ones accordingly.
 
 
 -----------
 ##  Recommended Notes
 
-- [^1] See the features of *Zettelkasten* [[The definitive feature of Zettelkasten]]
-- [^2]  [[How to Automatically Compare Notes]]
+- See the features of *Zettelkasten* [[The definitive feature of Zettelkasten]]
+-  [[How to Automatically Compare Notes]]

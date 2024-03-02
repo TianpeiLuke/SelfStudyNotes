@@ -22,3 +22,5 @@ authors:
 
 -----------
 ##  Recommended Notes
+
+- Check BSM data description, access, owner and pipeline in [[Buyer Seller Messaging (BSM) Entry Point]]

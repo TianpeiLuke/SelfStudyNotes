@@ -1,9 +1,7 @@
 ---
 tags:
-  - project
   - data_sources
   - entry_point
-  - system
 aliases:
   - 0802csdataheartbeat
 date of note: 2024-02-24

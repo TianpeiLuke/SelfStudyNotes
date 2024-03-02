@@ -17,5 +17,5 @@ The most important benefit of using Abuse Slip Box is its emphasis on **context
 -----------
 ##  Recommended Notes
 
-- [^1] See the features of *Zettelkasten* [[The definitive feature of Zettelkasten]]
-- [^2]  [[How to Automatically Compare Notes]]
+- See the features of *Zettelkasten* [[The definitive feature of Zettelkasten]]
+- [[How to Automatically Compare Notes]]

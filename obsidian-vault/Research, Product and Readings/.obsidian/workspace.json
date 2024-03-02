@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "a5f6cb4794e20d7e",
+        "id": "95867dfa1b043857",
         "type": "tabs",
         "children": [
           {
-            "id": "7591d571a2287b1b",
+            "id": "1bf3df662f63690e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Project Abuse Slip Box/Thoughts/Unified Note Template.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -70,7 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 571.5
+    "width": 493.5
   },
   "right": {
     "id": "dd847bcf28148492",
@@ -86,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Project Abuse Slip Box/Thoughts/Unified Note Template.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Project Abuse Slip Box/Thoughts/Unified Note Template.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,9 +126,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Project Abuse Slip Box/Thoughts/Unified Note Template.md"
-              }
+              "state": {}
             }
           },
           {
@@ -155,7 +146,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 572.5
+    "width": 708.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -166,56 +157,59 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "templater-obsidian:Templater": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false,
-      "obsidian-importer:Open Importer": false
+      "obsidian-importer:Open Importer": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "7591d571a2287b1b",
+  "active": "b6f37a3e66e6e317",
   "lastOpenFiles": [
-    "Project Abuse Slip Box/Thoughts/Graph-based Information Retrieval and Aggregation for Prompt Engineering.md",
-    "Project Abuse Slip Box/Thoughts/Comparison of Abuse Slip box to existing Systems.md",
     "Area Context-Enhanced BAP (COAP)/VoC Projects/Overview/Abuse Reversal and Reclassification (RnR).md",
-    "Project Abuse Slip Box/Thoughts/Value Proposition - Who can benefit from this system.md",
+    "Area Context-Enhanced BAP (COAP)/VoC Projects/Project A-to-Z claim abuse detection using Buyer Seller Messaging/A-to-Z Abuse detection via BSM.md",
+    "Resources for BAP projects/0 Entry Points/Buyer Seller Messaging (BSM) Entry Point.md",
+    "Resources for BAP projects/Action Taking System/ATS Architecture.md",
+    "Resources for BAP projects/Buyer Seller Messaging/Buyer Seller Messaging  - Topic Id.md",
+    "Resources for BAP projects/Buyer Seller Messaging/Buyer Seller Messaging  - OTF aggregated info.md",
+    "Resources for BAP projects/Buyer Seller Messaging/Buyer Seller Messaging  - Message Schema and Field Definitions.md",
+    "Resources for BAP projects/Buyer Seller Messaging/Buyer Seller Messaging  - Seller CS team.md",
+    "Resources for BAP projects/Buyer Seller Messaging/Buyer Seller Messaging  - Data Access.md",
+    "Resources for BAP projects/Buyer Seller Messaging/Buyer Seller Messaging  - Entry Point.md",
+    "Resources for BAP projects/Buyer Seller Messaging/Buyer Seller Messaging  - OTF message.md",
+    "Resources for BAP projects/Buyer Seller Messaging/Buyer Seller Messaging  - Data Ingestion Batch.md",
+    "Resources for BAP projects/Buyer Seller Messaging/bsm_leo_real_ingestion.jpg",
+    "Resources for BAP projects/Buyer Seller Messaging/Buyer Seller Messaging  - Background.md",
+    "Resources for BAP projects/Buyer Seller Messaging/Buyer Seller Messaging  - Data Ingestion Real-time.md",
+    "Resources for BAP projects/Buyer Seller Messaging/bsm_batch_ingestion.jpg",
+    "Resources for BAP projects/Buyer Seller Messaging/BSM_OTF_design.png",
+    "Resources for BAP projects/Buyer Seller Messaging",
+    "Resources for BAP projects/Action Taking System/ATS Architecture Sub-system.md",
+    "Resources for BAP projects/Action Taking System/ATS Background.md",
+    "Resources for BAP projects/Action Taking System/ATS Mental Model - DPAC.md",
     "Project Abuse Slip Box/Thoughts/Unified Note Template.md",
+    "Resources for BAP projects/0 Entry Points/Action Taking System Entry Point.md",
+    "0 Entry Points/Voice of Customer in BAP Entry Point.md",
+    "Project Abuse Slip Box/Thoughts/Graph-based Information Retrieval and Aggregation for Prompt Engineering.md",
+    "Resources for BAP projects/Action Taking System/ats_architecture.png",
+    "Resources for BAP projects/Action Taking System/ats_dpac.png",
+    "Resources for BAP projects/Action Taking System",
+    "Project Abuse Slip Box/Thoughts/Comparison of Abuse Slip box to existing Systems.md",
     "Project Abuse Slip Box/Thoughts/Abuse Slip Box features.md",
     "Project Abuse Slip Box/Thoughts/Abuse Slip box contribution.md",
-    "Project Abuse Slip Box/Project Entry Point/Abuse Slip Box Project Proposal Draft.md",
-    "Project Abuse Slip Box/Project Entry Point/Abuse Slip Box Project Planning Entry Point.md",
-    "Area Context-Enhanced BAP (COAP)/VoC Projects/Overview/Chat MO detection.md",
-    "Area Context-Enhanced BAP (COAP)/VoC Projects/Overview/Threat Abuse Detection in BSM.md",
-    "Reading Literature Notes/Self-Education, Learning, Reading, Writing, Listening/How to Take Smart Note Chapter Part 3.md",
-    "Reading Literature Notes/Self-Education, Learning, Reading, Writing, Listening/How to Take Smart Note Workflow.md",
-    "References in BAP/0 Entry Points/URES workflow.md",
-    "References in BAP/0 Entry Points/Patronus System Entry Point.md",
-    "References in BAP/0 Entry Points/Buyer Abuse Prevention System - Data.md",
-    "Area Context-Enhanced BAP (COAP)/VoC Projects/Overview/Context-Enhanced BAP using CS Contact data.md",
-    "Area Context-Enhanced BAP (COAP)/VoC Projects/Overview/Abuse Polygraph.md",
-    "Area Context-Enhanced BAP (COAP)/Customer Service Transcript/CS Digestion Plan.md",
+    "Project Abuse Slip Box/Thoughts/Abuse Slip Box benefits.md",
+    "Reading Literature Notes/Self-Education, Learning, Reading, Writing, Listening/How to Take Smart Note Book Summary.md",
+    "Slip Box/Reading Literature Notes/Research Methods",
+    "Slip Box/Reading Literature Notes/Self-Education, Learning, Reading, Writing, Listening/How to Take Smart Note Figures/zettelkasten method shelf.jpg",
+    "Slip Box/Reading Literature Notes/Self-Education, Learning, Reading, Writing, Listening/How to Take Smart Note Figures/luhmanns-notes.png",
+    "Slip Box/Reading Literature Notes/Self-Education, Learning, Reading, Writing, Listening/How to Take Smart Note Figures",
+    "Slip Box/Reading Literature Notes/Self-Education, Learning, Reading, Writing, Listening",
+    "Slip Box/Reading Literature Notes/Critical Thinking",
+    "Slip Box/Reading Literature Notes/Machine Learning",
+    "Slip Box/Reading Literature Notes/Self Help, Productivity, Relationship",
+    "Slip Box/Reading Literature Notes",
     "Area Context-Enhanced BAP (COAP)/VoC Projects/Project Abuse Polygraph/polygraph.jpg",
     "Area Context-Enhanced BAP (COAP)/VoC Projects/Project Abuse Polygraph",
-    "Area Context-Enhanced BAP (COAP)/VoC Projects/Overview",
-    "Area Context-Enhanced BAP (COAP)/VoC Projects",
-    "Area Context-Enhanced BAP (COAP)/Customer Service Transcript/Legal Document DPIA/3.4 Access Right.md",
-    "Area Context-Enhanced BAP (COAP)/Customer Service Transcript/Legal Document DPIA/5.1 Right and Freedom of Data Access.md",
-    "Area Context-Enhanced BAP (COAP)/Customer Service Transcript/Legal Document DPIA/2 DPIA Purposes of the processing.md",
-    "Area Context-Enhanced BAP (COAP)/Customer Service Transcript/Legal Document DPIA/1 DPIA Overview..md",
-    "Area Context-Enhanced BAP (COAP)/Customer Service Transcript/Legal Document DPIA/3 DPIA Customer Experience and Data Handling.md",
-    "Area Context-Enhanced BAP (COAP)/Customer Service Transcript/Legal Document DPIA/SideNote 1.md",
-    "Area Context-Enhanced BAP (COAP)/Customer Service Transcript/Legal Document DPIA/4. Data protection impact assessment.md",
-    "Area Context-Enhanced BAP (COAP)/Customer Service Transcript/Legal Document DPIA",
-    "Area Context-Enhanced BAP (COAP)/Customer Service Transcript",
-    "Area Context-Enhanced BAP (COAP)",
-    "References in BAP/0 Entry Points",
-    "0 Entry Points",
     "References in BAP/URES/URES_GMR_Architecture.png",
     "References in BAP/URES/URES_Architecture.png",
-    "References in BAP/Patronus/Patronus_pipeline_2.png",
-    "References in BAP/URES",
-    "References in BAP/Entry Points",
-    "References in BAP/Patronus/Patronus_pipeline_1.png",
     "Untitled.canvas",
-    "Reading Literature Notes/Self-Education, Learning, Reading, Writing, Listening/How to Take Smart Note Figures/zettelkasten method shelf.jpg",
-    "Reading Literature Notes/Self-Education, Learning, Reading, Writing, Listening/How to Take Smart Note Figures/luhmanns-notes.png",
     "Untitled 1.canvas"
   ]
 }

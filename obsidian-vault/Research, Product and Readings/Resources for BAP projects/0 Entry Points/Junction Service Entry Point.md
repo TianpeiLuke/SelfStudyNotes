@@ -1,7 +1,5 @@
 ---
 tags:
-  - project
-  - system
   - entry_point
   - data_sources
 aliases:

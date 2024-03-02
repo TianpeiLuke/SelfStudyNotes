@@ -1,7 +1,8 @@
 ---
 tags:
-  - project
   - data_access
+  - data_pipeline
+  - entry_point
 aliases:
   - 0802csaitdigest00
 date of note: 2024-02-28

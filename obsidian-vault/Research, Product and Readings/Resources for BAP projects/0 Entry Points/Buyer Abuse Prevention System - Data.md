@@ -1,9 +1,9 @@
 ---
 tags:
-  - project
   - abuse_slip_box
   - entry_point
   - data_sources
+  - data
 aliases:
   - 0802bapdataoverview
 date of note: 2024-02-21

@@ -79,7 +79,10 @@ Zettelkasten = Slip Box in German
 
 - Avoid **confusion** of different note types. Each type of notes has its own purpose, its role as well as its life-cycle. Not every note need to maintain in the system. 
   
-- **Do not treat every note as permanent note.** *The collection of good ideas is diluted to insignificance by all the other notes, which are only relevant for a specific project or actually not that good on second sight.*
+- **Do not treat every note as permanent note.** 
+  
+  >[!quote] 
+  >*The collection of good ideas is diluted to insignificance by all the other notes, which are only relevant for a specific project or actually not that good on second sight.*
 
 - **Do not only collect notes related to a specific project.** A project would end in one day. That means that everything you found, thought or encountered during the time of a project will be lost. Without a permanent storage that keep information between projects, you have to ***start all over again*** after each project and cut off all other promising lines of thought. At that moment, we have to rely on *our own capacity of memory or the length of project* to keep relevant information.
 
@@ -145,13 +148,13 @@ Zettelkasten = Slip Box in German
   
 - **Process** fleeting notes by summarizing or paraphrasing the material or idea behind them. When reading books, papers, etc, we can skip fleeting notes to directly write literature notes. Write down what you don't want to forget and things that you might use in future into **literature notes.** Add *full bibliography* to the literature note as precise as possible. Be *selective* when adding a literature note to our system. **Archive** literature notes in **literature reference system.** 
   
-- **Reflect** on the literature note and fleeting note we write and write down *our ideas and questions* in **permanent notes.** Thinking about how the new note may be related to our interests, research etc [^1]. 
+- **Reflect** on the literature note and fleeting note we write and write down *our ideas and questions* in **permanent notes.** Thinking about how the new note may be related to our interests, research etc.[^1] 
 	- *"Does the new information contradicts, supports or adds to existing ideas?"*
 	- *"Can we bridge different ideas to generate new idea?"*
 	- *"What questions are triggered by this new information?"*
   
 - **Add** permanent notes in the **slip-box** by
-	- Deciding where new permanent note fits the best. **Numbering the note** with some rules defining the partial ordering. [^2]
+	- Deciding where new permanent note fits the best. **Numbering the note** with some rules defining the partial ordering.[^2]
 	- **Adding a new link** to the existing relevant notes; It is ok if this note is unique and not connected to others.
 	- Adding a new note link to **index card** or other cards that serve as **entry point** if necessary. 
   
@@ -159,7 +162,7 @@ Zettelkasten = Slip Box in German
 	- **Traverse** through connected permanent notes. Use **effective thinking skills** such as 
 		- raising effective questions, 
 		- identifying flows of ideas and 
-		- understanding what is there and what is missing [^3] 
+		- understanding what is there and what is missing[^3] 
 		to generate new questions and ideas. Write new fleeting/permanent notes while thinking. 
 	  
 	- **Organize** related ideas into *topics*, *problems* or *genres of questions*. The process of traversing helps us to figure out aspects of topic that most interest us. Given that we have already written down pieces of ideas, questions and its reference, what is left is to gather and to sort them together. Write an **index note** for the organized related ideas. 
@@ -183,20 +186,21 @@ Zettelkasten = Slip Box in German
 - **Proofread** drafts and refine and evaluate arguments, reference, as well as sources.
 
 
+[^1]: check on exercise for self-centered research to know **what you are interested in** and **what bored you**. Instead of trying to please some imaginative judge, our interest should come out of our own mind. Check [[Where Research Begins Book Summary]]
+
+[^2]: **Number it consecutively**. The Zettelkasten numbers the notes automatically. “New note” will just add a note with a new number. If you click “New note sequence,” the new note will be registered at the same time as the note that follows the note currently active on the screen. But you can always add notes “behind” other notes anytime later. Each note can follow multiple other notes and therefore be part of different note sequences.
+
+[^3]: Check on suggestions in identifying the **flow of ideas** in [[The 5 Elements of Effective Thinking Suggestion 4]]; Raising **effective questions** in [[The 5 Elements of Effective Thinking Suggestion 3]];  Understanding **what is there and what is missing** in [[The 5 Elements of Effective Thinking Suggestion 1]].
+
   
 ----
 
 ## Recommended Notes
 
 - Refer to [[How to Take Smart Note Book Summary]] for book summary
-- [^1] check on exercise for self-centered research to know **what you are interested in** and **what bored you**. Instead of trying to please some imaginative judge, our interest should come out of our own mind. Check [[Where Research Begins Book Summary]]
-- [^2] **Number it consecutively**. The Zettelkasten numbers the notes automatically. “New note” will just add a note with a new number. If you click “New note sequence,” the new note will be registered at the same time as the note that follows the note currently active on the screen. But you can always add notes “behind” other notes anytime later. Each note can follow multiple other notes and therefore be part of different note sequences.
-- [^3] Check on suggestions in 
-	- identifying the **flow of ideas** in [[The 5 Elements of Effective Thinking Suggestion 4]]; 
-	- Raising **effective questions** in [[The 5 Elements of Effective Thinking Suggestion 3]];  
-	- Understanding **what is there and what is missing** in [[The 5 Elements of Effective Thinking Suggestion 1]].
-- [^4] Using feedback loops to develop habits. Check [[Atomic Habits Book Summary]]
 - Check the discussions on benefits of Smart-Note Taking [[How to Take Smart Note Benefits of Smart Note-Taking]]
+- Using feedback loops to develop habits. Check [[Atomic Habits Book Summary]]
+
 
 
 

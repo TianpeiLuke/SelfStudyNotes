@@ -1,6 +1,5 @@
 ---
 tags:
-  - project
   - data_sources
   - entry_point
   - system

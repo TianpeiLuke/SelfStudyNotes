@@ -1,9 +1,7 @@
 ---
 tags:
-  - project
   - system
   - entry_point
-  - data_sources
 aliases:
   - 0802bapuresworkflow
 date of note: 2024-02-27
