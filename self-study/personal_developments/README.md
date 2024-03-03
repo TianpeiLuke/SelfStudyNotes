@@ -14,6 +14,10 @@ This section address my learning on various books for personal development and e
 
 ***How to Win Friends and Influence People: Updated For the Next Generation of Leaders***, Dale Carnegie
 
+- Courage, Perseverance
+
+***Grit: The Power of Passion and Perseverance***, Angela Duckworth, 2022
+
 - Critical Thinking, Creative Thinking and Research
 
 ***The Five Elements of Effective Thinking***, Edward B. Burger, Michael Starbird, 2012
