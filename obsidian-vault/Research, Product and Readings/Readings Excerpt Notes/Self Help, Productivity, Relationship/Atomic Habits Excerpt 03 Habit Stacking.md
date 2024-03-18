@@ -1,11 +1,11 @@
 ---
 tags:
+  - book
+  - excerpt
   - habit
   - productivity
   - habit/cue
   - habit_stacking
-  - book
-  - excerpt
 aliases:
   - 0601atmhabit03e
 keywords:

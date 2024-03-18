@@ -1,16 +1,17 @@
 @inproceedings{brownLanguageModelsAre2020,
   title = {Language {{Models}} Are {{Few-Shot Learners}}},
+  shorttitle = {{{GPT-3}}},
   booktitle = {Advances in {{Neural Information Processing Systems}}},
   author = {Brown, Tom and Mann, Benjamin and Ryder, Nick and Subbiah, Melanie and Kaplan, Jared D and Dhariwal, Prafulla and Neelakantan, Arvind and Shyam, Pranav and Sastry, Girish and Askell, Amanda and Agarwal, Sandhini and Herbert-Voss, Ariel and Krueger, Gretchen and Henighan, Tom and Child, Rewon and Ramesh, Aditya and Ziegler, Daniel and Wu, Jeffrey and Winter, Clemens and Hesse, Chris and Chen, Mark and Sigler, Eric and Litwin, Mateusz and Gray, Scott and Chess, Benjamin and Clark, Jack and Berner, Christopher and McCandlish, Sam and Radford, Alec and Sutskever, Ilya and Amodei, Dario},
   date = {2020},
   volume = {33},
   pages = {1877--1901},
-  publisher = {{Curran Associates, Inc.}},
+  publisher = {Curran Associates, Inc.},
   url = {https://papers.nips.cc/paper/2020/hash/1457c0d6bfcb4967418bfb8ac142f64a-Abstract.html},
   urldate = {2024-02-21},
   abstract = {We demonstrate that scaling up language models greatly improves task-agnostic, few-shot performance, sometimes even becoming competitive with prior state-of-the-art fine-tuning approaches. Specifically, we train GPT-3, an autoregressive language model with 175 billion parameters, 10x more than any previous non-sparse language model, and test its performance in the few-shot setting.  For all tasks, GPT-3 is applied without any gradient updates or fine-tuning, with tasks and few-shot demonstrations specified purely via text interaction with the model.  GPT-3 achieves strong performance on many NLP datasets, including translation, question-answering, and cloze tasks. We also identify some datasets where GPT-3's few-shot learning still struggles, as well as some datasets where GPT-3 faces methodological issues related to training on large web corpora.},
   eventtitle = {Advances in {{Neural Information Processing Systems}} 33 ({{NeurIPS}} 2020)},
-  keywords = {in-context learning},
+  keywords = {GPT,GPT-3,in-context learning},
   note = {Meta Review
 \par
 This work extends the Transformer language model architecture of GPT-2 by scaling it to {$>$} 170 billion parameters, resulting in a new model called GPT-3. The paper demonstrates that when provided with zero or few labeled examples to condition on, this large model is capable of performing a multitude of language tasks without any further changes to model parameters. While on most tasks the zero-shot/few-shot performance is behind SOTA, the novelty lies in the demonstrated strong zero/few shot performance on diverse tasks. Clarity of exposition is another strength of the paper. One limitation is lack of reproducibility due to the massive compute necessary to train the model. Another limitation is that the paper’s scientific insights are limited, and the contribution is largely engineering. However, the strong experimental findings, and the thorough analysis presented in the paper make it worthy of acceptance at NeurIPS. Regarding ethical concerns, a big language model can attract the interest of malicious actors. However, the paper has done a thorough job of addressing these concerns.
@@ -31,7 +32,7 @@ Although this technique demonstrates good performance for some tasks, it require
   date = {2021-01},
   series = {{{IJCAI}}'20},
   pages = {3882--3890},
-  location = {{Yokohama, Yokohama, Japan}},
+  location = {Yokohama, Yokohama, Japan},
   abstract = {Beginning with McCarthy's Advice Taker (1959), AI has pursued the goal of providing a system with explicit, general knowledge and having the system reason over that knowledge. However, expressing the knowledge in a formal (logical or probabilistic) representation has been a major obstacle to this research. This paper investigates a modern approach to this problem where the facts and rules are provided as natural language sentences, thus bypassing a formal representation. We train transformers to reason (or emulate reasoning) over these sentences using synthetically generated data. Our models, that we call RuleTakers, provide the first empirical demonstration that this kind of soft reasoning over language is learnable, can achieve high (99\%) accuracy, and generalizes to test data requiring substantially deeper chaining than seen during training (95\%+ scores). We also demonstrate that the models transfer well to two hand-authored rulebases, and to rulebases paraphrased into more natural language. These findings are significant as it suggests a new role for transformers, namely as limited "soft theorem provers" operating over explicit theories in language. This in turn suggests new possibilities for explainability, correctability, and counterfactual reasoning in question-answering.},
   eventtitle = {{{IJCAI}}'20},
   isbn = {978-0-9992411-6-5},
@@ -55,6 +56,36 @@ Although this technique demonstrates good performance for some tasks, it require
   file = {/home/lukexie/Documents/Papers/storage/3NP6GCJR/Dong et al. - 2023 - A Survey on In-context Learning.pdf}
 }
 
+@inproceedings{fatemiTalkGraphEncoding2023,
+  title = {Talk like a {{Graph}}: {{Encoding Graphs}} for {{Large Language Models}}},
+  shorttitle = {Talk like a {{Graph}}},
+  booktitle = {Proceedings of the {{Twelfth International Conference}} on {{Learning Representations}} ({{ICLR}} 2024)},
+  author = {Fatemi, Bahare and Halcrow, Jonathan and Perozzi, Bryan},
+  date = {2023-10-13},
+  url = {https://openreview.net/forum?id=IuXR1CCrSi},
+  urldate = {2024-03-14},
+  abstract = {Graphs are a powerful tool for representing and analyzing complex relationships in real-world applications such as social networks, recommender systems, and computational finance. Reasoning on graphs is essential for drawing inferences about the relationships between entities in a complex system, and to identify hidden patterns and trends. Despite the remarkable progress in automated reasoning with natural text, reasoning on graphs with large language models (LLMs) remains an understudied problem. In this work, we perform the first comprehensive study of encoding graph-structured data as text for consumption by LLMs. We show that LLM performance on graph reasoning tasks varies on three fundamental levels: (1) the graph encoding method, (2) the nature of the graph task itself, and (3) interestingly, the very structure of the graph considered. These novel results provide valuable insight on strategies for encoding graphs as text. Using these insights we illustrate how the correct choice of encoders can boost performance on graph reasoning tasks inside LLMs by 4.8\% to 61.8\%, depending on the task.},
+  eventtitle = {The {{Twelfth International Conference}} on {{Learning Representations}} ({{ICLR}} 2024)},
+  langid = {english},
+  file = {/home/lukexie/Documents/Papers/storage/6IXW7XRE/Fatemi et al. - 2023 - Talk like a Graph Encoding Graphs for Large Langu.pdf}
+}
+
+@online{leiteDetectingMisinformationLLMPredicted2023,
+  title = {Detecting {{Misinformation}} with {{LLM-Predicted Credibility Signals}} and {{Weak Supervision}}},
+  author = {Leite, João A. and Razuvayevskaya, Olesya and Bontcheva, Kalina and Scarton, Carolina},
+  date = {2023-09-14},
+  eprint = {2309.07601},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2309.07601},
+  url = {http://arxiv.org/abs/2309.07601},
+  urldate = {2024-03-06},
+  abstract = {Credibility signals represent a wide range of heuristics that are typically used by journalists and fact-checkers to assess the veracity of online content. Automating the task of credibility signal extraction, however, is very challenging as it requires high-accuracy signal-specific extractors to be trained, while there are currently no sufficiently large datasets annotated with all credibility signals. This paper investigates whether large language models (LLMs) can be prompted effectively with a set of 18 credibility signals to produce weak labels for each signal. We then aggregate these potentially noisy labels using weak supervision in order to predict content veracity. We demonstrate that our approach, which combines zero-shot LLM credibility signal labeling and weak supervision, outperforms state-of-the-art classifiers on two misinformation datasets without using any ground-truth labels for training. We also analyse the contribution of the individual credibility signals towards predicting content veracity, which provides new valuable insights into their role in misinformation detection.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Machine Learning},
+  file = {/home/lukexie/Documents/Papers/storage/TRZ6CNVF/Leite et al. - 2023 - Detecting Misinformation with LLM-Predicted Credib.pdf;/home/lukexie/Documents/Papers/storage/D42MYVVV/2309.html}
+}
+
 @online{olssonIncontextLearningInduction2022,
   type = {Machine Learning (cs.LG)},
   title = {In-Context {{Learning}} and {{Induction Heads}}},
@@ -72,40 +103,6 @@ Although this technique demonstrates good performance for some tasks, it require
   file = {/home/lukexie/Documents/Papers/storage/QSYKXHWP/Olsson et al. - 2022 - In-context Learning and Induction Heads.pdf;/home/lukexie/Documents/Papers/storage/QSW9UXIP/2209.html}
 }
 
-@inproceedings{ouyangTrainingLanguageModels2022,
-  title = {Training Language Models to Follow Instructions with Human Feedback},
-  booktitle = {Advances in {{Neural Information Processing Systems}}},
-  author = {Ouyang, Long and Wu, Jeffrey and Jiang, Xu and Almeida, Diogo and Wainwright, Carroll and Mishkin, Pamela and Zhang, Chong and Agarwal, Sandhini and Slama, Katarina and Ray, Alex and Schulman, John and Hilton, Jacob and Kelton, Fraser and Miller, Luke and Simens, Maddie and Askell, Amanda and Welinder, Peter and Christiano, Paul F. and Leike, Jan and Lowe, Ryan},
-  date = {2022-12-06},
-  series = {{{NeurIPS}}' 22},
-  volume = {35},
-  pages = {27730--27744},
-  url = {https://proceedings.neurips.cc/paper_files/paper/2022/hash/b1efde53be364a73914f58805a001731-Abstract-Conference.html},
-  urldate = {2024-02-19},
-  abstract = {Making language models bigger does not inherently make them better at following a user's intent. For example, large language models can generate outputs that are untruthful, toxic, or simply not helpful to the user. In other words, these models are not aligned with their users. In this paper, we show an avenue for aligning language models with user intent on a wide range of tasks by fine-tuning with human feedback. Starting with a set of labeler-written prompts and prompts submitted through a language model API, we collect a dataset of labeler demonstrations of the desired model behavior, which we use to fine-tune GPT-3 using supervised learning. We then collect a dataset of rankings of model outputs, which we use to further fine-tune this supervised model using reinforcement learning from human feedback. We call the resulting models InstructGPT. In human evaluations on our prompt distribution, outputs from the 1.3B parameter InstructGPT model are preferred to outputs from the 175B GPT-3, despite having 100x fewer parameters. Moreover, InstructGPT models show improvements in truthfulness and reductions in toxic output generation while having minimal performance regressions on public NLP datasets. Even though InstructGPT still makes simple mistakes, our results show that fine-tuning with human feedback is a promising direction for aligning language models with human intent.},
-  eventtitle = {Advances in {{Neural Information Processing Systems}} 35 ({{NeurIPS}} 2022) {{Main Conference Track}}},
-  langid = {english},
-  file = {/home/lukexie/Documents/Papers/storage/JXBMNNUS/NeurIPS-2022-training-language-models-to-follow-instructions-with-human-feedback-Supplemental-Conference.pdf;/home/lukexie/Documents/Papers/storage/Y8CGDH59/Ouyang et al. - 2022 - Training language models to follow instructions wi.pdf}
-}
-
-@article{renSurveyDeepActive2021,
-  title = {A {{Survey}} of {{Deep Active Learning}}},
-  author = {Ren, Pengzhen and Xiao, Yun and Chang, Xiaojun and Huang, Po-Yao and Li, Zhihui and Gupta, Brij B. and Chen, Xiaojiang and Wang, Xin},
-  date = {2021-10-08},
-  journaltitle = {ACM Computing Surveys},
-  shortjournal = {ACM Comput. Surv.},
-  volume = {54},
-  number = {9},
-  pages = {180:1--180:40},
-  issn = {0360-0300},
-  doi = {10.1145/3472291},
-  url = {https://doi.org/10.1145/3472291},
-  urldate = {2024-02-20},
-  abstract = {Active learning (AL) attempts to maximize a model’s performance gain while annotating the fewest samples possible. Deep learning (DL) is greedy for data and requires a large amount of data supply to optimize a massive number of parameters if the model is to learn how to extract high-quality features. In recent years, due to the rapid development of internet technology, we have entered an era of information abundance characterized by massive amounts of available data. As a result, DL has attracted significant attention from researchers and has been rapidly developed. Compared with DL, however, researchers have a relatively low interest in AL. This is mainly because before the rise of DL, traditional machine learning requires relatively few labeled samples, meaning that early AL is rarely according the value it deserves. Although DL has made breakthroughs in various fields, most of this success is due to a large number of publicly available annotated datasets. However, the acquisition of a large number of high-quality annotated datasets consumes a lot of manpower, making it unfeasible in fields that require high levels of expertise (such as speech recognition, information extraction, medical images, etc.). Therefore, AL is gradually coming to receive the attention it is due. It is therefore natural to investigate whether AL can be used to reduce the cost of sample annotation while retaining the powerful learning capabilities of DL. As a result of such investigations, deep active learning (DeepAL) has emerged. Although research on this topic is quite abundant, there has not yet been a comprehensive survey of DeepAL-related works; accordingly, this article aims to fill this gap. We provide a formal classification method for the existing work, along with a comprehensive and systematic overview. In addition, we also analyze and summarize the development of DeepAL from an application perspective. Finally, we discuss the confusion and problems associated with DeepAL and provide some possible development directions.},
-  keywords = {active learning,deep active learning,Deep learning},
-  file = {/home/lukexie/Documents/Papers/storage/7JW7V3ZH/Ren et al. - 2021 - A Survey of Deep Active Learning.pdf}
-}
-
 @inproceedings{schaefferAreEmergentAbilities2023,
   title = {Are {{Emergent Abilities}} of {{Large Language Models}} a {{Mirage}}?},
   booktitle = {Advances in {{Neural Information Processing Systems}} 36 Pre-Proceedings ({{NeurIPS}} 2023)},
@@ -120,17 +117,34 @@ Although this technique demonstrates good performance for some tasks, it require
   file = {/home/lukexie/Documents/Papers/storage/D627KN2V/9624_are_emergent_abilities_of_larg-Supplementary Material.pdf;/home/lukexie/Documents/Papers/storage/SM7TUWNJ/Schaeffer et al. - 2024 - Are Emergent Abilities of Large Language Models a .pdf}
 }
 
-@inproceedings{wangSelfConsistencyImprovesChain2022,
-  title = {Self-{{Consistency Improves Chain}} of {{Thought Reasoning}} in {{Language Models}}},
-  author = {Wang, Xuezhi and Wei, Jason and Schuurmans, Dale and Le, Quoc V. and Chi, Ed H. and Narang, Sharan and Chowdhery, Aakanksha and Zhou, Denny},
-  date = {2022-09-29},
-  series = {{{ICLR}}' 23},
-  url = {https://openreview.net/forum?id=1PL1NIMMrw},
-  urldate = {2024-02-19},
-  abstract = {Chain-of-thought prompting combined with pretrained large language models has achieved encouraging results on complex reasoning tasks. In this paper, we propose a new decoding strategy, self-consistency, to replace the naive greedy decoding used in chain-of-thought prompting. It first samples a diverse set of reasoning paths instead of only taking the greedy one, and then selects the most consistent answer by marginalizing out all possible reasoning paths. Self-consistency leverages the intuition that a complex reasoning problem typically admits multiple different ways of thinking leading to its unique correct answer.  Our extensive empirical evaluation shows that self-consistency boosts the performance of chain-of-thought prompting with a striking margin on a range of popular arithmetic and commonsense reasoning benchmarks, including GSM8K (+17.9\%), SVAMP (+11.0\%), AQuA (+12.2\%), StrategyQA (+6.4\%) and ARC-challenge (+3.9\%).},
-  eventtitle = {The {{Eleventh International Conference}} on {{Learning Representations}}},
+@inproceedings{wangLargeLanguageModels2023,
+  title = {Large {{Language Models Are Implicitly Topic Models}}: {{Explaining}} and {{Finding Good Demonstrations}} for {{In-Context Learning}}},
+  shorttitle = {Large {{Language Models Are Implicitly Topic Models}}},
+  author = {Wang, Xinyi and Zhu, Wanrong and Saxon, Michael and Steyvers, Mark and Wang, William Yang},
+  date = {2023-07-16},
+  url = {https://openreview.net/forum?id=HCkI1b6ksc},
+  urldate = {2024-03-05},
+  abstract = {In recent years, pre-trained large language models (LLMs) have demonstrated remarkable efficiency in achieving an inference-time few-shot learning capability known as in-context learning. However, existing literature has highlighted the sensitivity of this capability to the selection of few-shot demonstrations. Current understandings of the underlying mechanisms by which this capability arises from regular language model pretraining objectives remain disconnected from the real-world LLMs. This study aims to examine the in-context learning phenomenon through a Bayesian lens, viewing real-world LLMs as implicit topic models. On this premise, we propose an algorithm to select optimal demonstrations from a set of annotated data with a small LLM, then directly generalize the selected demonstrations to larger LLMs. We demonstrate a significant 12.5\textbackslash\% improvement relative to the random selection baseline, averaged over eight GPT models on eight real-world text classification datasets. Our empirical findings support our hypothesis that LLMs implicitly infer a latent variable containing task information.},
+  eventtitle = {Workshop on {{Efficient Systems}} for {{Foundation Models}} @ {{ICML2023}}},
   langid = {english},
-  file = {/home/lukexie/Documents/Papers/storage/YSVKEAY4/Wang et al. - 2022 - Self-Consistency Improves Chain of Thought Reasoni.pdf}
+  file = {/home/lukexie/Documents/Papers/storage/2JN46G9U/Wang et al. - 2023 - Large Language Models Are Implicitly Topic Models.pdf}
+}
+
+@inproceedings{wangNoiseRobustFineTuningPretrained2023,
+  title = {Noise-{{Robust Fine-Tuning}} of {{Pretrained Language Models}} via {{External Guidance}}},
+  booktitle = {Findings of the {{Association}} for {{Computational Linguistics}}: {{EMNLP}} 2023},
+  author = {Wang, Song and Tan, Zhen and Guo, Ruocheng and Li, Jundong},
+  editor = {Bouamor, Houda and Pino, Juan and Bali, Kalika},
+  date = {2023-12},
+  pages = {12528--12540},
+  publisher = {Association for Computational Linguistics},
+  location = {Singapore},
+  doi = {10.18653/v1/2023.findings-emnlp.834},
+  url = {https://aclanthology.org/2023.findings-emnlp.834},
+  urldate = {2024-03-06},
+  abstract = {Adopting a two-stage paradigm of pretraining followed by fine-tuning, Pretrained Language Models (PLMs) have achieved substantial advancements in the field of natural language processing. However, in real-world scenarios, data labels are often noisy due to the complex annotation process, making it essential to develop strategies for fine-tuning PLMs with such noisy labels. To this end, we introduce an innovative approach for fine-tuning PLMs using noisy labels, which incorporates the guidance of Large Language Models (LLMs) like ChatGPT. This guidance assists in accurately distinguishing between clean and noisy samples and provides supplementary information beyond the noisy labels, thereby boosting the learning process during fine-tuning PLMs. Extensive experiments on synthetic and real-world noisy datasets further demonstrate the superior advantages of our framework over the state-of-the-art baselines.},
+  eventtitle = {Findings 2023},
+  file = {/home/lukexie/Documents/Papers/storage/UI6HFUFT/Wang et al. - 2023 - Noise-Robust Fine-Tuning of Pretrained Language Mo.pdf}
 }
 
 @article{weiEmergentAbilitiesLarge2022,
@@ -158,23 +172,6 @@ Although this technique demonstrates good performance for some tasks, it require
   eventtitle = {Advances in {{Neural Information Processing Systems}} 36 Pre-Proceedings ({{NeurIPS}} 2023) {{Main Conference Track}}},
   langid = {english},
   file = {/home/lukexie/Documents/Papers/storage/7JVH7YLY/Wies et al. - 2024 - The Learnability of In-Context Learning.pdf}
-}
-
-@article{yangGiveUsFacts2024a,
-  title = {Give {{Us}} the {{Facts}}: {{Enhancing Large Language Models}} with {{Knowledge Graphs}} for {{Fact-aware Language Modeling}}},
-  shorttitle = {Give {{Us}} the {{Facts}}},
-  author = {Yang, Linyao and Chen, Hongyang and Li, Zhao and Ding, Xiao and Wu, Xindong},
-  date = {2024},
-  journaltitle = {IEEE Transactions on Knowledge and Data Engineering},
-  pages = {1--20},
-  issn = {1558-2191},
-  doi = {10.1109/TKDE.2024.3360454},
-  url = {https://ieeexplore.ieee.org/abstract/document/10417790},
-  urldate = {2024-02-19},
-  abstract = {Recently, ChatGPT, a representative large language model (LLM), has gained considerable attention. Due to their powerful emergent abilities, recent LLMs are considered as a possible alternative to structured knowledge bases like knowledge graphs (KGs). However, while LLMs are proficient at learning probabilistic language patterns and engaging in conversations with humans, they, like previous smaller pre-trained language models (PLMs), still have difficulty in recalling facts while generating knowledge-grounded contents. To overcome these limitations, researchers have proposed enhancing data-driven PLMs with knowledge-based KGs to incorporate explicit factual knowledge into PLMs, thus improving their performance in generating texts requiring factual knowledge and providing more informed responses to user queries. This paper reviews the studies on enhancing PLMs with KGs, detailing existing knowledge graph enhanced pre-trained language models (KGPLMs) as well as their applications. Inspired by existing studies on KGPLM, this paper proposes enhancing LLMs with KGs by developing knowledge graph-enhanced large language models (KGLLMs). KGLLM provides a solution to enhance LLMs’ factual reasoning ability, opening up new avenues for LLM research.},
-  eventtitle = {{{IEEE Transactions}} on {{Knowledge}} and {{Data Engineering}}},
-  keywords = {Chatbots,ChatGPT,Knowledge based systems,Knowledge graph,Knowledge graphs,Knowledge management,Knowledge reasoning,Large language model,Long short term memory,Task analysis,Training,Transformers},
-  file = {/home/lukexie/Documents/Papers/storage/6NYQ2SIG/Yang et al. - 2024 - Give Us the Facts Enhancing Large Language Models.pdf;/home/lukexie/Documents/Papers/storage/D8MGSTTN/10417790.html}
 }
 
 @online{zhuLargeLanguageModels2023,

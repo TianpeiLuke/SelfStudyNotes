@@ -1,11 +1,12 @@
 ---
 tags:
+  - book
+  - self-help
   - productivity
-  - do_it_differently
   - habit_development
   - compound_effect
+  - do_it_differently
   - environment_design
-  - book
 aliases:
   - 0601atmhabits01s
 keywords:

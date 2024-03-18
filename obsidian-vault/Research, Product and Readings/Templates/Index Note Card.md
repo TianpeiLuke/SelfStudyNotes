@@ -1,5 +1,5 @@
 ---
 tags: 
 aliases: 
-date of note:
+date of note: {{date}}
 ---

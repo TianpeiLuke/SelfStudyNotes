@@ -1,12 +1,14 @@
 ---
 tags:
+  - book
+  - chapter
+  - knowledge_management
   - smart_note/zettelkasten
   - thinking
   - writting
   - learning
   - critical_thinking
   - research
-  - chapter
 aliases:
   - 0703smartnote03s
 keywords:
@@ -68,7 +70,11 @@ year: 2022
 ## Recommended Notes
 
 - Refer back to the main summary note [[How to Take Smart Note Book Summary]]
-
+- Excerpts:
+	- [[How to Take Smart Note Excerpt 01 Introduction]]
+	- [[How to Take Smart Note Excerpt 02 The slip-box manual]]
+	- [[How to Take Smart Note Excerpt 03]]
+	- [[How to Take Smart Note Excerpt 04 Writing a paper step by step]]
 
 ----------
 ## Book Citations

@@ -1,13 +1,14 @@
 ---
 tags:
+  - book
+  - excerpt
+  - exercise
   - research
   - self-centered
   - research/problem_collectives
   - change_a_variable
   - introspection
   - keyword_search
-  - book
-  - exercise
 aliases:
   - 0501researchbegin13e
 keywords:

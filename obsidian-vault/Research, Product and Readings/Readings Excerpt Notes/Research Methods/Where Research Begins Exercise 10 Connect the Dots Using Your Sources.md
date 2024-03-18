@@ -1,11 +1,12 @@
 ---
 tags:
+  - book
+  - excerpt
+  - exercise
   - research
   - self-centered
-  - reseach/assemble_argument
+  - research/assemble_argument
   - critical_thinking/flow_of_ideas
-  - book
-  - exercise
 aliases:
   - 0501researchbegin10e
 keywords:

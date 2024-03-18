@@ -1,14 +1,11 @@
 ---
 tags:
+  - book
+  - chapter
   - critical_thinking
-  - research
-  - learning
-  - education
   - critical_thinking/fail_to_succeed
   - mistakes
   - leadership_principle/bias_for_action
-  - book
-  - chapter
 aliases:
   - 05035elemthinking02s
 keywords:

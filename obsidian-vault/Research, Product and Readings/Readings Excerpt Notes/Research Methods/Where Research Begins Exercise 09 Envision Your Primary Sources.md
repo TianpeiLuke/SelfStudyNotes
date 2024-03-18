@@ -1,5 +1,8 @@
 ---
 tags:
+  - book
+  - excerpt
+  - exercise
   - research
   - self-centered
   - research/engage_primary_sources
@@ -7,8 +10,6 @@ tags:
   - critical_thinking/flow_of_ideas
   - try_this_now
   - envisioning
-  - book
-  - exercise
 aliases:
   - 0504researchbegin09e
 keywords:

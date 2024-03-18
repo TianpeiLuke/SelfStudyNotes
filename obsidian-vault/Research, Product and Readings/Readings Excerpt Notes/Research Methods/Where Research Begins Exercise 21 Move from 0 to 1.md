@@ -1,11 +1,12 @@
 ---
 tags:
+  - book
+  - excerpt
+  - exercise
   - research
   - self-centered
   - writing
   - research/drafting
-  - book
-  - exercise
 aliases:
   - 0501researchbegin21e
 keywords:

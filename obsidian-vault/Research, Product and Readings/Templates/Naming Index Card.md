@@ -57,4 +57,17 @@
 	- (05): Writing Skills, Grammars, Style
 	- (06): Effective Learning Skills, Mind Mapping, Memorization
 - (08): Project Management
-	- (01): 
+	- (01): Project Description, Backgrounds, Plan
+	- (02): Project Resources
+	- (03): Project Team
+	- (04): Project Documents
+- (09): Area of Influence
+	- (01): Area Description, Backgrounds etc.
+	- (02): Vision and Plan
+	- (03): System and Infrastructure
+- (10): Resources
+	- (01): Domain Knowledge, Wikis, Blogs, News
+	- (02): Online Videos, Online Classes
+	- (03): Codes, Github Repos
+	- (04): Datasets, Data Sources
+	- (05): Systems and Infrastructures

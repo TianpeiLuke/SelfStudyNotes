@@ -1,12 +1,12 @@
 ---
 tags:
-  - critical_thinking
-  - research
-  - learning
-  - education
-  - critical_thinking/deep_understanding
   - book
   - chapter
+  - critical_thinking
+  - critical_thinking/deep_understanding
+  - bias
+  - clear_clutter
+  - gap
 aliases:
   - 05035elemthinking01s
 keywords:

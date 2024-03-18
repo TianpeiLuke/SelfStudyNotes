@@ -1,11 +1,12 @@
 ---
 tags:
+  - book
+  - self-help
   - productivity
   - habit
   - personal_development
   - relationship_management
   - effectiveness
-  - book
 aliases:
   - 06017habits01s
 keywords:

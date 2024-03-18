@@ -1,13 +1,11 @@
 ---
 tags:
+  - book
+  - chapter
+  - self-help
   - productivity
   - habit
-  - effectiveness
-  - leadership
-  - relationship_management
-  - earn_trust
-  - listening
-  - chapter
+  - renewal
 aliases:
   - 06017habits08s
 keywords:
@@ -34,7 +32,7 @@ year: 1991
 
 ## Chapter Summary
 
-- **Part 4: Renewal.** This part deals with the *continual **balanced** development of ourselves and our relationship in an **ever-changing interdependent environment***. The author in this part inspired the readers to view themselves in the middle of process. The ***renewal process** is an **upward spiral** that involves **learning**, **commitment** and **doing***. All habits (1-6), principles and skills we have learned so far need to be maintained and practiced *regularly and consistently*. 
+- **Part 4: Renewal.** This part deals with the *continual **balanced** development of ourselves and our relationship in an **ever-changing interdependent environment***. The author in this part inspired the readers to view themselves in the middle of process. The ***renewal process** is an **upward spiral** that involves **learning**, **commitment** and **doing***. All habits (1-6), principles and skills we have learned so far need to be maintained and practiced *regularly and consistently*. [^1]
   
 - The ultimate *goal* of renewal is to always prepare ourselves in upcoming challenges in life.
   
@@ -65,7 +63,7 @@ year: 1991
 
 
 
-  
+  [^1]: To maintain the renewal process, one need to develop a set of long term habits in each of four dimensions (physical, mental, spiritual, emotional/social). See [[Atomic Habits Book Summary]] for methods of habit developments. 
 
 
 ----------

@@ -1,8 +1,8 @@
 ---
 tags:
-  - negotiation
-  - relationship_management
   - book
+  - relationship_management
+  - negotiation
 aliases:
   - 0603gty01s
 keywords:

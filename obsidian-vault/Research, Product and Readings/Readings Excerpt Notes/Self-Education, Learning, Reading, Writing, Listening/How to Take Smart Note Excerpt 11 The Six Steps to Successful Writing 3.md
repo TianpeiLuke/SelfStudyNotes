@@ -1,5 +1,7 @@
 ---
 tags:
+  - book
+  - excerpt
   - habit
   - gtd
   - writting

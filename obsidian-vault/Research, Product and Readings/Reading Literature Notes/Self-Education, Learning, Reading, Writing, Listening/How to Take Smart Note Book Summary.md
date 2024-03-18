@@ -1,12 +1,13 @@
 ---
 tags:
+  - book
+  - knowledge_management
   - smart_note/zettelkasten
   - thinking
   - writting
   - learning
   - critical_thinking
   - research
-  - book
 aliases:
   - 0703smartnote02s
 keywords:
@@ -83,12 +84,16 @@ Ahrens, S. (2022), *How to Take Smart Notes: One Simple Technique to Boost Writi
 
 -----------
 
-## Recommended Literature Notes
+## Recommended Literature Notes and Extend Reading
 
 - Refer to [[How to Take Smart Note Workflow]] for instructions on creating Zettelkasten system.
 - Check on a blog that discuss the Zettelkasten method in [link](https://sacredkarailee.medium.com/understanding-zettelkasten-notes-d7eb3fae0c45)
 - Blog in Medium [The Zettelkasten Method: Examples to help you get started](https://medium.com/@fairylights_io/the-zettelkasten-method-examples-to-help-you-get-started-8f8a44fa9ae6)
 - [Combining the Zettelkasten Method and Building a Second Brain](https://zettelkasten.de/posts/building-a-second-brain-and-zettelkasten/#:~:text=While%20BASB's%20%E2%80%9Csecond%20brain%E2%80%9D%20doesn,between%20BASB%20and%20the%20ZKM)
+- Visit the website [zettelkasten.de](https://zettelkasten.de/overview/#common-questions)  on various of topics regarding Zettelkasten.
+- Check on **topic tags** vs. **object tags** in this [blog.](https://zettelkasten.de/posts/object-tags-vs-topic-tags/)
+- Check on **the principle of atomicity** in this [blog](https://zettelkasten.de/posts/create-zettel-from-reading-notes/).
+- Check on **the principle of connectivity** in this [blog](https://zettelkasten.de/posts/luhmann-folgezettel-truth/).
 
 
 

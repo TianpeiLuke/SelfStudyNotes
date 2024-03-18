@@ -1,13 +1,14 @@
 ---
 tags:
+  - book
+  - excerpt
+  - exercise
   - research
   - self-centered
   - thinking
   - critical_thinking/raise_questions
   - research/question_to_problem
   - try_this_now
-  - book
-  - exercise
 aliases:
   - 0504researchbegin07e
 keywords:

@@ -1,15 +1,12 @@
 ---
 tags:
+  - book
+  - chapter
   - critical_thinking
-  - research
-  - learning
-  - education
   - critical_thinking/raise_questions
   - questions
   - active_listening
   - listening
-  - book
-  - chapter
 aliases:
   - 05035elemthinking03s
 keywords:

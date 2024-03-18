@@ -1,12 +1,12 @@
 ---
 tags:
+  - book
+  - excerpt
   - habit
   - productivity
   - habit/cue
   - habit_development
   - make_it_obvious
-  - book
-  - excerpt
 aliases:
   - 0601atmhabit04e
 keywords:

@@ -1,12 +1,14 @@
 ---
 tags:
+  - book
+  - excerpt
   - habit
   - gtd
   - research
   - writting
   - smart_note/zettelkasten
   - research/drafting
-  - reseach/assemble_argument
+  - research/assemble_argument
   - critical_thinking/deep_understanding
 aliases:
   - 0703smartnote10e

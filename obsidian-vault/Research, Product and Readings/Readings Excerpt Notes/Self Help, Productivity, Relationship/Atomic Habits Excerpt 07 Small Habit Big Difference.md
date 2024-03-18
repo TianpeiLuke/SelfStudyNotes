@@ -1,11 +1,11 @@
 ---
 tags:
+  - book
+  - excerpt
   - habit
   - productivity
   - compound_effect
   - atomic_progress
-  - book
-  - excerpt
 aliases:
   - 0601atmhabit07e
 keywords:

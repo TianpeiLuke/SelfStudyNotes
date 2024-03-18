@@ -1,20 +1,10 @@
 ---
 tags:
+  - book
   - self-centered
   - research
-  - research/topic_to_question
-  - research/question_to_problem
-  - research/engage_primary_sources
-  - reseach/assemble_argument
-  - research/project_planning
-  - research/problem_collectives
-  - research/rewriting_problem_collectives
-  - research/drafting
-  - research/rewriting_fields
-  - research/finding_new_project
   - writing
   - reading
-  - book
 aliases:
   - 0504researchbegin01s
 keywords:

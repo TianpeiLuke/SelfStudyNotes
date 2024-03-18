@@ -1,12 +1,12 @@
 ---
 tags:
+  - book
+  - excerpt
   - habit
   - productivity
   - law_of_least_effort
   - atomic_progress
   - make_it_easy
-  - book
-  - excerpt
 aliases:
   - 0601atmhabit09e
 keywords:

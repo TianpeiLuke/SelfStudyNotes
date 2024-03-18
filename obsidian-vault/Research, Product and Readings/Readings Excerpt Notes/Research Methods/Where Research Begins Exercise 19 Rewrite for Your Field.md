@@ -1,11 +1,12 @@
 ---
 tags:
+  - book
+  - excerpt
+  - exercise
   - research
   - self-centered
   - writing
   - research/rewriting_fields
-  - book
-  - exercise
 aliases:
   - 0501researchbegin19e
 keywords:

@@ -1,5 +1,8 @@
 ---
 tags:
+  - book
+  - chapter
+  - self-help
   - productivity
   - habit
   - effectiveness
@@ -8,7 +11,6 @@ tags:
   - negotiation
   - listening
   - earn_trust
-  - chapter
 aliases:
   - 06017habits04s
 keywords:

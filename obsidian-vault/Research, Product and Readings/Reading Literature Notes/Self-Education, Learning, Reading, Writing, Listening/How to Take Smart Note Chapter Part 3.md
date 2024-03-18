@@ -1,5 +1,8 @@
 ---
 tags:
+  - book
+  - chapter
+  - knowledge_management
   - smart_note/zettelkasten
   - thinking
   - writting
@@ -85,7 +88,7 @@ year: 2022
 	- This section covers some of topics related to smart note-taking:
 		- **Make a Career One Note at a Time**: We can measure our **productivity** with the number of notes per day. Due to the atomic structure of the Zettelkasten, we can make solid progress by gradual accumulation of atomic thoughts into our external thinking network.
 		  
-		- **Think Outside the Brain**: Taking smart notes is a process of *thinking within the medium of writing*. 
+		- **Think Outside the Brain**: Taking smart notes is a process of *thinking within the medium of writing*. [[Building a Second Brain Book Summary]]
 		  
 		- **Learn by not Trying**: ***Selection** is the key to build our mental model.* ***Forgetting is a blessing.*** It enables us to grasp the gist without losing in the details. As for Zettelkasten, it is also important to decide what to write as smart notes and what to include in the slip box.
 		  
@@ -97,7 +100,7 @@ year: 2022
 	- This section discuss the way to *develop ideas* and ***nurture creativity*** using Zettelkasten:
 		- **Develop Topics**: It is recommended to keep index cards in slip box to allow fast retrieval of topic relevant information. Be careful and selective when choosing keywords as tags in index card. Adding a new overview note when the structure of topic is adjusted. 
 		  
-		- **Make Smart Connections**: Discussions on several types of connections in digital and physical Zettelkasten. It discussed the link change to accommodate an update of knowledge and understanding.
+		- **Make Smart Connections**: Discussions on several types of connections in digital and physical Zettelkasten. It discussed the link change to accommodate an update of knowledge and understanding. [[Building a Second Brain Chapter Summary 1]]
 		  
 		- **Compare, Correct and Differentiate**: Comparing notes help us to spot our *bias and mistakes* in the past and to *differentiate similar concepts, cases and arguments*. It helps us to detect the *contradictions, paradoxes or oppositions* in the knowledge base, 
 		  
@@ -154,6 +157,13 @@ year: 2022
 ## Recommended Notes
 
 - Refer back to the main summary note [[How to Take Smart Note Book Summary]]
+- Excerpts:
+	- [[How to Take Smart Note Excerpt 09 The Six Steps to Successful Writing 1]]
+	- [[How to Take Smart Note Excerpt 10 The Six Steps to Successful Writing 2]]
+	- [[How to Take Smart Note Excerpt 11 The Six Steps to Successful Writing 3]]
+	- [[How to Take Smart Note Excerpt 12 The Six Steps to Successful Writing 4]]
+	- [[How to Take Smart Note Excerpt 13 The Six Steps to Successful Writing 5]]
+	- [[How to Take Smart Note Excerpt 14 The Six Steps to Successful Writing 6]]
 
 
 ----------

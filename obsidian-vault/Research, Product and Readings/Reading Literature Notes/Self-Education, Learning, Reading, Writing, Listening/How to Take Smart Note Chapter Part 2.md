@@ -1,12 +1,14 @@
 ---
 tags:
+  - book
+  - chapter
+  - knowledge_management
   - smart_note/zettelkasten
   - thinking
   - writting
   - learning
   - critical_thinking
   - research
-  - chapter
 aliases:
   - 0703smartnote04s
 keywords:
@@ -123,6 +125,11 @@ year: 2022
 ## Recommended Notes
 
 - Refer back to the main summary note [[How to Take Smart Note Book Summary]]
+- Excerpts:
+	- [[How to Take Smart Note Excerpt 05 The Four Underlying Principles 1]]
+	- [[How to Take Smart Note Excerpt 06 The Four Underlying Principles 2]]
+	- [[How to Take Smart Note Excerpt 07 The Four Underlying Principles 3]]
+	- [[How to Take Smart Note Excerpt 08 The Four Underlying Principles 4]]
 
 
 [^1]: The importance of writing our ***self-evidence*** down while doing research is discussed in [[Where Research Begins Book Summary]] Also this book stress the importance of ***leaving the Topic Land*** which is one of the benefits of using Zettelkasten. It also discuss the importance of seeking feedbacks from *Sounding board*. 
@@ -130,6 +137,9 @@ year: 2022
 [^3]: ***Progressive improvement*** and innovation has been discussed in *Flow of Ideas* [[The 5 Elements of Effective Thinking Suggestion 4]]
 [^4]: Consider how the smart note and an interconnected system can serve as a **cue** to the development of a habit of ***"thinking in writing"***. Also check on the importance of "**make it satisfying**" in maintain long term habits. We can also check on the debate on the importance of ***motivation vs. environment*** in habit forming. [[Atomic Habits Book Summary]]  Connect to thoughts in [[Habit and Cues Example]]
 [^5]: [[The 5 Elements of Effective Thinking Suggestion 5]] discusses that we need to keep changing for better as well.
+
+
+
 
 ----------
 ## Book Citations

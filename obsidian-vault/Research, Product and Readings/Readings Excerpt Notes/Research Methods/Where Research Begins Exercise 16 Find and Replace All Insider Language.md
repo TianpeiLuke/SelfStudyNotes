@@ -1,11 +1,12 @@
 ---
 tags:
+  - book
+  - excerpt
+  - exercise
   - research
   - self-centered
   - research/rewriting_problem_collectives
   - writing
-  - book
-  - exercise
 aliases:
   - 0501researchbegin16e
 keywords:

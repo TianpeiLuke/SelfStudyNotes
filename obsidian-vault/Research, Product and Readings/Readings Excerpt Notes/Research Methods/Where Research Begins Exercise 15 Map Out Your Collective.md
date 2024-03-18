@@ -1,5 +1,8 @@
 ---
 tags:
+  - book
+  - excerpt
+  - exercise
   - research
   - self-centered
   - research/problem_collectives
@@ -8,8 +11,6 @@ tags:
   - fast_reading
   - keyword_search
   - secondary_source
-  - book
-  - exercise
 aliases:
   - 0501researchbegin15e
 keywords:

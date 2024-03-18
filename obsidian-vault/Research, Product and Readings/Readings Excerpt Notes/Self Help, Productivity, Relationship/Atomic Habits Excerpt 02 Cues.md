@@ -1,9 +1,9 @@
 ---
 tags:
-  - productivity
-  - habit/cue
   - book
   - excerpt
+  - productivity
+  - habit/cue
 aliases:
   - 0601atmhabit02e
 keywords:

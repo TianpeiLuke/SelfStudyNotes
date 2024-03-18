@@ -1,5 +1,7 @@
 ---
 tags:
+  - book
+  - excerpt
   - habit
   - gtd
   - research
@@ -7,8 +9,6 @@ tags:
   - productivity
   - smart_note/zettelkasten
   - reading
-  - book
-  - excerpt
 aliases:
   - 0703smartnote05e
 keywords:

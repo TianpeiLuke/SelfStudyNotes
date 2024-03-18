@@ -1,13 +1,12 @@
 ---
 tags:
+  - book
+  - chapter
+  - self-help
   - productivity
   - habit
-  - effectiveness
-  - leadership
-  - relationship_management
   - earn_trust
-  - listening
-  - chapter
+  - synergize
 aliases:
   - 06017habits07s
 keywords:

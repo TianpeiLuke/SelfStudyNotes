@@ -1,12 +1,13 @@
 ---
 tags:
+  - book
+  - knowledge_management
+  - workflow
   - smart_note
   - smart_note/zettelkasten
   - thinking
   - writting
-  - workflow
   - digest
-  - book
 aliases:
   - 0703smartnote01m
 keywords:

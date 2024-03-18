@@ -1,8 +1,8 @@
 ---
 tags:
+  - book
   - reading
   - fast_reading
-  - book
 aliases:
   - 0703fastreading01s
 keywords:

@@ -1,11 +1,14 @@
 ---
 tags:
+  - book
+  - chapter
+  - self-help
   - productivity
   - habit
   - personal_development
   - relationship_management
   - effectiveness
-  - chapter
+  - paradigm_shift
 aliases:
   - 06017habits02s
 keywords:

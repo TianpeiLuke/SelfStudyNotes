@@ -1,14 +1,11 @@
 ---
 tags:
+  - book
+  - chapter
   - critical_thinking
-  - research
-  - learning
-  - education
   - critical_thinking/prepare_for_change
   - change
   - do_it_differently
-  - book
-  - chapter
 aliases:
   - 05035elemthinking05s
 keywords:

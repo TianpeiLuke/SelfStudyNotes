@@ -1,15 +1,19 @@
 ---
 tags:
+  - book
+  - chapter
+  - self-help
   - productivity
   - habit
   - personal_development
-  - effectiveness
-  - leadership
-  - time_management
-  - personal_mission
+  - proactivity
   - circle_of_influence
-  - envisioning
-  - chapter
+  - leadership
+  - personal_mission
+  - vision
+  - time_management
+  - priority
+  - quadrant_ii_focus
 aliases:
   - 06017habits03s
 keywords:

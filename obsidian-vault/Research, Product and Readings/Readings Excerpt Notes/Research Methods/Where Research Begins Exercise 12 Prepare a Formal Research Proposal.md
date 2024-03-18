@@ -1,11 +1,12 @@
 ---
 tags:
+  - book
+  - excerpt
+  - exercise
   - research
   - self-centered
   - project_management
   - research/drafting
-  - book
-  - exercise
 aliases:
   - 0501researchbegin12e
 keywords:

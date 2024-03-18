@@ -1,9 +1,10 @@
 ---
 tags:
-  - gtd
-  - productivity
-  - project_management
   - book
+  - self-help
+  - productivity
+  - gtd
+  - project_management
 aliases:
   - 0601gtd01s
 keywords: 

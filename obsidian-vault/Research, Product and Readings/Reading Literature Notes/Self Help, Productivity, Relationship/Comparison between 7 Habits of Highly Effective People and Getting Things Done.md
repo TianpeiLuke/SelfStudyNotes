@@ -1,7 +1,8 @@
 ---
 tags:
-  - productivity
+  - book
   - book_comparison
+  - productivity
 aliases:
   - 06017habitgtdcompare01s
 date of note: 2024-02-11

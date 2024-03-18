@@ -1,13 +1,14 @@
 ---
 tags:
+  - book
+  - chapter
+  - self-help
   - productivity
   - habit
-  - effectiveness
-  - leadership
   - relationship_management
   - earn_trust
   - listening
-  - chapter
+  - empathy
 aliases:
   - 06017habits06s
 keywords:

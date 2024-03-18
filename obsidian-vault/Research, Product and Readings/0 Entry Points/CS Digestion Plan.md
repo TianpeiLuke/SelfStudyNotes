@@ -3,9 +3,9 @@ tags:
   - project
   - data_digestion
   - customer_service_contact
-  - data_access
+  - data_sources
 aliases:
-  - 0804csdigestionplan00
+  - 0804csdigestion0
 date of note: 2024-02-27
 name: CS Data Digestion Plan
 ---

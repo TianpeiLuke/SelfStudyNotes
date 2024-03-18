@@ -1,13 +1,13 @@
 ---
 tags:
+  - book
+  - excerpt
   - habit
   - gtd
   - research
   - writting
   - productivity
   - smart_note/zettelkasten
-  - book
-  - excerpt
 aliases:
   - 0703smartnote01e
 keywords:

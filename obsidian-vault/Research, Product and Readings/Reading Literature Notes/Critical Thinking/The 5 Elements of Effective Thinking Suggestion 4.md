@@ -1,16 +1,13 @@
 ---
 tags:
+  - book
+  - chapter
   - critical_thinking
-  - research
-  - learning
-  - education
   - critical_thinking/flow_of_ideas
   - reference
   - incremental_improvement
   - atomic_progress
   - progressive_innovation
-  - book
-  - chapter
 aliases:
   - 05035elemthinking04s
 keywords:
