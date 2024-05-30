@@ -8,6 +8,10 @@ This repository is the latex-based notes for self-learning, mainly for math, sta
 
 ![Knowledge Graph](knowledge_graph.png)
 
+## Obsidian Graph
+
+![Slip Box Network](obsidian_slip_box.png)
+
 
 ## Table of Contents
 - [Boosting Methods](./self-study/boosting_methods/README.md)
