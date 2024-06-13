@@ -1,0 +1,74 @@
+**Digital Code** for Publication Reading
+
+- (01): Machine Learning
+	- (01): Learning Theory
+	- (02): General Machine Learning Algorithms (LR, Boosting, SVM, Regularization, Tradeoff)
+	- (03): Deep Learning Architectures and Algorithms
+	- (04): Reinforcement Learning Algorithms
+	- (05): Natural Language Processing Applications
+	- (06): Computer Vision Applications
+	- (07): Reinforcement Learning Applications
+	- (08): Causal Machine Learning
+	- (09): Representation Learning
+	- (10): Probabilistic Graphical Models
+	- (11): Network Analysis, Graph-based Modeling
+	- (12): General AI, Planning, Searching, Logical Deduction
+- (02): Computer Science, Software, Hardware
+	- (01): Algorithms, Complexity Analysis, Computer Science Theory
+	- (02): Software Design and Architecture
+	- (03): Parallel Computing, Distributed Computing, Cloud Computing
+	- (04): Information Retrieval
+	- (05): Operational System 
+	- (06): Computer Architecture
+- (03): Mathematics
+	- (01): Analysis (Continuous, Functional)
+	- (02): Linear Algebra, Matrix Analysis
+	- (03): Measure Theory, Probability Theory
+	- (04): Topology
+	- (05): Differential Equations
+	- (06): Differential Geometry, Lie Group
+	- (07): Graph Theory
+	- (08): Algebra (Group, Field etc.)
+- (04): Statistics
+	- (01): Point Estimation / Inference, Regression
+	- (02): Bayesian Analysis
+	- (03): Sampling Algorithms
+	- (04): Decision Theory, Game Theory
+	- (05): Concentration of Measure
+	- (06): High Dimensional Probability, Random Matrix Theory
+	- (07): Information Theory
+	- (08): Information Geometry, Optimal Transport
+	- (09): Hypothesis Testing
+	- (10): Causal Inference, Estimation, Analysis
+- (05): Critical Thinking, Logics, Research Methods
+	- (01): Mathematical Logics
+	- (02): Argumentation
+	- (03): Critical Thinking
+	- (04): Research Methodologies 
+- (06): Self-Help, Personal Development, Relationship Management
+	- (01): Productivity
+	- (02): Personal Development
+	- (03): Relationship Development and Management
+- (07): Self-Education, Learning, Reading, Writing, Listening
+	- (01): Online Courses
+	- (02): Self-Education
+	- (03): Reading and Comprehension, Fast Reading, Note-taking
+	- (04): Active Listening, Empathetic Listening
+	- (05): Writing Skills, Grammars, Style
+	- (06): Effective Learning Skills, Mind Mapping, Memorization
+- (08): Project Management
+	- (01): Project Description, Backgrounds, Plan
+	- (02): Project Resources
+	- (03): Project Team
+	- (04): Project Documents
+	- (05): Methodologies
+- (09): Area of Influence
+	- (01): Area Description, Backgrounds etc.
+	- (02): Vision and Plan
+	- (03): System and Infrastructure
+- (10): Resources
+	- (01): Domain Knowledge, Wikis, Blogs, News
+	- (02): Online Videos, Online Classes
+	- (03): Codes, Github Repos
+	- (04): Datasets, Data Sources
+	- (05): Systems and Infrastructures

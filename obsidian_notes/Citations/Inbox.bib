@@ -1,0 +1,192 @@
+@inproceedings{brownLanguageModelsAre2020,
+  title = {Language {{Models}} Are {{Few-Shot Learners}}},
+  shorttitle = {{{GPT-3}}},
+  booktitle = {Advances in {{Neural Information Processing Systems}}},
+  author = {Brown, Tom and Mann, Benjamin and Ryder, Nick and Subbiah, Melanie and Kaplan, Jared D and Dhariwal, Prafulla and Neelakantan, Arvind and Shyam, Pranav and Sastry, Girish and Askell, Amanda and Agarwal, Sandhini and Herbert-Voss, Ariel and Krueger, Gretchen and Henighan, Tom and Child, Rewon and Ramesh, Aditya and Ziegler, Daniel and Wu, Jeffrey and Winter, Clemens and Hesse, Chris and Chen, Mark and Sigler, Eric and Litwin, Mateusz and Gray, Scott and Chess, Benjamin and Clark, Jack and Berner, Christopher and McCandlish, Sam and Radford, Alec and Sutskever, Ilya and Amodei, Dario},
+  date = {2020},
+  volume = {33},
+  pages = {1877--1901},
+  publisher = {Curran Associates, Inc.},
+  url = {https://papers.nips.cc/paper/2020/hash/1457c0d6bfcb4967418bfb8ac142f64a-Abstract.html},
+  urldate = {2024-02-21},
+  abstract = {We demonstrate that scaling up language models greatly improves task-agnostic, few-shot performance, sometimes even becoming competitive with prior state-of-the-art fine-tuning approaches. Specifically, we train GPT-3, an autoregressive language model with 175 billion parameters, 10x more than any previous non-sparse language model, and test its performance in the few-shot setting.  For all tasks, GPT-3 is applied without any gradient updates or fine-tuning, with tasks and few-shot demonstrations specified purely via text interaction with the model.  GPT-3 achieves strong performance on many NLP datasets, including translation, question-answering, and cloze tasks. We also identify some datasets where GPT-3's few-shot learning still struggles, as well as some datasets where GPT-3 faces methodological issues related to training on large web corpora.},
+  eventtitle = {Advances in {{Neural Information Processing Systems}} 33 ({{NeurIPS}} 2020)},
+  keywords = {GPT,GPT-3,in-context learning},
+  note = {Meta Review
+\par
+This work extends the Transformer language model architecture of GPT-2 by scaling it to {$>$} 170 billion parameters, resulting in a new model called GPT-3. The paper demonstrates that when provided with zero or few labeled examples to condition on, this large model is capable of performing a multitude of language tasks without any further changes to model parameters. While on most tasks the zero-shot/few-shot performance is behind SOTA, the novelty lies in the demonstrated strong zero/few shot performance on diverse tasks. Clarity of exposition is another strength of the paper. One limitation is lack of reproducibility due to the massive compute necessary to train the model. Another limitation is that the paper’s scientific insights are limited, and the contribution is largely engineering. However, the strong experimental findings, and the thorough analysis presented in the paper make it worthy of acceptance at NeurIPS. Regarding ethical concerns, a big language model can attract the interest of malicious actors. However, the paper has done a thorough job of addressing these concerns.
+\par
+This paper investigates the potential of few-shot learning in Large Language Models.
+\par
+One recent popular technique for using language models to solve tasks is called~\textbf{\href{https://arxiv.org/abs/2005.14165}{zero-shot or few-shot prompting}}. This technique formulates a task based on text that a language model might have seen during training, where then the language model generates the answer by completing the text. For instance, to classify the sentiment of a movie review, a language model might be given the sentence, “\emph{The movie review ‘best RomCom since Pretty Woman’ is \_}” and be asked to complete the sentence with either the word “\emph{positive}” or “\emph{negative}”.
+\par
+Although this technique demonstrates good performance for some tasks, it requires careful prompt engineering to design tasks to look like data that the model has seen during training — an approach that performs well on some but not all tasks and also can be an unintuitive way for practitioners to interact with the model. For example, the creators of~\textbf{\href{https://arxiv.org/abs/2005.14165}{GPT-3}}~(one of the largest language models in use today) found that such prompting techniques did not result in good performance on natural language inference (NLI) tasks},
+  file = {/home/lukexie/Documents/Papers/storage/838IIZTJ/NeurIPS-2020-language-models-are-few-shot-learners-Supplemental.pdf;/home/lukexie/Documents/Papers/storage/WVSRCBZY/Brown et al. - 2020 - Language Models are Few-Shot Learners.pdf}
+}
+
+@inproceedings{clarkTransformersSoftReasoners2021,
+  title = {Transformers as {{Soft Reasoners}} over {{Language}}},
+  shorttitle = {{{RuleTakers}}},
+  booktitle = {Proceedings of the {{Twenty-Ninth International Joint Conference}} on {{Artificial Intelligence}}},
+  author = {Clark, Peter and Tafjord, Oyvind and Richardson, Kyle},
+  date = {2021-01},
+  series = {{{IJCAI}}'20},
+  pages = {3882--3890},
+  location = {Yokohama, Yokohama, Japan},
+  abstract = {Beginning with McCarthy's Advice Taker (1959), AI has pursued the goal of providing a system with explicit, general knowledge and having the system reason over that knowledge. However, expressing the knowledge in a formal (logical or probabilistic) representation has been a major obstacle to this research. This paper investigates a modern approach to this problem where the facts and rules are provided as natural language sentences, thus bypassing a formal representation. We train transformers to reason (or emulate reasoning) over these sentences using synthetically generated data. Our models, that we call RuleTakers, provide the first empirical demonstration that this kind of soft reasoning over language is learnable, can achieve high (99\%) accuracy, and generalizes to test data requiring substantially deeper chaining than seen during training (95\%+ scores). We also demonstrate that the models transfer well to two hand-authored rulebases, and to rulebases paraphrased into more natural language. These findings are significant as it suggests a new role for transformers, namely as limited "soft theorem provers" operating over explicit theories in language. This in turn suggests new possibilities for explainability, correctability, and counterfactual reasoning in question-answering.},
+  eventtitle = {{{IJCAI}}'20},
+  isbn = {978-0-9992411-6-5},
+  file = {/home/lukexie/Documents/Papers/storage/LJ3TPMK7/Clark et al. - 2021 - Transformers as soft reasoners over language.pdf}
+}
+
+@online{dongSurveyIncontextLearning2023,
+  title = {A {{Survey}} on {{In-context Learning}}},
+  author = {Dong, Qingxiu and Li, Lei and Dai, Damai and Zheng, Ce and Wu, Zhiyong and Chang, Baobao and Sun, Xu and Xu, Jingjing and Li, Lei and Sui, Zhifang},
+  date = {2023-06-01},
+  eprint = {2301.00234},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2301.00234},
+  url = {http://arxiv.org/abs/2301.00234},
+  urldate = {2024-02-20},
+  abstract = {With the increasing ability of large language models (LLMs), in-context learning (ICL) has become a new paradigm for natural language processing (NLP), where LLMs make predictions only based on contexts augmented with a few examples. It has been a new trend to explore ICL to evaluate and extrapolate the ability of LLMs. In this paper, we aim to survey and summarize the progress and challenges of ICL. We first present a formal definition of ICL and clarify its correlation to related studies. Then, we organize and discuss advanced techniques, including training strategies, demonstration designing strategies, as well as related analysis. Finally, we discuss the challenges of ICL and provide potential directions for further research. We hope that our work can encourage more research on uncovering how ICL works and improving ICL.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language},
+  note = {Comment: Papers collected until 2023/05/22},
+  file = {/home/lukexie/Documents/Papers/storage/3NP6GCJR/Dong et al. - 2023 - A Survey on In-context Learning.pdf}
+}
+
+@inproceedings{fatemiTalkGraphEncoding2023,
+  title = {Talk like a {{Graph}}: {{Encoding Graphs}} for {{Large Language Models}}},
+  shorttitle = {Talk like a {{Graph}}},
+  booktitle = {Proceedings of the {{Twelfth International Conference}} on {{Learning Representations}} ({{ICLR}} 2024)},
+  author = {Fatemi, Bahare and Halcrow, Jonathan and Perozzi, Bryan},
+  date = {2023-10-13},
+  url = {https://openreview.net/forum?id=IuXR1CCrSi},
+  urldate = {2024-03-14},
+  abstract = {Graphs are a powerful tool for representing and analyzing complex relationships in real-world applications such as social networks, recommender systems, and computational finance. Reasoning on graphs is essential for drawing inferences about the relationships between entities in a complex system, and to identify hidden patterns and trends. Despite the remarkable progress in automated reasoning with natural text, reasoning on graphs with large language models (LLMs) remains an understudied problem. In this work, we perform the first comprehensive study of encoding graph-structured data as text for consumption by LLMs. We show that LLM performance on graph reasoning tasks varies on three fundamental levels: (1) the graph encoding method, (2) the nature of the graph task itself, and (3) interestingly, the very structure of the graph considered. These novel results provide valuable insight on strategies for encoding graphs as text. Using these insights we illustrate how the correct choice of encoders can boost performance on graph reasoning tasks inside LLMs by 4.8\% to 61.8\%, depending on the task.},
+  eventtitle = {The {{Twelfth International Conference}} on {{Learning Representations}} ({{ICLR}} 2024)},
+  langid = {english},
+  file = {/home/lukexie/Documents/Papers/storage/6IXW7XRE/Fatemi et al. - 2023 - Talk like a Graph Encoding Graphs for Large Langu.pdf}
+}
+
+@online{leiteDetectingMisinformationLLMPredicted2023,
+  title = {Detecting {{Misinformation}} with {{LLM-Predicted Credibility Signals}} and {{Weak Supervision}}},
+  author = {Leite, João A. and Razuvayevskaya, Olesya and Bontcheva, Kalina and Scarton, Carolina},
+  date = {2023-09-14},
+  eprint = {2309.07601},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2309.07601},
+  url = {http://arxiv.org/abs/2309.07601},
+  urldate = {2024-03-06},
+  abstract = {Credibility signals represent a wide range of heuristics that are typically used by journalists and fact-checkers to assess the veracity of online content. Automating the task of credibility signal extraction, however, is very challenging as it requires high-accuracy signal-specific extractors to be trained, while there are currently no sufficiently large datasets annotated with all credibility signals. This paper investigates whether large language models (LLMs) can be prompted effectively with a set of 18 credibility signals to produce weak labels for each signal. We then aggregate these potentially noisy labels using weak supervision in order to predict content veracity. We demonstrate that our approach, which combines zero-shot LLM credibility signal labeling and weak supervision, outperforms state-of-the-art classifiers on two misinformation datasets without using any ground-truth labels for training. We also analyse the contribution of the individual credibility signals towards predicting content veracity, which provides new valuable insights into their role in misinformation detection.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Machine Learning},
+  file = {/home/lukexie/Documents/Papers/storage/TRZ6CNVF/Leite et al. - 2023 - Detecting Misinformation with LLM-Predicted Credib.pdf;/home/lukexie/Documents/Papers/storage/D42MYVVV/2309.html}
+}
+
+@online{olssonIncontextLearningInduction2022,
+  type = {Machine Learning (cs.LG)},
+  title = {In-Context {{Learning}} and {{Induction Heads}}},
+  author = {Olsson, Catherine and Elhage, Nelson and Nanda, Neel and Joseph, Nicholas and DasSarma, Nova and Henighan, Tom and Mann, Ben and Askell, Amanda and Bai, Yuntao and Chen, Anna and Conerly, Tom and Drain, Dawn and Ganguli, Deep and Hatfield-Dodds, Zac and Hernandez, Danny and Johnston, Scott and Jones, Andy and Kernion, Jackson and Lovitt, Liane and Ndousse, Kamal and Amodei, Dario and Brown, Tom and Clark, Jack and Kaplan, Jared and McCandlish, Sam and Olah, Chris},
+  date = {2022-09-23},
+  eprint = {2209.11895},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2209.11895},
+  url = {http://arxiv.org/abs/2209.11895},
+  urldate = {2024-02-24},
+  abstract = {"Induction heads" are attention heads that implement a simple algorithm to complete token sequences like [A][B] ... [A] -{$>$} [B]. In this work, we present preliminary and indirect evidence for a hypothesis that induction heads might constitute the mechanism for the majority of all "in-context learning" in large transformer models (i.e. decreasing loss at increasing token indices). We find that induction heads develop at precisely the same point as a sudden sharp increase in in-context learning ability, visible as a bump in the training loss. We present six complementary lines of evidence, arguing that induction heads may be the mechanistic source of general in-context learning in transformer models of any size. For small attention-only models, we present strong, causal evidence; for larger models with MLPs, we present correlational evidence.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Machine Learning},
+  file = {/home/lukexie/Documents/Papers/storage/QSYKXHWP/Olsson et al. - 2022 - In-context Learning and Induction Heads.pdf;/home/lukexie/Documents/Papers/storage/QSW9UXIP/2209.html}
+}
+
+@inproceedings{schaefferAreEmergentAbilities2023,
+  title = {Are {{Emergent Abilities}} of {{Large Language Models}} a {{Mirage}}?},
+  booktitle = {Advances in {{Neural Information Processing Systems}} 36 Pre-Proceedings ({{NeurIPS}} 2023)},
+  author = {Schaeffer, Rylan and Miranda, Brando and Koyejo, Sanmi},
+  date = {2023-10-16},
+  volume = {36},
+  url = {https://proceedings.neurips.cc/paper_files/paper/2023/hash/adc98a266f45005c403b8311ca7e8bd7-Abstract-Conference.html},
+  urldate = {2024-02-17},
+  abstract = {Recent work claims that large language models display \textbackslash textit\{emergent abilities\}, abilities not present in smaller-scale models that are present in larger-scale models.What makes emergent abilities intriguing is two-fold: their \textbackslash textit\{sharpness\}, transitioning seemingly instantaneously from not present to present, and their \textbackslash textit\{unpredictability\}, appearing at seemingly unforeseeable model scales.Here, we present an alternative explanation for emergent abilities: that for a particular task and model family, when analyzing fixed model outputs, emergent abilities appear due the researcher’s choice of metric rather than due to fundamental changes in model behavior with scale. Specifically, nonlinear or discontinuous metrics produce apparent emergent abilities, whereas linear or continuous metrics produce smooth, continuous, predictable changes in model performance.We present our alternative explanation in a simple mathematical model, then test it in three complementary ways: we (1) make, test and confirm three predictions on the effect of metric choice using the InstructGPT/GPT-3 family on tasks with claimed emergent abilities, (2) make, test and confirm two predictions about metric choices in a meta-analysis of emergent abilities on BIG-Bench; and (3) show how to choose metrics to produce never-before-seen seemingly emergent abilities in multiple vision tasks across diverse deep networks.Via all three analyses, we provide evidence that alleged emergent abilities evaporate with different metrics or with better statistics, and may not be a fundamental property of scaling AI models.},
+  eventtitle = {Advances in {{Neural Information Processing Systems}} 36 Pre-Proceedings ({{NeurIPS}} 2023)},
+  langid = {english},
+  file = {/home/lukexie/Documents/Papers/storage/D627KN2V/9624_are_emergent_abilities_of_larg-Supplementary Material.pdf;/home/lukexie/Documents/Papers/storage/SM7TUWNJ/Schaeffer et al. - 2024 - Are Emergent Abilities of Large Language Models a .pdf}
+}
+
+@inproceedings{wangLargeLanguageModels2023,
+  title = {Large {{Language Models Are Implicitly Topic Models}}: {{Explaining}} and {{Finding Good Demonstrations}} for {{In-Context Learning}}},
+  shorttitle = {Large {{Language Models Are Implicitly Topic Models}}},
+  author = {Wang, Xinyi and Zhu, Wanrong and Saxon, Michael and Steyvers, Mark and Wang, William Yang},
+  date = {2023-07-16},
+  url = {https://openreview.net/forum?id=HCkI1b6ksc},
+  urldate = {2024-03-05},
+  abstract = {In recent years, pre-trained large language models (LLMs) have demonstrated remarkable efficiency in achieving an inference-time few-shot learning capability known as in-context learning. However, existing literature has highlighted the sensitivity of this capability to the selection of few-shot demonstrations. Current understandings of the underlying mechanisms by which this capability arises from regular language model pretraining objectives remain disconnected from the real-world LLMs. This study aims to examine the in-context learning phenomenon through a Bayesian lens, viewing real-world LLMs as implicit topic models. On this premise, we propose an algorithm to select optimal demonstrations from a set of annotated data with a small LLM, then directly generalize the selected demonstrations to larger LLMs. We demonstrate a significant 12.5\textbackslash\% improvement relative to the random selection baseline, averaged over eight GPT models on eight real-world text classification datasets. Our empirical findings support our hypothesis that LLMs implicitly infer a latent variable containing task information.},
+  eventtitle = {Workshop on {{Efficient Systems}} for {{Foundation Models}} @ {{ICML2023}}},
+  langid = {english},
+  file = {/home/lukexie/Documents/Papers/storage/2JN46G9U/Wang et al. - 2023 - Large Language Models Are Implicitly Topic Models.pdf}
+}
+
+@inproceedings{wangNoiseRobustFineTuningPretrained2023,
+  title = {Noise-{{Robust Fine-Tuning}} of {{Pretrained Language Models}} via {{External Guidance}}},
+  booktitle = {Findings of the {{Association}} for {{Computational Linguistics}}: {{EMNLP}} 2023},
+  author = {Wang, Song and Tan, Zhen and Guo, Ruocheng and Li, Jundong},
+  editor = {Bouamor, Houda and Pino, Juan and Bali, Kalika},
+  date = {2023-12},
+  pages = {12528--12540},
+  publisher = {Association for Computational Linguistics},
+  location = {Singapore},
+  doi = {10.18653/v1/2023.findings-emnlp.834},
+  url = {https://aclanthology.org/2023.findings-emnlp.834},
+  urldate = {2024-03-06},
+  abstract = {Adopting a two-stage paradigm of pretraining followed by fine-tuning, Pretrained Language Models (PLMs) have achieved substantial advancements in the field of natural language processing. However, in real-world scenarios, data labels are often noisy due to the complex annotation process, making it essential to develop strategies for fine-tuning PLMs with such noisy labels. To this end, we introduce an innovative approach for fine-tuning PLMs using noisy labels, which incorporates the guidance of Large Language Models (LLMs) like ChatGPT. This guidance assists in accurately distinguishing between clean and noisy samples and provides supplementary information beyond the noisy labels, thereby boosting the learning process during fine-tuning PLMs. Extensive experiments on synthetic and real-world noisy datasets further demonstrate the superior advantages of our framework over the state-of-the-art baselines.},
+  eventtitle = {Findings 2023},
+  file = {/home/lukexie/Documents/Papers/storage/UI6HFUFT/Wang et al. - 2023 - Noise-Robust Fine-Tuning of Pretrained Language Mo.pdf}
+}
+
+@article{weiEmergentAbilitiesLarge2022,
+  title = {Emergent Abilities of Large Language Models},
+  author = {Wei, Jason and Tay, Yi and Bommasani, Rishi and Raffel, Colin and Zoph, Barret and Borgeaud, Sebastian and Yogatama, Dani and Bosma, Maarten and Zhou, Denny and Metzler, Donald and Chi, Ed H. and Hashimoto, Tatsunori and Vinyals, Oriol and Liang, Percy and Dean, Jeff and Fedus, William},
+  date = {2022-08},
+  journaltitle = {Transactions on Machine Learning Research},
+  issn = {2835-8856},
+  url = {https://openreview.net/forum?id=yzkSU5zdwD},
+  abstract = {Scaling up language models has been shown to predictably improve performance and sample efficiency on a wide range of downstream tasks. This paper instead discusses an unpredictable phenomenon that we refer to as emergent abilities of large language models. We consider an ability to be emergent if it is not present in smaller models but is present in larger models. Thus, emergent abilities cannot be predicted simply by extrapolating the performance of smaller models. The existence of such emergence raises the question of whether additional scaling could potentially further expand the range of capabilities of language models.},
+  annotation = {Survey Certification},
+  file = {/home/lukexie/Documents/Papers/storage/JHG3MH8P/Wei et al. - 2022 - Emergent abilities of large language models.pdf}
+}
+
+@inproceedings{wiesLearnabilityInContextLearning2024,
+  title = {The {{Learnability}} of {{In-Context Learning}}},
+  booktitle = {Advances in {{Neural Information Processing Systems}}},
+  author = {Wies, Noam and Levine, Yoav and Shashua, Amnon},
+  date = {2024-02-13},
+  series = {{{NeurIPS}}' 23},
+  volume = {36},
+  url = {https://proceedings.neurips.cc/paper_files/paper/2023/hash/73950f0eb4ac0925dc71ba2406893320-Abstract-Conference.html},
+  urldate = {2024-02-19},
+  abstract = {In-context learning is a surprising and important phenomenon that emerged when modern language models were scaled to billions of learned parameters. Without modifying a large language model's weights, it can be tuned to perform various downstream natural language tasks simply by including concatenated training examples of these tasks in its input. Though disruptive for many practical applications of large language models, this emergent learning paradigm is not well understood from a theoretical perspective. In this paper, we propose a first-of-its-kind PAC based framework for in-context learnability, and use it to provide the first finite sample complexity results for the in-context learning setup. Our framework includes an initial pretraining phase, which fits a function to the pretraining distribution, and then a second in-context learning phase, which keeps this function constant and concatenates training examples of the downstream task in its input. We use our framework in order to prove that, under mild assumptions, when the pretraining distribution is a mixture of latent tasks (a model often considered for natural language pretraining), these tasks can be efficiently learned via in-context learning, even though the model's weights are unchanged and the input significantly diverges from the pretraining distribution. Our theoretical analysis reveals that in this setting, in-context learning is more about identifying the task than about learning it, a result which is in line with a series of recent empirical findings. We hope that the in-context learnability framework presented in this paper will facilitate future progress towards a deeper understanding of this important new learning paradigm.},
+  eventtitle = {Advances in {{Neural Information Processing Systems}} 36 Pre-Proceedings ({{NeurIPS}} 2023) {{Main Conference Track}}},
+  langid = {english},
+  file = {/home/lukexie/Documents/Papers/storage/7JVH7YLY/Wies et al. - 2024 - The Learnability of In-Context Learning.pdf}
+}
+
+@online{zhuLargeLanguageModels2023,
+  title = {Large {{Language Models}} Can {{Learn Rules}}},
+  shorttitle = {Hypotheses-to-{{Theories}} ({{HtT}})},
+  author = {Zhu, Zhaocheng and Xue, Yuan and Chen, Xinyun and Zhou, Denny and Tang, Jian and Schuurmans, Dale and Dai, Hanjun},
+  date = {2023-10-10},
+  eprint = {2310.07064},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2310.07064},
+  url = {http://arxiv.org/abs/2310.07064},
+  urldate = {2024-02-26},
+  abstract = {When prompted with a few examples and intermediate steps, large language models (LLMs) have demonstrated impressive performance in various reasoning tasks. However, prompting methods that rely on implicit knowledge in an LLM often hallucinate incorrect answers when the implicit knowledge is wrong or inconsistent with the task. To tackle this problem, we present Hypotheses-to-Theories (HtT), a framework that learns a rule library for reasoning with LLMs. HtT contains two stages, an induction stage and a deduction stage. In the induction stage, an LLM is first asked to generate and verify rules over a set of training examples. Rules that appear and lead to correct answers sufficiently often are collected to form a rule library. In the deduction stage, the LLM is then prompted to employ the learned rule library to perform reasoning to answer test questions. Experiments on both numerical reasoning and relational reasoning problems show that HtT improves existing prompting methods, with an absolute gain of 11-27\% in accuracy. The learned rules are also transferable to different models and to different forms of the same problem.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language},
+  file = {/home/lukexie/Documents/Papers/storage/CPVXH4JI/Zhu et al. - 2023 - Large Language Models can Learn Rules.pdf;/home/lukexie/Documents/Papers/storage/CEEWE5AV/2310.html}
+}
