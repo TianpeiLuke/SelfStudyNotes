@@ -87,7 +87,7 @@ date of note: 2024-05-29
 >[!important]
 >It is *reminiscent* of **zero-one laws** in *probability theory*, which basically state that *events* that are determined by **many random variables** tend to have **probabilities either zero or one**.
 
-- [[Komogorov Zero-One Law]]
+- [[Kolmogorov Zero-One Law]]
 
 
 

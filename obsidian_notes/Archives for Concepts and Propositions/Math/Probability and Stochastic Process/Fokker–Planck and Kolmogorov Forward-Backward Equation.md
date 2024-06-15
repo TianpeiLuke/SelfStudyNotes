@@ -19,15 +19,265 @@ date of note: 2024-06-11
 >[!important]
 >**Name**: *Fokker–Planck Equation* and *Kolmogorov Forward-Backward Equation*
 
+![[Infinitesimal Generator of Stochastic Differential Equation#^1bd4b1]]
+
+### Kolmogorov Backward Equation
+
+>[!important] Definition
+>Let $L$ be a *differential operator* such that
+>$$
+>(L\,f)(x ,s) = \mu(x, s)\,\frac{\partial }{\partial x }f(x, s) +  \frac{1}{2}\sigma^2(x,s)\frac{\partial^2 }{ \partial x^2 }f(x,s). 
+>$$
+>
+>A **fundamental solution** of the *PDE*
+>$$
+>\begin{align*}
+> \frac{ \partial}{ \partial s }u(x, s) + L\,u(x, s) = 0 
+>\end{align*}
+>$$
+>is a *non-negative function* $p(y, t, x, s)$ with the following properties:
+>- it is *jointly continuous* in $(y, t, x, s)$,  *twice continuous differentiable* in $x$ and satisfies above PDE *with respect to* $s$ and $x$.
+>- for any *bounded continuous* function $f: \mathbb{R} \to \mathbb{R}$, and any $t >0$, 
+>  $$
+>  \begin{align*}
+>  u(x , s) = \int_{\mathbb{R}}\,f(y)\;p(y, t, x, s)dy
+>\end{align*}
+> $$
+> is *bounded*, satisfies *the above PDE* and $$\lim_{ s \to t }u(x ,s) = f(x),$$ for $x\in \mathbb{R}.$
 
 
-
+- [[Infinitesimal Generator of Stochastic Differential Equation]]
+- [[Markov Chain Transition Kernel and Transition Function]]
 - [[Stochastic Differential Equations]]
+
+>[!important] Definition
+>Let $L$ be a *partial differential operator*:
+>$$
+>(L\,f) := \mu \,\frac{\partial }{\partial x }f  +  \frac{1}{2}\sigma^2\frac{\partial^2 }{ \partial x^2 }f.
+>$$
+>
+>The *partial differential equation*
+>$$
+>\begin{align*}
+> \frac{ \partial}{ \partial s }u(x, s) + L\,u(x, s) = 0 
+>\end{align*}
+>$$
+>is called the **Kolmogorov's backward equation**, since it is a PDE in *backward variable* $(x,s)$.
+
+
+### Kolmogorov Forward Equation (Fokker–Planck Equation)
+
+>[!important] Theorem (Kolmogorov Forward Equation)
+>Suppose that $\sigma(x, t)$ and $\mu(x, t)$ are *bounded* and *continuous functions* such that 
+>- $$\sigma^2(x, t) \ge c > 0,$$
+>- $\mu(x, t)$ and $\sigma^2(x, t)$ satisfies a **Hölder condition** *with respect to* $x$ and $t$, that is, for all $x, y \in \mathbb{R}$ and $s,t >0$, 
+>  $$
+>  \lvert \mu(y, t) - \mu(x ,s) \rvert + \lvert \sigma^2(y, t) - \sigma^2(x, s) \rvert \le K\left(\lvert y -x \rvert^{\gamma} + \lvert t - s \rvert^{\gamma}  \right).  
+> $$
+>
+>Then the *PDE*
+>$$
+>\begin{align*}
+> \frac{ \partial}{ \partial s }u(x, s) + L\,u(x, s) = 0 
+>\end{align*}
+>$$
+>has a **fundamental solution** $p(y, t, x, s)$, which is **unique** and is **strictly positive.**
+>
+>If in addition $\sigma(x, t)$ and $\mu(x, t)$ have **two partial derivatives** with respect to $x$, which are *bounded* and *Hölder condition* with respect to $x$, then $p(y, t, x, s)$ as a *function in $y$ and $t$*, satisfies the PDE
+>$$
+>\begin{align*}
+>- \frac{\partial}{ \partial t } p + \frac{1}{2}\frac{\partial^2 }{ \partial y^2 }\left(\sigma^2\, p\right) - \frac{\partial }{\partial y }\left(\mu\,p\right) = 0
+>\end{align*}
+>$$
+
+- [[Hölder Condition and Hölder Continuous Function]]
+- [[Existence and Uniqueness of Solution for Stochastic Differential Equation]]
+- [[Introduction to Stochastic Calculus by Klebaner]] pp 144
+
+
+>[!important] Definition
+>The *partial differential equation* of $v(y, t) := p(y, t, x, s)$ 
+>$$
+>\begin{align*}
+>- \frac{\partial}{ \partial t } v(y, t) + \frac{1}{2}\frac{\partial^2 }{ \partial y^2 }\left(\sigma^2(y,t)\, v(y,t)\right) - \frac{\partial }{\partial y }\left(\mu(y,t)\,v(y,t)\right) = 0
+>\end{align*}
+>$$
+>is called the **Kolmogorov's forward equation**, since it is a PDE in *forward variable* $(y,t)$.
+>
+>It is also known as the **Fokker–Planck equation**, *diffusion equation*.
+
+### Markov Process as Weak Solution of SDE
+
+>[!important] Theorem
+>Suppose that $\sigma(x, t)$ and $\mu(x, t)$ are *bounded* and *continuous functions* such that 
+>- $$\sigma^2(x, t) \ge c > 0,$$
+>- $\mu(x, t)$ and $\sigma^2(x, t)$ satisfies a **Hölder condition** *with respect to* $x$ and $t$, that is, for all $x, y \in \mathbb{R}$ and $s,t >0$, 
+>  $$
+>  \lvert \mu(y, t) - \mu(x ,s) \rvert + \lvert \sigma^2(y, t) - \sigma^2(x, s) \rvert \le K\left(\lvert y -x \rvert^{\gamma} + \lvert t - s \rvert^{\gamma}  \right).  
+> $$
+>
+>Then 
+>- the *PDE* 
+>  $$
+>\begin{align*}
+> \frac{ \partial}{ \partial s }u(x, s) + L\,u(x, s) = 0 
+>\end{align*}
+>$$
+> has a **unique** *fundamental solution* $p(y, t, x, s)$.
+>
+>- The function $$P(y, t, x, s) := \int_{-\infty}^{y}p(u, t, x, s)du$$ uniquely defines a **transition function**.
+>  
+>- Moreover, this function has the property that for any bounded function $f(x, t)$ *twice continuously differentiable* in $x$ and  *once continuously differentiable* in $t$, i.e. $f\in \mathcal{C}_{b}^{2,1}(\mathbb{R} \times [0,T])$
+>  $$
+>  \begin{align*}
+>  &\int_{\mathbb{R}}f(y, t)\;P(dy, t, x ,s) - f(x ,s)\\
+>  &= \int_{s}^{t}\int_{\mathbb{R}}\,\left(\frac{\partial}{\partial u } + L \right)f(y, u)\;P(dy, u, x, s)\,du,
+>\end{align*}
+> $$
+> for all $0 \le s <t$, $x\in \mathbb{R}.$
+
 
 ## Explanation
 
+>[!important]
+>The above theorem provides an **one-to-one correspondence** of **Kolmogorov's forward equation** 
+>$$
+>\begin{align*}
+> \frac{ \partial}{ \partial s }u(x, s) + L\,u(x, s) = 0 
+>\end{align*}
+>$$
+>and **backward equation** 
+>$$
+>\begin{align*}
+>- \frac{\partial}{ \partial t } v(y, t) + \frac{1}{2}\frac{\partial^2 }{ \partial y^2 }\left(\sigma^2(y,t)\, v(y,t)\right) - \frac{\partial }{\partial y }\left(\mu(y,t)\,v(y,t)\right) = 0
+>\end{align*}
+>$$
+>via the **stochastic differential equation** 
+>$$
+>\begin{align*}
+>dX_{t} &= \mu(X_{t}, t)\,dt + \, \sigma\left(X_{t}, t\right)\,dW_{t}. 
+>\end{align*}
+>$$
+
+## Diffusion Process
+
+>[!important]
+>The function $p(y, t, x, s)$ in above theorem, satisfies both **Kolmogorov's forward equation**, and **Kolmogorov's backward equation**. 
+>
+>Thus its indefinite integral $P(y, t, x, s)$ **uniquely** determines a *Markov chain* $(X_{t})$ with *transition function*
+>$$
+>P(y, t, x, s) = \mathcal{P}(X_{t} \le y | X_{s} = x).
+>$$
+>
+
+- [[Markov Chain and Markov Process]]
+- [[Markov Chain Transition Kernel and Transition Function]]
+- [[Infinitesimal Generator of Stochastic Differential Equation]]
+
+>[!important] Definition
+>The Markov process defined above is called a **diffusion process** and the differential operator $L$ is called its **generator.**
+
+>[!important]
+>In particular, the theorem states that the **diffusion process** $X_{t}$ satisfies the **stochastic differential equation**
+>$$
+>\begin{align*}
+>dX_{t} &= \mu(X_{t}, t)\,dt + \, \sigma\left(X_{t}, t\right)\,dW_{t}. 
+>\end{align*}
+>$$
+>In other word, $X_{t}$ is the *weak solution* of SDE.
+
+- [[Stochastic Differential Equations]]
+- [[Weak Solution to Stochastic Differential Equation]]
 
 
+## Multi-dimensional Case
+
+>[!info]
+>Consider 
+>$$
+>d\boldsymbol{X} = \boldsymbol{b}(\boldsymbol{X}, t)dt + \boldsymbol{A}(\boldsymbol{X}, t)\,d\boldsymbol{W}
+>$$
+>where $\boldsymbol{b} = [b^1 \,{,}\ldots{,}\,b^n]$ and $\boldsymbol{A} = [a^{i,j}]_{n \times m}$
+
+>[!important] Definition
+>Let $L$ be a *partial differential operator*: (under *Einstein Summation*)
+>$$
+>\begin{align*}
+>L &:=  b^i\frac{ \partial  }{ \partial x^i } + c^{i,j}\frac{ \partial^2  }{ \partial x^i\,x^{j} }
+>\end{align*} 
+>$$ 
+>and $$c^{i,j} := \frac{1}{2} \sum_{k=1}^{m} a^{i,k}a^{j,k}.$$
+>
+>The *partial differential equation*
+>$$
+>\begin{align*}
+> \frac{ \partial}{ \partial s }u(x, s) + L\,u(x, s) = 0 
+>\end{align*}
+>$$
+>is called the **Kolmogorov's backward equation**, since it is a PDE in *backward variable* $(x,s) \in \mathbb{R}^n \times [0,T]$.
+
+- [[Einstein Summation Convention]]
+
+
+>[!important] Definition
+>The *partial differential equation* of $v(y, t) := p(y, t, x, s)$ (under *Einstein convention*)
+>$$
+>\begin{align*}
+>- \frac{\partial}{ \partial t } v(y, t) + \frac{1}{2}\frac{ \partial^2  }{ \partial y^i\,y^{j} }\left(c^{i,j}(y,t)\, v(y,t)\right) - \frac{\partial }{\partial y^i }\left(b^i(y,t)\,v(y,t)\right) = 0
+>\end{align*}
+>$$
+>is called the **Kolmogorov's forward equation**, since it is a PDE in *forward variable* $(y,t)$.
+>
+>It is also known as the **Fokker–Planck equation**, *diffusion equation*.
+
+
+## Functional Form
+
+ ![[Infinitesimal Generator of Stochastic Differential Equation#^8f9111]]
+
+
+>[!important]
+>The **backward equation** can be represented by generator $\mathcal{A}$ of Markov process $X_{t}$ as
+>$$
+>\frac{ \partial  }{ \partial t }u + \mathcal{A}u = 0 
+>$$
+>and the **forward equation** can be represented by the **adjoint** of $\mathcal{A}$ as
+>$$
+>\frac{ \partial}{ \partial t }p - \mathcal{A}^{*}p = 0 
+>$$
+>where
+>$$
+>\mathcal{A}^{*}p := L^{*}p = \frac{1}{2}\frac{ \partial^2  }{ \partial y^i\,y^{j} }\left(c^{i,j}(y,t)\, p(y,t, \cdot, \cdot)\right) - \frac{\partial }{\partial y^i }\left(b^i(y,t)\,p(y,t, \cdot, \cdot)\right)
+>$$
+>and the *adjoint* is defined by 
+>$$
+>\left\langle g\,,\,Lf \right\rangle_{L^2} = \left\langle  L^{*}g\,,\,f \right\rangle_{L^2}
+>$$
+
+- [[Infinitesimal Generator of Stochastic Differential Equation]]
+- [[Adjoint of Bounded Operator in Hilbert Space]]
+
+- [[Introduction to Stochastic Calculus by Klebaner]] pp 158
+
+## Vector Field and Operator Form
+
+>[!important]
+>The **Fokker–Planck equation** has also a **differential operator** form
+>$$
+>\frac{ \partial}{ \partial t }v - \frac{1}{2} \Delta \left(\boldsymbol{\sigma}^T\boldsymbol{\sigma}  v\right) + \nabla \cdot \left(\boldsymbol{\mu} v\right) = 0 
+>$$
+>where $$\nabla \cdot \boldsymbol{f} := \text{div}(\boldsymbol{f}) = \sum_{i}\frac{ \partial}{ \partial x^i }f^{i}(x) $$ is the **divergence operator** and
+>$$
+>\Delta g := \sum_{i,j=1}^{n}\frac{ \partial^2  }{ \partial x^i\,x^{j} }g
+>$$
+>is **the Laplace operator**
+>
+>$$
+>\Delta f = \nabla \cdot \left( \nabla f \right)
+>$$
+
+- [[Divergence of Vector Field on Riemannian Manifold]]
+- [[Laplacian of Smooth Map on Manifold]]
 
 
 
@@ -56,4 +306,7 @@ date of note: 2024-06-11
 - [[Introduction to Stochastic Calculus by Klebaner]]
 - [[Optimal Transport for Applied Mathematicians by Santambrogio]]
 - Oksendal, B. (2013). _Stochastic differential equations: an introduction with applications_. Springer Science & Business Media.
+
 - Wikipedia [Fokker-Planck_equation](https://en.wikipedia.org/wiki/Fokker%E2%80%93Planck_equation)
+- Wikipedia [Kolmogorov_backward_equations](https://en.wikipedia.org/wiki/Kolmogorov_backward_equations_(diffusion))
+- Wikipedia [Kolmogorov_equations](https://en.wikipedia.org/wiki/Kolmogorov_equations)

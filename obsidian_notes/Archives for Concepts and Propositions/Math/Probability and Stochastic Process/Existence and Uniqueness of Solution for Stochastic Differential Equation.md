@@ -20,8 +20,8 @@ date of note: 2024-06-11
 
 >[!important] Theorem
 >Suppose that $b: \mathbb{R}^n \times [0,T] \to \mathbb{R}^n$ and $A: \mathbb{R}^n \times [0,T] \to \mathbb{M}^{n\times m}$ are both *continuous function* and satisfies the following conditions:
->- **Uniformly Lipschitz** with respect to $x$: $$\lVert b(x, t) - b(y, t) \rVert \le L\lVert x - y \rVert$$ and  $$\lVert A(x, t) - A(y, t) \rVert \le L\lVert x - y \rVert$$ for all $t\in [0,T]$, $x, y \in \mathbb{R}^n$
->- **Bounded**: $$\lVert b(x, t) \rVert  \le L(1 + \lVert x \rVert )$$ and $$\lVert A(x, t) \rVert  \le L(1 + \lVert x \rVert )$$ for all $t\in [0,T]$, $x \in \mathbb{R}^n$
+>- **Uniformly Lipschitz** with respect to $x$: $$\lVert b(x, t) - b(y, t) \rVert + \lVert A(x, t) - A(y, t) \rVert\le L\lVert x - y \rVert$$ for all $t\in [0,T]$, $x, y \in \mathbb{R}^n$
+>- **Linear Growth**: $$\lVert b(x, t) \rVert  \le L(1 + \lVert x \rVert )$$ and $$\lVert A(x, t) \rVert  \le L(1 + \lVert x \rVert )$$ for all $t\in [0,T]$, $x \in \mathbb{R}^n$
 >
 >for some constant $L$.
 >
@@ -65,6 +65,8 @@ date of note: 2024-06-11
 ##  Recommended Notes and References
 
 - [[Stochastic Differential Equations]]
+- [[Fokker–Planck and Kolmogorov Forward-Backward Equation]]
+
 
 - [[Lipschitz Continuous Function]]
 - [[Contraction Function]]

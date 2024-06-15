@@ -38,6 +38,26 @@ date of note: 2024-05-15
 
 ## Explanation
 
+>[!info]
+>Intuitively, the **super-martingale** is a **non-increasing process**
+
+- [[Predictable and Increasing Process]]
+
+>[!important]
+>This theorem is a stochastic variant of the **monotone convergence theorem**.
+
+- [[Monotone Convergence Theorem]]
+
+>[!info]
+>Similar convergence results hold for **sub-martingale**, which is a *increasing process*.
+>
+>As a result, this theorem holds for **martingale.**
+
+
+>[!important]
+>This theorem is a generalization of the **strong law of large numbers (SLLN)** from **independent samples** to **martingales**.
+
+- [[Kolmogorov Strong Law of Large Numbers]]
 
 
 
@@ -50,3 +70,5 @@ date of note: 2024-05-15
 - [[Bandit Algorithms by Lattimore]]
 - [[Probability and Measure by Billingsley]]
 - [[A Probability Path by Resnick]]
+- [[Introduction to Stochastic Calculus by Klebaner]]
+- Wikipedia [martingale_convergence_theorems](https://en.wikipedia.org/wiki/Doob%27s_martingale_convergence_theorems)

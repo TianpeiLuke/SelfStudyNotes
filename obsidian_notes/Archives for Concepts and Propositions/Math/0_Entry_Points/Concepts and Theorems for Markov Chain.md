@@ -25,7 +25,7 @@ date of note: 2024-05-30
 - [[Concepts and Theorems in Probability Theory]]
 
 - [[Markov Chain and Markov Process]]
-- [[Markov Chain Transition Kernel]]
+- [[Markov Chain Transition Kernel and Transition Function]]
 
 - [[Integral Operator associated with Transition Kernel]]
 - [[Chapman-Kolmogorov Equation]]
@@ -50,7 +50,7 @@ date of note: 2024-05-30
 
 ### Generator of Continuous Time Markov Chain
 
-- [[Generator of Markov Process]]
+- [[Infinitesimal Generator of Markov Process]]
 
 
 

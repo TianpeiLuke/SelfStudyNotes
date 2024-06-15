@@ -52,7 +52,6 @@ date of note: 2024-06-12
 - [[Absolutely Continuous Function]]
 - [[Uniform Continuity Theorem]]
 - [[Hölder Space]]
-- [[Archives for Concepts and Propositions/Math/Measure Theory and Real Analysis/Hölder Inequality]]
 
 - [[Sample Path of Brownian Motion]]
 

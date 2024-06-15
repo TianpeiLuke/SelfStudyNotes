@@ -44,7 +44,7 @@ date of note: 2024-05-07
 ## Explanation
 
 >[!info]
->The conditional probability $\mathcal{P}[A | \mathscr{F}]$ can be defined using [[Markov Chain Transition Kernel]]
+>The conditional probability $\mathcal{P}[A | \mathscr{F}]$ can be defined using [[Markov Chain Transition Kernel and Transition Function]]
 
 >[!important] Definition (Kernel Version)
 >Consider a *kernel function* $K: \Omega \times \mathscr{F} \to \mathbb{R}$ satisfying the two conditions below:
@@ -83,6 +83,6 @@ date of note: 2024-05-07
 - [[Probability Space]]
 - [[Random Element and Random Variable]]
 - [[Conditional Expectation]]
-- [[Markov Chain Transition Kernel]]
+- [[Markov Chain Transition Kernel and Transition Function]]
 
 - Github Note [link](https://github.com/TianpeiLuke/SelfStudyNotes/tree/master/self-study/probability_and_measure_theory)

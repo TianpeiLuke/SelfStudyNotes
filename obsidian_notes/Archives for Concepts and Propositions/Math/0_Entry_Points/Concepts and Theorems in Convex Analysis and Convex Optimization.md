@@ -75,11 +75,13 @@ date of note: 2024-05-11
 ### Convex Optimization Problems
 
 - [[Convex Optimization Problem]]
+- [[Convex Bifunctions]]
 - [[Lagrangian Function]]
 - [[Lagrangian Dual Function]]
 - [[Lagrange Dual Problem]]
 - [[Karush-Kuhn-Tucker Optimality Condition]]
 - [[Fenchel Duality Theorem]]
+
 
 ### Fixed Point Theorem
 
@@ -91,6 +93,11 @@ date of note: 2024-05-11
 
 ### Saddle-Point and Minimax Theory
 
+- [[Minimax Problem and Saddle Point]]
+- [[Saddle Function]]
+- [[Saddle-Point Bifurcation]]
+- [[Conjugate Saddle Function]]
+- [[Minimax Theorem]]
 
 
 ## Explanation

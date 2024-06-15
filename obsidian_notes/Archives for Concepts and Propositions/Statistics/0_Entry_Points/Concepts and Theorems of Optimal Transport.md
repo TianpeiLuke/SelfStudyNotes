@@ -69,7 +69,7 @@ routing, involve moving distributions, and that thread appears in all of the sem
 - [[Itô Stochastic Integration]]
 - [[Stochastic Differential]]
 - [[Stochastic Differential Equations]]
-- [[Generator of Stochastic Differential Equation]]
+- [[Infinitesimal Generator of Stochastic Differential Equation]]
 - [[Fokker–Planck and Kolmogorov Forward-Backward Equation]]
 - [[Fokker–Planck Equation via Wasserstein Distance]]
 

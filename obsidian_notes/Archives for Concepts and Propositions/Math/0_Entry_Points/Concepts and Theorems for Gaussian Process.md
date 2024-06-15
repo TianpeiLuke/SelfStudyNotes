@@ -121,7 +121,7 @@ date of note: 2024-05-30
 - [[Itô Stochastic Integration]]
 - [[Itô Isometry]]
 - [[Itô Martingale Representation Theorem]]
-- [[Itô Process and Itô Diffusion]]
+- [[Itô Process and Diffusion Process]]
 - [[Itô Chain Rule and Itô Formula]]
 
 

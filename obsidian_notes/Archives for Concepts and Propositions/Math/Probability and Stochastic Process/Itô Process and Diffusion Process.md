@@ -29,29 +29,13 @@ date of note: 2024-06-07
 >dX_{t} = F(X_{t}, t)\,dt + G(X_{t}, t)\,dW
 >$$
 
-- [[Stochastic Differential]]
+
 - [[Stochastic Differential Equations]]
 - [[Itô Stochastic Integration]]
-- [[Itô Chain Rule and Itô Formula]]
-
->[!important] Definition
->An *Itô process (Itô diffusion)* $(X_{t}, t\in [0,T])$ is called **time-homogeneous** if it satisfies the stochastic differential equation:
->$$
->dX_{t} = F(X_{t})\,dt + G(X_{t})\,dW
->$$
->where $F$ and $G$ satisfies the **Lipschitz conditions**
->$$\lVert F(x) - F(y) \rVert \le L\lVert x - y \rVert$$ and  $$\lVert G(x) - G(y) \rVert \le L\lVert x - y \rVert$$ for all $t\in [0,T]$, $x, y \in \mathbb{R}^n$
-
-- [[Existence and Uniqueness of Solution for Stochastic Differential Equation]]
-- [[Lipschitz Continuous Function]]
 
 
 ## Expansion
 
->[!important]
->A time-homogeneous differential equation is a **global vector field** since its coordinate functions is **independent** with the *position* (i.e. the time $t$) of the vector field
-
-- [[Vector Field on Manifold]]
 
 ## Property
 
@@ -78,9 +62,10 @@ date of note: 2024-06-07
 -----------
 ##  Recommended Notes and References
 
+- [[Time Homogeneous Diffusion and SDE]]
+- [[Stochastic Differential Equations]]
 
-- [[Stochastic Differential]]
-- [[Itô Stochastic Integration]]
+
 - [[Adapted Stochastic Process and Non-anticipating Process]]
 - [[Progressively Measurable Stochastic Process]]
 - [[Brownian Motion Wiener Process]]

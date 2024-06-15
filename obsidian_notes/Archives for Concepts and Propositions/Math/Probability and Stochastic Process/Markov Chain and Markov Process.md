@@ -31,7 +31,7 @@ date of note: 2024-04-18
 \end{align*}
 >$$
 
-- [[Markov Chain Transition Kernel]]
+- [[Markov Chain Transition Kernel and Transition Function]]
 - [[Stochastic Process]]
 
 >[!important] Definition
@@ -83,7 +83,7 @@ date of note: 2024-04-18
 
 ## Key concepts of Markov Chain
 
-- [[Markov Chain Transition Kernel]]
+- [[Markov Chain Transition Kernel and Transition Function]]
 
 ## Continuous Time Markov Process
 
@@ -94,7 +94,7 @@ date of note: 2024-04-18
 -----------
 ##  Recommended Notes and References
 
-- [[Markov Chain Transition Kernel]]
+- [[Markov Chain Transition Kernel and Transition Function]]
 - [[Martingale]]
 - [[Filtration]]
 

@@ -19,13 +19,16 @@ date of note: 2024-05-12
 ## Explanation
 
 
+- [[Langevin Equation]]
+- [[Fokker–Planck and Kolmogorov Forward-Backward Equation]]
 
 
 
 -----------
 ##  Recommended Notes and References
 
-- [[Langevin Equation]]
+
+
 
 - [[Wasserstein Distance]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]

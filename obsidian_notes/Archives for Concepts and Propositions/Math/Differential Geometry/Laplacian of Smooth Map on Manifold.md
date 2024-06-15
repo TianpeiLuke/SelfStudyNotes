@@ -39,3 +39,4 @@ date of note: 2024-05-14
 - [[Gradient of Smooth Map]]
 
 - [[Concepts and Theorems for Riemannian Manifold]]
+- Wikipedia [Laplace_operator](https://en.wikipedia.org/wiki/Laplace_operator)

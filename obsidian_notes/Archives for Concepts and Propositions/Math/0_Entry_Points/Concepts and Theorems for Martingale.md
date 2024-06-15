@@ -16,7 +16,7 @@ date of note: 2024-05-15
 
 - [[Conditional Expectation]]
 - [[Conditional Probability]]
-- [[Markov Chain Transition Kernel]]
+- [[Markov Chain Transition Kernel and Transition Function]]
 
 
 ### Martingale and Stopping Time
@@ -50,6 +50,11 @@ date of note: 2024-05-15
 
 - [[Azuma-Hoeffding Inequality]]
 - [[Bernstein Inequality for Martingale]]
+
+### Quadratic Variation of Martingale
+
+- [[Quadratic Variation of Martingale]]
+
 
 
 ## Explanation

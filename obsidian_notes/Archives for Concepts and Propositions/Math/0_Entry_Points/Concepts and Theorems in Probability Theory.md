@@ -60,7 +60,7 @@ date of note: 2024-05-13
 - [[Borel Zero-One Law]]
 - [[Tail sigma Algebra]]
 - [[Almost Trivial sigma Algebra]]
-- [[Komogorov Zero-One Law]]
+- [[Kolmogorov Zero-One Law]]
 
 
 ## Modes of Convergence
@@ -98,7 +98,7 @@ date of note: 2024-05-13
 
 - [[Conditional Expectation]]
 - [[Conditional Probability]]
-- [[Markov Chain Transition Kernel]]
+- [[Markov Chain Transition Kernel and Transition Function]]
 
 
 

@@ -35,7 +35,7 @@ date of note: 2024-06-07
 >We call the above equation **Itô's Chain Rule** or **Itô's Formula**.
 
 
-- [[Itô Process and Itô Diffusion]]
+- [[Itô Process and Diffusion Process]]
 - [[Stochastic Differential]]
 - [[Itô Stochastic Integration]]
 - [[Progressively Measurable Stochastic Process]]
@@ -86,6 +86,28 @@ date of note: 2024-06-07
 >&\quad + \sum_{i=1}^{n} u_{x_{i}}(\left(X_{t}^1 \,{,}\ldots{,}\, X_{t}^n \right)\,,\, t)\,dX^{i}_{t} \\
 >&\quad + \frac{1}{2}\,\sum_{i=1}^{n}\sum_{j=1}^{n}u_{x_{i} x_{j}}(\left(X_{t}^1 \,{,}\ldots{,}\, X_{t}^n \right)\,,\, t)\,\sum_{k=1}^{m}G^{i,k}_{t}\,G^{j,k}_{t}\,dt
 >\end{align*}
+>$$
+
+### Compact Form via Generator
+
+- [[Infinitesimal Generator of Stochastic Differential Equation]]
+
+>[!important] Itô Formula (Generator)
+>Let $(X_{t})$ be a $n$-dimensional *time-homogeneous Itô Process* satisfying the SDE 
+>$$
+>dX_{t} = b(X_{t})\,dt + A(X_{t})\,dW,
+>$$
+>where $b = (b^1 \,{,}\ldots{,}\,b^n)$, $A = [a^{i,j}]_{n \times m}$ and $(W_{t})$ is an $m$-dimensional Wiener process.
+>
+>And let $L$ be the **(infinitesimal) generator** of $X_{t}$,  
+>$$
+>Lu: = b^i\frac{ \partial  }{ \partial x^i }u + c^{i,j}\frac{ \partial^2  }{ \partial x^i\,x^{j} }u
+>$$
+>where $\boldsymbol{C} = [c^{i,j}] = \boldsymbol{A}^T\boldsymbol{A}.$ Ant it follows the [[Einstein Summation Convention]].
+>
+>For any function $u(x, t)$ that is *twice continuously differentiable* at $x$ and *once continuous differentiable* at $t$,  $X_{t}$ satisfies the following SDE 
+>$$
+>du\left(X_{t}, t\right) = \left(L\,u + \frac{ \partial  }{ \partial t }u\right) (X_{t}, t)\, dt +   \left(\nabla u(X_{t}, t) \right)^T\,\boldsymbol{A}(X_{t}, t)\,dW_{t}
 >$$
 
 

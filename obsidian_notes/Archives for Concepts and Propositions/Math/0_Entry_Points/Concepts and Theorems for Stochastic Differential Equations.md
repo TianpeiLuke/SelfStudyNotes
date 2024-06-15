@@ -54,7 +54,7 @@ date of note: 2024-05-30
 - [[Itô Stochastic Integration]]
 - [[Itô Isometry]]
 - [[Itô Martingale Representation Theorem]]
-- [[Itô Process and Itô Diffusion]]
+- [[Itô Process and Diffusion Process]]
 - [[Stochastic Differential]]
 - [[Itô Chain Rule and Itô Formula]]
 - [[Stochastic Integral of Brownian Motion]]
@@ -72,22 +72,29 @@ date of note: 2024-05-30
 - [[Properties of Solution for Stochastic Differential Equation]]
 - [[Linear Stochastic Differential Equation]]
 - [[Homogeneous Linear Stochastic Differential Equation]]
-- [[General Solution of Linear Stochastic Differential Equation]]
+- [[Linear Stochastic Differential Equation Explicit Solution]]
+- [[Itô Process and Diffusion Process]]
+- [[Time Homogeneous Diffusion and SDE]]
 
 
 ### Diffusion Process
 
 - [[Stopping Time and Stochastic Integral]]
-- [[Generator of Stochastic Differential Equation]]
-- [[Generator of Brownian Motion and Laplacian]]
-- [[Fokker–Planck and Kolmogorov Forward-Backward Equation]]
-- [[Fokker–Planck Equation via Wasserstein Distance]]
+- [[Infinitesimal Generator of Stochastic Differential Equation]]
+- [[Infinitesimal Generator of Brownian Motion and Laplacian]]
+
+### Weak Solution to SDE
+
+- [[Weak Solution to Stochastic Differential Equation]]
+- [[Construction of Weak Solution to SDE]]
+- [[Martingale Problem]]
 
 
 ### Partial Differential Equations via SDE
 
+- [[Fokker–Planck and Kolmogorov Forward-Backward Equation]]
 - [[Feynman-Kac Formula]]
-
+- [[Stochastic Representation of Solutions of ODE]]
 
 ### Optimal Stopping
 

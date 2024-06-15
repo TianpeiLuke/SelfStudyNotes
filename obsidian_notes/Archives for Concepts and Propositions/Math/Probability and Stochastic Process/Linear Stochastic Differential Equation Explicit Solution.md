@@ -168,6 +168,103 @@ date of note: 2024-06-11
 >$$
 >We see that the solution is a **multiplicative scaling** to $X_{0}.$
 
+## Separation of Variables
+
+>[!important]
+>For **homogeneous SDE**
+>$$
+>\left\{ 
+>\begin{align*}
+>dX &= D(t)\,X\;dt + F(t)\,X\,dW\\
+>X(0)&= X_{0}
+>\end{align*}
+>\right.
+>$$ 
+>
+>We can find a solution with **product form**
+>$$
+>X(t) = X_{1}(t)\,X_{2}(t)
+>$$
+>where $X_{1}$ is the solution of another **homogeneous SDE**,
+>$$
+>\left\{ 
+>\begin{align*}
+>dX_{1} &= F(t)\,X_{1}\,dW\\
+>X(0)&= X_{0}
+>\end{align*}
+>\right.
+>$$ 
+>and $X_{2}$ satisfies the following SDE
+>$$
+>\left\{ 
+>\begin{align*}
+>dX_{2} &= A(t)\,X\;dt  + B(t)\,dW\\
+>X(0)&= 1
+>\end{align*}
+>\right.
+>$$ 
+>with $A, B$ to be selected.
+
+>[!important] 
+>From [[Itô Product Rule and Stochastic Integration by Parts]], We can prove that $X_{2}$ is the solution of the following homogeneous SDE.
+>$$
+>\left\{ 
+>\begin{align*}
+>dX_{2} &= D(t)\,X\;dt \\
+>X(0)&= 1
+>\end{align*}
+>\right.
+>$$ 
+
+- [[Introduction to Stochastic Differential Equations by Evans]] pp 100
+- [[Homogeneous Linear Stochastic Differential Equation]]
+
+>[!important]
+>For **general linear SDE**
+>$$
+>\left\{ 
+>\begin{align*}
+>dX &= (c(t) + D(t)\,X)\;dt + (e(t) + F(t)\,X)\,dW\\
+>X(0)&= X_{0}
+>\end{align*}
+>\right.
+>$$ 
+>
+>We can find a solution with **product form**
+>$$
+>X(t) = X_{1}(t)\,X_{2}(t)
+>$$
+>where $X_{1}$ is the solution of a **homogeneous SDE**,
+>$$
+>\left\{ 
+>\begin{align*}
+>dX_{1} &= D(t)\,X_{1}\;dt + F(t)\,X_{1}\,dW\\
+>X(0)&= 1
+>\end{align*}
+>\right.
+>$$ 
+>and $X_{2}$ satisfies the following **homogeneous SDE in narrow sense**
+>$$
+>\left\{ 
+>\begin{align*}
+>dX_{2} &= A(t)\,X_{2}\;dt  + B(t)\,dW\\
+>X(0)&= X_{0}
+>\end{align*}
+>\right.
+>$$ 
+>with $A, B$ to be selected.
+
+>[!info]
+>We can find via [[Itô Product Rule and Stochastic Integration by Parts]]
+>$$
+>\begin{align*}
+>A(t) &:= \left[ c(t) - F(t)e(t) \right]\left( X_{1}(t) \right)^{-1}\\
+>B(t) &:= e(t)\left( X_{1}(t) \right)^{-1}
+>\end{align*}
+>$$
+
+
+- [[Introduction to Stochastic Differential Equations by Evans]] pp 100
 
 
 
