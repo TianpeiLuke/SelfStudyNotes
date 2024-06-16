@@ -26,9 +26,9 @@ date of note: 2024-05-30
 - [[Contraction Map Principle]]
 
 - [[Existence and Uniqueness of Solution of Ordinary Differential Equations]]
-- [[Smooth Dependency of Solution of Ordinary Differential Equations]]
+- [[Smoothness of Solution of ODE]]
 - [[Extension of Solution of Ordinary Differential Equations]]
-- [[Types of Ordinary Differential Equations]]
+- [[Autonomous and Nonautonomous Ordinary Differential Equations]]
 
 
 ### Flows
@@ -42,11 +42,11 @@ date of note: 2024-05-30
 - [[Vector Field as Infinitesimal Generator of Local Flow]]
 - [[Maximal Integral Curve of Vector Field]]
 - [[Fundamental Theorem on Flows]]
-- [[Lie Derivative of Vector Field]]
+
 
 ### Lyapunov Stability
 
-- [[Lyapunov Stability]]
+- [[Lyapunov Stable Asymptotically Stable Solution of ODE]]
 - [[Lyapunov Function]]
 - [[Lyapunov Stability Theorem]]
 
@@ -93,6 +93,35 @@ date of note: 2024-05-30
 
 ### Partial Differential Equations
 
+- [[Partial Differential Equations]]
+- [[Linear Semilinear and Quasilinear Partial Differential Equations]]
+- [[Well-posed Problem of Partial Differential Equations]]
+- [[Generalized and Weak Solution of Partial Differential Equations]]
+
+- [[Second-Order Linear Partial Differential Equations]]
+
+
+### Important Linear PDE and System of Linear PDEs
+
+- [[Laplace Equation and Poisson Equation]]
+	- [[Harmonic Function]]
+- [[Helmhotz Equation]]
+- [[Teleport Equation]]
+- [[Liouville Equation]]
+- [[Heat Equation and Diffusion Equation]]
+- [[Fokker–Planck and Kolmogorov Forward-Backward Equation]]
+- [[Wave Equation]]
+- [[Schrödinger Equation]]
+
+- [[Maxwell Equations]]
+
+### Important Nonlinear PDE and System of Nonlinear PDEs
+
+- [[Hamilton-Jacobi Equation]]
+- [[Nonlinear Poisson Equation]]
+- [[Monge–Ampère Equation]]
+
+- [[Naiver-Stokes Equations for Incompressible Viscous Flow]]
 
 
 ### Basics of Functional Analysis
@@ -122,6 +151,14 @@ date of note: 2024-05-30
 - [[Weak Derivative via Tempered Distribution]]
 - [[Sobolev Space]]
 
+### Second-Order Elliptic Equations
+
+- [[Second-Order Elliptic Equation]]
+
+### Linear Evolution Equations
+
+- [[Second-Order Parabolic Equation]]
+- [[Second-Order Hyperbolic Equation]]
 
 
 
@@ -166,9 +203,11 @@ date of note: 2024-05-30
 -----------
 ##  Recommended Notes and References
 
-
+- [[Ordinary Differential Equations by Chicone]]
+- [[Partial Differential Equations by Evans]]
 - [[Introduction to Stochastic Differential Equations by Evans]]
 - [[Introduction to Stochastic Calculus by Klebaner]]
+
 - Särkkä, S., & Solin, A. (2019). _Applied stochastic differential equations_ (Vol. 10). Cambridge University Press.
 - Oksendal, B. (2013). _Stochastic differential equations: an introduction with applications_. Springer Science & Business Media
 

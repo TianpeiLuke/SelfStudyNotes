@@ -32,6 +32,8 @@ Chicone, C. (2006). _Ordinary Differential Equations with Applications_ (2nd edi
 
 - [[Homogeneous Linear Stochastic Differential Equation]]
 
+- [[Geodesic on Manifolds]]
+- [[Parallel Transport]]
 
 - [[Ordinary Differential Equations by Chicone]]
 - Chicone, C. (2006). _Ordinary Differential Equations with Applications_ (2nd edition). Springer.
