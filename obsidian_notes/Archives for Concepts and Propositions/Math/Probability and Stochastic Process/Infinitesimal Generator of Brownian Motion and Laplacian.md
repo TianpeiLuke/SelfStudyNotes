@@ -21,7 +21,7 @@ date of note: 2024-06-11
 ![[Infinitesimal Generator of Stochastic Differential Equation#^ee7d61]]
 
 
->[!important]
+>[!important] Definition
 >Let $b \equiv 0$ and $A = I$, we have the stochastic equation
 >$$
 >dX_{t} = dW_{t}
@@ -30,16 +30,20 @@ date of note: 2024-06-11
 >$$
 >\mathcal{A}f := \frac{1}{2}\sum_{i=1}^{n}\frac{ \partial^2 }{ \partial (x^i)^2 }f 
 >$$ 
->i.e. it is the **Laplacian partial differential equation** 
+>i.e. it is the **Laplace partial differential equation** 
 >$$
 >\mathcal{A} := \frac{1}{2} \Delta
 >$$
 >where $\Delta$ is the **Laplacian operator**.
 
+^143824
+
+- [[Laplace Equation and Poisson Equation]]
+
 - [[Infinitesimal Generator of Stochastic Differential Equation]]
 - [[Brownian Motion Wiener Process]]
 
-- [[Laplacian of Smooth Map on Manifold]]
+- [[Laplacian of Smooth Map on Riemannian Manifold]]
 - [[Vector Field on Manifold]]
 
 

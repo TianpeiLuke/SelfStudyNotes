@@ -28,6 +28,15 @@ date of note: 2024-05-24
 - [[Markov Chain and Markov Process]]
 - [[Stopping Time of Markov Chain]]
 
+>[!important] Definition
+>A *Markov process* $\left\{\Omega, \mathscr{F}, \mathscr{F}_{t}^s, X_{t}, \mathcal{P}_{x,s}  \right\}$ with transition probability $p$ is said to have **the strong Markov property** if for every $X\in \mathcal{X}$ and for every real-valued *stopping time* $\zeta$,
+>$$
+>\mathcal{P}_{x,s}\left( X(t+ \zeta) \in A \,|\, \mathscr{F}_{\zeta}^{s} \right) = p(A,\, t+\zeta,\, X(\zeta),\, \zeta) \quad \text{a.s.}
+>$$
+
+- Friedman, A. (1975). *Stochastic differential equations and applications*. pp 25.
+- [[Markov Transition Kernel and Transition Function]]
+
 ## Explanation
 
 

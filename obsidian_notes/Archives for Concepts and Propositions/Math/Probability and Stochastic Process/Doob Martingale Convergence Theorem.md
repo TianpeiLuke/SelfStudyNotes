@@ -54,11 +54,6 @@ date of note: 2024-05-15
 >As a result, this theorem holds for **martingale.**
 
 
->[!important]
->This theorem is a generalization of the **strong law of large numbers (SLLN)** from **independent samples** to **martingales**.
-
-- [[Kolmogorov Strong Law of Large Numbers]]
-
 
 
 

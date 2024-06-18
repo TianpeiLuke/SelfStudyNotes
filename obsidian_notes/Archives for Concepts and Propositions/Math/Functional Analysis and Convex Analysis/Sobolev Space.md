@@ -94,5 +94,5 @@ date of note: 2024-05-24
 - [[Hölder Space]]
 
 
-- [[Functional Analysis by Reed]]
+- [[Partial Differential Equations by Evans]]
 - Wikipedia [Sobolev space](https://en.wikipedia.org/wiki/Sobolev_space)

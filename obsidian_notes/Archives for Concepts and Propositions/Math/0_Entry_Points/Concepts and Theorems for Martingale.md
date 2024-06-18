@@ -16,7 +16,7 @@ date of note: 2024-05-15
 
 - [[Conditional Expectation]]
 - [[Conditional Probability]]
-- [[Markov Chain Transition Kernel and Transition Function]]
+- [[Markov Transition Kernel and Transition Function]]
 
 
 ### Martingale and Stopping Time

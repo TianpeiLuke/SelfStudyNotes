@@ -80,7 +80,7 @@ date of note: 2024-05-12
 
 - [[Shattering of Set by Set Family]]
 
-- [[PAC Learnable]]
+- [[PAC Learnable and Agnostic PAC Learnable]]
 - [[Bounded Difference Inequality]]
 - [[Understanding Machine Learning by Shalev-Shwartz]]
 - [[High Dimensional Statistics A Non-Asymptotic Viewpoint by Wainwright]]

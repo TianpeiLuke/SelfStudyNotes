@@ -27,6 +27,7 @@ date of note: 2024-05-20
 >dV_{g} := \sqrt{ \det(g_{i,j}) }\;\; dx^1 \ldots dx^n
 >$$
 
+- [[Hodge Star Operator on Riemannian Manifold]]
 - [[Riemannian Volume Form]]
 - [[Orientation of Manifolds]]
 
@@ -57,6 +58,35 @@ date of note: 2024-05-20
 
 >[!important]
 >The *divergence operator* maps a **vector field** into a **smooth function**.
+
+
+## Coordinate Representation
+
+- [[Coordinate Representation of Divergence Operator]]
+
+
+## Properties
+
+>[!important] Proposition
+>Let $(M, g)$ be a **compact Riemannian manifold** with boundary. Let $\widetilde{g}$ denote the *induced Riemannian metric* on $\partial M$, and let $N$ be the **outward** unit **normal vector field** along $\partial M$.
+>
+>Then 
+>- the **divergence operator**  $\text{div}: \mathfrak{X}(M) \to \mathcal{C}^{\infty}(M)$   satisfies the following **product rule**: 
+>  $$
+> \begin{align*}
+> \text{div}\left( f\,X \right) &= f\,\text{div}(X) + \left\langle \text{grad }f ,  X\right\rangle_{g}.
+> \end{align*}
+> $$
+>- And the following **integration by parts** holds
+>  $$
+> \begin{align*}
+>  \int_{M}\left\langle \text{grad }f ,  X\right\rangle_{g}\,dV_{g} &= - \int_{M}\left( f\,\text{div}(X)  \right)\,dV_{g} + \int_{\partial M} f\left\langle X , N \right\rangle dV_{\widetilde{g}}.
+> \end{align*}
+> $$
+
+
+- [[Integration by Parts]]
+- [[Introduction to Smooth Manifolds by Lee]] pp 436
 
 ## Divergence Theorem
 
@@ -114,7 +144,7 @@ date of note: 2024-05-20
 - [[Differential k-Form on Manifold]]
 
 
-- [[Laplacian of Smooth Map on Manifold]]
+- [[Laplacian of Smooth Map on Riemannian Manifold]]
 
 
 - [[Introduction to Smooth Manifolds by Lee]]

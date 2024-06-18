@@ -18,10 +18,9 @@ date of note: 2024-05-24
 ## Concept Definition
 
 >[!important]
->**Name**: Contraction Map Principle
+>**Name**: Contraction Map Principle, or *Fixed Point Theorem*
 
 ![[Fixed Point of Map#^54e302]]
-
 
 
 >[!important] Theorem

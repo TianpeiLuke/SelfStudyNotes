@@ -28,7 +28,7 @@ date of note: 2024-05-24
 >$$
 
 - [[Markov Chain and Markov Process]]
-- [[Markov Chain Transition Kernel and Transition Function]]
+- [[Markov Transition Kernel and Transition Function]]
 - [[Fubini Theorem]]
 
 
@@ -60,7 +60,7 @@ date of note: 2024-05-24
 
 
 - [[Markov Chain and Markov Process]]
-- [[Markov Chain Transition Kernel and Transition Function]]
+- [[Markov Transition Kernel and Transition Function]]
 
 - [[Fubini Theorem]]
 

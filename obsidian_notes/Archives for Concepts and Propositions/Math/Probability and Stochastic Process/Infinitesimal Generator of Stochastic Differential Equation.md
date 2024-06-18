@@ -19,7 +19,7 @@ date of note: 2024-06-11
 
 
 >[!important] Definition
->Let $(X_{t})$ be a *(time-homogeneous) Itô Process*. Denote the set $\mathcal{D}_{\mathcal{A}}(x)$ as the set of functions $f: \mathbb{R}^n \to \mathbb{R}$ that *the limit at $x$ exists*.
+>Let $(X_{t})$ be a *(time-homogeneous) Itô Process*.
 >
 >The **(infinitesimal) generator** $\mathcal{A}$ of $X_{t}$ is a linear operator $\mathcal{A}: \mathcal{D}_{\mathcal{A}}(x) \to \mathcal{D}_{\mathcal{A}}(x)$ defined by 
 >$$
@@ -35,6 +35,7 @@ date of note: 2024-06-11
 - [[Stochastic Differential Equations]]
 - [[Itô Process and Diffusion Process]]
 - Oksendal, B. (2013). _Stochastic differential equations: an introduction with applications_. Springer Science & Business Media pp 124
+- 
 
 
 
@@ -68,6 +69,7 @@ date of note: 2024-06-11
 - Oksendal, B. (2013). _Stochastic differential equations: an introduction with applications_. Springer Science & Business Media pp 126
 - [[Time Homogeneous Diffusion and SDE]]
 - [[Einstein Summation Convention]]
+- [[Partial Differential Equations]]
 
 >[!important] Definition
 >The **partial differential operator** 
@@ -111,6 +113,7 @@ date of note: 2024-06-11
 
 - [[Gradient of Smooth Map]]
 - [[Time Homogeneous Diffusion and SDE]]
+- [[Partial Differential Equations]]
 
 ## Generator of Brownian Motion
 
@@ -121,12 +124,15 @@ date of note: 2024-06-11
 -----------
 ##  Recommended Notes and References
 
+- [[Fokker–Planck and Kolmogorov Forward-Backward Equation]]
 - [[Infinitesimal Generator of Markov Process]]
 
 - [[Time Homogeneous Diffusion and SDE]]
 - [[Stochastic Differential Equations]]
 - [[Stochastic Process]]
 - [[Brownian Motion Wiener Process]]
+
+- [[Partial Differential Equations]]
 
 - [[Fourier Series and Fourier Transform]]
 

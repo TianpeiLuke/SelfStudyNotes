@@ -2,10 +2,12 @@
 tags:
   - concept
   - math/differential_equation
-keywords: 
+keywords:
+  - euler_lagrange_equation
+  - calculus_variation
 topics:
   - differential_equation
-name: 
+name: Euler–Lagrange Equation
 date of note: 2024-06-14
 ---
 
@@ -26,14 +28,10 @@ Chicone, C. (2006). _Ordinary Differential Equations with Applications_ (2nd edi
 -----------
 ##  Recommended Notes and References
 
+- [[Hamiltonian Systems of Differential Equations]]
 
-- [[Homogeneous Linear Differential Equations]]
-- [[Ordinary Differential Equations]]
-
-- [[Homogeneous Linear Stochastic Differential Equation]]
-
-- [[Geodesic on Manifolds]]
-- [[Parallel Transport]]
+- [[Legendre Transform]]
+- [[Lagrangian Function in Mechanics]]
 
 - [[Ordinary Differential Equations by Chicone]]
-- Chicone, C. (2006). _Ordinary Differential Equations with Applications_ (2nd edition). Springer.
+- Gelfand, I. M., & Silverman, R. A. (2000). _Calculus of variations_. Courier Corporation.

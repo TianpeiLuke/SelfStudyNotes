@@ -47,7 +47,7 @@ date of note: 2024-06-11
 
 
 - [[Infinitesimal Generator of Stochastic Differential Equation]]
-- [[Markov Chain Transition Kernel and Transition Function]]
+- [[Markov Transition Kernel and Transition Function]]
 - [[Stochastic Differential Equations]]
 
 >[!important] Definition
@@ -64,6 +64,9 @@ date of note: 2024-06-11
 >$$
 >is called the **Kolmogorov's backward equation**, since it is a PDE in *backward variable* $(x,s)$.
 
+^89943e
+
+- [[Partial Differential Equations]]
 
 ### Kolmogorov Forward Equation (Fokker–Planck Equation)
 
@@ -105,6 +108,10 @@ date of note: 2024-06-11
 >is called the **Kolmogorov's forward equation**, since it is a PDE in *forward variable* $(y,t)$.
 >
 >It is also known as the **Fokker–Planck equation**, *diffusion equation*.
+
+^6aedc0
+
+- [[Partial Differential Equations]]
 
 ### Markov Process as Weak Solution of SDE
 
@@ -171,7 +178,7 @@ date of note: 2024-06-11
 >
 
 - [[Markov Chain and Markov Process]]
-- [[Markov Chain Transition Kernel and Transition Function]]
+- [[Markov Transition Kernel and Transition Function]]
 - [[Infinitesimal Generator of Stochastic Differential Equation]]
 
 >[!important] Definition
@@ -268,7 +275,7 @@ date of note: 2024-06-11
 >$$
 >where $$\nabla \cdot \boldsymbol{f} := \text{div}(\boldsymbol{f}) = \sum_{i}\frac{ \partial}{ \partial x^i }f^{i}(x) $$ is the **divergence operator** and
 >$$
->\Delta g := \sum_{i,j=1}^{n}\frac{ \partial^2  }{ \partial x^i\,x^{j} }g
+>\Delta g := \sum_{i}^{n}\frac{ \partial^2  }{ (\partial x^i)^2 }g
 >$$
 >is **the Laplace operator**
 >
@@ -276,8 +283,8 @@ date of note: 2024-06-11
 >\Delta f = \nabla \cdot \left( \nabla f \right)
 >$$
 
-- [[Divergence of Vector Field on Riemannian Manifold]]
-- [[Laplacian of Smooth Map on Manifold]]
+- [[Divergence Operator of Vector Field on Riemannian Manifold]]
+- [[Laplacian of Smooth Map on Riemannian Manifold]]
 
 
 
@@ -291,20 +298,25 @@ date of note: 2024-06-11
 ##  Recommended Notes and References
 
 
+- [[Second-Order Linear Partial Differential Equations]]
+- [[Partial Differential Equations]]
+
 - [[Stochastic Differential Equations]]
 
 - [[Itô Stochastic Integration]]
 - [[Stochastic Process]]
 - [[Brownian Motion Wiener Process]]
 
-- [[Probability Distribution of Random Variable]]
-- [[Radon-Nikodym Derivative]]
+- [[Markov Transition Kernel and Transition Function]]
+
+- [[Partial Differential Equations]]
 
 - [[Wasserstein Space]]
 - [[Wasserstein Distance]]
 
 - [[Introduction to Stochastic Calculus by Klebaner]]
 - [[Optimal Transport for Applied Mathematicians by Santambrogio]]
+- [[Partial Differential Equations by Evans]]
 - Oksendal, B. (2013). _Stochastic differential equations: an introduction with applications_. Springer Science & Business Media.
 
 - Wikipedia [Fokker-Planck_equation](https://en.wikipedia.org/wiki/Fokker%E2%80%93Planck_equation)

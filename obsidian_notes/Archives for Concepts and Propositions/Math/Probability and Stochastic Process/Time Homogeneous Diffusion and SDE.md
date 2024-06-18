@@ -66,7 +66,7 @@ date of note: 2024-06-07
 >In other word, the weak solution of above SDE is a **stationary process**. 
 
 
-- [[Markov Chain Transition Kernel and Transition Function]]
+- [[Markov Transition Kernel and Transition Function]]
 - [[Weak Solution to Stochastic Differential Equation]]
 
 ## Generator 

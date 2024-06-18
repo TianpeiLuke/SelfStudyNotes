@@ -7,6 +7,7 @@ tags:
 keywords:
   - Markov_Chain
   - Transition_Kernel
+  - transition_function
 topics:
   - stochastic_process
   - functional_analysis
@@ -20,6 +21,8 @@ date of note: 2024-04-18
 >[!important]
 >**Name**:  Markov Chain Transition Kernel
 
+### Transition Kernel
+
 >[!important] Definition: 
 > A **transition kernel** (or **probability kernel**) is a function $K$ defined on $\mathcal{X} \times \mathcal{B}(\mathcal{X})$ such that 
 > 1. $\forall x \in \mathcal{X}$,    $K(x, \cdot)$  is a **probability measure**;
@@ -31,6 +34,18 @@ date of note: 2024-04-18
 - [[Conditional Probability]]
 - [[Monte Carlo Statistical Methods by Robert]]
 
+### Transition Function
+
+>[!important] Definition
+>Let $p(A, t, x, s)$ be a *non-negative function* defined for $0 \le s < t < \infty$, $x\in \mathcal{X}$, $A\in \mathcal{B}(\mathcal{X})$, and satisfying:
+>1. $p(A, t, x, s)$ is **Borel measurable** in $x$, for fixed $s, t, A$;
+>2. $p(A, t, x, s)$ is a **probability measure** in $A$, for fixed  $s, x, t$;
+>3. $p$ satisfies the **Chapman-Kolmogorov equation** $$p(A, t, x, s) = \int_{\mathcal{X}}p(A, t, y, u)p(dy, u, x, s)$$ for any $s < u < t.$
+>   
+>Then we call $p(A,t,x,s)$ a **Markov transition function** (a **transition probability function**, or a **transition probability**).   
+
+- Friedman, A. (1975). *Stochastic differential equations and applications*. pp 18
+- [[Chapman-Kolmogorov Equation]]
 
 ## Understanding
 
@@ -42,27 +57,31 @@ The above definition of Transition Kernel can be used to define the **conditiona
 
 - [[Conditional Probability]]
 
-## Transition Function
 
->[!important]
->Let $(X_{t}, t \ge 0)$ be a **Markov process**. 
+>[!info]
+>There is no consensus on the ordering of these arguments. 
 >
->The **transition function** $p$ is defined as the conditional probability of $X_{t} \in A$ given that $X_{s} = x$
+>For example, in [[Introduction to Stochastic Calculus by Klebaner]]
+>$$
+>p\left( \text{ next state }, \text{ next time },  \text{ current state },  \text{ current time }  \right)
+>$$
+>in  Friedman, A. (1975). Stochastic differential equations and applications. In _Stochastic differential equations_
+>$$
+>p\left( \text{ current time }, \text{ current state },  \text{ next time },  \text{ next state }  \right)
+>$$
+
+
+>[!info]
+>The **transition function** $p$ and **transition kernel** $K$ are equivalent
 >$$
 >\begin{align*}
->p(A, t, x, s) := K(X_{s} = x,  A) = \mathcal{P}\left( X_{t} \in A | X_{s} = x \right)
+>p(A, t, x, s) := K(x,  A) = \mathcal{P}\left( X_{t} \in A | X_{s} = x \right)
 >\end{align*}
 >$$
 >where $A\in \mathcal{B}(\mathcal{X}).$
->
->Without confusion, we *identifies* the *transition kernel* and *transition function* with the same notation $K$.
-
 
 - [[Markov Chain and Markov Process]]
 - [[Stochastic Process]]
-
-
-
 
 >[!info] 
 >For discrete-state Markov chain $X_{t}$, the **transition kernel** of Markov Chain can be simplified as the *time-invariant conditional probability mass function*
@@ -77,7 +96,6 @@ The above definition of Transition Kernel can be used to define the **conditiona
 > $$
 > 
 
-
 ## Chapman-Kolmogorov Equation
 
 - [[Chapman-Kolmogorov Equation]]
@@ -89,6 +107,32 @@ The above definition of Transition Kernel can be used to define the **conditiona
 >$$
 >K\,h(x) := \int_{\mathcal{X}} h(y)\,K(x, dy)
 >$$
+
+
+## Stochastic Process from Transition Function
+
+>[!important] Theorem
+>Let $p$ be a **transition probability function**. 
+>
+>Then, for any $s \ge 0$, and for **any probability distribution** $\pi$ on $(\mathcal{X}, \mathscr{F})$, there exists a *stochastic process* $(X_{t}, s \le t < \infty)$ such that 
+>- $$\mathcal{P}\left\{ X(s, \omega) \in A \right\} = \pi(A)$$
+>- $$\mathcal{P}\left\{ X(t, \omega) \in A \,|\, \sigma\left(X_{u}, u \in [s, \bar{s}]  \right) \right\} = p(A, t, X(\bar{s}), \bar{s}), \quad \text{ a.s. } $$ for  $s \le \bar{s} <t.$
+
+^b6b406
+
+- Friedman, A. (1975). Stochastic differential equations and applications. In _Stochastic differential equations_ (pp. 75-148). Berlin, Heidelberg: Springer Berlin Heidelberg. pp 30
+
+- [[Markov Chain and Markov Process]]
+
+## Semigroup 
+
+- [[Semigroup associated with Transition Function]]
+
+## Integral Operator
+
+- [[Integral Operator associated with Transition Kernel]]
+
+
 
 ## Forward and Backward Equation of SDE
 

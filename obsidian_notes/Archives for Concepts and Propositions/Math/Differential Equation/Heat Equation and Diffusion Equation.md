@@ -22,7 +22,7 @@ date of note: 2024-06-15
 >[!important] Definition
 >Let $t >0$, $x \in U \subset \mathbb{R}^n$ where $U$ is *open*. Define the unknown $u: \overline{U} \times [0, \infty) \to \mathbb{R}$, and the Laplacian
 >$$
->\Delta := \sum_{i,j=1}^{n}\frac{ \partial^2 }{ \partial x^i\,x^j } 
+>\Delta := \sum_{i}^{n}\frac{ \partial^2 }{ (\partial x^i)^2} 
 >$$
 >is with respect to *the spatial variables* $x := (x^1 \,{,}\ldots{,}\,x^n).$ And suppose $f: U \times [0, \infty) \to \mathbb{R}$ is given. 
 >
@@ -41,7 +41,8 @@ date of note: 2024-06-15
 >$$
 
 - [[Linear Semilinear and Quasilinear Partial Differential Equations]]
-- [[Laplacian of Smooth Map on Manifold]]
+- [[Laplacian of Smooth Map on Riemannian Manifold]]
+- [[Coordinate Representation of Laplace Operator]]
 
 
 ## Explanation
@@ -72,7 +73,7 @@ date of note: 2024-06-15
 >in $U$, where $V$ is the **gradient vector field** of *potential function*  $u$, i.e. $$V = \text{grad}(u)$$
 
 - [[Gradient of Smooth Map]]
-- [[Divergence of Vector Field on Riemannian Manifold]]
+- [[Divergence Operator of Vector Field on Riemannian Manifold]]
 - [[Divergence Theorem on Riemannian Manifold]]
 
 

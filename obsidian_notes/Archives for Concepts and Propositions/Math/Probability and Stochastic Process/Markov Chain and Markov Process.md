@@ -6,6 +6,8 @@ tags:
   - machine_learning_models/mc
 keywords:
   - Markov_properties
+  - transition_function
+  - Transition_Kernel
 topics:
   - stochastic_process
   - functional_analysis
@@ -19,7 +21,9 @@ date of note: 2024-04-18
 >[!important]
 >**Name**:  Markov Chain
 
->[!important] Definition
+### Discrete Time  Definition  
+
+>[!important] Definition (Discrete)
 >Given a *transition kernel* $K$, a sequence $(X_{t}, t\ge 0)$ of random variables is a **Markov chain** or **Markov Process**, denoted as $(X_{t})$,  if, 
 >- for any $t \in \mathbb{N}$, the *conditional distribution* of $X_{t}$ given $(X_{t-1} ,{,}\ldots{,}\,X_{0}) = ( x_{t-1}\,{,}\ldots{,}\,x_{0})$ is **the same as** the *distribution* of $X_{t}$ given $X_{t-1} = x_{t-1}.$
 > 
@@ -31,8 +35,41 @@ date of note: 2024-04-18
 \end{align*}
 >$$
 
-- [[Markov Chain Transition Kernel and Transition Function]]
+- [[Markov Transition Kernel and Transition Function]]
 - [[Stochastic Process]]
+
+### General Definition
+
+>[!important] Definition (Measure Theoretical)
+>Let $(\Omega, \mathscr{F})$ be a measurable space, $(\mathscr{F}_{t}^{s})$ is a *filtration* $$\mathscr{F}_{t}^{s} \subset \mathscr{F}_{t'}^{s'}, \quad \forall s' \le s \;\text{ and }\; t \le t'.$$ $\mathscr{F} := \mathscr{F}_{{\infty}}^{0}$ is the smallest $\sigma$-algebra containing all of $\mathscr{F}_{t}^{s}$.  
+>
+>Suppose there exists a *stochastic process* $X: [0, \infty) \times \Omega \to \mathcal{X}$ such that 
+>- $X(t, \omega)$ is *$\mathscr{F}_{t}^{s}$-measurable* for each $t \ge s$. 
+>- For each $x\in \mathcal{X}$, and $s \ge 0$, there exists a *probability measure* $\mathcal{P}_{x, s}$ defined on $(\Omega, \mathscr{F}_{\infty}^{s})$ such that
+>	- $$\mathcal{P}_{x,s}\left\{ X(s, \omega) = x \right\} = 1$$
+>	- for all $t \ge s$ and $h >0$ $$\mathcal{P}_{x,s}\left\{ X(t+h, \omega) \in A | \mathscr{F}_{t}^{s} \right\} = p(A, t+h, X(t, \omega), t), \quad \text{ a.s.}$$ where $p(A, t, x, s)$ is a *transition probability function*.
+>
+>Then the collection $\left\{\Omega, \mathscr{F}, \mathscr{F}_{t}^s, X_{t}, \mathcal{P}_{x,s}  \right\}$ is called a **Markov process** *corresponding to* transition function $p$.
+
+- [[Filtration]]
+- [[Stochastic Process]]
+- [[Markov Transition Kernel and Transition Function]]
+- Friedman, A. (1975). *Stochastic differential equations and applications*. pp 21
+
+## Explanation
+
+>[!info]
+>Intuitively, $$\mathcal{P}_{x,s} := \mathcal{P}(\cdot | X_{s} =x)$$
+>And $$\mathscr{F}_{s}^{t} = \sigma \left( X_{u}, \; u\in [s,t] \right)$$
+
+>[!info]
+>According to [[Markov Transition Kernel and Transition Function#^b6b406]], 
+>
+>Given a *transition function* $p$, we can find a *Markov process* corresponding to $p$, which is called the **Kolmogorov model**.
+
+
+
+## Types of Markov Chain
 
 >[!important] Definition
 >Let   $(X_{t}, t\in T)$ be a **Markov process**:
@@ -44,7 +81,7 @@ date of note: 2024-04-18
 - [[Countable Set and Uncountable Set]]
 
 
->[!important] Definitions
+>[!info] Graphical Model Definition
 >**Markov Chain** $(X_t)_t$ is a *probabilistic graphical model* over a *chain graph* $\mathcal{G}=(\mathcal{V}, \mathcal{E}_{C})$,  where each random variable $X_t$ only has **exactly one children** $X_{t+1}$ and **one parent** $X_{t-1}$. Denote the index of variable $t$ as the time. Markov chain  $(X_t)_t$ is also a *stochastic process*. 
 
 >[!important] Definition
@@ -54,9 +91,13 @@ date of note: 2024-04-18
 >$$
 >for any $k$, and every $k+1$ multi-index, $t_{0} \leq t_{1} \,{\leq}\ldots{\leq}\,t_{k}.$
 
-## Properties
 
->[!important]
+
+
+
+## Weak Markov Property
+
+>[!info]
 >The key interpretation of Markov property is that "**given the present, the history and future are independent**."
 
 
@@ -67,9 +108,19 @@ date of note: 2024-04-18
 > $$ 
 > It is seen that the **transition probability** does not depend on the time $t$, i.e. Markov chain is **time-invariant**.
 
-
-
 >[!info]
+>The weak Markov property in the measure-theoretical definition
+> $$\mathcal{P}_{x,s}\left\{ X(t+h, \omega) \in A | \mathscr{F}_{t}^{s} \right\} = p(A, t+h, X(t, \omega), t), \quad \text{ a.s.}$$
+> In particular
+> $$
+> \mathcal{P}_{x,s}\left( X(t+h, \omega) \in A | \mathscr{F}_{t}^{s} \right) = \mathcal{P}_{x,s}\left( X(t+h, \omega) \in A | X(t, \omega) \right)  \quad \text{ a.s.}
+> $$
+> for any $A \in \mathscr{F}_{\infty}^{t} := \sigma \left( X_{u}, \; u \ge t \right).$
+
+## Strong Markov Property
+
+
+>[!important]
 >The **strong Markov property** can be shown that 
 >$$
 >\mathbb{E}_{0}\left[h\left(X_{\zeta+1}, X_{\zeta+2}, \ldots \right) | x_{1} \,{,}\ldots{,}\,x_{\zeta} \right] = \mathbb{E}_{x_{\zeta}}\left[h\left(X_{1}, X_{2}, \ldots \right) \right]
@@ -79,14 +130,15 @@ date of note: 2024-04-18
 - [[Strong Markov Property]]
 - [[Stopping Time of Markov Chain]]
 
-
+>[!important]
+>Use measure theoretical notation, 
+>$$
+>\mathcal{P}_{x,s}\left( X(t+ \zeta) \in A \,|\, \mathscr{F}_{\zeta}^{s} \right) = p(A,\, t+\zeta,\, X(\zeta),\, \zeta) \quad \text{a.s.}
+>$$
 
 ## Key concepts of Markov Chain
 
-- [[Markov Chain Transition Kernel and Transition Function]]
-
-## Continuous Time Markov Process
-
+- [[Markov Transition Kernel and Transition Function]]
 
 
 
@@ -94,7 +146,7 @@ date of note: 2024-04-18
 -----------
 ##  Recommended Notes and References
 
-- [[Markov Chain Transition Kernel and Transition Function]]
+- [[Markov Transition Kernel and Transition Function]]
 - [[Martingale]]
 - [[Filtration]]
 

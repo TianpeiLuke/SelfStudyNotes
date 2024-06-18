@@ -26,7 +26,7 @@ date of note: 2024-04-18
 >(Kh)(x) = \int h(y)\;K(x, dy), \quad \forall h \in L^1(\mu)
 >$$
 
-- [[Markov Chain Transition Kernel and Transition Function]]
+- [[Markov Transition Kernel and Transition Function]]
 - [[Compact Operator]]
 
 
@@ -48,4 +48,4 @@ date of note: 2024-04-18
 - [[Chapman-Kolmogorov Equation]]
 
 - [[Markov Chain and Markov Process]]
-- [[Markov Chain Transition Kernel and Transition Function]]
+- [[Markov Transition Kernel and Transition Function]]

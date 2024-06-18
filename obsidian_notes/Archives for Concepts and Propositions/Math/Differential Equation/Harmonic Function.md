@@ -53,7 +53,7 @@ date of note: 2024-06-15
 
 - [[Linear Semilinear and Quasilinear Partial Differential Equations]]
 - [[Partial Differential Equations]]
-- [[Laplacian of Smooth Map on Manifold]]
+- [[Laplacian of Smooth Map on Riemannian Manifold]]
 
 - [[Infinitesimal Generator of Brownian Motion and Laplacian]]
 

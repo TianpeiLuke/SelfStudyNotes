@@ -87,7 +87,7 @@ date of note: 2024-05-30
 
 ### Applications
 
-- [[Euler–Lagrange Equation]]
+- [[Euler–Lagrange Equations]]
 - [[Diffusion and Infinite Dimensional ODE]]
 
 

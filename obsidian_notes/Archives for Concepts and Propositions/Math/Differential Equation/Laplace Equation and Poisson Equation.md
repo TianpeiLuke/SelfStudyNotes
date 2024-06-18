@@ -28,7 +28,7 @@ date of note: 2024-06-15
 >$$
 >where  $x\in U$, $U$ is an open set,   $u: \overline{U}  \to\mathbb{R}$, and 
 >$$
->\Delta := \sum_{i}^{n}\frac{ \partial^2 }{ \partial (x^i)^2} 
+>\Delta := \sum_{i}^{n}\frac{ \partial^2 }{ (\partial x^i)^2} 
 >$$
 >is the **Laplace differential operator** or *Laplacian operator*.
 
@@ -36,7 +36,8 @@ date of note: 2024-06-15
 
 - [[Partial Differential Equations]]
 - [[Linear Semilinear and Quasilinear Partial Differential Equations]]
-- [[Laplacian of Smooth Map on Manifold]]
+- [[Laplacian of Smooth Map on Riemannian Manifold]]
+- [[Coordinate Representation of Laplace Operator]]
 
 >[!important] Definition
 >The **(linear) Poisson equation** is defined as follows
@@ -47,7 +48,7 @@ date of note: 2024-06-15
 >$$
 >where  $x\in U$, $U$ is an open set,   $u: \overline{U}  \to\mathbb{R}$ is unknown, $f: U\to \mathbb{R}$ is given and
 >$$
->\Delta := \sum_{i=1}^{n}\frac{ \partial^2 }{ \partial (x^i)^2 } 
+>\Delta := \sum_{i=1}^{n}\frac{ \partial^2 }{ (\partial x^i)^2 } 
 >$$
 >is the *Laplace differential operator* or *Laplacian operator*.
 
@@ -58,7 +59,7 @@ date of note: 2024-06-15
 >The **Laplace equation** 
 >$$
 >\begin{align*}
-> \sum_{i=1}^{n}\frac{\partial^2}{\partial (x^i)^2} u= 0.
+> \sum_{i=1}^{n}\frac{\partial^2}{(\partial x^i)^2} u= 0.
 >\end{align*}
 >$$
 >is **elliptic equation**. 
@@ -80,7 +81,7 @@ date of note: 2024-06-15
 >in $U$, where $V$ is the **gradient vector field** of *potential function*  $u$, i.e. $$V = \text{grad}(u)$$
 
 - [[Gradient of Smooth Map]]
-- [[Divergence of Vector Field on Riemannian Manifold]]
+- [[Divergence Operator of Vector Field on Riemannian Manifold]]
 - [[Divergence Theorem on Riemannian Manifold]]
 
 ## Harmonic Function

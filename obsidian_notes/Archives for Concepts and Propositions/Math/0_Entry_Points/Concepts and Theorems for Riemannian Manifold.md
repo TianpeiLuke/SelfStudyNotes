@@ -44,13 +44,21 @@ date of note: 2024-05-20
 ### Calculus on Riemannian Manifold
 
 - [[Gradient of Smooth Map]]
+- [[Coordinate Representation of Gradient]]
 - [[Riemannian Volume Form]]
-- [[Divergence of Vector Field on Riemannian Manifold]]
-- [[Laplacian of Smooth Map on Manifold]]
+
+- [[Divergence Operator of Vector Field on Riemannian Manifold]]
+- [[Coordinate Representation of Divergence Operator]]
+- [[Laplacian of Smooth Map on Riemannian Manifold]]
+- [[Coordinate Representation of Laplace Operator]]
+
 - [[Integration on Riemannian Manifold]]
 - [[Stokes Theorem on Riemannian Manifold]]
 - [[Divergence Theorem on Riemannian Manifold]]
 - [[Riemannian Density]]
+
+- [[Hodge Star Operator on Riemannian Manifold]]
+- [[Laplace–Beltrami Operator of k-Form on Riemannian Manifold]]
 
 ### Riemannian Connection
 

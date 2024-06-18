@@ -106,5 +106,6 @@ date of note: 2024-06-11
 - [[Contraction Map Principle]]
 - [[Borel-Cantelli Lemma]]
 
+- [[Linear Semilinear and Quasilinear Partial Differential Equations]]
 
 - [[Introduction to Stochastic Differential Equations by Evans]]

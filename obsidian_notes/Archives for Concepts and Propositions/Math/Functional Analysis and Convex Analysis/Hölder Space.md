@@ -31,3 +31,5 @@ date of note: 2024-06-12
 - [[Continuous Function]]
 - [[Locally Convex Space]]
 - [[Sobolev Space]]
+
+- [[Partial Differential Equations by Evans]]

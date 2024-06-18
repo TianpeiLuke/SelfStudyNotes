@@ -29,6 +29,8 @@ date of note: 2024-05-24
 >$$
 >and also denote $x^{\alpha} := x_{1}^{\alpha_{1}} \, \ldots \, x_{n}^{\alpha_{n}}.$
 
+^f10f2e
+
 >[!important] Definition
 >The **functions of rapid decrease** (or the **class of Schwartz functions**) $\mathscr{S}(\mathbb{R}^n)$ is the set of *infinitely differentiable* complex-valued functions $f: \mathbb{R}^n \to \mathbb{R}$ for which 
 >$$

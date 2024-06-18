@@ -111,6 +111,7 @@ date of note: 2024-05-06
 - [[Orientation for Vector Space]]
 - [[Orientation of Manifolds]]
 - [[Differential k-Form as Infinitesimal Volume]]
+- [[Hodge Star Operator on Riemannian Manifold]]
 
 ### Stokes Theorem
 

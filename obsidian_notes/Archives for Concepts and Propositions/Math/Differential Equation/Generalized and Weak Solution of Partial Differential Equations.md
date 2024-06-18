@@ -21,7 +21,7 @@ date of note: 2024-06-15
 >
 
 - [[Partial Differential Equations]]
-- [[Partial Differential Equations by Evans]] pp 8
+- [[Partial Differential Equations by Evans]] pp 8, pp 508
 
 
 

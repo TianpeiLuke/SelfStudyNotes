@@ -41,7 +41,7 @@ date of note: 2024-05-20
 >$$
  >where $N$ is the **outward-pointing** *unit* **normal vector field** along $\partial M$ and $\tilde{g}$ is the **induced Riemannian metric** on $\partial M$.
 
-- [[Divergence of Vector Field on Riemannian Manifold]]
+- [[Divergence Operator of Vector Field on Riemannian Manifold]]
 - [[Stokes Theorem]]
 
 
@@ -51,7 +51,7 @@ date of note: 2024-05-20
 ## Proof
 
 >[!info]
->By definition of divergence [[Divergence of Vector Field on Riemannian Manifold]], 
+>By definition of divergence [[Divergence Operator of Vector Field on Riemannian Manifold]], 
 >$$
 >\int_{M} \left( \text{div }X \right)\; dV_{g} = \int_{M} d\left( X \mathbin{\lrcorner }\,dV_{g} \right)
 >$$
@@ -73,7 +73,7 @@ date of note: 2024-05-20
 ##  Recommended Notes and References
 
 - [[Stokes Theorem]]
-- [[Divergence of Vector Field on Riemannian Manifold]]
+- [[Divergence Operator of Vector Field on Riemannian Manifold]]
 
 - [[Vector Field along Subset of Manifold]]
 - [[Normal Space of Submanifold]]

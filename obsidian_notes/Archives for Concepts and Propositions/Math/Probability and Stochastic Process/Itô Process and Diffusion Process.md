@@ -4,6 +4,7 @@ tags:
   - math/stochastic_process
 keywords:
   - ito_process
+  - diffusion_process
 topics:
   - stochastic_process
 name: Itô Process

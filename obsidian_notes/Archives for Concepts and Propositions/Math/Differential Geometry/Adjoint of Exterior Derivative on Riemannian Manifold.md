@@ -3,23 +3,28 @@ tags:
   - concept
   - math/information_theory
   - math/differential_geometry
-keywords:
-  - laplacian_manifold
+keywords: 
 topics:
   - information_theory
   - differential_geometry
-name: Laplacian of Smooth Map on Manifold
+name: Adjoint of Exterior Derivative on Riemannian Manifold
 date of note: 2024-05-14
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Laplacian of Smooth Map on Manifold
+>**Name**:Adjoint of Exterior Derivative on Riemannian Manifold
 
 >[!important] Definition
 >
 
+
+- [[Exterior Derivatives of Differential Form]]
+- [[Riemannian Volume Form]]
+- [[Differential k-Form on Manifold]]
+- [[Space of all Smooth k-Forms on a Manifold]]
+- [[Introduction to Smooth Manifolds by Lee]] pp 439
 
 
 ## Explanation
@@ -35,8 +40,8 @@ date of note: 2024-05-14
 -----------
 ##  Recommended Notes and References
 
-- [[Divergence of Vector Field on Riemannian Manifold]]
-- [[Gradient of Smooth Map]]
+
+- [[Riemannian Metric and Riemannian Manifold]]
 
 - [[Concepts and Theorems for Riemannian Manifold]]
 - Wikipedia [Laplace_operator](https://en.wikipedia.org/wiki/Laplace_operator)

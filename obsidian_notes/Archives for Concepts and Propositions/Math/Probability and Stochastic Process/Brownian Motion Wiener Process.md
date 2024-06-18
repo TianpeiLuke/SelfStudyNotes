@@ -102,7 +102,7 @@ date of note: 2024-06-05
 
 
 
-## Brownian Motion of Particles
+## Brownian Motion from Diffusion Equation
 
 >[!important]
 >The development of Wiener process is based on the **diffusion process**, where the dynamic of particle's density is governed by the *diffusion equation*
@@ -110,6 +110,8 @@ date of note: 2024-06-05
 >\frac{ \partial  }{ \partial t }u(x, t) = \frac{D}{2} \frac{ \partial^2  }{ \partial x^2 } u(x, t) 
 >$$
 >where $u(x, t)$ is the **density** of particles at *position* $x$ and *time* $t$.
+
+- [[Heat Equation and Diffusion Equation]]
 
 >[!info]
 >Let $X_{t}$ be the position of particle at time $t = n\,\Delta t$. At each time, the particle takes an *increment* of $\Delta x$ with probability $1 /2$.
@@ -180,6 +182,18 @@ date of note: 2024-06-05
 
 - [[Martingale]]
 
+>[!important] Theorem (Lévy)
+>Let $(X_{t}, t \ge 0)$ be a **continuous martingale**, i.e. the sample path
+>$$
+>t \mapsto X_{t}(\omega)
+>$$
+>is *continuous* for all $\omega\in \Omega,$ and $X_{0} = 0$, and suppose that
+>$$X_{t}^2 - t$$ is a **martingale.**
+>
+>Then $X$ is a **Brownian motion.**
+
+- Rogers, L. C., & Williams, D. (2000). _Diffusions, markov processes, and martingales: Volume 1, foundations_ (Vol. 1). Cambridge university press. pp 2
+
 ## Markov Process
 
 >[!important] Theorem
@@ -200,7 +214,69 @@ date of note: 2024-06-05
 >\mathcal{P}\left(W_{t} \in B | W_{s}\right) = \left( \frac{1}{2\pi (t-s)} \right)^{n / 2} \int_{B} \exp \left( - \frac{|x - W_{s}|^2 }{2 (t-s)}\right) dx\, \quad \text{ a.s.}
 >$$
 
+- [[Markov Chain and Markov Process]]
 - [[Introduction to Stochastic Differential Equations by Evans]]
+
+>[!important] Proposition
+>Let $(W_{t}, t \ge 0)$ be **Wiener process** and $\mathscr{F}_{t} := \sigma(W_{s}, s\le t)$ is a *filtration*.
+>
+>For any *Borel function* $f: \mathbb{R} \to \mathbb{R}$, and $s, t \ge 0$, 
+>$$
+>\mathbb{E}\left[f(W_{t+s}) | \mathscr{F}_{s} \right] = \mathcal{P}_{t}f(W_{s})
+>$$
+>where $(\mathcal{P}_{s}, s\ge_{0})$ is defined as 
+>$$
+>\mathcal{P}_{s}f(x) := \left\{ 
+>\begin{array}{cc}
+>\int_{-\infty}^{\infty}p_{t}(x, y)f(y)\,dy & t > 0\\
+>f(x) & t = 0
+\end{array}
+>\right.
+>$$
+>where $$p_{t}(x, y) =  \left(\frac{1}{2\pi t}\right)^{1/2}\,\exp \left(- \frac{\left(x- y\right)^2}{2t}\right)$$ is the **transition density** of *Wiener process*.
+
+
+- Rogers, L. C., & Williams, D. (2000). _Diffusions, markov processes, and martingales: Volume 1, foundations_ (Vol. 1). Cambridge university press. pp 5
+
+## Infinitesimal Generator of Brownian Motion and PDE 
+
+>[!important] 
+>The **(infinitesimal) generator** of $(\mathcal{P}_{s}, s\ge_{0})$ is defined as
+>$$
+>\frac{d}{dt}\mathcal{P}_{t} = \mathcal{A}\mathcal{P}_{t} = \mathcal{P}_{t}\mathcal{A}
+>$$
+>where 
+>$$
+>\mathcal{A} := \lim_{ s \to 0_{+} } \frac{1}{s}\left(\mathcal{P}_{s} - I\right) 
+>$$
+
+
+![[Infinitesimal Generator of Brownian Motion and Laplacian#^143824]]
+
+- [[Infinitesimal Generator of Brownian Motion and Laplacian]]
+
+>[!important] 
+>The **Kolmogorov's backward equation** for the Wiener process **transition density** 
+>$$
+>\begin{align*}
+> \frac{ \partial  }{ \partial t }p_{t}(x, y) &= \frac{1}{2}\frac{ \partial^2  }{ \partial x^2 }  p_{t}(x, y) 
+>\end{align*}
+>$$
+>which is the **heat equation**
+
+- [[Fokker–Planck and Kolmogorov Forward-Backward Equation]]
+- [[Heat Equation and Diffusion Equation]]
+
+>[!important] 
+>The **Kolmogorov's forward equation** for the Wiener process **transition density** 
+>$$
+>\begin{align*}
+> \frac{ \partial  }{ \partial t }p_{t}(x, y) &= \frac{1}{2}\frac{ \partial^2  }{ \partial y^2 }  p_{t}(x, y) 
+>\end{align*}
+>$$
+>which is also the **heat equation**.
+
+
 
 ## Self-Similarity
 

@@ -54,7 +54,7 @@ date of note: 2024-05-10
 - [[Absolutely Convergent Integration]]
 
 >[!example]
->For $p=\infty$, $$L^{\infty}(X, \mu) := \left\{ f: X \to \mathbb{C} \text{ $\mu$-measurable}: \sup_{X}|f| < \infty \right\} $$ is the space of **essentially bounded functions** 
+>For $p=\infty$, $$L^{\infty}(X, \mu) := \left\{ f: X \to \mathbb{C} \text{ $\mu$-measurable}: \text{ess }\sup_{X}|f| < \infty \right\} $$ is the space of **essentially bounded functions** 
 
 - [[Bounded Function and Space of Bounded Functions]]
 

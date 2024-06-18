@@ -21,7 +21,7 @@ date of note: 2024-05-30
 
 - [[Concepts and Theorems in Probability Theory]]
 - [[Concepts and Theorems for Martingale]]
-- [[Concepts and Theorems for Markov Chain]]
+- [[Concepts and Theorems for Markov Process]]
 - [[Concepts and Theorems for Gaussian Process]]
 
 - [[Filtration]]

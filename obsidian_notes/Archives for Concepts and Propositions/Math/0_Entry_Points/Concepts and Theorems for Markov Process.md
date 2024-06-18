@@ -25,10 +25,13 @@ date of note: 2024-05-30
 - [[Concepts and Theorems in Probability Theory]]
 
 - [[Markov Chain and Markov Process]]
-- [[Markov Chain Transition Kernel and Transition Function]]
-
-- [[Integral Operator associated with Transition Kernel]]
+- [[Markov Transition Kernel and Transition Function]]
 - [[Chapman-Kolmogorov Equation]]
+
+- [[Semigroup associated with Transition Function]]
+- [[Feller Property of Transition Function]]
+- [[Integral Operator associated with Transition Kernel]]
+
 - [[Stopping Time of Markov Chain]]
 - [[Strong Markov Property]]
 - [[Number of Passages and Probability of Finite Return]]
@@ -50,8 +53,9 @@ date of note: 2024-05-30
 
 ### Generator of Continuous Time Markov Chain
 
+- [[Semigroup associated with Transition Function]]
+- [[Feller Property of Transition Function]]
 - [[Infinitesimal Generator of Markov Process]]
-
 
 
 ### Markov Chain Monte Carlo 
@@ -82,9 +86,11 @@ date of note: 2024-05-30
 - [[Concepts and Theorems in Hilbert Space]]
 
 
-
+- Friedman, A. (1975). *Stochastic differential equations and applications*. Vol.1
 - [[Monte Carlo Statistical Methods by Robert]]
 - [[Introduction to Stochastic Calculus by Klebaner]]
+
+
 - [[A Probability Path by Resnick]]
 - [[Probability and Measure by Billingsley]]
 

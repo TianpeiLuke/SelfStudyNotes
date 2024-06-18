@@ -43,6 +43,10 @@ date of note: 2024-06-04
 
 ## Explanation
 
+>[!important]
+>The *De Moivre–Laplace Theorem* is the first version of **central limit theorem**.
+
+
 >[!info]
 >The second version is the equivalent version of the first, given by [[Portmanteau Theorem]] as
 >$$

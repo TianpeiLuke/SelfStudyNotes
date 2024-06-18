@@ -59,6 +59,10 @@ date of note: 2024-05-27
 > \end{align}
 >$$ 
 
+^3d69fd
+
+- [[Ordinary Differential Equations]]
+- [[Autonomous and Nonautonomous Ordinary Differential Equations]]
 
 ## Examples
 

@@ -66,6 +66,9 @@ date of note: 2024-05-18
 >h = \left\langle \cdot, x_{h} \right\rangle_{\mathcal{H}}
 >$$
 
+## Coordinate Representation
+
+- [[Coordinate Representation of Gradient]]
 
 
 

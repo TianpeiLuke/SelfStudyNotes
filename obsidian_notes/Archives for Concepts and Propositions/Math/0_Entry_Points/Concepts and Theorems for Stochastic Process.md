@@ -42,10 +42,10 @@ date of note: 2024-05-30
 
 ### Markov Chain
 
-- [[Concepts and Theorems for Markov Chain]]
+- [[Concepts and Theorems for Markov Process]]
 
 - [[Markov Chain and Markov Process]]
-- [[Markov Chain Transition Kernel and Transition Function]]
+- [[Markov Transition Kernel and Transition Function]]
 
 - [[Stationary Process]]
 

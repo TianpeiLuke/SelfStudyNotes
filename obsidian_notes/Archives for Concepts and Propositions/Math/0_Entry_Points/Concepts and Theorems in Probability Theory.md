@@ -98,7 +98,7 @@ date of note: 2024-05-13
 
 - [[Conditional Expectation]]
 - [[Conditional Probability]]
-- [[Markov Chain Transition Kernel and Transition Function]]
+- [[Markov Transition Kernel and Transition Function]]
 
 
 

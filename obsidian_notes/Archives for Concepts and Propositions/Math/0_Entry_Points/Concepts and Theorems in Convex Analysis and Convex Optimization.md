@@ -76,7 +76,7 @@ date of note: 2024-05-11
 
 - [[Convex Optimization Problem]]
 - [[Convex Bifunctions]]
-- [[Lagrangian Function]]
+- [[Archives for Concepts and Propositions/Optimization and Numerical Methods/Lagrangian Function]]
 - [[Lagrangian Dual Function]]
 - [[Lagrange Dual Problem]]
 - [[Karush-Kuhn-Tucker Optimality Condition]]

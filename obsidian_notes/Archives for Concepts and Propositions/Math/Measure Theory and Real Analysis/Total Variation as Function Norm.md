@@ -61,7 +61,7 @@ date of note: 2024-05-28
 >$$
 >where $\text{div}$ is the **divergence operator**, $\mathcal{C}_{c}(X, \mathbb{R}^d)$ is the continuous function from $X \to \mathbb{R}^d$ with *compact support*, $\lVert  \rVert_{\infty}$ is the **essential supremum norm**.
 
-- [[Divergence of Vector Field on Riemannian Manifold]]
+- [[Divergence Operator of Vector Field on Riemannian Manifold]]
 - [[Continuous Functions with Compact Support]]
 - [[Uniformly Almost Everywhere Convergence]]
 

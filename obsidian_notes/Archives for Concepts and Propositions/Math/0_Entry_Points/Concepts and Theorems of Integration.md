@@ -288,8 +288,8 @@ date of note: 2024-06-06
 
 - [[Exterior Derivatives of Differential Form]]
 - [[Stokes Theorem]]
-
-
+- [[Divergence Theorem on Riemannian Manifold]]
+- [[Divergence Operator of Vector Field on Riemannian Manifold]]
 
 ## Explanation
 

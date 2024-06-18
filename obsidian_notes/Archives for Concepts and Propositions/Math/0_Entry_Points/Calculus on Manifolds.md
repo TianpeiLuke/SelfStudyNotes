@@ -61,7 +61,7 @@ date of note: 2024-05-06
 
 
 - [[Stokes Theorem on Riemannian Manifold]]
-- [[Divergence of Vector Field on Riemannian Manifold]]
+- [[Divergence Operator of Vector Field on Riemannian Manifold]]
 - [[Divergence Theorem on Riemannian Manifold]]
 
 - [[Stokes Theorem for Surface Integrals]]

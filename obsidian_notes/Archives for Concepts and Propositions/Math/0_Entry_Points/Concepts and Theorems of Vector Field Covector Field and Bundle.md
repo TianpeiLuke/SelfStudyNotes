@@ -96,6 +96,20 @@ date of note: 2024-05-06
 - [[Pullback of Covector Fields]]
 - [[Coordinate Representation of Pullback of Covector]]
 
+### Tensor on Riemannian Manifold
+
+- [[Riemannian Metric and Riemannian Manifold]]
+- [[Flat Operator and Lower Index of Vector Field]]
+- [[Sharp Operator and Raise Index of Covector Field]]
+- [[Tangent-Cotangent Isomorphism in Riemannian Manifold]]
+
+- [[Gradient of Smooth Map]]
+- [[Coordinate Representation of Gradient]]
+- [[Riemannian Volume Form]]
+- [[Divergence Operator of Vector Field on Riemannian Manifold]]
+- [[Coordinate Representation of Divergence Operator]]
+- [[Laplacian of Smooth Map on Riemannian Manifold]]
+- [[Coordinate Representation of Laplace Operator]]
 
 
 ## Duality between Tangent and Cotangent 

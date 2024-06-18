@@ -73,7 +73,7 @@ date of note: 2024-05-14
 -----------
 ##  Recommended Notes and References
 
-- [[Divergence on Manifold]]
+- [[Divergence Function on Manifold]]
 
 - Wikipedia [Bregman divergence](https://en.wikipedia.org/wiki/Bregman_divergence)
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]]

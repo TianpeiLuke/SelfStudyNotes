@@ -62,13 +62,15 @@ date of note: 2024-06-15
 >$$
 >where $H: \mathbb{R}^n \times \mathbb{R}^n \to \mathbb{R}$ is the **Hamiltonian** associated with **Lagrangian**.
 
+- [[Hamiltonian Function in Mechanic]]
+- [[Lagrangian Function in Mechanics]]
 - [[Hamiltonian Systems of Differential Equations]]
 - [[Legendre Transform]]
 
 
 ## Euler-Lagrange Equation
 
-- [[Euler–Lagrange Equation]]
+- [[Euler–Lagrange Equations]]
 
 
 

@@ -26,6 +26,9 @@ Chicone, C. (2006). _Ordinary Differential Equations with Applications_ (2nd edi
 -----------
 ##  Recommended Notes and References
 
+- [[Hamilton-Jacobi Equation]]
+- [[Hamiltonian Function in Mechanic]]
+
 - [[Stable Manifold]]
 - [[Smooth Manifold]]
 

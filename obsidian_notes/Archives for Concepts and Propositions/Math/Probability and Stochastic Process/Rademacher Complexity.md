@@ -68,7 +68,7 @@ date of note: 2024-05-12
 
 
 - [[Empirical Risk Minimization]]
-- [[PAC Learnable]]
+- [[PAC Learnable and Agnostic PAC Learnable]]
 
 - [[Concentration Inequalities by Boucheron]]
 - [[Mathematical Foundations of Infinite Dimensional Statistical Models by Gine]]

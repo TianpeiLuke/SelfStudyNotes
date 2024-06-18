@@ -56,7 +56,7 @@ date of note: 2024-06-13
 - [[Linear Stochastic Differential Equation]]
 - [[Stochastic Differential Equations]]
 
-- [[Markov Chain Transition Kernel and Transition Function]]
+- [[Markov Transition Kernel and Transition Function]]
 
 
 - [[Introduction to Stochastic Calculus by Klebaner]]
