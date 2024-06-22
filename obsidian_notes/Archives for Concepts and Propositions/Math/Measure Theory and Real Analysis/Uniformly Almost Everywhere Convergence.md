@@ -38,6 +38,10 @@ where
 > $$
 > is the **essential bound**. It is denoted as $f_{n}\stackrel{L^{\infty}}{\rightarrow}f$.
 
+^4f10f6
+
+- [[L-infinite Space]]
+- [[Essential Supremum and Essential Infimum]]
 
 
 

@@ -54,5 +54,7 @@ date of note: 2024-05-05
 -----------
 ##  Recommended Notes and References
 
+
 - [[Measure Space and Countably Additive Measure]]
 - [[Finite and sigma-Finite Measure]]
+- [[Real Analysis by Royden]]

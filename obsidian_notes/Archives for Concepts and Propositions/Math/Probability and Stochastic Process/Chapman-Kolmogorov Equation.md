@@ -32,6 +32,13 @@ date of note: 2024-05-24
 - [[Fubini Theorem]]
 
 
+>[!important] Definition
+>For **continuous time** *Markov process* $(X_{t}, t \ge 0)$, the **Chapman-Kolmogorov equation**
+> $$p(s, x, t, A) = \int_{\mathcal{X}}p(u, y, t, A)p(s, x, u, dy)$$ 
+> where $p$ is the **transition function**.
+
+
+
 >[!important] Theorem (Chapman-Kolmogorov Equation)
 >For every $m,n \in \mathbb{N}$, $x\in \mathcal{X}$ and $A \in \mathcal{B}(\mathcal{X})$, 
 >$$

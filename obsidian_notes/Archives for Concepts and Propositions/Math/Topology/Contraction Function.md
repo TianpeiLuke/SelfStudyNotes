@@ -47,3 +47,7 @@ date of note: 2024-05-04
 - [[Fixed Point of Map]]
 
 - Github Note [link](https://github.com/TianpeiLuke/SelfStudyNotes/tree/master/self-study/probability_and_measure_theory)
+
+
+- [[Functional Analysis by Reed]]
+- [[Real Analysis by Royden]]

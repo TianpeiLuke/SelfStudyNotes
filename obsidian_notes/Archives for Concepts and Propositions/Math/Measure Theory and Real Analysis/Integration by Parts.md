@@ -35,15 +35,19 @@ date of note: 2024-06-10
 >\end{align*}
 >$$
 
+^6d860c
+
 - [[Riemann Integration]]
 
-### Riemann Integral
+### Riemann–Stieltjes Integral
 
 >[!important] Proposition
 >Suppose $F$ is **monotonically increasing** on $[a,b]$, and $g$ is **continuous**, and $g(x) = G'(x)$ for $x\in [a,b]$. 
 >$$
 >\int_{a}^{b} F(x)\,g(x)\,dx = - \int_{a}^{b} G(x)\,dF(x) + F(b)G(b) - F(a)G(a)
 >$$
+
+^8158ee
 
 - [[Riemann–Stieltjes Integration]]
 
@@ -58,6 +62,8 @@ date of note: 2024-06-10
 >\int_{[a,b]}F'\,\phi\,dx = - \int_{[a,b]}F\,\phi'\,dx
 >\end{align*}
 >$$
+
+^73397d
 
 - [[Absolutely Convergent Integration]]
 - [[Absolutely Continuous Function]]

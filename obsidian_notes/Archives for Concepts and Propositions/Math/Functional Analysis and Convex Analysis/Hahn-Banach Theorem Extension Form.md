@@ -59,3 +59,9 @@ date of note: 2024-05-08
 - [[Bounded Linear Transform Theorem]]
 
 - Github Note [link](https://github.com/TianpeiLuke/SelfStudyNotes/tree/master/self-study/probability_and_measure_theory)
+
+
+- [[Functional Analysis by Reed]]
+- [[Real Analysis by Royden]]
+- [[Real Analysis Modern Techniques and Their Applications by Folland]]
+- [[Optimization by Vector Space Methods by Luenberger]]

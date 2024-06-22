@@ -41,3 +41,4 @@ date of note: 2024-05-07
 
 - [[Lebesgue Measure]]
 - [[Introduction to Measure Theory by Tao]]
+- [[Real Analysis by Royden]]

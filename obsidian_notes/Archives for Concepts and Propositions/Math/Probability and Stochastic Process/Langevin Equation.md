@@ -214,7 +214,7 @@ date of note: 2024-06-07
 ^709c25
 
 
-- [[Invariant Measure]]
+- [[Invariant Measure and Stationary Distribution]]
 - [[Stationary Process]]
 
 

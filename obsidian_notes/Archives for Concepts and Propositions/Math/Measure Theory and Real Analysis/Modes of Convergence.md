@@ -37,8 +37,16 @@ date of note: 2024-05-05
 > - If $f_n$ converges to $f$ **almost uniformly**, then $f_n$ converges to $f$ **pointwise almost everywhere.**
 > - If $f_n$ converges to $f$ **pointwise**, then $f_n$ converges to $f$ **pointwise almost everywhere**.
 > - If $f_n$ converges to $f$ in **$L^1$ norm**, then $f_n$ converges to $f$ **in measure**.
+> 	- If $f_n$ converges to $f$ **in measure** and $f_{n}$ is **uniformly integrable**, then $f_{n}$ converges to $f$ in __$L^1$ norm__
 > - If $f_n$ converges to $f$ **almost uniformly**, then $f_n$ converges to $f$ **in measure.**
 
+
+>[!important]
+>- $f_n$ converges to $f$ in **$L^p$ norm**  $\longleftrightarrow$  $f_n$ converges to $f$ **in measure** and $\{|f_{n}|^{p}\}$ is **uniformly integrable** and **tight**.
+>- If $f_n$ converges to $f$  **pointwise almost everywhere**, then 
+>	- $f_n$ converges to $f$ in **$L^p$ norm**  $\longleftrightarrow$   $\{|f_{n}|^p\}$ is **uniformly integrable** and **tight**.
+
+- [[Vitali Lp Convergence Theorem]]
 
 ### Counter Arguments that are Not True
 
@@ -70,8 +78,12 @@ date of note: 2024-05-05
 - [[Pointwise Almost Everywhere Convergence]]
 - [[Uniform Convergence]]
 - [[Uniformly Almost Everywhere Convergence]]
-- [[Convergence in L1 norm]]
+- [[Convergence in Lp norm]]
 - [[Almost Uniform Convergence]]
 - [[Convergence in Measure]]
-  
+
+- [[Uniform Integrable Family of Functions]]
+- [[Tightness of Integrable Functions]]
+- [[Vitali Lp Convergence Theorem]]
+
 - [[Measure Space and Countably Additive Measure]]

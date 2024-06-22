@@ -35,6 +35,8 @@ date of note: 2024-05-08
 > \end{align*}
 > $$
 
+^fff1cb
+
 >[!info]
 >The function $f^{*}$ is also called **the convex conjugate function** of $f$
 

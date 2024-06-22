@@ -23,7 +23,7 @@ date of note: 2024-05-09
 >
 >We say that $X_n$ **converges in distribution** to $X$ if **the cumulative distribution function** $F_n(\lambda)$ of $X_n$ *converges pointwise* to the cumulative distribution function $F(\lambda)$ of $X$ at all $\lambda \in \mathbb{R}$ for which $F$ is *continuous.* 
 >
->**Denoted** as $X_{n}\stackrel{F}{\rightarrow} X$ or $X_{n}\stackrel{d}{\rightarrow} X$ or $X_n \rightsquigarrow X$. 
+>**Denoted** as $X_{n}\stackrel{F}{\rightarrow} X$ or $X_{n}\stackrel{d}{\rightarrow} X$ or $X_n \rightsquigarrow X$, or $F_{n} \Rightarrow F$ 
 >$$
 > \begin{align*}
 > X_{n}\stackrel{d}{\rightarrow} X \; \Leftrightarrow \; F_n(\lambda) \rightarrow F(\lambda), \text{ for all }\lambda \in \mathbb{R}
@@ -39,9 +39,10 @@ date of note: 2024-05-09
 >[!info]
 >Note that the c.d.f of $X$ corresponds to a *push-forward measure* of $\mathcal{P}$ by random variable $X$.
 >$$
->F_{n}(\lambda) := (X_{n, \#}\mathcal{P})((-\infty , \lambda])
+>F_{n}(\lambda) := ((X_{n})_{*}\mathcal{P})((-\infty , \lambda])
 >$$ 
 
+- [[Push-forward Measure and Push-forward Operator]]
 
 ## General Definition on Metric Measure Space
 
@@ -76,14 +77,19 @@ date of note: 2024-05-09
 >\end{align*} 
 >$$ 
 
-
 - Note that $\mathcal{C}_{0}(\Omega) \subseteq \mathcal{BC}(\Omega)$.
 - If we further restrict $\Omega$ to be a *compact Hausdorff space*, then we have  $\mathcal{C}_{0}(\Omega) = \mathcal{BC}(\Omega)$. Then we can use [[Riesz-Markov Representation Theorem]]
-
+- Wikipedia [Weak_convergence_of_measures](https://en.wikipedia.org/wiki/Convergence_of_measures#Weak_convergence_of_measures)
 
 
 >[!info]
 >Note that the $I_{\mu_n} \stackrel{w^{*}}{\rightarrow} I_{\mu}$ is equivalent to $I_{\mu_n}(f) \rightarrow I_{\mu}(f)$ for all $f \in  \mathcal{BC}(\Omega)$.
+
+
+## Helly Selection Theorem
+
+- [[Helly Selection Theorem]]
+
 
 ## Equivalent Conditions for Convergence in Distribution
 
@@ -103,6 +109,8 @@ date of note: 2024-05-09
 - [[Probability Distribution of Random Variable]]
 - [[Weak Convergence in Banach Space]]
 - [[Weak Topology of Banach Space]]
+
+- [[Tightness of Measures]]
 
 - [[Asymptotic Statistics by A W van der Vaart]]
 

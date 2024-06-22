@@ -50,3 +50,4 @@ date of note: 2024-05-07
 
 
 - [[Real Analysis Modern Techniques and Their Applications by Folland]]
+- [[Real Analysis by Royden]]

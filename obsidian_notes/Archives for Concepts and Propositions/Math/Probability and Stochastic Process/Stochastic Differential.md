@@ -30,7 +30,7 @@ date of note: 2024-06-07
 
 ^222620
 
-- [[Itô Process and Diffusion Process]]
+- [[Itô Process]]
 - [[Itô Stochastic Integration]]
 - [[Progressively Measurable Stochastic Process]]
 - [[Brownian Motion Wiener Process]]

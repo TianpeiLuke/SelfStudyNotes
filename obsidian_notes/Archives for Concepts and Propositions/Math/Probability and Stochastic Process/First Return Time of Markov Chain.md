@@ -6,7 +6,7 @@ keywords:
 topics:
   - stochastic_process
 name: 
-date of note: 2024-06-13
+date of note: 2024-06-19
 ---
 
 ## Concept Definition
@@ -15,8 +15,6 @@ date of note: 2024-06-13
 >**Name**: 
 
 
-
-- [[Introduction to Stochastic Calculus by Klebaner]] pp 198
 
 ## Explanation
 
@@ -28,10 +26,6 @@ date of note: 2024-06-13
 ##  Recommended Notes and References
 
 
-- [[Martingale]]
-- [[Itô Stochastic Integration]]
+- [[Invariant Measure and Stationary Distribution]]
 
-- [[Riemann Integration]]
-
-
-- [[Introduction to Stochastic Calculus by Klebaner]]
+- [[Monte Carlo Statistical Methods by Robert]]

@@ -22,7 +22,7 @@ date of note: 2024-06-04
 >
 >Then
 >$$
->\frac{S_{n} - n\mu}{\sigma \sqrt{ n }} \stackrel{d}{\longrightarrow} \mathcal{N}(\mu, \sigma^2),
+>\frac{S_{n} - n\mu}{\sigma \sqrt{ n }} \stackrel{d}{\longrightarrow} \mathcal{N}(0, 1),
 >$$
 >where $\mathcal{N}(\mu, \sigma^2)$ is the **Gaussian distribution** with mean parameter $\mu$ and variance parameter $\sigma^2.$
 

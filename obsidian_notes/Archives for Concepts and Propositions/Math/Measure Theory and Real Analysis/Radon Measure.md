@@ -113,5 +113,6 @@ date of note: 2024-05-07
 - [[Borel Measure]]
 - [[Compactness]]
 
+- [[Real Analysis by Royden]]
 - [[Real Analysis Modern Techniques and Their Applications by Folland]]
 - [[Functional Analysis by Reed]]

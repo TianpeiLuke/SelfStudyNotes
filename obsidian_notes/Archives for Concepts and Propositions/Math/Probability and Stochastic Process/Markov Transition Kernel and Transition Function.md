@@ -37,12 +37,12 @@ date of note: 2024-04-18
 ### Transition Function
 
 >[!important] Definition
->Let $p(A, t, x, s)$ be a *non-negative function* defined for $0 \le s < t < \infty$, $x\in \mathcal{X}$, $A\in \mathcal{B}(\mathcal{X})$, and satisfying:
->1. $p(A, t, x, s)$ is **Borel measurable** in $x$, for fixed $s, t, A$;
->2. $p(A, t, x, s)$ is a **probability measure** in $A$, for fixed  $s, x, t$;
->3. $p$ satisfies the **Chapman-Kolmogorov equation** $$p(A, t, x, s) = \int_{\mathcal{X}}p(A, t, y, u)p(dy, u, x, s)$$ for any $s < u < t.$
+>Let $p(s, x, t, A)$ be a *non-negative function* defined for $0 \le s < t < \infty$, $x\in \mathcal{X}$, $A\in \mathcal{B}(\mathcal{X})$, and satisfying:
+>1. $p(s, x, t, A)$ is **Borel measurable** in $x$, for fixed $s, t, A$;
+>2. $p(s, x, t, A)$ is a **probability measure** in $A$, for fixed  $s, x, t$;
+>3. $p$ satisfies the **Chapman-Kolmogorov equation** $$p(s, x, t, A) = \int_{\mathcal{X}}p(u, y, t, A)p(s, x, u, dy)$$ for any $s < u < t.$
 >   
->Then we call $p(A,t,x,s)$ a **Markov transition function** (a **transition probability function**, or a **transition probability**).   
+>Then we call $p(s, x, t, A)$ a **Markov transition function** (a **transition probability function**, or a **transition probability**).   
 
 - Friedman, A. (1975). *Stochastic differential equations and applications*. pp 18
 - [[Chapman-Kolmogorov Equation]]
@@ -75,7 +75,7 @@ The above definition of Transition Kernel can be used to define the **conditiona
 >The **transition function** $p$ and **transition kernel** $K$ are equivalent
 >$$
 >\begin{align*}
->p(A, t, x, s) := K(x,  A) = \mathcal{P}\left( X_{t} \in A | X_{s} = x \right)
+>p(s, x, t, A) := K(x,  A) = \mathcal{P}\left( X_{t} \in A | X_{s} = x \right)
 >\end{align*}
 >$$
 >where $A\in \mathcal{B}(\mathcal{X}).$
@@ -86,7 +86,7 @@ The above definition of Transition Kernel can be used to define the **conditiona
 >[!info] 
 >For discrete-state Markov chain $X_{t}$, the **transition kernel** of Markov Chain can be simplified as the *time-invariant conditional probability mass function*
 > $$
-> K(x, y)  := \mathcal{P}(X_{t+1} = y | X_t = x).
+> K(x, y) := p(x, t, y, t+1)  := \mathcal{P}(X_{t+1} = y | X_t = x).
 > $$ 
 
 >[!info] **$m$-Step Transition Probability**
@@ -116,7 +116,7 @@ The above definition of Transition Kernel can be used to define the **conditiona
 >
 >Then, for any $s \ge 0$, and for **any probability distribution** $\pi$ on $(\mathcal{X}, \mathscr{F})$, there exists a *stochastic process* $(X_{t}, s \le t < \infty)$ such that 
 >- $$\mathcal{P}\left\{ X(s, \omega) \in A \right\} = \pi(A)$$
->- $$\mathcal{P}\left\{ X(t, \omega) \in A \,|\, \sigma\left(X_{u}, u \in [s, \bar{s}]  \right) \right\} = p(A, t, X(\bar{s}), \bar{s}), \quad \text{ a.s. } $$ for  $s \le \bar{s} <t.$
+>- $$\mathcal{P}\left\{ X(t, \omega) \in A \,|\, \sigma\left(X_{u}, u \in [s, \bar{s}]  \right) \right\} = p(\bar{s}, X(\bar{s}), t, A), \quad \text{ a.s. } $$ for  $s \le \bar{s} <t.$
 
 ^b6b406
 

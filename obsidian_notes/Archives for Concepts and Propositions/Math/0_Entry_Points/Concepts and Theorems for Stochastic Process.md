@@ -30,7 +30,7 @@ date of note: 2024-05-30
 - [[Stochastic Process]]
 - [[Progressively Measurable Stochastic Process]]
 - [[Finite Dimensional Distribution of Stochastic Process]]
-
+- [[Uniform Integrable Stochastic Process]]
 
 ### Martingale Theory
 
@@ -39,6 +39,11 @@ date of note: 2024-05-30
 
 - [[Martingale]]
 - [[Martingale Differences]]
+- [[Stopping Time of Filtration]]
+- [[Local Property of Stochastic Process and Localizing Sequence]]
+- [[Local Martingale]]
+
+- [[Dirichlet Class of Stochastic Process]]
 
 ### Markov Chain
 
@@ -46,6 +51,7 @@ date of note: 2024-05-30
 
 - [[Markov Chain and Markov Process]]
 - [[Markov Transition Kernel and Transition Function]]
+
 
 - [[Stationary Process]]
 
@@ -82,7 +88,7 @@ date of note: 2024-05-30
 
 - [[Concepts and Theorems for Gaussian Process]]
 - [[Brownian Motion Wiener Process]]
-- [[Representation of Brownian Motion]]
+- [[Coordinate Representation of Brownian Motion]]
 - [[Sample Path of Brownian Motion]]
 
 ### Spectral Representation

@@ -56,10 +56,21 @@ date of note: 2024-05-15
 
 ## Explanation
 
+>[!info]
+>$\tau$ is a **stopping time** with respect to $(\mathscr{F}_{t})$ means that the query 
+>
+>"*has the stopping time reached before time $t$?*" 
+>
+>can be *answered __deterministically__* given all information available at time $t$.
+>
+>In other word, the information used to determine the stopping time is **in the present** and not relying on **its own history**.
+
+
 >[!important]
 >Using the interpretation of **$\sigma$-algebras encoding information**, if 
 >- $\{\mathscr{F}_{t}: t\ge 0\}$ is thought of as **the knowledge available at time $t$**,  then 
 >- $\mathscr{F}_{\tau}$ is the information available **at the random time** $\tau$.
+
 
 ## Properties
 
@@ -75,6 +86,25 @@ date of note: 2024-05-15
 >is a **martingale** with respect to $\set{\mathscr{F}_n, n \ge 0}$, where $n\land \tau = \min\set{n, \tau}$.
 
 
+## Stopping Time of Martingale
+
+- [[Weak Optional Sampling Theorem]]
+- [[Doob Optional Sampling Theorem]]
+
+
+
+## Stopping Time of Markov Process
+
+- [[Stopping Time of Markov Chain]]
+
+
+## Stopping Time of Stochastic Integral
+
+- [[Stopping Time and Stochastic Integral]]
+
+## Local Properties
+
+- [[Local Property of Stochastic Process and Localizing Sequence]]
 
 
 

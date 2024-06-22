@@ -50,7 +50,7 @@ date of note: 2024-05-27
 >$$
 >is **not invertible**.
 
-- [[Resolvent Set and Spectrum of Linear Operator]]
+- [[Resolvent Operator and Spectrum of Linear Operator]]
 
 >[!important]
 >Eigenvalue $\lambda$ of $A$ is a *root* of the **characteristic equation**

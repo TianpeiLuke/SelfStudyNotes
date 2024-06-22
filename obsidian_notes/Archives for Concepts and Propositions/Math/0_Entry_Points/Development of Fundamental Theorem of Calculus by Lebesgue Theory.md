@@ -42,8 +42,8 @@ date of note: 2024-05-28
 
 - [[Monotone Differentiation Theorem]]
 - [[Jump function]]
-- [[Total Variation as Function Norm]]
-- [[Bounded Variation Function]]
+- [[Total Variation of Function]]
+- [[Space of Functions with Bounded Variation]]
 - [[Bounded Variation Differentiation Theorem]]
 - [[Locally Bounded Variation Function]]
 - [[Locally Bounded Variation Differentiation Theorem]]
@@ -73,3 +73,4 @@ date of note: 2024-05-28
 
 - [[Introduction to Measure Theory by Tao]]
 - [[Real Analysis Modern Techniques and Their Applications by Folland]]
+- [[Real Analysis by Royden]]

@@ -29,7 +29,7 @@ date of note: 2024-06-14
 
 - [[Stopping Time and Stochastic Integral]]
 - [[Stochastic Differential Equations]]
-- [[Itô Process and Diffusion Process]]
+- [[Itô Process]]
 
 
 - [[Markov Chain and Markov Process]]

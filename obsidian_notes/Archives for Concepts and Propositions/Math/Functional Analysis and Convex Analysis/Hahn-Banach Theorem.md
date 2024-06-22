@@ -24,7 +24,7 @@ date of note: 2024-05-08
 
 ### Geometric Form of The Hahn-Banach Theorem 
 
-- [[Hahn-Banach Theorem Geometric Form]]
+- [[Hahn-Banach Theorem Geometric Form and Mazur Theorem]]
 
 ## Explanation
 

@@ -23,6 +23,7 @@ date of note: 2024-05-15
 
 - [[Filtration]]
 - [[Adapted Stochastic Process and Non-anticipating Process]]
+- [[Progressively Measurable Stochastic Process]]
 - [[Martingale]]
 	- [[Sub-Martingale]]
 	- [[Super-Martingale]]
@@ -51,10 +52,25 @@ date of note: 2024-05-15
 - [[Azuma-Hoeffding Inequality]]
 - [[Bernstein Inequality for Martingale]]
 
+### Local Martingales
+
+- [[Uniform Integrable Stochastic Process]]
+- [[Dirichlet Class of Stochastic Process]]
+
+- [[Local Property of Stochastic Process and Localizing Sequence]]
+- [[Local Martingale]]
+
+
 ### Quadratic Variation of Martingale
 
-- [[Quadratic Variation of Martingale]]
+- [[Quadratic Variation and Covariation of Stochastic Process]]
 
+### Martingale Problem 
+
+- [[Martingale Problem]]
+- [[Fokker–Planck and Kolmogorov Forward-Backward Equation]]
+- [[Martingale via Solution of SDE and Backward Equation]]
+- [[Feynman-Kac Formula]]
 
 
 ## Explanation

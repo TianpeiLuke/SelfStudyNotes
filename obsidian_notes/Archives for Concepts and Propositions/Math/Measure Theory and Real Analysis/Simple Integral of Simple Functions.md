@@ -88,3 +88,4 @@ date of note: 2024-05-13
 -----------
 ##  Recommended Notes and References
 
+- [[Simple Approximation Theorem of Lp Function]]

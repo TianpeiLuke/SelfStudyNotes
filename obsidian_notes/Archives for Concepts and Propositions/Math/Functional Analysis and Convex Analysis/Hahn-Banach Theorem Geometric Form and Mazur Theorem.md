@@ -73,6 +73,10 @@ date of note: 2024-05-08
 - [[Convex Set]]
 - [[Urysohn Lemma]]
 
+
 - [[Functional Analysis by Reed]]
+- [[Real Analysis by Royden]] pp 292
+- [[Real Analysis Modern Techniques and Their Applications by Folland]]
+- [[Optimization by Vector Space Methods by Luenberger]]
 
 - Github Note [link](https://github.com/TianpeiLuke/SelfStudyNotes/tree/master/self-study/probability_and_measure_theory)

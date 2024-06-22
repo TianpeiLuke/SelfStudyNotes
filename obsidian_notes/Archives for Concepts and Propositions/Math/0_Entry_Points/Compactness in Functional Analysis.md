@@ -17,6 +17,9 @@ date of note: 2024-05-13
 - [[Weak-star Topology of Banach Space]]
 - [[Tychonoff Theorem and Product of Compact Space]]
 - [[Banach-Alaoglu Theorem]]
+- [[Helly Selection Theorem]]
+- [[Kakutani Theorem on Weak Compactness and Reflexivity]]
+- [[Characterization of Weak Compactness in Banach Space]]
 
 ## Compactness in Metric Space
 
@@ -67,3 +70,4 @@ date of note: 2024-05-13
 - [[Functional Analysis by Reed]]
 - [[Introductory Functional Analysis with Applications by Kreyszig]]
 - [[Real Analysis Modern Techniques and Their Applications by Folland]]
+- [[Real Analysis by Royden]]

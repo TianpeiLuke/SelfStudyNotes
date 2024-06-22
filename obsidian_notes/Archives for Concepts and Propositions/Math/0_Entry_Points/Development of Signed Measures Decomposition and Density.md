@@ -24,6 +24,7 @@ date of note: 2024-05-06
 - [[Hahn Decomposition Theorem]]
 - [[Mutually Singular Measures]]
 - [[Jordan Decomposition Theorem and total variation measure]]
+- [[Space of Bounded Signed Measures]]
 - [[Absolute Continuity for Measures]]
 - [[Signed Measure defined via Integral]]
 - [[Density and Probability Density]]
@@ -48,3 +49,4 @@ date of note: 2024-05-06
 - [[Real Analysis Modern Techniques and Their Applications by Folland]]
 - [[Probability and Measure by Billingsley]]
 - [[A Probability Path by Resnick]]
+- [[Real Analysis by Royden]]

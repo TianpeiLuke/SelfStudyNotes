@@ -50,4 +50,9 @@ date of note: 2024-05-13
 
 - [[Product Topology]]
 
+- [[Topology Book by Munkres]]
+- [[Real Analysis by Royden]]
+- [[Functional Analysis by Reed]]
+- [[Real Analysis Modern Techniques and Their Applications by Folland]]
+
 - Github Note [link](https://github.com/TianpeiLuke/SelfStudyNotes/tree/master/self-study/probability_and_measure_theory)

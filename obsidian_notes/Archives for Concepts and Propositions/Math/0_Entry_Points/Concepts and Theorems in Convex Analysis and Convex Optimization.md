@@ -38,16 +38,17 @@ date of note: 2024-05-11
  
 - [[Convex Function]]
 - [[Operations that Preserve Convexity]]
+- [[Perspective Function]]
 - [[Jensen Inequality]]
 - [[Semi-Continuous Function]]
 - [[Convex Differentiation Theorem]]
-	
+- [[Quasi-Convex Function]]	
 
 ### Duality Correspondence in Convex Space
 
 - [[Duality Correspondences of Convex Sets]]
 - [[Space of Bounded Linear Operators]]
-- [[Hahn-Banach Theorem Geometric Form]]
+- [[Hahn-Banach Theorem Geometric Form and Mazur Theorem]]
 	- [[Supporting Hyperplane of Convex Set]]
 	- [[Separation Theorem]]
 	- [[Support functional of Convex Set]]
@@ -76,7 +77,12 @@ date of note: 2024-05-11
 
 - [[Convex Optimization Problem]]
 - [[Convex Bifunctions]]
-- [[Archives for Concepts and Propositions/Optimization and Numerical Methods/Lagrangian Function]]
+- [[Locally Convex Space]]
+- [[Compactness]]
+- [[Extreme Points of Convex Set of Locally Convex Space]]
+- [[Krein-Milman Lemma and Krein-Milman Theorem]]
+
+- [[Lagrangian Function]]
 - [[Lagrangian Dual Function]]
 - [[Lagrange Dual Problem]]
 - [[Karush-Kuhn-Tucker Optimality Condition]]

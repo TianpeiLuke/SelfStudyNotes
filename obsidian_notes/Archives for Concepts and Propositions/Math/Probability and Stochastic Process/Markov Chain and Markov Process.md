@@ -76,7 +76,7 @@ date of note: 2024-04-18
 >- For each $t\in T$,  $X_{t} \in S$ where $S$ is the **state space**. 
 >- If $T = \mathbb{N}$, then the Markov process is called the **discrete-time Markov process**. The state space $S$ is a **countable set** for *discrete-time Markov process*.
 >- If $T = \mathbb{R}$, then the Markov process is called the **continuous-time Markov process**. The state space $S$ is also **countable**.
->- If $S$ is **uncountable**, the Markov chain is called **Harris chain**.
+>- If the state space $S$ is **uncountable**, the Markov chain is called **Harris chain**.
 
 - [[Countable Set and Uncountable Set]]
 

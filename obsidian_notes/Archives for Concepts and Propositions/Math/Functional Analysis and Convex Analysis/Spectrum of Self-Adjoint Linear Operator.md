@@ -40,7 +40,7 @@ date of note: 2024-05-27
 ##  Recommended Notes and References
 
 - [[Eigenvalue Point Residual Spectrum of Linear Operator]]
-- [[Resolvent Set and Spectrum of Linear Operator]]
+- [[Resolvent Operator and Spectrum of Linear Operator]]
 - [[Self-Adjoint Operator in Hilbert Space]]
 
 - [[Space of Bounded Linear Operators]]

@@ -23,7 +23,7 @@ date of note: 2024-05-24
 >
 >Consider $A \in \mathscr{F}$. We define **the number of passages** of $(X_{n})$ **at** $A$ as
 >$$
->\eta_{A} := \sum_{n=1}^{\infty}\mathbb{1}_{A}\left(X_{n}\right).
+>\eta_{A} := \sum_{n=1}^{\infty}\mathbb{1}\left(X_{n} \in A\right).
 >$$
 
 - [[Markov Chain and Markov Process]]

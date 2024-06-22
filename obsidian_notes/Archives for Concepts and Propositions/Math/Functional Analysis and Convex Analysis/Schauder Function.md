@@ -68,7 +68,7 @@ date of note: 2024-06-05
 ##  Recommended Notes and References
 
 - [[Haar Wavelet Function]]
-- [[Representation of Brownian Motion]]
+- [[Coordinate Representation of Brownian Motion]]
 
 
 - [[Functional Analysis by Reed]]

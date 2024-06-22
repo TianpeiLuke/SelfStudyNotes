@@ -38,7 +38,7 @@ date of note: 2024-05-27
 >$$
 >is **not injective**. Thus $\lambda \in \sigma(T)$ is in the **spectrum** of $T$.
 
-- [[Resolvent Set and Spectrum of Linear Operator]]
+- [[Resolvent Operator and Spectrum of Linear Operator]]
 - [[Hilbert Space]]
 - [[Injective Function]]
 

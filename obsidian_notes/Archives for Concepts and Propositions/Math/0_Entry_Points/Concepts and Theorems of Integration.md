@@ -29,6 +29,11 @@ date of note: 2024-06-06
 - [[Riemann Integration]]
 - [[Criterion of Riemann-Stieltjes Integrability]]
 
+#### Integration by Parts 
+
+ ![[Integration by Parts#^6d860c]]
+
+
 ### Riemann-Stieltjes Integration with respect to Functions with Bounded Variation on Closed Interval in Real Line
 
 >[!info]
@@ -37,6 +42,10 @@ date of note: 2024-06-06
 >$$
 
 - [[Riemann–Stieltjes Integration]]
+
+#### Integration by Parts 
+
+![[Integration by Parts#^8158ee]]
 
 
 ### Lebesgue Integration with respect to Lebesgue Measure on $\mathbb{R}^d$
@@ -82,6 +91,7 @@ date of note: 2024-06-06
 - [[Simple Integral of Simple Functions]]
 - [[Unsigned Integral of Functions]]
 - [[Absolutely Convergent Integration]]
+- [[Uniform Integrable Family of Functions]]
 - [[Criteria for Measurability]]
 - [[Integration by Parts]]
 
@@ -101,6 +111,10 @@ date of note: 2024-06-06
 
 - [[Second Fundamental Theorem of Calculus Absolutely Continuous]]
 - [[Development of Fundamental Theorem of Calculus by Lebesgue Theory]]
+
+#### Integration by Parts 
+
+![[Integration by Parts#^73397d]]
 
 ### Integration with respect to Lebesgue-Stieltjes Measure
 
@@ -169,12 +183,20 @@ date of note: 2024-06-06
 - [[Step Process]]
 - [[Itô Stochastic Integration of Step Process]]
 - [[Itô Stochastic Integration]]
+
 - [[Stochastic Differential]]
 - [[Itô Chain Rule and Itô Formula]]
 - [[Stochastic Integral of Brownian Motion]]
 - [[Stochastic Integral with Hermite Polynomial]]
 - [[Itô Product Rule and Stochastic Integration by Parts]]
 - [[Stochastic Differential of Product of Brownian Motions]]
+
+#### Integration by Parts
+
+![[Integration by Parts of Itô Stochastic Integration#^f05140]]
+
+- [[Quadratic Variation and Covariation of Stochastic Process]]
+- [[Integration by Parts of Itô Stochastic Integration]]
 
 
 ### White Noise Integration
@@ -183,11 +205,6 @@ date of note: 2024-06-06
 - [[Integration with respect to Wiener Measure]]
 - [[Representation of Gaussian Process via White Noise Integral]]
 
-### Stochastic Differential Equation
-
-- [[Stochastic Differential Equations]]
-- [[Langevin Equation]]
-- [[Ornstein–Uhlenbeck Process]]
 
 ### Integration with respect to Radon Measure as Linear Functional 
 
@@ -243,7 +260,7 @@ date of note: 2024-06-06
 
 - [[Hilbert Space]]
 - [[Self-Adjoint Operator in Hilbert Space]]
-- [[Resolvent Set and Spectrum of Linear Operator]]
+- [[Resolvent Operator and Spectrum of Linear Operator]]
 - [[Eigenvalue Point Residual Spectrum of Linear Operator]]
 - [[Spectrum of Self-Adjoint Linear Operator]]
 - [[Continuous Functional Calculus]]

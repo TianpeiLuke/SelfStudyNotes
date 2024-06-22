@@ -18,8 +18,8 @@ date of note: 2024-05-28
 >[!important] Definition
 >A function is **locally of bounded variation** if it is of *bounded variation* on *every compact interval* $[a, b]$. 
 
-- [[Bounded Variation Function]]
-- [[Total Variation as Function Norm]]
+- [[Space of Functions with Bounded Variation]]
+- [[Total Variation of Function]]
 - [[Compactness]]
 
 ## Explanation
@@ -31,5 +31,5 @@ date of note: 2024-05-28
 -----------
 ##  Recommended Notes and References
 
-- [[Bounded Variation Function]]
-- [[Total Variation as Function Norm]]
+- [[Space of Functions with Bounded Variation]]
+- [[Total Variation of Function]]

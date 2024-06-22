@@ -76,6 +76,10 @@ date of note: 2024-05-07
 - [[Criteria for Measurability]]
 - [[Complete Measure Space]]
 - [[Support of Measure]]
+- [[Inner Regularity]]
+- [[Outer Regularity]]
+- [[Tightness of Measures]]
+
 
 ### Other Important Measures
 
@@ -83,7 +87,7 @@ date of note: 2024-05-07
 - [[Discrete Measure]]
 - [[Counting Measure]]
 - [[Restriction of Measure on Subset]]
-
+- [[Radon Measure]]
 
 ### Construction of Abstract Measures
 
@@ -129,4 +133,7 @@ date of note: 2024-05-07
 -----------
 ##  Recommended Notes and References
 
+
 - [[Introduction to Measure Theory by Tao]]
+- [[Real Analysis by Royden]]
+- [[Real Analysis Modern Techniques and Their Applications by Folland]]

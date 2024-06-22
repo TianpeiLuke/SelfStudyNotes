@@ -23,7 +23,7 @@ date of note: 2024-04-18
 >[!important] Definition
 > If for any *bounded continuous function* $f(x)$, the function
 > $$
-> (t, z) \to \left( T_{t, t+h}\,f\right)(z) := \int_{\mathcal{X}}f(y)\;p(dy, t+h, z, t)
+> (t, z) \to \left( T_{t, t+h}\,f\right)(z) := \int_{\mathcal{X}}f(y)\;p(t, z, t+h, dy)
 > $$
 >is **continuous**, for any $h >0$, then we say  that the *transition function* $p$ (or, the corresponding *Markov process*) satisfies **the Feller property.**
 

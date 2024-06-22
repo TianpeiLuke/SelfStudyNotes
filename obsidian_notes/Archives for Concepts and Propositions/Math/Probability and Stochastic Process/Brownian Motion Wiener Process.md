@@ -156,7 +156,7 @@ date of note: 2024-06-05
 
 ## Representation of Brownian Motion
 
-- [[Representation of Brownian Motion]]
+- [[Coordinate Representation of Brownian Motion]]
 
 ## Sample Path Properties
 
@@ -167,7 +167,7 @@ date of note: 2024-06-05
 
 - [[Sample Path of Brownian Motion]]
 
-## Martingale
+## Martingale Characterization of Brownian Motion 
 
 >[!important] Proposition
 >The *Wiener process* $((W_{t}, \mathscr{F}_{t}), t\ge 0)$ is a **martingale** with respect to generated $\sigma$-algebra 
@@ -182,17 +182,16 @@ date of note: 2024-06-05
 
 - [[Martingale]]
 
->[!important] Theorem (Lévy)
->Let $(X_{t}, t \ge 0)$ be a **continuous martingale**, i.e. the sample path
->$$
->t \mapsto X_{t}(\omega)
->$$
->is *continuous* for all $\omega\in \Omega,$ and $X_{0} = 0$, and suppose that
->$$X_{t}^2 - t$$ is a **martingale.**
->
->Then $X$ is a **Brownian motion.**
+![[Lévy Characterization of Brownian Motion#^da976c]]
 
+![[Lévy Characterization of Brownian Motion#^0e9de9]]
+
+- [[Local Martingale]]
+- [[Lévy Characterization of Brownian Motion]]
 - Rogers, L. C., & Williams, D. (2000). _Diffusions, markov processes, and martingales: Volume 1, foundations_ (Vol. 1). Cambridge university press. pp 2
+- [[Introduction to Stochastic Calculus by Klebaner]] pp 203
+
+
 
 ## Markov Process
 
@@ -220,58 +219,72 @@ date of note: 2024-06-05
 >[!important] Proposition
 >Let $(W_{t}, t \ge 0)$ be **Wiener process** and $\mathscr{F}_{t} := \sigma(W_{s}, s\le t)$ is a *filtration*.
 >
->For any *Borel function* $f: \mathbb{R} \to \mathbb{R}$, and $s, t \ge 0$, 
+>For any *Borel function* $f: \mathbb{R} \to \mathbb{R}$, and $s, t \ge 0$,  the **weak Markov property** holds
 >$$
->\mathbb{E}\left[f(W_{t+s}) | \mathscr{F}_{s} \right] = \mathcal{P}_{t}f(W_{s})
+>\mathbb{E}\left[f(W_{t}) | \mathscr{F}_{s} \right] = T_{s,t}f(W_{s})
 >$$
->where $(\mathcal{P}_{s}, s\ge_{0})$ is defined as 
+>where $(T_{s, t}, 0 \le s \le t)$ is the **semi-group** *associated with transition function* $p$, which is defined as
 >$$
->\mathcal{P}_{s}f(x) := \left\{ 
+>T_{s, t}f(x) := \left\{ 
 >\begin{array}{cc}
->\int_{-\infty}^{\infty}p_{t}(x, y)f(y)\,dy & t > 0\\
->f(x) & t = 0
+>\int_{\mathcal{X}}f(y)\;p(dy, t, x, s) & t > s\\
+>f(x) & t = s
 \end{array}
 >\right.
 >$$
->where $$p_{t}(x, y) =  \left(\frac{1}{2\pi t}\right)^{1/2}\,\exp \left(- \frac{\left(x- y\right)^2}{2t}\right)$$ is the **transition density** of *Wiener process*.
+>where $$p(y, t, x, s) =  \left(\frac{1}{2\pi (t - s)}\right)^{1/2}\,\exp \left(- \frac{\left(x- y\right)^2}{2(t - s)}\right)$$ is the **transition function** of *Wiener process*.
 
-
+- [[Markov Chain and Markov Process]]
+- [[Semigroup associated with Transition Function]]
+- [[Markov Transition Kernel and Transition Function]]
 - Rogers, L. C., & Williams, D. (2000). _Diffusions, markov processes, and martingales: Volume 1, foundations_ (Vol. 1). Cambridge university press. pp 5
+- Friedman, A. (1975). *Stochastic differential equations and applications*. pp 23
 
 ## Infinitesimal Generator of Brownian Motion and PDE 
 
 >[!important] 
->The **(infinitesimal) generator** of $(\mathcal{P}_{s}, s\ge_{0})$ is defined as
+>The **(infinitesimal) generator** of $(T_{s,t}, 0 \le s \le t)$ is defined as
 >$$
->\frac{d}{dt}\mathcal{P}_{t} = \mathcal{A}\mathcal{P}_{t} = \mathcal{P}_{t}\mathcal{A}
+>\mathcal{A}_{s} := \lim_{ h \to 0_{+} } \frac{1}{h}\left(T_{s, s+h} - I\right) 
 >$$
->where 
+>For **time-homogeneous process**,  we can drop dependency on initial time
 >$$
->\mathcal{A} := \lim_{ s \to 0_{+} } \frac{1}{s}\left(\mathcal{P}_{s} - I\right) 
+>\mathcal{A} := \mathcal{A}_{s}
 >$$
+
+- Rogers, L. C., & Williams, D. (2000). _Diffusions, markov processes, and martingales: Volume 1, foundations_ (Vol. 1). Cambridge university press. pp 5
+- Friedman, A. (1975). *Stochastic differential equations and applications*. pp 23
 
 
 ![[Infinitesimal Generator of Brownian Motion and Laplacian#^143824]]
 
 - [[Infinitesimal Generator of Brownian Motion and Laplacian]]
+- [[Infinitesimal Generator of Markov Process]]
+
 
 >[!important] 
 >The **Kolmogorov's backward equation** for the Wiener process **transition density** 
 >$$
 >\begin{align*}
-> \frac{ \partial  }{ \partial t }p_{t}(x, y) &= \frac{1}{2}\frac{ \partial^2  }{ \partial x^2 }  p_{t}(x, y) 
+> \frac{ \partial  }{ \partial s}p(s, x, t, y) &= \frac{1}{2}\frac{ \partial^2  }{ \partial x^2 } p(s, x, t, y)
 >\end{align*}
 >$$
->which is the **heat equation**
+>which is the **heat equation**.
+>
+>The transition density corresponds to the Transition Kernel
+>$$
+>\int_{A} p(s, x, t, dy) = K(x, A) = \mathcal{P}(X_{t} \in A | X_{s} = x)
+>$$
 
 - [[Fokker–Planck and Kolmogorov Forward-Backward Equation]]
+- [[Markov Transition Kernel and Transition Function]]
 - [[Heat Equation and Diffusion Equation]]
 
 >[!important] 
 >The **Kolmogorov's forward equation** for the Wiener process **transition density** 
 >$$
 >\begin{align*}
-> \frac{ \partial  }{ \partial t }p_{t}(x, y) &= \frac{1}{2}\frac{ \partial^2  }{ \partial y^2 }  p_{t}(x, y) 
+> \frac{ \partial  }{ \partial t }p(s, x, t, y) &= \frac{1}{2}\frac{ \partial^2  }{ \partial y^2 } p(s, x, t, y)
 >\end{align*}
 >$$
 >which is also the **heat equation**.
@@ -306,7 +319,7 @@ date of note: 2024-06-05
 
 - [[Kolmogorov Extension Theorem in Infinite Product Space]]
 
-- [[Probability and Measure by Billingsley]]
+- [[Probability and Measure by Billingsley]] pp 498
 - [[Lectures on Gaussian Processes by Lifshits]]
 - [[Mathematical Foundations of Infinite Dimensional Statistical Models by Gine]]
 - [[High Dimensional Probability An Introduction by Vershynin]]

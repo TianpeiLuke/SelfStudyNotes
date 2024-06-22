@@ -24,7 +24,7 @@ date of note: 2024-05-25
 >[!important] Definition
 >Let $X$ be a *set* and $(Y, \mathscr{F})$ be a *measurable space*, and $f: X \to Y$ be a function. 
 >
->Then the collection**
+>Then the collection
 >$$
 > \begin{align*}
 > f^{*}(\mathscr{F}) & := \left\{f^{-1}(E): E \in \mathscr{F} \right\} \subset 2^{\mathscr{F}}

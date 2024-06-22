@@ -24,7 +24,7 @@ date of note: 2024-05-13
 	- [[Radon-Nikodym Derivative]]
 - [[Summary of Modes of Convergence]]
 	- [[Pointwise Almost Everywhere Convergence]]
-	- [[Convergence in L1 norm]]
+	- [[Convergence in Lp norm]]
 	- [[Convergence in Measure]]
 
 - [[sigma Algebra]]

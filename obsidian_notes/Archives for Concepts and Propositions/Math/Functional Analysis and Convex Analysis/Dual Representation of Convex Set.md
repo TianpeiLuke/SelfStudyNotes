@@ -22,7 +22,7 @@ date of note: 2024-05-08
 >If $K$ is a **closed convex** set in a *normed space*, then $K$ is equal to the **intersection** of *all* the **closed half-spaces** that *contain* it. 
 
 - This theorem is represented analytically via support functional  [[Support functional of Convex Set]]
-- The basis of this theorem is [[Hahn-Banach Theorem Geometric Form]]
+- The basis of this theorem is [[Hahn-Banach Theorem Geometric Form and Mazur Theorem]]
 
 
 
@@ -43,7 +43,7 @@ date of note: 2024-05-08
 ##  Recommended Notes and References
 
 - [[Convex Set]]
-- [[Hahn-Banach Theorem Geometric Form]]
+- [[Hahn-Banach Theorem Geometric Form and Mazur Theorem]]
 - [[Support functional of Convex Set]]
 
 

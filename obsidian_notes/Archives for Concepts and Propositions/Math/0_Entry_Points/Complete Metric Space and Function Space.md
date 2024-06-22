@@ -72,3 +72,4 @@ date of note: 2024-05-06
 - [[Metrization of Topological Space]]
 
 - [[Topology Book by Munkres]]
+- [[Real Analysis by Royden]]

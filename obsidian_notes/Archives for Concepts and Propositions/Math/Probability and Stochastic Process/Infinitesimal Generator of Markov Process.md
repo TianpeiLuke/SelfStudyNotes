@@ -3,7 +3,9 @@ tags:
   - concept
   - math/differential_equation
   - math/stochastic_process
-keywords: 
+keywords:
+  - infinitesimal_generator
+  - markov_process
 topics:
   - differential_equation
   - stochastic_process
@@ -29,22 +31,21 @@ date of note: 2024-06-11
 >Denote $\mathcal{D}_{\mathcal{A}}$ be the space of all functions  $f: \mathbb{R}^n \to \mathbb{R}$ that *the limit exists for all* $x\in \mathbb{R}^n$.
 
 - [[Infinitesimal Generator of Stochastic Differential Equation]]
-
 - [[Markov Chain and Markov Process]]
-- [[Vector Field as Infinitesimal Generator of Local Flow]]
+
 - [[Introduction to Stochastic Calculus by Klebaner]] pp 159
 - Friedman, A. (1975). *Stochastic differential equations and applications* pp 31
 
 ## Explanation
 
 >[!important]
->If $\left\{ T_{s,t} \right\}$ is the **semigroup associated with the transition probability function** $p$, we have
+>If $\left\{ T_{s,t} \right\}$ is the **semigroup associated with the transition probability function** $p$, the *infinitesmial generator* $\mathcal{A}_{s}$ associated with semigroup is  
 >$$
->\mathcal{A} := \lim_{ t \to 0_{+} } \frac{1}{t} \left( T_{s, s+t} - I\right)
+>\mathcal{A}_{s} := \lim_{ t \to 0_{+} } \frac{1}{t} \left( T_{s, s+t} - I\right)
 >$$
 >or
 >$$
->\mathcal{A}f := \lim_{ t \to 0_{+} } \frac{1}{t} \left( T_{s, s+t}f - f\right)
+>\mathcal{A}_{s}f := \lim_{ t \to 0_{+} } \frac{1}{t} \left( T_{s, s+t}f - f\right)
 >$$
 >where
 >$$
@@ -62,12 +63,13 @@ date of note: 2024-06-11
 -----------
 ##  Recommended Notes and References
 
+- [[Infinitesimal Generator of Brownian Motion and Laplacian]]
+- [[Infinitesimal Generator of Stochastic Differential Equation]]
 
+
+- [[Semigroup associated with Transition Function]]
+- [[Markov Transition Kernel and Transition Function]]
 - [[Markov Chain and Markov Process]]
-
-- [[Local Flow on Smooth Manifold]]
-- [[Vector Field as Infinitesimal Generator of Local Flow]]
-
 
 
 - Wikipedia [Infinitesimal_generator](https://en.wikipedia.org/wiki/Infinitesimal_generator_(stochastic_processes))

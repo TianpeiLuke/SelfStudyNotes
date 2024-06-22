@@ -5,6 +5,8 @@ tags:
   - math/stochastic_process
 keywords:
   - generator_sde
+  - infinitesimal_generator
+  - stochastic_differential_equations
 topics:
   - differential_equation
   - stochastic_process
@@ -32,16 +34,14 @@ date of note: 2024-06-11
 
 ^8f9111
 
+- [[Infinitesimal Generator of Markov Process]]
 - [[Stochastic Differential Equations]]
-- [[Itô Process and Diffusion Process]]
+- [[Itô Process]]
 - Oksendal, B. (2013). _Stochastic differential equations: an introduction with applications_. Springer Science & Business Media pp 124
-- 
-
 
 
 
 ### Generator for Time Homogeneous Diffusion Process
-
 
 >[!important] Proposition
 >Let $(X_{t})$ be a $n$-dimensional *time-homogeneous Itô Process* satisfying the SDE 
@@ -75,22 +75,28 @@ date of note: 2024-06-11
 >The **partial differential operator** 
 >$$
 >\begin{align*}
->L &:= \sum_{i}^{n} b^i\frac{ \partial  }{ \partial x^i } + \sum_{i,j = 1}^{n}c^{i,j}\frac{ \partial^2  }{ \partial x^i\,x^{j} }
+>L_{t} &:= \sum_{i}^{n} b^i(x, t)\frac{ \partial  }{ \partial x^i } + \sum_{i,j = 1}^{n}c^{i,j}(x, t)\frac{ \partial^2  }{ \partial x^i\,x^{j} }
 >\end{align*} 
 >$$ 
->where $$c^{i,j} := \frac{1}{2} \sum_{k=1}^{m} a^{i,k}a^{j,k}$$ is called the **generator** associated with the *homogeneous stochastic differential equation*
+>where $$c^{i,j} := \frac{1}{2} \sum_{k=1}^{m} a^{i,k}a^{j,k}$$ is called the **generator** associated with the *stochastic differential equation*
 >$$
->dX_{t} = b(X_{t})\,dt + A(X_{t})\,dW.
+>dX_{t} = b(X_{t}, t)\,dt + A(X_{t}, t)\,dW.
 >$$
 
 ^1bd4b1
 
 - [[Introduction to Stochastic Differential Equations by Evans]] pp 115
 
+
+
+
 ## Explanation
 
 >[!info]
 >The generator $L$ is a (possibly degenerate) **elliptic second-order linear partial differential operator**.
+
+- [[Second-Order Linear Partial Differential Equations]]
+- [[Second-Order Elliptic Equation]]
 
 >[!important]
 >The **infinitesimal generator** of *SDE* provides a *probabilistic interpretation* of the solution of **PDE**.

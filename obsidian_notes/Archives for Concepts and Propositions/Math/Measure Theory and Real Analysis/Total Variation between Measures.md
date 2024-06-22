@@ -61,6 +61,7 @@ date of note: 2024-05-23
 >$$  
 >where the *minimum* is taken over **all pairs of joint distributions** $\mathcal{M}_{+}(X \times Y)$ for the random variables $(X, Y)$, whose marginal distributions are $X \sim P$ and $Y \sim Q$. 
 
+- [[Space of Bounded Signed Measures]]
 - [[Optimal Transport in Space of Measures]]
 - [[Wasserstein Distance]]
 
@@ -86,7 +87,7 @@ date of note: 2024-05-23
 -----------
 ##  Recommended Notes and References
 
-
+- [[Space of Bounded Signed Measures]]
 - [[Measure Space and Countably Additive Measure]]
 
 - [[Kullback-Leibler Divergence]]

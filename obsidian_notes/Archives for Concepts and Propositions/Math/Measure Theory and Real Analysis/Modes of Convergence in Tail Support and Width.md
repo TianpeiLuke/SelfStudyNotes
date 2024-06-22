@@ -135,6 +135,6 @@ $$
 - [[Pointwise Almost Everywhere Convergence]]
 - [[Uniform Convergence]]
 - [[Uniformly Almost Everywhere Convergence]]
-- [[Convergence in L1 norm]]
+- [[Convergence in Lp norm]]
 - [[Almost Uniform Convergence]]
 - [[Convergence in Measure]]

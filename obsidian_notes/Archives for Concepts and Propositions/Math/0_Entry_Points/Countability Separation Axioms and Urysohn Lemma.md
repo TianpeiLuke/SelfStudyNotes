@@ -46,5 +46,6 @@ date of note: 2024-05-06
 ##  Recommended Notes and References
 
 
+- [[Real Analysis by Royden]]
 - [[Functional Analysis by Reed]]
 - [[Topology Book by Munkres]]

@@ -94,6 +94,8 @@ date of note: 2024-05-07
 >$$
 >then $E + x$ is Lebesgue measurable, and that $$m(E + x) = m(E).$$
 
+^e5f70d
+
 
 >[!important] Proposition (Measure of Elementary Sets)
 >If $A_{n} = I_{1} \,{\times}\ldots{\times}\,I_{n}$, then $A_{n}$ is **Lebesgue measurable** and

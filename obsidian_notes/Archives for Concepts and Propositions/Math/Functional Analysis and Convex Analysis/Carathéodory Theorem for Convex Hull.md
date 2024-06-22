@@ -117,5 +117,5 @@ date of note: 2024-05-16
 
 - [[Convex Set]]
 - [[Support functional of Convex Set]]
-- [[Hahn-Banach Theorem Geometric Form]]
+- [[Hahn-Banach Theorem Geometric Form and Mazur Theorem]]
 - [[Separation Theorem]]

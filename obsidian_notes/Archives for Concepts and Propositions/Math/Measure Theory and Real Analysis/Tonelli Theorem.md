@@ -177,5 +177,6 @@ date of note: 2024-05-25
 
 - [[Introduction to Measure Theory by Tao]]
 - [[Real Analysis Modern Techniques and Their Applications by Folland]]
+- [[Real Analysis by Royden]]
 - [[Probability and Measure by Billingsley]]
 - [[A Probability Path by Resnick]]

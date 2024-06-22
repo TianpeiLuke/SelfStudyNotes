@@ -26,6 +26,11 @@ date of note: 2024-05-07
 > \end{align*}
 >$$ 
 
+
+- [[Borel sigma Field]]
+- [[Borel Measure]]
+- [[Compactness]]
+
 ## Explanation
 
 >[!info]
@@ -50,3 +55,9 @@ date of note: 2024-05-07
 - [[Borel sigma Field]]
 - [[Borel Measure]]
 - [[Outer Regularity]]
+
+- [[Tightness of Measures]]
+- [[Compactness]]
+- [[Compact Open Topology]]
+
+- [[Topology of Set]]

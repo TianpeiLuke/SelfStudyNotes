@@ -41,7 +41,7 @@ date of note: 2024-05-27
 - [[Hilbert-Schmidt Theorem for Compact Self-Adjoint Operator]]
 
 - [[Eigenvalue Point Residual Spectrum of Linear Operator]]
-- [[Resolvent Set and Spectrum of Linear Operator]]
+- [[Resolvent Operator and Spectrum of Linear Operator]]
 - [[Adjoint of Bounded Operator in Hilbert Space]]
 - [[Adjoint of Bounded Operator in Banach Space]]
 

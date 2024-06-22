@@ -41,6 +41,8 @@ date of note: 2024-06-07
 - [[Itô Stochastic Integration]]
 - [[Progressively Measurable Stochastic Process]]
 - [[Brownian Motion Wiener Process]]
+- [[Quadratic Variation and Covariation of Stochastic Process]]
+
 
 >[!important] Theorem (Itô's Product Rule in multi-dimensional setting)
 >Suppose that $X_{t}$ has a *stochastic differential*
@@ -85,6 +87,7 @@ date of note: 2024-06-07
 >It is the **Itô integration-by-part formula**.
 
 - [[Integration by Parts]]
+- [[Integration by Parts of Itô Stochastic Integration]]
 
 >[!important]
 >If $G_{1} = 0$ or $G_{2} = 0$, the **corrected term vanishes** and the integrated version is

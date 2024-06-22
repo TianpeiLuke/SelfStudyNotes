@@ -39,3 +39,4 @@ date of note: 2024-05-13
 ##  Recommended Notes and References
 
 - [[Development of Measures]]
+- [[Real Analysis by Royden]]

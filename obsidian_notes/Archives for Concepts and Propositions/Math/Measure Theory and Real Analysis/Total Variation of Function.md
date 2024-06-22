@@ -51,19 +51,43 @@ date of note: 2024-05-28
 ## Generalization
 
 >[!important] Definition
->Let $X$ be an open subset of $\mathbb{R}^n$. Assume that $f \in L^1(X)$. 
+>Let $\Omega$ be an open subset of $\mathbb{R}^n$. Assume that $f \in L^1(\Omega)$. 
 >
->The **total variation** of $f$ in $X$ is defined as 
+>The **total variation** of $f$ in $\Omega$ is defined as 
 >$$
 >\begin{align*}
-> V(f, X) := \sup\left\{ \int_{X}f \;\text{div}(\phi)\, dx: \;\; \phi \in \mathcal{C}_{c}(X, \mathbb{R}^n), \; \lVert \phi \rVert_{L^{\infty}(X)} \le 1  \right\} 
+> V(f, \Omega) := \sup\left\{ \int_{\Omega}f \;\text{div}(\phi)\, dx: \;\; \phi \in \mathcal{C}_{c}(\Omega, \mathbb{R}^n), \; \lVert \phi \rVert_{L^{\infty}(\Omega)} \le 1  \right\} 
 \end{align*}
 >$$
->where $\text{div}$ is the **divergence operator**, $\mathcal{C}_{c}(X, \mathbb{R}^d)$ is the continuous function from $X \to \mathbb{R}^d$ with *compact support*, $\lVert  \rVert_{\infty}$ is the **essential supremum norm**.
+>where $\text{div}$ is the **divergence operator**, $\mathcal{C}_{c}(\Omega, \mathbb{R}^d)$ is the continuous function from $\Omega \to \mathbb{R}^d$ with *compact support*, $\lVert \cdot \rVert_{\infty}$ is the **essential supremum norm**.
 
 - [[Divergence Operator of Vector Field on Riemannian Manifold]]
 - [[Continuous Functions with Compact Support]]
-- [[Uniformly Almost Everywhere Convergence]]
+- [[L-infinite Space]]
+
+>[!important]
+>If $f \in \mathcal{C}^1(\Omega)$, i.e. it is continuous differentiable, then 
+>$$
+>V(f, \Omega)  = \int_{\Omega}\,\lVert \nabla f \rVert dx
+>$$ 
+
+
+
+>[!info]
+>The **total variation** of $f$ can be formulated as
+>$$
+>\int_{\Omega} \lvert Df \rvert := V(f, \Omega) 
+>$$
+>where $Df$ is the **weak derivative** of $f$ and it is a **finite vector-valued signed Radon measure** on $\mathscr{F}$ of $\Omega$ with 
+>$$
+>\int_{\Omega}f \;\text{div}(\phi)\, dx = - \int_{\Omega}\,\left\langle \phi , Df \right\rangle
+>$$
+
+- [[Weak Derivative via Tempered Distribution]]
+- [[Radon Measure]]
+
+
+
 
 
 
@@ -75,8 +99,9 @@ date of note: 2024-05-28
 - [[Banach Space]]
 - [[Lp Space]]
 
-- [[Bounded Variation Function]]
+- [[Space of Functions with Bounded Variation]]
 
 - [[Total Variation between Measures]]
+- [[Space of Bounded Signed Measures]]
 
 - Wikipedia [Total variation](https://en.wikipedia.org/wiki/Total_variation)

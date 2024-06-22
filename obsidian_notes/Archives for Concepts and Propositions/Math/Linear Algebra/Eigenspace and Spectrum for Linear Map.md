@@ -35,7 +35,7 @@ date of note: 2024-05-27
 >
 >We denote the **spectrum** of $A$ as $\sigma(A)$.
 
-- [[Resolvent Set and Spectrum of Linear Operator]]
+- [[Resolvent Operator and Spectrum of Linear Operator]]
 
 ## Explanation
 

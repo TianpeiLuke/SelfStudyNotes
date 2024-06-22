@@ -35,7 +35,7 @@ date of note: 2024-06-07
 >We call the above equation **Itô's Chain Rule** or **Itô's Formula**.
 
 
-- [[Itô Process and Diffusion Process]]
+- [[Itô Process]]
 - [[Stochastic Differential]]
 - [[Itô Stochastic Integration]]
 - [[Progressively Measurable Stochastic Process]]
@@ -48,6 +48,13 @@ date of note: 2024-06-07
 >$$
 >*almost surely* $\omega\in \Omega.$
 
+>[!info]
+>With [[Infinitesimal Generator of Stochastic Differential Equation]], we can write the Ito Formula in compact form
+>$$
+>du\left( X_{t}, t\right) = \left( L_{t} + \frac{ \partial  }{ \partial t}  \right)u(X_{t}, t)\,dt + \frac{ \partial  }{ \partial x }u(X_{t}, t)\,\sigma \left( X_{t}, t \right)\,dW. 
+>$$
+
+- [[Martingale via Solution of SDE and Backward Equation]]
 
 ## Generalization
 
@@ -112,7 +119,7 @@ date of note: 2024-06-07
 
 
 
-## Expansion
+## Explanation
 
 >[!info]
 >For each $\omega\in \Omega$, the *sample path* is *continuous* for $$u_{t}(X_{t}\,,\, t)\,, \quad  u_{x}(X_{t}\,,\, t)\,, \quad u_{x x}(X_{t}\,,\, t).$$
@@ -131,6 +138,9 @@ date of note: 2024-06-07
 >\end{align*}
 >$$
 
+## Martingale via Function of Ito Process
+
+- [[Martingale via Solution of SDE and Backward Equation]]
 
 
 ## Proof

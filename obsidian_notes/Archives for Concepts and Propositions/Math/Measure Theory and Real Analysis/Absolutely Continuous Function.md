@@ -37,7 +37,7 @@ date of note: 2024-05-28
 >- The **sum** or **product** of two **absolutely continuous functions** on an interval $[a, b]$ remains **absolutely continuous**.
 
 - [[Uniform Continuity Theorem]]
-- [[Bounded Variation Function]]
+- [[Space of Functions with Bounded Variation]]
 - [[Continuous Function]]
 
 
@@ -87,5 +87,5 @@ date of note: 2024-05-28
 - [[Absolute Continuity for Measures]]
 
 - [[Uniform Topology on Metric Spaces]]
-- [[Bounded Variation Function]]
+- [[Space of Functions with Bounded Variation]]
 - [[Continuous Function]]

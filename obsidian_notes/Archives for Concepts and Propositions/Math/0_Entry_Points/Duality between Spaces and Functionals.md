@@ -29,7 +29,7 @@ date of note: 2024-05-16
 
 
 - [[Duality Correspondences of Convex Sets]]
-	- [[Hahn-Banach Theorem Geometric Form]]
+	- [[Hahn-Banach Theorem Geometric Form and Mazur Theorem]]
 	- [[Minkowski Functional]]
 	- [[Support functional of Convex Set]]
 	- [[Supporting Hyperplane of Convex Set]]
@@ -64,6 +64,23 @@ date of note: 2024-05-16
 	- [[Radon Measure]]
 	- [[Summary of Spaces of Continuous Functions]]
 	- [[Riesz-Markov Representation Theorem]]
+	- [[Space of Bounded Signed Measures]]
+	- [[L-infinite Space]]
+
+![[Kantorovitch Representation Theorem for Dual of L-infinity#^48270b]]
+
+- [[Space of Bounded Signed Measures]]
+- [[Kantorovitch Representation Theorem for Dual of L-infinity]]
+
+
+>[!important]
+>$$
+>\begin{CD}
+> \mathcal{M}(\mathcal{X}) @>\subset>> \mathcal{BA}(\mathcal{X})\\ 
+>@VV*V  @VV* V\\ 
+> \mathcal{C}_{0}(\mathcal{X}) @>\subset>> L^{\infty}(\mathcal{X}, \mu)
+>\end{CD}
+>$$ 
 
 
 ### Self-Duality of Hilbert Space and its Linear Functionals
@@ -81,6 +98,25 @@ date of note: 2024-05-16
 - [[Hilbert Space]]
 - [[Riesz Representation Theorem]]
 
+![[Riesz Representation Theorem#^8d0eaf]]
+
+
+![[Lax-Milgram Lemma#^d7879a]]
+
+- [[Lax-Milgram Lemma]]
+
+![[Riesz Representation Theorem for Dual of Lp#^b582b1]]
+
+- [[Lp Space]]
+- [[Riesz Representation Theorem for Dual of Lp]]
+- [[Dual Normed Space of Lp Space]]
+
+>[!important]
+>Using $\left\langle  f\,,\,g    \right\rangle_{L^1} := \int f\,g\,d\mu$, we have
+>$$
+>\Phi: f \mapsto \left\langle  \cdot\,,\, f   \right\rangle_{L^{1}(\mathcal{X}, \mu)}
+>$$
+>is an **isometric isomorphism** of $L^{q}(\mathcal{X}, \mu)$ onto $\left(L^{p}(\mathcal{X}, \mu)\right)^{*}.$
 
 
 ## Explanation
@@ -96,4 +132,6 @@ date of note: 2024-05-16
 
 -----------
 ##  Recommended Notes and References
+
+
 

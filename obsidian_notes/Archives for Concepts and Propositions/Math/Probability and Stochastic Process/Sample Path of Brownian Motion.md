@@ -59,7 +59,7 @@ date of note: 2024-06-09
 
 ^46cc20
 
-- [[Bounded Variation Function]]
+- [[Space of Functions with Bounded Variation]]
 
 >[!info]
 >The sample path of Brownian motion is **not** of *bounded variation* $$\lVert W(\omega, t) \rVert_{TV} = \infty, \quad \forall \omega \in \Omega.$$

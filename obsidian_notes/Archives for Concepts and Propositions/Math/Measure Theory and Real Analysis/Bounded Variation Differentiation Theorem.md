@@ -18,8 +18,8 @@ date of note: 2024-05-28
 >[!important] Bounded Variation Differentiation Theorem
 >Every **bounded variation function** is **differentiable** *almost everywhere*.
 
-- [[Bounded Variation Function]]
-- [[Total Variation as Function Norm]]
+- [[Space of Functions with Bounded Variation]]
+- [[Total Variation of Function]]
 
 
 ## Explanation
@@ -31,7 +31,7 @@ date of note: 2024-05-28
 -----------
 ##  Recommended Notes and References
 
-- [[Bounded Variation Function]]
-- [[Total Variation as Function Norm]]
+- [[Space of Functions with Bounded Variation]]
+- [[Total Variation of Function]]
 
 - [[Monotone Differentiation Theorem]]

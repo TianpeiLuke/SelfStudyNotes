@@ -20,11 +20,11 @@ date of note: 2024-05-07
 >[!important] Definition
 >Given two topological measurable spaces $(\mathcal{X}, \mathscr{F})$ and $(\mathcal{Y}, \mathscr{G})$, define the space of all *Radon measures* on $\mathscr{F}$ as $\mathcal{M}(\mathcal{X})$, and the space of all *Radon measures* on $\mathscr{G}$ as $\mathcal{M}(\mathcal{Y})$.
 >
->For a *continuous map* $T : \mathcal{X} \rightarrow \mathcal{Y}$,  the **push-forward operator** is defined as $T_{\#}: \mathcal{M}(\mathcal{X}) \rightarrow \mathcal{M}(\mathcal{Y})$ that  satisfies 
+>For a *continuous map* $T : \mathcal{X} \rightarrow \mathcal{Y}$,  the **push-forward operator** is defined as $T_{*}: \mathcal{M}(\mathcal{X}) \rightarrow \mathcal{M}(\mathcal{Y})$ that  satisfies 
 >$$
 > \begin{align*}
-> T_{\#}\alpha &:= \alpha \circ T^{-1} \in \mathcal{M}(\mathcal{Y}), \quad \forall \alpha \in \mathcal{M}(\mathcal{X}) \\
-> \left(T_{\#}\alpha \right)(B)&:= \alpha\left(\set{ x: T(x) \in B \subset \mathcal{Y} }\right)  = \alpha(T^{-1}(B)), \quad B \in \mathscr{G}
+> T_{*}\alpha &:= \alpha \circ T^{-1} \in \mathcal{M}(\mathcal{Y}), \quad \forall \alpha \in \mathcal{M}(\mathcal{X}) \\
+> \left(T_{*}\alpha \right)(B)&:= \alpha\left(\set{ x: T(x) \in B \subset \mathcal{Y} }\right)  = \alpha(T^{-1}(B)), \quad B \in \mathscr{G}
 > \end{align*}
 >$$
 
@@ -36,9 +36,9 @@ date of note: 2024-05-07
 >**Name**:  Push-forward Measure
 
 >[!important] Definition
->The **push-forward measure** is defined as $$\beta := T_{\#}\alpha \in \mathcal{M}(\mathcal{Y})$$ of some $\alpha \in \mathcal{M}(\mathcal{X})$,  $T^{-1}(\cdot)$ is the *pre-image* of $T$, and $\mathcal{M}(\mathcal{X})$ is the *set of Radon measures* on the space $\mathcal{X}$. 
+>The **push-forward measure** is defined as $$\beta := T_{*}\alpha \in \mathcal{M}(\mathcal{Y})$$ of some $\alpha \in \mathcal{M}(\mathcal{X})$,  $T^{-1}(\cdot)$ is the *pre-image* of $T$, and $\mathcal{M}(\mathcal{X})$ is the *set of Radon measures* on the space $\mathcal{X}$. 
 >
->Sometimes we denote pushforward measure as $T_{*}\alpha$.
+>Sometimes we denote pushforward measure as $T_{\#}\alpha$.
 
 - [[Preimage and Range of Function]]
 

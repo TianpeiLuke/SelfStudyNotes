@@ -4,7 +4,6 @@ tags:
   - math/stochastic_process
 keywords:
   - ito_process
-  - diffusion_process
 topics:
   - stochastic_process
 name: Itô Process
@@ -54,7 +53,7 @@ date of note: 2024-06-07
 
 ## Markov Property
 
-
+- [[Diffusion Process]]
 
 
 

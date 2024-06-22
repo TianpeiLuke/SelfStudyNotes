@@ -27,12 +27,13 @@ date of note: 2024-05-28
 ## Proof
 
 >[!info]
->By $L^{1}$ approximations, for any $n \ge 1$ one can find a **continuous, compactly supported** function $f_n$ such that $$\lVert f -f_n \rVert_{L^1(\mathbb{R}^d)} \le \epsilon/4^{n}.$$ 
+>By $L^{1}$ approximations, for any $n \ge 1$ one can find a **continuous, compactly supported** function $f_n \in \mathcal{C}_{0}(\mathbb{R})$ such that $$\lVert f -f_n \rVert_{L^1(\mathbb{R}^d)} \le \epsilon/4^{n}.$$ 
 >
 >By **Markov's inequality**, that implies that $$\left\lvert f(x) -f_n(x) \right\rvert\le 1/2^{n-1}$$  for all $x$ *outside* of a Lebesgue measurable set $A_n$ of measure *at most $\epsilon/2^{n+1}$*. 
 
-- [[L1 Approximation of Functions]]
+- [[Simple Approximation Theorem of Lp Function]]
 - [[Markov Inequality]]
+- 
 
 >[!info]
 >Letting $$A = \bigcup_{n=1}^{\infty}A_{n},$$ we conclude that $A$ is *Lebesgue measurable* with measure *at most $\epsilon/2$*, and $f_n$ converges *uniformly* to $f$ outside of $A$. 

@@ -120,3 +120,6 @@ For a *Hausdorff space* $X$,  the following are **equivalent**:
 - [[Hausdorff Space]]
 - [[Locally Compactness]]
 - Github Note [link](https://github.com/TianpeiLuke/SelfStudyNotes/tree/master/self-study/probability_and_measure_theory)
+
+- [[Topology Book by Munkres]]
+- [[Real Analysis by Royden]]

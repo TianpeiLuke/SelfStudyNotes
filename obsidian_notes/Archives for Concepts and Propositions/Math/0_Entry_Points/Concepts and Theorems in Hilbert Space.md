@@ -37,7 +37,8 @@ date of note: 2024-05-11
 - [[Gram-Schmidt Orthogonalization]]
 - [[Coordinate Representation in Hilbert Space and Fourier Coefficients]]
 - [[Separable Hilbert Space]]
-
+- [[lp Sequence Space]]
+- [[Wasserstein Space]]
 
 ### Special Transforms and Functions of Hilbert Space
 
@@ -71,6 +72,7 @@ date of note: 2024-05-11
 - [[Linear Isomorphism]]
 - [[Isometry and Isometric isomorphism]]
 - [[Riesz Representation Theorem]]
+- [[Lax-Milgram Lemma]]
 - [[Canonical Dual Pairing]]
 
 ### Weak Topology on Hilbert Space
@@ -116,7 +118,7 @@ date of note: 2024-05-11
 
 ### Spectrum of Bounded Linear Operator
 
-- [[Resolvent Set and Spectrum of Linear Operator]]
+- [[Resolvent Operator and Spectrum of Linear Operator]]
 - [[Eigenvalue Point Residual Spectrum of Linear Operator]]
 - [[Spectral Radius of Linear Operator]]
 - [[Spectrum of Adjoint of Linear Operator]]
@@ -157,7 +159,7 @@ date of note: 2024-05-11
 
 ### Ergodic Theory
 
-- [[Invariant Measure]]
+- [[Invariant Measure and Stationary Distribution]]
 - [[Measure Preserving Transformation]]
 - [[Ergodic Transformation]]
 
@@ -196,4 +198,5 @@ date of note: 2024-05-11
 - [[Functional Analysis by Reed]]
 - [[Introductory Functional Analysis with Applications by Kreyszig]]
 - [[Real Analysis Modern Techniques and Their Applications by Folland]]
+- [[Real Analysis by Royden]]
 - [[Optimization by Vector Space Methods by Luenberger]]

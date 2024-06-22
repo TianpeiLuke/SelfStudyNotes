@@ -31,7 +31,7 @@ date of note: 2024-05-24
 - [[Stopping Time of Filtration]]
 
 
->[!info]
+>[!important] Definition
 >For a **discrete state** *Markov chain*, and $A = \{ j \}$,  the stopping time at $A$ is
 >$$
 >\tau_{j} :=  \inf\left\{n \ge 1: \;\; X_{n} = j \right\} 

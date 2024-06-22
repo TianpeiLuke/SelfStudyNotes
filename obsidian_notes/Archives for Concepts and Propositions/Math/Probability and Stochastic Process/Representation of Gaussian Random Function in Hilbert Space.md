@@ -64,7 +64,7 @@ date of note: 2024-05-10
 >where
 >- $\{\varphi_n\}_{n=1}^{\infty}$ is a *complete orthonormal basis*  on $\mathcal{H}$, 
 >- $\{\xi_n\}_{n=1}^{\infty}$ is a sequence of *independent* $\mathcal{N}(0, 1)$-distributed random variables, and 
->- $\{\sigma_n\}_{n=1}^{\infty}$ is a sequence of *non-negative numbers* satisfying assumption $$\sum_{n=1}^{\infty}\sigma_n^2 < \infty$$ 
+>- $\{\sigma_n\}_{n=1}^{\infty}$ is a sequence of *non-negative numbers* satisfying assumption $$\sum_{n=1}^{\infty}\sigma_n^2 < \infty$$ That is, $\sigma := (\sigma_{1}, \sigma_{2}  \,{,}\ldots{,}\,) \in \ell^2.$
 >
 >Then $X$ is a *Gaussian random element* in $\mathcal{H}$. 
 >
@@ -86,3 +86,6 @@ date of note: 2024-05-10
 - [[Gaussian Random Vector]]
 - [[Gaussian Random Variable]]
 - [[Gaussian Random Function]]
+
+- [[Hilbert Space]]
+- [[lp Sequence Space]]

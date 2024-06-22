@@ -112,7 +112,7 @@ date of note: 2024-05-15
 >[!info]
 >The Minkowski functional is used in combination with the Hahn-Banach Theorem to prove for extension of linear functional, since it provides a **sub-linear functional.**
 >
->It is the key in proving the [[Hahn-Banach Theorem Geometric Form]]
+>It is the key in proving the [[Hahn-Banach Theorem Geometric Form and Mazur Theorem]]
 
 - [[Hahn-Banach Theorem Extension Form]]
 
@@ -122,7 +122,7 @@ date of note: 2024-05-15
 
 - [[Convex Set]]
 - [[Support functional of Convex Set]]
-- [[Hahn-Banach Theorem Geometric Form]]
+- [[Hahn-Banach Theorem Geometric Form and Mazur Theorem]]
 
 - [[Convex Analysis by Rockafellar]]
 - [[Convex Optimization by Boyd]]

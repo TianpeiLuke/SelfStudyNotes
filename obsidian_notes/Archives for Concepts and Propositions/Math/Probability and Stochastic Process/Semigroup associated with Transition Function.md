@@ -26,7 +26,7 @@ date of note: 2024-04-18
 >Consider *linear mapping* $T_{s,t}: L^{\infty}(\mathcal{X}) \to L^{\infty}(\mathcal{X})$:
 >$$
 >\begin{align*}
-> \left( T_{s,t}f \right)(x) =  \int_{\mathcal{X}}f(y)\;p(dy, t, x, s)
+> \left( T_{s,t}f \right)(x) =  \int_{\mathcal{X}}f(y)\;p(s, x, t, dy)
 >\end{align*}
 >$$
 >where $p(A,t, x, s)$ is a *Markov transition function*.

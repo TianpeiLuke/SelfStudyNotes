@@ -61,3 +61,4 @@ date of note: 2024-05-24
 - [[Endomorphism between Groups]]
 
 - [[Functional Analysis by Reed]]
+- [[Real Analysis by Royden]]

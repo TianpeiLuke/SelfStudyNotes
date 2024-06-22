@@ -31,6 +31,8 @@ date of note: 2024-05-15
 >In addition, the norm of linear functional under dual space $\mathcal{H}^{*}$  is equal to the norm of vector in $\mathcal{H}$
 >$$\lVert f_{T} \rVert_{\mathcal{H}} = \lVert T \rVert_{\mathcal{H}^{*}}.$$
 
+^4ad0dc
+
 >[!important]
 >Importantly for _complex_ Hilbert spaces, $f_{T}$ is always located in the **_conjugate-linear_ coordinate** of the inner product.
 
@@ -171,8 +173,11 @@ date of note: 2024-05-15
 >$$  
 >
 >The **norm** of $A$ is the *smallest constant* $C$ such that 3. holds.
- 
+
+^8d0eaf
+
 - [[Sesquilinear Form]]
+- [[Lax-Milgram Lemma]]
 
 >[!important]
 >Note that the linear map $A$ must be applied in the **linear coordinate** of the sesquilinear form.
@@ -215,3 +220,4 @@ date of note: 2024-05-15
 - [[Functional Analysis by Reed]]
 - [[Optimization by Vector Space Methods by Luenberger]]
 - [[Introductory Functional Analysis with Applications by Kreyszig]]
+- [[Real Analysis by Royden]]

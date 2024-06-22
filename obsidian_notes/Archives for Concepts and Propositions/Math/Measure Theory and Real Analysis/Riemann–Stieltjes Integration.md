@@ -87,7 +87,7 @@ date of note: 2024-06-06
 > \end{align*}
 >$$  
 
-- [[Bounded Variation Function]]
+- [[Space of Functions with Bounded Variation]]
 
 ## Riemann Integration
 

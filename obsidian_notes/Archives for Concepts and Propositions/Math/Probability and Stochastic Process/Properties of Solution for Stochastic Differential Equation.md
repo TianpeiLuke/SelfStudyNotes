@@ -24,6 +24,10 @@ date of note: 2024-06-11
 [[Introduction to Stochastic Differential Equations by Evans]] pp 97
 
 
+### Martingale Property
+
+- [[Martingale via Solution of SDE and Backward Equation]]
+
 
 ## Explanation
 

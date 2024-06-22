@@ -62,7 +62,7 @@ date of note: 2024-05-28
 ### Denseness Statement
 
 - [[Stone-Weierstrass Theorem]]: A *sub-algebra* $B$ of *continuous functions* $\mathcal{C}(X, \mathbb{R})$ is **dense** if and only if it *separate points*.
-- [[L1 Approximation of Functions]]: The *continuous function* with *compact support* $\mathcal{C}_{c}(\mathbb{R}^d)$  is a **dense subset** of $L^1(\mathbb{R}^d).$
+- [[Simple Approximation Theorem of Lp Function]]: The *continuous function* with *compact support* $\mathcal{C}_{c}(\mathbb{R}^d)$  is a **dense subset** of $L^1(\mathbb{R}^d).$
 - [[Urysohn Lemma]]: On *normal / complete regular* topological space $X$, the space of continuous functions $\mathcal{C}(X)$, is *dense*. 
 - [[Uniform Continuity Theorem]]: the *limit* of the *uniform convergence* sequence of *continuous* functions is *continuous*
 

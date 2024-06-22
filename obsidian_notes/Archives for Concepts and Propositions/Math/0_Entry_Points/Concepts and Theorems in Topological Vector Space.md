@@ -45,6 +45,12 @@ date of note: 2024-05-11
 
 - [[Concepts and Theorems in Hilbert Space]]
 
+### Extreme Points of Locally Convex Space
+
+- [[Extreme Points of Convex Set of Locally Convex Space]]
+- [[Krein-Milman Lemma and Krein-Milman Theorem]]
+
+
 ### Fréchet Space
 
 - [[Complete Metric Space]]
@@ -99,6 +105,7 @@ date of note: 2024-05-11
 
 - [[Functional Analysis by Reed]]
 - [[Introductory Functional Analysis with Applications by Kreyszig]]
+- [[Real Analysis by Royden]]
 - [[Real Analysis Modern Techniques and Their Applications by Folland]]
 - [[Optimization by Vector Space Methods by Luenberger]]
 - [[Finite Dimensional Vector Spaces by Halmos]]

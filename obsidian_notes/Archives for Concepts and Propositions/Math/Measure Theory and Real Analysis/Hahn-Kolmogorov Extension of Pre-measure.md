@@ -70,3 +70,5 @@ date of note: 2024-05-13
 - [[Measure Space and Countably Additive Measure]]
 - [[sigma Algebra]]
 - [[Development of Measures]]
+
+- [[Real Analysis by Royden]]

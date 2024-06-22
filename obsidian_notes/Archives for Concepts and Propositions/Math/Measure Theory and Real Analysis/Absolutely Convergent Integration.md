@@ -147,6 +147,7 @@ date of note: 2024-05-13
 
 ## Integral by Parts
 
+- [[Integration by Parts]]
 
 
 
@@ -160,3 +161,6 @@ date of note: 2024-05-13
 - [[Measurable Function]]
 - [[Pointwise Almost Everywhere Convergence]]
 - [[Lebesgue-Stieltjes Integration]]
+
+- [[Real Analysis by Royden]]
+- [[Introduction to Measure Theory by Tao]]

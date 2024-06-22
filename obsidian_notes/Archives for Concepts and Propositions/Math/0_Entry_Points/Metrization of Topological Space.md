@@ -39,6 +39,13 @@ date of note: 2024-05-06
 - [[Locally Metrizable Space]]
 - [[Smirnov Metrization Theorem]]
 
+### Metrization of Normed Space
+
+- [[Weak Topology of Banach Space]]
+- [[Weak-star Topology of Banach Space]]
+- [[Metrizability of Weak Topologies of Normed Spaces]]
+
+
 ## Explanation
 
 
@@ -49,3 +56,5 @@ date of note: 2024-05-06
 ##  Recommended Notes and References
 
 - [[Topology Book by Munkres]]
+- [[Real Analysis by Royden]]
+- [[Functional Analysis by Reed]]

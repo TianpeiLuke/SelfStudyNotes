@@ -46,7 +46,7 @@ date of note: 2024-05-18
 >[!info]
 >Recall the **pushforward of measure** $\mathcal{P}$ by function $X$ as
 >$$
->(X_{\#}\mathcal{P})(B) := \mathcal{P}\{\omega: X(\omega) \in B  \} := \mathcal{P}\circ X^{-1}(B), \quad \forall B \in \mathscr{F}
+>(X_{*}\mathcal{P})(B) := \mathcal{P}\{\omega: X(\omega) \in B  \} := \mathcal{P}\circ X^{-1}(B), \quad \forall B \in \mathscr{F}
 >$$
 
 - [[Push-forward Measure and Push-forward Operator]]

@@ -27,6 +27,8 @@ date of note: 2024-05-13
 >
 > we also call such a function a **sequence**, or an **infinite sequence**, of elements of $X$. 
 
+^1645cc
+
 >[!important] Definition
 > If $x$ is an *$\omega$-tuple*, we often denote the *value* of $x$ *at* $i$ by $x_i$ rather than $x(i)$, and call it **the $i$-th coordinate** of $x$. 
 > 

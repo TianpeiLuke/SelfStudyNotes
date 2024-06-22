@@ -20,7 +20,7 @@ date of note: 2024-05-16
 	- $R_{\lambda}(T)$ is **bounded**
 	- $R_{\lambda}(T)$ is defined in a **dense subset** of $Y$
 
-- [[Resolvent Set and Spectrum of Linear Operator]]
+- [[Resolvent Operator and Spectrum of Linear Operator]]
 
 |                                                          | **point spectrum** $\sigma_{p}(T)$ | **continuous spectrum** $\sigma_{c}(T)$ | **residual spectrum** $\sigma_{r}(T)$ | **resolvent set** $\rho(T)$ |
 | -------------------------------------------------------- | ---------------------------------- | --------------------------------------- | ------------------------------------- | --------------------------- |
@@ -38,7 +38,7 @@ date of note: 2024-05-16
 -----------
 ##  Recommended Notes and References
 
-- [[Resolvent Set and Spectrum of Linear Operator]]
+- [[Resolvent Operator and Spectrum of Linear Operator]]
 - [[Eigenvalue Point Residual Spectrum of Linear Operator]]
 
 

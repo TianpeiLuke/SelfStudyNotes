@@ -51,3 +51,8 @@ date of note: 2024-05-04
 - [[Bounded Linear Functional]]
 - [[Norm and Normed Space]]
 - Github Note [link](https://github.com/TianpeiLuke/SelfStudyNotes/tree/master/self-study/probability_and_measure_theory)
+
+
+- [[Functional Analysis by Reed]]
+- [[Real Analysis Modern Techniques and Their Applications by Folland]]
+- [[Real Analysis by Royden]]

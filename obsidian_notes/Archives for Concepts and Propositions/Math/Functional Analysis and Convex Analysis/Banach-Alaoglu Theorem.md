@@ -24,6 +24,8 @@ date of note: 2024-05-13
 >$$ 
 >is **compact** in the **weak\* topology.**
 
+^ef7478
+
 - [[Tychonoff Theorem and Product of Compact Space]]
 ## Explanation
 
@@ -37,3 +39,4 @@ date of note: 2024-05-13
 
 - [[Functional Analysis by Reed]]
 - [[Real Analysis Modern Techniques and Their Applications by Folland]]
+- [[Real Analysis by Royden]]

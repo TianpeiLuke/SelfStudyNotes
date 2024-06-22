@@ -60,3 +60,4 @@ date of note: 2024-05-24
 
 
 - [[Functional Analysis by Reed]]
+- [[Real Analysis by Royden]]

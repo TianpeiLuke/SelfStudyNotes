@@ -29,6 +29,8 @@ date of note: 2024-05-10
 >
 >Here two functions are *equivalent* if they differ only on a set of *measure zero*.
 
+^5f512c
+
 - [[Measure Space and Countably Additive Measure]]
 - [[Measurable Function]]
 
@@ -36,14 +38,40 @@ date of note: 2024-05-10
 
 ## Explanation
 
->[!important] Riesz-Fisher Theorem
->Let $(X, \mathscr{F}, \mu)$ be a *measure space* and **$p\ge 1$**. 
->
->Then $L^p(X, \mu)$ is a **Banach space** with norm $$\lVert f \rVert_{p} = \left(\int_{X} |f|^p d\mu \right)^{1 / p}.$$
 
-- [[Norm and Normed Space]]
-- [[Minkowski Inequality]]
-- [[Banach Space]]
+
+
+## Riesz-Fisher Theorem
+
+>[!info]
+>$L^p$ space is a **Banach space**
+
+- [[Riesz-Fisher Theorem and Completeness of Lp Space]]
+
+## Dense Subspace
+
+![[Simple Approximation Theorem of Lp Function#^705504]]
+
+- [[Simple Approximation Theorem of Lp Function]]
+
+## Dual Space
+
+![[Dual Normed Space of Lp Space#^709202]]
+
+- [[Dual Normed Space of Lp Space]]
+
+![[Dual Normed Space of L-infinity Space#^e574fa]]
+
+- [[Dual Normed Space of L-infinity Space]]
+
+## Reflexive Banach Space
+
+>[!info]
+> Let $(\mathcal{X}, \mathscr{F}, \mu)$ be a **$\sigma$-finite measure space**, $1\le p < \infty$.
+> 
+> Then $L^p(\mathcal{X}, \mathscr{F}, \mu)$ is a **reflexive Banach space**.
+
+- [[Lp Space as Reflexive Banach Space]]
 
 
 ## Example
@@ -56,7 +84,9 @@ date of note: 2024-05-10
 >[!example]
 >For $p=\infty$, $$L^{\infty}(X, \mu) := \left\{ f: X \to \mathbb{C} \text{ $\mu$-measurable}: \text{ess }\sup_{X}|f| < \infty \right\} $$ is the space of **essentially bounded functions** 
 
-- [[Bounded Function and Space of Bounded Functions]]
+- [[L-infinite Space]]
+- [[Essential Supremum and Essential Infimum]]
+
 
 >[!example]
 >For $p=2$, $$L^{2}(X, \mu) := \left\{ f: X \to \mathbb{C} \text{ $\mu$-measurable}: \left(\int_{X} f^2 d\mu\right)^{1 / 2} < \infty \right\} $$ is the space of **square integrable functions.**
@@ -91,3 +121,8 @@ date of note: 2024-05-10
 
 
 - Github Note [link](https://github.com/TianpeiLuke/SelfStudyNotes/tree/master/self-study/probability_and_measure_theory)
+
+
+- [[Real Analysis by Royden]]
+- [[Real Analysis Modern Techniques and Their Applications by Folland]]
+- [[Functional Analysis by Reed]]

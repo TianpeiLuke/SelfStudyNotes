@@ -87,6 +87,7 @@ date of note: 2024-05-10
 >$$
 >where $(\sigma_{j}^2)$ consists of the **variance** of Gaussian process $X: \omega \to \varphi_{j}$ with respect to each basis function $\varphi_{j}$ and $(z_{j})$ satisfies $$\sum_{j=1}^{\infty}\sigma_{j}^2\,z_{j}^2 < \infty.$$ 
 
+- [[lp Sequence Space]]
 
 
 -----------

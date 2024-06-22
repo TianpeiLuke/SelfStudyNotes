@@ -61,6 +61,15 @@ date of note: 2024-05-10
 
 [[Cauchy-Schwartz Inequality]]
 
+>[!example]
+>If $$p = 1, \quad q = \infty,$$ we have the
+>$$
+>\begin{align*}
+> \lVert f\,g \rVert_{1} \le \lVert f \rVert_{1}\, \lVert g \rVert_{\infty}.   
+>\end{align*}
+>$$
+
+
 ## Proof
 
 - [[Young Inequality]]

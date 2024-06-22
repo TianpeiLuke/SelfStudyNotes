@@ -23,7 +23,7 @@ date of note: 2024-05-24
 >[!important] Definition
 >Let $\mathscr{S}(\mathbb{R}^n)$  be the *functions of rapid decrease* on $\mathbb{R}^n$. 
 >
->The (topological) dual  space of $\mathscr{S}(\mathbb{R}^n)$ , denoted by $\mathscr{S}^{'}(\mathbb{R}^n)$, is called **the space of tempered distributions**.
+>The (topological) dual  space of $\mathscr{S}(\mathbb{R}^n)$ , denoted by $\mathscr{S}^{'}(\mathbb{R}^n)$, is called **the space of tempered distributions** or **Schwartz distributions**.
 
 - [[Space of Functions of Rapid Decrease and Schwartz Class]]
 - [[Topological Dual of Locally Convex Space]]

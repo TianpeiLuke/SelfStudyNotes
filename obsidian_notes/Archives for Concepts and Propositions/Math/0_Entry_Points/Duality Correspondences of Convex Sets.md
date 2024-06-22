@@ -36,7 +36,7 @@ date of note: 2024-05-08
 
 - The Hahn-Banach Theorem
 	- [[Hahn-Banach Theorem Extension Form]]
-	- [[Hahn-Banach Theorem Geometric Form]]
+	- [[Hahn-Banach Theorem Geometric Form and Mazur Theorem]]
 		- [[Separation Theorem]]
 	- [[Supporting Hyperplane of Convex Set]]
 	- [[Dual Representation of Convex Set]]

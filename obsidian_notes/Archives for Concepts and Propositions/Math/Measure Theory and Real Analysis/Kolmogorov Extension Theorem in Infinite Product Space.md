@@ -24,10 +24,11 @@ date of note: 2024-05-25
 >[!important] Kolmogorov Extension Theorem
 >Let $((\mathcal{X}_{t},\mathscr{B}_{t}), \mathscr{T}_{t})_{t\in T}$ be a *family* of *measurable spaces* $(\mathcal{X}_{t},\mathscr{B}_{t})$, equipped with a *topology* $\mathscr{T}_{t}$. 
 >
->For each **finite** $S \subset T$,  let $\mu_{S}$ be an **inner regular probability measure** on $\mathscr{B}_{S} := \prod_{t\in S}\mathscr{B}_{t}$ with the *product topology* $\mathscr{T}_{S} := \prod_{t\in S}\mathscr{T}_{t},$ obeying the **compatibility condition** $$\pi_{R \leftarrow S, \#}(\mu_{S}) = \mu_{R}$$ whenever $R \subset S \subset T$ are two **nested finite subsets** of $T$. Here $$\pi_{R \leftarrow S}: \left(\prod_{t\in S}\mathcal{X}_{t}, \mathscr{B}_{S}\right) \to  \left(\prod_{t\in R}\mathcal{X}_{t}, \mathscr{B}_{R}\right)$$ is a **measurable canonical projection function,** and $\pi_{R \leftarrow S, \#}(\mu_{S})$  is the *pushforward measure* of $\mu_{S}$ by $\pi_{R, S}.$
+>For each **finite** $S \subset T$,  let $\mu_{S}$ be an **inner regular probability measure** on $\mathscr{B}_{S} := \prod_{t\in S}\mathscr{B}_{t}$ with the *product topology* $\mathscr{T}_{S} := \prod_{t\in S}\mathscr{T}_{t},$ obeying the **compatibility condition** $$\pi_{R \leftarrow S, *}(\mu_{S}) = \mu_{R}$$ whenever $R \subset S \subset T$ are two **nested finite subsets** of $T$. Here $$\pi_{R \leftarrow S}: \left(\prod_{t\in S}\mathcal{X}_{t}, \mathscr{B}_{S}\right) \to  \left(\prod_{t\in R}\mathcal{X}_{t}, \mathscr{B}_{R}\right)$$ is a **measurable canonical projection function,** and $\pi_{R \leftarrow S, *}(\mu_{S})$  is the *pushforward measure* of $\mu_{S}$ by $\pi_{R \leftarrow S}.$
 >
 >Then there exists a **unique probability measure** $\mu_{T}$ on $$\mathscr{B}_{T} := \prod_{t\in T}\mathscr{B}_{t}$$ with the property that $$\pi_{S, \#}(\mu_{T}) = \mu_{S}$$ for *all* **finite** $S \subset T$.
 
+- [[Introduction to Measure Theory by Tao]]  pp 199
 - [[Probability Space]]
 - [[Inner Regularity]]
 - [[Product sigma-Algebra]]
@@ -38,7 +39,13 @@ date of note: 2024-05-25
 - [[Tychonoff Theorem and Product of Compact Space]]
 - [[Product Topology]]
 
+- We rephrase the above theorem in concrete form
 
+>[!important] Kolmogorov Extension Theorem (Kolmogorov Existence Theorem)
+> 
+
+
+- [[Probability and Measure by Billingsley]] pp 486
 
 ## Explanation
 
@@ -96,7 +103,7 @@ date of note: 2024-05-25
 
 
 
-- [[Introduction to Measure Theory by Tao]]
+- [[Introduction to Measure Theory by Tao]]  pp 199
 - [[Real Analysis Modern Techniques and Their Applications by Folland]]
-- [[Probability and Measure by Billingsley]]
+- [[Probability and Measure by Billingsley]] pp 486
 - [[A Probability Path by Resnick]]

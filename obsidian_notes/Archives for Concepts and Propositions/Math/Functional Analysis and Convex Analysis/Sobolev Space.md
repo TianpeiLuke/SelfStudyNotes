@@ -59,6 +59,7 @@ date of note: 2024-05-24
 >
 >Note that $H^0(\Omega) = L^2(\Omega)$.
 
+- [[Hilbert Space]]
 
 
 ## Explanation
@@ -72,7 +73,14 @@ date of note: 2024-05-24
 
 - [[Banach Space]]
 
+## Bounded Variation Space
 
+>[!important]
+>$$
+>W^{1,1}(\Omega) \subsetneq \text{BV}(\Omega)
+>$$
+
+- [[Space of Functions with Bounded Variation]]
 
 
 

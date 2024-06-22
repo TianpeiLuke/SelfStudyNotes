@@ -104,7 +104,9 @@ date of note: 2024-05-20
 >$$
 >\text{Vol}\left( \theta_{t}(D) \right) = \text{Vol}\left( D \right)
 >$$
->whenever the *domain* of $\theta_{t}$ contains $D$.
+>whenever the *domain* of $\theta_{t}$ contains $D$.
+
+^380a08
 
 >[!important] Definition
 >Similarly,
@@ -125,9 +127,11 @@ date of note: 2024-05-20
 >- (d) **volume-increasing** *if and only if* $$\text{div}(X) > 0$$ on a *dense subset* of $M$. 
 >- (e) **volume-decreasing** *if and only if* $$\text{div}(X) < 0$$ on a *dense subset* of $M$.
 
+^d27f04
+
 - [[Divergence Theorem on Riemannian Manifold]]
 - [[Global Flow on Smooth Manifold]]
-
+- [[Measure Preserving Transformation]]
 
 
 

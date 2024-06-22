@@ -105,7 +105,7 @@ date of note: 2024-06-07
 -----------
 ##  Recommended Notes and References
 
-- [[Itô Process and Diffusion Process]]
+- [[Itô Process]]
 
 - [[Homogeneous Linear Stochastic Differential Equation]]
 - [[Itô Stochastic Integration]]

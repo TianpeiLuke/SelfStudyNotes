@@ -45,6 +45,7 @@ date of note: 2024-05-07
 > \end{align*}
 > $$
 
+- [[Space of Bounded Signed Measures]]
 - [[Lp Space]]
 
 ## Explanation
@@ -60,3 +61,4 @@ date of note: 2024-05-07
 - [[Total Variation between Measures]]
 
 - [[Real Analysis Modern Techniques and Their Applications by Folland]]
+- [[Real Analysis by Royden]]

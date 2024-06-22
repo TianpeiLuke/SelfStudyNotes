@@ -35,7 +35,7 @@ date of note: 2024-05-27
 >|\lambda| \to \infty \implies \lVert R_{\lambda}(T) \rVert \to 0.
 >$$
 
-- [[Resolvent Set and Spectrum of Linear Operator]]
+- [[Resolvent Operator and Spectrum of Linear Operator]]
 
 >[!important] Definition
 >Let $$r(T) := \sup\{ \lvert \lambda \rvert: \lambda \in \sigma(T)   \}$$
@@ -74,7 +74,7 @@ date of note: 2024-05-27
 ##  Recommended Notes and References
 
 
-- [[Resolvent Set and Spectrum of Linear Operator]]
+- [[Resolvent Operator and Spectrum of Linear Operator]]
 
 - [[Space of Bounded Linear Operators]]
 - [[Hilbert Space]]

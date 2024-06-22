@@ -92,6 +92,8 @@ date of note: 2024-05-09
 
 - [[Introductory Functional Analysis with Applications by Kreyszig]]
 - [[Functional Analysis by Reed]]
+- [[Real Analysis by Royden]]
+
 
 - Github Note [link](https://github.com/TianpeiLuke/SelfStudyNotes/tree/master/self-study/probability_and_measure_theory)
 

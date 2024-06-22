@@ -33,5 +33,5 @@ date of note: 2024-05-28
 - [[Locally Bounded Variation Function]]
 
 - [[Bounded Variation Differentiation Theorem]]
-- [[Bounded Variation Function]]
-- [[Total Variation as Function Norm]]
+- [[Space of Functions with Bounded Variation]]
+- [[Total Variation of Function]]

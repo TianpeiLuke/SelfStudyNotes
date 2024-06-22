@@ -94,3 +94,7 @@ date of note: 2024-05-15
 - [[Banach Space]]
 - [[Minkowski Functional]]
 - Github Note [link](https://github.com/TianpeiLuke/SelfStudyNotes/tree/master/self-study/probability_and_measure_theory)
+
+
+- [[Functional Analysis by Reed]]
+- [[Real Analysis by Royden]] pp 286

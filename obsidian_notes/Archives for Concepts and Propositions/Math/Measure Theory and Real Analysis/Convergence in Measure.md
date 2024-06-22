@@ -52,7 +52,7 @@ date of note: 2024-05-05
 -----------
 ##  Recommended Notes and References
 
-- [[Convergence in L1 norm]]
+- [[Convergence in Lp norm]]
 - [[Measure Space and Countably Additive Measure]]
 
 

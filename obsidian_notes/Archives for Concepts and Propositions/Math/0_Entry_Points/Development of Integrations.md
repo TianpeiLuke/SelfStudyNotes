@@ -146,6 +146,9 @@ date of note: 2024-05-13
 - [[Fatou Lemma]]
 - [[Dominated Convergence Theorem]]
 
+- [[Uniform Integrable Family of Functions]]
+- [[Vitali Lp Convergence Theorem]]
+
 ## Mode of Convergence
 
 - [[Summary of Modes of Convergence]]
@@ -161,7 +164,7 @@ date of note: 2024-05-13
 
 - [[Littlewood Principles]]
 	- [[Lebesgue Measure#Criteria for Measurability]]
-	- [[L1 Approximation of Functions]]
+	- [[Simple Approximation Theorem of Lp Function]]
 	- [[Lusin Theorem]]
 	- [[Egorov Theorem]]
 
@@ -172,9 +175,10 @@ date of note: 2024-05-13
 -----------
 ##  Recommended Notes and References
 
-- [[Lp Space]]
+
 
 - [[Introduction to Measure Theory by Tao]]
 - [[Real Analysis Modern Techniques and Their Applications by Folland]]
+- [[Real Analysis by Royden]]
 - [[Probability and Measure by Billingsley]]
 

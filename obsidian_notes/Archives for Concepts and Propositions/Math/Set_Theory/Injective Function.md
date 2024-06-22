@@ -74,7 +74,7 @@ date of note: 2024-05-10
 >\iota: X \xhookrightarrow{} Y
 >$$
 
-
+- [[Canonical Inclusion]]
 
 ## Properties
 

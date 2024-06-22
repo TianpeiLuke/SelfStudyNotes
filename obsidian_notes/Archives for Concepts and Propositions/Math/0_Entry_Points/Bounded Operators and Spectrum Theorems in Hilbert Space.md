@@ -45,7 +45,7 @@ date of note: 2024-05-11
 
 ### Spectrum of Bounded Linear Operator
 
-- [[Resolvent Set and Spectrum of Linear Operator]]
+- [[Resolvent Operator and Spectrum of Linear Operator]]
 - [[Eigenvalue Point Residual Spectrum of Linear Operator]]
 - [[Spectral Radius of Linear Operator]]
 - [[Spectrum of Adjoint of Linear Operator]]

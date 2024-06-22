@@ -30,14 +30,14 @@ date of note: 2024-05-08
 >
 >In other words, $K_1$ and $K_2$ lie in *opposite half-spaces* determined by $H$.
 
-- This theorem is equivalent to [[Hahn-Banach Theorem Geometric Form]]
+- This theorem is equivalent to [[Hahn-Banach Theorem Geometric Form and Mazur Theorem]]
 - [[Functional Analysis by Reed]]
 
 
 ## Explanation
 
 >[!info]
->Note that *one point set* is *trivially convex*, so the above theorem will reduce to [[Hahn-Banach Theorem Geometric Form]]. 
+>Note that *one point set* is *trivially convex*, so the above theorem will reduce to [[Hahn-Banach Theorem Geometric Form and Mazur Theorem]]. 
 
 ## Theorems of Alternatives
 

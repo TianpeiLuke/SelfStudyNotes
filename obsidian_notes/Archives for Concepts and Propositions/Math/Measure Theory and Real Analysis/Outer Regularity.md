@@ -48,3 +48,6 @@ date of note: 2024-05-07
 - [[Borel sigma Field]]
 - [[Borel Measure]]
 - [[Inner Regularity]]
+
+- [[Real Analysis by Royden]]
+- [[Real Analysis Modern Techniques and Their Applications by Folland]]

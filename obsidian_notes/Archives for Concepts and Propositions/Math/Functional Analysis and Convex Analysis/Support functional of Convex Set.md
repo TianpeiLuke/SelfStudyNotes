@@ -52,7 +52,7 @@ date of note: 2024-05-09
 ##  Recommended Notes and References
 
 - [[Convex Set]]
-- [[Hahn-Banach Theorem Geometric Form]]
+- [[Hahn-Banach Theorem Geometric Form and Mazur Theorem]]
 
 
 - Github Note [link](https://github.com/TianpeiLuke/SelfStudyNotes/tree/master/self-study/probability_and_measure_theory)

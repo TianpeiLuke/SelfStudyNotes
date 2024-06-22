@@ -28,6 +28,7 @@ date of note: 2024-05-13
 >$$ 
 
 - [[Simple Integral of Simple Functions]]
+- [[Simple Approximation Theorem of Lp Function]]
 
 ## Explanation
 
