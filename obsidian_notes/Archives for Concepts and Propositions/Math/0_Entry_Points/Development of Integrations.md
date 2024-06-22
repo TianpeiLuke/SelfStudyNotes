@@ -147,6 +147,7 @@ date of note: 2024-05-13
 - [[Dominated Convergence Theorem]]
 
 - [[Uniform Integrable Family of Functions]]
+- [[Vitali Convergence Theorem for Uniformly Integrable Tight Functions]]
 - [[Vitali Lp Convergence Theorem]]
 
 ## Mode of Convergence
@@ -164,7 +165,7 @@ date of note: 2024-05-13
 
 - [[Littlewood Principles]]
 	- [[Lebesgue Measure#Criteria for Measurability]]
-	- [[Simple Approximation Theorem of Lp Function]]
+	- [[Simple Approximation Theorem of Lp FuncSimple Approximation Theorem of Lp Function]]
 	- [[Lusin Theorem]]
 	- [[Egorov Theorem]]
 

@@ -42,6 +42,7 @@ date of note: 2024-05-09
 >F_{n}(\lambda) := ((X_{n})_{*}\mathcal{P})((-\infty , \lambda])
 >$$ 
 
+- [[Push-forward Measure and Push-forward Operator]](
 - [[Push-forward Measure and Push-forward Operator]]
 
 ## General Definition on Metric Measure Space
@@ -79,7 +80,7 @@ date of note: 2024-05-09
 
 - Note that $\mathcal{C}_{0}(\Omega) \subseteq \mathcal{BC}(\Omega)$.
 - If we further restrict $\Omega$ to be a *compact Hausdorff space*, then we have  $\mathcal{C}_{0}(\Omega) = \mathcal{BC}(\Omega)$. Then we can use [[Riesz-Markov Representation Theorem]]
-- Wikipedia [Weak_convergence_of_measures](https://en.wikipedia.org/wiki/Convergence_of_measures#Weak_convergence_of_measures)
+- Wikipedia [Weak_convergence_of_measures](https://en.wikipedia.org/wiki/Convergence_of_measures#Weak_convergence_of_measures)- Wikipedia [Weak_convergence_of_measures](https://en.wikipedia.org/wiki/Convergence_of_measures#Weak_convergence_of_measures)
 
 
 >[!info]

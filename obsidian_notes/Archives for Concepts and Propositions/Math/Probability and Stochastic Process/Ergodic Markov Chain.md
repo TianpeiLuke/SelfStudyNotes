@@ -2,17 +2,19 @@
 tags:
   - concept
   - math/stochastic_process
-keywords: 
+keywords:
+  - ergodicity
+  - Markov_Chain
 topics:
   - stochastic_process
-name: 
+name: Ergodic Markov Chain
 date of note: 2024-06-19
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Ergodic Markov Chain
 
 
 
@@ -25,7 +27,10 @@ date of note: 2024-06-19
 -----------
 ##  Recommended Notes and References
 
+- [[Aperiodic Markov Chain]]
+- [[Irreducibility of Markov Chain]]
 
-
+- [[Markov Transition Kernel and Transition Function]]
+- [[Markov Chain and Markov Process]]
 
 - [[Monte Carlo Statistical Methods by Robert]]

@@ -60,6 +60,7 @@ date of note: 2024-05-05
 - [[Convergence in Norm]]
 - [[Convergence in Lp norm]]
 - [[Uniformly Almost Everywhere Convergence]]
+- [[Uniformly Almost Everywhere Convergence]]
 - [[Norm Topology]]
 - [[Topology of Pointwise Convergence]]
 - [[Uniform Topology on Metric Spaces]]
@@ -87,6 +88,10 @@ date of note: 2024-05-05
 - [[Tightness of Integrable Functions]]
 - [[Uniform Integrable Family of Functions]]
 - [[Vitali Lp Convergence Theorem]]
+
+- [[Tight Family of Integrable Functions]]
+- [[Uniform Integrable Family of Functions]]
+- [[Vitali Convergence Theorem for Uniformly Integrable Tight Functions]]
 
 
 #### Convergence of (Bounded) Operators

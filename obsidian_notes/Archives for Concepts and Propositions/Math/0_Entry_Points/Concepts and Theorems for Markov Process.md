@@ -33,6 +33,7 @@ date of note: 2024-05-30
 - [[Integral Operator associated with Transition Kernel]]
 
 - [[Atom of Markov Chain]]
+- [[Small Set of Markov Chain]]
 
 ### Stopping Time
 
@@ -46,14 +47,16 @@ date of note: 2024-05-30
 - [[Concepts and Theorems for Martingale]]
 
 
-### Irreducibility of Discrete State Markov Chain
+### Irreducibility of Discrete Time Markov Chain
 
 - [[Resolvent associated with Transition Kernel]]
 - [[Communicate as Equivalence State Relation for Markov Chain]]
-- [[Classification of States of Markov Chain]]
-- [[Harris Recurrent State of Markov Process]]
-
 - [[Irreducibility of Markov Chain]]
+- [[Classification of States of Markov Chain]]
+- [[Recurrent Markov Chain]]
+- [[Harris Recurrent Set and Harris Recurrent Markov Chain]]
+
+
 - [[Foster Theorem for Positive Recurrency of Markov Chain]]
 - [[Poke Lemma for Positive Recurrency of Markov Chain]]
 
@@ -61,13 +64,12 @@ date of note: 2024-05-30
 
 - [[Invariant Measure and Stationary Distribution]]
 - [[Global Balance Equation for Invariant Measure]]
-- [[Detailed Balance Equation]]
-- [[First Return Time of Markov Chain]]
-- [[Kac Theorem on Discrete State Markov Chain]]
+- [[Kac Theorem on Markov Chain]]
 
 ### Ergodicity
 
 - [[Periodicity of State of Markov Chain]]
+- [[Aperiodic Markov Chain]]
 - [[Ergodic Markov Chain]]
 - [[Mean Hitting Time Formula for Markov Chain]]
 - [[Fundamental Matrix for Finite State Markov Chain]]
@@ -75,7 +77,9 @@ date of note: 2024-05-30
 ### Time-Reversible Markov Chain
 
 - [[Time-Reversible Markov Chain]]
+- [[Detailed Balance Equation]]
 - [[Test for Reversibility of Markov Chain]]
+
 
 ### Ergodic Theorems
 

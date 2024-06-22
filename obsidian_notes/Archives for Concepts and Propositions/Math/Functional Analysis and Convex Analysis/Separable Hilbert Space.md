@@ -34,11 +34,13 @@ date of note: 2024-05-15
 - [[Complete Orthonormal Basis of Hilbert Space]]
 - [[lp Sequence Space]]
 
+- [[lp Sequence Space]]
+- [[lp Sequence Space]]
+
 >[!info]
 >$$\ell^2 = \left\{  (a_{1},\, a_{2} \,{,}\ldots{,}\,): \sum_{i=1}^{\infty}|a_{i}|^2 < +\infty  \right\}$$ is called **the canonical Hilbert space**.
 
 - [[lp Sequence Space]]
-
 ## Explanation
 
 

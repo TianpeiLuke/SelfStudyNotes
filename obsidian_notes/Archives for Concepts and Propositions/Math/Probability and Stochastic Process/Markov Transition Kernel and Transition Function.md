@@ -49,6 +49,12 @@ date of note: 2024-04-18
 
 ## Understanding
 
+>[!info]
+>The definition of **transition kernel** fits better for *discrete-time Markov chain*.
+>
+>The definition of **transition function** fits better for *continuous-time Markov process*.
+
+
 
 >[!info] **Conditional Density Function**
 The above definition of Transition Kernel can be used to define the **conditional density function** $K(x, y) = P(y | x)$:
@@ -132,7 +138,19 @@ The above definition of Transition Kernel can be used to define the **conditiona
 
 - [[Integral Operator associated with Transition Kernel]]
 
+## Functional Analysis
 
+>[!important]
+>If $\mu$ is a *positive measure*, by [[Riesz-Markov Representation Theorem]], we can represent
+>$$
+>\mu\,f := \int_{\mathcal{X}}f(x)d\mu(x).
+>$$
+>By the definition of transition kernel [[Markov Transition Kernel and Transition Function]],   
+>- $\mu\,K$ is a **positive measure** on $\mathcal{B}(\mathcal{X})$ defined as $$\mu\,K (A) := \mu\,K(\cdot, A) = \int_{\mathcal{X}}K(x, A)\,d\mu(x), \quad \forall A\in \mathcal{B}(\mathcal{X}).$$
+>- $K\,f$ is a **function** on $\mathcal{X}$ defined as $$K\,f(x) := \int_{\mathcal{X}}\,f(y)\,K(x, dy), \quad \forall x\in \mathcal{X}.$$
+
+- [Lecture note](https://www.randomservices.org/random/expect/Kernels.html)
+- [[Invariant Measure and Stationary Distribution]]
 
 ## Forward and Backward Equation of SDE
 

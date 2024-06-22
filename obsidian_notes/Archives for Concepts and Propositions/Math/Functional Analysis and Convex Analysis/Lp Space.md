@@ -43,10 +43,21 @@ date of note: 2024-05-10
 
 ## Riesz-Fisher Theorem
 
+
+
+## Riesz-Fisher Theorem
+
 >[!info]
 >$L^p$ space is a **Banach space**
 
 - [[Riesz-Fisher Theorem and Completeness of Lp Space]]
+
+## Dense Subspace
+
+![[Simple Approximation Theorem of Lp Function#^705504]]
+
+- [[Simple Approximation Theorem of Lp Function]]
+
 
 ## Dense Subspace
 

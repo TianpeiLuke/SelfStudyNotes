@@ -16,14 +16,35 @@ date of note: 2024-06-19
 >[!important]
 >**Name**: Detailed Balance Equation for Invariant Measure
 
+### Discrete State Markov Chain
+
 >[!important] Definition
+>Let $(X_{n})$ be a *Markov chain* with *discrete state* $\mathcal{X}$.
+>
 >A $\mathcal{X}$-valued Markov chain with *transition kernel* $K$ satisfies the **detailed balance equation** if there exists a function $f$ satisfying 
 >$$
 > K(y, x)f(y) = K(x, y)f(x)
 >$$ 
 >for every $x, y \in \mathcal{X}$.
 
+
 - [[Markov Transition Kernel and Transition Function]]
+
+### Harris Chain
+
+
+>[!important] Definition (Uncountable State)
+>Let $(X_{n})$ be a *Harris chain* with *uncountable state* $\mathcal{X}$.
+>
+>$(X_{n})$ satisfies the **detailed balance equation** if there exists a *positive measure* $\nu$ satisfying
+>$$
+> \begin{align}
+> \nu(dx)\,K(x, dy) &=  \nu(dy)\,\,K(y, dx).
+> \end{align}
+>$$  
+
+- [[Invariant Measure and Stationary Distribution]]
+
 
 
 ## Explanation
@@ -46,11 +67,16 @@ date of note: 2024-06-19
 - [[Time-Reversible Markov Chain]]
 - [[Invariant Measure and Stationary Distribution]]
 
+## Global Balance Equation
+
+- [[Global Balance Equation for Invariant Measure]]
+
 
 
 -----------
 ##  Recommended Notes and References
 
+- [[Global Balance Equation for Invariant Measure]]
 
 - [[Invariant Measure and Stationary Distribution]]
 - [[Markov Transition Kernel and Transition Function]]
@@ -58,4 +84,4 @@ date of note: 2024-06-19
 
 - [[Probability and Measure by Billingsley]]
 - [[Monte Carlo Statistical Methods by Robert]]
-- Wikipedia [Detailed_balance](https://en.wikipedia.org/wiki/Detailed_balance)
+- Wikipedia [Balance_equation](https://en.wikipedia.org/wiki/Balance_equation)

@@ -39,7 +39,8 @@ date of note: 2024-05-11
 - [[Separable Hilbert Space]]
 - [[lp Sequence Space]]
 - [[Wasserstein Space]]
-
+- [[lp Sequence Space]]
+- [[Wasserstein Space]]
 ### Special Transforms and Functions of Hilbert Space
 
 - [[Fourier Basis Function]]

@@ -81,6 +81,23 @@ date of note: 2024-05-16
 > \mathcal{C}_{0}(\mathcal{X}) @>\subset>> L^{\infty}(\mathcal{X}, \mu)
 >\end{CD}
 >$$ 
+	- [[Space of Bounded Signed Measures]]
+	- [[L-infinite Space]]
+
+![[Kantorovitch Representation Theorem for Dual of L-infinity#^48270b]]
+
+- [[Space of Bounded Signed Measures]]
+- [[Kantorovitch Representation Theorem for Dual of L-infinity]]
+
+
+>[!important]
+>$$
+>\begin{CD}
+> \mathcal{M}(\mathcal{X}) @>\subset>> \mathcal{BA}(\mathcal{X})\\ 
+>@VV*V  @VV* V\\ 
+> \mathcal{C}_{0}(\mathcal{X}) @>\subset>> L^{\infty}(\mathcal{X}, \mu)
+>\end{CD}
+>$$ 
 
 
 ### Self-Duality of Hilbert Space and its Linear Functionals
