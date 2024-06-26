@@ -31,7 +31,7 @@ date of note: 2024-05-07
 ^4f1ef4
 
 - [[Absolute Continuity for Measures]]
-- [[Divergence on Manifold]]
+- [[Divergence Function on Manifold]]
 
 >[!info]
 >We call **KL divergence** for short.
@@ -190,7 +190,7 @@ date of note: 2024-05-07
 
 ## Divergence on Statistical Manifold
 
-- [[Divergence on Manifold]]
+- [[Divergence Function on Manifold]]
 
 
 ## Information Inequalities
@@ -207,7 +207,7 @@ date of note: 2024-05-07
 -----------
 ##  Recommended Notes and References
 
-- [[Divergence on Manifold]]
+- [[Divergence Function on Manifold]]
 
 - [[Elements of Information Theory by Cover]]
 

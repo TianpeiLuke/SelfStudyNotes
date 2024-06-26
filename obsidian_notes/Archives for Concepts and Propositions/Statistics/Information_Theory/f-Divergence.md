@@ -34,10 +34,12 @@ date of note: 2024-05-07
 > 
 > We call $f$ the **generator** of $\mathbb{D}_{f}\left( \cdot \left\|\right. \cdot \right).$
 
+^e7fa76
+
 - [[Convex Function]]
 - [[Absolute Continuity for Measures]]
 - [[Radon-Nikodym Derivative]]
-- [[Divergence on Manifold]]
+- [[Divergence Function on Manifold]]
 - [[Entropy Functional]]
 
 ## Explanation
@@ -59,6 +61,7 @@ date of note: 2024-05-07
 >This follows from the *convexity* of the mapping 
 >$$(p, q) \mapsto q\,f\left(\frac{p}{q}\right)$$ on $\mathbb{R}^2$
 
+- [[Perspective Function]]
 
 >[!info]
 >$f$-divergence is a **convex** function in the joint space of two discrete probability vectors.
@@ -101,7 +104,7 @@ date of note: 2024-05-07
 
 - [[Kullback-Leibler Divergence]]
 - [[Entropy Functional]]
-- [[Divergence on Manifold]]
+- [[Divergence Function on Manifold]]
 
 
 - [[Elements of Information Theory by Cover]]

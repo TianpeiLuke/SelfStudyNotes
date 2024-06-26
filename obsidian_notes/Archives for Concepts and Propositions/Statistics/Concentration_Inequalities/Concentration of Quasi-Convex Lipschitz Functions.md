@@ -49,6 +49,7 @@ date of note: 2024-05-30
 
 - [[Epigraph or Supergraph of Function]]
 - [[Convex Set]]
+- [[Quasi-Convex Function]]
 - [[Lipschitz Continuous Function]]
 
 ## Explanation

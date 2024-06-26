@@ -40,6 +40,7 @@ date of note: 2024-06-02
 ^9e072c
 
 - [[Sub-Gaussian Process]]
+- [[Gaussian Process]]
 - [[Stochastic Process]]
 - [[Metric Entropy of Metric Space]]
 

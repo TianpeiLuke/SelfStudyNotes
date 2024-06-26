@@ -30,6 +30,8 @@ date of note: 2024-05-12
 > $$
 >- $c: \mathcal{X} \times \mathcal{Y} \to \mathbb{R}_{+}$ defines **the cost of transportation** from position $x\in \mathcal{X}$ to position $y \in \mathcal{Y}$.
 
+- [[Space of Bounded Signed Measures]]
+
 >[!info]
 >The optimal value of **optimal transport** is defined as 
 >$$

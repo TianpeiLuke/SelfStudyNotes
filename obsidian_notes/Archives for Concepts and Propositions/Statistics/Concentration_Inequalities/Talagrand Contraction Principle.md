@@ -31,6 +31,8 @@ date of note: 2024-06-02
 > \end{align*}
 >$$ 
 
+^a80880
+
 
 >[!important] Talagrand's Contraction Principle
 >- Let $x_1 \,{,}\ldots{,}\, x_n$ be **vectors** whose real-valued components are indexed by $T$, that is, $$x_i = (x_{i,s})_{s \in T}.$$ 
@@ -50,6 +52,8 @@ date of note: 2024-06-02
 >\mathbb{E}\left[\Phi\left(\frac{1}{2}\sup_{s\in T}\left|\sum_{i=1}^n \epsilon_i\, \varphi_i(x_{i,s})\right|\right) \right] \le  \mathbb{E}\left[\Phi\left(\sup_{s\in T}\left|\sum_{i=1}^n \epsilon_i\,x_{i,s}\right|\right) \right].
 > \end{align}
 >$$ 
+
+^bb473c
 
 - [[Lipschitz Continuous Function]]
 - [[Symmetrized Empirical Process]]

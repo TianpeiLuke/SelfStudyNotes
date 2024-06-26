@@ -34,6 +34,7 @@ date of note: 2024-05-10
 - [[Binary Operation on Set]]
 - [[Canonical Inclusion]]
 - [[Canonical Projection]]
+- [[Characteristic Function of Set]]
 
 ### Finite and Infinite
 

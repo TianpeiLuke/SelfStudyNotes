@@ -65,7 +65,7 @@ date of note: 2024-06-01
 
 ### Information Geometry
 
-- [[Divergence on Manifold]]
+- [[Divergence Function on Manifold]]
 
 
 ## Explanation

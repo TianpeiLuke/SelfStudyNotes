@@ -28,6 +28,8 @@ date of note: 2024-06-02
 >$$  
 >where $$\overline{\mathcal{F}} := \set{f - \mathbb{E}_{ \mathcal{P} }\left[  f \right]: f\in \mathcal{F}}$$ is the **recentered function class**.
 
+^3a6f77
+
 - [[Empirical Process and Empirical Measure]]
 - [[Symmetrized Empirical Process]]
 - [[Rademacher Complexity]]

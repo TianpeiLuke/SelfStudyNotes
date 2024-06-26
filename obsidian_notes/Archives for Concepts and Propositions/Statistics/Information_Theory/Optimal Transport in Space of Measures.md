@@ -40,6 +40,7 @@ date of note: 2024-05-12
 >\int_{X \times Y} c \;d \pi
 >$$
 
+- [[Space of Bounded Signed Measures]]
 - [[Radon Measure]]
 - [[Product Measure]]
 - [[Fubini Theorem]]

@@ -165,7 +165,7 @@ date of note: 2024-05-13
 
 - [[Littlewood Principles]]
 	- [[Lebesgue Measure#Criteria for Measurability]]
-	- [[Simple Approximation Theorem of Lp FuncSimple Approximation Theorem of Lp Function]]
+	- [[Simple Approximation Theorem of Lp Function]]
 	- [[Lusin Theorem]]
 	- [[Egorov Theorem]]
 

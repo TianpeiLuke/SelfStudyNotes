@@ -67,7 +67,7 @@ date of note: 2024-05-07
 
 - [[Variational Formula for Kullback-Leibler Divergence]]
 - [[Kullback-Leibler Divergence]]
-- [[Divergence on Manifold]]
+- [[Divergence Function on Manifold]]
 
 - [[wanFDivergenceVariationalInference2020]]
 - [[Elements of Information Theory by Cover]]

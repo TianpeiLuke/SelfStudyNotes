@@ -40,56 +40,61 @@ date of note: 2024-05-30
 - [[Stopping Time of Markov Chain]]
 - [[Strong Markov Property]]
 - [[Number of Passages and Probability of Finite Return]]
+- [[Recursion Formulas for Discrete State Markov Chain]]
 - [[Renewal Time of Markov Chain]]
 
 ### Martingale Theory
 
 - [[Concepts and Theorems for Martingale]]
 
+### Classification of States for Discrete Time Markov Chain
 
-### Irreducibility of Discrete Time Markov Chain
+- [[Communicate as Equivalence State Relation for Markov Chain]]
+- [[Classification of States of Markov Chain]]
+
+### Irreducibility and Classification of Discrete Time Markov Chain
 
 - [[Resolvent associated with Transition Kernel]]
-- [[Communicate as Equivalence State Relation for Markov Chain]]
 - [[Irreducibility of Markov Chain]]
-- [[Classification of States of Markov Chain]]
 - [[Recurrent Markov Chain]]
 - [[Harris Recurrent Set and Harris Recurrent Markov Chain]]
+- [[Positive Recurrent Markov Chain]]
 
-
-- [[Foster Theorem for Positive Recurrency of Markov Chain]]
-- [[Poke Lemma for Positive Recurrency of Markov Chain]]
+- [[Foster Theorem for Discrete State Markov Chain]]
+- [[Poke Lemma for Discrete State Markov Chain]]
 
 ### Invariant Measure
 
 - [[Invariant Measure and Stationary Distribution]]
 - [[Global Balance Equation for Invariant Measure]]
+- [[Positive Recurrent Markov Chain]]
 - [[Kac Theorem on Markov Chain]]
 
 ### Ergodicity
 
 - [[Periodicity of State of Markov Chain]]
 - [[Aperiodic Markov Chain]]
-- [[Ergodic Markov Chain]]
-- [[Mean Hitting Time Formula for Markov Chain]]
+- [[Ergodic Markov Chain and Asymptotic of Transition Kernel]]
 - [[Fundamental Matrix for Finite State Markov Chain]]
-
-### Time-Reversible Markov Chain
-
-- [[Time-Reversible Markov Chain]]
-- [[Detailed Balance Equation]]
-- [[Test for Reversibility of Markov Chain]]
-
 
 ### Ergodic Theorems
 
-
-- [[Measure Preserving Transformation]]
+- [[Measure Preserving Transformation in Markov Chain]]
 - [[Mixing of Measure Preserving Transformation]]
-- [[Ergodic Transformation]]
-- [[Ergodic Theorem for Harris Recurrent Markov Process]]
+- [[Ergodic Theorem]]
+- [[Ergodic Theorem for Positive Recurrent Markov Process]]
 - [[Geometric Ergodicity]]
 - [[Geometric Ergodic Theorem]]
+
+### Time-Reversible Markov Chain
+
+- [[Detailed Balance Equation]]
+- [[Time-Reversible Markov Chain]]
+
+### Time-Homogeneous Markov Chain
+
+- [[Stationary Process]]
+- [[Time-Homogeneous Markov Process]]
 
 ### Central Limit Theorem for Markov Chain
 
@@ -146,11 +151,11 @@ date of note: 2024-05-30
 - [[Concepts and Theorems in Hilbert Space]]
 
 
+
+- Halmos, P. R. (2017). _Lectures on ergodic theory_. Courier Dover Publications.
 - Friedman, A. (1975). *Stochastic differential equations and applications*. Vol.1
 - [[Monte Carlo Statistical Methods by Robert]]
 - [[Introduction to Stochastic Calculus by Klebaner]]
-
-
 - [[A Probability Path by Resnick]]
 - [[Probability and Measure by Billingsley]]
 

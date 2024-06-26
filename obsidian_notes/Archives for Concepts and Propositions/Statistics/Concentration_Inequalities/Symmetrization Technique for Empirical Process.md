@@ -35,9 +35,19 @@ date of note: 2024-06-02
 
 
 
+## Symmetrization Inequalities
 
+
+![[Symmetrization Inequalities for Empirical Process#^3a6f77]]
 
 - [[Symmetrization Inequalities for Empirical Process]]
+
+
+## Contraction Property of Symmetrized Empirical Process
+
+![[Talagrand Contraction Principle#^bb473c]]
+
+
 - [[Contraction Principle for Symmetrized Empirical Process]]
 - [[Talagrand Contraction Principle]]
 - [[Rademacher Complexity]]

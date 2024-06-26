@@ -163,6 +163,7 @@ date of note: 2024-05-11
 - [[Invariant Measure and Stationary Distribution]]
 - [[Measure Preserving Transformation]]
 - [[Ergodic Transformation]]
+- [[Ergodic Theorem]]
 
 
 ### Reproducing Kernel Hilbert Space

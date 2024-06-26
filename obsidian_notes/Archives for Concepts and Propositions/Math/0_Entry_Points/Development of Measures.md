@@ -51,7 +51,7 @@ date of note: 2024-05-07
 - [[Finite and sigma-Finite Measure]]
 - [[sigma Algebra]]
 - [[Borel sigma Field]]
-- [[pi-system and d-system]]
+- [[pi-system and lambda-system and Dynkin Theorem]]
 - [[Compare Sigma Field with Topology]]
 
 ### Important Algebra

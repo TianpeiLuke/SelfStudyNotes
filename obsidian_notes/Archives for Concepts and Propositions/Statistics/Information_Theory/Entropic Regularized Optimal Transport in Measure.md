@@ -44,6 +44,7 @@ date of note: 2024-05-12
 - [[Optimal Transport in Space of Measures]]
 - [[Product Measure]]
 - [[Fubini Theorem]]
+- [[Space of Bounded Signed Measures]]
 
 >[!important]
 >This section introduces a family of numerical schemes to approximate solutions to *Kantorovich formulation* of **optimal transport** and its many generalizations. It operates by adding an **entropic regularization penalty** to the original problem. This regularization has several important advantages:

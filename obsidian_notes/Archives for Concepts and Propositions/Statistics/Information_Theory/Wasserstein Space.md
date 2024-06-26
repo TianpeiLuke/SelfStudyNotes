@@ -36,6 +36,7 @@ date of note: 2024-05-12
 >$$ 
 >where $c(x, y) := (d(x, y))^p$ for all $x, y \in X$.
 
+- [[Space of Bounded Signed Measures]]
 - [[Wasserstein Distance]]
 
 >[!important] Definition
@@ -57,6 +58,23 @@ date of note: 2024-05-12
 >[!info]
 >Wasserstein space is a **_metric_ space of measures**.
 
+## Weak Convergence
+
+>[!important]
+>A sequence of *measures* $\left\{ \mu_{n} \right\}$ *converges* to $\mu$ with respect to the **Wasserstein metric** is equivalent to **weak$^{*}$ (vague) convergence** of $\mu_{n}$ to $\mu$.
+>
+>$$
+>\mu_{n} \stackrel{\mathcal{W}_{p}}{\longrightarrow} \mu \implies \mu_{n} \stackrel{d}{\longrightarrow} \mu
+>$$
+>For the pushforward measure $\mu_{n} = (X_{n})_{*}\mathcal{P}$, it is equivalent to **convergence in distribution**
+>$$
+>\mu_{n} \stackrel{\mathcal{W}_{p}}{\longrightarrow} \mu \iff X_{n} \stackrel{d}{\longrightarrow} X \text{ and } X_{n} \stackrel{L^p}{\longrightarrow} X
+>$$
+
+
+- [[Weak-star Topology of Banach Space]]
+- [[Convergence in Distribution]]
+- [[Push-forward Measure and Push-forward Operator]]
 
 
 
