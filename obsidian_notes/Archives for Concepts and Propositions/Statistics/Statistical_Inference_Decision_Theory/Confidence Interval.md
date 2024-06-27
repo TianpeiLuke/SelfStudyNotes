@@ -29,8 +29,16 @@ date of note: 2024-05-22
 >[!info]
 >In other words, $(a, b)$ traps the parameter $\theta$ with probability $1-\alpha$. 
 
+>[!important] Definition
+
+
+- [[Mathematical Statistics by Shao]] pp 129
 ## Explanation
 
+>[!info]
+>$$
+>\inf_{\theta \in \Theta}\mathcal{P}_{\theta}\left[ \theta \in C_{n} \right] \ge 1- \alpha 
+>$$
 
 
 
@@ -44,3 +52,4 @@ date of note: 2024-05-22
 - [[Independent Random Variables]]
 
 - [[All of Statistics A Concise Course by Wasserman]]
+- [[Mathematical Statistics by Shao]] pp 129

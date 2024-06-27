@@ -20,33 +20,50 @@ date of note: 2024-06-01
 - [[Development of Measures]]
 - [[Development of Integrations]]
 
-### Basic Concepts
+### Fundamental of Statistics
 
+- [[Population and Sample and Statistical Problem]]
 - [[Parametric Models]]
 - [[Nonparametric Models and Semi-Parametric Models]]
+- [[Statistics]]
+
+- [[Statistical Decision Problem]]
+- [[Statistical Inference Problem]]
+- [[Statistical Estimation Problem]]
+- [[Hypothesis Testing Problem]]
+
+- [[Admissibility of Statistical Decision]]
+- [[Convex Decision Problem]]
+
+### Sufficient Statistics
 
 - [[Sufficient Statistics]]
 - [[Minimal Sufficient Statistics]]
 - [[Complete and Bounded Complete Statistics]]
 
-- [[Statistical Decision Problem]]
-- [[Admissibility of Statistical Decision]]
-- [[Rao-Blackwell Theorem]]
 
-- [[Statistical Inference Problem]]
+### Point Estimation
 
 - [[Point Estimator]]
 - [[Bias of Point Estimator]]
 - [[Consistency of Point Estimator]]
-- [[Confidence Interval]]
-
 
 ### Unbiased Estimation
 
 - [[Minimum Variance Unbiased Estimation]]
 - [[Fisher Information and Fisher Metric]]
 - [[Cramér-Rao Lower Bound]]
+- [[Rao-Blackwell Theorem]]
+- [[Lehmann-Scheffé Theorem]]
 - [[Asymptotic Property of MVUE]]
+
+
+
+### Invariance 
+
+- [[Invariant Family under Group of Transformations]]
+- [[Invariant Decision Problem under Group of Transformations]]
+
 
 ### Bayesian Estimation
 
@@ -85,7 +102,6 @@ date of note: 2024-06-01
 - [[Exponential Family as Affine Subspace in Statistical Manifold]]
 
 
-
 ### Minimaxity and Admissibility
 
 - [[Shrinkage Estimator]]
@@ -116,7 +132,6 @@ date of note: 2024-06-01
 - [[Wilcoxon Statistic]]
 - [[Jackknife Estimator of Variance]]
 
-
 ### Variance Estimation
 
 - [[Jackknife Estimator of Variance]]
@@ -127,6 +142,9 @@ date of note: 2024-06-01
 
 - [[Concepts and Theorems in Hypothesis Testing]]
 
+## Confidence Interval Estimation
+
+- [[Confidence Interval]]
 
 
 

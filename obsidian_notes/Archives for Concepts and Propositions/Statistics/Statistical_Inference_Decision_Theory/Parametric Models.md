@@ -68,7 +68,8 @@ date of note: 2024-06-08
 
 - [[Nonparametric Models and Semi-Parametric Models]]
 
-- [[Point Estimator]]
+
+- [[Population and Sample and Statistical Problem]]
 
 - [[All of Statistics A Concise Course by Wasserman]]
 - [[Mathematical Statistics by Shao]] pp 94

@@ -21,6 +21,8 @@ date of note: 2024-05-22
 >A statistic $T(X)$ is said to be **sufficient** for $P \in \mathcal{P}$, (or for $\theta \in \Theta$ when $$\mathcal{P} := \{ P_{\theta} :  \theta \in \Theta \}$$ 
 >is a *parametric family*)  *if and only if* the *conditional distribution* of $X$ given $T$ is *known* (does *not depend on* $P$ or  $\theta$).
 
+- [[Statistics]]
+- [[Parametric Models]]
 - [[Conditional Probability]]
 - [[Point Estimator]]
 
@@ -48,15 +50,19 @@ date of note: 2024-05-22
 >$$
 
 
+## Rao-Blackwell Theorem
+
+- [[Rao-Blackwell Theorem]]
 
 
 
 -----------
 ##  Recommended Notes and References
 
+- [[Statistics]]
 - [[Conditional Probability]]
 - [[Probability Distribution of Random Variable]]
 
 
 - [[All of Statistics A Concise Course by Wasserman]]
-- [[Mathematical Statistics by Shao]]
+- [[Mathematical Statistics by Shao]] pp 103

@@ -74,10 +74,10 @@ date of note: 2024-06-08
 -----------
 ##  Recommended Notes and References
 
+- [[Population and Sample and Statistical Problem]]
 
-
-- [[Point Estimator]]
 
 - [[All of Statistics A Concise Course by Wasserman]]
 - [[Mathematical Statistics by Shao]] pp 95
 - [[Mathematical Foundations of Infinite Dimensional Statistical Models by Gine]] pp 1
+- [[High Dimensional Statistics A Non-Asymptotic Viewpoint by Wainwright]]

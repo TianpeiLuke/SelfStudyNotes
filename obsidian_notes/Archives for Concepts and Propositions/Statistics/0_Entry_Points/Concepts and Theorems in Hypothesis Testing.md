@@ -22,13 +22,20 @@ date of note: 2024-06-01
 
 ### Basics of Hypothesis Testing
 
+- [[Population and Sample and Statistical Problem]]
+- [[Statistical Decision Problem]]
+- [[Statistical Inference Problem]]
+- [[Statistical Estimation Problem]]
+- [[Hypothesis Testing Problem]]
+
 - [[Power and Size of Test]]
-- [[Fundamental Lemma of Neyman and Pearson.]]
 - [[p-Value of Test]]
+
 - [[Asymptotic Significance Level]]
 
 ### Unbiased Most Powerful Test
 
+- [[Fundamental Lemma of Neyman and Pearson.]]
 - [[Unbiased Most Powerful Test]]
 
 ### Test in Parametric Models
@@ -40,13 +47,14 @@ date of note: 2024-06-01
 ### Test in Nonparametric Models
 
 - [[Sign Test]]
+- [[Wilcoxon Statistic]]
 - [[Permutation Test]]
 - [[Rank Test]]
 
 
 ## Basics of Statistics and Estimation
 
-- [[Concepts and Theorems in Statistical Estimation]]
+- [[Concepts and Theorems in Statistical Inference and Decision Theory]]
 
 
 ## Explanation
@@ -59,7 +67,7 @@ date of note: 2024-06-01
 ##  Recommended Notes and References
 
 
-- [[Concepts and Theorems in Statistical Estimation]]
+- [[Concepts and Theorems in Statistical Inference and Decision Theory]]
 
 
 - [[All of Statistics A Concise Course by Wasserman]]

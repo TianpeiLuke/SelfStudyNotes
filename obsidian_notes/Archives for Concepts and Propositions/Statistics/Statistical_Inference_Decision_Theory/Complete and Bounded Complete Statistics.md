@@ -24,6 +24,7 @@ date of note: 2024-06-25
 ##  Recommended Notes and References
 
 
+- [[Statistics]]
 - [[Sufficient Statistics]]
 
 
