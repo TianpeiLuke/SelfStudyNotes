@@ -25,7 +25,7 @@ date of note: 2024-06-24
 
 
 - [[Maximum Likelihood Estimation]]
-- [[Fisher Information and Fisher Metric]]
+- [[Fisher Information]]
 - [[Convergence in Measure]]
 
 

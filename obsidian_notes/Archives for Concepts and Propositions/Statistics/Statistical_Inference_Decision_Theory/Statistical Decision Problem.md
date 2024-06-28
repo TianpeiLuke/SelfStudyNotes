@@ -200,7 +200,19 @@ date of note: 2024-06-08
 
 - [[Hypothesis Testing Problem]]
 
+### Empirical Risk Minimization
 
+>[!example]
+>Let $X$ be a sample taking values in $\mathcal{X}$ from *nonparametric model* $\mathcal{P} \in \mathscr{P}$. Suppose that there exists some *unknown* Borel measurable function $f\in \mathcal{F}$ such that $$Y = f(X) \in \mathcal{Y}, \quad \forall X\in \mathcal{X}.$$ Let $\mathcal{H}$ be a family of *Borel measurable functions* from $\mathcal{X}$ to $\mathcal{Y}$. 
+>
+>A **statistical learning problem** can be formulated as that of *deciding which function* $h \in \mathcal{H}$ based on sample $(X, Y)$ where $X$ is from $\mathcal{P}$.
+>- Consider the **action space** $(\mathcal{H}, \mathcal{B}(\mathcal{H}))$ be the Borel measurable space of $\mathcal{H}$. The space $\mathcal{H}$ is called a **hypothesis class**.
+>- $f\in \mathcal{F}$ is called a **concept** and $\mathcal{F}$ is called a **concept class.**
+>-  A **classification (learning)  rule** is $$T: (\mathcal{X}, \mathscr{F}_{\mathcal{X}}) \to (\mathcal{H}, \mathcal{B}(\mathcal{H}))$$  Denote $h:=T(X)$.
+>- Define the **loss function** as $$L_{f}(X, h)$$
+>- Define the **risk function** as $$R_{T, f}(\mathcal{P}) := \mathbb{E}_{ \mathcal{P}}\left[ L_{f}(X, T(X)) \right]$$ The risk function is called the **generalization error** of $h.$
+
+- [[Statistical Learning via Statistical Decision Theory]]
 
 
 

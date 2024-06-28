@@ -75,7 +75,7 @@ date of note: 2024-05-22
 >\mathcal{P}_{\theta}\left\{   \lVert\;  \hat{\theta}_{n} -  \mathbb{E}_{\theta}[\hat{\theta} ] \;\rVert \ge t  \right\} \leq \delta(t, n)
 >$$
 
-- [[Bias of Point Estimator]]
+- [[Bias of Point Estimator and Unbiasedness]]
 - [[Basic Inequalities and Cramér–Chernoff Method]]
 
 >[!info]

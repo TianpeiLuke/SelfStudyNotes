@@ -32,6 +32,8 @@ date of note: 2024-06-08
 >
 >If $L(\mathcal{P}, \cdot)$ is **strictly convex** and $T_{0}$ is *not a function* of $T$, then $T_{0}$ is **inadmissible**.
 
+^4b3965
+
 
 - [[Sufficient Statistics]]
 - [[Admissibility of Statistical Decision]]
@@ -43,7 +45,7 @@ date of note: 2024-06-08
 
 ## Mininum Variance Unbiased  Estimation
 
-- [[Minimum Variance Unbiased Estimation]]
+- [[Uniformly Minimum Variance Unbiased Estimation]]
 
 >[!important]
 >The **Rao-Blackwell Theorem** states that the **conditional mean estimator** 

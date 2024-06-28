@@ -24,7 +24,7 @@ date of note: 2024-06-24
 -----------
 ##  Recommended Notes and References
 
-- [[Fisher Information and Fisher Metric]]
+- [[Fisher Information]]
 
 - [[Riemannian Metric and Riemannian Manifold]]
 - [[Inner Product Space]]

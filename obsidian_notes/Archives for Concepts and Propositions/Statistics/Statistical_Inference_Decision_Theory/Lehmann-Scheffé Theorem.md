@@ -22,7 +22,9 @@ date of note: 2024-06-26
 >
 >Furthermore, $h(T)$ is the **unique UMVUE** of $\theta$.
 
-- [[Minimum Variance Unbiased Estimation]]
+^e0b496
+
+- [[Uniformly Minimum Variance Unbiased Estimation]]
 - [[Sufficient Statistics]]
 - [[Complete and Bounded Complete Statistics]]
 - [[Mathematical Statistics by Shao]] pp 162
@@ -36,6 +38,8 @@ date of note: 2024-06-26
 >T_{1} := \mathbb{E}_{ \mathcal{P} }\left[\, T_{0}(X) \,|\,T\, \right]
 >$$
 >is at least **as good as** $T_{0}$ itself.
+>
+>This shows that the **conditional mean estimator** is UMVU estimatior.
 
 - [[Rao-Blackwell Theorem]]
 - [[Admissibility of Statistical Decision]]
@@ -47,9 +51,12 @@ date of note: 2024-06-26
 ##  Recommended Notes and References
 
 
-- [[Minimum Variance Unbiased Estimation]]
+- [[Uniformly Minimum Variance Unbiased Estimation]]
 - [[Sufficient Statistics]]
 - [[Complete and Bounded Complete Statistics]]
 
+
+- [[Measurable Function]]
+- [[Borel sigma Field]]
 
 - [[Mathematical Statistics by Shao]] pp 162

@@ -47,3 +47,5 @@ date of note: 2024-05-22
 ## Reference
   
 - [[Testing Statistical Hypotheses by Lehmann]]
+- [[Mathematical Statistics by Shao]]
+- [[Theory of Point Estimation by Lehmann]]

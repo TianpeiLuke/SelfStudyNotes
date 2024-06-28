@@ -25,7 +25,7 @@ date of note: 2024-06-24
 
 
 - [[Point Estimator]]
-- [[Fisher Information and Fisher Metric]]
+- [[Fisher Information]]
 - [[Consistency of Point Estimator]]
 - [[Convergence in Measure]]
 

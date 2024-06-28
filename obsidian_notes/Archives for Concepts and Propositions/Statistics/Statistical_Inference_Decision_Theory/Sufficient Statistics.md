@@ -16,10 +16,10 @@ date of note: 2024-05-22
 >**Name**: Sufficient Estimator
 
 >[!important] Definition
->Let $X$ be a sample from an unknown population $P \in \mathcal{P}$, where $\mathcal{P}$ is *a family of populations*. 
+>Let $X$ be a sample from an unknown population $\mathcal{P} \in \mathscr{P}$, where $\mathscr{P}$ is *a family of populations*. 
 >
->A statistic $T(X)$ is said to be **sufficient** for $P \in \mathcal{P}$, (or for $\theta \in \Theta$ when $$\mathcal{P} := \{ P_{\theta} :  \theta \in \Theta \}$$ 
->is a *parametric family*)  *if and only if* the *conditional distribution* of $X$ given $T$ is *known* (does *not depend on* $P$ or  $\theta$).
+>A statistic $T(X)$ is said to be **sufficient** for $\mathcal{P} \in \mathscr{P}$, (or for $\theta \in \Theta$ when $$\mathscr{P} := \{ \mathcal{P}_{\theta} :  \theta \in \Theta \}$$ 
+>is a *parametric family*)  if and only if the *conditional distribution* of $X$ given $T$ is *known* (does *not depend on* $\mathcal{P}$ or  $\theta$).
 
 - [[Statistics]]
 - [[Parametric Models]]
@@ -40,13 +40,13 @@ date of note: 2024-05-22
 ## Factorization
 
 >[!important] Factorization Theorem for Sufficient Statistic
->Suppose that $X$ is a sample from $P \in \mathcal{P}$ is a *family* of probability measures on $(\Omega^n, \mathscr{B}^n)$ dominated by a *$\sigma$-finite measure* $\nu$. 
+>Suppose that $X$ is a sample from $\mathcal{P} \in \mathscr{P}$ is a *family* of probability measures on $(\Omega^n, \mathscr{B}^n)$ dominated by a *$\sigma$-finite measure* $\nu$. 
 >
->Then the statistic $T(X)$ is **sufficient** for $P \in \mathcal{P}$ *if and only if* 
->- there are **nonnegative** *Borel functions* $h$ (which **does not depend on** $P$) on $(\Omega^n, \mathscr{B}^n)$ and 
->- $g_{P}$ (which **depends on** $P$) on the range of $T$ such that 
+>Then the statistic $T(X)$ is **sufficient** for $\mathcal{P} \in \mathscr{P}$ *if and only if* 
+>- there are **nonnegative** *Borel functions* $h$ (which **does not depend on** $\mathcal{P}$) on $(\Omega^n, \mathscr{B}^n)$ and 
+>- $g_{P}$ (which **depends on** $\mathcal{P}$) on the range of $T$ such that 
 >$$
-> \frac{dP}{d\nu}(x) = g_{P}\left(T(x)\right)h(x).
+> \frac{d\mathcal{P}}{d\nu}(x) = g_{P}\left(T(x)\right)h(x).
 >$$
 
 
@@ -63,6 +63,9 @@ date of note: 2024-05-22
 - [[Conditional Probability]]
 - [[Probability Distribution of Random Variable]]
 
+
+- [[Complete and Bounded Complete Statistics]]
+- [[Basu Theorem]]
 
 - [[All of Statistics A Concise Course by Wasserman]]
 - [[Mathematical Statistics by Shao]] pp 103

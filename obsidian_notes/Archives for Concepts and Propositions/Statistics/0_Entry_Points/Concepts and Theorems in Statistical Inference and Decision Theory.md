@@ -40,23 +40,22 @@ date of note: 2024-06-01
 - [[Sufficient Statistics]]
 - [[Minimal Sufficient Statistics]]
 - [[Complete and Bounded Complete Statistics]]
-
+- [[Basu Theorem]]
 
 ### Point Estimation
 
 - [[Point Estimator]]
-- [[Bias of Point Estimator]]
+- [[Bias of Point Estimator and Unbiasedness]]
 - [[Consistency of Point Estimator]]
 
 ### Unbiased Estimation
 
-- [[Minimum Variance Unbiased Estimation]]
-- [[Fisher Information and Fisher Metric]]
+- [[Uniformly Minimum Variance Unbiased Estimation]]
+- [[Fisher Information]]
 - [[Cramér-Rao Lower Bound]]
 - [[Rao-Blackwell Theorem]]
 - [[Lehmann-Scheffé Theorem]]
 - [[Asymptotic Property of MVUE]]
-
 
 
 ### Invariance 
@@ -89,14 +88,20 @@ date of note: 2024-06-01
 
 ### Exponential Family of Distributions
 
+- [[Exponential Family of Distributions]]
 - [[Generalized Linear Models]]
+- [[Log-Partition Function of Exponential Family]]
+
+- [[Fisher Information for Exponential Family]]
+
+- [[Maximum Likelihood Estimation of Exponential Family]]
 - [[Maximum Likelihood Estimation of Generalized Linear Models]]
 
-
-- [[Exponential Family of Distributions]]
-- [[Maximum Likelihood Estimation of Exponential Family]]
 - [[Maximum Entropy Learning]]
 - [[Maximum Entropy Learning of Exponential Family]]
+
+
+- [[Convex Conjugate of Log-Partition Function of Exponential Family]]
 - [[Exponential Family and Convex Duality]]
 - [[Exponential Family as Probabilistic Graphical Model]]
 - [[Exponential Family as Affine Subspace in Statistical Manifold]]
@@ -118,15 +123,6 @@ date of note: 2024-06-01
 - [[Algorithm Expectation-Maximization]]
 
 ### Nonparametric Estimation
-
-- [[Concepts and Inequalities for Empirical Process]]
-- [[Concepts and Theorems for Stochastic Differential Equations]]
-- [[Empirical Process and Empirical Measure]]
-- [[Glivenko-Cantelli Theorem]]
-- [[Glivenko-Cantelli Class]]
-- [[Brownian Motion Wiener Process]]
-- [[Itô Stochastic Integration]]
-- [[Stochastic Differential Equations]]
 
 - [[U-Statistics]]
 - [[Wilcoxon Statistic]]

@@ -45,7 +45,7 @@ date of note: 2024-05-14
 - [[Smooth Manifold]]
 - [[Tangent Space Definition and Development]]
 
-- [[Fisher Information and Fisher Metric]]
+- [[Fisher Information]]
 
 - [[f-Divergence]]
 - [[Kullback-Leibler Divergence]]

@@ -78,7 +78,7 @@ date of note: 2024-06-24
 ## Asymptotic Analysis
 
 - [[Asymptotic Efficiency of Maximum Likelihood Estimation]]
-- [[Fisher Information and Fisher Metric]]
+- [[Fisher Information]]
 
 
 ## MLE problem via KL divergence

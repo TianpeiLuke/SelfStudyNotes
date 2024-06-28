@@ -40,7 +40,7 @@ date of note: 2024-05-22
 
 - [[Statistical Estimation Problem]]
 - [[Statistics]]
-- [[Bias of Point Estimator]]
+- [[Bias of Point Estimator and Unbiasedness]]
 - [[Independent Random Variables]]
 
 ## Explanation

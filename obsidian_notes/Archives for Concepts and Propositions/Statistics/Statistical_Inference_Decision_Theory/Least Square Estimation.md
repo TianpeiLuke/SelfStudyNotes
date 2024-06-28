@@ -22,18 +22,21 @@ date of note: 2024-06-08
 
 ## Minimum Variance Unbiased Estimation (MVUE)
 
+- [[Uniformly Minimum Variance Unbiased Estimation]]
 
+
+## Gauss-Markov Theorem and BLUE
 
 - [[Gauss–Markov theorem]]
-- [[Minimum Variance Unbiased Estimation]]
 - [[Best Linear Unbiased Prediction]]
+
 
 
 -----------
 ##  Recommended Notes and References
 
 - [[Gauss–Markov theorem]]
-- [[Minimum Variance Unbiased Estimation]]
+- [[Uniformly Minimum Variance Unbiased Estimation]]
 
 - [[Point Estimator]]
 

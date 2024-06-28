@@ -15,7 +15,7 @@ date of note: 2024-06-08
 >**Name**: 
 
 
-- [[Minimum Variance Unbiased Estimation]]
+- [[Uniformly Minimum Variance Unbiased Estimation]]
 - [[Least Square Estimation]]
 - [[Best Linear Unbiased Prediction]]
 

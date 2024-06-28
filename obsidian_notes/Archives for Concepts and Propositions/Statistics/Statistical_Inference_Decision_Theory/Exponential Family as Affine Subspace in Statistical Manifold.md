@@ -32,16 +32,14 @@ date of note: 2024-06-24
 - [[Tangent Space and Tangent Bundle]]
 
 - [[Log-Likelihood Score Function]]
-- [[Fisher Information and Fisher Metric]]
+- [[Fisher Information Metric of Statistical Manifold]]
+
 
 - [[Exponential Family of Distributions]]
-- [[Generalized Linear Models]]
-
-- [[Likelihood Function]]
-- [[Sufficient Statistics]]
+- [[Riemannian Metric and Riemannian Manifold]]
 
 
 
 - [[Methods of Information Geometry by Amari]]
-- [[All of Statistics A Concise Course by Wasserman]]
-- [[Mathematical Statistics by Shao]]
+- [[Introduction to Smooth Manifolds by Lee]]
+- [[Introduction to Riemannian Manifolds by Lee]]

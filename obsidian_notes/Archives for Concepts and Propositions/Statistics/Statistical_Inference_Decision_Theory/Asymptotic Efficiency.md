@@ -24,7 +24,7 @@ date of note: 2024-06-24
 ##  Recommended Notes and References
 
 - [[Convergence in Distribution]]
-- [[Fisher Information and Fisher Metric]]
+- [[Fisher Information]]
 - [[Gaussian Random Variable]]
 
 

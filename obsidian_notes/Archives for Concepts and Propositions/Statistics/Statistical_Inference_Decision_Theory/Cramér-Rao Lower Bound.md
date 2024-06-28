@@ -37,11 +37,13 @@ date of note: 2024-06-24
 >$$
 >is the **Fisher information matrix**, which is assumed to be *positive definite* for any $\theta\in \Theta.$
 
+^71591b
+
 - [[Point Estimator]]
 - [[Parametric Models]]
 - [[Likelihood Function]]
-- [[Bias of Point Estimator]]
-- [[Fisher Information and Fisher Metric]]
+- [[Bias of Point Estimator and Unbiasedness]]
+- [[Fisher Information]]
 - [[Positive Semidefinite Operator]]
 
 >[!important] Definition
@@ -59,8 +61,17 @@ date of note: 2024-06-24
 >[!important]
 >The **Cramér-Rao lower bound** is attained if and only if $f_{\theta}$ is in an **exponential family**.
 
+- [[Exponential Family of Distributions]]
 
-- [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]]
+>[!quote]
+>In fact, if the **equality** above  holds for an *unbiased estimator* $T(X)$ of $g(\theta)$ (which is then a **UMVUE**), then the **greater** the *Fisher information* $I(\theta)$ is, the **smaller** $\text{Var}(T(X))$  is. 
+>
+>Thus, $I(\theta)$ is a **measure** of the **information that $X$ contains about the unknown $\theta$**.
+>
+>-- [[Mathematical Statistics by Shao]] pp 170
+
+
+
 
 
 

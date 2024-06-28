@@ -5,6 +5,7 @@ tags:
 keywords:
   - point_estimator
   - bias_estimation
+  - unbiased
 topics:
   - statistics
 name: Bias of Point Estimator
@@ -42,6 +43,11 @@ date of note: 2024-05-22
 
 ## Explanation
 
+
+
+## UMVU Estimation
+
+- [[Uniformly Minimum Variance Unbiased Estimation]]
 
 
 

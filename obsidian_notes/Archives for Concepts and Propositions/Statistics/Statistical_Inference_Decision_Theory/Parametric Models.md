@@ -59,7 +59,7 @@ date of note: 2024-06-08
 - [[Smooth Manifold]]
 - [[Coordinate Chart]]
 - [[Statistical Manifold of Parametric Family]]
-- [[Fisher Information and Fisher Metric]]
+- [[Fisher Information]]
 
 
 

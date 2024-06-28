@@ -26,7 +26,7 @@ date of note: 2024-06-08
 -----------
 ##  Recommended Notes and References
 
-- [[Bias of Point Estimator]]
+- [[Bias of Point Estimator and Unbiasedness]]
 - [[Convergence in Measure]]
 
 
