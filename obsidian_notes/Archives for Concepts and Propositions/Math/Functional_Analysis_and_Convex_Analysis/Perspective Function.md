@@ -22,7 +22,7 @@ date of note: 2024-06-18
 >
 >The **perspective function** of $\varphi$ is 
 >$$
-> \xi := \mathscr{P}_{\varphi}: \mathbb{R} \times \mathcal{H} \to (-\infty,+\infty]
+> \mathscr{P}_{\varphi}: \mathbb{R} \times \mathcal{H} \to (-\infty,+\infty]
 >$$
 >defined as
 >$$
@@ -85,6 +85,18 @@ date of note: 2024-06-18
 
 ## Examples
 
+>[!example]
+>Let $p_{\theta}(x)$ be a differentiable *probability density function* on $\mathcal{X}$. The **Fisher information** is defined as
+>$$
+>\begin{align*}
+>I(\theta) &:= \int_{\mathcal{X}} p_{\theta}(x)\,\left\lVert \nabla \log p_{\theta}(x)  \right\rVert^2\,dx \\[5pt]
+>&= \int_{\mathcal{X}} p_{\theta}(x)\,\left\lVert  \frac{\nabla p_{\theta}(x)}{p_{\theta}(x)}\right\rVert_{2}^2\,dx \\[5pt]
+>&= \mathscr{P}_{\lVert  \rVert }(p_{\theta}(x), \nabla p_{\theta}(x))
+>\end{align*}
+>$$
+>where $\varphi(\cdot) := \lVert \cdot \rVert_{2}^2.$
+
+- [[Fisher Information]]
 
 
 

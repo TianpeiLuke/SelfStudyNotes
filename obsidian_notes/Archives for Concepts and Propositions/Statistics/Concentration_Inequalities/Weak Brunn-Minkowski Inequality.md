@@ -37,7 +37,7 @@ date of note: 2024-05-24
 
 - [[Compactness]]
 - [[Lebesgue Measure]]
-
+- [[Log-Concave and Log-Convex Function]]
 - [[Brunn-Minkowski Inequality]]
 - [[Prékopa-Leindler Inequality]]
 
@@ -52,6 +52,6 @@ date of note: 2024-05-24
 -----------
 ##  Recommended Notes and References
 
-- [[Logarithmic Concave Measure]]
+- [[Log-Concave Measure]]
 
 - [[Concentration Inequalities by Boucheron]]

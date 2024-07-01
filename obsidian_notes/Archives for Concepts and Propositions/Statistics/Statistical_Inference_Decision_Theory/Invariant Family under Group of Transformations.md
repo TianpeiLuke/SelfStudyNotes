@@ -23,7 +23,7 @@ date of note: 2024-06-26
 - [[Population and Sample and Statistical Problem]]
 - [[Probability Distribution of Random Variable]]
 - [[Push-forward Measure and Push-forward Operator]]
-- [[Bijective Function and Inverse Function]]
+- [[Injective Function]]
 - [[Group]]
 
 ## Explanation

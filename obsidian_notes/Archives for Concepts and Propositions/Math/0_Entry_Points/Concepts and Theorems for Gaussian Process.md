@@ -74,7 +74,7 @@ date of note: 2024-05-30
 - [[Gaussian Complexity Gaussian Width]]
 
 - [[Concave Measure]]
-- [[Logarithmic Concave Measure]]
+- [[Log-Concave Measure]]
 - [[Ehrhard Concave Measure]]
 
 

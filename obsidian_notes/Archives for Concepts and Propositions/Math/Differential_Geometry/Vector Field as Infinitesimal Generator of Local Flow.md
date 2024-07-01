@@ -71,7 +71,7 @@ date of note: 2024-05-06
 - [[Global Flow on Smooth Manifold]]
 - [[Integral Curve of Vector Field]]
 
-- [[Tangent Vector as Velocity of Smooth Curves]]
+- [[Tangent Vector and Differential via Velocity of Smooth Curves]]
 - [[Smooth Vector Field on Manifold]]
 
 

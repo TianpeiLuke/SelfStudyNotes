@@ -42,5 +42,5 @@ date of note: 2024-05-27
 - [[Local Flow on Smooth Manifold]]
 
 
-- [[Tangent Vector as Velocity of Smooth Curves]]
+- [[Tangent Vector and Differential via Velocity of Smooth Curves]]
 

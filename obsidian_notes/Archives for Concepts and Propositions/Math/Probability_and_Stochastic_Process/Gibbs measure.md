@@ -45,7 +45,7 @@ date of note: 2024-05-14
 >$$
 >where $f(x) := - E(x) / T.$
 
-
+- [[Maximum Entropy Learning]]
 - See proof in [[Variational Formula for Kullback-Leibler Divergence]]
 
 

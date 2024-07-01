@@ -29,7 +29,7 @@ date of note: 2024-06-24
 - [[Riemannian Metric and Riemannian Manifold]]
 - [[Inner Product Space]]
 
-- [[Tangent Vector as Velocity of Smooth Curves]]
+- [[Tangent Vector and Differential via Velocity of Smooth Curves]]
 - [[Tangent Space and Tangent Bundle]]
 
 - [[Embedded Submanifold]]

@@ -29,7 +29,7 @@ date of note: 2024-06-24
 
 ^f6d78c
 
-- [[Radon-Nikodym Derivative]]
+- [[Probability Density Function of Random Variable]]
 - [[Measure Space and Countably Additive Measure]]
 - [[Probability Space]]
 - [[Finite and sigma-Finite Measure]]

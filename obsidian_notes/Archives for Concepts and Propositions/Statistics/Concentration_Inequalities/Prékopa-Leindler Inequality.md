@@ -40,7 +40,7 @@ date of note: 2024-05-24
 - [[Measurable Function]]
 - [[Lebesgue Measure]]
 - [[Convex Combination]]
-
+- [[Log-Concave and Log-Convex Function]]
 - [[Brunn-Minkowski Inequality]]
 
 ## Explanation

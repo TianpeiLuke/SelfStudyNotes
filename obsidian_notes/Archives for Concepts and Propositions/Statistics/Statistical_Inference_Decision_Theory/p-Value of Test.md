@@ -100,6 +100,13 @@ date of note: 2024-05-22
 
 - [[All of Statistics A Concise Course by Wasserman]]
 
+>[!important]
+>We can see that 
+>$$
+>  \mathcal{P}\left[\,p\text{-value}(X) \le \alpha\right] = \mathcal{P}\left(X \in C_{\alpha}\right)  = \alpha, \quad \mathcal{P}\in \mathscr{P}_{0}
+>$$
+
+
 >[!info]
 >- if $H_0$ is true, the **$p$-value** is like a **random draw** from a $Unif(0, 1)$ distribution.
 >- if $H_{1}$ is true, then the **$p$-value** *concentrate* around $0$.

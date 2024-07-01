@@ -31,7 +31,7 @@ date of note: 2024-05-12
 > $$
 
 - [[Relative Interior of Convex Set]]
-- [[Hahn-Banach Theorem Geometric Form]]
+- [[Hahn-Banach Theorem Geometric Form and Mazur Theorem]]
 - [[Separation Theorem]]
 - [[Convex Function]]
 - [[Convex Set]]

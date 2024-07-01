@@ -41,9 +41,8 @@ date of note: 2024-05-12
 >$$
 >g(\lambda, \nu) \leq p^{*}, \quad \forall \lambda \in \mathbb{R}^m, \nu \in \mathbb{R}^p.
 >$$
-
->[!important] Definition
->The above bound is non-trivial only when $\lambda_{i} \ge 0$ for each $i$ and $(\lambda, \nu) \in \text{dom}(g)$, i.e. $g(\lambda, \nu) > - \infty$.
+>
+>[](Definitions%20of%20General%20Optimization%20Problem.md)-trivial only when $\lambda_{i} \ge 0$ for each $i$ and $(\lambda, \nu) \in \text{dom}(g)$, i.e. $g(\lambda, \nu) > - \infty$.
 >
 >A pair $(\lambda, \nu) \in \text{dom}(g)$ with $\lambda \ge 0$ is called **dual feasible**.
 

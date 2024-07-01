@@ -50,7 +50,7 @@ date of note: 2024-06-24
 ^b32aa5
 
 - [[Parametric Models]]
-- [[Radon-Nikodym Derivative]]
+- [[Probability Density Function of Random Variable]]
 - [[Borel Measure]]
 - [[Measurable Function]]
 - [[Sufficient Statistics]]
@@ -113,6 +113,7 @@ date of note: 2024-06-24
 >\end{align*}
 >$$
 >In other word, there exists an **entire affine subset** of parameter vectors $\theta$, each associated with *the same distribution*.
+
 
 
 ## Log-Partition Function
@@ -204,6 +205,33 @@ date of note: 2024-06-24
 ## Maximum Entropy Learning as Dual Formulation
 
 - [[Maximum Entropy Learning of Exponential Family]]
+
+## Log-Concave Likelihood Function
+
+![[Log-Concave Measure#^81a226]]
+
+
+>[!important] Proposition
+>The *likelihood function* of an **exponential family** is **logarithmically concave** 
+
+- [[Likelihood Function]]
+- [[Log-Concave and Log-Convex Function]]
+
+>[!info]
+>Assume that the p.d.f. of measure in exponential family is
+>$$
+>f_{\eta}(x) = \exp\left( \left\langle  \eta\,,\, T(x)   \right\rangle - A(\eta) \right)\;, \quad x \in \mathcal{X}. 
+>$$
+>
+>Then the **likelihood function** $\ell(\eta; x ) = \exp(G(\eta; x))$
+>$$
+>G(\eta; x) := \left\langle  \eta\,,\, T(x)   \right\rangle - A(\eta)
+>$$
+>is an **concave** in $\eta$. Thus the likelihood function is **log-concave**.
+
+
+
+
 
 ## Convex Duality 
 

@@ -49,6 +49,7 @@ date of note: 2024-05-22
 > \frac{d\mathcal{P}}{d\nu}(x) = g_{P}\left(T(x)\right)h(x).
 >$$
 
+- [[Probability Density Function of Random Variable]]
 
 ## Rao-Blackwell Theorem
 

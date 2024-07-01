@@ -19,10 +19,20 @@ date of note: 2024-05-12
 
 ### Concepts
 
+- [[Definitions of General Optimization Problem]]
 - [[Convex Optimization Problem]]
+- [[Necessary and Sufficient Condition for Local Minimum of Smooth Function]]
+- [[Lagrangian Function]]
+- [[Lagrangian Dual Function]]
+- [[Lagrange Dual Problem]]
+- [[Fenchel Duality Theorem]]
+- [[Karush-Kuhn-Tucker Optimality Condition]]
 
 ### Algorithms
 
+- [[Simplex Method for Linear Optimization]]
+- [[Interior Point Method for Linear Optimization]]
+- [[Interior Point Method for Convex Optimization]]
 
 
 

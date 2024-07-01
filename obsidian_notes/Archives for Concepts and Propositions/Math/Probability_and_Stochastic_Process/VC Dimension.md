@@ -66,6 +66,7 @@ date of note: 2024-05-12
 - [[Shattering of Data by Function Class]]
 - [[Restriction of Function Class to Data]]
 
+- [[Growth Function of Function Class]]
 
 - [[Empirical Risk Minimization]]
 

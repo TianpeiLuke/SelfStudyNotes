@@ -66,7 +66,7 @@ date of note: 2024-06-01
 
 ### Bayesian Estimation
 
-- [[Bayes Risk and Bayes Error]]
+- [[Bayes Risk]]
 - [[Bayes Estimator]]
 - [[Minimum Mean Square Estimation]]
 - [[Bias-Variance Tradeoff]]
@@ -91,6 +91,7 @@ date of note: 2024-06-01
 - [[Exponential Family of Distributions]]
 - [[Generalized Linear Models]]
 - [[Log-Partition Function of Exponential Family]]
+- [[Log-Partition Function of Exponential Family]]
 
 - [[Fisher Information for Exponential Family]]
 
@@ -102,6 +103,7 @@ date of note: 2024-06-01
 
 
 - [[Convex Conjugate of Log-Partition Function of Exponential Family]]
+
 - [[Exponential Family and Convex Duality]]
 - [[Exponential Family as Probabilistic Graphical Model]]
 - [[Exponential Family as Affine Subspace in Statistical Manifold]]

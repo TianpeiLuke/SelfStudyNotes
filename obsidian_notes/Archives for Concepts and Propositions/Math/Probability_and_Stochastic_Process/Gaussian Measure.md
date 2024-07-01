@@ -203,7 +203,7 @@ date of note: 2024-05-10
 - [[Gaussian Random Vector]]
 - [[Gaussian Random Function]]
 
-
+- [[Log-Concave and Log-Convex Function]]
 - [[Logarithmic Sobolev Inequality for Gaussian Random Variables]]
 
 - [[Borel Measure]]

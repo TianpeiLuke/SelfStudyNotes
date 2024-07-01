@@ -93,7 +93,7 @@ date of note: 2024-05-12
 >$$ 
 >If $d^{*} \in \mathbb{R}$ then the **supremum** in dual problem is **attained**.
 
-- [[Hahn-Banach Theorem Geometric Form]]
+- [[Hahn-Banach Theorem Geometric Form and Mazur Theorem]]
 
 - [[Banach Space]]
 - [[Dual Normed Space and Dual Banach Space]]

@@ -27,7 +27,7 @@ date of note: 2024-06-07
 -----------
 ##  Recommended Notes and References
 
-- [[Logarithmic Concave Measure]]
+- [[Log-Concave Measure]]
 - [[Ehrhard Concave Measure]]
 
 - [[Convex Set]]

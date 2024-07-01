@@ -36,7 +36,7 @@ date of note: 2024-06-24
 
 
 - [[Parametric Models]]
-
+- [[Probability Density Function of Random Variable]]
 
 ## Explanation
 
@@ -110,6 +110,11 @@ date of note: 2024-06-24
 >\frac{ \partial  }{ \partial \eta }\psi(\eta)\;\left[I\left( \psi(\eta)\right)  \right]\; \left( \frac{ \partial  }{ \partial \eta }\psi(\eta) \right)^T
 >$$
 
+## Perspective Function
+
+- [[Perspective Function]]
+
+
 ## Fisher Information for Exponential Family
 
 
@@ -127,6 +132,8 @@ date of note: 2024-06-24
 >$$\mathscr{P}_{\Theta} := \left\{ \mathcal{P}_{\theta} \ll \mu: \theta \in \Theta \right\} = \left\{ f_{\theta} := \frac{d\mathcal{P}_{\theta}}{d\mu}: \theta \in \Theta   \right\} .$$
 
 - [[Riemannian Metric and Riemannian Manifold]]
+
+
 
 
 

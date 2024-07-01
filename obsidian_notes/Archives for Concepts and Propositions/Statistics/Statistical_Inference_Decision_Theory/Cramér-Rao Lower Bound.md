@@ -41,6 +41,7 @@ date of note: 2024-06-24
 
 - [[Point Estimator]]
 - [[Parametric Models]]
+- [[Probability Density Function of Random Variable]]
 - [[Likelihood Function]]
 - [[Bias of Point Estimator and Unbiasedness]]
 - [[Fisher Information]]
@@ -54,6 +55,19 @@ date of note: 2024-06-24
 >\end{align*}
 >$$
 >is called **information inequality** or the **Cramér-Rao lower bound**. 
+
+>[!important] Cramér-Rao Lower Bound (Variance-Covariance version)
+>The **variance-covariance matrix** $\text{Cov}(T, T)$ of an **unbiased estimator** $T(X)$ of $\theta$ satisfies
+>$$
+>\text{Cov}(T, T) \succeq \left[ I(\theta) \right]^{-1} 
+>$$
+>in the sense that 
+>$$
+>\text{Cov}(T, T) - \left[ I(\theta) \right]^{-1} 
+>$$
+>is **positive semi-definite**.
+
+
 
 
 ## Explanation

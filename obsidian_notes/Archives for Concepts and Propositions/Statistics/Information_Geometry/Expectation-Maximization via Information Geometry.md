@@ -29,7 +29,7 @@ date of note: 2024-06-24
 
 - [[e-Connection and m-Connection]]
 
-- [[Tangent Vector as Velocity of Smooth Curves]]
+- [[Tangent Vector and Differential via Velocity of Smooth Curves]]
 - [[Tangent Space and Tangent Bundle]]
 
 

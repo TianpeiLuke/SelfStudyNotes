@@ -48,11 +48,12 @@ date of note: 2024-05-13
 - [[Probability Space]]
 - [[Random Element and Random Variable]]
 - [[Probability Distribution of Random Variable]]
+- [[Probability Density Function of Random Variable]]
 - [[Cumulative Distribution Function of Random Variable]]
 - [[Characteristic Function of Random Variable]]
 - [[Moment Generating Function]]
 
-- [[Logarithmic Concave Measure]]
+- [[Log-Concave Measure]]
 
 ## Independence
 
@@ -101,6 +102,12 @@ date of note: 2024-05-13
 - [[Conditional Expectation]]
 - [[Conditional Probability]]
 - [[Markov Transition Kernel and Transition Function]]
+
+
+## Bayes Theorem
+
+- [[Prior and Posterior Measure]]
+- [[Bayes Theorem]]
 
 
 

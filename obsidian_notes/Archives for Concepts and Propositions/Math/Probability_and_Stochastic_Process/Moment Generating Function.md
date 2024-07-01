@@ -51,6 +51,7 @@ date of note: 2024-05-07
 >$$
 
 - [[Laplace Transform]]
+- [[Probability Density Function of Random Variable]]
 
 >[!info]
 >If we use *Riemann-Stieltjes integral* to define *the moment generating function*, we can also use **the Laplace-Stieljes transform** to replace *the Laplace transform*. 

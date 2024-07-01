@@ -33,7 +33,7 @@ date of note: 2024-05-27
 >If $0 \in J$, the point $\gamma(0)$ is called **the starting point** of $\gamma$.
 
 - [[Vector Field on Manifold]]
-- [[Tangent Vector as Velocity of Smooth Curves]]
+- [[Tangent Vector and Differential via Velocity of Smooth Curves]]
 
 
 
@@ -121,7 +121,7 @@ date of note: 2024-05-27
 -----------
 ##  Recommended Notes and References
 
-- [[Tangent Vector as Velocity of Smooth Curves]]
+- [[Tangent Vector and Differential via Velocity of Smooth Curves]]
 
 - [[Vector Field on Manifold]]
 - [[Topological Group]]

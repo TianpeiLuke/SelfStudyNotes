@@ -29,10 +29,86 @@ date of note: 2024-06-24
 - [[Convex Function]]
 - [[Minimal Sufficient Statistics]]
 
+## Space of Natural Parameters
+
+
+>[!important] Proposition
+>Let $f_{\eta}(x)$ be p.d.f. of sample $X$ from an *exponential family*, i.e.
+>$$
+>f_{\eta}(x) = \exp\left( \left\langle  \eta\,,\, T(x)   \right\rangle - A(\eta) \right)\;h(x), \quad x \in \mathcal{X}. 
+>$$
+>where $T: \mathcal{X} \to \mathbb{R}^d$ is *sufficient statistic* for $f_{\eta}$ and $\eta\in \mathbb{R}^d$ is the *natural parameter*.
+>
+>The **space of natural parameters** $$\mathcal{D} := \left\{ \eta \in \mathbb{R}^n: A(\eta) < \infty \right\} $$ is a **convex set**.
+
 ## Space of Realizable Mean Parameters
 
 >[!important] Proposition
 >Let $\mathcal{M}$ be the space of all **realizable mean parameters** associated with sufficient statistic $T: \mathcal{X} \to \mathbb{R}^d$,  i.e.
+>$$
+>\mathcal{M} := \left\{ \mu \in \mathbb{R}^d:  \exists \mathcal{P} \text{ such that }  \mu = \mathbb{E}_{\mathcal{P}}\left[ T(X) \right] \right\}.
+>$$
+>
+>Then $\mathcal{M}$ is a **convex** subset of $\mathbb{R}^d$.
+>
+>In particular, if $(X_{1} \,{,}\ldots{,}\,X_{m})$ is *discrete random vector* with *finite state space* $\mathcal{X}^m$, we have representation
+>$$
+>\begin{align*}
+>\mathcal{M} &:= \left\{ \mu \in \mathbb{R}^d: \mu = \sum_{x\in \mathcal{X}^m}T(x)\,p(x) \text{ where }  \exists p \text{ with } \sum_{\mathcal{X}^m}p(x) = 1, \text{ and }p(x) \ge 0   \right\}\\[5pt]
+>&= \text{conv}\left\{ T(x): x\in \mathcal{X}^{m} \right\}, 
+>\end{align*}
+>$$
+>where $\text{conv}(A)$ is the **convex hull** of set $A$.
+
+- [[Convex Set]]
+- [[Convex Hull]]
+- [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]] pp 54
+
+
+## Variational Representation of Log-Partition Function
+
+>[!important] Theorem
+>Let $X$ be sample from **exponential family** $\left\{ f_{\eta}: \eta\in \Xi \right\}$ taking values in $\mathcal{X}$, where
+>$$
+>f_{\eta}(x) = \exp\left( \left\langle  \eta\,,\, T(x)   \right\rangle - A(\eta) \right)\;h(x), \quad x \in \mathcal{X}.
+>$$
+>and $A$ is the **log-partition function**,
+>$$
+>A(\eta) = \log \left(\int_{\Omega}\,\exp\left( \left\langle  \eta\,,\, T(\omega) \right\rangle \right)\;h(\omega)\, d\mu(\omega) \right).
+>$$
+>
+>Let $\mathcal{M}$ be the space of all **realizable mean parameters** associated with sufficient statistic $T: \mathcal{X} \to \mathbb{R}^d$,  i.e.
+>$$
+>\mathcal{M} := \left\{ \mu \in \mathbb{R}^d:  \exists \mathcal{P} \text{ such that }  \mu = \mathbb{E}_{\mathcal{P}}\left[ T(X) \right] \right\}.
+>$$
+>
+>Then
+>- For any $\mu \in \text{int}(\mathcal{M})$, denote by $\eta(\mu)$ the **unique canonical parameter** satisfying the *dual matching condition* $$\nabla A(\eta) = \mu.$$ The **convex conjugate** of $A$,  $$A^{*}(\mu) = \sup_{\eta \in \mathcal{D}}\left\langle  \eta, \mu \right\rangle - A(\eta)$$ takes the form
+>$$
+>A^{*}(\mu) = \left\{ 
+>\begin{array}{cc}  
+> -H(f_{\eta(\mu)}) :=\mathbb{E}_{ f_{\eta} }\left[ \log(f_{\eta}) \right] &  \text{ if }\mu \in \text{int}(\mathcal{M}) \\
+> +\infty & \text{ if }\mu \not\in \overline{\mathcal{M}}.
+>\end{array}
+> \right.
+>$$
+> For any *boundary point* $\mu \in \partial \mathcal{M} = \overline{\mathcal{M}}\setminus \text{int}(\mathcal{M})$, we have $$A^{*}(\mu) = \lim_{ n \to \infty }A^{*}(\mu_{n}) $$ where $\left\{ \mu_{n}: n \ge 1 \right\} \subset \text{int}(\mathcal{M})$ and $\lim_{ n \to \infty }\mu_{n} \to \mu.$ 
+>- In terms of this dual, the **log-partition function** has the **variational representation** $$A(\eta) = \sup_{\eta \in \mathcal{D}}\left\langle  \eta, \mu \right\rangle - A^{*}(\mu).$$
+>- For all $\eta\in \mathcal{D}$, the **supremum** is attained **uniquely** at $\mu \in \text{int}(\mathcal{M})$ specified by the **moment-matching conditions** $$\mu =  \mathbb{E}_{ f_{\eta} }\left[T(X)\right] = \int_{\mathcal{X}}T\,f_{\eta}\,d\mu.$$
+
+- [[Legendre Transform]]
+- [[Shannon Entropy]]
+- [[Variational Formula for Kullback-Leibler Divergence]]
+- [[Convex Optimization Problem]]
+- [[Fenchel Duality Theorem]]
+- [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]] pp 67
+
+>[!info]
+>The second conclusion states 
+>$$
+>A^{* *} = A.
+>$$
+ associated with sufficient statistic $T: \mathcal{X} \to \mathbb{R}^d$,  i.e.
 >$$
 >\mathcal{M} := \left\{ \mu \in \mathbb{R}^d:  \exists \mathcal{P} \text{ such that }  \mu = \mathbb{E}_{\mathcal{P}}\left[ T(X) \right] \right\}.
 >$$

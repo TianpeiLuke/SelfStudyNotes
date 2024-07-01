@@ -39,7 +39,14 @@ date of note: 2024-06-04
 
 ## Explanation
 
+>[!info]
+>The characteristic function of random variable $X$ can be seen as the  **Fourier transform** of the **p.d.f.** of $X$ when $-\omega$ is used
+>$$
+>\phi_{X}(\omega) = \int_{\Omega}e^{i\omega x}\,p_{X}(x)\,dx = (\mathcal{F}\;p_{X})(-\omega)
+>$$
+
 - [[Fourier Series and Fourier Transform]]
+- [[Probability Density Function of Random Variable]]
 
 ## Relation to Moment Generating Functions
 

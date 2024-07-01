@@ -32,6 +32,9 @@ date of note: 2024-05-15
 
 >[!important] Definition
 >A function $f$ is **strictly convex** if *strict inequality* holds above whenever $x \neq y$ and $0 < \theta < 1$.
+>$$
+>f(\theta x + (1- \theta) y) < \theta f(x) + (1- \theta) f(y).
+>$$
 
 >[!important] Definition
 >We say $f$ is **concave** if $−f$ is *convex*, and **strictly concave** if $−f$ is *strictly convex*.
@@ -94,12 +97,17 @@ date of note: 2024-05-15
 >We can extend the definition of $f$ beyond its effective domain as
 >$$
 >\begin{align}
->\widetilde{f}(x) = \left\{ \begin{array}[cc]
+>\bar{f}(x) = \left\{ \begin{array}{cc}
 >f(x) & x \in \text{dom}(f)\\
 >+\infty & x \not\in \text{dom}(f)
 \end{array}  \right. 
 \end{align}
 >$$
+
+## Operations that Preserve Convexity
+
+- [[Operations that Preserve Convexity]]
+
 
 ## Examples
 
@@ -136,14 +144,7 @@ date of note: 2024-05-15
 >\lambda_{max}(\boldsymbol{X}) = \sup\left\{\boldsymbol{z}^T\boldsymbol{X}\boldsymbol{z}: \lVert \boldsymbol{z} \rVert_{2} = 1    \right\}
 >$$
 
->[!important] Proposition
->Let $C$ be a nonempty *convex set* and $f$ is *convex* in $(x, y)$, then the function 
->$$
->g(x) = \inf_{y \in C}f(x, y)
->$$
->is a **convex** function in $x$.
-
->[!example] Projection on Convex Set
+>[!example]
 >Let $C$ be a nonempty *convex set* and $f(x, y) = \lVert x - y \rVert$, then the function 
 >$$
 >g(x) = \inf_{y \in C}\lVert x - y \rVert

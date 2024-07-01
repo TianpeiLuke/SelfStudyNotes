@@ -40,9 +40,11 @@ date of note: 2024-05-11
 - [[Operations that Preserve Convexity]]
 - [[Perspective Function]]
 - [[Jensen Inequality]]
+
 - [[Semi-Continuous Function]]
 - [[Convex Differentiation Theorem]]
 - [[Quasi-Convex Function]]	
+- [[Log-Concave and Log-Convex Function]]
 
 ### Duality Correspondence in Convex Space
 
@@ -54,6 +56,8 @@ date of note: 2024-05-11
 	- [[Support functional of Convex Set]]
 	- [[Minkowski Functional]]
 	- [[Dual Representation of Convex Set]]
+- [[Extreme Points of Convex Set of Locally Convex Space]]
+- [[Krein-Milman Lemma and Krein-Milman Theorem]]
 
 ### Dual Representation of Convex Function
 
@@ -79,9 +83,10 @@ date of note: 2024-05-11
 - [[Convex Bifunctions]]
 - [[Locally Convex Space]]
 - [[Compactness]]
-- [[Extreme Points of Convex Set of Locally Convex Space]]
-- [[Krein-Milman Lemma and Krein-Milman Theorem]]
 
+- [[Unconstrained Local Minimization]]
+- [[Unconstrained Global Minimization]]
+- [[Necessary and Sufficient Condition for Local Minimum of Smooth Function]]
 - [[Lagrangian Function]]
 - [[Lagrangian Dual Function]]
 - [[Lagrange Dual Problem]]

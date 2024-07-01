@@ -45,7 +45,7 @@ date of note: 2024-05-06
 ### From Tangent Vector to Vector Field
 
 - [[Derivation of Smooth Map at point and Tangent Vector]]
-- [[Tangent Vector as Velocity of Smooth Curves]]
+- [[Tangent Vector and Differential via Velocity of Smooth Curves]]
 - [[Tangent Space Definition and Development]]
 - [[Tangent Space as Finite Dimensional Vector Space]]
 - [[Tangent Bundle]]

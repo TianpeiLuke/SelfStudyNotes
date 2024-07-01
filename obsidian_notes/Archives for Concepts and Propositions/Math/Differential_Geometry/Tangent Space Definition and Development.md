@@ -121,7 +121,7 @@ date of note: 2024-05-06
 
 ## Alternative Definition
 
-- [[Tangent Vector as Velocity of Smooth Curves]]
+- [[Tangent Vector and Differential via Velocity of Smooth Curves]]
 
 
 

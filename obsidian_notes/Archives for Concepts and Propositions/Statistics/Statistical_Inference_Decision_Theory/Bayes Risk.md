@@ -10,14 +10,14 @@ keywords:
 topics:
   - statistics/estimation
   - machine_learning_theory
-name: Bayes Risk and Bayes Error
+name: Bayes Risk
 date of note: 2024-06-08
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Bayes Risk and Bayes Error
+>**Name**: Bayes Risk
 
 ![[Statistical Decision Problem#^1e4cc1]]
 
@@ -40,8 +40,7 @@ date of note: 2024-06-08
 >r_{T}(\Pi) = \int_{\mathscr{P}}\,\int_{\Omega} L(\mathcal{P}, T(x))\,d\mathcal{P}_{X}(x)\,d\Pi(\mathcal{P}).
 >$$
 
-
-
+- [[Prior and Posterior Measure]]
 - [[Statistical Decision Problem]]
 - [[Measure Space and Countably Additive Measure]]
 - [[Probability Space]]
@@ -60,4 +59,4 @@ date of note: 2024-06-08
 
 - [[Bayes Estimator]]
 - [[All of Statistics A Concise Course by Wasserman]]
-- [[Mathematical Statistics by Shao]] pp 12o
+- [[Mathematical Statistics by Shao]] pp 12

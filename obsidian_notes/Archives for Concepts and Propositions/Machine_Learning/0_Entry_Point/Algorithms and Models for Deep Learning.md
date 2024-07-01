@@ -48,7 +48,7 @@ date of note: 2024-06-01
 
 #### Graph-based
 
-- [[Model  Graph Neural Network]]
+- [[Model Graph Neural Network]]
 
 #### Memorization Network
 

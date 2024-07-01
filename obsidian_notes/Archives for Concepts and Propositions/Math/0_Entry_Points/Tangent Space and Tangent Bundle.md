@@ -16,7 +16,10 @@ date of note: 2024-05-06
 
 - [[Derivation of Smooth Map at point and Tangent Vector]]
 - [[Tangent Space Definition and Development]]
-- [[Tangent Vector as Velocity of Smooth Curves]]
+- [[Parameterized Curve on Manifold]]
+- [[Velocity of Smooth Curves]]
+- [[Tangent Vector and Differential via Velocity of Smooth Curves]]
+- [[Tangent Space as Finite Dimensional Vector Space]]
 - [[Tangent Bundle]]
 - [[Coordinate Representation of Tangent Vector]]
 - [[Coordinate Representation of Differential at Point]]

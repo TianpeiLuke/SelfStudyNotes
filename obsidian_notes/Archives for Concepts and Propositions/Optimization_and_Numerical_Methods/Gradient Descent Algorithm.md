@@ -2,10 +2,11 @@
 tags:
   - concept
   - optimization/algorithm
-keywords: 
+keywords:
+  - gradient_descent_algorithm
 topics:
   - optimization
-name: 
+name: Gradient Descent Algorithm
 date of note: 2024-05-12
 ---
 
@@ -26,4 +27,4 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 - [[Numerical Optimization by Nocedal]]
-- [[Nonlinear Programming by Bertsekas]]
+- [[Nonlinear Programming by Bertsekas]] pp 22 - 86

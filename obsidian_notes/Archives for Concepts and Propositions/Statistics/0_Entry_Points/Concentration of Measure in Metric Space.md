@@ -25,7 +25,7 @@ date of note: 2024-05-11
 
 - [[Prékopa-Leindler Inequality]]
 - [[Weak Brunn-Minkowski Inequality]]
-- [[Logarithmic Concave Measure]]
+- [[Log-Concave Measure]]
 
 ### Classical Isoperimetry Theorem and Concentration of Lebesuge Measure
 

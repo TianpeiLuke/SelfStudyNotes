@@ -47,6 +47,8 @@ date of note: 2024-05-08
 > \end{align*}
 > $$
 
+^2763c0
+
 - [[Convex Function]]
 - [[Topological Vector Space]]
 - [[Bounded Linear Functional]]'

@@ -46,6 +46,8 @@ date of note: 2024-06-08
 >\mathcal{F} := \left\{ \frac{d\mathcal{P}}{d\mu}: \mathcal{P} \in \mathscr{P} \right\}. 
 >$$
 
+- [[Probability Density Function of Random Variable]]
+
 >[!important] Definition
 >In *statistical inference* and *decision theory*, methods designed for parametric models are called **parametric methods**.
 

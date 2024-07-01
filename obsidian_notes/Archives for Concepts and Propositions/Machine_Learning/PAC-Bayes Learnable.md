@@ -5,7 +5,7 @@ tags:
 keywords: 
 topics:
   - machine_learning_theory
-name: Empirical Risk Minimization
+name: 
 date of note: 2024-05-12
 ---
 
@@ -25,8 +25,8 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
-- [[PAC Learnable]]
-- [[Bounded Difference Inequality]]
+- [[PAC Learnable and Agnostic PAC Learnable]]
 - [[Understanding Machine Learning by Shalev-Shwartz]]
 
-- [[Empirical Process and Empirical Measure]]
+- [[Chernoff Bound for Bernoulli distribution]]
+- [[Bennett Inequality]]

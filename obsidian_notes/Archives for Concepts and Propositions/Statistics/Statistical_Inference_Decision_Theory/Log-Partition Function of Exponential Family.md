@@ -38,11 +38,23 @@ date of note: 2024-06-27
 
 - [[Exponential Family of Distributions]]
 - [[Sufficient Statistics]]
+- [[Probability Density Function of Random Variable]]
 
 ## Explanation
 
 
 ## Convexity
+
+>[!important] Proposition
+>Let $f_{\eta}(x)$ be p.d.f. of sample $X$ from an *exponential family*, i.e.
+>$$
+>f_{\eta}(x) = \exp\left( \left\langle  \eta\,,\, T(x)   \right\rangle - A(\eta) \right)\;h(x), \quad x \in \mathcal{X}. 
+>$$
+>where $T: \mathcal{X} \to \mathbb{R}^d$ is *sufficient statistic* for $f_{\eta}$ and $\eta\in \mathbb{R}^d$ is the *natural parameter*.
+>
+>The **space of natural parameters** $$\mathcal{D} := \left\{ \eta \in \mathbb{R}^n: A(\eta) < \infty \right\} $$ is a **convex set**.
+
+
 
 >[!important] Proposition
 >The **log-partition function**
