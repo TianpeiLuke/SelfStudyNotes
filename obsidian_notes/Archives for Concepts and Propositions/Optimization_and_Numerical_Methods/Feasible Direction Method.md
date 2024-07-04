@@ -25,7 +25,8 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
-- [[Newton Algorithm]]
+- [[Gradient Descent Algorithm]]
 
-- [[Numerical Optimization by Nocedal]]
-- [[Nonlinear Programming by Bertsekas]]
+
+- [[Nonlinear Programming by Bertsekas]] pp 214
+- [[Convex Optimization Algorithms by Bertsekas]] pp 73

@@ -23,7 +23,7 @@ date of note: 2024-05-06
 - [[Tangent Bundle]]
 - [[Coordinate Representation of Tangent Vector]]
 - [[Coordinate Representation of Differential at Point]]
-
+- [[Retraction on Smooth Manifold]]
 
 ## Explanation
 

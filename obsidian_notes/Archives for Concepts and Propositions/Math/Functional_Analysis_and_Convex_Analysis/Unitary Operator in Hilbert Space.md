@@ -81,7 +81,7 @@ date of note: 2024-05-27
 
 
 
-- [[Self-Adjoint Linear Map]]
+- [[Self-Adjoint Linear Map and Hermitian or Symmetric Matrix]]
 
 
 

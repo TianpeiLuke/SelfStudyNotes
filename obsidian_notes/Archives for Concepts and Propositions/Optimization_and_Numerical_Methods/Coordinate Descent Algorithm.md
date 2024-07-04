@@ -4,7 +4,7 @@ tags:
   - optimization/algorithm
 keywords: 
 topics:
-  - optimization
+  - optimization/algorithm
 name: 
 date of note: 2024-05-12
 ---
@@ -27,3 +27,4 @@ date of note: 2024-05-12
 
 - [[Numerical Optimization by Nocedal]]
 - [[Nonlinear Programming by Bertsekas]]
+- [[Convex Optimization Algorithms by Bertsekas]] pp 71, 369

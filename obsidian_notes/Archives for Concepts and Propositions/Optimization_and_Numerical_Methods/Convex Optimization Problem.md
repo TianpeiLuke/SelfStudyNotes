@@ -28,7 +28,7 @@ date of note: 2024-05-12
 >
 >Moreover, the **equality constraint functions** $h_{j}(x)$ must be **linear**.
 
-- [[Definitions of General Optimization Problem]]
+- [[Constrained Optimization Problem]]
 
 >[!important]
 >The **domain** of convex optimization problem 
@@ -64,10 +64,12 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
-- [[Definitions of General Optimization Problem]]
+- [[Constrained Optimization Problem]]
+- [[Unconstrained Global Minimization]]
+- [[Unconstrained Local Minimization]]
+- [[Necessary and Sufficient Condition for Local Minimum of Smooth Function]]
 
-
-- [[Convex Analysis by Rockafellar]]
+- [[Convex Analysis by Rockafellar]] pp 273
 - [[Convex Optimization by Boyd]]
 - [[Numerical Optimization by Nocedal]]
 - [[Nonlinear Programming by Bertsekas]]

@@ -25,7 +25,7 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
-- [[Newton Algorithm]]
+- [[Newton Method]]
 
 - [[Numerical Optimization by Nocedal]]
 - [[Nonlinear Programming by Bertsekas]]

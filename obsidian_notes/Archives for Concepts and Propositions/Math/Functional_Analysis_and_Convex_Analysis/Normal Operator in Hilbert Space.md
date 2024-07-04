@@ -47,7 +47,7 @@ date of note: 2024-05-27
 
 
 - [[Normal Transformation]]
-- [[Self-Adjoint Linear Map]]
+- [[Self-Adjoint Linear Map and Hermitian or Symmetric Matrix]]
 
 
 

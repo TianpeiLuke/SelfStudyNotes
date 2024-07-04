@@ -31,6 +31,8 @@ date of note: 2024-05-12
 >- If condition 1. and condition 2. **both hold**, the **infimum and supremum** are necessarily **finite**.
 >
 
+^d8f66a
+
 - [[Convex Optimization Problem]]
 - [[Lagrange Dual Problem]]
 - [[Legendre Transform]]
@@ -44,6 +46,8 @@ date of note: 2024-05-12
 >If $g$ is actually **polyhedral**, $\text{relint}(\text{dom}(g))$ and $\text{relint}(\text{dom}(g^{*}))$ are replaced by $\text{dom}(g)$ and $\text{dom}(g^{*})$ in condition 1. and condition 2., respectively. Also the *closure assumption* is superfluous.
 >
 >Similarly, if $f$ is **polyhedral**. (Thus if both $f$ and $g$ are polyhedral, we can drop $\text{relint}$ operation.)   
+
+^91000d
 
 
 ## Explanation
@@ -92,6 +96,8 @@ date of note: 2024-05-12
 >d^{*} = p^{*}.
 >$$ 
 >If $d^{*} \in \mathbb{R}$ then the **supremum** in dual problem is **attained**.
+
+^0a9d58
 
 - [[Hahn-Banach Theorem Geometric Form and Mazur Theorem]]
 

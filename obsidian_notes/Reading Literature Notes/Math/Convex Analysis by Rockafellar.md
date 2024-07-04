@@ -47,32 +47,32 @@ date of note: 2024-05-07
 
 # Basic Concepts
 
-- [[Concepts and Theorems in Convex Analysis and Convex Optimization#Convex Geometry]]
+- [[Concepts and Theorems in Convex Analysis and Convex Optimization Theory#Convex Geometry]]
 
 # Topological Properties
 
 
-- [[Concepts and Theorems in Convex Analysis and Convex Optimization#Affine Geometry]]
-- [[Concepts and Theorems in Convex Analysis and Convex Optimization#Convex Geometry]]
-- [[Concepts and Theorems in Convex Analysis and Convex Optimization#Convex Function]]
+- [[Concepts and Theorems in Convex Analysis and Convex Optimization Theory#Affine Geometry]]
+- [[Concepts and Theorems in Convex Analysis and Convex Optimization Theory#Convex Geometry]]
+- [[Concepts and Theorems in Convex Analysis and Convex Optimization Theory#Convex Function]]
 
 # Duality Correspondences
 
-- [[Concepts and Theorems in Convex Analysis and Convex Optimization#Duality Correspondence in Convex Space]]
-- [[Concepts and Theorems in Convex Analysis and Convex Optimization#Dual Representation of Convex Function]]
+- [[Concepts and Theorems in Convex Analysis and Convex Optimization Theory#Duality Correspondence in Convex Space]]
+- [[Concepts and Theorems in Convex Analysis and Convex Optimization Theory#Dual Representation of Convex Function]]
 
 # Representation and Inequalities
 
-- [[Concepts and Theorems in Convex Analysis and Convex Optimization#Representation and System of Inequalities]]
+- [[Concepts and Theorems in Convex Analysis and Convex Optimization Theory#Representation and System of Inequalities]]
 
 # Differential Theory
 
-- [[Concepts and Theorems in Convex Analysis and Convex Optimization#Differential Theory]]
+- [[Concepts and Theorems in Convex Analysis and Convex Optimization Theory#Differential Theory]]
 
 
 # Constrained Extremum Problem
 
-- [[Concepts and Theorems in Convex Analysis and Convex Optimization#Convex Optimization Problems]]
+- [[Concepts and Theorems in Convex Analysis and Convex Optimization Theory#Convex Optimization Problems]]
 
 # Saddle-Funtions and Minimax Theory
 

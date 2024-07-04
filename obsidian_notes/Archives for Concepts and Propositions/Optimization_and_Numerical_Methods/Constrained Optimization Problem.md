@@ -13,10 +13,10 @@ date of note: 2024-05-12
 ## Concept Definition
 
 >[!important]
->**Name**: General Optimization Problem
+>**Name**: Constrained Optimization Problem
 
 >[!important] Definition
->A general **optimization problem** is defined as below
+>A general **constrained optimization problem** is defined as below
 >$$
 >\begin{align*}
 >\min_{x \in X}\; & f_{0}(x) \\
@@ -24,6 +24,8 @@ date of note: 2024-05-12
 >&h_{j}(x) = 0, \quad j =1 \,{,}\ldots{,}\, p\\
 \end{align*}
 >$$
+
+^0430c8
 
 >[!important] Definition
 >In above problem:
@@ -44,6 +46,8 @@ date of note: 2024-05-12
 >$$
 >\Omega := \left\{ x\in X:  f_{i}(x) \leq 0, \; i =1 \,{,}\ldots{,}\, m;\quad h_{j}(x) = 0, \; j =1 \,{,}\ldots{,}\, p \right\}
 >$$
+
+^7c9083
 
 
 >[!important] Definition

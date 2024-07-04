@@ -4,9 +4,9 @@ tags:
   - optimization/algorithm
 keywords: 
 topics:
-  - optimization
+  - optimization/algorithm
 name: 
-date of note: 2024-05-12
+date of note: 2024-07-02
 ---
 
 ## Concept Definition
@@ -25,5 +25,8 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
-- [[Numerical Optimization by Nocedal]]
-- [[Nonlinear Programming by Bertsekas]]
+- [[Conjugate Gradient Algorithm Linear]]
+- [[Newton Method]]
+
+
+- [[Numerical Optimization by Nocedal]] pp 165 - 176

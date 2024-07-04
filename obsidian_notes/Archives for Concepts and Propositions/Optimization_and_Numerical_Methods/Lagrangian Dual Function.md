@@ -16,10 +16,10 @@ date of note: 2024-05-12
 >[!important]
 >**Name**: Lagrangian Dual Function
 
-![[Lagrangian Function#^d5f5f8]]
+![[Methods of Lagrangian Multipliers#^d5f5f8]]
 
-- [[Lagrangian Function]]
-- [[Definitions of General Optimization Problem]]
+- [[Methods of Lagrangian Multipliers]]
+- [[Constrained Optimization Problem]]
 
 
 >[!important] Definition
@@ -36,13 +36,13 @@ date of note: 2024-05-12
 ## Explanation
 
 >[!important] Proposition
->The *dual function* yields **lower bound** for the *optimal value* $p^{*}$ of the original problem in [[Definitions of General Optimization Problem]].
+>The *dual function* yields **lower bound** for the *optimal value* $p^{*}$ of the original problem in [[Constrained Optimization Problem]].
 >
 >$$
 >g(\lambda, \nu) \leq p^{*}, \quad \forall \lambda \in \mathbb{R}^m, \nu \in \mathbb{R}^p.
 >$$
 >
->[](Definitions%20of%20General%20Optimization%20Problem.md)-trivial only when $\lambda_{i} \ge 0$ for each $i$ and $(\lambda, \nu) \in \text{dom}(g)$, i.e. $g(\lambda, \nu) > - \infty$.
+>[](Constrained%20Optimization%20Problem.md)-trivial only when $\lambda_{i} \ge 0$ for each $i$ and $(\lambda, \nu) \in \text{dom}(g)$, i.e. $g(\lambda, \nu) > - \infty$.
 >
 >A pair $(\lambda, \nu) \in \text{dom}(g)$ with $\lambda \ge 0$ is called **dual feasible**.
 

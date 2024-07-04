@@ -15,34 +15,68 @@ date of note: 2024-05-12
 
 ### Theory
 
-- [[Concepts and Theorems in Convex Analysis and Convex Optimization]]
+- [[Concepts and Theorems in Convex Analysis and Convex Optimization Theory]]
 
 ### Concepts
 
-- [[Definitions of General Optimization Problem]]
+- [[Constrained Optimization Problem]]
 - [[Unconstrained Local Minimization]]
 - [[Unconstrained Global Minimization]]
 - [[Necessary and Sufficient Condition for Local Minimum of Smooth Function]]
 - [[Stationary Point and Singular Point of Smooth Function]]
 - [[Convex Optimization Problem]]
-- [[Lagrangian Function]]
+- [[Methods of Lagrangian Multipliers]]
 - [[Lagrangian Dual Function]]
 - [[Lagrange Dual Problem]]
 - [[Fenchel Duality Theorem]]
+- [[Saddle Point of Lagrangian Function]]
 - [[Karush-Kuhn-Tucker Optimality Condition]]
 
 
-### Algorithms
+### First-Order Gradient Algorithms
 
+- [[Iterative Descent]]
 - [[Gradient Descent Algorithm]]
-- [[Momentum  Algorithm]]
+- [[Line Search Strategies for Optimal Stepsize]]
+
+### Adaptive Stepsize Gradient Method
+
+- [[Momentum Algorithm]]
 - [[Adam Algorithm]]
-- [[Newton Algorithm]]
-- [[Stochastic Gradient Descent Algorithm]]
-- [[Conjugate Gradient Algorithm]]
-- [[Trust Region Method]]
+
+### Second-Order Gradient Algorithms
+
+- [[Newton Method]]
+- [[Secant Equation and Quasi-Newton Methods]]
 - [[BFGS Algorithm]]
-- [[Alternating Direction Method of Multipliers Algorithm]]
+- [[Limited Memory BFGS]]
+- [[Conjugate Gradient Algorithm Linear]]
+- [[Conjugate Gradient Algorithm Nonlinear]]
+- [[Newton-Conjugate Gradient and Inexact Newton Method]]
+
+### Feasible Direction Method for Constrained Problem
+
+- [[Feasible Direction Method]]
+- [[Gradient Projection Method]]
+- [[Coordinate Descent Algorithm]]
+
+### Trust-Region Method
+
+- [[Trust Region Method]]
+- [[Trust Region Newton-Conjugate Gradient Method]]
+
+### Stochastic Optimization Method
+
+- [[Stochastic Gradient Descent Algorithm]]
+
+
+
+
+
+### Gradient Computation
+
+
+
 
 
 ## Explanation
@@ -59,3 +93,4 @@ date of note: 2024-05-12
 - [[Convex Optimization by Boyd]]
 - [[Numerical Optimization by Nocedal]]
 - [[Nonlinear Programming by Bertsekas]]
+- [[Convex Optimization Algorithms by Bertsekas]]

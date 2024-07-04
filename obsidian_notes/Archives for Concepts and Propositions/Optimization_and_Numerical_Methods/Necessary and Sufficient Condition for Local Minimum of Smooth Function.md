@@ -80,6 +80,7 @@ date of note: 2024-06-29
 
 - [[Convex Set]]
 - [[Unconstrained Global Minimization]]
+- [[Stationary Point and Singular Point of Smooth Function]]
 - [[Convex Optimization Problem]]
 - [[Nonlinear Programming by Bertsekas]] pp 14
 
@@ -113,4 +114,7 @@ date of note: 2024-06-29
 - [[Unconstrained Global Minimization]]
 - [[Stationary Point and Singular Point of Smooth Function]]
 
-- [[Nonlinear Programming by Bertsekas]] 
+- [[Karush-Kuhn-Tucker Optimality Condition]]
+
+- [[Nonlinear Programming by Bertsekas]] pp 13 - 16
+- [[Numerical Optimization by Nocedal]] pp 14 - 16, 325

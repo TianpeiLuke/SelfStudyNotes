@@ -78,3 +78,4 @@ date of note: 2024-05-11
   
 - [[Numerical Optimization by Nocedal]]
 - [[Convex Optimization by Boyd]]
+- [[Convex Optimization Algorithms by Bertsekas]]

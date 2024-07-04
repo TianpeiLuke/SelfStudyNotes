@@ -78,6 +78,8 @@ date of note: 2024-05-20
 > [\gamma] \in \mathcal{V}_{p}\mathcal{M}
 >$$
 
+^673c21
+
 - [[Equivalence Relation]]
 - [[Equivalence Class]]
 - [[Quotient Set]]
@@ -89,6 +91,8 @@ date of note: 2024-05-20
 >$$
 >[\gamma] \mapsto [F \circ \gamma]
 >$$
+
+^de2033
 
 - [[Differential of a Smooth Map at Point]]
 

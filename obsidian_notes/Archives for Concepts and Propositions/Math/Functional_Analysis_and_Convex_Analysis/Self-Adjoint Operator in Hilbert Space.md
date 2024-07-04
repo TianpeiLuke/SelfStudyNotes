@@ -47,7 +47,7 @@ date of note: 2024-05-27
 - [[Hilbert Space]]
 - [[Adjoint of Bounded Operator in Hilbert Space]]
 
-- [[Self-Adjoint Linear Map]]
+- [[Self-Adjoint Linear Map and Hermitian or Symmetric Matrix]]
 
 
 

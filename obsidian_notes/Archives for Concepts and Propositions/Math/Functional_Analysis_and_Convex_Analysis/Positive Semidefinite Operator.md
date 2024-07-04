@@ -59,5 +59,6 @@ date of note: 2024-05-10
 
 - [[Bounded Linear Functional]]
 - [[Hilbert Space]]
+- [[Positive Semidefinite Transformation]]
 
 - Github Note [link](https://github.com/TianpeiLuke/SelfStudyNotes/tree/master/self-study/probability_and_measure_theory)

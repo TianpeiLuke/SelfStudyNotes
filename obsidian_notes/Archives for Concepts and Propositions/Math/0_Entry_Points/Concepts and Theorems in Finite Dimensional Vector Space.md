@@ -74,6 +74,7 @@ date of note: 2024-05-11
 ### Jordan Decomposition
 
 - [[Nilpotent Linear Transformation and Matrix]]
+- [[Krylov Subspace]]
 
 ### Inner Product and Orthogonality
 
@@ -85,9 +86,11 @@ date of note: 2024-05-11
 ### Adjoint of Linear Map
 
 - [[Adjoint of Linear Map]]
-- [[Self-Adjoint Linear Map]]
+- [[Self-Adjoint Linear Map and Hermitian or Symmetric Matrix]]
 - [[Unitary and Orthogonal Transformation]]
 - [[Normal Transformation]]
+- [[Positive Semidefinite Transformation]]
+- [[Conjugate Vector with respect to Positive Definite Transformation]]
 
 ### Spectrum Theorem of Self-Adjoint Linear Map
 

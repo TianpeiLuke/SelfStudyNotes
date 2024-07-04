@@ -49,3 +49,4 @@ date of note: 2024-06-28
 - [[Stationary Point and Singular Point of Smooth Function]]
 
 - [[Nonlinear Programming by Bertsekas]] pp 4
+- [[Numerical Optimization by Nocedal]] pp 12

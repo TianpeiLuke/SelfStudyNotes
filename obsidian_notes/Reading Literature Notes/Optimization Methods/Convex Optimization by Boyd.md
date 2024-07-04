@@ -102,4 +102,5 @@ date of note: 2024-05-07
 - **Optimization Algorithms**
 	- [[Numerical Optimization by Nocedal]]
 	- [[Nonlinear Programming by Bertsekas]]
+	- [[Convex Optimization Algorithms by Bertsekas]]
 

@@ -43,3 +43,4 @@ date of note: 2024-06-28
 - [[Unconstrained Local Minimization]]
 
 - [[Nonlinear Programming by Bertsekas]] pp 4 
+- [[Numerical Optimization by Nocedal]] pp 12

@@ -31,7 +31,7 @@ date of note: 2024-05-17
 >This problem is called the **Lagrange dual problem**.
 
 >[!info]
->WIth respect to dual problem, the problem in [[Definitions of General Optimization Problem]] is called the **primal problem**.
+>WIth respect to dual problem, the problem in [[Constrained Optimization Problem]] is called the **primal problem**.
 
 >[!important] Definition
 >The set of *dual feasible* $(\lambda, \nu)$ is **the dual feasible set** 
@@ -58,11 +58,11 @@ date of note: 2024-05-17
 -----------
 ##  Recommended Notes and References
 
-- [[Lagrangian Function]]
-- [[Definitions of General Optimization Problem]]
+- [[Methods of Lagrangian Multipliers]]
+- [[Constrained Optimization Problem]]
 - [[Theorems of Alternatives]]
 
 - [[Convex Analysis by Rockafellar]]
 - [[Convex Optimization by Boyd]]
 - [[Numerical Optimization by Nocedal]]
-- [[Nonlinear Programming by Bertsekas]]
+- [[Nonlinear Programming by Bertsekas]] pp 487

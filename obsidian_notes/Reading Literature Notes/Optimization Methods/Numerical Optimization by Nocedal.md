@@ -145,3 +145,4 @@ date of note: 2024-05-06
 
 - [[Convex Optimization by Boyd]]
 - [[Nonlinear Programming by Bertsekas]]
+- [[Convex Optimization Algorithms by Bertsekas]]

@@ -87,9 +87,10 @@ date of note: 2024-05-11
 - [[Unconstrained Local Minimization]]
 - [[Unconstrained Global Minimization]]
 - [[Necessary and Sufficient Condition for Local Minimum of Smooth Function]]
-- [[Lagrangian Function]]
+- [[Methods of Lagrangian Multipliers]]
 - [[Lagrangian Dual Function]]
 - [[Lagrange Dual Problem]]
+- [[Saddle Point of Lagrangian Function]]
 - [[Karush-Kuhn-Tucker Optimality Condition]]
 - [[Fenchel Duality Theorem]]
 
@@ -104,6 +105,7 @@ date of note: 2024-05-11
 
 ### Saddle-Point and Minimax Theory
 
+- [[Saddle Point of Lagrangian Function]]
 - [[Minimax Problem and Saddle Point]]
 - [[Saddle Function]]
 - [[Saddle-Point Bifurcation]]
