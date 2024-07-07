@@ -25,10 +25,10 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
-- [[Algorithm Policy Iteration]]
-- [[Algorithm Value Iteration]]
-- [[Algorithm Temporal Difference Learning]]
-- [[Algorithm Q Learning]]
+- [[Policy Iteration Algorithm]]
+- [[Value Iteration]]
+- [[Temporal Difference Learning]]
+- [[Q Learning Algorithm]]
 
 - [[Reinforcement Learning An Introduction by Sutton]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]

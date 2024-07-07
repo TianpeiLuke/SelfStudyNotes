@@ -61,6 +61,7 @@ date of note: 2024-05-06
 - **Machine Learning Theory and Models**
 	- [[Elements of Statistical Learning by Hastie]]
 	- [[Deep Learning by Goodfellow]]
+	- [[Deep Learning Foundations and Concepts by Bishop]]
 	- [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]]
 	- [[Probabilistic Graphical Models by Koller]]
 

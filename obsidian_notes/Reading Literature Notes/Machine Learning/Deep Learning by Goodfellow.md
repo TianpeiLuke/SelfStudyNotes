@@ -60,6 +60,7 @@ date of note: 2024-05-06
 
 - **Deep Learning Models**
 	- [[Probabilistic Machine Learning Advanced Topics by Murphy]]
+	- [[Deep Learning Foundations and Concepts by Bishop]]
 
 
  - **Optimization**

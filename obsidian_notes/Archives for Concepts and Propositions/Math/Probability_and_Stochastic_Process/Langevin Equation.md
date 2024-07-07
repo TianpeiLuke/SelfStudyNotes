@@ -241,3 +241,5 @@ date of note: 2024-06-07
 - [[Wasserstein Space]]
 
 - [[Introduction to Stochastic Differential Equations by Evans]]
+- [[Introduction to Stochastic Calculus by Klebaner]]
+- [[Deep Learning Foundations and Concepts by Bishop]] pp 450 - 454

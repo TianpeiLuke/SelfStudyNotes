@@ -71,7 +71,7 @@ date of note: 2024-06-01
 
 ### Probabilistic Graphical Model
 
-- [[Model Probabilistic Graphical Models]]
+- [[Probabilistic Graphical Models]]
 
 
 ### Gaussian Process

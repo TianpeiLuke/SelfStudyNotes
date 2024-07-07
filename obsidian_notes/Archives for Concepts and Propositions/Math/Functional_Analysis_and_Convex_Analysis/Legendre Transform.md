@@ -84,10 +84,10 @@ date of note: 2024-05-08
 > $$
 > where $A^{*}: V^{*} \to X^{*}$ is the **Adjoint** [[Adjoint of Bounded Operator in Banach Space]]
 > $$
-> \left\langle g , Ax \right\rangle = \left\lan[](Adjoint%20of%20Bounded%20Operator%20in%20Banach%20Space.md)n V^{*}, x \in X
+> \left\langle g , Ax \right\rangle = \left\langle  A^{*}g\,,\, x\right\rangle, \quad x \in X
 > $$
 > and $\left\langle \cdot , \cdot \right\rangle$ is [[Canonical Dual Pairing]].  
-> The function  $Af: V \to \mathbb{R}$ is called the[](Canonical%20Dual%20Pairing.md)ng $A$**
+> The function  $Af: V \to \mathbb{R}$ is called the the **pullback of** $A$
 > $$(Af)(y) : = \inf\left\{f(x):   Ax = y,\; x\in X\right\}.$$ 
 
 

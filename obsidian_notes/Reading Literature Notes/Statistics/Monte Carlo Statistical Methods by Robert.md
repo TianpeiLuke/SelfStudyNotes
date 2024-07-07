@@ -1,15 +1,16 @@
 ---
 tags:
   - book
+  - statistics/monte_carlo
 aliases:
-  - "robertMonteCarloStatistical2004"
-year: 2004 
-name: "Monte Carlo Statistical Methods"
-authors: "Christian Robert, George Casella"
+  - robertMonteCarloStatistical2004
+year: 2004
+name: Monte Carlo Statistical Methods
+authors: Christian Robert, George Casella
 publication: ""
-type: "book"
+type: book
 DOI: ""
-date of note: 2024-05-24 
+date of note: 2024-05-24
 ---
 
 > [!Cite]  
@@ -45,7 +46,9 @@ date of note: 2024-05-24
 
 -----
 ## Reference
-  
+
+- [[Monte Carlo Strategies in Scientific Computing by Liu]]
+
 - [[leeGibbsSamplerCoordinate2022]]
 - [[Probability and Measure by Billingsley]]
 - [[A Probability Path by Resnick]]

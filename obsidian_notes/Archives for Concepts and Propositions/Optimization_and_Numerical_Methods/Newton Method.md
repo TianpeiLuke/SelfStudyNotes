@@ -52,3 +52,4 @@ date of note: 2024-05-12
 - [[Numerical Optimization by Nocedal]]  pp 44
 - [[Nonlinear Programming by Bertsekas]] pp 26, 79, 88
 - [[Convex Optimization Algorithms by Bertsekas]] pp 67
+- [[Deep Learning by Goodfellow]] pp 303

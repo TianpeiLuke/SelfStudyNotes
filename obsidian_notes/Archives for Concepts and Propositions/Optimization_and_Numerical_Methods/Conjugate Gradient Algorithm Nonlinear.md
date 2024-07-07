@@ -88,3 +88,4 @@ date of note: 2024-05-12
 
 - [[Numerical Optimization by Nocedal]] pp 121
 - [[Nonlinear Programming by Bertsekas]]
+- [[Deep Learning by Goodfellow]] pp 307

@@ -58,7 +58,7 @@ date of note: 2024-05-12
 
 - [[Feasible Direction Method]]
 - [[Gradient Projection Method]]
-- [[Coordinate Descent Algorithm]]
+- [[Block Coordinate Descent Algorithm]]
 
 ### Trust-Region Method
 

@@ -28,7 +28,7 @@ date of note: 2024-05-14
 - [[Gibbs measure]]
 - [[Variational Formula for Kullback-Leibler Divergence]]
 - [[Kullback-Leibler Divergence]]
-- [[Model Probabilistic Graphical Models]]
+- [[Probabilistic Graphical Models]]
 
 - [[Maximum Likelihood Estimation]]
 

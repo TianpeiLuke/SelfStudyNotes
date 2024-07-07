@@ -74,4 +74,4 @@ date of note: 2024-05-10
 
 
 
-- [[Model Probabilistic Graphical Models]]
+- [[Probabilistic Graphical Models]]

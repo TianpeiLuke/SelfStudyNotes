@@ -36,7 +36,7 @@ date of note: 2024-05-12
 
 ### Basic Iterative Descent
 
-- [[Iterative Descent]]
+- [[Iterative Descent]] and [[Approximation Method for Optimization]]
 - [[Gradient Descent Algorithm]]
 - [[Line Search Strategies for Optimal Stepsize]]
 
@@ -72,13 +72,17 @@ date of note: 2024-05-12
 ### Proximal Algorithm
 
 - [[Proximal Algorithm]]
-- [[Proximal Gradient Algorithm]]
 - [[Dual Proximal Algorithm]]
 - [[Augmented Lagrangian Function]]
 - [[Augmented Lagrangian Algorithm]]
+- [[Alternating Direction Method of Multipliers Algorithm]]
+
+- [[Proximal Gradient Algorithm]]
+- [[Dual Proximal Gradient Algorithm]]
+
 - [[Proximal Cutting-Plane Algorithm]]
 - [[Bundle Methods]]
-- [[Alternating Direction Method of Multipliers Algorithm]]
+
 
 ### Generalized Proximal Method
 
@@ -99,7 +103,7 @@ date of note: 2024-05-12
 - [[Feasible Direction Method]]
 - [[Conditional Gradient Method and Frank-Wolfe Algorithm]]
 - [[Gradient Projection Method]]
-- [[Coordinate Descent Algorithm]]
+- [[Block Coordinate Descent Algorithm]]
 
 
 ## Explanation

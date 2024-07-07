@@ -29,4 +29,5 @@ date of note: 2024-05-12
 - [[Bregman Projection]]
 
 
-- [[Convex Optimization Algorithms by Bertsekas]] pp 388
+- [[Convex Optimization Algorithms by Bertsekas]] pp 392
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 281 - 283

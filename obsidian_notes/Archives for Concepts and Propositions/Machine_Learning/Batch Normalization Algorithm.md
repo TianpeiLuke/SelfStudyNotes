@@ -24,9 +24,8 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
-- [[Dynamic Programming for Optimal Stopping]]
 
 
-- [[Markov Decision Process]]
-- [[Reinforcement Learning An Introduction by Sutton]]
-
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]]
+- [[Deep Learning by Goodfellow]]
+- [[Deep Learning Foundations and Concepts by Bishop]] pp 227

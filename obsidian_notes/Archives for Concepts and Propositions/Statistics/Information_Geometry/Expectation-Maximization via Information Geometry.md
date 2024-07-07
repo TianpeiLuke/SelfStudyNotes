@@ -23,7 +23,7 @@ date of note: 2024-06-24
 -----------
 ##  Recommended Notes and References
 
-- [[Algorithm Expectation-Maximization]]
+- [[Expectation-Maximization Algorithm]]
 
 - [[Riemannian Metric and Riemannian Manifold]]
 

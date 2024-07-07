@@ -28,5 +28,7 @@ date of note: 2024-05-12
 - [[Bregman Divergence]]
 - [[Bregman Projection]]
 
+- [[Proximal Algorithm]]
+
 
 - [[Convex Optimization Algorithms by Bertsekas]] pp 388

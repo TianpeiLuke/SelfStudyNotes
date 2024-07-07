@@ -92,6 +92,22 @@ date of note: 2024-05-12
 - [[Convex Analysis by Rockafellar]] pp 281
 
 
+## Lagrangian Dual Function and Dual Problem
+
+- [[Lagrangian Dual Function]]
+- [[Lagrange Dual Problem]]
+
+
+## Necessary and Sufficient Conditions
+
+- [[Karush-Kuhn-Tucker Optimality Condition]]
+
+
+## Proximal Algorithm and Augmented Lagrangian
+
+- [[Proximal Algorithm]]
+- [[Dual Proximal Algorithm]]
+- [[Augmented Lagrangian Function]]
 
 
 

@@ -49,7 +49,7 @@ date of note: 2024-05-12
 >  \end{align*}
 >$$
 >
->Thus the **dual proximal problem** can be written as
+>Thus at iteration $k$, the **dual proximal problem** can be written as
 >$$
 >\begin{align*}
 >  \min \;& f^{*}(\lambda) - \left\langle  \lambda\,,\, x_{k} \right\rangle + \frac{c_{k}}{2}\lVert \lambda \rVert^2 \\
@@ -60,6 +60,7 @@ date of note: 2024-05-12
 - [[Legendre Transform]]
 - [[Fenchel Duality Theorem]]
 - [[Lagrange Dual Problem]]
+- [[Convex Optimization Problem]]
 
 >[!info]
 >Let $\lambda_{k+1}$ be the dual optimal solution. Then by KKT theorem, the **necessary and sufficient conditions** for $(x_{k+1}, \lambda_{k+1})$ are
@@ -72,7 +73,7 @@ date of note: 2024-05-12
 >[!important] Definition
 >Let $f: \mathbb{R}^{n} \to (-\infty, \infty]$ be a **closed convex function**.
 >
->The **dual proximal algorithm** solves the *dual problem* of the (primal) *proximal algorithm*. In particular, at each iteration $k$, 
+>The **dual proximal algorithm** solves the *dual proximal problem*. In particular, at each iteration $k$, 
 >
 >- The **dual variable** $\lambda_{k+1}$ solve the following optimization problem
 >$$
@@ -83,8 +84,22 @@ date of note: 2024-05-12
 
 ## Explanation
 
+>[!important]
+>The *dual proximal algorithm* solves the **dual problem** of the **proximal optimization**. 
+>
+>- It first updates *dual variable* $\lambda_{k+1}$ not the primal variable $x_{k+1}$ 
+>- It updates the *primal variable* $x_{k+1}$ based on the equation from *KKT optimality condition* $$\lambda_{k+1} \in \partial f_{1}(x_{k+1})$$
+
+>[!info]
+>- **Proximal algorithm**: $$x_{k+1} = \text{Prox}(x_{k}) \implies x_{k+1} \in \arg\min_{x\in \mathbb{R}^n}\left\{ f(x) + \frac{1}{2c_{k}}\;\lVert x - x_{k} \rVert^2 \right\}.$$
+>- **Dual Proximal algorithm**: $$x_{k+1} = \text{Dual-Prox}(x_{k}) \implies x_{k+1} = x_{k} - c_{k}\;\lambda_{k+1},$$ where $$\lambda_{k+1} \in \arg\min_{\lambda \in \mathbb{R}^n}\left\{ f^{*}(\lambda) - \left\langle  \lambda\,,\, x_{k} \right\rangle + \frac{c_{k}}{2}\lVert \lambda \rVert^2 \right\}$$
+>
 
 
+>[!info]
+>$$
+>\text{proximal operation }(\text{primal problem}) \iff  \text{dual proximal operation }(\text{primal problem})
+>$$
 
 
 

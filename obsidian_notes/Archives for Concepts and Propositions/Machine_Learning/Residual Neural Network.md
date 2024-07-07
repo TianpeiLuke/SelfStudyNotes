@@ -1,7 +1,8 @@
 ---
 tags:
   - concept
-  - machine_learning/algorithms
+  - machine_learning/models
+  - deep_learning/generative_model
 keywords: 
 topics: 
 name: 
@@ -24,10 +25,6 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
-- [[Elements of Statistical Learning by Hastie]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]
-- [[Elements of Information Theory by Cover]]
-- [[Nonlinear Programming by Bertsekas]] pp 554
-
-- [[Kullback-Leibler Divergence]]
-
+- [[Deep Learning by Goodfellow]] pp 368
+- [[Deep Learning Foundations and Concepts by Bishop]]

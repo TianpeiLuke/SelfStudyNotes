@@ -122,7 +122,11 @@ date of note: 2024-06-01
 
 ### Expectation Maximization
 
-- [[Algorithm Expectation-Maximization]]
+- [[Evidence Lower Bound]]
+- [[Majorization-Minimization Algorithm]]
+- [[Expectation-Maximization Algorithm]]
+- [[Evidence Lower Bound for Exponential Family]]
+- [[Expectation-Maximization Algorithm for Exponential Family]]
 
 ### Nonparametric Estimation
 

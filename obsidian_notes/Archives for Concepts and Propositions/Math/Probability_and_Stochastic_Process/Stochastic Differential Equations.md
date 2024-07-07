@@ -216,3 +216,5 @@ date of note: 2024-06-07
 
 - [[Introduction to Stochastic Differential Equations by Evans]]
 - [[Introduction to Stochastic Calculus by Klebaner]]
+- [[Deep Learning Foundations and Concepts by Bishop]] pp 598
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 708, 867, 997

@@ -1,7 +1,7 @@
 ---
 tags:
   - concept
-  - machine_learning/algorithms
+  - machine_learning/models
 keywords: 
 topics: 
 name: 
@@ -24,11 +24,9 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
-- [[Elements of Statistical Learning by Hastie]]
-- [[Probabilistic Machine Learning Advanced Topics by Murphy]]
-- [[Elements of Information Theory by Cover]]
+- [[Probabilistic Graphical Models by Koller]]
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]]
 
-
-
-- [[Kullback-Leibler Divergence]]
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]]
+- [[Deep Learning by Goodfellow]] pp 549
+- [[Deep Learning Foundations and Concepts by Bishop]] pp 325

@@ -33,6 +33,22 @@ date of note: 2024-07-01
 >**Iterative descent** is a **greedy algorithm** since it improve the objective function based on the current information only.
 
 
+## Variants
+
+- [[Gradient Descent Algorithm]]
+- [[Newton Method]]
+- [[Secant Equation and Quasi-Newton Methods]]
+- [[BFGS Algorithm]]
+- [[Conjugate Gradient Algorithm Linear]]
+- [[Conjugate Gradient Algorithm Nonlinear]]
+
+- [[Subgradient Methods]]
+- [[Gradient Projection Method]]
+- [[epsilon-Subgradient Methods]]
+
+- [[Feasible Direction Method]]
+- [[Block Coordinate Descent Algorithm]]
+
 
 
 -----------

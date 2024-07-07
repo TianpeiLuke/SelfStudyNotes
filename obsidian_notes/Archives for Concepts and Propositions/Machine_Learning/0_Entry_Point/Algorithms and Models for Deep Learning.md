@@ -23,37 +23,41 @@ date of note: 2024-06-01
 
 ### Algorithms for Training
 
-- [[Algorithm Back-Propagation]]
-- [[Algorithm Dropout]]
-- [[Algorithm Batch Normalization]]
+- [[Automatic Differentiation]]
+- [[Back-Propagation Algorithm]]
+- [[Dropout Algorithm]]
+- [[Batch Normalization Algorithm]]
 - [[Stochastic Gradient Descent Algorithm]]
-
+- [[Adam Algorithm]]
 
 ### Deep Learning Architecture
 
 #### Discriminative Model
 
-- [[Model Convolutional Neural Network]]
-- [[Model Auto-Encoder]]
-- [[Model Gated Recurrent Neural Network]]
-- [[Model Long-Short Term Memory Network]]
-- [[Model Residual Neural Network]]
-- [[Model Attention Neural Network]]
+- [[Convolutional Neural Network]]
+- [[Auto-Encoder]]
+- [[Gated Recurrent Neural Network]]
+- [[Long-Short Term Memory Network]]
+- [[Residual Neural Network]]
+- [[Attention Neural Network]]
 
 #### Generative Model
 
-- [[Model Variational Auto-Encoder]]
-- [[Model Diffusion Network]]
-- [[Model Generative Adversarial Network]]
+- [[Variational Auto-Encoder]]
+	- [[Evidence Lower Bound]]
+	- [[Variational Inference vs EM Algorithm]]
+
+- [[Diffusion Network]]
+- [[Generative Adversarial Network]]
 
 #### Graph-based
 
-- [[Model Graph Neural Network]]
+- [[Graph Neural Network]]
 
 #### Memorization Network
 
-- [[Model State Space Models]]
-- [[Model Transformer Network]]
+- [[State Space Models]]
+- [[Transformer Network]]
 
 
 
@@ -74,6 +78,7 @@ date of note: 2024-06-01
 
 - [[Deep Learning by Goodfellow]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]
+- [[Deep Learning Foundations and Concepts by Bishop]]
 
 
 

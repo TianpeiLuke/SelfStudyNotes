@@ -39,7 +39,7 @@ date of note: 2024-07-02
 >
 >The rule out unacceptably short steps we introduce a *second requirement*, called the **curvature condition**, which requires $\alpha_{k}$ to satisfy
 >$$
->\left\langle\, d_{k} , \nabla f(x_{k} + \alpha_{k}\,d_{k}) \, \right\rangle \ge c_{2}\, \left\langle d_{l} , \nabla f(x_{k})   \right\rangle
+>\left\langle\, d_{k} , \nabla f(x_{k} + \alpha\,d_{k}) \, \right\rangle \ge c_{2}\, \left\langle d_{l} , \nabla f(x_{k})   \right\rangle
 >$$
 >for some constant $c_{2} \in (c_{1}, 1)$ where $c_{1}$ is chosen from the *Armijo condition*.
 
@@ -50,7 +50,7 @@ date of note: 2024-07-02
 >$$
 >\begin{align*}
 >f(x_{k} + \alpha\, d_{k}) &\le f(x_{k}) + c_{1}\,\alpha\, \left\langle d_{k} , \nabla f(x_{k}) \right\rangle\;\\[5pt]
->\left\langle\, d_{k} , \nabla f(x_{k} + \alpha_{k}\,d_{k}) \, \right\rangle &\ge c_{2}\, \left\langle d_{l} , \nabla f(x_{k})   \right\rangle
+>\left\langle\, d_{k} , \nabla f(x_{k} + \alpha\,d_{k}) \, \right\rangle &\ge c_{2}\, \left\langle d_{l} , \nabla f(x_{k})   \right\rangle
 >\end{align*}
 >$$
 >with $0 < c_{1} < c_{2} < 1.$
@@ -59,11 +59,11 @@ date of note: 2024-07-02
 >[!important] Definition
 >We can also modify the *curvature condition* to force $\alpha_{k}$ to lie in at least a broad neighborhood of a *local minimizer* or *stationary point* of $\phi(\alpha) := f(x + \alpha d)$.
 >
->The **strong Wolfe conditions** requires $\alpha_{k}$ to satisfy
+>The **strong Wolfe conditions** requires $\alpha$ to satisfy
 >$$
 >\begin{align*}
 >f(x_{k} + \alpha\, d_{k}) &\le f(x_{k}) + c_{1}\,\alpha\, \left\langle d_{k} , \nabla f(x_{k}) \right\rangle\;\\[5pt]
->|\left\langle\, d_{k} , \nabla f(x_{k} + \alpha_{k}\,d_{k}) \, \right\rangle| &\ge c_{2}\, |\left\langle d_{l} , \nabla f(x_{k})   \right\rangle|
+>|\left\langle\, d_{k} , \nabla f(x_{k} + \alpha\,d_{k}) \, \right\rangle| &\ge c_{2}\, |\left\langle d_{l} , \nabla f(x_{k})   \right\rangle|
 >\end{align*}
 >$$
 >with $0 < c_{1} < c_{2} < 1.$
@@ -82,14 +82,14 @@ date of note: 2024-07-02
 >$$
 >\begin{align*}
 >f(x_{k} + \alpha\, d_{k}) &\le f(x_{k}) + c_{1}\,\alpha\, \left\langle d_{k} , \nabla f(x_{k}) \right\rangle\;\\[5pt]
->\left\langle\, d_{k} , \nabla f(x_{k} + \alpha_{k}\,d_{k}) \, \right\rangle &\ge c_{2}\, \left\langle d_{l} , \nabla f(x_{k})   \right\rangle
+>\left\langle\, d_{k} , \nabla f(x_{k} + \alpha\,d_{k}) \, \right\rangle &\ge c_{2}\, \left\langle d_{l} , \nabla f(x_{k})   \right\rangle
 >\end{align*}
 >$$
 >and the **strong Wolfe conditions**
 >$$
 >\begin{align*}
 >f(x_{k} + \alpha\, d_{k}) &\le f(x_{k}) + c_{1}\,\alpha\, \left\langle d_{k} , \nabla f(x_{k}) \right\rangle\;\\[5pt]
->|\left\langle\, d_{k} , \nabla f(x_{k} + \alpha_{k}\,d_{k}) \, \right\rangle| &\ge c_{2}\, |\left\langle d_{l} , \nabla f(x_{k})   \right\rangle|.
+>|\left\langle\, d_{k} , \nabla f(x_{k} + \alpha\,d_{k}) \, \right\rangle| &\ge c_{2}\, |\left\langle d_{l} , \nabla f(x_{k})   \right\rangle|.
 >\end{align*}
 >$$
 

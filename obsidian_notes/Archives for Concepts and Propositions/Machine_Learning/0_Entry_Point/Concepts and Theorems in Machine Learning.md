@@ -23,19 +23,58 @@ date of note: 2024-06-01
 
 ### Representations and Models
 
-
+- [[Regularization in Optimization]]
 
 ### Optimization Algorithm
 
+- [[Theory and Algorithms for Nonlinear Optimization]]
+- [[Theory and Algorithms for Convex Optimization]]
 
 
-### Inference and Learning Algorithm
+### Supervised Learning Algorithms
+
+#### Boosting
+
+- [[Gradient Boosting Trees]]
+
+#### Support Vector Machine and Kernel Methods
+
+- [[Reproducing Kernel Hilbert Space]]
+- [[Representation of Evaluational Functional in RKHS]]
+- [[Reproducing Kernel of RKHS]]
+- [[Supper Vector Machine]]
+
+#### Expectation-Maximization 
+
+- [[Evidence Lower Bound]]
+- [[Expectation-Maximization Algorithm]]
+- [[Evidence Lower Bound for Exponential Family]]
+- [[Expectation-Maximization Algorithm for Exponential Family]]
+- [[Variational Inference vs EM Algorithm]]
+
+#### Probabilistic Graphical Models
+
+- [[Probabilistic Graphical Models]]
+- [[Exponential Family of Distributions]]
+- [[Message Passing Algorithm]]
+
+#### Deep Learning
+
+- [[Algorithms and Models for Deep Learning]]
 
 
+### Unsupervised Learning Algorithm
+
+- 
+
+### Reinforcement Learning Algorithm
+
+- [[Algorithms and Models for Reinforcement Learning]]
 
 ### Evaluation Metric
 
-
+- [[Recall and Precision at k]]
+- [[Perplexity]]
 
 
 ### Learning Theory
@@ -60,6 +99,7 @@ date of note: 2024-06-01
 - [[Probabilistic Graphical Models by Koller]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]]
+
 
 
 

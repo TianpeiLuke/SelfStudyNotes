@@ -75,6 +75,23 @@ date of note: 2024-05-17
  
 - [[Legendre Transform]]
 
+>[!important] Proposition
+>- **Chain Rule**: Let $F$ be the composition of a convex function $h: \mathbb{R}^{m} \to \mathbb{R}^{n}$ and a matrix $A\in \mathbb{R}^{m \times n}$, $$F(x) = h(Ax), \quad \forall x\in \mathbb{R}^{n}.$$ Then $$\partial F(x) = A^T\,\partial h(A\,x) := \left\{ A^T\,g: g \in \partial h(Ax) \right\} $$
+>- **Additivity**: Let $F$ be the sum of convex functions $f_{i}: \mathbb{R}^{n} \to \mathbb{R}$, $i=1 \,{,}\ldots{,}\,m$, $$F(x) = \sum_{i=1}^{m}f_{i}(x), \quad x\in \mathbb{R}^{n}.$$ Then $$\partial F(x) = \partial f_{1}(x) \,{+}\ldots{+}\, \partial f_{m}(x), \quad x\in \mathbb{R}^{n}.$$
+
+- [[Convex Optimization Algorithms by Bertsekas]] pp 143
+
+## Characterization 
+
+>[!important] Proposition
+>Let $\mathcal{Z} \subset \mathbb{R}^{m}$ be a **compact set** and $\phi: \mathbb{R}^{n} \times \mathbb{R}^{m} \to \mathbb{R}$ be a function such that 
+>- $\phi(\cdot, z)$ is **convex** and **differentiable** for each $z\in \mathcal{Z}$. And
+>- $\nabla_{x}  \phi(x, \cdot)$ is **continuous** on $\mathcal{Z}$ for each $x \in \mathbb{R}^{n}$
+>
+>Define $$f(x) := \sup_{z \in \mathcal{Z}}\phi(x, z).$$ Then $$\partial f(x) = \text{conv}\left\{ \nabla_{x} \phi(x, z):\;\; z \in \mathcal{Z}(x) \right\}, \quad x\in \mathbb{R}^{n},$$ where $$\mathcal{Z}(x) := \left\{ z^{*}: \phi(x, z^{*}) = \max_{z \in \mathcal{Z}}\phi(x, z) \right\}. $$
+
+- [[Convex Hull]]
+- [[Convex Optimization Algorithms by Bertsekas]] pp 146
 
 
 ## Relation with Gradient
@@ -113,5 +130,7 @@ date of note: 2024-05-17
 - [[Differential of a Smooth Map at Point]]
 - [[Gradient of Smooth Map]]
 
+- [[Subgradient Methods]]
 
 - [[Convex Analysis by Rockafellar]]
+- [[Convex Optimization Algorithms by Bertsekas]] pp 135

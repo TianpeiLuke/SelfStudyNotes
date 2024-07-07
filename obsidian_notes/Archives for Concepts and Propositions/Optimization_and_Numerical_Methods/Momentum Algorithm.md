@@ -30,3 +30,5 @@ date of note: 2024-05-12
 
 - [[Deep Learning by Goodfellow]]
 - [[Convex Optimization Algorithms by Bertsekas]] pp 63
+- [[Deep Learning Foundations and Concepts by Bishop]]
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]]

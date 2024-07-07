@@ -29,4 +29,6 @@ date of note: 2024-05-12
 
 - [[Numerical Optimization by Nocedal]]
 - [[Nonlinear Programming by Bertsekas]]
-- [[Deep Learning by Goodfellow]] pp 286
+- [[Deep Learning by Goodfellow]] pp 147, 286
+- [[Deep Learning Foundations and Concepts by Bishop]] pp 214
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 265

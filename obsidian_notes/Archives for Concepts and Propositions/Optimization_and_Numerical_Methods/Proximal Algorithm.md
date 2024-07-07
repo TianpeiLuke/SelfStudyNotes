@@ -28,11 +28,28 @@ date of note: 2024-05-12
 
 ^258191
 
-
+- [[Convex Optimization Problem]]
 
 ## Explanation
 
 
+## Proximal Type Algorithms
+
+- [[Dual Proximal Algorithm]]
+- [[Augmented Lagrangian Algorithm]]
+- [[Proximal Gradient Algorithm]]
+- [[Dual Proximal Gradient Algorithm]]
+- [[Alternating Direction Method of Multipliers Algorithm]]
+
+>[!quote]
+>Thus all three *proximal-type methods*, 
+>- **proximal gradient**, 
+>- **ADMM**, and 
+>- **augmented Lagrangian**, 
+>
+>have *similarities*, and **relative strengths** and **weaknesses**. The choice between them hinges largely on the given problem's structure.
+>
+>-- [[Convex Optimization Algorithms by Bertsekas]] pp 337
 
 
 

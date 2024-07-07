@@ -33,7 +33,7 @@ date of note: 2024-06-24
 
 - [[Exponential Family of Distributions]]
 
-- [[Model Probabilistic Graphical Models]]
+- [[Probabilistic Graphical Models]]
 
 
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]]

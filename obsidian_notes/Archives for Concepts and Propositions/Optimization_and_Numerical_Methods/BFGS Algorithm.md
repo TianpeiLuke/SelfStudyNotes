@@ -30,6 +30,8 @@ date of note: 2024-05-12
 >	   $$H_{k+1} = \left(I - \rho_{k}\;s_{k}\,y_{k}^{T}\right)\,H_{k}\,\left(I - \rho_{k}\;y_{k}\,s_{k}^{T}\right) + \rho_{k}s_{k}\,s_{k}^T$$ where the *weight* is computed via  $$\rho_{k} = \frac{1}{y_{k}^T\,s_{k}}.$$
 >	5. update index $k \leftarrow k+ 1.$   
 
+^954dd0
+
 - [[Secant Equation and Quasi-Newton Methods]]
 - [[Gradient Descent Algorithm]]
 - [[Newton Method]]
