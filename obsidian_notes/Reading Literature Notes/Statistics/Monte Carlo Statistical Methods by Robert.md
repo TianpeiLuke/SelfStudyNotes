@@ -1,7 +1,7 @@
 ---
 tags:
   - book
-  - statistics/monte_carlo
+  - statistics/monte_carlo_simulation
 aliases:
   - robertMonteCarloStatistical2004
 year: 2004

@@ -35,11 +35,18 @@ date of note: 2024-06-01
 #### Discriminative Model
 
 - [[Convolutional Neural Network]]
+
+#### Representation Learning
+
 - [[Auto-Encoder]]
+- [[Contrastive Learning]]
+
+#### Sequential Model
+
 - [[Gated Recurrent Neural Network]]
 - [[Long-Short Term Memory Network]]
 - [[Residual Neural Network]]
-- [[Attention Neural Network]]
+- [[State Space Models]]
 
 #### Generative Model
 
@@ -56,8 +63,10 @@ date of note: 2024-06-01
 
 #### Memorization Network
 
-- [[State Space Models]]
+- [[Attention Neural Network]]
 - [[Transformer Network]]
+
+
 
 
 

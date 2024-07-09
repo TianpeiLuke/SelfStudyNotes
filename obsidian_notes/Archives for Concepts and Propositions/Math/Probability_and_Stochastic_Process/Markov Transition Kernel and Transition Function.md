@@ -28,6 +28,8 @@ date of note: 2024-04-18
 > 1. $\forall x \in \mathcal{X}$,    $K(x, \cdot)$  is a **probability measure**;
 > 2. $\forall A \in \mathcal{B}(\mathcal{X})$,    $K(\cdot, A)$ is a **measurable** function.
 
+^3d05e1
+
 - $\mathcal{B}(\mathcal{X})$ is the Borel $\sigma$-Algebra. [[Borel sigma Field]]
 - [[Probability Space]]
 - [[Measurable Function]]

@@ -90,6 +90,23 @@ date of note: 2024-07-05
 
 >[!important]
 >In **variational inference algorithm**, there are several additional **assumptions**:
+>- Due to complexity of $p_{\theta}(x| z)$, we **cannot compute the posterior density function** $p(\cdot | x, \hat{\theta}_{k})$ directly.
+>- assume that the variational density is from a parametric family as well $$q \in \left\{ q_{\psi}: \psi \in \Psi \right\} $$
+>
+>The **objective** of **variational auto-encoder (VAE)** is to *maximize* the ELBO with respect to parameter pair $(\theta, \psi)$ *jointly*
+>$$
+>\max_{\theta \in \theta, \psi \in \Psi}\sum_{i=1}^{n}\mathcal{L}(q_{\psi}, \theta; X_{i})
+>$$
+>where
+>- $$q_{\psi} := q(z| x, \psi), \quad \forall x\in \mathcal{X}$$ as a function of $x$ is called an **encoder**
+>- $$p(x | z, \theta), \quad \forall z\in \mathcal{Z}$$ as a function of $z$ is called a **decoder**.
+>  
+>The VAE trained two networks (encoder and decoder networks) **jointly**.
+
+- [[Expectation-Maximization Algorithm#EM Algorithm as Coordinate Ascent Algorithm]]
+- [[Parametric Models]]
+- [[Variational Auto-Encoder]]q, >[!important]
+>In **variational inference algorithm**, there are several additional **assumptions**:
 >- Due to complexity of $p_{\theta}(x| z)$, we **cannot obtain the closed form** of **posterior density function** $p(\cdot | x, \theta)$.
 >- assume that the variational density is from a parametric family as well $$q \in \left\{ q_{\psi}: \psi \in \Psi \right\} $$
 >

@@ -201,6 +201,8 @@ date of note: 2024-06-05
 >It can be shown that the shift-transformation $T$ above is **$\mathcal{P}$-measure preserving** called the **Markov shift**.
 
 
+
+
 ## Ergodic Transformation
 
 ![[Ergodic Transformation#^41fb4e]]
@@ -213,6 +215,8 @@ date of note: 2024-06-05
 
 -----------
 ##  Recommended Notes and References
+
+- [[Stationary Markov Chain via Measure Preserving Map]]
 
 - [[Vector Space over a Field]]
 - [[Measurable Function]]

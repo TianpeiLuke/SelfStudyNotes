@@ -33,6 +33,7 @@ date of note: 2024-05-12
 - [[Simplex Method for Linear Optimization]]
 - [[Interior Point Method for Linear Optimization]]
 - [[Interior Point Method for Convex Optimization]]
+- [[Semidefinite Programming]]
 
 ### Basic Iterative Descent
 

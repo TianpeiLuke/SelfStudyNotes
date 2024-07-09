@@ -25,7 +25,7 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 - [[Markov Chain and Markov Process]]
-- [[Message Passing Algorithm]]
+- [[Sum-Product Variable Elimination]]
 
 - [[Probabilistic Graphical Models by Koller]]
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]]

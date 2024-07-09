@@ -3,7 +3,7 @@ tags:
   - book
   - machine_learning/models
   - machine_learning/theory
-  - machine_learning/boosting
+  - machine_learning/models
 aliases:
   - schapireBoostingFoundationsAlgorithms2012
 year: 2012

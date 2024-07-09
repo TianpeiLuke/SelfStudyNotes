@@ -21,20 +21,16 @@ date of note: 2024-06-01
 
 ## List of Concepts
 
-### Representations and Models
+### Supervised Learning Models and Algorithms
 
-- [[Regularization in Optimization]]
+#### Nearest Neighbor Classification
 
-### Optimization Algorithm
-
-- [[Theory and Algorithms for Nonlinear Optimization]]
-- [[Theory and Algorithms for Convex Optimization]]
-
-
-### Supervised Learning Algorithms
+- [[k Nearest Neighbor Classification]]
+- [[k Nearest Neighbor Estimation]]
 
 #### Boosting
 
+- [[AdaBoost Method]]
 - [[Gradient Boosting Trees]]
 
 #### Support Vector Machine and Kernel Methods
@@ -42,7 +38,7 @@ date of note: 2024-06-01
 - [[Reproducing Kernel Hilbert Space]]
 - [[Representation of Evaluational Functional in RKHS]]
 - [[Reproducing Kernel of RKHS]]
-- [[Supper Vector Machine]]
+- [[Support Vector Machine]]
 
 #### Expectation-Maximization 
 
@@ -54,32 +50,48 @@ date of note: 2024-06-01
 
 #### Probabilistic Graphical Models
 
-- [[Probabilistic Graphical Models]]
-- [[Exponential Family of Distributions]]
-- [[Message Passing Algorithm]]
+- [[Models and Algorithms for Probabilistic Graphical Models]]
 
 #### Deep Learning
 
-- [[Algorithms and Models for Deep Learning]]
+- [[Models and Algorithms for Deep Learning]]
 
 
-### Unsupervised Learning Algorithm
+### Unsupervised Learning Models and Algorithms
 
-- 
+- [[k-Means Clustering]]
+- [[Principle Component Analysis]]
 
-### Reinforcement Learning Algorithm
+### Reinforcement Learning Models and Algorithms
 
-- [[Algorithms and Models for Reinforcement Learning]]
+- [[Models and Algorithms for Reinforcement Learning]]
 
 ### Evaluation Metric
 
 - [[Recall and Precision at k]]
 - [[Perplexity]]
 
+### Learning Paradigms and Strategies
 
-### Learning Theory
+- [[Multi-Modal Learning]]
+- [[Transfer Learning]]
+- [[Meta Learning]]
+- [[Self-Supervised Learning]]
+
+### Statistical Learning Theory
 
 - [[Concepts and Theorems in Statistical Learning Theory]]
+
+### Representations
+
+- [[Representation Learning]]
+- [[Regularization in Optimization]]
+
+### Optimization
+
+- [[Theory and Algorithms for Nonlinear Optimization]]
+- [[Theory and Algorithms for Convex Optimization]]
+
 
 
 ## Explanation

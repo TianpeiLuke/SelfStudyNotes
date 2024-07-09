@@ -50,7 +50,7 @@ date of note: 2024-07-05
 >- **expected (complete) log-likelihood function** with respect to $q\in \mathscr{P}_{Z}$ $$\mathbb{E}_{ q }\left[\log p_{\theta}(x, Z)\right]$$
 >- **entropy of variational density** $q$, $$ H(q) := \mathbb{E}_{ q }\left[- \log q(Z)\right] $$
 >
->In [[Probabilistic Graphical Models by Koller]] pp 881, the ELBO is called an **energy functional**.
+>In [[Probabilistic Graphical Models by Koller]] pp 385, 881, the ELBO is called an **energy functional**.
 
 ## ELBO as Lower Bound of Marginalized Likelihood
 

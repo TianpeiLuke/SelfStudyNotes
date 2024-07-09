@@ -81,6 +81,8 @@ date of note: 2024-06-07
 >$$
 >This means that the **increment** of process is **independent** from the *past events*, i.e. the process is a **Markov process**. 
 
+^6457d4
+
 - [[Markov Chain and Markov Process]]
 
 >[!important]

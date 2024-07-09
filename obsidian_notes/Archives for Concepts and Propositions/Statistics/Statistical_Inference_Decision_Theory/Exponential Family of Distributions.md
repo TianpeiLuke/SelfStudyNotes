@@ -308,6 +308,6 @@ date of note: 2024-06-24
 - [[Mathematical Statistics by Shao]] pp 96 - 99
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]]
 - [[Methods of Information Geometry by Amari]]
-- [[Probabilistic Graphical Models by Koller]]
+- [[Probabilistic Graphical Models by Koller]] pp 261 - 284
 - [[Convex Analysis by Rockafellar]]
 - [[Convex Optimization by Boyd]]

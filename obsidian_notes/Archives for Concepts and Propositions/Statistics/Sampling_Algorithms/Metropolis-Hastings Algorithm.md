@@ -1,7 +1,7 @@
 ---
 tags:
   - concept
-  - statistics/monte_carlo
+  - statistics/monte_carlo_simulation
 keywords: 
 topics:
   - statistics/monte_carlo
@@ -40,5 +40,6 @@ date of note: 2024-07-04
 - [[Deep Learning by Goodfellow]]
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 429
 
+- [[Probabilistic Graphical Models by Koller]]
 
 - Wikipedia [Metropolis-Hastings_algorithm](https://en.wikipedia.org/wiki/Metropolis%E2%80%93Hastings_algorithm)

@@ -81,7 +81,7 @@ date of note: 2024-06-01
 
 ### Artificial Neural Network
 
-- [[Algorithms and Models for Deep Learning]]
+- [[Models and Algorithms for Deep Learning]]
 
 
 ## Explanation

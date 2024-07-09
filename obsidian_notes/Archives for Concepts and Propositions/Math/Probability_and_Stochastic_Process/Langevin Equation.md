@@ -31,6 +31,8 @@ date of note: 2024-06-07
 >
 >The stochastic differential above is called **the Langevin equation**. 
 
+^b373a8
+
 - [[Stochastic Differential Equations]]
 - [[Stochastic Differential]]
 - [[Itô Stochastic Integration]]

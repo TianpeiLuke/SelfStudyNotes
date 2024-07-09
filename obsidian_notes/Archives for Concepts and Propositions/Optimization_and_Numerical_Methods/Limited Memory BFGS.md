@@ -84,3 +84,4 @@ date of note: 2024-07-02
 - [[Numerical Optimization by Nocedal]] pp 177
 - [[Nonlinear Programming by Bertsekas]] 
 - [[Deep Learning by Goodfellow]] pp 307 - 308
+- [[Probabilistic Graphical Models by Koller]] pp 991

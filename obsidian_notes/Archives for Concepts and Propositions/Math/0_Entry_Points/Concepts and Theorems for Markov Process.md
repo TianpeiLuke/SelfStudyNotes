@@ -6,7 +6,7 @@ tags:
   - math/probability
   - math/functional_analysis
   - statistics/concentration_inequality
-  - sampling/mcmc
+  - statistics/monte_carlo_simulation
 keywords: 
 topics:
   - stochastic_process
@@ -80,11 +80,15 @@ date of note: 2024-05-30
 ### Ergodic Theorems
 
 - [[Measure Preserving Transformation in Markov Chain]]
+- [[Stationary Markov Chain via Measure Preserving Map]]
 - [[Mixing of Measure Preserving Transformation]]
 - [[Ergodic Theorem]]
 - [[Ergodic Theorem for Positive Recurrent Markov Process]]
 - [[Geometric Ergodicity]]
 - [[Geometric Ergodic Theorem]]
+
+
+
 
 ### Time-Reversible Markov Chain
 

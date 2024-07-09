@@ -1,7 +1,7 @@
 ---
 tags:
   - book
-  - statistics/monte_carlo
+  - statistics/monte_carlo_simulation
 aliases:
   - liuMonteCarloStrategies2008
 year: 2008

@@ -1,7 +1,7 @@
 ---
 tags:
   - concept
-  - machine_learning/pac
+  - machine_learning/theory
 keywords:
   - Probably_Approximately_Correct
 topics:
