@@ -32,6 +32,8 @@ date of note: 2024-06-24
 >- If, In addition,  $\hat{\theta} := \hat{\theta}(X)  \in \overline{\Theta}$ is a *Borel function* of sample $X$  *$\mu$-almost everywhere*, then $\hat{\theta}$ is called a **maximum likelihood estimator (MLE)** of $\theta$. 
 >- For any measurable function $g: \Theta \to \mathbb{R}^{p}$ where $p \le d$, if $\hat{\theta}$ is a *maximum likelihood estimator (MLE)* of $\theta$, then $$\hat{\nu} = g(\hat{\theta})$$ is an *MLE* of $\nu = g(\theta).$
 
+^646b70
+
 - [[Likelihood Function]]
 - [[Point Estimator]]
 - [[Measure Space and Countably Additive Measure]]

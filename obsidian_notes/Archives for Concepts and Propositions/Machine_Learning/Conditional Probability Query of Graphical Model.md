@@ -2,6 +2,7 @@
 tags:
   - concept
   - machine_learning/strategy
+  - probabilistic_graphical_models/theory
 keywords: 
 topics:
   - machine_learning_strategy

@@ -91,6 +91,7 @@ date of note: 2024-05-06
 - [[Wedge Product]]
 - [[Grassmann Algebra]]
 - [[Interior Multiplication]]
+- [[Coordinate Representation of Interior Multiplication]]
 
 
 ### Differential Forms (Alternating Tensor Field)

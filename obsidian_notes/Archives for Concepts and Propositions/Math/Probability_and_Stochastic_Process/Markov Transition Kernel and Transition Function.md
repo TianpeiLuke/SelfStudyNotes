@@ -175,3 +175,4 @@ The above definition of Transition Kernel can be used to define the **conditiona
 
 - [[Monte Carlo Statistical Methods by Robert]]
 - [[Introduction to Stochastic Calculus by Klebaner]]
+- Wikipedia [Transition_kernel](https://en.wikipedia.org/wiki/Transition_kernel)

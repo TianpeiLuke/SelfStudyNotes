@@ -2,7 +2,8 @@
 tags:
   - concept
   - machine_learning/models
-  - deep_learning/generative_model
+  - deep_learning/generative_models
+  - boosting
 keywords: 
 topics: 
 name: 

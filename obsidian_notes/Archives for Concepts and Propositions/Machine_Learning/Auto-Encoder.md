@@ -2,7 +2,8 @@
 tags:
   - concept
   - machine_learning/models
-  - deep_learning/generative_model
+  - deep_learning/generative_models
+  - deep_learning/representation_learning
 keywords: 
 topics: 
 name: 

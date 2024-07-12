@@ -16,7 +16,7 @@ date of note: 2024-05-27
 >**Name**: Normal Transformation
 
 >[!important] Definition
->A linear transformation $A$ on a finite dimensional inner product space $V$  is said to be **normal**  if it *commutes with its adjoint*
+>A linear transformation $A$ on a finite dimensional inner product space $V$  is said to be **normal**  if it *commutes with its adjoint (conjugate transpose)*
 >$$
 > \begin{align*}
 > A^{*}A = A A^{*} 
@@ -59,5 +59,5 @@ date of note: 2024-05-27
 
 - Github Note [link](https://github.com/TianpeiLuke/SelfStudyNotes/tree/master/self-study/probability_and_measure_theory)
 
-- [[Matrix Analysis by Horn]]
+- [[Matrix Analysis by Horn]] pp 131
 - [[Finite Dimensional Vector Spaces by Halmos]]

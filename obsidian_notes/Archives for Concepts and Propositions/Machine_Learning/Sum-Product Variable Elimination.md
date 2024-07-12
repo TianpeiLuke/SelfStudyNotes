@@ -2,9 +2,14 @@
 tags:
   - concept
   - machine_learning/algorithms
-keywords: 
-topics: 
-name: 
+  - probabilistic_graphical_models/algorithm
+keywords:
+  - sum_product
+  - probabilistic_graphical_model
+topics:
+  - machine_learning_models
+  - probabilistic_graphical_model
+name: Sum-Product Variable Elimination
 date of note: 2024-05-12
 ---
 

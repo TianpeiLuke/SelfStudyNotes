@@ -31,7 +31,7 @@ date of note: 2024-05-06
 
 - [[Semi-Continuous Function]]
 - [[Epigraph or Supergraph of Function]]
-- [[Hypograph of Subgraph of Function]]
+- [[Hypograph or Subgraph of Function]]
 
 
 ### Limit Points and Closure

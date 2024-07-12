@@ -3,6 +3,7 @@ tags:
   - concept
   - machine_learning/theory
   - machine_learning/models
+  - deep_learning/discriminative_models
 keywords:
   - evidence_lower_bound
 topics:

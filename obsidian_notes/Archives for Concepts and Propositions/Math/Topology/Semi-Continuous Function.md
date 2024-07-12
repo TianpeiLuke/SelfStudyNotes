@@ -79,7 +79,7 @@ date of note: 2024-05-15
 >SImilarly, a function is **upper semi-continuous** if and only if its **hypograph is closed**.
 
 
-- [[Hypograph of Subgraph of Function]]
+- [[Hypograph or Subgraph of Function]]
 
 >[!info]
 >Combine conclusion for both **lower semi-continuous** and **upper semi-continuous** we have the [[Closed Graph Theorem]]

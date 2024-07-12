@@ -33,11 +33,11 @@ date of note: 2024-07-04
 
 - [[Markov Chain Monte Carlo Methods]]
 
-- [[All of Statistics A Concise Course by Wasserman]]
+- [[All of Statistics A Concise Course by Wasserman]] pp 411 - 415
 - [[Monte Carlo Statistical Methods by Robert]]
-- [[Monte Carlo Strategies in Scientific Computing by Liu]]
+- [[Monte Carlo Strategies in Scientific Computing by Liu]] pp 129 - 151
 
-- [[Probabilistic Graphical Models by Koller]]
+- [[Probabilistic Graphical Models by Koller]] pp 506
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 477 - 537
 - [[Deep Learning by Goodfellow]] pp 590
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 429

@@ -2,6 +2,7 @@
 tags:
   - concept
   - machine_learning/models
+  - probabilistic_graphical_models/models
 keywords: 
 topics: 
 name: 

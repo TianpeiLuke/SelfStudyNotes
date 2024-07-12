@@ -216,7 +216,7 @@ date of note: 2024-06-05
 -----------
 ##  Recommended Notes and References
 
-- [[Stationary Markov Chain via Measure Preserving Map]]
+- [[Markov Kernel with Invariant Measure via Measure Preserving Map]]
 
 - [[Vector Space over a Field]]
 - [[Measurable Function]]

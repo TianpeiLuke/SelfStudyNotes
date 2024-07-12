@@ -29,3 +29,4 @@ date of note: 2024-06-19
 
 
 - [[Monte Carlo Statistical Methods by Robert]]
+- [[Probabilistic Graphical Models by Koller]] pp 521

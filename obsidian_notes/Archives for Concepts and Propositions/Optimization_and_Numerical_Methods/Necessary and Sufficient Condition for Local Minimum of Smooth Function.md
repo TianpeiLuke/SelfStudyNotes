@@ -37,6 +37,7 @@ date of note: 2024-06-29
 
 
 - [[Gradient of Smooth Map]]
+- [[Positive Semidefinite Transformation]]
 - [[Nonlinear Programming by Bertsekas]] pp 13
 
 >[!info] Proof
@@ -100,6 +101,8 @@ date of note: 2024-06-29
 >f(x) \ge f(x^{*}) + \frac{\lambda}{2}\lVert x - x^{*} \rVert^2, \quad \forall x\in B_{\epsilon}(x^{*}). 
 >$$
 
+- [[Positive Semidefinite Transformation]]
+- [[Positive Semidefinite Operator]]
 
 ## Explanation
 

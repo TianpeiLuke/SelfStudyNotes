@@ -34,4 +34,4 @@ date of note: 2024-07-04
 - [[Monte Carlo Statistical Methods by Robert]]
 - [[Monte Carlo Strategies in Scientific Computing by Liu]]
 
-- [[Probabilistic Graphical Models by Koller]]
+- [[Probabilistic Graphical Models by Koller]] pp 524

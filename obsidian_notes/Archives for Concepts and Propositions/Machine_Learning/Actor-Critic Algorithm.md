@@ -2,6 +2,7 @@
 tags:
   - concept
   - machine_learning/algorithms
+  - reinforcement_learning
 keywords: 
 topics: 
 name: 

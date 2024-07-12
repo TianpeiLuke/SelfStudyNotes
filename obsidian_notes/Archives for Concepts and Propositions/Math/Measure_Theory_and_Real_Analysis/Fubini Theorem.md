@@ -127,7 +127,7 @@ date of note: 2024-05-25
 >$$  
 >Similarly if we replace $$\set{(x, t)\in X \times \mathbb{R}: 0 \le t\le f(x)}$$ by $$\set{(x, t)\in X \times \mathbb{R}: 0 \le t < f(x)}.$$
 
-- [[Hypograph of Subgraph of Function]]
+- [[Hypograph or Subgraph of Function]]
 
 
 >[!important] Corollary (Distribution Formula)

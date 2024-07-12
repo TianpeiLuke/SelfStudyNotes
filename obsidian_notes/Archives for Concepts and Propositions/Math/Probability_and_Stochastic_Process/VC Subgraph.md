@@ -22,14 +22,14 @@ date of note: 2024-05-31
 >[!important]
 >**Name**: VC Subgraph
 
-![[Hypograph of Subgraph of Function#^8d272c]]
+![[Hypograph or Subgraph of Function#^8d272c]]
 
 >[!important] Definition
 >A class of functions $\mathcal{F}$ is **VC subgraph** if the class of *subgraphs* $\text{hyp}(f)$ for $f\in \mathcal{F}$, 
 >$$\mathscr{F} = \set{\text{hyp}(f) : f \in \mathcal{F}},$$
 > is *VC class*.
 
-- [[Hypograph of Subgraph of Function]]
+- [[Hypograph or Subgraph of Function]]
 - [[Vapnik-Chervonenkis Class]]
 - [[Intersection of Set Family to Set]]
 - [[Shattering of Set by Set Family]]
@@ -51,7 +51,7 @@ date of note: 2024-05-31
 -----------
 ##  Recommended Notes and References
 
-- [[Hypograph of Subgraph of Function]]
+- [[Hypograph or Subgraph of Function]]
 - [[Vapnik-Chervonenkis Class]]
 - [[Intersection of Set Family to Set]]
 - [[Shattering of Set by Set Family]]

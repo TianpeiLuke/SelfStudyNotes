@@ -29,6 +29,8 @@ date of note: 2024-06-27
 >- If $I(\eta)$ is the **Fisher information** for the **natural parameter** $\eta$, then the **variance-covariance matrix** of *statistic* $T$ is $$\text{Cov}(T, T) = I(\eta).$$
 >- If  $I(\mu)$ is the **Fisher information** for the **mean parameter** $\mu$, $$\mu :=  \mathbb{E}_{ f_{\theta} }\left[\,T(X)\,\right]$$ Then the **variance-covariance matrix** of *statistic* $T$ is $$\text{Cov}(T, T) = \left[  I(\mu) \right]^{-1}.$$
 
+^713d66
+
 - [[Exponential Family of Distributions]]
 - [[Mathematical Statistics by Shao]] pp 171
 

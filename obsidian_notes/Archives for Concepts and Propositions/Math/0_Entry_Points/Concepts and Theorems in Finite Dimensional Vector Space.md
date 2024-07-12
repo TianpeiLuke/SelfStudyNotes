@@ -64,6 +64,7 @@ date of note: 2024-05-11
 - [[Symmetric Product]]
 - [[Alternating Tensor]]
 - [[Determinant of Linear Transformation]]
+- [[Laplace Expansion Theorem]]
 
 ### Characteristic Polynomial
 

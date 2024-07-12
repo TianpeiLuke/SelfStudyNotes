@@ -2,7 +2,7 @@
 tags:
   - concept
   - statistics/monte_carlo_simulation
-  - math/differential_equation
+  - math/differential_equation_simulation
 keywords:
   - hamiltonian_monte_carlo
 topics:
@@ -114,7 +114,7 @@ date of note: 2024-07-04
 
 [1]: Mangoubi, O., & Vishnoi, N. (2018). Dimensionally tight bounds for second-order Hamiltonian Monte Carlo. _Advances in neural information processing systems_, _31_
 
->[!important] Definition (HMC Leapfrog with multiple first-order steps)
+>[!important] Definition (HMC Leapfrog with multiple steps and MH rejection)
 >The **leapfrog method**  for **Hamiltonian Monte Carlo (HMC)** *method* works as follows
 >- Initialized with starting point $X_{0} \in \mathbb{R}^d$, 
 >- Set $T >0$, $N \in \mathbb{N}$, $\eta >0$
@@ -135,6 +135,7 @@ date of note: 2024-07-04
 >			- *accept* new sample $$X_{k} = \hat{q}$$ 
 >- Output $(X_{1} \,{,}\ldots{,}\,X_{N})$
 
+- [[Metropolis-Hastings Algorithm]]
 - Chen, T., Fox, E., & Guestrin, C. (2014, June). Stochastic gradient hamiltonian monte carlo. In _International conference on machine learning_ (pp. 1683-1691). PMLR.
 
 ### Discretizing HMC (Second-Order Approximation)
@@ -164,12 +165,16 @@ date of note: 2024-07-04
 > \hat{x}_{\eta}(x, p) &= x + \eta\frac{d}{dt}\hat{x}_{t}(x, p) + \frac{1}{2}\eta^2\, \frac{d^2}{dt^2}\hat{x}_{t}(x, p)   \\
 > &= x + \eta \, \Lambda^{-1}\, p - \frac{1}{2}\eta^2\,\Lambda^{-1}\,\nabla f(x) \\
 > \hat{p}_{\eta}(x, p) &= p + \eta\frac{d}{dt}\hat{p}_{t}(x, p) + \frac{1}{2}\eta^2\, \frac{d^2}{dt^2}\hat{p}_{t}(x, p)   \\
-> &= p - \eta \nabla f(x) - \frac{1}{2} \eta^2\,\nabla^2 f(x)\,p 
+> &= p - \eta \nabla f(x) - \frac{1}{2} \eta^2\,\nabla^2 f(x)\,\Lambda^{-1}\,p 
 >\end{align*}
+>$$
+>Note
+>$$
+>\frac{d}{dt}  \left( \nabla f(x) \right) = \nabla^2 f(x)^{T} \frac{d}{dt} x = \nabla^2 f(x)\, \Lambda^{-1} p
 >$$
 >here we apply the approximate
 >$$
->\nabla^2 f(x)\,p \approx \frac{\nabla f(\hat{x}_{\eta}) - \nabla f(x)}{\eta} 
+>\nabla^2 f(x)\,\Lambda^{-1} p \approx \frac{\nabla f(\hat{x}_{\eta}) - \nabla f(x)}{\eta} 
 >$$
 >thus
 >$$
@@ -245,6 +250,27 @@ date of note: 2024-07-04
 
 - Vishnoi, N. K. (2021). _An Introduction to Hamiltonian Monte Carlo Method for Sampling_ (arXiv:2108.12107). arXiv. [[vishnoiIntroductionHamiltonianMonte2021]] pp 5
 
+## Markov Chain Monte Carlo
+
+>[!important]
+>The **Hamiltonian Monte Carlo** method is a special case of **Markov Chain Monte Carlo (MCMC)**.
+>
+>In particular, since the **Hamiltonian flow** $\theta_{T}: \mathbb{R}^{2n} \to \mathbb{R}^{2n}$ for fixed $t$ is both 
+>- *measure preserving* due to above theorem and 
+>- *bijective* due to *time-reversibility*,
+>  
+>the corresponding Markov chain has *transition kernel* as
+>$$
+> K((q,p), A) = \int_{\Gamma}\,\mathbb{1}\left\{  \theta_{T}(q,p) \in A\right\} d\nu\left( \theta_{T} \right).
+>$$
+>where $\theta_{T} = \theta_{T}(X_{0}, \xi)$ is assumed to be random given the initial momentum $\xi$ is random.
+>
+>This kernel has invariant measure $\pi(x,p)$ as described in the theorem above.
+
+- [[Markov Chain Monte Carlo Methods]]
+- [[Markov Kernel with Invariant Measure via Measure Preserving Map]]
+
+
 
 ## Convergence for Strongly Convex and Smooth Potentials
 
@@ -261,6 +287,7 @@ date of note: 2024-07-04
 >$$
 >\mathcal{W}_{2}\left(\nu_{k}, \pi\right) \le \epsilon.
 >$$
+>where $\mathcal{W}_{2}$ is the *$2$-Wasserstein distance*.
 
 
 - [[Convex Function]]
@@ -324,12 +351,13 @@ date of note: 2024-07-04
 - [[Hamiltonian Function in Mechanic]]
 - [[Hamiltonian Systems of Differential Equations]]
 - [[Phase Space of Hamiltonian Systems of Differential Equations]]
-- [[Stationary Markov Chain via Measure Preserving Map]]
+- [[Markov Kernel with Invariant Measure via Measure Preserving Map]]
 
 - [[Exponential Family of Distributions]]
 
-- [[Monte Carlo Strategies in Scientific Computing by Liu]]
-- Brooks, S., Gelman, A., Jones, G., & Meng, X.-L. (Eds.). (2011). _Handbook of Markov Chain Monte Carlo_ (1st edition). Chapman and Hall/CRC. pp 113
+- [[Markov Chain Monte Carlo Methods]]
+- [[Monte Carlo Strategies in Scientific Computing by Liu]] pp 183 - 204
+- Neal. 2011. “[MCMC Using Hamiltonian Dynamics](http://arxiv.org/abs/1206.1901).” In _Handbook for Markov Chain Monte Carlo_.
 - Betancourt, M. (2018). _A Conceptual Introduction to Hamiltonian Monte Carlo_ (Methodology (Stat.ME) arXiv:1701.02434). arXiv. [https://doi.org/10.48550/arXiv.1701.02434](https://doi.org/10.48550/arXiv.1701.02434)
 - Betancourt, M., Byrne, S., Livingstone, S., & Girolami, M. (2017). The geometric foundations of Hamiltonian Monte Carlo. _Bernoulli_, _23_(4A), 2257–2298. [https://doi.org/10.3150/16-BEJ810](https://doi.org/10.3150/16-BEJ810)
 - Vishnoi, N. K. (2021). _An Introduction to Hamiltonian Monte Carlo Method for Sampling_ (arXiv:2108.12107). arXiv. [https://doi.org/10.48550/arXiv.2108.12107](https://doi.org/10.48550/arXiv.2108.12107) [[vishnoiIntroductionHamiltonianMonte2021]]

@@ -166,6 +166,8 @@ date of note: 2024-06-24
 >$$
 >as the set of all **realizable mean parameters**.
 
+^056e11
+
 ![[Exponential Family and Convex Duality#^14b84c]]
 
 - [[Exponential Family and Convex Duality]]

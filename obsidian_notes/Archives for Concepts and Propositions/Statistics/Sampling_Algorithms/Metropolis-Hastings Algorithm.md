@@ -16,9 +16,22 @@ date of note: 2024-07-04
 
 
 
+- [[Markov Transition Kernel and Transition Function]]
+- [[Detailed Balance Equation]]
+- [[Accept-Reject Sampling]]
+
+
 ## Explanation
 
 
+## Reversible Chain
+
+- [[Time-Reversible Markov Chain]]
+
+
+## Gibbs Sampling
+
+- [[Gibbs Sampling]]
 
 
 
@@ -27,12 +40,12 @@ date of note: 2024-07-04
 
 
 - [[Markov Chain and Markov Process]]
-- [[Detailed Balance Equation]]
-- [[Time-Reversible Markov Chain]]
 
-- [[Gibbs Sampling]]
 
-- [[All of Statistics A Concise Course by Wasserman]]
+
+
+
+- [[All of Statistics A Concise Course by Wasserman]] pp 411
 - [[Monte Carlo Statistical Methods by Robert]]
 - [[Monte Carlo Strategies in Scientific Computing by Liu]]
 
@@ -40,6 +53,6 @@ date of note: 2024-07-04
 - [[Deep Learning by Goodfellow]]
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 429
 
-- [[Probabilistic Graphical Models by Koller]]
+- [[Probabilistic Graphical Models by Koller]] pp 516
 
 - Wikipedia [Metropolis-Hastings_algorithm](https://en.wikipedia.org/wiki/Metropolis%E2%80%93Hastings_algorithm)

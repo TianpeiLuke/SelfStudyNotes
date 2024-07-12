@@ -2,6 +2,7 @@
 tags:
   - concept
   - machine_learning/algorithms
+  - deep_learning/algorithms
 keywords: 
 topics: 
 name: 

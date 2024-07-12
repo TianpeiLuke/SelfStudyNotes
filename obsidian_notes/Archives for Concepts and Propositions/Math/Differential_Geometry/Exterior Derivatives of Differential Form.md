@@ -61,6 +61,7 @@ date of note: 2024-05-19
 ^06d7a8
 
 - [[Differential of a Smooth Map at Point]]
+- [[Interior Multiplication]]
 
 >[!info]
 >The **exterior differentiation** defines the *differential* of $k$-form. 

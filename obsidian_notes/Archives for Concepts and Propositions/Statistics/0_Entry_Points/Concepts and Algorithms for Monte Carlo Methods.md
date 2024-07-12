@@ -2,7 +2,7 @@
 tags:
   - entry_point
   - concept
-  - statistics/monte_carlo_simulation
+  - statistics/monte_carlo_simulation_simulation
   - statistics/inference
 keywords: 
 topics:
@@ -17,13 +17,15 @@ date of note: 2024-07-04
 
 ### Fundamental of Monte Carlo Methods
 
-- [[Rejection Sampling]]
+- [[Monte Carlo and Applications]]
+- [[Fundamental Theorem of Simulation]]
+- [[Accept-Reject Sampling]]
 - [[Importance Sampling]]
 
 ### Sequential Monte Carlo
 
 - [[Sequential Importance Sampling]]
-- [[Particle Filtering]]
+- [[Particle Filter]]
 
 ### Markov Chain Monte Carlo
 
@@ -33,10 +35,11 @@ date of note: 2024-07-04
 - [[Metropolis-Hastings Algorithm]]
 - [[Gibbs Sampling]]
 
-### Monte Carlo using Dynamic System
+### Monte Carlo of Dynamic System
 
 - [[Hamiltonian Monte Carlo]]
 - [[Langevin Dynamics and Langevin Sampling]]
+- [[Stochastic Gradient Hamiltonian Monte Carlo]]
 
 ### Stochastic Optimization
 
@@ -46,6 +49,9 @@ date of note: 2024-07-04
 - [[Momentum Algorithm]]
 - [[Adam Algorithm]]
 
+
+
+- [[Langevin Dynamics and Langevin Sampling]]
 
 
 

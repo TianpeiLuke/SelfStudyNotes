@@ -2,6 +2,7 @@
 tags:
   - concept
   - machine_learning/strategy
+  - deep_learning/representation_learning
 keywords: 
 topics:
   - machine_learning_strategy
