@@ -52,3 +52,4 @@ date of note: 2024-05-23
 - [[Asymptotic Statistics by A W van der Vaart]]
 - [[All of Statistics A Concise Course by Wasserman]]
 - [[Testing Statistical Hypotheses by Lehmann]]
+- [[Statistical Decision Theory by Berger]]

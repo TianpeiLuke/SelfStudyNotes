@@ -20,7 +20,7 @@ date of note: 2024-06-08
 
 >[!quote] 
 >The **loss function** plays a crucial role in **statistical decision theory**.
->- *Loss functions* can be obtained from a **utility analysis** (Berger, 1985), but in many problems they have to be determined *subjectively.* 
+>- *Loss functions* can be obtained from a **utility analysis** (Berger, 1985  [[Statistical Decision Theory by Berger]]), but in many problems they have to be determined *subjectively.* 
 > 
 > In **statistical inference**, we make an inference *about* the **unknown population** based on 
 > - the *sample* $X$ and
@@ -80,7 +80,9 @@ date of note: 2024-06-08
 
 - [[Point Estimator]]
 
+
 - [[All of Statistics A Concise Course by Wasserman]]
 - [[Mathematical Statistics by Shao]] pp 122
+- [[Statistical Decision Theory by Berger]]
 - [[Mathematical Foundations of Infinite Dimensional Statistical Models by Gine]] pp 1
 - [[Probabilistic Graphical Models by Koller]]

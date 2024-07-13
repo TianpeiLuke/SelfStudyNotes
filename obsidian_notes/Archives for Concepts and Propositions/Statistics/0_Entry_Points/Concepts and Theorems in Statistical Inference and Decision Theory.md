@@ -139,6 +139,11 @@ date of note: 2024-06-01
 - [[Jackknife Estimator of Variance]]
 - [[Bootstrap Method]]
 
+### Sequential Decision Problem
+
+- [[Sequential Decision Process]]
+- [[Markov Decision Process]]
+
 
 ## Hypothesis Testing
 

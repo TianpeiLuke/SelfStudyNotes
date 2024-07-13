@@ -55,3 +55,6 @@ date of note: 2024-05-07
 
 ---
 ## Reference
+
+- [[Markov Decision Processes by Puterman]]
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]]

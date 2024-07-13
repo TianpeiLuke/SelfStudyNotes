@@ -229,4 +229,5 @@ date of note: 2024-06-08
 
 - [[All of Statistics A Concise Course by Wasserman]] pp 195
 - [[Mathematical Statistics by Shao]] pp 113 - 116
+- [[]]
 

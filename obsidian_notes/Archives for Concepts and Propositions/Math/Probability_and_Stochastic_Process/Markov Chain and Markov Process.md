@@ -53,6 +53,8 @@ date of note: 2024-04-18
 >
 >Then the collection $\left\{\Omega, \mathscr{F}, \mathscr{F}_{t}^s, X_{t}, \mathcal{P}_{x,s}  \right\}$ is called a **Markov process** corresponding to *transition function* $p$.
 
+^793949
+
 - [[Filtration]]
 - [[Stochastic Process]]
 - [[Markov Transition Kernel and Transition Function]]

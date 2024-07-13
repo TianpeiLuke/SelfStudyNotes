@@ -22,6 +22,7 @@ date of note: 2024-06-01
 
 ### Markov Decision Process
 
+- [[Sequential Decision Process]]
 - [[Concepts and Theorems for Markov Process]]
 - [[Markov Decision Process]]
 
@@ -59,6 +60,6 @@ date of note: 2024-06-01
 
 - [[Understanding Machine Learning by Shalev-Shwartz]]
 - [[Reinforcement Learning An Introduction by Sutton]]
-
+- [[Markov Decision Processes by Puterman]]
 
 

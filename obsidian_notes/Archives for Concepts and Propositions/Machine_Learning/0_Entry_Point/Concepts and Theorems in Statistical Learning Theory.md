@@ -83,6 +83,11 @@ date of note: 2024-06-01
 
 - [[Models and Algorithms for Deep Learning]]
 
+### Reinforcement Learning
+
+- [[Markov Decision Process]]
+- [[Models and Algorithms for Reinforcement Learning]]
+
 
 ## Explanation
 
