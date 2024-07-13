@@ -61,6 +61,7 @@ date of note: 2024-05-12
 - [[Convex Optimization Problem]]
 - [[Convex Analysis by Rockafellar]] pp 275
 
+
 >[!info]
 >For any feasible solution $x$ to $(P)$, we have 
 >$$
@@ -253,3 +254,4 @@ date of note: 2024-05-12
 - [[Convex Optimization by Boyd]]
 - [[Numerical Optimization by Nocedal]]  pp 321
 - [[Nonlinear Programming by Bertsekas]] pp 315 - 321
+- [[Optimization by Vector Space Methods by Luenberger]] pp 249 - 250

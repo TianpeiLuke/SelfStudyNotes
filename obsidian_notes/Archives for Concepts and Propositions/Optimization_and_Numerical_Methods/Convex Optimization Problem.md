@@ -28,6 +28,8 @@ date of note: 2024-05-12
 >
 >Moreover, the **equality constraint functions** $h_{j}(x)$ must be **linear**.
 
+^bc3f9c
+
 - [[Constrained Optimization Problem]]
 
 >[!important]
@@ -57,8 +59,11 @@ date of note: 2024-05-12
 >$$
 
 
+## Bifunction Representation
 
+![[Bifunction and Convex Bifunction#^64bafd]]
 
+- [[Bifunction and Convex Bifunction]]
 
 
 -----------

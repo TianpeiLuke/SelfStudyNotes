@@ -146,3 +146,4 @@ date of note: 2024-05-12
 - [[Numerical Optimization by Nocedal]] pp 103
 - [[Nonlinear Programming by Bertsekas]] pp 130
 - [[Deep Learning by Goodfellow]] pp 304
+- [[Optimization by Vector Space Methods by Luenberger]] pp 291 - 294

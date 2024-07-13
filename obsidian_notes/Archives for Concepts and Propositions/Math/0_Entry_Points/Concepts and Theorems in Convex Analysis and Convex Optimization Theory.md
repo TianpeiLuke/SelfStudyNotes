@@ -41,7 +41,11 @@ date of note: 2024-05-11
 - [[Perspective Function]]
 - [[Jensen Inequality]]
 
+- [[Proper Convex Function]]
 - [[Semi-Continuous Function]]
+- [[Closed Convex Function and Closure Operation]]
+
+
 - [[Convex Differentiation Theorem]]
 - [[Quasi-Convex Function]]	
 - [[Log-Concave and Log-Convex Function]]
@@ -80,7 +84,7 @@ date of note: 2024-05-11
 ### Convex Optimization Problems
 
 - [[Convex Optimization Problem]]
-- [[Convex Bifunctions]]
+- [[Bifunction and Convex Bifunction]]
 - [[Locally Convex Space]]
 - [[Compactness]]
 

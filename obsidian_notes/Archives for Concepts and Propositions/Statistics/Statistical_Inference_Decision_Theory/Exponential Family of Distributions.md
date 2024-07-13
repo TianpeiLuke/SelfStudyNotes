@@ -259,7 +259,7 @@ date of note: 2024-06-24
 
 ^c37891
 
-![[Fisher Information for Exponential Family#^5c1c5c]]
+![[Fisher Information for Exponential Family#^713d66]]
 
 
 - [[Fisher Information]]

@@ -53,7 +53,7 @@ date of note: 2024-05-12
 - [[Augmented Lagrangian Function]]
 - [[Proximal Algorithm]]
 - [[Proximal Gradient Algorithm]]
-- [[Convex Function]]
+- [[Closed Convex Function and Closure Operation]]
 - [[Convex Optimization Problem]]
 
 ## Explanation
@@ -104,6 +104,7 @@ date of note: 2024-05-12
 >- **minimizing augmented Lagrangian w.r.t. $z$**: $$z_{k+1} \in \arg\min_{z \in \mathbb{R}^m} L_{c}(x_{k+1}, z, \lambda_{k})$$
 >- **updating multipliers** $$\lambda_{k+1} = \lambda_{k} + c\,\left(A\,x_{k+1} + B z_{k+1} - c\right) $$
 
+- [[Closed Convex Function and Closure Operation]]
 ### Dual Proximal Gradient 
 
 ![[Dual Proximal Gradient Algorithm#^627a6c]]

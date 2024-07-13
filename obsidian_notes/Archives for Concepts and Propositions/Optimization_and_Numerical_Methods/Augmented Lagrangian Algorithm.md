@@ -40,7 +40,7 @@ date of note: 2024-05-12
 - [[Convex Optimization Problem]]
 - [[Legendre Transform]]
 - [[Lagrangian Dual Function]]
-
+- [[Closed Convex Function and Closure Operation]]
 
 ## Explanation
 
@@ -81,6 +81,9 @@ date of note: 2024-05-12
 >- the optimal value of primal problem $p(0) = p^{*}$ is *finite*.
 >  
 >Note that $p$ and $q$ are convex conjugate to each other and $$\left(p(u)\right)^{*} = -q(-\lambda)$$
+
+- [[Closed Convex Function and Closure Operation]]
+- [[Proper Convex Function]]
 
 >[!important] Primal Proximal of Dual Problem
 >The **augmented Lagrangian method** can be seen as solving the *dual problem* using **primal proximal algorithm**, i.e. at iteration $k$, the new dual variables solves 

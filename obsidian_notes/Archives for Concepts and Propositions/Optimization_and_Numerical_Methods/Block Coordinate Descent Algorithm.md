@@ -37,7 +37,8 @@ date of note: 2024-05-12
 >Thus, at each iteration, the cost is minimized *with respect to each of the block components* $x^i$, taken in **cyclic order**, with each minimization incorporating the results of the *preceding minimizations*.
 
 - [[Convex Optimization Problem]]
-
+- [[Closed Convex Function and Closure Operation]]
+- [[Proper Convex Function]]
 
 ## Explanation
 

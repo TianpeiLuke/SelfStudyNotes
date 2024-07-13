@@ -43,6 +43,7 @@ date of note: 2024-05-12
 
 ^d5f5f8
 
+- [[Bifunction and Convex Bifunction]]
 
 >[!important] Definition
 >- The variables $\lambda_{i}$ are called **the Lagrangian multiplier** *associated with* $i$-th inequality constraint $f_{i}(x) \leq 0$.
@@ -125,3 +126,4 @@ date of note: 2024-05-12
 - [[Convex Optimization by Boyd]]
 - [[Numerical Optimization by Nocedal]]
 - [[Nonlinear Programming by Bertsekas]]
+- [[Optimization by Vector Space Methods by Luenberger]] pp 216

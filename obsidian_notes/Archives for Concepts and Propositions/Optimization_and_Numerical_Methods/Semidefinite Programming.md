@@ -37,7 +37,7 @@ date of note: 2024-07-07
 
 
 - [[Convex Optimization Problem]]
-- [[Interior Point Method for Convex Optimization]]
+- [[Interior Point Method or Barrier Method for Convex Optimization]]
 
 
 

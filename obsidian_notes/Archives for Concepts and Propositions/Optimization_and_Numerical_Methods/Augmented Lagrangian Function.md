@@ -36,7 +36,8 @@ date of note: 2024-05-12
 - [[Convex Optimization Problem]]
 - [[Legendre Transform]]
 - [[Lagrangian Dual Function]]
-
+- [[Closed Convex Function and Closure Operation]]
+- [[Proper Convex Function]]
 
 
 ## Explanation
@@ -68,6 +69,7 @@ date of note: 2024-05-12
 >\end{align*}
 >$$
 
+- [[Bifunction and Convex Bifunction]]
 ## Strict Minimizer
 
 >[!important]

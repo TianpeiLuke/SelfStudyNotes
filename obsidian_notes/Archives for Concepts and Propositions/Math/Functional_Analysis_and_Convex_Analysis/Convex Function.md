@@ -29,6 +29,7 @@ date of note: 2024-05-15
 >\text{dom}(f) := \{ x: f(x) < + \infty \}
 >$$
 
+- [[Proper Convex Function]]
 
 >[!important] Definition
 >A function $f$ is **strictly convex** if *strict inequality* holds above whenever $x \neq y$ and $0 < \theta < 1$.

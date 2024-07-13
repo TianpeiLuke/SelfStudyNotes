@@ -24,6 +24,8 @@ date of note: 2024-07-04
 >- **Accept** $Y = X$ If $$U \le \frac{f(X)}{M\,g(X)}$$
 >- Otherwise return $1$.
 
+^c0ddd8
+
 - [[Fundamental Theorem of Simulation]]
 
 
@@ -39,7 +41,7 @@ date of note: 2024-07-04
 ##  Recommended Notes and References
 
 - [[Fundamental Theorem of Simulation]]
-
+- [[Importance Sampling]]
 
 
 - [[All of Statistics A Concise Course by Wasserman]] pp 404

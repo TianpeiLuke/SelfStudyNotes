@@ -34,6 +34,7 @@ date of note: 2024-05-12
 ^d8f66a
 
 - [[Convex Optimization Problem]]
+- [[Proper Convex Function]]
 - [[Lagrange Dual Problem]]
 - [[Legendre Transform]]
 - [[Convex Conjugate Function]]
@@ -127,5 +128,6 @@ date of note: 2024-05-12
 
 - [[Convex Analysis by Rockafellar]]
 - [[Convex Optimization by Boyd]]
+- [[Optimization by Vector Space Methods by Luenberger]] pp 201 - 202
 - [[Numerical Optimization by Nocedal]]
 - [[Nonlinear Programming by Bertsekas]]

@@ -35,6 +35,8 @@ date of note: 2024-07-05
 >$$
 >where $\nu_{Z}$ is the common dominating base measure on $\mathcal{Z}$ for both $q(z)$ and $p(z)$.
 
+^c74005
+
 - [[Parametric Models]]
 - [[Probability Density Function of Random Variable]]
 - [[Conditional Probability]]

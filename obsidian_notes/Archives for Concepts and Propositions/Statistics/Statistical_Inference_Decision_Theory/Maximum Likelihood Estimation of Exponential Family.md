@@ -140,6 +140,6 @@ date of note: 2024-06-24
 
 
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]]
-- [[Elements of Information Theory by Cover]]
+- [[Mathematical Statistics by Shao]] pp 98 - 99
 - [[All of Statistics A Concise Course by Wasserman]]
 

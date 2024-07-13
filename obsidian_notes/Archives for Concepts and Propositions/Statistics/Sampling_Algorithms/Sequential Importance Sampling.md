@@ -30,6 +30,10 @@ date of note: 2024-07-04
 
 - [[Probability Density Function of Random Variable]]
 
+>[!info]
+>It is **nontrivial** to find a good trial distribution $g$ in high dimensional space. One of the most useful strategies in these problems is to *build up* the *trial density* **sequentially**.
+
+
 >[!important] Definition
 >The task is to *generate* a list of samples $(X_{1} \,{,}\ldots{,}\,X_{n})$ *sequentially* from some *target joint distribution* $p$. 
 >
@@ -43,7 +47,15 @@ date of note: 2024-07-04
 
 ## Explanation
 
-
+>[!important]
+>The **benefits** for using *sequential importance sampling* include:
+> 
+>- We can make use of the **characteristics** of **local factor** $p(x_{t}| x_{t-1} \,{,}\ldots{,}\, x_{1})$ in *target density* when designing trial density $g(x_{t}| x_{t-1} \,{,}\ldots{,}\, x_{1})$. An example is the **local Markov property** $$p(x_{t}| x_{t-1} \,{,}\ldots{,}\, x_{1}) = p(x_{t}|x_{t-1})$$ for probabilistic graphical models. By sequential sampling, we break the complex problem into smaller pieces.
+> 
+>- We can *stop* generating further components of $x$ if the **partial weights** $w_{k}$ that **derived** from the sequentially generated the *partial samples* $(x_{1} \,{,}\ldots{,}\, x_{k})$ are **too small**. We can also **reject sample** with *small weight* and *restart again*. This way we avoid wasting effort generating samples with little  effect on final estimation. This rejection process would introduce additional bias which should be corrected. [[Monte Carlo Statistical Methods by Robert]]
+> 
+>- The SIS algorithm is *attractive* since we can use a sequence of auxiliary distributions to construct more **efficient sampling algorithm**.
+>
 
 
 

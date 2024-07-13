@@ -32,6 +32,7 @@ date of note: 2024-05-12
 
 - [[Polyhedral Approximation for Optimization]]
 - [[Proximal Cutting-Plane Algorithm]]
+- [[Closed Convex Function and Closure Operation]]
 
 
 
