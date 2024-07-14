@@ -47,8 +47,50 @@ date of note: 2024-05-12
 - [[Parametric Models]]
 - [[Statistical Decision Theory by Berger]] pp 282
 
+### Loss for Sequential Decision
 
-### Decision Rules
+![[Statistical Decision Problem#^e4b559]]
+
+
+>[!important] Definition
+>If $T$ *observations* are taken *sequentially*, at which point *action* $a \in \mathcal{A}$ is taken, then the **loss** $L$  when $\theta$ is the *true* state of nature will be denoted as $L(\theta, a, T)$ and the **loss function** is defined as  
+>$$
+>L: \Theta \times \mathcal{A} \times T \to [0, \infty)
+>$$
+>and 
+>- is *Borel* on $(\mathcal{A}_{s}, \mathscr{F}_{\mathcal{A}}^s)$ for each $\theta\in \Theta$ and $s \in T$.
+
+
+>[!example]
+>A special case is for i.i.d samples $X_{1:t}$, where 
+>$$
+>L(\theta, a, t) = \sum_{s=1}^{t}L(\theta, a)
+>$$  
+
+
+### Sequential Decision Procedure
+
+>[!important] Definition
+>A **(nonrandomized) sequential decision procedure** is denoted as 
+>$$
+>d = (\tau, \delta)
+>$$
+>- $\tau$ is called the **stopping rule**, consists of functions $$\tau_{0}, \; \tau_{1}\left(x_{1}\right),\; \tau_{2}(x_{1:2}),\; \ldots$$ where $\tau_{i}(x_{1:i})$ is the *probability* (either $0$ or $1$ for deterministic procedure) of *stopping sampling* and making decisions after observing $x_{1:t} := (x_{1} \,{,}\ldots{,}\,x_{t})$
+>- $\delta$ is called the **decision rule** and consists of a *sequence of decision functions* $$\delta_{0},\; \delta_{1}(x_{1}),\; \delta_{2}(x_{1:2}) \,{,}\ldots{,}\,$$ where $\delta_{s}(x_{1:s})$ is the *action* to be taken if sampling has stopped after observing $x_{1:s}$
+
+
+- [[Statistical Decision Theory by Berger]] pp 290
+
+>[!info]
+>An example of stopping rule is **stopping time**. A choice of stopping time is the **sample size**
+>$$
+>N(X_{1:\infty}) = \min\{n\ge 0:   \tau_{n}(X_{1:n}) = 1\}
+>$$
+
+- [[Stopping Time of Markov Chain]]
+- [[Stopping Time of Filtration]]
+
+### Markov and History Dependent Decision Rule
 
 >[!important] Definition
 >For each $s\in T$, a **deterministic** *decision rule* is said to be **Markovian** if it is a *measurable function* (a *statistic*) $$\delta_{s}: (\mathcal{X}^{s}, \mathscr{F}_{\mathcal{X}}^{s}) \to (\mathcal{A}_{s}, \mathscr{F}_{\mathcal{A}}^{s})$$  
@@ -61,26 +103,22 @@ date of note: 2024-05-12
 >$$
 >\mathcal{H}^s = \prod_{i=1}^{s}\mathcal{X}_{i}\;\times \prod_{i=1}^{s-1}\mathcal{A}_{i},\quad h_{s} := \left(x_{1}, a_{1} \,{,}\ldots{,}\,x_{s-1}, a_{s-1}, x_{s}\right) \in \mathcal{H}^s.
 >$$
+>Moreover, the history can be defined *recursively*
+>$$
+>\mathcal{H}^s = \mathcal{H}^{s-1} \times \mathcal{A} \times \mathcal{X}, \quad h_{s} = (h_{s-1}, a_{s-1}, x_{s})
+>$$
 
 - [[Markov Decision Processes by Puterman]] pp 21
 
-### Loss for Sequential Decision
-
-![[Statistical Decision Problem#^e4b559]]
-
 >[!important] Definition
->Similar to the statistical decision theory, the **loss function** $L$ is defined as 
+>For each $s\in T$, a **randomized** *decision rule* $\delta_{t}$ specify a *probability distribution* $q_{\delta_{t}}$ on $\mathcal{A}$, i.e.
 >$$
->L: \Theta \times \mathcal{A} \times T \to [0, \infty)
+>q(\cdot; \delta_{t})  \in \mathscr{P}_{\mathcal{A}}
 >$$
->and 
->- is *Borel* on $(\mathcal{A}_{s}, \mathscr{F}_{\mathcal{A}}^s)$ for each $\theta\in \Theta$ and $s \in T$.
->  
->A special case is for i.i.d samples $X_{1:t}$, where 
->$$
->L(\theta, a, t) = \sum_{s=1}^{t}L(\theta, a)
->$$  
-
+>where $\mathscr{P}_{\mathcal{A}}$ is the *space of all probability measures* on $(\mathcal{A}, \mathscr{F}_{\mathcal{A}})$.
+>
+>- A *randomized decision rule* is said to be **Markov** if it is a *measurable function* $$\delta_{t}: (\mathcal{X}, \mathcal{B}(\mathcal{X})) \to (\mathscr{P}_{\mathcal{A}}, \mathscr{F}_{\mathscr{P}_{\mathcal{A}}})$$
+>- A *randomized decision rule* is said to be **history dependent** if it is a *measurable function*  $$\delta_{s}: (\mathcal{H}^{s}, \mathscr{F}_{\mathcal{H}}^{s}) \to (\mathscr{P}_{\mathcal{A}}, \mathscr{F}_{\mathscr{P}_{\mathcal{A}}})$$  
 
 
 

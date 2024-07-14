@@ -102,6 +102,9 @@ date of note: 2024-05-11
 - [[Spectral Analysis of Function of Transform]]
 - [[Singular Value Decomposition of Linear Map]]
 
+### Matrix Analysis
+
+- [[Concepts and Theorems for Matrix Theory]]
 
 
 ## Explanation

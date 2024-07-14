@@ -136,7 +136,7 @@ date of note: 2024-05-30
 ### Markov Decision Process and Dynamic Programming
 
 - [[Markov Decision Process]]
-- [[Dynamic Programming on Markov Decision Process]]
+- [[Bellman Optimality Equation for MDP]]
 
 
 

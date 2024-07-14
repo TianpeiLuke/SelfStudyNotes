@@ -134,7 +134,7 @@ date of note: 2024-05-12
 >
 >In other word, back-propagation is a **dynamic programming algorithm**. It use additional memory (via the **computational graph**) to reduce the repeated computation of *partial derivatives* and *intermediate evaluations*.
 
-- [[Dynamic Programming on Markov Decision Process]]
+- [[Bellman Optimality Equation for MDP]]
 
 ## Symbol-to-Number Differentiation vs. Symbol-to-Symbol Differentiation
 

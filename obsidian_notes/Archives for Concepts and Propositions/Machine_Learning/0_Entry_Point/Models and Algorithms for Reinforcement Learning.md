@@ -25,10 +25,13 @@ date of note: 2024-06-01
 - [[Sequential Decision Process]]
 - [[Concepts and Theorems for Markov Process]]
 - [[Markov Decision Process]]
+- [[Returns and Goals of Reinforcement Learning]]
 
 ### Dynamic Programming
 
-- [[Dynamic Programming on Markov Decision Process]]
+- [[Value Function and Bellman Equation for MDP]]
+- [[Bellman Optimality Equation for MDP]]
+- [[Dynamic Programming for MDP]]
 - [[Policy Iteration Algorithm]]
 - [[Value Iteration]]
 

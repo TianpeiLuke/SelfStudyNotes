@@ -25,7 +25,7 @@ date of note: 2024-06-12
 -----------
 ##  Recommended Notes and References
 
-- [[Dynamic Programming on Markov Decision Process]]
+- [[Bellman Optimality Equation for MDP]]
 
 - [[Stopping Time of Markov Chain]]
 - [[Stopping Time of Filtration]]

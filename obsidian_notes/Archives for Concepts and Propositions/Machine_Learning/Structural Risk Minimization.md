@@ -2,10 +2,11 @@
 tags:
   - concept
   - machine_learning/theory
-keywords: 
+keywords:
+  - structural_risk_minimization
 topics:
   - machine_learning_theory
-name: 
+name: Structural Risk Minimization
 date of note: 2024-05-12
 ---
 
