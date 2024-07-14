@@ -26,7 +26,7 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
-- [[Policy Gradient Optimization]]
+
 - [[Markov Decision Process]]
 
 

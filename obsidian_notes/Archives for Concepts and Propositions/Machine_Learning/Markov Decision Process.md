@@ -230,10 +230,16 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
+
+- [[Value Function and Bellman Equation for MDP]]
+- [[Bellman Optimality Equation for MDP]]
+- [[Dynamic Programming for MDP]]
+
 - [[Policy Iteration Algorithm]]
 - [[Value Iteration]]
 - [[Temporal Difference Learning]]
-- [[Q Learning Algorithm]]
+- [[Q Learning Algorithm and Off-Policy Temporal Difference Control]]
+
 
 - [[Statistical Decision Problem]]
 
@@ -247,7 +253,7 @@ date of note: 2024-05-12
 
 - [[Reinforcement Learning An Introduction by Sutton]]
 - [[Markov Decision Processes by Puterman]] pp 36
-- [[Probabilistic Machine Learning Advanced Topics by Murphy]]
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 1118 - 1120
 - [[Statistical Decision Theory by Berger]] pp 282
 
 

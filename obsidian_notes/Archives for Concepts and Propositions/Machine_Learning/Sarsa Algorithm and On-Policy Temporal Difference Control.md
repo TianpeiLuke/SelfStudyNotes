@@ -15,6 +15,11 @@ date of note: 2024-05-12
 
 
 
+![[Bellman Optimality Equation for MDP#^469b99]]
+
+![[Bellman Optimality Equation for MDP#^2ff71a]]
+
+
 ## Explanation
 
 
@@ -25,13 +30,13 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 - [[Approximate Dynamic Programming for MDP]]
+- [[Temporal Difference Learning]]
 
+- [[Bellman Optimality Equation for MDP]]
+- [[Value Function and Bellman Equation for MDP]]
+- [[Markov Decision Process]]
 
-- [[Eligibility Traces]]
-- [[Sarsa Algorithm and On-Policy Temporal Difference Control]]
-- [[Expected Sarsa Algorithm]]
-- [[Q Learning Algorithm and Off-Policy Temporal Difference Control]]
 
 
 - [[Reinforcement Learning An Introduction by Sutton]]
-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 1137, 1140 - 1142
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 1142 - 1143

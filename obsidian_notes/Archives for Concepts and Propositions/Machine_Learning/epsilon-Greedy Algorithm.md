@@ -2,6 +2,7 @@
 tags:
   - concept
   - machine_learning/algorithms
+  - reinforcement_learning
 keywords: 
 topics: 
 name: 
@@ -24,5 +25,10 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
-- [[Reinforcement Learning An Introduction by Sutton]]
 
+- [[Multi-Armed Bandit]]
+
+
+
+- [[Reinforcement Learning An Introduction by Sutton]]
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 1148

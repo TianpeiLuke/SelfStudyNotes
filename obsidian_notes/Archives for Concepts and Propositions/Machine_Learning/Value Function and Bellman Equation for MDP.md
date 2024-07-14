@@ -154,4 +154,4 @@ date of note: 2024-07-13
 
 - [[Reinforcement Learning An Introduction by Sutton]] pp 58
 - [[Markov Decision Processes by Puterman]] pp 26
-- [[Probabilistic Machine Learning Advanced Topics by Murphy]]
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 1121

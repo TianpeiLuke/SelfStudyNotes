@@ -26,6 +26,7 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
+- [[Actor-Critic Algorithm]]
 - [[Policy Gradient Optimization]]
 - [[Markov Decision Process]]
 

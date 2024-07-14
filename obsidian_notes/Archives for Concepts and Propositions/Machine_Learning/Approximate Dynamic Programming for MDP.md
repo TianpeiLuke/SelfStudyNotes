@@ -25,8 +25,17 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
+- [[Temporal Difference Learning]]
+- [[Sarsa Algorithm and On-Policy Temporal Difference Control]]
+- [[Expected Sarsa Algorithm]]
 
-- [[Policy Gradient Optimization]]
+- [[Q Learning Algorithm and Off-Policy Temporal Difference Control]]
+- [[Double Q Learning Algorithm]]
+
+
+- [[Bellman Optimality Equation for MDP]]
+- [[Value Function and Bellman Equation for MDP]]
+- [[Dynamic Programming for MDP]]
 - [[Markov Decision Process]]
 
 

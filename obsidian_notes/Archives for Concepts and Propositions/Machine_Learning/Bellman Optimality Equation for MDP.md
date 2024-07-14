@@ -51,6 +51,8 @@ date of note: 2024-05-12
 >q_{*}(x, a) := \max_{\pi} q_{\pi}(x, a), \quad \forall x\in \mathcal{X}, \, a\in \mathcal{A}_{x}.
 >$$
 
+^469b99
+
 >[!important]
 >The following **equations** describe the relation between the **optimal state-value function** and the **optimal action-value function**
 >$$
@@ -94,6 +96,8 @@ date of note: 2024-05-12
 >\end{align*}
 >$$
 
+^44a63a
+
 >[!important]
 >For the *four argument transition function*, the **Bellman optimality equation** for *state-value function*
 >$$
@@ -115,6 +119,8 @@ date of note: 2024-05-12
 > &= \sum_{u \in \mathcal{X}}p(u | x, a)\,\left[ r(x, a) + \gamma\,\max_{a' \in \mathcal{A}}q_{*}(u, a') \right], \quad \forall x\in \mathcal{X}, a\in \mathcal{A}
 >\end{align*}
 >$$
+
+^2ff71a
 
 
 >[!important]
@@ -145,5 +151,5 @@ date of note: 2024-05-12
 
 - [[Reinforcement Learning An Introduction by Sutton]] pp 62 - 67
 - [[Markov Decision Processes by Puterman]]
-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 1135
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 1121
 

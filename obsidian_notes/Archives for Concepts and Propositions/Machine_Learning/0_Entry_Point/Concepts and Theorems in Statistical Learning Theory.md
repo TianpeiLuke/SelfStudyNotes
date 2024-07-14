@@ -48,11 +48,12 @@ date of note: 2024-06-01
 - [[Statistical Learning via Statistical Decision Theory]]
 - [[Realizability Assumption for Empirical Risk Minimization]]
 - [[PAC Learnable and Agnostic PAC Learnable]]
-
+- [[Bias-Variance Tradeoff]]
 
 - [[Regularization in Optimization]]
 - [[Structural Risk Minimization]]
 - [[PAC-Bayes Learnable]]
+
 
 ### K Nearest Neighbor
 
