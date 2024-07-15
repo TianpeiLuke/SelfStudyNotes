@@ -56,6 +56,10 @@ date of note: 2024-06-01
 
 - [[Models and Algorithms for Deep Learning]]
 
+#### Online Learning
+
+- [[Models and Algorithms for Online Learning]]
+
 
 ### Unsupervised Learning Models and Algorithms
 

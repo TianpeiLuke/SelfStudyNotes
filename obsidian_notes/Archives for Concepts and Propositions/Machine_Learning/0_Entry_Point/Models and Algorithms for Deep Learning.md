@@ -25,9 +25,15 @@ date of note: 2024-06-01
 
 - [[Automatic Differentiation]]
 - [[Back-Propagation Algorithm]]
+
 - [[Dropout Algorithm]]
 - [[Batch Normalization Algorithm]]
+
 - [[Stochastic Gradient Descent Algorithm]]
+- [[Stochastic Gradient Descent with Nesterov Momentum]]
+- [[Stochastic Gradient Descent with Momentum]]
+- [[AdaGrad Algorithm]]
+- [[RMSProp Algorithm]]
 - [[Adam Algorithm]]
 
 ### Deep Learning Architecture

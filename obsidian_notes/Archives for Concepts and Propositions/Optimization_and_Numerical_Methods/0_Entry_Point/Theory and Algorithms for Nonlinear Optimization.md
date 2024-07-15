@@ -32,17 +32,11 @@ date of note: 2024-05-12
 - [[Saddle Point of Lagrangian Function]]
 - [[Karush-Kuhn-Tucker Optimality Condition]]
 
-
 ### First-Order Gradient Algorithms
 
 - [[Iterative Descent]]
 - [[Gradient Descent Algorithm]]
 - [[Line Search Strategies for Optimal Stepsize]]
-
-### Adaptive Stepsize Gradient Method
-
-- [[Momentum Algorithm]]
-- [[Adam Algorithm]]
 
 ### Second-Order Gradient Algorithms
 
@@ -68,14 +62,20 @@ date of note: 2024-05-12
 ### Stochastic Optimization Method
 
 - [[Stochastic Gradient Descent Algorithm]]
+- [[Stochastic Gradient Descent with Momentum]]
+- [[Stochastic Gradient Descent with Nesterov Momentum]]
 
+### Adaptive Stepsize Gradient Method
 
-
+- [[AdaGrad Algorithm]]
+- [[RMSProp Algorithm]]
+- [[Adam Algorithm]]
 
 
 ### Gradient Computation
 
-
+- [[Automatic Differentiation]]
+- [[Back-Propagation Algorithm]]
 
 
 

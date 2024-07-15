@@ -41,9 +41,14 @@ date of note: 2024-05-12
 - [[Gradient Descent Algorithm]]
 - [[Line Search Strategies for Optimal Stepsize]]
 
-### Gradient Method with Exploration
+### Stochastic Gradient Method
 
-- [[Momentum Algorithm]]
+- [[Stochastic Gradient Descent Algorithm]]
+- [[Stochastic Gradient Descent with Momentum]]
+- [[Stochastic Gradient Descent with Nesterov Momentum]]
+
+- [[AdaGrad Algorithm]]
+- [[RMSProp Algorithm]]
 - [[Adam Algorithm]]
 
 ### Second-order Gradient Method

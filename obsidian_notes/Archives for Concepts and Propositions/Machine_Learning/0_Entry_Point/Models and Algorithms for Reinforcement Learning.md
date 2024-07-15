@@ -18,6 +18,8 @@ date of note: 2024-06-01
 
 ### Multi-arm Bandit
 
+- [[Models and Algorithms for Online Learning]]
+
 - [[Multi-Armed Bandit]]
 - [[epsilon-Greedy Algorithm]]
 - [[Exploration and Exploitation Tradeoff]]

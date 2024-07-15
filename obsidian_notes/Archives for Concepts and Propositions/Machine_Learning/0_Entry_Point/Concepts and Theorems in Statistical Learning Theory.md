@@ -72,6 +72,7 @@ date of note: 2024-06-01
 
 ### Probabilistic Graphical Model
 
+- [[Models and Algorithms for Probabilistic Graphical Models]]
 - [[Probabilistic Graphical Models]]
 
 
@@ -80,7 +81,7 @@ date of note: 2024-06-01
 - [[Concepts and Theorems for Gaussian Process]]
 
 
-### Artificial Neural Network
+### Deep Learning
 
 - [[Models and Algorithms for Deep Learning]]
 
@@ -88,6 +89,10 @@ date of note: 2024-06-01
 
 - [[Markov Decision Process]]
 - [[Models and Algorithms for Reinforcement Learning]]
+
+### Online Learning
+
+- [[Models and Algorithms for Online Learning]]
 
 
 ## Explanation

@@ -46,7 +46,7 @@ date of note: 2024-07-04
 - [[Stimulated Annealing]]
 
 - [[Stochastic Gradient Descent Algorithm]]
-- [[Momentum Algorithm]]
+- [[Stochastic Gradient Descent with Momentum]]
 - [[Adam Algorithm]]
 
 
