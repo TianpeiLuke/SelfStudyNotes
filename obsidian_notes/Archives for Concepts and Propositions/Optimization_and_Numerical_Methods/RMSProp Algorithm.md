@@ -39,8 +39,8 @@ date of note: 2024-05-12
 >	- **Sample** a *mini-batch* of $m$ samples $(X_{1}^{(k)} \,{,}\ldots{,}\,X_{m}^{(k)} )$ from distribution $p(x)$
 >	- *Estimate* the *gradient* via *Monte Carlo method*: $$\hat{g}_{k} := \frac{1}{m}\sum_{i=1}^{m} \nabla_{\theta} f(X_{i}^{(k)}, \theta_{k})$$
 >	- **Accumulate squared gradient** $$r_{k+1} = \rho\,r_{k} + (1 - \rho)\,\hat{g}_{k}\, \odot \hat{g}_{k}$$
->	- Compute *update direction* $$\hat{d}_{k} = - \frac{\alpha}{\sqrt{\delta + r_{k+1}}} \odot \hat{g}_{k}$$
->	- Update parameter along the direction $\hat{d}_{k}$ $$\theta_{k+1} = \theta_{k} + \hat{d}_{k}$$ 
+>	- Compute *update direction* $$\hat{d}_{k+1} = - \frac{\alpha}{\sqrt{\delta + r_{k+1}}} \odot \hat{g}_{k}$$
+>	- Update parameter along the direction $\hat{d}_{k}$ $$\theta_{k+1} = \theta_{k} + \hat{d}_{k+1}$$ 
 >	- $k \leftarrow k+1$
 
 ^7c751d

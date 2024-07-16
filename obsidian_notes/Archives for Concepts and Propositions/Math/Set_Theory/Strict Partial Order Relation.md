@@ -23,6 +23,8 @@ date of note: 2024-05-10
 > 
 > Moreover, suppose that we define $a \preceq b$ either $a \prec b$ or $a = b$. Then the relation $\preceq$ is called a **partial order** on $A$.
 
+^426824
+
 
 ## Explanation
 

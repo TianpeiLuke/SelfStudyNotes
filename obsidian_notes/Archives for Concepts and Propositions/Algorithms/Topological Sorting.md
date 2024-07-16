@@ -42,4 +42,6 @@ date of note: 2024-07-07
 -----------
 ##  Recommended Notes and References
 
+- [[Graph]]
+
 - [[Probabilistic Graphical Models by Koller]] pp 1144

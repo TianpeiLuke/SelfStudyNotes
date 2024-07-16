@@ -42,16 +42,16 @@ date of note: 2024-05-12
 >- *Require*: small constant $\delta$ for numerical stability
 >- Initialize **1st moment (i.e. momentum) variable** $m_{0}=0$, 
 >- Initialize **2nd moment variable** $r_{0}=0$
->- Initialize **time step** $k=1$
+>- Initialize **time step** $k=0$
 >- While the *convergence criteria* not met:
 >	- *Sample* a *mini-batch* of $m$ samples $(X_{1}^{(k)} \,{,}\ldots{,}\,X_{m}^{(k)} )$ from distribution $p(x)$
->	- *Estimate* the *gradient* via *Monte Carlo method*: $$\hat{g}_{k} := \frac{1}{m}\sum_{i=1}^{m} \nabla_{\theta} f(X_{i}^{(k)}, \theta_{k-1})$$
->	- Update **biased first-order moment estimate of gradient** $$m_{k} = \rho_{1}\,m_{k-1} + (1 - \rho_{1})\,\hat{g}_{k}$$
->	- Update **biased second-order moment estimate of gradient** $$r_{k} = \rho_{2}\,r_{k-1} + (1 - \rho_{2})\,\hat{g}_{k}\, \odot \hat{g}_{k}$$
->	- **Correct bias** in *first-order moment estimate* $$\hat{m}_{k} = \frac{s_{k}}{1 - \rho_{1}^{k}}$$
->	- **Correct bias** in *second-order moment estimate* $$\hat{r}_{k} = \frac{r_{k}}{1 - \rho_{2}^{k}}$$
->	- Compute *update direction* $$\hat{d}_{k} = - \frac{\alpha}{\delta + \sqrt{\hat{r}_{k}}} \odot \hat{m}_{k}$$
->	- Update parameter along the direction $\hat{d}_{k}$ $$\theta_{k} = \theta_{k-1} + \hat{d}_{k}$$ 
+>	- *Estimate* the *gradient* via *Monte Carlo method*: $$\hat{g}_{k} := \frac{1}{m}\sum_{i=1}^{m} \nabla_{\theta} f(X_{i}^{(k)}, \theta_{k})$$
+>	- Update **biased first-order moment estimate of gradient** $$m_{k+1} = \rho_{1}\,m_{k} + (1 - \rho_{1})\,\hat{g}_{k}$$
+>	- Update **biased second-order moment estimate of gradient** $$r_{k+1} = \rho_{2}\,r_{k} + (1 - \rho_{2})\,\hat{g}_{k}\, \odot \hat{g}_{k}$$
+>	- **Correct bias** in *first-order moment estimate* $$\hat{m}_{k+1} = \frac{m_{k+1}}{1 - \rho_{1}^{k+1}}$$
+>	- **Correct bias** in *second-order moment estimate* $$\hat{r}_{k+1} = \frac{r_{k+1}}{1 - \rho_{2}^{k+1}}$$
+>	- Compute *update direction* $$\hat{d}_{k+1} = - \frac{\alpha}{\delta + \sqrt{\hat{r}_{k+1}}} \odot \hat{m}_{k+1}$$
+>	- Update parameter along the direction $\hat{d}_{k+1}$ $$\theta_{k+1} = \theta_{k} + \hat{d}_{k+1}$$ 
 >	- $k \leftarrow k+1$
 
 

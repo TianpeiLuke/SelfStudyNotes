@@ -31,6 +31,7 @@ date of note: 2024-05-10
 >$$
 >That is, $R := \mathcal{E}.$
 
+- [[Graph]]
 
 
 

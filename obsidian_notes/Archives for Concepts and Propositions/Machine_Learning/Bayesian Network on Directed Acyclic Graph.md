@@ -37,6 +37,7 @@ date of note: 2024-05-12
 >That is, the *local dependencies* states that each node $X_{i}$ is *conditionally independent* with its *nondescendants* given its *parents*.
 
 - [[Conditional Independence]]
+- [[Directed Acyclic Graph]]
 
 ### Bayesian Network via Factorized Joint Probability Distribution
 
@@ -58,6 +59,7 @@ date of note: 2024-05-12
 
 - [[Probabilistic Graphical Models]]
 - [[Directed Acyclic Graph]]
+- [[Parent Children Descendant Ancestry in Graph]]
 
 ## Explanation
 

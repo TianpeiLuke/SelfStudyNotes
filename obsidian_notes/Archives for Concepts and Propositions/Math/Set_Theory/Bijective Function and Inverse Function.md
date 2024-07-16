@@ -48,7 +48,7 @@ date of note: 2024-05-10
 >- **Linear Algebraic Structure**: linear isomorphism [[Linear Isomorphism]]
 >- **Group Algebraic Structure**: group isomorphism [[Isomorphism between Groups]]
 >- **Ring Algebraic Structure**: ring isomorphism
->- **Graph Structure**: graph isomorphism
+>- **Graph Structure**: graph isomorphism [[Graph Isomorphism]]
 >- **Topological Structure**: homeomorphism [[Homeomorphism]]
 >- **Differential Structure**: diffeomorphism: [[Diffeomorphism]]
 >- **Metric Structure**:  isometry [[Isometry and Isometric isomorphism]]
