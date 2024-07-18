@@ -36,8 +36,10 @@ date of note: 2024-05-12
 >$$
 >That is, the *local dependencies* states that each node $X_{i}$ is *conditionally independent* with its *nondescendants* given its *parents*.
 
+- [[I-Map and Independence Assertion]]
 - [[Conditional Independence]]
 - [[Directed Acyclic Graph]]
+
 
 ### Bayesian Network via Factorized Joint Probability Distribution
 
@@ -71,9 +73,27 @@ date of note: 2024-05-12
 >-- [[Probabilistic Graphical Models by Koller]] pp 51 - 52  
 
 
+>[!quote]
+>A **BN** structure $G$ encodes a set of **conditional independence assumptions**; *every distribution* for which $G$ is an $I$-map must *satisfy these assumptions*. This property is the key to allowing the **compact factorized representation** ...
+>
+>-- [[Probabilistic Graphical Models by Koller]] pp 61
+
+
 ## Local Probabilistic Models
 
 - [[Local Probabilistic Models]]
+
+
+## Factorization to I-Map
+
+>[!important] Theorem
+>Let $\mathcal{G}$ be a **Bayesian network** over a set of random variables $\mathcal{X}$, and let $\mathcal{P}$ be a *joint distribution* over $\mathcal{X}$. 
+>
+>If $\mathcal{P}$ **factorizes** according to $\mathcal{P}$, then $\mathcal{G}$ is an **$I$-map** for $\mathcal{P}$, i.e. $$\mathcal{I}(\mathcal{G}) \subseteq \mathcal{I}(\mathcal{P}).$$
+
+- [[I-Map and Independence Assertion]]
+- [[Product Measure]]
+
 
 
 
@@ -83,6 +103,15 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
+- [[Graph]]
+- [[Directed Graph]]
+- [[Directed Acyclic Graph]]
+
+- [[Markov Network on Undirected Graph]]
+- [[Probabilistic Graphical Models]]
+
 - [[Probabilistic Graphical Models by Koller]]
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]
+- [[Deep Learning Foundations and Concepts by Bishop]] pp 326
+- [[Deep Learning by Goodfellow]] pp 554 - 556

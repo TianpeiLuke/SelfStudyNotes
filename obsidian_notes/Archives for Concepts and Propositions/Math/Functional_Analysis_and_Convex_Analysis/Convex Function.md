@@ -89,6 +89,8 @@ date of note: 2024-05-15
 >[!important]
 >Geometrically, this inequality means that **the line segment** between $(x, f(x))$ and $(y, f (y))$, which is *the chord* from x to y, **lies above the graph of $f$.**
 
+- [[Chord and Chorded Graph]]
+
 >[!info]
 >The *domain* of convex function $\text{dom}(f)$  must be a **convex set**.
 

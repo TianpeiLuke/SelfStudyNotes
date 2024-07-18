@@ -16,10 +16,16 @@ date of note: 2024-07-15
 >**Name**: Separation of Graph
 
 >[!important] Definition
->If $A, B \subseteq \mathcal{V}$, and $X  \subseteq \mathcal{V}\, \cup \, \mathcal{E}$ are such that 
->- *every $A$-$B$ path* in $\mathcal{G}$ contains a *vertex* or an *edge* from $X$, 
+>Let $\mathcal{G} = (\mathcal{V}, \mathcal{E})$ be a graph.
+>
+>If 
+>- $A, B \subseteq \mathcal{V}$, and
+>- $X  \subseteq \mathcal{V} \cup \mathcal{E}$ are such that 
+>	- *every $A$-$B$ path* in $\mathcal{G}$ contains a *vertex* or an *edge* from $X$, 
 >  
 >we say that $X$ **separates** $A$ and $B$ in $\mathcal{G}$.
+
+- [[Paths in Graph and Length of Path]]
 
 >[!info]
 >This implies that $$A \cap B \subseteq X.$$
@@ -32,7 +38,7 @@ date of note: 2024-07-15
 >A *separating* set of *vertices* is called a **separator**.
 
 >[!important] Definition
->The unordered pair $\{ A, B \}$ is a **separation** of $\mathcal{G}$ if $A \cup B = \mathcal{V}$ and $\mathcal{G}$ has *no edge between* $A \setminus B$ and $B \setminus A$. 
+>The unordered pair $\{ A, B \}$ is a **separation** of $\mathcal{G} = (\mathcal{V}, \mathcal{E})$ if $A \cup B = \mathcal{V}$ and $\mathcal{G}$ has *no edge between* $A \setminus B$ and $B \setminus A$. 
 >
 >The latter is equivalent to say that *$A \cap B$ separates $A$ from $B$*.
 >
@@ -57,6 +63,8 @@ date of note: 2024-07-15
 -----------
 ##  Recommended Notes and References
 
+
+- [[Connectivity of Graph]]
 - [[D-Separation in Graphical Model]]
 - [[Separation and Connectedness]]
 

@@ -27,7 +27,7 @@ date of note: 2024-07-15
 >
 >A *maximal connected subgraph* of $\mathcal{G}$ is a **component** of $\mathcal{G}$.
 
-- [[Subgraph]]
+- [[Graph Operations and Subgraph]]
 
 
 ## Explanation

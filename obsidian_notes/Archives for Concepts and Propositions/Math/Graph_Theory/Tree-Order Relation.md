@@ -29,6 +29,7 @@ date of note: 2024-07-09
 >
 >We can show that $\le$ is a *partial order relation*, called the **tree-order** *associated with* $T$ and $r$.
 
+- [[Tree Graph and Forest]]
 - [[Root and Rooted Tree]]
 - [[Strict Partial Order Relation]]
 

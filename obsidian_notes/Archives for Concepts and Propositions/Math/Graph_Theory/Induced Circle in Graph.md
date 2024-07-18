@@ -3,28 +3,27 @@ tags:
   - concept
   - math/graph_theory
 keywords:
-  - chord
-  - chord_graph
+  - induced_circle_graph
 topics:
   - math/graph_theory
-name: Chord and Chorded Graph
+name: Induced Circle in Graph
 date of note: 2024-07-15
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Chord and Chorded Graph
+>**Name**: Induced Circle in Graph
 
 ![[Cycles in Graph#^b22c6e]]
 
 
 >[!important] Definition
->An *edge* which joins two vertices of a cycle but is *not* itself an *edge of the cycle* is a **chord** *of that cycle*.
+>An **induced cycle** in a graph $G$ is a cycle in $G$ forming an *induced sub-graph*.
+>
+>An induced cycle in graph contains *no chords*.
 
-
-- [[Spanning Tree and Chord]]
-- [[Tree Graph and Forest]]
+- [[Chord and Chorded Graph]]
 
 
 ## Explanation

@@ -23,6 +23,9 @@ date of note: 2024-07-09
 >
 >A tree $T$ with a *fixed root* $r$ is a **rooted tree**.
 
+^f3cb7e
+
+
 
 
 
@@ -35,7 +38,7 @@ date of note: 2024-07-09
 -----------
 ##  Recommended Notes and References
 
-
+- [[Tree-Order Relation]]
 - [[Tree Graph and Forest]]
 - [[Graph]]
 

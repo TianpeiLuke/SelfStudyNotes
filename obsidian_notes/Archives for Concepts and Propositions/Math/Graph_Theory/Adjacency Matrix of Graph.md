@@ -29,6 +29,7 @@ date of note: 2024-07-09
 ##  Recommended Notes and References
 
 
+- [[Degree of Vertex]]
 - [[Matrix]]
 - [[Graph]]
 

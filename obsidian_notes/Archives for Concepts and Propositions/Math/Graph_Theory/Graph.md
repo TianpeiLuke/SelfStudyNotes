@@ -46,6 +46,8 @@ date of note: 2024-07-09
 >- The set of all edges from $\mathcal{X}$ *to a common end* $y$ is denoted as $E(\mathcal{X}, y)$
 >- The set of all edges in $\mathcal{E}$ *at a vertex* $v$ is denoted as $E(v)$
 
+^40a0c6
+
 - [[Graph Theory by Diestel]] pp 2
 
 >[!important] Definition
@@ -65,6 +67,17 @@ date of note: 2024-07-09
 
 - [[Relation]]
 - [[Topology of Set]]
+- Wikipedia [Graph (topology)](https://en.wikipedia.org/wiki/Graph_(topology)#:~:text=In%20topology%2C%20a%20branch%20of,with%20the%20point%20associated%20to)
+- Wikipedia [Topological_graph_theory](https://en.wikipedia.org/wiki/Topological_graph_theory)
+
+
+## Graph Algorithms
+
+
+
+## Probabilistic Graphical Model
+
+- [[Models and Algorithms for Probabilistic Graphical Models]]
 
 
 

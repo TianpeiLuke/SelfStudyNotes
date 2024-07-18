@@ -25,34 +25,37 @@ date of note: 2024-07-14
 
 #### Subgraph
 
-- [[Subgraph]]
+- [[Graph Operations and Subgraph]]
 - [[Induced Subgraph]]
 - [[Spanning Subgraph]]
-- [[Graph Minimal and Graph Maximal]]
+- [[Minimal and Maximal Property of Graph]]
 - [[Graph Complement]]
 - [[Line Graph]]
 
 #### Degree of Graph
 
 - [[Degree of Vertex]]
+- [[Regular Graph and Cube]]
 
 #### Path and Cycles
 
 - [[Paths in Graph and Length of Path]]
+- [[Independent Paths in Graph]]
 - [[Cycles in Graph]]
-- [[Circumference of Graph]]
+- [[Girth and Circumference of Graph]]
 - [[Chord and Chorded Graph]]
 - [[Distance and Diameter in Graph]]
 - [[Central Vertex and Radius in Graph]]
 - [[Trails in Directed Graph]]
 - [[Parent Children Descendant Ancestry in Graph]]
-- [[Walk in Graph]]
+- [[Walk and Trail in Graph]]
 
 #### Connectivity
 
 - [[Connected Graph and Connected Component of Graph]]
 - [[Separation of Graph]]
-- [[k-Connected Graph]]
+- [[Connectivity of Graph]]
+- [[Connectivity of Graph]]
 - [[Edge Connectivity of Graph]]
 
 #### Trees and Forest
@@ -64,6 +67,7 @@ date of note: 2024-07-14
 - [[Tree-Order Relation]]
 - [[Chain Graph]]
 - [[Height and Level of Rooted Tree]]
+- [[Normal Tree in Graph]]
 
 #### Bipartite Graphs
 

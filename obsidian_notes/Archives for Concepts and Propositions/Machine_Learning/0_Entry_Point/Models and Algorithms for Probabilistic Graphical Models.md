@@ -25,14 +25,19 @@ date of note: 2024-06-01
 
 - [[Conditional Independence]]
 - [[Probabilistic Graphical Models]]
+- [[I-Map and Independence Assertion]]
+
 
 - [[Confounding in Conditional Independence]]
-- [[D-Separation in Graphical Model]]
 
 #### Bayesian Network 
 
 - [[Bayesian Network on Directed Acyclic Graph]]
-- [[Faithfulness and Completeness on Conditional Independence]]
+- [[D-Separation in Graphical Model]]
+- [[Soundness and Faithfulness of D-Separation]]
+- [[I-Equivalence between Two Graphs]]
+- [[Minimal I-Map]]
+- [[Perfect Map for Independence Assertions]]
 - [[Statistical Equivalence between Graphical Models]]
 
 #### Markov Network
