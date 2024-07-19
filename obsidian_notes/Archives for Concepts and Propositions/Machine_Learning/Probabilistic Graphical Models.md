@@ -116,6 +116,10 @@ date of note: 2024-05-12
 >-- [[Deep Learning by Goodfellow]] pp 551
 
 
+### Sampling from High Dimensional Space
+
+- [[Concepts and Algorithms for Monte Carlo Methods]]
+
 
 
 

@@ -43,6 +43,8 @@ date of note: 2024-05-12
 >That is, the *local dependencies* states that each node $X_{i}$ is *conditionally independent* with its *nondescendants* given its *parents*.
 >
 
+^775ffa
+
 
 >[!important] Definition
 >We can now rewrite the statement that “*$\mathcal{P}$ satisfies the local independencies associated with $\mathcal{G}$*” simply as $$\mathcal{I}_{\ell}(\mathcal{G}) \subseteq \mathcal{I}(\mathcal{P}).$$
@@ -68,7 +70,7 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
-- [[D-Separation in Graphical Model]]
+- [[D-Separation in Bayesian Network]]
 - [[Conditional Independence]]
 - [[Bayesian Network on Directed Acyclic Graph]]
 - [[Independent Random Variables]]

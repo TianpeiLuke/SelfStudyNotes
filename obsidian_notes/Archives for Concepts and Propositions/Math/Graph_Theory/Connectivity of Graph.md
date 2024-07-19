@@ -42,7 +42,7 @@ date of note: 2024-07-15
 >- $\kappa(G) = 0$ if and only if $G$ is disconnected, or a $K^1$
 >- $\kappa(K^n) = n - 1$ for $n \ge 1$
 
-- [[Complete Graph and Triangle]]
+- [[Complete Graph Clique and Triangle]]
 
 
 

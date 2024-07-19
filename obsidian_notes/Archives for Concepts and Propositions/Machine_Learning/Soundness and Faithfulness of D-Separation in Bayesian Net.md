@@ -17,9 +17,9 @@ date of note: 2024-05-12
 >[!important]
 >**Name**: Soundness and Faithfulness of D-Separation
 
-![[D-Separation in Graphical Model#^ede428]]
+![[D-Separation in Bayesian Network#^ede428]]
 
-- [[D-Separation in Graphical Model]]
+- [[D-Separation in Bayesian Network]]
 - [[Walk and Trail in Graph]]
 
 ### Soundness 
@@ -45,7 +45,7 @@ date of note: 2024-05-12
 >
 >In other word, *any independence in* $\mathcal{P}$ is reflected in the *d-separation properties* of the graph.
 
-- [[D-Separation in Graphical Model]]
+- [[D-Separation in Bayesian Network]]
 - [[I-Map and Independence Assertion]]
 - [[Conditional Independence]]
 
@@ -74,7 +74,7 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
-- [[D-Separation in Graphical Model]]
+- [[D-Separation in Bayesian Network]]
 - [[Separation of Graph]]
 - [[I-Map and Independence Assertion]]
 - [[Conditional Independence]]

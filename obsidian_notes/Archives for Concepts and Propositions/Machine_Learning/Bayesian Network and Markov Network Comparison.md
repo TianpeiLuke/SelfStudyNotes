@@ -1,0 +1,76 @@
+---
+tags:
+  - concept
+  - machine_learning/models
+  - probabilistic_graphical_models/models
+  - probabilistic_graphical_models/theory
+keywords:
+  - markov_network
+  - markov_random_field
+  - bayesian_network
+topics:
+  - probabilistic_graphical_model
+name: Bayesian Network and Markov Network Comparison
+date of note: 2024-05-12
+---
+
+## Concept Definition
+
+>[!important]
+>**Name**: Bayesian Network and Markov Network Comparison
+
+### Comparison
+
+|                                               | **Bayesian Network**                                                                                                                                                                                                                                                                                                   | **Markov Network**                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| --------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Graph                                         | [[Directed Acyclic Graph]] i.e. $G = (V,E)$ where there exists an (**asymmetric**) orientation [[Oriented Directed Graph]] in the edge $uv := u\to v$                                                                                                                                                                  | [[Graph]] i..e $H = (V, E)$, the edge $uv = vu\in E$ is **symmetric**                                                                                                                                                                                                                                                                                                                                                                                  |
+| Local Subgraph                                | **Parent nodes** $$Pa_{G}(i) = \left\{ j\in V: (j\to i) \in E \right\}$$<br>The subgraph $$F(i) = (N(i), E\,\lvert_{N(i)})$$ where<br> $N(i) := \left\{ i \right\}\cup Pa_{G}(i)$.  [[Tree-Order Relation]]                                                                                                            | **Clique**, $D_{k}$ [[Complete Graph Clique and Triangle]]<br><br>**Markov blanket**$\text{ MB}_{\mathcal{H}}(X)$<br>                                                                                                                                                                                                                                                                                                                                  |
+| Link Structure in a *trail*                   | - **common effect** ($v$-structure, *immorality*)<br>- *common cause* (*fork*)<br>- chain graph<br><br>                                                                                                                                                                                                                | - chain graph                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| Definition of *Active Trail*                  | [[D-Separation in Bayesian Network#Active Trail and D-Separation in Bayesian Network]]<br>- if **$v$-structure exists**, then the common effect $X_{i}$ or at least one of its descendant is in $Z$<br>- if for non-$v$-structure, none of vertex in the trail is in $Z$<br><br>                                       | [[Separation in Markov Network#Active Trail and D-Separation in Markov Network]]<br>- none of vertex in the trail is in $Z$<br>- in undirected graph, $v$-structure is not defined.<br><br>                                                                                                                                                                                                                                                            |
+| *Global Conditional Independence* Assumptions | **Global Markov independence** via **d-separation**<br>$$\mathcal{I}(\mathcal{G}) := \left\{ (X \perp Y\lvert Z): \;\text{d-sep}_{G}(X;Y\lvert Z)  \right\} $$ [[D-Separation in Bayesian Network]]                                                                                                                    | **Global Markov independence** via **separation**<br>$$\mathcal{I}(\mathcal{H}) := \left\{ (X \perp Y\lvert Z): \;\text{sep}_{H}(X;Y\lvert Z)  \right\} $$ [[Separation in Markov Network]]                                                                                                                                                                                                                                                            |
+| *Monotonicity* of separation                  | $\times$                                                                                                                                                                                                                                                                                                               | $\checkmark$<br>$$\text{sep}_{H}(X; Y \lvert Z) \implies \text{sep}_{H}(X; Y \lvert Z')$$ if $Z' \supset Z$<br>                                                                                                                                                                                                                                                                                                                                        |
+| *Local Conditional Independence*              | [[I-Map and Independence Assertion#^775ffa]]<br>$$X_{i} \perp X_{\text{NonDescendant}(i)}\;\lvert\,X_{\text{Pa}(i)}$$                                                                                                                                                                                                  | [[Markov Blanket and Local Markov Independence]]<br>$$X \perp (\mathcal{X} - \{ X, MB_{\mathcal{H}}(X) \}) \,\lvert\,MB_{\mathcal{H}}(X)$$<br>                                                                                                                                                                                                                                                                                                         |
+| Local Independence Assumptions                | $$\mathcal{I}_{\ell}(\mathcal{G}):= \{ \left( X_{i} \perp X_{\text{NonDescendant}_{G}(i)} \,\lvert\,X_{Pa(i)}\right)\quad \forall i\in \mathcal{V}. \}$$                                                                                                                                                               | $$\mathcal{I}_{\ell}(\mathcal{H}):= \{ \left( X \perp (\mathcal{X} - \{ X, \text{MB}_{\mathcal{H}}(X) \}  )\,\lvert\,\text{MB}_{\mathcal{H}}(X)\right)\quad \forall X \in \mathcal{X}. \}$$                                                                                                                                                                                                                                                            |
+| **Local Probabilistic Models**                | [[Local Probabilistic Models]] <br>A *conditional probability distribution* (**CPD**)<br>$$\mathcal{P}(X_{i}\,\lvert\,X_{Pa(i)})$$<br>- as function of *parent nodes* $X_{Pa(i)}$ for fixed output region $X_{i}\in A_{i}$<br>- *output probability* on $X_{i}$ for each assignment in $X_{Pa(i)} = x_{pa(i)}$<br><br> | [[Markov Network on Undirected Graph#Factors]]<br>A **factor**<br>$$\phi_{k}: \mathcal{X}_{D_{k}}\to \mathbb{R}$$ - as a function of $X_{i}$ for *all nodes* in the *clique* $i\in D_{k}$<br>- output *deterministic value*                                                                                                                                                                                                                            |
+| *Local Consistency*                           | $$\sum_{x\in \mathcal{X}_{i}}\mathcal{P}(X_{i} = x\lvert X_{Pa(i)}) = 1$$                                                                                                                                                                                                                                              | $-$                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| *Global* Probabilistic Distribution           | $\mathcal{P}$ **factorizes** according to $\mathcal{G}$ <br>$$P(X_{v}\,,\, v\in \mathcal{V}) = \prod_{v\in \mathcal{V}}P(X_{v}\,\lvert\, X_{Pa(v)})$$                                                                                                                                                                  | $\mathcal{P}_{\Phi}$ **factorizes** according to $\mathcal{G}$ $$P(X_{v}\,,\, v\in \mathcal{V}) = \frac{1}{Z}\prod_{k=1}^{K}\phi_{k}(X_{D_{k}})$$                                                                                                                                                                                                                                                                                                      |
+| Conditional Independence and Global model     | For BN, for almost all $\mathcal{P}$ factorize over $\mathcal{G}$,<br>$$\mathcal{I}(\mathcal{G}) = \mathcal{I}(\mathcal{P})$$                                                                                                                                                                                          | $$\mathcal{I}(\mathcal{H})\subseteq \mathcal{I}(\mathcal{P})$$ and there is Markov network $\mathcal{H}$ that is a **unique minimal I-map** for $\mathcal{P}$                                                                                                                                                                                                                                                                                          |
+| Exclusions-Inclusiions                        |                                                                                                                                                                                                                                                                                                                        | - If $\mathcal{H}$ is a **non-chordal** Markov network, there is **no Bayesian network** that is a **perfect map** for $\mathcal{H}$, i.e. $$\forall \mathcal{G}\;\; \mathcal{I}(\mathcal{G}) \neq \mathcal{I}(\mathcal{H})$$<br>- If $\mathcal{H}$ is a **chordal** Markov network, there is a **Bayesian network** that is a **perfect map** for $\mathcal{H}$, i.e. $$\exists \mathcal{G}\;\; \mathcal{I}(\mathcal{G}) = \mathcal{I}(\mathcal{H})$$ |
+|                                               |                                                                                                                                                                                                                                                                                                                        | [[Probabilistic Graphical Models by Koller]] pp 140, 141                                                                                                                                                                                                                                                                                                                                                                                               |
+
+- [[I-Map and Independence Assertion]]
+- [[D-Separation in Bayesian Network]]
+- [[Separation in Markov Network]]
+- [[Soundness and Faithfulness of D-Separation in Bayesian Net]]
+- [[Soundness and Faithfulness of Separation in Markov Net]]
+
+
+
+## Explanation
+
+>[!quote]
+>As we showed, these independencies *cannot be naturally captured in a Bayesian network*: any Bayesian network I-map of such a distribution would necessarily have extraneous edges, and it would not capture at least one of the desired independence statements. More broadly, a Bayesian network requires that we **ascribe a directionality** to **each influence**. In this case, the **interactions** between the variables seem **symmetrical**, and we would like a model that allows us to represent these **correlations without forcing a specific direction to the influence**.
+>
+>A representation that implements this intuition is an **undirected graph**. As in a Bayesian network, the nodes in the graph of a **Markov network** represent the variables, and the edges Markov network correspond to a notion of *direct probabilistic interaction* between the neighboring variables an interaction that is **not mediated by any other variable** in the network.
+>
+>-- [[Probabilistic Graphical Models by Koller]] pp 103
+
+
+
+-----------
+##  Recommended Notes and References
+
+
+- [[Markov Network on Undirected Graph]]
+- [[Bayesian Network on Directed Acyclic Graph]]
+
+
+- [[Graph]]
+- [[Probabilistic Graphical Models]]
+
+
+- [[Probabilistic Graphical Models by Koller]] pp 
+- [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]]
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]]
+- [[Deep Learning Foundations and Concepts by Bishop]] pp 327
+- [[Deep Learning by Goodfellow]] pp 556 - 558

@@ -44,7 +44,7 @@ date of note: 2024-05-12
 
 
 
-- [[D-Separation in Graphical Model]]
+- [[D-Separation in Bayesian Network]]
 - [[Conditional Independence]]
 - [[Bayesian Network on Directed Acyclic Graph]]
 - [[Independent Random Variables]]

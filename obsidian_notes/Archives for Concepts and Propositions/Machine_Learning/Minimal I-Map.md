@@ -29,14 +29,18 @@ date of note: 2024-05-12
 - [[Minimal and Maximal Property of Graph]]
 
 
-
-
-
-
-
 ## Explanation
 
 
+## Minimal I-Map for Bayesian Network
+
+
+
+## Minimal I-map for Markov Network
+
+![[Markov Blanket and Local Markov Independence#^18e7c9]]
+
+- [[Markov Blanket and Local Markov Independence]]
 
 
 
@@ -45,7 +49,7 @@ date of note: 2024-05-12
 
 
 
-- [[D-Separation in Graphical Model]]
+- [[D-Separation in Bayesian Network]]
 - [[Conditional Independence]]
 - [[Bayesian Network on Directed Acyclic Graph]]
 - [[Independent Random Variables]]
@@ -56,6 +60,6 @@ date of note: 2024-05-12
 - [[Probabilistic Graphical Models]]
 
 
-- [[Probabilistic Graphical Models by Koller]] pp 60
+- [[Probabilistic Graphical Models by Koller]] pp 60, 121
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]

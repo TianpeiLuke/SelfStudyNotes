@@ -65,7 +65,7 @@ date of note: 2024-07-09
 -----------
 ##  Recommended Notes and References
 
-- [[Complete Graph and Triangle]]
+- [[Complete Graph Clique and Triangle]]
 
 - [[Adjacency Matrix of Graph]]
 - [[Graph]]

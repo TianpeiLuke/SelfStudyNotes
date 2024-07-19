@@ -33,8 +33,8 @@ date of note: 2024-06-01
 #### Bayesian Network 
 
 - [[Bayesian Network on Directed Acyclic Graph]]
-- [[D-Separation in Graphical Model]]
-- [[Soundness and Faithfulness of D-Separation]]
+- [[D-Separation in Bayesian Network]]
+- [[Soundness and Faithfulness of D-Separation in Bayesian Net]]
 - [[I-Equivalence between Two Graphs]]
 - [[Minimal I-Map]]
 - [[Perfect Map for Independence Assertions]]
@@ -43,7 +43,22 @@ date of note: 2024-06-01
 #### Markov Network
 
 - [[Markov Network on Undirected Graph]]
+- [[Reduced Markov Networks]]
+- [[Separation in Markov Network]]
+- [[Soundness and Faithfulness of Separation in Markov Net]]
+- [[Hammersley-Clifford Theorem]]
+- [[Markov Blanket and Local Markov Independence]]
+
+
+#### Comparison
+
+- [[Bayesian Network and Markov Network Comparison]]
+- [[Bayesian Network as Markov Network]]
+
+### Chordal Graph, Clique Tree
+
 - [[Chordal Graph and Triangulation]]
+- [[Clique Tree]]
 
 ### Exponential Family and Graphical Model
 

@@ -5,6 +5,7 @@ tags:
 keywords:
   - complete_graph
   - triangle_graph
+  - clique_subgraph
 topics:
   - math/graph_theory
 name: Complete Graph and Triangle
@@ -24,6 +25,12 @@ date of note: 2024-07-15
 >[!important] Definition
 >
 >A complete graph on $3$ vertices, $K^3$, is called a **triangle**.
+
+>[!important] Definition
+>A *complete subgraph* $\mathcal{H} \subset \mathcal{G}$ is called a **clique**.
+
+- [[Graph Operations and Subgraph]]
+
 
 
 

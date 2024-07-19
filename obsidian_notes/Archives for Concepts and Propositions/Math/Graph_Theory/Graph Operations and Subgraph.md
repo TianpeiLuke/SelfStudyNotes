@@ -32,7 +32,7 @@ date of note: 2024-07-15
 ^69d7e9
 
 - [[Set Operations]]
-- [[Complete Graph and Triangle]]
+- [[Complete Graph Clique and Triangle]]
 
 
 >[!important] Definition

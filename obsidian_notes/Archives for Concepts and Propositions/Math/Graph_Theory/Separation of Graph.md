@@ -65,7 +65,7 @@ date of note: 2024-07-15
 
 
 - [[Connectivity of Graph]]
-- [[D-Separation in Graphical Model]]
+- [[D-Separation in Bayesian Network]]
 - [[Separation and Connectedness]]
 
 

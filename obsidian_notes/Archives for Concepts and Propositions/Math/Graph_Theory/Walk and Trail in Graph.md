@@ -36,7 +36,7 @@ date of note: 2024-07-15
 -----------
 ##  Recommended Notes and References
 
-- [[D-Separation in Graphical Model]]
+- [[D-Separation in Bayesian Network]]
 
 - [[Paths in Graph and Length of Path]]
 - [[Graph]]

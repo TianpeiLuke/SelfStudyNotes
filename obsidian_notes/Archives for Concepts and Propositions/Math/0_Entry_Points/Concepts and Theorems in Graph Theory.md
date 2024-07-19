@@ -13,7 +13,7 @@ date of note: 2024-07-14
 ### Basic Concepts in Graph Theory
 
 - [[Graph]]
-- [[Complete Graph and Triangle]]
+- [[Complete Graph Clique and Triangle]]
 - [[Graph Homomorphism]]
 - [[Graph Isomorphism]]
 - [[Graph Property]]
