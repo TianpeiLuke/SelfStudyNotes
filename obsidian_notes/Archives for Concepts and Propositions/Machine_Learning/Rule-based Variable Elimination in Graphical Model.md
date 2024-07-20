@@ -24,12 +24,14 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
-- [[Gaussian Graphical Model]]
 
-- [[Gaussian Random Vector]]
-- [[Gaussian Process]]
-- [[Gaussian Measure]]
+- [[Sum-Product Variable Elimination]]
 
-- [[Probabilistic Graphical Models by Koller]] pp 612 - 615
+
+- [[Local Probabilistic Models]]
+- [[Bayesian Network on Directed Acyclic Graph]]
+
+
+- [[Probabilistic Graphical Models by Koller]] pp 348- 355
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]

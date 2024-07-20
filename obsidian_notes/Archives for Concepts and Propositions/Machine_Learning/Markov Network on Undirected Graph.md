@@ -59,6 +59,8 @@ date of note: 2024-05-12
 >$$
 >The key aspect to note about this definition is the fact that the two factors $\phi_{1}$ and $\phi_{2}$ are multiplied in a way that “*matches up*” the common part $Y$.
 
+^421079
+
 ### Markov Network
 
 >[!important] Definition

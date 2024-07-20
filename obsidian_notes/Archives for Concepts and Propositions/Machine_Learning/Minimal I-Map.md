@@ -23,6 +23,8 @@ date of note: 2024-05-12
 >- it is an *$I$-map* for $\mathcal{I}$, i.e. $$\mathcal{I}(\mathcal{K}) \subseteq \mathcal{I}$$
 >- and the *removal* of even a single *edge* from $\mathcal{K}$ renders it *not an $I$-map*, i.e. $$(\forall e \in \mathcal{K}),\; \mathcal{I}\left(\mathcal{K} - e\right) \not\subseteq \mathcal{I}.$$
 
+^665356
+
 - [[Conditional Independence]]
 - [[I-Map and Independence Assertion]]
 - [[Graph Operations and Subgraph]]

@@ -93,7 +93,7 @@ date of note: 2024-07-09
 ### Rule CPDs
 
 >[!important] Definition
->A **rule** $\rho$ is a pair $<c; p >$ where $c$ is an *assignment* to some subset of variables $C$, and $p\in [0,1]$.
+>A **rule** $\rho$ is a pair $<c; p >$ where $c$ is an *assignment* to some subset of variables $C$, and $p\in [0,1].$
 >
 >We define $C$ to be the **scope** of $\rho$, denoted $\text{Scope}[\rho].$
 

@@ -22,6 +22,8 @@ date of note: 2024-05-12
 >
 >We say that $\mathcal{K}$ is a **perfect map** (**P-map**) *for* $\mathcal{P}$ if $$\mathcal{I}(\mathcal{K}) = \mathcal{I}(\mathcal{P}).$$
 
+^f50db0
+
 - [[Conditional Independence]]
 - [[I-Map and Independence Assertion]]
 
@@ -53,6 +55,6 @@ date of note: 2024-05-12
 - [[Probabilistic Graphical Models]]
 
 
-- [[Probabilistic Graphical Models by Koller]] pp 60
+- [[Probabilistic Graphical Models by Koller]] pp 81
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]

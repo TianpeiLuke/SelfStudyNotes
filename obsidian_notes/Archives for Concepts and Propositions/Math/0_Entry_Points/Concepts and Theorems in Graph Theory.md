@@ -44,6 +44,7 @@ date of note: 2024-07-14
 - [[Cycles in Graph]]
 - [[Girth and Circumference of Graph]]
 - [[Chord and Chorded Graph]]
+- [[Chordal Graph and Triangulation]]
 - [[Distance and Diameter in Graph]]
 - [[Central Vertex and Radius in Graph]]
 - [[Trails in Directed Graph]]

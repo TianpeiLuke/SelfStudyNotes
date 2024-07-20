@@ -26,9 +26,8 @@ date of note: 2024-06-01
 - [[Conditional Independence]]
 - [[Probabilistic Graphical Models]]
 - [[I-Map and Independence Assertion]]
-
-
 - [[Confounding in Conditional Independence]]
+
 
 #### Bayesian Network 
 
@@ -39,6 +38,7 @@ date of note: 2024-06-01
 - [[Minimal I-Map]]
 - [[Perfect Map for Independence Assertions]]
 - [[Statistical Equivalence between Graphical Models]]
+- [[Bayesian Network Distribution to Graph]]
 
 #### Markov Network
 
@@ -48,7 +48,7 @@ date of note: 2024-06-01
 - [[Soundness and Faithfulness of Separation in Markov Net]]
 - [[Hammersley-Clifford Theorem]]
 - [[Markov Blanket and Local Markov Independence]]
-
+- [[Markov Network Distribution to Graph]]
 
 #### Comparison
 
@@ -58,7 +58,9 @@ date of note: 2024-06-01
 ### Chordal Graph, Clique Tree
 
 - [[Chordal Graph and Triangulation]]
-- [[Clique Tree]]
+- [[Cluster Graph and Family Preservation]]
+- [[Clique Tree and Running Intersection Property]]
+- [[Clique Tree Construction]]
 
 ### Exponential Family and Graphical Model
 
@@ -85,6 +87,7 @@ date of note: 2024-06-01
 
 - [[Gaussian Graphical Model]]
 - [[Hidden Markov Model]]
+	- [[Viterbi Decoding Algorithm for MAP in Hidden Markov Chain]]
 - [[Kalman Filter]]
 - [[Conditional Random Field]]
 - [[Latent Dirichlet Allocation]]
@@ -95,14 +98,22 @@ date of note: 2024-06-01
 ### Statistical Inference from Graphical Model
 
 - [[Conditional Probability Query of Graphical Model]]
+- [[Complexity of Exact Marginal and Conditional Inference in Bayes Net]]
+
+#### Exact Inference via Variable Elimination
+
 - [[Sum-Product Variable Elimination]]
-- [[Message Passing Algorithm for Tree-Structured Model]]
+- [[Rule-based Variable Elimination in Graphical Model]]
 
-- [[Gaussian Belief Propagation]]
+#### Message Passing in Clique Trees
 
-- [[Maximum A Posteriori Probability Query of Graphical Model]]
-- [[Max-Product Belief Propagation for Tree-Structured Model]]
-
+- [[Clique Tree and Running Intersection Property]]
+- [[Sum-Product Message Passing Algorithm for Clique Tree]]
+- [[Sum-Product Message Passing Algorithm Analysis for Clique Tree]]
+- [[Clique Tree Calibration]]
+- [[Clique Tree Measure for Sum-Product and Reparameterization]]
+- [[Belief-Update Message Passing Algorithm for Clique Tree]]
+- [[Belief Update and Sum Product Message Passing for Clique Tree]]
 
 
 ### Approximate Inference for Graphical Model
@@ -117,6 +128,35 @@ date of note: 2024-06-01
 - [[Concepts and Algorithms for Monte Carlo Methods]]
 - [[Markov Chain Monte Carlo Methods]]
 - [[Gibbs Sampling]]
+
+
+### MAP Inference
+
+- [[Maximum A Posteriori Probability Query of Graphical Model]]
+- [[Complexity of Exact MAP Inference in Bayes Net]]
+- [[Maximum Marginal of Factor in Graphical Model]]
+
+#### Exact Inference via Variable Elimination
+
+- [[Max-Product Variable Elimination]]
+
+#### Message Passing in Clique Trees
+
+- [[Max-Product Message Passing for Clique Tree]]
+- [[Max-Product Belief Propagation for Clique Tree]]
+- [[Clique Tree Measure for Max-Product and Reparameterization]]
+- [[Decoding Max-Marginal for Graphical Model]]
+
+#### Graph Cut Method
+
+- [[Graph Cut for MAP Inference in Graphical Model]]
+
+### Gaussian Graphical Model
+
+- [[Gaussian Graphical Model]]
+- [[Gaussian Belief Propagation]]
+
+
 
 ### Learning of Graphical Model
 

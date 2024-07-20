@@ -211,10 +211,15 @@ date of note: 2024-05-12
 >[!info]
 >[[Back-Propagation Algorithm]] is a version of **reverse mode** of **automatic differentiation**.
 
+>[!info]
+>This algorithm is close to the **Sum-Product Message Passing Algorithm** in graphical model
+
+- [[Sum-Product Message Passing Algorithm for Clique Tree]]
 
 ## Explanation
 
-
+>[!info]
+>This is a version of dynamic programming.
 
 ## Automatic Differentiation of Vector-valued Function
 

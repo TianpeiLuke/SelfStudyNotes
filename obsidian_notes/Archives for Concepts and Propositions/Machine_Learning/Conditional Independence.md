@@ -78,8 +78,10 @@ date of note: 2024-05-12
 >- **Symmetry**: $$(X \perp Y \,|\, Z) \implies (Y \perp X \,|\, Z).$$
 >- **Decomposition**: $$(X \perp (Y, W) \; | \; Z) \implies (X \perp Y \; | \; Z).$$
 >- **Weak Union**: $$(X \perp (Y, W) \; | \; Z) \implies (X \perp Y \; | \; Z,\, W).$$
+>- **Strong Union**: additional evidence cannot induce dependence $$(X \perp Y \; | \; Z) \implies (X \perp Y \; | \; Z,\, W).$$
 >- **Contraction**: $$(X \perp W \; | \; Z,\,Y) \;\land \; (X \perp Y \; | \; Z) \implies (X \perp (Y, W) \; | \; Z)$$
 >- If $\mathcal{P}(\alpha) >0$ for all $\alpha \neq \emptyset  \in \mathscr{F}$, i.e. $\mathcal{P}$ is **positive distribution**, and $X, Y, Z, W$ are **disjoint**, then $$(X \perp Y\,|\, Z, W) \;\land\; (X \perp W\,|\, Z, Y) \implies (X \perp (Y,W) \,|\, Z).$$
+>- **Transitivity**: for all **disjoint** $X, Y, Z$ and any variables $A$, $$\neg \left(X \perp A\,|\, Z\right) \;\land\; \neg\left(A \perp Y \,|\,Z\right) \implies \neg \left(X \perp Y \,|\,Z\right)$$ This is equivalent to $$\left(X \perp Y \,|\,Z\right) \implies \left(X \perp A\,|\, Z\right) \;\lor\; \left(A \perp Y \,|\,Z\right).$$
 
 
 - [[Probabilistic Graphical Models by Koller]] pp 25

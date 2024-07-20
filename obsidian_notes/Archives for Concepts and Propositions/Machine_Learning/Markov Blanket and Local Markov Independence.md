@@ -29,6 +29,8 @@ date of note: 2024-05-12
 >\mathcal{I}_{p}(\mathcal{H}) := \left\{ (X \perp Y \,|\, \mathcal{X} - \{ X, Y \}): \;\; X\text{-}Y\text{ path} \not\in \mathcal{H} \right\} 
 >$$
 
+^cc196a
+
 - [[I-Map and Independence Assertion]]
 - [[Conditional Independence]]
 - [[Paths in Graph and Length of Path]]
@@ -42,6 +44,8 @@ date of note: 2024-05-12
 >A set $U$ is a **Markov blanket** of $X$ *in a distribution* $\mathcal{P}$ if 
 >- $X \in U$
 >- $U$ is a *minimal set* of nodes such that $$\left(X \perp \left(\mathcal{X} - \{ X, U \}\right)\;|\;U\right) \in \mathcal{I}(\mathcal{P}).$$
+>
+>We denote this minimal set $U$ as $\text{MB}_{\mathcal{P}}(X)$.
 
 ^18e7c9
 

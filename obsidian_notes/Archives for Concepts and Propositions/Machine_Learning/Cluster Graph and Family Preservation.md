@@ -29,7 +29,7 @@ date of note: 2024-05-12
 - [[Chord and Chorded Graph]]
 - [[Complete Graph Clique and Triangle]]
 
-
+- [[Tree Graph and Forest]]
 - [[Graph]]
 
 - [[Probabilistic Graphical Models by Koller]]
