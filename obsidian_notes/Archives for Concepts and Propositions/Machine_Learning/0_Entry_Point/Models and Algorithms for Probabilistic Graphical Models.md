@@ -74,14 +74,12 @@ date of note: 2024-06-01
 - [[Maximum Likelihood Estimation of Exponential Family]]
 - [[Maximum Likelihood Estimation of Generalized Linear Models]]
 
-- [[Maximum Entropy Learning]]
 - [[Maximum Entropy Learning of Exponential Family]]
-
 - [[Convex Conjugate of Log-Partition Function of Exponential Family]]
 
 - [[Exponential Family and Convex Duality]]
 - [[Exponential Family as Probabilistic Graphical Model]]
-- [[Exponential Family as Affine Subspace in Statistical Manifold]]
+
 
 ### Examples
 
@@ -95,7 +93,7 @@ date of note: 2024-06-01
 - [[Ising Model]]
 
 
-### Statistical Inference from Graphical Model
+### Exact Inference for Graphical Model
 
 - [[Conditional Probability Query of Graphical Model]]
 - [[Complexity of Exact Marginal and Conditional Inference in Bayes Net]]
@@ -109,12 +107,16 @@ date of note: 2024-06-01
 
 - [[Clique Tree and Running Intersection Property]]
 - [[Sum-Product Message Passing Algorithm for Clique Tree]]
-- [[Sum-Product Message Passing Algorithm Analysis for Clique Tree]]
+- [[Correctness of Belief Propagation for Clique Tree]]
 - [[Clique Tree Calibration]]
-- [[Clique Tree Measure for Sum-Product and Reparameterization]]
+- [[Clique Tree Invariant of Sum Product and Reparameterization of PGM]]
 - [[Belief-Update Message Passing Algorithm for Clique Tree]]
-- [[Belief Update and Sum Product Message Passing for Clique Tree]]
+- [[Belief Propagation and Belief Update Equivalence for Clique Tree]]
 
+#### Inference via Maximum Entropy Learning
+
+- [[Maximum Entropy Learning]]
+- [[Exponential Family as Probabilistic Graphical Model]]
 
 ### Approximate Inference for Graphical Model
 

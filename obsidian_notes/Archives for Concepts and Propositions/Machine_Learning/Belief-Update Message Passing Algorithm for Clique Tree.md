@@ -18,6 +18,23 @@ date of note: 2024-05-12
 >[!important]
 >**Name**: Belief-Update Message Passing Algorithm or *Lauritzen-Spiegelhalter algorithm* for Clique Tree
 
+
+>[!info]
+>In [[Sum-Product Message Passing Algorithm for Clique Tree]], the **clique belief** is updated via  $$\beta_{i} = \psi_{i}\,\cdot\prod_{k\in N(i)}\delta_{k\to i}$$ 
+>As we discussed, this final potential is not used in computing the message to $C_j$: this potential *already incorporates the information* (message) passed **from** $C_{j}$; if we used it when computing the message **to** $C_{j}$, this information would be **double-counted.** 
+>
+>Thus, the message from $C_i$ to $C_j$ is computed in a way that **omits the information obtained from** $C_j$: 
+>- we **multiply** the *initial potential* with **all** of the messages **except for** the message from $C_{i}$, and 
+>- then **marginalize** over the *sepset*
+
+>[!info]
+>A different approach to computing the same expression is to 
+>- **multiply in all of the messages**, and 
+>- then **divide** the resulting factor by $\delta_{j\to i}$. 
+>  
+>To make this notion precise, we must define a factor-division operation:
+
+
 ### Factor Division
 
 >[!important] Definition
@@ -31,6 +48,7 @@ date of note: 2024-05-12
 
 
 ### Belief Update Algorithm
+
 
 >[!important] Algorithm
 >The **Belief-Update Message Passing Algorithm** for **Clique Tree** is described as 
@@ -92,6 +110,10 @@ date of note: 2024-05-12
 
 
 
+## Invariant Measure
+
+
+![[Belief Propagation and Belief Update Equivalence for Clique Tree#^64f40c]]
 
 
 
@@ -99,6 +121,7 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
+- [[Belief Propagation and Belief Update Equivalence for Clique Tree]]
 - [[Sum-Product Message Passing Algorithm for Clique Tree]]
 
 - [[Clique Tree and Running Intersection Property]]

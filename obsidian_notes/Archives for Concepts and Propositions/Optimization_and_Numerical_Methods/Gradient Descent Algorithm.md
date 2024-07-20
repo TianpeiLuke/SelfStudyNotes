@@ -158,6 +158,7 @@ date of note: 2024-05-12
 
 - [[Iterative Descent]]
 
+- [[Automatic Differentiation]]
 
 - [[Unconstrained Global Minimization]]
 - [[Unconstrained Local Minimization]]

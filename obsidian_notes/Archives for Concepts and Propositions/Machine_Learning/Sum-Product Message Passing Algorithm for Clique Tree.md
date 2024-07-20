@@ -98,13 +98,31 @@ date of note: 2024-05-12
 >- Changing query subset of variables requires us to *change the root clique* and to *rerun the entire algorithm*.
 >- The algorithm is **sequential**, i.e. the computation of message is from leave to root. 
 
+>[!info]
+>By [[Sum-Product Variable Elimination]],  if a variable $X\in C_{i}$ and $X\not\in C_{j}$, then $X$ is **eliminated** after **SP-Message** process. 
+>
+>The corresponding *marginal information* of $X$ will be sent to $C_{j}$ through message $\delta_{i\to j}$.
+
+
 ### Asynchronous Sum-Product Message Passing
+
+>[!info]
+>let us consider the task of computing the posterior distribution over every random variable in the network.
 
 >[!info]
 >In the following algorithm, we **do not choose root clique**. 
 >
 >As a consequence, the *message computation* and *belief update* are **in parallel** for each clique, which is **asynchronous**
 >- The benefit is the output is the *marginal probability* for **all cliques** in one pass; instead of **only for root clique**.
+
+>[!important] Definition
+>Let $T$ be a clique tree. 
+>
+>We say that $C_{i}$ is **ready** to *transmit to a neighbor* $C_{j}$ if $C_{i}$ has messages from all of its neighbors *except from* $C_{j}$.
+>
+>$$
+>C_{i} \text{ ready to }C_{j} \;\iff \; \delta_{k\to i} \text{ computed, }\;\;\forall k\in N(i) - j
+>$$
 
 
 >[!important] Algorithm
@@ -126,6 +144,9 @@ date of note: 2024-05-12
 >[!important] Definition
 >The above asynchronous sum-product message passing algorithm is often called **the sum-product belief  propagation algorithm.**
 
+>[!info]
+>Note that it is **important** that $C_i$ compute the *message* to a neighboring clique $C_j$ based on its **initial potential** $\psi_{i}$ and **not its modified potential** $\beta_{i}$.
+>- The latter already integrates information from $j$.
 
 >[!info]
 >There are in total $$2|E(T)|$$ *message passing computation* at each iterations, one for each direction in the graph.
@@ -145,6 +166,16 @@ date of note: 2024-05-12
 >
 >-- [[Probabilistic Graphical Models by Koller]] pp 358
 
+>[!important]
+>this algorithm applies both to **Bayesian network** and **Markov network** *inference*. 
+>- For a *Bayesian network* $\mathcal{B}$, if $\Phi$ consists of the **CPDs** in $\mathcal{B}$, *reduced* with some evidence e, then $$\beta_{r}(C_{r}) = \mathcal{P}_{\mathcal{B}}(C_{r}, e).$$
+>- For a *Markov network* $\mathcal{H}$, if $\Phi$ consists of the **compatibility functions** defining the network, then $$\beta_{r}(C_{r}) =  \hat{\mathcal{P}}_{\Phi}(C_{r}).$$
+>  
+>In both cases, we can obtain the *probability* over the variables in $C_{r}$ as usual, by *normalizing the resulting factor* to sum to $1$.  
+
+- [[Bayesian Network on Directed Acyclic Graph]]
+- [[Markov Network on Undirected Graph]]
+- [[Local Probabilistic Models]]
 
 ### Upward and Downward Pass
 
@@ -180,19 +211,19 @@ date of note: 2024-05-12
 
 ## Correctness
 
-- [[Sum-Product Message Passing Algorithm Analysis for Clique Tree]]
+- [[Correctness of Belief Propagation for Clique Tree]]
 
 
-## Clique Tree Calibration
+## Invariant Measure of Sum Product Message Passing
 
 - [[Clique Tree Calibration]]
-- [[Clique Tree Measure for Sum-Product and Reparameterization]]
+- [[Clique Tree Invariant of Sum Product and Reparameterization of PGM]]
 
 
 ## Belief Update Algorithm
 
 - [[Belief-Update Message Passing Algorithm for Clique Tree]]
-- [[Belief Update and Sum Product Message Passing for Clique Tree]]
+- [[Belief Propagation and Belief Update Equivalence for Clique Tree]]
 
 
 

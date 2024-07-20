@@ -27,18 +27,31 @@ date of note: 2024-05-12
 >$$
 >
 
+^d56b22
+
 - [[Clique Tree and Running Intersection Property]]
 
 >[!important] Definition
 >A clique tree $T$ is said to be **calibrated** if 
 >- all pairs of *adjacent cliques* $C_{i}$ and $C_{j}$ are *calibrated*.
 
+^ec693c
+
 >[!important] Definition
 >For a **calibrated** *clique tree* $T$,  the  **clique belief** for $\beta_{i}(C_{i})$ and the **sepset belief** satisfies the equation $$\mu_{i,j}(S_{i,j}) = \sum_{C_{i} \setminus S_{i,j}}\beta_{i}(C_{i}) = \sum_{C_{j} \setminus S_{i,j}}\beta_{j}(C_{j}).$$
+
+### Max Calibration
+
+>[!important] Definition
+>For a **calibrated** *clique tree* $T$,  the  **clique max-marginal** for $\beta_{i}(C_{i})$ and the **sepset max-marginal** satisfies the equation $$\mu_{i,j}(S_{i,j}) = \max_{C_{i} \setminus S_{i,j}}\beta_{i}(C_{i}) = \max_{C_{j} \setminus S_{i,j}}\beta_{j}(C_{j}).$$
 
 
 ## Explanation
 
+>[!quote]
+>A **calibrated clique tree** is more than simply a **data structure** that stores the results of probabilistic inference for all of the cliques in the tree. As we now show, it can also be viewed as an **alternative representation** of the measure $\hat{\mathcal{P}}_{\Phi}(\mathcal{X})$.
+>
+>-- [[Probabilistic Graphical Models by Koller]] pp 361
 
 
 
@@ -48,7 +61,7 @@ date of note: 2024-05-12
 
 
 - [[Sum-Product Message Passing Algorithm for Clique Tree]]
-- [[Clique Tree Measure for Sum-Product and Reparameterization]]
+- [[Clique Tree Invariant of Sum Product and Reparameterization of PGM]]
 - [[Clique Tree and Running Intersection Property]]
 
 - [[Tree-Order Relation]]

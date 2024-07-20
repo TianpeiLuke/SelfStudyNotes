@@ -137,8 +137,7 @@ date of note: 2024-05-12
 >\sum_{X}\left(\phi_{1} \cdot \phi_{2}\right) = \phi_{1} \cdot \left(\sum_{X}\phi_{2}\right)
 >$$
 
->[!important]
->The *sum-product variable elimination* is a **dynamic programming** algorithm.
+
 
 >[!quote]
 >To summarize, the **two ideas** that help us address the **exponential blowup** of the *joint distribution* are: 
@@ -148,6 +147,11 @@ date of note: 2024-05-12
 >  
 >-- [[Probabilistic Graphical Models by Koller]] pp 296  
 
+## Dynamic Programming Algorithms
+
+- [[Sum-Product Message Passing Algorithm for Clique Tree]]
+- [[Belief-Update Message Passing Algorithm for Clique Tree]]
+- [[Belief Propagation and Belief Update Equivalence for Clique Tree]]
 
 
 
