@@ -67,8 +67,6 @@ date of note: 2024-06-01
 - [[Exponential Family of Distributions]]
 - [[Generalized Linear Models]]
 - [[Log-Partition Function of Exponential Family]]
-- [[Log-Partition Function of Exponential Family]]
-
 - [[Fisher Information for Exponential Family]]
 
 - [[Maximum Likelihood Estimation of Exponential Family]]
@@ -113,14 +111,16 @@ date of note: 2024-06-01
 - [[Belief-Update Message Passing Algorithm for Clique Tree]]
 - [[Belief Propagation and Belief Update Equivalence for Clique Tree]]
 
-#### Inference via Maximum Entropy Learning
+#### Exact Inference via Maximum Entropy Learning
 
 - [[Maximum Entropy Learning]]
+- [[Maximum Entropy Learning of Clique Tree PGM]]
 - [[Exponential Family as Probabilistic Graphical Model]]
 
 ### Approximate Inference for Graphical Model
 
-- [[Variational Inference for Graphical Model]]
+- [[Variational Inference for Clique Tree]]
+- [[Stationary Point of Variational Inference for Clique Tree]]
 - [[Loopy Belief Propagation Algorithm for Graphical Model]]
 - [[Expectation Propagation Algorithm]]
 - [[Mean Field Approximation]]

@@ -2,9 +2,15 @@
 tags:
   - concept
   - machine_learning/algorithms
-keywords: 
-topics: 
-name: 
+  - probabilistic_graphical_models/models
+  - probabilistic_graphical_models/representation
+  - probabilistic_graphical_models/algorithm
+  - probabilistic_graphical_models/theory
+keywords:
+  - mean_field_approximation
+topics:
+  - probabilistic_graphical_model
+name: Mean Field Approximation
 date of note: 2024-05-12
 ---
 
@@ -24,6 +30,13 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
+
+- [[Kullback-Leibler Divergence]]
+- [[Evidence Lower Bound]]
+- [[Variational Inference vs EM Algorithm]]
+- [[Variational Inference for Clique Tree]]
+
+
 - [[Probabilistic Graphical Models by Koller]]
-- [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]]
+- [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]] pp 125 - 147
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]

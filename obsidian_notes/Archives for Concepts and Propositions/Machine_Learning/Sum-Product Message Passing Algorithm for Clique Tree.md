@@ -225,6 +225,16 @@ date of note: 2024-05-12
 - [[Belief-Update Message Passing Algorithm for Clique Tree]]
 - [[Belief Propagation and Belief Update Equivalence for Clique Tree]]
 
+## Variational Inference Perspective and Fixed Point Algorithm
+
+>[!quote]
+>This theorem characterizes the **solution** of the *optimization problem* in terms of **fixed-point equations** that must hold when we find a **maximal** $\mathcal{Q}$. These fixed-point equations define the *relationships that must hold* between the different *parameters* involved in the optimization problem. Most importantly, equation (11.10) defines each **message** in terms of **other messages**, allowing an easy **iterative approach** to solving the *fixed point equations*. These same themes appear in all the approaches we will discuss later in this chapter.
+>
+>-- [[Probabilistic Graphical Models by Koller]] pp 390
+
+- [[Variational Inference for Clique Tree]]
+- [[Stationary Point of Variational Inference for Clique Tree]]
+
 
 
 -----------
