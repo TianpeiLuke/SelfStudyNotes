@@ -148,7 +148,7 @@ date of note: 2024-07-05
 
 - [[Evidence Lower Bound]]
 
-- [[Variational Inference for Clique Tree]]
+- [[Variational Inference for Clique Tree and Cluster Graph]]
 
 - [[Marginalized Likelihood Function]]
 - [[Likelihood Function]]

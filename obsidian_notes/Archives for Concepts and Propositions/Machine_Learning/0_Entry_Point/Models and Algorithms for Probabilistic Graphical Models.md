@@ -21,13 +21,14 @@ date of note: 2024-06-01
 
 ## List of Concepts
 
-### Conditional Independence and Graphical Model Representation
+### Conditional Independence 
 
 - [[Conditional Independence]]
 - [[Probabilistic Graphical Models]]
 - [[I-Map and Independence Assertion]]
 - [[Confounding in Conditional Independence]]
 
+### Graphical Model Representation
 
 #### Bayesian Network 
 
@@ -115,14 +116,31 @@ date of note: 2024-06-01
 
 - [[Maximum Entropy Learning]]
 - [[Maximum Entropy Learning of Clique Tree PGM]]
+- [[Marginal Polytope and Local Consistent Polytope]]
 - [[Exponential Family as Probabilistic Graphical Model]]
+
+#### Variational Inference on Clique Tree
+
+- [[Bethe Entropy Approximation and Factorized Energy Functional]]
+- [[Bethe Variational Inference for Clique Tree]]
+- [[Stationary Point of Bethe Variational Inference Problem]]
 
 ### Approximate Inference for Graphical Model
 
-- [[Variational Inference for Clique Tree]]
-- [[Stationary Point of Variational Inference for Clique Tree]]
-- [[Loopy Belief Propagation Algorithm for Graphical Model]]
-- [[Expectation Propagation Algorithm]]
+#### Approximation via Cluster Graph
+
+- [[Cluster Graph and Family Preservation]]
+- [[Variational Inference for Clique Tree and Cluster Graph]]
+- [[Loopy Belief Propagation Algorithm for Cluster Graph]]
+
+#### Propagation with Approximate Message 
+
+- [[Factorized Message for Approximate Belief Propagation]]
+- [[Sum-Product Expectation Propagation Algorithm]]
+- [[Belief-Update Expectation Propagation Algorithm]]
+
+#### Approximation of the Family of Probability Distributions
+
 - [[Mean Field Approximation]]
 
 ### Sampling-based Approximate Inference 
@@ -157,7 +175,7 @@ date of note: 2024-06-01
 
 - [[Gaussian Graphical Model]]
 - [[Gaussian Belief Propagation]]
-
+- [[Inverse Covariance Estimation]]
 
 
 ### Learning of Graphical Model

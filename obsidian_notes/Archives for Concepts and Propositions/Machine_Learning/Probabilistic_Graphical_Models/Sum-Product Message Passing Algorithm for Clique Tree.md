@@ -177,7 +177,32 @@ date of note: 2024-05-12
 - [[Markov Network on Undirected Graph]]
 - [[Local Probabilistic Models]]
 
-### Upward and Downward Pass
+>[!important]
+>The above algorithm is a **tabular-based method**. 
+>
+>In tabular form, we need to maintain the following entities: 
+>-  the *value* of *messages* $\delta_{i\to j}(s_{i,j})$ for all **assignments** of $s_{i,j} \in \text{Var}(S_{i,j})$ and for **every edge** $ij\in E(T)$ 
+>- the *value* of *initial clique potentials* $\psi_{i}(c_{i})$ for all **assignment** $c_{i} \in \text{Var}(C_{i})$ for each clique $i\in V(T)$
+>- the output *value* of *clique beliefs* $\beta_{i}(c_{i})$ for all **assignment** $c_{i} \in \text{Var}(C_{i})$ for each clique $i\in V(T)$
+>
+>There are in total 
+>$$
+> 2\,\sum_{ij \in E(T)}|\text{Var}(S_{i,j})| + 2\sum_{i\in V(T)}|\text{Var}(C_{i})|
+>$$
+>table entities.
+>
+>In other word, it is for graphical model of **discrete random variables.** For *continuous random variable*, the message $\delta_{i\to j}$ is a **function**.
+
+>[!info]
+>A **functional form** of message passing is based on the assumption that  $$\delta_{i\to j} \in \mathcal{F}_{\theta}$$ that is, the message function belongs to a *parametric family*
+>
+>The most common parametric family is the **exponential family**, e.g. the **Gaussian graphical model.**
+
+- [[Parametric Models]]
+- [[Exponential Family of Distributions]]
+- [[Gaussian Graphical Model]]
+
+## Upward and Downward Pass
 
 >[!important]
 >The *message passing process* performed by the algorithm is equivalent to a much more systematic process that consists of an **upward pass** and a **downward pass**. 
@@ -196,13 +221,23 @@ date of note: 2024-05-12
 - [[Automatic Differentiation]]
 
 
+## Dynamic Programming
 
 >[!info]
 >The message passing algorithm is a **dynamic programming** *implementation* of the sum-product variable elimination.
 
 - [[Sum-Product Variable Elimination]]
 
-### Message Scheduling
+>[!important]
+>The **Bellman equation** corresponding to the sum-product message passing algorithm is
+>$$
+>\begin{align*}
+>\delta_{i\to j} &\propto \; \sum_{C_{i} \setminus S_{i,j}}\,\psi_{i}\,\cdot \left(\prod_{k\in (N(i) - j)}\delta_{k \to i}\right)
+>\end{align*}
+>$$
+
+
+## Message Scheduling
 
 
 >[!info]
@@ -227,13 +262,17 @@ date of note: 2024-05-12
 
 ## Variational Inference Perspective and Fixed Point Algorithm
 
+![[Bethe Variational Inference for Clique Tree#^9e261d]]
+
+
 >[!quote]
 >This theorem characterizes the **solution** of the *optimization problem* in terms of **fixed-point equations** that must hold when we find a **maximal** $\mathcal{Q}$. These fixed-point equations define the *relationships that must hold* between the different *parameters* involved in the optimization problem. Most importantly, equation (11.10) defines each **message** in terms of **other messages**, allowing an easy **iterative approach** to solving the *fixed point equations*. These same themes appear in all the approaches we will discuss later in this chapter.
 >
 >-- [[Probabilistic Graphical Models by Koller]] pp 390
 
-- [[Variational Inference for Clique Tree]]
-- [[Stationary Point of Variational Inference for Clique Tree]]
+- [[Variational Inference for Clique Tree and Cluster Graph]]
+- [[Bethe Variational Inference for Clique Tree]]
+- [[Stationary Point of Bethe Variational Inference Problem]]
 
 
 

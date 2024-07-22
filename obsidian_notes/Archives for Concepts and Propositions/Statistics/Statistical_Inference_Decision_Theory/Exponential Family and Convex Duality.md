@@ -62,6 +62,7 @@ date of note: 2024-06-24
 
 - [[Convex Set]]
 - [[Convex Hull]]
+- [[Marginal Polytope and Local Consistent Polytope]]
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]] pp 54
 
 

@@ -30,11 +30,12 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
+- [[Marginal Polytope and Local Consistent Polytope]]
 
 - [[Kullback-Leibler Divergence]]
 - [[Evidence Lower Bound]]
 - [[Variational Inference vs EM Algorithm]]
-- [[Variational Inference for Clique Tree]]
+- [[Variational Inference for Clique Tree and Cluster Graph]]
 
 
 - [[Probabilistic Graphical Models by Koller]]

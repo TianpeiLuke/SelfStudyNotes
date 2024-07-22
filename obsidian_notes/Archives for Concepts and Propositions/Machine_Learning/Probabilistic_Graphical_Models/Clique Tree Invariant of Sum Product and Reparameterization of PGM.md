@@ -59,6 +59,7 @@ date of note: 2024-05-12
 >
 >This property is called the **clique tree invariant.**
 
+
 ### Clique Tree Measure
 
 ![[Clique Tree Calibration#^d56b22]]
@@ -80,6 +81,12 @@ date of note: 2024-05-12
 
 - [[Clique Tree Calibration]]
 
+>[!info]
+>$$
+>\log \mathcal{Q}(\mathcal{X}) = \sum_{i\in V(T)}\beta_{i}(C_{i}) - \sum_{ij\in E(T)}\mu_{i,j}(S_{i,j})
+>$$
+
+
 >[!important] Theorem
 >Let $T$ be a *clique tree* over $\Phi$, and let $\beta_{i}(C_{i})$ be a set of **calibrated potentials** for $T$.
 >
@@ -92,6 +99,20 @@ date of note: 2024-05-12
 >We can view the **clique tree** as an **alternative representation** of the **joint measure**, one that directly reveals the **clique marginals**.
 
 
+>[!important]
+>It is important to see that for **exponential family** $\mathcal{P}_{\Phi}$, the clique tree invariant and **reparameterization** corresponds to the transform from *canonical parameterization* to **mean parameterization**. 
+>
+>That is, both *clique belief* and *sepset beliefs* for *calibrated clique tree measure* can be seen as the *expectation of indicator function* on *cliques and sepsets*
+>$$
+>\begin{align*}
+>\beta_{i} &= \mathbb{E}_{ \mathcal{P}_{\Phi} }\left[ \; \mathbb{1}\{C_{i}\} \;\right] = \mathcal{P}_{\Phi}(C_{i})\\
+>\mu_{i,j} &= \mathbb{E}_{ \mathcal{P}_{\Phi} }\left[ \; \mathbb{1}\{S_{i,j}\} \;\right] = \mathcal{P}_{\Phi}(S_{i,j})
+\end{align*}
+>$$
+
+- [[Exponential Family of Distributions]]
+- [[Exponential Family and Convex Duality]]
+- [[Characteristic Function of Set]]
 
 
 -----------

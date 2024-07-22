@@ -39,14 +39,14 @@ date of note: 2024-05-12
 ^f81f88
 
 >[!important] Definition
->The *exact inference problem* for clique-tree structured graphical model can be viewed as the **maximum entropy learning** with **marginal consistency constraints**.
+>The *exact inference problem* for clique-tree structured graphical model can be viewed as the **maximum entropy learning** with **moment constraints**.
 >
 >Specifically, the exact inference can be obtained as the following **convex optimization problem**  
 >$$
 >\begin{align*}
 >  \min_{(\beta, \mu) \in \mathscr{C}}\;& \mathbb{KL}\left( \mathcal{Q}_{\beta, \mu} \left\|\right. \mathcal{P}_{\Phi} \right) \\[5pt]
->  \text{s.t. }& \mu_{i,j}(s_{i,j}) = \sum_{C_{i} \setminus S_{i,j}}\beta_{i}(c_{i}),\;\; \forall ij\in E(T), \forall s_{i,j}\in \text{Val}(S_{i,j}) \\ 
->  &\sum_{c_{i}}\beta_{i}(c_{i}) = 1,\;\; \forall i \in V(T).
+>  \text{s.t. }\;&\, \mu_{i,j}(s_{i,j}) = \mathbb{E}_{ \mathcal{Q}_{\beta, \mu} }\left[  \mathbb{1}_{s_{i,j}}\{S_{i,j}\} \right],\;\; \forall ij\in E(T), \forall s_{i,j}\in \text{Val}(S_{i,j}) \\[5pt] 
+>  &\beta_{i}(c_{i}) = \mathbb{E}_{ \mathcal{Q}_{\beta, \mu} }\left[  \mathbb{1}_{c_{i}}\{C_{i}\} \right],\;\; \forall i \in V(T), \forall c_{i}\in \text{Val}(C_{i}).
 >\end{align*}
 >$$
 >where 
@@ -54,16 +54,22 @@ date of note: 2024-05-12
 >- $\mu := \left(\mu_{i,j}, \, ij\in E(T)\right),$
 >- $\mathcal{Q}_{\beta, \mu}$ is a **clique tree measure** $$\mathcal{Q}_{\beta, \mu}(\mathcal{X}) := \frac{\prod_{i\in V(T)}\beta_{i}}{\prod_{ij\in E(T)}\mu_{i,j}},$$
 >- and the **prior distribution** is of the factorized form with initial potentials $$\mathcal{P}_{\Phi}(\mathcal{X}) := \frac{1}{Z}\prod_{\phi \in \Phi}\phi(U_{\phi})$$
->  
->We call the constraint set as the set of **locally consistent marginal distributions**
->$$
->\mathbb{L}(T) := \left\{(\beta, \mu):\, \sum_{c_{i}}\beta_{i}(c_{i}) = 1,\;\; \forall i \in V(T);\;  \mu_{i,j}(s_{i,j}) = \sum_{C_{i} \setminus S_{i,j}}\beta_{i}(c_{i}),\;\; \forall ij\in E(T)\right\} 
->$$  
 
 - [[Maximum Entropy Learning]]
+- [[Marginal Polytope and Local Consistent Polytope]]
 - [[Clique Tree and Running Intersection Property]]
 - [[Clique Tree Calibration]]
 - [[Kullback-Leibler Divergence]]
+
+>[!important] Definition
+>The **maximum entropy learning** of the exact inference problem can be formulated in **compact form**
+>$$
+>\begin{align*}
+>  \min_{(\beta, \mu) \in \mathscr{C}}\;& \mathbb{KL}\left( \mathcal{Q}_{\beta, \mu} \left\|\right. \mathcal{P}_{\Phi} \right) \\[5pt]
+>  \text{s.t. }\;&\, (\beta, \mu)\in \mathbb{M}(\mathcal{G})
+>\end{align*}
+>$$
+
 
 ### Existence and Uniqueness of Optimal Solution
 
@@ -93,10 +99,10 @@ date of note: 2024-05-12
 >[!important] 
 >In solving this optimization problem, we conceptually **examine different configurations of beliefs** that satisfy the **marginal consistency constraints**, and we select the configuration that *minimize the objective*.
 
-## Variational Inference
+## Maximum Entropy Problem via Energy Functional Form
 
->[!important]
->We can define the **evidence lower bound (ELBO)** for the variational distribution $\mathcal{Q}$ 
+>[!important] Definition
+>We can define the **evidence lower bound (ELBO)** or the **energy functional** for the variational distribution $\mathcal{Q}$ 
 >$$
 >\begin{align*}
 >\mathcal{L}(\mathcal{Q}, \Phi; \mathcal{X}) &:= \mathbb{E}_{ \mathcal{Q} }\left[ \log \left(\frac{\hat{\mathcal{P}}_{\Phi}(\mathcal{X})}{\mathcal{Q}(\mathcal{X})}\right) \right] \\[5pt]
@@ -105,13 +111,35 @@ date of note: 2024-05-12
 \end{align*}
 >$$
 
+^c01c98
+
 >[!important]
 >$$
 >\mathbb{KL}\left( \mathcal{Q} \left\|\right. \mathcal{P}_{\Phi} \right) = \log Z - \mathcal{L}(\mathcal{Q}, \Phi; \mathcal{X}) 
 >$$
+>Thus the *energy functional* is the **lower bound** on the *log-partition function*
+>$$
+>\log Z \ge \mathcal{L}(\mathcal{Q}, \Phi; \mathcal{X}) 
+>$$
+
+- [[Log-Partition Function of Exponential Family]]
+
+![[Variational Inference for Clique Tree and Cluster Graph#^5fe294]]
+
 
 - [[Evidence Lower Bound]]
-- [[Variational Inference for Clique Tree]]
+- [[Variational Inference for Clique Tree and Cluster Graph]]
+- [[Stationary Point of Bethe Variational Inference Problem]]
+
+>[!important] Definition
+>The **maximum entropy learning** of the exact inference problem can be formulated in **compact form**
+>$$
+>\begin{align*}
+>  \max_{(\beta, \mu) \in \mathscr{C}}\;& \mathcal{L}(\mathcal{Q}_{\beta, \mu}, \Phi; \mathcal{X}) \\[5pt]
+>  \text{s.t. }\;&\, (\beta, \mu)\in \mathbb{M}(\mathcal{G})
+>\end{align*}
+>$$
+
 
 
 
