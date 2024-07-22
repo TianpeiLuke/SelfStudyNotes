@@ -57,6 +57,8 @@ date of note: 2024-06-24
 >[!info]
 >Given the above special form of score function (i.e. gradient of log-likelihood)
 
+- [[Information Projection and Moment Projection]]
+
 ## Explanation
 
 

@@ -45,6 +45,7 @@ date of note: 2024-06-24
 - [[Exponential Family of Distributions]]
 - [[Gibbs measure]]
 - [[Elements of Information Theory by Cover]]
+- [[Information Projection and Moment Projection]]
 
 ### Proof via Lagrangian Multiplier on Function Space
 

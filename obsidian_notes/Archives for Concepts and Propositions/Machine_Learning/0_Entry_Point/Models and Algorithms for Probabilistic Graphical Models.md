@@ -69,6 +69,7 @@ date of note: 2024-06-01
 - [[Generalized Linear Models]]
 - [[Log-Partition Function of Exponential Family]]
 - [[Fisher Information for Exponential Family]]
+- [[Information Projection and Moment Projection]]
 
 - [[Maximum Likelihood Estimation of Exponential Family]]
 - [[Maximum Likelihood Estimation of Generalized Linear Models]]

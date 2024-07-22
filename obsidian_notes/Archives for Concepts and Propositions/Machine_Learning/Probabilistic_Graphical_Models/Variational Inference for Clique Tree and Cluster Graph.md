@@ -190,6 +190,7 @@ date of note: 2024-05-12
 - [[Bayesian Network on Directed Acyclic Graph]]
 - [[Markov Network Distribution to Graph]]
 
+- [[Information Projection and Moment Projection]]
 
 - [[Probabilistic Graphical Models by Koller]] pp 385 - 390, 396-406, 411 - 418
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]] pp 73 - 92

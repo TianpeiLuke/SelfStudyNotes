@@ -107,6 +107,7 @@ date of note: 2024-05-12
 >	- **M-Step**: choose $\hat{\theta}_{k+1}$ via **m-projection**, i.e. $$\hat{\theta}_{k+1} \in \arg\min_{\theta\in \Theta}\left\{ \mathbb{KL}\left( q_{t+1} \left\|\right. p(\cdot | x, \theta)\right)  \right\}.$$
 >	- $k \leftarrow k+1$.
 
+- [[Information Projection and Moment Projection]]
 - [[Methods of Information Geometry by Amari]]
 - Amari, S. I. (1995). Information geometry of the EM and em algorithms for neural networks. _Neural networks_, _8_(9), 1379-1408. 
 
@@ -152,6 +153,7 @@ date of note: 2024-05-12
 
 - [[Radon-Nikodym Derivative]]
 - [[Parametric Models]]
+- [[Information Projection and Moment Projection]]
 
 
 - [[Elements of Statistical Learning by Hastie]] pp 272 - 279

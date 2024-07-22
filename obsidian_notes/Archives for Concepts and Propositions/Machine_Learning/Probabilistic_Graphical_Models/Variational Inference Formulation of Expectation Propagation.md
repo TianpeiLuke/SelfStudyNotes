@@ -32,12 +32,14 @@ date of note: 2024-05-12
 
 - [[Maximum Entropy Learning]]
 - [[Kullback-Leibler Divergence]]
+- [[Information Projection and Moment Projection]]
 
 
 - [[Exponential Family as Probabilistic Graphical Model]]
 - [[Exponential Family of Distributions]]
 - [[Log-Partition Function of Exponential Family]]
 - [[Convex Conjugate of Log-Partition Function of Exponential Family]]
+
 
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]

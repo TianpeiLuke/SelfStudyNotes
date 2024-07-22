@@ -24,6 +24,9 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
+
+- [[Information Projection and Moment Projection]]
+
 - [[Probabilistic Graphical Models by Koller]]
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]

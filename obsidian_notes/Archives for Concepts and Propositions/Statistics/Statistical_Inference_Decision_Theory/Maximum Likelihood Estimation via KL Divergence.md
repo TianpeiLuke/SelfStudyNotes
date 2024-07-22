@@ -23,6 +23,8 @@ date of note: 2024-06-25
 -----------
 ##  Recommended Notes and References
 
+
+- [[Information Projection and Moment Projection]]
 - [[Maximum Likelihood Estimation]]
 - [[Point Estimator]]
 - [[Likelihood Function]]

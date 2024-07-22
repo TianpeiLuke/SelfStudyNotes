@@ -150,7 +150,7 @@ date of note: 2024-05-12
 
 - [[Maximum Entropy Learning]]
 - [[Maximum Entropy Learning of Exponential Family]]
-
+- [[Information Projection and Moment Projection]]
 
 - [[Sum-Product Variable Elimination]]
 

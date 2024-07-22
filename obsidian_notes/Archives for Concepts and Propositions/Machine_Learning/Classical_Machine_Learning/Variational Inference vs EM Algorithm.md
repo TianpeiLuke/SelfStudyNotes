@@ -85,6 +85,7 @@ date of note: 2024-07-05
 >$$
 
 - [[Expectation-Maximization Algorithm]]
+- [[Information Projection and Moment Projection]]
 
 ## Variational Inference as Maximizing the ELBO
 
@@ -105,7 +106,9 @@ date of note: 2024-07-05
 
 - [[Expectation-Maximization Algorithm#EM Algorithm as Coordinate Ascent Algorithm]]
 - [[Parametric Models]]
-- [[Variational Auto-Encoder]]q, >[!important]
+- [[Variational Auto-Encoder]]
+ 
+>[!important]
 >In **variational inference algorithm**, there are several additional **assumptions**:
 >- Due to complexity of $p_{\theta}(x| z)$, we **cannot obtain the closed form** of **posterior density function** $p(\cdot | x, \theta)$.
 >- assume that the variational density is from a parametric family as well $$q \in \left\{ q_{\psi}: \psi \in \Psi \right\} $$
@@ -147,6 +150,7 @@ date of note: 2024-07-05
 ##  Recommended Notes and References
 
 - [[Evidence Lower Bound]]
+- [[Information Projection and Moment Projection]]
 
 - [[Variational Inference for Clique Tree and Cluster Graph]]
 

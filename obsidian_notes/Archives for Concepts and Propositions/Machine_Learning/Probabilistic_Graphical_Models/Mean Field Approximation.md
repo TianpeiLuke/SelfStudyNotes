@@ -31,11 +31,11 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 - [[Structured Variational Approximation]]
+- [[Information Projection and Moment Projection]]
 
 - [[Kullback-Leibler Divergence]]
-- [[Evidence Lower Bound]]
-- [[Variational Inference vs EM Algorithm]]
-- [[Variational Inference for Clique Tree and Cluster Graph]]
+- [[Maximum Entropy Learning]]
+
 
 
 - [[Probabilistic Graphical Models by Koller]] pp 449 - 469

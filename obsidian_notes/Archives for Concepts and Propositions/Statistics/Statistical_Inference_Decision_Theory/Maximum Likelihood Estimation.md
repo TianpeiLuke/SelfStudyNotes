@@ -87,7 +87,7 @@ date of note: 2024-06-24
 
 - [[Maximum Likelihood Estimation via KL Divergence]]
 - [[Kullback-Leibler Divergence]]
-
+- [[Information Projection and Moment Projection]]
 
 
 

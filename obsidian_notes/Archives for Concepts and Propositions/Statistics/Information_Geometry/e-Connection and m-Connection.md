@@ -24,6 +24,7 @@ date of note: 2024-06-24
 ##  Recommended Notes and References
 
 
+- [[Information Projection and Moment Projection]]
 - [[alpha-Connection]]
 - [[Dual of alpha-Connection]]
 

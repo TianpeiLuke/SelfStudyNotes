@@ -34,9 +34,11 @@ date of note: 2024-05-12
 
 
 - [[Kullback-Leibler Divergence]]
+- [[Information Projection and Moment Projection]]
+
+- [[Maximum Entropy Learning]]
 - [[Evidence Lower Bound]]
-- [[Variational Inference vs EM Algorithm]]
-- [[Variational Inference for Clique Tree and Cluster Graph]]
+
 
 
 - [[Probabilistic Graphical Models by Koller]]

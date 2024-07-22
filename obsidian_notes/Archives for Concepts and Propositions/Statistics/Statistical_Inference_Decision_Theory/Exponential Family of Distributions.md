@@ -149,6 +149,7 @@ date of note: 2024-06-24
 ^c95a01
 
 - [[Likelihood Function]]
+- [[Information Projection and Moment Projection]]
 
 ## Mean Parameterization of Exponential Family
 
@@ -203,10 +204,12 @@ date of note: 2024-06-24
 ## Maximum Likelihood Estimation and Convex Optimization
 
 - [[Maximum Likelihood Estimation of Exponential Family]]
+- [[Information Projection and Moment Projection]]
 
 ## Maximum Entropy Learning as Dual Formulation
 
 - [[Maximum Entropy Learning of Exponential Family]]
+- [[Information Projection and Moment Projection]]
 
 ## Log-Concave Likelihood Function
 

@@ -25,6 +25,8 @@ date of note: 2024-05-14
 -----------
 ##  Recommended Notes and References
 
+- [[Information Projection and Moment Projection]]
+
 - [[Gibbs measure]]
 - [[Variational Formula for Kullback-Leibler Divergence]]
 - [[Kullback-Leibler Divergence]]
