@@ -168,8 +168,6 @@ date of note: 2024-05-12
 - [[Variational Inference for Clique Tree and Cluster Graph]]
 - [[Maximum Entropy Learning of Clique Tree PGM]]
 - [[Evidence Lower Bound]]
-- [[Variational Inference vs EM Algorithm]]
-
 
 
 - [[Bayesian Network on Directed Acyclic Graph]]

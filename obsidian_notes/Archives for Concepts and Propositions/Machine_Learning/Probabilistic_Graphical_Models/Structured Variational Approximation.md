@@ -10,7 +10,7 @@ keywords:
   - mean_field_approximation
 topics:
   - probabilistic_graphical_model
-name: Mean Field Approximation
+name: Structured Variational Approximation
 date of note: 2024-05-12
 ---
 
@@ -30,7 +30,8 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
-- [[Structured Variational Approximation]]
+- [[Mean Field Approximation]]
+
 
 - [[Kullback-Leibler Divergence]]
 - [[Evidence Lower Bound]]
@@ -38,6 +39,6 @@ date of note: 2024-05-12
 - [[Variational Inference for Clique Tree and Cluster Graph]]
 
 
-- [[Probabilistic Graphical Models by Koller]] pp 449 - 469
+- [[Probabilistic Graphical Models by Koller]]
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]] pp 125 - 147
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]

@@ -34,6 +34,7 @@ date of note: 2024-05-12
 >- $D_{k}: \mathbb{R}^n \times \mathbb{R}^n \to \mathbb{R}_{+}$ is a (nonquadratic) **proximal term** 
 
 
+- [[Bregman Divergence]]
 - [[Proximal Gradient Algorithm]]
 - [[Generalized Proximal Method]]
 - [[Subdifferential of Convex Function]]
@@ -59,6 +60,7 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
+- [[Bregman Projection]]
 - [[Convex Optimization Problem]]
 - [[Convex Set]]
 - [[Convex Function]]

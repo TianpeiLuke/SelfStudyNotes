@@ -55,6 +55,8 @@ date of note: 2024-05-12
 >- $\mathcal{Q}_{\beta, \mu}$ is a **clique tree measure** $$\mathcal{Q}_{\beta, \mu}(\mathcal{X}) := \frac{\prod_{i\in V(T)}\beta_{i}}{\prod_{ij\in E(T)}\mu_{i,j}},$$
 >- and the **prior distribution** is of the factorized form with initial potentials $$\mathcal{P}_{\Phi}(\mathcal{X}) := \frac{1}{Z}\prod_{\phi \in \Phi}\phi(U_{\phi})$$
 
+^e2fab5
+
 - [[Maximum Entropy Learning]]
 - [[Marginal Polytope and Local Consistent Polytope]]
 - [[Clique Tree and Running Intersection Property]]

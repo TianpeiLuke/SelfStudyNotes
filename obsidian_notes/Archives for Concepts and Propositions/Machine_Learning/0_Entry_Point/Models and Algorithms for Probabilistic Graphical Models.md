@@ -127,6 +127,8 @@ date of note: 2024-06-01
 
 ### Approximate Inference for Graphical Model
 
+- [[Maximum Entropy Learning for Approximate Inference in PGM]]
+
 #### Approximation via Cluster Graph
 
 - [[Cluster Graph and Family Preservation]]
@@ -138,9 +140,12 @@ date of note: 2024-06-01
 - [[Factorized Message for Approximate Belief Propagation]]
 - [[Sum-Product Expectation Propagation Algorithm]]
 - [[Belief-Update Expectation Propagation Algorithm]]
+- [[Expectation Propagation and Exponential Family Messages]]
+- [[Variational Inference Formulation of Expectation Propagation]]
 
-#### Approximation of the Family of Probability Distributions
+#### Structured Variational Approximation
 
+- [[Structured Variational Approximation]]
 - [[Mean Field Approximation]]
 
 ### Sampling-based Approximate Inference 
