@@ -32,6 +32,8 @@ date of note: 2024-05-12
 
 ^b82379
 
+- [[Strongly Convex Function]]
+
 - [[Polyhedral Approximation for Optimization]]
 - [[Proximal Algorithm]]
 - [[Cutting Plane Methods and Outer Linearization]]
@@ -51,6 +53,7 @@ date of note: 2024-05-12
 - [[Proximal Algorithm]]
 - [[Cutting Plane Methods and Outer Linearization]]
 
+- [[Polyhedron and Polytope]]
 
 - [[Bundle Methods]]
 

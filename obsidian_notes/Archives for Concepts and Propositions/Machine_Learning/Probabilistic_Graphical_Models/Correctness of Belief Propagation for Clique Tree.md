@@ -30,7 +30,7 @@ date of note: 2024-05-12
 >Then $X$ does **not appear** anywhere in the tree on $C_{j}$ **side** of the **edge** $ij\in E(T)$.
 
 - [[Sum-Product Message Passing Algorithm for Clique Tree]]
-- [[Clique Tree and Running Intersection Property]]
+- [[Clique Tree and Graph and Running Intersection Property]]
 - [[Paths in Graph and Length of Path]]
 
 >[!important] Definition
@@ -90,7 +90,7 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
-
+- [[Clique Tree and Graph and Running Intersection Property]]
 - [[Root and Rooted Tree]]
 - [[Paths in Graph and Length of Path]]
 

@@ -57,6 +57,7 @@ date of note: 2024-05-12
 >\end{align*}
 >$$
 
+- [[Strongly Convex Function]]
 - [[Legendre Transform]]
 - [[Fenchel Duality Theorem]]
 - [[Lagrange Dual Problem]]

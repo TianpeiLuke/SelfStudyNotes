@@ -24,6 +24,7 @@ date of note: 2024-05-16
 
 - [[Affine Independent]]
 - [[Convex Hull]]
+- [[Polyhedron and Polytope]]
 
 >[!important] Definition
 >$\Delta_{m}$ is called **generalized $m$-dimensional simplex** if some of vertices are *free vectors* $v_{i} \in V$. These vertices are called **the vertices at infinity.**
@@ -38,6 +39,7 @@ date of note: 2024-05-16
 -----------
 ##  Recommended Notes and References
 
+- [[Polyhedron and Polytope]]
 - [[Convex Set]]
 - [[Affine Independent]]
 - [[Affine Combination]]

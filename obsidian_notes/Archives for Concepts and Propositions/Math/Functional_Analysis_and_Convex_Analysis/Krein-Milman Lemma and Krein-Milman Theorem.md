@@ -44,6 +44,8 @@ date of note: 2024-06-21
 >
 >Then $K$ is the **closed convex hull** of its **extreme points**.
 
+^8e5fc2
+
 - [[Convex Hull]]
 - [[Banach-Alaoglu Theorem]]
 - [[Hahn-Banach Theorem Geometric Form and Mazur Theorem]]

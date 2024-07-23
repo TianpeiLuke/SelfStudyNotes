@@ -43,6 +43,8 @@ date of note: 2024-05-09
 > \end{align*}
 >$$ 
 
+^ab1379
+
 - [[Dual Representation of Convex Set]]
 - [[Separation Theorem]]
 

@@ -23,6 +23,8 @@ date of note: 2024-05-15
 >f(\theta x + (1- \theta) y) \le \theta f(x) + (1- \theta) f(y).
 >$$
 
+^dcc682
+
 >[!important] Definition
 >The **effective domain** of a convex function is denoted as 
 >$$

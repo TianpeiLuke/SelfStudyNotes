@@ -119,7 +119,7 @@ date of note: 2024-05-12
 - [[Variational Inference vs EM Algorithm]]
 
 - [[Cluster Graph and Family Preservation]]
-- [[Clique Tree and Running Intersection Property]]
+- [[Clique Tree and Graph and Running Intersection Property]]
 
 - [[Bayesian Network on Directed Acyclic Graph]]
 - [[Markov Network Distribution to Graph]]

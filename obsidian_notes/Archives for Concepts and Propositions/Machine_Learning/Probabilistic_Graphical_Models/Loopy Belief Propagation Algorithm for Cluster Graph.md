@@ -35,7 +35,7 @@ date of note: 2024-05-12
 - [[Belief-Update Message Passing Algorithm for Clique Tree]]
 
 - [[Cluster Graph and Family Preservation]]
-- [[Clique Tree and Running Intersection Property]]
+- [[Clique Tree and Graph and Running Intersection Property]]
 - [[Graph]]
 
 

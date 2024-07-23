@@ -17,13 +17,24 @@ date of note: 2024-05-12
 
 ## Explanation
 
+>[!info]
+>The idea of **expectation propagation** is to 
+>- **propagate** only the **expectation** of *sufficient statistics* for each message, and 
+>- use the **backward mapping** to map to the *canonical parameters* for exponential family message
+>- finally, use the exponential family to *represent* the **marginal distribution** in each *clique*.
 
+>[!info]
+>Note that the $M$-projection would result in a naive **product measures** of *all CPDs* within each clique. 
+
+>[!info]
+>This method is close to **native Bayesian classification.**
 
 
 
 -----------
 ##  Recommended Notes and References
 
+- [[Information Projection and Moment Projection]]
 - [[Variational Inference Formulation of Expectation Propagation]]
 - [[Bethe Variational Inference for Clique Tree]]
 

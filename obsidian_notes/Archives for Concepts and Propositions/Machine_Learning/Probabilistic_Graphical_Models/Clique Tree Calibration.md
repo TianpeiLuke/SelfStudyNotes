@@ -29,7 +29,7 @@ date of note: 2024-05-12
 
 ^d56b22
 
-- [[Clique Tree and Running Intersection Property]]
+- [[Clique Tree and Graph and Running Intersection Property]]
 
 >[!important] Definition
 >A clique tree $T$ is said to be **calibrated** if 
@@ -62,7 +62,7 @@ date of note: 2024-05-12
 
 - [[Sum-Product Message Passing Algorithm for Clique Tree]]
 - [[Clique Tree Invariant of Sum Product and Reparameterization of PGM]]
-- [[Clique Tree and Running Intersection Property]]
+- [[Clique Tree and Graph and Running Intersection Property]]
 
 - [[Tree-Order Relation]]
 - [[Root and Rooted Tree]]

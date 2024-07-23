@@ -40,7 +40,6 @@ date of note: 2024-05-12
 - [[Subdifferential of Convex Function]]
 - [[Subgradient Methods]]
 
-
 ## Explanation
 
 >[!info]
@@ -64,6 +63,9 @@ date of note: 2024-05-12
 - [[Convex Optimization Problem]]
 - [[Convex Set]]
 - [[Convex Function]]
+- [[Polyhedron and Polytope]]
+- [[Strongly Convex Function]]
+
 
 - [[Gradient Descent Algorithm]]
 

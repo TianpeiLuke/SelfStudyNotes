@@ -31,7 +31,7 @@ date of note: 2024-05-12
 >- For each clique $C_{i}$, denote the indices of **cliques that are neighbors** of $C_{i}$ as $$N(i) := \left\{j:\; \exists\; C_{j}\text{-}C_{i} \text{ or } C_{i}\text{-}C_{j} \text{ path} \in E(T)  \right\} $$
 >- Let the **upstream neighbor** of $i$ in Clique tree be $$\text{Pa}(i):= \left\{ j\in N(i):  C_{j} \cap C_{r}\text{-}C_{i} \text{ path} \neq \emptyset \right\} $$
 
-- [[Clique Tree and Running Intersection Property]]
+- [[Clique Tree and Graph and Running Intersection Property]]
 - [[Root and Rooted Tree]]
 - [[Paths in Graph and Length of Path]]
 - [[Tree-Order Relation]]
@@ -49,7 +49,7 @@ date of note: 2024-05-12
 >2. It then **sums out** all variables **except** those in the **sepset** between $C_{i}$ and $C_{j}$, 
 >3. Finally, it **sends** the resulting factor as a **message** to $C_{j}$. 
 
-- [[Clique Tree and Running Intersection Property]]
+- [[Clique Tree and Graph and Running Intersection Property]]
 
 >[!important] Definition
 >The message is processed up to the tree, culminating at the *root clique*. 
@@ -282,7 +282,7 @@ date of note: 2024-05-12
 
 
 
-
+- [[Clique Tree and Graph and Running Intersection Property]]
 - [[Tree Graph and Forest]]
 
 - [[Bayesian Network on Directed Acyclic Graph]]

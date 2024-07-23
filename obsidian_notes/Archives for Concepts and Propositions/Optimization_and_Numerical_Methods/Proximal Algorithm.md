@@ -29,6 +29,7 @@ date of note: 2024-05-12
 ^258191
 
 - [[Convex Optimization Problem]]
+- [[Strongly Convex Function]]
 
 ## Explanation
 

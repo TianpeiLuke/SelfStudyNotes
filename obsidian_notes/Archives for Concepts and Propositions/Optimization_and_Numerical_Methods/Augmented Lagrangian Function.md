@@ -33,6 +33,7 @@ date of note: 2024-05-12
 >for $x\in \mathbb{R}^{n}$ and $\lambda \in \mathbb{R}^{m}$
 
 
+- [[Strongly Convex Function]]
 - [[Convex Optimization Problem]]
 - [[Legendre Transform]]
 - [[Lagrangian Dual Function]]

@@ -50,10 +50,11 @@ date of note: 2024-07-04
 
 ^627a6c
 
-
+- [[Strongly Convex Function]]
 - [[Proximal Gradient Algorithm]]
 - [[Augmented Lagrangian Algorithm]]
 - [[Dual Proximal Algorithm]]
+
 
 - [[Fenchel Duality Theorem]]
 

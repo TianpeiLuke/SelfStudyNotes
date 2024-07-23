@@ -199,8 +199,6 @@ date of note: 2024-06-24
 >where $\mu \in \mathcal{M}.$
 
 
-
-
 ## Maximum Likelihood Estimation and Convex Optimization
 
 - [[Maximum Likelihood Estimation of Exponential Family]]
@@ -210,6 +208,7 @@ date of note: 2024-06-24
 
 - [[Maximum Entropy Learning of Exponential Family]]
 - [[Information Projection and Moment Projection]]
+
 
 ## Log-Concave Likelihood Function
 
@@ -233,10 +232,6 @@ date of note: 2024-06-24
 >G(\eta; x) := \left\langle  \eta\,,\, T(x)   \right\rangle - A(\eta)
 >$$
 >is an **concave** in $\eta$. Thus the likelihood function is **log-concave**.
-
-
-
-
 
 ## Convex Duality 
 

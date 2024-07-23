@@ -25,7 +25,7 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
-- [[Clique Tree and Running Intersection Property]]
+- [[Clique Tree and Graph and Running Intersection Property]]
 - [[Chord and Chorded Graph]]
 - [[Complete Graph Clique and Triangle]]
 

@@ -84,6 +84,22 @@ date of note: 2024-06-24
 - [[Generalized Linear Models]]
 - [[Bias of Point Estimator and Unbiasedness]]
 
+## M-Projection
+
+![[Exponential Family and Convex Duality#^cb178d]]
+
+>[!info]
+>Let $$\mathcal{P} := \mathcal{P}_{n} = \frac{1}{n} \sum_{i=1}^{n} \delta_{X_{i}}$$ be the empirical measure, the **$M$-projection** of $\mathcal{P}_{n}$ onto the exponential family corresponds to the **MLE** $\hat{\theta}_{MLE}$ of $\theta$.
+>$$
+>\mathcal{P}_{\hat{\theta}_{MLE}} = \arg\min_{\mathcal{P}_{\theta}, \theta\in \Theta} \mathbb{KL}\left( \mathcal{P}_{n} \left\|\right. \mathcal{P}_{\theta}  \right)
+>$$
+
+- [[Empirical Process and Empirical Measure]]
+- [[Exponential Family and Convex Duality]]
+- [[Information Projection and Moment Projection]]
+
+
+
 
 ## UMVUE
 
@@ -117,6 +133,8 @@ date of note: 2024-06-24
 - [[Rao-Blackwell Theorem]]
 - [[Uniformly Minimum Variance Unbiased Estimation]]
 - [[Cramér-Rao Lower Bound]]
+
+
 
 
 

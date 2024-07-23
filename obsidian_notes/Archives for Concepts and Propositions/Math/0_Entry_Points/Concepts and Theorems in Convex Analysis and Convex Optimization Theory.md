@@ -33,6 +33,7 @@ date of note: 2024-05-11
 - [[Convex Combination]]
 - [[Convex Hull]]
 - [[Generalized Simplex]]
+- [[Polyhedron and Polytope]]
 
 ### Convex Function
  
@@ -41,6 +42,7 @@ date of note: 2024-05-11
 - [[Perspective Function]]
 - [[Jensen Inequality]]
 
+- [[Strongly Convex Function]]
 - [[Proper Convex Function]]
 - [[Semi-Continuous Function]]
 - [[Closed Convex Function and Closure Operation]]

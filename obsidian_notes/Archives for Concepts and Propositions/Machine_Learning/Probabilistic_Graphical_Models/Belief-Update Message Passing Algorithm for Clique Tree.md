@@ -124,7 +124,7 @@ date of note: 2024-05-12
 - [[Belief Propagation and Belief Update Equivalence for Clique Tree]]
 - [[Sum-Product Message Passing Algorithm for Clique Tree]]
 
-- [[Clique Tree and Running Intersection Property]]
+- [[Clique Tree and Graph and Running Intersection Property]]
 
 - [[Tree-Order Relation]]
 - [[Root and Rooted Tree]]

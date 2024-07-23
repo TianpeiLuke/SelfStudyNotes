@@ -290,7 +290,7 @@ date of note: 2024-07-04
 >where $\mathcal{W}_{2}$ is the *$2$-Wasserstein distance*.
 
 
-- [[Convex Function]]
+- [[Strongly Convex Function]]
 - [[Wasserstein Distance]]
 - Vishnoi, N. K. (2021). _An Introduction to Hamiltonian Monte Carlo Method for Sampling_ (arXiv:2108.12107). arXiv. [[vishnoiIntroductionHamiltonianMonte2021]] pp 5
 

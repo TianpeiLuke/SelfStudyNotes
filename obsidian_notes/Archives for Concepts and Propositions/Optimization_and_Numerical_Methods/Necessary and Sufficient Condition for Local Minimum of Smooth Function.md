@@ -103,6 +103,7 @@ date of note: 2024-06-29
 
 - [[Positive Semidefinite Transformation]]
 - [[Positive Semidefinite Operator]]
+- [[Strongly Convex Function]]
 
 ## Explanation
 

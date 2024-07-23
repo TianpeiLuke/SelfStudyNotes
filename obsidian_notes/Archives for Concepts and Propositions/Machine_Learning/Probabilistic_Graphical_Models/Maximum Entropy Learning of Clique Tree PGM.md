@@ -59,7 +59,7 @@ date of note: 2024-05-12
 
 - [[Maximum Entropy Learning]]
 - [[Marginal Polytope and Local Consistent Polytope]]
-- [[Clique Tree and Running Intersection Property]]
+- [[Clique Tree and Graph and Running Intersection Property]]
 - [[Clique Tree Calibration]]
 - [[Kullback-Leibler Divergence]]
 

@@ -73,7 +73,7 @@ date of note: 2024-05-12
 - [[Sum-Product Message Passing Algorithm for Clique Tree]]
 - [[Belief-Update Message Passing Algorithm for Clique Tree]]
 
-- [[Clique Tree and Running Intersection Property]]
+- [[Clique Tree and Graph and Running Intersection Property]]
 
 - [[Tree-Order Relation]]
 - [[Root and Rooted Tree]]

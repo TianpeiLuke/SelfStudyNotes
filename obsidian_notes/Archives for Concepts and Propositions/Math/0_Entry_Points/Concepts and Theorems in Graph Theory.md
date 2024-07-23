@@ -18,7 +18,7 @@ date of note: 2024-07-14
 - [[Graph Isomorphism]]
 - [[Graph Property]]
 
-- [[Hypergraph]]
+- [[Hypergraph in Graph Theory]]
 - [[Directed Graph]]
 - [[Oriented Directed Graph]]
 - [[Multigraph]]
@@ -59,10 +59,12 @@ date of note: 2024-07-14
 - [[Connectivity of Graph]]
 - [[Edge Connectivity of Graph]]
 
+
 #### Trees and Forest
 
 - [[Directed Acyclic Graph]]
 - [[Tree Graph and Forest]]
+- [[Polytree]]
 - [[Spanning Tree and Chord]]
 - [[Root and Rooted Tree]]
 - [[Tree-Order Relation]]
@@ -96,6 +98,9 @@ date of note: 2024-07-14
 - [[Packing Problem in Graph Theory]]
 - [[Covering Problem in Graph Theory]]
 - [[k-Factor Graph]]
+- [[Hypergraph in Graph Theory]]
+- [[Cluster Graph and Family Preservation]]
+- [[Clique Tree and Graph and Running Intersection Property]]
 
 
 

@@ -29,7 +29,7 @@ date of note: 2024-05-12
 
 - [[Subdifferential of Convex Function]]
 - [[Supporting Hyperplane of Convex Set]]
-
+- [[Polyhedron and Polytope]]
 
 ## Explanation
 

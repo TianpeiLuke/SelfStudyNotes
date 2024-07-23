@@ -128,7 +128,7 @@ date of note: 2024-05-12
 ## Explanation
 
 >[!important]
->A **key observatio**n used in performing *inference in graphical models* is that the **operations of factor product** and **summation** behave precisely as do *product* and *summation* over *numbers*.
+>A **key observation** used in performing *inference in graphical models* is that the **operations of factor product** and **summation** behave precisely as do *product* and *summation* over *numbers*.
 >
 >Specifically, $$\phi_{1}\cdot \phi_{2} = \phi_{2}\cdot \phi_{1}$$ and $$\sum_{X}\sum_{Y}\phi = \sum_{Y}\sum_{X}\phi.$$ And the associativity rule $$\left(\phi_{1} \cdot \phi_{2}\right)\cdot \phi_{3} = \phi_{1} \cdot \left(\phi_{2}\cdot \phi_{3}\right)$$
 >
@@ -158,6 +158,7 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
+- [[Clique Tree and Graph and Running Intersection Property]]
 - [[Max-Product Variable Elimination]]
 
 - [[Markov Network on Undirected Graph]]

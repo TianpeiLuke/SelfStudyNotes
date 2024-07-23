@@ -60,7 +60,7 @@ date of note: 2024-06-01
 
 - [[Chordal Graph and Triangulation]]
 - [[Cluster Graph and Family Preservation]]
-- [[Clique Tree and Running Intersection Property]]
+- [[Clique Tree and Graph and Running Intersection Property]]
 - [[Clique Tree Construction]]
 
 ### Exponential Family and Graphical Model
@@ -105,7 +105,7 @@ date of note: 2024-06-01
 
 #### Message Passing in Clique Trees
 
-- [[Clique Tree and Running Intersection Property]]
+- [[Clique Tree and Graph and Running Intersection Property]]
 - [[Sum-Product Message Passing Algorithm for Clique Tree]]
 - [[Correctness of Belief Propagation for Clique Tree]]
 - [[Clique Tree Calibration]]

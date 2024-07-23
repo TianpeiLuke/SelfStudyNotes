@@ -41,6 +41,7 @@ date of note: 2024-05-12
 - [[Legendre Transform]]
 - [[Lagrangian Dual Function]]
 - [[Closed Convex Function and Closure Operation]]
+- [[Strongly Convex Function]]
 
 ## Explanation
 

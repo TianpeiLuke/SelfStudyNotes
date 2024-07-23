@@ -35,6 +35,7 @@ date of note: 2024-05-12
 
 ^6f4130
 
+- [[Polyhedron and Polytope]]
 - [[Polyhedral Approximation for Optimization]]
 - [[Approximation Method for Optimization]]
 - [[Subdifferential of Convex Function]]

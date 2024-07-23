@@ -34,7 +34,8 @@ date of note: 2024-05-12
 >$$
 >where $\alpha_{k} >0$ is a scalar parameter, and $$\ell(y; x) := f(x) + \left\langle  \nabla f(x)\,,\, y -x   \right\rangle, \quad x, y \in \mathbb{R}^n$$ is the **first-order linear approximation** of $f$ at $x$.
 
-- [[Convex Function]]
+
+- [[Strongly Convex Function]]
 - [[Lipschitz Continuous Function]]
 - [[Gradient Projection Method]]
 
@@ -75,6 +76,6 @@ date of note: 2024-05-12
 
 - [[Approximation Method for Optimization]]
 - [[Convex Optimization Problem]]
-
+- [[Convex Function]]
 
 - [[Convex Optimization Algorithms by Bertsekas]] pp 330

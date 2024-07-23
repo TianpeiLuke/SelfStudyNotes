@@ -102,6 +102,7 @@ date of note: 2024-06-24
 - [[Variational Formula for Kullback-Leibler Divergence]]
 - [[Convex Optimization Problem]]
 - [[Fenchel Duality Theorem]]
+- [[Information Projection and Moment Projection]]
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]] pp 67
 
 >[!info]
@@ -127,6 +128,7 @@ date of note: 2024-06-24
 
 ^14b84c
 
+- [[Polyhedron and Polytope]]
 - [[Convex Set]]
 - [[Convex Hull]]
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]] pp 54
@@ -141,6 +143,7 @@ date of note: 2024-06-24
 >- $\mathcal{M} \subset \mathbb{R}^d$ is **full-dimensional** i.e. it is **affine hull** is equal to $\mathbb{R}^d$ if and only if the exponential family is **minimal.**
 >- $\mathcal{M}$ is **bounded** if and only if $\Theta = \mathbb{R}^d$ and the *log-partition function* $A$ is **global Lipschitz** on $\mathbb{R}^d.$
 
+- [[Polyhedron and Polytope]]
 
 ## Convexity of Log-Partition Function
 
@@ -201,12 +204,27 @@ date of note: 2024-06-24
 
 - [[Diffeomorphism]]
 - [[Riesz-Markov Representation Theorem]]
+- [[Information Projection and Moment Projection]]
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]] pp 65
 
+## M-Projection and I-Projection
 
-## Explanation
+>[!important] Proposition
+>Let $\mathcal{P}$ be a distribution over $\mathcal{X}$, and let $\mathscr{P}_{\Theta}:=\left\{ \mathcal{P}_{\theta}: \theta \in \Theta \right\}$ be an **exponential family** with p.d.f.
+>$$
+> f_{\theta}(x) := \frac{d\mathcal{P}_{\theta}}{d\nu}(x) = \exp\left( \left\langle  \eta(\theta)\,,\, T(x)   \right\rangle - A(\theta) \right)\;h(x), \quad x \in \mathcal{X}. 
+>$$
+>
+>If there exists a set of *parameters* $\theta^{*} \in \Theta$ such that $$ \mathbb{E}_{\mathcal{P}_{\theta^{*}}}\left[ T(X) \right] = \mathbb{E}_{\mathcal{P}}\left[ T(X) \right]$$ then the **$M$-projection** of $\mathcal{P}$ is $\mathcal{P}_{\theta^{*}}$, i.e. $$\mathcal{P}_{\theta^{*}} =\arg\min_{\mathcal{P}_{\theta} \in \mathscr{P}_{\Theta}}\mathbb{KL}\left( \mathcal{P} \left\|\right. \mathcal{P}_{\theta} \right)$$
 
+^cb178d
 
+- [[Information Projection and Moment Projection]]
+
+>[!info]
+>The **optimal parameter** $\theta^{*}$ that attains *the $M$-projection* of $\mathcal{P} := \mathcal{P}_{n}$ onto the exponential family is the **maximum likelihood estimator** of parameter $\theta$.
+
+- [[Maximum Likelihood Estimation of Exponential Family]]
 
 
 
@@ -216,7 +234,7 @@ date of note: 2024-06-24
 
 
 - [[Exponential Family of Distributions]]
-
+- [[Polyhedron and Polytope]]
 - [[Convex Optimization Problem]]
 
 

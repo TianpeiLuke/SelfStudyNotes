@@ -120,7 +120,7 @@ date of note: 2024-05-12
 
 
 - [[Clique Tree Calibration]]
-- [[Clique Tree and Running Intersection Property]]
+- [[Clique Tree and Graph and Running Intersection Property]]
 
 - [[Sum-Product Message Passing Algorithm for Clique Tree]]
 - [[Correctness of Belief Propagation for Clique Tree]]

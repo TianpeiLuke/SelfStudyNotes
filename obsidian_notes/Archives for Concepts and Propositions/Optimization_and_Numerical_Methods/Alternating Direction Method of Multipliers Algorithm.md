@@ -55,6 +55,7 @@ date of note: 2024-05-12
 - [[Proximal Gradient Algorithm]]
 - [[Closed Convex Function and Closure Operation]]
 - [[Convex Optimization Problem]]
+- [[Strongly Convex Function]]
 
 ## Explanation
 

@@ -30,6 +30,7 @@ date of note: 2024-05-12
 >$$
 
 
+- [[Polyhedron and Polytope]]
 - [[Cluster Graph and Family Preservation]]
 - [[Probabilistic Graphical Models by Koller]] pp 411
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]] pp 57 
@@ -88,10 +89,10 @@ date of note: 2024-05-12
 - [[Maximum Entropy Learning of Exponential Family]]
 - [[Exponential Family of Distributions]]
 
-- [[Clique Tree and Running Intersection Property]]
+- [[Clique Tree and Graph and Running Intersection Property]]
 - [[Cluster Graph and Family Preservation]]
 - [[Graph]]
-
+- [[Polyhedron and Polytope]]
 
 - [[Probabilistic Graphical Models by Koller]] pp 411
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]] pp 57, 76

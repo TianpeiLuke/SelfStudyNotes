@@ -62,6 +62,8 @@ date of note: 2024-05-12
 >The function $H$ is **$1$-strongly concave**, because its *Hessian* is 
 >$$\partial^2 H(\boldsymbol{P}) = − \text{diag}\left(\frac{1}{P_{i,j}}\right)  > 0$$ and $P_{i,j} \le 1$. 
 
+- [[Strongly Convex Function]]
+
 >[!important] Entropic-Regularized Optimal Transport (Discrete)
 >The **entropic-regularized optimal transport** is formulated as the following convex optimization problem
 >$$
