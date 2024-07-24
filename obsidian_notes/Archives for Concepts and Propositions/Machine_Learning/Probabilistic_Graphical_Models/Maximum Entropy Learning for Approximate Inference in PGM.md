@@ -68,7 +68,7 @@ date of note: 2024-05-12
 
 - [[Bethe Entropy Approximation and Factorized Energy Functional]]
 - [[Bethe Variational Inference for Clique Tree]]
-- [[Variational Inference for Clique Tree and Cluster Graph]]
+- [[Variational Inference for Clique Tree]]
 - [[Loopy Belief Propagation Algorithm for Cluster Graph]]
 
 ### Approximate the Message

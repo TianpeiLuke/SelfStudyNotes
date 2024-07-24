@@ -56,6 +56,11 @@ date of note: 2024-06-01
 - [[Bayesian Network and Markov Network Comparison]]
 - [[Bayesian Network as Markov Network]]
 
+#### Graphical Model with Continuous Variables
+
+- [[Challenges on Graphical Model with Continuous Variables]]
+
+
 ### Chordal Graph, Clique Tree
 
 - [[Chordal Graph and Triangulation]]
@@ -83,7 +88,7 @@ date of note: 2024-06-01
 
 ### Examples
 
-- [[Gaussian Graphical Model]]
+- [[Canonical Form of Gaussian Graphical Model]]
 - [[Hidden Markov Model]]
 	- [[Viterbi Decoding Algorithm for MAP in Hidden Markov Chain]]
 - [[Kalman Filter]]
@@ -125,6 +130,7 @@ date of note: 2024-06-01
 - [[Bethe Entropy Approximation and Factorized Energy Functional]]
 - [[Bethe Variational Inference for Clique Tree]]
 - [[Stationary Point of Bethe Variational Inference Problem]]
+- [[Variational Inference for Clique Tree]]
 
 ### Approximate Inference for Graphical Model
 
@@ -133,7 +139,7 @@ date of note: 2024-06-01
 #### Approximation via Cluster Graph
 
 - [[Cluster Graph and Family Preservation]]
-- [[Variational Inference for Clique Tree and Cluster Graph]]
+
 - [[Loopy Belief Propagation Algorithm for Cluster Graph]]
 
 #### Propagation with Approximate Message 
@@ -179,6 +185,8 @@ date of note: 2024-06-01
 
 ### Gaussian Graphical Model
 
+- [[Challenges on Graphical Model with Continuous Variables]]
+- [[Canonical Form of Gaussian Graphical Model]]
 - [[Gaussian Graphical Model]]
 - [[Gaussian Belief Propagation]]
 - [[Inverse Covariance Estimation]]

@@ -37,7 +37,8 @@ date of note: 2024-07-13
 
 ### Matrix Calculus
 
-
+- [[Sherman-Morrison-Woodbury Matrix Inversion Formula]]
+- [[Schur Complement]]
 
 
 ### Similarity and Diagonalization

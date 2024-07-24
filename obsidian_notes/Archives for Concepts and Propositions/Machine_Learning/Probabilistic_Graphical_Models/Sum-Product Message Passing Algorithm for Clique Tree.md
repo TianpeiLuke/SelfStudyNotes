@@ -200,7 +200,7 @@ date of note: 2024-05-12
 
 - [[Parametric Models]]
 - [[Exponential Family of Distributions]]
-- [[Gaussian Graphical Model]]
+- [[Canonical Form of Gaussian Graphical Model]]
 
 ## Upward and Downward Pass
 
@@ -270,7 +270,7 @@ date of note: 2024-05-12
 >
 >-- [[Probabilistic Graphical Models by Koller]] pp 390
 
-- [[Variational Inference for Clique Tree and Cluster Graph]]
+- [[Variational Inference for Clique Tree]]
 - [[Bethe Variational Inference for Clique Tree]]
 - [[Stationary Point of Bethe Variational Inference Problem]]
 

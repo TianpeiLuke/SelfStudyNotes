@@ -76,7 +76,7 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 - [[Maximum Entropy Learning of Clique Tree PGM]]
-- [[Variational Inference for Clique Tree and Cluster Graph]]
+- [[Variational Inference for Clique Tree]]
 
 - [[Evidence Lower Bound]]
 

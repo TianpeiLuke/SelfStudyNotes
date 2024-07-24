@@ -126,11 +126,11 @@ date of note: 2024-05-12
 
 - [[Log-Partition Function of Exponential Family]]
 
-![[Variational Inference for Clique Tree and Cluster Graph#^5fe294]]
+![[Variational Inference for Clique Tree#^5fe294]]
 
 
 - [[Evidence Lower Bound]]
-- [[Variational Inference for Clique Tree and Cluster Graph]]
+- [[Variational Inference for Clique Tree]]
 - [[Stationary Point of Bethe Variational Inference Problem]]
 
 >[!important] Definition

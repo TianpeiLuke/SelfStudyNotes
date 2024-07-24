@@ -113,7 +113,7 @@ date of note: 2024-05-12
 
 
 - [[Bethe Variational Inference for Clique Tree]]
-- [[Variational Inference for Clique Tree and Cluster Graph]]
+- [[Variational Inference for Clique Tree]]
 
 - [[Evidence Lower Bound]]
 - [[Variational Inference vs EM Algorithm]]

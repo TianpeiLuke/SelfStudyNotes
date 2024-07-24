@@ -29,7 +29,7 @@ date of note: 2024-05-12
 - [[Stationary Point of Bethe Variational Inference Problem]]
 
 - [[Maximum Entropy Learning of Clique Tree PGM]]
-- [[Variational Inference for Clique Tree and Cluster Graph]]
+- [[Variational Inference for Clique Tree]]
 
 - [[Sum-Product Message Passing Algorithm for Clique Tree]]
 - [[Belief-Update Message Passing Algorithm for Clique Tree]]

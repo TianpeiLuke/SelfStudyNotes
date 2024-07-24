@@ -37,7 +37,7 @@ date of note: 2024-07-04
 - [[Monte Carlo Statistical Methods by Robert]]
 - [[Monte Carlo Strategies in Scientific Computing by Liu]] pp 129 - 151
 
-- [[Probabilistic Graphical Models by Koller]] pp 506
+- [[Probabilistic Graphical Models by Koller]] pp 506, 512
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 477 - 537
 - [[Deep Learning by Goodfellow]] pp 590
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 429

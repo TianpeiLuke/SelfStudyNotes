@@ -152,7 +152,7 @@ date of note: 2024-07-05
 - [[Evidence Lower Bound]]
 - [[Information Projection and Moment Projection]]
 
-- [[Variational Inference for Clique Tree and Cluster Graph]]
+- [[Variational Inference for Clique Tree]]
 
 - [[Marginalized Likelihood Function]]
 - [[Likelihood Function]]

@@ -27,7 +27,7 @@ date of note: 2024-05-12
 
 - [[Bethe Variational Inference for Clique Tree]]
 - [[Bethe Entropy Approximation and Factorized Energy Functional]]
-- [[Variational Inference for Clique Tree and Cluster Graph]]
+- [[Variational Inference for Clique Tree]]
 - [[Maximum Entropy Learning of Clique Tree PGM]]
 
 >[!important] Definition
@@ -165,7 +165,7 @@ date of note: 2024-05-12
 - [[Necessary and Sufficient Condition for Local Minimum of Smooth Function]]
 
 
-- [[Variational Inference for Clique Tree and Cluster Graph]]
+- [[Variational Inference for Clique Tree]]
 - [[Maximum Entropy Learning of Clique Tree PGM]]
 - [[Evidence Lower Bound]]
 
