@@ -142,6 +142,9 @@ date of note: 2024-05-12
 
 - [[Kullback-Leibler Divergence]]
 
+## Variational EM
+
+- [[Variational Expectation-Maximization]]
 
 
 
@@ -162,6 +165,7 @@ date of note: 2024-05-12
 - [[Elements of Information Theory by Cover]]
 - [[Nonlinear Programming by Bertsekas]] pp 554
 - [[Probabilistic Graphical Models by Koller]] pp 868- 892, 907-929
+
 
 - [[Kullback-Leibler Divergence]]
 

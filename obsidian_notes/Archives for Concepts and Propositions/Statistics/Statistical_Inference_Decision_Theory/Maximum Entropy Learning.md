@@ -36,5 +36,7 @@ date of note: 2024-05-14
 - [[Maximum Likelihood Estimation]]
 
 
+- [[Elements of Information Theory by Cover]] 
 - [[Understanding Machine Learning by Shalev-Shwartz]]
-- [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]]
+- [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]] pp 64
+- [[Probabilistic Graphical Models by Koller]] pp 956 - 958

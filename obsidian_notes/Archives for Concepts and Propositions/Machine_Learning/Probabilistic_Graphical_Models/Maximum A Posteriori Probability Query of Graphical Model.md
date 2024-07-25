@@ -25,6 +25,14 @@ date of note: 2024-07-07
 -----------
 ##  Recommended Notes and References
 
+- [[Complexity of Exact MAP Inference in Bayes Net]]
+
+
+- [[Max-Product Variable Elimination]]
+- [[Decoding Max-Marginal for Graphical Model]]
+- [[Max-Product Message Passing for Clique Tree]]
+- [[Max-Product Belief Update for Clique Tree]]
+
 
 - [[Statistical Inference Problem]]
 

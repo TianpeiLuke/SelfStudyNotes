@@ -47,6 +47,8 @@ date of note: 2024-06-01
 - [[Evidence Lower Bound for Exponential Family]]
 - [[Expectation-Maximization Algorithm for Exponential Family]]
 - [[Variational Inference vs EM Algorithm]]
+- [[Variational Expectation-Maximization]]
+- [[Variational Bayesian Learning]]
 
 #### Probabilistic Graphical Models
 

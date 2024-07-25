@@ -48,12 +48,36 @@ date of note: 2024-05-12
 - [[Marginal Polytope and Local Consistent Polytope]]
 - [[Maximum Entropy Learning of Clique Tree PGM]]
 
-### Approximate the Entropy or Energy Functional
+
+### Exact Inference on Clique Tree
 
 >[!important] 
 >The idea behind the **belief propagation** and **belief update algorithm** is to
+>1. **identify** that the **objective** *energy functional* $\mathcal{L}$ or the *entropy functional* $H$ has a **tractable, factorized** form $\hat{\mathcal{L}}$.
+>2. **identify** that the constraints on **global consistency** (i.e. the marginal polytope) $\mathbb{M}(\mathcal{G})$ is **equivalent** to the **local consistency** (i.e. local consistency polytope) $\mathbb{L}(\mathcal{G})$
+>   
+>In other word, for **calibrated clique tree**, the following optimization problem is the solve the original maximum entropy learning problem and the inference is **exact**.   
+
+>[!important] Definition
+>For  clique tree $\mathcal{T}$ , the maximum entropy learning problem above can be reformulated as the **variational inference problem** 
+>$$
+>\begin{align*}
+>  \max_{(\beta, \mu) \in \mathscr{C}}\;& \hat{\mathcal{L}}(\mathcal{Q}_{\beta, \mu}, \Phi; \mathcal{X}) \\[5pt]
+>  \text{s.t. }\;&\, (\beta, \mu)\in \mathbb{L}(\mathcal{T})
+>\end{align*}
+>$$
+>where $\mathbb{L}(\mathcal{T}) = \mathbb{M}(\mathcal{T})$ is the **local consistent polytope**.
+
+### Approximate the Entropy or Energy Functional and Constraint Set
+
+>[!important] 
+>For cluster graph $\mathcal{G}$, the idea behind the **belief propagation** and **belief update algorithm** is to
 >1. **approximate** the **objective** *energy functional* $\mathcal{L}$ or the *entropy functional* $H$ by **tractable, factorized** form $\hat{\mathcal{L}}$.
 >2. **relax** of the constraints on **global consistency** (i.e. the marginal polytope) $\mathbb{M}(\mathcal{G})$ with the **local consistency** (i.e. local consistency polytope) $\mathbb{L}(\mathcal{G})$
+
+>[!quote]
+>**Clique tree calibration** optimizes the *factored energy functional*, which is **exact for clique trees**. The optimization is performed over the space of *calibrated clique potentials*. For clique trees, any set of *calibrated clique potentials* must arise from a real distribution, and so this space is precisely the **marginal polytope**. As a consequence, both our **objective** and our **constraint space** are *exact*, so our solution represents the exact posterior.
+
 
 >[!important] Definition
 >The **Bethe variational inference problem** can be formulated as
@@ -70,6 +94,12 @@ date of note: 2024-05-12
 - [[Bethe Variational Inference for Clique Tree]]
 - [[Variational Inference for Clique Tree]]
 - [[Loopy Belief Propagation Algorithm for Cluster Graph]]
+
+>[!quote]
+>**Cluster-graph (loopy) belief propagation** optimizes the *factored energy functional*, which is **approximate for loopy graphs**. The optimization is performed over the space of *locally consistent* pseudo-marginals, which is a **relaxation** of the marginal polytope. Thus, both the objective and the constraint space are approximate.
+>
+>-- [[Probabilistic Graphical Models by Koller]] pp 473
+
 
 ### Approximate the Message
 
@@ -103,6 +133,11 @@ date of note: 2024-05-12
 - [[Expectation Propagation and Exponential Family Messages]]
 - [[Variational Inference Formulation of Expectation Propagation]]
 
+>[!quote]
+>**Expectation propagation** over clique trees optimizes the *factored energy functional*, which is the exact objective in this case. However, the *constraints* define a space of *pseudo-marginals* that are not even entirely consistent — **only their moments are required to match**. Thus, the constraint space here is a **relaxation** of our constraints, even when the structure is a tree. Expectation propagation over *cluster graphs* adds, on top of these, all of the *approximations* induced by belief propagation.
+>
+>-- [[Probabilistic Graphical Models by Koller]] pp 474
+
 
 ### Approximate the Family of Feasible Distributions
 
@@ -126,10 +161,18 @@ date of note: 2024-05-12
 - [[Structured Variational Approximation]]
 - [[Mean Field Approximation]]
 
+>[!quote]
+>Finally, **structured variational methods** optimize the *exact* factored energy functional, for a class of distributions that is (generally) *less expressive* than necessary to encode $P_{\Phi}$. As a consequence, the *constraint space* is actually a **tightening** of our original constraint space. Because the objective function is exact, the result of this optimization provides a **lower bound** on the value of the exact optimization problem. As we will see, such bounds can play an important role in the context of learning.
+>
+>-- [[Probabilistic Graphical Models by Koller]] pp 474
 
 
 ## Explanation
 
+>[!quote]
+>This general framework opens the door to the development of many other approaches. Each of the methods that we described here involves a **design choice** in three dimensions: the **objective function** that we aim to optimize, the **space of (pseudo-)distributions** over which we perform our optimization, and the **algorithm** that we choose to use in order to perform the optimization. Although these three decisions affect each other, *these dimensions are sufficiently independent* that we can improve each one separately.
+>
+>-- [[Probabilistic Graphical Models by Koller]] pp 474
 
 
 

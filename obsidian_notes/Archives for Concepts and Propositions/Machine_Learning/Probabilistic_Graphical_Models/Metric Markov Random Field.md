@@ -1,7 +1,7 @@
 ---
 tags:
   - concept
-  - machine_learning/algorithms
+  - machine_learning/models
 keywords: 
 topics: 
 name: 
@@ -25,14 +25,13 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
-- [[Clique Tree Calibration]]
-- [[Clique Tree and Graph and Running Intersection Property]]
-
-- [[Tree-Order Relation]]
-- [[Root and Rooted Tree]]
-- [[Tree Graph and Forest]]
+- [[Markov Network on Undirected Graph]]
+- [[Markov Blanket and Local Markov Independence]]
 
 
-- [[Probabilistic Graphical Models by Koller]] pp 363
+- [[Probabilistic Graphical Models by Koller]]
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]
+
+- [[Deep Learning by Goodfellow]]
+- [[Deep Learning Foundations and Concepts by Bishop]]

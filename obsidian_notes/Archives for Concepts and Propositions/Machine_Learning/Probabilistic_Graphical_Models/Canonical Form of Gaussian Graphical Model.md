@@ -52,9 +52,13 @@ date of note: 2024-05-12
 > g &= - \frac{1}{2}\left\langle \Sigma^{-1}\mu , \mu \right\rangle - \log \left( (2\pi)^{n / 2}\, |\det(\Sigma)|^{1 / 2}\right)
 >\end{align*}
 >$$
->Note that $K$ is **precision matrix** (**inverse covariance matrix**) of Gaussian distribution.
+>- $K$ is **precision matrix** (**inverse covariance matrix**) of Gaussian distribution.
+>- $(K, h)$ forms **canonical parameters** for Gaussian distribution for *sufficient statistics* $X, XX^T.$
+>- $g$ is the *log-partition function.*
+>
 
 - [[Gaussian Random Vector]]
+- [[Exponential Family of Distributions]]
 
 >[!info]
 >Note that in general, $K$ is *not necessarily invertible*.
@@ -191,8 +195,8 @@ date of note: 2024-05-12
 >where the *precision matrix*  for conditional distribution is the block matrix of $\Theta$.
 >$$
 >\begin{align*}
->K' &= \Theta_{x x}\\
->\mu_{x|y} &= \mu_{x} - \Theta_{x x}^{-1}\Theta_{x y}\mu_{y}
+>K' &= \Theta_{x x} = \left(\Sigma_{x x} - \Sigma_{x y}\Sigma_{y y}^{-1}\Sigma_{y x} \right)^{-1}\\
+>\mu_{x|y} &= \mu_{x} + \Sigma_{x y}\Sigma_{y y}^{-1}(y - \mu_{y})
 \end{align*}
 >$$
 

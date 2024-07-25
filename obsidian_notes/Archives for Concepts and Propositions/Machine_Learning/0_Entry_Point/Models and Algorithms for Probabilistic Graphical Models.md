@@ -96,6 +96,7 @@ date of note: 2024-06-01
 - [[Latent Dirichlet Allocation]]
 - [[Restricted Boltzmann Machine]]
 - [[Ising Model]]
+- [[Metric Markov Random Field]]
 
 
 ### Exact Inference for Graphical Model
@@ -175,12 +176,14 @@ date of note: 2024-06-01
 #### Message Passing in Clique Trees
 
 - [[Max-Product Message Passing for Clique Tree]]
-- [[Max-Product Belief Propagation for Clique Tree]]
-- [[Clique Tree Measure for Max-Product and Reparameterization]]
+- [[Max-Product Belief Update for Clique Tree]]
+- [[Clique Tree Invariant of Max-Product and Reparameterization]]
 - [[Decoding Max-Marginal for Graphical Model]]
 
-#### Graph Cut Method
+### Graph Cut Method
 
+- [[Ising Model]]
+- [[Metric Markov Random Field]]
 - [[Graph Cut for MAP Inference in Graphical Model]]
 
 ### Gaussian Graphical Model
@@ -190,6 +193,8 @@ date of note: 2024-06-01
 - [[Gaussian Graphical Model]]
 - [[Gaussian Belief Propagation]]
 - [[Inverse Covariance Estimation]]
+- [[Partial Correlation]]
+- [[Graph LASSO and Structured Learning in Gaussian Graphical Model]]
 
 
 ### Learning of Graphical Model

@@ -6,6 +6,7 @@ tags:
 keywords:
   - sum_product
   - probabilistic_graphical_model
+  - variable_elimination
 topics:
   - machine_learning_models
   - probabilistic_graphical_model

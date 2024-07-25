@@ -45,6 +45,7 @@ date of note: 2024-05-12
 >[!important] Definition
 >For a **calibrated** *clique tree* $T$,  the  **clique max-marginal** for $\beta_{i}(C_{i})$ and the **sepset max-marginal** satisfies the equation $$\mu_{i,j}(S_{i,j}) = \max_{C_{i} \setminus S_{i,j}}\beta_{i}(C_{i}) = \max_{C_{j} \setminus S_{i,j}}\beta_{j}(C_{j}).$$
 
+- [[Max-Product Message Passing for Clique Tree]]
 
 ## Explanation
 

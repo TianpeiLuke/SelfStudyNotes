@@ -78,13 +78,19 @@ date of note: 2024-06-01
 - [[Best Linear Unbiased Prediction]]
 - [[Gauss–Markov theorem]]
 
+- [[Partial Correlation]]
+
+### Regularization
+
+- [[LASSO and Sparsity-Induced Least Square]]
+
+
 ### Parametric Estimation
 
 - [[Likelihood Function]]
 - [[Maximum Likelihood Estimation]]
 - [[Maximum Likelihood Estimation via KL Divergence]]
 - [[Conditional Likelihood Function]]
-
 
 ### Exponential Family of Distributions
 
@@ -107,6 +113,12 @@ date of note: 2024-06-01
 - [[Exponential Family and Convex Duality]]
 - [[Exponential Family as Probabilistic Graphical Model]]
 - [[Exponential Family as Affine Subspace in Statistical Manifold]]
+
+### Estimation of Multivariate Gaussian Distribution
+
+- [[Gaussian Random Vector]]
+- [[Inverse Covariance Estimation]]
+- [[Graph LASSO and Structured Learning in Gaussian Graphical Model]]
 
 
 ### Minimaxity and Admissibility

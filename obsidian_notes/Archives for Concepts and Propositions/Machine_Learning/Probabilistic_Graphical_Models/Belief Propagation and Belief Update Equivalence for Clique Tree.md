@@ -58,7 +58,7 @@ date of note: 2024-05-12
 ^64f40c
 
 - [[Clique Tree Invariant of Sum Product and Reparameterization of PGM]]
-
+- [[Clique Tree Invariant of Max-Product and Reparameterization]]
 
 
 ## Explanation

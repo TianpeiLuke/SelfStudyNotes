@@ -143,6 +143,14 @@ date of note: 2024-07-05
 >	- **EM algorithm** guarantee to **maximize** the *marginal log-likelihood* $p_{\theta}(x)$ when converges.
 >	- **VAE** has *no theoretical guarantee* as the choice of the *family of variational densities* (i.e. the function space of **encoder networks**) may not contain the *true posterior density.*
 
+## Variational EM
+
+- [[Variational Expectation-Maximization]]
+- [[Mean Field Approximation]]
+
+## Variational Bayes
+
+- [[Variational Bayesian Learning]]
 
 
 

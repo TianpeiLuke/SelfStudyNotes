@@ -234,7 +234,7 @@ date of note: 2024-06-27
 
 - [[Mathematical Statistics by Shao]] pp 96 - 99
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]]
-- [[Probabilistic Graphical Models by Koller]]
+- [[Probabilistic Graphical Models by Koller]] pp 946 - 9478
 - [[Deep Learning by Goodfellow]] pp 597 - 614
 - [[Convex Analysis by Rockafellar]]
 - [[Convex Optimization by Boyd]]

@@ -59,6 +59,8 @@ date of note: 2024-05-12
 >
 >This property is called the **clique tree invariant.**
 
+^d162e9
+
 
 ### Clique Tree Measure
 
@@ -113,6 +115,11 @@ date of note: 2024-05-12
 - [[Exponential Family of Distributions]]
 - [[Exponential Family and Convex Duality]]
 - [[Characteristic Function of Set]]
+
+## Max-Product Measure
+
+- [[Clique Tree Invariant of Max-Product and Reparameterization]]
+
 
 
 -----------

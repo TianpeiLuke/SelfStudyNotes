@@ -289,6 +289,6 @@ date of note: 2024-05-12
 - [[Markov Network on Undirected Graph]]
 
 
-- [[Probabilistic Graphical Models by Koller]] pp 348- 355
+- [[Probabilistic Graphical Models by Koller]] pp 348- 355, 963 - 966
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]] pp 24
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]
