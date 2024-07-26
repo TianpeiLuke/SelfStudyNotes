@@ -35,11 +35,16 @@ date of note: 2024-05-30
 - [[Radon Measure]]
 - [[Gaussian Measure]]
 - [[Gaussian Random Variable]]
+- [[Gaussian Random Vector]]
+- [[Independence in Gaussian Distribution]]
+- [[Marginal and Conditional Distribution of Gaussian]]
+
 - [[Gaussian Process]]
 - [[Sub-Gaussian Process]]
 - [[Gauss–Markov Process]]
 - [[Wiener Measure as Random Finitely Additive Measures]]
 - [[Tightness of Measures]]
+
 
 ### Functional Analysis of Gaussian Process
 
@@ -148,6 +153,14 @@ date of note: 2024-05-30
 
 ### Gaussian Graphical Models
 
+- [[Independence in Gaussian Distribution]]
+- [[Canonical Form of Gaussian Graphical Model]]
+- [[Gaussian Bayesian Network]]
+- [[Gaussian Graphical Model and Gaussian Markov Random Field]]
+- [[Gaussian Belief Propagation]]
+- [[Inverse Covariance Estimation]]
+- [[Partial Correlation]]
+- [[Graph LASSO and Structured Learning in Gaussian Graphical Model]]
 
 
 

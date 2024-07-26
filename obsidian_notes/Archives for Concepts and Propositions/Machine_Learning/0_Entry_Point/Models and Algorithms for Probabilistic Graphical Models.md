@@ -43,9 +43,11 @@ date of note: 2024-06-01
 
 #### Markov Network
 
+- [[Gibbs Distribution]]
 - [[Markov Network on Undirected Graph]]
 - [[Reduced Markov Networks]]
 - [[Separation in Markov Network]]
+- [[Positive Distribution]]
 - [[Soundness and Faithfulness of Separation in Markov Net]]
 - [[Hammersley-Clifford Theorem]]
 - [[Markov Blanket and Local Markov Independence]]
@@ -55,6 +57,11 @@ date of note: 2024-06-01
 
 - [[Bayesian Network and Markov Network Comparison]]
 - [[Bayesian Network as Markov Network]]
+
+#### Graphical Model with Continuous Variables
+
+- [[Challenges on Graphical Model with Continuous Variables]]
+
 
 #### Graphical Model with Continuous Variables
 
@@ -96,7 +103,6 @@ date of note: 2024-06-01
 - [[Latent Dirichlet Allocation]]
 - [[Restricted Boltzmann Machine]]
 - [[Ising Model]]
-- [[Metric Markov Random Field]]
 
 
 ### Exact Inference for Graphical Model
@@ -176,21 +182,21 @@ date of note: 2024-06-01
 #### Message Passing in Clique Trees
 
 - [[Max-Product Message Passing for Clique Tree]]
-- [[Max-Product Belief Update for Clique Tree]]
-- [[Clique Tree Invariant of Max-Product and Reparameterization]]
+- [[Max-Product Belief Propagation for Clique Tree]]
+- [[Clique Tree Measure for Max-Product and Reparameterization]]
 - [[Decoding Max-Marginal for Graphical Model]]
 
-### Graph Cut Method
+#### Graph Cut Method
 
-- [[Ising Model]]
-- [[Metric Markov Random Field]]
 - [[Graph Cut for MAP Inference in Graphical Model]]
 
 ### Gaussian Graphical Model
 
 - [[Challenges on Graphical Model with Continuous Variables]]
 - [[Canonical Form of Gaussian Graphical Model]]
-- [[Gaussian Graphical Model]]
+- [[Independence in Gaussian Distribution]]
+- [[Gaussian Bayesian Network]]
+- [[Gaussian Graphical Model and Gaussian Markov Random Field]]
 - [[Gaussian Belief Propagation]]
 - [[Inverse Covariance Estimation]]
 - [[Partial Correlation]]
@@ -205,6 +211,7 @@ date of note: 2024-06-01
 
 ### Causal Graphical Model
 
+- [[Concepts and Theorems in Causal Analysis and Causal Machine Learning]]
 - [[Confounding in Conditional Independence]]
 - [[Directed Connection in Causal Graph]]
 

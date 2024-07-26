@@ -209,7 +209,7 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
-- [[Gaussian Graphical Model]]
+- [[Gaussian Graphical Model and Gaussian Markov Random Field]]
 
 - [[Inverse Covariance Estimation]]
 - [[Gaussian Process]]

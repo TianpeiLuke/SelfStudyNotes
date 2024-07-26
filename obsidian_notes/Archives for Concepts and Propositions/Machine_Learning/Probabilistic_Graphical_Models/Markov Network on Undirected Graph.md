@@ -81,6 +81,9 @@ date of note: 2024-05-12
 - [[Exponential Family of Distributions]]
 - [[Log-Partition Function of Exponential Family]]
 
+
+
+
 >[!important] Definition
 >A **Markov network** is a pair $(\mathcal{H}, P_{\Phi})$ where $P_{\Phi}$ *factorizes according to* $\mathcal{H}$, and where $P_{\Phi}$ is specified as a set of *clique potentials* associated with cliques in $\mathcal{H}$. 
 

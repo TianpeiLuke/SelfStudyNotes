@@ -81,7 +81,7 @@ date of note: 2024-05-12
 >or equivalently
 >$$\text{sep}_{\mathcal{H}}(X; Y \,|\, Z) \implies \left( \mathcal{P} \vDash (X \perp Y\,|\,Z)\right)$$
 
-
+- [[Positive Distribution]]
 
 ## Explanation
 
@@ -91,7 +91,7 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
-
+- [[Positive Distribution]]
 - [[I-Map and Independence Assertion]]
 - [[Separation in Markov Network]]
 - [[Markov Network on Undirected Graph]]

@@ -161,6 +161,9 @@ date of note: 2024-05-12
 
 - [[Clique Tree and Graph and Running Intersection Property]]
 - [[Max-Product Variable Elimination]]
+- [[Gibbs Distribution]]
+
+- [[Conditional Probability Query of Graphical Model]]
 
 - [[Markov Network on Undirected Graph]]
 - [[Bayesian Network on Directed Acyclic Graph]]

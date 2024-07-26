@@ -143,8 +143,10 @@ date of note: 2024-07-09
 >$$
 >where $\xi \sim \mathcal{N}(0,I)$.
 
-- [[Linear Regression]]
+^5561cb
 
+- [[Linear Regression]]
+- [[Gaussian Bayesian Network]]
 
 
 ## Explanation

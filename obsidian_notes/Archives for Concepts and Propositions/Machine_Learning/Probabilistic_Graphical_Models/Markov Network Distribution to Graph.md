@@ -27,6 +27,7 @@ date of note: 2024-07-19
 >Then the **Markov network** $\mathcal{H}$ is the **unique minimal $I$-map** for $\mathcal{P}$.
 
 - [[Minimal I-Map]]
+- [[Positive Distribution]]
 
 >[!important] Theorem
 >Let $\mathcal{P}$ be a **positive distribution**.
@@ -37,7 +38,7 @@ date of note: 2024-07-19
 >Then the **Markov network** $\mathcal{H}$ is the **unique minimal $I$-map** for $\mathcal{P}$.
 
 - [[Markov Blanket and Local Markov Independence]]
-
+- [[Positive Distribution]]
 
 
 

@@ -32,9 +32,54 @@ date of note: 2024-05-10
 >$$
 >where $\mu \in \mathbb{R}^n$ and $\Sigma \succ 0$.
 
+^a97326
+
 - [[Positive Semidefinite Transformation]]
 
 ## Explanation
+
+
+
+
+## Exponential Family
+
+>[!important] Definition
+>The **multivariate Gaussian distribution** can be reparameterized according to the **canonical form** of an *exponential family* with  *canonical parameters* $\left( -\frac{1}{2}\Theta, \theta \right)$. That is,
+>$$
+>\begin{align*}
+>p(x; \Theta, \theta) &= \exp \left( -\frac{1}{2} \left\langle \Theta x , x \right\rangle + \left\langle \theta, x \right\rangle - A(\theta, \Theta) \right) \\[5pt]
+>&= \exp \left( \left\langle -\frac{1}{2} \Theta , x x^{T} \right\rangle_{tr} + \left\langle \theta, x \right\rangle - A(\theta, \Theta) \right)
+>\end{align*}
+>$$
+>where $\Theta = \Sigma^{-1}$ is the **precision matrix** and the *inner product* between two matrix is defined as  
+>$$
+>\left\langle  A\,,\,B    \right\rangle_{tr} = \text{tr}\left(A^{T}\,B\right)
+>$$
+>- The bijective map between the **canonical parameters** $(\theta, \Theta)$ and $(\mu, \Sigma)$ is defined as
+>$$
+>\begin{align*}
+> \Theta &= \Sigma^{-1}\\
+> \theta &= \Sigma^{-1}\,\mu
+>\end{align*}
+>$$ 
+>or 
+>$$
+>\begin{align*}
+> \Sigma &= \Theta^{-1}\\
+> \mu &= \Theta^{-1}\,\theta.
+>\end{align*}
+>$$ 
+>- The **log-partition function**
+>$$
+>\begin{align*}
+>A(\theta, \Theta) &= \frac{1}{2}\left[\left\langle \Theta^{-1}\theta , \theta \right\rangle - \log\det(\Theta) +  n \log \left( 2\pi\right) \right]\\[10pt]
+>&= \frac{1}{2}\left(\left\langle \Sigma^{-1}\mu , \mu \right\rangle + \log\det(\Sigma) +  n \log \left( 2\pi\right) \right).
+>\end{align*}
+>$$
+
+
+- [[Exponential Family of Distributions]]
+- [[Log-Partition Function of Exponential Family]]
 
 
 
@@ -44,3 +89,4 @@ date of note: 2024-05-10
 - [[Gaussian Random Variable]]
 - [[Gaussian Measure]]
 - Wikipedia [Multivariate_normal_distribution](https://en.wikipedia.org/wiki/Multivariate_normal_distribution)
+- [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]] 

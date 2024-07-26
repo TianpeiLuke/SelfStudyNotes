@@ -103,6 +103,7 @@ date of note: 2024-05-12
 >
 >The corresponding *marginal information* of $X$ will be sent to $C_{j}$ through message $\delta_{i\to j}$.
 
+- [[Gibbs Distribution]]
 
 ### Asynchronous Sum-Product Message Passing
 
@@ -200,7 +201,7 @@ date of note: 2024-05-12
 
 - [[Parametric Models]]
 - [[Exponential Family of Distributions]]
-- [[Canonical Form of Gaussian Graphical Model]]
+- [[Canonical Form of Canonical Form of Gaussian Graphical Model]]
 
 ## Upward and Downward Pass
 
@@ -289,6 +290,6 @@ date of note: 2024-05-12
 - [[Markov Network on Undirected Graph]]
 
 
-- [[Probabilistic Graphical Models by Koller]] pp 348- 355, 963 - 966
+- [[Probabilistic Graphical Models by Koller]] pp 348- 355, 963 - 966, 963 - 966
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]] pp 24
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]

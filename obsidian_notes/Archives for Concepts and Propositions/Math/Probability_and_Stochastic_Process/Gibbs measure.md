@@ -33,6 +33,10 @@ date of note: 2024-05-14
 >The *normalization factor* $$Z = \int_{\Omega} \exp \left(- \frac{ E(x)}{T}  \right)\; d\mu(x)$$ is called **the partition function**.
 
 
+
+
+
+
 ## Explanation
 
 >[!important]
@@ -51,5 +55,12 @@ date of note: 2024-05-14
 
 -----------
 ##  Recommended Notes and References
+
+- [[Gibbs Distribution]]
+- [[Stimulated Annealing]]
+- [[Restricted Boltzmann Machine]]
+
+- [[Gaussian Random Vector]]
+- [[Gaussian Measure]]
 
 - Wikipedia [Gibbs measure](https://en.wikipedia.org/wiki/Gibbs_measure)
