@@ -188,6 +188,9 @@ date of note: 2024-05-15
 \end{array}\right].
 >$$
 
+^021d3c
+
+- [[Schur Complement and Inversion of Block Matrix]]
 
 
 -----------
