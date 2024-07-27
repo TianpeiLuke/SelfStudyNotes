@@ -93,6 +93,8 @@ date of note: 2024-05-12
 >$$
 >This is similar to a **least equation estimation** problem.
 
+^044857
+
 - [[Convex Optimization Problem]]
 - [[Least Square Estimation]]
 - [[Positive Semidefinite Transformation]]
@@ -133,6 +135,8 @@ date of note: 2024-05-12
 >\end{align*}
 >$$
 >This is a **rank-2 modification**.
+
+^09e0ca
 
 - [[Sherman–Morrison–Woodbury Matrix Inversion Formula]]
 

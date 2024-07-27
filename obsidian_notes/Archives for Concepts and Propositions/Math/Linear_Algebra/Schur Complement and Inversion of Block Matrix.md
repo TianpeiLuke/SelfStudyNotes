@@ -9,7 +9,7 @@ keywords:
 topics:
   - matrix_analysis
   - linear_algebra
-name: Schur Complement
+name: Schur Complement and Inversion of Block Matrix
 date of note: 2024-07-23
 ---
 

@@ -16,7 +16,7 @@ date of note: 2024-07-23
 ## Concept Definition
 
 >[!important]
->**Name**: Sherman-Morrison-Woodbury Matrix Inversion Formula
+>**Name**: *Sherman-Morrison-Woodbury* Matrix Inversion Formula
 
 ![[Schur Complement and Inversion of Block Matrix#^eb8bd3]]
 
@@ -51,7 +51,8 @@ date of note: 2024-07-23
 >$$
 >\begin{align*}
 >\left(A + U\,D\,U^{T}\right)^{-1} &= A^{-1} - A^{-1}\,U\left(D^{-1} + U^{T}\,A^{-1}\,U\right)^{-1}\,U^{T}\,A^{-1} \\[5pt]
->(\text{Kailath Variant})\quad (A + B\,C)^{-1} &= A^{-1} - A^{-1}\,B\,\left(I + C\,A^{-1}\,B\right)^{-1}\,C\,A^{-1} \\[5pt]
+>(\text{Kailath Variant})\;\; (A + B\,C)^{-1} &= A^{-1} - A^{-1}\,B\,\left(I + C\,A^{-1}\,B\right)^{-1}\,C\,A^{-1} \\[5pt]
+>(\text{Push-through Identity})\;\; (I + UV)^{-1}\,U &= U\left(I + VU\right)^{-1} \\[5pt]
 > (I + A\,B)^{-1} &= I - A\,\left(I + BA\right)^{-1}\,B\\[5pt]
 > (I + U\,\Lambda\, U^{T})^{-1} &= I - U\,\left(\Lambda^{-1} + I\right)^{-1}\,U\\[5pt]
 > \left(I + A^{-1}\right)^{-1} &= A\,\left(I + A\right)^{-1} \\[5pt]
@@ -92,11 +93,23 @@ date of note: 2024-07-23
 
 - [[Schur Complement and Inversion of Block Matrix]]
 
+## Applications
+
+
 >[!info]
 >**Sherman-Morrison Formula** can be used as **rank-1 update** formula for *online matrix computation*. 
 
+![[BFGS Algorithm#^09e0ca]]
+
 - [[BFGS Algorithm]]
 - [[Limited Memory BFGS]]
+
+
+
+>[!info]
+>**Woodbury Identity** is used in **Kalman filter** update.
+
+- [[Kalman Filter]]
 
 
 -----------
