@@ -33,7 +33,7 @@ date of note: 2024-07-02
 
 - [[BFGS Algorithm]]
 - [[Secant Equation and Quasi-Newton Methods]]
-- [[Sherman-Morrison-Woodbury Matrix Inversion Formula]]
+- [[Sherman–Morrison–Woodbury Matrix Inversion Formula]]
 
 >[!important] Definition
 >Given a collection of $\{ (s_{i}, y_{i}) \}_{i=k-1}^{k-m}$ and the weight $$\rho_{i} = \frac{1}{y_{i}^T\,s_{i}},$$

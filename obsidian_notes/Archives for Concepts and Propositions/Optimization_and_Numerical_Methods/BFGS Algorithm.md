@@ -134,7 +134,7 @@ date of note: 2024-05-12
 >$$
 >This is a **rank-2 modification**.
 
-- [[Sherman-Morrison-Woodbury Matrix Inversion Formula]]
+- [[Sherman–Morrison–Woodbury Matrix Inversion Formula]]
 
 ## BFGS Updating Formula
 

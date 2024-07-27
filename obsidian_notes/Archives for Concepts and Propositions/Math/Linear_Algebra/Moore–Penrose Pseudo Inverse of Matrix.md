@@ -32,7 +32,7 @@ date of note: 2024-07-26
 ##  Recommended Notes and References
 
 - [[Schur Complement and Inversion of Block Matrix]]
-- [[Sherman-Morrison-Woodbury Matrix Inversion Formula]]
+- [[Sherman–Morrison–Woodbury Matrix Inversion Formula]]
 
 - [[Linear Regression]]
 - [[Least Square Estimation]]

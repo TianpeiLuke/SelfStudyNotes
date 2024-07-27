@@ -36,7 +36,7 @@ date of note: 2024-07-24
 - [[Conditional Independence]]
 
 - [[Schur Complement and Inversion of Block Matrix]]
-- [[Sherman-Morrison-Woodbury Matrix Inversion Formula]]
+- [[Sherman–Morrison–Woodbury Matrix Inversion Formula]]
 
 
 

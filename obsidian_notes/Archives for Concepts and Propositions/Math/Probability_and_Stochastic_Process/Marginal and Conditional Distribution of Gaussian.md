@@ -154,7 +154,7 @@ date of note: 2024-07-25
 ^4a335a
 
 - [[Schur Complement and Inversion of Block Matrix]]
-- [[Sherman-Morrison-Woodbury Matrix Inversion Formula]]
+- [[Sherman–Morrison–Woodbury Matrix Inversion Formula]]
 - [[Exponential Family of Distributions]]
 
 

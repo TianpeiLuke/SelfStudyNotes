@@ -159,7 +159,7 @@ date of note: 2024-05-12
 
 ![[Marginal and Conditional Distribution of Gaussian#^4a335a]]
 
-- [[Sherman-Morrison-Woodbury Matrix Inversion Formula]]
+- [[Sherman–Morrison–Woodbury Matrix Inversion Formula]]
 - [matrix inversion identity](https://en.wikipedia.org/w/index.php?title=Invertible_matrix&action=edit&section=18)
 
 ![[Marginal and Conditional Distribution of Gaussian#^fca789]]

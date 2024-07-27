@@ -64,7 +64,7 @@ date of note: 2024-07-23
 >where  $D^{\dagger}$ is the **generalized inverse** $$D\,D^{\dagger}\,D = D$$
 
 - [[Moore–Penrose Pseudo Inverse of Matrix]]
-- [[Sherman-Morrison-Woodbury Matrix Inversion Formula]]
+- [[Sherman–Morrison–Woodbury Matrix Inversion Formula]]
 
 ## Explanation
 
@@ -259,7 +259,7 @@ date of note: 2024-07-23
 ##  Recommended Notes and References
 
 
-- [[Sherman-Morrison-Woodbury Matrix Inversion Formula]]
+- [[Sherman–Morrison–Woodbury Matrix Inversion Formula]]
 - [[Matrix]]
 - [[General Linear Group]]
 
