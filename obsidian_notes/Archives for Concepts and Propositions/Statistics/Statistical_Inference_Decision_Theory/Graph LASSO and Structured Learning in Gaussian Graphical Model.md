@@ -35,7 +35,7 @@ date of note: 2024-07-24
 - [[Gaussian Graphical Model and Gaussian Markov Random Field]]
 - [[Conditional Independence]]
 
-- [[Schur Complement]]
+- [[Schur Complement and Inversion of Block Matrix]]
 - [[Sherman-Morrison-Woodbury Matrix Inversion Formula]]
 
 

@@ -97,6 +97,8 @@ date of note: 2024-05-12
 >- $g$ is the *log-partition function.*
 >
 
+^162c43
+
 - [[Probabilistic Graphical Models by Koller]] pp 248
 
 ## Explanation
@@ -154,6 +156,7 @@ date of note: 2024-05-12
 >
 >-- [[Probabilistic Graphical Models by Koller]] pp 250
 
+- [[Marginal and Conditional Distribution of Gaussian]]
 
 ## Independence in Gaussian Model
 

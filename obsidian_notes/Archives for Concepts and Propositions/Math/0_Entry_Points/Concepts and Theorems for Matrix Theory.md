@@ -37,8 +37,9 @@ date of note: 2024-07-13
 
 ### Matrix Calculus
 
+- [[Moore–Penrose Pseudo Inverse of Matrix]]
 - [[Sherman-Morrison-Woodbury Matrix Inversion Formula]]
-- [[Schur Complement]]
+- [[Schur Complement and Inversion of Block Matrix]]
 
 
 ### Similarity and Diagonalization

@@ -82,19 +82,21 @@ date of note: 2024-07-25
 >$$
 >Note that the *covariance* of the conditional distribution $\mathcal{P}(Y|X)$ is the **schur complement** of the *covariance matrix* of $X$ $$\Sigma / \Sigma_{x x} := \Sigma_{y y} - \Sigma_{y x}\,\Sigma_{x x}^{-1}\,\Sigma_{x y}.$$
 
+^70f047
+
 
 - [[Conditional Probability]]
 - [[Probability Density Function of Random Variable]]
-- [[Schur Complement]]
+- [[Schur Complement and Inversion of Block Matrix]]
 
-## Reparameterization in Precision Matrix
+## Canonical Parameterization 
 
 >[!important] 
 >Let $(X, Y)$ be *joint normal distribution* defind as 
 >$$
->p(x, y) = \mathcal{N}\left( (x,y);\; \mu,\, \Theta^{-1} \right)
+>p(x, y) = \mathcal{N}\left( (x,y);\; \mu,\, \Sigma \right) = p((x,y); \theta, \Theta)
 >$$
->where the precision matrix $\Theta = \Sigma^{-1}$.
+>where the precision matrix $\Theta = \Sigma^{-1}$ and $\theta = \Sigma^{-1}\mu$. Here $\left( \theta, -\frac{1}{2}\Theta \right)$ forms the **canoincal parameter** of exponential family.
 >
 >Denote the block partition of covariance matrix
 >$$
@@ -109,7 +111,7 @@ date of note: 2024-07-25
 >\end{array}\right].
 >\end{align*}
 >$$
->Since
+>We can derive the mapping between $(\Sigma, \mu)$ and $(\Theta, h)$
 >$$
 >\begin{align*}
 > \Theta &= \left[\begin{array}{cc}
@@ -119,6 +121,22 @@ date of note: 2024-07-25
 >\Sigma_{x x} & \Sigma_{x y} \\
 >\Sigma_{y x} & \Sigma_{y y}
 >\end{array}\right]^{-1} \\[10pt]
+>\theta &= \left[\begin{array}{c}
+>\theta_{x}  \\
+>\theta_{y} 
+>\end{array}\right]  = \left[\begin{array}{cc}
+>\Theta_{x x} & \Theta_{x y} \\
+>\Theta_{y x} & \Theta_{y y}
+>\end{array}\right] \left[\begin{array}{c}
+>\mu_{x}  \\
+>\mu_{y} 
+>\end{array}\right] =  \left[\begin{array}{cc}
+>\Sigma_{x x} & \Sigma_{x y} \\
+>\Sigma_{y x} & \Sigma_{y y}
+>\end{array}\right]^{-1}\,\left[\begin{array}{c}
+>\mu_{x}  \\
+>\mu_{y} 
+>\end{array}\right] 
 >\end{align*}
 >$$
 >Thus by **Schur complement**, and **Matrix Inversion Formula**, we have
@@ -127,12 +145,17 @@ date of note: 2024-07-25
 >\Theta_{y y} &= \left(\Sigma / \Sigma_{x x}\right)^{-1} =  \left(\Sigma_{y y} - \Sigma_{y x}\,\Sigma_{x x}^{-1}\,\Sigma_{x y} \right)^{-1} = \Sigma_{y|x}^{-1} \\[5pt]
 > \Sigma_{y y} &= \left(\Theta / \Theta_{x x}\right)^{-1} = \left(\Theta_{y y} - \Theta_{y x}\,\Theta_{x x}^{-1}\,\Theta_{x y} \right)^{-1} \\[5pt]
 > \Theta_{y x}&= -\left(\Sigma / \Sigma_{x x}\right)^{-1}\,\Sigma_{y x}\,\Sigma_{x x}^{-1}  \\[5pt]
-> \iff \;\; \Theta_{y y}^{-1}\Theta_{y x} &= -\Sigma_{y x}\Sigma_{x x}^{-1} 
+> \iff \;\; \Theta_{y y}^{-1}\Theta_{y x} &= -\Sigma_{y x}\Sigma_{x x}^{-1} \\[5pt]
+> \theta_{y} &= \Theta_{y y}\mu_{y} + \Theta_{y x}\mu_{x}  \\
+> &= \left(\Sigma / \Sigma_{x x}\right)^{-1}\mu_{y} - \left(\Sigma / \Sigma_{x x}\right)^{-1}\,\Sigma_{y x}\,\Sigma_{x x}^{-1}\mu_{x}
 >\end{align*}
 >$$
 
-- [[Schur Complement]]
+^4a335a
+
+- [[Schur Complement and Inversion of Block Matrix]]
 - [[Sherman-Morrison-Woodbury Matrix Inversion Formula]]
+- [[Exponential Family of Distributions]]
 
 
 >[!important] Proposition
@@ -140,6 +163,8 @@ date of note: 2024-07-25
 >$$
 >p(y) = \int_{x \in \mathbb{R}}p(x, y)dx = \mathcal{N}(y\,;\, \mu_{y},\, \left(\Theta / \Theta_{x x}\right)^{-1} ).
 >$$
+
+^fca789
 
 >[!important] Proposition
 >Then the **conditional p.d.f.** of $Y$ given $X$ is from a **normal distribution**
@@ -149,11 +174,44 @@ date of note: 2024-07-25
 >where
 >$$
 >\begin{align*}
-> \mu_{y|x} &= \mu_{y} - \Theta_{y y}^{-1}\,\Theta_{y x}\left(x - \mu_{x}\right) \\[5pt]
+> \mu_{y|x} &= \mu_{y} - \Theta_{y y}^{-1}\,\Theta_{y x}\left(x - \mu_{x}\right) \\[3pt]
+> &= \left(\mu_{y} +  \Theta_{y y}^{-1}\,\Theta_{y x}\mu_{x}\right) - \Theta_{y y}^{-1}\,\Theta_{y x}x  \\[8pt]
 > \Theta_{y y} &= \Sigma_{y | x}^{-1}
 >\end{align*}
 >$$
+>The *potential vector* of joint Gaussian is $\theta =\Sigma^{-1}\mu = \Theta\mu$  we have
+>$$
+>\begin{align*}
+> \theta = \left[\begin{array}{c}
+>\theta_{x}  \\
+>\theta_{y} 
+>\end{array}\right]  &= \left[\begin{array}{cc}
+>\Theta_{x x} & \Theta_{x y} \\
+>\Theta_{y x} & \Theta_{y y}
+>\end{array}\right] \left[\begin{array}{c}
+>\mu_{x}  \\
+>\mu_{y} 
+>\end{array}\right] 
+>\end{align*}
+>$$
+>so
+>$$
+>\theta_{y} = \Theta_{y x}\mu_{x} + \Theta_{y y}\mu_{y}.
+>$$
+>
+>We can find the *potential vector* for condition Gaussian distribution as
+>$$
+>\begin{align*}
+>\theta_{y|x} &= \Sigma_{y | x}^{-1}\mu_{y|x} \\
+>&=\Theta_{y y}\left( \mu_{y}+ \Theta_{y y}^{-1}\,\Theta_{y x}\mu_{x} - \Theta_{y y}^{-1}\,\Theta_{y x}x\right) \\
+>&= \left( \Theta_{y y}\mu_{y} + \Theta_{y x}\mu_{x}\right) - \Theta_{y x}x \\[5pt]
+>&= \theta_{y} - \Theta_{y x}x
+>\end{align*}
+>$$
 
+^0d8021
+
+- [[Canonical Form of Gaussian Graphical Model]]
 
 
 
@@ -173,7 +231,7 @@ date of note: 2024-07-25
 - [[Probability Distribution of Random Variable]]
 
 
-- [[Schur Complement]]
+- [[Schur Complement and Inversion of Block Matrix]]
 - [[Positive Semidefinite Transformation]]
 
 - Wikipedia [Multivariate_normal_distribution](https://en.wikipedia.org/wiki/Multivariate_normal_distribution)

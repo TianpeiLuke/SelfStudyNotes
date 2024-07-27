@@ -43,6 +43,9 @@ date of note: 2024-07-25
 >[!important]
 >if $\mathcal{B}$ is a **linear Gaussian Bayesian network**, then it defines a joint distribution that is **jointly Gaussian**.
 
+
+
+
 ## Joint Distribution
 
 >[!important] Theorem
@@ -53,6 +56,37 @@ date of note: 2024-07-25
 >Then:
 >- The distribution of $Y$ is a **normal distribution** $\mathcal{N}(y; \,\mu_{Y}, \sigma_{Y}^2)$ where $$\mu_{Y} = \beta_{0} + \left\langle \beta , \mu \right\rangle, \quad \sigma_{Y}^2 = \sigma^2 + \left\langle \Sigma \beta , \beta \right\rangle$$
 >- The *joint distribution* over $(X, Y)$ is a **normal distribution** where $$\text{Cov}(X_{i}; Y) = \sum_{j=1}^{k}\beta_{j}\,\text{Cov}(X_{i}; X_{j}) = \sum_{j=1}^{k}\beta_{j}\,\Sigma_{i,j}.$$
+
+>[!important] Theorem
+>Let $(X, Y)$ be a *joint normal distribution* $\mathcal{N}((x,y); \mu, \Sigma)$, 
+>$$
+>\begin{align*}
+> \Sigma &= \left[\begin{array}{cc}
+>\Sigma_{x x} & \Sigma_{x y} \\
+>\Sigma_{y x} & \Sigma_{y y}
+>\end{array}\right] \\[5pt]
+> \mu&= \left[\begin{array}{c}
+>\mu_{x}  \\
+>\mu_{y} 
+>\end{array}\right].
+>\end{align*}
+>$$
+>
+>Then the conditional density 
+>$$
+>p(Y | X) = \mathcal{N}(\beta_{0} + \left\langle  \beta\,,\,X   \right\rangle\,,\, \sigma^2)
+>$$
+>is such that 
+>$$
+>\begin{align*}
+> \beta_{0} &= \mu_{y} - \Sigma_{y x}\Sigma_{x x}^{-1}\mu_{x}\\[5pt]
+> \beta &=  \Sigma_{y x}\Sigma_{x x}^{-1}x\\[5pt]
+> \sigma^2 &= \Sigma_{y y} - \Sigma_{y x}\,\Sigma_{x x}^{-1}\,\Sigma_{x y}.
+>\end{align*}
+>$$
+
+- [[Marginal and Conditional Distribution of Gaussian]]
+
 
 ## I-Map
 
@@ -67,6 +101,14 @@ date of note: 2024-07-25
 - [[Minimal I-Map]]
 - [[Bayesian Network on Directed Acyclic Graph]]
 - [[Local Probabilistic Models]]
+
+>[!quote]
+>This **equivalence** between **Gaussian distributions** and **linear Gaussian networks** has important practical ramifications. On one hand, we can conclude that, for linear Gaussian networks, the joint distribution has a **compact representation** (one that is quadratic in the number of variables). Furthermore, the transformations from the network to the **joint** and back have a fairly *simple and efficiently computable* closed form. Thus, we can easily convert one representation to another, using whichever is more convenient for the current task. Conversely, while the  two representations are equivalent in their *expressive power*, there is **not a one-to-one correspondence** between their **parameterizations**. In particular, although in the worst case, the linear Gaussian representation and the Gaussian representation have the same number of parameters (exercise 7.6), there are cases where one representation can be significantly more compact than the other.
+>
+>-- [[Probabilistic Graphical Models by Koller]] pp 253
+
+
+
 
 
 

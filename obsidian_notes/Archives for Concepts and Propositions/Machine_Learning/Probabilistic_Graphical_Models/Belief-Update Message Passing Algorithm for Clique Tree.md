@@ -65,6 +65,8 @@ date of note: 2024-05-12
 >	- Call **Belief-Update Message Passing** subprocedure to update *clique belief* $\beta_{j}$ in receiving clique and *sepset belief* $\mu_{i,j}$ $$\text{BU-Message}(i, j)$$
 >- *Return*: *all clique beliefs* $\{ \beta_{i}, i\in V(T) \}$
 
+^f0e43c
+
 >[!important] Algorithm
 >The **BU-Message** subprocedure is described as
 >- *Require*: $i$, the *sending* clique index

@@ -118,7 +118,7 @@ date of note: 2024-05-12
 >
 > Note that $K' = K / K_{y y}$ is the **Schur complement** of $K_{y y}$.
 
-- [[Schur Complement]]
+- [[Schur Complement and Inversion of Block Matrix]]
 
 >[!important] Definition
 >Let  $C(x,y; K, h, g)$ be a *canonical form* over $(x,y)$ where 
@@ -139,12 +139,12 @@ date of note: 2024-05-12
 >$$
 >\begin{align*}
 > K' &= K_{x x}  \\[5pt]
-> h' &= h_{x} - K_{x y}h_{y}\\[5pt]
-> g' &= g + \left\langle h_{y} , y \right\rangle + \left\langle K_{y y}^{-1}y \,,\, y \right\rangle 
+> h' &= h_{x} - K_{x y}\,y\\[5pt]
+> g' &= g + \left\langle h_{y} , y \right\rangle - \frac{1}{2}\left\langle K_{y y}\,y \,,\, y \right\rangle 
 >\end{align*}
 >$$
 
-
+- [[Marginal and Conditional Distribution of Gaussian]]
 
 ## Explanation
 
@@ -157,51 +157,17 @@ date of note: 2024-05-12
 >- the **reduction** of of $C$ corresponds to the *conditional distribution* of $X$ given $Y=y$, $$C(x; K', h', g') = \mathcal{N}(x; \mu_{x|Y=y}, \Theta_{xx})$$
 
 
->[!info]
->Note that for $\Theta = \Sigma^{-1}$ i.e.
->$$
->\left[\begin{array}{cc}
->\Sigma_{x x} & \Sigma_{x y} \\
->\Sigma_{y x} & \Sigma_{y y}
->\end{array}\right] = \left[\begin{array}{cc}
->\Theta_{x x} & \Theta_{x y} \\
->\Theta_{y x} & \Theta_{y y}
->\end{array}\right]^{-1}
->$$
->By blockwise inversion formula
->$$
->\begin{align*}
->\Sigma_{x x} = \left( \Theta_{x x}  - \Theta_{x y}\Theta_{y y}^{-1}\Theta_{y x} \right)^{-1} = (\Theta / \Theta_{y y})^{-1}
->\end{align*}
->$$
->
->The **marginalization** of joint Gaussian is Gaussian with parameters as below
->$$
->\int_{y} \mathcal{N}(x,y; \mu, \Theta) dy = \mathcal{N}(x; \mu_{x}, \Sigma_{x x} ) := \mathcal{N}(x; \mu_{x}, \Theta / \Theta_{y y} )
->$$
->where the *precision matrix* for $x$
->$$
->K' = \Sigma_{x x}^{-1} = (\Theta / \Theta_{y y})
->$$
+![[Marginal and Conditional Distribution of Gaussian#^4a335a]]
 
 - [[Sherman-Morrison-Woodbury Matrix Inversion Formula]]
 - [matrix inversion identity](https://en.wikipedia.org/w/index.php?title=Invertible_matrix&action=edit&section=18)
 
->[!info]
->The **conditional distribution** of Gaussian given $Y=x$ is Gaussian with parameters as below
->$$
->\mathcal{N}(x | y; \mu, \Theta)  = \mathcal{N}(x; \mu_{x|y}, \Sigma_{x|y} ) := \mathcal{N}(x; \mu_{x|y}, \Theta_{x x} )
->$$
->where the *precision matrix*  for conditional distribution is the block matrix of $\Theta$.
->$$
->\begin{align*}
->K' &= \Theta_{x x} = \left(\Sigma_{x x} - \Sigma_{x y}\Sigma_{y y}^{-1}\Sigma_{y x} \right)^{-1}\\
->\mu_{x|y} &= \mu_{x} + \Sigma_{x y}\Sigma_{y y}^{-1}(y - \mu_{y})
-\end{align*}
->$$
+![[Marginal and Conditional Distribution of Gaussian#^fca789]]
 
 
+![[Marginal and Conditional Distribution of Gaussian#^0d8021]]
 
+- [[Marginal and Conditional Distribution of Gaussian]]
 
 
 
@@ -209,6 +175,7 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
+- [[Gaussian Belief Propagation]]
 - [[Gaussian Graphical Model and Gaussian Markov Random Field]]
 
 - [[Inverse Covariance Estimation]]
