@@ -231,6 +231,7 @@ date of note: 2024-06-27
 - [[Exponential Family as Probabilistic Graphical Model]]
 - [[Exponential Family and Convex Duality]]
 
+- [[Log-Partition Function and Score Function of Graphical Models]]
 - [[Partition Function for AdaBoost]]
 
 - [[Mathematical Statistics by Shao]] pp 96 - 99
