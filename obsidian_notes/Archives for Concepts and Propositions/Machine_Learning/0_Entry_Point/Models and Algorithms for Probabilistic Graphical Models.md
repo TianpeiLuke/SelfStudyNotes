@@ -45,6 +45,7 @@ date of note: 2024-06-01
 
 - [[Gibbs Distribution]]
 - [[Markov Network on Undirected Graph]]
+- [[Log-Partition Function and Score Function of Graphical Models]]
 - [[Reduced Markov Networks]]
 - [[Separation in Markov Network]]
 - [[Positive Distribution]]
@@ -164,6 +165,7 @@ date of note: 2024-06-01
 
 ### Sampling-based Approximate Inference 
 
+- [[Log-Partition Function and Score Function of Graphical Models]]
 - [[Concepts and Algorithms for Monte Carlo Methods]]
 - [[Markov Chain Monte Carlo Methods]]
 - [[Gibbs Sampling]]

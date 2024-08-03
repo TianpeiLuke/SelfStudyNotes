@@ -124,6 +124,7 @@ date of note: 2024-05-12
 >\log Z \ge \mathcal{L}(\mathcal{Q}, \Phi; \mathcal{X}) 
 >$$
 
+- [[Log-Partition Function and Score Function of Graphical Models]]
 - [[Log-Partition Function of Exponential Family]]
 
 ![[Variational Inference for Clique Tree#^5fe294]]

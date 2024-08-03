@@ -29,6 +29,9 @@ date of note: 2024-05-14
 >- the **unnormalized measure** is defined as $$\hat{\mathcal{P}}_{\Phi} := \prod_{i=1}^{k}\phi(D_{i})$$
 >- and the **partition function** is defined as $$Z = \sum_{x\in \mathcal{X}}\hat{\mathcal{P}}_{\Phi}(x)$$
 
+^ea2e18
+
+- [[Log-Partition Function and Score Function of Graphical Models]]
 - [[Probability Distribution of Random Variable]]
 - [[Markov Network on Undirected Graph]]
 
