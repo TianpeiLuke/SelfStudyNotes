@@ -117,14 +117,14 @@ date of note: 2024-05-12
 >&= \frac{1}{2}\left\{\mu_{j}^2(x, \psi) + \sigma_{j}^2(x, \psi) - 1 - \log \sigma_{j}^2(x, \psi)  \right\} 
 >\end{align*}
 >$$
->- The first term can be approximated using **Monte-Carlo estimator** $$\mathbb{E}_{Z_{i} \sim q }\left[  \log p_{\theta}(X_{i} | Z_{i}) \right] \approx \frac{1}{L} \sum_{l=1}^{L}\log p_{\theta}(X_{i} | Z_{i}^{l})$$ where $\{ Z_{i}^{l} \}_{l=1}^{L} \sim q(z|X_{i}, \psi)$ are **samples** drawn from the *encoder distribution* $q$.
+>- The first term can be approximated using **Monte-Carlo estimator** $$\mathbb{E}_{Z_{i} \sim q }\left[  \log p_{\theta}(X_{i} | Z_{i}) \right] \approx \frac{1}{L} \sum_{l=1}^{L}\log p_{\theta}(X_{i} | Z_{i}^{l})$$ where $\{ Z_{i}^{l} \}_{l=1}^{L} \sim q(z|X_{i}, \psi)$ are **samples** drawn from the *encoder distribution* $q.$
 >  
 
 
 ![[VAE_ELBO_backprop.png]]
 
 >[!info]
->Our **goal** is the use back-propagation to take gradient of $\mathcal{L}$ with respec to both $\theta$ and $\psi$. 
+>Our **goal** is the use back-propagation to take gradient of $\mathcal{L}$ with respec to both $\theta$ and $\psi.$
 >
 >However, when we use the *Monte-Carlo estimator*
 >$$\mathbb{E}_{Z_{i} \sim q }\left[  \log p_{\theta}(X_{i} | Z_{i}) \right] \approx \frac{1}{L} \sum_{l=1}^{L}\log p_{\theta}(X_{i} | Z_{i}^{l}),$$,the *samples* $\{ Z_{i}^{l} \}_{l=1}^{L} \sim q(z|X_{i}, \psi)$  from the *encoder distribution* $q$ are **fixed**.

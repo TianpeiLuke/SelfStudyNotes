@@ -214,7 +214,7 @@ date of note: 2024-05-12
 >[!info]
 >This algorithm is close to the **Sum-Product Message Passing Algorithm** in graphical model
 
-- [[Sum-Product Message Passing Algorithm for Clique Tree]]
+- [[Sum-Product Belief Propagation Algorithm for Clique Tree]]
 
 ## Explanation
 

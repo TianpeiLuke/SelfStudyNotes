@@ -84,6 +84,12 @@ date of note: 2024-05-12
 >- Compute the  **product** of *all factors* that have *eliminated all variables* in $\mathcal{Z}$: $$\phi^{*} = \prod_{\phi \in \Phi_{k}}\phi$$
 >- *Output*: $\phi^{*}$.
 
+^45fe7e
+
+
+>[!info]
+>Note that both [[Sum-Product Belief Propagation Algorithm for Clique Tree]], and [[Sum-Product Belief-Update Expectation Propagation Algorithm]], provide a clique tree ordering for the above variable elimination.
+
 
 >[!important] Theorem
 >Let $\mathcal{X}$ be some set of variables, and let $\Phi$ be a set of *factors* such that for each $\phi\in \Phi$, $$\text{scope}[\phi] \subseteq \mathcal{X}.$$
@@ -150,8 +156,8 @@ date of note: 2024-05-12
 
 ## Dynamic Programming Algorithms
 
-- [[Sum-Product Message Passing Algorithm for Clique Tree]]
-- [[Belief-Update Message Passing Algorithm for Clique Tree]]
+- [[Sum-Product Belief Propagation Algorithm for Clique Tree]]
+- [[Sum-Product Belief-Update Message Passing Algorithm for Clique Tree]]
 - [[Belief Propagation and Belief Update Equivalence for Clique Tree]]
 
 

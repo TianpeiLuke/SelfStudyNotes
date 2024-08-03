@@ -92,10 +92,14 @@ date of note: 2024-07-09
 
 ### Rule CPDs
 
+^f730de
+
 >[!important] Definition
 >A **rule** $\rho$ is a pair $<c; p >$ where $c$ is an *assignment* to some subset of variables $C$, and $p\in [0,1].$
 >
 >We define $C$ to be the **scope** of $\rho$, denoted $\text{Scope}[\rho].$
+
+^8f6b15
 
 
 >[!info]
@@ -110,6 +114,8 @@ date of note: 2024-07-09
 >- For each *rule* $\rho \in \mathcal{R}$, we have the $$\text{scope}[\rho] \subset \{ X_{i}, X_{Pa_{i}} \}$$
 >- For each *assignment* $(x, u) \in \{ X_{i}, X_{Pa_{i}} \}$, we have **precisely one rule** $<c; p>$ where $c$ is the assignment on rule condition and $p\in [0,1]$, such that $c$ is *compatible* with $(x,u)$. In this case, we say $$P(X_{i} = x | X_{Pa(i)} = u) = p$$
 >- The resulting CPD $P(X | U)$ is *legal CPD* in that $$\sum_{x}P(X_{i} = x | X_{Pa(i)} = u) = 1, \;\;\forall \text{ assignment }u.$$
+
+^98dd1f
 
 
 - [[Probabilistic Graphical Models by Koller]] pp 168

@@ -17,9 +17,9 @@ date of note: 2024-05-12
 >[!important]
 >**Name**: Belief Propagation and Belief Update Equivalence for Clique Tree
 
-![[Sum-Product Message Passing Algorithm for Clique Tree#^d4e300]]
+![[Sum-Product Belief Propagation Algorithm for Clique Tree#^d4e300]]
 
-![[Belief-Update Message Passing Algorithm for Clique Tree#^73ff45]]
+![[Sum-Product Belief-Update Message Passing Algorithm for Clique Tree#^73ff45]]
 
 >[!important] Theorem (Equivalence of Sum-Product and Belief Update Algorithms)
 >Let $T$ be a clique tree.
@@ -70,8 +70,8 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
-- [[Sum-Product Message Passing Algorithm for Clique Tree]]
-- [[Belief-Update Message Passing Algorithm for Clique Tree]]
+- [[Sum-Product Belief Propagation Algorithm for Clique Tree]]
+- [[Sum-Product Belief-Update Message Passing Algorithm for Clique Tree]]
 
 - [[Clique Tree and Graph and Running Intersection Property]]
 

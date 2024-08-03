@@ -25,7 +25,7 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 - [[Information Projection and Moment Projection]]
-- [[Sum-Product Message Passing Algorithm for Clique Tree]]
+- [[Sum-Product Belief Propagation Algorithm for Clique Tree]]
 
 - [[Maximum Entropy Learning]]
 - [[Kullback-Leibler Divergence]]

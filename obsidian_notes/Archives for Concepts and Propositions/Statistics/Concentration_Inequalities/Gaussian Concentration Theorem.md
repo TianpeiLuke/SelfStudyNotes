@@ -38,6 +38,7 @@ date of note: 2024-05-29
 ^e48f3e
 
 
+- [[Gaussian Quantile Function or Probit Function]]
 - [[Gaussian Cumulative Distribution Function]]
 - [[Gaussian Measure]]
 - [[Gaussian Random Variable]]

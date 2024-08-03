@@ -25,7 +25,7 @@ date of note: 2024-05-12
 >[!important]
 >In the same way that we used **dynamic programming** to modify the sum-product variable elimination algorithm to the case of clique trees, we can also modify the **max-product algorithm** to define a **max-product belief propagation algorithm** in clique trees.
 
-- [[Sum-Product Message Passing Algorithm for Clique Tree]]
+- [[Sum-Product Belief Propagation Algorithm for Clique Tree]]
 
 >[!important] Algorithm
 >The **MP-Message** subprocedure is described as

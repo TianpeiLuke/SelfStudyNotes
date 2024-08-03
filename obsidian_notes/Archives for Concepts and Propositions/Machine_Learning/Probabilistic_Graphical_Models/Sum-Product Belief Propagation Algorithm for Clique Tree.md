@@ -49,6 +49,8 @@ date of note: 2024-05-12
 >2. It then **sums out** all variables **except** those in the **sepset** between $C_{i}$ and $C_{j}$, 
 >3. Finally, it **sends** the resulting factor as a **message** to $C_{j}$. 
 
+^c3b4f5
+
 - [[Clique Tree and Graph and Running Intersection Property]]
 
 >[!important] Definition
@@ -201,7 +203,7 @@ date of note: 2024-05-12
 
 - [[Parametric Models]]
 - [[Exponential Family of Distributions]]
-- [[Canonical Form of Canonical Form of Gaussian Graphical Model]]
+- [[Canonical Form of Gaussian Graphical Model]]
 
 ## Upward and Downward Pass
 
@@ -258,7 +260,7 @@ date of note: 2024-05-12
 
 ## Belief Update Algorithm
 
-- [[Belief-Update Message Passing Algorithm for Clique Tree]]
+- [[Sum-Product Belief-Update Message Passing Algorithm for Clique Tree]]
 - [[Belief Propagation and Belief Update Equivalence for Clique Tree]]
 
 ## Variational Inference Perspective and Fixed Point Algorithm

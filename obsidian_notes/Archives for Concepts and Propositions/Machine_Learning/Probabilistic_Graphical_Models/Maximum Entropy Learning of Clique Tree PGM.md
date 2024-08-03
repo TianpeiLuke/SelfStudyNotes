@@ -85,8 +85,8 @@ date of note: 2024-05-12
 >[!info]
 >The optimal solution can be found via **belief propagation algorithm** or **belief update algorithm**.
 
-- [[Sum-Product Message Passing Algorithm for Clique Tree]]
-- [[Belief-Update Message Passing Algorithm for Clique Tree]]
+- [[Sum-Product Belief Propagation Algorithm for Clique Tree]]
+- [[Sum-Product Belief-Update Message Passing Algorithm for Clique Tree]]
 
 ## Explanation
 

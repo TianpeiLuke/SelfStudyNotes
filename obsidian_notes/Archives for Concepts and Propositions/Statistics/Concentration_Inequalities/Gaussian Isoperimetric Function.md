@@ -29,6 +29,7 @@ date of note: 2024-05-29
 
 ^fcd238
 
+- [[Gaussian Quantile Function or Probit Function]]
 - [[Gaussian Cumulative Distribution Function]]
 - [[Cumulative Distribution Function of Random Variable]]
 - [[Radon-Nikodym Derivative]]
@@ -135,7 +136,7 @@ date of note: 2024-05-29
 -----------
 ##  Recommended Notes and References
 
-
+- [[Gaussian Quantile Function or Probit Function]]
 - [[Gaussian Random Variable]]
 - [[Radon-Nikodym Derivative]]
 - [[Cumulative Distribution Function of Random Variable]]

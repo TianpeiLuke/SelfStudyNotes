@@ -38,6 +38,8 @@ date of note: 2024-05-12
 >\mathcal{F}_{\mathcal{D}} = \{0, 1\}^{\mathcal{D}}
 >$$
 
+^0ab3b0
+
 - [[Restriction of Function Class to Data]]
 
 ## Explanation

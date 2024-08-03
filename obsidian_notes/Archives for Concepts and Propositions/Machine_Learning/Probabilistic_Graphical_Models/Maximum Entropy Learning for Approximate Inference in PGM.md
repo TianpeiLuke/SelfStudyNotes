@@ -129,7 +129,7 @@ date of note: 2024-05-12
 - [[Exponential Family of Distributions]]
 - [[Factorized Message for Approximate Belief Propagation]]
 - [[Sum-Product Expectation Propagation Algorithm]]
-- [[Belief-Update Expectation Propagation Algorithm]]
+- [[Sum-Product Belief-Update Expectation Propagation Algorithm]]
 - [[Expectation Propagation and Exponential Family Messages]]
 - [[Variational Inference Formulation of Expectation Propagation]]
 

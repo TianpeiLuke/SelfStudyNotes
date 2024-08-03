@@ -101,6 +101,7 @@ date of note: 2024-06-01
 
 
 
+- [[Foundations of Machine Learning by Mohri]]
 - [[Understanding Machine Learning by Shalev-Shwartz]]
 - [[Reinforcement Learning An Introduction by Sutton]]
 - [[Markov Decision Processes by Puterman]]

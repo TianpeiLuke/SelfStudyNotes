@@ -39,6 +39,8 @@ date of note: 2024-04-18
 >- The *minimal number* of $n_{\mathcal{H}}$ satisfying above inequality is called the **sample complexity** of *learning* $\mathcal{H}$.
 >- When such an algorithm $\mathcal{A}$ exists, it is called a **PAC-learning algorithm** *for* $\mathcal{H}$.
 
+^500325
+
 - [[Realizability Assumption for Empirical Risk Minimization]]
 - [[Empirical Risk Minimization]]
 
@@ -116,8 +118,9 @@ date of note: 2024-04-18
 >
 >For other classification, Glivenko-Cantelli class is a **sufficient condition** only.
 
+## Weak PAC Learnable 
 
-
+- [[Weak PAC Learnablity]]
 
 
 -----------
@@ -128,7 +131,9 @@ date of note: 2024-04-18
 
 - [[Empirical Risk Minimization]]
 
+- [[Foundations of Machine Learning by Mohri]] pp 11 - 15, 24
 - [[Understanding Machine Learning by Shalev-Shwartz]]
-- [[Boosting Foundations and Algorithms by Schapire]]
+- [[Boosting Foundations and Algorithms by Schapire]] pp 45
+- [[Probabilistic Graphical Models by Koller]]
 
 - Github Note [link](https://github.com/TianpeiLuke/SelfStudyNotes/tree/master/self-study/statistical_learning_theory)

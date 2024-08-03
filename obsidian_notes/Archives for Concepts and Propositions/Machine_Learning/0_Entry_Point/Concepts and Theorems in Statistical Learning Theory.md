@@ -30,6 +30,7 @@ date of note: 2024-06-01
 - [[Symmetrized Empirical Process]]
 - [[Talagrand Contraction Principle]]
 - [[Rademacher Complexity]]
+- [[Uniform Bound via Rademacher Complexity]]
 - [[Rademacher Complexity Lower Bound for Suprema of Empirical Process]]
 - [[Rademacher Complexity Upper Bound for Suprema of Empirical Process]]
 
@@ -48,9 +49,17 @@ date of note: 2024-06-01
 - [[Statistical Learning via Statistical Decision Theory]]
 - [[Realizability Assumption for Empirical Risk Minimization]]
 - [[PAC Learnable and Agnostic PAC Learnable]]
-- [[Bias-Variance Tradeoff]]
+- [[Generalization Error Bound for Binary Classification Finite Case]]
+- [[Generalization Error Bound for Binary Classification VC Dimension]]
+- [[Rademacher Complexity]]
+- [[Rademacher Complexity Bound for Binary Classification]]
 
+
+### Regularization and Structural Risk Minimization
+
+- [[Bias-Variance Tradeoff]]
 - [[Regularization in Optimization]]
+- [[Non-Uniform Learning]]
 - [[Structural Risk Minimization]]
 - [[PAC-Bayes Learnable]]
 
@@ -59,6 +68,19 @@ date of note: 2024-06-01
 
 
 
+### Boosting and Ensemble Learning
+
+- [[Concepts and Theorems in Boosting and Ensemble Learning]]
+- [[AdaBoost Algorithm]]
+
+- [[Generalization Error Bound for AdaBoost Finite Case]]
+- [[Generalization Error Bound for AdaBoost VC Dimension]]
+- [[Weak PAC Learnablity]]
+- [[Empirical Weak Learning Assumption]]
+- [[Equivalence of Strong and Weak Learnability]]
+
+- [[Rademacher Complexity of a Convex Hull of Function Class]]
+- [[Generalization Error Bound for AdaBoost Rademacher Complexity]]
 
 ### Reproducing Kernel Hilbert Space
 
@@ -70,16 +92,19 @@ date of note: 2024-06-01
 - [[Covariance Function of Gaussian Process]]
 
 
+### Margin-based Generalization Bound
+
+- [[Margin as a Measure of Classification Confidence]]
+
+
 ### Probabilistic Graphical Model
 
 - [[Models and Algorithms for Probabilistic Graphical Models]]
 - [[Probabilistic Graphical Models]]
 
-
 ### Gaussian Process
 
 - [[Concepts and Theorems for Gaussian Process]]
-
 
 ### Deep Learning
 
@@ -95,6 +120,8 @@ date of note: 2024-06-01
 - [[Models and Algorithms for Online Learning]]
 
 
+
+
 ## Explanation
 
 
@@ -104,6 +131,8 @@ date of note: 2024-06-01
 -----------
 ##  Recommended Notes and References
 
+
+- [[Foundations of Machine Learning by Mohri]]
 - [[Understanding Machine Learning by Shalev-Shwartz]]
 - [[Boosting Foundations and Algorithms by Schapire]]
 - [[Elements of Statistical Learning by Hastie]]
@@ -111,9 +140,10 @@ date of note: 2024-06-01
 
 - [[Probabilistic Graphical Models by Koller]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]
-- [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]]
 
 
 
+- [[Concentration Inequalities by Boucheron]]
 - [[Mathematical Foundations of Infinite Dimensional Statistical Models by Gine]]
 - [[High Dimensional Statistics A Non-Asymptotic Viewpoint by Wainwright]]
+- [[High Dimensional Probability An Introduction by Vershynin]]

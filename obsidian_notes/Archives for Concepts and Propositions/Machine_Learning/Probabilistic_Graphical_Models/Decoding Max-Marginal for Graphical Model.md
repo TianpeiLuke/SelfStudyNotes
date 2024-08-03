@@ -68,7 +68,7 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
-- [[Max-Product Message Passing for Clique Tree]]
+- [[Max-Product Belief Propagation for Clique Tree]]
 - [[Max-Product Belief Update for Clique Tree]]
 - [[Max-Product Variable Elimination]]
 

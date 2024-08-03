@@ -57,4 +57,5 @@ date of note: 2024-05-12
 - [[Empirical Process and Empirical Measure]]
 
 - [[Understanding Machine Learning by Shalev-Shwartz]]
+- [[Foundations of Machine Learning by Mohri]] pp 17
 

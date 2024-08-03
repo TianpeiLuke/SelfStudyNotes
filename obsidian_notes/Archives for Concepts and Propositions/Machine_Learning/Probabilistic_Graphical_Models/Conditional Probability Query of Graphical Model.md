@@ -36,10 +36,10 @@ date of note: 2024-07-07
 
 
 - [[Sum-Product Variable Elimination]]
-- [[Sum-Product Message Passing Algorithm for Clique Tree]]
+- [[Sum-Product Belief Propagation Algorithm for Clique Tree]]
 - [[Sum-Product Expectation Propagation Algorithm]]
-- [[Belief-Update Message Passing Algorithm for Clique Tree]]
-- [[Belief-Update Expectation Propagation Algorithm]]
+- [[Sum-Product Belief-Update Message Passing Algorithm for Clique Tree]]
+- [[Sum-Product Belief-Update Expectation Propagation Algorithm]]
 
 
 - [[Maximum A Posteriori Probability Query of Graphical Model]]

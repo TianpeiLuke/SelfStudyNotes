@@ -36,6 +36,8 @@ date of note: 2024-05-30
 - [[Gaussian Measure]]
 - [[Gaussian Random Variable]]
 - [[Gaussian Random Vector]]
+- [[Gaussian Cumulative Distribution Function]]
+- [[Gaussian Quantile Function or Probit Function]]
 - [[Independence in Gaussian Distribution]]
 - [[Marginal and Conditional Distribution of Gaussian]]
 

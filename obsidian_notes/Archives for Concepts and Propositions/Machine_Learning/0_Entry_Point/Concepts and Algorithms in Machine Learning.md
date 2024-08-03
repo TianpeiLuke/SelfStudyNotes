@@ -28,16 +28,22 @@ date of note: 2024-06-01
 - [[k Nearest Neighbor Classification]]
 - [[k Nearest Neighbor Estimation]]
 
-#### Boosting
+#### Ensemble Learning and Boosting
 
-- [[AdaBoost Method]]
-- [[Gradient Boosting Trees]]
+- [[Concepts and Theorems in Boosting and Ensemble Learning]]
+
+- [[Ensemble Learning]]
+- [[AdaBoost Algorithm]]
+- [[Functional Gradient Descent]]
+
+
 
 #### Support Vector Machine and Kernel Methods
 
 - [[Reproducing Kernel Hilbert Space]]
 - [[Representation of Evaluational Functional in RKHS]]
 - [[Reproducing Kernel of RKHS]]
+- [[Margin as a Measure of Classification Confidence]]
 - [[Support Vector Machine]]
 
 #### Expectation-Maximization 
@@ -109,6 +115,8 @@ date of note: 2024-06-01
 -----------
 ##  Recommended Notes and References
 
+
+- [[Foundations of Machine Learning by Mohri]]
 - [[Understanding Machine Learning by Shalev-Shwartz]]
 - [[Boosting Foundations and Algorithms by Schapire]]
 - [[Elements of Statistical Learning by Hastie]]

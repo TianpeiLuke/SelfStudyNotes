@@ -72,6 +72,9 @@ date of note: 2024-05-12
 
 - [[PAC Learnable and Agnostic PAC Learnable]]
 - [[Bounded Difference Inequality]]
+
+
+- [[Foundations of Machine Learning by Mohri]] pp 41 - 47
 - [[Understanding Machine Learning by Shalev-Shwartz]]
 
 - [[Empirical Process and Empirical Measure]]

@@ -18,9 +18,9 @@ date of note: 2024-05-12
 >[!important]
 >**Name**: Sum-Product Message Passing Algorithm Analysis for Clique Tree
 
-![[Sum-Product Message Passing Algorithm for Clique Tree#^d4e300]]
+![[Sum-Product Belief Propagation Algorithm for Clique Tree#^d4e300]]
 
-![[Sum-Product Message Passing Algorithm for Clique Tree#^1e148a]]
+![[Sum-Product Belief Propagation Algorithm for Clique Tree#^1e148a]]
 
 ### Correctness
 
@@ -29,7 +29,7 @@ date of note: 2024-05-12
 >
 >Then $X$ does **not appear** anywhere in the tree on $C_{j}$ **side** of the **edge** $ij\in E(T)$.
 
-- [[Sum-Product Message Passing Algorithm for Clique Tree]]
+- [[Sum-Product Belief Propagation Algorithm for Clique Tree]]
 - [[Clique Tree and Graph and Running Intersection Property]]
 - [[Paths in Graph and Length of Path]]
 

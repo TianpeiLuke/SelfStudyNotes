@@ -20,7 +20,7 @@ date of note: 2024-05-12
 
 
 >[!info]
->In [[Sum-Product Message Passing Algorithm for Clique Tree]], the **clique belief** is updated via  $$\beta_{i} = \psi_{i}\,\cdot\prod_{k\in N(i)}\delta_{k\to i}$$ 
+>In [[Sum-Product Belief Propagation Algorithm for Clique Tree]], the **clique belief** is updated via  $$\beta_{i} = \psi_{i}\,\cdot\prod_{k\in N(i)}\delta_{k\to i}$$ 
 >As we discussed, this final potential is not used in computing the message to $C_j$: this potential *already incorporates the information* (message) passed **from** $C_{j}$; if we used it when computing the message **to** $C_{j}$, this information would be **double-counted.** 
 >
 >Thus, the message from $C_i$ to $C_j$ is computed in a way that **omits the information obtained from** $C_j$: 
@@ -124,7 +124,7 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 - [[Belief Propagation and Belief Update Equivalence for Clique Tree]]
-- [[Sum-Product Message Passing Algorithm for Clique Tree]]
+- [[Sum-Product Belief Propagation Algorithm for Clique Tree]]
 
 - [[Clique Tree and Graph and Running Intersection Property]]
 

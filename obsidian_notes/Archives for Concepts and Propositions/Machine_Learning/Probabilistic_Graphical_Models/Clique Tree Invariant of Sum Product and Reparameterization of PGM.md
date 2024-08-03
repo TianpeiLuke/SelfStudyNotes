@@ -21,9 +21,9 @@ date of note: 2024-05-12
 >[!important]
 >**Name**: Clique Tree Measure for Sum-Product and Reparameterization
 
-![[Sum-Product Message Passing Algorithm for Clique Tree#^1e148a]]
+![[Sum-Product Belief Propagation Algorithm for Clique Tree#^1e148a]]
 
-![[Sum-Product Message Passing Algorithm for Clique Tree#^d4e300]]
+![[Sum-Product Belief Propagation Algorithm for Clique Tree#^d4e300]]
 
 ### Convergence Distribution
 
@@ -40,7 +40,7 @@ date of note: 2024-05-12
 >\end{align*}
 >$$
 
-- [[Sum-Product Message Passing Algorithm for Clique Tree]]
+- [[Sum-Product Belief Propagation Algorithm for Clique Tree]]
 
 >[!important] Proposition
 >At **convergence** of the **belief propagation algorithm**, we have 
@@ -129,9 +129,9 @@ date of note: 2024-05-12
 - [[Clique Tree Calibration]]
 - [[Clique Tree and Graph and Running Intersection Property]]
 
-- [[Sum-Product Message Passing Algorithm for Clique Tree]]
+- [[Sum-Product Belief Propagation Algorithm for Clique Tree]]
 - [[Correctness of Belief Propagation for Clique Tree]]
-- [[Belief-Update Message Passing Algorithm for Clique Tree]]
+- [[Sum-Product Belief-Update Message Passing Algorithm for Clique Tree]]
 
 
 - [[Probabilistic Graphical Models by Koller]] pp 361 - 363

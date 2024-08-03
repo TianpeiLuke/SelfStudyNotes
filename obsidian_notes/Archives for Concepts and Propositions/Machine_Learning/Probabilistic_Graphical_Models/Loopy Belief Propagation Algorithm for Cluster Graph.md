@@ -31,8 +31,8 @@ date of note: 2024-05-12
 - [[Maximum Entropy Learning of Clique Tree PGM]]
 - [[Variational Inference for Clique Tree]]
 
-- [[Sum-Product Message Passing Algorithm for Clique Tree]]
-- [[Belief-Update Message Passing Algorithm for Clique Tree]]
+- [[Sum-Product Belief Propagation Algorithm for Clique Tree]]
+- [[Sum-Product Belief-Update Message Passing Algorithm for Clique Tree]]
 
 - [[Cluster Graph and Family Preservation]]
 - [[Clique Tree and Graph and Running Intersection Property]]

@@ -88,7 +88,8 @@ date of note: 2024-06-02
 
 - [[VC Dimension]]
 - [[Empirical Process and Empirical Measure]]
-
+- [[Packing Number of Metric Space]]
+- [[Covering Number of Metric Space]]
 
 
 - [[Mathematical Foundations of Infinite Dimensional Statistical Models by Gine]]

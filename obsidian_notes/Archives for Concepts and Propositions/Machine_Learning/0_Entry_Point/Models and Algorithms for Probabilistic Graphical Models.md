@@ -118,11 +118,11 @@ date of note: 2024-06-01
 #### Message Passing in Clique Trees
 
 - [[Clique Tree and Graph and Running Intersection Property]]
-- [[Sum-Product Message Passing Algorithm for Clique Tree]]
+- [[Sum-Product Belief Propagation Algorithm for Clique Tree]]
 - [[Correctness of Belief Propagation for Clique Tree]]
 - [[Clique Tree Calibration]]
 - [[Clique Tree Invariant of Sum Product and Reparameterization of PGM]]
-- [[Belief-Update Message Passing Algorithm for Clique Tree]]
+- [[Sum-Product Belief-Update Message Passing Algorithm for Clique Tree]]
 - [[Belief Propagation and Belief Update Equivalence for Clique Tree]]
 
 #### Exact Inference via Maximum Entropy Learning
@@ -153,7 +153,7 @@ date of note: 2024-06-01
 
 - [[Factorized Message for Approximate Belief Propagation]]
 - [[Sum-Product Expectation Propagation Algorithm]]
-- [[Belief-Update Expectation Propagation Algorithm]]
+- [[Sum-Product Belief-Update Expectation Propagation Algorithm]]
 - [[Expectation Propagation and Exponential Family Messages]]
 - [[Variational Inference Formulation of Expectation Propagation]]
 
@@ -181,9 +181,9 @@ date of note: 2024-06-01
 
 #### Message Passing in Clique Trees
 
-- [[Max-Product Message Passing for Clique Tree]]
 - [[Max-Product Belief Propagation for Clique Tree]]
-- [[Clique Tree Measure for Max-Product and Reparameterization]]
+- [[Max-Product Belief Update for Clique Tree]]
+- [[Clique Tree Invariant of Max-Product and Reparameterization]]
 - [[Decoding Max-Marginal for Graphical Model]]
 
 #### Graph Cut Method

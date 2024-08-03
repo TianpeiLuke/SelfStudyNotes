@@ -231,6 +231,7 @@ date of note: 2024-06-27
 - [[Exponential Family as Probabilistic Graphical Model]]
 - [[Exponential Family and Convex Duality]]
 
+- [[Partition Function for AdaBoost]]
 
 - [[Mathematical Statistics by Shao]] pp 96 - 99
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]]

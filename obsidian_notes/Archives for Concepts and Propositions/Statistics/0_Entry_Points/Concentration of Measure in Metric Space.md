@@ -72,6 +72,8 @@ date of note: 2024-05-11
 - [[Blowup of Sets]]
 - [[Gaussian Measure]]
 - [[Gaussian Random Variable]]
+- [[Gaussian Cumulative Distribution Function]]
+- [[Gaussian Quantile Function or Probit Function]]
 - [[Gaussian Isoperimetric Function]]
 
 ![[Bobkov Inequality#^74be32]]

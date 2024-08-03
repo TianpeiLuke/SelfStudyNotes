@@ -193,5 +193,9 @@ date of note: 2024-05-12
 
 - [[Empirical Process and Empirical Measure]]
 
+
+- [[Foundations of Machine Learning by Mohri]]
 - [[Understanding Machine Learning by Shalev-Shwartz]]
+- [[Boosting Foundations and Algorithms by Schapire]] pp 43 - 45
+- [[Probabilistic Graphical Models by Koller]]
 

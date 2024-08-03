@@ -85,10 +85,10 @@ date of note: 2024-07-14
 - [[Sarsa Algorithm and On-Policy Temporal Difference Control]]
 
 
-
 ### Boosting
 
-
+- [[Online Learning Perspective for AdaBoost]]
+- [[Concepts and Theorems in Boosting and Ensemble Learning]]
 
 
 
@@ -107,6 +107,8 @@ date of note: 2024-07-14
 - [[Online Learning and Online Convex Optimization by Shalev-Shwartz]]
 - [[Introduction to Online Convex Optimization by Hazan]]
 
+
+- [[Foundations of Machine Learning by Mohri]]
 - [[Understanding Machine Learning by Shalev-Shwartz]]
 - [[Boosting Foundations and Algorithms by Schapire]]
 - [[Elements of Statistical Learning by Hastie]]

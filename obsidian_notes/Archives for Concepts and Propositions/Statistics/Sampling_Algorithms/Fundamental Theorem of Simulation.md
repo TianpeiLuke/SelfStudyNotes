@@ -25,10 +25,13 @@ date of note: 2024-07-09
 >Thus $f$ is the **marginal density** of the *joint distribution* $$(X, U) \sim \mathcal{U}\left\{ (x,u):  0 < u < f(x) \right\}. $$
 
 
+- [[Quantile Function]]
 - [[Hypograph or Subgraph of Function]]
 - [[Probability Density Function of Random Variable]]
 - [[Fubini Theorem]]
+
 - [[Monte Carlo Statistical Methods by Robert]] pp 47
+
 
 >[!important] Corollary
 >Let $X \sim f(x)$ and let $g(x)$ be a *density function* that satisfies 

@@ -19,6 +19,29 @@ date of note: 2024-05-14
 ## Explanation
 
 
+## Applications
+
+
+### Exponential Family
+
+- [[Maximum Entropy Learning of Exponential Family]]
+
+
+### Boosting
+
+- [[Iterative Maximum Entropy Learning for AdaBoost]]
+
+
+### Probabilistic Graphical Model
+
+- [[Maximum Entropy Learning of Clique Tree PGM]]
+- [[Variational Inference for Clique Tree]]
+- [[Maximum Entropy Learning for Approximate Inference in PGM]]
+
+
+### Reinforcement Learning
+
+- [[Maximum Entropy Reinforcement Learning]]
 
 
 
@@ -29,6 +52,8 @@ date of note: 2024-05-14
 - [[Polyhedron and Polytope]]
 
 - [[Gibbs measure]]
+
+
 - [[Variational Formula for Kullback-Leibler Divergence]]
 - [[Kullback-Leibler Divergence]]
 - [[Probabilistic Graphical Models]]

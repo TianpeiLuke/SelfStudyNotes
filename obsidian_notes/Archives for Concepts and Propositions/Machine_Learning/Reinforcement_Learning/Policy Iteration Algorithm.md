@@ -24,5 +24,8 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
+
+
 - [[Reinforcement Learning An Introduction by Sutton]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 1124
+- [[Foundations of Machine Learning by Mohri]] pp 322

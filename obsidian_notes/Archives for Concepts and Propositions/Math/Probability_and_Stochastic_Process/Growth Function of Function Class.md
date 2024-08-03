@@ -31,6 +31,8 @@ date of note: 2024-06-01
 >
 > In words, $\tau_{\mathcal{F}}(n)$ is the **number of different functions** from a set $\mathcal{D}$ of **size** $n$ to $\set{0,1}$ that can be obtained by *restricting* $\mathcal{F}$ to $\mathcal{D}$.
 
+^dac056
+
 - [[Restriction of Function Class to Data]]
 
 
@@ -44,7 +46,7 @@ date of note: 2024-06-01
 
 - [[Shattering of Data by Function Class]]
 
->[!info]
+>[!important]
 >$$
 >\text{VC-dim}(\mathcal{F}) := \max\left\{k \in \mathbb{N}: \tau_{\mathcal{F}}(k) = 2^k  \right\} 
 >$$
@@ -64,5 +66,6 @@ date of note: 2024-06-01
 - [[Shattering of Data by Function Class]]
 
 
+- [[Foundations of Machine Learning by Mohri]] pp 38 - 41
 - [[Understanding Machine Learning by Shalev-Shwartz]]
 - [[Boosting Foundations and Algorithms by Schapire]]

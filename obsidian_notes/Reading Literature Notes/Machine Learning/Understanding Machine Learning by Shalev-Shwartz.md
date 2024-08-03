@@ -60,4 +60,6 @@ date of note: 2024-05-07
 	- [[Functional Analysis by Reed]]
 
 - Theory
+	- [[Foundations of Machine Learning by Mohri]]
 	- [[Kernel Methods in Machine Learning by Hofmann]]
+	- [[Boosting Foundations and Algorithms by Schapire]]

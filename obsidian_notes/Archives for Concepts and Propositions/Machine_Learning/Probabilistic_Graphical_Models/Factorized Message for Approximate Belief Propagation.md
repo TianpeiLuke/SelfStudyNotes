@@ -27,7 +27,7 @@ date of note: 2024-05-12
 
 
 - [[Maximum Entropy Learning of Clique Tree PGM]]
-- [[Sum-Product Message Passing Algorithm for Clique Tree]]
+- [[Sum-Product Belief Propagation Algorithm for Clique Tree]]
 
 
 - [[Cluster Graph and Family Preservation]]

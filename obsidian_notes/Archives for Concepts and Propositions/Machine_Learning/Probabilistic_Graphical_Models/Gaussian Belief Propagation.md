@@ -26,8 +26,8 @@ date of note: 2024-05-12
 >We can adapt these algorithms to apply to **linear Gaussian networks**, using **canonical forms** as our representation of factors.
 
 - [[Canonical Form of Gaussian Graphical Model]]
-- [[Belief-Update Message Passing Algorithm for Clique Tree]]
-- [[Sum-Product Message Passing Algorithm for Clique Tree]]
+- [[Sum-Product Belief-Update Message Passing Algorithm for Clique Tree]]
+- [[Sum-Product Belief Propagation Algorithm for Clique Tree]]
 
 
 ### Overview of Gaussian Belief Propagation
@@ -63,7 +63,7 @@ date of note: 2024-05-12
 
 ### Canonical Form for Message
 
-![[Sum-Product Message Passing Algorithm for Clique Tree#^d4e300]]
+![[Sum-Product Belief Propagation Algorithm for Clique Tree#^d4e300]]
 
 
 >[!important]
@@ -128,7 +128,7 @@ date of note: 2024-05-12
 >	- Update the **canonical parameters for the belief** $$\begin{align*}\hat{K}_{i} &= K_{i i } + \sum_{k \in N(i)}K_{k\to i} \\[5pt] \hat{h}_{i}&= h_{i} + \sum_{k \in N(i)}h_{k\to i}\end{align*}$$
 >- *Return*: the set of *canonical parameters* for all *beliefs* $\{(\hat{K}_{i}, \hat{h}_{i}), i\in V(T) \}$ or the *beliefs* $\{ \beta_{i}, i\in V(T) \}$, where $$\beta_{i} =  \exp \left(-\frac{1}{2}\hat{K}_{i}x_{i}^2 + \hat{h}_{i}x_{i}\right).$$  
 
-- [[Sum-Product Message Passing Algorithm for Clique Tree]]
+- [[Sum-Product Belief Propagation Algorithm for Clique Tree]]
 - [[Sum-Product Expectation Propagation Algorithm]]
 
 ### Convergence and Correctness of BP Algorithm for GGM
@@ -167,8 +167,8 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
-- [[Belief-Update Message Passing Algorithm for Clique Tree]]
-- [[Sum-Product Message Passing Algorithm for Clique Tree]]
+- [[Sum-Product Belief-Update Message Passing Algorithm for Clique Tree]]
+- [[Sum-Product Belief Propagation Algorithm for Clique Tree]]
 - [[Canonical Form of Gaussian Graphical Model]]
 - [[Gaussian Graphical Model and Gaussian Markov Random Field]]
 - [[Gaussian Bayesian Network]]

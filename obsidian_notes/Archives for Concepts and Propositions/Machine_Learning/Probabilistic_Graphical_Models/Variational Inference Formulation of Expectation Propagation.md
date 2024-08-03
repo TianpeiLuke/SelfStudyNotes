@@ -28,7 +28,7 @@ date of note: 2024-05-12
 - [[Bethe Variational Inference for Clique Tree]]
 
 - [[Sum-Product Expectation Propagation Algorithm]]
-- [[Belief-Update Expectation Propagation Algorithm]]
+- [[Sum-Product Belief-Update Expectation Propagation Algorithm]]
 
 - [[Maximum Entropy Learning]]
 - [[Kullback-Leibler Divergence]]

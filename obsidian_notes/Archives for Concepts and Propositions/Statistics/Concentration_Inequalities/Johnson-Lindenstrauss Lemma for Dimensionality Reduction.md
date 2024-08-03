@@ -43,4 +43,4 @@ date of note: 2024-06-02
 - [[High Dimensional Statistics A Non-Asymptotic Viewpoint by Wainwright]]
 - [[High Dimensional Probability An Introduction by Vershynin]]
 - [[Understanding Machine Learning by Shalev-Shwartz]]
-- [[Lectures on Gaussian Processes by Lifshits]]
+- [[Foundations of Machine Learning by Mohri]]

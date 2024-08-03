@@ -43,7 +43,7 @@ date of note: 2024-07-07
 
 - [[Max-Product Variable Elimination]]
 - [[Decoding Max-Marginal for Graphical Model]]
-- [[Max-Product Message Passing for Clique Tree]]
+- [[Max-Product Belief Propagation for Clique Tree]]
 - [[Max-Product Belief Update for Clique Tree]]
 
 - [[Probabilistic Graphical Models]]

@@ -72,6 +72,7 @@ date of note: 2024-05-12
 
 - [[Concentration Inequalities by Boucheron]]
 - [[Mathematical Foundations of Infinite Dimensional Statistical Models by Gine]]
+- [[Foundations of Machine Learning by Mohri]] pp 34
 - [[Understanding Machine Learning by Shalev-Shwartz]]
 - [[High Dimensional Statistics A Non-Asymptotic Viewpoint by Wainwright]]
 - [[High Dimensional Probability An Introduction by Vershynin]]
