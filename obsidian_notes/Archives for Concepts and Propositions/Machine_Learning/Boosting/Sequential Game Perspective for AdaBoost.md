@@ -24,16 +24,19 @@ date of note: 2024-07-29
 -----------
 ##  Recommended Notes and References
 
-- [[VC Dimension]]
-- [[Shattering of Data by Function Class]]
-- [[PAC Learnable and Agnostic PAC Learnable]]
-- [[Growth Function of Function Class]]
-- [[Sauer-Shelah Lemma for VC Dimension]]
 
+
+- [[Mixed Strategy and Finite Strategy Sets]]
+- [[Mixed Strategy and Continuous Strategy Sets]]
+- [[Nash Existence Theorem for Normal Form Game]]
+- [[Extensive-Form Game]]
+- [[Sequential Game Play and Sequential Rationality]]
+- [[Finitely Repeated Games]]
+
+- [[Sequential Decision Process]]
 
 - [[AdaBoost Algorithm]]
-- [[Empirical Risk Minimization]]
-- [[Log-Partition Function of Exponential Family]]
+
 
 
 - [[Foundations of Machine Learning by Mohri]] pp 137

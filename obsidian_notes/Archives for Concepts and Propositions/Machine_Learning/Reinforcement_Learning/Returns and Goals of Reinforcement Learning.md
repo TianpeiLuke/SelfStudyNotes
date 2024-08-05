@@ -91,6 +91,7 @@ date of note: 2024-05-12
 >- Then $\gamma =0$, $G_{t} = R_{t+1}$, i.e. the **short-sighted returns**. 
 >- If $\gamma \rightarrow 1$, we have the **far-sighted returns**, where the return objective takes future rewards into account more strongly. 
 
+- [[Discounting Payoff in Sequential Decision]]
 ### Returns 
 
 >[!important] Definition
