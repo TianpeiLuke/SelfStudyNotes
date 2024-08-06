@@ -127,6 +127,8 @@ date of note: 2024-05-12
 - [[Q Learning Algorithm and Off-Policy Temporal Difference Control]]
 
 - [[Markov Decision Process]]
+- [[Regret for Online Learning]]
+
 
 - [[Reinforcement Learning An Introduction by Sutton]] pp 53
 

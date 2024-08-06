@@ -45,6 +45,7 @@ date of note: 2024-07-02
 > L(x^{*}, \lambda) \le L(x^{*}, \lambda^{*}) \le L(x, \lambda^{*}), \quad \forall x\in \Omega, \; \forall \lambda \in \mathcal{M}.
 >$$
 
+- [[Von Neumann Min-Max Theorem]]
 
 
 ## Explanation

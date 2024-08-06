@@ -60,6 +60,8 @@ date of note: 2024-05-12
 > r_{t}(x, a)= \sum_{u\in \mathcal{X}}\,r_{t}(x, a, u)\,p_{t}(u | x, a)
 >$$
 
+- [[Expected Payoff in Statistical Decision Problem]]
+
 
 ### Transition Probability
 
@@ -240,7 +242,10 @@ date of note: 2024-05-12
 - [[Temporal Difference Learning]]
 - [[Q Learning Algorithm and Off-Policy Temporal Difference Control]]
 
+- [[Regret for Online Learning]]
+- [[No-Regret Learning]]
 
+- [[Sequential Decision Process]]
 - [[Statistical Decision Problem]]
 
 

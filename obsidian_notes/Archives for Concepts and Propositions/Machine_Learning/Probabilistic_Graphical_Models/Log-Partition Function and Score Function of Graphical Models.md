@@ -5,8 +5,12 @@ tags:
   - probabilistic_graphical_models/theory
   - probabilistic_graphical_models/models
   - machine_learning/theory
-keywords: 
-topics: 
+keywords:
+  - log_partition_function
+  - score_function
+  - probabilistic_graphical_model
+topics:
+  - probabilistic_graphical_model
 name: Log-Partition Function and Score Function of Graphical Models
 date of note: 2024-08-03
 ---
@@ -28,21 +32,23 @@ date of note: 2024-08-03
 > Z(\Phi) = \sum_{x}\hat{\mathcal{P}}(x; \Phi) = \sum_{(D_{1} \,{,}\ldots{,}\,D_{k})}\prod_{i=1}^{k}\phi(D_{i})
 > $$
 
+- [[Clique Tree Invariant of Sum Product and Reparameterization of PGM]]
+
 ![[Exponential Family of Distributions#^c95a01]]
 
 
 >[!important] Definition
->Given likelihood function $\ell(\Phi; x) := \mathcal{P}_{\Phi}(x)$ of Gibbs distribution factorized by $\Phi$, the **score function** or the **log-likelihood gradient** *with respect to* $\Phi$ is defined as 
+>Given the likelihood function $\ell(\theta; x) := \mathcal{P}_{\theta}(x)$ of Gibbs distribution parameterized by $\theta$, the **score function** or the **log-likelihood gradient** *with respect to* $\theta$ is defined as 
 >$$
 >\begin{align*}
->\nabla_{\Phi}\log \ell(\Phi; x) := \nabla_{\Phi}\log \mathcal{P}(x; \Phi) &= \nabla_{\Phi}\log \hat{\mathcal{P}}(x; \Phi) - \nabla_{\Phi} \log Z(\Phi) \\
->&=\nabla_{\Phi}\log \hat{\mathcal{P}}(x; \Phi) -  \mathbb{E}_{ \mathcal{P}_{\Phi} }\left[ \nabla_{\Phi} \log \hat{\mathcal{P}}(X; \Phi)\right]
+>\nabla_{\theta}\log \ell(\theta; x) := \nabla_{\theta}\log \mathcal{P}(x; \theta) &= \nabla_{\theta}\log \hat{\mathcal{P}}(x; \theta) - \nabla_{\theta} \log Z(\theta) \\
+>&=\nabla_{\theta}\log \hat{\mathcal{P}}(x; \theta) -  \mathbb{E}_{ \mathcal{P}_{\theta} }\left[ \nabla_{\theta} \log \hat{\mathcal{P}}(X; \theta)\right]
 >\end{align*}
 >$$ 
 >Note that 
 >- the second term is the *gradient* of the **log-partition function**. It is usually very difficult to estimate this term. 
 >- the first term is from the data.
->- The score function is the **difference** between the **sample mean** and the **model mean** of log-likelihood gradient un-normalized term $\nabla_{\Phi}\log \hat{\mathcal{P}}(x; \Phi)$.
+>- The score function is the **difference** between the **sample mean** and the **model mean** of log-likelihood gradient un-normalized term $\nabla_{\theta}\log \hat{\mathcal{P}}(x; \theta)$.
 >  
 
 - [[Markov Network on Undirected Graph]]
@@ -91,19 +97,7 @@ date of note: 2024-08-03
 - [[Log-Partition Function of Exponential Family]]
 
 
-## Maximum Entropy Learning
 
->[!important]
->The **convex conjugate** of $\log Z(\Phi)$ is the **entropy** of $\mathcal{P}(x; \Phi)$.
->
->Thus the **dual formulation** of the parameter estimation for graphical model $\mathcal{P}_{\Phi}$ is 
->$$
->\max_{\Phi}\; \log Z(\Phi)
->$$
-
-
-- [[Convex Conjugate Function]]
-- [[Maximum Entropy Learning of Clique Tree PGM]]
 
 
 

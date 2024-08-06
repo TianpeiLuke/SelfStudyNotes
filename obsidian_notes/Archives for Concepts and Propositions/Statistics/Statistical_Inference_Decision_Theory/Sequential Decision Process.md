@@ -67,6 +67,7 @@ date of note: 2024-05-12
 >L(\theta, a, t) = \sum_{s=1}^{t}L(\theta, a)
 >$$  
 
+- [[Online Prediction with Expert Advice]]
 
 ### Sequential Decision Procedure
 

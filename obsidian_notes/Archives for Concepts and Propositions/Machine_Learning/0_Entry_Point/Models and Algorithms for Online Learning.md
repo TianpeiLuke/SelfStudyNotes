@@ -60,10 +60,15 @@ date of note: 2024-07-14
 - [[Mirror Descent Algorithm]]
 
 
-### Online Learning Problem
+### Online Learning with Expert Advice
 
-
-
+- [[Online Prediction with Expert Advice]]
+- [[Regret for Online Learning]]
+- [[No-Regret Learning]]
+- [[Weighted Majority Algorithm for Binary Loss]]
+- [[Potential Function for Weighted Average Forecast]]
+- [[Weighted Average Forecast via Potential]]
+- [[Exponential Weighted Algorithm for Convex Loss]]
 
 
 ### Bandit Problem

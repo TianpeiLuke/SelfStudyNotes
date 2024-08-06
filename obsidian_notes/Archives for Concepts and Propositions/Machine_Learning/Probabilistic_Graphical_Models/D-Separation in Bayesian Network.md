@@ -25,7 +25,7 @@ date of note: 2024-05-12
 >- where $e_{i} := (X_{i}, X_{i+1})$ is a directed edge (either $X_{i} \to X_{i+1}$ or $X_{i} \leftarrow X_{i+1}$). 
 >  
 >Let $Z$ be a subset of *observed variables*. The trail $X_{1}e_{1}\cdots e_{n-1}X_{n}$ is **active** given $Z$ if
->- whenever there exists a **$v$-structure** $$X_{i-1} \rightarrow X_{i} \leftarrow X_{i+1},$$ then *$X_{i}$* or *one* of its *descendants* are in $Z$;
+>- whenever there exists a **$v$-structure (collider)** $$X_{i-1} \rightarrow X_{i} \leftarrow X_{i+1},$$ then *$X_{i}$* or *one* of its *descendants* are in $Z$;
 >- and *no* other node *along the trail* is in $Z$.
 
 ^c42526
@@ -50,7 +50,7 @@ date of note: 2024-05-12
 - [[I-Map and Independence Assertion]]
 - [[Conditional Independence]]
 
-### Active Trail and D-Separation in Markov Network
+### Active Trail and Separation in Markov Network
 
 >[!important] Definition
 >Let $\mathcal{G}$ be a *Markov network* structure, and $$X_{1}e_{1}\cdots X_{n-1}e_{n-1}X_{n}$$ be a *trail* in $\mathcal{G}$, 
@@ -60,7 +60,7 @@ date of note: 2024-05-12
 >-  *no* node $X_{i}$ *in the path* is in $Z$.
 
 >[!info]
->In undirected graph, there is **no common effect structure** ($v$-structure). So the definition of active trail is simply a trail that *does not pass through observed subset* $Z$.
+>In undirected graph, there is **no common effect structure** ($v$-structure or **collider**). So the definition of active trail is simply a trail that *does not pass through observed subset* $Z$.
 
 >[!important] Definition
 >Let $\mathcal{G}$ be a *Markov network* structure, and let $\mathcal{X}, \mathcal{Y}, \mathcal{Z}$ be three sets of nodes in $\mathcal{G}$. 

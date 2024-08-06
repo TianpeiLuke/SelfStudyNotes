@@ -34,7 +34,7 @@ date of note: 2024-08-04
 
 - [[Methods of Lagrangian Multipliers]]
 - [[Karush-Kuhn-Tucker Optimality Condition]]
-
+- [[Saddle Point of Lagrangian Function]]
 
 
 - [[Game Theory An Introduction by Tadelis]] pp 107
