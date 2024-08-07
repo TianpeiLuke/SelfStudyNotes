@@ -87,13 +87,13 @@ date of note: 2024-07-29
 >	- the **booster** 
 >		- *observe* the **expected loss** $M(h_{t}, D_{t})$
 >		- compute the **rate** $$\alpha_{t} = \frac{1}{2}\log \left( \frac{1 - M(h_{t}, D_{t}) }{M(h_{t}, D_{t}) } \right)$$
->		- *update* new distribution (**mixed strategy**) $D_{t+1}$ on $\mathcal{X}$ using the **exponential weighted average algorithm**. That is, for all $x\in \mathcal{X}$, $$D_{t+1}(x) = \frac{D_{t}(x)}{Z_{t}} \times \left\{\begin{array}{cc} e^{-\alpha_{t}}& \text{ if } M(h_{t}, x) = 0 \\ e^{\alpha_{t}}&\text{ if } M(h_{t}, x) = 1 \end{array}\right.$$ where $Z_{t}$ is the **partition function**
+>		- *update* new distribution (**mixed strategy**) $D_{t+1}$ on $\mathcal{X}$ using the **exponential weights**. That is, for all $x\in \mathcal{X}$, $$D_{t+1}(x) = \frac{D_{t}(x)}{Z_{t}} \times \left\{\begin{array}{cc} e^{-\alpha_{t}}& \text{ if } M(h_{t}, x) = 0 \\ e^{\alpha_{t}}&\text{ if } M(h_{t}, x) = 1 \end{array}\right.$$ where $Z_{t}$ is the **partition function**
 >- *Output*: 
 >	- a **mixed strategy** $$\bar{P} = \sum_{t=1}^{T}\alpha_{t}\,h_{t}$$ over $\mathcal{H}$ based on a linear combination of previous pure strategies $\{ h_{t} \}$. 
 >	- the *combined hypothesis* is  $$H = \text{sgn}(\bar{P}) := \text{sgn}\left(  \sum_{t=1}^{T}\alpha_{t}\,h_{t}\right).$$
 
+- [[Exponential Weights Algorithm for Convex Loss]]
 - [[Weighted Majority Algorithm for Binary Loss]]
-- [[Exponential Weighted Algorithm for Convex Loss]]
 - [[Sequential Game of Perfect Information]]
 - [[Partition Function for AdaBoost]]
 
@@ -126,7 +126,7 @@ date of note: 2024-07-29
 
 - [[AdaBoost Algorithm]]
 
-- [[Exponential Weighted Algorithm for Convex Loss]]
+- [[Exponential Weights Algorithm for Convex Loss]]
 
 
 - [[Foundations of Machine Learning by Mohri]] pp 137

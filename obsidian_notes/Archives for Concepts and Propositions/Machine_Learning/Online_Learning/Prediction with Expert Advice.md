@@ -9,14 +9,14 @@ keywords:
   - expert_advice
 topics:
   - online_learning
-name: Online Prediction with Expert Advice
+name: Prediction with Expert Advice
 date of note: 2024-08-05
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Online Prediction with Expert Advice
+>**Name**: Prediction with Expert Advice
 
 >[!important] Definition
 >Given an *non-stochastic* sequence $y_{1}\,, y_{2} \,{,}\ldots{,}\,$ in $\mathcal{Y}$, the task of **online prediction** is to generate predictions $\hat{y}_{1},\,\hat{y}_{1} \,{,}\ldots{,}\,$ in $\mathcal{D}$ so that the **cumulative loss** or **regret** is **minimized**. 
@@ -81,4 +81,5 @@ date of note: 2024-08-05
 
 
 
-- [[Prediction Learning and Games by Cesa-Bianchi]] p 5, 36
+- [[Prediction Learning and Games by Cesa-Bianchi]] pp 5, 36
+- [[Foundations of Machine Learning by Mohri]] pp 148

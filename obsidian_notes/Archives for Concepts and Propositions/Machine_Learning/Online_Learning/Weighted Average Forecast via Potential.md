@@ -67,6 +67,8 @@ date of note: 2024-08-05
 >	- Compute the **instantaneous regret** for expert $i=1\,{,}\ldots{,}\,k$ $$r_{i,t} = \ell(\hat{y}_{t}, y_{t}) - \ell(f_{i}^{(t)}, y_{t})$$
 >	- Update the **cumulative regret** for expert $i=1\,{,}\ldots{,}\,k$  $$R_{i, t} = R_{i, t-1} + r_{i,t}.$$ 
 
+^15269a
+
 
 
 
@@ -91,17 +93,17 @@ date of note: 2024-08-05
 
 ## Examples
 
-### Exponential Weighted Average
+### Exponential Weights Average
 
 ![[Potential Function for Weighted Average Forecast#^57afc0]]
 
 >[!important] Definition
->The **exponential weighted average** algorithm is the *weighted average forecast* with potential 
+>The **exponential weights algorithm** is the *weighted average forecast* with potential 
 >$$
 >\Phi(u; \eta) := \frac{1}{\eta}\log \left( \sum_{i=1}^{k}\exp \left( \eta\, u_{i} \right) \right)
 >$$
 >
->- The **weight** is computed as
+>- The **exponential weight** is computed as
 >$$
 >w_{i}^{(t)} = \nabla \Phi \left( R_{t-1}; \eta \right)_{i} = \frac{\exp \left( \eta\, R_{i, t-1} \right)}{\sum_{i=1}^{k}\exp \left( \eta\, R_{i, t-1} \right)}
 >$$
@@ -118,7 +120,8 @@ date of note: 2024-08-05
 
 ^668a02
 
-- [[Exponential Weighted Algorithm for Convex Loss]]
+- [[Exponential Weights Algorithm for Convex Loss]]
+- [[Regret Analysis for Exponential Weights Algorithm]]
 
 
 
@@ -129,12 +132,14 @@ date of note: 2024-08-05
 
 - [[Potential Function for Weighted Average Forecast]]
 - [[Regret for Online Learning]]
-- [[Exponential Weighted Algorithm for Convex Loss]]
-- [[Online Prediction with Expert Advice]]
+- [[Exponential Weights Algorithm for Convex Loss]]
+- [[Prediction with Expert Advice]]
 
+- [[EXP3 or Exponential Weights Algorithm for Exploration and Exploitation]]
 
 - [[Convex Function]]
 - [[Convex Optimization Problem]]
 
 
 - [[Prediction Learning and Games by Cesa-Bianchi]] pp 9
+- [[Bandit Algorithms by Lattimore]] 

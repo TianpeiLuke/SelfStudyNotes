@@ -26,6 +26,10 @@ date of note: 2024-05-12
 
 
 
+- [[Information Projection and Moment Projection]]
+- [[Maximum Entropy Learning]]
+- [[AdaBoost Algorithm]]
+
 
 
 
@@ -53,6 +57,10 @@ date of note: 2024-05-12
 - [[Empirical Risk Minimization]]
 - [[Empirical Process and Empirical Measure]]
 
+
+- [[Generalized Proximal Method]]
+- [[Entropy Minimization Algorithm]]
+- [[Incremental Algorithm]]
 
 
 - [[Boosting Foundations and Algorithms by Schapire]]  pp 231

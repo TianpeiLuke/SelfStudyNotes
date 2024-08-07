@@ -24,6 +24,8 @@ date of note: 2024-05-07
 > $$
 > and **$X \in \mathcal{G}((b - a)^2/4)$.**
 
+^dbac1c
+
 - [[Sub-Gaussian Random Variable]]
 
 

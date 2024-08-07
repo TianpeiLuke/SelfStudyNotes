@@ -17,9 +17,9 @@ date of note: 2024-08-05
 >[!important]
 >**Name**: No-Regret Learning for Online Prediction with Expert Advices
 
-![[Online Prediction with Expert Advice#^980822]]
+![[Prediction with Expert Advice#^980822]]
 
-![[Online Prediction with Expert Advice#^d0e7f4]]
+![[Prediction with Expert Advice#^d0e7f4]]
 
 ![[Regret for Online Learning#^c8c1f8]]
 
@@ -61,7 +61,7 @@ date of note: 2024-08-05
 
 
 - [[Regret for Online Learning]]
-- [[Online Prediction with Expert Advice]]
+- [[Prediction with Expert Advice]]
 
 
 

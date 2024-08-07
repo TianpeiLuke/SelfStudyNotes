@@ -33,6 +33,8 @@ date of note: 2024-05-12
 >-  $\ell(x;x_{0})$ is the **linearization** of $f$ at $x_{k}$ by *subgradients* $$\ell(x; x_{k}) := f(x_{k}) + \left\langle  g_{k}\,,\, x - x_{k}    \right\rangle, \quad g_{k} \in \partial f(x_{k})$$
 >- $D_{k}: \mathbb{R}^n \times \mathbb{R}^n \to \mathbb{R}_{+}$ is a (nonquadratic) **proximal term** 
 
+^1b2c18
+
 
 - [[Bregman Divergence]]
 - [[Proximal Gradient Algorithm]]

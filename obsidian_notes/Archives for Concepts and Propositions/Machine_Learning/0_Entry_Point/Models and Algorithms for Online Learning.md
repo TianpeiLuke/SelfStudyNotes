@@ -36,6 +36,8 @@ date of note: 2024-07-14
 - [[Basic Inequalities and Cramér–Chernoff Method]]
 - [[Martingale Based Inequalities]]
 
+- [[Hoeffding Inequality]]
+- [[Bernstein Inequality]]
 - [[Bounded Difference Inequality]]
 - [[Doob Maximal Inequality]]
 
@@ -45,30 +47,30 @@ date of note: 2024-07-14
 - [[Stochastic Gradient Descent Algorithm]]
 - [[Iterative Descent]]
 - [[Approximation Method for Optimization]]
-
 - [[Proximal Algorithm]]
 - [[Dual Proximal Algorithm]]
 - [[Augmented Lagrangian Algorithm]]
 - [[Alternating Direction Method of Multipliers Algorithm]]
-
-
 - [[Incremental Algorithm]]
 - [[Incremental Gradient Algorithm]]
 - [[Incremental Aggregated Gradient Algorithm]]
-
-
 - [[Mirror Descent Algorithm]]
 
 
-### Online Learning with Expert Advice
+### Prediction with Expert Advice
 
-- [[Online Prediction with Expert Advice]]
+- [[Prediction with Expert Advice]]
 - [[Regret for Online Learning]]
 - [[No-Regret Learning]]
 - [[Weighted Majority Algorithm for Binary Loss]]
 - [[Potential Function for Weighted Average Forecast]]
 - [[Weighted Average Forecast via Potential]]
-- [[Exponential Weighted Algorithm for Convex Loss]]
+- [[Exponential Weights Algorithm for Convex Loss]]
+- [[Regret Analysis for Exponential Weights Algorithm]]
+- [[Exponential Weights Algorithm as Mirror Descent]]
+
+### Online Learning
+
 
 
 ### Bandit Problem
@@ -76,6 +78,7 @@ date of note: 2024-07-14
 - [[Multi-Armed Bandit]]
 - [[epsilon-Greedy Algorithm]]
 - [[Exploration and Exploitation Tradeoff]]
+- [[EXP3 or Exponential Weights Algorithm for Exploration and Exploitation]]
 
 
 ### Approximate Dynamic Programming

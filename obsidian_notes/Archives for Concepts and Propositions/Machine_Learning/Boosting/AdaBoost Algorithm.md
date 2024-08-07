@@ -53,6 +53,29 @@ date of note: 2024-05-12
 >2. Each weak classifier only **focuses on a sub-population** that are not learned well by the previous learned models. This is obtained by **increase the importance weight** for the samples that are **misclassified** so that we can learn a hierarchical sequence of classifiers.
 
 
+## AdaBoost as Sequential Two-Player Zero-Sum Game
+
+- [[Sequential Game Perspective for AdaBoost]]
+
+## AdaBoost as Iterative Maximum Entropy Learning
+
+- [[Iterative Maximum Entropy Learning for AdaBoost]]
+- [[Online Learning Perspective for AdaBoost]]
+
+## AdaBoost as Greedy Stagewise Exponential Loss Minimization
+
+- [[Forward Stagewise Additive Modeling]]
+- [[Exponential Loss Minimization for AdaBoost]]
+
+
+## Generalization to Gradient Boost
+
+- [[Functional Gradient Descent]]
+- [[Gradient Boosting Algorithm]]
+
+
+
+
 
 -----------
 ##  Recommended Notes and References

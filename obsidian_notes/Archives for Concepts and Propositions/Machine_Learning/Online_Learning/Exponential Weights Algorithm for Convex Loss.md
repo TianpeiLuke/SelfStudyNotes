@@ -4,21 +4,21 @@ tags:
   - machine_learning/online_learning
   - online_learning/algorithms
 keywords:
-  - exponential_weighted_algorithm
+  - exponential_weightes_algorithm
   - online_learning
 topics:
   - online_learning
-name: Exponential Weighted Algorithm
+name: Exponential Weights Algorithm
 date of note: 2024-08-05
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Exponential Weighted Algorithm
+>**Name**: Exponential Weights Algorithm or *Exponential Weighted Average* Algorithm
 
 >[!important] Definition
->The **exponential weighted algorithm (EWA)** is described as follows:
+>The **exponential weights algorithm (EWA)** or **exponential weighted average algorithm** is described as follows:
 >- *Input*: outcome space $\mathcal{Y} \subset [0,1]$
 >- *Input*: decision space $\mathcal{D} \subset [0,1]$, that is **compact** and **convex**
 >- *Input*: a set of $k$ experts 
@@ -34,12 +34,25 @@ date of note: 2024-08-05
 >	- **Update** weight via **exponential update** $$w_{i}^{(t+1)} = w_{i}^{(t)}\exp \left( - \eta\;\ell(f_{i}^{(t)}, y_{t}) \right)$$
 >	- *Forecaster* incurs a *loss* $\ell(\hat{y}_{t}, y_{t}).$
 
+^05f7e9
+
 - [[Weighted Majority Algorithm for Binary Loss]]
-- [[Online Prediction with Expert Advice]]
+- [[Prediction with Expert Advice]]
+
+## Regret Analysis
+
+- [[Regret Analysis for Exponential Weights Algorithm]]
 
 
-## Explanation
+## Optimization Perspective
 
+>[!important]
+>The **EWA** can be seen as solving an online convex optimization problem via **generalized proximal algorithm** and **mirror descent**
+
+![[Exponential Weights Algorithm as Mirror Descent#^9a4b7d]]
+
+- [[Exponential Weights Algorithm as Mirror Descent]]
+- [[Mirror Descent Algorithm]]
 
 ## Generalization
 
@@ -55,9 +68,17 @@ date of note: 2024-08-05
 ##  Recommended Notes and References
 
 
+- [[Potential Function for Weighted Average Forecast]]
+- [[Weighted Average Forecast via Potential]]
+- [[Weighted Majority Algorithm for Binary Loss]]
+
+- [[EXP3 or Exponential Weights Algorithm for Exploration and Exploitation]]
+
 
 - [[Sequential Game Perspective for AdaBoost]]
 
 - [[Convex Function]]
 
-- [[Prediction Learning and Games by Cesa-Bianchi]] p 5, 14, 36
+- [[Prediction Learning and Games by Cesa-Bianchi]] pp 5, 14, 36
+- [[Bandit Algorithms by Lattimore]] pp 131 - 136
+- [[Foundations of Machine Learning by Mohri]] pp 156 - 159

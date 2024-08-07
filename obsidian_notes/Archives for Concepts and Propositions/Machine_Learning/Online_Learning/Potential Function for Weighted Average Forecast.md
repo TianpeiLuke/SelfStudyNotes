@@ -83,8 +83,8 @@ date of note: 2024-08-05
 ##  Recommended Notes and References
 
 
-- [[Exponential Weighted Algorithm for Convex Loss]]
-- [[Online Prediction with Expert Advice]]
+- [[Exponential Weights Algorithm for Convex Loss]]
+- [[Prediction with Expert Advice]]
 
 
 - [[Convex Function]]

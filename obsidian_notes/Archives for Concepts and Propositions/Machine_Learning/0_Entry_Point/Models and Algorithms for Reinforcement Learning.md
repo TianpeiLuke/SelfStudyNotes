@@ -23,6 +23,7 @@ date of note: 2024-06-01
 - [[Multi-Armed Bandit]]
 - [[epsilon-Greedy Algorithm]]
 - [[Exploration and Exploitation Tradeoff]]
+- [[EXP3 or Exponential Weights Algorithm for Exploration and Exploitation]]
 
 ### Markov Decision Process
 

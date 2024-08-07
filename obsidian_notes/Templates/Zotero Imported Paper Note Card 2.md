@@ -52,6 +52,8 @@ date of note: {{importDate | format("YYYY-MM-DD")}}
 
 
 
+## Highlight of Technical Details
+
 
 >[!todo]
 >Highlight the main techniques proposed in this paper. Also highlight the performance comparison to state-of-the-art.

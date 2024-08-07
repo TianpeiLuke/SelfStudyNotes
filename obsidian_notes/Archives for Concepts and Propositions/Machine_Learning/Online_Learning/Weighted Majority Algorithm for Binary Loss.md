@@ -33,7 +33,7 @@ date of note: 2024-08-05
 >	- The *forecaster* incurs a loss $$\ell(\hat{y}_{t}, y_{t}) := \mathbb{1}\left\{\hat{y}_{t}\neq y_{t} \right\} .$$
 
 
-- [[Online Prediction with Expert Advice]]
+- [[Prediction with Expert Advice]]
 - [[Characteristic Function of Set]]
 
 
@@ -50,9 +50,10 @@ date of note: 2024-08-05
 ##  Recommended Notes and References
 
 
-- [[Exponential Weighted Algorithm for Convex Loss]]
+- [[Exponential Weights Algorithm for Convex Loss]]
 - [[Sequential Game Perspective for AdaBoost]]
 
 - [[Convex Function]]
 
-- [[Prediction Learning and Games by Cesa-Bianchi]] p 5, 36
+- [[Prediction Learning and Games by Cesa-Bianchi]] pp 5, 36
+- [[Foundations of Machine Learning by Mohri]] pp 150 - 152
