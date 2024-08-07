@@ -38,6 +38,8 @@ date of note: 2024-07-14
 
 - [[Hoeffding Inequality]]
 - [[Bernstein Inequality]]
+- [[Hoeffding Inequality]]
+- [[Bernstein Inequality]]
 - [[Bounded Difference Inequality]]
 - [[Doob Maximal Inequality]]
 
@@ -72,6 +74,7 @@ date of note: 2024-07-14
 ### Online Learning
 
 - [[Online Learnability and Realizable Assumption]]
+- [[Regret for Online Learning]]
 
 
 ### Bandit Problem
@@ -80,6 +83,7 @@ date of note: 2024-07-14
 - [[epsilon-Greedy Algorithm]]
 - [[Exploration and Exploitation Tradeoff]]
 - [[EXP3 or Exponential Weights Algorithm for Exploration and Exploitation]]
+
 
 
 ### Approximate Dynamic Programming
