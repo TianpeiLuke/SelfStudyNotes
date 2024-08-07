@@ -70,6 +70,9 @@ date of note: 2024-08-05
 ^15269a
 
 
+- [[Bandit Algorithms by Lattimore]] ^15269a
+
+
 
 
 ## Explanation
@@ -133,7 +136,7 @@ date of note: 2024-08-05
 - [[Potential Function for Weighted Average Forecast]]
 - [[Regret for Online Learning]]
 - [[Exponential Weights Algorithm for Convex Loss]]
-- [[Prediction with Expert Advice]]
+- [[Online Prediction with Expert Advice]]
 
 - [[EXP3 or Exponential Weights Algorithm for Exploration and Exploitation]]
 

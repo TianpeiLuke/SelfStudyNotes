@@ -61,7 +61,7 @@ date of note: 2024-08-05
 
 ![[Online Learnability and Realizable Assumption#^f05186]]
 
->[!important] Definition (Realizable Case)
+>[!important] Definition (Non-Realizable Case)
 >In general **online learning** setting, we make the following assumptions:
 >- There is no stochastic assumption on the outcomes $(y_{1} \,{,}\ldots{,}\,y_{T}) \subset \mathcal{Y}$.
 >- $\mathcal{H} \subset \mathcal{Y}^{\mathcal{X}}$ is a *hypothesis class* $\mathcal{X}\to \mathcal{Y}$.
@@ -114,7 +114,7 @@ date of note: 2024-08-05
 - [[Prediction with Expert Advice]]
 
 
-
+- [[PAC Learnable and Agnostic PAC Learnable]]
 - [[Markov Decision Process]]
 - [[Sequential Decision Process]]
 - [[Statistical Decision Problem]]
