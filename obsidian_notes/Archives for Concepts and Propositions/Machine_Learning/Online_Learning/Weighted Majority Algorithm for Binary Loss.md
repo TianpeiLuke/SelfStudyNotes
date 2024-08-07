@@ -57,3 +57,4 @@ date of note: 2024-08-05
 
 - [[Prediction Learning and Games by Cesa-Bianchi]] pp 5, 36
 - [[Foundations of Machine Learning by Mohri]] pp 150 - 152
+- [[Understanding Machine Learning by Shalev-Shwartz]] pp 253 - 255
