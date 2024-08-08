@@ -26,7 +26,7 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
-- [[Multi-Armed Bandit]]
+- [[Multi-Armed Adversarial Bandit]]
 
 
 

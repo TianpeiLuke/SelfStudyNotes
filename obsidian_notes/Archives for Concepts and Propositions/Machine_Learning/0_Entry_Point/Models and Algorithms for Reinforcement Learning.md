@@ -20,7 +20,7 @@ date of note: 2024-06-01
 
 - [[Models and Algorithms for Online Learning]]
 
-- [[Multi-Armed Bandit]]
+- [[Multi-Armed Adversarial Bandit]]
 - [[epsilon-Greedy Algorithm]]
 - [[Exploration and Exploitation Tradeoff]]
 - [[EXP3 or Exponential Weights Algorithm for Exploration and Exploitation]]
