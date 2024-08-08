@@ -44,7 +44,7 @@ date of note: 2024-07-14
 - [[Doob Maximal Inequality]]
 
 
-### Online Convex Optimization
+### Convex Optimization Algorithm
 
 - [[Stochastic Gradient Descent Algorithm]]
 - [[Iterative Descent]]
@@ -53,10 +53,6 @@ date of note: 2024-07-14
 - [[Dual Proximal Algorithm]]
 - [[Augmented Lagrangian Algorithm]]
 - [[Alternating Direction Method of Multipliers Algorithm]]
-- [[Incremental Algorithm]]
-- [[Incremental Gradient Algorithm]]
-- [[Incremental Aggregated Gradient Algorithm]]
-- [[Mirror Descent Algorithm]]
 
 
 ### Prediction with Expert Advice
@@ -70,11 +66,28 @@ date of note: 2024-07-14
 - [[Exponential Weights Algorithm for Convex Loss]]
 - [[Regret Analysis for Exponential Weights Algorithm]]
 - [[Exponential Weights Algorithm as Mirror Descent]]
+- [[Exp-Concave Function]]
 
-### Online Learning
+### Online Learnability
 
-- [[Online Learnability and Realizable Assumption]]
+- [[Online Learnability and Realizabililty Assumption]]
 - [[Regret for Online Learning]]
+- [[Simple Online Learning Algorithms under Realizability Assumption]]
+- [[Shattered Tree by Hypothesis Class]]
+
+### Online Convex Optimization Algorithms
+
+- [[Online Convex Optimization]]
+- [[Incremental Algorithm]]
+- [[Incremental Gradient Algorithm]]
+- [[Incremental Aggregated Gradient Algorithm]]
+- [[Online Gradient Decent Algorithm]]
+
+- [[Follow-The-Leader Algorithm]]
+- [[Follow-The-Regularized-Leader Algorithm]]
+- [[Mirror Descent Algorithm]]
+- [[Online Mirror Descent Algorithm]]
+
 
 
 ### Bandit Problem
@@ -125,3 +138,4 @@ date of note: 2024-07-14
 - [[Understanding Machine Learning by Shalev-Shwartz]]
 - [[Boosting Foundations and Algorithms by Schapire]]
 - [[Elements of Statistical Learning by Hastie]]
+- [[Convex Optimization Algorithms by Bertsekas]]

@@ -55,11 +55,11 @@ date of note: 2024-08-05
 
 ### Regret for Online Learning
 
-![[Online Learnability and Realizable Assumption#^c10d11]]
+![[Online Learnability and Realizabililty Assumption#^c10d11]]
 
-![[Online Learnability and Realizable Assumption#^5e75f3]]
+![[Online Learnability and Realizabililty Assumption#^5e75f3]]
 
-![[Online Learnability and Realizable Assumption#^f05186]]
+![[Online Learnability and Realizabililty Assumption#^f05186]]
 
 >[!important] Definition (Non-Realizable Case)
 >In general **online learning** setting, we make the following assumptions:
@@ -78,7 +78,7 @@ date of note: 2024-08-05
 >R_{T}(\mathcal{H}) = \sup_{h\in \mathcal{H}}R_{T}(h) = \sum_{t=1}^{T}\ell(p_{t}, y_{t}) - \inf_{h\in \mathcal{H}}\sum_{t=1}^{T}\ell(h(x_{t}), y_{t})
 >$$
 
-- [[Online Learnability and Realizable Assumption]]
+- [[Online Learnability and Realizabililty Assumption]]
 - [[Empirical Risk Minimization]]
 - [[Realizability Assumption for Empirical Risk Minimization]]
 - [[Online Learning and Online Convex Optimization by Shalev-Shwartz]]
@@ -112,6 +112,7 @@ date of note: 2024-08-05
 
 - [[No-Regret Learning]]
 - [[Prediction with Expert Advice]]
+- [[Online Convex Optimization]]
 
 
 - [[PAC Learnable and Agnostic PAC Learnable]]

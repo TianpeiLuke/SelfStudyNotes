@@ -37,3 +37,4 @@ date of note: 2024-08-04
 
 
 - [[Game Theory An Introduction by Tadelis]] pp 190 - 192
+- [[Prediction Learning and Games by Cesa-Bianchi]]

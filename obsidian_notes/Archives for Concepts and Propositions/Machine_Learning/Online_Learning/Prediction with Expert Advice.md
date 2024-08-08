@@ -83,3 +83,4 @@ date of note: 2024-08-05
 
 - [[Prediction Learning and Games by Cesa-Bianchi]] pp 5, 36
 - [[Foundations of Machine Learning by Mohri]] pp 148
+- [[Introduction to Online Convex Optimization by Hazan]] pp 89

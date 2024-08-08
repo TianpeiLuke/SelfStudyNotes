@@ -32,6 +32,8 @@ date of note: 2024-05-14
 >
 >The *normalization factor* $$Z = \int_{\Omega} \exp \left(- \frac{ E(x)}{T}  \right)\; d\mu(x)$$ is called **the partition function**.
 
+^bfb840
+
 
 
 

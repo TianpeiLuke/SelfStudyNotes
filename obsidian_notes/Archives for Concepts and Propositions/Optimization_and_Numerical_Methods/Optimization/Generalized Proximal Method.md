@@ -32,6 +32,7 @@ date of note: 2024-05-12
 
 - [[Proximal Algorithm]]
 - [[Regularization in Optimization]]
+- [[Follow-The-Regularized-Leader Algorithm]]
 
 ## Explanation
 

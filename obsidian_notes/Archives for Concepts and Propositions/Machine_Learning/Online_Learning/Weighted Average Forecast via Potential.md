@@ -136,7 +136,7 @@ date of note: 2024-08-05
 - [[Potential Function for Weighted Average Forecast]]
 - [[Regret for Online Learning]]
 - [[Exponential Weights Algorithm for Convex Loss]]
-- [[Online Prediction with Expert Advice]]
+- [[Prediction with Expert Advice]]
 
 - [[EXP3 or Exponential Weights Algorithm for Exploration and Exploitation]]
 

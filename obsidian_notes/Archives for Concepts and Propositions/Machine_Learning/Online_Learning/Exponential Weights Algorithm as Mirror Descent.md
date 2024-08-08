@@ -38,7 +38,7 @@ date of note: 2024-08-06
 ^9a4b7d
 
 - [[Generalized Proximal Method]]
-- [[Mirror Descent Algorithm]]
+- [[Online Mirror Descent Algorithm]]
 - [[Entropy Minimization Algorithm]]
 - [[Kullback-Leibler Divergence]]
 - [[Incremental Algorithm]]
@@ -71,6 +71,8 @@ date of note: 2024-08-06
 ##  Recommended Notes and References
 
 
+- [[Mirror Descent Algorithm]]
+- [[Online Gradient Decent Algorithm]]
 - [[Exponential Weights Algorithm for Convex Loss]]
 - [[Weighted Average Forecast via Potential]]
 - [[Prediction with Expert Advice]]
@@ -81,4 +83,7 @@ date of note: 2024-08-06
 - [[Generalized Proximal Method]]
 - [[Bregman Distance Minimization]]
 
+
 - Blog [Gradient Descent as Exponential Weights](https://blog.wouterkoolen.info/GDasEW/post.html)
+- [[Online Learning and Online Convex Optimization by Shalev-Shwartz]] pp 143  - 144
+- [[Introduction to Online Convex Optimization by Hazan]] pp 60

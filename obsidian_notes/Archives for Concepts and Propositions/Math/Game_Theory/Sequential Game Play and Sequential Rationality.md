@@ -33,3 +33,4 @@ date of note: 2024-08-04
 - [[Rationalizability and Best Response]]
 
 - [[Game Theory An Introduction by Tadelis]] pp 130
+- [[Prediction Learning and Games by Cesa-Bianchi]]

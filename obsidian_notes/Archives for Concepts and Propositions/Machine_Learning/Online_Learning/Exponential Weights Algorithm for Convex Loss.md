@@ -61,6 +61,11 @@ date of note: 2024-08-05
 - [[Potential Function for Weighted Average Forecast]]
 - [[Weighted Average Forecast via Potential]]
 
+### Exponential Weighted Majority
+
+
+
+
 
 
 
@@ -82,3 +87,4 @@ date of note: 2024-08-05
 - [[Prediction Learning and Games by Cesa-Bianchi]] pp 5, 14, 36
 - [[Bandit Algorithms by Lattimore]] pp 131 - 136
 - [[Foundations of Machine Learning by Mohri]] pp 156 - 159
+- [[Introduction to Online Convex Optimization by Hazan]] pp 60

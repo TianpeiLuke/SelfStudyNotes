@@ -100,9 +100,16 @@ date of note: 2024-05-12
 
 ### Incremental Algorithm
 
+- [[Online Convex Optimization]]
 - [[Incremental Algorithm]]
 - [[Incremental Gradient Algorithm]]
 - [[Incremental Aggregated Gradient Algorithm]]
+- [[Online Gradient Decent Algorithm]]
+
+
+- [[Follow-The-Leader Algorithm]]
+- [[Follow-The-Regularized-Leader Algorithm]]
+- [[Online Mirror Descent Algorithm]]
 
 ### Feasible Direction Method for Constrained Problem
 

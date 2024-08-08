@@ -41,6 +41,7 @@ date of note: 2024-05-12
 - [[Generalized Proximal Method]]
 - [[Subdifferential of Convex Function]]
 - [[Subgradient Methods]]
+- [[Follow-The-Regularized-Leader Algorithm]]
 
 ## Explanation
 
@@ -56,6 +57,11 @@ date of note: 2024-05-12
 
 - [[Proximal Gradient Algorithm]]
 
+## Online Mirror Descent
+
+
+
+
 
 -----------
 ##  Recommended Notes and References
@@ -68,9 +74,13 @@ date of note: 2024-05-12
 - [[Polyhedron and Polytope]]
 - [[Strongly Convex Function]]
 
+- [[Exponential Weights Algorithm as Mirror Descent]]
+- [[Online Convex Optimization]]
 
+- [[Generalized Proximal Method]]
 - [[Gradient Descent Algorithm]]
-
 - [[Approximation Method for Optimization]]
 
 - [[Convex Optimization Algorithms by Bertsekas]] pp 382
+- [[Online Learning and Online Convex Optimization by Shalev-Shwartz]] pp 142
+- [[Introduction to Online Convex Optimization by Hazan]] pp 77 - 81

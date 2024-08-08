@@ -46,6 +46,8 @@ date of note: 2024-04-18
 >   
 >Then we call $p(s, x, t, A)$ a **Markov transition function** (a **transition probability function**, or a **transition probability**).   
 
+^8dc85c
+
 - Friedman, A. (1975). *Stochastic differential equations and applications*. pp 18
 - [[Chapman-Kolmogorov Equation]]
 

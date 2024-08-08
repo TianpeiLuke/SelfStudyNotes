@@ -82,7 +82,10 @@ date of note: 2024-07-28
 ### Game Theory and Online Learning
 
 - [[Models and Algorithms for Online Learning]]
+- [[Exponential Weights Algorithm for Convex Loss]]
+- [[Exponential Weights Algorithm as Mirror Descent]]
 - [[Sequential Game Perspective for AdaBoost]]
+
 
 ### Ensemble Learning and Generalization of Boosting
 

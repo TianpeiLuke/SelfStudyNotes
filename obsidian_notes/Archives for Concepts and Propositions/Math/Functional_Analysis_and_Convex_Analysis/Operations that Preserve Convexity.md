@@ -102,6 +102,8 @@ date of note: 2024-05-16
 >- If $f$ is **concave** and **non-decreasing**, and $g$ is **concave**, then  $f \circ g$ is **concave**.
 >- If $f$ is **concave** and **non-increasing**, and $g$ is **concave**, then  $f \circ g$ is **convex**.
 
+- [[Exp-Concave Function]]
+
 >[!important] Proposition
 >For a **convex function** $f$, define the **extended-value extension**
 >$$

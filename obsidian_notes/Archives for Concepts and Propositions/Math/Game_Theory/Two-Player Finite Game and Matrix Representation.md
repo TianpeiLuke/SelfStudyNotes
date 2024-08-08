@@ -31,3 +31,4 @@ date of note: 2024-08-04
 - [[Matrix]]
 
 - [[Game Theory An Introduction by Tadelis]] pp 46
+- [[Prediction Learning and Games by Cesa-Bianchi]]

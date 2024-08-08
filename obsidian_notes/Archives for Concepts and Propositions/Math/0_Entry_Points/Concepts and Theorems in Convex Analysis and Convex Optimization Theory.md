@@ -51,6 +51,7 @@ date of note: 2024-05-11
 - [[Convex Differentiation Theorem]]
 - [[Quasi-Convex Function]]	
 - [[Log-Concave and Log-Convex Function]]
+- [[Exp-Concave Function]]
 
 ### Duality Correspondence in Convex Space
 
