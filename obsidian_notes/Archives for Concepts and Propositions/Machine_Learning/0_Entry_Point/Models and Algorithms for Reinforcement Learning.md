@@ -20,6 +20,11 @@ date of note: 2024-06-01
 
 - [[Models and Algorithms for Online Learning]]
 
+- [[Explore-Then-Commit Bandit Algorithm]]
+- [[Upper Confidence Bound Algorithm]]
+- [[Upper Confidence Bound Algorithm Asymptotic Optimality]]
+- [[Upper Confidence Bound Algorithm Minmax Optimality]]
+- [[KL-Upper Confidence Bound Algorithm]]
 - [[Multi-Armed Adversarial Bandit]]
 - [[epsilon-Greedy Algorithm]]
 - [[Exploration and Exploitation Tradeoff]]

@@ -89,9 +89,13 @@ date of note: 2024-07-14
 - [[Online Mirror Descent Algorithm]]
 
 
-
 ### Bandit Problem
 
+- [[Explore-Then-Commit Bandit Algorithm]]
+- [[Upper Confidence Bound Algorithm]]
+- [[Upper Confidence Bound Algorithm Asymptotic Optimality]]
+- [[Upper Confidence Bound Algorithm Minmax Optimality]]
+- [[KL-Upper Confidence Bound Algorithm]]
 - [[Multi-Armed Adversarial Bandit]]
 - [[epsilon-Greedy Algorithm]]
 - [[Exploration and Exploitation Tradeoff]]

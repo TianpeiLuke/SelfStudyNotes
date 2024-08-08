@@ -48,8 +48,7 @@ date of note: 2024-05-12
 >
 >- A policy $\pi$ maps *history sequence* to *distributions over actions*
 
-- [[Markov Decision Process]]
-- [[Sequential Decision Process]]
+
 
 >[!important] Definition
 >The performance of a policy $\pi$ in *environment* $x = (x_{1} \,{,}\ldots{,}\,x_{T})$ is measured by the **expected regret**, which is the *expected loss* in *cumulative rewards* of the policy relative to the *best fixed action* in *hindsight*.
@@ -65,9 +64,6 @@ date of note: 2024-05-12
 >$$ 
 
 - [[Regret for Online Learning]]
-
-
-
 
 ## Explanation
 
@@ -93,6 +89,16 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
+
+
+- [[Regret for Online Learning]]
+- [[No-Regret Learning]]
+- [[Online Convex Optimization]]
+- [[Online Learnability and Realizabililty Assumption]]
+
+
+- [[Markov Decision Process]]
+- [[Sequential Decision Process]]
 
 
 - [[Reinforcement Learning An Introduction by Sutton]]
