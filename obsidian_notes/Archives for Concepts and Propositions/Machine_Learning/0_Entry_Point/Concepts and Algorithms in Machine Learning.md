@@ -97,7 +97,7 @@ date of note: 2024-06-01
 ### Representations
 
 - [[Representation Learning]]
-- [[Regularization in Optimization]]
+- [[Tikhonov Regularization in Optimization and Learning]]
 
 ### Optimization
 

@@ -32,7 +32,7 @@ date of note: 2024-08-07
 
 - [[Mirror Descent Algorithm]]
 - [[Online Mirror Descent Algorithm]]
-- [[Regularization in Optimization]]
+- [[Tikhonov Regularization in Optimization and Learning]]
 - [[Follow-The-Leader Algorithm]]
 
 

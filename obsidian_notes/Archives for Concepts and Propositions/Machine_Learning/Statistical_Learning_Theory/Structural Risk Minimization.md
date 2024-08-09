@@ -68,6 +68,7 @@ date of note: 2024-05-12
 > \end{align}
 >$$ 
 
+- [[Regularized Loss Minimization]]
 
 ## Explanation
 
@@ -82,7 +83,7 @@ date of note: 2024-05-12
 - [[PAC Learnable and Agnostic PAC Learnable]]
 
 - [[Empirical Risk Minimization]]
-- [[Regularization in Optimization]]
+- [[Tikhonov Regularization in Optimization and Learning]]
 
 
 - [[Foundations of Machine Learning by Mohri]]

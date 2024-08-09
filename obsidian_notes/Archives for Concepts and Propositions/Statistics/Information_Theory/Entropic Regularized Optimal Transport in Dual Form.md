@@ -84,7 +84,7 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
-- [[Regularization in Optimization]]
+- [[Tikhonov Regularization in Optimization and Learning]]
 - [[Optimal Transport in Space of Measures]]
 - [[Computational Optimal Transport by Peyre]]
 - [[Optimal Transport for Applied Mathematicians by Santambrogio]]

@@ -52,7 +52,7 @@ date of note: 2024-05-12
 > 
 > - the resulting approximate distance is **smooth** with respect to input histogram weights and positions of the Diracs and can be differentiated using **automatic differentiation**.
 
-- [[Regularization in Optimization]]
+- [[Tikhonov Regularization in Optimization and Learning]]
 - [[Automatic Differentiation]]
 
 >[!important] Definition
@@ -111,7 +111,7 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
-- [[Regularization in Optimization]]
+- [[Tikhonov Regularization in Optimization and Learning]]
 
 - [[Product Measure]]
 

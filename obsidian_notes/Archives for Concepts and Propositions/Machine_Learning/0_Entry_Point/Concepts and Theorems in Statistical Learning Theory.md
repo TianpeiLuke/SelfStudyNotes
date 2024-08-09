@@ -55,12 +55,22 @@ date of note: 2024-06-01
 - [[Rademacher Complexity Bound for Binary Classification]]
 
 
+### Convex Learning Problem
+
+- [[Convex Function]]
+- [[Concentration of Separately Convex Lipschitz Functions]]
+- [[Concentration of Quasi-Convex Lipschitz Functions]]
+
+
+
 ### Regularization and Structural Risk Minimization
 
 - [[Bias-Variance Tradeoff]]
-- [[Regularization in Optimization]]
 - [[Non-Uniform Learning]]
 - [[Structural Risk Minimization]]
+- [[Regularized Loss Minimization]]
+- [[Tikhonov Regularization in Optimization and Learning]]
+
 - [[PAC-Bayes Learnable]]
 
 

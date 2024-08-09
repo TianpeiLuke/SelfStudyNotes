@@ -31,7 +31,7 @@ date of note: 2024-05-12
 >where $D_{k}: \mathbb{R}^{n} \times \mathbb{R}^n \to (-\infty, +\infty]$ is a **regularization term**.
 
 - [[Proximal Algorithm]]
-- [[Regularization in Optimization]]
+- [[Tikhonov Regularization in Optimization and Learning]]
 - [[Follow-The-Regularized-Leader Algorithm]]
 
 ## Explanation
