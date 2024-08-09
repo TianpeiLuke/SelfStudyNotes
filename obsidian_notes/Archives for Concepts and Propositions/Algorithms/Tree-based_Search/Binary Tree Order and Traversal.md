@@ -25,3 +25,7 @@ date of note: 2024-08-08
 -----------
 ##  Recommended Notes and References
 
+
+- [[Binary Tree Inorder Traversal]]
+- [[Tree-Order Relation]]
+- [[Tree Graph and Forest]]

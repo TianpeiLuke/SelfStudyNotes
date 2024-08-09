@@ -40,4 +40,4 @@ date of note: 2024-08-07
 
 
 - [[Bandit Algorithms by Lattimore]] pp 84 - 96
-- [[Reinforcement Learning An Introduction by Sutton]]
+- [[Reinforcement Learning An Introduction by Sutton]] pp 35

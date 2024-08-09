@@ -20,16 +20,24 @@ date of note: 2024-06-01
 
 - [[Models and Algorithms for Online Learning]]
 
+- [[Stochastic Bandit Problem]]
 - [[Explore-Then-Commit Bandit Algorithm]]
 - [[epsilon-Greedy Algorithm]]
 - [[Upper Confidence Bound Algorithm]]
 - [[Upper Confidence Bound Algorithm Asymptotic Optimality]]
 - [[Upper Confidence Bound Algorithm Minmax Optimality]]
 - [[KL-Upper Confidence Bound Algorithm]]
-- [[Multi-Armed Adversarial Bandit]]
+- [[Bandit Gradient Algorithm]]
 
+
+- [[Multi-Armed Adversarial Bandit]]
 - [[Exploration and Exploitation Tradeoff]]
 - [[EXP3 or Exponential Weights Algorithm for Exploration and Exploitation]]
+
+
+- [[Contextual Bandit Problem]]
+
+
 
 ### Markov Decision Process
 

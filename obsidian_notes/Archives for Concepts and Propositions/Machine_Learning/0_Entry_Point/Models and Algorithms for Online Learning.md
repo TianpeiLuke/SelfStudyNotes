@@ -91,16 +91,22 @@ date of note: 2024-07-14
 
 ### Bandit Problem
 
+- [[Stochastic Bandit Problem]]
 - [[Explore-Then-Commit Bandit Algorithm]]
+- [[epsilon-Greedy Algorithm]]
+
 - [[Upper Confidence Bound Algorithm]]
 - [[Upper Confidence Bound Algorithm Asymptotic Optimality]]
 - [[Upper Confidence Bound Algorithm Minmax Optimality]]
 - [[KL-Upper Confidence Bound Algorithm]]
+- [[Bandit Gradient Algorithm]]
+
 - [[Multi-Armed Adversarial Bandit]]
-- [[epsilon-Greedy Algorithm]]
 - [[Exploration and Exploitation Tradeoff]]
 - [[EXP3 or Exponential Weights Algorithm for Exploration and Exploitation]]
 
+
+- [[Contextual Bandit Problem]]
 
 
 ### Approximate Dynamic Programming

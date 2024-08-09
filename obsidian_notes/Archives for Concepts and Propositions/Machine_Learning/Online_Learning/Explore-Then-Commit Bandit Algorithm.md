@@ -79,6 +79,8 @@ date of note: 2024-08-07
 
 ## Explanation
 
+>[!info]
+>Some other names for this algorithm is **forced sampling**, **explore-first**, **explore-then-exploit*. *
 
 ![[Multi-Armed Adversarial Bandit#^d92056]]
 
@@ -92,6 +94,8 @@ date of note: 2024-08-07
 >\text{new estimate } = \text{ old estimate } + \text{ stepsize} \times \left(\text{ target } - \text{ old estimate}\right) 
 >$$
 
+- [[Temporal Difference Learning]]
+- [[Sarsa Algorithm and On-Policy Temporal Difference Control]]
 - [[Q Learning Algorithm and Off-Policy Temporal Difference Control]]
 
 
