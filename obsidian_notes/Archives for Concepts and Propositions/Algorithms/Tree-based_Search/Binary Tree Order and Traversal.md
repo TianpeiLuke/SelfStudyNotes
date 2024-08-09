@@ -2,7 +2,7 @@
 tags:
   - concept
   - algorithm/search
-  - algorithm/graph
+  - algorithm/binary_tree
 keywords: 
 topics: 
 name: 

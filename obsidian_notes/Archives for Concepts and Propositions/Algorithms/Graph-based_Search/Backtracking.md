@@ -1,8 +1,7 @@
 ---
 tags:
   - concept
-  - algorithm/search
-  - algorithm/graph
+  - algorithm/backtracking
 keywords: 
 topics: 
 name: 
@@ -25,3 +24,4 @@ date of note: 2024-08-08
 -----------
 ##  Recommended Notes and References
 
+- [[Graph]]

@@ -1,8 +1,7 @@
 ---
 tags:
   - concept
-  - algorithm/search
-  - algorithm/graph
+  - algorithm/sort
 keywords: 
 topics: 
 name: 

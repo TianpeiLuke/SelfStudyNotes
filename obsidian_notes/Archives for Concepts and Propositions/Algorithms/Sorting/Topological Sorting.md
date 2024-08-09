@@ -3,23 +3,29 @@ tags:
   - concept
   - algorithm/graph
   - algorithm/sort
-keywords: 
-topics: 
-name: 
+keywords:
+  - topological_order_graph
+  - topological_sorting
+topics:
+  - algorithm/sort
+  - algorithm/graph
+name: Topological Sorting
 date of note: 2024-07-07
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Topological Sorting
 
 
->[!important] Kahn's algorithm
->$L \leftarrow$ Empty list that will contain the sorted elements
->$S \leftarrow$  Set of all nodes with *no incoming edge*
+>[!important] Definition
+>The **Kahn's algorithm** for topological sort algorithm on a graph $G = (V,E)$ is described as below
+>- *Require*: graph $G = (V, E)$
+>- *Initialization*: $L \leftarrow$ Empty list that will contain the sorted elements
+>- *Initialization*: $S \leftarrow$  Set of all nodes with *no incoming edge*
 > 
->- while$S$ is not empty:
+>- while $S$ is not empty:
 >	- **remove** a node $n$ from $S$
 >	- *add* $n$ to $L$
 >	- for each node $m$ with **an edge** $e$ *from* $n$ *to* $m$:
@@ -42,6 +48,8 @@ date of note: 2024-07-07
 -----------
 ##  Recommended Notes and References
 
+
 - [[Graph]]
+
 
 - [[Probabilistic Graphical Models by Koller]] pp 1144

@@ -1,7 +1,7 @@
 ---
 tags:
   - concept
-  - algorithm/search
+  - math/graph_theory
   - algorithm/graph
 keywords: 
 topics: 
@@ -25,3 +25,6 @@ date of note: 2024-08-08
 -----------
 ##  Recommended Notes and References
 
+
+- [[Flow of Graph]]
+- [[Graph]]
