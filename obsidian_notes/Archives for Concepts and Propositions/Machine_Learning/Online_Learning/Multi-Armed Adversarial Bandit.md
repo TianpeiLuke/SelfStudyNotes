@@ -43,6 +43,8 @@ date of note: 2024-05-12
 >	- *learner* observes **reward** $$X_{t} = x_{t, A_{t}} = \sum_{i=1}^{k}\,x_{t,i}\mathbb{1}\{A_{t} = i\}$$
 >	  
 
+^d92056
+
 >[!important] Definition
 >A **policy** under the $k$-armed bandit setting is a function $$\pi: [k] \times [0,1] \to \mathscr{P}_{k-1}$$ where $\mathscr{P}_{k-1}$ is the set of all *probability distributions* on a set of  $k$ sequences $[k]$.
 >
