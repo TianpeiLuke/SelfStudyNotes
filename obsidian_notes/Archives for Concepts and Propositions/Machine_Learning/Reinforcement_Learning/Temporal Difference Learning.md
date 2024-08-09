@@ -116,6 +116,9 @@ date of note: 2024-05-12
 
 - [[Eligibility Traces]]
 
+### Temporal Difference Learning, Monte Carlo Method and Dynamic Programming
+
+
 >[!important]
 >The approximation of target $$G_{t} \approx R_{t+1} + \gamma V(S_{t+1})$$ is the **key** for TD learning. 
 >
@@ -138,9 +141,34 @@ date of note: 2024-05-12
 >Whereas **Monte Carlo methods** must wait until the **end of the episode** to determine the *increment* to $V(S_t)$ (only then is $G_t$ known), **TD methods** need to wait only until the **next time step**. 
 >  
 
-
 - [[Dynamic Programming for MDP]]
 - [[Monte Carlo and Applications]]
+
+
+>[!important]
+>Let us compare **TD learning**  to **Dynamic Programming (DP)** and **Monte Carlo (MC)**. Because TD($0$) bases its update in part on an existing estimate, we say that it is a **bootstrapping method**, like DP. 
+>
+>Check the value function and Bellman equation as 
+>$$
+> \begin{align}
+> \text{DP: }v_{\pi}(s) &=  \mathbb{E}_{ \pi }\left[  R_{t+1}  + \gamma\,v_{\pi}(S_{t+1}) | S_{t} = s \right] \ \\[5pt]
+> \text{MC: }v_{\pi}(s) &=  \mathbb{E}_{ \pi }\left[  G_{t} | S_{t} = s \right] 
+> \end{align}
+>$$  
+>- **DP** estimate uses an estimate of the **Bellman equation** as target.
+>	- Although the *expectation* can be computed exactly, the value at state $S_{t+1}$ is an *estimate* since we do not know $S_{t+1}$ at time $t$. 
+>- The **MC** uses an estimate as *target*. 
+>	- The **Monte Carlo target** is an *estimate* because the *expected value* is not known; 
+>	- a *sample return* is used in place of the *real expected return*. 
+>- The **TD target** is an estimate for *both reasons*: 
+>	- it *samples the expected values*  and 
+>	- it uses the *current estimate* $V$ instead of the *true* $v_{\pi}$. 
+>
+>Thus, *TD methods* **combine** the **sampling** of Monte Carlo with the **bootstrapping** of DP.
+
+
+
+
 
 
 -----------

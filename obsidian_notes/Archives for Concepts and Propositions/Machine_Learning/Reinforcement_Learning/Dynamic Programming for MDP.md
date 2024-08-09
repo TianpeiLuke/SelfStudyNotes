@@ -47,7 +47,7 @@ date of note: 2024-05-12
 
 - [[Value Function and Bellman Equation for MDP]]
 - [[Bellman Optimality Equation for MDP]]
-
+- [[Bootstrap Method]]
 
 ## Explanation
 
