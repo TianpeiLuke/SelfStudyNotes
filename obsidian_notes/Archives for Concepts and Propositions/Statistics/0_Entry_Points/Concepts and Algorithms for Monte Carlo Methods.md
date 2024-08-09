@@ -25,7 +25,7 @@ date of note: 2024-07-04
 ### Sequential Monte Carlo
 
 - [[Sequential Importance Sampling]]
-- [[Particle Filter]]
+- [[Particle Filter or Sampling-Importance-Resampling]]
 
 ### Markov Chain Monte Carlo
 
@@ -33,7 +33,9 @@ date of note: 2024-07-04
 
 - [[Markov Chain Monte Carlo Methods]]
 - [[Metropolis-Hastings Algorithm]]
+- [[Random Walk Metropolis-Hastings]]
 - [[Gibbs Sampling]]
+- [[Gibbs Sampling for Graphical Model]]
 
 ### Monte Carlo of Dynamic System
 

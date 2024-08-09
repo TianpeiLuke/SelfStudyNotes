@@ -40,6 +40,7 @@ date of note: 2024-05-22
 - [[Conditional Probability]]
 - [[Probability Distribution of Random Variable]]
 
+- [[Particle Filter or Sampling-Importance-Resampling]]
 
 - [[Sub-Additivity of Entropy Functional and Tensorization]]
 

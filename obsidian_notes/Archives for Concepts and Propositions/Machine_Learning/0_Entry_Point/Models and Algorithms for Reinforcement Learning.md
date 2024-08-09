@@ -82,7 +82,7 @@ date of note: 2024-06-01
 
 - [[Concepts and Algorithms for Monte Carlo Methods]]
 - [[Sequential Importance Sampling]]
-- [[Particle Filter]]
+- [[Particle Filter or Sampling-Importance-Resampling]]
 
 ### Control as Inference
 

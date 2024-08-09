@@ -168,7 +168,10 @@ date of note: 2024-06-01
 - [[Log-Partition Function and Score Function of Graphical Models]]
 - [[Concepts and Algorithms for Monte Carlo Methods]]
 - [[Markov Chain Monte Carlo Methods]]
+- [[Metropolis-Hastings Algorithm]]
+- [[Random Walk Metropolis-Hastings]]
 - [[Gibbs Sampling]]
+- [[Gibbs Sampling for Graphical Model]]
 
 
 ### MAP Inference

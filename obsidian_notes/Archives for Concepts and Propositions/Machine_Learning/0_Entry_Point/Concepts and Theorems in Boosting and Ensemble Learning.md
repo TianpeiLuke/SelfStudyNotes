@@ -92,6 +92,11 @@ date of note: 2024-07-28
 - [[Ensemble Learning]]
 - [[Forward Stagewise Additive Modeling]]
 
+### Bootstrap
+
+- [[Bootstrap Method]]
+
+
 
 
 ## Explanation

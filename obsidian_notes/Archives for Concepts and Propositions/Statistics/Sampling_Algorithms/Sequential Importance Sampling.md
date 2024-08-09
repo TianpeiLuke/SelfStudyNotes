@@ -38,10 +38,12 @@ date of note: 2024-07-04
 >The task is to *generate* a list of samples $(X_{1} \,{,}\ldots{,}\,X_{n})$ *sequentially* from some *target joint distribution* $p$. 
 >
 >The **Sequential Importance Sampling (SIS)** algorithm is described as below:
->- Draw sample from *conditional trial density* $$X_{t} \sim g(x_{t}| X_{1} \,{,}\ldots{,}\,X_{t-1})$$
->- Compute the **incremental weight** $$u_{t} = \frac{p_t(X_{t})}{p_{t-1}(X_{1} \,{,}\ldots{,}\,X_{t-1}) \, g(x_t\,|\,X_{1} \,{,}\ldots{,}\,X_{t-1})}$$ where $p_{t}$ is a reasonable **approximation** of the **marginal** $p(x_{1} \,{,}\ldots{,}\,x_{t}).$ Note that $p_t(x_{1} \,{,}\ldots{,}\,x_{t})$ only need to be known *up to a constant* and only serves as a *"guide"* to construction of whole samples. 
->- Update *importance weight* $$w_{t} = w_{t-1}\,u_{t}$$
->- $t \leftarrow t+1$
+>- For $t=1 \,{,}\ldots{,}\,T$
+>	- Generate sample from *conditional trial density* $$X_{t} \sim g(x_{t}| X_{1} \,{,}\ldots{,}\,X_{t-1})$$
+>	- Compute the **incremental weight** $$u_{t} = \frac{p_t(X_{t})}{p_{t-1}(X_{1} \,{,}\ldots{,}\,X_{t-1}) \, g(x_t\,|\,X_{1} \,{,}\ldots{,}\,X_{t-1})}$$ where $p_{t}$ is a reasonable **approximation** of the **marginal** $p(x_{1} \,{,}\ldots{,}\,x_{t}).$ 
+>		- Note that $p_t(x_{1} \,{,}\ldots{,}\,x_{t})$ only need to be known *up to a constant* and only serves as a *"guide"* to construction of whole samples. 
+>	- Update **importance weight** $$w_{t} = w_{t-1}\,u_{t}$$
+>
 >- Output $$(w_{1}X_{1} \,{,}\ldots{,}\, w_{n}X_{n}) \sim p$$
 
 
@@ -66,7 +68,7 @@ date of note: 2024-07-04
 
 - [[Importance Sampling]]
 
-- [[Particle Filter]]
+- [[Particle Filter or Sampling-Importance-Resampling]]
 
 - [[All of Statistics A Concise Course by Wasserman]]
 - [[Monte Carlo Strategies in Scientific Computing by Liu]] pp 46
