@@ -26,6 +26,9 @@ date of note: 2024-05-12
 
 ![[Bellman Optimality Equation for MDP#^2ff71a]]
 
+![[Temporal Difference Learning#^a52316]]
+
+
 >[!important] Definition
 >The update rule for **Q-learning** is defined by
 >$$

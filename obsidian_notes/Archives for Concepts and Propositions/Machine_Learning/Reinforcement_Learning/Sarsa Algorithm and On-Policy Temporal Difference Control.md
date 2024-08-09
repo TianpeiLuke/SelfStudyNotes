@@ -2,22 +2,24 @@
 tags:
   - concept
   - machine_learning/algorithms
-keywords: 
-topics: 
-name: 
+  - reinforcement_learning/algorithm
+keywords:
+  - on_policy_learning
+  - temporal_difference_learning
+  - sarsa_algorithm
+topics:
+  - reinforcement_learning/algorithm
+name: Sarsa Algorithm and On-Policy Temporal Difference Control
 date of note: 2024-05-12
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Sarsa Algorithm and On-Policy Temporal Difference Control
 
+![[Temporal Difference Learning#^a52316]]
 
-
-![[Bellman Optimality Equation for MDP#^469b99]]
-
-![[Bellman Optimality Equation for MDP#^2ff71a]]
 
 
 ## Explanation
@@ -32,7 +34,7 @@ date of note: 2024-05-12
 - [[Approximate Dynamic Programming for MDP]]
 - [[Temporal Difference Learning]]
 
-- [[Bellman Optimality Equation for MDP]]
+- [[Dynamic Programming for MDP]]
 - [[Value Function and Bellman Equation for MDP]]
 - [[Markov Decision Process]]
 

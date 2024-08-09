@@ -2,16 +2,21 @@
 tags:
   - concept
   - machine_learning/algorithms
-keywords: 
-topics: 
-name: 
+  - reinforcement_learning/algorithm
+  - reinforcement_learning/theory
+keywords:
+  - expected_sarsa_algorithm
+  - temporal_difference_learning
+topics:
+  - reinforcement_learning/algorithm
+name: Expected Sarsa Algorithm
 date of note: 2024-05-12
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Expected Sarsa Algorithm
 
 >[!info]
 >One of the early breakthroughs in reinforcement learning was the development of an off-policy TD control algorithm known as **Q-learning**.
@@ -22,13 +27,11 @@ date of note: 2024-05-12
 
 ![[Bellman Optimality Equation for MDP#^2ff71a]]
 
+![[Temporal Difference Learning#^a52316]]
+
+
 >[!important] Definition
->The update rule for **Q-learning** is defined by
->$$
-> \begin{align}
-> Q(X_{t}, A_{t}) &\leftarrow Q(X_{t}, A_{t}) + \alpha_{t}\left[ R_{t+1} + \gamma \max_{a'\in \mathcal{A}(X_{t+1})}Q(X_{t+1}, a')  - Q(X_{t}, A_{t}) \right]. 
-> \end{align}
->$$ 
+
 
 
 ## Explanation
