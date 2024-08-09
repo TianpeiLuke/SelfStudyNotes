@@ -2,11 +2,13 @@
 tags:
   - concept
   - optimization/algorithm
+  - numerical_methods/numerical_linear_algebra
 keywords:
   - conjugate_vector_positive_definite
   - conjugate_gradient_linear
 topics:
   - optimization/algorithm
+  - numerical_linear_algebra
 name: Conjugate Gradient Algorithm Linear
 date of note: 2024-05-12
 ---

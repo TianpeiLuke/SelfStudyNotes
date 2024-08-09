@@ -223,7 +223,7 @@ date of note: 2024-07-04
 >
 >-- Brooks, S., Gelman, A., Jones, G., & Meng, X.-L. (Eds.). (2011). _Handbook of Markov Chain Monte Carlo_ (1st edition). Chapman and Hall/CRC. pp 130
 
-
+- [[Random Walk Metropolis-Hastings]]
 
 ## Stationarity of HMC
 
