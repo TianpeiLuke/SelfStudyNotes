@@ -29,7 +29,7 @@ date of note: 2024-05-12
 >  we recall the **Bellman equation** for *action-value function* $q$ and state-value function $v$ as below. 
 > $$ 
 > \begin{align}
-> v_{\pi}(s) &=    \mathbb{E}_{ \pi }\left[ R_{t+1}  + \gamma\,v_{\pi}(X_{t+1}) | X_{t} = x \right] \nonumber\\
+> v_{\pi}(x) &=    \mathbb{E}_{ \pi }\left[ R_{t+1}  + \gamma\,v_{\pi}(X_{t+1}) | X_{t} = x \right] \nonumber\\
 > q_{\pi}(x, a) &=  \mathbb{E}_{ \pi }\left[ R_{t+1} + \gamma q_{\pi}(X_{t+1}, A_{t+1}) | X_{t}=x, A_{t}=a \right]
 > \end{align}
 >$$  
@@ -41,7 +41,7 @@ date of note: 2024-05-12
 > Q(X_{t}, A_{t}) &\leftarrow Q(X_{t}, A_{t}) + \alpha_{t}\left[ R_{t+1} + \gamma Q(X_{t+1}, A_{t+1})  - Q(X_{t}, A_{t}) \right] . 
 > \end{align}
 >$$   
->The name of **SARSA** comes from the fact that the update is controlled by the **tuple** $$(X_{t}, A_{t}, R_{t+1}, X_{t+1}, A_{t+1}).$$ 
+>The name of **SARSA** comes from the fact that the update is controlled by the **tuple** $$(S_{t}, A_{t}, R_{t+1}, S_{t+1}, A_{t+1}).$$ 
 >Unlike the TD prediction, here we need to **sample a new action** based on the new state and policy.
 
 ^cf105f
@@ -138,6 +138,7 @@ date of note: 2024-05-12
 - [[Value Function and Bellman Equation for MDP]]
 - [[Markov Decision Process]]
 
+- [[Sequential Decision Process]]
 
 
 - [[Reinforcement Learning An Introduction by Sutton]]

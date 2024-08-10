@@ -123,6 +123,10 @@ date of note: 2024-05-12
 >\mathcal{H}^s = \mathcal{H}^{s-1} \times \mathcal{A} \times \mathcal{X}, \quad h_{s} = (h_{s-1}, a_{s-1}, x_{s})
 >$$
 
+- [[Multi-Step Temporal Difference Learning]]
+- [[Multi-Step SARSA Algorithm On-Policy]]
+
+
 >[!important] Definition
 >For each $s\in T$,  a **randomized** *decision rule* $\delta_{t}$ specify a *probability distribution* $q_{\delta_{t}}$ on $\mathcal{A}$ based on history or current state, i.e.
 >$$
