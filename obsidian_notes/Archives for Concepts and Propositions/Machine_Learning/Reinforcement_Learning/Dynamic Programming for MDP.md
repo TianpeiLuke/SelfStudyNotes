@@ -26,31 +26,51 @@ date of note: 2024-05-12
 ![[Value Function and Bellman Equation for MDP#^e3c917]]
 
 
->[!info]
->The *Bellman equations provide* the basics for dynamic programming. 
+>[!important] Definition
+>The **Bellman equations** provide the basics for dynamic programming. 
 >
->We summarize them as below:
+>We summarize **Bellman equations** for *state-value* and *action-value functions* as below:
 >$$
 >\begin{align*}
->v_{\pi}(x) &= \sum_{a \in \mathcal{A}}\pi(a | x) \sum_{u \in \mathcal{X}}\,p(u | x, a)\,\left[r(x, a) + \gamma\,v_{\pi}(u)  \right], \quad \forall x \in \mathcal{X} \\
+>v_{\pi}(x) &= \sum_{a \in \mathcal{A}}\pi(a | x) \sum_{u \in \mathcal{X}}\,p(u | x, a)\,\left[r(x, a) + \gamma\,v_{\pi}(u)  \right], \quad \forall x \in \mathcal{X} \\[5pt]
 > q_{\pi}(x, a) &=  \sum_{u \in \mathcal{X}}\,p(u | x, a)\,\left[\,r(x, a) + \gamma\,\sum_{a' \in \mathcal{A}}\pi(a' | u)\,q_{\pi}(u, a')  \right], \quad \forall x \in \mathcal{X}, \; a \in \mathcal{A}
 >\end{align*}
 >$$
->and the *Bellman optimality equation*
+
+^d0f53b
+
+- [[Value Function and Bellman Equation for MDP]]
+
+>[!important] Definition
+ >The **Bellman optimality equation**  for *state-value* and *action-value functions* as below:
 >$$
 >\begin{align*}
->v_{*}(x) &= \max_{a \in \mathcal{A}_{x}}\,\sum_{u \in \mathcal{X}}p(u | x, a)\left[\, r(x, a) + \gamma v_{*}(u) \,\right], \quad \forall x\in \mathcal{X} \\
+>v_{*}(x) &= \max_{a \in \mathcal{A}_{x}}\,\sum_{u \in \mathcal{X}}p(u | x, a)\left[\, r(x, a) + \gamma v_{*}(u) \,\right], \quad \forall x\in \mathcal{X} \\[5pt]
 >q_{*}(x, a) &= \sum_{u \in \mathcal{X}}p(u | x, a)\,\left[ r(x, a) + \gamma\,\max_{a' \in \mathcal{A}}q_{*}(u, a') \right], \quad \forall x\in \mathcal{X}, \,a\in \mathcal{A}
 >\end{align*}
 >$$
 
-
-- [[Value Function and Bellman Equation for MDP]]
 - [[Bellman Optimality Equation for MDP]]
 - [[Bootstrap Method]]
 
+### Policy Iteration
+
+- [[Policy Iteration Algorithm]]
+- [[Value Iteration Algorithm]]
+- [[Backward Induction and Dynamic Programming]]
+
+
 ## Explanation
 
+
+
+
+
+## Online Update for Model-Free Approach
+
+- [[SARSA Algorithm and On-Policy Temporal Difference Control]]
+- [[Q Learning Algorithm and Off-Policy Temporal Difference Control]]
+- [[Expected SARSA Algorithm]]
 
 
 

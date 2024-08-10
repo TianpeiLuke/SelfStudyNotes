@@ -26,9 +26,10 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
-- [[Policy Gradient Optimization]]
-- [[Markov Decision Process]]
+- [[Monte Carlo Control with Exploring Starts]]
+- [[Monte Carlo and Applications]]
 
+- [[Value Function and Bellman Equation for MDP]]
 
-- [[Reinforcement Learning An Introduction by Sutton]] pp 331 - 333
-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 1148
+- [[Reinforcement Learning An Introduction by Sutton]] pp 92 - 96
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] 

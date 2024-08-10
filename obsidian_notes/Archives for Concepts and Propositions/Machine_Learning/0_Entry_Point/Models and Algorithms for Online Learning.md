@@ -113,13 +113,6 @@ date of note: 2024-07-14
 
 - [[Models and Algorithms for Reinforcement Learning]]
 
-- [[Dynamic Programming for MDP]]
-- [[Approximate Dynamic Programming for MDP]]
-- [[On-Policy and Off-Policy Reinforcement Learning]]
-
-- [[Temporal Difference Learning]]
-- [[Sarsa Algorithm and On-Policy Temporal Difference Control]]
-
 
 ### Boosting
 

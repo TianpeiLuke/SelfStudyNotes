@@ -29,7 +29,7 @@ date of note: 2024-07-13
 ##  Recommended Notes and References
 
 
-- [[Sarsa Algorithm and On-Policy Temporal Difference Control]]
+- [[SARSA Algorithm and On-Policy Temporal Difference Control]]
 - [[Q Learning Algorithm and Off-Policy Temporal Difference Control]]
 
 - [[Temporal Difference Learning]]

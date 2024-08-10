@@ -25,9 +25,15 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
-- [[Approximate Dynamic Programming for MDP]]
+
+- [[lambda-Return Algorithm and Compound Update]]
+- [[Temporal Difference lambda Algorithm]]
+- [[Multi-Step Truncated lambda-Return Method]]
+
+
 - [[Temporal Difference Learning]]
 - [[Markov Decision Process]]
+- [[Prediction and Control Problems in Reinforcement Learning]]
 
 
 - [[Reinforcement Learning An Introduction by Sutton]]

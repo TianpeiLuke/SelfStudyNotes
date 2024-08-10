@@ -26,9 +26,12 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
+- [[Eligibility Traces]]
+- [[Actor-Critic Algorithm]]
+
 - [[Policy Gradient Optimization]]
 - [[Markov Decision Process]]
 
 
-- [[Reinforcement Learning An Introduction by Sutton]] pp 331 - 333
+- [[Reinforcement Learning An Introduction by Sutton]] pp 331 - 334
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 1148

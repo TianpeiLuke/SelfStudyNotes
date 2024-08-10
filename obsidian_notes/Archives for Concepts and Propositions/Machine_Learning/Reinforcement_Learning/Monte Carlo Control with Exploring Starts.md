@@ -26,9 +26,12 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
-- [[Policy Gradient Optimization]]
-- [[Markov Decision Process]]
-- [[Sequential Importance Sampling]]
+- [[Monte Carlo Prediction for Value Estimation]]
+- [[Monte Carlo and Applications]]
+
+
+- [[Bellman Optimality Equation for MDP]]
+- [[Value Function and Bellman Equation for MDP]]
 
 
 - [[Reinforcement Learning An Introduction by Sutton]] pp 185 - 187

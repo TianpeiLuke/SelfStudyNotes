@@ -45,53 +45,105 @@ date of note: 2024-06-01
 - [[Concepts and Theorems for Markov Process]]
 - [[Markov Decision Process]]
 - [[Returns and Goals of Reinforcement Learning]]
+- [[Value Function and Bellman Equation for MDP]]
+- [[Bellman Optimality Equation for MDP]]
+
 
 ### Dynamic Programming
 
-- [[Value Function and Bellman Equation for MDP]]
-- [[Bellman Optimality Equation for MDP]]
 - [[Dynamic Programming for MDP]]
+- [[Prediction and Control Problems in Reinforcement Learning]]
+- [[Policy Iteration Algorithm]]
+- [[Valued-based and Policy-based Reinforcement Learning]]
+- [[Value Iteration Algorithm]]
+- [[Generalized Policy Iteration]]
 - [[On-Policy and Off-Policy Reinforcement Learning]]
 
-- [[Valued-based and Policy-based Reinforcement Learning]]
-- [[Approximate Dynamic Programming for MDP]]
 
-### Planning
-
-- [[Planning in Markov Decision Process]]
-- [[Value Iteration]]
-- [[Policy Iteration Algorithm]]
-
-### Temporal Difference and Tabular-based Approach 
-
-- [[Temporal Difference Learning]]
-- [[Sarsa Algorithm and On-Policy Temporal Difference Control]]
-- [[Expected Sarsa Algorithm]]
-
-- [[Q Learning Algorithm and Off-Policy Temporal Difference Control]]
-- [[Double Q Learning Algorithm]]
-- [[Deep Q-Network]]
-
-- [[Eligibility Traces]]
-
-### Functional-based Approach
-
-- [[Policy Gradient Optimization]]
-- [[REINFORCE Algorithm]]
-- [[Actor-Critic Algorithm]]
-- [[A2C and A3C Algorithm]]
-
-### Model-based RL
-
-- [[Model-based Reinforcement Learning]]
-- [[Monte Carlo Tree Search]]
-- [[PILCO or Probabilistic Inference for Learning Control]]
-
-### Off-Policy Learning via Monte Carlo Methods
+### Monte Carlo Prediction and Control
 
 - [[Concepts and Algorithms for Monte Carlo Methods]]
 - [[Sequential Importance Sampling]]
 - [[Particle Filter or Sampling-Importance-Resampling]]
+- [[Monte Carlo Prediction for Value Estimation]]
+- [[Monte Carlo Control with Exploring Starts]]
+- [[Off-Policy Monte Carlo Prediction with Importance Sampling]]
+- [[Off-Policy Monte Carlo Control]]
+
+
+### Temporal Difference and Tabular-based Approach 
+
+- [[Temporal Difference Learning]]
+- [[SARSA Algorithm and On-Policy Temporal Difference Control]]
+- [[Expected SARSA Algorithm]]
+
+- [[Q Learning Algorithm and Off-Policy Temporal Difference Control]]
+- [[Double Q Learning Algorithm]]
+
+
+### Multi-Step Temporal Difference
+
+- [[Multi-Step Temporal Difference Learning]]
+- [[Multi-Step SARSA Algorithm On-Policy]]
+- [[Multi-Step SARSA Algorithm Off-Policy]]
+- [[Multi-Step Tree Backup Algorithm]]
+- [[Multi-Step Q-sigma Algorithm as Unifying Approach]]
+
+
+### Functional-Approximation Approach
+
+- [[Value Function Approximation]]
+- [[Prediction Objective for Value Function Approximation]]
+- [[Stochastic Gradient Descent Algorithm]]
+- [[Gradient Monte Carlo Method for Value Function Approximation]]
+- [[Semi-Gradient Temporal Difference]]
+- [[Linear Temporal Difference Learning]]
+- [[Deep Q-Network]]
+
+### On-Policy Control with Approximation
+
+- [[Episodic Semi-Gradient SARSA]]
+- [[Episodic Semi-Gradient Multi-Step SARSA]]
+- [[Differential Semi-Gradient SARSA for Markov Reward Process]]
+- [[Differential Semi-Gradient Multi-Step SARSA]]
+
+### Off-Policy Control with Approximation
+
+- [[Deadly Triad of Off-Policy Boostrapping with Function Approximation]]
+- [[Bellman Error]]
+- [[Gradient-Temporal Difference Methods]]
+
+### Eligibility Traces
+
+- [[Eligibility Traces]]
+- [[lambda-Return Algorithm and Compound Update]]
+- [[Temporal Difference lambda Algorithm]]
+- [[Multi-Step Truncated lambda-Return Method]]
+- [[Online lambda-Return Algorithm and Redoing Updates]] 
+- [[Online Temporal Difference lambda]]
+
+- [[SARSA lambda Algorithm]]
+- [[Watkin Q lambda Algorithm]]
+- [[Tree-Backup lambda Algorithm]]
+
+### Parameterized Policy Learning
+
+- [[Policy Gradient Optimization]]
+- [[REINFORCE Algorithm for Monte Carlo Policy Gradient]]
+- [[REINFORCE Algorithm with Baseline]]
+- [[Actor-Critic Algorithm]]
+- [[Actor-Critic Algorithm with Eligibility Traces]]
+- [[A2C and A3C Algorithm]]
+
+### Planning and Model-based RL
+
+- [[Planning in Markov Decision Process]]
+- [[Model-based Reinforcement Learning]]
+- [[Monte Carlo Tree Search]]
+- [[PILCO or Probabilistic Inference for Learning Control]]
+
+
+
 
 ### Control as Inference
 

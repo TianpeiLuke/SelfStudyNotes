@@ -17,11 +17,8 @@ date of note: 2024-05-12
 >[!important]
 >**Name**: Double Q Learning Algorithm
 
+![[Q Learning Algorithm and Off-Policy Temporal Difference Control#^d64bd3]]
 
-
-![[Bellman Optimality Equation for MDP#^469b99]]
-
-![[Bellman Optimality Equation for MDP#^2ff71a]]
 
 >[!important] Definition
 

@@ -95,7 +95,7 @@ date of note: 2024-08-07
 >$$
 
 - [[Temporal Difference Learning]]
-- [[Sarsa Algorithm and On-Policy Temporal Difference Control]]
+- [[SARSA Algorithm and On-Policy Temporal Difference Control]]
 - [[Q Learning Algorithm and Off-Policy Temporal Difference Control]]
 
 

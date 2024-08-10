@@ -238,7 +238,7 @@ date of note: 2024-05-12
 - [[Dynamic Programming for MDP]]
 
 - [[Policy Iteration Algorithm]]
-- [[Value Iteration]]
+- [[Value Iteration Algorithm]]
 - [[Temporal Difference Learning]]
 - [[Q Learning Algorithm and Off-Policy Temporal Difference Control]]
 
