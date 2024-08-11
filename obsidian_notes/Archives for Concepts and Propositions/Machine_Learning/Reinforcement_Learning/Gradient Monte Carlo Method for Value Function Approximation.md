@@ -18,9 +18,9 @@ date of note: 2024-08-09
 >[!important]
 >**Name**: Gradient Monte Carlo Method for Value Function Approximation
 
-![[Value Function Approximation#^ac5adb]]
+![[Value Function Approximation as Supervised Learning#^ac5adb]]
 
-![[Value Function Approximation#^08c9a9]]
+![[Value Function Approximation as Supervised Learning#^08c9a9]]
 
 ![[Stochastic Gradient Descent Algorithm#^c471ba]]
 
@@ -40,7 +40,9 @@ date of note: 2024-08-09
 >\end{align*}
 >$$
 
-- [[Value Function Approximation]]
+^00a8b6
+
+- [[Value Function Approximation as Supervised Learning]]
 - [[Stochastic Gradient Descent Algorithm]]
 - [[Minimum Mean Square Estimation]]
 

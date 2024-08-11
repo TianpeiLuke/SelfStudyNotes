@@ -35,6 +35,8 @@ date of note: 2024-08-09
 >The weight fades by with each additional step. That is, the weight **geometrically decay**.
 >
 
+^63443d
+
 
 ![[lambda_return.png]]
 
@@ -67,6 +69,10 @@ date of note: 2024-08-09
 - [[Monte Carlo Prediction for Value Estimation]]
 - [[Temporal Difference Learning]]
 
+>[!important] Definition
+>An update that *averages simpler component updates* is called a **compound update**.
+
+
 ## Offline $\lambda$-Return Algorithm
 
 >[!important] Definition
@@ -77,7 +83,7 @@ date of note: 2024-08-09
 >	- via *semi-gradient TD update* $$w_{t+1} = w_{t} + \alpha_{t}\left[ G_{t}^{\lambda} - \hat{v}(X_{t}, w_{t}) \right]\,\nabla \hat{v}\left(X_{t}, w_{t}\right) $$
 
 - [[Temporal Difference Learning]]
-- [[Value Function Approximation]]
+- [[Value Function Approximation as Supervised Learning]]
 - [[Gradient Monte Carlo Method for Value Function Approximation]]
 - [[Semi-Gradient Temporal Difference]]
 
@@ -101,7 +107,7 @@ date of note: 2024-08-09
 -----------
 ##  Recommended Notes and References
 
-- [[Value Function Approximation]]
+- [[Value Function Approximation as Supervised Learning]]
 - [[Gradient Monte Carlo Method for Value Function Approximation]]
 - [[Semi-Gradient Temporal Difference]]
 - [[Eligibility Traces]]

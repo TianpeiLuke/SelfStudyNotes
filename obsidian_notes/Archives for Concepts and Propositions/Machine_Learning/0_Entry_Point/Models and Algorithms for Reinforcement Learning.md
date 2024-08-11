@@ -93,12 +93,13 @@ date of note: 2024-06-01
 ### Functional-Approximation Approach
 
 - [[Tabular Representation and Function Approximation RL]]
-- [[Value Function Approximation]]
+- [[Value Function Approximation as Supervised Learning]]
 - [[Stochastic Gradient Descent Algorithm]]
 - [[Gradient Monte Carlo Method for Value Function Approximation]]
 - [[Semi-Gradient Temporal Difference]]
 - [[Linear Temporal Difference Learning]]
 - [[Deep Q-Network]]
+
 
 ### On-Policy Control with Approximation
 
@@ -107,11 +108,13 @@ date of note: 2024-06-01
 - [[Differential Semi-Gradient SARSA for Markov Reward Process]]
 - [[Differential Semi-Gradient Multi-Step SARSA]]
 
+
 ### Off-Policy Control with Approximation
 
 - [[Deadly Triad of Off-Policy Boostrapping with Function Approximation]]
 - [[Bellman Error]]
 - [[Gradient-Temporal Difference Methods]]
+
 
 ### Eligibility Traces
 
@@ -126,6 +129,7 @@ date of note: 2024-06-01
 - [[Watkin Q lambda Algorithm]]
 - [[Tree-Backup lambda Algorithm]]
 
+
 ### Parameterized Policy Learning
 
 - [[Policy Gradient Optimization]]
@@ -134,6 +138,7 @@ date of note: 2024-06-01
 - [[Actor-Critic Algorithm]]
 - [[Actor-Critic Algorithm with Eligibility Traces]]
 - [[A2C and A3C Algorithm]]
+
 
 ### Planning and Model-based RL
 

@@ -40,7 +40,7 @@ date of note: 2024-08-09
 >	- As its name suggests, the value function estimated via function approximation is **not exact** but approximation.
 >
 
-- [[Value Function Approximation]]
+- [[Value Function Approximation as Supervised Learning]]
 
 ### Discriminization and Generalization
 
@@ -65,7 +65,7 @@ date of note: 2024-08-09
 ##  Recommended Notes and References
 
 
-- [[Value Function Approximation]]
+- [[Value Function Approximation as Supervised Learning]]
 - [[Local Probabilistic Models]]
 
 
