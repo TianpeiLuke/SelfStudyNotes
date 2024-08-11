@@ -166,7 +166,7 @@ date of note: 2024-07-09
 
 - [[Bayesian Network on Directed Acyclic Graph]]
 - [[Conditional Probability]]
-
+- [[Tabular Representation and Function Approximation RL]]
 
 
 - [[Probabilistic Graphical Models by Koller]] pp 158 - 195

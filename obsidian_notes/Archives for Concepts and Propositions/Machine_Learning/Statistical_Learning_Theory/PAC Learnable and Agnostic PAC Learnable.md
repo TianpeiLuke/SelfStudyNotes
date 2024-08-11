@@ -130,6 +130,8 @@ date of note: 2024-04-18
 - [[Bounded Difference Inequality]]
 
 - [[Empirical Risk Minimization]]
+- [[Supervised Learning and Unsupervised Learning]]
+
 
 - [[Foundations of Machine Learning by Mohri]] pp 11 - 15, 24
 - [[Understanding Machine Learning by Shalev-Shwartz]]

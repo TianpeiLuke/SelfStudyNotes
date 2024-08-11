@@ -64,6 +64,9 @@ date of note: 2024-08-09
 >- When $\lambda = 1$, $$G_{t}^{1} := G_{t}.$$ Thus $\lambda$-return reduces to *conventional return*, which is implemented via **Monte Carlo methods.**
 >- When $\lambda = 0$, $$G_{t}^{0} = G_{t:t+1}.$$  Thus $\lambda$-return becomes the *one-step return*, which is implemented in the **one-step temporal difference learning TD(0)**.
 
+- [[Monte Carlo Prediction for Value Estimation]]
+- [[Temporal Difference Learning]]
+
 ## Offline $\lambda$-Return Algorithm
 
 >[!important] Definition
@@ -73,8 +76,10 @@ date of note: 2024-08-09
 >	- $$V_{t+1}(X_{t}) = V_{t}(X_{t}) + \alpha_{t}\left[ G_{t}^{\lambda} - V_{t}(X_{t}) \right] $$ or 
 >	- via *semi-gradient TD update* $$w_{t+1} = w_{t} + \alpha_{t}\left[ G_{t}^{\lambda} - \hat{v}(X_{t}, w_{t}) \right]\,\nabla \hat{v}\left(X_{t}, w_{t}\right) $$
 
+- [[Temporal Difference Learning]]
+- [[Value Function Approximation]]
+- [[Gradient Monte Carlo Method for Value Function Approximation]]
 - [[Semi-Gradient Temporal Difference]]
-
 
 
 ## Explanation

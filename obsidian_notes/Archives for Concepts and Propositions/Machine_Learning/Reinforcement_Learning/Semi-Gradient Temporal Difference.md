@@ -29,7 +29,6 @@ date of note: 2024-08-09
 - [[Gradient Monte Carlo Method for Value Function Approximation]]
 - [[Monte Carlo and Applications]]
 - [[Stochastic Gradient Descent Algorithm]]
-
 - [[Gradient Descent Algorithm]]
 - [[Gradient of Smooth Map]]
 

@@ -92,8 +92,8 @@ date of note: 2024-06-01
 
 ### Functional-Approximation Approach
 
+- [[Tabular Representation and Function Approximation RL]]
 - [[Value Function Approximation]]
-- [[Prediction Objective for Value Function Approximation]]
 - [[Stochastic Gradient Descent Algorithm]]
 - [[Gradient Monte Carlo Method for Value Function Approximation]]
 - [[Semi-Gradient Temporal Difference]]

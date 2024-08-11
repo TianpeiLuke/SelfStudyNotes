@@ -24,6 +24,8 @@ date of note: 2024-05-12
 >
 >-- [[Probabilistic Graphical Models by Koller]] pp 609
 
+- [[Tabular Representation and Function Approximation RL]]
+
 ### Canonical Form
 
 - [[Canonical Form of Gaussian Graphical Model]]

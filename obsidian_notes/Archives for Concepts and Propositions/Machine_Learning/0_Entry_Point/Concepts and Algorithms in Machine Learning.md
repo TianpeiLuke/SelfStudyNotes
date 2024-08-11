@@ -23,6 +23,8 @@ date of note: 2024-06-01
 
 ### Supervised Learning Models and Algorithms
 
+- [[Supervised Learning and Unsupervised Learning]]
+
 #### Nearest Neighbor Classification
 
 - [[k Nearest Neighbor Classification]]
