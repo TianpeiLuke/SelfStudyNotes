@@ -83,7 +83,7 @@ date of note: 2024-08-09
 >			- If $\pi$ is learned
 >				- Update $\pi$ so that $\pi(\cdot\,|\,X_{\tau})$ is **$\epsilon$-greedy** with respect to $Q_{\tau}$
 
-- [[Multi-Step Temporal Difference Learning]]
+- [[Multi-Step Return and Multi-Step Temporal Difference Learning]]
 - [[Multi-Step SARSA Algorithm Off-Policy]]
 
 
@@ -96,7 +96,7 @@ date of note: 2024-08-09
 
 ![[multi_step_temporal_difference.png]]
 
-- [[Multi-Step Temporal Difference Learning]]
+- [[Multi-Step Return and Multi-Step Temporal Difference Learning]]
 
 ## Compare with SARSA(0)
 
@@ -121,7 +121,7 @@ date of note: 2024-08-09
 ##  Recommended Notes and References
 
 - [[Multi-Step SARSA Algorithm Off-Policy]]
-- [[Multi-Step Temporal Difference Learning]]
+- [[Multi-Step Return and Multi-Step Temporal Difference Learning]]
 
 - [[SARSA Algorithm and On-Policy Temporal Difference Control]]
 - [[Temporal Difference Learning]]

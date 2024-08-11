@@ -28,7 +28,7 @@ date of note: 2024-08-09
 
 - [[Temporal Difference lambda Algorithm]]
 
-- [[lambda-Return Algorithm and Compound Update]]
+- [[lambda-Return and Compound Update]]
 
 
 - [[Temporal Difference Learning]]

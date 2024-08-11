@@ -27,8 +27,8 @@ date of note: 2024-08-09
 
 
 
-- [[Multi-Step Temporal Difference Learning]]
-- [[lambda-Return Algorithm and Compound Update]]
+- [[Multi-Step Return and Multi-Step Temporal Difference Learning]]
+- [[lambda-Return and Compound Update]]
 - [[Temporal Difference Learning]]
 - [[Eligibility Traces]]
 - [[Returns and Goals of Reinforcement Learning]]

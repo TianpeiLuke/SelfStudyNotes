@@ -17,6 +17,8 @@ date of note: 2024-08-09
 >[!important]
 >**Name**: Multi-Step Temporal Difference Learning
 
+### n-Step Return
+
 >[!info]
 >The **returns** can be estimated based on a history of rewards $(R_{s})_{s=t+1}^{T}$ using **Monte Carlo Method**
 >$$
@@ -24,6 +26,8 @@ date of note: 2024-08-09
 >G_{t} &:= R_{t+1} + \gamma R_{t+2} \,{+}\ldots{+}\, \gamma^{T-t - 1}R_{T}  
 \end{align*}
 >$$
+
+^de8997
 
 - [[Monte Carlo and Applications]]
 
@@ -59,6 +63,8 @@ date of note: 2024-08-09
 >for all $n,t$ such that $n \ge 1$ and $0 \le t< T-n.$
 >
 >For $t+n > T$, $G_{t: t+n} = G_{t}.$
+
+^b19bc5
 
 ### Multi-Step Temporal Learning Update
 

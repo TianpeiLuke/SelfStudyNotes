@@ -99,7 +99,7 @@ date of note: 2024-08-09
 ##  Recommended Notes and References
 
 - [[Multi-Step SARSA Algorithm On-Policy]]
-- [[Multi-Step Temporal Difference Learning]]
+- [[Multi-Step Return and Multi-Step Temporal Difference Learning]]
 - [[Temporal Difference Learning]]
 
 - [[SARSA Algorithm and On-Policy Temporal Difference Control]]

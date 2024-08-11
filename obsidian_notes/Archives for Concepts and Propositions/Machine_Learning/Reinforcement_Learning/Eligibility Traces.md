@@ -42,7 +42,7 @@ date of note: 2024-05-12
 
 - [[SARSA Algorithm and On-Policy Temporal Difference Control]]
 - [[Q Learning Algorithm and Off-Policy Temporal Difference Control]]
-- [[Multi-Step Temporal Difference Learning]]
+- [[Multi-Step Return and Multi-Step Temporal Difference Learning]]
 - [[Multi-Step SARSA Algorithm On-Policy]]
 
 ![[forward_view.png]]
@@ -87,7 +87,7 @@ date of note: 2024-05-12
 >
 >-- [[Reinforcement Learning An Introduction by Sutton]] pp 287
 
-- [[Multi-Step Temporal Difference Learning]]
+- [[Multi-Step Return and Multi-Step Temporal Difference Learning]]
 - [[Multi-Step SARSA Algorithm On-Policy]]
 - [[Multi-Step SARSA Algorithm Off-Policy]]
 
@@ -106,7 +106,7 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
-- [[lambda-Return Algorithm and Compound Update]]
+- [[lambda-Return and Compound Update]]
 - [[Temporal Difference lambda Algorithm]]
 - [[Multi-Step Truncated lambda-Return Method]]
 

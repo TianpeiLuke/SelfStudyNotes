@@ -9,6 +9,7 @@ keywords:
   - markov_decision_process
   - stochastic_process
   - statistical_decision_theory
+  - reinforcement_learning/theory
 topics:
   - machine_learning_theory
 name: Markov Decision Process
@@ -123,7 +124,7 @@ date of note: 2024-05-12
 >\mathcal{H}^s = \mathcal{H}^{s-1} \times \mathcal{A} \times \mathcal{X}, \quad h_{s} = (h_{s-1}, a_{s-1}, x_{s})
 >$$
 
-- [[Multi-Step Temporal Difference Learning]]
+- [[Multi-Step Return and Multi-Step Temporal Difference Learning]]
 - [[Multi-Step SARSA Algorithm On-Policy]]
 
 

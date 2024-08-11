@@ -25,6 +25,11 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
+
+- [[Ensemble Learning]]
+- [[lambda-Return and Compound Update]]
+
+
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 627
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 279
 - [[Deep Learning by Goodfellow]] pp 251

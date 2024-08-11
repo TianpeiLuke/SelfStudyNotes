@@ -26,7 +26,7 @@ date of note: 2024-08-09
 ##  Recommended Notes and References
 
 
-- [[lambda-Return Algorithm and Compound Update]]
+- [[lambda-Return and Compound Update]]
 - [[Multi-Step Truncated lambda-Return Method]]
 - [[Temporal Difference Learning]]
 - [[Eligibility Traces]]

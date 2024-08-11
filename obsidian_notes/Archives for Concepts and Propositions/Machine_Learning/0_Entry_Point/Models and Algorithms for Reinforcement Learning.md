@@ -83,7 +83,7 @@ date of note: 2024-06-01
 
 ### Multi-Step Temporal Difference
 
-- [[Multi-Step Temporal Difference Learning]]
+- [[Multi-Step Return and Multi-Step Temporal Difference Learning]]
 - [[Multi-Step SARSA Algorithm On-Policy]]
 - [[Multi-Step SARSA Algorithm Off-Policy]]
 - [[Multi-Step Tree Backup Algorithm]]
@@ -116,7 +116,7 @@ date of note: 2024-06-01
 ### Eligibility Traces
 
 - [[Eligibility Traces]]
-- [[lambda-Return Algorithm and Compound Update]]
+- [[lambda-Return and Compound Update]]
 - [[Temporal Difference lambda Algorithm]]
 - [[Multi-Step Truncated lambda-Return Method]]
 - [[Online lambda-Return Algorithm and Redoing Updates]] 

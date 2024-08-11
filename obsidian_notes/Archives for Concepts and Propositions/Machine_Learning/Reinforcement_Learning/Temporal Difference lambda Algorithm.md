@@ -29,7 +29,7 @@ date of note: 2024-08-09
 - [[Temporal Difference Learning]]
 - [[Eligibility Traces]]
 - [[Returns and Goals of Reinforcement Learning]]
-- [[Multi-Step Temporal Difference Learning]]
+- [[Multi-Step Return and Multi-Step Temporal Difference Learning]]
 
 
 
