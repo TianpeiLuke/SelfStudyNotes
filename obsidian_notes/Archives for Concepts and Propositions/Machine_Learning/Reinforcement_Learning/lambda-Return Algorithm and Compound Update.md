@@ -25,7 +25,9 @@ date of note: 2024-08-09
 -----------
 ##  Recommended Notes and References
 
-
+- [[Value Function Approximation]]
+- [[Gradient Monte Carlo Method for Value Function Approximation]]
+- [[Semi-Gradient Temporal Difference]]
 - [[Eligibility Traces]]
 - [[Returns and Goals of Reinforcement Learning]]
 - [[Multi-Step Temporal Difference Learning]]

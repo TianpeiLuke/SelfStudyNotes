@@ -138,6 +138,7 @@ date of note: 2024-08-09
 
 - [[Multi-Step SARSA Algorithm On-Policy]]
 - [[Multi-Step SARSA Algorithm Off-Policy]]
+- [[Eligibility Traces]]
 
 - [[Temporal Difference Learning]]
 
