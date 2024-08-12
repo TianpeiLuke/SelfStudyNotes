@@ -66,6 +66,8 @@ date of note: 2024-08-09
 >- When $\lambda = 1$, $$G_{t}^{1} := G_{t}.$$ Thus $\lambda$-return reduces to *conventional return*, which is implemented via **Monte Carlo methods.**
 >- When $\lambda = 0$, $$G_{t}^{0} = G_{t:t+1}.$$  Thus $\lambda$-return becomes the *one-step return*, which is implemented in the **one-step temporal difference learning TD(0)**.
 
+^e0bff0
+
 - [[Monte Carlo Prediction for Value Estimation]]
 - [[Temporal Difference Learning]]
 
@@ -101,6 +103,46 @@ date of note: 2024-08-09
 - [[Ensemble Learning]]
 - [[Bootstrap Method]]
 - [[Dropout Algorithm]]
+
+### Represent $\lambda$-Return via Rewards
+
+>[!info]
+>$$
+>\begin{align*}
+>G_{t}^{\lambda} &:= \left(1- \lambda\right)\,\sum_{n=1}^{T- t -1}\lambda^{n-1}\,G_{t:t+n} + \lambda^{T-t-1}G_{t} \\[5pt]
+>&= \left(1-\lambda\right)G_{t:t+1} + \left(1-\lambda\right)\lambda\,G_{t:t+2} \,{+}\ldots{+}\,\left(1-\lambda\right)\lambda^{T-t -2}\,G_{t:T-1} + \lambda^{T-t-1}G_{t} \\[5pt]
+>&= \left(1-\lambda\right)R_{t+1} + \left(1-\lambda\right)\,\gamma\,v(X_{t+1}, w_{t}) \\[5pt]
+>&\quad + \left(1-\lambda\right)\lambda\,R_{t+1} + \left(1-\lambda\right)\lambda\,\gamma\,R_{t+2} + \left(1-\lambda\right)\lambda\,\gamma^2\,v(X_{t+2}, w_{t+1}) \\[5pt]
+>&\quad +\ldots \\[5pt]
+>&\quad + \left(1-\lambda\right)\lambda^{T-t -2}\,R_{t+1} + \left(1-\lambda\right)\lambda^{T-t -2}\,\gamma\,R_{t+2} \,{+}\ldots{+}\, \left(1-\lambda\right)\lambda^{T-t -2}\,\gamma^{T-t-2}\,R_{T-1} + \left(1-\lambda\right)\lambda^{T-t -2}\,\gamma^{T-t-1}\,v\left(X_{T-1}, w_{T-2}\right)\\[5pt]\\
+>&\quad + \lambda^{T-t-1}R_{t+1} \,{+}\ldots{+}\, \lambda^{T-t-1}\gamma^{T-t-1} R_{T}\\[5pt]
+>&= \left[\left(1-\lambda\right) + \left(1-\lambda\right)\lambda\, \,{+}\ldots{+}\,\left(1-\lambda\right)\lambda^{T-t -2}\, +  \lambda^{T-t-1}\right]R_{t+1} \\[5pt]
+>&\quad + \left[\left(1-\lambda\right)\lambda\,  \,{+}\ldots{+}\,\left(1-\lambda\right)\lambda^{T-t -2}\, + \lambda^{T-t-1}\right]\,\gamma\,R_{t+2} \\[5pt]
+>&\quad + \,{}\ldots{}\,\\[5pt]
+>&\quad + \left[ \left(1-\lambda\right)\lambda^{T-t -2} + \lambda^{T-t-1}\right] \,\gamma^{T-t-2}\,R_{T-1}\\[5pt]
+>&\quad + \lambda^{T-t-1}\gamma^{T-t-1} R_{T} \\[5pt]
+>&\quad +  (1- \lambda)\sum_{s=0}^{T-t-2}\lambda^{s}\gamma^{s+1}\;v\left(X_{t+s+1}, w_{t+s}\right) \\[5pt]
+>&= \sum_{s=0}^{T-t-2}\left[(1-\lambda)\sum_{i=s}^{T-t-2}\lambda^{i} + \lambda^{T-t-1}\right]\,\gamma^{s}\,R_{t+s+1} + \lambda^{T-t-1}\gamma^{T-t-1} R_{T} \\[5pt] 
+>&\quad +  (1- \lambda)\gamma\;\sum_{s=0}^{T-t-2}\left(\lambda\gamma\right)^{s}v\left(X_{t+s+1}, w_{t+s}\right)\\[5pt] 
+>&= (1-\lambda)\sum_{s=0}^{T-t-2}\gamma^{s}\,\left[\sum_{i=s}^{T-t-2}\lambda^{i}R_{t+s+1} + \lambda^{s}\gamma\;v\left(X_{t+s+1}, w_{t+s}\right) \right]\,\\[5pt]
+>&\quad + \lambda^{T-t-1}\sum_{s=0}^{T-t-1}\gamma^{s}\,R_{t+s+1}
+>\end{align*}
+>$$
+
+>[!info]
+>For $\lambda =0$,  
+>$$
+>G_{t}^{\lambda} = R_{t+1} + \gamma\,v(X_{t+1}, w_{t})
+>$$
+
+>[!info]
+>For $\lambda = 1$,  
+>$$
+>G_{t}^{\lambda} = \sum_{s=0}^{T-t-1}\gamma^{s}\,R_{t+s+1}
+>$$
+
+- [[Temporal Difference lambda Algorithm]]
+
 
 
 

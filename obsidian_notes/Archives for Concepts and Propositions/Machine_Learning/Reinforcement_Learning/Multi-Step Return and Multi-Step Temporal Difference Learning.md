@@ -88,12 +88,12 @@ date of note: 2024-08-09
 
 >[!important] Definition
 >The **on-policy $n$-step temporal learning** algorithm for estimating $V \approx v_{*}$ or $v_{\pi}$ is described as below:
->- *Require*: an initialized $V(x)$ for all $x\in \mathcal{X}$
 >- *Require*: **target policy** $\pi$
 >- *Require*: step size $\alpha \in (0,1]$
 >- *Require*: discount $\gamma >0$
 >- *Require*: history length $n$
 >- *Require*: a buffer for **most recent $n$ history** $(X_{t}, R_{t})$
+>- Initialize $V_{n-1}(x)$ for all $x\in \mathcal{X}$
 >- For *episode* $k= 1 \,{,}\ldots{,}\,$
 >	- *Initialize* and *store* $X_{0} \neq \text{terminal}$
 >	- For $t=0,\,1 \,{,}\ldots{,}\,T + n -1$
@@ -104,10 +104,10 @@ date of note: 2024-08-09
 >				- $T = t+1$, i.e. break loop
 >		- Update the **stopping time** $\tau$ when the *estimate is updated* $$\tau = t - n + 1.$$
 >		- If $\tau \ge 0$
->			- Update the **$n$-return** with *cumulative discounted rewards* $$G_{\tau} = \sum_{i = \tau+1}^{\min\left\{ \tau + n\,,\,T  \right\}}\gamma^{i - \tau + 1}\,R_{i}$$
+>			- Update the **$n$-return** with *cumulative discounted rewards* $$G_{\tau: \tau+n} = \sum_{i = \tau+1}^{\min\left\{ \tau + n\,,\,T  \right\}}\gamma^{i - \tau - 1}\,R_{i}$$
 >			- If $\tau + n < T$
->				- Update the **$n$-return** with additional estimate from $Q$ $$G_{\tau} \leftarrow G_{\tau} + \gamma^n\,V_{\tau}(X_{\tau + n})$$
->			- Update **estimate of state-value** $V$ as $$V_{\tau+1}(X_{\tau}) = V_{\tau}(X_{\tau}) + \alpha \left[ G_{\tau} - V_{\tau}(X_{\tau}) \right]$$ 
+>				- Update the **$n$-return** with additional estimate from $Q$ $$G_{\tau: \tau+n} \leftarrow G_{\tau: \tau+n} + \gamma^n\,V_{\tau+n-1}(X_{\tau + n})$$
+>			- Update **estimate of state-value** $V$ as $$V_{\tau+n}(X_{\tau}) = V_{\tau+n-1}(X_{\tau}) + \alpha \left[ G_{\tau: \tau+n} - V_{\tau+n-1}(X_{\tau}) \right]$$ 
 
 
 

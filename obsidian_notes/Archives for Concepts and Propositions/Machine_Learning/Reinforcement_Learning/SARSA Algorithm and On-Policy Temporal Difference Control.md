@@ -55,7 +55,7 @@ date of note: 2024-05-12
 >
 >- *Require*: **$\epsilon$-soft policy** $\pi$, i.e. $$\pi(a| x) \ge \frac{\epsilon}{|\mathcal{A}(x)|},\, \forall a\in \mathcal{A}(x)$$
 >- *Require*: step size $\alpha_{t} >0$ for $t=1\,{,}\ldots{,}\,$
->- *Require*: reward *discount factor* $\gamma >0$
+>- *Require*: reward *discount factor* $\gamma \in (0,1)$
 >- *Initialize* **table for action-value function** $Q_{0}(x, a)$ for all $x\in \mathcal{X}$ and $a\in \mathcal{A}$. 
 >	- Note that the **terminal state** $Q_{0}(x_{\text{terminal}}, a) = 0$ for all $a\in \mathcal{A}$
 >- For **episode** $k=1,\,2\,{,}\ldots{,}\,$:
@@ -77,7 +77,7 @@ date of note: 2024-05-12
 >
 >- *Require*: action space $\mathcal{A}(x)$
 >- *Require*: step size $\alpha_{t} >0$ for $t=1\,{,}\ldots{,}\,$
->- *Require*: reward *discount factor* $\gamma >0$
+>- *Require*: reward *discount factor* $\gamma \in (0,1)$
 >- *Require*: $\epsilon >0$ controls the exploration.
 >- *Initialize* **table for action-value function** $Q_{0}(x, a)$ for all $x\in \mathcal{X}$ and $a\in \mathcal{A}$. 
 >	- Note that the **terminal state** $Q_{0}(x_{\text{terminal}}, a) = 0$ for all $a\in \mathcal{A}$

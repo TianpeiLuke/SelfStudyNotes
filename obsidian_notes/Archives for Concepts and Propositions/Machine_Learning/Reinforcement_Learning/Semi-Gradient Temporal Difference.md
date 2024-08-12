@@ -29,6 +29,12 @@ date of note: 2024-08-09
 >[!important] Definition
 >Similar to *temporal difference learning*, we replace **target** from the *Monte Carlo estimate of return* to the **temporal difference estimate** $$\hat{G}_{t} := R_{t+1} + \gamma \hat{v}(X_{t+1}, w_{t}),$$
 >
+>Thus a **semi-gradient TD update** is
+>$$\begin{align*}
+>w_{t+1} &= w_{t} + \alpha\,\left[ \hat{G}_{t}  - \hat{v}(X_{t}, w_{t}) \right]\;  \nabla_{w}\hat{v}(X_{t}, w_{t})\\[5pt]
+>&=  w_{t} + \alpha\,\left[ R_{t+1} + \gamma\,  \hat{v}(X_{t+1}, w_{t})  - \hat{v}(X_{t}, w_{t}) \right]\;  \nabla_{w}\hat{v}(X_{t}, w_{t})
+>\end{align*}
+>$$
 
 ^5680d7
 
@@ -50,7 +56,8 @@ date of note: 2024-08-09
 >		- Update **parameter** for value function using **SGD** on **TD error** $$\begin{align*}w_{t+1} &= w_{t} + \alpha\,\left[ \hat{G}_{t}  - \hat{v}(X_{t}, w_{t}) \right]\;  \nabla_{w}\hat{v}(X_{t}, w_{t})\\[5pt]&=  w_{t} + \alpha\,\left[ R_{t+1} + \gamma\,  \hat{v}(X_{t+1}, w_{t})  - \hat{v}(X_{t}, w_{t}) \right]\;  \nabla_{w}\hat{v}(X_{t}, w_{t})\end{align*}$$
 
 - [[Temporal Difference Learning]]
-
+- [[Stochastic Gradient Descent Algorithm]]
+- [[Minimum Mean Square Estimation]]
 
 ## Explanation
 

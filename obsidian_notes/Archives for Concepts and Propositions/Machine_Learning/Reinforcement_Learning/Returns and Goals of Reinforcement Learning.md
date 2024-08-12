@@ -122,6 +122,13 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
+
+- [[Multi-Step Return and Multi-Step Temporal Difference Learning]]
+- [[lambda-Return and Compound Update]]
+- [[Payoff Function in Decision Problem]]
+- [[Discounting Payoff in Sequential Decision]]
+
+
 - [[Bellman Optimality Equation for MDP]]
 - [[Temporal Difference Learning]]
 - [[Q Learning Algorithm and Off-Policy Temporal Difference Control]]

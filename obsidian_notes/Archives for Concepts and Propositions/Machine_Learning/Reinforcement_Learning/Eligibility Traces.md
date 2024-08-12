@@ -69,6 +69,14 @@ date of note: 2024-05-12
 - [[SARSA Algorithm and On-Policy Temporal Difference Control]]
 - [[Q Learning Algorithm and Off-Policy Temporal Difference Control]]
 
+>[!info]
+>The idea of eligibility traces is to add a **short-term memory** on the *previous visited state-action pairs*.
+>- The memory **decay exponentially** over time;
+>- The trace keep track of **all state-action pairs**
+>	- the *visited* state-action pair increments in the trace
+>	- the *unvisited* state-action pair *decay* by factor $\lambda$.
+
+
 ### Between TD and Monte Carlo
 
 >[!quote]
