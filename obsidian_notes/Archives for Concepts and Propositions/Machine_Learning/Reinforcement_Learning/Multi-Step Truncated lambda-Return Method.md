@@ -74,29 +74,35 @@ date of note: 2024-08-09
 >- *Require*: step size $\alpha \in (0,1]$, and  discount $\gamma \in (0,1)$
 >- *Require*: decay $\gamma \in [0,1]$
 >- *Require*: history length $n$
->- *Require*: a buffer for **most recent $n$ history** $(X_{t},R_{t},  w)$
->- *Initialize* and *store* $w\in \mathbb{R}^d$ in buffer
+>- *Require*: a buffer for **most recent $n$ history** $(X_{t},R_{t}, \delta_{t}',  w_{t})$
+>- *Initialize* and *store* $w_{s} = w\in \mathbb{R}^d$ for all $s\le n-1$ in buffer
 >- For *episode* $k= 1 \,{,}\ldots{,}\,$
 >	- *Initialize* and *store* $X_{0} \neq \text{terminal}$
->	- Initialize *eligibility trace* $z_{-1} = 0$
 >	- For $t=0,\,1 \,{,}\ldots{,}\,T + n -1$
 >		- If $t < T$:
 >			- Take action $$A_{t} \sim \pi(\cdot\,|\,X_{t})$$
 >			- Observe and *store* **next reward** $R_{t+1}$ and **next state** $X_{t+1}$
->			- Compute the **TD error** $$\delta_{t}' = R_{t + 1} + \gamma\,\hat{v}\left(X_{t+1}, w_{t}\right) - \hat{v}(X_{t}, w_{t-1})$$
+>			- Compute and *store* the **TD error** $$\delta_{t}' = R_{t + 1} + \gamma\,\hat{v}\left(X_{t+1}, w_{t}\right) - \hat{v}(X_{t}, w_{t-1})$$
 >				- Note that $w_{s} = w$ for first $n-1$ iterations $s\le n- 1$
->			- Update **eligibility trace** $$z_{t} = \gamma\,\lambda\,z_{t-1} + \delta_{t}'$$
 >			- If $X_{t+1}$ is **terminal**
 >				- $T = t+1$, i.e. break loop
 >		- Update the **stopping time** $\tau$ when the *estimate is updated* $$\tau = t - n + 1.$$
 >		- If $\tau \ge 0$
->			- Compute the **truncated $\lambda$-return** as $$G_{\tau: \tau+n}^{\lambda} := \hat{v}(X_{\tau}, w_{\tau-1}) + z_{\tau+n-1} = \hat{v}(X_{\tau}, w_{\tau-1})  +  z_{t}$$
->			- Update **parameter** $w_{t+1} := w_{\tau+n}$ as $$w_{\tau + n} = w_{\tau +n -1} + \alpha\,\left[ G_{\tau: \tau+n}^{\lambda}  - \hat{v}(X_{\tau}, w_{\tau+n-1}) \right]\;  \nabla_{w}\,\hat{v}(X_{\tau}, w_{\tau +n-1})$$ 
+>			- If $\tau = 0$
+>				- Initialize *eligibility trace* $z_{0} = 0$
+>				- For $s= t,\, t-1 \,{,}\ldots{,}\,\tau$:
+>					- Update **eligibility trace** by **accumulating backward** from time $t$ to $\tau$ $$z_{0} \leftarrow \gamma\,\lambda\,z_{0} + \delta_{s}'$$
+>			- Else
+>				- Update  **eligibility trace** $$z_{\tau} = (\gamma\,\lambda)^{-1}\left(z_{\tau-1} - \delta_{\tau}'\right)$$
+>			- Compute the **truncated $\lambda$-return** as $$G_{\tau: \tau+n}^{\lambda} := \hat{v}(X_{\tau}, w_{\tau-1}) + z_{\tau}  = \hat{v}(X_{\tau}, w_{\tau-1})  +  z_{\tau}$$
+>			- Update and **store** **parameter** $w_{\tau+n} :=w_{t+1}$ as $$w_{\tau + n} = w_{\tau +n -1} + \alpha\,\left[ G_{\tau: \tau+n}^{\lambda}  - \hat{v}(X_{\tau}, w_{\tau+n-1}) \right]\;  \nabla_{w}\,\hat{v}(X_{\tau}, w_{\tau +n-1})$$ 
 
 - [[Multi-Step Return and Multi-Step Temporal Difference Learning]]
 - [[Semi-Gradient Temporal Difference]]
 - [[Temporal Difference lambda Algorithm]]
 
+>[!info]
+>For each episode, there is a **forward pass** to sample the reward and next state, and a **backward pass** to accumulate the TD error
 
 ## Explanation
 

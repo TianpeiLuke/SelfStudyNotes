@@ -26,45 +26,54 @@ date of note: 2024-08-09
 >[!important] Definition
 >In TD($\lambda$), define the **eligibility trace** as a real-valued function for each state. That is,
 >$$
->x\to e(x) \in \mathbb{R}
+>x\to z(x) \in \mathbb{R}
 >$$
 >
 >
 >Given state $X_{t}$ at time $t$,  the **update rule** for *eligibility trace*  is
 >$$
 >\begin{align*}
-> e_{t}(X_{t}) &= e_{t-1}(X_{t}) + 1 \\[5pt]
-> e_{t}(x) &= \lambda\,e_{t-1}(x) \quad \forall x \neq X_{t}
+> z_{-1}(x) &= 0, \quad \forall x \\[5pt]
+> z_{t}(X_{t}) &= z_{t-1}(X_{t}) + 1 \\[5pt]
+> z_{t}(x) &\leftarrow \lambda\,\gamma\,z_{t}(x) \quad \forall x 
 >\end{align*}
 >$$
 
 ^cba720
 
 >[!important] Definition
->The **TD($\lambda$) update rule** for *state-value function* given **eligibility trace** $e(x, a)$ is defined as
+>The **TD($\lambda$) update rule** for *state-value function* given **eligibility trace** $z(x, a)$ is defined as
 >$$
 > \begin{align}
-> V_{t+1}(x) &\leftarrow  V_{t}(x) + \alpha_{t}\left(R_{t+1} + \gamma V_{t}(X_{t+1})  - V_{t}(X_{t})\right)\;e_{t}(x) \\[5pt]
->&=   V_{t}(x) + \alpha_{t}\,\delta_{t}\,e_{t}(x), \quad \forall x\in \mathcal{X}
+> V_{t+1}(x) &=  V_{t}(x) + \alpha_{t}\left(R_{t+1} + \gamma V_{t}(X_{t+1})  - V_{t}(X_{t})\right)\;z_{t}(x) \\[5pt]
+>&=   V_{t}(x) + \alpha_{t}\,\delta_{t}\,z_{t}(x), \quad \forall x\in \mathcal{X}
 > \end{align} 
 >$$
 >Note that, 
 >- unlike the *TD(0) update rule* which only update the value for *observed states*, the *TD($\lambda$) update rule* applies to *unobserved states* too.
 >- the TD($\lambda$) propagate the **TD error** based on *observed value* to *unobserved state*
 >
->- For observed state $X_{t}$,
+>The *eligibility trace* allows us to not only  update the value for **current observed state**, but also for **past observed states** using the **current TD error**
+>- For current observed state $X_{t}$,
 >$$
 > \begin{align}
-> V_{t+1}(X_{t}) &\leftarrow  V_{t}(X_{t}) + \alpha_{t}\left(R_{t+1} + \gamma V_{t}(X_{t+1})  - V_{t}(X_{t})\right)\;e_{t}(X_{t}) \\[5pt]
->&=   V_{t}(X_{t}) + \alpha_{t}\,\delta_{t}\,e_{t}(X_{t})
+> V_{t+1}(X_{t}) &= V_{t}(X_{t}) + \alpha_{t}\left(R_{t+1} + \gamma V_{t}(X_{t+1})  - V_{t}(X_{t})\right)\;e_{t}(X_{t}) \\[5pt]
+>&=   V_{t}(X_{t}) + \alpha_{t}\,\delta_{t}\,z_{t}(X_{t})
 > \end{align} 
 >$$
 >where $\delta_{t}$ is the **TD error** $$\delta_{t} := R_{t+1} + \gamma V_{t}(X_{t+1})  - V_{t}(X_{t}).$$
->- For unobserved state $x\neq X_{t}$
+>- For a **previous observed state** $X_{t-k}$, the value is *updated* with impact *decayed* according to **time since its last appearence in history**
 >$$
->V_{t+1}(x) \leftarrow V_{t}(x) + \alpha_{t}\,\delta_{t}\,\lambda\,e_{t-1}(x)
+>V_{t+1}(X_{t-k}) = V_{t}(X_{t-k}) + \alpha_{t}\,(\lambda \gamma)^{k}\,\delta_{t}\,z_{t-k}(X_{t-k})
 >$$
+>- For a state that **never occurs in the past**, there is **no update** to the value function
+>$$
+>V_{t+1}(x) = V_{t}(x) 
+>$$
+>
+>This is the **backward view.**
 
+![[backward_view.png]]
 
 ###  TD($\lambda$) Algorithm for Tabular Representation
 
@@ -77,17 +86,17 @@ date of note: 2024-08-09
 >	- Note that the **terminal state** $V_{0}(x_{\text{terminal}}) = 0$
 >- For **episode** $k=1,\,2\,{,}\ldots{,}\,$:
 >	- Initialize state $X_{0}$
->	- Initialize *eligibility trace* $e_{-1}(x) = 0$ for all state $x\in \mathcal{X}$
+>	- Initialize *eligibility trace* $z_{-1}(x) = 0$ for all state $x\in \mathcal{X}$
 >	- For step $t=0,\,1\,{,}\ldots{,}\,T$:
 >		- Generate a **sample action** according to *policy* $\pi$ and *current state* $$A_{t} \sim \pi(\cdot| X_{t})$$
 >		- Take action $A_{t}$
 >		- Observe **reward** $R_{t}$ and **next state** $X_{t+1}$
 >		- Compute the **temporal difference error** $$\delta_{t} = R_{t} + \gamma\,V_{t}(X_{t+1}) - V_{t}(X_{t})$$
->		- Update **eligibility trace** for *observed state* $$e_{t}(X_{t}) = e_{t-1}(X_{t}) + 1$$ 
->			- Set eligibility trace of *unobserved state* as the same $e_{t}(x) = e_{t-1}(x)$ for $x\neq X_{t}$
->		- For all state $x\in \mathcal{X}$
->			- Update value function for **all state** (not just observed state) using **TD error** with **eligibility trace** $$V_{t+1}(x) = V_{t}(x) + \alpha\,\delta_{t}\, e_{t}(x)  $$
->			- Update the *eligibility trace* with **$\lambda$-decay** $$e_{t}(x) \leftarrow  \gamma\,\lambda\,e_{t}(x)$$
+>		- Update **eligibility trace** for *observed state* $$z_{t}(X_{t}) = z_{t-1}(X_{t}) + 1$$ 
+>			- Note that $z_{t}(x) = z_{t-1}(x)$ for $x\neq X_{t}$
+>		- For **all state** $x\in \mathcal{X}$ (**Compound Update**)
+>			- Update value function for **all state** (not just observed state) using **TD error** with **eligibility trace** $$V_{t+1}(x) = V_{t}(x) + \alpha\,\delta_{t}\, z_{t}(x)  $$
+>			- Update the *eligibility trace* with **$\gamma\lambda$-decay** $$z_{t}(x) \leftarrow  \gamma\,\lambda\,z_{t}(x)$$
 
 - [[Temporal Difference Learning]]
 
@@ -106,6 +115,8 @@ date of note: 2024-08-09
 >where $\gamma >0$ is the *discount rate,* and $\lambda \in [0,1]$ is the parameter determine the *$\lambda$-return.* 
 >
 >This *eligibility trace* defined above is called the **accumulating trace**.
+
+^b68ae0
 
 - [[Eligibility Traces]]
 - [[Reinforcement Learning An Introduction by Sutton]] pp 301
@@ -149,7 +160,7 @@ date of note: 2024-08-09
 >		- Observe *reward* $R_{t+1}$ and *next state* $X_{t+1}$
 >		- Compute the **eligibility trace vector** $$z_{t} = \gamma\,\lambda\,z_{t-1} + \nabla \hat{v}(X_{t}, w_{t})$$
 >		- Compute the **temporal difference error** $$\delta_{t} = R_{t+1} + \gamma \,\hat{v}(X_{t+1}, w_{t}) - \hat{v}(X_{t}, w_{t})$$
->		- Update **parameter** for value function using **SGD** on **TD error** $$\begin{align*}w_{t+1} &=  w_{t} + \alpha\,\left[ R_{t+1} + \gamma\,  \hat{v}(X_{t+1}, w_{t})  - \hat{v}(X_{t}, w_{t}) \right]\;  z_{t}\\[5pt]&=w_{t} + \alpha\,\delta_{t}\,z_{t} \end{align*}$$
+>		- Update **parameter** for value function using **semi-gradient update** with *eligibility trace*  $$\begin{align*}w_{t+1} &=  w_{t} + \alpha\,\left[ R_{t+1} + \gamma\,  \hat{v}(X_{t+1}, w_{t})  - \hat{v}(X_{t}, w_{t}) \right]\;  z_{t}\\[5pt]&=w_{t} + \alpha\,\delta_{t}\,z_{t} \end{align*}$$
 
 - [[Semi-Gradient Temporal Difference]]
 

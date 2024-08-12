@@ -3,16 +3,18 @@ tags:
   - concept
   - reinforcement_learning/algorithm
   - reinforcement_learning/theory
-keywords: 
-topics: 
-name: 
+keywords:
+  - reinforcement_learning/algorithm
+topics:
+  - reinforcement_learning/algorithm
+name: Online Temporal Difference lambda
 date of note: 2024-08-09
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: True Online TD($\lambda$)
 
 
 
