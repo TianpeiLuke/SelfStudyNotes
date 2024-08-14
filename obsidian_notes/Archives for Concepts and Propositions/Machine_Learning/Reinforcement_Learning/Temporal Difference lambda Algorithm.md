@@ -34,8 +34,7 @@ date of note: 2024-08-09
 >$$
 >\begin{align*}
 > z_{-1}(x) &= 0, \quad \forall x \\[5pt]
-> z_{t}(X_{t}) &= z_{t-1}(X_{t}) + 1 \\[5pt]
-> z_{t}(x) &\leftarrow \lambda\,\gamma\,z_{t}(x) \quad \forall x 
+> z_{t}(x) &= \left\{\begin{array}{lc}\gamma\,\lambda\, z_{t-1}(x) + 1& \text{ if } x = X_{t}\\ \gamma\,\lambda\,z_{t-1}(x) & \text{ otherwise} \end{array}\right. 
 >\end{align*}
 >$$
 
@@ -73,7 +72,29 @@ date of note: 2024-08-09
 >
 >This is the **backward view.**
 
+^1134a1
+
 ![[backward_view.png]]
+
+>[!quote]
+>To better understand the backward view, consider what happens at various values of $\lambda$, then by
+>$$
+>\begin{align*}
+> z_{-1}(x) &= 0, \quad \forall x \\[5pt]
+> z_{t}(x) &= \left\{\begin{array}{lc}\gamma\,\lambda\, z_{t-1}(x) + 1& \text{ if } x = X_{t}\\ \gamma\,\lambda\,z_{t-1}(x) & \text{ otherwise} \end{array}\right. 
+>\end{align*}
+>$$
+ >all traces are *zero* at $t$ except for the trace corresponding to $X_{t}$. Thus the TD($\lambda$) update 
+>$$
+> \begin{align}
+> V_{t+1}(x) &=  V_{t}(x) + \alpha_{t}\left(R_{t+1} + \gamma V_{t}(X_{t+1})  - V_{t}(X_{t})\right)\;z_{t}(x) \\[5pt]
+>&=   V_{t}(x) + \alpha_{t}\,\delta_{t}\,z_{t}(x), \quad \forall x\in \mathcal{X}
+> \end{align} 
+>$$ 
+>reduces to the simple TD rule (6.2), which we henceforth call **TD(0)**. In terms of Figure above, TD(0) is the case in which *only the one state preceding the current one* is changed by the *TD error*. For larger values of $\lambda$, but still $\lambda <1$, *more of the __preceding states__ are changed*, but each more temporally distant state is *changed less* because its **eligibility trace** is *smaller*, as suggested in the figure. We say that the earlier states are given less _credit_ for the TD error.
+>
+>-- [[Reinforcement Learning An Introduction by Sutton]]
+
 
 ###  TD($\lambda$) Algorithm for Tabular Representation
 
@@ -92,11 +113,10 @@ date of note: 2024-08-09
 >		- Take action $A_{t}$
 >		- Observe **reward** $R_{t}$ and **next state** $X_{t+1}$
 >		- Compute the **temporal difference error** $$\delta_{t} = R_{t} + \gamma\,V_{t}(X_{t+1}) - V_{t}(X_{t})$$
->		- Update **eligibility trace** for *observed state* $$z_{t}(X_{t}) = z_{t-1}(X_{t}) + 1$$ 
->			- Note that $z_{t}(x) = z_{t-1}(x)$ for $x\neq X_{t}$
+>		- *Incremental update* **eligibility trace** for *observed state* $$z_{t}(X_{t}) = z_{t-1}(X_{t}) + 1$$ 
 >		- For **all state** $x\in \mathcal{X}$ (**Compound Update**)
 >			- Update value function for **all state** (not just observed state) using **TD error** with **eligibility trace** $$V_{t+1}(x) = V_{t}(x) + \alpha\,\delta_{t}\, z_{t}(x)  $$
->			- Update the *eligibility trace* with **$\gamma\lambda$-decay** $$z_{t}(x) \leftarrow  \gamma\,\lambda\,z_{t}(x)$$
+>			- Decrease the *eligibility trace* for **all states** by a factor $$z_{t}(x) \leftarrow \gamma\,\lambda\,z_{t}(x)$$
 
 - [[Temporal Difference Learning]]
 
@@ -232,3 +252,4 @@ date of note: 2024-08-09
 - [[Monte Carlo and Applications]]
 
 - [[Reinforcement Learning An Introduction by Sutton]] pp 292 - 293
+- Web [ebook](http://incompleteideas.net/book/first/ebook/node1.html)

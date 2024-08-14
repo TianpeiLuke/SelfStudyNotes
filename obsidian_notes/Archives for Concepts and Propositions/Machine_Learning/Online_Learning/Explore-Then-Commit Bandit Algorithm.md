@@ -80,7 +80,7 @@ date of note: 2024-08-07
 ## Explanation
 
 >[!info]
->Some other names for this algorithm is **forced sampling**, **explore-first**, **explore-then-exploit*. *
+>Some other names for this algorithm is **forced sampling**, **explore-first**, **explore-then-exploit**. 
 
 ![[Multi-Armed Adversarial Bandit#^d92056]]
 

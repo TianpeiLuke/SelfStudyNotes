@@ -74,6 +74,12 @@ date of note: 2024-08-09
 >[!important] Definition
 >An update that *averages simpler component updates* is called a **compound update**.
 
+>[!info]
+>The above formula for **$\lambda$-return** provides a **forward view** for algorithms such as TD($\lambda$)
+
+![[forward_view.png]]
+
+
 
 ## Offline $\lambda$-Return Algorithm
 
@@ -81,8 +87,10 @@ date of note: 2024-08-09
 >The **offline $\lambda$-return algorithm** is implemented with two phase
 >- Phase 1: *during the episode*,  it makes *no update* on the value function $V_{t}$ or its weight $w_{t}$;
 >- Phase 2: at the *end of episode*, a whole sequence of *offline updates* are made using $\lambda$-return as *target* 
->	- $$V_{t+1}(X_{t}) = V_{t}(X_{t}) + \alpha_{t}\left[ G_{t}^{\lambda} - V_{t}(X_{t}) \right] $$ or 
->	- via *semi-gradient TD update* $$w_{t+1} = w_{t} + \alpha_{t}\left[ G_{t}^{\lambda} - \hat{v}(X_{t}, w_{t}) \right]\,\nabla \hat{v}\left(X_{t}, w_{t}\right) $$
+>	- Tabular TD update $$V_{t+1}(X_{t}) = V_{t}(X_{t}) + \alpha_{t}\left[ G_{t}^{\lambda} - V_{t}(X_{t}) \right] $$  
+>	- or *semi-gradient TD update* $$w_{t+1} = w_{t} + \alpha_{t}\left[ G_{t}^{\lambda} - \hat{v}(X_{t}, w_{t}) \right]\,\nabla \hat{v}\left(X_{t}, w_{t}\right) $$
+
+^fa79cb
 
 - [[Temporal Difference Learning]]
 - [[Value Function Approximation as Supervised Learning]]

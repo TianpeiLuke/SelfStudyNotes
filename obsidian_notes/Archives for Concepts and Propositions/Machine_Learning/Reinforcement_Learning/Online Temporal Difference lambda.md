@@ -30,6 +30,7 @@ date of note: 2024-08-09
 
 - [[Temporal Difference lambda Algorithm]]
 
+
 - [[lambda-Return and Compound Update]]
 
 

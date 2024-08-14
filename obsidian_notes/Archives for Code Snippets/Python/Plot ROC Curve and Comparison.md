@@ -53,9 +53,12 @@ plt.xlabel('False Positive Rate', fontsize=15)
 plt.ylabel('True Positive Rate', fontsize=15)
 plt.title("Receiver operating characteristic", fontsize=15)
 plt.legend(loc='lower right', fontsize=15)
-plt.savefig(os.path.join(path, "ROC-BSM"+".png"))
 
-print("save png file to {}".format(os.path.join(path, "ROC-BSM"+".png")))
+
+path = ''
+filename = "ROC-BSM"+".png"
+
+print("save png file to {}".format(os.path.join(path, filename)))
 plt.savefig(os.path.join(path, filename))
 ```
 

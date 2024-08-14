@@ -30,9 +30,8 @@ date of note: 2024-08-09
 >Given state $X_{t}$ at time $t$, assume that $A_{t}$ is chosen, the **update rule** for *eligibility trace*  is
 >$$
 >\begin{align*}
->z_{-1}(x,a) &= 0, \quad \forall (x, a)  \\[5pt]
-> z_{t}(X_{t}, A_{t}) &= z_{t-1}(X_{t}, A_{t}) + 1 \\[5pt]
-> z_{t}(x, a) &\leftarrow \lambda\,\gamma\, z_{t}(x, a) \quad \forall (x, a)
+> z_{-1}(x, a) &= 0, \quad \forall (x,a) \in \mathcal{X}\times \mathcal{A} \\[5pt]
+> z_{t}(x, a) &= \left\{\begin{array}{lc}\gamma\,\lambda\, z_{t-1}(x, a) + 1& \text{ if } (x,a) = (X_{t}, A_{t})\\ \gamma\,\lambda\,z_{t-1}(x,a) & \text{ otherwise} \end{array}\right. 
 >\end{align*}
 >$$
 
@@ -47,7 +46,7 @@ date of note: 2024-08-09
 >where $\delta_{t}$ is the **TD error** $$\delta_{t} := R_{t+1} + \gamma V_{t}(X_{t+1})  - V_{t}(X_{t}).$$
 
 
-###  SARSA($\lambda$) Algorithm for Tabular Value Function Representation
+###  SARSA($\lambda$) Algorithm for Tabular Value
 
 >[!important] Definition
 >The **tabular-based SARSA($\lambda$) algorithm** is described as below:
@@ -66,10 +65,10 @@ date of note: 2024-08-09
 >		- Observe **reward** $R_{t+1}$ and **next state** $X_{t+1}$
 >		- Generate the **next action** $A_{t+1}$ from *next state* $X_{t+1}$  based on policy $\pi$ derived from $Q_{t}$ $$A_{t+1} \sim \pi(\cdot\,|\,X_{t+1}\,)$$
 >		- Compute the **temporal difference error** $$\delta_{t} = R_{t+1} + \gamma Q_{t}(X_{t+1}, A_{t+1})  - Q_{t}(X_{t}, A_{t}) $$
->		- Update **eligibility trace** only for *observed state-action pairs* $$z_{t}(X_{t}, A_{t}) = z_{t-1}(X_{t}, A_{t}) + 1$$ The rest trace value is unchanged.
+>		- Update **eligibility trace** for *observed state-action pair* $$z_{t}(X_{t}, A_{t}) = z_{t-1}(X_{t}, A_{t}) + 1$$ 
 >		- For *all state-action pair* $(x,a) \in \mathcal{X}\times \mathcal{A}$
 >			- Update *action-value function* for **all state-action pair** (not just observed one) using **TD error** with **eligibility trace** $$Q_{t+1}(x, a) = Q_{t}(x, a) + \alpha\,\delta_{t}\,z_{t}(x, a)$$
->			- Update the *eligibility trace* with **$\gamma\lambda$-decay**  $$z_{t}(x, a) \leftarrow  \gamma\,\lambda\,z_{t}(x, a)$$
+>			- Adjust the *eligibility trace* for all action-values by a decay factor $$z_{t}(x, a) \leftarrow \gamma\,\lambda\,z_{t}(x, a)$$
 
 - [[SARSA Algorithm and On-Policy Temporal Difference Control]]
 - [[Temporal Difference lambda Algorithm]]
@@ -96,7 +95,7 @@ date of note: 2024-08-09
 ### Semi-Gradient SARSA($\lambda$) Algorithm
 
 >[!important] Definition
->The **Semi-Gradient TD($\lambda$)** algorithm is described as the followings:
+>The **Semi-Gradient SARSA($\lambda$)** algorithm is described as the followings:
 >- *Require*: the *policy* $\pi$ in evaluation
 >- *Require*: approximate value function $\hat{q}(\cdot, \cdot; w): \mathcal{X} \times \mathcal{A} \to \mathbb{R}$ parameterized by $w\in \mathbb{R}^d$ and is *differentiable* in $w$. Set $\hat{v}(\text{terminal}; w) = 0$ for all $w$
 >- *Require*: step size $\alpha >0$
@@ -118,6 +117,10 @@ date of note: 2024-08-09
 - [[Temporal Difference lambda Algorithm]]
 
 ## Explanation
+
+>[!info]
+>Compare with *tabular representation*, the *eligibility trace* with *function approximation* **do not** need to update value function for each state **independently**. 
+
 
 
 

@@ -128,6 +128,8 @@ date of note: 2024-05-07
 -----------
 ##  Recommended Notes and References
 
+
+- [[Upper Confidence Bound Algorithm]]
 - [[Independent Random Variables]]
 
 - [[Concentration Inequalities by Boucheron]]

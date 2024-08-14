@@ -121,6 +121,8 @@ date of note: 2024-06-01
 - [[Eligibility Traces]]
 - [[lambda-Return and Compound Update]]
 - [[Temporal Difference lambda Algorithm]]
+- [[Equivalence of Forward View and Backward View for TD(lambda)]]
+
 - [[Multi-Step Truncated lambda-Return Method]]
 - [[Online lambda-Return Algorithm and Redoing Updates]] 
 - [[Online Temporal Difference lambda]]

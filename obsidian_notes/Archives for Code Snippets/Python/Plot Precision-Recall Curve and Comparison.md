@@ -49,13 +49,15 @@ plt.plot(recall_old, precision_old, color='darkgreen', lw=lw, label='old data (a
 plt.plot([0,1], [0,1], color='navy', lw=lw, linestyle='--')
 plt.xlim([0.0, 1.0])
 plt.ylim([0.0, 1.05])
-plt.xlabel('False Positive Rate', fontsize=15)
-plt.ylabel('True Positive Rate', fontsize=15)
+plt.xlabel('Recall', fontsize=15)
+plt.ylabel('Precision', fontsize=15)
 plt.title("Precision-Recall Curve", fontsize=15)
 plt.legend(loc='lower right', fontsize=15)
-plt.savefig(os.path.join(path, "PR-BSM"+".png"))
 
-print("save png file to {}".format(os.path.join(path, "ROC-BSM"+".png")))
+path = ''
+filename = "PR-BSM"+".png"
+
+print("save png file to {}".format(os.path.join(path, filename)))
 plt.savefig(os.path.join(path, filename))
 ```
 

@@ -3,7 +3,8 @@ tags:
   - concept
   - reinforcement_learning/bandit
   - online_learning/algorithms
-keywords: 
+keywords:
+  - upper_confidence_bound_algorithm
 topics:
   - online_learning
   - bandit_problem
@@ -17,6 +18,7 @@ date of note: 2024-08-07
 >[!important]
 >**Name**: 
 
+![[Upper Confidence Bound Algorithm#^20418e]]
 
 
 ## Explanation

@@ -95,6 +95,7 @@ date of note: 2024-07-14
 - [[Explore-Then-Commit Bandit Algorithm]]
 - [[epsilon-Greedy Algorithm]]
 
+- [[Principle of Optimism under Uncertainty]]
 - [[Upper Confidence Bound Algorithm]]
 - [[Upper Confidence Bound Algorithm Asymptotic Optimality]]
 - [[Upper Confidence Bound Algorithm Minmax Optimality]]
