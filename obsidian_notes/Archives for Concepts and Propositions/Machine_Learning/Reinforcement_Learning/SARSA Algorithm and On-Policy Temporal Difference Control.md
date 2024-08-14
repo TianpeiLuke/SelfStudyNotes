@@ -41,8 +41,9 @@ date of note: 2024-05-12
 > Q(X_{t}, A_{t}) &\leftarrow Q(X_{t}, A_{t}) + \alpha_{t}\left[ R_{t+1} + \gamma Q(X_{t+1}, A_{t+1})  - Q(X_{t}, A_{t}) \right] . 
 > \end{align}
 >$$   
->The name of **SARSA** comes from the fact that the update is controlled by the **tuple** $$(S_{t}, A_{t}, R_{t+1}, S_{t+1}, A_{t+1}).$$ 
->Unlike the TD prediction, here we need to **sample a new action** based on the new state and policy.
+>- The name of **SARSA** comes from the fact that the update is controlled by the **tuple** $$(S_{t}, A_{t}, R_{t+1}, S_{t+1}, A_{t+1}).$$ 
+>- Unlike the TD prediction, here we need to **sample a new action** based on the new state and policy.
+>- The **TD error** is defined as $$\delta_{t} := R_{t+1} + \gamma Q(X_{t+1}, A_{t+1})  - Q(X_{t}, A_{t})$$
 
 ^cf105f
 

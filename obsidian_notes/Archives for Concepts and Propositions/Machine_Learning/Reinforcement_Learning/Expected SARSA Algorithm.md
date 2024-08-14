@@ -36,6 +36,7 @@ date of note: 2024-05-12
 > Q(X_{t}, A_{t}) &\leftarrow Q(X_{t}, A_{t}) + \alpha_{t}\left[ R_{t+1} + \gamma\sum_{a'}\pi(a'|\,X_{t+1})\,Q(X_{t+1}, a')  - Q(X_{t}, A_{t}) \right] .
 > \end{align}
 >$$ 
+>- The **TD error** is defined as $$\delta_{t} :=  R_{t+1} + \gamma\sum_{a'}\pi(a'|\,X_{t+1})\,Q(X_{t+1}, a')  - Q(X_{t}, A_{t}) $$
 
 - [[Value Function and Bellman Equation for MDP]]
 - [[SARSA Algorithm and On-Policy Temporal Difference Control]]

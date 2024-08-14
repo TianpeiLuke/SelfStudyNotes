@@ -83,6 +83,7 @@ date of note: 2024-08-09
 >The learning algorithm is called the **$n$-step temporal difference learning.**
 >- Note that *no change* at all is made for the *first $n-1$ steps* of each episode. 
 >- *Additional $n-1$ steps* are made at the end of each episode.
+>- The **TD error** is $$\delta_{t} := G_{t: t+n} - V_{t+n-1}(X_{t}) .$$
 
 ### Multi-Step Temporal Learning for Prediction
 

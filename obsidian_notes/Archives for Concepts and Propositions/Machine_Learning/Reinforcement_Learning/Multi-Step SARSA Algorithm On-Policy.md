@@ -28,7 +28,7 @@ date of note: 2024-08-09
 
 ### Multi-Step SARSA On-Policy Update
 
->[!info]
+>[!important] Definition
 >We can redefine the **$n$-step returns** as update target in terms of *estimated action values* for $n\ge 1$, $t\in [0, T-n]$
 >$$
 >\begin{align*}
@@ -40,8 +40,8 @@ date of note: 2024-08-09
 ^af4858
 
 
->[!info]
->The natural update is then 
+>[!important] Definition
+>The natural **update** is then 
 >$$
 >\begin{align*}
 >Q_{t+n}(X_{t}, A_{t}) &:= Q_{t+n-1}(X_{t}, A_{t}) + \alpha \left(G_{t: t+n} - Q_{t+n-1}(X_{t}, A_{t})\right) \\
@@ -49,6 +49,11 @@ date of note: 2024-08-09
 \end{align*}
 >$$
 >and the rest action-value pair $(x,a) \neq (X_{t}, A_{t})$,  $$Q_{t+n}(x, a) = Q_{t+n-1}(x, a).$$
+>- The **TD error** is 
+>$$\begin{align*}
+>\delta_{t} &:= G_{t: t+n} - Q_{t+n-1}(X_{t}, A_{t}) \\[5pt]
+>&= \sum_{s=1}^{n}\gamma^{s-1}\,R_{t+s}  + \gamma^{n}\,Q_{t+n-1}\left(X_{t+n}, A_{t+n}\right)  - Q_{t+n-1}(X_{t}, A_{t}) 
+>\end{align*}$$
 
 ^879238
 

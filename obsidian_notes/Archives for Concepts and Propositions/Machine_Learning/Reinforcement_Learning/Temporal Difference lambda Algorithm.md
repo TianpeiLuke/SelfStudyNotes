@@ -61,10 +61,7 @@ date of note: 2024-08-09
 > \end{align} 
 >$$
 >where $\delta_{t}$ is the **TD error** $$\delta_{t} := R_{t+1} + \gamma V_{t}(X_{t+1})  - V_{t}(X_{t}).$$
->- For a **previous observed state** $X_{t-k}$, the value is *updated* with impact *decayed* according to **time since its last appearence in history**
->$$
->V_{t+1}(X_{t-k}) = V_{t}(X_{t-k}) + \alpha_{t}\,(\lambda \gamma)^{k}\,\delta_{t}\,z_{t-k}(X_{t-k})
->$$
+>- For a **previous observed state** $X_{t-k}$, the value is *updated* with impact *decayed* according to **time since its last appearence in history** $$z_{t}(x) \neq 0 \iff x\in \{ X_{0} \,{,}\ldots{,}\,X_{t} \}$$
 >- For a state that **never occurs in the past**, there is **no update** to the value function
 >$$
 >V_{t+1}(x) = V_{t}(x) 
