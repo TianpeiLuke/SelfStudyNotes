@@ -6,6 +6,7 @@ tags:
 keywords:
   - optional_stopping
   - optional_sampling_theorem
+  - optional_sampling
 topics:
   - stochastic_process
   - probability

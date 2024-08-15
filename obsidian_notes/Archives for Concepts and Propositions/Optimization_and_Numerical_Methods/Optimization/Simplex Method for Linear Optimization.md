@@ -29,7 +29,10 @@ date of note: 2024-05-12
 - [[Polyhedron and Polytope]]
 - [[Generalized Simplex]]
 
+
+
 - [[Introduction to Linear Optimization by Bertsimas]]
 - [[Convex Optimization by Boyd]]
 - [[Numerical Optimization by Nocedal]]
 - [[Nonlinear Programming by Bertsekas]]
+- [[Introduction to Algorithms by Cormen]]
