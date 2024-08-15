@@ -210,5 +210,5 @@ date of note: 2024-05-07
 - [[Divergence Function on Manifold]]
 
 - [[Elements of Information Theory by Cover]]
-
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 217 - 231
 

@@ -94,3 +94,4 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 - [[Computational Optimal Transport by Peyre]]
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 307

@@ -57,7 +57,7 @@ date of note: 2024-07-04
 
 - [[Conditional Expectation]]
 - [[State Space Models]]
-- [[Kalman Filter]]
+- [[Kalman Filter Discrete-Time]]
 
 
 
@@ -76,7 +76,7 @@ date of note: 2024-07-04
 - [[Sequential Importance Sampling]]
 - [[Bootstrap Method]]
 - [[Importance Sampling]]
-- [[Kalman Filter]]
+- [[Kalman Filter Discrete-Time]]
 
 - [[Feynman-Kac Formula]]
 

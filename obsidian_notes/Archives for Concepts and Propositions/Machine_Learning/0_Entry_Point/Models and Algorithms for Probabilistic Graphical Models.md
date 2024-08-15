@@ -99,7 +99,7 @@ date of note: 2024-06-01
 - [[Canonical Form of Gaussian Graphical Model]]
 - [[Hidden Markov Model]]
 	- [[Viterbi Decoding Algorithm for MAP in Hidden Markov Chain]]
-- [[Kalman Filter]]
+- [[Kalman Filter Discrete-Time]]
 - [[Conditional Random Field]]
 - [[Latent Dirichlet Allocation]]
 - [[Restricted Boltzmann Machine]]

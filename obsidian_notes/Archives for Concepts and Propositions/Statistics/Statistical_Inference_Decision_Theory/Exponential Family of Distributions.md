@@ -309,5 +309,6 @@ date of note: 2024-06-24
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]]
 - [[Methods of Information Geometry by Amari]]
 - [[Probabilistic Graphical Models by Koller]] pp 261 - 284
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 33 - 43
 - [[Convex Analysis by Rockafellar]]
 - [[Convex Optimization by Boyd]]

@@ -38,8 +38,6 @@ date of note: 2024-06-01
 - [[AdaBoost Algorithm]]
 - [[Functional Gradient Descent]]
 
-
-
 #### Support Vector Machine and Kernel Methods
 
 - [[Reproducing Kernel Hilbert Space]]
@@ -73,8 +71,14 @@ date of note: 2024-06-01
 
 ### Unsupervised Learning Models and Algorithms
 
+- [[Supervised Learning and Unsupervised Learning]]
 - [[k-Means Clustering]]
 - [[Principle Component Analysis]]
+- [[State Space Models]]
+- [[Gaussian Filtering and Smoothing]]
+- [[Kalman Filter Discrete-Time]]
+- [[Kalman Filter Continuous-Time]]
+- [[Extended Kalman Filter]]
 
 ### Reinforcement Learning Models and Algorithms
 

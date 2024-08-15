@@ -5,7 +5,7 @@ tags:
 keywords: 
 topics: 
 name: 
-date of note: 2024-05-12
+date of note: 2024-08-14
 ---
 
 ## Concept Definition
@@ -24,5 +24,6 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
-- [[Reinforcement Learning An Introduction by Sutton]]
+- [[Kalman Filter Discrete-Time]]
 
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 357 - 377

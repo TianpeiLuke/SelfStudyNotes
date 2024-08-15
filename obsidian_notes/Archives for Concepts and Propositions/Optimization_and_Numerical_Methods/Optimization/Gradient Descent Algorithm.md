@@ -167,4 +167,4 @@ date of note: 2024-05-12
 - [[Nonlinear Programming by Bertsekas]] pp 22 - 86
 - [[Deep Learning by Goodfellow]] 
 - [[Deep Learning Foundations and Concepts by Bishop]]
-- [[Probabilistic Machine Learning Advanced Topics by Murphy]]
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 273 - 278

@@ -80,7 +80,7 @@ date of note: 2024-07-04
 
 ## Nonlinear Filters
 
-- [[Kalman Filter]]
+- [[Kalman Filter Discrete-Time]]
 - [[Particle Filter or Sampling-Importance-Resampling]]
 
 

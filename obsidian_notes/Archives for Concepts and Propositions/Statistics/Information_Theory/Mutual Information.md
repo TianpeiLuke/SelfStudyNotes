@@ -89,5 +89,5 @@ date of note: 2024-05-13
 - [[Kullback-Leibler Divergence]]
 
 - [[Elements of Information Theory by Cover]]
-
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 236 - 244
 

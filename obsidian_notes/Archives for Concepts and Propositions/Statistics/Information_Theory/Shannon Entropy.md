@@ -91,3 +91,4 @@ date of note: 2024-05-22
 
 
 - [[Elements of Information Theory by Cover]]
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 232 - 235

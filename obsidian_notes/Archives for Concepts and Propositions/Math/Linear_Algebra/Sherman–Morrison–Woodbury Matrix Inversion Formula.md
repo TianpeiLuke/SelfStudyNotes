@@ -109,7 +109,7 @@ date of note: 2024-07-23
 >[!info]
 >**Woodbury Identity** is used in **Kalman filter** update.
 
-- [[Kalman Filter]]
+- [[Kalman Filter Discrete-Time]]
 
 
 -----------

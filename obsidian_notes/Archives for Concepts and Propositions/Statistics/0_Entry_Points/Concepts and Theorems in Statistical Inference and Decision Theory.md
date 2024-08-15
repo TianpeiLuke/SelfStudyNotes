@@ -151,10 +151,19 @@ date of note: 2024-06-01
 - [[Jackknife Estimator of Variance]]
 - [[Bootstrap Method]]
 
-### Sequential Decision Problem
+### Sequential Decision Problem 
 
 - [[Sequential Decision Process]]
 - [[Markov Decision Process]]
+
+### Statistical Signal Processing
+
+- [[Statistical Prediction Detection Smoothing and Filtering]]
+- [[State Space Models]]
+- [[Gaussian Filtering and Smoothing]]
+- [[Kalman Filter Discrete-Time]]
+- [[Kalman Filter Continuous-Time]]
+- [[Extended Kalman Filter]]
 
 
 ## Hypothesis Testing

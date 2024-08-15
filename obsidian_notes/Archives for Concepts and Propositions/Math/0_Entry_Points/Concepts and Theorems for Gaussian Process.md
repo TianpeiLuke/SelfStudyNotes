@@ -164,6 +164,14 @@ date of note: 2024-05-30
 - [[Partial Correlation]]
 - [[Graph LASSO and Structured Learning in Gaussian Graphical Model]]
 
+### Gaussian Filtering and Smoothing
+
+- [[Statistical Prediction Detection Smoothing and Filtering]]
+- [[Gaussian Filtering and Smoothing]]
+- [[State Space Models]]
+- [[Kalman Filter Discrete-Time]]
+- [[Kalman Filter Continuous-Time]]
+- [[Extended Kalman Filter]]
 
 
 ## Explanation

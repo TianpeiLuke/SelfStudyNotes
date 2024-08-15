@@ -39,6 +39,6 @@ date of note: 2024-05-12
 - [[Graph]]
 
 
-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] 
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 411 
 - [[Probabilistic Graphical Models by Koller]] pp 391 - 419
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]] pp 92 - 107
