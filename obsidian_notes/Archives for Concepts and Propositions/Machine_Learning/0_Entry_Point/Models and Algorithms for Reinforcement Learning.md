@@ -179,6 +179,7 @@ date of note: 2024-06-01
 - [[Understanding Machine Learning by Shalev-Shwartz]]
 - [[Reinforcement Learning An Introduction by Sutton]]
 - [[Markov Decision Processes by Puterman]]
+- [[An Introduction to Deep Reinforcement Learning by Francois-Lavet]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]
 
 

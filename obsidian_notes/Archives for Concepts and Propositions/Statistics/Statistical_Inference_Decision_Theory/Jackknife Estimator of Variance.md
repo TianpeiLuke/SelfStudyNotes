@@ -46,3 +46,4 @@ date of note: 2024-05-22
 
 - [[All of Statistics A Concise Course by Wasserman]]
 - [[Mathematical Statistics by Shao]]
+- [[An Introduction to Bootstrap by Efron]] pp 141, 283

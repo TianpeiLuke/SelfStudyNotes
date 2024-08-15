@@ -47,6 +47,4 @@ date of note: 2024-05-22
 
 - [[All of Statistics A Concise Course by Wasserman]]
 - [[Mathematical Statistics by Shao]]
-
-
-- Efron, B., & Tibshirani, R. J. (1993). *An Introduction to the Bootstrap* (1st edition). Chapman and Hall/CRC.
+- [[An Introduction to Bootstrap by Efron]] pp 45, 153, 168, 220, 283

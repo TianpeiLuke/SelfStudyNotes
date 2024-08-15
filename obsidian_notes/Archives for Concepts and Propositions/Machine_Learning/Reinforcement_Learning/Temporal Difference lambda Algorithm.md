@@ -142,8 +142,9 @@ date of note: 2024-08-09
 
 ![[Semi-Gradient Temporal Difference#^5680d7]]
 
+
 >[!important] 
->The **temporal difference error** for approximated value function is 
+>The **TD error** for approximated value function is 
 >$$
 >\delta_{t} := R_{t+1} + \gamma \,\hat{v}(X_{t+1}, w_{t}) - \hat{v}(X_{t}, w_{t}).
 >$$
@@ -217,6 +218,8 @@ date of note: 2024-08-09
 >**TD($\lambda$)** improves over the **offiine $\lambda$-return algorithm** in three ways. **First** it updates the weight vector on *every step* of an episode rather than *only at the end*, and thus its estimates may be better *sooner*. **Second**, its *computations* are *equally distributed* in time rather than all at the end of the episode. And **third**, it can be applied to *continuing problems* rather than just to episodic problems. In this section we present the **semi-gradient** version of **TD($\lambda$) with function approximation**.
 >
 >-- [[Reinforcement Learning An Introduction by Sutton]] pp 292
+
+- [[lambda-Return and Compound Update#Offline $ lambda$-Return Algorithm]]
 
 >[!quote]
 >With function approximation, the **eligibility trace** is a vector $z_{t} \in \mathbb{R}^d$ with the *same number of components* as the *weight vector* $w_{t}$. Whereas the weight vector is a **long-term memory**, accumulating over the lifetime of the system, the *eligibility trace* is a **short-term memory**, typically lasting less time than the length of an episode. Eligibility traces assist in the learning process; their only consequence is that they *affect the weight vector*, and then the weight vector determines the estimated value.

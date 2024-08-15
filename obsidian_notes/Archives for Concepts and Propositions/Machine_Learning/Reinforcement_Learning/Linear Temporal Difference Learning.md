@@ -70,10 +70,11 @@ date of note: 2024-08-09
 >$$
 >where $$b :=  \mathbb{E}\left[ R_{t+1}\,f_{t} \right] \in \mathbb{R}^d$$ and $$A :=  \mathbb{E}\left[f_{t}\,\left( f_{t} - \gamma\,f_{t+1}\right)^{T}   \right] \in \mathbb{R}^{d\times d}$$
 >
->This is the *UMVUE*.
+>This is the *minimum mean squared estimator*.
 
 - [[Minimum Mean Square Estimation]]
 - [[Uniformly Minimum Variance Unbiased Estimation]]
+
 
 
 

@@ -40,6 +40,8 @@ date of note: 2024-08-09
 >Note that in supervised learning, we are given a set of covariates-target pairs $$\set{(X_{t}, G_{t})}_{t=1, \ldots, T},$$ the problem is to estimate the function $v: \mathcal{X} \rightarrow \mathbb{R}$ so that $$\| G_{t} - v(X_{t})\|_{2}^{2}$$ is small in expectation. 
 > 
 
+^edee92
+
 - [[Supervised Learning and Unsupervised Learning]]
 
 >[!important]

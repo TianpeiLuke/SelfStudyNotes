@@ -39,3 +39,4 @@ date of note: 2024-08-09
 
 
 - [[Reinforcement Learning An Introduction by Sutton]] pp 278 - 283
+- [[An Introduction to Deep Reinforcement Learning by Francois-Lavet]]

@@ -12,6 +12,7 @@ date of note: 2024-04-08
 ## Code Snippet Summary
 
 >[!important]
+>Plot two bar graphs, one stacked on top of the other
 
 
 ## Code
@@ -56,3 +57,5 @@ def plot_stack_bars_general(df, vars, id, time, custom_index,  xticks_rotations=
 -----------
 ##  Recommended Notes
 
+
+- [[Change Color of a single Bar]]

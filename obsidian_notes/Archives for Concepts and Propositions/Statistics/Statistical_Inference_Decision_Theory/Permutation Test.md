@@ -30,3 +30,4 @@ date of note: 2024-06-24
 - [[Mathematical Statistics by Shao]]
 - [[Testing Statistical Hypotheses by Lehmann]]
 - [[All of Statistics A Concise Course by Wasserman]]
+- [[An Introduction to Bootstrap by Efron]] pp 202
