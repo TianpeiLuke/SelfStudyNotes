@@ -58,6 +58,8 @@ date of note: 2024-05-12
 \end{align*}
 >$$
 
+^423e21
+
 
 ## Bifunction Representation
 
@@ -68,6 +70,7 @@ date of note: 2024-05-12
 
 -----------
 ##  Recommended Notes and References
+
 
 - [[Constrained Optimization Problem]]
 - [[Unconstrained Global Minimization]]

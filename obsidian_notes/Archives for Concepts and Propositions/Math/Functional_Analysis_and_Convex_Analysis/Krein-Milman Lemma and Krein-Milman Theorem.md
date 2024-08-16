@@ -26,6 +26,7 @@ date of note: 2024-06-21
 
 - [[Extreme Points of Convex Set of Locally Convex Space]]
 - [[Bounded Linear Functional]]
+- [[Basic Solution for Linear Optimization]]
 - [[Compactness]]
 - [[Convex Set]]
 - [[Locally Convex Space]]

@@ -35,6 +35,7 @@ date of note: 2024-05-11
 - [[Generalized Simplex]]
 - [[Polyhedron and Polytope]]
 
+
 ### Convex Function
  
 - [[Convex Function]]
@@ -64,7 +65,9 @@ date of note: 2024-05-11
 	- [[Minkowski Functional]]
 	- [[Dual Representation of Convex Set]]
 - [[Extreme Points of Convex Set of Locally Convex Space]]
+- [[Extreme Points of Polyhedron]]
 - [[Krein-Milman Lemma and Krein-Milman Theorem]]
+
 
 ### Dual Representation of Convex Function
 

@@ -26,6 +26,19 @@ date of note: 2024-06-21
 >
 >A point $x \in K$ is called an **extreme point** of $K$ if the singleton set $\{ x \}$ is an *extreme subset* of $K$.
 
+^36426c
+
+- [[Vertex Point of Polyhedron]]
+- [[Basic Solution for Linear Optimization]]
+
+### Extreme Point for Polyhedron
+
+![[Extreme Points of Polyhedron#^3396c2]]
+
+- [[Extreme Points of Polyhedron]]
+- [[Vertex Point of Polyhedron]]
+- [[Introduction to Linear Optimization by Bertsimas]] pp 46
+
 
 ## Explanation
 

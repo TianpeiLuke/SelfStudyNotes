@@ -8,23 +8,33 @@ keywords:
   - linear_optimization
 topics:
   - optimization/algorithm
-name: Simplex Method for Linear Optimization
+name: Optimality Condition and Feasible Direction for Linear Optimization
 date of note: 2024-05-12
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Simplex Method for Linear Optimization
+>**Name**: Optimality Condition and Feasible Direction for Linear Optimization
 
 ![[Linear Optimization Problem#^099c2f]]
 
 ### Feasible Direction
 
+>[!important] Definition
+>Let $x$ be an element of a *polyhedron* $P$. 
+>
+>A vector $d\in \mathbb{R}^{n}$ is said to be a **feasible direction** at $x$, if there exists a *positive* scalar $\theta$ for which $$x + \theta\,d \in P.$$
 
+- [[Polyhedron and Polytope]]
 
+### Basic Solution 
 
+![[Basic Solution for Linear Optimization#^52390c]]
 
+- [[Basic Solution for Linear Optimization]]
+- [[Extreme Points of Polyhedron]]
+- [[Vertex Point of Polyhedron]]
 
 
 
@@ -45,10 +55,12 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
+
 - [[Linear Optimization Problem]]
 - [[Polyhedron and Polytope]]
 - [[Generalized Simplex]]
 - [[Interior Point Method for Linear Optimization]]
+- [[Simplex Method for Linear Optimization]]
 
 - [[Karush-Kuhn-Tucker Optimality Condition]]
 

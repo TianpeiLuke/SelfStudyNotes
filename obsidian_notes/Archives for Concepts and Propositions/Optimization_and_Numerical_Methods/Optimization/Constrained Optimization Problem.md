@@ -79,6 +79,8 @@ date of note: 2024-05-12
 >- If $x$ is feasible, and $f_{i}(x) = 0$ for *inequality constraint* $i$, we say that the corresponding *inequality constraint* $f_{i}(x) \leq 0$ is **active**.
 >- If the inequality constraint is *strict*,  $f_{i}(x) < 0$, we say the inequality constraint is **inactive**.
 
+^9a3b41
+
 >[!important] Definition
 >We say a constraint is **redundant** if deleting that constraint *does not change* the feasible set $\Omega$. 
 

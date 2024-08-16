@@ -60,6 +60,10 @@ date of note: 2024-07-22
 >
 >Conversely, the convex hull of  any *finite collection of vectors* is a **polytope**.
 
+^9235c5
+
+- [[Extreme Points of Polyhedron]]
+- [[Vertex Point of Polyhedron]]
 - [[Generalized Simplex]]
 
 
@@ -74,6 +78,7 @@ date of note: 2024-07-22
 - [[Support functional of Convex Set]]
 
 
+- [[Linear Optimization Problem]]
 - [[Generalized Simplex]]
 - [[Simplex Method for Linear Optimization]]
 - [[Interior Point Method for Linear Optimization]]
@@ -82,7 +87,7 @@ date of note: 2024-07-22
 - [[Convex Analysis by Rockafellar]]
 - [[Convex Optimization by Boyd]]
 - [[Convex Optimization Algorithms by Bertsekas]]
-- [[Introduction to Linear Optimization by Bertsimas]]
+- [[Introduction to Linear Optimization by Bertsimas]] pp 42
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]] pp 263
 
 - Wikipedia [Polyhedron](https://en.wikipedia.org/wiki/Polyhedron)
