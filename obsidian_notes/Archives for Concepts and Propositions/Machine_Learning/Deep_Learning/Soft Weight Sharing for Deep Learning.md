@@ -1,8 +1,9 @@
 ---
 tags:
   - concept
-  - machine_learning/models
-  - deep_learning/generative_models
+  - machine_learning/algorithms
+  - deep_learning/algorithms
+  - deep_learning/regularization
 keywords: 
 topics: 
 name: 
@@ -26,9 +27,7 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
-- [[Artificial Neural Network and Deep Learning]]
 
-
-- [[Deep Learning Foundations and Concepts by Bishop]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]
-- [[Deep Learning by Goodfellow]] pp 397
+- [[Deep Learning by Goodfellow]]
+- [[Deep Learning Foundations and Concepts by Bishop]] pp 271

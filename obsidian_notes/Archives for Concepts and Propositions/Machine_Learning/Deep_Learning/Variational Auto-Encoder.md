@@ -214,6 +214,7 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
+- [[Artificial Neural Network and Deep Learning]]
 
 
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 569 - 578

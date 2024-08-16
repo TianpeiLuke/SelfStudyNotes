@@ -47,6 +47,7 @@ date of note: 2024-06-01
 - [[Point Estimator]]
 - [[Bias of Point Estimator and Unbiasedness]]
 - [[Consistency of Point Estimator]]
+- [[Equivariance of Estimator]]
 
 ### Unbiased Estimation
 

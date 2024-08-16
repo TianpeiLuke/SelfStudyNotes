@@ -159,8 +159,9 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
-- [[Gradient Descent Algorithm]]
 
+- [[Gradient Descent Algorithm]]
+- [[Artificial Neural Network and Deep Learning]]
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 264
 - [[Deep Learning by Goodfellow]] pp 197 - 216

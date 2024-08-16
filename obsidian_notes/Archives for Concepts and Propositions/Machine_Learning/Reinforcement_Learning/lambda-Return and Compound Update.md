@@ -110,7 +110,7 @@ date of note: 2024-08-09
 
 - [[Ensemble Learning]]
 - [[Bootstrap Method]]
-- [[Dropout Algorithm]]
+- [[Dropout for Deep Learning]]
 
 ### Represent $\lambda$-Return via Rewards
 

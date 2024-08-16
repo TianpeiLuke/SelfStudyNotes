@@ -25,7 +25,9 @@ date of note: 2024-05-12
 ### Linear Optimization Problem
 
 - [[Linear Optimization Problem]]
+- [[Active and Independent Constraints for Linear Optimization]]
 - [[Basic Solution for Linear Optimization]]
+
 
 ### Simplex Methods
 

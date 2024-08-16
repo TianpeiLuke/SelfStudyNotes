@@ -42,6 +42,8 @@ date of note: 2024-06-26
 
 - [[Population and Sample and Statistical Problem]]
 - [[Statistical Decision Problem]]
+- [[Equivariance of Estimator]]
+
 
 - [[Topological Group]]
 - [[Group]]

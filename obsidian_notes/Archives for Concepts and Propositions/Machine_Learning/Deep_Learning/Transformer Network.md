@@ -25,7 +25,9 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
-- [[Attention Neural Network]]
+
+- [[Attention Mechanism in Neural Network]]
+- [[Artificial Neural Network and Deep Learning]]
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 637
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 357

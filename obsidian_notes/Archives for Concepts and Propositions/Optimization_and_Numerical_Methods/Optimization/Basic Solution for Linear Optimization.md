@@ -22,9 +22,13 @@ date of note: 2024-05-12
 
 ![[Constrained Optimization Problem#^9a3b41]]
 
->[!important] Definition
->If a vector $x^{*}$ satisfies the *equality condition* for the corresponding *inequality or inequality constraint*, then we say that the corresponding constraint is **active** or **binding** at $x^{*}$.
+### Active Constraint for LP
 
+![[Active and Independent Constraints for Linear Optimization#^90a3c5]]
+
+- [[Active and Independent Constraints for Linear Optimization]]
+
+### Basic Solution for LP
 
 >[!important] Definition
 >Consider a *polyhedron* $P$ defined by linear equality and inequality constraints, and let $x^{*}\in \mathbb{R}^{n}$.
@@ -55,11 +59,19 @@ date of note: 2024-05-12
 >- $x^{*}$ is an **extreme point**;
 >- $x^{*}$ is a **basic feasible solution**.
 
-
 - [[Vertex Point of Polyhedron]]
 - [[Polyhedron and Polytope]]
 - [[Extreme Points of Polyhedron]]
 - [[Krein-Milman Lemma and Krein-Milman Theorem]]
+
+>[!important] Corollary
+>Given a **finite** number of **linear inequality constraints**, there can only be a **finite** number of **basic or basic feasible solutions**.
+
+### Adjacent Basic Solution
+
+>[!important] Definition
+>Two distinct basic solutions to a set of *linear constraints* in $\mathbb{R}^{n}$ are said to be **adjacent** if we can find $n - 1$ *linearly independent constraints* that are *active* at both of them.
+
 
 
 ## Explanation
@@ -68,6 +80,30 @@ date of note: 2024-05-12
 >Note that if the number $m$ of **constraints** used to define a polyhedron $P \subset \mathbb{R}^{n}$ is *less than* $n$, $$m\le n$$ the **number of active constraints** at any given point must also be *less than* $n$, and there are **no basic** or **basic feasible solutions**.
 
 
+## Polyhedral in standard form
+
+>[!important]
+>Let $$P = \left\{ x\in \mathbb{R}^{n}:\; Ax = b,\; x \succeq 0 \right\} $$ be a polyhedron in **standard form**, and let $A \in \mathbb{R}^{m\times e n}$, where $m$ is the number of **equality constraints**.
+
+- [[Linear Optimization Problem]]
+- [[Introduction to Linear Optimization by Bertsimas]] pp 53
+
+>[!important] Theorem
+>Consider the constraints $Ax = b$, and $x \succeq 0$ and assume that the $m \times n$ matrix $A$ has **linearly independent rows**. 
+>
+>A vector $x\in \mathbb{R}^{n}$ is a **basic solution** *if and only if* we have $Ax = b$, and there exist **indices** $$B(1) \,{,}\ldots{,}\, B(m)$$ such that:
+>- The columns $$A_{B(1)} \,{,}\ldots{,}\,A_{B(m)}$$ are **linearly independent**;
+>- If $i \neq B(1) \,{,}\ldots{,}\, B(m)$, then $$x_{i} = 0$$
+
+- [[Active and Independent Constraints for Linear Optimization]]
+
+
+## Procedure for Constructing Basic Solution
+
+>[!important] Procedure for constructing basic solutions
+>1. Choose $m$ **linearly independent columns** $$A_{B(1)} \,{,}\ldots{,}\,A_{B(m)}·$$ 
+>2. Let $x_{i} = 0$ for all $i \neq B(1) \,{,}\ldots{,}\, B(m)$. 
+>3. Solve the **system of $m$ equations** $$Ax = b$$ for the unknowns $$x_{B(1)} \,{,}\ldots{,}\,x_{B(m)}$$
 
 
 

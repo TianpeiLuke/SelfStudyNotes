@@ -26,6 +26,7 @@ date of note: 2024-07-07
 -----------
 ##  Recommended Notes and References
 
+- [[Noise Contrastive Estimation]]
 
 - [[Deep Learning Foundations and Concepts by Bishop]]
 - [[Probabilistic Graphical Models by Koller]]

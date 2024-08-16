@@ -28,7 +28,8 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
-- [[Denoising Diffusion Probabilistic Models]]
+- [[Diffusion Network]]
+- [[Artificial Neural Network and Deep Learning]]
 
 
 - [[Wasserstein Distance]]

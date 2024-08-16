@@ -16,18 +16,33 @@ date of note: 2024-06-01
 
 ## List of Concepts
 
-### Basic Component of Artificial Neural Network
+### Foundations in Math, Statistics and Optimization
+
+- [[Concepts and Theorems in Finite Dimensional Vector Space]]
+- [[Concepts and Theorems for Matrix Theory]]
+- [[Concepts and Theorems in Probability Theory]]
+- [[Concepts and Theorems for Markov Process]]
+- [[Theory and Algorithms for Nonlinear Optimization]]
+- [[Concepts and Algorithms for Monte Carlo Methods]]
+- [[Concepts and Theorems in Statistical Inference and Decision Theory]]
+- [[Concepts and Theorems in Information Theory]]
+
+### Artificial Neural Network
+
+- [[Artificial Neural Network and Deep Learning]]
+- [[Activation Functions for Deep Learning]]
+- [[Perceptron Algorithm]]
+- [[Multi-Layer Perceptron and Fully Connected Network]]
 
 
 
-
-### Algorithms for Training
+### Back Propagation and Automatic Differentiation
 
 - [[Automatic Differentiation]]
 - [[Back-Propagation Algorithm]]
 
-- [[Dropout Algorithm]]
-- [[Batch Normalization Algorithm]]
+
+### Optimization Algorithm 
 
 - [[Stochastic Gradient Descent Algorithm]]
 - [[Stochastic Gradient Descent with Nesterov Momentum]]
@@ -36,40 +51,81 @@ date of note: 2024-06-01
 - [[RMSProp Algorithm]]
 - [[Adam Algorithm]]
 
-### Deep Learning Architecture
+### Normalization
 
-#### Discriminative Model
+- [[Batch Normalization]]
+- [[Layer Normalization]]
 
+### Regularization
+
+- [[Inductive Bias in Machine Learning]]
+- [[Tikhonov Regularization in Optimization and Learning]]
+- [[Regularized Loss Minimization]]
+- [[Equivariance of Estimator]]
+
+- [[Weight Decay for Deep Learning]]
+- [[Early Stopping for Deep Learning]]
+- [[Soft Weight Sharing for Deep Learning]]
+- [[Residual Connection for Deep Learning]]
+- [[Dropout for Deep Learning]]
+
+
+## Deep Learning Architectures
+
+### Convolutional Neural Network
+
+- [[Convolutional Filters]]
+- [[Pooling for Deep Learning]]
 - [[Convolutional Neural Network]]
 
-#### Representation Learning
+### Representation Learning
 
 - [[Auto-Encoder]]
 - [[Contrastive Learning]]
+- [[Noise Contrastive Estimation]]
 
-#### Sequential Model
+### Recurrent Network
 
+- [[Recurrent Neural Network]]
 - [[Gated Recurrent Neural Network]]
 - [[Long-Short Term Memory Network]]
 - [[Residual Neural Network]]
-- [[State Space Models]]
 
-#### Generative Model
 
+### Generative Model
+
+#### Variational Auto-Encoder
+
+- [[Evidence Lower Bound]]
+- [[Variational Inference vs EM Algorithm]]
 - [[Variational Auto-Encoder]]
-	- [[Evidence Lower Bound]]
-	- [[Variational Inference vs EM Algorithm]]
 
+#### Normalizing Flows
+
+- [[Normalizing Flows]]
+- [[Neural Ordinary Differential Equations]]
+
+
+#### Diffusion Network
+
+- [[Denoising Diffusion Probabilistic Models]]
 - [[Diffusion Network]]
+
+#### Generative Adversarial Network
+
+- [[Learning by Comparison for GAN]]
 - [[Generative Adversarial Network]]
 
-#### Graph-based
 
+
+### Graph-based Neural Network
+
+- [[Neural Message Passing Algorithm for Graph Neural Network]]
 - [[Graph Neural Network]]
 
-#### Memorization Network
+### Memorization Network
 
-- [[Attention Neural Network]]
+- [[Attention Mechanism in Neural Network]]
 - [[Transformer Network]]
 
 

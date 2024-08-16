@@ -35,9 +35,7 @@ date of note: 2024-05-12
 - [[Basic Solution for Linear Optimization]]
 - [[Extreme Points of Polyhedron]]
 - [[Vertex Point of Polyhedron]]
-
-
-
+- [[Active and Independent Constraints for Linear Optimization]]
 
 
 ## Explanation

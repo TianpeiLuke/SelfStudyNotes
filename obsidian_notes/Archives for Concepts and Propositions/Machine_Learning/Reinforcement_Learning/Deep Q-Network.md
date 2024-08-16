@@ -35,6 +35,7 @@ date of note: 2024-05-12
 >U_{t} := R_{t+1} + \gamma\, \max_{a' \in \mathcal{A}(X_{t+1})}\,\hat{q}\left(X_{t+1}, a'; w_{t}\right)
 >$$
 
+- [[Artificial Neural Network and Deep Learning]]
 - [[Semi-Gradient Temporal Difference]]
 - [[Q Learning Algorithm and Off-Policy Temporal Difference Control]]
 - [[Value Function Approximation as Supervised Learning]]
@@ -139,7 +140,7 @@ date of note: 2024-05-12
 - [[Bellman Optimality Equation for MDP]]
 - [[Value Function and Bellman Equation for MDP]]
 - [[Markov Decision Process]]
-
+- [[Artificial Neural Network and Deep Learning]]
 
 
 

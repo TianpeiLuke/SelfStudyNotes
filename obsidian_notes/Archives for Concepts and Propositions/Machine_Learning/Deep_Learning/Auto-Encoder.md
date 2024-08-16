@@ -26,7 +26,10 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
+
 - [[Variational Auto-Encoder]]
+- [[Artificial Neural Network and Deep Learning]]
+
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]
 - [[Deep Learning by Goodfellow]] pp 493
