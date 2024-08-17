@@ -16,8 +16,19 @@ date of note: 2024-05-12
 
 
 
+
+
 ## Explanation
 
+
+## Activation Functions in Deep Learning
+
+- [[Activation Functions for Deep Learning]]
+
+
+## Loss Function for Deep Learning
+
+- [[Error Function or Loss Function for Deep Learning]]
 
 ## Basic Building Blocks
 

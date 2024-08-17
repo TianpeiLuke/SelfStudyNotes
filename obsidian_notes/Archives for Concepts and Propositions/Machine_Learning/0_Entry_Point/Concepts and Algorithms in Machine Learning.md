@@ -30,6 +30,12 @@ date of note: 2024-06-01
 - [[k Nearest Neighbor Classification]]
 - [[k Nearest Neighbor Estimation]]
 
+#### Generalized Linear Models
+
+- [[Logistic Regression]]
+
+
+
 #### Ensemble Learning and Boosting
 
 - [[Concepts and Theorems in Boosting and Ensemble Learning]]
@@ -59,6 +65,8 @@ date of note: 2024-06-01
 #### Probabilistic Graphical Models
 
 - [[Models and Algorithms for Probabilistic Graphical Models]]
+- [[Naive Bayes Model]]
+- [[Conditional Random Field]]
 
 #### Deep Learning
 

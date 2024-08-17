@@ -99,6 +99,8 @@ date of note: 2024-06-24
 >\end{align*}
 >$$ 
 
+- [[Logistic Regression]]
+
 >[!example]
 >Consider the independent random variables $Y^{i} \in \left\{ 1 \,{,}\ldots{,}\,m\right\}$ from **categorical distribution**  for $i=1\,{,}\ldots{,}\,d.$
 >

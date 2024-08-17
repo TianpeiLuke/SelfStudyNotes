@@ -31,16 +31,16 @@ date of note: 2024-06-01
 
 - [[Artificial Neural Network and Deep Learning]]
 - [[Activation Functions for Deep Learning]]
+- [[Error Function or Loss Function for Deep Learning]]
+
+
 - [[Perceptron Algorithm]]
 - [[Multi-Layer Perceptron and Fully Connected Network]]
-
-
 
 ### Back Propagation and Automatic Differentiation
 
 - [[Automatic Differentiation]]
 - [[Back-Propagation Algorithm]]
-
 
 ### Optimization Algorithm 
 

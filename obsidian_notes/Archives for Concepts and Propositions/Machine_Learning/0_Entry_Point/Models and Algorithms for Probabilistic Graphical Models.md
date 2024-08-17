@@ -97,6 +97,7 @@ date of note: 2024-06-01
 ### Examples
 
 - [[Canonical Form of Gaussian Graphical Model]]
+- [[Naive Bayes Model]]
 - [[Hidden Markov Model]]
 	- [[Viterbi Decoding Algorithm for MAP in Hidden Markov Chain]]
 - [[Kalman Filter Discrete-Time]]
