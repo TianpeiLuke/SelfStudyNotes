@@ -33,6 +33,8 @@ date of note: 2024-05-12
 
 - [[Batch Normalization]]
 
+![[layer_normalization.png]]
+
 ### Inference Phase
 
 >[!important] 

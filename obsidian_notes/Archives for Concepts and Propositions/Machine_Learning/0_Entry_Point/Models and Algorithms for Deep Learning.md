@@ -117,11 +117,12 @@ date of note: 2024-06-01
 - [[Generative Adversarial Network]]
 
 
-
 ### Graph-based Neural Network
 
 - [[Neural Message Passing Algorithm for Graph Neural Network]]
 - [[Graph Neural Network]]
+- [[Graph Convolutional Filters]]
+- [[Graph Convolutional Neural Network]]
 
 ### Memorization Network
 
