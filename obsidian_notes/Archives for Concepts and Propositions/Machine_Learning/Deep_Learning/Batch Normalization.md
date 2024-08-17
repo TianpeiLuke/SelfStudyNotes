@@ -21,7 +21,7 @@ date of note: 2024-05-12
 ### Training Phase
 
 >[!important] Definition
->**Batch normalization** provide additional layer that normalize the *hidden unit values* for every time the weight is *updated.*
+>**Batch normalization** provide additional layer that normalize the *hidden unit values* for every time the weight is *updated.* It normalizes across *all examples* for *each hidden unit independently*.
 >
 >Let $a_{n,i}$ be the **pre-activations**, for a sample $n$ in a mini-batch  of $K$ samples, 
 >$$
@@ -29,8 +29,8 @@ date of note: 2024-05-12
 >$$
 >where $x_{n}\in \mathbb{R}^{d}$ is the input or the output of previous layer. Denote the *activation values*  as $z_{i} = h(a_{i})$
 >
->For each *mini-batch* of size $K$, **Batch normalization** is described as below:
->- For each dimension $i=1\,{,}\ldots{,}\,d$ (in parallel)
+>For each *mini-batch* of size $K$, **batch normalization** is described as below:
+>- For each hidden units $i=1\,{,}\ldots{,}\,d$ (in parallel)
 >	- Compute the *sample mean* $$\mu_{i} = \frac{1}{K} \sum_{n=1}^{K}a_{n,i}$$ and *sample variance* $$\sigma_{i}^2 = \frac{1}{K} \sum_{n=1}^{K}\left(a_{n,i} - \mu_{i}\right)^2$$
 >	- **Normalize** the **pre-activations** for each sample within mini-batch $$\hat{a}_{n,i} = \frac{a_{n,i} - \mu_{i}}{\sqrt{ \sigma_{i}^2 + \delta  }}, \quad n=1 \,{,}\ldots{,}\,K$$
 >	- **Re-scaling** the *normalized pre-activations* to have **mean** $\beta_{i}$ and **standard deviation** $\gamma_{i}$ $$\tilde{a}_{n,i} = \gamma_{i}\,\hat{a}_{n,i} + \beta_{i}$$
@@ -108,7 +108,9 @@ date of note: 2024-05-12
 >
 >The **product** of *a large number* of such terms will tend **towards** $0$ if *most of them* have a magnitude $< 1$ and will tend **towards** $\infty$ if *most of them* have a magnitude $> 1$. Consequently, as the depth of a network increases, **error function gradients** can tend to become either *very large* or *very small*.
 
+## Layer Normalization
 
+- [[Layer Normalization]]
 
 
 

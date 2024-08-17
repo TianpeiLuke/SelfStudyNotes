@@ -18,11 +18,27 @@ date of note: 2024-05-12
 >[!important]
 >**Name**: Layer Normalization
 
-
-
+>[!important] Definition
+>Compared to *batch normalization*, the **layer normalization** normalizes across all *hidden units* for *each sample independently.*
+>
+>For each *mini-batch* of size $K$, **layer normalization** is described as below:
+>- For each example $n=1\,{,}\ldots{,}\,K$ (in parallel)
+>	- Compute the *sample mean* $$\mu_{n} = \frac{1}{d} \sum_{i=1}^{d}a_{n,i}$$ and *sample variance* $$\sigma_{n}^2 = \frac{1}{d} \sum_{i=1}^{d}\left(a_{n,i} - \mu_{n}\right)^2$$
+>	- **Normalize** the **pre-activations** for each hidden unit within mini-batch $$\hat{a}_{n,i} = \frac{a_{n,i} - \mu_{n}}{\sqrt{ \sigma_{n}^2 + \delta  }}, \quad i=1 \,{,}\ldots{,}\,d$$
+>	- **Re-scaling** the *normalized pre-activations* to have **mean** $\beta_{n}$ and **standard deviation** $\gamma_{n}$ $$\tilde{a}_{n,i} = \gamma_{n}\,\hat{a}_{n,i} + \beta_{n}$$
+>  
+>- *Output*: *rescaled normalized pre-activation* $(\tilde{a}_{n,i})$ for $n=1\,{,}\ldots{,}\,K$ and $i=1\,{,}\ldots{,}\,d$ 
+>  
+>Like batch normalization, both $(\beta_{n}, \gamma_{n})$ for $n=1\,{,}\ldots{,}\,K$ are *learnable parameters*.  
 
 - [[Batch Normalization]]
 
+### Inference Phase
+
+>[!important] 
+>Since the mean $\mu_{n}$ and variance $\sigma_{n}^2$ are computed *for each sample*, no need additional moving average estimate for mean and variance of entire training set.
+>
+>That is, the **same normalization function** can be employed *during training* and **during inference**.
 
 
 

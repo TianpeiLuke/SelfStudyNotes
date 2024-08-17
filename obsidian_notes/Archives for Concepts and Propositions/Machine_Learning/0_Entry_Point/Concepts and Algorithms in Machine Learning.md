@@ -34,8 +34,6 @@ date of note: 2024-06-01
 
 - [[Logistic Regression]]
 
-
-
 #### Ensemble Learning and Boosting
 
 - [[Concepts and Theorems in Boosting and Ensemble Learning]]
