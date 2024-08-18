@@ -37,6 +37,7 @@ date of note: 2024-05-12
 - [[Feasible Direction and Reduced Cost for Linear Optimization]]
 - [[Optimality Condition for Linear Optimization]]
 - [[Simplex Method for Linear Optimization]]
+- [[Simplex Method for Linear Optimization Efficient Implementation]]
 
 ### Interior Point Methods
 

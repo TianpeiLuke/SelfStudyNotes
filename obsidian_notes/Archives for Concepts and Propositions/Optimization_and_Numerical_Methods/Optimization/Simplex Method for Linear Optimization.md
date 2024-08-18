@@ -170,10 +170,33 @@ date of note: 2024-05-12
 >		- If **no** component in $d$ is **negative**, i.e. $$d_{B} \succeq 0$$
 >			- *Return* with **optimal cost** $-\infty$; set $\theta^{*} = \infty$
 >		- Else, i.e. there exists some component $i\in [m]$ in $d_{B}$ that is $d_{B(i)} <0$  *negative*
->			- Compute $$\theta^{*} = \min_{\{ i=1 \,{,}\ldots{,}\,m:\; d_{B(i)} < 0 \}}\; -\frac{x_{B(i)}}{d_{B(i)}}$$ Let $l$ be the index that attains the minimum $$\theta^{*} = -\frac{x_{B(l)}}{d_{B(l)}}$$
+>			- Compute $$\theta^{*} = \min_{\{ i=1 \,{,}\ldots{,}\,m:\; d_{B(i)} < 0 \}}\; \left(-\frac{x_{B(i)}}{d_{B(i)}}\right)$$ Let $l$ be the index that attains the minimum $$\theta^{*} = -\frac{x_{B(l)}}{d_{B(l)}}$$
 >			- Form a **new basis** by *replacing* $A_{B(l)}$ with $A_{j}$.
 >			- Update a **new basic feasible solution** $y$ based on $x$, where the value of new basic variable are $$ y_{k} = \left\{\begin{array}{lc}\theta^{*} & k=j\\ x_{k} + \theta^{*}\;d_{k} & k \in \left\{ B(1) \,{,}\ldots{,}\, B(m) \right\}  \setminus \{ B(l) \} \\0 & \text{otherwise} \end{array} \right.$$
 
+
+
+
+
+## Explanation
+
+
+>[!quote]
+>Many optimization algorithms are structured as follows: given a *feasible solution*, we *search its neighborhood* to find a nearby feasible solution with *lower cost*. If no nearby feasible solution leads to a cost improvement , the algorithm *terminates* and we have a **locally optimal solution**. For general optimization problems, a locally optimal solution need not be (globally) optimal. Fortunately, in linear programming, **local optimality implies global optimality**; this is because we are minimizing a convex function over a convex set.
+>
+>-- [[Introduction to Linear Optimization by Bertsimas]] PP 82
+
+>[!info]
+>A **naive implemention** of the simplex method need to solve **two linear system of equations**
+>- $$p^{T} = c_{B}^{T}\,B^{-1}$$
+>- $$u = B^{-1}\,A_{j}$$
+>  
+>We need an *efficient method* for updating the matrix $B^{-1}$ each time that we effect a change of basis.
+
+- [[BFGS Algorithm]]
+
+
+## Performance Guarantee
 
 >[!important] Theorem
 >Assume that the feasible set is *nonempty* and that every **basic feasible solution** is **nondegenerate**. 
@@ -185,15 +208,6 @@ date of note: 2024-05-12
 >- We have found a vector d satisfying $$A\,d = 0,\; d \succeq 0,$$ and $$\left\langle  c\,,\, d   \right\rangle <0,$$ and the **optimal cost** is $-\infty$ .
 
 
-## Explanation
-
-
->[!quote]
->Many optimization algorithms are structured as follows: given a *feasible solution*, we *search its neighborhood* to find a nearby feasible solution with *lower cost*. If no nearby feasible solution leads to a cost improvement , the algorithm *terminates* and we have a **locally optimal solution**. For general optimization problems, a locally optimal solution need not be (globally) optimal. Fortunately, in linear programming, **local optimality implies global optimality**; this is because we are minimizing a convex function over a convex set.
->
->-- [[Introduction to Linear Optimization by Bertsimas]] PP 82
-
-## Analysis
 
 
 
