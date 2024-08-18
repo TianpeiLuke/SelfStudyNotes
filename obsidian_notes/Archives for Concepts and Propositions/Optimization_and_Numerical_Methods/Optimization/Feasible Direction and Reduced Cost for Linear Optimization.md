@@ -46,9 +46,17 @@ date of note: 2024-05-12
 >[!info]
 >Let $x$ be a **basic feasible solution** to the standard form problem, let $B(1) \,{,}\ldots{,}\, B(m)$ be the indices of the **basic variables**, and let $$B = [A_{B(1)} . . . A_{B(m)}]$$ be the corresponding **basis matrix**. 
 >
->In particular, we have $x_i = 0$ for every *nonbasic variable*, while the vector $XB = (x_{B(1)}\,{,}\ldots{,}\,x_{B(m)})$ of basic variables is given by  $$x_{B} = B^{-1}b.$$
+>In particular, we have $x_i = 0$ for every *nonbasic variable*, while the vector $$x_{B} = (x_{B(1)}\,{,}\ldots{,}\,x_{B(m)})$$ of basic variables is given by  $$x_{B} = B^{-1}b.$$
 
 - [[Basic Solution for Linear Optimization]]
+
+>[!info]
+>We consider the possibility of **moving away from** $x$, to a new vector $x + \theta\,d$, by selecting a **nonbasic variable** $x_{j}$ (which is initially at **zero level**) , and increasing it to a **positive value** $\theta$, while keeping the remaining *nonbasic variables* at **zero**.
+
+>[!info]
+>Algebraically, $$d_{j} = 1,$$ and $$d_{i} = 0$$ for **every nonbasic index** $i$ other than $j$. 
+>
+>At the same time, the vector $x_{B}$ of **basic variables** changes to $$x_{B} + \theta\,d_{B},$$ where $$d_{B} = (d_{B(1)} \,{,}\ldots{,}\, d_{B(m)})$$ is the vector with those *components* of $d$ that correspond to the *basic variables*.
 
 
 
@@ -93,7 +101,7 @@ date of note: 2024-05-12
 
 - [[Karush-Kuhn-Tucker Optimality Condition]]
 
-- [[Introduction to Linear Optimization by Bertsimas]] pp 81
+- [[Introduction to Linear Optimization by Bertsimas]] pp 81 - 85
 - [[Convex Optimization by Boyd]]
 - [[Numerical Optimization by Nocedal]]
 - [[Nonlinear Programming by Bertsekas]]

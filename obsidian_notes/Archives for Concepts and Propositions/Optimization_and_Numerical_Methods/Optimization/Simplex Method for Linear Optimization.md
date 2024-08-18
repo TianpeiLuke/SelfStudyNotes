@@ -46,6 +46,11 @@ date of note: 2024-05-12
 
 - [[Optimality Condition for Linear Optimization]]
 
+### Development of Simplex Method
+
+
+
+
 ### Simplex Method for Linear Optimization
 
 >[!important] Definition
@@ -62,20 +67,20 @@ date of note: 2024-05-12
 >- *Initialize* at an arbitrary **basic feasible solution** $x$
 >- While optimality condition not met:
 >	- Let $$A_{B(1)} \,{,}\ldots{,}\,A_{B(m)}$$ be a set of **basis columns** and $x$ be the associated **basic feasible solution**
->	- Compute the **reduced costs** $$\bar{c}_{j} = c_{j}  - \left\langle  c_{B}\,,\,B^{-1}\,A_{j} \right\rangle,$$ for all *non-basic indices* $j \not\in \{ B(1) \,{,}\ldots{,}\,B(m)\}$
+>		- Note that $x_{i} =0$ for all $i \not\in \{ B(1) \,{,}\ldots{,}\, B(m)\}$
+>	- Compute the **reduced costs** $$\bar{c}_{j} = c_{j}  - \left\langle  c_{B}\,,\,B^{-1}\,A_{j} \right\rangle,$$ for all *non-basic indices* $j \not\in \{ B(1) \,{,}\ldots{,}\,B(m)\}$ where the **basis matrix** $$B = [A_{B(1)} . . . A_{B(m)}]$$
 >	- If $\bar{c}_{j} \ge 0$ for all non-basic indices
 >		- the current basic solution $x$ is **optimal**; 
 >		- *Return* $x$ and the **optimal cost** $\left\langle  c\,,\,x    \right\rangle$
 >	- Else:
 >		- Find $j$ such that $\bar{c}_{j} < 0$
->		- Compute $$u = B^{-1}A_{j}$$
->			- If **no** component in $u$ is **positive**, 
->				- *Return* with **optimal cost** $-\infty$; set $\theta^{*} = \infty$
->			- Else 
->				- i.e. there exists some component $i\in [m]$ in $u$ that is $u_{i} >0$  *positive*
->				- Compute $$\theta^{*} = \min_{\{ i=1 \,{,}\ldots{,}\,m: u_{i} > 0 \}}\; \frac{x_{B(i)}}{u_{i}}$$ Let $l$ be the index that attains the minimum $$\theta^{*} = \frac{x_{B(l)}}{u_{l}}$$
->				- Form a **new basis** by *replacing* $A_{B(l)}$ with $A_{j}$.
->				- If $y$ is the **new basic feasible solution**, then the value of new basic variable are $$\left\{\begin{array}{lc}y_{j} = \theta^{*} & \\y_{B(i)} = x_{B(i)} - \theta^{*}\;u_{i} & i \neq l  \end{array} \right.$$
+>		- Compute the $j$-th **basic direction** $$d = B^{-1}A_{j}$$
+>		- If **no** component in $d$ is **positive**, i.e. $$d \preceq 0$$
+>			- *Return* with **optimal cost** $-\infty$; set $\theta^{*} = \infty$
+>		- Else, i.e. there exists some component $i\in [m]$ in $d$ that is $d_{i} >0$  *positive*
+>			- Compute $$\theta^{*} = \min_{\{ i=1 \,{,}\ldots{,}\,m: d_{i} > 0 \}}\; \frac{x_{B(i)}}{d_{i}}$$ Let $l$ be the index that attains the minimum $$\theta^{*} = \frac{x_{B(l)}}{d_{l}}$$
+>			- Form a **new basis** by *replacing* $A_{B(l)}$ with $A_{j}$.
+>			- Update a **new basic feasible solution** $y$ based on $x$, where the value of new basic variable are $$ y_{k} = \left\{\begin{array}{lc}\theta^{*} & k=j\\ x_{k} - \theta^{*}\;d_{\{i: B(i)=k\}} & k \in \left\{ B(1) \,{,}\ldots{,}\, B(m) \right\}  \setminus \{ B(l) \} \\0 & \text{otherwise} \end{array} \right.$$
 
 
 
