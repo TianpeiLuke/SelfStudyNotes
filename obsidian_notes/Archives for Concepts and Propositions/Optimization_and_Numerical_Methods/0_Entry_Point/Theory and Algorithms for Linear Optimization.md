@@ -21,17 +21,21 @@ date of note: 2024-05-12
 - [[Extreme Points of Convex Set of Locally Convex Space]]
 - [[Extreme Points of Polyhedron]]
 - [[Krein-Milman Lemma and Krein-Milman Theorem]]
+- [[Existence of Extreme Point in Polyhedron]]
 
 ### Linear Optimization Problem
 
 - [[Linear Optimization Problem]]
 - [[Active and Independent Constraints for Linear Optimization]]
 - [[Basic Solution for Linear Optimization]]
+- [[Degeneracy of Basic Solution in Linear Optimization]]
+- [[Optimality of Extreme Point in Linear Optimization]]
 
 
 ### Simplex Methods
 
-- [[Optimality Condition and Feasible Direction for Linear Optimization]]
+- [[Feasible Direction and Reduced Cost for Linear Optimization]]
+- [[Optimality Condition for Linear Optimization]]
 - [[Simplex Method for Linear Optimization]]
 
 ### Interior Point Methods

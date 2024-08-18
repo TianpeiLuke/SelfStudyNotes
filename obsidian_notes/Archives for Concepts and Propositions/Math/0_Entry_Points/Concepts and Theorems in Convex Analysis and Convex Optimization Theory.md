@@ -67,6 +67,8 @@ date of note: 2024-05-11
 - [[Extreme Points of Convex Set of Locally Convex Space]]
 - [[Extreme Points of Polyhedron]]
 - [[Krein-Milman Lemma and Krein-Milman Theorem]]
+- [[Existence of Extreme Point in Polyhedron]]
+- [[Optimality of Extreme Point in Linear Optimization]]
 
 
 ### Dual Representation of Convex Function

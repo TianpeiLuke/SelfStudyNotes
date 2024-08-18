@@ -47,6 +47,7 @@ date of note: 2024-05-12
 >[!info]
 >Note that if the number $m$ of **constraints** used to define a polyhedron $P \subset \mathbb{R}^{n}$ is *less than* $n$, $$m\le n$$ the **number of active constraints** at any given point must also be *less than* $n$, and there are **no basic** or **basic feasible solutions**.
 
+- [[Basic Solution for Linear Optimization]]
 
 
 
@@ -57,7 +58,9 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
-- [[Optimality Condition and Feasible Direction for Linear Optimization]]
+- [[Basic Solution for Linear Optimization]]
+
+- [[Feasible Direction and Reduced Cost for Linear Optimization]]
 - [[Linear Optimization Problem]]
 - [[Polyhedron and Polytope]]
 - [[Generalized Simplex]]

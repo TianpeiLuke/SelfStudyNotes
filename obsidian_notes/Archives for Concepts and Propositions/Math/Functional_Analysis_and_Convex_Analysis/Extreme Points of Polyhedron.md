@@ -52,6 +52,9 @@ date of note: 2024-06-21
 
 - [[Krein-Milman Lemma and Krein-Milman Theorem]]
 
+## Existence of Extreme Points in Polyhedron
+
+- [[Existence of Extreme Point in Polyhedron]]
 
 
 

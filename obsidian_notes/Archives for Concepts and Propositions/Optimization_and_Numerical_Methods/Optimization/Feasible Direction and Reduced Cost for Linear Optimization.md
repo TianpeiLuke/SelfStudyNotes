@@ -4,11 +4,12 @@ tags:
   - optimization/theory
   - optimization/algorithm
 keywords:
-  - simplex_method_linear
   - linear_optimization
+  - reduced_cost
+  - feasible_direction
 topics:
   - optimization/algorithm
-name: Optimality Condition and Feasible Direction for Linear Optimization
+name: Feasible Direction for Linear Optimization
 date of note: 2024-05-12
 ---
 
@@ -26,9 +27,11 @@ date of note: 2024-05-12
 >
 >A vector $d\in \mathbb{R}^{n}$ is said to be a **feasible direction** at $x$, if there exists a *positive* scalar $\theta$ for which $$x + \theta\,d \in P.$$
 
+^670d89
+
 - [[Polyhedron and Polytope]]
 
-### Basic Solution 
+### Moving from one Basic Solution to Another 
 
 ![[Basic Solution for Linear Optimization#^52390c]]
 
@@ -36,6 +39,34 @@ date of note: 2024-05-12
 - [[Extreme Points of Polyhedron]]
 - [[Vertex Point of Polyhedron]]
 - [[Active and Independent Constraints for Linear Optimization]]
+
+![[Basic Solution for Linear Optimization#^2fb7eb]]
+
+
+>[!info]
+>Let $x$ be a **basic feasible solution** to the standard form problem, let $B(1) \,{,}\ldots{,}\, B(m)$ be the indices of the **basic variables**, and let $$B = [A_{B(1)} . . . A_{B(m)}]$$ be the corresponding **basis matrix**. 
+>
+>In particular, we have $x_i = 0$ for every *nonbasic variable*, while the vector $XB = (x_{B(1)}\,{,}\ldots{,}\,x_{B(m)})$ of basic variables is given by  $$x_{B} = B^{-1}b.$$
+
+- [[Basic Solution for Linear Optimization]]
+
+
+
+
+
+### Reduced Cost
+
+>[!important] Definition
+>Let $x$ be a *basic solution*, let $B$ be an *associated basis matrix*, and let $c_{B}$ be the *vector* of *costs of the basic variables*. 
+>
+>For each $j$, we define the **reduced cost** $\bar{c}_{j}$ of the variable $x_{j}$ according to the formula
+>$$
+>\bar{c}_{j} := c_{j} - \left\langle  c_{B}\,,\, B^{-1}A_{j} \right\rangle
+>$$
+
+^6f654f
+
+
 
 
 ## Explanation

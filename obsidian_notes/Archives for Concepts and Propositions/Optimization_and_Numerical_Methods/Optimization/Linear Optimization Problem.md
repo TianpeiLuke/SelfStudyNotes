@@ -36,6 +36,21 @@ date of note: 2024-08-15
 
 ^099c2f
 
+>[!important] Definition
+>The **linear optimization problem** can be represented geometrically as 
+>$$
+>\begin{align*}
+>\min_{x} \;\;& f(x) \\
+>\text{s.t. }\;& x\in P
+>\end{align*}
+>$$
+>where $f: \mathbb{R}^{d} \to \mathbb{R}$ is a **linear function** and $P \subset \mathbb{R}^{d}$ is a **polyhedron**.
+
+- [[Bounded Linear Functional]]
+- [[Linear Map]]
+- [[Polyhedron and Polytope]]
+
+
 >[!important]
 >In linear optimization,
 >- the **feasible region** $$\mathcal{D} := \left\{ x\in \mathbb{R}^{n}:   Ax \preceq b\right\} $$ is a **polyhedron**

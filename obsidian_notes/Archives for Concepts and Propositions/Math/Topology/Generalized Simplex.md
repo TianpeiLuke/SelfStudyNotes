@@ -29,6 +29,9 @@ date of note: 2024-05-16
 >[!important] Definition
 >$\Delta_{m}$ is called **generalized $m$-dimensional simplex** if some of vertices are *free vectors* $v_{i} \in V$. These vertices are called **the vertices at infinity.**
 
+- [[Extreme Points of Polyhedron]]
+- [[Vertex Point of Polyhedron]]
+
 
 ## Explanation
 

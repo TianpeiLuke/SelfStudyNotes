@@ -65,6 +65,8 @@ date of note: 2024-07-22
 - [[Extreme Points of Polyhedron]]
 - [[Vertex Point of Polyhedron]]
 - [[Generalized Simplex]]
+- [[Existence of Extreme Point in Polyhedron]]
+- [[Introduction to Linear Optimization by Bertsimas]] pp 68
 
 
 -----------

@@ -72,6 +72,14 @@ date of note: 2024-05-12
 >[!important] Definition
 >Two distinct basic solutions to a set of *linear constraints* in $\mathbb{R}^{n}$ are said to be **adjacent** if we can find $n - 1$ *linearly independent constraints* that are *active* at both of them.
 
+>[!important] Definition
+>For standard form problems, we also say that two bases are **adjacent** if they share *all but one* basic column. 
+
+
+>[!important] 
+>Then, it is not hard to check that **adjacent basic solutions** can always be obtained from **two adjacent bases.** 
+>
+>Conversely, if two **adjacent bases** lead to **distinct basic solutions**, then the latter are **adjacent** .
 
 
 ## Explanation
@@ -95,6 +103,8 @@ date of note: 2024-05-12
 >- The columns $$A_{B(1)} \,{,}\ldots{,}\,A_{B(m)}$$ are **linearly independent**;
 >- If $i \neq B(1) \,{,}\ldots{,}\, B(m)$, then $$x_{i} = 0$$
 
+^2fb7eb
+
 - [[Active and Independent Constraints for Linear Optimization]]
 
 
@@ -105,6 +115,17 @@ date of note: 2024-05-12
 >2. Let $x_{i} = 0$ for all $i \neq B(1) \,{,}\ldots{,}\, B(m)$. 
 >3. Solve the **system of $m$ equations** $$Ax = b$$ for the unknowns $$x_{B(1)} \,{,}\ldots{,}\,x_{B(m)}$$
 
+## Existence of Basic Feasible Solution
+
+![[Existence of Extreme Point in Polyhedron#^5b9aa0]]
+
+![[Existence of Extreme Point in Polyhedron#^c2ffc7]]
+
+- [[Existence of Extreme Point in Polyhedron]]
+
+## Degenerate Basic Solution
+
+- [[Degeneracy of Basic Solution in Linear Optimization]]
 
 
 
@@ -113,7 +134,7 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
-- [[Optimality Condition and Feasible Direction for Linear Optimization]]
+- [[Feasible Direction and Reduced Cost for Linear Optimization]]
 - [[Linear Optimization Problem]]
 - [[Polyhedron and Polytope]]
 - [[Generalized Simplex]]

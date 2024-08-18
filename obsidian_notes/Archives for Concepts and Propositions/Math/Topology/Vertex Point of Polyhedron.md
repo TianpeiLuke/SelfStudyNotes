@@ -42,6 +42,7 @@ date of note: 2024-08-15
 ##  Recommended Notes and References
 
 
+- [[Generalized Simplex]]
 - [[Polyhedron and Polytope]]
 - [[Extreme Points of Convex Set of Locally Convex Space]]
 

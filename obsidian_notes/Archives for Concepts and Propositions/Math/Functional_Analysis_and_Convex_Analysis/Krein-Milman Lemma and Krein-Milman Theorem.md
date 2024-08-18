@@ -24,6 +24,8 @@ date of note: 2024-06-21
 >
 >Then the set of points in $K$ at which $\psi$ takes its **maximum value** on $K$ is an **extreme subset** of $K$.
 
+^5c9b4d
+
 - [[Extreme Points of Convex Set of Locally Convex Space]]
 - [[Bounded Linear Functional]]
 - [[Basic Solution for Linear Optimization]]
@@ -36,9 +38,12 @@ date of note: 2024-06-21
 >
 >Then $K$ has an **extreme point**.
 
+^5eae27
+
 - [[Zorn Lemma]]
 - [[Separation Theorem]]
 - [[Hahn-Banach Theorem Geometric Form and Mazur Theorem]]
+- [[Existence of Extreme Point in Polyhedron]]
 
 >[!important] Krein-Milman Theorem
 >Let $K$ be a *nonempty*, **compact**, **convex** subset of a **locally convex** *topological vector space* $\mathcal{X}$.
@@ -51,6 +56,11 @@ date of note: 2024-06-21
 - [[Banach-Alaoglu Theorem]]
 - [[Hahn-Banach Theorem Geometric Form and Mazur Theorem]]
 
+![[Polyhedron and Polytope#^9235c5]]
+
+- [[Linear Optimization Problem]]
+- [[Polyhedron and Polytope]]
+- [[Introduction to Linear Optimization by Bertsimas]] pp 68
 
 ## Explanation
 
