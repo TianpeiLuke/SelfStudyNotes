@@ -26,6 +26,7 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 - [[Gradient Descent Algorithm]]
+- [[Feasible Direction and Reduced Cost for Linear Optimization]]
 
 
 - [[Nonlinear Programming by Bertsekas]] pp 214
