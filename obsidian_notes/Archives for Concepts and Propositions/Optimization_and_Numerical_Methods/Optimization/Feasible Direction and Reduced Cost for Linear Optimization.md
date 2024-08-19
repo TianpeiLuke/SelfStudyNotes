@@ -122,6 +122,9 @@ date of note: 2024-05-12
 
 ^6f654f
 
+>[!important] Definition
+>This vector $$p^{T} = c_{B}^{T}\,B^{-1}$$ is called the **vector of simplex multipliers** associated with the basis $B$.
+
 ### Optimality Condition
 
 ![[Optimality Condition for Linear Optimization#^521cec]]

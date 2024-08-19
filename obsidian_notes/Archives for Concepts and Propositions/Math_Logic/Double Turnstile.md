@@ -43,3 +43,4 @@ date of note: 2024-07-17
 
 - Wikipedia [Double_turnstile](https://en.wikipedia.org/wiki/Double_turnstile)
 - Wikipedia [List_of_logic_symbols](https://en.wikipedia.org/wiki/List_of_logic_symbols)
+- Wikipedia [List_of_LaTeX_mathematical_symbols](https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols)

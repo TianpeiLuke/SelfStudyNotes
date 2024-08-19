@@ -56,6 +56,10 @@ date of note: 2024-05-12
 
 - [[Feasible Direction and Reduced Cost for Linear Optimization]]
 
+>[!important] Definition
+>This vector $$p^{T} = c_{B}^{T}\,B^{-1}$$ is called the **vector of simplex multipliers** associated with the basis $B$.
+
+
 #### Optimal Condition for LP
 
 ![[Optimality Condition for Linear Optimization#^521cec]]
@@ -160,7 +164,7 @@ date of note: 2024-05-12
 >- While optimality condition not met:
 >	- Let $$A_{B(1)} \,{,}\ldots{,}\,A_{B(m)}$$ be a set of **basis columns** and $x$ be the associated **basic feasible solution**
 >		- Note that $x_{i} =0$ for all $i \not\in \{ B(1) \,{,}\ldots{,}\, B(m)\}$
->	- Compute the **reduced costs** $$\bar{c}_{j} = c_{j}  - \left\langle  c_{B}\,,\,B^{-1}\,A_{j} \right\rangle,$$ for all *non-basic indices* $j \not\in \{ B(1) \,{,}\ldots{,}\,B(m)\}$ where the **basis matrix** $$B = [A_{B(1)} . . . A_{B(m)}]$$
+>	- Compute the **reduced costs** $$\bar{c}_{j} = c_{j}  - \left\langle  p\,,\,A_{j} \right\rangle,$$ for all *non-basic indices* $j \not\in \{ B(1) \,{,}\ldots{,}\,B(m)\}$ where $$p^{T} = c_{B}^{T}\,B^{-1}$$ is the **vector of simplex multipliers** associated with the **basis matrix** $$B = [A_{B(1)} \ldots A_{B(m)}]$$
 >	- If $\bar{c}_{j} \ge 0$ for all non-basic indices
 >		- the current basic solution $x$ is **optimal**; 
 >		- *Return* $x$ and the **optimal cost** $\left\langle  c\,,\,x    \right\rangle$
@@ -173,6 +177,8 @@ date of note: 2024-05-12
 >			- Compute $$\theta^{*} = \min_{\{ i=1 \,{,}\ldots{,}\,m:\; d_{B(i)} < 0 \}}\; \left(-\frac{x_{B(i)}}{d_{B(i)}}\right)$$ Let $l$ be the index that attains the minimum $$\theta^{*} = -\frac{x_{B(l)}}{d_{B(l)}}$$
 >			- Form a **new basis** by *replacing* $A_{B(l)}$ with $A_{j}$.
 >			- Update a **new basic feasible solution** $y$ based on $x$, where the value of new basic variable are $$ y_{k} = \left\{\begin{array}{lc}\theta^{*} & k=j\\ x_{k} + \theta^{*}\;d_{k} & k \in \left\{ B(1) \,{,}\ldots{,}\, B(m) \right\}  \setminus \{ B(l) \} \\0 & \text{otherwise} \end{array} \right.$$
+
+^933ad4
 
 
 
