@@ -10,7 +10,7 @@ This repository is the latex-based notes for self-learning, mainly for math, sta
 
 ## Obsidian Graph
 
-![Slip Box Network](./obsidian_slip_box_graph/obsidian_slip_box_2024-08-17_6.32.55_PM.png)
+![Slip Box Network](./obsidian_slip_box_graph/obsidian_slip_box_2024-08-19_10.19.30_AM.png)
 
 
 ## Table of Contents
