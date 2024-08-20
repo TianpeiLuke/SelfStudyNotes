@@ -62,11 +62,16 @@ date of note: 2024-05-12
 
 ### Network Flow Optimization
 
+- [[Network Flow Problem as Linear Optimization]]
+- [[Network Simplex Algorithm]]
+- [[Negative Cost Cycle Algorithm]]
+- [[Maximum Flow Problem]]
+- [[Minimum Spanning Tree Problem]]
 
 
 ### Integer Programming
 
-
+- [[Integer Programming Problem]]
 
 
 

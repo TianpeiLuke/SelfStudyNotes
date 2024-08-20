@@ -103,6 +103,12 @@ date of note: 2024-07-14
 - [[Clique Tree and Graph and Running Intersection Property]]
 
 
+### Flows
+
+- [[Archives for Concepts and Propositions/Math/Graph_Theory/Maximum Flow Problem]]
+
+
+
 
 ## Explanation
 
