@@ -77,6 +77,13 @@ date of note: 2024-05-12
 - [[Automatic Differentiation]]
 - [[Back-Propagation Algorithm]]
 
+### Least Square Estimation
+
+- [[Linear Regression]]
+- [[Least Square Estimation]]
+- [[Least Square Estimation Solution and Geometric Interpretation]]
+- [[Algorithms for Least Square Estimation Problem]]
+- [[Least Square Estimation with QR Factorization]]
 
 
 ## Explanation

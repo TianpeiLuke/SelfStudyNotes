@@ -43,14 +43,15 @@ date of note: 2024-06-08
 >The key for solving the LSE is to solve the **normal equations**. 
 >
 >We can apply *algorithms* from *numerical linear algebra*
->- [[QR Factorization of Matrix]]
->- [[Singular Value Decomposition of Linear Map]]
 
-
-
-
+- [[QR Factorization of Matrix]]
+- [[Singular Value Decomposition of Linear Map]]
 - [[Non-Parametric Least Square Estimation]]
 - [[Forward Stagewise Additive Modeling]]
+
+### QR Factorization and Successive Orthogonalization
+
+- [[Least Square Estimation with QR Factorization]]
 
 
 

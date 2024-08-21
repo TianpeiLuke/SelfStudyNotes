@@ -47,6 +47,16 @@ date of note: 2024-06-08
 - [[Optimization by Vector Space Methods by Luenberger]] pp 82
 - [[Moore–Penrose Pseudo Inverse of Matrix]]
 
+>[!important]
+>For **univariate linear regression** $d=1$, the solution is
+>$$
+>\hat{\beta} = \frac{\left\langle  x\,,\,y    \right\rangle}{\left\langle  x\,,\,x    \right\rangle}, \quad r = y - x\hat{\beta}
+>$$
+>where $y, x \in \mathbb{R}^{m}$.
+
+^76f8a3
+
+
 >[!info] Proof
 >$$
 >\begin{align*}

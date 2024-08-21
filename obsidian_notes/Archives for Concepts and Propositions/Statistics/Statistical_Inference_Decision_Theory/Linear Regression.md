@@ -36,8 +36,17 @@ date of note: 2024-06-11
 >Y = \sum_{i=1}^{d}\beta_{i}\,X^{i} + \beta_{0} + \epsilon,
 >$$
 >where the *noise term* $\epsilon \sim \mathcal{N}(0, \sigma^2)$ and the noise is *statistically independent* from the *covariates* $$\epsilon \perp (X^1 \,{,}\ldots{,}\,X^{d}).$$
+>- The **coefficient** $\hat{\beta}_{j}$ represents the *additional contribution* of $X^{j}$ on $Y$, *after* $X^{j}$ has been *adjusted* for $(X^1 \,{,}\ldots{,}\,X^{j-1}, X^{j+1} \,{,}\ldots{,}\,X^{d}).$
 
 ^24812d
+
+>[!important]
+>For $d=1$, the *linear regression* model is 
+>$$
+>Y = \beta_{1}\,X  + \epsilon
+>$$
+>We describe it as **"regression of $Y$ on $X$"** or **regress $Y$ on $X$.**
+
 
 ## Explanation
 
