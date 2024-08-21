@@ -24,15 +24,19 @@ date of note: 2024-06-01
 ### Supervised Learning Models and Algorithms
 
 - [[Supervised Learning and Unsupervised Learning]]
+- [[Regression Problem]]
 
 #### Nearest Neighbor Classification
 
 - [[k Nearest Neighbor Classification]]
 - [[k Nearest Neighbor Estimation]]
 
-#### Generalized Linear Models
+#### Linear and Generalized Linear Models
 
+- [[Linear Regression]]
 - [[Logistic Regression]]
+- [[Generalized Linear Models]]
+- [[Least Square Estimation]]
 
 #### Ensemble Learning and Boosting
 

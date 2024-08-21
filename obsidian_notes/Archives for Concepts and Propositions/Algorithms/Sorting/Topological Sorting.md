@@ -51,5 +51,6 @@ date of note: 2024-07-07
 
 - [[Graph]]
 
-
+- [[Introduction to Algorithms by Cormen]]
+- [[Algorithm Design Manual by Skiena]]
 - [[Probabilistic Graphical Models by Koller]] pp 1144

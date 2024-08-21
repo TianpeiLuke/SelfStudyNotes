@@ -36,6 +36,7 @@ date of note: 2024-05-12
 
 - [[Functional Gradient Descent]]
 - [[Line Search Strategies for Optimal Stepsize]]
+- [[Regression Problem]]
 
 ## Explanation
 

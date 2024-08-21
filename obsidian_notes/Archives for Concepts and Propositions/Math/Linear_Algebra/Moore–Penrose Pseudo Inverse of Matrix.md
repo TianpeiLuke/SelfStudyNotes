@@ -36,5 +36,6 @@ date of note: 2024-07-26
 
 - [[Linear Regression]]
 - [[Least Square Estimation]]
+- [[Least Square Estimation Solution and Geometric Interpretation]]
 
 - Wikipedia [Moore-Penrose_inverse](https://en.wikipedia.org/wiki/Moore%E2%80%93Penrose_inverse)

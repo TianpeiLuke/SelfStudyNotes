@@ -158,7 +158,7 @@ date of note: 2024-05-16
 >$$
 >where $A\in \mathbb{R}^{n\times m}$, is **convex**.
 
-
+- [[Least Square Estimation Solution and Geometric Interpretation]]
 
 
 ### Perspective Function

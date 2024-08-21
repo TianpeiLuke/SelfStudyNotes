@@ -40,6 +40,7 @@ date of note: 2024-05-12
 - [[Iterative Descent]] and [[Approximation Method for Optimization]]
 - [[Gradient Descent Algorithm]]
 - [[Line Search Strategies for Optimal Stepsize]]
+- [[Algorithms for Least Square Estimation Problem]]
 
 ### Stochastic Gradient Method
 

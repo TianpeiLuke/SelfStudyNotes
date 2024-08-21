@@ -24,3 +24,8 @@ date of note: 2024-08-08
 -----------
 ##  Recommended Notes and References
 
+- [[HeapSort Algorithm]]
+
+
+- [[Introduction to Algorithms by Cormen]]
+- [[Algorithm Design Manual by Skiena]]

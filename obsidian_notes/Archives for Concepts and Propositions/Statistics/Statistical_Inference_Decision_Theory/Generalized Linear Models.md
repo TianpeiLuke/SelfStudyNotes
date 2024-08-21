@@ -113,6 +113,22 @@ date of note: 2024-06-24
 >$$
 
 
+>[!example]
+>Consider the independent **Gaussian random variables** $Y^{i} \in \mathbb{R}$ with  parameter $(\mu^{i}, \sigma)$, i.e. for $i=1\,{,}\ldots{,}\,d$, the conditional p.d.f.
+>$$
+>\begin{align*}
+>P(y^i | x_{1}^i \,{,}\ldots{,}\, x_{k}^{i}) &= \frac{1}{\sqrt{2\pi  \sigma^2 }}\exp \left( -\frac{1}{2\sigma^2}\left\lVert  y^{i} - \left( \sum_{j=1}^{k}\beta_{j}\,x_{j}^{i} \right)  \right\rVert_{2}^2  \right) 
+>\end{align*}
+>$$
+>
+>The corresponding GLM is the **linear regression model** where
+>$$
+>\mathbb{E}\left[ Y^{i} \;|\;\mathcal{F}_{k}\right] = \mu^{i} =  \sum_{j=1}^{k}\beta_{j}\,X_{j}^{i}
+>$$
+
+- [[Linear Regression]]
+- [[Gaussian Random Variable]]
+- [[Gaussian Random Vector]]
 
 ## Maximum Likelihood Estimation
 

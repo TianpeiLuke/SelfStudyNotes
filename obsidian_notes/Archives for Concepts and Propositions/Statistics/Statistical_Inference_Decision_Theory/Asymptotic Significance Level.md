@@ -20,7 +20,7 @@ date of note: 2024-06-08
 
 
 
-- [[Gauss–Markov theorem]]
+- [[Gauss–Markov Theorem]]
 
 
 -----------

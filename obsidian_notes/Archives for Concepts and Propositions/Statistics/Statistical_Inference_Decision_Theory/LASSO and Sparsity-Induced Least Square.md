@@ -27,6 +27,7 @@ date of note: 2024-07-24
 -----------
 ##  Recommended Notes and References
 
+- [[Least Square Estimation]]
 - [[Linear Regression]]
 
 - [[Gaussian Graphical Model and Gaussian Markov Random Field]]

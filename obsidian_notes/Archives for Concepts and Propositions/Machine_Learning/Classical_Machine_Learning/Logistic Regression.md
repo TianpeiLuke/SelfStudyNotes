@@ -28,6 +28,7 @@ date of note: 2024-08-16
 ##  Recommended Notes and References
 
 
+- [[Linear Regression]]
 - [[Maximum Likelihood Estimation]]
 - [[Generalized Linear Models]]
 - [[Exponential Family of Distributions]]

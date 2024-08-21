@@ -72,26 +72,32 @@ date of note: 2024-06-01
 - [[Minimum Mean Square Estimation]]
 - [[Bias-Variance Tradeoff]]
 
-### Least Square Estimation
-
-- [[Linear Regression]]
-- [[Least Square Estimation]]
-- [[Best Linear Unbiased Prediction]]
-- [[Gauss–Markov theorem]]
-
-- [[Partial Correlation]]
-
-### Regularization
-
-- [[LASSO and Sparsity-Induced Least Square]]
-
-
 ### Parametric Estimation
 
 - [[Likelihood Function]]
 - [[Maximum Likelihood Estimation]]
 - [[Maximum Likelihood Estimation via KL Divergence]]
 - [[Conditional Likelihood Function]]
+
+
+### Least Square Estimation
+
+- [[Regression Problem]]
+- [[Linear Regression]]
+- [[Least Square Estimation]]
+- [[Least Square Estimation Solution and Geometric Interpretation]]
+- [[Algorithms for Least Square Estimation Problem]]
+- [[Best Linear Unbiased Prediction]]
+- [[Gauss–Markov Theorem]]
+
+- [[Partial Correlation]]
+- [[Non-Parametric Least Square Estimation]]
+
+### Regularization
+
+- [[LASSO and Sparsity-Induced Least Square]]
+
+
 
 ### Exponential Family of Distributions
 

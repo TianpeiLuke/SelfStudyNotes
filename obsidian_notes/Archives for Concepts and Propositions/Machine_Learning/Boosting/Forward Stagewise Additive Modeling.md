@@ -31,6 +31,10 @@ date of note: 2024-08-01
 >$$
 >where $L: \mathcal{Y} \times \mathcal{Y} \to \mathbb{R}_{+}$
 
+- [[Linear Regression]]
+- [[Least Square Estimation]]
+- [[Generalized Linear Models]]
+
 ### Forward Stagewise Additive Modeling
 
 >[!info] Definition
@@ -51,6 +55,8 @@ date of note: 2024-08-01
 >	- $$(\beta_{t}, \gamma_{t}) \in \arg\min_{(\beta, \gamma)}\left\{ \sum_{i=1}^{m}L\left( y_{i},\, f_{t-1}(x_{i}) +\, \beta\,b(x_{i};\, \gamma) \right)\right\} $$
 >	- Update $$f_{t}(x) = f_{t-1}(x) + \beta_{t}\,b(x;\,\gamma_{t})$$
 >- *Output*: $F_{T}.$
+
+- [[Algorithms for Least Square Estimation Problem]]
 
 ## Explanation
 

@@ -230,6 +230,6 @@ date of note: 2024-05-12
 
 - [[Introduction to Linear Optimization by Bertsimas]] pp 87 - 92
 - [[Convex Optimization by Boyd]]
-- [[Numerical Optimization by Nocedal]]
+- [[Numerical Optimization by Nocedal]] pp 355 - 389
 - [[Nonlinear Programming by Bertsekas]]
 - [[Introduction to Algorithms by Cormen]]

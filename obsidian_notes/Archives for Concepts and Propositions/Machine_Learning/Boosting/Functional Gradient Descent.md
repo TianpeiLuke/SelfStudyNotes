@@ -90,6 +90,7 @@ date of note: 2024-05-12
 >$$
 
 - [[Gradient Boosting Algorithm]]
+- [[Regression Problem]]
 
 ## AdaBoost
 
