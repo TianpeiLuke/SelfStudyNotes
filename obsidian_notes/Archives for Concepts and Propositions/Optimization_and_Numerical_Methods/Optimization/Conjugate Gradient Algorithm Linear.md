@@ -44,7 +44,7 @@ date of note: 2024-05-12
 
 - [[Conjugate Vector with respect to Positive Definite Transformation]]
 - [[Positive Semidefinite Transformation]]
-- [[Self-Adjoint Linear Map and Hermitian or Symmetric Matrix]]
+- [[Self-Adjoint Linear Map]]
 - [[Numerical Optimization by Nocedal]] pp 108
 
 >[!important] Definition (Standard Form)

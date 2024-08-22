@@ -87,7 +87,8 @@ date of note: 2024-05-11
 ### Adjoint of Linear Map
 
 - [[Adjoint of Linear Map]]
-- [[Self-Adjoint Linear Map and Hermitian or Symmetric Matrix]]
+- [[Self-Adjoint Linear Map]]
+- [[Hermitian or Symmetric Matrix]]
 - [[Unitary and Orthogonal Transformation]]
 - [[Normal Transformation]]
 - [[Positive Semidefinite Transformation]]

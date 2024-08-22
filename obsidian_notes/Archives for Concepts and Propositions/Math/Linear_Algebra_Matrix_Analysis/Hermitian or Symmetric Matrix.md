@@ -2,8 +2,11 @@
 tags:
   - concept
   - math/linear_algebra
+  - math/matrix_analysis
 keywords:
   - self_adjoint_linear_map
+  - hermitian_matrix
+  - symmetric_matrix
 topics:
   - linear_algebra
 name: Self-Adjoint Linear Map
@@ -13,18 +16,51 @@ date of note: 2024-05-09
 ## Concept Definition
 
 >[!important]
->**Name**:  Self-Adjoint Linear Map
+>**Name**:  Hermitian or Symmetric Matrix
+
+>[!important] Definition (Hermitian Matrix)
+>For *complex-valued* *finite dimensional inner product space* $V$, with given coordinate systems.
+>
+>A *self-adjoint* $A$  is represented by the **Hermitian matrix** $\boldsymbol{A}$:
+>$$
+> \boldsymbol{A} = \boldsymbol{A}^{H} \iff   a_{i,j} = \overline{a_{j,i}}, \quad \forall i,j=1 \,{,}\ldots{,}\,n
+>$$
+>
+>Note that for self-adjoint $A$
+>$$
+>\begin{align*}
+>\left\langle \boldsymbol{x} \,,\,  \boldsymbol{A} \boldsymbol{y}   \right\rangle_{\mathbb{C}} = \left\langle  \boldsymbol{A}\boldsymbol{x} \,,\, \boldsymbol{y}     \right\rangle_{\mathbb{C}}
+>\end{align*}
+>$$
+
+^9ff922
+
+- [[Self-Adjoint Linear Map]]
 
 >[!important] Definition
->Let $V$ be a *finite-dimensional inner product spaces*.
->
->A linear transformation  $A: V \to V$ is said to be **self-adjoint** if 
+>If $V$ is a *real-valued* inner product space, the *self-adjoint* $A$ is represented by the **symmetric matrix**  $\boldsymbol{A}$ 
 >$$
->A = A^{*}
+>\boldsymbol{A} = \boldsymbol{A}^{T} \iff  a_{i,j} = a_{j,i}, \quad i,j=1 \,{,}\ldots{,}\, n
 >$$
->where $A^{*}: V^{*} \to V^{*}$ is the adjoint of $A$. 
->
->Note that $V \simeq V^{*}$ for finite dimensional inner product space.
+>and
+>$$
+>\begin{align*}
+>\left\langle \boldsymbol{x} \,,\,  \boldsymbol{A} \boldsymbol{y}   \right\rangle_{\mathbb{R}} = \left\langle  \boldsymbol{A}\boldsymbol{x} \,,\, \boldsymbol{y}     \right\rangle_{\mathbb{R}}
+>\end{align*}
+>$$
+
+^d8f505
+
+>[!important] Proposition
+>A matrix $M\in \mathbb{R}^{2n \times 2n}$ is a **symmetric matrix** if it satisfies the following *equation*
+>$$
+>J\,M\,J^{T} = M^{T} 
+>$$
+>where $$J = \left[ \begin{array}{cc}0 & I_{n} \\ I_{n} &0\end{array} \right] $$ is the **permutation matrix**.
+
+^657918
+
+
 
 - [[Adjoint of Linear Map]]
 - [[Dual Space of Finite Dimensional Vector Space]]
@@ -40,37 +76,6 @@ date of note: 2024-05-09
 >$$
 
 
-## Matrix Representation
-
->[!important] 
->For *complex-valued* *finite dimensional inner product space* $V$, with given coordinate systems.
->
->A *self-adjoint* $A$  is represented by the **Hermitian matrix** $\boldsymbol{A}$:
->$$
-> \boldsymbol{A} = \boldsymbol{A}^{H} \iff   a_{i,j} = \overline{a_{j,i}}, \quad \forall i,j=1 \,{,}\ldots{,}\,n
->$$
->
->Note that for self-adjoint $A$
->$$
->\begin{align*}
->\left\langle \boldsymbol{x} \,,\,  \boldsymbol{A} \boldsymbol{y}   \right\rangle_{\mathbb{C}} = \left\langle  \boldsymbol{A}\boldsymbol{x} \,,\, \boldsymbol{y}     \right\rangle_{\mathbb{C}}
->\end{align*}
->$$
-
-
->[!important]
->If $V$ is a *real-valued* inner product space, the *self-adjoint* $A$ is represented by the **symmetric matrix**  $\boldsymbol{A}$ 
->$$
->\boldsymbol{A} = \boldsymbol{A}^{T} \iff  a_{i,j} = a_{j,i}, \quad i,j=1 \,{,}\ldots{,}\, n
->$$
->and
->$$
->\begin{align*}
->\left\langle \boldsymbol{x} \,,\,  \boldsymbol{A} \boldsymbol{y}   \right\rangle_{\mathbb{R}} = \left\langle  \boldsymbol{A}\boldsymbol{x} \,,\, \boldsymbol{y}     \right\rangle_{\mathbb{R}}
->\end{align*}
->$$
-
-
 
 
 
@@ -83,9 +88,11 @@ date of note: 2024-05-09
 - [[Dual Space of Finite Dimensional Vector Space]]
 
 - [[Normal Transformation]]
+- [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
 
 - [[Inner Product Space]]
 - [[Vector Space over a Field]]
 
 - [[Matrix Analysis by Horn]]
 - [[Finite Dimensional Vector Spaces by Halmos]]
+- [[Matrix Computations by Golub]] pp 29

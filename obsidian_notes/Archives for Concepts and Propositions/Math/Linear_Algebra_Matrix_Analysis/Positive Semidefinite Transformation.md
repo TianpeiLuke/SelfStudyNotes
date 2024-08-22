@@ -36,7 +36,7 @@ date of note: 2024-07-03
 >A \succeq 0.
 >$$
 
-- [[Self-Adjoint Linear Map and Hermitian or Symmetric Matrix]]
+- [[Self-Adjoint Linear Map]]
 
 >[!important] Definition
 >The **space** of *all positive semidefinite matrices*

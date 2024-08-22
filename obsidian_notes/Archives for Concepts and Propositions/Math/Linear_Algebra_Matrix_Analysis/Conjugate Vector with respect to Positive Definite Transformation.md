@@ -26,7 +26,7 @@ date of note: 2024-07-03
 >$$
 
 - [[Positive Semidefinite Transformation]]
-- [[Self-Adjoint Linear Map and Hermitian or Symmetric Matrix]]
+- [[Self-Adjoint Linear Map]]
 - [[Inner Product Space]]
 
 >[!important] Definition (Matrix Version)

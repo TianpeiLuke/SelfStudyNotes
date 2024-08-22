@@ -29,7 +29,8 @@ date of note: 2024-05-27
 >- There exists a *unitary matrix* $U\in U(n)$ such that $$A = U\,\boldsymbol{\Lambda}\,U^{*}$$ where $\boldsymbol{\Lambda} =\text{diag}\left\{\lambda_{1} \,{,}\ldots{,}\,\lambda_{n}\right\}.$
 
 - [[Spectral Theorem of Normal Map and Eigen decomposition]]
-- [[Self-Adjoint Linear Map and Hermitian or Symmetric Matrix]]
+- [[Self-Adjoint Linear Map]]
+- [[Hermitian or Symmetric Matrix]]
 
 >[!important] Spectral Theorem (Spectral Projection)
 >Let $A = [a_{i,j}] \in \mathbb{C}^{n \times n}$ be **Hermitian** and have **eigenvalues** $\lambda_{1} \,{,}\ldots{,}\,\lambda_{n}$. 
@@ -37,6 +38,7 @@ date of note: 2024-05-27
 >Then
 >$$A = \sum_{i=1}^{n}\lambda_{i}\,u_{i}\,u_{i}^{*} = \sum_{i=1}^{n}\lambda_{i}\,P_{\mathcal{E}_{\lambda_{i}}}$$ where $u_{i} \in \mathcal{E}_{\lambda_{i}}$ is an *eigenvector* associated with *eigenvalue* $\lambda_{i} \in \mathbb{R}$ of $A$, and $P_{\mathcal{E}_{\lambda_{i}}}$ is the **(spectral) projection map** onto the eignspace $\mathcal{E}_{\lambda_{i}}$ associated with *eigenvalue* $\lambda_{i}$.
 
+- [[Hermitian or Symmetric Matrix]]
 - [[Eigenspace and Spectrum for Linear Map]]
 - [[Eigenvalue and Eigenvector for Linear Map]]
 - [[Projection Map onto Linear Subspace]]

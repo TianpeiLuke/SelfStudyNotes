@@ -35,7 +35,7 @@ date of note: 2024-05-27
 >A^{*}A = A^2 = A A^{*}
 >$$
 
- - [[Self-Adjoint Linear Map and Hermitian or Symmetric Matrix]]
+ - [[Self-Adjoint Linear Map]]
 
 >[!example]
 >Every **unitary** or **orthogonal**  transform is *normal*

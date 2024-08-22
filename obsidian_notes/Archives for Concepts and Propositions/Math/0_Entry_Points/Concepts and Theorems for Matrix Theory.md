@@ -29,6 +29,7 @@ date of note: 2024-07-13
 
 ### Special Matrices
 
+- [[Symplectic Matrix]]
 
 ### Function of Matrix
 
@@ -54,7 +55,8 @@ date of note: 2024-07-13
 ### Adjoint and Hermitian 
 
 - [[Adjoint of Linear Map]]
-- [[Self-Adjoint Linear Map and Hermitian or Symmetric Matrix]]
+- [[Self-Adjoint Linear Map]]
+- [[Hermitian or Symmetric Matrix]]
 - [[Unitary and Orthogonal Transformation]]
 - [[Normal Transformation]]
 - [[Positive Semidefinite Transformation]]
