@@ -273,4 +273,5 @@ date of note: 2024-07-23
 - [[Least Square Estimation]]
 
 
+- [[Matrix Analysis by Horn]] pp 18
 - Wikipedia [Schur_complement](https://en.wikipedia.org/wiki/Schur_complement)

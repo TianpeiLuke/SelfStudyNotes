@@ -101,11 +101,14 @@ date of note: 2024-05-11
 - [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
 - [[Spectral Theorem of Normal Map and Eigen decomposition]]
 - [[Spectral Analysis of Function of Transform]]
-- [[Singular Value Decomposition of Linear Map]]
+- [[Rayleigh Quotient for Eigenvalue Problem]]
+- [[Convex Optimization for Eigenvalue Problem]]
 
 ### Matrix Analysis
 
 - [[Concepts and Theorems for Matrix Theory]]
+- [[Singular Value Decomposition of Linear Map]]
+- [[Singular Value Decomposition and Orthogonal Projection]]
 
 
 ## Explanation

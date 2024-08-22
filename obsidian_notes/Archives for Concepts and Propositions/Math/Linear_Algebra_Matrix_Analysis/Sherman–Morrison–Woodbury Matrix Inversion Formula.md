@@ -120,5 +120,6 @@ date of note: 2024-07-23
 - [[Matrix]]
 - [[General Linear Group]]
 
+- [[Matrix Analysis by Horn]] pp 19
 - Wikipedia [Woodbury_matrix_identity](https://en.wikipedia.org/wiki/Woodbury_matrix_identity)
 - Wikipedia [Sherman-Morrison_formula](https://en.wikipedia.org/wiki/Sherman%E2%80%93Morrison_formula)

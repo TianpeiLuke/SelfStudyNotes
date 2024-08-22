@@ -85,6 +85,16 @@ date of note: 2024-05-12
 - [[Algorithms for Least Square Estimation Problem]]
 - [[Least Square Estimation with QR Factorization]]
 
+### Eigenvalue Problem
+
+- [[Hermitian or Symmetric Matrix]]
+- [[Eigenvalue and Eigenvector for Linear Map]]
+- [[Eigenspace and Spectrum for Linear Map]]
+- [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
+- [[Rayleigh Quotient for Eigenvalue Problem]]
+- [[Convex Optimization for Eigenvalue Problem]]
+
+
 
 ## Explanation
 

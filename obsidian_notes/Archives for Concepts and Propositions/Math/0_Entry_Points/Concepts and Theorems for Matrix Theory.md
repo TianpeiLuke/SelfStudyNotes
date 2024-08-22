@@ -73,6 +73,7 @@ date of note: 2024-07-13
 
 - [[Singular Value Decomposition of Linear Map]]
 - [[Low Rank Approximation of Matrix and Eckhart-Young Theorem]]
+- [[Singular Value Decomposition and Orthogonal Projection]]
 - [[Least Square Estimation via Singular Value Decomposition]]
 
 
