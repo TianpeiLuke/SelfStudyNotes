@@ -191,3 +191,4 @@ date of note: 2024-06-08
 - [[Optimization by Vector Space Methods by Luenberger]] pp 78 - 102
 - [[Numerical Optimization by Nocedal]] pp 245 - 269
 - [[Elements of Statistical Learning by Hastie]] pp 43 - 56
+- [[Matrix Computations by Golub]] pp 303 - 334

@@ -51,8 +51,17 @@ date of note: 2024-06-08
 
 ### QR Factorization and Successive Orthogonalization
 
+![[Least Square Estimation with QR Factorization#^b530a4]]
+
+![[Least Square Estimation with QR Factorization#^7f67c6]]
+
 - [[Least Square Estimation with QR Factorization]]
 
+### Singular Value Decomposition
+
+![[Least Square Estimation via Singular Value Decomposition#^9f2cf8]]
+
+- [[Least Square Estimation via Singular Value Decomposition]]
 
 
 

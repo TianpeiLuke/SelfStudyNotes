@@ -70,6 +70,8 @@ date of note: 2024-07-13
 ### Singular Value Decomposition
 
 - [[Singular Value Decomposition of Linear Map]]
+- [[Low Rank Approximation of Matrix and Eckhart-Young Theorem]]
+- [[Least Square Estimation via Singular Value Decomposition]]
 
 
 ### Perturbation Theory and Eigenvalue

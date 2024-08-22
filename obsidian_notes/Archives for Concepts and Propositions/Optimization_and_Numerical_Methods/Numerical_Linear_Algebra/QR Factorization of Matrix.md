@@ -35,4 +35,4 @@ date of note: 2024-08-08
 - [[Unitary Group]]
 
 - [[Matrix Computations by Golub]] pp 246
-- [[Matrix Analysis by Horn]]
+- [[Matrix Analysis by Horn]] pp 83

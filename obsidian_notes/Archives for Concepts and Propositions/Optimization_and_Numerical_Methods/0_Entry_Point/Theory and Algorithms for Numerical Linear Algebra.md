@@ -17,6 +17,8 @@ date of note: 2024-05-12
 
 - [[Concepts and Theorems in Finite Dimensional Vector Space]]
 - [[Concepts and Theorems for Matrix Theory]]
+- [[Singular Value Decomposition of Linear Map]]
+- [[Low Rank Approximation of Matrix and Eckhart-Young Theorem]]
 
 ### General Linear Systems
 
@@ -29,12 +31,16 @@ date of note: 2024-05-12
 
 ### Orthogonalization 
 
+- [[Gram-Schmidt Orthogonalization]]
 - [[QR Factorization of Matrix]]
 
 ### Least Square Problems
 
 - [[Least Square Estimation]]
+- [[Least Square Estimation Solution and Geometric Interpretation]]
 - [[Moore–Penrose Pseudo Inverse of Matrix]]
+- [[Least Square Estimation with QR Factorization]]
+
 
 
 ### Eigenvalue Problem

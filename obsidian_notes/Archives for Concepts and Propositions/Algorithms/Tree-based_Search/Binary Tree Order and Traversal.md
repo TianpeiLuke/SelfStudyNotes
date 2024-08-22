@@ -29,3 +29,6 @@ date of note: 2024-08-08
 - [[Binary Tree Inorder Traversal]]
 - [[Tree-Order Relation]]
 - [[Tree Graph and Forest]]
+
+- [[Introduction to Algorithms by Cormen]]
+- [[Algorithm Design Manual by Skiena]]

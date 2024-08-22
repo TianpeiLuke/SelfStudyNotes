@@ -18,6 +18,8 @@ date of note: 2024-05-15
 >[!important] Definition
 >If $S$ is an *orthonormal set* in a *Hilbert space* $\mathcal{H}$ and *no other orthonormal set* contains $S$ as a *proper subset*, then $S$ is called **an orthonormal basis** (or a **complete orthonormal system**) for $\mathcal{H}$.
 
+- [[Orthogonality in Inner Product Space]]
+
 ## Explanation
 
 >[!important] Theorem
@@ -37,7 +39,7 @@ date of note: 2024-05-15
 >
 >That is, $S$ is an *orthonormal set* and it is *not properly contained* in any orthonormal set. Hence, $S$ is an **orthonormal basis**. Q.E.D.
 
-
+- [[Gram-Schmidt Orthogonalization]]
 - [[Strict Partial Order Relation]]
 - [[Supremum and Infimum of Sets]]
 - [[Upper Bound and Supremum of Set]]

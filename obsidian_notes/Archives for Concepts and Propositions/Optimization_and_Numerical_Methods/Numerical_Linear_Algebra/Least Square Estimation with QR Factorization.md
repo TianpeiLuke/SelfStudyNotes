@@ -48,7 +48,7 @@ date of note: 2024-08-20
 >- For $i=1\,{,}\ldots{,}\,d$:
 >	- **Regress** $X^{i}$ on $\left(r_{0} \,{,}\ldots{,}\,r_{i-1}\right)$ to produce 
 >		- the **coefficients** $$\hat{\gamma}_{j,i} = \frac{\left\langle  r_{j}\,,\,X^{i} \right\rangle}{\left\langle  r_{j}\,,\,r_{j}    \right\rangle},\quad j=1 \,{,}\ldots{,}\,i-1$$
->		- and the **residual vector** $$r_{i} = X^{i} - \sum_{j=1}^{i-1}\hat{\gamma}_{j,i}\;r_{j}$$
+>	- Compute the **residual vector** $$r_{i} = X^{i} - \sum_{j=1}^{i-1}\hat{\gamma}_{j,i}\;r_{j}$$
 >- **Regress** $Y$ on the **residual vector** $r_{d}$ to give the estimate $\hat{\beta}_{d}$ $$\hat{\beta}_{d} = \frac{\left\langle  r_{d}\,,\,Y \right\rangle}{\left\langle  r_{d}\,,\,r_{d}    \right\rangle}$$
 >
 >Note that by rearranging $(X^1 \,{,}\ldots{,}\,X^{d})$, any one of them could be in the last position, hence the above algorithm solves any least square coefficient $\hat{\beta}_{i}$ for $i=1\,{,}\ldots{,}\,d$ .
@@ -56,7 +56,7 @@ date of note: 2024-08-20
 
 >[!info]
 >The residual vectors are **orthogonal** to each other.
->$$\left\langle  r_{i}\,,\,r_{j}    \right\rangle = \lVert r_{i} \rVert  \delta_{i,j}$$
+>$$\left\langle  r_{i}\,,\,r_{j}    \right\rangle = \lVert r_{i} \rVert^2  \delta_{i,j}$$
 
 ### QR Factorization
 
@@ -69,7 +69,7 @@ date of note: 2024-08-20
 >- $Z = [r_{0} \,{,}\ldots{,}\,r_{d}]\in \mathbb{R}^{m\times (d+1)}$ whose *columns* are *residual vectors* and are *orthogonal* to each other.
 >- $\Gamma$ is an *upper triangular matrix* with entries as $\hat{\gamma}_{j,i}$.
 >  
->Define $D = \text{diag}\{\lVert r_{1} \rVert \,{,}\ldots{,}\, \lVert r_{d} \rVert \}$ is a *diagonal matrix.* We can represent the above matrix factorization as
+>Define $D = \text{diag}\{\lVert r_{0} \rVert \,{,}\ldots{,}\, \lVert r_{d} \rVert \}$ is a *diagonal matrix.* We can represent the above matrix factorization as
 >$$
 >\begin{align*}
 >X &= Z\,D^{-1}\,D\,\Gamma \\[5pt]
@@ -81,7 +81,12 @@ date of note: 2024-08-20
 >This is the **QR factorization** of data $X$.
 >
 
+^b530a4
+
 - [[QR Factorization of Matrix]]
+
+
+
 
 ### Least Square via QR Factorization
 
@@ -98,11 +103,32 @@ date of note: 2024-08-20
 >R\,\hat{\beta} = Q^{T}\,y
 >$$
 
+^7f67c6
+
+>[!important] Least Square Estimat via Compact QR decomposition
+>For $X\in \mathbb{R}^{m\times (d+1)}$ with $m \ge d+1$ and $y\in \mathbb{R}^{m}$, the **QR decomposition** of $X$ is $$X = Q\,R$$ where $Q\in \mathcal{O}(m)$ and $$Q^{T}\,X = R = \left[ \begin{array}{c}R_{1} \\ 0\end{array} \right] \in \mathbb{R}^{m\times (d+1)}$$ is *upper triangular*.
+>
+>If $$Q^{T}\,y := \left[ \begin{array}{c} y_{\parallel} \\ y_{\perp}\end{array} \right] \in \mathbb{R}^{m},$$ then 
+>$$
+>\lVert X\beta - y  \rVert_{2}^2 = \lVert Q^{T}\,X\,\beta - Q^{T}\,y \rVert_{2}^2 = \lVert R_{1}\beta - y_{\parallel} \rVert_{2}^2 + \lVert y_{\perp} \rVert_{2}^2   
+>$$
+>
+>Since $\text{rank}(X) = \text{rank}(R_{1}) = d+1$, it follows that the **least square estimate** $\hat{\beta}$ can be obtained by solving the *equations*
+>$$
+>R_{1}\,\hat{\beta} = y_{\parallel}.
+>$$
+>Note that $$\hat{\rho} = \lVert y_{\perp} \rVert_{2}.$$
+
 
 
 
 
 ## Explanation
+
+### Gram-Schmidt Process
+
+![[Gram-Schmidt Orthogonalization#^4fc278]]
+
 
 >[!important]
 >The algorithm above is the **Gram-Schmidt procedure** for multiple regression.
@@ -125,3 +151,4 @@ date of note: 2024-08-20
 - [[Optimization by Vector Space Methods by Luenberger]] pp 78 - 102
 - [[Numerical Optimization by Nocedal]] pp 245 - 269
 - [[Elements of Statistical Learning by Hastie]] pp 43 - 56
+- [[Matrix Computations by Golub]] pp 263 - 288, 303 - 334

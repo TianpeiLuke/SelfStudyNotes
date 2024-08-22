@@ -16,6 +16,10 @@ date of note: 2024-05-29
 >[!important]
 >**Name**: Singular Value Decomposition of Compact Operator
 
+![[Singular Value Decomposition of Linear Map#^bebe11]]
+
+- [[Singular Value Decomposition of Linear Map]]
+
 >[!important] Theorem (Canonical Form of Compact Operator)
 >Let $A$ be a **compact operator** on $\mathcal{H}$. 
 >

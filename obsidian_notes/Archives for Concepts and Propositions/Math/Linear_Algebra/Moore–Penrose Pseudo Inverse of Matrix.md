@@ -33,6 +33,8 @@ date of note: 2024-07-26
 
 - [[Schur Complement and Inversion of Block Matrix]]
 - [[Sherman–Morrison–Woodbury Matrix Inversion Formula]]
+- [[Singular Value Decomposition of Linear Map]]
+
 
 - [[Linear Regression]]
 - [[Least Square Estimation]]
