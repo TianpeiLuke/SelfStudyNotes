@@ -32,7 +32,7 @@ date of note: 2024-05-12
 
 ## Basic Building Blocks
 
-- [[Multi-Layer Perceptron and Fully Connected Network]]
+- [[Multi-Layer Perceptron and Feed-Forward Network]]
 - [[Activation Functions for Deep Learning]]
 
 ### Normalization Layer
@@ -71,7 +71,7 @@ date of note: 2024-05-12
 
 - [[Back-Propagation Algorithm]]
 - [[Perceptron Algorithm]]
-- [[Multi-Layer Perceptron and Fully Connected Network]]
+- [[Multi-Layer Perceptron and Feed-Forward Network]]
 
 
 - [[Understanding Machine Learning by Shalev-Shwartz]]

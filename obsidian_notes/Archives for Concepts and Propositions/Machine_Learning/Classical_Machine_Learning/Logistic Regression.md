@@ -35,7 +35,7 @@ date of note: 2024-08-16
 
 - [[Artificial Neural Network and Deep Learning]]
 - [[Perceptron Algorithm]]
-- [[Multi-Layer Perceptron and Fully Connected Network]]
+- [[Multi-Layer Perceptron and Feed-Forward Network]]
 
 - [[AdaBoost Algorithm]]
 

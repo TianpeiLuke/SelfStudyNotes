@@ -31,7 +31,7 @@ date of note: 2024-05-12
 - [[Artificial Neural Network and Deep Learning]]
 - [[Back-Propagation Algorithm]]
 - [[Perceptron Algorithm]]
-- [[Multi-Layer Perceptron and Fully Connected Network]]
+- [[Multi-Layer Perceptron and Feed-Forward Network]]
 
 
 - [[Understanding Machine Learning by Shalev-Shwartz]]

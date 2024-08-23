@@ -115,7 +115,7 @@ date of note: 2024-05-12
 - [[Follow-The-Regularized-Leader Algorithm]]
 
 - [[Artificial Neural Network and Deep Learning]]
-- [[Multi-Layer Perceptron and Fully Connected Network]]
+- [[Multi-Layer Perceptron and Feed-Forward Network]]
 - [[Iterative Maximum Entropy Learning for AdaBoost]]
 
 

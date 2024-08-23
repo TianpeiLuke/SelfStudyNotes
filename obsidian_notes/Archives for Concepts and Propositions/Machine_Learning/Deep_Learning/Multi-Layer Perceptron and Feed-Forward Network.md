@@ -33,9 +33,11 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
+- [[Artificial Neural Network and Deep Learning]]
 - [[Perceptron Algorithm]]
 - [[Logistic Regression]]
 
+- [[Back-Propagation Algorithm]]
 
 
 - [[Understanding Machine Learning by Shalev-Shwartz]]
@@ -44,3 +46,4 @@ date of note: 2024-05-12
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 180
 - [[Deep Learning by Goodfellow]] 
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 17
+- Wikipedia [Multilayer_perceptron](https://en.wikipedia.org/wiki/Multilayer_perceptron)
