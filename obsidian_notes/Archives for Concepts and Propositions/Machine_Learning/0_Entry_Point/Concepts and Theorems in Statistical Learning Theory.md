@@ -60,7 +60,7 @@ date of note: 2024-06-01
 - [[Convex Function]]
 - [[Concentration of Separately Convex Lipschitz Functions]]
 - [[Concentration of Quasi-Convex Lipschitz Functions]]
-
+- [[Surrogate Loss Minimization]]
 
 
 ### Regularization and Structural Risk Minimization

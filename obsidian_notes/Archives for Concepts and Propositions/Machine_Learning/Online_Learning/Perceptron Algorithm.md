@@ -28,6 +28,7 @@ date of note: 2024-05-12
 > \mathbb{1}\left\{ y \neq \text{sgn}\left\{ f(x;w) \right\}  \right\}  \le  \max\left\{ 0, -y\;f(x;w) \right\} 
 >$$
 
+- [[Surrogate Loss Minimization]]
 - [[Empirical Risk Minimization]]
 
 

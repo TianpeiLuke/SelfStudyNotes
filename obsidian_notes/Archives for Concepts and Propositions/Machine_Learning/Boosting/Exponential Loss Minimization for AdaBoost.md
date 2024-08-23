@@ -36,6 +36,7 @@ date of note: 2024-07-29
 >$$
 >Therefore, solving the exponential loss minimization leads to the *empirical risk minimization*.
 
+- [[Surrogate Loss Minimization]]
 - [[Characteristic Function of Set]]
 - [[Empirical Risk Minimization]]
 
