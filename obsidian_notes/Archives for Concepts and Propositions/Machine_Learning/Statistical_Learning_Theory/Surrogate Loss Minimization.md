@@ -39,4 +39,4 @@ date of note: 2024-08-22
 
 - [[Understanding Machine Learning by Shalev-Shwartz]]
 - [[Foundations of Machine Learning by Mohri]]
-- [[Elements of Statistical Learning by Hastie]]
+- [[Elements of Statistical Learning by Hastie]] pp 345 - 350

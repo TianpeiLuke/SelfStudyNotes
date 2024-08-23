@@ -99,6 +99,8 @@ date of note: 2024-06-24
 >\end{align*}
 >$$ 
 
+^5ae110
+
 - [[Logistic Regression]]
 
 >[!example]

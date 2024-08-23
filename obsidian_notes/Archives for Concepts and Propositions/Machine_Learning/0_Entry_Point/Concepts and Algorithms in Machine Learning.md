@@ -35,6 +35,7 @@ date of note: 2024-06-01
 
 - [[Linear Regression]]
 - [[Logistic Regression]]
+- [[Logistic Regression Solution via Iterative Reweighted Least Square]]
 - [[Generalized Linear Models]]
 - [[Least Square Estimation]]
 
