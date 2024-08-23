@@ -31,6 +31,7 @@ date of note: 2024-06-27
 
 ^713d66
 
+- [[Fisher Information]]
 - [[Exponential Family of Distributions]]
 - [[Mathematical Statistics by Shao]] pp 171
 

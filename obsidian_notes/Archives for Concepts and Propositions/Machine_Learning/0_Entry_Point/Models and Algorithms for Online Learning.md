@@ -89,6 +89,11 @@ date of note: 2024-07-14
 - [[Online Mirror Descent Algorithm]]
 
 
+### Online Classification
+
+- [[Perceptron Algorithm]]
+
+
 ### Bandit Problem
 
 - [[Stochastic Bandit Problem]]

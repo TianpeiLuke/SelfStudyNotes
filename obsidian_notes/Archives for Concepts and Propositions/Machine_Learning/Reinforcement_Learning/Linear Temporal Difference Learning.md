@@ -25,6 +25,7 @@ date of note: 2024-08-09
 
 - [[Value Function Approximation as Supervised Learning]]
 - [[Basis of Vector Space]]
+- [[Least Square Estimation]]
 
 
 >[!important] Definition
@@ -99,7 +100,9 @@ date of note: 2024-08-09
 
 - [[Value Function and Bellman Equation for MDP]]
 - [[Minimum Mean Square Estimation]]
-
+- [[Linear Regression]]
+- [[Least Square Estimation]]
+- [[Least Square Estimation Solution and Geometric Interpretation]]
 
 
 - [[Reinforcement Learning An Introduction by Sutton]] pp 202

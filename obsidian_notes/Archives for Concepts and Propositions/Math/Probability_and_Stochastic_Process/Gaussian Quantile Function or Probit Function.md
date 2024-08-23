@@ -76,6 +76,8 @@ date of note: 2024-06-09
 - [[Gaussian Isoperimetric Function]]
 
 
+- [[Probit Regression]]
+
 - [[Concentration Inequalities by Boucheron]]
 - [[Monte Carlo Statistical Methods by Robert]]
 - [[A Probability Path by Resnick]]

@@ -3,16 +3,23 @@ tags:
   - concept
   - machine_learning/models
   - deep_learning/discriminative_models
-keywords: 
-topics: 
-name: 
+  - deep_learning/models
+  - deep_learning/architecture
+keywords:
+  - mlp
+  - multilayer_perceptron
+  - fully_connected_network
+topics:
+  - deep_learning/algorithm
+  - deep_learning/network_block
+name: Multi-Layer Perceptron and Fully Connected Network
 date of note: 2024-05-12
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Multi-Layer Perceptron and Fully Connected Network
 
 
 

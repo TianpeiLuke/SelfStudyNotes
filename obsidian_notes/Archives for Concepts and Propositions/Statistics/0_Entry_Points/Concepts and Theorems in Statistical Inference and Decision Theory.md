@@ -95,8 +95,14 @@ date of note: 2024-06-01
 
 ### Regularization
 
+- [[Ridge Regression and L2 Regularization]]
 - [[LASSO and Sparsity-Induced Least Square]]
 
+
+### Other Regression Problem
+
+- [[Gaussian Quantile Function or Probit Function]]
+- [[Probit Regression]]
 
 
 ### Exponential Family of Distributions

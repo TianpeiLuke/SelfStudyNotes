@@ -40,6 +40,9 @@ date of note: 2024-06-11
 
 ^24812d
 
+- [[Gaussian Random Variable]]
+- [[Gaussian Random Vector]]
+
 >[!important]
 >For $d=1$, the *linear regression* model is 
 >$$
@@ -125,6 +128,7 @@ date of note: 2024-06-11
 - [[Regression Problem]]
 - [[Maximum Likelihood Estimation]]
 - [[Least Square Estimation]]
+- [[Least Square Estimation Solution and Geometric Interpretation]]
 - [[Generalized Linear Models]]
 
 
@@ -133,3 +137,4 @@ date of note: 2024-06-11
 - [[All of Statistics A Concise Course by Wasserman]] pp 210 
 - [[Mathematical Statistics by Shao]] 
 - [[Elements of Statistical Learning by Hastie]] pp 43 - 56
+- [[Deep Learning Foundations and Concepts by Bishop]] pp 112 - 120

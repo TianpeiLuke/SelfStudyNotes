@@ -29,6 +29,8 @@ date of note: 2024-07-24
 
 - [[Least Square Estimation]]
 - [[Linear Regression]]
+- [[Regularized Loss Minimization]]
+- [[Ridge Regression and L2 Regularization]]
 
 - [[Gaussian Graphical Model and Gaussian Markov Random Field]]
 - [[Conditional Independence]]
@@ -36,7 +38,7 @@ date of note: 2024-07-24
 - [[Schur Complement and Inversion of Block Matrix]]
 - [[Sherman–Morrison–Woodbury Matrix Inversion Formula]]
 
-
+- [[Graph LASSO and Structured Learning in Gaussian Graphical Model]]
 
 - [[Elements of Statistical Learning by Hastie]]
 - [[All of Statistics A Concise Course by Wasserman]]
