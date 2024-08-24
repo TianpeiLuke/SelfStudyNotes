@@ -19,10 +19,15 @@ date of note: 2024-05-12
 
 - [[Eigenvalue and Eigenvector for Linear Map]]
 - [[Eigenspace and Spectrum for Linear Map]]
+- [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
+
 
 
 -----------
 ##  Recommended Notes and References
+
+
+
 
 - [[Elements of Statistical Learning by Hastie]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]

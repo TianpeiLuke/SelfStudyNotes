@@ -99,8 +99,10 @@ date of note: 2024-06-01
 - [[LASSO and Sparsity-Induced Least Square]]
 
 
-### Other Regression Problem
+### Other Regression Problems
 
+- [[Logistic Regression]]
+- [[Logistic Regression Solution via Iterative Reweighted Least Square]]
 - [[Gaussian Quantile Function or Probit Function]]
 - [[Probit Regression]]
 

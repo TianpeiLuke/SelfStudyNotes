@@ -77,6 +77,7 @@ date of note: 2024-08-16
 
 - [[Newton Method]]
 
+
 ![[Least Square Estimation Solution and Geometric Interpretation#^17b91f]]
 
 - [[Least Square Estimation Solution and Geometric Interpretation]]
@@ -106,6 +107,22 @@ date of note: 2024-08-16
 >$$
 >z_{s}^{t+1} = \sum_{i=1}^{d}\beta_{i}^{t+1} x_{s}^{i} + \frac{y_{s} -p(x_{s}; \beta_{t+1}) }{p(x_{s}; \beta_{t+1})\;(1 - p(x_{s}; \beta_{t+1})) }
 >$$
+
+
+## BFGS and L-BFGS
+
+>[!important]
+>Other 2nd-order gradient methods such as 
+>- **BFGS** algorithms, 
+>- **L-BFGS** algorithms,
+>- **Netwon-Conjugate Gradient** algorithm
+>
+>can also be used to solve the logistic regression problem.
+
+- [[Limited Memory BFGS]]
+- [[BFGS Algorithm]]
+- [[Newton-Conjugate Gradient and Inexact Newton Method]]
+
 
 
 
