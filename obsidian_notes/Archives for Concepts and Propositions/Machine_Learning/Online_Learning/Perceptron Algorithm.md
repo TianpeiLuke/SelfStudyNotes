@@ -84,6 +84,7 @@ date of note: 2024-05-12
 >\end{align*}
 >$$
 
+- [[Rectified Linear Unit as Activation for Deep Learning]]
 - [[Convex Function]]
 - [[Operations that Preserve Convexity]]
 - [[Subgradient Methods]]

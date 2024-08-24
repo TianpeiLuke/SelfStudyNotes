@@ -15,8 +15,6 @@ date of note: 2024-05-12
 >**Name**: 
 
 
-- [[Sigmoid Function as Activation for Deep Learning]]
-- [[Rectified Linear Unit as Activation for Deep Learning]]
 
 ## Explanation
 
@@ -29,7 +27,9 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
+- [[Logistic Regression]]
 
+- [[Activation Functions for Deep Learning]]
 - [[Artificial Neural Network and Deep Learning]]
 - [[Back-Propagation Algorithm]]
 - [[Perceptron Algorithm]]

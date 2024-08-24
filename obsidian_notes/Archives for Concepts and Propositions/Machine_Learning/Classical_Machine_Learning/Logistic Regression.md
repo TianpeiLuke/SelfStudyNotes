@@ -51,6 +51,7 @@ date of note: 2024-08-16
 
 ^d3f593
 
+- [[Sigmoid Function as Activation for Deep Learning]]
 ### Maximum Likelihood Estimation
 
 >[!important] Definition

@@ -2,8 +2,11 @@
 tags:
   - concept
   - machine_learning/models
-  - deep_learning/discriminative_models
-keywords: 
+  - deep_learning/architecture
+keywords:
+  - relu_activation
+  - activation_function
+  - deep_learning
 topics: 
 name: 
 date of note: 2024-05-12
@@ -15,8 +18,6 @@ date of note: 2024-05-12
 >**Name**: 
 
 
-- [[Sigmoid Function as Activation for Deep Learning]]
-- [[Rectified Linear Unit as Activation for Deep Learning]]
 
 ## Explanation
 
@@ -29,11 +30,15 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
-
+- [[Activation Functions for Deep Learning]]
 - [[Artificial Neural Network and Deep Learning]]
 - [[Back-Propagation Algorithm]]
 - [[Perceptron Algorithm]]
 - [[Multi-Layer Perceptron and Feed-Forward Network]]
+
+- [[LASSO and Sparsity-Induced Least Square]]
+- [[Surrogate Loss Minimization]]
+- [[Support Vector Machine]]
 
 
 - [[Understanding Machine Learning by Shalev-Shwartz]]

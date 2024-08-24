@@ -31,6 +31,8 @@ date of note: 2024-06-01
 
 - [[Artificial Neural Network and Deep Learning]]
 - [[Activation Functions for Deep Learning]]
+	- [[Rectified Linear Unit as Activation for Deep Learning]]
+	- [[Sigmoid Function as Activation for Deep Learning]]
 - [[Error Function or Loss Function for Deep Learning]]
 
 
