@@ -32,11 +32,14 @@ date of note: 2024-06-09
 - [[Gaussian Cumulative Distribution Function]]
 - [[Gaussian Random Variable]]
 
+
 >[!important]
 >The **probit function** can be obtained by *inverse of error function*
 >$$
 >\Phi^{-1}(p) = \sqrt{ 2 }\; \text{erf}^{-1}(2p - 1).
 >$$
+
+- [[Sigmoid Function as Activation for Deep Learning]]
 
 ## Explanation
 
