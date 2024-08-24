@@ -30,6 +30,11 @@ date of note: 2024-05-10
 >$$
 >where the equality is achieved when $$a^p = b^q.$$
 
+### Young Inequality for Convolution 
+
+- [[Young Inequality for Convolution]]
+
+
 
 
 ## Explanation

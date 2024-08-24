@@ -121,6 +121,10 @@ date of note: 2024-05-11
 - [[Kantorovitch Representation Theorem for Dual of L-infinity]]
 - [[Lp Space as Reflexive Banach Space]]
 - [[Riesz Weak Compactness Theorem in Lp Space]]
+- [[Convolution Operation]]
+- [[Young Inequality]]
+- [[Young Inequality for Convolution]]
+
 
 ### Space of Bounded Operators
 

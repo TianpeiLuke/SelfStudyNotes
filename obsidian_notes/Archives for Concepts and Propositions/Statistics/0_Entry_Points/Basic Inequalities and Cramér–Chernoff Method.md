@@ -87,6 +87,10 @@ date of note: 2024-05-11
 
 - [[Minkowski Inequality]]
 
+
+
+- [[Young Inequality for Convolution]]
+
 ### Inequality for Convex Functions
 
 
