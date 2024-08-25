@@ -27,9 +27,7 @@ date of note: 2024-08-24
 ##  Recommended Notes and References
 
 
-
-- [[CMA-ES or Covariance Matrix Adaptation Evolution Strategy]]
-- [[Evolutionary Algorithms]]
+- [[Evolutionary Strategies]]
 - [[Derivative-Free Optimization]]
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 298 - 307

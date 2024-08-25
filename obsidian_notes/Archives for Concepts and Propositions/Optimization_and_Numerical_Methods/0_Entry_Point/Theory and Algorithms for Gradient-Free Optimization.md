@@ -48,6 +48,7 @@ date of note: 2024-08-24
 - [[Cross-Entropy Method for Genetic Algorithms]]
 - [[Differentiable Cross-Entropy Method for Genetic Algorithms]]
 - [[Evolutionary Strategies]]
+- [[CMA-ES or Covariance Matrix Adaptation Evolution Strategy]]
 
 
 
