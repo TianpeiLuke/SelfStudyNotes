@@ -11,7 +11,7 @@ This repository is the latex-based notes for self-learning, mainly for math, sta
 ## Obsidian Graph
 
 <p align="middle">
-  <img src="./obsidian_slip_box_graph/obsidian_slip_box_2024_08_23_labeled.png" width="32%" />
+  <img src="./obsidian_slip_box_graph/obsidian_slip_box_2024_08_23_labeled.png" width="40%" />
   <img src="./obsidian_slip_box_graph/obsidian_slip_box_2024-08-22_22-13-47.png" width="32%"/> 
 </p>
 
