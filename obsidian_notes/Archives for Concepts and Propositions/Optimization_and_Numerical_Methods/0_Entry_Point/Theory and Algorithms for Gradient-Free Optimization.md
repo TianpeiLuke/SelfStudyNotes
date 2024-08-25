@@ -50,7 +50,10 @@ date of note: 2024-08-24
 - [[Evolutionary Strategies]]
 - [[CMA-ES or Covariance Matrix Adaptation Evolution Strategy]]
 
+### Swam Intelligence
 
+- [[Particle Swarm Optimization]]
+- [[Ant Colony Optimization]]
 
 
 

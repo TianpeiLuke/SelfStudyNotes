@@ -133,7 +133,9 @@ date of note: 2024-06-01
 - [[Transformer Network]]
 
 
+### Neural Architecture Search
 
+- [[Neural Architecture Search]]
 
 
 
