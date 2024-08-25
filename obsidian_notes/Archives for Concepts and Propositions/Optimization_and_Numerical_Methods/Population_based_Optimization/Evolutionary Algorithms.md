@@ -27,8 +27,13 @@ date of note: 2024-08-24
 ##  Recommended Notes and References
 
 
+
+
 - [[Population-based Incremental Learning]]
 - [[Genetic Algorithms and Genetic Programming]]
+- [[Random Restart Hill Climbing]]
 - [[Derivative-Free Optimization]]
+
+
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 298 - 307

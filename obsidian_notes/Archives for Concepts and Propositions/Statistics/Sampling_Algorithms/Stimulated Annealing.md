@@ -35,3 +35,4 @@ date of note: 2024-07-04
 - [[Monte Carlo Strategies in Scientific Computing by Liu]]
 
 - [[Probabilistic Graphical Models by Koller]] pp 524
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 301

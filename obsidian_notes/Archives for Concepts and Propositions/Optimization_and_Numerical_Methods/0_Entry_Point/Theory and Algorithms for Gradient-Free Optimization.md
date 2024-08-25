@@ -25,30 +25,51 @@ date of note: 2024-08-24
 
 - [[Derivative-Free Optimization]]
 
+### Sub-gradient Methods
+
+- [[Subgradient Methods]]
+
+### Coordinate Descent Algorithm
+
+- [[Block Coordinate Descent Algorithm]]
+
+### Stimulated Annealing
+
+- [[Stimulated Annealing]]
+
+
 ### Local Search
 
+- [[Greedy Search and Hill Climbing]]
+
+- [[A-star Heuristic Search]]
 - [[Backtracking]]
 - [[Depth-First Search]]
 - [[Breadth-First Search]]
-- [[A-star Heuristic Search]]
+
 
 ### Stochastic Local Search
 
-
+- [[Stochastic Hill Climbing]]
+- [[Random Restart Hill Climbing]]
 - [[Monte Carlo Tree Search]]
 
 
+### Genetic Algorithms
+
+- [[Genetic Algorithms and Genetic Programming]]
 
 ### Evolutionary Algorithm
 
 - [[Evolutionary Algorithms]]
-- [[Genetic Algorithms and Genetic Programming]]
 - [[EDA or Estimation of Distribution Algorithm]]
 - [[Population-based Incremental Learning]]
 - [[Cross-Entropy Method for Genetic Algorithms]]
 - [[Differentiable Cross-Entropy Method for Genetic Algorithms]]
 - [[Evolutionary Strategies]]
+- [[Natural Evolutionary Strategies]]
 - [[CMA-ES or Covariance Matrix Adaptation Evolution Strategy]]
+- [[Neural Evolutionary Algorithm]]
 
 ### Swam Intelligence
 

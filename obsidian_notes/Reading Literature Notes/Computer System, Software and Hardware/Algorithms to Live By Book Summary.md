@@ -10,13 +10,13 @@ tags:
   - algorithm/sort
   - algorithm/search
   - computer_architecture/cache
-  - operation_system/scheduling
   - statistics/bayesian
   - machine_learning/theory
   - math/probability
   - math/graph_theory
   - statistics/network_analysis
   - math/game_theory
+  - operating_system/scheduling
 aliases:
   - 0201algorithmliveby00s
 keywords:
@@ -56,12 +56,31 @@ year: 2016
 
 ## Book Chapter Summary
 
+- [[Algorithms to Live By Chapter 1 Optimal Stopping]]
 
+- [[Algorithms to Live By Chapter 2 Explore and Exploit]]
+
+- [[Algorithms to Live By Chapter 3 Sorting]]
+
+- [[Algorithms to Live By Chapter 4 Caching]]
+
+- [[Algorithms to Live By Chapter 5 Scheduling]]
+
+- [[Algorithms to Live By Chapter 6 Bayes Rule]]
 
 
 
 -----------
 ##  Recommended Notes
+
+- [[A Probability Path by Resnick]]
+- [[Probability and Measure by Billingsley]]
+
+
+- [[Bandit Algorithms by Lattimore]]
+- [[Reinforcement Learning An Introduction by Sutton]]
+
+
 
 - [[Algorithm Design Manual by Skiena]]
 - [[Introduction to Algorithms by Cormen]]

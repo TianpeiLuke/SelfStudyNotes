@@ -27,6 +27,8 @@ date of note: 2024-08-24
 ##  Recommended Notes and References
 
 
+- [[Maximum Likelihood Estimation]]
+
 - [[Population-based Incremental Learning]]
 - [[Genetic Algorithms and Genetic Programming]]
 - [[Evolutionary Algorithms]]

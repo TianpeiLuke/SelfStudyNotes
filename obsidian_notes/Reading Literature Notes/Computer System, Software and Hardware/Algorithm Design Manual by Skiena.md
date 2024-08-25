@@ -48,6 +48,7 @@ date of note: 2024-08-15
 
 -----
 ## Reference
-  
+
+
 - [[Introduction to Algorithms by Cormen]]
 - [[Algorithms to Live By Book Summary]]

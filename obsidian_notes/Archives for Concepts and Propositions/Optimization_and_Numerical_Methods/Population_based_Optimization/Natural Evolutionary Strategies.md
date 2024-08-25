@@ -2,7 +2,6 @@
 tags:
   - concept
   - optimization/theory
-  - genetic_algorithm
   - evolutionary_algorithm
   - evolutionary_computation
 keywords: 
@@ -28,14 +27,12 @@ date of note: 2024-08-24
 ##  Recommended Notes and References
 
 
-- [[Differentiable Cross-Entropy Method for Genetic Algorithms]]
-- [[Cross-Entropy Loss Function]]
-- [[EDA or Estimation of Distribution Algorithm]]
-- [[Genetic Algorithms and Genetic Programming]]
+- [[Exponential Family of Distributions]]
+- [[Log-Partition Function of Exponential Family]]
+
+- [[Evolutionary Strategies]]
+- [[CMA-ES or Covariance Matrix Adaptation Evolution Strategy]]
 - [[Evolutionary Algorithms]]
 - [[Derivative-Free Optimization]]
-
-- [[REINFORCE Algorithm with Baseline]]
-
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 298 - 307

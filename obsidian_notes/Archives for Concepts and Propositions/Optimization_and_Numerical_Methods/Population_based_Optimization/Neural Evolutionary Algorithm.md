@@ -2,8 +2,8 @@
 tags:
   - concept
   - optimization/theory
-  - genetic_algorithm
   - evolutionary_algorithm
+  - deep_learning
   - evolutionary_computation
 keywords: 
 topics: 
@@ -28,14 +28,10 @@ date of note: 2024-08-24
 ##  Recommended Notes and References
 
 
-- [[Differentiable Cross-Entropy Method for Genetic Algorithms]]
-- [[Cross-Entropy Loss Function]]
-- [[EDA or Estimation of Distribution Algorithm]]
-- [[Genetic Algorithms and Genetic Programming]]
+- [[Neural Architecture Search]]
+
+- [[Artificial Neural Network and Deep Learning]]
 - [[Evolutionary Algorithms]]
 - [[Derivative-Free Optimization]]
-
-- [[REINFORCE Algorithm with Baseline]]
-
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 298 - 307
