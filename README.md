@@ -10,16 +10,16 @@ This repository is the latex-based notes for self-learning, mainly for math, sta
 
 ## Obsidian Graph
 
-<p float="left">
-  <img src="./obsidian_slip_box_graph/obsidian_slip_box_2024_08_23_labeled.png" width="40%" />
-  <img src="./obsidian_slip_box_graph/obsidian_slip_box_2024-08-22_22-13-47.png" width="40%"/> 
+<p align="middle">
+  <img src="./obsidian_slip_box_graph/obsidian_slip_box_2024_08_23_labeled.png" width="32%" />
+  <img src="./obsidian_slip_box_graph/obsidian_slip_box_2024-08-22_22-13-47.png" width="32%"/> 
 </p>
 
 
 
 ## Obsidian 3D Graph
 
-[![The 3D Plot of my Obsidian Knowledge Graph](./obsidian_slip_box_graph/slip_box_3d_graph_2024-08-23_1.39.44_PM)](https://youtu.be/es6aixIHAqY)
+![The 3D Plot of my Obsidian Knowledge Graph](./obsidian_slip_box_graph/slip_box_3d_graph_2024-08-23_1.39.44_PM)
 
 
 
