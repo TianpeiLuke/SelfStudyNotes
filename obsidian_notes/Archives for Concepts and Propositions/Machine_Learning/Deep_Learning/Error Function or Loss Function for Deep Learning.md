@@ -15,6 +15,33 @@ date of note: 2024-08-16
 >**Name**: 
 
 
+### Mean Square Error
+
+
+- [[Minimum Mean Square Estimation]]
+
+
+### Cross Entropy Error
+
+
+- [[Cross-Entropy Loss Function]]
+
+
+### Kullback-Leibler Divergence 
+
+- [[Kullback-Leibler Divergence]]
+
+
+### Log-Likihood Function
+
+- [[Likelihood Function]]
+- [[Maximum Likelihood Estimation]]
+
+
+
+
+
+
 
 ## Explanation
 

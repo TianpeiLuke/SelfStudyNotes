@@ -34,6 +34,7 @@ date of note: 2024-06-01
 	- [[Rectified Linear Unit as Activation for Deep Learning]]
 	- [[Sigmoid Function as Activation for Deep Learning]]
 - [[Error Function or Loss Function for Deep Learning]]
+	- [[Cross-Entropy Loss Function]]
 
 
 - [[Perceptron Algorithm]]

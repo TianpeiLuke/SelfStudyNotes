@@ -55,6 +55,8 @@ date of note: 2024-07-05
 >
 >In [[Probabilistic Graphical Models by Koller]] pp 385, 881, the ELBO is called an **energy functional**.
 
+- [[Cross-Entropy Loss Function]]
+
 ## ELBO as Lower Bound of Marginalized Likelihood
 
 >[!important] Definition
