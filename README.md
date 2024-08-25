@@ -19,7 +19,7 @@ This repository is the latex-based notes for self-learning, mainly for math, sta
 
 ## Obsidian 3D Graph
 
-![The 3D Plot of my Obsidian Knowledge Graph](./obsidian_slip_box_graph/slip_box_3d_graph_2024-08-23_1.39.44_PM)
+[![The 3D Plot of my Obsidian Knowledge Graph](./obsidian_slip_box_graph/slip_box_3d_graph_2024-08-23_1.39.44_PM.png)](https://youtu.be/es6aixIHAqY)
 
 
 
