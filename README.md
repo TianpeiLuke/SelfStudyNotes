@@ -14,6 +14,9 @@ This repository is the latex-based notes for self-learning, mainly for math, sta
 ![Slip Box Network](./obsidian_slip_box_graph/obsidian_slip_box_2024-08-22_22-13-47.png)
 
 
+## Obsidian 3D Graph
+![3D Graph](https://youtu.be/es6aixIHAqY)
+
 
 ## Table of Contents
 - [Boosting Methods](./self-study/boosting_methods/README.md)
