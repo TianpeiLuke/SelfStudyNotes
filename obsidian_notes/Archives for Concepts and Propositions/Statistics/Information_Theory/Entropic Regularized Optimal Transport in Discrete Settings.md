@@ -92,3 +92,4 @@ date of note: 2024-05-12
 - [[Optimal Transport in Space of Measures]]
 - [[Computational Optimal Transport by Peyre]]
 - [[Optimal Transport for Applied Mathematicians by Santambrogio]]
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 314 - 315

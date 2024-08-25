@@ -16,6 +16,8 @@ date of note: 2024-05-12
 ### Theory
 
 - [[Concepts and Theorems in Convex Analysis and Convex Optimization Theory]]
+- [[Theory and Algorithms for Convex Optimization]]
+
 
 ### Concepts
 
@@ -93,6 +95,12 @@ date of note: 2024-05-12
 - [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
 - [[Rayleigh Quotient for Eigenvalue Problem]]
 - [[Convex Optimization for Eigenvalue Problem]]
+
+
+### Derivative-Free Optimization
+
+- [[Theory and Algorithms for Gradient-Free Optimization]]
+- [[Derivative-Free Optimization]]
 
 
 
