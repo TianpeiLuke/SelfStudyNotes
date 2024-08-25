@@ -3,18 +3,16 @@ tags:
   - book
   - algorithm
   - critical_thinking
-  - statistics/bayesian
   - machine_learning/models
   - machine_learning/theory
 aliases:
-  - 0201algorithmliveby06s
+  - 0201algorithmliveby07s
 keywords:
-  - bayes_theorem
-  - bayesian_network
-  - bayesian_learning
+  - overfitting
+  - overfitting_machine_learning
+  - bias_variance_tradeoff
 topics:
-  - statistics/estimation
-  - statistics/bayesian
+  - machine_learning_theory
 date of note: 2024-08-15
 name: "Algorithms to Live By: The computer science of human decisions"
 author:
@@ -39,14 +37,16 @@ year: 2016
 
 
 
-- [[Bayes Theorem]]
-- [[Statistical Estimation Problem]]
-- [[Statistical Inference Problem]]
-- [[Statistical Decision Problem]]
+- [[Empirical Risk Minimization]]
+- [[Bias-Variance Tradeoff]]
 
 
-- [[Probability and Measure by Billingsley]]
-- [[A Probability Path by Resnick]]
+
+- [[Elements of Statistical Learning by Hastie]]
+- [[Boosting Foundations and Algorithms by Schapire]]
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]]
+- [[Deep Learning by Goodfellow]]
+- [[Deep Learning Foundations and Concepts by Bishop]]
 
 
 - [[Algorithms to Live By Book Summary]]

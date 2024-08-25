@@ -68,6 +68,15 @@ year: 2016
 
 - [[Algorithms to Live By Chapter 6 Bayes Rule]]
 
+- [[Algorithms to Live By Chapter 7 Overfitting]]
+
+- [[Algorithms to Live By Chapter 8 Relaxation]]
+
+- [[Algorithms to Live By Chapter 9 Randomness]]
+
+- [[Algorithms to Live By Chapter 10 Network]]
+
+- [[Algorithms to Live By Chapter 11 Game Theory]]
 
 
 -----------

@@ -3,18 +3,14 @@ tags:
   - book
   - algorithm
   - critical_thinking
-  - statistics/bayesian
-  - machine_learning/models
-  - machine_learning/theory
+  - computer_network/protocols
 aliases:
-  - 0201algorithmliveby06s
+  - 0201algorithmliveby10s
 keywords:
-  - bayes_theorem
-  - bayesian_network
-  - bayesian_learning
+  - computer_network
+  - computer_network/protocols
 topics:
-  - statistics/estimation
-  - statistics/bayesian
+  - computer_network
 date of note: 2024-08-15
 name: "Algorithms to Live By: The computer science of human decisions"
 author:
@@ -39,19 +35,8 @@ year: 2016
 
 
 
-- [[Bayes Theorem]]
-- [[Statistical Estimation Problem]]
-- [[Statistical Inference Problem]]
-- [[Statistical Decision Problem]]
-
-
-- [[Probability and Measure by Billingsley]]
-- [[A Probability Path by Resnick]]
-
 
 - [[Algorithms to Live By Book Summary]]
-
-
 
 
 ----------
