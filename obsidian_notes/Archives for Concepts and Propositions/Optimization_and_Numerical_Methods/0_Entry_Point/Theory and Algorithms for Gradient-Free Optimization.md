@@ -33,10 +33,6 @@ date of note: 2024-08-24
 
 - [[Block Coordinate Descent Algorithm]]
 
-### Stimulated Annealing
-
-- [[Stimulated Annealing]]
-
 
 ### Local Search
 
@@ -53,6 +49,7 @@ date of note: 2024-08-24
 
 - [[Stochastic Hill Climbing]]
 - [[Random Restart Hill Climbing]]
+- [[Simulated Annealing]]
 - [[Monte Carlo Tree Search]]
 
 

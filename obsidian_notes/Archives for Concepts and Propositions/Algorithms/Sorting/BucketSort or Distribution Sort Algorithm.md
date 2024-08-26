@@ -25,8 +25,8 @@ date of note: 2024-08-08
 ##  Recommended Notes and References
 
 
+- [[QuickSort Algorithm]]
 - [[HeapSort Algorithm]]
-- [[BucketSort or Distribution Sort Algorithm]]
 
 
 - [[Introduction to Algorithms by Cormen]]

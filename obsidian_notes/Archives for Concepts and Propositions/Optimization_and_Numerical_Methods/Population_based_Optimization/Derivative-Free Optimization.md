@@ -39,7 +39,7 @@ date of note: 2024-08-24
 
 ### Stimulated Annealing
 
-- [[Stimulated Annealing]]
+- [[Simulated Annealing]]
 - [[Metropolis-Hastings Algorithm]]
 
 ### Genetic Algorithms

@@ -29,6 +29,13 @@ date of note: 2024-08-24
 - [[Constrained Optimization Problem]]
 - [[Introduction to Evolutionary Computing by Eiben]] pp 28 - 32
 
+>[!info]
+>The evolutionary algorithm is used for **combinatorial optimization problem** when the feasible region is **discrete** (i.e. with *integer constraint*)
+
+- [[Combinatorial Optimization Problem]]
+- [[Integer Programming Problem]]
+
+
 >[!important] Definition
 >The **evolutionary algorithm** maintains a collection of $K$ *candidate solutions* called the **population** of $K$ good candidate. A *population* is a *multiset of genotypes*.
 >- Denote the population at time $t$ as $\mathcal{S}_{t}$.

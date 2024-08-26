@@ -46,7 +46,7 @@ year: 2016
 - [[Monte Carlo and Applications]]
 - [[Markov Chain Monte Carlo Methods]]
 - [[Metropolis-Hastings Algorithm]]
-- [[Stimulated Annealing]]
+- [[Simulated Annealing]]
 - [[Greedy Search and Hill Climbing]]
 - [[Stochastic Hill Climbing]]
 - [[Random Restart Hill Climbing]]

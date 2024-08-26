@@ -79,7 +79,7 @@ date of note: 2024-05-12
 >
 >- The **sampling-based** gradient decent algorithm can be viewed as an incremental algorithm, since for each update, the algorithm need to generate a sequence of samples and to update based on generated samples.
 
-- [[Stimulated Annealing]]
+- [[Simulated Annealing]]
 - [[Markov Chain Monte Carlo Methods]]
 
 ### Incremental Gradient Methods

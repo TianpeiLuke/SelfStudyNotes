@@ -40,7 +40,7 @@ date of note: 2024-08-25
 ##  Recommended Notes and References
 
 
-- [[Stimulated Annealing]]
+- [[Simulated Annealing]]
 - [[Stochastic Gradient Descent Algorithm]]
 - [[Gradient Descent Algorithm]]
 - [[Greedy Search and Hill Climbing]]

@@ -45,15 +45,14 @@ date of note: 2024-07-04
 
 ### Stochastic Optimization
 
-- [[Stimulated Annealing]]
+- [[Simulated Annealing]]
 
 - [[Stochastic Gradient Descent Algorithm]]
 - [[Stochastic Gradient Descent with Momentum]]
+- [[RMSProp Algorithm]]
+- [[AdaGrad Algorithm]]
 - [[Adam Algorithm]]
 
-
-
-- [[Langevin Dynamics and Langevin Sampling]]
 
 
 

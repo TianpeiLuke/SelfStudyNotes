@@ -59,7 +59,7 @@ date of note: 2024-05-14
 ##  Recommended Notes and References
 
 - [[Gibbs Distribution]]
-- [[Stimulated Annealing]]
+- [[Simulated Annealing]]
 - [[Restricted Boltzmann Machine]]
 
 - [[Gaussian Random Vector]]
