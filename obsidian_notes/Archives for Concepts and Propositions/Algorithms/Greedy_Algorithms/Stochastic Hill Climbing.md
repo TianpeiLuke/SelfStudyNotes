@@ -4,6 +4,8 @@ tags:
   - algorithm/search
   - machine_learning/algorithms
   - optimization/algorithm
+  - algorithm/greedy_algorithm
+  - algorithm/stochastic_search
 keywords: 
 topics: 
 name: 
@@ -28,7 +30,7 @@ date of note: 2024-08-25
 
 
 - [[Gradient Descent Algorithm]]
-
+- [[Greedy Search and Hill Climbing]]
 
 
 - [[Introduction to Algorithms by Cormen]]

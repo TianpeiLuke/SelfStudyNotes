@@ -4,6 +4,7 @@ tags:
   - algorithm/search
   - machine_learning/algorithms
   - optimization/algorithm
+  - algorithm/greedy_algorithm
 keywords: 
 topics: 
 name: 
@@ -28,8 +29,8 @@ date of note: 2024-08-25
 
 
 - [[Gradient Descent Algorithm]]
-- [[Greedy Search and Hill Climbing]]
 
+- [[Nelder–Mead Simplex Method]]
 
 - [[Introduction to Algorithms by Cormen]]
 - [[Algorithm Design Manual by Skiena]]

@@ -4,6 +4,8 @@ tags:
   - algorithm/search
   - machine_learning/algorithms
   - optimization/algorithm
+  - algorithm/greedy_algorithm
+  - algorithm/stochastic_search
 keywords: 
 topics: 
 name: 

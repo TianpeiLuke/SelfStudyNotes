@@ -41,6 +41,7 @@ date of note: 2024-08-24
 ### Local Search
 
 - [[Greedy Search and Hill Climbing]]
+- [[Nelder–Mead Simplex Method]]
 
 - [[A-star Heuristic Search]]
 - [[Backtracking]]
