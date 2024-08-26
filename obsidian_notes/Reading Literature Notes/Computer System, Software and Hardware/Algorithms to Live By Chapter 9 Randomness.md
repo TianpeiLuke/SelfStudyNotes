@@ -52,6 +52,7 @@ year: 2016
 - [[Random Restart Hill Climbing]]
 
 
+- [[Introduction to Evolutionary Computing by Eiben]]
 - [[Monte Carlo Statistical Methods by Robert]]
 - [[Elements of Statistical Learning by Hastie]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]
