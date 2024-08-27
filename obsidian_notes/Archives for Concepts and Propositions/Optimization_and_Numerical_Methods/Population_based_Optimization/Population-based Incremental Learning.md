@@ -27,7 +27,7 @@ date of note: 2024-08-24
 ##  Recommended Notes and References
 
 
-- [[Evolutionary Algorithms]]
+- [[Evolutionary Computation Algorithms]]
 - [[Derivative-Free Optimization]]
 
 

@@ -28,7 +28,7 @@ date of note: 2024-08-24
 
 - [[Gaussian Process]]
 - [[Probabilistic Graphical Models]]
-- [[Evolutionary Algorithms]]
+- [[Evolutionary Computation Algorithms]]
 
 
 - [[Deep Learning by Goodfellow]]

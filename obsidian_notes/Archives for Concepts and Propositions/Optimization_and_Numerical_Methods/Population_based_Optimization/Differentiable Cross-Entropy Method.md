@@ -31,7 +31,7 @@ date of note: 2024-08-24
 - [[Cross-Entropy Loss Function]]
 - [[EDA or Estimation of Distribution Algorithm]]
 - [[Genetic Algorithms]]
-- [[Evolutionary Algorithms]]
+- [[Evolutionary Computation Algorithms]]
 - [[Derivative-Free Optimization]]
 
 - [[REINFORCE Algorithm with Baseline]]

@@ -30,7 +30,7 @@ date of note: 2024-08-24
 - [[Genetic Algorithms]]
 
 - [[EDA or Estimation of Distribution Algorithm]]
-- [[Evolutionary Algorithms]]
+- [[Evolutionary Computation Algorithms]]
 - [[Derivative-Free Optimization]]
 
 

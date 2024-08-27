@@ -26,20 +26,20 @@ date of note: 2024-08-25
 - [[Gradient Descent Algorithm]]
 
 >[!important] Definition
->Consider a **discrete optimization problem**
+>Consider a **combinatorial optimization problem**
 >$$
 >\begin{align*}
 > \max_{x} &\; f(x)\\
-> \text{ s.t. }&\; x \in \mathcal{V}
+> \text{ s.t. }&\; x \in \mathcal{X}
 >\end{align*} 
 >$$
->where $G := (\mathcal{V}, \mathcal{E})$ is a graph and $f: \mathcal{V} \to \mathbb{R}$ is a real-value function. 
+>where $\mathcal{X}$ is a *(finite) discrete set* and $f: \mathcal{X} \to \mathbb{R}$ is a real-value function. 
 >
 >The **hill climbing** or **steapest ascent** or **greedy search** algorithm finds the *optimal solution* as follow:
 >- Initialize $x_{0}$
 >- Initialize $f_{max} = -\infty$, $x^{*}= x_{0}$
->- For $t=0,\,1\,{,}\ldots{,}\,$
->	- $$x_{t+1} = \arg\max_{x \in \mathcal{N}_{G}(x_{t})}f(x)$$ where $\mathcal{N}_{G}(x)$ is the *neighborhood* of $x$ in graph $G$, i.e. $$\mathcal{N}_{G}(x) := \{ y\in \mathcal{V}: xy\in \mathcal{E}  \}$$
+>- For $t=0,\,1\,{,}\ldots{,}\,$ until the *termination condition* is satisfied:
+>	- $$x_{t+1} = \arg\max_{x \in \mathcal{N}(x_{t})}f(x)$$ where $\mathcal{N}(x)$ is the *neighborhood* of $x$ in (*discrete topology* of) $\mathcal{X}$.
 >	- If $f(x_{t+1}) > f_{max}$:
 >		- $x^{*} = x_{t+1}$
 >		- $f_{max} = f(x_{t+1})$
@@ -51,8 +51,10 @@ date of note: 2024-08-25
 
 ^85f6f8
 
-- [[Graph]]
+- [[Combinatorial Optimization Problem]]
 - [[Unconstrained Local Minimization]]
+- [[Topology of Set]]
+
 
 ## Explanation
 
@@ -60,6 +62,8 @@ date of note: 2024-08-25
 >The *hill-climbing* algorithm is a **greedy algorithm**. 
 >
 >It is a discrete (gradient-free) version of *gradient descent algorithm*.
+
+- [[Gradient Descent Algorithm]]
 
 
 

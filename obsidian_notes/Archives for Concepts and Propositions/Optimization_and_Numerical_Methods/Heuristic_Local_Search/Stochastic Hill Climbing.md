@@ -45,6 +45,8 @@ date of note: 2024-08-25
 - [[Gradient Descent Algorithm]]
 - [[Greedy Search and Hill Climbing]]
 
+- [[Evolutionary Computation Algorithms]]
+
 
 - [[Introduction to Algorithms by Cormen]]
 - [[Algorithm Design Manual by Skiena]]

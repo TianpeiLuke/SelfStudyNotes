@@ -30,7 +30,7 @@ date of note: 2024-08-24
 
 - [[REINFORCE Algorithm with Baseline]]
 - [[CMA-ES or Covariance Matrix Adaptation Evolution Strategy]]
-- [[Evolutionary Algorithms]]
+- [[Evolutionary Computation Algorithms]]
 - [[Derivative-Free Optimization]]
 
 

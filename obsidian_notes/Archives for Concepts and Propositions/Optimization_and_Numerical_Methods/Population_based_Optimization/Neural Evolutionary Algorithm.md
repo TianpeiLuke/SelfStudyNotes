@@ -31,7 +31,7 @@ date of note: 2024-08-24
 - [[Neural Architecture Search]]
 
 - [[Artificial Neural Network and Deep Learning]]
-- [[Evolutionary Algorithms]]
+- [[Evolutionary Computation Algorithms]]
 - [[Derivative-Free Optimization]]
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 298 - 307

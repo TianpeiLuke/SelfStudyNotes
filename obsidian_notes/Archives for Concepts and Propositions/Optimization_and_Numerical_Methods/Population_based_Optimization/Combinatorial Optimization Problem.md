@@ -64,7 +64,7 @@ date of note: 2024-08-25
 
 ### Evolutionary Computation
 
-- [[Evolutionary Algorithms]]
+- [[Evolutionary Computation Algorithms]]
 - [[Genetic Algorithms]]
 - [[Particle Swarm Optimization]]
 

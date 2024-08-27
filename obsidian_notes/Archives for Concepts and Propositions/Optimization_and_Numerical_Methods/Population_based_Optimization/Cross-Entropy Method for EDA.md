@@ -71,7 +71,7 @@ date of note: 2024-08-24
 - [[EDA or Estimation of Distribution Algorithm]]
 
 - [[Natural Evolutionary Strategies]]
-- [[Evolutionary Algorithms]]
+- [[Evolutionary Computation Algorithms]]
 - [[Derivative-Free Optimization]]
 
 - [[REINFORCE Algorithm with Baseline]]

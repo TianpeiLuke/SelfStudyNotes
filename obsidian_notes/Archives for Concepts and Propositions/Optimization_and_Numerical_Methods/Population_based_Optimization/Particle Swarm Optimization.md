@@ -28,7 +28,7 @@ date of note: 2024-08-24
 
 
 - [[Ant Colony Optimization]]
-- [[Evolutionary Algorithms]]
+- [[Evolutionary Computation Algorithms]]
 - [[Derivative-Free Optimization]]
 
 

@@ -19,11 +19,11 @@ date of note: 2024-08-24
 >[!important]
 >**Name**: EDA or Estimation of Distribution Algorithm
 
-![[Evolutionary Algorithms#^ac42fa]]
+![[Evolutionary Computation Algorithms#^ac42fa]]
 
-![[Evolutionary Algorithms#^12072d]]
+![[Evolutionary Computation Algorithms#^12072d]]
 
-- [[Evolutionary Algorithms]]
+- [[Evolutionary Computation Algorithms]]
 
 >[!important] Definition
 >**Estimation of distribution algorithms (EDA)** are based on the idea of replacing the creation of offspring by ‘standard’ variation operators (*recombination* and *mutation*) by a three-step process:
@@ -113,7 +113,7 @@ date of note: 2024-08-24
 
 - [[Population-based Incremental Learning]]
 - [[Genetic Algorithms]]
-- [[Evolutionary Algorithms]]
+- [[Evolutionary Computation Algorithms]]
 - [[Derivative-Free Optimization]]
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 298 - 307

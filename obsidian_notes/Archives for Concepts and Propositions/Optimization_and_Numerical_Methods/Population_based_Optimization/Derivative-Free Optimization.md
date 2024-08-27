@@ -48,14 +48,11 @@ date of note: 2024-08-24
 - [[Stochastic Hill Climbing]]
 - [[Random Restart Hill Climbing]]
 - [[Simulated Annealing]]
-- [[Metropolis-Hastings Algorithm]]
 
 
 ### Evolutionary Computation
 
-#### Evolutionary Algorithms
-
-- [[Evolutionary Algorithms]]
+- [[Evolutionary Computation Algorithms]]
 - [[Evolutionary Strategies]]
 - [[Evolutionary Programming]]
 - [[Genetic Algorithms]]
@@ -66,7 +63,8 @@ date of note: 2024-08-24
 - [[Natural Evolutionary Strategies]]
 - [[CMA-ES or Covariance Matrix Adaptation Evolution Strategy]]
 
-#### Swam Intelligence
+
+### Swam Intelligence
 
 - [[Particle Swarm Optimization]]
 - [[Ant Colony Optimization]]
@@ -80,7 +78,7 @@ date of note: 2024-08-24
 ##  Recommended Notes and References
 
 
-- [[Evolutionary Algorithms]]
+- [[Evolutionary Computation Algorithms]]
 - [[Evolutionary Strategies]]
 - [[Particle Swarm Optimization]]
 

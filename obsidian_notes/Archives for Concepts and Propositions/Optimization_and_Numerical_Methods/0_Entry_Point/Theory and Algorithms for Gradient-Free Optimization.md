@@ -57,7 +57,9 @@ date of note: 2024-08-24
 
 - [[Comparison of Population-based Methods]]
 
-- [[Evolutionary Algorithms]]
+### Evolutionary Computation
+
+- [[Evolutionary Computation Algorithms]]
 - [[Evolutionary Programming]]
 - [[EDA or Estimation of Distribution Algorithm]]
 - [[Population-based Incremental Learning]]

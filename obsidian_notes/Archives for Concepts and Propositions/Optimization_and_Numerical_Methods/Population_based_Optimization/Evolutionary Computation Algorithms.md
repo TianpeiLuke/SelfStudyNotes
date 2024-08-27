@@ -2,7 +2,6 @@
 tags:
   - concept
   - optimization/theory
-  - evolutionary_algorithm
   - evolutionary_computation
 keywords:
   - evolutionary_algorithm
@@ -83,6 +82,11 @@ date of note: 2024-08-24
 >The principle behind **recombination** is simple – by *mating* two individuals with different but desirable features, we can produce an *offspring* that *combines both of those features*.
 >
 >-- Eiben, A. E., & Smith, J. E. (2015). _Introduction to evolutionary computing_. Springer-Verlag Berlin Heidelberg. pp 32
+
+>[!info]
+>*Evolutionary computation* can be seen as a *stochastic local search*, where at each iteration the algorithm produce a batch of candidate solutions (*offspring population*) that improve objective function (*fitness*) locally. 
+
+- [[Stochastic Hill Climbing]]
 
 
 

@@ -29,7 +29,7 @@ date of note: 2024-08-24
 
 - [[Greedy Search and Hill Climbing]]
 - [[Natural Evolutionary Strategies]]
-- [[Evolutionary Algorithms]]
+- [[Evolutionary Computation Algorithms]]
 - [[Derivative-Free Optimization]]
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 298 - 307
