@@ -56,23 +56,23 @@ year: 2016
 
 ## Book Chapter Summary
 
-- [[Algorithms to Live By Chapter 1 Optimal Stopping]]
+- [[Algorithms to Live By Chapter 01 Optimal Stopping]]
 
-- [[Algorithms to Live By Chapter 2 Explore and Exploit]]
+- [[Algorithms to Live By Chapter 02 Explore and Exploit]]
 
-- [[Algorithms to Live By Chapter 3 Sorting]]
+- [[Algorithms to Live By Chapter 03 Sorting]]
 
-- [[Algorithms to Live By Chapter 4 Caching]]
+- [[Algorithms to Live By Chapter 04 Caching]]
 
-- [[Algorithms to Live By Chapter 5 Scheduling]]
+- [[Algorithms to Live By Chapter 05 Scheduling]]
 
-- [[Algorithms to Live By Chapter 6 Bayes Rule]]
+- [[Algorithms to Live By Chapter 06 Bayes Rule]]
 
-- [[Algorithms to Live By Chapter 7 Overfitting]]
+- [[Algorithms to Live By Chapter 07 Overfitting]]
 
-- [[Algorithms to Live By Chapter 8 Relaxation]]
+- [[Algorithms to Live By Chapter 08 Relaxation]]
 
-- [[Algorithms to Live By Chapter 9 Randomness]]
+- [[Algorithms to Live By Chapter 09 Randomness]]
 
 - [[Algorithms to Live By Chapter 10 Network]]
 
