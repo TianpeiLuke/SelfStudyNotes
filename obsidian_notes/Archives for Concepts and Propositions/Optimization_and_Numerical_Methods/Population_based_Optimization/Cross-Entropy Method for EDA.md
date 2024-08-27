@@ -27,10 +27,29 @@ date of note: 2024-08-24
 >- In particular, we estimate $\mu_{t+1}, \Sigma_{t+1}$ bases on *selected top $K$ fittest samples* $\mathcal{S}_{t}^{(s)}$
 >- This is closely related to **sequential monte carlo (SMC)** methods [[Sequential Importance Sampling]]
 
+- [[Cross-Entropy Loss Function]]
 - [[EDA or Estimation of Distribution Algorithm]]
+
+
+
+>[!important] Definition
+>The **cross entropy method (CME)** generate *offsprings* based on the following steps:
+>- *Initialize* population $\mathcal{S}_{0}$ with $K$ random *candidate solutions*;
+>- For $t= 0,\,1\,{,}\ldots{,}\,$ until the *termination condition* is satisfied:
+>	- **Compute** the **fitness** for each candidate $X_{t}^{i}$ in $\mathcal{S}_{t}$, $$f(X_{t}^{i})$$
+>	- **Select** a *subpopulation* $\mathcal{S}_{t}^{(s)}$ of $m$ **elites**  based on the *fittest* subset of  population. $$\mathcal{S}_{t}^{(s)} = \left\{ X_{t}^{i} \in \mathcal{S}_{t}: f(X_{t}^{i}) \ge f(X_{t}^{(m)}) \right\}$$ where $X_{t}^{(j)}$ is the *j*-th fittest samples.
+>	- **Model Fitting**: estimate the *mean* and *covariance* of the Gaussian distribution
+>		- $$\mu_{t+1} = \frac{1}{m}\sum_{X_{t}^{i} \in \mathcal{S}_{t}^{(s)}}X_{t}^{i}$$
+>		- $$\Sigma_{t+1} = \frac{1}{m}\sum_{X_{t}^{i} \in \mathcal{S}_{t}^{(s)}}\left( X_{t}^{i} - \mu_{t+1}\right)\left( X_{t}^{i} - \mu_{t+1}\right)^{T}$$
+>	- **Model Sampling**:
+>		- **Generate** a set of $K$ candidates according to the *learned Gaussian distribution* $$X_{t+1}^{i} \sim \mathcal{N}(\mu_{t+1}, \Sigma_{t+1}), \quad i=1\,{,}\ldots{,}\,K$$
+>	- Choose the *offspring population* as the generated candidates $$\mathcal{S}_{t+1} = \left\{ X_{t+1}^{i}, \; i=1\,{,}\ldots{,}\,K \right\}.$$
+
 - [[Gaussian Random Vector]]
 - [[Gaussian Graphical Model]]
 - [[Gaussian Bayesian Network]]
+- [[Expectation-Maximization Algorithm]]
+
 
 ## Explanation
 
@@ -51,6 +70,7 @@ date of note: 2024-08-24
 - [[Cross-Entropy Loss Function]]
 - [[EDA or Estimation of Distribution Algorithm]]
 
+- [[Natural Evolutionary Strategies]]
 - [[Evolutionary Algorithms]]
 - [[Derivative-Free Optimization]]
 

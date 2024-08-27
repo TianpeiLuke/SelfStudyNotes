@@ -96,6 +96,10 @@ date of note: 2024-08-24
 - [[Auto-Encoder]]
 
 
+>[!quote]
+>the first EDA based on the theory of PGMs was called **Factorized Distribution Algorithm (FDA)** and it computed a factorization from a problem structure known apriori. In the field of **EDAs**, the term FDA was initially used to refer to *EDAs* that learned only the parameters of the probabilistic models and not the structure [98, 99, 100, 134, 145, 183]. However, the term was later also used to cover EDAs that *learn the structure from data* [81, 97, 104, 108, 109, 131, 146]. In this sense, the “FDA” and “EDA” terms were both used indistinctly to refer to the same class of algorithm. While the term “*EDA*” attempts to emphasize the role played in the algorithm by the *distribution estimation step*, the term “*FDA*” highlights that a *factorization of the distribution* is used in the estimation.
+>
+>-- Santana, R. (2017). Gray-box optimization and factorized distribution algorithms: where two worlds collide. _arXiv preprint arXiv:1707.03093_. pp 4
 
 
 
