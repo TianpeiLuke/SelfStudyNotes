@@ -33,7 +33,11 @@ year: 2016
 ##  Recommended Notes
 
 
+- [[Nash Equilibrium in Mixed Strategies]]
+- [[Nash Existence Theorem for Normal Form Game]]
 
+
+- [[Dominated Mixed Strategy]]
 - [[Payoff Function in Decision Problem]]
 - [[Ration Choice Paradigm]]
 - [[Expected Payoff in Statistical Decision Problem]]

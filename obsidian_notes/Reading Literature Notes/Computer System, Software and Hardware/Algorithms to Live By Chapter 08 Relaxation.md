@@ -43,6 +43,7 @@ year: 2016
 - [[Methods of Lagrangian Multipliers]]
 - [[Lagrange Dual Problem]]
 
+- [[Constrained Optimization Problem]]
 - [[Regularized Loss Minimization]]
 
 - [[Combinatorial Optimization Problem]]
@@ -51,6 +52,8 @@ year: 2016
 - [[Optimal Assignment Problem]]
 - [[Optimal Transport in Discrete Setting]]
 
+- [[Traveling Salesman Problem]]
+- [[Minimum Spanning Tree Problem]]
 
 
 - [[Convex Optimization by Boyd]]

@@ -59,6 +59,7 @@ year: 2016
 - [[Deep Learning Foundations and Concepts by Bishop]]
 - [[Introduction to Algorithms by Cormen]]
 - [[Algorithm Design Manual by Skiena]]
+- [[Introduction to Evolutionary Computing by Eiben]]
 
 
 - [[Algorithms to Live By Book Summary]]

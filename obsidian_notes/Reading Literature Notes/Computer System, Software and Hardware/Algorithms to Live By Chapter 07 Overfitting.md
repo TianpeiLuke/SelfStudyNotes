@@ -36,9 +36,19 @@ year: 2016
 ##  Recommended Notes
 
 
+- [[Early Stopping for Deep Learning]]
+
+- [[Regularized Loss Minimization]]
+- [[Inductive Bias in Machine Learning]]
+- [[Structural Risk Minimization]]
+
 
 - [[Empirical Risk Minimization]]
 - [[Bias-Variance Tradeoff]]
+
+- [[Tikhonov Regularization in Optimization and Learning]]
+- [[Ridge Regression and L2 Regularization]]
+- [[LASSO and Sparsity-Induced Least Square]]
 
 
 

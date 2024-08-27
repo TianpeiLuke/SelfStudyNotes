@@ -34,6 +34,7 @@ year: 2016
 -----------
 ##  Recommended Notes
 
+
 - [[Secretary Problem and 37 percent Rule]]
 - [[Weak Optional Sampling Theorem]]
 - [[Doob Optional Sampling Theorem]]
