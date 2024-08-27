@@ -36,4 +36,4 @@ date of note: 2024-08-26
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]
 
 
-- [[Algorithms to Live By Chapter 8 Relaxation]]
+- [[Algorithms to Live By Chapter 08 Relaxation]]

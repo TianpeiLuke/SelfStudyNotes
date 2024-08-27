@@ -33,5 +33,5 @@ date of note: 2024-08-26
 
 
 
-- [[Algorithms to Live By Chapter 1 Optimal Stopping]]
+- [[Algorithms to Live By Chapter 01 Optimal Stopping]]
 - Wikipedia [Secretary_problem](https://en.wikipedia.org/wiki/Secretary_problem)

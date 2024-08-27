@@ -53,5 +53,5 @@ date of note: 2024-08-26
 - [[Foundations of Machine Learning by Mohri]]
 
 
-- [[Algorithms to Live By Chapter 8 Relaxation]]
+- [[Algorithms to Live By Chapter 08 Relaxation]]
 - Wikipedia [Constraint_satisfaction_problem](https://en.wikipedia.org/wiki/Constraint_satisfaction_problem)

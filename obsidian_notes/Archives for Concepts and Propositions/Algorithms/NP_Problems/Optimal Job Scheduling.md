@@ -39,6 +39,6 @@ date of note: 2024-08-26
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]
 
 
-- [[Algorithms to Live By Chapter 5 Scheduling]]
+- [[Algorithms to Live By Chapter 05 Scheduling]]
 - Wikipedia [Optimal_job_scheduling](https://en.wikipedia.org/wiki/Optimal_job_scheduling)
 

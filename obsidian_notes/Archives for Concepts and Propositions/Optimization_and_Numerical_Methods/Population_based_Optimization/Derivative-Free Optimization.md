@@ -37,27 +37,36 @@ date of note: 2024-08-24
 
 - [[Block Coordinate Descent Algorithm]]
 
-### Stimulated Annealing
+### Local Search
 
+- [[Greedy Search and Hill Climbing]]
+- [[Nelder–Mead Simplex Method]]
+- [[A-star Heuristic Search]]
+
+### Stochastic Local Search
+
+- [[Stochastic Hill Climbing]]
+- [[Random Restart Hill Climbing]]
 - [[Simulated Annealing]]
 - [[Metropolis-Hastings Algorithm]]
 
-### Genetic Algorithms
 
-- [[Genetic Algorithms]]
-- [[EDA or Estimation of Distribution Algorithm]]
-- [[Cross-Entropy Method for EDA]]
-- [[Differentiable Cross-Entropy Method]]
+### Evolutionary Computation
 
-### Evolutionary Algorithms and Evolutionary Strategy
+#### Evolutionary Algorithms
 
 - [[Evolutionary Algorithms]]
 - [[Evolutionary Strategies]]
+- [[Evolutionary Programming]]
+- [[Genetic Algorithms]]
+- [[Genetic Programming]]
+- [[EDA or Estimation of Distribution Algorithm]]
+- [[Cross-Entropy Method for EDA]]
+- [[Differentiable Cross-Entropy Method]]
 - [[Natural Evolutionary Strategies]]
 - [[CMA-ES or Covariance Matrix Adaptation Evolution Strategy]]
 
-
-### Swam Intelligence
+#### Swam Intelligence
 
 - [[Particle Swarm Optimization]]
 - [[Ant Colony Optimization]]
