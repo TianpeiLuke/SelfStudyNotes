@@ -27,15 +27,12 @@ date of note: 2024-08-24
 ##  Recommended Notes and References
 
 
-- [[Cross-Entropy Method for Genetic Algorithms]]
-- [[Cross-Entropy Loss Function]]
+- [[Genetic Algorithms]]
+
 - [[EDA or Estimation of Distribution Algorithm]]
-- [[Genetic Algorithms and Genetic Programming]]
 - [[Evolutionary Algorithms]]
 - [[Derivative-Free Optimization]]
 
-- [[REINFORCE Algorithm with Baseline]]
 
-
+- [[Introduction to Evolutionary Computing by Eiben]] pp 14, 99, 104
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 298 - 307
-- [[Introduction to Evolutionary Computing by Eiben]] pp 110

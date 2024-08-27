@@ -40,6 +40,7 @@ date of note: 2024-05-15
 - [[Weak Optional Sampling Theorem]]
 - [[Doob Optional Sampling Theorem]]
 - [[Wald Identity and Wald Equation]]
+- [[Secretary Problem and 37 percent Rule]]
 
 ### Martingale Convergence Theorem
 

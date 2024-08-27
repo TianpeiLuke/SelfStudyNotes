@@ -38,6 +38,8 @@ date of note: 2024-05-12
 >\sum_{i,j}C_{i,j} P_{i,j}.
 >$$
 
+- [[Optimal Assignment Problem]]
+- [[Algorithms to Live By Chapter 8 Relaxation]]
 
 >[!info]
 >$\boldsymbol{P}$ is called a **probabilistic transport**. Here the coupling matrix $\boldsymbol{P}$  describes *the amount of mass* flowing from bin $i$ toward bin $j$, or from the mass found at $\boldsymbol{x}_i$ toward $\boldsymbol{y}_j$ in the formalism of discrete measures.
@@ -94,5 +96,9 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
+- [[Optimal Assignment Problem]]
+- [[Optimal Transport in Space of Measures]]
+
+- [[Optimal Transport for Applied Mathematicians by Santambrogio]]
 - [[Computational Optimal Transport by Peyre]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 307

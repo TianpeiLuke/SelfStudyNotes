@@ -26,6 +26,8 @@ date of note: 2024-08-24
 >- The terms **genotype**, **chromosome**, and **individual** are used to denote points in the space where the evolutionary search actually take place. 
 >- The space of genotype is called the **genotype space**
 
+^ac42fa
+
 - [[Constrained Optimization Problem]]
 - [[Introduction to Evolutionary Computing by Eiben]] pp 28 - 32
 
@@ -42,6 +44,8 @@ date of note: 2024-08-24
 >- The **diversity** of a *population* is a measure of the number of *different solutions*.
 >- At each time $t$, an *individual* in *population* at $t+1$ is called a **child** or an **offspring**.
 >- An *individual* in the *population* $\mathcal{S}_{t}$ that is selected at $t$ is called a **parent**.
+
+^12072d
 
 
 >[!important]
@@ -91,7 +95,7 @@ date of note: 2024-08-24
 
 
 - [[Population-based Incremental Learning]]
-- [[Genetic Algorithms and Genetic Programming]]
+- [[Genetic Algorithms]]
 - [[Random Restart Hill Climbing]]
 - [[Stochastic Hill Climbing]]
 - [[Greedy Search and Hill Climbing]]

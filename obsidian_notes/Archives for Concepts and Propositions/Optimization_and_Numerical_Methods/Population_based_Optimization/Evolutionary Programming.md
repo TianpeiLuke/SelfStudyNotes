@@ -2,8 +2,8 @@
 tags:
   - concept
   - optimization/theory
+  - genetic_algorithm
   - evolutionary_algorithm
-  - evolutionary_computation
 keywords: 
 topics: 
 name: 
@@ -27,20 +27,12 @@ date of note: 2024-08-24
 ##  Recommended Notes and References
 
 
-- [[Gradient Descent Algorithm#Riemannian Manifold]]
-- [[Fisher Information Metric of Statistical Manifold]]
-- [[Geodesic on Manifolds]]
 
-- [[Fisher Information for Exponential Family]]
-
-- [[Exponential Family of Distributions]]
-- [[Log-Partition Function of Exponential Family]]
-
-- [[Evolutionary Strategies]]
+- [[REINFORCE Algorithm with Baseline]]
 - [[CMA-ES or Covariance Matrix Adaptation Evolution Strategy]]
 - [[Evolutionary Algorithms]]
 - [[Derivative-Free Optimization]]
 
 
-- [[Introduction to Evolutionary Computing by Eiben]]
+- [[Introduction to Evolutionary Computing by Eiben]] pp 14, 101
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 298 - 307

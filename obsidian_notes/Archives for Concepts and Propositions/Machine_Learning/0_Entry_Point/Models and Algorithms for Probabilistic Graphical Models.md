@@ -213,6 +213,7 @@ date of note: 2024-06-01
 
 - [[Statistical Estimation Problem]]
 - [[Maximum Likelihood Estimation of Bayesian Network]]
+- [[EDA or Estimation of Distribution Algorithm]]
 
 
 ### Causal Graphical Model

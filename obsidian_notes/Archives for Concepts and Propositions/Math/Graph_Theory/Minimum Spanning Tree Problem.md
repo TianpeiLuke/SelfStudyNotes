@@ -34,12 +34,14 @@ date of note: 2024-07-15
 - [[Capacity and Network]]
 - [[Graph]]
 
+
 - [[Optimal Transport in Discrete Setting]]
 - [[Wasserstein Distance]]
 
 - [[Spanning Subgraph]]
 - [[Spanning Tree and Chord]]
 
+- [[Combinatorial Optimization Problem]]
 
 - [[Introduction to Linear Optimization by Bertsimas]] pp 343
 - [[Graph Theory by Diestel]] pp 141, 171

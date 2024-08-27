@@ -28,6 +28,7 @@ routing, involve moving distributions, and that thread appears in all of the sem
 
 ### Definition of Optimal Transport
 
+- [[Optimal Assignment Problem]]
 - [[Optimal Transport in Discrete Setting]]
 - [[Optimal Transport in Space of Measures]]
 

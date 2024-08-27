@@ -44,10 +44,10 @@ date of note: 2024-08-24
 
 ### Genetic Algorithms
 
-- [[Genetic Algorithms and Genetic Programming]]
+- [[Genetic Algorithms]]
 - [[EDA or Estimation of Distribution Algorithm]]
-- [[Cross-Entropy Method for Genetic Algorithms]]
-- [[Differentiable Cross-Entropy Method for Genetic Algorithms]]
+- [[Cross-Entropy Method for EDA]]
+- [[Differentiable Cross-Entropy Method]]
 
 ### Evolutionary Algorithms and Evolutionary Strategy
 

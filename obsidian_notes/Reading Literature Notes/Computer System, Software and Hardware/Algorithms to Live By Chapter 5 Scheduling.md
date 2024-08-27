@@ -34,7 +34,8 @@ year: 2016
 ##  Recommended Notes
 
 
-
+- [[Optimal Job Scheduling]]
+- [[Combinatorial Optimization Problem]]
 
 
 - [[Algorithms to Live By Book Summary]]

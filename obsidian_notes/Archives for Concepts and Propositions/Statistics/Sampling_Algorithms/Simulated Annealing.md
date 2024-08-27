@@ -32,7 +32,7 @@ date of note: 2024-07-04
 - [[Stochastic Hill Climbing]]
 
 >[!important] Definition
->The **Simulated Annealing algorithm** can be implemented as 
+>The **Simulated Annealing (SA) algorithm** can be implemented as 
 >- Simulate $\xi$ from an **instrumental distribution** with density $$g(\lVert \xi - X_{t} \rVert);$$
 >- **Accept** $X_{t+1} = \xi$ with **probability**
 >$$ 
@@ -123,8 +123,8 @@ date of note: 2024-07-04
 
 
 - [[All of Statistics A Concise Course by Wasserman]]
-- [[Monte Carlo Statistical Methods by Robert]]
-- [[Monte Carlo Strategies in Scientific Computing by Liu]]
+- [[Monte Carlo Statistical Methods by Robert]] pp 163 - 172, 209, 287, 315
+- [[Monte Carlo Strategies in Scientific Computing by Liu]] pp 209
 
 - [[Probabilistic Graphical Models by Koller]] pp 524
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 301

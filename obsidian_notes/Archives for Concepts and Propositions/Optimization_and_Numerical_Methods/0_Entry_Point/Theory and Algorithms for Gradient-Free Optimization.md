@@ -53,17 +53,18 @@ date of note: 2024-08-24
 - [[Monte Carlo Tree Search]]
 
 
-### Genetic Algorithms
+### Population-based Algorithm
 
-- [[Genetic Algorithms and Genetic Programming]]
-
-### Evolutionary Algorithm
+- [[Comparison of Population-based Methods]]
 
 - [[Evolutionary Algorithms]]
+- [[Evolutionary Programming]]
 - [[EDA or Estimation of Distribution Algorithm]]
 - [[Population-based Incremental Learning]]
-- [[Cross-Entropy Method for Genetic Algorithms]]
-- [[Differentiable Cross-Entropy Method for Genetic Algorithms]]
+- [[Genetic Algorithms]]
+- [[Genetic Programming]]
+- [[Cross-Entropy Method for EDA]]
+- [[Differentiable Cross-Entropy Method]]
 - [[Evolutionary Strategies]]
 - [[Natural Evolutionary Strategies]]
 - [[CMA-ES or Covariance Matrix Adaptation Evolution Strategy]]
