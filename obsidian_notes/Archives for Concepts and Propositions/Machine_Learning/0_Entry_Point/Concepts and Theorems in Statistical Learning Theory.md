@@ -100,7 +100,7 @@ date of note: 2024-06-01
 - [[Reproducing Kernel of RKHS]]
 - [[RKHS of Gaussian Random Function]]
 - [[Covariance Function of Gaussian Process]]
-
+- [[Representer Theorem]]
 
 ### Margin-based Generalization Bound
 

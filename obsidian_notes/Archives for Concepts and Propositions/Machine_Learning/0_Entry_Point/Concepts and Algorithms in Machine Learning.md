@@ -54,6 +54,7 @@ date of note: 2024-06-01
 - [[Reproducing Kernel of RKHS]]
 - [[Margin as a Measure of Classification Confidence]]
 - [[Support Vector Machine]]
+- [[Representer Theorem]]
 
 #### Expectation-Maximization 
 
