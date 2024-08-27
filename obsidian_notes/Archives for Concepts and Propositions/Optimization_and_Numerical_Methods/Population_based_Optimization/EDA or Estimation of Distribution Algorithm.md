@@ -2,8 +2,8 @@
 tags:
   - concept
   - optimization/theory
-  - genetic_algorithm
   - evolutionary_algorithm
+  - evolutionary_computation
 keywords:
   - eda_algorithm
   - estimation_of_distribution_algorithm
@@ -52,6 +52,8 @@ date of note: 2024-08-24
 - [[Bayesian Network on Directed Acyclic Graph]]
 - [[Gibbs Sampling for Graphical Model]] 
 - [[Maximum Likelihood Estimation of Bayesian Network]]
+
+![[boa_eda.png]]
 
 
 ## Explanation

@@ -2,8 +2,8 @@
 tags:
   - concept
   - optimization/theory
-  - genetic_algorithm
   - evolutionary_algorithm
+  - evolutionary_computation
 keywords:
   - evolutionary_algorithm
 topics:

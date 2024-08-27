@@ -2,8 +2,8 @@
 tags:
   - concept
   - optimization/theory
-  - genetic_algorithm
   - evolutionary_algorithm
+  - evolutionary_computation
 keywords: 
 topics: 
 name: 
@@ -30,6 +30,7 @@ date of note: 2024-08-24
 
 - [[REINFORCE Algorithm with Baseline]]
 - [[CMA-ES or Covariance Matrix Adaptation Evolution Strategy]]
+- [[Natural Evolutionary Strategies]]
 - [[Evolutionary Algorithms]]
 - [[Derivative-Free Optimization]]
 
