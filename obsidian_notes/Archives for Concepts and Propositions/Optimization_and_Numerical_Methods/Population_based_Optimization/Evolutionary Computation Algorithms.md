@@ -77,7 +77,9 @@ date of note: 2024-08-24
 ## Explanation
 
 >[!important] Definition
->Evolutionary algorithm is a subfield of **evolutionary computation**, a generic **population-based** *meta-heuristic optimization* 
+>Evolutionary algorithm is a subfield of **evolutionary computation**, a generic **population-based** **meta-heuristic optimization** 
+>
+>The other **meta-heuristic** optimization algorithms include **swam intelligence algorithms**
 
 >[!quote]
 >The principle behind **recombination** is simple – by *mating* two individuals with different but desirable features, we can produce an *offspring* that *combines both of those features*.
@@ -88,7 +90,6 @@ date of note: 2024-08-24
 >*Evolutionary computation* can be seen as a *stochastic local search*, where at each iteration the algorithm produce a batch of candidate solutions (*offspring population*) that improve objective function (*fitness*) locally. 
 
 - [[Stochastic Hill Climbing]]
-
 
 
 

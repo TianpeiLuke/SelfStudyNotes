@@ -1,13 +1,11 @@
 ---
 tags:
   - concept
-  - optimization/theory
-  - genetic_algorithm
-  - evolutionary_algorithm
+  - evolutionary_computation
 keywords: 
 topics: 
 name: 
-date of note: 2024-08-24
+date of note: 2024-08-27
 ---
 
 ## Concept Definition
@@ -27,10 +25,13 @@ date of note: 2024-08-24
 ##  Recommended Notes and References
 
 
+- [[Genetic Programming]]
+- [[Genetic Algorithms]]
+
+- [[Evolutionary Computation Algorithms]]
 - [[Combinatorial Optimization Problem]]
 - [[Derivative-Free Optimization]]
 
-- [[Traveling Salesman Problem]]
 
 
-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 298 - 307
+- [[Introduction to Evolutionary Computing by Eiben]] pp 110 - 112

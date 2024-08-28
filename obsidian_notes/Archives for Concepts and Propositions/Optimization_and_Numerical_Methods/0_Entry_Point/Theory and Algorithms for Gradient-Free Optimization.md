@@ -69,6 +69,7 @@ date of note: 2024-08-24
 - [[Evolutionary Programming]]
 - [[Genetic Algorithms]]
 - [[Genetic Programming]]
+- [[Differential Evolution Algorithm]]
 
 - [[EDA or Estimation of Distribution Algorithm]]
 - [[Population-based Incremental Learning]]
