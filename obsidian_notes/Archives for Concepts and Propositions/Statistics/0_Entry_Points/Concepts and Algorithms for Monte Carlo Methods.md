@@ -46,6 +46,9 @@ date of note: 2024-07-04
 ### Stochastic Optimization
 
 - [[Simulated Annealing]]
+- [[Annealed Importance Sampling]]
+
+- [[Monte Carlo Expectation Maximization]]
 
 - [[Stochastic Gradient Descent Algorithm]]
 - [[Stochastic Gradient Descent with Momentum]]

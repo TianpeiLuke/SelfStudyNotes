@@ -94,6 +94,20 @@ date of note: 2024-05-12
 >  
 
 - [[Majorization-Minimization Algorithm]]
+- [[Cross-Entropy Loss Function]]
+
+## Cross Entropy Method and Evolutionary Computation
+
+>[!info]
+>Note that the **majorization function** is proportional to the **cross entropy term**
+>$$
+>- Q(\theta; \hat{\theta}_{k}) \propto  \mathbb{E}_{ Z \sim p(z|x,\, \hat{\theta}_{k}) }\left[ -\log p(Z\,|\,x, \theta)  \right] := H_{ce}(p(\cdot|x,\, \hat{\theta}_{k})\,,\, p(\cdot\,|\,x, \theta))
+>$$
+
+
+- [[Cross-Entropy Loss Function]]
+- Brookes, D., Busia, A., Fannjiang, C., Murphy, K., & Listgarten, J. (2020). A view of estimation of distribution algorithms through the lens of expectation-maximization. _Proceedings of the 2020 Genetic and Evolutionary Computation Conference Companion_, 189–190. [https://doi.org/10.1145/3377929.3389938](https://doi.org/10.1145/3377929.3389938)
+
 
 
 ## em Algorithm via E-Projection and M-Projection
@@ -146,6 +160,10 @@ date of note: 2024-05-12
 
 - [[Variational Expectation-Maximization]]
 
+## Monte Carlo EM
+
+- [[Monte Carlo Expectation Maximization]]
+
 
 
 -----------
@@ -165,6 +183,7 @@ date of note: 2024-05-12
 - [[Elements of Information Theory by Cover]]
 - [[Nonlinear Programming by Bertsekas]] pp 554
 - [[Probabilistic Graphical Models by Koller]] pp 868- 892, 907-929
+- [[Monte Carlo Statistical Methods by Robert]] pp 176 - 182
 
 
 - [[Kullback-Leibler Divergence]]

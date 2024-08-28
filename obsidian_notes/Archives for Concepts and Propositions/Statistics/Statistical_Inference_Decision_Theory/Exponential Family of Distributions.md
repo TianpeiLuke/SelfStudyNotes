@@ -148,6 +148,7 @@ date of note: 2024-06-24
 
 ^c95a01
 
+- [[Log-Likelihood Score Function]]
 - [[Likelihood Function]]
 - [[Information Projection and Moment Projection]]
 

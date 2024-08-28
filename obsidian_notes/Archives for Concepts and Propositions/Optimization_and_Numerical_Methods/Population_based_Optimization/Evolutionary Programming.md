@@ -27,6 +27,8 @@ date of note: 2024-08-24
 ##  Recommended Notes and References
 
 
+- [[Parent Selection for Evolutionary Computation]]
+- [[Survivor Selection for Evolutionary Computation]]
 
 - [[REINFORCE Algorithm with Baseline]]
 - [[CMA-ES or Covariance Matrix Adaptation Evolution Strategy]]

@@ -77,6 +77,7 @@ date of note: 2024-06-27
 ^8780a9
 
 - [[Convex Function]]
+- [[Log-Likelihood Score Function]]
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]] pp 62
 
 #### Proof

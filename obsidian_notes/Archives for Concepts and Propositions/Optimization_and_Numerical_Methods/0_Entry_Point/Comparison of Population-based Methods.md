@@ -24,6 +24,8 @@ date of note: 2024-08-26
 | Particle Swarm Optimization (PSO)<br><br>[[Particle Swarm Optimization]]<br>                           | Real-valued vectors                                                                                                              | **None**                                    | Adding **velocity vector**                                       | **Deterministic** (each parent creates one offspring via mutation) | **Generational** (offspring replace parents)                                         |                                                                                                                            |
 | Estimation of Distribution algorithm (EDA) <br><br>[[EDA or Estimation of Distribution Algorithm]]<br> | Discrete or Real-valued vectors                                                                                                  | None                                        | None<br> <br>                                                    | **Fitness proportional**                                           | Generational                                                                         | Replace recombination and mutation with (**model selection**, **model estimation**, **model sampling**)                    |
 
+- [[Parent Selection for Evolutionary Computation]]
+- [[Survivor Selection for Evolutionary Computation]]
 - [[Introduction to Evolutionary Computing by Eiben]] pp 99 - 118
 
 

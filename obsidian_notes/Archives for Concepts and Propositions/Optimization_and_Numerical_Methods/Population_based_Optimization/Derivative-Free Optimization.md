@@ -26,6 +26,9 @@ date of note: 2024-08-24
 
 - [[Integer Programming Problem]]
 
+>[!important] Definition
+>A class of DFO is called the **black-box optimization** where the algorithm can *only access* $f$ via its output $f(x)$.
+
 
 ## DFO Methods
 
@@ -53,6 +56,8 @@ date of note: 2024-08-24
 ### Evolutionary Computation
 
 - [[Evolutionary Computation Algorithms]]
+- [[Parent Selection for Evolutionary Computation]]
+- [[Survivor Selection for Evolutionary Computation]]
 - [[Evolutionary Strategies]]
 - [[Evolutionary Programming]]
 - [[Genetic Algorithms]]

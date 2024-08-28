@@ -51,6 +51,7 @@ date of note: 2024-08-03
 >- The score function is the **difference** between the **sample mean** and the **model mean** of log-likelihood gradient un-normalized term $\nabla_{\theta}\log \hat{\mathcal{P}}(x; \theta)$.
 >  
 
+- [[Log-Likelihood Score Function]]
 - [[Markov Network on Undirected Graph]]
 
 >[!important] Definition

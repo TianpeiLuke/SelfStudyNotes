@@ -93,6 +93,7 @@ date of note: 2024-06-01
 - [[Partial Correlation]]
 - [[Non-Parametric Least Square Estimation]]
 
+
 ### Regularization
 
 - [[Ridge Regression and L2 Regularization]]
@@ -129,6 +130,7 @@ date of note: 2024-06-01
 - [[Exponential Family as Probabilistic Graphical Model]]
 - [[Exponential Family as Affine Subspace in Statistical Manifold]]
 
+
 ### Estimation of Multivariate Gaussian Distribution
 
 - [[Gaussian Random Vector]]
@@ -141,11 +143,13 @@ date of note: 2024-06-01
 - [[Shrinkage Estimator]]
 - [[James–Stein Estimator]]
 
+
 ### Asymptotic Optimality
 
 - [[Asymptotic Bias of Estimator]]
 - [[Asymptotic Efficiency]]
 - [[Asymptotic Efficiency of Maximum Likelihood Estimation]]
+
 
 ### Expectation Maximization
 
@@ -154,6 +158,8 @@ date of note: 2024-06-01
 - [[Expectation-Maximization Algorithm]]
 - [[Evidence Lower Bound for Exponential Family]]
 - [[Expectation-Maximization Algorithm for Exponential Family]]
+- [[Monte Carlo Expectation Maximization]]
+
 
 ### Nonparametric Estimation
 

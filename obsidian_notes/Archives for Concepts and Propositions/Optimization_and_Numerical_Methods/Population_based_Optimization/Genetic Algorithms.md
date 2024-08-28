@@ -27,6 +27,10 @@ date of note: 2024-08-24
 ##  Recommended Notes and References
 
 
+- [[Genetic Programming]]
+- [[Parent Selection for Evolutionary Computation]]
+- [[Survivor Selection for Evolutionary Computation]]
+
 - [[EDA or Estimation of Distribution Algorithm]]
 - [[Evolutionary Computation Algorithms]]
 - [[Derivative-Free Optimization]]

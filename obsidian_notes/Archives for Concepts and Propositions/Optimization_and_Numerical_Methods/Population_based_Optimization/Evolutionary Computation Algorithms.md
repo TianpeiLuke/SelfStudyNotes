@@ -17,7 +17,7 @@ date of note: 2024-08-24
 >**Name**: Evolutionary Algorithms
 
 >[!important] Definition
->The **evolutionary algorithm** solves the constrained optimization problem $$\min_{x\in \mathcal{X}} f(x)$$
+>The **evolutionary computation algorithm** solves the constrained optimization problem $$\min_{x\in \mathcal{X}} f(x)$$
 >where
 >-  the objective function $f: \mathcal{X} \to \mathbb{R}$ is called the **fitness function**.
 >- A feasible solution  $x\in \mathcal{X}$ is called a **candidate solution**, or **phenotype**, or an **individual**
@@ -46,6 +46,7 @@ date of note: 2024-08-24
 
 ^12072d
 
+- [[Parent Selection for Evolutionary Computation]]
 
 >[!important]
 >The role of **variation operators** is to create new individuals from old ones. In the corresponding *phenotype space* this amounts to generating new *candidate solutions*.

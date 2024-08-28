@@ -9,6 +9,7 @@ keywords:
   - greedy_algorithm
   - hill_climbing
   - gradient_free_optimization
+  - local_search
 topics:
   - optimization
   - algorithm/search
@@ -58,7 +59,7 @@ date of note: 2024-08-25
 
 ## Explanation
 
->[!important]
+>[!info]
 >The *hill-climbing* algorithm is a **greedy algorithm**. 
 >
 >It is a discrete (gradient-free) version of *gradient descent algorithm*.
@@ -74,6 +75,7 @@ date of note: 2024-08-25
 - [[Random Restart Hill Climbing]]
 - [[Gradient Descent Algorithm]]
 
+- [[Tabu Search]]
 - [[Nelder–Mead Simplex Method]]
 
 - [[Introduction to Algorithms by Cormen]]

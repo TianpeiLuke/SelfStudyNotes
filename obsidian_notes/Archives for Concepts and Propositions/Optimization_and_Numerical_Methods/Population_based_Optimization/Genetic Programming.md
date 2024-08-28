@@ -28,6 +28,8 @@ date of note: 2024-08-24
 
 
 - [[Genetic Algorithms]]
+- [[Parent Selection for Evolutionary Computation]]
+- [[Survivor Selection for Evolutionary Computation]]
 
 - [[EDA or Estimation of Distribution Algorithm]]
 - [[Evolutionary Computation Algorithms]]

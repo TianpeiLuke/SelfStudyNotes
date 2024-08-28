@@ -37,6 +37,8 @@ date of note: 2024-08-24
 ### Local Search
 
 - [[Greedy Search and Hill Climbing]]
+- [[Random Restart Hill Climbing]]
+- [[Tabu Search]]
 - [[Nelder–Mead Simplex Method]]
 
 - [[A-star Heuristic Search]]
@@ -48,8 +50,8 @@ date of note: 2024-08-24
 ### Stochastic Local Search
 
 - [[Stochastic Hill Climbing]]
-- [[Random Restart Hill Climbing]]
 - [[Simulated Annealing]]
+- [[Annealed Importance Sampling]]
 - [[Monte Carlo Tree Search]]
 
 
@@ -60,13 +62,19 @@ date of note: 2024-08-24
 ### Evolutionary Computation
 
 - [[Evolutionary Computation Algorithms]]
+- [[Parent Selection for Evolutionary Computation]]
+- [[Survivor Selection for Evolutionary Computation]]
+
+
 - [[Evolutionary Programming]]
-- [[EDA or Estimation of Distribution Algorithm]]
-- [[Population-based Incremental Learning]]
 - [[Genetic Algorithms]]
 - [[Genetic Programming]]
+
+- [[EDA or Estimation of Distribution Algorithm]]
+- [[Population-based Incremental Learning]]
 - [[Cross-Entropy Method for EDA]]
 - [[Differentiable Cross-Entropy Method]]
+
 - [[Evolutionary Strategies]]
 - [[Natural Evolutionary Strategies]]
 - [[CMA-ES or Covariance Matrix Adaptation Evolution Strategy]]
