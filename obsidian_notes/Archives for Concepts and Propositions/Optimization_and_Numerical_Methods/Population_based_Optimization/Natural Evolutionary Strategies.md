@@ -47,10 +47,14 @@ date of note: 2024-08-24
 
 - [[Newton Method]]
 
+## Natural Parameters in Exponential Family
+
+- [[Exponential Family of Distributions]]
+- [[Log-Partition Function of Exponential Family]]
+- [[Gaussian Graphical Model]]
+
 
 ## Natural Gradient in Information Geometry
-
-
 
 
 - [[Gradient Descent Algorithm#Riemannian Manifold]]

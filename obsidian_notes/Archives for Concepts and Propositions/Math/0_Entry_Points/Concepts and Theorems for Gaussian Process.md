@@ -40,6 +40,7 @@ date of note: 2024-05-30
 - [[Gaussian Quantile Function or Probit Function]]
 - [[Independence in Gaussian Distribution]]
 - [[Marginal and Conditional Distribution of Gaussian]]
+- [[Natural Parameter and Mean Parameter for Gaussian Distribution]]
 
 - [[Gaussian Process]]
 - [[Sub-Gaussian Process]]
@@ -158,7 +159,7 @@ date of note: 2024-05-30
 - [[Independence in Gaussian Distribution]]
 - [[Canonical Form of Gaussian Graphical Model]]
 - [[Gaussian Bayesian Network]]
-- [[Gaussian Graphical Model and Gaussian Markov Random Field]]
+- [[Gaussian Graphical Model]]
 - [[Gaussian Belief Propagation]]
 - [[Inverse Covariance Estimation]]
 - [[Partial Correlation]]

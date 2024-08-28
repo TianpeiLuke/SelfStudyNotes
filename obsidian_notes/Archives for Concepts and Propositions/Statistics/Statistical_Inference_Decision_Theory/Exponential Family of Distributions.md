@@ -14,6 +14,8 @@ keywords:
   - maximum_entropy_learning
   - fisher_information
   - information_geometry
+  - natural_parameterization
+  - mean_parameterization
 topics:
   - probability
   - machine_learning_models
@@ -301,7 +303,7 @@ date of note: 2024-06-24
 
 
 - [[Maximum Likelihood Estimation]]
-
+- [[Natural Parameter and Mean Parameter for Gaussian Distribution]]
 
 
 

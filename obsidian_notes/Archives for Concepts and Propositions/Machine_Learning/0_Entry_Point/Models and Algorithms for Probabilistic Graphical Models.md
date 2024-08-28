@@ -202,7 +202,7 @@ date of note: 2024-06-01
 - [[Canonical Form of Gaussian Graphical Model]]
 - [[Independence in Gaussian Distribution]]
 - [[Gaussian Bayesian Network]]
-- [[Gaussian Graphical Model and Gaussian Markov Random Field]]
+- [[Gaussian Graphical Model]]
 - [[Gaussian Belief Propagation]]
 - [[Inverse Covariance Estimation]]
 - [[Partial Correlation]]

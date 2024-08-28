@@ -35,7 +35,7 @@ date of note: 2024-05-12
 >[!info]
 >The Gaussian belief propagation algorithm utilizes the information form, or canonical form, of the Gaussian distribution
 
-![[Gaussian Graphical Model and Gaussian Markov Random Field#^162c43]]
+![[Gaussian Graphical Model#^162c43]]
 
 >[!important] 
 >It is noted that the **minimal cluster graph** that satisfies the **family preserving property** would contain *cluster* for each edge $(ij)$ so that $K_{ij} \neq 0$.
@@ -170,7 +170,7 @@ date of note: 2024-05-12
 - [[Sum-Product Belief-Update Message Passing Algorithm for Clique Tree]]
 - [[Sum-Product Belief Propagation Algorithm for Clique Tree]]
 - [[Canonical Form of Gaussian Graphical Model]]
-- [[Gaussian Graphical Model and Gaussian Markov Random Field]]
+- [[Gaussian Graphical Model]]
 - [[Gaussian Bayesian Network]]
 
 - [[Gaussian Random Vector]]

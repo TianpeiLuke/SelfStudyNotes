@@ -6,6 +6,8 @@ tags:
 keywords:
   - log_partition_function
   - exponential_family
+  - natural_parameterization
+  - mean_parameterization
 topics: 
 name: Log-Partition Function of Exponential Family
 date of note: 2024-06-27
@@ -231,6 +233,7 @@ date of note: 2024-06-27
 - [[Exponential Family of Distributions]]
 - [[Exponential Family as Probabilistic Graphical Model]]
 - [[Exponential Family and Convex Duality]]
+- [[Natural Parameter and Mean Parameter for Gaussian Distribution]]
 
 - [[Log-Partition Function and Score Function of Graphical Models]]
 - [[Partition Function for AdaBoost]]

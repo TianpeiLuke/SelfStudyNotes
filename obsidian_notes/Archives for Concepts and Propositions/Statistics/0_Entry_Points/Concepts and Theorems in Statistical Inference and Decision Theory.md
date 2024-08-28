@@ -129,7 +129,7 @@ date of note: 2024-06-01
 - [[Exponential Family and Convex Duality]]
 - [[Exponential Family as Probabilistic Graphical Model]]
 - [[Exponential Family as Affine Subspace in Statistical Manifold]]
-
+- [[Natural Parameter and Mean Parameter for Gaussian Distribution]]
 
 ### Estimation of Multivariate Gaussian Distribution
 

@@ -119,7 +119,7 @@ date of note: 2024-07-25
 
 - [[Inverse Covariance Estimation]]
 - [[Independence in Gaussian Distribution]]
-- [[Gaussian Graphical Model and Gaussian Markov Random Field]]
+- [[Gaussian Graphical Model]]
 - [[Gaussian Random Vector]]
 
 

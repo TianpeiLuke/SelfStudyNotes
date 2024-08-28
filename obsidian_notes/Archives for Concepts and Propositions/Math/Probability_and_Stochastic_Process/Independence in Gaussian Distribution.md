@@ -56,5 +56,5 @@ date of note: 2024-07-25
 
 - [[Gaussian Random Vector]]
 - [[Gaussian Measure]]
-- [[Gaussian Graphical Model and Gaussian Markov Random Field]]
+- [[Gaussian Graphical Model]]
 

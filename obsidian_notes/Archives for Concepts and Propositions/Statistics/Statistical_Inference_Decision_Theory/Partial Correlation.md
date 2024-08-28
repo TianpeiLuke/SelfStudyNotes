@@ -29,7 +29,7 @@ date of note: 2024-07-24
 
 - [[Linear Regression]]
 
-- [[Gaussian Graphical Model and Gaussian Markov Random Field]]
+- [[Gaussian Graphical Model]]
 - [[Conditional Independence]]
 
 - [[Schur Complement and Inversion of Block Matrix]]

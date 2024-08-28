@@ -176,7 +176,7 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 - [[Gaussian Belief Propagation]]
-- [[Gaussian Graphical Model and Gaussian Markov Random Field]]
+- [[Gaussian Graphical Model]]
 
 - [[Inverse Covariance Estimation]]
 - [[Gaussian Process]]
