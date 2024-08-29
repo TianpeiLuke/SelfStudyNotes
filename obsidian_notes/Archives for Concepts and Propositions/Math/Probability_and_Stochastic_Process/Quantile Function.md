@@ -81,6 +81,11 @@ date of note: 2024-08-02
 - [[Gaussian Quantile Function or Probit Function]]
 
 
+## Sampling
+
+
+- [[Parent Selection for Evolutionary Computation]]
+
 
 
 -----------

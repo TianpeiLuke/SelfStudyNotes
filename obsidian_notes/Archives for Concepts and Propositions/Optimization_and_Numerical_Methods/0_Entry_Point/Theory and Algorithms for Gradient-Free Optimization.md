@@ -62,6 +62,7 @@ date of note: 2024-08-24
 ### Evolutionary Computation
 
 - [[Evolutionary Computation Algorithms]]
+- [[Population Management Models for Evolutionary Computation]]
 - [[Parent Selection for Evolutionary Computation]]
 - [[Survivor Selection for Evolutionary Computation]]
 
@@ -85,6 +86,12 @@ date of note: 2024-08-24
 
 - [[Particle Swarm Optimization]]
 - [[Ant Colony Optimization]]
+
+### Multi-Objective Optimization
+
+- [[Multi-Objective Optimization Problem]]
+
+
 
 
 

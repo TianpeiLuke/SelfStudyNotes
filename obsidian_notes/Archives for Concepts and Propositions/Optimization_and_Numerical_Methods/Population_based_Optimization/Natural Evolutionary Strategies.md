@@ -39,6 +39,7 @@ date of note: 2024-08-24
 - [[Evolutionary Strategies]]
 - [[Fisher Information for Exponential Family]]
 
+- [[Survivor Selection for Evolutionary Computation#Fitness-based Replacement]]
 
 ## Explanation
 

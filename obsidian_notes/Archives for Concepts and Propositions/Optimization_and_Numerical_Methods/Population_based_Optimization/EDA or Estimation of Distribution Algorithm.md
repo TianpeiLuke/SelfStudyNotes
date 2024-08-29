@@ -34,19 +34,24 @@ date of note: 2024-08-24
 ^ad5721
 
 >[!important] Definition
+>Consider the maximization problem $$\max_{x\in \mathcal{X}} f(x)$$
+>
 >The **estimation of distribution algorithms (EDA)** generate *offsprings* based on the following steps:
->- *Initialize* population $\mathcal{S}_{0}$ with $\lambda$ random *candidate solutions*;
+>- *Initialize* population $\mathcal{S}_{0}$ with $\mu$ random *candidate solutions*;
 >- For $t= 0,\,1\,{,}\ldots{,}\,$ until the *termination condition* is satisfied:
 >	- **Compute** the **fitness** for each candidate $X_{t}^{i}$ in $\mathcal{S}_{t}$, $$f(X_{t}^{i})$$
->	- **Select** a *subpopulation* $\mathcal{S}_{t}^{(s)}$ based on the *fittest* subset of the current population. $$\mathcal{S}_{t}^{(s)} = \left\{ X_{t}^{i}: f(X_{t}^{i}) \ge f(X_{t}^{(m)}) \right\}$$ where $$f(X_{t}^{(1)})  \,{\ge}\ldots{\ge}\, f(X_{t}^{(K)})$$
+>	- **Select** a *subpopulation* $\mathcal{S}_{t}^{(s)}$ of size $\lambda$ based on the *fitness* of individuals.  For instance, 
+>		- **Truncation selection**: $$\mathcal{S}_{t}^{(s)} = \left\{ X_{t}^{i}: f(X_{t}^{i}) \ge f(X_{t}^{(\lambda)}) \right\}$$ where $f(X_{t}^{(1)})  \,{\ge}\ldots{\ge}\, f(X_{t}^{(\mu)})$
+>		- **Fitness proportionate selection**: select an individual $x_{i}$ from $\mathcal{S}_{t}$ based on probability $$P(i) = \frac{f(x_{i})}{\sum_{j=1}^{\mu}f(x_{j})}$$
 >	- **Model Selection**: 
 >		- Create a *graph* $G = (V, E)$ based on dependencies in distribution $\mathcal{P}_{t}^{(s)}$
 >	- **Model Fitting**: 
 >		- Estimate parameters for a **bayesian network** $\mathcal{B} = (G, \mathcal{P}_{t}^{(s)})$ with graph $G$ and distribution $\mathcal{P}_{t}^{(s)}$ estimated from the subpopulation  $\mathcal{S}_{t}^{(s)}$
 >	- **Model Sampling**:
->		- **Generate** a set of $\lambda$ candidates according to the learned *bayesian network* $\mathcal{B}$ $$X_{t+1}^{1} \,{,}\ldots{,}\,X_{t+1}^{\lambda} \sim \mathcal{B}$$
->	- Choose the *offspring population* as the generated candidates $$\mathcal{S}_{t+1} = \left\{ X_{t+1}^{1} \,{,}\ldots{,}\,X_{t+1}^{\lambda} \right\} $$
+>		- **Generate** a set of $\mu$ candidates according to the learned *bayesian network* $\mathcal{B}$ $$X_{t+1}^{1} \,{,}\ldots{,}\,X_{t+1}^{\mu} \sim \mathcal{B}$$
+>	- Choose the *offspring population* as the generated candidates $$\mathcal{S}_{t+1} = \left\{ X_{t+1}^{1} \,{,}\ldots{,}\,X_{t+1}^{\mu} \right\} $$
 
+- [[Parent Selection for Evolutionary Computation]]
 - [[Combinatorial Optimization Problem]]
 - [[Probabilistic Graphical Models]]
 - [[Bayesian Network on Directed Acyclic Graph]]

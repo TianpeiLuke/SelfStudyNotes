@@ -34,6 +34,8 @@ date of note: 2024-06-24
 > I(\theta)_{i,j} :=  \mathbb{E}_{ \mathcal{P}_{\theta} }\left[\frac{\partial}{ \partial \theta^i}\log f_{\theta}(X) \; \frac{\partial}{ \partial \theta^j}\log f_{\theta}(X)  \right].
 >$$
 
+^03df64
+
 
 - [[Parametric Models]]
 - [[Probability Density Function of Random Variable]]

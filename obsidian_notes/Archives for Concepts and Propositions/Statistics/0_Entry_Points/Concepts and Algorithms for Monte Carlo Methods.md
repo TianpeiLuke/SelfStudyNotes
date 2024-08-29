@@ -19,6 +19,8 @@ date of note: 2024-07-04
 
 - [[Monte Carlo and Applications]]
 - [[Fundamental Theorem of Simulation]]
+- [[Roulettle Wheel Algorithm to Resample from CDF]]
+
 - [[Accept-Reject Sampling]]
 - [[Importance Sampling]]
 

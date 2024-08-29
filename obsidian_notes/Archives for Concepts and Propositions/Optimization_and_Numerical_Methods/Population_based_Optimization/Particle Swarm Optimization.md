@@ -58,11 +58,12 @@ date of note: 2024-08-24
 >- *Require*: **inertia** $w\in \mathbb{R}$
 >- *Require*: **learning rate** for **personal influence** and **social influence** $\phi_{1}, \phi_{2} \in \mathbb{R}$
 >- *Require*: initial population of size $\lambda$ $$\mathcal{S}_{0} = \left\{ (x_{0}^{1}, v_{0}^{1}, b_{0}^{1}) \,{,}\ldots{,}\,  (x_{0}^{\lambda}, v_{0}^{\lambda}, b_{0}^{\lambda})\right\} $$ where 
->	- $x_{0}^{i}\in \mathbb{R}^{n}$, $v_{0}^{i} \in \mathbb{R}^{n}$, $b_{0}^{i} = x_{0}^{i}$
+>	- $x_{0}^{i}\in \mathcal{X} \subset \mathbb{R}^{n}$, $v_{0}^{i} \in \mathbb{R}^{n}$, $b_{0}^{i} = x_{0}^{i}$
 >- *Initialize* the population's **global best solution** (**champion**) $$c_{0} = \arg\min_{i=1\,{,}\ldots{,}\,\lambda}f(b_{0}^{i})$$
 >- For $t=0\,,1\,{,}\ldots{,}\,$ until termination condition is met
 >	- For each *particle* in **swam** $i=1\,{,}\ldots{,}\,\lambda$ 
->		- Generate two *random diagonal matrices* with diagonal entities drawn from *uniform distribution* in $[0,1]$ $$U_{1}[i,i],\;  U_{2}[i,i] \sim \text{Uniform}[0,1], \;i=1\,{,}\ldots{,}\,n$$
+>		- Generate *random variables* from *uniform distribution* in $[0,1]$ for each dimension $$U_{1, j},\;  U_{2,j} \sim \text{Uniform}[0,1], \;j=1\,{,}\ldots{,}\,n$$
+>			- Denote $$U_{k} = \text{diag}(U_{k,1} \,{,}\ldots{,}\,U_{k,n}), \;\;k=1,2$$
 >		- *Compute* the **new velocity** $$v_{t+1}^{i} =  w\,v_{t}^{i} + \phi_{1}\,U_{1}\,\left(b_{t}^{i} - x_{t}^{i}\right) + \phi_{2}\,U_{2}\,\left(c_{t} - x_{t}^{i}\right)$$
 >		- *Move* the **position** from $x_{t}^{i}$  by a new velocity $v_{t+1}^{i}$ $$x_{t+1}^{i} = x_{t}^{i} + v_{t+1}^{i}$$
 >		- *Update* the **personal best position** in history $$b_{t+1}^{i} = \left\{\begin{array}{ll}x_{t}^{i} & \text{ if }f(x_{t+1}^{i}) < f(b_{t}^{i})\\ b_{t}^{i} & \text{ otherwise} \end{array} \right.$$
@@ -147,3 +148,4 @@ date of note: 2024-08-24
 - [[Introduction to Evolutionary Computing by Eiben]] pp 112
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 298 - 307
 - Wikipedia [Particle_swarm_optimization](https://en.wikipedia.org/wiki/Particle_swarm_optimization)
+- Documentation [pymoo pso](https://pymoo.org/algorithms/soo/pso.html)

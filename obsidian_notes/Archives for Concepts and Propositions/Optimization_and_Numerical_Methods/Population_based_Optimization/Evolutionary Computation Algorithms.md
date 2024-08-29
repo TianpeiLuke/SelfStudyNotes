@@ -62,6 +62,8 @@ date of note: 2024-08-24
 >	- It chooses *what parts* of each parent are combined, and *how* this is done, depend on *random drawings*.
 >	- This is like *sexual reproduction*.
 
+^8340f3
+
 
 
 >[!important] Definition
@@ -70,7 +72,9 @@ date of note: 2024-08-24
 >- The role of **parent selection** or **mate selection** is to distinguish among individuals based on their quality, and, in particular, to allow the *better individuals* to become *parents* of the next generation.
 >- Together with the **survivor selection** mechanism, *parent selection* is responsible for pushing *quality improvements*.
 
+### Population Management
 
+- [[Population Management Models for Evolutionary Computation]]
 
 
 
