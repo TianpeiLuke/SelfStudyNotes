@@ -84,3 +84,4 @@ date of note: 2024-08-25
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 299
 - [[Introduction to Evolutionary Computing by Eiben]] pp 47
+- [[Artificial Intelligence Modern Approach by Russell]]

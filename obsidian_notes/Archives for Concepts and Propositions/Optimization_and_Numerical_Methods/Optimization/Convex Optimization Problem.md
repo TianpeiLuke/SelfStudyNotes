@@ -81,3 +81,4 @@ date of note: 2024-05-12
 - [[Convex Optimization by Boyd]]
 - [[Numerical Optimization by Nocedal]]
 - [[Nonlinear Programming by Bertsekas]]
+- [[Artificial Intelligence Modern Approach by Russell]]

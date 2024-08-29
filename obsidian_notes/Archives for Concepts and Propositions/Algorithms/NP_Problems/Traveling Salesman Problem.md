@@ -36,6 +36,7 @@ date of note: 2024-08-26
 - [[Algorithm Design Manual by Skiena]]
 - [[Introduction to Evolutionary Computing by Eiben]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]
+- [[Artificial Intelligence Modern Approach by Russell]]
 
 
 - [[Algorithms to Live By Chapter 08 Relaxation]]

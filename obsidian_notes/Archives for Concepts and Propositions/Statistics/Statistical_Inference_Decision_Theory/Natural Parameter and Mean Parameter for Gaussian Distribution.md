@@ -110,7 +110,7 @@ date of note: 2024-08-28
 >and
 >$$
 >\begin{align*}
-> I_{\theta, \Sigma}(\theta, \Theta)  = \frac{1}{2} \left[ \begin{array}{cc} - \Theta^{-1} & \Lambda_{kl}\,\theta \\[5pt] \theta^{T}\,\Lambda_{kl} & \lambda_{klmn} - \theta^{T}\,\Lambda_{klmn}\,\theta \end{array} \right] 
+> I_{\theta, \Sigma}(\theta, \Theta)  = \frac{1}{2} \left[ \begin{array}{cc} - \Theta^{-1} & \Lambda_{kl}\,\theta \\[5pt] \theta^{T}\,\Lambda_{mn} & \lambda_{klmn} - \theta^{T}\,\Lambda_{klmn}\,\theta \end{array} \right] 
 >\end{align*}
 >$$
 >where 

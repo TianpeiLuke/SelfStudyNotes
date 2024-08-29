@@ -236,6 +236,7 @@ date of note: 2024-06-01
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]]
 
 
+- [[Artificial Intelligence Modern Approach by Russell]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]
 - [[Deep Learning by Goodfellow]]
 - [[Deep Learning Foundations and Concepts by Bishop]]

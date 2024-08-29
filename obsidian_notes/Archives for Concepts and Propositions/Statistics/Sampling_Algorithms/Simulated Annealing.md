@@ -129,3 +129,4 @@ date of note: 2024-07-04
 - [[Probabilistic Graphical Models by Koller]] pp 524
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 301
 - [[Introduction to Evolutionary Computing by Eiben]] pp 47, 142
+- [[Artificial Intelligence Modern Approach by Russell]]

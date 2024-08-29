@@ -30,3 +30,5 @@ date of note: 2024-08-08
 - [[Breadth-First Search]]
 - [[Depth-First Search]]
 - [[Graph]]
+
+- [[Artificial Intelligence Modern Approach by Russell]]

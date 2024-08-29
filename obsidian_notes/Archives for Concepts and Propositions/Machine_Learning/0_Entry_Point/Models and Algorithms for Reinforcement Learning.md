@@ -182,4 +182,4 @@ date of note: 2024-06-01
 - [[An Introduction to Deep Reinforcement Learning by Francois-Lavet]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]
 
-
+- [[Artificial Intelligence Modern Approach by Russell]]

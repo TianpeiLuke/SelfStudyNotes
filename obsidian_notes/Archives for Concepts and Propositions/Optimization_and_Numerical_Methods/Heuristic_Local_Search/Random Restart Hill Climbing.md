@@ -60,3 +60,4 @@ date of note: 2024-08-25
 - [[Algorithms to Live By Book Summary]]
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 299
+- [[Artificial Intelligence Modern Approach by Russell]]

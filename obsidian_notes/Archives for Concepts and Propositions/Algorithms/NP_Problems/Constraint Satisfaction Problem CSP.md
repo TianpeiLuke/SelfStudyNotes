@@ -51,6 +51,7 @@ date of note: 2024-08-26
 - [[Probabilistic Graphical Models by Koller]]
 - [[Understanding Machine Learning by Shalev-Shwartz]]
 - [[Foundations of Machine Learning by Mohri]]
+- [[Artificial Intelligence Modern Approach by Russell]]
 
 
 - [[Algorithms to Live By Chapter 08 Relaxation]]

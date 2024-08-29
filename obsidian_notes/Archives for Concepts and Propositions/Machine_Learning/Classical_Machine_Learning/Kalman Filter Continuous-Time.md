@@ -44,3 +44,4 @@ date of note: 2024-05-12
 - [[Introduction to Stochastic Calculus by Klebaner]]
 - [[Introduction to Stochastic Differential Equations by Evans]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 357 - 377
+- [[Artificial Intelligence Modern Approach by Russell]]
