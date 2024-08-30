@@ -85,6 +85,15 @@ date of note: 2024-05-12
 - [[Estimation Error and Approximation Error]]
 - [[Tikhonov Regularization in Optimization and Learning]]
 
+## Minimum Description Length
+
+- [[Minimum Description Length]]
+
+## Occam's Razor
+
+- [[Occam Razor]]
+
+
 
 -----------
 ##  Recommended Notes and References

@@ -78,8 +78,14 @@ date of note: 2024-06-01
 - [[Bias-Complexity Tradeoff and Overfitting]]
 - [[Non-Uniform Learning]]
 - [[Structural Risk Minimization]]
+
+- [[Minimum Description Length]]
+- [[Occam Razor]]
+
 - [[Regularized Loss Minimization]]
 - [[Tikhonov Regularization in Optimization and Learning]]
+
+
 
 - [[PAC-Bayes Learnable]]
 
