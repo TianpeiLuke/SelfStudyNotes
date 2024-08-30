@@ -99,9 +99,16 @@ date of note: 2024-08-26
 - [[Linear Optimization Problem]]
 - [[Optimal Transport in Space of Measures]]
 
+## Algorithms that Approximately Solve the Optimal Assignment
+
+- [[Optimal Transport in Discrete Setting]]
+- [[Wasserstein Distance]]
+- [[k-Means Clustering]]
+
 
 ## NP Problem
 
+- [[Constraint Satisfaction Problem CSP]]
 
 
 
@@ -109,6 +116,7 @@ date of note: 2024-08-26
 ##  Recommended Notes and References
 
 
+- [[k-Means Clustering]]
 - [[Optimal Transport in Discrete Setting]]
 - [[Optimal Transport in Space of Measures]]
 - [[Integer Programming Problem]]

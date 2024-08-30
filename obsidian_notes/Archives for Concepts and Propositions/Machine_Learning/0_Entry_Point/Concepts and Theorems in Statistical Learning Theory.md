@@ -47,6 +47,10 @@ date of note: 2024-06-01
 
 - [[Empirical Risk Minimization]]
 - [[Statistical Learning via Statistical Decision Theory]]
+
+- [[Bayes Error and Bayes Classifier]]
+- [[Bayes Classifier via Posterior Probability]]
+
 - [[Realizability Assumption for Empirical Risk Minimization]]
 - [[PAC Learnable and Agnostic PAC Learnable]]
 - [[Generalization Error Bound for Binary Classification Finite Case]]

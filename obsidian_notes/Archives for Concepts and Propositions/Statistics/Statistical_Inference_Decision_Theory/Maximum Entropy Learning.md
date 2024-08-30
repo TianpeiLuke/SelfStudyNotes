@@ -63,5 +63,6 @@ date of note: 2024-05-14
 
 - [[Elements of Information Theory by Cover]] 
 - [[Understanding Machine Learning by Shalev-Shwartz]]
+- [[Foundations of Machine Learning by Mohri]] pp 295 - 308
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]] pp 64
 - [[Probabilistic Graphical Models by Koller]] pp 956 - 958

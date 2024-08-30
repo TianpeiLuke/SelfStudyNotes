@@ -113,7 +113,11 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
+
+- [[k-Means Clustering]]
 - [[Optimal Transport in Discrete Setting]]
+
+
 - [[Computational Optimal Transport by Peyre]]
 - [[Optimal Transport for Applied Mathematicians by Santambrogio]]
 

@@ -69,6 +69,12 @@ date of note: 2024-05-12
 >
 >The Euclidean metric characterizes the **dissimilarity** between observations.
 
+>[!info]
+>*k-means* algorithm is an **approximation algorithm** to solve the NP-hard optimal assignment problem.
+
+
+
+
 ## Variants
 
 
@@ -83,7 +89,7 @@ date of note: 2024-05-12
 ## Optimal Assignment Problem and Wasserstein Distance
 
 >[!quote]
->The k-means objective function is quite popular in practical applications of clustering. However, it turns out that finding the **optimal k-means solution** is often computationally infeasible (the problem is **NP-hard**, and even NP-hard to *approximate to within some constant*).
+>The $k$-means objective function is quite popular in practical applications of clustering. However, it turns out that finding the **optimal k-means solution** is often computationally infeasible (the problem is **NP-hard**, and even **NP-hard** to *approximate to within some constant*). As an alternative, the following simple iterative algorithm is often used, so often that, in many cases, the term **k-means Clustering** refers to the *outcome* of this algorithm rather than to the clustering that *minimizes the $k$-means objective cost*.
 >
 >-- [[Understanding Machine Learning by Shalev-Shwartz]] pp 270
 
@@ -110,3 +116,4 @@ date of note: 2024-05-12
 
 - [[Elements of Statistical Learning by Hastie]] pp 460, 509–514
 - [[Understanding Machine Learning by Shalev-Shwartz]] pp 268 - 271
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 922

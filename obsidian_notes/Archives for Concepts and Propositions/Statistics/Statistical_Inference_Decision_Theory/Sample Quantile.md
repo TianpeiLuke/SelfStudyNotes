@@ -25,7 +25,7 @@ date of note: 2024-06-24
 
 
 - [[Cumulative Distribution Function of Random Variable]]
-- [[Order Statistics]]
+- [[Archives for Concepts and Propositions/Statistics/Statistical_Inference_Decision_Theory/Order Statistics]]
 - [[Rank Test]]
 
 
