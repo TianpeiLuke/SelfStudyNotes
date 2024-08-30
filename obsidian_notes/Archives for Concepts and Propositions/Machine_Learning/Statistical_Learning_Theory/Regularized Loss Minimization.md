@@ -60,3 +60,4 @@ date of note: 2024-08-09
 
 - [[Foundations of Machine Learning by Mohri]]
 - [[Understanding Machine Learning by Shalev-Shwartz]] pp 137 
+- [[Learning with Kernels by Schölkopf]] pp 87 - 88

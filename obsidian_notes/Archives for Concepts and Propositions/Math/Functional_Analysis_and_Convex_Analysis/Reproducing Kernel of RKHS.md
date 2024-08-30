@@ -48,8 +48,10 @@ date of note: 2024-05-12
 >[!important]  Inner Product Representation of. Reproducing Kernel
 >By applying [[Riesz Representation Theorem]] on $K(x, \cdot)$ for each $x\in X$ evaluated at $y$, we have the **inner product representation** of **reproducing kernel**
 >$$
->K(x, y) [](Riesz%20Representation%20Theorem.md)ft\langle K(x, \cdot)  ,  K(y, \cdot) \right\rangle_{\mathcal{H}}
+>K(x, y) = \left\langle K(x, \cdot) ,  K(y, \cdot) \right\rangle_{\mathcal{H}}
 >$$
+
+- [[Riesz Representation Theorem]]
 
 >[!info]
 >This is called the **Kernel Theorem** or **Nuclear Theorem**. Similar results can be seen in **Nuclear space** 
