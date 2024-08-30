@@ -44,9 +44,9 @@ date of note: 2024-08-27
 >Let $\mathcal{X}$ be an index set, and  $\mathcal{H} \subset \mathbb{R}^{\mathcal{X}}$ be a *reproducing kernel Hilbert space*. Denote 
 >- by $\Omega : [0, \infty) \to \mathbb{R}$ a **strictly monotonic increasing function**, and 
 >- by $\ell : (\mathcal{X} \times \mathbb{R}^2)^m  \to \mathbb{R} \cup \{\infty\}$ an arbitrary *loss function*. 
->- Assume that there are a set of $M$ real-valued functions $$\psi_{p}: \mathcal{X} \to \mathbb{R},\quad p =1\,{,}\ldots{,}\,M$$ with property that the $m\times M$ matrix $$(\psi_{p}(x_{i}))_{i\in [m], p\in [M]}$$ has **rank** $M$  
+>- Assume that there are a set of $M$ real-valued functions $$\psi_{p}: \mathcal{X} \to \mathbb{R},\quad p =1\,{,}\ldots{,}\,M$$ with property that the $m\times M$ matrix $$(\psi_{p}(x_{i}))_{i\in [m], p\in [M]}$$ has **rank** $M$.  
 >  
->Then any $$\widetilde{f} := f + h, \quad f\in \mathcal{H}, \; h\in \text{span}\left\{ \psi_{p} \right\} $$ that **minimizes** the **regularized risk** 
+>Then any $$\widetilde{f} := f + h, \quad f\in \mathcal{H}, \; h\in \text{span}\left\{ \psi_{p}, p\in [M] \right\} $$ that **minimizes** the **regularized risk** 
 >$$
 >\widetilde{f}  \in \arg\min_{f\in \mathcal{H},\; h} \left\{  \ell \left((x_{i}, y_{i}, \widetilde{f}(x_{i})) \,{,}\ldots{,}\, (x_{m}, y_{m}, \widetilde{f}(x_{m}))\right) + \Omega \left(\lVert f \rVert_{\mathcal{H}} \right) \right\}
 >$$
@@ -55,6 +55,9 @@ date of note: 2024-08-27
 > \widetilde{f}(x) = \sum_{i=1}^{m}\alpha_{i} K(x_{i}, x) + \sum_{p=1}^{M}\beta_{p}\,\psi_{p}(x).
 >$$
 >with $\beta_{p}\in \mathbb{R}$ for all $p\in [M]$.
+
+- [[Linear Span over a Set of Vectors]]
+
 
 ## Explanation
 
