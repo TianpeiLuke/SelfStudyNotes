@@ -33,7 +33,7 @@ date of note: 2024-05-12
 - [[Kernel Methods in Machine Learning by Hofmann]]
 - [[Elements of Statistical Learning by Hastie]]
 - [[Understanding Machine Learning by Shalev-Shwartz]]
-- [[Foundations of Machine Learning by Mohri]]
+- [[Foundations of Machine Learning by Mohri]] pp 79 - 100
 
 - [[Convex Optimization by Boyd]]
 - [[Nonlinear Programming by Bertsekas]]

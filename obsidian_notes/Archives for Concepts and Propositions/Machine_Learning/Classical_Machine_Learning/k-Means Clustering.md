@@ -19,13 +19,14 @@ date of note: 2024-05-12
 >**Name**: k-Means Clustering
 
 >[!important] Definition
->Let $\{ x_{1} \,{,}\ldots{,}\, x_{m}\} \in \mathbb{R}^d$ be $m$ samples. Denote $d$ as the Euclidean metric $$d(x_{i}, x_{j}) = \lVert x_{i} - x_{j} \rVert_{2}.$$  Assume that there are $k$ clusters $$C_{1} \,{,}\ldots{,}\,C_{k}$$ so that each sample is assigned to *one of the cluster*. That is $$\exists \sigma: i \mapsto s\in [k] \text{ when }x_{i} \in C_{s}$$
+>Let $\mathcal{D} := \{ x_{1} \,{,}\ldots{,}\, x_{m}\} \in \mathbb{R}^d$ be $m$ samples. Denote $d$ as the Euclidean metric $$d(x_{i}, x_{j}) = \lVert x_{i} - x_{j} \rVert_{2}.$$  Assume that $\mathcal{D}$ is *partitioned* into $k$ *mutual exclusive clusters* $$C_{1} \,{,}\ldots{,}\,C_{k}$$ so that each sample is assigned to *one of the cluster*. That is, define the **assignment map** $$\sigma: i \mapsto s\in [k] \text{ when }x_{i} \in C_{s}$$
 >
 >Define the **within-point scatter** as 
 >  $$
 >  \begin{align*}
-> W(\sigma) &= \frac{1}{2}\sum_{s=1}^{k}\sum_{\sigma(i) = s}\sum_{\sigma(j) = s}\lVert x_{i} - x_{j} \rVert_{2}^2 \\
-> &= \sum_{s=1}^{k}\,N_{s} \sum_{\sigma(i) = s} \lVert x_{i} - \mu_{s} \rVert_{2}^2 
+> W(\sigma) &= \frac{1}{2}\sum_{s=1}^{k}\sum_{\sigma(i) = s}\sum_{\sigma(j) = s}\lVert x_{i} - x_{j} \rVert_{2}^2 \\[5pt]
+> &= \sum_{s=1}^{k}\,N_{s} \sum_{\sigma(i) = s} \lVert x_{i} - \mu_{s} \rVert_{2}^2 \\[5pt]
+> &= \sum_{i=1}^{m} \lVert x_{i} - \mu_{\sigma(i)} \rVert_{2}^2 
 >\end{align*}
 >$$
 >where $N_{s}$ is the number of samples assigned to $C_{s}$, and  $\mu_{s}$ is the **mean vector** associated with $s$-th cluster $C_{s}$ $$\mu_{s} = \frac{1}{N_{s}}\sum_{\sigma(i) = s}x_{i}.$$
@@ -56,8 +57,6 @@ date of note: 2024-05-12
 >		- The optimal assignment is to assign each observation to the **closest (current) cluster mean**. That is, for each $i\in [m]$ $$\sigma^{(t+1)}(i) = s\; \text{  if  }\lVert x_{i} - \mu_{s}^{(t)}\rVert_{2} \le \lVert x_{i} - \mu_{p}^{(t)}\rVert_{2},\; \forall p \neq s$$
 
 
-
-
 ## Explanation
 
 >[!quote]
@@ -70,15 +69,35 @@ date of note: 2024-05-12
 >
 >The Euclidean metric characterizes the **dissimilarity** between observations.
 
+## Variants
+
+
+
+
+
 ## Vector Quantization
 
 
 
 
-## Cost-Sensitive Cluster and Optimal Assignment
+## Optimal Assignment Problem and Wasserstein Distance
+
+>[!quote]
+>The k-means objective function is quite popular in practical applications of clustering. However, it turns out that finding the **optimal k-means solution** is often computationally infeasible (the problem is **NP-hard**, and even NP-hard to *approximate to within some constant*).
+>
+>-- [[Understanding Machine Learning by Shalev-Shwartz]] pp 270
+
+>[!important]
+>The k-mean problem is a **special case** of the optimal assignment problem when the **cost** is defined as the **squared Euclidean distance**
+>$$
+>\min_{\sigma}\;  \sum_{i} d^2(x_{i}, \mu_{\sigma(i)})
+>$$
+>
+>The optimal value of the k-mean objective is close related to **the $2$-Wasserstein distance** $$\mathcal{W}_{2}^2(\alpha_{x}, \beta_{\mu})$$ where two discrete measures $$\alpha_{x} = \sum_{i=1}^{m}\delta_{x_{i}},\;\; \beta_{\mu} = \sum_{s=1}^{k}\,N_{s}\,\delta_{\mu_{s}}$$
 
 - [[Optimal Assignment Problem and Monge Problem]]
-
+- [[Wasserstein Distance]]
+- [[Discrete Measure]]
 
 
 
@@ -90,4 +109,4 @@ date of note: 2024-05-12
 
 
 - [[Elements of Statistical Learning by Hastie]] pp 460, 509–514
-- [[Understanding Machine Learning by Shalev-Shwartz]]
+- [[Understanding Machine Learning by Shalev-Shwartz]] pp 268 - 271
