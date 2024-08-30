@@ -53,10 +53,15 @@ date of note: 2024-06-01
 
 - [[Realizability Assumption for Empirical Risk Minimization]]
 - [[PAC Learnable and Agnostic PAC Learnable]]
+- [[Estimation Error and Approximation Error]]
+
+
 - [[Generalization Error Bound for Binary Classification Finite Case]]
 - [[Generalization Error Bound for Binary Classification VC Dimension]]
 - [[Rademacher Complexity]]
 - [[Rademacher Complexity Bound for Binary Classification]]
+
+
 
 
 ### Convex Learning Problem
@@ -69,7 +74,8 @@ date of note: 2024-06-01
 
 ### Regularization and Structural Risk Minimization
 
-- [[Bias-Variance Tradeoff]]
+- [[Estimation Error and Approximation Error]]
+- [[Bias-Complexity Tradeoff and Overfitting]]
 - [[Non-Uniform Learning]]
 - [[Structural Risk Minimization]]
 - [[Regularized Loss Minimization]]
@@ -80,6 +86,7 @@ date of note: 2024-06-01
 
 ### K Nearest Neighbor
 
+- [[k Nearest Neighbor Classification]]
 
 
 ### Boosting and Ensemble Learning

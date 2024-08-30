@@ -67,7 +67,7 @@ date of note: 2024-08-30
 - [[PAC-Bayes Learnable]]
 
 
-- [[Elements of Statistical Learning by Hastie]]
+- [[Elements of Statistical Learning by Hastie]] pp 21
 - [[Understanding Machine Learning by Shalev-Shwartz]] pp 25
 - [[Foundations of Machine Learning by Mohri]] pp 22 - 23, 47, 61, 67, 74 - 78
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]

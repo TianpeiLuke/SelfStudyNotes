@@ -69,22 +69,41 @@ date of note: 2024-05-12
 >$$ 
 
 - [[Regularized Loss Minimization]]
+- [[Bias-Complexity Tradeoff and Overfitting]]
 
 ## Explanation
 
+>[!important]
+>Intuitively, the **SRM rule** solve the following 
+>$$
+>h_{\text{SRM}} = \arg\min_{h\in \mathcal{H}_{n}, \forall n}\left\{ L_{\mathcal{D}_{m}}(h) + \text{complexity}(\mathcal{H}_{n}, m) \right\}  
+>$$
 
+^16b921
 
+- [[Bias-Complexity Tradeoff and Overfitting]]
+- [[Estimation Error and Approximation Error]]
+- [[Tikhonov Regularization in Optimization and Learning]]
 
 
 -----------
 ##  Recommended Notes and References
+
+
+- [[Bias-Complexity Tradeoff and Overfitting]]
+- [[Estimation Error and Approximation Error]]
 
 - [[Non-Uniform Learning]]
 - [[PAC Learnable and Agnostic PAC Learnable]]
 
 - [[Empirical Risk Minimization]]
 - [[Tikhonov Regularization in Optimization and Learning]]
+- [[Regularized Loss Minimization]]
+
+- [[Representer Theorem]]
+- [[Upper Confidence Bound Algorithm]]
 
 
-- [[Foundations of Machine Learning by Mohri]]
-- [[Understanding Machine Learning by Shalev-Shwartz]]
+- [[Understanding Machine Learning by Shalev-Shwartz]] pp 60, 115
+- [[Foundations of Machine Learning by Mohri]] pp 27 - 28
+- [[Elements of Statistical Learning by Hastie]] pp 239 - 241
