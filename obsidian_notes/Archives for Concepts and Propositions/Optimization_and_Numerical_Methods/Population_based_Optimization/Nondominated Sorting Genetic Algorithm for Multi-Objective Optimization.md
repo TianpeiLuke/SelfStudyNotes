@@ -51,6 +51,7 @@ date of note: 2024-08-28
 - [[Weighted Hamming Distance]]
 - [[Survivor Selection for Evolutionary Computation]]
 - [[Parent Selection for Evolutionary Computation]]
+- [[Diversity Maintenance for Evolutionary Computation]]
 
 >[!quote]
 >this (NSGA-II) achieves **elitism** (via the plus strategy) and an **explicit diversity maintenance scheme**, as well as *reduced dependence* on parameters.

@@ -49,7 +49,7 @@ year: 2016
 - [[Combinatorial Optimization Problem]]
 - [[Integer Programming Problem]]
 
-- [[Optimal Assignment Problem]]
+- [[Optimal Assignment Problem and Monge Problem]]
 - [[Optimal Transport in Discrete Setting]]
 
 - [[Traveling Salesman Problem]]

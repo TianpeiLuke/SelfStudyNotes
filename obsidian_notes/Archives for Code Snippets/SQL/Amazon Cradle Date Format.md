@@ -68,5 +68,8 @@ There's another way to format dates you'll see a lot on Sage and in the wikis:
 -----------
 ##  Recommended Notes
 
+
 - Cradle Docs: 
 	- [Handling Dates in Cradle](https://w.amazon.com/bin/view/BDT/Products/Cradle/Docs/HandlingDates)
+
+- [[Date Filter in Amazon Redshift SQL]]

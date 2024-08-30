@@ -21,6 +21,7 @@ date of note: 2024-05-12
 >[!important]
 >**Name**: Optimal Transport as Linear Programming via Kantorovich relaxation 
 
+![[Optimal Assignment Problem and Monge Problem#^6219c2]]
 
 >[!important] Optimal Transport (Discrete) 
 >Suppose 
@@ -38,7 +39,7 @@ date of note: 2024-05-12
 >\sum_{i,j}C_{i,j} P_{i,j}.
 >$$
 
-- [[Optimal Assignment Problem]]
+- [[Optimal Assignment Problem and Monge Problem]]
 - [[Algorithms to Live By Chapter 08 Relaxation]]
 
 >[!info]
@@ -96,7 +97,7 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
-- [[Optimal Assignment Problem]]
+- [[Optimal Assignment Problem and Monge Problem]]
 - [[Optimal Transport in Space of Measures]]
 
 - [[Optimal Transport for Applied Mathematicians by Santambrogio]]

@@ -38,7 +38,7 @@ date of note: 2024-08-25
 - [[Knapscak Problem]]
 - [[Set Cover Problem]]
 - [[Optimal Job Scheduling]]
-- [[Optimal Assignment Problem]]
+- [[Optimal Assignment Problem and Monge Problem]]
 - [[Minimum Spanning Tree Problem]]
 - [[Maximum Clique Problem]]
 - [[Maximum Cut Problem]]
@@ -83,7 +83,7 @@ date of note: 2024-08-25
 
 ### Optimal Assignment and Optimal Transport
 
-- [[Optimal Assignment Problem]]
+- [[Optimal Assignment Problem and Monge Problem]]
 - [[Optimal Transport in Discrete Setting]]
 
 

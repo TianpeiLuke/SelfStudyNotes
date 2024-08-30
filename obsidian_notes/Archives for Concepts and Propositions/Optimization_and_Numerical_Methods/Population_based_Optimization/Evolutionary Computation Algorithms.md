@@ -81,7 +81,8 @@ date of note: 2024-08-24
 ## Explanation
 
 >[!important] Definition
->Evolutionary algorithm is a subfield of **evolutionary computation**, a generic **population-based** **meta-heuristic optimization** 
+>Evolutionary algorithm is a subfield of **evolutionary computation**, a generic **population-based** **meta-heuristic optimization**. 
+>- They are a family of *population-based trial and error* problem solvers with a **meta-heuristic** or **stochastic optimization** character. 
 >
 >The other **meta-heuristic** optimization algorithms include **swam intelligence algorithms**
 

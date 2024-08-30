@@ -65,6 +65,7 @@ date of note: 2024-08-24
 - [[Population Management Models for Evolutionary Computation]]
 - [[Parent Selection for Evolutionary Computation]]
 - [[Survivor Selection for Evolutionary Computation]]
+- [[Diversity Maintenance for Evolutionary Computation]]
 
 
 - [[Evolutionary Programming]]
@@ -106,4 +107,5 @@ date of note: 2024-08-24
 
 - [[Theory and Algorithms for Convex Optimization]]
 
+- [[Introduction to Evolutionary Computing by Eiben]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 298 - 307

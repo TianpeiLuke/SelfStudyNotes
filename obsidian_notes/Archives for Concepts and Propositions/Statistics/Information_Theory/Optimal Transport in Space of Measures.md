@@ -21,6 +21,7 @@ date of note: 2024-05-12
 >[!important]
 >**Name**: Optimal Transport as Optimization on Space of Radon Measures
 
+![[Optimal Assignment Problem and Monge Problem#^aa7704]]
 
 >[!important] Optimal Transport (Measure Space) 
 >Suppose 
@@ -44,6 +45,7 @@ date of note: 2024-05-12
 - [[Radon Measure]]
 - [[Product Measure]]
 - [[Fubini Theorem]]
+- [[Optimal Assignment Problem and Monge Problem]]
 
 
 >[!important] Optimal Transport (Optimization on Space of Radon Measures) 
@@ -51,8 +53,8 @@ date of note: 2024-05-12
 >$$
 >\begin{align*}
 >\inf_{\pi \in \mathcal{M}_{+}(X \times Y) } & \int_{X \times Y} c \;d \pi\\
-\text{s.t. }&  P_{\#}^{X}\pi = \alpha \\
-& P_{\#}^{Y}\pi = \beta
+\text{s.t. }&  P_{*}^{X}\pi = \alpha \\
+& P_{*}^{Y}\pi = \beta
 \end{align*}
 >$$
 >where $P^{X}: X \times Y \to X$ is the *canonical projection* onto the first coordinate, $$P^{X}(x, y) = x.$$ 
@@ -64,13 +66,13 @@ date of note: 2024-05-12
 - [[Fubini Theorem]]
 
 >[!important]
->$P_{\#}^{X}\pi$ is called the **push-forward measure** of $\pi$ by $P^X$, which is defined as
+>$P_{*}^{X}\pi$ is called the **push-forward measure** of $\pi$ by $P^X$, which is defined as
 >$$
->(P_{\#}^{X}\pi)(A) := \pi \circ (P^X)^{-1}(A) = \pi(\{(x,y) \in X\times Y: x\in A \}), \quad \forall A \in \mathscr{X}
+>(P_{*}^{X}\pi)(A) := \pi \circ (P^X)^{-1}(A) = \pi(\{(x,y) \in X\times Y: x\in A \}), \quad \forall A \in \mathscr{X}
 >$$
->Similarly, $P_{\#}^{Y}\pi$ is called the **push-forward measure** of $\pi$ by $P^Y$,
+>Similarly, $P_{*}^{Y}\pi$ is called the **push-forward measure** of $\pi$ by $P^Y$,
 >$$
->(P_{\#}^{Y}\pi)(B) := \pi \circ (P^Y)^{-1}(B) = \pi(\{(x,y)\in X\times Y: y\in B \}), \quad \forall B \in \mathscr{Y}
+>(P_{*}^{Y}\pi)(B) := \pi \circ (P^Y)^{-1}(B) = \pi(\{(x,y)\in X\times Y: y\in B \}), \quad \forall B \in \mathscr{Y}
 >$$
 
 - [[Push-forward Measure and Push-forward Operator]]
@@ -103,7 +105,7 @@ date of note: 2024-05-12
 >[!info]
 >- For simplicity, we define _the space of all **coupling**_ as a space of unsigned Radon measures on $X \times Y$ whose marginal measure is $\alpha$ and $\beta$ 
 >  $$
->  \Gamma_{+}(\alpha, \beta) := \left\{ \pi \in \mathcal{M}_{+}(X \times Y): P_{\#}^X \pi = \alpha, \; P_{\#}^{Y} \pi = \beta  \right\}
+>  \Gamma_{+}(\alpha, \beta) := \left\{ \pi \in \mathcal{M}_{+}(X \times Y): P_{*}^X \pi = \alpha, \; P_{*}^{Y} \pi = \beta  \right\}
 > $$ 
 
 - [[Product Measure]]
