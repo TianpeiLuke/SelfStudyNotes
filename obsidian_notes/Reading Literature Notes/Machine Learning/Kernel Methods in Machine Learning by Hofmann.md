@@ -55,6 +55,7 @@ date of note: 2024-05-10
 	- [[Boosting Foundations and Algorithms by Schapire]]
 	- [[Elements of Statistical Learning by Hastie]]
 	- [[Understanding Machine Learning by Shalev-Shwartz]]
+	- [[Learning with Kernels by Schölkopf]]
 
 
 - Optimization
