@@ -52,6 +52,8 @@ date of note: 2024-05-12
 >Then $\mathcal{F}_{\mathcal{D}}$ is the **a subspace of binary encoding** of **boolean functions** $f$.
 
 - [[Error Correcting Code]]
+- [[Minimum Description Length]]
+
 
 >[!important]
 >The idea of VC dimension is to find the *best possible* **dimension** for **encoding representation** of $\mathcal{F}$.

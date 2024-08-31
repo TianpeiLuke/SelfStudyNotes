@@ -25,6 +25,8 @@ date of note: 2024-05-12
 >
 >Assume that for each $n$, the class $\mathcal{H}_n$ enjoys the **uniform convergence property**, i.e. **PAC-learnable** regardless underlying distribution, with a *sample complexity function* $m_{\mathcal{H}_n}(\epsilon, \delta)$. 
 
+^e11f9f
+
 ![[PAC Learnable and Agnostic PAC Learnable#^500325]]
 
 
@@ -37,6 +39,8 @@ date of note: 2024-05-12
 >$$ 
 >
 > In other words, we have a *fixed sample size* $m$, and we are interested in the **lowest possible upper bound** on the **gap** between *empirical* and *true risks* achievable by using a sample of $m$ examples. 
+
+^d8d375
 
 - [[PAC Learnable and Agnostic PAC Learnable]]
 
@@ -51,6 +55,8 @@ date of note: 2024-05-12
 > Let $w : \mathbb{N} \to [0,1]$ be a function such that $$\sum_{n=1}^{\infty}w(n) \le 1.$$ We refer to $w$ as a **weight function** *over the hypothesis classes* $\mathcal{H}_1, \mathcal{H}_2, \ldots$ 
 > 
 > Such a weight function can reflect the importance that the learner attributes to each hypothesis class, or some *measure of the complexity* of *different hypothesis classes*.
+
+^f6ae3e
 
 >[!important] Definition
 > The goal of a **Structural Risk Minimization (SRM) rule** is to find a hypothesis $h \in \mathcal{H}$ that *minimizes* a certain upper bound on the *true risk* by **choosing weight** in a "*bound minimization*" manner. 
@@ -67,6 +73,8 @@ date of note: 2024-05-12
 > n(h) := \min\left\{ n : h \in \mathcal{H}_n \right\} .  
 > \end{align}
 >$$ 
+
+^b95023
 
 - [[Regularized Loss Minimization]]
 - [[Bias-Complexity Tradeoff and Overfitting]]

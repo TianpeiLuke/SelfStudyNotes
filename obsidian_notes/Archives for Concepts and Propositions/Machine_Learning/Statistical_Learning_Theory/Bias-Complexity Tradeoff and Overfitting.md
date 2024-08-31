@@ -62,12 +62,17 @@ date of note: 2024-08-30
 >
 >-- [[Understanding Machine Learning by Shalev-Shwartz]] pp 41
 
+## Bias-Variance Tradeoff
+
+- [[Bias-Variance Tradeoff]]
+
 
 ## Structural Risk Minimization
 
 ![[Structural Risk Minimization#^16b921]]
 
 - [[Structural Risk Minimization]]
+
 
 
 

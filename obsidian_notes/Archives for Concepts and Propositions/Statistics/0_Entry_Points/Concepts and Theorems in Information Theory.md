@@ -57,7 +57,10 @@ date of note: 2024-06-01
 
 ### Compression Theory
 
-
+- [[Prefix-Free String]]
+- [[Occam Razor]]
+- [[Minimum Description Length]]
+- [[Kraft Inequality]]
 
 ### Communication Theory
 

@@ -55,13 +55,13 @@ date of note: 2024-06-01
 - [[PAC Learnable and Agnostic PAC Learnable]]
 - [[Estimation Error and Approximation Error]]
 
+### Generalization Bound for ERM
 
 - [[Generalization Error Bound for Binary Classification Finite Case]]
 - [[Generalization Error Bound for Binary Classification VC Dimension]]
 - [[Rademacher Complexity]]
 - [[Rademacher Complexity Bound for Binary Classification]]
-
-
+- [[Fundamental Theorem of Statistical Learning]]
 
 
 ### Convex Learning Problem
@@ -70,6 +70,11 @@ date of note: 2024-06-01
 - [[Concentration of Separately Convex Lipschitz Functions]]
 - [[Concentration of Quasi-Convex Lipschitz Functions]]
 - [[Surrogate Loss Minimization]]
+
+### No-Free-Lunch Theorem and Inductive Bias
+
+- [[No-Free-Lunch Theorem]]
+- [[Inductive Bias in Machine Learning]]
 
 
 ### Regularization and Structural Risk Minimization

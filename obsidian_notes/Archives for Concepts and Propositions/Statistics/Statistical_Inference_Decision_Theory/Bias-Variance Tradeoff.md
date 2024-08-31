@@ -69,6 +69,9 @@ date of note: 2024-06-08
 
 - [[Bias of Point Estimator and Unbiasedness]]
 
+![[bias_variance_tradeoff.png]]
+
+- [[Elements of Statistical Learning by Hastie]] pp 225
 
 ## Explanation
 
@@ -106,5 +109,5 @@ date of note: 2024-06-08
 
 - [[All of Statistics A Concise Course by Wasserman]]
 - [[Mathematical Statistics by Shao]]
-- [[Elements of Statistical Learning by Hastie]] pp 24, 37, 219
+- [[Elements of Statistical Learning by Hastie]] pp 24, 37, 219 - 223
 - Wikipedia [Bias-variance_tradeoff](https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff)

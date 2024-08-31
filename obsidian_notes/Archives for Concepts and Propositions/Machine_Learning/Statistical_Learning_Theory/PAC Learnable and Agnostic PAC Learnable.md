@@ -68,6 +68,8 @@ date of note: 2024-04-18
 >- The *minimal number* of $n_{\mathcal{H}}$ satisfying above inequality is called the **sample complexity** of *learning* $\mathcal{H}$.
 >- When such an algorithm $\mathcal{A}$ exists, it is called a **agnostic PAC-learning algorithm** *for* $\mathcal{H}$.
 
+^a09a6f
+
 
 
 ## Explanation

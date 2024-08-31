@@ -2,16 +2,26 @@
 tags:
   - concept
   - machine_learning/theory
-keywords: 
-topics: 
-name: 
+keywords:
+  - occam_razor
+  - structural_risk_minimization
+topics:
+  - machine_learning_theory
+name: Occam Razor
 date of note: 2024-08-30
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Occam's Razor
+
+>[!important] Occam's Razor
+>
+>A **short explanation** (that is, a hypothesis that has a short length) tends to be *more valid* than a long explanation.
+
+>[!important] Definition
+>This is a well known principle, called **Occam’s razor**, after William of Ockham, a 14th-century English logician, who is believed to have been the first to phrase it explicitly.
 
 
 
