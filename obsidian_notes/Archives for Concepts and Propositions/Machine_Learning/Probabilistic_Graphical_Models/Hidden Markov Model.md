@@ -23,6 +23,7 @@ date of note: 2024-05-12
 
 >[!important] Definition
 >A **hidden Markov model (HMM)** is the simplest example of a *state-observation model* where the hidden states form a *chain graph* and each observation variable at $t$ is connected to current state only.
+>- In HMM, in addition to the conditional independence in state-observation model, it assume that the *current observation* is independent from *past observations* given the current state: $$\left(O^{(t)} \perp \left\{ O^{0:t-1}, O^{t+1:T}\right\}\,|\, X^{(t)}\right)$$
 >
 >The *joint distribution* of **HMM** can be factorized as
 >$$

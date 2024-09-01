@@ -108,7 +108,6 @@ date of note: 2024-06-01
 - [[Canonical Form of Gaussian Graphical Model]]
 - [[Naive Bayes Model]]
 - [[Hidden Markov Model]]
-	- [[Viterbi Decoding Algorithm for MAP in Hidden Markov Chain]]
 - [[Kalman Filter Discrete-Time]]
 - [[Recurrent Neural Network]]
 - [[Conditional Random Field]]
@@ -150,6 +149,7 @@ date of note: 2024-06-01
 
 - [[State-Observation Model Inference via Filtering]]
 - [[Hidden Markov Model Inference via Forward-Backward Algorithm]]
+- [[Hidden Markov Model MAP Inference via Viterbi Algorithm]]
 
 #### Variational Inference on Clique Tree
 
@@ -208,6 +208,8 @@ date of note: 2024-06-01
 - [[Max-Product Belief Update for Clique Tree]]
 - [[Clique Tree Invariant of Max-Product and Reparameterization]]
 - [[Decoding Max-Marginal for Graphical Model]]
+
+- [[Hidden Markov Model MAP Inference via Viterbi Algorithm]]
 
 #### Graph Cut Method
 
