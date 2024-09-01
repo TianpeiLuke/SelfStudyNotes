@@ -92,6 +92,7 @@ date of note: 2024-06-01
 - [[Kalman Filter Continuous-Time]]
 - [[Extended Kalman Filter]]
 - [[State Space Models and Nonlinear Dynamic System]]
+- [[Hidden Markov Model]]
 
 ### Reinforcement Learning Models and Algorithms
 

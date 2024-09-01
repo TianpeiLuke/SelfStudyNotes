@@ -51,6 +51,14 @@ date of note: 2024-05-12
 
 - [[Positive Distribution]]
 
+>[!info]
+>Hammersley-Clifford Theorem states that:
+>
+>For *positive distributions*, the **global Markov property** leads to **factorization** of distribution over graph.  
+
+- [[Separation in Markov Network]]
+
+
 
 -----------
 ##  Recommended Notes and References
@@ -67,3 +75,4 @@ date of note: 2024-05-12
 - [[Probabilistic Graphical Models by Koller]] pp 116
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 166
+- [[Elements of Statistical Learning by Hastie]] pp 629

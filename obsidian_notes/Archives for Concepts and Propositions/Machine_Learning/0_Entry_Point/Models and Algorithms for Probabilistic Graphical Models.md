@@ -73,7 +73,9 @@ date of note: 2024-06-01
 - [[Dynamic Bayesian Network]]
 - [[State-Observation Models]]
 - [[Linear Dynamic System]]
+- [[State Space Models and Nonlinear Dynamic System]]
 - [[Recurrent Neural Network]]
+- [[Hidden Markov Model]]
 
 
 ### Chordal Graph, Clique Tree
@@ -135,12 +137,19 @@ date of note: 2024-06-01
 - [[Sum-Product Belief-Update Message Passing Algorithm for Clique Tree]]
 - [[Belief Propagation and Belief Update Equivalence for Clique Tree]]
 
+
+
 #### Exact Inference via Maximum Entropy Learning
 
 - [[Maximum Entropy Learning]]
 - [[Maximum Entropy Learning of Clique Tree PGM]]
 - [[Marginal Polytope and Local Consistent Polytope]]
 - [[Exponential Family as Probabilistic Graphical Model]]
+
+#### Exact Inference in Temporal Models
+
+- [[State-Observation Model Inference via Filtering]]
+- [[Hidden Markov Model Inference via Forward-Backward Algorithm]]
 
 #### Variational Inference on Clique Tree
 
