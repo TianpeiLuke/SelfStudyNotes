@@ -41,7 +41,7 @@ date of note: 2024-05-12
 - [[Dynamic Bayesian Network]]
 - [[State-Observation Models]]
 - [[Hidden Markov Model]]
-- [[State Space Models and Linear Dynamic System]]
+- [[Linear Dynamic System]]
 - [[Artificial Neural Network and Deep Learning]]
 
 

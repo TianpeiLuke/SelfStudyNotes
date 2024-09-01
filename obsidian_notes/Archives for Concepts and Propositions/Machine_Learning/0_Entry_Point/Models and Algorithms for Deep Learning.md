@@ -46,6 +46,7 @@ date of note: 2024-06-01
 
 - [[Automatic Differentiation]]
 - [[Back-Propagation Algorithm]]
+- [[Back-Propagation Through Time]]
 
 ### Optimization Algorithm 
 
@@ -95,6 +96,9 @@ date of note: 2024-06-01
 - [[Gated Recurrent Neural Network]]
 - [[Long-Short Term Memory Network]]
 - [[Residual Neural Network]]
+- [[Bidirectional Recurrent Neural Network]]
+- [[Encoder-Decoder Sequence-to-Sequence Architecture]]
+- [[State Space Models and Nonlinear Dynamic System]]
 
 
 ### Generative Model

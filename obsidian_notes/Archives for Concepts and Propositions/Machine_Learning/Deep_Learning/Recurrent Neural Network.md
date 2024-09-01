@@ -46,7 +46,7 @@ date of note: 2024-08-16
 >- typical RNNs will add extra architectural features such as **output layers** that read information out of the state $h$ to make predictions.
 >- the **state transition function** $f$ is defined by a neural network such as $$f(h^{(t)}, x^{(t+1)}; \theta) := \sigma \left(W_{h}\,h^{(t)} + W_{x}\,x^{(t+1)} + b\right)$$
 
-- [[State Space Models and Linear Dynamic System]]
+- [[Linear Dynamic System]]
 - [[Multi-Layer Perceptron and Feed-Forward Network]]
 
 ### Unfolding the Recurrent Structure
@@ -104,6 +104,8 @@ date of note: 2024-08-16
 >	- the loss is chosen as the **negative log-likelihood** $$L(\hat{y}^{(t)}, y^{(t)}) = - \log \mathcal{P}_{\text{model}}(y^{(t)}\,|\, x^{(t)} \,{,}\ldots{,}\,x^{(1)})$$
 >	- $\mathcal{P}_{\text{model}}$ is given by reading entry of $\hat{y}^{(t)}$
 
+- [[Back-Propagation Through Time]]
+
 ### Architectures of RNN
 
 >[!important] Definition
@@ -129,6 +131,8 @@ date of note: 2024-08-16
 
 ![[rnn_sequence_one_sequence.png]]
 
+- [[Encoder-Decoder Sequence-to-Sequence Architecture]]
+
 
 ## Explanation
 
@@ -138,7 +142,7 @@ date of note: 2024-08-16
 ![[rnn_template.png]]
 
 >[!info]
->RNN is an **extension** of *linear dynamic system* in [[State Space Models and Linear Dynamic System]]. 
+>RNN is an **extension** of *linear dynamic system* in [[Linear Dynamic System]]. 
 
 
 

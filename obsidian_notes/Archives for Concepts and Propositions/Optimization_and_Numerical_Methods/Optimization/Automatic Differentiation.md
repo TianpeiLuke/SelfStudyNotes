@@ -152,6 +152,8 @@ date of note: 2024-05-12
 >[!important] Definition
 >The **reverse mode** of *automatic differentiation* does **not** perform *function and gradient evaluations* **concurrently**. Instead, **after** the evaluation of $f$ is *complete*, it **recovers the partial derivatives** of $f$ with respect to each variable $x_{i}$ —independent and intermediate variables alike—by performing a **reverse sweep** of the computational graph.
 
+^344a4a
+
 >[!important] Definition
 >Instead of keeping *gradient vectors* $g^{k}$ for intermediate variables, the **reverse mode** associates **scalar variable** $\bar{x}_{i}$ with *each node* in the graph; information about the *partial derivative* $\partial f / \partial x_{i}$ is **accumulated** in  $\bar{x}_{i}$ during the reverse sweep. The scalar $\bar{x}_{i}$ is called the **adjoint variables.**
 

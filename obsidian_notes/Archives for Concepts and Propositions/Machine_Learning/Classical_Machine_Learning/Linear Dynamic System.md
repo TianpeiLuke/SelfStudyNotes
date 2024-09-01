@@ -5,16 +5,17 @@ tags:
 keywords:
   - state_space_model
   - linear_dynamic_system
+  - linear_time_invariant_system
 topics:
   - machine_learning_models
-name: State Space Models
+name: Linear Dynamic System
 date of note: 2024-05-12
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: State Space Models and Linear Dynamic System
+>**Name**: Linear Dynamic System
 
 ### Linear Dynamic System
 
@@ -37,6 +38,8 @@ date of note: 2024-05-12
 >- $D(t) \in \mathbb{R}^{m\times p}$ is called the **feedforward (feed-through) matrix**
 >  
 >The dynamic system above is characterized by the state space $(y(t), x(t))$, which is called the **state-space model**.
+
+^78b0f0
 
 - [[Ordinary Differential Equations]]
 
@@ -78,6 +81,15 @@ date of note: 2024-05-12
 > Y_{t} &= C\,X_{t} + D\,U_{t}
 >\end{align*} \right.
 >$$
+
+^90435d
+
+
+### State-Space Model as Nonlinear Dynamic System
+
+![[State Space Models and Nonlinear Dynamic System#^4beaac]]
+
+- [[State Space Models and Nonlinear Dynamic System]]
 
 
 
@@ -146,6 +158,6 @@ date of note: 2024-05-12
 - [[Markov Chain and Markov Process]]
 
 - [[Probabilistic Graphical Models by Koller]] pp 211 - 222
-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 357
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 357, 969 - 970
 - [[Introduction to Stochastic Calculus by Klebaner]] pp 379
 - Wikipedia [State-space_representation](https://en.wikipedia.org/wiki/State-space_representation)

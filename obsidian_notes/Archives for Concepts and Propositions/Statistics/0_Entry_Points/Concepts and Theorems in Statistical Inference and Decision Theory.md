@@ -180,7 +180,7 @@ date of note: 2024-06-01
 ### Statistical Signal Processing
 
 - [[Statistical Prediction Detection Smoothing and Filtering]]
-- [[State Space Models and Linear Dynamic System]]
+- [[Linear Dynamic System]]
 - [[Gaussian Filtering and Smoothing]]
 - [[Kalman Filter Discrete-Time]]
 - [[Kalman Filter Continuous-Time]]

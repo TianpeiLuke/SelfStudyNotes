@@ -86,11 +86,12 @@ date of note: 2024-06-01
 - [[Supervised Learning and Unsupervised Learning]]
 - [[k-Means Clustering]]
 - [[Principle Component Analysis]]
-- [[State Space Models and Linear Dynamic System]]
+- [[Linear Dynamic System]]
 - [[Gaussian Filtering and Smoothing]]
 - [[Kalman Filter Discrete-Time]]
 - [[Kalman Filter Continuous-Time]]
 - [[Extended Kalman Filter]]
+- [[State Space Models and Nonlinear Dynamic System]]
 
 ### Reinforcement Learning Models and Algorithms
 

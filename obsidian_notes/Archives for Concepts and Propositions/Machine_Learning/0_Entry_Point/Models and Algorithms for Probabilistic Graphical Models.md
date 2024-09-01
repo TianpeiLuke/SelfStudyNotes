@@ -72,7 +72,7 @@ date of note: 2024-06-01
 
 - [[Dynamic Bayesian Network]]
 - [[State-Observation Models]]
-- [[State Space Models and Linear Dynamic System]]
+- [[Linear Dynamic System]]
 - [[Recurrent Neural Network]]
 
 

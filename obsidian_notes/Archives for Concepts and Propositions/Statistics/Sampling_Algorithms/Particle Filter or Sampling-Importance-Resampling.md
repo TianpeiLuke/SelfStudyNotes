@@ -34,6 +34,7 @@ date of note: 2024-07-04
 >$$
 
 - [[State-Observation Models]] 
+- [[State Space Models and Nonlinear Dynamic System]]
 
 
 >[!important] Definition
@@ -58,7 +59,7 @@ date of note: 2024-07-04
 >	- *Output*: The **conditional mean estimator** at time $t$ is approximated by sample mean $$\hat{\xi}_{t} = \frac{1}{m}\sum_{j=1}^{m}\xi_{t}^{(j)}$$
 
 - [[Conditional Expectation]]
-- [[State Space Models and Linear Dynamic System]]
+- [[Linear Dynamic System]]
 - [[Kalman Filter Discrete-Time]]
 
 

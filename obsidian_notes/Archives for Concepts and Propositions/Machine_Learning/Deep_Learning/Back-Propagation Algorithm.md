@@ -81,11 +81,13 @@ date of note: 2024-05-12
 >- $X$ is the input whose *gradient* we wish to compute, and 
 >- $G$ is the *gradient on the output* of the operation.
 
+^71c3c4
 
 
-![[backprop_outer_loop.png]]
 
-![[backprop_inner_loop.png]]
+![[backprop_outer_loop.png]] ^a79a3a
+
+![[backprop_inner_loop.png]] ^19b69f
 
 ## Explanation
 

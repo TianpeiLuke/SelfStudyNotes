@@ -27,7 +27,7 @@ date of note: 2024-05-12
 
 - [[Kalman Filter Discrete-Time]]
 - [[Extended Kalman Filter]]
-- [[State Space Models and Linear Dynamic System]]
+- [[Linear Dynamic System]]
 
 
 - [[Linear Stochastic Differential Equation]]

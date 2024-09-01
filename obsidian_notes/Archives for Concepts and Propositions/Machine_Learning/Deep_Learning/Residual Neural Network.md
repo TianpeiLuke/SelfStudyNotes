@@ -29,7 +29,7 @@ date of note: 2024-05-12
 - [[Artificial Neural Network and Deep Learning]]
 
 - [[Hidden Markov Model]]
-- [[State Space Models and Linear Dynamic System]]
+- [[Linear Dynamic System]]
 
 - [[Recurrent Neural Network]]
 

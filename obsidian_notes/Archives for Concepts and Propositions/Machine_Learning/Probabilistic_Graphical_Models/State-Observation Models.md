@@ -41,9 +41,16 @@ date of note: 2024-05-12
 >
 >-- [[Probabilistic Graphical Models by Koller]] pp 207
 
+## Partially Observed Markov Model
+
+>[!important]
+>A state-observation model is a **partially observed Markov model**.
+
+- [[Markov Decision Process]]
+
 ## State Space Model
 
-- [[State Space Models and Linear Dynamic System]]
+- [[Linear Dynamic System]]
 
 ## Sampling
 
