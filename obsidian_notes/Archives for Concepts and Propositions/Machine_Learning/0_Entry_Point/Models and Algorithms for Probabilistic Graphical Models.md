@@ -73,7 +73,7 @@ date of note: 2024-06-01
 - [[Dynamic Bayesian Network]]
 - [[State-Observation Models]]
 - [[State Space Models and Linear Dynamic System]]
-
+- [[Recurrent Neural Network]]
 
 
 ### Chordal Graph, Clique Tree
@@ -108,6 +108,7 @@ date of note: 2024-06-01
 - [[Hidden Markov Model]]
 	- [[Viterbi Decoding Algorithm for MAP in Hidden Markov Chain]]
 - [[Kalman Filter Discrete-Time]]
+- [[Recurrent Neural Network]]
 - [[Conditional Random Field]]
 - [[Latent Dirichlet Allocation]]
 - [[Restricted Boltzmann Machine]]
