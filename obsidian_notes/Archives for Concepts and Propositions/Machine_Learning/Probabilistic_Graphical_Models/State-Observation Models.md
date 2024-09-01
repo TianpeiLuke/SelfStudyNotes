@@ -51,6 +51,7 @@ date of note: 2024-05-12
 ## State Space Model
 
 - [[Linear Dynamic System]]
+- [[State Space Models and Nonlinear Dynamic System]]
 
 ## Sampling
 
