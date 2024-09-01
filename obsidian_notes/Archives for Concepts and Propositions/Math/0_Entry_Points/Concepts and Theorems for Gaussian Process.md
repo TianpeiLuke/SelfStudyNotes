@@ -169,7 +169,7 @@ date of note: 2024-05-30
 
 - [[Statistical Prediction Detection Smoothing and Filtering]]
 - [[Gaussian Filtering and Smoothing]]
-- [[State Space Models]]
+- [[State Space Models and Linear Dynamic System]]
 - [[Kalman Filter Discrete-Time]]
 - [[Kalman Filter Continuous-Time]]
 - [[Extended Kalman Filter]]

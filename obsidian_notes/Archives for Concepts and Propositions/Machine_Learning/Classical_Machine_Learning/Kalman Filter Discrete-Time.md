@@ -2,16 +2,25 @@
 tags:
   - concept
   - machine_learning/algorithms
-keywords: 
-topics: 
-name: 
+  - machine_learning/models
+keywords:
+  - kalman_filter
+topics:
+  - machine_learning_models
+  - machine_learning_theory
+name: Kalman Filter Discrete-Time
 date of note: 2024-05-12
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Kalman Filter Discrete-Time
+
+>[!important] Definition
+>
+
+
 
 
 
@@ -27,7 +36,7 @@ date of note: 2024-05-12
 
 - [[Kalman Filter Continuous-Time]]
 - [[Extended Kalman Filter]]
-- [[State Space Models]]
+- [[State Space Models and Linear Dynamic System]]
 - [[BFGS Algorithm]]
 
 
@@ -44,4 +53,5 @@ date of note: 2024-05-12
 
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 357 - 377
+- [[Probabilistic Graphical Models by Koller]] pp 211 - 212
 - [[Artificial Intelligence Modern Approach by Russell]]

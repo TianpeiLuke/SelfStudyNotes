@@ -27,7 +27,7 @@ date of note: 2024-05-12
 
 - [[Kalman Filter Continuous-Time]]
 - [[Extended Kalman Filter]]
-- [[State Space Models]]
+- [[State Space Models and Linear Dynamic System]]
 - [[BFGS Algorithm]]
 
 

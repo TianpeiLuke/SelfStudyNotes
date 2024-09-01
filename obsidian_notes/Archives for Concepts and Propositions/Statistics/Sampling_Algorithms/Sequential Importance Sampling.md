@@ -29,6 +29,7 @@ date of note: 2024-07-04
 >$$
 
 - [[Probability Density Function of Random Variable]]
+- [[State-Observation Models]]
 
 >[!info]
 >It is **nontrivial** to find a good trial distribution $g$ in high dimensional space. One of the most useful strategies in these problems is to *build up* the *trial density* **sequentially**.

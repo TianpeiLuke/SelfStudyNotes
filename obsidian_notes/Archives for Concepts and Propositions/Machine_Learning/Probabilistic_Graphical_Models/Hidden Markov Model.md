@@ -25,8 +25,9 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
-- [[State Space Models]]
+- [[State Space Models and Linear Dynamic System]]
 - [[Sequential Decision Process]]
+- [[Dynamic Bayesian Network]]
 - [[Markov Chain and Markov Process]]
 - [[Sum-Product Variable Elimination]]
 - [[Statistical Prediction Detection Smoothing and Filtering]]

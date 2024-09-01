@@ -108,4 +108,6 @@ date of note: 2024-06-11
 
 - [[Linear Semilinear and Quasilinear Partial Differential Equations]]
 
+- [[State Space Models and Linear Dynamic System]]
+
 - [[Introduction to Stochastic Differential Equations by Evans]]

@@ -68,6 +68,13 @@ date of note: 2024-06-01
 
 - [[Challenges on Graphical Model with Continuous Variables]]
 
+#### Dynamic Bayesian Network
+
+- [[Dynamic Bayesian Network]]
+- [[State-Observation Models]]
+- [[State Space Models and Linear Dynamic System]]
+
+
 
 ### Chordal Graph, Clique Tree
 

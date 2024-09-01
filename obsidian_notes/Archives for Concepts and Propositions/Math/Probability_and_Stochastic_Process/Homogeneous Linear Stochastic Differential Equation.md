@@ -62,5 +62,6 @@ date of note: 2024-06-11
 - [[Contraction Map Principle]]
 - [[Borel-Cantelli Lemma]]
 
+- [[State Space Models and Linear Dynamic System]]
 
 - [[Introduction to Stochastic Differential Equations by Evans]]
