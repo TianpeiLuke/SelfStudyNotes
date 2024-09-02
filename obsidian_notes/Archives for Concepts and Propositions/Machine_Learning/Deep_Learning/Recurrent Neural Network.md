@@ -165,12 +165,18 @@ date of note: 2024-08-16
 
 - [[Dynamic Bayesian Network]]
 
+## Gated Recurrent Neural Network
+
+- [[Long-Short Term Memory Network]]
+- [[Gated Recurrent Units in Neural Network]]
+
+
 
 -----------
 ##  Recommended Notes and References
 
 
-- [[Gated Recurrent Neural Network]]
+- [[Gated Recurrent Units in Neural Network]]
 - [[Long-Short Term Memory Network]]
 - [[Residual Neural Network]]
 - [[Transformer Network]]

@@ -101,7 +101,7 @@ date of note: 2024-05-12
 
 ### Recurrent Layer
 
-- [[Gated Recurrent Neural Network]]
+- [[Gated Recurrent Units in Neural Network]]
 - [[Long-Short Term Memory Network]]
 
 ### Residual Connection

@@ -32,7 +32,7 @@ date of note: 2024-08-31
 - [[Auto-Encoder]]
 
 - [[Recurrent Neural Network]]
-- [[Gated Recurrent Neural Network]]
+- [[Gated Recurrent Units in Neural Network]]
 - [[Long-Short Term Memory Network]]
 - [[Residual Neural Network]]
 

@@ -122,7 +122,15 @@ date of note: 2024-07-05
 >\end{align*}
 >$$
 
-
+>[!important] Definition
+>The **variational free energy** is defined as the *negative of ELBO*
+>$$
+>F(q, \theta; x) := - \mathcal{L}(q, \theta; x) =  \mathbb{E}_{q }\left[\log q(Z) -  \log p_{\theta}(x , Z) \right] 
+>$$
+>And the **KL divergence** is equal to 
+>$$
+> \mathbb{KL}\left( q \left\|\right. p(\cdot | x, \theta) \right) = F(q, \theta; x) + \log p_{\theta}(x) 
+>$$
 
 
 >[!info]

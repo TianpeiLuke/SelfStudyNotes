@@ -93,7 +93,7 @@ date of note: 2024-06-01
 ### Recurrent Network
 
 - [[Recurrent Neural Network]]
-- [[Gated Recurrent Neural Network]]
+- [[Gated Recurrent Units in Neural Network]]
 - [[Long-Short Term Memory Network]]
 - [[Residual Neural Network]]
 - [[Bidirectional Recurrent Neural Network]]
