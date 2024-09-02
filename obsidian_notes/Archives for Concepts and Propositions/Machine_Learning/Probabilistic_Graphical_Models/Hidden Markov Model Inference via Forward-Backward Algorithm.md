@@ -133,6 +133,10 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
+- [[Hidden Markov Model]]
+- [[Hidden Markov Model MAP Inference via Viterbi Algorithm]]
+
+
 - [[Sum-Product Belief Propagation Algorithm for Clique Tree]]
 - [[Sum-Product Variable Elimination]]
 - [[Statistical Prediction Detection Smoothing and Filtering]]
