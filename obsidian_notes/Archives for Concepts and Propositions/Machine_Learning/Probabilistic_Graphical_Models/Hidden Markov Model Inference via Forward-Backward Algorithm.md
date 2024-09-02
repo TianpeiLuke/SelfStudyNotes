@@ -125,6 +125,29 @@ date of note: 2024-05-12
 
 ## Fast Implementation
 
+>[!quote]
+>It is clear that a straightforward implementation of the **forwards-backwards algorithm** takes *$O(K^2T )$ time*, since we must perform a $K \times K$ *matrix multiplication* at each step. For some applications, such as speech recognition, $K$ is very large, so the $O(K^2)$ term becomes *prohibitive*. Fortunately, if the transition matrix is **sparse**, we can reduce this substantially. For example, in a sparse left-to-right transition matrix (e.g., Figure 9.6(a)), the algorithm *takes $O(T K)$ time*.
+>
+>-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 402
+
+>[!quote]
+>In some cases, we can exploit *special properties* of the *state space*, even if the transition matrix is not sparse. In particular, suppose the states represent a **discretization** of an underlying **continuous state-space**, and the transition matrix has the form $$A_{i,j} \propto  \rho(x_{j} - x_{i}),$$ where $x_{i}$ is the *continuous vector* represented by state $i$ and $\rho(u)$ is some scalar cost function, such as Euclidean distance. Then one can implement the forwards-backwards algorithm *in $O(T K \log K)$ time*. The **key** is to rewrite Equation (9.5) as a **convolution**,  $$\alpha_{t|t-1}(j) = \mathcal{P}(X^{(t)} = j \,|\, O^{(1\vartheta-1)}) =  \sum_{i}\,\alpha_{t-1}(i)\,A_{i,j} = \sum_{i}\,\alpha_{t-1}(i)\,\rho(j-i)$$  and then to apply the **Fast Fourier Transform**. (A similar transformation can be applied in the backwards pass.) This is very useful for models with large state spaces.
+>
+>-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 402
+
+- [[Convolution Operation]]
+- [[Fourier Series and Fourier Transform]]
+
+>[!quote]
+>We can also reduce inference to $O(\log T )$ time by using a **parallel prefix scan operator** that can be run efficiently on GPUs.
+>
+>-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 402
+
+>[!quote]
+>In some cases, the **bottleneck is memory**, not time. In particular, to compute the *posteriors* $\gamma_{t}$, we must store the *fitered distributions* $\alpha_{t}$ for $t = 1 \,{,}\ldots{,}\, T$ until we do the backwards pass. It is possible to devise a simple **divide-and-conquer algorithm** that reduces the **space complexity** from $O(KT )$ to $O(K \log T )$ at the cost of increasing the *running time* from $O(K^2T )$ to $O(K^2 T \log T)$. The basic idea is to **store** $\alpha_{t}$ and $\beta_{t}$ vectors at a *logarithmic number of intermediate checkpoints*, and then recompute the missing messages on demand from these checkpoints.
+>
+>-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 403
+
 
 
 

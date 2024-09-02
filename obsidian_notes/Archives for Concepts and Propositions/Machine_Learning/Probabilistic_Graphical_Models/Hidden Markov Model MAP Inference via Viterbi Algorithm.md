@@ -109,7 +109,14 @@ date of note: 2024-09-01
 >[!important] Definition
 >The **Viterbi algorithm** is also called the **Viterbi decoding** as finding the MAP estimate is the process of *decoding*.
 
+## Time and Space Complexity
 
+>[!quote]
+>The **time complexity** of **Viterbi** is clearly $O(K^2T)$ in general, and the **space complexity** is $O(KT)$, both the same as **forwards-backwards**. If the transition matrix has the form $$A_{i,j} \propto  \rho(x_{j} − x_{i}),$$ where $x_{i}$ is the *continuous vector* represented by state $i$ and $\rho(u)$ is some scalar cost function, such as Euclidean distance, we can implement Viterbi in *$O(T K)$ time*, by using the generalized distance transform to implement Equation.
+>
+>--[[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 405
+
+- [[Hidden Markov Model Inference via Forward-Backward Algorithm]]
 
 
 

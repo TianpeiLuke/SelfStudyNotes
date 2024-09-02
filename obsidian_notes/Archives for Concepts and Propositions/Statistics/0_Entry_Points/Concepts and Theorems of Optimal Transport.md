@@ -52,6 +52,12 @@ routing, involve moving distributions, and that thread appears in all of the sem
 - [[Variational Formulation of Optimal Transport]]
 
 
+### Optimal Transport in Machine Learning
+
+- [[k-Means Clustering]]
+
+
+
 ### Transportation Cost Inequalities
 
 - [[Information Inequalities]]
