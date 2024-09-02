@@ -133,6 +133,8 @@ date of note: 2024-05-12
 >	- choose $x_{i}^{*}$ that **maximizes** the corresponding query, given the *previous choice* $u_{i}$ (restricted to $\text{scope}[\phi_{X_{i}}] - \left\{ X_{i} \right\}$ ) $$x_{i}^{*} = \arg\max_{x_{i}}\phi_{X_{i}}(x_{i}, u_{i})$$
 >- *Output*: $$x^{*} = (x_{1}^{*} \,{,}\ldots{,}\,x_{k}^{*})$$
 
+- [[Hidden Markov Model MAP Inference via Viterbi Algorithm]]
+
 >[!info]
 >The key intuition in this computation is that, as we *eliminate variables*, we cannot determine their maximizing value.  However, we can determine a **“conditional” maximizing value** — their maximizing value **given** the values of the variables that *have not yet been eliminated*. 
 >- When we pick the value of the final variable, we can then **go back** and *pick the values* of the other variables accordingly. 
