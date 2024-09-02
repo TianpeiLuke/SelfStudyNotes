@@ -23,7 +23,7 @@ date of note: 2024-05-12
 
 >[!important] Definition
 >A **hidden Markov model (HMM)** is the simplest example of a *state-observation model* where the hidden states form a *chain graph* and each observation variable at $t$ is connected to current state only.
->- In HMM, in addition to the conditional independence in state-observation model, it assume that the *current observation* is independent from *past observations* given the current state: $$\left(O^{(t)} \perp \left\{ O^{0:t-1}, O^{t+1:T}\right\}\,|\, X^{(t)}\right)$$
+>- In HMM, it is assumed that the *current observation* is independent from *past observations* given the current state: $$\left(O^{(t)} \perp \left\{ O^{0:t-1}, O^{t+1:T}\right\}\,|\, X^{(t)}\right)$$
 >
 >The *joint distribution* of **HMM** can be factorized as
 >$$
@@ -47,10 +47,19 @@ date of note: 2024-05-12
 
 ![[finite_state_machine.png]]
 
+>[!info]
+>In practice, we only consider **discrete-time** **discrete-state** *Markov chain* for state process.
+
+- [[Markov Chain and Markov Process]]
+
+
 ## Posterior Inference and Forward-Backward Algorithm
 
 - [[Hidden Markov Model Inference via Forward-Backward Algorithm]]
 
+## Maximum A Posteriori Inference and Viterbi Decoding
+
+- [[Hidden Markov Model MAP Inference via Viterbi Algorithm]]
 
 
 

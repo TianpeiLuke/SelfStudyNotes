@@ -176,6 +176,7 @@ date of note: 2024-08-16
 - [[Transformer Network]]
 
 
+- [[Hidden Markov Model]]
 - [[Markov Transition Kernel and Transition Function]]
 - [[Dynamic Bayesian Network]]
 - [[Artificial Neural Network and Deep Learning]]
