@@ -81,7 +81,9 @@ date of note: 2024-05-12
 
 - [[Hidden Markov Model]]
 
+## Prediction, Filtering, Smoothing Tasks
 
+- [[Statistical Prediction Smoothing and Filtering for State Observation Model]]
 
 
 

@@ -88,7 +88,7 @@ date of note: 2024-05-12
 - [[Log-Partition Function of Exponential Family]]
 
 
-
+- [[Classification Problem]]
 - [[Empirical Risk Minimization]]
 - [[Empirical Process and Empirical Measure]]
 

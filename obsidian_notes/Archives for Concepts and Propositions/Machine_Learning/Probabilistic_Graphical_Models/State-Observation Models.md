@@ -25,8 +25,8 @@ date of note: 2024-05-12
 >- **Markov assumption for observation**: the *current observation* is independent from both *future* and *past states* given the *current state* $$(O^{(t)} \perp  \{X^{(0:t-1)},\, X^{(t+1:\infty)} \} \,|\, X^{(t)} )$$
 >  
 >A  **state space model** consists of two components
->- the **transition model** $$\mathcal{P}(X^{(t+1)} | X^{(t)})$$
->- the **observation model** $$\mathcal{P}(O^{(t)} | X^{(t)})$$
+>- the **transition model** or **dynamic model** $$\mathcal{P}(X^{(t+1)} | X^{(t)})$$
+>- the **observation model** or **measurement model** $$\mathcal{P}(O^{(t)} | X^{(t)})$$
 
 ^dc6850
 
@@ -52,6 +52,7 @@ date of note: 2024-05-12
 
 - [[Linear Dynamic System]]
 - [[State Space Models and Nonlinear Dynamic System]]
+- [[Statistical Prediction Smoothing and Filtering for State Observation Model]]
 
 ## Sampling
 

@@ -167,7 +167,7 @@ date of note: 2024-05-30
 
 ### Gaussian Filtering and Smoothing
 
-- [[Statistical Prediction Detection Smoothing and Filtering]]
+- [[Statistical Prediction Smoothing and Filtering for State Observation Model]]
 - [[Gaussian Filtering and Smoothing]]
 - [[Linear Dynamic System]]
 - [[Kalman Filter Discrete-Time]]

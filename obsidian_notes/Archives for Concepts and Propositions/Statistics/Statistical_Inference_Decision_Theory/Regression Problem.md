@@ -48,10 +48,20 @@ date of note: 2024-06-11
 ## Explanation
 
 
-## Linear Regression
+### Linear Regression
 
 - [[Linear Regression]]
 - [[Least Square Estimation]]
+
+### Probit Regression
+
+- [[Probit Regression]]
+
+### Boosting
+
+- [[Gradient Boosting Algorithm]]
+
+
 
 
 
@@ -59,6 +69,7 @@ date of note: 2024-06-11
 ##  Recommended Notes and References
 
 - [[Least Square Estimation]]
+- [[Classification Problem]]
 
 - [[Maximum Likelihood Estimation]]
 - [[Generalized Linear Models]]

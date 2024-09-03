@@ -32,6 +32,7 @@ date of note: 2024-05-12
 >	- The candidate for new information is partially controlled by the reset gate $$\hat{h}^{(t)} = \sigma \left(U x^{(t)} + W\,[r^{(t)} \odot h^{(t-1)}] + b\right)$$ 
 >	- The *reset* and *update gates* can individually “**ignore**” parts of the *state vector* $C^{(t-1)}$.
 
+- [[Leaky Units and Other Strategies for Multiple Time Scales Sequential Network]]
 
 >[!info]
 >Compared to LSTM, we combine the role of *long-term memory* $C^{(t)}$ and *short-term memory* $h^{(t)}$ into **one state vector** $h^{(t)}$. 
@@ -65,6 +66,6 @@ date of note: 2024-05-12
 - [[Recurrent Neural Network]]
 - [[Artificial Neural Network and Deep Learning]]
 
-- [[Deep Learning Foundations and Concepts by Bishop]]
-- [[Probabilistic Machine Learning Advanced Topics by Murphy]]
-- [[Deep Learning by Goodfellow]]
+- [[Deep Learning Foundations and Concepts by Bishop]] pp 382
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 636
+- [[Deep Learning by Goodfellow]] pp 400

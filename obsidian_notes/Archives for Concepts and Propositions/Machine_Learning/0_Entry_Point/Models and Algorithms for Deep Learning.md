@@ -93,6 +93,9 @@ date of note: 2024-06-01
 ### Recurrent Network
 
 - [[Recurrent Neural Network]]
+- [[Challenge of Long-Term Dependencies for Sequential Networks]]
+- [[Leaky Units and Other Strategies for Multiple Time Scales Sequential Network]]
+
 - [[Gated Recurrent Units in Neural Network]]
 - [[Long-Short Term Memory Network]]
 - [[Residual Neural Network]]

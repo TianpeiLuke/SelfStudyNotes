@@ -51,7 +51,7 @@ date of note: 2024-05-12
 
 
 - [[Bayes Theorem]]
-- [[Statistical Prediction Detection Smoothing and Filtering]]
+- [[Statistical Prediction Smoothing and Filtering for State Observation Model]]
 - [[Sum-Product Belief Propagation Algorithm for Clique Tree]]
 
 ### Forward-Backward Algorithm
@@ -162,7 +162,7 @@ date of note: 2024-05-12
 
 - [[Sum-Product Belief Propagation Algorithm for Clique Tree]]
 - [[Sum-Product Variable Elimination]]
-- [[Statistical Prediction Detection Smoothing and Filtering]]
+- [[Statistical Prediction Smoothing and Filtering for State Observation Model]]
 - [[Kalman Filter Discrete-Time]]
 
 

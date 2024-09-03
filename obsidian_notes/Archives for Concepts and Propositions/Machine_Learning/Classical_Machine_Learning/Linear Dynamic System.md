@@ -109,13 +109,11 @@ date of note: 2024-05-12
 
 >[!important] Definition
 >The **discrete-time linear time-invariant (LTI) system** can be formulated as a **state-observation model** where
->- the *transition model* is defined by the *Gaussian distribution* $$\mathcal{P}(X_{t+1} | X_{t}) = \mathcal{N}(AX_{t};  \Sigma_{X}),$$
->- the *observation model* is defined by the *Gaussian distribution* $$\mathcal{P}(Y_{t} | X_{t}) = \mathcal{N}(CX_{t};  \Sigma_{O}).$$
+>- the *transition model* is defined by the *Gaussian distribution* $$\mathcal{P}(X_{t+1} | X_{t}, \,U_{t}) = \mathcal{N}(\,A(t) X_{t} + B(t) U_{t}\;;\;  \Sigma_{X}\,),$$
+>- the *observation model* is defined by the *Gaussian distribution* $$\mathcal{P}(Y_{t} | X_{t},\, U_{t}) = \mathcal{N}(\,C(t) X_{t} + D(t) U_{t}\;;\;  \Sigma_{O}\,).$$
 >  
->We can see this when
->-  the *control vector* $U_{t}$ are assumed to be *i.i.d.* for all $t$ 
->- $U_{t} \sim \mathcal{N}(0,I)$ are assumed to be a *Gaussian while noise vector*
->- $U_{t} \perp X_{t}$ for all $t$
+>The above model is also called a **linear Gaussian state space model (LG-SSM)**.  
+
 
 - [[State-Observation Models]]
 - [[Gaussian Random Vector]]

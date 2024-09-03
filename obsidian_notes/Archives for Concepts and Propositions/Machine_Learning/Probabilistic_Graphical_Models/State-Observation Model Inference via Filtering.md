@@ -27,7 +27,7 @@ date of note: 2024-09-01
 
 
 - [[State-Observation Models]]
-- [[Statistical Prediction Detection Smoothing and Filtering]]
+- [[Statistical Prediction Smoothing and Filtering for State Observation Model]]
 - [[Sum-Product Belief Propagation Algorithm for Clique Tree]]
 - [[Hidden Markov Model Inference via Forward-Backward Algorithm]]
 - [[Particle Filter or Sampling-Importance-Resampling]]

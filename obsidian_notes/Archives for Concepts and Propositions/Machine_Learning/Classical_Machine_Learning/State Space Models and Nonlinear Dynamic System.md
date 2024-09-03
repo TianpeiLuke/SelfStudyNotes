@@ -78,6 +78,7 @@ date of note: 2024-05-12
 
 - [[State-Observation Models]]
 - [[Gaussian Random Vector]]
+- [[Statistical Prediction Smoothing and Filtering for State Observation Model]]
 
 ## Stochastic Control and Stochastic Differential Equation
 

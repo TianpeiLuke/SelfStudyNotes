@@ -30,12 +30,21 @@ date of note: 2024-08-10
  
 - [[Empirical Risk Minimization]]
 - [[Conditional Probability]]
+- [[Classification Problem]]
+- [[Regression Problem]]
 
 >[!important] Definition
 >The **non-probabilistic supervised learning** directly learn a function $h\in \mathcal{H}$ so that the error under $\mathcal{P}$ is minimized
 >$$
 >h \in \arg\inf_{h\in \mathcal{H}}\left\{ \mathbb{E}_{ p }\left[ L(h(X), Y)  \right] + \lambda\,\Omega \left(\lVert h \rVert  \right)\right\} 
 >$$
+
+>[!important] Definition
+>In **supervised learning**, the learning task is done in *batch mode*: we collect a batch of *labeled* training samples, and then a model is learned based on the *batched training set*.
+>
+>This is in contrast to the **reinforcement learning** and the **online learning** where the *labels* or *feedbacks* are collected in *sequential manner*  and the model is learned *while* feedbacks are collected.
+
+
 
 ### Unsupervised Learning
 
@@ -67,14 +76,13 @@ date of note: 2024-08-10
 - [[Artificial Neural Network and Deep Learning]]
 - [[Naive Bayes Model]]
 - [[Conditional Random Field]]
-- [[Multi-Armed Adversarial Bandit]]
-- [[Upper Confidence Bound Algorithm]]
-- [[EXP3 or Exponential Weights Algorithm for Exploration and Exploitation]]
+
 
 ### Unsupervised Learning Algorithm
 
 - [[k-Means Clustering]]
 - [[Principle Component Analysis]]
+- [[Latent Dirichlet Allocation]]
 
 
 
