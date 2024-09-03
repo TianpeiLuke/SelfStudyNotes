@@ -7,6 +7,7 @@ keywords:
   - state_observation_model
 topics:
   - machine_learning_models
+  - dynamic_system
 name: State-Observation Models
 date of note: 2024-05-12
 ---
@@ -53,7 +54,7 @@ date of note: 2024-05-12
 
 - [[Linear Dynamic System]]
 - [[State Space Models and Nonlinear Dynamic System]]
-- [[Statistical Prediction Smoothing and Filtering for State Observation Model]]
+- [[Statistical Prediction Filtering and Smoothing for State Observation Model]]
 
 ## Sampling
 

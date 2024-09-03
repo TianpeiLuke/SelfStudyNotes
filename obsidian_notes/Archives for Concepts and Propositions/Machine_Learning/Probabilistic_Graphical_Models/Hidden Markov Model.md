@@ -75,7 +75,7 @@ date of note: 2024-05-12
 - [[Dynamic Bayesian Network]]
 - [[Markov Chain and Markov Process]]
 - [[Sum-Product Variable Elimination]]
-- [[Statistical Prediction Smoothing and Filtering for State Observation Model]]
+- [[Statistical Prediction Filtering and Smoothing for State Observation Model]]
 
 - [[Recurrent Neural Network]]
 - [[Conditional Random Field]]

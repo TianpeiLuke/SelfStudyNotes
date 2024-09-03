@@ -4,12 +4,14 @@ tags:
   - machine_learning/models
   - probabilistic_graphical_models/models
   - probabilistic_graphical_models/sequential_models
+  - machine_learning/dynamic_system
 keywords:
   - dynamic_bayesian_network
 topics:
   - machine_learning_models
   - machine_learning_theory
   - probabilistic_graphical_model
+  - dynamic_system
 name: Dynamic Bayesian Network
 date of note: 2024-05-12
 ---
@@ -82,7 +84,7 @@ date of note: 2024-05-12
 
 ## Prediction, Filtering, Smoothing Tasks
 
-- [[Statistical Prediction Smoothing and Filtering for State Observation Model]]
+- [[Statistical Prediction Filtering and Smoothing for State Observation Model]]
 
 
 

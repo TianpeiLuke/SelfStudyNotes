@@ -51,8 +51,9 @@ date of note: 2024-05-12
 
 
 - [[Bayes Theorem]]
-- [[Statistical Prediction Smoothing and Filtering for State Observation Model]]
+- [[Statistical Prediction Filtering and Smoothing for State Observation Model]]
 - [[Sum-Product Belief Propagation Algorithm for Clique Tree]]
+- [[Bayesian Filtering and Smoothing Equations for State Observation Models]]
 
 ### Forward-Backward Algorithm
 
@@ -111,6 +112,11 @@ date of note: 2024-05-12
 
 - [[Sum-Product Belief Propagation Algorithm for Clique Tree]]
 
+>[!info]
+>The *forward-backward algorithm* is a **Bayesian smoothing algorithm**.
+
+- [[Bayesian Filtering and Smoothing Equations for State Observation Models]]
+
 >[!quote]
 >In practice it is more numerically stable to compute the **log probabilities** $$\ell_{t}(j) = \log \mathcal{P}(y^{(t)}\,|\,x^{(t)} = j)$$ of the evidence, rather than the probabilities $$\lambda_{t}(j) = \mathcal{P}(y^{(t)}\,|\,x^{(t)} = j).$$ We can combine the state *conditional log likelihoods* $\lambda_{t}(j)$ with the *state prior* $p(x^{(t)} = j| y^{(1:t-1)})$ by using the **log-sum-exp trick**,
 >
@@ -162,12 +168,12 @@ date of note: 2024-05-12
 
 - [[Sum-Product Belief Propagation Algorithm for Clique Tree]]
 - [[Sum-Product Variable Elimination]]
-- [[Statistical Prediction Smoothing and Filtering for State Observation Model]]
+- [[Statistical Prediction Filtering and Smoothing for State Observation Model]]
 - [[Kalman Filter Discrete-Time]]
 
 
 - [[State-Observation Models]]
-- [[State-Observation Model Inference via Filtering]]
+- [[Bayesian Filtering and Smoothing Equations for State Observation Models]]
 - [[State Space Models and Nonlinear Dynamic System]]
 - [[Dynamic Bayesian Network]]
 - [[Markov Chain and Markov Process]]

@@ -13,14 +13,17 @@ keywords:
   - state_observation_model
 topics:
   - statistics/estimation
-name: Statistical Prediction Detection Smoothing and Filtering
+  - probabilistic_graphical_model
+  - statistics/signal_processing
+  - dynamic_system
+name: Statistical Prediction Filtering and Smoothing for State Observation Model
 date of note: 2024-08-14
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Statistical Prediction Smoothing and Filtering for State Observation Model
+>**Name**: Statistical Prediction Filtering and Smoothing for State Observation Model
 
 ![[State-Observation Models#^dc6850]]
 
@@ -69,6 +72,8 @@ date of note: 2024-08-14
 >
 >Filtering task is also called a **tracking** task. 
 
+
+- [[Bayesian Filtering and Smoothing Equations for State Observation Models]]
 - [[Kalman Filter Discrete-Time]]
 - [[Kalman Filter Continuous-Time]]
 - [[Particle Filter or Sampling-Importance-Resampling]]
@@ -112,8 +117,10 @@ date of note: 2024-08-14
 
 - [[Hindsight Bias]]
 
+>[!info]
+>The **filtering task** is the **core** of *posterior inference task* for *state observation model*.
 
-
+- [[Bayesian Filtering and Smoothing Equations for State Observation Models]]
 
 
 -----------

@@ -4,11 +4,14 @@ tags:
   - machine_learning/models
   - probabilistic_graphical_models/sequential_models
   - statistics/signal_processing
+  - machine_learning/dynamic_system
 keywords:
   - state_space_model
   - linear_dynamic_system
 topics:
   - machine_learning_models
+  - probabilistic_graphical_model
+  - dynamic_system
 name: State Space Models and Nonlinear Dynamic System
 date of note: 2024-05-12
 ---
@@ -80,7 +83,7 @@ date of note: 2024-05-12
 
 - [[State-Observation Models]]
 - [[Gaussian Random Vector]]
-- [[Statistical Prediction Smoothing and Filtering for State Observation Model]]
+- [[Statistical Prediction Filtering and Smoothing for State Observation Model]]
 
 ## Stochastic Control and Stochastic Differential Equation
 

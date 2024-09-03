@@ -74,7 +74,8 @@ date of note: 2024-06-01
 - [[State-Observation Models]]
 	- [[Linear Dynamic System]]
 	- [[State Space Models and Nonlinear Dynamic System]]
-- [[Statistical Prediction Smoothing and Filtering for State Observation Model]]
+- [[Statistical Prediction Filtering and Smoothing for State Observation Model]]
+- [[Bayesian Filtering and Smoothing Equations for State Observation Models]]
 
 - [[Recurrent Neural Network]]
 - [[Hidden Markov Model]]
@@ -149,7 +150,7 @@ date of note: 2024-06-01
 
 #### Exact Inference in Temporal Models
 
-- [[State-Observation Model Inference via Filtering]]
+- [[Bayesian Filtering and Smoothing Equations for State Observation Models]]
 - [[Hidden Markov Model Inference via Forward-Backward Algorithm]]
 - [[Hidden Markov Model MAP Inference via Viterbi Algorithm]]
 
@@ -228,7 +229,7 @@ date of note: 2024-06-01
 - [[Inverse Covariance Estimation]]
 - [[Partial Correlation]]
 - [[Graph LASSO and Structured Learning in Gaussian Graphical Model]]
-
+- [[Natural Parameter and Mean Parameter for Gaussian Distribution]]
 
 ### Learning of Graphical Model
 

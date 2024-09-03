@@ -3,12 +3,16 @@ tags:
   - concept
   - machine_learning/models
   - statistics/signal_processing
+  - probabilistic_graphical_models/sequential_models
+  - machine_learning/dynamic_system
 keywords:
   - state_space_model
   - linear_dynamic_system
   - linear_time_invariant_system
 topics:
   - machine_learning_models
+  - dynamic_system
+  - probabilistic_graphical_model
 name: Linear Dynamic System
 date of note: 2024-05-12
 ---
@@ -114,6 +118,8 @@ date of note: 2024-05-12
 >- the *observation model* is defined by the *Gaussian distribution* $$\mathcal{P}(Y_{t} | X_{t},\, U_{t}) = \mathcal{N}(\,C(t) X_{t} + D(t) U_{t}\;;\;  \Sigma_{O}\,).$$
 >  
 >The above model is also called a **linear Gaussian state space model (LG-SSM)**.  
+
+^550f59
 
 
 - [[State-Observation Models]]
