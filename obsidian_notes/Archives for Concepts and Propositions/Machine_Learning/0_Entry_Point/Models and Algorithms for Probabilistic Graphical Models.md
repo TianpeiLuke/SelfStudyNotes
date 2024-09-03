@@ -138,7 +138,7 @@ date of note: 2024-06-01
 - [[Clique Tree Invariant of Sum Product and Reparameterization of PGM]]
 - [[Sum-Product Belief-Update Message Passing Algorithm for Clique Tree]]
 - [[Belief Propagation and Belief Update Equivalence for Clique Tree]]
-
+- [[Gaussian Belief Propagation]]
 
 
 #### Exact Inference via Maximum Entropy Learning
@@ -153,6 +153,8 @@ date of note: 2024-06-01
 - [[Bayesian Filtering and Smoothing Equations for State Observation Models]]
 - [[Hidden Markov Model Inference via Forward-Backward Algorithm]]
 - [[Hidden Markov Model MAP Inference via Viterbi Algorithm]]
+- [[Kalman Filter Discrete-Time]]
+
 
 #### Variational Inference on Clique Tree
 

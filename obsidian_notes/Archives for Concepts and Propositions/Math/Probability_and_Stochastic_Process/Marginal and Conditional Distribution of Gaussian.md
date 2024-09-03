@@ -88,6 +88,7 @@ date of note: 2024-07-25
 - [[Conditional Probability]]
 - [[Probability Density Function of Random Variable]]
 - [[Schur Complement and Inversion of Block Matrix]]
+- [[Kalman Filter Discrete-Time]]
 
 ## Canonical Parameterization 
 
@@ -229,6 +230,8 @@ date of note: 2024-07-25
 - [[Conditional Probability]]
 - [[Product Measure]]
 - [[Probability Distribution of Random Variable]]
+
+- [[Kalman Filter Discrete-Time]]
 
 
 - [[Schur Complement and Inversion of Block Matrix]]

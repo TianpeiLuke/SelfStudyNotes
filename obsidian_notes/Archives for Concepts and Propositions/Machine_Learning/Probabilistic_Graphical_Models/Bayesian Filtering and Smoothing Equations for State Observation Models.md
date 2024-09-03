@@ -55,6 +55,8 @@ date of note: 2024-09-01
 >	- The above equation in *prediction step* is due to [[Chapman-Kolmogorov Equation]]
 >- **Update Step**: update the current belief state using *Bayes rule* $$\begin{align*} \alpha_{t} = \mathcal{P}\left(X^{(t)}\;|\; O^{(1: t)}\right) &= \frac{1}{Z_{t}}\mathcal{P}(O^{(t)}| X^{(t)})\,\mathcal{P}\left(X^{(t)}\;|\;O^{(1:t-1)}\right)\\[5pt] &= \text{Normalize}\left(\lambda_{t}\,\alpha_{t|t-1} \right) \end{align*}$$
 
+^1f4438
+
 - [[Markov Transition Kernel and Transition Function]]
 - [[Kalman Filter Discrete-Time]]
 
