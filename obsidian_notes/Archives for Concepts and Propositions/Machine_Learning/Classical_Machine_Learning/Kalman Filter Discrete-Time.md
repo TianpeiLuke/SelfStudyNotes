@@ -3,6 +3,7 @@ tags:
   - concept
   - machine_learning/algorithms
   - machine_learning/models
+  - probabilistic_graphical_models/sequential_models
 keywords:
   - kalman_filter
 topics:

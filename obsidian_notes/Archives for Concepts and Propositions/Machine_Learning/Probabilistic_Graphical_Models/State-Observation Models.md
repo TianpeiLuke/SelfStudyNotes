@@ -2,6 +2,7 @@
 tags:
   - concept
   - machine_learning/models
+  - probabilistic_graphical_models/sequential_models
 keywords:
   - state_observation_model
 topics:

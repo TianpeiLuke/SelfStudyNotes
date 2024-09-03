@@ -2,6 +2,8 @@
 tags:
   - concept
   - machine_learning/models
+  - probabilistic_graphical_models/sequential_models
+  - statistics/signal_processing
 keywords:
   - state_space_model
   - linear_dynamic_system

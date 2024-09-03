@@ -1,10 +1,9 @@
 ---
 tags:
   - concept
-  - machine_learning/algorithms
   - machine_learning/models
   - probabilistic_graphical_models/models
-  - probabilistic_graphical_models/algorithm
+  - probabilistic_graphical_models/sequential_models
 keywords:
   - dynamic_bayesian_network
 topics:

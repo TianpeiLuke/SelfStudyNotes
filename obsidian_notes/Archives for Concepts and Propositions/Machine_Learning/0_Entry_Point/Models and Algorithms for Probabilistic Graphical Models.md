@@ -72,8 +72,10 @@ date of note: 2024-06-01
 
 - [[Dynamic Bayesian Network]]
 - [[State-Observation Models]]
-- [[Linear Dynamic System]]
-- [[State Space Models and Nonlinear Dynamic System]]
+	- [[Linear Dynamic System]]
+	- [[State Space Models and Nonlinear Dynamic System]]
+- [[Statistical Prediction Smoothing and Filtering for State Observation Model]]
+
 - [[Recurrent Neural Network]]
 - [[Hidden Markov Model]]
 

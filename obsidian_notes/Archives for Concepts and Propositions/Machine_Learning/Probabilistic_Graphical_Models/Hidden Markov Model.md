@@ -3,6 +3,7 @@ tags:
   - concept
   - machine_learning/models
   - probabilistic_graphical_models/models
+  - probabilistic_graphical_models/sequential_models
 keywords:
   - hidden_markov_model
 topics:

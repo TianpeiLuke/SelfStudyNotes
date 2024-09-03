@@ -3,9 +3,9 @@ tags:
   - concept
   - statistics/signal_processing
   - statistics/estimation
-  - statistics/inference
   - machine_learning/models
   - deep_learning/sequential_networks
+  - probabilistic_graphical_models/sequential_models
 keywords:
   - prediction_problem
   - smoothing_problem
@@ -65,7 +65,9 @@ date of note: 2024-08-14
 
 >[!important] Definition
 >The task of **(Bayesian) filtering** is to compute the **belief state** $$\mathcal{P}(X^{(t)}\,|\, O^{(1: t)})$$
->where we want to estimate the hidden state at *current time* $t$, given all *historical time* $<t$ and *present time* $t$ observations. 
+>where we want to estimate the hidden state at *current time* $t$, given all *historical time* $<t$ and *present time* $t$ observations.
+>
+>Filtering task is also called a **tracking** task. 
 
 - [[Kalman Filter Discrete-Time]]
 - [[Kalman Filter Continuous-Time]]
@@ -138,3 +140,4 @@ date of note: 2024-08-14
 - [[Statistical Decision Problem]]
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 353 - 358
+- [[Probabilistic Graphical Models by Koller]] pp 652 - 654
