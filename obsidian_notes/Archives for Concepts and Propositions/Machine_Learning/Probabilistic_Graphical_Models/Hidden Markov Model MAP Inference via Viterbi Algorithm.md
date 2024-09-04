@@ -101,8 +101,10 @@ date of note: 2024-09-01
 
 ## Explanation
 
->[!info] 
+>[!important] 
 >The **Viterbi algorithm** is a special case of the **max-product belief propagation algorithm** for HMM.
+>
+>This is a **dynamic programming algorithm**.
 
 - [[Max-Product Belief Propagation for Clique Tree]]
 

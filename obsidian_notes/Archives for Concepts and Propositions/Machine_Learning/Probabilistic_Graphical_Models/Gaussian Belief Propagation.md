@@ -162,6 +162,16 @@ date of note: 2024-05-12
 
 
 
+## Kalman Filter
+
+
+>[!info]
+>The posterior inference of **Kalman filter** can be seen as a special case of *Gaussian Belief Propagation* when operating on the **unfolded temporal network**.
+
+- [[Kalman Filter Discrete-Time]]
+
+
+
 
 -----------
 ##  Recommended Notes and References

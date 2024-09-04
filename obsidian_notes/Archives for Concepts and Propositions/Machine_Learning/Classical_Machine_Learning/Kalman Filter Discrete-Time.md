@@ -67,7 +67,10 @@ date of note: 2024-05-12
 >[!info]
 >The **Kalman filter (KF)** is an algorithm for *exact Bayesian filtering* for *linear Gaussian state space models*.
 >
->It is the Gaussian analog of the **Hidden Markov Model (HMM)**.
+>It is the Gaussian analog of the **Hidden Markov Model (HMM)**. 
+
+>[!info]
+>The posterior inference of Kalman filter follows the **dynamic programming algorithm**.
 
 
 >[!info]
@@ -135,12 +138,176 @@ date of note: 2024-05-12
 >$$
 >\mathcal{P}(X | O) = \mathcal{N}\left( \mu_{X} + K\left(O - \mu_{O}\right)\;;\; \Sigma_{X} - K\, \Sigma_{O}\,K^{T} \right)
 >$$
+>where $$K := \Sigma_{X,O}\,\Sigma_{O}^{-1}$$
+
+>[!info]
+>The *joint distribution* of *states in two consecutive time* given all past observations is given by
+>$$
+>\begin{align*}
+> &\mathcal{P}(X^{(t-1)},\,X^{(t)}\;|\; O^{(1: t-1)},\, U^{(1: t-1)} ) \\[5pt]
+> &= \mathcal{P}\left(X^{(t)}\;|\; X^{(t-1)},\, U^{(t-1)}\right)\,\mathcal{P}\left(X^{(t-1)}\;|\; O^{(1: t-1)},\, U^{(1: t-1)}\right)  \\[5pt]
+> &= \mathcal{N}\left(X^{(t)}\;|\; A\,X^{(t-1)} + B\,U^{(t-1)}\;;\; \Sigma_{X}  \right)\, \mathcal{N}\left(X^{(t-1)}\;|\; \mu_{t-1|t-1} ;\; \Sigma_{t-1|t-1}  \right) \\[5pt]
+> &= \mathcal{N}\left( (X^{(t-1)}, X^{(t)})\;|\; \hat{\mu}; \hat{\Sigma} \right)
+>\end{align*}
+>$$
+>where 
+>$$
+>\hat{\mu} = \left[ \begin{array}{c}\mu_{t-1|t-1} \\ A\,X^{(t-1)} + B\,U^{(t-1)} \end{array} \right], \quad \hat{\Sigma} = \left[\begin{array}{cc}\Sigma_{t-1|t-1} & \Sigma_{t-1|t-1}\,A^{T}\\ A\,\Sigma_{t-1|t-1} & A\,\Sigma_{t-1|t-1}\,A^{T} + \Sigma_{X} \end{array}  \right]  
+>$$
+
+>[!info]
+>The *marginal predictive distribution* is given by
+>$$
+>\begin{align*}
+>\mathcal{P}(X^{(t)}\;|\; O^{(1: t-1)},\, U^{(1: t-1)})&=  \mathcal{N}\left(X^{(t)}\;|\; A\,X^{(t-1)} + B\,U^{(t-1)}\,;\,  A\,\Sigma_{t-1|t-1}\,A^{T} + \Sigma_{X}  \right) \\
+>&:= \mathcal{N}\left( X^{(t)}\;|\;  \mu_{t|t-1}\,;\, \Sigma_{t|t-1} \right)
+>\end{align*}
+>$$
 >where
->- $$K := \Sigma_{X,O}\,\Sigma_{O}^{-1}$$
+>$$
+>\mu_{t|t-1} = A\,X^{(t-1)} + B\,U^{(t-1)}\;,\; \Sigma_{t|t-1} =  A\,\Sigma_{t-1|t-1}\,A^{T} + \Sigma_{X}.
+>$$
+>This is the result in **prediction step.**
+
+>[!info]
+>The *joint distribution* of *states* and *observations* at time $t$ is given by 
+>$$
+>\begin{align*}
+> &\mathcal{P}(X^{(t)},\,O^{(t)} \;|\; O^{(1: t-1)},\, U^{(1: t)}) \\[5pt]
+> &= \mathcal{P}\left(  O^{(t)} \;|\; X^{(t)},\, U^{(t)}\right)\,  \mathcal{P}\left(  X^{(t)} \;|\; O^{(1: t-1)},\, U^{(1: t-1)}\right) \\[5pt]
+> &= \mathcal{N}\left( O^{(t)}\;|\; C\,X^{(t)} + D\,U^{(t)}\;;\; \Sigma_{O}  \right)\; \mathcal{N}\left(  X^{(t)} \;|\;  \mu_{t|t-1}\,;\, \Sigma_{t|t-1} \right)\\[5pt]
+> &= \mathcal{N}\left( (X^{(t)},\,O^{(t)})\;|\; \bar{\mu}\;;\; \bar{\Sigma} \right) 
+>\end{align*}
+>$$
+>where
+>$$
+>\bar{\mu} = \left[ \begin{array}{c}\mu_{t|t-1} \\ C\,X^{(t)} + D\,U^{(t)} \end{array} \right], \quad \bar{\Sigma} = \left[\begin{array}{cc}\Sigma_{t|t-1} & \Sigma_{t|t-1}\,C^{T}\\ C\,\Sigma_{t|t-1} & C\,\Sigma_{t|t-1}\,C^{T} + \Sigma_{O|X} \end{array}  \right]  
+>$$
+>and $$\mu_{t}^{O} :=  C\,X^{(t)} + D\,U^{(t)}\;, \; \Sigma_{t}^{O} := C\,\Sigma_{t|t-1}\,C^{T} + \Sigma_{O|X}.$$
+
+>[!info]
+>The *conditional distribution* of current state given past and present observations can be computed using the joint distribution above
+>$$
+>\begin{align*}
+>\mathcal{P}\left( X^{(t)}\;|\; O^{(t)}, O^{(1: t-1)}, U^{(1: t)} \right) &:= \mathcal{N}\left(X^{(t)}\;|\; \mu_{t|t}\;;\;\Sigma_{t|t}  \right)
+>\end{align*}
+>$$
+>where the conditional mean and conditional covariance are given by
+>$$
+>\begin{align*}
+> \mu_{t|t} &= \mu_{t|t-1} + K\,\left( O^{(t)} - \mu_{t}^{O} \right) \\
+> &= \mu_{t|t-1} + \Sigma_{t|t-1}\,C^{T}\left[ C\,\Sigma_{t|t-1}\,C^{T} + \Sigma_{O|X} \right]^{-1} \left( O^{(t)} -  C\,X^{(t)} - D\,U^{(t)} \right) \\[10pt]
+> \Sigma_{t|t} &= \Sigma_{t|t-1} - K\,\Sigma_{O}\,K^{T}\\
+> &= \Sigma_{t|t-1} - \Sigma_{t|t-1}\,C^{T}\left[ C\,\Sigma_{t|t-1}\,C^{T} + \Sigma_{O|X} \right]^{-1}\,C\,\Sigma_{t|t-1}
+>\end{align*}
+>$$
+>which is the result in **update step**.
+>
+>Note that the **Kalman gain matrix** 
+>$$
+>\begin{align*}
+>K &= \Sigma_{t|t-1}\,C^{T}\,\Sigma_{O}^{-1}\\[5pt] 
+>&:= \Sigma_{t|t-1}\,C^{T}\,\left[ C\,\Sigma_{t|t-1}\,C^{T} + \Sigma_{O|X} \right]^{-1}
+>\end{align*}
+>$$
 
 
+## Gaussian Graphical Model and Belief Propagation
+
+>[!important]
+>The Kalman filter derivation consists of three operations
+>- **Joint distribution** or **Product operation**
+>	- *joint* of $X^{(t)}$ and $X^{(t-1)}$ $$\mathcal{P}\left(X^{(t)}\;|\; X^{(t-1)},\, U^{(t-1)}\right)\,\mathcal{P}\left(X^{(t-1)}\;|\; O^{(1: t-1)},\, U^{(1: t-1)}\right)  \to \mathcal{P}(X^{(t-1)},\,X^{(t)}\;|\; O^{(1: t-1)},\, U^{(1: t-1)} )$$
+>	- *joint* of $X^{(t)}$ and $O^{(t)}$ $$\mathcal{P}\left(  O^{(t)} \;|\; X^{(t)},\, U^{(t)}\right)\,  \mathcal{P}\left(  X^{(t)} \;|\; O^{(1: t-1)},\, U^{(1: t-1)}\right)  \to \mathcal{P}(X^{(t)},\,O^{(t)} \;|\; O^{(1: t-1)},\, U^{(1: t)})$$
+>- **Marginalization** 
+>	- *joint*  $(X^{(t)}, X^{(t-1)})$ to *marginal* $X^{(t)}$  $$\mathcal{P}(X^{(t-1)},\,X^{(t)}\;|\; O^{(1: t-1)},\, U^{(1: t-1)} )  \to \mathcal{P}(X^{(t)}\;|\; O^{(1: t-1)},\, U^{(1: t-1)})$$
+>- **(Posterior) Conditioning** or **Reduction by evidence**
+>	- *joint* $(X^{(t)}, O^{(t)})$ to conditional $(X^{(t)} | O^{(t)})$ $$\mathcal{P}(X^{(t)},\,O^{(t)} \;|\; O^{(1: t-1)},\, U^{(1: t)}) \to \mathcal{P}\left( X^{(t)}\;|\; O^{(t)}, O^{(1: t-1)}, U^{(1: t)} \right)$$
+>	  
+>In *Gaussian graphical model*, these are all standard operations of **canonical form**. Thus the Kalman filter can be seen as a special case of [[Gaussian Belief Propagation]].	  
+
+- [[Canonical Form of Gaussian Graphical Model]]
+
+## Kalman Filter based on Natural Parameters
+
+![[Natural Parameter and Mean Parameter for Gaussian Distribution#^683466]]
 
 
+>[!info]
+>Instead of updating mean $\mu$ and covariance $\Sigma$, we can update the **natural parameters** of Gaussian $$\theta_{t|t} = \Sigma_{t|t}^{-1}\mu_{t|t}\;,\; \Theta_{t|t} = \Sigma_{t|t}^{-1}$$
+>
+>The corresponding technique is called the **information filter**.
+
+- [[Natural Parameter and Mean Parameter for Gaussian Distribution]]
+
+>[!important] Definition
+>The **Information Form Kalman Filtering** consists of two steps
+>- **Prediction Step**: compute $$\mathcal{P}(X^{(t)}\;|\;O^{(1: t-1)},\, U^{(1:t)}) := \mathcal{N}\left(X^{(t)}\;;\; \theta_{t|t-1},\, \Theta_{t|t-1}\right)$$
+>	- The **precision matrix** of $(X^{(t-1)}|X^{(t)})$  is given by $$M_{t} := \Theta_{t-1|t-1} + A(t)^{T}\Sigma_{X}^{-1}A(t)$$
+>	- The **dual form** of **Kalman gain matrix** is $$J_{t} = \Sigma_{X}^{-1}A(t)\,M_{t}^{-1}$$
+>	- The **precision (information) matrix** for predictive distribution is updated via the **marginalization** $$\begin{align*}\Theta_{t|t-1} &= \Sigma_{X}^{-1} - \Sigma_{X}^{-1}A(t)\,\left[  \Theta_{t-1|t-1} + A(t)^{T}\Sigma_{X}^{-1}A(t)\right]^{-1}\,A(t)^{T}\Sigma_{X}^{-1}\\[5pt] &= \Sigma_{X}^{-1} -  J_{t}A(t)^{T}\Sigma_{X}^{-1} \\[5pt] &= \Sigma_{X}^{-1} - J_{t}\,M_{t}\,J_{t}^{T}\end{align*}$$
+>	- The first-order natural parameter for predictive distribution is updated via **marginalization**$$\theta_{t|t-1} = J_{t}\,\theta_{t-1 |t-1} + \Theta_{t|t-1}\left( B(t)U^{(t)} \right)$$
+>- **Update Step** $$\mathcal{P}(X^{(t)}\,|\, O^{(1:t)},\, U^{(1: t)})  := \mathcal{N}(X^{(t)}\,|\, \theta_{t|t},\, \Theta_{t|t})$$
+>	- The **information matrix** is updated via $$\Theta_{t|t} = \Theta_{t|t-1} + C(t)^{T}\,\Sigma_{O}^{-1}\,C(t)$$
+>	- The first-order natural parameter is updated via $$\theta_{t|t} = \theta_{t|t-1} + C(t)^{T}\,\Sigma_{O}^{-1}\,\left( O^{(t)} - D(t)U^{(t)}\right)$$
+
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 366
+
+>[!info]
+>The *joint distribution* of *states in two consecutive time* given all past observations is given by
+>$$
+>\begin{align*}
+> &\mathcal{P}(X^{(t-1)},\,X^{(t)}\;|\; O^{(1: t-1)},\, U^{(1: t-1)} ) \\[5pt]
+> &= \mathcal{P}\left(X^{(t)}\;|\; X^{(t-1)},\, U^{(t-1)}\right)\,\mathcal{P}\left(X^{(t-1)}\;|\; O^{(1: t-1)},\, U^{(1: t-1)}\right)  \\[5pt]
+> &= \mathcal{N}\left(X^{(t)}\;|\; \Sigma_{X}^{-1}\left( A\,X^{(t-1)} + B\,U^{(t-1)} \right)\;;\; \Sigma_{X}^{-1}  \right)\, \mathcal{N}\left(X^{(t-1)}\;|\; \theta_{t-1|t-1} ;\; \Theta_{t-1|t-1}  \right) \\[5pt]
+> &= \mathcal{N}\left( (X^{(t-1)}, X^{(t)})\;|\; \theta_{t-1,t|t-1}\;;\; \Theta_{t-1,t|t-1} \right)
+>\end{align*}
+>$$
+>where 
+>$$
+>\begin{align*}
+>\theta_{t-1,t|t-1} &= \left[ \begin{array}{c}\theta_{t-1|t-1} - A(t)^{T}\,\Sigma_{X}^{-1}\left( B(t)U^{(t)} \right) \\ \Sigma_{X}^{-1}\left( B(t)U^{(t)} \right)  \end{array} \right] \\[5pt] 
+>\Theta_{t-1,t|t-1} &= \left[\begin{array}{cc}\Theta_{t-1|t-1} + A(t)^{T}\,\Sigma_{X}^{-1}\,A(t) & -A(t)^{T}\,\Sigma_{X}^{-1}\\ -\Sigma_{X}^{-1}\,A(t) & \Sigma_{X}^{-1} \end{array}  \right]  
+>\end{align*}
+>$$
+>We can derive the result $$\mathcal{P}\left(  X^{(t)} \;|\; O^{(1: t-1)},\, U^{(1: t-1)}\right) := \mathcal{N}\left(  X^{(t)} \;|\;  \theta_{t|t-1}\,;\, \Theta_{t|t-1} \right)$$ based on  **marginalization** formula.
+
+- [[Canonical Form of Gaussian Graphical Model]]
+
+>[!info]
+>The *joint distribution*
+>$$
+>\begin{align*}
+> &\mathcal{P}(X^{(t)},\,O^{(t)} \;|\; O^{(1: t-1)},\, U^{(1: t)}) \\[5pt]
+> &= \mathcal{P}\left(  O^{(t)} \;|\; X^{(t)},\, U^{(t)}\right)\,  \mathcal{P}\left(  X^{(t)} \;|\; O^{(1: t-1)},\, U^{(1: t-1)}\right) \\[5pt]
+> &= \mathcal{N}\left( O^{(t)}\;|\;\Sigma_{O}^{-1}\left(C\,X^{(t)} + D\,U^{(t)}\right) \;;\; \Sigma_{O}^{-1}  \right)\; \mathcal{N}\left(  X^{(t)} \;|\;  \theta_{t|t-1}\,;\, \Theta_{t|t-1} \right)\\[5pt]
+> &= \mathcal{N}\left( (X^{(t)},\,O^{(t)})\;|\; \theta_{x,y|t}\;;\;\Theta_{x,y|t}\right) 
+>\end{align*}
+>$$
+>where
+>$$
+>\begin{align*}
+>\theta_{x,y|t} &= \left[ \begin{array}{c}\theta_{t|t-1} - C(t)^{T}\,\Sigma_{O}^{-1}\left( D(t)U^{(t)} \right) \\ \Sigma_{O}^{-1}\left( D(t)U^{(t)} \right)  \end{array} \right] \\[5pt] 
+>\Theta_{x,y|t} &= \left[\begin{array}{cc}\Theta_{t|t-1} + C(t)^{T}\,\Sigma_{O}^{-1}\,C(t) & -C(t)^{T}\,\Sigma_{O}^{-1}\\ -\Sigma_{O}^{-1}\,C(t) & \Sigma_{O}^{-1} \end{array}  \right]  
+>\end{align*}
+>$$
+>
+>The conditional distribution
+>$$
+>\begin{align*}
+>\mathcal{P}\left( X^{(t)}\;|\; O^{(t)}, O^{(1: t-1)}, U^{(1: t)} \right) &:= \mathcal{N}\left(X^{(t)}\;|\; \theta_{t|t}\;;\;\Theta_{t|t}  \right)
+>\end{align*}
+>$$
+>where
+>$$
+>\theta_{t|t} = \theta_{t|t-1} + C(t)^{T}\,\Sigma_{O}^{-1}\left( O - D(t)U^{(t)} \right)
+>$$
+>and
+>$$
+>\Theta_{t|t}  = \Theta_{t|t-1} + C(t)^{T}\,\Sigma_{O}^{-1}\,C(t) 
+>$$
+
+- [[Marginal and Conditional Distribution of Gaussian]]
 
 
 

@@ -124,6 +124,7 @@ date of note: 2024-05-12
 
 - [[State-Observation Models]]
 - [[Gaussian Random Vector]]
+- [[Kalman Filter Discrete-Time]]
 
 ## Stochastic Control and Stochastic Differential Equation
 
@@ -138,6 +139,8 @@ date of note: 2024-05-12
 > dY(t) &= C(t)\,X(t)\,dt + D(t)\,d\mathcal{W}(t)
 >\end{align*} \right.
 >$$
+
+^dbfda1
 
 - [[Homogeneous Linear Stochastic Differential Equation]]
 - [[Linear Stochastic Differential Equation]]

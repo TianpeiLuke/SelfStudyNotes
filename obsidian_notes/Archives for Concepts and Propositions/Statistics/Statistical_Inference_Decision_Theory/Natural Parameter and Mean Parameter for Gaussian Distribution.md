@@ -58,6 +58,8 @@ date of note: 2024-08-28
 >\end{align*}
 >$$
 
+^683466
+
 - [[Gaussian Random Vector]]
 - [[Gaussian Graphical Model]]
 - [[Canonical Form of Gaussian Graphical Model]]

@@ -32,8 +32,8 @@ date of note: 2024-05-12
 ### Posterior Inference of HMM
 
 >[!important] Definition
->Our goal is to infer the *hidden states* by computing the *posterior* over all the *hidden nodes* in the model $$\mathcal{P}(X^{(t)} | O^{(1: T)}).$$
->This is called the **smoothing distribution.**
+>Our goal is to infer the *hidden states* by computing the *posterior* over all the *hidden nodes* in the model given observations from *past, present and future*, i.e.  $$\mathcal{P}(X^{(t)} | O^{(1: T)}).$$
+>This is a **smoothing task** and the above distribution called the **smoothing distribution.**
 >
 >By Markov property, we can *decompose* the smoothing distribution into *two terms* by separating the observation into *past* and *future*
 >$$
@@ -94,6 +94,11 @@ date of note: 2024-05-12
 >		-  the **partition function** is given by $$\begin{align*}Z_{t} &= \mathcal{P}(O^{(t)}\;|\;O^{(1:t-1)})\\[5pt] &=\sum_{j\in \mathcal{X}}\,\mathcal{P}(O^{(t)}\;|\;X^{(t)} = j)\,\mathcal{P}(X^{(t)} = j\;|\;O^{(1: t-1)}) \\[5pt] &= \sum_{j\in \mathcal{X}}\,\lambda_{t}(j)\,\alpha_{t|t-1}(j)\end{align*}$$
 >		- the **matrix notation** of update is $$\begin{align*}\alpha_{t}(j)&= \frac{1}{Z_{t}} \lambda_{t}(j) \left[ \sum_{i\in \mathcal{X}}\alpha_{t-1}(i)\,A_{i,j} \right],\; \forall j\in \mathcal{X} \\[5pt] \implies \alpha_{t} &= \text{Normalize}\left(\lambda_{t} \odot \left[A^{T}\,\alpha_{t-1}\right] \right) \end{align*}$$
 
+>[!info]
+>The forward algorithm alone is able to complete the **filtering task** i.e. to compute the belief state $$\mathcal{P}(X^{(t)}\;|\;O^{(1:t)})$$
+
+- [[Statistical Prediction Filtering and Smoothing for State Observation Model]]
+
 ### Backward Recursion
 
 >[!important] Definition
@@ -109,10 +114,12 @@ date of note: 2024-05-12
 
 >[!important]
 >The *forward-backward algorithm* is a **sum-product belief propagation algorithm** for temporal graphical model. 
+>
+>This is a **dynamic programming algorithm**.
 
 - [[Sum-Product Belief Propagation Algorithm for Clique Tree]]
 
->[!info]
+>[!important]
 >The *forward-backward algorithm* is a **Bayesian smoothing algorithm**.
 
 - [[Bayesian Filtering and Smoothing Equations for State Observation Models]]

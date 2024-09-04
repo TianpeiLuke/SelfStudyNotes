@@ -79,6 +79,7 @@ date of note: 2024-06-01
 
 - [[Recurrent Neural Network]]
 - [[Hidden Markov Model]]
+- [[Kalman Filter Discrete-Time]]
 
 
 ### Chordal Graph, Clique Tree
