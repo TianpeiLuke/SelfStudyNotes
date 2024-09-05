@@ -37,6 +37,8 @@ date of note: 2024-09-04
 >p(x) = \mathcal{N}(x\;|\;0 \,;\, VV^{T} + \sigma^2I)
 >$$
 
+^098ba1
+
 - [[Principle Component Analysis]]
 - [[Factor Analysis]]
 
@@ -55,6 +57,8 @@ date of note: 2024-09-04
 >$$
 >S = \frac{1}{n}\sum_{i=1}^{n}x_{i}\,x_{i}^{T}
 >$$
+
+^a7df83
 
 - [[Maximum Likelihood Estimation]]
 - [[Gaussian Random Vector]]
@@ -191,10 +195,7 @@ date of note: 2024-09-04
 
 ## Nonlinear Kernel via GP-LVM
 
->[!info]
->If we replace the constant linear covariance to a *nonlinear kernel* depending on hidden factor/state $h$, $$C:= VV^{T} + \sigma^2I \implies K_{h},$$ we can model a *nonlinear relationship* between state $h$ and observations $x$.
->
->The resulting method is the **GP-LVM**.
+![[Gaussian Process Latent Variable Model#^501d8c]]
 
 - [[Gaussian Process Latent Variable Model]]
 
