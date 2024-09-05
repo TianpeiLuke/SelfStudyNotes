@@ -40,3 +40,4 @@ date of note: 2024-09-04
 
 - [[Elements of Statistical Learning by Hastie]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 930 - 933
+- [[Deep Learning Foundations and Concepts by Bishop]] pp 513

@@ -220,5 +220,6 @@ date of note: 2024-09-04
 
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 934 - 936
+- [[Deep Learning Foundations and Concepts by Bishop]] pp 506
 - [[Elements of Statistical Learning by Hastie]]
 - Tipping, M. E., & Bishop, C. M. (1999). Probabilistic principal component analysis. _Journal of the Royal Statistical Society Series B: Statistical Methodology_, _61_(3), 611-622.

@@ -167,5 +167,6 @@ date of note: 2024-05-12
 
 - [[Probabilistic Graphical Models by Koller]] pp 211 - 222
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 357, 969 - 996
+- [[Deep Learning Foundations and Concepts by Bishop]] pp 515
 - [[Introduction to Stochastic Calculus by Klebaner]] pp 379
 - Wikipedia [State-space_representation](https://en.wikipedia.org/wiki/State-space_representation)

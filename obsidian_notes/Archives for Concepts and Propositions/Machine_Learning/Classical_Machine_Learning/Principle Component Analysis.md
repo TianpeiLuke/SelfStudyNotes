@@ -265,3 +265,4 @@ date of note: 2024-05-12
 - [[Understanding Machine Learning by Shalev-Shwartz]] pp 279
 - [[Foundations of Machine Learning by Mohri]] pp 347–351, 356–358
 - [[An Introduction to Optimization on Smooth Manifolds by Boumal]] pp 6, 8
+- [[Deep Learning Foundations and Concepts by Bishop]] pp 497, 506, 565
