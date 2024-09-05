@@ -16,6 +16,10 @@ date of note: 2024-09-04
 
 
 
+
+
+![[factor_analysis_dpgm.png]]
+
 ## Explanation
 
 
