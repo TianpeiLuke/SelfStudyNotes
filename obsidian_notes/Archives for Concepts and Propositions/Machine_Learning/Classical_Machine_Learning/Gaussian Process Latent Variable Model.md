@@ -110,7 +110,7 @@ date of note: 2024-05-12
 >
 >The **marginal log-likelihood** function is given by
 >$$
->\log p(X| H; K) = - \frac{n}{2}\left[ d\log(2\pi) + \log\det\,\lvert  K_{h}\rvert + \left\langle   K_{h}^{-1} ,  J\right\rangle_{tr} \right] 
+>\log p(X\,|\, H; K) = - \frac{n}{2}\left[ d\log(2\pi) + \log\det\,\lvert  K_{h}\rvert + \left\langle   K_{h}^{-1} ,  J\right\rangle_{tr} \right] 
 >$$
 >where  the **kernel matrix**$$K_{h} = [K(h_{i}, h_{j})]_{i,j\in [n]}$$
 
