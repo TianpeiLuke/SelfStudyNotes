@@ -71,7 +71,13 @@ date of note: 2024-05-12
 >H^{*} = \arg\max_{H} - \frac{n}{2}\left[ d\log(2\pi) + \log\det\,\lvert  HH^{T} + \sigma^2I \rvert + \left\langle \left(   HH^{T}  + \sigma^2I  \right)^{-1} ,  J\right\rangle_{tr} \right] 
 >$$
 >
->The optimal states can be obtained in **closed form**
+>The optimal solution of above problem satisfies the equation
+>$$
+>\begin{align*}
+> J \left(   HH^{T}  + \sigma^2I  \right)^{-1} H = H
+>\end{align*}
+>$$
+>Thus the *SVD* of optimal state solution $H$ can be obtained in **closed form**
 >$$
 >H^{*} = V_{\lceil s \rceil}\left( P_{s} - \sigma^2 I\right)^{1/2} R^{T}
 >$$
@@ -92,12 +98,24 @@ date of note: 2024-05-12
 >$$
 >where $K: \mathcal{H}\times \mathcal{H} \to \mathbb{R}_{+}$ is a *covariance kernel*. 
 >
+>That is, the **GP-LVM** replace the *linear encoder* with a *nonlinear encoder* $h \mapsto f(h)$, represented by *Gaussian process*
+>$$
+>\left\{
+>\begin{align*}
+> \;p(f) &= \text{GP}(K) \\[5pt]
+> \;p(x\,|\,f(h),\, \sigma) &= \mathcal{N}(x\;|\; f(h)\,;\, \sigma^2I )
+>\end{align*}
+>\right.
+>$$
+>
 >The **marginal log-likelihood** function is given by
 >$$
 >\log p(X| H; K) = - \frac{n}{2}\left[ d\log(2\pi) + \log\det\,\lvert  K_{h}\rvert + \left\langle   K_{h}^{-1} ,  J\right\rangle_{tr} \right] 
 >$$
 >where  the **kernel matrix**$$K_{h} = [K(h_{i}, h_{j})]_{i,j\in [n]}$$
 
+
+- [[Gaussian Process]]
 - [[Reproducing Kernel of RKHS]]
 - [[RKHS of Gaussian Process]]
 
