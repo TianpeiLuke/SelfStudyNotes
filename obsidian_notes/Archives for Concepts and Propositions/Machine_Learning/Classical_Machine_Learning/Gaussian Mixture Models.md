@@ -34,6 +34,7 @@ date of note: 2024-09-04
 
 - [[Exponential Family of Distributions]]
 - [[Gaussian Random Vector]]
+- [[Expectation-Maximization Algorithm]]
 - [[Expectation-Maximization Algorithm for Exponential Family]]
 
 - [[Hidden Markov Model]]
@@ -42,8 +43,8 @@ date of note: 2024-09-04
 - [[Entropic Regularized Optimal Transport in Discrete Settings]]
 
 
-- [[Elements of Statistical Learning by Hastie]]
+- [[Elements of Statistical Learning by Hastie]] pp 273, 463, 492, 509
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 920 - 922
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]]
-- [[Probabilistic Graphical Models by Koller]]
+- [[Probabilistic Graphical Models by Koller]] pp 616 - 626, 685 - 688
 - [[Computational Optimal Transport by Peyre]]

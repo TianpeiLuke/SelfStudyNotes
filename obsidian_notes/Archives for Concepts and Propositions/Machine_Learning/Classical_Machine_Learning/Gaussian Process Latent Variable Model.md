@@ -32,7 +32,7 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
-
+- [[Probabilistic Principle Component Analysis]]
 - [[Gaussian Process]]
 - [[Factor Analysis]]
 - [[Latent Variable Models]]
@@ -51,5 +51,5 @@ date of note: 2024-05-12
 - [[Elements of Statistical Learning by Hastie]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 948 - 949
 - [[Elements of Information Theory by Cover]]
+- Lawrence, N. (2003). Gaussian process latent variable models for visualisation of high dimensional data. _Advances in neural information processing systems_, _16_.
 
-- [[Kullback-Leibler Divergence]]

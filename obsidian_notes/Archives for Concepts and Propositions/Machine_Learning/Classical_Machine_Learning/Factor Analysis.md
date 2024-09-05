@@ -26,6 +26,7 @@ date of note: 2024-09-04
 ##  Recommended Notes and References
 
 
+- [[Gaussian Mixture Models]]
 - [[Probabilistic Principle Component Analysis]]
 - [[Canonical Correlation Analysis]]
 - [[Principle Component Analysis]]
