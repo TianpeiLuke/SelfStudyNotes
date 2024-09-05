@@ -73,7 +73,7 @@ date of note: 2024-05-12
 >
 >The optimal states can be obtained in **closed form**
 >$$
->H^{*} = V_{\lceil s \rceil}\left( P_{s} - \sigma^2 I\right)^{-1/2} R^{T}
+>H^{*} = V_{\lceil s \rceil}\left( P_{s} - \sigma^2 I\right)^{1/2} R^{T}
 >$$
 >where
 >- $\Lambda_{ \lceil s \rceil }$ and  $V_{\lceil s \rceil}$ denote the top $s$ largest eigenvalues and their eigenvectors for $J$ $$V_{\lceil s \rceil} = [v_{1} \,{,}\ldots{,}\,v_{s}], \quad \Lambda_{ \lceil s \rceil } = \text{diag}(\lambda_{1} \,{,}\ldots{,}\,\lambda_{s})$$
@@ -90,6 +90,7 @@ date of note: 2024-05-12
 >$$
 > K_{h}:= HH^{T}  + \sigma^2I \implies K_{h} = [K(h_{i}, h_{j})]_{i,j\in [n]}
 >$$
+>where $K: \mathcal{H}\times \mathcal{H} \to \mathbb{R}_{+}$ is a *covariance kernel*. 
 >
 >The **marginal log-likelihood** function is given by
 >$$
