@@ -71,7 +71,7 @@ date of note: 2024-07-05
 >  \log p_{\theta}(x) &= \log \int_{\mathcal{Z}}p_{\theta}(x | z)\,p(z)\,d\nu_{Z}\\
 > &= \log \int_{\mathcal{Z}}\frac{p_{\theta}(x | z)\,p(z)}{q(z)}\,q(z)\,d\nu_{Z} \\
 > &\ge \int_{\mathcal{Z}}\log \left(\frac{p_{\theta}(x | z)\,p(z)}{q(z)}\right) \,q(z)\,d\nu_{Z} \\
-> &:= \mathcal{L}(\theta; x)
+> &:= \mathcal{L}(q, \theta; x)
 >\end{align*}
 >$$
 >The last inequality is due to the *Jensen's inequality* and the fact that $\log(x)$ is a *concave function*.

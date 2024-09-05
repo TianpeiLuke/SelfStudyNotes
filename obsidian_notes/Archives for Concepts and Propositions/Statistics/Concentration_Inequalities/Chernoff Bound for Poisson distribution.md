@@ -70,7 +70,7 @@ date of note: 2024-05-08
 > \end{align*}
 >$$
 
-
+- [[Poisson Random Variable]]
 
 
 >[!info]

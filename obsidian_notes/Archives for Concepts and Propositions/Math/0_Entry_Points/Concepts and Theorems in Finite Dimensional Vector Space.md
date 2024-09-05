@@ -27,6 +27,7 @@ date of note: 2024-05-11
 - [[Quotient Space of Vector Space]]
 - [[Quotient Linear Map on Quotient Vector Space]]
 
+
 ### Linear Map and Dual Space
 
 - [[Linear Map]]
@@ -44,7 +45,7 @@ date of note: 2024-05-11
 - [[Invariance under Linear Transformation]]
 - [[Reducibility of Linear Transformation]]
 - [[Projection Map onto Linear Subspace]]
-
+- [[Fundamental Subspaces from Linear Map and its Projection]]
 
 ### Matrix and Matrix Algebra
 

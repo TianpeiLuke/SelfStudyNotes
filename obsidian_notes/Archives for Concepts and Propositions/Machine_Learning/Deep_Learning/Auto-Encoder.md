@@ -4,20 +4,37 @@ tags:
   - machine_learning/models
   - deep_learning/generative_models
   - deep_learning/representation_learning
-keywords: 
-topics: 
-name: 
+keywords:
+  - autoencoder
+  - representation_learning
+topics:
+  - representation_learning
+name: Auto-Encoder
 date of note: 2024-05-12
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Auto-Encoder
 
 
 
 ## Explanation
+
+
+
+## Linear Autoencoder
+
+![[Principle Component Analysis#^4f6696]]
+
+![[Principle Component Analysis#^b1e550]]
+
+>[!info]
+>The above proposition shows that a **linear autoencoder** is equivalent to the **principle component analysis (PCA)**.
+
+- [[Principle Component Analysis]]
+- [[Probabilistic Principle Component Analysis]]
 
 
 

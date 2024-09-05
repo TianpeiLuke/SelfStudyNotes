@@ -111,6 +111,15 @@ date of note: 2024-06-01
 ### Exponential Family of Distributions
 
 - [[Exponential Family of Distributions]]
+	- [[Gaussian Random Variable]]
+	- [[Gaussian Random Vector]]
+	- [[Sub-Gaussian Random Variable]]
+	- [[Bernoulli Random Variable]]
+	- [[Binomial Random Variable]]
+	- [[Multinomial Random Variable]]
+	- [[Poisson Random Variable]]
+	- [[Gamma Random Variable]]
+
 - [[Generalized Linear Models]]
 - [[Log-Partition Function of Exponential Family]]
 - [[Log-Partition Function of Exponential Family]]
@@ -172,6 +181,10 @@ date of note: 2024-06-01
 - [[Jackknife Estimator of Variance]]
 - [[Bootstrap Method]]
 
+### Bayesian Inference
+
+- [[Conjugate Prior Distribution for Bayesian Inference]]
+
 ### Sequential Decision Problem 
 
 - [[Sequential Decision Process]]
@@ -181,7 +194,6 @@ date of note: 2024-06-01
 
 - [[Statistical Prediction Filtering and Smoothing for State Observation Model]]
 - [[Linear Dynamic System]]
-- [[Gaussian Filtering and Smoothing]]
 - [[Kalman Filter Discrete-Time]]
 - [[Kalman Filter Continuous-Time]]
 - [[Extended Kalman Filter]]

@@ -3,6 +3,7 @@ tags:
   - concept
   - machine_learning/models
   - probabilistic_graphical_models/models
+  - machine_learning/latent_variable_model
 keywords:
   - principle_component_analysis
   - dimensionality_reduction
@@ -33,6 +34,8 @@ date of note: 2024-05-12
 >\min_{W\in \mathbb{R}^{s \times d}, U \in \mathbb{R}^{d \times s}}\sum_{i=1}^{n}\lVert X_{i} - U\,W\,X_{i} \rVert_{2}^2 
 >$$
 
+^4f6696
+
 - [[Auto-Encoder]]
 
 >[!important] Proposition
@@ -42,6 +45,8 @@ date of note: 2024-05-12
 >$$
 >
 >Then the columns $u_{i}$ of  $U = [u_{i}]$ are **orthonormal** i.e. $$U^{T}U = I_{s}$$ and $$W = U^{T}.$$
+
+^b1e550
 
 - [[Understanding Machine Learning by Shalev-Shwartz]] pp 279
 
@@ -63,6 +68,7 @@ date of note: 2024-05-12
 
 - [[Linear Subspace]]
 - [[Projection Map onto Linear Subspace]]
+- [[Fundamental Subspaces from Linear Map and its Projection]]
 - [[Orthogonal Group]]
 - [[An Introduction to Optimization on Smooth Manifolds by Boumal]] pp 9 - 10
 

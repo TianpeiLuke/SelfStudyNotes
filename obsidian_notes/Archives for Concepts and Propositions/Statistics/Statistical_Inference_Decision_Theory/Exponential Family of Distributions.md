@@ -59,6 +59,20 @@ date of note: 2024-06-24
 
 ## Explanation
 
+### Examples 
+
+- [[Gaussian Random Variable]]
+- [[Gaussian Random Vector]]
+- [[Sub-Gaussian Random Variable]]
+- [[Bernoulli Random Variable]]
+- [[Binomial Random Variable]]
+- [[Multinomial Random Variable]]
+- [[Dirichlet Random Variable]]
+
+- [[Poisson Random Variable]]
+- [[Gamma Random Variable]]
+
+
 
 ## Canonical Form of Exponential Family
 

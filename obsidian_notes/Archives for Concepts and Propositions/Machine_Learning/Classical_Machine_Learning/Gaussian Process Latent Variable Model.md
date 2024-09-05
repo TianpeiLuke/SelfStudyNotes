@@ -176,7 +176,6 @@ date of note: 2024-05-12
 
 - [[Probabilistic Principle Component Analysis]]
 - [[Gaussian Process]]
-- [[Factor Analysis]]
 - [[Latent Variable Models]]
 
 - [[Reproducing Kernel Hilbert Space]]

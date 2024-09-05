@@ -162,8 +162,8 @@ date of note: 2024-05-11
 - [[Markov Inequality]]
 - [[Chebyshev Inequality]]
 
-### Cramér–Chernoff Method
 
+### Cramér–Chernoff Method
 
 >[!important] Chernoff's inequality
 >Let $(\Omega, \mathscr{F}, \mathcal{P})$ be a probability space. $X$ is a *random variable* whose *moment generating function* 
@@ -183,9 +183,6 @@ date of note: 2024-05-11
 	- [[Chernoff Bound for Bernoulli distribution]]
 	- [[Chernoff Bound for Poisson distribution]]
 
-- [[Sub-Gaussian Random Variable]]
-	- [[Sub-Gaussian Norm]]
-	- [[Orlicz Space]]
 
 >[!important] Hoeffding's Inequality
 >Let $X_1 \,{,}\ldots{,}\, X_n$ be **independent** random variables such that $X_i$ **takes its values in $[a_i, b_i]$** *almost surely* for all $i \le n$. Let
@@ -235,6 +232,26 @@ date of note: 2024-05-11
 >$$ 
 
 - [[Bernstein Inequality]]
+
+### Sub-Gaussian Random Variables
+
+- [[Sub-Gaussian Random Variable]]
+	- [[Sub-Gaussian Norm]]
+	- [[Orlicz Space]]
+
+- [[Gaussian Random Variable]]
+- [[Gaussian Random Vector]]
+- [[Bernoulli Random Variable]]
+- [[Binomial Random Variable]]
+- [[Multinomial Random Variable]]
+- [[Dirichlet Random Variable]]
+
+### Sub-Exponential Random Variables and Sub-Gamma Random Variables
+
+- [[Sub-Exponential Random Variables]]
+- [[Poisson Random Variable]]
+- [[Gamma Random Variable]]
+- [[Laplace Random Variable]]
 
 ### Johnson-Lindenstrauss Lemma
 

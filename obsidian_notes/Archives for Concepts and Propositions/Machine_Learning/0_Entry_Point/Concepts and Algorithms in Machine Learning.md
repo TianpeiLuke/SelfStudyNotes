@@ -108,14 +108,17 @@ date of note: 2024-06-01
 
 - [[Latent Variable Models]]
 - [[Factor Analysis]]
-
+- [[Probabilistic Principle Component Analysis]]
 - [[Independent Component Analysis]]
 - [[Nonnegative Matrix Factorization]]
+- [[Canonical Correlation Analysis]]
+- [[Multinomial Principle Component Analysis]]
+
 
 - [[Topic Models]]
+- [[Probabilistic Latent Semantic Analysis]]
 - [[Latent Dirichlet Allocation]]
 
-- [[Canonical Correlation Analysis]]
 
 - [[Gaussian Process Latent Variable Model]]
 
