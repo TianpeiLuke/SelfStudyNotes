@@ -27,12 +27,9 @@ date of note: 2024-07-24
 -----------
 ##  Recommended Notes and References
 
-
-- [[Least Square Estimation]]
 - [[Linear Regression]]
-- [[Partial Least Square]]
-- [[Regularized Loss Minimization]]
-- [[Ridge Regression and L2 Regularization]]
+- [[Least Square Estimation]]
+- [[LASSO and Sparsity-Induced Least Square]]
 
 - [[Gaussian Graphical Model]]
 - [[Conditional Independence]]
@@ -40,8 +37,9 @@ date of note: 2024-07-24
 - [[Schur Complement and Inversion of Block Matrix]]
 - [[Sherman–Morrison–Woodbury Matrix Inversion Formula]]
 
-- [[Graph LASSO and Structured Learning in Gaussian Graphical Model]]
+
 
 - [[Elements of Statistical Learning by Hastie]]
 - [[All of Statistics A Concise Course by Wasserman]]
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 945
 - Wikipedia [Partial_correlation](https://en.wikipedia.org/wiki/Partial_correlation)

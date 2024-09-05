@@ -166,6 +166,6 @@ date of note: 2024-05-12
 - [[Markov Chain and Markov Process]]
 
 - [[Probabilistic Graphical Models by Koller]] pp 211 - 222
-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 357, 969 - 970
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 357, 969 - 996
 - [[Introduction to Stochastic Calculus by Klebaner]] pp 379
 - Wikipedia [State-space_representation](https://en.wikipedia.org/wiki/State-space_representation)

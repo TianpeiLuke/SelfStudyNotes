@@ -39,4 +39,5 @@ date of note: 2024-07-24
 
 - [[Elements of Statistical Learning by Hastie]]
 - [[All of Statistics A Concise Course by Wasserman]]
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 944
 - Wikipedia [Partial_correlation](https://en.wikipedia.org/wiki/Partial_correlation)

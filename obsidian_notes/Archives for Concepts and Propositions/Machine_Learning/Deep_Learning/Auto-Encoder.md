@@ -27,8 +27,13 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
+- [[Latent Variable Models]]
 - [[Variational Auto-Encoder]]
 - [[Artificial Neural Network and Deep Learning]]
+
+- [[Principle Component Analysis]]
+- [[Probabilistic Principle Component Analysis]]
+- [[Factor Analysis]]
 
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]

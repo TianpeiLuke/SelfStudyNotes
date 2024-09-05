@@ -60,6 +60,9 @@ date of note: 2024-08-21
 >-- [[Matrix Computations by Golub]] pp 79
 
 
+## Principle Component Analysis
+
+- [[Principle Component Analysis]]
 
 
 
@@ -69,6 +72,7 @@ date of note: 2024-08-21
 ##  Recommended Notes and References
 
 
+- [[Principle Component Analysis]]
 - [[Singular Value Decomposition of Linear Map]]
 - [[Unitary Group]]
 - [[Projection Theorem of Hilbert Spaces]]

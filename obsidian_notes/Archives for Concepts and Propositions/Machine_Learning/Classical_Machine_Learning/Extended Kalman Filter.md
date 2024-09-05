@@ -49,5 +49,6 @@ date of note: 2024-08-14
 - [[State-Observation Models]]
 - [[Bayesian Filtering and Smoothing Equations for State Observation Models]]
 
+- [[Hidden Markov Model]]
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 369 - 373

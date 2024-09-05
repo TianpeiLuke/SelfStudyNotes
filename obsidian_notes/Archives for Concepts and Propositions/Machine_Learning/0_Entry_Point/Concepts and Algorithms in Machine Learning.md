@@ -30,6 +30,7 @@ date of note: 2024-06-01
 
 - [[k Nearest Neighbor Classification]]
 - [[k Nearest Neighbor Estimation]]
+- [[Curse of Dimensionality]]
 
 #### Linear and Generalized Linear Models
 
@@ -84,15 +85,61 @@ date of note: 2024-06-01
 ### Unsupervised Learning Models and Algorithms
 
 - [[Supervised Learning and Unsupervised Learning]]
+
+#### Clustering
+
 - [[k-Means Clustering]]
+- [[Gaussian Mixture Models]]
+- [[Gaussian Scale Mixtures]]
+
+#### Dimensionality Reduction
+
+- [[Curse of Dimensionality]]
+
 - [[Principle Component Analysis]]
+- [[Probabilistic Principle Component Analysis]]
+- [[Independent Component Analysis]]
+- [[Nonnegative Matrix Factorization]]
+- [[Latent Dirichlet Allocation]]
+
+- [[Canonical Correlation Analysis]]
+
+#### Latent Factor Models
+
+- [[Latent Variable Models]]
+- [[Factor Analysis]]
+
+- [[Independent Component Analysis]]
+- [[Nonnegative Matrix Factorization]]
+
+- [[Topic Models]]
+- [[Latent Dirichlet Allocation]]
+
+- [[Canonical Correlation Analysis]]
+
+- [[Gaussian Process Latent Variable Model]]
+
+- [[Auto-Encoder]]
+
+#### Dynamic System and State Space Models
+
+- [[State-Observation Models]]
+- [[State Space Models and Nonlinear Dynamic System]]
 - [[Linear Dynamic System]]
-- [[Gaussian Filtering and Smoothing]]
+
+- [[Bayesian Filtering and Smoothing Equations for State Observation Models]]
+
 - [[Kalman Filter Discrete-Time]]
 - [[Kalman Filter Continuous-Time]]
 - [[Extended Kalman Filter]]
-- [[State Space Models and Nonlinear Dynamic System]]
+
 - [[Hidden Markov Model]]
+- [[Hidden Markov Model Inference via Forward-Backward Algorithm]]
+- [[Hidden Markov Model MAP Inference via Viterbi Algorithm]]
+
+- [[Gaussian Process Latent Variable Model]]
+
+
 
 ### Reinforcement Learning Models and Algorithms
 

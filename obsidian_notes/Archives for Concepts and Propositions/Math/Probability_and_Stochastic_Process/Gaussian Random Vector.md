@@ -38,7 +38,11 @@ date of note: 2024-05-10
 
 ## Explanation
 
-
+>[!info]
+>The log-likelihood function for moment parameters is
+>$$
+>\log \mathcal{N}(x; \mu, \Sigma) = -\frac{n}{2} \log (2\pi) -\frac{1}{2} \log \det(\Sigma)   -\frac{1}{2}\left(x - \mu\right)^T\,\Sigma^{-1}\,(x - \mu)
+>$$
 
 
 ## Exponential Family

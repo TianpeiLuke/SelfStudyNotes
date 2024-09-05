@@ -171,6 +171,7 @@ date of note: 2024-05-12
 
 - [[Evidence Lower Bound]]
 - [[Variational Inference vs EM Algorithm]]
+- [[Gaussian Mixture Models]]
 
 - [[Radon-Nikodym Derivative]]
 - [[Parametric Models]]

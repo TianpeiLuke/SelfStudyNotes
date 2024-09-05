@@ -238,7 +238,7 @@ date of note: 2024-05-11
 
 ### Johnson-Lindenstrauss Lemma
 
-
+- [[Curse of Dimensionality]]
 - [[Gaussian Random Projections]]
 - [[epsilon Isometry]]
 - [[Johnson-Lindenstrauss Lemma for Dimensionality Reduction]]
