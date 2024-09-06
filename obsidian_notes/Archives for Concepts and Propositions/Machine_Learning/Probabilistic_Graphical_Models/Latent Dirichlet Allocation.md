@@ -46,8 +46,9 @@ date of note: 2024-05-12
 >\left\{
 >\begin{align*}
 > p(z_{n}) &= \text{Dirichlet}(z_{n}\;|\; \alpha) \\[5pt]
+> p(W) &= \prod_{k=1}^{s}\text{Dirichlet}(W_{k,:}\;|\; \beta) \\[5pt]
 > \; p(m_{n}\;|\; z_{n}) &= \prod_{l=1}^{L_{n}}\text{Multinomial}(m_{n,l}\;|\;z_{n}) \\[5pt]
-> \; p(x_{n}\;|\; m_{n}) &=  \prod_{l=1}^{L_{n}}\text{Multinomial}(x_{n,l}\;|\; W_{m_{n, l}, :})
+> \; p(x_{n}\;|\; m_{n}, W) &=  \prod_{l=1}^{L_{n}}\text{Multinomial}(x_{n,l}\;|\; W_{m_{n, l}, :})
 >\end{align*}
 >\right.
 >$$  
@@ -76,6 +77,7 @@ date of note: 2024-05-12
 >	- total $V$ distinct words (*vocabulary*)
 >	- a word in $l$ position is denoted as $x_{n,l}$
 >	- the *distribution of words* for each topic $k$ is represented by *row of* $W$, $W_{k,:} \in \Delta_{V-1}$
+>	- prior of $W_{k,:}$ is *Dirichlet*.
 >	- each word $x_{n,l}$ is associated with a hidden variable $m_{n,l} \in \{ 1 \,{,}\ldots{,}\, s\}$
 >	- hidden variable $m_{n,l}$ *assigns* each *word* to one of $s$ *topic*.
 >	- the hidden variable $m_{n,l}$ follows the *multinomial distribution* whose parameters are from $z$
