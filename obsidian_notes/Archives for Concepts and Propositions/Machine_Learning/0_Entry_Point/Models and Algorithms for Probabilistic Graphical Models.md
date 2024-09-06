@@ -197,6 +197,9 @@ date of note: 2024-06-01
 - [[Gibbs Sampling]]
 - [[Gibbs Sampling for Graphical Model]]
 
+- [[Sequential Importance Sampling]]
+- [[Particle Filter or Sampling-Importance-Resampling]]
+
 
 ### MAP Inference
 

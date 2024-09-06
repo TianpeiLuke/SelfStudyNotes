@@ -19,7 +19,7 @@ date of note: 2024-09-05
 >**Name**: Multinomial Random Variable
 
 >[!important] Definition
->A $k$-dimensional *non-negative discrete* random vector $$X = (X_{1} \,{,}\ldots{,}\,X_{k}) \in \left\{  (x_{1} \,{,}\ldots{,}\,x_{k}): \sum_{i=1}^{k}x_{i} = n, \; x_{i} \in \mathbb{N}_{+}, i=1 \,{,}\ldots{,}\,k  \right\}$$ is from the **multinomial distribution** with parameters $$p \in \Delta_{k} := \left\{(p_{1} \,{,}\ldots{,}\, p_{k}):\; \sum_{i=1}^{k}p_{i} = 1,\, p_{i} \ge 0\right\},$$ if the *probability mass function* is given by 
+>A $k$-dimensional *non-negative discrete* random vector $$X = (X_{1} \,{,}\ldots{,}\,X_{k}) \in \left\{  (x_{1} \,{,}\ldots{,}\,x_{k}): \sum_{i=1}^{k}x_{i} = n, \; x_{i} \in [n], i=1 \,{,}\ldots{,}\,k  \right\}$$ is from the **multinomial distribution** with parameters $$p \in \Delta_{k} := \left\{(p_{1} \,{,}\ldots{,}\, p_{k}):\; \sum_{i=1}^{k}p_{i} = 1,\, p_{i} \ge 0\right\},$$ if the *probability mass function* is given by 
 >$$
 >\begin{align*}
 >&p((x_{1} \,{,}\ldots{,}\,x_{k}); n, (p_{1} \,{,}\ldots{,}\, p_{k}) )\\[5pt]
@@ -28,10 +28,6 @@ date of note: 2024-09-05
 >$$
 >It is denoted $Multinomial(p_{1} \,{,}\ldots{,}\, p_{k}).$
 >
->The **support** of **multinomial distribution**
->$$
->\left\{ (x_{1} \,{,}\ldots{,}\,x_{k}) \in \mathbb{N}^{k}: \sum_{i=1}^{k}x_{i} = n \right\}
->$$
 
 
 >[!important] Definition
@@ -45,7 +41,7 @@ date of note: 2024-09-05
 ### Support
 
 >[!important] Definition
->The **support** for multinomial distribution is $$\left\{  (x_{1} \,{,}\ldots{,}\,x_{k}): \sum_{i=1}^{k}x_{i} = n, \; x_{i} \in \mathbb{N}, i=1 \,{,}\ldots{,}\,k  \right\}  \subset \mathbb{N}^{k} / \{ n \}.$$
+>The **support** for multinomial distribution is $$\left\{  (x_{1} \,{,}\ldots{,}\,x_{k}): \sum_{i=1}^{k}x_{i} = n, \; x_{i} \in \{ 1\,{,}\ldots{,}\,n \}, i=1 \,{,}\ldots{,}\,k  \right\}  \subset [n]^{k} / \{ n \}.$$
 
 
 
