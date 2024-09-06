@@ -38,7 +38,7 @@ date of note: 2024-07-04
 
 
 >[!important] Definition
->Consider the task of approximation of  the *conditional mean estimator*
+>Consider the task of approximation of  the *belief states*, i.e. the **filtering task**
 >$$
 >\bar{\xi}_{t} =  \mathbb{E}\left[ \xi_{t} \,|\,  y_{1}\,{,}\ldots{,}\,y_{t} \right]
 >$$
@@ -58,10 +58,13 @@ date of note: 2024-07-04
 >	- **Resample** a random sample $$\{\xi_{t}^{(1)}, \ldots, \xi_{t}^{(m)}\}$$ from $$\{\xi_{t}^{(*,1)}, \ldots, \xi_{t}^{(*,m)}\}$$ according to **multinomial distribution** with probability $(w_{t}^{(1)}\,{,}\ldots{,}\,w_{t}^{(m)})$
 >	- *Output*: The **conditional mean estimator** at time $t$ is approximated by sample mean $$\hat{\xi}_{t} = \frac{1}{m}\sum_{j=1}^{m}\xi_{t}^{(j)}$$
 
-- [[Conditional Expectation]]
+- [[Bayesian Filtering and Smoothing Equations for State Observation Models]]
 - [[Linear Dynamic System]]
 - [[Kalman Filter Discrete-Time]]
 
+- [[Bootstrap Method]]
+- [[Multinomial Random Variable]]
+- [[Roulettle Wheel Algorithm to Resample from CDF]]
 
 
 ## Explanation
@@ -83,7 +86,7 @@ date of note: 2024-07-04
 
 - [[Feynman-Kac Formula]]
 
-
+- [[Conditional Expectation]]
 - [[Exponential Weights Algorithm for Convex Loss]]
 
 

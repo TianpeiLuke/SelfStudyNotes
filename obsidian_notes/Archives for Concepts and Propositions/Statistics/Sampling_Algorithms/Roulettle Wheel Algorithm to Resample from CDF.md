@@ -36,6 +36,7 @@ date of note: 2024-08-28
 ^a9dfe5
 
 - [[Quantile Function]]
+- [[Multinomial Random Variable]]
 - [[Cumulative Distribution Function of Random Variable]]
 
 
@@ -56,6 +57,7 @@ date of note: 2024-08-28
 
 - [[Monte Carlo and Applications]]
 - [[Accept-Reject Sampling]]
+- [[Particle Filter or Sampling-Importance-Resampling]]
 
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 302

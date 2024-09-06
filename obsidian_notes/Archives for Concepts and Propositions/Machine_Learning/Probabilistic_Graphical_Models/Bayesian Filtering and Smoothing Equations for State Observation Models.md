@@ -118,6 +118,13 @@ date of note: 2024-09-01
 - [[Hidden Markov Model Inference via Forward-Backward Algorithm]]
 
 
+## Monte Carlo Methods and Particle Filter
+
+- [[Sequential Importance Sampling]]
+- [[Particle Filter or Sampling-Importance-Resampling]]
+
+
+
 
 -----------
 ##  Recommended Notes and References
