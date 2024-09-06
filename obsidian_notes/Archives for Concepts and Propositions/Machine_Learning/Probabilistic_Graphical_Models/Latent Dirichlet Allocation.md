@@ -78,6 +78,7 @@ date of note: 2024-05-12
 >	- a word in $l$ position is denoted as $x_{n,l}$
 >	- the *distribution of words* for each topic $k$ is represented by *row of* $W$, $W_{k,:} \in \Delta_{V-1}$
 >	- prior of $W_{k,:}$ is *Dirichlet*.
+>	- $W$ is *shared* for *multiple documents*
 >	- each word $x_{n,l}$ is associated with a hidden variable $m_{n,l} \in \{ 1 \,{,}\ldots{,}\, s\}$
 >	- hidden variable $m_{n,l}$ *assigns* each *word* to one of $s$ *topic*.
 >	- the hidden variable $m_{n,l}$ follows the *multinomial distribution* whose parameters are from $z$
