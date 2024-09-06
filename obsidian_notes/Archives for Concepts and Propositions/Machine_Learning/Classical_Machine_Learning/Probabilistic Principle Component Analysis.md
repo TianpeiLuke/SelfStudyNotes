@@ -99,15 +99,6 @@ date of note: 2024-09-04
 >\end{align*}
 >$$
 
->[!info]
->By **matrix inversion formula**
->$$
->\begin{align*}
->\frac{1}{\sigma^2} \left( I + \frac{1}{\sigma^2} V\,V^{T} \right)^{-1} &= \frac{1}{\sigma^2}\left(  I - \frac{1}{\sigma^2}V\,\left(I + \frac{1}{\sigma^2}V^{T}V\right)^{-1}\,V^{T} \right) \\[5pt]
->&= \frac{1}{\sigma^2}\left(  I - V\,\text{diag}\left( \frac{1}{\sigma^2+ \lVert v_{1} \rVert^2 } \,{,}\ldots{,}\, \frac{1}{\sigma^2+ \lVert v_{n} \rVert^2 }\right)\,V^{T} \right)
->\end{align*}
->$$
-
 - [[Sherman–Morrison–Woodbury Matrix Inversion Formula]]
 
 >[!info]
@@ -146,8 +137,7 @@ date of note: 2024-09-04
 >Since $$C= VV^{T}+ \sigma^2I \succeq \sigma^2I \succ 0,$$ this leads to
 >$$
 >\begin{align*}
-> C^{-1}\left(I - SC^{-1}\right)V &= 0 \\[5pt]
-> \implies \left(I - SC^{-1}\right)V &= 0 \\[5pt]
+> C^{-1}V  -  C^{-1}\, S C^{-1}V &= 0\\[5pt]
 > \implies SC^{-1} V = V
 >\end{align*}
 >$$
