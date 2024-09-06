@@ -34,6 +34,12 @@ date of note: 2024-09-05
 
 - [[Probability Density Function of Random Variable]]
 
+### Support
+
+>[!important] Definition
+>The **support** for Bernoulli distribution is $$\{ 0 ,1 \}$$
+
+
 ### Mean, Variance
 
 >[!important] Definition

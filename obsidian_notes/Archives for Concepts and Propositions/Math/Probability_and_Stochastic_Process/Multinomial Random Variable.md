@@ -42,6 +42,12 @@ date of note: 2024-09-05
 >$$
 >for $x:= (x_{1} \,{,}\ldots{,}\,x_{k}) \in \mathbb{N}^{k}.$
 
+### Support
+
+>[!important] Definition
+>The **support** for multinomial distribution is $$\left\{  (x_{1} \,{,}\ldots{,}\,x_{k}): \sum_{i=1}^{k}x_{i} = n, \; x_{i} \in \mathbb{N}, i=1 \,{,}\ldots{,}\,k  \right\}  \subset \mathbb{N}^{k} / \{ n \}.$$
+
+
 
 ### Mean and Covariance
 

@@ -19,15 +19,22 @@ date of note: 2024-09-05
 >**Name**: Binomial Random Variable
 
 >[!important] Definition
->A discrete random variable $X \in \{ 0,\,1 \,{,}\ldots{,}\, \}$ follows the **binomial distribution** with parameter $n\in \mathbb{N}$ and $p\in [0,1]$, if the *probability mass function* is given by 
+>A discrete random variable $X \in \{ 0,\,1 \,{,}\ldots{,}\, n\}$ follows the **binomial distribution** with parameter $n\in \mathbb{N}$ and $p\in [0,1]$, if the *probability mass function* is given by 
 >$$
 >p(k; n, p) = \mathcal{P}(X = k) = {n \choose k}\,p^{k}\,(1- p)^{n - k} :=  \frac{n!}{k! (n-k)!}\,p^{k}\,(1- p)^{n - k}
 >$$
->where $k = 0,\,1 \,{,}\ldots{,}\,$.
+>where $k = 0,\,1 \,{,}\ldots{,}\,n$.
 >
 >It is denoted as $B(n, p).$
 
 - [[Bernoulli Random Variable]]
+
+### Support
+
+>[!important] Definition
+>The **support** for binomial distribution is $$\{ 0 ,1 \,{,}\ldots{,}\,n \} = [n]$$
+
+
 
 ### Mean and Covariance
 

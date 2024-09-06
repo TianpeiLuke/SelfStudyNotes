@@ -19,7 +19,7 @@ date of note: 2024-09-05
 >**Name**: Dirichlet Random Variable
 
 >[!important] Definition
->A $k$-dimensional *non-negative* random vector $$X = (X_{1} \,{,}\ldots{,}\,X_{k}) \in \Delta_{k} := \left\{  (x_{1} \,{,}\ldots{,}\,x_{k}): \sum_{i=1}^{k}x_{i} = 1, \; x_{i} \in [0,1], i=1 \,{,}\ldots{,}\,k  \right\}$$ is from the **Dirichlet distribution** with parameters $$\alpha \in \mathbb{R}_{+}^{k} := \left\{(\alpha_{1} \,{,}\ldots{,}\, \alpha_{k}):\; \alpha_{i} \ge 0\right\},$$ if the *probability density function* with respect to *Lebesgue measure*  is given by 
+>A $k$-dimensional *non-negative* random vector $$X = (X_{1} \,{,}\ldots{,}\,X_{k}) \in \Delta_{k-1} := \left\{  (x_{1} \,{,}\ldots{,}\,x_{k}): \sum_{i=1}^{k}x_{i} = 1, \; x_{i} \in [0,1], i=1 \,{,}\ldots{,}\,k  \right\}$$ is from the **Dirichlet distribution** with parameters $$\alpha \in \mathbb{R}_{+}^{k} := \left\{(\alpha_{1} \,{,}\ldots{,}\, \alpha_{k}):\; \alpha_{i} \ge 0\right\},$$ if the *probability density function* with respect to *Lebesgue measure*  is given by 
 >$$
 >\begin{align*}
 >p((x_{1} \,{,}\ldots{,}\,x_{k}); (\alpha_{1} \,{,}\ldots{,}\, \alpha_{k}) ) &= \frac{\Gamma\left(\sum_{i=1}^{k}\alpha_{i} \right)}{\prod_{i=1}^{k}\Gamma(\alpha_{i} )}\,\prod_{i=1}^{k}x_{i}^{\alpha_{i} - 1}
@@ -29,6 +29,14 @@ date of note: 2024-09-05
 
 - [[Probability Density Function of Random Variable]]
 - [[Lebesgue Measure]]
+
+### Support
+
+>[!important] Definition
+>The **support** for Dirichlet distribution is **$(k-1)$-dimensional simplex** $$\Delta_{k-1} := \left\{  (x_{1} \,{,}\ldots{,}\,x_{k}): \sum_{i=1}^{k}x_{i} = 1, \; x_{i} \in [0,1], i=1 \,{,}\ldots{,}\,k  \right\}.$$
+
+- [[Generalized Simplex]]
+
 
 ### Mean and Covariance
 

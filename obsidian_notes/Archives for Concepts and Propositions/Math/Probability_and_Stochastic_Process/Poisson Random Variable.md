@@ -30,6 +30,11 @@ date of note: 2024-09-05
 - [[Probability Density Function of Random Variable]]
 - [[Counting Measure]]
 
+### Support
+
+>[!important] Definition
+>The **support** for Poisson distribution is $$\{ 0,1 \,{,}\ldots{,}\, \} = \mathbb{N}.$$
+
 ### Mean, Variance
 
 >[!important] Definition
