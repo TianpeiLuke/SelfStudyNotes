@@ -127,7 +127,6 @@ date of note: 2024-08-14
 ##  Recommended Notes and References
 
 
-- [[Gaussian Filtering and Smoothing]]
 - [[State-Observation Models]]
 - [[State Space Models and Nonlinear Dynamic System]]
 - [[Linear Dynamic System]]

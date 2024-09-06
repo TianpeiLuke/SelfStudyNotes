@@ -29,6 +29,7 @@ date of note: 2024-09-05
 
 
 - [[Gaussian Random Variable]]
+- [[Chi-Squared-Test]]
 
 
 - [[Moment Generating Function]]

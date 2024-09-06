@@ -168,11 +168,14 @@ date of note: 2024-05-30
 ### Gaussian Filtering and Smoothing
 
 - [[Statistical Prediction Filtering and Smoothing for State Observation Model]]
-- [[Gaussian Filtering and Smoothing]]
 - [[Linear Dynamic System]]
 - [[Kalman Filter Discrete-Time]]
 - [[Kalman Filter Continuous-Time]]
 - [[Extended Kalman Filter]]
+
+### Gaussian Process in Machine Learning
+
+- [[Gaussian Process Latent Variable Model]]
 
 
 ## Explanation

@@ -57,6 +57,7 @@ date of note: 2024-05-12
 - [[Multinomial Random Variable]]
 - [[Dirichlet Random Variable]]
 - [[Latent Variable Models]]
+- [[Conjugate Prior Distribution for Bayesian Inference]]
 
 
 ![[latent_dirichlet_allocation.png]]
