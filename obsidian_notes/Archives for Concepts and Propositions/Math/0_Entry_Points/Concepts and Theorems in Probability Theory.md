@@ -55,17 +55,22 @@ date of note: 2024-05-13
 
 - [[Log-Concave Measure]]
 
-### Examples for Random Variables
+### Standard Distributions
 
 - [[Gaussian Random Variable]]
 - [[Gaussian Random Vector]]
 - [[Sub-Gaussian Random Variable]]
 - [[Bernoulli Random Variable]]
 - [[Binomial Random Variable]]
+
 - [[Multinomial Random Variable]]
 - [[Dirichlet Random Variable]]
 
 - [[Poisson Random Variable]]
+- [[Chi-Square Random Variable]]
+
+- [[Geometric Random Variable]]
+- [[Negative Binomial Random Variable]]
 - [[Gamma Random Variable]]
 - [[Laplace Random Variable]]
 

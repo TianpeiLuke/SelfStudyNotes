@@ -248,10 +248,16 @@ date of note: 2024-05-11
 
 ### Sub-Exponential Random Variables and Sub-Gamma Random Variables
 
+
 - [[Sub-Exponential Random Variables]]
+
+
+- [[Chi-Square Random Variable]]
 - [[Poisson Random Variable]]
 - [[Gamma Random Variable]]
 - [[Laplace Random Variable]]
+- [[Geometric Random Variable]]
+- [[Negative Binomial Random Variable]]
 
 ### Johnson-Lindenstrauss Lemma
 
