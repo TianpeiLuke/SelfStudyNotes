@@ -152,4 +152,5 @@ date of note: 2024-09-05
 - [[Probability Distribution of Random Variable]]
 - [[Probability Space]]
 
+- [[Mathematical Statistics by Shao]] pp 18, 44-45
 - Wikipedia [Binomial_distribution](https://en.wikipedia.org/wiki/Binomial_distribution)

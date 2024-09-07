@@ -69,4 +69,6 @@ date of note: 2024-09-05
 - [[Probability Distribution of Random Variable]]
 - [[Probability Space]]
 
+
+- [[Mathematical Statistics by Shao]] pp 268
 - Wikipedia [Dirichlet_distribution](https://en.wikipedia.org/wiki/Dirichlet_distribution)

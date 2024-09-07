@@ -136,4 +136,5 @@ date of note: 2024-09-05
 - [[Probability Distribution of Random Variable]]
 - [[Probability Space]]
 
+- [[Mathematical Statistics by Shao]] pp 122
 - Wikipedia [Bernoulli_distribution](https://en.wikipedia.org/wiki/Bernoulli_distribution)

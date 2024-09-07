@@ -74,4 +74,6 @@ date of note: 2024-09-05
 - [[Probability Distribution of Random Variable]]
 - [[Probability Space]]
 
+
+- [[Mathematical Statistics by Shao]] pp 20, 23, 25,  27
 - Wikipedia [Chi-squared_distribution](https://en.wikipedia.org/wiki/Chi-squared_distribution)

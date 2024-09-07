@@ -37,3 +37,5 @@ date of note: 2024-09-05
 - [[Cumulative Distribution Function of Random Variable]]
 - [[Probability Distribution of Random Variable]]
 - [[Probability Space]]
+
+- [[Mathematical Statistics by Shao]] pp 18

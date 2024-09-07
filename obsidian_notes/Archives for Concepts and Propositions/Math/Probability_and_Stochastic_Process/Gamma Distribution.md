@@ -22,12 +22,12 @@ date of note: 2024-09-05
 >The **Gamma distribution** is a *two-parameter family* of continuous probability distribution.
 >
 >There are *two equivalent parametrization* of Gamma distribution:
->- **shape, scale parametrization**: 
+>- **(shape, scale) parametrization**: 
 >	- A random variable $X \in (0, \infty)$ follows the **Gamma distribution** with **shape parameter** $k >0$ and **scale parameter** $\theta >0$ if the p.d.f. of $X$ is given by $$p(x; k, \theta) := \frac{1}{\Gamma(k)\,\theta^{k}}\,x^{k - 1}\,e^{- x/\theta}$$ where $\Gamma(x)$ is the **Gamma function**.
->	- $X \sim \Gamma(k, \theta)$
->- **shape, rate parametrization**: 
+>	- Denote $X \sim \Gamma(k, \theta)$
+>- **(shape, rate) parametrization**: 
 >	- A random variable $X \in (0, \infty)$ follows the **Gamma distribution** with **shape parameter** $\alpha >0$ and **rate parameter** $\beta >0$ if the p.d.f. of $X$ is given by $$p(x; \alpha, \beta) := \frac{\beta^{\alpha}}{\Gamma(\alpha)}\,x^{\alpha - 1}\,e^{- \beta x}$$
->	- $X \sim \Gamma(\alpha, \beta)$
+>	- Denote $X \sim \Gamma(\alpha, \beta)$
 >	- Note that $$\beta = \frac{1}{\theta}$$
 
 - [[Probability Density Function of Random Variable]]
@@ -206,4 +206,6 @@ date of note: 2024-09-05
 - [[Cumulative Distribution Function of Random Variable]]
 - [[Probability Distribution of Random Variable]]
 - [[Probability Space]]
+
+- [[Mathematical Statistics by Shao]] pp 20, 36
 - Wikipedia [Gamma_distribution](https://en.wikipedia.org/wiki/Gamma_distribution)

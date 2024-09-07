@@ -200,5 +200,7 @@ date of note: 2024-09-05
 - [[Probability Distribution of Random Variable]]
 - [[Probability Space]]
 
+
+- [[Mathematical Statistics by Shao]] pp 98
 - Wikipedia [Multinomial_distribution](https://en.wikipedia.org/wiki/Multinomial_distribution)
 - Wikipedia [Multinomial_logistic_regression](https://en.wikipedia.org/wiki/Multinomial_logistic_regression)

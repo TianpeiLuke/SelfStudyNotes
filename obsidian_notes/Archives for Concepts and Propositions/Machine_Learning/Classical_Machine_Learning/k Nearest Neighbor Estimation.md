@@ -28,4 +28,5 @@ date of note: 2024-05-12
 
 - [[Elements of Statistical Learning by Hastie]]
 - [[Understanding Machine Learning by Shalev-Shwartz]]
+- [[Mathematical Statistics by Shao]] pp 332
 - Devroye, L., Györfi, L., & Lugosi, G. (2013). _A probabilistic theory of pattern recognition_ (Vol. 31). Springer Science & Business Media.
