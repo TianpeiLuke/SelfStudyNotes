@@ -32,9 +32,30 @@ date of note: 2024-09-05
 >$$
 >for $x \in [0,\infty),$ and $k \in \mathbb{N}.$
 
+### Support
+
+>[!important] Definition
+>The **support** for Gamma distribution is $$(0, \infty).$$
+
+### Mean, Variance
+
+>[!important] Definition
+>The **mean** of $X \sim \chi^2(k)$ is $$\mathbb{E}_{ p }\left[  X \right] = k.$$
+>
+>The **n-th moment** of $X$ is $$\mathbb{E}_{ p }\left[  X^n \right] = \theta^n\,\frac{\Gamma(k / 2 + n)}{\Gamma(k / 2)}.$$
+>
+>The **variance** of $X \sim \chi^2(k)$ is $$\text{Var}(X) = 2k.$$
 
 
+### Moment Generating Function
 
+>[!important] Definition
+>The **moment generating function** of $X \sim \chi^2(k)$ is 
+>$$
+>M_{X}(t) = \mathbb{E}_{ p }\left[  e^{t X} \right] =  \left(1 - 2 t\right)^{-k / 2} \quad \text{ if }t < \frac{1}{2}.
+>$$
+>
+>The **logarithmic moment generating function** is $$\psi_{X}(t) = -\frac{k}{2}\,\log \left(1 - 2 t\right)\quad \text{ if }t < \frac{1}{2}.$$
 
 
 ## Explanation
@@ -51,6 +72,30 @@ date of note: 2024-09-05
 >where $\theta$ is the *rate parameter*.
 
 - [[Gamma Distribution]]
+
+## Exponential Family
+
+>[!important] 
+>We can reformulate the Gamma distribution in the **natural parameterization** of *exponential family*
+>$$
+>\begin{align*}
+> p(x; k) &= \exp \left( \left( \frac{k}{2}-1 \right)\,\log(x) - \frac{x}{2} - \frac{k}{2} \log(2)  - \log \left(\Gamma(k / 2)\right)  \right) \\[5pt]
+> &:= \exp \left( \left\langle \xi , T(x) \right\rangle  - A(\xi)\right) 
+>\end{align*}
+>$$
+>where
+>$$
+>\begin{align*}
+>\xi &= \left( \left( \frac{k}{2}-1 \right), -\frac{1}{2} \right)^{T} \\[5pt]
+>T(x) &= (\log(x), x)^{T}  \\[5pt]
+>A(\xi) &= - \frac{k}{2} \log(2)  - \log \left(\Gamma(k / 2)\right) \\[5pt]
+>&= (\xi_{1} +1)\,\log(-\xi_{2}) - \log\Gamma(\xi_{1} + 1)  
+>\end{align*}
+>$$
+
+- [[Exponential Family of Distributions]]
+
+
 
 
 ## Sub-Exponential, Sub-Gamma Random Variables
@@ -75,5 +120,5 @@ date of note: 2024-09-05
 - [[Probability Space]]
 
 
-- [[Mathematical Statistics by Shao]] pp 20, 23, 25,  27
+- [[Mathematical Statistics by Shao]] pp 20- 22, 23, 25,  27
 - Wikipedia [Chi-squared_distribution](https://en.wikipedia.org/wiki/Chi-squared_distribution)
