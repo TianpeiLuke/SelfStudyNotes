@@ -71,6 +71,7 @@ date of note: 2024-06-01
 
 - [[Models and Algorithms for Probabilistic Graphical Models]]
 - [[Naive Bayes Model]]
+- [[Multinomial Naive Bayes Model]]
 - [[Conditional Random Field]]
 
 #### Deep Learning

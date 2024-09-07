@@ -28,8 +28,8 @@ date of note: 2024-09-05
 ##  Recommended Notes and References
 
 
-- [[Bernoulli Random Variable]]
-- [[Binomial Random Variable]]
+- [[Bernoulli Distribution]]
+- [[Binomial Distribution]]
 
 
 - [[Moment Generating Function]]

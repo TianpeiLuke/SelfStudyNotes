@@ -46,7 +46,7 @@ date of note: 2024-05-12
 >where $w_{m_{n}}  := W_{m_{n}, :} \in \Delta_{V-1}$.
 
 - [[Naive Bayes Model]]
-- [[Multinomial Random Variable]]
+- [[Multinomial Distribution]]
 - [[Latent Variable Models]]
 
 
@@ -95,7 +95,7 @@ date of note: 2024-05-12
 
 
 - [[Naive Bayes Model]]
-- [[Multinomial Random Variable]]
+- [[Multinomial Distribution]]
 - [[Multinomial Principle Component Analysis]]
 - [[Factor Analysis]]
 - [[Latent Variable Models]]

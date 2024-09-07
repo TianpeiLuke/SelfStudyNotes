@@ -28,7 +28,7 @@ date of note: 2024-09-05
 ##  Recommended Notes and References
 
 
-- [[Poisson Random Variable]]
+- [[Poisson Distribution]]
 
 
 - [[Moment Generating Function]]

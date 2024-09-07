@@ -27,5 +27,5 @@ date of note: 2024-09-05
 - [[Gaussian Random Vector]]
 - [[Gaussian Random Variable]]
 
-- [[Dirichlet Random Variable]]
-- [[Multinomial Random Variable]]
+- [[Dirichlet Distribution]]
+- [[Multinomial Distribution]]

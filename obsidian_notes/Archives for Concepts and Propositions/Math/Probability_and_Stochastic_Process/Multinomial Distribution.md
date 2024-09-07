@@ -124,11 +124,11 @@ date of note: 2024-09-05
 
 ## Binomial Distribution
 
-- [[Binomial Random Variable]]
+- [[Binomial Distribution]]
 
 ## Conjugate Prior
 
-- [[Dirichlet Random Variable]]
+- [[Dirichlet Distribution]]
 
 ## Exponential Family
 
@@ -191,7 +191,7 @@ date of note: 2024-09-05
 
 
 - [[Sub-Gaussian Random Variable]]
-- [[Dirichlet Random Variable]]
+- [[Dirichlet Distribution]]
 
 
 - [[Moment Generating Function]]

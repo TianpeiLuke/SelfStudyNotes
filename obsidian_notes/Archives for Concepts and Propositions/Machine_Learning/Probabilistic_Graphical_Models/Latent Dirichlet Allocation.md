@@ -54,8 +54,8 @@ date of note: 2024-05-12
 >$$  
 >where $w_{m_{n, l}}  := W_{m_{n, l}, :} \in \Delta_{V-1}$
 
-- [[Multinomial Random Variable]]
-- [[Dirichlet Random Variable]]
+- [[Multinomial Distribution]]
+- [[Dirichlet Distribution]]
 - [[Latent Variable Models]]
 - [[Conjugate Prior Distribution for Bayesian Inference]]
 - [[Multinomial Principle Component Analysis]]
@@ -122,8 +122,8 @@ date of note: 2024-05-12
 
 
 
-- [[Multinomial Random Variable]]
-- [[Dirichlet Random Variable]]
+- [[Multinomial Distribution]]
+- [[Dirichlet Distribution]]
 
 - [[Mean Field Approximation]]
 - [[Variational Inference vs EM Algorithm]]

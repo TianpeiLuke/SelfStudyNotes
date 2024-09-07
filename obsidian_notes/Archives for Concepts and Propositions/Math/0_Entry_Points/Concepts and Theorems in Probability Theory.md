@@ -60,19 +60,19 @@ date of note: 2024-05-13
 - [[Gaussian Random Variable]]
 - [[Gaussian Random Vector]]
 - [[Sub-Gaussian Random Variable]]
-- [[Bernoulli Random Variable]]
-- [[Binomial Random Variable]]
+- [[Bernoulli Distribution]]
+- [[Binomial Distribution]]
 
-- [[Multinomial Random Variable]]
-- [[Dirichlet Random Variable]]
+- [[Multinomial Distribution]]
+- [[Dirichlet Distribution]]
 
-- [[Poisson Random Variable]]
-- [[Chi-Square Random Variable]]
+- [[Poisson Distribution]]
+- [[Chi-Square Distribution]]
 
-- [[Geometric Random Variable]]
-- [[Negative Binomial Random Variable]]
-- [[Gamma Random Variable]]
-- [[Laplace Random Variable]]
+- [[Geometric Distribution]]
+- [[Negative Binomial Distribution]]
+- [[Gamma Distribution]]
+- [[Laplace Distribution]]
 
 
 ## Independence

@@ -101,7 +101,7 @@ date of note: 2024-06-24
 
 ^5ae110
 
-- [[Bernoulli Random Variable]]
+- [[Bernoulli Distribution]]
 - [[Logistic Regression]]
 
 
@@ -117,7 +117,7 @@ date of note: 2024-06-24
 >$$
 
 - [[Softmax Function and Log-Sum-Exp Function]]
-- [[Multinomial Random Variable]]
+- [[Multinomial Distribution]]
 - Wikipedia [Multinomial_logistic_regression](https://en.wikipedia.org/wiki/Multinomial_logistic_regression)
 
 >[!example]

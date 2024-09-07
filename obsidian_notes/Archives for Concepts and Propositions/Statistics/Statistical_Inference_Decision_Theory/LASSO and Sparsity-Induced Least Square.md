@@ -28,7 +28,7 @@ date of note: 2024-07-24
 ##  Recommended Notes and References
 
 
-- [[Laplace Random Variable]]
+- [[Laplace Distribution]]
 - [[Least Square Estimation]]
 - [[Linear Regression]]
 - [[Partial Least Square]]

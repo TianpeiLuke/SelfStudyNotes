@@ -127,7 +127,7 @@ date of note: 2024-09-05
 
 
 - [[Generalized Linear Models]]
-- [[Binomial Random Variable]]
+- [[Binomial Distribution]]
 - [[Sub-Gaussian Random Variable]]
 
 - [[Moment Generating Function]]

@@ -63,7 +63,7 @@ date of note: 2024-07-04
 - [[Kalman Filter Discrete-Time]]
 
 - [[Bootstrap Method]]
-- [[Multinomial Random Variable]]
+- [[Multinomial Distribution]]
 - [[Roulettle Wheel Algorithm to Resample from CDF]]
 
 

@@ -28,9 +28,9 @@ date of note: 2024-09-05
 ##  Recommended Notes and References
 
 
-- [[Gamma Random Variable]]
-- [[Laplace Random Variable]]
-- [[Poisson Random Variable]]
+- [[Gamma Distribution]]
+- [[Laplace Distribution]]
+- [[Poisson Distribution]]
 - [[Exponential Random Variable]]
 
 - [[Moment Generating Function]]

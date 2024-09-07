@@ -241,10 +241,10 @@ date of note: 2024-05-11
 
 - [[Gaussian Random Variable]]
 - [[Gaussian Random Vector]]
-- [[Bernoulli Random Variable]]
-- [[Binomial Random Variable]]
-- [[Multinomial Random Variable]]
-- [[Dirichlet Random Variable]]
+- [[Bernoulli Distribution]]
+- [[Binomial Distribution]]
+- [[Multinomial Distribution]]
+- [[Dirichlet Distribution]]
 
 ### Sub-Exponential Random Variables and Sub-Gamma Random Variables
 
@@ -252,12 +252,12 @@ date of note: 2024-05-11
 - [[Sub-Exponential Random Variables]]
 
 
-- [[Chi-Square Random Variable]]
-- [[Poisson Random Variable]]
-- [[Gamma Random Variable]]
-- [[Laplace Random Variable]]
-- [[Geometric Random Variable]]
-- [[Negative Binomial Random Variable]]
+- [[Chi-Square Distribution]]
+- [[Poisson Distribution]]
+- [[Gamma Distribution]]
+- [[Laplace Distribution]]
+- [[Geometric Distribution]]
+- [[Negative Binomial Distribution]]
 
 ### Johnson-Lindenstrauss Lemma
 

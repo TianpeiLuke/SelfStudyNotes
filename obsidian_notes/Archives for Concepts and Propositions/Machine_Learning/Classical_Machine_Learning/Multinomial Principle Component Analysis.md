@@ -44,8 +44,8 @@ date of note: 2024-09-05
 >where $w_{m_{n}}  := W_{m_{n}, :} \in \Delta_{V-1}$.
 >
 
-- [[Multinomial Random Variable]]
-- [[Dirichlet Random Variable]]
+- [[Multinomial Distribution]]
+- [[Dirichlet Distribution]]
 - [[Latent Variable Models]]
 
 
@@ -71,8 +71,8 @@ date of note: 2024-09-05
 ##  Recommended Notes and References
 
 
-- [[Dirichlet Random Variable]]
-- [[Multinomial Random Variable]]
+- [[Dirichlet Distribution]]
+- [[Multinomial Distribution]]
 - [[Probabilistic Principle Component Analysis]]
 - [[Principle Component Analysis]]
 

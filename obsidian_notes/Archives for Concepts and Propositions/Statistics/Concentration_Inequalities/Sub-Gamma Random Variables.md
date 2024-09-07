@@ -29,9 +29,9 @@ date of note: 2024-09-05
 
 - [[Sub-Exponential Random Variables]]
 
-- [[Gamma Random Variable]]
-- [[Laplace Random Variable]]
-- [[Poisson Random Variable]]
+- [[Gamma Distribution]]
+- [[Laplace Distribution]]
+- [[Poisson Distribution]]
 - [[Exponential Random Variable]]
 
 - [[Moment Generating Function]]

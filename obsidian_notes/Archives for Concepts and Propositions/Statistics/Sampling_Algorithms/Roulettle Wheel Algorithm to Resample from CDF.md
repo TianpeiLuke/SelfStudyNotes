@@ -36,7 +36,7 @@ date of note: 2024-08-28
 ^a9dfe5
 
 - [[Quantile Function]]
-- [[Multinomial Random Variable]]
+- [[Multinomial Distribution]]
 - [[Cumulative Distribution Function of Random Variable]]
 
 

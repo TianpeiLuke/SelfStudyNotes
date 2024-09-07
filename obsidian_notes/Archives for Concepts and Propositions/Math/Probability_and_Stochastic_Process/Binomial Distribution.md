@@ -27,7 +27,7 @@ date of note: 2024-09-05
 >
 >It is denoted as $B(n, p).$
 
-- [[Bernoulli Random Variable]]
+- [[Bernoulli Distribution]]
 
 ### Support
 
@@ -93,7 +93,7 @@ date of note: 2024-09-05
 >X = \sum_{i=1}^{n}Z_{i} \sim B(n, p)
 >$$
 
-- [[Bernoulli Random Variable]]
+- [[Bernoulli Distribution]]
 
 
 ## Exponential Family
@@ -134,16 +134,16 @@ date of note: 2024-09-05
 
 ## Multi-Dimensional Extension
 
-- [[Multinomial Random Variable]]
+- [[Multinomial Distribution]]
 
 
 
 -----------
 ##  Recommended Notes and References
 
-- [[Multinomial Random Variable]]
-- [[Bernoulli Random Variable]]
-- [[Geometric Random Variable]]
+- [[Multinomial Distribution]]
+- [[Bernoulli Distribution]]
+- [[Geometric Distribution]]
 - [[Sub-Gaussian Random Variable]]
 
 - [[Moment Generating Function]]

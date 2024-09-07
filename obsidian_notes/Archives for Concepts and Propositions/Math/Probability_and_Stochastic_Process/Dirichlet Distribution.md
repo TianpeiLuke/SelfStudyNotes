@@ -60,7 +60,7 @@ date of note: 2024-09-05
 ##  Recommended Notes and References
 
 
-- [[Multinomial Random Variable]]
+- [[Multinomial Distribution]]
 - [[Sub-Gaussian Random Variable]]
 
 - [[Moment Generating Function]]

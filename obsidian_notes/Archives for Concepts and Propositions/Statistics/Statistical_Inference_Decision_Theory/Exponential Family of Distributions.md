@@ -68,23 +68,23 @@ date of note: 2024-06-24
 - [[Sub-Gaussian Random Variable]]
 - [[Natural Parameter and Mean Parameter for Gaussian Distribution]]
 
-![[Bernoulli Random Variable#^b7be16]]
+![[Bernoulli Distribution#^b7be16]]
 
-- [[Bernoulli Random Variable]]
+- [[Bernoulli Distribution]]
 
-![[Binomial Random Variable#^ddf730]]
+![[Binomial Distribution#^ddf730]]
 
-- [[Binomial Random Variable]]
+- [[Binomial Distribution]]
 
-![[Multinomial Random Variable#^d94bb5]]
+![[Multinomial Distribution#^d94bb5]]
 
-- [[Multinomial Random Variable]]
-- [[Dirichlet Random Variable]]
+- [[Multinomial Distribution]]
+- [[Dirichlet Distribution]]
 
-![[Poisson Random Variable#^3043cb]]
+![[Poisson Distribution#^3043cb]]
 
-- [[Poisson Random Variable]]
-- [[Gamma Random Variable]]
+- [[Poisson Distribution]]
+- [[Gamma Distribution]]
 
 
 

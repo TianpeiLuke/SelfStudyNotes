@@ -57,14 +57,14 @@ date of note: 2024-09-06
 
 ## Multinomial Distribution
 
-![[Multinomial Random Variable#^d94bb5]]
+![[Multinomial Distribution#^d94bb5]]
 
 >[!important] 
 >The *softmax function* is the **forward map** for the *multinomial distribution*, which maps from *natural parameters* to *mean parameters*.
 >
 >The *log-sum-exp function* is the **log-partition function** for the *multinomial distribution*.
 
-- [[Multinomial Random Variable]]
+- [[Multinomial Distribution]]
 - [[Log-Partition Function of Exponential Family]]
 
 
@@ -83,7 +83,7 @@ date of note: 2024-09-06
 - [[Log-Partition Function and Score Function of Graphical Models]]
 
 
-- [[Multinomial Random Variable]]
+- [[Multinomial Distribution]]
 - [[Generalized Linear Models]]
 - [[Local Probabilistic Models]]
 

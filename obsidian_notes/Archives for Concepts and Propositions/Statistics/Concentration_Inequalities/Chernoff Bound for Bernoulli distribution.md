@@ -60,7 +60,7 @@ date of note: 2024-05-08
 > \end{align*}
 >$$
 
-- [[Bernoulli Random Variable]]
+- [[Bernoulli Distribution]]
 
 >[!info]
 >We note here that $h_p(a)$ is just the **Kullback-Leibler divergence** $\mathbb{KL}\left(  \mathcal{P}_a \left\|\right. \mathcal{P}_p \right)$ between a *Bernoulli distribution* $\mathcal{P}_a$ of parameter $a$ and a *Bernoulli distribution* $\mathcal{P}_p$ of parameter $p$. 
