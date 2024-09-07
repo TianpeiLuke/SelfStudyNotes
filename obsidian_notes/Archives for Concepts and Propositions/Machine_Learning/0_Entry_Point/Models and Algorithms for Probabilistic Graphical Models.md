@@ -40,6 +40,7 @@ date of note: 2024-06-01
 - [[Perfect Map for Independence Assertions]]
 - [[Statistical Equivalence between Graphical Models]]
 - [[Bayesian Network Distribution to Graph]]
+- [[Local Probabilistic Models]]
 
 #### Markov Network
 
@@ -106,6 +107,7 @@ date of note: 2024-06-01
 - [[Exponential Family and Convex Duality]]
 - [[Exponential Family as Probabilistic Graphical Model]]
 
+- [[Softmax Function and Log-Sum-Exp Function]]
 
 ### Examples
 

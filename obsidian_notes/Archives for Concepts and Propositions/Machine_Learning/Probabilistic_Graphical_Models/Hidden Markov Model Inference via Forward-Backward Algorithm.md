@@ -129,6 +129,8 @@ date of note: 2024-05-12
 >
 >-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 401
 
+- [[Softmax Function and Log-Sum-Exp Function]]
+
 >[!important]
 >An alternative implementation perform offline smoothing is to use **forwards filtering**/**backwards smoothing**. In this approach, we first perform the **forwards or filtering pass**, and then compute the **smoothed belief states** by working backwards,
 >

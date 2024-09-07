@@ -61,13 +61,27 @@ date of note: 2024-06-24
 
 ### Examples 
 
+![[Natural Parameter and Mean Parameter for Gaussian Distribution#^683466]]
+
 - [[Gaussian Random Variable]]
 - [[Gaussian Random Vector]]
 - [[Sub-Gaussian Random Variable]]
+- [[Natural Parameter and Mean Parameter for Gaussian Distribution]]
+
+![[Bernoulli Random Variable#^b7be16]]
+
 - [[Bernoulli Random Variable]]
+
+![[Binomial Random Variable#^ddf730]]
+
 - [[Binomial Random Variable]]
+
+![[Multinomial Random Variable#^d94bb5]]
+
 - [[Multinomial Random Variable]]
 - [[Dirichlet Random Variable]]
+
+![[Poisson Random Variable#^3043cb]]
 
 - [[Poisson Random Variable]]
 - [[Gamma Random Variable]]

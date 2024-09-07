@@ -86,6 +86,8 @@ date of note: 2024-09-01
 >	- Find the *most probable* **ancestor state** for each $j\in \mathcal{X}$ $$a_{t}(j) = \arg\min_{i} \left[\delta_{t-1}(i)  -\log A_{i,j} \right]$$
 >		- That is, $a_{t}(j)$ stores the identity of the *previous state* on the **most probable path** to $X^{(t)} = j$.
 
+- [[Softmax Function and Log-Sum-Exp Function]]
+
 ### Backwards Pass
 
 >[!important] Definition

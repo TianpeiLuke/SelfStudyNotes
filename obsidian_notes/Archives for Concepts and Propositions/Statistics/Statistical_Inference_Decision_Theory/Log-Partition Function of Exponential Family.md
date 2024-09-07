@@ -235,6 +235,7 @@ date of note: 2024-06-27
 - [[Exponential Family and Convex Duality]]
 - [[Natural Parameter and Mean Parameter for Gaussian Distribution]]
 
+- [[Softmax Function and Log-Sum-Exp Function]]
 - [[Log-Partition Function and Score Function of Graphical Models]]
 - [[Partition Function for AdaBoost]]
 

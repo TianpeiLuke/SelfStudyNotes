@@ -116,6 +116,7 @@ date of note: 2024-06-24
 >\end{align*}
 >$$
 
+- [[Softmax Function and Log-Sum-Exp Function]]
 - [[Multinomial Random Variable]]
 - Wikipedia [Multinomial_logistic_regression](https://en.wikipedia.org/wiki/Multinomial_logistic_regression)
 

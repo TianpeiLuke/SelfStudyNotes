@@ -97,6 +97,8 @@ date of note: 2024-09-05
 >\end{align*}
 >$$
 
+^b7be16
+
 
 - [[Exponential Family of Distributions]]
 - [[Generalized Linear Models]]

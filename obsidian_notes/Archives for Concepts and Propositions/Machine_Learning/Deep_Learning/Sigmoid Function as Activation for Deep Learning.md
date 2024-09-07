@@ -46,6 +46,13 @@ date of note: 2024-05-12
 >\frac{d}{dx}\sigma(x) = \sigma(x) \left(1 - \sigma(x)\right) 
 >$$ 
 
+### Softmax Function
+
+![[Softmax Function and Log-Sum-Exp Function#^af1cec]]
+
+- [[Softmax Function and Log-Sum-Exp Function]]
+
+
 ### Hyperbolic Tangent Sigmoid Function
 
 >[!important] Definition

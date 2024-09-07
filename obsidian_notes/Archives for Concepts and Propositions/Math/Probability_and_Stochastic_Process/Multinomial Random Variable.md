@@ -158,11 +158,15 @@ date of note: 2024-09-05
 >$$
 >h(x_{1} \,{,}\ldots{,}\,x_{k}) := \frac{n!}{x_{1}! \ldots x_{k}!}
 >$$
+>is the normalization factor for the *counting measure*.
+
+^d94bb5
 
 - [[Exponential Family of Distributions]]
+- [[Counting Measure]]
 
 >[!important]
->Note that the *mean parameters* is given by the **softmax function** 
+>Note that the *mean parameters* is given by the **softmax (softargmax) function** 
 >$$
 >\begin{align*}
 >p_{i} &= \frac{e^{\theta^{i}}}{\sum_{i=1}^{k}e^{\theta^{i}}} = \nabla_{i} A(\theta), \quad i=1\,{,}\ldots{,}\,k
@@ -174,6 +178,7 @@ date of note: 2024-09-05
 >A(\theta) := \log \left(\sum_{i=1}^{n}e^{\theta^{i}}\right)
 >$$
 
+- [[Softmax Function and Log-Sum-Exp Function]]
 - [[Convex Function]]
 - [[Operations that Preserve Convexity]]
 - [[Generalized Linear Models]]

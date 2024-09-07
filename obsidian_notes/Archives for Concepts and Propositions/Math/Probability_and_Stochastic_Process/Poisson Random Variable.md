@@ -59,6 +59,65 @@ date of note: 2024-09-05
 
 ## Explanation
 
+>[!info]
+>The **Poisson distribution** is a discrete probability distribution that expresses the probability of *a given number* of events occurring *in a fixed interval of time* if these events occur with a known *constant mean rate* and *independently* of the time since the last event.
+
+
+
+
+## Maximum Likelihood Estimation
+
+
+>[!important] 
+>The **log-likelihood function** is
+>$$
+>\log p(k; \lambda) = -\lambda + k\,\log(\lambda) - \log(k!)
+>$$
+
+>[!important] 
+>Let $X_{i} \sim \text{Poisson}(\lambda)$ be $m$ i.i.d. *Poisson random variables* $i=1\,{,}\ldots{,} m,$ then the **MLE** for parameter $\lambda$ is
+>$$
+>\hat{\lambda} = \frac{1}{m} \sum_{i=1}^{m}X_{i}
+>$$
+
+
+## Sums of Poisson-Distributed random variables
+
+>[!important] 
+>Let $X_{i} \sim \text{Poisson}(\lambda_{i})$ be $m$ **independent** *Poisson random variables* $i=1\,{,}\ldots{,} m,$
+>
+>Then the **sum** is also a *Poisson-distributed random variable* 
+>$$
+>\sum_{i=1}^{m}X_{i} \sim \text{Poisson}\left( \sum_{i=1}^{m}\lambda_{i} \right)
+>$$
+
+
+## Exponential Family
+
+>[!important] 
+>We can reformulate the Poisson distribution in the **natural parameterization** of *exponential family*
+>$$
+>\begin{align*}
+> p(k; \lambda) &= \exp \left( \log(\lambda)\,k -\lambda\right)\frac{1}{k!} \\[5pt]
+> &:= \exp \left( \left\langle \theta(\lambda) , T(k) \right\rangle  - A(\theta)\right)\;h(k)
+>\end{align*}
+>$$
+>where
+>$$
+>\begin{align*}
+>\theta(\lambda) &= \log(\lambda)  \\[5pt]
+>T(k) &= k  \\[5pt]
+>A(\theta) &= \lambda = \exp \left(\theta\right)
+>\end{align*}
+>$$
+>and
+>$$
+>h(k) :=  \frac{1}{k!}
+>$$
+>is the normalization factor for the *counting measure*.
+
+^3043cb
+
 
 ## Sub-Exponential Distribution
 

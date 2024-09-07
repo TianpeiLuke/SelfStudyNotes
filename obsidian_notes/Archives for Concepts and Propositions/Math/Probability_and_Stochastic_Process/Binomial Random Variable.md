@@ -119,10 +119,13 @@ date of note: 2024-09-05
 >$$
 >h(k) := {n \choose k} := \frac{n!}{k! (n-k)!}
 >$$
+>is the normalization factor for the *counting measure*.
+
+^ddf730
 
 
 - [[Exponential Family of Distributions]]
-
+- [[Counting Measure]]
 
 ## Sub-Gaussian Random Variables
 

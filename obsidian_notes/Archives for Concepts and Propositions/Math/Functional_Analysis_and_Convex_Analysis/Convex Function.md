@@ -132,7 +132,7 @@ date of note: 2024-05-15
 >  $$f(x) = \lVert x \rVert $$
 >- max function is **convex** function
 >  $$f(x) = \max_{i=1 \,{,}\ldots{,}\,n}\{ x_{i} \}$$
->- *log-sum-exp* function is **convex** function: [[Variational Formula for Kullback-Leibler Divergence]]
+>- *log-sum-exp* function is **convex** function: [[Softmax Function and Log-Sum-Exp Function]]
 >  $$f(x) = \log \left(\sum_{i=1}^n \exp(x_{i})\right)$$
 >  This function is also called **the soft-max function**
 >  $$ \max_{i=1 \,{,}\ldots{,}\,n}\{ x_{i} \} \le \log \left(\sum_{i=1}^n \exp(x_{i})\right) \le \max_{i=1 \,{,}\ldots{,}\,n}\{ x_{i} \} + \log(n)$$
