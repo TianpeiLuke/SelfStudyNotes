@@ -80,13 +80,30 @@ date of note: 2024-07-06
 >$$
 >where $$\mu_{x} := \mathbb{E}_{ \eta }\left[T(x, Z)\right]$$ is the **mean parameter** of the **variational density.**
 
+^d69640
 
+- [[Kullback-Leibler Divergence for Exponential Family#Mixed Form]]
 - [[Convex Conjugate Function]]
 - [[Legendre Transform]]
 
 
 ## Explanation
 
+![[Kullback-Leibler Divergence for Exponential Family#^1737d6]]
+
+
+
+
+## KL Divergence
+
+![[Kullback-Leibler Divergence for Exponential Family#^a7c80d]]
+
+- [[Kullback-Leibler Divergence for Exponential Family]]
+
+
+## EM Algorithm
+
+- [[Expectation-Maximization Algorithm for Exponential Family]]
 
 
 
@@ -97,9 +114,11 @@ date of note: 2024-07-06
 
 - [[Expectation-Maximization Algorithm]]
 - [[Log-Partition Function of Exponential Family]]
+- [[Exponential Family of Distributions]]
+
 
 - [[Bregman Divergence]]
 - [[Bregman Projection]]
 - [[Kullback-Leibler Divergence]]
 
-- [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]]
+- [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]] pp 154 - 156

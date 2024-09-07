@@ -40,6 +40,9 @@ date of note: 2024-07-06
 >$$
 >where $\mu_{x}$ is the *mean parameters* of the variational density,  $$\mu_{x} := \mathbb{E}_{ \eta }\left[T(x, Z)\right],$$ and $$A_{x}^{*}(\mu_{x}) := \sup_{\eta \in \Theta}\left\{ \left\langle  \eta\,,\,\mu_{x} \right\rangle - A_{x}(\eta) \right\}.$$
 
+- [[Kullback-Leibler Divergence for Exponential Family#Mixed Form]]
+
+
 >[!important] Definition
 >The **expectation-maximization (EM) algorithm** for exponential family works as below:
 >- Repeat the following steps until convergence:

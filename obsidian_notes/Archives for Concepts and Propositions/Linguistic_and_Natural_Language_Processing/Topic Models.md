@@ -27,7 +27,10 @@ date of note: 2024-09-04
 ##  Recommended Notes and References
 
 
+- [[Multinomial Principle Component Analysis]]
+- [[Multinomial Naive Bayes Model]]
 
+- [[Probabilistic Latent Semantic Analysis]]
 - [[Latent Dirichlet Allocation]]
 - [[Nonnegative Matrix Factorization]]
 - [[Latent Variable Models]]

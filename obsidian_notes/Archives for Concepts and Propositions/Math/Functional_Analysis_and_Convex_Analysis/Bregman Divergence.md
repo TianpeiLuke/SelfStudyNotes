@@ -25,6 +25,8 @@ date of note: 2024-05-14
 >\mathbb{D}_{f}\left( \boldsymbol{x} \left\|\right. \boldsymbol{y}\right) = f(\boldsymbol{x}) - f(\boldsymbol{y}) - \left\langle  \nabla f(\boldsymbol{y})\,,\,  \boldsymbol{x} - \boldsymbol{y} \right\rangle  
 >$$
 
+^b31c31
+
 
 
 >[!info]
@@ -67,6 +69,12 @@ date of note: 2024-05-14
 ## Solution for Bregman Projection
 
 - [[Expected Value Solution for Bregman Projection]]
+
+## KL Divergence within Exponential Family
+
+![[Kullback-Leibler Divergence for Exponential Family#^a7c80d]]
+
+- [[Kullback-Leibler Divergence for Exponential Family]]
 
 
 

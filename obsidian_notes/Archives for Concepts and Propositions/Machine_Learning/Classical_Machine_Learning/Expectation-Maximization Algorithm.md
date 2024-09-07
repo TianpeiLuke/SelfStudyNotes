@@ -180,7 +180,7 @@ date of note: 2024-05-12
 
 - [[Elements of Statistical Learning by Hastie]] pp 272 - 279
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 283 - 291
-- [[Deep Learning Foundations and Concepts by Bishop]] pp 474 - 490
+- [[Deep Learning Foundations and Concepts by Bishop]] pp 474 - 490, 518 - 521
 - [[Elements of Information Theory by Cover]]
 - [[Nonlinear Programming by Bertsekas]] pp 554
 - [[Probabilistic Graphical Models by Koller]] pp 868- 892, 907-929

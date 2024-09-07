@@ -28,6 +28,8 @@ date of note: 2024-06-01
 - [[Entropy Functional]]
 - [[Phi Entropy Functional]]
 
+- [[Kullback-Leibler Divergence for Exponential Family]]
+
 ### Optimal Transport
 
 - [[Concepts and Theorems of Optimal Transport]]

@@ -64,6 +64,44 @@ date of note: 2024-09-05
 ## Explanation
 
 
+
+## Maximum Likelihood Estimation
+
+>[!important]
+>The **log-likelihood function** is 
+>$$
+>\log p(x; p) = x \log p  + (1- x) \log (1- p)
+>$$
+
+
+>[!important]
+>The **MLE** of parameter $p$ for a set of i.i.d. Bernoulli random variables $X_{i}, i=1\,{,}\ldots{,}\,n$ is the sample mean $$\hat{p} = \frac{1}{n}\sum_{i=1}^{n}X_{i}.$$
+
+## Exponential Family
+
+>[!important] 
+>We can reformulate the Bernoulli distribution in the **natural parameterization** of *exponential family*
+>$$
+>\begin{align*}
+> p(x; p) &= \exp \left( x \log p  + (1- x) \log (1- p) \right) \\[5pt]
+> &= \exp \left( \log \left( \frac{p}{1- p} \right)\,x  + \log (1-p)\,\right) \\[5pt]
+> &:= \exp \left( \left\langle \theta(p) , T(x) \right\rangle - A(\theta) \right) \\[5pt]
+>\end{align*}
+>$$
+>where
+>$$
+>\begin{align*}
+>\theta(p) &= \log \left( \frac{p}{1- p} \right) \\[5pt]
+>T(x) &= x \\[5pt]
+>A(\theta) &= \log \frac{1}{1- p} = \log \left( 1 + e^{\theta} \right).
+>\end{align*}
+>$$
+
+
+- [[Exponential Family of Distributions]]
+- [[Generalized Linear Models]]
+- [[Logistic Regression]]
+
 ## Sub-Gaussian Distribution
 
 >[!important]
@@ -86,6 +124,7 @@ date of note: 2024-09-05
 ##  Recommended Notes and References
 
 
+- [[Generalized Linear Models]]
 - [[Binomial Random Variable]]
 - [[Sub-Gaussian Random Variable]]
 

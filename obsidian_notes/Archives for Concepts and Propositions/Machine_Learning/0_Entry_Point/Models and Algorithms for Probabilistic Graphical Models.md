@@ -111,6 +111,7 @@ date of note: 2024-06-01
 
 - [[Canonical Form of Gaussian Graphical Model]]
 - [[Naive Bayes Model]]
+	- [[Multinomial Naive Bayes Model]]
 - [[Hidden Markov Model]]
 - [[Kalman Filter Discrete-Time]]
 - [[Recurrent Neural Network]]

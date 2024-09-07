@@ -101,12 +101,14 @@ date of note: 2024-06-24
 
 ^5ae110
 
+- [[Bernoulli Random Variable]]
 - [[Logistic Regression]]
+
 
 >[!example]
 >Consider the independent random variables $Y^{i} \in \left\{ 1 \,{,}\ldots{,}\,m\right\}$ from **categorical distribution**  for $i=1\,{,}\ldots{,}\,d.$
 >
->Then the corresponding GLM is 
+>Then the corresponding GLM is called the **multinomial logistic regression**
 >$$
 >\begin{align*}
 >P(Y^i = j | x_{1}^i \,{,}\ldots{,}\, x_{k}^{i}) &= \text{soft-max}\left( \sum_{s=1}^{k}\beta_{s}^{j}x_{s}^{i},\; j\in [m] \right), \quad j\in \left\{ 1 \,{,}\ldots{,}\,m \right\}\\
@@ -114,6 +116,8 @@ date of note: 2024-06-24
 >\end{align*}
 >$$
 
+- [[Multinomial Random Variable]]
+- Wikipedia [Multinomial_logistic_regression](https://en.wikipedia.org/wiki/Multinomial_logistic_regression)
 
 >[!example]
 >Consider the independent **Gaussian random variables** $Y^{i} \in \mathbb{R}$ with  parameter $(\mu^{i}, \sigma)$, i.e. for $i=1\,{,}\ldots{,}\,d$, the conditional p.d.f.

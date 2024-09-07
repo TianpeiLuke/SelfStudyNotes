@@ -58,13 +58,70 @@ date of note: 2024-09-05
 
 ## Explanation
 
+>[!info]
+>Consider a set of $n$ **binary variables** $Z_{i} \in \left\{  0, 1 \right\}$  (Bernoulli random variable), a *Binomial random variable* $X \sim B(n, p)$ can be seen as the **count** of binary variables **when** $Z_{i} = 1$
+>$$
+>X = \frac{1}{n} \sum_{i=1}^{n}\mathbb{1}\left\{ Z_{i} = 1 \right\}
+>$$
+
+- [[Characteristic Function of Set]]
+
+## Maximum Likelihood Estimation
+
+
+>[!important] 
+>The **log-likelihood function** is
+>$$
+>\log p(k; n, p) = k\,\log(p) + (n-k)\,\log(1-p)   + \log \left(  {n \choose k} \right)
+>$$
+
+
+>[!important] 
+>Let $X_{i} \sim \text{B}(n, p)$ be $m$ i.i.d. Binomial random variables $i=1\,{,}\ldots{,} m,$ then the **MLE** for parameter $p$ is
+>$$
+>\hat{p} = \frac{1}{n\,m} \sum_{i=1}^{m}X_{i} = \dfrac{\frac{1}{m}\sum_{i=1}^{m}X_{i}}{n}
+>$$
 
 
 
 
 ## Sum of IID Bernoulli Random Variables
 
+>[!important] 
+>Let $Z_{i} \sim \text{Ber}(p)$ be $n$ i.i.d. Bernoulli random variables $i=1\,{,}\ldots{,} n,$ then 
+>$$
+>X = \sum_{i=1}^{n}Z_{i} \sim B(n, p)
+>$$
+
 - [[Bernoulli Random Variable]]
+
+
+## Exponential Family
+
+>[!important] 
+>We can reformulate the Binomial distribution in the **natural parameterization** of *exponential family*
+>$$
+>\begin{align*}
+> p(k; p) &= \exp \left( k\,\log(p) + (n-k)\,\log(1-p)   + \log \left(  {n \choose k} \right) \right) \\[5pt]
+> &= \exp \left( \log \left( \frac{p}{1- p}\right)\,k + n\,\log(1-p) \right)\,{n \choose k} \\[10pt]
+> &:= \exp \left( \left\langle \theta(p) , T(k) \right\rangle  - A(\theta)\right)\;h(k)
+>\end{align*}
+>$$
+>where
+>$$
+>\begin{align*}
+>\theta(p) &= \log \left( \frac{p}{1- p}\right) \\[5pt]
+>T(k) &= k  \\[5pt]
+>A(\theta) &= n \log \left( 1 + e^{\theta} \right)
+>\end{align*}
+>$$
+>and
+>$$
+>h(k) := {n \choose k} := \frac{n!}{k! (n-k)!}
+>$$
+
+
+- [[Exponential Family of Distributions]]
 
 
 ## Sub-Gaussian Random Variables

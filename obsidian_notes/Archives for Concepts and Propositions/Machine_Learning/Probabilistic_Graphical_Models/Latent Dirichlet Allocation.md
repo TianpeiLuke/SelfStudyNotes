@@ -37,7 +37,7 @@ date of note: 2024-05-12
 >- Denote $p_{n,v} := \mathcal{P}\left(x_{n,l} = v \;|\; z_{n}\right)$, then  $$p_{n} = (p_{n,1} \,{,}\ldots{,}\,p_{n,V}) = z_{n}^{T}\,W \in \Delta_{v-1}$$
 >- $$\sum_{v\in V}\mathcal{P}\left(x_{n,l} = v \;|\; z_{n}\right) = 1 \implies z_{n}^{T}\,W\,1_{V} = 1$$
 >  
->Finally, define $$m_{n,l} \in \{ 1 \,{,}\ldots{,}\, s \}$$ be a **latent variable** of word $x_{n,l}$.
+>Finally, define $$m_{n,l} \in \{ 1 \,{,}\ldots{,}\, s \}$$ as a **latent variable** of word $x_{n,l}$.
 >- $m_{n,l}$ represent the **topic allocation**.    
 >- Denote $m_{n} := (m_{n, 1} \,{,}\ldots{,}\,m_{n, L_{n}})$  
 >  
@@ -61,6 +61,8 @@ date of note: 2024-05-12
 
 
 ![[latent_dirichlet_allocation.png]]
+
+![[lda_jordan.png]]
 
 ## Explanation
 
@@ -92,6 +94,26 @@ date of note: 2024-05-12
 - [[Multinomial Principle Component Analysis]]
 
 
+## Multinomial Naive Bayes
+
+>[!quote]
+>In the **Bernoulli naive Bayes model**, we define a binary attribute (feature) $X_{i}$ to denote whether Bernoulli naive Bayes the $i$’th dictionary word $w_{i}$ *appears* in the document. This representation assumes that we care only about the *presence of a word*, not about how many times it appeared. Moreover, when applying the naive Bayes classifier with this representation we *assume* that the *appearance* of one word in the document is *independent* of the appearance of another (*given the document’s topic*). When learning a naive Bayes classifier with this representation, we learn frequency (over a document) of encountering each dictionary word in documents of specific categories — for example, the probability that the word “ball” appears in a document of category “sports.” We learn such a parameter for each pair (dictionary word, category). 
+>
+>In the **multinomial naive Bayes model**, we define attribute to describe the specific sequence of *multinomial naive Bayes words* in the document. The variable $X_{i}$ denotes *which dictionary word* appeared the $i$th word in the document. Thus, each $X_i$ can take on *many values*, one for each possible word. Here, when we use the naive Bayes classifier, we assume that the *choice* of word in *position* $i$ is *independent* of the choice of word in *position* $j$ (again, given the document’s topic). This model leads to a complication, since the distribution over $X_{i}$ is over all words in the document, which requires a large number of parameters. Thus, we further *assume* that the *probability* that a particular word is used in position $i$ does *not depend on* $i$; that is, the probability that $X_i = w$ (given the topic) is the same as the probability that $X_j = w$. In other words, we use *parameter sharing* between $P (X_{i} | C)$ and $P(X_{j}| C)$. This implies that the total number of parameters is again one for each (dictionary word, category).
+>
+>
+>-- [[Probabilistic Graphical Models by Koller]] pp 767
+
+![[Multinomial Naive Bayes Model#^1410e1]]
+
+- [[Multinomial Naive Bayes Model]]
+- [[Naive Bayes Model]]
+
+![[naive_bayes_lda.png]]
+
+
+
+
 
 
 -----------
@@ -118,7 +140,7 @@ date of note: 2024-05-12
 - [[Latent Variable Models]]
 
 
-- [[Probabilistic Graphical Models by Koller]]
-- [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]]
+- [[Probabilistic Graphical Models by Koller]] pp 769
+- [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]] pp 47 - 49
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 953 - 957
 - [[Elements of Statistical Learning by Hastie]]

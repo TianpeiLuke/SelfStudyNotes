@@ -104,6 +104,7 @@ date of note: 2024-09-04
 - [[Exponential Family of Distributions]]
 
 
-- [[Elements of Statistical Learning by Hastie]]
+- [[Elements of Statistical Learning by Hastie]] pp 674 - 678
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 919 - 969
-- [[Elements of Information Theory by Cover]]
+- [[Probabilistic Graphical Models by Koller]] pp 1012, 1048
+- [[Deep Learning Foundations and Concepts by Bishop]] pp 459, 495

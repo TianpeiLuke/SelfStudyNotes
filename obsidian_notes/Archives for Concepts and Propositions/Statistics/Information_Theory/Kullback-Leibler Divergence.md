@@ -188,6 +188,12 @@ date of note: 2024-05-07
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]]
 
 
+## Exponential Family
+
+- [[Kullback-Leibler Divergence for Exponential Family]]
+- [[Evidence Lower Bound for Exponential Family]]
+
+
 ## Divergence on Statistical Manifold
 
 - [[Divergence Function on Manifold]]

@@ -122,8 +122,6 @@ date of note: 2024-06-01
 
 - [[Generalized Linear Models]]
 - [[Log-Partition Function of Exponential Family]]
-- [[Log-Partition Function of Exponential Family]]
-
 - [[Fisher Information for Exponential Family]]
 
 - [[Maximum Likelihood Estimation of Exponential Family]]
@@ -132,12 +130,15 @@ date of note: 2024-06-01
 - [[Maximum Entropy Learning]]
 - [[Maximum Entropy Learning of Exponential Family]]
 
-
 - [[Convex Conjugate of Log-Partition Function of Exponential Family]]
-
 - [[Exponential Family and Convex Duality]]
 - [[Exponential Family as Probabilistic Graphical Model]]
 - [[Exponential Family as Affine Subspace in Statistical Manifold]]
+
+- [[Kullback-Leibler Divergence for Exponential Family]]
+- [[Evidence Lower Bound for Exponential Family]]
+- [[Expectation-Maximization Algorithm for Exponential Family]]
+
 - [[Natural Parameter and Mean Parameter for Gaussian Distribution]]
 
 ### Estimation of Multivariate Gaussian Distribution

@@ -46,7 +46,7 @@ date of note: 2024-09-04
 
 - [[Elements of Statistical Learning by Hastie]] pp 273, 463, 492, 509
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 920 - 922
-- [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]]
+- [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]] pp 46 - 47, 156 - 157
 - [[Probabilistic Graphical Models by Koller]] pp 616 - 626, 685 - 688
-- [[Deep Learning Foundations and Concepts by Bishop]] pp 86, 200, 271, 466
+- [[Deep Learning Foundations and Concepts by Bishop]] pp 478 - 484
 - [[Computational Optimal Transport by Peyre]]
