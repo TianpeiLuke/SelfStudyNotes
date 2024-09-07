@@ -17,8 +17,33 @@ date of note: 2024-09-05
 >**Name**: 
 
 
+### Support
+
+
+
+
+### Mean, Variance
+
+
+
+### Moment Generating Function
+
+
 
 ## Explanation
+
+
+
+
+## Maximum Likelihood Estimation
+
+
+
+
+## Exponential Family
+
+
+
 
 
 
@@ -28,6 +53,7 @@ date of note: 2024-09-05
 ##  Recommended Notes and References
 
 
+- [[Gamma Distribution]]
 - [[Poisson Distribution]]
 
 

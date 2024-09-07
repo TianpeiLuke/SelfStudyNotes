@@ -144,7 +144,7 @@ date of note: 2024-09-05
 
 
 
-- [[Exponential Random Variable]]
+- [[Exponential Distribution]]
 
 - [[Moment Generating Function]]
 - [[Random Element and Random Variable]]

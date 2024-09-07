@@ -31,7 +31,7 @@ date of note: 2024-09-05
 - [[Gamma Distribution]]
 - [[Laplace Distribution]]
 - [[Poisson Distribution]]
-- [[Exponential Random Variable]]
+- [[Exponential Distribution]]
 
 - [[Moment Generating Function]]
 - [[Random Element and Random Variable]]

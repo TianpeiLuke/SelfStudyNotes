@@ -67,7 +67,7 @@ date of note: 2024-05-13
 - [[Dirichlet Distribution]]
 
 - [[Poisson Distribution]]
-- [[Chi-Square Distribution]]
+- [[Chi-Squared Distribution]]
 
 - [[Geometric Distribution]]
 - [[Negative Binomial Distribution]]

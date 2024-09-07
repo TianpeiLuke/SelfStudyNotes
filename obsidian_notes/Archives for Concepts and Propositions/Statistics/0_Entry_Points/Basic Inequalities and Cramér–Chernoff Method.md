@@ -252,7 +252,7 @@ date of note: 2024-05-11
 - [[Sub-Exponential Random Variables]]
 
 
-- [[Chi-Square Distribution]]
+- [[Chi-Squared Distribution]]
 - [[Poisson Distribution]]
 - [[Gamma Distribution]]
 - [[Laplace Distribution]]
