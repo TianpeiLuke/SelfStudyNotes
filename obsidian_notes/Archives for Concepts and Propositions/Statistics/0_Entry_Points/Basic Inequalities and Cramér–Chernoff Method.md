@@ -160,8 +160,13 @@ date of note: 2024-05-11
 > $$
 
 - [[Markov Inequality]]
+
+![[Chebyshev Inequality#^1f4106]]
+
 - [[Chebyshev Inequality]]
 
+
+- [[Median-Mean Inequality]]
 
 ### Cramér–Chernoff Method
 
