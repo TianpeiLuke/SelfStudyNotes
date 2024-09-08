@@ -194,7 +194,7 @@ date of note: 2024-09-04
 >$$
 >The resulting model is an *autoencoder*, which is seen as the **nonlinear factor analysis** model. 
 
-- [[Auto-Encoder]]
+- [[Auto-Encoder and Stochastic Auto-Encoder]]
 
 ## Gaussian Mixtures
 

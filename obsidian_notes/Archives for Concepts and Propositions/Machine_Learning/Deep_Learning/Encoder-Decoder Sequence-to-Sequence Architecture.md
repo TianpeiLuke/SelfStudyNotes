@@ -29,7 +29,7 @@ date of note: 2024-08-31
 ##  Recommended Notes and References
 
 
-- [[Auto-Encoder]]
+- [[Auto-Encoder and Stochastic Auto-Encoder]]
 
 - [[Recurrent Neural Network]]
 - [[Gated Recurrent Units in Neural Network]]

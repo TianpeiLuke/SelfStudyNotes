@@ -153,7 +153,7 @@ date of note: 2024-08-24
 
 - [[Variational Auto-Encoder]]
 - [[Restricted Boltzmann Machine]]
-- [[Auto-Encoder]]
+- [[Auto-Encoder and Stochastic Auto-Encoder]]
 
 
 >[!quote]

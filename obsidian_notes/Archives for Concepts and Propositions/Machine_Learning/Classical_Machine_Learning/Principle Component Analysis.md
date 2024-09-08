@@ -36,7 +36,7 @@ date of note: 2024-05-12
 
 ^4f6696
 
-- [[Auto-Encoder]]
+- [[Auto-Encoder and Stochastic Auto-Encoder]]
 
 >[!important] Proposition
 >Let $(U,W)$ be the **optimal solution** for 
@@ -235,7 +235,7 @@ date of note: 2024-05-12
 ## Other Dimensionality Reduction Method
 
 - [[Independent Component Analysis]]
-- [[Auto-Encoder]]
+- [[Auto-Encoder and Stochastic Auto-Encoder]]
 - [[Nonnegative Matrix Factorization]]
 - [[Canonical Correlation Analysis]]
 

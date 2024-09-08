@@ -123,7 +123,7 @@ date of note: 2024-06-01
 
 - [[Gaussian Process Latent Variable Model]]
 
-- [[Auto-Encoder]]
+- [[Auto-Encoder and Stochastic Auto-Encoder]]
 
 #### Dynamic System and State Space Models
 

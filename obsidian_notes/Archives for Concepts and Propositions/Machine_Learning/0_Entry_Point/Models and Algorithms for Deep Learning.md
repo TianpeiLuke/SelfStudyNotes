@@ -86,7 +86,10 @@ date of note: 2024-06-01
 
 ### Representation Learning
 
-- [[Auto-Encoder]]
+- [[Auto-Encoder and Stochastic Auto-Encoder]]
+- [[Sparse Auto-Encoder and Regularized Auto-Encoder]]
+- [[Denoising Auto-Encoder]]
+- [[Contrastive Auto-Encoder]]
 - [[Contrastive Learning]]
 - [[Noise Contrastive Estimation]]
 
