@@ -28,7 +28,7 @@ date of note: 2024-05-12
 >
 >The **denoising autoencoder (DAE)** learns both *encoder function* $f$ and *decoder function* $g$ that minimize the *reconstruction error* between 
 >$$
->\min_{f, g}\sum_{i=1}^{n}L(X_{i} , g(h(\widetilde{X}_{i})) ) 
+>\min_{f, g}\sum_{i=1}^{n}L(X_{i} , g(f(\widetilde{X}_{i})) ) 
 >$$   
 >where $L: \mathbb{R}^{d} \times \mathbb{R}^{d} \to \mathbb{R}$ is the loss function that measures the *similarity* between the *input* and the *reconstructed input* from *corrupted copy*.
 
@@ -38,15 +38,59 @@ date of note: 2024-05-12
 - [[Markov Transition Kernel and Transition Function]]
 
 
+### Training DAE via MLE
+
+>[!important] Definition
+>The **training procedure** of **denoising autoencoder (DAE)** to learn a **reconstruction distribution** $$p_{\text{reconstruction}}(x | \tilde{x})$$ is described as below:
+>- *Require*: training data $\mathcal{D}:= \{ X_{i}, i=1\,{,}\ldots{,}\,n \}$
+>- *Require*: a *corruption process*, described by transition kernel $K(X, \widetilde{X}) = \mathcal{P}(\widetilde{X}\,|\, X)$
+>- **Sample** a training minibatch $$B^{(s)} := \left\{ X_{i}^{(s)}\,|\; i=1\,{,}\ldots{,}\,n_{s} \right\}$$ from training data $\mathcal{D}$
+>- **Sample** a *corrupted version* of minibatch $$\widetilde{X}_{i} \sim \mathcal{P}(\widetilde{X}\,|\, X_{i}), \quad i=1\,{,}\ldots{,}\,n_{s}$$
+>- **Learn** the *autoencoder reconstruction distribution* $$p_{\text{reconstruction}}(x | \tilde{x}) = p_{\text{decoder}}(x | h)$$ with the pair of minibatch $\{(X_{i}, \widetilde{X}_{i} ): i=1\,{,}\ldots{,}\,n_{s}  \}$ where
+>	-  $h$ is the output of the **encoder**$$h = f( \tilde{x})$$
+>	- and $p_{\text{decoder}}$ is defined by the **decoder** $$p_{\text{decoder}}(x | h) = g(h)$$
+
+>[!important] Definition
+>The **objective function** for training DAE is defined via the *maximum likelihood estimation* 
+>$$
+>\min_{f, p_{\text{decoder}}} \sum_{i=1}^{n} \mathbb{E}_{ \widetilde{X}_{j} \sim \mathcal{P}(\widetilde{X}\,|\, X_{i}) }\left[  -\log p_{\text{decoder}}\left(X_{i}\;|\; h = f(\widetilde{X}_{j})\right)  \right]  
+>$$
+
+- [[Maximum Likelihood Estimation]]
+
+### Score Matching
+
+>[!quote]
+>**Score matching** (Hyvärinen, 2005) is an alternative to maximum likelihood. It provides a consistent estimator of probability distributions based on encouraging the model to have the same **score** as the data distribution at every training point $x$.
+>
+>-- [[Deep Learning by Goodfellow]] pp 503
+
+- [[Exponential Family of Distributions#Score Function]]
+- [[Log-Likelihood Score Function]]
+- [[Likelihood Function]]
+- [[Information Projection and Moment Projection]]
+
+>[!important]
+>The necessary condition for MLE is that the *score estimate from sample data* should match the expectation of score with respect to *model*
+>$$
+>\mathbb{E}_{ X \sim \mathcal{P}_{n} }\left[  \nabla \log p_{\text{model}}(X)\right] = \mathbb{E}_{ X \sim p_{\text{model}} }\left[  \nabla \log p_{\text{model}}(X) \right]
+>$$
+>where $\mathcal{P}_{n}$ is the *empirical measure* (i.e. sample distribution from training data), and $p_{\text{model}}$ is the model distribution
+
+
+
+
 ## Explanation
 
 ![[denoising_autoencoder_data_manifold.png]]
 
 
-
 ## Stochastic Autoencoder
 
 - [[Auto-Encoder and Stochastic Auto-Encoder#Stochastic Auto-Encoder]]
+
+
+
 
 
 

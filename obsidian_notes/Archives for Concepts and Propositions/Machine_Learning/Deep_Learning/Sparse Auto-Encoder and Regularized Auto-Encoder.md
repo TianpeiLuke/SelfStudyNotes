@@ -26,15 +26,16 @@ date of note: 2024-05-12
 >[!important] Definition
 >The **regularized autoencoder** learns both *encoder function* $f$ and *decoder function* $g$ that minimize the *reconstruction error* with **regularization penalty**
 >$$
->\min_{f, g}\sum_{i=1}^{n}L(X_{i} , g(h(X_{i})) ) + \, \Omega\left(h\right)
+>\min_{f, g}\sum_{i=1}^{n}L(X_{i} , g(f(X_{i})) ) + \, \Omega\left(h\right)
 >$$   
->where $L: \mathbb{R}^{d} \times \mathbb{R}^{d} \to \mathbb{R}$ is the loss function that measures the *similarity* between the *input* and the *reconstructed input*.
->
+>where $L: \mathbb{R}^{d} \times \mathbb{R}^{d} \to \mathbb{R}$ is the loss function that measures the *similarity* between the *input* and the *reconstructed input*. $\Omega: \mathcal{H}\to \mathbb{R}_{+}$ is the *regularization penalty*
+>- $h$ is the encoder output $$h = f(x)$$
 >- If $$\Omega(h) = \lambda \sum_{i}|h_{i}|$$ is a *sparsity inducing regularization* term, it is called the **sparse autoencoder.**
 
 ^e81e41
 
 - [[LASSO and Sparsity-Induced Least Square]]
+- [[Tikhonov Regularization in Optimization and Learning]]
 - [[Regularized Loss Minimization]]
 - [[Laplace Distribution]]
 

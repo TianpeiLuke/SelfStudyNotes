@@ -28,11 +28,11 @@ date of note: 2024-05-12
 >  
 >The **autoencoder (AE)** learns both *encoder function* $f$ and *decoder function* $g$ that minimize the **reconstruction error** 
 >$$
->\min_{f, g}\sum_{i=1}^{n}\lVert X_{i} - g(h(X_{i}))  \rVert_{2}^{2} 
+>\min_{f, g}\sum_{i=1}^{n}\lVert X_{i} - g(f(X_{i}))  \rVert_{2}^{2} 
 >$$   
 >In general, define a loss function $L: \mathbb{R}^{d} \times \mathbb{R}^{d} \to \mathbb{R}$ that measure the *similarity* between the *input* and the *reconstructed input*.
 >$$
->\min_{f, g}\sum_{i=1}^{n}L(X_{i} , g(h(X_{i})) )
+>\min_{f, g}\sum_{i=1}^{n}L(X_{i} , g(f(X_{i})) )
 >$$   
 
 ^53810a

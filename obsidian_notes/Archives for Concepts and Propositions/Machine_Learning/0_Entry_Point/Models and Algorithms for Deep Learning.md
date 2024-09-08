@@ -86,6 +86,9 @@ date of note: 2024-06-01
 
 ### Representation Learning
 
+- [[Distributed Representation]]
+- [[Representation Learning]]
+
 - [[Auto-Encoder and Stochastic Auto-Encoder]]
 - [[Sparse Auto-Encoder and Regularized Auto-Encoder]]
 - [[Denoising Auto-Encoder]]

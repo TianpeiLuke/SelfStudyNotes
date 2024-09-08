@@ -156,6 +156,8 @@ date of note: 2024-06-01
 
 ### Learning Paradigms and Strategies
 
+- [[Supervised Learning and Unsupervised Learning]]
+- [[Representation Learning]]
 - [[Multi-Modal Learning]]
 - [[Transfer Learning]]
 - [[Meta Learning]]
