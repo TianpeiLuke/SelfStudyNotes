@@ -40,6 +40,8 @@ date of note: 2024-05-12
 
 ## Explanation
 
+![[denoising_autoencoder_data_manifold.png]]
+
 
 
 ## Stochastic Autoencoder
@@ -47,6 +49,11 @@ date of note: 2024-05-12
 - [[Auto-Encoder and Stochastic Auto-Encoder#Stochastic Auto-Encoder]]
 
 
+
+
+## Vector Field
+
+![[denoising_autoencoder_vector_field.png]]
 
 
 
@@ -68,4 +75,4 @@ date of note: 2024-05-12
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]
 - [[Deep Learning by Goodfellow]] pp 496 - 498, 501 - 505 
-- [[Deep Learning Foundations and Concepts by Bishop]] pp 563 - 567
+- [[Deep Learning Foundations and Concepts by Bishop]] pp 567 - 568
