@@ -33,10 +33,14 @@ date of note: 2024-06-01
 - [[Activation Functions for Deep Learning]]
 	- [[Rectified Linear Unit as Activation for Deep Learning]]
 	- [[Sigmoid Function as Activation for Deep Learning]]
-	- [[Rectified Linear Unit as Activation for Deep Learning]]
-	- [[Sigmoid Function as Activation for Deep Learning]]
+
+
 - [[Error Function or Loss Function for Deep Learning]]
+	- [[Maximum Likelihood Estimation]]
+	- [[Minimum Mean Square Estimation]]
 	- [[Cross-Entropy Loss Function]]
+	- [[Score Matching and Denoising Score Matching]]
+	- [[Noise Contrastive Estimation]]
 
 
 - [[Perceptron Algorithm]]
@@ -88,11 +92,12 @@ date of note: 2024-06-01
 
 - [[Distributed Representation]]
 - [[Representation Learning]]
+- [[Score Matching and Denoising Score Matching]]
 
 - [[Auto-Encoder and Stochastic Auto-Encoder]]
 - [[Sparse Auto-Encoder and Regularized Auto-Encoder]]
 - [[Denoising Auto-Encoder]]
-- [[Contrastive Auto-Encoder]]
+- [[Contractive Auto-Encoder]]
 - [[Contrastive Learning]]
 - [[Noise Contrastive Estimation]]
 

@@ -154,7 +154,7 @@ date of note: 2024-07-07
 - [[Auto-Encoder and Stochastic Auto-Encoder]]
 - [[Denoising Auto-Encoder]]
 - [[Sparse Auto-Encoder and Regularized Auto-Encoder]]
-- [[Contrastive Auto-Encoder]]
+- [[Contractive Auto-Encoder]]
 - [[Variational Auto-Encoder]]
 
 

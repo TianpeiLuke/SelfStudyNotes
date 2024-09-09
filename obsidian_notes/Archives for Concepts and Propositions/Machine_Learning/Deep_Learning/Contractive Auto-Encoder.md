@@ -7,17 +7,17 @@ tags:
 keywords:
   - autoencoder
   - representation_learning
-  - contrastive_autoencoder
+  - contractive_autoencoder
 topics:
   - representation_learning
-name: Contrastive Auto-Encoder
+name: Contractive Auto-Encoder
 date of note: 2024-05-12
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Contrastive Auto-Encoder
+>**Name**: Contractive Auto-Encoder
 
 ![[Auto-Encoder and Stochastic Auto-Encoder#^53810a]]
 
@@ -29,7 +29,7 @@ date of note: 2024-05-12
 - [[Regularized Loss Minimization]]
 
 >[!important] Definition
->The **contrastive autoencoder (CAE)** learns both *encoder function* $f$ and *decoder function* $g$ that minimize the *reconstruction error* with **regularization penalty** on the **derivative** of *hidden units*
+>The **contractive autoencoder (CAE)** learns both *encoder function* $f$ and *decoder function* $g$ that minimize the *reconstruction error* with **regularization penalty** on the **derivative** of *hidden units*
 >$$
 >\min_{f, g}\sum_{i=1}^{n}L(X_{i} , g(f(X_{i})) ) + \lambda\,\sum_{i}\lVert \nabla_{x} h_{i}\rVert^2 
 >$$   
@@ -40,7 +40,7 @@ date of note: 2024-05-12
 >	- $\lVert \cdot \rVert_{F}$ is the **Frobenius norm** $$\lVert A \rVert_{F} := \sqrt{\sum_{i}\sum_{j} A_{i,j}^2}.$$
 
 - Wikipedia [Jacobian_matrix_and_determinant](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant)
-
+- [[Contraction Function]]
 
 ## Explanation
 
@@ -82,8 +82,7 @@ date of note: 2024-05-12
 
 
 - [[Latent Variable Models]]
-- [[Contrastive Learning]]
-
+- [[Auto-Encoder and Stochastic Auto-Encoder]]
 - [[Artificial Neural Network and Deep Learning]]
 
 

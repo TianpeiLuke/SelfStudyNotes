@@ -60,6 +60,13 @@ date of note: 2024-05-12
 ![[stochastic_autoencoder.png]]
 
 
+### Score Matching
+
+![[Score Matching and Denoising Score Matching#^6a12a8]]
+
+- [[Score Matching and Denoising Score Matching]]
+
+
 ## Explanation
 
 >[!quote]

@@ -58,27 +58,11 @@ date of note: 2024-05-12
 
 - [[Maximum Likelihood Estimation]]
 
-### Score Matching
+### Denoising Score Matching
 
->[!quote]
->**Score matching** (Hyvärinen, 2005) is an alternative to maximum likelihood. It provides a consistent estimator of probability distributions based on encouraging the model to have the same **score** as the data distribution at every training point $x$.
->
->-- [[Deep Learning by Goodfellow]] pp 503
+![[Score Matching and Denoising Score Matching#^bbecdb]]
 
-- [[Exponential Family of Distributions#Score Function]]
-- [[Log-Likelihood Score Function]]
-- [[Likelihood Function]]
-- [[Information Projection and Moment Projection]]
-
->[!important]
->The necessary condition for MLE is that the *score estimate from sample data* should match the expectation of score with respect to *model*
->$$
->\mathbb{E}_{ X \sim \mathcal{P}_{n} }\left[  \nabla \log p_{\text{model}}(X)\right] = \mathbb{E}_{ X \sim p_{\text{model}} }\left[  \nabla \log p_{\text{model}}(X) \right]
->$$
->where $\mathcal{P}_{n}$ is the *empirical measure* (i.e. sample distribution from training data), and $p_{\text{model}}$ is the model distribution
-
-
-
+- [[Score Matching and Denoising Score Matching]]
 
 ## Explanation
 
