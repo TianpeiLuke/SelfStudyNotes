@@ -63,12 +63,13 @@ date of note: 2024-08-16
 >- Set $P(Y=0) = P(Y=1) = 1 / 2$, so that $\log \nu = 0.$ So that 
 >$$
 >\begin{align*}
-> p_{\text{joint, model}}(Y=1 \,|\,x) &= \frac{1}{1 +  \frac{p_{\text{noise}}(x)}{p_{\text{model}}(x)}  } \\[5pt]
+>h(X_{i}; \theta) &:=  p_{\text{joint, model}}(Y=1 \,|\,x) \\[5pt]
+>&= \frac{1}{1 +  \frac{p_{\text{noise}}(x)}{p_{\text{model}}(x)}  } \\[5pt]
 > &= \sigma \left(\log p_{\text{model}}(x) - \log p_{\text{noise}}(x) \right)
 >\end{align*}
 >$$
 >- The **final layer** is to **contrast two log-densities**
->- The loss function is $$\begin{align*}L(\theta) &= \sum_{i=1}^{n} \left\{Y_{i} \log p_{\text{joint}, \theta}(Y_{i} = 1 \,|\,X_{i}) + (1 - Y_{i})\,\log \left( 1 - p_{\text{joint}, \theta}(Y_{i} = 1\,|\,X_{i}) \right) \right\} \\[5pt] &= \sum_{i=1}^{n} \left\{Y_{i} \log h(X_{i}; \theta) + (1 - Y_{i})\,\log \left( 1 - h(X_{i}; \theta)\right) \right\}  \end{align*}$$
+
 
 - [[Logistic Regression]]
 
@@ -80,6 +81,17 @@ date of note: 2024-08-16
 > p_{\text{joint, model}}(Y=0 \,|\,x) &= p_{\text{joint, data}}(Y=0 \,|\,x) \\[5pt]
 > \iff \frac{p_{\text{noise}}(x)}{ p_{\text{noise}}(x) + \nu\,p_{\text{model}}(x)} &= \frac{p_{\text{noise}}(x)}{ p_{\text{noise}}(x) + \nu\,p_{\text{data}}(x)} \\[5pt]
 > \iff p_{\text{model}}(x) &= p_{\text{data}}(x)
+>\end{align*}
+>$$
+
+>[!important] Definition
+>We can formulate the **noise contrastive estimation (NCE) loss** as
+>$$
+>\begin{align*}
+> L(\theta) &= \mathbb{E}_{p_{\text{joint, data}}(X, Y) }\left[ -\log p_{\text{joint}, \theta}(Y \,|\,X) \right] \\[8pt]
+> &= \sum_{i: Y_{i} = 1}\left[-\log \frac{p(X_{i}; \theta)}{p(X_{i}; \theta)+ p_{n}(X_{i})} \right] +  \sum_{i: Y_{i} = 0}\left[-\log \frac{p_{n}(X_{i})}{p(X_{i}; \theta)+ p_{n}(X_{i})} \right] \\[8pt]
+> &= \sum_{i: Y_{i} = 1}\left[ -\log \sigma \left(\log p(X_{i}; \theta) - \log p_{n}(X_{i}) \right) \right] \\[5pt]
+> &\;\; +  \sum_{i: Y_{i} = 0}\left[ -\log \left\{1 - \sigma \left(\log p(X_{i}; \theta) - \log p_{n}(X_{i}) \right)  \right\}\right]
 >\end{align*}
 >$$
 
