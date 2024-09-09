@@ -142,7 +142,10 @@ date of note: 2024-08-16
 
 - [[Generative Adversarial Network]]
 
+## Contrastive Learning
 
+- [[Information Noise Contrastive Estimation as Contrastive Learning]]
+- [[Contrastive Learning]]
 
 
 

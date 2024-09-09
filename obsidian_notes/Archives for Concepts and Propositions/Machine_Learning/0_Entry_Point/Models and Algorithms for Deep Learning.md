@@ -120,15 +120,21 @@ date of note: 2024-06-01
 - [[Distributed Representation]]
 - [[Representation Learning]]
 
+#### Autoencoder
+
 - [[Auto-Encoder and Stochastic Auto-Encoder]]
 - [[Sparse Auto-Encoder and Regularized Auto-Encoder]]
 - [[Denoising Auto-Encoder]]
 - [[Contractive Auto-Encoder]]
 
+#### Contrastive Learning
+
 - [[Contrastive Learning]]
 - [[Noise Contrastive Estimation]]
 - [[Information Noise Contrastive Estimation as Contrastive Learning]]
 - [[Contrastive Predictive Coding as Sequence Representation]]
+- [[Siamese Network for Contrastive Learning]]
+- [[Triplet Loss Minimization for Contrastive Learning]]
 
 
 ### Recurrent Network
