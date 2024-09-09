@@ -140,6 +140,11 @@ date of note: 2024-09-08
 >[!quote]
 >The **major drawback** of adding noise to data arises when $p_{D}(x)$ is already a well-behaved distribution that *satisfies the regularity conditions* required by score matching. In this case, $$\mathbb{D}_{F}\left( q(\tilde{x}) \left\|\right. p_{\theta}(\tilde{x}) \right) \neq \mathbb{D}_{F}\left( p_{D}(x) \left\|\right. p_{\theta}(x) \right),$$ and DSM is **not a consistent objective** because the optimal EBM matches the noisy distribution $q(\tilde{x})$, not $p_{D}(x)$. This inconsistency becomes non-negligible when $q(\tilde{x})$ *significantly differs* from $p_D(x)$.
 
+## Contrastive Divergence
+
+- [[Contrastive Divergence]]
+
+
 
 
 -----------

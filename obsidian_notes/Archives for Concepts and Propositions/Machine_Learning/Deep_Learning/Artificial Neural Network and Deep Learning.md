@@ -75,11 +75,19 @@ date of note: 2024-05-12
 ## Activation Functions in Deep Learning
 
 - [[Activation Functions for Deep Learning]]
-
+	- [[Sigmoid Function as Activation for Deep Learning]]
+	- [[Rectified Linear Unit as Activation for Deep Learning]]
 
 ## Loss Function for Deep Learning
 
 - [[Error Function or Loss Function for Deep Learning]]
+	- [[Maximum Likelihood Estimation]]
+	- [[Minimum Mean Square Estimation]]
+	- [[Cross-Entropy Loss Function]]
+	- [[Score Matching and Denoising Score Matching]]
+	- [[Noise Contrastive Estimation]]
+
+
 
 ## Basic Building Blocks
 
@@ -87,7 +95,6 @@ date of note: 2024-05-12
 
 - [[Multi-Layer Perceptron and Feed-Forward Network]]
 - [[Activation Functions for Deep Learning]]
-- [[Loss Function in Deep Learning]]
 
 ### Normalization Layer
 

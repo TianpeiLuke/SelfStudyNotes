@@ -114,7 +114,7 @@ date of note: 2024-07-07
 
 
 
-## Similarity of Representation
+## Similarity of Representation and Contrastive Learning
 
 - [[Contrastive Learning]]
 - [[Canonical Correlation Analysis]]
@@ -122,6 +122,7 @@ date of note: 2024-07-07
 ## Transfer Learning
 
 - [[Transfer Learning]]
+
 
 
 ## Examples

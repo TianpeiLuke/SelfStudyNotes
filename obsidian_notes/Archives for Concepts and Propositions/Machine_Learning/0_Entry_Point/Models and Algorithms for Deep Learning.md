@@ -91,14 +91,27 @@ date of note: 2024-06-01
 ### Energy-based Model
 
 - [[Gibbs Measure and Energy-based Model]]
-- [[Markov Chain Monte Carlo Methods]]
+- [[Gibbs Distribution]]
 - [[Log-Partition Function and Score Function of Graphical Models]]
+
+#### Stochastic Maximum Likelihood Training
+
+- [[Markov Chain Monte Carlo Methods]]
 - [[Maximum Likelihood Estimation]]
+- [[Gibbs Sampling]]
 - [[Langevin Dynamics and Langevin Sampling]]
+- [[Contrastive Divergence]]
+
+#### Score Matching
+
 - [[Score Matching and Denoising Score Matching]]
+
+#### Noise Contrastive Estimation
 
 - [[Noise Contrastive Estimation]]
 - [[Contrastive Learning]]
+
+
 
 ### Representation Learning
 
