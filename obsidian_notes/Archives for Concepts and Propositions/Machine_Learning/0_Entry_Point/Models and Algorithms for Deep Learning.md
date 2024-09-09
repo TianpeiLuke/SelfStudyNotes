@@ -41,6 +41,7 @@ date of note: 2024-06-01
 	- [[Cross-Entropy Loss Function]]
 	- [[Score Matching and Denoising Score Matching]]
 	- [[Noise Contrastive Estimation]]
+	- [[Information Noise Contrastive Estimation as Contrastive Learning]]
 
 
 - [[Perceptron Algorithm]]
@@ -110,7 +111,8 @@ date of note: 2024-06-01
 
 - [[Noise Contrastive Estimation]]
 - [[Contrastive Learning]]
-
+- [[Information Noise Contrastive Estimation as Contrastive Learning]]
+- [[Contrastive Predictive Coding as Sequence Representation]]
 
 
 ### Representation Learning
@@ -125,6 +127,9 @@ date of note: 2024-06-01
 
 - [[Contrastive Learning]]
 - [[Noise Contrastive Estimation]]
+- [[Information Noise Contrastive Estimation as Contrastive Learning]]
+- [[Contrastive Predictive Coding as Sequence Representation]]
+
 
 ### Recurrent Network
 

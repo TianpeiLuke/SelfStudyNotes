@@ -60,9 +60,15 @@ date of note: 2024-08-16
 > &= \sigma \left(\log p_{\text{model}}(x) - \log p_{\text{noise}}(x) + \log \nu\right)
 >\end{align*}
 >$$
->- Set $P(Y=0) = P(Y=1) = 1 / 2$, so that $\log \nu = 0.$
+>- Set $P(Y=0) = P(Y=1) = 1 / 2$, so that $\log \nu = 0.$ So that 
+>$$
+>\begin{align*}
+> p_{\text{joint, model}}(Y=1 \,|\,x) &= \frac{1}{1 +  \frac{p_{\text{noise}}(x)}{p_{\text{model}}(x)}  } \\[5pt]
+> &= \sigma \left(\log p_{\text{model}}(x) - \log p_{\text{noise}}(x) \right)
+>\end{align*}
+>$$
 >- The **final layer** is to **contrast two log-densities**
->- $$\begin{align*}L(\theta) &= \sum_{i=1}^{n} \left\{Y_{i} \log p_{\text{joint, model}}(Y_{i} = 1 \,|\,X_{i}) + (1 - Y_{i})\,\log p_{\text{joint, model}}(Y_{i} = 0\,|\,X_{i}) \right\} \end{align*}$$
+>- The loss function is $$\begin{align*}L(\theta) &= \sum_{i=1}^{n} \left\{Y_{i} \log p_{\text{joint}, \theta}(Y_{i} = 1 \,|\,X_{i}) + (1 - Y_{i})\,\log \left( 1 - p_{\text{joint}, \theta}(Y_{i} = 1\,|\,X_{i}) \right) \right\} \\[5pt] &= \sum_{i=1}^{n} \left\{Y_{i} \log h(X_{i}; \theta) + (1 - Y_{i})\,\log \left( 1 - h(X_{i}; \theta)\right) \right\}  \end{align*}$$
 
 - [[Logistic Regression]]
 
@@ -144,7 +150,7 @@ date of note: 2024-08-16
 ##  Recommended Notes and References
 
 
-
+- [[Information Noise Contrastive Estimation as Contrastive Learning]]
 - [[Contrastive Learning]]
 - [[Denoising Auto-Encoder]]
 - [[Artificial Neural Network and Deep Learning]]
@@ -153,3 +159,4 @@ date of note: 2024-08-16
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 850 - 852
 - [[Deep Learning by Goodfellow]] pp 612 - 614
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 191
+- Gutmann, M., & Hyvärinen, A. (2010, March). Noise-contrastive estimation: A new estimation principle for unnormalized statistical models. In _Proceedings of the thirteenth international conference on artificial intelligence and statistics_ (pp. 297-304). JMLR Workshop and Conference Proceedings.
