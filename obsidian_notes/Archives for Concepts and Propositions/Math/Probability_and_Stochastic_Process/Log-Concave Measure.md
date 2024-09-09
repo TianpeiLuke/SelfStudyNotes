@@ -49,7 +49,7 @@ date of note: 2024-06-07
 >$$
 
 - [[Maximum Entropy Learning]]
-- [[Gibbs measure]]
+- [[Gibbs Measure and Energy-based Model]]
 
 ## Examples
 

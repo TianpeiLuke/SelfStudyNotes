@@ -103,7 +103,7 @@ dP^{*} = \frac{1}{Z}\exp\left(f\right)\;dQ
 >$$
 >Then optimal measure $P^{*}$ as above is called a **Gibbs measure.** 
 
-- [[Gibbs measure]]
+- [[Gibbs Measure and Energy-based Model]]
 - [[Maximum Entropy Learning]]
 - Wikipedia [Gibbs measure](https://en.wikipedia.org/wiki/Gibbs_measure)
 

@@ -26,7 +26,7 @@ date of note: 2024-09-08
 ![[Log-Partition Function and Score Function of Graphical Models#^830c6c]]
 
 >[!important] Definition
->The **score function** or **Stein score** is defined as the *gradient of the log-likelihood* with respect to the *data vector* $x$ and is given by $$s(x) = \nabla_{x} \log p(x).$$
+>The **score function** or **Stein score** is defined as the *gradient of the log-likelihood* with respect to the *data vector* $x$ and is given by $$s(x) := \nabla_{x} \log p(x).$$
 
 - [[Exponential Family of Distributions#Score Function]]
 - [[Log-Partition Function and Score Function of Graphical Models]]
@@ -40,9 +40,9 @@ date of note: 2024-09-08
 >$$
 >\min_{\theta} \mathbb{E}_{ X \sim p_{\text{data}} }\left[ \frac{1}{2}  \lVert \nabla_{x} \log p_{\text{data}}(X) - \nabla_{x} \log p_{\text{model}}(X; \theta)  \rVert_{2}^2 \right] 
 >$$ 
->The goal of training is to **match** the *model score* to the *data score*.
+>The loss above is called the **Fisher divergence**. The goal of training is to **match** the *model score* to the *data score*.
 >
->The loss function is equivalent to 
+>Under certain **regularity conditions** on data $p_{\text{data}}$, (e.g. *continuously differentiable*, *finite everywhere*),  the loss function can be reformulated as
 >$$
 >\begin{align*}
 >L(\theta)&:= \mathbb{E}_{ X \sim p_{\text{data}} }\left[ \sum_{j=1}^{d}\left\{\frac{ \partial^2 }{ \partial x_{j}^2 } \log p_{\text{model}}(X; \theta) + \frac{1}{2} \left(\frac{ \partial  }{ \partial x_{j} } \log p_{\text{model}}(X; \theta)\right)^2  \right\} \right] \\[5pt]
@@ -111,7 +111,7 @@ date of note: 2024-09-08
 >
 >The **smoothed data density** is defined as  
 >$$
->p_{\text{smooth}}(x ; y, \sigma) = \int_{\mathcal{Y}}\; K_{\sigma}(y, x) p_{\text{data}}(y) dy
+>p_{\text{smooth}}(x ; \sigma) = \int_{\mathcal{Y}}\; K_{\sigma}(y, x) p_{\text{data}}(y) dy
 >$$ 
 >where $p_{\text{data}}(y)$ is the empirical measure
 >$$
@@ -122,7 +122,7 @@ date of note: 2024-09-08
 >$$
 >\begin{align*}
 >L(\theta) &:=  \frac{1}{2} \mathbb{E}_{ X \sim p_{\text{smooth}} }\left[ \lVert \nabla_{x} \log p_{\text{smooth}}(X) - \nabla_{x} \log_{x} p_{\text{model}}(X; \theta)  \rVert_{2}^2 \right] \\[5pt]
->& := \frac{1}{2} \int \lVert \nabla_{x} \log p_{\text{model}}(x; \theta) - \nabla_{x} \log p_{\text{smooth}}(x ; y, \sigma)  \rVert_{2}^2\; p_{\text{smooth}}(x ; y, \sigma)\; dx \\[5pt]
+>& := \frac{1}{2} \int \lVert \nabla_{x} \log p_{\text{model}}(x; \theta) - \nabla_{x} \log p_{\text{smooth}}(x ; \sigma)  \rVert_{2}^2\; p_{\text{smooth}}(x ;  \sigma)\; dx \\[5pt]
 >& = \frac{1}{2n} \sum_{i=1}^{n} \int \lVert \nabla_{x} \log p_{\text{model}}(x; \theta) - \nabla_{x} \log K_{\sigma}(X_{i}, x)  \rVert_{2}^2\; K_{\sigma}(X_{i}, x)\; dx + \text{ const.}\\[5pt]
 >\end{align*}
 >$$ 
@@ -132,6 +132,13 @@ date of note: 2024-09-08
 - [[Markov Transition Kernel and Transition Function]]
 - [[Empirical Process and Empirical Measure]]
 
+>[!info]
+>To compute the expectation, we can *sample* from the data distribution, and then *sample* the *noise term*.
+
+- [[Denoising Auto-Encoder]]
+
+>[!quote]
+>The **major drawback** of adding noise to data arises when $p_{D}(x)$ is already a well-behaved distribution that *satisfies the regularity conditions* required by score matching. In this case, $$\mathbb{D}_{F}\left( q(\tilde{x}) \left\|\right. p_{\theta}(\tilde{x}) \right) \neq \mathbb{D}_{F}\left( p_{D}(x) \left\|\right. p_{\theta}(x) \right),$$ and DSM is **not a consistent objective** because the optimal EBM matches the noisy distribution $q(\tilde{x})$, not $p_{D}(x)$. This inconsistency becomes non-negligible when $q(\tilde{x})$ *significantly differs* from $p_D(x)$.
 
 
 

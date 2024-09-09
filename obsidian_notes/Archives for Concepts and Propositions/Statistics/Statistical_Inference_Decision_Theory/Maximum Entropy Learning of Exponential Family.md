@@ -43,7 +43,7 @@ date of note: 2024-06-24
 - [[Kullback-Leibler Divergence]]
 - [[Maximum Entropy Learning]]
 - [[Exponential Family of Distributions]]
-- [[Gibbs measure]]
+- [[Gibbs Measure and Energy-based Model]]
 - [[Elements of Information Theory by Cover]]
 - [[Information Projection and Moment Projection]]
 

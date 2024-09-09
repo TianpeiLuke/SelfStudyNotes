@@ -37,7 +37,7 @@ date of note: 2024-07-25
 ##  Recommended Notes and References
 
 
-- [[Gibbs measure]]
+- [[Gibbs Measure and Energy-based Model]]
 - [[Probability Distribution of Random Variable]]
 - [[Probability Space]]
 

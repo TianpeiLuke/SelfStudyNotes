@@ -51,7 +51,7 @@ date of note: 2024-05-14
 - [[Probability Space]]
 
 
-- [[Gibbs measure]]
+- [[Gibbs Measure and Energy-based Model]]
 - [[Probabilistic Graphical Models by Koller]] pp 108
 
 - Wikipedia [Gibbs measure](https://en.wikipedia.org/wiki/Gibbs_measure)

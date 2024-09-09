@@ -88,16 +88,28 @@ date of note: 2024-06-01
 - [[Pooling for Deep Learning]]
 - [[Convolutional Neural Network]]
 
+### Energy-based Model
+
+- [[Gibbs Measure and Energy-based Model]]
+- [[Markov Chain Monte Carlo Methods]]
+- [[Log-Partition Function and Score Function of Graphical Models]]
+- [[Maximum Likelihood Estimation]]
+- [[Langevin Dynamics and Langevin Sampling]]
+- [[Score Matching and Denoising Score Matching]]
+
+- [[Noise Contrastive Estimation]]
+- [[Contrastive Learning]]
+
 ### Representation Learning
 
 - [[Distributed Representation]]
 - [[Representation Learning]]
-- [[Score Matching and Denoising Score Matching]]
 
 - [[Auto-Encoder and Stochastic Auto-Encoder]]
 - [[Sparse Auto-Encoder and Regularized Auto-Encoder]]
 - [[Denoising Auto-Encoder]]
 - [[Contractive Auto-Encoder]]
+
 - [[Contrastive Learning]]
 - [[Noise Contrastive Estimation]]
 

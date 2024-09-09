@@ -17,9 +17,9 @@ date of note: 2024-07-04
 >[!important]
 >**Name**: Simulated Annealing
 
-![[Gibbs measure#^bfb840]]
+![[Gibbs Measure and Energy-based Model#^bfb840]]
 
-- [[Gibbs measure]]
+- [[Gibbs Measure and Energy-based Model]]
 
 >[!important] Definition
 >Consider the **energy maximization problem** $$x^{*} = \arg\max_{x\in \mathcal{X}}\,E(x)$$ where  $E(x)$ is called the **energy** of the system.
@@ -117,7 +117,7 @@ date of note: 2024-07-04
 ##  Recommended Notes and References
 
 
-- [[Gibbs measure]]
+- [[Gibbs Measure and Energy-based Model]]
 - [[Stochastic Hill Climbing]]
 - [[Derivative-Free Optimization]]
 

@@ -27,5 +27,7 @@ date of note: 2024-09-08
 
 - [[Score Matching and Denoising Score Matching]]
 - [[Kullback-Leibler Divergence]]
+- [[Divergence Function on Manifold]]
+
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 846

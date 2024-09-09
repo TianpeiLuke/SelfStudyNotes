@@ -50,7 +50,7 @@ date of note: 2024-07-04
 >- The *solution* of Hamiltonian system of differential equations forms a **Hamiltonian flow**  $$\theta_{t}: (x, p) \mapsto (x_{t}(x,p), p_{t}(x, p))$$ as the position and momentum of the particle after time $t$ staring from $(x,p).$
 
 - [[Radon-Nikodym Derivative]]
-- [[Gibbs measure]]
+- [[Gibbs Measure and Energy-based Model]]
 - [[Parametric Models]]
 - [[Hamiltonian Systems of Differential Equations]]
 

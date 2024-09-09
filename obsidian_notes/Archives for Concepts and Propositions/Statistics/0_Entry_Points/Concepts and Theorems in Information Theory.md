@@ -74,6 +74,7 @@ date of note: 2024-06-01
 - [[Maximum Likelihood Estimation via KL Divergence]]
 - [[Maximum Entropy Learning]]
 - [[Divergence Function on Manifold]]
+- [[Fisher Divergence]]
 
 
 ## Explanation

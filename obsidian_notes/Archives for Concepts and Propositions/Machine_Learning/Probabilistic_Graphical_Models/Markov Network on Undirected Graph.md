@@ -77,7 +77,7 @@ date of note: 2024-05-12
 >
 
 - [[Complete Graph Clique and Triangle]]
-- [[Gibbs measure]]
+- [[Gibbs Measure and Energy-based Model]]
 - [[Exponential Family of Distributions]]
 - [[Log-Partition Function and Score Function of Graphical Models]]
 

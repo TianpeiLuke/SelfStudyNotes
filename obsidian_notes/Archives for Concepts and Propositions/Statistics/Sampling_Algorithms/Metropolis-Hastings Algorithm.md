@@ -16,7 +16,7 @@ date of note: 2024-07-04
 >[!important]
 >**Name**: Metropolis-Hastings Algorithm
 
-![[Gibbs measure#^bfb840]]
+![[Gibbs Measure and Energy-based Model#^bfb840]]
 
 ### Metropolis Algorithm
 

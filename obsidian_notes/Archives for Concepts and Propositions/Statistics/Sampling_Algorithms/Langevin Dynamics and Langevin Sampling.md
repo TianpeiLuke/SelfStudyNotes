@@ -58,11 +58,12 @@ date of note: 2024-07-08
 - [[Hamiltonian Monte Carlo]]
 
 
-
-
 - [[Linear Stochastic Differential Equation Explicit Solution]]
 - [[Homogeneous Linear Stochastic Differential Equation]]
 - [[Stochastic Differential Equations]]
+
+- [[Gibbs Measure and Energy-based Model]]
+- [[Score Matching and Denoising Score Matching]]
 
 
 

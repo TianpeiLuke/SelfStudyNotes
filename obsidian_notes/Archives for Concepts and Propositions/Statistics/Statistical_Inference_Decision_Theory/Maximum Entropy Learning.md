@@ -51,7 +51,7 @@ date of note: 2024-05-14
 - [[Information Projection and Moment Projection]]
 - [[Polyhedron and Polytope]]
 
-- [[Gibbs measure]]
+- [[Gibbs Measure and Energy-based Model]]
 
 
 - [[Variational Formula for Kullback-Leibler Divergence]]
