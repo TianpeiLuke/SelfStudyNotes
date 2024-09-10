@@ -158,10 +158,14 @@ date of note: 2024-06-01
 
 - [[Supervised Learning and Unsupervised Learning]]
 - [[Representation Learning]]
+	- [[Contrastive Learning]]
+	- [[Metric Learning]]
+	- [[Multi-view Learning]]
 - [[Multi-Modal Learning]]
 - [[Transfer Learning]]
 - [[Meta Learning]]
 - [[Self-Supervised Learning]]
+
 
 ### Statistical Learning Theory
 

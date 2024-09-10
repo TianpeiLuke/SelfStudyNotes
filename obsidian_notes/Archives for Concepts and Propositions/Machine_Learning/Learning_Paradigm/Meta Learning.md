@@ -25,6 +25,8 @@ date of note: 2024-07-07
 -----------
 ##  Recommended Notes and References
 
+- [[Contrastive Learning]]
+
 
 - [[Deep Learning Foundations and Concepts by Bishop]]
 - [[Probabilistic Graphical Models by Koller]]

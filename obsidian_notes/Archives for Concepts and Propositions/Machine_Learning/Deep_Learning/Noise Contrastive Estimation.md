@@ -40,6 +40,9 @@ date of note: 2024-08-16
 > &= \arg\max_{\theta}\;\mathbb{E}_{p_{\text{joint, data}}(X, Y) }\left[ \log p_{\text{joint}, \theta}(Y \,|\,X) \right] 
 >\end{align*}
 >$$
+
+^f34cb8
+
   
 
 - [[Gibbs Measure and Energy-based Model]]
@@ -94,6 +97,17 @@ date of note: 2024-08-16
 > &\;\; +  \sum_{i: Y_{i} = 0}\left[ -\log \left\{1 - \sigma \left(\log p(X_{i}; \theta) - \log p_{n}(X_{i}) \right)  \right\}\right]
 >\end{align*}
 >$$
+>
+>In order to handle **intractable log-partition function**, we can reparameterize the model as $$\log p(x; \theta) := \log \tilde{p}(x; \alpha) + c$$ with augmented parameters $\theta := (\alpha, c)$, where
+>- The function $\tilde{p}(x; \alpha)$ is *unnormalized*.
+>- The parameter $c$  *approximates* the log-partition function $$c \approx - \log Z(\alpha) = - \log \int_{x} p(x; \alpha) dx.$$
+
+>[!info]
+>Note that the **NCE loss** does not need the **normalization factor** $\int \exp(f) = 1$ . 
+>$$
+>\sum_{i: Y_{i} = 1}\left[ -\log \sigma \left(f(x) - \log p_{n}(X_{i}) \right) \right] +  \sum_{i: Y_{i} = 0}\left[ -\log \left\{1 - \sigma \left(f(x) - \log p_{n}(X_{i}) \right)  \right\}\right]
+>$$
+
 
 
 
@@ -140,6 +154,10 @@ date of note: 2024-08-16
 >
 >-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 851
 
+## Optimality and Consistency 
+
+
+- Gutmann, M., & Hyvärinen, A. (2010, March). Noise-contrastive estimation: A new estimation principle for unnormalized statistical models. In _Proceedings of the thirteenth international conference on artificial intelligence and statistics_ (pp. 297-304). JMLR Workshop and Conference Proceedings.
 
 ## Score Matching
 
