@@ -61,7 +61,7 @@ date of note: 2024-09-08
 ### Normalized-Temperature Cross-Entropy
 
 >[!important] Definition
->The **normalized-temperature cross-entropy (NT-Xent) loss** with a temperature parameter $T$ is defined as
+>The **normalized-temperature cross-entropy (NT-Xent) loss** with a temperature parameter $\tau$ is defined as
 >$$
 >\begin{align*}
 > &L_{\text{NT-Xent}}(\theta)  \\[5pt]
@@ -192,7 +192,10 @@ date of note: 2024-09-08
 >\end{align*}
 >$$
 >And the optimal similarity measure is given by $$f(x, z) = \frac{p(z|x)}{p(z)}$$
+>
+>In other word, the **InfoNCE loss** minimization is equivalent to the *maximization* of **mutual information* between *data* and *representation*.
 
+- [[Mutual Information]]
 
 
 
