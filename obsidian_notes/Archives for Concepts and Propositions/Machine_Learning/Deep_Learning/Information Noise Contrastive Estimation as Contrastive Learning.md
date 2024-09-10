@@ -58,6 +58,18 @@ date of note: 2024-09-08
 >$$
 >is equal to $$d(X, X^{+}) = \log p(X^{+}|X) + c(X^{+})$$
 
+### Normalized-Temperature Cross-Entropy
+
+>[!important] Definition
+>The **normalized-temperature cross-entropy (NT-Xent) loss** with a temperature parameter $T$ is defined as
+>$$
+>\begin{align*}
+> &L_{\text{NT-Xent}}(\theta)  \\[5pt]
+> &= \mathbb{E}_{X, \mathcal{K}  }\left[ - \log \left\{ \frac{\exp \left( \dfrac{\left\langle f_{\theta}(X) , f_{\theta}(X^{+}) \right\rangle}{\tau\, \lVert  f_{\theta}(X) \rVert \, \lVert f_{\theta}(X^{+}) \rVert  } \right)}{\exp \left( \dfrac{\left\langle f_{\theta}(X) , f_{\theta}(X^{+}) \right\rangle}{\tau\, \lVert  f_{\theta}(X) \rVert \, \lVert f_{\theta}(X^{+}) \rVert  } \right) + \sum_{j=1}^{n-1}\exp \left( \dfrac{\left\langle f_{\theta}(X) , f_{\theta}(X_{j}^{-}) \right\rangle}{\tau\, \lVert  f_{\theta}(X) \rVert \, \lVert f_{\theta}(X_{j}^{-}) \rVert  } \right)} \right\}   \right]
+>\end{align*}
+>$$   
+
+- [[Cross-Entropy Loss Function]]
 
 ## Explanation
 
