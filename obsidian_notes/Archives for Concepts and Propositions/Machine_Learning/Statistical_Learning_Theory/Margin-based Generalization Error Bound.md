@@ -26,6 +26,7 @@ date of note: 2024-08-01
 ##  Recommended Notes and References
 
 
+- [[Margin-based Loss Function]]
 - [[Empirical Risk Minimization]]
 - [[PAC Learnable and Agnostic PAC Learnable]]
 

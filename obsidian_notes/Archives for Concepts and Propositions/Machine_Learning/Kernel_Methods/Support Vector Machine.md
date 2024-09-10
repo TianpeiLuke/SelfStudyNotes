@@ -28,6 +28,7 @@ date of note: 2024-05-12
 
 - [[Reproducing Kernel Hilbert Space]]
 - [[Reproducing Kernel of RKHS]]
+- [[Margin-based Loss Function]]
 
 
 - [[Kernel Methods in Machine Learning by Hofmann]]

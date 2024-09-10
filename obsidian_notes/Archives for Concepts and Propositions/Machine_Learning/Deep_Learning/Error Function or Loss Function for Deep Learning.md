@@ -3,41 +3,94 @@ tags:
   - concept
   - deep_learning/algorithms
   - deep_learning/models
-keywords: 
-topics: 
-name: 
+  - deep_learning/architecture
+keywords:
+  - error_function
+  - loss_function
+  - deep_learning
+topics:
+  - deep_learning/network_block
+name: Error Function or Loss Function for Deep Learning
 date of note: 2024-08-16
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Error Function or Loss Function for Deep Learning
 
 
-### Mean Square Error
-
-
-- [[Minimum Mean Square Estimation]]
-
-
-### Cross Entropy Error
-
-
-- [[Cross-Entropy Loss Function]]
-
-
-### Kullback-Leibler Divergence 
-
-- [[Kullback-Leibler Divergence]]
-
-
-### Log-Likihood Function
+### Negative Log-Likelihood Function
 
 - [[Likelihood Function]]
 - [[Maximum Likelihood Estimation]]
 
 
+### Mean Squared Error and Regularization
+
+- [[Minimum Mean Square Estimation]]
+- [[Auto-Encoder and Stochastic Auto-Encoder]]
+- [[Ridge Regression and L2 Regularization]]
+- [[LASSO and Sparsity-Induced Least Square]]
+- [[Contractive Auto-Encoder]]
+
+
+### Cross Entropy Loss
+
+- [[Cross-Entropy Loss Function]]
+- [[Kullback-Leibler Divergence]]
+
+
+### Convex Surrogate Loss
+
+- [[Generalized Linear Models]]
+- [[Logistic Regression]]
+- [[Softmax Function and Log-Sum-Exp Function]]
+- [[Exponential Loss Minimization for AdaBoost]]
+- [[Convex Conjugate of Log-Partition Function of Exponential Family]]
+
+
+### Margin-based Loss
+
+- [[Margin-based Loss Function]]
+
+
+### Maximum Entropy Learning
+
+- [[Maximum Entropy Learning]]
+- [[Log-Partition Function of Exponential Family]]
+- [[Exponential Family and Convex Duality]]
+
+
+### Evidence Lower Bound and Variational Free Energy
+
+- [[Evidence Lower Bound]]
+- [[Evidence Lower Bound for Exponential Family]]
+
+
+### Score Matching and Sampling-based Loss
+
+- [[Score Matching and Denoising Score Matching]]
+- [[Gibbs Sampling]]
+- [[Contrastive Divergence]]
+- [[Langevin Dynamics and Langevin Sampling]]
+- [[Hamiltonian Monte Carlo]]
+
+
+### Similarity-based Loss
+
+- [[Cosine Similarity and Similarity-based Loss]]
+
+
+### Contrastive Loss
+
+- [[Gibbs Measure and Energy-based Model]]
+- [[Triplet Loss Minimization for Contrastive Learning]]
+- [[Noise Contrastive Estimation]]
+- [[Information Noise Contrastive Estimation as Contrastive Learning]]
+
+
+### Ranking Loss
 
 
 

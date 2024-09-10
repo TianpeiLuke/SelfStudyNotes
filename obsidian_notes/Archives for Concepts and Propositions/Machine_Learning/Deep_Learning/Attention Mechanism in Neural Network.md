@@ -29,5 +29,5 @@ date of note: 2024-05-12
 - [[Artificial Neural Network and Deep Learning]]
 
 
-- [[Deep Learning Foundations and Concepts by Bishop]] pp 358
+- [[Deep Learning Foundations and Concepts by Bishop]] pp 358 - 363
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 629

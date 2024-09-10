@@ -53,7 +53,7 @@ date of note: 2024-06-01
 - [[Reproducing Kernel Hilbert Space]]
 - [[Representation of Evaluational Functional in RKHS]]
 - [[Reproducing Kernel of RKHS]]
-- [[Margin as a Measure of Classification Confidence]]
+- [[Margin-based Loss Function]]
 - [[Support Vector Machine]]
 - [[Representer Theorem]]
 

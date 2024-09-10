@@ -216,6 +216,8 @@ date of note: 2024-09-08
 >
 >- When applying the InfoNCE loss to parallel views that are the *same modality and dimension*, the *encoder* $f_{\theta}$ for the anchor $x$ and the positive and negative examples $g_{\phi}$ can be **shared**. $$f_{\theta} \equiv g_{\phi}$$
 
+^56fa08
+
 - [[Multi-view Learning]]
 
 

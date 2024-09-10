@@ -57,7 +57,7 @@ date of note: 2024-07-28
 
 ### Margin-based Theory
 
-- [[Margin as a Measure of Classification Confidence]]
+- [[Margin-based Generalization Error Bound]]
 - [[Margin-based Bound for AdaBoost]]
 
 ### Greedy Optimization for Boosting

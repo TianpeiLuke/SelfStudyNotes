@@ -126,7 +126,7 @@ date of note: 2024-06-01
 
 ### Margin-based Generalization Bound
 
-- [[Margin as a Measure of Classification Confidence]]
+- [[Margin-based Generalization Error Bound]]
 
 
 ### Probabilistic Graphical Model

@@ -45,7 +45,7 @@ date of note: 2024-09-08
 ^3609c4
 
 - [[Metric Learning]]
-
+- [[Margin-based Loss Function]]
 
 ### Pair Loss
 
@@ -61,6 +61,7 @@ date of note: 2024-09-08
 ^0cd056
 
 - Chopra, S., Hadsell, R., & LeCun, Y. (2005, June). Learning a similarity metric discriminatively, with application to face verification. In _2005 IEEE computer society conference on computer vision and pattern recognition (CVPR'05)_ (Vol. 1, pp. 539-546). IEEE.
+- [[Margin-based Loss Function]]
 
 
 ## Explanation

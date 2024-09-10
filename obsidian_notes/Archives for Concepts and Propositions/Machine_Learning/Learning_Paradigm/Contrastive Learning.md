@@ -97,6 +97,14 @@ date of note: 2024-07-07
 
 - [[Multi-view Learning]]
 
+>[!quote]
+>The members of positive and negative pairs do not necessarily have to come from the same data modality. In **contrastive-language image pretraining**, or **CLIP** (Radford et al., 2021), a positive pair consists of an image and its corresponding text caption, and two separate functions, one for each modality, are used to map the inputs to the same representation space. *Negative pairs* are then *mismatched images and captions*. This is often referred to as **weakly supervised**, as it relies on captioned images, which are often easier to obtain by scraping data from the internet than by manually labelling images with their classes.
+>
+>-- [[Deep Learning Foundations and Concepts by Bishop]] pp 192
+
+![[Information Noise Contrastive Estimation as Contrastive Learning#^56fa08]]
+
+
 ### Metric Learning
 
 - [[Metric Learning]]
@@ -125,6 +133,14 @@ date of note: 2024-07-07
 
 - [[Information Noise Contrastive Estimation as Contrastive Learning]]
 - [[Noise Contrastive Estimation]]
+
+## Choose Negative Samples
+
+>[!quote]
+>A particular contrastive learning algorithm is defined predominantly by **how the positive and negative pairs are chosen**, which is how we use our *prior knowledge* to specify what a good representation should be. For example, consider the problem of learning representations of images. Here, a common choice is to create positive pairs by corrupting the input images in ways that should preserve the semantic information of the image while greatly altering the image in the pixel space (Wu et al., 2018; He et al., 2019; Chen, Kornblith, et al., 2020). Corruptions are closely related to **data augmentations**, and examples include *rotation, translation, and colour shifts*. Other images from the data set can then be used to create the negative pairs. This approach to contrastive learning is known as **instance discrimination**.
+>
+>-- [[Deep Learning Foundations and Concepts by Bishop]] pp 192
+
 
 
 
