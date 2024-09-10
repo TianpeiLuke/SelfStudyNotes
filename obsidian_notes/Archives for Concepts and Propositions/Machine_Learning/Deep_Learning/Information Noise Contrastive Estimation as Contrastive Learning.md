@@ -166,16 +166,20 @@ date of note: 2024-09-08
 >\end{align*}
 >$$
 >
->Thus the **InfoNCE loss** 
+>Note that it is commonly to choose *proposal distribution* for negative samples as the *marginal distribution of representation* $$q(z) = p(z)$$ 
+>
+>The **InfoNCE loss** is *bounded below* according to the following 
 >$$
 >\begin{align*}
 >L_{\text{InfoNCE}}&=\mathbb{E}_{ X, Z, Y_{1:n-1} }\left[- \log p(X_{i} = Z \,|\, X, \mathcal{K})\right] \\[5pt] 
 >&= \mathbb{E}_{ X, Z, Y_{1:n-1} }\left[\log \left\{ 1 +  \frac{q(Z)}{p(X_{i} = Z | X)}\sum_{Y_{j}}\frac{p(Y_{j} | X)}{q(Y_{j})} \right\} \right] \\[5pt]
 >&\approx \mathbb{E}_{ X, Z }\left[\log \left\{ 1 +  \frac{q(Z)}{p(X_{i} = Z | X)} (n-1) \mathbb{E}_{ Y_{j} }\left[  \frac{p(Y_{j} | X)}{q(Y_{j})}\right] \right\} \right] \\[5pt]
 >&\ge \mathbb{E}_{ X, Z }\left[\log \left\{\frac{q(Z)}{p(Z | X)} n  \right\} \right]  \\[5pt]
+>&= \mathbb{E}_{ X, Z }\left[\log \left\{\frac{p(Z)}{p(Z | X)} n  \right\} \right] \\[5pt]
 >&= \log(n) - I(X; Z)
 >\end{align*}
 >$$
+>And the optimal similarity measure is given by $$f(x, z) = \frac{p(z|x)}{p(z)}$$
 
 
 

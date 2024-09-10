@@ -193,3 +193,4 @@ date of note: 2024-08-16
 - [[Deep Learning by Goodfellow]] pp 612 - 614
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 191
 - Gutmann, M., & Hyvärinen, A. (2010, March). Noise-contrastive estimation: A new estimation principle for unnormalized statistical models. In _Proceedings of the thirteenth international conference on artificial intelligence and statistics_ (pp. 297-304). JMLR Workshop and Conference Proceedings.
+- Gutmann, M. U., & Hyvärinen, A. (2012). Noise-Contrastive Estimation of Unnormalized Statistical Models, with Applications to Natural Image Statistics. _Journal of Machine Learning Research_, _13_(11), 307-361.
