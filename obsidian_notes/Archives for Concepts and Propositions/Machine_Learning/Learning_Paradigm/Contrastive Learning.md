@@ -141,6 +141,7 @@ date of note: 2024-07-07
 >
 >-- [[Deep Learning Foundations and Concepts by Bishop]] pp 192
 
+- [[Instance Discrimination for Contrastive Learning]]
 
 
 

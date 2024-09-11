@@ -193,7 +193,7 @@ date of note: 2024-09-08
 >$$
 >And the optimal similarity measure is given by $$f(x, z) = \frac{p(z|x)}{p(z)}$$
 >
->In other word, the **InfoNCE loss** minimization is equivalent to the *maximization* of **mutual information* between *data* and *representation*.
+>In other word, the **InfoNCE loss** minimization is equivalent to the *maximization* of **mutual information** between *data* and *representation*.
 
 - [[Mutual Information]]
 
