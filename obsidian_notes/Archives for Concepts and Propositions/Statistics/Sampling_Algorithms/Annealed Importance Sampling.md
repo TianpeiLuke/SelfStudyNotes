@@ -31,6 +31,10 @@ date of note: 2024-08-27
 - [[Importance Sampling]]
 - [[Simulated Annealing]]
 - [[Sequential Importance Sampling]]
+- [[Markov Chain Monte Carlo Methods]]
+- [[Gibbs Sampling]]
+- [[Metropolis-Hastings Algorithm]]
+
 
 - [[Log-Partition Function and Score Function of Graphical Models]]
 - [[Gibbs Measure and Energy-based Model]]

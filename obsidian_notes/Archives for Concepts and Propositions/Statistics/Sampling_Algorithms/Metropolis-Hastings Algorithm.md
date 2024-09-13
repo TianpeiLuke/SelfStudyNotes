@@ -53,7 +53,7 @@ date of note: 2024-07-04
 
 ^1aef3a
 
-- [[Gibbs Distribution]]
+- [[Gibbs Measure and Energy-based Model]]
 - [[Markov Transition Kernel and Transition Function]]
 - [[Detailed Balance Equation]]
 - [[Accept-Reject Sampling]]
