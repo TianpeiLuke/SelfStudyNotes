@@ -26,6 +26,7 @@ date of note: 2024-08-27
 ##  Recommended Notes and References
 
 
+- [[Estimating Partition Function via Importance Sampling]]
 
 - [[Importance Sampling]]
 - [[Simulated Annealing]]
@@ -36,4 +37,5 @@ date of note: 2024-08-27
 
 
 - [[Deep Learning by Goodfellow]] pp 617
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]]  pp 533 - 536
 - Neal, R. M. (2001). Annealed importance sampling. _Statistics and Computing_, _11_(2), 125–139. [https://doi.org/10.1023/A:1008923215028](https://doi.org/10.1023/A:1008923215028)

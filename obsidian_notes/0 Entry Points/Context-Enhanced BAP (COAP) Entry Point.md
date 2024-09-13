@@ -32,7 +32,7 @@ We group projects according to the customer contact data sources
 
 - **Customer Service Contact Transcripts**: [[Voice of Customer in BAP Entry Point]]
 	- [[Abuse Polygraph]]
-	- [[Chat MO detection]]
+	- [[Chat MO detection Entry Point]]
 - **Buyer Seller Messaging**
 	- [[BSM A-to-Z claim abuse detection]]
 	- [[Abuse Reversal and Reclassification (RnR) Entry Point]]

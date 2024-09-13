@@ -92,7 +92,7 @@ date of note: 2024-07-04
 
 - [[Monte Carlo Strategies in Scientific Computing by Liu]] pp 66-101
 - [[Monte Carlo Statistical Methods by Robert]] pp 552
-
-- [[Deep Learning Foundations and Concepts by Bishop]] pp 439
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 542 - 547
+- [[Deep Learning Foundations and Concepts by Bishop]] pp 439 - 440
 - [[Probabilistic Graphical Models by Koller]] pp 667
 - Wikipedia [Particle_filter](https://en.wikipedia.org/wiki/Particle_filter)

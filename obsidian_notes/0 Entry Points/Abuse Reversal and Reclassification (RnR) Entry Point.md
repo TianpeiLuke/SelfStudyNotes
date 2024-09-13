@@ -48,6 +48,7 @@ Here are some main points for why RnR is proposed:
 - Main Table for RnR flag and Deep dive
 	- [[Table mfn_abuse_reversals]]
 	- [[Table mfn_abuse_reversals ETL job]]
+	- [[Table mfn_automate_rr_high_score ETL job]]
 
 # Data
 

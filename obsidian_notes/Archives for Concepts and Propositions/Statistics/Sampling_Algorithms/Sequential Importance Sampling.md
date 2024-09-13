@@ -78,6 +78,6 @@ date of note: 2024-07-04
 - [[Reinforcement Learning An Introduction by Sutton]]
 
 - [[Probabilistic Graphical Models by Koller]]
-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 477 - 537
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 541 - 542
 - [[Deep Learning by Goodfellow]] pp 590
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 429

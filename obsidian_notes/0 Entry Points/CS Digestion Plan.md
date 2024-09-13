@@ -71,7 +71,7 @@ The *Account Integrity Team (AIT)* has built a pipeline that digests the data fr
 	- AIT team save the transcript **text** in **S3** while saving the meta fields (order_id, contact_id etc.) as well as **key prefix of S3** to **MDS** under ContREE workflow
 	- Scientist **need to use the object key stored in MDS to map S3 object to get the actual transcript**.
 	- The S3 bucket and its storage can be used for training purpose. 
-	- Both [[Chat MO detection]] and [[Abuse Polygraph]] are using this data set for training the first version of model. 
+	- Both [[Chat MO detection Entry Point]] and [[Abuse Polygraph]] are using this data set for training the first version of model. 
 	- By SDE team (EAGLE) managing the ingestion service, AIT is **not able to support long-term use case** for additional BAP use cases
 	- By agreement with AIT team, we would gain access to this data given that we have obtained legal approval and reviewed by **CS Neuron team**.  [[Quotes from emails from Eagle team]]
 - POC:
@@ -94,5 +94,5 @@ Patronus > AIT team >= CS Neuron
 - [wiki](https://w.amazon.com/bin/view/AbusePrevention/Abuse_ML/BuyerAbuse_NLP_CSContact/) for Voice of Customer projects in BAP
 - Roadmap, and project tracker in Context-Enhanced BAP (COAP) [wiki](https://w.amazon.com/bin/preview/AbusePrevention/Abuse_ML/BuyerAbuse_BuyerSellerMessaging/BSM_Prods_Roadmap)
 - Project [[Abuse Polygraph]]
-- Project [[Chat MO detection]]
+- Project [[Chat MO detection Entry Point]]
 - Overview of CS related projects in BAP [[Voice of Customer in BAP Entry Point]]
