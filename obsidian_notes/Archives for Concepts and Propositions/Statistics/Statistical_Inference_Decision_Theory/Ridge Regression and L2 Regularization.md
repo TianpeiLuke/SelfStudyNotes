@@ -2,9 +2,16 @@
 tags:
   - concept
   - statistics/estimation
-keywords: 
-topics: 
-name: 
+  - optimization/regularization
+  - deep_learning/regularization
+keywords:
+  - ridge_regression
+  - l2_regularization
+topics:
+  - statistics/estimation
+  - deep_learning/regularization
+  - statistics/regularization
+name: Ridge Regression and L2 Regularization
 date of note: 2024-08-22
 ---
 

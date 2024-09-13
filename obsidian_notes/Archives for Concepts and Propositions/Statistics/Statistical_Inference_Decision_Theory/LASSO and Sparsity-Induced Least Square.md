@@ -3,18 +3,19 @@ tags:
   - concept
   - statistics/estimation
 keywords:
-  - partial_correlation
-  - conditional_independence
+  - lasso
+  - sparsity
+  - l1_regularization
 topics:
   - statistics/estimation
-name: Partial Correlation
+name: LASSO and Sparsity-Induced Least Square
 date of note: 2024-07-24
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Partial Correlation
+>**Name**: LASSO and Sparsity-Induced Least Square
 
 
 

@@ -79,7 +79,7 @@ date of note: 2024-08-16
 
 ### Similarity-based Loss
 
-- [[Cosine Similarity and Similarity-based Loss]]
+- [[Cosine Similarity and Cosine Distance]]
 
 
 ### Contrastive Loss

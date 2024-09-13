@@ -26,6 +26,6 @@ date of note: 2024-09-08
 ##  Recommended Notes and References
 
 
-
+- [[Cosine Similarity and Cosine Distance]]
 - [[Contrastive Learning]]
 - Bromley, J., Guyon, I., LeCun, Y., Säckinger, E., & Shah, R. (1993). Signature verification using a" siamese" time delay neural network. _Advances in neural information processing systems_, _6_.
