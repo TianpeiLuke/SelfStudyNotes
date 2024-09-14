@@ -105,6 +105,7 @@ date of note: 2024-05-27
 
 - [[Norm and Normed Space]]
 - [[Bounded Linear Operator and Norm of Operator]]
+- [[Frobenius Norm of Matrix]]
 
 >[!important] Corollary (Perturbation)
 >If $A\in \mathbb{R}^{n\times m}$,  and $E\in \mathbb{R}^{n\times m}$  then 

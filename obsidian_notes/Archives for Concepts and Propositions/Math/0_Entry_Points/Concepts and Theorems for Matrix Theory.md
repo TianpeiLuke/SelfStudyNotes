@@ -31,10 +31,30 @@ date of note: 2024-07-13
 
 - [[Symplectic Matrix]]
 
+
+### Matrix Norm
+
+- [[Frobenius Norm of Matrix]]
+- [[Lpq Norm of Matrix]]
+- [[L1 Norm and L2 Norm of Matrix]]
+- [[Schatten Norm and Nuclear Norm of Matrix]]
+
+
 ### Function of Matrix
 
 - [[Determinant of Linear Transformation]]
 - [[Laplace Expansion Theorem]]
+- [[Cayley–Hamilton Theorem]]
+
+
+### Polynomials associated with Matrix
+
+- [[Characteristic Polynomial for Linear Map]]
+- [[Minimal Polynomial for Linear Map]]
+- [[Multiplicity of Linear Map]]
+- [[Cayley–Hamilton Theorem]]
+
+
 
 ### Matrix Calculus
 

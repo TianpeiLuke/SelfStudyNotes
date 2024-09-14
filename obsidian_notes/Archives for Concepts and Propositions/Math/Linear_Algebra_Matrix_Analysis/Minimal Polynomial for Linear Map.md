@@ -31,8 +31,10 @@ date of note: 2024-05-27
 
 - [[Eigenvalue and Eigenvector for Linear Map]]
 - [[Characteristic Polynomial for Linear Map]]
+- [[Cayley–Hamilton Theorem]]
 
 - [[Linear Map]]
+- [[Matrix]]
 
 - [[Finite Dimensional Vector Spaces by Halmos]]
 - [[Matrix Analysis by Horn]]

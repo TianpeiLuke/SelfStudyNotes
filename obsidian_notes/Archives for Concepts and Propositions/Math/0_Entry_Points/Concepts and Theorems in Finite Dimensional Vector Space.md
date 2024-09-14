@@ -72,6 +72,7 @@ date of note: 2024-05-11
 - [[Characteristic Polynomial for Linear Map]]
 - [[Minimal Polynomial for Linear Map]]
 - [[Multiplicity of Linear Map]]
+- [[Cayley–Hamilton Theorem]]
 
 ### Jordan Decomposition
 

@@ -39,6 +39,8 @@ date of note: 2024-07-04
 >w(x) = \frac{d\mathcal{P} / d\nu}{d\mathcal{Q} / d\nu}= \frac{p(x)}{q(x)}.
 >$$
 
+^1fa755
+
 - [[Expectation of Random Variable]]
 - [[Probability Distribution of Random Variable]]
 - [[Absolute Continuity for Measures]]

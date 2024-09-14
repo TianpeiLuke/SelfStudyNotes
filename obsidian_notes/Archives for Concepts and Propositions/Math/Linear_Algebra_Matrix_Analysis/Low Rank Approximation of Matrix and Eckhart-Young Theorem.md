@@ -26,6 +26,7 @@ date of note: 2024-08-21
 
 - [[Bounded Linear Operator and Norm of Operator]]
 - [[Rank and Nullity of Linear Map]]
+- [[L1 Norm and L2 Norm of Matrix]]
 
 ## The Eckhart-Young Theorem
 
@@ -40,12 +41,13 @@ date of note: 2024-08-21
 ^65eeb8
 
 - [[Singular Value Decomposition of Linear Map]]
+- [[L1 Norm and L2 Norm of Matrix]]
 
 >[!important]
 >Note that $A_{k}$ above is also the closest rank-$k$ matrix to $A$ in **Frobenius norm.**
 >$$A_{k} = \arg\min_{\text{rank}(B) = k}\;\lVert A - B \rVert_{F}.$$
 
-
+- [[Frobenius Norm of Matrix]]
 
 ## Explanation
 

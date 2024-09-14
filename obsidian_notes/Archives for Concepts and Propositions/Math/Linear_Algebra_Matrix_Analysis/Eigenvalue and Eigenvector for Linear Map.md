@@ -58,6 +58,8 @@ date of note: 2024-05-27
 >\det \left(\lambda I - A\right) = 0
 >$$
 
+^fb9212
+
 - [[Characteristic Polynomial for Linear Map]]
 - [[Minimal Polynomial for Linear Map]]
 

@@ -168,6 +168,7 @@ date of note: 2024-05-12
 
 - [[Low Rank Approximation of Matrix and Eckhart-Young Theorem]]
 - [[Singular Value Decomposition of Linear Map]]
+- [[L1 Norm and L2 Norm of Matrix]]
 
 
 ### PCA as Hard Spectral Filtering
