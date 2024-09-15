@@ -25,6 +25,8 @@ date of note: 2024-05-27
 -----------
 ##  Recommended Notes and References
 
+- [[Resolvent Operator and Spectrum of Linear Operator]]
+- [[Eigenvalue Point Residual Spectrum of Linear Operator]]
 
 
 - [[Functional Analysis by Reed]]

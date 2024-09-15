@@ -37,6 +37,7 @@ date of note: 2024-05-27
 
 - [[Resolvent Operator and Spectrum of Linear Operator]]
 
+
 ## Explanation
 
 
@@ -100,4 +101,4 @@ date of note: 2024-05-27
 
 
 - [[Finite Dimensional Vector Spaces by Halmos]]
-- [[Matrix Analysis by Horn]]
+- [[Matrix Analysis by Horn]] pp 45 - 48

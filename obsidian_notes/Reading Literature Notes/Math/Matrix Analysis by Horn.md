@@ -46,4 +46,7 @@ date of note: 2024-05-16
 
 -----
 ## Reference
-  
+
+
+- [[Matrix Analysis for Scientists and Engineers by Laub]]
+- [[Matrix Computations by Golub]]

@@ -52,7 +52,7 @@ date of note: 2024-05-27
 >$$
 >is *not dense*, then $\lambda$ is said to be in the **residual spectrum** of $T$. 
 
-
+- [[Range and Kernel of Linear Map]]
 
 
 ## Explanation
@@ -61,6 +61,9 @@ date of note: 2024-05-27
 >For finite dimensional $X$, the **point spectrum** is **all** of the *spectrum*.
 - [[Eigenspace and Spectrum for Linear Map]]
 
+![[Characteristic Polynomial for Linear Map#^5aa1eb]]
+
+- [[Characteristic Polynomial for Linear Map]]
 
 ## Nonempty 
 
@@ -77,6 +80,8 @@ date of note: 2024-05-27
 >$$
 >R_{\lambda}(T) = \frac{1}{\lambda} \left\{ 1 + \sum_{n=1}^{\infty}\left( \frac{T}{\lambda} \right)^n \right\}  
 >$$
+
+
 
 
 

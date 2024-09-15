@@ -47,6 +47,12 @@ date of note: 2024-05-11
 - [[Projection Map onto Linear Subspace]]
 - [[Fundamental Subspaces from Linear Map and its Projection]]
 
+### System of Linear Equations
+
+- [[System of Linear Equations or Linear System]]
+- [[Existence and Uniqueness of Solution of Linear Equations]]
+
+
 ### Matrix and Matrix Algebra
 
 - [[Matrix]]

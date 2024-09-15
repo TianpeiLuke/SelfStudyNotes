@@ -172,3 +172,4 @@ date of note: 2024-05-27
 - [[Finite Dimensional Vector Spaces by Halmos]]
 - [[Matrix Analysis by Horn]] pp 150
 - [[Matrix Computations by Golub]] pp 76 - 81
+- [[Matrix Analysis for Scientists and Engineers by Laub]] pp 35 - 40

@@ -31,7 +31,7 @@ date of note: 2024-05-27
 
 ## Eigenvalue as Root
 
-![[Eigenvalue and Eigenvector for Linear Map#^06f8b9]]
+![[Eigenvalue and Eigenvector for Linear Map#^06f8b9]] ^9d1778
 
 ![[Eigenvalue and Eigenvector for Linear Map#^fb9212]]
 
@@ -39,6 +39,8 @@ date of note: 2024-05-27
 >Let $A$ be an $n \times n$ matrix. 
 >
 >A number $\lambda$ is an **eigenvalue** of $A$ *if and only if* $\lambda$ is a **root** of the **characteristic polynomial** of $A$.
+
+^5aa1eb
 
 - [[Eigenvalue and Eigenvector for Linear Map]]
 
@@ -61,8 +63,11 @@ date of note: 2024-05-27
 - [[Minimal Polynomial for Linear Map]]
 
 
+## Infinite Dimensional Space
 
-
+- [[Resolvent Operator and Spectrum of Linear Operator]]
+- [[Eigenvalue Point Residual Spectrum of Linear Operator]]
+- [[Partition of Spectrum]]
 
 
 
@@ -70,7 +75,7 @@ date of note: 2024-05-27
 -----------
 ##  Recommended Notes and References
 
-
+- [[Fundamental Theorem of Algebra]]
 
 - [[Minimal Polynomial for Linear Map]]
 - [[Eigenvalue and Eigenvector for Linear Map]]

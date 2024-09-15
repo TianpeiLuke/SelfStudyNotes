@@ -99,4 +99,4 @@ date of note: 2024-05-27
 - [[Image of Group Homomorphism]]
 
 - [[Matrix Analysis by Horn]]
-- [[Finite Dimensional Vector Spaces by Halmos]]
+- [[Finite Dimensional Vector Spaces by Halmos]] pp 90

@@ -193,3 +193,4 @@ date of note: 2024-06-08
 - [[Elements of Statistical Learning by Hastie]] pp 43 - 56
 - [[Matrix Computations by Golub]] pp 303 - 334
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 117
+- [[Matrix Analysis for Scientists and Engineers by Laub]] pp 65 - 67

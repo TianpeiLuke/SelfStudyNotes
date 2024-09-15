@@ -85,3 +85,4 @@ date of note: 2024-08-21
 - [[Elements of Statistical Learning by Hastie]]
 - [[Numerical Optimization by Nocedal]]
 - [[Matrix Computations by Golub]] pp 260 - 288
+- [[Matrix Analysis for Scientists and Engineers by Laub]] pp 70 - 71

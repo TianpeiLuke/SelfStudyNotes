@@ -138,3 +138,4 @@ date of note: 2024-06-11
 - [[Mathematical Statistics by Shao]] 
 - [[Elements of Statistical Learning by Hastie]] pp 43 - 56
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 112 - 120
+- [[Matrix Analysis for Scientists and Engineers by Laub]] pp 65 - 71

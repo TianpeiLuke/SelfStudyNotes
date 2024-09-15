@@ -41,3 +41,4 @@ date of note: 2024-09-05
 
 - [[Finite Dimensional Vector Spaces by Halmos]]
 - [[Matrix Analysis by Horn]]
+- [[Matrix Analysis for Scientists and Engineers by Laub]]

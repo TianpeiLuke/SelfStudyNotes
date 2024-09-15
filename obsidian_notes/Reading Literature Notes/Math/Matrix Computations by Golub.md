@@ -59,6 +59,6 @@ date of note: 2024-08-08
 
 -----
 ## Reference
-  
 
+- [[Matrix Analysis for Scientists and Engineers by Laub]]
 - [[Matrix Analysis by Horn]]

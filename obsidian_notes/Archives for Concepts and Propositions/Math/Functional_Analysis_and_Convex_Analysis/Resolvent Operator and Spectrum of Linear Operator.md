@@ -29,6 +29,7 @@ date of note: 2024-05-27
 
 - [[Hilbert Space]]
 - [[Bijective Function and Inverse Function]]
+- [[Characteristic Polynomial for Linear Map]]
 
 
 >[!important] Definition
@@ -70,6 +71,11 @@ date of note: 2024-05-27
 >$$
 >|\lambda| \to \infty \implies \lVert R_{\lambda}(T) \rVert \to 0.
 >$$
+
+## Finite Dimensional
+
+- [[Characteristic Polynomial for Linear Map]]
+
 
 
 -----------
