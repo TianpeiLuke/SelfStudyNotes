@@ -55,12 +55,17 @@ date of note: 2024-07-13
 - [[Cayley–Hamilton Theorem]]
 
 
-
 ### Matrix Calculus
 
 - [[Moore–Penrose Pseudo Inverse of Matrix]]
 - [[Sherman–Morrison–Woodbury Matrix Inversion Formula]]
 - [[Schur Complement and Inversion of Block Matrix]]
+
+
+### Linear System
+
+- [[System of Linear Equations or Linear System]]
+- [[Existence and Uniqueness of Solution of Linear Equations]]
 
 
 ### Similarity and Diagonalization
