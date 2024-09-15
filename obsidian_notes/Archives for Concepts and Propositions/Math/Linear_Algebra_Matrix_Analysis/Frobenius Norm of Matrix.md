@@ -38,3 +38,4 @@ date of note: 2024-09-13
 - Wikipedia [Matrix_norm](https://en.wikipedia.org/wiki/Matrix_norm)
 - [[Matrix Analysis by Horn]]
 - [[Finite Dimensional Vector Spaces by Halmos]]
+- [[Matrix Analysis for Scientists and Engineers by Laub]] pp 59 - 61
