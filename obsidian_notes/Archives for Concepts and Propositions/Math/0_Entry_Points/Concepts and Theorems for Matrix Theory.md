@@ -35,8 +35,8 @@ date of note: 2024-07-13
 ### Matrix Norm
 
 - [[Frobenius Norm of Matrix]]
-- [[Lpq Norm of Matrix]]
-- [[L1 Norm and L2 Norm of Matrix]]
+- [[Operator Mixed pq Norm of Matrix]]
+- [[Operator p-Norm of Matrix]]
 - [[Schatten Norm and Nuclear Norm of Matrix]]
 
 

@@ -30,6 +30,8 @@ date of note: 2024-05-04
 >     
 >then $q$ is a **norm**.
 
+^376595
+
 
 >[!info]
 > A **metric** $d: X\times X \rightarrow \mathbb{R}_{+}$ that **induced from a norm** is given by $$d_{\theta}(\mathbf{x}, \mathbf{y})= q_{\theta}(\mathbf{y}-\mathbf{x}),\; \forall \mathbf{x,y}\in X.$$

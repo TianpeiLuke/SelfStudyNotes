@@ -29,6 +29,7 @@ date of note: 2024-05-28
 - [[Trace of Positive Semi-Definite Operator]]
 - [[Square Root of Positive Semidefinite Operator and Absolute Value]]
 - [[Adjoint of Linear Map]]
+- [[Schatten Norm and Nuclear Norm of Matrix]]
 
 
 >[!important] Definition

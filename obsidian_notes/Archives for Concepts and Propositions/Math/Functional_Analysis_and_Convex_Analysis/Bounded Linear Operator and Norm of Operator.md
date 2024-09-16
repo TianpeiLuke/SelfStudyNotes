@@ -22,6 +22,8 @@ date of note: 2024-05-05
 > 1. **Linearity**: $T(\alpha x + \beta y) = \alpha T(x) + \beta T(y)$ for all $x, y \in X$, $\alpha, \beta \in \mathbb{R}$ or $\mathbb{C}$
 > 2. **Boundedness**: $\|Tx\|_{Y} \le C\,\|x\|_{X}$ for small $C \ge 0$.
 
+^36986d
+
 
 
 >[!important]
@@ -34,6 +36,8 @@ date of note: 2024-05-05
 > \|T\| &:= \sup_{\|x\|_{X} = 1 }\|Tx\|_{Y}
 > \end{align*}
 > $$
+
+^52c1c9
 
 
 ## Explanation
