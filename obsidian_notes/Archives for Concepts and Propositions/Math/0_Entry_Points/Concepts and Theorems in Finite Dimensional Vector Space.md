@@ -84,6 +84,8 @@ date of note: 2024-05-11
 
 - [[Nilpotent Linear Transformation and Matrix]]
 - [[Krylov Subspace]]
+- [[Jordan Canonical Form]]
+
 
 ### Inner Product and Orthogonality
 

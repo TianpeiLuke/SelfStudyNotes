@@ -274,4 +274,5 @@ date of note: 2024-07-23
 
 
 - [[Matrix Analysis by Horn]] pp 18
+- [[Matrix Analysis for Scientists and Engineers by Laub]] pp 48, 102 - 104
 - Wikipedia [Schur_complement](https://en.wikipedia.org/wiki/Schur_complement)
