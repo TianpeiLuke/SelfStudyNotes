@@ -24,10 +24,13 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
+
+- [[Graph LASSO and Structured Learning in Gaussian Graphical Model]]
 - [[Canonical Form of Gaussian Graphical Model]]
 - [[Semidefinite Programming]]
 
 - [[Positive Semidefinite Transformation]]
+- [[Convex Optimization Problem]]
 
 
 - [[Probabilistic Graphical Models by Koller]]
