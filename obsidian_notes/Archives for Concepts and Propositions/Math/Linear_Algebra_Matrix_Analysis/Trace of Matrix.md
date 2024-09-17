@@ -92,3 +92,4 @@ date of note: 2024-09-16
 - [[Matrix Analysis by Horn]]
 - [[Matrix Analysis for Scientists and Engineers by Laub]]
 - [[Matrix Computations by Golub]]
+- Wikipedia [Trace](https://en.wikipedia.org/wiki/Trace_(linear_algebra))
