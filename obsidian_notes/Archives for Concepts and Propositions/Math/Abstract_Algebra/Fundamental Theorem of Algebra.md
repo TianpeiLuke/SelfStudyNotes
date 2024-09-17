@@ -34,7 +34,7 @@ date of note: 2024-09-15
 ## Explanation
 
 >[!info]
->The **fundamental theorem of algebra**, also called **d'Alembert's theorem**[[1]](https://en.wikipedia.org/wiki/Fundamental_theorem_of_algebra#cite_note-1) or the **d'Alembert–Gauss theorem**, states that every non-[constant](https://en.wikipedia.org/wiki/Constant_polynomial "Constant polynomial") single-variable [polynomial](https://en.wikipedia.org/wiki/Polynomial "Polynomial") with [complex](https://en.wikipedia.org/wiki/Complex_number "Complex number") [coefficients](https://en.wikipedia.org/wiki/Coefficient "Coefficient") has at least one complex [root](https://en.wikipedia.org/wiki/Zero_of_a_function "Zero of a function"). This includes polynomials with real coefficients, since every real number is a complex number with its [imaginary part](https://en.wikipedia.org/wiki/Imaginary_part "Imaginary part") equal to zero.
+>The **fundamental theorem of algebra**, also called **d'Alembert's theorem** or the **d'Alembert–Gauss theorem**, states that every non-constant single-variable polynomial with *complex coefficients* has at least one *complex root*. This includes polynomials with real coefficients, since every real number is a complex number with its imaginary part equal to zero.
 
 
 

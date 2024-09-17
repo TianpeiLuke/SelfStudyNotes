@@ -21,17 +21,21 @@ date of note: 2024-09-13
 
 ![[Bounded Linear Operator and Norm of Operator#^52c1c9]]
 
+
+### Matrix $(p,q)$-Norm
+
 >[!important] Definition
 >Let $A \in \mathbb{R}^{m\times n}$. 
 >
->Then the **$L_{p,q}$ norm of matrix** is defined as 
+>Then the **$(p,q)$-matrix norm** or **operator norm** is defined as 
 >$$
 >\lVert A \rVert_{p, q} := \max_{\lVert x \rVert_{q} \neq 0 } \frac{\lVert A x \rVert_{p} }{\lVert x \rVert_{q} } := \max_{\lVert x \rVert_{q} = 1 } \lVert Ax \rVert_{p} 
 >$$
+>This is an **operator norm** _subordinate to_ (or **induced by**) two vector norms $\lVert  \rVert_{p}, \lVert  \rVert_{q}.$
 
 ^0d8b17
 
-### $L_{p}$ norm 
+### Matrix $p$-Norm
 
 ![[Operator p-Norm of Matrix#^c830b5]]
 

@@ -25,6 +25,12 @@ date of note: 2024-05-27
 >
 >We can also view $A$ as a linear map $A: V\to V$ with $\text{dim}(V) =n$. Then we say that $P_{A}(\lambda)$ is the **characteristic polynomial** of *linear map*.
 
+^785fd1
+
+>[!important] Definition
+>We refer to the equation $$\det(x I - A) = P_{A}(x) = 0$$ as the **characteristic equation** of $A$.
+
+
 ## Explanation
 
 
@@ -45,17 +51,44 @@ date of note: 2024-05-27
 - [[Eigenvalue and Eigenvector for Linear Map]]
 
 
-
 >[!important] Proposition
 >Let $A, B$ be two $n \times n$ matrices and assume that $B$ is **invertible**
 >
 >Then the **characteristic polynomial** of $A$ is equal to  the **characteristic polynomial** of $B^{\text{-1}}AB$, i.e. $$\det \left(\lambda I - A\right) = \det \left(\lambda I - B^{-1} A B\right)$$
 
 
+## Fundamental Theorem of Algebra
+
+>[!important]
+>Let $\lambda_{1} \,{,}\ldots{,}\,\lambda_{n}$ be $n$ **eigenvalues** (with possibly repetition) for matrix $A\in \mathbb{R}^{n\times n}$.
+>
+>According to **fundamental theorem of algebra**, the **characteristic polynomial** of $A$ have decomposition
+>$$
+>\det(\lambda I - A) = \prod_{k=1}^{n}\left( \lambda - \lambda_{k} \right)
+>$$
+
+- [[Fundamental Theorem of Algebra]]
+
+
+## Determinant and Trace
+
+>[!important]
+>Let $\lambda_{1} \,{,}\ldots{,}\,\lambda_{n}$ be $n$ **eigenvalues** (with possibly repetition) for matrix $A\in \mathbb{R}^{n\times n}$. The characteristic polynomial of $A$ is 
+>$$
+>\det(\lambda I - A) = \prod_{k=1}^{n}\left( \lambda - \lambda_{k} \right)
+>$$
+>
+>- The coefficient of *first-order term* $\lambda$ is the **trace** of $A$ $$\text{tr}(A) = \sum_{k=1}^{n}\lambda_{k}.$$
+>- The coefficient of *zero-order term* $1$ is the **determinant** of $A$ $$\det(A) = \prod_{k=1}^{n}\lambda_{k}.$$
+
+- [[Determinant of Linear Transformation]]
+- [[Trace of Matrix]]
+
+
 
 ## Algebraic Multiplicity and Geometric Multiplicity
 
-- [[Multiplicity of Linear Map]]
+- [[Algebraic and Geometric Multiplicity of Linear Map]]
 
 
 ## Minimal Polynomial 

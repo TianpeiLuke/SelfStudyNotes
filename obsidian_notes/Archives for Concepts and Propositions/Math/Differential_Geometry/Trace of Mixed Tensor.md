@@ -105,7 +105,7 @@ date of note: 2024-05-20
 > \end{align*}
 >$$ 
 
-
+- [[Trace of Matrix]]
 
 
 

@@ -35,6 +35,11 @@ date of note: 2024-05-10
 >For tensor space, we can also define **trace**. See [[Trace of Mixed Tensor]].
 
 
+## Trace of Matrix
+
+- [[Trace of Matrix]]
+
+
 
 -----------
 ##  Recommended Notes and References

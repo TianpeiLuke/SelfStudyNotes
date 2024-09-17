@@ -66,12 +66,13 @@ date of note: 2024-05-27
 
 ## Trace and Determinant in terms of Eigenvalue
 
-
-
-
 - [[Determinant of Linear Transformation]]
+- [[Trace of Matrix]]
 
 
+## Geometric Multiplicity
+
+- [[Algebraic and Geometric Multiplicity of Linear Map]]
 
 
 
@@ -83,4 +84,4 @@ date of note: 2024-05-27
 - [[Eigenspace and Spectrum for Linear Map]]
 
 - [[Finite Dimensional Vector Spaces by Halmos]]
-- [[Matrix Analysis by Horn]]
+- [[Matrix Analysis by Horn]] pp 75 - 80

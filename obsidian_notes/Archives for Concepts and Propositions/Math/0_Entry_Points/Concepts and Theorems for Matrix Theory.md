@@ -43,38 +43,9 @@ date of note: 2024-07-13
 ### Function of Matrix
 
 - [[Determinant of Linear Transformation]]
+- [[Trace of Matrix]]
 - [[Laplace Expansion Theorem]]
 - [[Cayley–Hamilton Theorem]]
-
-
-### Polynomials associated with Matrix
-
-- [[Characteristic Polynomial for Linear Map]]
-- [[Minimal Polynomial for Linear Map]]
-- [[Multiplicity of Linear Map]]
-- [[Cayley–Hamilton Theorem]]
-
-
-### Matrix Calculus
-
-- [[Moore–Penrose Pseudo Inverse of Matrix]]
-- [[Sherman–Morrison–Woodbury Matrix Inversion Formula]]
-- [[Schur Complement and Inversion of Block Matrix]]
-
-
-### Linear System
-
-- [[System of Linear Equations or Linear System]]
-- [[Existence and Uniqueness of Solution of Linear Equations]]
-
-
-### Similarity and Diagonalization
-
-
-
-
-### Jordan Decomposition
-
 
 
 ### Adjoint and Hermitian 
@@ -92,6 +63,43 @@ date of note: 2024-07-13
 - [[Eigenspace and Spectrum for Linear Map]]
 - [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
 - [[Spectral Theorem of Normal Map and Eigen decomposition]]
+
+
+### Polynomials associated with Matrix
+
+- [[Characteristic Polynomial for Linear Map]]
+- [[Minimal Polynomial for Linear Map]]
+- [[Algebraic and Geometric Multiplicity of Linear Map]]
+- [[Cayley–Hamilton Theorem]]
+
+
+### Similarity, Diagonalization and Canonical Forms
+
+- [[Similarity Relation between Linear Maps and Matrices]]
+- [[Diagonalizable Matrix]]
+
+
+
+
+
+### Matrix Calculus
+
+- [[Moore–Penrose Pseudo Inverse of Matrix]]
+- [[Sherman–Morrison–Woodbury Matrix Inversion Formula]]
+- [[Schur Complement and Inversion of Block Matrix]]
+
+
+### Linear System
+
+- [[System of Linear Equations or Linear System]]
+- [[Existence and Uniqueness of Solution of Linear Equations]]
+
+
+### Jordan Decomposition
+
+- [[Nilpotent Linear Transformation and Matrix]]
+- [[Krylov Subspace]]
+- [[Jordan Canonical Form]]
 
 
 ### Singular Value Decomposition

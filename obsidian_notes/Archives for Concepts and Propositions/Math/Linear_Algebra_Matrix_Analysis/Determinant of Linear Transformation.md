@@ -76,6 +76,24 @@ date of note: 2024-05-14
 - [[Homomorphism between Groups]]
 
 
+## Determinant via Eigenvalues
+
+>[!important] Proposition
+>Let $A\in \mathbb{C}^{n\times n}$ be a matrix with $n$ (possibly repeated) **eigenvalues** $\lambda_{1} \,{,}\ldots{,}\,\lambda_{n}$. 
+>
+>The **determinant** of $A$ can be computed via *eigenvalues* 
+>$$
+>\det(A) = \prod_{k=1}^{n}\lambda_{k}.
+>$$
+
+- [[Eigenvalue and Eigenvector for Linear Map]]
+
+## Characteristic Polynomial 
+
+- [[Characteristic Polynomial for Linear Map]]
+
+
+
 
 
 -----------

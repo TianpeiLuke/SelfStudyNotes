@@ -76,9 +76,15 @@ date of note: 2024-05-11
 ### Characteristic Polynomial
 
 - [[Characteristic Polynomial for Linear Map]]
-- [[Minimal Polynomial for Linear Map]]
-- [[Multiplicity of Linear Map]]
+- [[Algebraic and Geometric Multiplicity of Linear Map]]
 - [[Cayley–Hamilton Theorem]]
+- [[Minimal Polynomial for Linear Map]]
+
+### Similarity Relationship and Canonical Forms
+
+- [[Similarity Relation between Linear Maps and Matrices]]
+- [[Diagonalizable Matrix]]
+
 
 ### Jordan Decomposition
 

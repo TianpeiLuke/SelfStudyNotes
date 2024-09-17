@@ -28,12 +28,12 @@ date of note: 2024-09-13
 
 - [[Operator Mixed pq Norm of Matrix]]
 
-### $L_{1}$ Norm 
+### Matrix $1$-Norm
 
 >[!important] Definition
 >Let $A \in \mathbb{R}^{m\times n}$. 
 >
->Then the **$L_{1}$ norm of matrix** or **matrix 1-norm** is defined as 
+>Then the **matrix 1-norm** is defined as 
 >$$
 >\lVert A \rVert_{1} := \max_{j\in [n]}\left(\sum_{i=1}^{m}\lvert a_{i,j} \rvert \right)
 >$$
@@ -41,24 +41,26 @@ date of note: 2024-09-13
 
 ^be3a94
 
+### Matrix $p$-Norm
+
 
 >[!important] Definition
 >Let $A \in \mathbb{R}^{m\times n}$. 
 >
->Then the **$L_{p}$ norm of matrix** or **matrix $p$-norm** for $p \ge 1$ is defined as 
+>Then the **matrix $p$-norm** for $p \ge 1$ is defined as 
 >$$
 >\lVert A \rVert_{p} := \max_{\lVert x \rVert_{p} \neq 0 } \frac{\lVert A x \rVert_{p} }{\lVert x \rVert_{p} } := \max_{\lVert x \rVert_{p} = 1 } \lVert Ax \rVert_{p} 
 >$$
->
+>This is an **operator norm** _subordinate to_ (or **induced by**) two vector norms $\lVert  \rVert_{p}.$
 
 ^c830b5
 
-### $L_{\infty}$ Norm 
+### Matrix $\infty$-Norm
 
 >[!important] Definition
 >Let $A \in \mathbb{R}^{m\times n}$. 
 >
->Then the **$L_{\infty}$ norm of matrix** or **matrix $\infty$-norm**  is defined as 
+>Then the **matrix $\infty$-norm**  is defined as 
 >$$
 >\lVert A \rVert_{\infty} := \max_{i\in [m]}\left(\sum_{j=1}^{n}\lvert a_{i,j} \rvert \right)
 >$$
@@ -67,7 +69,7 @@ date of note: 2024-09-13
 ^866ef8
 
 
-### $L_{2}$ Norm or Spectral Norm
+### Matrix $2$-Norm or Spectral Norm
 
 >[!important] Definition
 >Let $A \in \mathbb{R}^{m\times n}$. 

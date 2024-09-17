@@ -26,6 +26,8 @@ date of note: 2024-05-27
 >
 >This applies to both matrix and linear transformation.
 
+^1372fd
+
 - [[Eigenvalue and Eigenvector for Linear Map]]
 - [[Linear Subspace]]
 - [[Vector Space over a Field]]
@@ -61,7 +63,7 @@ date of note: 2024-05-27
 
 - [[Characteristic Polynomial for Linear Map]]
 - [[Minimal Polynomial for Linear Map]]
-- [[Multiplicity of Linear Map]]
+- [[Algebraic and Geometric Multiplicity of Linear Map]]
 
 
 >[!important] Proposition
@@ -72,6 +74,8 @@ date of note: 2024-05-27
 >  \mathcal{E}_{\lambda_{1}} \,{\oplus}\ldots{\oplus}\,\mathcal{E}_{\lambda_{k}}
 >$$ 
 >exists.
+
+^3d4672
 
 - [[Direct Sum of Subspaces]]
 - [[Linear Independence]]

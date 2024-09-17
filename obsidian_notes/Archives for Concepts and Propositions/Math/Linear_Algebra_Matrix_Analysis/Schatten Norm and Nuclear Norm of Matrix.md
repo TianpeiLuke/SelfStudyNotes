@@ -48,6 +48,7 @@ date of note: 2024-09-13
 
 ^a510d6
 
+- [[Trace of Matrix]]
 - [[Positive Semidefinite Operator]]
 - [[Trace Class Operator]]
 
