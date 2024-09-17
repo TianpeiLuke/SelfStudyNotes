@@ -26,6 +26,8 @@ date of note: 2024-05-10
 >$$ 
 >The number $\text{tr}\left(A\right)$ is called **the trace** of $A$.
 
+^ca68f5
+
 - [[Positive Semidefinite Operator]]
 - [[Complete Orthonormal Basis of Hilbert Space]]
 
