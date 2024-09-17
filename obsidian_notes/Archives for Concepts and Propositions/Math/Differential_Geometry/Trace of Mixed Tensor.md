@@ -44,6 +44,8 @@ date of note: 2024-05-20
 >$$
 >where $\left\langle \cdot , \cdot \right\rangle: V^{*} \times V \to \mathbb{R}$ is the **canonical dual pairing**.
 
+^efc0e0
+
 - [[Canonical Dual Pairing]]
 
 >[!important] Definition

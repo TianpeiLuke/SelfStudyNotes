@@ -19,27 +19,28 @@ date of note: 2024-09-16
 
 
 >[!important] Definition
+>Let $A = [a_{i,j}] \in M_{n}$ be a $n\times n$ matrix.
 >
-
-
-
-
+>The **trace** of matrix $A$ is the *sum of diagonal entries* of $A$ $$\text{tr}(A) = \sum_{i=1}^{n}a_{i,i}.$$
 
 ## Explanation
 
 
 
-## Trace via Eigenvalues
+## Trace via Eigenvalues and Characteristic Polynomial
 
 
 - [[Eigenvalue and Eigenvector for Linear Map]]
 - [[Trace of Positive Semi-Definite Operator]]
 
-## Trace via Characteristic Polynomial
-
+![[Characteristic Polynomial for Linear Map#^435f9a]]
 
 - [[Characteristic Polynomial for Linear Map]]
 
+
+## Trace of Tensor
+
+![[Trace of Mixed Tensor#^efc0e0]]
 
 
 

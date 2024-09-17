@@ -81,6 +81,8 @@ date of note: 2024-05-27
 >- The coefficient of *first-order term* $\lambda$ is the **trace** of $A$ $$\text{tr}(A) = \sum_{k=1}^{n}\lambda_{k}.$$
 >- The coefficient of *zero-order term* $1$ is the **determinant** of $A$ $$\det(A) = \prod_{k=1}^{n}\lambda_{k}.$$
 
+^435f9a
+
 - [[Determinant of Linear Transformation]]
 - [[Trace of Matrix]]
 
