@@ -8,14 +8,15 @@ name:
 date of note: 2024-09-12
 ---
 
-## Top 100 Concept Notes Ranked by Number of Out-Links
+## Top 70 Books Ranked by In-Links
 
 
 ```dataview
-LIST length(file.outlinks)
-FROM #concept AND -#entry_point
-SORT length(file.outlinks) DESC
-LIMIT 100
+LIST length(file.inlinks)
+FROM #book
+SORT length(file.inlinks) DESC
+WHERE length(file.inlinks) > 0
+LIMIT 70
 ```
 
 

@@ -91,6 +91,8 @@ date of note: 2024-06-08
 
 ^03c5db
 
+- [[Normal Transformation]]
+
 >[!info]
 >Note that 
 >$$

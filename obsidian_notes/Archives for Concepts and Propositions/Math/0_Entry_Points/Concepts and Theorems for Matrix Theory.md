@@ -78,7 +78,11 @@ date of note: 2024-07-13
 - [[Similarity Relation between Linear Maps and Matrices]]
 - [[Diagonalizable Matrix]]
 
+### Unitary Similarity and Unitary Equivalence
 
+- [[Unitary Group]]
+- [[Unitary Similarity]]
+- [[Schur Triangularization and Schur Form]]
 
 
 

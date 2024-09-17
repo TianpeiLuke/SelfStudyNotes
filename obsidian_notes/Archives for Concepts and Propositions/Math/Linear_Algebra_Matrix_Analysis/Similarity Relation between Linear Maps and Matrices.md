@@ -50,12 +50,11 @@ date of note: 2024-09-16
 
 - [[Equivalence Relation]]
 
->[!info]
->Let $A$ be the matrix representation of linear map $L_{A}$ and  $B$ be the matrix representation of linear map $L_{B}$. 
->
->Then $A$ is **similar** to $B$ if $L_{A}$ is **isomorphic** to $L_{B}$, i.e. $$A \sim B \iff L_{A} \simeq L_{B}$$
+>[!important]
+>Two **similar matrices** are the different **representations** of **same linear map** under **different basis**.
 
-- [[Isometry and Isometric isomorphism]]
+- [[Linear Map]]
+- [[Basis of Vector Space]]
 - [[Linear Isomorphism]]
 
 
@@ -93,9 +92,11 @@ date of note: 2024-09-16
 
 ## Diagonalizable Matrix
 
-
 - [[Diagonalizable Matrix]]
 
+## Unitary Similarity
+
+- [[Unitary Similarity]]
 
 
 
