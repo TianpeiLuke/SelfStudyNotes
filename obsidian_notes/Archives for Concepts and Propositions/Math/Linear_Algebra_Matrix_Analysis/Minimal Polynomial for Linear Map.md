@@ -65,5 +65,6 @@ date of note: 2024-05-27
 - [[Linear Map]]
 - [[Matrix]]
 
-- [[Finite Dimensional Vector Spaces by Halmos]]
+
+- [[Finite Dimensional Vector Spaces by Halmos]] pp 112 -- 115
 - [[Matrix Analysis by Horn]] pp 191 - 195

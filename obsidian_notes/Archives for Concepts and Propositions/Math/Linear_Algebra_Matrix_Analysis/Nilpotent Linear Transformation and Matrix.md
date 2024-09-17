@@ -21,6 +21,8 @@ date of note: 2024-05-26
 >
 >The least such integer $m$ is called the **index of nilpotence**.
 
+^a1b57c
+
 
 >[!important] Definition
 >A matrix $\boldsymbol{A}$ is called **nilpotent matrix** if there exists some $m\in \mathbb{N}$ such that $$\boldsymbol{A}^m = 0.$$

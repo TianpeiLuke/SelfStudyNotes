@@ -108,6 +108,12 @@ date of note: 2024-09-15
 - [[Minimal Polynomial for Linear Map]]
 
 
+## Nilpotent Transformation
+
+![[Nilpotent Linear Transformation and Matrix#^a1b57c]]
+
+- [[Nilpotent Linear Transformation and Matrix]]
+
 
 
 -----------
@@ -124,3 +130,4 @@ date of note: 2024-09-15
 - [[Matrix Analysis by Horn]] pp 164 - 171
 - [[Matrix Analysis for Scientists and Engineers by Laub]] pp 82 - 85
 - [[Matrix Computations by Golub]] pp 354, 400 - 402
+- [[Finite Dimensional Vector Spaces by Halmos]] pp 112 -- 115

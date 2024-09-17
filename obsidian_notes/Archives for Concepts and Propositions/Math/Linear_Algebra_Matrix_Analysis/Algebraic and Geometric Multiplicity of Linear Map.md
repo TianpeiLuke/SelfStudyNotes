@@ -32,7 +32,7 @@ date of note: 2024-05-27
 >
 >For clarity, we sometimes refer to the *multiplicity of an eigenvalue* as its **algebraic multiplicity**.
 >$$
->\text{geometric multiplicity}(\lambda_{i}) := k_{i}
+>\text{algebraic multiplicity}(\lambda_{i}) := k_{i}
 >$$ 
 
 
@@ -82,6 +82,6 @@ date of note: 2024-05-27
 
 
 
-- [[Finite Dimensional Vector Spaces by Halmos]]
+- [[Finite Dimensional Vector Spaces by Halmos]] pp 112 -- 115
 - [[Matrix Analysis by Horn]] pp 49 - 56, 75 - 82
 - [[Matrix Analysis for Scientists and Engineers by Laub]]
