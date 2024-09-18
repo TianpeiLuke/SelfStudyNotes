@@ -31,6 +31,7 @@ date of note: 2024-05-27
 - [[Spectral Theorem of Normal Map and Eigen decomposition]]
 - [[Self-Adjoint Linear Map]]
 - [[Hermitian or Symmetric Matrix]]
+- [[Unitary Similarity and Unitary Diagonalizable]]
 
 >[!important] Spectral Theorem (Spectral Projection)
 >Let $A = [a_{i,j}] \in \mathbb{C}^{n \times n}$ be **Hermitian** and have **eigenvalues** $\lambda_{1} \,{,}\ldots{,}\,\lambda_{n}$. 

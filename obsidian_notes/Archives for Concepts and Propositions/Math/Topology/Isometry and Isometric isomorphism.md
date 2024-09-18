@@ -102,7 +102,7 @@ date of note: 2024-05-15
 >
 >On the other hand, an **unitary operator** $U: V \to V$ is a linear isometry on $V$
 
-- [[Unitary Similarity]]
+- [[Unitary Similarity and Unitary Diagonalizable]]
 - [[Unitary Operator in Hilbert Space]]
 - [[Unitary Group]]
 

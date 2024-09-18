@@ -96,7 +96,9 @@ date of note: 2024-09-16
 
 ## Unitary Similarity
 
-- [[Unitary Similarity]]
+![[Unitary Similarity and Unitary Diagonalizable#^9aed0a]]
+
+- [[Unitary Similarity and Unitary Diagonalizable]]
 
 
 

@@ -56,6 +56,15 @@ date of note: 2024-05-26
 - [[Vector Space over a Field]]
 - [[Reducibility of Linear Transformation]]
 
+
+## Decomposition of Linear Map
+
+>[!important] Theorem
+>Every *linear map* $A \in L(V)$ on a *finite-dimensional space* $V$ is the **direct sum** of a **nilpotent transformation** and an **invertible transformation**.
+
+
+
+
 ## Krylov Subspace
 
 - [[Krylov Subspace]]
@@ -75,4 +84,4 @@ date of note: 2024-05-26
 - [[Vector Space over a Field]]
 
 
-- [[Finite Dimensional Vector Spaces by Halmos]]
+- [[Finite Dimensional Vector Spaces by Halmos]] pp 109 - 111

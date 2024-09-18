@@ -27,6 +27,12 @@ date of note: 2024-09-16
 
 - [[General Linear Group]]
 
+### Unitarily Diagonalizable 
+
+![[Unitary Similarity and Unitary Diagonalizable#^be2b64]]
+
+- [[Unitary Similarity and Unitary Diagonalizable]]
+
 ## Explanation
 
 

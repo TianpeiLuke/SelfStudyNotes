@@ -61,10 +61,16 @@ date of note: 2024-05-27
 >[!quote]
 >the **eigenvalues** of $A \in M_n$ will always mean the **eigenvalues** *together with* their **respective (algebraic) multiplicities**.
 
->[!important]
+
+
+
+>[!important] Theorem
+>The **geometric multiplicity** of an **eigenvalue** $\Lambda$ of $A \in L(V)$ is **less than or equal to** its **algebraic multiplicity**.
+>
 >$$
 >\text{geometric multiplicity}(\lambda) := \text{dim}\left(\mathcal{E}_{\lambda}\right) \le \text{algebraic multiplicity}(\lambda)
 >$$ 
+
 
 
 ## Jordan Form

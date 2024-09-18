@@ -81,7 +81,7 @@ date of note: 2024-07-13
 ### Unitary Similarity and Unitary Equivalence
 
 - [[Unitary Group]]
-- [[Unitary Similarity]]
+- [[Unitary Similarity and Unitary Diagonalizable]]
 - [[Schur Triangularization and Schur Form]]
 
 

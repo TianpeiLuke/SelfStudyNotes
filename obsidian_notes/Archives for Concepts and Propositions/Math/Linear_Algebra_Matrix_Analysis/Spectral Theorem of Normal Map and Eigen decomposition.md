@@ -29,7 +29,7 @@ date of note: 2024-05-27
 - [[Eigenvalue and Eigenvector for Linear Map]]
 - [[Normal Transformation]]
 - [[General Linear Group]]
-- [[Similarity Relation between Linear Maps and Matrices]]
+- [[Unitary Similarity and Unitary Diagonalizable]]
 - [[Matrix Analysis by Horn]]
 
 >[!important] Definition
