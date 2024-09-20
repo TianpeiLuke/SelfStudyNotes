@@ -59,9 +59,7 @@ date of note: 2024-09-15
 >- There exists a **nontrivial solution** to the **homogeneous system** $$Ax = 0$$ *if and only if* $$\text{rank}(A) < n.$$
 
 - [[Range and Kernel of Linear Map]]
-- [[Surjective Function]]
-- [[Injective Function]]
-- [[Bijective Function and Inverse Function]]
+- [[Surjective Injective Invertible Linear Map and Rank]]
 
 ## Existence and Uniqueness of Solution for Matrix Linear System
 

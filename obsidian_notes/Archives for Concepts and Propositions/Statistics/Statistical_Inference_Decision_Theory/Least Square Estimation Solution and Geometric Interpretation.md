@@ -44,6 +44,7 @@ date of note: 2024-06-08
 
 ^17b91f
 
+- [[Surjective Injective Invertible Linear Map and Rank]]
 - [[Optimization by Vector Space Methods by Luenberger]] pp 82
 - [[Moore–Penrose Pseudo Inverse of Matrix]]
 
@@ -91,6 +92,7 @@ date of note: 2024-06-08
 
 ^03c5db
 
+- [[Range and Kernel of Product Map and Normal Map]]
 - [[Normal Transformation]]
 
 >[!info]

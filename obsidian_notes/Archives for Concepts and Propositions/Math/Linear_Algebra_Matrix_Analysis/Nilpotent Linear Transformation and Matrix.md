@@ -62,7 +62,7 @@ date of note: 2024-05-26
 >[!important] Theorem
 >Every *linear map* $A \in L(V)$ on a *finite-dimensional space* $V$ is the **direct sum** of a **nilpotent transformation** and an **invertible transformation**.
 
-
+- [[Surjective Injective Invertible Linear Map and Rank]]
 
 
 ## Krylov Subspace

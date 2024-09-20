@@ -23,6 +23,8 @@ date of note: 2024-05-27
 > \end{align*}
 >$$ 
 
+^8471b1
+
 - [[Adjoint of Linear Map]]
 - [[Inner Product Space]]
 

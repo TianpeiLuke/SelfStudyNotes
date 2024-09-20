@@ -141,6 +141,8 @@ date of note: 2024-05-20
 ##  Recommended Notes and References
 
 
+- [[Range and Kernel of Linear Map]]
 - [[Rank and Nullity of Linear Map]]
+- [[Rank–Nullity Theorem]]
 
 - [[Introduction to Smooth Manifolds by Lee]]

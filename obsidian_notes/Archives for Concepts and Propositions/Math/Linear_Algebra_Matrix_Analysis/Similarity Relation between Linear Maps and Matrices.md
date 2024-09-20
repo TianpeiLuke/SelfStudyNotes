@@ -30,6 +30,7 @@ date of note: 2024-09-16
 
 ^5ebca6
 
+- [[Surjective Injective Invertible Linear Map and Rank]]
 - [[General Linear Group]]
 
 

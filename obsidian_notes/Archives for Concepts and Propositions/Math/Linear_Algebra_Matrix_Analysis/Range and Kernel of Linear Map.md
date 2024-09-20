@@ -29,14 +29,18 @@ date of note: 2024-05-27
 >\text{R}(A) := \text{Im}(A) := A(V) = \left\{ Av: v\in V \right\} 
 >$$
 
+^e3c09c
+
 - [[Image of Group Homomorphism]]
 
 
 >[!important] Definition
 >The **kernel** or **null-space** of linear map $A: V \to W$ is defined as
 >$$
->\text{Ker}(A) := \left\{v\in V: Av = 0 \right\} 
+>\text{Ker}(A) := \text{N}(A) := \left\{v\in V: Av = 0 \right\} 
 >$$
+
+^50b63e
 
 - [[Kernel of Group Homomorphism]]
 
@@ -48,6 +52,12 @@ date of note: 2024-05-27
 
 - [[Linear Subspace]]
 
+
+## Range and Kernel of Product 
+
+![[Range and Kernel of Product Map and Normal Map#^7125e4]]
+
+- [[Range and Kernel of Product Map and Normal Map]]
 
 
 

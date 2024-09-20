@@ -34,11 +34,15 @@ date of note: 2024-05-11
 - [[Linear Isomorphism]]
 - [[Range and Kernel of Linear Map]]
 - [[Rank and Nullity of Linear Map]]
+- [[Surjective Injective Invertible Linear Map and Rank]]
 - [[Rank–Nullity Theorem]]
+- [[Range and Kernel of Product Map and Normal Map]]
+
 - [[Dual Space of Finite Dimensional Vector Space]]
 - [[Dual Basis of Dual Space]]
 - [[Annihilator of Subset of Vector Space]]
 - [[Dual of Direct Sum]]
+
 
 ### Invariance of Linear Transformation
 

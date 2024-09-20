@@ -56,6 +56,7 @@ date of note: 2024-05-27
 >
 >Then the **characteristic polynomial** of $A$ is equal to  the **characteristic polynomial** of $B^{\text{-1}}AB$, i.e. $$\det \left(\lambda I - A\right) = \det \left(\lambda I - B^{-1} A B\right)$$
 
+- [[Surjective Injective Invertible Linear Map and Rank]]
 
 ## Fundamental Theorem of Algebra
 

@@ -76,10 +76,15 @@ date of note: 2024-07-26
 - [[Normal Transformation]]
 - [[Rank and Nullity of Linear Map]]
 - [[Least Square Estimation Solution and Geometric Interpretation]]
+- [[Surjective Injective Invertible Linear Map and Rank]]
+- [[Range and Kernel of Product Map and Normal Map]]
+
+
 
 
 ## SVD of Moore-Penrose Pseudoinverse
 
+![[Singular Value Decomposition and Pseudoinverse#^652a04]]
 
 - [[Singular Value Decomposition and Pseudoinverse]]
 

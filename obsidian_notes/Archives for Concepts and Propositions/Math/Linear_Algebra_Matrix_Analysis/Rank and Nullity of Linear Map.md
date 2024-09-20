@@ -67,6 +67,10 @@ date of note: 2024-05-27
 >$$
 >\text{rank}(A\,B) \le \min \left\{ \; \text{rank}(A) \;,\; \text{rank}(B) \;\right\}
 >$$
+>- the **rank of product map** is *bounded below* by 
+>$$
+>\text{rank}(A) + \text{rank}(B) - n \le  \text{rank}(A\,B)
+>$$
 >- the **nullity of product map** is *bounded above* by the **sum** of **each map's nullity**
 >$$
 >\text{nullity}(A\,B) \; \le \;  \text{nullity}(A) +\text{nullity}(B) 
@@ -80,10 +84,20 @@ date of note: 2024-05-27
 >\text{rank}(AB) = \text{rank}(BA) = \text{rank}(A)
 >$$
 >That is, the **rank is invariant** under *__invertible__ linear transformation*.
+>
+>Also  the **nullity of product map** is 
+>$$
+>\text{nullity}(B\,A) = \text{nullity}(A)
+>$$
 
 ### Rank-Nullity Theorem
 
 - [[Rank–Nullity Theorem]]
+
+
+## Range and Kernel of Product and Normal Map
+
+- [[Range and Kernel of Product Map and Normal Map]]
 
 
 
@@ -98,5 +112,12 @@ date of note: 2024-05-27
 - [[Kernel of Group Homomorphism]]
 - [[Image of Group Homomorphism]]
 
+- [[Differential of a Smooth Map at Point]]
+- [[Smooth Map]]
+- [[Rank of Smooth Map]]
+- [[Rank Theorem]]
+
+
 - [[Matrix Analysis by Horn]]
 - [[Finite Dimensional Vector Spaces by Halmos]] pp 90
+- [[Matrix Analysis for Scientists and Engineers by Laub]] pp 24

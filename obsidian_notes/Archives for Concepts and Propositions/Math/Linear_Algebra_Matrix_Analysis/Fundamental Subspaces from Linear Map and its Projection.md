@@ -25,7 +25,7 @@ date of note: 2024-09-05
 >
 >The **four fundamental subspaces** from linear map $A$ include
 >- **Range/Image of linear map $A$**: $$\text{R}(A) = \text{Im}(A) := \left\{Av\in W:\; v\in V \right\}  \subseteq W.$$
->- **Kernel of linear map $A$**: $$\text{Ker}(A) := \left\{v\in V: Av = 0 \right\}  \subseteq V.$$
+>- **Kernel (Null Space) of linear map $A$**: $$\text{Ker}(A) = \text{N}(A) := \left\{v\in V: Av = 0 \right\}  \subseteq V.$$
 >- **Range/Image of adjoint $A^{*}$**:  $$\text{R}(A^{*}) = \text{Im}(A^{*}) := \left\{A^{*}w \in V^{*}:\; w\in W^{*}\simeq W \right\}  \subseteq V^{*} \simeq V.$$
 >- **Kernel of adjoint $A^{*}$**:  $$\text{Ker}(A^{*}) := \left\{w\in W^{*}: A^{*}w = 0 \right\}  \subseteq  W^{*} \simeq W.$$
 
@@ -39,6 +39,9 @@ date of note: 2024-09-05
 - [[Dual Space of Hilbert Space]]
 
 
+
+
+
 ## Explanation
 
 >[!info]
@@ -48,7 +51,7 @@ date of note: 2024-09-05
 
 ## Direct Sum Decomposition of Domain and Codomain
 
->[!important] Proposition
+>[!important] Theorem
 >Let $A\in M_{m,n}$ be matrix representation of linear map $A: V\to W$, where $V,W$ are vector spaces with dimension $n$ and $m$ respectively.
 >
 >Then the **four fundamental subspaces** have the following relationship:
@@ -57,7 +60,7 @@ date of note: 2024-09-05
 
 - [[Orthogonal Complement of Hilbert Spaces]]
 
->[!important] Proposition
+>[!important] Theorem
 >Let $A\in M_{m,n}$ be matrix representation of linear map $A: V\to W$, where $V,W$ are vector spaces with dimension $n$ and $m$ respectively.
 >
 >Then
@@ -65,6 +68,9 @@ date of note: 2024-09-05
 >- the **domain** of $A$ has the following **direct sum decomposition** $$V = \text{Ker}(A) \;\oplus\; \text{R}(A^{*})$$  where $$\text{dim}(\text{Ker}(A)) = \text{dim}(V) - \text{rank}(A) = n - r; \quad \text{dim}\left(\text{R}(A^{*})\right) = r.$$ 
 
 ^3f989c
+
+![[fundamental_subspaces.png]]
+
 
 - [[Direct Sum of Subspaces]]
 - [[Direct Sum of Hilbert Spaces]]
@@ -74,7 +80,12 @@ date of note: 2024-09-05
 >The **range** of both $A$ and its **adjoint** $A^{*}$ has the **same dimension** $r$.
 >
 >The **kernel** of both $A$ and its **adjoint** $A^{*}$ has the **same codimension** $r$.
- 
+
+## Range and Kernel of Product
+
+
+- [[Range and Kernel of Product Map and Normal Map]]
+
 
 ## SVD and Fundamental Subspaces
 
@@ -118,4 +129,4 @@ date of note: 2024-09-05
 
 - [[Finite Dimensional Vector Spaces by Halmos]]
 - [[Matrix Analysis by Horn]]
-- [[Matrix Analysis for Scientists and Engineers by Laub]]
+- [[Matrix Analysis for Scientists and Engineers by Laub]] pp 22 - 24

@@ -48,6 +48,7 @@ date of note: 2024-05-26
 >(f \circ g)(v) = f(g(v)) 
 >$$
 
+- [[Surjective Injective Invertible Linear Map and Rank]]
 - [[Linear Isomorphism]]
 - [[Linear Map]]
 - [[Bijective Function and Inverse Function]]

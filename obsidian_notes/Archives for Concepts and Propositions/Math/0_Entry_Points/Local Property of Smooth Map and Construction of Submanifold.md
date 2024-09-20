@@ -16,6 +16,11 @@ date of note: 2024-05-18
 
 ### Rank and Local Property of Smooth Map
 
+
+- [[Range and Kernel of Linear Map]]
+- [[Rank and Nullity of Linear Map]]
+- [[Rank–Nullity Theorem]]
+
 - [[Smooth Map]]
 - [[Rank of Smooth Map]]
 

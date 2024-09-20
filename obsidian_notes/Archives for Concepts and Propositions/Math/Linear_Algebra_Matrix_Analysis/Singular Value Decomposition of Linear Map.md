@@ -153,8 +153,9 @@ date of note: 2024-05-27
 
 ## Fundamental Subspaces
 
+![[Singular Value Decomposition and Fundamental Subspaces#^b13e8a]]
 
-- [[Singular Vector Decomposition and Fundamental Subspaces]]
+- [[Singular Value Decomposition and Fundamental Subspaces]]
 - [[Fundamental Subspaces from Linear Map and its Projection]]
 
 
