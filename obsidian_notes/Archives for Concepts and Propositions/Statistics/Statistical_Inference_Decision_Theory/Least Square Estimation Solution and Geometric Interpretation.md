@@ -100,7 +100,7 @@ date of note: 2024-06-08
 >$$
 >is called the **Moore–Penrose pseudo-inverse** of matrix $X$. Then the least square estimate can be represented as
 >$$
->\hat{\beta} = X^{\dagger}y
+>\hat{\beta} = X^{+}y
 >$$
 
 - [[Moore–Penrose Pseudo Inverse of Matrix]]

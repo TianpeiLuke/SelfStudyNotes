@@ -61,5 +61,11 @@ date of note: 2024-05-27
 - [[Image of Group Homomorphism]]
 
 
+- [[Rank and Nullity of Linear Map]]
+- [[Rank–Nullity Theorem]]
+- [[Fundamental Subspaces from Linear Map and its Projection]]
+- [[Singular Value Decomposition and Fundamental Subspaces]]
+
+
 - [[Matrix Analysis by Horn]]
 - [[Finite Dimensional Vector Spaces by Halmos]] pp 88

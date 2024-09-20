@@ -19,9 +19,13 @@ date of note: 2024-05-12
 - [[Concepts and Theorems for Matrix Theory]]
 - [[Singular Value Decomposition of Linear Map]]
 - [[Low Rank Approximation of Matrix and Eckhart-Young Theorem]]
+- [[Moore–Penrose Pseudo Inverse of Matrix]]
+- [[Singular Vector Decomposition and Pseudoinverse]]
 
 ### General Linear Systems
 
+- [[System of Linear Equations or Linear System]]
+- [[Existence and Uniqueness of Solution of Linear Equations]]
 - [[LU Factorization of Matrix]]
 
 ### Special Linear Systems
@@ -38,9 +42,8 @@ date of note: 2024-05-12
 
 - [[Least Square Estimation]]
 - [[Least Square Estimation Solution and Geometric Interpretation]]
-- [[Moore–Penrose Pseudo Inverse of Matrix]]
 - [[Least Square Estimation with QR Factorization]]
-
+- [[Least Square Estimation via Singular Value Decomposition]]
 
 
 ### Eigenvalue Problem

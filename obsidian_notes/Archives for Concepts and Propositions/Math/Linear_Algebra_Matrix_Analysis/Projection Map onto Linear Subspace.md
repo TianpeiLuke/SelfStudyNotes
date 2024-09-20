@@ -28,6 +28,8 @@ date of note: 2024-05-26
 >P_{S}\,z = x.  
 >$$
 
+^38f848
+
 - [[Invariance under Linear Transformation]]
 - [[Direct Sum of Subspaces]]
 - [[Linear Subspace]]

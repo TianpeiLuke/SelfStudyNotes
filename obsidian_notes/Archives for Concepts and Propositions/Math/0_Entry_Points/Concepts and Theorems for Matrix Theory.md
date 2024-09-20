@@ -77,6 +77,9 @@ date of note: 2024-07-13
 
 - [[Similarity Relation between Linear Maps and Matrices]]
 - [[Diagonalizable Matrix]]
+- [[Simultaneously Diagonalizable Matrices]]
+- [[Commuting Family of Matrices]]
+
 
 ### Unitary Similarity and Unitary Equivalence
 
@@ -91,6 +94,7 @@ date of note: 2024-07-13
 - [[Moore–Penrose Pseudo Inverse of Matrix]]
 - [[Sherman–Morrison–Woodbury Matrix Inversion Formula]]
 - [[Schur Complement and Inversion of Block Matrix]]
+- [[Singular Vector Decomposition and Pseudoinverse]]
 
 
 ### Linear System
@@ -110,8 +114,10 @@ date of note: 2024-07-13
 
 - [[Singular Value Decomposition of Linear Map]]
 - [[Low Rank Approximation of Matrix and Eckhart-Young Theorem]]
-- [[Singular Value Decomposition and Orthogonal Projection]]
+- [[Singular Value Decomposition and Fundamental Subspaces]]
+- [[Singular Vector Decomposition and Pseudoinverse]]
 - [[Least Square Estimation via Singular Value Decomposition]]
+
 
 
 ### Perturbation Theory and Eigenvalue

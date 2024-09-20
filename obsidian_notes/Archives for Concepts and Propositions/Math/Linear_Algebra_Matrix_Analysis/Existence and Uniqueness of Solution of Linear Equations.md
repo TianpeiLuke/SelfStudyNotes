@@ -67,24 +67,24 @@ date of note: 2024-09-15
 
 >[!important] Theorem (Existence)
 >The **matrix linear system** $$AX = B$$ where $A\in \mathbb{R}^{m\times n}$, $B\in \mathbb{R}^{m\times k}$ has a **solution** *if and only if* $$\text{R}(B) \subseteq \text{R}(A);$$
->- equivalently, a solution **exists** *if and only if* $$A\,A^{\dagger}\,B = B.$$ Here $A^{\dagger}$ is the **Moore-Penrose pesudoinverse**.
+>- equivalently, a solution **exists** *if and only if* $$A\,A^{+}\,B = B.$$ Here $A^{\dagger}$ is the **Moore-Penrose pesudoinverse**.
 
 - [[Moore–Penrose Pseudo Inverse of Matrix]]
 
 >[!important] Theorem (Solution of Matrix Linear System)
->Let $A\in \mathbb{R}^{m\times n}$, $B\in \mathbb{R}^{m\times k}$ and *suppose* that $$A\,A^{\dagger}\,B = B.$$
+>Let $A\in \mathbb{R}^{m\times n}$, $B\in \mathbb{R}^{m\times k}$ and *suppose* that $$A\,A^{+}\,B = B.$$
 >
->Then any matrix of the **form** $$X = A^{\dagger}\,B + \left(I - A^{\dagger}\,A\right)\,Y$$
+>Then any matrix of the **form** $$X = A^{+}\,B + \left(I - A^{+}\,A\right)\,Y$$
 >where $Y\in \mathbb{R}^{n\times k}$ is *arbitrary* is a **solution** of $$A\,X = B.$$  Furthermore, **all solutions** of above matrix linear system are of this form.
 
 - [[Least Square Estimation Solution and Geometric Interpretation]]
 
 
 >[!important] Theorem (Uniqueness)
->A solution to the *matrix linear system* $$AX = B$$ where $A\in \mathbb{R}^{m\times n}$, $B\in \mathbb{R}^{m\times k}$ is **unique** *if and only if* $$A^{\dagger}\,A = I;$$
+>A solution to the *matrix linear system* $$AX = B$$ where $A\in \mathbb{R}^{m\times n}$, $B\in \mathbb{R}^{m\times k}$ is **unique** *if and only if* $$A^{+}\,A = I;$$
 >- equivalently, the above equation has a **unique solution** *if and only if* $$\text{Ker}(A) = \{ 0 \}.$$
 
-
+- [[Fundamental Subspaces from Linear Map and its Projection]]
 
 
 

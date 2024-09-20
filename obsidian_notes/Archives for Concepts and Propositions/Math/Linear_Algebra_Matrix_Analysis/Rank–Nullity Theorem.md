@@ -36,6 +36,9 @@ date of note: 2024-05-27
 >\text{dim}\;\text{domain}(A) = \text{dim}\;\text{Im}(A) + \text{dim}\;\text{Ker}(A)
 >$$
 
+![[Fundamental Subspaces from Linear Map and its Projection#^3f989c]]
+
+- [[Fundamental Subspaces from Linear Map and its Projection]]
 
 ## Quotient of Domain Modulo Kernel
 

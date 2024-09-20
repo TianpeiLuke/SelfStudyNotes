@@ -23,7 +23,7 @@ date of note: 2024-09-16
 >[!important] Definition
 >If $A \in M_{n}$ is *similar* to a *diagonal matrix*, then $A$ is said to be **diagonalizable**.
 >
->That is, $A$ is **diagonalizable** if there exists an non-singular matrix $S\in GL(n)$ such that $$A = S^{-1}\,\Lambda\,S$$ where $\Lambda := \text{diag}(\lambda_{1} \,{,}\ldots{,}\,\lambda_{n})$ is a diagonal matrix.
+>That is, $A$ is **diagonalizable** if there exists an non-singular matrix $S\in GL(n)$ such that $$A = S\,\Lambda\,S^{-1}$$ where $\Lambda := \text{diag}(\lambda_{1} \,{,}\ldots{,}\,\lambda_{n})$ is a diagonal matrix.
 
 - [[General Linear Group]]
 
@@ -104,7 +104,7 @@ date of note: 2024-09-16
 
 
 
-- [[Matrix Analysis by Horn]] pp 59
+- [[Matrix Analysis by Horn]] pp 59 - 61
 - [[Matrix Analysis for Scientists and Engineers by Laub]]
 - [[Finite Dimensional Vector Spaces by Halmos]]
 - [[Matrix Computations by Golub]] pp 353 - 354

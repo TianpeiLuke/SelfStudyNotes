@@ -124,7 +124,7 @@ date of note: 2024-05-11
 
 - [[Concepts and Theorems for Matrix Theory]]
 - [[Singular Value Decomposition of Linear Map]]
-- [[Singular Value Decomposition and Orthogonal Projection]]
+- [[Singular Value Decomposition and Fundamental Subspaces]]
 
 
 ## Explanation

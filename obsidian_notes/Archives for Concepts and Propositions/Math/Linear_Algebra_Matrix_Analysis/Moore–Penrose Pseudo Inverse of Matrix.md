@@ -29,14 +29,16 @@ date of note: 2024-07-26
 >- $$(AX)^{T} = AX$$
 >- $$(XA)^{T} = XA$$
 >  
->Denote the **Moore-Penrose Pseudo Inverse** of $A$ as $A^{\dagger}.$
+>Denote the **Moore-Penrose Pseudo Inverse** of $A$ as $A^{+}.$
+
+^56d67e
 
 
 ## Explanation
 
 >[!info]
 >$$
->A\in \mathbb{R}^{n\times m}, \; A^{\dagger} \in \mathbb{R}^{m \times n}
+>A\in \mathbb{R}^{n\times m}, \; A^{+} \in \mathbb{R}^{m \times n}
 >$$
 
 ## Existence
@@ -44,36 +46,42 @@ date of note: 2024-07-26
 >[!important] Proposition
 >Let $A \in M_{n,m}$ be matrix of dimension $n\times m$.  
 >
->The **Moore-Penrose Pseudo Inverse** $A^{\dagger}$ **exists** and is **unique**.
+>The **Moore-Penrose Pseudo Inverse** $A^{+}$ **exists** and is **unique**.
 
 
 ## Properties
 
 >[!important] Proposition
->Let $A \in M_{n,m}$ be matrix of dimension $n\times m$.  The **Moore-Penrose Pseudo Inverse** $A^{\dagger}$.
+>Let $A \in M_{n,m}$ be matrix of dimension $n\times m$.  The **Moore-Penrose Pseudo Inverse** $A^{+}$.
 >
 >The following properties hold
->- If $A$ is **non-singular**, then $$A^{\dagger} = A^{-1}.$$
->- **Dual Pseudo Inverse** $$\left(A^{\dagger}\right)^{\dagger} = A$$
->- **Pseudoinverse and Transpose** $$\left(A^{T}\right)^{\dagger} = \left(A^{\dagger}\right)^{T}$$
->- **Pseudoinverse of Symmetric Idempotent**: if $A^2= A$, $A = A^{T}$, then $$A^{\dagger} = A$$
->- Both $$A\,A^{\dagger}, \;\; A^{\dagger}\,A$$ are **idempotent**.
->- **Rank**: $$\text{rank}(A) = \text{rank}(A^{\dagger}) = \text{rank}\left(A\,A^{\dagger}\right) = \text{rank}\left(A^{\dagger}\,A\right)$$
->- $$A^{T}\,A\,A^{\dagger} = A^{T} = A^{\dagger}\,A\,A^{T}$$
->- $$A^{T}\,\left(A^{\dagger}\right)^{T}\,A^{\dagger} = A^{\dagger}= A^{\dagger}\,\left(A^{\dagger}\right)^{T}\,A^{T}$$
->- $$\left(A^{T}\,A\right)^{\dagger} = A^{\dagger}\,\left(A^{\dagger}\right)^{T},$$ $$\left(A\,A^{T}\right)^{\dagger} = \left(A^{\dagger}\right)^{T}\,A^{\dagger}.$$
->- $$A\left(A^{T}\,A\right)^{\dagger}\, A^{T}\,A = A = A\,A^{T}\left(A\,A^{T}\right)^{\dagger}\,A$$
->- $$A^{\dagger} = \left(A^{T}\,A\right)^{\dagger}\,A^{T} = A^{T}\,\left(A\,A^{T}\right)^{\dagger}$$
->- **Full Column Rank**: if $A$ has *full column rank*, $$A^{\dagger} = \left(A^{T}\,A\right)^{-1}\,A^{T}.$$
->- **Full Row Rank**: if $A$ has *full row rank*, $$A^{\dagger} = A^{T}\,\left(A\,A^{T}\right)^{-1}.$$
->- **Zero**: $$A = 0 \;\iff\; A^{\dagger} = 0.$$
->- $$AB = 0 \;\iff \; B^{\dagger}\,A^{\dagger} = 0$$
->- $$A^{\dagger}\,B = 0 \;\iff\; A^{T}\,B = 0$$
->- **Kronecker product** $$\left(A \otimes B\right)^{\dagger} = A^{\dagger} \otimes B^{\dagger}.$$
+>- If $A$ is **non-singular**, then $$A^{+} = A^{-1}.$$
+>- **Dual Pseudo Inverse** $$\left(A^{+}\right)^{+} = A$$
+>- **Pseudoinverse and Transpose** $$\left(A^{T}\right)^{+} = \left(A^{+}\right)^{T}$$
+>- **Pseudoinverse of Symmetric Idempotent**: if $A^2= A$, $A = A^{T}$, then $$A^{+} = A$$
+>- Both $$A\,A^{+}, \;\; A^{+}\,A$$ are **idempotent**.
+>- **Rank**: $$\text{rank}(A) = \text{rank}(A^{+}) = \text{rank}\left(A\,A^{+}\right) = \text{rank}\left(A^{+}\,A\right)$$
+>- $$A^{T}\,A\,A^{+} = A^{T} = A^{+}\,A\,A^{T}$$
+>- $$A^{T}\,\left(A^{+}\right)^{T}\,A^{+} = A^{+}= A^{+}\,\left(A^{+}\right)^{T}\,A^{T}$$
+>- $$\left(A^{T}\,A\right)^{+} = A^{+}\,\left(A^{+}\right)^{T},$$ $$\left(A\,A^{T}\right)^{+} = \left(A^{+}\right)^{T}\,A^{+}.$$
+>- $$A\left(A^{T}\,A\right)^{+}\, A^{T}\,A = A = A\,A^{T}\left(A\,A^{T}\right)^{+}\,A$$
+>- $$A^{+} = \left(A^{T}\,A\right)^{+}\,A^{T} = A^{T}\,\left(A\,A^{T}\right)^{+}$$
+>- **Full Column Rank**: if $A$ has *full column rank*, $$A^{+} = \left(A^{T}\,A\right)^{-1}\,A^{T}.$$
+>- **Full Row Rank**: if $A$ has *full row rank*, $$A^{+} = A^{T}\,\left(A\,A^{T}\right)^{-1}.$$
+>- **Zero**: $$A = 0 \;\iff\; A^{+} = 0.$$
+>- $$AB = 0 \;\iff \; B^{+}\,A^{+} = 0$$
+>- $$A^{+}\,B = 0 \;\iff\; A^{T}\,B = 0$$
+>- **Kronecker product** $$\left(A \otimes B\right)^{+} = A^{+} \otimes B^{+}.$$
 
 - [[Normal Transformation]]
 - [[Rank and Nullity of Linear Map]]
 - [[Least Square Estimation Solution and Geometric Interpretation]]
+
+
+## SVD of Moore-Penrose Pseudoinverse
+
+
+- [[Singular Vector Decomposition and Pseudoinverse]]
 
 
 

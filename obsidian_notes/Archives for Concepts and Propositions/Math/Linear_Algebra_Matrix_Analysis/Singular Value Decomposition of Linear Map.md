@@ -151,7 +151,11 @@ date of note: 2024-05-27
 
 - [[Low Rank Approximation of Matrix and Eckhart-Young Theorem]]
 
+## Fundamental Subspaces
 
+
+- [[Singular Vector Decomposition and Fundamental Subspaces]]
+- [[Fundamental Subspaces from Linear Map and its Projection]]
 
 
 
