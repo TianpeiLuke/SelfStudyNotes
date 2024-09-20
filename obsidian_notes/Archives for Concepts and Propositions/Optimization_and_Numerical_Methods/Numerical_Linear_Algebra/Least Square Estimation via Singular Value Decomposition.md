@@ -63,10 +63,10 @@ date of note: 2024-08-21
 
 ## Explanation
 
-![[Singular Vector Decomposition and Pseudoinverse#^ad36dd]]
+![[Singular Value Decomposition and Pseudoinverse#^ad36dd]]
 
 
-- [[Singular Vector Decomposition and Pseudoinverse]]
+- [[Singular Value Decomposition and Pseudoinverse]]
 
 
 -----------

@@ -20,7 +20,7 @@ date of note: 2024-05-12
 - [[Singular Value Decomposition of Linear Map]]
 - [[Low Rank Approximation of Matrix and Eckhart-Young Theorem]]
 - [[Moore–Penrose Pseudo Inverse of Matrix]]
-- [[Singular Vector Decomposition and Pseudoinverse]]
+- [[Singular Value Decomposition and Pseudoinverse]]
 
 ### General Linear Systems
 

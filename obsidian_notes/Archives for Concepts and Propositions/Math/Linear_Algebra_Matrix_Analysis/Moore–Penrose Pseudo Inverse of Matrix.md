@@ -81,7 +81,7 @@ date of note: 2024-07-26
 ## SVD of Moore-Penrose Pseudoinverse
 
 
-- [[Singular Vector Decomposition and Pseudoinverse]]
+- [[Singular Value Decomposition and Pseudoinverse]]
 
 
 

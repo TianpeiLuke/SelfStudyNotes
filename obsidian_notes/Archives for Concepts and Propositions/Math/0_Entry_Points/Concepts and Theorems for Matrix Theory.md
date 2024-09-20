@@ -94,7 +94,7 @@ date of note: 2024-07-13
 - [[Moore–Penrose Pseudo Inverse of Matrix]]
 - [[Sherman–Morrison–Woodbury Matrix Inversion Formula]]
 - [[Schur Complement and Inversion of Block Matrix]]
-- [[Singular Vector Decomposition and Pseudoinverse]]
+- [[Singular Value Decomposition and Pseudoinverse]]
 
 
 ### Linear System
@@ -115,7 +115,7 @@ date of note: 2024-07-13
 - [[Singular Value Decomposition of Linear Map]]
 - [[Low Rank Approximation of Matrix and Eckhart-Young Theorem]]
 - [[Singular Value Decomposition and Fundamental Subspaces]]
-- [[Singular Vector Decomposition and Pseudoinverse]]
+- [[Singular Value Decomposition and Pseudoinverse]]
 - [[Least Square Estimation via Singular Value Decomposition]]
 
 
