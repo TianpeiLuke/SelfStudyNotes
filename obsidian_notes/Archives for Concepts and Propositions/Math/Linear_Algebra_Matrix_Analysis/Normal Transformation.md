@@ -53,7 +53,8 @@ date of note: 2024-05-27
 ##  Recommended Notes and References
 
 
-
+- [[Matrix]]
+- [[Linear Map]]
 - [[Adjoint of Linear Map]]
 - [[Inner Product Space]]
 

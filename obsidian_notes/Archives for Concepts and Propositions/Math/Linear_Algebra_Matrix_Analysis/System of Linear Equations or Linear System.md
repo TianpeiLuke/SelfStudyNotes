@@ -76,6 +76,8 @@ date of note: 2024-09-15
 - [[Rank and Nullity of Linear Map]]
 - [[Rank–Nullity Theorem]]
 
+- [[Linear Map]]
+- [[Matrix]]
 - [[Moore–Penrose Pseudo Inverse of Matrix]]
 - [[Linear Regression]]
 - [[Least Square Estimation]]

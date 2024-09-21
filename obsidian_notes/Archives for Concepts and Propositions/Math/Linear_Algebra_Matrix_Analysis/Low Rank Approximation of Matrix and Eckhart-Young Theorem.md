@@ -78,6 +78,7 @@ date of note: 2024-08-21
 - [[Singular Value Decomposition of Linear Map]]
 - [[Unitary Group]]
 - [[Projection Theorem of Hilbert Spaces]]
+- [[Matrix]]
 
 
 - [[Matrix Analysis by Horn]] pp 150
