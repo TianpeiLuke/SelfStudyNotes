@@ -164,13 +164,40 @@ date of note: 2024-06-08
 
 ^c0f78a
 
+- [[Fundamental Orthogonal Projections]]
 - [[Projection Map onto Linear Subspace]]
 - [[Projection Theorem of Hilbert Spaces]]
 - [[Orthogonal Complement of Hilbert Spaces]]
 - [[Hilbert Space]]
-- [[Orthogonal Complement of Hilbert Spaces]]
 
+## General Solution of Linear Least Square Estimation
 
+>[!important] Theorem
+>Let $X\in \mathbb{R}^{n\times d}$, and $y\in \mathbb{R}^{n}$.
+>
+>The **general solution** of **linear least square estimation** $$\hat{\beta} = \arg\min_{\beta} \lVert X\beta - y \rVert_{2}^2$$ is of the form
+>$$
+>\begin{align*}
+>\beta &= X^{+} y + \left(I- X^{+}X\right)z \\[5pt]
+>&= P_{\text{Ker}(X)^{\perp}}\left(X^{+}y\right) + P_{\text{Ker}(X)}z
+>\end{align*}
+>$$
+>where $z\in \mathbb{R}^{d}$ is *arbitrary*.
+>- The solution is **unique** if $X$ has **full column rank** i.e. $$\text{rank}(X) = d \; \iff \; X^{+}X = I$$
+
+^0bdae8
+
+- [[Fundamental Orthogonal Projections]]
+- [[Moore–Penrose Pseudo Inverse of Matrix]]
+- [[Surjective Injective Invertible Linear Map and Rank]]
+- [[Matrix Analysis for Scientists and Engineers by Laub]] pp 65 - 66
+
+## Solution of Linear System
+
+![[Existence and Uniqueness of Solution of Linear Equations#^1dcd93]]
+
+- [[System of Linear Equations or Linear System]]
+- [[Existence and Uniqueness of Solution of Linear Equations]]
 
 
 

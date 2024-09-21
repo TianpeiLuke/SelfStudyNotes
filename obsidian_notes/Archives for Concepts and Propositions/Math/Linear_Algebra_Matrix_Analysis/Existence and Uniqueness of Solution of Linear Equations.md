@@ -75,14 +75,30 @@ date of note: 2024-09-15
 >Then any matrix of the **form** $$X = A^{+}\,B + \left(I - A^{+}\,A\right)\,Y$$
 >where $Y\in \mathbb{R}^{n\times k}$ is *arbitrary* is a **solution** of $$A\,X = B.$$  Furthermore, **all solutions** of above matrix linear system are of this form.
 
+^1dcd93
+
 - [[Least Square Estimation Solution and Geometric Interpretation]]
 
+![[Fundamental Orthogonal Projections#^64a8f0]]
+
+![[Fundamental Orthogonal Projections#^3d1aa0]]
+
+- [[Fundamental Orthogonal Projections]]
 
 >[!important] Theorem (Uniqueness)
 >A solution to the *matrix linear system* $$AX = B$$ where $A\in \mathbb{R}^{m\times n}$, $B\in \mathbb{R}^{m\times k}$ is **unique** *if and only if* $$A^{+}\,A = I;$$
 >- equivalently, the above equation has a **unique solution** *if and only if* $$\text{Ker}(A) = \{ 0 \}.$$
 
-- [[Fundamental Subspaces from Linear Map and its Projection]]
+- [[Fundamental Subspaces from Linear Map]]
+
+## Linear Least Square Estimation
+
+![[Least Square Estimation#^9775a7]]
+
+![[Least Square Estimation Solution and Geometric Interpretation#^0bdae8]]
+
+- [[Least Square Estimation]]
+- [[Least Square Estimation Solution and Geometric Interpretation]]
 
 
 

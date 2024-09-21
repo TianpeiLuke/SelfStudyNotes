@@ -20,7 +20,7 @@ date of note: 2024-08-21
 >[!important]
 >**Name**: Singular Value Decomposition and Orthogonal Projection
 
-![[Fundamental Subspaces from Linear Map and its Projection#^71c730]]
+![[Fundamental Subspaces from Linear Map#^71c730]]
 
 >[!important] Proposition
 >Let $A \in M_{m,n}$ be a $m\times n$ matrix and the **singular value decomposition (SVD)** of $A$ is given by $$A = U \,\Sigma\,V^{*},$$ where 
@@ -43,7 +43,7 @@ date of note: 2024-08-21
 ^b13e8a
 
 - [[Singular Value Decomposition of Linear Map]]
-- [[Fundamental Subspaces from Linear Map and its Projection]]
+- [[Fundamental Subspaces from Linear Map]]
 - [[Orthogonal Complement of Hilbert Spaces]]
 
 ![[svd_fundamental_subspaces.png]]
@@ -53,13 +53,19 @@ date of note: 2024-08-21
 
 
 
+## Projection of Fundamental Subspaces via SVD
+
+![[Fundamental Orthogonal Projections#^6010c1]]
+
+- [[Fundamental Orthogonal Projections]]
+
 
 
 -----------
 ##  Recommended Notes and References
 
 
-- [[Fundamental Subspaces from Linear Map and its Projection]]
+- [[Fundamental Subspaces from Linear Map]]
 - [[Singular Value Decomposition of Linear Map]]
 - [[Range and Kernel of Linear Map]]
 - [[Projection Map onto Linear Subspace]]

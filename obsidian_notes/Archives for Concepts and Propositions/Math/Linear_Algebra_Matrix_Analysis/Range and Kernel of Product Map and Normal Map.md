@@ -34,7 +34,7 @@ date of note: 2024-09-20
 
 ^7125e4
 
-- [[Fundamental Subspaces from Linear Map and its Projection]]
+- [[Fundamental Subspaces from Linear Map]]
 - [[Range and Kernel of Linear Map]]
 - [[Normal Transformation]]
 

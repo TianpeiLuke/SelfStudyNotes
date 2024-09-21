@@ -68,7 +68,7 @@ date of note: 2024-05-12
 
 - [[Linear Subspace]]
 - [[Projection Map onto Linear Subspace]]
-- [[Fundamental Subspaces from Linear Map and its Projection]]
+- [[Fundamental Subspaces from Linear Map]]
 - [[Orthogonal Group]]
 - [[An Introduction to Optimization on Smooth Manifolds by Boumal]] pp 9 - 10
 

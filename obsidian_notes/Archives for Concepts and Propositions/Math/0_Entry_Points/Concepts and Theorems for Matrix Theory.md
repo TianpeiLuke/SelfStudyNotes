@@ -96,7 +96,8 @@ date of note: 2024-07-13
 - [[Sherman–Morrison–Woodbury Matrix Inversion Formula]]
 - [[Schur Complement and Inversion of Block Matrix]]
 - [[Singular Value Decomposition and Pseudoinverse]]
-
+- [[Fundamental Subspaces from Linear Map]]
+- [[Fundamental Orthogonal Projections]]
 
 ### Linear System
 

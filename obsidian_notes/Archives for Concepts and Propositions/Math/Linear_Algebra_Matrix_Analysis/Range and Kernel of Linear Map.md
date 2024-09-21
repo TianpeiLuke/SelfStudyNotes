@@ -73,7 +73,7 @@ date of note: 2024-05-27
 
 - [[Rank and Nullity of Linear Map]]
 - [[Rank–Nullity Theorem]]
-- [[Fundamental Subspaces from Linear Map and its Projection]]
+- [[Fundamental Subspaces from Linear Map]]
 - [[Singular Value Decomposition and Fundamental Subspaces]]
 
 

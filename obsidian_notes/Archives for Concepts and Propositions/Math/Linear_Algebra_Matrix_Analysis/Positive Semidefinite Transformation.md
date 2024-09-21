@@ -75,6 +75,8 @@ date of note: 2024-07-03
 
 - [[Eigenvalue and Eigenvector for Linear Map]]
 - [[Eigenspace and Spectrum for Linear Map]]
+- [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
+- [[Spectral Theorem of Normal Map and Eigen decomposition]]
 
 
 - [[Gaussian Random Vector]]

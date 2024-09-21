@@ -88,6 +88,12 @@ date of note: 2024-07-26
 
 - [[Singular Value Decomposition and Pseudoinverse]]
 
+## Orthogonal Project on Range and Kernel Spaces
+
+![[Fundamental Orthogonal Projections#^6010c1]]
+
+- [[Fundamental Orthogonal Projections]]
+
 
 
 

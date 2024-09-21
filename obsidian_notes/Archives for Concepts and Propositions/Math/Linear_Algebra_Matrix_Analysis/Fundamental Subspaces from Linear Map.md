@@ -99,6 +99,9 @@ date of note: 2024-09-05
 
 ![[Projection Map onto Linear Subspace#^38f848]]
 
+![[Fundamental Orthogonal Projections#^6010c1]]
+
+- [[Fundamental Orthogonal Projections]]
 - [[Projection Map onto Linear Subspace]]
 
 

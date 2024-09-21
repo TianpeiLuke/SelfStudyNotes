@@ -26,6 +26,7 @@ date of note: 2024-05-11
 - [[Direct Sum of Subspaces]]
 - [[Quotient Space of Vector Space]]
 - [[Quotient Linear Map on Quotient Vector Space]]
+- [[Fundamental Subspaces from Linear Map]]
 
 
 ### Linear Map and Dual Space
@@ -49,7 +50,8 @@ date of note: 2024-05-11
 - [[Invariance under Linear Transformation]]
 - [[Reducibility of Linear Transformation]]
 - [[Projection Map onto Linear Subspace]]
-- [[Fundamental Subspaces from Linear Map and its Projection]]
+- [[Fundamental Subspaces from Linear Map]]
+- [[Fundamental Orthogonal Projections]]
 
 ### System of Linear Equations
 
@@ -102,7 +104,9 @@ date of note: 2024-05-11
 - [[Inner Product Space]]
 - [[Orthogonality in Inner Product Space]]
 - [[Gram-Schmidt Orthogonalization]]
-
+- [[Direct Sum of Subspaces]]
+- [[Fundamental Subspaces from Linear Map]]
+- [[Fundamental Orthogonal Projections]]
 
 ### Adjoint of Linear Map
 
@@ -129,6 +133,7 @@ date of note: 2024-05-11
 - [[Concepts and Theorems for Matrix Theory]]
 - [[Singular Value Decomposition of Linear Map]]
 - [[Singular Value Decomposition and Fundamental Subspaces]]
+- [[Fundamental Orthogonal Projections]]
 
 
 ## Explanation
