@@ -60,6 +60,17 @@ date of note: 2024-06-05
 
 
 
+## QR Factorization
+
+- [[QR Factorization of Matrix]]
+
+
+## Least Square Estimation via Gram-Schmidt Orthogonalization
+
+- [[Least Square Estimation with QR Factorization]]
+
+
+
 -----------
 ##  Recommended Notes and References
 

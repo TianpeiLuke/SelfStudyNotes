@@ -46,6 +46,8 @@ date of note: 2024-05-11
 - [[Fourier Basis Function]]
 - [[Fourier Series and Fourier Transform]]
 - [[Convergence of Fourier Series]]
+- [[Discrete Fourier Transform]]
+- [[Fast Fourier Transform]]
 - [[Laplace Transform]]
 - [[Wavelet]]
 - [[Haar Wavelet Function]]

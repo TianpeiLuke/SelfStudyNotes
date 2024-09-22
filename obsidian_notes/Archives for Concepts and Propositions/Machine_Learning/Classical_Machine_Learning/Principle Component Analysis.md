@@ -107,6 +107,7 @@ date of note: 2024-05-12
 >	- the *j*-th **principle component direction** $u_{j}$ of $X$ is the solution of the following **variance maximization problem** $$\begin{align*}u_{j} = \arg\max_{u \in \mathbb{S}^{d-1}}&\; \mathbb{E}\left[  \left\langle u , X \right\rangle^2  \right] := \left\langle u ,\Sigma\,u  \right\rangle \\[10pt]\text{s.t. }& \left\langle u_{i} , u \right\rangle = 0, \quad i=1\,{,}\ldots{,}\,j-1\end{align*}$$
 
 - [[Rayleigh Quotient for Eigenvalue Problem]]
+- [[Courant-Fischer Minimax Theorem]]
 
 >[!info]
 >We can see a similar formulation in [[Iterative Maximum Entropy Learning for AdaBoost]]

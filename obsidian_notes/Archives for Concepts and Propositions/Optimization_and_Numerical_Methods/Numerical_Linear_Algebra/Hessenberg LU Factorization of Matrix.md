@@ -25,10 +25,11 @@ date of note: 2024-08-08
 ##  Recommended Notes and References
 
 
+- [[LU Factorization of Matrix]]
 - [[Matrix]]
 - [[Gaussian Elimination for Solving Linear System]]
 
 
-- [[Numerical Linear Algebra by Trefethen]] pp 147 - 171 
+- [[Numerical Linear Algebra by Trefethen]] pp 
 - [[Matrix Computations by Golub]] pp 111
 - [[Matrix Analysis by Horn]]

@@ -101,4 +101,5 @@ date of note: 2024-09-16
 
 - [[Finite Dimensional Vector Spaces by Halmos]]
 - [[Matrix Analysis by Horn]] pp 101 - 106
-- [[Matrix Computations by Golub]]
+- [[Matrix Computations by Golub]] pp 440
+- [[Numerical Linear Algebra by Trefethen]]

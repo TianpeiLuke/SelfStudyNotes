@@ -25,10 +25,14 @@ date of note: 2024-08-08
 ##  Recommended Notes and References
 
 
+- [[System of Linear Equations or Linear System]]
+- [[Existence and Uniqueness of Solution of Linear Equations]]
+
+
 - [[Matrix]]
 - [[Gaussian Elimination for Solving Linear System]]
 
 
-- [[Numerical Linear Algebra by Trefethen]] pp 147 - 171 
-- [[Matrix Computations by Golub]] pp 111
+- [[Numerical Linear Algebra by Trefethen]] pp
+- [[Matrix Computations by Golub]] pp 280 - 282
 - [[Matrix Analysis by Horn]]

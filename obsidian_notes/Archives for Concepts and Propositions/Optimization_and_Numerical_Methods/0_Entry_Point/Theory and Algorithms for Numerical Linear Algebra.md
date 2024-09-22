@@ -26,11 +26,40 @@ date of note: 2024-05-12
 
 - [[System of Linear Equations or Linear System]]
 - [[Existence and Uniqueness of Solution of Linear Equations]]
+
+- [[Triangular System of Equations]]
+- [[Forward Substitution of Lower Triangular System]]
+- [[Back Substitution of Upper Triangular System]]
+
+- [[Gaussian Elimination for Solving Linear System]]
 - [[LU Factorization of Matrix]]
+- [[Pivoting to Control Numerical Instability]]
+- [[Stability Analysis of Gaussian Elimination]]
 
 ### Special Linear Systems
 
+#### Symmetric or Hermitian System 
 
+- [[Hermitian or Symmetric Matrix]]
+- [[LDL Factorization of Symmetric Matrix]]
+
+#### Symmetric or Hermitian Positive Definite System 
+
+- [[Positive Semidefinite Transformation]]
+- [[Cholesky Factorization of Hermitian Positive Definite Matrices]]
+- [[LDL Factorization with Symmetric Pivoting]]
+
+#### Banded System of Equations
+
+- [[Band Triangular System of Equations]]
+- [[Band Forward Substitution and Band Back Substitution]]
+- [[Band Gaussian Elimination with Pivoting]]
+- [[Hessenberg LU Factorization of Matrix]]
+- [[Band Cholesky Factorization of Hermitian Positive Semidefinite Matrices]]
+
+#### Tridiagonal System of Equations
+
+- [[Tridiagonal System of Equations]]
 
 
 ### Orthogonalization 
@@ -51,16 +80,20 @@ date of note: 2024-05-12
 - [[Eigenspace and Spectrum for Linear Map]]
 - [[Eigenvalue and Eigenvector for Linear Map]]
 - [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
-
-
-### Large Sparse Eigenvalue Problems
-
+- [[Rayleigh Quotient for Eigenvalue Problem]]
+- [[Courant-Fischer Minimax Theorem]]
 
 
 ### Solving Large Sparse Linear System of Equations
 
 - [[Krylov Subspace]]
 - [[Conjugate Gradient Algorithm Linear]]
+
+
+### Large Sparse Eigenvalue Problems
+
+
+
 
 
 
@@ -73,6 +106,9 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
+
+- [[Matrix Computations by Golub]]
+- [[Numerical Linear Algebra by Trefethen]]
 
 - [[Matrix Analysis by Horn]]
 - [[Finite Dimensional Vector Spaces by Halmos]]

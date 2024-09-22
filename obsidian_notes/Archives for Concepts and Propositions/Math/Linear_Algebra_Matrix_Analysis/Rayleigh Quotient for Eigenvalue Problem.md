@@ -27,6 +27,7 @@ date of note: 2024-08-21
 
 - [[Convex Optimization for Eigenvalue Problem]]
 
+- [[Courant-Fischer Minimax Theorem]]
 - [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
 - [[Eigenvalue and Eigenvector for Linear Map]]
 - [[Eigenspace and Spectrum for Linear Map]]

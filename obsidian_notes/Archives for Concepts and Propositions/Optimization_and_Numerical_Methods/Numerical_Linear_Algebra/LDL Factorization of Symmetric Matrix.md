@@ -25,10 +25,14 @@ date of note: 2024-08-08
 ##  Recommended Notes and References
 
 
+- [[Hermitian or Symmetric Matrix]]
+- [[LU Factorization of Matrix]]
 - [[Matrix]]
+- [[Orthogonal Group]]
+- [[Unitary Group]]
 - [[Gaussian Elimination for Solving Linear System]]
 
 
-- [[Numerical Linear Algebra by Trefethen]] pp 147 - 171 
-- [[Matrix Computations by Golub]] pp 111
+- [[Numerical Linear Algebra by Trefethen]] pp 
+- [[Matrix Computations by Golub]] pp 156 - 159
 - [[Matrix Analysis by Horn]]

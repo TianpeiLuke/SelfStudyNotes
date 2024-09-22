@@ -31,6 +31,7 @@ date of note: 2024-07-13
 ### Special Matrices
 
 - [[Symplectic Matrix]]
+- [[Toeplitz Matrix]]
 
 
 ### Matrix Norm
@@ -58,12 +59,14 @@ date of note: 2024-07-13
 - [[Normal Transformation]]
 - [[Positive Semidefinite Transformation]]
 
-### Spectral Theorem
+### Spectral Theorem and Eigenvalue Problem
 
 - [[Eigenvalue and Eigenvector for Linear Map]]
 - [[Eigenspace and Spectrum for Linear Map]]
 - [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
 - [[Spectral Theorem of Normal Map and Eigen decomposition]]
+- [[Rayleigh Quotient for Eigenvalue Problem]]
+- [[Courant-Fischer Minimax Theorem]]
 
 
 ### Polynomials associated with Matrix

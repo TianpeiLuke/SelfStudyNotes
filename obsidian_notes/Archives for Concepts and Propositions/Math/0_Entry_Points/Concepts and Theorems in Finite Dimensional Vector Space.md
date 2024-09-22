@@ -126,6 +126,7 @@ date of note: 2024-05-11
 - [[Spectral Theorem of Normal Map and Eigen decomposition]]
 - [[Spectral Analysis of Function of Transform]]
 - [[Rayleigh Quotient for Eigenvalue Problem]]
+- [[Courant-Fischer Minimax Theorem]]
 - [[Convex Optimization for Eigenvalue Problem]]
 
 ### Matrix Analysis

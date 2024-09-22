@@ -26,6 +26,7 @@ date of note: 2024-08-21
 ##  Recommended Notes and References
 
 
+- [[Courant-Fischer Minimax Theorem]]
 - [[Rayleigh Quotient for Eigenvalue Problem]]
 
 - [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
