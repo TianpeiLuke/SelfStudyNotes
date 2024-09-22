@@ -31,6 +31,8 @@ date of note: 2024-08-08
 - [[Matrix]]
 
 
+- [[Signals and Systems by Oppenheim]]
+- [[Discrete Time Signal Processing by Oppenheim]]
 
 - [[Numerical Linear Algebra by Trefethen]] pp
 - [[Matrix Computations by Golub]] pp 219 - 231

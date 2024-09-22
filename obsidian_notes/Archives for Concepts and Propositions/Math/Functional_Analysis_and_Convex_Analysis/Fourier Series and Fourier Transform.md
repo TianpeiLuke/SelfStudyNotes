@@ -4,6 +4,7 @@ tags:
   - math/functional_analysis
   - math/probability
   - math/stochastic_process
+  - electrical_engineering/signal_processing
 keywords:
   - fourier_transform
   - fourier_series
@@ -119,11 +120,15 @@ date of note: 2024-06-05
 
 - [[Hilbert Space]]
 - [[Fourier Basis Function]]
+- [[Discrete Fourier Transform]]
+- [[Fast Fourier Transform]]
 
 - [[Characteristic Function of Random Variable]]
 
 - [[Functional Analysis by Reed]]
 - [[Real Analysis Modern Techniques and Their Applications by Folland]]
 
+- [[Signals and Systems by Oppenheim]]
+- [[Discrete Time Signal Processing by Oppenheim]]
 
 - Wikipedia [Fourier_transform](https://en.wikipedia.org/wiki/Fourier_transform)
