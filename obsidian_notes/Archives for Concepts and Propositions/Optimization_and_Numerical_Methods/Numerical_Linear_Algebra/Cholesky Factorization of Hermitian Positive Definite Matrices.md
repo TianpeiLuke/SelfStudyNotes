@@ -40,4 +40,4 @@ date of note: 2024-09-21
 \
 
 - [[Matrix Computations by Golub]] pp 163 - 166
-- [[Numerical Linear Algebra by Trefethen]] pp 163 - 171 
+- [[Numerical Linear Algebra by Trefethen]] pp 172 - 178

@@ -38,4 +38,5 @@ date of note: 2024-08-21
 - Wikipedia [Rayleigh_quotient](https://en.wikipedia.org/wiki/Rayleigh_quotient)
 - [[Matrix Analysis by Horn]] pp 44
 - [[Matrix Computations by Golub]]
+- [[Numerical Linear Algebra by Trefethen]] pp 203 - 204
 - [[Convex Optimization by Boyd]]

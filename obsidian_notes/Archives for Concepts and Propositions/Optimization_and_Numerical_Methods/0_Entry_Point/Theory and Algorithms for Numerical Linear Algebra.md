@@ -61,6 +61,11 @@ date of note: 2024-05-12
 
 - [[Tridiagonal System of Equations]]
 
+#### Toeplitz System
+
+- [[Toeplitz System of Equations]]
+
+
 
 ### Orthogonalization 
 
@@ -80,8 +85,17 @@ date of note: 2024-05-12
 - [[Eigenspace and Spectrum for Linear Map]]
 - [[Eigenvalue and Eigenvector for Linear Map]]
 - [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
+- [[Schur Triangularization and Schur Form]]
+
+
 - [[Rayleigh Quotient for Eigenvalue Problem]]
 - [[Courant-Fischer Minimax Theorem]]
+
+### Large Sparse Eigenvalue Problems
+
+- [[Krylov Subspace]]
+- [[Lanczos Iteration to Solve Eigenvalue Problem]]
+- [[Jacobi-Davidson Algorithm to Sparse Eigenvalue Problem]]
 
 
 ### Solving Large Sparse Linear System of Equations
@@ -89,8 +103,6 @@ date of note: 2024-05-12
 - [[Krylov Subspace]]
 - [[Conjugate Gradient Algorithm Linear]]
 
-
-### Large Sparse Eigenvalue Problems
 
 
 

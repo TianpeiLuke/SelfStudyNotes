@@ -66,3 +66,4 @@ date of note: 2024-05-27
 
 - [[Finite Dimensional Vector Spaces by Halmos]]
 - [[Matrix Analysis by Horn]] pp 135
+- [[Numerical Linear Algebra by Trefethen]] pp 181 - 188

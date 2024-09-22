@@ -30,6 +30,6 @@ date of note: 2024-08-08
 - [[Gaussian Elimination for Solving Linear System]]
 
 
-- [[Numerical Linear Algebra by Trefethen]] pp 
+- [[Numerical Linear Algebra by Trefethen]] pp 196 - 201
 - [[Matrix Computations by Golub]] pp 111
 - [[Matrix Analysis by Horn]]
