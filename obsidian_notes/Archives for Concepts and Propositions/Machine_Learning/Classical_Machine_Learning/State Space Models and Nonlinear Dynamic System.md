@@ -65,6 +65,9 @@ date of note: 2024-05-12
 
 - [[Dynamic Bayesian Network]]
 
+>[!info]
+>A *state-space model* is a standard model in **modern control theory**.
+
 
 
 ## State-Observation Models

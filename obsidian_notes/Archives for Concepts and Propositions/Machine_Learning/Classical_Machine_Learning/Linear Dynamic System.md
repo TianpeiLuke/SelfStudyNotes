@@ -107,6 +107,9 @@ date of note: 2024-05-12
 - [[Dynamic Bayesian Network]]
 - [[Gaussian Bayesian Network]]
 
+>[!info]
+>A *linear dynamic model* is a basic model in **modern control theory**.
+
 
 ## State-Observation Models
 
