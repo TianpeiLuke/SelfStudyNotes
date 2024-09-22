@@ -171,6 +171,10 @@ date of note: 2024-05-12
 - [[Kalman Filter Discrete-Time]]
 
 
+## Gauss-Seidel Iteration
+
+- [[Gauss-Seidel Iteration for Sparse Linear Equations]]
+
 
 
 -----------

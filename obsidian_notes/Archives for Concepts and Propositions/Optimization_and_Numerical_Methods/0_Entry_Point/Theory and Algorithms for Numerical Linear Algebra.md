@@ -100,7 +100,11 @@ date of note: 2024-05-12
 
 ### Solving Large Sparse Linear System of Equations
 
-- [[Krylov Subspace]]
+- [[Sparse Linear System and Graph]]
+- [[Jacobi Iteration to solve the Sparse Linear Equations]]
+- [[Gauss-Seidel Iteration for Sparse Linear Equations]]
+- [[Successive Over-Relaxation for Sparse Linear System]]
+- [[Gauss-Seidel Iteration for Sparse Symmetric Positive Definite System]]
 - [[Conjugate Gradient Algorithm Linear]]
 
 
