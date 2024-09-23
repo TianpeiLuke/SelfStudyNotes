@@ -124,5 +124,6 @@ date of note: 2024-07-23
 
 - [[Matrix Analysis by Horn]] pp 19
 - [[Matrix Analysis for Scientists and Engineers by Laub]] pp 48
+- [[Matrix Computations by Golub]] pp 65
 - Wikipedia [Woodbury_matrix_identity](https://en.wikipedia.org/wiki/Woodbury_matrix_identity)
 - Wikipedia [Sherman-Morrison_formula](https://en.wikipedia.org/wiki/Sherman%E2%80%93Morrison_formula)
