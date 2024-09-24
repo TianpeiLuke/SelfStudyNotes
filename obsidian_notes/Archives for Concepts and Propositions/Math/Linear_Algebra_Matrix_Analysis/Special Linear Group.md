@@ -31,7 +31,7 @@ date of note: 2024-05-26
 - [[Matrix]]
 - [[Determinant of Linear Transformation]]
 - [[General Linear Group]]
-
+- [[Surjective Injective Invertible Linear Map and Rank]]
 
 ## Explanation
 

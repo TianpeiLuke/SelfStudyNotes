@@ -45,7 +45,7 @@ date of note: 2024-07-13
 - [[Rank–Nullity Theorem]]
 - [[Rank of Partitioned Matrix and Rank-Principal Matrix]]
 - [[Jacobi Identity and Minors of the Inverse]]
-- [[Cauchy–Binet Formula for Minor of Product]]
+- [[Cauchy-Binet Formula for Minor of Product]]
 
 
 ### Special Matrices

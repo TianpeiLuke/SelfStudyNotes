@@ -73,7 +73,7 @@ date of note: 2024-07-10
 - [[Interior Multiplication]]
 
 
-- [[Cauchy–Binet Formula for Minor of Product]]
+- [[Cauchy-Binet Formula for Minor of Product]]
 - [[Minor and Principal Minor]]
 - [[Principal Submatrix]]
 - [[Determinant of Linear Transformation]]
