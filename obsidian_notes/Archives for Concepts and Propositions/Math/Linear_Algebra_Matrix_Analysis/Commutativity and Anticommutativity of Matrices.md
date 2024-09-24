@@ -26,10 +26,12 @@ date of note: 2024-09-17
 ##  Recommended Notes and References
 
 
-- [[Commutativity and Anticommutativity of Matrices]]
 - [[Unitary Similarity and Unitary Diagonalizable]]
 - [[Diagonalizable Matrix]]
 - [[General Linear Group]]
+- [[Ring with Identity]]
+- [[Ring]]
+
 
 - [[Matrix]]
 - [[Linear Map]]
@@ -37,4 +39,4 @@ date of note: 2024-09-17
 - [[Abelian Group]]
 
 
-- [[Matrix Analysis by Horn]] pp 62 - 63
+- [[Matrix Analysis by Horn]] pp 21

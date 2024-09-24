@@ -45,6 +45,7 @@ date of note: 2024-07-25
 >p(y) = \int_{x \in \mathbb{R}}p(x, y)dx = \mathcal{N}(y\,;\, \mu_{y},\, \Sigma_{y y}).
 >$$
 
+- [[Partition of Matrix and Block Matrix]]
 - [[Probability Density Function of Random Variable]]
 
 ### Conditional Distribution
@@ -87,6 +88,7 @@ date of note: 2024-07-25
 
 - [[Conditional Probability]]
 - [[Probability Density Function of Random Variable]]
+- [[Partition of Matrix and Block Matrix]]
 - [[Schur Complement and Inversion of Block Matrix]]
 - [[Kalman Filter Discrete-Time]]
 
@@ -154,6 +156,7 @@ date of note: 2024-07-25
 
 ^4a335a
 
+- [[Partition of Matrix and Block Matrix]]
 - [[Schur Complement and Inversion of Block Matrix]]
 - [[Sherman–Morrison–Woodbury Matrix Inversion Formula]]
 - [[Exponential Family of Distributions]]
@@ -212,6 +215,7 @@ date of note: 2024-07-25
 
 ^0d8021
 
+- [[Partition of Matrix and Block Matrix]]
 - [[Canonical Form of Gaussian Graphical Model]]
 
 
@@ -233,7 +237,7 @@ date of note: 2024-07-25
 
 - [[Kalman Filter Discrete-Time]]
 
-
+- [[Partition of Matrix and Block Matrix]]
 - [[Schur Complement and Inversion of Block Matrix]]
 - [[Positive Semidefinite Transformation]]
 

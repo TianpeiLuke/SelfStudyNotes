@@ -30,7 +30,12 @@ date of note: 2024-09-21
 - [[Existence and Uniqueness of Solution of Linear Equations]]
 - [[Back Substitution of Upper Triangular System]]
 - [[LU Factorization of Matrix]]
-\
+
+- [[Principal Submatrix]]
+- [[Schur Complement and Inversion of Block Matrix]]
+- [[System of Linear Equations or Linear System]]
+- [[Matrix]]
+
 
 - [[Matrix Computations by Golub]] pp 111 - 114
 - [[Numerical Linear Algebra by Trefethen]] pp 147 - 171 

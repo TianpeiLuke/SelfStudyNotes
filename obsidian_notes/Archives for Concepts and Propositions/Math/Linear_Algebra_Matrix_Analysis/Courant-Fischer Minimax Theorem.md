@@ -17,15 +17,26 @@ date of note: 2024-09-21
 >[!important]
 >**Name**: Courant-Fischer Minimax Theorem
 
+![[Variational Characterization of Eigenvalues of Hermitian Matrix#^50523d]]
+
+- [[Variational Characterization of Eigenvalues of Hermitian Matrix]]
+
 >[!important] Theorem
->If $A\in \mathbb{R}^{n\times n}$ is a **symmetric matrix**, then the **$k$-th largest eigenvalue** of $A$ is obtained as
+>Let $A\in M_{n}$ be a **Hermitian matrix**, and $S \subset \mathbb{C}^{n}$ be a finite-dimensional linear subspace. Let **eigenvalues** of $A$ be ordered as $$\lambda_{min} = \lambda_{n} \,{\le}\ldots{\le}\,\lambda_{1} = \lambda_{max}.$$
+>
+>Then the **$k$-th largest eigenvalue** of $A$ is obtained as
 >$$
->\lambda_{k}(A) = \max_{\text{dim}(S) = k}\;\min_{y\in S,\, y\neq 0} \frac{\left\langle  y\,,\, Ay   \right\rangle}{\left\langle  y\,,\,y    \right\rangle}, \quad k=1\,{,}\ldots{,}\,n.
+>\lambda_{k}(A) = \max_{\text{dim}(S) = k}\;\min_{0\neq x\in S} \frac{\left\langle x , Ax \right\rangle}{\left\langle  x,x    \right\rangle}, \quad k=1\,{,}\ldots{,}\,n.
 >$$
+>and 
+>$$
+>\lambda_{k}(A) = \min_{\text{dim}(S) = n - k + 1}\;\max_{0\neq x\in S} \frac{\left\langle x , Ax \right\rangle}{\left\langle  x,x    \right\rangle}, \quad k=1\,{,}\ldots{,}\,n.
+>$$
+
+^3d4e1f
 
 - [[Hermitian or Symmetric Matrix]]
 - [[Eigenvalue and Eigenvector for Linear Map]]
-
 
 
 
@@ -35,6 +46,10 @@ date of note: 2024-09-21
 >The **eigenvalues** of a *symmetric matrix* have a **minimax** *characterization* that  revolves around the quadratic form $$\frac{x^T\,A\,x}{x^T\,x}$$
 
 - [[Rayleigh Quotient for Eigenvalue Problem]]
+
+## Variational Characterization of Eigenvalue of Hermitian Matrix
+
+- [[Variational Characterization of Eigenvalues of Hermitian Matrix]]
 
 
 
@@ -52,10 +67,10 @@ date of note: 2024-09-21
 - [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
 - [[Principle Component Analysis]]
 - [[Schur Triangularization and Schur Form]]
-
+- [[Saddle Point of Lagrangian Function]]
 
 
 - [[Matrix Analysis for Scientists and Engineers by Laub]]
-- [[Matrix Analysis by Horn]]
+- [[Matrix Analysis by Horn]] pp 235 - 238
 - [[Matrix Computations by Golub]] pp 441
 - [[An Introduction to Optimization on Smooth Manifolds by Boumal]]

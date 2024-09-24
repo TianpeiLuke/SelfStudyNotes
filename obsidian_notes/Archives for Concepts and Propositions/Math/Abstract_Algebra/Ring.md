@@ -47,6 +47,8 @@ date of note: 2024-05-22
 ##  Recommended Notes and References
 
 
+- [[Commutativity and Anticommutativity of Matrices]]
+- [[General Linear Group]]
 - [[Group]]
 
 - [[Abstract Algebra by Dummit]]

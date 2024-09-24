@@ -19,7 +19,7 @@ date of note: 2024-07-23
 >**Name**: Schur Complement and Inversion of Block Matrix
 
 >[!important] Definition
->Suppose that $m, n \in \mathbb{N}$, and a matrix $M \in \mathbb{R}^{(m+n) \times (m+n)}$ can be partitioned into four *blocks* as
+>Suppose that $m, n \in \mathbb{N}$, and a matrix $M \in \mathbb{R}^{(m+n) \times (m+n)}$ can be **partitioned** into four *blocks* as
 >$$
 >\begin{align*}
 > M &= \left[\begin{array}{cc}
@@ -44,6 +44,8 @@ date of note: 2024-07-23
 
 ^eb8bd3
 
+- [[Partition of Matrix and Block Matrix]]
+- [[Principal Submatrix]]
 
 >[!important] Definition
 >Suppose that $m, n \in \mathbb{N}$, and a matrix $M \in \mathbb{R}^{(m+n) \times (m+n)}$ can be partitioned into four *blocks* as
@@ -160,6 +162,8 @@ date of note: 2024-07-23
 >\end{align*}
 >$$
 
+- [[Gaussian Elimination for Solving Linear System]]
+
 >[!important]
 >If $M$ and $D$ is *invertible*,  we can decompose the inverse of 
 >$$
@@ -221,7 +225,8 @@ date of note: 2024-07-23
 >  
 >This formula is called the **Schur formula**.  
 
-
+- [[Principal Submatrix]]
+- [[Minor and Principal Minor]]
 
 ## Positive Definiteness
 
@@ -265,6 +270,9 @@ date of note: 2024-07-23
 
 - [[Convex Function]]
 - [[Operations that Preserve Convexity]]
+
+- [[Minor and Principal Minor]]
+- [[Partition of Matrix and Block Matrix]]
 - [[Sherman–Morrison–Woodbury Matrix Inversion Formula]]
 - [[Matrix]]
 - [[General Linear Group]]
@@ -273,6 +281,6 @@ date of note: 2024-07-23
 - [[Least Square Estimation]]
 
 
-- [[Matrix Analysis by Horn]] pp 18
+- [[Matrix Analysis by Horn]] pp 18, 24- 25
 - [[Matrix Analysis for Scientists and Engineers by Laub]] pp 48, 102 - 104
 - Wikipedia [Schur_complement](https://en.wikipedia.org/wiki/Schur_complement)

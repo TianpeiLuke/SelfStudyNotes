@@ -59,10 +59,17 @@ date of note: 2024-05-11
 - [[Existence and Uniqueness of Solution of Linear Equations]]
 
 
-### Matrix and Matrix Algebra
+### Matrix and Submatrix
 
 - [[Matrix]]
 - [[Matrix Transformation]]
+- [[Partition of Matrix and Block Matrix]]
+- [[Principal Submatrix]]
+- [[Law of Complementary Nullities between Block Matrix and Inverse]]
+- [[Rank of Partitioned Matrix and Rank-Principal Matrix]]
+
+### Matrix Algebra
+
 - [[General Linear Group]]
 - [[Special Linear Group]]
 - [[Orthogonal Group]]
@@ -77,6 +84,7 @@ date of note: 2024-05-11
 - [[Symmetric Product]]
 - [[Alternating Tensor]]
 - [[Determinant of Linear Transformation]]
+- [[Minor and Principal Minor]]
 - [[Laplace Expansion Theorem]]
 
 ### Characteristic Polynomial

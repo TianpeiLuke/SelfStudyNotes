@@ -26,7 +26,7 @@ date of note: 2024-08-08
 
 
 - [[Pivoting to Control Numerical Instability]]
-- [[LDL Factorization of Symmetric Matrix]]
+- [[LDU Factorization of Symmetric Matrix]]
 - [[Hermitian or Symmetric Matrix]]
 - [[LU Factorization of Matrix]]
 - [[Matrix]]
@@ -36,4 +36,4 @@ date of note: 2024-08-08
 
 - [[Numerical Linear Algebra by Trefethen]] pp
 - [[Matrix Computations by Golub]] pp 165 - 166
-- [[Matrix Analysis by Horn]]
+- [[Matrix Analysis by Horn]] pp 218 - 221

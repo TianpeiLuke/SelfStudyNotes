@@ -47,9 +47,23 @@ date of note: 2024-09-21
 >- *Require*: $A = [a_{i,j}]_{j\leq i}$ and $b= [b_{i}]$
 >- For $j=n\,{,}\ldots{,}\,2$:
 >	- $$x_{j} = \frac{b_{j}}{a_{jj}}$$
->	- For $k=1 \,{,}\ldots{,}\,j-1$:
->		- $$x_{k} \leftarrow x_{k} - a_{k,j}\,x_{j}$$
+>	- For $k=1 \,{,}\ldots{,}\,j-1$ *in parallel*:
+>		- $$b_{k} \leftarrow b_{k} - a_{k,j}\,x_{j}$$
 >- Finally $$x_{1} = \frac{b_{1}}{a_{11}}$$
+
+- [[Principal Submatrix]]
+- [[Partition of Matrix and Block Matrix]]
+### Parallel Formulation
+
+>[!important] Definition
+>Specifically, the **column-oriented back substitution** algorithm that solves the *upper triangular system*  is described as follows:
+>- *Require*: $A = [a_{i,j}]_{j\leq i}$ and $b= [b_{i}]$
+>- For $j=n\,{,}\ldots{,}\,2$:
+>	- $$x_{j} = \frac{b_{j}^{(n-j+1)}}{a_{jj}}$$
+>	- $$b_{1:j-1}^{(n-j+2)} = b_{1:j-1}^{(n-j+1)} - a_{1:j-1,j}\;x_{j}$$
+>- Finally $$x_{1} = \frac{b_{1}^{(n)}}{a_{11}}$$
+
+
 
 ## Explanation
 
@@ -58,6 +72,14 @@ date of note: 2024-09-21
 >$$
 >b_{i} \leftarrow \frac{b_{i} - \sum_{j=i+1}^{n}a_{i,j}\,b_{j}}{a_{i,i}}
 >$$
+
+
+## Algorithm Complexity Analysis
+
+>[!important]
+>Since the algorithm need to access each entry $a_{i,j}$ by row, the **time complexity** of the algorithm is $$O\left( n^2 \right)$$
+>
+>The **space complexity** is $O(1)$ since we can substitute $b$ into $x$ in place.
 
 
 
@@ -73,3 +95,4 @@ date of note: 2024-09-21
 
 
 - [[Matrix Computations by Golub]] pp 106  - 109
+- [[Matrix Analysis by Horn]] pp 216

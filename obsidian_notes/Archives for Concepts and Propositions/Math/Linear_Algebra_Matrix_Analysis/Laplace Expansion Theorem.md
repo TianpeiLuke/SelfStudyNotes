@@ -17,17 +17,17 @@ date of note: 2024-07-10
 >[!important] Laplace Expansion by Minors along a Row or a Column
 >The **determinant** may be defined inductively for $A = [a_{i,j}] \in \mathcal{L}(F^n)$ in the following way. 
 >
->Assume that the determinant is defined over $\mathcal{L}(F^{n-1})$ and let $A_{i,j} \in \mathcal{L}(F^{n-1})$ denote the **submatrix** of $A \in \mathcal{L}(F^n)$ obtained by **deleting row** $i$ and **column** $j$ of $A$. 
+>Assume that the determinant is defined over $\mathcal{L}(F^{n-1})$ and let $A_{i^{c},j^{c}} \in \mathcal{L}(F^{n-1})$ denote the **submatrix** of $A \in \mathcal{L}(F^n)$ obtained by **deleting row** $i$ and **column** $j$ of $A$. 
 >
 >Then, for any $i, j \in \{ 1 \,{,}\ldots{,}\, n\}$, we have 
 >$$
->\det(A) = \sum_{k=1}^{n}(-1)^{i + k} a_{i,k}\;\det(A_{i,k}) = \sum_{k=1}^{n}(-1)^{k + j} a_{k,j}\;\det(A_{k,j})
+>\det(A) = \sum_{k=1}^{n}(-1)^{i + k} a_{i,k}\;\det(A_{i^{c},k^{c}}) = \sum_{k=1}^{n}(-1)^{k + j} a_{k,j}\;\det(A_{k^{c},j^{c}})
 >$$
 >The first sum is the **Laplace expansion by minors** *along row* $i$; the second sum is the **Laplace expansion by minors** *along column* $j$.
 
 - [[Determinant of Linear Transformation]]
 - [[Space of Bounded Linear Operators]]
-
+- [[Minor and Principal Minor]]
 
 >[!important] Laplace Expansion Theorem
 >Let $A = [a_{i,j}] \in \mathcal{L}(F^n)$ and $k \in \{ 1 \,{,}\ldots{,}\,n \}$, and $\beta \subseteq \{ 1 \,{,}\ldots{,}\,n \}$ be any given *index set of cardinality* $k$.
@@ -38,6 +38,8 @@ date of note: 2024-07-10
 >$$
 >in which the sums are over *all index set* $\alpha \subseteq \{ 1 \,{,}\ldots{,}\, n\}$ of cardinality $k$, and $$p(\alpha, \beta) = \sum_{i\in \alpha}i + \sum_{j\in \beta}j.$$
 
+- [[Minor and Principal Minor]]
+- [[Partition of Matrix and Block Matrix]]
 
 ## Explanation
 
@@ -71,6 +73,9 @@ date of note: 2024-07-10
 - [[Interior Multiplication]]
 
 
+- [[Cauchy–Binet Formula for Minor of Product]]
+- [[Minor and Principal Minor]]
+- [[Principal Submatrix]]
 - [[Determinant of Linear Transformation]]
 - [[Matrix]]
 

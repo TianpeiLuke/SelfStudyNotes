@@ -17,22 +17,41 @@ date of note: 2024-07-13
 
 - [[Concepts and Theorems in Finite Dimensional Vector Space]]
 
-### Matrix Algebra
+### Matrix and Inverse
 
 - [[Matrix]]
 - [[Matrix Transformation]]
+- [[Rank and Nullity of Linear Map]]
 - [[Surjective Injective Invertible Linear Map and Rank]]
+- [[Adjugate of Matrix]]
+- [[Cramer Rule]]
+
+### Matrix Algebra
+
 - [[General Linear Group]]
 - [[Special Linear Group]]
 - [[Orthogonal Group]]
 - [[Unitary Group]]
 - [[Special Orthogonal Group]]
 
+### Submatrix
+
+- [[Partition of Matrix and Block Matrix]]
+- [[Principal Submatrix]]
+- [[Minor and Principal Minor]]
+- [[Conformal Partitions of Matrices]]
+- [[Schur Complement and Inversion of Block Matrix]]
+- [[Law of Complementary Nullities between Block Matrix and Inverse]]
+- [[Rank–Nullity Theorem]]
+- [[Rank of Partitioned Matrix and Rank-Principal Matrix]]
+- [[Jacobi Identity and Minors of the Inverse]]
+- [[Cauchy–Binet Formula for Minor of Product]]
+
+
 ### Special Matrices
 
-- [[Symplectic Matrix]]
 - [[Toeplitz Matrix]]
-
+- [[Symplectic Matrix]]
 
 ### Matrix Norm
 
@@ -66,6 +85,7 @@ date of note: 2024-07-13
 - [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
 - [[Spectral Theorem of Normal Map and Eigen decomposition]]
 - [[Rayleigh Quotient for Eigenvalue Problem]]
+- [[Variational Characterization of Eigenvalues of Hermitian Matrix]]
 - [[Courant-Fischer Minimax Theorem]]
 
 
@@ -90,7 +110,7 @@ date of note: 2024-07-13
 - [[Unitary Group]]
 - [[Unitary Similarity and Unitary Diagonalizable]]
 - [[Schur Triangularization and Schur Form]]
-
+- [[Triangular Equivalence of Matrices]]
 
 
 ### Matrix Calculus

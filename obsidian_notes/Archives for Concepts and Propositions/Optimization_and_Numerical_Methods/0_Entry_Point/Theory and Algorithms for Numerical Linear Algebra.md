@@ -41,13 +41,14 @@ date of note: 2024-05-12
 #### Symmetric or Hermitian System 
 
 - [[Hermitian or Symmetric Matrix]]
-- [[LDL Factorization of Symmetric Matrix]]
+- [[LDU Factorization of Symmetric Matrix]]
+- [[Triangular Equivalence of Matrices]]
 
 #### Symmetric or Hermitian Positive Definite System 
 
 - [[Positive Semidefinite Transformation]]
 - [[Cholesky Factorization of Hermitian Positive Definite Matrices]]
-- [[LDL Factorization with Symmetric Pivoting]]
+- [[LDU Factorization with Symmetric Pivoting]]
 
 #### Banded System of Equations
 

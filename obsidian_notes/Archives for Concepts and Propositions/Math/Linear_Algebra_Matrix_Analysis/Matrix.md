@@ -3,6 +3,7 @@ tags:
   - concept
   - math/linear_algebra
   - math/functional_analysis
+  - math/matrix_analysis
 keywords:
   - matrix
 topics:

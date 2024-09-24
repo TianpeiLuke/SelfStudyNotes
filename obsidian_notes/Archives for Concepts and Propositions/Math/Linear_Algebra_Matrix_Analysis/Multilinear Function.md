@@ -51,7 +51,7 @@ date of note: 2024-05-14
 >- A *multilinear function* of **one variable** is just a **linear function**, and 
 >- a multilinear function of **two variables** is generally called **bilinear**.
 
-- 
+- [[Sesquilinear Form]]
 - [[Inner Product Space]]
 
 ## Explanation
