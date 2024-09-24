@@ -91,7 +91,7 @@ date of note: 2024-05-11
 
 - [[Characteristic Polynomial for Linear Map]]
 - [[Algebraic and Geometric Multiplicity of Linear Map]]
-- [[Cayley–Hamilton Theorem]]
+- [[Cayley-Hamilton Theorem]]
 - [[Minimal Polynomial for Linear Map]]
 
 ### Similarity Relationship and Canonical Forms

@@ -46,7 +46,7 @@ date of note: 2024-05-27
 >Then $A$ is **diagonalizable** *if and only if* $$Q(A) = 0.$$
 
 - [[Diagonalizable Matrix]]
-- [[Cayley–Hamilton Theorem]]
+- [[Cayley-Hamilton Theorem]]
 
 
 
