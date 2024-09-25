@@ -110,6 +110,7 @@ date of note: 2024-05-11
 ### Inner Product and Orthogonality
 
 - [[Inner Product Space]]
+- [[Sesquilinear Form]]
 - [[Orthogonality in Inner Product Space]]
 - [[Gram-Schmidt Orthogonalization]]
 - [[Direct Sum of Subspaces]]

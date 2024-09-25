@@ -67,6 +67,7 @@ date of note: 2024-06-11
 ^89943e
 
 - [[Partial Differential Equations]]
+- [[Congruence Relation between Matrices]]
 
 ### Kolmogorov Forward Equation (Fokker–Planck Equation)
 
@@ -348,9 +349,9 @@ date of note: 2024-06-11
 - [[Brownian Motion Wiener Process]]
 
 - [[Markov Transition Kernel and Transition Function]]
+- [[Congruence Relation between Matrices]]
 
 - [[Partial Differential Equations]]
-
 - [[Wasserstein Space]]
 - [[Wasserstein Distance]]
 

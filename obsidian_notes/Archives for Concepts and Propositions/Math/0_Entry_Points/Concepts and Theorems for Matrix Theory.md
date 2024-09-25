@@ -134,6 +134,12 @@ date of note: 2024-07-13
 - [[Krylov Subspace]]
 - [[Jordan Canonical Form]]
 
+#### Congruence
+
+- [[Congruence Relation between Matrices]]
+- [[Unitary Congruence Relation between Matrices]]
+- [[Sylvester Law of Inertia]]
+
 
 ### Matrix Analysis
 
@@ -158,6 +164,8 @@ date of note: 2024-07-13
 
 #### Positive Semidefinite Matrices
 
+- [[Inner Product Space]]
+- [[Sesquilinear Form]]
 - [[Normal Transformation]]
 - [[Polar Decomposition of Transformation]]
 - [[Positive Semidefinite Transformation]]

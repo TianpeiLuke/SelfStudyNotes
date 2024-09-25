@@ -69,6 +69,7 @@ date of note: 2024-05-29
 - [[Introduction to Smooth Manifolds by Lee]]
 - [[Functional Analysis by Reed]]
 - [[Finite Dimensional Vector Spaces by Halmos]]
+- [[Matrix Analysis by Horn]] pp 227, 232
 
 
 - Wikipedia [Complex_conjugate_of_a_vector_space](https://en.wikipedia.org/wiki/Complex_conjugate_of_a_vector_space)

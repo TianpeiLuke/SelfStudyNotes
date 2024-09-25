@@ -26,6 +26,7 @@ date of note: 2024-08-08
 
 
 - [[LU Factorization of Matrix]]
+- [[Hessenberg Matrix]]
 - [[Matrix]]
 - [[Gaussian Elimination for Solving Linear System]]
 
