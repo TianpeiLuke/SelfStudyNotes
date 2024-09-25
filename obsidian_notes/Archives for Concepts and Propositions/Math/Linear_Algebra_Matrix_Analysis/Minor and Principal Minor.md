@@ -52,10 +52,13 @@ date of note: 2024-09-23
 ### Cofactor
 
 >[!important] Definition
->A **cofactor** is a *signed minor* of matrix $A$, i.e. $$\left(-1\right)^{i+j}\det \left(A_{i^{c}, j^{c}}\right)$$
+>A **cofactor** is a *signed minor* of matrix $A$, i.e. $$\left(-1\right)^{i+j}\det \left(A[i^{c}, j^{c}]\right)$$
 >We call the signed determinant of a $r\times r$ submatrix as the **cofactor of size $r$.**
 
+^b43d82
+
 - [[Laplace Expansion Theorem]]
+- [[Adjugate of Matrix]]
 
 
 ## Explanation

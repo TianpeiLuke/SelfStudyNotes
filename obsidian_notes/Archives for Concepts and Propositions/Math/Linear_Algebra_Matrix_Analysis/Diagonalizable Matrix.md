@@ -100,7 +100,7 @@ date of note: 2024-09-16
 - [[Spectral Theorem of Normal Map and Eigen decomposition]]
 - [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
 
-
+- [[Diagonal Matrix and Block Diagonal Matrix]]
 
 
 

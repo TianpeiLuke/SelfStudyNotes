@@ -88,6 +88,7 @@ date of note: 2024-09-16
 - [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
 - [[Equivalence Relation]]
 
+- [[Diagonal Matrix and Block Diagonal Matrix]]
 
 - [[Finite Dimensional Vector Spaces by Halmos]]
 - [[Matrix Analysis by Horn]] pp 95 - 101

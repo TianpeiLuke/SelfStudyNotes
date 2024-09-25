@@ -28,6 +28,9 @@ date of note: 2024-05-27
 >- $A$ is **unitarily diagonalizable**
 >- There exists a *unitary matrix* $U\in U(n)$ such that $$A = U\,\boldsymbol{\Lambda}\,U^{*}$$ where $\boldsymbol{\Lambda} =\text{diag}\left\{\lambda_{1} \,{,}\ldots{,}\,\lambda_{n}\right\}.$
 
+
+- [[Diagonal Matrix and Block Diagonal Matrix]]
+- [[Unitary and Orthogonal Transformation]]
 - [[Spectral Theorem of Normal Map and Eigen decomposition]]
 - [[Self-Adjoint Linear Map]]
 - [[Hermitian or Symmetric Matrix]]

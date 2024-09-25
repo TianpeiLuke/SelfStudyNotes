@@ -31,6 +31,7 @@ date of note: 2024-08-08
 - [[Existence and Uniqueness of Solution of Linear Equations]]
 
 
+- [[Triangular Matrix and Block Triangular Matrix]]
 - [[Matrix]]
 - [[Gaussian Elimination for Solving Linear System]]
 

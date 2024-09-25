@@ -58,6 +58,9 @@ date of note: 2024-05-26
 >$$
 
 
+## Row and Column Operations
+
+- [[Elementary Row and Column Operations]]
 
 
 

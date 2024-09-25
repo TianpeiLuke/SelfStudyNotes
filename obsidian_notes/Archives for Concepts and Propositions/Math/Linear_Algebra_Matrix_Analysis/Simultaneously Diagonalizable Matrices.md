@@ -28,6 +28,7 @@ date of note: 2024-09-17
 
 - [[Unitary Similarity and Unitary Diagonalizable]]
 - [[Diagonalizable Matrix]]
+- [[Diagonal Matrix and Block Diagonal Matrix]]
 - [[General Linear Group]]
 
 - [[Matrix]]

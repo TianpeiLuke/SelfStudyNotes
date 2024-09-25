@@ -30,6 +30,7 @@ date of note: 2024-09-21
 - [[Existence and Uniqueness of Solution of Linear Equations]]
 - [[Back Substitution of Upper Triangular System]]
 - [[LU Factorization of Matrix]]
+- [[Reduced Row Echelon Form]]
 
 - [[Principal Submatrix]]
 - [[Schur Complement and Inversion of Block Matrix]]

@@ -46,6 +46,7 @@ date of note: 2024-07-23
 
 - [[Partition of Matrix and Block Matrix]]
 - [[Principal Submatrix]]
+- [[Surjective Injective Invertible Linear Map and Rank]]
 
 >[!important] Definition
 >Suppose that $m, n \in \mathbb{N}$, and a matrix $M \in \mathbb{R}^{(m+n) \times (m+n)}$ can be partitioned into four *blocks* as
@@ -69,6 +70,17 @@ date of note: 2024-07-23
 - [[Sherman–Morrison–Woodbury Matrix Inversion Formula]]
 
 ## Explanation
+
+>[!info]
+>Let $\alpha \subset\left\{ 1\,{,}\ldots{,}\,n \right\}$ such that the **prinicipal submatrix** $A[\alpha, \alpha]$ is non-singular. 
+>
+>Then the **Schur complement** of $A[\alpha, \alpha]$ in $A$ is 
+>$$
+>A / A[\alpha,\alpha] = A[\alpha^c, \alpha^c] - A[\alpha^{c}, \alpha]\,A[\alpha, \alpha]^{-1}\,A[\alpha, \alpha^{c}]
+>$$
+
+- [[Principal Submatrix]]
+
 
 
 ## Block Matrix Inversion
@@ -126,7 +138,7 @@ date of note: 2024-07-23
 >$$ 
 
 >[!important]
->If $D$ is *invertible*,  we can compute the **Gauss-Jordan elimination** as
+>If $D$ is *invertible*,  we can compute the **block Gauss-Jordan elimination** as
 >$$
 >\begin{align*}
 >M &= \left[\begin{array}{cc}

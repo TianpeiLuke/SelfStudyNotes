@@ -25,12 +25,14 @@ date of note: 2024-05-27
 
 ^33ff0c
 
-- [[Unitary Group]]
+- [[Diagonal Matrix and Block Diagonal Matrix]]
+- [[Unitary and Orthogonal Transformation]]
 - [[Eigenvalue and Eigenvector for Linear Map]]
 - [[Normal Transformation]]
 - [[General Linear Group]]
 - [[Unitary Similarity and Unitary Diagonalizable]]
 - [[Matrix Analysis by Horn]]
+
 
 >[!important] Definition
 >A representation of a *normal matrix* $A \in \mathbb{C}^{n\times n}$  as $$A = U\,\boldsymbol{\Lambda}\,U^{*}$$ where $U\in U(n)$, and $\boldsymbol{\Lambda} =\text{diag}\left\{\lambda_{1} \,{,}\ldots{,}\,\lambda_{n}\right\},$ is called a **spectral decomposition** or **eigen-decomposition** of $A$.
@@ -45,7 +47,7 @@ date of note: 2024-05-27
 - [[Eigenvalue and Eigenvector for Linear Map]]
 - [[Projection Map onto Linear Subspace]]
 - [[Finite Dimensional Vector Spaces by Halmos]]
-
+- [[Diagonal Matrix and Block Diagonal Matrix]]
 
 ## Explanation
 

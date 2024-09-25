@@ -27,7 +27,7 @@ date of note: 2024-08-08
 
 - [[Discrete Fourier Transform]]
 - [[Fourier Series and Fourier Transform]]
-- [[Toeplitz Matrix]]
+- [[Toeplitz Matrix and Backward Forward Shift Operation]]
 - [[Matrix]]
 
 

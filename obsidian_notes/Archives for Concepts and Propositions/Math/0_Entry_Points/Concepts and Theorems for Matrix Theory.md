@@ -17,16 +17,20 @@ date of note: 2024-07-13
 
 - [[Concepts and Theorems in Finite Dimensional Vector Space]]
 
-### Matrix and Inverse
+### Fundamental Concepts
+
+#### Matrix and Inverse
 
 - [[Matrix]]
-- [[Matrix Transformation]]
 - [[Rank and Nullity of Linear Map]]
 - [[Surjective Injective Invertible Linear Map and Rank]]
+- [[Matrix Transformation]]
+- [[Elementary Row and Column Operations]]
 - [[Adjugate of Matrix]]
+- [[Reduced Row Echelon Form]]
 - [[Cramer Rule]]
 
-### Matrix Algebra
+#### Matrix Algebra
 
 - [[General Linear Group]]
 - [[Special Linear Group]]
@@ -34,7 +38,7 @@ date of note: 2024-07-13
 - [[Unitary Group]]
 - [[Special Orthogonal Group]]
 
-### Submatrix
+#### Submatrix
 
 - [[Partition of Matrix and Block Matrix]]
 - [[Principal Submatrix]]
@@ -47,49 +51,31 @@ date of note: 2024-07-13
 - [[Jacobi Identity and Minors of the Inverse]]
 - [[Cauchy-Binet Formula for Minor of Product]]
 
+#### Special Matrices
 
-### Special Matrices
+- [[Diagonal Matrix and Block Diagonal Matrix]]
+- [[Triangular Matrix and Block Triangular Matrix]]
+- [[Quasi-triangular Matrix and Quasi-diagonal Matrix]]
+- [[Tridiagonal Bidiagonal and Block Tridiagonal Matrix]]
+- [[Hessenberg Matrix]]
 
-- [[Toeplitz Matrix]]
+- [[Permutation Matrix and Reversal Matrix]]
+- [[Circulant Matrix and Circulant Permutation Operation]]
+- [[Toeplitz Matrix and Backward Forward Shift Operation]]
+- [[Discrete Fourier Transform]]
+
+- [[Nonnegative and Positive Matrix]]
 - [[Symplectic Matrix]]
 
-### Matrix Norm
-
-- [[Frobenius Norm of Matrix]]
-- [[Operator Mixed pq Norm of Matrix]]
-- [[Operator p-Norm of Matrix]]
-- [[Schatten Norm and Nuclear Norm of Matrix]]
-
-
-### Function of Matrix
+#### Determinant and Trace of Matrix
 
 - [[Determinant of Linear Transformation]]
 - [[Trace of Matrix]]
 - [[Laplace Expansion Theorem]]
-- [[Cayley-Hamilton Theorem]]
+- [[Cauchy-Binet Formula for Minor of Product]]
 
 
-### Adjoint and Hermitian 
-
-- [[Adjoint of Linear Map]]
-- [[Self-Adjoint Linear Map]]
-- [[Hermitian or Symmetric Matrix]]
-- [[Unitary and Orthogonal Transformation]]
-- [[Normal Transformation]]
-- [[Positive Semidefinite Transformation]]
-
-### Spectral Theorem and Eigenvalue Problem
-
-- [[Eigenvalue and Eigenvector for Linear Map]]
-- [[Eigenspace and Spectrum for Linear Map]]
-- [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
-- [[Spectral Theorem of Normal Map and Eigen decomposition]]
-- [[Rayleigh Quotient for Eigenvalue Problem]]
-- [[Variational Characterization of Eigenvalues of Hermitian Matrix]]
-- [[Courant-Fischer Minimax Theorem]]
-
-
-### Polynomials associated with Matrix
+#### Polynomials associated with Matrix
 
 - [[Characteristic Polynomial for Linear Map]]
 - [[Minimal Polynomial for Linear Map]]
@@ -97,32 +83,22 @@ date of note: 2024-07-13
 - [[Cayley-Hamilton Theorem]]
 
 
-### Similarity, Diagonalization and Canonical Forms
+### System of Linear Equations
 
-- [[Similarity Relation between Linear Maps and Matrices]]
-- [[Diagonalizable Matrix]]
-- [[Simultaneously Diagonalizable Matrices]]
-- [[Commuting Family of Matrices]]
+#### Projections and Subspaces
 
+- [[Projection Map onto Linear Subspace]]
+- [[Fundamental Subspaces from Linear Map]]
+- [[Fundamental Orthogonal Projections]]
 
-### Unitary Similarity and Unitary Equivalence
-
-- [[Unitary Group]]
-- [[Unitary Similarity and Unitary Diagonalizable]]
-- [[Schur Triangularization and Schur Form]]
-- [[Triangular Equivalence of Matrices]]
-
-
-### Matrix Calculus
+#### Pseudoinverse and Matrix Inversion Formula
 
 - [[Moore–Penrose Pseudo Inverse of Matrix]]
 - [[Sherman–Morrison–Woodbury Matrix Inversion Formula]]
 - [[Schur Complement and Inversion of Block Matrix]]
 - [[Singular Value Decomposition and Pseudoinverse]]
-- [[Fundamental Subspaces from Linear Map]]
-- [[Fundamental Orthogonal Projections]]
 
-### Linear System
+#### Linear System
 
 - [[Range and Kernel of Linear Map]]
 - [[Rank and Nullity of Linear Map]]
@@ -132,14 +108,68 @@ date of note: 2024-07-13
 - [[Existence and Uniqueness of Solution of Linear Equations]]
 
 
-### Jordan Decomposition
+### Equivalent Representation of Matrix
+
+#### Similarity, Diagonalization and Canonical Forms
+
+- [[Similarity Relation between Linear Maps and Matrices]]
+- [[Diagonalizable Matrix]]
+- [[Simultaneously Diagonalizable Matrices]]
+- [[Commuting Family of Matrices]]
+
+#### Unitary Similarity and Unitary Equivalence
+
+- [[Unitary and Orthogonal Transformation]]
+- [[Unitary Group]]
+- [[Gram-Schmidt Orthogonalization]]
+- [[QR Factorization of Matrix]]
+- [[Unitary Similarity and Unitary Diagonalizable]]
+- [[Schur Triangularization and Schur Form]]
+- [[Triangular Equivalence of Matrices]]
+- [[Normal Transformation]]
+
+#### Jordan Decomposition
 
 - [[Nilpotent Linear Transformation and Matrix]]
 - [[Krylov Subspace]]
 - [[Jordan Canonical Form]]
 
 
-### Singular Value Decomposition
+### Matrix Analysis
+
+#### Adjoint and Hermitian
+
+- [[Adjoint of Linear Map]]
+- [[Self-Adjoint Linear Map]]
+- [[Hermitian or Symmetric Matrix]]
+
+#### Variational Formulation of Eigenvalue Problem
+
+- [[Rayleigh Quotient for Eigenvalue Problem]]
+- [[Variational Characterization of Eigenvalues of Hermitian Matrix]]
+- [[Courant-Fischer Minimax Theorem]]
+
+#### Matrix Norm
+
+- [[Frobenius Norm of Matrix]]
+- [[Operator Mixed pq Norm of Matrix]]
+- [[Operator p-Norm of Matrix]]
+- [[Schatten Norm and Nuclear Norm of Matrix]]
+
+#### Positive Semidefinite Matrices
+
+- [[Normal Transformation]]
+- [[Polar Decomposition of Transformation]]
+- [[Positive Semidefinite Transformation]]
+
+#### Spectral Theorem
+
+- [[Eigenvalue and Eigenvector for Linear Map]]
+- [[Eigenspace and Spectrum for Linear Map]]
+- [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
+- [[Spectral Theorem of Normal Map and Eigen decomposition]]
+
+#### Singular Value Decomposition
 
 - [[Singular Value Decomposition of Linear Map]]
 - [[Low Rank Approximation of Matrix and Eckhart-Young Theorem]]
@@ -147,14 +177,27 @@ date of note: 2024-07-13
 - [[Singular Value Decomposition and Pseudoinverse]]
 - [[Least Square Estimation via Singular Value Decomposition]]
 
+#### Positive and Nonnegative Matrices
+
+- [[Nonnegative and Positive Matrix]]
+- [[Stochastic Matrix]]
 
 
-### Perturbation Theory and Eigenvalue
+### Perturbation Theory
+
+
+### Matrix Calculus
 
 
 
 
-### Matrix Differentials
+### System of Linear Differential Equations
+
+- [[Concepts and Theorems for Differential Equations]]
+- [[Ordinary Differential Equations]]
+- [[Autonomous and Nonautonomous Ordinary Differential Equations]]
+- [[Linear ODE with Constant Coefficients]]
+- [[Exponential Map of Linear Operator]]
 
 
 

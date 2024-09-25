@@ -32,6 +32,8 @@ date of note: 2024-09-15
 >\right] \in \mathbb{C}^{k_{i}\times k_{i}}
 >$$
 
+- [[Triangular Matrix and Block Triangular Matrix]]
+
 >[!important] Theorem (Jordan Canonical Form)
 >For all $A\in \mathbb{C}^{n\times n}$ with *eigenvalues* $\lambda_{1} \,{,}\ldots{,}\,\lambda_{n}\in \mathbb{C}$ (*not necessarily distinct*), there exists an *non-singular* $S\in \mathbb{C}^{n\times n}$ such that 
 >$$
@@ -55,9 +57,11 @@ date of note: 2024-09-15
 >
 >If $A\in \mathbb{R}^{n\times n}$ with only **real eigenvalues**, then $S\in GL(n,\mathbb{R})$.
 
+
 - [[Similarity Relation between Linear Maps and Matrices]]
 - [[Eigenvalue and Eigenvector for Linear Map]]
 - [[Algebraic and Geometric Multiplicity of Linear Map]]
+
 
 >[!important] Definition
 >For $A\in \mathbb{C}^{n\times n}$, the **Jordan canonical form (JCF)** is of the form

@@ -110,6 +110,7 @@ date of note: 2024-05-11
 - [[Singular Value Decomposition of Compact Operator]]
 
 - [[Positive Semidefinite Operator]]
+- [[Polar Decomposition of Bounded Operator]]
 - [[Square Root of Positive Semidefinite Operator and Absolute Value]]
 - [[Trace of Positive Semi-Definite Operator]]
 - [[Trace Class Operator]]

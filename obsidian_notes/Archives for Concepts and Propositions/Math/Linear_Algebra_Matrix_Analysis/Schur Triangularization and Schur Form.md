@@ -24,7 +24,7 @@ date of note: 2024-09-16
 >- There exists a **unitary matrix** $$U = [x\; u_{2} \,{\;}\ldots{\;}\,u_{n}]\in M_{n}$$ such that $$U^{*}\,A\,U = T = [t_{i,j}]$$ is **upper triangular** with *diagonal entries* $t_{i,i}= \lambda_{i}$, $i=1\,{,}\ldots{,}\,n.$
 >- If $A \in \mathbb{R}^{n\times n}$ has **only real eigenvalues**, then $x$ may be chosen to be **real** and there is a **real orthogonal** $$Q = [x\; q_{2}\,{\;}\ldots{\;}\,q_{n}]\in O(n) \subset \mathbb{R}^{n\times n}$$ such that $$Q^{T}\,A\,Q = T = [t_{i,j}]$$ is **upper triangular** with *diagonal entries* $t_{i,i}= \lambda_{i}$, $i=1\,{,}\ldots{,}\,n.$
 
-
+- [[Triangular Matrix and Block Triangular Matrix]]
 - [[Unitary and Orthogonal Transformation]]
 - [[Unitary Group]]
 - [[Unitary Similarity and Unitary Diagonalizable]]
@@ -49,6 +49,7 @@ date of note: 2024-09-16
 >$$
 >is an **upper triangular matrix** and $U = [x\; u_{2} \,{\;}\ldots{\;}\,u_{n}]\in \mathcal{U}(n)$ is **unitary**.
 
+- [[Triangular Matrix and Block Triangular Matrix]]
 - [[Eigenvalue and Eigenvector for Linear Map]]
 
 
@@ -97,6 +98,7 @@ date of note: 2024-09-16
 
 
 - [[Unitary Similarity and Unitary Diagonalizable]]
+- [[Triangular Matrix and Block Triangular Matrix]]
 
 
 - [[Finite Dimensional Vector Spaces by Halmos]]

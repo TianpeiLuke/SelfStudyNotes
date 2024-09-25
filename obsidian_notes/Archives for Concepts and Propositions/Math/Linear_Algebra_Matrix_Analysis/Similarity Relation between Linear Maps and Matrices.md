@@ -20,13 +20,13 @@ date of note: 2024-09-16
 >[!important] Definition
 >Let $A, B\in M_{n}$ be $n\times n$ matrix. 
 >
->We say $B$ **is similar to** $A$ if there exists a *nonsingular* $S\in M_{n}$ such that 
+>We say $A$ **is similar to** $B$ if there exists a *nonsingular* $S\in M_{n}$ such that 
 >$$
-> B = S^{-1}\,A\,S
+> A = S\,B\,S^{-1}
 >$$
 >
->- The transformation $$A \to S^{-1}\,A\,S$$ is called a **similarity transformation** by the **similarity matrix** $S$
->- The similarity relation is represented as $$B \sim A$$
+>- The transformation $$B \to S\,B\,S^{-1}$$ is called a **similarity transformation** by the **similarity matrix** $S$
+>- The similarity relation is represented as $$A \sim B$$
 
 ^5ebca6
 
@@ -39,9 +39,10 @@ date of note: 2024-09-16
 >
 >We say that $B$ is **permutation similar to** $A$ if there exits a **permutation matrix** $P$ such that 
 >$$
-> B = P^{T}\,A\,P
+> B = P\,A\,P^{T}
 >$$
 
+- [[Permutation Matrix and Reversal Matrix]]
 - [[Symmetric Group]]
 
 ## Explanation

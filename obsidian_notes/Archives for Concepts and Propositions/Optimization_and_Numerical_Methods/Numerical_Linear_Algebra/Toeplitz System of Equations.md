@@ -29,7 +29,7 @@ date of note: 2024-08-08
 - [[System of Linear Equations or Linear System]]
 - [[Existence and Uniqueness of Solution of Linear Equations]]
 
-- [[Toeplitz Matrix]]
+- [[Toeplitz Matrix and Backward Forward Shift Operation]]
 - [[Matrix]]
 
 

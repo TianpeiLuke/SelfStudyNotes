@@ -62,6 +62,7 @@ date of note: 2024-08-08
 
 - [[System of Linear Equations or Linear System]]
 - [[Sparse Linear System and Graph]]
+- [[Triangular Matrix and Block Triangular Matrix]]
 - [[Matrix]]
 
 

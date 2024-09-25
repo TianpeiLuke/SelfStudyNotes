@@ -31,6 +31,8 @@ date of note: 2024-09-21
 >- For $i=n-1\,{,}\ldots{,}\,1$:
 >	- $$x_{i} = \frac{b_{i} - \sum_{j=i+1}^{n}a_{i j}\,x_{j}}{a_{i i}}$$
 
+- [[Triangular Matrix and Block Triangular Matrix]]
+
 >[!important] Definition
 >**Column-oriented versions** of the above procedures can be obtained by *reversing loop orders*. Note that 
 >$$
@@ -88,10 +90,12 @@ date of note: 2024-09-21
 -----------
 ##  Recommended Notes and References
 
+
 - [[Triangular System of Equations]]
 - [[System of Linear Equations or Linear System]]
 - [[Existence and Uniqueness of Solution of Linear Equations]]
 - [[Forward Substitution of Lower Triangular System]]
+- [[Triangular Matrix and Block Triangular Matrix]]
 
 
 - [[Matrix Computations by Golub]] pp 106  - 109

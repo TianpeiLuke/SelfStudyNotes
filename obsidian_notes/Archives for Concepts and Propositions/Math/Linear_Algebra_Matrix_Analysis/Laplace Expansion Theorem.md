@@ -21,9 +21,11 @@ date of note: 2024-07-10
 >
 >Then, for any $i, j \in \{ 1 \,{,}\ldots{,}\, n\}$, we have 
 >$$
->\det(A) = \sum_{k=1}^{n}(-1)^{i + k} a_{i,k}\;\det(A_{i^{c},k^{c}}) = \sum_{k=1}^{n}(-1)^{k + j} a_{k,j}\;\det(A_{k^{c},j^{c}})
+>\det(A) = \sum_{k=1}^{n}(-1)^{i + k} a_{i,k}\;\det(A[i^{c},k^{c}]) = \sum_{k=1}^{n}(-1)^{k + j} a_{k,j}\;\det(A[k^{c},j^{c}])
 >$$
 >The first sum is the **Laplace expansion by minors** *along row* $i$; the second sum is the **Laplace expansion by minors** *along column* $j$.
+
+^b65d26
 
 - [[Determinant of Linear Transformation]]
 - [[Space of Bounded Linear Operators]]
@@ -43,6 +45,11 @@ date of note: 2024-07-10
 
 ## Explanation
 
+![[Adjugate of Matrix#^8344b6]]
+
+![[Adjugate of Matrix#^b4ad1a]]
+
+- [[Adjugate of Matrix]]
 
 ## Interior Multiplication
 
@@ -63,12 +70,15 @@ date of note: 2024-07-10
 - [[Coordinate Representation of Interior Multiplication]]
 - [[Interior Multiplication]]
 - [[Alternating Tensor]]
+- [[Einstein Summation Convention]]
 
 
 -----------
 ##  Recommended Notes and References
 
 
+- [[Adjugate of Matrix]]
+- [[Cramer Rule]]
 - [[Coordinate Representation of Interior Multiplication]]
 - [[Interior Multiplication]]
 

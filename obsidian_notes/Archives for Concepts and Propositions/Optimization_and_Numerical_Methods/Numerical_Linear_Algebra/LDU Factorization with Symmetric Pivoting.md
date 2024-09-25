@@ -29,6 +29,7 @@ date of note: 2024-08-08
 - [[LDU Factorization of Symmetric Matrix]]
 - [[Hermitian or Symmetric Matrix]]
 - [[LU Factorization of Matrix]]
+- [[Triangular Matrix and Block Triangular Matrix]]
 - [[Matrix]]
 
 

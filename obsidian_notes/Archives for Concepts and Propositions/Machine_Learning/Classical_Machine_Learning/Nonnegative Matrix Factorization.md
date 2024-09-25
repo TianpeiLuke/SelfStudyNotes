@@ -32,13 +32,12 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
+- [[Nonnegative and Positive Matrix]]
 - [[Principle Component Analysis]]
 - [[Probabilistic Principle Component Analysis]]
 - [[Gaussian Random Vector]]
 
 - [[Latent Variable Models]]
-
-
 
 
 - [[Curse of Dimensionality]]
@@ -47,8 +46,10 @@ date of note: 2024-05-12
 - [[Johnson-Lindenstrauss Lemma for Dimensionality Reduction]]
 
 
+
 - [[Elements of Statistical Learning by Hastie]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]
 - [[Elements of Information Theory by Cover]]
+- [[Matrix Analysis by Horn]]
 
 - [[Kullback-Leibler Divergence]]

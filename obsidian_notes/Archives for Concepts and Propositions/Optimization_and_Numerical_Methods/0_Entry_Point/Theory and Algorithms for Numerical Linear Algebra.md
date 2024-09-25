@@ -31,10 +31,13 @@ date of note: 2024-05-12
 - [[Forward Substitution of Lower Triangular System]]
 - [[Back Substitution of Upper Triangular System]]
 
+- [[Elementary Row and Column Operations]]
+- [[Reduced Row Echelon Form]]
 - [[Gaussian Elimination for Solving Linear System]]
 - [[LU Factorization of Matrix]]
 - [[Pivoting to Control Numerical Instability]]
 - [[Stability Analysis of Gaussian Elimination]]
+
 
 ### Special Linear Systems
 
@@ -86,6 +89,7 @@ date of note: 2024-05-12
 - [[Eigenspace and Spectrum for Linear Map]]
 - [[Eigenvalue and Eigenvector for Linear Map]]
 - [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
+- [[Spectral Theorem of Normal Map and Eigen decomposition]]
 - [[Schur Triangularization and Schur Form]]
 
 
