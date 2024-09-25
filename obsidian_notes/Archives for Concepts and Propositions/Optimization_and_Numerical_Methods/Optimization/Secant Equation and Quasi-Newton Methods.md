@@ -57,6 +57,9 @@ date of note: 2024-07-02
 
 ^035e08
 
+- [[Positive Semidefinite Transformation]]
+- [[Hermitian or Symmetric Matrix]]
+
 ### Symmetric Rank-One Formula
 
 >[!important] Definition
@@ -139,6 +142,8 @@ date of note: 2024-07-02
 >$$
 >
 >This means that these methods can be used to solve the **systems of linear equations**.
+
+- [[System of Linear Equations or Linear System]]
 
 
 

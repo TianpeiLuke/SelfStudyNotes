@@ -98,6 +98,8 @@ date of note: 2024-05-12
 - [[Convex Optimization Problem]]
 - [[Least Square Estimation]]
 - [[Positive Semidefinite Transformation]]
+- [[Hermitian or Symmetric Matrix]]
+- [[Frobenius Norm of Matrix]]
 
 >[!info]
 >The choice of *weighted Frobenius norm* is to have **scale-invariant solution**.
@@ -192,6 +194,11 @@ date of note: 2024-05-12
 - [[Newton Method]]
 - [[Unconstrained Global Minimization]]
 - [[Positive Semidefinite Transformation]]
+
+
+- [[Sherman–Morrison–Woodbury Matrix Inversion Formula]]
+- [[System of Linear Equations or Linear System]]
+
 
 - [[Numerical Optimization by Nocedal]] pp 139
 - [[Nonlinear Programming by Bertsekas]]

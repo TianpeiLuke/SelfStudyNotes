@@ -144,6 +144,8 @@ date of note: 2024-05-12
 
 - [[Conjugate Gradient Algorithm Nonlinear]]
 - [[Newton Method]]
+- [[System of Linear Equations or Linear System]]
+
 
 - [[Numerical Optimization by Nocedal]] pp 103
 - [[Nonlinear Programming by Bertsekas]] pp 130
