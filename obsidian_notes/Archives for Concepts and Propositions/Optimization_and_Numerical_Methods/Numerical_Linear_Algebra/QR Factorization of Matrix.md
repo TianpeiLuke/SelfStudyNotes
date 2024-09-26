@@ -93,6 +93,18 @@ date of note: 2024-08-08
 >Given column partitions $$A = [x_{1}\,{,}\ldots{,}\,x_{n}],$$ the $Q$ matrix consists of orthonormal vectors $$Q = [z_{1}\,{,}\ldots{,}\,z_{n}]$$
 
 
+## QR Factorization Algorithms
+
+- [[Householder Transformation and Householder Reflection]]
+- [[Householder QR Factorization]]
+- [[Block Householder QR Factorization]]
+
+- [[Givens Transformation and Givens Rotation]]
+- [[Givens QR Factorization]]
+
+- [[Householder QR Factorization]]
+
+- [[Gram-Schmidt Orthogonalization]]
 
 
 
@@ -100,7 +112,7 @@ date of note: 2024-08-08
 ##  Recommended Notes and References
 
 
-- [[Gram-Schmidt Orthogonalization]]
+
 - [[Orthogonality in Inner Product Space]]
 
 

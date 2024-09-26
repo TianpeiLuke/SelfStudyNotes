@@ -135,6 +135,10 @@ date of note: 2024-08-20
 
 - [[Gram-Schmidt Orthogonalization]]
 
+## Householder Least Square Solution
+
+- [[Householder QR Factorization]]
+
 
 
 

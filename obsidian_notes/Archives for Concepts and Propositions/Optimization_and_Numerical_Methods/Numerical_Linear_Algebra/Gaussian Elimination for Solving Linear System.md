@@ -19,11 +19,14 @@ date of note: 2024-09-21
 >[!important]
 >**Name**: Gaussian Elimination for Solving Linear System
 
-
-
-
+![[Elementary Row and Column Operations#^92e828]]
 
 - [[Elementary Row and Column Operations]]
+
+
+
+
+
 
 ## Explanation
 

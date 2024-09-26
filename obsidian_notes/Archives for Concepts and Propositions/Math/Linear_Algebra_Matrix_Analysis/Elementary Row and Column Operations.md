@@ -39,6 +39,8 @@ date of note: 2024-09-24
 >	- The $(j,i)$ place is the **multiplier scalar** $\tau$. In above display $j > i$.
 >	- We can represent the **Type 3 elementary operation matrix** as $$E_{3} = I_{n} + \tau\,e_{j}\,e_{i}^T.$$
 
+^92e828
+
 
 ## Explanation
 

@@ -71,10 +71,15 @@ date of note: 2024-05-12
 
 
 
-### Orthogonalization 
+### Orthogonalization and QR Factorization
 
+- [[Householder Transformation and Householder Reflection]]
+- [[Givens Transformation and Givens Rotation]]
 - [[Gram-Schmidt Orthogonalization]]
 - [[QR Factorization of Matrix]]
+- [[Householder QR Factorization]]
+- [[Block Householder QR Factorization]]
+
 
 ### Least Square Problems
 
@@ -84,7 +89,7 @@ date of note: 2024-05-12
 - [[Least Square Estimation via Singular Value Decomposition]]
 
 
-### Eigenvalue Problem
+### Symmetric Eigenvalue Problem
 
 - [[Eigenspace and Spectrum for Linear Map]]
 - [[Eigenvalue and Eigenvector for Linear Map]]
@@ -92,9 +97,14 @@ date of note: 2024-05-12
 - [[Spectral Theorem of Normal Map and Eigen decomposition]]
 - [[Schur Triangularization and Schur Form]]
 
-
 - [[Rayleigh Quotient for Eigenvalue Problem]]
 - [[Courant-Fischer Minimax Theorem]]
+
+- [[Power Iteration and PageRank for Eigenvalue of Symmetric Matrices]]
+- [[QR Iteration for Eigenvalue of Symmetric Matrix]]
+- [[Tridiagonal Decomposition of Symmetric Matrix]]
+
+
 
 ### Large Sparse Eigenvalue Problems
 

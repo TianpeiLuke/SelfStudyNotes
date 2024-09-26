@@ -43,6 +43,11 @@ date of note: 2024-06-05
 - [[Orthogonality in Inner Product Space]]
 - [[Inner Product Space]]
 
+### Modified Gram-Schmidt Algorithm
+
+- [[Modified Gram-Schmidt Algorithm for QR Factorization]]
+
+
 ## Explanation
 
 >[!important]
@@ -57,6 +62,7 @@ date of note: 2024-06-05
 ## Complete Orthonormal Basis in Hilbert Space
 
 - [[Complete Orthonormal Basis of Hilbert Space]]
+
 
 
 
