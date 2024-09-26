@@ -55,3 +55,7 @@ date of note: 2024-05-15
 - [[Orthogonality in Inner Product Space]]
 - [[Basis of Vector Space]]
 - [[Hilbert Space]]
+
+- [[Functional Analysis by Reed]]
+- [[Real Analysis by Royden]]
+- [[Real Analysis Modern Techniques and Their Applications by Folland]]

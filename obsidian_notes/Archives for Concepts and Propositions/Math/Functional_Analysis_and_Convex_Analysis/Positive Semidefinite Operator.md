@@ -61,4 +61,6 @@ date of note: 2024-05-10
 - [[Hilbert Space]]
 - [[Positive Semidefinite Transformation]]
 
+
+- [[Functional Analysis by Reed]]
 - Github Note [link](https://github.com/TianpeiLuke/SelfStudyNotes/tree/master/self-study/probability_and_measure_theory)

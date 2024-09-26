@@ -58,3 +58,6 @@ date of note: 2024-05-15
 - [[Complete Orthonormal Basis of Hilbert Space]]
 - [[Vector Space over a Field]]
 
+- [[Functional Analysis by Reed]]
+- [[Real Analysis by Royden]]
+- [[Real Analysis Modern Techniques and Their Applications by Folland]]

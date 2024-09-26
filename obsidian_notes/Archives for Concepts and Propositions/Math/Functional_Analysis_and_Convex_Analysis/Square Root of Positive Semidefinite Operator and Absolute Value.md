@@ -30,6 +30,8 @@ date of note: 2024-05-28
 >\lvert A \rvert := \sqrt{ A^{*}A }. 
 >$$
 
+^b24042
+
 - [[Adjoint of Bounded Operator in Hilbert Space]]
 
 ## Explanation
@@ -52,3 +54,4 @@ date of note: 2024-05-28
 
 
 - [[Hilbert Space]]
+- [[Functional Analysis by Reed]]

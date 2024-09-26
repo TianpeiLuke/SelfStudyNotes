@@ -87,4 +87,8 @@ date of note: 2024-05-04
 - [[Metric Space]]
 - [[Norm and Normed Space]]
 
+
+- [[Functional Analysis by Reed]]
+- [[Finite Dimensional Vector Spaces by Halmos]]
+- [[Matrix Analysis by Horn]]
 - Github Note [link](https://github.com/TianpeiLuke/SelfStudyNotes/tree/master/self-study/probability_and_measure_theory)

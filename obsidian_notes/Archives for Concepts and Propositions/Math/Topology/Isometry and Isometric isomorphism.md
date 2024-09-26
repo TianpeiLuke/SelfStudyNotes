@@ -34,6 +34,8 @@ date of note: 2024-05-15
 >
 >$(X, d_{X})$ and $(Y, d_{Y})$ are said to be **isometric** if such $f$ exists.
 
+^d81537
+
 - [[Metric Space]]
 
 
