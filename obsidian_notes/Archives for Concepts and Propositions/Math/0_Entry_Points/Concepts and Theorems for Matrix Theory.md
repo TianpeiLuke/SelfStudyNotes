@@ -78,9 +78,10 @@ date of note: 2024-07-13
 #### Polynomials associated with Matrix
 
 - [[Characteristic Polynomial for Linear Map]]
-- [[Minimal Polynomial for Linear Map]]
 - [[Algebraic and Geometric Multiplicity of Linear Map]]
 - [[Cayley-Hamilton Theorem]]
+- [[Minimal Polynomial for Linear Map]]
+- [[Companion Matrix of Polynomial]]
 
 
 ### System of Linear Equations

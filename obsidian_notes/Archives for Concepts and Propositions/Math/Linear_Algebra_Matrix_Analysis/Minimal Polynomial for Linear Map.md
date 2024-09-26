@@ -61,7 +61,7 @@ date of note: 2024-05-27
 
 - [[Algebraic and Geometric Multiplicity of Linear Map]]
 
-
+- [[Companion Matrix of Polynomial]]
 - [[Linear Map]]
 - [[Matrix]]
 
