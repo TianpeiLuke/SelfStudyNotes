@@ -27,6 +27,8 @@ date of note: 2024-08-08
 
 - [[Gaussian Elimination for Solving Linear System]]
 
+### Existence
+
 >[!important] Lemma
 >Let $A\in M_{n}$ and suppose that $$A = LU$$ is an **LU factorization**.
 >
@@ -44,11 +46,80 @@ date of note: 2024-08-08
 >[!info]
 >This lemma implies that **LU factorization** has a **recursive structure.**
 
+>[!important] Theorem (Row/Column Inclusion Property)
+>Let $A\in M_{n}$.
+>
+>Then
+>- $A$ has an **$LU$ factorization** $$A = LU$$ in which $L$ is **nonsingular** *if and only if* $A$ has **row inclusion property**:
+>	- For each $i=1\,{,}\ldots{,}\,n-1$, $A[i+1, [1:i]]$ is a **linear combination** of rows of $A[1:i]$, $$A_{i+1, [1:i]} \in \text{span}\left\{ A_{1, [1:i]} \,{,}\ldots{,}\, A_{i, [1:i]}\right\}, \quad i=1\,{,}\ldots{,}\,n-1$$
+>- $A$ has an **$LU$ factorization** in which $U$ is **nonsingular** *if and only if* $A$ has **column inclusion property**:
+>	- For each $j=1\,{,}\ldots{,}\,n-1$, $A[[1:j], j+1]$ is a **linear combination** of columns of $A[1:j]$, $$A_{[1:j],j+1} \in \text{span}\left\{ A_{[1:j], 1} \,{,}\ldots{,}\, A_{[1:j],j}\right\}, \quad j=1\,{,}\ldots{,}\,n-1$$
+
+>[!info]
+>If all **leading principal matrices** $A[1:k, 1:k]$  are non-singular for $k=1\,{,}\ldots{,}\,r$ with $r=\text{rank}(A)$, then $A$ satisfies both **row inclusion property** and **column inclusion property.**
+
+>[!important] Corollary
+>Suppose that $A\in M_{n}$ has  $\text{rank}(A) = r$. 
+>
+>If all the **leading principal matrices** $A[1:k]$ is **nonsingular**, i.e. the *principal minor* is *nonzero* $$\det \left( A[1:k, 1:k] \right) \neq 0, \quad k=1\,{,}\ldots{,}\,r$$ then $A$ has a **$LU$ factorization**. Furthermore, either factor may be chosen to be **unit triangular**. 
+>
+>Both $L$ and $U$ are **nonsingular** *if and only if* $r=n$, 
+>- that is, *if and only if* $A$ and all of its **leading principal submatrices** are **nonsingular.**
+
+- [[Principal Submatrix]]
+- [[Minor and Principal Minor]]
+- [[Triangular Matrix and Block Triangular Matrix]]
+
+### LDU Factorization and Uniqueness
+
+>[!important] Corollary (LDU Factorization and Uniqueness of LU Factorization)
+>Let $A\in M_{n}$. 
+>
+>- Suppose that $A$ is **nonsingular**. Then $A$ has a **$LU$ factorization** $$A = LU$$ *if and only if* all of its **leading principal submatrices** are nonsingular $$\det \left( A[1:k, 1:k] \right) \neq 0, \quad k=1\,{,}\ldots{,}\,n$$
+>
+>- Suppose that $A[1:k, 1:k]$ are nonsingular for all $k=1\,{,}\ldots{,}\,n$. Then $$A = L\,D\,U$$ where $L$ is a **lower triangular matrix**, $U$ is an **upper triangular matrix**, $D = \text{diag}(d_{1}\,{,}\ldots{,}\,d_{n})$ is **diagonal** with $$\begin{align*}d_{1} &= a_{11}, \\[5pt]  d_{i} &= \frac{\det\left(A[1:i, 1:i]\right)}{\det \left( A[1:i-1, 1:i-1] \right)}, \quad i=2\,{,}\ldots{,}\,n\end{align*}$$ The factors $L, U, D$ are **uniquely determined.** 
+
+^62518f
+
+>[!important] Definition
+>Let $A\in M_{n}$ with *nonsingular leading principal submatrices* $A[1:k]$.
+>
+>Then the **LDU factorization** of $A$ is given by 
+>$$A = L\,D\,U$$ where $L$ is a **lower triangular matrix**, $U$ is an **upper triangular matrix**, $D = \text{diag}(d_{1}\,{,}\ldots{,}\,d_{n})$ is **diagonal** with $$\begin{align*}d_{1} &= a_{11}, \\[5pt]  d_{i} &= \frac{\det\left(A[1:i, 1:i]\right)}{\det \left( A[1:i-1, 1:i-1] \right)}, \quad i=2\,{,}\ldots{,}\,n\end{align*}$$ which are the *ratios* of *successive principle minors*.
 
 
 ## Explanation
 
+>[!info]
+>Without the condition on **nonsingular leading principal submatrices**  $$\det \left( A[1:k, 1:k] \right) \neq 0, \quad k=1\,{,}\ldots{,}\,n,$$ there is **no guarantee** that the *LU factorization* **exist** or to be **unique**.
 
+>[!info]
+>Given the $LU$ factorization, we can decompose the system of equations $$Ax = b \iff LUx = b$$ into **two systems**:
+>- $$Ly = b$$ which can be solved by **forward substitution** with $O(n^2)$ complexity
+>- $$Ux = y$$ which can be solved by **back substitution** with $O(n^2)$ complexity
+>
+
+- [[Forward Substitution of Lower Triangular System]]
+- [[Back Substitution of Upper Triangular System]]
+
+## LU Factorization via Gaussian Elimination
+
+>[!info]
+>The *upper triangular matrix* $U$ can be obtained by applying **Gaussian elimination** $M_{k}$ for each row $k=1\,{,}\ldots{,}\,n-1$ of $A$. Then the *lower triangular matrix* $L$ is given by the **inverse** of these operations
+>$$
+>L = M_{1}^{-1}\,{}\ldots{}\,M_{n-1}^{-1} = I_{n} + \sum_{k=1}^{n-1}\tau^{(k)}\,e_{k}^{T}
+>$$
+>the **$k$th column** of $L$ is defined by the **multipliers** that arise in the $k$-th step of Gaussian elimination.
+
+- [[Gaussian Elimination for Solving Linear System]]
+
+
+## Symmetric Matrix
+
+>[!info]
+>If $A = A^{T}$, then the **$LDU$ factorization** becomes **$LDL^{T}$ factorization** $$A = L\,D\,L^{T}$$ where the $U = L^{T}$ matrix in $LDU$ factorization.
+
+- [[LDU Factorization of Symmetric Matrix]]
 
 
 
@@ -56,9 +127,10 @@ date of note: 2024-08-08
 -----------
 ##  Recommended Notes and References
 
-- [[Gaussian Elimination for Solving Linear System]]
-- [[Forward Substitution of Lower Triangular System]]
-- [[Back Substitution of Upper Triangular System]]
+
+
+
+- [[LDU Factorization of Symmetric Matrix]]
 
 - [[System of Linear Equations or Linear System]]
 - [[Sparse Linear System and Graph]]

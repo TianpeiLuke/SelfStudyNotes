@@ -31,6 +31,8 @@ date of note: 2024-09-21
 - [[Back Substitution of Upper Triangular System]]
 - [[LU Factorization of Matrix]]
 - [[Reduced Row Echelon Form]]
+- [[Elementary Row and Column Operations]]
+
 
 - [[Principal Submatrix]]
 - [[Schur Complement and Inversion of Block Matrix]]
