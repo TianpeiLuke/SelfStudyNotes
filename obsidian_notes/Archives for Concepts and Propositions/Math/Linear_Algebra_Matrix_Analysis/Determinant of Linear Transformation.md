@@ -42,6 +42,18 @@ date of note: 2024-05-14
 >$$
 
 - [[Linear Map]]
+
+### Alternating Tensor 
+
+>[!important] Definition
+>The **determinant function** $A \mapsto \det(A)$ is the *unique function* $$f: M_{n}(F) \to F $$ such that 
+>- **Mutli-linearity**: $$f(A_{1} \,{,}\ldots{,}\,a\,A_{k}+ b\,B_{k} \,{,}\ldots{,}\,A_{n}) = a\,f(A_{1} \,{,}\ldots{,}\,A_{k} \,{,}\ldots{,}\,A_{n}) + b\,f(A_{1} \,{,}\ldots{,}\,B_{k} \,{,}\ldots{,}\,A_{n})$$
+>- **Alternating**: $$f(A_{1} \,{,}\ldots{,}\,A_{i} \,{,}\ldots{,}\, A_{j} \,{,}\ldots{,}\,A_{n}) = - f(A_{1} \,{,}\ldots{,}\,A_{j} \,{,}\ldots{,}\, A_{i} \,{,}\ldots{,}\,A_{n})$$
+>- **Normalized**: $$f(I) = 1.$$
+
+- [[Alternating Tensor]]
+- [[Multilinear Function]]
+
 ## Explanation
 
 >[!info]
