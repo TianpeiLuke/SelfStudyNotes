@@ -26,7 +26,7 @@ date of note: 2024-09-24
 >- inverses of square matrices.
 
 >[!important] Definition
->The following operations are *three types* of **elementary row operations**:
+>The **elementary row/column operations** include the following *three types*:
 >- **Type 1: Interchange of two rows**: interchange row $i$ and $j$ results from the left multiplication of $A$ by $$E_{1}:= \left[\begin{array}{ccccccc}1 & & & & & & & &\\ & \ddots & & & & & & &\\ & & 0& & \cdots & & 1& &\\  & & \vdots & & & & \vdots& &\\& & 1& & \cdots & & 0& &\\ & & & &  & & & \ddots &\\ & & & & & & & & 1  \end{array} \right]$$ where
 >	- the only two *nonzero* *off-diagonal entries* are in $(i,j)$ and $(j,i)$ positions, and 
 >	- the two *zero diagonal entries* are in $(i,i)$ and $(j,j)$ position  
