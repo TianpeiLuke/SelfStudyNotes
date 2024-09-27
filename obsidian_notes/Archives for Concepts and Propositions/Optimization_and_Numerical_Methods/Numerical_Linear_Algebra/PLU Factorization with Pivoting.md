@@ -32,10 +32,24 @@ date of note: 2024-09-26
 >[!info]
 >The factors above need **not to be unique**.
 
+### PLU Factorization via Gaussian Elimination with Partial Pivoting
+
+- [[Gaussian Elimination with Partial Pivoting]]
+
+
+### PLU Factorization via Gaussian Elimination with Complete Pivoting
+
+- [[Gaussian Elimination with Complete Pivoting]]
+
+
 
 ## Explanation
 
+>[!info]
+>In implementation, the $PLU$ factorization is given by **Gaussian elimination with pivoting**.
 
+- [[Gaussian Elimination for Solving Linear System]]
+- [[Gaussian Elimination with Complete Pivoting]]
 
 
 
@@ -47,7 +61,7 @@ date of note: 2024-09-26
 - [[Triangular Equivalence of Matrices]]
 - [[LU Factorization of Matrix]]
 - [[Gaussian Elimination for Solving Linear System]]
-- [[Pivoting to Control Numerical Instability]]
+- [[Gaussian Elimination with Complete Pivoting]]
 
 - [[Permutation Matrix and Reversal Matrix]]
 - [[Triangular Matrix and Block Triangular Matrix]]
@@ -55,4 +69,4 @@ date of note: 2024-09-26
 
 
 - [[Matrix Analysis by Horn]] pp 219
-- [[Matrix Computations by Golub]]
+- [[Matrix Computations by Golub]] pp 129 - 131

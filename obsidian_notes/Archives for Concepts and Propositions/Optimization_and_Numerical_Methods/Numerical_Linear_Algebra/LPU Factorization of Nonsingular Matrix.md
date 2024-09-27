@@ -49,7 +49,7 @@ date of note: 2024-09-26
 ## LPDU Factorization of Nonsingular Matrix
 
 
-- [[LPDU Factorization of Nonsingular Matrix and Pivoting]]
+- [[LPDU Factorization of Nonsingular Matrix]]
 
 
 
@@ -59,9 +59,9 @@ date of note: 2024-09-26
 
 - [[Triangular Equivalence of Matrices]]
 - [[LU Factorization of Nonsingular Matrix]]
-- [[PLU Factorization]]
+- [[PLU Factorization with Pivoting]]
 - [[Gaussian Elimination for Solving Linear System]]
-- [[Pivoting to Control Numerical Instability]]
+- [[Gaussian Elimination with Complete Pivoting]]
 
 - [[Permutation Matrix and Reversal Matrix]]
 - [[Triangular Matrix and Block Triangular Matrix]]

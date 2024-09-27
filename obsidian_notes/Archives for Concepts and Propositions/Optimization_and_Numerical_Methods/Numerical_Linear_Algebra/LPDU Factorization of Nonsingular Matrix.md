@@ -53,9 +53,9 @@ date of note: 2024-09-26
 
 - [[Triangular Equivalence of Matrices]]
 - [[LU Factorization of Matrix]]
-- [[PLU Factorization]]
+- [[PLU Factorization with Pivoting]]
 - [[Gaussian Elimination for Solving Linear System]]
-- [[Pivoting to Control Numerical Instability]]
+- [[Gaussian Elimination with Complete Pivoting]]
 
 - [[Permutation Matrix and Reversal Matrix]]
 - [[Triangular Matrix and Block Triangular Matrix]]

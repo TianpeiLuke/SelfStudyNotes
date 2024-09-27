@@ -137,10 +137,10 @@ date of note: 2024-07-13
 #### Triangular Equivalence
 
 - [[LU Factorization of Matrix]]
-- [[PLU Factorization]]
+- [[PLU Factorization with Pivoting]]
 - [[Triangular Equivalence of Matrices]]
 - [[LPU Factorization of Nonsingular Matrix]]
-- [[LPDU Factorization of Nonsingular Matrix and Pivoting]]
+- [[LPDU Factorization of Nonsingular Matrix]]
 - [[Cholesky Factorization of Hermitian Positive Definite Matrices]]
 
 #### Congruence

@@ -91,9 +91,9 @@ date of note: 2024-08-08
 
 ### PLU Factorization
 
-![[PLU Factorization#^0aac00]]
+![[PLU Factorization with Pivoting#^0aac00]]
 
-- [[PLU Factorization]]
+- [[PLU Factorization with Pivoting]]
 
 
 ## Explanation

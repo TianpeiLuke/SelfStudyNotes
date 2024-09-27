@@ -113,6 +113,8 @@ date of note: 2024-09-21
 >$$
 >where $$B - v\,w^{T} / \alpha = L_{1}\,U_{1} $$ is the **LU factorization** of **rank-1 updated trailing principal submatrix** $B - v\,w^{T} / \alpha$.
 
+^c1fdc9
+
 - [[LDU Factorization of Symmetric Matrix]]
 
 >[!important] Definition
@@ -126,6 +128,8 @@ date of note: 2024-09-21
 >	- Collect a list of indices $\rho = k+1:n$
 >	- Replace the $k$-th column of *lower triangular* part of $A$ $$A[\rho, k] \leftarrow \frac{A[\rho, k]}{A[\rho, \rho]}$$
 >	- Replace the *$(n-k)$ trailing principal submatrix* by the **outer product** $$A[\rho, \rho] \leftarrow A[\rho, \rho] - A[\rho, k]\,A[k, \rho].$$
+
+^5aee93
 
 
 
@@ -153,7 +157,7 @@ date of note: 2024-09-21
 - [[System of Linear Equations or Linear System]]
 - [[Matrix]]
 
-- [[Pivoting to Control Numerical Instability]]
+- [[Gaussian Elimination with Complete Pivoting]]
 
 
 - [[Matrix Computations by Golub]] pp 111 - 114

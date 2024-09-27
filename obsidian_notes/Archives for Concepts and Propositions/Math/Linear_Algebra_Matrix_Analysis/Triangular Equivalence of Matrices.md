@@ -54,9 +54,9 @@ date of note: 2024-09-23
 
 ### LPDU Factorization
 
-![[LPDU Factorization of Nonsingular Matrix and Pivoting#^f64407]]
+![[LPDU Factorization of Nonsingular Matrix#^f64407]]
 
-- [[LPDU Factorization of Nonsingular Matrix and Pivoting]]
+- [[LPDU Factorization of Nonsingular Matrix]]
 
 
 

@@ -154,7 +154,7 @@ $$
 - [[Existence and Uniqueness of Solution of Linear Equations]]
 
 - [[LDU Factorization of Symmetric Matrix]]
-- [[LPDU Factorization of Nonsingular Matrix and Pivoting]]
+- [[LPDU Factorization of Nonsingular Matrix]]
 - [[QR Factorization of Matrix]]
 - [[Normal Transformation]]
 

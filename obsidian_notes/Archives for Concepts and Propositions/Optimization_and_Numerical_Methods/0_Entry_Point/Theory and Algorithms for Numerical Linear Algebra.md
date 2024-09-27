@@ -24,20 +24,30 @@ date of note: 2024-05-12
 
 ### General Linear Systems
 
+#### Solution of Linear System
+
 - [[System of Linear Equations or Linear System]]
 - [[Existence and Uniqueness of Solution of Linear Equations]]
+
+#### Triangular System
 
 - [[Triangular System of Equations]]
 - [[Forward Substitution of Lower Triangular System]]
 - [[Back Substitution of Upper Triangular System]]
 
+#### Elementary Operations
+
 - [[Elementary Row and Column Operations]]
 - [[Reduced Row Echelon Form]]
+
+#### LU Factorization and Gaussian Elimination
+
 - [[Gaussian Elimination for Solving Linear System]]
 - [[LU Factorization of Matrix]]
-- [[Pivoting to Control Numerical Instability]]
+- [[Gaussian Elimination with Partial Pivoting]]
+- [[Gaussian Elimination with Complete Pivoting]]
 - [[LPU Factorization of Nonsingular Matrix]]
-- [[LPDU Factorization of Nonsingular Matrix and Pivoting]]
+- [[LPDU Factorization of Nonsingular Matrix]]
 - [[Stability Analysis of Gaussian Elimination]]
 
 
@@ -48,13 +58,16 @@ date of note: 2024-05-12
 
 - [[Hermitian or Symmetric Matrix]]
 - [[LDU Factorization of Symmetric Matrix]]
+- [[LDU Factorization with Symmetric Pivoting]]
 - [[Triangular Equivalence of Matrices]]
 
 #### Symmetric or Hermitian Positive Definite System 
 
 - [[Positive Semidefinite Transformation]]
+- [[QR Factorization of Matrix]]
+- [[Square Root of Positive Semidefinite Transformation and Absolute Value]]
 - [[Cholesky Factorization of Hermitian Positive Definite Matrices]]
-- [[LDU Factorization with Symmetric Pivoting]]
+
 
 #### Banded System of Equations
 

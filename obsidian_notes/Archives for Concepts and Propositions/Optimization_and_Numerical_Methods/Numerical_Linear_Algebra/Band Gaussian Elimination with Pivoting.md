@@ -28,7 +28,7 @@ date of note: 2024-09-21
 
 - [[Band Triangular System of Equations]]
 
-- [[Pivoting to Control Numerical Instability]]
+- [[Gaussian Elimination with Complete Pivoting]]
 - [[Gaussian Elimination for Solving Linear System]]
 - [[System of Linear Equations or Linear System]]
 - [[Existence and Uniqueness of Solution of Linear Equations]]

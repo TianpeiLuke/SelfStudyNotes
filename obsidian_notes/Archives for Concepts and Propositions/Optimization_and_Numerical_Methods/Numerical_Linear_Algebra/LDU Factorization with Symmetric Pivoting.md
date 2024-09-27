@@ -25,7 +25,7 @@ date of note: 2024-08-08
 ##  Recommended Notes and References
 
 
-- [[Pivoting to Control Numerical Instability]]
+- [[Gaussian Elimination with Complete Pivoting]]
 - [[LDU Factorization of Symmetric Matrix]]
 - [[Hermitian or Symmetric Matrix]]
 - [[LU Factorization of Matrix]]
