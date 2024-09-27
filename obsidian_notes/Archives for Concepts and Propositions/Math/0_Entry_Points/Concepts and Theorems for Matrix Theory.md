@@ -126,7 +126,6 @@ date of note: 2024-07-13
 - [[QR Factorization of Matrix]]
 - [[Unitary Similarity and Unitary Diagonalizable]]
 - [[Schur Triangularization and Schur Form]]
-- [[Triangular Equivalence of Matrices]]
 - [[Normal Transformation]]
 
 #### Jordan Decomposition
@@ -134,6 +133,15 @@ date of note: 2024-07-13
 - [[Nilpotent Linear Transformation and Matrix]]
 - [[Krylov Subspace]]
 - [[Jordan Canonical Form]]
+
+#### Triangular Equivalence
+
+- [[LU Factorization of Matrix]]
+- [[PLU Factorization]]
+- [[Triangular Equivalence of Matrices]]
+- [[LPU Factorization of Nonsingular Matrix]]
+- [[LPDU Factorization of Nonsingular Matrix and Pivoting]]
+- [[Cholesky Factorization of Hermitian Positive Definite Matrices]]
 
 #### Congruence
 
@@ -168,8 +176,9 @@ date of note: 2024-07-13
 - [[Inner Product Space]]
 - [[Sesquilinear Form]]
 - [[Normal Transformation]]
-- [[Polar Decomposition of Transformation]]
 - [[Positive Semidefinite Transformation]]
+- [[Square Root of Positive Semidefinite Transformation and Absolute Value]]
+- [[Polar Decomposition of Transformation]]
 
 #### Spectral Theorem
 

@@ -27,17 +27,17 @@ date of note: 2024-09-24
 
 >[!important] Definition
 >The **elementary row/column operations** include the following *three types*:
->- **Type 1: Interchange of two rows**: interchange row $i$ and $j$ results from the left multiplication of $A$ by $$E_{1}:= \left[\begin{array}{ccccccc}1 & & & & & & & &\\ & \ddots & & & & & & &\\ & & 0& & \cdots & & 1& &\\  & & \vdots & & & & \vdots& &\\& & 1& & \cdots & & 0& &\\ & & & &  & & & \ddots &\\ & & & & & & & & 1  \end{array} \right]$$ where
+>- **Type 1: Interchange of two rows**: interchange row $i$ and $j$ results from the left multiplication of $A$ by $$E_{1}(i,j):= \left[\begin{array}{ccccccc}1 & & & & & & & &\\ & \ddots & & & & & & &\\ & & 0& & \cdots & & 1& &\\  & & \vdots & & & & \vdots& &\\& & 1& & \cdots & & 0& &\\ & & & &  & & & \ddots &\\ & & & & & & & & 1  \end{array} \right]$$ where
 >	- the only two *nonzero* *off-diagonal entries* are in $(i,j)$ and $(j,i)$ positions, and 
 >	- the two *zero diagonal entries* are in $(i,i)$ and $(j,j)$ position  
->	- We can represent the **Type 1 elementary operation matrix** as $$E_{1} = I_{n} - (e_{i} - e_{j})(e_{i} - e_{j})^{T}$$ where  $e_{i} = [0\,{,}\ldots{,}\,1_{i}\,,0\,{,}\ldots{,}\,0]$ has one $1$ at $i$-th place. 
+>	- We can represent the **Type 1 elementary operation matrix** as $$E_{1}(i,j) = I_{n} - (e_{i} - e_{j})(e_{i} - e_{j})^{T}$$ where  $e_{i} = [0\,{,}\ldots{,}\,1_{i}\,,0\,{,}\ldots{,}\,0]$ has one $1$ at $i$-th place. 
 >	- $e_{i}$ is the $i$-th column of identity matrix $I$.
->- **Type 2: Multiplication of a row by a Nonzero Scalar**: multiplication of row $i$ by a nonzero scalar $\tau$ results from left multiplication of $A$ by $$E_{2} := \left[ \begin{array}{ccccccc}1& & & & & & \\ & \ddots & & & & & \\ & & 1 & & & & \\ & & &\tau & & & \\ & & & &1 & & \\ & & & & & \ddots & \\ & & & & & & 1\\ \end{array} \right] $$
+>- **Type 2: Multiplication of a row by a Nonzero Scalar**: multiplication of row $i$ by a nonzero scalar $\tau$ results from left multiplication of $A$ by $$E_{2}(i, \tau) := \left[ \begin{array}{ccccccc}1& & & & & & \\ & \ddots & & & & & \\ & & 1 & & & & \\ & & &\tau & & & \\ & & & &1 & & \\ & & & & & \ddots & \\ & & & & & & 1\\ \end{array} \right] $$
 >	- The $(i,i)$ place is the **multiplier scalar**  $\tau$.
->	- We can represent the **Type 2 elementary operation matrix** as $$E_{2} = I_{n} + (\tau -1)\,e_{i}\,e_{i}^T.$$
->- **Type 3: Addition of a Scalar Multiple of one row to another row**: addition of $\tau$ times row $i$ of $A$ to row $j$ of $A$ results from left multiplication of $A$ by $$E_{3} = \left[ \begin{array}{cccccc}1 & & & & & \\  & \ddots & & & & \\ &  & 1 & & & \\ &  & & 1 & & \\ &  & \tau & & \ddots & \\ &  & & &  & 1\\ \end{array} \right] $$
+>	- We can represent the **Type 2 elementary operation matrix** as $$E_{2}(i) = I_{n} + (\tau -1)\,e_{i}\,e_{i}^T.$$
+>- **Type 3: Addition of a Scalar Multiple of one row to another row**: addition of $\tau$ times row $i$ of $A$ to row $j$ of $A$ results from left multiplication of $A$ by $$E_{3}(i,j, \tau) = \left[ \begin{array}{cccccc}1 & & & & & \\  & \ddots & & & & \\ &  & 1 & & & \\ &  & & 1 & & \\ &  & \tau & & \ddots & \\ &  & & &  & 1\\ \end{array} \right] $$
 >	- The $(j,i)$ place is the **multiplier scalar** $\tau$. In above display $j > i$.
->	- We can represent the **Type 3 elementary operation matrix** as $$E_{3} = I_{n} + \tau\,e_{j}\,e_{i}^T.$$
+>	- We can represent the **Type 3 elementary operation matrix** as $$E_{3}(i,j) = I_{n} + \tau\,e_{j}\,e_{i}^T.$$
 
 ^92e828
 
@@ -55,6 +55,10 @@ date of note: 2024-09-24
 - [[Alternating Tensor]]
 - [[Multilinear Function]]
 
+
+## Gaussian Elimination
+
+- [[Gaussian Elimination for Solving Linear System]]
 
 
 

@@ -26,7 +26,6 @@ date of note: 2024-09-16
 
 - [[Triangular Matrix and Block Triangular Matrix]]
 - [[Unitary and Orthogonal Transformation]]
-- [[Unitary Group]]
 - [[Unitary Similarity and Unitary Diagonalizable]]
 
 >[!important] Definition
@@ -89,6 +88,13 @@ date of note: 2024-09-16
 >Let $\mathcal{F} \subseteq M_{n}$ be a nonempty **commuting family.**
 >
 >Then there exists a **unitary matrix** $U\in M_{n}$ such that $$U^{*}\,A\,U$$ is **upper triangular** for **every** $A\in \mathcal{F}$.
+
+- [[Commuting Family of Matrices]]
+
+## Jordan Form
+
+- [[Jordan Canonical Form]]
+
 
 
 

@@ -36,7 +36,10 @@ date of note: 2024-05-12
 - [[Gaussian Elimination for Solving Linear System]]
 - [[LU Factorization of Matrix]]
 - [[Pivoting to Control Numerical Instability]]
+- [[LPU Factorization of Nonsingular Matrix]]
+- [[LPDU Factorization of Nonsingular Matrix and Pivoting]]
 - [[Stability Analysis of Gaussian Elimination]]
+
 
 
 ### Special Linear Systems

@@ -125,7 +125,9 @@ date of note: 2024-05-11
 - [[Unitary and Orthogonal Transformation]]
 - [[Normal Transformation]]
 - [[Positive Semidefinite Transformation]]
+- [[Square Root of Positive Semidefinite Transformation and Absolute Value]]
 - [[Conjugate Vector with respect to Positive Definite Transformation]]
+
 
 ### Spectrum Theorem of Self-Adjoint Linear Map
 

@@ -21,8 +21,19 @@ date of note: 2024-08-08
 
 ![[LU Factorization of Matrix#^62518f]]
 
+>[!important] Proposition ($LDL^{T}$ Factorization)
+>Let $A\in M_{n}$ be a **Hermitian matrix** and all of its **leading principal submatrices** are nonsingular $$\det \left( A[1:k, 1:k] \right) \neq 0, \quad k=1\,{,}\ldots{,}\,n-1.$$
+>
+>Then there exists a **unit lower triangular matrix** $L$ and a **diagonal matrix** $$D = \text{diag}(d_{1}\,{,}\ldots{,}\,d_{n})$$ such that $$A = L\,D\,L^{T}.$$
+>
+>And the factorization is **unique**.
+
+^951558
+
 - [[Hermitian or Symmetric Matrix]]
 - [[LU Factorization of Matrix]]
+
+
 
 
 

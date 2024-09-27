@@ -66,6 +66,8 @@ date of note: 2024-08-08
 >Both $L$ and $U$ are **nonsingular** *if and only if* $r=n$, 
 >- that is, *if and only if* $A$ and all of its **leading principal submatrices** are **nonsingular.**
 
+^301e76
+
 - [[Principal Submatrix]]
 - [[Minor and Principal Minor]]
 - [[Triangular Matrix and Block Triangular Matrix]]
@@ -87,8 +89,22 @@ date of note: 2024-08-08
 >Then the **LDU factorization** of $A$ is given by 
 >$$A = L\,D\,U$$ where $L$ is a **lower triangular matrix**, $U$ is an **upper triangular matrix**, $D = \text{diag}(d_{1}\,{,}\ldots{,}\,d_{n})$ is **diagonal** with $$\begin{align*}d_{1} &= a_{11}, \\[5pt]  d_{i} &= \frac{\det\left(A[1:i, 1:i]\right)}{\det \left( A[1:i-1, 1:i-1] \right)}, \quad i=2\,{,}\ldots{,}\,n\end{align*}$$ which are the *ratios* of *successive principle minors*.
 
+### PLU Factorization
+
+![[PLU Factorization#^0aac00]]
+
+- [[PLU Factorization]]
+
 
 ## Explanation
+
+>[!quote]
+>The **LU factorization** is a "high level" algebraic description of **Gaussian elimination**.
+>
+>-- [[Matrix Computations by Golub]] pp 111
+
+- [[Gaussian Elimination for Solving Linear System]]
+
 
 >[!info]
 >Without the condition on **nonsingular leading principal submatrices**  $$\det \left( A[1:k, 1:k] \right) \neq 0, \quad k=1\,{,}\ldots{,}\,n,$$ there is **no guarantee** that the *LU factorization* **exist** or to be **unique**.
@@ -104,17 +120,12 @@ date of note: 2024-08-08
 
 ## LU Factorization via Gaussian Elimination
 
->[!info]
->The *upper triangular matrix* $U$ can be obtained by applying **Gaussian elimination** $M_{k}$ for each row $k=1\,{,}\ldots{,}\,n-1$ of $A$. Then the *lower triangular matrix* $L$ is given by the **inverse** of these operations
->$$
->L = M_{1}^{-1}\,{}\ldots{}\,M_{n-1}^{-1} = I_{n} + \sum_{k=1}^{n-1}\tau^{(k)}\,e_{k}^{T}
->$$
->the **$k$th column** of $L$ is defined by the **multipliers** that arise in the $k$-th step of Gaussian elimination.
+![[Gaussian Elimination for Solving Linear System#^057350]]
 
 - [[Gaussian Elimination for Solving Linear System]]
 
 
-## Symmetric Matrix
+## $LDL^{T}$ Factorization for Symmetric Matrix
 
 >[!info]
 >If $A = A^{T}$, then the **$LDU$ factorization** becomes **$LDL^{T}$ factorization** $$A = L\,D\,L^{T}$$ where the $U = L^{T}$ matrix in $LDU$ factorization.

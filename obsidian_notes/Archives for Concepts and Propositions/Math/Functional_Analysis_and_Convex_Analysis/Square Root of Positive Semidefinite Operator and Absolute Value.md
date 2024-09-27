@@ -22,6 +22,8 @@ date of note: 2024-05-28
 >
  Furthermore, $B$  **commutes** with *every bounded operator* which **commutes** with $A$. 
 
+^37d617
+
 - [[Positive Semidefinite Operator]]
 
 >[!important] Definition
@@ -42,6 +44,10 @@ date of note: 2024-05-28
 > C = A^{*}A \succeq 0.
 >$$
 
+
+## Finite Dimensional Space
+
+- [[Square Root of Positive Semidefinite Transformation and Absolute Value]]
 
 
 

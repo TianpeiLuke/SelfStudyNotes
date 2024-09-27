@@ -32,5 +32,6 @@ date of note: 2024-09-21
 - [[LU Factorization of Matrix]]
 \
 
+- [[Matrix Computations by Golub]] pp 111 - 114
 - [[Matrix Computations by Golub]] pp 124 - 136
 - [[Numerical Linear Algebra by Trefethen]] pp 155 - 162 
