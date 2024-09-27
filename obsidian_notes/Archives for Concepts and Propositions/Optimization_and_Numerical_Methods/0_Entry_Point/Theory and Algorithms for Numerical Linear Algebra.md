@@ -71,8 +71,10 @@ date of note: 2024-05-12
 
 #### Banded System of Equations
 
+- [[Banded System of Equations]]
 - [[Band Triangular System of Equations]]
 - [[Band Forward Substitution and Band Back Substitution]]
+- [[Band Gaussian Elimination and Band LU Factorization]]
 - [[Band Gaussian Elimination with Pivoting]]
 - [[Hessenberg LU Factorization of Matrix]]
 - [[Band Cholesky Factorization of Hermitian Positive Semidefinite Matrices]]

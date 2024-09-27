@@ -132,6 +132,9 @@ date of note: 2024-08-08
 
 - [[LDU Factorization of Symmetric Matrix]]
 
+## Band LU Factorization
+
+- [[Band Gaussian Elimination and Band LU Factorization]]
 
 
 

@@ -25,6 +25,9 @@ date of note: 2024-08-08
 ##  Recommended Notes and References
 
 
+- [[Band Triangular System of Equations]]
+- [[Band Gaussian Elimination and Band LU Factorization]]
+
 - [[Forward Substitution of Lower Triangular System]]
 - [[Back Substitution of Upper Triangular System]]
 - [[Triangular System of Equations]]

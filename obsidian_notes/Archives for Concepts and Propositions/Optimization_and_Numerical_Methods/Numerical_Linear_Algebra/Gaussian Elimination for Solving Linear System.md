@@ -140,6 +140,11 @@ date of note: 2024-09-21
 
 - [[LU Factorization of Matrix]]
 
+## Band LU Factorization
+
+- [[Band Gaussian Elimination and Band LU Factorization]]
+
+
 
 -----------
 ##  Recommended Notes and References

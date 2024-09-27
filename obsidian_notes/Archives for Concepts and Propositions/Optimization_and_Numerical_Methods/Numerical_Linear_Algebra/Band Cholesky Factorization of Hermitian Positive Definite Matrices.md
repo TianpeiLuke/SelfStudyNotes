@@ -26,6 +26,8 @@ date of note: 2024-09-21
 ##  Recommended Notes and References
 
 
+- [[Band Gaussian Elimination and Band LU Factorization]]
+
 - [[Cholesky Factorization of Hermitian Positive Definite Matrices]]
 - [[Positive Semidefinite Transformation]]
 - [[Hermitian or Symmetric Matrix]]
