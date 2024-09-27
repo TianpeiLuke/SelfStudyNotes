@@ -53,12 +53,12 @@ date of note: 2024-09-21
 >
 >The **Cholesky factorization** algorithm is described as below:
 >- *Require*: **symmetric positive definite matrix** $A \succ 0$
->- For $j=1\,{,}\ldots{,}\,n-1$:
->	- Initialize with the *$j$-th column* of *lower triangular part* of $A$ $$v_{j:n}  = A_{j:n, j}$$
+>- For $j=1\,{,}\ldots{,}\,n$:
+>	- Initialize with the *$j$-th column* of *lower triangular part* of $A$ $$v_{j:n}  = A_{\{j:n\}, j}$$
 >	- For $k=1\,{,}\ldots{,}\,j-1$:
->		- Update based on *first $j-1$ columns* of $G$ $$v_{j:n} \leftarrow v_{j:n} - G_{j,k}\,G_{j:n,k}$$
->	- The *j-th column* of $G$ is given by $$G_{j:n,j} = \frac{v_{j:n}}{\sqrt{v_{j}}} $$
->- *Return* the **Cholesky factor** as a *lower triangular matrix* $$G = [G_{1:n,1} \,{,}\ldots{,}\,G_{j:n,j} \,{,}\ldots{,}\,G_{n,n}]$$
+>		- Update based on *first $j-1$ columns* of $G$ $$v_{j:n} \leftarrow v_{j:n} - G_{j,k}\,G_{\{j:n\},k}$$
+>	- The *j-th column* of $G$ is given by $$G_{\{j:n\},j} = \frac{v_{j:n}}{\sqrt{v_{j}}} $$
+>- *Return* the **Cholesky factor** as a *lower triangular matrix* $$G = [G_{\{1:n\},1} \,{,}\ldots{,}\,G_{\{j:n\},j} \,{,}\ldots{,}\,G_{n,n}]$$
 
 >[!info]
 >$$
@@ -74,6 +74,16 @@ $$
 >The **time complexity** of Cholesky factorization is $$\frac{n^3}{3}$$ This is about **half as many operations as** *Gaussian elimination* which needs $\frac{2}{3}n^3.$
 
 - [[Gaussian Elimination for Solving Linear System]]
+
+>[!important] Definition
+>The *Gaxpy implementation* of **Cholesky factorization** algorithm is described as below:
+>- *Require*: **symmetric positive definite matrix** $A \succ 0$
+>- For $j=1\,{,}\ldots{,}\,n$:
+>	- If $j > 1$:
+>		- **Update** the *$j$-th columns* of $A$ $$A_{\{j:n\}, j} \leftarrow A_{\{j:n\}, j} - A_{\{j:n\}, \{1:j-1\} }\,A_{j, \{1:j-1\} }^{T}$$
+>	- **Reweight** *j-th column* of $A$ by $$A_{\{j:n\}, j} = \frac{A_{\{j:n\}, j}}{\sqrt{A_{j,j}}} $$
+>- *Return* the **Cholesky factor** as a *lower triangular part* of $A$ $$G = [A_{\{1:n\},1} \,{,}\ldots{,}\,A_{\{j:n\},j} \,{,}\ldots{,}\,A_{n,n}]$$
+
 
 ## Explanation
 

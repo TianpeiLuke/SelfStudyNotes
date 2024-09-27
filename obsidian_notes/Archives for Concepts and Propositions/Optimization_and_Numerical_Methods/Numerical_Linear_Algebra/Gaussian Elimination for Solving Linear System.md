@@ -54,7 +54,7 @@ date of note: 2024-09-21
 >[!important] Definition
 >Consider the problem of solving the *$LU$ factorization* $$A= L\,U$$ where $A = [a_{i,j}]\in \mathbb{C}^{n\times n}$, $L$ is an *unit lower triangular matrix* and $U$ is *upper triangular matrix*.
 >
->Assume that $$\det(A_{1:k,1:k}) \neq 0, \quad k=1\,{,}\ldots{,}\,n-1.$$
+>Assume that $$\det(A_{\{1:k\},\{1:k\}}) \neq 0, \quad k=1\,{,}\ldots{,}\,n-1.$$
 >
 >The **Gaussian Elimination without pivoting** computes the *LU factorization* as follows:
 >- *Require*: $A\in \mathbb{R}^{n\times n}$
@@ -62,9 +62,9 @@ date of note: 2024-09-21
 >- For $k=1\,{,}\ldots{,}\,n-1$:
 >	- For $j=k+1\,{,}\ldots{,}\,n$:
 >		- Compute the $(j,k)$ entry of $L$ $$l_{j,k} = \frac{u_{j,k}}{u_{k,k}}$$
->		- Apply **Gaussian transformation** on $j$-th *row* of $U$ $$U_{j, k:n} \leftarrow U_{j, k:n} - l_{j,k}\,U_{k, k:n}.$$
+>		- Apply **Gaussian transformation** on $j$-th *row* of $U$ $$U_{j, \{k:n\}} \leftarrow U_{j, \{k:n\}} - l_{j,k}\,U_{k, \{k:n\}}.$$
 >			- Note that $u_{j,k} = 0$ after update
->			- So we can update $$U_{j, k+1:n} \leftarrow U_{j, k+1:n} - l_{j,k}\,U_{k, k+1:n}.$$
+>			- So we can update $$U_{j, \{k+1:n\}} \leftarrow U_{j, \{k+1:n\}} - l_{j,k}\,U_{k, \{k+1:n\}}.$$
 
 ^057350
 
@@ -125,7 +125,7 @@ date of note: 2024-09-21
 >The **outer product LU factorization** is decribed as follows:
 >- *Require*: $A\in \mathbb{R}^{n\times n}$
 >- For $k=1\,{,}\ldots{,}\,n-1$:
->	- Collect a list of indices $\rho = k+1:n$
+>	- Collect a list of indices $\rho = \{k+1:n\}$
 >	- Replace the $k$-th column of *lower triangular* part of $A$ $$A[\rho, k] \leftarrow \frac{A[\rho, k]}{A[\rho, \rho]}$$
 >	- Replace the *$(n-k)$ trailing principal submatrix* by the **outer product** $$A[\rho, \rho] \leftarrow A[\rho, \rho] - A[\rho, k]\,A[k, \rho].$$
 
