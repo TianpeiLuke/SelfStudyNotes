@@ -6,13 +6,13 @@ This repository is the latex-based notes for self-learning, mainly for math, sta
 
 ## Knowledge Graph
 
-![Knowledge Graph](knowledge_graph.png)
+![Knowledge Graph](domain_knowledge_graph.png)
 
 ## Obsidian Graph
 
 <p align="middle">
-  <img src="./obsidian_slip_box_graph/obsidian_slip_box_2024-09-21_21-36-07.png" width="100%" />
-  <img src="./obsidian_slip_box_graph/obsidian_slip_box_2024-08-28_labeled.png" width="100%" />
+  <img src="./obsidian_slip_box_graph/obsidian_slip_box_2024-09-26_8.20.51_AM.png" width="100%" />
+  <img src="./obsidian_slip_box_graph/obsidian_slip_box_2024-09-26_labeled.png" width="100%" />
 </p>
 
 
