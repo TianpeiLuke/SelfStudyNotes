@@ -44,12 +44,12 @@ date of note: 2024-05-12
 
 - [[Gaussian Elimination for Solving Linear System]]
 - [[LU Factorization of Matrix]]
+- [[PLU Factorization with Pivoting]]
 - [[Gaussian Elimination with Partial Pivoting]]
 - [[Gaussian Elimination with Complete Pivoting]]
 - [[LPU Factorization of Nonsingular Matrix]]
 - [[LPDU Factorization of Nonsingular Matrix]]
 - [[Stability Analysis of Gaussian Elimination]]
-
 
 
 ### Special Linear Systems
@@ -68,7 +68,6 @@ date of note: 2024-05-12
 - [[Square Root of Positive Semidefinite Transformation and Absolute Value]]
 - [[Cholesky Factorization of Hermitian Positive Definite Matrices]]
 
-
 #### Banded System of Equations
 
 - [[Banded System of Equations]]
@@ -83,10 +82,12 @@ date of note: 2024-05-12
 
 - [[Tridiagonal System of Equations]]
 
-#### Toeplitz System
+#### Toeplitz and Circulant System
 
 - [[Toeplitz System of Equations]]
-
+- [[Circulant Matrix and Circulant Permutation Operation]]
+- [[Discrete Fourier Transform]]
+- [[Fast Fourier Transform]]
 
 
 ### Orthogonalization and QR Factorization

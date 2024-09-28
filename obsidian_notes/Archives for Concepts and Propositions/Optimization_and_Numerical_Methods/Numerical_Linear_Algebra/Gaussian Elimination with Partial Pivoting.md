@@ -50,7 +50,7 @@ date of note: 2024-09-21
 - [[Elementary Row and Column Operations]]
 - [[Permutation Matrix and Reversal Matrix]]
 
-### Partial Pivoting
+### Gaussian Elimination with Partial Pivoting
 
 >[!important] Definition
 >Interchange permutations can be used in $LU$ computations to guarantee that *no multiplier is greater than $1$* in absolute value.
@@ -59,14 +59,48 @@ date of note: 2024-09-21
 >
 >This particular row interchange strategy is called **partial pivoting**.
 >- The resulting **Gaussian elimination with pivoting** corresponds to the factorization $$M_{n-1}P_{n-1}\,{}\ldots{}\,M_{1}P_{1}A = U,$$ where $M_{k}$ is the *Gaussian transformation* at $k$ step, and $P_{k}$ is the *interchange permutation*  
->
+
+>[!important] 
+>The **partial pivoting** strategy can be described as below:
+>- For $k=1\,{,}\ldots{,}\,n-1$:
+>	- Find an **interchange permutation** $P_{k}$ that **swaps** $A_{k,k}$ with **largest element** $A_{i_{k},k}$ in $|A_{\{ k:n \}, k}|$, i.e. $$i_{k} = \arg\max_{i\in \{ k:n \}}|A_{i,k}|$$
+>	- Swap rows $$A \leftarrow P_{k}A$$
+>	- Apply the **Gaussian elimination without pivoting** 
+>		- Determine the *Gaussian transformation* $$M_{k} = I - \tau^{(k)}\,e_{k}^{T}$$ such that if $v$ is *k-th* column of $M_{k}A$ then $$v_{\{ k+1:n \}} = 0$$
+>		- $$A \leftarrow M_{k}A$$
+
+- [[Gaussian Elimination for Solving Linear System]]
+
+>[!important] Definition
+>The **Gaussian Elimination with pivoting** computes the *LU factorization* as follows:
+>- *Require*: $A\in \mathbb{R}^{n\times n}$
+>- *Initialize*: $L = I$,  $U = A$, $P = I$
+>- For $k=1\,{,}\ldots{,}\,n-1$:
+>	- Determine the index $i_{k}\in \{ k:n \}$ so that $$i_{k} = \arg\max_{i\in \{ k:n \}}\lvert U_{i,k} \rvert $$
+>	- Set the *pivot map* $$\pi(k) = i_{k}$$
+>	- **Swap rows** of $U$ $$\text{swap}\left(U_{k, \{ k:n \}}\,,\, U_{i_{k},\{ k:n \}}\right)$$
+>	- **Swap rows** of $L$ $$\text{swap}\left(L_{k, \{ 1:k-1 \}}\,,\, U_{i_{k},\{ 1:k-1 \}}\right)$$
+>	- **Swap rows** of $P$ $$\text{swap}\left(P_{k, :}\,,\, P_{i_{k}, :}\right)$$
+>	- For $j=k+1\,{,}\ldots{,}\,n$:
+>		- Compute the $(j,k)$ entry of $L$ $$L_{j,k} = \frac{U_{j,k}}{U_{k,k}}$$
+>		- Apply **Gaussian transformation** on $j$-th *row* of $U$ $$U_{j, \{k:n\}} \leftarrow U_{j, \{k:n\}} - L_{j,k}\,U_{k, \{k:n\}}.$$
+>			- Note that $U_{j,k} = 0$ after update
+>			- So we can update $$U_{j, \{k+1:n\}} \leftarrow U_{j, \{k+1:n\}} - L_{j,k}\,U_{k, \{k+1:n\}}.$$
 
 
+### Outer Product LU with Partial Pivoting
 
-
-
-
-
+>[!important] Definition
+>The **outer product LU factorization with Partial Pivoting** is decribed as follows:
+>- *Require*: $A\in \mathbb{R}^{n\times n}$
+>- For $k=1\,{,}\ldots{,}\,n-1$:
+>	- Determine the index $i_{k}\in \{ k:n \}$ so that $$i_{k} = \arg\max_{i\in \{ k:n \}}\lvert A[i,k] \rvert $$
+>	- Set the *pivot map* $$\pi(k) = i_{k}$$
+>	- **Swap rows** of $A$ $$\text{swap}\left(A[k, :], A[i_{k},:]\right)$$
+>	- If $A_{k,k} \neq_{0}$:
+>		- Collect a list of indices $\rho = \{k+1:n\}$
+>		- Replace the $k$-th column of *lower triangular* part of $A$ $$A[\rho, k] \leftarrow \frac{A[\rho, k]}{A[\rho, \rho]}$$
+>		- Replace the *$(n-k)$ trailing principal submatrix* by the **outer product** $$A[\rho, \rho] \leftarrow A[\rho, \rho] - A[\rho, k]\,A[k, \rho].$$
 
 
 ## Explanation
