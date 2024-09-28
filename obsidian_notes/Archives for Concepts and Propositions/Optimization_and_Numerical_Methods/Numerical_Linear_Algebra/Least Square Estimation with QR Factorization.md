@@ -105,6 +105,8 @@ date of note: 2024-08-20
 
 ^7f67c6
 
+- [[Back Substitution of Upper Triangular System]]
+
 >[!important] Least Square Estimat via Compact QR decomposition
 >For $X\in \mathbb{R}^{m\times (d+1)}$ with $m \ge d+1$ and $y\in \mathbb{R}^{m}$, the **QR decomposition** of $X$ is $$X = Q\,R$$ where $Q\in \mathcal{O}(m)$ and $$Q^{T}\,X = R = \left[ \begin{array}{c}R_{1} \\ 0\end{array} \right] \in \mathbb{R}^{m\times (d+1)}$$ is *upper triangular*.
 >

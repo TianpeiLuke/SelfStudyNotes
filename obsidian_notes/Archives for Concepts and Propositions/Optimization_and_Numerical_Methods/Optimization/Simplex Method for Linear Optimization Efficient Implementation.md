@@ -78,6 +78,8 @@ date of note: 2024-08-18
 >$$
 >We conclude that all it takes to generate $\overline{B}^{-1}$, is to start with $B^{-1}$ and apply the *sequence* of **elementary row oper­ations** described above.
 
+- [[Elementary Row and Column Operations]]
+
 #### Revised Simplex Method
 
 >[!important] Definition
