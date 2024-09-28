@@ -58,10 +58,30 @@ date of note: 2024-09-24
 - [[Multilinear Function]]
 
 
-## Gaussian Elimination
+## Examples
+### Gaussian Elimination
+
+>[!example]
+>Consider a vector $v = [v_{1} \,{,}\ldots{,}\,v_{n}]$.
+>
+>A **Gaussian transformation** is a matrix of the form $$M_{k} = I_{n} - \sum_{i=k+1}^{n}\tau_{i}^{(k)}e_{i}\,e_{k}^{T} = I_{n} - \tau^{(k)}\,e_{k}^{T}, \quad k=1\,{,}\ldots{,}\,n$$ where 
+>- $e_{i}$ is the $i$-th column of identify matrix with only one $1$ at position $i$ of  the vector and all zeros in other places;
+>- and $$\tau_{i}^{(k)} = \frac{v_{i}}{v_{k}},\quad i=k+1\,{,}\ldots{,}\,n,$$ are called **multipliers.**
+>
+>  
+>Then left-multiplying the Gaussian transform gives $$M_{k}\,v = \left[ \begin{array}{cccccc}1 & \cdots & 0 & 0 & \cdots & 0 \\ \vdots & \ddots & \vdots & \vdots &  & \vdots \\ 0 & \cdots & 1 & 0 & \cdots & 0 \\ 0 & \cdots & -\tau_{k+1}^{(k)} & 1 & \cdots & 0 \\ \vdots & \ddots & \vdots & \vdots & \ddots & \vdots \\ 0 & \cdots & -\tau_{n}^{(k)} & 0 & \cdots & 1 \end{array} \right]\;\left[ \begin{array}{c}v_{1} \\ \vdots \\ v_{k} \\ v_{k+1} \\ \vdots \\ v_{n}\end{array} \right] =  \left[ \begin{array}{c}v_{1} \\ \vdots \\ v_{k} \\ 0 \\ \vdots \\ 0\end{array} \right]$$ 
+>- Applying the Gaussian transformation $M_{k}$ on the vector $v_{k}$ will *set all rows below $k$* to $zero$. 
 
 - [[Gaussian Elimination for Solving Linear System]]
 
+### Pivoting
+
+>[!example]
+>**Pivoting** refers to technique that choose a proper entry in each column $k$ as the pivot for *Gaussian transformation* by **interchange permutation** of chosen row with the current *pivot row* $k$.
+>
+>The benefit of pivoting is that the ratio $\tau^{(k)}$ can be bounded. 
+
+- [[Gaussian Elimination with Partial Pivoting]]
 
 
 

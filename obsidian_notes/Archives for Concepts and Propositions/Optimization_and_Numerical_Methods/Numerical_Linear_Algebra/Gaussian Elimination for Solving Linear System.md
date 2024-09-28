@@ -26,14 +26,16 @@ date of note: 2024-09-21
 >[!important] Definition
 >Consider a vector $v = [v_{1} \,{,}\ldots{,}\,v_{n}]$.
 >
->A **Gaussian transformation** is a matrix of the form $$M_{k} = I_{n} - \sum_{i=k+1}^{n}\tau_{i}e_{i}\,e_{k}^{T}, \quad k=1\,{,}\ldots{,}\,n$$ where 
+>A **Gaussian transformation** is a matrix of the form $$M_{k} = I_{n} - \sum_{i=k+1}^{n}\tau_{i}^{(k)}e_{i}\,e_{k}^{T}, \quad k=1\,{,}\ldots{,}\,n$$ where 
 >- $e_{i}$ is the $i$-th column of identify matrix with only one $1$ at position $i$ of  the vector and all zeros in other places;
->- and $$\tau_{i} = \frac{v_{i}}{v_{k}},\quad i=k+1\,{,}\ldots{,}\,n,$$ are called **multipliers.**
+>- and $$\tau_{i}^{(k)} = \frac{v_{i}}{v_{k}},\quad i=k+1\,{,}\ldots{,}\,n,$$ are called **multipliers.**
 >- $v_{k} \neq 0$ in the denominator of the *multipliers* is called the **pivot.**
->- We can write it compactly as $$M_{k} = I_{n} - \tau\,e_{k} \in \mathbb{R}^{n\times n}$$ where $$\tau := \sum_{i=k+1}^{n}\tau_{i}e_{i} = \left[ \begin{array}{c}0\\ \vdots\\ 0\\ \tau_{k+1}\\ \vdots\\ \tau_{n} \end{array} \right] $$  
+>- We can write it compactly as $$M_{k} = I_{n} - \tau^{(k)}\,e_{k}^{T} \in \mathbb{R}^{n\times n}$$ where $$\tau^{(k)} := \sum_{i=k+1}^{n}\tau_{i}^{(k)}e_{i} = \left[ \begin{array}{c}0\\ \vdots\\ 0\\ \tau_{k+1}^{(k)}\\ \vdots\\ \tau_{n}^{(k)} \end{array} \right] $$  
 >  
->Then left-multiplying the Gaussian transform gives $$M_{k}\,v = \left[ \begin{array}{cccccc}1 & \cdots & 0 & 0 & \cdots & 0 \\ \vdots & \ddots & \vdots & \vdots &  & \vdots \\ 0 & \cdots & 1 & 0 & \cdots & 0 \\ 0 & \cdots & -\tau_{k+1} & 1 & \cdots & 0 \\ \vdots & \ddots & \vdots & \vdots & \ddots & \vdots \\ 0 & \cdots & -\tau_{n} & 0 & \cdots & 1 \end{array} \right]\;\left[ \begin{array}{c}v_{1} \\ \vdots \\ v_{k} \\ v_{k+1} \\ \vdots \\ v_{n}\end{array} \right] =  \left[ \begin{array}{c}v_{1} \\ \vdots \\ v_{k} \\ 0 \\ \vdots \\ 0\end{array} \right]$$ 
+>Then left-multiplying the Gaussian transform gives $$M_{k}\,v = \left[ \begin{array}{cccccc}1 & \cdots & 0 & 0 & \cdots & 0 \\ \vdots & \ddots & \vdots & \vdots &  & \vdots \\ 0 & \cdots & 1 & 0 & \cdots & 0 \\ 0 & \cdots & -\tau_{k+1}^{(k)} & 1 & \cdots & 0 \\ \vdots & \ddots & \vdots & \vdots & \ddots & \vdots \\ 0 & \cdots & -\tau_{n}^{(k)} & 0 & \cdots & 1 \end{array} \right]\;\left[ \begin{array}{c}v_{1} \\ \vdots \\ v_{k} \\ v_{k+1} \\ \vdots \\ v_{n}\end{array} \right] =  \left[ \begin{array}{c}v_{1} \\ \vdots \\ v_{k} \\ 0 \\ \vdots \\ 0\end{array} \right]$$ 
 >- Applying the Gaussian transformation $M_{k}$ on the vector $v_{k}$ will *set all rows below $k$* to $zero$. 
+
+^cf77f5
 
 >[!important] Definition
 >Consider the problem of solving the *system of linear equations* $$Ax = b$$ where $A = [a_{i,j}]\in \mathbb{C}^{n\times n}$ and $b\in \mathbb{C}^{n}.$
@@ -61,10 +63,10 @@ date of note: 2024-09-21
 >- *Initialize*: $L = I$, and $U = A$
 >- For $k=1\,{,}\ldots{,}\,n-1$:
 >	- For $j=k+1\,{,}\ldots{,}\,n$:
->		- Compute the $(j,k)$ entry of $L$ $$l_{j,k} = \frac{u_{j,k}}{u_{k,k}}$$
->		- Apply **Gaussian transformation** on $j$-th *row* of $U$ $$U_{j, \{k:n\}} \leftarrow U_{j, \{k:n\}} - l_{j,k}\,U_{k, \{k:n\}}.$$
->			- Note that $u_{j,k} = 0$ after update
->			- So we can update $$U_{j, \{k+1:n\}} \leftarrow U_{j, \{k+1:n\}} - l_{j,k}\,U_{k, \{k+1:n\}}.$$
+>		- Compute the $(j,k)$ entry of $L$ $$L_{j,k} = \frac{U_{j,k}}{U_{k,k}}$$
+>		- Apply **Gaussian transformation** on $j$-th *row* of $U$ $$U_{j, \{k:n\}} \leftarrow U_{j, \{k:n\}} - L_{j,k}\,U_{k, \{k:n\}}.$$
+>			- Note that $U_{j,k} = 0$ after update
+>			- So we can update $$U_{j, \{k+1:n\}} \leftarrow U_{j, \{k+1:n\}} - L_{j,k}\,U_{k, \{k+1:n\}}.$$
 
 ^057350
 

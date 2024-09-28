@@ -30,7 +30,7 @@ date of note: 2024-09-26
 ^0aac00
 
 >[!info]
->The factors above need **not to be unique**.
+>The factors above need **not to be unique**. Each $P$ corresponds to a **pivoting strategy**.
 
 ### PLU Factorization via Gaussian Elimination with Partial Pivoting
 
@@ -51,6 +51,18 @@ date of note: 2024-09-26
 - [[Gaussian Elimination for Solving Linear System]]
 - [[Gaussian Elimination with Complete Pivoting]]
 
+>[!important]
+>The *PLU factorization* can be written as
+>$$
+> PA = LU
+>$$
+>since $P = \hat{P}^{-1}$ is also a permutation matrix if $\hat{P}$ is a permutation.
+
+>[!info]
+>**Partial pivoting** is such a universal practice that this factorization is usually known simply as an **LU factorization** of $A$.
+
+- [[LU Factorization of Matrix]]
+
 
 
 -----------
@@ -59,7 +71,7 @@ date of note: 2024-09-26
 
 - [[LPU Factorization of Nonsingular Matrix]]
 - [[Triangular Equivalence of Matrices]]
-- [[LU Factorization of Matrix]]
+
 - [[Gaussian Elimination for Solving Linear System]]
 - [[Gaussian Elimination with Complete Pivoting]]
 
