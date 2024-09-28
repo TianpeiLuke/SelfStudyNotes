@@ -25,6 +25,8 @@ date of note: 2024-09-24
 >- calculating determinants and 
 >- inverses of square matrices.
 
+^17a742
+
 >[!important] Definition
 >The **elementary row/column operations** include the following *three types*:
 >- **Type 1: Interchange of two rows**: interchange row $i$ and $j$ results from the left multiplication of $A$ by $$E_{1}(i,j):= \left[\begin{array}{ccccccc}1 & & & & & & & &\\ & \ddots & & & & & & &\\ & & 0& & \cdots & & 1& &\\  & & \vdots & & & & \vdots& &\\& & 1& & \cdots & & 0& &\\ & & & &  & & & \ddots &\\ & & & & & & & & 1  \end{array} \right]$$ where

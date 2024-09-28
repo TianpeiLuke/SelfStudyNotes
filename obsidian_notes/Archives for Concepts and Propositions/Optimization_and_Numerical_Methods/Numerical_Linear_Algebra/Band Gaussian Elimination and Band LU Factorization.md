@@ -29,8 +29,27 @@ date of note: 2024-09-21
 >
 >If $A$ has **upper bandwidth** $q$ and **lower bandwith** $p$, then $U$ has **upper bandwidth** $q$ and $L$ has **lower bandwith** $p$.
 
+^4f120b
+
 - [[LU Factorization of Matrix]]
 - [[Gaussian Elimination for Solving Linear System]]
+
+### Band Gaussian Elimination
+
+>[!important] Definition
+>Consider the problem of solving the *$LU$ factorization* $$A= L\,U$$ where $A \in M_{n}$ has *upper bandwidth* $q$ and *lower bandwidth* $p$, $L$ is an *unit lower triangular matrix* and $U$ is *upper triangular matrix*.
+>
+>The **band Gaussian elimination without pivoting** computes the *band LU factorization* as follows:
+>- *Require*: $A\in \mathbb{R}^{n\times n}$ with *upper bandwidth* $q$ and *lower bandwidth* $p$
+>- *Initialize*: $L = I$, and $U = A$
+>- For $k=1\,{,}\ldots{,}\,n-1$:
+>	- For $j=k+1\,{,}\ldots{,}\,\min\{k+p, n\}$: 
+>		- **Update $L$**: compute the $(j,k)$ entry of $L$ $$L_{j,k} = \frac{U_{j,k}}{U_{k,k}}$$
+>		- For $i=k+1\,{,}\ldots{,}\,\min\{k+q, n\}$:
+>			- **Update** $U$: compute the $(j,i)$ entry of $U$ $$U_{j, i} \leftarrow U_{j, i} - L_{j,k}\,U_{k, i}.$$
+
+>[!important]
+>If $n \gg p$ and $n \gg q$, then this algorithm involves about $$2npq$$ flops. 
 
 
 
@@ -45,6 +64,7 @@ date of note: 2024-09-21
 
 
 - [[LU Factorization of Matrix]]
+- [[Banded System of Equations]]
 - [[Band Triangular System of Equations]]
 - [[Band Forward Substitution and Band Back Substitution]]
 

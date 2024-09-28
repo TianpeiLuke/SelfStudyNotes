@@ -24,10 +24,13 @@ date of note: 2024-09-21
 >[!important] Corollary (Cholesky factorization)
 >Let $A\in M_{n}$ be **Hermitian**.
 >
->Then $A \succeq 0$ is **positive semidefinite** (respectively, **positive definite**) *if and only if* there exists a **lower triangular matrix** $L\in M_{n}$ with **nonnegative** (respectively, **positive**) *diagonal entries* such that $$A = L\,L^{*}.$$
+>Then $A \succeq 0$ is **positive semidefinite** (respectively, **positive definite**) *if and only if* there exists a **lower triangular matrix** $G \in M_{n}$ with **nonnegative** (respectively, **positive**) *diagonal entries* such that $$A = G\,G^{*}.$$
 >
->- If $A \succ 0$ is **positive definite**, then $L$ is **unique**.
->- If $A\in \mathbb{R}^{n\times n}$ is *real*, then $L$ may be taken to be *real*.
+>- If $A \succ 0$ is **positive definite**, then $G$ is **unique**.
+>- If $A\in \mathbb{R}^{n\times n}$ is *real*, then $G$ may be taken to be *real*.
+
+^c9a9c1
+
  
 
 >[!important] Definition
@@ -59,6 +62,8 @@ date of note: 2024-09-21
 >		- Update based on *first $j-1$ columns* of $G$ $$v_{j:n} \leftarrow v_{j:n} - G_{j,k}\,G_{\{j:n\},k}$$
 >	- The *j-th column* of $G$ is given by $$G_{\{j:n\},j} = \frac{v_{j:n}}{\sqrt{v_{j}}} $$
 >- *Return* the **Cholesky factor** as a *lower triangular matrix* $$G = [G_{\{1:n\},1} \,{,}\ldots{,}\,G_{\{j:n\},j} \,{,}\ldots{,}\,G_{n,n}]$$
+
+^770789
 
 >[!info]
 >$$
@@ -155,6 +160,10 @@ $$
 >Here $\lambda_{min}(A)$ is the "distance to trouble" in the Cholesky setting.
 >
 >-- [[Matrix Computations by Golub]] pp 165
+
+## Band Cholesky Factorization
+
+- [[Band Cholesky Factorization of Hermitian Positive Definite Matrices]]
 
 
 

@@ -73,6 +73,8 @@ date of note: 2024-07-26
 >- $$A^{+}\,B = 0 \;\iff\; A^{T}\,B = 0$$
 >- **Kronecker product** $$\left(A \otimes B\right)^{+} = A^{+} \otimes B^{+}.$$
 
+^56317c
+
 - [[Normal Transformation]]
 - [[Rank and Nullity of Linear Map]]
 - [[Least Square Estimation Solution and Geometric Interpretation]]

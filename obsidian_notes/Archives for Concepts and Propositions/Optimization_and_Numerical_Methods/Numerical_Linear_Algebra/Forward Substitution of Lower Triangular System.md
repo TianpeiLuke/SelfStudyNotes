@@ -31,6 +31,8 @@ date of note: 2024-09-21
 >- For $i=2\,{,}\ldots{,}\,n$:
 >	- $$x_{i} = \frac{b_{i} - \sum_{j=1}^{i-1}a_{i j}\,x_{j}}{a_{i i}}$$
 
+^7dde49
+
 - [[Triangular Matrix and Block Triangular Matrix]]
 
 >[!important] Definition
@@ -52,6 +54,8 @@ date of note: 2024-09-21
 >	- For $k=j+1 \,{,}\ldots{,}\,n$ *in parallel*:
 >		- $$b_{k} \leftarrow b_{k} - a_{k,j}\,x_{j}$$
 >- Finallly $$x_{n} = \frac{b_{n}}{a_{nn}}$$
+
+^7ef70f
 
 ### Parallel Formulation
 

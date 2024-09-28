@@ -31,6 +31,8 @@ date of note: 2024-09-21
 >- For $i=n-1\,{,}\ldots{,}\,1$:
 >	- $$x_{i} = \frac{b_{i} - \sum_{j=i+1}^{n}a_{i j}\,x_{j}}{a_{i i}}$$
 
+^e097d9
+
 - [[Triangular Matrix and Block Triangular Matrix]]
 
 >[!important] Definition
@@ -52,6 +54,8 @@ date of note: 2024-09-21
 >	- For $k=1 \,{,}\ldots{,}\,j-1$ *in parallel*:
 >		- $$b_{k} \leftarrow b_{k} - a_{k,j}\,x_{j}$$
 >- Finally $$x_{1} = \frac{b_{1}}{a_{11}}$$
+
+^20d9f8
 
 - [[Principal Submatrix]]
 - [[Partition of Matrix and Block Matrix]]
