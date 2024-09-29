@@ -81,6 +81,8 @@ date of note: 2024-09-25
 >	- Adjust **Householder vector** so that $v_{1} =1$. $$v \leftarrow \frac{v}{v_{1}}$$
 >- *Return* $(\beta, v)$
 
+^082feb
+
 - [[Unitary and Orthogonal Transformation]]
 - [[Orthogonal Group]]
 - [[Matrix Computations by Golub]] pp 236

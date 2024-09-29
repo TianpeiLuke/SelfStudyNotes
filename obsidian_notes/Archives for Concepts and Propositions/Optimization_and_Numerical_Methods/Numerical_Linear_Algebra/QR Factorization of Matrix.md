@@ -28,6 +28,8 @@ date of note: 2024-08-08
 >- There **exists** a **unitary** $Q\in \mathcal{U}(m)$, and an **upper triangular** $R\in M_{m,n}$ with **non-negative  diagonal entries** such that $$A = Q\,R.$$
 >- If $A\in \mathbb{R}^{m\times n}$, then all factors $Q, R$ in above may be taken to be real.
 
+^b07f79
+
 - [[Orthogonality in Inner Product Space]]
 - [[Unitary and Orthogonal Transformation]]
 - [[Triangular Matrix and Block Triangular Matrix]]
