@@ -107,6 +107,7 @@ date of note: 2024-05-12
 ### Least Square Problems
 
 - [[Least Square Estimation]]
+- [[Algorithms for Least Square Estimation Problem]]
 - [[Least Square Estimation Solution and Geometric Interpretation]]
 - [[Least Square Estimation with QR Factorization]]
 - [[Least Square Estimation via Singular Value Decomposition]]

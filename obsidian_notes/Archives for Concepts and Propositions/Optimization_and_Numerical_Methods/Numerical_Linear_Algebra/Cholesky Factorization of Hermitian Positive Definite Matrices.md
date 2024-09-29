@@ -83,6 +83,7 @@ $$
 - [[LDU Factorization of Symmetric Matrix]]
 - [[Gaussian Elimination for Solving Linear System]]
 
+>[!important]
 >- This is about **half as many operations as** *Gaussian elimination* which needs $$\frac{2}{3}n^3.$$
 >- This is the **same** number of operations as compared to the **$LDL^{T}$ factorization**.
 

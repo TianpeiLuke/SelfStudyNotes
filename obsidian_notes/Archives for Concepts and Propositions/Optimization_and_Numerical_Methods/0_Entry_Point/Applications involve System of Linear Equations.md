@@ -71,6 +71,7 @@ date of note: 2024-09-27
 - [[Linear Regression]]
 - [[Moore–Penrose Pseudo Inverse of Matrix]]
 - [[Least Square Estimation Solution and Geometric Interpretation]]
+- [[Algorithms for Least Square Estimation Problem]]
 
 #### Normal Equation
 
@@ -105,6 +106,12 @@ date of note: 2024-09-27
 >
  >Then the solution can be found via solving $$R\,x = Q^{T}b:= y$$
 >- This is a *triangular system*
+
+>[!important]
+>**QR factorization** is preferred compared to **Cholosky factorization** of **normal equations**.
+>
+>-- [[Matrix Computations by Golub]] pp 268
+
 
 - [[QR Factorization of Matrix]]
 - [[Householder QR Factorization]]

@@ -103,9 +103,11 @@ date of note: 2024-08-20
 >$$
 >R\,\hat{\beta} = Q^{T}\,y
 >$$
+>- Apply the *MGS algorithm* to augmented matrix $$\left[ A, b \right] $$ would reduce the *dependency on the instability* of $Q$
 
 ^7f67c6
 
+- [[Modified Gram-Schmidt Algorithm for QR Factorization]]
 - [[Back Substitution of Upper Triangular System]]
 
 >[!important] Least Square Estimat via Compact QR decomposition
@@ -122,10 +124,6 @@ date of note: 2024-08-20
 >$$
 >Note that $$\hat{\rho} = \lVert y_{\perp} \rVert_{2}.$$
 
-
-
-
-
 ## Explanation
 
 ### Gram-Schmidt Process
@@ -139,6 +137,26 @@ date of note: 2024-08-20
 - [[Gram-Schmidt Orthogonalization]]
 - [[Modified Gram-Schmidt Algorithm for QR Factorization]]
 
+### Householder LS
+
+>[!important] Definition
+>The **Householder Least Square algorithm** solves the least square problem as follows
+>- *Require*: $X\in \mathbb{R}^{m\times n}$ with **full column rank** $\text{rank}(A)=n$, $b\in \mathbb{R}^{m}$
+>- Apply **Householder QR** to overwrite $X$ with its *QR factorization*
+>- For $j=1\,{,}\ldots{,}\,n$
+>	- Recover **Householder vector** $$v^{(j)} = \left[ \begin{array}{c}1 \\ A_{\{ j+1:m \}, j}\end{array} \right] $$
+>	- Recover **scalar for Householder transformation** $$\beta^{(j)} = \frac{2}{\left\langle  v\,,\,v    \right\rangle}$$
+>	- Apply **Householder transformation** to vector $b$ $$b_{j:m} \leftarrow b_{j:m} - \beta^{(j)}\left((v^{(j)})^{T}\,b_{j:m}\right)\,v^{(j)}$$
+>- Solve the **upper triangular system** $$R_{\{ 1:n \}, \{ 1:n \}}\,\beta = b_{1:n}$$ by **back substitution.**
+
+- [[Householder Transformation and Householder Reflection]]
+- [[Householder QR Factorization]]
+- [[Back Substitution of Upper Triangular System]]
+
+>[!info]
+>This methods requires $$2\left( m - \frac{n}{3} \right)n^2$$ flops
+>- $O(mn)$ flops associated with *updating* $b$
+>- $O(n^2)$ flops associated with solving $R\beta = b'$ via *back substitution.*
 
 
 

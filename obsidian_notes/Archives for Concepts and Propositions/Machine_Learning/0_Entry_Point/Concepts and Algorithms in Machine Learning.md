@@ -39,6 +39,11 @@ date of note: 2024-06-01
 - [[Logistic Regression Solution via Iterative Reweighted Least Square]]
 - [[Generalized Linear Models]]
 - [[Least Square Estimation]]
+- [[Algorithms for Least Square Estimation Problem]]
+- [[Least Square Estimation Solution and Geometric Interpretation]]
+- [[Least Square Estimation with QR Factorization]]
+- [[Least Square Estimation via Singular Value Decomposition]]
+
 
 #### Ensemble Learning and Boosting
 

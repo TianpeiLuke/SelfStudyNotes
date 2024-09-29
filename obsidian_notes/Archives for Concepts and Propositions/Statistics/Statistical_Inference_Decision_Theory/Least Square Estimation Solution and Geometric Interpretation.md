@@ -166,6 +166,7 @@ date of note: 2024-06-08
 ^c0f78a
 
 - [[Fundamental Orthogonal Projections]]
+- [[Fundamental Subspaces from Linear Map]]
 - [[Projection Map onto Linear Subspace]]
 - [[Projection Theorem of Hilbert Spaces]]
 - [[Orthogonal Complement of Hilbert Spaces]]
