@@ -130,11 +130,44 @@ date of note: 2024-09-27
 - [[Sherman–Morrison–Woodbury Matrix Inversion Formula]]
 - [[Schur Complement and Inversion of Block Matrix]]
 
+### Ridge Regression
+
+>[!info]
+>The **ridge regression** problem solves
+>$$
+>\min_{x} \; \lVert Ax - b \rVert_{2}^2 + \lambda\,\lVert x \rVert_{2}^2  
+>$$
+>This is equivalent to solve a **least square** problem with **augmented design matrix**
+>$$
+>\min_{x}\; \lVert \widetilde{A}\,x -   \widetilde{b}\rVert^2 
+>$$
+>where $$\widetilde{A}:= \left[ \begin{array}{c}A\\[5pt] \sqrt{ \lambda}I \end{array} \right]$$ and $$\widetilde{b}:= \left[ \begin{array}{c}b\\[5pt] 0 \end{array} \right]$$
+
+- [[Ridge Regression and L2 Regularization]]
+
 ### Logistic Regression
+
+![[Logistic Regression Solution via Iterative Reweighted Least Square#^bd6332]]
+
+![[Logistic Regression Solution via Iterative Reweighted Least Square#^8e7fe7]]
+
+>[!info]
+>Using Netwon's method to solve the logistic regression requries solving the equation
+>$$
+>\nabla^2 \ell(\beta)\, d = - \nabla \ell(\beta)
+>$$
+>The **iterative reweighted least sequare (IRLS)** need to solve a **weighted least square problem** at each iteration
+>- It solve the *weighted normal equation*
+>$$
+>X^{T}WX\,d = X^{T}(y-p)
+>$$
+>- or it solves the least square problem $$\min_{d} \lVert \hat{X}d - \hat{b} \rVert_{2}^2$$
+>	- $$\hat{X} = W^{1 / 2}X, \quad \hat{b} = W^{1 / 2}z_{t}$$
+
+![[Logistic Regression Solution via Iterative Reweighted Least Square#^3e8b8a]]
 
 - [[Logistic Regression]]
 - [[Logistic Regression Solution via Iterative Reweighted Least Square]]
-
 
 
 ### Gradient-based Optimization
@@ -185,6 +218,9 @@ date of note: 2024-09-27
 - [[Covariant Hessian Tensor]]
 - [[Secant Equation and Quasi-Newton Methods]]
 - [[BFGS Algorithm]]
+
+
+
 
 ### Linear Optimization
 

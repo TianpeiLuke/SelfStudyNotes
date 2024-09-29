@@ -48,6 +48,8 @@ date of note: 2024-08-16
 >- $$X = \left[ \begin{array}{ccccc}x_{1}^{1}& X_{1}^{2}& \ldots & x_{1}^{d} & 1\\ x_{2}^{1}& x_{2}^{2}& \ldots & x_{2}^{d}& 1 \\ \ldots & \ldots & \ldots & \ldots & \ldots \\ x_{m}^{1}& x_{m}^{2}& \ldots & x_{m}^{d} & 1  \end{array} \right]\in \mathbb{R}^{m\times (d+1)},$$ 
 >- $p := (p_{1}(x_{1}; \beta) \,{,}\ldots{,}\, p_{1}(x_{m}; \beta))$
 
+^bd6332
+
 
 >[!important]
 >The **Hessian** of log-likelihood function is
@@ -58,6 +60,8 @@ date of note: 2024-08-16
 \end{align}
 >$$
 >where the $W$ is a *diagonal matrix* $$W_{s,s} = \left[ p_{1}(x_{s}; \beta)\, (1 - p_{1}(x_{s}; \beta)) \right].$$
+
+^8e7fe7
 
 ![[Logistic Regression#^373e80]]
 
@@ -94,6 +98,8 @@ date of note: 2024-08-16
 >	- Compute the **gradient** of *logistic function* as diagonal term of $W_{t}$ $$W_{t}[s,s] = p_{t}(s)\,(1- p_{t}(s)), \; s=1\,{,}\ldots{,}\,m.$$
 >	- Adjust the **response** with a **reweighted error term**  $$z_{t} = X\,\beta_{t} + W_{t}^{-1}\,(y - p_{t})$$
 >	- Solve the **weighted least square estimation problem** $$\begin{align*}\beta_{t+1} &= \arg\min_{\beta}\; \lVert z_{t} - X\beta \rVert_{W_{t}}^2 \\[5pt] &:=  \arg\min_{\beta}\; (z_{t}- X\beta)^{T\,}W_{t}\left(z_{t} - X\beta\right)\end{align*}$$
+
+^3e8b8a
 
 - [[Least Square Estimation]]
 - [[Least Square Estimation Solution and Geometric Interpretation]]
