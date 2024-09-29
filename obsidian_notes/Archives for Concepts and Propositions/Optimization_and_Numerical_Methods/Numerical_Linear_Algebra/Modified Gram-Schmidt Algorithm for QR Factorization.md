@@ -29,9 +29,9 @@ date of note: 2024-09-25
 >- *Require*: $A\in \mathbb{R}^{m\times n}$ with $\text{rank}(A) = n$
 >- For $k=1\,{,}\ldots{,}\,n$:
 >	- Set diagonal term of upper triangular matrix be the *norm* of $k$-th column  of $A$ $$R_{k,k} = \lVert A_{\{ 1:m \}, k} \rVert $$
->	- Set $k$-th column of $Q$ $$Q_{\{ 1:m \}, k} = \frac{A_{\{ 1:m \},k}}{R_{k,k}}$$
+>	- **Normalize** $k$-th column of $A$ as $k$-th column of $Q$ $$Q_{\{ 1:m \}, k} = \frac{A_{\{ 1:m \},k}}{R_{k,k}}$$
 >	- For $j=k+1\,{,}\ldots{,}\,n$:
->		- Compute $R$ as the *projection* of columns of $A$ onto the *basis columns* of $Q$ $$R_{k,j} = Q_{\{ 1:m \}, k}^{T}\,A_{\{ 1:m \}, j}$$
+>		- Compute $R$ as the *cosine similarity* of *$k$-th column* of $A$ and the *$j$-th columns* of $Q$ $$R_{k,j} = Q_{\{ 1:m \}, k}^{T}\,A_{\{ 1:m \}, j}$$
 >		- Overwrite the $j$-th column of $A$ by the **residual** $$A_{\{ 1:m \}, j} \leftarrow A_{\{ 1:m \}, j} - Q_{\{ 1:m \}, k}\,R_{k,j}$$
 >- *Return*: 
 >	- the upper triangular matrix $$R_{1} = [R_{k,\{ k:n \}}^{(n)}]$$
@@ -39,6 +39,7 @@ date of note: 2024-09-25
 
 - [[QR Factorization of Matrix]]
 - [[Surjective Injective Invertible Linear Map and Rank]]
+- [[Cosine Similarity and Cosine Distance]]
 
 >[!important]
 >The **modified Gram-Schmidt (MGS) algorithm** requires only $$2mn^2$$ flops.
@@ -49,6 +50,14 @@ date of note: 2024-09-25
 
 ## Explanation
 
+>[!info]
+>Compare to CGS and MGS, 
+>- the MGS 
+>	- **normalizing** the columns of **input** $A$ for each column. 
+>	- performs the *normalization* **before** *regression*, and *residual computation*
+>- the CGS 
+>	- **normalizing** the **residual** (except for the first column)
+>	- perform the *normalization* **after** *regression*, and *residual computation*
 
 
 
