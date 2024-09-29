@@ -195,10 +195,22 @@ date of note: 2024-07-13
 - [[Singular Value Decomposition and Pseudoinverse]]
 - [[Least Square Estimation via Singular Value Decomposition]]
 
+- [[Von Neumann Trace Theorem]]
+
+
 #### Positive and Nonnegative Matrices
 
 - [[Nonnegative and Positive Matrix]]
-- [[Stochastic Matrix]]
+- [[Irreducible Nonnegative Matrix]]
+- [[Perron-Frobenius Theorem on Irreducible Nonnegative Matrix]]
+
+#### Stochastic and Doubly Stochastic Matrices
+
+- [[Stochastic Matrix and Doubly Stochastic Matrix]]
+- [[Space of Stochastic Matrices]]
+
+- [[Birkhoff Theorem on Characterization of Doubly Stochastic Matrix]]
+- [[Convex Optimization on Space of Double Stochastic Matrices]]
 
 
 ### Perturbation Theory

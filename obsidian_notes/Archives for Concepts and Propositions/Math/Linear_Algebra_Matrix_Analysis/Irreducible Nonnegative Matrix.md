@@ -18,30 +18,28 @@ date of note: 2024-09-24
 
 ## Explanation
 
-
-
-
-
-
-## Eigenvector and Invariant Measures of Markov Chain
-
-- [[Eigenvalue and Eigenvector for Linear Map]]
 - [[Invariant Measure and Stationary Distribution]]
+- [[Irreducibility of Markov Chain]]
+- [[Markov Transition Kernel and Transition Function]]
+- [[Markov Chain and Markov Process]]
+
 
 
 -----------
 ##  Recommended Notes and References
 
-
-- [[Invariant Measure and Stationary Distribution]]
-- [[Hidden Markov Model]]
-- [[Markov Chain and Markov Process]]
+- [[Nonnegative and Positive Matrix]]
 - [[Nonnegative Matrix Factorization]]
-- [[Markov Transition Kernel and Transition Function]]
+
 - [[Matrix]]
 - [[Positive Linear Functional]]
+- [[Power Iteration and PageRank for Eigenvalue of Symmetric Matrices]]
+
+- [[Optimal Transport in Discrete Setting]]
+- [[Network Flow Problem as Linear Optimization]]
+- [[Stochastic Matrix and Doubly Stochastic Matrix]]
 
 
-- [[Matrix Analysis by Horn]]
+- [[Matrix Analysis by Horn]] pp 533 - 547
 - [[Matrix Analysis for Scientists and Engineers by Laub]]
 - [[Matrix Computations by Golub]]

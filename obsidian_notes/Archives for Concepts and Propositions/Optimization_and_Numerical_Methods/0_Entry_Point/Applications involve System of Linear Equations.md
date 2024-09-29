@@ -123,6 +123,13 @@ date of note: 2024-09-27
 - [[Sherman–Morrison–Woodbury Matrix Inversion Formula]]
 - [[Schur Complement and Inversion of Block Matrix]]
 
+### Logistic Regression
+
+- [[Logistic Regression]]
+- [[Logistic Regression Solution via Iterative Reweighted Least Square]]
+
+
+
 ### Gradient-based Optimization
 
 - [[Necessary and Sufficient Condition for Local Minimum of Smooth Function]]
@@ -178,6 +185,17 @@ date of note: 2024-09-27
 - [[Simplex Method for Linear Optimization]]
 - [[Simplex Method for Linear Optimization Efficient Implementation]]
 
+### Optimal Transport
+
+- [[Optimal Transport in Discrete Setting]]
+- [[Entropic Regularized Optimal Transport in Discrete Settings]]
+- [[Entropic Regularized Optimal Transport in Dual Form]]
+
+
+### Network Flow 
+
+- [[Network Flow Problem as Linear Optimization]]
+
 
 ### Convex Optimization
 
@@ -186,6 +204,61 @@ date of note: 2024-09-27
 - [[Lagrangian Dual Function]]
 - [[Lagrange Dual Problem]]
 - [[Karush-Kuhn-Tucker Optimality Condition]]
+- [[Interior Point Method or Barrier Method for Convex Optimization]]
+
+
+### Dynamic System
+
+- [[Linear Dynamic System]]
+- [[Kalman Filter Discrete-Time]]
+
+
+### Gaussian Graphical Model
+
+- [[Gaussian Graphical Model]]
+- [[Gaussian Belief Propagation]]
+- [[Marginal and Conditional Distribution of Gaussian]]
+- [[Canonical Form of Gaussian Graphical Model]]
+
+
+- [[Inverse Covariance Estimation]]
+- [[Graph LASSO and Structured Learning in Gaussian Graphical Model]]
+- [[Gauss-Seidel Iteration for Sparse Linear Equations]]
+
+
+### MAP Inference in Graphical Model
+
+- [[Maximum A Posteriori Probability Query of Graphical Model]]
+- [[Max-Product Variable Elimination]]
+- [[Clique Tree Invariant of Max-Product and Reparameterization]]
+
+
+
+### Markov Process and Markov Chain
+
+- [[Nonnegative and Positive Matrix]]
+- [[Markov Chain and Markov Process]]
+- [[Markov Chain Monte Carlo Methods]]
+- [[Markov Transition Kernel and Transition Function]]
+- [[Invariant Measure and Stationary Distribution]]
+- [[Kac Theorem on Markov Chain]]
+- [[Power Iteration and PageRank for Eigenvalue of Symmetric Matrices]]
+
+
+### Principle Component Analysis
+
+- [[Principle Component Analysis]]
+- [[Nonnegative Matrix Factorization]]
+- [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
+
+
+
+### Support Vector Machine
+
+- [[Support Vector Machine]]
+
+
+
 
 
 

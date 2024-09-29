@@ -102,7 +102,7 @@ The above definition of Transition Kernel can be used to define the **conditiona
 >We can represent it into a **stochastic matrix** $K$ where $$K_{i,j} = K(X_{t+1}=j\;|\;X_{t}=i)$$ 
 >Note that the **row sum is one** $$\sum_{j\in \mathcal{X}}K_{i,j} = 1, \quad \forall i\in \mathcal{X}.$$
 
-- [[Stochastic Matrix]]
+- [[Stochastic Matrix and Doubly Stochastic Matrix]]
 
 >[!info] **$m$-Step Transition Probability**
 > Then the **$m$-step transition probability** is defined as
@@ -169,9 +169,13 @@ The above definition of Transition Kernel can be used to define the **conditiona
 - [[Introduction to Stochastic Calculus by Klebaner]] pp 135
 
 
-## Matrix Analysis
+## Stochastic Matrix
 
-- [[Stochastic Matrix]]
+>[!info]
+>We can define the **transition kernel matrix** as $$K = [K_{i,j}]$$ where $$K_{i,j} = K(i, j) = \mathcal{P}(X_{t+1} = j | X_t = i)$$ This matrix satisfies $$Ke = e \iff \sum_{j}K_{i,j} = \sum_{j}\mathcal{P}(X_{t+1} = j | X_t = i) = 1$$
+>Thus $$K = [K_{i,j}]$$ is a **stochastic matrix**.
+
+- [[Stochastic Matrix and Doubly Stochastic Matrix]]
 
 
 -----------

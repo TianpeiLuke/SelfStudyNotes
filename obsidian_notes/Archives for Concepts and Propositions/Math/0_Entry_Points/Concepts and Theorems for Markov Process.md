@@ -87,7 +87,16 @@ date of note: 2024-05-30
 - [[Geometric Ergodicity]]
 - [[Geometric Ergodic Theorem]]
 
+### Nonnegative Matrix and Stochastic Matrix Theory
 
+- [[Nonnegative and Positive Matrix]]
+- [[Irreducible Nonnegative Matrix]]
+- [[Perron-Frobenius Theorem on Irreducible Nonnegative Matrix]]
+
+- [[Stochastic Matrix and Doubly Stochastic Matrix]]
+- [[Space of Stochastic Matrices]]
+- [[Birkhoff Theorem on Characterization of Doubly Stochastic Matrix]]
+- [[Convex Optimization on Space of Double Stochastic Matrices]]
 
 
 ### Time-Reversible Markov Chain

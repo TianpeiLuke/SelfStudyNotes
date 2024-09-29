@@ -83,6 +83,12 @@ $$
 - [[LDU Factorization of Symmetric Matrix]]
 - [[Gaussian Elimination for Solving Linear System]]
 
+>- This is about **half as many operations as** *Gaussian elimination* which needs $$\frac{2}{3}n^3.$$
+>- This is the **same** number of operations as compared to the **$LDL^{T}$ factorization**.
+
+- [[LDU Factorization of Symmetric Matrix]]
+- [[Gaussian Elimination for Solving Linear System]]
+
 
 >[!important] Definition
 >The *Gaxpy implementation* of **Cholesky factorization** algorithm is described as below:
