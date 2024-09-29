@@ -63,11 +63,32 @@ date of note: 2024-06-05
 
 - [[Complete Orthonormal Basis of Hilbert Space]]
 
-
-
-
 ## QR Factorization
 
+>[!info]
+>The Gram-Schmidt process is essentially the **$QR$ factorization** where
+>- $$Q= [z_{1} \,{,}\ldots{,}\,z_{n}]$$
+>- $$R = [\left\langle  z_{i}\,,\,x_{j}    \right\rangle],\quad j=i\,{,}\ldots{,}\,n$$
+
+>[!important] Definition
+>Consider the **QR factorization** of full column rank $A\in \mathbb{R}^{m\times n}$ with $\text{rank}(A) = n$, $$A = Q_{1}R_{1}$$ where $Q_{1}\in \mathbb{R}^{m\times n}$ with *orthornormal columns*, and $R\in \mathbb{R}^{n\times n}$ is an *upper triangular matrix.*
+>
+>The **classical Gram-Schmidt (CGS) algorithm** is described as follows:
+>- *Require*: $A\in \mathbb{R}^{m\times n}$ with $\text{rank}(A) = n$
+>- Compute the **1st diagonal term** of $R$ $$R_{1,1} = \lVert A_{:,1} \rVert_{2}$$
+>- Find *first column* of $Q$ by **normalizing** first column of $A$ $$Q_{:,1} = \frac{A_{:,1}}{R_{1,1}}$$
+>- For $k=2\,{,}\ldots{,}\,n$:
+>	- Compute $R$ as the *projection* of columns of $A$ onto the *basis columns* of $Q$ $$R_{\{ 1:k-1 \},k} = Q_{\{ 1:m \}, \{ 1: k-1 \}}^{T}\,A_{\{ 1:m \}, k}$$
+>	- Compute the **residual** $$r_{k} :=  A_{\{ 1:m \}, k} - Q_{\{ 1:m \}, \{ 1:k-1 \}}\,R_{\{ 1:k-1 \},k}$$
+>	- Compute $k$-th **diagonal term** of $R$ as the norm of residual $$R_{k,k} = \lVert z \rVert_{2}$$
+>	- Find *$k$-th column* of $Q$ by **normalizing** the residual   $$Q_{\{ 1:m \},k} = \frac{z}{R_{k,k}}$$
+>- *Return*: 
+>	- the upper triangular matrix $$R_{1} = [R_{k,\{ k:n \}}^{(n)}]$$
+>	- the matrix $Q_{1}$ with orthornormal columns. 
+
+^4a4caa
+
+- [[Modified Gram-Schmidt Algorithm for QR Factorization]]
 - [[QR Factorization of Matrix]]
 
 

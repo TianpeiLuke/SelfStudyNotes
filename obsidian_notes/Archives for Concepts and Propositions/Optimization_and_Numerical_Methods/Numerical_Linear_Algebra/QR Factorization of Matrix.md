@@ -85,29 +85,23 @@ date of note: 2024-08-08
 >where $L$ is a *lower triangular matrix* with *non-negative diagonal entries* and $Q$ has **orthonormal rows**.
 
 
-## Gram-Schmidt Process
-
-![[Gram-Schmidt Orthogonalization#^4fc278]]
-
-- [[Gram-Schmidt Orthogonalization]]
-
->[!info]
->Given column partitions $$A = [x_{1}\,{,}\ldots{,}\,x_{n}],$$ the $Q$ matrix consists of orthonormal vectors $$Q = [z_{1}\,{,}\ldots{,}\,z_{n}]$$
-
-
 ## QR Factorization Algorithms
+
+### QR Factorization via Householder Transformation
 
 - [[Householder Transformation and Householder Reflection]]
 - [[Householder QR Factorization]]
 - [[Block Householder QR Factorization]]
 
+### QR Factorization via Givens Transformation
+
 - [[Givens Transformation and Givens Rotation]]
 - [[Givens QR Factorization]]
 
-- [[Householder QR Factorization]]
+### QR Factorization via Gram-Schmidt Orthogonalization
 
 - [[Gram-Schmidt Orthogonalization]]
-
+- [[Modified Gram-Schmidt Algorithm for QR Factorization]]
 
 
 -----------

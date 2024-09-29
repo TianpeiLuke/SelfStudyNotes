@@ -97,9 +97,11 @@ date of note: 2024-05-12
 - [[Householder Transformation and Householder Reflection]]
 - [[Givens Transformation and Givens Rotation]]
 - [[Gram-Schmidt Orthogonalization]]
+
 - [[QR Factorization of Matrix]]
 - [[Householder QR Factorization]]
 - [[Block Householder QR Factorization]]
+- [[Modified Gram-Schmidt Algorithm for QR Factorization]]
 
 
 ### Least Square Problems

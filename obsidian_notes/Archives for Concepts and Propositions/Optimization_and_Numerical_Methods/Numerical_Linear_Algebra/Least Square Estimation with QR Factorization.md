@@ -84,8 +84,9 @@ date of note: 2024-08-20
 ^b530a4
 
 - [[QR Factorization of Matrix]]
-
-
+- [[Householder QR Factorization]]
+- [[Givens QR Factorization]]
+- [[Modified Gram-Schmidt Algorithm for QR Factorization]]
 
 
 ### Least Square via QR Factorization
@@ -136,10 +137,7 @@ date of note: 2024-08-20
 >The algorithm above is the **Gram-Schmidt procedure** for multiple regression.
 
 - [[Gram-Schmidt Orthogonalization]]
-
-## Householder Least Square Solution
-
-- [[Householder QR Factorization]]
+- [[Modified Gram-Schmidt Algorithm for QR Factorization]]
 
 
 
