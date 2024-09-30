@@ -65,7 +65,7 @@ date of note: 2024-06-08
 - [[Gaussian Elimination with Partial Pivoting]]
 - [[Gaussian Elimination for Solving Linear System]]
 
-### QR Factorization and Successive Orthogonalization
+### QR Factorization
 
 ![[Least Square Estimation with QR Factorization#^b530a4]]
 
@@ -99,6 +99,13 @@ date of note: 2024-06-08
 
 - [[Singular Value Decomposition of Linear Map]]
 - [[Least Square Estimation via Singular Value Decomposition]]
+
+### Iterative Methods 
+
+- [[Classical Iterations to approximate Sparse Linear System Solution]]
+- [[Conjugate Gradient Algorithm Linear]]
+- [[Conjugate Gradient Normal Equation Residual]]
+
 
 
 

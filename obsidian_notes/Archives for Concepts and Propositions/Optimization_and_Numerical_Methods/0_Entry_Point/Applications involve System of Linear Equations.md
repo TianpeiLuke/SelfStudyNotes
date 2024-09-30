@@ -100,6 +100,13 @@ date of note: 2024-09-27
 
 
 >[!info]
+>The solution to the **normal equation** can be approximated via *iterative methods*
+>- The **conjugage gradient normal equation residual (CGNR)** method
+
+- [[Conjugate Gradient Algorithm Linear]]
+
+
+>[!info]
 >In case for **undercomplete system** $n < m$
 >
 >An alternative way is to find the **QR factorization** of $A$ $$A = Q\,R$$ where $Q$ is orthogonal matrix, and $R$ is *upper triangular*.
@@ -129,6 +136,9 @@ date of note: 2024-09-27
 
 - [[Sherman–Morrison–Woodbury Matrix Inversion Formula]]
 - [[Schur Complement and Inversion of Block Matrix]]
+
+
+
 
 ### Ridge Regression
 

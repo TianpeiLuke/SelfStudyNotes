@@ -86,6 +86,9 @@ date of note: 2024-05-12
 - [[Least Square Estimation Solution and Geometric Interpretation]]
 - [[Algorithms for Least Square Estimation Problem]]
 - [[Least Square Estimation with QR Factorization]]
+- [[Least Square Estimation via Singular Value Decomposition]]
+- [[Conjugate Gradient Normal Equation Residual]]
+
 
 ### Eigenvalue Problem
 
@@ -95,6 +98,14 @@ date of note: 2024-05-12
 - [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
 - [[Rayleigh Quotient for Eigenvalue Problem]]
 - [[Convex Optimization for Eigenvalue Problem]]
+
+- [[QR Iteration for Eigenvalue of Symmetric Matrix]]
+- [[Tridiagonal Decomposition of Symmetric Matrix]]
+
+- [[Biorthogonalization Methods]]
+- [[Lanczos Iteration to Solve Eigenvalue Problem]]
+- [[Jacobi-Davidson Algorithm to Sparse Eigenvalue Problem]]
+- [[Arnoldi Iterations to Sparse Eigenvalue Problems]]
 
 
 ### Derivative-Free Optimization

@@ -134,6 +134,10 @@ date of note: 2024-05-12
 >	- generate new **conjugate gradient direction**: $$d_{k+1} = - y_{k+1} + \beta_{k+1}\,d_{k}$$
 >	- $k \leftarrow k+1$
 
+## Conjugate Gradient Normal Equation Residual 
+
+
+
 
 
 -----------
