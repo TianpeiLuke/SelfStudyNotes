@@ -24,7 +24,7 @@ date of note: 2024-09-24
 >
 >Then
 >- the **spectral radius** of $A$ is **positive** $$\rho(A) = \sup\left\{ |\lambda|: \lambda\in \sigma(A) \right\} > 0.$$ 
->- $\rho(A)$ is an **algebraically simple eigenvalue** of $A$, i.e. the *algebraic multiplicity* of $\rho(A)$ is $1.$ $$\det \left(\lambda I - A\right) = (\lambda - \rho(A))\,p_{1}(\lambda).$$
+>- $\rho(A)$ is an **algebraically simple eigenvalue** of $A$, i.e. the *algebraic multiplicity* of $\rho(A)$ is **$1.$** $$\det \left(\lambda I - A\right) = (\lambda - \rho(A))\,p_{1}(\lambda).$$
 >- there *exists* a **unique** *real vector* $x=(x_{1}\,{,}\ldots{,}\,x_{n})$ such that $$Ax = \rho(A)\,x$$ and $$\left\langle  e\,,\, x   \right\rangle = \sum_{i=1}^{n}x_{i} = 1.$$ Moreover, this vector is **positive** i.e. $x \succ 0.$
 >- there *exists* a **unique** *real vector* $y=(y_{1}\,{,}\ldots{,}\,y_{n})$ such that $$y^{T}A = \rho(A)\,y^{T}$$ and $$\left\langle  x\,,\, y   \right\rangle = \sum_{i=1}^{n}x_{i}y_{i} = 1.$$ Moreover, this vector is **positive** i.e. $y \succ 0.$
 
@@ -37,8 +37,8 @@ date of note: 2024-09-24
 >Let $A\in M_{n}$ be **irreducible** and **nonnegative**. 
 >
 >Then 
->- the **(right) Perron vector** of $A$ is defined as the *unique positive eigenvector* $x$ of $A$ associated with $A$'s spectral radius. That is, $$Ax = \rho(A)x, \quad x\in \Delta_{n}.$$
->- And the **left Perron vector** of $A$ is defined as the *unique positive eigenvector* $y$ of $A^{T}$ associated with $A$'s spectral radius. That is, $$A^{T}y = \rho(A)y, \quad y\succ 0, \; \left\langle  x\,,\,y \right\rangle = 1.$$
+>- the **(right) Perron vector** of $A$ is defined as the *right eigenvector* $x$ of $A$ associated with $A$'s *spectral radius* (*maximum eigenvalue*). By **Perron-Frobenius theorem**, $$Ax = \rho(A)x, \quad x\in \Delta_{n}.$$
+>- And the **left Perron vector** of $A$ is defined as the *left eigenvector* $y$ of $A$ associated with $A$'s *spectral radius* (*maximum eigenvalue*). That is, $$y^{T}A = \rho(A)y^{T}, \quad y\succ 0, \; \left\langle  x\,,\,y \right\rangle = 1.$$
 
 
 

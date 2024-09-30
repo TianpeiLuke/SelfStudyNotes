@@ -27,7 +27,10 @@ date of note: 2024-05-27
 
 - [[Adjoint of Linear Map]]
 - [[Inner Product Space]]
+- [[Commutativity and Anticommutativity of Matrices]]
 
+>[!important] Proposition
+>A matrix $A\in \mathbb{C}^{n\times n}$ is **normal** *if and onlly if* it **real** and **imaginary** part **commutes**, i.e. $$A = B + Ci \text{ normal } \;\iff\; BC = CB. $$
 
 ## Explanation
 
@@ -48,7 +51,6 @@ date of note: 2024-05-27
 - [[Unitary and Orthogonal Transformation]]
 
 
-
 -----------
 ##  Recommended Notes and References
 
@@ -63,4 +65,4 @@ date of note: 2024-05-27
 - Github Note [link](https://github.com/TianpeiLuke/SelfStudyNotes/tree/master/self-study/probability_and_measure_theory)
 
 - [[Matrix Analysis by Horn]] pp 131
-- [[Finite Dimensional Vector Spaces by Halmos]]
+- [[Finite Dimensional Vector Spaces by Halmos]] pp 159

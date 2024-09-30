@@ -78,6 +78,9 @@ date of note: 2024-09-27
 >[!info]
 >If $A$ has **full column rank**, e.g. $n > m$, then the LSE has **unique solution** $$x = A^{+}b= \left(A^{T}\,A\right)^{-1}\,A^{T}b$$ 
 
+
+#### Gaussian Elimination and Cholesky Factorization
+
 >[!info]
 >Solving $x$ is equivalent to finding the solution of **normal equation**
 >$$
@@ -98,13 +101,23 @@ date of note: 2024-09-27
 - [[Forward Substitution of Lower Triangular System]]
 - [[Back Substitution of Upper Triangular System]]
 
+#### Iterative Method 
 
 >[!info]
->The solution to the **normal equation** can be approximated via *iterative methods*
+>The **iterative methods** can be used to solve the **high dimensional normal equation**
+>- Since $S = A^{T}A$ is symmetric positive semidefinite, the **conjugate gradient method** can be used.
+>- Solving $$A^TAx = A^Tb \iff \min \lVert Ax - b \rVert_{2}^2 $$
+>	- compute **step size** $$\alpha_{k} = - \frac{r_{k}^T\,d_{k}}{d_{k}^T\,A\,d_{k}}$$
+>	- update solution: $$x_{k+1} = x_{k} + \alpha_{k}\,d_{k}$$
+>	- update **residual**: $$r_{k+1} = Ax_{k+1} - b$$
+>	-  $$\beta_{k+1} = \frac{r_{k+1}^T\,A\,d_{k}}{d_{k}^T\,A\,d_{k}}$$ 
+>	- $$d_{k+1} = - r_{k+1} + \beta_{k+1}\,d_{k}$$
 >- The **conjugage gradient normal equation residual (CGNR)** method
 
 - [[Conjugate Gradient Algorithm Linear]]
+- [[Conjugate Gradient Normal Equation Residual]]
 
+#### Modified Gram-Schmidt Orthogonalization and QR Factorization
 
 >[!info]
 >In case for **undercomplete system** $n < m$
@@ -113,18 +126,24 @@ date of note: 2024-09-27
 >
  >Then the solution can be found via solving $$R\,x = Q^{T}b:= y$$
 >- This is a *triangular system*
+>- A typical iterative method is based on the **modified Gram-Schmidt orthogonalization process**
+>- We can also apply **Hourseholder reflection** or **Givens rotations** to compute *QR factorization*.
 
 >[!important]
->**QR factorization** is preferred compared to **Cholosky factorization** of **normal equations**.
+>**QR factorization** is preferred compared to **Cholesky factorization** of **normal equations**.
 >
 >-- [[Matrix Computations by Golub]] pp 268
 
 
 - [[QR Factorization of Matrix]]
+- [[Modified Gram-Schmidt Algorithm for QR Factorization]]
 - [[Householder QR Factorization]]
+- [[Givens QR Factorization]]
 - [[Least Square Estimation with QR Factorization]]
 
 - [[Back Substitution of Upper Triangular System]]
+
+#### SVD and Matrix Analysis
 
 >[!info]
 >An equivalent way is to find the **Singular Value Decomposition (SVD)** of $A$ $$A = U\,\Sigma\,V^{T}$$ where $U, V$ are orthogonal matrices, and $\Sigma$ is *diagonal*.

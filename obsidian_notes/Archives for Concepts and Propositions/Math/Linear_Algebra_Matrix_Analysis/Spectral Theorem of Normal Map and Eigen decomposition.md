@@ -25,7 +25,7 @@ date of note: 2024-05-27
 
 ^33ff0c
 
-- [[Diagonal Matrix and Block Diagonal Matrix]]
+- [[Diagonalizable Matrix]]
 - [[Unitary and Orthogonal Transformation]]
 - [[Eigenvalue and Eigenvector for Linear Map]]
 - [[Normal Transformation]]
@@ -46,7 +46,7 @@ date of note: 2024-05-27
 - [[Eigenspace and Spectrum for Linear Map]]
 - [[Eigenvalue and Eigenvector for Linear Map]]
 - [[Projection Map onto Linear Subspace]]
-- [[Finite Dimensional Vector Spaces by Halmos]]
+- [[Finite Dimensional Vector Spaces by Halmos]] pp 156
 - [[Diagonal Matrix and Block Diagonal Matrix]]
 
 ## Explanation
@@ -69,6 +69,7 @@ date of note: 2024-05-27
 ##  Recommended Notes and References
 
 
+- [[Diagonal Matrix and Block Diagonal Matrix]]
 - [[Spectral Theorem in Multiplication Operator Form]]
 - [[Spectral Theorem in Projection-Valued Measure Form]]
 

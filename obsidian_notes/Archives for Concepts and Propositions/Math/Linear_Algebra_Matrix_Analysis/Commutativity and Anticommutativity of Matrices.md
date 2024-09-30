@@ -40,3 +40,4 @@ date of note: 2024-09-17
 
 
 - [[Matrix Analysis by Horn]] pp 21
+- [[Finite Dimensional Vector Spaces by Halmos]] pp 171 - 172

@@ -19,6 +19,7 @@ date of note: 2024-05-27
 
 ![[Spectral Theorem of Normal Map and Eigen decomposition#^33ff0c]]
 
+### Matrix Representation
 
 >[!important] Spectral Theorem (Unitarily Diagonalization Form)
 >Let $A = [a_{i,j}] \in \mathbb{C}^{n \times n}$ be **Hermitian** and have **eigenvalues** $\lambda_{1} \,{,}\ldots{,}\,\lambda_{n}$. 
@@ -26,13 +27,11 @@ date of note: 2024-05-27
 >Then:
 >- All the eigenvalues $\lambda_{1} \,{,}\ldots{,}\,\lambda_{n} \in \mathbb{R}$ are **real**.
 >- $A$ is **unitarily diagonalizable**
->- There exists a *unitary matrix* $U\in U(n)$ such that $$A = U\,\boldsymbol{\Lambda}\,U^{*}$$ where $\boldsymbol{\Lambda} =\text{diag}\left\{\lambda_{1} \,{,}\ldots{,}\,\lambda_{n}\right\}.$
-
+>- There exists a *unitary matrix* $U\in U(n)$ such that $$A = U\,\Lambda\,U^{*}$$ where $\Lambda =\text{diag}\left\{\lambda_{1} \,{,}\ldots{,}\,\lambda_{n}\right\}.$
 
 - [[Diagonal Matrix and Block Diagonal Matrix]]
 - [[Unitary and Orthogonal Transformation]]
 - [[Spectral Theorem of Normal Map and Eigen decomposition]]
-- [[Self-Adjoint Linear Map]]
 - [[Hermitian or Symmetric Matrix]]
 - [[Unitary Similarity and Unitary Diagonalizable]]
 
@@ -42,17 +41,51 @@ date of note: 2024-05-27
 >Then
 >$$A = \sum_{i=1}^{n}\lambda_{i}\,u_{i}\,u_{i}^{*} = \sum_{i=1}^{n}\lambda_{i}\,P_{\mathcal{E}_{\lambda_{i}}}$$ where $u_{i} \in \mathcal{E}_{\lambda_{i}}$ is an *eigenvector* associated with *eigenvalue* $\lambda_{i} \in \mathbb{R}$ of $A$, and $P_{\mathcal{E}_{\lambda_{i}}}$ is the **(spectral) projection map** onto the eignspace $\mathcal{E}_{\lambda_{i}}$ associated with *eigenvalue* $\lambda_{i}$.
 
-- [[Hermitian or Symmetric Matrix]]
+- [[Projection Map onto Linear Subspace]]
+
+### Linear Map Interpretation
+
+>[!important] Spectral Theorem (Linear Map)
+>Let $A\in \mathcal{L}(V)$ be a **self-adjoint linear transformation** on a *finite dimensional inner product space* $V.$
+>
+>Then there exists a set of **real values** $\lambda_{1}\,{,}\ldots{,}\,\lambda_{r}\in \mathbb{R}$, and **orthogonal projection maps** $P_{1}\,{,}\ldots{,}\,P_{r}$ so that 
+>- $\lambda_{i}$ are **pairwise distinct**, $$\lambda_{i} \neq \lambda_{j}, \quad i\neq j\in \{ 1\,{,}\ldots{,}\,r\}$$
+>- $P_i$ are **pairwise orthogonal** $$P_{i}^{*}P_{j} = 0, \quad i\neq j\in \{ 1\,{,}\ldots{,}\,r \}$$
+>- $$\sum_{i=1}^{r}P_{i} = I.$$
+>- the linear map $A$ can be decomposed into the linear combination of these orthogonal projections $$A = \sum_{i=1}^{r}\lambda_{i}\,P_{i}$$ where $P_{i} := P_{\mathcal{E}_{\lambda_{i}}}$ is the **orthogonal projection** onto the **eigenspace** $\mathcal{E}_{\lambda_{i}}$ associated with $\lambda_{i}$.
+
+^7617c3
+
+
+- [[Self-Adjoint Linear Map]]
 - [[Eigenspace and Spectrum for Linear Map]]
 - [[Eigenvalue and Eigenvector for Linear Map]]
 - [[Projection Map onto Linear Subspace]]
-- [[Finite Dimensional Vector Spaces by Halmos]]
+- [[Finite Dimensional Vector Spaces by Halmos]] pp 156
 
 ## Explanation
 
 
 
 
+## Principle of Biorthogonality
+
+- [[Principle of Biorthogonality]]
+
+
+## Self-Adjoint Bounded Operator in Hilbert Space
+
+![[Spectral Projection#^50c777]]
+
+- [[Spectral Projection]]
+
+![[Projection-Valued Measure#^e2e839]]
+
+- [[Projection-Valued Measure]]
+
+![[Spectral Theorem in Projection-Valued Measure Form#^8e4b3b]]
+
+- [[Spectral Theorem in Projection-Valued Measure Form]]
 
 -----------
 ##  Recommended Notes and References
@@ -67,6 +100,6 @@ date of note: 2024-05-27
 
 
 
-- [[Finite Dimensional Vector Spaces by Halmos]]
+- [[Finite Dimensional Vector Spaces by Halmos]] pp 155 - 158
 - [[Matrix Analysis by Horn]] pp 135
 - [[Numerical Linear Algebra by Trefethen]] pp 181 - 188

@@ -41,6 +41,8 @@ date of note: 2024-05-27
 > \end{align}
 >$$
 
+^8e4b3b
+
 
 - [[Integration with respect to Project-Valued Measure]]
 - [[Projection-Valued Measure]]

@@ -158,6 +158,9 @@ date of note: 2024-05-27
 - [[Singular Value Decomposition and Fundamental Subspaces]]
 - [[Fundamental Subspaces from Linear Map]]
 
+## Polar Decomposition
+
+- [[Polar Decomposition of Transformation]]
 
 
 -----------

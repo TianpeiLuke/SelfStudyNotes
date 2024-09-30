@@ -22,6 +22,10 @@ date of note: 2024-09-25
 
 ![[Givens Rotations and Jacobi Rotations#^956c04]]
 
+![[Givens Rotations and Jacobi Rotations#^05b457]]
+
+![[Givens Rotations and Jacobi Rotations#^77e0de]]
+
 >[!important] Definition
 >Let $A\in \mathbb{R}^{m\times n}$ with $m\ge n$.
 >
@@ -29,13 +33,13 @@ date of note: 2024-09-25
 >- *Require*: $A$
 >- For $j=1\,{,}\ldots{,}\,n$:
 >	- For $i=m\,{,}\ldots{,}\,j+1$:
->		- Compute the **Givens rotations** $$[\cos(\theta), \sin(\theta)] = \text{Givens}(A_{i-1, j}\,,\,A_{i,j})$$ 
->		- Apply the *Given rotations* to annihilate $(i,j)$ entry $$A_{\{ i-1:i \}, \{ j:n \}} \leftarrow \left[ \begin{array}{cc}\cos(\theta) & -\sin(\theta) \\  \sin(\theta) & \cos(\theta) \end{array} \right]\,A_{\{ i-1:i \}, \{ j:n \}} $$
+>		- Compute the **Givens rotations** $$[c, s] = \text{Givens}(A_{i-1, j}\,,\,A_{i,j})$$ 
+>		- Apply the *Given rotations* to annihilate $(i,j)$ entry $$A_{\{ i-1:i \}, \{ j:n \}} \leftarrow \left[ \begin{array}{cc}c & s \\  -s & c \end{array} \right]^{T}\,A_{\{ i-1:i \}, \{ j:n \}} $$
 >- *Return*: the **upper triangular matrix** $$R = Q^{T}A$$ is given by the upper triangular part of $A$, $$[A_{\{ j+1:m \}, j}]$$
 
 - [[Givens Rotations and Jacobi Rotations]]
 
->[!important]
+
 
 ## Explanation
 

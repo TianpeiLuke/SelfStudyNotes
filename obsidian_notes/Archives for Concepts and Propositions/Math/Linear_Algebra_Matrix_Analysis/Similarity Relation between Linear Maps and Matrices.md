@@ -87,6 +87,8 @@ date of note: 2024-09-16
 - [[Spectral Theorem of Normal Map and Eigen decomposition]]
 - [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
 
+![[Eigenvalue and Eigenvector for Linear Map#^1a14c3]]
+
 ## Change of Basis
 
 

@@ -48,12 +48,20 @@ date of note: 2024-09-16
 ^be2b64
 
 - [[Diagonalizable Matrix]]
-- [[Spectral Theorem of Normal Map and Eigen decomposition]]
-- [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
-
 
 ## Explanation
 
+>[!info]
+>The **spectral theorem** states that all
+>-  **Hermitian matrices** (**symmetric matrix**)  $$A = A^{*}$$
+>-  **Normal matrice** $$AA^{*} = A^{*}A$$
+>
+>are *unitary diagonalizable.*
+
+- [[Hermitian or Symmetric Matrix]]
+- [[Normal Transformation]]
+- [[Spectral Theorem of Normal Map and Eigen decomposition]]
+- [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
 
 ## Norm Invariance 
 

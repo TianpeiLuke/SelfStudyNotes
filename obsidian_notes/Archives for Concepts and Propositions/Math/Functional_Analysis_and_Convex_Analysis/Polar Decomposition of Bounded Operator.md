@@ -33,6 +33,8 @@ date of note: 2024-09-24
 > 
 >$U$ is **uniquely determined** by the condition that $$\text{Ker}(U) = \text{Ker}(A).$$  Moreover, $$\text{R}(U) = \overline{\text{R}(A)}.$$ 
 
+^7e985f
+
 - [[Partial Isometry]]
 - [[Square Root of Positive Semidefinite Operator and Absolute Value]]
 - [[Range and Kernel of Linear Operator]]
@@ -47,7 +49,7 @@ date of note: 2024-09-24
 ## Explanation
 
 
-
+- [[Polar Decomposition of Transformation]]
 
 
 -----------

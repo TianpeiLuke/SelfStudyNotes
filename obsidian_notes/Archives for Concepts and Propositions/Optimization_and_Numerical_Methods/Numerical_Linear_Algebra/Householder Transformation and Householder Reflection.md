@@ -24,20 +24,22 @@ date of note: 2024-09-25
 >[!important] Definition
 >Let $v\in \mathbb{R}^{n}$ be nonzero. 
 >
->Then the **Householder reflection** or **Householder transformation** or **Householder matrix**  $P_{v}\in \mathbb{R}^{m\times m}$ is of the form $$P_{v} = I_{n} - \beta\,v\,v^{T}$$ where $$\beta = 2\,\left( v^{T}v \right)^{-1}.$$
+>Then the **Householder reflection** or **Householder transformation** or **Householder matrix**  $H_{v}\in \mathbb{R}^{m\times m}$ is of the form $$H_{v} = I_{n} - \beta\,v\,v^{T}$$ where $$\beta = 2\,\left( v^{T}v \right)^{-1}.$$
 >- The vector $v$ is called the **Householder vector.**
->- $P_{v}x$ is a **reflection** of $x$ in $\text{R}(v)^{\perp}.$ 
+>- $H_{v}x$ is a **reflection** of $x$ in $\text{R}(v)^{\perp}.$ 
+
+^bc2fa5
 
 - [[Elementary Row and Column Operations]]
 - [[Fundamental Orthogonal Projections]]
 - [[Orthogonal Complement of Hilbert Spaces]]
 
 >[!important] Proposition
->Let $v\in \mathbb{R}^{n}$ be nonzero. The **Householder reflection** is $$P_{v} = I_{n} - 2\left( v^T v\right)^{-1}\,v\,v^{T}.$$
+>Let $v\in \mathbb{R}^{n}$ be nonzero. The **Householder reflection** is $$H_{v} = I_{n} - 2\left( v^T v\right)^{-1}\,v\,v^{T}.$$
 >
 >Then
->- $P_{v}$ is **symmetric** $$P_{v} = P_{v}^{T}.$$
->- $P_{v}$ is **orthogonal** $$P_{v}^{T}\,P_{v} = P_{v}\,P_{v}^{T} = I.$$
+>- $H_{v}$ is **symmetric** $$H_{v} = H_{v}^{T}.$$
+>- $H_{v}$ is **orthogonal** $$H_{v}^{T}\,H_{v} = H_{v}\,H_{v}^{T} = I.$$
 
 
 - [[Unitary and Orthogonal Transformation]]
@@ -45,7 +47,7 @@ date of note: 2024-09-25
 
 
 >[!info]
->Let $v\in \mathbb{R}^{n}$ be nonzero. The **Householder reflection** is $$P_{v} = I_{n} - 2v\,v^{+}$$ where the **Moore-Penrose Pseudoinverse** of $v$ is $$v^{+} = \left( v^{T}\,v \right)^{-1}\, v^{T}$$
+>Let $v\in \mathbb{R}^{n}$ be nonzero. The **Householder reflection** is $$H_{v} = I_{n} - 2v\,v^{+}$$ where the **Moore-Penrose Pseudoinverse** of $v$ is $$v^{+} = \left( v^{T}\,v \right)^{-1}\, v^{T}$$
 
 - [[Moore–Penrose Pseudo Inverse of Matrix]]
 
@@ -54,14 +56,14 @@ date of note: 2024-09-25
 >[!info]
 >If we set $$v = x  - \lVert x \rVert_{2}\,e_{1} \implies v_{1} = x_{1} - \lVert x \rVert_{2},$$ the **Householder transformation** on $v$ gives 
 >$$
->P_{v}\,x =  \lVert x \rVert_{2}\,e_{1}. 
+>H_{v}\,x =  \lVert x \rVert_{2}\,e_{1}. 
 >$$
 
 
 >[!important] Definition
 >Consider the task to compute $v = [v_{1}\,{,}\ldots{,}\,v_{n}]\in \mathbb{R}^{n}$ with $v_{1} = 1$, and $\beta\in \mathbb{R}$ such that
->-  the *Householder transformation* is *orthogonal* $$P_{v} := I - 2 \beta\, v\,v^{T} \in \mathcal{O}(n).$$ 
->- And $$P_{v}\,x = \lVert x \rVert_{2}\, e_{1}.$$ 
+>-  the *Householder transformation* is *orthogonal* $$H_{v} := I - 2 \beta\, v\,v^{T} \in \mathcal{O}(n).$$ 
+>- And $$H_{v}\,x = \lVert x \rVert_{2}\, e_{1}.$$ 
 >  
 >The procedure **$\text{Householder}(x)$** computes $(v,\beta)$ as follow:
 >- *Require*: $0 \neq x\in \mathbb{R}^{n}$
@@ -102,22 +104,22 @@ date of note: 2024-09-25
 >[!info]
 >The **Moore-Penrose Pseudoinverse** of $v$ is $$v^{+} = \left( v^{T}\,v \right)^{-1}\, v^{T}$$
 >
->Then the **projection matrix** on $\text{R}(v)^{\perp}$ is $$P_{\text{R}(v)^{\perp}} = I - v\,v^{+} = I - \left( v^{T}\,v \right)^{-1}\,v\,v^{T}$$
+>Then the **projection matrix** on $\text{R}(v)^{\perp}$ is $$H_{\text{R}(v)^{\perp}} = I - v\,v^{+} = I - \left( v^{T}\,v \right)^{-1}\,v\,v^{T}$$
 >
->The **Householder transformation** is a **reflection** on $\text{R}(v)^{\perp}$ $$P_{householder} = I - 2v\,v^{+}$$
+>The **Householder transformation** is a **reflection** on $\text{R}(v)^{\perp}$ $$H_{householder} = I - 2v\,v^{+}$$
 
 - [[Fundamental Orthogonal Projections]]
 - [[Moore–Penrose Pseudo Inverse of Matrix]]
 - [[Projection Map onto Linear Subspace]]
 
 >[!info]
->Similar to the **Gaussian transformation** in Gaussian elimination $$M_{k} = I_{n} - \tau\,e_{k},$$ the **Householder transformation** $$P_{v} = I - 2\,v\,v^{+}$$ is a **rank-1 update** of $I$.
+>Similar to the **Gaussian transformation** in Gaussian elimination $$M_{k} = I_{n} - \tau\,e_{k},$$ the **Householder transformation** $$H_{v} = I - 2\,v\,v^{+}$$ is a **rank-1 update** of $I$.
 
 - [[Gaussian Elimination for Solving Linear System]]
 
 >[!info]
->For nonzero $x\neq 0$, applying Householder reflection $$P_{v}x = x - 2 \frac{\left\langle v , x \right\rangle}{\left\langle v , v \right\rangle}\,v$$
->We can choose $v \in \text{span}\left\{ e_{1}, x \right\}$ so that $$P_{v}x = \alpha\,e_{1}$$ for any nonzero $x$ and some $\alpha\in  \mathbb{R}$.
+>For nonzero $x\neq 0$, applying Householder reflection $$H_{v}x = x - 2 \frac{\left\langle v , x \right\rangle}{\left\langle v , v \right\rangle}\,v$$
+>We can choose $v \in \text{span}\left\{ e_{1}, x \right\}$ so that $$H_{v}x = \alpha\,e_{1}$$ for any nonzero $x$ and some $\alpha\in  \mathbb{R}$.
 >
 >
 >In particular, let $$v = x + \lambda\, e_{1}$$ 
@@ -134,7 +136,7 @@ date of note: 2024-09-25
 >So
 >$$
 >\begin{align*} 
->Px &= \left( 1 - 2 \frac{ \lVert x \rVert_{2}^2  + \lambda x_{1} }{\lVert x \rVert_{2}^2 + 2\lambda x_{1} + \lambda^2} \right)x\,- 2 \frac{\left\langle v , x \right\rangle}{\left\langle v , v \right\rangle}\,\lambda\,e_{1} \\[5pt]
+>Hx &= \left( 1 - 2 \frac{ \lVert x \rVert_{2}^2  + \lambda x_{1} }{\lVert x \rVert_{2}^2 + 2\lambda x_{1} + \lambda^2} \right)x\,- 2 \frac{\left\langle v , x \right\rangle}{\left\langle v , v \right\rangle}\,\lambda\,e_{1} \\[5pt]
 >&= \left( \frac{ \lambda^2  - \lVert x \rVert_{2}^2  }{\lVert x \rVert_{2}^2 + 2\lambda x_{1} + \lambda^2} \right)x\,- 2\lambda \left(  \frac{ \lVert x \rVert_{2}^2  + \lambda x_{1} }{\lVert x \rVert_{2}^2 + 2\lambda x_{1} + \lambda^2} \right)\,e_{1}\\[5pt]
 >&= \alpha\,e_{1}
 >\end{align*}
@@ -147,7 +149,7 @@ date of note: 2024-09-25
 >[!important]
 >Thus when we set $$v = x  \pm \lVert x \rVert_{2}\,e_{1},$$ the **Householder transformation** on $v$ gives 
 >$$
->P_{v}\,x = \mp \lVert x \rVert_{2}\,e_{1}. 
+>H_{v}\,x = \mp \lVert x \rVert_{2}\,e_{1}. 
 >$$
 >
 >It is this simple determination of $v$ that makes the Householder reflections so **useful**.
@@ -169,11 +171,11 @@ date of note: 2024-09-25
 ## Householder Transformation on Matrix
 
 >[!important]
->Note that $$P_{v}A = (I -\beta v\,v^{T})A = A - (\beta\,v)(v^T\,A)$$ involves a **matrix-vector product** $$w^{T} = v^{T}\,A$$ and a **rank-1 update** $$P_{v}A = A - (\beta\,v)\,w^{T}.$$ This process requires **$4mn$ flops**. 
+>Note that $$H_{v}A = (I -\beta v\,v^{T})A = A - (\beta\,v)(v^T\,A)$$ involves a **matrix-vector product** $$w^{T} = v^{T}\,A$$ and a **rank-1 update** $$H_{v}A = A - (\beta\,v)\,w^{T}.$$ This process requires **$4mn$ flops**. 
 >
->Similarly, $$AP_{v} = A(I -\beta v\,v^{T}) = A - (\beta\,Av)v^T$$ which also requires **$4mn$ flops**. 
+>Similarly, $$AH_{v} = A(I -\beta v\,v^{T}) = A - (\beta\,Av)v^T$$ which also requires **$4mn$ flops**. 
 >
->- We never need to compute the *matrix-matrix product* $P_{v}A$ directly.
+>- We never need to compute the *matrix-matrix product* $H_{v}A$ directly.
 >- Householder updates *never entail the explicit formation* of the Householder matrix.
 
 ## QR Factorization
@@ -197,10 +199,10 @@ date of note: 2024-09-25
 
 - [[Sherman–Morrison–Woodbury Matrix Inversion Formula]]
 
-
+- [[Unitary and Orthogonal Transformation]]
 - [[Elementary Row and Column Operations]]
 - [[Matrix]]
 
 
-- [[Matrix Analysis by Horn]]
+- [[Matrix Analysis by Horn]] pp 87
 - [[Matrix Computations by Golub]] pp 234 - 239

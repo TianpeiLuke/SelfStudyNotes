@@ -94,8 +94,15 @@ date of note: 2024-05-09
 > $$ 
 > where $\lVert \cdot \rVert$ is the induced norm by inner product.
 
+## Examples
 
+![[Givens Rotations and Jacobi Rotations#^956c04]]
 
+- [[Givens Rotations and Jacobi Rotations]]
+
+![[Householder Transformation and Householder Reflection#^bc2fa5]]
+
+- [[Householder Transformation and Householder Reflection]]
 
 
 

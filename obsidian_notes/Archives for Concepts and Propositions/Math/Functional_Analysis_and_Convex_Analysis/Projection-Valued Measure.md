@@ -36,6 +36,8 @@ date of note: 2024-05-27
 >- **Product of Projections**:  $$P_{S_1}P_{S_2} = P_{S_1 \cap S_2}$$
 >
 
+^e2e839
+
 - [[Norm Topology]]
 - [[Projection Map onto Linear Subspace]]
 

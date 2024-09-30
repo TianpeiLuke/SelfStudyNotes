@@ -80,6 +80,11 @@ date of note: 2024-05-27
 - [[Direct Sum of Subspaces]]
 - [[Linear Independence]]
 
+## Principle of Biorthogonality
+
+- [[Principle of Biorthogonality]]
+
+
 
 ## Polynomial Function of Transformation
 

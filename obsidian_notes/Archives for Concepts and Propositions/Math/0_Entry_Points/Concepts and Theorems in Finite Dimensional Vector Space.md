@@ -98,6 +98,9 @@ date of note: 2024-05-11
 
 - [[Similarity Relation between Linear Maps and Matrices]]
 - [[Diagonalizable Matrix]]
+- [[Unitary Similarity and Unitary Diagonalizable]]
+- [[Schur Triangularization and Schur Form]]
+
 
 
 ### Jordan Decomposition

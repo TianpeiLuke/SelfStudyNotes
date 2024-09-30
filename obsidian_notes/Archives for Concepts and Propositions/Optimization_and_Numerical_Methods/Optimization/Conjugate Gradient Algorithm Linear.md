@@ -134,9 +134,11 @@ date of note: 2024-05-12
 >	- generate new **conjugate gradient direction**: $$d_{k+1} = - y_{k+1} + \beta_{k+1}\,d_{k}$$
 >	- $k \leftarrow k+1$
 
+- [[Gaussian Elimination with Partial Pivoting]]
+
 ## Conjugate Gradient Normal Equation Residual 
 
-
+- [[Conjugate Gradient Normal Equation Residual]]
 
 
 
@@ -156,3 +158,4 @@ date of note: 2024-05-12
 - [[Deep Learning by Goodfellow]] pp 304
 - [[Optimization by Vector Space Methods by Luenberger]] pp 291 - 294
 - [[Matrix Computations by Golub]] pp 625 - 639
+- [[Numerical Linear Algebra by Trefethen]] pp 294 - 301
