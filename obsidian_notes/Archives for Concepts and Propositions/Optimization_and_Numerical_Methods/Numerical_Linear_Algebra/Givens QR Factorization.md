@@ -20,7 +20,7 @@ date of note: 2024-09-25
 >[!important]
 >**Name**: Givens QR Factorization
 
-![[Givens Transformation and Givens Rotation#^956c04]]
+![[Givens Rotations and Jacobi Rotations#^956c04]]
 
 >[!important] Definition
 >Let $A\in \mathbb{R}^{m\times n}$ with $m\ge n$.
@@ -33,7 +33,7 @@ date of note: 2024-09-25
 >		- Apply the *Given rotations* to annihilate $(i,j)$ entry $$A_{\{ i-1:i \}, \{ j:n \}} \leftarrow \left[ \begin{array}{cc}\cos(\theta) & -\sin(\theta) \\  \sin(\theta) & \cos(\theta) \end{array} \right]\,A_{\{ i-1:i \}, \{ j:n \}} $$
 >- *Return*: the **upper triangular matrix** $$R = Q^{T}A$$ is given by the upper triangular part of $A$, $$[A_{\{ j+1:m \}, j}]$$
 
-- [[Givens Transformation and Givens Rotation]]
+- [[Givens Rotations and Jacobi Rotations]]
 
 >[!important]
 
@@ -54,7 +54,7 @@ date of note: 2024-09-25
 ##  Recommended Notes and References
 
 
-- [[Givens Transformation and Givens Rotation]]
+- [[Givens Rotations and Jacobi Rotations]]
 
 
 - [[Linear Span over a Set of Vectors]]

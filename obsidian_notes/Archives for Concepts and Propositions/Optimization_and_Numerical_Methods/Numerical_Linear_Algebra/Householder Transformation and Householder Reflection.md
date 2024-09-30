@@ -187,7 +187,7 @@ date of note: 2024-09-25
 -----------
 ##  Recommended Notes and References
 
-- [[Givens Transformation and Givens Rotation]]
+- [[Givens Rotations and Jacobi Rotations]]
 
 - [[Linear Span over a Set of Vectors]]
 - [[Orthogonal Complement of Hilbert Spaces]]

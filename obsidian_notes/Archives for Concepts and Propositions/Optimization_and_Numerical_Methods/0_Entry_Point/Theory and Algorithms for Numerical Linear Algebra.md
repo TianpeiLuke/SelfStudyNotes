@@ -95,7 +95,7 @@ date of note: 2024-05-12
 ### Orthogonalization and QR Factorization
 
 - [[Householder Transformation and Householder Reflection]]
-- [[Givens Transformation and Givens Rotation]]
+- [[Givens Rotations and Jacobi Rotations]]
 - [[Gram-Schmidt Orthogonalization]]
 
 - [[QR Factorization of Matrix]]

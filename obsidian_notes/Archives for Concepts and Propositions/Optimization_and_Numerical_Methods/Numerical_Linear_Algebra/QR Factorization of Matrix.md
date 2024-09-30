@@ -95,7 +95,7 @@ date of note: 2024-08-08
 
 ### QR Factorization via Givens Transformation
 
-- [[Givens Transformation and Givens Rotation]]
+- [[Givens Rotations and Jacobi Rotations]]
 - [[Givens QR Factorization]]
 
 ### QR Factorization via Gram-Schmidt Orthogonalization
