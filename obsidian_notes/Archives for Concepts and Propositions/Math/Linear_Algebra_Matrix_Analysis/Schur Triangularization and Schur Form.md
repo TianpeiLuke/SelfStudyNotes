@@ -52,6 +52,17 @@ date of note: 2024-09-16
 - [[Eigenvalue and Eigenvector for Linear Map]]
 
 
+>[!info]
+>The Schur form can be represented as 
+>$$
+>T = D + N
+>$$
+>where $D$ is the **diagonal matrix** with *eigenvalue entries* and $N$ is strictly upper triangular, which is a **nilpotent matrix.**
+
+- [[Nilpotent Linear Transformation and Matrix]]
+- [[Eigenvalue and Eigenvector for Linear Map]]
+- [[Matrix Computations by Golub]] pp 351,
+
 ### Real Schur Form
 
 >[!important] Theorem
@@ -81,7 +92,6 @@ date of note: 2024-09-16
 
 ## Explanation
 
-
 ## Commuting Family
 
 >[!important] Theorem
@@ -109,5 +119,5 @@ date of note: 2024-09-16
 
 - [[Finite Dimensional Vector Spaces by Halmos]]
 - [[Matrix Analysis by Horn]] pp 101 - 106
-- [[Matrix Computations by Golub]] pp 440
+- [[Matrix Computations by Golub]] pp 351, 440
 - [[Numerical Linear Algebra by Trefethen]] pp 193 - 195
