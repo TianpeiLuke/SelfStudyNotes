@@ -1,23 +1,26 @@
 ---
 tags:
   - concept
+  - math/linear_algebra
+  - math/matrix_analysis
   - numerical_methods/numerical_linear_algebra
 keywords:
-  - jacobi_iteration_sparse_linear_system
+  - gauss_seidel_iteration
+  - sparse_linear_equations
 topics:
   - numerical_linear_algebra
-name: Jacobi Iteration to solve the Sparse Linear Equations
+  - linear_algebra
+  - matrix_analysis
+name: Gauss-Seidel Iteration for Sparse Linear Equations
 date of note: 2024-09-21
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Jacobi Iteration to solve the Sparse Linear Equations
+>**Name**: Gauss-Seidel Iteration for Sparse Linear Equations
 
-![[Classical Iterations to approximate Sparse Linear System Solution#^39280e]]
-
-![[System of Linear Equations or Linear System#^818e89]]
+![[Jacobi Iteration to solve the Sparse Linear Equations#^2e75bb]]
 
 >[!important] Definition
 >Consider the *linear system* $Ax = b$ where $A = [a_{i,j}] \in M_{m,n}(\mathbb{C})$,  $b = [b_{i}]\in \mathbb{C}^{m}$. That is,
@@ -31,25 +34,22 @@ date of note: 2024-09-21
 >$$
 >Suppose $x^{(k-1)}$ is an *approximation* to $x = A^{-1}b$. 
 >
->The **Jacobi iteration** generates a *new approximation* $x^{(k)}$ by computing 
+>The **Gauss-Seidel iteration** generates a *new approximation* $x^{(k)}$ by computing 
 >$$
 >\begin{align*}
-> x_{i}^{(k)}  &= \frac{b_{i} - \sum_{j=1}^{i-1}a_{i,j}\,x_{j}^{(k-1)} -  \sum_{j=i+1}^{n}a_{i,j}\,x_{j}^{(k-1)}}{a_{i,i}}, \quad i=1\,{,}\ldots{,}\,n
+> x_{i}^{(k)}  &= \dfrac{b_{i} - \sum_{j=1}^{i-1}a_{i,j}\,x_{j}^{(k)} -  \sum_{j=i+1}^{n}a_{i,j}\,x_{j}^{(k-1)}}{a_{i,i}}, \quad i=1\,{,}\ldots{,}\,n
 >\end{align*}
 >$$
 
-^2e75bb
-
-- [[System of Linear Equations or Linear System]]
-- [[Classical Iterations to approximate Sparse Linear System Solution]]
+- [[Jacobi Iteration to solve the Sparse Linear Equations]]
 
 >[!important] Definition
 >Consider the *linear system* $$Ax = b$$ where $A = [a_{i,j}] \in M_{m,n}(\mathbb{C})$,  $b = [b_{i}]\in \mathbb{C}^{m}$. 
 >
->The **Jacobi iteration**  generates a *new approximation* $x^{(k)}$ at iteration $k$ by $$M_{J}\,x^{(k)} = N_{J}\,x^{(k-1)} + b$$
+>The **Gauss-Seidel iteration**  generates a *new approximation* $x^{(k)}$ at iteration $k$ by $$M_{GS}\,x^{(k)} = N_{GS}\,x^{(k-1)} + b$$
 >where 
 >$$
->M_{J} = D_{A},\quad N_{J} = -\left(L_{A} + U_{A}\right)
+>M_{GS} = D_{A} + L_{A},\quad N_{GS} = - U_{A}
 >$$
 >and $D_{A}$, $L_{A}$ and $U_{A}$ are *diagonal entries*, *lower triangular entries*, and *upper triangular entries* of $A$, respectively
 >$$
@@ -60,14 +60,8 @@ date of note: 2024-09-21
 \end{align*}
 >$$
 
-
-
 ## Explanation
 
->[!quote]
->Note that the **most recent solution estimate** is **not fully exploited** in the updating of  a particular component. For example, $x^{(k-1)}$ is used in the calculation of $x_{2}^{(k)}$ even  though $x_{1}^{(k)}$ is available.
->
->-- [[Matrix Computations by Golub]] pp 612
 
 
 
@@ -75,13 +69,18 @@ date of note: 2024-09-21
 -----------
 ##  Recommended Notes and References
 
-
 - [[Classical Iterations to approximate Sparse Linear System Solution]]
-- [[Gauss-Seidel Iteration to solve Sparse Linear Equations]]
+- [[Jacobi Iteration to solve the Sparse Linear Equations]]
 
 - [[System of Linear Equations or Linear System]]
 - [[Existence and Uniqueness of Solution of Linear Equations]]
 
 
-- [[Matrix Computations by Golub]] pp 611 - 617
-- [[Numerical Linear Algebra by Trefethen]] pp 
+- [[Gaussian Belief Propagation]]
+- [[Gaussian Graphical Model]]
+- [[Graph LASSO and Structured Learning in Gaussian Graphical Model]]
+- [[Inverse Covariance Estimation]]
+
+
+- [[Matrix Computations by Golub]] pp 611 - 615
+- [[Numerical Linear Algebra by Trefethen]] pp 318, 339

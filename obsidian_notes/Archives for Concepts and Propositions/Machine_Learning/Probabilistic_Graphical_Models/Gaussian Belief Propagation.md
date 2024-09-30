@@ -173,7 +173,7 @@ date of note: 2024-05-12
 
 ## Gauss-Seidel Iteration
 
-- [[Gauss-Seidel Iteration for Sparse Linear Equations]]
+- [[Gauss-Seidel Iteration to solve Sparse Linear Equations]]
 
 
 

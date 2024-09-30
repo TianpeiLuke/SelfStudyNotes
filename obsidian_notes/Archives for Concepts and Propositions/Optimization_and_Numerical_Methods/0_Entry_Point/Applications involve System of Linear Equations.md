@@ -266,7 +266,7 @@ date of note: 2024-09-27
 
 - [[Inverse Covariance Estimation]]
 - [[Graph LASSO and Structured Learning in Gaussian Graphical Model]]
-- [[Gauss-Seidel Iteration for Sparse Linear Equations]]
+- [[Gauss-Seidel Iteration to solve Sparse Linear Equations]]
 
 
 ### MAP Inference in Graphical Model

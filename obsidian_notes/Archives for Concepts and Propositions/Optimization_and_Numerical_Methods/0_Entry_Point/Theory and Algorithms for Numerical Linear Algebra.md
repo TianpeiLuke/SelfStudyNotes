@@ -133,17 +133,25 @@ date of note: 2024-05-12
 ### Large Sparse Eigenvalue Problems
 
 - [[Krylov Subspace]]
+- [[Principle of Biorthogonality]]
+- [[Biorthogonalization Methods]]
 - [[Lanczos Iteration to Solve Eigenvalue Problem]]
 - [[Jacobi-Davidson Algorithm to Sparse Eigenvalue Problem]]
-
+- [[Arnoldi Iterations to Sparse Eigenvalue Problems]]
 
 ### Solving Large Sparse Linear System of Equations
 
 - [[Sparse Linear System and Graph]]
+
+#### Iterative Methods
+
+- [[Classical Iterations to approximate Sparse Linear System Solution]]
 - [[Jacobi Iteration to solve the Sparse Linear Equations]]
-- [[Gauss-Seidel Iteration for Sparse Linear Equations]]
+- [[Gauss-Seidel Iteration to solve Sparse Linear Equations]]
 - [[Successive Over-Relaxation for Sparse Linear System]]
 - [[Gauss-Seidel Iteration for Sparse Symmetric Positive Definite System]]
+
+- [[Biorthogonalization Methods]]
 - [[Conjugate Gradient Algorithm Linear]]
 
 

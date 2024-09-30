@@ -186,6 +186,7 @@ date of note: 2024-07-13
 - [[Eigenspace and Spectrum for Linear Map]]
 - [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
 - [[Spectral Theorem of Normal Map and Eigen decomposition]]
+- [[Principle of Biorthogonality]]
 
 #### Singular Value Decomposition
 

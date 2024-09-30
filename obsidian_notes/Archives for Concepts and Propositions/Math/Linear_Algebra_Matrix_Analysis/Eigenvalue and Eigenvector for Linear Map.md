@@ -38,7 +38,12 @@ date of note: 2024-05-27
 >\boldsymbol{A\,v} = \lambda\, \boldsymbol{v}
 >$$
 >
->In this case, the vector $\boldsymbol{v}$ is called an **eigenvector** or **characteristic vector** of $\boldsymbol{A}$ *associated with* $\lambda.$
+>In this case, the vector $\boldsymbol{v}$ is called an **(right) eigenvector** or **characteristic vector** of $\boldsymbol{A}$ *associated with* $\lambda.$
+
+>[!important] Definition
+>A nonzero vector $w\in \mathbb{C}^{n}$ is a **left eigenvector** of $A\in M_{n}$ associated with an **eigenvalue** $\lambda\in \mathbb{C}$ of $A$ if $$w^{*}A = \lambda\,w^{*}.$$
+>
+ 
 
 
 ## Explanation
@@ -75,6 +80,10 @@ date of note: 2024-05-27
 - [[Algebraic and Geometric Multiplicity of Linear Map]]
 
 
+## Principle of Biorthogonality
+
+- [[Principle of Biorthogonality]]
+- [[Biorthogonalization Methods]]
 
 
 -----------

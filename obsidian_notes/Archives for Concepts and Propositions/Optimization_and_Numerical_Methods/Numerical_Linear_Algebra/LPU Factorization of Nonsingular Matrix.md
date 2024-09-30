@@ -58,7 +58,7 @@ date of note: 2024-09-26
 
 
 - [[Triangular Equivalence of Matrices]]
-- [[LU Factorization of Nonsingular Matrix]]
+- [[LU Factorization of Matrix]]
 - [[PLU Factorization with Pivoting]]
 - [[Gaussian Elimination for Solving Linear System]]
 - [[Gaussian Elimination with Complete Pivoting]]
