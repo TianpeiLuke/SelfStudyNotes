@@ -54,7 +54,8 @@ date of note: 2024-09-25
 ## Hessenburg QR Iteration
 
 
-
+- [[Hessenberg Decomposition of Matrix]]
+- [[Hessenburg QR Iteration to solve Eigenvalue Problem]]
 
 
 
