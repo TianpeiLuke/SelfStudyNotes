@@ -179,6 +179,7 @@ date of note: 2024-07-13
 - [[Positive Semidefinite Transformation]]
 - [[Square Root of Positive Semidefinite Transformation and Absolute Value]]
 - [[Polar Decomposition of Transformation]]
+- [[Procrustes Problem as Approximation by Unitary Transformation]]
 
 #### Spectral Theorem
 
@@ -192,6 +193,8 @@ date of note: 2024-07-13
 
 - [[Singular Value Decomposition of Linear Map]]
 - [[Low Rank Approximation of Matrix and Eckhart-Young Theorem]]
+- [[Procrustes Problem as Approximation by Unitary Transformation]]
+- [[Procrustes Problem via Singular Value Decomposition]]
 - [[Singular Value Decomposition and Fundamental Subspaces]]
 - [[Singular Value Decomposition and Pseudoinverse]]
 - [[Least Square Estimation via Singular Value Decomposition]]

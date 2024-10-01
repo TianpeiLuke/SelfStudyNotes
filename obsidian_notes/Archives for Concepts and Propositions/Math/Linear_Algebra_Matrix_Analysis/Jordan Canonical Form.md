@@ -78,6 +78,10 @@ date of note: 2024-09-15
 >
 >-- [[Matrix Analysis by Horn]] pp 176
 
+- [[Homogeneous Linear Differential Equations]]
+- [[Linear ODE with Constant Coefficients]]
+- [[Exponential Map of Linear Operator]]
+
 
 ## Characteristic Polynomial and Multiplicity 
 

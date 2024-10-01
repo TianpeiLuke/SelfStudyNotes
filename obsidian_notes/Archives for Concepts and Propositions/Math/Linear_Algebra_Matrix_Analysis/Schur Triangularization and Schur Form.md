@@ -29,7 +29,7 @@ date of note: 2024-09-16
 - [[Unitary Similarity and Unitary Diagonalizable]]
 
 >[!important] Definition
->Let $A\in M_{n}$ have *eigenvalues* $\lambda_{1} \,{,}\ldots{,}\,\lambda_{n}$. 
+>Let $A\in M_{n}(\mathbb{C})$ have *eigenvalues* $\lambda_{1} \,{,}\ldots{,}\,\lambda_{n}$. 
 >
 >The **Schur form** or **Schur triangularization** of $A$ is represented as
 >$$
@@ -47,6 +47,7 @@ date of note: 2024-09-16
 \right] \in M_{n}
 >$$
 >is an **upper triangular matrix** and $U = [x\; u_{2} \,{\;}\ldots{\;}\,u_{n}]\in \mathcal{U}(n)$ is **unitary**.
+>- The columns $u_{i}$ are called the **Schur vectors.**
 
 - [[Triangular Matrix and Block Triangular Matrix]]
 - [[Eigenvalue and Eigenvector for Linear Map]]
@@ -100,24 +101,40 @@ date of note: 2024-09-16
 >[!important] Theorem
 >Let $A\in \mathbb{R}^{n\times n}$.
 >
->There exists a real **nonsingular** $S\in \mathbb{R}^{n\times n}$ such that $$S^{-1}\,A\,S$$ is a **real upper triangular matrix**  $$T = \left[ \begin{array}{cccc}A_{1} & \star  & \cdots & \star \\[5pt]  & A_{2} &  &  \\[5pt] &  & \ddots &  \vdots\\[5pt] &  &  & A_{n} \\[5pt] \end{array}\right] \in M_{n}$$ where each $A_{i}$ is either $1\times 1$ or $2 \times 2$.
+>There exists a real **nonsingular** $S\in \mathbb{R}^{n\times n}$ such that $$S^{-1}\,A\,S$$ is a **real quasi-upper-triangular matrix**  $$T = \left[ \begin{array}{cccc}A_{1} & \star  & \cdots & \star \\[5pt]  & A_{2} &  &  \\[5pt] &  & \ddots &  \vdots\\[5pt] &  &  & A_{n} \\[5pt] \end{array}\right] \in M_{n}$$ where each $A_{i}$ is either $1\times 1$ or $2 \times 2$.
 >- If $A_{i}\in \mathbb{R}$ then $A_{i} = \lambda_{i}$ is the **real eigenvalue** of $A$;
 >- If $A_{i}\in \mathbb{R}^{2\times 2}$, then it has a special form that displays the **a conjugate pair** of **non-real eigenvalues** of $A$: $$\left[ \begin{array}{cc}a & b \\-b & a\end{array} \right],\quad a,b\in \mathbb{R}, b>0 $$ when the *complex eigenvalues* are of form $\lambda_{i} = a \pm ib.$
 >- The **diagonal blocks** are completely determined by the **eigenvalues** of $A$; they may appear in any prescribed order.
 
-
+- [[Quasi-triangular Matrix and Quasi-diagonal Matrix]]
 - [[General Linear Group]]
 - [[Similarity Relation between Linear Maps and Matrices]]
 
 >[!important] Theorem
 >Let $A\in \mathbb{R}^{n\times n}$.
 >
->There exists a real **orthogonal** $Q\in O(n) \subset  \mathbb{R}^{n\times n}$ such that $$Q^{T}\,A\,Q$$ is a **real upper triangular matrix**  $$T = \left[ \begin{array}{cccc}A_{1} & \star  & \cdots & \star \\[5pt]  & A_{2} &  &  \\[5pt] &  & \ddots &  \vdots\\[5pt] &  &  & A_{n} \\[5pt] \end{array}\right] \in M_{n}$$ where each $A_{i}$ is either $1\times 1$ or $2 \times 2$.
+>There exists a real **orthogonal** $Q\in O(n) \subset  \mathbb{R}^{n\times n}$ such that $$Q^{T}\,A\,Q$$ is a **real quasi-upper-triangular matrix**  $$T = \left[ \begin{array}{cccc}A_{1} & \star  & \cdots & \star \\[5pt]  & A_{2} &  &  \\[5pt] &  & \ddots &  \vdots\\[5pt] &  &  & A_{n} \\[5pt] \end{array}\right] \in M_{n}$$ where each $A_{i}$ is either $1\times 1$ or $2 \times 2$.
 >- If $A_{i}\in \mathbb{R}$ then $A_{i} = \lambda_{i}$ is the **real eigenvalue** of $A$;
 >- If $A_{i}\in \mathbb{R}^{2\times 2}$, then it has **a conjugate pair** of **non-real eigenvalues** of $A$ (but **no special form**)
 >- The **ordering** of its *diagonal blocks* may be prescribed in the following sense:
 >	- If the *real eigenvalues* and *conjugate pairs* of *non-real eigenvalues* of $A$ are listed in a prescribed order, then the *real eigenvalues* and *conjugate pairs* of *non-real eigenvalues* of the respective diagonal blocks $A_{1} \,{,}\ldots{,}\,A_{m}$ of $Q^{T} A Q$ are in the *same order*.
 
+
+
+
+>[!important] Definition
+>Let $A\in \mathbb{R}^{n\times n}$ have *eigenvalues* $\lambda_{1} \,{,}\ldots{,}\,\lambda_{n}$. 
+>
+>The **real Schur form (RSF)** of $A$ is represented as
+>$$
+>A = Q\,T\,Q^{T}
+>$$ 
+>where 
+>$$
+>T = \left[ \begin{array}{cccc}A_{1} & \star  & \cdots & \star \\[5pt]  & A_{2} &  &  \\[5pt] &  & \ddots &  \vdots\\[5pt] &  &  & A_{n} \\[5pt] \end{array}\right] \in \mathbb{R}^{n\times n}
+>$$
+>is an **quasi-upper-triangular matrix** with each $A_{i}$ being either $1\times 1$ or $2 \times 2$, and $Q\in \mathcal{O}(n)$ is **orthogonal**.
+>- The columns $u_{i}$ are called the **real Schur vectors.**
 
 
 ## Explanation
@@ -131,9 +148,14 @@ date of note: 2024-09-16
 - [[Classical Iterations to approximate Sparse Linear System Solution]]
 
 >[!info]
->Compared with the **spectral theorem** or **eigen-decomposition**, **Schur decomposition** do not requires $A$ to be *self-adjoint* (*Hermitian* or *Symmetric*). 
+>Compared with the **spectral theorem** or **eigen-decomposition**, **Schur decomposition** do not requires $A$ to be *normal* or *self-adjoint* (*Hermitian* or *Symmetric*). 
 >
 >Thus the *canonical form* is *not a diagonal matrix* $$D = \text{diag}(\lambda_{1}\,{,}\ldots{,}\,\lambda_{n})$$ with eigenvalues $\lambda_{i}$ but an **upper triangular matrix** $$T = D + N$$ with eigenvalue diagonal entries
+
+>[!important] 
+>Every matrix $A\in M_{n}$ is **unitarily similar** to an **upper triangular matrix** $$A \sim T=D+N$$
+>
+>Among them, $A$ is **unitarily similar** to a **diagonal matrix** $$A \sim D$$ *if and only if* $A$ is **normal matrix**. $$A^{*}A = AA^{*}.$$
 
 
 ## Commuting Family

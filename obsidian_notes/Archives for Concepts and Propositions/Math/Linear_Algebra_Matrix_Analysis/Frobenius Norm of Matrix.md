@@ -41,6 +41,15 @@ date of note: 2024-09-13
 >- and $r = \text{rank(A)}$.
 
 - [[Singular Value Decomposition of Linear Map]]
+
+
+>[!info]
+>The **Frobenius norm** is also called
+>- **$\ell_{2}$-norm**
+>- **Schur norm**
+>- **Hilbert-Schmidt norm**
+>- **Schatten 2-norm**
+
 - [[Hilbert-Schmidt Operator]]
 
 ## Related Norms 

@@ -47,7 +47,7 @@ date of note: 2024-09-13
 >[!important] Definition
 >Let $A \in \mathbb{R}^{m\times n}$. 
 >
->Then the **matrix $p$-norm** for $p \ge 1$ is defined as 
+>Then the **matrix $p$-norm** or **$\ell_{p}$-norm** for $p \ge 1$ is defined as 
 >$$
 >\lVert A \rVert_{p} := \max_{\lVert x \rVert_{p} \neq 0 } \frac{\lVert A x \rVert_{p} }{\lVert x \rVert_{p} } := \max_{\lVert x \rVert_{p} = 1 } \lVert Ax \rVert_{p} 
 >$$
@@ -136,7 +136,7 @@ date of note: 2024-09-13
 - [[Convex Function]]
 
 
-- [[Matrix Analysis by Horn]]
+- [[Matrix Analysis by Horn]] pp 340 - 369
 - [[Finite Dimensional Vector Spaces by Halmos]]
 - [[Matrix Analysis for Scientists and Engineers by Laub]] pp 59 - 61
 - [[Matrix Computations by Golub]] pp 71 - 73

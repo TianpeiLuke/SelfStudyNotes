@@ -25,6 +25,7 @@ date of note: 2024-08-21
 >The **Rayleigh quotient** associated with $A$ is defined as
 >$$R(A, x) := \frac{\left\langle  x\,,\, Ax   \right\rangle}{\left\langle  x\,,\,x    \right\rangle}, \quad \forall\,  0 \neq x\in \mathbb{C}^{n}$$
 
+- [[Hermitian or Symmetric Matrix]]
 - [[Sesquilinear Form]]
 
 
@@ -70,6 +71,7 @@ date of note: 2024-08-21
 
 - Wikipedia [Rayleigh_quotient](https://en.wikipedia.org/wiki/Rayleigh_quotient)
 - [[Matrix Analysis by Horn]] pp 44
+- [[Matrix Analysis for Scientists and Engineers by Laub]] pp 100
 - [[Matrix Computations by Golub]]
 - [[Numerical Linear Algebra by Trefethen]] pp 203 - 204
 - [[Convex Optimization by Boyd]]

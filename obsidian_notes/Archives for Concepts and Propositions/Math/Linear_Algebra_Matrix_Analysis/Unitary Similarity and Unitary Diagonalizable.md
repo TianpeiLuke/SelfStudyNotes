@@ -57,6 +57,8 @@ date of note: 2024-09-16
 >-  **Normal matrice** $$AA^{*} = A^{*}A$$
 >
 >are *unitary diagonalizable.*
+>
+>Conversely, any matrix that is *unitary diagonalizable* must be **normal**.
 
 - [[Hermitian or Symmetric Matrix]]
 - [[Normal Transformation]]
