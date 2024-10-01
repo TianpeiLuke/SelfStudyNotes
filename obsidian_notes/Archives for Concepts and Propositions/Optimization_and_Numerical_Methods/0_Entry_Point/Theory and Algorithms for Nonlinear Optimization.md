@@ -99,13 +99,13 @@ date of note: 2024-05-12
 - [[Rayleigh Quotient for Eigenvalue Problem]]
 - [[Convex Optimization for Eigenvalue Problem]]
 
-- [[QR Iteration for Eigenvalue of Symmetric Matrix]]
+- [[QR Iteration to solve Eigenvalue Problem of General Matrix]]
 - [[Tridiagonal Decomposition of Symmetric Matrix]]
 
 - [[Biorthogonalization Methods]]
-- [[Lanczos Iteration to Solve Eigenvalue Problem]]
+- [[Lanczos Iteration to solve Eigenvalue Problem]]
 - [[Jacobi-Davidson Algorithm to Sparse Eigenvalue Problem]]
-- [[Arnoldi Iterations to Sparse Eigenvalue Problems]]
+- [[Arnoldi Iterations to solve Eigenvalue Problems]]
 
 
 ### Derivative-Free Optimization

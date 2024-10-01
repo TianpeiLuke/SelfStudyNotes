@@ -78,7 +78,7 @@ date of note: 2024-08-08
 
 
 - [[Matrix]]
-- [[Gaussian Elimination for Solving Linear System]]
+- [[Gaussian Elimination to solve Linear System]]
 
 
 - [[Numerical Linear Algebra by Trefethen]] pp

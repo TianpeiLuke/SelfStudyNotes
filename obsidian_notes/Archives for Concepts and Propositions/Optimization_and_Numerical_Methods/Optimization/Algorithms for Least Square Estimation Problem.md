@@ -63,7 +63,7 @@ date of note: 2024-06-08
 - [[LDU Factorization of Symmetric Matrix]]
 - [[LU Factorization of Matrix]]
 - [[Gaussian Elimination with Partial Pivoting]]
-- [[Gaussian Elimination for Solving Linear System]]
+- [[Gaussian Elimination to solve Linear System]]
 
 ### QR Factorization
 
@@ -102,7 +102,7 @@ date of note: 2024-06-08
 
 ### Iterative Methods 
 
-- [[Classical Iterations to approximate Sparse Linear System Solution]]
+- [[Classical Iterations to approximate Solution of Sparse Linear System]]
 - [[Conjugate Gradient Algorithm Linear]]
 - [[Conjugate Gradient Normal Equation Residual]]
 

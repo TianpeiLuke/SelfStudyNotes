@@ -33,7 +33,7 @@ date of note: 2024-09-24
 
 - [[Matrix]]
 - [[Positive Linear Functional]]
-- [[Power Iteration and PageRank for Eigenvalue of Symmetric Matrices]]
+- [[Power Iteration to solve Eigenvalue Problem of General Matrix]]
 
 - [[Optimal Transport in Discrete Setting]]
 - [[Network Flow Problem as Linear Optimization]]

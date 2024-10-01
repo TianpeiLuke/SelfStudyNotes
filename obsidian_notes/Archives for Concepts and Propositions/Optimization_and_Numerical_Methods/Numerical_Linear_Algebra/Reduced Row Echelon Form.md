@@ -29,7 +29,7 @@ date of note: 2024-09-24
 - [[Elementary Row and Column Operations]]
 - [[System of Linear Equations or Linear System]]
 - [[Existence and Uniqueness of Solution of Linear Equations]]
-- [[Gaussian Elimination for Solving Linear System]]
+- [[Gaussian Elimination to solve Linear System]]
 - [[LU Factorization of Matrix]]
 
 

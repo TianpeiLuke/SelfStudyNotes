@@ -18,9 +18,9 @@ date of note: 2024-09-21
 >[!important]
 >**Name**: Gaussian Elimination with Complete Pivoting
 
-![[Gaussian Elimination for Solving Linear System#^5aee93]]
+![[Gaussian Elimination to solve Linear System#^5aee93]]
 
-- [[Gaussian Elimination for Solving Linear System]]
+- [[Gaussian Elimination to solve Linear System]]
 
 ### Partial Pivoting
 

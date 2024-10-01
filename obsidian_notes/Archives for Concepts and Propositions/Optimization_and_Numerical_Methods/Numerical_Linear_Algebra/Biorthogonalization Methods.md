@@ -31,7 +31,7 @@ date of note: 2024-09-29
 - [[System of Linear Equations or Linear System]]
 
 - [[Conjugate Gradient Algorithm Linear]]
-- [[Lanczos Iteration to Solve Eigenvalue Problem]]
+- [[Lanczos Iteration to solve Eigenvalue Problem]]
 
 - [[Eigenvalue and Eigenvector for Linear Map]]
 - [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]

@@ -27,7 +27,7 @@ date of note: 2024-09-25
 ##  Recommended Notes and References
 
 
-- [[Power Iteration and PageRank for Eigenvalue of Symmetric Matrices]]
+- [[Power Iteration to solve Eigenvalue Problem of General Matrix]]
 - [[Householder Transformation and Householder Reflection]]
 
 - [[Linear Span over a Set of Vectors]]

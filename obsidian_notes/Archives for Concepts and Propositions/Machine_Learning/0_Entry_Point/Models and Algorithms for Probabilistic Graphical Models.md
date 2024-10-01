@@ -189,6 +189,7 @@ date of note: 2024-06-01
 
 - [[Structured Variational Approximation]]
 - [[Mean Field Approximation]]
+- [[Mean Field Approximation for Gaussian Markov Random Field]]
 
 ### Sampling-based Approximate Inference 
 
@@ -235,6 +236,9 @@ date of note: 2024-06-01
 - [[Gaussian Bayesian Network]]
 - [[Gaussian Graphical Model]]
 - [[Gaussian Belief Propagation]]
+- [[Mean Field Approximation for Gaussian Markov Random Field]]
+
+
 - [[Inverse Covariance Estimation]]
 - [[Partial Correlation]]
 - [[Graph LASSO and Structured Learning in Gaussian Graphical Model]]

@@ -46,16 +46,59 @@ date of note: 2024-09-29
 >
 >-- [[Numerical Linear Algebra by Trefethen]] pp 244
 
+### Number of Steps, Work per Step
 
-## Projection into Krylov Subspaces 
+>[!quote]
+>**Gaussian elimination**, **QR factorization**, and most other algorithms of dense linear algebra fit the following pattern: **there are $O(m)$ steps**, **each requiring $O(m^2)$ work**, for a total work estimate of $O(m^3)$. (Of course these figures, especially the second, may change on a parallel computer.) For iterative methods, the same figures still apply, but now they represent a typical worst-case behavior. When these methods succeed, they may do so by reducing one or both of these factors.
+>
+>-- [[Numerical Linear Algebra by Trefethen]] pp 246
+
+>[!quote]
+>We shall see that the number of steps required for **convergence** to a satisfactory precision typically depends on **spectral properties** of the matrix $A$, if the word "spectral" is interpreted broadly.
+>
+>-- [[Numerical Linear Algebra by Trefethen]] pp 246
+
+>[!quote]
+>The *ideal iterative method* in linear algebra reduces the number of steps from $m$ to $O(1)$ and the work per step from $O(m^2)$ to $O(m)$, reducing the total work from $O(m^3)$ to $O(m)$. Such extraordinary speedups do occur in practical problems, but a more **typical improvement** is perhaps from $O(m^3)$ to $O(m^2)$.
+
+### Exact vs. Approximate Solutions
+
+
+
+
+## Summary of Iterative Algorithms
 
 - [[Krylov Subspace]]
 
+|                                     | **Solution to Linear System** $Ax = b$                                        | **Eigenvalue Problem**  $Ax = \lambda x$ |
+| ----------------------------------- | ----------------------------------------------------------------------------- | ---------------------------------------- |
+| $A = A^{*}$ **self-adjoint**        | **Conjugate Gradient (CG)**                                                   | **Lanczos Iteration**                    |
+| $A \neq A^{*}$ **not self-adjoint** | **Power Iteration**<br>**Conjugate Gradient Normal Equation Residual (CGNR)** | **Arnoldi Iteration**                    |
 
-## Algorithms
+
+
+## Iterative Algorithms to Solve Linear Equations
 
 - [[Gauss-Seidel Iteration to solve Sparse Linear Equations]]
 - [[Jacobi Iteration to solve the Sparse Linear Equations]]
+
+### Symmetric
+
+- [[Conjugate Gradient Algorithm Linear]]
+
+
+### Non Symmetric
+
+- [[Power Iteration to solve Eigenvalue Problem of General Matrix]]
+- [[QR Iteration to solve Eigenvalue Problem of General Matrix]]
+- [[Conjugate Gradient Normal Equation Residual]]
+
+
+
+## Iterative Algorithms to Solve Eigenvalue Problem
+
+- [[Lanczos Iteration to solve Eigenvalue Problem]]
+- [[Arnoldi Iterations to solve Eigenvalue Problems]]
 
 
 

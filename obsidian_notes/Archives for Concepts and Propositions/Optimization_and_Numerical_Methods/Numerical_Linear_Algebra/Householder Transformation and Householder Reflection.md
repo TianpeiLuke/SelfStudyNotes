@@ -115,7 +115,7 @@ date of note: 2024-09-25
 >[!info]
 >Similar to the **Gaussian transformation** in Gaussian elimination $$M_{k} = I_{n} - \tau\,e_{k},$$ the **Householder transformation** $$H_{v} = I - 2\,v\,v^{+}$$ is a **rank-1 update** of $I$.
 
-- [[Gaussian Elimination for Solving Linear System]]
+- [[Gaussian Elimination to solve Linear System]]
 
 >[!info]
 >For nonzero $x\neq 0$, applying Householder reflection $$H_{v}x = x - 2 \frac{\left\langle v , x \right\rangle}{\left\langle v , v \right\rangle}\,v$$

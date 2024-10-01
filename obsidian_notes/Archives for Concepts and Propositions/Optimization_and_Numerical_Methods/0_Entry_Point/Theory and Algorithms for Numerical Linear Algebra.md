@@ -42,7 +42,7 @@ date of note: 2024-05-12
 
 #### LU Factorization and Gaussian Elimination
 
-- [[Gaussian Elimination for Solving Linear System]]
+- [[Gaussian Elimination to solve Linear System]]
 - [[LU Factorization of Matrix]]
 - [[PLU Factorization with Pivoting]]
 - [[Gaussian Elimination with Partial Pivoting]]
@@ -78,6 +78,7 @@ date of note: 2024-05-12
 - [[Band Gaussian Elimination and Band LU Factorization]]
 - [[Band Gaussian Elimination with Pivoting]]
 - [[Hessenberg LU Factorization of Matrix]]
+- [[Hessenberg Decomposition of Matrix]]
 - [[Band Cholesky Factorization of Hermitian Positive Semidefinite Matrices]]
 
 #### Tridiagonal System of Equations
@@ -113,7 +114,7 @@ date of note: 2024-05-12
 - [[Least Square Estimation via Singular Value Decomposition]]
 
 
-### Symmetric Eigenvalue Problem
+###  Eigenvalue Problem
 
 - [[Eigenspace and Spectrum for Linear Map]]
 - [[Eigenvalue and Eigenvector for Linear Map]]
@@ -124,36 +125,50 @@ date of note: 2024-05-12
 - [[Rayleigh Quotient for Eigenvalue Problem]]
 - [[Courant-Fischer Minimax Theorem]]
 
-- [[Power Iteration and PageRank for Eigenvalue of Symmetric Matrices]]
-- [[QR Iteration for Eigenvalue of Symmetric Matrix]]
-- [[Tridiagonal Decomposition of Symmetric Matrix]]
+
+### Iterative Algorithms to solve Large Eigenvalue Problems
 
 
-
-### Large Sparse Eigenvalue Problems
-
-- [[Krylov Subspace]]
 - [[Principle of Biorthogonality]]
 - [[Biorthogonalization Methods]]
-- [[Lanczos Iteration to Solve Eigenvalue Problem]]
-- [[Jacobi-Davidson Algorithm to Sparse Eigenvalue Problem]]
-- [[Arnoldi Iterations to Sparse Eigenvalue Problems]]
 
-### Solving Large Sparse Linear System of Equations
+#### General Case, Small Scale
+
+- [[Power Iteration to solve Eigenvalue Problem of General Matrix]]
+- [[QR Iteration to solve Eigenvalue Problem of General Matrix]]
+- [[Hessenberg Decomposition of Matrix]]
+- [[Hessenburg QR Iteration to solve Eigenvalue Problem]]
+
+#### Symmetric Case, Large Scale
+
+- [[Krylov Subspace]]
+- [[Tridiagonal Decomposition of Symmetric Matrix]]
+- [[Lanczos Iteration to solve Eigenvalue Problem]]
+
+#### General Case, Large Scale
+
+- [[Arnoldi Iterations to solve Eigenvalue Problems]]
+- [[Jacobi-Davidson Algorithm to Sparse Eigenvalue Problem]]
+
+
+
+### Iterative Algorithms to solve Large Sparse Linear System
 
 - [[Sparse Linear System and Graph]]
 
-#### Iterative Methods
+#### General Case
 
-- [[Classical Iterations to approximate Sparse Linear System Solution]]
+- [[Classical Iterations to approximate Solution of Sparse Linear System]]
 - [[Jacobi Iteration to solve the Sparse Linear Equations]]
 - [[Gauss-Seidel Iteration to solve Sparse Linear Equations]]
 - [[Successive Over-Relaxation for Sparse Linear System]]
-- [[Gauss-Seidel Iteration for Sparse Symmetric Positive Definite System]]
+
+
+#### Symmetric Case
 
 - [[Biorthogonalization Methods]]
 - [[Conjugate Gradient Algorithm Linear]]
-
+- [[Gauss-Seidel Iteration for Sparse Symmetric Positive Definite System]]
 
 
 

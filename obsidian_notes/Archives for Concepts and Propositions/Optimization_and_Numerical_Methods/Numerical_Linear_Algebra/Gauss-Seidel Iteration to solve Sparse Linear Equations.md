@@ -34,7 +34,7 @@ date of note: 2024-09-21
 >$$
 >Suppose $x^{(k-1)}$ is an *approximation* to $x = A^{-1}b$. 
 >
->The **Gauss-Seidel iteration** generates a *new approximation* $x^{(k)}$ by computing 
+>The **Gauss-Seidel iteration** generates a *new approximation* $x^{(k)}$ by computing a **forward pass**
 >$$
 >\begin{align*}
 > x_{i}^{(k)}  &= \dfrac{b_{i} - \sum_{j=1}^{i-1}a_{i,j}\,x_{j}^{(k)} -  \sum_{j=i+1}^{n}a_{i,j}\,x_{j}^{(k-1)}}{a_{i,i}}, \quad i=1\,{,}\ldots{,}\,n
@@ -62,6 +62,16 @@ date of note: 2024-09-21
 
 ## Explanation
 
+>[!info]
+>$$
+>\begin{align*}
+> x_{i}^{(k)}  &= \dfrac{1}{a_{i,i}}\left(b_{i} - \sum_{j=1}^{i-1}a_{i,j}\,x_{j}^{(k)} -  \sum_{j=i+1}^{n}a_{i,j}\,x_{j}^{(k-1)}\right), \quad i=1\,{,}\ldots{,}\,n
+>\end{align*}
+>$$
+>can be interpreted as a **message-passing algorithm** where $x_{1}\,{\succ}\ldots{\succ}\,x_{n}$ defines a **topological ordering**
+>- At iteration $k$, all variables $j \le i$ are replaced by *updated value* $x_{j}^{(k)}$, which is the **forward pass**.
+
+- [[Mean Field Approximation for Gaussian Markov Random Field]]
 
 
 
@@ -69,7 +79,7 @@ date of note: 2024-09-21
 -----------
 ##  Recommended Notes and References
 
-- [[Classical Iterations to approximate Sparse Linear System Solution]]
+- [[Classical Iterations to approximate Solution of Sparse Linear System]]
 - [[Jacobi Iteration to solve the Sparse Linear Equations]]
 
 - [[System of Linear Equations or Linear System]]
