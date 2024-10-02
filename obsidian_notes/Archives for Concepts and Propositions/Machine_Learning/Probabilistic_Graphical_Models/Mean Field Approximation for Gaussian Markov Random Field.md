@@ -30,8 +30,8 @@ date of note: 2024-05-12
 ## Solving Normal Equation
 
 
-- [[Gauss-Seidel Iteration to solve Sparse Linear Equations]]
-- [[Jacobi Iteration to solve the Sparse Linear Equations]]
+- [[Gauss-Seidel Iteration for Sparse Linear System]]
+- [[Jacobi Iteration for Sparse Linear System]]
 - [[Least Square Estimation]]
 - [[Least Square Estimation Solution and Geometric Interpretation]]
 
@@ -52,8 +52,8 @@ date of note: 2024-05-12
 - [[Gaussian Belief Propagation]]
 
 
-- [[Gauss-Seidel Iteration to solve Sparse Linear Equations]]
-- [[Jacobi Iteration to solve the Sparse Linear Equations]]
+- [[Gauss-Seidel Iteration for Sparse Linear System]]
+- [[Jacobi Iteration for Sparse Linear System]]
 - [[Least Square Estimation]]
 - [[Least Square Estimation Solution and Geometric Interpretation]]
 

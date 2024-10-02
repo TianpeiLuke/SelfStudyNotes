@@ -24,6 +24,8 @@ date of note: 2024-05-26
 >x \in M \implies Ax \in M
 >$$
 
+^b37c58
+
 
 ## Explanation
 
@@ -63,7 +65,7 @@ date of note: 2024-05-26
 >$$
 
 - [[Matrix]]
-
+- [[Triangular Matrix and Block Triangular Matrix]]
 
 
 

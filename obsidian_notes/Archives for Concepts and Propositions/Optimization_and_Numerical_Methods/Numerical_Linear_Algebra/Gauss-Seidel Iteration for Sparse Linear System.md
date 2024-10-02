@@ -20,7 +20,7 @@ date of note: 2024-09-21
 >[!important]
 >**Name**: Gauss-Seidel Iteration for Sparse Linear Equations
 
-![[Jacobi Iteration to solve the Sparse Linear Equations#^2e75bb]]
+![[Jacobi Iteration for Sparse Linear System#^2e75bb]]
 
 >[!important] Definition
 >Consider the *linear system* $Ax = b$ where $A = [a_{i,j}] \in M_{m,n}(\mathbb{C})$,  $b = [b_{i}]\in \mathbb{C}^{m}$. That is,
@@ -41,7 +41,7 @@ date of note: 2024-09-21
 >\end{align*}
 >$$
 
-- [[Jacobi Iteration to solve the Sparse Linear Equations]]
+- [[Jacobi Iteration for Sparse Linear System]]
 
 >[!important] Definition
 >Consider the *linear system* $$Ax = b$$ where $A = [a_{i,j}] \in M_{m,n}(\mathbb{C})$,  $b = [b_{i}]\in \mathbb{C}^{m}$. 
@@ -80,7 +80,7 @@ date of note: 2024-09-21
 ##  Recommended Notes and References
 
 - [[Classical Iterations to approximate Solution of Sparse Linear System]]
-- [[Jacobi Iteration to solve the Sparse Linear Equations]]
+- [[Jacobi Iteration for Sparse Linear System]]
 
 - [[System of Linear Equations or Linear System]]
 - [[Existence and Uniqueness of Solution of Linear Equations]]

@@ -33,7 +33,7 @@ date of note: 2024-09-24
 
 - [[Matrix]]
 - [[Positive Linear Functional]]
-- [[Power Iteration and Inverse Iteration to solve Eigenvalue Problem]]
+- [[Power Iteration and Inverse Iteration for General Eigenvalue Problem]]
 
 - [[Optimal Transport in Discrete Setting]]
 - [[Network Flow Problem as Linear Optimization]]

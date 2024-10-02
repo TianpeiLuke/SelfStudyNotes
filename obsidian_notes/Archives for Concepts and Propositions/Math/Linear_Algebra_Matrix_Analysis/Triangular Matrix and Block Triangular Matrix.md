@@ -93,7 +93,12 @@ date of note: 2024-09-24
 
 - [[Diagonal Matrix and Block Diagonal Matrix]]
 
+>[!info]
+>The *block triangular matrix* is the representation of linear map that is **invariant within a subspace** $S$.
 
+![[Invariance under Linear Transformation#^b37c58]]
+
+- [[Invariance under Linear Transformation]]
 
 ## Properties
 
@@ -132,6 +137,7 @@ date of note: 2024-09-24
 -----------
 ##  Recommended Notes and References
 
+- [[Invariance under Linear Transformation]]
 - [[Tridiagonal Bidiagonal and Block Tridiagonal Matrix]]
 - [[Diagonal Matrix and Block Diagonal Matrix]]
 

@@ -37,7 +37,7 @@ date of note: 2024-09-29
 - [[System of Linear Equations or Linear System]]
 
 - [[Conjugate Gradient Algorithm Linear]]
-- [[Lanczos Iteration to solve Eigenvalue Problem]]
+- [[Lanczos Iteration for Large Eigenvalue Problem]]
 
 
 - [[Matrix Analysis by Horn]]

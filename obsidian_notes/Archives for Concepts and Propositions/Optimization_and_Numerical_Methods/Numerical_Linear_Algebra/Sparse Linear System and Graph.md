@@ -24,8 +24,8 @@ date of note: 2024-09-21
 ##  Recommended Notes and References
 
 
-- [[Gauss-Seidel Iteration to solve Sparse Linear Equations]]
-- [[Jacobi Iteration to solve the Sparse Linear Equations]]
+- [[Gauss-Seidel Iteration for Sparse Linear System]]
+- [[Jacobi Iteration for Sparse Linear System]]
 
 - [[System of Linear Equations or Linear System]]
 - [[Existence and Uniqueness of Solution of Linear Equations]]

@@ -44,7 +44,7 @@ date of note: 2024-09-25
 >
 >-- [[Matrix Computations by Golub]] pp 367
 
-- [[Power Iteration and Inverse Iteration to solve Eigenvalue Problem]]
+- [[Power Iteration and Inverse Iteration for General Eigenvalue Problem]]
 
 >[!info]
 >Note that $$T_{k} = R_{k}U_{k} = U_{k}^{*}U_{k}R_{k}U_{k} = U_{k}^{*}(U_{k}R_{k})U_{k} = U_{k}^{*}\,T_{k-1}\,U_{k}$$ so $T_{k}  \stackrel{U}{\sim} T_{k-1}$.
@@ -55,10 +55,15 @@ date of note: 2024-09-25
 
 ## Hessenburg QR Iteration
 
-
 - [[Hessenberg Reduction via Householder Transformation]]
-- [[Hessenburg QR Iteration to solve Eigenvalue Problem]]
+- [[Hessenburg QR Iteration for Unsymmetric Eigenvalue Problem]]
 
+## Symmetric QR Iteration
+
+>[!info]
+>For $A = A^{*}$, the QR iteration above will generate **block diagonal matrices** $D$. 
+>
+>In particular, we can find unitary matrix $Q$ such that $$Q^{T}A Q = T$$ where $T$ is **tridiagonal matrix.**
 
 
 
@@ -67,7 +72,7 @@ date of note: 2024-09-25
 
 
 - [[Hessenberg Reduction via Householder Transformation]]
-- [[Power Iteration and Inverse Iteration to solve Eigenvalue Problem]]
+- [[Power Iteration and Inverse Iteration for General Eigenvalue Problem]]
 - [[Schur Triangularization and Schur Form]]
 
 

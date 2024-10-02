@@ -79,8 +79,8 @@ date of note: 2024-09-29
 
 ## Iterative Algorithms to Solve Linear Equations
 
-- [[Gauss-Seidel Iteration to solve Sparse Linear Equations]]
-- [[Jacobi Iteration to solve the Sparse Linear Equations]]
+- [[Gauss-Seidel Iteration for Sparse Linear System]]
+- [[Jacobi Iteration for Sparse Linear System]]
 
 ### Symmetric
 
@@ -89,16 +89,16 @@ date of note: 2024-09-29
 
 ### Non Symmetric
 
-- [[Power Iteration and Inverse Iteration to solve Eigenvalue Problem]]
-- [[QR Iteration to solve Eigenvalue Problem of General Matrix]]
+- [[Power Iteration and Inverse Iteration for General Eigenvalue Problem]]
+- [[QR Iteration for General Eigenvalue Problem]]
 - [[Conjugate Gradient Normal Equation Residual]]
 
 
 
 ## Iterative Algorithms to Solve Eigenvalue Problem
 
-- [[Lanczos Iteration to solve Eigenvalue Problem]]
-- [[Arnoldi Iterations to solve Eigenvalue Problems]]
+- [[Lanczos Iteration for Large Eigenvalue Problem]]
+- [[Arnoldi Iterations for Large Eigenvalue Problems]]
 
 
 

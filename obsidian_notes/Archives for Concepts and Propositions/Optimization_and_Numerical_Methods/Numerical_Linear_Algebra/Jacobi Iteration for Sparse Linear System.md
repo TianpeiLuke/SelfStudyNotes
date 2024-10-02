@@ -6,19 +6,14 @@ keywords:
   - jacobi_iteration_sparse_linear_system
 topics:
   - numerical_linear_algebra
-name: Jacobi Iteration to solve the  - numerical_methods/numerical_linear_algebra
-keywords:
-  - jacobi_iteration_sparse_linear_system
-topics:
-  - numerical_linear_algebra
-name: Jacobi Iteration to solve the Sparse Linear Equations
+name: Jacobi Iteration for Sparse Linear System
 date of note: 2024-09-21
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Jacobi Iteration to solve the Sparse Linear Equations
+>**Name**: Jacobi Iteration for Sparse Linear System
 
 ![[Classical Iterations to approximate Solution of Sparse Linear System#^39280e]]
 
@@ -82,7 +77,7 @@ date of note: 2024-09-21
 
 
 - [[Classical Iterations to approximate Solution of Sparse Linear System]]
-- [[Gauss-Seidel Iteration to solve Sparse Linear Equations]]
+- [[Gauss-Seidel Iteration for Sparse Linear System]]
 
 - [[System of Linear Equations or Linear System]]
 - [[Existence and Uniqueness of Solution of Linear Equations]]

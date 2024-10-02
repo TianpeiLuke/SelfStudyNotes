@@ -29,6 +29,7 @@ date of note: 2024-08-08
 - [[Existence and Uniqueness of Solution of Linear Equations]]
 
 
+- [[Tridiagonal Bidiagonal and Block Tridiagonal Matrix]]
 - [[Matrix]]
 - [[Gaussian Elimination to solve Linear System]]
 

@@ -19,6 +19,8 @@ date of note: 2024-09-25
 >[!important]
 >**Name**: Power Iteration to solve Eigenvalue Problem of General Matrix
 
+### Identifying the Eigenvalue
+
 >[!important] Definition
 >Consider the *eigenvalue problem* $$Ax = \lambda x$$ where $A\in \mathbb{C}^{n\times n}$ and $\lambda_{1} \,{,}\ldots{,}\,\lambda_{n}$ are eigenvalues of $A$ with $$|\lambda_{1}| > |\lambda_{2}| \,{\ge}\ldots{\ge}\,|\lambda_{n}|.$$
 >- Suppose that $A$ is *diagonalizable* i.e. there exists non-singular matrix $X= [x_{1}\,{,}\ldots{,}\,x_{n}]$, such that $$A = X\text{diag}(\lambda_{1}\,{,}\ldots{,}\,\lambda_{n})X^{-1}.$$
@@ -37,25 +39,7 @@ date of note: 2024-09-25
 - [[Similarity Relation between Linear Maps and Matrices]]
 - [[Eigenvalue and Eigenvector for Linear Map]]
 
-
-
-
-## Explanation
-
->[!info]
->The **key observation** is that the **Rayleigh quotient** is bounded between *largest eigenvalue* $\lambda_{1}$ and *smallest eigenvalue* $\lambda_{n}$, $$\lambda_{n} \le \left\langle  q\,,\,A\,q    \right\rangle \le \lambda_{1}$$
-
-- [[Rayleigh Quotient for Eigenvalue Problem]]
-- [[Variational Characterization of Eigenvalues of Hermitian Matrix]]
-
-
-## QR Iteration
-
-- [[QR Iteration to solve Eigenvalue Problem of General Matrix]]
-- [[Hessenburg QR Iteration to solve Eigenvalue Problem]]
-
-
-## Identifying the Eigenspace associated with the Eigenvalue
+### Identifying the Eigenspace associated with the Eigenvalue
 
 >[!important] Definition
 >Consider the *eigenvalue problem* $$Ax = \lambda x$$ where $A\in \mathbb{C}^{n\times n}$ and $\lambda_{1} \,{,}\ldots{,}\,\lambda_{n}$ are eigenvalues of $A$.
@@ -75,6 +59,30 @@ date of note: 2024-09-25
 
 >[!info]
 >The inverse iteration is the the power iteration for $(A - \mu I)^{-1}$.
+
+![[rayleigh_quotient_power_inverse.png]]
+
+
+## Explanation
+
+>[!info]
+>The **key observation** is that the **Rayleigh quotient** is bounded between *largest eigenvalue* $\lambda_{1}$ and *smallest eigenvalue* $\lambda_{n}$, $$\lambda_{n} \le \left\langle  q\,,\,A\,q    \right\rangle \le \lambda_{1}$$
+
+- [[Rayleigh Quotient for Eigenvalue Problem]]
+- [[Variational Characterization of Eigenvalues of Hermitian Matrix]]
+
+### Symmetric Power Iteration and Inverse Iteration
+
+>[!info]
+>This method can be applied to Hermitian cases, $$A = A^{*},$$ and the Schur form is a **block diagonal matrix** $$T= D = \text{diag}(\lambda_{1} \,{,}\ldots{,}\,\lambda_{n})$$
+
+## QR Iteration
+
+- [[QR Iteration for General Eigenvalue Problem]]
+- [[Hessenburg QR Iteration for Unsymmetric Eigenvalue Problem]]
+
+
+
 
 
 -----------

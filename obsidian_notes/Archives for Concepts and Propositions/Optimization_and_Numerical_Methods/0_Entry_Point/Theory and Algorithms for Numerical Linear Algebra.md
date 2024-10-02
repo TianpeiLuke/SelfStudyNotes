@@ -84,6 +84,8 @@ date of note: 2024-05-12
 #### Tridiagonal System of Equations
 
 - [[Tridiagonal System of Equations]]
+- [[Tridiagonal Decomposition of Symmetric Matrix]]
+- [[Tridiagonal Eigenvalue Problem]]
 
 #### Toeplitz and Circulant System
 
@@ -126,37 +128,61 @@ date of note: 2024-05-12
 - [[Courant-Fischer Minimax Theorem]]
 
 
-### Iterative Algorithms to solve Large Eigenvalue Problems
+### Iterative Algorithms to solve Eigenvalue Problems
 
+![[rayleigh_quotient_power_inverse.png]]
 
+- [[Rayleigh Quotient for Eigenvalue Problem]]
 - [[Principle of Biorthogonality]]
 - [[Biorthogonalization Methods]]
 
 #### General Case, Small Scale
 
-- [[Power Iteration and Inverse Iteration to solve Eigenvalue Problem]]
-- [[QR Iteration to solve Eigenvalue Problem of General Matrix]]
+>[!info]
+>For general $A\in \mathbb{C}^{n\times n}$, $$A \stackrel{U}{\sim} T = D+ N$$ 
+
+- [[Schur Triangularization and Schur Form]]
+- [[Jordan Canonical Form]]
+- [[Power Iteration and Inverse Iteration for General Eigenvalue Problem]]
+- [[QR Iteration for General Eigenvalue Problem]]
 - [[Hessenberg QR Factorization via Given Transformation]]
 - [[Householder Transformation and Householder Reflection]]
 - [[Hessenberg Reduction via Householder Transformation]]
-- [[Hessenburg QR Iteration to solve Eigenvalue Problem]]
-- [[Rayleigh Quotient Iteration to solve Eigenvalue Problem]]
+- [[Hessenburg QR Iteration for Unsymmetric Eigenvalue Problem]]
 
+
+#### Symmetric Case, Small Scale
+
+>[!info]
+>For Hermitian $A = A^{*}\in \mathbb{C}^{n\times n}$, $$A \stackrel{U}{\sim} D$$ or $$A \stackrel{U}{\sim} T$$ for *tridiagonal matrix*.
+
+- [[Unitary Similarity and Unitary Diagonalizable]]
+- [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
+- [[Rayleigh Quotient for Eigenvalue Problem]]
+- [[Variational Characterization of Eigenvalues of Hermitian Matrix]] 
+
+- [[Rayleigh Quotient Iteration for Symmetric Eigenvalue Problem]]
+- [[Tridiagonal Eigenvalue Problem]]
+- [[Tridiagonal Decomposition of Symmetric Matrix]]
+- [[Tridiagonal Reduction of Symmetric Matrix via Householder Transformation]]
+- [[Symmetric QR Iteration for Tridiagonal Decomposition]]
+
+- [[Symmetric Schur Decomposition of 2-by-2 Matrix]]
+- [[Jacobi Method for Symmetric Eigenvalue Problem]]
 
 #### Symmetric Case, Large Scale
 
-- [[Rayleigh Quotient for Eigenvalue Problem]]
-- [[Variational Characterization of Eigenvalues of Hermitian Matrix]]
+>[!info]
+>For large scalar problem, we only the compute **top/bottom $k$ eigenvalues and eigenvectors.**
+
 - [[Krylov Subspace]]
 - [[Convex Optimization for Eigenvalue Problem]]
-- [[Tridiagonal Decomposition of Symmetric Matrix]]
-- [[Lanczos Iteration to solve Eigenvalue Problem]]
-
+- [[Lanczos Iteration for Large Eigenvalue Problem]]
 
 
 #### General Case, Large Scale
 
-- [[Arnoldi Iterations to solve Eigenvalue Problems]]
+- [[Arnoldi Iterations for Large Eigenvalue Problems]]
 - [[Jacobi-Davidson Algorithm to Sparse Eigenvalue Problem]]
 
 
@@ -168,8 +194,8 @@ date of note: 2024-05-12
 #### General Case
 
 - [[Classical Iterations to approximate Solution of Sparse Linear System]]
-- [[Jacobi Iteration to solve the Sparse Linear Equations]]
-- [[Gauss-Seidel Iteration to solve Sparse Linear Equations]]
+- [[Jacobi Iteration for Sparse Linear System]]
+- [[Gauss-Seidel Iteration for Sparse Linear System]]
 - [[Successive Over-Relaxation for Sparse Linear System]]
 
 #### Symmetric Case

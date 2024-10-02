@@ -18,7 +18,7 @@ date of note: 2024-08-08
 >[!important]
 >**Name**: Hessenberg Reduction via Householder Transformation
 
-![[Hessenburg QR Iteration to solve Eigenvalue Problem#^71e8e1]]
+![[Hessenburg QR Iteration for Unsymmetric Eigenvalue Problem#^71e8e1]]
 
 ![[Householder Transformation and Householder Reflection#^082feb]]
 
@@ -36,7 +36,7 @@ date of note: 2024-08-08
 - [[Hessenberg Matrix]]
 - [[Householder Transformation and Householder Reflection]]
 - [[Householder QR Factorization]]
-- [[QR Iteration to solve Eigenvalue Problem of General Matrix]]
+- [[QR Iteration for General Eigenvalue Problem]]
 
 >[!important]
 >This algorithm takes $$\frac{10 n^3}{3}$$ flops,  with additional $$\frac{4n^3}{3}$$ flops to form $U_{0}.$
@@ -44,7 +44,7 @@ date of note: 2024-08-08
 
 ### Hessenberg QR Iteration
 
-- [[Hessenburg QR Iteration to solve Eigenvalue Problem]]
+- [[Hessenburg QR Iteration for Unsymmetric Eigenvalue Problem]]
 
 
 ## Explanation
@@ -64,8 +64,8 @@ date of note: 2024-08-08
 
 
 - [[Householder Transformation and Householder Reflection]]
-- [[Hessenburg QR Iteration to solve Eigenvalue Problem]]
-- [[QR Iteration to solve Eigenvalue Problem of General Matrix]]
+- [[Hessenburg QR Iteration for Unsymmetric Eigenvalue Problem]]
+- [[QR Iteration for General Eigenvalue Problem]]
 - [[Hessenberg QR Factorization via Given Transformation]]
 - [[Hessenberg Matrix]]
 - [[Matrix]]

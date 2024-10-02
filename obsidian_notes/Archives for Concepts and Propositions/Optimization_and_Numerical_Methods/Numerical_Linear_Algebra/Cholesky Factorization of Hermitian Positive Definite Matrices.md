@@ -65,31 +65,13 @@ date of note: 2024-09-21
 
 ^770789
 
->[!info]
->$$
->\begin{align*}
->A_{:,j} &= \sum_{k=1}^{n}G_{:,k}\,G^{T}_{k,j}\\[5pt]
->&\quad (G_{i,j} = 0, \forall j >i)\\[5pt]
->&= \sum_{k=1}^{j}G_{:,k}\,G^{T}_{k,j} \\
->&= \sum_{k=1}^{j}G_{:,k}\,G_{j,k}
->\end{align*}
-$$
-
->[!important]
->The **time complexity** of Cholesky factorization is $$\frac{n^3}{3}$$ 
->- This is about **half as many operations as** *Gaussian elimination* which needs $$\frac{2}{3}n^3.$$
->- This is the **same** number of operations as compared to the **$LDL^{T}$ factorization**.
-
-- [[LDU Factorization of Symmetric Matrix]]
-- [[Gaussian Elimination for Solving Linear System]]
 
 >[!important]
 >- This is about **half as many operations as** *Gaussian elimination* which needs $$\frac{2}{3}n^3.$$
 >- This is the **same** number of operations as compared to the **$LDL^{T}$ factorization**.
 
 - [[LDU Factorization of Symmetric Matrix]]
-- [[Gaussian Elimination for Solving Linear System]]
-
+- [[Gaussian Elimination to solve Linear System]]
 
 >[!important] Definition
 >The *Gaxpy implementation* of **Cholesky factorization** algorithm is described as below:
@@ -100,8 +82,18 @@ $$
 >	- **Reweight** *j-th column* of $A$ by $$A_{\{j:n\}, j} = \frac{A_{\{j:n\}, j}}{\sqrt{A_{j,j}}} $$
 >- *Return* the **Cholesky factor** as a *lower triangular part* of $A$ $$G = [A_{\{1:n\},1} \,{,}\ldots{,}\,A_{\{j:n\},j} \,{,}\ldots{,}\,A_{n,n}]$$
 
-
 ## Explanation
+
+>[!info]
+>$$
+>\begin{align*}
+>A_{:,j} &= \sum_{k=1}^{n}G_{:,k}\,G^{T}_{k,j}\\[5pt]
+>&\quad (G_{i,j} = 0, \forall j >i)\\[5pt]
+>&= \sum_{k=1}^{j}G_{:,k}\,G^{T}_{k,j}\\[5pt]
+>&= \sum_{k=1}^{j}G_{:,k}\,G_{j,k}
+>\end{align*}
+>$$
+
 
 >[!info] Proof via Square Root and QR Factorization
 >Let $A^{1 / 2}$ be the **square root** of $A \succeq 0$, and the **QR factorization** $$A^{1 / 2} = Q\,R.$$ Then 
@@ -192,7 +184,7 @@ $$
 - [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
 
 - [[Square Root of Positive Semidefinite Operator and Absolute Value]]
-\
+
 
 - [[Matrix Computations by Golub]] pp 163 - 166
 - [[Numerical Linear Algebra by Trefethen]] pp 172 - 178

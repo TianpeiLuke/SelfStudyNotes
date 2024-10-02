@@ -295,7 +295,7 @@ date of note: 2024-09-27
 
 - [[Inverse Covariance Estimation]]
 - [[Graph LASSO and Structured Learning in Gaussian Graphical Model]]
-- [[Gauss-Seidel Iteration to solve Sparse Linear Equations]]
+- [[Gauss-Seidel Iteration for Sparse Linear System]]
 
 
 ### MAP Inference in Graphical Model
@@ -314,7 +314,7 @@ date of note: 2024-09-27
 - [[Markov Transition Kernel and Transition Function]]
 - [[Invariant Measure and Stationary Distribution]]
 - [[Kac Theorem on Markov Chain]]
-- [[Power Iteration and Inverse Iteration to solve Eigenvalue Problem]]
+- [[Power Iteration and Inverse Iteration for General Eigenvalue Problem]]
 
 
 ### Principle Component Analysis

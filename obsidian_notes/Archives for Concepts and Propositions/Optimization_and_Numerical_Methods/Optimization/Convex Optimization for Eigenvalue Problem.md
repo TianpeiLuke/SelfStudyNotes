@@ -40,8 +40,8 @@ date of note: 2024-08-21
 ## Iterative Algorithms
 
 
-- [[Lanczos Iteration to solve Eigenvalue Problem]]
-- [[Arnoldi Iterations to solve Eigenvalue Problems]]
+- [[Lanczos Iteration for Large Eigenvalue Problem]]
+- [[Arnoldi Iterations for Large Eigenvalue Problems]]
 
 
 

@@ -27,8 +27,9 @@ date of note: 2024-09-25
 ##  Recommended Notes and References
 
 
-- [[Tridiagonal Reduction of Symmetric Matrix via Householder Transformation]]
+- [[Tridiagonal Decomposition of Symmetric Matrix]]
 - [[Power Iteration and Inverse Iteration for General Eigenvalue Problem]]
+- [[Householder Transformation and Householder Reflection]]
 
 - [[Linear Span over a Set of Vectors]]
 - [[Orthogonal Complement of Hilbert Spaces]]

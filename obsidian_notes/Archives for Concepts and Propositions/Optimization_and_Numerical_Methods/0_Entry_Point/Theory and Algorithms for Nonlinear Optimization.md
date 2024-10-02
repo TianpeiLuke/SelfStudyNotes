@@ -105,16 +105,16 @@ date of note: 2024-05-12
 
 #### Iterative Algorithms to Solve Eigenvalue Problem
 
-- [[Power Iteration and Inverse Iteration to solve Eigenvalue Problem]]
-- [[QR Iteration to solve Eigenvalue Problem of General Matrix]]
-- [[Hessenburg QR Iteration to solve Eigenvalue Problem]]
-- [[Rayleigh Quotient Iteration to solve Eigenvalue Problem]]
+- [[Power Iteration and Inverse Iteration for General Eigenvalue Problem]]
+- [[QR Iteration for General Eigenvalue Problem]]
+- [[Hessenburg QR Iteration for Unsymmetric Eigenvalue Problem]]
+- [[Rayleigh Quotient Iteration for Symmetric Eigenvalue Problem]]
 
 #### Iterative Algorithms to Solve Large Sparse Eigenvalue Problem
 
 - [[Biorthogonalization Methods]]
-- [[Lanczos Iteration to solve Eigenvalue Problem]]
-- [[Arnoldi Iterations to solve Eigenvalue Problems]]
+- [[Lanczos Iteration for Large Eigenvalue Problem]]
+- [[Arnoldi Iterations for Large Eigenvalue Problems]]
 - [[Tridiagonal Decomposition of Symmetric Matrix]]
 - [[Jacobi-Davidson Algorithm to Sparse Eigenvalue Problem]]
 

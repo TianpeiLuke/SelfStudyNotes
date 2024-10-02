@@ -23,7 +23,7 @@ date of note: 2024-09-21
 -----------
 ##  Recommended Notes and References
 
-- [[Jacobi Iteration to solve the Sparse Linear Equations]]
+- [[Jacobi Iteration for Sparse Linear System]]
 
 - [[System of Linear Equations or Linear System]]
 - [[Existence and Uniqueness of Solution of Linear Equations]]
