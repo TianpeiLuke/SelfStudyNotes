@@ -100,12 +100,17 @@ date of note: 2024-05-12
 - [[Eigenspace and Spectrum for Linear Map]]
 - [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
 - [[Rayleigh Quotient for Eigenvalue Problem]]
+- [[Courant-Fischer Minimax Theorem]]
 - [[Convex Optimization for Eigenvalue Problem]]
 
+#### Iterative Algorithms to Solve Eigenvalue Problem
+
+- [[Power Iteration and Inverse Iteration to solve Eigenvalue Problem]]
 - [[QR Iteration to solve Eigenvalue Problem of General Matrix]]
 - [[Hessenburg QR Iteration to solve Eigenvalue Problem]]
 - [[Rayleigh Quotient Iteration to solve Eigenvalue Problem]]
 
+#### Iterative Algorithms to Solve Large Sparse Eigenvalue Problem
 
 - [[Biorthogonalization Methods]]
 - [[Lanczos Iteration to solve Eigenvalue Problem]]
