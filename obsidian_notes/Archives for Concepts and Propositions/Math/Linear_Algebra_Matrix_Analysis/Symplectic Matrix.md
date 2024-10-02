@@ -42,6 +42,7 @@ date of note: 2024-05-09
 >$$J = \left[ \begin{array}{cc}0 & I_{n} \\ -I_{n} &0\end{array} \right] $$ is the **permutation matrix**.
 
 - [[Permutation Matrix and Reversal Matrix]]
+- [[Skew-Hermitian and Skew-Symmetric Matrix]]
 
 ## Explanation
 

@@ -50,6 +50,7 @@ date of note: 2024-05-09
 ^6ddb7d
 
 - [[Permutation Matrix and Reversal Matrix]]
+- [[Skew-Hermitian and Skew-Symmetric Matrix]]
 
 ## Explanation
 

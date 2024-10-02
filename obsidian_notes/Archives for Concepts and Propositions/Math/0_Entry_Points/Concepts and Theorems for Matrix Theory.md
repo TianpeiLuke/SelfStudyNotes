@@ -59,6 +59,7 @@ date of note: 2024-07-13
 - [[Tridiagonal Bidiagonal and Block Tridiagonal Matrix]]
 - [[Hessenberg Matrix]]
 
+- [[Skew-Hermitian and Skew-Symmetric Matrix]]
 - [[Permutation Matrix and Reversal Matrix]]
 - [[Circulant Matrix and Circulant Permutation Operation]]
 - [[Toeplitz Matrix and Backward Forward Shift Operation]]
@@ -159,6 +160,7 @@ date of note: 2024-07-13
 - [[Adjoint of Linear Map]]
 - [[Self-Adjoint Linear Map]]
 - [[Hermitian or Symmetric Matrix]]
+- [[Skew-Hermitian and Skew-Symmetric Matrix]]
 
 #### Variational Formulation of Eigenvalue Problem
 

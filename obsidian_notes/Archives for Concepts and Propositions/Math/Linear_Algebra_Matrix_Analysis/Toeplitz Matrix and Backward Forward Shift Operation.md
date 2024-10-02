@@ -70,6 +70,7 @@ date of note: 2024-08-08
 ##  Recommended Notes and References
 
 
+- [[Skew-Hermitian and Skew-Symmetric Matrix]]
 - [[Circulant Matrix and Circulant Permutation Operation]]
 - [[Permutation Matrix and Reversal Matrix]]
 - [[Discrete Fourier Transform]]

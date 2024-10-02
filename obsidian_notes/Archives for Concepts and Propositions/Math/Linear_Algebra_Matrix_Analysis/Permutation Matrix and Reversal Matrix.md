@@ -71,6 +71,7 @@ date of note: 2024-08-08
 ##  Recommended Notes and References
 
 
+- [[Skew-Hermitian and Skew-Symmetric Matrix]]
 
 - [[Elementary Row and Column Operations]]
 - [[Circulant Matrix and Circulant Permutation Operation]]
