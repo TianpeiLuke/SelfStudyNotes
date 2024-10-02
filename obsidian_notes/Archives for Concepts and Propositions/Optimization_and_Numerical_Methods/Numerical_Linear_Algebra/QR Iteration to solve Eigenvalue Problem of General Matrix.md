@@ -54,7 +54,7 @@ date of note: 2024-09-25
 ## Hessenburg QR Iteration
 
 
-- [[Hessenberg Decomposition of Matrix]]
+- [[Hessenberg Reduction via Householder Transformation]]
 - [[Hessenburg QR Iteration to solve Eigenvalue Problem]]
 
 
@@ -64,7 +64,7 @@ date of note: 2024-09-25
 ##  Recommended Notes and References
 
 
-- [[Hessenberg Decomposition of Matrix]]
+- [[Hessenberg Reduction via Householder Transformation]]
 - [[Power Iteration to solve Eigenvalue Problem of General Matrix]]
 - [[Schur Triangularization and Schur Form]]
 

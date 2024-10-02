@@ -85,6 +85,8 @@ date of note: 2024-09-25
 
 ^082feb
 
+^082feb
+
 - [[Unitary and Orthogonal Transformation]]
 - [[Orthogonal Group]]
 - [[Matrix Computations by Golub]] pp 236

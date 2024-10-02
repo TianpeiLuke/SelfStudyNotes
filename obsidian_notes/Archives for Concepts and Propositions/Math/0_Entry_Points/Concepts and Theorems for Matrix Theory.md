@@ -222,6 +222,21 @@ date of note: 2024-07-13
 
 ### Matrix Calculus
 
+#### Basic Operations
+
+- [[Matrix Transformation]]
+- [[Vectorization Operation of Matrix]]
+
+#### Kronecker Product and Hadamard Product
+
+- [[Multilinear Function]]
+- [[Tensor Product]]
+- [[Abstract Tensor Product]]
+- [[Kronecker Product of Matrices]]
+- [[Hadamard Product of Matrices]]
+
+#### Matrix Differentials
+
 
 
 

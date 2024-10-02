@@ -39,6 +39,9 @@ date of note: 2024-05-14
 ## Explanation
 
 
+## Kronecker Product
+
+- [[Kronecker Product of Matrices]]
 
 
 
@@ -48,6 +51,7 @@ date of note: 2024-05-14
 - [[Multilinear Function]]
 - [[Arbitrary Cartestian Products]]
 
+- [[Kronecker Product of Matrices]]
 
 - [[Introduction to Smooth Manifolds by Lee]]
 - [[Finite Dimensional Vector Spaces by Halmos]]

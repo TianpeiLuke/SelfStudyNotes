@@ -80,8 +80,13 @@ date of note: 2024-05-11
 
 - [[Multilinear Function]]
 - [[Tensor Product]]
+- [[Abstract Tensor Product]]
 - [[Symmetric Tensor]]
 - [[Symmetric Product]]
+- [[Kronecker Product of Matrices]]
+
+### Determinant
+
 - [[Alternating Tensor]]
 - [[Determinant of Linear Transformation]]
 - [[Minor and Principal Minor]]
@@ -97,10 +102,10 @@ date of note: 2024-05-11
 ### Similarity Relationship and Canonical Forms
 
 - [[Similarity Relation between Linear Maps and Matrices]]
+- [[Normal Transformation]]
 - [[Diagonalizable Matrix]]
 - [[Unitary Similarity and Unitary Diagonalizable]]
 - [[Schur Triangularization and Schur Form]]
-
 
 
 ### Jordan Decomposition

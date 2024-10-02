@@ -35,7 +35,7 @@ date of note: 2024-09-25
 
 
 - [[Hessenberg QR Factorization via Given Transformation]]
-- [[Hessenberg Decomposition of Matrix]]
+- [[Hessenberg Reduction via Householder Transformation]]
 - [[Schur Triangularization and Schur Form]]
 
 ### Shifted QR Iteration
@@ -84,7 +84,7 @@ date of note: 2024-09-25
 
 
 
-- [[Hessenberg Decomposition of Matrix]]
+- [[Hessenberg Reduction via Householder Transformation]]
 - [[Hessenberg Matrix]]
 
 - [[Power Iteration to solve Eigenvalue Problem of General Matrix]]

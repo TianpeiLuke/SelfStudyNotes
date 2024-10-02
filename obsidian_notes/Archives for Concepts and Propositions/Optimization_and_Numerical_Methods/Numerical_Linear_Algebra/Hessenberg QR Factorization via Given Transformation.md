@@ -39,4 +39,4 @@ date of note: 2024-09-25
 - [[Elementary Row and Column Operations]]
 
 - [[Matrix Analysis by Horn]]
-- [[Matrix Computations by Golub]] pp 253
+- [[Matrix Computations by Golub]] pp 248 - 250, 377 - 378

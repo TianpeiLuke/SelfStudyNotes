@@ -78,7 +78,7 @@ date of note: 2024-05-12
 - [[Band Gaussian Elimination and Band LU Factorization]]
 - [[Band Gaussian Elimination with Pivoting]]
 - [[Hessenberg LU Factorization of Matrix]]
-- [[Hessenberg Decomposition of Matrix]]
+- [[Hessenberg Reduction via Householder Transformation]]
 - [[Band Cholesky Factorization of Hermitian Positive Semidefinite Matrices]]
 
 #### Tridiagonal System of Equations
@@ -136,7 +136,7 @@ date of note: 2024-05-12
 
 - [[Power Iteration to solve Eigenvalue Problem of General Matrix]]
 - [[QR Iteration to solve Eigenvalue Problem of General Matrix]]
-- [[Hessenberg Decomposition of Matrix]]
+- [[Hessenberg Reduction via Householder Transformation]]
 - [[Hessenburg QR Iteration to solve Eigenvalue Problem]]
 
 #### Symmetric Case, Large Scale

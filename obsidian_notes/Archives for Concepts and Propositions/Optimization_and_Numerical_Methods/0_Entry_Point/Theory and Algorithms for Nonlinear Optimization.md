@@ -89,6 +89,9 @@ date of note: 2024-05-12
 - [[Least Square Estimation via Singular Value Decomposition]]
 - [[Conjugate Gradient Normal Equation Residual]]
 
+- [[Least Square Estimation via Singular Value Decomposition]]
+- [[Conjugate Gradient Normal Equation Residual]]
+
 
 ### Eigenvalue Problem
 
@@ -106,6 +109,14 @@ date of note: 2024-05-12
 - [[Lanczos Iteration to solve Eigenvalue Problem]]
 - [[Jacobi-Davidson Algorithm to Sparse Eigenvalue Problem]]
 - [[Arnoldi Iterations to solve Eigenvalue Problems]]
+
+- [[QR Iteration for Eigenvalue of Symmetric Matrix]]
+- [[Tridiagonal Decomposition of Symmetric Matrix]]
+
+- [[Biorthogonalization Methods]]
+- [[Lanczos Iteration to Solve Eigenvalue Problem]]
+- [[Jacobi-Davidson Algorithm to Sparse Eigenvalue Problem]]
+- [[Arnoldi Iterations to Sparse Eigenvalue Problems]]
 
 
 ### Derivative-Free Optimization

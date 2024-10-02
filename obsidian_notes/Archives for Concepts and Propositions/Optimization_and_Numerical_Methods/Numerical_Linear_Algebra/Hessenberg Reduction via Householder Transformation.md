@@ -2,6 +2,7 @@
 tags:
   - concept
   - numerical_methods/numerical_linear_algebra
+  - math/matrix_analysis
 keywords: 
 topics: 
 name: 
@@ -14,6 +15,8 @@ date of note: 2024-08-08
 >**Name**: 
 
 
+- [[Hessenberg Matrix]]
+- [[Householder Transformation and Householder Reflection]]
 
 ## Explanation
 
@@ -34,6 +37,6 @@ date of note: 2024-08-08
 - [[Gaussian Elimination to solve Linear System]]
 
 
-- [[Numerical Linear Algebra by Trefethen]] pp 196 - 201
+- [[Numerical Linear Algebra by Trefethen]] pp 196 - 199
 - [[Matrix Computations by Golub]] pp 378 - 383
 - [[Matrix Analysis by Horn]]

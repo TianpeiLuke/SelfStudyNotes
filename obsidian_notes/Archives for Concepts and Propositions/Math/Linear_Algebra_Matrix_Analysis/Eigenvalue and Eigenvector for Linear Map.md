@@ -38,7 +38,7 @@ date of note: 2024-05-27
 >Let $A \in \mathcal{L}(V)$ be a linear transformation on $V$ and $A^{*}\in \mathcal{L}(V^{*})$ be the *adjoint* of $A$
 >
 >
->A nonzero *covector* $f\in V^{*}$ is called a **left eigenvector** of $A$ *associated with* eigenvalue $\lambda$ if $$A^{*}f = \bar{\lambda}\,f$$ or equivalently, the dual of $f$, $f^{*}$ satisfies $$f^{*}\,A = \lambda\,f^{*}.$$
+>A nonzero *covector* $f\in V^{*}$ is called a **left (right) eigenvector** of $A$ *associated with* eigenvalue $\lambda$ if $$A^{*}f = \bar{\lambda}\,f$$ or equivalently, the dual of $f$, $f^{*}$ satisfies $$f^{*}\,A = \lambda\,f^{*}.$$
 
 - [[Adjoint of Linear Map]]
 
