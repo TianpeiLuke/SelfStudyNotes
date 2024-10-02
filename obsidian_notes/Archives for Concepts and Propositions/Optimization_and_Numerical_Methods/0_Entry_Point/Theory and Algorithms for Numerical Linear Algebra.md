@@ -163,7 +163,6 @@ date of note: 2024-05-12
 - [[Gauss-Seidel Iteration to solve Sparse Linear Equations]]
 - [[Successive Over-Relaxation for Sparse Linear System]]
 
-
 #### Symmetric Case
 
 - [[Biorthogonalization Methods]]

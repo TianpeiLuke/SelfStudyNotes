@@ -25,6 +25,10 @@ date of note: 2024-09-29
 
 - [[Hessenberg Reduction via Householder Transformation]]
 
+
+
+
+
 -----------
 ##  Recommended Notes and References
 
