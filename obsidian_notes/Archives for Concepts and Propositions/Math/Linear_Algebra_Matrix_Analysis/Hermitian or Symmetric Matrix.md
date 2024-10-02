@@ -51,20 +51,10 @@ date of note: 2024-05-09
 
 ^d8f505
 
->[!important] Proposition
->A matrix $M\in \mathbb{R}^{2n \times 2n}$ is a **symmetric matrix** if it satisfies the following *equation*
->$$
->J\,M\,J^{T} = M^{T} 
->$$
->where $$J = \left[ \begin{array}{cc}0 & I_{n} \\ I_{n} &0\end{array} \right] $$ is the **permutation matrix**.
-
-^657918
-
-
-
 - [[Adjoint of Linear Map]]
 - [[Dual Space of Finite Dimensional Vector Space]]
 - [[Inner Product Space]]
+- [[Permutation Matrix and Reversal Matrix]]
 
 
 ## Explanation
@@ -93,6 +83,6 @@ date of note: 2024-05-09
 - [[Inner Product Space]]
 - [[Vector Space over a Field]]
 
-- [[Matrix Analysis by Horn]]
+- [[Matrix Analysis by Horn]] pp 7, 227 - 234
 - [[Finite Dimensional Vector Spaces by Halmos]]
 - [[Matrix Computations by Golub]] pp 29

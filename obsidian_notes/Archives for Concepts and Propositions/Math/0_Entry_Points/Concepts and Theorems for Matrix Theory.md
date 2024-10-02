@@ -65,6 +65,8 @@ date of note: 2024-07-13
 - [[Discrete Fourier Transform]]
 
 - [[Nonnegative and Positive Matrix]]
+
+- [[Hamiltonian Matrix]]
 - [[Symplectic Matrix]]
 
 #### Determinant and Trace of Matrix

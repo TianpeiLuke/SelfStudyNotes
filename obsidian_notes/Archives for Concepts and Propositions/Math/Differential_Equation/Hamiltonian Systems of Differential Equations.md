@@ -44,7 +44,7 @@ date of note: 2024-06-14
 
 ^ad0948
 
-
+- [[Symplectic Matrix]]
 - [[Homogeneous Linear Differential Equations]]
 
 - Chicone, C. (2006). _Ordinary Differential Equations with Applications_ (2nd edition). Springer. pp 38

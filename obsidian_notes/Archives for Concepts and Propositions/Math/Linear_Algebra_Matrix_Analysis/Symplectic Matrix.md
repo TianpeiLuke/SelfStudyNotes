@@ -3,10 +3,18 @@ tags:
   - concept
   - math/linear_algebra
   - math/matrix_analysis
+  - math/differential_equation
+  - numerical_methods/numerical_differential_equations
+  - math/differential_geometry
 keywords:
   - symplectic_matrix
 topics:
   - linear_algebra
+  - matrix_analysis
+  - differential_equation
+  - numerical_linear_algebra
+  - numerical_differential_equation
+  - differential_geometry
 name: Symplectic Matrix
 date of note: 2024-05-09
 ---
@@ -20,9 +28,9 @@ date of note: 2024-05-09
 
 ![[Hermitian or Symmetric Matrix#^9ff922]]
 
-![[Hermitian or Symmetric Matrix#^657918]]
+![[Hamiltonian Matrix#^6ddb7d]]
 
-- [[Hermitian or Symmetric Matrix]]
+- [[Hamiltonian Matrix]]
 - [[Inner Product Space]]
 
 >[!important] Definition
@@ -33,7 +41,7 @@ date of note: 2024-05-09
 >where 
 >$$J = \left[ \begin{array}{cc}0 & I_{n} \\ -I_{n} &0\end{array} \right] $$ is the **permutation matrix**.
 
-
+- [[Permutation Matrix and Reversal Matrix]]
 
 ## Explanation
 
@@ -51,6 +59,18 @@ date of note: 2024-05-09
 >S_{11}^T\,S_{22} = I_{n} + S_{21}^{T}\,S_{12} 
 >$$
 
+## Hamiltonian Matrix
+
+- [[Hamiltonian Matrix]]
+- [[Hamiltonian Function in Mechanic]]
+
+## Hamiltonian System of Equations
+
+
+- [[Hamiltonian Systems of Differential Equations]]
+- [[Hamiltonian Monte Carlo]]
+
+## Sympletic Group
 
 
 
@@ -61,12 +81,18 @@ date of note: 2024-05-09
 
 
 
+
+- [[Hamiltonian Matrix]]
+- [[Hamiltonian Function in Mechanic]]
+- [[Hamiltonian Systems of Differential Equations]]
+
 - [[Linear Map]]
 - [[Matrix]]
 
 - [[Inner Product Space]]
 - [[Vector Space over a Field]]
 
-- [[Matrix Analysis by Horn]]
+
 - [[Matrix Computations by Golub]] pp 29
 - [[Introduction to Smooth Manifolds by Lee]]
+- Wikipedia [Symplectic_matrix](https://en.wikipedia.org/wiki/Symplectic_matrix)
