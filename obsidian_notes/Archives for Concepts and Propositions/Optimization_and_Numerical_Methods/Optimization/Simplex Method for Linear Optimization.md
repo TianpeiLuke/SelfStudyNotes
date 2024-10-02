@@ -50,6 +50,7 @@ date of note: 2024-05-12
 
 ![[Feasible Direction and Reduced Cost for Linear Optimization#^50bb61]]
 
+
 #### Reduced Cost
 
 ![[Feasible Direction and Reduced Cost for Linear Optimization#^6f654f]]
@@ -180,7 +181,8 @@ date of note: 2024-05-12
 
 ^933ad4
 
-
+- [[Gaussian Elimination with Partial Pivoting]]
+- [[LU Factorization of Matrix]]
 
 
 

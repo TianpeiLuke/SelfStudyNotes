@@ -40,7 +40,7 @@ date of note: 2024-07-09
 ##  Recommended Notes and References
 
 
-- [[Girth of Graph]]
+- [[Girth and Circumference of Graph]]
 - [[Directed Acyclic Graph]]
 - [[Tree Graph and Forest]]
 

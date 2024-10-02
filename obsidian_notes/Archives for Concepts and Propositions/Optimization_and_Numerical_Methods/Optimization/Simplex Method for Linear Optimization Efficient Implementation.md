@@ -31,6 +31,9 @@ date of note: 2024-08-18
 >- In addition, **computing the reduced costs** of all variables requires $O(mn)$ *arithmetic operations*, because we need to form the inner product of the vector $p$ with each one of the nonbasic columns $A_{j}$.
 >- Thus, the **total computational effort** per iteration is $O(m^{3} + mn)$.
 
+- [[Gaussian Elimination with Partial Pivoting]]
+- [[LU Factorization of Matrix]]
+
 ### Revised Implementation
 
 >[!info]
@@ -66,6 +69,11 @@ date of note: 2024-08-18
 >- We **divide** the $l$-th row by $-d_{B(l)}$. This *replaces* $-d_{B(l)}$ by **one**.
 >  
 >In words , we are **adding** to *each row* a **multiple** of the $l$-th row to **replace** the $l$-th column $-d_{B}$ by the $l$-th **unit vector** $e_{l}$.  
+
+- [[Elementary Row and Column Operations]]
+- [[Gaussian Elimination with Partial Pivoting]]
+- [[LU Factorization of Matrix]]
+
 
 >[!info]
 >This sequence of *ele­mentary row operations* is **equivalent** to left-multiplying $B^{-1}\overline{B}$ by a certain *invertible matrix* $Q$. We have
@@ -117,6 +125,9 @@ date of note: 2024-08-18
 >				- Collect a matrix $$\left[ B^{-1},\, (-d_{B})\right] \in \mathbb{R}^{m\times (m+1)} $$
 >				- **Add** to each one of its rows a **multiple** of the $l$-th row to make the *last column* equal to the **unit vector** $e_{l}$.
 >				- The *first $m$ columns* is equal to $\overline{B}^{-1}$
+
+- [[Gaussian Elimination to solve Linear System]]
+- [[Gaussian Elimination with Partial Pivoting]]
 
 #### Complexity
 

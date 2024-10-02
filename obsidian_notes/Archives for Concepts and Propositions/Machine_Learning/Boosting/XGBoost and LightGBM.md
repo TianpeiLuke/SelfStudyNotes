@@ -257,8 +257,8 @@ Let’s assume we want to predict if it’s “Hot”, “Cold” or “Unknown�
 
 
 - [[Gradient Boosting Algorithm]]
-- [[[[Functional Gradient Descent]]Gradient Boosting Trees]]
-- 
+- [[Functional Gradient Descent]]
+- [[Gradient Boosting Trees]]
 
 
 - [[chenXGBoostScalableTree2016]] Chen, T., & Guestrin, C. (2016). XGBoost: A Scalable Tree Boosting System. _Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining_, 785–794.
