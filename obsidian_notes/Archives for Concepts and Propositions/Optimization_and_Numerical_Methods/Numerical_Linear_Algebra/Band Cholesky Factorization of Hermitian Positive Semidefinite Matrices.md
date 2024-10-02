@@ -32,7 +32,7 @@ date of note: 2024-09-21
 
 - [[System of Linear Equations or Linear System]]
 - [[Existence and Uniqueness of Solution of Linear Equations]]
-- [[Gaussian Elimination to solve Linear System]]
+- [[Gaussian Elimination for General Linear System]]
 - [[LU Factorization of Matrix]]
 
 

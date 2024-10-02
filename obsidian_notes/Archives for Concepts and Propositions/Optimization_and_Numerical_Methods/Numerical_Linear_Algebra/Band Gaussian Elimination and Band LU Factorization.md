@@ -22,7 +22,7 @@ date of note: 2024-09-21
 
 ![[LU Factorization of Matrix#^62518f]]
 
-![[Gaussian Elimination to solve Linear System#^057350]]
+![[Gaussian Elimination for General Linear System#^057350]]
 
 >[!important] Theorem
 >Suppose $A\in M_{n}$ has a **LU factorization** $$A = LU.$$
@@ -32,7 +32,7 @@ date of note: 2024-09-21
 ^4f120b
 
 - [[LU Factorization of Matrix]]
-- [[Gaussian Elimination to solve Linear System]]
+- [[Gaussian Elimination for General Linear System]]
 
 ### Band Gaussian Elimination
 
@@ -69,7 +69,7 @@ date of note: 2024-09-21
 - [[Band Forward Substitution and Band Back Substitution]]
 
 - [[Gaussian Elimination with Complete Pivoting]]
-- [[Gaussian Elimination to solve Linear System]]
+- [[Gaussian Elimination for General Linear System]]
 
 \
 

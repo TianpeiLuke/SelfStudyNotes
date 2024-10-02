@@ -41,9 +41,9 @@ date of note: 2024-08-08
 
 ### Algorithms
 
-![[Gaussian Elimination to solve Linear System#^057350]]
+![[Gaussian Elimination for General Linear System#^057350]]
 
-- [[Gaussian Elimination to solve Linear System]]
+- [[Gaussian Elimination for General Linear System]]
 
 
 >[!important] Definition
@@ -71,7 +71,7 @@ date of note: 2024-08-08
 >- It is about **half the number of flops** involved in Gaussian elimination.
 >- This is the same number of operations as the **Cholosky factorization**.
 
-- [[Gaussian Elimination to solve Linear System]]
+- [[Gaussian Elimination for General Linear System]]
 - [[Cholesky Factorization of Hermitian Positive Definite Matrices]]
 
 ## Explanation
@@ -143,7 +143,7 @@ date of note: 2024-08-08
 - [[Matrix]]
 - [[Orthogonal Group]]
 - [[Unitary Group]]
-- [[Gaussian Elimination to solve Linear System]]
+- [[Gaussian Elimination for General Linear System]]
 
 
 - [[Numerical Linear Algebra by Trefethen]] pp 

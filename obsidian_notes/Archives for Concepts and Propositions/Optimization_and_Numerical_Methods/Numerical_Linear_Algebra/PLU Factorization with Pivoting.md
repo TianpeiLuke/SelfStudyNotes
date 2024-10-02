@@ -48,7 +48,7 @@ date of note: 2024-09-26
 >[!info]
 >In implementation, the $PLU$ factorization is given by **Gaussian elimination with pivoting**.
 
-- [[Gaussian Elimination to solve Linear System]]
+- [[Gaussian Elimination for General Linear System]]
 - [[Gaussian Elimination with Complete Pivoting]]
 
 >[!important]
@@ -72,7 +72,7 @@ date of note: 2024-09-26
 - [[LPU Factorization of Nonsingular Matrix]]
 - [[Triangular Equivalence of Matrices]]
 
-- [[Gaussian Elimination to solve Linear System]]
+- [[Gaussian Elimination for General Linear System]]
 - [[Gaussian Elimination with Complete Pivoting]]
 
 - [[Permutation Matrix and Reversal Matrix]]

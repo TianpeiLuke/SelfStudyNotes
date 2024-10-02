@@ -82,7 +82,7 @@ date of note: 2024-09-25
 >	- Let $x = A_{\{ j:m \}, j}$ $$H_{k}A_{\{ j:m \}, j} = \lVert A_{\{ j:m \}, j} \rVert\, e_{1} $$ which set all entries $A_{\{ j+1:m \},j} = 0$ and $A_{j,j} = \lVert A_{\{ j:m \}, j} \rVert.$
 
 - [[Householder Transformation and Householder Reflection]]
-- [[Gaussian Elimination to solve Linear System]]
+- [[Gaussian Elimination for General Linear System]]
 - [[Elementary Row and Column Operations]]
 
 

@@ -25,7 +25,7 @@ date of note: 2024-08-08
 >$$
 >where $L \in M_{n}$ is a *lower triangular matrix* and $U \in M_{n}$ is an *upper triangular matrix*.
 
-- [[Gaussian Elimination to solve Linear System]]
+- [[Gaussian Elimination for General Linear System]]
 
 ### Existence
 
@@ -103,7 +103,7 @@ date of note: 2024-08-08
 >
 >-- [[Matrix Computations by Golub]] pp 111
 
-- [[Gaussian Elimination to solve Linear System]]
+- [[Gaussian Elimination for General Linear System]]
 
 
 >[!info]
@@ -120,9 +120,9 @@ date of note: 2024-08-08
 
 ## LU Factorization via Gaussian Elimination
 
-![[Gaussian Elimination to solve Linear System#^057350]]
+![[Gaussian Elimination for General Linear System#^057350]]
 
-- [[Gaussian Elimination to solve Linear System]]
+- [[Gaussian Elimination for General Linear System]]
 
 
 ## $LDL^{T}$ Factorization for Symmetric Matrix

@@ -63,7 +63,7 @@ date of note: 2024-06-08
 - [[LDU Factorization of Symmetric Matrix]]
 - [[LU Factorization of Matrix]]
 - [[Gaussian Elimination with Partial Pivoting]]
-- [[Gaussian Elimination to solve Linear System]]
+- [[Gaussian Elimination for General Linear System]]
 
 ### QR Factorization
 

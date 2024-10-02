@@ -18,9 +18,9 @@ date of note: 2024-09-21
 >[!important]
 >**Name**: Gaussian Elimination with Partial Pivoting
 
-![[Gaussian Elimination to solve Linear System#^057350]]
+![[Gaussian Elimination for General Linear System#^057350]]
 
-- [[Gaussian Elimination to solve Linear System]]
+- [[Gaussian Elimination for General Linear System]]
 
 >[!important] Definition
 >In *Gaussian elimination*, the diagonal entry $A_{k,k}$ of matrix $A$ plays a critical role. We call $A_{kk}$ the **pivot.**
@@ -69,7 +69,7 @@ date of note: 2024-09-21
 >		- Determine the *Gaussian transformation* $$M_{k} = I - \tau^{(k)}\,e_{k}^{T}$$ such that if $v$ is *k-th* column of $M_{k}A$ then $$v_{\{ k+1:n \}} = 0$$
 >		- $$A \leftarrow M_{k}A$$
 
-- [[Gaussian Elimination to solve Linear System]]
+- [[Gaussian Elimination for General Linear System]]
 
 >[!important] Definition
 >The **Gaussian Elimination with pivoting** computes the *LU factorization* as follows:

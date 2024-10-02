@@ -42,7 +42,7 @@ date of note: 2024-05-12
 
 #### LU Factorization and Gaussian Elimination
 
-- [[Gaussian Elimination to solve Linear System]]
+- [[Gaussian Elimination for General Linear System]]
 - [[LU Factorization of Matrix]]
 - [[PLU Factorization with Pivoting]]
 - [[Gaussian Elimination with Partial Pivoting]]

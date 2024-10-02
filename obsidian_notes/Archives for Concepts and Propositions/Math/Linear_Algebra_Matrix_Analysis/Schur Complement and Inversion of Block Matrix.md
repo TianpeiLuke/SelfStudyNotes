@@ -174,7 +174,7 @@ date of note: 2024-07-23
 >\end{align*}
 >$$
 
-- [[Gaussian Elimination to solve Linear System]]
+- [[Gaussian Elimination for General Linear System]]
 
 >[!important]
 >If $M$ and $D$ is *invertible*,  we can decompose the inverse of 

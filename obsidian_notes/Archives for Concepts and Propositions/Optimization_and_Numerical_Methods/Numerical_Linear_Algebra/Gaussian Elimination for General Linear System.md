@@ -10,14 +10,14 @@ keywords:
 topics:
   - numerical_linear_algebra
   - matrix_analysis
-name: Gaussian Elimination for Solving Linear System
+name: Gaussian Elimination for General Linear System
 date of note: 2024-09-21
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Gaussian Elimination for Solving Linear System
+>**Name**: Gaussian Elimination for General Linear System
 
 ![[Elementary Row and Column Operations#^92e828]]
 

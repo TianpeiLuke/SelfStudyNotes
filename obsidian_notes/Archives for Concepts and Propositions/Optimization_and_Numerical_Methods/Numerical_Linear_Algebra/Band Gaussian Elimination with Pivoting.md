@@ -29,7 +29,7 @@ date of note: 2024-09-21
 - [[Band Triangular System of Equations]]
 
 - [[Gaussian Elimination with Complete Pivoting]]
-- [[Gaussian Elimination to solve Linear System]]
+- [[Gaussian Elimination for General Linear System]]
 - [[System of Linear Equations or Linear System]]
 - [[Existence and Uniqueness of Solution of Linear Equations]]
 - [[Back Substitution of Upper Triangular System]]

@@ -71,7 +71,7 @@ date of note: 2024-09-21
 >- This is the **same** number of operations as compared to the **$LDL^{T}$ factorization**.
 
 - [[LDU Factorization of Symmetric Matrix]]
-- [[Gaussian Elimination to solve Linear System]]
+- [[Gaussian Elimination for General Linear System]]
 
 >[!important] Definition
 >The *Gaxpy implementation* of **Cholesky factorization** algorithm is described as below:

@@ -126,7 +126,7 @@ date of note: 2024-08-18
 >				- **Add** to each one of its rows a **multiple** of the $l$-th row to make the *last column* equal to the **unit vector** $e_{l}$.
 >				- The *first $m$ columns* is equal to $\overline{B}^{-1}$
 
-- [[Gaussian Elimination to solve Linear System]]
+- [[Gaussian Elimination for General Linear System]]
 - [[Gaussian Elimination with Partial Pivoting]]
 
 #### Complexity

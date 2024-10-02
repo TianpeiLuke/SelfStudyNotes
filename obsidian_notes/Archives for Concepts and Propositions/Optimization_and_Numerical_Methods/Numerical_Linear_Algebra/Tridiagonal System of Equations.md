@@ -31,7 +31,7 @@ date of note: 2024-08-08
 
 - [[Tridiagonal Bidiagonal and Block Tridiagonal Matrix]]
 - [[Matrix]]
-- [[Gaussian Elimination to solve Linear System]]
+- [[Gaussian Elimination for General Linear System]]
 
 
 - [[Numerical Linear Algebra by Trefethen]] pp
