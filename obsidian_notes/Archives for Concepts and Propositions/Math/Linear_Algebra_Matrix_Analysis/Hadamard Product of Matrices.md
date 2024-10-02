@@ -43,9 +43,9 @@ date of note: 2024-10-01
 >- **Diagonal Operator**: 
 >	- For $v\in F^{n}$ $$\text{diag}(v) = (v\,\boldsymbol{1}^{T}) \odot I$$
 >	- For $A\in M_{n}$, $$\text{diag}(A) = A \odot I.$$
->- Let $x,y\in F^{n}$ and $D_{x} = \text{diag}(x)$, $D_{y} = \text{diag}(y)$. Then the following **identity for quadratic form** holds $$x^{*} (A \odot B) y = \text{tr}\left(D_{x}^{*}AD_{y}B^{*}\right)$$
+>- **Trace Formula**: Let $x,y\in F^{n}$ and $D_{x} = \text{diag}(x)$, $D_{y} = \text{diag}(y)$. Then the following identity holds $$x^{*} (A \odot B) y = \text{tr}\left(D_{x}^{*}AD_{y}B^{*}\right)$$
 >	- $$(x\,y^{*}) \odot A = D_{x}\,A\,D_{y}^{*}$$
->	- **Inner Product** between Matrices: $$\left\langle  B\,,\, A   \right\rangle = \text{tr}(B^{*} A) = \text{tr}(AB^{*}) = \boldsymbol{1}^{T}\left(A \odot B\right)\boldsymbol{1}.$$
+>	- **Inner Product** between Matrices: $$\left\langle  B\,,\, A   \right\rangle_{tr} = \text{tr}(B^{*} A) = \text{tr}(AB^{*}) = \boldsymbol{1}^{T}\left(A \odot B\right)\boldsymbol{1}.$$
 >- **Hadamard Product of Vectors** Let $x,y\in F^{n}$ and $D_{x} = \text{diag}(x)$, $D_{y} = \text{diag}(y)$. Then $$x \odot y = D_{x}y = D_{y}x$$
 >- **Determinant**: If $A, B\in M_{m}$, then $$\det(A \odot B) \ge \det(A)\,\det(B)$$
 
