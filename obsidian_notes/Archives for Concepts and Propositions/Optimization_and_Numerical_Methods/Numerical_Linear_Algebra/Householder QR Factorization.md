@@ -40,6 +40,8 @@ date of note: 2024-09-25
 >- *Return*: the **upper triangular matrix** $R$ $$R := [A_{j, \{ j:n \}}]_{j=1}^{n}$$ and the **lower triangular part** $$v^{(j)} = [\underbrace{ 0 \,{,}\ldots{,}\,0 }_{ j-1 }\,,1\,, A_{j+1,j}\,{,}\ldots{,}\,A_{m,j} ],\quad j=1\,{,}\ldots{,}\,n.$$ 
 >- *Return*: the $Q$ matrix $$Q= H_{1}\,{}\ldots{}\,H_{n},$$ which is obtained by the **backward accumulation algorithm.**
 
+^7f3184
+
 - [[Householder Transformation and Householder Reflection]]
 - [[QR Factorization of Matrix]]
 - [[Unitary and Orthogonal Transformation]]

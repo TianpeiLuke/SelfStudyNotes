@@ -31,6 +31,8 @@ date of note: 2024-09-25
 >	- Compute the **QR factorization** of $T_{k-1}$ $$U_{k}\,R_{k} = T_{k-1}$$
 >	- Apply $U_{k}$ to **column** of $R_{k}$ to obtain new unitary similar matrix $T_{k}$ $$T_{k} = R_{k}\,U_{k}$$
 
+^a864d4
+
 - [[QR Factorization of Matrix]]
 - [[Schur Triangularization and Schur Form]]
 

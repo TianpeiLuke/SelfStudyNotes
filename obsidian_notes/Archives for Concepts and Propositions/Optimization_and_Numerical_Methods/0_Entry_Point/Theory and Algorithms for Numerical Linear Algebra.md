@@ -136,8 +136,11 @@ date of note: 2024-05-12
 
 - [[Power Iteration to solve Eigenvalue Problem of General Matrix]]
 - [[QR Iteration to solve Eigenvalue Problem of General Matrix]]
+- [[Hessenberg QR Factorization via Given Transformation]]
+- [[Householder Transformation and Householder Reflection]]
 - [[Hessenberg Reduction via Householder Transformation]]
 - [[Hessenburg QR Iteration to solve Eigenvalue Problem]]
+
 
 #### Symmetric Case, Large Scale
 

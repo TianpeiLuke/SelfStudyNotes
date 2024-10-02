@@ -108,24 +108,6 @@ date of note: 2024-08-08
 
 -----------
 ##  Recommended Notes and References
-QR Factorization Algorithms
-
-### QR Factorization via Householder Transformation
-
-- [[Householder Transformation and Householder Reflection]]
-- [[Householder QR Factorization]]
-- [[Block Householder QR Factorization]]
-
-### QR Factorization via Givens Transformation
-
-- [[Givens Transformation and Givens Rotation]]
-- [[Givens QR Factorization]]
-
-### QR Factorization via Gram-Schmidt Orthogonalization
-
-- [[Gram-Schmidt Orthogonalization]]
-- [[Modified Gram-Schmidt Algorithm for QR Factorization]]
-
 
 - [[Orthogonality in Inner Product Space]]
 

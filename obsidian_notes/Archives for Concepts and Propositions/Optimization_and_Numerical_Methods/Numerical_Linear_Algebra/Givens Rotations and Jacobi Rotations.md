@@ -91,6 +91,8 @@ date of note: 2024-09-25
 >	- $$A_{j,i} = c\,\tau_{1} - s\,\tau_{2}$$
 >	- $$A_{j,k} = s\,\tau_{1} + c\,\tau_{2}$$
 
+^24aabc
+
 
 
 ## Explanation
