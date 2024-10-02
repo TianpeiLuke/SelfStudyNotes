@@ -65,6 +65,8 @@ date of note: 2024-05-12
 \end{align*}
 >$$
 
+^ad1beb
+
 - [[Linear Optimization Problem]]
 - [[Theory and Algorithms for Linear Optimization]]
 

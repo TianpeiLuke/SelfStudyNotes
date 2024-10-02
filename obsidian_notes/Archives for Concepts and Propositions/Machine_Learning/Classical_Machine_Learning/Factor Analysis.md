@@ -70,6 +70,8 @@ date of note: 2024-09-04
 >- We see that $$\Sigma_{x} :=  \Psi + \widehat{W}\,\widehat{W}^{T}$$ is a **low rank decomposition.**
 >
 
+^a9ed6d
+
 - [[Marginal and Conditional Distribution of Gaussian]]
 
 >[!important] 
@@ -89,6 +91,8 @@ date of note: 2024-09-04
 >	- The right hand side  takes $O(s^3 + d)$ to compute.
 >- The **Mahalanobis distance** can also be computed using the Schur complement $$\begin{align*} &\left\langle \left(  \Psi + W\,\Sigma_{0}\,W^{T}  \right)^{-1} ,  S\right\rangle_{tr} \\[5pt] &= \left\langle  \Psi^{-1} ,  S\right\rangle_{tr} - \left\langle \Psi^{-1}W\left(\Sigma_{0}^{-1} +  W^{T}\Psi^{-1}W \right)^{-1}W^{T}\Psi^{-1},  S\right\rangle_{tr} \end{align*}$$ 
 >	- which takes $O(s^3 + sd)$ to compute
+
+^cb4966
 
 - [[Schur Complement and Inversion of Block Matrix]]
 

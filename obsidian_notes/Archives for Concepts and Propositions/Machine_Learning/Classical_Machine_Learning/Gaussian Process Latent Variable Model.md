@@ -86,6 +86,8 @@ date of note: 2024-05-12
 >- $P_{s} = \text{diag}\left(p_{1} \,{,}\ldots{,}\,p_{s}\right)$ where $$p_{j} = \left\{\begin{array}{ll}\lambda_{j} & \text{ if } \lambda_{j} \ge \sigma^2 \\[5pt] \sigma^2 & \text{ otherwise }\end{array}\right.$$ For $j$ such that $\lambda_{j} < \sigma^2$, the corresponding $u_{j}$ is *arbitrary*.
 >- $R\in \mathcal{O}(s)$ is an *arbitrary orthogonal matrix* . 
 
+^6c8c67
+
 
 - [[Probabilistic Principle Component Analysis#Maximum Likelihood Estimation for PPCA]]
 
@@ -114,6 +116,8 @@ date of note: 2024-05-12
 >$$
 >where  the **kernel matrix**$$K_{h} = [K(h_{i}, h_{j})]_{i,j\in [n]}$$
 
+^2824ff
+
 
 - [[Gaussian Process]]
 - [[Reproducing Kernel of RKHS]]
@@ -137,6 +141,8 @@ date of note: 2024-05-12
 >- The optimization problem can be solved via *iterative algorithms* such as 
 >	- **stochastic gradient descent (SGD)**
 >	- **(scaled) conjugate gradient descent (SCG)**
+
+^cb892f
 
 - [[Conjugate Gradient Algorithm Nonlinear]]
 - [[Stochastic Gradient Descent Algorithm]]

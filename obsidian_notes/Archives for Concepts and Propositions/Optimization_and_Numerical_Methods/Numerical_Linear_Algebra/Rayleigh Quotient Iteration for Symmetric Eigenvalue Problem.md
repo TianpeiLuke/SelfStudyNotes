@@ -28,7 +28,7 @@ date of note: 2024-10-01
 
 - [[Rayleigh Quotient for Eigenvalue Problem]]
 - [[Variational Characterization of Eigenvalues of Hermitian Matrix]]
-- [[Courant-Fischer Minimax Theorem]]
+- [[Courant-Fischer Minimax Theorem for Eigenvalue Problem]]
 
 
 - [[Eigenvalue and Eigenvector for Linear Map]]

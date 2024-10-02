@@ -126,7 +126,7 @@ date of note: 2024-05-12
 - [[Schur Triangularization and Schur Form]]
 
 - [[Rayleigh Quotient for Eigenvalue Problem]]
-- [[Courant-Fischer Minimax Theorem]]
+- [[Courant-Fischer Minimax Theorem for Eigenvalue Problem]]
 
 
 ### Iterative Algorithms to solve Eigenvalue Problems

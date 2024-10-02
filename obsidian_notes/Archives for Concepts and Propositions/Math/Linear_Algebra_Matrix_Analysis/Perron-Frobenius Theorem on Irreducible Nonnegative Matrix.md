@@ -40,7 +40,7 @@ date of note: 2024-09-24
 >- the **(right) Perron vector** of $A$ is defined as the *right eigenvector* $x$ of $A$ associated with $A$'s *spectral radius* (*maximum eigenvalue*). By **Perron-Frobenius theorem**, $$Ax = \rho(A)x, \quad x\in \Delta_{n}.$$
 >- And the **left Perron vector** of $A$ is defined as the *left eigenvector* $y$ of $A$ associated with $A$'s *spectral radius* (*maximum eigenvalue*). That is, $$y^{T}A = \rho(A)y^{T}, \quad y\succ 0, \; \left\langle  x\,,\,y \right\rangle = 1.$$
 
-
+- [[Kac Theorem on Markov Chain]]
 
 ## Explanation
 

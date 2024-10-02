@@ -167,7 +167,7 @@ date of note: 2024-07-13
 
 - [[Rayleigh Quotient for Eigenvalue Problem]]
 - [[Variational Characterization of Eigenvalues of Hermitian Matrix]]
-- [[Courant-Fischer Minimax Theorem]]
+- [[Courant-Fischer Minimax Theorem for Eigenvalue Problem]]
 
 #### Matrix Norm
 

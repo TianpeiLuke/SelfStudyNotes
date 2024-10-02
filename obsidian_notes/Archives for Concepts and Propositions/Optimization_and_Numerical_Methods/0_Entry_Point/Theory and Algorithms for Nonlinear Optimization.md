@@ -100,7 +100,7 @@ date of note: 2024-05-12
 - [[Eigenspace and Spectrum for Linear Map]]
 - [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
 - [[Rayleigh Quotient for Eigenvalue Problem]]
-- [[Courant-Fischer Minimax Theorem]]
+- [[Courant-Fischer Minimax Theorem for Eigenvalue Problem]]
 - [[Convex Optimization for Eigenvalue Problem]]
 
 #### Iterative Algorithms to Solve Eigenvalue Problem

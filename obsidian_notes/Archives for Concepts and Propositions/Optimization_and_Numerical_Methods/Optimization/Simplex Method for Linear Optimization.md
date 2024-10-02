@@ -60,6 +60,8 @@ date of note: 2024-05-12
 >[!important] Definition
 >This vector $$p^{T} = c_{B}^{T}\,B^{-1}$$ is called the **vector of simplex multipliers** associated with the basis $B$.
 
+^3b2740
+
 
 #### Optimal Condition for LP
 
@@ -77,6 +79,8 @@ date of note: 2024-05-12
 >
 >- If all of them are **nonnegative**, by above *optimal condition*, we have an **optimal solution** and we stop.
 >- If on the other hand, the *reduced cost* $\bar{c}_{j}$ of a *nonbasic variable* $x_{j}$ is **negative,** the **$j$-th basic direction** $$d= -B^{-1}\,A_{j}$$ is a **feasible direction** of  cost *decrease*.
+
+^0e8413
 
 >[!important] Definition
 >While moving along the *$j$-th basic direction* $$d= -B^{-1}\,A_{j},$$ the *nonbasic variable* $x_{j}$ becomes *positive* and all other nonbasic variables remain at *zero*.

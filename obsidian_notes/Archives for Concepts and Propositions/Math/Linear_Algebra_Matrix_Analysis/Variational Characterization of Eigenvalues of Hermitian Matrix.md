@@ -49,7 +49,7 @@ date of note: 2024-09-23
 
 ## Courant-Fischer Minimax Theorem for Eigenvalues
 
-![[Courant-Fischer Minimax Theorem#^3d4e1f]]
+![[Courant-Fischer Minimax Theorem for Eigenvalue Problem#^3d4e1f]]
 
 
 
@@ -58,7 +58,7 @@ date of note: 2024-09-23
 
 - [[Minimax Theorem]]
 - [[Rayleigh Quotient for Eigenvalue Problem]]
-- [[Courant-Fischer Minimax Theorem]]
+- [[Courant-Fischer Minimax Theorem for Eigenvalue Problem]]
 
 
 - [[Eigenvalue and Eigenvector for Linear Map]]

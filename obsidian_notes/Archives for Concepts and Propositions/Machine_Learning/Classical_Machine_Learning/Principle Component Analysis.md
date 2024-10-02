@@ -66,6 +66,8 @@ date of note: 2024-05-12
 >$$
 >where $$\text{St}(d, s)  := \left\{U \in \mathbb{R}^{d \times s}: U^{T}\,U = I  \right\}$$ is called the **Stiefel manifold**  and $P_{\mathcal{R}(U)} = U\,U^{T}$ is the *orthogonal projection* on *range (column space)* of $U$, $\mathcal{R}(U)$.
 
+^028c45
+
 - [[Linear Subspace]]
 - [[Projection Map onto Linear Subspace]]
 - [[Fundamental Subspaces from Linear Map]]
@@ -99,6 +101,8 @@ date of note: 2024-05-12
 >\end{align}
 >$$
 
+^feea32
+
 
 
 >[!important] Definition
@@ -110,7 +114,7 @@ date of note: 2024-05-12
 
 - [[Rayleigh Quotient for Eigenvalue Problem]]
 - [[Variational Characterization of Eigenvalues of Hermitian Matrix]]
-- [[Courant-Fischer Minimax Theorem]]
+- [[Courant-Fischer Minimax Theorem for Eigenvalue Problem]]
 
 >[!info]
 >We can see a similar formulation in [[Iterative Maximum Entropy Learning for AdaBoost]]
@@ -141,6 +145,8 @@ date of note: 2024-05-12
 >\end{align}
 >$$
 >is the set $$U^{*} = \left[ u_{1} \,{,}\ldots{,}\, u_{s}\right] $$ whose columns are **eigenvectors** of $S$ corresponding to **top $s$ largest eignvalues**.
+
+^ab6364
 
 
 >[!important] Definition

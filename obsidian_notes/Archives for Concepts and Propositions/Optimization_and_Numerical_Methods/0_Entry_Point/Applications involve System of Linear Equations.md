@@ -254,19 +254,53 @@ date of note: 2024-09-27
 ### Linear Optimization
 
 - [[Linear Optimization Problem]]
+
+>[!info]
+>Two major steps require solving linear systems based on **basis matrix** $B$:
+>- Computation of **simplex multipliers** $$p^{T}B = c_{B}^{T}$$
+>- Computation of **basic feasible direction**: $$B\,d = -A_{j}$$
+>  
+>Note that  $$B= [B(1) \,{,}\ldots{,}\, B(m)]\in \mathbb{R}^{m\times m}$$ may be sparse since the columns are basic solutions, which are *vertices of the polytope*.
+
+- [[Basic Solution for Linear Optimization]]
+
+
+![[Simplex Method for Linear Optimization#^3b2740]]
+
+![[Simplex Method for Linear Optimization#^0e8413]]
+
 - [[Simplex Method for Linear Optimization]]
 - [[Simplex Method for Linear Optimization Efficient Implementation]]
 
-### Optimal Transport
+>[!info]
+>**Interior Point method** involves **Newton's method** for each iteration.
+
+- [[Interior Point Method for Linear Optimization]]
+
+####  Optimal Transport
+
+>[!info]
+>Finding the **optimal transport coupling** is a **linear programming problem**.
+
+![[Optimal Transport in Discrete Setting#^ad1beb]]
 
 - [[Optimal Transport in Discrete Setting]]
 - [[Entropic Regularized Optimal Transport in Discrete Settings]]
 - [[Entropic Regularized Optimal Transport in Dual Form]]
 
-
-### Network Flow 
+#### Network Flow 
 
 - [[Network Flow Problem as Linear Optimization]]
+
+
+#### MAP Inference in Graphical Model
+
+>[!info]
+>**MAP inference** can be reformulated as **integer programming problem**
+
+- [[Maximum A Posteriori Probability Query of Graphical Model]]
+- [[Max-Product Variable Elimination]]
+- [[Clique Tree Invariant of Max-Product and Reparameterization]]
 
 
 ### Convex Optimization
@@ -278,8 +312,33 @@ date of note: 2024-09-27
 - [[Karush-Kuhn-Tucker Optimality Condition]]
 - [[Interior Point Method or Barrier Method for Convex Optimization]]
 
+#### Eigenvalue Problem as Convex Optimization on Manifold
+
+- [[Rayleigh Quotient for Eigenvalue Problem]]
+- [[Variational Characterization of Eigenvalues of Hermitian Matrix]]
+- [[Courant-Fischer Minimax Theorem for Eigenvalue Problem]]
+
+### Latent Variable Model and Factor Analysis
+
+![[Factor Analysis#^a9ed6d]]
+
+![[Factor Analysis#^cb4966]]
+
+- [[Latent Variable Models]]
+- [[Factor Analysis]]
+
+![[Gaussian Process Latent Variable Model#^6c8c67]]
+
+![[Gaussian Process Latent Variable Model#^cb892f]]
+
+- [[Gaussian Process Latent Variable Model]]
 
 ### Dynamic System
+
+>[!info]
+>The key for Kalman filter is to solve the **Kalman information gain matrix**
+>$$K_{t} = \Sigma_{t|t-1}\,C(t)^{T}\,\left(\Sigma_{t:t-1}^{O}\right)^{-1}$$
+>This involves the *linear system* $$(\Sigma_{t:t-1}^{O})^{T}\,K_{t}^{T}\, = (\Sigma_{t}^{O,X})^{T}$$ where $$\Sigma_{t}^{O,X}:= \Sigma_{t|t-1}\,C(t)^{T}$$
 
 - [[Linear Dynamic System]]
 - [[Kalman Filter Discrete-Time]]
@@ -287,37 +346,57 @@ date of note: 2024-09-27
 
 ### Gaussian Graphical Model
 
+>[!info]
+>Probability inference on **Gaussian Graphical model (GGM)** using the mean field approximation can be seen as the **Gauss-Seidel iteration** 
+
+- [[Mean Field Approximation for Gaussian Markov Random Field]]
+- [[Gauss-Seidel Iteration for Sparse Linear System]]
 - [[Gaussian Graphical Model]]
-- [[Gaussian Belief Propagation]]
 - [[Marginal and Conditional Distribution of Gaussian]]
 - [[Canonical Form of Gaussian Graphical Model]]
 
+>[!info]
+>**Structure learning** on Gaussian graphical model via **Graph LASSO** can be seen as solving the **sparse linear equations** 
 
 - [[Inverse Covariance Estimation]]
 - [[Graph LASSO and Structured Learning in Gaussian Graphical Model]]
-- [[Gauss-Seidel Iteration for Sparse Linear System]]
-
-
-### MAP Inference in Graphical Model
-
-- [[Maximum A Posteriori Probability Query of Graphical Model]]
-- [[Max-Product Variable Elimination]]
-- [[Clique Tree Invariant of Max-Product and Reparameterization]]
 
 
 
 ### Markov Process and Markov Chain
 
+>[!info]
+>The **transition kernel matrix** $$K = [p(X_{t+1}=j | X_{t}=i)]_{i,j}$$ is a **nonnegative** and **stochastic matrix**
+
 - [[Nonnegative and Positive Matrix]]
 - [[Markov Chain and Markov Process]]
 - [[Markov Chain Monte Carlo Methods]]
 - [[Markov Transition Kernel and Transition Function]]
+
+- [[Birkhoff Theorem on Characterization of Doubly Stochastic Matrix]]
+
+>[!info]
+>The **first left eigenvector** associated with $1$ of $K$ is the **invariant measure** $$\pi^{T}K = \pi^{T}$$
+
 - [[Invariant Measure and Stationary Distribution]]
 - [[Kac Theorem on Markov Chain]]
+- [[Perron-Frobenius Theorem on Irreducible Nonnegative Matrix]]
+
+>[!info]
+>We can use many numerical methods to compute the largest eigenvector.
+
 - [[Power Iteration and Inverse Iteration for General Eigenvalue Problem]]
+- [[Rayleigh Quotient for Eigenvalue Problem]]
+- [[QR Iteration for General Eigenvalue Problem]]
 
 
 ### Principle Component Analysis
+
+![[Principle Component Analysis#^028c45]]
+
+![[Principle Component Analysis#^feea32]]
+
+![[Principle Component Analysis#^ab6364]]
 
 - [[Principle Component Analysis]]
 - [[Nonnegative Matrix Factorization]]
@@ -331,8 +410,12 @@ date of note: 2024-09-27
 
 
 
+### Linear ODE and Stochastic Linear ODE
 
-
+- [[Linear ODE with Constant Coefficients]]
+- [[Jordan Canonical Form]]
+- [[Linear Stochastic Differential Equation]]
+- [[Linear Stochastic Differential Equation Explicit Solution]]
 
 
 

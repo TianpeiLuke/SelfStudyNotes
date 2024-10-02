@@ -23,7 +23,7 @@ date of note: 2024-08-21
 
 ![[Variational Characterization of Eigenvalues of Hermitian Matrix#^50523d]]
 
-- [[Courant-Fischer Minimax Theorem]]
+- [[Courant-Fischer Minimax Theorem for Eigenvalue Problem]]
 - [[Variational Characterization of Eigenvalues of Hermitian Matrix]]
 - [[Rayleigh Quotient for Eigenvalue Problem]]
 

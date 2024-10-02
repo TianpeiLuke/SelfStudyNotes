@@ -45,9 +45,9 @@ date of note: 2024-08-21
 
 ##  Min-Max Theorem
 
-![[Courant-Fischer Minimax Theorem#^3d4e1f]]
+![[Courant-Fischer Minimax Theorem for Eigenvalue Problem#^3d4e1f]]
 
-- [[Courant-Fischer Minimax Theorem]]
+- [[Courant-Fischer Minimax Theorem for Eigenvalue Problem]]
 
 ## Principle Component Analysis
 
@@ -63,7 +63,7 @@ date of note: 2024-08-21
 - [[Convex Optimization for Eigenvalue Problem]]
 
 
-- [[Courant-Fischer Minimax Theorem]]
+- [[Courant-Fischer Minimax Theorem for Eigenvalue Problem]]
 - [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
 - [[Eigenvalue and Eigenvector for Linear Map]]
 - [[Eigenspace and Spectrum for Linear Map]]
