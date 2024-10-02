@@ -106,6 +106,7 @@ date of note: 2024-05-12
 - [[Block Householder QR Factorization]]
 - [[Modified Gram-Schmidt Algorithm for QR Factorization]]
 
+- [[Bidiagonal Factorization with Householder Transformation]]
 
 ### Least Square Problems
 
