@@ -146,10 +146,12 @@ date of note: 2024-05-12
 - [[Jordan Canonical Form]]
 - [[Power Iteration and Inverse Iteration for General Eigenvalue Problem]]
 - [[QR Iteration for General Eigenvalue Problem]]
+
 - [[Hessenberg QR Factorization via Given Transformation]]
 - [[Householder Transformation and Householder Reflection]]
 - [[Hessenberg Reduction via Householder Transformation]]
 - [[Hessenburg QR Iteration for Unsymmetric Eigenvalue Problem]]
+- [[Shift Strategy for Faster Hessenberg QR Iterations]]
 
 
 #### Symmetric Case, Small Scale

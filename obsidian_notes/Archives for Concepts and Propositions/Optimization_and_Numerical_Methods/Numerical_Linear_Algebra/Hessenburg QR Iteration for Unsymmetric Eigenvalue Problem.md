@@ -84,21 +84,8 @@ date of note: 2024-09-25
 
 ### Shifted QR Iteration
 
->[!info]
->We can improve the *rate of convergence* for *Hessenberg QR iteration* with **shifts.** 
 
-
->[!important] Definition
->The **shifted Hessenberg QR iteration** algorithm *approximates* the **eigenvalues** $D$ of $A$ by producing a sequence of *unitarily similar Hessenberg matrices* $\{H_{k}\}_{k\ge 1}$ as follow:
->- *Require*: $A\in \mathbb{C}^{n\times n}$
->- *Require*: **shift parameter** $\mu\in \mathbb{R}$
->- Initialize with **Hessenberg reduction** $$H_{0} = U_{0}^{*}\,A\,U_{0}$$
->- For $k=1\,{,}\ldots{,}\,$ until convergence:
->	- Compute the **QR factorization** of *Hessenberg matrix* $H_{k-1}$ **shifted by** $\mu$  $$U_{k}\,R_{k} = H_{k-1} -\mu I$$
->	- Apply $U_{k}$ to **column** of $R_{k}$ with **additional shifting** to obtain new *unitary similar* **Hessenberg matrix** $H_{k}$ $$H_{k} = R_{k}\,U_{k} + \mu I$$
-
-#### Francis QR Step
-
+- [[Shift Strategy for Faster Hessenberg QR Iterations]]
 
 
 ### Put it Together
