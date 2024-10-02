@@ -68,6 +68,7 @@ date of note: 2024-07-13
 - [[Nonnegative and Positive Matrix]]
 
 - [[Hamiltonian Matrix]]
+- [[Skew-Hamiltonian Matrix]]
 - [[Symplectic Matrix]]
 
 #### Determinant and Trace of Matrix

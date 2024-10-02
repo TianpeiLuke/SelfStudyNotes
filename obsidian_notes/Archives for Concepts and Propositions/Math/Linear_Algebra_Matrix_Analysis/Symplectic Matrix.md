@@ -30,16 +30,18 @@ date of note: 2024-05-09
 
 ![[Hamiltonian Matrix#^6ddb7d]]
 
-- [[Hamiltonian Matrix]]
+- [[Hamiltonian Matrix]] ^678224
 - [[Inner Product Space]]
 
 >[!important] Definition
 >A matrix $S\in \mathbb{R}^{2n\times 2n}$ is  **symplectic** if 
 >$$
-> S^{T}\,J\,S = J
+> S^{T}\,J\,S = J \quad \iff \quad JS = (S^{-1})^{T}J
 >$$
 >where 
 >$$J = \left[ \begin{array}{cc}0 & I_{n} \\ -I_{n} &0\end{array} \right] $$ is the **permutation matrix**.
+
+^050719
 
 - [[Permutation Matrix and Reversal Matrix]]
 - [[Skew-Hermitian and Skew-Symmetric Matrix]]
