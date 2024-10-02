@@ -64,14 +64,17 @@ date of note: 2024-07-03
 - [[Linear Independence]]
 
 
+## Conjugate Gradient
 
+- [[Conjugate Gradient Algorithm Linear]]
+- [[Conjugate Gradient Algorithm Nonlinear]]
 
 
 -----------
 ##  Recommended Notes and References
 
 
-
+- [[Krylov Subspace]]
 - [[Vector Space over a Field]]
 
 - [[Numerical Optimization by Nocedal]] pp 103
