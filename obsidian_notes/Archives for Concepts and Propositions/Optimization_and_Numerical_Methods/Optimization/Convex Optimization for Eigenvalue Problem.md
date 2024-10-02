@@ -3,17 +3,33 @@ tags:
   - concept
   - math/matrix_analysis
   - math/linear_algebra
-keywords: 
-topics: 
-name: 
+  - optimization/algorithm
+  - optimization/theory
+keywords:
+  - rayleigh_quotient
+topics:
+  - optimization
+  - optimization/algorithm
+name: Convex Optimization for Eigenvalue Problem
 date of note: 2024-08-21
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Convex Optimization for Eigenvalue Problem
 
+![[Rayleigh Quotient for Eigenvalue Problem#^2635f7]]
+
+![[Variational Characterization of Eigenvalues of Hermitian Matrix#^50523d]]
+
+- [[Courant-Fischer Minimax Theorem]]
+- [[Variational Characterization of Eigenvalues of Hermitian Matrix]]
+- [[Rayleigh Quotient for Eigenvalue Problem]]
+
+
+
+- [[Krylov Subspace]]
 
 
 ## Explanation
@@ -21,13 +37,18 @@ date of note: 2024-08-21
 
 
 
+## Iterative Algorithms
+
+
+- [[Lanczos Iteration to solve Eigenvalue Problem]]
+- [[Arnoldi Iterations to solve Eigenvalue Problems]]
+
+
 
 -----------
 ##  Recommended Notes and References
 
 
-- [[Courant-Fischer Minimax Theorem]]
-- [[Rayleigh Quotient for Eigenvalue Problem]]
 
 - [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
 - [[Eigenvalue and Eigenvector for Linear Map]]

@@ -25,6 +25,8 @@ date of note: 2024-08-21
 >The **Rayleigh quotient** associated with $A$ is defined as
 >$$R(A, x) := \frac{\left\langle  x\,,\, Ax   \right\rangle}{\left\langle  x\,,\,x    \right\rangle}, \quad \forall\,  0 \neq x\in \mathbb{C}^{n}$$
 
+^2635f7
+
 - [[Hermitian or Symmetric Matrix]]
 - [[Sesquilinear Form]]
 

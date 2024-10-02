@@ -145,7 +145,10 @@ date of note: 2024-05-12
 
 #### Symmetric Case, Large Scale
 
+- [[Rayleigh Quotient for Eigenvalue Problem]]
+- [[Variational Characterization of Eigenvalues of Hermitian Matrix]]
 - [[Krylov Subspace]]
+- [[Convex Optimization for Eigenvalue Problem]]
 - [[Tridiagonal Decomposition of Symmetric Matrix]]
 - [[Lanczos Iteration to solve Eigenvalue Problem]]
 
