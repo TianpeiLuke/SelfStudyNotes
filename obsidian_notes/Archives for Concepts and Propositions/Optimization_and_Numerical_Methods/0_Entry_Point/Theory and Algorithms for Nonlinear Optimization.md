@@ -103,20 +103,15 @@ date of note: 2024-05-12
 - [[Convex Optimization for Eigenvalue Problem]]
 
 - [[QR Iteration to solve Eigenvalue Problem of General Matrix]]
-- [[Tridiagonal Decomposition of Symmetric Matrix]]
+- [[Hessenburg QR Iteration to solve Eigenvalue Problem]]
+- [[Rayleigh Quotient Iteration to solve Eigenvalue Problem]]
+
 
 - [[Biorthogonalization Methods]]
 - [[Lanczos Iteration to solve Eigenvalue Problem]]
 - [[Jacobi-Davidson Algorithm to Sparse Eigenvalue Problem]]
 - [[Arnoldi Iterations to solve Eigenvalue Problems]]
-
-- [[QR Iteration for Eigenvalue of Symmetric Matrix]]
 - [[Tridiagonal Decomposition of Symmetric Matrix]]
-
-- [[Biorthogonalization Methods]]
-- [[Lanczos Iteration to Solve Eigenvalue Problem]]
-- [[Jacobi-Davidson Algorithm to Sparse Eigenvalue Problem]]
-- [[Arnoldi Iterations to Sparse Eigenvalue Problems]]
 
 
 ### Derivative-Free Optimization
