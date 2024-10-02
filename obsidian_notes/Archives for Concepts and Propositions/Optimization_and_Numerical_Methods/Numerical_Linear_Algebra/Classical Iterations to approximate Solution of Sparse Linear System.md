@@ -89,7 +89,7 @@ date of note: 2024-09-29
 
 ### Non Symmetric
 
-- [[Power Iteration to solve Eigenvalue Problem of General Matrix]]
+- [[Power Iteration and Inverse Iteration to solve Eigenvalue Problem]]
 - [[QR Iteration to solve Eigenvalue Problem of General Matrix]]
 - [[Conjugate Gradient Normal Equation Residual]]
 

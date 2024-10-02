@@ -27,7 +27,7 @@ date of note: 2024-09-25
 ##  Recommended Notes and References
 
 
-- [[Power Iteration to solve Eigenvalue Problem of General Matrix]]
+- [[Power Iteration and Inverse Iteration to solve Eigenvalue Problem]]
 - [[Householder Transformation and Householder Reflection]]
 
 - [[Linear Span over a Set of Vectors]]

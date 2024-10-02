@@ -44,7 +44,7 @@ date of note: 2024-09-25
 >
 >-- [[Matrix Computations by Golub]] pp 367
 
-- [[Power Iteration to solve Eigenvalue Problem of General Matrix]]
+- [[Power Iteration and Inverse Iteration to solve Eigenvalue Problem]]
 
 >[!info]
 >Note that $$T_{k} = R_{k}U_{k} = U_{k}^{*}U_{k}R_{k}U_{k} = U_{k}^{*}(U_{k}R_{k})U_{k} = U_{k}^{*}\,T_{k-1}\,U_{k}$$ so $T_{k}  \stackrel{U}{\sim} T_{k-1}$.
@@ -67,7 +67,7 @@ date of note: 2024-09-25
 
 
 - [[Hessenberg Reduction via Householder Transformation]]
-- [[Power Iteration to solve Eigenvalue Problem of General Matrix]]
+- [[Power Iteration and Inverse Iteration to solve Eigenvalue Problem]]
 - [[Schur Triangularization and Schur Form]]
 
 

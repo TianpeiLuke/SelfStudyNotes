@@ -35,7 +35,7 @@ date of note: 2024-09-24
 - [[Optimal Transport in Discrete Setting]]
 - [[Network Flow Problem as Linear Optimization]] pp 517 - 547
 - [[Stochastic Matrix and Doubly Stochastic Matrix]]
-- [[Power Iteration to solve Eigenvalue Problem of General Matrix]]
+- [[Power Iteration and Inverse Iteration to solve Eigenvalue Problem]]
 
 - [[Optimal Transport in Discrete Setting]]
 - [[Network Flow Problem as Linear Optimization]]

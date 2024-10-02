@@ -134,12 +134,13 @@ date of note: 2024-05-12
 
 #### General Case, Small Scale
 
-- [[Power Iteration to solve Eigenvalue Problem of General Matrix]]
+- [[Power Iteration and Inverse Iteration to solve Eigenvalue Problem]]
 - [[QR Iteration to solve Eigenvalue Problem of General Matrix]]
 - [[Hessenberg QR Factorization via Given Transformation]]
 - [[Householder Transformation and Householder Reflection]]
 - [[Hessenberg Reduction via Householder Transformation]]
 - [[Hessenburg QR Iteration to solve Eigenvalue Problem]]
+- [[Rayleigh Quotient Iteration to solve Eigenvalue Problem]]
 
 
 #### Symmetric Case, Large Scale
@@ -147,6 +148,8 @@ date of note: 2024-05-12
 - [[Krylov Subspace]]
 - [[Tridiagonal Decomposition of Symmetric Matrix]]
 - [[Lanczos Iteration to solve Eigenvalue Problem]]
+
+
 
 #### General Case, Large Scale
 

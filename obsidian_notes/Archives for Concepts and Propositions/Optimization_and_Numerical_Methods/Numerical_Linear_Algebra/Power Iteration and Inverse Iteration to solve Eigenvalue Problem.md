@@ -7,6 +7,7 @@ tags:
 keywords:
   - power_iteration_eigenvalue_problem
   - matrix_analysis
+  - inverse_iteration
 topics:
   - numerical_linear_algebra
 name: Power Iteration to solve Eigenvalue Problem of General Matrix
@@ -90,3 +91,4 @@ date of note: 2024-09-25
 
 
 - [[Matrix Computations by Golub]] pp 450 - 452
+- [[Numerical Linear Algebra by Trefethen]] pp 204 - 207

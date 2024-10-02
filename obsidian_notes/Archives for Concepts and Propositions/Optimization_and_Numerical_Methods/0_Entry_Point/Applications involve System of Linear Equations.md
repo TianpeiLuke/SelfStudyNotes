@@ -314,7 +314,7 @@ date of note: 2024-09-27
 - [[Markov Transition Kernel and Transition Function]]
 - [[Invariant Measure and Stationary Distribution]]
 - [[Kac Theorem on Markov Chain]]
-- [[Power Iteration to solve Eigenvalue Problem of General Matrix]]
+- [[Power Iteration and Inverse Iteration to solve Eigenvalue Problem]]
 
 
 ### Principle Component Analysis
