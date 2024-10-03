@@ -113,7 +113,7 @@ date of note: 2024-05-12
 #### Iterative Algorithms to Solve Large Sparse Eigenvalue Problem
 
 - [[Biorthogonalization Methods]]
-- [[Lanczos Iteration for Large Eigenvalue Problem]]
+- [[Lanczos Iteration Practical for Large Symmetric Eigenvalue Problem]]
 - [[Arnoldi Iterations for Large Eigenvalue Problems]]
 - [[Tridiagonal Decomposition of Symmetric Matrix]]
 - [[Jacobi-Davidson Algorithm to Sparse Eigenvalue Problem]]

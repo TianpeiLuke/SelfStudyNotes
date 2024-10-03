@@ -139,7 +139,7 @@ date of note: 2024-05-12
 - [[Principle of Biorthogonality]]
 - [[Biorthogonalization Methods]]
 
-#### General Case, Small Scale
+#### General Case without Symmetric, Small Scale
 
 >[!info]
 >For general $A\in \mathbb{C}^{n\times n}$, $$A \stackrel{U}{\sim} T = D+ N$$ 
@@ -147,6 +147,9 @@ date of note: 2024-05-12
 - [[Schur Triangularization and Schur Form]]
 - [[Jordan Canonical Form]]
 - [[Power Iteration and Inverse Iteration for General Eigenvalue Problem]]
+
+>[!info]
+>The most common approach is to reduce an *unsymmetric matrix* $A$ to a *Hessenberg matrix* $H$, and then perform *QR iterations*
 
 - [[QR Iteration for General Eigenvalue Problem]]
 - [[Hessenberg QR Factorization via Given Transformation]]
@@ -171,6 +174,8 @@ date of note: 2024-05-12
 
 - [[Rayleigh Quotient Iteration for Symmetric Eigenvalue Problem]]
 
+>[!info]
+>Similar to unsymmetric case, the most common approach is to reduce a *symmetric matrix* $A$ to a *tridiagonal matrix* $T$, and then perform *QR iterations* to *diagonalize it*.
 
 - [[Tridiagonal Eigenvalue Problem]]
 - [[Tridiagonal Decomposition of Symmetric Matrix]]
@@ -188,10 +193,11 @@ date of note: 2024-05-12
 
 - [[Krylov Subspace]]
 - [[Convex Optimization for Eigenvalue Problem]]
-- [[Lanczos Iteration for Large Eigenvalue Problem]]
+- [[Lanczos Tridiagonalization for Large Symmetric Eigenvalue Problem]]
+- [[Lanczos Iteration Practical for Large Symmetric Eigenvalue Problem]]
 
 
-#### General Case, Large Scale
+#### General Case without Symmetric, Large Scale
 
 - [[Arnoldi Iterations for Large Eigenvalue Problems]]
 - [[Jacobi-Davidson Algorithm to Sparse Eigenvalue Problem]]

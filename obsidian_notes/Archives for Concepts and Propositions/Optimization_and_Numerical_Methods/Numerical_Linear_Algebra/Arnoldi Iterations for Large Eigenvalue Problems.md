@@ -33,11 +33,13 @@ date of note: 2024-09-29
 ##  Recommended Notes and References
 
 
+- [[Hessenberg Reduction via Householder Transformation]]
 - [[Krylov Subspace]]
 - [[System of Linear Equations or Linear System]]
 
 - [[Conjugate Gradient Algorithm Linear]]
-- [[Lanczos Iteration for Large Eigenvalue Problem]]
+- [[Lanczos Tridiagonalization for Large Symmetric Eigenvalue Problem]]
+- [[Lanczos Iteration Practical for Large Symmetric Eigenvalue Problem]]
 
 
 - [[Matrix Analysis by Horn]]

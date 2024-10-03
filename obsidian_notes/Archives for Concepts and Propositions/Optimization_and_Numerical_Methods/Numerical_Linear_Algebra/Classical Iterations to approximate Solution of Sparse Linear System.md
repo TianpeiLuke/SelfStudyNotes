@@ -97,7 +97,7 @@ date of note: 2024-09-29
 
 ## Iterative Algorithms to Solve Eigenvalue Problem
 
-- [[Lanczos Iteration for Large Eigenvalue Problem]]
+- [[Lanczos Iteration Practical for Large Symmetric Eigenvalue Problem]]
 - [[Arnoldi Iterations for Large Eigenvalue Problems]]
 
 
