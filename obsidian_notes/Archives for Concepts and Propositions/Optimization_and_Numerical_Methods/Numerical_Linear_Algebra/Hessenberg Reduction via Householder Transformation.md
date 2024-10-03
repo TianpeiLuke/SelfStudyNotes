@@ -33,6 +33,8 @@ date of note: 2024-08-08
 >	- Apply the *Householder transformation* on **columns** of $A$ via the *rank-1 update* $$A_{\{ 1:n \}, \{ k+1:n \}} \leftarrow A_{\{ 1:n \}, \{ k+1:n \}} - \beta^{(k)}\,\left(A_{\{ 1:n \}, \{ k+1:n \}} v^{(k)}\right)(v^{(k)})^{T} $$
 >- *Return* the **upper Hessenberg matrix** that overwrites $A$ as $$H = U_{0}^{T}\,A\,U_{0}$$
 
+^44a0a9
+
 - [[Hessenberg Matrix]]
 - [[Householder Transformation and Householder Reflection]]
 - [[Householder QR Factorization]]

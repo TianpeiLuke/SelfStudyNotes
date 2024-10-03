@@ -147,13 +147,14 @@ date of note: 2024-05-12
 - [[Schur Triangularization and Schur Form]]
 - [[Jordan Canonical Form]]
 - [[Power Iteration and Inverse Iteration for General Eigenvalue Problem]]
-- [[QR Iteration for General Eigenvalue Problem]]
 
+- [[QR Iteration for General Eigenvalue Problem]]
 - [[Hessenberg QR Factorization via Given Transformation]]
 - [[Householder Transformation and Householder Reflection]]
 - [[Hessenberg Reduction via Householder Transformation]]
 - [[Hessenburg QR Iteration for Unsymmetric Eigenvalue Problem]]
-- [[Shift Strategy for Faster Hessenberg QR Iterations]]
+- [[Shift Strategy for Faster QR Iterations]]
+- [[QR Iteration Practical for General Eigenvalue Problem]]
 
 
 #### Symmetric Case, Small Scale

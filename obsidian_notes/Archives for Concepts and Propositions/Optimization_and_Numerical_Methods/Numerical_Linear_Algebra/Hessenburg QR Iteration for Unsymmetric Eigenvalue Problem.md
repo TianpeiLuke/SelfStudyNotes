@@ -85,12 +85,12 @@ date of note: 2024-09-25
 ### Shifted QR Iteration
 
 
-- [[Shift Strategy for Faster Hessenberg QR Iterations]]
+- [[Shift Strategy for Faster QR Iterations]]
 
 
 ### Put it Together
 
-
+- [[QR Iteration Practical for General Eigenvalue Problem]]
 
 
 >[!important]
@@ -118,7 +118,8 @@ date of note: 2024-09-25
 >
 >It can be shown that $T_{k}$ will converge to the **Schur form** $$T_{k} \to T = D+N$$
 
-## Hessenburg QR Iteration
+>[!info]
+>The **Hessenberg QR iteration** with **shift** is the *standard QR iteration* in practice.
 
 
 
@@ -139,10 +140,6 @@ date of note: 2024-09-25
 - [[Schur Triangularization and Schur Form]]
 
 
-
-
-- [[Linear Span over a Set of Vectors]]
-- [[Orthogonal Complement of Hilbert Spaces]]
 - [[QR Factorization of Matrix]]
 
 - [[Eigenvalue and Eigenvector for Linear Map]]
