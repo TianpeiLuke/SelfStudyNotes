@@ -175,7 +175,8 @@ date of note: 2024-05-12
 - [[Tridiagonal Eigenvalue Problem]]
 - [[Tridiagonal Decomposition of Symmetric Matrix]]
 - [[Tridiagonal Reduction of Symmetric Matrix via Householder Transformation]]
-- [[Symmetric QR Iteration for Tridiagonal Decomposition]]
+- [[Symmetric QR Step with Shift]]
+- [[Symmetric QR Iteration for Symmetric Eigenvalue Problem]]
 
 - [[Symmetric Schur Decomposition of 2-by-2 Matrix]]
 - [[Jacobi Method for Symmetric Eigenvalue Problem]]

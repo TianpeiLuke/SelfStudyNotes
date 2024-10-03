@@ -93,9 +93,7 @@ date of note: 2024-09-25
 - [[QR Iteration Practical for General Eigenvalue Problem]]
 
 
->[!important]
->This algorithm requires $$25n^3$$ flops if $Q$ and $T$ are computed. 
->- If only the **eigenvalues** are desired, then $$10n^3$$ flops are necessary.
+
 
 
 ## Explanation

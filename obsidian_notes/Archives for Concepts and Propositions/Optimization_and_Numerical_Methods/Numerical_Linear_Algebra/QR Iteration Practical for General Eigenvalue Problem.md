@@ -59,7 +59,9 @@ date of note: 2024-10-02
 - [[Schur Triangularization and Schur Form]]
 - [[Shift Strategy for Faster QR Iterations]]
 
-
+>[!important]
+>This algorithm requires $$25n^3$$ flops if $Q$ and $T$ are computed. 
+>- If only the **eigenvalues** are desired, then $$10n^3$$ flops are necessary.
 ## Explanation
 
 >[!info]
@@ -72,7 +74,7 @@ date of note: 2024-10-02
 ## Symmetric Case
 
 - [[Tridiagonal Reduction of Symmetric Matrix via Householder Transformation]]
-- [[Symmetric QR Iteration for Tridiagonal Decomposition]]
+- [[Symmetric QR Iteration for Symmetric Eigenvalue Problem]]
 
 
 
@@ -88,7 +90,7 @@ date of note: 2024-10-02
 - [[QR Iteration for General Eigenvalue Problem]]
 - [[QR Factorization of Matrix]]
 
-- [[Symmetric QR Iteration for Tridiagonal Decomposition]]
+- [[Symmetric QR Iteration for Symmetric Eigenvalue Problem]]
 
 - [[Eigenvalue and Eigenvector for Linear Map]]
 - [[Hermitian or Symmetric Matrix]]

@@ -99,7 +99,7 @@ date of note: 2024-10-02
 - [[QR Factorization of Matrix]]
 
 - [[QR Iteration Practical for General Eigenvalue Problem]]
-- [[Symmetric QR Iteration for Tridiagonal Decomposition]]
+- [[Symmetric QR Iteration for Symmetric Eigenvalue Problem]]
 
 - [[Eigenvalue and Eigenvector for Linear Map]]
 - [[Matrix]]
