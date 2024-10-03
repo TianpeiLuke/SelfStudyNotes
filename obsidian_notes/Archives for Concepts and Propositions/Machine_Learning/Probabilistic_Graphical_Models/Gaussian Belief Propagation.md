@@ -171,11 +171,6 @@ date of note: 2024-05-12
 - [[Kalman Filter Discrete-Time]]
 
 
-## Mean-Field Approximation and Gauss-Seidel Iteration
-
-- [[Mean Field Approximation]]
-- [[Gauss-Seidel Iteration to solve solve Sparse Linear Equations]]
-
 
 
 -----------

@@ -36,6 +36,9 @@ date of note: 2024-05-11
 - [[Complete Orthonormal Basis of Hilbert Space]]
 - [[Gram-Schmidt Orthogonalization]]
 - [[Coordinate Representation in Hilbert Space and Fourier Coefficients]]
+
+### Examples
+
 - [[Separable Hilbert Space]]
 - [[lp Sequence Space]]
 - [[Wasserstein Space]]
@@ -112,9 +115,7 @@ date of note: 2024-05-11
 - [[Singular Value Decomposition of Compact Operator]]
 
 - [[Positive Semidefinite Operator]]
-
 - [[Square Root of Positive Semidefinite Operator and Absolute Value]]
-
 - [[Partial Isometry]]
 - [[Polar Decomposition of Bounded Operator]]
 

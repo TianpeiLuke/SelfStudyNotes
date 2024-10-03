@@ -27,6 +27,9 @@ date of note: 2024-05-11
 - [[Cauchy Sequence]]	
 - [[Complete Metric Space]]
 - [[Banach Space]]
+
+### Examples
+
 - [[Lp Space]]
 - [[Essential Supremum and Essential Infimum]]
 - [[L-infinite Space]]
