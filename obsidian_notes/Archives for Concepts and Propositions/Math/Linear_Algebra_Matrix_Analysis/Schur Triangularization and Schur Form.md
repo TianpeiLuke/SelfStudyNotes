@@ -191,6 +191,7 @@ date of note: 2024-09-16
 
 - [[Finite Dimensional Vector Spaces by Halmos]] pp 106 - 107
 - [[Matrix Analysis by Horn]] pp 101 - 106
+- [[Matrix Analysis for Scientists and Engineers by Laub]] pp 98
 - [[Matrix Computations by Golub]] pp 351, 440
 - [[Numerical Linear Algebra by Trefethen]] pp 193 - 195
 - [[Matrix CookBook by Petersen]] pp 32
