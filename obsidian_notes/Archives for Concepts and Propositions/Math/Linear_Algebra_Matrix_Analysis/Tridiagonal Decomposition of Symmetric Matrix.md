@@ -58,6 +58,7 @@ date of note: 2024-09-25
 >- If $q_{1} = v_{1}$, then $$q_{i} = \pm v_{i}, \;\;\text{ and }\;\; |T_{i,i-1}| = |S_{i,i-1}|, \quad i=1\,{,}\ldots{,}\,k-2$$
 >- Moreover, if $k < n$, then $$S_{k+1, k} = 0.$$
 
+
 ## Explanation
 
 >[!info]

@@ -82,6 +82,11 @@ date of note: 2024-09-15
 - [[Linear ODE with Constant Coefficients]]
 - [[Exponential Map of Linear Operator]]
 
+>[!info]
+>The **Jordan decomposition** is an *nonunitary analog* to the **Schur decomposition** for unsymmetric matrix.
+
+- [[Schur Triangularization and Schur Form]]
+
 
 ## Characteristic Polynomial and Multiplicity 
 

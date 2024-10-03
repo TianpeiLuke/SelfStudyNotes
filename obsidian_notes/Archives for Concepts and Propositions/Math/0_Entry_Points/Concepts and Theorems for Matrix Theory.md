@@ -133,15 +133,16 @@ date of note: 2024-07-13
 - [[Normal Transformation]]
 - [[Invariant Subspaces Approximation for Self-Adjoint Matrix]]
 
-
-#### Jordan Decomposition
-
-- [[Nilpotent Linear Transformation and Matrix]]
 - [[Krylov Subspace and Krylov Matrix]]
-
 - [[Hessenberg Decomposition of Matrix]]
 - [[Tridiagonal Decomposition of Symmetric Matrix]]
 
+
+#### Jordan Decomposition
+
+- [[Similarity Relation between Linear Maps and Matrices]]
+- [[Nilpotent Linear Transformation and Matrix]]
+- [[Krylov Subspace and Krylov Matrix]]
 - [[Jordan Canonical Form]]
 
 #### Triangular Equivalence

@@ -157,6 +157,10 @@ date of note: 2024-09-16
 >
 >Among them, $A$ is **unitarily similar** to a **diagonal matrix** $$A \sim D$$ *if and only if* $A$ is **normal matrix**. $$A^{*}A = AA^{*}.$$
 
+>[!info]
+>The **Jordan decomposition** is an *nonunitary analog* to the **Schur decomposition** for unsymmetric matrix.
+
+- [[Jordan Canonical Form]]
 
 ## Commuting Family
 

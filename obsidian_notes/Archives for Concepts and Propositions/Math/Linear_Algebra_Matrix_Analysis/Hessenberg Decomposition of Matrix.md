@@ -59,6 +59,15 @@ date of note: 2024-09-25
 >- Moreover, if $k < n$, then $$G_{k+1, k} = 0.$$
 
 
+### Geometric Multiplicity
+
+>[!important] Proposition
+>If $\lambda$ is an **eigenvalue** of an **unreduced Hessenberg matrix** $H\in \mathbb{R}^{n\times n}$, then the **geometric multiplicity** of $\lambda$ is $1$, i.e. $$\text{dim}(\mathcal{E}_{\lambda})=1.$$
+
+- [[Eigenvalue and Eigenvector for Linear Map]]
+- [[Algebraic and Geometric Multiplicity of Linear Map]]
+
+
 ## Explanation
 
 
@@ -90,4 +99,4 @@ date of note: 2024-09-25
 - [[Tridiagonal Bidiagonal and Block Tridiagonal Matrix]]
 
 - [[Matrix Analysis by Horn]]
-- [[Matrix Computations by Golub]] pp 378 - 381
+- [[Matrix Computations by Golub]] pp 378 - 382
