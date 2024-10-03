@@ -26,6 +26,8 @@ date of note: 2024-09-24
 >[!important] Definition
 >A matrix $A=[a_{i,j}]\in M_{n}$ is called an **tridiagonal matrix** if $$a_{i,j} =0 \quad \text{ if } |i - j| > 1,$$ i.e.  $$A = \left[ \begin{array}{ccccc}a_{11} & a_{12} &  &  0 \\[5pt] a_{21} & a_{22} & \ddots &   \\[5pt]   & \ddots & \ddots &  a_{n-1, n} \\[5pt] 0 &    & a_{n, n-1} & a_{nn}\end{array} \right].$$
 
+^06ea9d
+
 - [[Diagonal Matrix and Block Diagonal Matrix]]
 - [[Matrix Transformation]]
 
@@ -61,6 +63,19 @@ date of note: 2024-09-24
 ## Properties
 
 
+
+## QR Factorization
+
+>[!important] Proposition
+>Let $T\in \mathbb{R}^{n\times n}$ be a **symmetric** and **tridiagonal matrix**.
+>
+>Then the **QR factorization** of $T$ **preserves the tridiagonal form**. That is, $$T = QR$$ where 
+>- $Q\in \mathcal{O}(n)$ with **lower bandwidth** $1$
+>- $R\in \mathbb{R}^{n\times n}$ is a **banded upper triangular matrix** with **upper bandwdith** $2$
+>
+>Moreover, $$T_{+} = RQ = Q^{T}QRQ = Q^{T}TQ$$ is also **symmetric** and **tridiagonal**.
+
+- [[QR Factorization of Matrix]]
 
 
 ## Diagonalization

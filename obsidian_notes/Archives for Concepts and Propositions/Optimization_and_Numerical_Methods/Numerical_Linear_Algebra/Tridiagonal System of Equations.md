@@ -13,7 +13,9 @@ date of note: 2024-08-08
 >[!important]
 >**Name**: 
 
+![[Tridiagonal Bidiagonal and Block Tridiagonal Matrix#^06ea9d]]
 
+- [[Tridiagonal Bidiagonal and Block Tridiagonal Matrix]]
 
 ## Explanation
 

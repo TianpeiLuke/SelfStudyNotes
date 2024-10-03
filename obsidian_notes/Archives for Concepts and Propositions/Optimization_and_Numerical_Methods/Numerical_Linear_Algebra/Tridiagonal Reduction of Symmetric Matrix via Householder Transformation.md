@@ -36,6 +36,8 @@ date of note: 2024-09-25
 >- *Return* the tridiagonal matrix $T$ which overwrites $A$.
 >	- the matrix $Q$ can be stored in factored form $P_{k}$ in off-diagonal portion of $A$
 
+^7e7a23
+
 
 
 >[!important]

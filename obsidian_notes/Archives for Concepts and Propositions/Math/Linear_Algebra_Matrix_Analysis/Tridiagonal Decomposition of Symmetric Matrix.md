@@ -23,7 +23,7 @@ date of note: 2024-09-25
 >[!important] Proposition
 >Let $A\in M_{n}$ be a **Hermitian matrix**. 
 >
->There exists an **unitary matrix** $U\in \mathcal{U}(n)$ such that $$A = U\,T\,U^{*}$$ where $T$ is a **tridiagonal matrix**.
+>There exists an **unitary matrix** $U\in \mathcal{U}(n)$ such that $$A = U\,T\,U^{*}$$ where $T$ is a **symmetric** and **tridiagonal matrix**.
 
 - [[Tridiagonal Bidiagonal and Block Tridiagonal Matrix]]
 
