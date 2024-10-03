@@ -76,6 +76,17 @@ date of note: 2024-05-09
 
 - [[Symplectic Matrix]]
 
+>[!important] Proposition
+>The *symplectic similarity transformations* **preserve Hamiltonian structure**:
+>$$
+>J\left( S^{-1}MS \right) = \left( J\left( S^{-1}MS \right) \right)^{T}
+>$$
+>where $S$ is a **symplectic matrix**, and $M$ is a **Hamiltonian matrix**.
+>- This shows that $$M \text{ Hamiltonian } \iff S^{-1}MS \text{ Hamiltonian }$$
+
+- [[Divergence Theorem on Riemannian Manifold]]
+- [[Hamiltonian Monte Carlo]]
+
 ## Skew-Hamiltonian matrix
 
 ![[Skew-Hamiltonian Matrix#^b17e61]]

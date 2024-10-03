@@ -50,3 +50,5 @@ date of note: 2024-05-16
 
 - [[Matrix Analysis for Scientists and Engineers by Laub]]
 - [[Matrix Computations by Golub]]
+- [[Numerical Linear Algebra by Trefethen]]
+- [[Matrix CookBook by Petersen]]

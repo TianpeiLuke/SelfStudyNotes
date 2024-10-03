@@ -40,3 +40,4 @@ date of note: 2024-10-01
 - [[Matrix Analysis by Horn]] pp 7, 136, 153, 227, 276, 567, 
 - [[Matrix Computations by Golub]] pp 18
 - [[Matrix Analysis for Scientists and Engineers by Laub]]
+- [[Matrix CookBook by Petersen]] pp 48

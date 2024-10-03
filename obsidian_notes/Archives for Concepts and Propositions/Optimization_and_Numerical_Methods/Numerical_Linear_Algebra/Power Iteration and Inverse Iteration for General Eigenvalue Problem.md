@@ -55,6 +55,8 @@ date of note: 2024-09-25
 >	- *Normalize* the vector $$q^{(k)} = \frac{z^{(k)}}{\lVert z^{(k)} \rVert_{2} }$$
 >	- **Approximate the eigenvalue**  via the bilinear form $$\lambda^{(k)} = (q^{(k)})^{*}\,A\,q^{(k)}$$
 
+^9b3cc4
+
 - [[Resolvent Operator and Spectrum of Linear Operator]]
 
 >[!info]

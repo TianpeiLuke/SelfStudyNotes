@@ -49,6 +49,7 @@ date of note: 2024-08-21
 ##  Recommended Notes and References
 
 
+- [[Invariant Subspaces Approximation for Self-Adjoint Matrix]]
 
 - [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
 - [[Eigenvalue and Eigenvector for Linear Map]]

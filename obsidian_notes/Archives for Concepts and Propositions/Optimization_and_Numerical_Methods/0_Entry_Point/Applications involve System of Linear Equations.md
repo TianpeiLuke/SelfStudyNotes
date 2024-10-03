@@ -412,10 +412,15 @@ date of note: 2024-09-27
 
 ### Linear ODE and Stochastic Linear ODE
 
+- [[Concepts and Theorems for Differential Equations]]
+- [[Concepts and Theorems for Stochastic Differential Equations]]
+- [[Theory and Algorithms for Numerical Solution of Differential Equations]]
+
+- [[Exponential Map of Linear Operator]]
+- [[Homogeneous Linear Differential Equations]]
 - [[Linear ODE with Constant Coefficients]]
 - [[Jordan Canonical Form]]
-- [[Linear Stochastic Differential Equation]]
-- [[Linear Stochastic Differential Equation Explicit Solution]]
+
 
 
 

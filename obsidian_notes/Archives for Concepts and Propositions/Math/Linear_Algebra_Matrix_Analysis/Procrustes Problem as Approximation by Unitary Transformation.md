@@ -26,6 +26,7 @@ date of note: 2024-09-30
 
 ^47b6c5
 
+- [[Stiefel Manifold]]
 - [[Frobenius Norm of Matrix]]
 
 ### Optimal Solution via Polar Decomposition
@@ -62,6 +63,7 @@ date of note: 2024-09-30
 ##  Recommended Notes and References
 
 
+- [[Invariant Subspaces Approximation for Self-Adjoint Matrix]]
 - [[Procrustes Problem via Singular Value Decomposition]]
 - [[Low Rank Approximation of Matrix and Eckhart-Young Theorem]]
 - [[Frobenius Norm of Matrix]]

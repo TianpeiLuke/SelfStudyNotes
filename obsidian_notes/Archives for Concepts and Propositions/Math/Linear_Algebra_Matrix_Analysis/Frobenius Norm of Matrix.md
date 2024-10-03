@@ -90,3 +90,4 @@ date of note: 2024-09-13
 - [[Finite Dimensional Vector Spaces by Halmos]]
 - [[Matrix Analysis for Scientists and Engineers by Laub]] pp 59 - 61
 - [[Matrix Computations by Golub]] pp 71, 77 - 79
+- [[Matrix CookBook by Petersen]] pp 61

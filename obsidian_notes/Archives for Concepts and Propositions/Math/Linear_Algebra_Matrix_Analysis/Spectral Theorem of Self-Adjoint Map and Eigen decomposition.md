@@ -29,6 +29,8 @@ date of note: 2024-05-27
 >- $A$ is **unitarily diagonalizable**
 >- There exists a *unitary matrix* $U\in U(n)$ such that $$A = U\,\Lambda\,U^{*}$$ where $\Lambda =\text{diag}\left\{\lambda_{1} \,{,}\ldots{,}\,\lambda_{n}\right\}.$
 
+^e5de5d
+
 - [[Diagonal Matrix and Block Diagonal Matrix]]
 - [[Unitary and Orthogonal Transformation]]
 - [[Spectral Theorem of Normal Map and Eigen decomposition]]
@@ -65,7 +67,10 @@ date of note: 2024-05-27
 
 ## Explanation
 
+>[!info]
+>The **eigen-decomposition** of *symmetric matrix* $A$, $$A = U\,D\,U^{T}$$ is a special case of **Schur decomposition** $$A = U\,T\,U^{T}.$$ Thus, it is also called the **symmetric Schur decomposition.** 
 
+- [[Schur Triangularization and Schur Form]]
 
 
 ## Principle of Biorthogonality

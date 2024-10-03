@@ -114,3 +114,4 @@ date of note: 2024-07-26
 - Wikipedia [Moore-Penrose_inverse](https://en.wikipedia.org/wiki/Moore%E2%80%93Penrose_inverse)
 - [[Matrix Analysis by Horn]] pp 453 - 454
 - [[Matrix Analysis for Scientists and Engineers by Laub]] pp 29 - 31
+- [[Matrix CookBook by Petersen]] pp 21

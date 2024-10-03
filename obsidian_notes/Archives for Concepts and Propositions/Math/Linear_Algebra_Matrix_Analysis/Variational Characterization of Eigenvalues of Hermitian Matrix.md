@@ -68,7 +68,8 @@ date of note: 2024-09-23
 - [[Principle Component Analysis]]
 - [[Schur Triangularization and Schur Form]]
 
-
+- [[Stiefel Manifold]]
+- [[Grassmann Manifold as Quotient Manifold]]
 
 - [[Matrix Analysis for Scientists and Engineers by Laub]]
 - [[Matrix Analysis by Horn]] pp 234 - 236

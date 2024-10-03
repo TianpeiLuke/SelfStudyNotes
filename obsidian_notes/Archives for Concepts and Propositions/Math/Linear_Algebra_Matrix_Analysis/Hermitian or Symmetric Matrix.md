@@ -86,3 +86,4 @@ date of note: 2024-05-09
 - [[Matrix Analysis by Horn]] pp 7, 227 - 234
 - [[Finite Dimensional Vector Spaces by Halmos]]
 - [[Matrix Computations by Golub]] pp 29
+- [[Matrix CookBook by Petersen]] pp 48

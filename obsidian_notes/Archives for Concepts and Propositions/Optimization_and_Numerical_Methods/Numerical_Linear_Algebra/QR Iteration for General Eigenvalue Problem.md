@@ -53,6 +53,11 @@ date of note: 2024-09-25
 >
 >It can be shown that $T_{k}$ will converge to the **Schur form** $$T_{k} \to T = D+N$$
 
+>[!info]
+>The QR iteration $\hat{U}_{k}:=\left(U_{0}\,{}\ldots{}\,U_{k}\right)$ converges to $U_{*}$ when $$U_{*} = \arg\min_{U} \lVert A U - U S \rVert_{F}$$
+
+- [[Invariant Subspaces Approximation for Self-Adjoint Matrix]]
+
 ## Hessenburg QR Iteration
 
 - [[Hessenberg Reduction via Householder Transformation]]

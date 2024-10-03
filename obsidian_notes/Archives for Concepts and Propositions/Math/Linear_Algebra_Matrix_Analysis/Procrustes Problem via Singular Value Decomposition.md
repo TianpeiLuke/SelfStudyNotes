@@ -1,16 +1,23 @@
 ---
 tags:
   - concept
-keywords: 
-topics: 
-name: 
+  - math/matrix_analysis
+  - math/linear_algebra
+  - numerical_methods/numerical_linear_algebra
+keywords:
+  - procrustes_problem
+  - singular_value_decomposition
+topics:
+  - matrix_analysis
+  - numerical_linear_algebra
+name: Procrustes Problem via Singular Value Decomposition
 date of note: 2024-09-30
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Procrustes Problem via Singular Value Decomposition
 
 
 ![[Procrustes Problem as Approximation by Unitary Transformation#^47b6c5]]

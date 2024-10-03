@@ -86,6 +86,8 @@ date of note: 2024-05-12
 - [[Tridiagonal System of Equations]]
 - [[Tridiagonal Decomposition of Symmetric Matrix]]
 - [[Tridiagonal Eigenvalue Problem]]
+- [[LU Factorization of Tridiagonal Matrix]]
+
 
 #### Toeplitz and Circulant System
 
@@ -131,7 +133,7 @@ date of note: 2024-05-12
 
 ### Iterative Algorithms to solve Eigenvalue Problems
 
-![[rayleigh_quotient_power_inverse.png]]
+
 
 - [[Rayleigh Quotient for Eigenvalue Problem]]
 - [[Principle of Biorthogonality]]
@@ -164,7 +166,11 @@ date of note: 2024-05-12
 - [[Rayleigh Quotient for Eigenvalue Problem]]
 - [[Variational Characterization of Eigenvalues of Hermitian Matrix]] 
 
+![[rayleigh_quotient_power_inverse.png]]
+
 - [[Rayleigh Quotient Iteration for Symmetric Eigenvalue Problem]]
+
+
 - [[Tridiagonal Eigenvalue Problem]]
 - [[Tridiagonal Decomposition of Symmetric Matrix]]
 - [[Tridiagonal Reduction of Symmetric Matrix via Householder Transformation]]
@@ -227,3 +233,4 @@ date of note: 2024-05-12
 
 - [[Matrix Analysis by Horn]]
 - [[Finite Dimensional Vector Spaces by Halmos]]
+- [[Matrix CookBook by Petersen]]

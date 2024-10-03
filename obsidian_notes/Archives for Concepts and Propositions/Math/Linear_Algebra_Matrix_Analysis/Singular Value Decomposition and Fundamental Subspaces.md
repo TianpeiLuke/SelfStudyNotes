@@ -76,3 +76,4 @@ date of note: 2024-08-21
 - [[Matrix Analysis by Horn]]
 - [[Matrix Computations by Golub]] pp 82
 - [[Matrix Analysis for Scientists and Engineers by Laub]] pp 36
+- [[Matrix CookBook by Petersen]] pp 31

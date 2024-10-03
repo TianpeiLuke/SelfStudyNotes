@@ -92,3 +92,4 @@ date of note: 2024-09-15
 
 - [[Matrix Analysis by Horn]] pp 12
 - [[Matrix Computations by Golub]]
+- [[Matrix CookBook by Petersen]] pp 28

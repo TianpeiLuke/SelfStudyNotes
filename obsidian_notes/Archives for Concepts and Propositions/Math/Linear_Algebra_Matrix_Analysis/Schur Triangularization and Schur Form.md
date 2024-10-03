@@ -31,7 +31,7 @@ date of note: 2024-09-16
 >[!important] Definition
 >Let $A\in M_{n}(\mathbb{C})$ have *eigenvalues* $\lambda_{1} \,{,}\ldots{,}\,\lambda_{n}$. 
 >
->The **Schur form** or **Schur triangularization** of $A$ is represented as
+>The **Schur form** or **Schur triangularization (decomposition)** of $A$ is represented as
 >$$
 >A = U\,T\,U^{*}
 >$$ 
@@ -193,3 +193,4 @@ date of note: 2024-09-16
 - [[Matrix Analysis by Horn]] pp 101 - 106
 - [[Matrix Computations by Golub]] pp 351, 440
 - [[Numerical Linear Algebra by Trefethen]] pp 193 - 195
+- [[Matrix CookBook by Petersen]] pp 32

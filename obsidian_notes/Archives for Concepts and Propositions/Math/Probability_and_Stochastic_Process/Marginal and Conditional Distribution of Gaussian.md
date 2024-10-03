@@ -242,3 +242,4 @@ date of note: 2024-07-25
 - [[Positive Semidefinite Transformation]]
 
 - Wikipedia [Multivariate_normal_distribution](https://en.wikipedia.org/wiki/Multivariate_normal_distribution)
+- [[Matrix CookBook by Petersen]] pp 40 - 44

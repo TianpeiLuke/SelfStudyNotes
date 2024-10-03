@@ -29,12 +29,24 @@ date of note: 2024-08-21
 
 - [[Hermitian or Symmetric Matrix]]
 - [[Sesquilinear Form]]
+- [[Stiefel Manifold]]
+
+>[!important] Proposition
+>Let $A\in M_{n}$ be a *Hermitian matrix* and $x\in \mathbb{C}^{n}$. 
+>
+>The problem $$\min_{\lambda}\;\lVert (A - \lambda I)x  \rVert_{2}^2$$ has **unique minimizer** as $$\lambda^{*} = R(A, x) := \frac{\left\langle  x\,,\, Ax   \right\rangle}{\left\langle  x\,,\,x    \right\rangle}$$
 
 
 ## Explanation
 
 >[!info]
 >The Rayleigh quotient is used in the **min-max theorem** to get exact values of all eigenvalues. It is also used in *eigenvalue algorithms* (such as [Rayleigh quotient iteration](https://en.wikipedia.org/wiki/Rayleigh_quotient_iteration "Rayleigh quotient iteration")) to obtain an eigenvalue approximation from an eigenvector approximation.
+
+>[!info]
+>The above proposition states that **Rayleigh quotient** approximate the *eigenvalue* associated with given *eigenvector*.
+>$$
+>\lambda(x) = R(A,x)
+>$$
 
 
 ## Variational Characterization of Eigenvalue Problem
@@ -54,6 +66,11 @@ date of note: 2024-08-21
 ![[Principle Component Analysis#^d06ebc]]
 
 - [[Principle Component Analysis]]
+
+## Rayleigh Quotient Iterations for Eigenvalue Problem
+
+- [[Rayleigh Quotient Iteration for Symmetric Eigenvalue Problem]]
+
 
 
 

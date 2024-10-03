@@ -4,16 +4,21 @@ tags:
   - math/matrix_analysis
   - math/linear_algebra
   - numerical_methods/numerical_linear_algebra
-keywords: 
-topics: 
-name: 
+keywords:
+  - tridiagonal_decomposition
+topics:
+  - matrix_analysis
+  - numerical_linear_algebra
+name: Tridiagonal Decomposition of Symmetric Matrix
 date of note: 2024-09-25
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Tridiagonal Decomposition of Symmetric Matrix
+
+>[!important] 
 
 
 

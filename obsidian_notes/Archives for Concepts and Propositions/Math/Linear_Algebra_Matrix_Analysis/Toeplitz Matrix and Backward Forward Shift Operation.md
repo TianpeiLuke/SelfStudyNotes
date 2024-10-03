@@ -81,3 +81,4 @@ date of note: 2024-08-08
 - [[Numerical Linear Algebra by Trefethen]] 
 - [[Matrix Computations by Golub]] pp 208 - 218
 - [[Matrix Analysis by Horn]] pp 34
+- [[Matrix CookBook by Petersen]] pp 54

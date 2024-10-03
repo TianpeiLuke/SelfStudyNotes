@@ -68,6 +68,7 @@ date of note: 2024-05-12
 
 ^028c45
 
+- [[Stiefel Manifold]]
 - [[Linear Subspace]]
 - [[Projection Map onto Linear Subspace]]
 - [[Fundamental Subspaces from Linear Map]]

@@ -202,6 +202,12 @@ date of note: 2024-06-08
 - [[System of Linear Equations or Linear System]]
 - [[Existence and Uniqueness of Solution of Linear Equations]]
 
+## Numerical Solution for Least Square Problem
+
+- [[Algorithms for Least Square Estimation Problem]]
+
+
+
 
 
 -----------
@@ -229,3 +235,4 @@ date of note: 2024-06-08
 - [[Numerical Linear Algebra by Trefethen]] pp 77 - 87
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 117
 - [[Matrix Analysis for Scientists and Engineers by Laub]] pp 65 - 67
+- [[Matrix CookBook by Petersen]] pp 28

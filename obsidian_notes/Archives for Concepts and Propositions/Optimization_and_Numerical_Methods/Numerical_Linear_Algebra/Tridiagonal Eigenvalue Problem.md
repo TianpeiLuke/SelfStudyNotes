@@ -32,4 +32,4 @@ date of note: 2024-10-02
 - [[Eigenvalue and Eigenvector for Linear Map]]
 
 - [[Matrix Analysis by Horn]]
-- [[Matrix Computations by Golub]] pp 458 - 475
+- [[Matrix Computations by Golub]] pp 467 - 475

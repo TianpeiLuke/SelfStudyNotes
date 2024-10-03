@@ -3,7 +3,6 @@ tags:
   - concept
   - math/matrix_analysis
   - numerical_methods/numerical_linear_algebra
-  - optimization/algorithm
 keywords: 
 topics: 
 name: 
@@ -27,12 +26,11 @@ date of note: 2024-10-02
 ##  Recommended Notes and References
 
 
-- [[Diagonalizable Matrix]]
-- [[Invariance under Linear Transformation]]
+- [[Tridiagonal Bidiagonal and Block Tridiagonal Matrix]]
+- [[Tridiagonal System of Equations]]
+- [[Tridiagonal Decomposition of Symmetric Matrix]]
 
 
-- [[Hermitian or Symmetric Matrix]]
-- [[Matrix]]
-- [[Linear Map]]
-
-- [[Matrix Computations by Golub]] pp 443 - 448
+- [[Matrix Analysis by Horn]] pp 222
+- [[Matrix Computations by Golub]] pp 458, 548
+- [[Numerical Linear Algebra by Trefethen]]

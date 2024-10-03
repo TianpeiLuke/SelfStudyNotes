@@ -131,6 +131,7 @@ date of note: 2024-07-13
 - [[Unitary Similarity and Unitary Diagonalizable]]
 - [[Schur Triangularization and Schur Form]]
 - [[Normal Transformation]]
+- [[Invariant Subspaces Approximation for Self-Adjoint Matrix]]
 
 #### Jordan Decomposition
 
@@ -193,6 +194,7 @@ date of note: 2024-07-13
 - [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
 - [[Spectral Theorem of Normal Map and Eigen decomposition]]
 - [[Principle of Biorthogonality]]
+- [[Invariant Subspaces Approximation for Self-Adjoint Matrix]]
 
 #### Singular Value Decomposition
 
@@ -263,4 +265,7 @@ date of note: 2024-07-13
 
 
 - [[Matrix Analysis by Horn]]
+- [[Matrix Analysis for Scientists and Engineers by Laub]]
 - [[Finite Dimensional Vector Spaces by Halmos]]
+- [[Matrix CookBook by Petersen]]
+- [[Matrix Computations by Golub]]

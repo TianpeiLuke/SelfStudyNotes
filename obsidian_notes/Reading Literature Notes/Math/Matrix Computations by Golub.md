@@ -63,3 +63,4 @@ date of note: 2024-08-08
 - [[Matrix Analysis for Scientists and Engineers by Laub]]
 - [[Matrix Analysis by Horn]]
 - [[Numerical Linear Algebra by Trefethen]]
+- [[Matrix CookBook by Petersen]]

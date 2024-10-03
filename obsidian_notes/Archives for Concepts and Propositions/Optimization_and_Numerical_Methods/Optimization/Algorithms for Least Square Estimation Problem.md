@@ -125,6 +125,28 @@ date of note: 2024-06-08
 >-- [[Matrix Computations by Golub]] pp 268
 
 
+## Comparison of Time Complexity
+
+| Method                                                  | Flops             |
+| ------------------------------------------------------- | ----------------- |
+| **Cholesky Factorization** and **Gaussian Elimination** | $\dfrac{2n^3}{3}$ |
+| **Householder QR**                                      | $\dfrac{4n^3}{3}$ |
+| **Modified Gram-Schmidt**                               | $2n^3$            |
+| **Singular Value Decomposition**                        | $12n^3$           |
+
+
+
+>[!quote]
+>Although **Gaussian elimination** involves the least amount of arithmetic, there are three reasons why an orthogonalization method might be considered:
+>- The flop counts tend to exaggerate the **Gaussian elimination** advantage. When *memory traffic* and *vectorization overheads* are considered, the **QR approach** is comparable in efficiency. 
+>- The **orthogonalization methods** have **guaranteed stability**; there is no "*growth factor*" to worry about as in Gaussian elimination. 
+>- In cases of **ill-conditioning**, the *orthogonal methods* give an added measure of reliability. QR with condition estimation is very dependable and, of course, SVD is *unsurpassed* when it comes to producing a meaningful solution to a nearly singular system.
+>  
+>We are not expressing a strong preference for orthogonalization methods but merely suggesting viable alternatives to Gaussian elimination.  
+>  
+>-- [[Matrix Computations by Golub]] pp 298 - 299  
+
+
 
 -----------
 ##  Recommended Notes and References

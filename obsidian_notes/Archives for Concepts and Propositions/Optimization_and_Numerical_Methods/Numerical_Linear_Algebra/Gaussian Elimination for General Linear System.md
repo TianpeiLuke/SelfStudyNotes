@@ -174,3 +174,4 @@ date of note: 2024-09-21
 
 - [[Matrix Computations by Golub]] pp 111 - 114
 - [[Numerical Linear Algebra by Trefethen]] pp 147 - 171 
+- [[Matrix CookBook by Petersen]] pp 32

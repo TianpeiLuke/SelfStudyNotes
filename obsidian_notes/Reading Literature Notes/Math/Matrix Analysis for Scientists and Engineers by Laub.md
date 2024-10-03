@@ -48,3 +48,5 @@ date of note: 2024-09-15
 
 - [[Matrix Analysis by Horn]]
 - [[Matrix Computations by Golub]]
+- [[Numerical Linear Algebra by Trefethen]]
+- [[Matrix CookBook by Petersen]]
