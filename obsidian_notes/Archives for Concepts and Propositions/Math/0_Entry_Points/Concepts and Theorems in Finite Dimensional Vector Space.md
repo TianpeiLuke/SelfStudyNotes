@@ -111,7 +111,7 @@ date of note: 2024-05-11
 ### Jordan Decomposition
 
 - [[Nilpotent Linear Transformation and Matrix]]
-- [[Krylov Subspace]]
+- [[Krylov Subspace and Krylov Matrix]]
 - [[Jordan Canonical Form]]
 
 

@@ -67,7 +67,7 @@ date of note: 2024-05-26
 
 ## Krylov Subspace
 
-- [[Krylov Subspace]]
+- [[Krylov Subspace and Krylov Matrix]]
 
 
 

@@ -27,7 +27,7 @@ date of note: 2024-09-29
 
 
 - [[Principle of Biorthogonality]]
-- [[Krylov Subspace]]
+- [[Krylov Subspace and Krylov Matrix]]
 - [[System of Linear Equations or Linear System]]
 
 - [[Conjugate Gradient Algorithm Linear]]

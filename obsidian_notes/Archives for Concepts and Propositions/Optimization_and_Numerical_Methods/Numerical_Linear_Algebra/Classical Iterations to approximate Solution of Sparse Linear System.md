@@ -68,7 +68,7 @@ date of note: 2024-09-29
 
 ## Summary of Iterative Algorithms
 
-- [[Krylov Subspace]]
+- [[Krylov Subspace and Krylov Matrix]]
 
 |                                     | **Solution to Linear System** $Ax = b$                                        | **Eigenvalue Problem**  $Ax = \lambda x$ |
 | ----------------------------------- | ----------------------------------------------------------------------------- | ---------------------------------------- |

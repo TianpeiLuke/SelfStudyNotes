@@ -24,6 +24,9 @@ date of note: 2024-10-02
 ##  Recommended Notes and References
 
 
+- [[Shift Strategy for Faster Symmetric QR Iterations]]
+- [[Tridiagonal Reduction of Symmetric Matrix via Householder Transformation]]
+
 - [[Hessenburg QR Iteration for Unsymmetric Eigenvalue Problem]]
 - [[QR Iteration for General Eigenvalue Problem]]
 

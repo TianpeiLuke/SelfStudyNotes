@@ -108,7 +108,7 @@ date of note: 2024-05-12
 
 
 - [[Conjugate Vector with respect to Positive Definite Transformation]]
-- [[Krylov Subspace]]
+- [[Krylov Subspace and Krylov Matrix]]
 - [[Numerical Optimization by Nocedal]] pp 109
 
 ## Convergence Analysis
@@ -150,7 +150,7 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 - [[Conjugate Vector with respect to Positive Definite Transformation]]
-- [[Krylov Subspace]]
+- [[Krylov Subspace and Krylov Matrix]]
 
 - [[Conjugate Gradient Algorithm Nonlinear]]
 - [[Newton Method]]

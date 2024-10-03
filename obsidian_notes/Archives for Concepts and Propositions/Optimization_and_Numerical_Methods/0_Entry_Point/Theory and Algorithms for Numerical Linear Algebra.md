@@ -153,7 +153,7 @@ date of note: 2024-05-12
 
 - [[QR Iteration for General Eigenvalue Problem]]
 - [[Hessenberg QR Factorization via Given Transformation]]
-- [[Householder Transformation and Householder Reflection]]
+- [[Hessenberg Decomposition of Matrix]]
 - [[Hessenberg Reduction via Householder Transformation]]
 - [[Hessenburg QR Iteration for Unsymmetric Eigenvalue Problem]]
 - [[Shift Strategy for Faster QR Iterations]]
@@ -180,7 +180,7 @@ date of note: 2024-05-12
 - [[Tridiagonal Eigenvalue Problem]]
 - [[Tridiagonal Decomposition of Symmetric Matrix]]
 - [[Tridiagonal Reduction of Symmetric Matrix via Householder Transformation]]
-- [[Symmetric QR Step with Shift]]
+- [[Shift Strategy for Faster Symmetric QR Iterations]]
 - [[Symmetric QR Iteration for Symmetric Eigenvalue Problem]]
 
 - [[Symmetric Schur Decomposition of 2-by-2 Matrix]]
@@ -191,7 +191,7 @@ date of note: 2024-05-12
 >[!info]
 >For large scalar problem, we only the compute **top/bottom $k$ eigenvalues and eigenvectors.**
 
-- [[Krylov Subspace]]
+- [[Krylov Subspace and Krylov Matrix]]
 - [[Convex Optimization for Eigenvalue Problem]]
 - [[Lanczos Tridiagonalization for Large Symmetric Eigenvalue Problem]]
 - [[Lanczos Iteration Practical for Large Symmetric Eigenvalue Problem]]

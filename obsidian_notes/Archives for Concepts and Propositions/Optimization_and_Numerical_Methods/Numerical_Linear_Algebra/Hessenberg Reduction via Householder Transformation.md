@@ -35,6 +35,7 @@ date of note: 2024-08-08
 
 ^44a0a9
 
+- [[Hessenberg Decomposition of Matrix]]
 - [[Hessenberg Matrix]]
 - [[Householder Transformation and Householder Reflection]]
 - [[Householder QR Factorization]]

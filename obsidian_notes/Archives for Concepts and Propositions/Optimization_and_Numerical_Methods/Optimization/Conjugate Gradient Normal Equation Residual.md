@@ -35,7 +35,7 @@ date of note: 2024-09-30
 - [[Least Square Estimation]]
 - [[Least Square Estimation Solution and Geometric Interpretation]]
 - [[Algorithms for Least Square Estimation Problem]]
-- [[Krylov Subspace]]
+- [[Krylov Subspace and Krylov Matrix]]
 
 
 - [[System of Linear Equations or Linear System]]

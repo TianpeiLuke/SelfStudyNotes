@@ -130,7 +130,7 @@ date of note: 2024-09-15
 
 
 - [[Nilpotent Linear Transformation and Matrix]]
-- [[Krylov Subspace]]
+- [[Krylov Subspace and Krylov Matrix]]
 - [[Characteristic Polynomial for Linear Map]]
 - [[Minimal Polynomial for Linear Map]]
 

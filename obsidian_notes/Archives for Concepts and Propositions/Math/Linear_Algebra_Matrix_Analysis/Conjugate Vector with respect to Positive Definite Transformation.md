@@ -74,7 +74,7 @@ date of note: 2024-07-03
 ##  Recommended Notes and References
 
 
-- [[Krylov Subspace]]
+- [[Krylov Subspace and Krylov Matrix]]
 - [[Vector Space over a Field]]
 
 - [[Numerical Optimization by Nocedal]] pp 103

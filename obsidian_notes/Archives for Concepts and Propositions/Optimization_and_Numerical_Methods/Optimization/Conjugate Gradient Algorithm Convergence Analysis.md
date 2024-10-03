@@ -46,7 +46,7 @@ date of note: 2024-05-12
 >and $x_{k}$ is the **minimizer** of $$\phi(x) = \frac{1}{2} x^T\,A\,x - b^T\,x$$ over the *affine subspace* $$x_{0} + \text{span}\left\{ d_{0}, d_{1} \,{,}\ldots{,}\,d_{k-1} \right\}.$$
 
 - [[Affine Combination]]
-- [[Krylov Subspace]]
+- [[Krylov Subspace and Krylov Matrix]]
 - [[Numerical Optimization by Nocedal]] pp 106
 
 ## Explanation
@@ -130,7 +130,7 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 - [[Conjugate Vector with respect to Positive Definite Transformation]]
-- [[Krylov Subspace]]
+- [[Krylov Subspace and Krylov Matrix]]
 
 - [[Conjugate Gradient Algorithm Nonlinear]]
 - [[Newton Method]]

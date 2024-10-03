@@ -85,7 +85,7 @@ date of note: 2024-10-02
 ## Explanation
 
 
-
+- [[Shift Strategy for Faster Symmetric QR Iterations]]
 
 
 -----------

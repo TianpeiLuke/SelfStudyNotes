@@ -23,6 +23,7 @@ date of note: 2024-09-21
 -----------
 ##  Recommended Notes and References
 
+- [[Tridiagonal Reduction of Symmetric Matrix via Householder Transformation]]
 
 - [[Lanczos Iteration Practical for Large Symmetric Eigenvalue Problem]]
 - [[Tridiagonal Bidiagonal and Block Tridiagonal Matrix]]

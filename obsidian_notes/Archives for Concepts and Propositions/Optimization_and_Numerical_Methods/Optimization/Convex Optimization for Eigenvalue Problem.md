@@ -29,7 +29,7 @@ date of note: 2024-08-21
 
 
 
-- [[Krylov Subspace]]
+- [[Krylov Subspace and Krylov Matrix]]
 
 
 ## Explanation

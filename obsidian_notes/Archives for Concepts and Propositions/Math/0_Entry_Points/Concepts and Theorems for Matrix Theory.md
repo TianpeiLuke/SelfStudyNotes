@@ -126,17 +126,22 @@ date of note: 2024-07-13
 
 - [[Unitary and Orthogonal Transformation]]
 - [[Unitary Group]]
+- [[Unitary Similarity and Unitary Diagonalizable]]
 - [[Gram-Schmidt Orthogonalization]]
 - [[QR Factorization of Matrix]]
-- [[Unitary Similarity and Unitary Diagonalizable]]
 - [[Schur Triangularization and Schur Form]]
 - [[Normal Transformation]]
 - [[Invariant Subspaces Approximation for Self-Adjoint Matrix]]
 
+
 #### Jordan Decomposition
 
 - [[Nilpotent Linear Transformation and Matrix]]
-- [[Krylov Subspace]]
+- [[Krylov Subspace and Krylov Matrix]]
+
+- [[Hessenberg Decomposition of Matrix]]
+- [[Tridiagonal Decomposition of Symmetric Matrix]]
+
 - [[Jordan Canonical Form]]
 
 #### Triangular Equivalence
