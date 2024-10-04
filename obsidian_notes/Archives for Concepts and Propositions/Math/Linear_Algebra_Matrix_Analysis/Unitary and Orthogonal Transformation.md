@@ -94,6 +94,23 @@ date of note: 2024-05-09
 > $$ 
 > where $\lVert \cdot \rVert$ is the induced norm by inner product.
 
+- [[Finite Dimensional Vector Spaces by Halmos]] pp 142
+
+
+>[!important] Proposition
+>If $U\in M_{n}$, the following are **equivalent**:
+>- $U$ is **unitary**.
+>- $U$ is **nonsingular** and $U^{*} = U^{-1}$.
+>- $$UU^{*} = I.$$
+>- $U^{*}$ is **unitary**.
+>- The *columns* of $U$ are **orthonormal**.
+>- The *rows* of $U$ are **orthonormal**.
+>- For all $x\in \mathbb{C}^{n}$, $$\lVert x \rVert_{2} = \lVert Ux \rVert_{2},$$ that is, $x$ and $Ux$ have the **same Euclidean norm**.
+
+- [[Isometry and Isometric isomorphism]]
+- [[Matrix Analysis by Horn]] pp 84
+
+
 ## Examples
 
 ![[Givens Rotations and Jacobi Rotations#^956c04]]
@@ -120,7 +137,7 @@ date of note: 2024-05-09
 - [[Vector Space over a Field]]
 
 
-- [[Matrix Analysis by Horn]]
-- [[Finite Dimensional Vector Spaces by Halmos]]
+- [[Matrix Analysis by Horn]] pp 83 - 85
+- [[Finite Dimensional Vector Spaces by Halmos]] pp 143
 - [[Matrix Computations by Golub]]
 - [[Matrix CookBook by Petersen]] pp 49
