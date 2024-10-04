@@ -47,7 +47,7 @@ date of note: 2024-10-03
 >[!important]
 >This theorem states that for any linear transformation $A\in \mathcal{L}(V)$ on a  finite dimensional space $V$. 
 >
->$$V= \bigoplus_{j=1}^{r_{i}}\text{Ker}(A - \lambda_{1}I)^{q_{1,j}} \,{\oplus}\ldots{\oplus}\,\bigoplus_{j=1}^{r_{p}}\text{Ker}(A - \lambda_{p}I)^{q_{p,j}}$$  
+>$$V= \bigoplus_{j=1}^{r_{i}}\text{Ker}(A - \lambda_{1}I)^{q_{1,j}} \,{\oplus}\ldots{\oplus}\,\bigoplus_{j=1}^{r_{p}}\text{Ker}(A - \lambda_{q}I)^{q_{p,j}}$$  
 >- $$\sum_{j=1}^{r_{i}}\text{dim}(\text{Ker}(A - \lambda_{i}I)^{q_{i,j}}) = m_{i}$$
 
 ![[Jordan Canonical Form#^44be3f]]

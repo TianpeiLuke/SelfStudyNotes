@@ -46,6 +46,18 @@ date of note: 2024-09-29
 >
 >-- [[Numerical Linear Algebra by Trefethen]] pp 244
 
+
+### Projection into Krylov Space
+
+>[!quote]
+>The iterative methods that occupy the remainder of this book are based on the idea of **projecting** an $m$-dimensional problem into a **lower-dimensional Krylov subspace**.
+>
+>-- [[Numerical Linear Algebra by Trefethen]] pp 245
+
+- [[Krylov Subspace and Krylov Matrix]]
+
+
+
 ### Number of Steps, Work per Step
 
 >[!quote]
@@ -63,6 +75,12 @@ date of note: 2024-09-29
 
 ### Exact vs. Approximate Solutions
 
+>[!quote]
+>Matrix iterative methods are **approximate** in the sense that in principle they do not deliver exact answers, even in the absence of *rounding errors*, at least when carried to the number of iterative steps that is of practical interest. ... After all, *even **direct methods** are inexact* when carried out on a computer: one hopes for answers accurate to machine precision, no better. Since **iterative methods** too may be used to achieve the full accuracy of machine precision, the fact that they are in principle approximate need have little significance.
+
+
+![[iterative_method_linear_algebra.png]]
+
 
 
 
@@ -70,11 +88,15 @@ date of note: 2024-09-29
 
 - [[Krylov Subspace and Krylov Matrix]]
 
-|                                     | **Solution to Linear System** $Ax = b$                                        | **Eigenvalue Problem**  $Ax = \lambda x$ |
-| ----------------------------------- | ----------------------------------------------------------------------------- | ---------------------------------------- |
-| $A = A^{*}$ **self-adjoint**        | **Conjugate Gradient (CG)**                                                   | **Lanczos Iteration**                    |
-| $A \neq A^{*}$ **not self-adjoint** | **Power Iteration**<br>**Conjugate Gradient Normal Equation Residual (CGNR)** | **Arnoldi Iteration**                    |
+|                   | $Ax = b$ **linear system problem**  |    $Ax = \lambda x$ **eigenvalue problem**    |
+| ---------------   | ------------------------------------ | --------------------------------------------- |
+| $A = A^{*}$ **Hermitian** |  **Conjugate Gradient (CG)**  |  **Lanczos Iteration** |
+| $A \neq A^{*}$ **Non-Hermitian** | **GMRES**, **CGN**, **BCG** | **Arnoldi Iteration** |
 
+- [[Conjugate Gradient Algorithm Linear]]
+- [[Lanczos Tridiagonalization for Large Symmetric Eigenvalue Problem]]
+- [[Arnoldi Iterations for Large Eigenvalue Problems]]
+- [[Conjugate Gradient Normal Equation Residual]]
 
 
 ## Iterative Algorithms to Solve Linear Equations
