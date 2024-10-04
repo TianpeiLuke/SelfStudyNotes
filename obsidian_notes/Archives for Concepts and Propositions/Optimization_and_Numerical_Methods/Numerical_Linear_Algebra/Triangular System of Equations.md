@@ -41,7 +41,20 @@ date of note: 2024-08-08
 
 ## Explanation
 
+>[!info]
+>The triangular system is the by-product of 
+>- **LU factorization (Gaussian Elimination)** 
+>- **Cholesky factorization**
+>- and **QR factorization** 
+>
+>during the solution of linear system.
+>
+>All linear system problem would end up as solving a triangular system.
 
+- [[LU Factorization of Matrix]]
+- [[LDU Factorization of Symmetric Matrix]]
+- [[Cholesky Factorization of Hermitian Positive Definite Matrices]]
+- [[QR Factorization of Matrix]]
 
 ## Solution via Forward and Back Substitution
 

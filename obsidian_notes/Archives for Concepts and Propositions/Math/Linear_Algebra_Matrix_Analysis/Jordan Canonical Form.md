@@ -57,6 +57,8 @@ date of note: 2024-09-15
 >
 >If $A\in \mathbb{R}^{n\times n}$ with only **real eigenvalues**, then $S\in GL(n,\mathbb{R})$.
 
+^44be3f
+
 
 - [[Similarity Relation between Linear Maps and Matrices]]
 - [[Eigenvalue and Eigenvector for Linear Map]]
@@ -127,6 +129,9 @@ date of note: 2024-09-15
 
 - [[Nilpotent Linear Transformation and Matrix]]
 
+![[Nilpotent Linear Transformation Geometric Characterization#^bfe541]]
+
+- [[Nilpotent Linear Transformation Geometric Characterization]]
 
 
 -----------

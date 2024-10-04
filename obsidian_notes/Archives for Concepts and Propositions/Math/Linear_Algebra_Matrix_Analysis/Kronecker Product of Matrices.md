@@ -121,6 +121,6 @@ date of note: 2024-10-01
 
 - [[Matrix Analysis for Scientists and Engineers by Laub]] pp 139 - 144
 - [[Matrix Computations by Golub]] pp 27 - 28, 707, 712, 715
-- [[Finite Dimensional Vector Spaces by Halmos]] pp 98
+- [[Finite Dimensional Vector Spaces by Halmos]] pp 95 - 98
 - [[Matrix CookBook by Petersen]] pp 59
 - Wikipedia [Kronecker_product](https://en.wikipedia.org/wiki/Kronecker_product)

@@ -57,6 +57,8 @@ date of note: 2024-05-26
 - [[Reducibility of Linear Transformation]]
 
 
+
+
 ## Decomposition of Linear Map
 
 >[!important] Theorem

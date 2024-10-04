@@ -24,12 +24,41 @@ date of note: 2024-08-08
 >
 >In other word, the *system of equations* are $$a_{i,i-1}x_{i-1} + a_{i,i}x_{i}  + a_{i,i+1}x_{i+1} = b_{i}, \quad i=2\,{,}\ldots{,}\,n-1,$$ and $$a_{1,1}x_{1} + a_{1,2}x_{2} = b_{1}$$ and $$a_{n,n-1}x_{n-1} + a_{n,n}x_{n} = b_{n}.$$
 
+>[!info]
+>Tridiagonal system is a special case of **banded system**
+
+- [[Banded System of Equations]]
 
 ## Explanation
 
 >[!info]
 >This system of equations naturally arises as the **finite difference equations** when *discretizing the differential equations*.
 
+>[!info]
+>Converting the general **symmetric system** into the **symmetric tridiagonal system** is a *critical step* in computing the **eigen-decomposition** 
+
+- [[Tridiagonal Decomposition of Symmetric Matrix]]
+- [[Symmetric QR Iteration for Symmetric Eigenvalue Problem]]
+- [[Lanczos Tridiagonalization for Large Symmetric Eigenvalue Problem]]
+
+## Solution to Tridiagonal Equation
+
+>[!important]
+>A tridiagonal equation has **LU factorization** as it is a **banded system of equations** with upper bandwidth $q$, lower bandwidth $p$ such that  $$p =q =1$$ That is, $$T= LU$$ where $L$ and $U$ are both **bidiagonal matrix**
+>
+>Both *LU factorization* and the *banded forward* and *back substitution* requires **linear time complexity** $O(n)$.
+>- The  *LU factorization* for solution of general linear system requires $O(n^3).$
+
+- [[Tridiagonal Bidiagonal and Block Tridiagonal Matrix]]
+
+![[Band Gaussian Elimination and Band LU Factorization#^bb2266]]
+
+- [[Band Gaussian Elimination and Band LU Factorization]]
+
+![[Band Forward Substitution and Band Back Substitution#^c7f30d]]
+
+
+- [[Band Forward Substitution and Band Back Substitution]]
 
 
 -----------

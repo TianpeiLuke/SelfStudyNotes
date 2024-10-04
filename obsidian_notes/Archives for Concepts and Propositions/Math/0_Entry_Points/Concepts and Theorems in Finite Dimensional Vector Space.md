@@ -111,8 +111,10 @@ date of note: 2024-05-11
 ### Jordan Decomposition
 
 - [[Nilpotent Linear Transformation and Matrix]]
+- [[Nilpotent Linear Transformation Geometric Characterization]]
 - [[Krylov Subspace and Krylov Matrix]]
 - [[Jordan Canonical Form]]
+- [[Jordan Canonical Form Geometric Interpretation]]
 
 
 ### Inner Product and Orthogonality

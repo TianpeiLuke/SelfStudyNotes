@@ -48,6 +48,8 @@ date of note: 2024-09-21
 >		- For $i=k+1\,{,}\ldots{,}\,\min\{k+q, n\}$:
 >			- **Update** $U$: compute the $(j,i)$ entry of $U$ $$U_{j, i} \leftarrow U_{j, i} - L_{j,k}\,U_{k, i}.$$
 
+^bb2266
+
 >[!important]
 >If $n \gg p$ and $n \gg q$, then this algorithm involves about $$2npq$$ flops. 
 
@@ -55,6 +57,14 @@ date of note: 2024-09-21
 
 ## Explanation
 
+>[!info]
+>When $p = q = 1$, the corresponding system of equations is a [[Tridiagonal System of Equations]].
+>
+>Thus there exists a **LU factorization** of a **tridiagonal system** $$T = LU$$ where $L$ and $U$ are **lower** and **upper bidiagonal system**.
+>
+>From above, we see that the *LU factorization* has **linear time complexity** $2n.$
+
+- [[Tridiagonal Bidiagonal and Block Tridiagonal Matrix]]
 
 
 

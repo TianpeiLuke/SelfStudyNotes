@@ -32,6 +32,8 @@ date of note: 2024-07-03
 > \mathcal{K}_{m} := \mathcal{K}_{m}(A, v) := \text{span}\{ v,\, Av \,{,}\ldots{,}\, A^{m-1}v \}.
 > $$
 
+^27eea3
+
 - [[Linear Subspace]]
 - [[Linear Span over a Set of Vectors]]
 - [[Nilpotent Linear Transformation and Matrix]]
@@ -60,6 +62,7 @@ date of note: 2024-07-03
 
 ^e38b83
 
+- [[Range and Kernel of Linear Map]]
 
 ## Explanation
 
@@ -70,11 +73,15 @@ date of note: 2024-07-03
 >$$
 >That is, the **grade** of  $v$ *with respect to* $A$ is $m$.
 
+![[Nilpotent Linear Transformation and Matrix#^ee0cec]]
+
+![[Nilpotent Linear Transformation Geometric Characterization#^f97bb9]]
 
 
 -----------
 ##  Recommended Notes and References
 
+- [[Nilpotent Linear Transformation Geometric Characterization]]
 - [[Nilpotent Linear Transformation and Matrix]]
 
 - [[Linear Span over a Set of Vectors]]
@@ -83,9 +90,8 @@ date of note: 2024-07-03
 
 - [[Numerical Optimization by Nocedal]] pp 108
 - [[Nonlinear Programming by Bertsekas]] 
-- [[Matrix Analysis by Horn]]
-- [[Finite Dimensional Vector Spaces by Halmos]]
-- [[Matrix Computations by Golub]] pp 381, 459
+- [[Matrix Analysis by Horn]] pp 221
+- [[Matrix Computations by Golub]] pp 381, 459, 548
 - Gutknecht, M. H. (2007). A brief introduction to Krylov space methods for solving linear systems. In _Frontiers of Computational Science: Proceedings of the International Symposium on Frontiers of Computational Science 2005_ (pp. 53-62). Springer Berlin Heidelberg.
 
 - Wikipedia [Krylov_subspace](https://en.wikipedia.org/wiki/Krylov_subspace)

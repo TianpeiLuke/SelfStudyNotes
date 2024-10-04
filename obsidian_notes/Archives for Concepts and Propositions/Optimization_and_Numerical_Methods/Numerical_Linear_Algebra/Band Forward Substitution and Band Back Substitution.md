@@ -37,6 +37,8 @@ date of note: 2024-08-08
 >		- $$b_{k} \leftarrow b_{k} - L_{k,j}\,x_{j}$$
 >	- Finally $$x_{n} = \frac{b_{n}}{L_{n,n}}$$
 
+^c7f30d
+
 - [[Forward Substitution of Lower Triangular System]]
 
 >[!important] 

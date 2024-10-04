@@ -142,8 +142,10 @@ date of note: 2024-07-13
 
 - [[Similarity Relation between Linear Maps and Matrices]]
 - [[Nilpotent Linear Transformation and Matrix]]
+- [[Nilpotent Linear Transformation Geometric Characterization]]
 - [[Krylov Subspace and Krylov Matrix]]
 - [[Jordan Canonical Form]]
+- [[Jordan Canonical Form Geometric Interpretation]]
 
 #### Triangular Equivalence
 

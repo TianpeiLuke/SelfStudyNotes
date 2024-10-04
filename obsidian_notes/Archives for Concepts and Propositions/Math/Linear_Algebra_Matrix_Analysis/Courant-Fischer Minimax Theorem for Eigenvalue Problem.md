@@ -72,5 +72,6 @@ date of note: 2024-09-21
 
 - [[Matrix Analysis for Scientists and Engineers by Laub]]
 - [[Matrix Analysis by Horn]] pp 235 - 238
+- [[Finite Dimensional Vector Spaces by Halmos]] pp 181
 - [[Matrix Computations by Golub]] pp 441
 - [[An Introduction to Optimization on Smooth Manifolds by Boumal]]
