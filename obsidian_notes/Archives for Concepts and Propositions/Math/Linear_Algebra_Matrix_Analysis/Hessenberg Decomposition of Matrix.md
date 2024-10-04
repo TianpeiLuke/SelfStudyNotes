@@ -64,14 +64,25 @@ date of note: 2024-09-25
 >[!important] Proposition
 >If $\lambda$ is an **eigenvalue** of an **unreduced Hessenberg matrix** $H\in \mathbb{R}^{n\times n}$, then the **geometric multiplicity** of $\lambda$ is $1$, i.e. $$\text{dim}(\mathcal{E}_{\lambda})=1.$$
 
+^49191f
+
 - [[Eigenvalue and Eigenvector for Linear Map]]
 - [[Algebraic and Geometric Multiplicity of Linear Map]]
 
-
 ## Explanation
 
+![[Derogatory Matrix and Defective Matrix#^29fa19]]
 
+- [[Derogatory Matrix and Defective Matrix]]
 
+>[!important] 
+>An **unreduced Hessenberg matrix** is **nonderagotory.**
+>
+>Moreover, any matrix $B$ that is *similar* to an unreduced Hessenberg matrix is **nonderagotory.**
+
+^f822a0
+
+- [[Similarity Relation between Linear Maps and Matrices]]
 
 
 ## Hessenberg Reduction via Householder Transformation

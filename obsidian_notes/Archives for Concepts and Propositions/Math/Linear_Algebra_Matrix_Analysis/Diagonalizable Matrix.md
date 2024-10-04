@@ -83,6 +83,15 @@ date of note: 2024-09-16
 >[!important] Theorem
 >If $A \in M_{n}$ has $n$ **distinct eigenvalues**, then $A$ is **diagonalizable**.
 
+### Deragotoary and Defective Matrix
+
+![[Derogatory Matrix and Defective Matrix#^29fa19]]
+
+![[Derogatory Matrix and Defective Matrix#^872c76]]
+
+- [[Derogatory Matrix and Defective Matrix]]
+
+
 
 ## Jordan Canonical Forms
 

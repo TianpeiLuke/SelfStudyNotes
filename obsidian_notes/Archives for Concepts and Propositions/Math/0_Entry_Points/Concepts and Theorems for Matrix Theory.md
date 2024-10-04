@@ -84,9 +84,11 @@ date of note: 2024-07-13
 
 - [[Characteristic Polynomial for Linear Map]]
 - [[Algebraic and Geometric Multiplicity of Linear Map]]
+- [[Derogatory Matrix and Defective Matrix]]
 - [[Cayley-Hamilton Theorem]]
 - [[Minimal Polynomial for Linear Map]]
 - [[Companion Matrix of Polynomial]]
+
 
 
 ### System of Linear Equations
@@ -148,6 +150,7 @@ date of note: 2024-07-13
 - [[Jordan Canonical Form]]
 - [[Jordan Canonical Form Geometric Interpretation]]
 
+
 #### Triangular Equivalence
 
 - [[LU Factorization of Matrix]]
@@ -204,6 +207,7 @@ date of note: 2024-07-13
 - [[Spectral Theorem of Normal Map and Eigen decomposition]]
 - [[Principle of Biorthogonality]]
 - [[Invariant Subspaces Approximation for Self-Adjoint Matrix]]
+
 
 #### Singular Value Decomposition
 

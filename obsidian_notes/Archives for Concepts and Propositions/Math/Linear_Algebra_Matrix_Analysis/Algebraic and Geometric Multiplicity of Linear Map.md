@@ -53,6 +53,8 @@ date of note: 2024-05-27
 >\text{geometric multiplicity}(\lambda) := \text{dim}\left(\mathcal{E}_{\lambda}\right)
 >$$ 
 
+^273395
+
 - [[Eigenspace and Spectrum for Linear Map]]
 
 

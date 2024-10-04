@@ -112,9 +112,12 @@ date of note: 2024-09-15
 >- The **sum** of the **sizes** of all the *Jordan blocks* corresponding to a *given eigenvalue* is its **algebraic multiplicity**. $$\text{algebraic multiplicity}(\lambda_{i}) = \sum_{j: J_{j}(\lambda_{i})}k_{j}$$
 >- Define $$r_{k}(A, \lambda) = \text{rank}\left(A - \lambda I\right)^{k}$$ Suppose $\lambda$ is an *eigenvalue* of $A$. There exists a positive integer $k^{*}$ such that $$r_{1}(A, \lambda) > r_{2}(A, \lambda) \,{>}\ldots{>}\, r_{k^{*}}(A, \lambda) = r_{k^{*}+1}(A, \lambda)$$ This integer $k^{*}$ is the **size of largest Jordan block** with eigenvalue $\lambda$. And this integer is the **index** of $\lambda$ as an *eigenvalue* of $A$.
 
+^31139a
+
 - [[Nilpotent Linear Transformation and Matrix]]
 - [[Eigenspace and Spectrum for Linear Map]]
 - [[Diagonalizable Matrix]]
+- [[Derogatory Matrix and Defective Matrix]]
 
 ## Minimal Polynomials
 
