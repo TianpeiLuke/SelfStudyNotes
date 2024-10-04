@@ -30,6 +30,8 @@ date of note: 2024-09-21
 - [[Tridiagonal Eigenvalue Problem]]
 - [[Tridiagonal Decomposition of Symmetric Matrix]]
 
+- [[Arnoldi Iterations for Large Eigenvalue Problems]]
+
 - [[Eigenvalue and Eigenvector for Linear Map]]
 - [[Eigenspace and Spectrum for Linear Map]]
 - [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]

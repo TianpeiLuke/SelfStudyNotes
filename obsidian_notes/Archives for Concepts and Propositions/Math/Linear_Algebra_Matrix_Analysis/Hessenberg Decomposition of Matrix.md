@@ -34,9 +34,9 @@ date of note: 2024-09-25
 ### QR Factorization
 
 >[!important] Theorem
->Let $A\in \mathbb{R}^{n\times n}$ and $Q = [q_{1}\,{,}\ldots{,}\,q_{n}]\in \mathcal{O}(n)$ be **orthogonal matrix**.
+>Let $A\in M_{n}$ and $Q = [q_{1}\,{,}\ldots{,}\,q_{n}]\in \mathcal{U}(n)$ be **unitary matrix**.
 >
->Then $$Q^{T}AQ = H$$ is an **unreduced upper Hessenberg matrix** *if and only if*  $$Q^{T}K(A, q_{1}, n) = R$$ is **nonsingular** and **upper triangular**.
+>Then $$Q^{*}AQ = H$$ is an **unreduced upper Hessenberg matrix** *if and only if*  $$Q^{*}K(A, q_{1}, n) = R$$ is **nonsingular** and **upper triangular**.
 
 ^40c613
 

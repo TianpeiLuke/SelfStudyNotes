@@ -32,6 +32,11 @@ date of note: 2024-09-24
 - [[Matrix Transformation]]
 
 >[!important] Definition
+>A **Jacobi matrix** is a *real symmetric tridiagonal matrix* with *positive subdiagonal entries*.
+
+- [[Hermitian or Symmetric Matrix]]
+
+>[!important] Definition
 >A matrix $A=[a_{i,j}]\in M_{n}$ is called an **upper bidiagonal matrix** if $$a_{i,j} =0 \quad \text{ if } |i - j| > 1, \text{ or } j<i$$ i.e.  $$A = \left[ \begin{array}{ccccc}a_{11} & a_{12} &  &  0 \\[5pt] 0 & a_{22} & \ddots &   \\[5pt]   & \ddots & \ddots &  a_{n-1, n} \\[5pt] 0 &    & 0 & a_{nn}\end{array} \right].$$
 
 - [[Triangular Matrix and Block Triangular Matrix]]
