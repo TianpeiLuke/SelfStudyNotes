@@ -57,6 +57,33 @@ date of note: 2024-05-27
 
 - [[Eigenspace and Spectrum for Linear Map]]
 
+### Algebraic-Geometric Multiplicity Inequality
+
+>[!important] Theorem
+>Let $A\in M_{n}$ and $\lambda\in \mathbb{C}$, and let $k\ge 1$ be a positive integer. 
+>
+>Consider the following three statements:
+>1. $\lambda$ is an **eigenvalue** of $A$ with **geometric multiplicity** *at least* $k$, i.e. $$\text{dim}(\mathcal{E}_{\lambda}) \ge k.$$
+>2. For each $m= (n-k+1)\,{,}\ldots{,}\,n$, $\lambda$ is an **eigenvalue** of every $m\times m$ **principal submatrix** of $A$.
+>3. $\lambda$ is an **eigenvalue** of $A$ with **algebraic multiplicity** *at least* $k$.
+>  
+>Then $$1. \implies 2. \implies 3.$$  
+>In particular, the **algebraic multiplicity** of en *eigenvalue* is **at least** *as great as* its **geometric multiplicity.** $$\text{dim}(\mathcal{E}_{\lambda_{i}}) \le k_{i},\quad \forall \lambda_{i}\in \lambda(A).$$
+
+
+- [[Principal Submatrix]]
+- [[Eigenvalue and Eigenvector for Linear Map]]
+- [[Matrix Analysis by Horn]] pp 79
+
+>[!important] Theorem
+>Let $A\in M_{n}$ and $\lambda\in \mathbb{C}$, and nonzero vectors $x,y\in \mathbb{C}^{n}$. Suppose that $\lambda$ is an *eigenvalue* of $A$, with *right eigenvector* $x$ and *left eigenvector* $y$, $$Ax = \lambda x, \quad y^{*}A = \lambda y^{*}.$$
+>
+>
+>- If $\lambda$ has **algebraic multiplicity** $1$, then $$y^{*}x = \left\langle y\,,\, x \right\rangle \neq 0$$
+>- If $\lambda$ has **geometric multiplicity** $1$, then it has **algebraic multiplicity** $1$ *if and only if*  $$y^{*}x = \left\langle y\,,\, x \right\rangle \neq 0$$
+
+- [[Principle of Biorthogonality]]
+- [[Matrix Analysis by Horn]] pp 80
 
 ## Explanation
 
