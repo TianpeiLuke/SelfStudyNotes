@@ -20,16 +20,17 @@ date of note: 2024-09-25
 >**Name**: Companion Matrix of Polynomial
 
 >[!important] Definition
->Let $p(x)$ be a *polynomial* of *degree* $(n-1)$, i.e. $$p_{n-1}(x) = a_{n-1}x^{n-1} \,{+}\ldots{+}\,a_{1}x + a_{0},$$ where $a_{i}\in F$ is some *field*.
+>Let $p_{n}(x)$ be a *polynomial* of *degree* $n$, i.e. $$p_{n}(x) = x^n + a_{n-1}x^{n-1} \,{+}\ldots{+}\,a_{1}x + a_{0},$$ where $a_{i}\in F$ is some *field*.
 >
->A **companion matrix** or the **companion form** associated with $p_{n-1}(x)$ is of the form $$C = \left[ \begin{array}{ccccc}0 & 1 & 0 & \cdots & 0 \\ 0 & 0 & 1 & \ddots & \vdots \\ \vdots &  & \ddots & \ddots & 0 \\ 0 & \cdots & \cdots & 0 & 1 \\ a_{0} & a_{1} & \cdots & a_{n-2} & a_{n-1} \\ \end{array} \right] \in M_{n}(F)$$
+>A **companion matrix** or the **companion form** of $p_{n}(x)$ is of the form $$C = \left[ \begin{array}{ccccc}0 & 0 & \cdots & 0 & -a_{0} \\ 1 & 0 & \cdots & 0& -a_{1} \\  0 & 1 & \ddots & \vdots & \vdots \\ \vdots &  & \ddots & 0 & -a_{n-2} \\ 0 & \cdots & 0 & 1 & -a_{n-1} \end{array} \right] \in M_{n}(F)$$
+>- The **characteristic polynomial** of $C$ is $p_{n}(\lambda)$ $$\det \left(\lambda I - C\right) = \lambda^n + a_{n-1}\lambda^{n-1} \,{+}\ldots{+}\,a_{1}\lambda + a_{0} := p_{n}(\lambda)$$
 
 
 
 ## Explanation
 
 >[!info]
->$$C = \left[ \begin{array}{cc}0 & I_{n-1} \\ a_{0} & a_{1:n-1} \end{array} \right] $$
+>$$C = \left[ \begin{array}{cc}0 &  -a_{0} \\ I_{n-1} & -a_{1:n-1} \end{array} \right] $$
 
 
 
