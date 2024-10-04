@@ -27,6 +27,18 @@ date of note: 2024-08-08
 >
 >In other word, the system of equations are $$a_{i,1}x_{1}  \,{+}\ldots{+}\, a_{i,i}x_{i} = b_{i}, \quad i=1\,{,}\ldots{,}\,n.$$
 
+### Bidiagonal System
+
+>[!important] Definition
+>An **upper bidiagonal system** of equations is of form $$Bx = b$$ where $$B = \left[ \begin{array}{ccccc}a_{11} & a_{12} &  &  0 \\[5pt] 0 & a_{22} & \ddots &   \\[5pt]   & \ddots & \ddots &  a_{n-1, n} \\[5pt] 0 &    & 0 & a_{nn}\end{array} \right].$$
+>
+>In other word, the *system of equations* are $$a_{i,i}x_{i}  + a_{i,i+1}x_{i+1} = b_{i}, \quad i=1\,{,}\ldots{,}\,n-1,$$  and $$a_{n,n}x_{n} = b_{n}.$$
+
+>[!important] Definition
+>A **lower bidiagonal system** of equations is of form $$Bx = b$$ where $$B = \left[ \begin{array}{ccccc}a_{11} & 0 &  &  0 \\[5pt] a_{2,1} & a_{22} & \ddots &   \\[5pt]   & \ddots & \ddots &  0 \\[5pt] 0 &    & a_{n,n-1} & a_{nn}\end{array} \right].$$
+>
+>In other word, the *system of equations* are $$a_{i,i-1}x_{i-1}  + a_{i,i}x_{i} = b_{i}, \quad i=2\,{,}\ldots{,}\,n,$$ and $$a_{1,1}x_{1} = b_{1}$$
+
 ## Explanation
 
 

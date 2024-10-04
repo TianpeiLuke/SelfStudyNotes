@@ -24,6 +24,7 @@ date of note: 2024-08-08
 >
 >In other word, the *system of equations* are $$a_{i,i-1}x_{i-1} + a_{i,i}x_{i}  + a_{i,i+1}x_{i+1} = b_{i}, \quad i=2\,{,}\ldots{,}\,n-1,$$ and $$a_{1,1}x_{1} + a_{1,2}x_{2} = b_{1}$$ and $$a_{n,n-1}x_{n-1} + a_{n,n}x_{n} = b_{n}.$$
 
+
 ## Explanation
 
 >[!info]
