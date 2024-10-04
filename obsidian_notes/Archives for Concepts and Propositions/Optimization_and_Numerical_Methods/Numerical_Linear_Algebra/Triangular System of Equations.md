@@ -2,21 +2,44 @@
 tags:
   - concept
   - numerical_methods/numerical_linear_algebra
-keywords: 
-topics: 
-name: 
+keywords:
+  - triangular_system_of_equations
+topics:
+  - numerical_linear_algebra
+name: Triangular System of Equations
 date of note: 2024-08-08
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Triangular System of Equations
 
+![[Triangular Matrix and Block Triangular Matrix#^a825eb]]
 
+>[!important] Definition
+>An **upper triangular system** of equations is of form $$Ux = b$$ where $$U = \left[ \begin{array}{ccccc}a_{11} & a_{12} & \cdots & a_{1n} \\[5pt]  & a_{22} & \cdots & a_{2n} \\[5pt]  &  & \ddots & \vdots \\[5pt] &  &  & a_{nn}\end{array} \right].$$
+>
+>In other word, the system of equations are $$a_{i,i}x_{i}  \,{+}\ldots{+}\, a_{i,n}x_{n} = b_{i}, \quad i=1\,{,}\ldots{,}\,n.$$
+
+>[!important] Definition
+>A **lower triangular system** of equations is of form $$Lx = b$$ where $$L = \left[ \begin{array}{ccccc}a_{11} & &  &  \\[5pt] a_{21} & a_{22} &  &  \\[5pt] \cdots & \cdots & \ddots \\[5pt] a_{n1} & a_{n2} & \cdots & a_{nn}\end{array} \right].$$ 
+>
+>In other word, the system of equations are $$a_{i,1}x_{1}  \,{+}\ldots{+}\, a_{i,i}x_{i} = b_{i}, \quad i=1\,{,}\ldots{,}\,n.$$
 
 ## Explanation
 
+
+
+## Solution via Forward and Back Substitution
+
+![[Back Substitution of Upper Triangular System#^e097d9]]
+
+- [[Back Substitution of Upper Triangular System]]
+
+![[Forward Substitution of Lower Triangular System#^7dde49]]
+
+- [[Forward Substitution of Lower Triangular System]]
 
 
 
