@@ -24,6 +24,8 @@ date of note: 2024-09-16
 >- There exists a **unitary matrix** $$U = [x\; u_{2} \,{\;}\ldots{\;}\,u_{n}]\in M_{n}$$ such that $$U^{*}\,A\,U = T = [t_{i,j}]$$ is **upper triangular** with *diagonal entries* $t_{i,i}= \lambda_{i}$, $i=1\,{,}\ldots{,}\,n.$
 >- If $A \in \mathbb{R}^{n\times n}$ has **only real eigenvalues**, then $x$ may be chosen to be **real** and there is a **real orthogonal** $$Q = [x\; q_{2}\,{\;}\ldots{\;}\,q_{n}]\in O(n) \subset \mathbb{R}^{n\times n}$$ such that $$Q^{T}\,A\,Q = T = [t_{i,j}]$$ is **upper triangular** with *diagonal entries* $t_{i,i}= \lambda_{i}$, $i=1\,{,}\ldots{,}\,n.$
 
+^b40ca5
+
 - [[Triangular Matrix and Block Triangular Matrix]]
 - [[Unitary and Orthogonal Transformation]]
 - [[Unitary Similarity and Unitary Diagonalizable]]
@@ -120,8 +122,6 @@ date of note: 2024-09-16
 >	- If the *real eigenvalues* and *conjugate pairs* of *non-real eigenvalues* of $A$ are listed in a prescribed order, then the *real eigenvalues* and *conjugate pairs* of *non-real eigenvalues* of the respective diagonal blocks $A_{1} \,{,}\ldots{,}\,A_{m}$ of $Q^{T} A Q$ are in the *same order*.
 
 
-
-
 >[!important] Definition
 >Let $A\in \mathbb{R}^{n\times n}$ have *eigenvalues* $\lambda_{1} \,{,}\ldots{,}\,\lambda_{n}$. 
 >
@@ -138,6 +138,14 @@ date of note: 2024-09-16
 
 
 ## Explanation
+
+>[!important]
+>The importance of **Schur decomposition** is that it applies to **all matrices / maps** regardless its property, 
+>- while the **eigen-decomposition** only applies to **normal matrices / maps** including the **Hermitian matrices** / **self-adjoint maps**. 
+
+- [[Spectral Theorem of Normal Map and Eigen decomposition]]
+- [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
+
 
 >[!important]
 >**Schur form** of a matrix is a canonical form  that displays **eigenvalues** but **not eigenvectors**. 

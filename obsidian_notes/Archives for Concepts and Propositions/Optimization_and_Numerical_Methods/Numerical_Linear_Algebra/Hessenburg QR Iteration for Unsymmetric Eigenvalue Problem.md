@@ -41,6 +41,9 @@ date of note: 2024-09-25
 - [[Hessenberg Reduction via Householder Transformation]]
 - [[Schur Triangularization and Schur Form]]
 
+![[eigenvalue_unsymmetric.png]]
+
+
 ### A Hessenberg QR Step via Givens Rotation
 
 >[!info]

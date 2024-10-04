@@ -70,6 +70,7 @@ date of note: 2024-10-02
 >- In the process, we monitor the Hessenberg matrix and to reduce the **off-diagonal term** to zero if it is *below tolerance threshold* 
 >- Only apply QR iteration on the **unreduced diagonal blocks**
 
+![[eigenvalue_unsymmetric.png]]
 
 ## Symmetric Case
 

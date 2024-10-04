@@ -61,6 +61,8 @@ date of note: 2024-10-02
 >[!important]
 >This algorithm requires about $$\frac{4n^3}{3}$$ flops if $Q$ is *not accumulated* and about $$9n^3$$ flops if $Q$ is *accumulated*.
 
+![[eigenvalue_symmetric.png]]
+
 
 ## Explanation
 

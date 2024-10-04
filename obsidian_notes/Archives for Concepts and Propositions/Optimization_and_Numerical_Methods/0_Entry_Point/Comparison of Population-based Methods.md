@@ -5,7 +5,8 @@ tags:
   - population_based_methods
   - evolutionary_computation
 keywords: 
-topics: 
+topics:
+  - evolutionary_computation
 name: 
 date of note: 2024-08-26
 ---

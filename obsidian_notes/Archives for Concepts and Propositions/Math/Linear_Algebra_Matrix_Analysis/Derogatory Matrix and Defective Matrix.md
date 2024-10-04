@@ -41,7 +41,13 @@ date of note: 2024-10-04
 
 ## Explanation
 
+>[!info]
+>Defective or Nondefective property is **invariant** under the **simlarity transformation**
+>$$
+>A \text{ defective/nondefective } \iff SAS^{-1} \text{ defective/nondefective }
+>$$
 
+- [[Similarity Relation between Linear Maps and Matrices]]
 
 ## Diagonalizable
 
@@ -53,6 +59,14 @@ date of note: 2024-10-04
 ^872c76
 
 - [[Diagonalizable Matrix]]
+
+>[!important] Proposition
+>A matrix is **unitary diagonalizable** *if and only if* it is **normal.**
+
+- [[Normal Transformation]]
+
+>[!info]
+>A normal matrix is *nondefective*.
 
 ## Hessenberg Decomposition
 
@@ -71,7 +85,7 @@ date of note: 2024-10-04
 
 - [[Jordan Canonical Form]]
 - [[Jordan Canonical Form Geometric Interpretation]]
-- [[Similarity Relation between Linear Maps and Matrices]]
+
 
 
 
@@ -92,3 +106,4 @@ date of note: 2024-10-04
 
 - [[Matrix Analysis by Horn]] 77, 106
 - [[Matrix Computations by Golub]] pp 383
+- [[Numerical Linear Algebra by Trefethen]] pp 185

@@ -25,6 +25,8 @@ date of note: 2024-09-25
 >
 >There exists an **unitary matrix** $U\in \mathcal{U}(n)$ such that $$A = U\,T\,U^{*}$$ where $T$ is a **symmetric** and **tridiagonal matrix**.
 
+^616da0
+
 - [[Tridiagonal Bidiagonal and Block Tridiagonal Matrix]]
 
 ### QR Factorization
@@ -67,6 +69,19 @@ date of note: 2024-09-25
 ![[Hessenberg Decomposition of Matrix#^40c613]]
 
 - [[Hessenberg Decomposition of Matrix]]
+
+
+>[!info]
+>**Tridiagonal decomposition** is the intermediate steps to converge to **symmetric Schur form** or the **diagonal matrix of eigenvalues**.
+>$$
+>T^{(1)} \to T^{(2)} \,{\to}\ldots{\to}\, \Lambda
+>$$
+>where the off-diagonal terms in both *lower and upper triangular part* of $T$ *converges to zero*.
+>$$
+>H^{(k)}_{\{ i+1:n \},i} = H^{(k)}_{i,\{ i+1:n \}}  \to 0.
+>$$
+
+^8a0810
 
 ## Tridiagonal Decomposition via Householder Transformation
 

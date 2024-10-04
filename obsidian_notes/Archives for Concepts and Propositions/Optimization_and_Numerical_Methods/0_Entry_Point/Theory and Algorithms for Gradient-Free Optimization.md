@@ -9,6 +9,7 @@ tags:
 keywords: 
 topics:
   - optimization
+  - evolutionary_computation
 name: 
 date of note: 2024-08-24
 ---

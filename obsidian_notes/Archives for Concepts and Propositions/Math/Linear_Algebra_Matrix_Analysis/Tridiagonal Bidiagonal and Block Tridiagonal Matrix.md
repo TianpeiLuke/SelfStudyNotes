@@ -54,11 +54,14 @@ date of note: 2024-09-24
 
 ## Explanation
 \
->[!info]
+>[!important]
 >A **tridiagonal matrix** is both an **upper Hessenberg matrix** and a **lower Hessenberg matrix**.
+>
+>That is a **tridiagonal matrix** is a **Hermitian Hessenberg matrix.**
 
 - [[Hessenberg Matrix]]
-
+- [[Hessenberg Decomposition of Matrix]]
+- [[Tridiagonal Decomposition of Symmetric Matrix]]
 
 ## Properties
 

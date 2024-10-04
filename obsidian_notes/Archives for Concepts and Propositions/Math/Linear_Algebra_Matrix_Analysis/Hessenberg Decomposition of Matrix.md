@@ -25,6 +25,8 @@ date of note: 2024-09-25
 >
 >There exists an **unitary matrix** $U\in \mathcal{U}(n)$ such that $$A = U\,H\,U^{*}$$ where $H$ is a **Hessenberg matrix**.
 
+^884435
+
 - [[Hessenberg Matrix]]
 
 ![[Krylov Subspace and Krylov Matrix#^e38b83]]
@@ -84,12 +86,23 @@ date of note: 2024-09-25
 
 - [[Similarity Relation between Linear Maps and Matrices]]
 
+>[!info]
+>**Hessenberg decomposition** is the intermediate steps to converge to **Schur form**.
+>$$
+>H^{(1)} \to H^{(2)} \,{\to}\ldots{\to}\, T
+>$$
+>where the off-diagonal terms in *lower triangular part* of $H$ *converges to zero*.
+>$$
+>H^{(k)}_{\{ i+1:n \},i} \to 0.
+>$$
+
+^6c0758
 
 ## Hessenberg Reduction via Householder Transformation
 
 - [[Hessenberg Reduction via Householder Transformation]]
 
-## Symmetric Case
+## Hermitian Case
 
 - [[Tridiagonal Decomposition of Symmetric Matrix]]
 - [[Tridiagonal Reduction of Symmetric Matrix via Householder Transformation]]

@@ -10,7 +10,8 @@ tags:
   - deep_learning/algorithms
   - optimization/algorithm
 keywords: 
-topics: 
+topics:
+  - numerical_linear_algebra
 name: 
 date of note: 2024-09-27
 ---

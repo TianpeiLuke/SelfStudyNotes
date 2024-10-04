@@ -7,6 +7,7 @@ keywords:
 topics:
   - linear_algebra
   - matrix_analysis
+  - numerical_linear_algebra
 name: 
 date of note: 2024-05-12
 ---
@@ -133,11 +134,11 @@ date of note: 2024-05-12
 
 ### Iterative Algorithms to solve Eigenvalue Problems
 
-
-
 - [[Rayleigh Quotient for Eigenvalue Problem]]
 - [[Principle of Biorthogonality]]
 - [[Biorthogonalization Methods]]
+
+- [[Numerical Algorithms for Eigenvalue Problem]]
 
 #### General Case without Symmetric, Small Scale
 
