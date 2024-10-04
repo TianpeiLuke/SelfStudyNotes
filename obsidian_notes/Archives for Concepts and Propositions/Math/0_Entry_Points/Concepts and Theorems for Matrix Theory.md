@@ -58,6 +58,7 @@ date of note: 2024-07-13
 - [[Quasi-triangular Matrix and Quasi-diagonal Matrix]]
 - [[Tridiagonal Bidiagonal and Block Tridiagonal Matrix]]
 - [[Hessenberg Matrix]]
+- [[Companion Matrix of Polynomial]]
 
 - [[Skew-Hermitian and Skew-Symmetric Matrix]]
 - [[Permutation Matrix and Reversal Matrix]]

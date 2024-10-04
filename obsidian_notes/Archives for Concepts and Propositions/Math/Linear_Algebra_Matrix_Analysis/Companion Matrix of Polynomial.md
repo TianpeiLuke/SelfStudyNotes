@@ -20,11 +20,16 @@ date of note: 2024-09-25
 >**Name**: Companion Matrix of Polynomial
 
 >[!important] Definition
+>Let $p(x)$ be a *polynomial* of *degree* $(n-1)$, i.e. $$p_{n-1}(x) = a_{n-1}x^{n-1} \,{+}\ldots{+}\,a_{1}x + a_{0},$$ where $a_{i}\in F$ is some *field*.
 >
+>A **companion matrix** or the **companion form** associated with $p_{n-1}(x)$ is of the form $$C = \left[ \begin{array}{ccccc}0 & 1 & 0 & \cdots & 0 \\ 0 & 0 & 1 & \ddots & \vdots \\ \vdots &  & \ddots & \ddots & 0 \\ 0 & \cdots & \cdots & 0 & 1 \\ a_{0} & a_{1} & \cdots & a_{n-2} & a_{n-1} \\ \end{array} \right] \in M_{n}(F)$$
+
 
 
 ## Explanation
 
+>[!info]
+>$$C = \left[ \begin{array}{cc}0 & I_{n-1} \\ a_{0} & a_{1:n-1} \end{array} \right] $$
 
 
 
