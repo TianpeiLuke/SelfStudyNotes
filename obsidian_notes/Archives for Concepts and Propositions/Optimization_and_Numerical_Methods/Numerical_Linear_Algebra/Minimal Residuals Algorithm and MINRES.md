@@ -25,7 +25,8 @@ date of note: 2024-10-04
 -----------
 ##  Recommended Notes and References
 
-- [[Minimal Residuals Algorithm and MINRES]]
+
+- [[GMRES as Regression on Krylov Space]]
 
 - [[Krylov Subspace and Krylov Matrix]]
 - [[Nilpotent Linear Transformation and Matrix]]
@@ -40,4 +41,4 @@ date of note: 2024-10-04
 
 - [[Matrix Analysis by Horn]] 
 - [[Numerical Linear Algebra by Trefethen]] pp 266 -275
-- [[Matrix Computations by Golub]] pp 642 - 644
+- [[Matrix Computations by Golub]] pp 639 - 641

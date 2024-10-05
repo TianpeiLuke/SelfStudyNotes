@@ -18,7 +18,7 @@ date of note: 2024-09-29
 
 ## Explanation
 
-
+![[krylov_subspace_methods_classification.png]]
 
 
 
@@ -26,12 +26,19 @@ date of note: 2024-09-29
 ##  Recommended Notes and References
 
 
+- [[Krylov Subspace Methods]]
 - [[Principle of Biorthogonality]]
 - [[Krylov Subspace and Krylov Matrix]]
 - [[System of Linear Equations or Linear System]]
 
+
 - [[Conjugate Gradient Algorithm Linear]]
+- [[Conjugate Gradient Algorithm Lanczos]]
 - [[Lanczos Iteration Practical for Large Symmetric Eigenvalue Problem]]
+- [[Biconjugate Gradients Algorithm for Nonsymmetric System]]
+- [[GMRES as Regression on Krylov Space]]
+- [[Minimal Residuals Algorithm and MINRES]]
+
 
 - [[Eigenvalue and Eigenvector for Linear Map]]
 - [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]

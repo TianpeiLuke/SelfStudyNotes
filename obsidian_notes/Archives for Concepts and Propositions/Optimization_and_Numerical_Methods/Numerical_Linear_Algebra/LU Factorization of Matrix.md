@@ -137,10 +137,6 @@ date of note: 2024-08-08
 - [[Band Gaussian Elimination and Band LU Factorization]]
 
 
-## LU Factorization of Tridiagonal Matrix
-
-- [[LU Factorization of Tridiagonal Matrix]]
-
 
 -----------
 ##  Recommended Notes and References

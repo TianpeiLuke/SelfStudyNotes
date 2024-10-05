@@ -31,12 +31,15 @@ date of note: 2024-10-04
 - [[Lanczos Iteration for Tridiagonal Reduction of Large Matrix]]
 - [[Lanczos Iteration Practical for Large Symmetric Eigenvalue Problem]]
 - [[Conjugate Gradient Algorithm Linear]]
+- [[Conjugate Gradient Algorithm Lanczos]]
+- [[Minimal Residuals Algorithm and MINRES]]
+
 
 ### Tridiagonal Bi-Orthogonalization
 
 - [[Biorthogonalization Methods]]
 - [[Conjugate Gradient Normal Equation Residual and CGNER]]
-
+- [[Biconjugate Gradients Algorithm for Nonsymmetric System]]
 
 
 

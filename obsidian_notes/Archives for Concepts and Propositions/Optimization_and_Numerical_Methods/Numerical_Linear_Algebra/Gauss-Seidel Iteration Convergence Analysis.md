@@ -23,15 +23,16 @@ date of note: 2024-09-21
 -----------
 ##  Recommended Notes and References
 
+
+
+- [[Gauss-Seidel Iteration for Sparse Linear System]]
 - [[Jacobi Iteration for Sparse Linear System]]
+
 
 - [[System of Linear Equations or Linear System]]
 - [[Existence and Uniqueness of Solution of Linear Equations]]
 - [[Hermitian or Symmetric Matrix]]
 - [[Positive Semidefinite Transformation]]
-
-- [[Gaussian Belief Propagation]]
-- [[Gaussian Graphical Model]]
 
 
 - [[Matrix Computations by Golub]] pp 615 - 619

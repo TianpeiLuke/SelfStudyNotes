@@ -87,7 +87,7 @@ date of note: 2024-05-12
 - [[Tridiagonal System of Equations]]
 - [[Tridiagonal Decomposition of Symmetric Matrix]]
 - [[Tridiagonal Eigenvalue Problem]]
-- [[LU Factorization of Tridiagonal Matrix]]
+
 
 
 #### Toeplitz and Circulant System
@@ -234,18 +234,22 @@ date of note: 2024-05-12
 - [[Classical Iterations to approximate Solution of Sparse Linear System]]
 - [[Jacobi Iteration for Sparse Linear System]]
 - [[Gauss-Seidel Iteration for Sparse Linear System]]
+- [[Gauss-Seidel Iteration Convergence Analysis]]
 - [[Successive Over-Relaxation for Sparse Linear System]]
 
+
+- [[Biorthogonalization Methods]]
 - [[GMRES as Regression on Krylov Space]]
+- [[Conjugate Gradient Normal Equation Residual and CGNER]]
 
 #### Symmetric Case
 
-- [[Biorthogonalization Methods]]
-
 - [[Conjugate Gradient Algorithm Linear]]
+- [[Conjugate Gradient Algorithm Convergence Analysis]]
 - [[Conjugate Gradient Algorithm Lanczos]]
-- [[Conjugate Gradient Normal Equation Residual and CGNER]]
-- [[Gauss-Seidel Iteration for Sparse Symmetric Positive Definite System]]
+- [[Minimal Residuals Algorithm and MINRES]]
+
+
 
 ### Krylov Subspace Methods
 
@@ -256,6 +260,7 @@ date of note: 2024-05-12
 - [[GMRES as Regression on Krylov Space]]
 - [[Conjugate Gradient Algorithm Linear]]
 - [[Conjugate Gradient Normal Equation Residual and CGNER]]
+- [[Biconjugate Gradients Algorithm for Nonsymmetric System]]
 
 
 

@@ -3,10 +3,11 @@ tags:
   - concept
   - optimization/algorithm
   - numerical_methods/numerical_linear_algebra
+  - math/matrix_analysis
 keywords: 
 topics: 
 name: 
-date of note: 2024-09-30
+date of note: 2024-10-05
 ---
 
 ## Concept Definition
@@ -31,12 +32,12 @@ date of note: 2024-09-30
 - [[Conjugate Gradient Algorithm Convergence Analysis]]
 - [[Conjugate Gradient Algorithm Nonlinear Convergence Analysis]]
 
-
-- [[Least Square Estimation]]
-- [[Least Square Estimation Solution and Geometric Interpretation]]
-- [[Algorithms for Least Square Estimation Problem]]
+- [[Lanczos Iteration for Tridiagonal Reduction of Large Matrix]]
+- [[Tridiagonal Decomposition of Symmetric Matrix]]
+- [[Hermitian or Symmetric Matrix]]
 - [[Krylov Subspace and Krylov Matrix]]
-
+- [[Nilpotent Linear Transformation and Matrix]]
+- [[Nilpotent Linear Transformation Geometric Characterization]]
 
 - [[System of Linear Equations or Linear System]]
 - [[Existence and Uniqueness of Solution of Linear Equations]]
@@ -45,5 +46,5 @@ date of note: 2024-09-30
 
 
 - [[Matrix Analysis by Horn]]
-- [[Matrix Computations by Golub]] pp 636 - 638
-- [[Numerical Linear Algebra by Trefethen]] pp 304 - 305
+- [[Matrix Computations by Golub]] pp 645 - 646
+- [[Numerical Linear Algebra by Trefethen]] pp 308 - 309
