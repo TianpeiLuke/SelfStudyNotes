@@ -146,6 +146,7 @@ date of note: 2024-10-04
 
 - [[Hessenberg Decomposition of Matrix]]
 - [[Hessenberg Reduction via Householder Transformation]]
+- [[Arnoldi Iteration for Hessenberg Reduction of Large Matrix]]
 - [[Hessenburg QR Iteration for Unsymmetric Eigenvalue Problem]]
 - [[Shift Strategy for Faster QR Iterations]]
 - [[QR Iteration Practical for General Eigenvalue Problem]]
@@ -159,6 +160,7 @@ date of note: 2024-10-04
 
 - [[Tridiagonal Decomposition of Symmetric Matrix]]
 - [[Tridiagonal Reduction of Symmetric Matrix via Householder Transformation]]
+- [[Lanczos Iteration for Tridiagonal Reduction of Large Matrix]]
 - [[Shift Strategy for Faster Symmetric QR Iterations]]
 - [[Symmetric QR Iteration for Symmetric Eigenvalue Problem]]
 
