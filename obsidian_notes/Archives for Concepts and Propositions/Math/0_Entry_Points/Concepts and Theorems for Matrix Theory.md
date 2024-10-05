@@ -207,6 +207,7 @@ date of note: 2024-07-13
 - [[Spectral Theorem of Normal Map and Eigen decomposition]]
 - [[Principle of Biorthogonality]]
 - [[Invariant Subspaces Approximation for Self-Adjoint Matrix]]
+- [[Ritz Pair for Linear Map with respect to Subspace]]
 
 
 #### Singular Value Decomposition

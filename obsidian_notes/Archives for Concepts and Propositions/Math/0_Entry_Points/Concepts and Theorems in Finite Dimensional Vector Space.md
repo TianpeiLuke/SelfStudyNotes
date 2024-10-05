@@ -43,6 +43,7 @@ date of note: 2024-05-11
 - [[Dual Basis of Dual Space]]
 - [[Annihilator of Subset of Vector Space]]
 - [[Dual of Direct Sum]]
+- [[Ritz Pair for Linear Map with respect to Subspace]]
 
 
 ### Invariance of Linear Transformation

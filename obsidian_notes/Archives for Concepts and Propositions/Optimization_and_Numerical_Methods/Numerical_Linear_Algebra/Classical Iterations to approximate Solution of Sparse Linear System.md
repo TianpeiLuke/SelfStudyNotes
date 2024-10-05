@@ -94,8 +94,8 @@ date of note: 2024-09-29
 | $A \neq A^{*}$ **Non-Hermitian** | **GMRES**, **CGN**, **BCG** | **Arnoldi Iteration** |
 
 - [[Conjugate Gradient Algorithm Linear]]
-- [[Lanczos Tridiagonalization for Large Symmetric Eigenvalue Problem]]
-- [[Arnoldi Iterations for Large Eigenvalue Problems]]
+- [[Lanczos Iteration for Tridiagonal Reduction of Large Matrix]]
+- [[Arnoldi Iteration for Hessenberg Reduction of Large Matrix]]
 - [[Conjugate Gradient Normal Equation Residual]]
 
 
@@ -120,7 +120,7 @@ date of note: 2024-09-29
 ## Iterative Algorithms to Solve Eigenvalue Problem
 
 - [[Lanczos Iteration Practical for Large Symmetric Eigenvalue Problem]]
-- [[Arnoldi Iterations for Large Eigenvalue Problems]]
+- [[Arnoldi Iteration for Hessenberg Reduction of Large Matrix]]
 
 
 

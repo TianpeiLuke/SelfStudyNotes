@@ -41,7 +41,7 @@ date of note: 2024-08-21
 
 
 - [[Lanczos Iteration Practical for Large Symmetric Eigenvalue Problem]]
-- [[Arnoldi Iterations for Large Eigenvalue Problems]]
+- [[Arnoldi Iteration for Hessenberg Reduction of Large Matrix]]
 
 
 

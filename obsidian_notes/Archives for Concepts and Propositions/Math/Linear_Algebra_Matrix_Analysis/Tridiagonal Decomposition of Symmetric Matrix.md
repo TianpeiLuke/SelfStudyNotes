@@ -41,6 +41,8 @@ date of note: 2024-09-25
 >- If $R$ is *nonsingular*, then $T$ is **unreduced.**
 >- If $R$ is *singular* and $k$ is smallest interger such that $R_{kk}=0$, then $k$ is also the **smalest index** such that $T_{k,k-1}=0$
 
+^d21ddc
+
 - [[Hermitian or Symmetric Matrix]]
 - [[Triangular Matrix and Block Triangular Matrix]]
 - [[Krylov Subspace and Krylov Matrix]]

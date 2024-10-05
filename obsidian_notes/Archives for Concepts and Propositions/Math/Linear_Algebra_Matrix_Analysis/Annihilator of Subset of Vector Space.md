@@ -28,6 +28,8 @@ date of note: 2024-05-26
 >S^{0} := \left\{ h \in V^{*}: \left\langle  h\,,\, x   \right\rangle = 0, \quad \forall x \in S. \right\} 
 >$$
 
+^e7f2a8
+
 
 - [[Dual Space of Finite Dimensional Vector Space]]
 - [[Covector on Vector Space]]

@@ -60,10 +60,17 @@ date of note: 2024-08-08
 - [[Hessenberg Matrix]]
 - [[Hessenberg QR Factorization via Given Transformation]]
 
+### Hessenberg Reduction for Submatrix using Arnoldi Process
+
+- [[Arnoldi Iteration for Hessenberg Reduction of Large Matrix]]
+
 |                              | $A = QR$ <br>**QR Factorization**                                      | $A= QHQ^{*}$ <br>**Henssenberg Factorization**                                                |
 | ---------------------------- | ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
 | Orthogonal Structuring       | **Householder Transformation**<br><br>[[Householder QR Factorization]] | **Householder Transformation**<br><br>[[Hessenberg Reduction via Householder Transformation]] |
-| Structured Orthogonalization | **Gram-Schmidt process**<br><br>[[Gram-Schmidt Orthogonalization]]     | **Arnoldi process**<br><br>[[Arnoldi Iterations for Large Eigenvalue Problems]]               |
+| Structured Orthogonalization | **Gram-Schmidt process**<br><br>[[Gram-Schmidt Orthogonalization]]     | **Arnoldi process**<br><br>[[Arnoldi Iteration for Hessenberg Reduction of Large Matrix]]               |
+
+
+
 
 
 

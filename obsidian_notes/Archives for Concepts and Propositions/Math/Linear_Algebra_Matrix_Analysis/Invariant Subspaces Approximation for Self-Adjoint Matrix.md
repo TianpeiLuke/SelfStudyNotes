@@ -26,6 +26,8 @@ date of note: 2024-10-02
 >
 >Then the following minimization problem $$\min_{S\in \mathbb{R}^{r\times r}}\lVert AU - US \rVert_{F}^2 $$ has a **unique solution** $$S^{*} = U^T\,A\,U$$ with **optimal value** $$\lVert AU - US \rVert_{F}^2 = \lVert \left( I - UU^{T} \right)AU \rVert_{F}^2$$
 
+^6a3a8f
+
 - [[Hermitian or Symmetric Matrix]]
 - [[Unitary and Orthogonal Transformation]]
 - [[Positive Semidefinite Transformation]]

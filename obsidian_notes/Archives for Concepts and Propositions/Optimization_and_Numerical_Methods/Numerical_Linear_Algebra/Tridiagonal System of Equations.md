@@ -39,7 +39,7 @@ date of note: 2024-08-08
 
 - [[Tridiagonal Decomposition of Symmetric Matrix]]
 - [[Symmetric QR Iteration for Symmetric Eigenvalue Problem]]
-- [[Lanczos Tridiagonalization for Large Symmetric Eigenvalue Problem]]
+- [[Lanczos Iteration for Tridiagonal Reduction of Large Matrix]]
 
 ## Solution to Tridiagonal Equation
 

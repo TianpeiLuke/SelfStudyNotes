@@ -194,13 +194,27 @@ date of note: 2024-05-12
 
 - [[Krylov Subspace and Krylov Matrix]]
 - [[Convex Optimization for Eigenvalue Problem]]
-- [[Lanczos Tridiagonalization for Large Symmetric Eigenvalue Problem]]
+- [[Ritz Pair for Linear Map with respect to Subspace]]
+
+>[!info]
+>**Lanczos process** is an iterative process that compute **tridiagonal decomposition** of *Hermitian matrix* using **modified Gram-Schmdit** process.
+>- **Lanczos proces** is a stable version of **QR factorization** of *Krylov matrix* $$K(A, q_{1}, k)= Q_{k}R_{k}$$
+>- The *eigenvalue* is **approximated** by the *eigenvalue of tridiagonal matrix* at the end of iteration.
+>- **Lanczos process** reduce the complexity of the direct tridiagonalization via *Householder transformation*  [[Tridiagonal Reduction of Symmetric Matrix via Householder Transformation]]
+
+- [[Lanczos Iteration for Tridiagonal Reduction of Large Matrix]]
 - [[Lanczos Iteration Practical for Large Symmetric Eigenvalue Problem]]
 
 
 #### General Case without Symmetric, Large Scale
 
-- [[Arnoldi Iterations for Large Eigenvalue Problems]]
+>[!info]
+>**Arnoldi process** is an iterative process that compute **Hessenberg decomposition** of *unsymmetric matrix* using **modified Gram-Schmdit** process.
+>- **Arnoldi proces** is a stable version of **QR factorization** of *Krylov matrix* $$K(A, q_{1}, k)= Q_{k}R_{k}$$
+>- The *eigenvalue* is **approximated** by the *eigenvalue of Hessenberg matrix* at the end of iteration.
+>- **Arnoldi process** reduce the complexity of the direct Hessenberg reduction via *Householder transformation* [[Hessenberg Reduction via Householder Transformation]]
+
+- [[Arnoldi Iteration for Hessenberg Reduction of Large Matrix]]
 - [[Jacobi-Davidson Algorithm to Sparse Eigenvalue Problem]]
 
 

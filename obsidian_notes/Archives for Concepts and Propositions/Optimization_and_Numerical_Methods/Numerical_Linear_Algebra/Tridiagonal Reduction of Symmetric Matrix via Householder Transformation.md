@@ -45,6 +45,15 @@ date of note: 2024-09-25
 
 ## Explanation
 
+### Tridiagonal Reduction for Submatrix using Lanczos Process
+
+- [[Lanczos Iteration for Tridiagonal Reduction of Large Matrix]]
+
+|                              | $A = QR$ <br>**QR Factorization**                                      | $A= QTQ^{*}$ <br>**Tridiagonal Factorization**                                                                     |
+| ---------------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| Orthogonal Structuring       | **Householder Transformation**<br><br>[[Householder QR Factorization]] | **Householder Transformation**<br><br>[[Tridiagonal Reduction of Symmetric Matrix via Householder Transformation]] |
+| Structured Orthogonalization | **Gram-Schmidt process**<br><br>[[Gram-Schmidt Orthogonalization]]     | **Lanczos process**<br><br>[[Lanczos Iteration for Tridiagonal Reduction of Large Matrix]]                         |
+
 
 
 

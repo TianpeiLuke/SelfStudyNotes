@@ -24,7 +24,7 @@ date of note: 2024-09-21
 ##  Recommended Notes and References
 
 
-- [[Lanczos Tridiagonalization for Large Symmetric Eigenvalue Problem]]
+- [[Lanczos Iteration for Tridiagonal Reduction of Large Matrix]]
 - [[Tridiagonal Bidiagonal and Block Tridiagonal Matrix]]
 - [[Tridiagonal Eigenvalue Problem]]
 - [[Tridiagonal Decomposition of Symmetric Matrix]]

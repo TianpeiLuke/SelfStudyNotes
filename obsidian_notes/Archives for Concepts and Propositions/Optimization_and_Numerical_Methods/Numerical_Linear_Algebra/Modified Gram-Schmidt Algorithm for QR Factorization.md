@@ -37,6 +37,8 @@ date of note: 2024-09-25
 >	- the upper triangular matrix $$R_{1} = [R_{k,\{ k:n \}}^{(n)}]$$
 >	- the matrix $Q_{1}$ as the result of overwritten $A$ $$Q_{1} := A^{(n)}$$ 
 
+^6afb16
+
 - [[QR Factorization of Matrix]]
 - [[Surjective Injective Invertible Linear Map and Rank]]
 - [[Cosine Similarity and Cosine Distance]]

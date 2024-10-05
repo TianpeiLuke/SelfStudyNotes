@@ -114,7 +114,7 @@ date of note: 2024-05-12
 
 - [[Biorthogonalization Methods]]
 - [[Lanczos Iteration Practical for Large Symmetric Eigenvalue Problem]]
-- [[Arnoldi Iterations for Large Eigenvalue Problems]]
+- [[Arnoldi Iteration for Hessenberg Reduction of Large Matrix]]
 - [[Tridiagonal Decomposition of Symmetric Matrix]]
 - [[Jacobi-Davidson Algorithm to Sparse Eigenvalue Problem]]
 
