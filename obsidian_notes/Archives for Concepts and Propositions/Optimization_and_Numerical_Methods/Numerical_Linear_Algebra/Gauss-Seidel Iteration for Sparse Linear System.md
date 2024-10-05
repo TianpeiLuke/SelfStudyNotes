@@ -41,6 +41,8 @@ date of note: 2024-09-21
 >\end{align*}
 >$$
 
+^084714
+
 - [[Jacobi Iteration for Sparse Linear System]]
 
 >[!important] Definition
@@ -59,6 +61,8 @@ date of note: 2024-09-21
 > U_{A} &= \left[ \begin{array}{cccc}0& a_{1,2}  & \cdots  & a_{1,n} \\\vdots & 0 & \ddots & \vdots\\ \vdots &  & \ddots & a_{n-1,n}\\ 0 &  &  & 0\end{array} \right]
 \end{align*}
 >$$
+
+^86aad2
 
 ## Explanation
 

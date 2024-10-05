@@ -1,16 +1,25 @@
 ---
 tags:
   - concept
-keywords: 
-topics: 
-name: 
+  - math/matrix_analysis
+  - numerical_methods/numerical_linear_algebra
+keywords:
+  - successive_over_relaxation
+topics:
+  - matrix_analysis
+  - numerical_linear_algebra
+name: Successive Over-Relaxation for Sparse Linear System
 date of note: 2024-09-21
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Successive Over-Relaxation for Sparse Linear System
+
+![[Gauss-Seidel Iteration for Sparse Linear System#^084714]]
+
+![[Gauss-Seidel Iteration for Sparse Linear System#^86aad2]]
 
 
 
@@ -23,14 +32,12 @@ date of note: 2024-09-21
 -----------
 ##  Recommended Notes and References
 
-- [[Jacobi Iteration for Sparse Linear System]]
+
+- [[Gauss-Seidel Iteration for Sparse Linear System]]
 
 - [[System of Linear Equations or Linear System]]
 - [[Existence and Uniqueness of Solution of Linear Equations]]
 
-
-- [[Gaussian Belief Propagation]]
-- [[Gaussian Graphical Model]]
 
 
 - [[Matrix Computations by Golub]] pp 619 - 620

@@ -134,6 +134,8 @@ date of note: 2024-08-08
 
 ## Band LU Factorization
 
+![[Band Gaussian Elimination and Band LU Factorization#^4f120b]]
+
 - [[Band Gaussian Elimination and Band LU Factorization]]
 
 
