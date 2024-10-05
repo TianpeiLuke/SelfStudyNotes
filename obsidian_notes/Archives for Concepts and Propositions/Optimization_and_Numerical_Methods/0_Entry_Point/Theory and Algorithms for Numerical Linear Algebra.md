@@ -243,6 +243,7 @@ date of note: 2024-05-12
 - [[Biorthogonalization Methods]]
 
 - [[Conjugate Gradient Algorithm Linear]]
+- [[Conjugate Gradient Algorithm Lanczos]]
 - [[Conjugate Gradient Normal Equation Residual and CGNER]]
 - [[Gauss-Seidel Iteration for Sparse Symmetric Positive Definite System]]
 

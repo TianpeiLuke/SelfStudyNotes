@@ -60,6 +60,9 @@ date of note: 2024-05-12
 - [[Limited Memory BFGS]]
 - [[Conjugate Gradient Algorithm Linear]]
 - [[Conjugate Gradient Algorithm Nonlinear]]
+- [[Conjugate Gradient Algorithm Convergence Analysis]]
+- [[Conjugate Gradient Algorithm Nonlinear Convergence Analysis]]
+- [[Conjugate Gradient Algorithm Lanczos]]
 - [[Newton-Conjugate Gradient and Inexact Newton Method]]
 
 ### Polyhedral Approximation Methods
