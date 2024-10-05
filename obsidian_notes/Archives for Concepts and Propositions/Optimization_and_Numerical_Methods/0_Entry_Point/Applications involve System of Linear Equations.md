@@ -116,7 +116,7 @@ date of note: 2024-09-27
 >- The **conjugage gradient normal equation residual (CGNR)** method
 
 - [[Conjugate Gradient Algorithm Linear]]
-- [[Conjugate Gradient Normal Equation Residual]]
+- [[Conjugate Gradient Normal Equation Residual and CGNER]]
 
 #### Modified Gram-Schmidt Orthogonalization and QR Factorization
 

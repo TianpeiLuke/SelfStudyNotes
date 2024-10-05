@@ -96,7 +96,7 @@ date of note: 2024-09-29
 - [[Conjugate Gradient Algorithm Linear]]
 - [[Lanczos Iteration for Tridiagonal Reduction of Large Matrix]]
 - [[Arnoldi Iteration for Hessenberg Reduction of Large Matrix]]
-- [[Conjugate Gradient Normal Equation Residual]]
+- [[Conjugate Gradient Normal Equation Residual and CGNER]]
 
 
 ## Iterative Algorithms to Solve Linear Equations
@@ -113,7 +113,7 @@ date of note: 2024-09-29
 
 - [[Power Iteration and Inverse Iteration for General Eigenvalue Problem]]
 - [[QR Iteration for General Eigenvalue Problem]]
-- [[Conjugate Gradient Normal Equation Residual]]
+- [[Conjugate Gradient Normal Equation Residual and CGNER]]
 
 
 

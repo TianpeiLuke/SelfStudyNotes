@@ -107,6 +107,7 @@ date of note: 2024-05-12
 >- **Conjugacy**: the new direction is *conjugate to all previous directions* with respect to $A$ $$\left\langle A\,d_{i}\,,\,d_{k} \right\rangle = 0, \quad i=0,1 \,{,}\ldots{,}\,k-1.$$
 
 
+- [[Krylov Subspace Methods]]
 - [[Conjugate Vector with respect to Positive Definite Transformation]]
 - [[Krylov Subspace and Krylov Matrix]]
 - [[Numerical Optimization by Nocedal]] pp 109
@@ -136,13 +137,14 @@ date of note: 2024-05-12
 
 ## Conjugate Gradient Normal Equation Residual 
 
+- [[Conjugate Gradient Normal Equation Residual and CGNER]]
 
+## Other Krylov Subspace Methods
 
-- [[Gaussian Elimination with Partial Pivoting]]
-
-## Conjugate Gradient Normal Equation Residual 
-
-- [[Conjugate Gradient Normal Equation Residual]]
+- [[Krylov Subspace Methods]]
+- [[Lanczos Iteration for Tridiagonal Reduction of Large Matrix]]
+- [[Arnoldi Iteration for Hessenberg Reduction of Large Matrix]]
+- [[GMRES as Regression on Krylov Space]]
 
 
 

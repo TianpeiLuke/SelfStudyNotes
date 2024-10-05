@@ -111,6 +111,7 @@ date of note: 2024-05-12
 
 - [[Bidiagonal Factorization with Householder Transformation]]
 
+
 ### Least Square Problems
 
 - [[Least Square Estimation]]
@@ -119,6 +120,9 @@ date of note: 2024-05-12
 - [[Least Square Estimation with QR Factorization]]
 - [[Least Square Estimation via Singular Value Decomposition]]
 
+- [[Krylov Subspace Methods]]
+- [[GMRES as Regression on Krylov Space]]
+- [[Conjugate Gradient Normal Equation Residual and CGNER]]
 
 ###  Eigenvalue Problem
 
@@ -230,14 +234,23 @@ date of note: 2024-05-12
 - [[Gauss-Seidel Iteration for Sparse Linear System]]
 - [[Successive Over-Relaxation for Sparse Linear System]]
 
+- [[GMRES as Regression on Krylov Space]]
+
 #### Symmetric Case
 
 - [[Biorthogonalization Methods]]
+
 - [[Conjugate Gradient Algorithm Linear]]
-- [[Conjugate Gradient Normal Equation Residual]]
+- [[Conjugate Gradient Normal Equation Residual and CGNER]]
 - [[Gauss-Seidel Iteration for Sparse Symmetric Positive Definite System]]
 
+### Krylov Subspace Methods
 
+- [[Krylov Subspace and Krylov Matrix]]
+- [[Krylov Subspace Methods]]
+- [[GMRES as Regression on Krylov Space]]
+- [[Conjugate Gradient Algorithm Linear]]
+- [[Conjugate Gradient Normal Equation Residual and CGNER]]
 
 
 

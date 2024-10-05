@@ -104,7 +104,7 @@ date of note: 2024-06-08
 
 - [[Classical Iterations to approximate Solution of Sparse Linear System]]
 - [[Conjugate Gradient Algorithm Linear]]
-- [[Conjugate Gradient Normal Equation Residual]]
+- [[Conjugate Gradient Normal Equation Residual and CGNER]]
 
 
 

@@ -87,10 +87,10 @@ date of note: 2024-05-12
 - [[Algorithms for Least Square Estimation Problem]]
 - [[Least Square Estimation with QR Factorization]]
 - [[Least Square Estimation via Singular Value Decomposition]]
-- [[Conjugate Gradient Normal Equation Residual]]
+- [[Conjugate Gradient Normal Equation Residual and CGNER]]
 
 - [[Least Square Estimation via Singular Value Decomposition]]
-- [[Conjugate Gradient Normal Equation Residual]]
+- [[Conjugate Gradient Normal Equation Residual and CGNER]]
 
 
 ### Eigenvalue Problem
