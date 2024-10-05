@@ -86,6 +86,12 @@ date of note: 2024-08-08
 >$$
 >where $L$ is a *lower triangular matrix* with *non-negative diagonal entries* and $Q$ has **orthonormal rows**.
 
+>[!info]
+>**QR factorization** is often **preferred** as compared to **Gaussian eliminiation / LU factorization** as it is more **numerically stable**.
+>- This is due to the **orthonormal constrain** on the *columns*  of $Q$, while the column norm of $L$ matrix can be very large.
+
+- [[Complete Orthonormal Basis of Hilbert Space]]
+- [[Orthogonal Group]]
 
 ## QR Factorization Algorithms
 
