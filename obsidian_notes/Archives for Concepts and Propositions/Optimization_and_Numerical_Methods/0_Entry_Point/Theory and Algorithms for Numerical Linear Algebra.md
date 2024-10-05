@@ -207,6 +207,7 @@ date of note: 2024-05-12
 >- **Lanczos process** reduce the complexity of the direct tridiagonalization via *Householder transformation*  [[Tridiagonal Reduction of Symmetric Matrix via Householder Transformation]]
 
 - [[Lanczos Iteration for Tridiagonal Reduction of Large Matrix]]
+- [[Ritz Pair for Linear Map with respect to Subspace]]
 - [[Lanczos Iteration Practical for Large Symmetric Eigenvalue Problem]]
 
 
@@ -219,6 +220,7 @@ date of note: 2024-05-12
 >- **Arnoldi process** reduce the complexity of the direct Hessenberg reduction via *Householder transformation* [[Hessenberg Reduction via Householder Transformation]]
 
 - [[Arnoldi Iteration for Hessenberg Reduction of Large Matrix]]
+- [[Ritz Pair for Linear Map with respect to Subspace]]
 - [[Jacobi-Davidson Algorithm to Sparse Eigenvalue Problem]]
 
 

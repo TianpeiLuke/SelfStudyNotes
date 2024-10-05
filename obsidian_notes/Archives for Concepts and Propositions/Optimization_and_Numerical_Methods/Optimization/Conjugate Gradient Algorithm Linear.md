@@ -146,6 +146,21 @@ date of note: 2024-05-12
 - [[Arnoldi Iteration for Hessenberg Reduction of Large Matrix]]
 - [[GMRES as Regression on Krylov Space]]
 
+## Relation to the Eigenvalue Problem
+
+>[!quote]
+>There is a close analogy between the **CG iteration** for solving $$Ax = b$$ and the **Lanczos iteration** for finding eigenvalues $$Ax = \lambda x.$$ 
+>- The eigenvalues of $A$, as discussed in Lecture 27, are the **stationary values** for $x  \in \mathbb{R}$ in of the **Rayleigh quotient**, $$r(x) = \frac{\left\langle  x\,,\, Ax \right\rangle}{\left\langle  x\,,\, x \right\rangle}.$$ 
+>	- As pointed out in Exercise 36.1, the **eigenvalue estimates (Ritz values)** associated with step $n$ of the *Lanczos iteration* are the **stationary values** of the same function $r(x)$ if $x$ is restricted to the **Krylov subspace** $\mathcal{K}_{n}$. 
+>- This is a perfect parallel of what we have shown in the last two pages, that the solution $x^{*}$ of $Ax = b$ is the **minimal point** in $\mathbb{R}^{m}$ of the scalar function $w(x)$, 
+>	- and the **CG iterate** $x_{n}$ is the **minimal point** of the same function $w(x)$ if $x$ is *restricted to* $\mathcal{K}_{n}$.
+>	  
+>-- [[Numerical Linear Algebra by Trefethen]] pp 298	  
+
+- [[Rayleigh Quotient for Eigenvalue Problem]]
+- [[Convex Optimization for Eigenvalue Problem]]
+- [[Lanczos Iteration for Tridiagonal Reduction of Large Matrix]]
+- [[Ritz Pair for Linear Map with respect to Subspace]]
 
 
 -----------
