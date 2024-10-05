@@ -113,6 +113,8 @@ date of note: 2024-07-03
 - [[Nonlinear Programming by Bertsekas]] 
 - [[Matrix Analysis by Horn]] pp 221
 - [[Matrix Computations by Golub]] pp 381, 459, 548
+- [[Numerical Linear Algebra by Trefethen]] pp 245, 253
+
 - Gutknecht, M. H. (2007). A brief introduction to Krylov space methods for solving linear systems. In _Frontiers of Computational Science: Proceedings of the International Symposium on Frontiers of Computational Science 2005_ (pp. 53-62). Springer Berlin Heidelberg.
 
 - Wikipedia [Krylov_subspace](https://en.wikipedia.org/wiki/Krylov_subspace)

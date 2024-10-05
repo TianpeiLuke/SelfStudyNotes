@@ -145,5 +145,5 @@ date of note: 2024-06-08
 - [[Numerical Optimization by Nocedal]] pp 245
 - [[Elements of Statistical Learning by Hastie]] pp 43 - 56
 - [[Matrix Computations by Golub]] pp 303 - 334
-- [[Numerical Linear Algebra by Trefethen]] pp 77 - 87
+- [[Numerical Linear Algebra by Trefethen]] pp 36, 77 - 87, 129 - 144
 - [[Matrix Analysis for Scientists and Engineers by Laub]] pp 65 - 71

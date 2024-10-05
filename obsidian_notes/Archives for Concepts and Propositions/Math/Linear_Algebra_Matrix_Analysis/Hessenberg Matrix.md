@@ -64,6 +64,5 @@ date of note: 2024-09-24
 - [[Triangular Matrix and Block Triangular Matrix]]
 
 - [[Matrix Computations by Golub]] pp 15, 179, 378
-- [[Matrix Analysis by Horn]] pp 35
-- [[Matrix Analysis for Scientists and Engineers by Laub]]
-- [[Numerical Linear Algebra by Trefethen]]
+- [[Matrix Analysis by Horn]] pp 35, 82, 174
+- [[Numerical Linear Algebra by Trefethen]] pp 193 - 201, 305 - 306

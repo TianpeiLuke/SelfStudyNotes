@@ -104,6 +104,6 @@ date of note: 2024-10-04
 - [[Matrix]]
 
 
-- [[Matrix Analysis by Horn]] 77, 106
+- [[Matrix Analysis by Horn]] 77, 106, 190, 178, 206
 - [[Matrix Computations by Golub]] pp 383
 - [[Numerical Linear Algebra by Trefethen]] pp 185

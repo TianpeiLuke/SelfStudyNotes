@@ -87,3 +87,5 @@ date of note: 2024-05-26
 
 
 - [[Finite Dimensional Vector Spaces by Halmos]] pp 109 - 111
+- [[Matrix Analysis for Scientists and Engineers by Laub]] pp 115
+- [[Matrix Analysis by Horn]] pp 38,  128, 157, 189, 190, 

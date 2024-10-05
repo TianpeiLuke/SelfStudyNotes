@@ -30,4 +30,4 @@ date of note: 2024-09-21
 - [[Positive Semidefinite Transformation]]
 
 - [[Matrix Computations by Golub]] pp 589 - 597
-- [[Numerical Linear Algebra by Trefethen]] pp 
+- [[Numerical Linear Algebra by Trefethen]] pp 319, 342

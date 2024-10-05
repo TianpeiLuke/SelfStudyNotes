@@ -208,3 +208,4 @@ date of note: 2024-09-25
 
 - [[Matrix Analysis by Horn]] pp 87
 - [[Matrix Computations by Golub]] pp 234 - 239
+- [[Numerical Linear Algebra by Trefethen]] pp 70 - 73

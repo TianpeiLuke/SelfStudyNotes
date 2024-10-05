@@ -88,3 +88,4 @@ date of note: 2024-09-23
 - [[Matrix Analysis for Scientists and Engineers by Laub]] pp 100
 - [[Matrix Computations by Golub]] pp 24
 - [[Finite Dimensional Vector Spaces by Halmos]] pp 167
+- [[Numerical Linear Algebra by Trefethen]] pp 154, 214

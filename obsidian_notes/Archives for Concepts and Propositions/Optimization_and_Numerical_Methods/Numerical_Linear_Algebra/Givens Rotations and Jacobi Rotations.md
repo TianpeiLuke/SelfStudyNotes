@@ -132,5 +132,6 @@ date of note: 2024-09-25
 
 - [[Matrix Analysis by Horn]] pp 87
 - [[Matrix Computations by Golub]] pp 239 - 243
+- [[Numerical Linear Algebra by Trefethen]] pp 76, 195, 218, 226, 268
 - Wikipedia [Givens_rotation](https://en.wikipedia.org/wiki/Givens_rotation)
 - Wikipedia [Jacobi_rotation](https://en.wikipedia.org/wiki/Jacobi_rotation)

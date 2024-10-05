@@ -65,3 +65,4 @@ date of note: 2024-05-08
 - [[Real Analysis by Royden]]
 - [[Real Analysis Modern Techniques and Their Applications by Folland]]
 - [[Optimization by Vector Space Methods by Luenberger]]
+- [[Numerical Linear Algebra by Trefethen]] pp 331

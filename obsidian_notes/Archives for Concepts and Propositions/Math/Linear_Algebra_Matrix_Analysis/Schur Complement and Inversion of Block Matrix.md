@@ -295,4 +295,6 @@ date of note: 2024-07-23
 
 - [[Matrix Analysis by Horn]] pp 18, 24- 25
 - [[Matrix Analysis for Scientists and Engineers by Laub]] pp 48, 102 - 104
+- [[Numerical Linear Algebra by Trefethen]] pp 154
+- [[Matrix CookBook by Petersen]]
 - Wikipedia [Schur_complement](https://en.wikipedia.org/wiki/Schur_complement)

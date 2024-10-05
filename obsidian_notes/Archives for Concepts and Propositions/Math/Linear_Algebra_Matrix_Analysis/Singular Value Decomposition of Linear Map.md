@@ -182,3 +182,4 @@ date of note: 2024-05-27
 - [[Matrix Computations by Golub]] pp 76 - 81
 - [[Matrix Analysis for Scientists and Engineers by Laub]] pp 35 - 40
 - [[Matrix CookBook by Petersen]] 31
+- [[Numerical Linear Algebra by Trefethen]] pp 25 - 37, 83, 113, 234 - 240

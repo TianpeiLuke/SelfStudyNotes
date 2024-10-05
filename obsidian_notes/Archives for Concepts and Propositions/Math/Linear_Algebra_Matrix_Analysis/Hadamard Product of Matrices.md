@@ -73,4 +73,5 @@ date of note: 2024-10-01
 
 - [[Matrix Analysis by Horn]] pp 371, 477 - 484
 - [[Matrix Computations by Golub]] pp 710
+- [[Numerical Linear Algebra by Trefethen]] pp 16
 - Wikipedia [Hadamard_product](https://en.wikipedia.org/wiki/Hadamard_product_(matrices))

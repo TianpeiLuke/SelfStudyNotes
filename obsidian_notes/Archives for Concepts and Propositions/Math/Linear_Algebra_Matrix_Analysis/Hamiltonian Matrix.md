@@ -113,5 +113,6 @@ date of note: 2024-05-09
 
 
 - [[Matrix Computations by Golub]] pp 29, 420
+
 - [[Introduction to Smooth Manifolds by Lee]]
 - Wikipedia [Hamiltonian_matrix](https://en.wikipedia.org/wiki/Hamiltonian_matrix)
