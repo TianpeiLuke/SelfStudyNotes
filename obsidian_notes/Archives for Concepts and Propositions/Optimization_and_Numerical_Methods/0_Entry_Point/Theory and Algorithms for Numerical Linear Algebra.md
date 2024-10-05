@@ -248,6 +248,8 @@ date of note: 2024-05-12
 
 ### Krylov Subspace Methods
 
+![[krylov_subspace_methods_classification.png]]
+
 - [[Krylov Subspace and Krylov Matrix]]
 - [[Krylov Subspace Methods]]
 - [[GMRES as Regression on Krylov Space]]

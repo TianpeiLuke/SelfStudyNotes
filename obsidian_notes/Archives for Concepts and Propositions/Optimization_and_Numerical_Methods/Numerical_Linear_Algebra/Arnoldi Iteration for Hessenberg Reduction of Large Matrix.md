@@ -137,6 +137,7 @@ date of note: 2024-09-29
 >[!info]
 >**Arnoldi process** is an iterative process that compute **Hessenberg decomposition** of *unsymmetric matrix* using **modified Gram-Schmdit** process.
 >- **Arnoldi proces** is a stable version of **QR factorization** of *Krylov matrix* $$K(A, q_{1}, k)= Q_{k}R_{k}$$
+>	- It can be seen as a process of **Hessenburg orthogonalization.**
 >- The *eigenvalue* is **approximated** by the *eigenvalue of Hessenberg matrix* at the end of iteration.
 >- **Arnoldi process** reduce the complexity of the direct Hessenberg reduction via *Householder transformation* [[Hessenberg Reduction via Householder Transformation]]
 

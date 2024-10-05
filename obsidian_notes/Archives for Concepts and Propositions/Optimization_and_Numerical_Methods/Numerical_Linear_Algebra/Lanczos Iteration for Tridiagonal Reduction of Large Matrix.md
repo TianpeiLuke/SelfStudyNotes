@@ -121,6 +121,7 @@ date of note: 2024-09-21
 >[!info]
 >**Lanczos process** is an iterative process that compute **tridiagonal decomposition** of *Hermitian matrix* using **modified Gram-Schmdit** process.
 >- **Lanczos proces** is a stable version of **QR factorization** of *Krylov matrix* $$K(A, q_{1}, k)= Q_{k}R_{k}$$
+>	- It can be seen as a process of **tridiagonal orthogonalization.**
 >- The *eigenvalue* is **approximated** by the *eigenvalue of tridiagonal matrix* at the end of iteration.
 >- **Lanczos process** reduce the complexity of the direct tridiagonalization via *Householder transformation*  [[Tridiagonal Reduction of Symmetric Matrix via Householder Transformation]]
 
