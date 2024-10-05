@@ -64,6 +64,8 @@ date of note: 2024-07-03
 
 - [[Range and Kernel of Linear Map]]
 
+
+
 ## Explanation
 
 >[!important] 
@@ -76,6 +78,25 @@ date of note: 2024-07-03
 ![[Nilpotent Linear Transformation and Matrix#^ee0cec]]
 
 ![[Nilpotent Linear Transformation Geometric Characterization#^f97bb9]]
+
+
+## Krylov Methods
+
+- [[Krylov Subspace Methods]]
+
+![[Tridiagonal Decomposition of Symmetric Matrix#^d21ddc]]
+
+- [[Tridiagonal Decomposition of Symmetric Matrix]]
+- [[Lanczos Iteration for Tridiagonal Reduction of Large Matrix]]
+
+![[Hessenberg Decomposition of Matrix#^40c613]]
+
+- [[Hessenberg Decomposition of Matrix]]
+- [[Arnoldi Iteration for Hessenberg Reduction of Large Matrix]]
+
+![[Conjugate Gradient Algorithm Linear#^4f0700]]
+
+- [[Conjugate Gradient Algorithm Linear]]
 
 
 -----------
