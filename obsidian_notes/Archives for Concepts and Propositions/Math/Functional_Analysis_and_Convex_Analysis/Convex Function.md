@@ -191,6 +191,7 @@ date of note: 2024-05-15
 ^021d3c
 
 - [[Schur Complement and Inversion of Block Matrix]]
+- [[Moore–Penrose Pseudo Inverse of Matrix]]
 
 
 -----------
