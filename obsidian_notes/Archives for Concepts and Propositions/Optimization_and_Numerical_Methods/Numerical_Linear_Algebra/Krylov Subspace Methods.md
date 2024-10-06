@@ -29,7 +29,7 @@ date of note: 2024-10-04
 ### Tridiagonal Orthogonalization
 
 - [[Lanczos Iteration for Tridiagonal Reduction of Large Matrix]]
-- [[Lanczos Iteration Practical for Large Symmetric Eigenvalue Problem]]
+- [[Lanczos Iteration Practical with Reorthogonalization]]
 - [[Conjugate Gradient Algorithm Linear]]
 - [[Conjugate Gradient Algorithm Lanczos]]
 - [[Minimal Residuals Algorithm and MINRES]]

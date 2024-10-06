@@ -34,7 +34,7 @@ date of note: 2024-09-29
 
 - [[Conjugate Gradient Algorithm Linear]]
 - [[Conjugate Gradient Algorithm Lanczos]]
-- [[Lanczos Iteration Practical for Large Symmetric Eigenvalue Problem]]
+- [[Lanczos Iteration Practical with Reorthogonalization]]
 - [[Biconjugate Gradients Algorithm for Nonsymmetric System]]
 - [[GMRES as Regression on Krylov Space]]
 - [[Minimal Residuals Algorithm and MINRES]]

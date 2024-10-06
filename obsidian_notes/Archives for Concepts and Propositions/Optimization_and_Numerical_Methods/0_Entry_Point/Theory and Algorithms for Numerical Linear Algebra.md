@@ -208,7 +208,7 @@ date of note: 2024-05-12
 
 - [[Lanczos Iteration for Tridiagonal Reduction of Large Matrix]]
 - [[Ritz Pair for Linear Map with respect to Subspace]]
-- [[Lanczos Iteration Practical for Large Symmetric Eigenvalue Problem]]
+- [[Lanczos Iteration Practical with Reorthogonalization]]
 
 
 #### General Case without Symmetric, Large Scale

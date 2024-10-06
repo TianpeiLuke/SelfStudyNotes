@@ -40,7 +40,7 @@ date of note: 2024-08-21
 ## Iterative Algorithms
 
 
-- [[Lanczos Iteration Practical for Large Symmetric Eigenvalue Problem]]
+- [[Lanczos Iteration Practical with Reorthogonalization]]
 - [[Arnoldi Iteration for Hessenberg Reduction of Large Matrix]]
 
 
