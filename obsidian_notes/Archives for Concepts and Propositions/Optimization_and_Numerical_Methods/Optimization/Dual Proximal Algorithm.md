@@ -2,6 +2,7 @@
 tags:
   - concept
   - optimization/algorithm
+  - optimization/convex_optimization
 keywords:
   - dual_proximal_algorithm
 topics:

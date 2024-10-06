@@ -3,6 +3,7 @@ tags:
   - concept
   - optimization/algorithm
   - optimization/theory
+  - optimization/convex_optimization
 keywords:
   - conjugate_vector_positive_definite
 topics:

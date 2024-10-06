@@ -3,6 +3,7 @@ tags:
   - concept
   - optimization/algorithm
   - online_learning/algorithms
+  - optimization/convex_optimization
 keywords:
   - incremental_algorithm
 topics:

@@ -5,6 +5,7 @@ tags:
   - optimization/theory
   - online_learning/theory
   - online_learning/algorithms
+  - optimization/convex_optimization
 keywords:
   - online_convex_optimization
 topics:

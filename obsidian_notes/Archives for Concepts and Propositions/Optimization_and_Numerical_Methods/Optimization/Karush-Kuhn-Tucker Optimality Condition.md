@@ -3,6 +3,7 @@ tags:
   - concept
   - optimization/theory
   - math/convex_analysis
+  - optimization/convex_optimization
 keywords:
   - kkt_optimality_condition
 topics:

@@ -4,6 +4,7 @@ tags:
   - optimization/theory
   - optimization/algorithm
   - math/convex_analysis
+  - optimization/convex_optimization
 keywords:
   - interior_point_method
   - logarithmic_barrier

@@ -2,6 +2,8 @@
 tags:
   - concept
   - optimization/algorithm
+  - optimization/convex_optimization
+  - deep_learning/algorithms
 keywords:
   - gradient_descent_algorithm
   - line_search

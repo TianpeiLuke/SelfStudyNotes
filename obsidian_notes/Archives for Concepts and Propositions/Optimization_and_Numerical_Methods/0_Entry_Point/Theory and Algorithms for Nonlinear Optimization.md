@@ -111,15 +111,20 @@ date of note: 2024-05-12
 - [[Power Iteration and Inverse Iteration for General Eigenvalue Problem]]
 - [[QR Iteration for General Eigenvalue Problem]]
 - [[Hessenburg QR Iteration for Unsymmetric Eigenvalue Problem]]
+- [[QR Iteration Practical for General Eigenvalue Problem]]
+- [[Symmetric QR Iteration for Symmetric Eigenvalue Problem]]
 - [[Rayleigh Quotient Iteration for Symmetric Eigenvalue Problem]]
 
 #### Iterative Algorithms to Solve Large Sparse Eigenvalue Problem
 
-- [[Biorthogonalization Methods]]
-- [[Lanczos Iteration Practical with Reorthogonalization]]
+- [[Hessenberg Decomposition of Matrix]]
 - [[Arnoldi Iteration for Hessenberg Reduction of Large Matrix]]
 - [[Tridiagonal Decomposition of Symmetric Matrix]]
+- [[Lanczos Iteration Practical with Reorthogonalization]]
+
+- [[Biorthogonalization Methods]]
 - [[Jacobi-Davidson Algorithm to Sparse Eigenvalue Problem]]
+
 
 
 ### Derivative-Free Optimization

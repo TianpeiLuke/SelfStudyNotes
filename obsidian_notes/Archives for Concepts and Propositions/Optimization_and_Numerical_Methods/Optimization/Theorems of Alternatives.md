@@ -3,6 +3,8 @@ tags:
   - concept
   - optimization/theory
   - math/convex_analysis
+  - optimization/linear_optimization
+  - optimization/convex_optimization
 keywords:
   - theorem_alternatives
 topics:

@@ -2,6 +2,8 @@
 tags:
   - concept
   - optimization/algorithm
+  - optimization/convex_optimization
+  - optimization/linear_optimization
 keywords:
   - bundle_methods
 topics:

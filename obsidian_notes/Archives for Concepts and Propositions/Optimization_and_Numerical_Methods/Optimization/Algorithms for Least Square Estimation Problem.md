@@ -4,6 +4,8 @@ tags:
   - statistics/estimation
   - math/probability
   - optimization/algorithm
+  - optimization/convex_optimization
+  - math/matrix_analysis
 keywords:
   - least_square_estimation
   - pseudo_inverse_matrix

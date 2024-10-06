@@ -2,6 +2,8 @@
 tags:
   - concept
   - optimization/algorithm
+  - optimization/convex_optimization
+  - optimization/linear_optimization
 keywords:
   - cutting_plane_method
   - outer_linearization

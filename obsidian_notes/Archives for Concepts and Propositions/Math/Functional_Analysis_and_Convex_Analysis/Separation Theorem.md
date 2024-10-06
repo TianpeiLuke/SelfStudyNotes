@@ -4,6 +4,7 @@ tags:
   - math/functional_analysis
   - math/convex_analysis
   - optimization/theory
+  - optimization/convex_optimization
 keywords:
   - separation_theorem_convex
 topics:

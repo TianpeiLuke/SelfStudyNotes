@@ -4,6 +4,7 @@ tags:
   - optimization/algorithm
   - numerical_methods/numerical_linear_algebra
   - math/matrix_analysis
+  - optimization/convex_optimization
 keywords: 
 topics: 
 name: 

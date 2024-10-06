@@ -7,6 +7,7 @@ tags:
   - optimization/theory
   - math/optimal_transport
   - algorithm/graph
+  - optimization/linear_optimization
 keywords: 
 topics: 
 name: 

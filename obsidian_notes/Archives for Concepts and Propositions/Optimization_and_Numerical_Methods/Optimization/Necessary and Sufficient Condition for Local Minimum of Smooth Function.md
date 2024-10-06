@@ -1,7 +1,8 @@
 ---
 tags:
   - concept
-  - optimization
+  - optimization/theory
+  - optimization/convex_optimization
 keywords:
   - necessary_condition_optimality
   - sufficient_condition_optimality

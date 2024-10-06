@@ -3,6 +3,7 @@ tags:
   - concept
   - optimization/algorithm
   - numerical_methods/numerical_linear_algebra
+  - optimization/convex_optimization
 keywords:
   - conjugate_vector_positive_definite
   - conjugate_gradient_linear

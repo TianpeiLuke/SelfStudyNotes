@@ -2,6 +2,7 @@
 tags:
   - concept
   - optimization/algorithm
+  - optimization/convex_optimization
 keywords: 
 topics:
   - optimization
@@ -25,8 +26,12 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
+
+- [[Gradient Projection Method]]
 - [[Gradient Descent Algorithm]]
 - [[Feasible Direction and Reduced Cost for Linear Optimization]]
+- [[Simplex Method for Linear Optimization]]
+- [[Simplex Method for Linear Optimization Efficient Implementation]]
 
 
 - [[Nonlinear Programming by Bertsekas]] pp 214

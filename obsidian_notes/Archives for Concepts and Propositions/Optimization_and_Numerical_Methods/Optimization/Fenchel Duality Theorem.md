@@ -2,6 +2,7 @@
 tags:
   - concept
   - optimization/theory
+  - optimization/convex_optimization
 keywords:
   - convex_duality
   - fenchel_duality_theorem

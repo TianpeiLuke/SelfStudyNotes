@@ -2,6 +2,7 @@
 tags:
   - concept
   - optimization/theory
+  - optimization/convex_optimization
 keywords:
   - optimization_terminology
 topics:

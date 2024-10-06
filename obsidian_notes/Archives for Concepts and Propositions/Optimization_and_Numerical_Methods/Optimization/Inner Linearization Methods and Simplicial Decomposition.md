@@ -2,6 +2,8 @@
 tags:
   - concept
   - optimization/algorithm
+  - optimization/linear_optimization
+  - optimization/convex_optimization
 keywords:
   - inner_linearization
   - simplicial_decomposition

@@ -3,6 +3,7 @@ tags:
   - concept
   - optimization/algorithm
   - deep_learning/algorithms
+  - optimization/convex_optimization
 keywords:
   - adagrad_algorithm
   - stochastic_gradient_descent
