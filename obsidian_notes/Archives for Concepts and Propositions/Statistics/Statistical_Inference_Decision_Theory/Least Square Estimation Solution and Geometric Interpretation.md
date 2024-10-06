@@ -44,6 +44,7 @@ date of note: 2024-06-08
 
 ^17b91f
 
+- [[Normal Equations and Newton System of Equations]]
 - [[Surjective Injective Invertible Linear Map and Rank]]
 - [[Optimization by Vector Space Methods by Luenberger]] pp 82
 - [[Moore–Penrose Pseudo Inverse of Matrix]]
@@ -92,6 +93,7 @@ date of note: 2024-06-08
 
 ^03c5db
 
+- [[Normal Equations and Newton System of Equations]]
 - [[Range and Kernel of Product Map and Normal Map]]
 - [[Normal Transformation]]
 - [[Cholesky Factorization of Hermitian Positive Definite Matrices]]

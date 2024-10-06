@@ -30,3 +30,4 @@ date of note: 2024-05-12
 
 - [[Numerical Optimization by Nocedal]]
 - [[Nonlinear Programming by Bertsekas]]
+- [[Convex Optimization by Boyd]] pp 302

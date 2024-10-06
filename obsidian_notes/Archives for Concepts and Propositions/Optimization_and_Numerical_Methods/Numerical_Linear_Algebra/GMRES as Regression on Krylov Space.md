@@ -26,6 +26,7 @@ date of note: 2024-10-04
 ##  Recommended Notes and References
 
 - [[Minimal Residuals Algorithm and MINRES]]
+- [[Normal Equations and Newton System of Equations]]
 
 - [[Krylov Subspace and Krylov Matrix]]
 - [[Nilpotent Linear Transformation and Matrix]]

@@ -148,8 +148,9 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
+
 - [[Methods of Lagrangian Multipliers]]
 - [[Lagrange Dual Problem]]
 
 - [[Convex Analysis by Rockafellar]]
-- [[Convex Optimization by Boyd]]
+- [[Convex Optimization by Boyd]] pp 50, 54, 258, 269

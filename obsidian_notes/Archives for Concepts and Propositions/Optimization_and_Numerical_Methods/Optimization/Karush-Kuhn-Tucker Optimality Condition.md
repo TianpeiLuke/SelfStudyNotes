@@ -252,7 +252,7 @@ date of note: 2024-05-12
 - [[Constrained Optimization Problem]]
 
 - [[Convex Analysis by Rockafellar]] pp 282
-- [[Convex Optimization by Boyd]]
+- [[Convex Optimization by Boyd]] pp 243, 677
 - [[Numerical Optimization by Nocedal]]  pp 321
 - [[Nonlinear Programming by Bertsekas]] pp 315 - 321
 - [[Optimization by Vector Space Methods by Luenberger]] pp 249 - 250

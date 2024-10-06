@@ -27,6 +27,7 @@ date of note: 2024-10-04
 
 
 - [[GMRES as Regression on Krylov Space]]
+- [[Normal Equations and Newton System of Equations]]
 
 - [[Krylov Subspace and Krylov Matrix]]
 - [[Nilpotent Linear Transformation and Matrix]]
@@ -35,7 +36,8 @@ date of note: 2024-10-04
 - [[Least Square Estimation]]
 - [[Least Square Estimation with QR Factorization]]
 
-- [[Arnoldi Iteration for Hessenberg Reduction of Large Matrix]]
+- [[Hermitian or Symmetric Matrix]]
+- [[Lanczos Iteration for Tridiagonal Reduction of Large Matrix]]
 - [[Modified Gram-Schmidt Algorithm for QR Factorization]]
 - [[Gram-Schmidt Orthogonalization]]
 

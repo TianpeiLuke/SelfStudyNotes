@@ -297,4 +297,5 @@ date of note: 2024-07-23
 - [[Matrix Analysis for Scientists and Engineers by Laub]] pp 48, 102 - 104
 - [[Numerical Linear Algebra by Trefethen]] pp 154
 - [[Matrix CookBook by Petersen]]
+- [[Convex Optimization by Boyd]] pp 672
 - Wikipedia [Schur_complement](https://en.wikipedia.org/wiki/Schur_complement)

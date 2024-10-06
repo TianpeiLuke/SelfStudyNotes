@@ -116,3 +116,4 @@ date of note: 2024-07-26
 - [[Matrix Analysis for Scientists and Engineers by Laub]] pp 29 - 31
 - [[Matrix CookBook by Petersen]] pp 21
 - [[Numerical Linear Algebra by Trefethen]] pp 81 - 85, 94, 129, 335
+- [[Convex Optimization by Boyd]] pp 88, 141, 153, 177, 185, 305

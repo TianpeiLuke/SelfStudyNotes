@@ -98,3 +98,4 @@ date of note: 2024-05-12
 - [[Nonlinear Programming by Bertsekas]] pp 228
 - [[Convex Optimization Algorithms by Bertsekas]] pp 73, 302
 - [[Optimization by Vector Space Methods by Luenberger]] pp 297
+- [[Convex Optimization by Boyd]] pp 557

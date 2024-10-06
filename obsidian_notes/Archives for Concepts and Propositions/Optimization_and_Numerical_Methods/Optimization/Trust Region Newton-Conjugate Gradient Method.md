@@ -31,3 +31,4 @@ date of note: 2024-07-02
 
 
 - [[Numerical Optimization by Nocedal]] pp 165 - 176
+- [[Convex Optimization by Boyd]] pp 229, 302, 515

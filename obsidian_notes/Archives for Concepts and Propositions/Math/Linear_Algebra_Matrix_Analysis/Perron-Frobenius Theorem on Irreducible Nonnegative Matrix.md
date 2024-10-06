@@ -69,3 +69,4 @@ date of note: 2024-09-24
 - [[Matrix Analysis by Horn]] pp 534 - 537
 - [[Matrix Analysis for Scientists and Engineers by Laub]]
 - [[Matrix Computations by Golub]]
+- [[Convex Optimization by Boyd]] pp 165

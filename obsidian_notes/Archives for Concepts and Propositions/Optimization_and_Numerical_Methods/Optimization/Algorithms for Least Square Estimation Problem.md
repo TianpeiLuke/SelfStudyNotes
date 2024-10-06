@@ -48,6 +48,8 @@ date of note: 2024-06-08
 >
 >We can apply *algorithms* from *numerical linear algebra*
 
+- [[Normal Equations and Newton System of Equations]]
+
 >[!info]
 >Solving $x$ is equivalent to finding the solution of **normal equation**
 >$$

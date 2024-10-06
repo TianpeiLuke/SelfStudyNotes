@@ -160,3 +160,4 @@ date of note: 2024-08-08
 - [[Matrix Analysis by Horn]] pp 216 - 223
 - [[Matrix Analysis for Scientists and Engineers by Laub]] pp 5 - 6
 - [[Matrix CookBook by Petersen]] pp 32
+- [[Convex Optimization by Boyd]] pp 668, 671

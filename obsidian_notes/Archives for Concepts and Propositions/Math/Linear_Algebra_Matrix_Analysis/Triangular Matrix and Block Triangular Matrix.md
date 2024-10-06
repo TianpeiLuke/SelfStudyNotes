@@ -145,3 +145,4 @@ date of note: 2024-09-24
 - [[Matrix Analysis by Horn]] pp 31 - 32
 - [[Matrix Analysis for Scientists and Engineers by Laub]] pp 2
 - [[Numerical Linear Algebra by Trefethen]] pp 194, 218, 305- 306
+- [[Convex Optimization by Boyd]] pp 326, 665

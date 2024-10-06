@@ -23,6 +23,11 @@ date of note: 2024-05-12
 - [[Moore–Penrose Pseudo Inverse of Matrix]]
 - [[Singular Value Decomposition and Pseudoinverse]]
 
+### Numerical Stability and Error Analysis
+
+- [[Condition Number for Stability of Numerical Linear System]]
+
+
 ### General Linear Systems
 
 #### Solution of Linear System
@@ -76,11 +81,11 @@ date of note: 2024-05-12
 - [[Band Triangular System of Equations]]
 - [[Band Forward Substitution and Band Back Substitution]]
 - [[Band Gaussian Elimination and Band LU Factorization]]
-- [[Band Gaussian Elimination and Band LU Factorization]]
 - [[Band Gaussian Elimination with Pivoting]]
 - [[Hessenberg LU Factorization of Matrix]]
 - [[Hessenberg Reduction via Householder Transformation]]
-- [[Band Cholesky Factorization of Hermitian Positive Semidefinite Matrices]]
+- [[Band Cholesky Factorization of Hermitian Positive Definite Matrices]]
+
 
 #### Tridiagonal System of Equations
 
@@ -117,12 +122,14 @@ date of note: 2024-05-12
 - [[Least Square Estimation]]
 - [[Algorithms for Least Square Estimation Problem]]
 - [[Least Square Estimation Solution and Geometric Interpretation]]
+- [[Normal Equations and Newton System of Equations]]
 - [[Least Square Estimation with QR Factorization]]
 - [[Least Square Estimation via Singular Value Decomposition]]
 
 - [[Krylov Subspace Methods]]
 - [[GMRES as Regression on Krylov Space]]
 - [[Conjugate Gradient Normal Equation Residual and CGNER]]
+
 
 ###  Eigenvalue Problem
 
@@ -248,6 +255,11 @@ date of note: 2024-05-12
 - [[Conjugate Gradient Algorithm Convergence Analysis]]
 - [[Conjugate Gradient Algorithm Lanczos]]
 - [[Minimal Residuals Algorithm and MINRES]]
+
+
+### Preconditioning
+
+- [[Condition Number for Stability of Numerical Linear System]]
 
 
 

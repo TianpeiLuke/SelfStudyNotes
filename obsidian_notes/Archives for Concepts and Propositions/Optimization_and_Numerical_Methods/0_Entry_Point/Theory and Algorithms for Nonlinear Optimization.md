@@ -87,13 +87,13 @@ date of note: 2024-05-12
 - [[Linear Regression]]
 - [[Least Square Estimation]]
 - [[Least Square Estimation Solution and Geometric Interpretation]]
+- [[Normal Equations and Newton System of Equations]]
 - [[Algorithms for Least Square Estimation Problem]]
 - [[Least Square Estimation with QR Factorization]]
 - [[Least Square Estimation via Singular Value Decomposition]]
 - [[Conjugate Gradient Normal Equation Residual and CGNER]]
-
-- [[Least Square Estimation via Singular Value Decomposition]]
-- [[Conjugate Gradient Normal Equation Residual and CGNER]]
+- [[GMRES as Regression on Krylov Space]]
+- [[Minimal Residuals Algorithm and MINRES]]
 
 
 ### Eigenvalue Problem

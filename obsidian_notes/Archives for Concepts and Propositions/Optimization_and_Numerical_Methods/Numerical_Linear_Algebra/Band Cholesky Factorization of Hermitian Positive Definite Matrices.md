@@ -86,3 +86,4 @@ date of note: 2024-09-21
 
 - [[Matrix Computations by Golub]] pp 180 
 - [[Numerical Linear Algebra by Trefethen]] pp 
+- [[Convex Optimization by Boyd]] pp 670

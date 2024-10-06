@@ -84,3 +84,4 @@ date of note: 2024-08-08
 - [[Numerical Linear Algebra by Trefethen]] pp
 - [[Matrix Computations by Golub]] pp 280 - 282
 - [[Matrix Analysis by Horn]]
+- [[Convex Optimization by Boyd]] pp 510, 546, 553, 669, 675

@@ -44,6 +44,8 @@ date of note: 2024-07-24
 
 - [[Graph LASSO and Structured Learning in Gaussian Graphical Model]]
 
+
 - [[Elements of Statistical Learning by Hastie]]
 - [[All of Statistics A Concise Course by Wasserman]]
+- [[Convex Optimization by Boyd]] pp 184, 205
 - Wikipedia [Partial_correlation](https://en.wikipedia.org/wiki/Partial_correlation)

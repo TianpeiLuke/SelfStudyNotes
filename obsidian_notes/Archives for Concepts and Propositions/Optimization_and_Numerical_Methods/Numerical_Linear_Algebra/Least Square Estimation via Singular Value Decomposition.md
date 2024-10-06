@@ -88,3 +88,4 @@ date of note: 2024-08-21
 - [[Numerical Optimization by Nocedal]]
 - [[Matrix Computations by Golub]] pp 260 - 288
 - [[Matrix Analysis for Scientists and Engineers by Laub]] pp 70 - 71
+- [[Convex Optimization by Boyd]] pp 4, 131, 153, 177, 293, 304, 458

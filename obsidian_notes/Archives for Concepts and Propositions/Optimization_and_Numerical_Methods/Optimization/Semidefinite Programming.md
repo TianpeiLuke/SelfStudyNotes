@@ -27,10 +27,11 @@ date of note: 2024-07-07
 -----------
 ##  Recommended Notes and References
 
+
 - [[Positive Semidefinite Transformation]]
 - [[Positive Semidefinite Operator]]
 
-
+- [[Inverse Covariance Estimation]]
 
 - [[Convex Function]]
 - [[Determinant of Linear Transformation]]
@@ -42,6 +43,6 @@ date of note: 2024-07-07
 
 
 
-- [[Convex Optimization by Boyd]]
+- [[Convex Optimization by Boyd]] pp 168, 201, 265, 285, 600 - 608, 618 
 - [[Convex Optimization Algorithms by Bertsekas]]
 - [[Nonlinear Programming by Bertsekas]]

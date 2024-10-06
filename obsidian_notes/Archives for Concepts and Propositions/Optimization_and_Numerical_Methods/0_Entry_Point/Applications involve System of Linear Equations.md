@@ -79,6 +79,7 @@ date of note: 2024-09-27
 >[!info]
 >If $A$ has **full column rank**, e.g. $n > m$, then the LSE has **unique solution** $$x = A^{+}b= \left(A^{T}\,A\right)^{-1}\,A^{T}b$$ 
 
+- [[Normal Equations and Newton System of Equations]]
 
 #### Gaussian Elimination and Cholesky Factorization
 
@@ -94,6 +95,7 @@ date of note: 2024-09-27
 >- Or we can use **Cholesky factorization**  $$S = G\,G^{T},$$ which requires $n^3 / 3$ flops. Here $G$ is a *lower triangular matrix*. 
 >	- The solution can be obtained by solving two triangular systems $$G\,y = w, \quad G^{T}\,x = y$$
 
+- [[Normal Equations and Newton System of Equations]]
 - [[Hermitian or Symmetric Matrix]]
 - [[Positive Semidefinite Transformation]]
 - [[LDU Factorization of Symmetric Matrix]]

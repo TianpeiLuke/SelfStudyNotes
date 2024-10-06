@@ -85,3 +85,4 @@ date of note: 2024-08-08
 - [[Matrix Computations by Golub]] pp 
 - [[Matrix Analysis by Horn]] pp 32 - 33
 - [[Matrix CookBook by Petersen]] pp 56
+- [[Convex Optimization by Boyd]] pp 666
