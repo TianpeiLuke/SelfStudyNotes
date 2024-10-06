@@ -8,7 +8,11 @@ tags:
 keywords:
   - normal_equation_least_square
   - netwon_system_equations
-topics: 
+topics:
+  - numerical_linear_algebra
+  - statistics/inference
+  - convex_analysis
+  - optimization
 name: Normal Equations and Newton System of Equations
 date of note: 2024-10-06
 ---
@@ -35,6 +39,7 @@ date of note: 2024-10-06
 - [[Least Square Estimation]]
 - [[Algorithms for Least Square Estimation Problem]]
 - [[Least Square Estimation Solution and Geometric Interpretation]]
+- [[Moore–Penrose Pseudo Inverse of Matrix]]
 
 ### Normal Transformations
 
@@ -114,7 +119,7 @@ date of note: 2024-10-06
 - [[Matrix]]
 
 
-- [[Matrix Analysis by Horn]]
+- [[Matrix Analysis by Horn]] pp 462
 - [[Matrix Analysis for Scientists and Engineers by Laub]] pp 65 - 67
 - [[Matrix CookBook by Petersen]] pp 28
 - [[Matrix Computations by Golub]] pp 303 - 334

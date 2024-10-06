@@ -86,6 +86,7 @@ date of note: 2024-06-01
 - [[Linear Regression]]
 - [[Least Square Estimation]]
 - [[Least Square Estimation Solution and Geometric Interpretation]]
+- [[Normal Equations and Newton System of Equations]]
 - [[Algorithms for Least Square Estimation Problem]]
 - [[Best Linear Unbiased Prediction]]
 - [[Gauss–Markov Theorem]]

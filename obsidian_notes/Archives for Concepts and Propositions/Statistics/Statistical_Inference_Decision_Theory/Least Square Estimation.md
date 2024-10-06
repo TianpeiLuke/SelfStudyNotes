@@ -87,6 +87,8 @@ date of note: 2024-06-08
 
 ![[Least Square Estimation Solution and Geometric Interpretation#^03c5db]]
 
+- [[Normal Equations and Newton System of Equations]]
+
 ### Algorithm to Solve Least Square Estimation
 
 - [[Algorithms for Least Square Estimation Problem]]
