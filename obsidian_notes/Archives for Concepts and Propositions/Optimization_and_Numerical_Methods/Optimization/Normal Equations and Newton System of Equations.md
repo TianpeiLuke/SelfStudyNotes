@@ -79,8 +79,6 @@ date of note: 2024-10-06
 - [[Minimal Residuals Algorithm and MINRES]]
 - [[Conjugate Gradient Algorithm Linear]]
 
-- [[Biorthogonalization Methods]]
-- [[Conjugate Gradient Normal Equation Residual and CGNER]]
 
 
 

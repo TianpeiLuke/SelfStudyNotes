@@ -30,6 +30,7 @@ date of note: 2024-09-29
 - [[Principle of Biorthogonality]]
 - [[Krylov Subspace and Krylov Matrix]]
 - [[System of Linear Equations or Linear System]]
+- [[Normal Equations and Newton System of Equations]]
 
 
 - [[Conjugate Gradient Algorithm Linear]]

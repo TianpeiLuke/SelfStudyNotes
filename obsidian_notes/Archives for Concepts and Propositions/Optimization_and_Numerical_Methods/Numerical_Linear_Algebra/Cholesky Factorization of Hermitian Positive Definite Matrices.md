@@ -171,7 +171,7 @@ date of note: 2024-09-21
 
 
 
-
+- [[Normal Equations and Newton System of Equations]]
 - [[System of Linear Equations or Linear System]]
 - [[Existence and Uniqueness of Solution of Linear Equations]]
 

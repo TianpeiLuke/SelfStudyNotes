@@ -39,6 +39,7 @@ date of note: 2024-10-05
 - [[Nilpotent Linear Transformation and Matrix]]
 - [[Nilpotent Linear Transformation Geometric Characterization]]
 
+- [[Normal Equations and Newton System of Equations]]
 - [[System of Linear Equations or Linear System]]
 - [[Existence and Uniqueness of Solution of Linear Equations]]
 

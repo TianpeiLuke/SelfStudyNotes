@@ -37,6 +37,7 @@ date of note: 2024-10-04
 
 ### Tridiagonal Bi-Orthogonalization
 
+- [[Normal Equations and Newton System of Equations]]
 - [[Biorthogonalization Methods]]
 - [[Conjugate Gradient Normal Equation Residual and CGNER]]
 - [[Biconjugate Gradients Algorithm for Nonsymmetric System]]

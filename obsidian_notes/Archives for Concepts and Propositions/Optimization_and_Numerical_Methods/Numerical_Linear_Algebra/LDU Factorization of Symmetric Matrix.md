@@ -140,6 +140,7 @@ date of note: 2024-08-08
 - [[Hermitian or Symmetric Matrix]]
 - [[LU Factorization of Matrix]]
 - [[Triangular Matrix and Block Triangular Matrix]]
+- [[Normal Equations and Newton System of Equations]]
 - [[Matrix]]
 - [[Orthogonal Group]]
 - [[Unitary Group]]

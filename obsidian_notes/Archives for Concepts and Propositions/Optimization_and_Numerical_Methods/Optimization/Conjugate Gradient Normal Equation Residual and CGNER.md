@@ -25,6 +25,7 @@ date of note: 2024-09-30
 -----------
 ##  Recommended Notes and References
 
+- [[Normal Equations and Newton System of Equations]]
 
 - [[Conjugate Gradient Algorithm Linear]]
 - [[Conjugate Gradient Algorithm Nonlinear]]
