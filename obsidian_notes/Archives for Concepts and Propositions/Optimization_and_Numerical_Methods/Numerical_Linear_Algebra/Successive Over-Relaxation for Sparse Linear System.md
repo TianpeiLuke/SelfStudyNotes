@@ -78,21 +78,23 @@ date of note: 2024-09-21
 >The **symmetric forward successive over-relaxation (SSOR)** iteration can be formulated in compact form: $$\left(\frac{1}{w}D_{A} + L_{A}\right)x^{(k)} = \left(\left(\frac{1}{w} - 1\right)D_{A} - L_{A}^{T}\right)x^{(k-1)} + b$$
 >And the **symmetric backward successive over-relaxation (SSOR)** iteration is formulated as $$\left(\frac{1}{w}D_{A} + L_{A}^{T}\right)x^{(k)} = \left(\left(\frac{1}{w} - 1\right)D_{A} - L_{A}\right)x^{(k-1)} + b$$
 >where 
->-  $D_{A}$, $L_{A}$ and $U_{A}$ are *diagonal entries*, *lower triangular entries*, and *upper triangular entries* of $A$, respectively
->$$
->\begin{align*}
-> D_{A} &= \text{diag}(A) = \text{diag}(a_{1,1} \,{,}\ldots{,}\,a_{n,n})\\[5pt] 
-> L_{A} &= \left[ \begin{array}{cccc}0&  &  & 0 \\ a_{2,1}& 0 &  & \vdots\\ \vdots & \ddots & \ddots & \vdots\\ a_{n,1}& \cdots & a_{n,n-1} & 0\end{array} \right]\\[5pt]  
-> U_{A} &= \left[ \begin{array}{cccc}0& a_{1,2}  & \cdots  & a_{1,n} \\\vdots & 0 & \ddots & \vdots\\ \vdots &  & \ddots & a_{n-1,n}\\ 0 &  &  & 0\end{array} \right]
-\end{align*}
->$$
+>-  $D_{A}$, $L_{A}$ and $U_{A}$ are *diagonal entries*, *lower triangular entries*, and *upper triangular entries* of $A$, respectively $$\begin{align*}D_{A} &= \text{diag}(A) = \text{diag}(a_{1,1} \,{,}\ldots{,}\,a_{n,n})\\[5pt] L_{A} &= \left[ \begin{array}{cccc}0&  &  & 0 \\ a_{2,1}& 0 &  & \vdots\\ \vdots & \ddots & \ddots & \vdots\\ a_{n,1}& \cdots & a_{n,n-1} & 0\end{array} \right]\\[5pt]  U_{A} &= \left[ \begin{array}{cccc}0& a_{1,2}  & \cdots  & a_{1,n} \\\vdots & 0 & \ddots & \vdots\\ \vdots &  & \ddots & a_{n-1,n}\\ 0 &  &  & 0\end{array} \right]\end{align*}$$
+>- It can be shown that if $$M_{SSOR} = \frac{w}{2 -w}\left(\frac{1}{w}D_{A} + L_{A}\right)\,D_{A}^{-1}\,\left(\frac{1}{w}D_{A} + L_{A}^{T}\right)$$ then the **transition equation** is given by $$x^{(k)} = x^{(k-1)} + M_{SSOR}^{-1}\left(b - Ax^{(k-1)}\right)$$
+>	- Note that $M_{SSOR}$ is defined if $0 < w < 2$ and that it is *symmetric*. 
+>	- It is also *positive  definite* if $A$ has positive diagonal entries.
 
 
 ## Explanation
 
 >[!quote]
 >The **Gauss-Seidel iteration** is very attractive because of its simplicity. Unfortunately, if the spectral radius of $M_{GS}^{-1} N_{GS}$ is close to unity, then it may be **prohibitively slow**.
+>
+>-- [[Matrix Computations by Golub]] pp 619
 
+>[!quote]
+>One step of a classical iterative method. In this book we have not discussed the "classical iterations" such as **Jacobi**, **Gauss-Seidel**, **SOR**, or **SSOR**, but one or more steps of these iterations—particularly *Jacobi* and *SSOR*—often serve excellently as **preconditioners**. This is also one of the key ideas behind multigrid methods.
+>
+>-- [[Numerical Linear Algebra by Trefethen]] pp 318
 
 
 
@@ -107,6 +109,8 @@ date of note: 2024-09-21
 - [[System of Linear Equations or Linear System]]
 - [[Existence and Uniqueness of Solution of Linear Equations]]
 
+- [[RMSProp Algorithm]]
+- [[Adam Algorithm]]
 
 
 - [[Matrix Computations by Golub]] pp 619 - 620
