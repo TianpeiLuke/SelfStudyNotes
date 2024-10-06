@@ -42,7 +42,7 @@ date of note: 2024-05-12
 >Since the **Hessian matrix** $\nabla^2 f(x_{k})$ may **not always be positive definite**, $d_{k}$ may **not always be a descent direction**, and many of the ideas discussed so far in this chapter no longer apply.
 
 - [[Numerical Optimization by Nocedal]]  pp 44
-
+- [[Normal Equations and Newton System of Equations]]
 
 
 -----------

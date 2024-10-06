@@ -60,6 +60,7 @@ date of note: 2024-07-02
 
 - [[Positive Semidefinite Transformation]]
 - [[Hermitian or Symmetric Matrix]]
+- [[Normal Equations and Newton System of Equations]]
 
 ### Symmetric Rank-One Formula
 

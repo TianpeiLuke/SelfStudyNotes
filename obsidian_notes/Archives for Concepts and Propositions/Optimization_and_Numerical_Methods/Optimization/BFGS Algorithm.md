@@ -160,6 +160,8 @@ date of note: 2024-05-12
 >$$
 >where $$\lVert A \rVert_{W} = \lVert W^{1 / 2}\,A\,W^{1 / 2} \rVert_{F}$$ is the **weighted Frobenius norm** of matrix and the *weight matrix* $W$ is any matrix satisfying $$W\,s_{k} = y_{k}.$$
 
+^7f5c27
+
 >[!important] Definition
 >The **unique solution** of above optimization problem is
 >$$

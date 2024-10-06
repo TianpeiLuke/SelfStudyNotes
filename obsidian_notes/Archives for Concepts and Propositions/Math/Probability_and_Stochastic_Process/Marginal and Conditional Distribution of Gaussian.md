@@ -91,6 +91,7 @@ date of note: 2024-07-25
 - [[Partition of Matrix and Block Matrix]]
 - [[Schur Complement and Inversion of Block Matrix]]
 - [[Kalman Filter Discrete-Time]]
+- [[Normal Equations and Newton System of Equations]]
 
 ## Canonical Parameterization 
 
