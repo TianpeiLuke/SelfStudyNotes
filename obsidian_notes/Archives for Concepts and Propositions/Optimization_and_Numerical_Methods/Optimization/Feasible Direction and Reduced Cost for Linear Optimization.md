@@ -3,6 +3,7 @@ tags:
   - concept
   - optimization/theory
   - optimization/algorithm
+  - optimization/linear_optimization
 keywords:
   - linear_optimization
   - reduced_cost

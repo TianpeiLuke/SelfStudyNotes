@@ -4,6 +4,7 @@ tags:
   - math/convex_analysis
   - optimization/theory
   - machine_learning/theory
+  - optimization/linear_optimization
 keywords:
   - polyhedral_set
   - polytope_set

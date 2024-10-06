@@ -6,6 +6,7 @@ tags:
   - math/functional_analysis
   - math/convex_analysis
   - optimization/theory
+  - optimization/convex_optimization
 keywords: 
 topics:
   - topology

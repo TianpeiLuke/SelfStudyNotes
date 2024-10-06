@@ -4,6 +4,7 @@ tags:
   - math/functional_analysis
   - optimization/theory
   - math/topology
+  - optimization/linear_optimization
 keywords:
   - extreme_points
   - convex_set

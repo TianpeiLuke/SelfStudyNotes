@@ -2,6 +2,8 @@
 tags:
   - concept
   - math/functional_analysis
+  - optimization/linear_optimization
+  - optimization/convex_optimization
 keywords:
   - krein_milman_lemma
   - krein_milman_theorem

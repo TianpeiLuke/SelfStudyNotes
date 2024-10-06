@@ -2,6 +2,7 @@
 tags:
   - concept
   - optimization/theory
+  - optimization/linear_optimization
 keywords:
   - basic_solution_linear_optimization
   - degeneracy_basic_solution

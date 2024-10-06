@@ -2,6 +2,7 @@
 tags:
   - concept
   - optimization/theory
+  - optimization/linear_optimization
 keywords:
   - extreme_points
   - polyhedral_set

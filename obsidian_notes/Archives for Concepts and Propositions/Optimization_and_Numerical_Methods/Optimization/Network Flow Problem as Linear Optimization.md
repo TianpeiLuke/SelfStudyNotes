@@ -7,9 +7,13 @@ tags:
   - optimization/theory
   - math/optimal_transport
   - algorithm/graph
-keywords: 
-topics: 
-name: 
+  - optimization/linear_optimization
+keywords:
+  - network_flow_optimization
+topics:
+  - optimization/theory
+  - optimization/algorithm
+name: Network Flow Problem as Linear Optimization
 date of note: 2024-07-15
 ---
 

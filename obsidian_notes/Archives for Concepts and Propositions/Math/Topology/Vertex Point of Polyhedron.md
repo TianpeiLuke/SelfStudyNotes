@@ -4,6 +4,7 @@ tags:
   - math/topology
   - math/functional_analysis
   - optimization/theory
+  - optimization/linear_optimization
 keywords:
   - vertex_polyhedron
   - polyhedral_set

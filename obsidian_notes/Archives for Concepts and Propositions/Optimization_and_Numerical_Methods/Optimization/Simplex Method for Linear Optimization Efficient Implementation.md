@@ -2,6 +2,7 @@
 tags:
   - concept
   - optimization/algorithm
+  - optimization/linear_optimization
 keywords:
   - simplex_method_linear
 topics:

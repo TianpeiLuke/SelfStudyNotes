@@ -2,6 +2,7 @@
 tags:
   - concept
   - math/convex_analysis
+  - optimization/linear_optimization
 keywords:
   - generalized_simplex
 topics:
