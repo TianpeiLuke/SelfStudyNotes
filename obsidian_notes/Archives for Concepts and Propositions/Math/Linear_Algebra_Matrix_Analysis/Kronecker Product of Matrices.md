@@ -81,6 +81,8 @@ date of note: 2024-10-01
 >- **Determinant**: For $A\in M_{n}$ and $B\in M_{p}$, we have $$\det \left( A\otimes B \right) = \det(A)^{p}\,\det(B)^{n}.$$
 >- **Trace**: $$\text{tr}(A\otimes B) = \text{tr}(A)\,\text{tr}(B).$$
 >- **Vectorization of Kronecker Product** $$\text{vec}\left( A\otimes B \right) = \left( I_{n} \otimes K_{qm} \otimes I_{p} \right)\,(\text{vec}(A) \otimes \text{vec}(B))$$
+>- **Norm**: $$\lVert A \otimes B \rVert_{F} = \lVert A \rVert_{F}\, \lVert B \rVert_{F}.$$ $$\lVert A \otimes B \rVert_{2} = \lVert A \rVert_{2}\, \lVert B \rVert_{2}.$$
+>- **Rank**: $$\text{rank}(A \otimes B) = \text{rank}(A) \cdot \text{rank}(B).$$
 
 
 - [[Similarity Relation between Linear Maps and Matrices]]
@@ -91,13 +93,24 @@ date of note: 2024-10-01
 - [[Moore–Penrose Pseudo Inverse of Matrix]]
 - [[Determinant of Linear Transformation]]
 - [[Trace of Matrix]]
+- [[Rank and Nullity of Linear Map]]
 - [[Adjoint of Linear Map]]
+- [[Frobenius Norm of Matrix]]
+- [[Operator p-Norm of Matrix]]
 
 
 >[!info]
 >We can rewrite the matrix equation $$AXB = C$$ by **vec trick** i.e. $$\text{vec}(C) = \text{vec}(AXB) = (B^{T} \otimes A)\,\text{vec}(X)$$
 
+>[!important] Proposition
+>- If $A, B$ are both **Hermitian positive definite**, then $$A \otimes B$$ is **Hermitian positive definite**.
+>- If $A, B$ are both **unitary**, then $$A \otimes B$$ is **unitary**.
+>- If $A, B$ are both **stochastic matrix**, then $$A \otimes B$$ is **stochastic matrix**.
 
+- [[Hermitian or Symmetric Matrix]]
+- [[Positive Semidefinite Transformation]]
+- [[Unitary and Orthogonal Transformation]]
+- [[Stochastic Matrix and Doubly Stochastic Matrix]]
 
 
 

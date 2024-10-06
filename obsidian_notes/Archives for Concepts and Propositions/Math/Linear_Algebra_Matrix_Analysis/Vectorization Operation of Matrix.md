@@ -35,6 +35,6 @@ date of note: 2024-10-01
 - [[Matrix]]
 
 
-- [[Matrix Analysis by Horn]]
+- [[Matrix Analysis by Horn]] pp 21
 - [[Matrix Analysis for Scientists and Engineers by Laub]]
 - [[Matrix Computations by Golub]]

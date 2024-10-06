@@ -29,11 +29,16 @@ date of note: 2024-09-21
 - [[Tridiagonal Eigenvalue Problem]]
 - [[Tridiagonal Decomposition of Symmetric Matrix]]
 
+- [[Householder Transformation and Householder Reflection]]
+- [[Householder QR Factorization]]
+- [[Ritz Pair for Linear Map with respect to Subspace]]
+
+
 - [[Eigenvalue and Eigenvector for Linear Map]]
 - [[Eigenspace and Spectrum for Linear Map]]
 - [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
 - [[Positive Semidefinite Transformation]]
 
 - [[Matrix Analysis by Horn]] pp 221
-- [[Matrix Computations by Golub]] pp 556 - 571
-- [[Numerical Linear Algebra by Trefethen]] pp 276 - 293
+- [[Matrix Computations by Golub]] pp 562 - 566
+- [[Numerical Linear Algebra by Trefethen]] pp 245, 276 - 284, 298, 303, 340
