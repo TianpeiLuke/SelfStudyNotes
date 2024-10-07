@@ -76,7 +76,8 @@ date of note: 2024-09-21
 >- At iteration $k$, all variables $j \le i$ are replaced by *updated value* $x_{j}^{(k)}$, which is the **forward pass**.
 
 - [[Mean Field Approximation for Gaussian Markov Random Field]]
-
+- [[Sparse Linear System and Graph]]
+- [[Sparse Matrix Representation]]
 
 
 

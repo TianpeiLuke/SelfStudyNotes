@@ -232,9 +232,7 @@ date of note: 2024-05-12
 
 
 
-### Iterative Algorithms to solve Large Sparse Linear System
-
-- [[Sparse Linear System and Graph]]
+### Iterative Algorithms to solve Large Linear System
 
 #### General Case
 
@@ -255,6 +253,12 @@ date of note: 2024-05-12
 - [[Conjugate Gradient Algorithm Convergence Analysis]]
 - [[Conjugate Gradient Algorithm Lanczos]]
 - [[Minimal Residuals Algorithm and MINRES]]
+
+### Sparse Matrix and Sparse Linear System
+
+- [[Sparse Matrix Representation]]
+- [[Sparse Linear System and Graph]]
+- [[Sparse Matrix Factorization and Challenges]]
 
 
 ### Preconditioning
