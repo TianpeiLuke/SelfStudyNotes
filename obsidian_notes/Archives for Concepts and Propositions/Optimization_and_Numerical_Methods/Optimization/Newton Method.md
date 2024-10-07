@@ -45,6 +45,17 @@ date of note: 2024-05-12
 - [[Normal Equations and Newton System of Equations]]
 
 
+## Numerical Solution for Newton System
+
+- [[Normal Equations and Newton System of Equations]]
+- [[Cholesky Factorization of Hermitian Positive Definite Matrices]]
+- [[LDU Factorization of Symmetric Matrix]]
+- [[Conjugate Gradient Algorithm Linear]]
+- [[Newton-Conjugate Gradient and Inexact Newton Method]]
+- [[Lanczos Iteration for Tridiagonal Reduction of Large Matrix]]
+
+
+
 -----------
 ##  Recommended Notes and References
 

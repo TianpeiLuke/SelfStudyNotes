@@ -97,7 +97,12 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
+
 - [[Newton Method]]
+- [[Secant Equation and Quasi-Newton Methods]]
+- [[BFGS Algorithm]]
+
+
 
 - [[Sequential Quadratic Programming]]
 - [[Convex Optimization Problem]]
@@ -107,4 +112,4 @@ date of note: 2024-05-12
 
 - [[Convex Optimization by Boyd]] pp 561
 - [[Numerical Optimization by Nocedal]] pp 563 - 594
-- [[Nonlinear Programming by Bertsekas]]
+- [[Nonlinear Programming by Bertsekas]] pp 446 - 473

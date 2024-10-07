@@ -43,6 +43,7 @@ date of note: 2024-05-12
 
 ^48ebc6
 
+- [[Quadratic Programming]]
 - [[Conjugate Vector with respect to Positive Definite Transformation]]
 - [[Positive Semidefinite Transformation]]
 - [[Self-Adjoint Linear Map]]
