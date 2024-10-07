@@ -28,8 +28,9 @@ date of note: 2024-07-07
 ##  Recommended Notes and References
 
 
+- [[Semidefinite Programming]]
 - [[Positive Semidefinite Transformation]]
-- [[Second-Order Cone Programming]]
+- [[Quadratic Programming]]
 
 - [[Inverse Covariance Estimation]]
 

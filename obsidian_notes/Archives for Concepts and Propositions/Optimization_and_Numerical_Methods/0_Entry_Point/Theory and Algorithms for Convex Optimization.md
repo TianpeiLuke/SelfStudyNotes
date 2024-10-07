@@ -29,13 +29,14 @@ date of note: 2024-05-12
 - [[Fenchel Duality Theorem]]
 - [[Karush-Kuhn-Tucker Optimality Condition]]
 
-### Algorithms
+### Classical Algorithms
 
 - [[Linear Optimization Problem]]
 - [[Simplex Method for Linear Optimization]]
 - [[Interior Point Method for Linear Optimization]]
 - [[Interior Point Method or Barrier Method for Convex Optimization]]
 - [[Semidefinite Programming]]
+- [[Second-Order Cone Programming]]
 - [[Quadratic Programming]]
 - [[Sequential Quadratic Programming]]
 
