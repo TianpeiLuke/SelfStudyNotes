@@ -44,6 +44,7 @@ date of note: 2024-05-18
 
 - [[Space of all Smooth Vector Fields on a Manifold]]
 
+
 >[!important]
 >In differential geometry, in order to apply [[Einstein Summation Convention]], the **component index of vector field is on the top**, since the basis frame has index on the bottom.
 

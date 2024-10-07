@@ -29,4 +29,5 @@ date of note: 2024-05-20
 - [[Affine Connection on Tangent Bundle]]
 
 
+
 - [[Introduction to Riemannian Manifolds by Lee]]

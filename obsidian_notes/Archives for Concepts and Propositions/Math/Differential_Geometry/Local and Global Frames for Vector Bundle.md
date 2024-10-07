@@ -67,6 +67,9 @@ date of note: 2024-05-19
  >- If $A \subseteq M$ is a **closed subset** and $(\tau_1,\ldots, \tau_k)$ is a **linearly independent** $k$-tuple of **sections** of $E|_{A}$ that are **smooth** in the sense described in [[Vector Bundle]],  then there exists a **smooth local frame** $(\sigma_1,\ldots, \sigma_k)$ for $E$ over *some neighborhood of* $A$ such that $$\sigma_{i}\big|_{A} = \tau_{i}$$ for $i = 1,\ldots,k$.
 
 
+- [[Linear Independence]]
+- [[Basis of Vector Space]]
+
 ## Construct Smooth Local Trivialization
 
 >[!info]
@@ -139,7 +142,7 @@ date of note: 2024-05-19
 	- [[Cotangent Bundle]]
 
 
-
+- [[Basis of Vector Space]]
 
 
 - [[Introduction to Smooth Manifolds by Lee]]

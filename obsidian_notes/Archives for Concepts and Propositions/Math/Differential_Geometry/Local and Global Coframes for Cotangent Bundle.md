@@ -24,6 +24,7 @@ date of note: 2024-05-19
  >If $U = M$, it is called a **global coframe**. (A *local coframe* for $M$ is just a *local frame* for *the vector bundle* $T^{*}M$
 
 
+- [[Linear Independence]]
 - [[Basis of Vector Space]]
 - [[Space of all Smooth Covector Fields on a Manifold]]
 

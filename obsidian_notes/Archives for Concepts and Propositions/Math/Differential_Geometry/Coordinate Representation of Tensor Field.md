@@ -42,6 +42,8 @@ date of note: 2024-05-20
 - [[Covariant Tensor on Vector Space]]
 - [[Contravariant Tensor on Vector Space]]
 - [[Mixed Tensor on Vector Space]]
+- [[Linear Independence]]
+- [[Basis of Vector Space]]
 
 
 >[!important] Definition

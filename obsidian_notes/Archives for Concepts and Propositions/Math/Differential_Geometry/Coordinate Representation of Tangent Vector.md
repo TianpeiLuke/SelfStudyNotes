@@ -156,6 +156,10 @@ Recall that
 
 - [[Derivation of Smooth Map at point and Tangent Vector]]
 
+- [[Linear Independence]]
+- [[Basis of Vector Space]]
+- [[Vector Space over a Field]]
+
 
 - [[Smooth Manifold]]
 - [[Smooth Map]]

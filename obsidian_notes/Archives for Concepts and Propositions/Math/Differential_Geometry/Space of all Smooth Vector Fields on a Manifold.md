@@ -67,5 +67,9 @@ date of note: 2024-05-18
 - [[Vector Field on Manifold]]
 - [[Tangent Bundle]]
 
+- [[Linear Independence]]
+- [[Basis of Vector Space]]
+- [[Vector Space over a Field]]
+
 
 - [[Introduction to Smooth Manifolds by Lee]]
