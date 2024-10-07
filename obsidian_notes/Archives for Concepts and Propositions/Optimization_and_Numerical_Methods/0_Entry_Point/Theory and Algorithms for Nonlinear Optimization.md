@@ -125,13 +125,16 @@ date of note: 2024-05-12
 - [[Biorthogonalization Methods]]
 - [[Jacobi-Davidson Algorithm to Sparse Eigenvalue Problem]]
 
-
-
 ### Derivative-Free Optimization
 
 - [[Theory and Algorithms for Gradient-Free Optimization]]
 - [[Derivative-Free Optimization]]
 
+
+### Sequential Quadratic Programming
+
+- [[Quadratic Programming]]
+- [[Sequential Quadratic Programming]]
 
 
 ## Explanation

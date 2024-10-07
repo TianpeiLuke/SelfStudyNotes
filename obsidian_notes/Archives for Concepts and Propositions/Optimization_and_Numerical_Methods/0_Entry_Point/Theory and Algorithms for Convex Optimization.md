@@ -16,6 +16,7 @@ date of note: 2024-05-12
 ### Theory
 
 - [[Concepts and Theorems in Convex Analysis and Convex Optimization Theory]]
+- [[Theory and Algorithms for Linear Optimization]]
 
 ### Concepts
 
@@ -30,10 +31,13 @@ date of note: 2024-05-12
 
 ### Algorithms
 
+- [[Linear Optimization Problem]]
 - [[Simplex Method for Linear Optimization]]
 - [[Interior Point Method for Linear Optimization]]
 - [[Interior Point Method or Barrier Method for Convex Optimization]]
 - [[Semidefinite Programming]]
+- [[Quadratic Programming]]
+- [[Sequential Quadratic Programming]]
 
 ### Basic Iterative Descent
 
@@ -121,6 +125,13 @@ date of note: 2024-05-12
 - [[Conditional Gradient Method and Frank-Wolfe Algorithm]]
 - [[Gradient Projection Method]]
 - [[Block Coordinate Descent Algorithm]]
+
+### Sequential Quadratic Programming
+
+- [[Quadratic Programming]]
+- [[Sequential Quadratic Programming]]
+- [[Interior Point Method or Barrier Method for Convex Optimization]]
+
 
 
 ## Explanation

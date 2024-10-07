@@ -99,11 +99,12 @@ date of note: 2024-05-12
 
 - [[Newton Method]]
 
+- [[Sequential Quadratic Programming]]
 - [[Convex Optimization Problem]]
 - [[Convex Set]]
 - [[Convex Function]]
 - [[Karush-Kuhn-Tucker Optimality Condition]]
 
 - [[Convex Optimization by Boyd]] pp 561
-- [[Numerical Optimization by Nocedal]]
+- [[Numerical Optimization by Nocedal]] pp 563 - 594
 - [[Nonlinear Programming by Bertsekas]]

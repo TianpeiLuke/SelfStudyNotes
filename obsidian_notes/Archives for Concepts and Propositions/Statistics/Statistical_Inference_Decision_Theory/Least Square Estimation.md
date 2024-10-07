@@ -144,7 +144,7 @@ date of note: 2024-06-08
 - [[All of Statistics A Concise Course by Wasserman]] pp 211
 - [[Mathematical Statistics by Shao]] pp 182
 - [[Optimization by Vector Space Methods by Luenberger]]  pp 78 - 102
-- [[Numerical Optimization by Nocedal]] pp 245
+- [[Numerical Optimization by Nocedal]] pp 245 - 269
 - [[Elements of Statistical Learning by Hastie]] pp 43 - 56
 - [[Matrix Computations by Golub]] pp 303 - 334
 - [[Numerical Linear Algebra by Trefethen]] pp 36, 77 - 87, 129 - 144

@@ -59,5 +59,7 @@ date of note: 2024-10-04
 - [[Modified Gram-Schmidt Algorithm for QR Factorization]]
 - [[Gram-Schmidt Orthogonalization]]
 
+- [[Sequential Quadratic Programming]]
+
 - [[Matrix Analysis by Horn]] 
 - [[Numerical Linear Algebra by Trefethen]] pp 266 -275

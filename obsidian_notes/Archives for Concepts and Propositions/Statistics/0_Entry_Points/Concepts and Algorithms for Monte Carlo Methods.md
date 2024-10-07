@@ -2,8 +2,8 @@
 tags:
   - entry_point
   - concept
-  - statistics/monte_carlo_simulation_simulation
   - statistics/inference
+  - statistics/monte_carlo_simulation
 keywords: 
 topics:
   - statistics/monte_carlo
