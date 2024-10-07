@@ -26,6 +26,7 @@ date of note: 2024-10-06
 ##  Recommended Notes and References
 
 
+- [[Fill-Reducing Ordering for Sparse Matrix Factorization]]
 - [[Sparse Linear System and Graph]]
 - [[Sparse Matrix Representation]]
 

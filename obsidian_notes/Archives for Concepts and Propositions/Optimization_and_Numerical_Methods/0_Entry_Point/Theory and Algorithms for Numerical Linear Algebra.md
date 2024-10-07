@@ -259,6 +259,7 @@ date of note: 2024-05-12
 - [[Sparse Matrix Representation]]
 - [[Sparse Linear System and Graph]]
 - [[Sparse Matrix Factorization and Challenges]]
+- [[Fill-Reducing Ordering for Sparse Matrix Factorization]]
 
 
 ### Preconditioning
