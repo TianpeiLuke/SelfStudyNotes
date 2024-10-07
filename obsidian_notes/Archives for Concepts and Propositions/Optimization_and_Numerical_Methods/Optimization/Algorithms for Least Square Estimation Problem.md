@@ -104,13 +104,29 @@ date of note: 2024-06-08
 - [[Singular Value Decomposition of Linear Map]]
 - [[Least Square Estimation via Singular Value Decomposition]]
 
-### Iterative Methods 
+### Iterative Method to Solve Large Least Square Problem
 
-- [[Classical Iterations to approximate Solution of Sparse Linear System]]
+>[!info]
+>The **iterative methods** can be used to solve the **high dimensional normal equation**
+
+- [[Krylov Subspace Methods]]
+
+- [[Arnoldi Iteration for Hessenberg Reduction of Large Matrix]]
+- [[GMRES as Regression on Krylov Space]]
+- [[Minimal Residuals Algorithm and MINRES]]
+
+
+>[!info]
+>Since $S = A^{T}A$ is symmetric positive semidefinite, the **conjugate gradient method** can be used.
+>- Solving $$A^TAx = A^Tb \iff \min \lVert Ax - b \rVert_{2}^2 $$
+>	- compute **step size** $$\alpha_{k} = - \frac{r_{k}^T\,d_{k}}{d_{k}^T\,A\,d_{k}}$$
+>	- update solution: $$x_{k+1} = x_{k} + \alpha_{k}\,d_{k}$$
+>	- update **residual**: $$r_{k+1} = Ax_{k+1} - b$$
+>	-  $$\beta_{k+1} = \frac{r_{k+1}^T\,A\,d_{k}}{d_{k}^T\,A\,d_{k}}$$ 
+>	- $$d_{k+1} = - r_{k+1} + \beta_{k+1}\,d_{k}$$
+
 - [[Conjugate Gradient Algorithm Linear]]
 - [[Conjugate Gradient Normal Equation Residual and CGNER]]
-
-
 
 
 ## Explanation

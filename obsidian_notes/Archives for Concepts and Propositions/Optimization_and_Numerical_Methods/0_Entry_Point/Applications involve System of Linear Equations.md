@@ -104,22 +104,6 @@ date of note: 2024-09-27
 - [[Forward Substitution of Lower Triangular System]]
 - [[Back Substitution of Upper Triangular System]]
 
-#### Iterative Method 
-
->[!info]
->The **iterative methods** can be used to solve the **high dimensional normal equation**
->- Since $S = A^{T}A$ is symmetric positive semidefinite, the **conjugate gradient method** can be used.
->- Solving $$A^TAx = A^Tb \iff \min \lVert Ax - b \rVert_{2}^2 $$
->	- compute **step size** $$\alpha_{k} = - \frac{r_{k}^T\,d_{k}}{d_{k}^T\,A\,d_{k}}$$
->	- update solution: $$x_{k+1} = x_{k} + \alpha_{k}\,d_{k}$$
->	- update **residual**: $$r_{k+1} = Ax_{k+1} - b$$
->	-  $$\beta_{k+1} = \frac{r_{k+1}^T\,A\,d_{k}}{d_{k}^T\,A\,d_{k}}$$ 
->	- $$d_{k+1} = - r_{k+1} + \beta_{k+1}\,d_{k}$$
->- The **conjugage gradient normal equation residual (CGNR)** method
-
-- [[Conjugate Gradient Algorithm Linear]]
-- [[Conjugate Gradient Normal Equation Residual and CGNER]]
-
 #### Modified Gram-Schmidt Orthogonalization and QR Factorization
 
 >[!info]
@@ -159,7 +143,28 @@ date of note: 2024-09-27
 - [[Sherman–Morrison–Woodbury Matrix Inversion Formula]]
 - [[Schur Complement and Inversion of Block Matrix]]
 
+#### Iterative Method to Solve Large Least Square Problem
 
+>[!info]
+>The **iterative methods** can be used to solve the **high dimensional normal equation**
+
+- [[Krylov Subspace Methods]]
+
+- [[Arnoldi Iteration for Hessenberg Reduction of Large Matrix]]
+- [[GMRES as Regression on Krylov Space]]
+
+
+>[!info]
+>Since $S = A^{T}A$ is symmetric positive semidefinite, the **conjugate gradient method** can be used.
+>- Solving $$A^TAx = A^Tb \iff \min \lVert Ax - b \rVert_{2}^2 $$
+>	- compute **step size** $$\alpha_{k} = - \frac{r_{k}^T\,d_{k}}{d_{k}^T\,A\,d_{k}}$$
+>	- update solution: $$x_{k+1} = x_{k} + \alpha_{k}\,d_{k}$$
+>	- update **residual**: $$r_{k+1} = Ax_{k+1} - b$$
+>	-  $$\beta_{k+1} = \frac{r_{k+1}^T\,A\,d_{k}}{d_{k}^T\,A\,d_{k}}$$ 
+>	- $$d_{k+1} = - r_{k+1} + \beta_{k+1}\,d_{k}$$
+
+- [[Conjugate Gradient Algorithm Linear]]
+- [[Conjugate Gradient Normal Equation Residual and CGNER]]
 
 
 ### Ridge Regression

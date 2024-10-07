@@ -42,3 +42,4 @@ date of note: 2024-10-04
 - [[Matrix Analysis by Horn]] 
 - [[Numerical Linear Algebra by Trefethen]] pp 266 -275
 - [[Matrix Computations by Golub]] pp 642 - 644
+- Saad, Y. (2003). _Iterative methods for sparse linear systems_. Society for Industrial and Applied Mathematics. pp 157 - 172
