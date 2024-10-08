@@ -45,15 +45,18 @@ date of note: 2024-08-22
 
 - [[Algorithms for Least Square Estimation Problem]]
 - [[Least Square Estimation]]
-- [[Least Square Estimation with QR Factorization]]
-- [[Krylov Subspace Methods]]
-- [[GMRES as Regression on Krylov Space]]
-- [[Conjugate Gradient Algorithm Linear]]
+
 
 
 ## SVD of Ridge Regression
 
 
+
+
+
+## $\ell_{1}$ Regularized Regression
+
+- [[LASSO and Sparsity-Induced Least Square]]
 
 
 -----------
@@ -64,7 +67,7 @@ date of note: 2024-08-22
 - [[Tikhonov Regularization in Optimization and Learning]]
 - [[Regularized Loss Minimization]]
 
-- [[LASSO and Sparsity-Induced Least Square]]
+
 
 - [[Regression Problem]]
 - [[Minimum Mean Square Estimation]]
