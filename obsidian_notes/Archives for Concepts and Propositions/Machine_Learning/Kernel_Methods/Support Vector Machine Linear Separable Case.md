@@ -43,7 +43,7 @@ date of note: 2024-05-12
 >Thus the **(hard) support vector machine** find optimal $(w, b)$ for **linear separable case** by solving the following *convex optimization problem* 
 >$$\begin{align*}
 >\min_{w, b}\,&\; \frac{1}{2}\lVert w \rVert_{2}^2 \\[5pt] 
->\text{ s.t. } & y_{i}\left(\left\langle  w\,,\,x_{i} \right\rangle + b\right) \ge 0, \quad i=1\,{,}\ldots{,}\,m
+>\text{ s.t. } & y_{i}\left(\left\langle  w\,,\,x_{i} \right\rangle + b\right) \ge 1, \quad i=1\,{,}\ldots{,}\,m
 >\end{align*}
 >$$
 
@@ -55,11 +55,61 @@ date of note: 2024-05-12
 
 ![[max_margin_learning.png]]
 
+###  Lagrangian Function and KKT System
+
+>[!important] Definition
+>The **Lagrangian** is defined as
+>$$
+>L(w, b, \alpha_{i\in [m]}) = \frac{1}{2}\lVert w \rVert_{2}^2 - \sum_{i=1}^{m}\alpha_{i}\left[y_{i}\left(\left\langle  w\,,\,x_{i} \right\rangle + b\right) - 1\right] 
+>$$
+>
+>By **Karush-Kuhn-Tucker (KKT) optimality condition**, we obtain a system of equations (**KKT system**)
+>$$
+>\left\{
+>\begin{array}{cll}
+>\nabla_{w} L&= w - \sum_{i=1}^{m}\alpha_{i}y_{i}\,x_{i} &= 0\\[5pt] 
+>\nabla_{b} L&= -\sum_{i=1}^{m}\alpha_{i}y_{i} &= 0\\[5pt]
+> \forall i\in [m]& \alpha_{i}\,\left[  y_{i}\left(\left\langle  w\,,\,x_{i} \right\rangle + b\right) - 1\right]  &= 0\\[5pt] 
+> \implies &\alpha_{i} = 0 \quad \text{ or } \quad y_{i}\left(\left\langle  w\,,\,x_{i} \right\rangle + b\right) - 1 =0
+>\end{array}
+>\right. 
+>$$
+>The last equation is the *complementary slackness condition.*
+>- The samples $x_{i}$ whose corresponding dual variable $\alpha_{i} \neq 0$ is called the **support vectors.**  
+>	- Only *support vectors* $x_{i}$  appear in the equation for $$w = \sum_{i=1}^{m}\alpha_{i}y_{i}\,x_{i} = \sum_{i: \alpha_{i} \neq 0}\alpha_{i}y_{i}\,x_{i} .$$
+>	- For *support vectors* $x_{i}$, by complementary slackness condition, $$y_{i}\left(\left\langle  w\,,\,x_{i} \right\rangle + b\right) = 1$$
+>	- Thus **support vectors lies on the margin** of marginal hyperplane. $$\left\langle  w\,,\, x \right\rangle + b = \pm 1$$
+
+- [[Methods of Lagrangian Multipliers]]
+- [[Karush-Kuhn-Tucker Optimality Condition]]
 
 ### Dual Optimization Problem
 
+>[!important] Definition
+>Substituting the KKT condition into the Lagrangian, we obtain the **Lagrangian dual function**
+>$$
+>\begin{align*}
+>L(\alpha) &:= \underbrace{ \frac{1}{2}\left\lVert  \sum_{i=1}^{m}\alpha_{i}y_{i}\,x_{i}  \right\rVert_{2}^2 - \sum_{i,j=1}^{m}\alpha_{i}\alpha_{j} y_{i}y_{j} \left\langle  x_{i}\,,\,x_{j} \right\rangle  }_{ -\frac{1}{2} \sum_{i,j=1}^{m}\alpha_{i}\alpha_{j} y_{i}y_{j} \left\langle  x_{i}\,,\,x_{j} \right\rangle }- \underbrace{ \sum_{i=1}^{m}\alpha_{i}y_{i}b }_{0} + \sum_{i=1}^{m}\alpha_{i} \\[10pt]
+>&=  -\frac{1}{2} \sum_{i,j=1}^{m}\alpha_{i}\alpha_{j} y_{i}y_{j} \left\langle  x_{i}\,,\,x_{j} \right\rangle  + \sum_{i=1}^{m}\alpha_{i}
+\end{align*}
+>$$
 
+- [[Lagrangian Dual Function]]
+- [[Lagrange Dual Problem]]
 
+>[!important] Definition
+>The **dual optimization problem** of **hard SVM** is given by 
+>$$
+>\begin{align*}
+> \max_{\alpha}\;&\; \sum_{i=1}^{m}\alpha_{i} -\frac{1}{2} \sum_{i,j=1}^{m}\alpha_{i}\alpha_{j} y_{i}y_{j} \left\langle  x_{i}\,,\,x_{j} \right\rangle \\[5pt]
+> \text{s.t. }&\; \alpha_{i} \ge 0, \quad i=1\,{,}\ldots{,}\,m \\[5pt]
+> &\; \sum_{i=1}^{m}\alpha_{i} y_{i} = 0
+>\end{align*}
+>$$
+>- This is a *convex optimization problem* and it is a *quadratic programming (QP)* problem.
+
+- [[Quadratic Programming]]
+- [[Convex Optimization Problem]]
 
 
 ## Explanation
