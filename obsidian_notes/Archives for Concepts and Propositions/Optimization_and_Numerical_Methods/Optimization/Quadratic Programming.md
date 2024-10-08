@@ -76,12 +76,7 @@ date of note: 2024-10-06
 
 - [[Methods of Lagrangian Multipliers]]
 - [[Karush-Kuhn-Tucker Optimality Condition]]
-- [[LDU Factorization of Symmetric Matrix]]
 
-- [[Tridiagonal Reduction of Symmetric Matrix via Householder Transformation]]
-- [[Lanczos Iteration for Tridiagonal Reduction of Large Matrix]]
-- [[GMRES as Regression on Krylov Space]]
-- [[Conjugate Gradient Algorithm Linear]]
 
 
 ## Explanation
@@ -98,8 +93,37 @@ date of note: 2024-10-06
 - [[Integer Programming Problem]]
 
 
+## Algorithms that Solve QP
 
+### Generic Convex Programming Solver
 
+- [[Interior Point Method or Barrier Method for Convex Optimization]]
+
+### Iterative Optimization Solver
+
+- [[Gradient Descent Algorithm]]
+- [[Newton Method]]
+- [[BFGS Algorithm]]
+- [[Limited Memory BFGS]]
+- [[Trust Region Method]]
+
+### Proximal Algorithms
+
+- [[Augmented Lagrangian Algorithm]]
+- [[Alternating Direction Method of Multipliers Algorithm]]
+- [[Gradient Projection Method]]
+
+### Symmetric Linear System Solver
+
+- [[LDU Factorization of Symmetric Matrix]]
+- [[Tridiagonal Reduction of Symmetric Matrix via Householder Transformation]]
+- [[Lanczos Iteration for Tridiagonal Reduction of Large Matrix]]
+
+### Symmetric Positive Definite System Solver
+
+- [[Cholesky Factorization of Hermitian Positive Definite Matrices]]
+- [[GMRES as Regression on Krylov Space]]
+- [[Conjugate Gradient Algorithm Linear]]
 
 
 
@@ -162,3 +186,4 @@ date of note: 2024-10-06
 - [[Numerical Optimization by Nocedal]] pp 422,  448 - 492
 - [[Nonlinear Programming by Bertsekas]] pp 202, 256, 365, 385, 471, 600
 - [[Matrix Computations by Golub]] pp 313 - 318
+- Wikipedia [Quadratic_programming](https://en.wikipedia.org/wiki/Quadratic_programming)

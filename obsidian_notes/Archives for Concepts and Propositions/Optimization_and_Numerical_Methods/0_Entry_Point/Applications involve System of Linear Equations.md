@@ -320,7 +320,7 @@ date of note: 2024-09-27
 - [[Karush-Kuhn-Tucker Optimality Condition]]
 - [[Interior Point Method or Barrier Method for Convex Optimization]]
 
-#### Quadratic Programming with Equality Constraints
+### Quadratic Programming
 
 ![[Quadratic Programming#^387671]]
 
@@ -331,12 +331,32 @@ date of note: 2024-09-27
 - [[GMRES as Regression on Krylov Space]]
 - [[Conjugate Gradient Algorithm Linear]]
 
+#### Support Vector Machine
 
-#### Eigenvalue Problem as Convex Optimization on Manifold
+- [[Support Vector Machine Linear Separable Case]]
+- [[Support Vector Machine General with Soft-Margin Relaxation]]
+
+
+### Eigenvalue Problem as Convex Optimization on Manifold
 
 - [[Rayleigh Quotient for Eigenvalue Problem]]
 - [[Variational Characterization of Eigenvalues of Hermitian Matrix]]
 - [[Courant-Fischer Minimax Theorem for Eigenvalue Problem]]
+
+
+#### Principle Component Analysis
+
+![[Principle Component Analysis#^028c45]]
+
+![[Principle Component Analysis#^feea32]]
+
+![[Principle Component Analysis#^ab6364]]
+
+- [[Principle Component Analysis]]
+- [[Nonnegative Matrix Factorization]]
+- [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
+
+
 
 ### Latent Variable Model and Factor Analysis
 
@@ -410,23 +430,7 @@ date of note: 2024-09-27
 - [[QR Iteration for General Eigenvalue Problem]]
 
 
-### Principle Component Analysis
 
-![[Principle Component Analysis#^028c45]]
-
-![[Principle Component Analysis#^feea32]]
-
-![[Principle Component Analysis#^ab6364]]
-
-- [[Principle Component Analysis]]
-- [[Nonnegative Matrix Factorization]]
-- [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
-
-
-
-### Support Vector Machine
-
-- [[Support Vector Machine Linear Separable Case]]
 
 
 
