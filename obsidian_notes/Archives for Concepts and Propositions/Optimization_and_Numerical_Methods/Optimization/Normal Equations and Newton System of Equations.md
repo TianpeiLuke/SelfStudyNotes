@@ -126,4 +126,4 @@ date of note: 2024-10-06
 - [[Mathematical Statistics by Shao]] pp 182
 - [[Optimization by Vector Space Methods by Luenberger]] pp 78 - 102
 - [[Numerical Optimization by Nocedal]] pp 245 - 269
-- [[Elements of Statistical Learning by Hastie]] pp 43 - 56
+- [[Elements of Statistical Learning by Hastie]] pp 12, 43 - 56

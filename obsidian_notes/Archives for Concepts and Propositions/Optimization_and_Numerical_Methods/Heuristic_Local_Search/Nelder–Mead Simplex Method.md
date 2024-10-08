@@ -34,3 +34,4 @@ date of note: 2024-08-24
 
 - [[Numerical Optimization by Nocedal]] pp 238
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 298 - 307
+- [[Convex Optimization Algorithms by Bertsekas]] pp 83

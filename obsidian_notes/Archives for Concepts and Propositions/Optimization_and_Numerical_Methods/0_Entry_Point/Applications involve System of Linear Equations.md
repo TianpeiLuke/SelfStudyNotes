@@ -339,9 +339,11 @@ date of note: 2024-09-27
 
 ### Eigenvalue Problem as Convex Optimization on Manifold
 
+- [[Semidefinite Programming]]
 - [[Rayleigh Quotient for Eigenvalue Problem]]
 - [[Variational Characterization of Eigenvalues of Hermitian Matrix]]
 - [[Courant-Fischer Minimax Theorem for Eigenvalue Problem]]
+- [[Convex Optimization for Eigenvalue Problem]]
 
 
 #### Principle Component Analysis

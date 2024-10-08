@@ -44,5 +44,5 @@ date of note: 2024-07-07
 
 
 - [[Convex Optimization by Boyd]] pp 168, 201, 265, 285, 600 - 608, 618 
-- [[Convex Optimization Algorithms by Bertsekas]]
+- [[Convex Optimization Algorithms by Bertsekas]] pp 22 - 25
 - [[Nonlinear Programming by Bertsekas]]

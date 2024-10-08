@@ -2,6 +2,10 @@
 tags:
   - concept
   - statistics/estimation
+  - machine_learning/models
+  - machine_learning/theory
+  - optimization/regularization
+  - optimization/convex_optimization
 keywords:
   - lasso
   - sparsity
@@ -48,4 +52,5 @@ date of note: 2024-07-24
 - [[Elements of Statistical Learning by Hastie]]
 - [[All of Statistics A Concise Course by Wasserman]]
 - [[Convex Optimization by Boyd]] pp 184, 205
+- [[Convex Optimization Algorithms by Bertsekas]] pp 27 - 29
 - Wikipedia [Partial_correlation](https://en.wikipedia.org/wiki/Partial_correlation)

@@ -76,7 +76,7 @@ date of note: 2024-10-06
 
 - [[Methods of Lagrangian Multipliers]]
 - [[Karush-Kuhn-Tucker Optimality Condition]]
-
+- [[KKT System for Solution of Quadratic Programming]]
 
 
 ## Explanation

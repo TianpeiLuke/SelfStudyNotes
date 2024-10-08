@@ -51,5 +51,6 @@ date of note: 2024-05-12
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]
 - [[Elements of Information Theory by Cover]]
 - [[Matrix Analysis by Horn]]
+- [[Convex Optimization Algorithms by Bertsekas]] pp 30 
 
 - [[Kullback-Leibler Divergence]]

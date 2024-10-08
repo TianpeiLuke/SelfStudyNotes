@@ -135,6 +135,7 @@ date of note: 2024-05-12
 
 - [[Quadratic Programming]]
 - [[Sequential Quadratic Programming]]
+- [[KKT System for Solution of Quadratic Programming]]
 - [[Interior Point Method or Barrier Method for Convex Optimization]]
 
 
