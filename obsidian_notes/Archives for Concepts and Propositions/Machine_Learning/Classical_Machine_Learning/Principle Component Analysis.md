@@ -262,7 +262,7 @@ date of note: 2024-05-12
 - [[Factor Analysis]]
 - [[Latent Variable Models]]
 - [[Canonical Correlation Analysis]]
-
+- [[Quadratic Programming]]
 
 - [[Eigenvalue and Eigenvector for Linear Map]]
 - [[Eigenspace and Spectrum for Linear Map]]

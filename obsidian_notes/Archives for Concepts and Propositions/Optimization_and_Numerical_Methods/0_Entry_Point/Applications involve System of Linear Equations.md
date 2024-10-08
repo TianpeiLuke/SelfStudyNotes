@@ -320,6 +320,18 @@ date of note: 2024-09-27
 - [[Karush-Kuhn-Tucker Optimality Condition]]
 - [[Interior Point Method or Barrier Method for Convex Optimization]]
 
+#### Quadratic Programming with Equality Constraints
+
+![[Quadratic Programming#^387671]]
+
+- [[Quadratic Programming]]
+- [[Sequential Quadratic Programming]]
+- [[Tridiagonal Reduction of Symmetric Matrix via Householder Transformation]]
+- [[Lanczos Iteration for Tridiagonal Reduction of Large Matrix]]
+- [[GMRES as Regression on Krylov Space]]
+- [[Conjugate Gradient Algorithm Linear]]
+
+
 #### Eigenvalue Problem as Convex Optimization on Manifold
 
 - [[Rayleigh Quotient for Eigenvalue Problem]]

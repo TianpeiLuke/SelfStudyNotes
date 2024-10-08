@@ -78,6 +78,8 @@ date of note: 2024-06-08
 
 ^f8f306
 
+- [[Quadratic Programming]]
+
 ### Solution of Least Square Estimation
 
 ![[Least Square Estimation Solution and Geometric Interpretation#^17b91f]]
