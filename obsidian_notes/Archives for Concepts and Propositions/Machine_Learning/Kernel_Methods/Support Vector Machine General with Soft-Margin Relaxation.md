@@ -47,6 +47,9 @@ date of note: 2024-05-12
 >\end{align*}
 >$$
 >- The objective reflects the *tradeoff* between *maximum-margin* and *minimum outliers (slack penalties)*.
+
+^5c5e42
+
  
 
 - [[Support Vector Machine Linear Separable Case]]
