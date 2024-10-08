@@ -90,7 +90,7 @@ date of note: 2024-05-12
 
 - [[LASSO and Sparsity-Induced Least Square]]
 - [[Surrogate Loss Minimization]]
-- [[Support Vector Machine]]
+- [[Support Vector Machine Linear Separable Case]]
 
 
 - [[Understanding Machine Learning by Shalev-Shwartz]]

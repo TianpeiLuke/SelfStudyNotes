@@ -70,7 +70,7 @@ date of note: 2024-08-10
 - [[Linear Regression]]
 - [[Least Square Estimation]]
 - [[Logistic Regression]]
-- [[Support Vector Machine]]
+- [[Support Vector Machine Linear Separable Case]]
 - [[AdaBoost Algorithm]]
 - [[Gradient Boosting Algorithm]]
 - [[Artificial Neural Network and Deep Learning]]

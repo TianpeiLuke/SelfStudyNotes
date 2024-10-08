@@ -45,7 +45,7 @@ date of note: 2024-06-11
 - [[k Nearest Neighbor Classification]]
 - [[Logistic Regression]]
 - [[AdaBoost Algorithm]]
-- [[Support Vector Machine]]
+- [[Support Vector Machine Linear Separable Case]]
 - [[Artificial Neural Network and Deep Learning]]
 - [[Conditional Random Field]]
 - [[Naive Bayes Model]]

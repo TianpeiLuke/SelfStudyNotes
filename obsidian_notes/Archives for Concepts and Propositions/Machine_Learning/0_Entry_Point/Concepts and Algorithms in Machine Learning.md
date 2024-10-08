@@ -59,7 +59,8 @@ date of note: 2024-06-01
 - [[Representation of Evaluational Functional in RKHS]]
 - [[Reproducing Kernel of RKHS]]
 - [[Margin-based Loss Function]]
-- [[Support Vector Machine]]
+- [[Support Vector Machine Linear Separable Case]]
+- [[Support Vector Machine General with Soft-Margin Relaxation]]
 - [[Representer Theorem]]
 
 #### Expectation-Maximization 

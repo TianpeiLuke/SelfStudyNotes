@@ -78,13 +78,13 @@ date of note: 2024-08-27
 
 - [[Reproducing Kernel Hilbert Space]]
 - [[Reproducing Kernel of RKHS]]
-- [[Support Vector Machine]]
+- [[Support Vector Machine Linear Separable Case]]
 
 
 - [[Kernel Methods in Machine Learning by Hofmann]] pp 16
 - [[Learning with Kernels by Schölkopf]] pp 89, 91
 
 - [[Elements of Statistical Learning by Hastie]]
-- [[Understanding Machine Learning by Shalev-Shwartz]]
+- [[Understanding Machine Learning by Shalev-Shwartz]] pp 179 - 189
 - [[Foundations of Machine Learning by Mohri]] pp 117
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 692

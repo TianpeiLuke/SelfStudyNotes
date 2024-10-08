@@ -32,7 +32,7 @@ date of note: 2024-08-22
 
 - [[AdaBoost Algorithm]]
 - [[Exponential Loss Minimization for AdaBoost]]
-- [[Support Vector Machine]]
+- [[Support Vector Machine Linear Separable Case]]
 - [[Logistic Regression]]
 - [[Perceptron Algorithm]]
 

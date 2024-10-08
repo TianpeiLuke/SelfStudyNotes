@@ -30,7 +30,7 @@ date of note: 2024-08-01
 - [[Empirical Risk Minimization]]
 - [[PAC Learnable and Agnostic PAC Learnable]]
 
-- [[Support Vector Machine]]
+- [[Support Vector Machine Linear Separable Case]]
 - [[AdaBoost Algorithm]]
 
 

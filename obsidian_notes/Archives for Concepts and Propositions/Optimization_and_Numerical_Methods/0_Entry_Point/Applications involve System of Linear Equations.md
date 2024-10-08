@@ -414,7 +414,7 @@ date of note: 2024-09-27
 
 ### Support Vector Machine
 
-- [[Support Vector Machine]]
+- [[Support Vector Machine Linear Separable Case]]
 
 
 
