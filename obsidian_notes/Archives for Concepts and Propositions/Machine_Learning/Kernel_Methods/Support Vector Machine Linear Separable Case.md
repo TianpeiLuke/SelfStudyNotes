@@ -93,9 +93,11 @@ date of note: 2024-05-12
 >&=  -\frac{1}{2} \sum_{i,j=1}^{m}\alpha_{i}\alpha_{j} y_{i}y_{j} \left\langle  x_{i}\,,\,x_{j} \right\rangle  + \sum_{i=1}^{m}\alpha_{i}
 \end{align*}
 >$$
+>- This is a *concave function*.
 
 - [[Lagrangian Dual Function]]
 - [[Lagrange Dual Problem]]
+- [[Convex Function]]
 
 >[!important] Definition
 >The **dual optimization problem** of **hard SVM** is given by 
@@ -110,6 +112,18 @@ date of note: 2024-05-12
 
 - [[Quadratic Programming]]
 - [[Convex Optimization Problem]]
+
+### SVM Linear Classifier
+
+>[!important] Definition
+>The **optimal linear classifier** for the **SVM** is of the form
+>$$
+> h(x) = \text{sgn}\left\{ \sum_{i=1}^{m}\alpha_{i} y_{i} \left\langle  x_{i}\,,\,x    \right\rangle + b \right\} 
+>$$
+>- $h(x)$ only depends on the pair $(x_{i}, y_{i})$ for **support vectors**, i.e. $\alpha_{i} > 0$
+>- the *bias term* $$b = y_{i} - \sum_{j=1}^{m}\alpha_{j}y_{j} \left\langle  x_{j}\,,\,x_{i}    \right\rangle$$
+
+- [[Representer Theorem]]
 
 
 ## Explanation

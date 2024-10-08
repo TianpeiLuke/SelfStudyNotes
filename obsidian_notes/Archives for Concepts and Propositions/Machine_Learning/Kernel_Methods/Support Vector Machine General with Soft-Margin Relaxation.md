@@ -57,6 +57,85 @@ date of note: 2024-05-12
 
 ![[max_margin_soft.png]]
 
+###  Lagrangian Function and KKT System
+
+>[!important] Definition
+>The **Lagrangian** is defined as
+>$$
+>L(w, b, \alpha_{i\in [m]}, \beta_{i\in [m]}) = \frac{1}{2}\lVert w \rVert_{2}^2 + C\sum_{i=1}^{m}\xi_{i} - \sum_{i=1}^{m}\alpha_{i}\left[y_{i}\left(\left\langle  w\,,\,x_{i} \right\rangle + b\right) - 1+ \xi_{i}\right] - \sum_{i=1}^{m}\beta_{i}\xi_{i} 
+>$$
+>
+>By **Karush-Kuhn-Tucker (KKT) optimality condition**, we obtain a system of equations (**KKT system**)
+>$$
+>\left\{
+>\begin{array}{cll}
+>\nabla_{w} L&= w - \sum_{i=1}^{m}\alpha_{i}y_{i}\,x_{i} = 0 &(1)\\[5pt] 
+>\nabla_{b} L&= -\sum_{i=1}^{m}\alpha_{i}y_{i} = 0 &(2)\\[5pt]
+>\nabla_{\xi_{i}} L&= C - \alpha_{i} - \beta_{i} = 0 &(3)\\[5pt]
+> \forall i\in [m]& \alpha_{i}\,\left[  y_{i}\left(\left\langle  w\,,\,x_{i} \right\rangle + b\right) - 1 + \xi_{i}\right]  = 0 &\\[5pt] 
+> \implies &\alpha_{i} = 0 \quad \text{ or } \quad y_{i}\left(\left\langle  w\,,\,x_{i} \right\rangle + b\right) - 1 + \xi_{i} =0  &(4)\\[5pt] 
+>\forall i\in [m]& \beta_{i}\,\xi_{i} = 0 & \\[5pt] 
+> \implies & \beta_{i} =0 \quad \text{ or } \quad  \xi_{i} = 0 &(5)
+>\end{array}
+>\right. 
+>$$
+>The last two equations are the *complementary slackness conditions.*
+>- The samples $x_{i}$ whose corresponding dual variable $\alpha_{i} \neq 0$ is called the **support vectors.**  
+>	- Only *support vectors* $x_{i}$  appear in the equation for $$w = \sum_{i=1}^{m}\alpha_{i}y_{i}\,x_{i} = \sum_{i: \alpha_{i} \neq 0}\alpha_{i}y_{i}\,x_{i} .$$
+>	- For *support vectors* $x_{i}$, by complementary slackness condition (4), $$y_{i}\left(\left\langle  w\,,\,x_{i} \right\rangle + b\right) = 1 - \xi_{i}$$
+>	- If $\xi_{i}=0$, then the **support vectors lies on the margin** of marginal hyperplane. $$\left\langle  w\,,\, x \right\rangle + b = 1$$
+>	- If $\xi_{i} \neq 0$, $x_{i}$ is an **outlier**. By the second complementary slackness condition (5) and (3), $$\beta_{i} = 0, \text{ and }\alpha_{i} = C$$
+>	- Thus the support vector are either 
+>		- **lying on the marginal hyperplane** ($\xi_{i}=0$)
+>		- or an **outlier** ($\alpha_{i}= C, \; \beta_{i}=0$)
+
+- [[Methods of Lagrangian Multipliers]]
+- [[Karush-Kuhn-Tucker Optimality Condition]]
+
+### Dual Optimization Problem
+
+>[!important] Definition
+>Substituting the KKT condition into the Lagrangian, we obtain the **Lagrangian dual function**
+>$$
+>\begin{align*}
+>L(\alpha) &:= \underbrace{ \frac{1}{2}\left\lVert  \sum_{i=1}^{m}\alpha_{i}y_{i}\,x_{i}  \right\rVert_{2}^2 - \sum_{i,j=1}^{m}\alpha_{i}\alpha_{j} y_{i}y_{j} \left\langle  x_{i}\,,\,x_{j} \right\rangle  }_{ -\frac{1}{2} \sum_{i,j=1}^{m}\alpha_{i}\alpha_{j} y_{i}y_{j} \left\langle  x_{i}\,,\,x_{j} \right\rangle }- \underbrace{ \sum_{i=1}^{m}\alpha_{i}y_{i}b }_{0} + \sum_{i=1}^{m}\alpha_{i} \\[10pt]
+>&=  -\frac{1}{2} \sum_{i,j=1}^{m}\alpha_{i}\alpha_{j} y_{i}y_{j} \left\langle  x_{i}\,,\,x_{j} \right\rangle  + \sum_{i=1}^{m}\alpha_{i}
+\end{align*}
+>$$
+>- This is a *concave function*.
+>- This is the same as the **Hard SVM** with **linearly separable case**.
+
+- [[Lagrangian Dual Function]]
+- [[Lagrange Dual Problem]]
+- [[Convex Function]]
+- [[Support Vector Machine Linear Separable Case]]
+
+>[!important] Definition
+>The **dual optimization problem** of **soft-margin SVM** is given by 
+>$$
+>\begin{align*}
+> \max_{\alpha}\;&\; \sum_{i=1}^{m}\alpha_{i} -\frac{1}{2} \sum_{i,j=1}^{m}\alpha_{i}\alpha_{j} y_{i}y_{j} \left\langle  x_{i}\,,\,x_{j} \right\rangle \\[5pt]
+> \text{s.t. }&\; 0 \le \alpha_{i} \le C, \quad i=1\,{,}\ldots{,}\,m \\[5pt]
+> &\; \sum_{i=1}^{m}\alpha_{i} y_{i} = 0
+>\end{align*}
+>$$
+>- This is a *convex optimization problem* and it is a *quadratic programming (QP)* problem.
+>- Compare to hard SVM, the soft SVM has *dual variable bounded* in $[0,C]$.
+
+- [[Quadratic Programming]]
+- [[Convex Optimization Problem]]
+
+### SVM Linear Classifier
+
+>[!important] Definition
+>The **optimal linear classifier** for the **SVM** is of the form
+>$$
+> h(x) = \text{sgn}\left\{ \sum_{i=1}^{m}\alpha_{i} y_{i} \left\langle  x_{i}\,,\,x    \right\rangle + b \right\} 
+>$$
+>- $h(x)$ only depends on the pair $(x_{i}, y_{i})$ for **support vectors**, i.e. $0 < \alpha_{i} < C$
+>- the *bias term* $$b = y_{i} - \sum_{j=1}^{m}\alpha_{j}y_{j} \left\langle  x_{j}\,,\,x_{i}    \right\rangle$$
+
+- [[Representer Theorem]]
 
 
 
