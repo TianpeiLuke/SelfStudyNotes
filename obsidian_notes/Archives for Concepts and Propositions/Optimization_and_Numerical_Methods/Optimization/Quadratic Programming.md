@@ -113,17 +113,18 @@ date of note: 2024-10-06
 - [[Alternating Direction Method of Multipliers Algorithm]]
 - [[Gradient Projection Method]]
 
-### Symmetric Linear System Solver
+### Symmetric Positive Definite Linear System Solver
 
 - [[LDU Factorization of Symmetric Matrix]]
+- [[Cholesky Factorization of Hermitian Positive Definite Matrices]]
 - [[Tridiagonal Reduction of Symmetric Matrix via Householder Transformation]]
 - [[Lanczos Iteration for Tridiagonal Reduction of Large Matrix]]
-
-### Symmetric Positive Definite System Solver
-
-- [[Cholesky Factorization of Hermitian Positive Definite Matrices]]
-- [[GMRES as Regression on Krylov Space]]
 - [[Conjugate Gradient Algorithm Linear]]
+
+### Iterative Solution to KKT System
+
+- [[GMRES as Regression on Krylov Space]]
+
 
 
 
