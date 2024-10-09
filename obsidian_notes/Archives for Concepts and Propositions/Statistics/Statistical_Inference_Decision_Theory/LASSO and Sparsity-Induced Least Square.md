@@ -118,7 +118,8 @@ date of note: 2024-07-24
 >The **soft-thresholding function** or **shrinkage operation** is defined as  
 >$$
 >\begin{align}
->&\text{soft-thresholding}(x, \lambda) := \text{shrinkage}(x, \lambda) \\[5pt]
+>&\text{soft-thresholding}(x, \lambda)  \\[5pt]
+>&:= \text{shrinkage}(x, \lambda) \\[5pt]
 >&:= \text{sgn}(x)\;\left[ |x| - \lambda \right]_{+} \\[10pt] 
 >&= \left\{\begin{array}{cl} x-\lambda &\text{ if }x \ge \lambda > 0 \\[5pt] x +\lambda &\text{ if }x \le -\lambda < 0 \\[5pt] 0 & \text{ otherwise}\end{array}  \right. \\
 >\end{align}$$
