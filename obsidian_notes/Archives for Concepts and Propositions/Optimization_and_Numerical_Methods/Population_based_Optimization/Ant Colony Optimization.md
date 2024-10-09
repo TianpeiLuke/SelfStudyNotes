@@ -35,6 +35,7 @@ date of note: 2024-08-24
 - [[Derivative-Free Optimization]]
 
 - [[Traveling Salesman Problem]]
+- [[Graph]]
 
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 298 - 307
