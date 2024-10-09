@@ -19,6 +19,7 @@ date of note: 2024-08-22
 ## Explanation
 
 
+![[surrogate_loss_comparison.png]]
 
 
 
@@ -30,9 +31,11 @@ date of note: 2024-08-22
 - [[Convex Function]]
 - [[Convex Optimization Problem]]
 
+
 - [[AdaBoost Algorithm]]
 - [[Exponential Loss Minimization for AdaBoost]]
-- [[Support Vector Machine Linear Separable Case]]
+- [[Hinge Loss as Surrogate Loss Function]]
+- [[Support Vector Machine General with Soft-Margin Relaxation]]
 - [[Logistic Regression]]
 - [[Perceptron Algorithm]]
 

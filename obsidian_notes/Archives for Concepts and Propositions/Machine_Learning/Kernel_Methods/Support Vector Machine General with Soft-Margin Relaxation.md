@@ -28,7 +28,7 @@ date of note: 2024-05-12
 ### Soft SVM with Slack Variables
 
 >[!important] Definition
->Let $\{(x_{i}, y_{i})\} \in \mathcal{X}\times \{ 0,1 \}$ be a set of $n$ samples.
+>Let $\{(x_{i}, y_{i})\} \in \mathcal{X}\times \{ -1,1 \}$ be a set of $n$ samples.
 >- *Assume* that these samples are **not linearly separable**, i.e. for all $(w,b)\in \mathbb{R}^{d}\times \mathbb{R}$ such that $$y_{i}\left(\left\langle  w\,,\,x_{i} \right\rangle + b\right) \not\ge 1, \quad \exists i\in [m]$$ 
 >- Assume that there exists a **slack variable** $\xi_{i}$ for each $i\in [m]$ such that the *__relaxed__ version of linearly separable conditions hold* $$y_{i}\left(\left\langle  w\,,\,x_{i} \right\rangle + b\right) \ge 1 - \xi_{i}, \quad \forall i\in [m]$$
 >	- Here $\xi_{i}$ measures the *distance* by which $x_{i}$ *violates* the inequality $y_{i}\left(\left\langle  w\,,\,x_{i} \right\rangle + b\right) \ge 1.$
@@ -59,6 +59,24 @@ date of note: 2024-05-12
 - [[Regularized Loss Minimization]]
 
 ![[max_margin_soft.png]]
+
+### Hinge Loss Minimization
+
+>[!important] Definition
+>The  **support vector machine (soft-SVM)** with **soft margin** can be formulated as the **$\ell_{2}$-regularized hinge loss minimization** problem
+>$$
+>\begin{align*}
+> \min_{w, b}\;&\; \frac{1}{2}\lVert w \rVert_{2}^2 + C\,\sum_{i=1}^{m}\max\left\{0,  1 - y_{i}f(x_{i}) \right\} \\[5pt]
+> = & \sum_{i=1}^{m}L_{hinge}(y_{i}, f(x_{i})) + \frac{\lambda}{2}\lVert w \rVert_{2}^2 
+>\end{align*}
+>$$
+>where $$L_{hinge}(y_{i}, f(x_{i})) = \max\left\{0,  1 - y_{i}f(x_{i}) \right\}.$$
+
+- [[Surrogate Loss Minimization]]
+- [[Hinge Loss as Surrogate Loss Function]]
+
+
+
 
 ###  Lagrangian Function and KKT System
 
@@ -108,6 +126,8 @@ date of note: 2024-05-12
 >- This is a *concave function*.
 >- This is the same as the **Hard SVM** with **linearly separable case**.
 
+^80afee
+
 - [[Lagrangian Dual Function]]
 - [[Lagrange Dual Problem]]
 - [[Convex Function]]
@@ -124,6 +144,8 @@ date of note: 2024-05-12
 >$$
 >- This is a *convex optimization problem* and it is a *quadratic programming (QP)* problem.
 >- Compare to hard SVM, the soft SVM has *dual variable bounded* in $[0,C]$.
+
+^1af93d
 
 - [[Quadratic Programming]]
 - [[Convex Optimization Problem]]
@@ -150,6 +172,15 @@ date of note: 2024-05-12
 >-- [[Foundations of Machine Learning by Mohri]] pp 80
 
 
+## Kernel Trick and Nonlinear Expansion
+
+
+- [[Support Vector Machine Kernel Expansion and RKHS]]
+- [[Reproducing Kernel Hilbert Space]]
+- [[Reproducing Kernel of RKHS]]
+
+
+
 
 -----------
 ##  Recommended Notes and References
@@ -160,7 +191,7 @@ date of note: 2024-05-12
 
 
 - [[Kernel Methods in Machine Learning by Hofmann]]
-- [[Elements of Statistical Learning by Hastie]]
+- [[Elements of Statistical Learning by Hastie]] pp 417 - 421, 654, 657
 - [[Understanding Machine Learning by Shalev-Shwartz]] pp 171 - 177
 - [[Foundations of Machine Learning by Mohri]] pp 87- 100
 

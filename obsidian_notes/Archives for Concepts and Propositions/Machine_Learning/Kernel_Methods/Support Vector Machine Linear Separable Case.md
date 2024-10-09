@@ -26,7 +26,7 @@ date of note: 2024-05-12
 ### Hard SVM with  Linear Separable Case
 
 >[!important] Definition
->Let $\{(x_{i}, y_{i})\} \in \mathcal{X}\times \{ 0,1 \}$ be a set of $n$ samples.
+>Let $\{(x_{i}, y_{i})\} \in \mathcal{X}\times \{ -1,1 \}$ be a set of $n$ samples.
 >- *Assume* that these samples are **linearly separable**, i.e. there exists some $(w,b)\in \mathbb{R}^{d}\times \mathbb{R}$ such that $$y_{i}\left(\left\langle  w\,,\,x_{i} \right\rangle + b\right) \ge 0, \quad \forall i\in [m]$$ 
 >
 >The **(hard) support vector machine (SVM)** aims at finding the *separating hyperplane* $$h(x) = \left\langle  w\,,\,  x \right\rangle + b$$ with **maximum margin**. That is, the **support vector machine** solve the following problem
@@ -126,6 +126,9 @@ date of note: 2024-05-12
 - [[Representer Theorem]]
 
 
+
+
+
 ## Explanation
 
 >[!quote]
@@ -133,7 +136,24 @@ date of note: 2024-05-12
 >
 >-- [[Foundations of Machine Learning by Mohri]] pp 80
 
+>[!important]
+>It is important to note that both the dual optimization problem 
+>$$
+>\begin{align*}
+> \max_{\alpha}\;&\; \sum_{i=1}^{m}\alpha_{i} -\frac{1}{2} \sum_{i,j=1}^{m}\alpha_{i}\alpha_{j} y_{i}y_{j} \left\langle  x_{i}\,,\,x_{j} \right\rangle \\[5pt]
+> \text{s.t. }&\; \alpha_{i} \ge 0, \quad i=1\,{,}\ldots{,}\,m \\[5pt]
+> &\; \sum_{i=1}^{m}\alpha_{i} y_{i} = 0
+>\end{align*}
+>$$
+>and the solution 
+>$$
+> h(x) = \text{sgn}\left\{ \sum_{i=1}^{m}\alpha_{i} y_{i} \left\langle  x_{i}\,,\,x    \right\rangle + b \right\} 
+>$$
+>involves $\left\{ x_{i} \right\}$ only through the **inner products**
 
+- [[Inner Product Space]]
+- [[Reproducing Kernel Hilbert Space]]
+- [[Reproducing Kernel of RKHS]]
 
 
 ## Soft-SVM with Non-Linear Separable Case
@@ -145,13 +165,12 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
-- [[Reproducing Kernel Hilbert Space]]
-- [[Reproducing Kernel of RKHS]]
+
 
 
 
 - [[Kernel Methods in Machine Learning by Hofmann]]
-- [[Elements of Statistical Learning by Hastie]]
+- [[Elements of Statistical Learning by Hastie]] pp 417 - 421, 654, 657
 - [[Understanding Machine Learning by Shalev-Shwartz]] pp 167 - 171
 - [[Foundations of Machine Learning by Mohri]] pp 79 - 100
 

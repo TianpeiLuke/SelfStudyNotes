@@ -28,6 +28,8 @@ date of note: 2024-06-11
 > r(X) = \mathbb{E}_{ \mathcal{P} }\left[Y | X  \right] = \sum_{i=1}^{d}\beta_{i}\,X^{i} + \beta_{0}
 >$$
 
+^06ce34
+
 - [[Least Square Estimation]]
 
 >[!important] Definition

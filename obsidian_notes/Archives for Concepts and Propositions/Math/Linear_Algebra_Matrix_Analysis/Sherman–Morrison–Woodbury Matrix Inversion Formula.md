@@ -33,6 +33,8 @@ date of note: 2024-07-23
 >\left(A + u\,v^{T}\right)^{-1} = A^{-1} - \frac{A^{-1} u v^{T} A^{-1} }{1 + v^{T}A^{-1}u}
 >$$
 
+^10d59a
+
 - [[Surjective Injective Invertible Linear Map and Rank]]
 
 ### Woodbury Identity
@@ -42,6 +44,8 @@ date of note: 2024-07-23
 >$$
 >\left(A + U\,D\,V\right)^{-1} = A^{-1} - A^{-1}\,U\left(D^{-1} + V\,A^{-1}\,U\right)^{-1}\,V\,A^{-1}
 >$$
+
+^57a83b
 
 
 >[!info]
@@ -62,6 +66,8 @@ date of note: 2024-07-23
 > \left(A^{-1} + B^{-1}\right) &= A^{-1}\,\left(A + B\right)\,B^{-1}  \\[5pt]
 >\end{align*}
 >$$
+
+^552b86
 
 
 ## Explanation

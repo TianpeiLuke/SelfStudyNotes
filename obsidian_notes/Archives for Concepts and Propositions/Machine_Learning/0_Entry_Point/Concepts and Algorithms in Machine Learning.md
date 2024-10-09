@@ -55,13 +55,18 @@ date of note: 2024-06-01
 
 #### Support Vector Machine and Kernel Methods
 
-- [[Reproducing Kernel Hilbert Space]]
-- [[Representation of Evaluational Functional in RKHS]]
-- [[Reproducing Kernel of RKHS]]
 - [[Margin-based Loss Function]]
 - [[Support Vector Machine Linear Separable Case]]
 - [[Support Vector Machine General with Soft-Margin Relaxation]]
+- [[Hinge Loss as Surrogate Loss Function]]
+
+
+- [[Support Vector Machine Kernel Expansion and RKHS]]
+- [[Reproducing Kernel Hilbert Space]]
+- [[Representation of Evaluational Functional in RKHS]]
+- [[Reproducing Kernel of RKHS]]
 - [[Representer Theorem]]
+
 
 #### Expectation-Maximization 
 

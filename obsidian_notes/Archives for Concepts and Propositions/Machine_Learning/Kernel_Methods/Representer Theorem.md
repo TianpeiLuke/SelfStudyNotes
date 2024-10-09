@@ -32,6 +32,8 @@ date of note: 2024-08-27
 > f(x) = \sum_{i=1}^{m}\alpha_{i} K(x_{i}, x).
 >$$
 
+^315388
+
 - [[Regularized Loss Minimization]]
 - [[Reproducing Kernel of RKHS]]
 - [[Reproducing Kernel Hilbert Space]]

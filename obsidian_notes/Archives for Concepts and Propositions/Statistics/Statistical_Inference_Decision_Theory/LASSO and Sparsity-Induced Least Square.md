@@ -21,9 +21,124 @@ date of note: 2024-07-24
 >[!important]
 >**Name**: LASSO and Sparsity-Induced Least Square
 
+![[Linear Regression#^24812d]]
+
+- [[Linear Regression]]
+
+![[Least Square Estimation#^9775a7]]
+
+>[!important] Definition
+>Consider a *linear regression model*
+>$$
+>Y = \sum_{i=1}^{d}\beta_{i}\,X^{i} + \beta_{0} + \epsilon,
+>$$
+>where $X := (X^1 \,{,}\ldots{,}\,X^{d})\in \mathbb{R}^{d}$ and $Y\in \mathbb{R}$.
+>
+>The **least absolute shrinkage and selection operator**, or **LASSO**, or **lasso estimate** are the value $\hat{\beta} := (\hat{\beta}_1 \,{,}\ldots{,}\,\hat{\beta}_d,\,\hat{\beta}_{0})$ that minimize the constrained optimization problem
+>$$
+>\begin{align*}
+>\hat{\beta} = \arg\min_{\beta}& \sum_{s=1}^{m}\left[ Y_{s} - \left( \sum_{i=1}^{d}\beta_{i}\,X_{s}^{i} + \beta_{0} \right)\right]^2 \\[5pt]
+> \text{s.t. }& \sum_{i=1}^{s}\lvert \beta_{i} \rvert \le t 
+\end{align*}
+>$$
+>where 
+>- the loss term is the *regression loss* $$\mathbb{E}_{ p }\left[  L_{LS}(Y, f(X)) \right] := \sum_{s=1}^{m}\left[ Y_{s} - \left( \sum_{i=1}^{d}\beta_{i}\,X_{s}^{i} + \beta_{0} \right)\right]^2$$
+>- the constraint set $$\mathcal{S} = \{ \beta\in \mathbb{R}^{d}: \lVert \beta \rVert_{1} \le t  \}$$ is a *polyhedron*.
+>  
+>Computing LASSO estimate is a **quadratic programming** problem.  
+
+- [[Constrained Optimization Problem]]
+- [[Polyhedron and Polytope]]
+- [[Quadratic Programming]]
+
+>[!important] 
+>**LASSO** is also known as **basis pursuit.**
+
+
+>[!important] Definition
+>**LASSO** can be written  in the **Lagrangian form**  as the **$\ell_{1}$-regularized residual sum of squares**
+>$$
+>\hat{\beta} = \arg\min_{\beta} \sum_{s=1}^{m}\left[ Y_{s} - \left( \sum_{i=1}^{d}\beta_{i}\,X_{s}^{i} + \beta_{0} \right)\right]^2 + \lambda \sum_{i=1}^{d}|\beta_{i}|
+>$$ 
+>where  
+>- the second term is the **$\ell_{1}$ regularization term** or the **sparse-inducing regularization** term
+>$$
+>  \lambda \lVert \beta \rVert_{1} := \lambda \sum_{i=1}^{d}|\beta_{i}|
+>$$
+>
+>
+>The **LASSO** can be formulated in matrix form as the **regularized least square** problem
+>$$
+>\min_{\beta\in \mathbb{R}^{d+1}}\; \lVert X\beta - y \rVert_{2}^2 + \lambda \lVert \beta \rVert_{1}  
+>$$
+>where 
+>- $y := (Y_{1} \,{,}\ldots{,}\,Y_{m})\in \mathbb{R}^{m}$,  
+>- $$X = \left[ \begin{array}{ccccc}X_{1}^{1}& X_{1}^{2}& \ldots & X_{1}^{d} & 1\\ X_{2}^{1}& X_{2}^{2}& \ldots & X_{2}^{d}& 1 \\ \ldots & \ldots & \ldots & \ldots & \ldots \\ X_{m}^{1}& X_{m}^{2}& \ldots & X_{m}^{d} & 1  \end{array} \right]\in \mathbb{R}^{m\times (d+1)},$$
+
+- [[Least Square Estimation]]
+- [[Regularized Loss Minimization]]
+- [[Methods of Lagrangian Multipliers]]
+
+### LASSO Estimate as Soft-Thresholding of Least Square Estimate
+
+>[!important]
+>Let $\hat{\beta}^{LS}$ be the correspond *least square estimate*, i.e. $$\hat{\beta}^{LS} = \arg\min_{\beta} \lVert X\beta - y \rVert_{2}^2$$
+>
+>Assume that $X$ has **orthonormal columns**, i.e. $X^{T}X = I$.
+>
+>Then the **LASSO estimate** $\hat{\beta}^{LASSO}$ can be obtained by **soft-thresholding** on least square estimate as
+>$$
+>\begin{align}
+>\hat{\beta}^{LASSO}_{i} &= \text{sgn}(\hat{\beta}^{\text{LS}}_{i})\;\left[ |\hat{\beta}_{i}^{\text{LS}}| - \lambda \right]_{+}, &\quad i=1\,{,}\ldots{,}\,d\\[5pt] 
+>&= \left\{\begin{array}{cl} \hat{\beta}_{i}^{\text{LS}} -\lambda &\text{ if }\hat{\beta}_{i}^{\text{LS}} \ge \lambda > 0 \\[5pt] \hat{\beta}_{i}^{\text{LS}} +\lambda &\text{ if }\hat{\beta}_{i}^{\text{LS}} \le -\lambda < 0 \\[5pt] 0 & \text{ otherwise}\end{array}  \right. \\[5pt] 
+>&= \text{soft-thresholding}(\,\hat{\beta}^{\text{LS}}_{i}\,)
+>\end{align}
+>$$
+>where $$[x]_{+} = \max\{ 0, x\}.$$
+
+^4e9f00
+
+- [[Rectified Linear Unit as Activation for Deep Learning]]
+
+>[!important] Definition
+>The **soft-thresholding function** is defined as  
+>$$
+>\begin{align}
+>\text{soft-threshold}_{\lambda}(x) &:= \text{sgn}(x)\;\left[ |x| - \lambda \right]_{+} \\[10pt] 
+>&= \left\{\begin{array}{cl} x-\lambda &\text{ if }x \ge \lambda > 0 \\[5pt] x +\lambda &\text{ if }x \le -\lambda < 0 \\[5pt] 0 & \text{ otherwise}\end{array}  \right. \\
+>\end{align}$$
+>
+>- This function *remove all* $x$ whose *absolute value* is *less than* $\lambda$.
+>- For $|x| \ge \lambda$, the *absolute value* is *reduced* by $\lambda$.
+
+>[!info]
+>Soft-thresholding function is commonly used in **wavelet-based smoothing.**
+
+- [[Wavelet]]
 
 
 ## Explanation
+
+>[!quote]
+>Because of the nature of the constraint, making t sufficiently small will cause some of the coefficients to be exactly zero. Thus the lasso does a kind  of **continuous subset selection**. 
+>
+>If $t$ is chosen larger than $$t_{0} = \sum_{j=1}^{p}\lvert \hat{\beta}_{j} \rvert $$ (where $\hat{\beta}_{j} = \hat{\beta}_{j}^{LS}$, the *least squares estimates*), then the **lasso estimates** are the $\hat{\beta}_{j}$’s. 
+>
+>On the other hand, for $t = t_{0}/2$ say, then the *least squares coefficients* are **shrunk** by about 50% on average. However, *the nature of the shrinkage is not obvious*, and we investigate it further in Section 3.4.4 below. Like the subset size in variable subset selection, or the penalty parameter in ridge regression, $t$ should be *adaptively chosen* to minimize an estimate of expected prediction error.
+>
+>-- [[Elements of Statistical Learning by Hastie]] pp 69
+
+
+
+## $\ell_{1}$ vs $\ell_{2}$ Regularization
+
+![[Ridge Regression and L2 Regularization#^8d2b54]]
+
+![[LASSO and Sparsity-Induced Least Square#^4e9f00]]
+
+- [[Ridge Regression and L2 Regularization]]
+
+![[ridge_regression_lasso.png]]
 
 
 
@@ -34,11 +149,11 @@ date of note: 2024-07-24
 
 
 - [[Laplace Distribution]]
-- [[Least Square Estimation]]
-- [[Linear Regression]]
 - [[Partial Least Square]]
-- [[Regularized Loss Minimization]]
-- [[Ridge Regression and L2 Regularization]]
+
+
+
+
 
 - [[Gaussian Graphical Model]]
 - [[Conditional Independence]]
@@ -48,8 +163,10 @@ date of note: 2024-07-24
 
 - [[Graph LASSO and Structured Learning in Gaussian Graphical Model]]
 
+- [[Convex Optimization Problem]]
 
-- [[Elements of Statistical Learning by Hastie]]
+
+- [[Elements of Statistical Learning by Hastie]] pp 68 - 79
 - [[All of Statistics A Concise Course by Wasserman]]
 - [[Convex Optimization by Boyd]] pp 184, 205
 - [[Convex Optimization Algorithms by Bertsekas]] pp 27 - 29

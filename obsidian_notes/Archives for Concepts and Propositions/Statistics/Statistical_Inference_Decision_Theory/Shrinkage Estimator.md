@@ -25,6 +25,7 @@ date of note: 2024-06-24
 
 - [[James–Stein Estimator]]
 - [[Convergence in Measure]]
+- [[LASSO and Sparsity-Induced Least Square]]
 
 
 - [[Point Estimator]]
