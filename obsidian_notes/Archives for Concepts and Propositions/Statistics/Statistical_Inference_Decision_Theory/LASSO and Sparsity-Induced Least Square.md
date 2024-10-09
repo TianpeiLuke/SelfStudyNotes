@@ -51,6 +51,8 @@ date of note: 2024-07-24
 >- This is a **quadratic programming** problem.  
 >- The corresponding problem is also called the **sparse linear regression.**
 
+^9e20a2
+
 - [[Constrained Optimization Problem]]
 - [[Polyhedron and Polytope]]
 - [[Quadratic Programming]]

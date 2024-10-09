@@ -130,6 +130,21 @@ date of note: 2024-06-08
 
 - [[Non-Parametric Least Square Estimation]]
 
+## Regularized Least Square
+
+### $\ell_{2}$ Regularization
+
+![[Ridge Regression and L2 Regularization#^3aea13]]
+
+- [[Ridge Regression and L2 Regularization]]
+
+### $\ell_{1}$ Regularization
+
+![[LASSO and Sparsity-Induced Least Square#^9e20a2]]
+
+- [[LASSO and Sparsity-Induced Least Square]]
+
+
 
 
 -----------
