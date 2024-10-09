@@ -52,6 +52,6 @@ date of note: 2024-07-24
 
 - [[Elements of Statistical Learning by Hastie]]
 - [[All of Statistics A Concise Course by Wasserman]]
-- [[High Dimensional Statistics A Non-Asymptotic Viewpoint by Wainwright]]
+- [[High Dimensional Statistics A Non-Asymptotic Viewpoint by Wainwright]] pp 265, 253, 352 - 369
 - [[High Dimensional Probability An Introduction by Vershynin]]
 - Wikipedia [Partial_correlation](https://en.wikipedia.org/wiki/Partial_correlation)

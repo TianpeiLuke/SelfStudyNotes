@@ -45,8 +45,11 @@ date of note: 2024-07-24
 >where 
 >- the loss term is the *regression loss* $$\mathbb{E}_{ p }\left[  L_{LS}(Y, f(X)) \right] := \sum_{s=1}^{m}\left[ Y_{s} - \left( \sum_{i=1}^{d}\beta_{i}\,X_{s}^{i} + \beta_{0} \right)\right]^2$$
 >- the constraint set $$\mathcal{S} = \{ \beta\in \mathbb{R}^{d}: \lVert \beta \rVert_{1} \le t  \}$$ is a *polyhedron*.
+>
+>In matrix form, we can write the LASSO estimation problem as *least square problem* with **$\ell_{1}$ norm constraint** (i.e. *linear constraint*) $$\begin{align*}\min_{\beta}&\; \lVert X\beta - y \rVert_{2}^2  \\[5pt]\text{s.t. }& \lVert \beta \rVert_{1}  \le t \end{align*}$$
 >  
->Computing LASSO estimate is a **quadratic programming** problem.  
+>- This is a **quadratic programming** problem.  
+>- The corresponding problem is also called the **sparse linear regression.**
 
 - [[Constrained Optimization Problem]]
 - [[Polyhedron and Polytope]]
@@ -82,7 +85,7 @@ date of note: 2024-07-24
 >[!important] 
 >**LASSO** is also known as **basis pursuit.**
 >
->The common formulation of the **basis pursuit** problem is to solve the **$\ell_{1}$ norm minimization problem** with *affine equality constraint*
+>The common formulation of the **basis pursuit** problem or **basis pursuit linear program** is to solve the **$\ell_{1}$ norm minimization problem** with *affine equality constraint*
 >$$
 >\begin{align}
 > \min_{\beta\in \mathbb{R}^{d}} &\; \lVert \beta \rVert_{1}\\[5pt]
@@ -90,7 +93,10 @@ date of note: 2024-07-24
 >\end{align}
 >$$
 
+- [[High Dimensional Statistics A Non-Asymptotic Viewpoint by Wainwright]] pp 200
 
+>[!info]
+>Same as LASSO, if we could solve this problem, then we would obtain a *solution* to the *linear equations* that has the **fewest number of non-zero entries**.
 
 
 ### LASSO Estimate as Soft-Thresholding of Least Square Estimate
@@ -150,7 +156,25 @@ date of note: 2024-07-24
 >
 >-- [[Elements of Statistical Learning by Hastie]] pp 69
 
+>[!important] 
+>The **LASSO** estimate is the **convex relaxation** of the general **sparse linear regression problem** which originally modeled using $\ell_{0}$ norm:
+>$$
+>\begin{align}
+> \min_{\beta\in \mathbb{R}^{d}} &\; \lVert \beta \rVert_{0}\\[5pt]
+>\text{s.t. }& X\beta = y 
+>\end{align}
+>$$
+>or
+>$$
+>\begin{align*}
+>\min_{\beta}&\; \lVert X\beta - y \rVert_{2}^2  \\[5pt]
+> \text{s.t. }& \lVert \beta \rVert_{0}  \le t 
+\end{align*}
+>$$
+>
+>Here **$\ell_{0}$ norm** is defined as the **support** of vector $x$, i.e. the *count* of *nonzero entries in a vector* $$\lVert x \rVert_{0} = \text{supp}(x) := \lvert \{ i: x_{i} \neq 0 \} \rvert  $$
 
+- [[Support of Measure]]
 
 ## $\ell_{1}$ vs $\ell_{2}$ Regularization
 
@@ -189,7 +213,8 @@ date of note: 2024-07-24
 
 
 - [[Elements of Statistical Learning by Hastie]] pp 68 - 79
-- [[All of Statistics A Concise Course by Wasserman]]
+- [[High Dimensional Statistics A Non-Asymptotic Viewpoint by Wainwright]] pp 198, 200, 262 - 265
+- [[High Dimensional Probability An Introduction by Vershynin]] pp 263 - 267
 - [[Convex Optimization by Boyd]] pp 184, 205
 - [[Convex Optimization Algorithms by Bertsekas]] pp 27 - 29, 286 - 288
 - Wikipedia [Partial_correlation](https://en.wikipedia.org/wiki/Partial_correlation)

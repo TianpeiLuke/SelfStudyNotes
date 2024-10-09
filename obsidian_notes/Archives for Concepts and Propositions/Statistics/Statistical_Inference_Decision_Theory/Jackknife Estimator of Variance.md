@@ -44,6 +44,6 @@ date of note: 2024-05-22
 - [[Sub-Additivity of Entropy Functional and Tensorization]]
 
 
-- [[All of Statistics A Concise Course by Wasserman]]
+- [[All of Statistics A Concise Course by Wasserman]] pp 109, 115
 - [[Mathematical Statistics by Shao]]
 - [[An Introduction to Bootstrap by Efron]] pp 141, 283
