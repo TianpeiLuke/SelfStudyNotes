@@ -123,13 +123,14 @@ date of note: 2024-08-22
 - [[Singular Value Decomposition of Linear Map]]
 - [[Sherman–Morrison–Woodbury Matrix Inversion Formula]]
 
-
-
 ## Explanation
 
 
+- [[Gaussian Random Vector]]
+- [[Prior and Posterior Measure]]
 
-## Solution via Least Square Estimation
+
+## Ridge Regression as Least Square Estimation on Augmented Matrix
 
 >[!info]
 >The **ridge regression** problem solves
@@ -146,14 +147,7 @@ date of note: 2024-08-22
 
 - [[Algorithms for Least Square Estimation Problem]]
 - [[Least Square Estimation]]
-
-
-
-## SVD of Ridge Regression
-
-
-
-
+- [[KKT System for Solution of Quadratic Programming]]
 
 ## $\ell_{1}$ Regularized Regression
 
