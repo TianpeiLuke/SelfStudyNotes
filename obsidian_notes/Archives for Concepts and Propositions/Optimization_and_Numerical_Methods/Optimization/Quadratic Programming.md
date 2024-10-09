@@ -47,6 +47,8 @@ date of note: 2024-10-06
 >- and $$c = -R^{T}d.$$
 >
 
+^9ccf19
+
 - [[Convex Optimization Problem]]
 - [[Sesquilinear Form]]
 - [[Multilinear Function]]
