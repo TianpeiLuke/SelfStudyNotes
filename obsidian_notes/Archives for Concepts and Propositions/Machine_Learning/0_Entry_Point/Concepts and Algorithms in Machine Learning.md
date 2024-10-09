@@ -35,14 +35,19 @@ date of note: 2024-06-01
 #### Linear and Generalized Linear Models
 
 - [[Linear Regression]]
-- [[Logistic Regression]]
-- [[Logistic Regression Solution via Iterative Reweighted Least Square]]
-- [[Generalized Linear Models]]
 - [[Least Square Estimation]]
 - [[Algorithms for Least Square Estimation Problem]]
 - [[Least Square Estimation Solution and Geometric Interpretation]]
 - [[Least Square Estimation with QR Factorization]]
 - [[Least Square Estimation via Singular Value Decomposition]]
+
+- [[Ridge Regression and L2 Regularization]]
+- [[LASSO and Sparsity-Induced Least Square]]
+
+- [[Logistic Regression]]
+- [[Logistic Regression Solution via Iterative Reweighted Least Square]]
+- [[Generalized Linear Models]]
+
 
 
 #### Ensemble Learning and Boosting
