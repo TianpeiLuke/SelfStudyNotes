@@ -37,6 +37,7 @@ date of note: 2024-07-24
 
 - [[LASSO and Sparsity-Induced Least Square]]
 - [[Inverse Covariance Estimation]]
+- [[Sparse Inverse Covariance Estimation with Known Structure]]
 - [[Linear Regression]]
 
 - [[Gaussian Graphical Model]]

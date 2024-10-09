@@ -80,6 +80,8 @@ date of note: 2024-05-12
 >\end{align*}
 >$$
 
+^d75d16
+
 >[!important] 
 >The **optimal solution** of *inverse covariance estimation* given a set of $n > d$ samples $\{ X_{i}, i=1\,{,}\ldots{,}\,n \}$ is
 >$$
