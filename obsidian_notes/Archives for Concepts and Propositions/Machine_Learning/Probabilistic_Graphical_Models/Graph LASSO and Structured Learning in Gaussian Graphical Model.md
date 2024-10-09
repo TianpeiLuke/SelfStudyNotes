@@ -50,7 +50,8 @@ date of note: 2024-07-24
 - [[Regularized Loss Minimization]]
 - [[Convex Optimization Problem]]
 
-- [[Elements of Statistical Learning by Hastie]]
+- [[Probabilistic Graphical Models by Koller]] pp 987 - 992
+- [[Elements of Statistical Learning by Hastie]] pp 635 - 638
 - [[All of Statistics A Concise Course by Wasserman]]
 - [[High Dimensional Statistics A Non-Asymptotic Viewpoint by Wainwright]] pp 265, 253, 352 - 369
 - [[High Dimensional Probability An Introduction by Vershynin]]

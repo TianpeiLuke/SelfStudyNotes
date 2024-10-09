@@ -90,6 +90,9 @@ date of note: 2024-05-10
 -----------
 ##  Recommended Notes and References
 
+
+- [[Inverse Covariance Estimation]]
+
 - [[Gaussian Random Variable]]
 - [[Gaussian Measure]]
 - Wikipedia [Multivariate_normal_distribution](https://en.wikipedia.org/wiki/Multivariate_normal_distribution)

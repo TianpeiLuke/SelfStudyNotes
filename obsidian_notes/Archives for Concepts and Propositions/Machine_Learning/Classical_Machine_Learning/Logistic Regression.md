@@ -174,3 +174,4 @@ date of note: 2024-08-16
 - [[All of Statistics A Concise Course by Wasserman]]
 - [[Understanding Machine Learning by Shalev-Shwartz]]
 - [[Foundations of Machine Learning by Mohri]]
+- [[Convex Optimization by Boyd]] pp 354 - 355

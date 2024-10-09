@@ -57,6 +57,7 @@ date of note: 2024-08-28
 > \Sigma &= -\frac{1}{2} \Theta^{-1}
 >\end{align*}
 >$$
+>- The *natural parameterization* of Gaussian distribution is also called the **information form** of *the Gaussian distribution*.
 
 ^683466
 

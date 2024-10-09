@@ -132,6 +132,8 @@ date of note: 2024-06-08
 
 ## Regularized Least Square
 
+- [[Regularized Loss Minimization]]
+
 ### $\ell_{2}$ Regularization
 
 ![[Ridge Regression and L2 Regularization#^3aea13]]

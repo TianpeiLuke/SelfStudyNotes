@@ -48,6 +48,11 @@ date of note: 2024-06-08
 
 ## Explanation
 
+>[!info]
+>**Gauss-Markov theorem** states that **least square estimator** has **uniformly minimum variance** among **unbiased estimator** for linear regression model.
+>
+
+
 
 ## Least Square Estimation
 
