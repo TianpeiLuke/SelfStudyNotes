@@ -10,6 +10,7 @@ keywords:
   - lasso
   - sparsity
   - l1_regularization
+  - basis_pursuit
 topics:
   - statistics/estimation
 name: LASSO and Sparsity-Induced Least Square
@@ -51,9 +52,6 @@ date of note: 2024-07-24
 - [[Polyhedron and Polytope]]
 - [[Quadratic Programming]]
 
->[!important] 
->**LASSO** is also known as **basis pursuit.**
-
 
 >[!important] Definition
 >**LASSO** can be written  in the **Lagrangian form**  as the **$\ell_{1}$-regularized residual sum of squares**
@@ -79,6 +77,22 @@ date of note: 2024-07-24
 - [[Regularized Loss Minimization]]
 - [[Methods of Lagrangian Multipliers]]
 
+### Basis Pursuit
+
+>[!important] 
+>**LASSO** is also known as **basis pursuit.**
+>
+>The common formulation of the **basis pursuit** problem is to solve the **$\ell_{1}$ norm minimization problem** with *affine equality constraint*
+>$$
+>\begin{align}
+> \min_{\beta\in \mathbb{R}^{d}} &\; \lVert \beta \rVert_{1}\\[5pt]
+>\text{s.t. }& X\beta = y 
+>\end{align}
+>$$
+
+
+
+
 ### LASSO Estimate as Soft-Thresholding of Least Square Estimate
 
 >[!important]
@@ -91,7 +105,7 @@ date of note: 2024-07-24
 >\begin{align}
 >\hat{\beta}^{LASSO}_{i} &= \text{sgn}(\hat{\beta}^{\text{LS}}_{i})\;\left[ |\hat{\beta}_{i}^{\text{LS}}| - \lambda \right]_{+}, &\quad i=1\,{,}\ldots{,}\,d\\[5pt] 
 >&= \left\{\begin{array}{cl} \hat{\beta}_{i}^{\text{LS}} -\lambda &\text{ if }\hat{\beta}_{i}^{\text{LS}} \ge \lambda > 0 \\[5pt] \hat{\beta}_{i}^{\text{LS}} +\lambda &\text{ if }\hat{\beta}_{i}^{\text{LS}} \le -\lambda < 0 \\[5pt] 0 & \text{ otherwise}\end{array}  \right. \\[5pt] 
->&= \text{soft-thresholding}(\,\hat{\beta}^{\text{LS}}_{i}\,)
+>&= \text{soft-thresholding}(\,\hat{\beta}^{\text{LS}}_{i}\,,\, \lambda)
 >\end{align}
 >$$
 >where $$[x]_{+} = \max\{ 0, x\}.$$
@@ -101,15 +115,22 @@ date of note: 2024-07-24
 - [[Rectified Linear Unit as Activation for Deep Learning]]
 
 >[!important] Definition
->The **soft-thresholding function** is defined as  
+>The **soft-thresholding function** or **shrinkage operation** is defined as  
 >$$
 >\begin{align}
->\text{soft-threshold}_{\lambda}(x) &:= \text{sgn}(x)\;\left[ |x| - \lambda \right]_{+} \\[10pt] 
+>&\text{soft-thresholding}(x, \lambda) := \text{shrinkage}(x, \lambda) \\[5pt]
+>&:= \text{sgn}(x)\;\left[ |x| - \lambda \right]_{+} \\[10pt] 
 >&= \left\{\begin{array}{cl} x-\lambda &\text{ if }x \ge \lambda > 0 \\[5pt] x +\lambda &\text{ if }x \le -\lambda < 0 \\[5pt] 0 & \text{ otherwise}\end{array}  \right. \\
 >\end{align}$$
 >
 >- This function *remove all* $x$ whose *absolute value* is *less than* $\lambda$.
 >- For $|x| \ge \lambda$, the *absolute value* is *reduced* by $\lambda$.
+>- The **shrinkage operation** can be defined using the *proximal operation* $$\text{shrinkage}(x, \lambda) = \arg\min_{z} \left\{  \lVert x \rVert_{1} + \frac{1}{2\lambda}\lVert x - z \rVert_{2}^2   \right\} $$
+
+- [[Proximal Algorithm]]
+- [[Augmented Lagrangian Algorithm]]
+- [[Alternating Direction Method of Multipliers Algorithm]]
+
 
 >[!info]
 >Soft-thresholding function is commonly used in **wavelet-based smoothing.**
@@ -169,5 +190,5 @@ date of note: 2024-07-24
 - [[Elements of Statistical Learning by Hastie]] pp 68 - 79
 - [[All of Statistics A Concise Course by Wasserman]]
 - [[Convex Optimization by Boyd]] pp 184, 205
-- [[Convex Optimization Algorithms by Bertsekas]] pp 27 - 29
+- [[Convex Optimization Algorithms by Bertsekas]] pp 27 - 29, 286 - 288
 - Wikipedia [Partial_correlation](https://en.wikipedia.org/wiki/Partial_correlation)
