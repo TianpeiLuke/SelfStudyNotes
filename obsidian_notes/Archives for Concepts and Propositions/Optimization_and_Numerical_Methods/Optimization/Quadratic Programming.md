@@ -142,6 +142,8 @@ date of note: 2024-10-06
 - [[Algorithms for Least Square Estimation Problem]]
 - [[Least Square Estimation with QR Factorization]]
 
+- [[LASSO and Sparsity-Induced Least Square]]
+- [[Ridge Regression and L2 Regularization]]
 
 ### Support Vector Machines
 
