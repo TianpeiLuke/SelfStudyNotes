@@ -46,8 +46,11 @@ date of note: 2024-07-24
 >- and $$\lVert \Theta \rVert_{1, \text{ off}} = \sum_{i\neq j}|\theta_{i,j}|$$
 >
 
-- [[Regularized Loss Minimization]]
-- [[LASSO and Sparsity-Induced Least Square]]
+- [[Gaussian Graphical Model]]
+- [[Inverse Covariance Estimation]]
+- [[Lp Space]]
+- [[Operator p-Norm of Matrix]]
+- [[Sparse Inverse Covariance Estimation for GGM with Known Structure]]
 
 
 ### Graph LASSO algorithm
@@ -90,12 +93,9 @@ date of note: 2024-07-24
 ![[LASSO and Sparsity-Induced Least Square#^5d43ca]]
 
 - [[Sparse Inverse Covariance Estimation for GGM with Known Structure]]
-- [[Gaussian Graphical Model]]
-- [[Inverse Covariance Estimation]]
-- [[Operator Mixed pq Norm of Matrix]]
 - [[LASSO and Sparsity-Induced Least Square]]
 - [[Block Coordinate Descent Algorithm]]
-- [[Alternating Direction Method of Multipliers Algorithm]]
+
 
 
 ## Explanation
@@ -216,7 +216,8 @@ date of note: 2024-07-24
 
 
 - [[Linear Regression]]
-
+- [[Regularized Loss Minimization]]
+- [[LASSO and Sparsity-Induced Least Square]]
 - [[Conditional Independence]]
 
 
