@@ -78,7 +78,7 @@ date of note: 2024-10-06
 
 - [[Methods of Lagrangian Multipliers]]
 - [[Karush-Kuhn-Tucker Optimality Condition]]
-- [[KKT Matrix and KKT System for Optimization]]
+- [[KKT Matrix and KKT System for Optimization with Equality Constraints]]
 
 
 ## Explanation

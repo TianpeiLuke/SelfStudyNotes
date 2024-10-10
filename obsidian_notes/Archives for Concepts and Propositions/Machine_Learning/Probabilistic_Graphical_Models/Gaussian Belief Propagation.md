@@ -106,7 +106,7 @@ date of note: 2024-05-12
 
 ^967ffd
 
-- [[KKT Matrix and KKT System for Optimization]]
+- [[KKT Matrix and KKT System for Optimization with Equality Constraints]]
 ### Gaussian Belief Propagation
 
 >[!important] Algorithm

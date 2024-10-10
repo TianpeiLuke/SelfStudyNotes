@@ -11,14 +11,14 @@ topics:
   - convex_analysis
   - optimization/theory
   - numerical_linear_algebra
-name: KKT System for Optimization
+name: KKT Matrix and KKT System for Optimization with Equality Constraints
 date of note: 2024-10-08
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: KKT System for Optimization
+>**Name**: KKT Matrix and KKT System for Optimization with Equality Constraints
 
 ![[System of Linear Equations or Linear System#^818e89]]
 
@@ -70,7 +70,7 @@ date of note: 2024-10-08
 > A^{T} & 0
 >\end{array} \right] 
 >$$
->where $H\in \mathcal{S}_{++}^{m}$ and $A\in \mathbb{R}^{p\times m}$ with full column rank, then the **Schur complement** of $H$ of $\widetilde{H}$ is **negative definite**
+>where $H\in \mathcal{S}_{++}^{p}$ and $A\in \mathbb{R}^{p\times m}$ with *full column rank* with $p > m$, then the **Schur complement** of $H$ of $\widetilde{H}$ is **negative definite**
 >$$
 >S := \widetilde{H} / H := - A^{T}H^{-1}A \prec 0
 >$$
@@ -79,9 +79,9 @@ date of note: 2024-10-08
 - [[Schur Complement and Inversion of Block Matrix]]
 
 >[!info]
->We can find **Cholesky factorization** of $\widetilde{H} / H$
+>We can find **Cholesky factorization** of $-\widetilde{H} / H$
 >$$
->\widetilde{H} / H = GG^{T}
+>-\widetilde{H} / H = GG^{T}
 >$$
 >where $G\in \mathbb{R}^{m\times m}$ is **lower triangular**.
 

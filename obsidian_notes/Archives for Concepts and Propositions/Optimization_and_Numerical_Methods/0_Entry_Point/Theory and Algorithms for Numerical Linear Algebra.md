@@ -69,7 +69,7 @@ date of note: 2024-05-12
 
 - [[Normal Equations and Newton System of Equations]]
 - [[Secant Equation and Quasi-Newton Methods]]
-- [[KKT Matrix and KKT System for Optimization]]
+- [[KKT Matrix and KKT System for Optimization with Equality Constraints]]
 
 #### Symmetric or Hermitian Positive Definite System 
 
