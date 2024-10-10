@@ -191,11 +191,11 @@ date of note: 2024-07-24
 >[!important]
 >Note that the **diagonal term** of $W$ is *fixed* $$W_{j,j} = S_{j,j} + \lambda.$$
 
-## Solving Graph LASSO via Augmented Lagrangian
+## Other Algorithms that Solve Graph LASSO
 
 - [[Augmented Lagrangian Algorithm]]
 - [[Alternating Direction Method of Multipliers Algorithm]]
-
+- Oztoprak, F., Nocedal, J., Rennie, S., & Olsen, P. A. (2012). Newton-like methods for sparse inverse covariance estimation. _Advances in neural information processing systems_, _25_.
 
 
 ## Statistical Analysis for Graph Lasso
@@ -232,4 +232,5 @@ date of note: 2024-07-24
 - [[Elements of Statistical Learning by Hastie]] pp 635 - 638
 - [[High Dimensional Statistics A Non-Asymptotic Viewpoint by Wainwright]] pp 265, 253, 353 - 369
 - [[High Dimensional Probability An Introduction by Vershynin]]
-- Wikipedia [Partial_correlation](https://en.wikipedia.org/wiki/Partial_correlation)
+- Friedman, J., Hastie, T., & Tibshirani, R. (2008). Sparse inverse covariance estimation with the graphical lasso. _Biostatistics_, _9_(3), 432-441.
+- Mazumder, R., & Hastie, T. (2012). The graphical lasso: New insights and alternatives. _Electronic journal of statistics_, _6_, 2125.

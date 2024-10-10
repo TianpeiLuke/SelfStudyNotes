@@ -78,6 +78,8 @@ date of note: 2024-07-24
 >- $y := (Y_{1} \,{,}\ldots{,}\,Y_{m})\in \mathbb{R}^{m}$,  
 >- $$X = \left[ \begin{array}{ccccc}X_{1}^{1}& X_{1}^{2}& \ldots & X_{1}^{d} & 1\\ X_{2}^{1}& X_{2}^{2}& \ldots & X_{2}^{d}& 1 \\ \ldots & \ldots & \ldots & \ldots & \ldots \\ X_{m}^{1}& X_{m}^{2}& \ldots & X_{m}^{d} & 1  \end{array} \right]\in \mathbb{R}^{m\times (d+1)},$$
 
+^19dff8
+
 - [[Least Square Estimation]]
 - [[Regularized Loss Minimization]]
 - [[Methods of Lagrangian Multipliers]]
@@ -213,13 +215,14 @@ date of note: 2024-07-24
 
 ## Algorithms that Solves LASSO
 
-
-- [[Dual Proximal Algorithm]]
-- [[Augmented Lagrangian Algorithm]]
-- [[Alternating Direction Method of Multipliers Algorithm]]
+- [[LASSO Algorithms]]
 
 
+## Statistical Analysis of LASSO
 
+
+- Zhao, P., & Yu, B. (2006). On model selection consistency of Lasso. _The Journal of Machine Learning Research_, _7_, 2541-2563.
+- Zou, H. (2006). The adaptive lasso and its oracle properties. _Journal of the American statistical association_, _101_(476), 1418-1429.
 
 
 -----------
@@ -249,4 +252,14 @@ date of note: 2024-07-24
 - [[High Dimensional Probability An Introduction by Vershynin]] pp 263 - 267
 - [[Convex Optimization by Boyd]] pp 184, 205
 - [[Convex Optimization Algorithms by Bertsekas]] pp 27 - 29, 286 - 288
-- Wikipedia [Partial_correlation](https://en.wikipedia.org/wiki/Partial_correlation)
+- Tibshirani, R. (1996). Regression shrinkage and selection via the lasso. _Journal of the Royal Statistical Society Series B: Statistical Methodology_, _58_(1), 267-288.
+- Osborne, M. R., Presnell, B., & Turlach, B. A. (2000). On the lasso and its dual. _Journal of Computational and Graphical statistics_, _9_(2), 319-337.
+- Roth, V. (2004). The generalized LASSO. _IEEE transactions on neural networks_, _15_(1), 16-28.
+- Zou, H. (2006). The adaptive lasso and its oracle properties. _Journal of the American statistical association_, _101_(476), 1418-1429.
+- Zhao, P., & Yu, B. (2006). On model selection consistency of Lasso. _The Journal of Machine Learning Research_, _7_, 2541-2563.
+- Friedman, J., Hastie, T., Höfling, H., & Tibshirani, R. (2007). Pathwise coordinate optimization. _The annals of applied statistics_, _1_(2), 302-332.
+- Park, T., & Casella, G. (2008). The bayesian lasso. _Journal of the american statistical association_, _103_(482), 681-686.
+- Friedman, J., Hastie, T., & Tibshirani, R. (2010). A note on the group lasso and a sparse group lasso. _arXiv preprint arXiv:1001.0736_.
+- Tibshirani, R. J. (2011). _The solution path of the generalized lasso_. Stanford University.
+- Zhang, Y., Zhang, N., Sun, D., & Toh, K. C. (2020). An efficient Hessian based algorithm for solving large-scale sparse group Lasso problems. _Mathematical Programming_, _179_, 223-263.
+

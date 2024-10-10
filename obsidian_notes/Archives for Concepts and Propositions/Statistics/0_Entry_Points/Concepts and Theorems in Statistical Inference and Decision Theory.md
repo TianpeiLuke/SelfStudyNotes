@@ -99,7 +99,8 @@ date of note: 2024-06-01
 
 - [[Ridge Regression and L2 Regularization]]
 - [[LASSO and Sparsity-Induced Least Square]]
-
+- [[LASSO Algorithms]]
+- [[Graph LASSO and Structured Learning in Gaussian Graphical Model]]
 
 ### Other Regression Problems
 

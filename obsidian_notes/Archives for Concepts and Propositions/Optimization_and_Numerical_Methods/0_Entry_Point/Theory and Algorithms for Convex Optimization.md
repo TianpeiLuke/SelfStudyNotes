@@ -98,6 +98,7 @@ date of note: 2024-05-12
 - [[Proximal Cutting-Plane Algorithm]]
 - [[Bundle Methods]]
 
+- [[LASSO Algorithms]]
 
 ### Generalized Proximal Method
 
