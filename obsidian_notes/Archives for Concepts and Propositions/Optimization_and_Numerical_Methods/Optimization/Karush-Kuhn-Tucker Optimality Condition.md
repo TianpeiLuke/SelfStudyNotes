@@ -118,6 +118,8 @@ date of note: 2024-05-12
 >  
 >The conditions above are known as **the Karush-Kuhn-Tucker (KKT) condition**.
 
+^a09722
+
 - [[Unconstrained Local Minimization]]
 - [[Necessary and Sufficient Condition for Local Minimum of Smooth Function]]
 - [[Methods of Lagrangian Multipliers]]

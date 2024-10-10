@@ -77,6 +77,8 @@ date of note: 2024-05-12
 >- The **first step** corresponds to the **message** sent from the $X_{i}$ *cluster* to the $X_i$, $X_j$ *edge*; in this step, $X_{i}$ *aggregates* all of the information from its own local potential and the message sent from its other incident edges $$\begin{align*}\hat{K}_{i / j} &= K_{i i } + \sum_{k \in \{N(i) - j\}}K_{k\to i} \\[5pt] \hat{h}_{i / j} &= h_{i} + \sum_{k \in \{N(i) - j\}}h_{k\to i}\end{align*}$$
 >- In the **second step**, the $X_i$, $X_j$ *edge* takes the message received from $X_{i}$, and send the appropriate message to $X_{j}.$ The form of message is computed via *marginalized Gaussian distribution*. It gives rise the following update equation $$\begin{align*}K_{i \to j} &= -K_{j i}K_{i / j}^{-1} \,K_{i j}   \\[5pt] h_{i / j} &= -K_{j i}K_{i / j}^{-1}\,h_{i / j}\end{align*}$$
 
+^919312
+
 
 >[!info]
 >Note that the first step is to compute the **canonical form of join probability** 
@@ -102,6 +104,9 @@ date of note: 2024-05-12
 >\end{align*}
 >$$
 
+^967ffd
+
+- [[KKT Matrix and KKT System for Optimization]]
 ### Gaussian Belief Propagation
 
 >[!important] Algorithm

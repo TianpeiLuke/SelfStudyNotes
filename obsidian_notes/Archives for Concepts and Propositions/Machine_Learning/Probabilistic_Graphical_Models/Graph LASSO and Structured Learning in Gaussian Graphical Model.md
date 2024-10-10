@@ -195,7 +195,12 @@ date of note: 2024-07-24
 
 - [[Augmented Lagrangian Algorithm]]
 - [[Alternating Direction Method of Multipliers Algorithm]]
+- Yuan, M. (2010). High dimensional inverse covariance matrix estimation via linear programming. _The Journal of Machine Learning Research_, _11_, 2261-2286.
 - Oztoprak, F., Nocedal, J., Rennie, S., & Olsen, P. A. (2012). Newton-like methods for sparse inverse covariance estimation. _Advances in neural information processing systems_, _25_.
+- Hsieh, C. J., Sustik, M. A., Dhillon, I. S., Ravikumar, P. K., & Poldrack, R. (2013). BIG & QUIC: Sparse inverse covariance estimation for a million variables. _Advances in neural information processing systems_, _26_.
+- Hsieh, C. J., Sustik, M. A., Dhillon, I. S., & Ravikumar, P. (2014). QUIC: quadratic approximation for sparse inverse covariance estimation. _J. Mach. Learn. Res._, _15_(1), 2911-2947.
+- Kim, I., Lee, M., & Seok, J. (2023). ICEGAN: Inverse covariance estimating generative adversarial network. _Machine Learning: Science and Technology_, _4_(2), 025008.
+
 
 
 ## Statistical Analysis for Graph Lasso

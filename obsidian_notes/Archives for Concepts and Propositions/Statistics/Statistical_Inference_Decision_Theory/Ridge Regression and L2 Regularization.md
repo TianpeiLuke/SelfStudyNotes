@@ -149,7 +149,7 @@ date of note: 2024-08-22
 
 - [[Algorithms for Least Square Estimation Problem]]
 - [[Least Square Estimation]]
-- [[KKT System for Solution of Quadratic Programming]]
+- [[KKT Matrix and KKT System for Optimization]]
 
 ## $\ell_{1}$ Regularized Regression
 

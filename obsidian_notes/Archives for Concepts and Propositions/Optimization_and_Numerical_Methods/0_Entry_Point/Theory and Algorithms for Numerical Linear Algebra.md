@@ -67,6 +67,10 @@ date of note: 2024-05-12
 - [[LDU Factorization with Symmetric Pivoting]]
 - [[Triangular Equivalence of Matrices]]
 
+- [[Normal Equations and Newton System of Equations]]
+- [[Secant Equation and Quasi-Newton Methods]]
+- [[KKT Matrix and KKT System for Optimization]]
+
 #### Symmetric or Hermitian Positive Definite System 
 
 - [[Positive Semidefinite Transformation]]
