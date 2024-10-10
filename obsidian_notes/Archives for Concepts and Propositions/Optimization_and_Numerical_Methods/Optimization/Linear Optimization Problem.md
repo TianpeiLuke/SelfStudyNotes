@@ -98,7 +98,7 @@ date of note: 2024-08-15
 
 - [[Simplex Method for Linear Optimization]]
 - [[Interior Point Method for Linear Optimization]]
-- [[Interior Point Method or Barrier Method for Convex Optimization]]
+- [[Primal-Dual Interior Point Method for Convex Optimization]]
 
 
 - [[Convex Optimization by Boyd]]

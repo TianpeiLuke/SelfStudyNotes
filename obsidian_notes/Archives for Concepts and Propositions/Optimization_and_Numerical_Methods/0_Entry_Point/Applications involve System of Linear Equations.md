@@ -322,7 +322,7 @@ date of note: 2024-09-27
 - [[Lagrangian Dual Function]]
 - [[Lagrange Dual Problem]]
 - [[Karush-Kuhn-Tucker Optimality Condition]]
-- [[Interior Point Method or Barrier Method for Convex Optimization]]
+- [[Primal-Dual Interior Point Method for Convex Optimization]]
 
 ### Quadratic Programming
 

@@ -11,14 +11,14 @@ keywords:
   - barrier_method
 topics:
   - optimization
-name: Interior Point Method for Convex Optimization
+name: Primal-Dual Interior Point Method for Convex Optimization
 date of note: 2024-05-12
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Interior Point Method or *Barrier Method* for Convex Optimization
+>**Name**: Primal-Dual Interior Point Method for Convex Optimization
 
 ![[Convex Optimization Problem#^bc3f9c]]
 
@@ -44,6 +44,7 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
+- [[Barrier Method for Convex Optimization]]
 - [[Newton Method]]
 - [[Secant Equation and Quasi-Newton Methods]]
 - [[BFGS Algorithm]]
@@ -56,6 +57,6 @@ date of note: 2024-05-12
 - [[Convex Function]]
 - [[Karush-Kuhn-Tucker Optimality Condition]]
 
-- [[Convex Optimization by Boyd]] pp 561
+- [[Convex Optimization by Boyd]] pp 609 - 621
 - [[Numerical Optimization by Nocedal]] pp 563 - 594
 - [[Nonlinear Programming by Bertsekas]] pp 446 - 473

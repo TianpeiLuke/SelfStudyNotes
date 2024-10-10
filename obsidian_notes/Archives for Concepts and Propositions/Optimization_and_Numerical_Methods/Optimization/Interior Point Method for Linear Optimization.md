@@ -33,11 +33,13 @@ date of note: 2024-05-12
 
 
 - [[Simplex Method for Linear Optimization]]
-- [[Interior Point Method or Barrier Method for Convex Optimization]]
+- [[Logarithmic Barrier Function and Central Path for Interior Point Methods]]
+- [[Barrier Method for Convex Optimization]]
+- [[Primal-Dual Interior Point Method for Convex Optimization]]
 
 
 
 - [[Introduction to Linear Optimization by Bertsimas]] pp 303
-- [[Convex Optimization by Boyd]]
+- [[Convex Optimization by Boyd]] pp 571 - 573, 613 - 615, 616 - 618
 - [[Numerical Optimization by Nocedal]] pp 392 - 418
 - [[Nonlinear Programming by Bertsekas]]

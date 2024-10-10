@@ -102,7 +102,7 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
-- [[Interior Point Method or Barrier Method for Convex Optimization]]
+- [[Primal-Dual Interior Point Method for Convex Optimization]]
 - [[Newton Method]]
 - [[Secant Equation and Quasi-Newton Methods]]
 - [[BFGS Algorithm]]

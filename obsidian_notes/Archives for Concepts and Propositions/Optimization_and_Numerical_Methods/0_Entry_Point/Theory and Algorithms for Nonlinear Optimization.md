@@ -136,7 +136,7 @@ date of note: 2024-05-12
 - [[Quadratic Programming]]
 - [[Sequential Quadratic Programming]]
 - [[KKT Matrix and KKT System for Optimization with Equality Constraints]]
-- [[Interior Point Method or Barrier Method for Convex Optimization]]
+- [[Primal-Dual Interior Point Method for Convex Optimization]]
 
 
 ## Explanation

@@ -99,7 +99,7 @@ date of note: 2024-10-06
 
 ### Generic Convex Programming Solver
 
-- [[Interior Point Method or Barrier Method for Convex Optimization]]
+- [[Primal-Dual Interior Point Method for Convex Optimization]]
 
 ### Iterative Optimization Solver
 

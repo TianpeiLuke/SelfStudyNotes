@@ -30,7 +30,7 @@ date of note: 2024-10-06
 - [[Quadratic Programming]]
 - [[Convex Optimization Problem]]
 
-- [[Interior Point Method or Barrier Method for Convex Optimization]]
+- [[Primal-Dual Interior Point Method for Convex Optimization]]
 - [[Interior Point Method for Linear Optimization]]
 - [[Newton Method]]
 - [[Secant Equation and Quasi-Newton Methods]]

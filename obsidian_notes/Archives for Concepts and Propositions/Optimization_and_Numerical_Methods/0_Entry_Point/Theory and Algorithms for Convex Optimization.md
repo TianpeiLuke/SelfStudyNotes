@@ -35,7 +35,8 @@ date of note: 2024-05-12
 - [[Simplex Method for Linear Optimization]]
 - [[Interior Point Method for Linear Optimization]]
 - [[Logarithmic Barrier Function and Central Path for Interior Point Methods]]
-- [[Interior Point Method or Barrier Method for Convex Optimization]]
+- [[Barrier Method for Convex Optimization]]
+- [[Primal-Dual Interior Point Method for Convex Optimization]]
 - [[Semidefinite Programming]]
 - [[Second-Order Cone Programming]]
 - [[Quadratic Programming]]
@@ -134,7 +135,7 @@ date of note: 2024-05-12
 - [[Quadratic Programming]]
 - [[Sequential Quadratic Programming]]
 - [[KKT Matrix and KKT System for Optimization with Equality Constraints]]
-- [[Interior Point Method or Barrier Method for Convex Optimization]]
+- [[Primal-Dual Interior Point Method for Convex Optimization]]
 
 
 ### Optimization with Equality Constraints

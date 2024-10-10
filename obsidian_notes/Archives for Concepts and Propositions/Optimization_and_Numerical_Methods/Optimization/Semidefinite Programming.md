@@ -108,7 +108,7 @@ date of note: 2024-07-07
 
 
 
-- [[Interior Point Method or Barrier Method for Convex Optimization]]
+- [[Primal-Dual Interior Point Method for Convex Optimization]]
 
 
 
