@@ -231,7 +231,7 @@ date of note: 2024-05-12
 - [[Linear Optimization Problem]]
 - [[Polyhedron and Polytope]]
 - [[Generalized Simplex]]
-- [[Interior Point Method for Linear Optimization]]
+- [[Primal-Dual Interior Point Method for Linear Optimization]]
 
 - [[Karush-Kuhn-Tucker Optimality Condition]]
 

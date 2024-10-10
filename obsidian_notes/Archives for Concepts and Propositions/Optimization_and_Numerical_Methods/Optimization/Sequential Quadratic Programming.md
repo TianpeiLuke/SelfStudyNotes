@@ -31,7 +31,7 @@ date of note: 2024-10-06
 - [[Convex Optimization Problem]]
 
 - [[Primal-Dual Interior Point Method for Convex Optimization]]
-- [[Interior Point Method for Linear Optimization]]
+- [[Primal-Dual Interior Point Method for Linear Optimization]]
 - [[Newton Method]]
 - [[Secant Equation and Quasi-Newton Methods]]
 - [[BFGS Algorithm]]

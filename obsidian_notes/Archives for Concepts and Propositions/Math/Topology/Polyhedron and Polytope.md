@@ -84,7 +84,7 @@ date of note: 2024-07-22
 - [[Linear Optimization Problem]]
 - [[Generalized Simplex]]
 - [[Simplex Method for Linear Optimization]]
-- [[Interior Point Method for Linear Optimization]]
+- [[Primal-Dual Interior Point Method for Linear Optimization]]
 
 
 - [[Convex Analysis by Rockafellar]]

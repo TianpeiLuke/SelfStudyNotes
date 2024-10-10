@@ -81,7 +81,7 @@ date of note: 2024-08-15
 
 ## Interior Point Method
 
-- [[Interior Point Method for Linear Optimization]]
+- [[Primal-Dual Interior Point Method for Linear Optimization]]
 
 
 
@@ -97,7 +97,7 @@ date of note: 2024-08-15
 
 
 - [[Simplex Method for Linear Optimization]]
-- [[Interior Point Method for Linear Optimization]]
+- [[Primal-Dual Interior Point Method for Linear Optimization]]
 - [[Primal-Dual Interior Point Method for Convex Optimization]]
 
 

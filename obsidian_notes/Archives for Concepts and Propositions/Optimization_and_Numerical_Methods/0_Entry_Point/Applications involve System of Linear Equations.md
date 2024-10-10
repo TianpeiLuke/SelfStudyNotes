@@ -287,7 +287,7 @@ date of note: 2024-09-27
 >[!info]
 >**Interior Point method** involves **Newton's method** for each iteration.
 
-- [[Interior Point Method for Linear Optimization]]
+- [[Primal-Dual Interior Point Method for Linear Optimization]]
 
 ####  Optimal Transport
 
