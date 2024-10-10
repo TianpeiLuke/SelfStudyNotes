@@ -113,6 +113,8 @@ date of note: 2024-05-12
 >- Compute **message** from the **edge clique** $(X_{i}, X_{j})$ to **node clique** $j$ via the **marginalization** of the *canonical form* $$\tau(x_{j}) = \int_{x_{i}}\psi(x_{i}, x_{j})d x_{i} \propto   \exp \left(-\frac{1}{2}K_{i\to j}\,x_{j}^2 + h_{i\to j}x_{j} \right)$$ where the **canonical parameters** are $$\begin{align*}K_{i \to j} &= -K_{j i}\hat{K}_{i / j}^{-1} \,K_{i j}   \\[5pt] h_{i \to j} &= -K_{j i}\hat{K}_{i / j}^{-1}\,\hat{h}_{i / j}\end{align*}$$
 >- *Return* **canonical parameters** of **message** $\tau(x_{j})$ as $$(K_{i \to j}\,,\, h_{i / j}).$$
 
+^f3c18b
+
 - [[Canonical Form of Gaussian Graphical Model]]
 
 >[!important] Algorithm

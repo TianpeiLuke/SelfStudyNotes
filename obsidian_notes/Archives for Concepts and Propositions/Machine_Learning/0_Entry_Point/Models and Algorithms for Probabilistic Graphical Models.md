@@ -241,7 +241,7 @@ date of note: 2024-06-01
 
 - [[Inverse Covariance Estimation]]
 - [[Partial Correlation]]
-- [[Sparse Inverse Covariance Estimation with Known Structure]]
+- [[Sparse Inverse Covariance Estimation for GGM with Known Structure]]
 - [[Graph LASSO and Structured Learning in Gaussian Graphical Model]]
 - [[Natural Parameter and Mean Parameter for Gaussian Distribution]]
 

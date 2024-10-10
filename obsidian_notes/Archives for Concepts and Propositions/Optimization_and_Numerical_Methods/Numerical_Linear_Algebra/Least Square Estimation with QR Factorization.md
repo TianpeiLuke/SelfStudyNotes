@@ -118,12 +118,13 @@ date of note: 2024-08-20
 >\lVert X\beta - y  \rVert_{2}^2 = \lVert Q^{T}\,X\,\beta - Q^{T}\,y \rVert_{2}^2 = \lVert R_{1}\beta - y_{\parallel} \rVert_{2}^2 + \lVert y_{\perp} \rVert_{2}^2   
 >$$
 >
->Since $\text{rank}(X) = \text{rank}(R_{1}) = d+1$, it follows that the **least square estimate** $\hat{\beta}$ can be obtained by solving the *equations*
+>Since $\text{rank}(X) = \text{rank}(R_{1}) = d+1$, it follows that the **least square estimate** $\hat{\beta}$ can be obtained by solving the *upper triangular system of equations*
 >$$
 >R_{1}\,\hat{\beta} = y_{\parallel}.
 >$$
 >Note that $$\hat{\rho} = \lVert y_{\perp} \rVert_{2}.$$
 
+- [[Back Substitution of Upper Triangular System]]
 ## Explanation
 
 ### Gram-Schmidt Process

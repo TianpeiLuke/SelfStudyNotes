@@ -56,6 +56,11 @@ date of note: 2024-09-30
 >$$
 >with equality holds *if and only if* $$AB^{*}U^{*} \succeq 0.$$
 
+>[!info]
+>The **Procrustes problem** is used in *computer vision* and *computer graphics*.
+>
+>For instance, in **object matching**, it finds the *optimal rotation* on one object to **match** the other object.
+
 
 
 
@@ -72,6 +77,7 @@ date of note: 2024-09-30
 - [[Principle Component Analysis]]
 
 
+- [[Elements of Statistical Learning by Hastie]] pp 539 - 541
 - [[Matrix Analysis by Horn]] pp 463
 - [[Matrix Analysis for Scientists and Engineers by Laub]]
 - [[Matrix Computations by Golub]]

@@ -66,6 +66,8 @@ date of note: 2024-07-23
 >$$
 >where  $D^{\dagger}$ is the **generalized inverse** $$D\,D^{\dagger}\,D = D$$
 
+^d24c9f
+
 - [[Moore–Penrose Pseudo Inverse of Matrix]]
 - [[Sherman–Morrison–Woodbury Matrix Inversion Formula]]
 

@@ -135,7 +135,7 @@ date of note: 2024-05-12
 
 ## Sparse Inverse Covariance Estimation
 
-- [[Sparse Inverse Covariance Estimation with Known Structure]]
+- [[Sparse Inverse Covariance Estimation for GGM with Known Structure]]
 - [[Graph LASSO and Structured Learning in Gaussian Graphical Model]]
 
 ## Related Semidefinite Programming Problems

@@ -146,7 +146,7 @@ date of note: 2024-06-01
 
 - [[Gaussian Random Vector]]
 - [[Inverse Covariance Estimation]]
-- [[Sparse Inverse Covariance Estimation with Known Structure]]
+- [[Sparse Inverse Covariance Estimation for GGM with Known Structure]]
 - [[Graph LASSO and Structured Learning in Gaussian Graphical Model]]
 
 

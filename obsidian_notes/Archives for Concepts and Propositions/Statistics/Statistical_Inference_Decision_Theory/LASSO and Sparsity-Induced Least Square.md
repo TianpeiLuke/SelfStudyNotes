@@ -85,15 +85,17 @@ date of note: 2024-07-24
 ### Basis Pursuit
 
 >[!important] 
->**LASSO** is also known as **basis pursuit.**
+>**LASSO** is closely related to **basis pursuit.**
 >
->The common formulation of the **basis pursuit** problem or **basis pursuit linear program** is to solve the **$\ell_{1}$ norm minimization problem** with *affine equality constraint*
+>The **basis pursuit** problem or **basis pursuit linear program** is to solve the **$\ell_{1}$ norm minimization problem** with *affine equality constraint*
 >$$
 >\begin{align}
 > \min_{\beta\in \mathbb{R}^{d}} &\; \lVert \beta \rVert_{1}\\[5pt]
 >\text{s.t. }& X\beta = y 
 >\end{align}
 >$$
+>- The *Lagrangian form* is given by $$L(\beta, \mu) = \lVert \beta \rVert_{1} + \left\langle  \mu\,,\, X\beta - y  \right\rangle $$
+>- When $$\mu = \frac{1}{\lambda}\left(X\beta - y \right)$$ both basis pursuit and the LASSO problem have the same form of Lagrangian form.
 
 - [[High Dimensional Statistics A Non-Asymptotic Viewpoint by Wainwright]] pp 200
 
@@ -136,6 +138,8 @@ date of note: 2024-07-24
 >- For $|x| \ge \lambda$, the *absolute value* is *reduced* by $\lambda$.
 >- The **shrinkage operation** can be defined using the *proximal operation* $$\text{shrinkage}(x, \lambda) = \arg\min_{z} \left\{  \lVert x \rVert_{1} + \frac{1}{2\lambda}\lVert x - z \rVert_{2}^2   \right\} $$
 
+^5d43ca
+
 - [[Proximal Algorithm]]
 - [[Augmented Lagrangian Algorithm]]
 - [[Alternating Direction Method of Multipliers Algorithm]]
@@ -145,6 +149,25 @@ date of note: 2024-07-24
 >Soft-thresholding function is commonly used in **wavelet-based smoothing.**
 
 - [[Wavelet]]
+
+### Subgradient Optimality Condition
+
+>[!important] Definition
+>By **subgradient optimality condition**
+>$$
+> 0 \in \partial_{\beta} \left( \lVert X\beta - y \rVert_{2}^2 + \lambda \lVert \beta \rVert_{1}   \right)
+>$$
+>that is,
+>$$
+> X^{T}X\beta - X^{T}y + \lambda \cdot \text{sgn}(\beta)=0
+>$$
+>where $$\text{sgn}(\beta) \in \partial \lVert \beta \rVert_{1}$$
+>- This equation is seen as the **normal equation** with an error term.
+>- Algorithms such as the **subgradient methods** can be derived to solve this equation explicitly.
+
+- [[Subdifferential of Convex Function]]
+- [[Normal Equations and Newton System of Equations]]
+- [[Subgradient Methods]]
 
 
 ## Explanation
@@ -187,6 +210,13 @@ date of note: 2024-07-24
 - [[Ridge Regression and L2 Regularization]]
 
 ![[ridge_regression_lasso.png]]
+
+## Algorithms that Solves LASSO
+
+
+- [[Dual Proximal Algorithm]]
+- [[Augmented Lagrangian Algorithm]]
+- [[Alternating Direction Method of Multipliers Algorithm]]
 
 
 
