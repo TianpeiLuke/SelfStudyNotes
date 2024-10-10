@@ -163,6 +163,7 @@ date of note: 2024-05-30
 - [[Gaussian Belief Propagation]]
 - [[Inverse Covariance Estimation]]
 - [[Partial Correlation]]
+- [[Sparse Inverse Covariance Estimation for GGM with Known Structure]]
 - [[Graph LASSO and Structured Learning in Gaussian Graphical Model]]
 
 ### Gaussian Filtering and Smoothing
