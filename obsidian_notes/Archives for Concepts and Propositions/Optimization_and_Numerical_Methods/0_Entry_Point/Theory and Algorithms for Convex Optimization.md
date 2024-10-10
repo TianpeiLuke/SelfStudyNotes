@@ -34,6 +34,7 @@ date of note: 2024-05-12
 - [[Linear Optimization Problem]]
 - [[Simplex Method for Linear Optimization]]
 - [[Interior Point Method for Linear Optimization]]
+- [[Logarithmic Barrier Function and Central Path for Interior Point Methods]]
 - [[Interior Point Method or Barrier Method for Convex Optimization]]
 - [[Semidefinite Programming]]
 - [[Second-Order Cone Programming]]

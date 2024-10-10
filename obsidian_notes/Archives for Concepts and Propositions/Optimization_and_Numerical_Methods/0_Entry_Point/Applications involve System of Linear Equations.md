@@ -256,7 +256,11 @@ date of note: 2024-09-27
 - [[Secant Equation and Quasi-Newton Methods]]
 - [[BFGS Algorithm]]
 
+#### KKT System and Optimization with Equality Constraint
 
+
+
+- [[KKT Matrix and KKT System for Optimization with Equality Constraints]]
 
 
 ### Linear Optimization

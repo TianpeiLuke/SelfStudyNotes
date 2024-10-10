@@ -67,7 +67,7 @@ date of note: 2024-05-12
 >- This is essentially the same term as in **barrier method** since $$-\log \lambda_{i}(\Theta) \to \infty \text{ when }\lambda_{i} \to 0$$
 >- Thus we can drop the $\Theta \succ 0$ requirement due to above.
 
-- [[Interior Point Method or Barrier Method for Convex Optimization]]
+- [[Logarithmic Barrier Function and Central Path for Interior Point Methods]]
 
 >[!important] Definition
 >Let $X\sim \mathcal{N}(0, \Sigma)$,  and $\Theta = \Sigma^{-1}$.
@@ -120,7 +120,7 @@ date of note: 2024-05-12
 - [[Convex Optimization by Boyd]] pp 74
 - [[Eigenvalue and Eigenvector for Linear Map]]
 - [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
-- [[Interior Point Method or Barrier Method for Convex Optimization]]
+- [[Logarithmic Barrier Function and Central Path for Interior Point Methods]]
 
 ### Negative Precision Matrix as Natural Parameter
 
