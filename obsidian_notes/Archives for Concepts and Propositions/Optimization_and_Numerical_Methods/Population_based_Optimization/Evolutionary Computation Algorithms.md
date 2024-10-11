@@ -34,7 +34,7 @@ date of note: 2024-08-24
 >The evolutionary algorithm is used for **combinatorial optimization problem** when the feasible region is **discrete** (i.e. with *integer constraint*)
 
 - [[Combinatorial Optimization Problem]]
-- [[Integer Programming Problem]]
+- [[Integer Linear Optimization Problem and Integer Programming]]
 
 
 >[!important] Definition

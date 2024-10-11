@@ -119,7 +119,7 @@ date of note: 2024-08-26
 - [[k-Means Clustering]]
 - [[Optimal Transport in Discrete Setting]]
 - [[Optimal Transport in Space of Measures]]
-- [[Integer Programming Problem]]
+- [[Integer Linear Optimization Problem and Integer Programming]]
 - [[Combinatorial Optimization Problem]]
 
 

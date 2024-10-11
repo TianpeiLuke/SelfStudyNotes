@@ -48,7 +48,7 @@ date of note: 2024-08-25
 
 ### Integer Programming
 
-- [[Integer Programming Problem]]
+- [[Integer Linear Optimization Problem and Integer Programming]]
 
 ### Sparsity
 
@@ -104,7 +104,7 @@ date of note: 2024-08-25
 
 - [[Derivative-Free Optimization]]
 
-- [[Integer Programming Problem]]
+- [[Integer Linear Optimization Problem and Integer Programming]]
 - [[Linear Optimization Problem]]
 
 

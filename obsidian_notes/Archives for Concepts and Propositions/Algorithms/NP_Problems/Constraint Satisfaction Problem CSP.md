@@ -35,7 +35,7 @@ date of note: 2024-08-26
 ##  Recommended Notes and References
 
 
-- [[Integer Programming Problem]]
+- [[Integer Linear Optimization Problem and Integer Programming]]
 - [[Combinatorial Optimization Problem]]
 - [[Constrained Optimization Problem]]
 

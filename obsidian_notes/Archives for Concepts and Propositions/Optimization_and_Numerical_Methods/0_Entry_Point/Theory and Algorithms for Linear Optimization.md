@@ -72,7 +72,7 @@ date of note: 2024-05-12
 
 ### Integer Programming
 
-- [[Integer Programming Problem]]
+- [[Integer Linear Optimization Problem and Integer Programming]]
 
 
 

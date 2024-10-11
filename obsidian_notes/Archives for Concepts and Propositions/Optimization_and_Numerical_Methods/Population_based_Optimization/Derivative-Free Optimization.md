@@ -24,7 +24,7 @@ date of note: 2024-08-24
 >
 >This is useful for **blackbox function optimization** as well as **discrete optimization**.
 
-- [[Integer Programming Problem]]
+- [[Integer Linear Optimization Problem and Integer Programming]]
 
 >[!important] Definition
 >A class of DFO is called the **black-box optimization** where the algorithm can *only access* $f$ via its output $f(x)$.
@@ -87,7 +87,7 @@ date of note: 2024-08-24
 - [[Evolutionary Strategies]]
 - [[Particle Swarm Optimization]]
 
-- [[Integer Programming Problem]]
+- [[Integer Linear Optimization Problem and Integer Programming]]
 
 - [[Numerical Optimization by Nocedal]] pp 220 - 242
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 298 - 307

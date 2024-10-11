@@ -83,6 +83,9 @@ date of note: 2024-08-15
 
 - [[Primal-Dual Interior Point Method for Linear Optimization]]
 
+## Integer Programming
+
+- [[Integer Linear Optimization Problem and Integer Programming]]
 
 
 

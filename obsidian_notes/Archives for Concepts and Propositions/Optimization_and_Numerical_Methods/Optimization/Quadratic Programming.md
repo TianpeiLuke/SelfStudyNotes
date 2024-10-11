@@ -96,7 +96,7 @@ date of note: 2024-10-06
 
 ### Indefinite Quadratic Programming
 
-- [[Integer Programming Problem]]
+- [[Integer Linear Optimization Problem and Integer Programming]]
 
 
 ## Algorithms that Solve QP
