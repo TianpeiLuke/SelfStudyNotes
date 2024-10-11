@@ -62,6 +62,30 @@ date of note: 2024-05-12
 
 ## Explanation
 
+>[!info]
+>The main effort in the **barrier method** is to compute the *Newton step* by solving the **KKT system**
+>$$
+>\begin{align*}
+>\left[ \begin{array}{cc}
+> H_{bar} & A^{T} \\[5pt] 
+> A & 0
+>\end{array} \right] \left[ \begin{array}{c}\Delta x \\[5pt] \Delta \nu\end{array} \right]  &= - \left[ \begin{array}{c} g\\[5pt] 0 \end{array} \right] 
+>\end{align*}
+>$$
+>where
+>$$
+>H_{bar} := t\nabla^2 f_{0}(x) + \sum_{i=1}^{m} \frac{1}{-f_{i}(x)}\,\nabla^2 f_{i}(x) + \sum_{i=1}^{m} \frac{1}{f_{i}^2(x)}\,\nabla f_{i}(x) \left(\nabla f_{i}(x)\right)^{T}
+>$$
+>and
+>$$
+>g := t \nabla f_{0}(x) + \sum_{i=1}^{m} \frac{1}{-f_{i}(x)}\,\nabla f_{i}(x)
+>$$
+
+^43eb92
+
+
+- [[KKT Matrix and KKT System for Optimization with Equality Constraints]]
+
 
 ## Primal-Dual Interior Point Methods
 

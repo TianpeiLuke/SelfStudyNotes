@@ -271,6 +271,11 @@ date of note: 2024-09-27
 
 ![[Primal-Dual Interior Point Method for Convex Optimization#^d03e25]]
 
+#### Barrier Method
+
+![[Barrier Method for Convex Optimization#^43eb92]]
+
+- [[Barrier Method for Convex Optimization]]
 #### Primal-Dual Interior Point Method
 
 ![[Primal-Dual Interior Point Method for Convex Optimization#^e17125]]

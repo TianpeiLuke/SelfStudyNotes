@@ -215,8 +215,12 @@ date of note: 2024-05-12
 >
 >-- [[Convex Optimization by Boyd]] pp 609
 
+![[Barrier Method for Convex Optimization#^43eb92]]
 
 - [[Barrier Method for Convex Optimization]]
+
+>[!info]
+>If we allow $$\lambda_{i} = - \frac{1}{f_{i}(x)}$$ then $$\frac{1}{t} H_{\text{bar}} = H_{\text{pd}}.$$ And both algorithms solve the **same structure** of **KKT system**
 
 
 
