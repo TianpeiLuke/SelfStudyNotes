@@ -60,13 +60,35 @@ date of note: 2024-08-19
 
 - [[Quadratic Programming]]
 
+## NP Problems that are Integer Programming
 
-## Algorithms that Solves Integer Programming
+>[!important] 
+>The *general integer programming problem* is shown to be **NP-complete.**
+
+
+- [[Knapscak Problem]]
+- [[Set Cover Problem]]
+- [[Traveling Salesman Problem]]
+- [[Maximum Cut Problem]]
+- [[Constraint Satisfaction Problem CSP]]
+- [[Optimal Assignment Problem and Monge Problem]]
+
+
+
+## Algorithms that approximate solutions of Integer Programming
+
+### Linear Programming
+
+- [[Simplex Method for Linear Optimization]]
 
 
 ### Heuristic-based Search
 
 - [[Backtracking]]
+- [[Greedy Search and Hill Climbing]]
+- [[Stochastic Hill Climbing]]
+- [[Ant Colony Optimization]]
+- [[Simulated Annealing]]
 
 ### Evolutionary Computation
 
@@ -78,17 +100,20 @@ date of note: 2024-08-19
 - [[Natural Evolutionary Strategies]]
 - [[Cross-Entropy Method for EDA]]
 
+### Graph-based Approaches
 
-## NP Problems that are Integer Programming
-
-- [[Knapscak Problem]]
-- [[Set Cover Problem]]
-- [[Traveling Salesman Problem]]
-- [[Maximum Cut Problem]]
-- [[Constraint Satisfaction Problem CSP]]
+- [[Graph]]
 
 
-## Graphical Models
+### Graphical Model and Neural Network
+
+- [[Restricted Boltzmann Machine]]
+
+
+
+
+
+## MAP inference in Graphical Models as Integer Programming
 
 - [[Maximum A Posteriori Probability Query of Graphical Model]]
 
@@ -101,12 +126,8 @@ date of note: 2024-08-19
 
 
 
-
-
-
-
-
-
 - [[Introduction to Linear Optimization by Bertsimas]] pp 451
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]]
 - [[Probabilistic Graphical Models by Koller]]
+
+- Wikipedia [Integer_programming](https://en.wikipedia.org/wiki/Integer_programming)
