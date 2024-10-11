@@ -95,7 +95,7 @@ date of note: 2024-05-12
 >The inverse covariance estimation can be reformulated as a **semidefinite programming (SDP)** problem.
 >$$
 >\begin{align*}
-> \min_{u, \Theta \in \mathbb{R}^{d\times d}} \;&\; \frac{1}{2}\text{tr}\left(S\,\Theta\right)  \\[5pt]
+> \min_{u, \Theta \in \mathbb{R}^{d\times d}} \;&\; \text{tr}\left(S\,\Theta\right)  \\[5pt]
 > \text{s.t. }\;&\; \Theta \succ 0
 >\end{align*}
 >$$
