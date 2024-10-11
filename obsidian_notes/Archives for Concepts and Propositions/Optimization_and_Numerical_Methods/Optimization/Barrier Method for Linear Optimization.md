@@ -162,7 +162,7 @@ date of note: 2024-05-12
 - [[KKT Matrix and KKT System for Optimization with Equality Constraints]]
 
 - [[Least Absolute Deviations]]
-- [[Least Absolute Deviations Solution via Barrier Method and Weighted Least Square]]
+- [[Least Absolute Deviations Solution via Iterative Re-weighted Least Square]]
 
 - [[Introduction to Linear Optimization by Bertsimas]] pp 303 - 438
 - [[Convex Optimization by Boyd]] pp 571 - 573, 613 - 615, 616 - 618

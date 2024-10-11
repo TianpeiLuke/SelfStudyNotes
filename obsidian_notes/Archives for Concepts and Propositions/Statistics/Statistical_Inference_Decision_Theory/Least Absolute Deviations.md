@@ -68,13 +68,13 @@ date of note: 2024-10-11
 
 ## Solution to LAD Problem
 
-![[Least Absolute Deviations Solution via Barrier Method and Weighted Least Square#^538310]]
+![[Least Absolute Deviations Solution via Iterative Re-weighted Least Square#^538310]]
 
-- [[Least Absolute Deviations Solution via Barrier Method and Weighted Least Square]]
+- [[Least Absolute Deviations Solution via Iterative Re-weighted Least Square]]
 
-![[Least Absolute Deviations Solution via Barrier Method and Weighted Least Square#^9104d2]]
+![[Least Absolute Deviations Solution via Iterative Re-weighted Least Square#^9104d2]]
 
-![[Least Absolute Deviations Solution via Barrier Method and Weighted Least Square#^cb93bb]]
+![[Least Absolute Deviations Solution via Iterative Re-weighted Least Square#^cb93bb]]
 
 
 ## $\ell_{1}$ vs. $\ell_{2}$ Regression Problem
