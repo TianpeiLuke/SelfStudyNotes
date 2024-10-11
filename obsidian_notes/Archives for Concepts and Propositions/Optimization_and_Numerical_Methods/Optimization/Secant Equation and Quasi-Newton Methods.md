@@ -62,6 +62,13 @@ date of note: 2024-07-02
 - [[Hermitian or Symmetric Matrix]]
 - [[Normal Equations and Newton System of Equations]]
 
+>[!info]
+>The **secant equation** is also called **Newton equation** and it is used in *Newton's method*
+>$$
+> \nabla^2 f(x_{0})\, d = - \nabla f(x_{0})
+>$$
+
+- [[Newton Method]]
 ### Symmetric Rank-One Formula
 
 >[!important] Definition
