@@ -347,7 +347,8 @@ date of note: 2024-07-04
 - [[Detailed Balance Equation]]
 - [[Time-Reversible Markov Chain]]
 
-
+- [[Symplectic Matrix]]
+- [[Hamiltonian Matrix]]
 - [[Hamiltonian Function in Mechanic]]
 - [[Hamiltonian Systems of Differential Equations]]
 - [[Phase Space of Hamiltonian Systems of Differential Equations]]

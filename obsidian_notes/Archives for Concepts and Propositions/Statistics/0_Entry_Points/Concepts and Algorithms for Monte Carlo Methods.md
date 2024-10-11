@@ -58,6 +58,12 @@ date of note: 2024-07-04
 - [[AdaGrad Algorithm]]
 - [[Adam Algorithm]]
 
+### Monte Carlo Methods in Reinforcement Learning
+
+- [[Monte Carlo Prediction for Value Estimation]]
+- [[Monte Carlo Control with Exploring Starts]]
+- [[Off-Policy Monte Carlo Prediction with Importance Sampling]]
+- [[Off-Policy Monte Carlo Control]]
 
 
 
