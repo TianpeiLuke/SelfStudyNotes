@@ -70,12 +70,12 @@ date of note: 2024-05-12
 - [[Logarithmic Barrier Function and Central Path for Interior Point Methods]]
 
 >[!important] Definition
->Let $X\sim \mathcal{N}(0, \Sigma)$,  and $\Theta = \Sigma^{-1}$.
+>Let $X_{i}\sim \mathcal{N}(0, \Sigma)$, and $\Theta = \Sigma^{-1}$. Let the design matrix $X\in \mathbb{R}^{n\times d}$ whose rows are $X_{i}$. The sample covariance is $$S = \frac{1}{n}X^{T}X$$ 
 >
->The **inverse covariance estimation** is to find the *maximum likelihood estimation* of $\Theta\in \mathcal{S}_{++}^{n}$ given sample $X\in \mathbb{R}^{d}$ by solving the following *convex optimization problem*
+>The **inverse covariance estimation** is to find the *maximum likelihood estimation* of $\Theta\in \mathcal{S}_{++}^{d}$ given $n$ i.i.d. samples $X\in \mathbb{R}^{n\times d}$ by solving the following *convex optimization problem*
 >$$
 >\begin{align*}
-> \min_{\Theta \in \mathbb{R}^{d\times d}} \;&\; \frac{1}{2}\text{tr}\left(X X^T\,\Theta\right) - \frac{1}{2}\log \det \Theta \\[5pt]
+> \min_{\Theta \in \mathbb{R}^{d\times d}} \;&\; \frac{1}{2}\text{tr}\left(S\,\Theta\right) - \frac{1}{2}\log \det \Theta \\[5pt]
 > \text{s.t. }\;&\;\Theta = \Theta^{T}
 >\end{align*}
 >$$
@@ -85,9 +85,31 @@ date of note: 2024-05-12
 >[!important] 
 >The **optimal solution** of *inverse covariance estimation* given a set of $n > d$ samples $\{ X_{i}, i=1\,{,}\ldots{,}\,n \}$ is
 >$$
->\Theta = \left(\frac{1}{n}X_{i}X_{i}^{T}\right)^{-1} = \hat{\Sigma}^{-1}
+>\Theta = S^{-1}
 >$$
 >which is the *inverse of sample covariance matrix*.
+
+### Semidefinite Programming Formulation
+
+>[!important]
+>The inverse covariance estimation can be reformulated as a **semidefinite programming (SDP)** problem.
+>$$
+>\begin{align*}
+> \min_{u, \Theta \in \mathbb{R}^{d\times d}} \;&\; \frac{1}{2}\text{tr}\left(S\,\Theta\right)  \\[5pt]
+> \text{s.t. }\;&\; \Theta \succ 0
+>\end{align*}
+>$$
+>- The term $-\log \det(\Theta)$ is used as **log-barrier** function for interior point method, i.e. for each $t>0$
+>$$
+>\begin{align*}
+> \min_{u, \Theta \in \mathbb{R}^{d\times d}} \;&\; t\;\text{tr}\left(S\,\Theta\right)  - \log \det(\Theta)
+>\end{align*}
+>$$ 
+
+- [[Semidefinite Programming]]
+- [[Logarithmic Barrier Function and Central Path for Interior Point Methods]]
+- [[Barrier Method for Convex Optimization]]
+
 
 ## Explanation
 
@@ -138,27 +160,15 @@ date of note: 2024-05-12
 - [[Sparse Inverse Covariance Estimation for GGM with Known Structure]]
 - [[Graph LASSO and Structured Learning in Gaussian Graphical Model]]
 
-## Related Semidefinite Programming Problems
-
->[!info]
->Since the log-determinant term requires the eigenvalues of $\Theta$ to be as *large as possible*, we can define a similar problem
->$$
->\begin{align*}
-> \min_{u, \Theta \in \mathbb{R}^{d\times d}} \;&\; \frac{1}{2}\text{tr}\left(X X^T\,\Theta\right)  \\[5pt]
-> \text{s.t. }\;&\; \Theta \succeq u I 
->\end{align*}
->$$
->- This is a **semidefinite programming (SDP)** problem.
-
-- [[Semidefinite Programming]]
+## Related Semidefinite Programming
 
 >[!info]
 >Another similar **SDP problem** is
 >$$
 >\begin{align*}
-> \min_{u, \Theta \in \mathbb{R}^{d\times d}} \;&\; \frac{1}{2}\text{tr}\left(X X^T\,\Theta\right)  \\[5pt]
+> \min_{u, \Theta \in \mathbb{R}^{d\times d}} \;&\; \text{tr}\left(S\Theta\right)  \\[5pt]
 > \text{s.t. }\;&\; \left\langle  u_{i}\,,\,\Theta u_{i} \right\rangle = \text{tr}\left(u_{i}u_{i}^{T}\Theta\right) \le c_{i}, \quad i=1\,{,}\ldots{,}\,m \\[5pt]
-> &\;\Theta \succeq 0
+> &\;\Theta \succ 0
 >\end{align*}
 >$$
 
