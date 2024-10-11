@@ -77,6 +77,8 @@ date of note: 2024-10-08
 >$$
 >or $$- \widetilde{H} / H \in \mathcal{S}_{++}^{m}$$
 
+![[Schur Complement and Inversion of Block Matrix#^a49072]]
+
 - [[Schur Complement and Inversion of Block Matrix]]
 
 >[!info]
@@ -222,6 +224,8 @@ date of note: 2024-10-08
 ## KKT System in Gaussian Belief Propagation
 
 ![[Gaussian Belief Propagation#^919312]]
+
+![[Gaussian Belief Propagation#^d985d2]]
 
 ![[Gaussian Belief Propagation#^d985d2]]
 

@@ -297,6 +297,21 @@ date of note: 2024-07-23
 
 - [[Convex Function]]
 
+>[!example]
+>The **KKT matrix**
+>$$
+>M = \left[ \begin{array}{cc}H & A^{T} \\[5pt] A & 0\end{array} \right] 
+>$$
+>
+>If $H \succ 0$ and $A \neq 0$ has *full row rank*, then
+>- the **Schur complement** of $H$ of $M$ is $$M / H := - A\,H^{-1}\,A^{T} \prec 0$$
+>- $M$ is **nonsingular** with $$\det(M) = \det(H)\, \det \left(M / H\right) \neq 0$$
+>- Since $M / H \prec 0$ and $H \succ 0$, $M$ is **not positive definite**. 
+>	- In fact, $M$ is **indefinite.**
+
+^a49072
+
+- [[KKT Matrix and KKT System for Optimization with Equality Constraints]]
 
 ## Conditional Distribution of Gaussian
 

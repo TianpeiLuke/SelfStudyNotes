@@ -127,6 +127,138 @@ date of note: 2024-05-12
 >
 >This formula is called the **DFP updating formula**.
 
+
+#### Proof
+
+>[!info] Proof
+>Denote $$\hat{B} = W^{1/2}BW^{1/2}, \quad \hat{B}_{k} = W^{1/2}BW^{1/2} $$ so
+>$$
+>\begin{align*}
+>\lVert B - B_{k} \rVert_{W}^2 &= \lVert W^{1/2}BW^{1/2} - W^{1/2}B_{k}W^{1/2} \rVert_{F}^2 \\
+>&:= \lVert \hat{B} - \hat{B}_{k} \rVert_{F}^2
+>\end{align*}
+>$$
+>Since 
+>$$
+>\begin{align*}
+> Wy_{k}  &= s_{k}\\
+> W^{1/2}y_{k}  &= W^{-1/2}s_{k}
+>\end{align*}
+>$$
+>Denote $$\hat{y}_{k} = W^{1/2}y_{k}, \quad \hat{s}_{k} = W^{-1/2}s_{k}.$$  The above have
+>$$
+>\hat{y}_{k} = \hat{s}_{k} \quad (1)
+>$$
+>Finally
+>$$
+>\begin{align*}
+>W^{1/2}Bs_{k} &= W^{1/2}y_{k} = \hat{y}_{k} \\
+> \iff W^{1/2}BW^{1/2} W^{-1/2}s_{k} &= \hat{y}_{k} \\
+> \iff \hat{B}\hat{s}_{k} &= \hat{y}_{k} \quad (\text{ substitute }(1))\\
+> \implies \hat{B}\hat{s}_{k} &= \hat{s}_{k} 
+>\end{align*}
+>$$
+
+>[!important]
+>So the optimization becomes
+>$$
+>\begin{align*}
+> \min_{B \in \mathbb{R}^{n\times n} } &\lVert \hat{B} - \hat{B}_{k} \rVert_{F}^2 \\
+> \text{s.t. }&\; \hat{B}\,\hat{s}_{k} = \hat{s}_{k} 
+>\end{align*}
+>$$
+>where
+>- The constraint states that $\hat{s}_{k}$ is the **eigenvector** of $\hat{B}$ associated with **eigenvalue** $1$.
+>- This problem is closely related to **low-rank approximation problem.**
+
+- [[Low Rank Approximation of Matrix and Eckhart-Young Theorem]]
+
+
+>[!info]
+>Define $$u = \frac{\hat{s}_{k}}{\lVert \hat{s}_{k} \rVert }.$$ Let the eigendecomposition of symmetric $\hat{B}$ be $$\hat{B} = U\Lambda U^{T}$$ where $$\Lambda = \text{diag}(1, \lambda_{2} \,{,}\ldots{,}\,\lambda_{n})$$
+>
+>The orthogonal matrix $U$ has $u$ as one column, and others are orthornormal to $u$, i.e. 
+>$$U = [u, u_{\perp}]$$
+
+- [[Eigenvalue and Eigenvector for Linear Map]]
+- [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
+
+>[!info]
+>Note that $u_{\perp}$ and $u$ are **$\hat{B}$-conjugate** since $$\left\langle  u_{\perp}\,,\,\hat{B}u  \right\rangle = \left\langle  u_{\perp}\,,\, u   \right\rangle =0$$ while $$\left\langle  u\,,\,\hat{B}u  \right\rangle = \left\langle  u\,,\, u   \right\rangle =1.$$ This is due to $$\hat{B}u = u.$$
+
+- [[Conjugate Vector with respect to Positive Definite Transformation]]
+- [[Perron-Frobenius Theorem on Irreducible Nonnegative Matrix]]
+- [[Stochastic Matrix and Doubly Stochastic Matrix]]
+
+>[!info] 
+>The above objective can be reformulated as
+>$$
+>\begin{align*}
+>\lVert \hat{B} - \hat{B}_{k} \rVert_{F}^2 &= \lVert U^{T} \hat{B} U- U^{T} \hat{B}_{k} U \rVert_{F}^2 \\[5pt]
+>&= \lVert \Lambda - U^{T} \hat{B}_{k} U \rVert_{F}^2 \\[5pt]
+>&= \left\lVert \left[ \begin{array}{cc} 1 & \\ & u_{\perp}^{T} \hat{B} u_{\perp}\end{array} \right]  - \left[ \begin{array}{cc} u^{T} \hat{B}_{k} u & u^{T} \hat{B}_{k} u_{\perp} \\ u_{\perp}^{T} \hat{B}_{k} u & u_{\perp}^{T} \hat{B}_{k} u_{\perp}\end{array} \right]   \right\rVert_{F}^2 \\[10pt]
+>&= (u^{T} \hat{B}_{k} u - 1)^2 + \lVert u^{T} \hat{B}_{k} u_{\perp}  \rVert_{F}^2 +   \lVert u_{\perp}^{T} \hat{B}_{k} u  \rVert_{F}^2 + \lVert u_{\perp}^{T} \hat{B} u_{\perp} -  u_{\perp}^{T} \hat{B}_{k} u_{\perp} \rVert_{F}^2 
+>\end{align*}
+>$$
+>The first three terms are fixed since $\hat{B}_{k}$ is fixed. So to minimize the objective, we have to minimize
+>$$
+>\begin{align*}
+>\lVert u_{\perp}^{T} \hat{B} u_{\perp} -  u_{\perp}^{T} \hat{B}_{k} u_{\perp} \rVert_{F}^2 
+>\end{align*}
+>$$
+>which leads to **equation** $$ u_{\perp}^{T} \hat{B} u_{\perp} =  u_{\perp}^{T} \hat{B}_{k} u_{\perp}.$$
+>The corresponding *optimal solution* for $\hat{B}$ becomes
+>$$
+>\begin{align*}
+>\hat{B} &= U \left[ \begin{array}{cc} 1 & \\ & u_{\perp}^{T} \hat{B} u_{\perp}\end{array} \right] U^{T} \\[5pt]
+>&= U \left[ \begin{array}{cc} 1 & \\ & u_{\perp}^{T} \hat{B}_{k} u_{\perp}\end{array} \right] U^{T}\\[5pt]
+>&= uu^{T} + (u_{\perp}u_{\perp}^{T})\,\hat{B}_{k}\,(u_{\perp}u_{\perp}^{T}) 
+>\end{align*}
+>$$
+>Note that $$I = [u, u_{\perp}][u, u_{\perp}]^{T} = uu^{T} + u_{\perp}u_{\perp}^{T}$$ so $$u_{\perp}u_{\perp}^{T} = I - uu^{T}$$
+
+>[!important]
+>The optimal solution has the form
+>$$
+>\hat{B} = (I - uu^{T})\,\hat{B}_{k}\,(I - uu^{T}) + uu^{T}
+>$$
+>where $u = \hat{s}_{k} / \lVert \hat{s}_{k} \rVert.$
+
+
+>[!info]
+>Convert it back to original form
+>$$
+>\begin{align*}
+>W^{1/2}BW^{1/2} &=(I - uu^{T})\,\hat{B}_{k}\,(I - uu^{T}) + uu^{T} \\[5pt]
+> \implies B &= W^{-1/2}(I - uu^{T})\,\hat{B}_{k}\,(I - uu^{T})W^{-1/2} + W^{-1/2}uu^{T}W^{-1/2}
+>\end{align*}
+>$$
+>since $$Wy_{k}  = s_{k} \implies  W^{1/2}y_{k}  = W^{-1/2}s_{k} = \hat{s}_{k} \implies y_{k} =  W^{-1/2}\hat{s}_{k}$$ and $$\lVert \hat{s}_{k} \rVert^2 = \hat{s}_{k}^{T}\hat{s}_{k} = s_{k}^{T}W^{-1}s_{k} =  s_{k}^{T}y_{k}$$ we have
+>$$
+>\begin{align*}
+>W^{-1/2}uu^{T}W^{-1/2}&= W^{-1/2}\frac{\hat{s}_{k}\hat{s}_{k}^{T}}{\lVert \hat{s}_{k} \rVert^2 }W^{-1/2} = \frac{y_{k}y_{k}^T}{s_{k}^{T}y_{k}}
+>\end{align*}
+>$$
+>and
+>$$
+>\begin{align*}
+>W^{-1/2}uu^{T}\,\hat{B}_{k}\,uu^{T}\,W^{-1/2}&= (W^{-1/2}uu^{T}\,W^{1/2})B_{k}(W^{1/2}\,uu^{T}\,W^{-1/2}) \\[10pt]
+>\text{where } W^{-1/2}uu^{T}\,W^{1/2} &=  W^{-1/2}\frac{\hat{s}_{k}\hat{s}_{k}^{T}}{\lVert \hat{s}_{k} \rVert^2 }W^{1/2} \\[5pt]
+>&=\frac{y_{k}y_{k}^TW}{s_{k}^{T}y_{k}} = \frac{y_{k}s_{k}^T}{s_{k}^{T}y_{k}}
+>\end{align*}
+>$$
+>As a result
+>$$
+>\begin{align*}
+>B &= W^{-1/2}(I - uu^{T})\,\hat{B}_{k}\,(I - uu^{T})W^{-1/2} + W^{-1/2}uu^{T}W^{-1/2} \\[5pt]
+>&= \left(I -  \frac{y_{k}s_{k}^T}{s_{k}^{T}y_{k}}\right)\,B_{k}\,\left(I -  \frac{s_{k}y_{k}^T}{s_{k}^{T}y_{k}}\right) + \frac{y_{k}y_{k}^T}{s_{k}^{T}y_{k}} \\[5pt]
+>&= \left(I -  \rho_{k}\, y_{k}s_{k}^T \right)\,B_{k}\,\left(I -  \rho_{k}\, s_{k}y_{k}^T \right) + \rho_{k}\, y_{k}y_{k}^T
+>\end{align*}
+>$$
+>End of Proof.
+
+- [Quasi-newton methods: Understanding DFP updating formula](https://math.stackexchange.com/questions/2091867/quasi-newton-methods-understanding-dfp-updating-formula)
+
 ## DFP Updating Formula for Inverse
 
 >[!important] Definition
@@ -172,7 +304,7 @@ date of note: 2024-05-12
 >where
 >$$\rho_{k} = \frac{1}{y_{k}^T\,s_{k}}.$$ 
 >
->This formula is called the **DFP updating formula**.
+>This formula is called the **BFGS updating formula**.
 
 >[!info]
 >Notice that compare to **DFP updating formula**, the **BFGS updating formula** has the same form and the only changes are 
