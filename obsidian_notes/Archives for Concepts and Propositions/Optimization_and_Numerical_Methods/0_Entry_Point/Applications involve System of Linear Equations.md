@@ -256,11 +256,30 @@ date of note: 2024-09-27
 - [[Secant Equation and Quasi-Newton Methods]]
 - [[BFGS Algorithm]]
 
-#### KKT System and Optimization with Equality Constraint
+### Interior Point Methods for Convex Optimization
+
+- [[Convex Optimization Problem]]
+
+#### Central Path and the Residual Equations
+
+![[Logarithmic Barrier Function and Central Path for Interior Point Methods#^1d97b8]]
+
+- [[Logarithmic Barrier Function and Central Path for Interior Point Methods]]
+- [[Karush-Kuhn-Tucker Optimality Condition]]
+
+![[Primal-Dual Interior Point Method for Convex Optimization#^b6cd47]]
+
+![[Primal-Dual Interior Point Method for Convex Optimization#^d03e25]]
+
+#### Primal-Dual Interior Point Method
+
+![[Primal-Dual Interior Point Method for Convex Optimization#^e17125]]
+
+![[Primal-Dual Interior Point Method for Convex Optimization#^67c26f]]
 
 
-
-- [[KKT Matrix and KKT System for Optimization with Equality Constraints]]
+- [[Primal-Dual Interior Point Method for Convex Optimization]]
+- [[Newton Method]]
 
 
 ### Linear Optimization
@@ -315,19 +334,13 @@ date of note: 2024-09-27
 - [[Clique Tree Invariant of Max-Product and Reparameterization]]
 
 
-### Convex Optimization
-
-- [[Convex Optimization Problem]]
-- [[Methods of Lagrangian Multipliers]]
-- [[Lagrangian Dual Function]]
-- [[Lagrange Dual Problem]]
-- [[Karush-Kuhn-Tucker Optimality Condition]]
-- [[Primal-Dual Interior Point Method for Convex Optimization]]
-
 ### Quadratic Programming
 
 ![[Quadratic Programming#^387671]]
 
+![[KKT Matrix and KKT System for Optimization with Equality Constraints#^f43071]]
+
+- [[KKT Matrix and KKT System for Optimization with Equality Constraints]]
 - [[Quadratic Programming]]
 - [[Sequential Quadratic Programming]]
 - [[Tridiagonal Reduction of Symmetric Matrix via Householder Transformation]]
@@ -335,7 +348,14 @@ date of note: 2024-09-27
 - [[GMRES as Regression on Krylov Space]]
 - [[Conjugate Gradient Algorithm Linear]]
 
-#### Support Vector Machine
+#### KKT System and Optimization with Equality Constraint
+
+![[KKT Matrix and KKT System for Optimization with Equality Constraints#^e0bfc8]]
+
+- [[KKT Matrix and KKT System for Optimization with Equality Constraints]]
+
+
+### Support Vector Machine
 
 - [[Support Vector Machine Linear Separable Case]]
 - [[Support Vector Machine General with Soft-Margin Relaxation]]
@@ -398,13 +418,12 @@ date of note: 2024-09-27
 - [[Mean Field Approximation for Gaussian Markov Random Field]]
 - [[Gauss-Seidel Iteration for Sparse Linear System]]
 - [[Gaussian Graphical Model]]
-- [[Marginal and Conditional Distribution of Gaussian]]
-- [[Canonical Form of Gaussian Graphical Model]]
+
 
 >[!info]
 >**Structure learning** on Gaussian graphical model via **Graph LASSO** can be seen as solving the **sparse linear equations** 
 
-- [[Inverse Covariance Estimation]]
+- [[Sparse Inverse Covariance Estimation for GGM with Known Structure]]
 - [[Graph LASSO and Structured Learning in Gaussian Graphical Model]]
 
 

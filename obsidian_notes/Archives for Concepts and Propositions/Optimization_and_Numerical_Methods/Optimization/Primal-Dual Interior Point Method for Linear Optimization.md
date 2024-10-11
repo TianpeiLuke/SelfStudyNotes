@@ -36,6 +36,8 @@ date of note: 2024-05-12
 - [[Logarithmic Barrier Function and Central Path for Interior Point Methods]]
 - [[Barrier Method for Convex Optimization]]
 - [[Primal-Dual Interior Point Method for Convex Optimization]]
+- [[KKT Matrix and KKT System for Optimization with Equality Constraints]]
+
 
 
 

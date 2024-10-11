@@ -34,13 +34,13 @@ date of note: 2024-07-23
 >$$
 > M / D := A - B\,D^{-1}\,C
 >$$
->and $M / D \in \mathbb{R}^{n\times n.}$
+>and $M / D \in \mathbb{R}^{m\times m.}$
 >
 >Similarly, if $A$ is *invertible*, then the **Schur complement** of block $A$ of *the matrix* $M$ is defined as 
 >$$
 > M / A := D - C\,A^{-1}\,B .
 >$$
->and $M / A \in \mathbb{R}^{m \times m}.$
+>and $M / A \in \mathbb{R}^{n \times n}.$
 
 ^eb8bd3
 
@@ -138,6 +138,35 @@ date of note: 2024-07-23
 > -C & A
 >\end{array}\right] 
 >$$ 
+
+>[!important] Proposition (Identity for Inverse Block Submatrix)
+>Let 
+>$$
+>\begin{align*}
+> A &= \left[\begin{array}{cc}
+> A_{11} & A_{12}\\
+> A_{21} & A_{22}
+>\end{array}\right] \\[10pt]
+>&= \left[\begin{array}{cc}
+> B_{11} & B_{12}\\
+> B_{21 }& B_{22}
+>\end{array}\right]^{-1} := B^{-1}
+>\end{align*}
+>$$
+>Also 
+>- define $X^{*}$ as the solution to equations $$X^{*} := B_{12}B_{22}^{-1} \quad \iff \quad X^{*}B_{22} = B_{12} \;\; \iff \;\; B_{22}^{*}X = B_{12}^{*}$$
+>- define $Z$ as the solution to equations $$Z := B_{22}^{-1}B_{21}\quad \iff \quad B_{22}Z = B_{21}$$
+>
+>We have the following **identities**:
+>- The **diagonal block** of *inverse matrix* is the **inverse** of **Schur complement** of **opposite diagonal block** of *primal matrix* 
+>  $$\begin{align*} A_{11} &= (B / B_{22})^{-1} \\[5pt] &= \left( B_{11} - B_{12}B_{22}^{-1}B_{21} \right)^{-1} \\[5pt]  &= B_{11}^{-1} +   B_{11}^{-1}B_{12}(B / B_{11})^{-1}B_{21}B_{11}^{-1} \end{align*}$$
+>- The **anti-diagonal block** of *inverse matrix* can be computed via the **diagonal block** of *inverse matrix* multiplying a *solution to normal equation*  $$\begin{align*} A_{12} &= -(B / B_{22})^{-1} B_{12}B_{22}^{-1} \\[5pt] &= -A_{11}X^{*} \end{align*}$$ 
+>- Similarly, $$\begin{align*} A_{21} &= -B_{22}^{-1}B_{21}\,(B / B_{22})^{-1} \\[5pt] &= -Z A_{11} \end{align*}$$
+>- If $A, B$ are symmetric or Hermitian, then $X^{*} = Z$.
+>- If $A, B$ are positive semidefinite, then $X^{*} = Z$ are solutions of *normal equations*
+
+- [[Normal Equations and Newton System of Equations]]
+
 
 >[!important]
 >If $D$ is *invertible*,  we can compute the **block Gauss-Jordan elimination** as

@@ -80,6 +80,10 @@ date of note: 2024-10-06
 - [[Karush-Kuhn-Tucker Optimality Condition]]
 - [[KKT Matrix and KKT System for Optimization with Equality Constraints]]
 
+![[KKT Matrix and KKT System for Optimization with Equality Constraints#^f43071]]
+
+
+
 
 ## Explanation
 

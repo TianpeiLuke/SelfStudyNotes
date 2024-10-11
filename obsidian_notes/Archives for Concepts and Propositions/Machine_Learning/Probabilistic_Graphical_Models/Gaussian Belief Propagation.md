@@ -72,6 +72,8 @@ date of note: 2024-05-12
 >\delta_{i \to j}(x_{j}) = \exp \left(-\frac{1}{2}K_{i\to j}\,x_{j}^2 + h_{i\to j}x_{j} \right).
 >$$
 
+^d985d2
+
 >[!important]
 >We compute the **coefficients** in this expression via a **two-stage process**.
 >- The **first step** corresponds to the **message** sent from the $X_{i}$ *cluster* to the $X_i$, $X_j$ *edge*; in this step, $X_{i}$ *aggregates* all of the information from its own local potential and the message sent from its other incident edges $$\begin{align*}\hat{K}_{i / j} &= K_{i i } + \sum_{k \in \{N(i) - j\}}K_{k\to i} \\[5pt] \hat{h}_{i / j} &= h_{i} + \sum_{k \in \{N(i) - j\}}h_{k\to i}\end{align*}$$
