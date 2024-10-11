@@ -77,10 +77,10 @@ date of note: 2024-10-11
 >\left[ \begin{array}{cc} X^{T} & - X^{T} \\[5pt] - I & - I\end{array} \right] \left[ \begin{array}{cc} D_{1} &  \\[5pt]  & D_{2}\end{array} \right] \left[ \begin{array}{cc} X & - I \\[5pt] - X & - I\end{array} \right]\left[ \begin{array}{c}\Delta \beta \\[5pt] \Delta \xi \end{array} \right]  &= - \left[ \begin{array}{c} X^{T}g_{1}\\[5pt] g_{2} \end{array} \right] 
 >\end{align*}
 >$$
->where $D_{1}, D_{2}$ are diagonal of *inverse* of **square** of **negative** and **positive part** of residual
->- $$D_{1} = \text{diag}\left(y - X\beta + \xi \right)^{-2}$$
->- $$D_{2} = \text{diag}\left(-y + X\beta + \xi \right)^{-2}$$
->- $g_{1}$ measure the *inverse* of the **difference between positive part** of residual and **negative part** of residual $$g_{1} = \text{diag}\left(y - X\beta + \xi \right)^{-1}1 - \text{diag}\left(-y + X\beta + \xi \right)^{-1}1$$
+>where $D_{1}, D_{2}$ are diagonal matrices
+>-  $D_{1}$ measure the inverse of **squared distance** between **regression residual** and **lower bound**$$D_{1} = \text{diag}\left(y - X\beta + \xi \right)^{-2}$$
+>- $D_{2}$ measure the inverse of **squared distance** between **regression residual** and **upper bound** $$D_{2} = \text{diag}\left(-y + X\beta + \xi \right)^{-2}$$
+>- $g_{1}$ measure the *inverse* of the **difference** the **distances** from *residual* to **upper bound** and the distance to **lower bound** $$g_{1} = \text{diag}\left(y - X\beta + \xi \right)^{-1}1 - \text{diag}\left(-y + X\beta + \xi \right)^{-1}1$$
 >- $g_{2}$ measure the *inverse* of the **gap** between $1 / t$ and **absolute deviations** $$g_{2} = t\,1 - \text{diag}\left(y - X\beta + \xi \right)^{-1}1 + \text{diag}\left(-y + X\beta + \xi \right)^{-1}1$$
 
 ^9104d2
