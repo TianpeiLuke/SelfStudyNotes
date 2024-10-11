@@ -26,8 +26,6 @@ date of note: 2024-05-12
 
 ![[Logarithmic Barrier Function and Central Path for Interior Point Methods#^779aa5]]
 
-- [[Logarithmic Barrier Function and Central Path for Interior Point Methods]]
-- [[Convex Optimization Problem]]
 
 >[!important] Definition
 >Consider the *convex optimization problem*
@@ -59,6 +57,8 @@ date of note: 2024-05-12
 >	- If the **duality gap** $m / t < \epsilon$:
 >		- *Return*: optimal solution $x^{*} = x$
 
+- [[Logarithmic Barrier Function and Central Path for Interior Point Methods]]
+- [[Convex Optimization Problem]]
 
 ## Explanation
 
@@ -84,6 +84,7 @@ date of note: 2024-05-12
 ^43eb92
 
 
+- [[Newton Method]]
 - [[KKT Matrix and KKT System for Optimization with Equality Constraints]]
 
 
@@ -98,7 +99,7 @@ date of note: 2024-05-12
 
 
 
-- [[Newton Method]]
+
 - [[Secant Equation and Quasi-Newton Methods]]
 - [[BFGS Algorithm]]
 
