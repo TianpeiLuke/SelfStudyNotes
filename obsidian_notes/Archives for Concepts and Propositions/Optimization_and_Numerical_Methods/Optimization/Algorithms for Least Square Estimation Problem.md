@@ -111,9 +111,15 @@ date of note: 2024-06-08
 
 - [[Krylov Subspace Methods]]
 
+#### GMRES
+
+![[GMRES as Regression on Krylov Space#^ee401b]]
+
 - [[Arnoldi Iteration for Hessenberg Reduction of Large Matrix]]
 - [[GMRES as Regression on Krylov Space]]
 - [[Minimal Residuals Algorithm and MINRES]]
+
+#### Conjugate Gradient
 
 
 >[!info]

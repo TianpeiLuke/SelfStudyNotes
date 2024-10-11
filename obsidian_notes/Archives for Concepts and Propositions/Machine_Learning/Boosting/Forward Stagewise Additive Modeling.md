@@ -63,6 +63,20 @@ date of note: 2024-08-01
 >[!info]
 >The additive model $$f(x) = \sum_{t=1}^{T}\beta_{t}\,b(x; \gamma_{t})$$ can be seen as an expansion of $f$ by basis $\left\{ b(\cdot; \gamma):  \gamma \in \Gamma \right\}$
 
+### GMRES
+
+>[!info]
+>**GRMES** is seen as a **forward stagewise additive modeling** where 
+>$$
+>f = \sum_{i=1}^{T}\beta_{i} (A^{i-1}b)
+>$$
+>with an expansion of $f$ by basis $\{ A^{i-1}b: i=1\,{,}\ldots{,}\, \}$ 
+
+
+![[GMRES as Regression on Krylov Space#^dc7f60]]
+
+- [[GMRES as Regression on Krylov Space]]
+
 
 
 ## AdaBoost

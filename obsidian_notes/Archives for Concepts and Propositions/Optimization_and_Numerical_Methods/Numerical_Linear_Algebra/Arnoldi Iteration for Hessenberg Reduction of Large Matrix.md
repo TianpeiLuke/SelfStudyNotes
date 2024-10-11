@@ -39,6 +39,8 @@ date of note: 2024-09-29
 >For $A$ *large*, computing the full reduction is not possible. Thus, let us consider the first $m$ columns of $Q$ as $$Q_{m} = [q_{1}\,{,}\ldots{,}\,q_{m}]$$
 >Computing the Hessenberg reduction of first $m$ columns only involve the $(m+1)\times m$ upper left section of $H$ $$H = \left[\begin{array}{cc}\hat{H}_{m} & \star \\ \star & \star \end{array}\right] $$ where $$\hat{H}_{m} = \left[ \begin{array}{ccccc}H_{11} & \cdots & \cdots  &  H_{1m} \\[5pt] H_{21} & H_{22} & \cdots &  \vdots \\[5pt]   & \ddots & \ddots &   \vdots \\[5pt] 0 &    & H_{m,m-1} & H_{m, m}\\[5pt]   &    & & H_{m+1, m}\end{array} \right] \in \mathbb{R}^{(m+1)\times m}$$
 
+^34a873
+
 
 
 >[!important] Definition
@@ -105,6 +107,8 @@ date of note: 2024-09-29
 >
 >We can represent the linear operator $$v \mapsto Q_{k}Q_{k}^{*}Av$$ in terms of basis $\{ q_{1}\,{,}\ldots{,}\,q_{k} \}$ as  $$H_{k} = Q_{k}^{*}AQ_{k} $$
 >- The diagonal element of $H_{k}$ is the **Rayleigh quotient** $$H_{i,i} :=\frac{ \left\langle  q_{i}\,,\,A q_{i}\right\rangle}{\left\langle  q_{i}\,,\, q_{i}   \right\rangle} = \left\langle  q_{i}\,,\,A q_{i}\right\rangle.$$
+
+^7a14ab
 
 - [[Fundamental Orthogonal Projections]]
 - [[Rayleigh Quotient for Eigenvalue Problem]]
