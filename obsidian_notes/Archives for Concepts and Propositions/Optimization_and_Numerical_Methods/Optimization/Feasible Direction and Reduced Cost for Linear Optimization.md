@@ -153,7 +153,7 @@ date of note: 2024-05-12
 - [[Linear Optimization Problem]]
 - [[Polyhedron and Polytope]]
 - [[Generalized Simplex]]
-- [[Primal-Dual Interior Point Method for Linear Optimization]]
+- [[Barrier Method for Linear Optimization]]
 - [[Simplex Method for Linear Optimization]]
 
 - [[Karush-Kuhn-Tucker Optimality Condition]]

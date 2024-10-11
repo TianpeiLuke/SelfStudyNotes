@@ -100,6 +100,8 @@ date of note: 2024-05-12
 >- $$\nabla \phi = \sum_{i=1}^{m} \frac{1}{-f_{i}(x)} \nabla f_{i}(x)$$
 >- $$\nabla^2 \phi = \sum_{i=1}^{m} \frac{1}{f_{i}^2(x)} \nabla f_{i}(x)\,(\nabla f_{i}(x))^T + \sum_{i=1}^{m} \frac{1}{-f_{i}(x)} \nabla^2 f_{i}(x)$$
 
+^86dd4f
+
 
 ### Central Path
 
@@ -180,7 +182,7 @@ date of note: 2024-05-12
 #### The characteristic for Central Path and Relation to KKT
 
 >[!important] Definition
->In summary, the **central path** $\{x^{*}(t)\}$ and  its associated dual $\lambda^{*}(t), \nu^{*}(t))$ must satisfy the **modified KKT conditions**
+>In summary, the **central path** $\{x^{*}(t)\}$ and  its associated dual $(\lambda^{*}(t), \nu^{*}(t))$ must satisfy the **modified KKT conditions**
 >$$
 >\begin{align*}
 > Ax &= b\\[5pt]

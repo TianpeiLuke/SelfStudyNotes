@@ -8,7 +8,7 @@ tags:
 keywords:
   - interior_point_method
   - logarithmic_barrier
-  - barrier_method
+  - primal_dual_interior_point_method
 topics:
   - optimization
 name: Primal-Dual Interior Point Method for Convex Optimization
@@ -111,7 +111,7 @@ date of note: 2024-05-12
 >[!important] Definition
 >Note that the primal-dual solution in primal-dual interior point method **do not guarantee to be feasible**. Thus, the *duality gap* cannot to be evaluated easily as in Barrier method.
 >
->Instead, we define the **surrogate duality gap** as $$\hat{\eta}(x, \lambda) = - F(x)^{T} \lambda$$ for any $x$ and $\lambda$ satisfying
+>Instead, we define the **surrogate duality gap** as $$\hat{\eta}(x, \lambda) = - F(x)^{T} \lambda = - \sum_{i=1}^{m}\lambda_{i} f_{i}(x)$$ for any $x$ and $\lambda$ satisfying
 >$$
 >F(x) \prec 0, \quad \lambda \succ 0.
 >$$ 
@@ -222,8 +222,9 @@ date of note: 2024-05-12
 >[!info]
 >If we allow $$\lambda_{i} = - \frac{1}{f_{i}(x)}$$ then $$\frac{1}{t} H_{\text{bar}} = H_{\text{pd}}.$$ And both algorithms solve the **same structure** of **KKT system**
 
+## Linear Optimization
 
-
+- [[Primal-Dual Interior Point Method for Linear Optimization]]
 
 
 -----------

@@ -33,7 +33,7 @@ date of note: 2024-05-12
 
 - [[Linear Optimization Problem]]
 - [[Simplex Method for Linear Optimization]]
-- [[Primal-Dual Interior Point Method for Linear Optimization]]
+- [[Barrier Method for Linear Optimization]]
 - [[Logarithmic Barrier Function and Central Path for Interior Point Methods]]
 - [[Barrier Method for Convex Optimization]]
 - [[Primal-Dual Interior Point Method for Convex Optimization]]

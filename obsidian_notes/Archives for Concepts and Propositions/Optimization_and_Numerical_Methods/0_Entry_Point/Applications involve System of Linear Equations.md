@@ -311,6 +311,12 @@ date of note: 2024-09-27
 >[!info]
 >**Interior Point method** involves **Newton's method** for each iteration.
 
+![[Barrier Method for Linear Optimization#^e3946e]]
+
+- [[Barrier Method for Linear Optimization]]
+
+![[Primal-Dual Interior Point Method for Linear Optimization#^3eb532]]
+
 - [[Primal-Dual Interior Point Method for Linear Optimization]]
 
 ####  Optimal Transport
