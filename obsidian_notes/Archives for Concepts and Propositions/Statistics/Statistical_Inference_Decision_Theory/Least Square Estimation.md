@@ -73,7 +73,7 @@ date of note: 2024-06-08
 >[!important] Definition
 >The **linear least squares estimation (LSE) problem** can be represented in compact form as
 >$$
->\min_{\beta \in \mathbb{R}^{d+1}} \lVert Y - X\,\beta \rVert_{2}^2 
+>\min_{\beta \in \mathbb{R}^{d+1}} \lVert y - X\,\beta \rVert_{2}^2 
 >$$
 
 ^f8f306
@@ -146,7 +146,9 @@ date of note: 2024-06-08
 
 - [[LASSO and Sparsity-Induced Least Square]]
 
+## Least Absolute Deviations as $\ell_{1}$ Regression Loss
 
+- [[Least Absolute Deviations]]
 
 
 -----------
@@ -160,8 +162,10 @@ date of note: 2024-06-08
 - [[Point Estimator]]
 
 
+
 - [[All of Statistics A Concise Course by Wasserman]] pp 211
 - [[Mathematical Statistics by Shao]] pp 182
+- [[Theory of Point Estimation by Lehmann]] pp 3, 178
 - [[Optimization by Vector Space Methods by Luenberger]]  pp 78 - 102
 - [[Numerical Optimization by Nocedal]] pp 245 - 269
 - [[Elements of Statistical Learning by Hastie]] pp 43 - 56

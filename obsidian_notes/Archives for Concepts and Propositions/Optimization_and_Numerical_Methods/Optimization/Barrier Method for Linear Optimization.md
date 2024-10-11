@@ -47,6 +47,8 @@ date of note: 2024-05-12
 >\quad (B_{t})
 >$$
 
+^56afa0
+
 - [[Linear Optimization Problem]]
 
 >[!important]
@@ -92,6 +94,8 @@ date of note: 2024-05-12
 >	- **Increase** $t$ by rate $\mu$ as $$t \leftarrow \mu\,t$$
 >	- If the **duality gap** $m / t < \epsilon$:
 >		- *Return*: optimal solution $x^{*} = x$
+
+^87009c
 
 
 - [[Barrier Method for Convex Optimization]]
@@ -157,8 +161,8 @@ date of note: 2024-05-12
 - [[Primal-Dual Interior Point Method for Convex Optimization]]
 - [[KKT Matrix and KKT System for Optimization with Equality Constraints]]
 
-
-
+- [[Least Absolute Deviations]]
+- [[Least Absolute Deviations Solution via Barrier Method and Weighted Least Square]]
 
 - [[Introduction to Linear Optimization by Bertsimas]] pp 303 - 438
 - [[Convex Optimization by Boyd]] pp 571 - 573, 613 - 615, 616 - 618

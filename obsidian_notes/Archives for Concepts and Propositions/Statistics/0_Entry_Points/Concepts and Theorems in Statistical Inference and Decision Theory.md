@@ -104,6 +104,8 @@ date of note: 2024-06-01
 
 ### Other Regression Problems
 
+- [[Least Absolute Deviations]]
+- [[Least Absolute Deviations Solution via Barrier Method and Weighted Least Square]]
 - [[Logistic Regression]]
 - [[Logistic Regression Solution via Iterative Reweighted Least Square]]
 - [[Gaussian Quantile Function or Probit Function]]
