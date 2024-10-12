@@ -45,6 +45,8 @@ date of note: 2024-05-12
 >$$
 >where $\mathbb{M}(\mathcal{G})$ is the **marginal polytope** associated with graph $\mathcal{G}$.
 
+^5fbd75
+
 - [[Marginal Polytope and Local Consistent Polytope]]
 - [[Maximum Entropy Learning of Clique Tree PGM]]
 
@@ -159,7 +161,7 @@ date of note: 2024-05-12
 >where $\mathscr{M}$ is a *family of probability distributions* with **tractable form**.
 
 - [[Structured Variational Approximation]]
-- [[Mean Field Approximation]]
+- [[Mean Field Approximation for PGM]]
 
 >[!quote]
 >Finally, **structured variational methods** optimize the *exact* factored energy functional, for a class of distributions that is (generally) *less expressive* than necessary to encode $P_{\Phi}$. As a consequence, the *constraint space* is actually a **tightening** of our original constraint space. Because the objective function is exact, the result of this optimization provides a **lower bound** on the value of the exact optimization problem. As we will see, such bounds can play an important role in the context of learning.

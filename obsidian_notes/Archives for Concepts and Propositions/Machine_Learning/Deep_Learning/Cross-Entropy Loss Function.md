@@ -40,6 +40,8 @@ date of note: 2024-08-24
 >\mathbb{KL}\left( P \left\|\right. Q \right) = H_{ce}(P, Q) - H(P)
 >$$
 
+^c4fbc4
+
 - [[Kullback-Leibler Divergence]]
 - [[Shannon Entropy]]
 - [[Measure Space and Countably Additive Measure]]

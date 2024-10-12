@@ -29,6 +29,8 @@ date of note: 2024-05-12
 >\mathbb{M}(\mathcal{G}) := \left\{(\beta, \mu):\;\exists \mathcal{P}\; \text{ such that } \beta_{i} = \mathcal{P}(C_{i}),\; i\in V(\mathcal{G}),\;\; \mu_{i,j} = \mathcal{P}(S_{i,j}),\; ij\in E(\mathcal{G}) \right\} 
 >$$
 
+^161ed7
+
 
 - [[Polyhedron and Polytope]]
 - [[Cluster Graph and Family Preservation]]

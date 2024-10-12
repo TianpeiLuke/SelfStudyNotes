@@ -20,7 +20,7 @@ date of note: 2024-05-12
 >**Name**: 
 
 
-- [[Mean Field Approximation]]
+- [[Mean Field Approximation for PGM]]
 - [[Gaussian Graphical Model]]
 
 ## Explanation
@@ -46,7 +46,7 @@ date of note: 2024-05-12
 - [[Kullback-Leibler Divergence]]
 - [[Maximum Entropy Learning]]
 
-- [[Mean Field Approximation]]
+- [[Mean Field Approximation for PGM]]
 - [[Gaussian Graphical Model]]
 - [[Natural Parameter and Mean Parameter for Gaussian Distribution]]
 - [[Gaussian Belief Propagation]]

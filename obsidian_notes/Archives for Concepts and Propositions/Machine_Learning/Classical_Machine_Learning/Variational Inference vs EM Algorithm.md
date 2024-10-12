@@ -146,7 +146,7 @@ date of note: 2024-07-05
 ## Variational EM
 
 - [[Variational Expectation-Maximization]]
-- [[Mean Field Approximation]]
+- [[Mean Field Approximation for PGM]]
 
 ## Variational Bayes
 

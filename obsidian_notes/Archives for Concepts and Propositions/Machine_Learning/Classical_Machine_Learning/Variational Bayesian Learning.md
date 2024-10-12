@@ -39,7 +39,7 @@ date of note: 2024-07-23
 - [[Evidence Lower Bound]]
 - [[Variational Inference vs EM Algorithm]]
 
-- [[Mean Field Approximation]]
+- [[Mean Field Approximation for PGM]]
 
 - [[Probabilistic Graphical Models by Koller]] pp 897 - 898
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]] pp 158 - 159

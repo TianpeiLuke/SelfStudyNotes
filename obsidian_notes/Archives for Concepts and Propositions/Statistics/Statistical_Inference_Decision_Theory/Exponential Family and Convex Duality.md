@@ -97,6 +97,8 @@ date of note: 2024-06-24
 >- In terms of this dual, the **log-partition function** has the **variational representation** $$A(\eta) = \sup_{\eta \in \mathcal{D}}\left\langle  \eta, \mu \right\rangle - A^{*}(\mu).$$
 >- For all $\eta\in \mathcal{D}$, the **supremum** is attained **uniquely** at $\mu \in \text{int}(\mathcal{M})$ specified by the **moment-matching conditions** $$\mu =  \mathbb{E}_{ f_{\eta} }\left[T(X)\right] = \int_{\mathcal{X}}T\,f_{\eta}\,d\mu.$$
 
+^ed96df
+
 - [[Legendre Transform]]
 - [[Shannon Entropy]]
 - [[Variational Formula for Kullback-Leibler Divergence]]
@@ -201,6 +203,8 @@ date of note: 2024-06-24
 >$$
 >\mu = \nabla A(\eta)
 >$$
+
+^9f7aa4
 
 - [[Diffeomorphism]]
 - [[Riesz-Markov Representation Theorem]]

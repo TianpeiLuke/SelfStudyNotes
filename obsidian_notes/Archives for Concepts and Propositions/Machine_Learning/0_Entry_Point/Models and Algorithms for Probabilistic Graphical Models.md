@@ -188,7 +188,8 @@ date of note: 2024-06-01
 #### Structured Variational Approximation
 
 - [[Structured Variational Approximation]]
-- [[Mean Field Approximation]]
+- [[Mean Field Approximation for PGM]]
+- [[Mean Field Approximation for Exponential Family]]
 - [[Mean Field Approximation for Gaussian Markov Random Field]]
 
 ### Sampling-based Approximate Inference 

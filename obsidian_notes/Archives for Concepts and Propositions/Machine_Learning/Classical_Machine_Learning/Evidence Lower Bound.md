@@ -132,6 +132,8 @@ date of note: 2024-07-05
 > \mathbb{KL}\left( q \left\|\right. p(\cdot | x, \theta) \right) = F(q, \theta; x) + \log p_{\theta}(x) 
 >$$
 
+^afb000
+
 
 >[!info]
 >Define $$Q(\theta; \hat{\theta}) := \mathbb{E}_{ p }\left[  \log p_{\theta}(x, z) \;|\; x, \hat{\theta} \right]$$ where the expectation is with respect to  $p(z| x, \hat{\theta} )$. 

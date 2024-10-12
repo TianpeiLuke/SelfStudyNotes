@@ -43,7 +43,7 @@ date of note: 2024-07-23
 - [[Expectation-Maximization Algorithm for Exponential Family]]
 - [[Variational Inference vs EM Algorithm]]
 
-- [[Mean Field Approximation]]
+- [[Mean Field Approximation for PGM]]
 
 
 - [[Probabilistic Graphical Models by Koller]] pp 895 - 896

@@ -125,7 +125,7 @@ date of note: 2024-05-12
 - [[Multinomial Distribution]]
 - [[Dirichlet Distribution]]
 
-- [[Mean Field Approximation]]
+- [[Mean Field Approximation for PGM]]
 - [[Variational Inference vs EM Algorithm]]
 - [[Variational Inference for Clique Tree]]
 

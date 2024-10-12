@@ -67,7 +67,7 @@ date of note: 2024-07-06
 >	- **M-Step**: *Estimate* the **natural parameter** by $$\hat{\theta}^{k+1} = \arg\max_{\theta \in \Theta}\,\mathcal{L}(\hat{\mu}_{x}^{k+1}, \theta\,; x) $$
 >	- $k \leftarrow k+1$.
 
-- [[Mean Field Approximation]]
+- [[Mean Field Approximation for PGM]]
 
 
 
