@@ -246,5 +246,6 @@ date of note: 2024-05-12
 - [[Karush-Kuhn-Tucker Optimality Condition]]
 
 - [[Convex Optimization by Boyd]] pp 609 - 621
+- [[Convex Optimization Algorithms by Bertsekas]] pp 420 - 423
 - [[Numerical Optimization by Nocedal]] pp 563 - 594
 - [[Nonlinear Programming by Bertsekas]] pp 446 - 473
