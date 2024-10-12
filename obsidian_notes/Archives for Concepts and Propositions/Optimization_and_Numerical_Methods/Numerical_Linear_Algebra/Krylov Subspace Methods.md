@@ -52,6 +52,8 @@ date of note: 2024-10-04
 >$$F_{n}[x] = \left\{ p(x): \text{ degree of }p \le n \right\} $$
 >
 >The **polynomial of linear map** $A\in L(V)$ is defined as $$p_{n}(A) = A^n + a_{n-1}A^{n-1} \,{+}\ldots{+}\,a_{1}A + a_{0}I.$$
+>- This is the *image of a mapping* $$F[\lambda(A)] \to L(V): \quad p_{n}(x) \mapsto B := p_{n}(A)$$
+>- The *spectrum* of $p_{n}(A)$ is $$\lambda_{i} \in \lambda(A) \quad \implies \quad p_{n}(\lambda) \in \lambda(p_{n}(A))$$
 >
 >The **Krylov subspace methods** can be considered as the finding the **optimal polynomial** $p(x) \in F_{n}[x]$ such that the **norm** of **polynomial approximation** of $A$ over $b$  is minimized
 >$$
@@ -61,7 +63,9 @@ date of note: 2024-10-04
 ^2c2024
 
 - [[Continuous Functional Calculus]]
-
+- [[Eigenspace and Spectrum for Linear Map]]
+- [[Eigenvalue and Eigenvector for Linear Map]]
+- [[Polynomial Ring]]
 
 
 ## Explanation

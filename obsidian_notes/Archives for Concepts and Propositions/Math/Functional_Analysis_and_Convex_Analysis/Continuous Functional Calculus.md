@@ -100,6 +100,9 @@ date of note: 2024-05-27
 >p_{n}(A) \psi = p_{n}(\lambda) \psi
 >$$
 
+- [[Polynomial Ring]]
+
+
 >[!info]
 >Then we can use the fact that $p_{n} \to f\in \mathcal{C}(\sigma(A))$ *uniformly* via the classical result of [[Stone-Weierstrass Theorem]], given that $\sigma(A) \subset \mathbb{R}$ is *compact Hausdorff*.
 

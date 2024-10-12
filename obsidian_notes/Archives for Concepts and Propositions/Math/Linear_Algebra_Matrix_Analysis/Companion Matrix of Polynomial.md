@@ -24,6 +24,9 @@ date of note: 2024-09-25
 >
 >A **companion matrix** or the **companion form** of $p_{n}(x)$ is of the form $$C = \left[ \begin{array}{ccccc}0 & 0 & \cdots & 0 & -a_{0} \\ 1 & 0 & \cdots & 0& -a_{1} \\  0 & 1 & \ddots & \vdots & \vdots \\ \vdots &  & \ddots & 0 & -a_{n-2} \\ 0 & \cdots & 0 & 1 & -a_{n-1} \end{array} \right] \in M_{n}(F)$$
 
+- [[Polynomial Ring]]
+- [[Matrix]]
+
 
 >[!important] Proposition
 >- The **characteristic polynomial** of $C$ is $p_{n}(\lambda)$ $$\det \left(\lambda I - C\right) = \lambda^n + a_{n-1}\lambda^{n-1} \,{+}\ldots{+}\,a_{1}\lambda + a_{0} := p_{n}(\lambda)$$

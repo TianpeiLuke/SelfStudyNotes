@@ -27,6 +27,9 @@ date of note: 2024-05-27
 
 ^785fd1
 
+- [[Polynomial Ring]]
+
+
 >[!important] Definition
 >We refer to the equation $$\det(x I - A) = P_{A}(x) = 0$$ as the **characteristic equation** of $A$.
 
