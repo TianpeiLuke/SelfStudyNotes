@@ -200,8 +200,24 @@ date of note: 2024-05-12
 
 ^1d97b8
 
-
 ## Explanation
+
+>[!quote]
+>We can view **interior-point methods** as *another level* in the hierarchy of convex optimization algorithms. 
+>- **Linear equality constrained quadratic problems** are the simplest. For these problems the *KKT conditions* are a set of linear equations, which can be solved analytically. 
+>	- [[Quadratic Programming]]
+>	- [[KKT Matrix and KKT System for Optimization with Equality Constraints]]
+>	- [[Least Square Estimation]]
+>	- [[Normal Equations and Newton System of Equations]]
+>- **Newton’s method** is the next level in the hierarchy. We can think of Newton’s method as a technique for solving a linear equality constrained optimization problem, with *twice differentiable objective*, by reducing it to *a sequence of linear equality constrained quadratic problems*.
+>	- [[Newton Method]]
+>	- [[Secant Equation and Quasi-Newton Methods]]
+>	- [[BFGS Algorithm]]
+>- **Interior-point methods** form the next level in the hierarchy: They solve an optimization problem with linear equality and inequality constraints by reducing it to *a sequence of linear equality constrained problems.*
+>	- [[Barrier Method for Convex Optimization]]
+>	- [[Primal-Dual Interior Point Method for Convex Optimization]]
+> 
+>-- [[Convex Optimization by Boyd]] pp 561 - 562 
 
 
 ## Barrier Methods

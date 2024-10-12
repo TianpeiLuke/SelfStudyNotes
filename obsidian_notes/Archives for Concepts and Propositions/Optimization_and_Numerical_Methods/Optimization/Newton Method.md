@@ -44,6 +44,13 @@ date of note: 2024-05-12
 - [[Numerical Optimization by Nocedal]]  pp 44
 - [[Normal Equations and Newton System of Equations]]
 
+>[!quote]
+>We can think of Newton’s method as a technique for solving a linear equality constrained optimization problem, with *twice differentiable objective*, by reducing it to *a sequence of linear equality constrained quadratic problems*.
+
+- [[Secant Equation and Quasi-Newton Methods]]
+- [[Quadratic Programming]]
+- [[KKT Matrix and KKT System for Optimization with Equality Constraints]]
+
 
 ## Numerical Solution for Newton System
 
