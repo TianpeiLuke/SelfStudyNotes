@@ -176,7 +176,7 @@ date of note: 2024-10-04
 - [[GMRES as Regression on Krylov Space]]
 - [[Conjugate Gradient Algorithm Linear]]
 - [[Conjugate Gradient Algorithm Lanczos]]
-- [[Conjugate Gradient Normal Equation Residual and CGNER]]
+- [[Conjugate Gradient Normal Equation Residual and CGNR]]
 - [[Conjugate Gradient Algorithm Convergence Analysis]]
 - [[Conjugate Gradient Algorithm Nonlinear Convergence Analysis]]
 

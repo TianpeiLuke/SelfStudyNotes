@@ -91,7 +91,7 @@ date of note: 2024-05-12
 - [[Algorithms for Least Square Estimation Problem]]
 - [[Least Square Estimation with QR Factorization]]
 - [[Least Square Estimation via Singular Value Decomposition]]
-- [[Conjugate Gradient Normal Equation Residual and CGNER]]
+- [[Conjugate Gradient Normal Equation Residual and CGNR]]
 - [[GMRES as Regression on Krylov Space]]
 - [[Minimal Residuals Algorithm and MINRES]]
 

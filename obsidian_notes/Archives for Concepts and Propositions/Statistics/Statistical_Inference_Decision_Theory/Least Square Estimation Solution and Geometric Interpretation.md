@@ -97,7 +97,7 @@ date of note: 2024-06-08
 - [[Range and Kernel of Product Map and Normal Map]]
 - [[Normal Transformation]]
 - [[Cholesky Factorization of Hermitian Positive Definite Matrices]]
-- [[Conjugate Gradient Normal Equation Residual and CGNER]]
+- [[Conjugate Gradient Normal Equation Residual and CGNR]]
 
 >[!info]
 >Note that 

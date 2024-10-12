@@ -164,7 +164,7 @@ date of note: 2024-09-27
 >	- $$d_{k+1} = - r_{k+1} + \beta_{k+1}\,d_{k}$$
 
 - [[Conjugate Gradient Algorithm Linear]]
-- [[Conjugate Gradient Normal Equation Residual and CGNER]]
+- [[Conjugate Gradient Normal Equation Residual and CGNR]]
 
 
 ### Ridge Regression

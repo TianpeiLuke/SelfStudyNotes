@@ -144,7 +144,7 @@ date of note: 2024-05-12
 ## Conjugate Gradient Normal Equation Residual 
 
 - [[Normal Equations and Newton System of Equations]]
-- [[Conjugate Gradient Normal Equation Residual and CGNER]]
+- [[Conjugate Gradient Normal Equation Residual and CGNR]]
 
 ## Other Krylov Subspace Methods
 

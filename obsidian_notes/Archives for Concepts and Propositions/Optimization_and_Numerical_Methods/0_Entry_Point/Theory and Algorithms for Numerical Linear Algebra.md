@@ -132,7 +132,7 @@ date of note: 2024-05-12
 
 - [[Krylov Subspace Methods]]
 - [[GMRES as Regression on Krylov Space]]
-- [[Conjugate Gradient Normal Equation Residual and CGNER]]
+- [[Conjugate Gradient Normal Equation Residual and CGNR]]
 
 
 ###  Eigenvalue Problem
@@ -249,7 +249,7 @@ date of note: 2024-05-12
 
 - [[Biorthogonalization Methods]]
 - [[GMRES as Regression on Krylov Space]]
-- [[Conjugate Gradient Normal Equation Residual and CGNER]]
+- [[Conjugate Gradient Normal Equation Residual and CGNR]]
 
 #### Symmetric Case
 
@@ -279,8 +279,9 @@ date of note: 2024-05-12
 - [[Krylov Subspace and Krylov Matrix]]
 - [[Krylov Subspace Methods]]
 - [[GMRES as Regression on Krylov Space]]
+- [[Minimal Residuals Algorithm and MINRES]]
 - [[Conjugate Gradient Algorithm Linear]]
-- [[Conjugate Gradient Normal Equation Residual and CGNER]]
+- [[Conjugate Gradient Normal Equation Residual and CGNR]]
 - [[Biconjugate Gradients Algorithm for Nonsymmetric System]]
 
 
