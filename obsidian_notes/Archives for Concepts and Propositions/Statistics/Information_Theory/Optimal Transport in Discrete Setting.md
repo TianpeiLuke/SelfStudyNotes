@@ -46,7 +46,7 @@ date of note: 2024-05-12
 >$\boldsymbol{P}$ is called a **probabilistic transport**. Here the coupling matrix $\boldsymbol{P}$  describes *the amount of mass* flowing from bin $i$ toward bin $j$, or from the mass found at $\boldsymbol{x}_i$ toward $\boldsymbol{y}_j$ in the formalism of discrete measures.
 
 >[!important] Optimal Transport (Linear Programming) 
->The above formulation is defined as a **linear programming** problem:
+>The above formulation is defined as a **linear optimization** problem:
 >$$
 >\begin{align*}
 >\min_{P_{i,j} \in \mathbb{R}_{+}^{n \times m}} & \sum_{i,j}C_{i,j} P_{i,j} \\
@@ -58,17 +58,19 @@ date of note: 2024-05-12
 >or, in matrix form
 >$$
 >\begin{align*}
->\min_{\boldsymbol{P} \in \mathbb{R}_{+}^{n \times m}} & \left\langle \boldsymbol{P} \,,\, \boldsymbol{C}    \right\rangle := \sum_{i,j}C_{i,j} P_{i,j} \\
-\text{s.t. }&  \boldsymbol{P}\mathbf{1}_{m} = \mathbf{a} \\
-&\boldsymbol{P}^T\mathbf{1}_{n}  = \boldsymbol{b}   \\
-&P_{i,j} \ge 0 \nonumber
-\end{align*}
+>\min_{P \in \mathbb{R}_{+}^{n \times m}} & \left\langle P \,,\, C    \right\rangle := \sum_{i,j}C_{i,j} P_{i,j} := 1^{T}\,(P \odot C)\,1 \\
+>\text{s.t. }&  P\,1_{m} = a\\
+>&P^T\,1_{n}  = b   \\
+>&P_{i,j} \ge 0 \nonumber
+>\end{align*}
 >$$
 
 ^ad1beb
 
 - [[Linear Optimization Problem]]
+- [[Nonnegative and Positive Matrix]]
 - [[Theory and Algorithms for Linear Optimization]]
+- [[Hadamard Product of Matrices]]
 
 >[!info]
 >The two sets of equality constraints corresponds to **the conservation of total mass** at both locations. 
@@ -90,8 +92,32 @@ date of note: 2024-05-12
 >$$  
 >where $\delta_{\boldsymbol{x}_{i}}$ is the *point mass (Dirac funcation)* at $\boldsymbol{x}_i$ and $\boldsymbol{a} \in \Delta_{n}$. The discrete measure $\alpha$ can be used to describe the distribution of the mass in one location. 
 
+## Doubly Stochastic Matrix
+
+>[!info]
+>The feasible region is a generalization of the space of **doubly stochastic matrix**
+>
+>$$
+>\begin{align*}
+>P\,1 = 1 \\
+>P^{T}\,1  = 1   \\
+>P_{i,j} \ge 0 \nonumber
+\end{align*}
+>$$
+>By **Birkhoff theorem**, this feasible region is a **simplex** (*polyhedron*) with **finite extreme points (vertices)** and all the extreme points are **permutation matrix.**
+
+- [[Stochastic Matrix and Doubly Stochastic Matrix]]
+- [[Birkhoff Theorem on Characterization of Doubly Stochastic Matrix]]
+- [[Perron-Frobenius Theorem on Irreducible Nonnegative Matrix]]
+- [[Extreme Points of Polyhedron]]
+- [[Vertex Point of Polyhedron]]
+
+## Solving Kantorovich Optimal Transport Problem
 
 
+- [[Barrier Method for Linear Optimization]]
+- [[Primal-Dual Interior Point Method for Linear Optimization]]
+- Oberman, A. M., & Ruan, Y. (2015). An efficient linear programming method for optimal transportation. _arXiv preprint arXiv:1509.03668_.
 
 
 
