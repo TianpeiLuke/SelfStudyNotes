@@ -88,18 +88,20 @@ date of note: 2024-10-12
 >[!important] Definition
 >Consider an *exponential family* $P_{\phi}$ with a collection $\phi = (\phi_{\alpha}, \alpha \in I)$ of *sufficient statistics* associated with the *cliques* of $\mathcal{G} = (\mathcal{V}, \mathcal{E})$ and natural parameters $\theta^{P}$
 >- The space of all *$\phi$-exponential family* that factorizes over $\mathcal{G}$ is $$\mathscr{P} := \left\{P_{\phi} \in \mathcal{M}:  P_{\phi} \vDash \mathcal{I}(\mathcal{G}) \right\}$$ 
->- and the corresponding p.d.f. has the form $$P_{\Phi}(x; \theta^{P}) = \exp \left(\sum_{\alpha \in I} \theta^{P}_{\alpha }\,\phi_{\alpha }(x_{D_{\alpha}}) - A(\theta^{P})\right)$$ where  $A(\theta^{P})$ is the *log-partition function*, $$D_{\phi} := \text{domain}(\phi),\; \implies\; \phi: X_{D_{\phi}} \to \mathbb{R}$$
->- The *unnormalized distribution* $$\tilde{P}_{\Phi}(x; \theta^{P}) = \exp \left(\sum_{\alpha \in I} \theta^{P}_{\alpha }\,\phi_{\alpha }(x_{D_{\alpha}})\right)$$
+>- and the corresponding p.d.f. has the form $$P_{\Phi}(x; \theta^{P}) = \exp \left(\sum_{\alpha \in I} \theta^{P}_{\alpha }\,\phi_{\alpha }(x_{\alpha}) - A(\theta^{P})\right)$$ where  $A(\theta^{P})$ is the *log-partition function*, $$X_{\alpha}:= \text{scope}(\phi_{\alpha}),\; \implies\; \phi: X_{\alpha} \to \mathbb{R}$$
+>- The *unnormalized distribution* $$\tilde{P}_{\Phi}(x; \theta^{P}) = \exp \left(\sum_{\alpha \in I} \theta^{P}_{\alpha }\,\phi_{\alpha }(x_{\alpha})\right)$$
 >
->Define the **energy functional** for the variational distribution $Q$ 
+>Define the **energy functional** for the *variational distribution* $Q_{\mu}$ in *exponential family* parameterized by mean parameter $\mu^{Q}$
 >$$
 >\begin{align*}
->\mathcal{L}(Q, \theta^{P}; \mathcal{X}) &= \mathbb{E}_{Q}\left[\log \tilde{P}_{\Phi}(x; \theta^{P})\right]  - \mathbb{E}_{Q }\left[  \log Q \right] \\[10pt]
->&= \sum_{\alpha \in I} \theta^{P}_{\alpha }\;\mathbb{E}_{Q }\left[  \phi_{\alpha }(X_{D_{\alpha}}) \right]  + H_{Q}(X) \\[10pt]
->&= \left\langle  \mu^{Q}\,,\, \theta^{P}\right\rangle + H_{Q}(X)  
+>\mathcal{L}(\mu^{Q}, \theta^{P}; \mathcal{X}) &= \mathbb{E}_{\mu}\left[\log \tilde{P}_{\Phi}(x; \theta^{P})\right]  - \mathbb{E}_{\mu}\left[  \log Q \right] \\[10pt]
+>&= \sum_{\alpha \in I} \theta^{P}_{\alpha }\;\mathbb{E}_{\mu}\left[  \phi_{\alpha }(X_{\alpha}) \right]  + H(Q_{\mu}) \\[10pt]
+>&= \left\langle  \mu^{Q}\,,\, \theta^{P}\right\rangle - A^{*}(\mu^{Q})
 \end{align*}
 >$$   
->where $\mu^{Q}$ is the *expected value of sufficient statistics* with respect to $Q$, i.e. $$\mu^{Q} = (\mathbb{E}_{Q}\left[\phi_{\alpha }(X_{D_{\alpha}}) \right], \;\; \alpha\in I)$$
+>where 
+>- $\mu^{Q}$ is the *expected value of sufficient statistics* with respect to $Q$, i.e. $$\mu^{Q} = (\mathbb{E}_{Q}\left[\phi_{\alpha }(X_{\alpha}) \right], \;\; \alpha\in I)$$
+>- and $A^{*}(\mu)$ is the *dual of log-partition* function $A(\theta)$, which is the *negative entropy* $$A^{*}(\mu) = -H(Q_{\mu}) = \mathbb{E}_{ \mu }\left[  \log Q_{\mu}(X) \right]$$
 
 ^144559
 
