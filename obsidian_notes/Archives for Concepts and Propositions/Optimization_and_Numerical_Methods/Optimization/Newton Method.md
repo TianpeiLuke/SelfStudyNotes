@@ -34,7 +34,30 @@ date of note: 2024-05-12
 - [[Gradient Descent Algorithm]]
 - [[Line Search Strategies for Optimal Stepsize]]
 
+### Optimal Search Direction via Quadratic Programming
 
+>[!important] 
+>We can consider the *search direction* $d_{k}$ at $x_{k}$ via **Newton's method** as the *minimizer* of the *second-order approximation* of  twice continuously differentiable functions $f$ at $x_{k}$.
+>
+>The *second-order Talyor expansion* of $f$ at some point $x_{k}$ is given by 
+>$$
+>f(x_{k} + \alpha\,d_{k}) \approx f(x_{k}) + \alpha\,\left\langle  d_{k}\,,\,\nabla f(x_{k}) \right\rangle + \frac{\alpha^2}{2}d_{k}^T\,\nabla^2 f(x_{k})\,d_{k}
+>$$
+>Thus the *search direction* $d_{k}$ at $x_{k}$ is the solution of the *quadratic optimization problem* below:
+>$$
+>\min_{d_{k}} f(x_{k} + \alpha\,d_{k}) \approx f(x_{k}) + \alpha\,\left\langle  d_{k}\,,\,\nabla f(x_{k}) \right\rangle + \frac{\alpha^2}{2}d_{k}^T\,\nabla^2 f(x_{k})\,d_{k}
+>$$
+>The *stationary point* for above problem should satisfies the **normal equation**
+>$$
+>\nabla^2 f(x_{k})\,d_{k} = -\nabla f(x_{k}),
+>$$
+>which corresponds to the **search direction** $d_{k}$ of **Newton's method.**
+
+^b393c2
+
+- [[Line Search Strategies for Optimal Stepsize]]
+- [[Normal Equations and Newton System of Equations]]
+- [[Quadratic Programming]]
 
 ## Explanation
 

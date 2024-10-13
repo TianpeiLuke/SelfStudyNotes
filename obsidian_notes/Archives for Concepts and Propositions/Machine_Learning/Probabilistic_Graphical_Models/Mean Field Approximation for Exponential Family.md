@@ -21,39 +21,55 @@ date of note: 2024-05-12
 
 ![[Energy Functional for Probabilistic Graphical Model#^144559]]
 
+### Tractable Family and Approximation of Mean Parameter Space
+
+![[Structured Variational Approximation#^3ca63f]]
+![[Structured Variational Approximation#^4cc9e0]]
+
+- [[Structured Variational Approximation]]
+
+### Naive Mean Field Approximation
+
 >[!important] Definition
->Consider an *exponential family* $P_{\phi}$ with a collection $\phi = (\phi_{\alpha}, \alpha \in I)$ of *sufficient statistics* associated with the *cliques* of $\mathcal{G} = (\mathcal{V}, \mathcal{E})$ and natural parameters $\theta^{P}$
+>Consider an *exponential family* $P_{\phi}$ with a collection $\phi = (\phi_{\alpha}, \alpha \in I)$ of *sufficient statistics* associated with the *cliques* of $\mathcal{G} = (\mathcal{V}, \mathcal{E})$ and natural parameters $\theta$
 >- The space of all *$\phi$-exponential family* that factorizes over $\mathcal{G}$ is $$\mathscr{P} := \left\{P_{\phi} \in \mathcal{M}:  P_{\phi} \vDash \mathcal{I}(\mathcal{G}) \right\}$$ 
->- and the corresponding p.d.f. has the form $$P_{\Phi}(x; \theta^{P}) = \exp \left(\sum_{\alpha \in I} \theta^{P}_{\alpha }\,\phi_{\alpha }(x_{D_{\alpha}}) - A(\theta^{P})\right)$$ where  $A(\theta^{P})$ is the *log-partition function*, $$D_{\phi} := \text{domain}(\phi),\; \implies\; \phi: X_{D_{\phi}} \to \mathbb{R}$$
->- The *unnormalized distribution* $$\tilde{P}_{\Phi}(x; \theta^{P}) = \exp \left(\sum_{\alpha \in I} \theta^{P}_{\alpha }\,\phi_{\alpha }(x_{D_{\alpha}})\right)$$
+>- and the corresponding p.d.f. has the form $$P_{\Phi}(x; \theta) = \exp \left(\sum_{\alpha \in I} \theta_{\alpha }\,\phi_{\alpha }(x_{\alpha}) - A(\theta)\right)$$ where  $A(\theta)$ is the *log-partition function*, $$X_{\alpha} := \text{scope}(\phi_{\alpha}),\; \implies\; \phi_{\alpha}: X_{\alpha} \to \mathbb{R}$$
+>- The *unnormalized distribution* $$\tilde{P}_{\Phi}(x; \theta) = \exp \left(\sum_{\alpha \in I} \theta_{\alpha }\,\phi_{\alpha }(x_{\alpha})\right)$$
 >  
 >The **naive mean field algorithms** assume that the *variational distribution* $Q$ is within the class of distributions that are the *product of independent marginals*
 >$$
->\mathcal{Q}_{\text{mean field}} := \left\{ Q \in \mathcal{M}(\mathcal{Z}): Q(X_{v}\,,\, v\in \mathcal{V}) = \prod_{v\in \mathcal{V}} Q(X_{v}) \right\} 
+>\begin{align*}
+>\mathcal{Q}_{\text{mean field}} &:= \left\{ Q \in \mathcal{M}(\mathcal{Z}): Q(X_{v}\,,\, v\in \mathcal{V}) = \prod_{v\in \mathcal{V}} Q(X_{v}) \right\} \\[5pt]
+>&=  \{ Q:\; Q \vDash \mathcal{F} := (\mathcal{V}, \emptyset) \}
+>\end{align*}
 >$$
+>- $\mathcal{F}:= (\mathcal{V}, \emptyset) \subset \mathcal{G}$ is a subgraph with *no edges*.
+>- Assume that $Q$ is from an exponential family $$Q \in \mathcal{Q}_{\text{mean field}}\cap \mathscr{P}_{\Phi}$$
+>- This means that the space of mean parameters $\mu^{Q}$ of $Q$ under *mean field approximation* is $$\mathbb{M}_{\mathcal{F}}(\mathcal{G}) = \{\mu = (\mu_{\alpha}) \in \mathbb{R}^{d}, \;\; \mathbb{E}_{ \eta }\left[  \phi_{\alpha}(X) \right] =  \mu_{\alpha}, \;\; \text{ where }\eta_{\alpha} = 0,\; \forall \alpha\in I \setminus I_{\mathcal{F}} \}$$ 
+>- The *restriction* of dual function $A^{*}(\mu)$ on $\mathbb{M}_{\mathcal{F}}(\mathcal{G})$ is given by $$A^{*}(\mu)\big|_{\mathbb{M}_{\mathcal{F}}(\mathcal{G})} := A_{\mathcal{F}}^{*}(\mu).$$
+>
 >Thus the **energy functional** can be factorized as
 >$$
 >\begin{align*}
->\mathcal{L}(Q, \theta^{P}; \mathcal{X})  &= \left\langle  \mu^{Q}\,,\, \theta^{P}\right\rangle + H_{Q}(X)  \\[5pt]
->&= \left\langle  \mu^{Q}\,,\, \theta^{P}\right\rangle + \sum_{v\in \mathcal{V}}H_{Q_{v}}(X_{v}) \\[5pt]
->&= \sum_{\alpha \in I}\theta_{\alpha}^{P}\,\mu_{\alpha}^{Q} + \sum_{v\in \mathcal{V}}H_{Q_{v}}(X_{v}) 
+>\mathcal{L}(\mu^{Q}, \theta; \mathcal{X})  &= \left\langle  \mu^{Q}\,,\, \theta\right\rangle + H_{Q}(X)  \\[5pt]
+>&:= \left\langle  \mu^{Q}\,,\, \theta\right\rangle - A_{\mathcal{F}}^{*}(\mu^{Q})  \\[5pt]
+>&= \left\langle  \mu^{Q}\,,\, \theta\right\rangle + \sum_{v\in \mathcal{V}}H_{Q_{v}}(X_{v})
 >\end{align*}
 >$$ 
->where $\mu^{Q}$ is the *expected value of sufficient statistics* with respect to $Q$, i.e. 
+>where $\mu^{Q} = (\mu_{\alpha}^{Q})$ is the *expected value of sufficient statistics* with respect to product measure $Q$, i.e. 
 >$$
->\mu^{Q}_{\alpha} = \mathbb{E}_{ Q }\left[ \phi(X_{D_{\phi_{\alpha}}})\right] = \sum_{X_{\alpha}}\,\left(\prod_{v\in \phi_{\alpha}}Q_{v}(X_{v})\right)\phi_{\alpha}(X_{\alpha}), \quad \forall \alpha\in I.
+>\mu^{Q}_{\alpha} = \mathbb{E}_{ Q }\left[ \phi(X_{\alpha})\right] = \sum_{x_{\alpha}}\,\left(\prod_{v\in \text{scope}(\phi_{\alpha})}Q_{v}(x_{v})\right)\phi_{\alpha}(x_{\alpha}), \quad \forall \alpha\in I_{\mathcal{F}}.
 >$$
 >
->The **naive mean field algorithm** on $\mathcal{P}_{\Phi}(x; \theta^{P})$ solves the following optimization problem
+>The **naive mean field algorithm** on $\mathcal{P}_{\Phi}(x; \theta)$ solves the following optimization problem
 >$$
 >\begin{align*}
->  \max_{\{Q(X_{i})\}}\;& \mathcal{L}(Q, \theta^{P}; \mathcal{X}) =  \sum_{\alpha \in I}\theta_{\alpha}^{P}\,\mu_{\alpha}^{Q} + \sum_{v\in \mathcal{V}}H_{Q_{v}}(X_{v})\\[5pt]
->  \text{s.t. }\;&\, Q(X) = \prod_{v\in \mathcal{V}}Q(X_{v})\\[5pt]
->  &\, \sum_{X_{v}\in \mathcal{X}_{v}}Q(X_{v}) = 1,\quad \forall v\in \mathcal{V} \\[10pt]
->  &\, \mu^{Q}_{\alpha} = \mathbb{E}_{ Q }\left[ \phi(X_{D_{\phi_{\alpha}}})\right], \quad \forall \alpha\in I 
+>  \max_{\mu^{Q}}\;& \mathcal{L}(\mu^{Q}, \theta; \mathcal{X}) =  \left\langle  \mu^{Q}\,,\, \theta\right\rangle - A_{\mathcal{F}}^{*}(\mu^{Q}) \\[5pt]
+>  \text{s.t. }\;&\, \mu^{Q} \in \mathbb{M}_{\mathcal{F}}(\mathcal{G})
 >\end{align*}
 >$$
-  
+
+^9d3014
 
 - [[Energy Functional for Probabilistic Graphical Model]]
 - [[Maximum Entropy Learning of Exponential Family]]
@@ -62,11 +78,14 @@ date of note: 2024-05-12
 - [[Kullback-Leibler Divergence for Exponential Family]]
 
 
-
-
-
 ## Explanation
 
+
+
+
+## Mean Field Approximation for Gaussian Graphical Model
+
+- [[Mean Field Approximation for Gaussian Markov Random Field]]
 
 
 

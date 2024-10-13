@@ -252,15 +252,23 @@ date of note: 2024-05-12
 >- This is **arithmetic average**, whereas the *mean field approximation* is the **geometric average.**
 >- Also this expectation is with respect to $P_{\Phi}$ while the *mean field* uses the approximation $Q$ 
 
+### Why Mean Field
 
+![[Structured Variational Approximation#^ea614b]]
 
+![[Structured Variational Approximation#^3ca63f]]
 
+![[Structured Variational Approximation#^4cc9e0]]
+
+![[Structured Variational Approximation#^dc3a63]]
+
+- [[Structured Variational Approximation]]
 
 
 -----------
 ##  Recommended Notes and References
 
-- [[Structured Variational Approximation]]
+
 - [[Information Projection and Moment Projection]]
 
 - [[Kullback-Leibler Divergence]]

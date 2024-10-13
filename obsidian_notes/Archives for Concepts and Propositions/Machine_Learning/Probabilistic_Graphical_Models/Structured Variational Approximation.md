@@ -30,6 +30,8 @@ date of note: 2024-05-12
 >- the nature of the *constraint set* $\mathbb{M}$
 >- the lack of an explicit form for the *dual function* $A^{*}$.
 
+^ea614b
+
 >[!important]
 >The **core idea** of **mean field approaches** is simple: 
 >
@@ -57,6 +59,8 @@ date of note: 2024-05-12
 > \end{align}
 >$$  
 >- By definition, the exponential family in **tractable family** has some of cliques removed. 
+
+^3ca63f
 
 - [[Exponential Family of Distributions]]
 - [[Markov Network on Undirected Graph]]
@@ -88,6 +92,61 @@ date of note: 2024-05-12
 > \end{align*}
 >$$  
 >- $\mathbb{M}_{\mathcal{F}}$ is an **inner approximation** to the set $\mathbb{M}$ of *realizable mean parameters*. 
+
+^4cc9e0
+
+### Mean Field Lower Bound
+
+>[!info]
+>By **Fenchel’s inequality** for conjugate duals, we have the following propositions
+
+- [[Fenchel Duality Theorem]]
+
+
+>[!important] Proposition (Mean Field Lower Bound)
+> Any **mean parameter** $\mu \in \mathbb{M}^{\circ}$ yields a **lower bound** on the **partition function**:
+>$$
+> \begin{align}
+> A(\eta) &\ge \left\langle  \eta\,,\, \mu   \right\rangle - A^{*}(\mu) 
+> \end{align}
+>$$ 
+> Moreover, **equality** holds *if and only if* $\eta$ and $\mu$ are **dually coupled**, i.e., $$\mu =  \mathbb{E}_{ \eta }\left[  \phi(X) \right].$$
+>
+
+>[!quote]
+>Since the **dual function** $A^{*}$ typically lacks an *explicit form*, it is not possible, at least in general, to compute the lower bound above. 
+>
+>The **mean field approach** *circumvents* this difficulty by **restricting the choice of $\mu$** to the **tractable subset** $\mathbb{M}_{\mathcal{F}}(\mathcal{G})$, for which the *dual function has an  explicit form*.
+>
+>- For compactness in notation, we define $$A^{*}_{\mathcal{F}} = A^{*}|_{\mathbb{M}_{\mathcal{F}}(\mathcal{G})},$$  corresponding to the dual function *restricted* to the set $\mathbb{M}_{\mathcal{F}}(\mathcal{G})$. 
+>- As long as $\mu$ belongs to $\mathbb{M}_{\mathcal{F}}(\mathcal{G})$, then the **lower bound** $$\begin{align} A(\eta)|_{\mathbb{M}_{\mathcal{F}}(\mathcal{G})} &\ge \left\langle  \eta\,,\, \mu   \right\rangle - A^{*}_{\mathcal{F}}(\mu) \end{align}$$  involves $A^{*}_{\mathcal{F}}$, and hence can be computed easily.
+>  
+>  
+>-- [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]] pp 131  
+
+^dc3a63
+
+### Mean Field as Best Approximation on Restricted Parameter Space
+
+>[!important] Definition
+>Given a subgraph $\mathcal{F} \subset \mathcal{G}$, and the corresponding approximation of parameter space by *tractable family*
+>$$
+> \begin{align}
+> \mathbb{M}_{\mathcal{F}}(\mathcal{G}):= \mathbb{M}_{\mathcal{F}}(\mathcal{G}; \phi) &:= \{\mu \in \mathbb{R}^{d}, \;\; \mathbb{E}_{ \eta }\left[  \phi(X) \right] =  \mu, \;\; \text{ for some }\eta \in \Omega(\mathcal{F}) \} \\[5pt]
+> &=  \nabla A_{\Omega_{\mathcal{F}}} 
+> \end{align}
+>$$  
+>
+>The **mean field approach** *maximizes* the *lower bound* of *log-partition function* $A$ within the approximated parameter space $\mathbb{M}_{\mathcal{F}}(\mathcal{G})$ as 
+>$$
+>\begin{align*}
+> \max_{\mu}\;&\; \left\langle  \theta\,,\,\mu \right\rangle - A_{\mathcal{F}}^{*}(\eta)\\[5pt]
+>\text{s.t.}\;&\; \mu \in \mathbb{M}_{\mathcal{F}}(\mathcal{G})
+>\end{align*}
+>$$
+>- The corresponding $\mu^{*}$ is identified as the **mean field approximation** of true *mean parameter*.
+
+
 
 ### Structured Variational Approach
 

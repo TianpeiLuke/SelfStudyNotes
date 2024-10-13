@@ -47,7 +47,30 @@ date of note: 2024-09-27
 - [[Existence and Uniqueness of Solution of Linear Equations]]
 - [[Moore–Penrose Pseudo Inverse of Matrix]]
 
-### Linear Least Square Estimation
+## Three Levels of Optimization and Related Linear System
+
+>[!quote]
+>We can formulate the optimization algorithms into three levels:
+>- **Linear equality constrained quadratic problems** are the simplest. For these problems the *KKT conditions* are a set of linear equations, which can be solved analytically. 
+>	- [[Quadratic Programming]]
+>	- [[KKT Matrix and KKT System for Optimization with Equality Constraints]]
+>	- [[Least Square Estimation]]
+>	- [[Normal Equations and Newton System of Equations]]
+>- **Newton’s method** is the next level in the hierarchy. We can think of Newton’s method as a technique for solving a linear equality constrained optimization problem, with *twice differentiable objective*, by reducing it to *a sequence of linear equality constrained quadratic problems*.
+>	- [[Newton Method]]
+>	- [[Secant Equation and Quasi-Newton Methods]]
+>	- [[BFGS Algorithm]]
+>- **Interior-point methods** form the next level in the hierarchy: They solve an optimization problem with linear equality and inequality constraints by reducing it to *a sequence of linear equality constrained problems.*
+>	- [[Barrier Method for Convex Optimization]]
+>	- [[Primal-Dual Interior Point Method for Convex Optimization]]
+> 
+>-- [[Convex Optimization by Boyd]] pp 561 - 562 
+
+
+
+## Normal Equation, Least Square Estimation and Quadratic Programming
+
+### Least Square Problem
 
 >[!info]
 >If $n >m$, i.e. there are more equations/constraints than variables, the system $$Ax = b$$ is **overcomplete.**
@@ -74,7 +97,7 @@ date of note: 2024-09-27
 - [[Least Square Estimation Solution and Geometric Interpretation]]
 - [[Algorithms for Least Square Estimation Problem]]
 
-#### Normal Equation
+### Normal Equation
 
 >[!info]
 >If $A$ has **full column rank**, e.g. $n > m$, then the LSE has **unique solution** $$x = A^{+}b= \left(A^{T}\,A\right)^{-1}\,A^{T}b$$ 
@@ -199,6 +222,27 @@ date of note: 2024-09-27
 - [[Logistic Regression]]
 - [[Logistic Regression Solution via Iterative Reweighted Least Square]]
 
+## Quadratic Programming with Equality Constraints
+
+![[Quadratic Programming#^387671]]
+
+![[KKT Matrix and KKT System for Optimization with Equality Constraints#^f43071]]
+
+- [[KKT Matrix and KKT System for Optimization with Equality Constraints]]
+- [[Quadratic Programming]]
+- [[Sequential Quadratic Programming]]
+- [[Tridiagonal Reduction of Symmetric Matrix via Householder Transformation]]
+- [[Lanczos Iteration for Tridiagonal Reduction of Large Matrix]]
+- [[GMRES as Regression on Krylov Space]]
+- [[Conjugate Gradient Algorithm Linear]]
+
+### KKT System and Optimization with Equality Constraint
+
+![[KKT Matrix and KKT System for Optimization with Equality Constraints#^e0bfc8]]
+
+- [[KKT Matrix and KKT System for Optimization with Equality Constraints]]
+
+## Newton System of Equations and Second-Order Gradient Methods
 
 ### Gradient-based Optimization
 
@@ -208,7 +252,7 @@ date of note: 2024-09-27
 >[!info]
 >In **gradient-based methods**, $$x_{t+1} = x_{t} + \alpha_{k}\,d_{t}$$ where $$\left\langle  d_{t}\,,\,\nabla f(x_{t})    \right\rangle < 0$$
 
-#### Newton Methods and Gradient Descent Direction
+### Newton's Methods
 
 >[!info]
 >In **Newton's method**, the gradient descent **direction**
@@ -219,6 +263,8 @@ date of note: 2024-09-27
 >-  $H_{t}$ and $g_{t}$ are **Hessian matrix** and **gradient** of $f$ at $x_{t}$ respectively  $$H_{t} := \nabla^2 f(x_{t}), \quad g_{t} := \nabla f(x_{t})$$
 >- The linear system $$H_{t}\,d = - g_{t}$$ is a **symmetric positive semidefinite system**
 
+![[Newton Method#^b393c2]]
+
 - [[Newton Method]]
 
 - [[Hermitian or Symmetric Matrix]]
@@ -226,7 +272,7 @@ date of note: 2024-09-27
 - [[LDU Factorization of Symmetric Matrix]]
 - [[Cholesky Factorization of Hermitian Positive Definite Matrices]]
 
-#### Quasi-Newton Methods and Secant Equation
+### Quasi-Newton Methods and Secant Equation
 
 >[!info]
 >Instead of computing the Hessian $H_{t}:= \nabla^2 f(x_{t})$, we can use the gradient to approximate $H_{t}$. These methods are called the **quasi-Newton methods.**
@@ -249,11 +295,12 @@ date of note: 2024-09-27
 - [[Secant Equation and Quasi-Newton Methods]]
 - [[BFGS Algorithm]]
 
-### Interior Point Methods for Convex Optimization
+
+## Interior Point Methods for Convex Optimization
 
 - [[Convex Optimization Problem]]
 
-#### Central Path and the Residual Equations
+### Central Path and the Residual Equations
 
 ![[Logarithmic Barrier Function and Central Path for Interior Point Methods#^1d97b8]]
 
@@ -264,12 +311,12 @@ date of note: 2024-09-27
 
 ![[Primal-Dual Interior Point Method for Convex Optimization#^d03e25]]
 
-#### Barrier Method
+### Barrier Method
 
 ![[Barrier Method for Convex Optimization#^43eb92]]
 
 - [[Barrier Method for Convex Optimization]]
-#### Primal-Dual Interior Point Method
+### Primal-Dual Interior Point Method
 
 ![[Primal-Dual Interior Point Method for Convex Optimization#^e17125]]
 
@@ -280,7 +327,7 @@ date of note: 2024-09-27
 - [[Newton Method]]
 
 
-### Linear Optimization
+## Linear Optimization
 
 - [[Linear Optimization Problem]]
 
@@ -312,7 +359,7 @@ date of note: 2024-09-27
 
 - [[Primal-Dual Interior Point Method for Linear Optimization]]
 
-####  Optimal Transport
+###  Application: Optimal Transport
 
 >[!info]
 >Finding the **optimal transport coupling** is a **linear programming problem**.
@@ -323,12 +370,12 @@ date of note: 2024-09-27
 - [[Entropic Regularized Optimal Transport in Discrete Settings]]
 - [[Entropic Regularized Optimal Transport in Dual Form]]
 
-#### Network Flow 
+### Application: Network Flow 
 
 - [[Network Flow Problem as Linear Optimization]]
 
 
-#### MAP Inference in Graphical Model
+### Application: MAP Inference in Graphical Model
 
 >[!info]
 >**MAP inference** can be reformulated as **integer programming problem**
@@ -338,34 +385,41 @@ date of note: 2024-09-27
 - [[Clique Tree Invariant of Max-Product and Reparameterization]]
 
 
-### Quadratic Programming
 
-![[Quadratic Programming#^387671]]
+## Gaussian Graphical Model
 
-![[KKT Matrix and KKT System for Optimization with Equality Constraints#^f43071]]
+### Mean Field Approximation
 
-- [[KKT Matrix and KKT System for Optimization with Equality Constraints]]
-- [[Quadratic Programming]]
-- [[Sequential Quadratic Programming]]
-- [[Tridiagonal Reduction of Symmetric Matrix via Householder Transformation]]
-- [[Lanczos Iteration for Tridiagonal Reduction of Large Matrix]]
-- [[GMRES as Regression on Krylov Space]]
-- [[Conjugate Gradient Algorithm Linear]]
+>[!info]
+>Probability inference on **Gaussian Graphical model (GGM)** using the mean field approximation can be seen as the **Gauss-Seidel iteration** 
 
-#### KKT System and Optimization with Equality Constraint
+![[Mean Field Approximation for Gaussian Markov Random Field#^a12fee]]
 
-![[KKT Matrix and KKT System for Optimization with Equality Constraints#^e0bfc8]]
+![[Mean Field Approximation for Gaussian Markov Random Field#^b5abb1]]
 
-- [[KKT Matrix and KKT System for Optimization with Equality Constraints]]
+- [[Mean Field Approximation for Gaussian Markov Random Field]]
+- [[Gauss-Seidel Iteration for Sparse Linear System]]
+- [[Gaussian Graphical Model]]
 
 
-### Support Vector Machine
+### Inference and Structural Learning on Gaussian Graphical Model
+
+
+>[!info]
+>**Structure learning** on Gaussian graphical model via **Graph LASSO** can be seen as solving the **LASSO** problem for each covariant-response pair. 
+
+- [[Sparse Inverse Covariance Estimation for GGM with Known Structure]]
+- [[Graph LASSO and Structured Learning in Gaussian Graphical Model]]
+
+
+
+## Support Vector Machine as Quadratic Programming
 
 - [[Support Vector Machine Linear Separable Case]]
 - [[Support Vector Machine General with Soft-Margin Relaxation]]
 
 
-### Eigenvalue Problem as Convex Optimization on Manifold
+## Eigenvalue Problem as Convex Optimization on Manifold
 
 - [[Semidefinite Programming]]
 - [[Rayleigh Quotient for Eigenvalue Problem]]
@@ -374,7 +428,7 @@ date of note: 2024-09-27
 - [[Convex Optimization for Eigenvalue Problem]]
 
 
-#### Principle Component Analysis
+### Principle Component Analysis
 
 ![[Principle Component Analysis#^028c45]]
 
@@ -385,8 +439,6 @@ date of note: 2024-09-27
 - [[Principle Component Analysis]]
 - [[Nonnegative Matrix Factorization]]
 - [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
-
-
 
 ### Latent Variable Model and Factor Analysis
 
@@ -412,24 +464,6 @@ date of note: 2024-09-27
 
 - [[Linear Dynamic System]]
 - [[Kalman Filter Discrete-Time]]
-
-
-### Gaussian Graphical Model
-
->[!info]
->Probability inference on **Gaussian Graphical model (GGM)** using the mean field approximation can be seen as the **Gauss-Seidel iteration** 
-
-- [[Mean Field Approximation for Gaussian Markov Random Field]]
-- [[Gauss-Seidel Iteration for Sparse Linear System]]
-- [[Gaussian Graphical Model]]
-
-
->[!info]
->**Structure learning** on Gaussian graphical model via **Graph LASSO** can be seen as solving the **sparse linear equations** 
-
-- [[Sparse Inverse Covariance Estimation for GGM with Known Structure]]
-- [[Graph LASSO and Structured Learning in Gaussian Graphical Model]]
-
 
 
 ### Markov Process and Markov Chain
@@ -460,10 +494,7 @@ date of note: 2024-09-27
 
 
 
-
-
-
-### Linear ODE and Stochastic Linear ODE
+## Linear ODE and Stochastic Linear ODE
 
 - [[Concepts and Theorems for Differential Equations]]
 - [[Concepts and Theorems for Stochastic Differential Equations]]

@@ -151,6 +151,12 @@ date of note: 2024-10-06
 - [[LASSO and Sparsity-Induced Least Square]]
 - [[Ridge Regression and L2 Regularization]]
 
+### Newton's Method
+
+![[Newton Method#^b393c2]]
+
+- [[Newton Method]]
+
 ### Support Vector Machines
 
 ![[Support Vector Machine Linear Separable Case#^ad85f3]]
