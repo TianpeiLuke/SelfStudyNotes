@@ -113,6 +113,8 @@ date of note: 2024-10-11
 >- $$W := D^{1 / 2}$$
 >- $$\hat{b} = -D^{-1}\,g $$
 
+^4d5e6e
+
 - [[Least Square Estimation]]
 - [[Algorithms for Least Square Estimation Problem]]
 

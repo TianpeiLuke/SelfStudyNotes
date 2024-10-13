@@ -384,7 +384,14 @@ date of note: 2024-09-27
 - [[Max-Product Variable Elimination]]
 - [[Clique Tree Invariant of Max-Product and Reparameterization]]
 
+### Least Absolute Deviation
 
+![[Least Absolute Deviations Solution via Iterative Re-weighted Least Square#^538310]]
+
+![[Least Absolute Deviations Solution via Iterative Re-weighted Least Square#^4d5e6e]]
+
+- [[Least Absolute Deviations]]
+- [[Least Absolute Deviations Solution via Iterative Re-weighted Least Square]]
 
 ## Gaussian Graphical Model
 
