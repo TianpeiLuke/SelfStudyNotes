@@ -95,6 +95,9 @@ date of note: 2024-05-12
 
 ^4cc9e0
 
+![[mean_field_mean_space.png]]
+
+
 ### Mean Field Lower Bound
 
 >[!info]
