@@ -120,6 +120,8 @@ date of note: 2024-05-12
 >$$
 >\begin{align*}
 > \frac{ \partial  }{ \partial Q(x_{i}) }L_{i} &= -\log Q(x_{i}) - 1 + \lambda +   \sum_{\phi\in \Phi}\sum_{x_{-i}}\left(\prod_{j\neq i}Q(x_{j})\right)\,\log \phi(x_{i}, x_{-i}) \\[5pt]
+> &= -\log Q(x_{i}) - 1 + \lambda +  \sum_{\phi\in \Phi}\sum_{x_{-i}} \frac{\prod_{j} Q(x_{j})}{Q(x_{i})}\,\log \phi(x_{i}, x_{-i}) \\[5pt]
+> &= -\log Q(x_{i}) - 1 + \lambda +  \sum_{\phi\in \Phi}\sum_{x_{-i}} \frac{Q(x_{i}, x_{-i})}{Q(x_{i})}\,\log \phi(x_{i}, x_{-i}) \\[5pt]
 > &= -\log Q(x_{i}) - 1 + \lambda +  \sum_{\phi\in \Phi}\mathbb{E}_{ X \sim Q }\left[  \log \phi(X_{i}, X_{-i})\;|\;X_{i} = x_{i} \right] \\[5pt]
 > & =0
 >\end{align*}
@@ -194,7 +196,17 @@ date of note: 2024-05-12
 ### Mean Field Approximation Algorithm
 
 >[!important] Definition
->The **Mean Field approximation algorithm** is described as follow:
+>Consider the optimization problem
+>$$
+>\begin{align*}
+>  \max_{\{Q(X_{i})\}}\;& \mathcal{L}(Q, \Phi; \mathcal{X})\\[5pt]
+>  \text{s.t. }\;&\, Q(X) = \prod_{v\in \mathcal{V}}Q(X_{v})\\[5pt]
+>  &\, \sum_{X_{v}\in \mathcal{X}_{v}}Q(X_{v}) = 1,\quad \forall v\in \mathcal{V}
+>\end{align*}
+>$$
+>where $\mathcal{L}(Q, \Phi; \mathcal{X})$ is the *energy functional* for $Q$ and $\tilde{P}_{\Phi}$.
+>
+>The **Mean Field approximation algorithm** solves above problem using *coordinate ascent* as follow:
 >- *Require*: Factors $\Phi := \{ \phi \}$ that defines the graphical model $P_{\Phi}$;
 >- *Require*: *Initial Distribution*  $Q_{0}$
 >- Initialize the list
@@ -216,6 +228,13 @@ date of note: 2024-05-12
 >[!info]
 >This is a **coordinate ascent algorithm** which *increase the energy functional* at iteration.
 
+>[!info]
+>When a *marginal distributions* $Q(X_{i})$ is *updated*, all **other marginal distributions** whose variable that shared the same potential $\phi$ need to be updated since 
+>$$
+> Q(x_{j}) \leftarrow \exp \left\{\sum_{\phi: X_{i}, X_{j}\in \text{scope}(\phi)}\mathbb{E}_{ ((X_{\phi} \cup \{ X_{i} \} )\setminus \{ X_{j} \})  \sim Q }\left[\log \phi(X_{\phi}, X_{i}, x_{j})\right] \right\}  
+> $$
+> 
+>Thus we need to revert all related variables back into the *unprocessed list*. 
 
 
 
