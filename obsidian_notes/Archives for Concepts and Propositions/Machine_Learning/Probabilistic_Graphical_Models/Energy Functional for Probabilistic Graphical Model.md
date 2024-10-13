@@ -105,6 +105,7 @@ date of note: 2024-10-12
 
 ^144559
 
+- [[Kullback-Leibler Divergence for Exponential Family]]
 - [[Exponential Family of Distributions]]
 - [[Shannon Entropy]]
 
