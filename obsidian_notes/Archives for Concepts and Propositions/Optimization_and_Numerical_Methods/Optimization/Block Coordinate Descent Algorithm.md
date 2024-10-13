@@ -63,6 +63,7 @@ date of note: 2024-05-12
 - [[Arbitrary Cartestian Products]]
 
 - [[Gibbs Sampling]]
+- [[Mean Field Approximation for PGM]]
 
 - [[Numerical Optimization by Nocedal]]
 - [[Nonlinear Programming by Bertsekas]]

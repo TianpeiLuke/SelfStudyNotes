@@ -40,7 +40,7 @@ date of note: 2024-05-12
 >\begin{align*}
 >\mathcal{L}(Q, \Phi; \mathcal{X}) &= \mathbb{E}_{Q}\left[ \log \tilde{P}_{\Phi}  - \log Q  \right] \\[5pt]
 >&= H(Q) + \mathbb{E}_{ Q }\left[  \log \tilde{P}_{\Phi}(X)\right]\\[5pt]
->&= \sum_{v\in \mathcal{V}}H_{Q}(X_{v}) + \sum_{\phi\in \Phi} \sum_{X_{\phi}\in \mathcal{X}_{\phi}} \left(\prod_{i \in \phi}Q(X_{i})\right)  \log \phi_{k}(X_{\phi})
+>&= \sum_{v\in \mathcal{V}}H_{Q}(X_{v}) + \sum_{\phi\in \Phi} \sum_{X_{\phi}\in \mathcal{X}_{\phi}} \left(\prod_{x_{i} \in \text{scope}(\phi)}Q(X_{i})\right)  \log \phi_{k}(X_{\phi})
 >\end{align*}
 >$$
 >
@@ -86,11 +86,19 @@ date of note: 2024-05-12
 
 
 >[!important] Corollary
->For the **naive mean field approximation**,  the distribution $Q(X_{i})$ is **locally optimal** **only if** 
+>In the **naive mean field approximation**,  the distribution $Q(X_{i})$ is **locally optimal** **only if** 
 > $$
 > Q(x_{i}) = \frac{1}{Z_{i}} \exp \left\{\mathbb{E}_{ X_{-i} \sim Q }\left[\log P_{\Phi}(x_{i} | X_{-i})\right] \right\}  
 > $$
 >where $Z_{i}$ is a *local normalizing constant*.
+
+
+>[!important] Corollary
+>In the **naive mean field approximation**,  the distribution $Q(X_{i})$ is **locally optimal** **only if** 
+> $$
+> Q(x_{i}) = \frac{1}{Z_{i}} \exp \left\{\sum_{\phi: X_{i}\in \text{scope}(\phi)}\mathbb{E}_{ (X_{\phi} \setminus \{ X_{i} \})  \sim Q }\left[\log \phi(X_{\phi}, x_{i})\right] \right\}  
+> $$
+>where $Z_{i}$ is a *normalizing constant*.
 
 #### Proof of Theorem
 
@@ -136,6 +144,77 @@ date of note: 2024-05-12
 - [[Methods of Lagrangian Multipliers]]
 
 #### Proof of Corollary
+
+>[!info]
+>Note that 
+>$$
+>\tilde{P}_{\Phi} = \prod_{\phi \in \Phi}\phi  \;\; \implies \;\; \log\tilde{P}_{\Phi} = \sum_{\phi \in \Phi}\log \phi
+>$$
+>So 
+>$$
+>\sum_{\phi\in \Phi} \mathbb{E}_{ X \sim Q }\left[  \log \phi \;|\;x_{i}\right] = \mathbb{E}_{ X_{\phi} \sim Q }\left[  \log \tilde{P}_{\Phi}(X_{i}, X_{-i})\;|\;x_{i} \right]
+>$$
+>Note that $Q$ is a *product measure*, so
+>$$
+>Q(X_{-i}|x_{i}) = Q(X_{-i})
+>$$
+>which means that
+>$$
+>\mathbb{E}_{ X \sim Q }\left[  \log \tilde{P}_{\Phi}(X_{i}, X_{-i})\;|\;x_{i} \right] =  \mathbb{E}_{ X_{-i} \sim Q }\left[  \log \tilde{P}_{\Phi}(x_{i}, X_{-i})\right]
+>$$
+
+>[!info]
+>Note that $$\tilde{P}_{\Phi}(x_{i}, X_{-i}) = Z\,P_{\Phi}(x_{i}. X_{-i}) = Z\,P_{\Phi}(x_{i}|X_{-i})\,P_{\Phi}(X_{-i})$$
+>
+>We conclude that 
+>$$
+>\begin{align*}
+> \sum_{\phi\in \Phi} \mathbb{E}_{ X \sim Q }\left[  \log \phi \;|\;x_{i}\right] &= \mathbb{E}_{ X_{-i} \sim Q }\left[  \tilde{P}_{\Phi}(x_{i}, X_{-i})\right] \\[5pt]
+> &= \mathbb{E}_{ X_{-i} \sim Q }\left[\log P_{\Phi}(x_{i}|X_{-i})\right] + \mathbb{E}_{ X_{-i} \sim Q }\left[\log ZP_{\Phi}(X_{-i})\right]
+>\end{align*}
+>$$
+
+>[!info]
+>From above theorem,
+>$$
+>\begin{align*}
+>Q(x_{i}) &= \frac{1}{Z_{i}} \exp \left\{ \sum_{\phi \in \Phi}\mathbb{E}_{ Q }\left[\log \phi | X_{i} = x_{i}\right] \right\} \\[5pt]
+>&= \frac{1}{Z_{i}} \exp \left\{  \mathbb{E}_{ X_{-i} \sim Q }\left[\log P_{\Phi}(x_{i}|X_{-i})\right]\right\} \exp \left\{\mathbb{E}_{ X_{-i} \sim Q }\left[\log ZP_{\Phi}(X_{-i})\right] \right\} \\[5pt]
+>\end{align*}
+>$$
+>where 
+>$$\exp \left\{\mathbb{E}_{ X_{-i} \sim Q }\left[\log ZP_{\Phi}(X_{-i})\right] \right\}$$ is a *constant with respect to* $x_{i}$, so we can *absorb it into* $Z_{i}$.
+>
+>Thus
+>$$
+>Q(x_{i}) = \frac{1}{Z_{i}} \exp \left\{  \mathbb{E}_{ X_{-i} \sim Q }\left[\log P_{\Phi}(x_{i}|X_{-i})\right]\right\} 
+>$$
+>\[End of Proof\]
+
+### Mean Field Approximation Algorithm
+
+>[!important] Definition
+>The **Mean Field approximation algorithm** is described as follow:
+>- *Require*: Factors $\Phi := \{ \phi \}$ that defines the graphical model $P_{\Phi}$;
+>- *Require*: *Initial Distribution*  $Q_{0}$
+>- Initialize the list
+>	- $$Q \leftarrow Q_{0}$$
+>	- initialize the **list of unprocessed variables** $$\mathcal{U} \leftarrow \mathcal{X}$$
+>- While $\mathcal{U} \neq \emptyset$:
+>	- Choose $X_{i} \in \mathcal{U}$
+>	- Store the *previous* marginal distribution assignments $$Q_{old}(X_{i}) \leftarrow Q(X_{i})$$
+>	- For $x_{i}\in \mathcal{X}_{i}$:
+>		- Update each **new assignment** of $Q(X_{i})$ $$Q(x_{i}) \leftarrow \exp \left\{\sum_{\phi: X_{i}\in \text{scope}(\phi)}\mathbb{E}_{ (X_{\phi} \setminus \{ X_{i} \})  \sim Q }\left[\log \phi(X_{\phi}, x_{i})\right] \right\} $$
+>	- **Normalize** the *marginal distribution* $Q(X_{i})$
+>	- If $Q_{old}(X_{i}) \neq Q(X_{i})$:
+>		- Include all *other variables* in scopes of factors $\phi$ into the *unprocessed list* $$\mathcal{U} \leftarrow \mathcal{U} \;\cup\; \bigcup_{\phi: X_{i}\in \text{scope}(\phi)}\text{scope}(\phi)$$
+>	- Mark $X_{i}$ as processed: $$\mathcal{U} \leftarrow \mathcal{U} \setminus \{ X_{i} \}.$$
+>- Return the *variational distribution* $Q$.
+
+- [[Block Coordinate Descent Algorithm]]
+
+>[!info]
+>This is a **coordinate ascent algorithm** which *increase the energy functional* at iteration.
 
 
 
