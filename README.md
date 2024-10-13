@@ -23,7 +23,7 @@ This repository is the latex-based notes for self-learning, mainly for math, sta
   <img src="./obsidian_slip_box_graph/slip_box_3d_graph_2024-10-13_9.31.19_AM.png" width="60%" />
 </p>
 
-[Link to Animation](https://youtu.be/a-gzMBUC5qU?si=Ltwx7cvolrOioULE)
+[Link to Animation](https://youtu.be/XVmD8URNH9s)
 
 
 
