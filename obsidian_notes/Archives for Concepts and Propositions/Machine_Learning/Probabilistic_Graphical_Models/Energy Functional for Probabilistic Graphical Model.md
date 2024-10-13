@@ -28,12 +28,12 @@ date of note: 2024-10-12
 
 
 >[!important] Definition
->Let $\mathcal{G} = (\mathcal{V}, \mathcal{E})$ be a graph and $(P_{\Phi}, \mathcal{G})$ be a *probabilistic graphical model* over $\mathcal{G}$. That is, the  joint distribution  $P_{\Phi}$ with factors $\Phi := \left\{ \phi_{1} \,{,}\ldots{,}\, \phi_{K}\right\}$  *factorizes over* $\mathcal{G}$, i.e. $$
-> P_{\Phi}(X_{v}\,,\, v\in \mathcal{V}) = \frac{1}{Z} \tilde{P}_{\Phi} := \frac{1}{Z}\prod_{\phi\in \Phi}\phi(X_{D_{\phi}})$$ 
->where $$ \tilde{P}_{\Phi} := \prod_{\phi\in \Phi}\phi(X_{D_{\phi}})$$ is the *unnormalized distribution*, and the *domain of factor* $\phi$ is $$X_{D_{\phi}} = (X_{v}, \; v\in D_{\phi}) = \text{domain}(\phi).$$
+>Let $\mathcal{G} = (\mathcal{V}, \mathcal{E})$ be a graph and $(P_{\Phi}, \mathcal{G})$ be a *probabilistic graphical model* over $\mathcal{G}$. That is, the  joint distribution  $P_{\Phi}$ with factors $\Phi := \left\{ \phi_{\alpha},\; \alpha\in I\right\}$  *factorizes over* $\mathcal{G}$, i.e. $$
+> P_{\Phi}(X_{v}\,,\, v\in \mathcal{V}) = \frac{1}{Z} \tilde{P}_{\Phi} := \frac{1}{Z}\prod_{\phi\in \Phi}\phi(X_{\phi})$$ 
+>where $$ \tilde{P}_{\Phi} := \prod_{\phi\in \Phi}\phi$$ is the *unnormalized distribution*, and the *domain of factor* $\phi$ is $$X_{\phi} = (X_{v}, \; v\in D_{\phi}) = \text{scope}(\phi).$$
 >
 >
->Define the **energy functional** for the variational distribution $Q$ 
+>Define the **energy functional** for the variational distribution $Q$, or the **variational free energy**, as  
 >$$
 >\begin{align*}
 >\mathcal{L}(Q, \Phi; \mathcal{X}) &:= \mathbb{E}_{ Q }\left[ \log \left(\frac{\tilde{P}_{\Phi}(X)}{Q(X)}\right) \right] \\[5pt]
