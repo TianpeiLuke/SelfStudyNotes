@@ -103,33 +103,11 @@ date of note: 2024-05-12
 
 ## Maximum Entropy Problem via Energy Functional Form
 
->[!important] Definition
->We can define the **evidence lower bound (ELBO)** or the **energy functional** for the variational distribution $\mathcal{Q}$ 
->$$
->\begin{align*}
->\mathcal{L}(\mathcal{Q}, \Phi; \mathcal{X}) &:= \mathbb{E}_{ \mathcal{Q} }\left[ \log \left(\frac{\hat{\mathcal{P}}_{\Phi}(\mathcal{X})}{\mathcal{Q}(\mathcal{X})}\right) \right] \\[5pt]
->&= \mathbb{E}_{ \mathcal{Q} }\left[\log \hat{\mathcal{P}}_{\Phi}(\mathcal{X}) \right]  - \mathbb{E}_{ \mathcal{Q} }\left[  \log \mathcal{Q} \right] \\[10pt]
->&= \sum_{\phi\in \Phi}\mathbb{E}_{ \mathcal{Q} }\left[  \log(\phi) \right] + H_{\mathcal{Q}}(\mathcal{X})
-\end{align*}
->$$
-
-^c01c98
-
->[!important]
->$$
->\mathbb{KL}\left( \mathcal{Q} \left\|\right. \mathcal{P}_{\Phi} \right) = \log Z - \mathcal{L}(\mathcal{Q}, \Phi; \mathcal{X}) 
->$$
->Thus the *energy functional* is the **lower bound** on the *log-partition function*
->$$
->\log Z \ge \mathcal{L}(\mathcal{Q}, \Phi; \mathcal{X}) 
->$$
-
-- [[Log-Partition Function and Score Function of Graphical Models]]
-- [[Log-Partition Function of Exponential Family]]
+![[Energy Functional for Probabilistic Graphical Model#^c01c98]]
 
 ![[Variational Inference for Clique Tree#^5fe294]]
 
-
+- [[Energy Functional for Probabilistic Graphical Model]]
 - [[Evidence Lower Bound]]
 - [[Variational Inference for Clique Tree]]
 - [[Stationary Point of Bethe Variational Inference Problem]]

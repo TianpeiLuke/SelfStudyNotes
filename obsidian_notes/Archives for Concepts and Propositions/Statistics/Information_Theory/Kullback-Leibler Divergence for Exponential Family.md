@@ -43,6 +43,8 @@ date of note: 2024-09-06
 >
 >The above form is referred to as the **primal form** of the **KL divergence**.
 
+^c8dcb6
+
 - [[Kullback-Leibler Divergence]]
 - [[Exponential Family of Distributions]]
 - [[Log-Partition Function of Exponential Family]]

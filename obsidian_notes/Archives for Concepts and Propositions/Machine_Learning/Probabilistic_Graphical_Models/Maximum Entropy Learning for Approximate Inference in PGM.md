@@ -47,6 +47,7 @@ date of note: 2024-05-12
 
 ^5fbd75
 
+- [[Energy Functional for Probabilistic Graphical Model]]
 - [[Marginal Polytope and Local Consistent Polytope]]
 - [[Maximum Entropy Learning of Clique Tree PGM]]
 

@@ -19,55 +19,141 @@ date of note: 2024-05-12
 >[!important]
 >**Name**: Mean Field Approximation for PGM
 
-![[Evidence Lower Bound#^c74005]]
+![[Energy Functional for Probabilistic Graphical Model#^c01c98]]
 
-![[Evidence Lower Bound#^afb000]]
-
-- [[Evidence Lower Bound]]
+- [[Energy Functional for Probabilistic Graphical Model]]
 
 >[!important] Definition
->The **naive mean field algorithms** assume that the *variational distribution* $q\in \mathcal{Q}$ is within the class of distributions that are the *product of independent marginals*
+>Let $P_{\Phi}$ be a *Bayesian network* or *Markov network* over $\mathcal{X}$ that *factorizes* according to $\mathcal{G}$, and $\Phi$ be a set of *factors* in $P$. The unnormalized distribution is 
 >$$
->\mathcal{Q}_{\text{mean field}} := \left\{ q \in \mathcal{M}(\mathcal{Z}): q(Z_{1} \,{,}\ldots{,}\,Z_{k}) = \prod_{i} q(Z_{i}) \right\} 
+> \tilde{P}_{\Phi}(X_{v}\,,\, v\in \mathcal{V}) = \prod_{\phi \in \Phi}\phi(X_{\phi})
 >$$
 >
->The **ELBO** or **negative variational free energy** under the *mean field assumption* is given by
+>
+>The **naive mean field algorithms** assume that the *variational distribution* $Q$ is within the class of distributions that are the *product of independent marginals*
+>$$
+>\mathcal{Q}_{\text{mean field}} := \left\{ Q \in \mathcal{M}(\mathcal{Z}): Q(X_{v}\,,\, v\in \mathcal{V}) = \prod_{v\in \mathcal{V}} Q(X_{v}) \right\} 
+>$$
+>
+>The **energy functional** under the *mean field assumption* $Q\in \mathcal{Q}_{\text{mean field}}$ is given by
 >$$
 >\begin{align*}
->\mathcal{L}(q, \theta; x) &= \mathbb{E}_{ q\in \mathcal{Q}_{\text{mean}} }\left[ \log p_{\theta}(x, Z) - \log q(Z) \right] \\[5pt]
->&= \mathbb{E}_{ q\in \mathcal{Q}_{\text{mean}} }\left[ \log p_{\theta}(x, Z)\right] - \mathbb{E}_{ q\in \mathcal{Q}_{\text{mean}} }\left[ \log q(Z) \right]\\[5pt]
->&= \sum_{Z\in \mathcal{Z}}\left(\prod_{i=1}^{k}q(Z_{i})\right)\log p_{\theta}(x, Z) + \sum_{i=1}^{k}H(q(Z_{i}))
+>\mathcal{L}(Q, \Phi; \mathcal{X}) &= \mathbb{E}_{Q}\left[ \log \tilde{P}_{\Phi}  - \log Q  \right] \\[5pt]
+>&= H(Q) + \mathbb{E}_{ Q }\left[  \log \tilde{P}_{\Phi}(X)\right]\\[5pt]
+>&= \sum_{v\in \mathcal{V}}H_{Q}(X_{v}) + \sum_{\phi\in \Phi} \sum_{X_{\phi}\in \mathcal{X}_{\phi}} \left(\prod_{i \in \phi}Q(X_{i})\right)  \log \phi_{k}(X_{\phi})
 >\end{align*}
 >$$
-
->[!important] Definition
->Let $\mathcal{P}_{\Phi}$ be a *Bayesian network* or *Markov network* over $\mathcal{X}$ that *factorizes* according to $\mathcal{G}$, and $\Phi$ be a set of *factors* in $\mathcal{P}$.
 >
->The **naive mean field algorithm** on $\mathcal{P}_{\Phi}$ can be formulated in **compact form**
+>The **naive mean field algorithm** on $\mathcal{P}_{\Phi}$ solves the following optimization problem
 >$$
 >\begin{align*}
->  \min_{\{\mathcal{Q}(X_{i})\}}\;& \mathbb{KL}\left( \mathcal{Q} \left\|\right. \mathcal{P}_{\Phi} \right) \\[5pt]
->  \text{s.t. }\;&\, \mathcal{Q}(X) = \prod_{i\in \mathcal{V}(\mathcal{G})}\mathcal{Q}(X_{i})\\[5pt]
->  &\, \sum_{Z_{i}\in \mathcal{Z}_{i}}\mathcal{Q}(X_{i}) = 1,\quad \forall i\in \mathcal{V}(\mathcal{G})
+>  \max_{\{Q(X_{i})\}}\;& \mathcal{L}(Q, \Phi; \mathcal{X})\\[5pt]
+>  \text{s.t. }\;&\, Q(X) = \prod_{v\in \mathcal{V}}Q(X_{v})\\[5pt]
+>  &\, \sum_{X_{v}\in \mathcal{X}_{v}}Q(X_{v}) = 1,\quad \forall v\in \mathcal{V}
 >\end{align*}
 >$$
 >- Instead of estimation the joint variational distribution $\mathcal{Q}$, the mean field algorithm estimates *each marginal distribution* independently.
->  
->Equivalently, we can represent it as **maximizing the variational free energy**   
->$$
->\begin{align*}
->  \max_{\{ \mathcal{Q}(X_{i}) \}}\;& \mathcal{L}(\mathcal{Q}, \Phi; \mathcal{X}) = - \mathbb{E}_{ \mathcal{Q} }\left[  \log \mathcal{P}_{\Phi}  \right] - \sum_{i\in \mathcal{V}}H_{\mathcal{Q}}(X_{i}) \\[5pt]
->  \text{s.t. }\;&\, \mathcal{Q}(X) = \prod_{i\in \mathcal{V}}\mathcal{Q}(X_{i})\\[5pt]
->  &\, \sum_{X_{i}\in \mathcal{X}_{i}}\mathcal{Q}(X_{i}) = 1,\quad \forall i\in \mathcal{V}
->\end{align*}
->$$
 
+>[!info]
+>The key characteristic of mean field approximation is that
+>- We **do not approximate the objective function**, which is the case for 
+>	- [[Loopy Belief Propagation Algorithm for Cluster Graph]] and 
+>	- [[Sum-Product Expectation Propagation Algorithm]]
+>- We approximate the **optimization space** $$Q \vDash \mathcal{G}  \implies Q \vDash \mathcal{G}_{0} = (\mathcal{V}, \emptyset).$$
+
+- [[Structured Variational Approximation]]
 - [[Maximum Entropy Learning for Approximate Inference in PGM]]
 - [[Marginal Polytope and Local Consistent Polytope]]
+
+### Fixed-Point Solution for Mean Field Problem
+
+>[!important] Proposition
+>The distribution $Q(X_{i})$ is a **local minimizer** of the **naive mean field** problem
+>$$
+>\begin{align*}
+>  \max_{\{Q(X_{i})\}}\;& \mathcal{L}(Q, \Phi; \mathcal{X})\\[5pt]
+>  \text{s.t. }\;&\, Q(X) = \prod_{v\in \mathcal{V}}Q(X_{v})\\[5pt]
+>  &\, \sum_{X_{v}\in \mathcal{X}_{v}}Q(X_{v}) = 1,\quad \forall v\in \mathcal{V}
+>\end{align*}
+>$$
+> **given**  $\{ Q(X_{j}),\; j\neq i \}$ **if and only if** $Q(X_{i})$ is of the form
+> $$
+> Q(x_{i}) = \frac{1}{Z_{i}} \exp \left\{ \sum_{\phi \in \Phi}\mathbb{E}_{ Q }\left[\log \phi | X_{i} = x_{i}\right] \right\}  
+> $$
+>where $Z_{i}$ is a *local normalizing constant* and $\mathbb{E}_{ Q }\left[\log \phi | X_{i} = x_{i}\right]$ is **conditional expectation** given $X_{i}=x_{i}$, $$\mathbb{E}_{ Q }\left[\log \phi | X_{i} = x_{i}\right] = \sum_{x_{\phi}}Q(x_{\phi}|x_{i})\,\log \phi(x_{\phi}).$$
+
+- [[Fixed Point of Map]]
+
+
+>[!important] Corollary
+>For the **naive mean field approximation**,  the distribution $Q(X_{i})$ is **locally optimal** **only if** 
+> $$
+> Q(x_{i}) = \frac{1}{Z_{i}} \exp \left\{\mathbb{E}_{ X_{-i} \sim Q }\left[\log P_{\Phi}(x_{i} | X_{-i})\right] \right\}  
+> $$
+>where $Z_{i}$ is a *local normalizing constant*.
+
+#### Proof of Theorem
+
+>[!info]
+>First, consider restriction of energy functional to terms only including $X_{i}$, 
+>$$
+>F_{i}(Q) := H_{Q}(X_{i}) + \sum_{\phi\in \Phi} \mathbb{E}_{ X_{\phi} \sim Q }\left[  \log \phi \right] 
+>$$
+>and the *Lagrangian* is defined as
+>$$
+>L_{i}(Q, \lambda) =   H_{Q}(X_{i}) + \sum_{\phi\in \Phi} \mathbb{E}_{ X_{\phi} \sim Q }\left[  \log \phi \right] + \lambda \left(\sum_{x_{i}}Q(x_{i}) - 1\right)
+>$$
+>where
+>$$
+>\mathbb{E}_{ X_{\phi} \sim Q }\left[  \log \phi \right] = \sum_{x_{i}}\sum_{x_{-i}}\left(\prod_{i}Q(x_{i})\right)\,\log \phi(x_{i}, x_{-i})
+>$$
+>
+>Taking derivative with respect to $Q(x_{i})$ we have the *necessary condition* for optimal solution $Q(x_{i})$ is that
+>$$
+>\begin{align*}
+> \frac{ \partial  }{ \partial Q(x_{i}) }L_{i} &= -\log Q(x_{i}) - 1 + \lambda +   \sum_{\phi\in \Phi}\sum_{x_{-i}}\left(\prod_{j\neq i}Q(x_{j})\right)\,\log \phi(x_{i}, x_{-i}) \\[5pt]
+> &= -\log Q(x_{i}) - 1 + \lambda +  \sum_{\phi\in \Phi}\mathbb{E}_{ X \sim Q }\left[  \log \phi(X_{i}, X_{-i})\;|\;X_{i} = x_{i} \right] \\[5pt]
+> & =0
+>\end{align*}
+>$$
+>
+>Thus $$\log Q(x_{i}) = \lambda - 1+ \sum_{\phi\in \Phi}\mathbb{E}_{ X \sim Q }\left[  \log \phi\;|\;x_{i} \right]$$ Taking exponents on both sides and renormalize, we can remove $\lambda$, which leads to the solution
+>$$
+>Q(x_{i}) = \frac{1}{Z_{i}} \exp \left\{ \sum_{\phi \in \Phi}\mathbb{E}_{ Q }\left[\log \phi | X_{i} = x_{i}\right] \right\} 
+>$$
+
+>[!info]
+>To show that this condition is *sufficient*, we see that the objective function restricting on $X_{i}$
+>$$
+>F_{i}(Q) := H_{Q}(X_{i}) + \sum_{\phi\in \Phi} \mathbb{E}_{ X_{\phi} \sim Q }\left[  \log \phi \right] 
+>$$
+ >is **concave** in $Q(x_{i})$ since 
+ >- the *entropy is concave* in $Q(X_{i})$ and 
+ >- the second term $$\mathbb{E}_{ X_{\phi} \sim Q }\left[  \log \phi \right] = \sum_{x_{i}}\sum_{x_{-i}}Q(x_{i})\left(\prod_{j\neq i}Q(x_{j})\right)\,\log \phi(x_{i}, x_{-i})$$ is *linear* in $Q(x_{i})$ given all others $Q(x_{-i})$
+>
+>Thus the local optimization has a **unique solution**, which is of the form above. \[End of Proof\]
+
+- [[Methods of Lagrangian Multipliers]]
+
+#### Proof of Corollary
+
 
 
 
 ## Explanation
+
+>[!info]
+>From above corollary, $Q(x_{i})$ is the **geometric average** of the **conditional probability** of $x_i$ *given all other variables* in the domain.
+>- The **weight of average** is based on *probability assignment* of $Q$
+>- In this sense, the *mean field approximation* requires that the **marginal of $X_i$ be “consistent” with the marginals of other variables**.
+>  
+>Note
+>$$
+>P_{\Phi}(x_{i}) = \sum_{x_{-i}}P_{\Phi}(x_{-i})\,P_{\Phi}(x_{i} | x_{-i}) = \mathbb{E}_{ X_{-i} \sim P_{\Phi} }\left[  P_{\Phi}(x_{i} | X_{-i}) \right]
+>$$  
+>- This is **arithmetic average**, whereas the *mean field approximation* is the **geometric average.**
+>- Also this expectation is with respect to $P_{\Phi}$ while the *mean field* uses the approximation $Q$ 
+
 
 
 
@@ -82,6 +168,7 @@ date of note: 2024-05-12
 - [[Kullback-Leibler Divergence]]
 - [[Cross-Entropy Loss Function]]
 - [[Maximum Entropy Learning]]
+- [[Maximum Entropy Learning of Clique Tree PGM]]
 
 - [[Bayesian Network on Directed Acyclic Graph]]
 - [[Markov Network on Undirected Graph]]

@@ -25,16 +25,9 @@ date of note: 2024-05-12
 
 ![[Maximum Entropy Learning of Clique Tree PGM#^f81f88]]
 
->[!important] Definition
->We can define the **evidence lower bound (ELBO)** or the **energy functional** for the variational distribution $\mathcal{Q}$ 
->$$
->\begin{align*}
->\mathcal{L}(\mathcal{Q}, \Phi; \mathcal{X}) &:= \mathbb{E}_{ \mathcal{Q} }\left[ \log \left(\frac{\hat{\mathcal{P}}_{\Phi}(\mathcal{X})}{\mathcal{Q}(\mathcal{X})}\right) \right] \\[5pt]
->&= \mathbb{E}_{ \mathcal{Q} }\left[\log \hat{\mathcal{P}}_{\Phi}(\mathcal{X}) \right]  - \mathbb{E}_{ \mathcal{Q} }\left[  \log \mathcal{Q} \right] \\[10pt]
->&= \sum_{\phi\in \Phi}\mathbb{E}_{ \mathcal{Q} }\left[  \log(\phi) \right] + H_{\mathcal{Q}}(\mathcal{X})
-\end{align*}
->$$
+![[Energy Functional for Probabilistic Graphical Model#^c01c98]]
 
+- [[Energy Functional for Probabilistic Graphical Model]]
 - [[Maximum Entropy Learning of Clique Tree PGM]]
 
 >[!info]

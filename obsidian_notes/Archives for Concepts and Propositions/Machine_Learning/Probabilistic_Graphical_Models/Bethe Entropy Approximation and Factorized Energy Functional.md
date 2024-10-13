@@ -21,8 +21,9 @@ date of note: 2024-05-12
 >[!important]
 >**Name**: Bethe Entropy Approximation and Factorized Energy Functional
 
-![[Maximum Entropy Learning of Clique Tree PGM#^c01c98]]
+![[Energy Functional for Probabilistic Graphical Model#^c01c98]]
 
+- [[Energy Functional for Probabilistic Graphical Model]]
 ### Cluster Tree 
 
 >[!important] Definition

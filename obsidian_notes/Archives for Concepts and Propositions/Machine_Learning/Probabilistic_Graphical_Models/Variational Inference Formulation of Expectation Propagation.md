@@ -26,6 +26,7 @@ date of note: 2024-05-12
 
 - [[Expectation Propagation and Exponential Family Messages]]
 - [[Bethe Variational Inference for Clique Tree]]
+- [[Energy Functional for Probabilistic Graphical Model]]
 
 - [[Sum-Product Expectation Propagation Algorithm]]
 - [[Sum-Product Belief-Update Expectation Propagation Algorithm]]
@@ -40,7 +41,9 @@ date of note: 2024-05-12
 - [[Log-Partition Function of Exponential Family]]
 - [[Convex Conjugate of Log-Partition Function of Exponential Family]]
 
-
+- [[Probabilistic Graphical Models]]
+- [[Markov Network on Undirected Graph]]
+- [[Bayesian Network on Directed Acyclic Graph]]
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]
 - [[Probabilistic Graphical Models by Koller]] pp 442 - 445

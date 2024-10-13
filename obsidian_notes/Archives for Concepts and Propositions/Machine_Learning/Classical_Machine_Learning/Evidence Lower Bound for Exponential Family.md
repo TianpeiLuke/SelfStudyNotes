@@ -59,6 +59,8 @@ date of note: 2024-07-06
 >\mathcal{L}(\eta, \theta; x) = \left\langle  \theta - \eta\,,\, \mu_{x} \right\rangle - A(\theta) + A(\eta\,; x)
 >$$
 
+^5475ea
+
 
 - [[Exponential Family of Distributions]]
 - [[Log-Partition Function of Exponential Family]]
@@ -115,6 +117,8 @@ date of note: 2024-07-06
 - [[Expectation-Maximization Algorithm]]
 - [[Log-Partition Function of Exponential Family]]
 - [[Exponential Family of Distributions]]
+- [[Energy Functional for Probabilistic Graphical Model]]
+
 
 
 - [[Bregman Divergence]]

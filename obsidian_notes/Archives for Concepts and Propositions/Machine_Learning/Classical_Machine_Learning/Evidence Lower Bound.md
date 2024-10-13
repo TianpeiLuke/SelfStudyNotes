@@ -134,6 +134,7 @@ date of note: 2024-07-05
 
 ^afb000
 
+- [[Energy Functional for Probabilistic Graphical Model]]
 
 >[!info]
 >Define $$Q(\theta; \hat{\theta}) := \mathbb{E}_{ p }\left[  \log p_{\theta}(x, z) \;|\; x, \hat{\theta} \right]$$ where the expectation is with respect to  $p(z| x, \hat{\theta} )$. 
@@ -195,7 +196,7 @@ date of note: 2024-07-05
 
 - [[Elements of Statistical Learning by Hastie]] pp 277
 
-- [[Probabilistic Graphical Models by Koller]] pp 881
+- [[Probabilistic Graphical Models by Koller]] pp 385, 881
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 569 - 578
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 284, 347, 434
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]]

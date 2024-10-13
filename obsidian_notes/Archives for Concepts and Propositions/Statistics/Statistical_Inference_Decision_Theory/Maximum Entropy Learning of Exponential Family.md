@@ -40,6 +40,8 @@ date of note: 2024-06-24
 >and $T(x) = (T_{1}(x) \,{,}\ldots{,}\,T_{d}(x))$ and $\eta = (\eta_{1} \,{,}\ldots{,}\,\eta_{i}) \in \mathbb{R}^d$ and 
 >$$A(\eta) = \log \int_{\mathcal{X}} \exp \left(\left\langle  \eta\,,\, T(x) \right\rangle \right)d\mathcal{P}_{0}(x)  = \log \mathbb{E}_{ \mathcal{P}_{0} }\left[ \exp \left(\left\langle  \eta\,,\, T(X) \right\rangle\right) \right].$$
 
+^e73c44
+
 - [[Kullback-Leibler Divergence]]
 - [[Maximum Entropy Learning]]
 - [[Exponential Family of Distributions]]

@@ -162,6 +162,7 @@ date of note: 2024-06-01
 
 #### Variational Inference on Clique Tree
 
+- [[Energy Functional for Probabilistic Graphical Model]]
 - [[Bethe Entropy Approximation and Factorized Energy Functional]]
 - [[Bethe Variational Inference for Clique Tree]]
 - [[Stationary Point of Bethe Variational Inference Problem]]
