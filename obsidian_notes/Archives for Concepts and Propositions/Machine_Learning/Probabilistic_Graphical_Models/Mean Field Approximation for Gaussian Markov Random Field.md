@@ -75,14 +75,14 @@ date of note: 2024-05-12
 >$$
 >where $(\theta, \Theta)$ are *canonical parameters* of target distribution $\mathcal{N}(x; \theta, \Theta).$
 >- Note that $$\Theta_{i,j} = 0, \quad \forall (i,j)\not\in \mathcal{E}.$$
->- This is a **quadratic optimization problem** with **log-barrier term.** $$\max_{\mu, E} \left\langle  \theta\,,\,  \mu  \right\rangle + \frac{1}{2}\mu^{T}(\Theta - \text{diag}(\Theta))\mu + \left\langle  \text{diag}(\Theta)\,,\, \text{diag}(E) \right\rangle - \phi(\text{diag}(E - \mu \mu^{T}))$$
+>- This is a **quadratic optimization problem** with **log-barrier term.** $$\max_{\mu, E} \left\langle  \theta\,,\,  \mu  \right\rangle + \frac{1}{2}\mu^{T}(\Theta - \text{diag}(\Theta))\mu + \text{tr}(\Theta\,\text{diag}(E)) - \phi(\text{diag}(E - \mu \mu^{T}))$$
 >
 >The *necessary condition* for optimal solution of above problem satisfies the following equations:
 >$$
 >\left\{
 >\begin{align*}
-> \frac{1}{2(E_{ii} - \mu_{i}^2)} &= - \Theta_{ii}, \quad i=1\,{,}\ldots{,}\,d\\[5pt]
-> \frac{\mu_{i}}{2(E_{ii} - \mu_{i}^2)} &= \theta_{i} + \sum_{j\in N(i)} \Theta_{ij}\mu_{j}, \quad i=1\,{,}\ldots{,}\,d\
+> \frac{1}{(E_{ii} - \mu_{i}^2)} &= - \Theta_{ii}, \quad i=1\,{,}\ldots{,}\,d\\[5pt]
+> \frac{\mu_{i}}{(E_{ii} - \mu_{i}^2)} &= \theta_{i} + \sum_{j\in N(i)}  \Theta_{ij}\mu_{j}, \quad i=1\,{,}\ldots{,}\,d\
 >\end{align*}
 >\right.
 >$$
@@ -104,8 +104,8 @@ date of note: 2024-05-12
 >Take the derivative with respect to both $\mu$ and $E_{ii}$
 >$$
 >\begin{align*}
-> \nabla_{\mu_{i}} L &= \theta_{i} + \frac{1}{2}\Theta_{i,j}\mu_{j}\,\mathbb{1}\{ j\in N(i) \} + \frac{1}{2} \frac{1}{E_{ii} - \mu_{i}^2}(-2\mu_{i}) = 0, \quad i=1\,{,}\ldots{,}\,d\\[5pt]
-> \nabla_{E_{ii}} L &= \Theta_{ii} + \frac{1}{2} \frac{1}{E_{ii} - \mu_{i}^2} = 0, \quad i=1\,{,}\ldots{,}\,d\\[5pt]
+> \nabla_{\mu_{i}} L &= \theta_{i} + \Theta_{i,j}\mu_{j}\,\mathbb{1}\{ j\in N(i) \} + \frac{1}{2} \frac{1}{E_{ii} - \mu_{i}^2}(-2\mu_{i}) = 0, \quad i=1\,{,}\ldots{,}\,d\\[5pt]
+> \nabla_{E_{ii}} L &= \frac{1}{2}\Theta_{ii} + \frac{1}{2} \frac{1}{E_{ii} - \mu_{i}^2} = 0, \quad i=1\,{,}\ldots{,}\,d\\[5pt]
 >\end{align*}
 >$$
 
@@ -125,9 +125,9 @@ date of note: 2024-05-12
 >- *Require*: *Initial mean parameters*  $\mu_{i}^{0}$ and $E_{ii}^{0}$ for all $i=1\,{,}\ldots{,}\,d$
 >- For $t=1\,{,}\ldots{,}\,$ until convergence:
 >	- For $i=1\,{,}\ldots{,}\,d$:
->		- Update **mean parameter** $$\mu_{i}^{(t)} = - \frac{1}{\Theta_{ii}}\left(\theta_{t} + \sum_{j\in N(i), j<i}\Theta_{i,j}\,\mu_{j}^{(t)} + \sum_{j\in N(i),\, j > i}\Theta_{i,j}\,\mu_{j}^{(t-1)}\right)$$ 
+>		- Update **mean parameter** $$\mu_{i}^{(t)} = - \frac{1}{\Theta_{ii}}\left(\theta_{t} + \sum_{j\in N(i), j<i}\Theta_{i,j}\,\mu_{j}^{(t)} + \sum_{j\in N(i),\, j > i}\Theta_{i,j}\,\mu_{j}^{(t-1)}\right)$$
 >- When converges:
->	- Update the **second moment parameter** $$E_{ii} = -\frac{1}{2\Theta_{ii}} + \mu_{i}^2.$$
+>	- Update the **second moment parameter** $$E_{ii} = -\frac{1}{\Theta_{ii}} + \mu_{i}^2.$$
 >- Return the *mean parameters of variational distribution* $(\mu_{i}, E_{ii})_{i=1}^{d}$.
 
 - [[Gauss-Seidel Iteration for Sparse Linear System]]
@@ -142,10 +142,10 @@ date of note: 2024-05-12
 >
 >In essence, it solves $\mu$ via the **sparse normal system**
 >$$
->  \Theta \mu = - \theta
+>  \Theta \mu = - \theta 
 >$$
 >- Note that this fits the mapping between mean and canonical parameters for the target distribution $P_{\Phi}$. That is, for the  $P_{\Phi} := \mathcal{N}(\theta, \Theta)$, the **true mean parameter** should be given by $$\mu^{P} = -\Theta^{-1}\theta$$
->- In other word, the **mean field approximation** $\mu^{Q}$ *guarantee* to converge to the **true mean** $\mu^{P}$ i.e.  $$\mu^{Q} \rightarrow \mu^{P} := -\Theta^{-1}\theta$$ if $\Theta$ is *strictly diagonally dominant*
+>- In other word, the **mean field approximation** $\mu^{Q}$ *guarantee* to converge to the **true mean** $\mu^{P}$ i.e.  $$\mu^{Q} \rightarrow \mu^{P} := \Theta^{-1}\theta$$ if $\Theta$ is *strictly diagonally dominant*
 
 ^b5abb1
 

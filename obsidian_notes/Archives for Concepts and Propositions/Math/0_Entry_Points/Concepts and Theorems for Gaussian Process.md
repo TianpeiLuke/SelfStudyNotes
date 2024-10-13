@@ -161,6 +161,7 @@ date of note: 2024-05-30
 - [[Gaussian Bayesian Network]]
 - [[Gaussian Graphical Model]]
 - [[Gaussian Belief Propagation]]
+- [[Mean Field Approximation for Gaussian Markov Random Field]]
 - [[Inverse Covariance Estimation]]
 - [[Partial Correlation]]
 - [[Sparse Inverse Covariance Estimation for GGM with Known Structure]]
