@@ -47,7 +47,7 @@ year: 2016
 - [[Regularized Loss Minimization]]
 
 - [[Combinatorial Optimization Problem]]
-- [[Integer Programming Problem]]
+- [[Integer Linear Optimization Problem and Integer Programming]]
 
 - [[Optimal Assignment Problem and Monge Problem]]
 - [[Optimal Transport in Discrete Setting]]
