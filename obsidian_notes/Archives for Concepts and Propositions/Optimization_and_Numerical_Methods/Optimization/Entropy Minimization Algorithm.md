@@ -41,13 +41,25 @@ date of note: 2024-05-12
 
 
 
+## Bregman Divergence Minimization
+
+![[Bregman Divergence Minimization#^745bcc]]
+
+- [[Bregman Divergence Minimization]]
+- [[Bregman Divergence]]
+
+
+## Optimal Transport
+
+- [[Entropic Regularized Optimal Transport in Discrete Settings]]
+- [[Sinkhorn Algorithm for Entropy Regularized Optimal Transport]]
 
 
 -----------
 ##  Recommended Notes and References
 
-- [[Bregman Divergence]]
-- [[Bregman Projection]]
+
+
 - [[Kullback-Leibler Divergence]]
 - [[Shannon Entropy]]
 - [[Phi Entropy Functional]]

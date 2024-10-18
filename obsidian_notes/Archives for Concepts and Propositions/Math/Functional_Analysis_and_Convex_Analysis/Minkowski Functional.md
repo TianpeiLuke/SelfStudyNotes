@@ -31,6 +31,8 @@ date of note: 2024-05-15
 >$$  
 >defined on $X^{*}$ is called **the support functional** of $K$. 
 
+^72ea74
+
 >[!info]
 >For any $x \in X$, $\rho_{K}(x) < + \infty$ if and only if 
 >$$

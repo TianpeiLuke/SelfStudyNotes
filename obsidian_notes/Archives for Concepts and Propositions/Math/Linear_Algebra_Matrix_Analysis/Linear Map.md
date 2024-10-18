@@ -34,6 +34,8 @@ date of note: 2024-05-15
 > \end{align*}
 >$$
 
+^ece3c6
+
 - [[Vector Space over a Field]]
 - [[Bounded Linear Operator and Norm of Operator]]
 - [[Bounded Linear Functional]]

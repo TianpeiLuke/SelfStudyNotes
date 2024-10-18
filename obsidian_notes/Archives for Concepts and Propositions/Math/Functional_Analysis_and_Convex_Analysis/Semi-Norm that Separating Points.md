@@ -29,6 +29,8 @@ date of note: 2024-05-04
 >     
 >then $q$ is a **norm**.
 
+^886fb7
+
 - [[Norm and Normed Space]]
 
 >[!important] Definition
