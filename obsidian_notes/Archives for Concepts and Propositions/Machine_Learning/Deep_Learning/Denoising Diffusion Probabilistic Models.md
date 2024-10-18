@@ -24,9 +24,8 @@ date of note: 2024-05-12
 
 >[!important] Definition
 > The **denoising diffusion probabilistic model (DDPM)** consists of two processes:
-> - The **forward pass** corresponds to a **multi-step noise process** i.e. a **diffusion process**
-> - The **reverse pass** learns a neural network that invert the corruption
-
+> - The **forward pass** corresponds to a *multi-step noise process* i.e. a **diffusion process**
+> - The **reverse pass** learns a neural network that invert the noise process, which is used as the *generator* of new samples.
 
 
 - [[Diffusion Process]]
@@ -44,12 +43,19 @@ date of note: 2024-05-12
 >where 
 >- $z_{0} = x$ is *input data*;
 >- $\epsilon_{t} \sim \mathcal{N}(0, I)$
+>- The parameter $$\beta_{1} < \beta_{2} \,{<}\ldots{<}\,\beta_{T} < 1$$
 >- The *Markov transition kernel* is defined by conditional Gaussian distribution $$K(z_{t-1}, z_{t}) = \mathcal{N}(z_{t}\;|\; \sqrt{ 1 - \beta_{t} }\,z_{t-1},\; \beta_{t}I)$$
 >- This is called the **forward pass**
 
 - [[Gaussian Process]]
 - [[Gaussian Random Vector]]
 - [[Markov Transition Kernel and Transition Function]]
+
+### Diffusion Kernel
+
+
+
+
 
 ### Reverse Pass
 

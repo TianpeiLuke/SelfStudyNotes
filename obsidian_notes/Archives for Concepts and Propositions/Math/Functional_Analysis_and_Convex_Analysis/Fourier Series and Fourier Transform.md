@@ -88,6 +88,11 @@ date of note: 2024-06-05
 - [[Homeomorphism]]
 - [[Automorphism between Groups]]
 
+### Compare to Taylor Series
+
+- [[Taylor Series for Local Polynomial Approximation of Smooth Function]]
+
+
 ## Fourier Inversion Theorem
 
 >[!important]

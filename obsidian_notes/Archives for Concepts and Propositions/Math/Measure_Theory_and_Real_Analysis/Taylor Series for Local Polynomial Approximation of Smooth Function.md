@@ -56,6 +56,9 @@ date of note: 2024-10-17
 ## Explanation
 
 
+### Compare to Fourier Series
+
+- [[Fourier Series and Fourier Transform]]
 
 
 
