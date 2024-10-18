@@ -71,6 +71,7 @@ date of note: 2024-05-12
 - [[Conjugate Gradient Algorithm Nonlinear Convergence Analysis]]
 - [[Conjugate Gradient Algorithm Lanczos]]
 - [[Newton-Conjugate Gradient and Inexact Newton Method]]
+- [[Newton-Lanczos Method for Large Scale Optimization]]
 
 ### Polyhedral Approximation Methods
 
@@ -106,8 +107,9 @@ date of note: 2024-05-12
 
 - [[Generalized Proximal Method]]
 - [[Entropy Minimization Algorithm]]
-- [[Bregman Distance Minimization]]
+- [[Bregman Divergence Minimization]]
 - [[Majorization-Minimization Algorithm]]
+- [[Difference of Convex Optimization and Concave-Convex Procedure]]
 - [[Mirror Descent Algorithm]]
 
 ### Incremental Algorithm

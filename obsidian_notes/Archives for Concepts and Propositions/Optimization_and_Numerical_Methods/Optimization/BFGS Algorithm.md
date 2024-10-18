@@ -6,7 +6,6 @@ tags:
 keywords:
   - BFGS_algorithm
 topics:
-  - optimization
   - optimization/algorithm
 name: BFGS Algorithm
 date of note: 2024-05-12
@@ -88,8 +87,7 @@ date of note: 2024-05-12
 >$$
 >\begin{align*}
 > \min_{B \in \mathbb{R}^{n\times n} } &\lVert B - B_{k} \rVert_{W}^2 \\
-> \text{s.t. }&\; B\,s_{k} = y_{k} \\
-> &\; B = B^T
+> \text{s.t. }&\; B\,s_{k} = y_{k}
 >\end{align*}
 >$$
 >This is similar to a **least equation estimation** problem.

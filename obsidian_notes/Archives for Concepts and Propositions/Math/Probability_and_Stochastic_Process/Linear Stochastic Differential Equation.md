@@ -94,7 +94,9 @@ date of note: 2024-06-11
 - [[Ornstein–Uhlenbeck Process]]
 
 
+## Explicit Solution
 
+- [[Linear Stochastic Differential Equation Explicit Solution]]
 
 -----------
 ##  Recommended Notes and References

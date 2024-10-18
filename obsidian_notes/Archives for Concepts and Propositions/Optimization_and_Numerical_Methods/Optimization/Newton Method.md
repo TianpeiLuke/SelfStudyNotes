@@ -55,6 +55,7 @@ date of note: 2024-05-12
 
 ^b393c2
 
+- [[Taylor Series for Local Polynomial Approximation of Smooth Function]]
 - [[Line Search Strategies for Optimal Stepsize]]
 - [[Normal Equations and Newton System of Equations]]
 - [[Quadratic Programming]]

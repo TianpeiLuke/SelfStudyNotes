@@ -27,6 +27,8 @@ date of note: 2024-05-04
 >$$ 
 >where the **equality** holds if and only if $x$ and $y$ are linearly dependent.
 
+^11b65d
+
 >[!info]
 >This inequality is fundamental to inner product space since its proof only uses the definition of inner product. 
 

@@ -8,7 +8,7 @@ tags:
 keywords:
   - quadratic_programming
 topics:
-  - optimization
+  - optimization/theory
 name: Quadratic Programming
 date of note: 2024-10-06
 ---

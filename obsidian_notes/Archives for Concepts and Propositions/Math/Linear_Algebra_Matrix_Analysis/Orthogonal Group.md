@@ -25,13 +25,17 @@ date of note: 2024-05-26
 >The set of all $n\times n$ *real orthogonal matrices* together with matrix multiplication forms a group, called the **orthogonal group** of *degree $n$*. It is denoted as $O(n)$.
 >
 >$$
->O(n) := \left\{ \boldsymbol{U} \in M(n, \mathbb{R}): \left\langle  \boldsymbol{Ux}\,,\,\boldsymbol{Uy} \right\rangle  = \left\langle  \boldsymbol{x}\,,\,\boldsymbol{y} \right\rangle, \;\; \forall \boldsymbol{x}, \boldsymbol{y} \in \mathbb{R}^n \right\} 
+>O(n) := \left\{ U \in M(n, \mathbb{R}): \left\langle  Ux\,,\,Uy \right\rangle  = \left\langle  x\,,\,y \right\rangle, \;\; \forall x, y \in \mathbb{R}^n \right\} 
+>$$
+>or
+>$$
+>O(n) := \left\{ U \in M(n, \mathbb{R}): UU^{T} = U^{T}U = I_{n} \right\} 
 >$$
 
-- [[Matrix]]
 - [[Unitary and Orthogonal Transformation]]
 - [[Orthogonality in Inner Product Space]]
 - [[Isometry and Isometric isomorphism]]
+- [[Inner Product Space]]
 
 ## Explanation
 
@@ -102,12 +106,14 @@ date of note: 2024-05-26
 	- [[Special Linear Group]]
 
 - [[Matrix]]
+- [[Linear Map]]
 - [[Determinant of Linear Transformation]]
 - [[Vector Space over a Field]]
+- [[Stiefel Manifold]]
 - [[Lie Group]]
 	- [[Topological Group]]
 	- [[Group]]
 
 
-- [[Matrix Analysis by Horn]]]]
+- [[Matrix Analysis by Horn]]
 - [[Introduction to Smooth Manifolds by Lee]]

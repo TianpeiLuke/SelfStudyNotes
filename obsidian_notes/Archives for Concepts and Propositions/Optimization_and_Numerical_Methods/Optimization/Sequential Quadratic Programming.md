@@ -5,7 +5,9 @@ tags:
   - optimization/algorithm
   - optimization/convex_optimization
 keywords: 
-topics: 
+topics:
+  - optimization/algorithm
+  - optimization/theory
 name: 
 date of note: 2024-10-06
 ---

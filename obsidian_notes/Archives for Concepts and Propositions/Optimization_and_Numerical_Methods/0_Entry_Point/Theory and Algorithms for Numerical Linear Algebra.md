@@ -240,7 +240,7 @@ date of note: 2024-05-12
 
 #### General Case
 
-- [[Classical Iterations to approximate Solution of Sparse Linear System]]
+- [[Iterative Methods to approximate Solution of Large-Scale Linear System]]
 - [[Jacobi Iteration for Sparse Linear System]]
 - [[Gauss-Seidel Iteration for Sparse Linear System]]
 - [[Gauss-Seidel Iteration Convergence Analysis]]

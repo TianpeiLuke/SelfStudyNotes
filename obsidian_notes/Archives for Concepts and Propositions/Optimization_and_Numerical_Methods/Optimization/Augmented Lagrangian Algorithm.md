@@ -108,8 +108,8 @@ date of note: 2024-05-12
 >$$
 >\begin{align*}
 > \inf_{x\in \mathcal{X}} L_{c}(x, \lambda) &= \inf_{x\in \mathcal{X}} \left\{  f(x) + \left\langle  \lambda\,,\, Ax - b \right\rangle + \frac{c}{2}\lVert Ax - b \rVert^2  \right\}  \\
-> &= \inf_{u \in \mathbb{R}^{m}} \inf \left\{  f(x) + \left\langle  \lambda\,,\, u\right\rangle + \frac{c}{2}\lVert u\rVert^2: x\in \mathcal{X},\; Ax - b = u  \right\}\\
-> &= \inf_{u \in \mathbb{R}^{m}}\left\{ \inf \left\{  f(x): x\in \mathcal{X},\; Ax - b = u  \right\} + \left\langle  \lambda\,,\, u\right\rangle + \frac{c}{2}\lVert u\rVert^2 \right\}\\
+> &= \inf_{u \in \mathbb{R}^{m}} \inf_{x} \left\{  f(x) + \left\langle  \lambda\,,\, u\right\rangle + \frac{c}{2}\lVert u\rVert^2: x\in \mathcal{X},\; Ax - b = u  \right\}\\
+> &= \inf_{u \in \mathbb{R}^{m}}\left\{ \inf_{x} \left\{  f(x): x\in \mathcal{X},\; Ax - b = u  \right\} + \left\langle  \lambda\,,\, u\right\rangle + \frac{c}{2}\lVert u\rVert^2 \right\}\\
 > &= \inf_{u \in \mathbb{R}^{m}}\left\{ p(u) + \left\langle  \lambda\,,\, u\right\rangle + \frac{c}{2}\lVert u\rVert^2 \right\}\\
 >\end{align*}
 >$$

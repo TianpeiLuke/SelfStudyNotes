@@ -39,6 +39,7 @@ date of note: 2024-05-11
 ### Convex Function
  
 - [[Convex Function]]
+- [[Necessary and Sufficient Conditions for Convex Function]]
 - [[Operations that Preserve Convexity]]
 - [[Perspective Function]]
 - [[Jensen Inequality]]

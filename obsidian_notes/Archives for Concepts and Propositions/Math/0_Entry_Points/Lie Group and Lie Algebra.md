@@ -20,7 +20,7 @@ date of note: 2024-05-06
 - [[Special Linear Group]]
 - [[Orthogonal Group]]
 - [[Unitary Group]]
-- [[Special Orthogonal Group]]
+- [[Special Orthogonal Group and Special Unitary Group]]
 - [[Lie Bracket of Vector Fields]]
 - [[Lie Derivative of Vector Field]]
 

@@ -83,7 +83,7 @@ date of note: 2024-07-06
 
 - [[Bregman Divergence]]
 - [[Bregman Projection]]
-- [[Bregman Distance Minimization]]
+- [[Bregman Divergence Minimization]]
 - [[Kullback-Leibler Divergence]]
 
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]]

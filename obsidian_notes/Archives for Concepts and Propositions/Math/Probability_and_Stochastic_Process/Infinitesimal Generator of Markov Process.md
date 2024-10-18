@@ -70,7 +70,7 @@ date of note: 2024-06-11
 
 - [[Infinitesimal Generator of Brownian Motion and Laplacian]]
 - [[Infinitesimal Generator of Stochastic Differential Equation]]
-
+- [[Positive Semidefinite Operator]]
 
 - [[Semigroup associated with Transition Function]]
 - [[Markov Transition Kernel and Transition Function]]

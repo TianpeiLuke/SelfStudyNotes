@@ -44,6 +44,7 @@ date of note: 2024-05-08
 -----------
 ##  Recommended Notes and References
 
+- [[Minkowski Functional]]
 - [[Banach Space]]
 - [[Dual Normed Space and Dual Banach Space]]
 - [[Bounded Linear Functional]]

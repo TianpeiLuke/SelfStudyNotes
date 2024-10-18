@@ -91,10 +91,12 @@ date of note: 2024-10-06
 >$$
 >Thus the finding the direction $d_{t} = d$ is the *solution of linear system* $$\nabla^2 f(x_{t})\,d =  - \nabla f(x_{t}) \iff H_{t}\,d = - g_{t}$$ where
 >-  $H_{t}$ and $g_{t}$ are **Hessian matrix** and **gradient** of $f$ at $x_{t}$ respectively  $$H_{t} := \nabla^2 f(x_{t}), \quad g_{t} := \nabla f(x_{t})$$
->- The linear system $$H_{t}\,d = - g_{t}$$ is a **symmetric positive semidefinite system
+>- The linear system $$H_{t}\,d = - g_{t}$$ is a **symmetric positive semidefinite system**
 
 - [[Gradient Descent Algorithm]]
 - [[Newton Method]]
+- [[Cholesky Factorization of Hermitian Positive Definite Matrices]]
+- [[Lanczos Iteration for Tridiagonal Reduction of Large Matrix]]
 
 ![[Secant Equation and Quasi-Newton Methods#^035e08]]
 
@@ -111,7 +113,7 @@ date of note: 2024-10-06
 ##  Recommended Notes and References
 
 
-
+- [[Taylor Series for Local Polynomial Approximation of Smooth Function]]
 - [[System of Linear Equations or Linear System]]
 - [[Hermitian or Symmetric Matrix]]
 - [[Matrix]]

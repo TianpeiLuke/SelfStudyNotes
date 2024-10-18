@@ -7,7 +7,7 @@ tags:
 keywords:
   - lagrangian_function
 topics:
-  - optimization
+  - optimization/theory
 name: Lagrangian Dual Function
 date of note: 2024-05-12
 ---

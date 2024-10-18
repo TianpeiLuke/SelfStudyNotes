@@ -22,6 +22,8 @@ date of note: 2024-05-15
 
 ## Explanation
 
+### Existence of Complete Orthonormal Basis for Hilbert Space
+
 >[!important] Theorem
 >Every *Hilbert space* $\mathcal{H}$ has an **orthonormal basis**.
 

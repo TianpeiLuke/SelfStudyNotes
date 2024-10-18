@@ -39,7 +39,7 @@ date of note: 2024-05-10
 
 
 >[!important] 
->A *Hilbert-Schmidt operator* $T$ on a *square integrable space* $L^2(M, \mu)$} is a **integral kernel operator**.
+>A *Hilbert-Schmidt operator* $T$ on a *square integrable space* $L^2(M, \mu)$ is a **integral kernel operator**.
 >
 >In other word, for $T \in \mathcal{L}(\mathcal{H})$,  if $$\text{tr}\left( T^{*}T \right) < \infty,$$ then $T$ is a **compact operator**. 
 

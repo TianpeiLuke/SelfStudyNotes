@@ -105,12 +105,16 @@ date of note: 2024-07-24
 >Same as LASSO, if we could solve this problem, then we would obtain a *solution* to the *linear equations* that has the **fewest number of non-zero entries**.
 
 
-### LASSO Estimate as Soft-Thresholding of Least Square Estimate
+### LASSO Estimate with Orthonormal Covariates as Soft-Thresholding
 
 >[!important]
 >Let $\hat{\beta}^{LS}$ be the correspond *least square estimate*, i.e. $$\hat{\beta}^{LS} = \arg\min_{\beta} \lVert X\beta - y \rVert_{2}^2$$
 >
->Assume that $X$ has **orthonormal columns**, i.e. $X^{T}X = I$.
+>Assume that $X$ has **orthonormal columns**, i.e. $X^{T}X = I$. Thus the corresponding LASSO problem becomes
+>$$
+> \min_{\beta} \; \lVert \beta - \hat{y} \rVert_{2}^2 + \lambda\lVert \beta \rVert_{1}  
+>$$
+>where $\hat{y} = X^{T}y = \hat{\beta}^{LS}.$
 >
 >Then the **LASSO estimate** $\hat{\beta}^{LASSO}$ can be obtained by **soft-thresholding** on least square estimate as
 >$$

@@ -43,6 +43,9 @@ date of note: 2024-06-11
 >e^{D\,t} = \sum_{k=0}^{\infty}\frac{D^k\,t^k}{k!}.
 >$$
 
+- [[Matrix Exponential]]
+
+
 >[!important] Proposition (Linear Stochastic Differential Equations in Narrow Sense)
 >The **solution** of 
 >$$
@@ -149,7 +152,7 @@ date of note: 2024-06-11
 >The solution contains two **additive** terms.
 
 - [[Langevin Equation]]
-
+- [[Matrix Exponential]]
 
 >[!example]
 >Consider a **homoegeneous**  *linear SDE* with **multiplicative noise**
@@ -168,6 +171,7 @@ date of note: 2024-06-11
 >$$
 >We see that the solution is a **multiplicative scaling** to $X_{0}.$
 
+- [[Matrix Exponential]]
 ## Separation of Variables
 
 >[!important]
@@ -279,6 +283,7 @@ date of note: 2024-06-11
 - [[Contraction Function]]
 - [[Contraction Map Principle]]
 - [[Borel-Cantelli Lemma]]
+- [[Matrix Exponential]]
 
 
 - [[Introduction to Stochastic Differential Equations by Evans]]

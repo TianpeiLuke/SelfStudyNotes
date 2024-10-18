@@ -325,7 +325,13 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
+
 - [[Back-Propagation Algorithm]]
+- [[Newton Method]]
+- [[Newton-Conjugate Gradient and Inexact Newton Method]]
+- [[Newton-Lanczos Method for Large Scale Optimization]]
+- [[Conjugate Gradient Algorithm Nonlinear]]
+
 
 - [[Numerical Optimization by Nocedal]] pp 204
 - [[Nonlinear Programming by Bertsekas]]

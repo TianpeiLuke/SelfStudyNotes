@@ -6,7 +6,7 @@ tags:
 keywords:
   - dual_optimization
 topics:
-  - optimization
+  - optimization/theory
 name: Lagrange Dual Problem
 date of note: 2024-05-17
 ---

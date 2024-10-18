@@ -21,6 +21,8 @@ date of note: 2024-06-24
 >[!important]
 >**Name**: Maximum Entropy Learning of Exponential Family
 
+### Exponential Family as Solution of Maximum Entropy Learning 
+
 >[!important] Definition
 >Let $(\mathcal{X}, \mathscr{F}, \mathcal{P}_{0})$ be a *probability space* and $T_{i}: \mathcal{X} \to \mathbb{R}$ is a *measurable function* for $i=1 \,{,}\ldots{,}\,d$. 
 >
@@ -121,6 +123,51 @@ date of note: 2024-06-24
 
 
 
+## Maximum Entropy Learning of Exponential Family 
+
+![[Kullback-Leibler Divergence for Exponential Family#^1737d6]]
+
+- [[Kullback-Leibler Divergence for Exponential Family]]
+
+>[!important]
+>Let $(\mathcal{X}, \mathscr{F}, \nu)$ be a measure space, and let $\mathscr{P}_{\Theta}$ be an exponential family containing *parametric models* that are dominated by a *common* $\sigma$-finite measure $\nu$. 
+>
+>Let $P_{1}, P_{2}$ be distributions from the same exponential family $\mathscr{P}$, where 
+>- $P_{1} = P_{\mu^1}$ with *mean parameter* $\mu^1\in \mathcal{M}$
+>- and $P_{2} = P_{\theta^2}$ with *canonical parameter* $\theta^{2} \in \Theta$
+>
+>The *KL-divergence* from $P_{2}$ to $P_{1}$ can be formulated as the mixed-form 
+>$$
+>\mathbb{KL}\left( P_{1} \left\|\right. P_{2} \right) = A(\theta^2) - \left\langle \mu^1 , \theta^2 \right\rangle + A^{*}(\mu^1)
+>$$ 
+>where
+>- $A(\theta^2)$ is the *log-partition function* of distribution $P_{2}$
+>- $A^{*}(\mu^1)$ is the *dual of log-partition function*, i.e. the *negative entropy* of distribution $P_{1}$
+>  
+>The **maximum entropy learning** for $P_{1}$ given prior distribution $P_{2}$ under mean constraint set $\mathcal{M}_{2}$ is formulated as 
+>$$
+>\begin{align*}
+> \min_{\mu^1}\;&\; \mathbb{KL}\left( P_{1} \left\|\right. P_{2} \right) \equiv A(\theta^2) - \left\langle \mu^1 , \theta^2 \right\rangle + A^{*}(\mu^1) \\[5pt]
+> \text{s.t. }&\;\; \mu^{1} \in \mathcal{M}_{2} 
+>\end{align*}
+>$$
+>or equivalently,
+>$$
+>\begin{align*}
+> \max_{\mu^1}\;&\; \left\langle \mu^1 , \theta^2 \right\rangle -A^{*}(\mu^1) \\[5pt]
+> \text{s.t. }&\;\; \mu^{1} \in \mathcal{M} 
+>\end{align*}
+>$$
+>where the *mean parameter space*
+>$$
+>\mathcal{M} := \left\{ \mu: \exists\,p,\quad \mathbb{E}_{p}\left[  \phi_{k}\right] = \mu_{k},\; k\in I  \right\} 
+>$$
+
+- [[Exponential Family of Distributions]]
+- [[Log-Partition Function of Exponential Family]]
+- [[Convex Conjugate of Log-Partition Function of Exponential Family]]
+- [[Maximum Entropy Learning for Approximate Inference in PGM]]
+- [[Mean Field Approximation for Exponential Family]]
 
 
 -----------
@@ -129,7 +176,7 @@ date of note: 2024-06-24
 - [[Marginal Polytope and Local Consistent Polytope]]
 - [[Polyhedron and Polytope]]
 
-- [[Exponential Family of Distributions]]
+
 
 
 - [[Likelihood Function]]

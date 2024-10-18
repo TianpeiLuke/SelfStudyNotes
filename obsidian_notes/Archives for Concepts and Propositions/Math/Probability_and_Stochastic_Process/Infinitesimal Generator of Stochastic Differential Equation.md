@@ -67,6 +67,7 @@ date of note: 2024-06-11
 ^ee7d61
 
 - Oksendal, B. (2013). _Stochastic differential equations: an introduction with applications_. Springer Science & Business Media pp 126
+- [[Positive Semidefinite Operator]]
 - [[Time Homogeneous Diffusion and SDE]]
 - [[Einstein Summation Convention]]
 - [[Partial Differential Equations]]
@@ -86,6 +87,7 @@ date of note: 2024-06-11
 ^1bd4b1
 
 - [[Introduction to Stochastic Differential Equations by Evans]] pp 115
+- [[Positive Semidefinite Operator]]
 
 
 

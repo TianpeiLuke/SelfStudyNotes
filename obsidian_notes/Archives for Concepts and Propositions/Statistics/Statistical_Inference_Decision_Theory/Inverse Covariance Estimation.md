@@ -42,8 +42,7 @@ date of note: 2024-05-12
 >The task of **inverse covariance estimation** is to find the *maximum likelihood estimation* of $\Theta\in \mathcal{S}_{++}^{n}$, i.e.
 >$$
 >\begin{align*}
-> \min_{\Theta \in \mathbb{R}^{d\times d}} \;&\; \frac{1}{2}x^T\,\Theta\,x - \frac{1}{2}\log \det|\Theta| \\[5pt]
-> \text{s.t. }\;&\;\Theta \succ 0
+> \min_{\Theta \in \mathbb{R}^{d\times d}} \;&\; \frac{1}{2}x^T\,\Theta\,x - \frac{1}{2}\log \det|\Theta| 
 >\end{align*}
 >$$
 >where
@@ -75,8 +74,7 @@ date of note: 2024-05-12
 >The **inverse covariance estimation** is to find the *maximum likelihood estimation* of $\Theta\in \mathcal{S}_{++}^{d}$ given $n$ i.i.d. samples $X\in \mathbb{R}^{n\times d}$ by solving the following *convex optimization problem*
 >$$
 >\begin{align*}
-> \min_{\Theta \in \mathbb{R}^{d\times d}} \;&\; \frac{1}{2}\text{tr}\left(S\,\Theta\right) - \frac{1}{2}\log \det \Theta \\[5pt]
-> \text{s.t. }\;&\;\Theta = \Theta^{T}
+> \min_{\Theta \in \mathbb{R}^{d\times d}} \;&\; \frac{1}{2}\text{tr}\left(S\,\Theta\right) - \frac{1}{2}\log \det \Theta 
 >\end{align*}
 >$$
 

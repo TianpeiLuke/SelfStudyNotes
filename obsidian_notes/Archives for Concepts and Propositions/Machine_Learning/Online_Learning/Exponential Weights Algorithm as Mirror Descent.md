@@ -81,7 +81,7 @@ date of note: 2024-08-06
 
 - [[Mirror Descent Algorithm]]
 - [[Generalized Proximal Method]]
-- [[Bregman Distance Minimization]]
+- [[Bregman Divergence Minimization]]
 
 
 - Blog [Gradient Descent as Exponential Weights](https://blog.wouterkoolen.info/GDasEW/post.html)

@@ -8,7 +8,7 @@ keywords:
   - linear_optimization
   - primal_dual_interior_point_method
 topics:
-  - optimization
+  - optimization/algorithm
 name: Primal-Dual Interior Point Method for Linear Optimization
 date of note: 2024-05-12
 ---

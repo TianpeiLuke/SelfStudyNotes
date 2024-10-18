@@ -15,7 +15,7 @@ date of note: 2024-05-12
 ## Concept Definition
 
 >[!important]
->**Name**: Independent Component Analysis
+>**Name**: Nonnegative Matrix Factorization
 
 >[!important] Definition
 

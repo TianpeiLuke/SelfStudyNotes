@@ -56,10 +56,12 @@ date of note: 2024-09-27
 >	- [[KKT Matrix and KKT System for Optimization with Equality Constraints]]
 >	- [[Least Square Estimation]]
 >	- [[Normal Equations and Newton System of Equations]]
+>	- [[Conjugate Gradient Algorithm Linear]]
 >- **Newton’s method** is the next level in the hierarchy. We can think of Newton’s method as a technique for solving a linear equality constrained optimization problem, with *twice differentiable objective*, by reducing it to *a sequence of linear equality constrained quadratic problems*.
 >	- [[Newton Method]]
 >	- [[Secant Equation and Quasi-Newton Methods]]
 >	- [[BFGS Algorithm]]
+>	- [[Conjugate Gradient Algorithm Nonlinear]]
 >- **Interior-point methods** form the next level in the hierarchy: They solve an optimization problem with linear equality and inequality constraints by reducing it to *a sequence of linear equality constrained problems.*
 >	- [[Barrier Method for Convex Optimization]]
 >	- [[Primal-Dual Interior Point Method for Convex Optimization]]
@@ -294,6 +296,14 @@ date of note: 2024-09-27
 - [[Covariant Hessian Tensor]]
 - [[Secant Equation and Quasi-Newton Methods]]
 - [[BFGS Algorithm]]
+
+### Conjugate Gradient 
+
+![[Conjugate Gradient Algorithm Nonlinear#^edc131]]
+
+![[Conjugate Gradient Algorithm Nonlinear#^1642a0]]
+
+- [[Conjugate Gradient Algorithm Nonlinear]]
 
 
 ## Interior Point Methods for Convex Optimization

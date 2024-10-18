@@ -38,6 +38,7 @@ date of note: 2024-07-02
 
 ^85e2d7
 
+- [[Taylor Series for Local Polynomial Approximation of Smooth Function]]
 - [[Unconstrained Local Minimization]]
 - [[Necessary and Sufficient Condition for Local Minimum of Smooth Function]]
 

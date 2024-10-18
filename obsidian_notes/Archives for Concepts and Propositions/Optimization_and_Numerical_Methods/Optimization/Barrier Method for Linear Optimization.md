@@ -8,7 +8,7 @@ keywords:
   - barrier_method
   - linear_optimization
 topics:
-  - optimization
+  - optimization/algorithm
 name: Barrier Method for Linear Optimization
 date of note: 2024-05-12
 ---

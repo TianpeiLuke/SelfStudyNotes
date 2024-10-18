@@ -54,6 +54,7 @@ date of note: 2024-05-12
 - [[Approximation Method for Optimization]]
 - [[Proximal Algorithm]]
 - [[Cutting Plane Methods and Outer Linearization]]
+- [[Taylor Series for Local Polynomial Approximation of Smooth Function]]
 
 - [[Polyhedron and Polytope]]
 

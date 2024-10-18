@@ -74,6 +74,7 @@ date of note: 2024-06-07
 >X(t) = e^{-\beta\,t}\,X_{0} + \sigma\,\int_{0}^{t}e^{-\beta (t-s)}\,dW(s)
 >$$
 
+- [[Matrix Exponential]]
 - [[Linear Stochastic Differential Equation Explicit Solution]]
 
 >[!info]

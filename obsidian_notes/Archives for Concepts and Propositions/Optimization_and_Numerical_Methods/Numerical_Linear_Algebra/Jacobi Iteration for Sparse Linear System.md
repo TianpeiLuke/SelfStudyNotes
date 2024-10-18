@@ -15,7 +15,7 @@ date of note: 2024-09-21
 >[!important]
 >**Name**: Jacobi Iteration for Sparse Linear System
 
-![[Classical Iterations to approximate Solution of Sparse Linear System#^39280e]]
+![[Iterative Methods to approximate Solution of Large-Scale Linear System#^39280e]]
 
 ![[System of Linear Equations or Linear System#^818e89]]
 
@@ -41,7 +41,7 @@ date of note: 2024-09-21
 ^2e75bb
 
 - [[System of Linear Equations or Linear System]]
-- [[Classical Iterations to approximate Solution of Sparse Linear System]]
+- [[Iterative Methods to approximate Solution of Large-Scale Linear System]]
 
 >[!important] Definition
 >Consider the *linear system* $$Ax = b$$ where $A = [a_{i,j}] \in M_{m,n}(\mathbb{C})$,  $b = [b_{i}]\in \mathbb{C}^{m}$. 
@@ -76,7 +76,7 @@ date of note: 2024-09-21
 ##  Recommended Notes and References
 
 
-- [[Classical Iterations to approximate Solution of Sparse Linear System]]
+- [[Iterative Methods to approximate Solution of Large-Scale Linear System]]
 - [[Gauss-Seidel Iteration for Sparse Linear System]]
 
 - [[System of Linear Equations or Linear System]]

@@ -60,9 +60,28 @@ date of note: 2024-05-12
 >	- $k \leftarrow k + 1.$
 >	
 
-
+^1642a0
 
 ## Explanation
+
+>[!info]
+>For nonlinear objective function $f$, consider the approximation of $f$ by its **second-order Taylor expansion**
+>$$
+>f(x_{k} + \alpha d) \approx f(x_{k}) + \alpha\left\langle \nabla f(x_{k}) ,  d\right\rangle + \frac{\alpha^2}{2}d^{T}\nabla^2 f(x_{k}) d
+>$$
+>where the RHS achieve optimal value with $d$ satisfying the **Newton equation**
+>$$
+> \alpha \nabla^2 f(x_{k}) d = - \nabla f(x_{k})
+>$$ 
+>Then the **conjugate gradient method** iteratively solves above **Newton equation**. 
+
+^edc131
+
+- [[Normal Equations and Newton System of Equations]]
+- [[Newton Method]]
+- [[Newton-Conjugate Gradient and Inexact Newton Method]]
+- [[Conjugate Gradient Algorithm Lanczos]]
+
 
 >[!info]
 >- For **gradient methods**, the direction $d_{k}$ depends on the *gradient* of objective only $$d_{k} = - D_{k}\nabla f(x_{k})$$
@@ -78,6 +97,39 @@ date of note: 2024-05-12
 ## Convergence Analysis
 
 - [[Conjugate Gradient Algorithm Nonlinear Convergence Analysis]]
+
+
+## Equivalence to BFGS Algorithm
+
+
+- [[BFGS Algorithm]]
+- Shanno, D. F. (1978). Conjugate gradient methods with inexact searches. _Mathematics of operations research_, _3_(3), 244-256.
+- Shanno, D. F. (1978). On the convergence of a new conjugate gradient algorithm. _SIAM Journal on Numerical Analysis_, _15_(6), 1247-1257.
+- Andrei, N. (2007). Scaled conjugate gradient algorithms for unconstrained optimization. _Computational Optimization and Applications_, _38_(3), 401–416. [https://doi.org/10.1007/s10589-007-9055-7](https://doi.org/10.1007/s10589-007-9055-7)
+
+
+## Scaled Conjugate Gradient
+
+>[!info]
+>Instead of solving *Newton's equations*
+>$$
+> \alpha \nabla^2 f(x_{k}) d = - \nabla f(x_{k})
+>$$ 
+>the **scaled conjugate gradient** solves the **secant equations** as approximation
+>$$
+> \alpha B_{k} s_{k} = y_{k}
+>$$ 
+>where 
+>-  $s_{k} = x_{k+1} - x_{k}$, and 
+>- $y_{k} = \nabla f(x_{k+1}) - \nabla f(x_{k})$
+>- $B_{k} \approx \nabla^2 f(x_{k})$
+
+
+- [[Secant Equation and Quasi-Newton Methods]]
+- [[BFGS Algorithm]]
+- [[Limited Memory BFGS]]
+- Andrei, N. (2007). Scaled conjugate gradient algorithms for unconstrained optimization. _Computational Optimization and Applications_, _38_(3), 401–416. [https://doi.org/10.1007/s10589-007-9055-7](https://doi.org/10.1007/s10589-007-9055-7)
+
 
 
 

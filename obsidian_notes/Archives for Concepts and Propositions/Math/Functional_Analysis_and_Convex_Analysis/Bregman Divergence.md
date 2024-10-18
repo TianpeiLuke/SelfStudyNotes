@@ -3,6 +3,9 @@ tags:
   - concept
   - math/information_theory
   - math/functional_analysis
+  - optimization/theory
+  - optimization/algorithm
+  - statistics/estimation
 keywords:
   - bregman_divergence
 topics:
@@ -20,24 +23,32 @@ date of note: 2024-05-14
 >[!important] Definition
 >Let $f: \mathcal{X} \to \mathbb{R}$ be a *continuous differentiable* and *strictly convex* function defined on a *convex set* $\mathcal{X}$
 >
->The **Bregman divergence** associated with $f$ for points $\boldsymbol{x}, \boldsymbol{y} \in \mathcal{X}$  is defined as 
+>The **Bregman divergence** associated with $f$ for points $x,y \in \mathcal{X}$  is defined as 
 >$$
->\mathbb{D}_{f}\left( \boldsymbol{x} \left\|\right. \boldsymbol{y}\right) = f(\boldsymbol{x}) - f(\boldsymbol{y}) - \left\langle  \nabla f(\boldsymbol{y})\,,\,  \boldsymbol{x} - \boldsymbol{y} \right\rangle  
+>\mathbb{D}_{f}\left( x \left\|\right. y\right) = f(x) - f(y) - \left\langle  \nabla f(y)\,,\,  x - y \right\rangle  
 >$$
 
 ^b31c31
 
 
-
->[!info]
->The Bregman divergence is the *difference* between the value of $f$ at point $\boldsymbol{x}$ and the value of the *first-order Taylor expansion* of $f$ around point $\boldsymbol{y}$ evaluated at point $x$:
-
 ## Explanation
 
 
+![[Geometric-interpretation-of-Bregman-Divergence.png]]
+
+>[!important]
+>The Bregman divergence is the *difference* between 
+>- the value of $f$ at point $x$, i.e. $f(x)$ and 
+>- the value of the **first-order Taylor expansion** of $f$ *around point* $y$ *evaluated* at point $x$, i.e. $$f(y) + \left\langle \nabla f(y) , x - y \right\rangle$$
+
+
+- [[Taylor Series for Local Polynomial Approximation of Smooth Function]]
+- [[Lie Derivative of Vector Field]]
 
 ## Properties
 
+
+- [[Necessary and Sufficient Conditions for Convex Function]]
 
 >[!important]
 >For $\boldsymbol{x}$, $\boldsymbol{y}$ and $\boldsymbol{z}$, the **Pythagorean Theorem** holds
@@ -75,6 +86,14 @@ date of note: 2024-05-14
 ![[Kullback-Leibler Divergence for Exponential Family#^a7c80d]]
 
 - [[Kullback-Leibler Divergence for Exponential Family]]
+
+## Bregman Divergence as Proximal Operator
+
+- [[Generalized Proximal Method]]
+- [[Bregman Divergence Minimization]]
+- [[Majorization-Minimization Algorithm]]
+- [[Mirror Descent Algorithm]]
+
 
 
 

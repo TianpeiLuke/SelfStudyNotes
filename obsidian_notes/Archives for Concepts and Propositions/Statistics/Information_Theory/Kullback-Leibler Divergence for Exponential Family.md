@@ -77,6 +77,7 @@ date of note: 2024-09-06
 - [[Log-Partition Function of Exponential Family]]
 - [[Exponential Family and Convex Duality]]
 - [[Convex Conjugate of Log-Partition Function of Exponential Family]]
+- [[Maximum Entropy Learning of Exponential Family]]
 
 ### Dual Form
 

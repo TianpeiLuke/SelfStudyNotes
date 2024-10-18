@@ -79,10 +79,14 @@ date of note: 2024-10-02
 - [[Rayleigh Quotient for Eigenvalue Problem]]
 - [[Convex Optimization for Eigenvalue Problem]]
 
+- [[Retraction on Smooth Manifold]]
+- [[Retraction Map onto a Subspace]]
 
 - [[Unitary Group]]
 - [[Orthogonal Group]]
 - [[General Linear Group]]
+- [[Orbit Space of Topological Group Action]]
+- [[Quotient Space of Vector Space]]
 
 - [[Topology of Set]]
 - [[Topological Manifold]]

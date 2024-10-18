@@ -58,9 +58,25 @@ date of note: 2024-05-12
 
 ## Explanation
 
+![[Mirror Descent Algorithm#^3e19a2]]
+
+- [[Mirror Descent Algorithm]]
+- [[Proximal Cutting-Plane Algorithm]]
 
 
+>[!important]
+>**Gradient descent algorithms** can all been seen as approximating the objective function by its **Taylor expansion** at some neighboring point with some *proximal term*
+>
+>- For *first-order gradient method*, 
+>$$
+>\min_{x} f(x) \approx \min_{x} f(x_{k}) + \left\langle \nabla f(x_{k}) ,   x - x_{k}\right\rangle
+>$$
+>- For *second-order gradient method*,
+>$$
+>\min_{x} f(x) \approx \min_{x} f(x_{k}) + \left\langle \nabla f(x_{k}) ,   x - x_{k}\right\rangle + \frac{1}{2} (x - x_{k})^{T}\,\nabla^2 f(x_{k})\,(x - x_{k})
+>$$
 
+- [[Taylor Series for Local Polynomial Approximation of Smooth Function]]
 ## Generalization
 
 >[!important] Definition

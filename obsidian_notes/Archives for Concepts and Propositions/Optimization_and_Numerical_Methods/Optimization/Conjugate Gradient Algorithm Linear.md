@@ -141,6 +141,11 @@ date of note: 2024-05-12
 
 - [[Preconditioning to improve Numerical Stability]]
 
+## Conjugate Gradient Lanczos Version
+
+- [[Conjugate Gradient Algorithm Lanczos]]
+
+
 ## Conjugate Gradient Normal Equation Residual 
 
 - [[Normal Equations and Newton System of Equations]]
@@ -152,6 +157,7 @@ date of note: 2024-05-12
 - [[Lanczos Iteration for Tridiagonal Reduction of Large Matrix]]
 - [[Arnoldi Iteration for Hessenberg Reduction of Large Matrix]]
 - [[GMRES as Regression on Krylov Space]]
+- [[Minimal Residuals Algorithm and MINRES]]
 
 ## Relation to the Eigenvalue Problem
 

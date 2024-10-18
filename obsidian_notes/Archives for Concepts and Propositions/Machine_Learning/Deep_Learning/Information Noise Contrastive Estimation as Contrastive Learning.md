@@ -123,6 +123,7 @@ date of note: 2024-09-08
 >[!info]
 >The contrastive learning via **InfoNCE loss** indicates that using additional *randomly generated samples* could help for learning the representation of the positive samples.
 
+- [[Triplet Loss Minimization for Contrastive Learning]]
 
 ## Mutual Information
 

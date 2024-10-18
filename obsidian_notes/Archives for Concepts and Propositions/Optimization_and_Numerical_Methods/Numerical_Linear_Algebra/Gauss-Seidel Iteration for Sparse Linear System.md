@@ -84,7 +84,7 @@ date of note: 2024-09-21
 -----------
 ##  Recommended Notes and References
 
-- [[Classical Iterations to approximate Solution of Sparse Linear System]]
+- [[Iterative Methods to approximate Solution of Large-Scale Linear System]]
 - [[Jacobi Iteration for Sparse Linear System]]
 
 - [[System of Linear Equations or Linear System]]

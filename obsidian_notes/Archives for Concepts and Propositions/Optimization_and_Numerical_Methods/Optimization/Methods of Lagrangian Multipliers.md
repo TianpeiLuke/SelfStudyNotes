@@ -7,8 +7,8 @@ tags:
 keywords:
   - lagrangian_function
 topics:
-  - optimization
   - convex_analysis
+  - optimization/theory
 name: Lagrangian Function
 date of note: 2024-05-12
 ---

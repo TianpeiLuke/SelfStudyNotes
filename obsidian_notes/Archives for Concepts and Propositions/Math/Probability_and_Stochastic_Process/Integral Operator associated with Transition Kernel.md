@@ -49,3 +49,5 @@ date of note: 2024-04-18
 
 - [[Markov Chain and Markov Process]]
 - [[Markov Transition Kernel and Transition Function]]
+- [[Reproducing Kernel of RKHS]]
+- [[Functional Analysis by Reed]]

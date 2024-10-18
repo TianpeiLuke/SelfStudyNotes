@@ -116,7 +116,7 @@ date of note: 2024-05-15
 >It is the key in proving the [[Hahn-Banach Theorem Geometric Form and Mazur Theorem]]
 
 - [[Hahn-Banach Theorem Extension Form]]
-
+- [[Sublinear Functional]]
 
 -----------
 ##  Recommended Notes and References

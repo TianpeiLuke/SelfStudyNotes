@@ -7,7 +7,6 @@ tags:
 keywords:
   - kkt_optimality_condition
 topics:
-  - optimization
   - convex_analysis
   - optimization/theory
 name: KKT Optimality Condition

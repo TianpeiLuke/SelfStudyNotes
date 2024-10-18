@@ -127,7 +127,7 @@ date of note: 2024-05-12
 >Our **goal** is the use back-propagation to take gradient of $\mathcal{L}$ with respec to both $\theta$ and $\psi.$
 >
 >However, when we use the *Monte-Carlo estimator*
->$$\mathbb{E}_{Z_{i} \sim q }\left[  \log p_{\theta}(X_{i} | Z_{i}) \right] \approx \frac{1}{L} \sum_{l=1}^{L}\log p_{\theta}(X_{i} | Z_{i}^{l}),$$,the *samples* $\{ Z_{i}^{l} \}_{l=1}^{L} \sim q(z|X_{i}, \psi)$  from the *encoder distribution* $q$ are **fixed**.
+>$$\mathbb{E}_{Z_{i} \sim q }\left[  \log p_{\theta}(X_{i} | Z_{i}) \right] \approx \frac{1}{L} \sum_{l=1}^{L}\log p_{\theta}(X_{i} | Z_{i}^{l}),$$ the *samples* $\{ Z_{i}^{l} \}_{l=1}^{L} \sim q(z|X_{i}, \psi)$  from the *encoder distribution* $q$ are **fixed**.
 >
 >On the other hand, changing $\psi$ will **change the distribution** $q(z|X_{i}, \psi)$ from which the samples are drawn and yet these samples are fixed values so that we do not have a way to obtain the **derivatives of these samples with respect to $\psi$**.
 

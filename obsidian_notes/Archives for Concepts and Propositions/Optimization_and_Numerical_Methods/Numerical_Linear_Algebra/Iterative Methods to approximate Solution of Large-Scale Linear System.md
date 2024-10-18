@@ -130,7 +130,7 @@ date of note: 2024-09-29
 
 - [[System of Linear Equations or Linear System]]
 - [[Existence and Uniqueness of Solution of Linear Equations]]
-
+- [[Newton-Conjugate Gradient and Inexact Newton Method]]
 
 - [[Matrix Analysis by Horn]]
 - [[Numerical Linear Algebra by Trefethen]]

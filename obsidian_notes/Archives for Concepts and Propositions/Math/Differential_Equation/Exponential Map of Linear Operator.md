@@ -27,6 +27,7 @@ Chicone, C. (2006). _Ordinary Differential Equations with Applications_ (2nd edi
 ##  Recommended Notes and References
 
 
+- [[Matrix Exponential]]
 - [[Homogeneous Linear Differential Equations]]
 - [[Ordinary Differential Equations]]
 

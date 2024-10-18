@@ -10,7 +10,7 @@ keywords:
   - logarithmic_barrier
   - primal_dual_interior_point_method
 topics:
-  - optimization
+  - optimization/algorithm
 name: Primal-Dual Interior Point Method for Convex Optimization
 date of note: 2024-05-12
 ---
@@ -199,6 +199,7 @@ date of note: 2024-05-12
 >-- [[Convex Optimization by Boyd]] pp 616
 
 - [[Sparse Linear System and Graph]]
+- [[Newton-Conjugate Gradient and Inexact Newton Method]]
 
 
 ## Barrier Method
@@ -244,6 +245,7 @@ date of note: 2024-05-12
 - [[Convex Set]]
 - [[Convex Function]]
 - [[Karush-Kuhn-Tucker Optimality Condition]]
+- [[Taylor Series for Local Polynomial Approximation of Smooth Function]]
 
 - [[Convex Optimization by Boyd]] pp 609 - 621
 - [[Convex Optimization Algorithms by Bertsekas]] pp 420 - 423

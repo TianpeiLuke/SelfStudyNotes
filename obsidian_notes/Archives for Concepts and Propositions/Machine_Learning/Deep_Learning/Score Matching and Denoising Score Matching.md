@@ -58,6 +58,7 @@ date of note: 2024-09-08
 
 - [[Deep Learning by Goodfellow]] pp 609
 - [[Minimum Mean Square Estimation]]
+- [[Least Square Estimation]]
 - [[REINFORCE Algorithm with Baseline]]
 
 >[!important]

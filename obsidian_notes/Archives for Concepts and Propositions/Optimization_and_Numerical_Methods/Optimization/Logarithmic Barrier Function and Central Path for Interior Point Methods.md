@@ -10,7 +10,8 @@ keywords:
   - logarithmic_barrier
   - barrier_method
 topics:
-  - optimization
+  - optimization/theory
+  - optimization/algorithm
 name: Logarithmic Barrier Function and Central Path for Interior Point Methods
 date of note: 2024-05-12
 ---

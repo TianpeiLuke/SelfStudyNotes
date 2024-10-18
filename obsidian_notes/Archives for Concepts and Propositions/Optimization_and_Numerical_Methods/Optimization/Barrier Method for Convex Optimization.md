@@ -10,7 +10,7 @@ keywords:
   - logarithmic_barrier
   - barrier_method
 topics:
-  - optimization
+  - optimization/algorithm
 name: Interior Point Method for Convex Optimization
 date of note: 2024-05-12
 ---
@@ -85,6 +85,7 @@ date of note: 2024-05-12
 
 
 - [[Newton Method]]
+- [[Newton-Conjugate Gradient and Inexact Newton Method]]
 - [[KKT Matrix and KKT System for Optimization with Equality Constraints]]
 
 

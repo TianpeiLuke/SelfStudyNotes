@@ -34,13 +34,21 @@ date of note: 2024-10-02
 
 - [[Orthogonal Group]]
 - [[Complete Orthonormal Basis of Hilbert Space]]
+- [[Compactness]]
+- [[Subspace Topology]]
 
 
 >[!example]
 >- $$V_{n}(\mathbb{R}^{n}) = \mathcal{O}(n) \equiv \{U\in \mathbb{R}^{n\times n}:\;  U^{T}U =  I_{n} = UU^{T} \}$$ 
->
->- $$V_{1}(\mathbb{R}^{n}) = \mathbb{S}^{n-1} := \{ u\in \mathbb{R}^{n}: \lVert u \rVert_{2} = 1  \}.$$
+>- $$V_{n}(\mathbb{C}^{n}) = \mathcal{U}(n) \equiv \{U\in \mathbb{C}^{n\times n}:\;  U^{*}U =  I_{n} = UU^{*} \}$$ 
+>- $$V_{n-1}(\mathbb{R}^{n}) = \mathcal{SO}(n) := \{ u\in \mathcal{O}(n): \det(U) = 1  \}.$$
+>- $$V_{n-1}(\mathbb{C}^{n}) = \mathcal{SU}(n) := \{ u\in \mathcal{U}(n) : \det(U) = 1   \}.$$
+>- $$V_{1}(\mathbb{R}^{n}) = \mathcal{S}^{n-1} := \{ u\in \mathbb{R}^{n}: \lVert u \rVert_{2} = 1  \}.$$
+>- $$V_{1}(\mathbb{C}^{n}) = \mathcal{S}^{2n-1} := \{ u\in \mathbb{C}^{n}: \lVert u \rVert_{2} = 1  \}.$$
 
+- [[Unitary Group]]
+- [[Orthogonal Group]]
+- [[Special Orthogonal Group and Special Unitary Group]]
 
 
 ## Explanation
@@ -64,6 +72,8 @@ date of note: 2024-10-02
 - [[Riemannian Metric and Riemannian Manifold]]
 - [[Smooth Manifold]]
 
+- [[Retraction on Smooth Manifold]]
+- [[Retraction Map onto a Subspace]]
 
 - [[Principle Component Analysis]]
 - [[Invariance under Linear Transformation]]
@@ -71,13 +81,15 @@ date of note: 2024-10-02
 - [[Convex Optimization for Eigenvalue Problem]]
 
 
-- [[Unitary Group]]
-- [[Orthogonal Group]]
+- [[Homogeneous Space]]
+
 - [[General Linear Group]]
 
 - [[Linear Subspace]]
 - [[Vector Space over a Field]]
+- [[Topology of Set]]
 
 
 - [[An Introduction to Optimization on Smooth Manifolds by Boumal]]
+- Wikipedia [Stiefel_manifold](https://en.wikipedia.org/wiki/Stiefel_manifold)
 - [[edelmanGeometryAlgorithmsOrthogonality1998]] Edelman, A., Arias, T. A., & Smith, S. T. (1998). The geometry of algorithms with orthogonality constraints. _SIAM journal on Matrix Analysis and Applications_, _20_(2), 303-353.

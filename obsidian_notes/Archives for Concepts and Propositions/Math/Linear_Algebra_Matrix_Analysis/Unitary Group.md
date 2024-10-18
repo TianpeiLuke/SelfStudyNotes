@@ -25,7 +25,11 @@ date of note: 2024-05-26
 >The set of all $n\times n$ *complex unitary matrices* together with matrix multiplication forms a group, called the **unitary group**. It is denoted as $U(n)$.
 >
 >$$
->U(n) := \left\{ \boldsymbol{U} \in M(n, \mathbb{C}): \left\langle  \boldsymbol{Ux}\,,\,\boldsymbol{Uy} \right\rangle_{\mathbb{C}}  = \left\langle  \boldsymbol{x}\,,\,\boldsymbol{y} \right\rangle_{\mathbb{C}}, \;\;  \forall \boldsymbol{x}, \boldsymbol{y} \in \mathbb{C}^n \right\} 
+>U(n) := \left\{ U \in M(n, \mathbb{C}): \left\langle Ux\,,\,Uy \right\rangle_{\mathbb{C}}  = \left\langle  x\,,\,y \right\rangle_{\mathbb{C}}, \;\;  \forall x, y \in \mathbb{C}^n \right\} 
+>$$
+>or
+>$$
+>U(n) := \left\{ U \in M(n, \mathbb{C}): UU^{*} = U^{*}U = I_{n} \right\} 
 >$$
 
 - [[Matrix]]
@@ -103,7 +107,7 @@ date of note: 2024-05-26
 
 - [[Matrix]]
 - [[Determinant of Linear Transformation]]
-
+- [[Stiefel Manifold]]
 - [[Lie Group]]
 	- [[Topological Group]]
 	- [[Group]]

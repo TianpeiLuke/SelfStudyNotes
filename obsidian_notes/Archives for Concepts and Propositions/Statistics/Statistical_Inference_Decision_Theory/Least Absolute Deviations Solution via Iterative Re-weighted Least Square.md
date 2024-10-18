@@ -117,7 +117,7 @@ date of note: 2024-10-11
 
 - [[Least Square Estimation]]
 - [[Algorithms for Least Square Estimation Problem]]
-
+- [[Majorization-Minimization Algorithm]]
 
 ## Explanation
 

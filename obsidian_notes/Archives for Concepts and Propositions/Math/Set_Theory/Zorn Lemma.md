@@ -68,6 +68,19 @@ date of note: 2024-05-10
 
 - [[Topological Vector Space]]
 
+>[!example]
+>Prove the **Hahn-Banach theorem (Extension Form).**
+
+- [[Hahn-Banach Theorem Extension Form]]
+
+>[!example]
+>Prove that every **Hilbert space** has a **complete orthonormal basis.**
+
+- [[Complete Orthonormal Basis of Hilbert Space]]
+
+
+
+
 ## Equivalent Theorems
 
 >[!important]
@@ -85,6 +98,7 @@ date of note: 2024-05-10
 
 - [[Simple Order Relation]]
 - [[Topology Book by Munkres]]
+
 
 
 [^1]: [William Timothy Gowers](https://en.wikipedia.org/wiki/Timothy_Gowers "Timothy Gowers") (12 August 2008). ["How to use Zorn's lemma"](https://gowers.wordpress.com/2008/08/12/how-to-use-zorns-lemma/).

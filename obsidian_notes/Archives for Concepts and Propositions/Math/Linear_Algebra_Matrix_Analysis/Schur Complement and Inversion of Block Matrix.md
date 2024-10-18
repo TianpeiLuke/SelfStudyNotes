@@ -291,6 +291,8 @@ date of note: 2024-07-23
 >- If $A$ is **positive definite**, then $M$ is **positive semi-definite** *if and only if*  the *Schur complement* $M / A$ is **positive semi-definite** $$(A \succ 0) \quad   M \succeq 0 \;\iff \;  M / A \succeq 0.$$ 
 >- If $C$ is **positive definite**, then $M$ is **positive semi-definite** *if and only if*  the *Schur complement* $M / C$ is **positive semi-definite** $$(C \succ 0) \quad   M \succeq 0 \;\iff \;  M / C \succeq 0.$$ 
 
+^ad7e0f
+
 - [[Positive Semidefinite Transformation]]
 
 ![[Convex Function#^021d3c]]

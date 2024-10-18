@@ -88,6 +88,8 @@ date of note: 2024-10-04
 >	- Obtain the *solution iterate* of linear system as $$x_{k} = Q_{k}\,z_{k}$$
 >- *Return* $x^{*}$ as the solution of symmetric linear system. $$x_{k} \to x^{*} = A^{-1}b$$
 
+^ac4c95
+
 - [[Lanczos Iteration for Tridiagonal Reduction of Large Matrix]]
 
 
@@ -100,14 +102,14 @@ date of note: 2024-10-04
 
 - [[GMRES as Regression on Krylov Space]]
 
+## Conjugate Gradient
+
+![[Conjugate Gradient Algorithm Lanczos#^87babe]]
+
+- [[Conjugate Gradient Algorithm Lanczos]]
 
 -----------
 ##  Recommended Notes and References
-
-
-
-
-
 
 
 

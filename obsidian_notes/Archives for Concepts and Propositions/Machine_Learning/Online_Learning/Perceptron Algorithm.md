@@ -113,6 +113,7 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
+- [[Mirror Descent Algorithm]]
 - [[Follow-The-Leader Algorithm]]
 - [[Follow-The-Regularized-Leader Algorithm]]
 

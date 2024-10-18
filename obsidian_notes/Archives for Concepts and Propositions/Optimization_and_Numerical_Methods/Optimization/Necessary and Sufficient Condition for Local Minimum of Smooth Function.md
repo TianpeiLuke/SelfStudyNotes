@@ -62,6 +62,7 @@ date of note: 2024-06-29
 >$$
 >Therefore $\nabla^2 f(x^{*})$ is **positive semi-definite**.
 
+- [[Taylor Series for Local Polynomial Approximation of Smooth Function]]
 - [[Tangent Space Definition and Development]]
 - [[Positive Semidefinite Operator]]
 

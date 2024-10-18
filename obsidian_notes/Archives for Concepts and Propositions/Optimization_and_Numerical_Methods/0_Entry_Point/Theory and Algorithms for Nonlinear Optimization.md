@@ -45,13 +45,19 @@ date of note: 2024-05-12
 - [[Newton Method]]
 - [[Secant Equation and Quasi-Newton Methods]]
 - [[BFGS Algorithm]]
-- [[Limited Memory BFGS]]
+
+- [[Conjugate Gradient Algorithm Lanczos]]
 - [[Conjugate Gradient Algorithm Linear]]
 - [[Conjugate Gradient Algorithm Nonlinear]]
 - [[Conjugate Gradient Algorithm Convergence Analysis]]
 - [[Conjugate Gradient Algorithm Nonlinear Convergence Analysis]]
-- [[Conjugate Gradient Algorithm Lanczos]]
+
+
+### Large-Scale Second-Order Gradient Algorithms
+
 - [[Newton-Conjugate Gradient and Inexact Newton Method]]
+- [[Newton-Lanczos Method for Large Scale Optimization]]
+- [[Limited Memory BFGS]]
 
 ### Feasible Direction Method for Constrained Problem
 

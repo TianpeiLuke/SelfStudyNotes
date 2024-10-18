@@ -31,6 +31,7 @@ date of note: 2024-05-12
 
 - [[Subdifferential of Convex Function]]
 - [[Supporting Hyperplane of Convex Set]]
+- [[Taylor Series for Local Polynomial Approximation of Smooth Function]]
 - [[Polyhedron and Polytope]]
 
 ## Explanation

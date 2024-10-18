@@ -130,7 +130,7 @@ date of note: 2024-10-04
 - [[Power Iteration and Inverse Iteration for General Eigenvalue Problem]]
 - [[Rayleigh Quotient Iteration for Symmetric Eigenvalue Problem]]
 - [[QR Iteration for General Eigenvalue Problem]]
-- [[Classical Iterations to approximate Solution of Sparse Linear System]]
+- [[Iterative Methods to approximate Solution of Large-Scale Linear System]]
 
 ### Two Phases of Eigenvalue Computation
 

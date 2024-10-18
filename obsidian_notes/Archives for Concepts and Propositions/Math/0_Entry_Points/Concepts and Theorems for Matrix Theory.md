@@ -36,7 +36,7 @@ date of note: 2024-07-13
 - [[Special Linear Group]]
 - [[Orthogonal Group]]
 - [[Unitary Group]]
-- [[Special Orthogonal Group]]
+- [[Special Orthogonal Group and Special Unitary Group]]
 
 #### Submatrix
 
@@ -267,6 +267,7 @@ date of note: 2024-07-13
 - [[Ordinary Differential Equations]]
 - [[Autonomous and Nonautonomous Ordinary Differential Equations]]
 - [[Linear ODE with Constant Coefficients]]
+- [[Matrix Exponential]]
 - [[Exponential Map of Linear Operator]]
 
 

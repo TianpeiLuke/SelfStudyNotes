@@ -6,7 +6,7 @@ tags:
 keywords:
   - generalized_proximal_method
 topics:
-  - optimization
+  - optimization/algorithm
 name: Generalized Proximal Method
 date of note: 2024-05-12
 ---
@@ -27,13 +27,16 @@ date of note: 2024-05-12
 >
 >The **generalized proximal algorithm** solves the following problem at each iteration $k$
 >$$
-> x_{k+1} \in \arg\min_{x\in \mathbb{R}^n}\left\{ f(x) + D_{k}(x, x_{k}) \right\} 
+> x_{k+1} \in \arg\min_{x\in \mathbb{R}^n}\left\{ f(x) + \frac{1}{c_{k}}D_{k}(x, x_{k}) \right\} 
 >$$
 >where $D_{k}: \mathbb{R}^{n} \times \mathbb{R}^n \to (-\infty, +\infty]$ is a **regularization term**.
+
+^8944af
 
 - [[Proximal Algorithm]]
 - [[Tikhonov Regularization in Optimization and Learning]]
 - [[Follow-The-Regularized-Leader Algorithm]]
+- [[Bregman Divergence Minimization]]
 
 ## Explanation
 
@@ -50,7 +53,7 @@ date of note: 2024-05-12
 ## Variants
 
 - [[Entropy Minimization Algorithm]]
-- [[Bregman Distance Minimization]]
+- [[Bregman Divergence Minimization]]
 - [[Majorization-Minimization Algorithm]]
 - [[Mirror Descent Algorithm]]
 

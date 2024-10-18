@@ -153,7 +153,7 @@ date of note: 2024-09-16
 
 - [[QR Factorization of Matrix]]
 - [[Eigenvalue and Eigenvector for Linear Map]]
-- [[Classical Iterations to approximate Solution of Sparse Linear System]]
+- [[Iterative Methods to approximate Solution of Large-Scale Linear System]]
 
 >[!info]
 >Compared with the **spectral theorem** or **eigen-decomposition**, **Schur decomposition** do not requires $A$ to be *normal* or *self-adjoint* (*Hermitian* or *Symmetric*). 

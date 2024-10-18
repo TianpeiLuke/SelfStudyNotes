@@ -134,7 +134,7 @@ date of note: 2024-05-12
 
 
 - [[Expectation-Maximization Algorithm for Exponential Family]]
-- [[Bregman Distance Minimization]]
+- [[Bregman Divergence Minimization]]
 
 
 
