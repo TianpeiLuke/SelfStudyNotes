@@ -47,7 +47,14 @@ date of note: 2024-05-14
 
 ## Properties
 
+>[!important] Proposition
+>Let $f: \mathcal{X} \to \mathbb{R}$ be a *continuous differentiable* and *strictly convex* function defined on a *convex set* $\mathcal{X}$. 
+>
+>The **Bregman divergence** $\mathbb{D}_{f}\left( x \left\|\right. y\right)$ satisfies the following conditions
+>- **Non-negativity**: $$\mathbb{D}_{f}\left( x \left\|\right. y\right) \ge 0, \quad \forall x,y\in \mathcal{X}$$
+>- **Positivity**: $$\mathbb{D}_{f}\left( x \left\|\right. y\right) = 0 \quad \iff \quad  x = y.$$
 
+- [[Divergence Function on Manifold]]
 - [[Necessary and Sufficient Conditions for Convex Function]]
 
 >[!important]
