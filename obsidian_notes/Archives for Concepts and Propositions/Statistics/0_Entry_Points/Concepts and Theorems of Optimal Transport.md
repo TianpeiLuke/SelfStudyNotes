@@ -50,6 +50,7 @@ routing, involve moving distributions, and that thread appears in all of the sem
 - [[Entropic Regularized Optimal Transport in Discrete Settings]]
 - [[Entropic Regularized Optimal Transport in Measure]]
 - [[Variational Formulation of Optimal Transport]]
+- [[Sinkhorn Algorithm for Entropy Regularized Optimal Transport]]
 
 
 ### Optimal Transport in Machine Learning

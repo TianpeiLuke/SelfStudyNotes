@@ -101,6 +101,8 @@ date of note: 2024-05-12
 >
 >The optimal value of the k-mean objective is close related to **the $2$-Wasserstein distance** $$\mathcal{W}_{2}^2(\alpha_{x}, \beta_{\mu})$$ where two discrete measures $$\alpha_{x} = \sum_{i=1}^{m}\delta_{x_{i}},\;\; \beta_{\mu} = \sum_{s=1}^{k}\,N_{s}\,\delta_{\mu_{s}}$$
 
+^5944a3
+
 - [[Optimal Assignment Problem and Monge Problem]]
 - [[Wasserstein Distance]]
 - [[Discrete Measure]]

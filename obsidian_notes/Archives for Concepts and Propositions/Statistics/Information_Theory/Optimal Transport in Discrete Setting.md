@@ -39,6 +39,8 @@ date of note: 2024-05-12
 >\sum_{i,j}C_{i,j} P_{i,j}.
 >$$
 
+^afc0dd
+
 - [[Optimal Assignment Problem and Monge Problem]]
 - [[Algorithms to Live By Chapter 08 Relaxation]]
 
@@ -119,6 +121,20 @@ date of note: 2024-05-12
 - [[Primal-Dual Interior Point Method for Linear Optimization]]
 - Oberman, A. M., & Ruan, Y. (2015). An efficient linear programming method for optimal transportation. _arXiv preprint arXiv:1509.03668_.
 
+## Network Flow
+
+- [[Network Flow Problem as Linear Optimization]]
+- [[Network Simplex Algorithm]]
+
+## K-Means
+
+![[k-Means Clustering#^5944a3]]
+
+- [[k-Means Clustering]]
+
+## Entropic Regularized Optimal Transport
+
+- [[Entropic Regularized Optimal Transport in Discrete Settings]]
 
 
 
@@ -129,5 +145,5 @@ date of note: 2024-05-12
 - [[Optimal Transport in Space of Measures]]
 
 - [[Optimal Transport for Applied Mathematicians by Santambrogio]]
-- [[Computational Optimal Transport by Peyre]]
+- [[Computational Optimal Transport by Peyre]] pp 13 - 37
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 307
