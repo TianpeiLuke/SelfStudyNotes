@@ -78,3 +78,6 @@ date of note: 2024-10-13
 ----
 
 ## Reference and Related Notes
+
+
+- [[An Introduction to Optimization on Smooth Manifolds by Boumal]]
