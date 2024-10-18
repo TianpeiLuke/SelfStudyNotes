@@ -113,4 +113,13 @@ date of note: 2024-05-14
 
 
 - [[Sign of Permutation]]
+
+
+- [[Introduction to Smooth Manifolds by Lee]]
 - [[Finite Dimensional Vector Spaces by Halmos]]
+- [[Matrix Analysis by Horn]]
+- [[Matrix Analysis for Scientists and Engineers by Laub]]
+- [[Matrix CookBook by Petersen]]
+- [[Matrix Computations by Golub]]
+- [[Numerical Linear Algebra by Trefethen]]
+- [[Principles of Mathematical Analysis by Rudin]] pp 232

@@ -41,3 +41,6 @@ date of note: 2024-05-07
 -----------
 ##  Recommended Notes and References
 
+
+- [[Introduction to Measure Theory by Tao]]
+- [[Principles of Mathematical Analysis by Rudin]] pp 302 - 305

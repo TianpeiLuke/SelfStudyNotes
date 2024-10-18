@@ -110,6 +110,5 @@ date of note: 2024-06-06
 
 - [[Introduction to Measure Theory by Tao]]
 - [[Real Analysis Modern Techniques and Their Applications by Folland]]
-
-- Rudin, W. (1964). _Principles of mathematical analysis_ (Vol. 3). New York: McGraw-hill.
+- [[Principles of Mathematical Analysis by Rudin]] pp 121
 - Abbott, S. (2015). _Understanding analysis_. Springer.

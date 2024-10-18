@@ -57,6 +57,9 @@ date of note: 2024-05-07
 
 - [[Fatou Lemma]]
 
+
+- [[Real Analysis by Royden]]
 - [[Introduction to Measure Theory by Tao]]
 - [[Real Analysis Modern Techniques and Their Applications by Folland]]
+- [[Principles of Mathematical Analysis by Rudin]] pp 321
 - [[Probability and Measure by Billingsley]]

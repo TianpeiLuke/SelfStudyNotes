@@ -142,3 +142,9 @@ date of note: 2024-05-05
 
 - [[Finitely Additive Measure]]
 - [[pi-system and lambda-system and Dynkin Theorem]]
+
+- [[Real Analysis by Royden]]
+- [[Introduction to Measure Theory by Tao]]
+- [[Real Analysis Modern Techniques and Their Applications by Folland]]
+- [[Functional Analysis by Reed]]
+- [[Principles of Mathematical Analysis by Rudin]] pp 310

@@ -42,4 +42,7 @@ date of note: 2024-05-20
 
 - [[Divergence Theorem on Riemannian Manifold]]
 
+- [[Second Fundamental Theorem of Calculus Absolutely Continuous]]
+
 - [[Introduction to Smooth Manifolds by Lee]]
+- [[Principles of Mathematical Analysis by Rudin]] pp 272 - 275

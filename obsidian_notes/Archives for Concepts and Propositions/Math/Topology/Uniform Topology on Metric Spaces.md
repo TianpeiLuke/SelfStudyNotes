@@ -72,4 +72,7 @@ date of note: 2024-05-09
 - [[Norm and Normed Space]]
 - [[Metric Space]]
 - [[Upper Bound and Supremum of Set]]
+
+- [[Topology Book by Munkres]]
+- [[Principles of Mathematical Analysis by Rudin]] pp 147
 - Github Note [link](https://github.com/TianpeiLuke/SelfStudyNotes/tree/master/self-study/probability_and_measure_theory)

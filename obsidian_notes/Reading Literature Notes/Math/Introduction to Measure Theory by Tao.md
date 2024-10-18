@@ -100,5 +100,7 @@ date of note: 2024-05-06
 
 ## Reference
 
+- [[Real Analysis by Royden]]
+- [[Principles of Mathematical Analysis by Rudin]]
 - [[Real Analysis Modern Techniques and Their Applications by Folland]]
 - [[Topology Book by Munkres]]

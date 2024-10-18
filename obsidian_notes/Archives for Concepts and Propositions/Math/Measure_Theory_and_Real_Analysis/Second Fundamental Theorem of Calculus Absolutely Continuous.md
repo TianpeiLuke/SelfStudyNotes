@@ -49,3 +49,8 @@ date of note: 2024-05-28
 - [[Absolutely Continuous Function]]
 
 - [[Second Fundamental Theorem of Calculus Lipschitz]]
+
+
+- [[Real Analysis by Royden]]
+- [[Introduction to Measure Theory by Tao]]
+- [[Principles of Mathematical Analysis by Rudin]]

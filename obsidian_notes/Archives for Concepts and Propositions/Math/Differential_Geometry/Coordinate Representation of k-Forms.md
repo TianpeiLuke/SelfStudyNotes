@@ -79,3 +79,6 @@ date of note: 2024-05-19
 - [[Coordinate Representation of Differential]]
 - [[Differential k-Form on Manifold]]
 
+
+- [[Introduction to Smooth Manifolds by Lee]]
+- [[Principles of Mathematical Analysis by Rudin]] pp 257 - 260

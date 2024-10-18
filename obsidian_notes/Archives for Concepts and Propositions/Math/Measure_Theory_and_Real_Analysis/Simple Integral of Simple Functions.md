@@ -100,3 +100,10 @@ date of note: 2024-05-13
 ##  Recommended Notes and References
 
 - [[Simple Approximation Theorem of Lp Function]]
+
+
+- [[Real Analysis by Royden]]
+- [[Introduction to Measure Theory by Tao]]
+- [[Real Analysis Modern Techniques and Their Applications by Folland]]
+- [[Functional Analysis by Reed]]
+- [[Principles of Mathematical Analysis by Rudin]] pp 313 - 318

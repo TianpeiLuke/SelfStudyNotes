@@ -153,3 +153,4 @@ date of note: 2024-05-19
 - [[Wedge Product]]
 
 - [[Introduction to Smooth Manifolds by Lee]]
+- [[Principles of Mathematical Analysis by Rudin]] pp 260 - 261

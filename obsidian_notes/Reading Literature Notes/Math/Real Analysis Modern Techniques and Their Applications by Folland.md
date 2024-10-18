@@ -108,6 +108,10 @@ date of note: 2024-05-06
 ----
 ## Reference
 
+
+- [[Principles of Mathematical Analysis by Rudin]]
+- [[Real Analysis by Royden]]
+- [[Real Analysis Modern Techniques and Their Applications by Folland]]
 - [[Probability and Measure by Billingsley]]
 - [[Introduction to Measure Theory by Tao]]
 - [[Topology Book by Munkres]]

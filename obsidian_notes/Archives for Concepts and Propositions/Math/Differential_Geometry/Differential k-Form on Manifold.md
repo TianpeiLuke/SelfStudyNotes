@@ -66,3 +66,4 @@ date of note: 2024-05-19
 - [[Section of Vector Bundle]]
 
 - [[Introduction to Smooth Manifolds by Lee]]
+- [[Principles of Mathematical Analysis by Rudin]] pp 253 - 257

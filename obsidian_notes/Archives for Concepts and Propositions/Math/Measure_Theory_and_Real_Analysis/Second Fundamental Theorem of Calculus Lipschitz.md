@@ -45,3 +45,8 @@ date of note: 2024-05-28
 
 - [[Lipschitz Continuous Function]]
 - [[Lipschitz and Rademacher Differentiation Theorem]]
+
+
+- [[Real Analysis by Royden]]
+- [[Introduction to Measure Theory by Tao]]
+- [[Principles of Mathematical Analysis by Rudin]]

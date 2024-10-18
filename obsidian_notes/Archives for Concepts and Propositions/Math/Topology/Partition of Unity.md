@@ -29,3 +29,4 @@ date of note: 2024-05-20
 
 - [[Topology Book by Munkres]]
 - [[Introduction to Smooth Manifolds by Lee]]
+- [[Principles of Mathematical Analysis by Rudin]] pp 251

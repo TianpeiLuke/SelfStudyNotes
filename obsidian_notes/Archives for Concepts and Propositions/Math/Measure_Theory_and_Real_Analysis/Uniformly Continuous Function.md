@@ -25,3 +25,5 @@ date of note: 2024-05-28
 -----------
 ##  Recommended Notes and References
 
+
+- [[Principles of Mathematical Analysis by Rudin]]

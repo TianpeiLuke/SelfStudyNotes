@@ -99,3 +99,4 @@ date of note: 2024-05-14
 - [[Smooth Map]]
 
 - [[Introduction to Smooth Manifolds by Lee]]
+- [[Principles of Mathematical Analysis by Rudin]] pp 260 - 261

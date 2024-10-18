@@ -45,7 +45,9 @@ date of note: 2024-06-19
 
 -----
 ## Reference
-  
+
+
+- [[Principles of Mathematical Analysis by Rudin]]
 - [[Introduction to Measure Theory by Tao]]
 - [[Real Analysis Modern Techniques and Their Applications by Folland]]
 

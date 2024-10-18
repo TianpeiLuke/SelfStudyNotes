@@ -45,5 +45,7 @@ date of note: 2024-05-25
 
 - [[Topology of Set]]
 
+
 - [[Functional Analysis by Reed]]
 - [[Topology Book by Munkres]]
+- [[Principles of Mathematical Analysis by Rudin]] 

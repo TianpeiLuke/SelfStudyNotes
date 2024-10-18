@@ -45,3 +45,9 @@ date of note: 2024-05-07
 
 - [[Measure Space and Countably Additive Measure]]
 - [[sigma Algebra]]
+
+
+- [[Real Analysis by Royden]]
+- [[Introduction to Measure Theory by Tao]]
+- [[Real Analysis Modern Techniques and Their Applications by Folland]]
+- [[Principles of Mathematical Analysis by Rudin]] pp 318

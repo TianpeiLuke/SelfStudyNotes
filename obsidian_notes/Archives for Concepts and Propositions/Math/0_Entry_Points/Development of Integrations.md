@@ -182,4 +182,4 @@ date of note: 2024-05-13
 - [[Real Analysis Modern Techniques and Their Applications by Folland]]
 - [[Real Analysis by Royden]]
 - [[Probability and Measure by Billingsley]]
-
+- [[Principles of Mathematical Analysis by Rudin]] pp 321

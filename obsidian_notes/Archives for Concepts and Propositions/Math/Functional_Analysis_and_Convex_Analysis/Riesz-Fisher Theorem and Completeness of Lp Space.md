@@ -52,5 +52,6 @@ date of note: 2024-05-10
 - [[Real Analysis by Royden]] pp 398
 - [[Functional Analysis by Reed]]
 - [[Real Analysis Modern Techniques and Their Applications by Folland]]
+- [[Principles of Mathematical Analysis by Rudin]] pp 330
 
 - Github Note [link](https://github.com/TianpeiLuke/SelfStudyNotes/tree/master/self-study/probability_and_measure_theory)

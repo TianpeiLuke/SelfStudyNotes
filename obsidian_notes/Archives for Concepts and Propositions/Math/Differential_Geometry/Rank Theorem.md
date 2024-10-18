@@ -146,3 +146,4 @@ date of note: 2024-05-20
 - [[Rank–Nullity Theorem]]
 
 - [[Introduction to Smooth Manifolds by Lee]]
+- [[Principles of Mathematical Analysis by Rudin]] pp 228 - 229

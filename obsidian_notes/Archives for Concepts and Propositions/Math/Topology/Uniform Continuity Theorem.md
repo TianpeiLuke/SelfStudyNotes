@@ -41,3 +41,4 @@ date of note: 2024-05-25
 - [[Uniform Topology on Metric Spaces]]
 
 - [[Topology Book by Munkres]]
+- [[Principles of Mathematical Analysis by Rudin]] pp 90

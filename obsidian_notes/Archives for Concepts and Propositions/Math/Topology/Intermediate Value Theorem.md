@@ -45,4 +45,5 @@ date of note: 2024-05-25
 
 - [[Separation and Connectedness]]
 
+- [[Principles of Mathematical Analysis by Rudin]] 
 - [[Topology Book by Munkres]]
