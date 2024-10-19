@@ -148,8 +148,9 @@ date of note: 2024-09-08
 
 ## Diffusion Models
 
-- [[Diffusion Network]]
+![[Denoising Diffusion Probabilistic Models and Diffusion Network#^a375c4]]
 
+- [[Denoising Diffusion Probabilistic Models and Diffusion Network]]
 
 
 

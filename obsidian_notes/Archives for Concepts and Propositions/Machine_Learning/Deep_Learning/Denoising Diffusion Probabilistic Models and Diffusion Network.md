@@ -514,11 +514,19 @@ date of note: 2024-05-12
 >\begin{align*}
 >\mathcal{L}(q, w; x) &\propto -\sum_{t=1}^{T}\frac{\beta_{t}}{2(1- \alpha_{t})(1- \beta_{t})}\mathbb{E}_{Z_{t} \sim q(\cdot|x) }\left[\lVert g(Z_{t}, w, t) - \epsilon_{t} \rVert_{2}^2\right] 
 >\end{align*}
->$$  
->We can denote the perturbed data distribution as  
+>$$ 
+>where $\epsilon_{t} \sim \mathcal{N}(0, I)$. 
+>
+>We can replace $\epsilon_{t}$ by transition kernel $$\nabla \log K_{\alpha_{t}}(x, Z_{t}) = \nabla \log \mathcal{N}(\sqrt{ \alpha_{t} }x,\; (1-\alpha_{t})I )$$ This allows us to reformulate *ELBO* as the **denoising score matching** objective
+>$$
+>\begin{align*}
+>\mathcal{L}(q, w; x) &\propto -\sum_{t=1}^{T}\frac{\beta_{t}}{2(1- \alpha_{t})(1- \beta_{t})}\mathbb{E}_{Z_{t} \sim q(\cdot|x) }\left[\lVert g(Z_{t}, w, t) - \nabla \log K_{\alpha_{t}}(x, Z_{t}) \rVert_{2}^2\right] 
+>\end{align*}
+>$$ 
+
+^a375c4
 
 - [[Score Matching and Denoising Score Matching]]
-
 
 
 ## Stochastic Differential Equation for DDPM
@@ -535,6 +543,8 @@ date of note: 2024-05-12
 >The *denoising diffusion probabilistic model (DDPM)* can be formulated as two **continuous-time stochastic differential equations (SDE)**:
 >- **Forward SDE**: $$dX_{t} = f(x, t)\,dt + \sigma(t)\,dW_{t}$$
 >- **Reverse SDE**: $$dX_{t} = \left[f(x,t) - \sigma^2(t)\,\nabla_{x} \log p(x; t)\right]\,dt + \sigma(t)\,d\hat{W}_{t}$$
+>	- $\hat{W}_{t}$ is a *standard Wiener process* when time flows from $T$ to $0$ 
+>	- The **drift term**  in *Reverse SDE* $$f(x,t) - \sigma^2(t)\,\nabla_{x} \log p(x; t)$$  corresponds to the **score matching** objective
 >	- We can recover original signal by *subtracting* $$\sigma^2(t)\,\nabla_{x} \log p(x; t)$$ in the **drift term**
 
 - [[Stochastic Differential Equations]]
