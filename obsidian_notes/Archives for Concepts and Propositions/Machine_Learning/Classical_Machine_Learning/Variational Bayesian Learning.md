@@ -38,6 +38,8 @@ date of note: 2024-07-23
 - [[Exponential Family of Distributions]]
 - [[Evidence Lower Bound]]
 - [[Variational Inference vs EM Algorithm]]
+- [[Denoising Diffusion Probabilistic Models and Diffusion Network]]
+
 
 - [[Mean Field Approximation for PGM]]
 

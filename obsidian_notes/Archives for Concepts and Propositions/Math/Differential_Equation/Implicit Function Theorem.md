@@ -18,7 +18,7 @@ date of note: 2024-06-14
 >**Name**: Implicit Function Theorem
 
 >[!important] Implicit Function Theorem
->Let $f: E\subset \mathbb{R}^{n+m} \to \mathbb{R}^{n}$ be a **continuous differentiable function** on an open subset $U$, such that $$f(x_{0}, y_{0}) = 0$$ for **some point** $(x_{0}, y_{0})\in E$ 
+>Let $f: E\subset \mathbb{R}^{n+m} \to \mathbb{R}^{n}$ be a **continuous differentiable function** on an open subset $E$, such that $$f(x_{0}, y_{0}) = 0$$ for **some point** $(x_{0}, y_{0})\in E$ 
 >- Let $$A := \frac{ \partial f}{ \partial (x, y) }(x_{0}, y_{0})  \in \mathbb{R}^{n\times (n+m)}.$$ Note that $$df = A\left[dx, dy\right]^{T} = A_{x}dx + A_{y}dy$$
 >- Assume that $$A_{x} := \frac{ \partial f}{ \partial x } $$ is **invertible**
 >
@@ -29,7 +29,7 @@ date of note: 2024-06-14
 >	- $g: W \to \mathbb{R}^{n}$ is a **continuous differentiable** function from $W$ into $\mathbb{R}^{n}$, 
 >	- $$g(y_{0}) = x_{0}.$$
 >	- The equation $$f(g(y), y) = 0,\quad \forall y\in W$$
->	- The **first-order derivative** of $g$ is given by $$\frac{dg}{dy}(b) = -\left(A_{x}\right)^{-1}A_{y} := \left(\frac{ \partial f}{ \partial x } \right)^{-1}\,\frac{ \partial f}{ \partial y}.$$
+>	- The **first-order derivative** of $g$ is given by $$\frac{dg}{dy}(y_{0}) = -\left(A_{x}\right)^{-1}A_{y} := -\left(\frac{ \partial f}{ \partial x } \right)^{-1}\,\frac{ \partial f}{ \partial y}.$$
 
 - [[Differential of a Smooth Map at Point]]
 - [[Coordinate Representation of Differential]]

@@ -28,7 +28,7 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
-- [[Denoising Diffusion Probabilistic Models]]
+- [[Denoising Diffusion Probabilistic Models and Diffusion Network]]
 
 
 - [[Wasserstein Distance]]

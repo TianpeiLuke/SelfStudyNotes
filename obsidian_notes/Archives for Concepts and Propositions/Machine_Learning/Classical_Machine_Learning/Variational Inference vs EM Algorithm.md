@@ -152,6 +152,11 @@ date of note: 2024-07-05
 
 - [[Variational Bayesian Learning]]
 
+## Variational Inference in Deep Learning
+
+- [[Variational Auto-Encoder]]
+- [[Denoising Diffusion Probabilistic Models and Diffusion Network]]
+
 
 
 -----------

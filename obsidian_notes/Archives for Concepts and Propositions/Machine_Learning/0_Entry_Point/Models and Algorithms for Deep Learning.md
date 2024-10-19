@@ -167,7 +167,7 @@ date of note: 2024-06-01
 
 #### Diffusion Network
 
-- [[Denoising Diffusion Probabilistic Models]]
+- [[Denoising Diffusion Probabilistic Models and Diffusion Network]]
 - [[Diffusion Network]]
 
 #### Generative Adversarial Network

@@ -98,7 +98,7 @@ date of note: 2024-05-12
 - [[Probabilistic Principle Component Analysis]]
 - [[Factor Analysis]]
 
-- [[Denoising Diffusion Probabilistic Models]]
+- [[Denoising Diffusion Probabilistic Models and Diffusion Network]]
 
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]

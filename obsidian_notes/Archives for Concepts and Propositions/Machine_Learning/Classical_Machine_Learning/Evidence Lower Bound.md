@@ -55,6 +55,8 @@ date of note: 2024-07-05
 >
 >In [[Probabilistic Graphical Models by Koller]] pp 385, 881, the ELBO is called an **energy functional**.
 
+^cfe07c
+
 - [[Cross-Entropy Loss Function]]
 
 ## ELBO as Lower Bound of Marginalized Likelihood
@@ -77,6 +79,8 @@ date of note: 2024-07-05
 >The last inequality is due to the *Jensen's inequality* and the fact that $\log(x)$ is a *concave function*.
 >
 >Since the *marginal likelihood function* $p_{\theta}(x)$ is called the **evidence** *of* $x$, its lower bound is called the  **evidence lower bound (ELBO)**.
+
+^fbc1e1
 
 - [[Likelihood Function]]
 - [[Jensen Inequality]]
