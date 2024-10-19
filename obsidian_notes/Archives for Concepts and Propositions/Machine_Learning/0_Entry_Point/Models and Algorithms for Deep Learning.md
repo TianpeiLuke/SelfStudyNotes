@@ -168,7 +168,10 @@ date of note: 2024-06-01
 #### Diffusion Network
 
 - [[Denoising Diffusion Probabilistic Models and Diffusion Network]]
-- [[Diffusion Network]]
+- [[Score-based Generative Models or SGMs]]
+- [[Diffusion Network Score Matching Equivalence]]
+- [[Continuous-Time Diffusion Network via Stochastic Differential Equations]]
+
 
 #### Generative Adversarial Network
 

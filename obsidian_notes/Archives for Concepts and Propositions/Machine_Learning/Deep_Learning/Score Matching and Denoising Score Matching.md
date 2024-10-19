@@ -148,9 +148,10 @@ date of note: 2024-09-08
 
 ## Diffusion Models
 
-![[Denoising Diffusion Probabilistic Models and Diffusion Network#^a375c4]]
 
+- [[Diffusion Network Score Matching Equivalence]]
 - [[Denoising Diffusion Probabilistic Models and Diffusion Network]]
+- [[Continuous-Time Diffusion Network via Stochastic Differential Equations]]
 
 
 

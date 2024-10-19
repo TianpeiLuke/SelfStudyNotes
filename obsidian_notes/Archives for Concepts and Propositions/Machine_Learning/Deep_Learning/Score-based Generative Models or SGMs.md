@@ -19,8 +19,6 @@ date of note: 2024-05-12
 ## Explanation
 
 
-- [[Langevin Equation]]
-- [[Fokker–Planck and Kolmogorov Forward-Backward Equation]]
 - [[Diffusion Process]]
 - [[Stochastic Differential Equations]]
 
@@ -29,8 +27,9 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 - [[Denoising Diffusion Probabilistic Models and Diffusion Network]]
+- [[Score Matching and Denoising Score Matching]]
+- [[Gibbs Measure and Energy-based Model]]
 
 
-- [[Wasserstein Distance]]
-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 857
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 864 - 866
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 581 - 603
