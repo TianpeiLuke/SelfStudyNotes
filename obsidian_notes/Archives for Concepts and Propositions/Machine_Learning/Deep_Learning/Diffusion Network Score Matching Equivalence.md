@@ -30,6 +30,7 @@ date of note: 2024-10-19
 >- The **forward diffusion kernel** for DDPM is given by $$q(z_{t} | x) = \mathcal{N}(z_{t}\;|\; \sqrt{ \alpha_{t} }x,\, (1-\alpha_{t})I )$$ where $$z_{t} = \sqrt{ \alpha_{t} }x + \sqrt{ 1- \alpha_{t} }\epsilon_{t}$$
 >- The **data conditional reverse transition** is given by $$q(z_{t-1} | z_{t}, x) = \mathcal{N}(z_{t-1}\;|\; m_{t}(x, z_{t}),\,\sigma_{t}^2I)$$
 >	- The mean can be reparameterized by noise term $$\begin{align*}m_{t}(x, z_{t}) &:= \frac{1}{1- \alpha_{t}}\left[ (1- \alpha_{t-1})\sqrt{ 1- \beta_{t} }\,z_{t} + \sqrt{ \alpha_{t-1} }\,\beta_{t}\,x \right]\\[5pt] \equiv  m_{t}(z_{t}, \epsilon_{t})&= \frac{1}{\sqrt{ 1 - \beta_{t} }}\left[ z_{t} - \frac{\beta_{t}}{\sqrt{ 1 - \alpha_{t} }}\epsilon_{t}\right] := \frac{1}{\sqrt{ 1 - \beta_{t} }}\left[ z_{t} + \beta_{t} \hat{\epsilon}_{t}\right]  \end{align*}$$
+>	- $$\hat{\epsilon}_{t} := -\frac{1}{\sqrt{ 1 - \alpha_{t} }}\epsilon_{t}$$
 >	- The variance $$\sigma_{t}^2 := \frac{1 - \alpha_{t-1}}{1- \alpha_{t}}\,\beta_{t} := \rho_{t}\beta_{t} \approx \beta_{t}$$
 >- The **reverse transition** for DDPM is approximated by the **diffusion network** as $$p(z_{t-1}|z_{t}, w) = \mathcal{N}(z_{t-1}\,|\, \mu(z_{t}, w, t),\, \beta_{t}I)$$ 
 >	- The mean $\mu$ is further represented by a *network* $g$ that **predicts noise** as $$\begin{align*}\mu(z_{t}, w, t) &= \frac{1}{\sqrt{ 1- \beta_{t} }}\left[ z_{t} - \frac{\beta_{t}}{\sqrt{ 1 - \alpha_{t} }}  g(z_{t}, w, t) \right] \\[5pt] &:=\frac{1}{\sqrt{ 1- \beta_{t} }}\left[ z_{t} + \beta_{t}s(z_{t}, w, t)\right] \end{align*}$$ 
@@ -84,12 +85,14 @@ date of note: 2024-10-19
 >So the **simplified objective** for ELBO is equivalent to the following **score matching objective**
 >$$
 >\begin{align*}
->&\sum_{t=2}^{T}\mathbb{E}_{ z_{t} }\left[  \left\lVert s(z_{t}, w, t)  - \hat{\epsilon}_{t}  \right\rVert^2  \right] \\[5pt]
->&=\sum_{t=2}^{T}\mathbb{E}_{  z_{t} }\left[  \left\lVert s(z_{t}, w, t)  + \frac{z_{t} -\sqrt{1- \beta_{t}}\,z_{t-1}}{\beta_{t}}   \right\rVert^2  \right] \\[5pt]
->&= \sum_{t=2}^{T}\mathbb{E}_{  z_{t} }\left[  \left\lVert \nabla_{z_{t}} \log \mathcal{N}(z_{t} \,|\, \sqrt{1- \beta_{t}}\,\hat{z}_{t-1}, \beta_{t}I)  - \nabla_{z_{t}} \log \mathcal{N}(z_{t} \,|\, \sqrt{1- \beta_{t}}\,z_{t-1}, \beta_{t}I)  \right\rVert^2  \right] \\[5pt]
+>&\sum_{t=2}^{T}\mathbb{E}_{ z_{t},\,\hat{\epsilon}_{t} }\left[  \left\lVert s(z_{t}, w, t)  - \hat{\epsilon}_{t}  \right\rVert^2  \right] \\[5pt]
+>&=\sum_{t=2}^{T}\mathbb{E}_{  z_{t},\,\hat{\epsilon}_{t} }\left[  \left\lVert s(z_{t}, w, t)  + \frac{z_{t} -\sqrt{1- \beta_{t}}\,z_{t-1}}{\beta_{t}}   \right\rVert^2  \right] \\[5pt]
+>&= \sum_{t=2}^{T}\mathbb{E}_{  z_{t}\,\hat{\epsilon}_{t} }\left[  \left\lVert \nabla_{z_{t}} \log \mathcal{N}(z_{t} \,|\, \sqrt{1- \beta_{t}}\,\hat{z}_{t-1}, \beta_{t}I)  - \nabla_{z_{t}} \log \mathcal{N}(z_{t} \,|\, \sqrt{1- \beta_{t}}\,z_{t-1}, \beta_{t}I)  \right\rVert^2  \right] \\[5pt]
 >&= \sum_{t=2}^{T}\mathbb{E}_{  z_{t} }\left[  \left\lVert \text{ score(forward process | denoised image) }  - \text{ score(forward process | true image) } \right\rVert^2  \right] \\[5pt]
 >\end{align*}
 >$$   
+
+^b963c2
 
 - [[Conditional Expectation]]
 - [[Minimum Mean Square Estimation]]

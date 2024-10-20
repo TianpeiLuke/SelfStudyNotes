@@ -57,6 +57,32 @@ date of note: 2024-10-19
 - [[Langevin Equation]]
 - [[Ornstein–Uhlenbeck Process]]
 
+### ODE for Diffusion Network
+
+>[!quote]
+>For all diffusion processes governed by an *SDE*, there exists a corresponding **deterministic process** described by an **ODE** whose trajectories have the **same marginal probability densities** $p(z|t)$ as the SDE. 
+>
+>...
+>The ODE formulation allows the use of efficient **adaptive-step solvers** to reduce the number of function evaluations dramatically. Moreover, it allows probabilistic diffusion models to be related to **normalizing flow models**, from which the change-of-variables formula (18.1) can be used to provide an exact evaluation of the log likelihood.
+>
+>-- [[Deep Learning Foundations and Concepts by Bishop]] pp 599
+
+- [[Normalizing Flows]]
+
+>[!important] Definition
+>The **ordinary differential equation** that shared the same marginal density as the diffusion network above is given by
+>$$
+> \frac{d}{dt}x(t) = f(x(t), t) - \frac{1}{2}g^{2}(t)\;\nabla_{x} \log p(x(t))
+>$$
+>
+>For **DDPM**, the corresponding **ODE** is given by
+>$$
+>\frac{d}{dt}x(t) = -\frac{1}{2}\beta(t)\,x(t) - \beta(t)\;\nabla_{x} \log p(x(t))
+>$$
+
+- [[Ordinary Differential Equations]]
+- [[Fokker–Planck and Kolmogorov Forward-Backward Equation]]
+
 
 ## Explanation
 
