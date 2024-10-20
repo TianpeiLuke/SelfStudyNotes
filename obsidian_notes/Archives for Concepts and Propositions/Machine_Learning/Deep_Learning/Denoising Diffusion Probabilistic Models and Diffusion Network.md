@@ -282,8 +282,12 @@ date of note: 2024-05-12
 >	- The *KL-divergence of Gaussian* can be written in closed form $$\mathbb{KL}\left( q(z_{t-1}| Z_{t}, x) \left\|\right. p(z_{t-1}\,|\,Z_{t}, w) \right) = \frac{1}{2\beta_{t}}\lVert m_{t}(x, z_{t}) - \mu(z_{t}, w, t) \rVert_{2}^2 + \text{ const.} $$
 >
 
+
+- [[Chain Rule of Kullback-Leibler Divergence]]
+- [[Conditional Kullback-Leibler Divegence]]
 - [[Kullback-Leibler Divergence of Gaussian Distributions]]
 - [[Kullback-Leibler Divergence]]
+
 
 >[!info]
 >$$
