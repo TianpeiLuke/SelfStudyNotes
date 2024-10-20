@@ -24,28 +24,6 @@ date of note: 2024-10-19
 
 ### Denoising Diffusion Probabilistic Model
 
-![[Denoising Diffusion Probabilistic Models and Diffusion Network#^de66ca]]
-
-
-![[Denoising Diffusion Probabilistic Models and Diffusion Network#^e4a1ab]]
-
-![[Denoising Diffusion Probabilistic Models and Diffusion Network#^e4a1ab]]
-
-![[Denoising Diffusion Probabilistic Models and Diffusion Network#^03693f]]
-
-
-![[Denoising Diffusion Probabilistic Models and Diffusion Network#^bf4525]]
-
-- [[Denoising Diffusion Probabilistic Models and Diffusion Network]]
-
-### Denoising Score Matching
-
-![[Score Matching and Denoising Score Matching#^bbecdb]]
-
-- [[Score Matching and Denoising Score Matching]]
-
-### DDPM as DSM
-
 >[!important] Definition
 >The **denoising diffusion probabilistic models (DDPM)** can be reformulated as a **score matching** problem.
 >
@@ -57,6 +35,18 @@ date of note: 2024-10-19
 >	- The mean $\mu$ is further represented by a *network* $g$ that **predicts noise** as $$\begin{align*}\mu(z_{t}, w, t) &= \frac{1}{\sqrt{ 1- \beta_{t} }}\left[ z_{t} - \frac{\beta_{t}}{\sqrt{ 1 - \alpha_{t} }}  g(z_{t}, w, t) \right] \\[5pt] &:=\frac{1}{\sqrt{ 1- \beta_{t} }}\left[ z_{t} + \beta_{t}s(z_{t}, w, t)\right] \end{align*}$$ 
 >	- We can instead define the **score model** as $$s(z_{t}, w, t) = - \frac{1}{\sqrt{ 1 - \alpha_{t} }}g(z_{t}, w, t)$$
 >	- The **conditional mean estimator** of $z_{t-1}$ given $z_{t}$ under **diffusion model** can be obtained as $$\hat{z}_{t-1} = \frac{1}{\sqrt{ 1- \beta_{t} }}\left(z_{t} - \frac{\beta_{t}}{\sqrt{1 - \alpha_{t} }}g(z_{t}, w, t) \right) = \frac{1}{\sqrt{ 1- \beta_{t} }}\left( z_{t} + \beta_{t}s(z_{t}, w, t) \right)$$
+
+- [[Denoising Diffusion Probabilistic Models and Diffusion Network]]
+
+### Denoising Score Matching
+
+![[Score Matching and Denoising Score Matching#^bbecdb]]
+
+- [[Score Matching and Denoising Score Matching]]
+
+### DDPM as DSM
+
+>[!important] 
 >- The **data score function** is defined as $$\begin{align*}\nabla_{z_{t-1}} \log q(z_{t-1} | z_{t}, x) &= \nabla_{z_{t-1}} \left(- \frac{\lVert z_{t-1} -  m_{t}(z_{t}, \epsilon_{t}) \rVert^2 }{2\sigma_{t}^2} \right) \\[5pt]  &= -\frac{z_{t-1} -  m_{t}(z_{t}, \epsilon_{t}) }{\sigma_{t}^2} \\[5pt] \end{align*}$$
 >- The **score function** of diffusion model is that $$\begin{align*}\nabla_{z_{t-1}} \log p(z_{t-1}|z_{t}, w) &= - \frac{z_{t-1} - \mu(z_{t}, w, t)}{\beta_{t}}\end{align*}$$ 
 
@@ -106,6 +96,22 @@ date of note: 2024-10-19
 
 
 ## Explanation
+
+>[!info]
+>By comparison, we see that the **denoising diffusion probabilistic model** learns the decoder (diffusion network) by continuously *matching*
+>- the *score* of **denoised image** from the **model-based** *reverse diffusion process*, and 
+>- the *score* of **corrupted image** from the **data-driven** *forward difussion process*
+>
+>under a **different level of noise variance** (continuously changing through time.)
+>
+>$$
+>\begin{CD}
+> x \to \ldots @>>> z_{t-1} @> +\hat{\epsilon}_{t} \sim \mathcal{N} >> z_{t}  \\ 
+> @.  @VVV  @| \\ 
+> @.  \hat{z}_{t-1} @<< s(z_{t}, w, t) < z_{t}  \\ 
+>\end{CD}
+>$$ 
+
 
 
 

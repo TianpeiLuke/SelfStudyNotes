@@ -35,6 +35,7 @@ date of note: 2024-10-19
 >	- We can recover original signal by *subtracting* $$\sigma^2(t)\,\nabla_{x} \log p(X_{t}; t)$$ in the **drift term**
 
 
+- [[Score Matching and Denoising Score Matching]]
 - [[Fokker–Planck and Kolmogorov Forward-Backward Equation]]
 - Anderson, B. D. (1982). Reverse-time diffusion equation models. _Stochastic Processes and their Applications_, _12_(3), 313-326.
 

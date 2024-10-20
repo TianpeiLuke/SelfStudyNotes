@@ -46,6 +46,8 @@ date of note: 2024-08-27
 > \mathbb{E}_{ p_{1} }\left[  f(X) \right] = \int \frac{p\left(x_{0} \,{,}\ldots{,}\,x_{n}\right)}{q\left(x_{0} \,{,}\ldots{,}\,x_{n}\right)}f(x_{n}) dx_{0}\,{}\ldots{}\,d x_{n}
 >$$
 
+^047f9a
+
 - [[Time-Reversible Markov Chain]]
 
 
@@ -82,6 +84,25 @@ date of note: 2024-08-27
 >
 >-- [[Deep Learning by Goodfellow]] pp 617
 
+
+
+## Applications
+
+
+### Energy-based Model
+
+- [[Gibbs Measure and Energy-based Model]]
+
+
+### Contrastive Learning
+
+- [[Noise Contrastive Estimation]]
+- [[Information Noise Contrastive Estimation as Contrastive Learning]]
+
+
+### Diffusion Network
+
+- [[Denoising Diffusion Probabilistic Models and Diffusion Network]]
 
 
 -----------

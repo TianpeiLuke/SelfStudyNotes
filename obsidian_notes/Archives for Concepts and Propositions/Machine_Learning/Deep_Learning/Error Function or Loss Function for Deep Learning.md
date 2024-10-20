@@ -29,6 +29,8 @@ date of note: 2024-08-16
 ### Mean Squared Error and Regularization
 
 - [[Minimum Mean Square Estimation]]
+- [[Least Square Estimation]]
+- [[Least Absolute Deviations]]
 - [[Auto-Encoder and Stochastic Auto-Encoder]]
 - [[Ridge Regression and L2 Regularization]]
 - [[LASSO and Sparsity-Induced Least Square]]
@@ -40,6 +42,15 @@ date of note: 2024-08-16
 - [[Cross-Entropy Loss Function]]
 - [[Kullback-Leibler Divergence]]
 
+### Maximum Entropy Learning and KL Divergence
+
+- [[Kullback-Leibler Divergence]]
+- [[Maximum Entropy Learning]]
+- [[Log-Partition Function of Exponential Family]]
+- [[Exponential Family and Convex Duality]]
+- [[Kullback-Leibler Divergence for Exponential Family]]
+- [[Bregman Divergence]]
+
 
 ### Convex Surrogate Loss
 
@@ -48,29 +59,27 @@ date of note: 2024-08-16
 - [[Softmax Function and Log-Sum-Exp Function]]
 - [[Exponential Loss Minimization for AdaBoost]]
 - [[Convex Conjugate of Log-Partition Function of Exponential Family]]
+- [[Majorization-Minimization Algorithm]]
 
 
 ### Margin-based Loss
 
 - [[Margin-based Loss Function]]
-
-
-### Maximum Entropy Learning
-
-- [[Maximum Entropy Learning]]
-- [[Log-Partition Function of Exponential Family]]
-- [[Exponential Family and Convex Duality]]
+- [[Hinge Loss as Surrogate Loss Function]]
 
 
 ### Evidence Lower Bound and Variational Free Energy
 
 - [[Evidence Lower Bound]]
 - [[Evidence Lower Bound for Exponential Family]]
+- [[Variational Auto-Encoder]]
+- [[Energy Functional for Probabilistic Graphical Model]]
 
 
 ### Score Matching and Sampling-based Loss
 
 - [[Score Matching and Denoising Score Matching]]
+- [[Denoising Diffusion Probabilistic Models and Diffusion Network]]
 - [[Gibbs Sampling]]
 - [[Contrastive Divergence]]
 - [[Langevin Dynamics and Langevin Sampling]]

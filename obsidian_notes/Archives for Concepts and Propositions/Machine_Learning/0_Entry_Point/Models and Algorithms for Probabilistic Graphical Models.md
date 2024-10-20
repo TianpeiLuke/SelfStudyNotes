@@ -81,6 +81,7 @@ date of note: 2024-06-01
 - [[Recurrent Neural Network]]
 - [[Hidden Markov Model]]
 - [[Kalman Filter Discrete-Time]]
+- [[Denoising Diffusion Probabilistic Models and Diffusion Network]]
 
 
 ### Chordal Graph, Clique Tree
@@ -121,7 +122,7 @@ date of note: 2024-06-01
 - [[Latent Dirichlet Allocation]]
 - [[Restricted Boltzmann Machine]]
 - [[Ising Model]]
-
+- [[Denoising Diffusion Probabilistic Models and Diffusion Network]]
 
 ### Exact Inference for Graphical Model
 

@@ -576,6 +576,7 @@ date of note: 2024-05-12
 ^90afc8
 
 - [[Variational Auto-Encoder]]
+- [[Information Projection and Moment Projection]]
 - [[Generative Adversarial Network]]
 
 ## Denoising Score Matching
@@ -584,6 +585,14 @@ date of note: 2024-05-12
 
 - [[Diffusion Network Score Matching Equivalence]]
 - [[Score Matching and Denoising Score Matching]]
+
+## Annealed Importance Sampling and Annealed Langevin Dynamic
+
+![[Annealed Importance Sampling#^047f9a]]
+
+- [[Annealed Importance Sampling]]
+- [[Langevin Dynamics and Langevin Sampling]]
+
 
 
 ## Stochastic Differential Equation for DDPM
