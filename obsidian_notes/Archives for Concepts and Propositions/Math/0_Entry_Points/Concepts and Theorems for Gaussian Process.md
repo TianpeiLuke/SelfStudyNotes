@@ -41,6 +41,7 @@ date of note: 2024-05-30
 - [[Independence in Gaussian Distribution]]
 - [[Marginal and Conditional Distribution of Gaussian]]
 - [[Natural Parameter and Mean Parameter for Gaussian Distribution]]
+- [[Kullback-Leibler Divergence of Gaussian Distributions]]
 
 - [[Gaussian Process]]
 - [[Sub-Gaussian Process]]

@@ -130,6 +130,15 @@ date of note: 2024-09-06
 
 - [[Bregman Divergence]]
 
+
+
+## Examples
+
+### KL Divergence of Gaussian
+
+- [[Kullback-Leibler Divergence of Gaussian Distributions]]
+
+
 ## Variational Representation
 
 >[!info]

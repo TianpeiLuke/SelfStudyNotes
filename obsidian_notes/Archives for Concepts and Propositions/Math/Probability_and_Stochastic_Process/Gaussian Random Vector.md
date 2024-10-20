@@ -44,6 +44,10 @@ date of note: 2024-05-10
 >\log \mathcal{N}(x; \mu, \Sigma) = -\frac{n}{2} \log (2\pi) -\frac{1}{2} \log \det(\Sigma)   -\frac{1}{2}\left(x - \mu\right)^T\,\Sigma^{-1}\,(x - \mu)
 >$$
 
+## Marginal and Conditional Distribution
+
+- [[Marginal and Conditional Distribution of Gaussian]]
+
 
 ## Exponential Family
 
@@ -84,8 +88,12 @@ date of note: 2024-05-10
 
 - [[Exponential Family of Distributions]]
 - [[Log-Partition Function of Exponential Family]]
+- [[Natural Parameter and Mean Parameter for Gaussian Distribution]]
 
+## KL Divergence 
 
+- [[Kullback-Leibler Divergence of Gaussian Distributions]]
+- [[Kullback-Leibler Divergence]]
 
 -----------
 ##  Recommended Notes and References

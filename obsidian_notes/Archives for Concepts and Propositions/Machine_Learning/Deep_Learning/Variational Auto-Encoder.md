@@ -208,6 +208,13 @@ date of note: 2024-05-12
 ## Explanation
 
 
+### Compare to Diffusion Network
+
+![[Denoising Diffusion Probabilistic Models and Diffusion Network#^90afc8]]
+
+- [[Denoising Diffusion Probabilistic Models and Diffusion Network]]
+
+
 
 
 
