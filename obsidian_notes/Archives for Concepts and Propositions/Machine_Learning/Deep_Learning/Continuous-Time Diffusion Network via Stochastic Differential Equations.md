@@ -34,6 +34,8 @@ date of note: 2024-10-19
 >	- The **drift term**  in *Reverse SDE* $$f(X_{t},t) - \sigma^2(t)\,\nabla_{x} \log p(X_{t}; t)$$  corresponds to the **score matching** objective
 >	- We can recover original signal by *subtracting* $$\sigma^2(t)\,\nabla_{x} \log p(X_{t}; t)$$ in the **drift term**
 
+^e99b7e
+
 
 - [[Score Matching and Denoising Score Matching]]
 - [[Fokker–Planck and Kolmogorov Forward-Backward Equation]]
@@ -69,10 +71,12 @@ date of note: 2024-10-19
 
 - [[Normalizing Flows]]
 
+![[Continuous-Time Diffusion Network via Stochastic Differential Equations#^e99b7e]]
+
 >[!important] Definition
 >The **ordinary differential equation** that shared the same marginal density as the diffusion network above is given by
 >$$
-> \frac{d}{dt}x(t) = f(x(t), t) - \frac{1}{2}g^{2}(t)\;\nabla_{x} \log p(x(t))
+> \frac{d}{dt}x(t) = f(x(t), t) - \frac{1}{2}\sigma^{2}(t)\;\nabla_{x} \log p(x(t))
 >$$
 >
 >For **DDPM**, the corresponding **ODE** is given by
