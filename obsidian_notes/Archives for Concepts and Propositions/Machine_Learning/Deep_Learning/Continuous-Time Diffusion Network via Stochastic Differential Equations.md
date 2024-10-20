@@ -30,7 +30,7 @@ date of note: 2024-10-19
 >The *denoising diffusion probabilistic model (DDPM)* can be formulated as two **continuous-time stochastic differential equations (SDE)**:
 >- **Forward SDE**: $$dX_{t} = f(X_{t}, t)\,dt + \sigma(t)\,dW_{t}$$
 >- **Reverse SDE**: $$dX_{t} = \left[f(X_{t},t) - \sigma^2(t)\,\nabla_{x} \log p(X_{t}; t)\right]\,dt + \sigma(t)\,d\widehat{W}_{t}$$
->	- $\widehat{W}_{t}$ is a *standard Wiener process* when time flows from $T$ to $0$ 
+>	- $\widehat{W}_{t}$ is a *standard Wiener process* when time flows *backwards* from $T$ to $0$ 
 >	- The **drift term**  in *Reverse SDE* $$f(X_{t},t) - \sigma^2(t)\,\nabla_{x} \log p(X_{t}; t)$$  corresponds to the **score matching** objective
 >	- We can recover original signal by *subtracting* $$\sigma^2(t)\,\nabla_{x} \log p(X_{t}; t)$$ in the **drift term**
 
@@ -74,10 +74,11 @@ date of note: 2024-10-19
 ![[Continuous-Time Diffusion Network via Stochastic Differential Equations#^e99b7e]]
 
 >[!important] Definition
->The **ordinary differential equation** that shared the same marginal density as the diffusion network above is given by
+>The **ordinary differential equation (ODE)** that shared the same marginal density as the diffusion network above can be obtained from the *forward-time SDE*
 >$$
 > \frac{d}{dt}x(t) = f(x(t), t) - \frac{1}{2}\sigma^{2}(t)\;\nabla_{x} \log p(x(t))
 >$$
+>This is called the **probability flow ODE**.
 >
 >For **DDPM**, the corresponding **ODE** is given by
 >$$
@@ -86,6 +87,30 @@ date of note: 2024-10-19
 
 - [[Ordinary Differential Equations]]
 - [[Fokker–Planck and Kolmogorov Forward-Backward Equation]]
+
+>[!important] Definition
+>We can also define the **probability flow ordinary differential equation (ODE)** from the *reverse-time SDE*
+>$$
+> \frac{d}{dt}x(t) = f(x(t), t) - \frac{1}{2}\sigma^{2}(t)\;s(x(t), w, t)
+>$$ 
+>where $$s(x, w, t) \approx \nabla_{x} \log p(x, t)$$ is the *score function*.
+>- This is also a special case of **neural ordinary differential equations** or **continuous-time normalizing flow.**
+
+- [[Normalizing Flows]]
+
+
+### Compare SDE and ODE approach
+
+>[!important] 
+>We can decompose the **forward stochastic differential equation** for *DDPM* into two parts:
+>$$
+>dX_{t} = \underbrace{ -\frac{1}{2}\beta(t)\left[ X_{t} + s(X_{t}, w, t) \right]\,dt }_{ \text{probability flow ODE} } \underbrace{ - \frac{1}{2}\beta(t)\,s(X_{t}, w, t) + \sqrt{ \beta(t) }\,d \widehat{W}_{t} }_{ \text{Langevin diffusion SDE} } 
+>$$
+
+>[!quote]
+>The **continuous noise injection** can *compensate for errors* introduced by the **numerical integration** of the *ODE term*. Consequently, the resulting samples often look better. However, the **ODE approach can be faster**. Fortunately it is possible to combine these techniques, as proposed in [Kar+22]. The basic idea is illustrated in Figure 25.9: we **alternate** between performing a *deterministic step* using an ODE solver, and then *adding a small amount noise* to the result. This can be repeated for some number of steps. (We discuss ways to reduce the number of required steps in Section 25.5.)
+>
+>-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 871
 
 
 ## Explanation

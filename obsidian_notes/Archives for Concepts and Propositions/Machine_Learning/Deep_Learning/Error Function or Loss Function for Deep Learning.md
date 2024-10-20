@@ -99,6 +99,12 @@ date of note: 2024-08-16
 - [[Information Noise Contrastive Estimation as Contrastive Learning]]
 
 
+### Adversarial Loss
+
+
+- [[Generative Adversarial Network]]
+
+
 ### Ranking Loss
 
 
