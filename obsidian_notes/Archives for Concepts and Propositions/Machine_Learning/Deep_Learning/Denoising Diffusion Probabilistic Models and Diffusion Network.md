@@ -98,11 +98,13 @@ date of note: 2024-05-12
 >$$
 >q(z_{t}) = \int_{\mathcal{D}}\,q(z_{t}\,|\,x)\,p_{\text{data}}(x)\,dx
 >$$
->This unconditional marginal corresponds to the **Gaussian convolution** in **image filter and reconstruction**:
->- It will remove the *high frequency component* such as the *low-level details*, *textures* etc.
->- Then it will remove the *low frequency component* i.e. the *high-level semantic information*.
+>- We can view this as the **noise perturbed data distribution** under **different noise scale**.
+>
+>- This unconditional marginal corresponds to the **Gaussian convolution** in **image filter and reconstruction**:
+>	- It will remove the *high frequency component* such as the *low-level details*, *textures* etc.
+>	- Then it will remove the *low frequency component* i.e. the *high-level semantic information*.
 >  
->The **forward pass** in DDPM is equivalent to apply *multiple stages* of **band-pass filters** in image processing.  
+>- The **forward pass** in DDPM is equivalent to apply *multiple stages* of **band-pass filters** in image processing.  
 
 - [[Wavelet]]
 
@@ -182,6 +184,7 @@ date of note: 2024-05-12
 >where
 >- the **diffusion network** is the mean function $$\mu(z_{t}, w, t)$$ 
 >	- Note that it takes *time-step* $t$ as *input* to account for the *change of variance* $\beta_{t}$ at *different time-step* of Markov chain.
+>	- We can consider $\mu(z_{t}, w,t)$ as the **noise conditional score network** which conditioned on *different noise scale, indexed by* $t$
 >	- This allows us to use a *single network* to invert *all the steps* in the Markov chain, instead of having to learn a *separate network for each step*.
 >- **Intuition**: Even if the posterior distribution $q(z_{t-1}|z_{t})$ is *multi-modal*, if we let $\beta_{t} \ll 1$, we would expect it can be approximated by *single-modal Gaussian distribution.*
 >  
@@ -338,11 +341,14 @@ date of note: 2024-05-12
 >[!important] Definition
 >Let $g(z_{t}, w, t)$ be a *neural network* that predicts the **total noise component** that was added to the original data $x$ to create the *noisy data* $z_{t}$ at that step. 
 >
->That is,
+>That is, we can *reparameterize* mean network as 
 >$$\mu(z_{t}, w,t) = \frac{1}{\sqrt{ 1 - \beta_{t} }}\left[ z_{t} - \frac{\beta_{t}}{\sqrt{ 1 - \alpha_{t} }} g(z_{t}, w, t) \right] $$
+>- The network $g$ corresponds to **Stein score function** $$\begin{align*} s(z_{t}, w, t) :=  -\frac{1}{\sqrt{ 1 - \alpha_{t} }} g(z_{t}, w, t) &= - \frac{z_{t} -\sqrt{1- \beta_{t}}\,\mu(z_{t}, w,t)}{\beta_{t}} \\[5pt] &= \nabla_{z_{t}} \log \mathcal{N}(z_{t}\;|\; \sqrt{1- \beta_{t}}\,\mu(z_{t}, w,t),\, \beta_{t}I) \\[5pt] &= \nabla_{z} \log p(z_{t} | \sqrt{1- \beta_{t}}\,\hat{z}_{t-1}, \beta_{t}I) \end{align*}$$ where $$\hat{z}_{t-1} = \mu(z_{t}, w,t)$$
+>- The network $$s(z_{t}, w, t)$$ corresponds to the **noise conditional score network** in **Score-baesd Generative Model (SGM).**
 
 ^03693f
 
+- [[Score Matching and Denoising Score Matching]]
 
 >[!important] 
 >Since the **mean function** of *forward pass* is of the form $$m_{t}(x, z_{t}) = \frac{1}{\sqrt{ 1 - \beta_{t} }}\left[ z_{t} - \frac{\beta_{t}}{\sqrt{ 1 - \alpha_{t} }}\epsilon_{t}\right],$$ the **KL-divergence** in the **consistent term** becomes 
@@ -570,7 +576,7 @@ date of note: 2024-05-12
 
 ## Denoising Score Matching
 
-
+![[Diffusion Network Score Matching Equivalence#^af368e]]
 
 - [[Diffusion Network Score Matching Equivalence]]
 - [[Score Matching and Denoising Score Matching]]
