@@ -24,18 +24,11 @@ date of note: 2024-10-19
 
 ### Denoising Diffusion Probabilistic Model
 
->[!important] Definition
->The **denoising diffusion probabilistic models (DDPM)** can be reformulated as a **score matching** problem.
->
->- The **forward diffusion kernel** for DDPM is given by $$q(z_{t} | x) = \mathcal{N}(z_{t}\;|\; \sqrt{ \alpha_{t} }x,\, (1-\alpha_{t})I )$$ where $$z_{t} = \sqrt{ \alpha_{t} }x + \sqrt{ 1- \alpha_{t} }\epsilon_{t}$$
->- The **data conditional reverse transition** is given by $$q(z_{t-1} | z_{t}, x) = \mathcal{N}(z_{t-1}\;|\; m_{t}(x, z_{t}),\,\sigma_{t}^2I)$$
->	- The mean can be reparameterized by noise term $$\begin{align*}m_{t}(x, z_{t}) &:= \frac{1}{1- \alpha_{t}}\left[ (1- \alpha_{t-1})\sqrt{ 1- \beta_{t} }\,z_{t} + \sqrt{ \alpha_{t-1} }\,\beta_{t}\,x \right]\\[5pt] \equiv  m_{t}(z_{t}, \epsilon_{t})&= \frac{1}{\sqrt{ 1 - \beta_{t} }}\left[ z_{t} - \frac{\beta_{t}}{\sqrt{ 1 - \alpha_{t} }}\epsilon_{t}\right] := \frac{1}{\sqrt{ 1 - \beta_{t} }}\left[ z_{t} + \beta_{t} \hat{\epsilon}_{t}\right]  \end{align*}$$
->	- $$\hat{\epsilon}_{t} := -\frac{1}{\sqrt{ 1 - \alpha_{t} }}\epsilon_{t}$$
->	- The variance $$\sigma_{t}^2 := \frac{1 - \alpha_{t-1}}{1- \alpha_{t}}\,\beta_{t} := \rho_{t}\beta_{t} \approx \beta_{t}$$
->- The **reverse transition** for DDPM is approximated by the **diffusion network** as $$p(z_{t-1}|z_{t}, w) = \mathcal{N}(z_{t-1}\,|\, \mu(z_{t}, w, t),\, \beta_{t}I)$$ 
->	- The mean $\mu$ is further represented by a *network* $g$ that **predicts noise** as $$\begin{align*}\mu(z_{t}, w, t) &= \frac{1}{\sqrt{ 1- \beta_{t} }}\left[ z_{t} - \frac{\beta_{t}}{\sqrt{ 1 - \alpha_{t} }}  g(z_{t}, w, t) \right] \\[5pt] &:=\frac{1}{\sqrt{ 1- \beta_{t} }}\left[ z_{t} + \beta_{t}s(z_{t}, w, t)\right] \end{align*}$$ 
->	- We can instead define the **score model** as $$s(z_{t}, w, t) = - \frac{1}{\sqrt{ 1 - \alpha_{t} }}g(z_{t}, w, t)$$
->	- The **conditional mean estimator** of $z_{t-1}$ given $z_{t}$ under **diffusion model** can be obtained as $$\hat{z}_{t-1} = \frac{1}{\sqrt{ 1- \beta_{t} }}\left(z_{t} - \frac{\beta_{t}}{\sqrt{1 - \alpha_{t} }}g(z_{t}, w, t) \right) = \frac{1}{\sqrt{ 1- \beta_{t} }}\left( z_{t} + \beta_{t}s(z_{t}, w, t) \right)$$
+>[!info] 
+>Recall that for **denoising diffusion probabilistic models (DDPM)**, the **forward diffusion kernel** for DDPM is given by $$q(z_{t} | x) = \mathcal{N}(z_{t}\;|\; \sqrt{ \alpha_{t} }x,\, (1-\alpha_{t})I )$$ where $$z_{t} = \sqrt{ \alpha_{t} }x + \sqrt{ 1- \alpha_{t} }\epsilon_{t}$$
+
+
+![[Denoising Diffusion Probabilistic Models and Diffusion Network#^bf4525]]
 
 - [[Denoising Diffusion Probabilistic Models and Diffusion Network]]
 
@@ -47,58 +40,57 @@ date of note: 2024-10-19
 
 ### DDPM as DSM
 
->[!important] 
->- The **data score function** is defined as $$\begin{align*}\nabla_{z_{t-1}} \log q(z_{t-1} | z_{t}, x) &= \nabla_{z_{t-1}} \left(- \frac{\lVert z_{t-1} -  m_{t}(z_{t}, \epsilon_{t}) \rVert^2 }{2\sigma_{t}^2} \right) \\[5pt]  &= -\frac{z_{t-1} -  m_{t}(z_{t}, \epsilon_{t}) }{\sigma_{t}^2} \\[5pt] \end{align*}$$
->- The **score function** of diffusion model is that $$\begin{align*}\nabla_{z_{t-1}} \log p(z_{t-1}|z_{t}, w) &= - \frac{z_{t-1} - \mu(z_{t}, w, t)}{\beta_{t}}\end{align*}$$ 
-
-#### Denoising Score Matching using Reverse Transition Kernel
-
 >[!important] Definition
->Thus the **DDPM** approximately minimize the **denoising score matching objective**
+>Consider the *forward diffusion process* in *DDPM* as the **corruption process** and **diffusion kernel** defines a **noise kernel** as $$K_{\alpha_{t}}(x, z_{t}) := q(z_{t}\,|\,x) = \mathcal{N}(z_{t}\,|\, \sqrt{ \alpha_{t} }x,\, (1-\alpha_{t})\,I )$$
+>
+>The **(marginal) distribution** or **smoothed data density** of corrupted data $z_{t}$ at time $t$ is given by $$q(z_{t}) = \int q(z_{t}\,|\,x)\,p_{\text{data}}(x)\,dx.$$
+>
+>The **score matching algorithm** minimizes the mean squared error between a **model score network** $s(z_{t}, w, t)$ and the *smoothed data density*
 >$$
->\begin{align*}
->\mathcal{L}(w) &=\mathbb{E}_{t,\, x\sim \mathcal{D},\, Z_{t} \sim q(\cdot|x),\, Z_{t-1} \sim q(\cdot|z_{t}, x) }\left[\left\lVert  \nabla_{z_{t-1}} \log p(z_{t-1}|z_{t}, w) - \nabla_{z_{t-1}} \log q(z_{t-1} | z_{t}, x) \right\rVert_{2}^2\right]  \\[5pt] 
->&=\mathbb{E}_{t,\, x\sim \mathcal{D},\, Z_{t} \sim q(\cdot|x),\, Z_{t-1} \sim q(\cdot|z_{t}, x)}\left[\left\lVert  - \frac{z_{t-1} - \mu(z_{t}, w, t)}{\beta_{t}} + \frac{z_{t-1} -  m_{t}(x, z_{t}) }{\sigma_{t}^2} \right\rVert_{2}^2\right]  \\[5pt] 
->&=\mathbb{E}_{t,\, x\sim \mathcal{D},\, Z_{t} \sim q(\cdot|x),\, Z_{t-1} \sim q(\cdot|z_{t}, x)}\left[\left\lVert  - \frac{z_{t-1} - \mu(z_{t}, w, t)}{\beta_{t}} + \frac{z_{t-1} -  m_{t}(x, z_{t}) }{\rho_{t}\,\beta_{t}} \right\rVert_{2}^2\right]  \\[5pt] 
->&\propto \mathbb{E}_{t,\, x\sim \mathcal{D},\, Z_{t} \sim q(\cdot|x)}\left[\frac{1}{\beta_{t}^2} \lVert \mu(Z_{t}, w, t) - m_{t}(x, Z_{t}) \rVert_{2}^2\right]  \\[5pt] 
->&=\;\mathbb{E}_{t,\, x\sim \mathcal{D},\, Z_{t} \sim q(\cdot|x), \hat{\epsilon}_{t}}\left[\frac{1}{1-\beta_{t}}\left\lVert  s(Z_{t}, w, t)  -  \hat{\epsilon}_{t} \right\rVert_{2}^2\right]    \\[5pt] 
->&=\;\mathbb{E}_{t,\, x\sim \mathcal{D},\,\epsilon_{t} \sim \mathcal{N}(0,I)} \left[\frac{1}{(1-\beta_{t})(1- \alpha_{t})}\left\lVert  g(Z_{t}, w, t)  -  \epsilon_{t}   \right\rVert_{2}^2\right] \end{align*}
+>\mathcal{L}(w) := \frac{1}{2} \mathbb{E}_{ t\sim \mathcal{U}([T]) }\mathbb{E}_{ Z_{t} \sim q(z_{t}) }\left[ \lVert s(Z_{t}, w, t) -  \nabla_{z_{t}} \log q(Z_{t}) \rVert_{2}^2  \right] 
 >$$
->where
->- $m(x, z_{t})$ is the *conditional mean* estimated based on *forward transition*.
->- This is equivalent to the **simplied ELBO objective** for DDPM is $$\begin{align*}\mathcal{L}(w) &=\mathbb{E}_{t, x\sim \mathcal{D}, \epsilon_{t} \sim \mathcal{N}(0,I) }\left[\lVert g(Z_{t}, w, t) - \epsilon_{t} \rVert_{2}^2\right]  \end{align*}$$  
+>- However, $q(z_{t})$ is **intractable**. Thus we *replace* it with the *diffusion kernel* $q(z_{t}|x)$
+>
+>This leads to the **denoising score matching (DSM)** objective functoin
+>$$
+>\begin{align}
+>\mathcal{L}_{\text{DSM}}(w) &:= \frac{1}{2}\mathbb{E}_{ t\sim \mathcal{U}([T]) }\left[\mathbb{E}_{x \sim \mathcal{D} }\left[ \mathbb{E}_{ Z_{t} \sim q(\cdot|x) }\left[ \lVert s(Z_{t}, w, t) -  \nabla_{z_{t}} \log q(Z_{t}\,|\,x) \rVert_{2}^2  \right] \right] \right]
+>\end{align}
+>$$
+>Note that  
+>- $$\nabla_{z_{t}} \log q(z_{t}\,|\,x) = - \frac{z_{t} - \sqrt{ \alpha_{t} }x}{1- \alpha_{t}} := -\frac{1}{\sqrt{ 1- \alpha_{t} }}\,\epsilon_{t}$$ where $$z_{t} = \sqrt{ \alpha_{t} }x + \sqrt{ 1- \alpha_{t} }\epsilon_{t}, \quad \epsilon_{t}\sim \mathcal{N}(0,I)$$
+>
+>So the **DSM objective function** can be reformulated as 
+>$$
+>\begin{align}
+>\mathcal{L}_{\text{DSM}}(w) &:= \frac{1}{2}\mathbb{E}_{ t\sim \mathcal{U}([T]) }\left[\mathbb{E}_{x \sim \mathcal{D} }\left[ \mathbb{E}_{ \epsilon_{t} \sim \mathcal{N}(0,I) }\left[ \left\lVert s\left(\sqrt{ \alpha_{t} }x + \sqrt{ 1- \alpha_{t} }\epsilon_{t}, w, t\right) + \frac{1}{\sqrt{ 1 - \alpha_{t} }}\epsilon_{t} \right\rVert_{2}^2  \right] \right] \right] \\[10pt]
+> &=\frac{1}{2} \mathbb{E}_{ t\sim \mathcal{U}([T]) }\left[\mathbb{E}_{x \sim \mathcal{D} }\left[ \mathbb{E}_{ \epsilon_{t} \sim \mathcal{N}(0,I) }\left[ \frac{1}{1- \alpha_{t}}\,\left\lVert g\left(\sqrt{ \alpha_{t} }x + \sqrt{ 1- \alpha_{t} }\epsilon_{t}, w, t\right) -  \epsilon_{t} \right\rVert_{2}^2  \right] \right] \right]
+>\end{align}
+>$$
+>where the **score network** from **DSM** and the **noise network** from **DDPM** have the following relation
+>$$
+>s\left(z_{t}, w, t\right) := - \frac{1}{\sqrt{ 1 - \alpha_{t} }}g(z_{t}, w, t)
+>$$
+>- This is exactly the **simplified ELBO objective** for **DDPM**
+>- The exact **ELBO objective** of **DDPM** corresponds to the **weighted combinations** of *multiple DSMs*, i.e. $$\begin{align} \mathcal{L}(w; T) &= \frac{1}{2}\sum_{t=1}^{T}\mathbb{E}_{x \sim \mathcal{D} }\left[ \mathbb{E}_{ \epsilon_{t} \sim \mathcal{N}(0,I) }\left[ \frac{\lambda_{t}}{1- \alpha_{t}}\,\left\lVert g\left(\sqrt{ \alpha_{t} }x + \sqrt{ 1- \alpha_{t} }\epsilon_{t}, w, t\right) -  \epsilon_{t} \right\rVert_{2}^2  \right] \right] \\[5pt] &= \sum_{t=1}^{T}\lambda_{t}\,\mathcal{L}_{\text{DSM}}(w) \end{align}$$ where $$\lambda_{t} := \frac{\beta_{t}}{(1 - \beta_{t})}$$
 
-^af368e
+^2dd27e
 
 - [[Score Matching and Denoising Score Matching]]
 - [[Markov Chain and Markov Process]]
 - [[Markov Transition Kernel and Transition Function]]
 
-#### Denoising Score Matching using Forward Transition Kernel
 
->[!important]
->We see that $$\mu(z_{t}, w,t) = \frac{1}{\sqrt{ 1- \beta_{t} }}\left[ z_{t} + \beta_{t}s(z_{t}, w, t)\right]$$
->- So the **conditional mean estimator** of $z_{t-1}$ given $z_{t}$ under model  is $$\hat{z}_{t-1} := \mathbb{E}_{w }\left[  Z_{t-1}|z_{t}, w \right] = \mu(z_{t}, w,t) = \frac{1}{\sqrt{ 1- \beta_{t} }}\left( z_{t} + \beta_{t}s(z_{t}, w, t) \right)$$
->	- $\hat{z}_{t-1}$ is the **denoised image** from *reverse diffusion process*.
->- The network $s$ corresponds to **Stein score function** given the **conditional mean estimator** $\hat{z}_{t-1}$ under **model**  $$\begin{align*} s(z_{t}, w, t)  &= - \frac{z_{t} -\sqrt{1- \beta_{t}}\,\mu(z_{t}, w,t)}{\beta_{t}} \\[5pt] &= \nabla_{z_{t}} \log \mathcal{N}(z_{t}\;|\; \sqrt{1- \beta_{t}}\,\mu(z_{t}, w,t),\, \beta_{t}I) \\[5pt] &= \nabla_{z_{t}} \log \mathcal{N}(z_{t} \,|\, \sqrt{1- \beta_{t}}\,\hat{z}_{t-1},\, \beta_{t}I) \end{align*}$$ where $$\hat{z}_{t-1} = \mathbb{E}_{w }\left[  Z_{t-1}|z_{t}, w \right]$$
->  
->So the **simplified objective** for ELBO is equivalent to the following **score matching objective**
->$$
->\begin{align*}
->&\sum_{t=2}^{T}\mathbb{E}_{ z_{t},\,\hat{\epsilon}_{t} }\left[  \left\lVert s(z_{t}, w, t)  - \hat{\epsilon}_{t}  \right\rVert^2  \right] \\[5pt]
->&=\sum_{t=2}^{T}\mathbb{E}_{  z_{t},\,\hat{\epsilon}_{t} }\left[  \left\lVert s(z_{t}, w, t)  + \frac{z_{t} -\sqrt{1- \beta_{t}}\,z_{t-1}}{\beta_{t}}   \right\rVert^2  \right] \\[5pt]
->&= \sum_{t=2}^{T}\mathbb{E}_{  z_{t}\,\hat{\epsilon}_{t} }\left[  \left\lVert \nabla_{z_{t}} \log \mathcal{N}(z_{t} \,|\, \sqrt{1- \beta_{t}}\,\hat{z}_{t-1}, \beta_{t}I)  - \nabla_{z_{t}} \log \mathcal{N}(z_{t} \,|\, \sqrt{1- \beta_{t}}\,z_{t-1}, \beta_{t}I)  \right\rVert^2  \right] \\[5pt]
->&= \sum_{t=2}^{T}\mathbb{E}_{  z_{t} }\left[  \left\lVert \text{ score(forward process | denoised image) }  - \text{ score(forward process | true image) } \right\rVert^2  \right] \\[5pt]
->\end{align*}
->$$   
 
-^b963c2
-
-- [[Conditional Expectation]]
-- [[Minimum Mean Square Estimation]]
 
 
 ## Explanation
+
+>[!info]
+>The **score network** $s(z, w, t)$ can be find in the formulation of mean function 
+>$$\mu(z_{t}, w,t) = \frac{1}{\sqrt{ 1 - \beta_{t} }}\left[ z_{t} - \frac{\beta_{t}}{\sqrt{ 1 - \alpha_{t} }} g(z_{t}, w, t) \right] $$
+>- $s(z, w, t)$  can be seen as the **Stein score function** for *forward transition* when the *corrupted image* $z_{t-1}$ is replaced by the *denoised image* $\hat{z}_{t-1}$ $$\begin{align*} s(z_{t}, w, t) :=  -\frac{1}{\sqrt{ 1 - \alpha_{t} }} g(z_{t}, w, t) &= - \frac{z_{t} -\sqrt{1- \beta_{t}}\,\mu(z_{t}, w,t)}{\beta_{t}} \\[5pt] &= \nabla_{z_{t}} \log \mathcal{N}(z_{t}\;|\; \sqrt{1- \beta_{t}}\,\mu(z_{t}, w,t),\, \beta_{t}I) \\[5pt] &= \nabla_{z} \log p(z_{t} | \sqrt{1- \beta_{t}}\,\hat{z}_{t-1}, \beta_{t}I) \end{align*}$$ where $$\hat{z}_{t-1} = \mu(z_{t}, w,t)$$
+
 
 >[!info]
 >By comparison, we see that the **denoising diffusion probabilistic model** learns the decoder (diffusion network) by continuously *matching*
@@ -116,6 +108,32 @@ date of note: 2024-10-19
 >$$ 
 
 
+## Score Matching from Continuous-Time Diffusion Model
+ ![[Continuous-Time Diffusion Network via Stochastic Differential Equations#^e99b7e]]
+
+
+>[!important]
+>The **reverse SDE** for diffusion network is given by
+>$$dz_{t} = \left[f(z_{t},t) - \sigma^2(t)\,\nabla_{x} \log q(z_{t})\right]\,dt + \sigma(t)\,d\widehat{W}_{t}$$
+>where the **drift term** can be interpreted as the **score matching** between 
+>- the forward drift term $f(z_{t},t)$ and
+>- the **score function of marginal** $$\nabla_{x} \log q(z_{t})$$ 
+>  
+>Ideally, we want to learn the **score function** $s(z_{t}, w, t)$ directly via regression 
+>$$
+>\min_{w}\;\mathbb{E}_{ t,\, Z_{t}\sim q(z_{t}) }\left[ \lVert s(Z_{t}, w, t) - \nabla_{x} \log q(Z_{t}) \rVert_{2}^2  \right]
+>$$  
+>but the unconditioned marginal is *intractable*.
+>
+>Instead, we use the *conditional reversal kernel* $$q(z_{t}|x) = \mathcal{N}(z_{t}\,|\,\gamma_{t}\,x,\, \sigma_{t}^2I)$$ as the **score of diffused data sample**. Thus, the **denoising score matching** corresponds to the solution of the following optimization
+>$$
+>\min_{w}\;\mathbb{E}_{ t, \,x\sim \mathcal{D},\,  Z_{t}\sim q(\cdot|x) }\left[ \lVert s(Z_{t}, w, t) - \nabla_{x} \log q(Z_{t}\,|\,x) \rVert_{2}^2  \right]
+>$$  
+>- This is the same as the discrete-time case.
+
+- [[Continuous-Time Diffusion Network via Stochastic Differential Equations]]
+
+
 
 
 
@@ -131,9 +149,13 @@ date of note: 2024-10-19
 - [[Time-Reversible Markov Chain]]
 - [[Markov Transition Kernel and Transition Function]]
 - [[Artificial Neural Network and Deep Learning]]
+- [[Conditional Expectation]]
+- [[Minimum Mean Square Estimation]]
 
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 864 - 867
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 581 - 603
+- **CVPR 2023 Tutorial**: [link](https://cvpr2023-tutorial-diffusion-models.github.io);
+	- [Youtube recording](https://www.youtube.com/watch?v=1d4r19GEVos)
 - Song, Y., & Ermon, S. (2019). Generative modeling by estimating gradients of the data distribution. _Advances in neural information processing systems_, _32_.
 - Song, Y., Sohl-Dickstein, J., Kingma, D. P., Kumar, A., Ermon, S., & Poole, B. (2020). Score-based generative modeling through stochastic differential equations. _arXiv preprint arXiv:2011.13456_.

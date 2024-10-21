@@ -36,7 +36,7 @@ date of note: 2024-10-19
 
 ^e99b7e
 
-
+- [[Stochastic Differential Equations]]
 - [[Score Matching and Denoising Score Matching]]
 - [[Fokker–Planck and Kolmogorov Forward-Backward Equation]]
 - Anderson, B. D. (1982). Reverse-time diffusion equation models. _Stochastic Processes and their Applications_, _12_(3), 313-326.
@@ -58,6 +58,43 @@ date of note: 2024-10-19
 - [[Stochastic Differential Equations]]
 - [[Langevin Equation]]
 - [[Ornstein–Uhlenbeck Process]]
+
+>[!info] Proof
+>For DDPM, the update of *forward diffusion* is given by $$x_{t} = \sqrt{ 1 - \beta_{t} }\,x_{t-1} + \sqrt{ \beta_{t} }\epsilon_{t}$$
+>
+>Let $\beta_{t} = \beta(t)\Delta t$ so the update becomes 
+>$$
+>\begin{align*}
+>x_{t} &= \sqrt{ 1 - \beta_{t} }\,x_{t-1} + \sqrt{ \beta_{t} }\,\epsilon_{t} \\[5pt]
+>&= \sqrt{ 1 -  \beta(t)\Delta t }\,x_{t-1} + \sqrt{  \beta(t)\Delta t }\,\epsilon_{t}
+>\end{align*}
+>$$
+>We approximate the first term via *first-order Taylor expansion*
+>$$
+>\begin{align*}
+>\sqrt{ 1 -  \beta(t)\Delta t } &\approx 1 - \frac{\beta(t)\Delta t}{2} 
+>\end{align*}
+>$$
+>so 
+>$$
+>\begin{align*}
+>x_{t} &\approx x_{t-1} - \frac{\beta(t)\Delta t}{2}\,x_{t-1}  + \sqrt{  \beta(t)\Delta t }\,\epsilon_{t}
+>\end{align*}
+>$$
+>This leads to 
+>$$
+>\begin{align*}
+> \frac{x_{t} - x_{t-1}}{\Delta t} &\approx - \frac{\beta(t)}{2}\,x_{t-1}  + \sqrt{  \frac{\beta(t)}{\Delta t }}\,\epsilon_{t} \\[5pt]
+> \lim_{ \Delta t \to 0 }  \frac{x_{t} - x_{t-1}}{\Delta t} &= - \frac{\beta(t)}{2}\,x_{t-1}  + \sqrt{ \beta(t) } \lim_{ \Delta t \to 0 } \frac{\mathcal{N}(0,I)}{\sqrt{\Delta t }}\,\\[5pt]
+> \implies \frac{d}{dt} X(t) &=  - \frac{\beta(t)}{2}\,X(t)  + \sqrt{ \beta(t) } \frac{d}{dt} W_{t}\\[5pt]
+>  dX(t) &=  - \frac{\beta(t)}{2}\,X(t)\,dt  + \sqrt{ \beta(t) }\,dW(t)
+>\end{align*}
+>$$
+>End-of-Proof.
+
+
+![[continuous_time_diffusion_network_sde_visual.png]]
+
 
 ### ODE for Diffusion Network
 
@@ -93,9 +130,10 @@ date of note: 2024-10-19
 >$$
 > \frac{d}{dt}x(t) = f(x(t), t) - \frac{1}{2}\sigma^{2}(t)\;s(x(t), w, t)
 >$$ 
->where $$s(x, w, t) \approx \nabla_{x} \log p(x, t)$$ is the *score function*.
+>where $$s(x, w, t) \approx \nabla_{x} \log p(x; t)$$ is the *score function*.
 >- This is also a special case of **neural ordinary differential equations** or **continuous-time normalizing flow.**
 
+- [[Score Matching and Denoising Score Matching]]
 - [[Normalizing Flows]]
 
 
@@ -106,6 +144,9 @@ date of note: 2024-10-19
 >$$
 >dX_{t} = \underbrace{ -\frac{1}{2}\beta(t)\left[ X_{t} + s(X_{t}, w, t) \right]\,dt }_{ \text{probability flow ODE} } \underbrace{ - \frac{1}{2}\beta(t)\,s(X_{t}, w, t) + \sqrt{ \beta(t) }\,d \widehat{W}_{t} }_{ \text{Langevin diffusion SDE} } 
 >$$
+
+- [[Langevin Dynamics and Langevin Sampling]]
+- [[Langevin Equation]]
 
 >[!quote]
 >The **continuous noise injection** can *compensate for errors* introduced by the **numerical integration** of the *ODE term*. Consequently, the resulting samples often look better. However, the **ODE approach can be faster**. Fortunately it is possible to combine these techniques, as proposed in [Kar+22]. The basic idea is illustrated in Figure 25.9: we **alternate** between performing a *deterministic step* using an ODE solver, and then *adding a small amount noise* to the result. This can be repeated for some number of steps. (We discuss ways to reduce the number of required steps in Section 25.5.)
@@ -120,6 +161,12 @@ date of note: 2024-10-19
 >The **main drawback** of *diffusion models* for generating data is that they require **multiple sequential inference passes** through the *trained network*, which can be computationally expensive. One way to speed up the sampling process is first to convert the **denoising process** to a **differential equation over continuous time** and then to use alternative efficient *discretization methods* to solve the equation efficiently.
 >
 >-- [[Deep Learning Foundations and Concepts by Bishop]] pp 593
+
+>[!info]
+>The formulation of **SDE** for **DDPM** is **varience preserving SDE**
+>$$dX_{t} = - \frac{1}{2}\beta(t)\,X_{t}\,dt + \sqrt{\beta(t)}\,dW_{t}$$ 
+>where $$q(x_{t}\,|\,x_{0}) = \mathcal{N}(x_{t}\,|\, \gamma_{t}\,x_{0},\, \sigma_{t}^2I )$$
+
 
 
 ## Neural Ordinary Differential Equations
@@ -154,11 +201,14 @@ date of note: 2024-10-19
 - [[Normalizing Flows]]
 - [[Neural Ordinary Differential Equations]]
 
-- [[Stochastic Differential Equations]]
+
+- [[Wasserstein Distance]]
 
 
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 598 - 599
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 867 - 872
+- **CVPR 2023 Tutorial**: [link](https://cvpr2023-tutorial-diffusion-models.github.io);
+	- [Youtube recording](https://www.youtube.com/watch?v=1d4r19GEVos)
 
 - Anderson, B. D. (1982). Reverse-time diffusion equation models. _Stochastic Processes and their Applications_, _12_(3), 313-326.
 - Song, Y., Sohl-Dickstein, J., Kingma, D. P., Kumar, A., Ermon, S., & Poole, B. (2021). Score-Based Generative Modeling through Stochastic Differential Equations. In _International Conference on Learning Representations_.

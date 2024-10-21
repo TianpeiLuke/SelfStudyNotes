@@ -2,6 +2,7 @@
 tags:
   - concept
   - math/game_theory
+  - deep_learning/generative_models
 keywords: 
 topics: 
 name: 

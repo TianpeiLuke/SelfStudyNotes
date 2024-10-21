@@ -86,27 +86,8 @@ date of note: 2024-05-12
 - [[Invariant Measure and Stationary Distribution]]
 - [[Ergodic Markov Chain and Asymptotic of Transition Kernel]]
 
->[!important]
->The simple formulation of 1-step transition kernel in *forward diffusion* allows us to directly **jump** to $t$-step of the process *without simulating the entire process*.
->
->From **autoencoder** point of view, the **encoder step** is a fixed mapping where $$z_{t} = \sqrt{ \alpha_{t} }x + \sqrt{ 1 - \alpha_{t} }\epsilon_{t}$$
->
->Unlike **variational autoencoder**, **DDPM** requires **multiple encoder at different time** while each has **different variance** $\alpha_{t}$
+![[diffusion_kernel_ddpm.png]]
 
->[!important] Definition
->The **marginal distribution** of $t$-step intermediate representation $z_{t}$ is given by 
->$$
->q(z_{t}) = \int_{\mathcal{D}}\,q(z_{t}\,|\,x)\,p_{\text{data}}(x)\,dx
->$$
->- We can view this as the **noise perturbed data distribution** under **different noise scale**.
->
->- This unconditional marginal corresponds to the **Gaussian convolution** in **image filter and reconstruction**:
->	- It will remove the *high frequency component* such as the *low-level details*, *textures* etc.
->	- Then it will remove the *low frequency component* i.e. the *high-level semantic information*.
->  
->- The **forward pass** in DDPM is equivalent to apply *multiple stages* of **band-pass filters** in image processing.  
-
-- [[Wavelet]]
 
  >[!info] Proof
  >Note that 
@@ -142,6 +123,31 @@ date of note: 2024-05-12
 >\end{align*}
 >$$
 >So $$\hat{\sigma}_{t}^2 = 1- \alpha_{t}$$
+
+
+>[!important]
+>The simple formulation of 1-step transition kernel in *forward diffusion* allows us to directly **jump** to $t$-step of the process *without simulating the entire process*.
+>
+>From **autoencoder** point of view, the **encoder step** is a fixed mapping where $$z_{t} = \sqrt{ \alpha_{t} }x + \sqrt{ 1 - \alpha_{t} }\epsilon_{t}$$
+>
+>Unlike **variational autoencoder**, **DDPM** requires **multiple encoder at different time** while each has **different variance** $1-\alpha_{t}$
+
+>[!important] Definition
+>The **marginal distribution** of $t$-step intermediate representation $z_{t}$ is given by 
+>$$
+>q(z_{t}) = \int_{\mathcal{D}}\,q(z_{t}\,|\,x)\,p_{\text{data}}(x)\,dx
+>$$
+>- We can view this as the **noise perturbed data distribution** under **different noise scale**.
+>
+>- This unconditional marginal corresponds to the **Gaussian convolution** in **image processing and reconstruction**:
+>	- It will first remove the *high frequency component* such as the *low-level details*, *textures* etc.
+>	- Then it will remove the *low frequency component* i.e. the *high-level semantic information*.
+>  
+>- The **forward pass** in DDPM is equivalent to apply *multiple stages* of **band-pass filters** in image processing.  
+
+- [[Wavelet]]
+
+![[diffusion_kernel_gaussian_convolution.png]]
 
 
 ## Reverse Diffusion Chain and Diffusion Network
@@ -201,6 +207,9 @@ date of note: 2024-05-12
 ^e4a1ab
 
 - [[Artificial Neural Network and Deep Learning]]
+
+![[diffusion_network_time_embedding.png]]
+
 
 ## Variational Training
 
@@ -398,14 +407,11 @@ date of note: 2024-05-12
 >\end{align*}
 >$$  
 >
->We can further omit the factor $\beta_{t} / (2(1- \alpha_{t})(1- \beta_{t}))$, and obtain the **regression loss function** for **noise recontruction**
+>We can further omit the factor $\beta_{t} / (2(1- \alpha_{t})(1- \beta_{t}))$, and obtain the **simplified loss function** for **noise recontruction**
 >$$
->\mathcal{L}(w) = \sum_{t=1}^{T}\mathbb{E}_{x\sim \mathcal{D}, \epsilon_{t} \sim \mathcal{N}(0, I) }\left[\lVert g\left(\sqrt{ \alpha_{t} }x + \sqrt{ 1- \alpha_{t} }\epsilon_{t}, w, t\right) - \epsilon_{t} \rVert_{2}^2\right] 
+>\mathcal{L}_{\text{simple}}(w) = \mathbb{E}_{ t\sim \mathcal{U}([T]) }\left[\mathbb{E}_{x \sim \mathcal{D} }\left[ \mathbb{E}_{ \epsilon_{t} \sim \mathcal{N}(0,I) }\left[ \left\lVert g\left(\sqrt{ \alpha_{t} }x + \sqrt{ 1- \alpha_{t} }\epsilon_{t}, w, t\right) -  \epsilon_{t} \right\rVert_{2}^2  \right] \right] \right] 
 >$$
 >which is approximated with *Monte Carlo sampling*
->$$
->\hat{\mathcal{L}}(w) = \sum_{t=1}^{T}\sum_{k=1}^{L}\lVert g(Z_{t}^{(k)}, w, t) - \epsilon_{t} \rVert_{2}^2
->$$
 
 ^bf4525
 
@@ -417,9 +423,9 @@ date of note: 2024-05-12
 ### Training Algorithm
 
 >[!important] Definition
->The **training algorithm** for  **denoising diffusion probabilistic model (DDPM)** solves the noise regression problem 
+>The **training algorithm** for  **denoising diffusion probabilistic model (DDPM)** solves the regression problem 
 >$$
->\min_{w}\hat{\mathcal{L}}_{T}(w) = \min_{w}\sum_{t=1}^{T}\sum_{k=1}^{L}\lVert g(Z_{t}^{(k)}, w, t) - \epsilon_{t} \rVert_{2}^2
+>\min_{w}\hat{\mathcal{L}}(w) = \min_{w}\mathbb{E}_{ t\sim \mathcal{U}([T]) }\left[\mathbb{E}_{x \sim \mathcal{D} }\left[ \mathbb{E}_{ \epsilon_{t} \sim \mathcal{N}(0,I) }\left[ \left\lVert g\left(\sqrt{ \alpha_{t} }x + \sqrt{ 1- \alpha_{t} }\epsilon_{t}, w, t\right) -  \epsilon_{t} \right\rVert_{2}^2  \right] \right] \right]
 >$$
 >which is described as below:
 >- *Require*: training data $\mathcal{D}$
@@ -436,6 +442,8 @@ date of note: 2024-05-12
 >	- Take optimization step based on *stochastic gradient descent* $$w \leftarrow w - \eta \nabla \hat{\mathcal{L}}(w)$$
 >- *Return*: decoder network parameter $w$
 
+- [[Stochastic Gradient Descent Algorithm]]
+- [[Adam Algorithm]]
 
 >[!info]
 >Although both *forward pass* and *reverse pass* are based on **Markov chain**,  the *DDPM training* be **paralleled**. This is because
@@ -522,6 +530,10 @@ date of note: 2024-05-12
 >	- It is further estimated using **Monte Carlo estimator** $$\begin{align*}\mathcal{L}(q, w; x) &\propto \mathbb{E}_{Z_{1} \sim q(\cdot|x) }\left[\log p(x|Z_{1}, w) \right] - \frac{1}{2\beta_{t}}\sum_{t=2}^{T}\mathbb{E}_{Z_{t} \sim q(\cdot|x)  }\left[\lVert m_{t}(x, Z_{t}) - \mu(Z_{t}, w, t) \rVert_{2}^2\right] \\[5pt] &\approx \frac{1}{L_{1}}\sum_{k_{1}=1}^{L_{1}}\log p(x|Z_{1}^{(k_{1})}, w) - \frac{1}{2\beta_{t}}\sum_{t=2}^{T}\frac{1}{L_{t}}\sum_{k_{t}=1}^{L_{t}} \lVert m_{t}(x, Z_{t}^{(k_{t})}) - \mu(Z_{t}^{(k_{t})}, w, t) \rVert_{2}^2 \end{align*}$$
 >	- Using the *noise network*, the reformulation of training objective as $$\begin{align*}\mathcal{L}(w) &= \sum_{t=1}^{T}\mathbb{E}_{Z_{t} \sim q(\cdot|x) }\left[\lVert g(Z_{t}, w, t) - \epsilon_{t} \rVert_{2}^2\right] \\[5pt] &\approx \sum_{t=1}^{T}\sum_{k=1}^{L}\lVert g(Z_{t}^{(k)}, w, t) - \epsilon_{t} \rVert_{2}^2\end{align*}$$ 
 
+### Generative Model Trilemma
+
+![[generative_learning_trilemma.png]]
+
 
 ## Variational Auto-encoder
 
@@ -581,10 +593,7 @@ date of note: 2024-05-12
 
 ## Denoising Score Matching
 
-![[Diffusion Network Score Matching Equivalence#^af368e]]
-
-![[Diffusion Network Score Matching Equivalence#^b963c2]]
-
+![[Diffusion Network Score Matching Equivalence#^2dd27e]]
 
 - [[Diffusion Network Score Matching Equivalence]]
 - [[Score Matching and Denoising Score Matching]]
@@ -624,6 +633,8 @@ date of note: 2024-05-12
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 857
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 581 - 603
+- **CVPR 2023 Tutorial**: [link](https://cvpr2023-tutorial-diffusion-models.github.io);
+	- [Youtube recording](https://www.youtube.com/watch?v=1d4r19GEVos)
 - Ho, J., Jain, A., & Abbeel, P. (2020). Denoising diffusion probabilistic models. _Advances in neural information processing systems_, _33_, 6840-6851.
 - Song, J., Meng, C., & Ermon, S. (2020.) Denoising Diffusion Implicit Models. In _International Conference on Learning Representations_. 
 - Kawar, B., Elad, M., Ermon, S., & Song, J. (2022). Denoising diffusion restoration models. _Advances in Neural Information Processing Systems_, _35_, 23593-23606.
