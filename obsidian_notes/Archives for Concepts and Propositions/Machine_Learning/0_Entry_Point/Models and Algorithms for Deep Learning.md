@@ -171,6 +171,9 @@ date of note: 2024-06-01
 - [[Score-based Generative Models or SGMs]]
 - [[Diffusion Network Score Matching Equivalence]]
 - [[Continuous-Time Diffusion Network via Stochastic Differential Equations]]
+- [[Latent Space Diffusion Model]]
+- [[Guided Diffusion Model and Conditional Diffusion Model]]
+- [[Discrete Denoising Diffusion Probabilistic Models]]
 
 
 #### Generative Adversarial Network

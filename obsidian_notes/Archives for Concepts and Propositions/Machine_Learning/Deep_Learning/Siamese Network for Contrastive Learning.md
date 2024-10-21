@@ -3,16 +3,20 @@ tags:
   - concept
   - deep_learning/representation_learning
   - deep_learning/contrastive_learning
-keywords: 
-topics: 
-name: 
+keywords:
+  - siamese_network
+  - contrastive_learning
+  - representation_learning
+topics:
+  - deep_learning/contrastive_learning
+name: Siamese Network for Contrastive Learning
 date of note: 2024-09-08
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Siamese Network for Contrastive Learning
 
 
 

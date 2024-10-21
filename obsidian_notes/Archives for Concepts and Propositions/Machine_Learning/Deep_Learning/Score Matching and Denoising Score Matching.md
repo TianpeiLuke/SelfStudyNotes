@@ -57,6 +57,7 @@ date of note: 2024-09-08
 ^6a12a8
 
 - [[Deep Learning by Goodfellow]] pp 609
+- [[Fisher Divergence]]
 - [[Minimum Mean Square Estimation]]
 - [[Least Square Estimation]]
 - [[REINFORCE Algorithm with Baseline]]

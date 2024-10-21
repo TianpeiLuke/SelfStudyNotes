@@ -620,6 +620,14 @@ date of note: 2024-05-12
 - [[Continuous-Time Diffusion Network via Stochastic Differential Equations]]
 
 
+## Other Variants
+
+- [[Discrete Denoising Diffusion Probabilistic Models]]
+- [[Latent Space Diffusion Model]]
+- [[Guided Diffusion Model and Conditional Diffusion Model]]
+
+
+
 -----------
 ##  Recommended Notes and References
 
