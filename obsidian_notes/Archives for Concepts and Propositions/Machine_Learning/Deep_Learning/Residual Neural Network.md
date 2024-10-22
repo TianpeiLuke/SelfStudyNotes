@@ -16,6 +16,11 @@ date of note: 2024-05-12
 
 
 
+- [[Residual Connection for Deep Learning]]
+- [[Convolutional Filters]]
+- [[Convolutional Neural Network]]
+
+
 ## Explanation
 
 
@@ -25,13 +30,12 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
-- [[Residual Connection for Deep Learning]]
+
 - [[Artificial Neural Network and Deep Learning]]
 
 - [[Hidden Markov Model]]
 - [[Linear Dynamic System]]
 
-- [[Recurrent Neural Network]]
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]
 - [[Deep Learning by Goodfellow]] pp 368

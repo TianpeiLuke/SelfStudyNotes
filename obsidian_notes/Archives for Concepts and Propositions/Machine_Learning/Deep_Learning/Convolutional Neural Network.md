@@ -24,17 +24,29 @@ date of note: 2024-05-12
 
 ![[cnn_example.png]]
 
+- [[Convolutional Filters]]
+- [[Pooling for Deep Learning]]
+- [[Multi-Layer Perceptron and Feed-Forward Network]]
+- [[Activation Functions for Deep Learning]]
+- [[Softmax Function and Log-Sum-Exp Function]]
 
 ## Explanation
 
 
+- [[Equivariance of Estimator]]
+
+
+## Encoder-Decoder Architecture
+
+- [[U-Net as Convolutional Autoencoder with Skip Connections]]
+- [[Auto-Encoder and Stochastic Auto-Encoder]]
 
 
 
 -----------
 ##  Recommended Notes and References
 
-- [[Equivariance of Estimator]]
+
 
 - [[Artificial Neural Network and Deep Learning]]
 

@@ -26,7 +26,9 @@ date of note: 2024-05-12
 ![[cnn_encoder_decoder.png]]
 
 - [[Auto-Encoder and Stochastic Auto-Encoder]]
-
+- [[Convolutional Neural Network]]
+- [[Convolutional Filters]]
+- [[Pooling for Deep Learning]]
 
 ### U-Net
 
@@ -43,9 +45,8 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
-- [[Convolutional Neural Network]]
-- [[Convolutional Filters]]
-- [[Pooling for Deep Learning]]
+
+
 - [[Equivariance of Estimator]]
 - [[Residual Connection for Deep Learning]]
 
