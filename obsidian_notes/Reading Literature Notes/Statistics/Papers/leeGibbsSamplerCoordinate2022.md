@@ -75,3 +75,9 @@ date of note: 2024-05-14
 ----
 
 ## Reference and Related Notes
+
+- [[Gibbs Sampling]]
+- [[Block Coordinate Descent Algorithm]]
+
+- [[Markov Chain Monte Carlo Methods]]
+- [[Monte Carlo Strategies in Scientific Computing by Liu]] 

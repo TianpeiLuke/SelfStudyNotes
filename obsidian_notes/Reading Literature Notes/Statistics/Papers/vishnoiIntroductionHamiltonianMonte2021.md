@@ -76,6 +76,7 @@ date of note: 2024-07-08
 
 ## Reference and Related Notes
 
+- [[Hamiltonian Monte Carlo]]
 
 - [[Monte Carlo Strategies in Scientific Computing by Liu]]
 - [[Monte Carlo Statistical Methods by Robert]]

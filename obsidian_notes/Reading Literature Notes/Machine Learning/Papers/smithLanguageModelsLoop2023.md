@@ -289,3 +289,6 @@ Additional settings:
 ----
 
 ## Reference and Related Notes
+
+
+- [[Large Language Model and Pretrained Language Models]]

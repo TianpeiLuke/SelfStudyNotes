@@ -193,3 +193,5 @@ date of note: 2024-03-13
 ----
 
 ## Reference and Related Notes
+
+- [[Triplet Loss Minimization for Contrastive Learning]]

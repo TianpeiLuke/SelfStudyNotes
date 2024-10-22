@@ -90,3 +90,4 @@ date of note: 2024-07-04
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 477 - 537
 - [[Deep Learning by Goodfellow]] pp 590
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 429
+- [[leeGibbsSamplerCoordinate2022]]

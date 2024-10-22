@@ -73,3 +73,8 @@ date of note: 2024-05-12
 ----
 
 ## Reference and Related Notes
+
+- [[keLightGBMHighlyEfficient2017]]
+- [[Gradient Boosting Trees]]
+
+- [[Boosting Foundations and Algorithms by Schapire]]

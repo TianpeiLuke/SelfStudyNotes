@@ -362,7 +362,7 @@ date of note: 2024-07-04
 - Neal. 2011. “[MCMC Using Hamiltonian Dynamics](http://arxiv.org/abs/1206.1901).” In _Handbook for Markov Chain Monte Carlo_.
 - Betancourt, M. (2018). _A Conceptual Introduction to Hamiltonian Monte Carlo_ (Methodology (Stat.ME) arXiv:1701.02434). arXiv. [https://doi.org/10.48550/arXiv.1701.02434](https://doi.org/10.48550/arXiv.1701.02434)
 - Betancourt, M., Byrne, S., Livingstone, S., & Girolami, M. (2017). The geometric foundations of Hamiltonian Monte Carlo. _Bernoulli_, _23_(4A), 2257–2298. [https://doi.org/10.3150/16-BEJ810](https://doi.org/10.3150/16-BEJ810)
-- Vishnoi, N. K. (2021). _An Introduction to Hamiltonian Monte Carlo Method for Sampling_ (arXiv:2108.12107). arXiv. [https://doi.org/10.48550/arXiv.2108.12107](https://doi.org/10.48550/arXiv.2108.12107) [[vishnoiIntroductionHamiltonianMonte2021]]
+- [[vishnoiIntroductionHamiltonianMonte2021]] Vishnoi, N. K. (2021). _An Introduction to Hamiltonian Monte Carlo Method for Sampling_ (arXiv:2108.12107). arXiv. [https://doi.org/10.48550/arXiv.2108.12107](https://doi.org/10.48550/arXiv.2108.12107) 
 
 
 

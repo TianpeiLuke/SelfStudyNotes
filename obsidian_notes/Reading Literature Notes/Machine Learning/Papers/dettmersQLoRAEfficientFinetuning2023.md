@@ -73,3 +73,5 @@ date of note:
 ----
 
 ## Reference and Related Notes
+
+- [[Large Language Model and Pretrained Language Models]]

@@ -78,3 +78,5 @@ date of note: 2024-10-21
 ----
 
 ## Reference and Related Notes
+
+- [[devlinBERTPretrainingDeep2019]]

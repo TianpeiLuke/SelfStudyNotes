@@ -78,3 +78,7 @@ date of note: 2024-10-21
 ----
 
 ## Reference and Related Notes
+
+
+- [[Bidirectional Encoder Representation from Transformer or BERT]]
+- [[liuRoBERTaRobustlyOptimized2019]]
