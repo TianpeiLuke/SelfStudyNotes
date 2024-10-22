@@ -46,6 +46,8 @@ date of note: 2024-08-16
 >- typical RNNs will add extra architectural features such as **output layers** that read information out of the state $h$ to make predictions.
 >- the **state transition function** $f$ is defined by a neural network such as $$f(h^{(t)}, x^{(t+1)}; \theta) := \sigma \left(W_{h}\,h^{(t)} + W_{x}\,x^{(t+1)} + b\right)$$
 
+^81c4ad
+
 - [[Linear Dynamic System]]
 - [[Multi-Layer Perceptron and Feed-Forward Network]]
 

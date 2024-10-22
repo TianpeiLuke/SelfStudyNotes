@@ -17,6 +17,8 @@ date of note: 2024-08-31
 >[!important]
 >**Name**: Bidirectional Recurrent Neural Network
 
+![[Recurrent Neural Network#^81c4ad]]
+
 
 
 ## Explanation

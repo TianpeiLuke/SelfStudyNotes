@@ -60,6 +60,11 @@ date of note: 2024-05-12
 - [[Bregman Projection]]
 
 
+## Iterative Least Square
+
+- [[Logistic Regression Solution via Iterative Reweighted Least Square]]
+- [[Least Absolute Deviations Solution via Iterative Re-weighted Least Square]]
+
 
 
 -----------

@@ -56,7 +56,9 @@ routing, involve moving distributions, and that thread appears in all of the sem
 ### Optimal Transport in Machine Learning
 
 - [[k-Means Clustering]]
-
+- [[Generative Adversarial Network]]
+- [[Denoising Diffusion Probabilistic Models and Diffusion Network]]
+- [[Continuous-Time Diffusion Network via Stochastic Differential Equations]]
 
 
 ### Transportation Cost Inequalities
@@ -68,7 +70,7 @@ routing, involve moving distributions, and that thread appears in all of the sem
 - [[Kullback-Leibler Divergence]]
 - [[Pinsker Inequality]]
 - [[Transportation Cost Inequality]]
-
+- [[Isoperimetric Inequality via Transportation Cost]]
 
 ### Diffusion Process
 
@@ -81,9 +83,9 @@ routing, involve moving distributions, and that thread appears in all of the sem
 - [[Fokker–Planck and Kolmogorov Forward-Backward Equation]]
 - [[Fokker–Planck Equation via Wasserstein Distance]]
 
+### Gradient Flows
 
-
-
+- [[Gradient Descent Algorithm]]
 
 
 
