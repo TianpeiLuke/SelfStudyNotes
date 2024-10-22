@@ -48,7 +48,7 @@ date of note: 2024-09-09
 
 - [[Triplet Loss Minimization for Contrastive Learning]]
 - [[Information Noise Contrastive Estimation as Contrastive Learning]]
-
+- [[Attention Mechanism in Neural Network]]
 
 
 - [[Cauchy-Schwartz Inequality]]

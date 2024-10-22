@@ -158,7 +158,9 @@ date of note: 2024-06-01
 - [[Inverse Reinforcement Learning]]
 - [[Imitation Learning]]
 
+### Reinforcement Learning with Foundational Models
 
+- [[Reinforcement Learning with Human Feedbacks]]
 
 
 
