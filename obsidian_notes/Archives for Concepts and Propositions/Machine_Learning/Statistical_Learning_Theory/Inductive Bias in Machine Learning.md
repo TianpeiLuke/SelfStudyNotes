@@ -27,6 +27,14 @@ date of note: 2024-05-12
 
 
 
+## Examples
+
+- [[Convolutional Filters]]
+
+- [[Attention Mechanism in Neural Network]]
+
+
+
 
 -----------
 ##  Recommended Notes and References

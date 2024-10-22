@@ -113,6 +113,7 @@ date of note: 2024-07-07
 
 - [[Supervised Learning and Unsupervised Learning]]
 - [[Representation Learning]]
+- [[Word Embedding]]
 
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 173, 991

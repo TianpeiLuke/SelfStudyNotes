@@ -27,6 +27,10 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
+- [[Siamese Network for Contrastive Learning]]
+- [[Contrastive Learning]]
+- [[Representation Learning]]
+
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]
 - [[Deep Learning by Goodfellow]]

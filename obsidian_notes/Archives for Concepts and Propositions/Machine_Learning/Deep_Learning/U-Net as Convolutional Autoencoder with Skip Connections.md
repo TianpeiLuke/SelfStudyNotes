@@ -21,8 +21,16 @@ date of note: 2024-05-12
 >**Name**: Convolutional Neural Network
 
 
+### Encoder-Decoder Architecture for CNN
 
-![[cnn_example.png]]
+![[cnn_encoder_decoder.png]]
+
+- [[Auto-Encoder and Stochastic Auto-Encoder]]
+
+
+### U-Net
+
+![[u-net.png]]
 
 
 ## Explanation
@@ -34,7 +42,12 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
+
+- [[Convolutional Neural Network]]
+- [[Convolutional Filters]]
+- [[Pooling for Deep Learning]]
 - [[Equivariance of Estimator]]
+- [[Residual Connection for Deep Learning]]
 
 - [[Artificial Neural Network and Deep Learning]]
 

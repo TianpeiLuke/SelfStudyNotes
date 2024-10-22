@@ -116,6 +116,26 @@ date of note: 2024-05-12
 - [[Variational Auto-Encoder]]
 
 
+## Other Models with Encoder-Decoder Architecture
+
+### U-Net
+
+- [[U-Net as Convolutional Autoencoder with Skip Connections]]
+
+### Diffusion Network
+
+- [[Denoising Diffusion Probabilistic Models and Diffusion Network]]
+
+### Transformer Network
+
+- [[Transformer Network]]
+- [[Large Language Model and Pretrained Language Models]]
+- [[Bidirectional Encoder Representation from Transformer or BERT]]
+- [[Generative Pre-trained Transformer or GPT]]
+
+
+
+
 -----------
 ##  Recommended Notes and References
 

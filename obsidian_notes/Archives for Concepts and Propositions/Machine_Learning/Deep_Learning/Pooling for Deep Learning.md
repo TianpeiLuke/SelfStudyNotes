@@ -16,6 +16,9 @@ date of note: 2024-08-16
 
 
 
+![[max_pooling.png]]
+
+
 ## Explanation
 
 
@@ -27,6 +30,7 @@ date of note: 2024-08-16
 
 - [[Equivariance of Estimator]]
 - [[Convolutional Neural Network]]
+- [[Convolutional Filters]]
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]
 - [[Deep Learning by Goodfellow]] 

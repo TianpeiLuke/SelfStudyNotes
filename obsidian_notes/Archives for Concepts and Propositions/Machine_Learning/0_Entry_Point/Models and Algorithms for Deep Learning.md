@@ -88,6 +88,7 @@ date of note: 2024-06-01
 - [[Convolutional Filters]]
 - [[Pooling for Deep Learning]]
 - [[Convolutional Neural Network]]
+- [[U-Net as Convolutional Autoencoder with Skip Connections]]
 
 ### Energy-based Model
 
