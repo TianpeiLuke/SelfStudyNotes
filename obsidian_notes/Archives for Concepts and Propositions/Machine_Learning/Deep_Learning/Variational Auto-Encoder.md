@@ -120,6 +120,9 @@ date of note: 2024-05-12
 >- The first term can be approximated using **Monte-Carlo estimator** $$\mathbb{E}_{Z_{i} \sim q }\left[  \log p_{\theta}(X_{i} | Z_{i}) \right] \approx \frac{1}{L} \sum_{l=1}^{L}\log p_{\theta}(X_{i} | Z_{i}^{l})$$ where $\{ Z_{i}^{l} \}_{l=1}^{L} \sim q(z|X_{i}, \psi)$ are **samples** drawn from the *encoder distribution* $q.$
 >  
 
+- [[Monte Carlo and Applications]]
+- [[Markov Chain Monte Carlo Methods]]
+- [[Annealed Importance Sampling]]
 
 ![[VAE_ELBO_backprop.png]]
 
@@ -228,3 +231,4 @@ date of note: 2024-05-12
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 781 - 810
 - [[Deep Learning by Goodfellow]]
+- [[Foundations of Computer Vision by Torralba]] pp 493 - 505

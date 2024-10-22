@@ -40,4 +40,4 @@ date of note: 2024-05-12
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]
 - [[Deep Learning by Goodfellow]] pp 368
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 275
-- Torralba, A., Isola, P., & Freeman, W. T. (2024). _Foundations of Computer Vision_. The MIT Press. pp 357 - 358
+- [[Foundations of Machine Learning by Mohri]] pp 357 - 358

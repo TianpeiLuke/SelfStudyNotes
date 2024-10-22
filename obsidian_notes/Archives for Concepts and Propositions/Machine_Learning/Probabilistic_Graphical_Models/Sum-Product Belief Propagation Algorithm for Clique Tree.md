@@ -295,3 +295,4 @@ date of note: 2024-05-12
 - [[Probabilistic Graphical Models by Koller]] pp 348- 355, 963 - 966, 963 - 966
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]] pp 24
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 408
+- [[Foundations of Computer Vision by Torralba]] pp 428 - 433

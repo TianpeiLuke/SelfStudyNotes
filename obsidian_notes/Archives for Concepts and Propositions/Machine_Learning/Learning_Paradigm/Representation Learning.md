@@ -139,7 +139,6 @@ date of note: 2024-07-07
 - [[RKHS of Gaussian Process]]
 - [[Multinomial Principle Component Analysis]]
 
-
 ### Latent Variable Model
 
 - [[Latent Variable Models]]
@@ -160,11 +159,33 @@ date of note: 2024-07-07
 - [[Variational Auto-Encoder]]
 
 
+### Convolutional Neural Network
+
+- [[Convolutional Neural Network]]
+- [[U-Net as Convolutional Autoencoder with Skip Connections]]
+- [[Residual Neural Network]]
+
+
+### Diffusion Network
+
+- [[Denoising Diffusion Probabilistic Models and Diffusion Network]]
+
+
+### Contrastive Learning
+
+- [[Contrastive Learning]]
+- [[Triplet Loss Minimization for Contrastive Learning]]
+- [[Noise Contrastive Estimation]]
+- [[Information Noise Contrastive Estimation as Contrastive Learning]]
+
+
 ### Graphical Model
 
 - [[Restricted Boltzmann Machine]]
 - [[Conditional Random Field]]
 - [[Gaussian Graphical Model]]
+- [[Gaussian Belief Propagation]]
+
 
 ### Dynamic System
 
@@ -184,7 +205,9 @@ date of note: 2024-07-07
 ### Transformers
 
 - [[Transformer Network]]
-
+- [[Large Language Model and Pretrained Language Models]]
+- [[Bidirectional Encoder Representation from Transformer or BERT]]
+- [[Generative Pre-trained Transformer or GPT]]
 
 
 
@@ -202,3 +225,4 @@ date of note: 2024-07-07
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 188 - 189
 - [[Probabilistic Graphical Models by Koller]]
 - [[Deep Learning by Goodfellow]] pp 3, 16, 147, 517 - 549
+- [[Foundations of Computer Vision by Torralba]] pp 441 - 443

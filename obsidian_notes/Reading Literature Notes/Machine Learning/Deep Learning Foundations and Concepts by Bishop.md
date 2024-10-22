@@ -47,3 +47,4 @@ date of note: 2024-07-06
 
 - [[Deep Learning by Goodfellow]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]
+- [[Foundations of Computer Vision by Torralba]]

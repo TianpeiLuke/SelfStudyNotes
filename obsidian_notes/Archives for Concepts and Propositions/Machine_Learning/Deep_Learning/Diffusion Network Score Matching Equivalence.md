@@ -155,6 +155,7 @@ date of note: 2024-10-19
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 864 - 867
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 581 - 603
+- Torralba, A., Isola, P., & Freeman, W. T. (2024). _Foundations of Computer Vision_. The MIT Press. pp 484 - 487
 - **CVPR 2023 Tutorial**: [link](https://cvpr2023-tutorial-diffusion-models.github.io);
 	- [Youtube recording](https://www.youtube.com/watch?v=1d4r19GEVos)
 - Song, Y., & Ermon, S. (2019). Generative modeling by estimating gradients of the data distribution. _Advances in neural information processing systems_, _32_.

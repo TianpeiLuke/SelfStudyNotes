@@ -641,6 +641,7 @@ date of note: 2024-05-12
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 857
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 581 - 603
+- [[Foundations of Computer Vision by Torralba]] pp 484 -  487
 - **CVPR 2023 Tutorial**: [link](https://cvpr2023-tutorial-diffusion-models.github.io);
 	- [Youtube recording](https://www.youtube.com/watch?v=1d4r19GEVos)
 - [[hoDenoisingDiffusionProbabilistic2020]] Ho, J., Jain, A., & Abbeel, P. (2020). Denoising diffusion probabilistic models. _Advances in neural information processing systems_, _33_, 6840-6851.
