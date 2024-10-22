@@ -126,6 +126,7 @@ date of note: 2024-05-30
 - [[Concepts and Theorems for Stochastic Differential Equations]]
 - [[Diffusion Process]]
 - [[Fokker–Planck and Kolmogorov Forward-Backward Equation]]
+- [[Dynkin Formula]]
 - [[Feynman-Kac Formula]]
 - [[Martingale via Solution of SDE and Backward Equation]]
 
@@ -138,13 +139,23 @@ date of note: 2024-05-30
 
 ### Markov Chain Monte Carlo 
 
+- [[Concepts and Algorithms for Monte Carlo Methods]]
 
-
-
+- [[Markov Chain Monte Carlo Methods]]
+- [[Metropolis-Hastings Algorithm]]
+- [[Random Walk Metropolis-Hastings]]
+- [[Gibbs Sampling]]
+- [[Hamiltonian Monte Carlo]]
+- [[Langevin Dynamics and Langevin Sampling]]
+- [[Annealed Importance Sampling]]
 
 ### Markov Decision Process and Dynamic Programming
 
+- [[Models and Algorithms for Reinforcement Learning]]
+
 - [[Markov Decision Process]]
+- [[Returns and Goals of Reinforcement Learning]]
+- [[Value Function and Bellman Equation for MDP]]
 - [[Bellman Optimality Equation for MDP]]
 
 

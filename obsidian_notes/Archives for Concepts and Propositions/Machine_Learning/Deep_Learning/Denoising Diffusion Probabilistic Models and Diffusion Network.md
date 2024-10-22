@@ -643,6 +643,6 @@ date of note: 2024-05-12
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 581 - 603
 - **CVPR 2023 Tutorial**: [link](https://cvpr2023-tutorial-diffusion-models.github.io);
 	- [Youtube recording](https://www.youtube.com/watch?v=1d4r19GEVos)
-- Ho, J., Jain, A., & Abbeel, P. (2020). Denoising diffusion probabilistic models. _Advances in neural information processing systems_, _33_, 6840-6851.
+- [[hoDenoisingDiffusionProbabilistic2020]] Ho, J., Jain, A., & Abbeel, P. (2020). Denoising diffusion probabilistic models. _Advances in neural information processing systems_, _33_, 6840-6851.
 - Song, J., Meng, C., & Ermon, S. (2020.) Denoising Diffusion Implicit Models. In _International Conference on Learning Representations_. 
 - Kawar, B., Elad, M., Ermon, S., & Song, J. (2022). Denoising diffusion restoration models. _Advances in Neural Information Processing Systems_, _35_, 23593-23606.

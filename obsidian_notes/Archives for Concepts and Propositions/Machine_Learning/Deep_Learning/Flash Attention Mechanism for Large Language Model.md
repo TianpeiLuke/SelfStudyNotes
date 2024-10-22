@@ -25,5 +25,9 @@ date of note: 2024-10-21
 -----------
 ##  Recommended Notes and References
 
+
 - [[Attention Mechanism in Neural Network]]
 - [[Transformer Network]]
+
+- [[daoFlashAttentionFastMemoryEfficient2022]]
+- [[touvronLlamaOpenFoundation2023]]

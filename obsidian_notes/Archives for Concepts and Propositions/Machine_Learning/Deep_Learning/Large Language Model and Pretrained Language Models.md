@@ -27,5 +27,8 @@ date of note: 2024-10-21
 
 - [[Attention Mechanism in Neural Network]]
 - [[Transformer Network]]
+
 - [[Bidirectional Encoder Representation from Transformer or BERT]]
 - [[Generative Pre-trained Transformer or GPT]]
+- [[liuRoBERTaRobustlyOptimized2019]]
+- [[touvronLlamaOpenFoundation2023]]

@@ -30,3 +30,5 @@ date of note: 2024-10-21
 - [[Transformer Network]]
 - [[Large Language Model and Pretrained Language Models]]
 - [[Bidirectional Encoder Representation from Transformer or BERT]]
+- [[Artificial Neural Network and Deep Learning]]
+
