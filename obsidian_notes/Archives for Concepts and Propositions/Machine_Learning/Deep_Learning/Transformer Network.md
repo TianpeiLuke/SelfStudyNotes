@@ -60,3 +60,4 @@ date of note: 2024-05-12
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 637
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 357
 - [[vaswaniAttentionAllYou2017]] Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., & Polosukhin, I. (2017). Attention is All you Need. _Advances in Neural Information Processing Systems_, _30_. [https://proceedings.neurips.cc/paper_files/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html](https://proceedings.neurips.cc/paper_files/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html)
+- Torralba, A., Isola, P., & Freeman, W. T. (2024). _Foundations of Computer Vision_. The MIT Press. pp 379 - 382
