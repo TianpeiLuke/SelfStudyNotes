@@ -122,7 +122,7 @@ date of note: 2024-05-12
 
 
 
-### Multi-Head Attention
+### Multi-Head Attention and Self-Attention
 
 >[!important] Definition
 >The **multi-head attention** extends the formulation of attention layer by introducing *additional query, key and value mapping*, each generating a new query-key-value pair.
@@ -231,6 +231,42 @@ date of note: 2024-05-12
 - [[Reproducing Kernel of RKHS]]
 
 
+
+## Why Self-Attention?
+
+![[transformer_cost_comp.png]]
+
+>[!quote]
+>In this section we compare various aspects of self-attention layers to the **recurrent and convolutional layers** commonly used for mapping one **variable-length sequence** of symbol representations $(x_{1} \,{,}\ldots{,}\, x_{n})$ to another *sequence of equal length* $(z_{1} \,{,}\ldots{,}\, z_{n})$, with $x_i, z_i \in \mathbb{R}^{d}$, such as a hidden layer in a typical sequence transduction encoder or decoder. Motivating our use of self-attention we consider three desiderata.  
+>
+>- One is the **total computational complexity per layer**. 
+>- Another is the amount of computation that can be **parallelized**, as measured by the **minimum number of sequential operations** required.  
+>- The third is the *path length* between **long-range dependencies** in the network. Learning long-range dependencies is a *key challenge* in many sequence transduction tasks. One key factor affecting the ability to learn such dependencies is the **length of the paths forward and backward signals** have to traverse in the network. The *shorter* these paths between any combination of positions in the input and output sequences, the *easier* it is to learn long-range dependencies [11]. Hence we also compare the **maximum path length** between any two *input and output positions* in networks composed of the different layer types.
+>  
+>-- [[vaswaniAttentionAllYou2017]]  Attention is All you Need, pp 6
+
+>[!quote]
+>As noted in Table 1, 
+>- a **self-attention layer** connects all positions with a **constant number of sequentially executed operations**, 
+>- whereas a **recurrent layer** requires $O(n)$ sequential operations. 
+>
+>In terms of **computational complexity**, 
+>- **self-attention layers** are faster than recurrent layers when the *sequence length $n$ is smaller than the representation dimensionality* $d$, which is most often the case with sentence representations used by state-of-the-art models in machine translations, such as word-piece [31] and byte-pair [25] representations. 
+>
+>To improve computational performance for tasks involving **very long sequences**, self-attention could be restricted to considering only a **neighborhood of size** $r$ in the input sequence centered around the respective output position. This would increase the maximum path length to $O(n/r)$.
+>
+>-- [[vaswaniAttentionAllYou2017]]  Attention is All you Need, pp 6
+
+>[!quote]
+>A single **convolutional layer** with *kernel width* $k < n$ does **not connect all pairs** of *input and output positions*. 
+>- Doing so requires a stack of $O(n/k)$ **convolutional layers** in the case of contiguous kernels, or $O(\log_{k}(n))$ in the case of **dilated convolutions** [15], *increasing the length of the longest paths* between any two positions in the network. 
+>- Convolutional layers are generally **more expensive** than recurrent layers, by a factor of $k$. 
+>- **Separable convolutions** [6], however, *decrease the complexity* considerably, to $O(k · n · d + n · d^2)$. 
+>- Even with $k = n$, however, the **complexity** of a **separable convolution** is *equal to* the *combination* of a **self-attention layer** and a **point-wise feed-forward layer**, the approach we take in our model.
+>
+>-- [[vaswaniAttentionAllYou2017]]  Attention is All you Need, pp 7
+
+
 ### Compare to Convolution
 
 >[!quote]
@@ -258,10 +294,10 @@ date of note: 2024-05-12
 - [[Long-Short Term Memory Network]]
 - [[Gated Recurrent Units in Neural Network]]
 
-![[transformer_cost_comp.png]]
-
 
 ## Transformer
+
+![[Transformer Network#^e9ade3]]
 
 - [[Transformer Network]]
 
