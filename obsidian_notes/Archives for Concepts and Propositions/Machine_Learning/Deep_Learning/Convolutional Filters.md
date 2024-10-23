@@ -22,6 +22,21 @@ date of note: 2024-05-12
 >[!important]
 >**Name**: Convolutional Filters
 
+### Convolution Operation
+
+ ![[Convolution Operation#^a2007d]]
+- [[Convolution Operation]]
+
+>[!important] Definition
+>The **convolution** between $f$ and $K$ is given by $$s = (f*K)(t) = \int f(x)\,K(t - x)\,dx$$
+>- The first argument $f$ is called the **input** of convolution
+>- The *second argument* $K$ is called the **kernel** of convolution.
+>- The *output* is referred as the **feature map.**
+
+- [[Reproducing Kernel of RKHS]]
+
+### Digital Convolution
+
 
 
 

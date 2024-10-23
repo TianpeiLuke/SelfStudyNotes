@@ -212,13 +212,13 @@ date of note: 2024-05-12
 >[!important] Definition
 >The formulation of **query-key-value attention** is equivalent to **kernel machines** where the output can be seen as the *weighted linear combination* of *target values* on *support vectors*
 >$$
->z := f(x) = \sum_{i=1}^{m}K(x_{i}, x)\,z_{i}
+>z := f(x) = \sum_{i=1}^{n}K(x_{i}, x)\,z_{i}
 >$$
 >where 
 >- The input corresponds to the **query.**
 >- $z_{i}$ are *target values* at *support vectors*; In *attention layer*, it corresponds to the **value** of output.
->- The set of records (i.e. *support vectors*) $\left\{ x_{1} \,{,}\ldots{,}\,x_{m}\right\}$ are *stored* in the system, which are called **keys** in *attention layer*.
->- The evaluations of *kernels* $$\alpha_{i}(x_{i}, x) := K(x_{i}, x)$$ are weights that depends on similarity of the input $x$ and stored vectors $\left\{ x_{1} \,{,}\ldots{,}\,x_{m}\right\}$. These weights are called **attention weights.**
+>- The set of records (i.e. *support vectors*) $\left\{ x_{1} \,{,}\ldots{,}\,x_{n}\right\}$ are *stored* in the system, which are called **keys** in *attention layer*.
+>- The evaluations of *kernels* $$\alpha_{i}(x_{i}, x) := K(x_{i}, x)$$ are weights that depends on similarity of the input $x$ and stored vectors $\left\{ x_{1} \,{,}\ldots{,}\,x_{n}\right\}$. These weights are called **attention weights.**
 
 >[!info]
 >The main difference between *attention mechanism* and *kernel machine* is that 
