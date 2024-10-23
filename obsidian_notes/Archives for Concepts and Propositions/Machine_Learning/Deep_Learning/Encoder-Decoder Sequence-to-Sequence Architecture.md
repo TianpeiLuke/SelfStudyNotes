@@ -20,6 +20,8 @@ date of note: 2024-08-31
 
 ### RNN
 
+![[rnn_sequence_one_sequence.png]]
+
 - [[Recurrent Neural Network]]
 - [[Gated Recurrent Units in Neural Network]]
 - [[Long-Short Term Memory Network]]
@@ -34,11 +36,15 @@ date of note: 2024-08-31
 
 ### Diffusion Network
 
+![[diffusion_network_ddpm.png]]
+
 - [[Denoising Diffusion Probabilistic Models and Diffusion Network]]
 - [[Continuous-Time Diffusion Network via Stochastic Differential Equations]]
 
 
 ### Transformer Network
+
+![[transformer.png]]
 
 - [[Transformer Network]]
 - [[Large Language Model and Pretrained Language Models]]
