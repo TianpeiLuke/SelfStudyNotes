@@ -37,6 +37,21 @@ date of note: 2024-05-12
 
 ### Digital Convolution
 
+>[!important] Definition
+>Let $I[j, k]$ be $(j,k)$ position of image and $K$ be a **filter** with values $K(l,m)$.
+>
+>The **feature map** $C$ has values given by 
+>$$
+>C[j, k] = \sum_{l}\sum_{m}I[j+l, k+m]\,K[l, m]
+>$$
+>- This feature map is the result of **convolution**, referred as $$C = I * K.$$
+>- Strictly speaking, this is actually **cross-correlation operation.** In deep learning, the cross-correlation and convolution operations are not distinguished.
+
+>[!important] Definition
+>The **two-dimensional convolution operation** between $I$ and $K$ is given by 
+>$$
+>C[j,k] = \sum_{l}\sum_{m}\,I[j - l, k - m]\,K[l, m]
+>$$
 
 
 
@@ -51,6 +66,11 @@ date of note: 2024-05-12
 >We see that the connections in this network are **sparse** in that most connections are absent. Also, the values of the weights are **shared** by *all the hidden units*, as indicated by the colours of the connections. This transformation is an example of a **convolution**.
 >
 >-- [[Deep Learning Foundations and Concepts by Bishop]] pp 292
+
+>[!quote]
+>The **advantage** of a convolutional layer compared to using a linear layer is that the *weights of the kernel* are **shared** *across locations* in the input. Thus if a pattern in the input shifts locations, the corresponding output activation will also shift. This is called **shift equivariance**. In some cases, we want the output to be the same, no matter where the input pattern occurs; this is called **shift invariance**, and can be obtained by using a **pooling layer**, which computes the maximum or average value in each local patch of the input. (Note that pooling layers have no free (learnable) parameters.) Other forms of invariance can also be captured by neural networks (see e.g., [CW16; FWW21]).
+>
+>-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 626
 
 
 
@@ -92,8 +112,7 @@ date of note: 2024-05-12
 - [[Invariance under Linear Transformation]]
 - [[Inductive Bias in Machine Learning]]
 
->[!info]
->Most of convolution operation in convolution filter is actually just **cross-correlation operation.**
+
 
 
 
