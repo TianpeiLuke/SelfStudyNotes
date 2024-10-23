@@ -75,7 +75,7 @@ date of note: 2024-10-08
 
 >[!important]
 >The **Representer theorem** states that the **Kernel SVM** is the minimizer of the *regularized risk problem* $$h \in \arg\min_{f\in \mathcal{H}} \sum_{i=1}^{m}L_{\text{hinge}}(y_{i}, f(x_{i})) + \frac{\lambda}{2}\lVert f \rVert_{\mathcal{H}}^2,$$
->where $$L_{\text{hinge}}(y, f(x)) = \max\left\{ 0, 1- y\,f(x) \right\}$$
+>where $\mathcal{H}$ is a *reproducing kernel Hilbert space*, and $$L_{\text{hinge}}(y, f(x)) = \max\left\{ 0, 1- y\,f(x) \right\}$$
 
 - [[Hinge Loss as Surrogate Loss Function]]
 - [[Regularized Loss Minimization]]
@@ -99,6 +99,7 @@ date of note: 2024-10-08
 
 
 - [[Kernel Methods in Machine Learning by Hofmann]]
+- [[Learning with Kernels by Schölkopf]] pp 200 - 203
 - [[Elements of Statistical Learning by Hastie]] pp 417 - 421, 654, 657
 - [[Understanding Machine Learning by Shalev-Shwartz]] pp 171 - 177
 - [[Foundations of Machine Learning by Mohri]] pp 87- 100

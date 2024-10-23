@@ -96,6 +96,8 @@ date of note: 2024-05-12
 >$$
 >- The attention layer described so far allows the output vectors to *attend to data-dependent patterns* of input vectors and is called an **attention head**.
 
+^332141
+
 - [[Softmax Function and Log-Sum-Exp Function]]
 
 
@@ -104,6 +106,8 @@ date of note: 2024-05-12
 >- $$W^{Q} \in \mathbb{R}^{d\times d_{k}},\quad W^{K}\in \mathbb{R}^{d\times d_{k}},\quad W^{V} \in \mathbb{R}^{d\times d_{v}},$$
 >
 >This process is called **self-attention** since we use the same input to determine the query, key and values.
+
+^876ec1
 
 
 ![[scaled_dot_product_attention.png]]
@@ -150,6 +154,8 @@ date of note: 2024-05-12
 >&= \sum_{i=1}^{h}\text{softmax}\left( \frac{XW_{i}^{Q}\,(W_{i}^{K})^{T}X^{T}}{\sqrt{ d_{k} }} \right)\,X\,\underbrace{ W_{i}^{V}W_{i}^{O} }_{ \text{combine} } \\[5pt]
 >\end{align*}
 >$$
+
+^a47445
 
 >[!important] Definition
 >In the original paper, the **multi-head attention** is formulated in terms of *three inputs*: 
@@ -242,8 +248,17 @@ date of note: 2024-05-12
 
 ### Compare to LSTM and GRU
 
+>[!important]
+>Compare to RNN, attention mechanism 
+>- allows the network to learn **long range dependencies** that are not easily captured by recurrent networks such as LSTM, GRU etc.
+>- It also facilitates the **massive parallel processing** which is not available from *recurrent networks* which is **sequential.**
+>  
+>On the other hand, in *sequence data processing*, where the sequential position information is important, attention mechanism and transformer need additional **positional encoding**  
+
 - [[Long-Short Term Memory Network]]
 - [[Gated Recurrent Units in Neural Network]]
+
+![[transformer_cost_comp.png]]
 
 
 ## Transformer

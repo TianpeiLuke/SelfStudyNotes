@@ -54,4 +54,3 @@ date of note: 2024-05-12
 - [[Deep Learning by Goodfellow]] pp 321
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 287
 - [[Foundations of Computer Vision by Torralba]] pp 335 - 354
-- 

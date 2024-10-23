@@ -170,6 +170,7 @@ date of note: 2024-05-12
 
 
 - [[Kernel Methods in Machine Learning by Hofmann]]
+- [[Learning with Kernels by Schölkopf]] pp 14, 197, 202, 227
 - [[Elements of Statistical Learning by Hastie]] pp 417 - 421, 654, 657
 - [[Understanding Machine Learning by Shalev-Shwartz]] pp 167 - 171
 - [[Foundations of Machine Learning by Mohri]] pp 79 - 100

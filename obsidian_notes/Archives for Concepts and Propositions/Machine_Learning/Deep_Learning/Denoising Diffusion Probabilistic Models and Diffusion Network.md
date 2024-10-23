@@ -210,6 +210,7 @@ date of note: 2024-05-12
 
 ![[diffusion_network_time_embedding.png]]
 
+- [[Transformer Network#Positional Encoding]]
 
 ## Variational Training
 
