@@ -50,14 +50,18 @@ date of note: 2024-05-12
 >[!important] Definition
 >The **two-dimensional convolution operation** between $I$ and $K$ is given by 
 >$$
->C[j,k] = \sum_{l}\sum_{m}\,I[j - l, k - m]\,K[l, m]
+>C[j,k] = (I*K)[j,k] = \sum_{l}\sum_{m}\,I[l, m]\,K[j - l, k - m]
+>$$
+>or equivalently,
+>$$
+>C[j,k] = (K*I)[j,k] = \sum_{l}\sum_{m}\,I[j - l, k - m]\,K[l, m]
 >$$
 
 
 
 ![[convolution_filter.png]]
 
-### Translation Invariance
+### Translation Equivariance
 
 >[!quote]
 > The units of the hidden layer form a **feature map** in which all the units *share the same weights*. Consequently if a *local patch* of an image produces a particular response in the unit connected to that patch, then the *same set* of pixel values at a different location will produce the *same response* in the corresponding **translated location** in the feature map. 
@@ -103,6 +107,8 @@ date of note: 2024-05-12
 
 ## Explanation
 
+### Motivations
+
 >[!quote]
 >One **motivation** for the introduction of convolutional networks is that for *image data*, which is the modality for which CNNs were designed, a standard fully connected architecture would **require vast numbers of parameters** due to the *high-dimensional nature of images*. To see this, consider a colour image with $103 \times 103$ pixels, each with three values corresponding to red, green, and blue intensities. If the first hidden layer of the network has, say, $1,000$ hidden units, then we already have $3 \times 109$ weights in the first layer. Furthermore, such a network would have to learn any **invariances** and **equivariances** by example, which would require huge data sets. By designing an architecture that incorporates our *inductive bias* about the *structure of images*, we can reduce the data set requirements dramatically and also improve generalization with respect to **symmetries in the image space**.
 >
@@ -112,7 +118,26 @@ date of note: 2024-05-12
 - [[Invariance under Linear Transformation]]
 - [[Inductive Bias in Machine Learning]]
 
-
+>[!important]
+>Convolution leverages **three important ideas** that can help improve a machine learning system: 
+>
+>- **Sparse Interactions** (also referred to as **sparse connectivity** or **sparse weights**): Instead of allowing every output unit interacts with every input unit, *Convolutional networks*, typically have *sparse interactions*. 
+>	- This is accomplished by making the **kernel** *smaller* than the *input*. 
+>	- This means that we store *fewer parameters*, which both reduces the *memory requirements* of the model and improves its statistical efficiency. 
+>	- It also means that computing the output requires *fewer operations*. These improvements in efficiency are usually quite large. 
+>	- If we limit the *number of connections* each output may have to $k$, then the *sparsely connected* approach requires only $k \times n$ parameters and $$O(m \times n) \to O(k \times n)$$ runtime.
+>- **Parameter sharing**:  refers to using the *same parameter* for more than one function in a model. 
+>	- In a *traditional neural net*, each element of the weight matrix is used *exactly once* when computing the output of a layer. As a synonym for parameter sharing, one can say that a network has **tied weights**, because the value of the weight applied to *one input* is *tied* to the value of a *weight* applied elsewhere.
+>	- In a *convolutional neural net*, each member of the **kernel** is used at *every position* of the input. 
+>	- The parameter sharing used by the convolution operation means that rather than learning a *separate set of parameters* for *every location*, we **learn only one set**. 
+>	- This does not affect the runtime of forward propagation—it is still $O(k \times n)$ —but it does further **reduce the storage requirements** of the model to $k$ parameters.
+>- **Equivariant representations**. 
+>	- To say a function is equivariant means that if the *input changes*, the *output changes in the same way*. 
+>	- Specifically, a function $f(x)$ is *equivariant* to a function $g$ if $$f(g(x)) = g(f(x)).$$
+>	- The **convolution** is *equivalent* to **translation (shift) operation.**
+>	- Convolution is *not naturally equivariant* to some other transformations, such as **changes in the scale** or **rotation of an image**. 
+>
+>-- [[Deep Learning by Goodfellow]] pp 325
 
 
 
