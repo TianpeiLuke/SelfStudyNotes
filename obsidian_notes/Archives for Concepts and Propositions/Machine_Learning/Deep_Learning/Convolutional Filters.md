@@ -28,7 +28,7 @@ date of note: 2024-05-12
 - [[Convolution Operation]]
 
 >[!important] Definition
->The **convolution** between $f$ and $K$ is given by $$s = (f*K)(t) = \int f(x)\,K(t - x)\,dx$$
+>The **convolution** between $f$ and $K$ is given by $$s(t) = (f*K)(t) = \int f(x)\,K(t - x)\,dx$$
 >- The first argument $f$ is called the **input** of convolution
 >- The *second argument* $K$ is called the **kernel** of convolution.
 >- The *output* is referred as the **feature map.**
@@ -44,7 +44,13 @@ date of note: 2024-05-12
 
 ### Translation Invariance
 
-
+>[!quote]
+> The units of the hidden layer form a **feature map** in which all the units *share the same weights*. Consequently if a *local patch* of an image produces a particular response in the unit connected to that patch, then the *same set* of pixel values at a different location will produce the *same response* in the corresponding **translated location** in the feature map. 
+> - This is an example of **equivariance**. 
+> 
+>We see that the connections in this network are **sparse** in that most connections are absent. Also, the values of the weights are **shared** by *all the hidden units*, as indicated by the colours of the connections. This transformation is an example of a **convolution**.
+>
+>-- [[Deep Learning Foundations and Concepts by Bishop]] pp 292
 
 
 
@@ -85,6 +91,11 @@ date of note: 2024-05-12
 - [[Equivariance of Estimator]]
 - [[Invariance under Linear Transformation]]
 - [[Inductive Bias in Machine Learning]]
+
+>[!info]
+>Most of convolution operation in convolution filter is actually just **cross-correlation operation.**
+
+
 
 
 

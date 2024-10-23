@@ -65,6 +65,11 @@ date of note: 2024-08-08
 
 
 
+## Digitial Convolution
+
+- [[Convolution Operation]]
+
+
 
 -----------
 ##  Recommended Notes and References
