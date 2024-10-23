@@ -161,12 +161,14 @@ date of note: 2024-05-12
 >- Both **encoder** and **decoder** take *input tokens* with corresponding **embedding representation** from user
 >- All inputs are *added by* **positional encoding**
 >- **Encoder** transforms the input token embedding with position encoding into the **encoded representation**;
->- **Decoder** is an **autoregressive model**, which consists of two parts:
->	- an *encoder* subnetwork that takes additional input (with embedding and positional encoding) from user
->	- a **multi-head attention layer** that takes the **encoded representation** from the output of encoder as **keys and values**, and takes the output of encoder subnetwork as **query**
+>	- The encoder is a stack of **multi-head self-attention.**
+>- **Decoder** is an **autoregressive model**
+>	- like the *encoder*, it consists of *multi-head self-attention*
+>	- besides, each block has a **multi-head attention layer** that takes the **encoded representation** from the output of encoder as **keys and values**, and takes the output of encoder subnetwork as **query**
+>	- the *decoder* is a stack of **multi-head self-attention** and **multi-head cross-attention.**
 >- **Causal decoding**: To ensures that the predictions for *position* $i$ can depend only on the known outputs at positions *less than* $i$.,
->	- Additional **causal masking** is present in *decoder* to avoid *positions* from attending to *subsequent positions*.
->	- Also the outputs are **shifted right** by one position, which 
+>	- additional **causal masking** is present in *decoder* to avoid *positions* from attending to *subsequent positions*.
+>	- Also the outputs are **shifted right** by one position 
 >  
 >  
 >This model is proposed in [[vaswaniAttentionAllYou2017]] for **machine translation task.**  

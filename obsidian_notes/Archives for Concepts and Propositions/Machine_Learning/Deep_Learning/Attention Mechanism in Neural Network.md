@@ -226,7 +226,7 @@ date of note: 2024-05-12
 >
 >- But in **attention mechanism**, we *fix the kernel* and **learn the embedding**.  
 
-- [[Support Vector Machine General with Soft-Margin Relaxation]]
+- [[Support Vector Machine Kernel Expansion and RKHS]]
 - [[Representer Theorem]]
 - [[Reproducing Kernel of RKHS]]
 

@@ -4,16 +4,25 @@ tags:
   - machine_learning/algorithms
   - deep_learning/algorithms
   - deep_learning/regularization
-keywords: 
-topics: 
-name: 
+keywords:
+  - dropout_deep_learning
+  - ensemble_method
+topics:
+  - deep_learning/regularization
+name: Dropout for Deep Learning
 date of note: 2024-05-12
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Dropout for Deep Learning
+
+
+
+
+![[dropout_deep_learning.png]]
+
 
 
 
