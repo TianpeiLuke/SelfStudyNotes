@@ -28,6 +28,17 @@ date of note: 2024-05-12
 
 ## Explanation
 
+>[!quote]
+>**Dropout** (Srivastava et al., 2014) provides a *computationally inexpensive* but *powerful* method of *regularizing a broad family of models*. 
+>- To a first approximation, dropout can be thought of as a method of making **bagging** practical for *ensembles of very many large neural networks*. 
+>- **Bagging** involves training *multiple models* and evaluating multiple models on *each test example*. 
+>	- This seems impractical when each model is a large neural network, since training and evaluating such networks is costly in terms of runtime and memory. 
+>	- It is common to use ensembles of five to ten neural networks—Szegedy et al. (2014a) used six to win the ILSVRCbut more than this rapidly becomes unwieldy. 
+>- Dropout provides an **inexpensive approximation** to training and evaluating a bagged ensemble of exponentially many neural networks.
+>  
+>-- [[Deep Learning by Goodfellow]] pp 251  
+
+- [[Ensemble Learning]]
 
 
 
