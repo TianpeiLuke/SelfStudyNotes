@@ -24,7 +24,7 @@ date of note: 2024-08-08
 >
 >A **Toeplitz matrix** $A\in M_{n+1}$ is of the form
 >$$
->A = \left[ \begin{array}{cccc}a_{0} & a_{1} & \cdots & a_{n} \\ a_{-1} & a_{0} & \cdots & a_{n-1} \\ \vdots & \ddots & \ddots & \vdots \\ a_{-n} & a_{-n+1} & \cdots & a_{0} \\ \end{array} \right] 
+>A := T(a) := \left[ \begin{array}{cccc}a_{0} & a_{1} & \cdots & a_{n} \\ a_{-1} & a_{0} & \cdots & a_{n-1} \\ \vdots & \ddots & \ddots & \vdots \\ a_{-n} & a_{-n+1} & \cdots & a_{0} \\ \end{array} \right] 
 >$$
 >where each entry $$a_{i,j} = a_{j-i}.$$
 >- The entries of $A$ are **constant** down the *diagonals* **parallel to** *the main diagonal*.
@@ -86,9 +86,11 @@ date of note: 2024-08-08
 >[!info]
 >$$
 >\begin{align*}
->y[i] &= (x * h)[i] = \sum_{l=-\infty}^{\infty}h[i - l]\,x[l]
+>(x * h)[i] &= \sum_{l=0}^{m}h[i - l]\,x[l] \\
+>&= \sum_{l=0}^{m}T_{i,l}(h)\,x[l]
 >\end{align*}
 >$$
+>If $x\in \mathbb{R}^{m+1}$, $h \in \mathbb{R}^{2m+1}$, then $x*h \in  \mathbb{R}^{m+1}$
 
 
 
