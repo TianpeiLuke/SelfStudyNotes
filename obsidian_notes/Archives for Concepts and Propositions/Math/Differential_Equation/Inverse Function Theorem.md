@@ -28,6 +28,10 @@ date of note: 2024-06-14
 
 - [[Surjective Injective Invertible Linear Map and Rank]]
 - [[Injective Function]]
+- [[Bijective Function and Inverse Function]]
+- [[Smooth Map]]
+- [[Differential of a Smooth Map at Point]]
+- [[Coordinate Representation of Differential at Point]]
 
 
 ## Explanation
@@ -45,6 +49,7 @@ Chicone, C. (2006). _Ordinary Differential Equations with Applications_ (2nd edi
 
 - [[Vector Field as Infinitesimal Generator of Local Flow]]
 - [[Urysohn Lemma]]
+- [[Implicit Function Theorem]]
 
 - [[Ordinary Differential Equations]]
 

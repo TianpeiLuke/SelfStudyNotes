@@ -24,6 +24,8 @@ date of note: 2024-05-30
 - [[Fixed Point of Map]]
 - [[Contraction Function]]
 - [[Contraction Map Principle]]
+- [[Inverse Function Theorem]]
+- [[Implicit Function Theorem]]
 
 - [[Existence and Uniqueness of Solution of Ordinary Differential Equations]]
 - [[Smoothness of Solution of ODE]]

@@ -34,7 +34,7 @@ date of note: 2024-06-14
 - [[Differential of a Smooth Map at Point]]
 - [[Coordinate Representation of Differential]]
 - [[Surjective Injective Invertible Linear Map and Rank]]
-
+- [[Smooth Map]]
 - [[Principles of Mathematical Analysis by Rudin]] pp 224
 
 
@@ -50,11 +50,11 @@ Chicone, C. (2006). _Ordinary Differential Equations with Applications_ (2nd edi
 
 - [[Stable Manifold]]
 - [[Smooth Manifold]]
-
+- [[Smooth Map]]
 - [[Vector Field as Infinitesimal Generator of Local Flow]]
 
 - [[Ordinary Differential Equations]]
-
+- [[Inverse Function Theorem]]
 
 - [[Principles of Mathematical Analysis by Rudin]] pp 224
 - [[Ordinary Differential Equations by Chicone]]

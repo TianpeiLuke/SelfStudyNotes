@@ -28,6 +28,8 @@ date of note: 2024-05-06
 
 - [[Differential of a Smooth Map at Point]]
 - [[Coordinate Representation of Smooth Map]]
+- [[Implicit Function Theorem]]
+- [[Inverse Function Theorem]]
 - [[Differential as Covector Field]]
 
 
