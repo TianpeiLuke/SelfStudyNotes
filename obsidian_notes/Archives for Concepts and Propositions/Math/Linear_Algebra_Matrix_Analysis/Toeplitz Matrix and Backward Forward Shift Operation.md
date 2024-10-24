@@ -65,7 +65,22 @@ date of note: 2024-08-08
 
 
 
-## Digitial Convolution
+## Digital Convolution
+
+![[Convolution Operation#^f03102]]
+
+>[!important] Definition
+>The **convolution operation** is a linear transformation. 
+>
+>Given $x = [x_{1}\,{,}\ldots{,}\,x_{n}]$, and $h = [h_{1}\,{,}\ldots{,}\,h_{m}]$, the **convolution** between $x$ and $h$ can be seen as multiplying $x$ with a **Toeplitz matrix** from $h$, i.e.
+>$$
+>\begin{align*}
+> y &= h * x \\[5pt]
+> &= \left[ \begin{array}{ccccc}h_{1} & 0 & \cdots & & 0 \\ h_{2} & h_{1} & \vdots & & \vdots \\ h_{3} & h_{2} & \ddots & &  \\ \vdots &  \ddots & \ddots & \ddots & 0 \\ h_{m-1} &  \ldots & \ldots & h_{2} & h_{1} \\ h_{m} &  \ddots & \ldots & h_{3} & h_{2} \\ 0 &  h_{m} & \ddots & \ddots & \vdots  \\   \vdots & \ddots & \ddots & \ddots & \vdots  \\ 0 & 0 & \cdots & 0 & h_{m} \end{array} \right]\;\left[ \begin{array}{c} x_{1} \\ x_{2} \\ \vdots \\ x_{n} \end{array}\right]  \\[5pt]
+> &= T_{h}\,x
+>\end{align*}
+>$$
+
 
 - [[Convolution Operation]]
 

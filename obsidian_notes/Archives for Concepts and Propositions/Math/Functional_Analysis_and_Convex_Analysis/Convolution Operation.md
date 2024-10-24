@@ -127,6 +127,23 @@ date of note: 2024-08-24
 - [[Space of Bounded Signed Measures]]
 - [[Characteristic Function of Set]]
 
+### Digital Convolutions
+
+>[!important] Definition
+>Let $x= [\,{,}\ldots{,}\,x_{1}\,{,}\ldots{,}\,x_{n}]$ and $h= [\,{,}\ldots{,}\,h_{1}\,{,}\ldots{,}\,h_{m}]$.
+>
+>Then the **convolution** of $x$ and $f$ is given by 
+>$$
+>y[i] = (h * x)[i] = \sum_{l=-\infty}^{\infty}x[i - l]\,h[l]
+>$$
+>or, equivalently,
+>$$
+>y[i] = (x * h)[i] = \sum_{l=-\infty}^{\infty}h[i - l]\,x[l]
+>$$
+>- For finite sequence,  $h= [h_{-m}\,{,}\ldots{,}\,h_{1}\,{,}\ldots{,}\,h_{m}]$, the **convolution** is given by $$y[i] = (x * h)[i] = \sum_{l=-m}^{m}x[i - l]\,h[l]$$
+
+^f03102
+
 
 
 ## Explanation
