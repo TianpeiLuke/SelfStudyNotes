@@ -28,6 +28,15 @@ date of note: 2024-05-12
 - [[Multi-Layer Perceptron and Feed-Forward Network]]
 - [[Bernoulli Distribution]]
 
+>[!info]
+>Given a binary vector $d$, we have the family of submodels as 
+>$$
+>p(y|\,v, d) := \text{softmax}\left(W^{T}\,\left(d \odot v\right) + b\right)
+>$$
+
+- [[Hadamard Product of Matrices]]
+
+
 >[!important] Definition
 >During the **training** with **dropout**, 
 >- For each sample $x_{n}$:
@@ -133,4 +142,4 @@ date of note: 2024-05-12
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 627 - 628
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 279
-- [[Deep Learning by Goodfellow]] pp 251
+- [[Deep Learning by Goodfellow]] pp 251 - 260
