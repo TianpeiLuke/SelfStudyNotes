@@ -58,6 +58,8 @@ date of note: 2024-07-13
 >q_{\pi}(x, a) := \mathbb{E}^{ \pi }\left[  G_{t} \,|\,X_{t} = x,\,A_{t} = a \right] = \mathbb{E}^{ \pi }\left[ \sum_{k=0}^{\infty}\gamma^{k}\,R_{t+k+1} \,|\,X_{t} = x, \,A_{t} = a \right].
 >$$
 
+^d40460
+
 ### Bellman Equation for State-Value Function 
 
 >[!important] Definition

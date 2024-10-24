@@ -34,6 +34,8 @@ date of note: 2024-08-16
 >$$ 
 >*Unfolding* the equation by repeatedly applying the definition in this way has yielded an expression that does *not involve recurrence*. Such an expression can now be represented by a traditional directed acyclic computational graph.
 
+![[recurrent_layer.png]]
+
 >[!important] Definition
 >**Recurrent neural networks**, or **RNNs** is a family of neural networks for processing sequential data.
 >
