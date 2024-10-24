@@ -14,9 +14,16 @@ date of note: 2024-09-02
 >[!important]
 >**Name**: 
 
+### Adding Skip Connections through Time
 
 
-- [[Challenge of Long-Term Dependencies for Sequential Networks]]
+### Leaky Units
+
+
+### Removing Connections
+
+
+- [[Vanishing and Exploding Gradient Problems for Sequential Networks]]
 
 ## Explanation
 
@@ -40,4 +47,4 @@ date of note: 2024-09-02
 - [[Transformer Network]]
 
 
-- [[Deep Learning by Goodfellow]] pp 390 - 392
+- [[Deep Learning by Goodfellow]] pp 395 - 397

@@ -23,6 +23,7 @@ date of note: 2024-08-16
 
 
 
+- [[Vanishing and Exploding Gradient Problems for Sequential Networks]]
 
 
 ![[residual_connections.png]]

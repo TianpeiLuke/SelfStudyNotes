@@ -48,7 +48,7 @@ date of note: 2024-05-12
 
 
 - [[Equivariance of Estimator]]
-- [[Residual Connection for Deep Learning and Vanishing and Exploding Gradients]]
+- [[Residual Connection for Deep Learning]]
 
 - [[Artificial Neural Network and Deep Learning]]
 

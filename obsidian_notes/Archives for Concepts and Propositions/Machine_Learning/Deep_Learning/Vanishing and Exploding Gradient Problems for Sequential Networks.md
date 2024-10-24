@@ -29,9 +29,10 @@ date of note: 2024-09-02
 
 - [[Gated Recurrent Units in Neural Network]]
 - [[Long-Short Term Memory Network]]
-- [[Residual Neural Network]]
-
 - [[Recurrent Neural Network]]
+
+- [[Residual Neural Network]]
+- [[Residual Connection for Deep Learning]]
 
 
 - [[Attention Mechanism in Neural Network]]

@@ -20,6 +20,9 @@ date of note: 2024-08-31
 
 ### RNN
 
+![[encoder_decoder_sequence_sequence.png]]
+
+
 ![[rnn_sequence_one_sequence.png]]
 
 - [[Recurrent Neural Network]]

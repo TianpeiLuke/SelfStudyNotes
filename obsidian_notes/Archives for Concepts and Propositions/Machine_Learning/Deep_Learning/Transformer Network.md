@@ -47,7 +47,7 @@ date of note: 2024-05-12
 
 - [[Attention Mechanism in Neural Network]]
 - [[Multi-Layer Perceptron and Feed-Forward Network]]
-- [[Residual Connection for Deep Learning and Vanishing and Exploding Gradients]]
+- [[Residual Connection for Deep Learning]]
 - [[Layer Normalization]]
 
 >[!quote]

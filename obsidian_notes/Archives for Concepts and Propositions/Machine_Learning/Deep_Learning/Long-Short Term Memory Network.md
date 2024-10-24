@@ -87,7 +87,7 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 - [[Recurrent Neural Network]]
-- [[Challenge of Long-Term Dependencies for Sequential Networks]]
+- [[Vanishing and Exploding Gradient Problems for Sequential Networks]]
 
 - [[Dynamic Bayesian Network]]
 - [[State-Observation Models]]

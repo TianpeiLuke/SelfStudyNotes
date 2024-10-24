@@ -77,7 +77,7 @@ date of note: 2024-06-01
 - [[Weight Decay for Deep Learning]]
 - [[Early Stopping for Deep Learning]]
 - [[Soft Weight Sharing for Deep Learning]]
-- [[Residual Connection for Deep Learning and Vanishing and Exploding Gradients]]
+- [[Residual Connection for Deep Learning]]
 - [[Dropout for Deep Learning]]
 
 
@@ -141,7 +141,7 @@ date of note: 2024-06-01
 ### Recurrent Network
 
 - [[Recurrent Neural Network]]
-- [[Challenge of Long-Term Dependencies for Sequential Networks]]
+- [[Vanishing and Exploding Gradient Problems for Sequential Networks]]
 - [[Leaky Units and Other Strategies for Multiple Time Scales Sequential Network]]
 
 - [[Gated Recurrent Units in Neural Network]]

@@ -293,9 +293,11 @@ date of note: 2024-05-12
 >  
 >On the other hand, in *sequence data processing*, where the sequential position information is important, attention mechanism and transformer need additional **positional encoding**  
 
+- [[Vanishing and Exploding Gradient Problems for Sequential Networks]]
+- [[Leaky Units and Other Strategies for Multiple Time Scales Sequential Network]]
 - [[Long-Short Term Memory Network]]
 - [[Gated Recurrent Units in Neural Network]]
-
+- [[Residual Connection for Deep Learning]]
 
 ## Transformer
 
