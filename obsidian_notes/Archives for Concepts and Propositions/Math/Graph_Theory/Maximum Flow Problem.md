@@ -32,8 +32,8 @@ date of note: 2024-07-15
 
 
 
-- [[Flow of Graph]]
-- [[Capacity and Network]]
+- [[Network and Flow and Capacity and Cut]]
+- [[Max-Flow Min-Cut Theorem]]
 - [[Graph]]
 
 - [[Network Flow Problem as Linear Optimization]]

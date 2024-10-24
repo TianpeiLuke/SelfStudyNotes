@@ -30,8 +30,8 @@ date of note: 2024-07-15
 
 
 - [[Paths in Graph and Length of Path]]
-- [[Flow of Graph]]
-- [[Capacity and Network]]
+- [[Network and Flow and Capacity and Cut]]
+- [[Max-Flow Min-Cut Theorem]]
 - [[Graph]]
 
 - [[Optimal Transport in Discrete Setting]]

@@ -64,6 +64,9 @@ date of note: 2024-05-12
 
 ### Network Flow Optimization
 
+- [[Edge Orientiations]]
+- [[Network and Flow and Capacity and Cut]]
+- [[Max-Flow Min-Cut Theorem]]
 - [[Network Flow Problem as Linear Optimization]]
 - [[Network Simplex Algorithm]]
 - [[Negative Cost Cycle Algorithm]]

@@ -105,7 +105,11 @@ date of note: 2024-07-14
 
 ### Flows
 
-- [[Archives for Concepts and Propositions/Math/Graph_Theory/Maximum Flow Problem]]
+- [[Edge Orientiations]]
+- [[Circulation of Graph]]
+- [[Network and Flow and Capacity and Cut]]
+- [[Max-Flow Min-Cut Theorem]]
+- [[Maximum Flow Problem]]
 
 
 

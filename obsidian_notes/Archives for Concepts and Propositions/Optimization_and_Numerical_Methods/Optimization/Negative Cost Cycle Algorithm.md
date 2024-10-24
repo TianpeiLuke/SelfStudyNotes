@@ -36,7 +36,7 @@ date of note: 2024-07-15
 - [[Simplex Method for Linear Optimization Efficient Implementation]]
 
 - [[Network Flow Problem as Linear Optimization]]
-- [[Capacity and Network]]
+- [[Max-Flow Min-Cut Theorem]]
 - [[Graph]]
 
 

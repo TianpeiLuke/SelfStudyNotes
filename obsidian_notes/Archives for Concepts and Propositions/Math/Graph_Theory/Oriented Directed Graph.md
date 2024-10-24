@@ -26,6 +26,7 @@ date of note: 2024-07-09
 
 ^1716d0
 
+- [[Edge Orientiations]]
 - [[Directed Acyclic Graph]]
 
 
