@@ -56,7 +56,7 @@ date of note: 2024-07-09
 >- the source $s\in S$, and 
 >- the sink $t\in \bar{S} := V \setminus S$, 
 >
->then the pair $$(S, \bar{S})$$ is called a **cut**.
+>then the pair $$(S, \bar{S})$$ is called a **cut** or **cut-set**.
 >
 >The **capacity of a cut** is the total capacity of all arcs from $S$ to $\bar{S}$, i.e. $$c(S, \bar S) := \sum_{\overrightarrow{e} \in \overrightarrow{E}(S, \bar{S})}\,c(\overrightarrow{e}).$$
 
