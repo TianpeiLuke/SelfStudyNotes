@@ -77,7 +77,7 @@ date of note: 2024-06-01
 - [[Weight Decay for Deep Learning]]
 - [[Early Stopping for Deep Learning]]
 - [[Soft Weight Sharing for Deep Learning]]
-- [[Residual Connection for Deep Learning]]
+- [[Residual Connection for Deep Learning and Vanishing and Exploding Gradients]]
 - [[Dropout for Deep Learning]]
 
 

@@ -113,7 +113,7 @@ date of note: 2024-05-12
 
 ### Residual Connection
 
-- [[Residual Connection for Deep Learning]]
+- [[Residual Connection for Deep Learning and Vanishing and Exploding Gradients]]
 
 ### Attention Layer and Transformer
 

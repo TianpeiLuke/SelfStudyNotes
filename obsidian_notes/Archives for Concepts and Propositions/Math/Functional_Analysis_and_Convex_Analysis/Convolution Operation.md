@@ -139,6 +139,7 @@ date of note: 2024-08-24
 ## Toeplitz Matrix and Digital Convolution
 
 - [[Toeplitz Matrix and Backward Forward Shift Operation]]
+- [[Circulant Matrix and Circulant Permutation Operation]]
 
 ## $*$-Algebra
 

@@ -77,6 +77,8 @@ date of note: 2024-05-12
 - [[Cosine Similarity and Cosine Distance]]
 - [[Similarity Search]]
 
+![[attention_flow.png]]
+
 >[!important] Definition
 >In the matrix form, the  **query-key-value attention** for $n$ inputs are given by 
 >$$
