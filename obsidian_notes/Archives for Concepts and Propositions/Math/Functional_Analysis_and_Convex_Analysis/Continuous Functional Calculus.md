@@ -58,6 +58,8 @@ date of note: 2024-05-27
 > \end{align}
 >$$
 
+^bc47ad
+
 
 - [[Self-Adjoint Operator in Hilbert Space]]
 - [[C-star Algebra]]
@@ -134,5 +136,7 @@ date of note: 2024-05-27
 - [[Self-Adjoint Operator in Hilbert Space]]
 - [[Hilbert Space]]
 
+- [[Matrix Polynomial]]
+- [[Matrix Exponential]]
 
 - [[Functional Analysis by Reed]]

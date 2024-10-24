@@ -267,6 +267,7 @@ date of note: 2024-07-13
 - [[Ordinary Differential Equations]]
 - [[Autonomous and Nonautonomous Ordinary Differential Equations]]
 - [[Linear ODE with Constant Coefficients]]
+- [[Matrix Polynomial]]
 - [[Matrix Exponential]]
 - [[Exponential Map of Linear Operator]]
 

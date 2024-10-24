@@ -24,6 +24,9 @@ date of note: 2024-09-13
 >
 >Then the polynomial of linear map $$P_{A}(A) = 0.$$
 
+^6f7d87
+
+- [[Matrix Polynomial]]
 - [[Characteristic Polynomial for Linear Map]]
 
 ## Explanation

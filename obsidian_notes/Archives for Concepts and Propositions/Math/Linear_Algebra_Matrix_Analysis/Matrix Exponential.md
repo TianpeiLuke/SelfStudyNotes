@@ -43,6 +43,7 @@ date of note: 2024-10-14
 >- Let $\mathcal{L}$ be the **Laplace transform operator**. Then $$\mathcal{L}\left( \exp(\lambda A) \right) = (\lambda I- A)^{-1}$$ where $\lambda\not\in \lambda(A)$ is *not in the spectrum* of $A$ and $$(\lambda I- A)^{-1}$$ is called the **resolvent** of $A$.
 >- The **derivative** of $e^{tA}$ with *respect to* $t$ is $$\frac{d}{dt} e^{tA} = A\,e^{tA} = e^{tA}\,A.$$
 
+- [[Matrix Polynomial]]
 - [[Surjective Injective Invertible Linear Map and Rank]]
 - [[Laplace Transform]]
 - [[Eigenspace and Spectrum for Linear Map]]

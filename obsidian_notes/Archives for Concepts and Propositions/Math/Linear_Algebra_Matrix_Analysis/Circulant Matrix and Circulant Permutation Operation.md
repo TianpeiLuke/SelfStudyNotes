@@ -58,6 +58,27 @@ date of note: 2024-08-08
 - [[Commutative Ring Algebra]]
 
 
+## Spectrum, Eigenvectors and Fourier Series
+
+- [[Eigenvalue and Eigenvector for Linear Map]]
+- [[Fourier Series and Fourier Transform]]
+- [[Polynomial Ring]]
+
+
+## Determinant
+
+- [[Determinant of Linear Transformation]]
+
+## Matrix Polynomial
+
+- [[Matrix Polynomial]]
+- [[Continuous Functional Calculus]]
+- [[Matrix Exponential]]
+
+
+## Circulant Graph
+
+- [[Cycles in Graph]]
 
 
 -----------
