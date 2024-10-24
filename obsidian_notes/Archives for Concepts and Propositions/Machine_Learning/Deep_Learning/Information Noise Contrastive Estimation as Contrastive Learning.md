@@ -107,6 +107,7 @@ date of note: 2024-09-08
 > \dfrac{p^{+}(X_{i} | X)}{\sum_{m=1}^{n}p^{+}(X_{m} | X)} =  \dfrac{\exp \left( \left\langle f_{\theta}(X) , f_{\theta}(X_{i}) \right\rangle \right)}{\sum_{m=1}^{n}\exp \left( \left\langle f_{\theta}(X) , f_{\theta}(X_{i}) \right\rangle \right)}
 >$$
 
+- [[Gibbs Measure and Energy-based Model]]
 
 >[!quote]
 >Note that the function resembles a **classification cross-entropy error function** in which the cosine similarity of the *positive pair* gives the logit for the *label class* and the cosine similarities for the *negative pairs* give the logits for the *incorrect classes*.

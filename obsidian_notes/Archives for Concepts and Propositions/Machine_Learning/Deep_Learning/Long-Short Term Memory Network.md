@@ -50,7 +50,7 @@ date of note: 2024-05-12
 >	- Note that $$\hat{C}^{(t)} = \sigma \left(U x^{(t)} + W\,h^{(t-1)} + b\right)$$ define the new information into the cell.
 >	- $\hat{C}^{(t)}$ is called the **candidate gate** in some literature, and $\sigma(\cdot) := \tanh(\cdot)$ for candidate gate.
 >- **Output Gate**: controls the output of *short-term memory* $$o^{(t)} = \sigma\left(U^{o}x^{(t)} + W^{o}\,h^{(t-1)} + b^{o}\right)$$
->- **Update** of **short-term memory** via activation of long-term memory, controlled by output gate $$h^{(t)} = o^{(t)} \odot \tanh(h^{(t)})$$
+>- **Update** of **short-term memory** via activation of long-term memory, controlled by output gate $$h^{(t)} = o^{(t)} \odot \tanh(C^{(t)})$$
 >	- Note that the *short-term memory* is the output of *sigmoid activation* via *long-term memory* 
 >- *Output*: the state vector $C^{(t)}$ and hidden vector $h^{(t)}$ at next time
 

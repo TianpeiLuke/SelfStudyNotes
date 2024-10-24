@@ -48,6 +48,7 @@ date of note: 2024-08-08
 >$$
 >where  $C_{n}\in M_{n}$ is **basic circulant permutation matrix** *if and only if* $A$ is a **circulant matrix**.
 
+- [[Matrix Polynomial]]
 
 >[!info]
 >This representation reveals that the circulant matrices of size $n$ are a **commutative algebra**: 
@@ -60,8 +61,11 @@ date of note: 2024-08-08
 
 ## Spectrum, Eigenvectors and Fourier Series
 
+
+
 - [[Eigenvalue and Eigenvector for Linear Map]]
 - [[Fourier Series and Fourier Transform]]
+- [[Discrete Fourier Transform]]
 - [[Polynomial Ring]]
 
 

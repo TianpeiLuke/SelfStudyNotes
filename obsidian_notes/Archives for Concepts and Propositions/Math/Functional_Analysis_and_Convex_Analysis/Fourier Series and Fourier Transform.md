@@ -33,6 +33,8 @@ date of note: 2024-06-05
 >where  $\mathcal{F}: L^1(\mathbb{R}) \to L^1(\mathbb{R})$ is a *linear operator.* That is $\mathcal{F}\in \mathcal{L}(L^1(\mathbb{R})).$
 >
 
+^677ad7
+
 
 - [[Absolutely Convergent Integration]]
 - [[Bounded Linear Operator and Norm of Operator]]
@@ -45,7 +47,7 @@ date of note: 2024-06-05
 >The **Fourier transform** for $f\in L^1(\mathbb{R}^d)$ is defined as 
 >$$
 >\begin{align*}
->(\mathcal{F}f)(\boldsymbol{\omega}) := \hat{f}(\boldsymbol{\omega}) = \int_{\mathbb{R}^d}f(\boldsymbol{t})\,e^{-i 2\pi \left\langle  \boldsymbol{\omega}\,,\,\boldsymbol{t} \right\rangle} d\boldsymbol{t}
+>(\mathcal{F}f)(\boldsymbol{\omega}) := \hat{f}(\boldsymbol{\omega}) = \frac{1}{(2\pi)^{d / 2} }\int_{\mathbb{R}^d}f(\boldsymbol{t})\,e^{-i 2\pi \left\langle  \boldsymbol{\omega}\,,\,\boldsymbol{t} \right\rangle} d\boldsymbol{t}
 >\end{align*}
 >$$
 >where  $\mathcal{F}: L^1(\mathbb{R}^d) \to L^1(\mathbb{R}^d)$ is a *linear operator.* That is $\mathcal{F}\in \mathcal{L}(L^1(\mathbb{R}^d)).$
@@ -64,10 +66,12 @@ date of note: 2024-06-05
 >The **inverse Fourier transform** for $f\in L^1(\mathbb{R}^d)$ is defined as 
 >$$
 >\begin{align*}
->(\mathcal{F}^{-1}f)(\boldsymbol{t}) = f^{\lor}(\boldsymbol{t}) &= \int_{\mathbb{R}^d}f(\boldsymbol{\omega})\,e^{i 2\pi \left\langle  \boldsymbol{\omega}\,,\,\boldsymbol{t} \right\rangle} d\boldsymbol{\omega}
+>(\mathcal{F}^{-1}f)(\boldsymbol{t}) = f^{\lor}(\boldsymbol{t}) &= \frac{1}{(2\pi)^{d / 2} }\int_{\mathbb{R}^d}f(\boldsymbol{\omega})\,e^{i 2\pi \left\langle  \boldsymbol{\omega}\,,\,\boldsymbol{t} \right\rangle} d\boldsymbol{\omega}
 >\end{align*}
 >$$
 >
+
+^3a1551
 
 
 ## Explanation
@@ -110,14 +114,17 @@ date of note: 2024-06-05
 
 - [[Fourier Transform on Schwartz Function and Tempered Distribution]]
 
-
-
-
 ## Spectral Decomposition of Fourier Transform
 
 - [[Eigenvalue Point Residual Spectrum of Linear Operator]]
 - [[Hermite Polynomials]]
 
+
+## Discrete Fourier Transform
+
+
+- [[Discrete Fourier Transform]]
+- [[Fast Fourier Transform]]
 
 
 -----------
