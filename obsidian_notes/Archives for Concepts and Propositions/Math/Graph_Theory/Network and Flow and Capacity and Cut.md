@@ -38,9 +38,9 @@ date of note: 2024-07-09
 >[!important] Definition
 >Let $N := (G, s,t, c)$ be the *network* with graph $G = (V, E)$, $s,t\in V$ and *capacity function* $c$ on $G$.
 >
->A  $$f: \vec{E} \rightarrow \mathbb{R}$$ is called a **flow** in network $N$ if it satisfies the following **three conditions**:
+>A function $$f: \vec{E} \rightarrow \mathbb{R}$$ is called a **flow** in network $N$ if it satisfies the following **three conditions**:
 >- **Skew symmetry constraint**: The *flow* on an arc from $x$ to $y$ is equivalent to the *negation of the flow* on the arc from $y$ to $x$, $$f(e, x, y) = - f(e, y, x), \quad \forall (e,x, y)\in \vec{E},\, x\neq y$$
->- **Flow conservation constraint**: The *total net flow* *entering* a node $v$ is zero for all nodes in the network except the source and sink $s,t$, $$f(v, V) = 0,\quad \forall v\in V \setminus \{ s, t \}$$
+>- **Flow conservation constraint**: The *total net flow* *entering* a node $v$ is zero for all nodes in the network except the source $s$ and sink $t$, $$f(v, V) = 0,\quad \forall v\in V \setminus \{ s, t \}$$
 >- **Capacity constraint**: the flow on each arc does *not exceed* the *capacity* of the edge $$f(\vec{e}) \le c(\vec{e}), \quad \forall \vec{e} \in \vec{E}$$
 >  
 >We call $f$ **integral** if all its values are *integers*.  
@@ -62,9 +62,16 @@ date of note: 2024-07-09
 
 ^667ae1
 
-
-
 ## Explanation
+
+
+## Flow Condition as Linear Constraint
+
+
+
+## Capacity of Cut-Set as Linear Function
+
+
 
 
 
@@ -77,6 +84,7 @@ date of note: 2024-07-09
 - [[Max-Flow Min-Cut Theorem]]
 - [[Maximum Flow Problem]]
 - [[Graph]]
+- [[Linear Optimization Problem]]
 
 - [[Graph Theory by Diestel]] pp 149 - 150
 - Wikipedia [Flow_network](https://en.wikipedia.org/wiki/Flow_network)
