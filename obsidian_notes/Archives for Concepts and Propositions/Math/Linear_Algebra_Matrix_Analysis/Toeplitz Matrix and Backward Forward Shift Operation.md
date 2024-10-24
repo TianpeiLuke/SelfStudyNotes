@@ -81,8 +81,15 @@ date of note: 2024-08-08
 >\end{align*}
 >$$
 
-
 - [[Convolution Operation]]
+
+>[!info]
+>$$
+>\begin{align*}
+>y[i] &= (x * h)[i] = \sum_{l=-\infty}^{\infty}h[i - l]\,x[l]
+>\end{align*}
+>$$
+
 
 
 
