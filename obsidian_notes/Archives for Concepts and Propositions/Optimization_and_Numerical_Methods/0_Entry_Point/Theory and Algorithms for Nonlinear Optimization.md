@@ -87,6 +87,7 @@ date of note: 2024-05-12
 
 - [[Automatic Differentiation]]
 - [[Back-Propagation Algorithm]]
+- [[REINFORCE Algorithm for Monte Carlo Policy Gradient]]
 
 ### Least Square Estimation
 
