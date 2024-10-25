@@ -82,12 +82,13 @@ date of note: 2024-08-08
 >$$
 >Ax = y
 >$$
->corresponds to the **cyclic convolution**
+>corresponds to the **cyclic convolution** or **periodic convolution**
 >$$
 >y = a * x \; \implies \;  y_{i} = \sum_{k=0}^{n-1}a_{i - k}\,x_{k}, \quad i=0\,{,}\ldots{,}\,n-1
 >$$
 
 - [[Convolution Operation]]
+- [[Discrete Time Signal Processing by Oppenheim]] PP 631
 
 ## Spectrum, Eigenvectors and Discrete Fourier Transform
 
@@ -101,16 +102,39 @@ date of note: 2024-08-08
 >- $C_{n}$ is **unitary** (or **real orthogonal**)
 >- Let $$D = \text{diag}\left(1,\, \omega_{n} \,{,}\ldots{,}\,\omega_{n}^{n-1}\right)$$ where $$\omega_{n} := \exp \left(i \frac{2\pi}{n}\right)$$ and let $F_{n}$ be the **DFT matrix**.  $$\begin{align*} F_{n} &= \frac{1}{\sqrt{ n }} \left[ \begin{array}{cccc} 1 & 1 & \ldots & 1 \\[5pt] 1 & \omega_{n} & \ldots & \omega_{n}^{n-1} \\[5pt] \vdots  & \ldots & \ldots & \ldots \\[5pt] 1 & \omega_{n}^{n-1} & \ldots & \omega_{n}^{(n-1)(n-1)} \\[5pt] \end{array} \right] \\[10pt]  &=  \frac{1}{\sqrt{ n }} \left[ \begin{array}{cccc} 1 & 1 & \ldots & 1 \\[5pt] 1 & \omega_{n} & \ldots & \omega_{n}^{n-1} \\[5pt] \vdots  & \ldots & \ldots & \ldots \\[5pt] 1 & \omega_{n}^{n-1} & \ldots & \omega_{n} \\[5pt] \end{array} \right]\end{align*}$$ Then $$C_{n}F_{n} = F_{n}D$$ That is, the **spectral decomposition** of $C_{n}$ is given by $$C_{n} = F_{n}\,D\,F_{n}^{*}$$ where
 >	- the **eigenvalues** of $C_{n}$ consists of all **$n$-th root of unit** (i.e. $\omega_{n}^n=1$) $$1,\, \omega_{n} \,{,}\ldots{,}\,\omega_{n}^{n-1}$$ and $$\sum_{k=0}^{n-1}\omega_{n}^{k} = 0$$
->	- and the **eigenvector** of $C_{n}$ corresponds to **eigenvalue** $\omega_{n}^{k}$ is **the Fourier modes** $$v_{k} := \frac{1}{\sqrt{ n}}\left[ 1,\,\omega_{n}^{k}\,{,}\ldots{,}\,\omega_{n}^{k(n-1)} \right]^{T}$$
+>	- and the **eigenvector** of $C_{n}$ corresponds to **eigenvalue** $\omega_{n}^{k}$ is **the $k$-th Fourier modes** $$v_{k} := \frac{1}{\sqrt{ n}}\left[ 1,\,\omega_{n}^{k}\,{,}\ldots{,}\,\omega_{n}^{k(n-1)} \right]^{T}$$
 
 
 ^174342
 
+- [[Unitary and Orthogonal Transformation]]
 - [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
 - [[Eigenvalue and Eigenvector for Linear Map]]
 - [[Fourier Series and Fourier Transform]]
 - [[Discrete Fourier Transform]]
 - [[Polynomial Ring]]
+
+>[!info] Proof
+>See that
+>$$
+>\begin{align*}
+>\left[ \begin{array}{ccccc}0 & 1 & \cdots & \cdots & 0 \\ \vdots & 0 & 1 &  & 0 \\  \vdots & \vdots & \ddots &  \ddots & \vdots \\ 0 &  &  & 0 & 1 \\ 1 &  0 & \cdots &  & 0 \end{array} \right] \left[ \begin{array}{c}x_{1} \\ x_{2} \\ \vdots \\ x_{n-1} \\ x_{n}\end{array} \right] &= \left[ \begin{array}{c}x_{2} \\ x_{3} \\ \vdots \\ x_{n} \\ x_{1}\end{array} \right]
+>\end{align*}
+>$$
+>Thus
+>$$
+>\begin{align*}
+>\left[ \begin{array}{ccccc}0 & 1 & \cdots & \cdots & 0 \\ \vdots & 0 & 1 &  & 0 \\  \vdots & \vdots & \ddots &  \ddots & \vdots \\ 0 &  &  & 0 & 1 \\ 1 &  0 & \cdots &  & 0 \end{array} \right] \left[ \begin{array}{c}1 \\ \omega_{n}^{k} \\ \vdots \\ \omega_{n}^{k(n-2)} \\ \omega_{n}^{k(n-1)} \end{array} \right] &= \left[ \begin{array}{c}\omega_{n}^{k}  \\ \omega_{n}^{2k}  \\ \vdots \\ \omega_{n}^{k(n-1)} \\ 1\end{array} \right] = \omega_{n}^{k}\left[ \begin{array}{c}1 \\ \omega_{n}^{k} \\ \vdots \\ \omega_{n}^{k(n-2)} \\ \omega_{n}^{k(n-1)} \end{array} \right]
+>\end{align*}
+>$$
+>Therefore $v_{k} := \frac{1}{\sqrt{ n}}\left[ 1,\,\omega_{n}^{k}\,{,}\ldots{,}\,\omega_{n}^{k(n-1)} \right]^{T}$ is the eigenvector of $C_{n}$ associated with $\omega_{n}^{k}$, i.e. $$C_{n}v_{k} = \omega_{n}^{k}\,v_{k}.$$
+
+>[!important]
+>Use the projection formula for spectral theorem
+>$$
+>C_{n} = \sum_{k=0}^{n-1}\,\omega_{n}^{k}\,v_{k}\,v_{k}^{*}
+>$$
+
 
 >[!important] Corollary
 >Let $$a := (a_{0} \,{,}\ldots{,}\,a_{n-1})$$ be a sequence of length $n$ and a **circulant matrix** $A\in M_{n}$ of **size** $n$ is of the form
@@ -140,7 +164,7 @@ date of note: 2024-08-08
 >In fact, it works for all $\omega_{n}$ so that $$\omega_{n}^{n} = 1$$
 
 >[!info]
->This can be understood by realizing that **multiplication** with a *circulant matrix* implements a **circulant convolution**. 
+>This can be understood by realizing that **multiplication** with a *circulant matrix* implements a **cyclic convolution**. 
 >- In **Fourier space**, **convolutions become multiplication**. 
 >- Hence the *product of a circulant matrix with a Fourier mode* yields a *multiple of that Fourier mode*, i.e. it is an **eigenvector**. 
 >  
@@ -149,7 +173,7 @@ date of note: 2024-08-08
 >\begin{align*}
 >  a*x&= y \\[5pt]
 > \iff Ax &= y\\[5pt]
-> \implies F_{n}\,\text{diag}(\sqrt{n}\,F_{n}^{*}a)\,F^{*}x &= y \\[5pt] 
+> \implies F_{n}\,\text{diag}(\sqrt{n}\,F_{n}^{*}a)\,F_{n}^{*}x &= y \\[5pt] 
 > \implies \text{diag}(\sqrt{n}\,F_{n}^{*}a)\,\sqrt{n}\,F_{n}^{*}x &= \sqrt{n}\,F_{n}^{*}\,y\\[5pt] 
 > \implies \mathcal{F}(a)\,\mathcal{F}(x) &= \mathcal{F}\left(a*x\right)
 \end{align*}

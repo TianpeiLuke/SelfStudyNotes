@@ -116,6 +116,7 @@ date of note: 2024-05-27
 
 - [[Spectral Measure induced by Positive Linear Functional]]
 - [[Continuous Functional Calculus]]
+- [[Involutory and Coninvolutory Transformations]]
 
 - [[Self-Adjoint Operator in Hilbert Space]]
 - [[Hilbert Space]]

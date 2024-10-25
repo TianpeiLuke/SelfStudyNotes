@@ -69,8 +69,11 @@ date of note: 2024-10-24
 >Then
 >- $F$ is **unitary**, **symmetric** and **coninvolutory** i.e. $$F_{n}\,F_{n}^{*} = F_{n}\,\overline{F}_{n} = I$$ or $$F_{n}^{-1} = F_{n}^{*} = \overline{F}_{n}.$$
 
+^6c0327
+
 - [[Unitary and Orthogonal Transformation]]
 - [[Hermitian or Symmetric Matrix]]
+- [[Involutory and Coninvolutory Transformations]]
 
 ## Circulant Matrix and Eigenvectors
 

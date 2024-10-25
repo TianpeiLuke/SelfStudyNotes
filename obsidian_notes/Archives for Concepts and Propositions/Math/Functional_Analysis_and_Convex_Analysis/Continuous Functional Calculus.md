@@ -68,6 +68,7 @@ date of note: 2024-05-27
 - [[Norm and Normed Space]]
 - [[Positive Semidefinite Operator]]
 - [[Hilbert Space]]
+- [[Involutory and Coninvolutory Transformations]]
 
 
 

@@ -134,6 +134,7 @@ date of note: 2024-05-11
 - [[Self-Adjoint Linear Map]]
 - [[Hermitian or Symmetric Matrix]]
 - [[Unitary and Orthogonal Transformation]]
+- [[Involutory and Coninvolutory Transformations]]
 - [[Normal Transformation]]
 - [[Positive Semidefinite Transformation]]
 - [[Square Root of Positive Semidefinite Transformation and Absolute Value]]

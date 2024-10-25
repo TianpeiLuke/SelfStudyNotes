@@ -169,6 +169,8 @@ date of note: 2024-07-13
 - [[Sylvester Law of Inertia]]
 
 
+
+
 ### Matrix Analysis
 
 #### Adjoint and Hermitian
@@ -177,6 +179,7 @@ date of note: 2024-07-13
 - [[Self-Adjoint Linear Map]]
 - [[Hermitian or Symmetric Matrix]]
 - [[Skew-Hermitian and Skew-Symmetric Matrix]]
+- [[Involutory and Coninvolutory Transformations]]
 
 #### Variational Formulation of Eigenvalue Problem
 

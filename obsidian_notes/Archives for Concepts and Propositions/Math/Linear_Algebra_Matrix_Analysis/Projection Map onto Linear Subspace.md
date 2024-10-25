@@ -46,6 +46,8 @@ date of note: 2024-05-26
 >[!important] Proposition
 >A linear transformation $P$ is a **projection** on some subspace *if and only if* it is **idempotent**, that is, $$P^2 =P.$$
 
+^b88860
+
 >[!important] Corollary
 >If $P$ is the **projection on** $S$ **along** $W$, then $S$ and $W$ are, respectively, the sets of all solutions of the equations
 >$$
