@@ -18,7 +18,7 @@ date of note: 2024-05-12
 >**Name**: Early Stopping for Deep Learning
 
 >[!important] Definition
->The **early stopping** is a *regularization technique* that allows the training *terminates* when *no validation error is improved* and return the *parameters with best performance* in past.
+>The **early stopping** is a regularization technique that allows the training *terminates* when *no validation error is improved* (after some time) and return the *parameters with best performance* by far.
 
 >[!important] Definition
 >The **early stopping meta-algorithm** is described as follow
@@ -46,7 +46,7 @@ date of note: 2024-05-12
 
 
 >[!info]
->This is a version of **hill climbing greedy search**.
+>This is the **hill climbing greedy search**.
 
 - [[Tabu Search]]
 - [[Greedy Search and Hill Climbing]]
@@ -108,7 +108,7 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
-
+- [[Tikhonov Regularization in Optimization and Learning]]
 - [[Regularized Loss Minimization]]
 - [[Artificial Neural Network and Deep Learning]]
 

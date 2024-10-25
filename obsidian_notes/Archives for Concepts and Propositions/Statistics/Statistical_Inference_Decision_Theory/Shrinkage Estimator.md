@@ -12,6 +12,8 @@ date of note: 2024-06-24
 >[!important]
 >**Name**: 
 
+![[LASSO and Sparsity-Induced Least Square#^5d43ca]]
+
 
 
 ## Explanation
