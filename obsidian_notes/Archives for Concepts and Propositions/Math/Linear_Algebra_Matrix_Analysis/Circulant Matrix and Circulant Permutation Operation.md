@@ -130,9 +130,8 @@ date of note: 2024-08-08
 - [[Unitary Similarity and Unitary Diagonalizable]]
 
 >[!important] 
->These two are the same:
->- The **(operator) spectrum** of **circulant matrix** for a **periodic sequence** 
->- the **(Fourier) spectrum** of the **periodic sequence.**
+>The **(operator) spectrum** of **circulant matrix** $C(a)$ for a *periodic sequence* $a$ is also the **(Fourier) spectrum** of the **periodic sequence.**
+>$$\lambda(C(a)) = \mathcal{F}(a)$$
 
 >[!info]
 >These two above theorems work for both $$\omega_{n} := \exp \left(-i \frac{2\pi}{n}\right)$$ and $$\omega_{n} := \exp \left(i \frac{2\pi}{n}\right)$$
