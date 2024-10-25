@@ -114,7 +114,7 @@ date of note: 2024-08-08
 >[!important] Corollary
 >Let $$a := (a_{0} \,{,}\ldots{,}\,a_{n-1})$$ be a sequence of length $n$ and a **circulant matrix** $A\in M_{n}$ of **size** $n$ is of the form
 >$$
->A = \left[ \begin{array}{cccc}a_{0} & a_{1} & \cdots & a_{n-1} \\ a_{n-1} & a_{0} & \cdots & a_{n-2} \\ \vdots & \vdots & \ddots & \vdots \\ a_{1} & a_{2} & \cdots & a_{0} \\ \end{array} \right] = \sum_{i=0}^{n-1}a_{i}C_{n}^{i}. 
+>A = \left[ \begin{array}{cccc}a_{0} & a_{1} & \cdots & a_{n-1} \\ a_{n-1} & a_{0} & \cdots & a_{n-2} \\ \vdots & \vdots & \ddots & \vdots \\ a_{1} & a_{2} & \cdots & a_{0} \\ \end{array} \right] = \sum_{k=0}^{n-1}a_{k}C_{n}^{k}. 
 >$$
 >
 >Then the **spectral decomposition** of $A$ is given by $$A = F_{n}\,\Lambda\,F_{n}^{*}$$ where 
