@@ -144,6 +144,7 @@ date of note: 2024-08-24
 
 ^f03102
 
+- [[Circulant Matrix and Circulant Permutation Operation]]
 
 
 ## Explanation

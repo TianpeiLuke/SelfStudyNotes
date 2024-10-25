@@ -59,6 +59,25 @@ date of note: 2024-08-08
 - [[Commutative Ring Algebra]]
 
 
+## Convolution
+
+>[!important] 
+>Let $$a := (a_{0} \,{,}\ldots{,}\,a_{n-1})$$ be a sequence of length $n$ and $A\in M_{n}$ be the **circulant matrix**  of **size** $n$ 
+>$$
+>A = \left[ \begin{array}{cccc}a_{0} & a_{1} & \cdots & a_{n-1} \\ a_{n-1} & a_{0} & \cdots & a_{n-2} \\ \vdots & \vdots & \ddots & \vdots \\ a_{1} & a_{2} & \cdots & a_{0} \\ \end{array} \right] 
+>$$ 
+>
+>Then for $x= (x_{0}\,{,}\ldots{,}\,x_{n-1})$, and $y=(y_{0}\,{,}\ldots{,}\,y_{n-1})$, the **circulant linear system** 
+>$$
+>Ax = y
+>$$
+>corresponds to the **circulant convolution**
+>$$
+>y_{i} = \sum_{k=0}^{n-1}a_{i - k}\,x_{k}, \quad i=0\,{,}\ldots{,}\,n-1
+>$$
+
+- [[Convolution Operation]]
+
 ## Spectrum, Eigenvectors and Discrete Fourier Transform
 
 >[!important] Theorem
@@ -69,7 +88,7 @@ date of note: 2024-08-08
 >
 >Then 
 >- $C_{n}$ is **unitary** (or **real orthogonal**)
->- Let $$D = \text{diag}\left(1,\, \omega_{n} \,{,}\ldots{,}\,\omega_{n}^{n-1}\right)$$ where $$\omega_{n} := \exp \left(i \frac{2\pi}{n}\right)$$ and let $F_{n}$ be the **(inverse) DFT matrix**.  $$\begin{align*} F_{n} &= \frac{1}{\sqrt{ n }} \left[ \begin{array}{cccc} 1 & 1 & \ldots & 1 \\[5pt] 1 & \omega_{n} & \ldots & \omega_{n}^{n-1} \\[5pt] \vdots  & \ldots & \ldots & \ldots \\[5pt] 1 & \omega_{n}^{n-1} & \ldots & \omega_{n}^{(n-1)(n-1)} \\[5pt] \end{array} \right] \\[10pt]  &=  \frac{1}{\sqrt{ n }} \left[ \begin{array}{cccc} 1 & 1 & \ldots & 1 \\[5pt] 1 & \omega_{n} & \ldots & \omega_{n}^{n-1} \\[5pt] \vdots  & \ldots & \ldots & \ldots \\[5pt] 1 & \omega_{n}^{n-1} & \ldots & \omega_{n} \\[5pt] \end{array} \right]\end{align*}$$ Then $$C_{n}F_{n} = F_{n}D$$ That is, the **spectral decomposition** of $C_{n}$ is given by $$C_{n} = F_{n}\,D\,F_{n}^{*}$$
+>- Let $$D = \text{diag}\left(1,\, \omega_{n} \,{,}\ldots{,}\,\omega_{n}^{n-1}\right)$$ where $$\omega_{n} := \exp \left(i \frac{2\pi}{n}\right)$$ and let $F_{n}$ be the **DFT matrix**.  $$\begin{align*} F_{n} &= \frac{1}{\sqrt{ n }} \left[ \begin{array}{cccc} 1 & 1 & \ldots & 1 \\[5pt] 1 & \omega_{n} & \ldots & \omega_{n}^{n-1} \\[5pt] \vdots  & \ldots & \ldots & \ldots \\[5pt] 1 & \omega_{n}^{n-1} & \ldots & \omega_{n}^{(n-1)(n-1)} \\[5pt] \end{array} \right] \\[10pt]  &=  \frac{1}{\sqrt{ n }} \left[ \begin{array}{cccc} 1 & 1 & \ldots & 1 \\[5pt] 1 & \omega_{n} & \ldots & \omega_{n}^{n-1} \\[5pt] \vdots  & \ldots & \ldots & \ldots \\[5pt] 1 & \omega_{n}^{n-1} & \ldots & \omega_{n} \\[5pt] \end{array} \right]\end{align*}$$ Then $$C_{n}F_{n} = F_{n}D$$ That is, the **spectral decomposition** of $C_{n}$ is given by $$C_{n} = F_{n}\,D\,F_{n}^{*}$$
 >	- So the **eigenvector** of $C_{n}$ corresponds to **eigenvalue** $\omega_{n}^{k}$ is **the Fourier modes** $$v_{k} := \frac{1}{\sqrt{ n}}\left[ 1,\,\omega_{n}^{k}\,{,}\ldots{,}\,\omega_{n}^{k(n-1)} \right]^{T}$$
 
 ^174342
@@ -88,7 +107,9 @@ date of note: 2024-08-08
 >
 >Then the **spectral decomposition** of $A$ is given by $$A = F_{n}\,\Lambda\,F_{n}^{*}$$ where 
 >- $F_{n}$ be the **DFT matrix**.  $$\begin{align*} F_{n} &= \frac{1}{\sqrt{ n }} \left[ \begin{array}{cccc} 1 & 1 & \ldots & 1 \\[5pt] 1 & \omega_{n} & \ldots & \omega_{n}^{n-1} \\[5pt] \vdots  & \ldots & \ldots & \ldots \\[5pt] 1 & \omega_{n}^{n-1} & \ldots & \omega_{n}^{(n-1)(n-1)} \\[5pt] \end{array} \right] \\[10pt]  &=  \frac{1}{\sqrt{ n }} \left[ \begin{array}{cccc} 1 & 1 & \ldots & 1 \\[5pt] 1 & \omega_{n} & \ldots & \omega_{n}^{n-1} \\[5pt] \vdots  & \ldots & \ldots & \ldots \\[5pt] 1 & \omega_{n}^{n-1} & \ldots & \omega_{n} \\[5pt] \end{array} \right]\end{align*}$$ 
->- And the **spectrum** of $A$, $\Lambda = \text{diag}(\lambda_{1}\,{,}\ldots{,}\,\lambda_{n})$, is given by the **inverse Fourier transform** of $a$, $$\lambda_{j} = \sum_{k=1}^{n}\,a_{k}\,\omega_{n}^{(k-1)(j-1)}:= (\mathcal{F}^{-1}a)_{j}$$ with $$\omega_{n} := \exp \left(i \frac{2\pi}{n}\right)$$
+>- And the **spectrum** of $A$, $\Lambda = \text{diag}(\lambda_{1}\,{,}\ldots{,}\,\lambda_{n})$, is given by the **Fourier transform** of $a$, $$\lambda_{j} = \sum_{k=1}^{n}\,a_{k}\,\omega_{n}^{(k-1)(j-1)}:= (\mathcal{F}a)_{j}$$ with $$\omega_{n} := \exp \left(i \frac{2\pi}{n}\right)$$
+>- Or equivalently $$(\lambda_{1}\,{,}\ldots{,}\,\lambda_{n})^{T} = \sqrt{n} \,F_{n}^{*}a$$
+>- Moreover, **all circulant matrices** shared the **same eigenvectors**, and they are **simultaneously unitary diagonalizable.**
 
 ^a24c39
 
@@ -100,11 +121,26 @@ date of note: 2024-08-08
 >- The **(operator) spectrum** of **circulant matrix** for a **periodic sequence** 
 >- the **(Fourier) spectrum** of the **periodic sequence.**
 
+>[!info]
+>These two above theorems work for both $$\omega_{n} := \exp \left(-i \frac{2\pi}{n}\right)$$ and $$\omega_{n} := \exp \left(i \frac{2\pi}{n}\right)$$
+>
+>In fact, it works for all $\omega_{n}$ so that $$\omega_{n}^{n} = 1$$
 
 >[!info]
->This can be understood by realizing that **multiplication** with a *circulant matrix* implements a **convolution**. 
+>This can be understood by realizing that **multiplication** with a *circulant matrix* implements a **circulant convolution**. 
 >- In **Fourier space**, **convolutions become multiplication**. 
->- Hence the *product of a circulant matrix with a Fourier mode* yields a *multiple of that Fourier mode*, i.e. it is an **eigenvector**. $$A\,\frac{1}{\sqrt{ n}}\left[ 1,\,\omega_{n}^{k}\,{,}\ldots{,}\,\omega_{n}^{k(n-1)} \right]^{T} = (\mathcal{F}^{-1}a)_{j}\,\frac{1}{\sqrt{ n}}\left[ 1,\,\omega_{n}^{k}\,{,}\ldots{,}\,\omega_{n}^{k(n-1)} \right]^{T}$$
+>- Hence the *product of a circulant matrix with a Fourier mode* yields a *multiple of that Fourier mode*, i.e. it is an **eigenvector**. 
+>  
+>See this via eigen-decomposition  
+>$$
+>\begin{align*}
+>  a*x&= y \\[5pt]
+> \iff Ax &= y\\[5pt]
+> \implies F_{n}\,\text{diag}(\sqrt{n}\,F_{n}^{*}a)\,F^{*}x &= y \\[5pt] 
+> \implies \text{diag}(\sqrt{n}\,F_{n}^{*}a)\,F^{*}x &= F_{n}^{*}\,y\\[5pt] 
+> \implies \sqrt{n}\;\mathcal{F}(a)\,\mathcal{F}(x) &= \mathcal{F}\left(a*x\right)
+\end{align*}
+>$$
 
 - [[Convolution Operation]]
 
@@ -162,3 +198,4 @@ date of note: 2024-08-08
 - [[Numerical Linear Algebra by Trefethen]] pp 187, 305, 318, 342
 - [[Matrix Computations by Golub]] pp 220
 - [[Matrix Analysis by Horn]] pp 33 - 34, 100, 36
+- Wikipedia [Circulant_matrix](https://en.wikipedia.org/wiki/Circulant_matrix)
