@@ -59,7 +59,7 @@ date of note: 2024-08-08
 - [[Commutative Ring Algebra]]
 
 
-## Spectrum, Eigenvectors and Fourier Series
+## Spectrum, Eigenvectors and Discrete Fourier Transform
 
 >[!important] Theorem
 >Let $C_{n}$ be a **basic circulant permuation matrix** i.e.
@@ -69,7 +69,7 @@ date of note: 2024-08-08
 >
 >Then 
 >- $C_{n}$ is **unitary** (or **real orthogonal**)
->- Let $$D = \text{diag}\left(1,\, \omega_{n} \,{,}\ldots{,}\,\omega_{n}^{n-1}\right)$$ where $$\omega_{n} := \exp \left(i \frac{2\pi}{n}\right)$$ and let $F_{n}$ be the **DFT matrix**.  $$\begin{align*} F_{n} &= \frac{1}{\sqrt{ n }} \left[ \begin{array}{cccc} 1 & 1 & \ldots & 1 \\[5pt] 1 & \omega_{n} & \ldots & \omega_{n}^{n-1} \\[5pt] \vdots  & \ldots & \ldots & \ldots \\[5pt] 1 & \omega_{n}^{n-1} & \ldots & \omega_{n}^{(n-1)(n-1)} \\[5pt] \end{array} \right] \\[10pt]  &=  \frac{1}{\sqrt{ n }} \left[ \begin{array}{cccc} 1 & 1 & \ldots & 1 \\[5pt] 1 & \omega_{n} & \ldots & \omega_{n}^{n-1} \\[5pt] \vdots  & \ldots & \ldots & \ldots \\[5pt] 1 & \omega_{n}^{n-1} & \ldots & \omega_{n} \\[5pt] \end{array} \right]\end{align*}$$ Then $$C_{n}F_{n} = F_{n}D$$ That is, the **spectral decomposition** of $C_{n}$ is given by $$C_{n} = F_{n}\,D\,F_{n}^{*}$$
+>- Let $$D = \text{diag}\left(1,\, \omega_{n} \,{,}\ldots{,}\,\omega_{n}^{n-1}\right)$$ where $$\omega_{n} := \exp \left(i \frac{2\pi}{n}\right)$$ and let $F_{n}$ be the **(inverse) DFT matrix**.  $$\begin{align*} F_{n} &= \frac{1}{\sqrt{ n }} \left[ \begin{array}{cccc} 1 & 1 & \ldots & 1 \\[5pt] 1 & \omega_{n} & \ldots & \omega_{n}^{n-1} \\[5pt] \vdots  & \ldots & \ldots & \ldots \\[5pt] 1 & \omega_{n}^{n-1} & \ldots & \omega_{n}^{(n-1)(n-1)} \\[5pt] \end{array} \right] \\[10pt]  &=  \frac{1}{\sqrt{ n }} \left[ \begin{array}{cccc} 1 & 1 & \ldots & 1 \\[5pt] 1 & \omega_{n} & \ldots & \omega_{n}^{n-1} \\[5pt] \vdots  & \ldots & \ldots & \ldots \\[5pt] 1 & \omega_{n}^{n-1} & \ldots & \omega_{n} \\[5pt] \end{array} \right]\end{align*}$$ Then $$C_{n}F_{n} = F_{n}D$$ That is, the **spectral decomposition** of $C_{n}$ is given by $$C_{n} = F_{n}\,D\,F_{n}^{*}$$
 >	- So the **eigenvector** of $C_{n}$ corresponds to **eigenvalue** $\omega_{n}^{k}$ is **the Fourier modes** $$v_{k} := \frac{1}{\sqrt{ n}}\left[ 1,\,\omega_{n}^{k}\,{,}\ldots{,}\,\omega_{n}^{k(n-1)} \right]^{T}$$
 
 ^174342
@@ -88,10 +88,11 @@ date of note: 2024-08-08
 >
 >Then the **spectral decomposition** of $A$ is given by $$A = F_{n}\,\Lambda\,F_{n}^{*}$$ where 
 >- $F_{n}$ be the **DFT matrix**.  $$\begin{align*} F_{n} &= \frac{1}{\sqrt{ n }} \left[ \begin{array}{cccc} 1 & 1 & \ldots & 1 \\[5pt] 1 & \omega_{n} & \ldots & \omega_{n}^{n-1} \\[5pt] \vdots  & \ldots & \ldots & \ldots \\[5pt] 1 & \omega_{n}^{n-1} & \ldots & \omega_{n}^{(n-1)(n-1)} \\[5pt] \end{array} \right] \\[10pt]  &=  \frac{1}{\sqrt{ n }} \left[ \begin{array}{cccc} 1 & 1 & \ldots & 1 \\[5pt] 1 & \omega_{n} & \ldots & \omega_{n}^{n-1} \\[5pt] \vdots  & \ldots & \ldots & \ldots \\[5pt] 1 & \omega_{n}^{n-1} & \ldots & \omega_{n} \\[5pt] \end{array} \right]\end{align*}$$ 
->- And the **spectrum** of $A$, $\Lambda = \text{diag}(\lambda_{1}\,{,}\ldots{,}\,\lambda_{n})$, is given by the **inverse Fourier transform** $$\lambda_{j} = \sum_{k=0}^{n-1}\,a_{k+1}\,\omega_{n}^{k(j-1)}:= (\mathcal{F}^{-1}a)_{j}$$ with $$\omega_{n} := \exp \left(i \frac{2\pi}{n}\right)$$
+>- And the **spectrum** of $A$, $\Lambda = \text{diag}(\lambda_{1}\,{,}\ldots{,}\,\lambda_{n})$, is given by the **inverse Fourier transform** of $a$, $$\lambda_{j} = \sum_{k=1}^{n}\,a_{k}\,\omega_{n}^{(k-1)(j-1)}:= (\mathcal{F}^{-1}a)_{j}$$ with $$\omega_{n} := \exp \left(i \frac{2\pi}{n}\right)$$
 
 ^a24c39
 
+- [[Discrete Fourier Transform]]
 - [[Unitary Similarity and Unitary Diagonalizable]]
 
 >[!important] 
@@ -119,6 +120,18 @@ date of note: 2024-08-08
 
 
 ## Determinant
+
+>[!important]
+>The **determinant** of **circulant matrix**
+>$$
+>A = \left[ \begin{array}{cccc}a_{1} & a_{2} & \cdots & a_{n} \\ a_{n} & a_{1} & \cdots & a_{n-1} \\ \vdots & \vdots & \ddots & \vdots \\ a_{2} & a_{3} & \cdots & a_{1} \\ \end{array} \right]. 
+>$$
+>is given by
+>$$
+>\det(A) = \prod_{j=1}^{n}\lambda_{j}  = \prod_{j=1}^{n}(\mathcal{F}^{-1}a)_{j-1} = \prod_{j=1}^{n}\left(\sum_{k=1}^{n}\,a_{k}\,\omega_{n}^{(k-1)(j-1)}\right)
+>$$
+>with $$\omega_{n} := \exp \left(i \frac{2\pi}{n}\right)$$
+
 
 - [[Determinant of Linear Transformation]]
 

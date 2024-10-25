@@ -85,7 +85,7 @@ date of note: 2024-08-08
 >is a **Vandermonde matrix** with $$W_{N} := \exp \left(- i\left(\frac{2\pi}{N}\right)\right)$$
 >- The **DFT matrix** is **unitary** $$F_{N} \in \mathcal{U}(N)$$
 
-- [[DFT Matrix]]
+- [[Discrete Fourier Transform Matrix or DFT Matrix]]
 - [[Vandermonde Matrix]]
 - [[Circulant Matrix and Circulant Permutation Operation]]
 - Wikipedia [DFT_matrix](https://en.wikipedia.org/wiki/DFT_matrix)

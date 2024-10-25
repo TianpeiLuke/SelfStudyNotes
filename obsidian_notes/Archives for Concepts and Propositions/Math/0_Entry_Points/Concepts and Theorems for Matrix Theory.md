@@ -65,7 +65,7 @@ date of note: 2024-07-13
 - [[Circulant Matrix and Circulant Permutation Operation]]
 - [[Toeplitz Matrix and Backward Forward Shift Operation]]
 - [[Discrete Fourier Transform]]
-- [[DFT Matrix]]
+- [[Discrete Fourier Transform Matrix or DFT Matrix]]
 - [[Vandermonde Matrix]]
 
 - [[Nonnegative and Positive Matrix]]

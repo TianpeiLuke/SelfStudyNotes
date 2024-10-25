@@ -5,23 +5,20 @@ tags:
   - math/matrix_analysis
   - numerical_methods/numerical_linear_algebra
 keywords:
-  - vandermonde_matrix
-  - matrix_polynomial
-  - characteristic_polynomial
   - dft_matrix
   - discrete_fourier_transform
 topics:
   - matrix_analysis
   - linear_algebra
   - numerical_linear_algebra
-name: Vandermonde Matrix and DFT Matrix
+name: Discrete Fourier Transform Matrix or DFT Matrix
 date of note: 2024-10-24
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: DFT Matrix
+>**Name**: Discrete Fourier Transform Matrix or DFT Matrix
 
 ### DFT Matrix
 
@@ -38,9 +35,23 @@ date of note: 2024-10-24
 >- the **discrete Fourier basis factor** is $$W_{n} := \exp \left(- i\left(\frac{2\pi}{n}\right)\right)$$
 >- That is, $$F= \frac{1}{\sqrt{ n }} [f_{k,j}], \quad f_{k,j} = W_{n}^{(k-1)(j-1)}$$
 
-
+- [[Discrete Fourier Transform]]
 
 ## Explanation
+
+>[!info]
+>Conventional **DFT matrix** is **non-unitary**
+>$$
+>\begin{align*}
+> F_{n} &=  \left[ \begin{array}{cccc} 1 & 1 & \ldots & 1 \\[5pt] 1 & W_{n} & \ldots & W_{n}^{n-1} \\[5pt] \vdots  & \ldots & \ldots & \ldots \\[5pt] 1 & W_{n}^{n-1} & \ldots & W_{n}^{(n-1)(n-1)} \\[5pt] \end{array} \right] 
+>\end{align*}
+>$$
+>and
+>$$
+>F_{n}^{-1} = \frac{1}{n}\,F_{n}^{*}
+>$$
+
+
 
 ### Vandermonde Matrix
 
@@ -56,7 +67,7 @@ date of note: 2024-10-24
 >Let $F \in M_{n}(F)$ be a **Discrete Fourier Transform (DFT) matrix**.
 >
 >Then
->- $F$ is **unitary**, **symmetric** and **coninvolutory** i.e. $$F_{n}\,F_{n}^{*} = F_{n}\,\overline{F}_{n} = I$$
+>- $F$ is **unitary**, **symmetric** and **coninvolutory** i.e. $$F_{n}\,F_{n}^{*} = F_{n}\,\overline{F}_{n} = I$$ or $$F_{n}^{-1} = F_{n}^{*} = \overline{F}_{n}.$$
 
 - [[Unitary and Orthogonal Transformation]]
 - [[Hermitian or Symmetric Matrix]]
@@ -90,3 +101,5 @@ date of note: 2024-10-24
 
 - [[Matrix Computations by Golub]] pp 33 - 35
 - [[Numerical Linear Algebra by Trefethen]]
+- [[Discrete Time Signal Processing by Oppenheim]]
+- [[Signals and Systems by Oppenheim]]
