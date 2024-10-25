@@ -62,6 +62,7 @@ date of note: 2024-08-27
 >$$
 
 - [[Cross-Entropy Loss Function]]
+- [[Majorization-Minimization Algorithm]]
 - Brookes, D., Busia, A., Fannjiang, C., Murphy, K., & Listgarten, J. (2020). A view of estimation of distribution algorithms through the lens of expectation-maximization. _Proceedings of the 2020 Genetic and Evolutionary Computation Conference Companion_, 189–190. [https://doi.org/10.1145/3377929.3389938](https://doi.org/10.1145/3377929.3389938)
 
 

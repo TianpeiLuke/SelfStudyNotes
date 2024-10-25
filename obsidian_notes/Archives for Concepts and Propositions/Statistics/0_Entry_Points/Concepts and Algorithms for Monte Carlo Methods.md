@@ -50,6 +50,8 @@ date of note: 2024-07-04
 - [[Simulated Annealing]]
 - [[Annealed Importance Sampling]]
 
+- [[REINFORCE Algorithm for Monte Carlo Policy Gradient]]
+
 - [[Monte Carlo Expectation Maximization]]
 
 - [[Stochastic Gradient Descent Algorithm]]
@@ -64,6 +66,7 @@ date of note: 2024-07-04
 - [[Monte Carlo Control with Exploring Starts]]
 - [[Off-Policy Monte Carlo Prediction with Importance Sampling]]
 - [[Off-Policy Monte Carlo Control]]
+- [[REINFORCE Algorithm with Baseline]]
 
 
 

@@ -37,13 +37,13 @@ date of note: 2024-05-12
 - [[Softmax Function and Log-Sum-Exp Function]]
 - [[Linear Temporal Difference Learning]]
 
-### REINFORCE as Monte Carlo Estimator of Gradient of Expected Loss
+### REINFORCE as Monte Carlo Estimator of Gradient
 
 >[!important] Definition
->The **REINFORCE** algorithm computes the *gradient of expected loss function* with respect to parameters 
+>The **REINFORCE** algorithm computes the *gradient of expected function* with respect to parameters 
 >$$
 >\begin{align*}
->\nabla_{\theta}\;\mathbb{E}_{ \theta }\left[  f(X) \right]
+>\nabla_{\theta}\;\mathcal{L}(\theta) := \nabla_{\theta}\;\mathbb{E}_{ \theta }\left[  f(X) \right]
 >\end{align*}
 >$$  
 >via *Monte Carlo method*. 
@@ -60,7 +60,7 @@ date of note: 2024-05-12
 >$$
 >since $$\nabla_{\theta} \log p(x; \theta) = \frac{1}{p(x; \theta)} \nabla_{\theta} p(x; \theta) $$
 >
->Thus the **REINFORCE** approximate the *gradient of loss function* via samples from $X^{(s)} \sim p(x;\theta)$ and the *gradient* is approximated as
+>Thus the **REINFORCE** approximate the *gradient of expected function* via samples from $$X^{(s)} \sim p(x;\theta)$$ and the *gradient* is approximated as
 >$$
 >\begin{align*}
 >\nabla_{\theta}\;\mathbb{E}_{ \theta }\left[  f(X) \right] &=  \mathbb{E}_{ \theta }\left[\,f(X)\,\nabla_{\theta}\,\log p(X; \theta)\, \right] \\[5pt]
@@ -73,11 +73,15 @@ date of note: 2024-05-12
 - [[Cross-Entropy Loss Function]]
 - [[Monte Carlo and Applications]]
 
-
-
-
 ## Explanation
 
+
+
+## Other Gradient Computation Method
+
+- [[Automatic Differentiation]]
+- [[Back-Propagation Algorithm]]
+- [[Back-Propagation Through Time]]
 
 
 
