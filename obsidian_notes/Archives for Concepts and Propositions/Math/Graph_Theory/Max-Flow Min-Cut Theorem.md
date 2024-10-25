@@ -42,7 +42,10 @@ date of note: 2024-07-09
 
 ## Linear Programming
 
+![[Maximum Flow Problem#^19518d]]
+
 - [[Network Flow Problem as Linear Optimization]]
+- [[Maximum Flow Problem]]
 - [[Fenchel Duality Theorem]]
 
 

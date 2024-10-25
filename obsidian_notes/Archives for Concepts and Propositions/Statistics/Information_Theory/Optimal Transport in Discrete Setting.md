@@ -69,6 +69,7 @@ date of note: 2024-05-12
 
 ^ad1beb
 
+- [[Minimum Cost Flow Problem]]
 - [[Linear Optimization Problem]]
 - [[Nonnegative and Positive Matrix]]
 - [[Theory and Algorithms for Linear Optimization]]

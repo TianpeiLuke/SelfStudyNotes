@@ -103,14 +103,15 @@ date of note: 2024-07-14
 - [[Clique Tree and Graph and Running Intersection Property]]
 
 
-### Flows
+### Network Flows
 
 - [[Edge Orientiations]]
 - [[Circulation of Graph]]
 - [[Network and Flow and Capacity and Cut]]
 - [[Max-Flow Min-Cut Theorem]]
+- [[Network Flow Problem as Linear Optimization]]
 - [[Maximum Flow Problem]]
-
+- [[Minimum Cost Flow Problem]]
 
 
 
