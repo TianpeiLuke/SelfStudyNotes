@@ -30,8 +30,8 @@ date of note: 2024-06-07
 
 ^222620
 
-- [[Itô Process]]
-- [[Itô Stochastic Integration]]
+- [[Ito Process]]
+- [[Ito Stochastic Integration]]
 - [[Progressively Measurable Stochastic Process]]
 - [[Brownian Motion Wiener Process]]
 
@@ -88,12 +88,12 @@ date of note: 2024-06-07
 ##  Recommended Notes and References
 
 
-- [[Itô Stochastic Integration]]
-- [[Itô Stochastic Integration of Step Process]]
+- [[Ito Stochastic Integration]]
+- [[Ito Stochastic Integration of Step Process]]
 - [[Progressively Measurable Stochastic Process]]
 - [[Brownian Motion Wiener Process]]
 
-- [[Itô Chain Rule and Itô Formula]]
-- [[Itô Product Rule and Stochastic Integration by Parts]]
+- [[Ito Chain Rule and Ito Formula]]
+- [[Ito Product Rule and Stochastic Integration by Parts]]
 
 - [[Introduction to Stochastic Differential Equations by Evans]]

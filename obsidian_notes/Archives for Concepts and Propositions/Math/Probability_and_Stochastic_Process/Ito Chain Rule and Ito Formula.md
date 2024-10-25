@@ -35,9 +35,9 @@ date of note: 2024-06-07
 >We call the above equation **Itô's Chain Rule** or **Itô's Formula**.
 
 
-- [[Itô Process]]
+- [[Ito Process]]
 - [[Stochastic Differential]]
-- [[Itô Stochastic Integration]]
+- [[Ito Stochastic Integration]]
 - [[Progressively Measurable Stochastic Process]]
 - [[Brownian Motion Wiener Process]]
 
@@ -145,7 +145,7 @@ date of note: 2024-06-07
 
 ## Proof
 
-- [[Itô Product Rule and Stochastic Integration by Parts]]
+- [[Ito Product Rule and Stochastic Integration by Parts]]
 
 
 
@@ -154,10 +154,10 @@ date of note: 2024-06-07
 ##  Recommended Notes and References
 
 - [[Stochastic Integral of Brownian Motion]]
-- [[Itô Product Rule and Stochastic Integration by Parts]]
+- [[Ito Product Rule and Stochastic Integration by Parts]]
 
-- [[Itô Stochastic Integration]]
-- [[Itô Stochastic Integration of Step Process]]
+- [[Ito Stochastic Integration]]
+- [[Ito Stochastic Integration of Step Process]]
 - [[Progressively Measurable Stochastic Process]]
 - [[Brownian Motion Wiener Process]]
 

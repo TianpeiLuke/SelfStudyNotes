@@ -181,14 +181,14 @@ date of note: 2024-06-06
 - [[Brownian Motion Wiener Process]]
 - [[Progressively Measurable Stochastic Process]]
 - [[Step Process]]
-- [[Itô Stochastic Integration of Step Process]]
-- [[Itô Stochastic Integration]]
+- [[Ito Stochastic Integration of Step Process]]
+- [[Ito Stochastic Integration]]
 
 - [[Stochastic Differential]]
-- [[Itô Chain Rule and Itô Formula]]
+- [[Ito Chain Rule and Ito Formula]]
 - [[Stochastic Integral of Brownian Motion]]
 - [[Stochastic Integral with Hermite Polynomial]]
-- [[Itô Product Rule and Stochastic Integration by Parts]]
+- [[Ito Product Rule and Stochastic Integration by Parts]]
 - [[Stochastic Differential of Product of Brownian Motions]]
 
 #### Integration by Parts

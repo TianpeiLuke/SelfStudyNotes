@@ -104,8 +104,8 @@ date of note: 2024-05-30
 
 - [[Progressively Measurable Stochastic Process]]
 - [[Step Process]]
-- [[Itô Stochastic Integration of Step Process]]
-- [[Itô Stochastic Integration]]
+- [[Ito Stochastic Integration of Step Process]]
+- [[Ito Stochastic Integration]]
 - [[Stochastic Differential]]
 
 ### Stochastic Differential Equation

@@ -47,7 +47,7 @@ date of note: 2024-06-07
 - [[Adapted Stochastic Process and Non-anticipating Process]]
 - [[Stochastic Process]]
 
-- [[Itô Stochastic Integration of Step Process]]
+- [[Ito Stochastic Integration of Step Process]]
 - [[Simple Integral of Simple Functions]]
 
 - [[Introduction to Stochastic Differential Equations by Evans]]

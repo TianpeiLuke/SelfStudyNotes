@@ -219,7 +219,7 @@ date of note: 2024-06-07
 
 - [[Langevin Equation]]
 
-- [[Itô Stochastic Integration]]
+- [[Ito Stochastic Integration]]
 
 
 - [[Wasserstein Distance]]

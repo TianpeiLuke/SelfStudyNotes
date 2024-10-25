@@ -46,7 +46,7 @@ date of note: 2024-06-07
 
 - [[Stochastic Differential]]
 - [[Progressively Measurable Stochastic Process]]
-- [[Itô Stochastic Integration]]
+- [[Ito Stochastic Integration]]
 
 
 ## Explanation
@@ -154,7 +154,7 @@ date of note: 2024-06-07
 >\end{align*}
 >$$
 
-- [[Itô Chain Rule and Itô Formula]]
+- [[Ito Chain Rule and Ito Formula]]
 
 >[!example]
 >Let $n = m = 1$. Consider the following **linear stochastic differential equation**:
@@ -205,8 +205,8 @@ date of note: 2024-06-07
 ##  Recommended Notes and References
 
 - [[Stochastic Differential]]
-- [[Itô Stochastic Integration]]
-- [[Itô Stochastic Integration of Step Process]]
+- [[Ito Stochastic Integration]]
+- [[Ito Stochastic Integration of Step Process]]
 - [[Progressively Measurable Stochastic Process]]
 - [[Brownian Motion Wiener Process]]
 

@@ -58,7 +58,7 @@ date of note: 2024-06-07
 - [[Brownian Motion Wiener Process]]
 - [[Gaussian Process]]
 
-- [[Itô Stochastic Integration]]
+- [[Ito Stochastic Integration]]
 
 
 - [[Wasserstein Distance]]

@@ -31,7 +31,7 @@ date of note: 2024-06-07
 
 
 - [[Stochastic Differential Equations]]
-- [[Itô Stochastic Integration]]
+- [[Ito Stochastic Integration]]
 
 
 ## Expansion

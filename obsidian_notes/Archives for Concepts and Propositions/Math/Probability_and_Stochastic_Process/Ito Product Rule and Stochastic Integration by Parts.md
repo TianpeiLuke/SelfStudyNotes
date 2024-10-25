@@ -38,7 +38,7 @@ date of note: 2024-06-07
 >is called the **Itô correction term**.
 
 - [[Stochastic Differential]]
-- [[Itô Stochastic Integration]]
+- [[Ito Stochastic Integration]]
 - [[Progressively Measurable Stochastic Process]]
 - [[Brownian Motion Wiener Process]]
 - [[Quadratic Variation and Covariation of Stochastic Process]]
@@ -108,10 +108,10 @@ date of note: 2024-06-07
 -----------
 ##  Recommended Notes and References
 
-- [[Itô Chain Rule and Itô Formula]]
+- [[Ito Chain Rule and Ito Formula]]
 
-- [[Itô Stochastic Integration]]
-- [[Itô Stochastic Integration of Step Process]]
+- [[Ito Stochastic Integration]]
+- [[Ito Stochastic Integration of Step Process]]
 - [[Progressively Measurable Stochastic Process]]
 - [[Brownian Motion Wiener Process]]
 

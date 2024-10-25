@@ -33,7 +33,7 @@ date of note: 2024-06-07
 >
 >In other word, the **limit** $$\int_{0}^{T}X_{t}^n\,dW$$ **exists** *in* $L^2(\Omega, \mathcal{P})$ topology.
 
-- [[Itô Stochastic Integration of Step Process]]
+- [[Ito Stochastic Integration of Step Process]]
 - [[Progressively Measurable Stochastic Process]]
 - [[Brownian Motion Wiener Process]]
 
@@ -119,7 +119,7 @@ date of note: 2024-06-07
 >  \mathbb{E}\left[ \int_{0}^{T} X_{t}\;dW\;\int_{0}^{T} Y_{t}\;dW \right] = \mathbb{E}\left[  \int_{0}^{T} X_{t}\,Y_{t}\;dt \right]
 > $$
 
-- [[Itô Isometry]]
+- [[Ito Isometry]]
 
 ## Integration by Parts
 
@@ -135,7 +135,7 @@ date of note: 2024-06-07
 - [[Gaussian Process]]
 
 - [[Riemann–Stieltjes Integration]]
-- [[Itô Stochastic Integration of Step Process]]
+- [[Ito Stochastic Integration of Step Process]]
 
 
 - [[Introduction to Stochastic Differential Equations by Evans]]

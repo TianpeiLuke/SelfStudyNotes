@@ -210,7 +210,7 @@ date of note: 2024-06-11
 >with $A, B$ to be selected.
 
 >[!important] 
->From [[Itô Product Rule and Stochastic Integration by Parts]], We can prove that $X_{2}$ is the solution of the following homogeneous SDE.
+>From [[Ito Product Rule and Stochastic Integration by Parts]], We can prove that $X_{2}$ is the solution of the following homogeneous SDE.
 >$$
 >\left\{ 
 >\begin{align*}
@@ -259,7 +259,7 @@ date of note: 2024-06-11
 >with $A, B$ to be selected.
 
 >[!info]
->We can find via [[Itô Product Rule and Stochastic Integration by Parts]]
+>We can find via [[Ito Product Rule and Stochastic Integration by Parts]]
 >$$
 >\begin{align*}
 >A(t) &:= \left[ c(t) - F(t)e(t) \right]\left( X_{1}(t) \right)^{-1}\\

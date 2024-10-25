@@ -62,7 +62,7 @@ date of note: 2024-06-11
 
 - [[Stochastic Differential Equations]]
 
-- [[Itô Stochastic Integration]]
+- [[Ito Stochastic Integration]]
 - [[Stochastic Process]]
 - [[Brownian Motion Wiener Process]]
 

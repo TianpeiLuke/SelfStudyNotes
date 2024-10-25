@@ -76,7 +76,7 @@ routing, involve moving distributions, and that thread appears in all of the sem
 
 - [[Concepts and Theorems for Stochastic Differential Equations]]
 
-- [[Itô Stochastic Integration]]
+- [[Ito Stochastic Integration]]
 - [[Stochastic Differential]]
 - [[Stochastic Differential Equations]]
 - [[Infinitesimal Generator of Stochastic Differential Equation]]

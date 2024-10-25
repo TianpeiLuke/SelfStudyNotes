@@ -62,17 +62,17 @@ date of note: 2024-05-30
 
 - [[Progressively Measurable Stochastic Process]]
 - [[Step Process]]
-- [[Itô Stochastic Integration of Step Process]]
-- [[Itô Stochastic Integration]]
-- [[Itô Isometry]]
-- [[Itô Martingale Representation Theorem]]
-- [[Itô Process]]
+- [[Ito Stochastic Integration of Step Process]]
+- [[Ito Stochastic Integration]]
+- [[Ito Isometry]]
+- [[Ito Martingale Representation Theorem]]
+- [[Ito Process]]
 - [[Diffusion Process]]
 - [[Stochastic Differential]]
-- [[Itô Chain Rule and Itô Formula]]
+- [[Ito Chain Rule and Ito Formula]]
 - [[Stochastic Integral of Brownian Motion]]
 - [[Stochastic Integral with Hermite Polynomial]]
-- [[Itô Product Rule and Stochastic Integration by Parts]]
+- [[Ito Product Rule and Stochastic Integration by Parts]]
 - [[Integration by Parts of Itô Stochastic Integration]]
 - [[Stochastic Differential of Product of Brownian Motions]]
 
@@ -90,7 +90,7 @@ date of note: 2024-05-30
 
 ### Diffusion Process
 
-- [[Itô Process]]
+- [[Ito Process]]
 - [[Diffusion Process]]
 - [[Time Homogeneous Diffusion and SDE]]
 

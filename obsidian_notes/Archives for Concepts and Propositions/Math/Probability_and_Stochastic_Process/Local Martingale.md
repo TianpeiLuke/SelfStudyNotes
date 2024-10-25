@@ -59,7 +59,7 @@ date of note: 2024-06-18
 >is **uniformly integrable**.
 
 - [[Stopping Time and Stochastic Integral]]
-- [[Itô Stochastic Integration]]
+- [[Ito Stochastic Integration]]
 
 
 

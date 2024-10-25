@@ -33,7 +33,7 @@ date of note: 2024-06-07
 >$$
 
 - [[Filtration]]
-- [[Itô Stochastic Integration]]
+- [[Ito Stochastic Integration]]
 - [[Brownian Motion Wiener Process]]
 - [[Random Element and Random Variable]]
 - [[Progressively Measurable Stochastic Process]]
@@ -91,7 +91,7 @@ date of note: 2024-06-07
 ##  Recommended Notes and References
 
 - [[Filtration]]
-- [[Itô Stochastic Integration]]
+- [[Ito Stochastic Integration]]
 - [[Brownian Motion Wiener Process]]
 - [[Random Element and Random Variable]]
 - [[Martingale]]

@@ -72,7 +72,7 @@ date of note: 2024-06-07
 ## Generator 
 
 >[!important]
->Following [[Itô Chain Rule and Itô Formula]], we can formulate the differential of function $f(X_{t}, t)$ of the *time-homogeneous Ito process* $(X_{t})$  as
+>Following [[Ito Chain Rule and Ito Formula]], we can formulate the differential of function $f(X_{t}, t)$ of the *time-homogeneous Ito process* $(X_{t})$  as
 >$$
 >\begin{align*}
 > d\,f(X_{t}, t) = \left( \frac{ \partial}{ \partial t }f + L\,f  \right)\,dt + \nabla f \cdot A\,dW
@@ -105,10 +105,10 @@ date of note: 2024-06-07
 -----------
 ##  Recommended Notes and References
 
-- [[Itô Process]]
+- [[Ito Process]]
 
 - [[Homogeneous Linear Stochastic Differential Equation]]
-- [[Itô Stochastic Integration]]
+- [[Ito Stochastic Integration]]
 - [[Existence and Uniqueness of Solution for Stochastic Differential Equation]]
 - [[Brownian Motion Wiener Process]]
 

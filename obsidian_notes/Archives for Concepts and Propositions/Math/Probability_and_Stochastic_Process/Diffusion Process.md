@@ -51,7 +51,7 @@ date of note: 2024-06-07
 
 ## Itô Process and Solution of Stochastic Differential Equation
 
-- [[Itô Process]]
+- [[Ito Process]]
 - [[Stochastic Differential]]
 
 

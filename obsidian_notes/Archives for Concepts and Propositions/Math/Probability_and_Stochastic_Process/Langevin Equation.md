@@ -35,7 +35,7 @@ date of note: 2024-06-07
 
 - [[Stochastic Differential Equations]]
 - [[Stochastic Differential]]
-- [[Itô Stochastic Integration]]
+- [[Ito Stochastic Integration]]
 - [[Brownian Motion Wiener Process]]
 
 ## Solution
@@ -137,8 +137,8 @@ date of note: 2024-06-07
 ^2f9aa4
 
 - [[Mean Function]]
-- [[Itô Stochastic Integration]]
-- [[Itô Isometry]]
+- [[Ito Stochastic Integration]]
+- [[Ito Isometry]]
 
 >[!important]
 >The **moment function**
@@ -230,7 +230,7 @@ date of note: 2024-06-07
 
 - [[Stochastic Differential Equations]]
 - [[Stochastic Differential]]
-- [[Itô Stochastic Integration]]
+- [[Ito Stochastic Integration]]
 - [[Brownian Motion Wiener Process]]
 
 

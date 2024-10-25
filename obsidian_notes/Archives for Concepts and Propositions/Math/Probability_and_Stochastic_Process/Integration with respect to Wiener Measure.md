@@ -57,7 +57,7 @@ date of note: 2024-06-07
 >where the **integrand** is a **simple function** $$f:= \sum_{i=0}^{n-1}x_{i}\mathbb{1}_{(t_{i}, t_{i+1}]}\in L^2(T, \mu)$$ not a **random variable**.
 
 
-- [[Itô Stochastic Integration of Step Process]]
+- [[Ito Stochastic Integration of Step Process]]
 
 
 -----------

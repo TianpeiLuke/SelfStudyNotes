@@ -52,7 +52,7 @@ date of note: 2024-06-07
 >  \mathbb{E}\left[ \left(\int_{0}^{T} X_{t}\;dW \right)^2 \right] = \mathbb{E}\left[  \int_{0}^{T} X^2_{t}\;dt \right]
 > $$
 
-- [[Itô Isometry]]
+- [[Ito Isometry]]
 - [[Progressively Measurable Stochastic Process]]
 - [[Isometry and Isometric isomorphism]]
 
@@ -122,6 +122,6 @@ date of note: 2024-06-07
 - [[Riemann–Stieltjes Integration]]
 - [[Simple Integral of Simple Functions]]
 
-- [[Itô Stochastic Integration]]
+- [[Ito Stochastic Integration]]
 
 - [[Introduction to Stochastic Differential Equations by Evans]]

@@ -39,7 +39,7 @@ date of note: 2024-06-19
 
 ^2d4df5
 
-- [[Itô Chain Rule and Itô Formula]]
+- [[Ito Chain Rule and Ito Formula]]
 - [[Infinitesimal Generator of Stochastic Differential Equation]]
 
 ### Martingale from Solution of SDE
@@ -177,8 +177,8 @@ date of note: 2024-06-19
 ##  Recommended Notes and References
 
 - [[Dynkin Formula]]
-- [[Itô Process]]
-- [[Itô Chain Rule and Itô Formula]]
+- [[Ito Process]]
+- [[Ito Chain Rule and Ito Formula]]
 
 - [[Martingale Problem]]
 - [[Martingale]]

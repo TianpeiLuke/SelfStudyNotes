@@ -114,7 +114,7 @@ date of note: 2024-06-15
 - [[Diffusion and Infinite Dimensional ODE]]
 - [[Brownian Motion Wiener Process]]
 - [[Infinitesimal Generator of Brownian Motion and Laplacian]]
-- [[Itô Process]]
+- [[Ito Process]]
 - [[Stopping Time and Stochastic Integral]]
 
 
@@ -145,7 +145,7 @@ date of note: 2024-06-15
 - [[Partial Differential Equations]]
 
 - [[Diffusion and Infinite Dimensional ODE]]
-- [[Itô Process]]
+- [[Ito Process]]
 - [[Stochastic Differential Equations]]
 
 - [[Fokker–Planck and Kolmogorov Forward-Backward Equation]]

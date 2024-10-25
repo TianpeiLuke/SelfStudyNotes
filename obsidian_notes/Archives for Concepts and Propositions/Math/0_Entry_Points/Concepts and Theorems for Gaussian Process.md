@@ -131,11 +131,11 @@ date of note: 2024-05-30
 ### Stochastic Calculus
 
 - [[Progressively Measurable Stochastic Process]]
-- [[Itô Stochastic Integration]]
-- [[Itô Isometry]]
-- [[Itô Martingale Representation Theorem]]
-- [[Itô Chain Rule and Itô Formula]]
-- [[Itô Product Rule and Stochastic Integration by Parts]]
+- [[Ito Stochastic Integration]]
+- [[Ito Isometry]]
+- [[Ito Martingale Representation Theorem]]
+- [[Ito Chain Rule and Ito Formula]]
+- [[Ito Product Rule and Stochastic Integration by Parts]]
 
 
 ### Stochastic Differential Equations

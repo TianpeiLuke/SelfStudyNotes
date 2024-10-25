@@ -16,13 +16,13 @@ date of note: 2024-06-07
 >**Name**: Itô Stochastic Integral of Brownian Motion
 
 
-[[Itô Chain Rule and Itô Formula]]
+[[Ito Chain Rule and Ito Formula]]
 
 
 >[!important]
 >Let $X_{t} := W_{t}$, $u(x) = x^m$. Then $$dX = dW \implies F \equiv 0 \text{ and } G \equiv 1.$$
 >
->By [[Itô Chain Rule and Itô Formula]],
+>By [[Ito Chain Rule and Ito Formula]],
 >$$
 >d(W^m) = m\,W^{m-1}\,dW + \frac{m(m-1)}{2}\,W^{m-2} dt
 >$$
@@ -37,7 +37,7 @@ date of note: 2024-06-07
 >\end{align*}
 >$$
 
-- [[Itô Stochastic Integration]]
+- [[Ito Stochastic Integration]]
 - [[Brownian Motion Wiener Process]]
 
 >[!important]
@@ -67,8 +67,8 @@ date of note: 2024-06-07
 ##  Recommended Notes and References
 
 
-- [[Itô Stochastic Integration]]
-- [[Itô Stochastic Integration of Step Process]]
+- [[Ito Stochastic Integration]]
+- [[Ito Stochastic Integration of Step Process]]
 - [[Brownian Motion Wiener Process]]
 
 

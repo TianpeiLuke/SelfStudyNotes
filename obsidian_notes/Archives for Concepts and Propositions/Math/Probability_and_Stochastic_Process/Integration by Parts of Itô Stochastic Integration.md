@@ -35,8 +35,8 @@ date of note: 2024-06-18
 
 ^f05140
 
-- [[Itô Stochastic Integration]]
-- [[Itô Chain Rule and Itô Formula]]
+- [[Ito Stochastic Integration]]
+- [[Ito Chain Rule and Ito Formula]]
 - [[Quadratic Variation and Covariation of Stochastic Process]]
 
 >[!important] 
@@ -62,8 +62,8 @@ date of note: 2024-06-18
 >$$
 >It is the **Itô integration-by-part formula**.
 
-- [[Itô Process]]
-- [[Itô Product Rule and Stochastic Integration by Parts]]
+- [[Ito Process]]
+- [[Ito Product Rule and Stochastic Integration by Parts]]
 
 ## Explanation
 
@@ -85,7 +85,7 @@ date of note: 2024-06-18
 ##  Recommended Notes and References
 
 - [[Integration by Parts]]
-- [[Itô Stochastic Integration]]
+- [[Ito Stochastic Integration]]
 
 - [[Introduction to Stochastic Calculus by Klebaner]]
 - Wikipedia [Ito Calculus](https://en.wikipedia.org/wiki/It%C3%B4_calculus)

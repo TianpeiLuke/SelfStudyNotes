@@ -36,7 +36,7 @@ date of note: 2024-06-11
 
 - [[Infinitesimal Generator of Markov Process]]
 - [[Stochastic Differential Equations]]
-- [[Itô Process]]
+- [[Ito Process]]
 - Oksendal, B. (2013). _Stochastic differential equations: an introduction with applications_. Springer Science & Business Media pp 124
 
 
@@ -106,7 +106,7 @@ date of note: 2024-06-11
 
 
 >[!important]
->Following [[Itô Chain Rule and Itô Formula]], we can formulate the differential of function $f(X_{t}, t)$ of the *time-homogeneous diffusion process* $(X_{t})$  as
+>Following [[Ito Chain Rule and Ito Formula]], we can formulate the differential of function $f(X_{t}, t)$ of the *time-homogeneous diffusion process* $(X_{t})$  as
 >$$
 >\begin{align*}
 > d\,f(X_{t}, t) = \left( \frac{ \partial}{ \partial t }f + L\,f  \right)\,dt + \nabla f \cdot A\,dW

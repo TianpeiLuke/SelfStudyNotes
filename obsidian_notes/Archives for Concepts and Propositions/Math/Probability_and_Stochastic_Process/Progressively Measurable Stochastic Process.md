@@ -57,7 +57,7 @@ date of note: 2024-06-07
 
 - [[Inner Product Space]]
 - [[Hilbert Space]]
-- [[Itô Isometry]]
+- [[Ito Isometry]]
 
 
 >[!important] Definition
@@ -109,7 +109,7 @@ date of note: 2024-06-07
 - [[Stochastic Process]]
 - [[Lp Space]]
 
-- [[Itô Stochastic Integration]]
+- [[Ito Stochastic Integration]]
 
 - [[Introduction to Stochastic Differential Equations by Evans]]
 - Wikipedia [Progressively measurable process](https://en.wikipedia.org/wiki/Progressively_measurable_process)

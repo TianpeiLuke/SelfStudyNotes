@@ -30,7 +30,7 @@ date of note: 2024-06-13
 >- $P_{t}^n = (t_{0}^n, \,{,}\ldots{,}\, t_{k_{n}}^n)$ is a **partition** on $[0,t]$, and $t_{0}^n =0$ and $t_{k_{n}}^n = t.$
 >- $$\Delta(P_{t}^n) \equiv \sup_{0\le i\le k_{n}-1}\lvert t_{i+1}^n - t_{i}^n \rvert $$ is the *norm of the tagged partition*. 
 
-- [[Itô Stochastic Integration]]
+- [[Ito Stochastic Integration]]
 - [[Riemann Integration]]
 - [[Introduction to Stochastic Calculus by Klebaner]] pp 198
 
@@ -139,7 +139,7 @@ date of note: 2024-06-13
 >\left[ X_{1}, X_{2} \right]_{t} = \int_{0}^{t}\,G_{1}\,G_{2}\,ds
 >$$
 
-- [[Itô Product Rule and Stochastic Integration by Parts]]
+- [[Ito Product Rule and Stochastic Integration by Parts]]
 
 
 
@@ -148,8 +148,8 @@ date of note: 2024-06-13
 ##  Recommended Notes and References
 
 - [[Lévy Characterization of Brownian Motion]]
-- [[Itô Product Rule and Stochastic Integration by Parts]]
-- [[Itô Stochastic Integration]]
+- [[Ito Product Rule and Stochastic Integration by Parts]]
+- [[Ito Stochastic Integration]]
 
 - [[Riemann Integration]]
 - [[Total Variation of Function]]

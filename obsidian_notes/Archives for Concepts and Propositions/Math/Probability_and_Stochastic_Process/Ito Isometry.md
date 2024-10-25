@@ -15,9 +15,9 @@ date of note: 2024-06-07
 >[!important]
 >**Name**: Itô Isometry
 
-![[Itô Stochastic Integration#^ad88e0]]
+![[Ito Stochastic Integration#^ad88e0]]
 
-- [[Itô Stochastic Integration]]
+- [[Ito Stochastic Integration]]
 - [[Progressively Measurable Stochastic Process]]
 - [[Brownian Motion Wiener Process]]
 
@@ -72,7 +72,7 @@ date of note: 2024-06-07
 - [[Gaussian Process]]
 
 - [[Riemann–Stieltjes Integration]]
-- [[Itô Stochastic Integration of Step Process]]
+- [[Ito Stochastic Integration of Step Process]]
 
 
 - [[Introduction to Stochastic Differential Equations by Evans]]

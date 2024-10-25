@@ -15,7 +15,7 @@ date of note: 2024-06-07
 >**Name**: 
 
 
-- [[Itô Stochastic Integration]]
+- [[Ito Stochastic Integration]]
 - [[Progressively Measurable Stochastic Process]]
 - [[Brownian Motion Wiener Process]]
 - [[Hermite Polynomials]]
@@ -32,8 +32,8 @@ date of note: 2024-06-07
 ##  Recommended Notes and References
 
 
-- [[Itô Stochastic Integration]]
-- [[Itô Stochastic Integration of Step Process]]
+- [[Ito Stochastic Integration]]
+- [[Ito Stochastic Integration of Step Process]]
 - [[Progressively Measurable Stochastic Process]]
 - [[Brownian Motion Wiener Process]]
 
