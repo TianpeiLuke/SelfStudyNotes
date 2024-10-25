@@ -258,6 +258,27 @@ date of note: 2024-05-12
 - [[Conjugate Gradient Algorithm Lanczos]]
 - [[Minimal Residuals Algorithm and MINRES]]
 
+
+### Circulant System and Eigenvalue Problem
+
+>[!info]
+>Due to **fast Fourier transform**, solving the **eigenvalue problem** of **circulant matrix**
+> $$
+> A\,F_{n} = F_{n}\,\Lambda
+> $$
+>requires only $$O(n\log(n)) \quad \text{ v.s. traditional } O(n^3)$$
+>
+>Similarly, solving a **circulant system** $$Ax = b \implies F_{n}\,\Lambda\,F_{n}^{*}x = b \implies x = F_{n}\Lambda^{-1}\,F_{n}^{*}b$$ can be achieved using **fast Fourier transform** with time complexity $$O(n\log(n))$$
+>- The **circulant system** corresponds to the **convolution** which becomes **multiplication** in **spectral domain.**
+
+- [[Discrete Fourier Transform]]
+- [[Convolution Operation]]
+- [[Fast Fourier Transform]]
+- [[Circulant Matrix and Circulant Permutation Operation]]
+- [[DFT Matrix]]
+
+
+
 ### Sparse Matrix and Sparse Linear System
 
 - [[Sparse Matrix Representation]]

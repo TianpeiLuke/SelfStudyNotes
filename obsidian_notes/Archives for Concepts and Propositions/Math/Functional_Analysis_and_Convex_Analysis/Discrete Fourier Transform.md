@@ -100,6 +100,13 @@ date of note: 2024-08-08
 
 
 
+### Circulant Matrix
+
+![[Circulant Matrix and Circulant Permutation Operation#^174342]]
+
+- [[Circulant Matrix and Circulant Permutation Operation]]
+
+
 ## Compare to Continuous-Time Fourier Transform
 
 

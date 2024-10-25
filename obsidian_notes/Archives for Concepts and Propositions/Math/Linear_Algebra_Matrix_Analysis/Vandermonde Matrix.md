@@ -51,6 +51,8 @@ date of note: 2024-10-24
 
 ## Explanation
 
+>[!info]
+>Instead of naive **LU Factorization (Gaussian Elimination)** with time complexity $O(n^3)$, an efficient algorithm for solving the linear system $$V(x_{1}\,{,}\ldots{,}\,x_{n})\,a= y$$ exists using **Lagrangian interpolation method** with time complexity $$O(n^2)$$
 
 
 ## Linear Interpolation
@@ -76,6 +78,13 @@ date of note: 2024-10-24
 
 
 ## DFT Matrix
+
+>[!important]
+>A **DFT** matrix can be seen as a **Vandermonde matrix** i.e.
+>$$
+>F_{n} = V\left(W_{n}^{0}, W_{n}^{1} \,{,}\ldots{,}\, W_{n}^{n-1}\right)
+>$$
+>- Each term $$x_{k+1} := W_{n}^{k} = \exp \left(-i \frac{2\pi k}{n}\right), \quad k=0\,{,}\ldots{,}\,n-1$$ is the **k-th root of unity.**
 
 - [[DFT Matrix]]
 
