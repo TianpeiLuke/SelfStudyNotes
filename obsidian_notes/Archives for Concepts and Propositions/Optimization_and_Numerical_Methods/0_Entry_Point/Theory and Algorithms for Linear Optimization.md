@@ -71,6 +71,7 @@ date of note: 2024-05-12
 - [[Network Simplex Algorithm]]
 - [[Negative Cost Cycle Algorithm]]
 - [[Maximum Flow Problem]]
+- [[Minimum Cost Flow Problem]]
 - [[Minimum Spanning Tree Problem]]
 
 
