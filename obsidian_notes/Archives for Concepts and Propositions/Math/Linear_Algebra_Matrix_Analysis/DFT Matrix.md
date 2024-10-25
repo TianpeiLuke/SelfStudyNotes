@@ -27,13 +27,13 @@ date of note: 2024-10-24
 >A matrix $F \in M_{n}(F)$ is called **Discrete Fourier Transform (DFT) matrix** if it has the form
 >$$
 >\begin{align*}
-> F_{n} &= \frac{1}{\sqrt{ n }} \left[ \begin{array}{cccc} 1 & 1 & \ldots & 1 \\[5pt] 1 & W_{n} & \ldots & W_{n}^{n-1} \\[5pt] \vdots  & \ldots & \ldots & \ldots \\[5pt] 1 & W_{n}^{n-1} & \ldots & W_{n}^{(n-1)(n-1)} \\[5pt] \end{array} \right] \\[10pt]
-> &=  \frac{1}{\sqrt{ n }} \left[ \begin{array}{cccc} 1 & 1 & \ldots & 1 \\[5pt] 1 & W_{n} & \ldots & W_{n}^{n-1} \\[5pt] \vdots  & \ldots & \ldots & \ldots \\[5pt] 1 & W_{n}^{n-1} & \ldots & W_{n} \\[5pt] \end{array} \right]
+> F_{n} &= \frac{1}{\sqrt{ n }} \left[ \begin{array}{cccc} 1 & 1 & \ldots & 1 \\[5pt] 1 & \omega_{n} & \ldots & \omega_{n}^{n-1} \\[5pt] \vdots  & \ldots & \ldots & \ldots \\[5pt] 1 & \omega_{n}^{n-1} & \ldots & \omega_{n}^{(n-1)(n-1)} \\[5pt] \end{array} \right] \\[10pt]
+> &=  \frac{1}{\sqrt{ n }} \left[ \begin{array}{cccc} 1 & 1 & \ldots & 1 \\[5pt] 1 & \omega_{n} & \ldots & \omega_{n}^{n-1} \\[5pt] \vdots  & \ldots & \ldots & \ldots \\[5pt] 1 & \omega_{n}^{n-1} & \ldots & \omega_{n} \\[5pt] \end{array} \right]
 >\end{align*}
 >$$
 >where
->- the **discrete Fourier basis factor** is $$W_{n} := \exp \left(- i\left(\frac{2\pi}{n}\right)\right)$$
->- That is, $$F= \frac{1}{\sqrt{ n }} [f_{k,j}], \quad f_{k,j} = W_{n}^{(k-1)(j-1)}$$
+>- the **discrete Fourier basis factor** is $$\omega_{n} := \exp \left(- i\left(\frac{2\pi}{n}\right)\right)$$
+>- That is, $$F= \frac{1}{\sqrt{ n }} [f_{k,j}], \quad f_{k,j} = \omega_{n}^{(k-1)(j-1)}$$
 
 - [[Discrete Fourier Transform]]
 
@@ -43,12 +43,12 @@ date of note: 2024-10-24
 >Conventional **DFT matrix** is **non-unitary**
 >$$
 >\begin{align*}
-> F_{n} &=  \left[ \begin{array}{cccc} 1 & 1 & \ldots & 1 \\[5pt] 1 & W_{n} & \ldots & W_{n}^{n-1} \\[5pt] \vdots  & \ldots & \ldots & \ldots \\[5pt] 1 & W_{n}^{n-1} & \ldots & W_{n}^{(n-1)(n-1)} \\[5pt] \end{array} \right] 
+> F_{n} &=  \left[ \begin{array}{cccc} 1 & 1 & \ldots & 1 \\[5pt] 1 & \omega_{n} & \ldots & \omega_{n}^{n-1} \\[5pt] \vdots  & \ldots & \ldots & \ldots \\[5pt] 1 & \omega_{n}^{n-1} & \ldots & \omega_{n}^{(n-1)(n-1)} \\[5pt] \end{array} \right] 
 >\end{align*}
 >$$
 >and
 >$$
->F_{n}^{-1} = \frac{1}{n}\,F_{n}^{*}
+>F_{n}^{-1} = \frac{1}{n}\,F_{n}^{*} = \frac{1}{n} \overline{F}_{n}
 >$$
 
 
@@ -58,7 +58,7 @@ date of note: 2024-10-24
 >[!important]
 >A **DFT** matrix can be seen as a **Vandermonde matrix** i.e.
 >$$
->F_{n} = \frac{1}{\sqrt{ n }} V\left(W_{n}^{0}, W_{n}^{1} \,{,}\ldots{,}\, W_{n}^{n-1}\right)
+>F_{n} = \frac{1}{\sqrt{ n }} V\left(\omega_{n}^{0}, \omega_{n}^{1} \,{,}\ldots{,}\, \omega_{n}^{n-1}\right)
 >$$
 
 ## Properties
