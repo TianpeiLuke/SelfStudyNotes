@@ -56,6 +56,7 @@ date of note: 2024-05-12
 
 - [[Approximation Method for Optimization]]
 
+- [[Extended Monotropic Program]]
 - [[Cutting Plane Methods and Outer Linearization]]
 - [[Proximal Cutting-Plane Algorithm]]
 - [[Bundle Methods]]

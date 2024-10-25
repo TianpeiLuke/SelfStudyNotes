@@ -79,6 +79,7 @@ date of note: 2024-07-15
 
 - [[Optimal Transport in Discrete Setting]]
 - [[Wasserstein Distance]]
+- [[Extended Monotropic Program]]
 
 
 - [[Introduction to Linear Optimization by Bertsimas]] pp 272 - 302

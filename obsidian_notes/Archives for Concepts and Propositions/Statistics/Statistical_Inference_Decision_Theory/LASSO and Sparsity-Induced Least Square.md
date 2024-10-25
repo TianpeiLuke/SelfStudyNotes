@@ -247,6 +247,7 @@ date of note: 2024-07-24
 - [[Sherman–Morrison–Woodbury Matrix Inversion Formula]]
 
 - [[Graph LASSO and Structured Learning in Gaussian Graphical Model]]
+- [[Extended Monotropic Program]]
 
 - [[Convex Optimization Problem]]
 
