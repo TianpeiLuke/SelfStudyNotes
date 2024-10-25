@@ -39,6 +39,17 @@ date of note: 2024-08-08
 
 - [[Permutation Matrix and Reversal Matrix]]
 
+### Properties
+
+>[!important] Proposition
+>Let $C_{n} \in M_{n}$ be a **basic circulant permulation matrix**.
+>Then 
+>- $C_{n}$ is a **circulant matrix**, and **permutation matrix**
+>- $$C^n = I$$
+>- $$C^{-1} = C^{n-1} = C^{T}$$
+
+- [[Matrix Polynomial]]
+
 ## Explanation
 
 >[!important] Proposition
@@ -65,6 +76,11 @@ date of note: 2024-08-08
 
 >[!info]
 >A **circulant matrix** is a **Toeplitz matrix** associated with a *periodic sequence* $$a = (a_{0}\,{,}\ldots{,}\,a_{n-1},\,a_{0}\,{,}\ldots{,}\,)$$
+>
+>$$
+>A = [a_{i,j}]
+>$$
+>where  $$a_{i,j} = a_{(j-i) \mod n}$$
 
 - [[Toeplitz Matrix and Backward Forward Shift Operation]]
 
@@ -145,7 +161,7 @@ date of note: 2024-08-08
 >Then the **spectral decomposition** of $A$ is given by $$A = F_{n}\,\Lambda\,F_{n}^{*}$$ where 
 >- $F_{n}$ be the **DFT matrix**.  $$\begin{align*} F_{n} &= \frac{1}{\sqrt{ n }} \left[ \begin{array}{cccc} 1 & 1 & \ldots & 1 \\[5pt] 1 & \omega_{n} & \ldots & \omega_{n}^{n-1} \\[5pt] \vdots  & \ldots & \ldots & \ldots \\[5pt] 1 & \omega_{n}^{n-1} & \ldots & \omega_{n}^{(n-1)(n-1)} \\[5pt] \end{array} \right] \\[10pt]  &=  \frac{1}{\sqrt{ n }} \left[ \begin{array}{cccc} 1 & 1 & \ldots & 1 \\[5pt] 1 & \omega_{n} & \ldots & \omega_{n}^{n-1} \\[5pt] \vdots  & \ldots & \ldots & \ldots \\[5pt] 1 & \omega_{n}^{n-1} & \ldots & \omega_{n} \\[5pt] \end{array} \right]\end{align*}$$ 
 >- And the **spectrum** of $A$, $\Lambda = \text{diag}(\lambda_{0}\,{,}\ldots{,}\,\lambda_{n-1})$, is given by the **Fourier transform** of $a$, $$\lambda_{j} = \sum_{k=0}^{n-1}\,a_{k}\,\omega_{n}^{kj}:= (\mathcal{F}a)_{j},\quad j=0\,{,}\ldots{,}\,n-1$$ with $$\omega_{n} := \exp \left(i \frac{2\pi}{n}\right)$$
->- Or equivalently $$(\lambda_{1}\,{,}\ldots{,}\,\lambda_{n})^{T} = \sqrt{n} \,F_{n}^{*}a$$
+>- Or equivalently $$\begin{align*}(\lambda_{1}\,{,}\ldots{,}\,\lambda_{n})^{T} &= FA^{T}e_{1} \\[5pt] &= \overline{F\overline{A}e_{1}} \\[5pt] &= \sqrt{n} \,F_{n}^{*}Ae_{1} \\[5pt] &=\sqrt{n} \,F_{n}^{*}a\end{align*}$$
 >- Moreover, **all circulant matrices** shared the **same eigenvectors**, and they are **simultaneously unitary diagonalizable.**
 
 ^a24c39
@@ -236,4 +252,5 @@ date of note: 2024-08-08
 - [[Matrix Computations by Golub]] pp 220
 - [[Matrix Analysis by Horn]] pp 33 - 34, 100, 36
 - Wikipedia [Circulant_matrix](https://en.wikipedia.org/wiki/Circulant_matrix)
+- [matrix manual](http://www.ee.ic.ac.uk/hp/staff/dmb/matrix/special.html)
 - Youtube OpenCourse [31. Eigenvectors of Circulant Matrices: Fourier Matrix](https://www.youtube.com/watch?v=1pFv7e9xtHo)

@@ -10,6 +10,8 @@ tags:
   - optimization/linear_optimization
 keywords:
   - network_flow_optimization
+  - maximum_flow
+  - minimum_cut
 topics:
   - optimization/theory
   - optimization/algorithm
@@ -20,7 +22,16 @@ date of note: 2024-07-15
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Network Flow Problem as Linear Optimization
+
+![[Network and Flow and Capacity and Cut#^9fa477]]
+![[Network and Flow and Capacity and Cut#^4a27b4]]
+
+![[Network and Flow and Capacity and Cut#^667ae1]]
+
+
+
+- [[Network and Flow and Capacity and Cut]]
 
 
 
