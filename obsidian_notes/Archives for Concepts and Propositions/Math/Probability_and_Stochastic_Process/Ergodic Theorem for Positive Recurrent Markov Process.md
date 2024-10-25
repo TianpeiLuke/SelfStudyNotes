@@ -31,6 +31,8 @@ date of note: 2024-06-19
 >\lim_{ n \to \infty } \frac{1}{n}\sum_{k=1}^{n}\mathbb{1}\{X_{k} = x\}  =  \frac{1}{\mathbb{E}\left[  \tau_{x} | X_{0} \sim  \mu \right]}, \text{ a.s.}
 >$$
 
+^0d8daa
+
 - [[Characteristic Function of Set]]
 - [[Simple Integral of Simple Functions]]
 - [[Stopping Time of Markov Chain]]
@@ -69,6 +71,8 @@ date of note: 2024-06-19
 >If $(X_{n})$ has a **$\sigma$-finite invariant measure** $\pi$, the following two statements are **equivalent**:
 >- The Markov chain $(X_{n})$ is **Harris recurrent**.
 >- If $f, g \in L^1(\mathcal{X}, \pi)$ with $$\int_{\mathcal{X}}g\,d\pi \neq 0$$ then $$\lim_{ n \to \infty } \frac{\frac{1}{n}\sum_{k=1}^{n}f(X_{k})}{\frac{1}{n}\sum_{k=1}^{n}g(X_{k})} = \frac{\int_{\mathcal{X}}f\,d\pi}{\int_{\mathcal{X}}g\,d\pi}, \text{ a.s.}$$
+
+^aa4970
 
 >[!info]
 >Choose $g = 1$, we have
