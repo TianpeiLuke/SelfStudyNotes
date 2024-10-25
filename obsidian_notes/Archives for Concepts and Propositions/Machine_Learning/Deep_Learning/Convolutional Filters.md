@@ -117,6 +117,7 @@ date of note: 2024-05-12
 >- $$C[j, k] = \sum_{s}\sum_{l}\sum_{m}I[(j-1)\times s + l, (k-1)\times s +m, s]\,K[l, m, s]$$
 >- If we use same stride horizontally and vertically, the *output feature map dimension* is $$ \left( \left\lfloor \frac{n + 2p - k}{s} \right\rfloor + 1 \right)   \times  \left( \left\lfloor  \frac{m + 2p - k}{s} \right\rfloor + 1 \right)$$
 
+![[strided_convolutions.png]]
 
 ### Multi-dimensional Convolutions
 

@@ -11,6 +11,7 @@ keywords:
 topics:
   - deep_learning/network_block
   - deep_learning/models
+  - deep_learning/sequential_networks
 name: Gated Recurrent Units in Neural Network
 date of note: 2024-05-12
 ---
@@ -32,7 +33,7 @@ date of note: 2024-05-12
 >	- The candidate for new information is partially controlled by the reset gate $$\hat{h}^{(t)} = \sigma \left(U x^{(t)} + W\,[r^{(t)} \odot h^{(t-1)}] + b\right)$$ 
 >	- The *reset* and *update gates* can individually “**ignore**” parts of the *state vector* $C^{(t-1)}$.
 
-- [[Leaky Units and Other Strategies for Multiple Time Scales Sequential Network]]
+- [[Strategies for Multiple Time Scales Sequential Network]]
 - [[Hadamard Product of Matrices]]
 
 >[!info]

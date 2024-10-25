@@ -39,9 +39,13 @@ date of note: 2024-06-01
 	- [[Maximum Likelihood Estimation]]
 	- [[Minimum Mean Square Estimation]]
 	- [[Cross-Entropy Loss Function]]
+	- [[Kullback-Leibler Divergence]]
 	- [[Score Matching and Denoising Score Matching]]
+	- [[Fisher Divergence]]
 	- [[Noise Contrastive Estimation]]
 	- [[Information Noise Contrastive Estimation as Contrastive Learning]]
+	- [[Triplet Loss Minimization for Contrastive Learning]]
+
 
 
 - [[Perceptron Algorithm]]
@@ -142,7 +146,7 @@ date of note: 2024-06-01
 
 - [[Recurrent Neural Network]]
 - [[Vanishing and Exploding Gradient Problems for Sequential Networks]]
-- [[Leaky Units and Other Strategies for Multiple Time Scales Sequential Network]]
+- [[Strategies for Multiple Time Scales Sequential Network]]
 
 - [[Gated Recurrent Units in Neural Network]]
 - [[Long-Short Term Memory Network]]
@@ -159,6 +163,10 @@ date of note: 2024-06-01
 - [[Evidence Lower Bound]]
 - [[Variational Inference vs EM Algorithm]]
 - [[Variational Auto-Encoder]]
+
+- [[Gumbel Distribution as Generalized Extreme Value Distribution]]
+- [[Gumbel Softmax]]
+
 
 #### Normalizing Flows
 
@@ -181,6 +189,11 @@ date of note: 2024-06-01
 
 - [[Learning by Comparison for GAN]]
 - [[Generative Adversarial Network]]
+
+### Bayesian Neural Network and Deep Ensemble Learning
+
+- [[Bayesian Neural Network]]
+- [[Mixture of Experts as Deep Ensemble Learning]]
 
 
 ### Graph-based Neural Network

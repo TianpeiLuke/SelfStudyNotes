@@ -247,6 +247,8 @@ date of note: 2024-05-12
 >  
 >-- [[vaswaniAttentionAllYou2017]]  Attention is All you Need, pp 6
 
+^ad8f13
+
 >[!quote]
 >As noted in Table 1, 
 >- a **self-attention layer** connects all positions with a **constant number of sequentially executed operations**, 
@@ -258,6 +260,8 @@ date of note: 2024-05-12
 >To improve computational performance for tasks involving **very long sequences**, self-attention could be restricted to considering only a **neighborhood of size** $r$ in the input sequence centered around the respective output position. This would increase the maximum path length to $O(n/r)$.
 >
 >-- [[vaswaniAttentionAllYou2017]]  Attention is All you Need, pp 6
+
+^cc46d7
 
 >[!quote]
 >A single **convolutional layer** with *kernel width* $k < n$ does **not connect all pairs** of *input and output positions*. 
@@ -294,7 +298,7 @@ date of note: 2024-05-12
 >On the other hand, in *sequence data processing*, where the sequential position information is important, attention mechanism and transformer need additional **positional encoding**  
 
 - [[Vanishing and Exploding Gradient Problems for Sequential Networks]]
-- [[Leaky Units and Other Strategies for Multiple Time Scales Sequential Network]]
+- [[Strategies for Multiple Time Scales Sequential Network]]
 - [[Long-Short Term Memory Network]]
 - [[Gated Recurrent Units in Neural Network]]
 - [[Residual Connection for Deep Learning]]

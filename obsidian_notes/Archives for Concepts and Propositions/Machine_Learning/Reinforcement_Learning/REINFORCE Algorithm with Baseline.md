@@ -33,6 +33,7 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
+- [[REINFORCE Algorithm for Monte Carlo Policy Gradient]]
 - [[Monte Carlo and Applications]]
 - [[Importance Sampling]]
 

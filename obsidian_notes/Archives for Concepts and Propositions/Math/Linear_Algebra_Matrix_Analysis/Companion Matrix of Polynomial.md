@@ -42,6 +42,27 @@ date of note: 2024-09-25
 
 
 
+## Krylov Matrix and Similarity 
+
+>[!important] Proposition
+>Let $x\in \mathbb{R}^{n}$ and let $K := K(A,x,n)$ be a **nonsingular Krylov matrix**. 
+>
+>If the vector $c = [c_{0}\,{,}\ldots{,}\,c_{n-1}]$ solve the **Krylov system of equations**
+>$$
+>Kc = - A^{n}\,x
+>$$
+>Then it follows that 
+>$$
+>A\,K = K\,C
+>$$
+>where $C$ is the **companion matrix** of polynomial $$p_{n}(x) = x^n + c_{n-1}x^{n-1}\,{+}\ldots{+}\,c_{1}x + c_{0}$$ i.e. 
+> $$C = \left[ \begin{array}{ccccc}0 & 0 & \cdots & 0 & -c_{0} \\ 1 & 0 & \cdots & 0& -c_{1} \\  0 & 1 & \ddots & \vdots & \vdots \\ \vdots &  & \ddots & 0 & -c_{n-2} \\ 0 & \cdots & 0 & 1 & -c_{n-1} \end{array} \right] \in M_{n}(F)$$
+> - In other word, $A$ is **similar** to $C$ and $$K^{-1}\,A\,K = C$$
+
+- [[Krylov Subspace and Krylov Matrix]]
+- [[Similarity Relation between Linear Maps and Matrices]]
+
+
 
 -----------
 ##  Recommended Notes and References

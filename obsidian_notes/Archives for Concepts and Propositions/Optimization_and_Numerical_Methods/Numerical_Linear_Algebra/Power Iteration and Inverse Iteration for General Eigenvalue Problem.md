@@ -97,7 +97,7 @@ date of note: 2024-09-25
 - [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
 - [[QR Factorization of Matrix]]
 
-
+- [[Vanishing and Exploding Gradient Problems for Sequential Networks]]
 
 
 - [[Matrix Computations by Golub]] pp 450 - 452

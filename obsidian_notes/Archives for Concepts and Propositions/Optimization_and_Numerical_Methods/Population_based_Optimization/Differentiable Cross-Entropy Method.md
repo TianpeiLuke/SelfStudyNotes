@@ -34,7 +34,7 @@ date of note: 2024-08-24
 - [[Evolutionary Computation Algorithms]]
 - [[Derivative-Free Optimization]]
 
-- [[REINFORCE Algorithm with Baseline]]
+- [[REINFORCE Algorithm for Monte Carlo Policy Gradient]]
 
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 298 - 307

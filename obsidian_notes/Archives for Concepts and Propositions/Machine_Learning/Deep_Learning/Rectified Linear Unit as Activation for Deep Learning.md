@@ -28,7 +28,7 @@ date of note: 2024-05-12
 
 ^8da7d6
 
-
+- [[Hinge Loss as Surrogate Loss Function]]
 
 ### Leaky ReLU
 
@@ -46,6 +46,22 @@ date of note: 2024-05-12
 
 ^8b0ae0
 
+>[!quote]
+>Another way to obtain paths on which the *product of derivatives* is close to *one* is to have **units with linear self-connections** and a weight *near one* on these connections.
+>
+>When we accumulate a *running average* $\mu^{(t)}$ of some value $v^{(t)}$ by applying the update $$\mu^{(t)} \leftarrow \alpha\mu^{(t−1)} + (1 − \alpha)v^{(t)},$$ 
+>- the $\alpha$ parameter is an example of a *linear self-connection* from $\mu^{(t−1)}$ to $\mu^{(t)}$. 
+>- When $\alpha$ is *near one*, the running average remembers information about the *past for a long time*, and 
+>- when $\alpha$ is *near zero*, information about the *past is rapidly discarded*. 
+>
+>Hidden units with linear self-connections can behave similarly to such running averages. Such hidden units are called **leaky units.**
+>
+>-- [[Deep Learning by Goodfellow]] pp 396
+
+^9ae94a
+
+- [[Strategies for Multiple Time Scales Sequential Network]]
+- [[Vanishing and Exploding Gradient Problems for Sequential Networks]]
 
 ### Soft ReLU
 
@@ -74,6 +90,7 @@ date of note: 2024-05-12
 >The introduction of ReLU gave a big *improvement* in training efficiency over previous sigmoidal activation functions (Krizhevsky, Sutskever, and Hinton, 2012). As well as allowing *deeper networks* to be trained efficiently, it is much **less sensitive to the random initialization** of the weights. It is also well suited to a **low-precision** implementation, such as 8-bit fixed versus 64-bit floating point, and it is computationally *cheap to evaluate*. Many practical applications simply use ReLU units as the default unless the goal is explicitly to explore the effects of different choices of activation function.
 >
 >-- [[Deep Learning Foundations and Concepts by Bishop]] pp 185
+
 
 
 

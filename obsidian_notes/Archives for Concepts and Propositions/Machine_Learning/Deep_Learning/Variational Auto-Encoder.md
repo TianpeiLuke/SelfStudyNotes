@@ -217,6 +217,9 @@ date of note: 2024-05-12
 
 - [[Denoising Diffusion Probabilistic Models and Diffusion Network]]
 
+## Other Variants
+
+- [[Gumbel Softmax]]
 
 
 

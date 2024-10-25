@@ -37,7 +37,7 @@ date of note: 2024-08-24
 > $$
 >- This can be approximated by drawing **Monte Carlo samples**.
 
-- [[REINFORCE Algorithm with Baseline]]
+- [[REINFORCE Algorithm for Monte Carlo Policy Gradient]]
 - [[EDA or Estimation of Distribution Algorithm]]
 
 >[!important] Definition
@@ -56,7 +56,7 @@ date of note: 2024-08-24
 
 - [[Gradient Descent Algorithm]]
 - [[Log-Likelihood Score Function]]
-- [[REINFORCE Algorithm with Baseline]]
+- [[REINFORCE Algorithm for Monte Carlo Policy Gradient]]
 
 
 ## Explanation

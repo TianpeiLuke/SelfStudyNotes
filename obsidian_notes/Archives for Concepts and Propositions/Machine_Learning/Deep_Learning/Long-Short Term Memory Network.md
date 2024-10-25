@@ -59,7 +59,7 @@ date of note: 2024-05-12
 
 - [[Rectified Linear Unit as Activation for Deep Learning]]
 - [[Sigmoid Function as Activation for Deep Learning]]
-- [[Leaky Units and Other Strategies for Multiple Time Scales Sequential Network]]
+- [[Strategies for Multiple Time Scales Sequential Network]]
 - [[Hadamard Product of Matrices]]
 
 

@@ -507,6 +507,8 @@ date of note: 2024-05-12
 >
 >Thus $$\hat{z}_{t-1} = \mu\left(\sqrt{ 1 - \beta_{t} }\,z_{t-1} + \sqrt{ \beta_{t} }\epsilon_{t},\; w,\;t\right) + \sqrt{ \beta_{t} }\epsilon_{t}$$  
 
+>[!info]
+>The *forward process* and *backward process* can also be seen in [[Bidirectional Recurrent Neural Network]]
 
 
 ### Which part is Exact and Which part is Approximation?
@@ -626,6 +628,8 @@ date of note: 2024-05-12
 - [[Discrete Denoising Diffusion Probabilistic Models]]
 - [[Latent Space Diffusion Model]]
 - [[Guided Diffusion Model and Conditional Diffusion Model]]
+
+
 
 
 

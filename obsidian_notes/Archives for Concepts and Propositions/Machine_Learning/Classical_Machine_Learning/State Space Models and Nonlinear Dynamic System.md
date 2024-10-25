@@ -107,6 +107,11 @@ date of note: 2024-05-12
 - [[Introduction to Stochastic Calculus by Klebaner]] pp 379
 
 
+## Recurrent Neural Network
+
+- [[Recurrent Neural Network]]
+- [[Long-Short Term Memory Network]]
+- [[Gated Recurrent Units in Neural Network]]
 
 
 

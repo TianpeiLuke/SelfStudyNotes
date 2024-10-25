@@ -55,8 +55,14 @@ date of note: 2024-06-01
 - [[Concepts and Theorems in Boosting and Ensemble Learning]]
 
 - [[Ensemble Learning]]
+- [[Bagging and Model Averaging]]
+- [[Random Forest Algorithm]]
+
+
 - [[AdaBoost Algorithm]]
 - [[Functional Gradient Descent]]
+- [[Gradient Boosting Algorithm]]
+
 
 #### Support Vector Machine and Kernel Methods
 

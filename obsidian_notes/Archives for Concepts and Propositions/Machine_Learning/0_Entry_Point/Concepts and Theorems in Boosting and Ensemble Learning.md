@@ -91,13 +91,18 @@ date of note: 2024-07-28
 ### Ensemble Learning and Generalization of Boosting
 
 - [[Ensemble Learning]]
+- [[Bagging and Model Averaging]]
 - [[Forward Stagewise Additive Modeling]]
+- [[Random Forest Algorithm]]
 
 ### Bootstrap
 
 - [[Bootstrap Method]]
 
+### Deep Ensemble Learning
 
+- [[Dropout for Deep Learning]]
+- [[Mixture of Experts as Deep Ensemble Learning]]
 
 
 ## Explanation

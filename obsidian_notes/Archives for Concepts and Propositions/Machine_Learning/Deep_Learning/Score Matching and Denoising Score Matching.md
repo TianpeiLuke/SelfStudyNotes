@@ -60,7 +60,8 @@ date of note: 2024-09-08
 - [[Fisher Divergence]]
 - [[Minimum Mean Square Estimation]]
 - [[Least Square Estimation]]
-- [[REINFORCE Algorithm with Baseline]]
+- [[REINFORCE Algorithm for Monte Carlo Policy Gradient]]
+- [[Coordinate Representation of Differential at Point]]
 
 >[!important]
 >Here it is important to emphasize that the *gradient* is *with respect to the* **data vector**, **not** with respect to any **parameter vector**.

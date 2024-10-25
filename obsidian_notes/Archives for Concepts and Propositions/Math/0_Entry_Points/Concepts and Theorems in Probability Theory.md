@@ -74,6 +74,7 @@ date of note: 2024-05-13
 - [[Gamma Distribution]]
 - [[Laplace Distribution]]
 
+- [[Gumbel Distribution as Generalized Extreme Value Distribution]]
 
 ## Independence
 

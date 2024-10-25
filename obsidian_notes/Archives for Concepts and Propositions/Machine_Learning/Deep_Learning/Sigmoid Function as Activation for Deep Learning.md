@@ -160,7 +160,7 @@ date of note: 2024-05-12
 >
 >-- [[Deep Learning Foundations and Concepts by Bishop]] pp 184 - 185
 
-
+- [[Vanishing and Exploding Gradient Problems for Sequential Networks]]
 
 
 -----------

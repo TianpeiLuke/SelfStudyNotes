@@ -20,6 +20,34 @@ date of note: 2024-07-29
 ## Explanation
 
 
+## Ensemble Learning Methods
+
+### Bagging
+
+- [[Bagging and Model Averaging]]
+
+### Boostrap
+
+- [[Bootstrap Method]]
+
+### Gaussian Mixtures
+
+- [[Gaussian Mixture Models]]
+- [[Gaussian Scale Mixtures]]
+
+### Dropout in Deep Learning
+
+- [[Dropout for Deep Learning]]
+
+### Boosting
+
+- [[AdaBoost Algorithm]]
+- [[Gradient Boosting Algorithm]]
+- [[Gradient Boosting Trees]]
+
+### Mixture of Experts
+
+
 
 
 
@@ -27,6 +55,7 @@ date of note: 2024-07-29
 ##  Recommended Notes and References
 
 
+- [[Bagging and Model Averaging]]
 
 
 

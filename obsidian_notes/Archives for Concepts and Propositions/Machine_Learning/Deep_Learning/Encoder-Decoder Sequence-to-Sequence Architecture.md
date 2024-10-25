@@ -8,6 +8,7 @@ keywords:
   - bidirectional
 topics:
   - deep_learning/models
+  - deep_learning/sequential_networks
 name: Encoder-Decoder Sequence-to-Sequence Architecture
 date of note: 2024-08-31
 ---
