@@ -275,7 +275,7 @@ date of note: 2024-05-12
 - [[Convolution Operation]]
 - [[Fast Fourier Transform]]
 - [[Circulant Matrix and Circulant Permutation Operation]]
-- [[Discrete Fourier Transform Matrix or DFT Matrix]]
+- [[DFT Matrix]]
 
 
 

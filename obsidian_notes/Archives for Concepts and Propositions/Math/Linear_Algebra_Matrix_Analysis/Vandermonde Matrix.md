@@ -86,7 +86,7 @@ date of note: 2024-10-24
 >$$
 >- Each term $$x_{k+1} := W_{n}^{k} = \exp \left(-i \frac{2\pi k}{n}\right), \quad k=0\,{,}\ldots{,}\,n-1$$ is the **k-th root of unity.**
 
-- [[Discrete Fourier Transform Matrix or DFT Matrix]]
+- [[DFT Matrix]]
 
 
 ## Vandermonde Similarity and Companion Matrix
