@@ -68,10 +68,10 @@ date of note: 2024-05-12
 - [[Network and Flow and Capacity and Cut]]
 - [[Max-Flow Min-Cut Theorem]]
 - [[Network Flow Problem as Linear Optimization]]
-- [[Network Simplex Algorithm]]
-- [[Negative Cost Cycle Algorithm]]
 - [[Maximum Flow Problem]]
 - [[Minimum Cost Flow Problem]]
+- [[Network Simplex Algorithm]]
+- [[Negative Cost Cycle Algorithm]]
 - [[Minimum Spanning Tree Problem]]
 
 
