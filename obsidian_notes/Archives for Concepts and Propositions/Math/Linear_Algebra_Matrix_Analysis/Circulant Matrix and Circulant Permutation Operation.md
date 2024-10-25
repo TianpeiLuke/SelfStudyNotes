@@ -42,7 +42,7 @@ date of note: 2024-08-08
 ## Explanation
 
 >[!important] Proposition
->A matrix $A\in M_{n}$ can be written in the form
+>A matrix $A\in M_{n}$ can be written in the form of *matrix polynomial*
 >$$
 >A = \sum_{k=0}^{n-1}a_{k}\,C_{n}^{k}
 >$$
@@ -99,9 +99,10 @@ date of note: 2024-08-08
 >
 >Then 
 >- $C_{n}$ is **unitary** (or **real orthogonal**)
->- Let $$D = \text{diag}\left(1,\, \omega_{n} \,{,}\ldots{,}\,\omega_{n}^{n-1}\right)$$ where $$\omega_{n} := \exp \left(i \frac{2\pi}{n}\right)$$ and let $F_{n}$ be the **DFT matrix**.  $$\begin{align*} F_{n} &= \frac{1}{\sqrt{ n }} \left[ \begin{array}{cccc} 1 & 1 & \ldots & 1 \\[5pt] 1 & \omega_{n} & \ldots & \omega_{n}^{n-1} \\[5pt] \vdots  & \ldots & \ldots & \ldots \\[5pt] 1 & \omega_{n}^{n-1} & \ldots & \omega_{n}^{(n-1)(n-1)} \\[5pt] \end{array} \right] \\[10pt]  &=  \frac{1}{\sqrt{ n }} \left[ \begin{array}{cccc} 1 & 1 & \ldots & 1 \\[5pt] 1 & \omega_{n} & \ldots & \omega_{n}^{n-1} \\[5pt] \vdots  & \ldots & \ldots & \ldots \\[5pt] 1 & \omega_{n}^{n-1} & \ldots & \omega_{n} \\[5pt] \end{array} \right]\end{align*}$$ Then $$C_{n}F_{n} = F_{n}D$$ That is, the **spectral decomposition** of $C_{n}$ is given by $$C_{n} = F_{n}\,D\,F_{n}^{*}$$
->	- So the **eigenvector** of $C_{n}$ corresponds to **eigenvalue** $\omega_{n}^{k}$ is **the Fourier modes** $$v_{k} := \frac{1}{\sqrt{ n}}\left[ 1,\,\omega_{n}^{k}\,{,}\ldots{,}\,\omega_{n}^{k(n-1)} \right]^{T}$$
->	- The **eigenvalues** of $C_{n}$ consists of all **$n$-th root of unit** $$1,\, \omega_{n} \,{,}\ldots{,}\,\omega_{n}^{n-1}$$ and $$\sum_{k=0}^{n-1}\omega_{n}^{k} = 0$$
+>- Let $$D = \text{diag}\left(1,\, \omega_{n} \,{,}\ldots{,}\,\omega_{n}^{n-1}\right)$$ where $$\omega_{n} := \exp \left(i \frac{2\pi}{n}\right)$$ and let $F_{n}$ be the **DFT matrix**.  $$\begin{align*} F_{n} &= \frac{1}{\sqrt{ n }} \left[ \begin{array}{cccc} 1 & 1 & \ldots & 1 \\[5pt] 1 & \omega_{n} & \ldots & \omega_{n}^{n-1} \\[5pt] \vdots  & \ldots & \ldots & \ldots \\[5pt] 1 & \omega_{n}^{n-1} & \ldots & \omega_{n}^{(n-1)(n-1)} \\[5pt] \end{array} \right] \\[10pt]  &=  \frac{1}{\sqrt{ n }} \left[ \begin{array}{cccc} 1 & 1 & \ldots & 1 \\[5pt] 1 & \omega_{n} & \ldots & \omega_{n}^{n-1} \\[5pt] \vdots  & \ldots & \ldots & \ldots \\[5pt] 1 & \omega_{n}^{n-1} & \ldots & \omega_{n} \\[5pt] \end{array} \right]\end{align*}$$ Then $$C_{n}F_{n} = F_{n}D$$ That is, the **spectral decomposition** of $C_{n}$ is given by $$C_{n} = F_{n}\,D\,F_{n}^{*}$$ where
+>	- the **eigenvalues** of $C_{n}$ consists of all **$n$-th root of unit** (i.e. $\omega_{n}^n=1$) $$1,\, \omega_{n} \,{,}\ldots{,}\,\omega_{n}^{n-1}$$ and $$\sum_{k=0}^{n-1}\omega_{n}^{k} = 0$$
+>	- and the **eigenvector** of $C_{n}$ corresponds to **eigenvalue** $\omega_{n}^{k}$ is **the Fourier modes** $$v_{k} := \frac{1}{\sqrt{ n}}\left[ 1,\,\omega_{n}^{k}\,{,}\ldots{,}\,\omega_{n}^{k(n-1)} \right]^{T}$$
+
 
 ^174342
 

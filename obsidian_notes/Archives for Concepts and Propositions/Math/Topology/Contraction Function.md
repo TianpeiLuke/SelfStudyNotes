@@ -51,3 +51,4 @@ date of note: 2024-05-04
 
 - [[Functional Analysis by Reed]]
 - [[Real Analysis by Royden]]
+- [[Principles of Mathematical Analysis by Rudin]]

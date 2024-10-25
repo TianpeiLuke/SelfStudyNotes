@@ -43,7 +43,7 @@ date of note: 2024-07-09
 ## Linear Programming
 
 - [[Network Flow Problem as Linear Optimization]]
-
+- [[Fenchel Duality Theorem]]
 
 
 
