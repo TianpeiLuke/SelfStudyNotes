@@ -69,3 +69,4 @@ date of note: 2024-05-12
 
 - [[Computational Optimal Transport by Peyre]]
 - [[Optimal Transport for Applied Mathematicians by Santambrogio]]
+- [[Optimal Transport Old and New by Villani]]

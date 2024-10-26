@@ -175,6 +175,8 @@ date of note: 2024-05-22
 
 - [[Sub-Gaussian Random Variable]]
 
+
+- [[Optimal Transport Old and New by Villani]]
 - [[Concentration Inequalities by Boucheron]]
 - [[High Dimensional Statistics A Non-Asymptotic Viewpoint by Wainwright]]
 - [[Elements of Information Theory by Cover]]

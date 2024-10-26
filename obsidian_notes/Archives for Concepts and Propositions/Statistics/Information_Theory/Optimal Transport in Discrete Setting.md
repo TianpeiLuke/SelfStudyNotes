@@ -147,4 +147,5 @@ date of note: 2024-05-12
 
 - [[Optimal Transport for Applied Mathematicians by Santambrogio]]
 - [[Computational Optimal Transport by Peyre]] pp 13 - 37
+- [[Optimal Transport Old and New by Villani]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 307

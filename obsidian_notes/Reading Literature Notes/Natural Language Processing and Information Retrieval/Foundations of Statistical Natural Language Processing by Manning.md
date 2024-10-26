@@ -1,15 +1,16 @@
 ---
 tags:
   - book
+  - natural_language_processing
 aliases:
-  - "manningFoundationsStatisticalNatural1999"
-year: 1999 
-name: "Foundations of Statistical Natural Language Processing"
-authors: "Christopher D. Manning, Hinrich Schütze"
+  - manningFoundationsStatisticalNatural1999
+year: 1999
+name: Foundations of Statistical Natural Language Processing
+authors: Christopher D. Manning, Hinrich Schütze
 publication: ""
-type: "book"
+type: book
 DOI: ""
-date of note: 2024-10-25 
+date of note: 2024-10-25
 ---
 
 > [!Cite]  

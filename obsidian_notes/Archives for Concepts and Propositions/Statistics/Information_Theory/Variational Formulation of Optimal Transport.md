@@ -94,7 +94,10 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
+
 - [[Optimal Transport in Discrete Setting]]
+
 - [[Computational Optimal Transport by Peyre]]
 - [[Optimal Transport for Applied Mathematicians by Santambrogio]]
+- [[Optimal Transport Old and New by Villani]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 311

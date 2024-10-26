@@ -47,31 +47,32 @@ date of note: 2024-05-06
   
 # Smooth Manifolds
 
-- [[Smooth Manifolds]]
+- [[Concepts and Theorems for Smooth Manifolds]]
 
 # Smooth Maps
 
-- [[Smooth Functions and Smooth Maps]]
+- [[Concepts and Theorems for Smooth Manifolds]]
 
 # Tangent Vectors
 
-- [[Tangent Space and Tangent Bundle]]
+- [[Concepts related to Tangent Space and Tangent Bundle]]
 
 # Submersions, Immersions, and Embeddings
 
-- [[Local Property of Smooth Map and Construction of Submanifold]]
+- [[Concepts and Theorems for Smooth Manifolds]]
 
 # Submanifolds
 
-- [[Local Property of Smooth Map and Construction of Submanifold]]
+- [[Concepts and Theorems for Smooth Manifolds]]
 
 # Sard’s Theorem
 
-- [[Local Property of Smooth Map and Construction of Submanifold]]
+- [[Concepts and Theorems for Smooth Manifolds]]
 
 # Lie Groups
 
-
+- [[Concepts and Theorems for Smooth Manifolds]]
+- [[Lie Group and Lie Algebra]]
 
 # Vector Fields
 

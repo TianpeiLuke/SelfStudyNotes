@@ -49,5 +49,7 @@ date of note: 2024-05-12
 ## Reference
 
 
+- [[Gradient Flows in Metric Spaces and in Space of Probability Measures by Ambrosio]]
 - [[Computational Optimal Transport by Peyre]]
+- [[Optimal Transport Old and New by Villani]]
 - [[Real Analysis Modern Techniques and Their Applications by Folland]]

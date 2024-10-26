@@ -59,7 +59,9 @@ date of note: 2024-10-25
 - [[Ordinary Differential Equations]]
 
 
+- [[Gradient Flows in Metric Spaces and in Space of Probability Measures by Ambrosio]]
 - [[An Introduction to Optimization on Smooth Manifolds by Boumal]]
 - [[Optimal Transport for Applied Mathematicians by Santambrogio]]
 - [[Ordinary Differential Equations by Chicone]]
+
 - Wibisono, A. (2018, July). Sampling as optimization in the space of measures: The Langevin dynamics as a composite optimization problem. In _Conference on Learning Theory_ (pp. 2093-3027). PMLR.

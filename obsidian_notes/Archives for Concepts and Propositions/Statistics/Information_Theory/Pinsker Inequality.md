@@ -102,9 +102,10 @@ date of note: 2024-05-23
 - [[Kullback-Leibler Divergence]]
 - [[Transportation Cost Inequality]]
 
+
 - [[Computational Optimal Transport by Peyre]]
 - [[Optimal Transport for Applied Mathematicians by Santambrogio]]
-
+- [[Optimal Transport Old and New by Villani]]
 - [[Elements of Information Theory by Cover]]
 
 - [[Concentration Inequalities by Boucheron]]

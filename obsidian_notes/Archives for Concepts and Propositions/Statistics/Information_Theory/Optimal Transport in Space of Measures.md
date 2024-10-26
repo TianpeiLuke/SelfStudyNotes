@@ -132,3 +132,5 @@ date of note: 2024-05-12
 - [[Optimal Transport in Discrete Setting]]
 - [[Computational Optimal Transport by Peyre]]
 - [[Optimal Transport for Applied Mathematicians by Santambrogio]]
+- [[Optimal Transport Old and New by Villani]]
+- [[Gradient Flows in Metric Spaces and in Space of Probability Measures by Ambrosio]]

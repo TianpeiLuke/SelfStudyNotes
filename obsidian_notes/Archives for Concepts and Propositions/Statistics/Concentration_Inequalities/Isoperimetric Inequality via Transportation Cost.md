@@ -63,5 +63,6 @@ date of note: 2024-05-30
 - [[Kullback-Leibler Divergence]]
 
 
+- [[Optimal Transport Old and New by Villani]]
 - [[High Dimensional Statistics A Non-Asymptotic Viewpoint by Wainwright]]
 - [[Concentration Inequalities by Boucheron]]

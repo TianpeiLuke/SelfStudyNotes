@@ -129,6 +129,7 @@ date of note: 2024-08-26
 
 - [[Computational Optimal Transport by Peyre]]
 - [[Optimal Transport for Applied Mathematicians by Santambrogio]]
+- [[Optimal Transport Old and New by Villani]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 307
 - [[Graph Theory by Diestel]]
 - Wikipedia [Assignment_problem](https://en.wikipedia.org/wiki/Assignment_problem)
