@@ -18,14 +18,49 @@ date of note: 2024-09-13
 ### N-Gram Models
 
 - [[n-Gram Model and Language Model]]
+- [[Naive Bayes Model]]
+- [[Multinomial Naive Bayes Model]]
+- [[Multinomial Principle Component Analysis]]
 
 ### Vector Semantics
 
 - [[Vector Space Model for Text Representation]]
+- [[Word Embedding]]
 - [[Topic Models]]
 
 
-### Machine Translation
+### Machine Learning Models
+
+#### Prediction with Structured Output
+
+- [[Support Vector Machine Kernel Expansion and RKHS]]
+
+#### Dynamic System and Graphical Models
+
+- [[Models and Algorithms for Probabilistic Graphical Models]]
+
+- [[Conditional Random Field]]
+
+- [[Dynamic Bayesian Network]]
+- [[State-Observation Models]]
+	- [[Linear Dynamic System]]
+	- [[State Space Models and Nonlinear Dynamic System]]
+- [[Statistical Prediction Filtering and Smoothing for State Observation Model]]
+- [[Bayesian Filtering and Smoothing Equations for State Observation Models]]
+
+- [[Hidden Markov Model]]
+- [[Hidden Markov Model Inference via Forward-Backward Algorithm]]
+- [[Hidden Markov Model MAP Inference via Viterbi Algorithm]]
+- [[Kalman Filter Discrete-Time]]
+
+#### Recurrent Neural Network
+
+- [[Models and Algorithms for Deep Learning]]
+- [[Recurrent Neural Network]]
+- [[Long-Short Term Memory Network]]
+- [[Gated Recurrent Units in Neural Network]]
+- [[Residual Neural Network]]
+- [[Bidirectional Recurrent Neural Network]]
 
 #### Attention and Transformer 
 
@@ -43,6 +78,19 @@ date of note: 2024-09-13
 - [[Foundational Models for Transfer Learning]]
 - [[In-Context Learning and Prompt Engineering for LLM]]
 - [[Reinforcement Learning with Human Feedbacks]]
+
+
+### Text Classification, 
+
+- [[Encoder-Decoder Sequence-to-Sequence Architecture]]
+- [[Part-of-Speech Tagging]]
+- [[Name Entity Recognition]]
+
+
+
+### Machine Translation
+
+
 
 
 ### Question-Answering

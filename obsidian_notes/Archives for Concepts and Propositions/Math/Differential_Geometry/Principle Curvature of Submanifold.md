@@ -26,6 +26,10 @@ date of note: 2024-05-20
 ##  Recommended Notes and References
 
 - [[Riemannian Metric and Riemannian Manifold]]
-
+- [[Riemann Curvature Tensor]]
+- [[Ricci Curvature Ricci Tensor]]
+- [[Curvature Tensor on Riemannian Manifold]]
+- [[Eigenvalue and Eigenvector for Linear Map]]
+- [[Principle Component Analysis]]
 
 - [[Introduction to Riemannian Manifolds by Lee]]
