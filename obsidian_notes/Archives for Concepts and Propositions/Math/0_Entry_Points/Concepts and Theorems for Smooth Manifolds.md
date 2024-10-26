@@ -1,6 +1,6 @@
 ---
 tags:
-  - entry_points
+  - entry_point
   - concept
   - math/differential_geometry
 keywords: 
@@ -137,6 +137,21 @@ date of note: 2024-10-25
 - [[Parametric Transversality Theorem]]
 
 
+### Lie Group and Lie Algebra
+
+#### Lie Group and Examples
+
+- [[Lie Group]]
+- [[General Linear Group]]
+- [[Special Linear Group]]
+- [[Orthogonal Group]]
+- [[Unitary Group]]
+- [[Special Orthogonal Group and Special Unitary Group]]
+
+#### Lie Derivatives
+
+- [[Lie Bracket of Vector Fields]]
+- [[Lie Derivative of Vector Field]]
 
 
 

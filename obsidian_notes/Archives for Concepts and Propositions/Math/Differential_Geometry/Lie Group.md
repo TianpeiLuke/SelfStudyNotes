@@ -20,7 +20,7 @@ date of note: 2024-05-26
 >**Name**: Lie Group
 
 >[!important] Definition
->A **Lie group** is a smooth manifold $G$ (without boundary) that is also a *group* in the algebraic sense, with the property that the *multiplication map* $m: G \times G \to G$ and *inversion map* $i: G\to G$, given by 
+>A **Lie group** is a *smooth manifold* $G$ (without boundary) that is also a *group* in the algebraic sense, with the property that the *multiplication map* $m: G \times G \to G$ and *inversion map* $i: G\to G$, given by 
 >$$
 >m(g, h) = gh, \quad i(g) = g^{-1}
 >$$ 
