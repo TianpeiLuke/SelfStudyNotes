@@ -21,7 +21,7 @@ date of note: 2024-05-18
 - [[Rank and Nullity of Linear Map]]
 - [[Rank–Nullity Theorem]]
 
-- [[Smooth Map]]
+- [[Smooth Map between Euclidean Spaces]]
 - [[Rank of Smooth Map]]
 
 - [[Smooth Submersion]]

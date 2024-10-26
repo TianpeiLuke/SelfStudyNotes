@@ -38,7 +38,7 @@ date of note: 2024-05-06
 
 - [[Concepts and Theorems in Tensor Space]]
 - [[Differentiation of Vector Field]]
-- [[Smooth Manifolds]]
+- [[Smooth Manifold]]
 - [[Group]]
 - [[Algebra over Field]]
 

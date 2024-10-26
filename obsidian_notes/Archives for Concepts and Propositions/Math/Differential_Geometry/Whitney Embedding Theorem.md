@@ -47,6 +47,6 @@ date of note: 2024-05-20
 - [[Sard Theorem]]
 - [[Smooth Embedding]]
 
-- [[Smooth Map]]
+- [[Smooth Map between Euclidean Spaces]]
 
 - [[Introduction to Smooth Manifolds by Lee]]

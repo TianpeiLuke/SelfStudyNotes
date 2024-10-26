@@ -19,7 +19,7 @@ date of note: 2024-05-06
 >[!important] Definition on Euclidean spaces
 >If $U$ and $V$ are *open* subsets of Euclidean spaces $\mathbb{R}^n$ and $\mathbb{R}^m$, respectively, a function $F: U \rightarrow V$ is said to be a **diffeomorphism** if $F$ is *smooth*,  *bijective* and has a *smooth inverse map*. 
 
-- [[Smooth Map]]
+- [[Smooth Map between Euclidean Spaces]]
 
 >[!info]
 >A *diffeomorphism* is, in particular, a **homeomorphism**.

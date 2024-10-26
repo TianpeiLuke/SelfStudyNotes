@@ -162,7 +162,7 @@ Recall that
 
 
 - [[Smooth Manifold]]
-- [[Smooth Map]]
+- [[Smooth Map between Euclidean Spaces]]
 - [[Smooth Chart and Smooth Coordinate Map]]
 - [[Smooth Map between Smooth Manifolds]]
 

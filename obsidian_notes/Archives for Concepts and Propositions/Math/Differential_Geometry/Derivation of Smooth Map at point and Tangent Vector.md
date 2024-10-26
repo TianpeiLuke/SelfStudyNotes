@@ -24,7 +24,7 @@ date of note: 2024-05-06
 > \end{align}
 > $$
 
-- [[Smooth Map]]
+- [[Smooth Map between Euclidean Spaces]]
 
 >[!important] Definition on Smooth Manifold
 >Let $M$ be a *smooth manifold* with or without boundary, and let $p$ be a point of $M$. 

@@ -29,7 +29,7 @@ date of note: 2024-06-14
 - [[Surjective Injective Invertible Linear Map and Rank]]
 - [[Injective Function]]
 - [[Bijective Function and Inverse Function]]
-- [[Smooth Map]]
+- [[Smooth Map between Euclidean Spaces]]
 - [[Differential of a Smooth Map at Point]]
 - [[Coordinate Representation of Differential at Point]]
 

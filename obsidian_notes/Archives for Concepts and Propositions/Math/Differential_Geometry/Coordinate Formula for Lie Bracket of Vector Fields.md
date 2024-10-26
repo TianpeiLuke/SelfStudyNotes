@@ -80,7 +80,7 @@ vector fields** $\frac{\partial}{\partial x^{i}}$  in *any smooth chart*:
 
 
 - [[Differential of a Smooth Map at Point]]
-- [[Smooth Map]]
+- [[Smooth Map between Euclidean Spaces]]
   
   
 - [[Space of all Smooth Vector Fields on a Manifold]]

@@ -33,7 +33,7 @@ date of note: 2024-05-14
 >
 
 - [[Tangent Space Definition and Development]]
-- [[Smooth Map]]
+- [[Smooth Map between Euclidean Spaces]]
 
  >[!info]
 > Note that if $f \in \mathcal{C}^{\infty}(N)$, then $f \circ F \in \mathcal{C}^{\infty}(M)$, so $v(f \circ F)$ makes sense. 
@@ -96,7 +96,7 @@ date of note: 2024-05-14
 ##  Recommended Notes and References
 
 - [[Tangent Space Definition and Development]]
-- [[Smooth Map]]
+- [[Smooth Map between Euclidean Spaces]]
 
 - [[Introduction to Smooth Manifolds by Lee]]
 - [[Principles of Mathematical Analysis by Rudin]] pp 260 - 261

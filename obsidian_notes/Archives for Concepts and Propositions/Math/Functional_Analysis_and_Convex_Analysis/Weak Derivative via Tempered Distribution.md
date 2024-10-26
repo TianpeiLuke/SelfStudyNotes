@@ -87,7 +87,7 @@ date of note: 2024-05-24
 -----------
 ##  Recommended Notes and References
 
-- [[Smooth Map]]
+- [[Smooth Map between Euclidean Spaces]]
 - [[Fréchet Space]]
 
 - [[Space of Tempered Distributions]]

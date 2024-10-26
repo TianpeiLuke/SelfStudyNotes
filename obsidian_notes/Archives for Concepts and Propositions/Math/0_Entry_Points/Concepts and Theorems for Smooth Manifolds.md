@@ -17,7 +17,7 @@ date of note: 2024-10-25
 - [[Topological Manifold]]
 - [[Coordinate Chart]]
 - [[Coordinate Domain and Coordinate Map]]
-- [[Smooth Map]]
+- [[Smooth Map between Euclidean Spaces]]
 - [[Diffeomorphism]]
 - [[Transition Map and Smoothly Compatible]]
 - [[Smooth Atlas]]
@@ -36,8 +36,8 @@ date of note: 2024-10-25
 ### Smooth Map
 
 - [[Smooth Function on Smooth Manifold]]
+- [[Smooth Map between Euclidean Spaces]]
 - [[Smooth Map between Smooth Manifolds]]
-- [[Smooth Map]]
 
 
 ### Tangent Vector and Vector Fields 
@@ -152,6 +152,10 @@ date of note: 2024-10-25
 
 - [[Lie Bracket of Vector Fields]]
 - [[Lie Derivative of Vector Field]]
+
+#### Lie Algebra
+
+
 
 
 

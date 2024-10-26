@@ -6,14 +6,14 @@ keywords:
   - smooth_map
 topics:
   - differential_geometry
-name: Smooth Map
+name: Smooth Map between Euclidean Spaces
 date of note: 2024-05-06
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Smooth Map
+>**Name**: Smooth Map between Euclidean Spaces
 
 >[!important] Definition
 >If $U$ and $V$ are *open* subsets of Euclidean spaces $\mathbb{R}^n$ and $\mathbb{R}^m$, respectively, a function $F: U \rightarrow V$ is said to be **smooth** (or $\mathcal{C}^{\infty}$ , or **infinitely differentiable**) if each of its component functions has *continuous partial derivatives* of *all orders*. 

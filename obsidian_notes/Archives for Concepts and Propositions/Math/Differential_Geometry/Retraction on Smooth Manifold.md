@@ -19,7 +19,7 @@ date of note: 2024-07-01
 >A **retraction** on *manifold* $\mathcal{M}$ is a *smooth map*:
 >$$R: T\mathcal{M} \to \mathcal{M}: \quad (x, v) \mapsto R_{x}(v)$$ such that each curve $$\gamma(t) := R_{x}(tv)$$ satisfies $$\gamma(0) = x,\; \quad \gamma'(0) = v.$$
 
-- [[Smooth Map]]
+- [[Smooth Map between Euclidean Spaces]]
 - [[Smooth Manifold]]
 - [[Tangent Bundle]]
 

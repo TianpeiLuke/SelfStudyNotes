@@ -31,7 +31,7 @@ date of note: 2024-05-18
 > In this case, we say *the vector fields* $X$ *and* $Y$ are **$F$-related.**
 
 - [[Differential of a Smooth Map at Point]]
-- [[Smooth Map]]
+- [[Smooth Map between Euclidean Spaces]]
 - [[Smooth Vector Field on Manifold]]
 
 
@@ -76,7 +76,7 @@ date of note: 2024-05-18
 
 
 - [[Differential of a Smooth Map at Point]]
-- [[Smooth Map]]
+- [[Smooth Map between Euclidean Spaces]]
   
   
 - [[Space of all Smooth Vector Fields on a Manifold]]

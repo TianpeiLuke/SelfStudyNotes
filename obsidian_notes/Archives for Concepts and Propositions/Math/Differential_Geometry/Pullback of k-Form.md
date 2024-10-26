@@ -59,7 +59,7 @@ date of note: 2024-05-18
 
 - [[Pullback of Covector Fields]]
 - [[Differential of a Smooth Map at Point]]
-- [[Smooth Map]]
+- [[Smooth Map between Euclidean Spaces]]
 - [[Differential k-Form on Manifold]]
 
 

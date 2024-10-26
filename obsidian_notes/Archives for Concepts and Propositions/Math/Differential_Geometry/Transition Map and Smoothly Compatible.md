@@ -46,6 +46,6 @@ date of note: 2024-05-06
 
 - [[Topological Manifold]]
 - [[Coordinate Chart]]
-- [[Smooth Map]]
+- [[Smooth Map between Euclidean Spaces]]
 
 - [[Introduction to Smooth Manifolds by Lee]]

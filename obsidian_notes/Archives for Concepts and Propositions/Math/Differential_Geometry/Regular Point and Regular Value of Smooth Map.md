@@ -62,7 +62,7 @@ date of note: 2024-05-20
 
 - [[Rank of Smooth Map]]
 - [[Differential of a Smooth Map at Point]]
-- [[Smooth Map]]
+- [[Smooth Map between Euclidean Spaces]]
 
 - [[Critical Point and Critical Value of Smooth Map]]
 

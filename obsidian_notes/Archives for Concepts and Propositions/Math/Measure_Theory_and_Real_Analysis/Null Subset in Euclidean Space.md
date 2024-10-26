@@ -67,7 +67,7 @@ date of note: 2024-05-20
 >
 >Then $F(A)$ has **measure zero.**
 
-- [[Smooth Map]]
+- [[Smooth Map between Euclidean Spaces]]
 
 
 

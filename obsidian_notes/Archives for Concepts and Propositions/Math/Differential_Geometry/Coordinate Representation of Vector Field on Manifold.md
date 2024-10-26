@@ -89,7 +89,7 @@ date of note: 2024-05-18
 >If $(U, (x^i))$ is any **smooth coordinate chart** on $M$, then the **restriction** of $X$ to $U$ is **smooth** *if and only if* its **component functions** with respect to this chart are **smooth**.
 
 - [[Smooth Chart and Smooth Coordinate Map]]
-- [[Smooth Map]]
+- [[Smooth Map between Euclidean Spaces]]
 
 
 

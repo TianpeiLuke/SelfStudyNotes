@@ -73,7 +73,7 @@ date of note: 2024-05-18
 
 
 - [[Differential of a Smooth Map at Point]]
-- [[Smooth Map]]
+- [[Smooth Map between Euclidean Spaces]]
   
   
 - [[Space of all Smooth Vector Fields on a Manifold]]

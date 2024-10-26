@@ -88,7 +88,7 @@ date of note: 2024-05-24
 
 - [[Lp Space]]
 
-- [[Smooth Map]]
+- [[Smooth Map between Euclidean Spaces]]
 - [[Norm and Normed Space]]
 - [[Fréchet Space]]
 - [[Vector Space over a Field]]

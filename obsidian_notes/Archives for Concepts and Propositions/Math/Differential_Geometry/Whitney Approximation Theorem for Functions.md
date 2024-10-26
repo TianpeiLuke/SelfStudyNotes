@@ -30,7 +30,7 @@ date of note: 2024-05-20
 >If $F$ is **smooth** on a **closed** *subset* $A \subseteq M$, then $\widetilde{F}$ can be chosen to be **equal to** $F$ on $A$.
 
 - [[Continuous Function]]
-- [[Smooth Map]]
+- [[Smooth Map between Euclidean Spaces]]
 
 
 ## Explanation
@@ -51,6 +51,6 @@ date of note: 2024-05-20
 - [[Sard Theorem]]
 
 
-- [[Smooth Map]]
+- [[Smooth Map between Euclidean Spaces]]
 
 - [[Introduction to Smooth Manifolds by Lee]]

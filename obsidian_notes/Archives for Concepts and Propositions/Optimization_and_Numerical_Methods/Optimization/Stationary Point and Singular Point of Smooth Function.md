@@ -57,7 +57,7 @@ date of note: 2024-06-29
 >for any *curve*  $\gamma: J \to \mathcal{M}$ on $\mathcal{M}$ where $J \subset \mathbb{R}$ is an interval and $\gamma(0) = x.$
 
 
-- [[Smooth Map]]
+- [[Smooth Map between Euclidean Spaces]]
 - [[An Introduction to Optimization on Smooth Manifolds by Boumal]] pp 55
 
 ## Explanation

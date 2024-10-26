@@ -54,7 +54,7 @@ date of note: 2024-06-14
 >  
 >If $V$ has **positive value** somewhere in **each open set containing** $x_{0}$, then $x_{0}$ is **not stable**.
 
-- [[Smooth Map]]
+- [[Smooth Map between Euclidean Spaces]]
 
 
 

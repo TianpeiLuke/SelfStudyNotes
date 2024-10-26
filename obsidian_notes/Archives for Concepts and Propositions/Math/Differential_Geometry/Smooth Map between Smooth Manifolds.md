@@ -37,6 +37,6 @@ date of note: 2024-05-06
 ##  Recommended Notes and References
 
 - [[Smooth Manifold]]
-- [[Smooth Map]]
+- [[Smooth Map between Euclidean Spaces]]
 - [[Smooth Chart and Smooth Coordinate Map]]
 - [[Smooth Function on Smooth Manifold]]

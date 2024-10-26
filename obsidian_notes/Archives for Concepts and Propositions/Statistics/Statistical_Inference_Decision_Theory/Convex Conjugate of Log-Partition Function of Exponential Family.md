@@ -110,7 +110,7 @@ date of note: 2024-06-27
 - [[Convex Function]]
 - [[Semi-Continuous Function]]
 - [[Exponential Family of Distributions#Minimal Representation]]
-- [[Smooth Map]]
+- [[Smooth Map between Euclidean Spaces]]
 - [[Interior of Set]]
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]] pp 273
 

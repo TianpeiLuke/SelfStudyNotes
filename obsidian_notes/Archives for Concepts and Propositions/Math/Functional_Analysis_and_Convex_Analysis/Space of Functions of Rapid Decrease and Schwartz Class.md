@@ -106,7 +106,7 @@ date of note: 2024-05-24
 >\mathcal{C}_{0}^{\infty}(\mathbb{R}^n) \subseteq \mathscr{S}(\mathbb{R}^n) \subseteq \mathcal{C}^{\infty}(\mathbb{R}^n)
 >$$
 
-- [[Smooth Map]]
+- [[Smooth Map between Euclidean Spaces]]
 
 
 ## Lp space
@@ -135,7 +135,7 @@ date of note: 2024-05-24
 -----------
 ##  Recommended Notes and References
 
-- [[Smooth Map]]
+- [[Smooth Map between Euclidean Spaces]]
 - [[Fréchet Space]]
 
 - [[Space of Tempered Distributions]]

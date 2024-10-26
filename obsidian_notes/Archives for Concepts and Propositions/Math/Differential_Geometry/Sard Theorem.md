@@ -82,6 +82,6 @@ date of note: 2024-05-20
 ##  Recommended Notes and References
 
 
-- [[Smooth Map]]
+- [[Smooth Map between Euclidean Spaces]]
 
 - [[Introduction to Smooth Manifolds by Lee]]

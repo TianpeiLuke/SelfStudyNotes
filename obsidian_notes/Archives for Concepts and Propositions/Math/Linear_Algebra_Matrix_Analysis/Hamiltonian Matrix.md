@@ -62,7 +62,7 @@ date of note: 2024-05-09
 >- $$\text{dim}(\text{sp}(2n))= 2n^2 + n.$$
 >- The corresponding **Lie group** is a **sympletic group.** $$\text{Sp}(2n)$$
 
-- [[Lie Group and Lie Algebra]]
+- [[Lie Group]]
 
 
 ## Hamiltonian Mechanics

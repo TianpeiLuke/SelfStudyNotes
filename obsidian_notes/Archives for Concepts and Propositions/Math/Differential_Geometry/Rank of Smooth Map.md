@@ -83,7 +83,7 @@ date of note: 2024-05-20
 ##  Recommended Notes and References
 
 
-- [[Smooth Map]]
+- [[Smooth Map between Euclidean Spaces]]
 
 - [[Rank and Nullity of Linear Map]]
 

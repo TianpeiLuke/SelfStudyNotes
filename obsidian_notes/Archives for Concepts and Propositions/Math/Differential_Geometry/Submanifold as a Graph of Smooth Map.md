@@ -16,7 +16,7 @@ date of note: 2024-05-20
 
 
 
-- [[Smooth Map]]
+- [[Smooth Map between Euclidean Spaces]]
 - [[Graph of Function]]
 
 ## Explanation
@@ -28,7 +28,7 @@ date of note: 2024-05-20
 -----------
 ##  Recommended Notes and References
 
-- [[Smooth Map]]
+- [[Smooth Map between Euclidean Spaces]]
 
 - [[Embedded Submanifold]]
 

@@ -34,7 +34,7 @@ date of note: 2024-10-17
 
 - [[Polynomial Ring]]
 - [[Continuous Function]]
-- [[Smooth Map]]
+- [[Smooth Map between Euclidean Spaces]]
 
 >[!important] Definition
 >Suppose 
