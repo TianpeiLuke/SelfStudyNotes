@@ -27,6 +27,6 @@ date of note: 2024-05-20
 
 
 - [[Vector Bundle]]
-- [[Tangent Space and Tangent Bundle]]
+- [[Concepts related to Tangent Space and Tangent Bundle]]
 
 - [[Introduction to Smooth Manifolds by Lee]]

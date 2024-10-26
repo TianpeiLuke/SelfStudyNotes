@@ -27,7 +27,7 @@ date of note: 2024-06-24
 - [[Riemannian Metric and Riemannian Manifold]]
 
 - [[Tangent Vector and Differential via Velocity of Smooth Curves]]
-- [[Tangent Space and Tangent Bundle]]
+- [[Concepts related to Tangent Space and Tangent Bundle]]
 
 - [[Connection in Vector Bundle]]
 - [[Affine Connection on Tangent Bundle]]

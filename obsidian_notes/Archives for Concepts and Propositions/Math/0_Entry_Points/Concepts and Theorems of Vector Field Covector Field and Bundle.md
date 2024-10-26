@@ -141,7 +141,7 @@ date of note: 2024-05-06
 -----------
 ##  Recommended Notes and References
 
-- [[Tangent Space and Tangent Bundle]]
+- [[Concepts related to Tangent Space and Tangent Bundle]]
 - [[Cotangent Space and Differential of Map]]
 
 - [[Introduction to Smooth Manifolds by Lee]]

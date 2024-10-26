@@ -57,7 +57,7 @@ date of note: 2024-10-02
 > The property of **tangent bundle** is related to the properties of the *corresponding map* $F$ viewed as **continuous map**. 
 
 - [[Tangent Bundle]]
-- [[Tangent Space and Tangent Bundle]]
+- [[Concepts related to Tangent Space and Tangent Bundle]]
 
 
 

@@ -46,19 +46,6 @@ date of note: 2024-05-06
 >![[tangent_space_to_vector_space_diagram.png]]
 >
 
- <img src="https://i.upmath.me/svg/%0A%5Cbegin%7Btikzcd%7D%0A%09V%20%26%26%20%7BT_%7Ba%7DV%7D%20%5C%5C%0A%09%5C%5C%0A%09W%20%26%26%20%7BT_%7BL(a)%7DW%7D%0A%09%5Carrow%5B%22%5Csimeq%22%2C%20from%3D1-1%2C%20to%3D1-3%5D%0A%09%5Carrow%5B%22L%22'%2C%20from%3D1-1%2C%20to%3D3-1%5D%0A%09%5Carrow%5B%22%7BdL_a%7D%22%2C%20from%3D1-3%2C%20to%3D3-3%5D%0A%09%5Carrow%5B%22%5Csimeq%22'%2C%20from%3D3-1%2C%20to%3D3-3%5D%0A%5Cend%7Btikzcd%7D%0A" alt="
-\begin{tikzcd}
-	V &amp;&amp; {T_{a}V} \\
-	\\
-	W &amp;&amp; {T_{L(a)}W}
-	\arrow[&quot;\simeq&quot;, from=1-1, to=1-3]
-	\arrow[&quot;L&quot;', from=1-1, to=3-1]
-	\arrow[&quot;{dL_a}&quot;, from=1-3, to=3-3]
-	\arrow[&quot;\simeq&quot;', from=3-1, to=3-3]
-\end{tikzcd}
-" />
-
-
 - [[Introduction to Smooth Manifolds by Lee]]
 
 

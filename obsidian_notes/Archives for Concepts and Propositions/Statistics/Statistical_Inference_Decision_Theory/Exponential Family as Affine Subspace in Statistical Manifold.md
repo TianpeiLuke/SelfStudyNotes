@@ -29,7 +29,7 @@ date of note: 2024-06-24
 
 - [[Affine Space]]
 - [[Statistical Manifold of Parametric Family]]
-- [[Tangent Space and Tangent Bundle]]
+- [[Concepts related to Tangent Space and Tangent Bundle]]
 
 - [[Log-Likelihood Score Function]]
 - [[Fisher Information Metric of Statistical Manifold]]

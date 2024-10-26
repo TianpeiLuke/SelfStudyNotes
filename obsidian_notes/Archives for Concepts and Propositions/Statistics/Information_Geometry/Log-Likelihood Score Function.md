@@ -28,7 +28,7 @@ date of note: 2024-06-24
 - [[Inner Product Space]]
 
 - [[Tangent Vector and Differential via Velocity of Smooth Curves]]
-- [[Tangent Space and Tangent Bundle]]
+- [[Concepts related to Tangent Space and Tangent Bundle]]
 
 
 - [[Methods of Information Geometry by Amari]]

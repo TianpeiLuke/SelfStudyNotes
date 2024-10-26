@@ -12,7 +12,6 @@ date of note: 2024-10-25
 
 ##  List of Concepts
 
-
 ### Smooth Manifold from Topology
 
 - [[Topological Manifold]]
@@ -30,6 +29,8 @@ date of note: 2024-10-25
 ### Example of Smooth Manifolds
 
 
+- [[Stiefel Manifold]]
+- [[Grassmann Manifold as Quotient Manifold]]
 
 
 ### Smooth Map
