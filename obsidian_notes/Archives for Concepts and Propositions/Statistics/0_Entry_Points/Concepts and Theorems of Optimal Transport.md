@@ -72,22 +72,20 @@ routing, involve moving distributions, and that thread appears in all of the sem
 - [[Transportation Cost Inequality]]
 - [[Isoperimetric Inequality via Transportation Cost]]
 
-### Diffusion Process
-
-- [[Concepts and Theorems for Stochastic Differential Equations]]
-
-- [[Ito Stochastic Integration]]
-- [[Stochastic Differential]]
-- [[Stochastic Differential Equations]]
-- [[Infinitesimal Generator of Stochastic Differential Equation]]
-- [[Fokker–Planck and Kolmogorov Forward-Backward Equation]]
-- [[Fokker–Planck Equation via Wasserstein Distance]]
 
 ### Gradient Flows
 
 - [[Gradient Descent Algorithm]]
 - [[Gradient Flow on Euclidean Space]]
+- [[Proximal Algorithm]]
 - [[Gradient Flow on Smooth Manifold]]
+- [[Gradient Flows in Wasserstein Space]]
+- [[Generalized Proximal Method]]
+- [[Heat Equation and Fokker–Planck Equation via Wasserstein Distance]]
+- [[Concepts and Theorems for Stochastic Differential Equations]]
+
+
+
 
 
 

@@ -63,7 +63,7 @@ date of note: 2024-10-25
 - [[Gradient Descent Algorithm]]
 - [[Langevin Dynamics and Langevin Sampling]]
 
-- [[Fokker–Planck Equation via Wasserstein Distance]]
+- [[Heat Equation and Fokker–Planck Equation via Wasserstein Distance]]
 - [[Fokker–Planck and Kolmogorov Forward-Backward Equation]]
 
 - [[Polish Space]]

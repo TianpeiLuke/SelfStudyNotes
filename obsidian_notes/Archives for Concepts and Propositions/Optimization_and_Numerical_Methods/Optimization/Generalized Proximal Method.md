@@ -58,6 +58,12 @@ date of note: 2024-05-12
 - [[Mirror Descent Algorithm]]
 
 
+## Gradient Flow on Wasserstein Space
+
+- [[Gradient Flows in Wasserstein Space]]
+- [[Heat Equation and Fokker–Planck Equation via Wasserstein Distance]]
+
+
 -----------
 ##  Recommended Notes and References
 
