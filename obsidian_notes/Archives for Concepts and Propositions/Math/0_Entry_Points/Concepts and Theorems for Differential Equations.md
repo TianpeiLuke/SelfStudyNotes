@@ -55,8 +55,7 @@ date of note: 2024-05-30
 
 ### Manifolds 
 
-- [[Smooth Manifolds]]
-- [[Tangent Space and Tangent Bundle]]
+- [[Concepts and Theorems in Smooth Manifolds]]
 - [[Concepts and Theorems of Vector Field Covector Field and Bundle]]
 
 - [[Invariant Manifold]]
