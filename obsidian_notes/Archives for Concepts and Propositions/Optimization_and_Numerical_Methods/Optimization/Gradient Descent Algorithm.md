@@ -39,7 +39,7 @@ date of note: 2024-05-12
 
 - [[Line Search Strategies for Optimal Stepsize]]
 
-## Riemannian Manifold
+### Gradient Descent on Riemannian Manifold
 
 >[!important] Definition
 >Let $(\mathcal{M}, g)$ be a *Riemannian manifold* and $R: T\mathcal{M} \to \mathcal{M}$ is the *retraction map* on $\mathcal{M}$.
@@ -124,6 +124,19 @@ date of note: 2024-05-12
 
 - [[BFGS Algorithm]]
 
+## Gradient Flow as Continuous Limit of Gradient Descent
+
+>[!important]
+>The **gradient descent** algorithm can be seen as *discretized* version of **gradient flow**
+>$$
+>\begin{align*}
+>&- \alpha \nabla f(x_{k})  = x_{k+1} - x_{k} \\[5pt]
+>&\implies -\alpha \nabla f(x(t))dt  = dx(t) \\[5pt]
+>& \iff \frac{d}{dt} x(t) = -\alpha \nabla f(x(t))
+>\end{align*}
+>$$ 
+
+- [[Continuity Equation and Gradient Flow on Euclidean Space]]
 
 ## Conjugate Gradient Method
 

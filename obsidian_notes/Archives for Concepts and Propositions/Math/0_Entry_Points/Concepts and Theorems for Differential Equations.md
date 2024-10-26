@@ -45,6 +45,7 @@ date of note: 2024-05-30
 - [[Maximal Integral Curve of Vector Field]]
 - [[Fundamental Theorem on Flows]]
 
+- [[Continuity Equation and Gradient Flow on Euclidean Space]]
 
 ### Lyapunov Stability
 
@@ -65,6 +66,8 @@ date of note: 2024-05-30
 - [[Implicit Function Theorem]]
 - [[Rectification Lemma and Flow Box Theorem]]
 - [[Inverse Function Theorem]]
+- [[Gradient Flow on Smooth Manifold]]
+
 
 ### Periodic Solutions
 

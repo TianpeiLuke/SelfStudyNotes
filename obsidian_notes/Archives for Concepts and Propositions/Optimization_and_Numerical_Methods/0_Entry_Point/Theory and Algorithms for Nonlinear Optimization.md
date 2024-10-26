@@ -146,6 +146,11 @@ date of note: 2024-05-12
 - [[Primal-Dual Interior Point Method for Convex Optimization]]
 
 
+### Optimization on Manifold
+
+- [[Gradient Descent Algorithm on Riemannian Manifold]]
+
+
 ## Explanation
 
 

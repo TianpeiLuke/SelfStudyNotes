@@ -68,6 +68,7 @@ date of note: 2024-07-08
 
 
 - [[Monte Carlo Statistical Methods by Robert]] pp 326, 318
+- Wibisono, A. (2018, July). Sampling as optimization in the space of measures: The Langevin dynamics as a composite optimization problem. In _Conference on Learning Theory_ (pp. 2093-3027). PMLR.
 - Chen, T., Fox, E., & Guestrin, C. (2014, June). Stochastic gradient hamiltonian monte carlo. In _International conference on machine learning_ (pp. 1683-1691). PMLR.
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 454 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 515, 527 - 529
