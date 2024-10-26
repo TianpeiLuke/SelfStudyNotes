@@ -19,81 +19,7 @@ date of note: 2024-05-30
 
 ### Ordinary Differential Equations
 
-- [[Ordinary Differential Equations]]
-
-- [[Fixed Point of Map]]
-- [[Contraction Function]]
-- [[Contraction Map Principle]]
-- [[Inverse Function Theorem]]
-- [[Implicit Function Theorem]]
-
-- [[Existence and Uniqueness of Solution of Ordinary Differential Equations]]
-- [[Smoothness of Solution of ODE]]
-- [[Extension of Solution of Ordinary Differential Equations]]
-- [[Autonomous and Nonautonomous Ordinary Differential Equations]]
-
-
-### Flows
-
-- [[Concepts and Theorems of Vector Field Covector Field and Bundle]]
-
-- [[Integral Curve of Vector Field]]
-- [[Global Flow on Smooth Manifold]]
-- [[Vector Field as Infinitesimal Generator of Global Flow]]
-- [[Local Flow on Smooth Manifold]]
-- [[Vector Field as Infinitesimal Generator of Local Flow]]
-- [[Maximal Integral Curve of Vector Field]]
-- [[Fundamental Theorem on Flows]]
-
-- [[Continuity Equation and Gradient Flow on Euclidean Space]]
-
-### Lyapunov Stability
-
-- [[Lyapunov Stable Asymptotically Stable Solution of ODE]]
-- [[Lyapunov Function]]
-- [[Lyapunov Stability Theorem]]
-
-### Manifolds 
-
-- [[Concepts and Theorems for Smooth Manifolds]]
-- [[Concepts and Theorems of Vector Field Covector Field and Bundle]]
-
-- [[Invariant Manifold]]
-- [[Stable Manifold]]
-- [[Hamiltonian Systems of Differential Equations]]
-- [[Phase Space of Hamiltonian Systems of Differential Equations]]
-- [[Implicit Function Theorem]]
-- [[Rectification Lemma and Flow Box Theorem]]
-- [[Inverse Function Theorem]]
-- [[Gradient Flow on Smooth Manifold]]
-
-
-### Periodic Solutions
-
-- [[Periodic Solutions of ODE]]
-- [[Poincaré Map]]
-- [[Poincaré–Bendixson Theory]]
-
-### Linear System of Differential Equations
-
-- [[Homogeneous Linear Differential Equations]]
-- [[Gronwall Inequality]]
-- [[Principle of Superposition]]
-- [[Linear ODE with Constant Coefficients]]
-- [[Exponential Map of Linear Operator]]
-
-###  Stability of Nonlinear System
-
-- [[Variation of Parameters Formula]]
-- [[Floquet Theory]]
-- [[Lyapunov Exponents]]
-- [[Hill Equation]]
-
-### Applications
-
-- [[Euler–Lagrange Equations]]
-- [[Diffusion and Infinite Dimensional ODE]]
-
+- [[Concepts and Theorems for Ordinary Differential Equations]]
 
 ### Partial Differential Equations
 
@@ -128,6 +54,7 @@ date of note: 2024-05-30
 - [[Naiver-Stokes Equations for Incompressible Viscous Flow]]
 
 
+
 ### Basics of Functional Analysis
 
 - [[Concepts and Theorems in Banach Space]]
@@ -155,6 +82,14 @@ date of note: 2024-05-30
 - [[Weak Derivative via Tempered Distribution]]
 - [[Sobolev Space]]
 
+
+### Gradient Flows
+
+- [[Gradient Flow on Euclidean Space]]
+- [[Gradient Flow on Smooth Manifold]]
+- [[Gradient Flows in Wasserstein Space]]
+
+
 ### Second-Order Elliptic Equations
 
 - [[Second-Order Elliptic Equation]]
@@ -163,6 +98,7 @@ date of note: 2024-05-30
 
 - [[Second-Order Parabolic Equation]]
 - [[Second-Order Hyperbolic Equation]]
+
 
 
 

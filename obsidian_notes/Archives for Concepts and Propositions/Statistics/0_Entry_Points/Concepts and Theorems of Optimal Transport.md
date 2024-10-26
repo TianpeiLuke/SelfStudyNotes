@@ -86,7 +86,7 @@ routing, involve moving distributions, and that thread appears in all of the sem
 ### Gradient Flows
 
 - [[Gradient Descent Algorithm]]
-- [[Continuity Equation and Gradient Flow on Euclidean Space]]
+- [[Gradient Flow on Euclidean Space]]
 - [[Gradient Flow on Smooth Manifold]]
 
 

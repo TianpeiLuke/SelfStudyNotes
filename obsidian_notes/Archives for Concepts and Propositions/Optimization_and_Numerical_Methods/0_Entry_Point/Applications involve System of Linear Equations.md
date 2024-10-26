@@ -513,7 +513,7 @@ date of note: 2024-09-27
 
 ## Linear ODE and Stochastic Linear ODE
 
-- [[Concepts and Theorems for Differential Equations]]
+- [[Concepts and Theorems for Ordinary Differential Equations]]
 - [[Concepts and Theorems for Stochastic Differential Equations]]
 - [[Theory and Algorithms for Numerical Solution of Differential Equations]]
 

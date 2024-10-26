@@ -268,7 +268,7 @@ date of note: 2024-07-13
 
 ### System of Linear Differential Equations
 
-- [[Concepts and Theorems for Differential Equations]]
+- [[Concepts and Theorems for Ordinary Differential Equations]]
 - [[Ordinary Differential Equations]]
 - [[Autonomous and Nonautonomous Ordinary Differential Equations]]
 - [[Linear ODE with Constant Coefficients]]

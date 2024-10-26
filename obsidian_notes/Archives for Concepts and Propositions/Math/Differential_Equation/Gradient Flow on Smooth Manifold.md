@@ -17,10 +17,24 @@ date of note: 2024-10-25
 >[!important]
 >**Name**: 
 
-- [[Continuity Equation and Gradient Flow on Euclidean Space]]
+- [[Gradient Flow on Euclidean Space]]
+
+>[!important] Definition
+>Let  $(M, g)$ be a Riemannian manifold and $X$ be a vector field on $M$. Let $\Phi: M \to \mathbb{R}$ be a smooth function on $M$
+>
+>The **gradient flow** associated with $\Phi$ is the *flow* induced by the *ordinary differential equations*
+>$$
+>\frac{d}{dt} X(t) = - \text{grad}_{X(t)}\,\Phi
+>$$
 
 
-- [[Smooth Manifold]]
+- [[Smooth Function on Smooth Manifold]]
+- [[Vector Field on Manifold]]
+- [[Riemannian Metric and Riemannian Manifold]]
+- [[Local Flow on Smooth Manifold]]
+- [[Gradient of Smooth Map]]
+
+
 - [[Space of Bounded Signed Measures]]
 - [[Divergence Operator of Vector Field on Riemannian Manifold]]
 - [[Tangent Space as Finite Dimensional Vector Space]]
@@ -55,13 +69,14 @@ date of note: 2024-10-25
 - [[Polish Space]]
 
 - [[Tangent Bundle]]
-- [[Riemannian Metric and Riemannian Manifold]]
-- [[Ordinary Differential Equations]]
 
+- [[Ordinary Differential Equations]]
+- [[Smooth Manifold]]
 
 - [[Gradient Flows in Metric Spaces and in Space of Probability Measures by Ambrosio]]
 - [[An Introduction to Optimization on Smooth Manifolds by Boumal]]
 - [[Optimal Transport for Applied Mathematicians by Santambrogio]]
+- [[Optimal Transport Old and New by Villani]] pp 629 - 635, 681, 694
 - [[Ordinary Differential Equations by Chicone]]
 
 - Wibisono, A. (2018, July). Sampling as optimization in the space of measures: The Langevin dynamics as a composite optimization problem. In _Conference on Learning Theory_ (pp. 2093-3027). PMLR.

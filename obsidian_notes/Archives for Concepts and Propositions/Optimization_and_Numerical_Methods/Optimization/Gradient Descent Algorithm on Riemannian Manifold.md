@@ -60,7 +60,7 @@ date of note: 2024-05-12
 - [[Unconstrained Global Minimization]]
 - [[Unconstrained Local Minimization]]
 - [[Automatic Differentiation]]
-- [[Continuity Equation and Gradient Flow on Euclidean Space]]
+- [[Gradient Flow on Euclidean Space]]
 
 
 -----------

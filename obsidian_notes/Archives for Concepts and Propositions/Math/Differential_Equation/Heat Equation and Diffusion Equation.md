@@ -130,7 +130,9 @@ date of note: 2024-06-15
 - [[Fokker–Planck and Kolmogorov Forward-Backward Equation]]
 
 
+## Gradient Flow on Wasserstein Space
 
+- [[Gradient Flows in Wasserstein Space]]
 
 
 

@@ -29,3 +29,4 @@ date of note: 2024-05-20
 
 
 - [[Introduction to Riemannian Manifolds by Lee]]
+- [[Optimal Transport Old and New by Villani]]
