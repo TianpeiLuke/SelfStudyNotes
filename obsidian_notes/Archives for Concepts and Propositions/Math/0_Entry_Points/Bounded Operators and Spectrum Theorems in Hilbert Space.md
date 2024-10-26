@@ -19,8 +19,9 @@ date of note: 2024-05-11
 
 ### Topology of Linear Operator Space on Hilbert Space
 
-- Strong Operator Topology:  [[Convergence in Norm]]
-- Weak Operator Topology: 
+- [[Norm Topology]]
+- [[Convergence in Norm]]
+- [[Weak Operator Topology]]
 
 
 ### Compact Operator
@@ -75,7 +76,8 @@ date of note: 2024-05-11
 
 ## Explanation
 
-
+- [[Concepts and Theorems in Finite Dimensional Vector Space]]
+- [[Concepts and Theorems for Matrix Theory]]
 
 
 

@@ -32,6 +32,7 @@ date of note: 2024-05-27
 >$$
 >for some $(a_{0}, \,{,}\ldots{,}\,a_{n})$.
 
+- [[Krylov Subspace and Krylov Matrix]]
 
 ## Explanation
 
