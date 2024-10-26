@@ -17,7 +17,7 @@ date of note: 2024-09-13
 
 ### N-Gram Models
 
-- [[n-Gram Model and Bags of Words Representation]]
+- [[n-Gram Model and Language Model]]
 
 ### Vector Semantics
 

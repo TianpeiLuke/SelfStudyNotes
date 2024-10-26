@@ -26,7 +26,7 @@ date of note: 2024-09-12
 
 
 - [[Word Embedding]]
-- [[n-Gram Model and Bags of Words Representation]]
+- [[n-Gram Model and Language Model]]
 - [[Cosine Similarity and Cosine Distance]]
 
 
