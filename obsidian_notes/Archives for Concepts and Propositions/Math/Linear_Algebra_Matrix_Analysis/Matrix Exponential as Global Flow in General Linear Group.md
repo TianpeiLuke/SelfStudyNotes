@@ -51,9 +51,9 @@ date of note: 2024-10-27
 >[!important]
 >We can define  a map $$\theta: \mathbb{R} \times \text{GL}(n;\mathbb{C}) \to \text{GL}(n;\mathbb{C})$$ from  **one-parameter subgroup** $A$ by $$\theta(t, X)= A(t)\,X$$
 >
->Note that, $\theta$ is a **global flow** in $\text{GL}(n; \mathbb{C})$ since the following conditions are satisfied:
+>We show that $\theta$ is a **global flow** in $\text{GL}(n; \mathbb{C})$ since the following conditions are satisfied:
 >- $\theta$ is a *continuous map*
->- $$\theta(0, X) = X := A(0)X$$
+>- $$\theta(0, X) = A(0)X = X$$
 >- for any $X\in \text{GL}(n; \mathbb{C})$, any $s,t\in \mathbb{R}$ $$\begin{align*} \theta(t, \theta(s, X)) & = A(t)\theta(s, X) \\[5pt] &= A(t)A(s)X \\[5pt] &= A(t+s)X \\[5pt] &= \theta(t+s, X)\end{align*}$$
 
 - [[Topological Group Action]]
