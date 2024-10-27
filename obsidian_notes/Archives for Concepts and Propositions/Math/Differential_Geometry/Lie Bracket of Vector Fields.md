@@ -66,6 +66,13 @@ date of note: 2024-05-18
 
 - [[Connection in Vector Bundle]]
 
+## Algebraic Definition of Lie Bracket from Lie Algebra
+
+![[Lie Algebra as Vector Space with Lie Bracket#^cd013a]]
+
+- [[Lie Algebra as Vector Space with Lie Bracket]]
+
+
 
 
 -----------
@@ -85,3 +92,4 @@ date of note: 2024-05-18
 
 
 - [[Introduction to Smooth Manifolds by Lee]]
+- [[Lie Groups Lie Algebra and Representations by Hall]]

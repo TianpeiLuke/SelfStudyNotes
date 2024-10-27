@@ -37,7 +37,7 @@ date of note: 2024-05-20
 > v \mathbin{\lrcorner } \omega &= (i_v\omega).
 > \end{align*}
 >$$ 
-> This is often read ""**$v$ into $\omega$**."
+> This is often read “**$v$ into $\omega$**."
 
 >[!info]
 >$$

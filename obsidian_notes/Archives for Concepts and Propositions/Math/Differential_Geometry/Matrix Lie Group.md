@@ -7,35 +7,38 @@ tags:
   - math/linear_algebra
 keywords:
   - lie_group
+  - matrix_lie_group
 topics:
   - lie_group
   - differential_geometry
   - algebra
-name: Lie Group
+name: Matrix Lie Group
 date of note: 2024-05-26
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Lie Group
+>**Name**: Matrix Lie Group
 
 >[!important] Definition
->A **Lie group** is a *smooth manifold* $G$ (without boundary) that is also a *group* in the algebraic sense, with the property that 
->- the *multiplication map* $m: G \times G \to G$, given by $$m(g, h) = gh$$   
->- and *inversion map* $i: G\to G$, given by $$i(g) = g^{-1}$$ 
+>A **matrix Lie group** is a *subgroup* $G$ of the *general linear group* $\text{GL}(n; \mathbb{C})$ with the following property: 
+>- For $\{A_{n}\}$ is any sequence in $G$, if $$A_{n} \to A$$ then 
+>	- either $A\in G$ 
+>	- or $A$ is *not invertible* i.e. $A\not\in \text{GL}(n; \mathbb{C})$
 >  
->are both *smooth*.
 
-- [[Smooth Manifold]]
-- [[Group]]
+- [[Subgroup]]
+- [[General Linear Group]]
+
 
 ## Explanation
 
 >[!important]
->A Lie group is a **topological group**.
+>The condition above means that a *matrix Lie group* is a **closed subgroup** of $\text{GL}(n; \mathbb{C})$.
 
 - [[Topological Group]]
+- [[Closed Set]]
 
 ## Examples
 
@@ -44,7 +47,7 @@ date of note: 2024-05-26
 >
 >For finite dimensional space $V$, a **general linear group** of *degree* $n$  $\text{GL}(n, F)$ is a Lie group with *matrix multiplication* as the multiplication operation.
 
-- [[General Linear Group]] 
+[[General Linear Group]] 
 
 >[!example]
 >A **special linear group** of degree $n$, $\text{SL}(n, F)$  is a *Lie group* with *matrix multiplication* as its multiplication operation. 
@@ -83,10 +86,6 @@ date of note: 2024-05-26
 >Thus $\mathbb{S}^1$ is a Lie group, called the **cycle group**.
 
 
-## Matrix Lie Group
-
-- [[Matrix Lie Group]]
-
 ## Tangent Space as Lie Algebra
 
 - [[Lie Algebra as Vector Space with Lie Bracket]]
@@ -97,11 +96,11 @@ date of note: 2024-05-26
 -----------
 ##  Recommended Notes and References
 
-
+- [[Matrix Exponential]]
+- [[Lie Group]]
 - [[Smooth Manifold]]
 - [[Group]]
-
 - [[Topological Group]]
 
 - [[Introduction to Smooth Manifolds by Lee]]
-- [[Lie Groups Lie Algebra and Representations by Hall]]
+- [[Lie Groups Lie Algebra and Representations by Hall]] pp 4

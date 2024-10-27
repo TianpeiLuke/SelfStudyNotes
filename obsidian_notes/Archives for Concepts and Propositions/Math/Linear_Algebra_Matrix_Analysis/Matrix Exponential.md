@@ -29,6 +29,20 @@ date of note: 2024-10-14
 >$$
 >- The series *converges to all* $A$, i.e. with radius of convergence for $|\lambda(A)| \leq \infty.$
 
+
+## Explanation
+
+### Lie Group and Lie Algebra
+
+
+
+- [[Exponential Map via Geodesic]]
+- [[Lie Group]]
+- [[Lie Algebra as Vector Space with Lie Bracket]]
+
+
+## Properties
+
 >[!important] Proposition
 >Let $A\in M_{n}$, $s, t\in \mathbb{R}$.
 >
@@ -49,7 +63,7 @@ date of note: 2024-10-14
 - [[Eigenspace and Spectrum for Linear Map]]
 - [[Resolvent Operator and Spectrum of Linear Operator]]
 
-### Schur Decomposition and Jordan Decomposition for Matrix Exponential
+## Schur Decomposition and Jordan Decomposition for Matrix Exponential
 
 >[!important] Proposition
 >If $A \in M_{n}$ is **self-adjoint (or normal)** with eigen-decomposition (**symmetric Schur form**) $$A = U\,\text{diag}(\lambda_{1}\,{,}\ldots{,}\,\lambda_{n})\,U,$$ where $\lambda_{i}$ are **eigenvalues** of $A$,  then the **exponential** of $A$ also has eigen-decomposition as  $$e^{A} = U\,\text{diag}(e^{\lambda_{1}} \,{,}\ldots{,}\, e^{\lambda_{n}})\,U^{T}$$ 
@@ -66,13 +80,48 @@ date of note: 2024-10-14
 >[!info]
 >If $$A = \sum_{i=1}^{n}\lambda_{i}u_{i}\,u_{i}^{*}$$ then $$e^{tA} = \sum_{i=1}^{n}e^{t\lambda_{i}}\,u_{i}\,u_{i}^{*}$$
 
+## Determinant
+
+>[!important] Proposition
+>For any $X\in M_{n}(\mathbb{C})$, we have 
+>$$
+>\det \left(e^{X}\right) = e^{\text{tr}(X)}
+>$$
+
+- [[Determinant of Linear Transformation]]
+- [[Trace of Matrix]]
 
 
+## Polar Decomposition
+
+![[Polar Decomposition of Transformation#^636e45]]
+
+>[!important] Proposition
+>Let $P\in M_{n}$ be a **self-adjoint**, **positive definite transformation**. 
+>
+>Then $P$ can be **uniquely** written as a **matrix exponential** $$P = e^{X}$$ where $X \in M_{n}$ is **self-adjoint** linear transformation. 
+>
+>- Conversely, if $X\in M_{n}$ is **self-adjoint**, then $$e^{X} \in \mathcal{S}_{++}^{n}$$ is a *self-adjoint*, *positive definite*. 
+
+>[!important] Proposition
+>For $A\in \text{GL}(n)$, there exists a **unique decomposition** $$A  = Ue^{X}$$ where $U$ is *unitary* and $X$ is *self-adjoint*.
+
+- [[Positive Semidefinite Transformation]]
+- [[Self-Adjoint Linear Map]]
+- [[Hermitian or Symmetric Matrix]]
+- [[Polar Decomposition of Transformation]]
 
 
-## Explanation
+## One-Parameter Group
+
+>[!important] Definition
+>
 
 
+- [[Topological Group Action]]
+- [[Local Flow on Smooth Manifold]]
+- [[Global Flow on Smooth Manifold]]
+- [[Lie Groups Lie Algebra and Representations by Hall]] pp 41
 
 
 
@@ -95,3 +144,4 @@ date of note: 2024-10-14
 
 - [[Matrix Analysis by Horn]]
 - [[Matrix Analysis for Scientists and Engineers by Laub]] pp 109 - 114
+- [[Lie Groups Lie Algebra and Representations by Hall]] pp 31 - 45

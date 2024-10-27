@@ -15,7 +15,8 @@ date of note: 2024-05-20
 >**Name**: 
 
 
-
+- [[Metric Connection]]
+- [[Symmetric Connection]]
 ## Explanation
 
 

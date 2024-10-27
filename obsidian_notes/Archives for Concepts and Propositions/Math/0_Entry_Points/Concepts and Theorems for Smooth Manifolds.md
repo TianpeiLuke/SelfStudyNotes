@@ -139,7 +139,7 @@ date of note: 2024-10-25
 
 ### Lie Group and Lie Algebra
 
-#### Lie Group and Examples
+#### Lie Group and Matrix Lie Group
 
 - [[Lie Group]]
 - [[General Linear Group]]
@@ -147,6 +147,7 @@ date of note: 2024-10-25
 - [[Orthogonal Group]]
 - [[Unitary Group]]
 - [[Special Orthogonal Group and Special Unitary Group]]
+- [[Matrix Exponential]]
 
 #### Lie Derivatives
 
@@ -154,6 +155,8 @@ date of note: 2024-10-25
 - [[Lie Derivative of Vector Field]]
 
 #### Lie Algebra
+
+- [[Lie Algebra as Vector Space with Lie Bracket]]
 
 
 ### Sympletic Manifold

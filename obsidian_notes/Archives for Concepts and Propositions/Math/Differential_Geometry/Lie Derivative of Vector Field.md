@@ -42,7 +42,7 @@ date of note: 2024-05-20
 ## Explanation
 
 
-
+- [[Bregman Divergence]]
 
 
 ## Relation with Lie Bracket

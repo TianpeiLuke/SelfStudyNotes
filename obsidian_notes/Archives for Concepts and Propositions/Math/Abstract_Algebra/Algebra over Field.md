@@ -25,6 +25,8 @@ date of note: 2024-05-28
 >- **Distributivity of Multiplication over Addition**: for any $a, b, c\in \mathcal{A}$,  $$a(b+c)=ab+ac,$$
 >- **Distributivity of Addition over Multiplication**: for any $a, b, c\in \mathcal{A}$,  $$(a+b)c=ac+bc,$$
 
+^60bc18
+
 
 - [[Vector Space over a Field]]
 - [[Group]]

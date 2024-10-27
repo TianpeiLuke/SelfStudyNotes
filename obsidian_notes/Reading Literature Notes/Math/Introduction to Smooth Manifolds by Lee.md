@@ -139,4 +139,7 @@ date of note: 2024-05-06
 ----
 ## Reference
 
+
 - [[Topology Book by Munkres]]
+- [[Introduction to Riemannian Manifolds by Lee]]
+- [[Lie Groups Lie Algebra and Representations by Hall]]
