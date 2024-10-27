@@ -81,6 +81,16 @@ date of note: 2024-05-07
 >$$
 
 
+## Relation with Cross Entropy
+
+>[!important]
+>Note that the *Kullback-Leibler divergence* can be represented as 
+>$$
+>\mathbb{KL}\left( P \left\|\right. Q \right) = H_{ce}(P, Q) - H(P) = \mathbb{E}_{ P }\left[  - \log Q \right]  - H(P) 
+>$$
+
+
+- [[Cross-Entropy Loss Function]]
 
 ## Chain Rule
 

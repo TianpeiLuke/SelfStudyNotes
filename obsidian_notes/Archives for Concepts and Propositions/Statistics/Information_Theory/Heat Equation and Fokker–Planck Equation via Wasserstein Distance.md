@@ -31,10 +31,12 @@ date of note: 2024-06-11
 >$$
 >- We have $$\frac{\delta F}{\delta \rho} =\log \rho + 1$$
 >- So $$\nabla \left(\frac{\delta F}{\delta \rho}\right) = \frac{\nabla \rho}{\rho}$$
+>- The entropy functional $F$ is referred to as the **internal energy**.
 >
->Also define $\mathcal{L}$ as a **linear potential functional** $$\mathcal{L}(\rho) := \int_{\Omega} L(x)\,d\rho(x) = \mathbb{E}_{ \rho }\left[  L(X) \right]$$ 
+>Also define $\mathcal{L}$ as a **linear functional** $$\mathcal{L}(\rho) := \int_{\Omega} L(x)\,d\rho(x) = \mathbb{E}_{ \rho }\left[  L(X) \right]$$ 
 >- We have $$\frac{\delta \mathcal{L}}{\delta \rho} =L \implies \nabla \left(\frac{\delta \mathcal{L}}{\delta \rho}\right) = \nabla L$$
 >- We could see $L$ as the *loss function* in machine learning.
+>- The linear functional $\mathcal{L}$ is referred to as the **potential energy.**
 
 - [[Entropy Functional]]
 - [[Expectation of Random Variable]]
@@ -73,8 +75,8 @@ date of note: 2024-06-11
 >$$
 >\rho_{k+1}^{\tau} \in \arg\min_{\rho}\left\{ F(\rho) + \mathcal{L}(\rho) + \frac{W_{2}^2(\rho, \rho_{k}^{\tau}) }{2\tau}  \right\}  
 >$$
->
->This gradient flow is the *solution* of **fokker-planck equation** 
+>  
+>This gradient flow is the *solution* of **Fokker-Planck equation** 
 >$$
 >\begin{align*}
 >\frac{ \partial }{ \partial t }\rho_{t} - \text{div}\left(\rho_{t}\; \nabla \left( \frac{\delta (F+ \mathcal{L})}{\delta \rho} \right)(\rho_{t}) \right)  &= 0 \\[5pt]
@@ -83,9 +85,37 @@ date of note: 2024-06-11
 \end{align*}
 >$$
 
-
 - [[Fokker–Planck and Kolmogorov Forward-Backward Equation]]
 - [[Stochastic Differential Equations]]
+
+>[!important]
+>Note that the composite functional $F + \mathcal{L}$ is the **Kullback-Leibler divergence** if $\mathcal{L}$ is the *cross entropy* $$\mathcal{L} = \mathbb{E}_{ \rho }\left[  -\log \nu \right]$$ 
+>Thus
+>$$
+>\begin{align*}
+>J(\rho) &:= F(\rho) + \mathcal{L}(\rho) \\[5pt] 
+>&:= -H(\rho) + \mathbb{E}_{ \rho }\left[  -\log \nu \right] \\[5pt] 
+>&= \mathbb{E}_{ \rho }\left[ \log \left(\frac{\rho}{\nu}\right) \right] \\[5pt] 
+>&:= \mathbb{KL}\left( \rho \left\|\right. \nu  \right)
+>\end{align*}
+>$$
+>with loss function $L$ as the *negative log-likelihood function* of a *prior measure* $\nu$
+>$$L = -\log \nu \quad \iff \quad \nu = e^{-L}$$
+>
+>Then the *discretized gradient flow* becomes the **entropy minimization algorithm**
+>$$
+>\rho_{k+1}^{\tau} \in \arg\min_{\rho}\left\{ \mathbb{KL}\left( \rho \left\|\right. \nu  \right) + \frac{W_{2}^2(\rho, \rho_{k}^{\tau}) }{2\tau}  \right\}  
+>$$
+>- The corresponding **Fokker-Planck equation** has the same form as the **score matching** algorithm 
+>$$
+>\begin{align*}
+>\frac{ \partial }{ \partial t }\rho_{t} + \text{div}(\rho_{t}\, \left(\nabla \log \rho_{t}  - \nabla \log \nu\right)    )  &= 0 
+\end{align*}
+>$$
+
+- [[Kullback-Leibler Divergence]]
+- [[Entropy Minimization Algorithm]]
+- [[Score Matching and Denoising Score Matching]]
 
 ### Uniqueness
 
@@ -99,6 +129,10 @@ date of note: 2024-06-11
 >	- In particular, $$J > -\infty$$ is *bounded from below*.
 >- Moreover, for each $\tau >0$, the following sequence of optimization problems recursively defined is **well-posed**  $$\rho_{k+1}^{\tau} \in \arg\min_{\rho}\left\{ J(\rho) + \frac{W_{2}^2(\rho, \rho_{k}^{\tau}) }{2\tau}  \right\}, \quad k=0\,{,}\ldots{,}\,$$
 >	-  That is, there **exists** a **minimizer** at each step $k$, and the minimizer is **unique.** 
+
+
+>[!info]
+>As we just showed, the functional $J$ can be the KL-divergence, thus the conclusion of above proposition corresponds to the **maximum entropy learning**
 
 - [[Maximum Entropy Learning]]
 - [[Variational Formula for Entropy Functional]]
@@ -150,7 +184,7 @@ date of note: 2024-06-11
 - [[Fokker–Planck and Kolmogorov Forward-Backward Equation]]
 - [[Langevin Dynamics and Langevin Sampling]]
 - [[Stochastic Gradient Descent Algorithm]]
-
+- Wibisono, A. (2018, July). Sampling as optimization in the space of measures: The Langevin dynamics as a composite optimization problem. In _Conference on Learning Theory_ (pp. 2093-3027). PMLR.
 
 
 

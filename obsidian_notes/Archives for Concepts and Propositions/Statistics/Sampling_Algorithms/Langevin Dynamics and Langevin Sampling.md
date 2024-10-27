@@ -56,6 +56,7 @@ date of note: 2024-07-08
 
 - [[Gradient Flow in Wasserstein Space]]
 - [[Heat Equation and Fokker–Planck Equation via Wasserstein Distance]]
+- Wibisono, A. (2018, July). Sampling as optimization in the space of measures: The Langevin dynamics as a composite optimization problem. In _Conference on Learning Theory_ (pp. 2093-3027). PMLR.
 
 
 
