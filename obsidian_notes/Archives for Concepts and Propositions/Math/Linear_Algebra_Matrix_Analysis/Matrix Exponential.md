@@ -112,16 +112,13 @@ date of note: 2024-10-14
 - [[Polar Decomposition of Transformation]]
 
 
-## One-Parameter Group
+## Global Flow in General Linear Group
 
->[!important] Definition
->
+![[Matrix Exponential as Global Flow in General Linear Group#^926b51]]
 
+![[Matrix Exponential as Global Flow in General Linear Group#^b0ad7e]]
 
-- [[Topological Group Action]]
-- [[Local Flow on Smooth Manifold]]
-- [[Global Flow on Smooth Manifold]]
-- [[Lie Groups Lie Algebra and Representations by Hall]] pp 41
+- [[Matrix Exponential as Global Flow in General Linear Group]]
 
 
 

@@ -73,7 +73,7 @@ date of note: 2024-05-06
 - [[Maximal Integral Curve of Vector Field]]
 - [[Fundamental Theorem on Flows]]
 - [[Lie Derivative of Vector Field]]
-
+- [[Matrix Exponential as Global Flow in General Linear Group]]
 
 ### From Differential and Covector to Covector Field
 

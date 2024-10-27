@@ -18,12 +18,20 @@ date of note: 2024-05-06
 ### Lie Group and Matrix Lie Group
 
 - [[Lie Group]]
+- [[Matrix Lie Group]]
 - [[General Linear Group]]
 - [[Special Linear Group]]
 - [[Orthogonal Group]]
 - [[Unitary Group]]
 - [[Special Orthogonal Group and Special Unitary Group]]
+
+
+### Matrix Exponential
+
 - [[Matrix Exponential]]
+- [[Matrix Exponential as Global Flow in General Linear Group]]
+- [[Polar Decomposition of Transformation]]
+
 
 ### Lie Derivatives
 
