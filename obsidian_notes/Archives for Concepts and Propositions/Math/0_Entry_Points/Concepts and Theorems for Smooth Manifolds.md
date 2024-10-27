@@ -156,6 +156,12 @@ date of note: 2024-10-25
 #### Lie Algebra
 
 
+### Sympletic Manifold
+
+- [[Symplectic Matrix]]
+- [[Hamiltonian Matrix]]
+- [[Hamiltonian Function in Mechanic]]
+- [[Hamiltonian Systems of Differential Equations]]
 
 
 
