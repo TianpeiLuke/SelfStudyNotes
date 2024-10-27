@@ -60,6 +60,14 @@ date of note: 2024-10-27
 - [[Local Flow on Smooth Manifold]]
 - [[Global Flow on Smooth Manifold]]
 
+## Exponential Map on Matrix Lie Group
+
+![[Exponential Map of Lie Group and Matrix Lie Group#^c127f2]]
+
+![[Exponential Map of Lie Group and Matrix Lie Group#^910d1c]]
+
+- [[Exponential Map of Lie Group and Matrix Lie Group]]
+
 
 
 

@@ -76,9 +76,9 @@ date of note: 2024-05-06
 - [[Geodesic on Manifolds]]
 - [[Parallel Transport]]
 - [[Coordinate Representation of Vector Field Parallel Along a Curve]]
-- [[Metric Connection]]
+- [[Metric Connection for Riemannian Manifold]]
 - [[Symmetric Connection]]
-- [[Levi Civita Connection]]
+- [[Levi Civita Connection and Riemannian Connection]]
 
 
 ## Explanation

@@ -71,4 +71,4 @@ date of note: 2024-05-18
 - [[Vector Fields as Total Derivation of Smooth Maps]]
 - [[Space of all Smooth Vector Fields on a Manifold]]
 
-- [[Introduction to Riemannian Manifolds by Lee]]
+- [[Introduction to Riemannian Manifolds by Lee]] pp 85 - 100

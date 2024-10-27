@@ -27,15 +27,18 @@ date of note: 2024-09-24
 >Then there is a **partial isometry** $U$ such that 
 >$$
 > \begin{align*}
-> A = U \;\lvert A \rvert 
+> A = U\,P
 > \end{align*}
 >$$
-> 
->$U$ is **uniquely determined** by the condition that $$\text{Ker}(U) = \text{Ker}(A).$$  Moreover, $$\text{R}(U) = \overline{\text{R}(A)}.$$ 
+>where 
+>- $P$ is a **positive semi-definite operator** and $$P = \sqrt{ A^{*}A } := \lvert A \rvert $$
+>- $U$ is **uniquely determined** by the condition that $$\text{Ker}(U) = \text{Ker}(A).$$  
+>- Moreover, $$\text{R}(U) = \overline{\text{R}(A)}.$$ 
 
 ^7e985f
 
 - [[Partial Isometry]]
+- [[Positive Semidefinite Operator]]
 - [[Square Root of Positive Semidefinite Operator and Absolute Value]]
 - [[Range and Kernel of Linear Operator]]
 
@@ -48,6 +51,10 @@ date of note: 2024-09-24
 
 ## Explanation
 
+
+## Polar Decomposition for Linear Map on Finite-Dimensional Space
+
+![[Polar Decomposition of Transformation#^636e45]]
 
 - [[Polar Decomposition of Transformation]]
 

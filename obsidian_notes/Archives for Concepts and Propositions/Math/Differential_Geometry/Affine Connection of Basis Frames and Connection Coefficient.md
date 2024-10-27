@@ -40,7 +40,7 @@ date of note: 2024-05-21
 >[!important]
 >The $n^3$ functions $$\{\Gamma_{i,j}^{k}\}$$ are called **the Christoffel symbols** under **the metric connections**.
 
-- [[Metric Connection]]
+- [[Metric Connection for Riemannian Manifold]]
 
 
 ## Explanation

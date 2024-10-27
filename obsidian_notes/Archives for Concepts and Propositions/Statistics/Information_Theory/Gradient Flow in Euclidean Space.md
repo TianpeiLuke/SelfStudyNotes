@@ -127,7 +127,7 @@ date of note: 2024-10-25
 >where $$\omega_{x, y}(s)$$ denotes any **constant-speed geodesic** *connecting* $x$ and $y$, parameterized by unit interval $s\in [0,1]$
 
 - [[Geodesic on Manifolds]]
-- [[Exponential Map via Geodesic]]
+- [[Exponential Map via Geodesic on Riemannian Manifold]]
 
 
 ### Minimizing Movement Curve

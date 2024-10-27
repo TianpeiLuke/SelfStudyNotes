@@ -63,10 +63,11 @@ date of note: 2024-05-20
 ### Riemannian Connection
 
 - [[Connection in Vector Bundle]]
-- [[Metric Connection]]
+- [[Metric Connection for Riemannian Manifold]]
 - [[Symmetric Connection]]
-- [[Levi Civita Connection]]
-- [[Exponential Map via Geodesic]]
+- [[Fundamental Theorem of Riemannian Geometry]]
+- [[Levi Civita Connection and Riemannian Connection]]
+- [[Exponential Map via Geodesic on Riemannian Manifold]]
 - [[Normal Neighborhood]]
 
 ### Riemannian Curvature

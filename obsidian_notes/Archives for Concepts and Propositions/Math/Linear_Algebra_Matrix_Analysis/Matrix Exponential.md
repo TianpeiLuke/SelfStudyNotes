@@ -36,7 +36,7 @@ date of note: 2024-10-14
 
 
 
-- [[Exponential Map via Geodesic]]
+- [[Exponential Map via Geodesic on Riemannian Manifold]]
 - [[Lie Group]]
 - [[Lie Algebra as Vector Space with Lie Bracket]]
 
@@ -120,6 +120,15 @@ date of note: 2024-10-14
 
 - [[Matrix Exponential as Global Flow in General Linear Group]]
 
+## Exponential Map on Matrix Lie Group
+
+![[Exponential Map of Lie Group and Matrix Lie Group#^c127f2]]
+
+![[Exponential Map of Lie Group and Matrix Lie Group#^910d1c]]
+
+- [[Exponential Map of Lie Group and Matrix Lie Group]]
+
+
 
 
 -----------
@@ -142,3 +151,4 @@ date of note: 2024-10-14
 - [[Matrix Analysis by Horn]]
 - [[Matrix Analysis for Scientists and Engineers by Laub]] pp 109 - 114
 - [[Lie Groups Lie Algebra and Representations by Hall]] pp 31 - 45
+- [[Introduction to Smooth Manifolds by Lee]] pp 517

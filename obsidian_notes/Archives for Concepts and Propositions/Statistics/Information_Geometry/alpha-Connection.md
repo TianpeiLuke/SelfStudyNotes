@@ -36,7 +36,7 @@ date of note: 2024-06-24
 - [[Affine Connection on Tangent Bundle]]
 
 
-- [[Metric Connection]]
+- [[Metric Connection for Riemannian Manifold]]
 
 
 

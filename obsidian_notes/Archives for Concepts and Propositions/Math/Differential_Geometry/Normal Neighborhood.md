@@ -28,4 +28,4 @@ date of note: 2024-05-20
 - [[Riemannian Metric and Riemannian Manifold]]
 
 
-- [[Introduction to Riemannian Manifolds by Lee]]
+- [[Introduction to Riemannian Manifolds by Lee]] pp 131

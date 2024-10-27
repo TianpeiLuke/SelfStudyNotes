@@ -162,6 +162,11 @@ date of note: 2024-10-25
 #### Lie Algebra
 
 - [[Lie Algebra as Vector Space with Lie Bracket]]
+- [[One-Parameter Subgroup of Lie Group and Flow]]
+
+#### Exponential Map
+
+- [[Exponential Map of Lie Group and Matrix Lie Group]]
 
 
 ### Sympletic Manifold

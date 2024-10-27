@@ -22,7 +22,7 @@ date of note: 2024-05-20
 
 
 
-- [[Metric Connection]]
+- [[Metric Connection for Riemannian Manifold]]
 
 
 

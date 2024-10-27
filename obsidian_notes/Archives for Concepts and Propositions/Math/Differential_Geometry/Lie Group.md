@@ -103,5 +103,5 @@ date of note: 2024-05-26
 
 - [[Topological Group]]
 
-- [[Introduction to Smooth Manifolds by Lee]]
-- [[Lie Groups Lie Algebra and Representations by Hall]]
+- [[Introduction to Smooth Manifolds by Lee]] pp 151 - 157
+- [[Lie Groups Lie Algebra and Representations by Hall]] pp 25
