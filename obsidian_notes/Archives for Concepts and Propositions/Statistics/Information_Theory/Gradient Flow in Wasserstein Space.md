@@ -46,7 +46,7 @@ date of note: 2024-10-25
 >  
 >The **discretization** of **gradient flow** of $F$ on $\mathbb{W}_{2}(\Omega)$ is given by the *iterated minimization*
 >$$
->\rho_{k+1}^{\tau} \in \arg\min_{\rho}\left\{ F(\rho) + \frac{W_{2}^2(\rho, \rho_{k}^{\tau}) }{2\tau}  \right\}, \quad k=0,\,1\,{,}\ldots{,}\, 
+>\rho_{k+1}^{\tau} \in \arg\min_{\rho \in \mathbb{W}_{2}(\Omega)}\left\{ F(\rho) + \frac{W_{2}^2(\rho, \rho_{k}^{\tau}) }{2\tau}  \right\}, \quad k=0,\,1\,{,}\ldots{,}\, 
 >$$
 
 
@@ -66,6 +66,15 @@ date of note: 2024-10-25
 - [[Laplacian of Smooth Map on Riemannian Manifold]]
 - [[Wasserstein Distance]]
 
+>[!important] Definition
+>We define the **Jordan-Kinderleherer-Otto (JKO) scheme** or **JKO operator** of functional $F$ as 
+>$$
+>\text{JKO}(\mu; F, \tau) := \arg\min_{\rho \in \mathbb{W}_{2}(\Omega)}\left\{ F(\rho) + \frac{W_{2}^2(\rho, \mu) }{2\tau}  \right\}
+>$$
+>- *JKO operator* is seen as the **proximity operator**
+
+- Salim, A., Korba, A., & Luise, G. (2020). The Wasserstein proximal gradient algorithm. _Advances in Neural Information Processing Systems_, _33_, 12356-12366.
+
 
 ## Explanation
 
@@ -80,6 +89,9 @@ date of note: 2024-10-25
 >can be seen as **generalized proximal algorithm** where the *Wasserstein distance* is the *proximity measure* in space of probability measures.
 
 - [[Generalized Proximal Method]]
+- [[Proximal Gradient Algorithm]]
+- Salim, A., Korba, A., & Luise, G. (2020). The Wasserstein proximal gradient algorithm. _Advances in Neural Information Processing Systems_, _33_, 12356-12366.
+
 
 ### Local Minimum
 
@@ -94,6 +106,7 @@ date of note: 2024-10-25
 - [[Divergence Theorem on Riemannian Manifold]]
 - [[Divergence Operator of Vector Field on Riemannian Manifold]]
 - [[Local Flow on Smooth Manifold]]
+
 
 
 ## Heat Equation
@@ -123,6 +136,26 @@ date of note: 2024-10-25
 
 - [[Heat Equation and Fokker–Planck Equation via Wasserstein Distance]]
 - [[Fokker–Planck and Kolmogorov Forward-Backward Equation]]
+
+## Gradient Descent in Wasserstein Space
+
+>[!important]
+>The gradient flow of  functional $F$ in Wasserstein space $\mathbb{W}_{2}$  
+>$$
+>\rho_{k+1}^{\tau} \in \arg\min_{\rho \in \mathbb{W}_{2}}\left\{ F(\rho) + \frac{W_{2}^2(\rho, \rho_{k}^{\tau}) }{2\tau}  \right\}, \quad k=0,\,1\,{,}\ldots{,}\, 
+>$$
+>is the **continuous time dynamics** that define **curves of steepest descent** to minimize an objective function over $\mathbb{W}_{2}$  
+>$$\min_{\rho \in \mathbb{W}_{2}}\,F(\rho)$$
+>
+>In particular, the corresponding **gradient descent** in $\mathbb{W}_{2}$  
+>$$
+>\rho_{k+1}^{\tau} = \left(I - \tau\,\nabla \left( \frac{\delta F}{\delta \rho} \right)(\rho_{k}^{\tau}) \right)_{*}\,\rho_{k}^{\tau}
+>$$
+>where
+>- $$\mu_{k+1} = X_{*}\mu_{k}$$ is the **pushforward measure** of $\mu_{k}$ by $X$
+
+- [[Gradient Descent Algorithm]]
+- [[Push-forward Measure and Push-forward Operator]]
 
 
 

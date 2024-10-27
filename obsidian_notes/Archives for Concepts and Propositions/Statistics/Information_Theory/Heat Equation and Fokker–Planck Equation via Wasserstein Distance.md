@@ -139,7 +139,7 @@ date of note: 2024-06-11
 >can be seen as a **diffusion process** where
 >- the *velocity* of each particle is given by $$-  \frac{\nabla\rho_{t}}{\rho_{t}} - \nabla L$$ 
 >  
->The corresponding **stochastic differential equation** is a **Langevin equation**  
+>The corresponding **stochastic differential equation** is the **Langevin equation**  
 >$$
 > dX_{t} = - \nabla L(X_{t})\,dt + dW_{t}
 >$$
@@ -149,7 +149,7 @@ date of note: 2024-06-11
 - [[Diffusion Process]]
 - [[Fokker–Planck and Kolmogorov Forward-Backward Equation]]
 - [[Langevin Dynamics and Langevin Sampling]]
-
+- [[Stochastic Gradient Descent Algorithm]]
 
 
 

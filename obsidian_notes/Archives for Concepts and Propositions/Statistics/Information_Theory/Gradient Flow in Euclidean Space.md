@@ -129,6 +129,9 @@ date of note: 2024-10-25
 - [[Geodesic on Manifolds]]
 - [[Exponential Map via Geodesic]]
 
+
+### Minimizing Movement Curve
+
 >[!important] Definition
 >A curve $$x: [0, T] \to \mathcal{X}$$ is said to be a **minimizing movement** if there exists a sequence of time steps $\tau_{j} \to 0$ such that the *piecewise constant interpolations* $x^{\tau_{j}}$ , built from a sequence of solutions of iterated minimization 
 >$$
@@ -177,11 +180,36 @@ date of note: 2024-10-25
 
 
 
-## Gradient Descent
+## Gradient Descent and Proximal Gradient
 
-- [[Stochastic Gradient Descent Algorithm]]
+>[!important]
+>We see that the **gradient flow** in Euclidean space is described by the *recursive minimization*
+>$$
+>x_{k+1}^{\tau} \in \arg\min_{x}\left\{ f(x) + \frac{\lVert x - x_{k}^{\tau} \rVert_{2}^2 }{2\tau}  \right\}  
+>$$
+>Then $$\nabla f(x_{k+1}^{\tau}) + \frac{x_{k+1}^{\tau} - x_{k}^{\tau}}{\tau} = 0 \implies \frac{x_{k+1}^{\tau} - x_{k}^{\tau}}{\tau} = - \nabla f(x_{k+1}^{\tau})$$
+>Thus the update is equivalent to the **gradient descent**
+>$$
+>x_{k+1}^{\tau} = x_{k}^{\tau} - \tau\,\nabla f(x_{k}^{\tau})
+>$$
+
 - [[Gradient Descent Algorithm]]
-- [[Langevin Dynamics and Langevin Sampling]]
+
+>[!important]
+>Let $$f(x) = F(x) + H(x)$$ where $F$ is **convex smooth**, while $H$ is **convex and nonsmooth**
+>
+>We see that the **gradient flow** of $F + H$ in Euclidean space is described by the *recursive minimization*
+>$$
+>x_{k+1}^{\tau} \in \arg\min_{x}\left\{ F(x) + H(x) + \frac{\lVert x - x_{k}^{\tau} \rVert_{2}^2 }{2\tau}  \right\}  
+>$$
+>Then $$\frac{x - x_{k}^{\tau}}{\tau} \in - \nabla F(x_{k+1}^{\tau}) - \partial H(x_{k+1}^{\tau})$$
+>Thus the update is equivalent to the **proximal gradient descent**
+>$$
+>x_{k+1}^{\tau} = \text{Prox}_{H}\left(x_{k}^{\tau} - \tau\,\nabla F(x_{k}^{\tau})\right)
+>$$
+
+- [[Proximal Gradient Algorithm]]
+
 
 
 
