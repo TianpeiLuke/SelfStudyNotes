@@ -33,8 +33,10 @@ date of note: 2024-10-27
 
 ^926b51
 
+- [[Continuous Function]]
 - [[General Linear Group]]
 - [[Subgroup]]
+- [[One-Parameter Subgroup of Lie Group as Integral Curve]]
 
 >[!important] Theorem (Representation of One-Parameter Subgroup)
 >Let $A: \mathbb{R} \to \text{GL}(n; \mathbb{C})$ be a **one-parameter subgroup** of $\text{GL}(n; \mathbb{C})$, 
@@ -57,7 +59,6 @@ date of note: 2024-10-27
 >- for any $X\in \text{GL}(n; \mathbb{C})$, any $s,t\in \mathbb{R}$ $$\begin{align*} \theta(t, \theta(s, X)) & = A(t)\theta(s, X) \\[5pt] &= A(t)A(s)X \\[5pt] &= A(t+s)X \\[5pt] &= \theta(t+s, X)\end{align*}$$
 
 - [[Topological Group Action]]
-- [[Local Flow on Smooth Manifold]]
 - [[Global Flow on Smooth Manifold]]
 
 ## Exponential Map on Matrix Lie Group

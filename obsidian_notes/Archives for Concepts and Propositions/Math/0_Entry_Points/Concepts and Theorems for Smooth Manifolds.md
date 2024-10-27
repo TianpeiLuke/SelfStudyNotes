@@ -162,7 +162,7 @@ date of note: 2024-10-25
 #### Lie Algebra
 
 - [[Lie Algebra as Vector Space with Lie Bracket]]
-- [[One-Parameter Subgroup of Lie Group and Flow]]
+- [[One-Parameter Subgroup of Lie Group as Integral Curve]]
 
 #### Exponential Map
 

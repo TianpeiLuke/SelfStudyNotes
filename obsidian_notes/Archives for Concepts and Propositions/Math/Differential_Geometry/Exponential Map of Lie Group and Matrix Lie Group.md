@@ -21,8 +21,7 @@ date of note: 2024-05-20
 >[!important]
 >**Name**: Exponential Map of Lie Group and Matrix Lie Group
 
-![[Matrix Exponential as Global Flow in General Linear Group#^926b51]]
-
+![[One-Parameter Subgroup of Lie Group as Integral Curve#^477259]]
 
 >[!important] Definition
 >Let $G$ be a *Lie group* with *Lie algebra* $\mathfrak{g}$.
@@ -36,9 +35,12 @@ date of note: 2024-05-20
 
 - [[Lie Group]]
 - [[Lie Algebra as Vector Space with Lie Bracket]]
+- [[One-Parameter Subgroup of Lie Group as Integral Curve]]
 - [[Matrix Exponential as Global Flow in General Linear Group]]
 
 ### Matrix Lie Group
+
+![[Matrix Exponential as Global Flow in General Linear Group#^926b51]]
 
 >[!important] Definition
 >Let $G$ be a *matrix Lie group* with *Lie algebra* $\mathfrak{g}$.
