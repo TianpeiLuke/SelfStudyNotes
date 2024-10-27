@@ -6,21 +6,26 @@ tags:
   - optimization/theory
   - optimization/algorithm
   - deep_learning/generative_models
-keywords: 
-topics: 
-name: 
+keywords:
+  - gradient_flow_manifold
+topics:
+  - differential_equation
+  - differential_geometry
+name: Gradient Flow on Smooth Manifold
 date of note: 2024-10-25
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Gradient Flow on Smooth Manifold
+
+![[Gradient Flow in Euclidean Space#^6fbd2b]]
 
 - [[Gradient Flow in Euclidean Space]]
 
 >[!important] Definition
->Let  $(M, g)$ be a Riemannian manifold and $X$ be a vector field on $M$. Let $\Phi: M \to \mathbb{R}$ be a smooth function on $M$
+>Let  $(M, g)$ be a *Riemannian manifold* and $X$ be a vector field on $M$. Let $\Phi: M \to \mathbb{R}$ be a smooth function on $M$
 >
 >The **gradient flow** associated with $\Phi$ is the *flow* induced by the *ordinary differential equations*
 >$$
@@ -46,6 +51,12 @@ date of note: 2024-10-25
 
 ## Explanation
 
+
+
+
+## Gradient Descent on Riemannian Manifold
+
+- [[Gradient Descent Algorithm on Riemannian Manifold]]
 
 
 

@@ -167,7 +167,7 @@ date of note: 2024-06-11
 - [[Concepts and Theorems for Stochastic Differential Equations]]
 
 
-
+- Jordan, R., Kinderlehrer, D., & Otto, F. (1998). The variational formulation of the Fokker--Planck equation. _SIAM journal on mathematical analysis_, _29_(1), 1-17.
 - [[Introduction to Stochastic Calculus by Klebaner]]
 - [[Optimal Transport for Applied Mathematicians by Santambrogio]] pp 292 - 300
 - [[Optimal Transport Old and New by Villani]]

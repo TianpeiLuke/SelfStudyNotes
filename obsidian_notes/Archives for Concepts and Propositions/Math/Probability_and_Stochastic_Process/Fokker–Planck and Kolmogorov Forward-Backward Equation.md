@@ -332,7 +332,7 @@ date of note: 2024-06-11
 ## Gradient Flow in Wasserstein Space
 
 - [[Heat Equation and Fokker–Planck Equation via Wasserstein Distance]]
-
+- Jordan, R., Kinderlehrer, D., & Otto, F. (1998). The variational formulation of the Fokker--Planck equation. _SIAM journal on mathematical analysis_, _29_(1), 1-17.
 
 
 -----------

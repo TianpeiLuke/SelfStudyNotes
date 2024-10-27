@@ -35,6 +35,8 @@ date of note: 2024-10-25
 >$$
 >- This *Cauchy problem* has a **unique solution** if $\nabla f$ is **Lipschitz continuous**.
 
+^6fbd2b
+
 - [[Gradient of Smooth Map]]
 - [[Ordinary Differential Equations]]
 - [[Local Flow on Smooth Manifold]]
@@ -140,6 +142,36 @@ date of note: 2024-10-25
 
 ## Explanation
 
+
+### Local and Global Minimum
+
+>[!info]
+>Let $f$ be a **smooth function**.
+>
+>A **gradient flow** $x(t)$ of $f$,
+>$$\left\{
+>\begin{align*}
+>\frac{d}{dt} x(t) &= - \nabla f(x(t)) \\[5pt]
+>x(0) &= x_{0}
+>\end{align*}\right.
+>$$
+>starting from a point $x_{0}$, will *converge* to one of **stationary point (local minima)** of $f$ i.e. $$x(t) \to x^{*} \in \{ z: \; \nabla f(z) = 0 \}$$ 
+
+- [[Necessary and Sufficient Condition for Local Minimum of Smooth Function]]
+
+>[!info]
+>Let $f$ be a **convex function**.
+>
+>A **gradient flow** $x(t)$ of $f$,
+>$$\left\{
+>\begin{align*}
+>\frac{d}{dt} x(t) &= - \nabla f(x(t)) \\[5pt]
+>x(0) &= x_{0}
+>\end{align*}\right.
+>$$
+>starting from any point $x_{0}$, will all *converge* to the **optimal solution** $$x(t) \to x^{*} = \arg\min_{x} f(x)$$ 
+
+- [[Necessary and Sufficient Condition for Local Minimum of Smooth Function]]
 
 
 

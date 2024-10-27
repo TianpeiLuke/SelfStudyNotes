@@ -81,6 +81,19 @@ date of note: 2024-10-25
 
 - [[Generalized Proximal Method]]
 
+### Local Minimum
+
+>[!info]
+>The *gradient flow* of  functional $F$ in Wasserstein space $\mathbb{W}_{2}$ 
+>$$\frac{ \partial }{ \partial t }\rho_{t} - \text{div}\left(\rho_{t}\; \nabla \left( \frac{\delta F}{\delta \rho} \right)(\rho_{t}) \right)  = 0$$
+>will *converge to* **local minimum** of functional $F$
+>$$
+>\rho_{t} \to \rho \in \left\{ \rho \in \mathbb{W}_{2}(\Omega):  \nabla \left( \frac{\delta F}{\delta \rho} \right) = 0 \right\} 
+>$$
+
+- [[Divergence Theorem on Riemannian Manifold]]
+- [[Divergence Operator of Vector Field on Riemannian Manifold]]
+- [[Local Flow on Smooth Manifold]]
 
 
 ## Heat Equation
@@ -135,3 +148,4 @@ date of note: 2024-10-25
 - [[Optimal Transport for Applied Mathematicians by Santambrogio]] pp 290 - 304
 - [[Optimal Transport Old and New by Villani]] pp 629 - 635, 681, 694
 - [[Ordinary Differential Equations by Chicone]]
+- Jordan, R., Kinderlehrer, D., & Otto, F. (1998). The variational formulation of the Fokker--Planck equation. _SIAM journal on mathematical analysis_, _29_(1), 1-17.
