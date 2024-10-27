@@ -34,6 +34,7 @@ date of note: 2024-10-27
 >
 >A map  $$\gamma: \mathbb{R} \to G$$  is an **one-parameter subgroups** $\gamma$ of $G$ *if and only if*  it is a **maximal integral curve** of **left-invariant** vector fields *starting at the identity*.
 
+- [[Maximal Integral Curve of Vector Field]]
 - [[Integral Curve of Vector Field]]
 
 

@@ -121,6 +121,8 @@ date of note: 2024-05-27
 -----------
 ##  Recommended Notes and References
 
+
+- [[Maximal Integral Curve of Vector Field]]
 - [[Tangent Vector and Differential via Velocity of Smooth Curves]]
 
 - [[Vector Field on Manifold]]

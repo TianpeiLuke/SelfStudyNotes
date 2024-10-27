@@ -102,6 +102,9 @@ date of note: 2024-05-27
 -----------
 ##  Recommended Notes and References
 
+- [[Integral Curve of Vector Field]]
+- [[Local Flow on Smooth Manifold]]
+
 - [[Vector Field on Manifold]]
 - [[Topological Group]]
 - [[Topological Group Action]]
