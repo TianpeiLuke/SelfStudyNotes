@@ -49,6 +49,8 @@ date of note: 2024-05-12
 >
 >It is denoted as  $\mathbb{W}_{p}(X)$.
 
+^998943
+
 - [[Metric Space]]
 - [[Radon Measure]]
 

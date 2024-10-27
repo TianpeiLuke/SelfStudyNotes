@@ -94,6 +94,9 @@ date of note: 2024-05-30
 - [[Euler–Lagrange Equations]]
 - [[Diffusion and Infinite Dimensional ODE]]
 
+### Calculus of Variations
+
+- [[Variation of Functional]]
 
 ### Partial Differential Equations
 

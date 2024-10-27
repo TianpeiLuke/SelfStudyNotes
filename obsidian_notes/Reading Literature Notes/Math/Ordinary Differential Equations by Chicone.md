@@ -51,6 +51,7 @@ date of note: 2024-06-15
 
 - [[Introduction to Stochastic Differential Equations by Evans]]
 - [[Introduction to Stochastic Calculus by Klebaner]]
+- [[Calculus of Variations by Gelfand]]
 
 
 - [[Introduction to Smooth Manifolds by Lee]]

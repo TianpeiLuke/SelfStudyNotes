@@ -21,6 +21,10 @@ date of note: 2024-05-30
 
 - [[Concepts and Theorems for Ordinary Differential Equations]]
 
+### Calculus of Variations
+
+- [[Variation of Functional]]
+
 ### Partial Differential Equations
 
 - [[Partial Differential Equations]]

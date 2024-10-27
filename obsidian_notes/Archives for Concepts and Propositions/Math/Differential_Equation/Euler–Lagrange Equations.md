@@ -37,7 +37,7 @@ date of note: 2024-06-14
 
 - [[Ordinary Differential Equations by Chicone]] pp 225
 - [[Partial Differential Equations by Evans]] pp 441
-- Gelfand, I. M., & Silverman, R. A. (2000). _Calculus of variations_. Courier Corporation. pp 14
+- [[Calculus of Variations by Gelfand]] pp 14
 
 >[!important] Definition
 >We can show that $C$ is a *smooth manifold* and $J: C \to \mathbb{R}$ is a *smooth map*.
@@ -53,7 +53,7 @@ date of note: 2024-06-14
 > $$
 > for all $v \in T_{\phi}(C).$ 
 
-
+- [[Variation of Functional]]
 - [[Tangent Space Definition and Development]]
 - [[Smooth Manifold]]
 

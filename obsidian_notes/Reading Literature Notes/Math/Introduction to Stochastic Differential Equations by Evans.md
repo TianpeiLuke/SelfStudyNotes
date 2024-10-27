@@ -75,6 +75,7 @@ date of note: 2024-06-05
 
 
 - [[Introduction to Stochastic Calculus by Klebaner]]
+- [[Calculus of Variations by Gelfand]]
 
 - [[Lectures on Gaussian Processes by Lifshits]]
 - [[Probability and Measure by Billingsley]]
