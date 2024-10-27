@@ -137,6 +137,8 @@ date of note: 2024-06-11
 - [[Maximum Entropy Learning]]
 - [[Variational Formula for Entropy Functional]]
 
+
+
 ## Explanation
 
 
@@ -163,6 +165,13 @@ date of note: 2024-06-11
 - [[Bregman Divergence Minimization]]
 
 
+## Logarithmic Sobolev Inequality
+
+- [[Logarithmic Sobolev Inequality for Gaussian Random Variables]]
+
+
+
+
 ## Langevin Equation
 
 >[!important] 
@@ -175,7 +184,7 @@ date of note: 2024-06-11
 >  
 >The corresponding **stochastic differential equation** is the **Langevin equation**  
 >$$
-> dX_{t} = - \nabla L(X_{t})\,dt + dW_{t}
+> dX_{t} = - \nabla L(X_{t})\,dt + \sqrt{2}\; dW_{t}
 >$$
 >- The **gradient flow** above is seen as the PDE formulation of the Langevin equation.
 
