@@ -202,7 +202,7 @@ date of note: 2024-10-25
 >$$
 >x_{k+1}^{\tau} \in \arg\min_{x}\left\{ F(x) + H(x) + \frac{\lVert x - x_{k}^{\tau} \rVert_{2}^2 }{2\tau}  \right\}  
 >$$
->Then $$\frac{x - x_{k}^{\tau}}{\tau} \in - \nabla F(x_{k+1}^{\tau}) - \partial H(x_{k+1}^{\tau})$$
+>Then $$\frac{x_{k+1}^{\tau} - x_{k}^{\tau}}{\tau} \in - \nabla F(x_{k+1}^{\tau}) - \partial H(x_{k+1}^{\tau})$$
 >Thus the update is equivalent to the **proximal gradient descent**
 >$$
 >x_{k+1}^{\tau} = \text{Prox}_{H}\left(x_{k}^{\tau} - \tau\,\nabla F(x_{k}^{\tau})\right)
