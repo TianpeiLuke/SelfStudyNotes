@@ -72,7 +72,7 @@ date of note: 2024-05-06
 # Lie Groups
 
 - [[Concepts and Theorems for Smooth Manifolds]]
-- [[Lie Group and Lie Algebra]]
+- [[Concepts and Theorems for Lie Group and Lie Algebra]]
 
 # Vector Fields
 

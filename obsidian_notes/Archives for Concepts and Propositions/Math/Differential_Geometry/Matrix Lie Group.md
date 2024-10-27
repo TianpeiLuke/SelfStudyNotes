@@ -26,64 +26,50 @@ date of note: 2024-05-26
 >- For $\{A_{n}\}$ is any sequence in $G$, if $$A_{n} \to A$$ then 
 >	- either $A\in G$ 
 >	- or $A$ is *not invertible* i.e. $A\not\in \text{GL}(n; \mathbb{C})$
->  
+>
+>In other words, a **matrix Lie group** is a *closed subgroup* of $\text{GL}(n; \mathbb{C})$.  
+
+^e3a312
 
 - [[Subgroup]]
 - [[General Linear Group]]
+- [[Topological Group]]
+- [[Limit Point]]
+- [[Closed Set]]
 
 
 ## Explanation
 
->[!important]
->The condition above means that a *matrix Lie group* is a **closed subgroup** of $\text{GL}(n; \mathbb{C})$.
+>[!info]
+>Since both $\text{GL}(n; \mathbb{C})$ and $\text{GL}(n; \mathbb{R})$ are **Lie group**, all of their **close subgroups** are *Lie groups*.
 
-- [[Topological Group]]
-- [[Closed Set]]
+- [[Lie Group]]
 
 ## Examples
 
->[!example]
->A **general linear group** of vector field $V$, $\text{GL}(V)$  is a *Lie group* with function composition as its *multiplication operation*. 
->
->For finite dimensional space $V$, a **general linear group** of *degree* $n$  $\text{GL}(n, F)$ is a Lie group with *matrix multiplication* as the multiplication operation.
-
-[[General Linear Group]] 
 
 >[!example]
->A **special linear group** of degree $n$, $\text{SL}(n, F)$  is a *Lie group* with *matrix multiplication* as its multiplication operation. 
+>A **special linear group** of degree $n$, $\text{SL}(n, F)$  is a *matrix Lie group* with *matrix multiplication* as its multiplication operation. 
 >
->It is a subgroup of $\text{GL}(n, F)$.
+>It is a *closed subgroup* of $\text{GL}(n, F)$.
 
 - [[Special Linear Group]]
 
 >[!example]
->An **orthogonal group** of degree $n$, $\text{O}(n)$  is a *Lie group* with *matrix multiplication* as its multiplication operation. 
+>An **orthogonal group** of degree $n$, $\text{O}(n)$  is a *matrix Lie group* with *matrix multiplication* as its multiplication operation. 
 >
->It is a subgroup of $\text{GL}(n, \mathbb{R})$.
+>It is a *closed subgroup* of $\text{GL}(n, \mathbb{R})$.
 
 - [[Orthogonal Group]]
 
 >[!example]
->An **unitary group** of degree $n$, $\text{U}(n)$  is a *Lie group* with *matrix multiplication* as its multiplication operation. 
+>An **unitary group** of degree $n$, $\text{U}(n)$  is a *matrix Lie group* with *matrix multiplication* as its multiplication operation. 
 >
->It is a subgroup of $\text{GL}(n, \mathbb{C})$.
+>It is a *closed subgroup* of $\text{GL}(n, \mathbb{C})$.
 
 - [[Unitary Group]]
 
->[!example]
->A  $n$-dimensional **Euclidean space** $\mathbb{R}^n$ is a *Lie Group* with *vector addition* as its multiplication operation. 
->
->Similarly, $\mathbb{C}^n$ is also a *Lie Group*.
-
-
->[!example]
->A one-dimensional **circle** $\mathbb{S}^1$ is a *smooth manifold* and a group under *complex multiplication*.
->
->With appropriate *angle functions as local coordinates*  on open subsets of $\mathbb{S}^1$, multiplication and inversion have the smooth coordinate representation
->$$
->(\theta_{1}, \theta_{2}) \mapsto \theta_{1} + \theta_{2}, \qquad \theta \mapsto -\theta
->$$ 
->Thus $\mathbb{S}^1$ is a Lie group, called the **cycle group**.
+- [[Special Orthogonal Group and Special Unitary Group]]
 
 
 ## Tangent Space as Lie Algebra

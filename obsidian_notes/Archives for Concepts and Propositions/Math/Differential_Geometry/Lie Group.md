@@ -85,6 +85,8 @@ date of note: 2024-05-26
 
 ## Matrix Lie Group
 
+![[Matrix Lie Group#^e3a312]]
+
 - [[Matrix Lie Group]]
 
 ## Tangent Space as Lie Algebra

@@ -42,3 +42,4 @@ date of note: 2024-10-27
 
 
 - [[Introduction to Smooth Manifolds by Lee]]
+- [[Abstract Algebra by Dummit]]
