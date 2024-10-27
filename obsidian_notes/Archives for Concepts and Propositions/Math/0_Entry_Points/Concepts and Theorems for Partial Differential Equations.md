@@ -89,9 +89,9 @@ date of note: 2024-05-30
 
 ### Gradient Flows
 
-- [[Gradient Flow on Euclidean Space]]
+- [[Gradient Flow in Euclidean Space]]
 - [[Gradient Flow on Smooth Manifold]]
-- [[Gradient Flows in Wasserstein Space]]
+- [[Gradient Flow in Wasserstein Space]]
 
 
 ### Second-Order Elliptic Equations

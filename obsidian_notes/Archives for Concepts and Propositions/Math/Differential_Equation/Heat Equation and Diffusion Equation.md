@@ -132,7 +132,7 @@ date of note: 2024-06-15
 
 ## Gradient Flow on Wasserstein Space
 
-- [[Gradient Flows in Wasserstein Space]]
+- [[Gradient Flow in Wasserstein Space]]
 
 
 

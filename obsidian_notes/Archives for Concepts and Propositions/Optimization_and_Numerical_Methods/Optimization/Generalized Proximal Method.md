@@ -60,7 +60,7 @@ date of note: 2024-05-12
 
 ## Gradient Flow on Wasserstein Space
 
-- [[Gradient Flows in Wasserstein Space]]
+- [[Gradient Flow in Wasserstein Space]]
 - [[Heat Equation and Fokker–Planck Equation via Wasserstein Distance]]
 
 

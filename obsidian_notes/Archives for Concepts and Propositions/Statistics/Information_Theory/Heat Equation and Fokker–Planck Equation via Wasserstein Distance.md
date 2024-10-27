@@ -20,20 +20,20 @@ date of note: 2024-06-11
 >[!important]
 >**Name**: Fokker–Planck Equation via Wasserstein Distance
 
-![[Gradient Flows in Wasserstein Space#^1e5b9f]]
+![[Gradient Flow in Wasserstein Space#^1e5b9f]]
 
 >[!important] Definition
 >Let $(\Omega, \mathscr{F})$ be a measurable metric space and  $\mathscr{P}(\Omega)$ be the *space of probability measures* on $\Omega$. Assume that $\Omega$ is *compact*.
 >
->Define $f: \mathscr{P}(\Omega) \to \mathbb{R}\cup \{ \infty \}$ as the **entropy functional**
+>Define $F: \mathscr{P}(\Omega) \to \mathbb{R}\cup \{ \infty \}$ as the **entropy functional**
 >$$
->f(\rho) := \int_{\Omega} \rho(x)\,\log(\rho(x)) \,dx := -H(\rho)
+>F(\rho) := \int_{\Omega} \rho(x)\,\log(\rho(x)) \,dx := -H(\rho)
 >$$
->- We have $$\frac{\delta f}{\delta \rho} =\log \rho + 1$$
->- So $$\nabla \left(\frac{\delta f}{\delta \rho}\right) = \frac{\nabla \rho}{\rho}$$
+>- We have $$\frac{\delta F}{\delta \rho} =\log \rho + 1$$
+>- So $$\nabla \left(\frac{\delta F}{\delta \rho}\right) = \frac{\nabla \rho}{\rho}$$
 >
->Also define $V$ as a **linear potential functional** $$V(\rho) := \int_{\Omega} L(x)\,d\rho(x) = \mathbb{E}_{ \rho }\left[  L(X) \right]$$ 
->- We have $$\frac{\delta V}{\delta \rho} =L \implies \nabla \left(\frac{\delta V}{\delta \rho}\right) = \nabla L$$
+>Also define $\mathcal{L}$ as a **linear potential functional** $$\mathcal{L}(\rho) := \int_{\Omega} L(x)\,d\rho(x) = \mathbb{E}_{ \rho }\left[  L(X) \right]$$ 
+>- We have $$\frac{\delta \mathcal{L}}{\delta \rho} =L \implies \nabla \left(\frac{\delta \mathcal{L}}{\delta \rho}\right) = \nabla L$$
 >- We could see $L$ as the *loss function* in machine learning.
 
 - [[Entropy Functional]]
@@ -45,15 +45,15 @@ date of note: 2024-06-11
 ### Heat Equation
 
 >[!important] Definition
->Consider the **discretization** of **gradient flow** of $f$ on  **Wasserstein space** $\mathbb{W}_{2}(\Omega)$ is given by the *iterated minimization* for $k=0,\,1\,{,}\ldots{,}\,$
+>Consider the **discretization** of **gradient flow** of $F$ on  **Wasserstein space** $\mathbb{W}_{2}(\Omega)$ is given by the *iterated minimization* for $k=0,\,1\,{,}\ldots{,}\,$
 >$$
->\rho_{k+1}^{\tau} \in \arg\min_{\rho}\left\{ f(\rho) + \frac{W_{2}^2(\rho, \rho_{k}^{\tau}) }{2\tau}  \right\}  
+>\rho_{k+1}^{\tau} \in \arg\min_{\rho}\left\{ F(\rho) + \frac{W_{2}^2(\rho, \rho_{k}^{\tau}) }{2\tau}  \right\}  
 >$$
 >
 >This gradient flow is the *solution* of **heat equation** 
 >$$
 >\begin{align*}
->\frac{ \partial }{ \partial t }\rho_{t} - \text{div}\left(\rho_{t}\; \nabla \left( \frac{\delta f}{\delta \rho} \right)(\rho_{t}) \right)  &= 0 \\[5pt]
+>\frac{ \partial }{ \partial t }\rho_{t} - \text{div}\left(\rho_{t}\; \nabla \left( \frac{\delta F}{\delta \rho} \right)(\rho_{t}) \right)  &= 0 \\[5pt]
 > \implies \frac{ \partial }{ \partial t }\rho_{t} - \text{div}\left(\rho_{t}\;  \frac{\nabla \rho_{t}}{\rho_{t}} \right)  &= 0  \\[5pt]
 > \implies \frac{ \partial }{ \partial t }\rho_{t} - \text{div}\left(\nabla \rho_{t}\right)  &= 0  \\[5pt]
 > \implies \frac{ \partial }{ \partial t }\rho_{t} - \Delta \rho_{t}  &= 0  \\[5pt]
@@ -62,22 +62,22 @@ date of note: 2024-06-11
 >where $$\Delta g = \text{div}(\nabla g)$$ is the *Laplacian operator*.
 
 - [[Entropy Functional]]
-- [[Gradient Flows in Wasserstein Space]]
+- [[Gradient Flow in Wasserstein Space]]
 - [[Stochastic Differential Equations]]
 - [[Heat Equation and Diffusion Equation]]
 
 ### Fokker-Planck Equation
 
 >[!important] Definition
->Consider the **discretization** of **gradient flow** of $f$ on  **Wasserstein space** $\mathbb{W}_{2}(\Omega)$ is given by the *iterated minimization* for $k=0,\,1\,{,}\ldots{,}\,$
+>Consider the **discretization** of **gradient flow** of $F+\mathcal{L}$ on  **Wasserstein space** $\mathbb{W}_{2}(\Omega)$ is given by the *iterated minimization* for $k=0,\,1\,{,}\ldots{,}\,$
 >$$
->\rho_{k+1}^{\tau} \in \arg\min_{\rho}\left\{ f(\rho) + V(\rho) + \frac{W_{2}^2(\rho, \rho_{k}^{\tau}) }{2\tau}  \right\}  
+>\rho_{k+1}^{\tau} \in \arg\min_{\rho}\left\{ F(\rho) + \mathcal{L}(\rho) + \frac{W_{2}^2(\rho, \rho_{k}^{\tau}) }{2\tau}  \right\}  
 >$$
 >
 >This gradient flow is the *solution* of **fokker-planck equation** 
 >$$
 >\begin{align*}
->\frac{ \partial }{ \partial t }\rho_{t} - \text{div}\left(\rho_{t}\; \nabla \left( \frac{\delta (f+ V)}{\delta \rho} \right)(\rho_{t}) \right)  &= 0 \\[5pt]
+>\frac{ \partial }{ \partial t }\rho_{t} - \text{div}\left(\rho_{t}\; \nabla \left( \frac{\delta (F+ \mathcal{L})}{\delta \rho} \right)(\rho_{t}) \right)  &= 0 \\[5pt]
 > \implies \frac{ \partial }{ \partial t }\rho_{t} - \text{div}\left(\rho_{t}\;  \frac{\nabla \rho_{t}}{\rho_{t}}  + \rho_{t} \nabla L\right)  &= 0  \\[5pt]
 > \implies \frac{ \partial }{ \partial t }\rho_{t} - \Delta \rho_{t} - \text{div}(\rho_{t}\, \nabla L)  &= 0  \\[5pt]
 \end{align*}
@@ -100,7 +100,8 @@ date of note: 2024-06-11
 >- Moreover, for each $\tau >0$, the following sequence of optimization problems recursively defined is **well-posed**  $$\rho_{k+1}^{\tau} \in \arg\min_{\rho}\left\{ J(\rho) + \frac{W_{2}^2(\rho, \rho_{k}^{\tau}) }{2\tau}  \right\}, \quad k=0\,{,}\ldots{,}\,$$
 >	-  That is, there **exists** a **minimizer** at each step $k$, and the minimizer is **unique.** 
 
-
+- [[Maximum Entropy Learning]]
+- [[Variational Formula for Entropy Functional]]
 
 ## Explanation
 

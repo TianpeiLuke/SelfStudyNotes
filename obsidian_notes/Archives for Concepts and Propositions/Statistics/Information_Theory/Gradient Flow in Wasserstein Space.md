@@ -8,19 +8,19 @@ keywords:
   - gradient_flow_wasserstein
 topics:
   - partial_differential_equation
-name: Gradient Flows in Wasserstein Space
+name: Gradient Flow in Wasserstein Space
 date of note: 2024-10-25
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Gradient Flows in Wasserstein Space
+>**Name**: Gradient Flow in Wasserstein Space
 
 
-![[Gradient Flow on Euclidean Space#^33863e]]
+![[Gradient Flow in Euclidean Space#^33863e]]
 
-- [[Gradient Flow on Euclidean Space]]
+- [[Gradient Flow in Euclidean Space]]
 
 ![[Wasserstein Space#^998943]]
 

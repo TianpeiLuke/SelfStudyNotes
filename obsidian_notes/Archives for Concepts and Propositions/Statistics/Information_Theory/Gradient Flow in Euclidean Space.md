@@ -13,14 +13,14 @@ keywords:
 topics:
   - differential_equation
   - ordinary_differential_equations
-name: Gradient Flow on Euclidean Space
+name: Gradient Flow in Euclidean Space
 date of note: 2024-10-25
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Gradient Flow on Euclidean Space
+>**Name**: Gradient Flow in Euclidean Space
 
 
 >[!important] Definition

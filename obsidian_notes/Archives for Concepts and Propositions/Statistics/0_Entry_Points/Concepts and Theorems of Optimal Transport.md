@@ -76,10 +76,10 @@ routing, involve moving distributions, and that thread appears in all of the sem
 ### Gradient Flows
 
 - [[Gradient Descent Algorithm]]
-- [[Gradient Flow on Euclidean Space]]
+- [[Gradient Flow in Euclidean Space]]
 - [[Proximal Algorithm]]
 - [[Gradient Flow on Smooth Manifold]]
-- [[Gradient Flows in Wasserstein Space]]
+- [[Gradient Flow in Wasserstein Space]]
 - [[Generalized Proximal Method]]
 - [[Heat Equation and Fokker–Planck Equation via Wasserstein Distance]]
 - [[Concepts and Theorems for Stochastic Differential Equations]]

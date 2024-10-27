@@ -17,7 +17,7 @@ date of note: 2024-10-25
 >[!important]
 >**Name**: 
 
-- [[Gradient Flow on Euclidean Space]]
+- [[Gradient Flow in Euclidean Space]]
 
 >[!important] Definition
 >Let  $(M, g)$ be a Riemannian manifold and $X$ be a vector field on $M$. Let $\Phi: M \to \mathbb{R}$ be a smooth function on $M$

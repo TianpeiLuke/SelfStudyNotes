@@ -54,7 +54,7 @@ date of note: 2024-07-08
 >\rho_{k+1}^{\tau} \in \arg\min_{\rho}\left\{ \mathbb{E}_{ \rho_{t} }\left[ \log \rho_{t}(X) \right] + \mathbb{E}_{ \rho_{t} }\left[ f(X) \right] + \frac{W_{2}^2(\rho, \rho_{k}^{\tau}) }{2\tau}  \right\}  
 >$$
 
-- [[Gradient Flows in Wasserstein Space]]
+- [[Gradient Flow in Wasserstein Space]]
 - [[Heat Equation and Fokker–Planck Equation via Wasserstein Distance]]
 
 

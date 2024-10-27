@@ -136,7 +136,7 @@ date of note: 2024-05-12
 >\end{align*}
 >$$ 
 
-- [[Gradient Flow on Euclidean Space]]
+- [[Gradient Flow in Euclidean Space]]
 
 ## Conjugate Gradient Method
 

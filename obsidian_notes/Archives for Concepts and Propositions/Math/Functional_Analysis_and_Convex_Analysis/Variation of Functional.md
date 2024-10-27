@@ -29,7 +29,7 @@ date of note: 2024-10-26
 - [[Bounded Linear Functional]]
 - [[Euler–Lagrange Equations]]
 - [[Lagrangian Function in Mechanics]]
-- [[Gradient Flows in Wasserstein Space]]
+- [[Gradient Flow in Wasserstein Space]]
 
 
 - [[Ordinary Differential Equations by Chicone]] pp 225

@@ -45,7 +45,7 @@ date of note: 2024-05-30
 - [[Maximal Integral Curve of Vector Field]]
 - [[Fundamental Theorem on Flows]]
 
-- [[Gradient Flow on Euclidean Space]]
+- [[Gradient Flow in Euclidean Space]]
 
 ### Lyapunov Stability
 
