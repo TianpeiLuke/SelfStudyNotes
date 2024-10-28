@@ -31,7 +31,7 @@ date of note: 2024-05-06
 - [[Fundamental Theorem on Flows]]
 
 - [[Lie Derivative of Vector Field]]
-
+- [[Lie Algebra as Vector Space with Lie Bracket]]
 - [[Lie Group]]
 
 ### Exterior Derivative

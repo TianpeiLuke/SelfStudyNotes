@@ -223,6 +223,8 @@ date of note: 2024-06-05
 - [[Measure Space and Countably Additive Measure]]
 - [[Space of Bounded Linear Operators]]
 
+- [[Haar Measure on Locally Compact Topological Group]]
+- [[Lie Group]]
 - [[Topological Group]]
 - [[Special Linear Group]]
 - [[Unitary Group]]
