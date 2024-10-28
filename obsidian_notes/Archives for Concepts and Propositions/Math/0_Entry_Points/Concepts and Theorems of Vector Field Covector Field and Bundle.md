@@ -173,6 +173,9 @@ date of note: 2024-05-06
 - [[Parallel Transport of Tensor Field along Curve]]
 - [[Coordinate Representation of Vector Field Parallel Along a Curve]]
 
+- [[Parallel Transport Algebraic Definitions]]
+- [[Covariant Derivative from Parallel Transport]]
+
 #### Riemannian Connection
 
 - [[Metric Connection for Riemannian Manifold]]

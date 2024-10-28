@@ -35,7 +35,7 @@ date of note: 2024-05-20
 
 ^3107a5
 
-- [[Connection in Vector Bundle and Covariant Derivative]]
+- [[Affine Connection on Tangent Bundle]]
 - [[Parameterized Curve on Manifold]]
 - [[Smooth Manifold]]
 - [[Velocity of Smooth Curves]]
@@ -67,6 +67,7 @@ date of note: 2024-05-20
 ##  Recommended Notes and References
 
 
+- [[Connection in Vector Bundle and Covariant Derivative]]
 - [[Vector Field Along a Curve]]
 - [[Smooth Map between Euclidean Spaces]]
 - [[Smooth Vector Field on Manifold]]

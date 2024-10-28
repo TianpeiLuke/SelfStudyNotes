@@ -8,26 +8,22 @@ keywords:
   - geodesic_curve
 topics:
   - differential_geometry
-name: Parallel Transport of Tensor Field along Curve
+name: Parallel Transport Algebraic Definitions
 date of note: 2024-05-20
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Parallel Transport of Tensor Field along Curve
+>**Name**: Parallel Transport Algebraic Definitions
 
 ![[Covariant Derivative Along a Curve#^3107a5]]
 
->[!important] Definition
->Let $\mathcal{M}$ be a *smooth manifold* and let $\nabla$ be a *connection* in $T\mathcal{M}$. 
->
->A *smooth vector* or *tensor field* $V$ *along a smooth curve* $\gamma$ is said to be **parallel along** $\gamma$ *with respect to* $\nabla$ if $$D_t(V) = 0.$$
 
-^a259b7
+
 
 - [[Covariant Derivative Along a Curve]]
-- [[Affine Connection on Tangent Bundle]]
+- [[Connection in Vector Bundle and Covariant Derivative]]
 - [[Vector Field Along a Curve]]
 - [[Parameterized Curve on Manifold]]
 - [[Smooth Manifold]]
@@ -41,8 +37,7 @@ date of note: 2024-05-20
 
 ## Explanation
 
->[!important]
->![[Parallel_Transport.png]]
+
 
 
 
@@ -51,22 +46,10 @@ date of note: 2024-05-20
 
 ![[parallel_orthonormal_frame.png]]
 
-## Existence and Uniqueness of Parallel Transport 
 
-- [[Existence and Uniqueness of Solution of Ordinary Differential Equations]]
+## Covariant Derivative from Parallel Transport
 
-
-## Geodesics
-
-- [[Maximal Geodesic and Geodesic Segment]]
-- [[Geodesic on Manifolds]]
-
-## Coordinate Representation
-
-- [[Coordinate Representation of Vector Field Parallel Along a Curve]]
-- [[Coordinate Representation of Geodesic and Geodesic Equations]]
-
-
+- [[Covariant Derivative from Parallel Transport]]
 
 
 
@@ -76,7 +59,9 @@ date of note: 2024-05-20
 ##  Recommended Notes and References
 
 
-- [[Connection in Vector Bundle and Covariant Derivative]]
+- [[Parallel Transport of Tensor Field along Curve]]
+- [[Covariant Derivative from Parallel Transport]]
+
 - [[Tensor Field on Manifold]]
 - [[Section of Vector Bundle]]
 - [[Integral Curve of Vector Field]]

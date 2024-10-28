@@ -27,7 +27,8 @@ date of note: 2024-05-20
 ^1d16a0
 
 - [[Covariant Derivative Along a Curve]]
-- [[Connection in Vector Bundle and Covariant Derivative]]
+- [[Affine Connection on Tangent Bundle]]
+
 - [[Smooth Manifold]]
 - [[Velocity of Smooth Curves]]
 - [[Integral Curve of Vector Field]]
@@ -56,6 +57,7 @@ date of note: 2024-05-20
 ##  Recommended Notes and References
 
 
+- [[Connection in Vector Bundle and Covariant Derivative]]
 - [[Tangent Vector and Differential via Velocity of Smooth Curves]]
 - [[Parameterized Curve on Manifold]]
 - [[Space of all Smooth Vector Fields on a Manifold]]

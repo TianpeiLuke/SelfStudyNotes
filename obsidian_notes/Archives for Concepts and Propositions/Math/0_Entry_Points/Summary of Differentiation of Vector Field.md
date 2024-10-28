@@ -58,6 +58,7 @@ date of note: 2024-05-06
 >
 >The idea is to **project** the directional derivative from *ambient vector space* to **the tangent space of the submanifold.**
 
+#### Connection and Affine Connection
 
 - [[Development of Connection from Euclidean to Manifold]]
 - [[Connection in Vector Bundle and Covariant Derivative]]
@@ -68,20 +69,27 @@ date of note: 2024-05-06
 - [[Difference Tensor based on Affine Connection]]
 - [[Space of all Affine Connections]]
 
+#### Total Covariant Derivative
+
 - [[Total Covariant Derivative]]
 - [[Second Covariant Derivatives]]
 - [[Covariant Hessian Tensor]]
 
 - [[Vector Field Along a Curve]]
 
+#### Covariant Derivative along Curve, Parallel Transport, Geodesics
 
 - [[Covariant Derivative Along a Curve]]
 - [[Coordinate Representation of Covariant Derivative Along a Curve]]
+
 - [[Geodesic on Manifolds]]
 - [[Coordinate Representation of Geodesic and Geodesic Equations]]
 - [[Maximal Geodesic and Geodesic Segment]]
+
 - [[Parallel Transport of Tensor Field along Curve]]
 - [[Coordinate Representation of Vector Field Parallel Along a Curve]]
+- [[Parallel Transport Algebraic Definitions]]
+- [[Covariant Derivative from Parallel Transport]]
 
 
 - [[Metric Connection for Riemannian Manifold]]
