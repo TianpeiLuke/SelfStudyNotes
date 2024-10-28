@@ -19,6 +19,9 @@ date of note: 2024-05-06
 
 - [[Lie Group]]
 - [[Matrix Lie Group]]
+
+### Examples
+
 - [[General Linear Group]]
 - [[Special Linear Group]]
 - [[Orthogonal Group]]
@@ -58,6 +61,7 @@ date of note: 2024-05-06
 ##  Recommended Notes and References
 
 
+- [[Concepts and Theorems for Smooth Manifolds]]
 - [[Concepts and Theorems in Tensor Space]]
 - [[Differentiation of Vector Field]]
 - [[Smooth Manifold]]

@@ -27,6 +27,7 @@ date of note: 2024-05-08
 - [[Outer Regularity]]
 - [[Radon Measure]]
 - [[Signed Measure]]
+- [[Haar Measure on Locally Compact Topological Group]]
 - [[Jordan Decomposition Theorem and total variation measure]]
 
 ### Topology
@@ -57,6 +58,7 @@ date of note: 2024-05-08
 - [[L-infinite Space]]
 - [[Dual Normed Space of Lp Space]]
 - [[Dual Normed Space of L-infinity Space]]
+- [[Riesz Representation Theorem for Dual of Lp]]
 
 ### Kantorovitch Representation Theorem
 

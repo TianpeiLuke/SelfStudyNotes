@@ -20,7 +20,9 @@ date of note: 2024-05-11
 ### Topology of Linear Operator Space on Hilbert Space
 
 - [[Norm Topology]]
+- [[Uniform Operator Topology]]
 - [[Convergence in Norm]]
+- [[Strong Operator Topology]]
 - [[Weak Operator Topology]]
 
 

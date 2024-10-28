@@ -28,5 +28,5 @@ date of note: 2024-05-26
 ##  Recommended Notes and References
 
 - [[Ring]]
-
+- [[Nilpotent Linear Transformation and Matrix]]
 - [[Abstract Algebra by Dummit]]
