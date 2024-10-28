@@ -73,6 +73,8 @@ date of note: 2024-05-17
 
 ## Development of the Coordinate Representation of Differentials
 
+![[differential_coordinate.png]]
+
 ### Coordinate Representation of Differential on Euclidean Space
 
 >[!info]

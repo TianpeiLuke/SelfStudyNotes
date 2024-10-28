@@ -25,6 +25,8 @@ date of note: 2024-05-20
 - [[Local Section of Continuous Function]]
 - [[Smooth Submersion]]
 
+![[local_section_of_submersion.png]]
+
 
 ## Explanation
 

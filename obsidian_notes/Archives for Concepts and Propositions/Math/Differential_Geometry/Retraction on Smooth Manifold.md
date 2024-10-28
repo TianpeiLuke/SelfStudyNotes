@@ -32,6 +32,10 @@ date of note: 2024-07-01
 >- $$R_{x}(0) = x,$$
 >- $$dR_{x}(0): T_{x}\mathcal{M} \to T_{x}\mathcal{M}$$ is the **identity map**: $$dR_{x}(0)[v] = v.$$
 
+- [[Exponential Map via Geodesic on Riemannian Manifold]]
+- [[Geodesic on Manifolds]]
+- [[Exponential Map of Lie Group and Matrix Lie Group]]
+- [[Matrix Exponential as Global Flow in General Linear Group]]
 
 ## Explanation
 

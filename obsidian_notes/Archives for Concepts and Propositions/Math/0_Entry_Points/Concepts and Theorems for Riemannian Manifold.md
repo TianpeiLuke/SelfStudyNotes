@@ -62,7 +62,7 @@ date of note: 2024-05-20
 
 ### Riemannian Connection
 
-- [[Connection in Vector Bundle]]
+- [[Connection in Vector Bundle and Covariant Derivative]]
 - [[Metric Connection for Riemannian Manifold]]
 - [[Symmetric Connection]]
 - [[Fundamental Theorem of Riemannian Geometry]]

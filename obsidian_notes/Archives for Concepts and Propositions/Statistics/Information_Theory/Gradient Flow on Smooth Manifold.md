@@ -33,6 +33,8 @@ date of note: 2024-10-25
 >$$
 
 
+- [[Exponential Map via Geodesic on Riemannian Manifold]]
+- [[Geodesic on Manifolds]]
 - [[Smooth Function on Smooth Manifold]]
 - [[Vector Field on Manifold]]
 - [[Riemannian Metric and Riemannian Manifold]]

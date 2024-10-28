@@ -60,6 +60,8 @@ date of note: 2024-05-06
 >[!info]
 >Tangent bundle is **the default domain** for many *functions on tangent vectors*.
 
+![[coordinate_tangent_bundle.png]]
+
 ### Tangent Space as Space of Free Vectors
 
 

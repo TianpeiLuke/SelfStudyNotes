@@ -64,7 +64,7 @@ date of note: 2024-05-18
 >[!info]
 >Compare to the covariant derivative defined by connections. 
 
-- [[Connection in Vector Bundle]]
+- [[Connection in Vector Bundle and Covariant Derivative]]
 
 ## Algebraic Definition of Lie Bracket from Lie Algebra
 

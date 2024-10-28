@@ -42,6 +42,8 @@ date of note: 2024-05-18
 
 - [[Covector on Vector Space]]
 
+![[covector_fields.png]]
+
 ## Smooth and Rough Covector Fields
 
 >[!info]

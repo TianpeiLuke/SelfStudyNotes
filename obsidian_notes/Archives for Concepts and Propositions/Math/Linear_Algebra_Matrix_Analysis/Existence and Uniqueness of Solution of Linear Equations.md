@@ -121,7 +121,7 @@ date of note: 2024-09-15
 
 - [[Existence and Uniqueness of Solution for Stochastic Differential Equation]]
 - [[Existence and Uniqueness of Solution of Ordinary Differential Equations]]
-- [[Linear ODE with Constant Coefficients]]
+- [[Linear Ordinary Differential Equations with Constant Coefficients]]
 - [[Linear Stochastic Differential Equation]]
 - [[Homogeneous Linear Differential Equations]]
 

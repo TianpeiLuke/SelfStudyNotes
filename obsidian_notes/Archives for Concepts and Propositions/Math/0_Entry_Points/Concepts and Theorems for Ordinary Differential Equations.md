@@ -79,7 +79,7 @@ date of note: 2024-05-30
 - [[Homogeneous Linear Differential Equations]]
 - [[Gronwall Inequality]]
 - [[Principle of Superposition]]
-- [[Linear ODE with Constant Coefficients]]
+- [[Linear Ordinary Differential Equations with Constant Coefficients]]
 - [[Exponential Map of Linear Operator]]
 
 ###  Stability of Nonlinear System

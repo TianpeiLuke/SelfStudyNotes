@@ -22,6 +22,9 @@ date of note: 2024-05-20
 
 - [[Canonical Inclusion]]
 
+![[immersed_subman_locally_embedded.png]]
+
+
 >[!info]
 >$S \subset M$ is an embedded smooth submanifold
 >- $S$ is a **topological manifold** (may not need to be subspace topology)

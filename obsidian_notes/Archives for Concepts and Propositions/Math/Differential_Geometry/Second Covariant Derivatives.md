@@ -25,6 +25,6 @@ date of note: 2024-05-21
 -----------
 ##  Recommended Notes and References
 
-- [[Connection in Vector Bundle]]
+- [[Connection in Vector Bundle and Covariant Derivative]]
 
 - [[Introduction to Riemannian Manifolds by Lee]]

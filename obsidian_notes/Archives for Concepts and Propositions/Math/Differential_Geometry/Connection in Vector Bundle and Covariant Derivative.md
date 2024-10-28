@@ -60,7 +60,9 @@ date of note: 2024-05-18
 ## Explanation
 
 
+## Covariant Derivative along Smooth Curve
 
+- [[Covariant Derivative Along a Curve]]
 
 
 -----------

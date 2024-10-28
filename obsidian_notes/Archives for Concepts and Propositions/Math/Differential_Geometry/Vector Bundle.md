@@ -37,6 +37,8 @@ date of note: 2024-05-18
 - [[Surjective Function]]
 - [[Continuous Function]]
 
+![[local_trivialization.png]]
+
 >[!important]
 >The **rank** of a *vector bundle* is the **dimension** of *vector space* $\pi^{-1}(p)$ associated with each point $p$.
 

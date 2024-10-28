@@ -35,6 +35,11 @@ date of note: 2024-05-20
 
 ## Explanation
 
+![[derivation_function_along_curve.png]]
+
+![[tangent_plane.png]]
+
+
 ## Composition
 
 >[!important] Proposition (The Velocity of a Composite Curve)

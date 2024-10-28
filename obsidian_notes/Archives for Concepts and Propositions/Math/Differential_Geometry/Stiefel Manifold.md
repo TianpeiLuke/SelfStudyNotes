@@ -64,7 +64,7 @@ date of note: 2024-10-02
 - [[Grassmann Manifold as Quotient Manifold]]
 
 - [[Tangent Space to Submanifold]]
-- [[Parallel Transport]]
+- [[Parallel Transport of Tensor Field along Curve]]
 - [[Geodesic on Manifolds]]
 
 - [[Local and Global Frame for Tangent Bundle]]

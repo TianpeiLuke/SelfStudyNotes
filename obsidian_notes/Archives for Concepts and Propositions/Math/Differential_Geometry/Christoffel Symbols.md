@@ -59,7 +59,7 @@ date of note: 2024-05-20
 -----------
 ##  Recommended Notes and References
 
-- [[Connection in Vector Bundle]]
+- [[Connection in Vector Bundle and Covariant Derivative]]
 - [[Affine Connection on Tangent Bundle]]
 
 

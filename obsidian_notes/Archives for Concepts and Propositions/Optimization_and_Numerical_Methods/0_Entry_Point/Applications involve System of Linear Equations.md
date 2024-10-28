@@ -519,7 +519,7 @@ date of note: 2024-09-27
 
 - [[Exponential Map of Linear Operator]]
 - [[Homogeneous Linear Differential Equations]]
-- [[Linear ODE with Constant Coefficients]]
+- [[Linear Ordinary Differential Equations with Constant Coefficients]]
 - [[Jordan Canonical Form]]
 
 

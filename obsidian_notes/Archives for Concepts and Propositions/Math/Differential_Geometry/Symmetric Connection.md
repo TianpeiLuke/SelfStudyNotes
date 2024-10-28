@@ -27,7 +27,7 @@ date of note: 2024-05-20
 >where $[X, Y]$ is the *Lie bracket* of two vector fields.
 
 
-- [[Connection in Vector Bundle]]
+- [[Connection in Vector Bundle and Covariant Derivative]]
 - [[Lie Bracket of Vector Fields]]
 - [[Vector Field on Manifold]]
 - [[Space of all Smooth Vector Fields on a Manifold]]

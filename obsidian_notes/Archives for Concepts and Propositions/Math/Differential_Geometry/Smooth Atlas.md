@@ -21,8 +21,6 @@ date of note: 2024-05-06
 >An atlas $\mathcal{A}$ is called a **smooth atlas** if *any two charts* in $\mathcal{A}$ are *smoothly compatible* with each other.
 
 
-
-
 ## Explanation
 
 >[!info]

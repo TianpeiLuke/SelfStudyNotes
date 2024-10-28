@@ -30,7 +30,7 @@ date of note: 2024-05-20
 >$$  
 
 - [[Riemannian Metric and Riemannian Manifold]]
-- [[Connection in Vector Bundle]]
+- [[Connection in Vector Bundle and Covariant Derivative]]
 - [[Tangent Bundle]]
 - [[Vector Field on Manifold]]
 - [[Space of all Smooth Vector Fields on a Manifold]]

@@ -26,6 +26,8 @@ date of note: 2024-05-06
 
 ## Tangent Space in Euclidean Space
 
+![[tangent_space_to_vector_space_diagram.png]]
+
 ### Geometric Tangent Space in Euclidean Space
 
 >[!info]
@@ -106,6 +108,9 @@ date of note: 2024-05-06
 - [[Bounded Linear Operator and Norm of Operator]]
 
 ## Extension to Smooth Manifold
+
+![[tangent_space_rn.png]]
+
 
 - We can also reach to the isomorphism between a geometric tangent vector at $p$ on smooth manifold and a directional derivative along such geometric tangent vector at $p$
 

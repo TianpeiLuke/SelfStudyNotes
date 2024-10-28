@@ -25,6 +25,8 @@ date of note: 2024-05-19
 >$$(A^k)(A^l) \subseteq A^{k+l}$$ 
 >for each $k$ and $l$.
 
+- [[Algebra over Field]]
+
 >[!important] Definition
  >A graded algebra is **anticommutative** if the product satisfies $$ab = (-1)^{kl}ba$$ for $a \in A^k$, $b \in A^l$.  
  

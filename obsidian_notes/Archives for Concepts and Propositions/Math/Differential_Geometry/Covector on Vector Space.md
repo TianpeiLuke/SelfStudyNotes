@@ -27,7 +27,7 @@ date of note: 2024-05-10
 ## Explanation
 
 
-
+![[covector_fields.png]]
 
 
 -----------

@@ -30,13 +30,16 @@ date of note: 2024-05-05
 
 ## Explanation
 
-
+![[coordinate_chart.png]]
 
 
 
 -----------
 ##  Recommended Notes and References
 
+- [[Transition Map and Smoothly Compatible]]
+- [[Smooth Atlas]]
+- [[Maximal Smooth Atlas]]
 - [[Topological Manifold]]
 - [[Homeomorphism]]
 

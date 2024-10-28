@@ -60,22 +60,30 @@ date of note: 2024-05-06
 
 
 - [[Development of Connection from Euclidean to Manifold]]
-- [[Connection in Vector Bundle]]
+- [[Connection in Vector Bundle and Covariant Derivative]]
 - [[Affine Connection on Tangent Bundle]]
 - [[Affine Connection of Basis Frames and Connection Coefficient]]
 - [[Coordinate Representation of Connection]]
 - [[Christoffel Symbols]]
 - [[Difference Tensor based on Affine Connection]]
 - [[Space of all Affine Connections]]
+
 - [[Total Covariant Derivative]]
 - [[Second Covariant Derivatives]]
 - [[Covariant Hessian Tensor]]
+
 - [[Vector Field Along a Curve]]
+
+
 - [[Covariant Derivative Along a Curve]]
 - [[Coordinate Representation of Covariant Derivative Along a Curve]]
 - [[Geodesic on Manifolds]]
-- [[Parallel Transport]]
+- [[Coordinate Representation of Geodesic and Geodesic Equations]]
+- [[Maximal Geodesic and Geodesic Segment]]
+- [[Parallel Transport of Tensor Field along Curve]]
 - [[Coordinate Representation of Vector Field Parallel Along a Curve]]
+
+
 - [[Metric Connection for Riemannian Manifold]]
 - [[Symmetric Connection]]
 - [[Levi Civita Connection and Riemannian Connection]]

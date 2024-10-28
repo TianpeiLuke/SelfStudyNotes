@@ -29,7 +29,7 @@ date of note: 2024-06-24
 - [[Tangent Vector and Differential via Velocity of Smooth Curves]]
 - [[Concepts related to Tangent Space and Tangent Bundle]]
 
-- [[Connection in Vector Bundle]]
+- [[Connection in Vector Bundle and Covariant Derivative]]
 - [[Affine Connection on Tangent Bundle]]
 
 

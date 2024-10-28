@@ -64,6 +64,9 @@ date of note: 2024-05-27
 - [[Ordinary Differential Equations]]
 - [[Autonomous and Nonautonomous Ordinary Differential Equations]]
 
+![[integral_curves.png]]
+
+
 ## Examples
 
 >[!example]
@@ -114,7 +117,12 @@ date of note: 2024-05-27
 
 - [[Smooth Maps on Space of Vector Fields]]
 
+## Geodesic and Parallel Transport
 
+- [[Geodesic on Manifolds]]
+- [[Parallel Transport of Tensor Field along Curve]]
+- [[Coordinate Representation of Geodesic and Geodesic Equations]]
+- [[Coordinate Representation of Vector Field Parallel Along a Curve]]
 
 
 

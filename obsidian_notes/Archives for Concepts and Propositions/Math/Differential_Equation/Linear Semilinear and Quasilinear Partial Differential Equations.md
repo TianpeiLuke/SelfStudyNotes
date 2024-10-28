@@ -95,7 +95,7 @@ date of note: 2024-06-15
 
 - [[Partial Differential Equations]]
 
-- [[Linear ODE with Constant Coefficients]]
+- [[Linear Ordinary Differential Equations with Constant Coefficients]]
 - [[Homogeneous Linear Differential Equations]]
 - [[Autonomous and Nonautonomous Ordinary Differential Equations]]
 - [[Homogeneous Linear Stochastic Differential Equation]]

@@ -27,6 +27,7 @@ date of note: 2024-05-27
 >If $M$ is a manifold, a **flow domain** for $M$ is an *open subset* $\mathfrak{D} \subseteq \mathbb{R} \times M$ with the *property* that 
 >- for each $p \in M$, the set $$\mathfrak{D}^{(p)} = \set{t \in \mathbb{R}: (t, p) \in \mathfrak{D}}$$ is an **open interval** *containing $0$*.
 
+![[flow_domain.png]]
 
 >[!important] Definition
 > A **flow** on $M$ is a *continuous map* $$\theta: \mathfrak{D} \rightarrow M,$$ where  $\mathfrak{D} \subseteq \mathbb{R} \times M$ is a *flow domain*, that satisfies the following **group laws**:
@@ -40,6 +41,7 @@ date of note: 2024-05-27
 - [[Topological Group Action]]
 - [[Group]]
 
+![[local_flow.png]]
 
 >[!info]
 >We sometimes call $\theta$ a **local flow** to distinguish it from a *global flow* as defined earlier. 

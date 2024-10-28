@@ -43,6 +43,8 @@ date of note: 2024-05-18
 
 ## Explanation
 
+![[F_related_vector_fields.png]]
+
 >[!info]
 >Recall the **pushforward of measure** $\mathcal{P}$ by function $X$ as
 >$$

@@ -26,6 +26,8 @@ date of note: 2024-05-18
 >$$ 
 >This defines *$n$ functions* $X^i: U \rightarrow \mathbb{R}$, called the **component functions** of $X$ in the given chart.
 
+^b98f3e
+
 - [[Coordinate Representation of Tangent Vector]]
 - [[Einstein Summation Convention]]
 
@@ -63,7 +65,7 @@ date of note: 2024-05-18
 >and  $\nabla$ (*the nabla symbol*) is also called **gradient operator**.
 > 
 
-
+![[coordinate_curve.png]]
 
 ## Explanation
 

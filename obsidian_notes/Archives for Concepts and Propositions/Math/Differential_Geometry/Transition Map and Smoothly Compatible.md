@@ -19,6 +19,8 @@ date of note: 2024-05-06
 >[!important] Definition
 >Let $M$ be a *topological $n$-manifold.* If $(U, \varphi)$, $(V, \psi)$ are two *charts* such that $U \cap V \neq \emptyset$, the *composite map* $\psi \circ \varphi^{-1}: \varphi(U \cap V ) \rightarrow \psi(U \cap V)$ is called the **transition map** from $\varphi$ to $\psi$. 
 
+![[transition_map.png]]
+
 >[!info]
 >It is a *composition* of *homeomorphisms*, and is therefore itself a *homeomorphism*. 
 
@@ -28,6 +30,8 @@ date of note: 2024-05-06
 
 - [[Coordinate Chart]]
 - [[Diffeomorphism]]
+
+![[smooth_compatiability_slice_chart.png]]
 
 >[!info]
 >Since $\varphi(U \cap V )$ and $\psi(U \cap V )$ are open subsets of $\mathbb{R}^n$, smoothness of this map is to be interpreted in the ordinary sense of having *continuous partial derivatives of all orders.*

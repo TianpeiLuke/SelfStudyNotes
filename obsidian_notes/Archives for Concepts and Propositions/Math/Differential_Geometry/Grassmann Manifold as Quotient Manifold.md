@@ -68,7 +68,7 @@ date of note: 2024-10-02
 
 - [[Stiefel Manifold]]
 - [[Tangent Space to Submanifold]]
-- [[Parallel Transport]]
+- [[Parallel Transport of Tensor Field along Curve]]
 - [[Geodesic on Manifolds]]
 - [[Riemannian Metric and Riemannian Manifold]]
 - [[Smooth Manifold]]

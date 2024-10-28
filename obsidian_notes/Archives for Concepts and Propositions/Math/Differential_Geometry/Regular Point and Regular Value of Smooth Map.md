@@ -33,6 +33,8 @@ date of note: 2024-05-20
 >$$
 >is a *regular point*.
 
+![[regular_surface.png]]
+
 >[!important] Definition
 >A level set $\Phi^{-1}(c)$ is called a **regular level set** if $c$ is a *regular value* of $\Phi$.
 

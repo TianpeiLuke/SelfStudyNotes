@@ -27,6 +27,10 @@ date of note: 2024-05-20
 >$$ 
 > provided the derivative exists. 
 
+
+![[lie_derivatives.png]]
+
+
 >[!important]
 > For small $t \neq 0$, at least the **difference quotient** makes sense: 
 > - $\theta_t$ is defined in a neighborhood of $p$, and 
@@ -81,7 +85,7 @@ date of note: 2024-05-20
 >- **Covariant Derivative**: 
 
 - [[Exterior Derivatives of Differential Form]]
-- [[Connection in Vector Bundle]]
+- [[Connection in Vector Bundle and Covariant Derivative]]
 - [[Affine Connection on Tangent Bundle]]
 
 

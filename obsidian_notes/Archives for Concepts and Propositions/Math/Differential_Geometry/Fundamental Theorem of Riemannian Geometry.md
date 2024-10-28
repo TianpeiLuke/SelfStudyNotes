@@ -17,9 +17,9 @@ date of note: 2024-05-20
 >[!important]
 >**Name**: Levi Civita Connection
 
-![[Connection in Vector Bundle#^94b423]]
+![[Connection in Vector Bundle and Covariant Derivative#^94b423]]
 
-- [[Connection in Vector Bundle]]
+- [[Connection in Vector Bundle and Covariant Derivative]]
 
 >[!important] Fundamental Theorem of Riemannian Geometry
 >Let $(M, g)$ be a **Riemannian** or **pseudo-Riemannian manifold** (with or without boundary). 
@@ -48,7 +48,7 @@ date of note: 2024-05-20
 
 
 - [[Riemannian Metric and Riemannian Manifold]]
-- [[Connection in Vector Bundle]]
+- [[Connection in Vector Bundle and Covariant Derivative]]
 
 
 

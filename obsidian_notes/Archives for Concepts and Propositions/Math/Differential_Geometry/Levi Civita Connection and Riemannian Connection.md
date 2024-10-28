@@ -28,7 +28,7 @@ date of note: 2024-05-20
 >When $g$ is *positive definite*, the **Riemannian connection**.
 
 - [[Riemannian Metric and Riemannian Manifold]]
-- [[Connection in Vector Bundle]]
+- [[Connection in Vector Bundle and Covariant Derivative]]
 - [[Metric Connection for Riemannian Manifold]]
 - [[Symmetric Connection]]
 - [[Lie Bracket of Vector Fields]]

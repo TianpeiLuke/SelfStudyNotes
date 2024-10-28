@@ -34,6 +34,9 @@ date of note: 2024-05-19
 >[!important] Definition
 >More generally, a **local section** of $E$ is a *continuous* map $\sigma: U \rightarrow E$ defined on some *open subset* $U \subseteq M$ and satisfying $$\pi \circ \sigma =  \text{Id}_U.$$ 
 
+![[local_section_vector_bundle.png]]
+
+
 >[!important] Definition
 >To emphasize the distinction, a section defined on **all of** $M$ is sometimes called a **global section**. 
 

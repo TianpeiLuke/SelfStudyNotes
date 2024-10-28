@@ -16,6 +16,10 @@ date of note: 2024-05-20
 >[!important]
 >**Name**: Coordinate Representation of Connection
 
+![[Connection in Vector Bundle and Covariant Derivative#^94b423]]
+
+- [[Connection in Vector Bundle and Covariant Derivative]]
+
 >[!important] Proposition
 >Let $M$ be a smooth manifold with or without boundary, and let $\nabla$ be a connection in $TM$. 
 >
@@ -29,6 +33,8 @@ date of note: 2024-05-20
 > \nabla_{X}Y &= \left( X(Y^k) + X^i\,Y^j \Gamma_{i,j}^{k} \right)\,E_k.
 > \end{align}
 >$$ 
+
+^8b43b3
 
 - [[Affine Connection of Basis Frames and Connection Coefficient]]
 - [[Einstein Summation Convention]]

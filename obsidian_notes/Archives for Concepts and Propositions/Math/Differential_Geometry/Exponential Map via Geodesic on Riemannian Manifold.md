@@ -37,11 +37,15 @@ date of note: 2024-05-20
 - [[Tangent Bundle]]
 - [[Tangent Vector and Differential via Velocity of Smooth Curves]]
 - [[Levi Civita Connection and Riemannian Connection]]
+- [[Maximal Geodesic and Geodesic Segment]]
 - [[Geodesic on Manifolds]]
 - [[Riemannian Metric and Riemannian Manifold]]
 
 
 ## Explanation
+
+
+![[exp_map.png]]
 
 
 
@@ -64,7 +68,7 @@ date of note: 2024-05-20
 
 - [[Maximal Integral Curve of Vector Field]]
 - [[Parameterized Curve on Manifold]]
-- [[Parallel Transport]]
+- [[Parallel Transport of Tensor Field along Curve]]
 
 - [[Retraction on Smooth Manifold]]
 

@@ -47,6 +47,7 @@ date of note: 2024-05-17
 
 ## Development of the Basis of Tangent Space
 
+![[tangent_vec_coordinates.png]]
 
 ### Isomorphism between Tangent Space of Manifold and Tangent Space of Euclidean Space
 
@@ -113,6 +114,7 @@ Recall that
 >\frac{\partial}{\partial x^1}\Bigr|_{\varphi(p)}, \ldots, \frac{\partial}{\partial x^n}\Bigr|_{\varphi(p)}
 >$$
 >form a **basis** for $T_{\varphi(p)}\mathbb{R}^n$.
+
 
 
 ### Basis Derivations on Tangent Space of Manifold

@@ -200,7 +200,7 @@ date of note: 2024-06-14
 - [[Homogeneous Linear Stochastic Differential Equation]]
 
 - [[Geodesic on Manifolds]]
-- [[Parallel Transport]]
+- [[Parallel Transport of Tensor Field along Curve]]
 
 - [[Ordinary Differential Equations by Chicone]]
 - Gelfand, I. M., & Silverman, R. A. (2000). _Calculus of variations_. Courier Corporation.

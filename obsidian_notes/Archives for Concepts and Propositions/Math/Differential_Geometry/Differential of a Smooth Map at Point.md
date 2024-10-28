@@ -76,6 +76,8 @@ date of note: 2024-05-14
 
 - [[Bounded Linear Operator and Norm of Operator]]
 
+![[differentials.png]]
+
 ## Properties
 
 >[!important] Proposition

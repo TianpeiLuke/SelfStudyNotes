@@ -84,7 +84,7 @@ date of note: 2024-09-15
 - [[Least Square Estimation Solution and Geometric Interpretation]]
 
 
-- [[Linear ODE with Constant Coefficients]]
+- [[Linear Ordinary Differential Equations with Constant Coefficients]]
 - [[Linear Stochastic Differential Equation]]
 - [[Homogeneous Linear Differential Equations]]
 

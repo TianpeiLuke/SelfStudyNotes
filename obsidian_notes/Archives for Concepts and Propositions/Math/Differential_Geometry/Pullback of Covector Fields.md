@@ -118,7 +118,9 @@ date of note: 2024-05-18
 - [[Differential of a Smooth Map at Point]]
 - [[Smooth Map between Euclidean Spaces]]
 - [[Pullback by Bounded Operator in Banach Space]]
-  
+- [[Pushforward of Vector Fields]]
+
+
 - [[Space of all Smooth Covector Fields on a Manifold]]
 - [[Smooth Covector Field on Manifold]]
 - [[Covector Field on Manifold]]

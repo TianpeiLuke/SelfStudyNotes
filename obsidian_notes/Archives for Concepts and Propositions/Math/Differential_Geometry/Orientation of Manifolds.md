@@ -21,7 +21,7 @@ date of note: 2024-05-25
 
 ## Explanation
 
-
+![[positive_oriented_boundary_curve.png]]
 
 
 

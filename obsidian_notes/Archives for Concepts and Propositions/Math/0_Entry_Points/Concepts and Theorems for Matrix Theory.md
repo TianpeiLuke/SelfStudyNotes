@@ -271,7 +271,7 @@ date of note: 2024-07-13
 - [[Concepts and Theorems for Ordinary Differential Equations]]
 - [[Ordinary Differential Equations]]
 - [[Autonomous and Nonautonomous Ordinary Differential Equations]]
-- [[Linear ODE with Constant Coefficients]]
+- [[Linear Ordinary Differential Equations with Constant Coefficients]]
 - [[Matrix Polynomial]]
 - [[Matrix Exponential]]
 - [[Exponential Map of Linear Operator]]

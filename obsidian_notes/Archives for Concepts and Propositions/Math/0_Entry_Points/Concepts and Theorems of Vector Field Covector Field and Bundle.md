@@ -111,6 +111,76 @@ date of note: 2024-05-06
 - [[Laplacian of Smooth Map on Riemannian Manifold]]
 - [[Coordinate Representation of Laplace Operator]]
 
+## Derivatives of Vector Fields and Tensor Fields
+
+- [[Summary of Differentiation of Vector Field]]
+
+### Lie Derivative
+
+>[!info]
+>**Lie derivative** measure the **directional derivative** of **tangent vector fields** *along the* **flow** of another *tangent vector fields*.
+>
+>The key is to use a **flow** on smooth manifold to define the **direction** in the **directional derivative**
+
+
+- [[Lie Bracket of Vector Fields]]
+- [[Coordinate Formula for Lie Bracket of Vector Fields]]
+
+- [[Integral Curve of Vector Field]]
+- [[Local Flow on Smooth Manifold]]
+- [[Vector Field as Infinitesimal Generator of Local Flow]]
+- [[Fundamental Theorem on Flows]]
+
+- [[Lie Derivative of Vector Field]]
+- [[Lie Algebra as Vector Space with Lie Bracket]]
+- [[Lie Group]]
+
+### Covariant Derivative of Tensor Field
+
+
+>[!info]
+>**Covariant derivative** measure the **directional derivative** of **sections of vector bundle** *along the* **tangent direction** defined by *tangent vector fields*.
+>
+>The idea is to **project** the directional derivative from *ambient vector space* to **the tangent space of the submanifold.**
+
+#### Connection, Covariant Derivative of Tensor Field and Affine Connection
+
+- [[Development of Connection from Euclidean to Manifold]]
+- [[Connection in Vector Bundle and Covariant Derivative]]
+- [[Affine Connection on Tangent Bundle]]
+- [[Affine Connection of Basis Frames and Connection Coefficient]]
+- [[Coordinate Representation of Connection]]
+- [[Christoffel Symbols]]
+- [[Difference Tensor based on Affine Connection]]
+- [[Space of all Affine Connections]]
+
+#### Covariant Derivatives
+
+- [[Total Covariant Derivative]]
+- [[Second Covariant Derivatives]]
+- [[Covariant Hessian Tensor]]
+
+#### Parallel Transport and Geodesic Curve
+
+- [[Vector Field Along a Curve]]
+- [[Covariant Derivative Along a Curve]]
+- [[Coordinate Representation of Covariant Derivative Along a Curve]]
+
+- [[Geodesic on Manifolds]]
+- [[Coordinate Representation of Geodesic and Geodesic Equations]]
+- [[Maximal Geodesic and Geodesic Segment]]
+
+- [[Parallel Transport of Tensor Field along Curve]]
+- [[Coordinate Representation of Vector Field Parallel Along a Curve]]
+
+#### Riemannian Connection
+
+- [[Metric Connection for Riemannian Manifold]]
+- [[Symmetric Connection]]
+- [[Levi Civita Connection and Riemannian Connection]]
+
+
+
 
 ## Duality between Tangent and Cotangent 
 
