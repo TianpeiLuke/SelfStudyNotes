@@ -48,7 +48,9 @@ date of note: 2024-10-11
 ##  Recommended Notes and References
 
 
-
+- [[Matrix Polynomial]]
+- [[Characteristic Polynomial for Linear Map]]
+- [[Companion Matrix of Polynomial]]
 
 - [[Characteristic Polynomial for Linear Map]]
 - [[Continuous Functional Calculus]]
