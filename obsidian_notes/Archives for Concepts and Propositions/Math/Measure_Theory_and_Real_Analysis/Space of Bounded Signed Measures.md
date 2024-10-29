@@ -26,6 +26,8 @@ date of note: 2024-06-20
 >
 >We define the **total variation of** $\nu$ as $$\lVert \nu \rVert := \lvert \nu \rvert\,(\mathcal{X}).$$
 
+^d5ec0e
+
 - [[Finitely Additive Measure]]
 - [[Jordan Decomposition Theorem and total variation measure]]
 - [[Signed Measure]]
@@ -40,6 +42,8 @@ date of note: 2024-06-20
 >$$
 > \mathcal{BA}(\mathcal{X}, \mathscr{F}) := \left\{ \nu \in {\mathbb{R}}^{\mathscr{F}}: \nu \text{ finitely additive and } \lvert \nu \rvert (\mathcal{X}) < \infty \right\}. 
 >$$ 
+
+^aaf5b8
 
 - [[Boolean Algebra]]
 
@@ -61,6 +65,8 @@ date of note: 2024-06-20
 >$$
 > \mathcal{RCA}(\mathcal{X}, \mathscr{F}) := \left\{ \mu \in {\mathbb{R}}^{\mathscr{F}}: \mu \text{ Radon measure and } \lvert \mu \rvert (\mathcal{X}) < \infty \right\}. 
 >$$ 
+
+^73c68c
 
 - [[Locally Compact Hausdorff Space]]
 - [[Inner Regularity]]

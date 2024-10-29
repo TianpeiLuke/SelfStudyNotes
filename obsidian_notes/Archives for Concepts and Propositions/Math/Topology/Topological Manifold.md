@@ -30,6 +30,8 @@ date of note: 2024-05-04
 > 3. $M$ is **locally Euclidean** of *dimension $n$*: 
 >    each point of $M$ has a *neighborhood* that is *homeomorphic* to an *open* subset of $\mathbb{R}^n$. 
 
+^90f99f
+
 - [[Hausdorff Space]]
 - [[Second Countablity]]
 - [[Homeomorphism]]

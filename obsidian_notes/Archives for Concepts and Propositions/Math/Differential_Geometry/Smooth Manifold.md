@@ -22,6 +22,8 @@ date of note: 2024-05-06
 >[!important] Definition
 >A **smooth manifold** is a pair $(M, \mathcal{A})$, where $M$ is a *topological manifold* and $\mathcal{A}$ is a *smooth structure* on $M$.
 
+^dcce28
+
 - [[Maximal Smooth Atlas]]
 
 ## Explanation

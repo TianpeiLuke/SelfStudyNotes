@@ -19,6 +19,8 @@ date of note: 2024-05-05
 >[!important] Definition
 >Let $M$ be a *topological n-manifold*. A **coordinate chart** (or just a **chart**) on $M$ is a *pair* $(U, \varphi)$, where $U$ is an **open subset** of $M$ and $\varphi: U \rightarrow \widehat{U}$ is a **homeomorphism** from $U$ to an *open subset* $\widehat{U} = \varphi(U) \subseteq \mathbb{R}^n.$
 
+^1c8d37
+
 
 >[!important] Definition
 >- By definition of a topological manifold, each point $p \in M$ is contained in the **domain** of some chart $(U, \varphi)$. 

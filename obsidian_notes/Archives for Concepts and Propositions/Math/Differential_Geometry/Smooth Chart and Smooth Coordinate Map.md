@@ -20,6 +20,8 @@ date of note: 2024-05-06
 >[!important] Definition
 >If $M$ is a smooth manifold, any chart $(U, \varphi)$ contained in the given *maximal smooth atlas* is called a **smooth chart**, and the corresponding coordinate map $\varphi$ is called a **smooth coordinate map**. 
 
+^4b2910
+
 >[!important] Definition
 >It is useful also to introduce the terms **smooth coordinate domain** or **smooth coordinate neighborhood** for the domain of a smooth coordinate chart. 
 >

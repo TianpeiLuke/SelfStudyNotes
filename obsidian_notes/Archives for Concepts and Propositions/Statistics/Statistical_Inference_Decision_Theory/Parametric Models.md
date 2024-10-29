@@ -30,6 +30,7 @@ date of note: 2024-06-08
 
 - [[Space of Bounded Signed Measures]]
 - [[Coordinate Chart]]
+- [[Statistical Manifold of Parametric Family]]
 - [[Mathematical Statistics by Shao]] pp 94
 
 >[!important] Definition

@@ -20,6 +20,7 @@ date of note: 2024-05-06
 >
 >An atlas $\mathcal{A}$ is called a **smooth atlas** if *any two charts* in $\mathcal{A}$ are *smoothly compatible* with each other.
 
+- [[Transition Map and Smoothly Compatible]]
 
 ## Explanation
 
@@ -36,6 +37,6 @@ date of note: 2024-05-06
 
 - [[Topological Manifold]]
 - [[Coordinate Chart]]
-- [[Transition Map and Smoothly Compatible]]
+
 
 - [[Introduction to Smooth Manifolds by Lee]]
