@@ -2,7 +2,7 @@
 tags:
   - concept
   - math/topology
-  - math/algebra
+  - math/abstract_algebra
   - math/algebraic_topology
 keywords:
   - topological_group_action

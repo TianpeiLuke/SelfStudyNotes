@@ -3,7 +3,7 @@ tags:
   - concept
   - math/linear_algebra
   - math/differential_geometry
-  - math/algebra
+  - math/abstract_algebra
 keywords:
   - permutation_group
   - symmetric_group_k

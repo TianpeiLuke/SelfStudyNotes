@@ -43,6 +43,15 @@ date of note: 2024-05-15
 - [[Basis of Vector Space]]
 - [[Vector Space over a Field]]
 
+>[!important] Definition
+>Let $F$ be an arbitrary field $F$.
+>
+>The set of all $n\times n$ **square matrices** with **entries from** $F$ is denoted as $$M_{n}(F) := \left\{ A = [a_{i,j}] \;|\; a_{i,j} \in F, \, i,j=1\,{,}\ldots{,}\,n \right\} .$$
+>
+>The set of all $n\times m$ **matrices** with **entries from** $F$ is denoted as $$M_{n,m}(F) := \left\{ A = [a_{i,j}] \;|\; a_{i,j} \in F, \, i=1\,{,}\ldots{,}\,n,\,j=1\,{,}\ldots{,}\,m \right\} .$$
+
+- [[Field]]
+- [[Ring]]
 
 
 ## Explanation
@@ -66,3 +75,4 @@ date of note: 2024-05-15
 
 - [[Finite Dimensional Vector Spaces by Halmos]]
 - [[Matrix Analysis by Horn]]
+- [[Abstract Algebra by Dummit]] pp 235

@@ -3,7 +3,7 @@ tags:
   - concept
   - math/lie_group_algebra
   - math/differential_geometry
-  - math/algebra
+  - math/abstract_algebra
   - math/linear_algebra
 keywords:
   - lie_group

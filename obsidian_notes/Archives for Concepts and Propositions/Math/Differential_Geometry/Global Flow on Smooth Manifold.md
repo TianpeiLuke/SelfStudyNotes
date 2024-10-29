@@ -3,7 +3,7 @@ tags:
   - concept
   - math/differential_geometry
   - math/topology
-  - math/algebra
+  - math/abstract_algebra
 keywords:
   - global_flow_smooth_manifold
   - topological_group_action

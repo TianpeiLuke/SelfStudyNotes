@@ -3,7 +3,7 @@ tags:
   - concept
   - math/differential_geometry
   - math/topology
-  - math/algebra
+  - math/abstract_algebra
 keywords:
   - integral_curve_vector_field
 topics:

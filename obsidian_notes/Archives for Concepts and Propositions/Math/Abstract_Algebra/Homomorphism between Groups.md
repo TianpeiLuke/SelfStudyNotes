@@ -1,11 +1,12 @@
 ---
 tags:
   - concept
-  - math/algebra
+  - math/abstract_algebra
 keywords:
   - group_homomorphism
 topics:
   - algebra
+  - abstract_algebra
 name: Homomorphism between Groups
 date of note: 2024-05-21
 ---

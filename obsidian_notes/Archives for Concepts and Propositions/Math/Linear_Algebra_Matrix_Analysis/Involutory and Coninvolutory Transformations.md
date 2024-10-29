@@ -2,7 +2,7 @@
 tags:
   - concept
   - math/matrix_analysis
-  - math/algebra
+  - math/abstract_algebra
   - math/linear_algebra
 keywords:
   - involutory_transformation

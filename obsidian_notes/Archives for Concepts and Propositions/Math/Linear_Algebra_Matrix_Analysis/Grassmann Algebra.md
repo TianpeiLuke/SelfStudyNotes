@@ -1,7 +1,7 @@
 ---
 tags:
   - concept
-  - math/algebra
+  - math/abstract_algebra
   - math/differential_geometry
 keywords:
   - grassmann_algebra

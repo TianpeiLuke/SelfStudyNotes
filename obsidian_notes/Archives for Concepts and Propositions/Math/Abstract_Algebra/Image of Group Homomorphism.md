@@ -1,11 +1,12 @@
 ---
 tags:
   - concept
-  - math/algebra
+  - math/abstract_algebra
 keywords:
   - image_group_homomorphism
 topics:
   - algebra
+  - abstract_algebra
 name: Image of Group Homomorphism
 date of note: 2024-05-21
 ---

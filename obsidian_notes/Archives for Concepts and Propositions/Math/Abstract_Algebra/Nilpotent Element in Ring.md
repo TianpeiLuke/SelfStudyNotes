@@ -1,11 +1,12 @@
 ---
 tags:
   - concept
-  - math/algebra
+  - math/abstract_algebra
 keywords:
   - nilpotent_ring
 topics:
   - algebra
+  - abstract_algebra
 name: Nilpotent Element in Ring
 date of note: 2024-05-26
 ---

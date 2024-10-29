@@ -2,7 +2,7 @@
 tags:
   - concept
   - math/linear_algebra
-  - math/algebra
+  - math/abstract_algebra
   - math/lie_group_algebra
   - math/differential_geometry
 keywords:

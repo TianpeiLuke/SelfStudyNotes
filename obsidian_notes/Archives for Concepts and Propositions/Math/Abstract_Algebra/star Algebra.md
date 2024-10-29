@@ -2,7 +2,7 @@
 tags:
   - concept
   - math/functional_analysis
-  - math/algebra
+  - math/abstract_algebra
 keywords:
   - star_algebra
 topics:

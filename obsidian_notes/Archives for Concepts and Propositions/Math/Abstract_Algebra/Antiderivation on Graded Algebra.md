@@ -2,7 +2,7 @@
 tags:
   - concept
   - math/differential_geometry
-  - math/algebra
+  - math/abstract_algebra
 keywords:
   - antiderivation
 topics:

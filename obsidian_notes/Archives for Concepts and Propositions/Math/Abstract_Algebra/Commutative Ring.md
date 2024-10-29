@@ -1,7 +1,7 @@
 ---
 tags:
   - concept
-  - math/algebra
+  - math/abstract_algebra
 keywords:
   - commutative_ring
 topics:

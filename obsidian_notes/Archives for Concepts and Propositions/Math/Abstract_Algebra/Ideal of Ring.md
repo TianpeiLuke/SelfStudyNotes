@@ -1,11 +1,12 @@
 ---
 tags:
   - concept
-  - math/algebra
+  - math/abstract_algebra
 keywords:
   - left_ideal_ring
 topics:
   - algebra
+  - abstract_algebra
 name: Left Ideal of Ring
 date of note: 2024-05-28
 ---
@@ -54,6 +55,6 @@ date of note: 2024-05-28
 - [[Abelian Group]]
 - [[Subgroup]]
 
-- [[Abstract Algebra by Dummit]]
+- [[Abstract Algebra by Dummit]] pp 242
 
 - Wikipedia [Ideal_(ring_theory)](https://en.wikipedia.org/wiki/Ideal_(ring_theory))

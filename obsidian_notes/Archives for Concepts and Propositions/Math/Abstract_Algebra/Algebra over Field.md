@@ -1,7 +1,7 @@
 ---
 tags:
   - concept
-  - math/algebra
+  - math/abstract_algebra
   - math/linear_algebra
 keywords:
   - algebra_over_field

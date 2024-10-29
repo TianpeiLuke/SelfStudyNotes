@@ -1,7 +1,7 @@
 ---
 tags:
   - concept
-  - math/algebra
+  - math/abstract_algebra
   - math/linear_algebra
 keywords:
   - left_r_module
@@ -9,6 +9,7 @@ keywords:
 topics:
   - algebra
   - linear_algebra
+  - abstract_algebra
 name: Left Ring Module
 date of note: 2024-05-22
 ---

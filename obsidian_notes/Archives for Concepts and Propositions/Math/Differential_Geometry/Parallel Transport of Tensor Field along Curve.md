@@ -42,6 +42,15 @@ date of note: 2024-05-20
 ## Explanation
 
 >[!important]
+>It is always possible to **extend** a *vector at a point* to a **parallel vector field** *along any given curve*. 
+>
+>However, it may not be possible in general to extend it to a **parallel vector field** on an **open subset** of the *manifold*. 
+>- The impossibility of finding such extensions is intimately connected with the phenomenon of **curvature**.
+
+- [[Ricci Curvature Ricci Tensor]]
+
+
+>[!important]
 >![[Parallel_Transport.png]]
 
 

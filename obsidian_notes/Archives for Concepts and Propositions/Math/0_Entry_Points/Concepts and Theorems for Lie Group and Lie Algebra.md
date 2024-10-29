@@ -4,7 +4,7 @@ tags:
   - concept
   - math/topology
   - math/differential_geometry
-  - math/algebra
+  - math/abstract_algebra
 keywords: 
 topics:
   - topology

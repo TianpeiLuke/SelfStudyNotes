@@ -1,7 +1,7 @@
 ---
 tags:
   - concept
-  - math/algebra
+  - math/abstract_algebra
   - math/differential_geometry
 keywords:
   - grassmann_algebra
@@ -9,6 +9,7 @@ keywords:
 topics:
   - algebra
   - differential_geometry
+  - abstract_algebra
 name: Grassmann Algebra
 date of note: 2024-05-19
 ---

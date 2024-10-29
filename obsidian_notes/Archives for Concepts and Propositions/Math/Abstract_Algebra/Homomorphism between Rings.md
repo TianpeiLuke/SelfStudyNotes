@@ -1,11 +1,12 @@
 ---
 tags:
   - concept
-  - math/algebra
+  - math/abstract_algebra
 keywords:
   - ring_homomorphism
 topics:
   - algebra
+  - abstract_algebra
 name: Homomorphism between Rings
 date of note: 2024-05-21
 ---

@@ -107,7 +107,7 @@ date of note: 2024-05-20
 >And the **covariant derivative** of $W$ with respect to $V = \gamma'(0)$ 
 >$$
 > \begin{align}
->(\nabla_{X}Y)_{p}&=\lim_{t \rightarrow 0}\frac{P^{\gamma}_{t, 0}(W_{\gamma(t)})  - W_p}{t}
+>(\nabla_{V}W)_{p}&=\lim_{t \rightarrow 0}\frac{P^{\gamma}_{t, 0}(W_{\gamma(t)})  - W_p}{t}
 > \end{align}
 >$$ 
 >- ![[directional_derivative_of_vector_fields.png]]
@@ -121,7 +121,7 @@ date of note: 2024-05-20
 >		- This parallel transport map works in **reverse** from $\gamma(t)$ to $\gamma(0)$
 >	- For **Lie derivative**, it is via the **local flow** $\theta_{t}$ of a *vector field* $V$ $$d(\theta_{-t})_{\theta_{t}(p)}\left(W_{\theta_t(p)}\right) \in T_{\gamma(0)}\mathcal{M}$$
 >		- esp. $$\theta_t(p) = \theta(t, p): \mathcal{M} \to \mathcal{M}$$
->		- $$\theta_t(\gamma(0)) = \gamma(t).$$
+>		- $$\theta_0(p) = p, \quad (\theta^{(p)})'(0) = V_p,\quad  \theta_t(\gamma(0)) = \gamma(t).$$ 
 >		- The flow $\theta_{-t}$ is the **reverse flow**
 
 ^6bab4a

@@ -2,7 +2,7 @@
 tags:
   - concept
   - math/topology
-  - math/algebra
+  - math/abstract_algebra
 keywords:
   - quotient_group
 topics:

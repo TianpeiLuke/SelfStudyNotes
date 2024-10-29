@@ -1,11 +1,12 @@
 ---
 tags:
   - concept
-  - math/algebra
+  - math/abstract_algebra
 keywords:
   - group_algebra
 topics:
   - algebra
+  - abstract_algebra
 name: Group
 date of note: 2024-05-21
 ---

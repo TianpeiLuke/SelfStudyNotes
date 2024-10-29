@@ -106,6 +106,7 @@ date of note: 2024-05-20
 
 
 
+
 ![[para_transp3.png]]
 
 
