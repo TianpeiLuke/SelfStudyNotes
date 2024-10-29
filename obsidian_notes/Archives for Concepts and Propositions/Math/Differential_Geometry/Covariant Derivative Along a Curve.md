@@ -48,8 +48,20 @@ date of note: 2024-05-20
 
 ![[geo_curv.png]]
 
+### Covariant Derivative as Normal Projection of Derivative
+
+>[!info]
+>Let $w$ be a *smooth vector field* in an open subset $U \subset \mathcal{S}$ and $p\in U$, i.e. $w(p) \in T_{p}S$.  Let $y\in T_{p}S$. 
+>
+>Consider a parameterized curve $\alpha: (-\epsilon, \epsilon) \rightarrow U$, with $\alpha(0) = p$ and $\dot{\alpha}(0) = y$, and let $w(t), t\in (-\epsilon, \epsilon)$, be the **restriction** of the *vector field to the curve* $\alpha$. 
+>
+>The vector obtained by the **normal projection** of $$\frac{d}{dt}w(0)$$ onto the *tangent plane* $T_{p}S$ is called the **covariant derivative** at $p$ of the *vector field* $w$ relative to the vector $y$. This *covariant derivative* is denoted by $$\frac{Dw}{dt}(0) \;\;\text{ or }\;\; D_{y}w.$$
+
+
 ![[cov_deriv.png]]
 
+>[!info]
+> The **covariant derivative** only depends on the **intrinsic geometry** of the **surface** and it does *not depend* on the *choice of the curve*. 
 
 
 ## Coordinate Representation

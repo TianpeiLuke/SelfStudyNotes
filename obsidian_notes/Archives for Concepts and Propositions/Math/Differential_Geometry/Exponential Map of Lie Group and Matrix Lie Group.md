@@ -54,7 +54,19 @@ date of note: 2024-05-20
 
 ## Explanation
 
+>[!info] 
+>- This definition of *exponential map* in **Lie group** via the **flow (one-parameter subgroup)** is *similar to*
+>- the traditional definition of *exponential map* in **general smooth manifold** via the **parallel transport**
+>  
+>The former is based on the **Lie derivative** while the later is based on **parallel transport.**
+>  
 
+- [[Exponential Map via Geodesic on Riemannian Manifold]]
+
+![[Covariant Derivative from Parallel Transport#^6bab4a]]
+
+- [[Lie Derivative of Vector Field]]
+- [[Covariant Derivative from Parallel Transport]]
 
 
 
@@ -62,7 +74,7 @@ date of note: 2024-05-20
 ##  Recommended Notes and References
 
 
-- [[Exponential Map via Geodesic on Riemannian Manifold]]
+
 
 - [[Matrix Exponential]]
 - [[Topological Group Action]]

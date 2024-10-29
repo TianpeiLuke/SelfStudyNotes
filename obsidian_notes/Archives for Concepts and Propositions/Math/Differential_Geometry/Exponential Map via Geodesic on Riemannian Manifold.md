@@ -61,6 +61,11 @@ date of note: 2024-05-20
 
 - [[Matrix Exponential]]
 
+![[Covariant Derivative from Parallel Transport#^6bab4a]]
+
+- [[Covariant Derivative from Parallel Transport]]
+- [[Lie Derivative of Vector Field]]
+
 
 -----------
 ##  Recommended Notes and References

@@ -45,7 +45,10 @@ date of note: 2024-05-20
 
 ## Explanation
 
+![[Covariant Derivative from Parallel Transport#^6bab4a]]
 
+
+- [[Covariant Derivative from Parallel Transport]]
 - [[Bregman Divergence]]
 
 
@@ -82,7 +85,7 @@ date of note: 2024-05-20
 >[!info]
 >Compare to the property of 
 >- **Exterior differentiation**: [[Exterior Derivatives of Differential Form#Existence and Uniqueness of Exterior Derivative]]
->- **Covariant Derivative**: 
+>- **Covariant Derivative**:  [[Connection in Vector Bundle and Covariant Derivative]]
 
 - [[Exterior Derivatives of Differential Form]]
 - [[Connection in Vector Bundle and Covariant Derivative]]

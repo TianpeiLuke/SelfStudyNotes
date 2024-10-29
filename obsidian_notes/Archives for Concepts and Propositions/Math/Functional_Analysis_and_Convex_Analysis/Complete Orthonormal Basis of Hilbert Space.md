@@ -27,7 +27,7 @@ date of note: 2024-05-15
 >[!important] Theorem
 >Every *Hilbert space* $\mathcal{H}$ has an **orthonormal basis**.
 
->[!info]
+>[!info] Proof
 >Consider the collection $\mathscr{C}$ of all orthonormal sets in $\mathcal{H}$.
 >- $\mathscr{C}$ is a **partially ordered** set with respect to the inclusion relation $$S_{1} \subset S_{2} \implies S_{1} \prec S_{2}.$$
 >

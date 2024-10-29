@@ -34,7 +34,19 @@ date of note: 2024-05-20
 - [[Integral Curve of Vector Field]]
 
 
+
 ## Explanation
+
+>[!important]
+>There are *two alternatives* for the definition of **geodesics**:
+>
+>- *Geodesics* is the "**shortest**" path that connects two points on the surface; This definition is hard since the definition of manifold is abstract. 
+>	- This definition requires the definition of **distance**, i.e. for **Riemannian manifold**
+>- Geodesics is the curve on the surface that has **zero tangential acceleration**. 
+>	- This is the motivation to introduce the concept of **connections**.
+
+- [[Riemannian Metric and Riemannian Manifold]]
+
 
 >[!info]
 >The **geodesic curve** concerns on the *covariant derivative* of **velocity field** $\gamma'(t)$ along the **velocity direction** $\gamma'(t)$,

@@ -42,7 +42,7 @@ date of note: 2024-05-20
 - [[Preimage and Range of Function]]
 ## Explanation
 
-
+![[regular_surface.png]]
 
 
 
