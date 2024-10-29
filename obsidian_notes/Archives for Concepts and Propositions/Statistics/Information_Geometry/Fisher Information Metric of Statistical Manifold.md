@@ -26,7 +26,7 @@ date of note: 2024-06-27
 ##  Recommended Notes and References
 
 - [[Log-Likelihood Score Function]]
-- [[Statistical Manifold of Parametric Family]]
+- [[Statistical Manifold as Parametric Family]]
 
 - [[Riemannian Metric and Riemannian Manifold]]
 - [[Inner Product Space]]

@@ -25,6 +25,7 @@ date of note: 2024-06-01
 - [[Population and Sample and Statistical Problem]]
 - [[Parametric Models]]
 - [[Nonparametric Models and Semi-Parametric Models]]
+- [[Statistical Manifold as Parametric Family]]
 - [[Statistics]]
 
 - [[Statistical Decision Problem]]

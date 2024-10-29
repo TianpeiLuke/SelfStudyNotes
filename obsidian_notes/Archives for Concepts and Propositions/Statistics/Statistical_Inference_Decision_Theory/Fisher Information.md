@@ -126,7 +126,7 @@ date of note: 2024-06-24
 ## Riemannian Metric of Statistical Manifold
 
 - [[Fisher Information Metric of Statistical Manifold]]
-- [[Statistical Manifold of Parametric Family]]
+- [[Statistical Manifold as Parametric Family]]
 
 
 >[!info]

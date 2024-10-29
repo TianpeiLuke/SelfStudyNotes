@@ -30,7 +30,7 @@ date of note: 2024-06-08
 
 - [[Space of Bounded Signed Measures]]
 - [[Coordinate Chart]]
-- [[Statistical Manifold of Parametric Family]]
+- [[Statistical Manifold as Parametric Family]]
 - [[Mathematical Statistics by Shao]] pp 94
 
 >[!important] Definition
@@ -61,7 +61,7 @@ date of note: 2024-06-08
 
 - [[Smooth Manifold]]
 - [[Coordinate Chart]]
-- [[Statistical Manifold of Parametric Family]]
+- [[Statistical Manifold as Parametric Family]]
 - [[Fisher Information]]
 
 

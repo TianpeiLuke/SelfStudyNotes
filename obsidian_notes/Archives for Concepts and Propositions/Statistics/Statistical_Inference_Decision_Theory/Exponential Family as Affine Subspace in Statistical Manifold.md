@@ -28,7 +28,7 @@ date of note: 2024-06-24
 ##  Recommended Notes and References
 
 - [[Affine Space]]
-- [[Statistical Manifold of Parametric Family]]
+- [[Statistical Manifold as Parametric Family]]
 - [[Concepts related to Tangent Space and Tangent Bundle]]
 
 - [[Log-Likelihood Score Function]]
