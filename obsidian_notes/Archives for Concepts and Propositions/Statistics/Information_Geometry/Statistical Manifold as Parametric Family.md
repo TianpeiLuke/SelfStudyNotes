@@ -72,11 +72,19 @@ date of note: 2024-06-24
 
 ## Explanation
 
+### Space of Measures with Bounded Total Variations
+
 ![[Space of Bounded Signed Measures#^d5ec0e]]
 
 ![[Space of Bounded Signed Measures#^73c68c]]
 
 - [[Space of Bounded Signed Measures]]
+
+### Wasserstein Space
+
+![[Wasserstein Space#^998943]]
+
+- [[Wasserstein Space]]
 
 
 
