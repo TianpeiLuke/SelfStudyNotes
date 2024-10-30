@@ -91,5 +91,5 @@ date of note: 2024-05-18
 - [[Vector Space over a Field]]
 
 
-- [[Introduction to Smooth Manifolds by Lee]]
-- [[Lie Groups Lie Algebra and Representations by Hall]]
+- [[Introduction to Smooth Manifolds by Lee]] pp 186 - 189
+- [[Lie Groups Lie Algebra and Representations by Hall]] pp 49

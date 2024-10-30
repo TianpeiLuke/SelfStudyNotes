@@ -146,7 +146,11 @@ date of note: 2024-05-11
 - [[Hölder Space]]
 - [[Sobolev Space]]
 
+### Calculus of Variations
 
+- [[Fréchet Derivative and Strong Derivative in Banach Space]]
+- [[Gateaux Derivative and Weak Derivative in Banach Space]]
+- [[First Variation and Variational Derivative of Functional]]
 
 
 

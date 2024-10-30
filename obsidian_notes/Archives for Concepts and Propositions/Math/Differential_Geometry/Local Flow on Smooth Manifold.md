@@ -17,11 +17,15 @@ date of note: 2024-05-27
 
 >[!info]
 >We have seen that *__every smooth global flow__ gives rise to a __smooth vector field__* whose *integral curves* are precisely *the curves defined by the flow*. 
+>
+>
 
 - [[Vector Field as Infinitesimal Generator of Global Flow]]
 
 >[!important]
 >**Conversely**, however, it is **not true** that every smooth vector field is the infinitesimal generator of a smooth global flow.
+>
+>We see from [[Fundamental Theorem on Flows]], the statement is true for **local flow**.
 
 >[!important] Definition
 >If $M$ is a manifold, a **flow domain** for $M$ is an *open subset* $\mathfrak{D} \subseteq \mathbb{R} \times M$ with the *property* that 
@@ -48,6 +52,7 @@ date of note: 2024-05-27
 >
 >The unwieldy term **local one-parameter group action** is also used.
 
+- [[Topological Group Action]]
 - [[Global Flow on Smooth Manifold]]
 
 
@@ -58,6 +63,8 @@ date of note: 2024-05-27
 
 
 ## Fundamental Theorem on Flows
+
+![[Fundamental Theorem on Flows#^c359e5]]
 
 - [[Fundamental Theorem on Flows]]
 - [[Local Flow on Smooth Manifold]]

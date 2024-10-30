@@ -24,6 +24,7 @@ date of note: 2024-05-17
 >$$Hx = \set{h\cdot x: h\in H}.$$
 
 - [[Equivalence Class]]
+- [[Subgroup]]
 
 
 

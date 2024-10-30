@@ -12,6 +12,9 @@ date of note: 2024-05-10
 
 ##  List of Concepts
 
+
+![[Concepts_from_set.png]]
+
 ### Set
 
 - [[Set Operations]]

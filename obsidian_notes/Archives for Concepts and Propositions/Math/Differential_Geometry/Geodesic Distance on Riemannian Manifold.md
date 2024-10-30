@@ -14,8 +14,10 @@ date of note: 2024-05-20
 >[!important]
 >**Name**: 
 
+
 - [[Minimizing Curves in Riemannian Manifold]]
 - [[Geodesic on Manifolds]]
+- [[Euler–Lagrange Equations]]
 
 
 ## Explanation

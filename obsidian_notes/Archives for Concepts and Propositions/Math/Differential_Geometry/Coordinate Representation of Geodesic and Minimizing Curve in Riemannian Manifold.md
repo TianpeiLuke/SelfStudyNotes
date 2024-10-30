@@ -1,12 +1,14 @@
 ---
 tags:
   - concept
+  - math/riemannian_geometry
   - math/differential_geometry
 keywords: 
 topics:
+  - riemannian_geometry
   - differential_geometry
 name: 
-date of note: 2024-05-20
+date of note: 2024-10-29
 ---
 
 ## Concept Definition
@@ -14,8 +16,10 @@ date of note: 2024-05-20
 >[!important]
 >**Name**: 
 
-- [[Minimizing Curves in Riemannian Manifold]]
+
+- [[Riemannian Metric and Riemannian Manifold]]
 - [[Geodesic on Manifolds]]
+- [[Euler–Lagrange Equations]]
 
 
 ## Explanation
@@ -27,7 +31,8 @@ date of note: 2024-05-20
 -----------
 ##  Recommended Notes and References
 
-- [[Riemannian Metric and Riemannian Manifold]]
 
+- [[Christoffel Symbols]]
+- [[Levi Civita Connection and Riemannian Connection]]
 
 - [[Introduction to Riemannian Manifolds by Lee]]

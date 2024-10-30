@@ -34,6 +34,8 @@ date of note: 2024-05-22
 ##  Recommended Notes and References
 
 
+- [[Polynomial Ring]]
+- [[Matrix Ring]]
 - [[Ring]]
 
 - [[Abstract Algebra by Dummit]]

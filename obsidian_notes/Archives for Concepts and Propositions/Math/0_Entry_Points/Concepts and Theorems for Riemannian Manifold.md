@@ -67,8 +67,19 @@ date of note: 2024-05-20
 - [[Symmetric Connection]]
 - [[Fundamental Theorem of Riemannian Geometry]]
 - [[Levi Civita Connection and Riemannian Connection]]
+
 - [[Exponential Map via Geodesic on Riemannian Manifold]]
 - [[Normal Neighborhood]]
+
+### Riemannian Geodesic and Distance
+
+- [[Minimizing Curves in Riemannian Manifold]]
+- [[One-Parameter Family of Curves in Riemannian Manifold]]
+- [[First-Variational Formula for Minimizing Curves]]
+- [[Geodesic in Riemannian Manifold]]
+- [[Coordinate Representation of Geodesic and Minimizing Curve in Riemannian Manifold]]
+- [[Geodesic Distance on Riemannian Manifold]]
+
 
 ### Riemannian Curvature
 

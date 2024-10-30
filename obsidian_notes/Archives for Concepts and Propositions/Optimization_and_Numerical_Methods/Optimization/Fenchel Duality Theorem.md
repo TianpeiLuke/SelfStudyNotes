@@ -51,6 +51,37 @@ date of note: 2024-05-12
 
 ^91000d
 
+>[!important] Fenchel's Duality Theorem (Euclidean space)
+>Let  $X$ and $Y$ be *Euclidean space*,  $f: X \to \mathbb{R}\cup \{\infty\}$ and $g: Y \to \mathbb{R}\cup \{\infty\}$ be *functions* on $X, Y$ respectively and $A: X\to Y$ be a *linear map* with *adjoint* $A^{*}$.
+>
+>Then **the Fenchel problem**
+>$$
+>\begin{align*}
+> p^{*} &:= \inf_{x \in X}\left\{ f(x) + g(A x) \right\} \\
+> d^{*} &:= \sup_{y \in Y}\left\{ -g^{*}(-y) - f^{*}(A^{*} y) \right\} 
+\end{align*}
+>$$
+>satisfies **weak duality**:
+>$$
+>d^{*} \le p^{*},
+>$$
+>where $f^{*}$ and $g^{*}$ are the **convex conjugate** of $f$ and $g$, respectively.   
+>
+>Furthermore, if $f$ and $g$ are **convex functions** and **either** of the following *conditions* is satisfied:
+>- $$0 \in \text{core}\left(\text{dom}(g) - A\,\text{dom}(f)\right)$$
+>- or the *stronger condition* $$A\, \text{dom}(f) \; \cap \; \{y\in Y: g \in \mathcal{C}(Y) \text{ and finite at }y \} \neq \emptyset;$$
+>
+>then the **strong duality** hold, i.e.,
+>$$
+>d^{*} = p^{*}.
+>$$ 
+>And the **supremum** in dual problem is **attained** if it is *finite*.
+>
+>Finally, for any point $x\in X$, the **calculus rule** $$\partial \left(f + g \circ A\right)(x) \supseteq \partial f(x) + A^{*}\,\partial g(Ax)$$ holds,
+>- with **equality** if $f,g$ are both *convex* and *either* above conditions for strong duality holds.
+
+- Jonathan M. Borwein and Adrian S. Lewis. (2005). *Convex Analysis and Nonlinear Optimization: Theory and Examples*. , Springer. 2nd Edition pp 62 - 63
+
 
 ## Explanation
 
@@ -128,6 +159,7 @@ date of note: 2024-05-12
 - [[Relative Interior of Convex Set]]
 
 - [[Convex Analysis by Rockafellar]]
+- Jonathan M. Borwein and Adrian S. Lewis. (2005). *Convex Analysis and Nonlinear Optimization: Theory and Examples*. , Springer. 2nd Edition pp 62 - 63
 - [[Convex Optimization by Boyd]]
 - [[Optimization by Vector Space Methods by Luenberger]] pp 201 - 202
 - [[Numerical Optimization by Nocedal]]

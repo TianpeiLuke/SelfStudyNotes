@@ -63,6 +63,9 @@ date of note: 2024-05-20
 ## Explanation
 
 
+## Geodesics in Riemannian Manifold
+
+- [[Coordinate Representation of Geodesic and Minimizing Curve in Riemannian Manifold]]
 
 
 

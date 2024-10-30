@@ -30,6 +30,8 @@ date of note: 2024-05-27
 >	- $\theta_t: M_t \rightarrow M_{-t}$ is a **diffeomorphism** with **inverse flow** $\theta_{-t}$.
 >
 
+^c359e5
+
 - [[Local Flow on Smooth Manifold]]
 - [[Vector Field as Infinitesimal Generator of Local Flow]]
 - [[Maximal Integral Curve of Vector Field]]

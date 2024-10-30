@@ -70,6 +70,7 @@ date of note: 2024-05-11
 - [[Krein-Milman Lemma and Krein-Milman Theorem]]
 - [[Existence of Extreme Point in Polyhedron]]
 - [[Optimality of Extreme Point in Linear Optimization]]
+- [[Fenchel Duality Theorem]]
 
 
 ### Dual Representation of Convex Function
@@ -137,7 +138,9 @@ date of note: 2024-05-11
 -----------
 ##  Recommended Notes and References
 
+
 - [[Convex Analysis by Rockafellar]]
 - [[Convex Optimization by Boyd]]
+- Jonathan M. Borwein and Adrian S. Lewis. (2005). *Convex Analysis and Nonlinear Optimization: Theory and Examples*. , Springer. 2nd Edition
 
 - [[Nonlinear Programming by Bertsekas]]

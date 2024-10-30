@@ -73,9 +73,15 @@ date of note: 2024-05-21
 
 
 
+
+
 -----------
 ##  Recommended Notes and References
 
 - [[Group]]
+- [[Homomorphism between Rings]]
+- [[Lie Algebra Homomorphism]]
+- [[Bundle Homomorphism]]
+- [[Graph Homomorphism]]
 
 - [[Abstract Algebra by Dummit]]

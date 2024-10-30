@@ -45,7 +45,9 @@ date of note: 2024-05-20
 >- Geodesics is the curve on the surface that has **zero tangential acceleration**. 
 >	- This is the motivation to introduce the concept of **connections**.
 
+- [[Minimizing Curves in Riemannian Manifold]]
 - [[Riemannian Metric and Riemannian Manifold]]
+- [[Geodesic on Manifolds]]
 
 
 >[!info]

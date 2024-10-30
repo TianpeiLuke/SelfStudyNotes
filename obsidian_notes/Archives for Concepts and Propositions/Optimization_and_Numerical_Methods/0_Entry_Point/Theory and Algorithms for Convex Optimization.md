@@ -160,3 +160,4 @@ date of note: 2024-05-12
 - [[Numerical Optimization by Nocedal]]
 - [[Nonlinear Programming by Bertsekas]]
 - [[Convex Optimization Algorithms by Bertsekas]]
+- Jonathan M. Borwein and Adrian S. Lewis. (2005). *Convex Analysis and Nonlinear Optimization: Theory and Examples*. , Springer. 2nd Edition

@@ -35,6 +35,7 @@ date of note: 2024-05-21
 >
 >For each $a\in G$, such $b\in G$ as described above is **unique**, called the **inverse** of $a$ in the group. We denote it as $a^{-1}.$
 
+- [[Semi-Group]]
 - [[Binary Operation on Set]]
 
 ## Explanation
@@ -47,6 +48,13 @@ date of note: 2024-05-21
 ##  Recommended Notes and References
 
 - [[Set Operations]]
+
+
+- [[Lie Group]]
+- [[Matrix Lie Group]]
+- [[Symmetric Group]]
+- [[General Linear Group]]
+
 
 
 - [[Abstract Algebra by Dummit]]

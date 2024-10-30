@@ -19,6 +19,9 @@ date of note: 2024-05-06
 
 - [[Lie Group]]
 - [[Matrix Lie Group]]
+- [[Lie Group Homomorphism]]
+- [[Lie Group Isomorphism]]
+- [[Lie Subgroup]]
 
 ### Examples
 
@@ -44,6 +47,10 @@ date of note: 2024-05-06
 ### Lie Algebra
 
 - [[Lie Algebra as Vector Space with Lie Bracket]]
+- [[Lie Algebra Homomorphism]]
+- [[Lie Algebra Isomorphism]]
+- [[Lie Algebra Automorphism]]
+- [[Adjoint map in Lie Algebra]]
 - [[One-Parameter Subgroup of Lie Group as Integral Curve]]
 
 ### Exponential Map

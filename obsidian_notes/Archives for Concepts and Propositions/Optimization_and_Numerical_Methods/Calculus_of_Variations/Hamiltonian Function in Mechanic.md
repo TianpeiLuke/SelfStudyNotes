@@ -34,4 +34,4 @@ Chicone, C. (2006). _Ordinary Differential Equations with Applications_ (2nd edi
 - [[Lagrangian Function in Mechanics]]
 
 - [[Ordinary Differential Equations by Chicone]]
-- Gelfand, I. M., & Silverman, R. A. (2000). _Calculus of variations_. Courier Corporation.
+- [[Calculus of Variations by Gelfand]]

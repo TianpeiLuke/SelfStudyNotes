@@ -139,6 +139,8 @@ date of note: 2024-10-25
 
 ### Lie Group and Lie Algebra
 
+- [[Concepts and Theorems for Lie Group and Lie Algebra]]
+
 #### Lie Group and Matrix Lie Group
 
 - [[Lie Group]]
@@ -162,6 +164,7 @@ date of note: 2024-10-25
 #### Lie Algebra
 
 - [[Lie Algebra as Vector Space with Lie Bracket]]
+- [[Lie Algebra Homomorphism]]
 - [[One-Parameter Subgroup of Lie Group as Integral Curve]]
 
 #### Exponential Map

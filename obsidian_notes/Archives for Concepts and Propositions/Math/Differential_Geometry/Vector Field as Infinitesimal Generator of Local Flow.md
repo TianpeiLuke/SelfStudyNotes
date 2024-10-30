@@ -48,7 +48,8 @@ date of note: 2024-05-06
 
 
 >[!info]
->$V$ is the **infinitesimal generator of the flow** $\theta$ then $\theta$ is the **integral curve** of $V$.
+>- $V$ is the **infinitesimal generator of the flow** $\theta$ 
+>- then $\theta$ is the **integral curve** of $V$.
 
 >[!important] Proposition
 >If $\theta: \mathfrak{D} \rightarrow M$ is a *smooth flow*, then 
@@ -60,11 +61,20 @@ date of note: 2024-05-06
 - [[Integral Curve of Vector Field]]
 
 
+## Fundamental Theorem on Flows
+
+>[!info]
+>Every **vector field** have a **unique maximum flow**, which is also the **maximum integral curve** of that vector field.
+
+![[Fundamental Theorem on Flows#^c359e5]]
+
+- [[Fundamental Theorem on Flows]]
 
 
 
 -----------
 ##  Recommended Notes and References
+
 
 - [[Vector Field as Infinitesimal Generator of Global Flow]]
 
@@ -74,6 +84,8 @@ date of note: 2024-05-06
 - [[Tangent Vector and Differential via Velocity of Smooth Curves]]
 - [[Smooth Vector Field on Manifold]]
 
+- [[Infinitesimal Generator of Markov Process]]
+- [[Infinitesimal Generator of Brownian Motion and Laplacian]]
 
 
 - [[Introduction to Smooth Manifolds by Lee]]

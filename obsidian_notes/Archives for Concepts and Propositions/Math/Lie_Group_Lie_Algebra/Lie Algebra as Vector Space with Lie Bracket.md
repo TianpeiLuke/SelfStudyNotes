@@ -76,5 +76,5 @@ date of note: 2024-10-27
 - [[Topological Group]]
 
 
-- [[Introduction to Smooth Manifolds by Lee]] pp 191 - 202
+- [[Introduction to Smooth Manifolds by Lee]] pp 191 - 203
 - [[Lie Groups Lie Algebra and Representations by Hall]] pp 49

@@ -38,6 +38,29 @@ date of note: 2024-05-04
 >
 >Given the topology on **domain** and **co-domain**, we can always define a continuous function. 
 
+## Continuous Functional in Metric Space and Normed Linear Space
+
+>[!important] Definition
+>Let $(X, d_{X})$  and $(Y, d_{Y})$ be *metrix spaces.*
+>
+>A functional $$f: X \to Y$$ is **continuous** at $x_{0}\in X$ if for any $\epsilon >0$, there exists some $\delta >0$ such that 
+>$$
+>d_{X}(x, x_{0}) < \delta \implies d_{Y}(f(x), f(x_{0})) < \epsilon  
+>$$
+
+- [[Metric Space]]
+
+>[!important] Definition
+>Let $(X, \lVert \cdot \rVert_{X})$ be a *normed linear space*. 
+>
+>A functional $$f: X \to \mathbb{R}$$ is **continuous** at $x_{0}\in X$ if for any $\epsilon >0$, there exists some $\delta >0$ such that 
+>$$
+>\lVert x - x_{0} \rVert_{X} < \delta \implies \lvert f(x) - f(x_{0}) \rvert < \epsilon  
+>$$
+
+- [[Norm and Normed Space]]
+
+
 
 
 -----------

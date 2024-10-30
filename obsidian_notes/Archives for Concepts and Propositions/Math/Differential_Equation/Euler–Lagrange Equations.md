@@ -26,7 +26,11 @@ date of note: 2024-06-14
 >
 >The **Euler-Lagrange equation** arise the following problem:
 >
->Find **the extreme point** $\phi^{*} \in C$ of functional $J(\phi)$ 
+>- Find **the extreme point** $\phi^{*} \in C$ of functional $J(\phi)$ 
+
+^f331ce
+
+- [[Variational Problem]]
 
 >[!important] Definition
 >The smooth function $$L: \mathbb{R}^{k} \times \mathbb{R}^{k} \times \mathbb{R} \to \mathbb{R} \iff (\phi, \dot{\phi}, t) \mapsto L(\phi, \dot{\phi}, t)$$ is called a **Lagrangian**.
@@ -53,6 +57,17 @@ date of note: 2024-06-14
 > $$
 > for all $v \in T_{\phi}(C).$ 
 
+^7c3405
+
+>[!info]
+>This is actually the **variational derivative** of $J$ at $\phi$, i.e. $$\frac{\delta J}{\delta \phi} = \frac{d}{d\epsilon}\Big|_{\epsilon =0}J(\phi + s\,v) $$
+>If both *Fréchet derivative* $D J(\phi)$ and *Gateaux derivative* $d J(\phi, v)$ exists, then 
+>$$
+>\delta J(\phi, v) = d J(\phi, v) = D J(\phi)\,v
+>$$
+
+- [[Gateaux Derivative and Weak Derivative in Banach Space]]
+- [[Fréchet Derivative and Strong Derivative in Banach Space]]
 - [[Variation of Functional]]
 - [[Tangent Space Definition and Development]]
 - [[Smooth Manifold]]
@@ -142,6 +157,8 @@ date of note: 2024-06-14
 >\end{align*}
 >$$
 
+^76fc96
+
 
 
 >[!important] Proposition
@@ -149,6 +166,15 @@ date of note: 2024-06-14
 >$$
 >\frac{\partial  L}{ \partial \phi} - \left(\frac{d}{dt} \frac{\partial  L}{ \partial \dot{\phi}}\,\right) = 0.
 >$$
+
+
+>[!important] 
+>The LHS of **Euler-Lagrange equation** is called the **first variation** or the **variational derivative** of a functional $L$
+>$$
+>\frac{\delta L}{\delta \phi} := \frac{\partial  L}{ \partial \phi} - \left(\frac{d}{dt} \frac{\partial  L}{ \partial \dot{\phi}}\,\right)
+>$$
+
+- [[First Variation and Variational Derivative of Functional]]
 
 ## Generalization
 
@@ -187,6 +213,10 @@ date of note: 2024-06-14
 
 
 
+## Geodesics in Riemannian Manifold
+
+- [[Coordinate Representation of Geodesic and Minimizing Curve in Riemannian Manifold]]
+
 
 
 
@@ -203,4 +233,4 @@ date of note: 2024-06-14
 - [[Parallel Transport of Tensor Field along Curve]]
 
 - [[Ordinary Differential Equations by Chicone]]
-- Gelfand, I. M., & Silverman, R. A. (2000). _Calculus of variations_. Courier Corporation.
+- [[Calculus of Variations by Gelfand]] pp 14 - 27, 38, 67
