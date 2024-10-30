@@ -58,4 +58,5 @@ Chicone, C. (2006). _Ordinary Differential Equations with Applications_ (2nd edi
 
 - [[Principles of Mathematical Analysis by Rudin]] pp 224
 - [[Ordinary Differential Equations by Chicone]]
+- [[Optimization by Vector Space Methods by Luenberger]] pp 187, 266
 - Chicone, C. (2006). _Ordinary Differential Equations with Applications_ (2nd edition). Springer.

@@ -141,6 +141,11 @@ date of note: 2024-05-12
 - [[Semi-Continuous Function]]
 
 
+## Min-Max Theorem 
+
+![[Von Neumann Min-Max Theorem#^3ea541]]
+
+- [[Von Neumann Min-Max Theorem]]
 
 
 

@@ -72,7 +72,6 @@ date of note: 2024-10-29
 
 
 
-- [[Functional Analysis by Reed]]
-- [[Calculus of Variations by Gelfand]]
+- [[Optimization by Vector Space Methods by Luenberger]] pp 172, 175
 - Giaquinta, M. and Hildebrandt, S. (1996) *Calculus of Variations 1. The Lagrangian Formalism*, Grundlehren der Mathematischen Wissenschaften 310. Springer-Verlag, Berlin. pp 10
 - Jonathan M. Borwein and Adrian S. Lewis. (2005). *Convex Analysis and Nonlinear Optimization: Theory and Examples*. , Springer. 2nd Edition pp 153 - 156, 176

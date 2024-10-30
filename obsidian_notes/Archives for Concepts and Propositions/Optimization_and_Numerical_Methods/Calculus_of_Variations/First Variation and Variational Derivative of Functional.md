@@ -84,5 +84,5 @@ date of note: 2024-10-29
 
 - [[Bounded Linear Functional]]
 
-
+- [[Optimization by Vector Space Methods by Luenberger]]
 - [[Calculus of Variations by Gelfand]] pp 27 - 29, 

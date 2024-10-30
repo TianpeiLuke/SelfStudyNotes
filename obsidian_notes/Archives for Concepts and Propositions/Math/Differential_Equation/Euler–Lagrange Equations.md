@@ -234,3 +234,4 @@ date of note: 2024-06-14
 
 - [[Ordinary Differential Equations by Chicone]]
 - [[Calculus of Variations by Gelfand]] pp 14 - 27, 38, 67
+- [[Optimization by Vector Space Methods by Luenberger]] pp 180, 184

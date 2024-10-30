@@ -43,7 +43,7 @@ date of note: 2024-10-29
 ## Explanation
 
 >[!info]
->Gateaux derivative is the **directional derivative.**
+>The *Gateaux derivative* is the **directional derivative** of *functional* in *function space* where the direction $h$ itself is a function.
 
 - [[Derivation of Smooth Map at point and Tangent Vector]]
 
@@ -76,7 +76,6 @@ date of note: 2024-10-29
 - [[Banach Space]]
 
 
-- [[Functional Analysis by Reed]]
-- [[Calculus of Variations by Gelfand]]
+- [[Optimization by Vector Space Methods by Luenberger]] pp 171
 - Giaquinta, M. and Hildebrandt, S. (1996) *Calculus of Variations 1. The Lagrangian Formalism*, Grundlehren der Mathematischen Wissenschaften 310. Springer-Verlag, Berlin. pp 10
 - Jonathan M. Borwein and Adrian S. Lewis. (2005). *Convex Analysis and Nonlinear Optimization: Theory and Examples*. , Springer. 2nd Edition pp 22, 36, 73, 151 - 157, 160, 240, 245
