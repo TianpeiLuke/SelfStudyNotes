@@ -60,6 +60,7 @@ date of note: 2024-10-25
 - [[Semi-Continuous Function]]
 
 - [[Wasserstein Space]]
+- [[First Variation and Variational Derivative of Functional]]
 - [[Parameterized Curve on Manifold]]
 - [[Vector Field on Manifold]]
 - [[Divergence Operator of Vector Field on Riemannian Manifold]]
