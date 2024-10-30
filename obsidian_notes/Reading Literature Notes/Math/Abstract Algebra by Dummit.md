@@ -1,7 +1,7 @@
 ---
 tags:
   - book
-  - math/algebra
+  - math/abstract_algebra
 aliases:
   - dummitAbstractAlgebra2003
 year: 2003
