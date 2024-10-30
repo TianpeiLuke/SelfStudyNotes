@@ -33,6 +33,7 @@ date of note: 2024-10-29
 >  
 >As a result $$\Delta J := J[y + h] - J[y] = \left(\frac{\delta J}{\delta y} \Big|_{x = x_{0}} + \epsilon \right)\,\Delta\,\sigma $$ Thus as $\epsilon \to 0$, we have the **variation or differential of functional** at a point $x_{0}$ as $$\delta J = \frac{\delta J}{\delta y} \Big|_{x = x_{0}}\,\Delta\,\sigma$$
 
+- [[Variation of Functional]]
 - [[Characteristic Function of Set]]
 - [[Metric Topology and epsilon-ball]]
 - [[Space of all Continuous Functions]]

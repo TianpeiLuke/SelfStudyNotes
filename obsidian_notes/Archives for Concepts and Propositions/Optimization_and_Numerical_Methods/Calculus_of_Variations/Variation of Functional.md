@@ -2,6 +2,7 @@
 tags:
   - concept
   - math/functional_analysis
+  - math/calculus_of_variations
 keywords: 
 topics: 
 name: 
@@ -24,6 +25,10 @@ date of note: 2024-10-26
 -----------
 ##  Recommended Notes and References
 
+
+- [[First Variation and Variational Derivative of Functional]]
+- [[Fréchet Derivative and Strong Derivative in Banach Space]]
+- [[Gateaux Derivative and Weak Derivative in Banach Space]]
 
 - [[Banach Space]]
 - [[Bounded Linear Functional]]

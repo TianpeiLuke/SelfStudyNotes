@@ -72,6 +72,8 @@ date of note: 2024-10-27
 - [[Differential of a Smooth Map at Point]]
 - [[Coordinate Representation of Differential at Point]]
 
+- [[Implicit Function Theorem]]
+- [[Inverse Function Theorem]]
 
 ### Tensor Space and Operator
 
