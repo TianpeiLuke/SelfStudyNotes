@@ -289,7 +289,7 @@ date of note: 2024-06-06
 - [[Differential k-Form as Infinitesimal Volume]]
 - [[Riemannian Volume Form]]
 - [[Integration of Differential k-Form]]
-- [[Integration on Riemannian Manifold]]
+- [[Integration on Riemannian Manifold and Volume of Compact Riemannian Manifold]]
 
 
 >[!important] Stokes' Theorem

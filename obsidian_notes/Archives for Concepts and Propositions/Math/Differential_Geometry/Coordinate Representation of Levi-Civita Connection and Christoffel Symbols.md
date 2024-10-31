@@ -25,6 +25,7 @@ date of note: 2024-10-30
 
 
 - [[Levi Civita Connection and Riemannian Connection]]
+- [[Christoffel Symbols]]
 - [[Vector Field on Manifold]]
 - [[Affine Connection on Tangent Bundle]]
 - [[Affine Connection of Basis Frames and Connection Coefficient]]

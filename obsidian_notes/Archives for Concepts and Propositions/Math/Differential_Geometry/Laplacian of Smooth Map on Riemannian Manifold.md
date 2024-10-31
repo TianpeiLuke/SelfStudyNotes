@@ -54,5 +54,5 @@ date of note: 2024-05-14
 - [[Riemannian Metric and Riemannian Manifold]]
 
 
-- [[Concepts and Theorems for Riemannian Manifold]]
+- [[Concepts and Theorems for Riemannian Manifold]] pp 32
 - Wikipedia [Laplace_operator](https://en.wikipedia.org/wiki/Laplace_operator)

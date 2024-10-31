@@ -20,11 +20,29 @@ date of note: 2024-05-20
 - [[Affine Connection of Basis Frames and Connection Coefficient]]
 
 >[!important] Definition
->The **Christoffel symbols** are the **connection coefficients** of a **metric connection** $\nabla$ with respect to a smooth local frame in $T\mathcal{M}$.
-
+>Let $(\mathcal{M}, g)$ be a Riemannian or pseudo-Riemannian manifold.
+>
+>The **Christoffel symbols of the second kind** are the *connection coefficients* of a *Levi-Civita connection* $\nabla$ with respect to a smooth local frame in $T\mathcal{M}$.
+>
+>That is, it is a set of $n^3$ smooth functions $\{\Gamma_{i,j}^{k}\}$ that satisfies the equation
+>$$
+>\nabla_{E_{i}}E_{j} = \Gamma_{i,j}^{k}E_{k}, \quad \forall i,j,k=1\,{,}\ldots{,}\,n
+>$$
+>where $\{ E_{i} \}$ are local frames in $T\mathcal{M}$ and $\nabla$ is the *Levi-Civita connection*.
 
 - [[Metric Connection for Riemannian Manifold]]
+- [[Levi Civita Connection and Riemannian Connection]]
+- [[Einstein Summation Convention]]
 
+
+>[!important] Definition
+>Let $(\mathcal{M}, g)$ be a Riemannian or pseudo-Riemannian manifold.
+>
+>The **Christoffel symbols of the first kind**  is a set of $n^3$ smooth functions $\{\Gamma_{i,j,l}\}$ that satisfies the equation
+>$$
+>\Gamma_{i,j,l} = g_{k,l}\Gamma_{i,j}^{k}
+>$$
+>where $\{\Gamma_{i,j}^{k}\}$ is the *Christoffel symbols of the second kind* with respect to the *Levi-Civita connection*  $\nabla$.
 
 
 ## Explanation
@@ -40,19 +58,12 @@ date of note: 2024-05-20
 
 ## Properties
 
->[!important] Proposition (Change of Basis)
->Let $M$ be a smooth manifold with or without boundary, and let $\nabla$ be a *connection* in $TM$. 
->
->Suppose we are given **two smooth local frames** $(E_i)$ and $(\widetilde{E}_j)$ for $TM$ on an open subset $U \subseteq M$, related by $\widetilde{E}_i = A_i^j E_j$ for some matrix of functions $(A_i^j)$. 
->
->Let $\Gamma_{i,j}^{k}$ and $\widetilde{\Gamma}_{i,j}^{k}$ denote the **connection coefficients** of $\nabla$ with respect to these two frames.
->
-> Then
-> $$
-> \begin{align}
-> \widetilde{\Gamma}_{i,j}^{k} &= (A^{-1})_{t}^{k}A_{i}^{r}A_{j}^{s}\Gamma_{r,s}^{t}+ (A^{-1})_{t}^{k}A_{i}^{s}E_{s}(A_{j}^{t})  
-> \end{align}
->$$ 
+- [[Affine Connection of Basis Frames and Connection Coefficient]]
+
+
+## Coordinate Representation 
+
+- [[Coordinate Representation of Levi-Civita Connection and Christoffel Symbols]]
 
 
 
@@ -64,4 +75,4 @@ date of note: 2024-05-20
 - [[Affine Connection on Tangent Bundle]]
 
 
-- [[Introduction to Riemannian Manifolds by Lee]]
+- [[Introduction to Riemannian Manifolds by Lee]] pp 124

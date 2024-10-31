@@ -27,4 +27,11 @@ date of note: 2024-05-25
 
 - [[Vector Space over a Field]]
 
+- [[Riemannian Volume Form]]
+- [[Interior Multiplication]]
+- [[Density on Vector Space]]
+- [[Riemannian Metric and Riemannian Manifold]]
+
+
 - [[Introduction to Smooth Manifolds by Lee]]
+- [[Introduction to Riemannian Manifolds by Lee]] pp 31

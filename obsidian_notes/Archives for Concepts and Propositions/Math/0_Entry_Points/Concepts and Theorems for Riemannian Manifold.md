@@ -52,7 +52,7 @@ date of note: 2024-05-20
 - [[Laplacian of Smooth Map on Riemannian Manifold]]
 - [[Coordinate Representation of Laplace Operator]]
 
-- [[Integration on Riemannian Manifold]]
+- [[Integration on Riemannian Manifold and Volume of Compact Riemannian Manifold]]
 - [[Stokes Theorem on Riemannian Manifold]]
 - [[Divergence Theorem on Riemannian Manifold]]
 - [[Riemannian Density]]
@@ -67,7 +67,9 @@ date of note: 2024-05-20
 - [[Symmetric Connection]]
 - [[Fundamental Theorem of Riemannian Geometry]]
 - [[Levi Civita Connection and Riemannian Connection]]
-
+- [[Christoffel Symbols]]
+- [[Coordinate Representation of Levi-Civita Connection and Christoffel Symbols]]
+- [[Koszul Formula for Levi-Civita Connection]]
 
 ### Normal Neighborhood and Normal Coordinate System
 
@@ -76,6 +78,7 @@ date of note: 2024-05-20
 
 ### Riemannian Geodesic and Distance
 
+- [[Riemannian Geodesic]]
 - [[Minimizing Curves in Riemannian Manifold]]
 - [[One-Parameter Family of Curves in Riemannian Manifold]]
 - [[First-Variational Formula for Minimizing Curves]]

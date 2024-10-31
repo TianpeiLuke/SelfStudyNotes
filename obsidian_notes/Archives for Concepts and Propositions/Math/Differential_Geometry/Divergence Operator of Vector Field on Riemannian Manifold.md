@@ -133,6 +133,10 @@ date of note: 2024-05-20
 - [[Global Flow on Smooth Manifold]]
 - [[Measure Preserving Transformation]]
 
+## Laplacian Operator
+
+
+- [[Laplacian of Smooth Map on Riemannian Manifold]]
 
 
 -----------
@@ -148,9 +152,9 @@ date of note: 2024-05-20
 - [[Differential k-Form on Manifold]]
 
 
-- [[Laplacian of Smooth Map on Riemannian Manifold]]
+
 
 
 - [[Introduction to Smooth Manifolds by Lee]]
-- [[Introduction to Riemannian Manifolds by Lee]]
+- [[Introduction to Riemannian Manifolds by Lee]] pp 32
 - Wikipedia [Divergence](https://en.wikipedia.org/wiki/Divergence)

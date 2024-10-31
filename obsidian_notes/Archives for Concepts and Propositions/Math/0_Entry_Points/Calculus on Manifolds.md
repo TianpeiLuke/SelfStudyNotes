@@ -51,7 +51,7 @@ date of note: 2024-05-06
 - [[Integration of Differential k-Form]]
 - [[Integration of Differential k-Form over Parametrization]]
 
-- [[Integration on Riemannian Manifold]]
+- [[Integration on Riemannian Manifold and Volume of Compact Riemannian Manifold]]
 
 ### Stokes's Theorem
 

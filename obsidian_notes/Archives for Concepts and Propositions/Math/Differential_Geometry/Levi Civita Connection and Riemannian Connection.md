@@ -18,7 +18,7 @@ date of note: 2024-05-20
 >[!important]
 >**Name**: Levi Civita Connection and Riemannian Connection
 
->[!important] Fundamental Theorem of Riemannian Geometry
+>[!important] Definition
 >Let $(M, g)$ be a *Riemannian* or *pseudo-Riemannian manifold* (with or without boundary). 
 >
 >A *connection* $\nabla$ on $TM$ $$\nabla: \mathfrak{X}(M) \times \mathfrak{X}(M) \to \mathfrak{X}(M)$$ is called the **Levi-Civita connection** of $g$, if for any $X, Y, Z\in \mathfrak{X}(M)$, 
@@ -42,7 +42,20 @@ date of note: 2024-05-20
 ## Explanation
 
 
+## Properties
 
+### Equivalence to Euclidean Connection in Euclidean Space
+
+
+### Equivalence to Tangential Connection in Submanifold
+
+
+### Neurality and Coordinate Independence
+
+
+### Riemannian Volume
+
+- [[Riemannian Volume Form]]
 
 
 -----------

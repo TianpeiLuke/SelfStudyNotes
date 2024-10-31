@@ -1,12 +1,10 @@
 ---
 tags:
   - concept
-  - math/differential_geometry
 keywords: 
-topics:
-  - differential_geometry
+topics: 
 name: 
-date of note: 2024-05-20
+date of note: 2024-10-30
 ---
 
 ## Concept Definition
@@ -25,7 +23,11 @@ date of note: 2024-05-20
 -----------
 ##  Recommended Notes and References
 
+
+- [[Geodesic on Manifolds]]
+- [[Levi Civita Connection and Riemannian Connection]]
+- [[Christoffel Symbols]]
 - [[Riemannian Metric and Riemannian Manifold]]
 
-- [[Introduction to Smooth Manifolds by Lee]]
-- [[Introduction to Riemannian Manifolds by Lee]]
+
+- [[Introduction to Riemannian Manifolds by Lee]] PP 124 - 125
