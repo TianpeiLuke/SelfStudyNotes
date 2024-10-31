@@ -50,13 +50,17 @@ date of note: 2024-10-25
 - [[Tangent Space as Finite Dimensional Vector Space]]
 - [[Tangent Bundle]]
 - [[Coordinate Representation of Tangent Vector]]
+- [[Change of Coordinates for Tangent Vector]]
 - [[Coordinate Representation of Differential at Point]]
+- [[Change of Coordinates for Differential at a Point]]
 - [[Retraction on Smooth Manifold]]
+
 
 ### Covector and Differential of Map
 
 - [[Differential of a Smooth Map at Point]]
 - [[Coordinate Representation of Smooth Map]]
+
 - [[Covector on Vector Space]]
 - [[Covector Space]]
 - [[Implicit Function Theorem]]

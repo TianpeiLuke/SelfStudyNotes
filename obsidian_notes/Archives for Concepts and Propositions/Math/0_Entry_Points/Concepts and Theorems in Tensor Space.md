@@ -67,6 +67,7 @@ date of note: 2024-05-06
 - [[Coordinate Representation of Tensor Field]]
 - [[Pullback of Tensor Fields]]
 - [[Coordinate Representation of Pullback of Tensor Field]]
+- [[Change of Coordinates between Tensor Fields]]
 
 ### Symmetric Tensor
 
@@ -101,6 +102,7 @@ date of note: 2024-05-06
 - [[Space of all Smooth k-Forms on a Manifold]]
 - [[Coordinate Representation of k-Forms]]
 - [[Coordinate Representation of Pullback of k-Forms]]
+- [[Change of Coordinates for Differential k-Forms]]
 - [[Trace of Mixed Tensor]]
 
 ### Exterior Derivative of Differential Form

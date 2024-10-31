@@ -58,10 +58,12 @@ date of note: 2024-05-06
 - [[Local and Global Frame for Tangent Bundle]]
 - [[Coordinate Representation of Vector Field on Manifold]]
 
+
 ### Transform between Vector Fields
 
 - [[Smooth Maps on Space of Vector Fields]]: **F-related**
 - [[Pushforward of Vector Fields]]
+- [[Change of Coordinates between Vector Fields]]
 
 ### Global Flows, Local Flows and Integral Curves
 
@@ -88,6 +90,7 @@ date of note: 2024-05-06
 - [[Space of all Smooth Covector Fields on a Manifold]]
 - [[Local and Global Coframes for Cotangent Bundle]]
 - [[Coordinate Representation of Covector Field on Manifold]]
+
 - [[Differential as Covector Field]]
 - [[Coordinate Representation of Differential]]
 
@@ -95,6 +98,7 @@ date of note: 2024-05-06
 
 - [[Pullback of Covector Fields]]
 - [[Coordinate Representation of Pullback of Covector]]
+- [[Change of Coordinates for Covector Fields and Differentials]]
 
 ### Tensor on Riemannian Manifold
 
