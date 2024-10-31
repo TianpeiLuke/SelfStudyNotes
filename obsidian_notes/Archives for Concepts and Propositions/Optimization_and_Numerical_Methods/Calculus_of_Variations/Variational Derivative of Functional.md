@@ -85,6 +85,30 @@ date of note: 2024-10-29
 >\frac{\delta J}{\delta y} = \frac{ \partial F}{ \partial y} -\frac{d}{dx}  \frac{ \partial F }{ \partial y' } 
 >$$
 
+### Variational Derivative for Multivariate Function Input
+
+![[Euler–Lagrange Equations#^fbb619]]
+
+>[!important]
+>Let $x := (x^1\,{,}\ldots{,}\,x^{n})$, and $y: \mathbb{R}^{n} \to \mathbb{R}$.
+>
+>For functional defined as $$J[y] = \int_{a}^{b}F(x, y, \nabla y)dx,$$ the corresponding **variation** of $J$ at $x_{0}$ is given by 
+>$$
+>\begin{align*}
+>\delta J(y, h) = J[y+ h] - J[y] = \int_{a}^{b} \frac{\delta J}{\delta y} h\,dx, \quad \delta y := h \in \mathcal{C}_{c}^{\infty}(\mathbb{R}^{d}, \mathbb{R})
+>\end{align*}
+>$$
+>
+>We can show that the **variational derivative** of $J$ is given by the LHS of **Euler-Lagrange equation**.
+>$$
+>\frac{\delta J}{\delta y} = \frac{\partial  L}{ \partial y}- \sum_{i=1}^{n}\left(\frac{\partial }{ \partial x^{i}}\frac{\partial  L}{ \partial (\partial_{i} y) }\,\right)
+>$$
+>or
+>$$
+>\frac{\delta J}{\delta y} = \frac{ \partial F}{ \partial y} - \text{div}\left( \frac{ \partial F }{ \partial  \nabla y }  \right)
+>$$
+
+- [[Euler–Lagrange Equations]]
 
 
 ## Explanation
@@ -115,3 +139,5 @@ date of note: 2024-10-29
 
 - [[Optimization by Vector Space Methods by Luenberger]]
 - [[Calculus of Variations by Gelfand]] pp 27 - 29, 
+- Giaquinta, M., & Hildebrandt, S. (1995). _Calculus of Variations I_ (Corrected edition). Springer.
+- Wikipedia [Functional_derivative](https://en.wikipedia.org/wiki/Functional_derivative#Definition)

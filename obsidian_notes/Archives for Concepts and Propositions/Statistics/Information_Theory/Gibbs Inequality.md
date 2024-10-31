@@ -30,8 +30,25 @@ date of note: 2024-05-14
 
 ^2ff4a4
 
+- [[Cross-Entropy Loss Function]]
+- [[Kullback-Leibler Divergence]]
 
 ## Explanation
+
+![[Cross-Entropy Loss Function#^8e6b5a]]
+
+
+![[Cross-Entropy Loss Function#^c4fbc4]]
+
+>[!info]
+>This is basically directly from **nonnegative** of *KL divergence* and decomposition of LLM divergence into cross entropy and entropy
+>$$
+>\begin{align*}
+>&\left(-\sum_{i=1}^n p_{i} \log(q_{i})\right) -\left(-\sum_{i=1}^n p_{i} \log(p_{i}) \right)\\[5pt]
+>& = H_{ce}(p, q) - H(p) \\[5pt] 
+>& = \mathbb{KL}\left( p \left\|\right.  q \right) \ge 0
+\end{align*}
+>$$
 
 
 

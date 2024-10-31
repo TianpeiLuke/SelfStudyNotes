@@ -28,6 +28,7 @@ date of note: 2024-10-21
 
 - [[Attention Mechanism in Neural Network]]
 - [[Transformer Network]]
+- [[Scaling Law of Large Language Model]]
 
 
 - [[Encoder-Decoder Sequence-to-Sequence Architecture]]

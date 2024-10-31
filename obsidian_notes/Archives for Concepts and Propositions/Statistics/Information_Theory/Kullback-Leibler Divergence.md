@@ -204,8 +204,9 @@ date of note: 2024-05-07
 - [[Evidence Lower Bound for Exponential Family]]
 
 
-## Divergence on Statistical Manifold
+## $\alpha$-Divergence on Statistical Manifold
 
+- [[alpha-Divergence]]
 - [[Divergence Function on Manifold]]
 
 

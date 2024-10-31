@@ -1,8 +1,10 @@
 ---
 tags:
   - concept
+  - numerical_methods/numerical_differential_equations
 keywords: 
-topics: 
+topics:
+  - numerical_differential_equation
 name: 
 date of note: 2024-10-31
 ---

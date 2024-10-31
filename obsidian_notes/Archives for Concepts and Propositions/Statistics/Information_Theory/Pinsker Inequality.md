@@ -25,7 +25,7 @@ date of note: 2024-05-23
 >[!important] Pinsker's Inequality
 >Let $\mathcal{P}, \mathcal{Q}$ be two *probability measures* on measurable space $(\Omega, \mathscr{F})$ such that $P \ll Q.$ 
 >
->Then
+>Then the **total variation** between two *measures* is **bounded above** by the **KL-divergence**
 >$$
 > \begin{align}
 > V(\mathcal{P}, \mathcal{Q})^2 &\le \frac{1}{2}\mathbb{KL}\left( \mathcal{P} \left\|\right. \mathcal{Q} \right).

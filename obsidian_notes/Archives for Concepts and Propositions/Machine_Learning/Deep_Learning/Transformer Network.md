@@ -6,6 +6,7 @@ tags:
   - deep_learning/architecture
   - deep_learning/models
   - natural_language_processing/large_language_models
+  - deep_learning/large_language_models
 keywords:
   - transformer_network
   - attention_network

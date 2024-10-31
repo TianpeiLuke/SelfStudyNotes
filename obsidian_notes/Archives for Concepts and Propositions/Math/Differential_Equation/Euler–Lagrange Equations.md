@@ -197,6 +197,15 @@ date of note: 2024-06-14
 >\frac{\partial  L}{ \partial \phi}- \sum_{i=1}^{n}\left(\frac{\partial }{ \partial x^{i}}\frac{\partial  L}{ \partial \phi_{i} }\,\right)= 0
 >\end{align*}
 >$$
+>or
+>$$
+>\frac{\partial  L}{ \partial \phi}- \text{div}\left( \frac{ \partial L }{ \partial \nabla \phi }  \right)= 0
+>$$
+>where 
+>- the *divergence operator* is given by $$\text{div}(X) = \sum_{i=1}^{n}\frac{\partial }{ \partial x^{i}}X^{i}$$
+>- and $$\frac{ \partial L }{ \partial \nabla \phi } = \left[\left( \frac{\partial  L}{ \partial \phi_{i} } \right) \right]_{i} = \left[\left( \frac{\partial  L}{ \partial (\partial_{i}\phi) } \right)\right]_{i}$$
+
+^fbb619
 
 >[!important] Definition  (Several functions of several variables with single derivative)
 >Let  $\phi^{j}: \mathbb{R}^{n} \to \mathbb{R}^{k}$ be an unknown  *smooth function* for $j=1 \,{,}\ldots{,}\,m$ and  the **Lagrangian** $$L: \mathbb{R}^{k} \times \mathbb{R}^{n \times k} \,{\times}\ldots{\times}\, \mathbb{R}^{n \times k}  \times \mathbb{R}^{n} \to \mathbb{R}$$ be a *smooth function* such that $$(\phi^1 \,{,}\ldots{,}\,\phi^m, \Phi^1 \,{,}\ldots{,}\, \Phi^m, x) \mapsto L(\phi^1 \,{,}\ldots{,}\,\phi^m, \Phi^1 \,{,}\ldots{,}\, \Phi^m, x),$$  where $$x:=(x^1 \,{,}\ldots{,}\,x^n), \quad \Phi^{j} :=  (\phi_{1}^{j} \,{,}\ldots{,}\, \phi_{n}^{j}), \quad \phi_{i}^{j} := \frac{ \partial  }{ \partial x^{i} }\phi^{j} $$
@@ -207,7 +216,12 @@ date of note: 2024-06-14
 >\frac{\partial  L}{ \partial \phi^{j}}- \sum_{i=1}^{n}\left(\frac{\partial }{ \partial x^{i}}\frac{\partial  L}{ \partial \phi_{i}^{j} }\,\right)= 0, \quad j=1 \,{,}\ldots{,}\,m
 >\end{align*}
 >$$
+>or
+>$$
+>\frac{\partial  L}{ \partial \phi^{j}}- \text{div}\left( \frac{ \partial L }{ \partial \nabla \phi^{j} }  \right)= 0, \quad j=1 \,{,}\ldots{,}\,m
+>$$
 
+- [[Variational Derivative of Functional]]
 
 ## Explanation
 

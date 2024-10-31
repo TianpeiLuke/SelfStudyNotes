@@ -56,6 +56,9 @@ date of note: 2024-08-24
 >H_{ce}(p, q) = -\sum_{i=1}^{k}p_{i}\log q_{i}.
 >$$ 
 
+^8e6b5a
+
+- [[Gibbs Inequality]]
 
 ## Explanation
 
@@ -127,6 +130,7 @@ date of note: 2024-08-24
 - [[Evidence Lower Bound]]
 - [[Surrogate Loss Minimization]]
 - [[Empirical Risk Minimization]]
+- [[Gibbs Inequality]]
 
 
 - [[Elements of Information Theory by Cover]]

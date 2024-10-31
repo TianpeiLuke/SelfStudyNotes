@@ -25,9 +25,10 @@ date of note: 2024-10-25
 ![[Wasserstein Space#^998943]]
 
 >[!info]
->The **first-variation of functional** $F$ $$\frac{\delta F}{\delta \rho}$$  is defined as a measurable function that satisfies the equation $$\frac{d}{dt}\Big|_{t=0} F(\rho + t\,\mu) = \int \frac{\delta F}{\delta \rho}(\rho)\, d\mu$$
+>The **variation derivative of functional** $F$, $\delta F / \delta \rho$,  is defined as a measurable function that satisfies the equation $$\delta F(\rho, \mu) := \frac{d}{dt}\Big|_{t=0} F(\rho + t\,\mu) = \int \frac{\delta F}{\delta \rho}(\rho)\, d\mu$$
 
 - [[First Variation of Functional]]
+- [[Variational Derivative of Functional]]
 
 >[!important] Definition
 >Let $(\Omega, \mathscr{F})$ be a measurable metric space and  $\mathbb{W}_{2}(\Omega)$ be the *Wasserstein space* of *order* $2$ on $\Omega$. 
@@ -41,7 +42,7 @@ date of note: 2024-10-25
 >The **gradient flow** of  *functional* $F$ in *Wasserstein space* $\mathbb{W}_{2}(\Omega)$ is defined as $$\frac{ \partial }{ \partial t }\rho_{t} - \text{div}\left(\rho_{t}\; \nabla \left( \frac{\delta F}{\delta \rho} \right)(\rho_{t}) \right)  = 0$$
 >where
 >- $\rho_{t} \in \mathbb{W}_{2}(\Omega)$ is a *parameterized curve* in $\mathbb{W}_{2}(\Omega)$, parameterized by $t$
->- $$\nabla \left( \frac{\delta F}{\delta \rho} \right)$$ is the *gradient* of *first variational* of functional $f$, which is a *vector field* on $\mathbb{W}_{2}$ space.
+>- $$\nabla \left( \frac{\delta F}{\delta \rho} \right)$$ is the *gradient* of *variational derivative* of functional $f$, which is a *vector field* on $\mathbb{W}_{2}$ space.
 >- The PDE above is a **continuity equation** for vector field $$X = \nabla \left( \frac{\delta F}{\delta \rho} \right)$$
 >  
 >The **discretization** of **gradient flow** of $F$ on $\mathbb{W}_{2}(\Omega)$ is given by the *iterated minimization*

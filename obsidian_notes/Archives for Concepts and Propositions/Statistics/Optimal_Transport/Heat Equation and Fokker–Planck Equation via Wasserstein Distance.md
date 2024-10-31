@@ -4,6 +4,8 @@ tags:
   - math/information_theory
   - math/differential_equation
   - math/stochastic_process
+  - math/optimal_transport
+  - math/partial_differential_equation
 keywords:
   - fokker_planck_equation
   - optimal_transport

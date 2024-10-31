@@ -65,3 +65,4 @@ date of note: 2024-10-26
 - [[Ordinary Differential Equations by Chicone]] pp 225
 - [[Partial Differential Equations by Evans]] pp 441
 - [[Calculus of Variations by Gelfand]]  pp 14
+- [[Optimization by Vector Space Methods by Luenberger]] pp 171

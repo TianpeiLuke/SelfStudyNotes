@@ -32,7 +32,8 @@ date of note: 2024-06-01
 >The following **chain rule** holds
 >$$
 >\begin{align*}
->\mathbb{KL}\left( P \left\|\right. Q \right) &= \mathbb{KL}\left( P_{X} \left\|\right. Q_{X}  \right) + \mathbb{KL}\left( P[Y | \mathscr{F}_{\mathcal{X}}] \left\|\right. Q[Y | \mathscr{F}_{\mathcal{X}}] \right)
+>\mathbb{KL}\left( P \left\|\right. Q \right) &= \mathbb{KL}\left( P_{X} \left\|\right. Q_{X}  \right) + \mathbb{KL}\left( P[Y | \mathscr{F}_{\mathcal{X}}] \left\|\right. Q[Y | \mathscr{F}_{\mathcal{X}}] \right) \\[5pt]
+>&= \mathbb{KL}\left( p_{X} \left\|\right. q_{X}  \right) + \mathbb{E}_{ X }\left[  \mathbb{KL}\left( p(y | X) \left\|\right. q(y | X) \right) \right]
 \end{align*}
 >$$
 

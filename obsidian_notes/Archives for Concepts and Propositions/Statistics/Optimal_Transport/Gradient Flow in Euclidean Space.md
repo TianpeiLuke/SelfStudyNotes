@@ -7,6 +7,7 @@ tags:
   - optimization/algorithm
   - deep_learning/generative_models
   - math/ordinary_differential_equation
+  - math/optimal_transport
 keywords:
   - gradient_flow_euclidean
   - ordinary_differential_equations

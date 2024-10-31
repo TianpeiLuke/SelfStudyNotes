@@ -1,8 +1,10 @@
 ---
 tags:
   - concept
+  - math/differential_geometry
 keywords: 
-topics: 
+topics:
+  - differential_geometry
 name: 
 date of note: 2024-10-31
 ---

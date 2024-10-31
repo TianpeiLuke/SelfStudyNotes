@@ -111,6 +111,18 @@ date of note: 2024-08-26
 - [[Constraint Satisfaction Problem CSP]]
 
 
+## Network Flow Theory
+
+- [[Minimum Cost Flow Problem]]
+- [[Maximum Cut Problem]]
+- [[Network and Flow and Capacity and Cut]]
+
+
+
+## Principle of Least Action
+
+- [[Principle of Least Action]]
+
 
 -----------
 ##  Recommended Notes and References

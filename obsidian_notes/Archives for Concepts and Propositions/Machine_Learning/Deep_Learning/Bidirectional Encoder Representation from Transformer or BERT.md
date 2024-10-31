@@ -3,6 +3,8 @@ tags:
   - concept
   - deep_learning/architecture
   - deep_learning/models
+  - deep_learning/large_language_models
+  - natural_language_processing/large_language_models
 keywords: 
 topics: 
 name: 

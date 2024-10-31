@@ -33,14 +33,11 @@ date of note: 2024-05-08
 
 ## Explanation
 
->[!info]
+>[!info] Proof
 >$$
 >\varphi(x) = -\log(x)
 >$$
->is a convex function. 
-
->[!info] Proof
->by Jenson's inequality, 
+>is a convex function. By Jenson's inequality, 
 >$$
 >\begin{align*}
 >\varphi \left( \frac{\sum_{i=1}^n r_{i}x_{i} }{\sum_{i=1}^n r_{i}}\right) &\le  \frac{\sum_{i=1}^n r_{i} \varphi\left(x_{i}\right)   }{\sum_{i=1}^n r_{i}}
@@ -57,5 +54,7 @@ date of note: 2024-05-08
 -----------
 ##  Recommended Notes and References
 
+
+- [[Kullback-Leibler Divergence]]
 - Wikipedia [Jensen's_inequality](https://en.wikipedia.org/wiki/Jensen%27s_inequality)
 - Github Note [link](https://github.com/TianpeiLuke/SelfStudyNotes/tree/master/self-study/probability_and_measure_theory)

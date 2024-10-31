@@ -6,6 +6,7 @@ tags:
   - optimization/theory
   - optimization/algorithm
   - deep_learning/generative_models
+  - math/optimal_transport
 keywords:
   - gradient_flow_manifold
 topics:

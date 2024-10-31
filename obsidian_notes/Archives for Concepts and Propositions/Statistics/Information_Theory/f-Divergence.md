@@ -40,7 +40,8 @@ date of note: 2024-05-07
 - [[Absolute Continuity for Measures]]
 - [[Radon-Nikodym Derivative]]
 - [[Divergence Function on Manifold]]
-- [[Entropy Functional]]
+- [[Phi Entropy Functional]]
+
 
 ## Explanation
 
