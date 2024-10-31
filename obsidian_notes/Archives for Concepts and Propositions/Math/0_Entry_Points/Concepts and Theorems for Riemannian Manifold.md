@@ -68,6 +68,9 @@ date of note: 2024-05-20
 - [[Fundamental Theorem of Riemannian Geometry]]
 - [[Levi Civita Connection and Riemannian Connection]]
 
+
+### Normal Neighborhood and Normal Coordinate System
+
 - [[Exponential Map via Geodesic on Riemannian Manifold]]
 - [[Normal Neighborhood]]
 

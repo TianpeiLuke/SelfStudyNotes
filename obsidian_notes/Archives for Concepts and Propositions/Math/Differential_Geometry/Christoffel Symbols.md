@@ -19,7 +19,8 @@ date of note: 2024-05-20
 
 - [[Affine Connection of Basis Frames and Connection Coefficient]]
 
-
+>[!important] Definition
+>The **Christoffel symbols** are the **connection coefficients** of a **metric connection** $\nabla$ with respect to a smooth local frame in $T\mathcal{M}$.
 
 
 - [[Metric Connection for Riemannian Manifold]]

@@ -55,6 +55,11 @@ date of note: 2024-05-21
 >	- the index of the **basis vector field** $\partial/ \partial x^k$ which spans the space of vector fields. 
 
 
+## Levi-Civita Connection Coefficients
+
+- [[Levi Civita Connection and Riemannian Connection]]
+- [[Riemannian Metric and Riemannian Manifold]]
+
 
 
 
@@ -63,6 +68,6 @@ date of note: 2024-05-21
 
 - [[Affine Connection on Tangent Bundle]]
 - [[Christoffel Symbols]]
-- [[Einstein Summation Convention
+- [[Einstein Summation Convention]]
 
 - [[Introduction to Riemannian Manifolds by Lee]]
