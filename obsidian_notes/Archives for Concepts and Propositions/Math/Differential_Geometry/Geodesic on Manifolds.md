@@ -33,7 +33,19 @@ date of note: 2024-05-20
 - [[Velocity of Smooth Curves]]
 - [[Integral Curve of Vector Field]]
 
+### Existence and Uniqueness 
 
+>[!important] Existence and Uniqueness of Geodesics
+>Let $\mathcal{M}$ be a *smooth manifold* and $\nabla$ a *connection* in $T\mathcal{M}$.
+>
+>For every $p\in \mathcal{M}$, $w\in T_{p}\mathcal{M}$, and $t_{0}\in \mathbb{R}$, there **exists** an *open interval* $I \subseteq \mathbb{R}$ containing $t_{0}$, and a **geodesic** $\gamma: I \to \mathcal{M}$ satisfying 
+>- $\gamma(t_{0}) = 0$
+>- $\gamma'(t_{0}) = v.$
+>  
+>Any *two such geodesics* **agree** on their *common domain.*  
+
+- [[Fundamental Theorem on Flows]]
+- [[Existence and Uniqueness of Solution of Ordinary Differential Equations]]
 
 ## Explanation
 

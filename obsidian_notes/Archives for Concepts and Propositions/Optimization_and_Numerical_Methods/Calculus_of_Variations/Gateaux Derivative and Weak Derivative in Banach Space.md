@@ -33,7 +33,7 @@ date of note: 2024-10-29
 >*holds* for *any* $h\in X$, and $|\epsilon| < \epsilon_{0}$ with *sufficiently small* $\epsilon_{0}h > 0$. 
 >- In other word, $F$ is **Gateaux differentiable** *at* $u_{0}$ if there exists $\ell\in X^{*}$ such that $$\begin{align*}\lim_{ \epsilon \to 0 } \frac{|F(u_{0} + \epsilon h) - F(u_{0}) - \epsilon \ell(h)|}{\epsilon} = 0, \quad \forall h\in X, |\epsilon| < \epsilon_{0} \end{align*}$$
 >
->- We call the *value* $\ell(h)$  as the  **Gateaux derivative** of $F$  *at* $u_{0}$, i.e. $$dF(u_{0}, h)  = \ell(h).$$ 
+>- We call the *value* $\ell(h)$  as the  **Gateaux derivative** of $F$  *at* $u_{0}$, i.e. $$\delta F(u_{0}, h)  = \ell(h).$$ 
 >- The **Gateaux derivative** is also called the **weak derivative** of *functional* $F$.
 
 
@@ -62,8 +62,15 @@ date of note: 2024-10-29
 
 >[!info]
 >- The the  **Fréchet derivative** of a *functional* at a point is a **linear functional** $$DF(u_{0}) \in X^{*}$$
->- And the **Gateaux derivative** of a *functional* at a point is **real-value** $$dF(u_{0}, h) \in \mathbb{R}.$$ 
+>- And the **Gateaux derivative** of a *functional* at a point is **real-value** $$\delta F(u_{0}, h) \in \mathbb{R}.$$ 
 >	- The *Gateaux derivative* can be seen as a **directional derivative** of $F$ along direction $h$.
+
+## Variational Derivative
+
+![[Variational Derivative of Functional#^82443b]]
+
+- [[Variational Derivative of Functional]]
+
 
 
 
@@ -72,7 +79,7 @@ date of note: 2024-10-29
 
 
 
-- [[First Variation and Variational Derivative of Functional]]
+
 - [[Banach Space]]
 
 

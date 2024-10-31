@@ -53,6 +53,12 @@ date of note: 2024-07-29
 >- The **column player** is to **maximize** the loss $$\max_{Q}M(P, Q)$$
 >- This game is a **zero-sum game**.
 
+### Min-Max Theorem for Nash Equilibrium 
+
+![[Von Neumann Min-Max Theorem#^d1aa27]]
+
+- [[Von Neumann Min-Max Theorem]]
+
 ### Online Prediction as Repeated Game Play
 
 - [[Online Learning Perspective for AdaBoost]]

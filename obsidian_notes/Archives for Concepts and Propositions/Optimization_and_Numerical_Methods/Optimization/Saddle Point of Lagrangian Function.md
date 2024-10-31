@@ -48,6 +48,11 @@ date of note: 2024-07-02
 
 - [[Von Neumann Min-Max Theorem]]
 
+### Min-max Theorem
+
+![[Von Neumann Min-Max Theorem#^8777e4]]
+
+
 
 ## Explanation
 

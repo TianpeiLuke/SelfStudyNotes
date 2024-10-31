@@ -68,7 +68,7 @@ date of note: 2024-06-14
 
 - [[Gateaux Derivative and Weak Derivative in Banach Space]]
 - [[Fréchet Derivative and Strong Derivative in Banach Space]]
-- [[Variation of Functional]]
+- [[First Variation of Functional]]
 - [[Tangent Space Definition and Development]]
 - [[Smooth Manifold]]
 
@@ -174,7 +174,7 @@ date of note: 2024-06-14
 >\frac{\delta L}{\delta \phi} := \frac{\partial  L}{ \partial \phi} - \left(\frac{d}{dt} \frac{\partial  L}{ \partial \dot{\phi}}\,\right)
 >$$
 
-- [[First Variation and Variational Derivative of Functional]]
+- [[Variational Derivative of Functional]]
 
 ## Generalization
 

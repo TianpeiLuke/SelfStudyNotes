@@ -27,7 +27,7 @@ date of note: 2024-10-25
 >[!info]
 >The **first-variation of functional** $F$ $$\frac{\delta F}{\delta \rho}$$  is defined as a measurable function that satisfies the equation $$\frac{d}{dt}\Big|_{t=0} F(\rho + t\,\mu) = \int \frac{\delta F}{\delta \rho}(\rho)\, d\mu$$
 
-- [[Variation of Functional]]
+- [[First Variation of Functional]]
 
 >[!important] Definition
 >Let $(\Omega, \mathscr{F})$ be a measurable metric space and  $\mathbb{W}_{2}(\Omega)$ be the *Wasserstein space* of *order* $2$ on $\Omega$. 
@@ -60,7 +60,7 @@ date of note: 2024-10-25
 - [[Semi-Continuous Function]]
 
 - [[Wasserstein Space]]
-- [[First Variation and Variational Derivative of Functional]]
+- [[Variational Derivative of Functional]]
 - [[Parameterized Curve on Manifold]]
 - [[Vector Field on Manifold]]
 - [[Divergence Operator of Vector Field on Riemannian Manifold]]

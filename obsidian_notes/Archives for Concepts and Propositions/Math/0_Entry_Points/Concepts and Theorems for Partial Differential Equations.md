@@ -23,7 +23,8 @@ date of note: 2024-05-30
 
 ### Calculus of Variations
 
-- [[Variation of Functional]]
+- [[Concepts and Theorems for Calculus of Variations]]
+- [[First Variation of Functional]]
 
 ### Partial Differential Equations
 

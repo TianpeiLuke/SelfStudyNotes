@@ -150,7 +150,7 @@ date of note: 2024-05-11
 
 - [[Fréchet Derivative and Strong Derivative in Banach Space]]
 - [[Gateaux Derivative and Weak Derivative in Banach Space]]
-- [[First Variation and Variational Derivative of Functional]]
+- [[Variational Derivative of Functional]]
 
 
 

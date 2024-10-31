@@ -68,7 +68,7 @@ date of note: 2024-10-29
 
 
 
-- [[First Variation and Variational Derivative of Functional]]
+- [[Variational Derivative of Functional]]
 
 
 
