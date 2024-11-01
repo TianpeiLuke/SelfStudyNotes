@@ -16,7 +16,7 @@ date of note: 2024-10-29
 ## Concept Definition
 
 >[!important]
->**Name**: First Variation and Variational Derivative of Functional
+>**Name**: Variational Derivative of Functional
 
 >[!important] Definition
 >Let $y\in \mathcal{C}^{1}(\mathbb{R}^{d})$ be a *continuous differentiable function*. Denote $y := y(x)$ for some $x\in \mathbb{R}^{d}$.  
