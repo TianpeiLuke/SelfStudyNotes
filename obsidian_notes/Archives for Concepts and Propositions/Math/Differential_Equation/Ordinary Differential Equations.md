@@ -43,6 +43,8 @@ date of note: 2024-06-14
 >$$
 >for all $t \in J_{0}$.
 
+^480c33
+
 >[!important] Definition
 >We also call a solution as "**trajectory**", "*phase curve*" and "**integral curve**"
 
@@ -60,7 +62,9 @@ date of note: 2024-06-14
 >$$
 >The second equation is called the **initial condition**.
 >
->If the differential equations is defined as above and $(x_{0}, t_{0}) \in U\times J$, then the pair of equations is called an **initial value problem**.
+>If the differential equations is defined as above and $(x_{0}, t_{0}) \in U\times J$, then the pair of equations is called an **initial value problem (IVP)**.
+
+^df84bb
 
 
 

@@ -32,6 +32,8 @@ date of note: 2024-10-17
 >
 >Then there **exists** a point $\theta \in (\alpha, \beta)$ such that $$f(\beta) = P_{n-1}(\beta) + \frac{f^{(n)}(\theta)}{n!}\,(\beta - \alpha)^{n}$$  
 
+^d63547
+
 - [[Polynomial Ring]]
 - [[Continuous Function]]
 - [[Smooth Map between Euclidean Spaces]]

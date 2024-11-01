@@ -76,19 +76,25 @@ date of note: 2024-10-25
 >where 
 >- $\tau >0$ is a fixed *step parameter*.
 
+^ce373d
+
 - [[Proximal Gradient Algorithm]]
+- [[Explicit Euler Method for Discretization of ODE]]
 
 >[!info]
 >We see that 
 >$$
 >x_{k+1}^{\tau} \in \arg\min_{x}\left\{ f(x) + \frac{\lVert x - x_{k}^{\tau} \rVert_{2}^2 }{2\tau}  \right\}  
 >$$
->Then $$\nabla f(x_{k+1}^{\tau}) + \frac{x - x_{k}^{\tau}}{\tau} = 0 \implies \frac{x - x_{k}^{\tau}}{\tau} = - \nabla f(x_{k+1}^{\tau})$$
+>Then $$\nabla f(x_{k+1}^{\tau}) + \frac{x_{k+1}^{\tau} - x_{k}^{\tau}}{\tau} = 0 \implies \frac{x_{k+1}^{\tau} - x_{k}^{\tau}}{\tau} = - \nabla f(x_{k+1}^{\tau})$$
 >
 >This is the **discrete-time implicit Euler scheme** for $$\frac{d}{dt} x(t) = - \nabla f(x(t))$$
 
+^476dc0
+
 - [[Fixed Point of Map]]
 - [[Contraction Map Principle]]
+- [[Implicit Euler Method for Discretization of ODE]]
 
 
 ### Extension to Metric Space
@@ -195,6 +201,7 @@ date of note: 2024-10-25
 >$$
 
 - [[Gradient Descent Algorithm]]
+- [[Explicit Euler Method for Discretization of ODE]]
 
 >[!important]
 >Let $$f(x) = F(x) + H(x)$$ where $F$ is **convex smooth**, while $H$ is **convex and nonsmooth**

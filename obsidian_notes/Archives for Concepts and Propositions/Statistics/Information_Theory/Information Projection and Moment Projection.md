@@ -184,7 +184,7 @@ date of note: 2024-07-21
 >- the **$M$-projection** corresponds to  the *orthogonal projection* under the **$m$-connection,** $\nabla^{m} = \nabla ^{(1)}$ 
 
 - [[e-Connection and m-Connection]]
-- [[alpha-Connection]]
+- [[alpha-Connection on Statistical Manifold]]
 
 
 

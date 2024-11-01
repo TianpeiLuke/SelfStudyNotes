@@ -62,6 +62,8 @@ date of note: 2024-06-24
 >A **$n$-dimensional statistical manifold** is a **parameteric family** of distributions, or a **parametric model**. $$\mathcal{S} := \left\{ p_{\theta}: \theta \in \Theta \subseteq \mathbb{R}^{n} \right\} $$
 >
 
+^646891
+
 - [[Measure Space and Countably Additive Measure]]
 - [[Probability Space]]
 - [[Probability Density Function of Random Variable]]

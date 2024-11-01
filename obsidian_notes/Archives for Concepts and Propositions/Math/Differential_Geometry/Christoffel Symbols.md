@@ -30,6 +30,8 @@ date of note: 2024-05-20
 >$$
 >where $\{ E_{i} \}$ are local frames in $T\mathcal{M}$ and $\nabla$ is the *Levi-Civita connection*.
 
+^ce4cd0
+
 - [[Metric Connection for Riemannian Manifold]]
 - [[Levi Civita Connection and Riemannian Connection]]
 - [[Einstein Summation Convention]]
@@ -45,6 +47,9 @@ date of note: 2024-05-20
 >where $\{\Gamma_{i,j}^{k}\}$ is the *Christoffel symbols of the second kind* with respect to the *Levi-Civita connection*  $\nabla$.
 
 
+^587512
+
+
 ## Explanation
 
 
@@ -55,6 +60,8 @@ date of note: 2024-05-20
 >	- the index of *component* $Y^j$ for the **differentiated vector field** $Y$ in $\nabla_{X}Y$;
 >- the **one upper index** $k$ corresponds to 
 >	- the index of the **basis vector field** $\partial/ \partial x^k$ which spans the space of vector fields. 
+
+
 
 ## Properties
 
@@ -73,6 +80,6 @@ date of note: 2024-05-20
 
 - [[Connection in Vector Bundle and Covariant Derivative]]
 - [[Affine Connection on Tangent Bundle]]
-
+- [[alpha-Connection on Statistical Manifold]]
 
 - [[Introduction to Riemannian Manifolds by Lee]] pp 124

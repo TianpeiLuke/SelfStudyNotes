@@ -126,8 +126,10 @@ date of note: 2024-05-12
 
 ## Gradient Flow as Continuous Limit of Gradient Descent
 
+![[Gradient Flow in Euclidean Space#^6fbd2b]]
+
 >[!important]
->The **gradient descent** algorithm can be seen as *discretized* version of **gradient flow**
+>The **gradient flow problem** is a continuous-time gradient descent
 >$$
 >\begin{align*}
 >&- \alpha \nabla f(x_{k})  = x_{k+1} - x_{k} \\[5pt]
@@ -135,8 +137,11 @@ date of note: 2024-05-12
 >& \iff \frac{d}{dt} x(t) = -\alpha \nabla f(x(t))
 >\end{align*}
 >$$ 
+>
+>In other word,  the **gradient descent** algorithm can be seen as solving the  **gradient flow**  using the **Euler method**. 
 
 - [[Gradient Flow in Euclidean Space]]
+- [[Explicit Euler Method for Discretization of ODE]]
 
 ## Conjugate Gradient Method
 

@@ -25,7 +25,7 @@ date of note: 2024-06-24
 
 
 - [[Information Projection and Moment Projection]]
-- [[alpha-Connection]]
+- [[alpha-Connection on Statistical Manifold]]
 - [[Dual of alpha-Connection]]
 
 - [[Riemannian Metric and Riemannian Manifold]]

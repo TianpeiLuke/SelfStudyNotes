@@ -43,7 +43,7 @@ date of note: 2024-10-28
 - [[Connection in Vector Bundle and Covariant Derivative]]
 - [[Levi Civita Connection and Riemannian Connection]]
 
-- [[alpha-Connection]]
+- [[alpha-Connection on Statistical Manifold]]
 - [[Dual of alpha-Connection]]
 
 

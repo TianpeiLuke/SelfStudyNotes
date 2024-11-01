@@ -27,7 +27,7 @@ date of note: 2024-06-24
 
 
 
-- [[alpha-Connection]]
+- [[alpha-Connection on Statistical Manifold]]
 - [[Dual of alpha-Connection]]
 - [[Divergence Function on Manifold]]
 
