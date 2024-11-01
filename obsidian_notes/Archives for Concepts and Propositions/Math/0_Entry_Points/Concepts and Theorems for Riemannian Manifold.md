@@ -75,6 +75,9 @@ date of note: 2024-05-20
 
 - [[Exponential Map via Geodesic on Riemannian Manifold]]
 - [[Normal Neighborhood]]
+- [[Normal Coordinates]]
+
+
 
 ### Riemannian Geodesic and Distance
 

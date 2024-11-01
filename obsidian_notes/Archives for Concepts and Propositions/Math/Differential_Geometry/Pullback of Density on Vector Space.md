@@ -25,6 +25,9 @@ date of note: 2024-05-25
 -----------
 ##  Recommended Notes and References
 
+
+- [[Density on Vector Space]]
 - [[Vector Space over a Field]]
+- [[Pullback of k-Form]]
 
 - [[Introduction to Smooth Manifolds by Lee]]

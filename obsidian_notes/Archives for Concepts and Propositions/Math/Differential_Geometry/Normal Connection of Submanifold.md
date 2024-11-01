@@ -25,6 +25,11 @@ date of note: 2024-05-20
 -----------
 ##  Recommended Notes and References
 
+
+- [[Normal Neighborhood]]
+- [[Affine Connection on Tangent Bundle]]
+
+- [[Connection in Vector Bundle and Covariant Derivative]]
 - [[Riemannian Metric and Riemannian Manifold]]
 
 

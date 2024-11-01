@@ -25,7 +25,16 @@ date of note: 2024-05-20
 -----------
 ##  Recommended Notes and References
 
+
+- [[Principle Curvature of Submanifold]]
+- [[Gauss-Bonnet Theorem]]
+
+
+- [[Embedded Submanifold]]
 - [[Riemannian Metric and Riemannian Manifold]]
+
+- [[Trace of Matrix]]
+- [[Determinant of Linear Transformation]]
 
 
 - [[Introduction to Riemannian Manifolds by Lee]]

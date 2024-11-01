@@ -15,7 +15,6 @@ date of note: 2024-05-20
 >**Name**: 
 
 
-- [[Curvature Tensor on Riemannian Manifold]]
 
 ## Explanation
 
@@ -27,8 +26,14 @@ date of note: 2024-05-20
 ##  Recommended Notes and References
 
 
-- [[Riemannian Metric and Riemannian Manifold]]
-- [[Tensor Field on Manifold]]
-- [[Mixed Tensor on Vector Space]]
+- [[Normal Neighborhood]]
+- [[Geodesic on Manifolds]]
+- [[Exponential Map via Geodesic on Riemannian Manifold]]
 
-- [[Introduction to Riemannian Manifolds by Lee]]
+- [[Diffeomorphism]]
+- [[Linear Isomorphism]]
+
+- [[Riemannian Metric and Riemannian Manifold]]
+
+
+- [[Introduction to Riemannian Manifolds by Lee]] pp 131

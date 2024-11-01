@@ -28,4 +28,7 @@ date of note: 2024-05-20
 - [[Riemannian Metric and Riemannian Manifold]]
 
 
+- [[Graph]]
+
+- [[Graph Theory by Diestel]]
 - [[Introduction to Riemannian Manifolds by Lee]]

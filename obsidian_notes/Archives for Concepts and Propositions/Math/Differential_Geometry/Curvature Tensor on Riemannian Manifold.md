@@ -25,6 +25,10 @@ date of note: 2024-05-20
 -----------
 ##  Recommended Notes and References
 
+
+- [[Coordinate Representation of Curvature Tensor]]
+- [[Tensor Field on Manifold]]
+- [[Mixed Tensor on Vector Space]]
 - [[Riemannian Metric and Riemannian Manifold]]
 
 

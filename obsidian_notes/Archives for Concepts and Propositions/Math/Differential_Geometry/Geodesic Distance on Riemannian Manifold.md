@@ -17,6 +17,7 @@ date of note: 2024-05-20
 
 - [[Minimizing Curves in Riemannian Manifold]]
 - [[Geodesic on Manifolds]]
+- [[First Variation of Functional]]
 - [[Euler–Lagrange Equations]]
 
 

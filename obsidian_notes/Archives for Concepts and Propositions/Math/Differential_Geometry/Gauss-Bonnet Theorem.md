@@ -16,6 +16,11 @@ date of note: 2024-05-20
 
 
 
+- [[Euler Characteristic of Riemannian Manifold]]
+- [[Geodesic Polygon on Riemannian Manifold]]
+- [[Gaussian Curvature and Mean Curvature of Submanifold]]
+- [[Gauss-Bonnet Formula]]
+
 ## Explanation
 
 ![[Gauss_Bonnet_triangle.png]]

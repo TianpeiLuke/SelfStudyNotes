@@ -15,6 +15,7 @@ date of note: 2024-05-20
 >**Name**: 
 
 
+- [[Gauss-Bonnet Theorem]]
 
 ## Explanation
 
