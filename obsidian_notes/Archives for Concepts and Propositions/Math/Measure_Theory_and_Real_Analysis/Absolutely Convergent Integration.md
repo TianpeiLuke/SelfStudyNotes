@@ -92,6 +92,7 @@ date of note: 2024-05-13
 
 - [[Monotone Sequence of Nested Sets]]
 - [[Restriction of Measure on Subset]]
+- [[Fundamental Lemma of the Calculus of Variations]]
 
 ## Change of Variable
 
