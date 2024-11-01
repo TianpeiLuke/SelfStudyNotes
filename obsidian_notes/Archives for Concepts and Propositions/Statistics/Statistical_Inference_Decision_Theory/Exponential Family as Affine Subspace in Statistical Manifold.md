@@ -32,7 +32,7 @@ date of note: 2024-06-24
 - [[Concepts related to Tangent Space and Tangent Bundle]]
 
 - [[Log-Likelihood Score Function]]
-- [[Fisher Information Metric of Statistical Manifold]]
+- [[Fisher Metric or Information Metric of Statistical Manifold]]
 
 
 - [[Exponential Family of Distributions]]

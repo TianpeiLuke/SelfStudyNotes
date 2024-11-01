@@ -28,7 +28,7 @@ date of note: 2024-10-28
 - [[Log-Likelihood Score Function]]
 
 - [[Fisher Information]]
-- [[Fisher Information Metric of Statistical Manifold]]
+- [[Fisher Metric or Information Metric of Statistical Manifold]]
 
 ### Connections and Geometry on Statistical Manifold
 

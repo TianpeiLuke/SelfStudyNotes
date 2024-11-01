@@ -59,7 +59,7 @@ date of note: 2024-08-24
 
 
 - [[Gradient Descent Algorithm#Riemannian Manifold]]
-- [[Fisher Information Metric of Statistical Manifold]]
+- [[Fisher Metric or Information Metric of Statistical Manifold]]
 - [[Divergence Function on Manifold]]
 
 
@@ -72,7 +72,7 @@ date of note: 2024-08-24
 - [[Survivor Selection for Evolutionary Computation]]
 
 - [[Gradient Descent Algorithm#Riemannian Manifold]]
-- [[Fisher Information Metric of Statistical Manifold]]
+- [[Fisher Metric or Information Metric of Statistical Manifold]]
 - [[Geodesic on Manifolds]]
 
 - [[Fisher Information for Exponential Family]]

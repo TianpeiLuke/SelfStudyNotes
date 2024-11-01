@@ -34,7 +34,7 @@ date of note: 2024-08-24
 
 - [[Natural Evolutionary Strategies]]
 - [[Cross-Entropy Method for EDA]]
-- [[Fisher Information Metric of Statistical Manifold]]
+- [[Fisher Metric or Information Metric of Statistical Manifold]]
 
 
 

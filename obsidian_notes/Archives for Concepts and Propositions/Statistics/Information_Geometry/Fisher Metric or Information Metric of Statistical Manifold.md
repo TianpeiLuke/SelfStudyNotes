@@ -7,19 +7,20 @@ tags:
   - math/riemannian_geometry
 keywords:
   - fisher_metric
+  - information_metric
 topics:
   - information_geometry
   - statistics/estimation
   - probabilistic_graphical_model
   - machine_learning_theory
-name: Fisher Information Metric of Statistical Manifold
+name: Fisher Metric or Information Metric of Statistical Manifold
 date of note: 2024-06-27
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Fisher Information Metric of Statistical Manifold
+>**Name**: Fisher Metric or Information Metric of Statistical Manifold
 
 ![[Statistical Manifold as Parametric Family#^646891]]
 
@@ -27,12 +28,12 @@ date of note: 2024-06-27
 
 >[!important] Definition
 >Let  be a $n$-dimensional *statistical manifold* with *parameterization* $\theta\in \Theta$ on $\sigma$-finite measure space $(\mathcal{X}, \mathscr{F}, \mu)$.
->- Assume that $$\mathcal{S} \subset \mathcal{P}(\mathcal{X}) \subset L^2(\mathcal{X})$$
+>- Assume that $$\mathcal{S} \subset \mathcal{P}(\mathcal{X}) \subset L^2(\mathcal{X})$$ 
+>- Note that for any random variables $X,Y\in L^2(\mathcal{X})$, $$\left\langle  X\,,\,Y  \right\rangle_{p} := \mathbb{E}_{ p }\left[  X Y\right]$$  
 >- Denote $\ell_{\theta} := \log p_{\theta}$ as the *log-likelihood function*.
 >  
 >Given a point $p_{\theta}\in \mathcal{S}$ for $\theta\in \Theta$, the **Fisher information matrix** of $\mathcal{S}$ is a $n\times n$ matrix $$I(\theta) := [g_{i,j}(\theta)]$$ where
 >- the $(i,j)$-entry is given by $$\begin{align*}I(\theta)_{i,j} := g_{i,j}(\theta) &=  \mathbb{E}_{ \theta }\left[ \frac{ \partial}{ \partial \theta^{i} }\ell\,\frac{ \partial}{ \partial \theta^{j}}\ell \right] \\[5pt] &= \int_{\mathcal{X}} \frac{ \partial}{ \partial \theta^{i} }\ell(\theta; x)\,\frac{ \partial}{ \partial \theta^{j} }\ell(\theta; x)\; p(x; \theta)\,d\mu(x) \\[5pt] &:= \left\langle \frac{ \partial}{ \partial \theta^{i} }\ell \,,\,  \frac{ \partial}{ \partial \theta^{j}}\ell  \right\rangle_{\theta} \end{align*}$$ 
->- Note that for any random variables $X,Y\in L^2(\mathcal{X})$, $$\left\langle  X\,,\,Y  \right\rangle_{p} := \mathbb{E}_{ p }\left[  X Y\right]$$  
 >  
 >Assume that $$\mathcal{B}_{\theta} := \left\{ \frac{ \partial}{ \partial \theta^{1} }\ell_{\theta} \,{,}\ldots{,}\, \frac{ \partial}{ \partial \theta^{n} }\ell_{\theta} \right\} \subset T_{p_{\theta}}\mathcal{S}$$  are *linearly independent* for each $\theta\in \Theta$.
 >- In other word,  $\mathcal{B}_{\theta}$ form a **basis** of tangent space $T_{p}\mathcal{S}$ at $p_{\theta}$. 

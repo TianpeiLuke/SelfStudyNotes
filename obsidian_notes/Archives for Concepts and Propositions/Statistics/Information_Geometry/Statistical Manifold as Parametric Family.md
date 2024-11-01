@@ -80,7 +80,7 @@ date of note: 2024-06-24
 
 
 
-- [[Fisher Information Metric of Statistical Manifold]]
+- [[Fisher Metric or Information Metric of Statistical Manifold]]
 - [[Riemannian Metric and Riemannian Manifold]]
 
 
