@@ -21,8 +21,11 @@ date of note: 2024-10-30
 - [[Euler–Lagrange Equations]]
 
 - [[Necessary and Sufficient Condition for Local Minimum of Smooth Function]]
-
+- [[Unconstrained Local Minimization]]
+- [[Extremum and Weak and Relative Extremum of Functional]]
 - [[Fundamental Lemma of the Calculus of Variations]]
+- [[Necessary Condition for Relative Extremum of Functional]]
+
 
 ### Lagrangian Formalism
 

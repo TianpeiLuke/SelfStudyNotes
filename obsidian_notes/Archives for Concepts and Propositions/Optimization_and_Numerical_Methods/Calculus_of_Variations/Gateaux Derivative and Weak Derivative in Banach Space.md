@@ -34,7 +34,10 @@ date of note: 2024-10-29
 >- In other word, $F$ is **Gateaux differentiable** *at* $u_{0}$ if there exists $\ell\in X^{*}$ such that $$\begin{align*}\lim_{ \epsilon \to 0 } \frac{|F(u_{0} + \epsilon h) - F(u_{0}) - \epsilon \ell(h)|}{\epsilon} = 0, \quad \forall h\in X, |\epsilon| < \epsilon_{0} \end{align*}$$
 >
 >- We call the *value* $\ell(h)$  as the  **Gateaux derivative** of $F$  *at* $u_{0}$, i.e. $$\delta F(u_{0}, h)  = \ell(h).$$ 
+>	- $\ell$ is called the **principal linear part** of the increment.
 >- The **Gateaux derivative** is also called the **weak derivative** of *functional* $F$.
+
+^bd289e
 
 
 

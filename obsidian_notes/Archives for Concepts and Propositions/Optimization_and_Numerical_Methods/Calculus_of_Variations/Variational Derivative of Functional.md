@@ -108,6 +108,8 @@ date of note: 2024-10-29
 >\frac{\delta J}{\delta y} = \frac{ \partial F}{ \partial y} - \text{div}\left( \frac{ \partial F }{ \partial  \nabla y }  \right)
 >$$
 
+^60b0b8
+
 - [[Euler–Lagrange Equations]]
 
 

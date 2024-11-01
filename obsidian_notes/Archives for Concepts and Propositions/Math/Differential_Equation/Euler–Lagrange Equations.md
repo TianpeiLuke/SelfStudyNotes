@@ -59,6 +59,10 @@ date of note: 2024-06-14
 
 ^7c3405
 
+- [[Fundamental Lemma of the Calculus of Variations]]
+- [[Necessary Condition for Relative Extremum of Functional]]
+- [[Extremum and Weak and Relative Extremum of Functional]]
+
 >[!info]
 >This is actually the **variational derivative** of $J$ at $\phi$, i.e. $$\frac{\delta J}{\delta \phi} = \frac{d}{d\epsilon}\Big|_{\epsilon =0}J(\phi + s\,v) $$
 >If both *Fréchet derivative* $D J(\phi)$ and *Gateaux derivative* $d J(\phi, v)$ exists, then 
