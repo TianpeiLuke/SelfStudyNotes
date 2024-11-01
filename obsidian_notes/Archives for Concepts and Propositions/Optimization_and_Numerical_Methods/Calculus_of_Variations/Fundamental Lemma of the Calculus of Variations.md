@@ -34,7 +34,7 @@ date of note: 2024-10-30
 - [[Continuous Functions with Compact Support]]
 - [[Smooth Map between Euclidean Spaces]]
 
-### General Form
+### General Form $L^1$ space
 
 >[!important] Fundamental Lemma of the Calculus of Variations (General Form)
 >Let $f\in L^{1}(\Omega)$ be a **integrable real-valued function** on an open set $\Omega \subset \mathbb{R}^{n}$, and 
@@ -48,16 +48,18 @@ date of note: 2024-10-30
 - [[Lp Space]]
 - [[Pointwise Almost Everywhere Convergence]]
 
-### Other Variants 
+### Sobolev Space 
 
 >[!important] Fundamental Lemma of the Calculus of Variations (Du Bois-Reymond's Lemma)
 >Let $f\in L^{1}(\Omega)$ be a *integrable real-valued function* on an open set $\Omega \subset \mathbb{R}^{n}$, and 
->- suppose that $$\int_{\Omega}\,f(x)\,D_{\alpha}\eta(x)\,dx = 0,\quad \forall \eta \in \mathcal{C}_{c}^{\infty}(\Omega),\;\forall 1 \le \alpha \le n$$ holds. Then we have  $$f(x) = \text{const.}\quad \text{ a.e. in } \Omega.$$
+>- suppose that $$\int_{\Omega}\,f(x)\,D^{\alpha}\eta(x)\,dx = 0,\quad \forall \eta \in \mathcal{C}_{c}^{\infty}(\Omega),\;\forall 1 \le \alpha \le n$$ holds. Then we have  $$f(x) = \text{const.}\quad \text{ a.e. in } \Omega.$$
 >
 >
 
 - [[Sobolev Space]]
 
+
+### Subsidiary Conditions
 
 >[!important] Fundamental Lemma of the Calculus of Variations (Subsidiary Conditions)
 >Let $f\in L^{1}(\Omega)$ be a *integrable real-valued function* on an open set $\Omega \subset \mathbb{R}^{n}$, and suppose that $$\int_{\Omega}\,f(x)\,\eta(x)\,dx = 0$$ holds for all $\eta \in \mathcal{C}_{c}^{\infty}(\Omega)$ subject to the **subsidiary condition** $$\int_{\Omega}\,g(x)\,\eta(x)\,dx = 0$$

@@ -30,10 +30,13 @@ date of note: 2024-06-14
 
 ^f331ce
 
+- [[Extremum and Weak and Relative Extremum of Functional]]
 - [[Variational Problem]]
 
 >[!important] Definition
 >The smooth function $$L: \mathbb{R}^{k} \times \mathbb{R}^{k} \times \mathbb{R} \to \mathbb{R} \iff (\phi, \dot{\phi}, t) \mapsto L(\phi, \dot{\phi}, t)$$ is called a **Lagrangian**.
+
+^d45d34
 
 - [[Lagrangian Function in Mechanics]]
 
@@ -151,8 +154,8 @@ date of note: 2024-06-14
 ### Euler-Lagrange equation(s)
 
 
->[!important] Definition  (Single function of single variables with single derivative)
->Let  $\phi: \mathbb{R} \to \mathbb{R}^{k}$ be an unknown  *smooth curve*  and  $L: \mathbb{R}^{k} \times \mathbb{R}^{k} \times \mathbb{R} \to \mathbb{R}$ be a *smooth function* such that $$(\phi, \dot{\phi}, t) \mapsto L(\phi, \dot{\phi}, t).$$ 
+>[!important] Definition  (Single real-valued function of single variables with single derivative)
+>Let  $\phi: \mathbb{R} \to \mathbb{R}$ be an unknown  *smooth curve*  and  $L: \mathbb{R} \times \mathbb{R}\times \mathbb{R} \to \mathbb{R}$ be a *smooth function* such that $$(\phi, \dot{\phi}, t) \mapsto L(\phi, \dot{\phi}, t).$$ 
 >
 >The **Euler-Lagrange equation** of $\phi$ is defined as
 >$$
@@ -173,7 +176,7 @@ date of note: 2024-06-14
 
 
 >[!important] 
->The LHS of **Euler-Lagrange equation** is called the **first variation** or the **variational derivative** of a functional $L$
+>The LHS of **Euler-Lagrange equation** is called the **variational derivative** of a functional $L$
 >$$
 >\frac{\delta L}{\delta \phi} := \frac{\partial  L}{ \partial \phi} - \left(\frac{d}{dt} \frac{\partial  L}{ \partial \dot{\phi}}\,\right)
 >$$
@@ -182,8 +185,8 @@ date of note: 2024-06-14
 
 ## Generalization
 
->[!important] Definition (Several functions of single variable with single derivative)
->Let  $\phi^{i}: \mathbb{R} \to \mathbb{R}^{k}$ be an unknown *smooth curve* $i=1 \,{,}\ldots{,}\,m$  and  the **Lagrangian**  $$L: \mathbb{R}^{k} \,{\times}\ldots{\times}\, \mathbb{R}^{k} \times \mathbb{R}^{k} \,{\times}\ldots{\times}\, \mathbb{R}^{k} \times\mathbb{R} \to \mathbb{R}$$ be a *smooth function* such that $$(\phi^1, \,{,}\ldots{,}\,\phi^m, \dot{\phi^{1}}, \,{,}\ldots{,}\, \dot{\phi^{m}}, t) \mapsto L(\phi^1, \,{,}\ldots{,}\,\phi^m, \dot{\phi^{1}}, \,{,}\ldots{,}\, \dot{\phi^{m}}, t).$$ 
+>[!important] Definition (Multiple real-valued function of single variable with single derivative)
+>Let  $\phi^{i}: \mathbb{R} \to \mathbb{R}$ be an unknown *smooth curve* $i=1 \,{,}\ldots{,}\,m$  and  the **Lagrangian**  $$L: \underbrace{ \mathbb{R} \,{\times}\ldots{\times}\, \mathbb{R}  }_{m}\times \underbrace{ \mathbb{R} \,{\times}\ldots{\times}\, \mathbb{R} }_{ m }\times\mathbb{R} \to \mathbb{R}$$ be a *smooth function* such that $$(\phi^1, \,{,}\ldots{,}\,\phi^m, \dot{\phi^{1}}, \,{,}\ldots{,}\, \dot{\phi^{m}}, t) \mapsto L(\phi^1, \,{,}\ldots{,}\,\phi^m, \dot{\phi^{1}}, \,{,}\ldots{,}\, \dot{\phi^{m}}, t).$$ 
 >
 >The **Euler-Lagrange equations** is *a system of $m$ differential equations*
 >$$
@@ -191,11 +194,13 @@ date of note: 2024-06-14
 >\frac{\partial  L}{ \partial \phi^{i}} - \left(\frac{d}{dt} \frac{\partial  L}{ \partial \dot{\phi^{i}}}\,\right) = 0, \quad i=1 \,{,}\ldots{,}\,m
 >\end{align*}
 >$$
+>- This applies to the *vector-valued function* with *univariate input* $$\phi := (\phi^1 \,{,}\ldots{,}\,\phi^{m}): \mathbb{R} \to \mathbb{R}^{m}.$$
 
->[!important] Definition  (Single function of several variables with single derivative)
->Let  $\phi: \mathbb{R}^{n} \to \mathbb{R}^{k}$ be an unknown  *smooth function*  and the **Lagrangian**  $$L: \mathbb{R}^{k} \times \mathbb{R}^{n \times k} \times \mathbb{R}^{n} \to \mathbb{R}$$ be a *smooth function* such that $$(\phi, \Phi , x) \mapsto L(\phi, \Phi, x),$$  where $$x:=(x^1 \,{,}\ldots{,}\,x^n), \quad \Phi :=  (\phi_{1} \,{,}\ldots{,}\, \phi_{n}), \quad \phi_{i} := \frac{ \partial  }{ \partial x^{i} }\phi $$
+
+>[!important] Definition  (Single vector-valued function of several variables with single derivative)
+>Let  $\phi: \mathbb{R}^{n} \to \mathbb{R}^{k}$ be an unknown  *smooth function*  and the **Lagrangian**  $$L: \mathbb{R}^{k} \times \mathbb{R}^{k \times n} \times \mathbb{R}^{n} \to \mathbb{R}$$ be a *smooth function* such that $$(\phi, \Phi , x) \mapsto L(\phi, \Phi, x),$$  where $$x:=(x^1 \,{,}\ldots{,}\,x^n), \quad \Phi :=  (\phi_{1} \,{,}\ldots{,}\, \phi_{n}) \in \mathbb{R}^{k \times n}, \quad \phi_{i} := \frac{ \partial  }{ \partial x^{i} }\phi \in \mathbb{R}^{k}$$
 >
->The **Euler-Lagrange equation**  is defined as
+>The **Euler-Lagrange equation**  is defined as *a system of $k$ differential equations*
 >$$
 >\begin{align*}
 >\frac{\partial  L}{ \partial \phi}- \sum_{i=1}^{n}\left(\frac{\partial }{ \partial x^{i}}\frac{\partial  L}{ \partial \phi_{i} }\,\right)= 0
@@ -207,14 +212,15 @@ date of note: 2024-06-14
 >$$
 >where 
 >- the *divergence operator* is given by $$\text{div}(X) = \sum_{i=1}^{n}\frac{\partial }{ \partial x^{i}}X^{i}$$
->- and $$\frac{ \partial L }{ \partial \nabla \phi } = \left[\left( \frac{\partial  L}{ \partial \phi_{i} } \right) \right]_{i} = \left[\left( \frac{\partial  L}{ \partial (\partial_{i}\phi) } \right)\right]_{i}$$
+>- and $$\frac{ \partial L }{ \partial \nabla \phi } = \left[\left( \frac{\partial  L}{ \partial \phi_{i} } \right) \right]_{i} = \left[\left( \frac{\partial  L}{ \partial (\partial_{i}\phi) } \right)\right]_{i}  \in \mathbb{R}^{k \times n}$$
+>- Note $$\frac{\partial  L}{ \partial \phi} := \left(\frac{\partial  L}{ \partial \phi^{1}} \,{,}\ldots{,}\,\frac{\partial  L}{ \partial \phi^{k}}\right) \in \mathbb{R}^{k}$$
 
 ^fbb619
 
->[!important] Definition  (Several functions of several variables with single derivative)
->Let  $\phi^{j}: \mathbb{R}^{n} \to \mathbb{R}^{k}$ be an unknown  *smooth function* for $j=1 \,{,}\ldots{,}\,m$ and  the **Lagrangian** $$L: \mathbb{R}^{k} \times \mathbb{R}^{n \times k} \,{\times}\ldots{\times}\, \mathbb{R}^{n \times k}  \times \mathbb{R}^{n} \to \mathbb{R}$$ be a *smooth function* such that $$(\phi^1 \,{,}\ldots{,}\,\phi^m, \Phi^1 \,{,}\ldots{,}\, \Phi^m, x) \mapsto L(\phi^1 \,{,}\ldots{,}\,\phi^m, \Phi^1 \,{,}\ldots{,}\, \Phi^m, x),$$  where $$x:=(x^1 \,{,}\ldots{,}\,x^n), \quad \Phi^{j} :=  (\phi_{1}^{j} \,{,}\ldots{,}\, \phi_{n}^{j}), \quad \phi_{i}^{j} := \frac{ \partial  }{ \partial x^{i} }\phi^{j} $$
+>[!important] Definition  (Multiple vector-valued functions of several variables with single derivative)
+>Let  $\phi^{j}: \mathbb{R}^{n} \to \mathbb{R}^{k}$ be an unknown  *smooth function* for $j=1 \,{,}\ldots{,}\,m$ and  the **Lagrangian** $$L: \underbrace{ \mathbb{R}^{k} \,{\times}\ldots{\times}\, \mathbb{R}^{k} }_{ m } \times \underbrace{ \mathbb{R}^{k \times n} \,{\times}\ldots{\times}\, \mathbb{R}^{k \times n}}_{m} \times \mathbb{R}^{n} \to \mathbb{R}$$ be a *smooth function* such that $$(\phi^1 \,{,}\ldots{,}\,\phi^m, \Phi^1 \,{,}\ldots{,}\, \Phi^m, x) \mapsto L(\phi^1 \,{,}\ldots{,}\,\phi^m, \Phi^1 \,{,}\ldots{,}\, \Phi^m, x),$$  where $$x:=(x^1 \,{,}\ldots{,}\,x^n), \quad \Phi^{j} :=  (\phi_{1}^{j} \,{,}\ldots{,}\, \phi_{n}^{j}), \quad \phi_{i}^{j} := \frac{ \partial  }{ \partial x^{i} }\phi^{j} \in \mathbb{R}^{k}$$
 >
->The **Euler-Lagrange equations** is *a system of $m$ equations* 
+>The **Euler-Lagrange equations** is *a system of $(m\times k)$ equations* 
 >$$
 >\begin{align*}
 >\frac{\partial  L}{ \partial \phi^{j}}- \sum_{i=1}^{n}\left(\frac{\partial }{ \partial x^{i}}\frac{\partial  L}{ \partial \phi_{i}^{j} }\,\right)= 0, \quad j=1 \,{,}\ldots{,}\,m
@@ -224,8 +230,18 @@ date of note: 2024-06-14
 >$$
 >\frac{\partial  L}{ \partial \phi^{j}}- \text{div}\left( \frac{ \partial L }{ \partial \nabla \phi^{j} }  \right)= 0, \quad j=1 \,{,}\ldots{,}\,m
 >$$
+>where 
+>$$\frac{\partial  L}{ \partial \phi^{j}} := \left(\frac{\partial  L}{ \partial \phi^{1,j}} \,{,}\ldots{,}\,\frac{\partial  L}{ \partial \phi^{k,j}}\right) \in \mathbb{R}^{k}$$
 
 - [[Variational Derivative of Functional]]
+
+### Relative Extremum of Lagrangian Functional
+
+![[Necessary Condition for Relative Extremum of Functional#^70ac73]]
+
+- [[Necessary Condition for Relative Extremum of Functional]]
+
+
 
 ## Explanation
 

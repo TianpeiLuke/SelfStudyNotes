@@ -42,9 +42,7 @@ date of note: 2024-10-29
 ### Variational Derivative via First Variation and Gateaux Differential
 
 >[!important] Definition
->Let $X \subset \mathcal{C}^{\infty}(\Omega)$ be the space of *smooth functions* on $\Omega$. A *functional* $$J: X \to \mathbb{R}$$ is given by $$J[y] = \int_{\Omega}\,F(x, y, y')\,dx$$ where 
->- $$F: \Omega \times X \times X \to \mathbb{R}$$ 
->- $y := y(x) \in X$ and $y' = dy / dx.$
+>Let $X \subset \mathcal{C}^{1}(\Omega)$ be the space of *smooth functions* on $\Omega$. A *functional* $$J: X \to \mathbb{R}$$ is given by the *Lagrangian formalism* $$J[y] = \int_{\Omega}\,F(x, y, y')\,dx$$ where  $y := y(x) \in X$ and $y' = dy / dx.$
 >  
 >The **variational derivative** of $J$ at $y_{0}\in X$ is defined as a smooth function $$\frac{\delta J}{\delta y}\Big|_{y_{0}} \in X$$ that satisfies 
 >$$
@@ -59,7 +57,7 @@ date of note: 2024-10-29
 - [[Gateaux Derivative and Weak Derivative in Banach Space]]
 - [[First Variation of Functional]]
 - [[Continuous Functions with Compact Support]]
-
+- [[Lagrangian Function in Mechanics]]
 
 
 ### Variational Derivative via Euler-Lagrange Equation
@@ -101,7 +99,7 @@ date of note: 2024-10-29
 >
 >We can show that the **variational derivative** of $J$ is given by the LHS of **Euler-Lagrange equation**.
 >$$
->\frac{\delta J}{\delta y} = \frac{\partial  L}{ \partial y}- \sum_{i=1}^{n}\left(\frac{\partial }{ \partial x^{i}}\frac{\partial  L}{ \partial (\partial_{i} y) }\,\right)
+>\frac{\delta J}{\delta y} = \frac{\partial  F}{ \partial y}- \sum_{i=1}^{n}\left(\frac{\partial }{ \partial x^{i}}\frac{\partial  F}{ \partial (\partial_{i} y) }\,\right)
 >$$
 >or
 >$$

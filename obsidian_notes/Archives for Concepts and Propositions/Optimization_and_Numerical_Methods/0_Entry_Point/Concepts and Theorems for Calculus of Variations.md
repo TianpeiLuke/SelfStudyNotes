@@ -12,19 +12,19 @@ date of note: 2024-10-30
 
 ## List of Concepts
 
-### First Variation and Necessary Conditions
+### First Variation and 
 
 - [[First Variation of Functional]]
 - [[Fréchet Derivative and Strong Derivative in Banach Space]]
 - [[Gateaux Derivative and Weak Derivative in Banach Space]]
 - [[Variational Derivative of Functional]]
-- [[Euler–Lagrange Equations]]
 
-- [[Necessary and Sufficient Condition for Local Minimum of Smooth Function]]
-- [[Unconstrained Local Minimization]]
+### Necessary Conditions for Relative Extremum of Functional and Euler-Laguange Equation
+
 - [[Extremum and Weak and Relative Extremum of Functional]]
 - [[Fundamental Lemma of the Calculus of Variations]]
 - [[Necessary Condition for Relative Extremum of Functional]]
+- [[Euler–Lagrange Equations]]
 
 
 ### Lagrangian Formalism

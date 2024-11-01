@@ -2,12 +2,14 @@
 tags:
   - concept
   - math/differential_equation
+  - math/calculus_of_variations
 keywords:
   - euler_lagrange_equation
   - calculus_variation
 topics:
   - differential_equation
-name: Euler–Lagrange Equation
+  - variational_calculus
+name: Hamiltonian Function in Mechanic
 date of note: 2024-06-14
 ---
 
@@ -17,6 +19,8 @@ date of note: 2024-06-14
 >**Name**: 
 
 
+- [[Lagrangian Function in Mechanics]]
+- [[Legendre Transform]]
 
 ## Explanation
 
@@ -28,10 +32,11 @@ Chicone, C. (2006). _Ordinary Differential Equations with Applications_ (2nd edi
 -----------
 ##  Recommended Notes and References
 
-- [[Hamiltonian Systems of Differential Equations]]
 
-- [[Legendre Transform]]
-- [[Lagrangian Function in Mechanics]]
+- [[Hamiltonian Systems of Differential Equations]]
+- [[First Variation of Functional]]
+
+
 
 - [[Ordinary Differential Equations by Chicone]]
 - [[Calculus of Variations by Gelfand]]
