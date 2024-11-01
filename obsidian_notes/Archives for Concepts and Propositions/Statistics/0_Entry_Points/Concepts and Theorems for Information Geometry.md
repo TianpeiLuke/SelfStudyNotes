@@ -30,14 +30,6 @@ date of note: 2024-10-28
 - [[Fisher Information]]
 - [[Fisher Information Metric of Statistical Manifold]]
 
-
-### Divergence on Statistical Manifold
-
-- [[Divergence Function on Manifold]]
-- [[Kullback-Leibler Divergence]]
-- [[f-Divergence]]
-
-
 ### Connections and Geometry on Statistical Manifold
 
 - [[Connection in Vector Bundle and Covariant Derivative]]
@@ -45,6 +37,13 @@ date of note: 2024-10-28
 
 - [[alpha-Connection on Statistical Manifold]]
 - [[Dual of alpha-Connection]]
+
+
+### Divergence on Statistical Manifold
+
+- [[Divergence Function on Manifold]]
+- [[Kullback-Leibler Divergence]]
+- [[f-Divergence]]
 
 
 ### Exponential Family

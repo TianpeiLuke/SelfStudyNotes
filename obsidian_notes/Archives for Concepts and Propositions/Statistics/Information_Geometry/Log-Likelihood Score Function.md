@@ -31,6 +31,6 @@ date of note: 2024-06-24
 - [[Concepts related to Tangent Space and Tangent Bundle]]
 
 
-- [[Methods of Information Geometry by Amari]]
+- [[Methods of Information Geometry by Amari]] pp 26 - 27
 - [[All of Statistics A Concise Course by Wasserman]]
 - [[Elements of Information Theory by Cover]]

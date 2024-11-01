@@ -81,7 +81,7 @@ date of note: 2024-09-12
 >$$
 
 - [[Invariant Measure and Stationary Distribution]]
-- [[e-Connection and m-Connection]]
+- [[e-Connection and m-Connection on Statistical Manifold]]
 
 >[!important] Definition
 >The **annealed importance sampling (AIS)** strategy to estimate the ratio of partition functions is described as below:

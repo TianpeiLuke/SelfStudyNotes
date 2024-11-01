@@ -25,11 +25,12 @@ date of note: 2024-06-24
 ![[Christoffel Symbols#^587512]]
 
 >[!important] Definition
->Let $\mathcal{S}$ be a $n$-dimensional *statistical manifold* with *parameterization* $\theta\in \Theta$. Denote $\ell_{\theta} := \log p_{\theta}$ as the *log-likelihood function*.
+>Let $\mathcal{S}$ be a $n$-dimensional *statistical manifold* with *parameterization* $\theta\in \Theta$. 
+>- Denote $\ell_{\theta} := \log p_{\theta}$ as the *log-likelihood function*.
 >
 >The **$\alpha$-connections** $$\nabla^{(\alpha)}: \mathfrak{X}(\mathcal{S}) \times \mathfrak{X}(\mathcal{S}) \rightarrow \mathfrak{X}(\mathcal{S})$$ is *a family of affine connections* on the tangent bundle $T\mathcal{S}$, for $\alpha \in [-1, 1].$
 >
->- The **coefficient** or the **Christoffel symbol** of **the first hand** of the **$\alpha$-connection** under the *Fisher metric* is formulated as
+>- The **coefficient** or the **Christoffel symbol** of the **$\alpha$-connection** under the *Fisher metric* is formulated as
 >$$
 > \begin{align}
 > \Gamma_{i,j; k}^{(\alpha)} &= \mathbb{E}_{\theta}\left[\left(\frac{\partial}{ \partial \theta^{i}} \frac{\partial}{ \partial \theta^{j}}\ell_{\theta} + \frac{1 - \alpha}{2}  \frac{\partial}{ \partial \theta^{i} }\ell_{\theta}\,\frac{\partial}{ \partial \theta^{j} }\ell_{\theta}\right)\left( \frac{ \partial  }{ \partial \theta^{k} }\ell_{\theta}\right) \right], \quad i,j,k=1\,{,}\ldots{,}\,n
@@ -42,6 +43,8 @@ date of note: 2024-06-24
 > \end{align*}
 >$$ 
 > where $g_{i,j} = \left\langle \partial_{i} \ell \,,\, \partial_{j} \ell \right\rangle_p$ is the *Fisher metric*..
+
+^24ddaa
 
 - [[Affine Connection on Tangent Bundle]]
 - [[Christoffel Symbols]]
@@ -73,6 +76,6 @@ date of note: 2024-06-24
 
 
 
-- [[Methods of Information Geometry by Amari]]
+- [[Methods of Information Geometry by Amari]] pp 32 - 34
 - [[Introduction to Smooth Manifolds by Lee]]
 - [[Introduction to Riemannian Manifolds by Lee]]

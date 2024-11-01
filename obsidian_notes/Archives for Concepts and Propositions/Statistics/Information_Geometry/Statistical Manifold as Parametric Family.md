@@ -70,6 +70,19 @@ date of note: 2024-06-24
 - [[Random Element and Random Variable]]
 - [[Parametric Models]]
 
+### Tangent Space of Statistical Manifold
+
+
+- [[Log-Likelihood Score Function]]
+
+
+### Statistical Manifold as Riemannian Manifold with Fisher Metric
+
+
+
+- [[Fisher Information Metric of Statistical Manifold]]
+- [[Riemannian Metric and Riemannian Manifold]]
+
 
 
 ## Explanation
