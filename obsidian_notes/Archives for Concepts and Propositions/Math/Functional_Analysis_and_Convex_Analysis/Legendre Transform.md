@@ -242,6 +242,8 @@ date of note: 2024-05-08
 >H(p, q) =  \frac{1}{2} \left\langle p , M^{-1}\,p \right\rangle  + V(q)
 >$$
 
+^ee6fff
+
 
 ## Generalization
 

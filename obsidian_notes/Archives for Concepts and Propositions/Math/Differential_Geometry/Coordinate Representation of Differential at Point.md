@@ -44,6 +44,10 @@ date of note: 2024-05-17
 >
 >That is $dF_{p}$ is represented in *coordinate bases* by the **Jacobian matrix** of (*the coordinate representative* of) $F$.
 
+^9a537d
+
+- [[Jacobian Matrix and Jacobian Determinant]]
+
 >[!info]
 >Note that [[Einstein Summation Convention]]
 

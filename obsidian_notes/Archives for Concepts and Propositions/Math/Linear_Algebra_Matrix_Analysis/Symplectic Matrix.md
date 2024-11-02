@@ -65,7 +65,7 @@ date of note: 2024-05-09
 ## Hamiltonian Matrix
 
 - [[Hamiltonian Matrix]]
-- [[Hamiltonian Function in Mechanic]]
+- [[Hamiltonian Function in Mechanic and Variational Calculus]]
 
 ## Hamiltonian System of Equations
 
@@ -86,7 +86,7 @@ date of note: 2024-05-09
 
 
 - [[Hamiltonian Matrix]]
-- [[Hamiltonian Function in Mechanic]]
+- [[Hamiltonian Function in Mechanic and Variational Calculus]]
 - [[Hamiltonian Systems of Differential Equations]]
 
 - [[Linear Map]]

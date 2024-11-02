@@ -40,6 +40,10 @@ date of note: 2024-06-28
 
 - [[Necessary and Sufficient Condition for Local Minimum of Smooth Function]]
 
+## Functional Extension
+
+- [[Extremum and Weak and Relative Extremum of Functional]]
+
 
 
 -----------

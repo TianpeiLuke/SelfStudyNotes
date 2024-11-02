@@ -33,6 +33,7 @@ date of note: 2024-05-12
 - [[Gradient of Smooth Map]]
 - [[Gradient Descent Algorithm]]
 - [[Line Search Strategies for Optimal Stepsize]]
+- [[Jacobian Matrix and Jacobian Determinant]]
 
 ### Optimal Search Direction via Quadratic Programming
 

@@ -71,6 +71,8 @@ date of note: 2024-05-18
 >$$  
 >where $\tau(p)v$ denotes the usual action of the $k\times k$ **matrix** $\tau(p)$ on the vector $v \in \mathbb{R}^k$.
 
+^446434
+
 
 ![[transition_btw_two_smooth_local_trivializations.png]]
 
@@ -79,8 +81,12 @@ date of note: 2024-05-18
 >The *smooth map* $$\tau:  U \cap V \rightarrow GL(k, \mathbb{R})$$ described in this lemma is called the **transition function** between the *local trivializations* $\Phi$ and $\Psi$. 
 
 >[!info]
->For example, if $M$ is a smooth manifold and $\Phi$ and $\Psi$ are the *local trivializations* of **tangent bundle** $TM$ associated with *two different smooth charts*, then the **transition function** between them is **the Jacobian matrix** of the *coordinate transition map*.
+>If $M$ is a smooth manifold and 
+>- $\Phi$ and $\Psi$ are the *local trivializations* of **tangent bundle** $TM$ associated with *two different smooth charts*, 
+>
+>then the **transition function** $$\tau(p)$$ between them is **the Jacobian matrix** of the *coordinate transition map*.
 
+- [[Jacobian Matrix and Jacobian Determinant]]
 
 ## Chart in Vector Bundle
 

@@ -31,7 +31,7 @@ date of note: 2024-10-30
 
 - [[Variational Problem]]
 - [[Principle of Least Action]]
-- [[Lagrangian Function in Mechanics]]
+- [[Lagrangian Function in Mechanics and Variational Calculus]]
 
 
 
@@ -44,7 +44,7 @@ date of note: 2024-10-30
 ### Hamiltonian Canonical Formalism
 
 - [[Convex Conjugate Function]]
-- [[Hamiltonian Function in Mechanic]]
+- [[Hamiltonian Function in Mechanic and Variational Calculus]]
 
 
 ### Hamilton-Jacobi Theory

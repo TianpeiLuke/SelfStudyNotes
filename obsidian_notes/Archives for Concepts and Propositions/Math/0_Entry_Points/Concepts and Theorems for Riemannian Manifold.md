@@ -74,6 +74,7 @@ date of note: 2024-05-20
 ### Normal Neighborhood and Normal Coordinate System
 
 - [[Exponential Map via Geodesic on Riemannian Manifold]]
+- [[Retraction on Smooth Manifold]]
 - [[Normal Neighborhood]]
 - [[Normal Coordinates]]
 

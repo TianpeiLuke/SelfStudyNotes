@@ -46,7 +46,7 @@ date of note: 2024-10-29
 ## Explanation
 
 >[!info]
->The *Gateaux derivative* is the **directional derivative** of *functional* in *function space* where the direction $h$ itself is a function.
+>The *Gateaux derivative* is the  generalization of **directional derivative** of *functional* in *function space* where the direction $h$ itself is a function.
 
 - [[Derivation of Smooth Map at point and Tangent Vector]]
 

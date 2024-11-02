@@ -57,7 +57,7 @@ date of note: 2024-10-29
 - [[Gateaux Derivative and Weak Derivative in Banach Space]]
 - [[First Variation of Functional]]
 - [[Continuous Functions with Compact Support]]
-- [[Lagrangian Function in Mechanics]]
+- [[Lagrangian Function in Mechanics and Variational Calculus]]
 
 
 ### Variational Derivative via Euler-Lagrange Equation
@@ -108,6 +108,7 @@ date of note: 2024-10-29
 
 ^60b0b8
 
+- [[Jacobian Matrix and Jacobian Determinant]]
 - [[Euler–Lagrange Equations]]
 
 
@@ -132,7 +133,7 @@ date of note: 2024-10-29
 ##  Recommended Notes and References
 
 
-- [[Lagrangian Function in Mechanics]]
+- [[Lagrangian Function in Mechanics and Variational Calculus]]
 - [[Entropy Functional]]
 
 - [[Bounded Linear Functional]]

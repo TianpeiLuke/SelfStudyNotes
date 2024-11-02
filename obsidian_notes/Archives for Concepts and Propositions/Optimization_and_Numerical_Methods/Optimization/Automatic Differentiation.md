@@ -118,6 +118,7 @@ date of note: 2024-05-12
 >
 >The directional derivatives $D_{p}x_{i}$ are therefore **evaluated side by side** *with* the **intermediate results**.
 
+- [[Jacobian Matrix and Jacobian Determinant]]
 
 >[!important] Forward Mode
 >The **forward mode** of **automatic differentiation** is described as 
@@ -230,6 +231,8 @@ date of note: 2024-05-12
 >$$
 >\frac{ \partial f }{ \partial x } = \left[ \frac{ \partial f_{i} }{ \partial x_{j} }  \right]_{i,j}  \in \mathbb{R}^{m \times n}
 >$$
+
+- [[Jacobian Matrix and Jacobian Determinant]]
 
 >[!important]
 >For the **forward mode**, it is the same as the scalar function for the intermediate nodes. For the output nodes, since there are total of $m$ output nodes, we can find the directional derivative for each component

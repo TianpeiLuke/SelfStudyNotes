@@ -36,6 +36,8 @@ date of note: 2024-05-12
 >  
 > In computational graph, the functions are simple operations with one or two input variables.  
 
+- [[Jacobian Matrix and Jacobian Determinant]]
+
 ### Backpropagation as Reverse Mode Automatic Differentiation
 
 
@@ -56,6 +58,7 @@ date of note: 2024-05-12
 ![[Automatic Differentiation#^52d1dd]]
 
 - We can **compute the Jacobian** during *the reverse sweep* instead of forward sweep. This way, we do not need to keep the Jacobian in memory for too long.
+- [[Jacobian Matrix and Jacobian Determinant]]
 
 ### General Back-propagation
 

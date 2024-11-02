@@ -28,6 +28,10 @@ date of note: 2024-05-06
 >$$ 
 > where $DF$ represents **the Jacobian matrix** of $F$ in these coordinates.
 
+^164bfd
+
+- [[Jacobian Matrix and Jacobian Determinant]]
+
 >[!info]
 >Note that $$d(y^i \circ F) = dF^{i} = \det(DF)_{j}^{i} \;\; dx^{j}$$
 

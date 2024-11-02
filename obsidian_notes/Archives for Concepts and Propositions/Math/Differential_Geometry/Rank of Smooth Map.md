@@ -27,6 +27,7 @@ date of note: 2024-05-20
 >[!info]
 >it is **the rank of the Jacobian matrix** of $F$ in any smooth chart, or the **dimension** of $$\text{Im }dF_p \subseteq T_{F(p)}N.$$ 
 
+- [[Jacobian Matrix and Jacobian Determinant]]
 
 >[!important] Definition
 >If $F$ has the **same rank** $r$ **at every point**, we say that it has **constant rank**, and write $$\text{rank}\,F = r.$$
@@ -75,6 +76,9 @@ date of note: 2024-05-20
 
 - [[Rank Theorem]]
 
+## Inverse Function Theorem
+
+- [[Inverse Function Theorem]]
 
 
 

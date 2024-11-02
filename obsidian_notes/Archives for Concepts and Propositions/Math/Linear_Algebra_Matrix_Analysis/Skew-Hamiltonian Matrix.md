@@ -72,7 +72,7 @@ date of note: 2024-05-09
 - [[Inner Product Space]]
 - [[Vector Space over a Field]]
 
-- [[Hamiltonian Function in Mechanic]]
+- [[Hamiltonian Function in Mechanic and Variational Calculus]]
 - [[Hamiltonian Systems of Differential Equations]]
 
 

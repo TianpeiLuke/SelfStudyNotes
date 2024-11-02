@@ -51,6 +51,7 @@ date of note: 2024-10-12
 - [[Cross-Entropy Loss Function]]
 
 
+
 >[!important]
 >$$
 >\mathbb{KL}\left( Q \left\|\right. P_{\Phi} \right) = \log Z - \mathcal{L}(Q, \Phi; \mathcal{X}) 
@@ -73,6 +74,11 @@ date of note: 2024-10-12
 >
 >But the **energy functional** only need the *unnormalized distribution*, which is more convenient.
 
+### Hamiltonian
+
+![[Hamiltonian Function in Mechanic and Variational Calculus#^eb8491]]
+
+- [[Hamiltonian Function in Mechanic and Variational Calculus]]
 
 ### Evidence Lower Bound
 
@@ -81,6 +87,8 @@ date of note: 2024-10-12
 ![[Evidence Lower Bound#^afb000]]
 
 - [[Evidence Lower Bound]]
+
+
 
 
 ## Energy Functional for Exponential Family

@@ -38,7 +38,7 @@ date of note: 2024-06-14
 
 ^d45d34
 
-- [[Lagrangian Function in Mechanics]]
+- [[Lagrangian Function in Mechanics and Variational Calculus]]
 
 ### Calculus of Variation
 
@@ -151,6 +151,7 @@ date of note: 2024-06-14
 >\frac{\partial  L}{ \partial \phi} - \left(\frac{d}{dt} \frac{\partial  L}{ \partial \dot{\phi}}\,\right) = 0
 >$$
 
+- [[Fundamental Lemma of the Calculus of Variations]]
 ### Euler-Lagrange equation(s)
 
 
@@ -218,7 +219,10 @@ date of note: 2024-06-14
 ^fbb619
 
 >[!important] Definition  (Multiple vector-valued functions of several variables with single derivative)
->Let  $\phi^{j}: \mathbb{R}^{n} \to \mathbb{R}^{k}$ be an unknown  *smooth function* for $j=1 \,{,}\ldots{,}\,m$ and  the **Lagrangian** $$L: \underbrace{ \mathbb{R}^{k} \,{\times}\ldots{\times}\, \mathbb{R}^{k} }_{ m } \times \underbrace{ \mathbb{R}^{k \times n} \,{\times}\ldots{\times}\, \mathbb{R}^{k \times n}}_{m} \times \mathbb{R}^{n} \to \mathbb{R}$$ be a *smooth function* such that $$(\phi^1 \,{,}\ldots{,}\,\phi^m, \Phi^1 \,{,}\ldots{,}\, \Phi^m, x) \mapsto L(\phi^1 \,{,}\ldots{,}\,\phi^m, \Phi^1 \,{,}\ldots{,}\, \Phi^m, x),$$  where $$x:=(x^1 \,{,}\ldots{,}\,x^n), \quad \Phi^{j} :=  (\phi_{1}^{j} \,{,}\ldots{,}\, \phi_{n}^{j}), \quad \phi_{i}^{j} := \frac{ \partial  }{ \partial x^{i} }\phi^{j} \in \mathbb{R}^{k}$$
+>Let  $\phi^{j}: \mathbb{R}^{n} \to \mathbb{R}^{k}$ be an unknown  *smooth function* for $j=1 \,{,}\ldots{,}\,m$ and  the **Lagrangian** $$L: \underbrace{ \mathbb{R}^{k} \,{\times}\ldots{\times}\, \mathbb{R}^{k} }_{ m } \times \underbrace{ \mathbb{R}^{k \times n} \,{\times}\ldots{\times}\, \mathbb{R}^{k \times n}}_{m} \times \mathbb{R}^{n} \to \mathbb{R}$$ be a *smooth function* such that $$(\phi^1 \,{,}\ldots{,}\,\phi^m, \Phi^1 \,{,}\ldots{,}\, \Phi^m, x) \mapsto L(\phi^1 \,{,}\ldots{,}\,\phi^m, \Phi^1 \,{,}\ldots{,}\, \Phi^m, x),$$  where 
+>- $$x:=(x^1 \,{,}\ldots{,}\,x^n)$$
+>- $$\Phi^{j} :=  (\phi_{1}^{j} \,{,}\ldots{,}\, \phi_{n}^{j}) \in \mathbb{R}^{k\times n}$$
+>- $$\phi_{i}^{j} := \frac{ \partial  }{ \partial x^{i} }\phi^{j} := \left[ \frac{ \partial  }{ \partial x^{i} }\phi^{j,s} \right]_{s=1}^{k}  \in \mathbb{R}^{k}$$
 >
 >The **Euler-Lagrange equations** is *a system of $(m\times k)$ equations* 
 >$$
@@ -228,11 +232,21 @@ date of note: 2024-06-14
 >$$
 >or
 >$$
->\frac{\partial  L}{ \partial \phi^{j}}- \text{div}\left( \frac{ \partial L }{ \partial \nabla \phi^{j} }  \right)= 0, \quad j=1 \,{,}\ldots{,}\,m
+>\frac{\partial  L}{ \partial \phi^{j}}- \text{div}\left( \frac{ \partial L }{ \partial D \phi^{j} }  \right)= 0, \quad j=1 \,{,}\ldots{,}\,m
 >$$
->where 
+>
+>Note 
 >$$\frac{\partial  L}{ \partial \phi^{j}} := \left(\frac{\partial  L}{ \partial \phi^{1,j}} \,{,}\ldots{,}\,\frac{\partial  L}{ \partial \phi^{k,j}}\right) \in \mathbb{R}^{k}$$
+>So we can expand the vector form into $(m\times k)$  equations
+>$$
+>\begin{align*}
+>\frac{\partial  L}{ \partial \phi^{j,s}}- \sum_{i=1}^{n}\left(\frac{\partial }{ \partial x^{i}}\frac{\partial  L}{ \partial \phi_{i}^{j,s} }\,\right)= 0, \quad j=1 \,{,}\ldots{,}\,m,\; s=1\,{,}\ldots{,}\,k
+>\end{align*}
+>$$
 
+^91e132
+
+- [[Jacobian Matrix and Jacobian Determinant]]
 - [[Variational Derivative of Functional]]
 
 ### Relative Extremum of Lagrangian Functional

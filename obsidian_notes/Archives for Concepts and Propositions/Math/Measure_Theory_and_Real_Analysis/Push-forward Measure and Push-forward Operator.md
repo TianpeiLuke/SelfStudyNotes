@@ -63,7 +63,7 @@ date of note: 2024-05-07
 >The **pushforward measure** corresponds to the change of variable
 
 - [[Absolutely Convergent Integration]]
-
+- [[Jacobian Matrix and Jacobian Determinant]]
 
 
 

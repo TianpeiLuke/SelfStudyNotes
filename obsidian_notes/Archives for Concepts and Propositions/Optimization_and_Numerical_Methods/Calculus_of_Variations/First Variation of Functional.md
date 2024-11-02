@@ -39,9 +39,8 @@ date of note: 2024-10-26
 
 ^d58f5c
 
-- [[Smooth Map between Euclidean Spaces]]
-- [[Coordinate Representation of Differential at Point]]
-- [[Lagrangian Function in Mechanics]]
+- [[Jacobian Matrix and Jacobian Determinant]]
+- [[Lagrangian Function in Mechanics and Variational Calculus]]
 
 
 ## Explanation
@@ -79,10 +78,12 @@ date of note: 2024-10-26
 - [[Banach Space]]
 - [[Bounded Linear Functional]]
 - [[Euler–Lagrange Equations]]
-- [[Lagrangian Function in Mechanics]]
+- [[Lagrangian Function in Mechanics and Variational Calculus]]
 - [[Gradient Flow in Wasserstein Space]]
 
 - [[Minimizing Curves in Riemannian Manifold]]
+- [[Smooth Map between Euclidean Spaces]]
+- [[Coordinate Representation of Differential at Point]]
 
 
 - [[Ordinary Differential Equations by Chicone]] pp 225

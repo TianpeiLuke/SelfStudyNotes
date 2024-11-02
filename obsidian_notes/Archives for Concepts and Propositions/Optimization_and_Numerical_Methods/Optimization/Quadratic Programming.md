@@ -192,7 +192,7 @@ date of note: 2024-10-06
 
 
 
-
+- [[Jacobian Matrix and Jacobian Determinant]]
 - [[Polyhedron and Polytope]]
 
 

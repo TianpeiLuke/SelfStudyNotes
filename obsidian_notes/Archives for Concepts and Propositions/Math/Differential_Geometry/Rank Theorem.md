@@ -42,6 +42,7 @@ date of note: 2024-05-20
 > \end{align}
 >$$ 
 
+- [[Jacobian Matrix and Jacobian Determinant]]
 - [[Rank of Smooth Map]]
 - [[Smooth Submersion]]
 - [[Smooth Immersion]]
@@ -61,6 +62,7 @@ date of note: 2024-05-20
 >- If $F$ is **bijective**, then it is a **diffeomorphism**.
 >
 
+- [[Inverse Function Theorem]]
 - [[Smooth Submersion]]
 - [[Smooth Immersion]]
 - [[Diffeomorphism]]

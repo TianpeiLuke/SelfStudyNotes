@@ -108,6 +108,9 @@ date of note: 2024-05-12
 >
 >The **product** of *a large number* of such terms will tend **towards** $0$ if *most of them* have a magnitude $< 1$ and will tend **towards** $\infty$ if *most of them* have a magnitude $> 1$. Consequently, as the depth of a network increases, **error function gradients** can tend to become either *very large* or *very small*.
 
+- [[Vanishing and Exploding Gradient Problems for Sequential Networks]]
+- [[Jacobian Matrix and Jacobian Determinant]]
+
 ## Layer Normalization
 
 - [[Layer Normalization]]

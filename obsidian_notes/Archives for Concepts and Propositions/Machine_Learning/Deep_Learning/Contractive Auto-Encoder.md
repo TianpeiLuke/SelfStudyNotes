@@ -39,7 +39,7 @@ date of note: 2024-05-12
 >	- $$\frac{ \partial f }{ \partial x } := Df \in \mathbb{R}^{s\times d}$$ is the *Jacobian matrix* for encoder $f: \mathbb{R}^{d} \to \mathbb{R}^{s}$.
 >	- $\lVert \cdot \rVert_{F}$ is the **Frobenius norm** $$\lVert A \rVert_{F} := \sqrt{\sum_{i}\sum_{j} A_{i,j}^2}.$$
 
-- Wikipedia [Jacobian_matrix_and_determinant](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant)
+- [[Jacobian Matrix and Jacobian Determinant]]
 - [[Contraction Function]]
 
 ## Explanation

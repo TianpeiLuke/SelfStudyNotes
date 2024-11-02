@@ -67,6 +67,7 @@ date of note: 2024-10-27
 
 - [[Smooth Map between Euclidean Spaces]]
 - [[Derivation of Smooth Map at point and Tangent Vector]]
+- [[Jacobian Matrix and Jacobian Determinant]]
 
 - [[Differential as Covector Field]]
 - [[Differential of a Smooth Map at Point]]

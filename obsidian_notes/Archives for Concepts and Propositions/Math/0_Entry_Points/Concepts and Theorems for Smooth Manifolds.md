@@ -51,15 +51,15 @@ date of note: 2024-10-25
 - [[Tangent Bundle]]
 - [[Coordinate Representation of Tangent Vector]]
 - [[Change of Coordinates for Tangent Vector]]
-- [[Coordinate Representation of Differential at Point]]
-- [[Change of Coordinates for Differential at a Point]]
-- [[Retraction on Smooth Manifold]]
 
 
 ### Covector and Differential of Map
 
 - [[Differential of a Smooth Map at Point]]
+- [[Coordinate Representation of Differential at Point]]
+- [[Change of Coordinates for Differential at a Point]]
 - [[Coordinate Representation of Smooth Map]]
+- [[Jacobian Matrix and Jacobian Determinant]]
 
 - [[Covector on Vector Space]]
 - [[Covector Space]]
@@ -74,6 +74,7 @@ date of note: 2024-10-25
 - [[Range and Kernel of Linear Map]]
 - [[Rank and Nullity of Linear Map]]
 - [[Rank–Nullity Theorem]]
+
 - [[Rank of Smooth Map]]
 
 #### Submerision, Immerision and Embedding
@@ -180,7 +181,7 @@ date of note: 2024-10-25
 
 - [[Symplectic Matrix]]
 - [[Hamiltonian Matrix]]
-- [[Hamiltonian Function in Mechanic]]
+- [[Hamiltonian Function in Mechanic and Variational Calculus]]
 - [[Hamiltonian Systems of Differential Equations]]
 
 

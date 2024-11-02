@@ -64,7 +64,7 @@ date of note: 2024-05-12
 ^b6cd47
 
 - [[KKT Matrix and KKT System for Optimization with Equality Constraints]]
-
+- [[Jacobian Matrix and Jacobian Determinant]]
 ### System of Equations for Central Path via Residual
 
 >[!important]

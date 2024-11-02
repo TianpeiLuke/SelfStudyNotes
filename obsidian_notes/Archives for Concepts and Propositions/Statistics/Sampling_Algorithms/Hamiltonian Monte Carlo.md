@@ -349,7 +349,7 @@ date of note: 2024-07-04
 
 - [[Symplectic Matrix]]
 - [[Hamiltonian Matrix]]
-- [[Hamiltonian Function in Mechanic]]
+- [[Hamiltonian Function in Mechanic and Variational Calculus]]
 - [[Hamiltonian Systems of Differential Equations]]
 - [[Phase Space of Hamiltonian Systems of Differential Equations]]
 - [[Markov Kernel with Invariant Measure via Measure Preserving Map]]

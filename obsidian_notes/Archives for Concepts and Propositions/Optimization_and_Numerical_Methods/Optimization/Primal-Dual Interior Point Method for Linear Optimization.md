@@ -68,7 +68,7 @@ date of note: 2024-05-12
 
 - [[Linear Optimization Problem]]
 - [[Primal-Dual Interior Point Method for Convex Optimization]]
-
+- [[Jacobian Matrix and Jacobian Determinant]]
 
 ### Primal-Dual Interior Point Method for Linear Programming
 

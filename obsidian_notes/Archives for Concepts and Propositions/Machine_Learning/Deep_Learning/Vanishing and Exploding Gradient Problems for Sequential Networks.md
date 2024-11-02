@@ -46,7 +46,7 @@ date of note: 2024-09-02
 
 - [[Power Iteration and Inverse Iteration for General Eigenvalue Problem]]
 - [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
-
+- [[Jacobian Matrix and Jacobian Determinant]]
 
 ## Explanation
 

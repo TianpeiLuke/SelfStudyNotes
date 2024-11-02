@@ -15,6 +15,10 @@ date of note: 2024-06-14
 >[!important]
 >**Name**: Hamiltonian Systems of Differential Equations
 
+![[Hamiltonian Function in Mechanic and Variational Calculus#^614926]]
+
+- [[Hamiltonian Function in Mechanic and Variational Calculus]]
+
 >[!important] Definition
 >Let  $H: \mathbb{R}^{n} \times \mathbb{R}^{n} \to \mathbb{R}$ be a *smooth function*, called **Hamiltonian**, given by
 >$$
@@ -41,13 +45,16 @@ date of note: 2024-06-14
 > - I & 0
 >\end{array}\right] \in \mathbb{R}^{2n \times 2n}
 >$$
+>is a *skew-symmetric permutation matrix*.
 
 ^ad0948
 
 - [[Symplectic Matrix]]
 - [[Homogeneous Linear Differential Equations]]
-
-- Chicone, C. (2006). _Ordinary Differential Equations with Applications_ (2nd edition). Springer. pp 38
+- [[Gradient Flow in Euclidean Space]]
+- [[Permutation Matrix and Reversal Matrix]]
+- [[Skew-Hermitian and Skew-Symmetric Matrix]]
+- [[Ordinary Differential Equations by Chicone]] pp 38
 
 
 ## Explanation
@@ -97,10 +104,9 @@ date of note: 2024-06-14
 ^46b385
 
 
-
 ## Lagrangian Mechanics
 
-- [[Lagrangian Function in Mechanics]]
+- [[Lagrangian Function in Mechanics and Variational Calculus]]
 - [[Legendre Transform]]
 
 ## Energy Surface
@@ -125,7 +131,7 @@ date of note: 2024-06-14
 ##  Recommended Notes and References
 
 - [[Hamilton-Jacobi Equation]]
-- [[Hamiltonian Function in Mechanic]]
+- [[Hamiltonian Function in Mechanic and Variational Calculus]]
 
 - [[Stable Manifold]]
 - [[Smooth Manifold]]
@@ -135,5 +141,5 @@ date of note: 2024-06-14
 - [[Ordinary Differential Equations]]
 
 
-- [[Ordinary Differential Equations by Chicone]]
+- [[Ordinary Differential Equations by Chicone]] pp 38
 - [[Introduction to Smooth Manifolds by Lee]]

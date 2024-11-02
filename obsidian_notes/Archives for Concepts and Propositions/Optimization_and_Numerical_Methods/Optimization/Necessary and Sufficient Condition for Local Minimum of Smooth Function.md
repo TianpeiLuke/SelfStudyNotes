@@ -110,6 +110,10 @@ date of note: 2024-06-29
 ## Explanation
 
 
+## Functional Extension
+
+- [[Necessary Condition for Relative Extremum of Functional]]
+
 
 
 
