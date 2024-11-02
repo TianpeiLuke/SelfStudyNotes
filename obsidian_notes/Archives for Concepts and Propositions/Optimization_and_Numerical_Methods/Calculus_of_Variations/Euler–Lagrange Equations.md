@@ -197,6 +197,8 @@ date of note: 2024-06-14
 >$$
 >- This applies to the *vector-valued function* with *univariate input* $$\phi := (\phi^1 \,{,}\ldots{,}\,\phi^{m}): \mathbb{R} \to \mathbb{R}^{m}.$$
 
+^000423
+
 
 >[!important] Definition  (Single vector-valued function of several variables with single derivative)
 >Let  $\phi: \mathbb{R}^{n} \to \mathbb{R}^{k}$ be an unknown  *smooth function*  and the **Lagrangian**  $$L: \mathbb{R}^{k} \times \mathbb{R}^{k \times n} \times \mathbb{R}^{n} \to \mathbb{R}$$ be a *smooth function* such that $$(\phi, \Phi , x) \mapsto L(\phi, \Phi, x),$$  where $$x:=(x^1 \,{,}\ldots{,}\,x^n), \quad \Phi :=  (\phi_{1} \,{,}\ldots{,}\, \phi_{n}) \in \mathbb{R}^{k \times n}, \quad \phi_{i} := \frac{ \partial  }{ \partial x^{i} }\phi \in \mathbb{R}^{k}$$

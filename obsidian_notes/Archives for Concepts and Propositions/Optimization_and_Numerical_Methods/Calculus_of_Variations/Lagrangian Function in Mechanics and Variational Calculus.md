@@ -67,6 +67,30 @@ date of note: 2024-06-14
 >  
 >
 
+### Classical Mechanics
+
+>[!important]
+>In **classical mechanic**, the *Lagrangian* is the **difference** between the **kinetic energy** $T$ and **potential energy** $U$
+>$$
+>L = T - U
+>$$
+
+
+## Euler-Lagrange Equation
+
+![[Euler–Lagrange Equations#^000423]]
+
+- [[Euler–Lagrange Equations]]
+
+>[!important] 
+>Given the **Lagrangian** $$L(x, U(x), DU(x)) := L(x, u_{1}(x), \,{,}\ldots{,}\,u_{k}(x), u_{1}'(x)\,{,}\ldots{,}\,u_{k}'(x) ),$$
+>the **Euler-Lagrange equation** provides the following equality
+>$$
+>\begin{align*}
+>\frac{d}{dx} L_{u_{i}'}  &= L_{u_{i}}, \quad i=1\,{,}\ldots{,}\,k
+>\end{align*}
+>$$
+
 
 
 

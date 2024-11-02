@@ -154,6 +154,15 @@ date of note: 2024-06-14
 - [[Convex Conjugate Function]]
 - [[Lagrangian Function in Mechanics and Variational Calculus]]
 
+### Classical Mechanics
+
+>[!important]
+>In **classical mechanic**, the *Hamiltonian* is the **sum** between the **kinetic energy** $T$ and **potential energy** $U$
+>$$
+>H = T + U
+>$$
+
+
 
 ## Hamiltonian System
 
