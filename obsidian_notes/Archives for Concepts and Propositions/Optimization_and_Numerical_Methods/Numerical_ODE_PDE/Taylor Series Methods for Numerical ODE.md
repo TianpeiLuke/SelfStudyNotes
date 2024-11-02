@@ -41,7 +41,10 @@ date of note: 2024-10-31
 >$$
 >- Choose $t = t_{n}$, we have **TS(p) method** $$x_{n+1} = x_{n} + hx_{n}' + \frac{1}{2}h^2x_{n}^{(2)} \,{+}\ldots{+}\,\frac{h^{p}}{p!}x_{n}^{(p)}$$ where $$x_{n}' \approx x^{(1)}(t_{n}) \quad{,}\ldots{,}\quad x_{n}^{(p)}\approx x^{(p)}(t_{n})$$
 >- To obtain $x_{n}^{(p)}\approx x^{(p)}(t_{n})$, it is *necessary* to **differentiate** the *RHS of ODE* $f(x(t), t, \lambda)$ **$(p-1)$ times**,
+>- Note that $$x_{n}' \approx x^{(1)}(t_{n}) = f(x_{n}, t_{n}, \lambda)$$
 >- e.g. $$\begin{align*}x_{n}^{(2)} &\approx \frac{d}{dt} \left(\frac{d}{dt} x(t_{n})\right) \\[5pt] &= \frac{d}{dt} f(x(t_{n}), t_{n}, \lambda) \\[5pt] &= \partial_{x}f\,\left(\frac{d}{dt} x\right) + \partial_{t}f \\[5pt] &= \left\{  f\,\partial_{x}f\, + \partial_{t}f \right\}  \big|_{t_{n}}\end{align*}$$ 
+
+^96fcb1
 
 - [[Taylor Series for Local Polynomial Approximation of Smooth Function]]
 
