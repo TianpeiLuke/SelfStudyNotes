@@ -35,6 +35,7 @@ date of note: 2024-10-31
 
 
 - [[Ordinary Differential Equations]]
-- [[Autonomous and Nonautonomous Ordinary Differential Equations]]
+
+
 
 - [[Numerical Methods for Ordinary Differential Equations by Butcher]] pp 92
