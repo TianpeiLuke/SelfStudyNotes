@@ -77,13 +77,26 @@ date of note: 2024-10-30
 > \iff \frac{\partial F}{ \partial u^{i}}- \sum_{j=1}^{n}\left(\frac{\partial }{ \partial x^{j}}\frac{\partial  F}{ \partial u_{j}^{i} }\,\right)= 0
 \end{align*}
 >$$
->for all $x\in \Omega.$ 
->- Here $$Du = [\nabla u^{1}\,{,}\ldots{,}\,\nabla u^{m}]^{T}\in \mathbb{R}^{m\times n},\;\; \nabla u^{i} = (u_{1}^{i} \,{,}\ldots{,}\,u_{n}^{i})^T \in \mathbb{R}^{n},\;\; u_{j}^{i} = \frac{ \partial  }{ \partial x_{j} }u^{i} $$
+>for all $x\in \Omega,$ where $$Du = [\nabla u^{1}\,{,}\ldots{,}\,\nabla u^{m}]^{T}\in \mathbb{R}^{m\times n},\;\; \nabla u^{i} = (u_{1}^{i} \,{,}\ldots{,}\,u_{n}^{i})^T \in \mathbb{R}^{n},\;\; u_{j}^{i} = \frac{ \partial  }{ \partial x_{j} }u^{i} $$
 >- Actually, the same conclusion **holds** if $F_{u^{i}} \in \mathcal{C}$ and $F_{\partial_{j}u^{i}} \in \mathcal{C}^{1}$.
 
 ^70ac73
 
 - [[Euler–Lagrange Equations]]
+
+### Convex Set
+
+>[!important] Proposition
+>Let $f: X \to \mathbb{R}$ be a real-valued functional where $X$ is a vector space. 
+>
+>Suppose that $x_{0}\in X$ is a **relative minimizer** of $f$ on a **convex set** $\Omega \subset X$, and that $f$ is **Gateaux differentiable** at $x_{0}$.
+>
+>Then the **Gateaux differential** (*first variation*) of $f$ at $x_{0}$ **in direction of** $h := x-x_{0}$ is **non-negative**. 
+>$$
+>\delta f(x_{0}; x-x_{0}) \ge 0, \quad \forall x\in \Omega.
+>$$
+
+- [[Convex Set]]
 
 
 ## Explanation
@@ -112,4 +125,5 @@ date of note: 2024-10-30
 
 
 - [[Calculus of Variations by Gelfand]] pp 13
+- [[Optimization by Vector Space Methods by Luenberger]] pp 178
 - Giaquinta, M. and Hildebrandt, S. (1996) *Calculus of Variations 1. The Lagrangian Formalism*, Grundlehren der Mathematischen Wissenschaften 310. Springer-Verlag, Berlin. pp 16
