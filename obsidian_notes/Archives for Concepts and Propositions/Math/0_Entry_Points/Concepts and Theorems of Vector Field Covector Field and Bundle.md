@@ -154,7 +154,6 @@ date of note: 2024-05-06
 - [[Affine Connection on Tangent Bundle]]
 - [[Affine Connection of Basis Frames and Connection Coefficient]]
 - [[Coordinate Representation of Connection]]
-- [[Christoffel Symbols]]
 - [[Difference Tensor based on Affine Connection]]
 - [[Space of all Affine Connections]]
 
@@ -185,7 +184,7 @@ date of note: 2024-05-06
 - [[Metric Connection for Riemannian Manifold]]
 - [[Symmetric Connection]]
 - [[Levi Civita Connection and Riemannian Connection]]
-
+- [[Christoffel Symbols]]
 
 
 
