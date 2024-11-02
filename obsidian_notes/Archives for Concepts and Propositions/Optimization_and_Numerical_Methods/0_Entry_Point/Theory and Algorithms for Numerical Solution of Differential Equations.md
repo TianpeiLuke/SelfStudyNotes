@@ -52,6 +52,12 @@ date of note: 2024-05-12
 
 
 - [[Linear Multistep Methods for Numerical ODE]]
+- [[Trapezoidal Rule as Two-Step Method for Numerical ODE]]
+- [[Adams-Bashforth Method for Numerical ODE]]
+- [[Characteristic Polynomials of Linear Multistep Methods for Numerical ODE]]
+- [[Stability of Linear Multistep Methods for Numerical ODE]]
+- [[Nyström Method for Numerical ODE]]
+- [[k-Step Methods for Numerical ODE]]
 
 
 ### Runge-Kutta Methods

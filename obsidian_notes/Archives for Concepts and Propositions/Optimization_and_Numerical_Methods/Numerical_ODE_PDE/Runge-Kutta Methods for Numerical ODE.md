@@ -28,3 +28,8 @@ date of note: 2024-10-31
 
 - [[Ordinary Differential Equations]]
 - [[Autonomous and Nonautonomous Ordinary Differential Equations]]
+
+
+
+- [[Numerical Methods for Ordinary Differential Equations by Butcher]] pp 91, 97, 118, 129, 335, 392
+- [[Numerical Methods for Ordinary Differential Equations IVP by Griffiths]] pp 3, 19, 123 - 143, 197, 203
