@@ -43,7 +43,7 @@ date of note: 2024-06-15
 >The **(linear) Poisson equation** is defined as follows
 >$$
 >\begin{align*}
-> - \Delta u & = f
+> \Delta u & = f
 >\end{align*}
 >$$
 >where  $x\in U$, $U$ is an open set,   $u: \overline{U}  \to\mathbb{R}$ is unknown, $f: U\to \mathbb{R}$ is given and

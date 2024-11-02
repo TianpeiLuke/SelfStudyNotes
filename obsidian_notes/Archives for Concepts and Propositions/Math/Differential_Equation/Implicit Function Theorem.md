@@ -32,7 +32,7 @@ date of note: 2024-06-14
 >	- The **first-order derivative** of $g$ is given by $$\frac{dg}{dy}(y_{0}) = -\left(A_{x}\right)^{-1}A_{y} := -\left(\frac{ \partial f}{ \partial x } \right)^{-1}\,\frac{ \partial f}{ \partial y}.$$
 
 - [[Differential of a Smooth Map at Point]]
-- [[Coordinate Representation of Differential]]
+- [[Jacobian Matrix and Jacobian Determinant]]
 - [[Surjective Injective Invertible Linear Map and Rank]]
 - [[Smooth Map between Euclidean Spaces]]
 - [[Principles of Mathematical Analysis by Rudin]] pp 224
@@ -41,7 +41,7 @@ date of note: 2024-06-14
 ## Explanation
 
 
-Chicone, C. (2006). _Ordinary Differential Equations with Applications_ (2nd edition). Springer. pp 50
+
 
 
 
@@ -57,6 +57,5 @@ Chicone, C. (2006). _Ordinary Differential Equations with Applications_ (2nd edi
 - [[Inverse Function Theorem]]
 
 - [[Principles of Mathematical Analysis by Rudin]] pp 224
-- [[Ordinary Differential Equations by Chicone]]
+- [[Ordinary Differential Equations by Chicone]] pp 50
 - [[Optimization by Vector Space Methods by Luenberger]] pp 187, 266
-- Chicone, C. (2006). _Ordinary Differential Equations with Applications_ (2nd edition). Springer.

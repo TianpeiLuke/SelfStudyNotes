@@ -53,6 +53,8 @@ date of note: 2024-10-17
 >- $x \in B(x_{0}, d)$ is in the *small neighborhood* of $x_{0}$
 >- and $\theta \in (x_{0}, x)$ is a fixed point.
 
+^2aeac6
+
 
 
 ## Explanation

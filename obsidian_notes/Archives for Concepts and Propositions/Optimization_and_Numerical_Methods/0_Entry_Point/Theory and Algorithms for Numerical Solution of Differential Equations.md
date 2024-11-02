@@ -26,6 +26,14 @@ date of note: 2024-05-12
 - [[Implicit Euler Method for Discretization of ODE]]
 
 
+
+![[classification_numerical_ode.png]]
+
+### Taylor Series Methods
+
+- [[Taylor Series Methods for Numerical ODE]]
+
+
 ### Linear Multi-Step Methods
 
 - [[Linear Multistep Methods for Numerical ODE]]
