@@ -48,7 +48,7 @@ date of note: 2024-06-12
 ## Reference
   
 
-
+- [[Numerical Solution of Stochastic Differential Equations by Kloeden]]
 - [[Introduction to Stochastic Differential Equations by Evans]]
 - [[Probability and Measure by Billingsley]]
 - [[Monte Carlo Statistical Methods by Robert]]

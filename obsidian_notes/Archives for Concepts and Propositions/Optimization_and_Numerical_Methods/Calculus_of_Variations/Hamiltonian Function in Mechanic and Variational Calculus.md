@@ -151,6 +151,7 @@ date of note: 2024-06-14
 >which is the **Hamiltonian** with optimal solution $$p = \nabla\hat{L}(u')$$
 
 - [[Legendre Transform]]
+- [[Convex Conjugate Function]]
 - [[Lagrangian Function in Mechanics and Variational Calculus]]
 
 

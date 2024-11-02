@@ -74,6 +74,7 @@ date of note: 2024-06-05
 ## Reference
 
 
+- [[Numerical Solution of Stochastic Differential Equations by Kloeden]]
 - [[Introduction to Stochastic Calculus by Klebaner]]
 - [[Calculus of Variations by Gelfand]]
 

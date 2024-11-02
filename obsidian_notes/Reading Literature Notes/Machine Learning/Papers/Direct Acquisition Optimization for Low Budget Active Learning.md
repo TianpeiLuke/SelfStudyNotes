@@ -32,7 +32,7 @@ date of note:
 >Briefly summarize the paper and its contributions. This is not the place to critique the paper; the authors should generally agree with a well-written summary.
 
 >[!info]
->In this paper, the author adopts the newly proposed Kolmogorov-Arnold network to the basic auto-encoder network by replacing the MLP layer with KAN. In order to improve the performance, the authors propose the polynomial kernel instead of B-spline kernel in the original KAN paper. The 2-layer KAE model is shown to outperform the shadow auto-encoder and KAN with B-spline, Fourier basis, Wavelet basis in MINST, and CIFAR datasets.  
+>In this paper, the authors present a new Active Learning framework under the low budget setting. The proposed Direct Acquisition Optimization (DAO) algorithm uses the influence function to update the model parameter and estimate the true loss with importance sampling. The main contributions of this paper is a novel AL algorithm with the proposal of selecting samples based on expected loss reduction. Compared to existing approaches, this method do not rely on additional holdout labeled data for loss evaluation and requires less time for model update using influence function using influence function approximation. The experiment results indicate the proposed method is more efficient than the baseline methods including the random selection in image classification use cases.
 
 
 
@@ -55,6 +55,11 @@ date of note:
 >- What are the existing work for the same topic and problem?
 >- What happens in this field before this paper?
 
+>[!info]
+>This paper focus on extreme low budge setting while using expected loss reduction as criterion for sample selection. Most of active learning are based on heuristics, which emphasize the computational efficiency in sample selection process. But the training objective is different from the heuristic for sample selection, making them less effective. However, evaluating expected loss on test data requires some labeled validation set. This is not suitable for active learning with low budget. For this reason, this paper raised an important challenge in active learning. This paper combines several existing techniques such the the use of surrogate proposal (which is common for sampling-based methods), and the use of variance-reduction importance sampling for estimation of expected loss. It is interesting to see that the influence function is chosen.   
+
+
+
 >[!question] 
 >Decide the *quality* of this paper.  
 >- Is the derivation in this paper correct? 
@@ -64,7 +69,8 @@ date of note:
 >- Is the result repeatable?
 >- 
 
-
+>[!info]
+>Both derivations and results from this paper seem correct, and are supportive to the author's claim that the heuristic-based methods are sub-optimal and using surrogate function would help to mitigate the lack of labeled samples in low budget setting. No code is shared thus we cannot judge on repeatablilty of experiment.
 
 
 >[!question] 
@@ -76,9 +82,7 @@ date of note:
 >- Is the graph and other visualization in this paper clear to read?
 
 >[!info]
->This paper is clearly written with well-organized structure. The presentation is concise. The theorem in the paper demonstrated that using KAN can achieve universal function approximation. 
->
->The structure of experiment section is also good, with KAE showing good performance in similarity search, image classification, image denoising
+>This paper has well-organized structure. The objective is clear for the active learning. The presentation is not very clear in Methodology section, esp. when intermediate procedure for parameter update as well as the step for loss evaluation is lengthy and notation heavy.
 
 
 >[!question] 
@@ -88,6 +92,7 @@ date of note:
 >- Is the idea and experiment in this paper demonstrate a new direction for the field?
 >- How ?
 
+>[!info]
 
 
 
@@ -99,15 +104,34 @@ date of note:
 >- Be *specific*, avoid generic remarks. For example, if you believe the contribution lacks novelty, provide references and an explanation as evidence; if you believe experiments are insufficient, explain why and exactly what is missing, etc.
 
 >[!info]
->**originality**:
->One of the major issue of this paper is the lack of originality. The KAE model is simply replacing MLP by KAN in auto-encoder with a simple change of kernel from B-spline to polynomial. 
+>Contribution: 
+>This paper focus on active learning with low budge setting and the algorithm presented solves three issues: 1) how to obtain pseudo-labels  in unlabeled data; 2) how to approximate new model parameter without retraining; 3) how provide low bias estimation on true expected loss on unlabled data. 
 >
->The auto-encoder network is widely used and simple to implement while KAN is novel, it is not the contribution of this paper. It is expected that to publish in ICLR we need to either propose a novel idea that would challenge the existing belief or we should present the new system that beat the state-of-the-art.  Given that the plain auto-encoder is not the state-of-the-art in either CIFAR or MINST and the two-layer architecture is trivial, we are expecting that the authors would bring new insights from either theory or in implementation point of view to show why KAE is able to challenge MLP. Unfortunately, this paper is not achieving this goal yet. 
->
->
+> The issue for 1) is that the obtaining a good proposed surrogate function is difficult.This model plays a central role for the success of this algorithm both theoretically and practically showing in experiments. It is always possible to use the old model from last iteration for surrogate, but it is an poor estimate of the oracle given low budget setup. Thus although this framework claims that it is superior to the heuristic it still inject the heuristic within the surrogate model. More issue with surrogate model is the update of the model. Would you retrain the surrogate model and the main model using the same acquired labels? how to make sure that surrogate model guides us towards the true target better than current production? if not, the cross entropy correction would be a misleading term.
+> 
+> The issue for 2) is that to approximate model parameter using influence function, we have to approximate the influence function itself with some iterative method. Both CG and Quasi-Newton like solution has its own challenge, e.g. in CG, in order to compute the influence of one unlabeled sample. we have to do two back-propagation, which is more time-consuming than retraining the model with early stopping. Another issue for this approximation method is additional memory requirement for large model, like LLM. Finally, when the Hessian is indefinite ( e.g. saddle points), this is not clear that if this second-order estimate would result in severe underwhelming result in parameter estimation. Since the new model parameter is used in cross-entropy correction term in importance sampling, it is likely that the error rate will affect the sample stage.
+> 
+> The issue for 3) is that since cross-entropy acquisition function is the key for bias-variance reduction, it is critical to have some guarantee that the impact of error in both surrogate function selection, and parameter update is bounded. It is expected that when the cross-entropy is low but both proposal and target function are limited, this active learning would be worse than random selection. 
+> 
+> All in all, a major concern for this model is that it is a very complicated system with multiple approximation steps, which has its own errors in each step. The good performance is thus not guaranteed. The uninformative choice of surrogate function and the approximation of parameter update would damage the performance of this model in larger and more complicated dataset. As for the computation cost as compared to model retraiin, it is not clear parameter update with second-order gradient like estimation would reduce the cost of computation as compared to partial retrain (like using Contrastive Divergence). 
+
+
 
 >[!info]
+>Over-Confidence of model,
 >
+>Complicated Error Reduction computation for LLM => CG, Stochastic approximate
+>
+>Hessian, not positive definition, 
+>
+>the acquisition distribution in importance weight need to be proportional to true test loss function in order to achieve variance reduction, but the use of cross entropy between surrogate loss function and model score is not necessarily proportional to the true test loss. Instead it is a disagreement measure 
+>
+>line 5 is wrong, as n_ivp is from labeled data 
+>
+>every unlabelled data need to estimate the true loss and sort
+>
+>surrogate function need to be trained.
+
 
 
 
