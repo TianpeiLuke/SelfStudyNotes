@@ -90,6 +90,6 @@ date of note: 2024-10-02
 - [[Topology of Set]]
 
 
-- [[An Introduction to Optimization on Smooth Manifolds by Boumal]]
+- [[An Introduction to Optimization on Smooth Manifolds by Boumal]] pp 8 - 11
 - Wikipedia [Stiefel_manifold](https://en.wikipedia.org/wiki/Stiefel_manifold)
 - [[edelmanGeometryAlgorithmsOrthogonality1998]] Edelman, A., Arias, T. A., & Smith, S. T. (1998). The geometry of algorithms with orthogonality constraints. _SIAM journal on Matrix Analysis and Applications_, _20_(2), 303-353.

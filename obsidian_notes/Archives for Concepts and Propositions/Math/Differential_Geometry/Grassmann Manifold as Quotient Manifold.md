@@ -91,6 +91,6 @@ date of note: 2024-10-02
 - [[Topology of Set]]
 - [[Topological Manifold]]
 
-- [[An Introduction to Optimization on Smooth Manifolds by Boumal]]
+- [[An Introduction to Optimization on Smooth Manifolds by Boumal]] pp 8 - 11
 - [[Introduction to Smooth Manifolds by Lee]] pp 22–24, 554, 561
 - [[edelmanGeometryAlgorithmsOrthogonality1998]] Edelman, A., Arias, T. A., & Smith, S. T. (1998). The geometry of algorithms with orthogonality constraints. _SIAM journal on Matrix Analysis and Applications_, _20_(2), 303-353.

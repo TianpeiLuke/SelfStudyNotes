@@ -94,3 +94,4 @@ date of note: 2024-08-21
 - [[Matrix Computations by Golub]]
 - [[Numerical Linear Algebra by Trefethen]] pp 203 - 204
 - [[Convex Optimization by Boyd]]
+- [[An Introduction to Optimization on Smooth Manifolds by Boumal]] pp 5 - 6

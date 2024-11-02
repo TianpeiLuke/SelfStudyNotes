@@ -282,5 +282,5 @@ date of note: 2024-05-12
 - [[High Dimensional Probability An Introduction by Vershynin]] pp 46, 99, 102
 - [[Understanding Machine Learning by Shalev-Shwartz]] pp 279
 - [[Foundations of Machine Learning by Mohri]] pp 347–351, 356–358
-- [[An Introduction to Optimization on Smooth Manifolds by Boumal]] pp 6, 8
+- [[An Introduction to Optimization on Smooth Manifolds by Boumal]] pp 6, 8 - 11
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 497 - 505, 506, 565
