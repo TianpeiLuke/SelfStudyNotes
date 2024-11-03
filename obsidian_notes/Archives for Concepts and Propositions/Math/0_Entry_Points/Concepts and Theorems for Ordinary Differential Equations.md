@@ -93,6 +93,7 @@ date of note: 2024-05-30
 
 - [[Euler–Lagrange Equations]]
 - [[Diffusion and Infinite Dimensional ODE]]
+- [[Sturm-Liouville Eigenvalue Problem]]
 
 ### Calculus of Variations
 

@@ -47,6 +47,7 @@ date of note: 2024-05-30
 - [[Fokker–Planck and Kolmogorov Forward-Backward Equation]]
 - [[Wave Equation]]
 - [[Schrödinger Equation]]
+- [[Sturm-Liouville Eigenvalue Problem]]
 
 - [[Maxwell Equations]]
 
