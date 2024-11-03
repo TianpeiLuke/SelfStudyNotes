@@ -60,6 +60,7 @@ date of note: 2024-05-04
 >[!important]
 >**Continuously differentiable** $\subset$ **Lipschitz continuous** $\subset$ **absolutely continuous**  $\subset$ **uniformly continuous**
 
+- [[Space of Continuous Differentiable Functions]]
 - [[Uniform Topology on Metric Spaces]]
 
 ## Differentiation Theorem

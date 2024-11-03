@@ -57,6 +57,8 @@ date of note: 2024-06-15
 >$$
 >is the unknown function with $u:= \left(u^1 \,{,}\ldots{,}\, u^{m}\right)$.
 
+- [[Differentiability in Higher Dimensions Euclidean Space]]
+- [[Space of Continuous Differentiable Functions]]
 
 ## Explanation
 

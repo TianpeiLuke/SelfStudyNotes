@@ -82,6 +82,7 @@ date of note: 2024-10-30
 
 ^70ac73
 
+- [[Space of Continuous Differentiable Functions]]
 - [[Euler–Lagrange Equations]]
 
 ### Convex Set

@@ -151,6 +151,7 @@ date of note: 2024-05-12
 >			- and *optimal dual solution* $(\lambda^{*}, \nu^{*}) = (\lambda, \nu).$
 
 - [[Newton Method]]
+- [[Space of Continuous Differentiable Functions]]
 
 >[!info]
 >The primal-dual interior-point algorithm **terminates** when 

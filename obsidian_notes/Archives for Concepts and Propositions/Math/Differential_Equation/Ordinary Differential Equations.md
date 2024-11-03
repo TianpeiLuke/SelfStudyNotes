@@ -17,7 +17,7 @@ date of note: 2024-06-14
 >**Name**: Ordinary Differential Equations
 
 >[!important] Definition
->Let $J \subseteq \mathbb{R}$, $U \subseteq \mathbb{R}^n$, and $\Lambda \subseteq \mathbb{R}^k$ be open subsets, and suppose that $f: U \times J \times \Lambda \to \mathbb{R}^n$ is a smooth function, i.e. it is continuous differentiable.
+>Let $J \subseteq \mathbb{R}$, $U \subseteq \mathbb{R}^n$, and $\Lambda \subseteq \mathbb{R}^k$ be open subsets, and suppose that $f: U \times J \times \Lambda \to \mathbb{R}^n$ is a smooth function, i.e. it is *continuous differentiable*.
 >
 >An **ordinary differential equation (ODE)** is an equation of the form
 >$$
@@ -27,6 +27,7 @@ date of note: 2024-06-14
 >$$
 >where the vector $x\in \mathbb{R}^n$ are **state variables** and $\lambda\in \Lambda$ is a vector of **parameters**.
 
+- [[Space of Continuous Differentiable Functions]]
 - [[Ordinary Differential Equations by Chicone]] pp 2
 
 >[!important] Definition

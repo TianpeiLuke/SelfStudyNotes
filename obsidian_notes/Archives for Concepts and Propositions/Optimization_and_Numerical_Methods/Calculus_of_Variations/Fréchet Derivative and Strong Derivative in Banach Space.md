@@ -37,6 +37,7 @@ date of note: 2024-10-29
 
 - [[Banach Space]]
 - [[Dual Normed Space and Dual Banach Space]]
+- [[Jacobian Matrix and Jacobian Determinant]]
 
 
 ## Explanation
@@ -46,6 +47,7 @@ date of note: 2024-10-29
 >$$
 >DF(u_{0}) \in X^{*}
 >$$
+>- The **Fréchet derivative** of function is **Jacobian matrix** $$DF(x_{0})$$
 
 
 >[!important]
@@ -67,7 +69,7 @@ date of note: 2024-10-29
 ##  Recommended Notes and References
 
 
-
+- [[Differentiability in Higher Dimensions Euclidean Space]]
 - [[Variational Derivative of Functional]]
 
 

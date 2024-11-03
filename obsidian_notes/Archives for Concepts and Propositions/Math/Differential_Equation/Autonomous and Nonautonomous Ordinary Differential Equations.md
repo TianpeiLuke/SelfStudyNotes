@@ -57,14 +57,14 @@ date of note: 2024-06-14
 ![[Integral Curve of Vector Field#^3d69fd]]
 
 - [[Vector Field on Manifold]]
-
 - [[Integral Curve of Vector Field]]
+
 
 ## Flows
 
-![[Global Flow on Smooth Manifold#^532ef7]]
+![[Local Flow on Smooth Manifold#^db3422]]
 
-
+- [[Local Flow on Smooth Manifold]]
 - [[Global Flow on Smooth Manifold]]
 - [[Vector Field as Infinitesimal Generator of Global Flow]]
 

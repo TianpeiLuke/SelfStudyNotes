@@ -37,6 +37,8 @@ date of note: 2024-06-12
 >\text{continuouly differentiable }\subset \text{ Lipschitz continuous }\subset \text{ Hölder continuous } \subset \text{ uniformly continuous } \subset \text{ continuous }
 >$$
 
+- [[Space of Continuous Differentiable Functions]]
+- [[Lipschitz Continuous Function]]
 - [[Summary of Spaces of Continuous Functions]]
 
 
@@ -48,7 +50,7 @@ date of note: 2024-06-12
 ##  Recommended Notes and References
 
 - [[Continuous Function]]
-- [[Lipschitz Continuous Function]]
+
 - [[Absolutely Continuous Function]]
 - [[Uniform Continuity Theorem]]
 - [[Hölder Space]]

@@ -25,7 +25,7 @@ date of note: 2024-06-14
 >$$
 >as $t \to \beta.$
 
-
+- [[Space of Continuous Differentiable Functions]]
 - [[Ordinary Differential Equations]]
 - [[Existence and Uniqueness of Solution of Ordinary Differential Equations]]
 

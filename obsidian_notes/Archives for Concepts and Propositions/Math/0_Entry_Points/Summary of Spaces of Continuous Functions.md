@@ -21,6 +21,7 @@ date of note: 2024-05-08
 
 ### Other Continuity
 
+- [[Space of Continuous Differentiable Functions]]
 - [[Lipschitz Continuous Function]]
 - [[Absolutely Continuous Function]]
 - [[Hölder Condition and Hölder Continuous Function]]

@@ -73,6 +73,8 @@ date of note: 2024-05-12
 
 ^8b91e9
 
+- [[Space of Continuous Differentiable Functions]]
+
 >[!important] Definition
 >The function 
 >$$

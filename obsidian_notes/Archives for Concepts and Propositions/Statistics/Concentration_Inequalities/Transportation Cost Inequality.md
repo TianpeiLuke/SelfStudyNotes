@@ -41,6 +41,8 @@ date of note: 2024-05-22
 
 ^8653e5
 
+- [[Space of Continuous Differentiable Functions]]
+
 >[!important] Proposition
 > In particular, given $\nu > 0$, $X$ follows a **sub-Gaussian distribution**, i.e.
 >$$ 

@@ -94,6 +94,7 @@ date of note: 2024-06-13
 >$$
 >is a **martingale** under the *probability measure* $\mathcal{P}_{x,s}$ with respect to **filtration** $\mathcal{F}_{t}$ for $t \ge s$.
 
+- [[Space of Continuous Differentiable Functions]]
 
 ### Verification of Weak Solution on Canonical Space
 

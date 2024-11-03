@@ -144,6 +144,7 @@ date of note: 2024-06-11
 > $$
 > for all $0 \le s <t$, $x\in \mathbb{R}.$
 
+- [[Space of Continuous Differentiable Functions]]
 - [[Martingale via Solution of SDE and Backward Equation]]
 - [[Introduction to Stochastic Calculus by Klebaner]] pp 143 - pp 144
 

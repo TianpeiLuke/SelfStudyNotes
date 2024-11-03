@@ -39,7 +39,7 @@ date of note: 2024-06-11
 >\right.
 >$$
 
-
+- [[Space of Continuous Differentiable Functions]]
 - [[Stochastic Differential Equations]]
 - [[Lipschitz Continuous Function]]
 

@@ -32,7 +32,7 @@ date of note: 2024-06-14
 - [[Injective Function]]
 - [[Bijective Function and Inverse Function]]
 - [[Jacobian Matrix and Jacobian Determinant]]
-
+- [[Space of Continuous Differentiable Functions]]
 
 
 

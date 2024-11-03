@@ -31,6 +31,9 @@ date of note: 2024-10-27
 
 ### Differentiation in One-Dimensional Real Space
 
+- [[Differentiability in One Dimensions Euclidean Space]]
+- [[Space of Continuous Differentiable Functions]]
+
 - [[Tangent Space Definition and Development]]
 - [[Derivation of Smooth Map at point and Tangent Vector]]
 
@@ -65,10 +68,11 @@ date of note: 2024-10-27
 
 - [[Concepts related to Tangent Space and Tangent Bundle]]
 
-- [[Smooth Map between Euclidean Spaces]]
-- [[Derivation of Smooth Map at point and Tangent Vector]]
+- [[Differentiability in Higher Dimensions Euclidean Space]]
 - [[Jacobian Matrix and Jacobian Determinant]]
 
+- [[Smooth Map between Euclidean Spaces]]
+- [[Derivation of Smooth Map at point and Tangent Vector]]
 - [[Differential as Covector Field]]
 - [[Differential of a Smooth Map at Point]]
 - [[Coordinate Representation of Differential at Point]]

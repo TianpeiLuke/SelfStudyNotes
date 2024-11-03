@@ -27,6 +27,8 @@ date of note: 2024-05-27
 >
 >We see from [[Fundamental Theorem on Flows]], the statement is true for **local flow**.
 
+^2df66b
+
 >[!important] Definition
 >If $M$ is a manifold, a **flow domain** for $M$ is an *open subset* $\mathfrak{D} \subseteq \mathbb{R} \times M$ with the *property* that 
 >- for each $p \in M$, the set $$\mathfrak{D}^{(p)} = \set{t \in \mathbb{R}: (t, p) \in \mathfrak{D}}$$ is an **open interval** *containing $0$*.
@@ -41,6 +43,8 @@ date of note: 2024-05-27
 > &\theta(t, \theta(s, p)) = \theta(t+s, p), \quad \forall s \in \mathfrak{D}^{(p)}, \; t \in \mathfrak{D}^{(\theta(s, p))},\; (\text{i.e. }t+s \in \mathfrak{D}^{(p)})  
 > \end{align}
 >$$  
+
+^db3422
 
 - [[Topological Group Action]]
 - [[Group]]

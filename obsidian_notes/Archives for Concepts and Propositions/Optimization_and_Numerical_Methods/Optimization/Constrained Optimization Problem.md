@@ -144,7 +144,7 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
-
+- [[Space of Continuous Differentiable Functions]]
 
 
 - [[Convex Analysis by Rockafellar]]

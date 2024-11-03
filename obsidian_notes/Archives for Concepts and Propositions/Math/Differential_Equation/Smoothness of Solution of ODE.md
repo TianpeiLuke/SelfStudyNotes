@@ -30,6 +30,7 @@ date of note: 2024-06-14
 >
 >Moreover, if $f\in \mathcal{C}^{k}$, i.e. $f$ is *$k$-times continuous differentiable* for some $k=1, 2 \,{,}\ldots{,}\, \infty$, then the **solution** is also *$k$-times continuous differentiable*, i.e. $\phi \in \mathcal{C}^{k}.$
 
+- [[Space of Continuous Differentiable Functions]]
 - [[Smooth Map between Euclidean Spaces]]
 - [[Ordinary Differential Equations]]
 - [[Existence and Uniqueness of Solution of Ordinary Differential Equations]]

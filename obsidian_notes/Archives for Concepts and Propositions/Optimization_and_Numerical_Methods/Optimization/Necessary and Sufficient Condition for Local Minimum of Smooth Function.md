@@ -36,7 +36,7 @@ date of note: 2024-06-29
 
 ^da6d0c
 
-
+- [[Space of Continuous Differentiable Functions]]
 - [[Gradient of Smooth Map]]
 - [[Positive Semidefinite Transformation]]
 - [[Nonlinear Programming by Bertsekas]] pp 13

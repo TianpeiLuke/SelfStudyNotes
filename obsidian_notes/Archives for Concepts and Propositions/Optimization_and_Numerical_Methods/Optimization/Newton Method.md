@@ -91,7 +91,7 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
-
+- [[Space of Continuous Differentiable Functions]]
 
 - [[Numerical Optimization by Nocedal]]  pp 44
 - [[Nonlinear Programming by Bertsekas]] pp 26, 79, 88

@@ -41,6 +41,7 @@ date of note: 2024-05-12
 - [[Numerical Optimization by Nocedal]] pp 121
 - [[Conjugate Gradient Algorithm Linear]]
 - [[Gradient Descent Algorithm]]
+- [[Space of Continuous Differentiable Functions]]
 
 ## Polak-Ribière Method and Variants
 

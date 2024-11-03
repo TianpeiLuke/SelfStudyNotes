@@ -32,6 +32,8 @@ date of note: 2024-11-01
 >- Each *column* is denoted as $$\frac{ \partial f }{ \partial x^{j}} := \left(  \frac{\partial\,f^{1}}{\partial\,x^{j}}(x) \,,\,\ldots \,,\,\frac{\partial\,f^{m}}{\partial\,x^{j}}(x)\right)$$
 >- The **Jacobian matrix** is denoted as $$Df := \frac{ \partial f }{ \partial x } :=  \frac{ \partial (f^1 \,{,}\ldots{,}\,f^{m}) }{ \partial (x^{1} \,{,}\ldots{,}\,x^{n}) } $$
 
+- [[Differentiability in Higher Dimensions Euclidean Space]]
+
 >[!important] Definition
 >Let $f: \mathbb{R}^{n} \to \mathbb{R}^{n}$ be a smooth function.
 >

@@ -31,6 +31,7 @@ date of note: 2024-06-14
 >$$
 >with *initial condition*.
 
+- [[Space of Continuous Differentiable Functions]]
 - [[Ordinary Differential Equations]]
 - [[Ordinary Differential Equations by Chicone]] pp 3
 

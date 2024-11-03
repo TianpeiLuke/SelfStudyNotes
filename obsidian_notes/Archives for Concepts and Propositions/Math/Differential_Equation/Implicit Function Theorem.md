@@ -35,6 +35,7 @@ date of note: 2024-06-14
 - [[Jacobian Matrix and Jacobian Determinant]]
 - [[Surjective Injective Invertible Linear Map and Rank]]
 - [[Smooth Map between Euclidean Spaces]]
+- [[Space of Continuous Differentiable Functions]]
 - [[Principles of Mathematical Analysis by Rudin]] pp 224
 
 

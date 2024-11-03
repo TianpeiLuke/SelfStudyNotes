@@ -36,6 +36,7 @@ date of note: 2024-10-17
 
 - [[Polynomial Ring]]
 - [[Continuous Function]]
+- [[Space of Continuous Differentiable Functions]]
 - [[Smooth Map between Euclidean Spaces]]
 
 >[!important] Definition
