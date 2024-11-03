@@ -187,7 +187,7 @@ date of note: 2024-07-21
 >
 >- the **$M$-projection** corresponds to  the *orthogonal projection* under the **$m$-connection,** $\nabla^{m} = \nabla ^{(1)}$ 
 
-- [[e-Connection and m-Connection on Statistical Manifold]]
+- [[Exponential Connection and Mixture Connection on Statistical Manifold]]
 - [[alpha-Connection on Statistical Manifold]]
 
 
@@ -196,7 +196,7 @@ date of note: 2024-07-21
 -----------
 ##  Recommended Notes and References
 
-- [[e-Connection and m-Connection on Statistical Manifold]]
+- [[Exponential Connection and Mixture Connection on Statistical Manifold]]
 
 
 - [[Maximum Entropy Learning]]

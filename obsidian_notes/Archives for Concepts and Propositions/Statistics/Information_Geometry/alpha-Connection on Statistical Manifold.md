@@ -53,6 +53,28 @@ date of note: 2024-06-24
 - [[Tangent Bundle]]
 - [[Riemannian Metric and Riemannian Manifold]]
 
+### Riemannian Connection
+
+>[!important] Theorem
+>The **$0$-connection** is the **Riemannian connection** with respect to **Fisher metric**.
+>
+>$$
+>\begin{align*}
+>\partial_{k}g_{i,j} &= \mathbb{E}_{ \theta }\left[  (\partial_{k}\partial_{i}\ell_{\theta})\,(\partial_{j}\ell_{\theta}) \right] + \mathbb{E}_{ \theta }\left[  (\partial_{i}\ell_{\theta})\,(\partial_{k}\partial_{j}\ell_{\theta}) \right] + \mathbb{E}_{ \theta }\left[  (\partial_{i}\ell_{\theta})\,(\partial_{j}\ell_{\theta})\,(\partial_{k}\ell_{\theta}) \right] \\[5pt]
+>&= \Gamma_{k,i:j}^{(0)} + \Gamma_{k,j:i}^{(0)}
+>\end{align*}
+>$$
+
+- [[Levi Civita Connection and Riemannian Connection]]
+
+### Exponential Connection and Mixture Connection
+
+![[Exponential Connection and Mixture Connection on Statistical Manifold#^a34e99]]
+
+![[Exponential Connection and Mixture Connection on Statistical Manifold#^fb526f]]
+
+- [[Exponential Connection and Mixture Connection on Statistical Manifold]]
+
 
 ## Explanation
 

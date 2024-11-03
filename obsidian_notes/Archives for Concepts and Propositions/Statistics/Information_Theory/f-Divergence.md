@@ -94,7 +94,14 @@ date of note: 2024-05-07
 >\mathbb{D}_{f}\left(P\left\|\right.Q\right) = \int - \log\left( \frac{dP}{dQ} \right) dQ = \int  \log\left( \frac{dQ}{dP} \right) dQ = \mathbb{KL}\left( Q \left\|\right. P \right) .
 >$$
 
-
+>[!example]
+>$$
+>f^{(\alpha)}(x) = \left\{\begin{array}{cl} \dfrac{4}{1- \alpha^2}\left[ 1 - x^{(1+\alpha)/2} \right] & \alpha \not\in \{ -1, 1 \} \\[5pt] x \log x & \alpha = 1 \\[5pt] -\log x & \alpha = -1  \end{array}  \right. 
+>$$
+>we have the **$\alpha$-divergence** [[alpha-Divergence]]
+>$$
+>\mathbb{D}^{(\alpha)}\left(P\left\|\right.Q\right) = \frac{4}{1- \alpha^2} \int \left[ 1 - \left(\frac{dP}{dQ}\right)^{(1+\alpha)/2} \right] dQ =  \frac{4}{1- \alpha^2} \left\{ 1 - \int p(x)^{(1- \alpha)/2} q(x)^{(1 + \alpha)/2}dx \right\}  .
+>$$
 
 
 
@@ -110,5 +117,6 @@ date of note: 2024-05-07
 
 - [[Elements of Information Theory by Cover]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 55
+- [[Methods of Information Geometry by Amari]] pp 56
 - Wikipedia [F-divergence](https://en.wikipedia.org/wiki/F-divergence)
 
