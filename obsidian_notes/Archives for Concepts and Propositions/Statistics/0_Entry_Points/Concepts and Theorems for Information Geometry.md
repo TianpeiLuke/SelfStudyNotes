@@ -30,21 +30,25 @@ date of note: 2024-10-28
 - [[Fisher Information]]
 - [[Fisher Metric or Information Metric of Statistical Manifold]]
 
-### Connections and Geometry on Statistical Manifold
+### Connections on Statistical Manifold
 
 - [[Connection in Vector Bundle and Covariant Derivative]]
 - [[Levi Civita Connection and Riemannian Connection]]
 
 - [[alpha-Connection on Statistical Manifold]]
-- [[Dual of alpha-Connection]]
+- [[Exponential Connection and Mixture Connection on Statistical Manifold]]
+- [[Duality of Connections on Riemannian Manifold]]
 
+### Geometry of Statistical Manifold
+
+- [[Exponential Embedding and Representation of Tangent Space of Statistical Manifold]]
+- [[Mixture Embedding and Representation of Tangent Space of Statistical Manifold]]
 
 ### Divergence on Statistical Manifold
 
 - [[Divergence Function on Manifold]]
 - [[Kullback-Leibler Divergence]]
 - [[f-Divergence]]
-
 
 ### Exponential Family
 

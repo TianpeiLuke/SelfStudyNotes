@@ -44,6 +44,7 @@ date of note: 2024-06-27
 
 - [[Log-Likelihood Score Function]]
 - [[Statistical Manifold as Parametric Family]]
+- [[Exponential Embedding and Representation of Tangent Space of Statistical Manifold]]
 - [[Fisher Information]]
 - [[Riemannian Metric and Riemannian Manifold]]
 - [[Linear Independence]]

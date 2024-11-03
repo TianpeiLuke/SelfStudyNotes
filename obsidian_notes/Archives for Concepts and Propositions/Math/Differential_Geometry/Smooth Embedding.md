@@ -20,6 +20,8 @@ date of note: 2024-05-20
 >- a *smooth immersion* $F: M \rightarrow N$ that is *also* 
 >- a **topological embedding**, i.e., a *homeomorphism* onto its image $F(M) \subseteq N$ in the **subspace topology**. 
 
+^2f0f85
+
 - [[Smooth Immersion]]
 - [[Canonical Inclusion]]
 - [[Homeomorphism]]

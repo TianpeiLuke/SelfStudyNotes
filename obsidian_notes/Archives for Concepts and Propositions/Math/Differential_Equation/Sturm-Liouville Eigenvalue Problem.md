@@ -16,7 +16,8 @@ date of note: 2024-11-03
 
 ## Explanation
 
-
+- [[Homogeneous Linear Differential Equations]]
+- [[Autonomous and Nonautonomous Ordinary Differential Equations]]
 
 
 
@@ -37,7 +38,10 @@ date of note: 2024-11-03
 
 
 - [[Hilbert Space]]
+- [[Second-Order Linear Partial Differential Equations]]
 - [[Ordinary Differential Equations]]
 - [[Partial Differential Equations]]
 
+
+- 
 - Wikipedia [Sturm-Liouville Theory](https://en.wikipedia.org/wiki/Sturm%E2%80%93Liouville_theory)

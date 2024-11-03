@@ -28,6 +28,8 @@ date of note: 2024-09-08
 >[!important] Definition
 >The **score function** or **Stein score** is defined as the *gradient of the log-likelihood* with respect to the *data vector* $x$ and is given by $$s(x) := \nabla_{x} \log p(x).$$
 
+^b18499
+
 - [[Exponential Family of Distributions#Score Function]]
 - [[Log-Partition Function and Score Function of Graphical Models]]
 - [[Log-Likelihood Score Function]]

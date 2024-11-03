@@ -149,7 +149,7 @@ date of note: 2024-06-24
 
 - [[Information Projection and Moment Projection]]
 
-- [[Dual of alpha-Connection]]
+- [[Duality of Connections on Riemannian Manifold]]
 
 - [[Riemannian Metric and Riemannian Manifold]]
 

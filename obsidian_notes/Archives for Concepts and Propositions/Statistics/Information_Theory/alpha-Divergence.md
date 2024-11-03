@@ -93,7 +93,7 @@ date of note: 2024-06-24
 
 
 - [[alpha-Connection on Statistical Manifold]]
-- [[Dual of alpha-Connection]]
+- [[Duality of Connections on Riemannian Manifold]]
 - [[Divergence Function on Manifold]]
 
 

@@ -70,6 +70,7 @@ date of note: 2024-05-20
 - [[Christoffel Symbols]]
 - [[Coordinate Representation of Levi-Civita Connection and Christoffel Symbols]]
 - [[Koszul Formula for Levi-Civita Connection]]
+- [[Duality of Connections on Riemannian Manifold]]
 
 ### Normal Neighborhood and Normal Coordinate System
 

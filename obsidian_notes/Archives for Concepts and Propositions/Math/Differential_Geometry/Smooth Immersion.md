@@ -20,6 +20,8 @@ date of note: 2024-05-20
 >
 >or *equivalently*, if $$\text{rank }F = \text{dim }M.$$
 
+^fcddc4
+
 
 - [[Rank of Smooth Map]]
 - [[Differential of a Smooth Map at Point]]

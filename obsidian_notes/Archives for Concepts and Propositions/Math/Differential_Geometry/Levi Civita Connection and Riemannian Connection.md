@@ -27,6 +27,8 @@ date of note: 2024-05-20
 >  
 >When $g$ is *positive definite*, the **Riemannian connection**.
 
+^838914
+
 - [[Riemannian Metric and Riemannian Manifold]]
 - [[Connection in Vector Bundle and Covariant Derivative]]
 - [[Metric Connection for Riemannian Manifold]]
@@ -42,6 +44,10 @@ date of note: 2024-05-20
 ## Explanation
 
 
+### Dual Connections
+
+- [[Duality of Connections on Riemannian Manifold]]
+
 ## Properties
 
 ### Equivalence to Euclidean Connection in Euclidean Space
@@ -56,6 +62,10 @@ date of note: 2024-05-20
 ### Riemannian Volume
 
 - [[Riemannian Volume Form]]
+
+
+
+
 
 
 -----------
