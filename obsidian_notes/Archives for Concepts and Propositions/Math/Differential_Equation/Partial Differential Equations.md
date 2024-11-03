@@ -59,6 +59,7 @@ date of note: 2024-06-15
 
 - [[Differentiability in Higher Dimensions Euclidean Space]]
 - [[Space of Continuous Differentiable Functions]]
+- [[Jacobian Matrix and Jacobian Determinant]]
 
 ## Explanation
 

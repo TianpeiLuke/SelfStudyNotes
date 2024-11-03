@@ -35,6 +35,9 @@ date of note: 2024-06-15
 >$$
 >
 
+
+- [[Hamiltonian Function in Mechanic and Variational Calculus]]
+- [[Jacobian Matrix and Jacobian Determinant]]
 - [[Partial Differential Equations]]
 - [[Linear Semilinear and Quasilinear Partial Differential Equations]]
 

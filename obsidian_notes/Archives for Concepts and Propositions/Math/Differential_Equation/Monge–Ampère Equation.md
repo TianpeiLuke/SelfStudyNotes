@@ -18,7 +18,7 @@ date of note: 2024-06-15
 
 
 >[!important] Definition
->
+>$$\det \left(D^2 u\right) = f$$
 
 - [[Partial Differential Equations]]
 
