@@ -98,13 +98,13 @@ date of note: 2024-08-08
 >$$
 >Ax = y
 >$$
->corresponds to the **cyclic convolution** or **periodic convolution**
+>corresponds to the **cyclic convolution** or **circular convolution**
 >$$
 >y = a * x \; \implies \;  y_{i} = \sum_{k=0}^{n-1}a_{i - k}\,x_{k}, \quad i=0\,{,}\ldots{,}\,n-1
 >$$
 
 - [[Convolution Operation]]
-- [[Discrete Time Signal Processing by Oppenheim]] PP 631
+- [[Discrete Time Signal Processing by Oppenheim]] PP 631， 654 - 655
 
 ## Spectrum, Eigenvectors and Discrete Fourier Transform
 

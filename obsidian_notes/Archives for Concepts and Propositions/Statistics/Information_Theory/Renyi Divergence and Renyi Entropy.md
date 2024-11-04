@@ -74,6 +74,15 @@ date of note: 2024-11-03
 ## Explanation
 
 
+## Properties
+
+
+### Pythagorean Inequality
+
+
+
+### Data Processing Inequality
+
 
 
 
@@ -92,3 +101,4 @@ date of note: 2024-11-03
 
 - [[Elements of Information Theory by Cover]]
 - Van Erven, T., & Harremos, P. (2014). Rényi divergence and Kullback-Leibler divergence. _IEEE Transactions on Information Theory_, _60_(7), 3797-3820.
+- Li, Y., & Turner, R. E. (2016). Rényi divergence variational inference. _Advances in neural information processing systems_, _29_.
