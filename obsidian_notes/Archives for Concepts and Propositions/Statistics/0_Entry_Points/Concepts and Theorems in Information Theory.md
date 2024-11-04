@@ -38,6 +38,7 @@ date of note: 2024-06-01
 
 - [[Jensen Inequality]]
 - [[Gibbs Inequality]]
+- [[Data-Processing Inequality]]
 - [[Han Inequality]]
 - [[Variational Formula for Kullback-Leibler Divergence]]
 - [[Variational Formula for f-Divergence]]
@@ -80,9 +81,10 @@ date of note: 2024-06-01
 - [[Divergence Function on Manifold]]
 - [[Kullback-Leibler Divergence]]
 - [[f-Divergence]]
+- [[alpha-Divergence]]
 - [[Renyi Divergence and Renyi Entropy]]
 - [[Fisher Divergence]]
-- [[alpha-Divergence]]
+
 
 
 

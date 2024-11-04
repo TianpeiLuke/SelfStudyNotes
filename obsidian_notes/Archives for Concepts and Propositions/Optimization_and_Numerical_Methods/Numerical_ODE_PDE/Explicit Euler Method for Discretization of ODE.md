@@ -43,7 +43,7 @@ date of note: 2024-10-31
 >  
 >Thus the **Euler method** approximate the ODE via recursion as $$x_{n+1} = x_{n} + h\,f_{n}, \quad n=1\,{,}\ldots{,}\,N$$
 >where
->- $$x_{n} := x(t_{n}), \quad f_{n} := f(x_{n}, t_{n}, \lambda).$$   
+>- $$x_{n} \approx x(t_{n}), \quad f_{n} := f(x_{n}, t_{n}, \lambda) \approx f(x(t_{n}), t_{n}, \lambda).$$   
 >- Sometimes it is more convenient to use $x_{n}'$ for the approximation of $x$ at $t_{n}$, then the *Euler method* is written as $$x_{n+1} = x_{n} + h\,x_{n}'$$
 
 
