@@ -49,6 +49,10 @@ date of note: 2024-10-28
 - [[Divergence Function on Manifold]]
 - [[Kullback-Leibler Divergence]]
 - [[f-Divergence]]
+- [[Renyi Divergence and Renyi Entropy]]
+- [[Fisher Divergence]]
+- [[alpha-Divergence]]
+
 
 ### Exponential Family
 

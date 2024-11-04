@@ -74,7 +74,16 @@ date of note: 2024-06-01
 - [[Maximum Likelihood Estimation via KL Divergence]]
 - [[Maximum Entropy Learning]]
 - [[Divergence Function on Manifold]]
+
+### Information Divergence
+
+- [[Divergence Function on Manifold]]
+- [[Kullback-Leibler Divergence]]
+- [[f-Divergence]]
+- [[Renyi Divergence and Renyi Entropy]]
 - [[Fisher Divergence]]
+- [[alpha-Divergence]]
+
 
 
 ## Explanation
