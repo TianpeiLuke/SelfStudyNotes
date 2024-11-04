@@ -28,6 +28,13 @@ date of note: 2024-06-25
 ## Explanation
 
 
+## Data Processing Inequality
+
+![[Data-Processing Inequality#^8aa0d2]]
+
+![[Data-Processing Inequality#^638906]]
+
+- [[Data-Processing Inequality]]
 
 
 
@@ -41,3 +48,4 @@ date of note: 2024-06-25
 
 
 - [[Mathematical Statistics by Shao]] pp 107
+- [[Elements of Information Theory by Cover]] pp 37

@@ -19,7 +19,9 @@ date of note: 2024-05-22
 >Let $X$ be a sample from an unknown population $\mathcal{P} \in \mathscr{P}$, where $\mathscr{P}$ is *a family of populations*. 
 >
 >A statistic $T(X)$ is said to be **sufficient** for $\mathcal{P} \in \mathscr{P}$, (or for $\theta \in \Theta$ when $$\mathscr{P} := \{ \mathcal{P}_{\theta} :  \theta \in \Theta \}$$ 
->is a *parametric family*)  if and only if the *conditional distribution* of $X$ given $T$ is *known* (does *not depend on* $\mathcal{P}$ or  $\theta$).
+>is a *parametric family*)  if and only if the *conditional distribution* of $X$ given $T$ is *known* does *not depend on* $\mathcal{P}$ or  $\theta$.
+
+^7c0a9f
 
 - [[Statistics]]
 - [[Parametric Models]]
@@ -55,6 +57,19 @@ date of note: 2024-05-22
 
 - [[Rao-Blackwell Theorem]]
 
+## Data Processing Inequality
+
+![[Data-Processing Inequality#^11ff5a]]
+
+![[Data-Processing Inequality#^8aa0d2]]
+
+- [[Mutual Information]]
+- [[Data-Processing Inequality]]
+
+>[!info]
+>For any statistics, $$\theta \to X \to T(X)$$
+>
+>Thus $$I(\theta; X) \ge I(\theta; X \,|\,T(X))$$
 
 
 -----------
@@ -70,3 +85,4 @@ date of note: 2024-05-22
 
 - [[All of Statistics A Concise Course by Wasserman]]
 - [[Mathematical Statistics by Shao]] pp 103
+- [[Elements of Information Theory by Cover]] pp 36

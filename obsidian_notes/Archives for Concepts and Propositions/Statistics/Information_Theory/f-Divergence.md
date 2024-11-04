@@ -49,6 +49,8 @@ date of note: 2024-05-07
 
 ## Properties
 
+### Non-negativity
+
 >[!important] Proposition
 >Let $P$ and $Q$ be two probability measures on $\mathcal{X}$ and $P \ll Q$. 
 >
@@ -64,13 +66,14 @@ date of note: 2024-05-07
 
 - [[Perspective Function]]
 
+### Convexity
+
 >[!info]
 >$f$-divergence is a **convex** function in the joint space of two discrete probability vectors.
 
 >[!important] Proposition
 >The $f$-divergence $\mathbb{D}_{f}\left( P \left\|\right.Q \right)$ is **convex** in **the pair of probability measures** $(P, Q)$; 
->
->that is, if $(P_{1}, Q_{1})$ and $(P_{2}, Q_{2})$ are two pair of *probability measures*. Then for all $\lambda \in [0,1]$,
+>- that is, if $(P_{1}, Q_{1})$ and $(P_{2}, Q_{2})$ are two pair of *probability measures*. Then for all $\lambda \in [0,1]$,
 >$$
 >\begin{align*}
 >\mathbb{D}_{f}\left( P_{1} + (1- \lambda) P_{2} \left\|\right. \lambda Q_{1} + (1- \lambda) Q_{2}  \right) &\le \lambda \mathbb{D}_{f}\left(  P_{1}  \left\|\right. Q_{1}  \right) \\
@@ -78,6 +81,38 @@ date of note: 2024-05-07
 \end{align*}
 >$$
 
+### Dual Divergence
+
+
+
+### Data Processing Inequality
+
+- [[Data-Processing Inequality]]
+
+
+### Invariant to Sufficient Statistics
+
+- [[Sufficient Statistics]]
+
+
+## Fisher metric and $\alpha$-Connection and Information Geometry
+
+![[alpha-Connection on Statistical Manifold#^ec8eb2]]
+
+>[!important] 
+>Since *$f$-divergence*  is **invariant** with respect to **sufficient statistics**, so 
+>- the *induced metric* $g^{(f)}$
+>- and the *induced connection* $\nabla^{(f)}$
+>
+>are **invariant** with respect to **sufficient statistics**.
+>
+>This implies that there exists $c, \alpha$ such that
+>$$g^{(f)} = c\,g, \quad \nabla^{(f)} = \nabla^{(\alpha)}$$
+>where 
+>- $g$ is the **Fisher metric**, and $\nabla^{(\alpha)}$ is an **$\alpha$-connection**.
+>-  We can find that $$c= f^{(2)}(1), \quad \alpha = 3 + 2 \frac{f^{(3)}(1)}{f^{(2)}(1)} $$
+
+- [[alpha-Connection on Statistical Manifold]]
 
 
 ## Example
@@ -103,7 +138,17 @@ date of note: 2024-05-07
 >\mathbb{D}^{(\alpha)}\left(P\left\|\right.Q\right) = \frac{4}{1- \alpha^2} \int \left[ 1 - \left(\frac{dP}{dQ}\right)^{(1+\alpha)/2} \right] dQ =  \frac{4}{1- \alpha^2} \left\{ 1 - \int p(x)^{(1- \alpha)/2} q(x)^{(1 + \alpha)/2}dx \right\}  .
 >$$
 
+>[!example]
+>$$f(x) := \frac{1}{2}\lvert x - 1 \rvert ,$$ we have the [[Total Variation between Measures]]
+>$$
+>\mathbb{D}_{f}\left(P\left\|\right.Q\right) = \frac{1}{2}\int \left\lvert \left( \frac{dP}{dQ} \right) - 1 \right\rvert  dQ = \frac{1}{2} \int |dP - dQ| = \frac{1}{2} \int |p - q|\,d\mu
+>$$
 
+>[!example]
+>$$f(x) := \frac{1}{2}(\sqrt{ x } - 1)^2,$$ we have the **squared Hellinger distance**
+>$$
+>\mathbb{D}_{f}\left(P\left\|\right.Q\right) = \frac{1}{2}\int \left( \sqrt{\frac{dP}{dQ} }  - 1 \right)^2  dQ = \frac{1}{2} \int (\sqrt{ p } - \sqrt{ q })^2d\mu
+>$$
 
 
 

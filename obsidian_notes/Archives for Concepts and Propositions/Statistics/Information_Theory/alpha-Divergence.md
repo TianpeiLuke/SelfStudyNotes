@@ -42,6 +42,8 @@ date of note: 2024-06-24
 >- And $p(x)$, $q(x)$ are *p.d.f*. of $P$ and $Q$ with respect to a common $\sigma$-finite measure $\mu$ on $(\Omega, \mathscr{F}).$
 >- The **$\alpha$-divergence** is a *special case* of the *$f$-divergence* where $f = f^{(\alpha)}$ $$\mathbb{D}^{(\alpha)}\left(P\left\|\right.Q\right) := \mathbb{D}_{f^{(\alpha)}}\left(P\left\|\right.Q\right)$$
 
+^bb3c1f
+
 
 - [[f-Divergence]]
 - [[Absolute Continuity for Measures]]
@@ -79,6 +81,12 @@ date of note: 2024-06-24
 
 - Wikipedia [Hellinger_distance](https://en.wikipedia.org/wiki/Hellinger_distance)
 
+
+## Rényi Divergence
+
+![[Renyi Divergence and Renyi Entropy#^a36567]]
+
+- [[Renyi Divergence and Renyi Entropy]]
 
 ## $\alpha$-Connection
 

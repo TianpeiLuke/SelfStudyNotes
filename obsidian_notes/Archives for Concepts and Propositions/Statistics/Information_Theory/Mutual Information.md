@@ -73,7 +73,9 @@ date of note: 2024-05-13
 >I(X; Y) = I(Y; X)
 >$$
 
+### Data Processing Inequality
 
+- [[Data-Processing Inequality]]
 
 
 

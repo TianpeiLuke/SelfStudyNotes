@@ -158,6 +158,21 @@ date of note: 2024-05-07
 \end{align*}
 >$$
 
+### Data Processing Inequality
+
+>[!important] Data-processing Inequality
+>Let $(\Omega, \mathscr{F})$ be a measureable space and $$\mathscr{G} \subseteq \mathscr{F}$$ be a **sub-$\sigma$-algebra**. Assume $P, Q$ are two probabilty measures on $\mathscr{F}$ with $P \ll Q$.
+>
+>Then the **KL divergence** of $P$ from $Q$ is **no less than** the **KL divergence**  $P$ from $Q$ both **conditioned on** $\mathscr{G}$
+>
+>$$
+>\mathbb{KL}\left( P \left\|\right. Q \right) \ge \mathbb{KL}\left( P|_{\mathscr{G}} \left\|\right. Q|_{\mathscr{G}} \right)
+>$$
+
+^0c204f
+
+- [[Data-Processing Inequality]]
+- [[Conditional Probability]]
 
 ## Bregman divergence
 
@@ -204,11 +219,11 @@ date of note: 2024-05-07
 - [[Evidence Lower Bound for Exponential Family]]
 
 
-## $\alpha$-Divergence on Statistical Manifold
+## Other Divergence on Statistical Manifold
 
 - [[alpha-Divergence]]
 - [[Divergence Function on Manifold]]
-
+- [[Renyi Divergence and Renyi Entropy]]
 
 ## Information Inequalities
 

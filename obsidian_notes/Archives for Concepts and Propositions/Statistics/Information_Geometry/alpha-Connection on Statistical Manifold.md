@@ -79,6 +79,37 @@ date of note: 2024-06-24
 ## Explanation
 
 
+## Invariance to Sufficient Statistics and Uniqueness
+
+>[!important] Theorem
+>Denote a finite set as $$\mathcal{X}_{n} := \left\{ 1\,{,}\ldots{,}\,n \right\} $$ and the space of probability measures on $\mathcal{X}_{n}$  as $\mathcal{P}_{n} = \mathcal{P}(\mathcal{X}_{n})$
+>- Suppose  $$\{(g_{n}, \nabla_{n})\}_{n=1}^{\infty}$$ is a sequence of *Riemannian metrics* and *affine connections* on $\mathcal{P}_{n}$ for each $n$, respectively.
+>- Define $$F: \mathcal{X}_{n} \to \mathcal{X}_{m}$$ as a *surjective mapping*.
+>- $$\mathcal{S} \subset \mathcal{P}_{n},\; \mathcal{S}_{F} \subset \mathcal{P}_{m}$$ 
+>- The $(g_{n}, \nabla_{n})$ and $(g_{m}, \nabla_{m})$ are induce metrics and connections on $\mathcal{S}$ and $\mathcal{S}_{F}$ by *restriction* and *projection*.
+>
+>
+>Assume that $\{(g_{n}, \nabla_{n})\}_{n=1}^{\infty}$ is **invariant** with respect to **sufficient statistics**; 
+>- i.e., for all $n, m,$ and statistical manifold $\mathcal{S} \subset \mathcal{P}_{n},$ and $$F: \mathcal{X}_{n} \to \mathcal{X}_{m}$$ such that $F$ is a **sufficient statistic** for $\mathcal{S}$, the *induced metrics* and *connections* on $\mathcal{S}$ and $S_{F}$ are assumed to be **invariant**.
+>
+>Then there exist a *positive real number* $c\in \mathbb{R}$ and a real number $\alpha$ such that, 
+>- for all $n$, $g_{n}$ **coincides** with the **Fisher metric** on $\mathcal{P}_{n}$ scaled by a factor of $c$, and $\nabla_{n}$ coincides with the **$\alpha$-connection** on $\mathcal{P}_{n}$. $$g_{n} = c\,g, \quad \nabla_{n} = \nabla^{(\alpha)}$$
+
+^ec8eb2
+
+- [[Methods of Information Geometry by Amari]] pp 38
+- [[Fisher Metric or Information Metric of Statistical Manifold]]
+- [[Fisher Information]]
+- [[Sufficient Statistics]]
+- [[f-Divergence]]
+
+>[!important]
+>In this way, we see that for models on **finite sets**, 
+>- the **Fisher metric** (up to a constant factor) 
+>- and the **$\alpha$-connections**
+>
+>are characterized by the **invariance** with respect to **sufficient statistics**.
+
 
 
 
