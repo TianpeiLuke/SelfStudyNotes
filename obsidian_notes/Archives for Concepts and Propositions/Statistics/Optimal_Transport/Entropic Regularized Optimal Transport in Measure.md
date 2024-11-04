@@ -66,7 +66,7 @@ date of note: 2024-05-12
 - [[Kullback-Leibler Divergence]]
 - [[Product Measure]]
 - [[Fubini Theorem]]
-- [[Mutual Information]]
+
 
 
 >[!important] Definition
@@ -97,6 +97,9 @@ date of note: 2024-05-12
 & Y \sim \beta
 \end{align*}
 >$$
+
+- [[Mutual Information]]
+- [[Push-forward Measure and Push-forward Operator]]
 
 
 ## Explanation
