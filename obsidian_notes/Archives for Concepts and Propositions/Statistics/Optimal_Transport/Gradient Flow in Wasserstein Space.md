@@ -42,8 +42,9 @@ date of note: 2024-10-25
 >The **gradient flow** of  *functional* $F$ in *Wasserstein space* $\mathbb{W}_{2}(\Omega)$ is defined as $$\frac{ \partial }{ \partial t }\rho_{t} - \text{div}\left(\rho_{t}\; \nabla \left( \frac{\delta F}{\delta \rho} \right)(\rho_{t}) \right)  = 0$$
 >where
 >- $\rho_{t} \in \mathbb{W}_{2}(\Omega)$ is a *parameterized curve* in $\mathbb{W}_{2}(\Omega)$, parameterized by $t$
->- $$\nabla \left( \frac{\delta F}{\delta \rho} \right)$$ is the *gradient* of *variational derivative* of functional $f$, which is a *vector field* on $\mathbb{W}_{2}$ space.
->- The PDE above is a **continuity equation** for vector field $$X = \nabla \left( \frac{\delta F}{\delta \rho} \right)$$
+>- $$\frac{\delta F}{\delta \rho}$$ is the *variational derivative* of functional $F$
+>	- For integral functional $F$ with respect to  *Lagrangian* $L$ $$F = \int_{\Omega} L(x, \rho, \nabla \rho) dx,$$ the variational derivative is given by the *Euler-Lagrangian equation* $$\frac{\delta F}{\delta \rho} = \frac{ \partial L}{ \partial \rho} - \text{div}\left( \frac{ \partial L }{ \partial  \nabla \rho }  \right)$$
+>- $$V := -\nabla \left( \frac{\delta F}{\delta \rho} \right)$$ is the *gradient vector field* of functional derivative on $\mathbb{W}_{2}$ space.
 >  
 >The **discretization** of **gradient flow** of $F$ on $\mathbb{W}_{2}(\Omega)$ is given by the *iterated minimization*
 >$$
@@ -54,19 +55,14 @@ date of note: 2024-10-25
 
 ^1e5b9f
 
-- [[Probability Space]]
-- [[Measure Space and Countably Additive Measure]]
-- [[Space of Bounded Signed Measures]]
-- [[Compactness]]
 - [[Semi-Continuous Function]]
-
 - [[Wasserstein Space]]
 - [[Variational Derivative of Functional]]
-- [[Parameterized Curve on Manifold]]
-- [[Vector Field on Manifold]]
+- [[Euler–Lagrange Equations]]
+- [[Lagrangian Function in Mechanics and Variational Calculus]]
 - [[Divergence Operator of Vector Field on Riemannian Manifold]]
-- [[Laplacian of Smooth Map on Riemannian Manifold]]
 - [[Wasserstein Distance]]
+
 
 >[!important] Definition
 >We define the **Jordan-Kinderleherer-Otto (JKO) scheme** or **JKO operator** of functional $F$ as 
@@ -80,6 +76,10 @@ date of note: 2024-10-25
 
 ## Explanation
 
+>[!important]
+>The PDE above is a **continuity equation** $$\frac{ \partial  }{ \partial t }\rho_{t} + \text{div}\left(\rho_{t}\,V\right) = 0$$ for vector field $$V = -\nabla \psi$$ where $$\psi = \left( \frac{\delta F}{\delta \rho} \right)$$
+
+- [[Continuity Equation]]
 
 ### Generalized Proximal Algorithm
 
@@ -124,6 +124,7 @@ date of note: 2024-10-25
 - [[Entropy Functional]]
 - [[Heat Equation and Diffusion Equation]]
 - [[Heat Equation and Fokker–Planck Equation via Wasserstein Distance]]
+- [[Laplacian of Smooth Map on Riemannian Manifold]]
 
 ## Fokker-Planck Equation
 
@@ -172,13 +173,19 @@ date of note: 2024-10-25
 
 - [[Heat Equation and Diffusion Equation]]
 
+- [[Parameterized Curve on Manifold]]
+- [[Vector Field on Manifold]]
 - [[Vector Field Along a Curve]]
 - [[Optimal Transport in Space of Measures]]
 - [[Radon Measure]]
 - [[Polish Space]]
+- [[Probability Space]]
+- [[Measure Space and Countably Additive Measure]]
+- [[Space of Bounded Signed Measures]]
+- [[Compactness]]
 
 
-- [[Gradient Flows in Metric Spaces and in Space of Probability Measures by Ambrosio]]
+- [[Gradient Flows in Metric Spaces and in Space of Probability Measures by Ambrosio]] pp 281
 - [[An Introduction to Optimization on Smooth Manifolds by Boumal]]
 - [[Optimal Transport for Applied Mathematicians by Santambrogio]] pp 290 - 304
 - [[Optimal Transport Old and New by Villani]] pp 629 - 635, 681, 694

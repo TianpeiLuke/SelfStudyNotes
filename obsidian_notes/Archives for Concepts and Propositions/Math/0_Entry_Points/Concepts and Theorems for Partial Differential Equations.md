@@ -48,7 +48,7 @@ date of note: 2024-05-30
 - [[Wave Equation]]
 - [[Schrödinger Equation]]
 - [[Sturm-Liouville Eigenvalue Problem]]
-
+- [[Continuity Equation]]
 - [[Maxwell Equations]]
 
 ### Important Nonlinear PDE and System of Nonlinear PDEs

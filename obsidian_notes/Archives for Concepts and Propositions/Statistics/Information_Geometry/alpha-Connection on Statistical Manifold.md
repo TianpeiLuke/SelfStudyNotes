@@ -42,7 +42,7 @@ date of note: 2024-06-24
 > \Gamma_{i,j; k}^{(\alpha)} &:= \left\langle \nabla^{(\alpha)}_{\partial_i}{\partial_j}\,,\, \partial_k \right\rangle_{g},
 > \end{align*}
 >$$ 
-> where $g_{i,j} = \left\langle \partial_{i} \ell \,,\, \partial_{j} \ell \right\rangle_p$ is the *Fisher metric*..
+> where $g_{i,j} = \left\langle \partial_{i} \ell \,,\, \partial_{j} \ell \right\rangle_p$ is the *Fisher metric*.
 
 ^24ddaa
 

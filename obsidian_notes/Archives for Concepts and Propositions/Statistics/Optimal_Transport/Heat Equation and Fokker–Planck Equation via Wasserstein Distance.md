@@ -215,7 +215,7 @@ date of note: 2024-06-11
 - Jordan, R., Kinderlehrer, D., & Otto, F. (1998). The variational formulation of the Fokker--Planck equation. _SIAM journal on mathematical analysis_, _29_(1), 1-17.
 - [[Introduction to Stochastic Calculus by Klebaner]]
 - [[Optimal Transport for Applied Mathematicians by Santambrogio]] pp 292 - 300
-- [[Optimal Transport Old and New by Villani]]
-- [[Gradient Flows in Metric Spaces and in Space of Probability Measures by Ambrosio]]
+- [[Optimal Transport Old and New by Villani]] pp 672  - 675
+- [[Gradient Flows in Metric Spaces and in Space of Probability Measures by Ambrosio]] pp 281 - 284
 - Oksendal, B. (2013). _Stochastic differential equations: an introduction with applications_. Springer Science & Business Media.
 - Wikipedia [Fokker-Planck_equation](https://en.wikipedia.org/wiki/Fokker%E2%80%93Planck_equation)

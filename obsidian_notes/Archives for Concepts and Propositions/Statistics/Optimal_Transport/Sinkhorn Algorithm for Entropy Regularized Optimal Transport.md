@@ -61,6 +61,7 @@ date of note: 2024-10-17
 
 - [[Fixed Point of Map]]
 - [[Contraction Map Principle]]
+- [[Block Coordinate Descent Algorithm]]
 
 
 ## Explanation
