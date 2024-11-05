@@ -225,6 +225,11 @@ date of note: 2024-07-04
 
 - [[Random Walk Metropolis-Hastings]]
 
+### Other Symplectic Numerical Methods for Hamiltonian System
+
+- [[Symplectic Euler Method for Hamiltonian System]]
+
+
 ## Stationarity of HMC
 
 ![[Hamiltonian Systems of Differential Equations#^46b385]]
