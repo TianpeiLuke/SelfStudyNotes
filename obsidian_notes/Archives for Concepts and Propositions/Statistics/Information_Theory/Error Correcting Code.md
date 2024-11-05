@@ -36,7 +36,7 @@ date of note: 2024-06-01
 >- its image $$E(\set{0, 1}^k)$$ is called a **codebook** (and very often the image itself is called **the error correcting code**; 
 >- the elements $$E(x)$$ of the image are called **codewords**.
 
-
+- [[Auto-Encoder and Stochastic Auto-Encoder]]
 
 ## Explanation
 

@@ -34,8 +34,9 @@ date of note: 2024-10-31
 ##  Recommended Notes and References
 
 
-- [[Ordinary Differential Equations]]
 
+- [[Ordinary Differential Equations]]
+- [[Space of Continuous Differentiable Functions]]
 
 
 - [[Numerical Methods for Ordinary Differential Equations by Butcher]] pp 92

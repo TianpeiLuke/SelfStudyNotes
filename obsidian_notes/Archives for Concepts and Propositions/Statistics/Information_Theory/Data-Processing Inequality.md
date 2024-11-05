@@ -89,6 +89,11 @@ date of note: 2024-11-04
 ![[Renyi Divergence and Renyi Entropy#^39e8c9]]
 
 - [[Renyi Divergence and Renyi Entropy]]
+
+![[f-Divergence#^186a5e]]
+
+![[f-Divergence#^45f066]]
+
 - [[f-Divergence]]
 
 

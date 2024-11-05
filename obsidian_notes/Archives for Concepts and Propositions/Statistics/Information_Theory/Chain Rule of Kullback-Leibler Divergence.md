@@ -36,6 +36,8 @@ date of note: 2024-06-01
 >&= \mathbb{KL}\left( p_{X} \left\|\right. q_{X}  \right) + \mathbb{E}_{ X }\left[  \mathbb{KL}\left( p(y | X) \left\|\right. q(y | X) \right) \right]
 \end{align*}
 >$$
+>where the **conditional KL divergence** is defined as 
+>$$\mathbb{KL}\left( P[Y | \mathscr{F}_{\mathcal{X}}] \left\|\right. Q[Y | \mathscr{F}_{\mathcal{X}}] \right) := \mathbb{E}_{ X }\left[  \mathbb{KL}\left( p(y | X) \left\|\right. q(y | X) \right) \right]$$
 
 - [[Conditional Kullback-Leibler Divegence]]
 

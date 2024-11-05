@@ -36,12 +36,12 @@ date of note: 2024-10-31
 >- $f: U \times J \times \Lambda \to \mathbb{R}^n$ is a smooth function, i.e. it is *continuous differentiable*. 
 >- $J \subseteq \mathbb{R}$, $U \subseteq \mathbb{R}^n$, and $\Lambda \subseteq \mathbb{R}^k$ be open subsets.
 >  
->The **explicit Euler method** or **Euler method** or **Euler scheme** is a *discretization method* of the ODE over a *grid* of points $t = t_{n}$ where $$t_{n} = t_{0} + nh, \quad n=1\,{,}\ldots{,}\,N$$ and $$N = \left\lfloor  \frac{t_{f} - t_{0}}{h}  \right\rfloor.$$
+>The **explicit Euler method** or **Euler method** or **Euler scheme** is a *temporal discretization method* to approximate the solution of the ODE over a *grid* of points $t = t_{n}$ where $$t_{n} = t_{0} + nh, \quad n=1\,{,}\ldots{,}\,N$$ and $$N = \left\lfloor  \frac{t_{f} - t_{0}}{h}  \right\rfloor.$$
 >
 >In particular, consider the *first-order Taylor expansion* of $x$, $$x(t_{n} + h) = x(t_{n}) + x'(t_{n})\,h + o(h^2)$$  
 >- Substitute the ODE $$x'(t_{n}) = f(x(t_{n}), t_{n}, \lambda),$$ we have $$x(t_{n} + h) = x(t_{n}) + h\,f(x(t_{n}), t_{n}, \lambda) + o(h^2)$$
 >  
->Thus the **Euler method** approximate the ODE via recursion as $$x_{n+1} = x_{n} + h\,f_{n}, \quad n=1\,{,}\ldots{,}\,N$$
+>Thus the **Euler method** approximate the solution of ODE via recursion as $$x_{n+1} = x_{n} + h\,f_{n}, \quad n=1\,{,}\ldots{,}\,N$$
 >where
 >- $$x_{n} \approx x(t_{n}), \quad f_{n} := f(x_{n}, t_{n}, \lambda) \approx f(x(t_{n}), t_{n}, \lambda).$$   
 >- Sometimes it is more convenient to use $x_{n}'$ for the approximation of $x$ at $t_{n}$, then the *Euler method* is written as $$x_{n+1} = x_{n} + h\,x_{n}'$$

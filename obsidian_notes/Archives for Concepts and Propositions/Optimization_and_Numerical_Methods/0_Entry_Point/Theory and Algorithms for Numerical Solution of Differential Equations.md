@@ -18,6 +18,8 @@ date of note: 2024-05-12
 - [[Concepts and Theorems for Ordinary Differential Equations]]
 - [[Concepts and Theorems for Stochastic Differential Equations]]
 
+>[!important]
+>Numerical methods for ordinary differential equations refer to a class of *iterative methods*, which are used in **temporal discretization** for the *approximate solutions* of ODE.
 
 ### Euler Method
 
@@ -46,18 +48,23 @@ date of note: 2024-05-12
 >[!quote]
 >- **Greater dependence on previous values**
 >
->After the first step of a numerical method has been completed, approximations are available, to be used in the computation of $y_{n}$, not only for $y(x_{n-1})$ and $y'(x_{n-1})$ but  also for $y(x_{n-1})$ and $y'(x_{n-2})$. After further steps, even more previous information is available. Instead of computing $y_{n}$ in a complicated manner *from just the value of* $y_{n-1}$, we could consider **making more use of the values computed in past steps**, as they become available.
+>After the first step of a numerical method has been completed, approximations are available, to be used in the computation of $y_{n}$, not only for $y(x_{n-1})$ and $y'(x_{n-1})$ but  also for $y(x_{n-2})$ and $y'(x_{n-2})$. 
+>
+>After further steps, even more previous information is available. Instead of computing $y_{n}$ in a complicated manner *from just the value of* $y_{n-1}$, we could consider **making more use of the values computed in past steps**, as they become available.
 >
 >-- [[Numerical Methods for Ordinary Differential Equations by Butcher]] pp 92
 
-
 - [[Linear Multistep Methods for Numerical ODE]]
+
+- [[Characteristic Polynomials of Linear Multistep Methods for Numerical ODE]]
+- [[k-Step Methods for Numerical ODE]]
+- [[Stability of Linear Multistep Methods for Numerical ODE]]
+
 - [[Trapezoidal Rule as Two-Step Method for Numerical ODE]]
 - [[Adams-Bashforth Method for Numerical ODE]]
-- [[Characteristic Polynomials of Linear Multistep Methods for Numerical ODE]]
-- [[Stability of Linear Multistep Methods for Numerical ODE]]
+- [[Adams-Moulton Method for Numerical ODE]]
 - [[Nyström Method for Numerical ODE]]
-- [[k-Step Methods for Numerical ODE]]
+
 
 
 ### Runge-Kutta Methods

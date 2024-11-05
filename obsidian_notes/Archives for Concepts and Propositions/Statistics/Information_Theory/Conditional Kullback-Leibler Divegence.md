@@ -35,7 +35,7 @@ date of note: 2024-06-01
 >$$
 >\begin{align*}
 >\mathbb{KL}\left( \mathcal{P}[Y | \mathscr{F}_{X}] \left\|\right. \mathcal{Q}[Y | \mathscr{F}_{X}] \right) &:= \int_{\mathcal{X} \times \mathcal{Y}} \log \left(\frac{\mathcal{P}[Y | \mathscr{F}_{X}]}{\mathcal{Q}[Y | \mathscr{F}_{X}]}\right)\; d\mathcal{P} = \int_{\mathcal{X} \times \mathcal{Y}} \frac{d\mathcal{P}}{d\mathcal{Q}}\; \log \left(\frac{\mathcal{P}[Y | \mathscr{F}_{X}]}{\mathcal{Q}[Y | \mathscr{F}_{X}]}\right)\; d\mathcal{Q}\\
->&= \mathbb{E}_{ \mathcal{P} }\left[  \; \log \left(\frac{\mathcal{P}[Y | \mathscr{F}_{X}]}{\mathcal{Q}[Y | \mathscr{F}_{X}]}\right)\;\right] 
+>&= \mathbb{E}_{ \mathcal{P}_{X, Y} }\left[  \; \log \left(\frac{\mathcal{P}[Y | \mathscr{F}_{X}]}{\mathcal{Q}[Y | \mathscr{F}_{X}]}\right)\;\right] 
 \end{align*}
 >$$
 

@@ -137,6 +137,8 @@ date of note: 2024-05-07
 >\mathbb{E}_{ X }\left[  \mathbb{D}_{f}\left( P_{Y|X} \left\|\right. Q_{Y|X} \right) \right] \ge \mathbb{D}_{f}\left( P_{Y} \left\|\right. Q_{Y} \right)
 >$$
 
+^7d4f1b
+
 
 >[!important] Data Processing Inequality
 >Let $P, Q$ be probability measures on *product measureable space* $(\mathcal{X}\times \mathcal{Y}, \mathscr{F})$.  Define  $(X, Y)$  as a pair of  *random variables* on $\mathcal{X} \times \mathcal{Y}$ whose joint distribution can be $P$ or $Q$. 
@@ -149,6 +151,8 @@ date of note: 2024-05-07
 > \mathbb{D}_{f}\left( P_{X} \left\|\right. Q_{X} \right)  \ge \mathbb{D}_{f}\left( P_{Y} \left\|\right. Q_{Y} \right)
 >$$
 
+^186a5e
+
 
 >[!important] Data-processing Inequality
 >Let $X, Y. Z$ be random variables that form a **Markov chain in order** $$X \to Y \to Z$$ i.e. $$p(x, y, z) = p(z|y)\,p(y|x)\,p(x).$$
@@ -159,6 +163,8 @@ date of note: 2024-05-07
 >$$
 >- That is, **no processing** of $Y$, deterministic or random, can **increase** the information that $Y$ contains about $X$.
 
+^45f066
+
 
 - [[Data-Processing Inequality]]
 
@@ -168,7 +174,7 @@ date of note: 2024-05-07
 >[!important] Definition
 >A function $T(X)$ is said to be a **sufficient statistic** relative to the parametric family $\mathcal{P}_{\theta}$ if $$\theta \to T(X) \to X$$ form a **Markov chain.**
 >
->If $T(X)$ is sufficient statistics, then the **equality** holds in the **data processing inequality** $$I_{f}(\theta ; X) = I_{f}(\theta ; X \,|\, T(X))$$
+>If $T(X)$ is sufficient statistics, then the **equality** holds in the **data processing inequality** $$I_{f}(\theta \,;\, X) = I_{f}(\theta \,;\, X \,|\, T(X))$$
 
 - [[Sufficient Statistics]]
 
