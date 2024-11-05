@@ -149,6 +149,8 @@ date of note: 2024-05-30
 -----------
 ##  Recommended Notes and References
 
+- [[Theory and Algorithms for Numerical Solution of Differential Equations]]
+
 - [[Ordinary Differential Equations by Chicone]]
 - [[Partial Differential Equations by Evans]]
 - [[Introduction to Stochastic Differential Equations by Evans]]

@@ -131,6 +131,7 @@ date of note: 2024-05-30
 
 - [[Concepts and Theorems for Markov Process]]
 - [[Concepts and Theorems for Martingale]]
+- [[Theory and Algorithms for Numerical Solution of Differential Equations]]
 
 - [[Introduction to Stochastic Differential Equations by Evans]]
 - [[Introduction to Stochastic Calculus by Klebaner]]

@@ -16,7 +16,6 @@ date of note: 2024-05-12
 ### Ordinary Differential Equations and Stochastic Differential Equations
 
 - [[Concepts and Theorems for Ordinary Differential Equations]]
-- [[Concepts and Theorems for Stochastic Differential Equations]]
 
 >[!important]
 >Numerical methods for ordinary differential equations refer to a class of *iterative methods*, which are used in **temporal discretization** for the *approximate solutions* of ODE.
@@ -79,10 +78,24 @@ date of note: 2024-05-12
 - [[Runge-Kutta Methods for Numerical ODE]]
 
 
+### Hamiltonian System
+
+- [[Concepts and Theorems for Calculus of Variations]]
+- [[Lagrangian Function in Mechanics and Variational Calculus]]
+- [[Euler–Lagrange Equations]]
+- [[Hamiltonian Function in Mechanic and Variational Calculus]]
+- [[Hamiltonian Systems of Differential Equations]]
+
+- [[Symplectic Euler Method for Hamiltonian System]]
+
 
 ### Numerical Solution of Stochastic Differential Equations
 
-- [[Explicit Euler Method for Discretization of SDE]]
+- [[Concepts and Theorems for Stochastic Differential Equations]]
+
+- [[Explicit Euler-Maruyama Method for Discretization of SDE]]
+
+
 
 
 
