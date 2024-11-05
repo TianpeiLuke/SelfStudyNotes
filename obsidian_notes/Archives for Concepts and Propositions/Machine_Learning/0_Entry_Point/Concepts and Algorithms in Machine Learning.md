@@ -165,6 +165,15 @@ date of note: 2024-06-01
 
 - [[Gaussian Process Latent Variable Model]]
 
+#### Density Estimation
+
+- [[Kernel Density Estimation]]
+
+
+#### Nonparametric Inference
+
+- [[Non-Parametric Least Square Estimation]]
+
 
 
 ### Reinforcement Learning Models and Algorithms

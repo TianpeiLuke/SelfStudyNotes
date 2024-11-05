@@ -48,6 +48,8 @@ date of note: 2024-06-08
 ^01d861
 
 - [[Nonparametric Models and Semi-Parametric Models]]
+- [[Least Square Estimation]]
+
 
 ### Solution for Non-Parametric Least Square 
 
@@ -84,6 +86,7 @@ date of note: 2024-06-08
 
 
 - [[All of Statistics A Concise Course by Wasserman]] pp 211
+- [[All of Nonparametric Statistics by Wasserman]] pp 61 - 71
 - [[Mathematical Statistics by Shao]] pp 182
 - [[Optimization by Vector Space Methods by Luenberger]]  pp 78 - 102
 - [[Numerical Optimization by Nocedal]] pp 245

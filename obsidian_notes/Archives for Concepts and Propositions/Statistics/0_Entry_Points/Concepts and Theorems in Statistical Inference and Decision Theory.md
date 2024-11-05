@@ -181,12 +181,25 @@ date of note: 2024-06-01
 
 - [[U-Statistics]]
 - [[Wilcoxon Statistic]]
-- [[Jackknife Estimator of Variance]]
 
-### Variance Estimation
+### Boostrap and Jackknife
 
 - [[Jackknife Estimator of Variance]]
 - [[Bootstrap Method]]
+
+### Kernel Smoothing
+
+
+### Nonparametric Regression
+
+- [[Non-Parametric Least Square Estimation]]
+- [[B-Spline Functions]]
+
+
+### Density Estimation
+
+- [[Kernel Density Estimation]]
+
 
 ### Bayesian Inference
 
@@ -204,6 +217,11 @@ date of note: 2024-06-01
 - [[Kalman Filter Discrete-Time]]
 - [[Kalman Filter Continuous-Time]]
 - [[Extended Kalman Filter]]
+
+### Wavelets
+
+- [[Wavelet]]
+
 
 
 ## Hypothesis Testing
@@ -233,6 +251,7 @@ date of note: 2024-06-01
 
 
 - [[All of Statistics A Concise Course by Wasserman]]
+- [[All of Nonparametric Statistics by Wasserman]]
 - [[Mathematical Statistics by Shao]]
 - [[Theory of Point Estimation by Lehmann]]
 
