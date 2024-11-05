@@ -109,6 +109,9 @@ date of note: 2024-07-04
 >	- Choose new sample as the end position$$X_{k} = q_{T / \eta}\left(X_{k-1}, \xi\right)$$
 >- Output $X_{N}$
 
+- [[Symplectic Euler Method for Hamiltonian System#Separable Hamiltonian]]
+- Leimkuhler, B., & Reich, S. (2004). _Simulating hamiltonian dynamics_ (No. 14). Cambridge university press. pp 74 - 81
+
 >[!info]
 >It is shown in [^1] that the **Leapfrog integrator** requires a numerical step size of $O^{*}(d^{-1 / 4})$ to maintain an $\Omega(1)$ *Metropolis acceptance probability* in the limit as the dimension $d\to \infty$.
 

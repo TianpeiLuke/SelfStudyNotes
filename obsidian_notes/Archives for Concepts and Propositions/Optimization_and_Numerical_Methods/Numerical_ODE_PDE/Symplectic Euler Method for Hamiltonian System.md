@@ -30,26 +30,21 @@ date of note: 2024-10-31
 >\end{align*}
 >\right.
 >$$
+>- Denote $q := (q_{1}\,{,}\ldots{,}\,q_{n})$ and $p := (p_{1}\,{,}\ldots{,}\,p_{n})$ 
 >- The task is to find the *temporal discretization* of the *approximate solution* of the *Hamiltonian ODEs*.
 >
->The **symplectic Euler method** is of the form ($i=1$)
->$$
+>The **symplectic Euler method** is of the form
+>$$\left\{
 >\begin{align*}
-> p_{n+1} &= p_{n} - h\,\dfrac{ \partial H }{ \partial q}(p_{n+1}, q_{n}) \\[5pt]
-> q_{n+1} &= q_{n} + h\,\dfrac{ \partial H }{ \partial p}(p_{n+1}, q_{n}) 
->\end{align*}
+> p_{n+1} &= p_{n} - h\,\nabla_{q}\,H(p_{n+1}, q_{n}) \\[8pt]
+> q_{n+1} &= q_{n} + h\,\nabla_{p}\,H(p_{n+1}, q_{n}) 
+>\end{align*}\right.
 >$$
 >- This is a combination of *implicit Euler* and *explicit Euler method*
 >	- the update for $p$ follows the *implicit Euler rule*
 >	- the update for $q$ follows the *explicit Euler rule.*
 >- This method is **symplectic** since $$\det \left(\left[ \begin{array}{cc} \dfrac{\partial p_{n+1} }{ \partial p_{n} } & \dfrac{\partial p_{n+1} }{ \partial q_{n} } \\[5pt] \dfrac{\partial q_{n+1} }{ \partial p_{n} } & \dfrac{\partial q_{n+1} }{ \partial q_{n} }   \end{array} \right] \right) = 1$$
->- If the *Hamiltonian* is **separable** i.e. $$H(p, q) := T(p) + V(q),$$ then the above *symplectic Euler method* is **explicit** 
->$$
->\begin{align*}
-> p_{n+1} &= p_{n} - h\,\dfrac{d}{dq}V(q_{n}) \\[5pt]
-> q_{n+1} &= q_{n} + h\,\dfrac{d}{dp}T(p_{n+1}) 
->\end{align*}
->$$
+
 
 
 - [[Hamiltonian Systems of Differential Equations]]
@@ -58,13 +53,49 @@ date of note: 2024-10-31
 - [[Implicit Euler Method for Discretization of ODE]]
 - [[Symplectic Matrix]]
 
+>[!important]
+>An alternative **symplectic Euler method** is given by 
+>$$\left\{
+>\begin{align*}
+> q_{n+1} &= q_{n} + h\,\nabla_{p}\,H(p_{n}, q_{n+1})   \\[8pt]
+> p_{n+1} &= p_{n} - h\,\nabla_{q}\,H(p_{n}, q_{n+1})
+>\end{align*}\right.
+>$$
+
+### Separable Hamiltonian
+
+>[!important] Definition
+> If the *Hamiltonian* is **separable** i.e. $$H(p, q) := T(p) + V(q),$$ then the above *symplectic Euler method* is **explicit** 
+>$$\left\{
+>\begin{align*}
+> p_{n+1} &= p_{n} - h\,\nabla_{q}\,V(q_{n}) \\[8pt]
+> q_{n+1} &= q_{n} + h\,\nabla_{p}\,T(p_{n+1}) 
+>\end{align*}\right.
+>$$
+
+>[!important] Definition
+> If the *Hamiltonian* is **separable** i.e. $$H(p, q) := T(p) + V(q),$$ we can also split it into three parts $$H(p, q) := T(p) + \frac{1}{2} V(q) + \frac{1}{2} V(q)$$ 
+> then we have the **second-order splitting sympletic Euler method** 
+>$$\left\{
+>\begin{align*}
+> p_{n+ 1 /2} &= p_{n} - \frac{1}{2} h\,\nabla_{q}\,V(q_{n}) \\[8pt]
+> q_{n+1} &= q_{n} + h\,\nabla_{p}\,T(p_{n+1 / 2}) \\[8pt]
+> p_{n+1} &= p_{n + 1 / 2} -  \frac{1}{2} h\,\nabla_{q}\,V(q_{n+1}) 
+>\end{align*}\right.
+>$$
+>- This is called the **second-order Stormer-Verlet method**.
+>- See also **leap-frog method**
+
+- [[Hamiltonian Monte Carlo]]
+- [[Nyström Method for Numerical ODE]]
+
 
 ## Explanation
 
 
 
 
-- [[Hamiltonian Monte Carlo]]
+
 
 
 -----------
@@ -76,3 +107,4 @@ date of note: 2024-10-31
 
 
 - [[Numerical Methods for Ordinary Differential Equations IVP by Griffiths]] pp 210 - 217
+- Leimkuhler, B., & Reich, S. (2004). _Simulating hamiltonian dynamics_ (No. 14). Cambridge university press. pp 74 - 81
