@@ -45,7 +45,9 @@ date of note: 2024-05-08
 
 -----
 ## Reference
-  
+
+
+- [[All of Nonparametric Statistics by Wasserman]]
 - [[Concentration Inequalities by Boucheron]]
 - [[High Dimensional Probability An Introduction by Vershynin]]
 - [[Elements of Information Theory by Cover]]

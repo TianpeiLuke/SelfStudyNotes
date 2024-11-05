@@ -49,3 +49,4 @@ date of note: 2024-05-22
 - [[Testing Statistical Hypotheses by Lehmann]]
 - [[Mathematical Statistics by Shao]]
 - [[Theory of Point Estimation by Lehmann]]
+- [[All of Nonparametric Statistics by Wasserman]]
