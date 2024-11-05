@@ -15,7 +15,7 @@ date of note: 2024-10-31
 >[!important]
 >**Name**: Runge-Kutta Methods for Numerical ODE
 
-### General Runge-Kutta Method
+### General Multi-Stage Runge-Kutta Method
 
 >[!important] Definition
 >Consider the *initial value problem (IVP)* of *ordinary differential equations (ODEs)*
@@ -32,7 +32,7 @@ date of note: 2024-10-31
 >- $J \subseteq \mathbb{R}$, $U \subseteq \mathbb{R}^n$, and $\Lambda \subseteq \mathbb{R}^k$ be open subsets.
 >- The task is to find the *temporal discretization* of the *approximate solution* of the IVP.
 >  
->The **general $s$-stage Runge-Kutta method** may be written in the form
+>The **general $s$-stage Runge-Kutta method** that solves *temporal discretization problem*  the may be written in the form
 >$$
 >\begin{align*}
 >k_{i} &= f\left(x_{n} + h\,\sum_{j=1}^{s}a_{i,j}\,k_{j}\,,\, t_{n} + c_{i}\,h\,,\,\lambda \right), \quad i=1\,{,}\ldots{,}\,s \\[5pt]
@@ -51,7 +51,8 @@ date of note: 2024-10-31
 >\end{array}
 >$$
 >where $$A = [a_{i,j}] \in \mathbb{R}^{s\times s}, \quad b = [b_{i}] \in \mathbb{R}^{s}, \, c = [c_{i}]  \in \mathbb{R}^{s}$$
->- The **explicit Runge-Kutta method** requires that $A$ is **strictly lower triangular** and $\{ k_{i} \}$ can be computed in turn without solving the nonlinear equation. 
+>
+>The **explicit Runge-Kutta method** requires that $A$ is **strictly lower triangular** and $\{ k_{i} \}$ can be computed in turn without solving the nonlinear equation. 
 >- The **Butcher array** for *explicit Runge-Kutta method* is given by 
 >$$
 >\begin{array}{c|ccccc}
@@ -63,7 +64,7 @@ date of note: 2024-10-31
 >  & b_{1} & b_{2} & \cdots & b_{s} 
 >\end{array}
 >$$
->- Thus each step formula for *explicit RK method* is given by
+>- Thus each stage $k_{i}$ for *explicit RK method* is given by
 >$$
 >\begin{align*}
 >k_{1} &:= f\left(x_{n}\,,\, t_{n}\,,\,\lambda \right) \\[8pt]
@@ -109,7 +110,7 @@ date of note: 2024-10-31
 >\begin{align*}
 > k_{1} &= f(x_{n}, t_{n}, \lambda)\\[5pt]
 > k_{2} &= f\left( x_{n} +  h\,k_{1}\,,\, t_{n} +  h \,,\, \lambda \right)\\[5pt]
-> x_{n+1} &= x_{n} + \frac{1}{2}\,(k_{1} + k_{2}) \\[5pt]
+> x_{n+1} &= x_{n} + \frac{1}{2}\,h\,(k_{1} + k_{2}) \\[5pt]
 > t_{n+1} &= t_{n} + h
 >\end{align*}
 >$$
@@ -178,7 +179,11 @@ date of note: 2024-10-31
 
 ## Explanation
 
+>[!info]
+>The *one-stage Runge-Kutta method* is **Euler method**.
 
+- [[Explicit Euler Method for Discretization of ODE]]
+- [[Implicit Euler Method for Discretization of ODE]]
 
 
 
