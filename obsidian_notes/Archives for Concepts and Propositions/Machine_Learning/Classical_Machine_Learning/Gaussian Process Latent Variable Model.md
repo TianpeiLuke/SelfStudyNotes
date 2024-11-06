@@ -4,6 +4,8 @@ tags:
   - machine_learning/models
   - probabilistic_graphical_models/models
   - math/stochastic_process
+  - machine_learning/latent_variable_model
+  - machine_learning/dimensionality_reduction
 keywords:
   - gaussian_process
   - gaussian_process_latent_variable_model

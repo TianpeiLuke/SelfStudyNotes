@@ -3,6 +3,7 @@ tags:
   - concept
   - machine_learning/models
   - machine_learning/boosting
+  - machine_learning/ensemble_methods
 keywords:
   - gradient_boost
   - tree_based_classifier

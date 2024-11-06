@@ -15,6 +15,9 @@ date of note: 2024-11-01
 
 >[!important]
 >**Name**: k-Step Methods for Numerical ODE
+- [[Ordinary Differential Equations]]
+
+
 
 >[!important] Definition
 >Consider the *initial value problem (IVP)* of *ordinary differential equations*

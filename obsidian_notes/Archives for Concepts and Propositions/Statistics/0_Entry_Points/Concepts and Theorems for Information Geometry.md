@@ -52,6 +52,7 @@ date of note: 2024-10-28
 - [[Renyi Divergence and Renyi Entropy]]
 - [[Fisher Divergence]]
 - [[alpha-Divergence]]
+- [[Total Variation between Measures]]
 
 
 ### Exponential Family

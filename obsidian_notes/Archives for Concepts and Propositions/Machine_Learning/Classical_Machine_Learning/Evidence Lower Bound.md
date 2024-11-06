@@ -4,6 +4,8 @@ tags:
   - machine_learning/theory
   - machine_learning/models
   - deep_learning/discriminative_models
+  - machine_learning/latent_variable_model
+  - deep_learning/variational_learning
 keywords:
   - evidence_lower_bound
 topics:

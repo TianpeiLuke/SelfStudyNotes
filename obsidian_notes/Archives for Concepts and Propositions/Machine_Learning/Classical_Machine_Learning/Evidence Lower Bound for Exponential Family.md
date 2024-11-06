@@ -4,6 +4,8 @@ tags:
   - statistics/estimation
   - machine_learning/models
   - machine_learning/algorithms
+  - deep_learning/variational_learning
+  - machine_learning/variational_learning
 keywords:
   - expectation_maximization
   - exponential_family
@@ -11,6 +13,7 @@ keywords:
 topics:
   - machine_learning_models
   - machine_learning_algorithm
+  - machine_learning/variational_learning
 name: Expectation-Maximization Algorithm for Exponential Family
 date of note: 2024-07-06
 ---

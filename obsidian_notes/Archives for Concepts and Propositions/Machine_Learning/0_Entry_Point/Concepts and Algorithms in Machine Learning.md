@@ -50,18 +50,20 @@ date of note: 2024-06-01
 
 
 
-#### Ensemble Learning and Boosting
+#### Decision Tree, Ensemble Learning and Boosting
 
 - [[Concepts and Theorems in Boosting and Ensemble Learning]]
+
+- [[Decision Tree Model for Classification and Regression]]
 
 - [[Ensemble Learning]]
 - [[Bagging and Model Averaging]]
 - [[Random Forest Algorithm]]
 
-
 - [[AdaBoost Algorithm]]
 - [[Functional Gradient Descent]]
 - [[Gradient Boosting Algorithm]]
+- [[Gradient Boosting Trees]]
 
 
 #### Support Vector Machine and Kernel Methods

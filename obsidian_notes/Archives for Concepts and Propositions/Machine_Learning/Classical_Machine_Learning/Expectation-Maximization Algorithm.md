@@ -3,11 +3,15 @@ tags:
   - concept
   - machine_learning/algorithms
   - statistics/estimation
+  - deep_learning/variational_learning
+  - machine_learning/latent_variable_model
+  - machine_learning/variational_learning
 keywords:
   - expectation_maximization
 topics:
   - machine_learning_models
   - machine_learning_algorithm
+  - machine_learning/variational_learning
 name: Expectation-Maximization Algorithm
 date of note: 2024-05-12
 ---

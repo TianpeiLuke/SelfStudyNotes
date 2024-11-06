@@ -3,6 +3,7 @@ tags:
   - concept
   - machine_learning/models
   - probabilistic_graphical_models/models
+  - machine_learning/latent_variable_model
 keywords: 
 topics: 
 name: 

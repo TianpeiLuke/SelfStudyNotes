@@ -14,6 +14,8 @@ date of note: 2024-11-01
 
 >[!important]
 >**Name**: Nyström Method for Numerical ODE
+- [[Ordinary Differential Equations]]
+- [[Space of Continuous Differentiable Functions]]
 
 ![[k-Step Methods for Numerical ODE#^57a043]]
 

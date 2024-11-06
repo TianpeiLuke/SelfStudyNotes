@@ -3,6 +3,8 @@ tags:
   - concept
   - machine_learning/models
   - machine_learning/algorithms
+  - machine_learning/latent_variable_model
+  - deep_learning/variational_learning
 keywords:
   - variational_inference
   - em_algorithm

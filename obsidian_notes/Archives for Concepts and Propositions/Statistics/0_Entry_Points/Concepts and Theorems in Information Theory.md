@@ -84,6 +84,7 @@ date of note: 2024-06-01
 - [[alpha-Divergence]]
 - [[Renyi Divergence and Renyi Entropy]]
 - [[Fisher Divergence]]
+- [[Total Variation between Measures]]
 
 
 

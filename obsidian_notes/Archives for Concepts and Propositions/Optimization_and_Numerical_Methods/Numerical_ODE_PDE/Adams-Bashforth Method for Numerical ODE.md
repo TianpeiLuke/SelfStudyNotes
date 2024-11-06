@@ -23,7 +23,7 @@ date of note: 2024-11-01
 ### Two-Step Adams-Bashforth
 
 >[!important] Definition
->Consider the *initial value problem (IVP)* of *ordinary differential equations*
+>Consider the *initial value problem (IVP) (IVP)* of *ordinary differential equations*
 >$$
 >\left\{
 >\begin{align*}
@@ -35,6 +35,7 @@ date of note: 2024-11-01
 >where 
 >- $f: U \times J \times \Lambda \to \mathbb{R}^n$ is a smooth function, i.e. it is *continuous differentiable*. 
 >- $J \subseteq \mathbb{R}$, $U \subseteq \mathbb{R}^n$, and $\Lambda \subseteq \mathbb{R}^k$ be open subsets.
+>- The task is to find the *temporal discretization* of the *approximate solution* of the IVP.
 >- The task is to find the *temporal discretization* of the *approximate solution* of the IVP.
 >  
 >Consider the *second-order Taylor expansion*, $$z(t+h) = z(t) + hz'(t) + \frac{1}{2}h^2z''(t) + O(h^3)$$  and substitute the *Taylor expansion* of $z'$ *backward*,  $$z'(t - h) = z'(t) - h\,z''(t) + O(h^2) \implies h\,z''(t) = z'(t) - z'(t- h) + O(h^2)$$  

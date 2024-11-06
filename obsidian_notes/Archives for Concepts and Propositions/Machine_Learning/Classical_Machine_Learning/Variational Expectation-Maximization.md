@@ -5,6 +5,8 @@ tags:
   - machine_learning/algorithms
   - probabilistic_graphical_models/models
   - deep_learning/algorithms
+  - deep_learning/variational_learning
+  - machine_learning/variational_learning
 keywords:
   - expectation_maximization
   - variational_inference

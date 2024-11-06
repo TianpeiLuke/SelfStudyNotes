@@ -3,6 +3,7 @@ tags:
   - concept
   - machine_learning/models
   - probabilistic_graphical_models/models
+  - machine_learning/dimensionality_reduction
 keywords:
   - dimensionality_reduction
 topics:

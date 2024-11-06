@@ -3,6 +3,8 @@ tags:
   - concept
   - machine_learning/models
   - probabilistic_graphical_models/models
+  - machine_learning/dimensionality_reduction
+  - machine_learning/latent_variable_model
 keywords:
   - multinomial_pca
   - multinomial_priniciple_component_analysis

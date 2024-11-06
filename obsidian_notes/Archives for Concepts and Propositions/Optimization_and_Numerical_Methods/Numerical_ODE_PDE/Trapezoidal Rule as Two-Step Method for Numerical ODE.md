@@ -22,7 +22,7 @@ date of note: 2024-11-01
 - [[Taylor Series for Local Polynomial Approximation of Smooth Function]]
 
 >[!important] Definition
->Consider the *initial value problem (IVP)* of *ordinary differential equations*
+>Consider the *initial value problem (IVP) (IVP)* of *ordinary differential equations*
 >$$
 >\left\{
 >\begin{align*}
@@ -74,6 +74,7 @@ date of note: 2024-11-01
 
 - [[Linear Multistep Methods for Numerical ODE]]
 - [[Ordinary Differential Equations]]
+- [[Space of Continuous Differentiable Functions]]
 - [[Space of Continuous Differentiable Functions]]
 
 

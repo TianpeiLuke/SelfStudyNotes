@@ -4,6 +4,7 @@ tags:
   - statistics/estimation
   - machine_learning/models
   - machine_learning/algorithms
+  - machine_learning/variational_learning
 keywords:
   - expectation_maximization
   - exponential_family

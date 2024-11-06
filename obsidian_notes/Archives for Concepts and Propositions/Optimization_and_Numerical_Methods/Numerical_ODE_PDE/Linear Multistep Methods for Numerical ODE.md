@@ -27,7 +27,7 @@ date of note: 2024-10-31
 - [[Taylor Series for Local Polynomial Approximation of Smooth Function]]
 
 
-
+- [[k-Step Methods for Numerical ODE]]
 
 
 -----------

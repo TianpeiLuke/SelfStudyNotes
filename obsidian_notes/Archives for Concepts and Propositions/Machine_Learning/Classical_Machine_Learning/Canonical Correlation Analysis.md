@@ -4,11 +4,13 @@ tags:
   - machine_learning/models
   - probabilistic_graphical_models/models
   - machine_learning/latent_variable_model
+  - machine_learning/dimensionality_reduction
 keywords:
   - dimensionality_reduction
 topics:
   - probabilistic_graphical_model
   - machine_learning_models
+  - machine_learning/dimensionality_reduction
 name: 
 date of note: 2024-05-12
 ---
