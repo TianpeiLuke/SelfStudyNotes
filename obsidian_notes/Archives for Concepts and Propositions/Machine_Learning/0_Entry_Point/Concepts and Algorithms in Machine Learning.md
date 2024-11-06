@@ -80,6 +80,9 @@ date of note: 2024-06-01
 - [[Reproducing Kernel of RKHS]]
 - [[Representer Theorem]]
 
+- [[Kernel Density Estimation]]
+- [[Kernel Principal Component Analysis]]
+
 
 #### Expectation-Maximization 
 
@@ -116,6 +119,7 @@ date of note: 2024-06-01
 - [[k-Means Clustering]]
 - [[Gaussian Mixture Models]]
 - [[Gaussian Scale Mixtures]]
+- [[Spectral Clustering]]
 
 #### Dimensionality Reduction
 
@@ -123,6 +127,8 @@ date of note: 2024-06-01
 
 - [[Principle Component Analysis]]
 - [[Probabilistic Principle Component Analysis]]
+- [[Kernel Principal Component Analysis]]
+
 - [[Independent Component Analysis]]
 - [[Nonnegative Matrix Factorization]]
 - [[Latent Dirichlet Allocation]]
