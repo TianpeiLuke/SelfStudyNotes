@@ -35,6 +35,8 @@ date of note: 2024-11-05
 >- adding a *threshold* to *branch* the region along the dominant feature. 
 >- The *leaves* of the tree is the *final partition* of the feature space.
 
+^a29d4f
+
 - [[Partition of Set]]
 - [[Forward Stagewise Additive Modeling]]
 - [[Tree Graph and Forest]]
@@ -96,25 +98,29 @@ date of note: 2024-11-05
 >	- Collapse $v$ to obtain $T'$
 >	- $$T \leftarrow T'$$
 
+### Classification Tree
 
+>[!important] Definition
+>Let $\mathcal{D} := \left\{ (x_{i}, y_{i}) \right\}_{i=1}^{n} \subset \mathcal{X}\times \mathcal{Y}$ where $\mathcal{X} \subseteq \mathbb{R}^{d}$ and $\mathcal{Y} = \{ 1\,{,}\ldots{,}\, K\}$.
+>
+>Consider a *partition* of feature domain into $k$ mutually exclusive regions $\left\{ R_{s} \right\}$, i.e. $$\mathcal{X} = \bigcup_{s=1}^{k}R_{s}, \quad R_{i} \cap R_{j} = \emptyset$$
+>- Denote $$\hat{p}_{s,j} := \frac{1}{|R_{s}|}\sum_{x_{i}\in R_{s}}\mathbb{1}\left\{ y_{i} = j \right\} $$ as the *proportion* of *class* $j$ in $R_{s}$.
+>- The predicted label for region $R_{s}$ is given by $$j(s) := \arg\max_{j} \hat{p}_{s,j}.$$
+>
+>The **classification tree** is a class of decision tree $$f_{k}(x;\, \beta, R) = \sum_{s=1}^{k}\beta_{s}\,\mathbb{1}\left\{ x\in R_{s} \right\} $$  that *minimizes* the **total node impurity**.
+>
+>For each region $R_{s}$, the **node impurity** can be *measured* in different ways. For instance, 
+>- **Misclassification error** $$\frac{1}{|R_{s}|}\sum_{x_{i} \in R_{s}}\mathbb{1}\left\{ y_{i} \neq j(s) \right\} := 1 - \hat{p}_{s,j(s)}$$
+>- **Gini Index** $$\sum_{j \neq j'}\hat{p}_{s, j}\,\hat{p}_{s, j'} := \sum_{j=1}^{K}\hat{p}_{s,j}\,\left(1 - \hat{p}_{s, j}\right)$$
+>- **Entropy** or **deviance** $$- \sum_{j=1}^{K}\hat{p}_{s,j}\,\log \hat{p}_{s,j}$$
+>  
 
+- [[Empirical Risk Minimization]]
+- [[Shannon Entropy]]
+- [[Cross-Entropy Loss Function]]
+- [[Logistic Regression]]
 
-
->[!important]
->The **training algorithm** for decision tree is described as follows:
->- *Require*: the training data $\mathcal{D}$
->- For $l=1,\,2\,{,}\ldots{,}\,$ until stopping criterion met:
->	- Let $$\mathcal{R} := \left\{ R_{s}^{(l)} \right\}_{s=1}^{k_{l}}$$ be the partition of covariate.
->	- For $s=1\,{,}\ldots{,}\,k_{l}$:
->		- Find the *optimal* **splitting variable** $x^{j}$ and **split point** $\theta$ by solving the optimization problem $$(j^{*}, \theta^{*}) = \arg\min_{j, \theta}\left[ \min_{c_{1}}\sum_{x_{i} \in R_{s, -}(j, \theta) }\left( y_{i} - c_{1}\right)^2 +  \min_{c_{2}}\sum_{x_{i} \in R_{s, +}(j, \theta) }\left( y_{i} - c_{2}\right)^2\right] $$ where
->			- $$\begin{align*}R_{s, -}(j, \theta) &= \left\{ (x^1 \,{,}\ldots{,}\,x^{d})\in R_{s}\;|\;x^{j} \le \theta \right\} \\[5pt] R_{s, +}(j, \theta) &= \left\{ (x^1 \,{,}\ldots{,}\,x^{d}) \in R_{s}\;|\;x^{j} > \theta \right\}\end{align*}$$
->			- Note that $$\begin{align*}\hat{c}_{1} &= \arg\min_{c_{1}}\sum_{x_{i} \in R_{s, -}(j, \theta) }\left( y_{i} - c_{1}\right)^2 \\[5pt] &= \text{Avg}\left\{y_{i}:\; x_{i}\in R_{s, -}(j, \theta) \right\}\end{align*}$$ and $$\begin{align*}\hat{c}_{2} &= \arg\min_{c_{2}}\sum_{x_{i} \in R_{s, +}(j, \theta) }\left( y_{i} - c_{2}\right)^2 \\[5pt]  &= \text{Avg}\left\{y_{i}\;|\; x_{i}\in R_{s, +}(j, \theta) \right\}\end{align*}$$
->- *Return*: 
->	- the **final partition** $\mathcal{R} := \left\{ R_{1} \,{,}\ldots{,}\, R_{k}\right\}$
->	- the **coefficients** $$\hat{\beta}_{s} = \text{Avg}\left\{y_{i}\;|\; x_{i}\in R_{s}\right\}$$
-
-
-
+![[node_impurity.png]]
 
 
 ## Explanation
@@ -136,6 +142,18 @@ date of note: 2024-11-05
 >- There are **fast, reliable algorithms** to learn these trees
 
 - [[k-Means Clustering]]
+
+>[!quote]
+>All three are similar, but *cross-entropy* and the *Gini index* are **differentiable**, and hence more amenable to numerical optimization. ...
+>
+>In addition, *cross-entropy* and the *Gini index* are more **sensitive to changes** in the *node probabilities* than the *mis-classification rate*. ... either the Gini index or cross-entropy should be used when **growing the tree**. To guide **cost-complexity pruning**, any of the three measures can be used, but typically it is the *misclassification rate*.
+>
+>The **Gini index** can be interpreted in two interesting ways. 
+>- Rather than classify observations to the *majority class* in the node, we could classify them to class $k$ *with probability* $\hat{p}_{s,k}$. Then the **expected training error rate** of this rule in the node is $$\sum_{k\neq k'}\hat{p}_{m,k}\,\hat{p}_{m,k'}$$ — **the Gini index**. 
+>- Similarly,  if we code each observation as $1$ for class $k$ and zero otherwise, the **variance** over the node of this $0$-$1$ response is $$\hat{p}_{m,k}(1 − \hat{p}_{m,k}).$$ Summing over classes $k$ again gives the *Gini index*.
+>
+>-- [[Elements of Statistical Learning by Hastie]] pp 309 - 310
+
 
 ## Ensemble Learning that enhanced Decision Tree
 
@@ -163,3 +181,4 @@ date of note: 2024-11-05
 
 - [[Elements of Statistical Learning by Hastie]] pp 305 - 317
 - [[Boosting Foundations and Algorithms by Schapire]] pp 
+- Murphy, K. P. (2012). _Machine learning: a probabilistic perspective_. MIT press.pp 544 - 552
