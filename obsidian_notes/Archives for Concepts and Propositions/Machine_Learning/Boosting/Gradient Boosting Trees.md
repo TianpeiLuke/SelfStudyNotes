@@ -27,6 +27,13 @@ date of note: 2024-05-12
 
 
 
+## Bagging and Random Forest
+
+- [[Bagging and Model Averaging]]
+- [[Decision Tree Model for Classification and Regression]]
+- [[Random Forest Algorithm]]
+
+
 
 -----------
 ##  Recommended Notes and References

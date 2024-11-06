@@ -27,8 +27,8 @@ date of note: 2024-10-24
 >- *Require*: the dataset  $\mathcal{D} := \left\{ (x_{i}, y_{i}) \right\}_{i=1}^{n}$
 >- *Require*: total rounds $B >0$
 >- For $b=1\,{,}\ldots{,}\,B$:
->	- **Bootstrap resampling**: select a *sub-population* by resampling with repetition from $\mathcal{D}$ $$\mathcal{D}^{b}\sim \mathcal{D}$$
->	- **Learning**: grow a **random forest tree** $T^{(b)}$ based on *sub-population* $\mathcal{D}^{b}$ by *recursively* repeating the following steps for each **terminate node** of the tree, until **minimium node size** $n_{min}$ is reached 
+>	- **Bootstrap resampling**: select a *sub-population* by resampling with repetition from $\mathcal{D}$ $$\mathcal{D}^{(b)}\sim \mathcal{D}$$
+>	- **Learning**: grow a **random forest tree** $T^{(b)}$ based on *sub-population* $\mathcal{D}^{(b)}$ by *recursively* repeating the following steps for each **terminate node** of the tree, until **minimium node size** $n_{min}$ is reached 
 >		- *Select $p$ variables __at random__* from $d$ variables;
 >		- Pick the **best variable / split point** among selected $p$ variables
 >		- **Split** the node into two children nodes.
@@ -65,14 +65,20 @@ date of note: 2024-10-24
 ## Explanation
 
 
-
-
-
 ## Compare with Boosting
+
+
+>[!quote]
+>**Boosting** in Chapter 10 was initially proposed as a **committee method** as well, although unlike bagging, the *committee of weak learners* **evolves over time**, and the members cast a *weighted vote*. Boosting appears to *dominate* bagging on most problems, and became the preferred choice. 
+>
+>**Random forests** (Breiman, 2001) is a *substantial modification* of **bagging** that builds a large collection of **de-correlated trees**, and then *averages them*. On many problems the performance of *random forests* is very similar to *boosting*, and they are simpler to train and tune. As a consequence, random forests are popular, and are implemented in a variety of packages.
+>
+>-- [[Elements of Statistical Learning by Hastie]] pp 587
 
 - [[AdaBoost Algorithm]]
 - [[Gradient Boosting Trees]]
 - [[Gradient Boosting Algorithm]]
+
 
 
 
