@@ -31,3 +31,4 @@ date of note: 2024-07-09
 - [[Graph]]
 
 - [[Graph Theory by Diestel]] pp 17
+- [[Networks by Newman]] pp 131 - 133

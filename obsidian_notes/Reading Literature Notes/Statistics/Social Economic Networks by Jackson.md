@@ -48,3 +48,4 @@ date of note: 2024-11-05
 
 - [[Game Theory An Introduction by Tadelis]]
 - [[Graph Theory by Diestel]]
+- [[Networks by Newman]]

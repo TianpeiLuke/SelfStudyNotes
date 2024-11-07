@@ -81,4 +81,5 @@ date of note: 2024-07-09
 - [[Interior of Set]]
 
 - [[Graph Theory by Diestel]] pp 6
+- [[Networks by Newman]] pp 131 - 133
 - Wikipedia [Path_(graph_theory)](https://en.wikipedia.org/wiki/Path_(graph_theory))

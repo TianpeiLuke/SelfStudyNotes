@@ -114,6 +114,12 @@ date of note: 2024-07-14
 - [[Minimum Cost Flow Problem]]
 
 
+### Spectral Graph Theory
+
+- [[Adjacency Matrix of Graph]]
+- [[Graph Laplacian]]
+
+
 
 ## Explanation
 
@@ -126,3 +132,5 @@ date of note: 2024-07-14
 
 
 - [[Graph Theory by Diestel]] 
+- [[Social Economic Networks by Jackson]]
+- [[Networks by Newman]]

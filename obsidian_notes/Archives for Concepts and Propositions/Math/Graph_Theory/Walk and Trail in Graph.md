@@ -42,4 +42,5 @@ date of note: 2024-07-15
 - [[Graph]]
 
 - [[Graph Theory by Diestel]] pp 8
+- [[Networks by Newman]] pp 131 - 133
 - Wikipedia [Path_(graph_theory)](https://en.wikipedia.org/wiki/Path_(graph_theory))

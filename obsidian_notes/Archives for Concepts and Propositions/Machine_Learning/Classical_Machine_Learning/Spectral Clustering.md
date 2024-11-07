@@ -27,6 +27,7 @@ date of note: 2024-11-05
 
 
 - [[k-Means Clustering]]
+- [[Graph Laplacian]]
 
 
 - [[Cut Space of Graph]]

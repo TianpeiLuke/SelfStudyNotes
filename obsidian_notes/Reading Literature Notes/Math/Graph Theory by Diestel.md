@@ -42,4 +42,7 @@ date of note: 2024-07-15
 
 -----
 ## Reference
-  
+
+
+- [[Social Economic Networks by Jackson]]
+- [[Networks by Newman]]

@@ -71,3 +71,4 @@ date of note: 2024-07-09
 - [[Graph]]
 
 - [[Graph Theory by Diestel]] pp 5 - 6
+- [[Networks by Newman]] pp 126 - 131
