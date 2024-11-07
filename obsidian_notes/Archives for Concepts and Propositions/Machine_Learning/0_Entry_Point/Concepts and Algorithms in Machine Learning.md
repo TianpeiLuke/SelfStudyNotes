@@ -29,7 +29,7 @@ date of note: 2024-06-01
 #### Nearest Neighbor Classification
 
 - [[k Nearest Neighbor Classification]]
-- [[k Nearest Neighbor Estimation]]
+- [[k Nearest Neighbor Density Estimation]]
 - [[Curse of Dimensionality]]
 
 #### Linear and Generalized Linear Models
@@ -176,6 +176,7 @@ date of note: 2024-06-01
 #### Density Estimation
 
 - [[Parzen Kernel Density Estimation]]
+- [[k Nearest Neighbor Density Estimation]]
 
 
 #### Nonparametric Inference
