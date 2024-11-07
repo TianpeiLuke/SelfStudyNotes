@@ -35,3 +35,5 @@ date of note: 2024-11-05
 
 
 - [[Elements of Statistical Learning by Hastie]] pp 547 - 550
+- [[Learning with Kernels by Schölkopf]] pp 429 - 442
+
