@@ -2,6 +2,7 @@
 tags:
   - concept
   - math/graph_theory
+  - statistics/random_network
 keywords: 
 topics:
   - math/graph_theory
@@ -28,10 +29,11 @@ date of note: 2024-07-09
 ##  Recommended Notes and References
 
 
-- [[Restricted Boltzmann Machine]]
-- [[Artificial Neural Network and Deep Learning]]
+- [[Erdős-Rényi Random Graph]]
+- [[Bernoulli Distribution]]
+- [[Random Graph]]
 - [[Graph]]
 
-- [[Graph Theory by Diestel]] pp 17
+
 - [[Social Economic Networks by Jackson]]
-- [[Networks by Newman]] pp 115 - 118
+- [[Networks by Newman]] pp 369

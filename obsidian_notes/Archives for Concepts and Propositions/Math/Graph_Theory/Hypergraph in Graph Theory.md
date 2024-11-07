@@ -61,5 +61,7 @@ date of note: 2024-07-09
 - [[Set Operations]]
 
 - [[Graph Theory by Diestel]] pp 27
+- [[Social Economic Networks by Jackson]]
+- [[Networks by Newman]] pp 114
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]] pp 260
 - Wikipedia [Hypergraph](https://en.wikipedia.org/wiki/Hypergraph)

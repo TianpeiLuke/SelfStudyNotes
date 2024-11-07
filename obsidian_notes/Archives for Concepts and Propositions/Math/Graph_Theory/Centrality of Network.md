@@ -28,10 +28,9 @@ date of note: 2024-07-09
 ##  Recommended Notes and References
 
 
-- [[Restricted Boltzmann Machine]]
-- [[Artificial Neural Network and Deep Learning]]
+
 - [[Graph]]
 
-- [[Graph Theory by Diestel]] pp 17
+- [[Graph Theory by Diestel]] 
 - [[Social Economic Networks by Jackson]]
-- [[Networks by Newman]] pp 115 - 118
+- [[Networks by Newman]] pp 159 - 177

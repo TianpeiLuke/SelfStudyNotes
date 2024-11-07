@@ -27,3 +27,10 @@ date of note: 2024-07-09
 -----------
 ##  Recommended Notes and References
 
+
+- [[Graph]]
+
+
+- [[Graph Theory by Diestel]]
+- [[Social Economic Networks by Jackson]]
+- [[Networks by Newman]] pp 123 - 126
