@@ -51,6 +51,8 @@ date of note: 2024-05-28
 >$$  
 >where $E_{r}$ **shrinks regularly** to $x$.
 
+^5093e6
+
 - [[Lebesgue Measure]]
 - [[Lebesgue-Radon-Nikodym Theorem]]
 - [[Radon-Nikodym Derivative]]

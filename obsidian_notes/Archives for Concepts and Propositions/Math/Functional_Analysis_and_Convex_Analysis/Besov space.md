@@ -1,6 +1,7 @@
 ---
 tags:
   - concept
+  - math/functional_analysis
 keywords: 
 topics: 
 name: 

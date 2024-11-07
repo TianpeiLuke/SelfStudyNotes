@@ -198,7 +198,7 @@ date of note: 2024-06-01
 
 ### Density Estimation
 
-- [[Kernel Density Estimation]]
+- [[Parzen Kernel Density Estimation]]
 
 
 ### Bayesian Inference

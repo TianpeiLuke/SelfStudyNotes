@@ -29,6 +29,9 @@ date of note: 2024-06-05
 - [[Hilbert Space]]
 - [[Complete Orthonormal Basis of Hilbert Space]]
 
+
+
 - [[Functional Analysis by Reed]]
 - [[Real Analysis Modern Techniques and Their Applications by Folland]]
+- [[All of Nonparametric Statistics by Wasserman]]
 

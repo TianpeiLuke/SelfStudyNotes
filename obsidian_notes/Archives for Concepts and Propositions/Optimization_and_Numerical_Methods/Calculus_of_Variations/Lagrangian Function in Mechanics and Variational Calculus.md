@@ -91,6 +91,8 @@ date of note: 2024-06-14
 >\end{align*}
 >$$
 
+![[Euler–Lagrange Equations#^91e132]]
+
 
 
 

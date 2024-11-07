@@ -2,16 +2,25 @@
 tags:
   - concept
   - machine_learning/boosting
-keywords: 
-topics: 
-name: 
+keywords:
+  - xgboost_model
+  - lighgbm_model
+topics:
+  - boosting
+  - machine_learning_algorithm
+name: XGBoost and LightGBM
 date of note: 2024-07-30
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: XGBoost and LightGBM
+
+### Gradient Boost Trees
+
+- [[Gradient Boosting Trees]]
+- [[Gradient Boosting Algorithm]]
 
 ### XGBoost
 
@@ -80,6 +89,7 @@ date of note: 2024-07-30
 > 
 >-- https://towardsdatascience.com/what-makes-lightgbm-lightning-fast-a27cf0d9785e 
 
+- [[Gradient Boosting Trees#Split Finding Algorithm]]
 
 >[!quote]
 >LightGBM aims to reduce complexity of histogram building ( **$O(data * feature)$** ) by *down sampling* data and feature using **_GOSS_** and **_EFB._** This will bring down the complexity to **($O(data2 * bundles)$)** where **$data2 < data$ and $bundles \ll feature$**.
@@ -254,11 +264,6 @@ Let’s assume we want to predict if it’s “Hot”, “Cold” or “Unknown�
 
 -----------
 ##  Recommended Notes and References
-
-
-- [[Gradient Boosting Algorithm]]
-- [[Functional Gradient Descent]]
-- [[Gradient Boosting Trees]]
 
 
 - [[chenXGBoostScalableTree2016]] Chen, T., & Guestrin, C. (2016). XGBoost: A Scalable Tree Boosting System. _Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining_, 785–794.

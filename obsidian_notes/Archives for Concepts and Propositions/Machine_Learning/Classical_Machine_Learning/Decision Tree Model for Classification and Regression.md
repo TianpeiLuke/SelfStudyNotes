@@ -43,7 +43,7 @@ date of note: 2024-11-05
 
 ![[cart_decision_tree.png]]
 
-### Regression Tree Learning
+### Regression Tree 
 
 >[!important] Definition
 >Let $\mathcal{D} := \left\{ (x_{i}, y_{i}) \right\}_{i=1}^{n} \subset \mathcal{X}\times \mathcal{Y}$ where $\mathcal{X} \subseteq \mathbb{R}^{d}$.
@@ -122,6 +122,59 @@ date of note: 2024-11-05
 
 ![[node_impurity.png]]
 
+>[!quote]
+>All three are similar, but *cross-entropy* and the *Gini index* are **differentiable**, and hence more amenable to numerical optimization. ...
+>
+>In addition, *cross-entropy* and the *Gini index* are more **sensitive to changes** in the *node probabilities* than the *mis-classification rate*. ... either the Gini index or cross-entropy should be used when **growing the tree**. To guide **cost-complexity pruning**, any of the three measures can be used, but typically it is the *misclassification rate*.
+>
+>The **Gini index** can be interpreted in two interesting ways. 
+>- Rather than classify observations to the *majority class* in the node, we could classify them to class $k$ *with probability* $\hat{p}_{s,k}$. Then the **expected training error rate** of this rule in the node is $$\sum_{k\neq k'}\hat{p}_{m,k}\,\hat{p}_{m,k'}$$ — **the Gini index**. 
+>- Similarly,  if we code each observation as $1$ for class $k$ and zero otherwise, the **variance** over the node of this $0$-$1$ response is $$\hat{p}_{m,k}(1 − \hat{p}_{m,k}).$$ Summing over classes $k$ again gives the *Gini index*.
+>
+>-- [[Elements of Statistical Learning by Hastie]] pp 309 - 310
+
+### Other Issues
+
+#### Categorical Predictors
+
+>[!quote]
+>When **splitting** a predictor having $q$ possible *unordered values*, there are $$2^{q−1} − 1$$ *possible partitions* of the $q$ values into two groups, and the computations become **prohibitive** for large $q$. 
+>
+>However, with a $0$-$1$ outcome, this computation simplifies. We order the predictor classes according to the **proportion** *falling in outcome class* $1$. Then we split this predictor as if it were an ordered predictor. 
+>
+>- One can show this gives the **optimal split**, in terms of *cross-entropy* or *Gini index*, among all possible $2^{q−1} − 1$ splits.
+>  
+>  
+>-- [[Elements of Statistical Learning by Hastie]] pp 310  
+
+>[!quote]
+>The **partitioning algorithm** tends to favor categorical predictors with *many levels* $q$; the number of partitions grows exponentially in $q$, and the more choices we have, the *more likely we can find a good one* for the data at hand. This can lead to **severe overfitting** if $q$ is large, and such variables should be avoided.
+>
+>-- [[Elements of Statistical Learning by Hastie]] pp 310  
+
+- [[Bias-Complexity Tradeoff and Overfitting]]
+
+#### Missing Predictor Values
+
+>[!quote]
+>Suppose our data has some **missing predictor values** in some or all of the variables. 
+>- We might **discard** any observation with some missing values, but this could lead to serious depletion of the training set. 
+>- Alternatively we might try to **fill in (impute)** the missing values, with say the mean of that predictor over the nonmissing observations.
+>  
+>-- [[Elements of Statistical Learning by Hastie]] pp 311  
+
+>[!quote]
+>For tree-based models, there are two better approaches. 
+>- The first is applicable to **categorical predictors**: we simply **make a new category** for “missing.” From this we might discover that observations with missing values for some measurement behave differently than those with nonmissing values. 
+>- The second more general approach is the **construction of surrogate variables**. 
+>	- When considering a predictor for a **split**, we use only the observations for which that *predictor* is **not missing**. Having chosen the best (primary) predictor and split point, we form **a list of surrogate predictors and split points.** 
+>		- The first surrogate is the predictor and corresponding split point that **best mimics** the *split* of the training data achieved by the *primary split*. 
+>		- The second surrogate is the predictor and corresponding split point that does **second best**, and so on. 
+>		- When sending observations down the tree either in the training phase or during prediction, we **use the surrogate splits in order**, if the *primary splitting predictor is missing*. 
+>		- Surrogate splits exploit **correlations between predictors** to try and alleviate the effect of missing data. The higher the correlation between the missing predictor and the other predictors, the smaller the loss of information due to the missing value.
+>		  
+>-- [[Elements of Statistical Learning by Hastie]] pp 311  		  
+
 
 ## Explanation
 
@@ -129,6 +182,8 @@ date of note: 2024-11-05
 >**Tree-based methods** *partition* the feature space into a set of *rectangles*, and then fit a simple model (like a *constant*) in each one. They are conceptually simple yet powerful.
 >
 >-- [[Elements of Statistical Learning by Hastie]] pp 305
+
+### Pros and Cons of Decision Tree
 
 >[!important]
 >Note that **tree-based ensemble** did partition the input space into several regions similar to **clustering**, but the partition is selected to *optimize the loss* with respect to target $y$, while for the clustering method the partition is selected to optimize some metrics on the input data $x$. 
@@ -143,16 +198,21 @@ date of note: 2024-11-05
 
 - [[k-Means Clustering]]
 
->[!quote]
->All three are similar, but *cross-entropy* and the *Gini index* are **differentiable**, and hence more amenable to numerical optimization. ...
->
->In addition, *cross-entropy* and the *Gini index* are more **sensitive to changes** in the *node probabilities* than the *mis-classification rate*. ... either the Gini index or cross-entropy should be used when **growing the tree**. To guide **cost-complexity pruning**, any of the three measures can be used, but typically it is the *misclassification rate*.
->
->The **Gini index** can be interpreted in two interesting ways. 
->- Rather than classify observations to the *majority class* in the node, we could classify them to class $k$ *with probability* $\hat{p}_{s,k}$. Then the **expected training error rate** of this rule in the node is $$\sum_{k\neq k'}\hat{p}_{m,k}\,\hat{p}_{m,k'}$$ — **the Gini index**. 
->- Similarly,  if we code each observation as $1$ for class $k$ and zero otherwise, the **variance** over the node of this $0$-$1$ response is $$\hat{p}_{m,k}(1 − \hat{p}_{m,k}).$$ Summing over classes $k$ again gives the *Gini index*.
->
->-- [[Elements of Statistical Learning by Hastie]] pp 309 - 310
+>[!important] 
+>The **limitations** of tree-based methods include
+>- **High variance**: Often a small change in the data can result in a very different series of splits, making *interpretation somewhat precarious*. 
+>	- The major reason for this instability is the **hierarchical nature** of the *process*: the effect of an **error in the top split** is *propagated down* to all of the splits below it.
+>- **Lack of Smoothness**: 
+>	- The lack of smoothness of prediction surface can degrade performance in the **regression** setting, where we would normally expect the underlying function to be smooth. 
+>- **Difficulty in Capturing Additive Structure**: The decision tree may have more difficulties to model **additive structure.** 
+>	- If there are more than $2$ additive effects, it would take many fortuitous splits to recreate the structure, and the data analyst would be hard pressed to recognize it in the estimated tree.
+
+
+
+
+
+
+
 
 
 ## Ensemble Learning that enhanced Decision Tree
