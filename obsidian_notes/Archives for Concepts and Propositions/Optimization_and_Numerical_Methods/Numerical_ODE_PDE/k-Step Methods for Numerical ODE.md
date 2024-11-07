@@ -54,7 +54,7 @@ date of note: 2024-11-01
 
 - [[Characteristic Polynomials of Linear Multistep Methods for Numerical ODE]]
 - [[Linear Multistep Methods for Numerical ODE]]
-
+- [[z-Transform]]
 
 
 ## Explanation

@@ -193,7 +193,7 @@ date of note: 2024-10-31
 
 - [[Ordinary Differential Equations]]
 - [[Space of Continuous Differentiable Functions]]
-
+- [[z-Transform]]
 
 
 - [[Numerical Methods for Ordinary Differential Equations by Butcher]] pp 91, 97, 118, 129, 335, 392

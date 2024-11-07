@@ -73,7 +73,7 @@ date of note: 2024-11-01
 >- The **AB(k)** method belongs to the *family of* **k-step explicit linear multistep method (LMM)**
 
 - [[k-Step Methods for Numerical ODE]]
-
+- [[z-Transform]]
 
 ## Explanation
 

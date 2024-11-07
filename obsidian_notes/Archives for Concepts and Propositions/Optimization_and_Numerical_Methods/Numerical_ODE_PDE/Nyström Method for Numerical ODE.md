@@ -43,6 +43,7 @@ date of note: 2024-11-01
 >- The *first characteristic polynomial* is given by $$\rho(z) = z^{k} - z^{k-2}$$
 
 - [[k-Step Methods for Numerical ODE]]
+- [[z-Transform]]
 
 ### 2-Step Method
 

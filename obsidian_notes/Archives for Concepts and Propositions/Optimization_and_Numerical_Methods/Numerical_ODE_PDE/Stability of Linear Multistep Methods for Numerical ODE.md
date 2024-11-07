@@ -26,6 +26,7 @@ date of note: 2024-11-01
 ##  Recommended Notes and References
 
 
+- [[z-Transform]]
 - [[Linear Multistep Methods for Numerical ODE]]
 
 - [[Numerical Methods for Ordinary Differential Equations IVP by Griffiths]] pp 51 - 52

@@ -34,7 +34,7 @@ date of note: 2024-10-31
 ##  Recommended Notes and References
 
 
-
+- [[z-Transform]]
 - [[Ordinary Differential Equations]]
 - [[Space of Continuous Differentiable Functions]]
 

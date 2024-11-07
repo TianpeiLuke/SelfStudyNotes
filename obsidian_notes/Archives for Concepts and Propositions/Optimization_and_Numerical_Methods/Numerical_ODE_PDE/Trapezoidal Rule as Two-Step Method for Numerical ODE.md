@@ -76,6 +76,7 @@ date of note: 2024-11-01
 - [[Ordinary Differential Equations]]
 - [[Space of Continuous Differentiable Functions]]
 - [[Space of Continuous Differentiable Functions]]
+- [[z-Transform]]
 
 
 - [[Numerical Methods for Ordinary Differential Equations IVP by Griffiths]] pp 45 - 48

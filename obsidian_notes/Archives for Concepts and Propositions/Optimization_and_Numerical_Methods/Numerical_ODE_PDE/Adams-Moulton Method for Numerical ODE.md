@@ -42,6 +42,7 @@ date of note: 2024-11-01
 
 
 - [[k-Step Methods for Numerical ODE]]
+- [[z-Transform]]
 
 ## Explanation
 
