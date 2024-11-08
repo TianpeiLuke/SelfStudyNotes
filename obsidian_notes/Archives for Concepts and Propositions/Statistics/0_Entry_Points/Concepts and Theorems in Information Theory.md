@@ -88,6 +88,8 @@ date of note: 2024-06-01
 - [[Chi-squared Divergence]]
 - [[Total Variation between Measures]]
 
+![[integral_prob_f_diverg.png]]
+
 ### Integral Probability Metric and Wasserstein Distance
 
 - [[Integral Probability Metric between Probability Measures]]
@@ -117,3 +119,5 @@ date of note: 2024-06-01
 - [[High Dimensional Statistics A Non-Asymptotic Viewpoint by Wainwright]]
 - [[Concentration Inequalities by Boucheron]]
 - [[Mathematical Foundations of Infinite Dimensional Statistical Models by Gine]]
+
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]]
