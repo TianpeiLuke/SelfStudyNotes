@@ -32,6 +32,7 @@ date of note: 2024-05-12
 - [[Rademacher Complexity]]
 - [[Symmetrized Empirical Process]]
 - [[Empirical Process and Empirical Measure]]
+- [[Integral Probability Metric between Probability Measures]]
 
 - [[Concentration Inequalities by Boucheron]]
 - [[Mathematical Foundations of Infinite Dimensional Statistical Models by Gine]]

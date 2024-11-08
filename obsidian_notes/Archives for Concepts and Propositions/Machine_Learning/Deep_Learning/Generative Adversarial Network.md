@@ -75,7 +75,39 @@ date of note: 2024-05-12
 >-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 884  
 
 
+## Variants
 
+### Wasserstein GAN
+
+![[Variational Representation of Wasserstein Distance#^7ba1e7]]
+
+- [[Wasserstein Distance]]
+- [[Variational Representation of Wasserstein Distance]]
+
+
+### $f$-GAN
+
+![[Variational Formula for f-Divergence#^9e3cf2]]
+
+- [[f-Divergence]]
+- [[Variational Formula for f-Divergence]]
+
+
+### Conditional GAN
+
+- [[Conditional Generative Adversarial Network]]
+
+
+### Deep Convolutional GAN or DCGAN
+
+
+- [[Convolutional Neural Network]]
+
+### Self-Attention GAN or SAGAN
+
+
+- [[Attention Mechanism in Neural Network]]
+- 
 
 
 
@@ -85,12 +117,11 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 - [[Von Neumann Min-Max Theorem]]
-- [[Wasserstein Distance]]
-- [[Variational Representation of Wasserstein Distance]]
+
 - [[Artificial Neural Network and Deep Learning]]
 - [[Two-Player Finite Game and Matrix Representation]]
 
-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 883
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 883 - 914
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 533 - 544
 - [[Deep Learning by Goodfellow]] pp 679, 690
 - [[Foundations of Computer Vision by Torralba]] pp 487 - 489

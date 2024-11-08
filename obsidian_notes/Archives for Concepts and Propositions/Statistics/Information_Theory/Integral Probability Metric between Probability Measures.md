@@ -25,6 +25,16 @@ date of note: 2024-11-07
 
 
 
+
+### Functional Deviation
+
+![[Glivenko-Cantelli Class#^a200eb]]
+
+- [[Glivenko-Cantelli Class]]
+- [[Supremum of Empirical Process indexed by VC Class]]
+
+
+
 ## Explanation
 
 ### Compare with $f$-divergence and Wasserstein Distance
@@ -39,6 +49,14 @@ date of note: 2024-11-07
 - [[Wasserstein Space]]
 - [[Variational Formula for f-Divergence]]
 - [[f-Divergence]]
+
+## $f$-Divergence
+
+>[!important]
+>The only **integral probability metric** that is also a *$f$-divergence* is the **total variation** of measure.
+
+- [[Total Variation between Measures]]
+
 
 
 
@@ -63,5 +81,6 @@ date of note: 2024-11-07
 
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 57,  889
+- Wikipedia [Integral_probability_metric](https://en.wikipedia.org/wiki/Integral_probability_metric)
 
 

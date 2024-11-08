@@ -77,7 +77,8 @@ date of note: 2024-05-31
 >\mathcal{P}_{n}f := \frac{1}{n}\sum_{j=1}^n  \mathbb{1}\left\{ X_{j} \le x \right\}. 
 >$$
 
-
+- [[Integral Probability Metric between Probability Measures]]
+- [[Glivenko-Cantelli Class]]
 
 
 ## Corollary

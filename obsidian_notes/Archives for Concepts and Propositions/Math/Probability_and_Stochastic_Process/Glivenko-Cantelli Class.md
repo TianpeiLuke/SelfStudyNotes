@@ -37,7 +37,10 @@ date of note: 2024-05-31
 >$$ 
 > as $n \to \infty$. 
 
+^a200eb
+
 - [[Convergence in Measure]]
+- [[Integral Probability Metric between Probability Measures]]
 
 >[!important] Definition
 >A family of functions $\mathcal{F}$ is a **strong Glivenko-Cantelli class** for $\mathcal{P}$ if 

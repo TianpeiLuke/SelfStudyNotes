@@ -37,9 +37,10 @@ date of note: 2024-06-02
 - [[Vapnik-Chervonenkis Class]]
 - [[Empirical Process and Empirical Measure]]
 
+
 - [[Dudley Entropy Integral Inequality]]
 - [[Glivenko-Cantelli Class]]
-
+- [[Integral Probability Metric between Probability Measures]]
 
 ## Explanation
 

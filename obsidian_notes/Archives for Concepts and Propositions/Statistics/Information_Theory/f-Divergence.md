@@ -225,6 +225,8 @@ date of note: 2024-05-07
 >\mathbb{D}_{f}\left(P\left\|\right.Q\right) = \int \frac{dP}{dQ} \log\left( \frac{dP}{dQ} \right) dQ = \int  \log\left( \frac{dP}{dQ} \right) dP = \mathbb{KL}\left( P \left\|\right. Q \right) .
 >$$
 
+^736d41
+
 >[!example]
 >$$f(x) := -\log(x),$$ we have the **reversed KL divergence**, i.e. [[Kullback-Leibler Divergence]].
 >$$
@@ -245,6 +247,8 @@ date of note: 2024-05-07
 >$$
 >\mathbb{D}_{f}\left(P\left\|\right.Q\right) = \frac{1}{2}\int \left\lvert \left( \frac{dP}{dQ} \right) - 1 \right\rvert  dQ = \frac{1}{2} \int |dP - dQ| = \frac{1}{2} \int |p - q|\,d\mu
 >$$
+
+^3efb2b
 
 >[!example]
 >$$f(x) := \frac{1}{2}(\sqrt{ x } - 1)^2,$$ we have the **squared Hellinger distance** [[Hellinger Distance between Distributions]]

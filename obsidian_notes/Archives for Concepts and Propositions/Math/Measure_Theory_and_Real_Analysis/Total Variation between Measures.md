@@ -47,6 +47,23 @@ date of note: 2024-05-23
 - [[Lp Space]]
 
 
+## Total Variation as $f$-Divergence
+
+![[f-Divergence#^3efb2b]]
+
+- [[f-Divergence]]
+
+
+## Total Variation as Integral Probability Metric
+
+
+
+>[!important]
+>The only **integral probability metric** that is also a *$f$-divergence* is the **total variation** of measure.
+
+- [[Integral Probability Metric between Probability Measures]]
+
+
 
 ## Total Variation as Wasserstein Distance
 
@@ -63,6 +80,7 @@ date of note: 2024-05-23
 
 - [[Space of Bounded Signed Measures]]
 - [[Optimal Transport in Space of Measures]]
+- [[Weighted Hamming Distance]]
 - [[Wasserstein Distance]]
 
 >[!important] 

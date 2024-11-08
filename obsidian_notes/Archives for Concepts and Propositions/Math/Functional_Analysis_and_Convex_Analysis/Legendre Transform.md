@@ -228,7 +228,9 @@ date of note: 2024-05-08
 >f^{*}(x^{*}) = \frac{1}{4}\left\langle x^{*} , A^{-1}x^{*} \right\rangle - b
 >$$
 
-## Mechanics
+## Applications
+
+### Mechanics and Calculus of Variations
 
 >[!important]
 >In classical mechanics, the **Hamiltonian** (kinetic energy plus potential energy) is the *Legendre transform* of the **Lagrangian**. 
@@ -243,6 +245,31 @@ date of note: 2024-05-08
 >$$
 
 ^ee6fff
+
+- [[Lagrangian Function in Mechanics and Variational Calculus]]
+- [[Hamiltonian Function in Mechanic and Variational Calculus]]
+- [[First Variation of Functional]]
+
+### $f$-Divergence
+
+- [[f-Divergence]]
+- [[Variational Formula for f-Divergence]]
+
+### Bregman Divergence
+
+- [[Bregman Divergence]]
+
+### Lagrangian Multipliers and Convex Optimizations
+
+- [[Methods of Lagrangian Multipliers]]
+- [[Lagrangian Dual Function]]
+- [[Convex Optimization Problem]]
+
+### Concentration Inequality
+
+- [[Cramér–Chernoff Method]]
+- [[Moment Generating Function]]
+- [[Transportation Cost Inequality]]
 
 
 ## Generalization
