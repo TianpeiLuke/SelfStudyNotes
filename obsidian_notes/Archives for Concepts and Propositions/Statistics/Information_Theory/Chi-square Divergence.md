@@ -19,14 +19,17 @@ date of note: 2024-11-07
 ## Explanation
 
 
+## f-Divergence
 
+![[f-Divergence#^1543bf]]
 
+- [[f-Divergence]]
 
 -----------
 ##  Recommended Notes and References
 
 
-- [[f-Divergence]]
+
 - [[Renyi Divergence and Renyi Entropy]]
 - [[alpha-Divergence]]
 - [[Kullback-Leibler Divergence]]
