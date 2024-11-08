@@ -67,7 +67,7 @@ date of note: 2024-11-07
 - [[Hellinger Distance between Distributions]]
 - [[Exponential Loss Minimization for AdaBoost]]
 
-- [[Chi-square Divergence]]
+- [[Chi-squared Divergence]]
 - [[Logistic Regression]]
 
 ### Connection with Integral Probability Metric

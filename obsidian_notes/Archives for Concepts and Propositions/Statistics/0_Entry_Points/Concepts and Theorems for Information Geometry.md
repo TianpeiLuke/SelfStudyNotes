@@ -55,7 +55,7 @@ date of note: 2024-10-28
 - [[Total Variation between Measures]]
 - [[Jensen-Shannon Divergence]]
 - [[Hellinger Distance between Distributions]]
-- [[Chi-square Divergence]]
+- [[Chi-squared Divergence]]
 
 
 ### Exponential Family

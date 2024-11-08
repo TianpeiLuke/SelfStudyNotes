@@ -85,7 +85,8 @@ date of note: 2024-05-09
 >By the Risez-Markov Representation Theorem, it is essentially **the convergence of functionals** in the *dual space* $(\mathbb{R}^{\Omega})^{*}$ of the space of random variables $\mathbb{R}^{\Omega}$.
 
 - [[Riesz-Markov Representation Theorem]]
-
+- [[Glivenko-Cantelli Class]]
+- [[Integral Probability Metric between Probability Measures]]
 
 
 -----------

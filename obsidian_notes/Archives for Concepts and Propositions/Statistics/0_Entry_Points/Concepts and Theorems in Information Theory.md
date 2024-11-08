@@ -85,7 +85,7 @@ date of note: 2024-06-01
 - [[Renyi Divergence and Renyi Entropy]]
 - [[Hellinger Distance between Distributions]]
 - [[Jensen-Shannon Divergence]]
-- [[Chi-square Divergence]]
+- [[Chi-squared Divergence]]
 - [[Fisher Divergence]]
 - [[Total Variation between Measures]]
 

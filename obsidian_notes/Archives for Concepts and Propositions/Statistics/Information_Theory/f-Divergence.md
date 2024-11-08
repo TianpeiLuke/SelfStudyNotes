@@ -256,8 +256,10 @@ date of note: 2024-05-07
 >\mathbb{D}_{f}\left(P\left\|\right.Q\right) = \frac{1}{2}\int \left( \sqrt{\frac{dP}{dQ} }  - 1 \right)^2  dQ = \frac{1}{2} \int (\sqrt{ p } - \sqrt{ q })^2d\mu
 >$$
 
+^b23587
+
 >[!example]
->$$f(x) := (x - 1)^2,$$ we have the **$\chi^2$-divergence** [[Chi-square Divergence]]
+>$$f(x) := (x - 1)^2,$$ we have the **$\chi^2$-divergence** [[Chi-squared Divergence]]
 >$$
 >\mathbb{D}_{f}\left(P\left\|\right.Q\right) = \int \left(\frac{dP}{dQ}  - 1 \right)^2  dQ  = \int \frac{\left(dP - dQ\right)^2}{dQ}  = \chi^2\left(P\left\|\right.Q\right)
 >$$

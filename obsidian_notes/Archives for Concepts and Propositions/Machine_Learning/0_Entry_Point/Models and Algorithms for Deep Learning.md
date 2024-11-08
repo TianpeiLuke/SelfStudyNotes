@@ -195,6 +195,7 @@ date of note: 2024-06-01
 	- [[Variational Representation of Wasserstein Distance]]
 	- [[Integral Probability Metric between Probability Measures]]
 	- [[Maximum Mean Discrepancy between Probability Measures via RKHS]]
+	- [[Kernel Mean Embedding of Distribution]]
 	- [[Density Ratio Estimation via Binary Classifiers]]
 	- [[Actor-Critic Algorithm]]
 - [[Generative Adversarial Network]]

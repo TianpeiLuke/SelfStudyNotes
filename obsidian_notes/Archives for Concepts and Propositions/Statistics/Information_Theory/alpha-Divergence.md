@@ -79,6 +79,8 @@ date of note: 2024-06-24
 >\frac{1}{2} \sqrt{\mathbb{D}^{(0)}\left(P\left\|\right.Q\right)} = \left\{ \frac{1}{2} \int_{\Omega}\,\left(\sqrt{ p(x)} - \sqrt{q(x)} \right)^2\,d\mu(x) \right\}^{1/2} 
 >$$
 
+^59f390
+
 - Wikipedia [Hellinger_distance](https://en.wikipedia.org/wiki/Hellinger_distance)
 
 

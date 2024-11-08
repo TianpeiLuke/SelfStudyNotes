@@ -28,6 +28,8 @@ date of note: 2024-05-10
 >- a  sequence of *independent* $\mathcal{N}(0, 1)$-distributed random variables $\{\xi_n\}_{n=1}^{\infty}$, and 
 >- a sequence of *non-negative numbers* $\{\sigma_n\}_{n=1}^{\infty}$ satisfying assumption $$\sum_{n=1}^{\infty}\sigma_n^2 < \infty$$ 
 
+^5db3d8
+
 - [[Separable Space]]
 - [[Hilbert Space]]
 
@@ -79,6 +81,8 @@ date of note: 2024-05-10
 >- The **norm** in  *RKHS* of Gaussian process $$\lVert h \rVert_{\mathcal{H}_{\mathcal{N}}^{*}}^2 = \lVert z \rVert_{\mathcal{X}_{\mathcal{N}}^{*}}^2 = \sum_{j=1}^{\infty}\sigma_{j}^2\,z_{j}^2 = \sum_{j=1}^{\infty}\frac{h_{j}^2}{\sigma_{j}^2}.$$ 
 >- Thus the **RKHS** of Gaussian process $$\mathcal{H}_{\mathcal{N}} = \left\{ h = \sum_{i=1}^{\infty}h_{i} \varphi_i \in \mathcal{X}:  \; \sum_{j=1}^{\infty}\frac{h_{j}^2}{\sigma_{j}^2} < \infty\right\}.$$
 >- The **inner product** in $\mathcal{H}_{\mathcal{N}}$ is defined as $$\left\langle  h_{1}\,,\, h_{2}  \right\rangle_{\mathcal{H}_{\mathcal{N}}} = \sum_{j=1}^{\infty}\frac{(h_{1})_{j}\,(h_{2})_{j}}{\sigma_{j}^2}.$$
+
+^7ecefc
 
 >[!info]
 >We see that the function in RKHS of Gaussian process in Hilbert space

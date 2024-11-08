@@ -3,30 +3,33 @@ tags:
   - concept
   - math/information_theory
   - math/information_geometry
+  - deep_learning/generative_models
+  - statistics/hypothesis_testing
 keywords:
-  - hellinger_distance
+  - chi_squared_divergence
 topics:
   - information_theory
   - information_geometry
-name: Hellinger Distance between Distributions
+  - deep_learning/generative_models
+  - statistics/hypothesis_testing
+name: Chi-squared Divergence
 date of note: 2024-11-07
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Hellinger Distance between Distributions
+>**Name**: Chi-squared Divergence
 
 >[!important] Definition
 >if $P$ and $Q$ are *probability measures* on a measurable space $(\Omega, \mathscr{F})$, and $P$ is *absolutely continuous* with respect to $Q$, 
 >$$P \ll Q.$$
 >
->The **squared Helinger distance** between $P$ and $Q$ is defined by
+>The **$\chi^2$-divergence** or **$\chi^2$-distance** from $Q$ to $P$ is defined as
 >$$
 >\begin{align*}
->H^2(P, Q) &:= \frac{1}{2}\int_{\Omega}\left(\sqrt{ \frac{dP}{dQ} } - 1\right)^2\,dQ \\[8pt]
->&= \frac{1}{2} \int_{\Omega}\left(\sqrt{ p(x) } - \sqrt{ q(x) }\right)^2\,d\mu \\[8pt]
->&= 1 - \int_{\Omega}\sqrt{ p(x)q(x) }\,d\mu
+> \chi^2\left( P \left\|\right. Q \right) &= \frac{1}{2} \int_{\Omega} \left(\frac{dP}{dQ} - 1\right)^2\,dQ \\[8pt]
+> &:= \frac{1}{2} \int_{\Omega} \frac{\left(q(x) - p(x)\right)^2}{q(x)}d\mu
 >\end{align*}
 >$$
 >where 
@@ -37,36 +40,29 @@ date of note: 2024-11-07
 - [[Probability Density Function of Random Variable]]
 - [[Absolute Continuity for Measures]]
 
-
 ## Explanation
 
 
+## f-Divergence
 
-## $f$-divergence and $\alpha$-divergence
-
-![[f-Divergence#^b23587]]
+![[f-Divergence#^1543bf]]
 
 - [[f-Divergence]]
-- [[Renyi Divergence and Renyi Entropy]]
-
-![[alpha-Divergence#^59f390]]
-
-- [[alpha-Divergence]]
-
 
 -----------
 ##  Recommended Notes and References
 
 
-
-- [[Kullback-Leibler Divergence]]
 - [[Divergence Function on Manifold]]
 
-- [[Jensen Inequality]]
-- [[Shannon Entropy]]
+
+- [[Chi-Squared-Test]]
+- [[Chi-Squared Distribution]]
+
+
 
 - [[Statistical Manifold as Parametric Family]]
+- [[Probability Space]]
 
-- [[Probabilistic Machine Learning Advanced Topics by Murphy]]  pp 57
-- Wikipedia [Hellinger_distance](https://en.wikipedia.org/wiki/Hellinger_distance)
 
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 57

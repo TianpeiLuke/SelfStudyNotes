@@ -82,8 +82,9 @@ date of note: 2024-06-01
 
 - [[Integral Probability Metric between Probability Measures]]
 - [[Maximum Mean Discrepancy between Probability Measures via RKHS]]
-
+- [[Kernel Mean Embedding of Distribution]]
 - [[Parzen Kernel Density Estimation]]
+
 - [[Kernel Principal Component Analysis]]
 
 
@@ -177,6 +178,10 @@ date of note: 2024-06-01
 - [[Gaussian Process Latent Variable Model]]
 
 #### Density Estimation
+
+- [[Integral Probability Metric between Probability Measures]]
+- [[Maximum Mean Discrepancy between Probability Measures via RKHS]]
+- [[Kernel Mean Embedding of Distribution]]
 
 - [[Parzen Kernel Density Estimation]]
 - [[k Nearest Neighbor Density Estimation]]

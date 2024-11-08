@@ -77,7 +77,11 @@ date of note: 2024-11-04
 - [[Lebesgue Density from Radon-Nikodym Derivative]]
 - [[Lebesgue Measure]]
 
+## Empirical Kernel Mean Embedding
 
+![[Kernel Mean Embedding of Distribution#^19844b]]
+
+- [[Kernel Mean Embedding of Distribution]]
 
 
 
