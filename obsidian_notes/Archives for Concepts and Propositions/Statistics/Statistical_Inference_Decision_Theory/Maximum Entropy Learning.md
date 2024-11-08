@@ -22,10 +22,10 @@ date of note: 2024-05-14
 ## Applications
 
 
-### Exponential Family
+### Exponential Family and Mixture Family
 
 - [[Maximum Entropy Learning of Exponential Family]]
-
+- [[Mixture Family of Distributions]]
 
 ### Boosting
 

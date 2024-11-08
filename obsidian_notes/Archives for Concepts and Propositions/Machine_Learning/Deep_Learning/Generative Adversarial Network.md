@@ -27,6 +27,26 @@ date of note: 2024-05-12
 >
 >-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 883
 
+>[!important] Definition
+>**Implicit generative models** do not include a *likelihood function* or *observation model*. 
+>- Instead, the *generating procedure* defines a valid *density* on the *output space* that forms an effective likelihood function: $$X = G_{\theta}(Z), \quad Z \sim \mathcal{P}$$ where $G_{\theta}$ is the *cumulative distribution function* of $X$ with respect to measure $\mathcal{P}$.
+>- The p.d.f. of $X$ is given by $$p_{X}(x) = \frac{\partial}{ \partial x^{1}}\,{}\ldots{}\,\frac{\partial}{ \partial x^{d}}\int_{z: G_{\theta}(z) \le x}\,p_{Z}(z)\,dz$$
+>	- We can use neural network to approximate $G_{\theta}$. 
+>	- Such models are sometimes called **generator networks** or **generative neural samplers**; they can also be throught of as **differentiable simulators**.
+>- The problem of learning an intractable implicit generative model is called **likelihood-free inference** or **simulation-based inference**.
+
+- [[Fundamental Theorem of Simulation]]
+- [[Cumulative Distribution Function of Random Variable]]
+- [[Quantile Function]]
+
+### Principle of Learning by Comparison
+
+![[Principle of Learning by Comparison for Implicit Generative Models#^d5e48f]]
+
+- [[Principle of Learning by Comparison for Implicit Generative Models]]
+
+
+
 ### Generative Adversarial Networks
 
 ![[generative_adversarial_network.png]]
@@ -35,6 +55,27 @@ date of note: 2024-05-12
 
 
 ## Explanation
+
+>[!info]
+>Compared to **explicit generative models** such as 
+>- [[Gaussian Process]]
+>- [[Factor Analysis]]
+>- [[Variational Auto-Encoder]]
+>- [[Denoising Diffusion Probabilistic Models and Diffusion Network]]
+>- [[Normalizing Flows]]
+>  
+>the *Generative Adversarial Network (GAN)* do *not* need to know the **likelihood function** class before. Instead, it generate samples based on **simulation**.
+
+- [[Monte Carlo and Applications]]
+
+>[!info]
+>*Likelihood-free inference* also forms the basis of the field known as **approximate Bayesian computation** or **ABC**.
+>- Both approximate Bayesian and GAN rely on a learning principle based on **_comparing real and simulated data_**.
+>  
+>-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 884  
+
+
+
 
 
 

@@ -56,6 +56,9 @@ date of note: 2024-07-09
 >[!info]
 >Moreover, since the **marginal distribution** of $X$ is the original **target distribution**, $f$, by generating a uniform variable on $\left\{ (x,u):  0 < u < f(x) \right\}$, we have *generated a random variable from* $f$. And this generation was produced **without using $f$** other than through the calculation of $f(x)$.
 
+## Neural Generator
+
+- [[Generative Adversarial Network]]
 
 
 

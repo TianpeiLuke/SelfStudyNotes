@@ -74,7 +74,7 @@ date of note: 2024-06-24
 >$$
 >\mathbb{D}^{(0)}\left(P\left\|\right.Q\right) = 2 \int_{\Omega}\,\left(\sqrt{ p(x)} - \sqrt{q(x)} \right)^2\,d\mu(x).
 >$$
->where the square root of it is the **Hellinger distance**
+>where the square root of it is the **Hellinger distance** [[Hellinger Distance between Distributions]]
 >$$
 >\frac{1}{2} \sqrt{\mathbb{D}^{(0)}\left(P\left\|\right.Q\right)} = \left\{ \frac{1}{2} \int_{\Omega}\,\left(\sqrt{ p(x)} - \sqrt{q(x)} \right)^2\,d\mu(x) \right\}^{1/2} 
 >$$

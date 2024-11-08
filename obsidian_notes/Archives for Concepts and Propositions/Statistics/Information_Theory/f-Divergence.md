@@ -202,13 +202,13 @@ date of note: 2024-05-07
 ## Example
 
 >[!example]
->$$f(x) := x\log(x),$$ we have the [[Kullback-Leibler Divergence]].
+>$$f(x) := x\log(x),$$ we have the **KL divergence** i.e. [[Kullback-Leibler Divergence]].
 >$$
 >\mathbb{D}_{f}\left(P\left\|\right.Q\right) = \int \frac{dP}{dQ} \log\left( \frac{dP}{dQ} \right) dQ = \int  \log\left( \frac{dP}{dQ} \right) dP = \mathbb{KL}\left( P \left\|\right. Q \right) .
 >$$
 
 >[!example]
->$$f(x) := -\log(x),$$ we have the **reversed** [[Kullback-Leibler Divergence]].
+>$$f(x) := -\log(x),$$ we have the **reversed KL divergence**, i.e. [[Kullback-Leibler Divergence]].
 >$$
 >\mathbb{D}_{f}\left(P\left\|\right.Q\right) = \int - \log\left( \frac{dP}{dQ} \right) dQ = \int  \log\left( \frac{dQ}{dP} \right) dQ = \mathbb{KL}\left( Q \left\|\right. P \right) .
 >$$
@@ -223,22 +223,28 @@ date of note: 2024-05-07
 >$$
 
 >[!example]
->$$f(x) := \frac{1}{2}\lvert x - 1 \rvert ,$$ we have the [[Total Variation between Measures]]
+>$$f(x) := \frac{1}{2}\lvert x - 1 \rvert ,$$ we have the **total variation** [[Total Variation between Measures]]
 >$$
 >\mathbb{D}_{f}\left(P\left\|\right.Q\right) = \frac{1}{2}\int \left\lvert \left( \frac{dP}{dQ} \right) - 1 \right\rvert  dQ = \frac{1}{2} \int |dP - dQ| = \frac{1}{2} \int |p - q|\,d\mu
 >$$
 
 >[!example]
->$$f(x) := \frac{1}{2}(\sqrt{ x } - 1)^2,$$ we have the **squared Hellinger distance**
+>$$f(x) := \frac{1}{2}(\sqrt{ x } - 1)^2,$$ we have the **squared Hellinger distance** [[Hellinger Distance between Distributions]]
 >$$
 >\mathbb{D}_{f}\left(P\left\|\right.Q\right) = \frac{1}{2}\int \left( \sqrt{\frac{dP}{dQ} }  - 1 \right)^2  dQ = \frac{1}{2} \int (\sqrt{ p } - \sqrt{ q })^2d\mu
 >$$
 
 >[!example]
->$$f(x) := (x - 1)^2,$$ we have the **$\chi^2$-divergence**
+>$$f(x) := (x - 1)^2,$$ we have the **$\chi^2$-divergence** [[Pearson Chi-square Divergence]]
 >$$
 >\mathbb{D}_{f}\left(P\left\|\right.Q\right) = \int \left(\frac{dP}{dQ}  - 1 \right)^2  dQ  = \int \frac{\left(dP - dQ\right)^2}{dQ}  = \chi^2\left(P\left\|\right.Q\right)
 >$$
+
+
+>[!example]
+
+- [[Jensen-Shannon Divergence]]
+
 
 
 

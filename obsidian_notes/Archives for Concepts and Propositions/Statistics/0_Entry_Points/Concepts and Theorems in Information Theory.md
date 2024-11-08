@@ -76,13 +76,16 @@ date of note: 2024-06-01
 - [[Maximum Entropy Learning]]
 - [[Divergence Function on Manifold]]
 
-### Information Divergence
+### Information Divergences
 
 - [[Divergence Function on Manifold]]
 - [[Kullback-Leibler Divergence]]
 - [[f-Divergence]]
 - [[alpha-Divergence]]
 - [[Renyi Divergence and Renyi Entropy]]
+- [[Hellinger Distance between Distributions]]
+- [[Jensen-Shannon Divergence]]
+- [[Pearson Chi-square Divergence]]
 - [[Fisher Divergence]]
 - [[Total Variation between Measures]]
 

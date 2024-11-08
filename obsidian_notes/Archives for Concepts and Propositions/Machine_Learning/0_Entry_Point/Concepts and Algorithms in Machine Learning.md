@@ -206,6 +206,10 @@ date of note: 2024-06-01
 - [[Meta Learning]]
 - [[Self-Supervised Learning]]
 
+- [[Maximum Likelihood Estimation]]
+- [[Maximum Entropy Learning]]
+- [[Principle of Learning by Comparison for Implicit Generative Models]]
+
 
 ### Statistical Learning Theory
 

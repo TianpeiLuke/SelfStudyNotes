@@ -71,6 +71,11 @@ date of note: 2024-10-28
 - [[Natural Parameter and Mean Parameter for Gaussian Distribution]]
 
 
+### Mixture Family
+
+- [[Mixture Family of Distributions]]
+
+
 ### Wasserstein Space and Gradient Flows
 
 - [[Concepts and Theorems of Optimal Transport]]

@@ -92,6 +92,6 @@ date of note: 2024-11-03
 - [[Exponential Embedding and Representation of Tangent Space of Statistical Manifold]]
 - [[Exponential Connection and Mixture Connection on Statistical Manifold]]
 - [[Smooth Embedding]]
-
+- [[Mixture Family of Distributions]]
 
 - [[Methods of Information Geometry by Amari]] pp 40 - 41

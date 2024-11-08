@@ -68,6 +68,11 @@ date of note: 2024-07-04
 - [[Off-Policy Monte Carlo Control]]
 - [[REINFORCE Algorithm with Baseline]]
 
+### Simulation-based Learning
+
+- [[Principle of Learning by Comparison for Implicit Generative Models]]
+- [[Generative Adversarial Network]]
+
 
 
 ## Explanation

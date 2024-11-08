@@ -21,7 +21,7 @@ date of note: 2024-09-15
 >
 >That is $$p(x) = (x- z)\,q(x)$$ where $z\in \mathbb{C}$ and $q(x)$ is a polynomial with *complex coefficients*, whose *degree is $1$ smaller* than that of $p$.
 
-
+- [[Polynomial Ring]]
 
 >[!important] Corollary
 >A **polynomial of degree** $n \ge 1$ with **complex coefficients** has, counting *multiplicities*, **exactly $n$ zeros** among the complex numbers.

@@ -129,6 +129,7 @@ date of note: 2024-06-24
 > \end{align}
 >$$ 
 
+- [[Mixture Family of Distributions]]
 
 >[!important] Theorem
 >A **mixture family** in the form of $$p(x; \theta) = \left\langle  \theta\,,\,T(x)    \right\rangle + h(x)$$ is **m-fiat** i.e. $$\Gamma_{i,j:k}^{(m)} = 0$$ and its **mixture parameters** $$\theta := (\theta^1 \,{,}\ldots{,}\,\theta^{n})$$ form an **m-affine coordinate system**.
