@@ -40,5 +40,6 @@ date of note: 2024-11-07
 
 - [[Statistical Manifold as Parametric Family]]
 
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]]  pp 57
 - Wikipedia [Hellinger_distance](https://en.wikipedia.org/wiki/Hellinger_distance)
 

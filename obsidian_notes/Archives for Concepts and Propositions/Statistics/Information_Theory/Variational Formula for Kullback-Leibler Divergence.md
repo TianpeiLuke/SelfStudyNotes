@@ -36,6 +36,7 @@ date of note: 2024-05-07
 \frac{dP}{dQ} = \frac{dP / d\lambda}{dQ / d\lambda} = \frac{\exp(f)}{\mathbb{E}_{Q}\left[ \exp\left(f\right) \right]}, \quad P\text{-a.s.}  \quad (1)
 >$$
 >where $dP / d\lambda$ and $dQ / d\lambda$  are *the Radon-Nikodym derivatives* of $P$ and $Q$ with respect to $\lambda$.
+>- This theorem is the **Donsker-Varadhan theorem.**
 
 ^fd2b28
 
@@ -48,8 +49,7 @@ date of note: 2024-05-07
 >[!info]
 >In practice, we would use the Lebesgue measure for $\lambda$ in $\mathbb{R}^n$ 
 
->[!info]
->This theorem is due to **Donsker and Varadhan**. 
+
 
 >[!info]
 >For **centered random variables**, 

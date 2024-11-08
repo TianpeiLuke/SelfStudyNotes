@@ -79,7 +79,7 @@ date of note: 2024-06-01
 - [[Maximum Likelihood Estimation]]
 - [[Maximum Likelihood Estimation via KL Divergence]]
 - [[Conditional Likelihood Function]]
-
+- [[Mixture Family of Distributions]]
 
 ### Least Square Estimation
 

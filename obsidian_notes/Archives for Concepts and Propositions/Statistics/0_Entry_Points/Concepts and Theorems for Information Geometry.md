@@ -53,6 +53,9 @@ date of note: 2024-10-28
 - [[Fisher Divergence]]
 - [[alpha-Divergence]]
 - [[Total Variation between Measures]]
+- [[Jensen-Shannon Divergence]]
+- [[Hellinger Distance between Distributions]]
+- [[Pearson Chi-square Divergence]]
 
 
 ### Exponential Family

@@ -43,6 +43,7 @@ routing, involve moving distributions, and that thread appears in all of the sem
 - [[Wasserstein Distance]]
 - [[Wasserstein Space]]
 - [[Variational Representation of Wasserstein Distance]]
+- [[Maximum Mean Discrepancy between Probability Measures via RKHS]]
 
 
 ### Entropy Regularization 

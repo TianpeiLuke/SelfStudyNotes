@@ -26,6 +26,8 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
+- [[Principle of Learning by Comparison for Implicit Generative Models]]
+- [[Generative Adversarial Network]]
 - [[Policy Gradient Optimization]]
 - [[Markov Decision Process]]
 

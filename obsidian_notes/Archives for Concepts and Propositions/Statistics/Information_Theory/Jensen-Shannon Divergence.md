@@ -26,7 +26,7 @@ date of note: 2024-11-07
 >$$ 
 >where $M$ is defined as the *mixture model* between $P$ and $Q$ $$M = \frac{1}{2}P + \frac{1}{2}Q$$
 >- Note that $P \ll M, \quad Q\ll M.$
->- The **Jensen-Shanon divergence (JSD)** is *symmetrized* and *smoothed version* of *KL-divergence*
+>- The **Jensen-Shanon divergence (JSD)** is *symmetrized* and *smoothed version* of *KL-divergence* $$\mathbb{D}_{JSD}\left( P \left\|\right. Q \right) = \mathbb{D}_{JSD}\left( Q \left\|\right. P \right)$$
 
 - [[Probability Space]]
 - [[Measure Space and Countably Additive Measure]]
@@ -51,7 +51,7 @@ date of note: 2024-11-07
 >- The **Jensen-Shanon divergence (JSD)** is seen as the total divergence for a cluster of distributions to its *barycenter* in *statistical manifold* under the **mixture connection.**
 
 - [[Exponential Connection and Mixture Connection on Statistical Manifold]]
-
+- [[Mixture Family of Distributions]]
 
 
 
@@ -80,9 +80,9 @@ date of note: 2024-11-07
 >[!important] Propostion
 >Let $(\Omega, \mathscr{F})$ be a meaureable space, and $P, Q$ are two probability measures on $\mathscr{F}$.
 >
->The **Jensen-Shanon divergence (JSD)** between $P$ and $Q$ is bounded between $[0,1]$ 
+>The **Jensen-Shanon divergence (JSD)** between $P$ and $Q$ is bounded between $[0,\log(2)]$ 
 >$$
-> 0 \le \mathbb{D}_{JSD}\left( P \left\|\right. Q \right) \le 1
+> 0 \le \mathbb{D}_{JSD}\left( P \left\|\right. Q \right) \le \log(2)
 >$$ 
 >- If $P_{1}\,{,}\ldots{,}\,P_{K}$ are probability measures on $\mathscr{F}$, then  
 >$$
@@ -106,25 +106,34 @@ date of note: 2024-11-07
 >[!important] Definition
 >Let $p_{1}\,{,}\ldots{,}\,p_{K}$ be $K$ p.d.f.s in a statistical manifold $\mathcal{S}$.
 >
->The **centroid** $C$ of  $p_{1}\,{,}\ldots{,}\,p_{K}$ is given by 
+>The **centroid** $C$ of  $p_{1}\,{,}\ldots{,}\,p_{K}$ is given by *moment-projection*
 >$$
 >C^{*} = \arg\min_{C} \frac{1}{K}\sum_{i=1}^{K}\mathbb{KL}\left( p_{i} \left\|\right.  C\right)
 >$$
 >which is the **mixture** of $p_{1}\,{,}\ldots{,}\,p_{K}$, i.e. $$C^{*} := \frac{1}{K}\sum_{i=1}^{K}p_{i} \in \mathcal{S}$$
 >and the corresponding *minimum total divergence* is the **Jensen-Shanon divergence (JSD)** $$\mathbb{D}_{JSD}\left( P_{1}\,{,}\ldots{,}\,P_{K} \right) = \min \frac{1}{K}\sum_{i=1}^{K}\mathbb{KL}\left( p_{i} \left\|\right.  C\right)$$
 
+- [[Information Projection and Moment Projection]]
+
 ## Convex-Concave Procedure
 
 - [[Difference of Convex Optimization and Concave-Convex Procedure]]
 
+## f-Divergence
 
+>[!info]
+>The *Jenson-Shannon divergence* is a $f$-divergence.
+
+![[f-Divergence#^a66a56]]
+
+- [[f-Divergence]]
 
 
 -----------
 ##  Recommended Notes and References
 
 
-- [[f-Divergence]]
+
 - [[Renyi Divergence and Renyi Entropy]]
 - [[alpha-Divergence]]
 - [[Kullback-Leibler Divergence]]

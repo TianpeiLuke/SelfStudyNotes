@@ -47,6 +47,7 @@ date of note: 2024-09-08
 
 - [[Contrastive Learning]]
 - [[Noise Contrastive Estimation]]
+- [[Density Ratio Estimation via Binary Classifiers]]
 - [[Generalized Linear Models]]
 - [[Multinomial Distribution]]
 - [[Softmax Function and Log-Sum-Exp Function]]

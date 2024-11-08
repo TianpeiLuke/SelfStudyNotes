@@ -70,6 +70,8 @@ date of note: 2024-05-12
 >\text{Lip}(f) := \min\{K: d_{\mathbb{R}}(f(x), f(y)) \le K\,d(x, y), \forall x, y \in \mathcal{X} \}
 >$$
 
+^7ba1e7
+
 - [[Variational Formulation of Optimal Transport]]
 - [[Lipschitz Continuous Function]]
 - [[Riesz-Markov Representation Theorem]]
@@ -105,6 +107,16 @@ date of note: 2024-05-12
 >I_{\mu}(f) := \int_{\mathcal{X}} f d\mu
 >$$
 >and $\mathcal{C}_{Lip}(\mathcal{X})$ is the space of Lipschitz continuous functions.
+
+### Compare with Variational Formulation of $f$-divergence
+
+>[!important]
+>- **Wasserstein distance** $$\mathcal{W}_{1}(\alpha, \beta) = \sup\left\{ \int_{\mathcal{X}}\phi\;d\alpha -  \int_{\mathcal{X}}\phi\;d\beta:  \;\forall \phi \in \mathcal{C}(\mathcal{X}) \text{ with } \text{Lip}(\phi) \le 1 \right\}$$
+>- **$f$-divergence** $$\mathbb{D}_{f}\left( \alpha \left\|\right. \beta \right) = \sup\left\{ \int_{\mathcal{X}}\,\phi\;d\alpha - \int_{\mathcal{X}}\,f^{*}(\phi)\,d\beta:\; \forall \phi \in \mathcal{B}(\mathcal{X}) \text{ and measureable}  \right\} $$
+
+- [[f-Divergence]]
+- [[Variational Formula for f-Divergence]]
+
 
 
 ## Proof

@@ -110,13 +110,39 @@ date of note: 2024-11-07
 - [[Variational Representation of Wasserstein Distance]]
 
 
-#### Statistical Divergence and Distance in Probability Space
+### Learning Discriminator 
+
+#### Density Ratio Estimation
+
+
+
+- [[Density Ratio Estimation via Binary Classifiers]]
+- [[Noise Contrastive Estimation]]
+- [[Jensen-Shannon Divergence]]
+
+#### Variational Representation of $f$-Divergence
+
+![[Variational Formula for f-Divergence#^9e3cf2]]
 
 - [[f-Divergence]]
-- [[Renyi Divergence and Renyi Entropy]]
-- [[alpha-Divergence]]
-- 
+- [[Variational Formula for f-Divergence]]
+- [[Variational Formula for Kullback-Leibler Divergence]]
 
+#### Wasserstein Distance and Integral Probability Metrics
+
+![[Variational Representation of Wasserstein Distance#^7ba1e7]]
+
+- [[Variational Representation of Wasserstein Distance]]
+- [[Wasserstein Distance]]
+- [[Wasserstein Space]]
+
+
+
+- [[Integral Probability Metric between Probability Measures]]
+- [[Total Variation between Measures]]
+
+
+- [[Maximum Mean Discrepancy between Probability Measures via RKHS]]
 
 
 
@@ -139,6 +165,6 @@ date of note: 2024-11-07
 - [[Generative Adversarial Network]]
 
 
-- [[Deep Learning by Goodfellow]]
-- [[Deep Learning Foundations and Concepts by Bishop]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 883 - 894
+- [[Deep Learning Foundations and Concepts by Bishop]] pp 533 - 544
+- [[Deep Learning by Goodfellow]] pp 679, 690

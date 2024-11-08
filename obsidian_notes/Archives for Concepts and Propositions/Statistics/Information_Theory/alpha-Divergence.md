@@ -120,3 +120,4 @@ date of note: 2024-06-24
 - [[Methods of Information Geometry by Amari]] pp 57
 - [[Introduction to Smooth Manifolds by Lee]]
 - [[Introduction to Riemannian Manifolds by Lee]]
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 56

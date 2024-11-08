@@ -3,6 +3,8 @@ tags:
   - concept
   - math/information_theory
   - math/information_geometry
+  - deep_learning/generative_models
+  - machine_learning/theory
 keywords:
   - f_divergence
 topics:
@@ -39,6 +41,7 @@ date of note: 2024-05-07
 ^e7fa76
 
 - [[Convex Function]]
+- [[Proper Convex Function]]
 - [[Absolute Continuity for Measures]]
 - [[Radon-Nikodym Derivative]]
 - [[Divergence Function on Manifold]]
@@ -73,6 +76,11 @@ date of note: 2024-05-07
 
 ## Explanation
 
+### Compare with Wasserstein Distance
+
+
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 893
+- [[Wasserstein Distance]]
 
 
 ## Properties
@@ -178,6 +186,16 @@ date of note: 2024-05-07
 
 - [[Sufficient Statistics]]
 
+## Variational Formulation
+
+![[Variational Formula for f-Divergence#^9e3cf2]]
+
+- [[Variational Formula for f-Divergence]]
+
+## Density Ratio Estimation
+
+- [[Density Ratio Estimation via Binary Classifiers]]
+
 
 ## Fisher metric and $\alpha$-Connection and Information Geometry
 
@@ -242,8 +260,22 @@ date of note: 2024-05-07
 
 
 >[!example]
+>$$f(x) := \frac{1}{2} x\log(x) - \frac{x+1}{2}\log \left(\frac{x+1}{2}\right),$$ we have the **Jenson-Shannon divergence** [[Jensen-Shannon Divergence]]
+>$$
+>\begin{align*}
+>\mathbb{D}_{f}\left(P\left\|\right.Q\right) &= \int \left( \frac{1}{2} \frac{dP}{dQ} \log\left( \frac{dP}{dQ} \right) - \frac{dP / dQ +1}{2}\log \left(\frac{dP / dQ+1}{2}\right) \right)  dQ  \\[5pt] 
+>&= \frac{1}{2}   \int \log\left( \frac{dP}{dQ} \right) dP -  \int \frac{dP  +dQ}{2}\log \left(\frac{dP + dQ}{2\,dQ}\right) \\[5pt] 
+>&= \frac{1}{2}   \int \log\left( \frac{dP}{dQ} \right) dP +  \int \frac{dP  +dQ}{2}\log \left(\frac{dQ}{(dP + dQ) / 2}\right) \\[5pt] 
+>&= \frac{1}{2}   \int \log\left( \frac{dP}{dQ} \right) dP + \frac{1}{2} \int \log \left(\frac{dQ}{(dP + dQ) / 2}\right)dP +  \frac{1}{2}\int \log \left(\frac{dQ}{(dP + dQ) / 2}\right)dQ \\[5pt] 
+>&= \frac{1}{2}   \int \log\left( \frac{dP}{dQ} \,\frac{dQ}{(dP + dQ) / 2}\right)dP +  \frac{1}{2}\int \log \left(\frac{dQ}{(dP + dQ) / 2}\right)dQ \\[5pt] 
+>&= \frac{1}{2}   \int \log\left( \frac{dP}{(dP + dQ) / 2}\right)dP +  \frac{1}{2}\int \log \left(\frac{dQ}{(dP + dQ) / 2}\right)dQ \\[5pt] 
+>&= \mathbb{D}_{JSD}\left( P \left\|\right. Q \right)
+>\end{align*}
+>$$
 
-- [[Jensen-Shannon Divergence]]
+^a66a56
+
+
 
 
 

@@ -113,6 +113,11 @@ date of note: 2024-08-16
 
 ## Explanation
 
+### Density Ratio Estimation Trick
+
+![[Density Ratio Estimation via Binary Classifiers#^010141]]
+
+- [[Density Ratio Estimation via Binary Classifiers]]
 ### Intractable Partition Function
 
 >[!quote]
@@ -163,13 +168,25 @@ date of note: 2024-08-16
 
 - [[Score Matching and Denoising Score Matching]]
 
-## Generative Adversarial Network
+
+## Learning by Comparison and Generative Adversarial Network
+
+>[!quote]
+>In most of this book, we rely on the **principle of maximum likelihood** for learning. 
+>
+>By maximizing the likelihood we effectively *minimize the KL divergence* between the **model** $q_{\theta}$ and the unknown true data distribution $p^{*}$, $$\min_{\theta}\,\mathbb{KL}\left( p^{*} \left\|\right. q_{\theta} \right)$$
+>
+>In **implicit models** we *cannot evaluate* $q_{\theta}(x)$, and thus cannot use maximum likelihood training. As implicit models provide a **sampling procedure**, we instead are searching for *learning principles* that *only use samples from the model*.
+>
+>-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 885
+
 
 >[!quote]
 >*Noise contrastive estimation* is based on the idea that a **good generative model** should be able to **distinguish data from noise**. A closely related idea is that a good generative model should be able to generate samples that no classifier can distinguish from data. This idea yields generative adversarial networks.
 >
 >-- [[Deep Learning by Goodfellow]] pp 614
 
+- [[Principle of Learning by Comparison for Implicit Generative Models]]
 - [[Generative Adversarial Network]]
 
 ## Contrastive Learning

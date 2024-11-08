@@ -114,6 +114,7 @@ date of note: 2024-06-01
 
 #### Noise Contrastive Estimation
 
+- [[Density Ratio Estimation via Binary Classifiers]]
 - [[Noise Contrastive Estimation]]
 - [[Contrastive Learning]]
 - [[Information Noise Contrastive Estimation as Contrastive Learning]]
@@ -187,7 +188,14 @@ date of note: 2024-06-01
 
 #### Generative Adversarial Network
 
-- [[Learning by Comparison for GAN]]
+- [[Principle of Learning by Comparison for Implicit Generative Models]]
+	- [[f-Divergence]]
+	- [[Variational Formula for f-Divergence]]
+	- [[Wasserstein Distance]]
+	- [[Variational Representation of Wasserstein Distance]]
+	- [[Integral Probability Metric between Probability Measures]]
+	- [[Maximum Mean Discrepancy between Probability Measures via RKHS]]
+	- [[Actor-Critic Algorithm]]
 - [[Generative Adversarial Network]]
 
 ### Bayesian Neural Network and Deep Ensemble Learning

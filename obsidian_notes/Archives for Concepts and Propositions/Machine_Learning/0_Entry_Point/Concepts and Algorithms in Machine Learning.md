@@ -80,6 +80,9 @@ date of note: 2024-06-01
 - [[Reproducing Kernel of RKHS]]
 - [[Representer Theorem]]
 
+- [[Integral Probability Metric between Probability Measures]]
+- [[Maximum Mean Discrepancy between Probability Measures via RKHS]]
+
 - [[Parzen Kernel Density Estimation]]
 - [[Kernel Principal Component Analysis]]
 

@@ -117,6 +117,7 @@ date of note: 2024-07-21
 
 - [[Product Measure]]
 - [[Probabilistic Graphical Models]]
+- [[Mixture Family of Distributions]]
 
 >[!important] Proposition
 >Let $\mathcal{P}$ be a distribution over $(X_{1}\,{,}\ldots{,}\,X_{n})$, and let $\mathcal{G}$ be a  **Bayesian network structure**. 
