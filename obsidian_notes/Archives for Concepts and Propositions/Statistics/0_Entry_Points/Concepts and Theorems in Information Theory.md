@@ -76,7 +76,7 @@ date of note: 2024-06-01
 - [[Maximum Entropy Learning]]
 - [[Divergence Function on Manifold]]
 
-### Information Divergences
+### Information Divergences and Related Metrics
 
 - [[Divergence Function on Manifold]]
 - [[Kullback-Leibler Divergence]]
@@ -89,6 +89,9 @@ date of note: 2024-06-01
 - [[Fisher Divergence]]
 - [[Total Variation between Measures]]
 
+- [[Wasserstein Distance]]
+- [[Integral Probability Metric between Probability Measures]]
+- [[Maximum Mean Discrepancy between Probability Measures via RKHS]]
 
 
 
