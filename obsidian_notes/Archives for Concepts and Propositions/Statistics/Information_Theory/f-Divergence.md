@@ -196,6 +196,25 @@ date of note: 2024-05-07
 
 - [[Density Ratio Estimation via Binary Classifiers]]
 
+## Wasserstein Distance and Integral Probability Metric
+
+![[integral_prob_f_diverg.png]]
+
+>[!important]
+>The only **integral probability metric** that is also a *$f$-divergence* is the **total variation** of measure.
+>
+>$$
+>\begin{align*}
+>V(P, Q) &:= \sup_{A\in \mathscr{F}}\lvert  P(A) - Q(A) \rvert  \\[5pt]
+>&= \sup_{\mathbb{1} \in \mathcal{F}}\left\{ \left\lvert \int_{\Omega}\mathbb{1}_{A}\,P - \int_{\Omega}\mathbb{1}_{A}\,Q   \right\rvert   \right\} 
+>\end{align*}
+>$$
+>That is $$\mathcal{F} := \left\{ \mathbb{1}_{A}: \;A\in \mathscr{F} \right\} $$
+
+- [[Integral Probability Metric between Probability Measures]]
+- [[Maximum Mean Discrepancy between Probability Measures via RKHS]]
+- [[Wasserstein Distance]]
+
 
 ## Fisher metric and $\alpha$-Connection and Information Geometry
 

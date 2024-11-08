@@ -19,7 +19,7 @@ date of note: 2024-11-07
 ## Concept Definition
 
 >[!important]
->**Name**: Chi-squared Divergence
+>**Name**: Chi-squared Divergence or $\chi^2$-divergence
 
 >[!important] Definition
 >if $P$ and $Q$ are *probability measures* on a measurable space $(\Omega, \mathscr{F})$, and $P$ is *absolutely continuous* with respect to $Q$, 

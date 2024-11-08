@@ -79,6 +79,8 @@ date of note: 2024-11-07
 
 ## $f$-Divergence
 
+![[integral_prob_f_diverg.png]]
+
 >[!important]
 >The only **integral probability metric** that is also a *$f$-divergence* is the **total variation** of measure.
 >

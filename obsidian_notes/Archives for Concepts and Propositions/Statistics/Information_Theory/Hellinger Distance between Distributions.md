@@ -41,7 +41,6 @@ date of note: 2024-11-07
 ## Explanation
 
 
-
 ## $f$-divergence and $\alpha$-divergence
 
 ![[f-Divergence#^b23587]]
