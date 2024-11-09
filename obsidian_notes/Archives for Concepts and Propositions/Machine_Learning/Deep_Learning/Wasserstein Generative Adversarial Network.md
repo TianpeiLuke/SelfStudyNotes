@@ -34,8 +34,8 @@ date of note: 2024-05-12
 >X\sim p^{*}, \quad X' = g_{\theta}(Z) \sim q_{\theta}(Z),\; Z\sim p(z)
 >$$
 >
->At iteration $t$, the *training* for **Wasserstein-Generative Adversarial Network (Wasserstein-GAN)** consists of two steps
->- Given $\theta^{(t-1)}$,  training of **discriminator** or **critic** $D_{\psi}$ via 
+>At iteration $t$, the *training* for **Wasserstein-Generative Adversarial Network (Wasserstein-GAN)** consists of two sub-routines
+>- Given $\theta^{(t-1)}$,  training of **discriminator** or **critic** $D_{\psi}$ for $K$ steps via 
 >$$
 >\begin{align*}
 >\psi &= \arg\max_{\psi}\left\{ \mathbb{E}_{p^{*}}\left[ D_{\psi}(X)   \right] -  \mathbb{E}_{Z\sim p(z)}\left[D_{\psi}(g_{\theta^{(t-1)}}(Z))  \right]  \right\} 
