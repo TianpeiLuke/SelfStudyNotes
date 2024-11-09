@@ -40,6 +40,22 @@ date of note: 2024-09-09
 
 ### Margin-Loss Function
 
+>[!important] Definition
+>Let $(X,Y)$ be sample from a joint distribution $P$ on $\mathcal{X}\times \mathcal{Y}$ and $$f: \mathcal{X} \to \mathcal{Y}$$ be measurable function. 
+>
+>A *loss function* $\ell: \mathcal{Y}\times \mathcal{Y} \to \mathbb{R}_{+}$ is called a **margin-based loss** function if it is of the form 
+>$$
+>\ell(Y, f(X)) := \hat{\ell} \left(Yf(X)\right)
+>$$
+>where 
+>- $\hat{\ell}: \mathcal{Y} \to \mathbb{R}$ is a *convex function*, and
+>- $yf(x)$ is called the **margin.**
+>  
+>The **margin-based risk** is defined as $$R_{\ell}(f) := \mathbb{E}_{ X,Y }\left[ \hat{\ell}(Y\,f(X)) \right]$$  
+
+- [[Statistical Decision Problem]]
+- [[Empirical Risk Minimization]]
+- [[Convex Function]]
 
 
 
