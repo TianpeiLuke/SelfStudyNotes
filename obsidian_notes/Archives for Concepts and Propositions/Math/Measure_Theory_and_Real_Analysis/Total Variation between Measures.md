@@ -27,7 +27,7 @@ date of note: 2024-05-23
 >The **total variation** or **variational distance** between $\mathcal{P}$ and $\mathcal{Q}$ is defined by
 >$$
 > \begin{align}
-> V(\mathcal{P},\mathcal{Q}) &:= \sup_{A \in \mathscr{F}} |\mathcal{P}(A) - \mathcal{Q}(A)| 
+> V(\mathcal{P},\mathcal{Q}) &:= \sup_{A \in \mathscr{F}} |\mathcal{P}(A) - \mathcal{Q}(A)| := \lVert P - Q \rVert_{TV} 
 > \end{align}
 >$$ 
 

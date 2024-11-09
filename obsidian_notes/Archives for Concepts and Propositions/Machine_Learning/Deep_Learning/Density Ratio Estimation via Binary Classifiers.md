@@ -107,6 +107,7 @@ date of note: 2024-11-07
 >  
 >-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 887  
 
+### Total Variation and Hinge Loss
 
 >[!example]
 >For $\mathcal{Y} := \left\{ -1, +1 \right\}$, the **total variation distance** corresponds to the **hinge loss** $$\ell(\alpha) = \max\left\{0 , 1- \alpha \right\} = [1- \alpha]_{+}$$
@@ -120,11 +121,11 @@ date of note: 2024-11-07
 > &=  \mathbb{E}_{ X| Y =1 }\left[ \max\left\{0, 1- h^{*}(X) \right\}  \right] + \mathbb{E}_{ X| Y =-1 }\left[ \max\left\{0, 1+ h^{*}(X) \right\}  \right]\\[8pt]
 > &=  \mathbb{E}_{ P }\left[ \max\left\{0, 1- h^{*}(X) \right\}  \right] + \mathbb{E}_{ Q }\left[ \max\left\{0, 1+ h^{*}(X) \right\}  \right]\\[8pt]
 > &= 2\,\mathbb{E}_{X}\left[ \min\left\{ P(X)\, , \, Q(X) \right\}  \right] \\[8pt] 
-> &= 2 - 2V(P,Q)  \\[8pt] 
+> &= 2 - 2\lVert P - Q \rVert_{TV}   \\[8pt] 
 >\end{align*}
 >$$
 >or
->$$\mathbb{E}_{ X, Y }\left[ \max\left\{0, 1- Y\,h^{*}(X) \right\}  \right] = 1 - V(P, Q)$$
+>$$\mathbb{E}_{ X, Y }\left[ \max\left\{0, 1- Y\,h^{*}(X) \right\}  \right] = 1 - \lVert P - Q \rVert_{TV} $$
 
 
 ^9345f7
@@ -132,6 +133,8 @@ date of note: 2024-11-07
 - [[Total Variation between Measures]]
 - [[Hinge Loss as Surrogate Loss Function]]
 - [[Bayes Error and Bayes Classifier]]
+
+### Hellinger Distance and Exponential Loss
 
 >[!example]
 >The **Hellinger distance** corresponds to the **exponential loss** $$\ell(\alpha) = \exp(-\alpha)$$
@@ -161,6 +164,8 @@ date of note: 2024-11-07
 - [[Hellinger Distance between Distributions]]
 - [[Exponential Loss Minimization for AdaBoost]]
 
+### Jensen-Shannon Divergence and Logistic Loss
+
 >[!example]
 >The **Jensen-Shannon divergence** corresponds to the **logistic loss** $$\ell(\alpha) = \log \left( 1 + \exp(-\alpha) \right)$$
 >- The Bayes classifier is given by $$h^{*}(x) = \log \frac{P(x)}{Q(x)}$$
@@ -187,8 +192,10 @@ date of note: 2024-11-07
 - [[Jensen-Shannon Divergence]]
 - [[Logistic Regression]]
 
+### Triangular Discrimination Distance and Least Square Loss
+
 >[!example]
->The **triangular discrimination distance** corresponds to the **least square loss** $$\ell(\alpha) = (1 - \alpha)^2$$
+>The **triangular discrimination** corresponds to the **least square loss** $$\ell(\alpha) = (1 - \alpha)^2$$
 >- The Bayes classifier is given by $$h^{*}(x) = \frac{P(x) - Q(x)}{P(x) + Q(x)}$$
 >- Assume $$\pi:= P(Y=1) = 1 - \pi := P(Y = 0) = \frac{1}{2}.$$
 >
@@ -212,8 +219,8 @@ date of note: 2024-11-07
 >$$
 >where $$\Delta(P, Q) := \frac{1}{2}\int \frac{\left(P(x) - Q(x)\right)^2}{P(x) + Q(x)} \,dx $$
 
-- [[Chi-squared Divergence]]
 - [[Least Square Estimation]]
+- Topsoe, F. (2000). Some inequalities for information divergence and related measures of discrimination. _IEEE Transactions on information theory_, _46_(4), 1602-1609.
 
 
 ## Connection with Integral Probability Metric

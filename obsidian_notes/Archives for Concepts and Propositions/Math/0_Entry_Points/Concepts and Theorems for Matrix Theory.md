@@ -203,6 +203,7 @@ date of note: 2024-07-13
 - [[Square Root of Positive Semidefinite Transformation and Absolute Value]]
 - [[Polar Decomposition of Transformation]]
 - [[Procrustes Problem as Approximation by Unitary Transformation]]
+- [[Affine Invariant Riemannian Metric in Space of Symmetric Positive Definite Matrices]]
 
 #### Spectral Theorem
 
