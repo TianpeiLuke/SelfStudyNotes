@@ -135,17 +135,17 @@ date of note: 2024-11-07
 >V(p^{*}, q_{\theta}) := \max_{\psi} \mathbb{E}_{ X,Y }\left[\ell \left( Y\,D_{\psi}(X) \right)  \right]
 >\end{align*}
 >$$
->- If $\ell$ is **binary cross-entropy loss**, the learning objective becomes $$V(p^{*}, q_{\theta}) := \frac{1}{2} \sup_{\psi}\left\{ \mathbb{E}_{p^{*}}\left[ \log \left(  D_{\psi}(X) \right)  \right] +  \mathbb{E}_{q_{\theta}}\left[ \log \left( 1 - D_{\psi}(X) \right) \right] \right\}  $$
->	- The optimal critic is $$D_{\psi^{*}} := \frac{p^{*}}{p^{*} + q_{\theta}}$$
->	- Thus the minimum risk is $$V^{*}(p^{*}, q_{\theta}) = \mathbb{D}_{JSD}\left( p^{*} \left\|\right. q_{\theta} \right) - \log(2).$$
->	- As a result, the generative model parameter $\theta$ can be learned by minimizing the **Jensen-Shannon divergence** 
->	  $$
->	  \begin{align*}
->	  \theta &= \arg\min_{\theta}\mathbb{D}_{JSD}\left( p^{*} \left\|\right. q_{\theta} \right) \\[5pt]
->	  &= \arg\min_{\theta}\max_{\psi}\left\{ \mathbb{E}_{p^{*}}\left[ \log \left(  D_{\psi}(X) \right)  \right] +  \mathbb{E}_{q_{\theta}}\left[ \log \left( 1 - D_{\psi}(X) \right) \right]  \right\} 
->	  \end{align*}
->	  $$
->	- This is a **min-max problem** that is defined in the original **Generative Adversarial Network**.
+
+#### Binary Cross Entropy Loss
+
+![[Density Ratio Estimation via Binary Classifiers#^e7d9e0]]
+
+>[!example]
+>If $\ell$ is **binary cross-entropy loss**, the learning objective becomes $$V(p^{*}, q_{\theta}) := \frac{1}{2} \left\{ \mathbb{E}_{p^{*}}\left[ \log \left(  D_{\psi}(X) \right)  \right] +  \mathbb{E}_{q_{\theta}}\left[ \log \left( 1 - D_{\psi}(X) \right) \right] \right\}  $$
+>- The optimal critic is $$D_{\psi^{*}} := \frac{p^{*}}{p^{*} + q_{\theta}}$$
+>- Thus the minimum risk is $$V^{*}(p^{*}, q_{\theta}) = \mathbb{D}_{JSD}\left( p^{*} \left\|\right. q_{\theta} \right) - \log(2).$$
+>- As a result, the generative model parameter $\theta$ can be learned by minimizing the **Jensen-Shannon divergence**  $$\begin{align*} &\min_{\theta}\mathbb{D}_{JSD}\left( p^{*} \left\|\right. q_{\theta} \right) \\[5pt] &= \min_{\theta}\max_{\psi}\left\{ \mathbb{E}_{p^{*}}\left[ \log \left(  D_{\psi}(X) \right)  \right] +  \mathbb{E}_{q_{\theta}}\left[ \log \left( 1 - D_{\psi}(X) \right) \right]  \right\} \end{align*}$$
+>- This is a **min-max problem** that is defined in the original **Generative Adversarial Network**.
 
 ^b00731
 
@@ -156,7 +156,38 @@ date of note: 2024-11-07
 - [[Noise Contrastive Estimation]]
 - [[Generative Adversarial Network]]  
 
-![[Density Ratio Estimation via Binary Classifiers#^e7d9e0]]
+#### Exponential Loss
+
+![[Density Ratio Estimation via Binary Classifiers#^f9387f]]
+
+>[!example]
+>If $\ell$ is **exponential loss**, the learning objective becomes $$V(p^{*}, q_{\theta}) := \frac{1}{2} \left\{ \mathbb{E}_{p^{*}}\left[ \sqrt{ - \frac{1 - D_{\psi}(X)}{D_{\psi}(X)} } \right] +  \mathbb{E}_{q_{\theta}}\left[ \sqrt{- \frac{D_{\psi}(X)}{1 - D_{\psi}(X)}} \right] \right\}  $$
+>- The optimal critic is $$D_{\psi^{*}} := \frac{1}{2} \log \left(\frac{p^{*}}{q_{\theta}}\right)$$
+>- Thus the minimum risk is the **squared Hellinger distance** $$V^{*}(p^{*}, q_{\theta}) = H^2(p^{*}, q_{\theta})- 1.$$
+
+- [[Exponential Loss Minimization for AdaBoost]]
+- [[Hellinger Distance between Distributions]]
+
+#### Hinge Loss
+
+![[Density Ratio Estimation via Binary Classifiers#^9345f7]]
+
+>[!example]
+>If $\ell$ is **hinge loss**, the learning objective becomes 
+>$$
+>\begin{align*}
+>V(p^{*}, q_{\theta}) &:= \mathbb{E}_{p^{*}}\left[ - \max\left\{ 0, 1- \log \left(\frac{D_{\psi}(X)}{1 - D_{\psi}(X)}\right) \right\}   \right]  \\[5pt]
+>&+  \mathbb{E}_{q_{\theta}}\left[ - \max\left\{ 0, 1 + \log \left(\frac{D_{\psi}(X)}{1 - D_{\psi}(X)}\right) \right\}   \right] 
+>\end{align*}
+>$$
+>- The optimal critic is $$D_{\psi^{*}} := \text{sgn}(p^{*} - q_{\theta} )$$
+>- Thus the minimum risk is the **total variation** $$V^{*}(p^{*}, q_{\theta}) = \lVert  p^{*} - q_{\theta} \rVert_{TV}  - 1$$
+
+- [[Hinge Loss as Surrogate Loss Function]]
+- [[Total Variation between Measures]]
+
+
+
 
 >[!quote]
 >This establishes a connection between **optimal binary classification** and **distributional divergences**. 
