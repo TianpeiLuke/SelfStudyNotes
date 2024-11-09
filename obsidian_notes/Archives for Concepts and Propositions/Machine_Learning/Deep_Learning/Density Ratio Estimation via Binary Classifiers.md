@@ -137,7 +137,7 @@ date of note: 2024-11-07
 ### Hellinger Distance and Exponential Loss
 
 >[!example]
->The **Hellinger distance** corresponds to the **exponential loss** $$\ell(\alpha) = \exp(-\alpha)$$
+>The **squared Hellinger distance** corresponds to the **exponential loss** $$\ell(\alpha) = \exp(-\alpha)$$
 >- The Bayes classifier is given by $$h^{*}(x) = \frac{1}{2}\log \frac{P(x)}{Q(x)}$$
 >- Assume $$\pi:= P(Y=1) = 1 - \pi := P(Y = 0) = \frac{1}{2}.$$
 >
@@ -233,8 +233,8 @@ date of note: 2024-11-07
 >\begin{align*}
 >R^{\ell}(h) &:=  \inf_{h\in \mathcal{F}} \mathbb{E}_{ X,Y }\left[ \ell(Y\,h(X)) \right]  \\[5pt]
 >&=  \inf_{h\in \mathcal{F}} \mathbb{E}_{ X,Y }\left[ -2Y\,h(X) \right]\\[5pt] 
->&= \inf_{h\in \mathcal{F}}\left\{ \pi\,  \mathbb{E}_{X|Y=1}\left[ 2h(X) \right] +  (1-\pi)\,  \mathbb{E}_{X|Y=-1}\left[ -2h(X) \right] \right\} \\[5pt] 
->&= \inf_{h\in \mathcal{F}}\left\{  \mathbb{E}_{P}\left[ h(X) \right] -   \mathbb{E}_{Q}\left[ h(X) \right] \right\} \\[5pt] 
+>&= \sup_{h\in \mathcal{F}}\left\{ \pi\,  \mathbb{E}_{X|Y=1}\left[ 2h(X) \right] +  (1-\pi)\,  \mathbb{E}_{X|Y=-1}\left[ -2h(X) \right] \right\} \\[5pt] 
+>&= \sup_{h\in \mathcal{F}}\left\{  \mathbb{E}_{P}\left[ h(X) \right] -   \mathbb{E}_{Q}\left[ h(X) \right] \right\} \\[5pt] 
 >&:= D_{\mathcal{F}}(P, Q)
 >\end{align*} 
 >$$
