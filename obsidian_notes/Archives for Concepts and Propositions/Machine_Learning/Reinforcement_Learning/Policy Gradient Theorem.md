@@ -40,7 +40,7 @@ date of note: 2024-05-12
 >$$
 >respectively. 
 >
->Then the **gradient of average reward** is given by 
+>Then the **gradient** of *reward* or *average reward* is given by 
 >$$
 > \begin{align}
 > \nabla_{\theta}\,\mathcal{R}(\theta) &\propto \sum_{s}\mu_{\pi(\theta)}(s)\, \sum_{a} \nabla_{\theta}\pi(a \,|\,s, \theta)\,q_{\pi}(s, a) & \\[5pt]
