@@ -29,22 +29,39 @@ date of note: 2024-05-12
 ![[Policy Gradient Optimization#^f0d871]]
 
 >[!important] Policy Gradient Theorem
->For both the **episodic case** and **continuing case** under *ergodic MDP*, the objective functions $\mathcal{R}(\theta)$ are defined as in \eqref{eqn: obj_policy_grad_episodic} and \eqref{eqn: obj_policy_grad_continuing} respectively. 
+>For both the **episodic case** and **continuing case** under *ergodic MDP*, the objective functions $\mathcal{R}(\theta)$ are defined as in 
+>$$
+>\begin{align}
+>\mathcal{R}(\theta) &:= v_{\pi(\theta)}(s_{0})  &\\[5pt]
+>&=\sum_{a}\pi(a |s_{0}, \theta)\,q_{\pi}(s_{0}, a) & \text{ episodic case }  \\[10pt]
+>\mathcal{R}(\theta) &:= r(\pi(a |s, \theta))  & \\[5pt]
+> &= \sum_{s}\mu_{\pi(\theta)}(s)\,\sum_{a}\pi(a |s, \theta)\,\sum_{s', r}p(s', r| s, a)\,r, & \text{ continuing case } 
+>\end{align}
+>$$
+>respectively. 
 >
 >Then 
 >$$
 > \begin{align}
-> \grad{\mb{\theta}}{\cR(\mb{\theta})} &\propto \sum_{s}\mu_{\pi(\mb{\theta})}(s)\sum_{a}\grad{\mb{\theta}}{\pi(a |\mb{s}, \mb{\theta})}q_{\pi}(\mb{s}, a) \label{eqn: policy_grad_theorem}\\
-> &= \E{\mb{s} \sim \mb{\mu}_{\pi(\mb{\theta})}}{\sum_{a}\grad{\mb{\theta}}{\pi(a |\mb{s}, \mb{\theta})}q_{\pi}(\mb{s}, a) } \label{eqn: policy_grad_theorem2} \\
-> &= \E{\mb{s} \sim \mb{\mu}_{\pi(\mb{\theta})}}{\E{a \sim \pi(a|\mb{s}, \mb{\theta})}{\grad{\mb{\theta}}{\log \pi(a |\mb{s}, \mb{\theta})}q_{\pi}(\mb{s}, a) }},\label{eqn: policy_grad_theorem3}
+> \nabla_{\theta}\,\mathcal{R}(\theta) &\propto \sum_{s}\mu_{\pi(\theta)}(s)\, \sum_{a} \nabla_{\theta}\pi(a \,|\,s, \theta)\,q_{\pi}(s, a) & \\[5pt]
+> &=  \mathbb{E}_{ S \sim \mu_{\pi(\theta)} }\left[  \sum_{a} \nabla_{\theta}\,\pi(a \,|\,S, \theta)\,q_{\pi}(S, a)  \right]  & \\[5pt]
+> &=  \mathbb{E}_{ S \sim \mu_{\pi(\theta)} }\left[\,\mathbb{E}_{ A \sim  \pi(a\,|\,s, \theta)  }\left[\, \nabla_{\theta} \log \pi(A \,|\,S\,,\,\theta)\,q_{\pi}(S, A) \right] \right], & (1)
 > \end{align}
 >$$  
->where $\mb{\mu}_{\pi}$ is the limiting state distribution under $\pi$, $\mu(s) = \lim_{t\rightarrow \infty}Pr\{S_{t} = s| S_{0}, \pi\}$, (or on-policy distribution under policy $\pi$).  In particular, the gradient of objective does not depend on the gradient of state distribution $\grad{}{\mb{\mu}}$.  For ergodic MDP with average reward objective, the equation \eqref{eqn: policy_grad_theorem} is exact. For episodic task, the constant of proportionality is the average length of an episode.
-
-
+>where 
+>- $\mu_{\pi}$ is the **limiting state distribution** under $\pi$,  $$\mu_{\pi}(s) = \lim_{t\rightarrow \infty}P\{S_{t} = s| S_{0}, \pi\},$$ (or **on-policy distribution** under policy $\pi$).  
+>
+>In particular, the **gradient of objective** does **not depend** on the **gradient of state distribution** $\nabla \mu$.  
+>
+>- For **ergodic MDP** with **average reward objective**, the equation $(1)$  is **exact**. 
+>- For **episodic task**, the constant of *proportionality* is the *average length* of an episode.
 
 - [[Policy Gradient Optimization]]
 - [[Markov Decision Process]]
+- [[Invariant Measure and Stationary Distribution]]
+- [[Classification of States of Markov Chain]]
+- [[Kac Theorem on Markov Chain]]
+
 
 ## Explanation
 
