@@ -169,6 +169,15 @@ date of note: 2024-05-12
 
 ## Variants
 
+### GAN with other Loss
+
+![[Principle of Learning by Comparison for Implicit Generative Models#^d327d2]]
+
+![[Principle of Learning by Comparison for Implicit Generative Models#^0909f6]]
+
+- [[Principle of Learning by Comparison for Implicit Generative Models]]
+
+
 ### $f$-GAN
 
 ![[f-Generative Adversarial Network#^ebb70c]]

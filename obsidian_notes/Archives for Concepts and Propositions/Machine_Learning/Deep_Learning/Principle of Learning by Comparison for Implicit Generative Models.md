@@ -165,6 +165,8 @@ date of note: 2024-11-07
 >- The optimal critic is $$D_{\psi^{*}} := \frac{1}{2} \log \left(\frac{p^{*}}{q_{\theta}}\right)$$
 >- Thus the minimum risk is the **squared Hellinger distance** $$V^{*}(p^{*}, q_{\theta}) = H^2(p^{*}, q_{\theta})- 1.$$
 
+^d327d2
+
 - [[Exponential Loss Minimization for AdaBoost]]
 - [[Hellinger Distance between Distributions]]
 
@@ -182,6 +184,8 @@ date of note: 2024-11-07
 >$$
 >- The optimal critic is $$D_{\psi^{*}} := \text{sgn}(p^{*} - q_{\theta} )$$
 >- Thus the minimum risk is the **total variation** $$V^{*}(p^{*}, q_{\theta}) = \lVert  p^{*} - q_{\theta} \rVert_{TV}  - 1$$
+
+^0909f6
 
 - [[Hinge Loss as Surrogate Loss Function]]
 - [[Total Variation between Measures]]

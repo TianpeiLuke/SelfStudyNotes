@@ -54,7 +54,6 @@ date of note: 2024-06-01
 - [[Dynamic Programming for MDP]]
 - [[Prediction and Control Problems in Reinforcement Learning]]
 - [[Policy Iteration Algorithm]]
-- [[Valued-based and Policy-based Reinforcement Learning]]
 - [[Value Iteration Algorithm]]
 - [[Generalized Policy Iteration]]
 - [[On-Policy and Off-Policy Reinforcement Learning]]

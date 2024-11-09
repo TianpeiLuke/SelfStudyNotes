@@ -61,6 +61,7 @@ date of note: 2024-05-12
 - [[Invariant Measure and Stationary Distribution]]
 - [[Classification of States of Markov Chain]]
 - [[Kac Theorem on Markov Chain]]
+- [[Value Function and Bellman Equation for MDP]]
 
 
 ## Explanation
