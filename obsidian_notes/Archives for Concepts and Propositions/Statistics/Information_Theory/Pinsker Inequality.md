@@ -108,4 +108,5 @@ date of note: 2024-05-23
 - [[Optimal Transport Old and New by Villani]]
 - [[Elements of Information Theory by Cover]]
 
+- [[High Dimensional Statistics A Non-Asymptotic Viewpoint by Wainwright]] pp 490
 - [[Concentration Inequalities by Boucheron]]

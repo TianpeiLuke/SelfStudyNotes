@@ -77,7 +77,7 @@ date of note: 2024-11-07
 ## Connection to $f$-Divergence
 
 >[!important] Theorem (Nguyen, X., Wainwright, M. J., & Jordan, M. I. (2009))
->Let $X,Y$ be sample from joint distribution on $\mathcal{X}\times \left\{ -1,1 \right\}$ and $P,Q$ be conditional probability measures on $\mathcal{X}$ given $Y=1$ and $Y=-1$, respectively.
+>Let $X,Y$ be sample from joint distribution on $\mathcal{X}\times \left\{ -1,1 \right\}$ and $P,Q$ be conditional probability measures on $\mathcal{X}$ given $Y=1$ and $Y=-1$, respectively. $$P(x) = P(x | Y=1), \quad Q(x) = P(x | Y=0).$$
 >
 >For any **margin-based surrogate loss** function $\ell$, there *exists* an **$f$-divergence** such that $$R^{\ell}_{\mathcal{F}} = - \mathbb{D}_{f}\left( P \left\|\right. Q \right) $$ for some **lower semi-continuous convex function** $f$
 >
@@ -120,12 +120,12 @@ date of note: 2024-11-07
 > &=  \mathbb{E}_{ X| Y =1 }\left[ \max\left\{0, 1- h^{*}(X) \right\}  \right] + \mathbb{E}_{ X| Y =-1 }\left[ \max\left\{0, 1+ h^{*}(X) \right\}  \right]\\[8pt]
 > &=  \mathbb{E}_{ P }\left[ \max\left\{0, 1- h^{*}(X) \right\}  \right] + \mathbb{E}_{ Q }\left[ \max\left\{0, 1+ h^{*}(X) \right\}  \right]\\[8pt]
 > &= 2\,\mathbb{E}_{X}\left[ \min\left\{ P(X)\, , \, Q(X) \right\}  \right] \\[8pt] 
-> &= 1 - V(P,Q)  \\[8pt] 
+> &= 2 - 2V(P,Q)  \\[8pt] 
 >\end{align*}
 >$$
 >or
->$$\mathbb{E}_{ X, Y }\left[ \max\left\{0, 1- Y\,h^{*}(X) \right\}  \right] = 1 - V(P_{X,Y}, Q_{X,Y})$$
->where $$P_{X,Y} = P(X, Y=1),\; Q_{X,Y} = P(X, Y=-1).$$
+>$$\mathbb{E}_{ X, Y }\left[ \max\left\{0, 1- Y\,h^{*}(X) \right\}  \right] = 1 - V(P, Q)$$
+
 
 ^9345f7
 
@@ -145,15 +145,16 @@ date of note: 2024-11-07
 > &=  \mathbb{E}_{P}\left[ \exp \left( - h^{*}(X) \right)  \right] +  \mathbb{E}_{Q}\left[ \exp \left( h^{*}(X) \right)  \right]\\[5pt]
 > &= \int \sqrt{\frac{q(x)}{p(x)}}p(x)dx + \int \sqrt{\frac{p(x)}{q(x)}}q(x)dx\\[5pt]
 > &= 2 \int_{\mathcal{X}}\sqrt{ p(x)\,q(x) }dx \\[5pt]
-> &= 1 - \int_{\mathcal{X}} \left( \sqrt{ p(x) } - \sqrt{ q(x) } \right)^2\,dx \\[5pt]
-> &=  1 - 2H^2(P,Q) 
+> &= \int (p(x) + q(x)) dx - \int \left(p(x) + q(x) - 2\sqrt{ p(x)\,q(x) }\right) dx \\[5pt]
+> &= 2 - \int_{\mathcal{X}} \left( \sqrt{ p(x) } - \sqrt{ q(x) } \right)^2\,dx \\[5pt]
+> &=  2 - 2H^2(P,Q) 
 >\end{align*} 
 >$$
 >or
 >$$
->\mathbb{E}_{ X, Y }\left[ \exp \left( - Y\,h^{*}(X) \right)  \right] = 1 - 2H^2(P_{X,Y},Q_{X, Y}) 
+>\mathbb{E}_{ X, Y }\left[ \exp \left( - Y\,h^{*}(X) \right)  \right] = 1 - H^2(P,Q) 
 >$$
->where $$P_{X,Y} = P(X, Y=1),\; Q_{X,Y} = P(X, Y=-1).$$
+>
 
 ^f9387f
 
@@ -185,6 +186,34 @@ date of note: 2024-11-07
 
 - [[Jensen-Shannon Divergence]]
 - [[Logistic Regression]]
+
+>[!example]
+>The **triangular discrimination distance** corresponds to the **least square loss** $$\ell(\alpha) = (1 - \alpha)^2$$
+>- The Bayes classifier is given by $$h^{*}(x) = \frac{P(x) - Q(x)}{P(x) + Q(x)}$$
+>- Assume $$\pi:= P(Y=1) = 1 - \pi := P(Y = 0) = \frac{1}{2}.$$
+>
+>Then 
+> $$
+>\begin{align*}
+> &2\mathbb{E}_{ X, Y }\left[ (1 - Yh^{*}(X))^2  \right]  \\[5pt]
+> &= \mathbb{E}_{ P }\left[ (1 - h^{*}(X))^2 \right] + \mathbb{E}_{ Q }\left[  (1 + h^{*}(X))^2 \right]  \\[5pt]
+> &= \int P(x)\, \frac{(2Q(x))^2}{(P(x) + Q(x))^2} \,dx + \int Q(x)\,\frac{(2P(x))^2}{(P(x) + Q(x))^2}\,dx \\[5pt]
+> &= \int \frac{4 P(x)\, Q(x)(P(x) + Q(x))}{(P(x) + Q(x))^2} \,dx \\[5pt]
+> &= \int \frac{4 P(x)\, Q(x)}{P(x) + Q(x)} \,dx \\[5pt]
+> &= \int \frac{(P(x) + Q(x))P(x)}{P(x) + Q(x)} \,dx + \int \frac{(P(x) + Q(x))Q(x)}{P(x) + Q(x)} \,dx  - \int \frac{(P(x) + Q(x))P(x) + (P(x) + Q(x))Q(x) -  4 P(x)\, Q(x)}{P(x) + Q(x)} \,dx\\[5pt]
+> &= 2  - \int \frac{(P(x) + Q(x))P(x) + (P(x) + Q(x))Q(x) -  4 P(x)\, Q(x)}{P(x) + Q(x)} \,dx\\[5pt]
+> &= 2-  \int \frac{\left(P(x) - Q(x)\right)^2}{P(x) + Q(x)} \,dx \\[5pt]
+> &= 2 - 2\Delta(P, Q)
+>\end{align*} 
+>$$
+>or
+>$$
+>\mathbb{E}_{ X, Y }\left[ (1 - Yh^{*}(X))^2  \right]  = 1 - \Delta(P, Q)
+>$$
+>where $$\Delta(P, Q) := \frac{1}{2}\int \frac{\left(P(x) - Q(x)\right)^2}{P(x) + Q(x)} \,dx $$
+
+- [[Chi-squared Divergence]]
+- [[Least Square Estimation]]
 
 
 ## Connection with Integral Probability Metric

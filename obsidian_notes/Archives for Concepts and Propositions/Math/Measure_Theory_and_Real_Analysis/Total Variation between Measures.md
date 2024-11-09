@@ -122,5 +122,5 @@ date of note: 2024-05-23
 - [[Optimal Transport for Applied Mathematicians by Santambrogio]]
 - [[Probability and Measure by Billingsley]]
 - [[Elements of Information Theory by Cover]]
-- [[High Dimensional Statistics A Non-Asymptotic Viewpoint by Wainwright]]
+- [[High Dimensional Statistics A Non-Asymptotic Viewpoint by Wainwright]] pp 489
 - [[Concentration Inequalities by Boucheron]]
