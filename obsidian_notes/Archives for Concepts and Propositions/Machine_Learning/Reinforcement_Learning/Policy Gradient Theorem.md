@@ -40,7 +40,7 @@ date of note: 2024-05-12
 >$$
 >respectively. 
 >
->Then 
+>Then the **gradient of average reward** is given by 
 >$$
 > \begin{align}
 > \nabla_{\theta}\,\mathcal{R}(\theta) &\propto \sum_{s}\mu_{\pi(\theta)}(s)\, \sum_{a} \nabla_{\theta}\pi(a \,|\,s, \theta)\,q_{\pi}(s, a) & \\[5pt]
@@ -49,12 +49,12 @@ date of note: 2024-05-12
 > \end{align}
 >$$  
 >where 
->- $\mu_{\pi}$ is the **limiting state distribution** under $\pi$,  $$\mu_{\pi}(s) = \lim_{t\rightarrow \infty}P\{S_{t} = s| S_{0}, \pi\},$$ (or **on-policy distribution** under policy $\pi$).  
+>- $\mu_{\pi}$ is the **limiting state distribution** under $\pi$,  $$\mu_{\pi}(s) = \lim_{t\rightarrow \infty}P\{S_{t} = s| S_{0}, \pi\},$$ (or *on-policy distribution* under policy $\pi$).  
 >
 >In particular, the **gradient of objective** does **not depend** on the **gradient of state distribution** $\nabla \mu$.  
 >
->- For **ergodic MDP** with **average reward objective**, the equation $(1)$  is **exact**. 
->- For **episodic task**, the constant of *proportionality* is the *average length* of an episode.
+>- For *ergodic MDP* with *average reward objective*, the equation $(1)$  is **exact**. 
+>- For *episodic task*, the constant of *proportionality* is the *average length* of an episode.
 
 - [[Policy Gradient Optimization]]
 - [[Markov Decision Process]]
@@ -65,7 +65,12 @@ date of note: 2024-05-12
 
 ## Explanation
 
+>[!info]
+>Parameterized policy methods have an **important theoretical advantage** over *action-value methods* in the form of the **policy gradient theorem**, which gives an exact formula for how performance is affected by the policy parameter that does **not involve derivatives** of the *state distribution*. 
+>
+>This theorem provides a theoretical foundation for all policy gradient methods.
 
+- [[Policy Gradient Optimization]]
 
 
 
