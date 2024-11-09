@@ -38,13 +38,19 @@ date of note: 2024-06-01
 - [[Error Function or Loss Function for Deep Learning]]
 	- [[Maximum Likelihood Estimation]]
 	- [[Minimum Mean Square Estimation]]
+	- [[Hinge Loss as Surrogate Loss Function]]
+	- [[Exponential Loss Minimization for AdaBoost]]
 	- [[Cross-Entropy Loss Function]]
 	- [[Kullback-Leibler Divergence]]
 	- [[Score Matching and Denoising Score Matching]]
 	- [[Fisher Divergence]]
+	- [[Density Ratio Estimation via Binary Classifiers]]
 	- [[Noise Contrastive Estimation]]
 	- [[Information Noise Contrastive Estimation as Contrastive Learning]]
 	- [[Triplet Loss Minimization for Contrastive Learning]]
+	- [[Principle of Learning by Comparison for Implicit Generative Models]]
+	- [[f-Divergence]]
+	- [[Wasserstein Distance]]
 
 
 

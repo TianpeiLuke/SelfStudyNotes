@@ -213,6 +213,7 @@ date of note: 2024-06-01
 - [[Transfer Learning]]
 - [[Meta Learning]]
 - [[Self-Supervised Learning]]
+- [[Reinforcement Learning]]
 
 - [[Maximum Likelihood Estimation]]
 - [[Maximum Entropy Learning]]
