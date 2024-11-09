@@ -61,6 +61,8 @@ date of note: 2024-05-12
 > r_{t}(x, a)= \sum_{u\in \mathcal{X}}\,r_{t}(x, a, u)\,p_{t}(u | x, a)
 >$$
 
+^f0b818
+
 - [[Expected Payoff in Statistical Decision Problem]]
 
 
@@ -77,6 +79,8 @@ date of note: 2024-05-12
 >$$    
 >
 >The transition function can be extended to represents the probability of *next state* $X_{t+1}\in A_{X}$ and *next reward* $R_{t}\in B_{\mathcal{A}}$ given *current state* $X_{t} =x$ and *current action* $a$. In particular, $$K_{t}: \mathcal{X} \times \mathcal{A}\times \mathcal{B}(\mathcal{X}) \times \mathscr{F}_{\mathcal{A}} \to[0, \infty)$$ where $$p_{t}(A_{X}, B_{\mathcal{A}} | x, a) := K_{t}(x. a, A_{X}, B_{\mathcal{A}}).$$
+
+^c86b5a
 
 - [[Markov Transition Kernel and Transition Function]]
 

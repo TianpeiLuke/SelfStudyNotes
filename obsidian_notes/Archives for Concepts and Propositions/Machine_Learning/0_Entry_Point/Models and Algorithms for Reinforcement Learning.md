@@ -134,7 +134,9 @@ date of note: 2024-06-01
 
 ### Parameterized Policy Learning
 
+- [[Valued-based and Policy-based Reinforcement Learning]]
 - [[Policy Gradient Optimization]]
+- [[Policy Gradient Theorem]]
 - [[REINFORCE Algorithm for Monte Carlo Policy Gradient]]
 - [[REINFORCE Algorithm with Baseline]]
 - [[Actor-Critic Algorithm]]
