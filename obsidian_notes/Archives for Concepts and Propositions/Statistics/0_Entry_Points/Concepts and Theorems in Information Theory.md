@@ -113,6 +113,7 @@ date of note: 2024-06-01
 
 - [[Information Inequalities]]
 - [[Concepts and Theorems of Optimal Transport]]
+- [[Comparison of Information Divergence and Integral Probability Metrics]]
 
 
 - [[High Dimensional Probability An Introduction by Vershynin]]

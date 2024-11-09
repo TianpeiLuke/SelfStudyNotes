@@ -128,17 +128,18 @@ date of note: 2024-08-16
 
 ## Surrogate Loss Minimization
 
-
-
-
 - [[Surrogate Loss Minimization]]
 - [[Empirical Risk Minimization]]
 
+## Jensen-Shannon Divergence and Density Ratio
+
+![[Density Ratio Estimation via Binary Classifiers#^e7d9e0]]
+
+- [[Jensen-Shannon Divergence]]
+- [[Density Ratio Estimation via Binary Classifiers]]
 
 
 ## One-Layer Neural Network
-
-
 
 - [[Artificial Neural Network and Deep Learning]]
 

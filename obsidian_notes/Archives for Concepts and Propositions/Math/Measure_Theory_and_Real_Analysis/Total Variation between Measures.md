@@ -97,6 +97,13 @@ date of note: 2024-05-23
 - [[Wasserstein Distance]]
 - [[Weighted Hamming Distance]]
 
+## Hinge Loss and Density Ratio Estimation
+
+![[Density Ratio Estimation via Binary Classifiers#^9345f7]]
+
+- [[Density Ratio Estimation via Binary Classifiers]]
+- [[Hinge Loss as Surrogate Loss Function]]
+
 
 
 

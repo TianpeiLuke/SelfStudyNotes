@@ -128,6 +128,16 @@ date of note: 2024-11-07
 
 - [[f-Divergence]]
 
+## Density Ratio Estimation
+
+![[Density Ratio Estimation via Binary Classifiers#^e7d9e0]]
+
+- [[Density Ratio Estimation via Binary Classifiers]]
+- [[Logistic Regression]]
+
+
+
+
 
 -----------
 ##  Recommended Notes and References

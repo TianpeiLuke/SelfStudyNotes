@@ -24,6 +24,8 @@ date of note: 2024-07-09
 >$$
 >Thus $f$ is the **marginal density** of the *joint distribution* $$(X, U) \sim \mathcal{U}\left\{ (x,u):  0 < u < f(x) \right\}. $$
 
+^640e95
+
 
 - [[Quantile Function]]
 - [[Hypograph or Subgraph of Function]]

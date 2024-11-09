@@ -53,6 +53,15 @@ date of note: 2024-11-07
 - [[alpha-Divergence]]
 
 
+## Exponential Loss
+
+![[Density Ratio Estimation via Binary Classifiers#^f9387f]]
+
+- [[Exponential Loss Minimization for AdaBoost]]
+- [[Density Ratio Estimation via Binary Classifiers]]
+
+
+
 -----------
 ##  Recommended Notes and References
 

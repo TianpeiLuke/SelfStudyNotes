@@ -199,6 +199,9 @@ date of note: 2024-06-01
 	- [[Density Ratio Estimation via Binary Classifiers]]
 	- [[Actor-Critic Algorithm]]
 - [[Generative Adversarial Network]]
+- [[Monte Carlo Simulation vs Generative Adversarial Network]]
+- [[f-Generative Adversarial Network]]
+- [[Wasserstein Generative Adversarial Network]]
 - [[Conditional Generative Adversarial Network]]
 
 ### Bayesian Neural Network and Deep Ensemble Learning

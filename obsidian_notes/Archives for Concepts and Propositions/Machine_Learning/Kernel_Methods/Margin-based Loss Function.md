@@ -38,6 +38,11 @@ date of note: 2024-09-09
 
 ![[geometric_margin.png]]
 
+### Margin-Loss Function
+
+
+
+
 ## Explanation
 
 >[!info]

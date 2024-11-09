@@ -81,7 +81,12 @@ date of note: 2024-06-24
 
 ^59f390
 
-- Wikipedia [Hellinger_distance](https://en.wikipedia.org/wiki/Hellinger_distance)
+
+## $f$-divergence
+
+![[f-Divergence#^2b24ea]]
+
+- [[f-Divergence]]
 
 
 ## Rényi Divergence

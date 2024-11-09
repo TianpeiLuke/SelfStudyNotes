@@ -261,6 +261,8 @@ date of note: 2024-05-07
 >\mathbb{D}^{(\alpha)}\left(P\left\|\right.Q\right) = \frac{4}{1- \alpha^2} \int \left[ 1 - \left(\frac{dP}{dQ}\right)^{(1+\alpha)/2} \right] dQ =  \frac{4}{1- \alpha^2} \left\{ 1 - \int p(x)^{(1- \alpha)/2} q(x)^{(1 + \alpha)/2}dx \right\}  .
 >$$
 
+^2b24ea
+
 >[!example]
 >$$f(x) := \frac{1}{2}\lvert x - 1 \rvert ,$$ we have the **total variation** [[Total Variation between Measures]]
 >$$
@@ -302,6 +304,36 @@ date of note: 2024-05-07
 
 ^a66a56
 
+## Approximate $f$-Divergence via Optimization
+
+>[!important] Theorem (Nguyen, X., Wainwright, M. J., & Jordan, M. I. (2009))
+>Let $X,Y$ be sample from joint distribution on $\mathcal{X}\times \left\{ -1,1 \right\}$ and $P,Q$ be conditional probability measures on $\mathcal{X}$ given $Y=1$ and $Y=-1$, respectively.
+>
+>For any **margin-based surrogate loss** function $\ell$, there *exists* an **$f$-divergence** such that $$R^{\ell}_{\mathcal{F}} = - \mathbb{D}_{f}\left( P \left\|\right. Q \right) $$ for some **lower semi-continuous convex function** $f$
+>
+>*Conversely*, Let $f$ be **lower semi-continuous convex function** satisfying the condition
+>- the *convex-conjugate* $$\Psi(x^{*}) = f^{*}(-x^{*})$$ is decreasing, convex
+>- $\Psi(\Psi(x^{*})) = x^{*}$ for all $x^{*} \in (x_{1}^{*}, x_{2}^{*})$;
+>- there exists a point $u^{*} \in (x_{1}^{*}, x_{2}^{*})$, such that $\Psi(u^{*}) = u^{*}$
+>
+>Then there exists a **decreasing convex surrogate loss** $\ell$ such that 
+>- the following equation holds between $f$ and $\ell$, $$f(u) = -\inf_{\alpha}\left\{ \ell(-\alpha) + \ell(\alpha)\,u \right\} $$	 
+>- and, the corresponding **$f$-divergence** satisfies the equation $$R^{\ell}_{\mathcal{F}} = - \mathbb{D}_{f}\left( P \left\|\right. Q \right).$$
+
+- Nguyen, X., Wainwright, M. J., & Jordan, M. I. (2009). On surrogate loss functions and f-divergences. _The Annals of Statistics_, _37_(2), 876–904. [https://doi.org/10.1214/08-AOS595](https://doi.org/10.1214/08-AOS595)
+- [[f-Divergence]]
+- [[Surrogate Loss Minimization]]
+- [[Margin-based Loss Function]]
+- [[Closed Convex Function and Closure Operation]]
+
+
+>[!quote]
+>This establishes a connection between **optimal binary classification** and **distributional divergences**. 
+>
+>- By using binary classification, we were able to compute the *distributional divergence* **using only samples**, which is the important property needed for learning **implicit generative models**; 
+>- as expressed in the guiding principles, we have turned an intractable estimation problem — how to estimate the JSD divergence, into an *optimization problem* — how to learn a classifier which can be used to **approximate that divergence**.
+>  
+>-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 887  
 
 
 
