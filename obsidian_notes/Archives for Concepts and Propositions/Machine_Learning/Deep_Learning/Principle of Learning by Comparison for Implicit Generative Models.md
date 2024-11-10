@@ -309,14 +309,25 @@ date of note: 2024-11-07
 
 ## Explanation
 
+## Applications
 
+### GAN
+
+- [[Generative Adversarial Network]]
+- [[f-Generative Adversarial Network]]
+- [[Wasserstein Generative Adversarial Network]]
+
+### Actor-Critic Reinforcement Learning
+
+- [[Actor-Critic Algorithm]]
+- [[Actor-Critic Algorithm with Eligibility Traces]]
 
 
 
 -----------
 ##  Recommended Notes and References
 
-- [[Generative Adversarial Network]]
+
 
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 883 - 894
