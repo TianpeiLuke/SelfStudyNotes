@@ -117,6 +117,8 @@ date of note: 2024-05-12
 >- It is called **Markovian** since the decision for current action **only depends** on the *current state* $x_{t}$, *not history*.
 >- It is **deterministic** since it choose an action without uncertainty. 
 
+^63a761
+
 >[!important] Definition
 >For each $s\in T$, a *deterministic decision rule* is said to be **history dependent** if it is a *measurable function* (a *statistic*) $$\delta_{s}: (\mathcal{H}^{s}, \mathscr{F}_{\mathcal{H}}^{s}) \to (\mathcal{A}_{x}, \mathscr{F}_{\mathcal{A}_{x}})$$  
 >where 
@@ -152,6 +154,8 @@ date of note: 2024-05-12
 >\pi(a | x) = q_{\delta_{t}(x)}(a)
 >$$
 >Note that from definition of [[Conditional Probability]], for each $x\in \mathcal{X}$, $$\pi(\cdot | x) \in \mathscr{P}_{\mathcal{A}}$$
+
+^56b9a5
 
 
 

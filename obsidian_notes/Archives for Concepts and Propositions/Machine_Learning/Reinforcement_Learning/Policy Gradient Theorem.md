@@ -26,16 +26,27 @@ date of note: 2024-05-12
 
 ![[Markov Decision Process#^a1e9de]]
 
-![[Policy Gradient Optimization#^f0d871]]
+![[Policy Parameterization and Policy Function Approximation#^5693ea]]
+
+![[Policy Parameterization and Policy Function Approximation#^ba05ca]]
+
+- [[Policy Parameterization and Policy Function Approximation]]
 
 >[!important] Policy Gradient Theorem
->For both the **episodic case** and **continuing case** under *ergodic MDP*, the objective functions $\mathcal{R}(\theta)$ are defined as in 
+>Assume that 
+>- for the **episodic case**,  objective functions $\mathcal{R}(\theta)$ are defined as the **value function**, i.e. 
 >$$
 >\begin{align}
->\mathcal{R}(\theta) &:= v_{\pi(\theta)}(s_{0})  &\\[5pt]
->&=\sum_{a}\pi(a |s_{0}, \theta)\,q_{\pi}(s_{0}, a) & \text{ episodic case }  \\[10pt]
->\mathcal{R}(\theta) &:= r(\pi(a |s, \theta))  & \\[5pt]
-> &= \sum_{s}\mu_{\pi(\theta)}(s)\,\sum_{a}\pi(a |s, \theta)\,\sum_{s', r}p(s', r| s, a)\,r, & \text{ continuing case } 
+>\mathcal{R}(\theta) &:= v_{\pi(\theta)}(s_{0})  \\[5pt]
+>&=\sum_{a}\pi(a |s_{0}, \theta)\,q_{\pi}(s_{0}, a)  
+>\end{align}
+>$$
+>- and for the **continuing case** under *ergodic MDP*, the objective functions $\mathcal{R}(\theta)$ are defined as the **average rewards**, i.e.
+>$$
+>\begin{align}
+>\mathcal{R}(\theta) &:= r(\pi(a |s, \theta))   \\[5pt]
+> &= \sum_{s}\mu_{\pi(\theta)}(s)\,\sum_{a}\pi(a |s, \theta)\,\sum_{s', r}p(s', r| s, a)\,r, \\[5pt]
+>&= \sum_{s}\mu_{\pi(\theta)}(s)\,\sum_{a}\pi(a |s, \theta)\,q_{\pi}(s, a), \\[5pt]
 >\end{align}
 >$$
 >respectively. 
@@ -49,7 +60,7 @@ date of note: 2024-05-12
 > \end{align}
 >$$  
 >where 
->- $\mu_{\pi}$ is the **limiting state distribution** under $\pi$,  $$\mu_{\pi}(s) = \lim_{t\rightarrow \infty}P\{S_{t} = s| S_{0}, \pi\},$$ (or *on-policy distribution* under policy $\pi$).  
+>- $\mu_{\pi}$ is the **limiting state distribution** under $\pi$,  $$\mu_{\pi}(s) = \lim_{t\rightarrow \infty}P\{S_{t} = s| S_{0}, \pi\} = \lim_{ t \to \infty }K_{\pi}^{t}(S_{0}, s) ,$$ (or *on-policy distribution* under policy $\pi$).  
 >
 >In particular, the **gradient of objective** does **not depend** on the **gradient of state distribution** $\nabla \mu$.  
 >
@@ -57,12 +68,13 @@ date of note: 2024-05-12
 >- For *episodic task*, the constant of *proportionality* is the *average length* of an episode.
 
 - [[Policy Gradient Optimization]]
-- [[Policy Gradient Optimization]]
 - [[Markov Decision Process]]
-- [[Invariant Measure and Stationary Distribution]]
-- [[Classification of States of Markov Chain]]
-- [[Kac Theorem on Markov Chain]]
 - [[Value Function and Bellman Equation for MDP]]
+- [[Invariant Measure and Stationary Distribution]]
+- [[Markov Transition Kernel and Transition Function]]
+- [[Ergodic Markov Chain and Asymptotic of Transition Kernel]]
+
+
 
 
 ## Explanation

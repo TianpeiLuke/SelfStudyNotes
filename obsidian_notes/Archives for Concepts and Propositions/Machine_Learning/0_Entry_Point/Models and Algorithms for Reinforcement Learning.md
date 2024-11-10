@@ -77,7 +77,6 @@ date of note: 2024-06-01
 - [[Temporal Difference Learning]]
 - [[SARSA Algorithm and On-Policy Temporal Difference Control]]
 - [[Expected SARSA Algorithm]]
-
 - [[Q Learning Algorithm and Off-Policy Temporal Difference Control]]
 - [[Double Q Learning Algorithm]]
 
@@ -136,6 +135,7 @@ date of note: 2024-06-01
 ### Parameterized Policy Learning
 
 - [[Valued-based and Policy-based Reinforcement Learning]]
+- [[Policy Parameterization and Policy Function Approximation]]
 - [[Policy Gradient Optimization]]
 - [[Policy Gradient Theorem]]
 - [[REINFORCE Algorithm for Monte Carlo Policy Gradient]]
