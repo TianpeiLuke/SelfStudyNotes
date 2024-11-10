@@ -46,10 +46,10 @@ date of note: 2024-05-20
 
 - [[Space of Symmetric Positive Semidefinite Matrices]]
 - [[Riemannian Geometry of Space of Positive Semidefinite Matrices]]
-- [[Affine Invariant Riemannian Metric in Space of Symmetric Positive Definite Matrices]]
+- [[Affine Invariant Riemannian Distance in Space of Symmetric Positive Definite Matrices]]
 - [[Metric Tensor on Space of Positive Semidefinite Matrices]]
-- [[Geodesic under AIRM on Space of Symmetric Positive Matrices]]
-- [[Log-Euclidean Riemannian Metric in Space of Symmetric Positive Definite Matrices]]
+- [[Geodesic under AIR on Space of Symmetric Positive Matrices]]
+- [[Log-Euclidean Riemannian Distance in Space of Symmetric Positive Definite Matrices]]
 
 #### Information Geometry
 

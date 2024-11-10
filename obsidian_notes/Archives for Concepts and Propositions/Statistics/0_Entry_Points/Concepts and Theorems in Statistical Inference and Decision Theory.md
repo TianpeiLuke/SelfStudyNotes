@@ -152,7 +152,7 @@ date of note: 2024-06-01
 - [[Inverse Covariance Estimation]]
 - [[Sparse Inverse Covariance Estimation for GGM with Known Structure]]
 - [[Graph LASSO and Structured Learning in Gaussian Graphical Model]]
-- [[Affine Invariant Riemannian Metric in Space of Symmetric Positive Definite Matrices]]
+- [[Affine Invariant Riemannian Distance in Space of Symmetric Positive Definite Matrices]]
 
 ### Minimaxity and Admissibility
 

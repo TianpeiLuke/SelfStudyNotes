@@ -80,8 +80,8 @@ date of note: 2024-10-14
 
 - [[Lie Group]]
 - [[Lie Algebra as Vector Space with Lie Bracket]]
-- [[Log-Euclidean Riemannian Metric in Space of Symmetric Positive Definite Matrices]]
-- [[Affine Invariant Riemannian Metric in Space of Symmetric Positive Definite Matrices]]
+- [[Log-Euclidean Riemannian Distance in Space of Symmetric Positive Definite Matrices]]
+- [[Affine Invariant Riemannian Distance in Space of Symmetric Positive Definite Matrices]]
 
 
 - [[Matrix Analysis by Horn]]

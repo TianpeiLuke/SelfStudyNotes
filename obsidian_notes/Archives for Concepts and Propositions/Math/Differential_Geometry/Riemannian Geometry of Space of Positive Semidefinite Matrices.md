@@ -20,8 +20,8 @@ date of note: 2024-11-09
 - [[Space of Symmetric Positive Semidefinite Matrices]]
 
 
-- [[Affine Invariant Riemannian Metric in Space of Symmetric Positive Definite Matrices]]
-- [[Log-Euclidean Riemannian Metric in Space of Symmetric Positive Definite Matrices]]
+- [[Affine Invariant Riemannian Distance in Space of Symmetric Positive Definite Matrices]]
+- [[Log-Euclidean Riemannian Distance in Space of Symmetric Positive Definite Matrices]]
 
 ## Explanation
 
@@ -37,4 +37,5 @@ date of note: 2024-11-09
 - [[Tangent Space Definition and Development]]
 - [[Tangent Bundle]]
 - [[Riemannian Metric and Riemannian Manifold]]
+- Moakher, M. (2005). A differential geometric approach to the geometric mean of symmetric positive-definite matrices. _SIAM journal on matrix analysis and applications_, _26_(3), 735-747.
 

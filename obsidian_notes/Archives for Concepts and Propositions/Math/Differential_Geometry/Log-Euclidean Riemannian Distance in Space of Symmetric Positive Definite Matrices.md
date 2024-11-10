@@ -10,26 +10,28 @@ topics:
   - matrix_analysis
   - riemannian_geometry
   - linear_algebra
-name: Log-Euclidean Riemannian Metric in Space of Symmetric Positive Definite Matrices
+name: Log-Euclidean Riemannian Distance in Space of Symmetric Positive Definite Matrices
 date of note: 2024-11-09
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Log-Euclidean Riemannian Metric in Space of Symmetric Positive Definite Matrices
+>**Name**: Log-Euclidean Riemannian Distance in Space of Symmetric Positive Definite Matrices
 
 >[!important] Definition
 >Let $\mathcal{S}_{++}^{n}$ be the *space of symmetric positive definite matrices* in $M_{n}$.
 >
->The **Log-Euclidean Riemannian Metric (LERM)** between two symmetric positive definite matrices $X, Y\in \mathcal{S}_{++}^{n}$ is defined as
+>The **Log-Euclidean Riemannian (LERM) distance** between two symmetric positive definite matrices $X, Y\in \mathcal{S}_{++}^{n}$ is defined as
 >$$
 >D_{le}(X, Y) = \left\lVert \log(X) - \log(Y)\right\rVert_{F} 
 >$$
 >where $\log(\cdot)$ is the *principal matrix logarithm*.
+>- It is the *curve length* between two points on  $\mathcal{S}_{++}^{n}$
 
 ^18bd07
 
+- [[Minimizing Curves in Riemannian Manifold]]
 - [[Space of Symmetric Positive Semidefinite Matrices]]
 - [[Hermitian or Symmetric Matrix]]
 - [[Positive Semidefinite Transformation]]

@@ -139,12 +139,14 @@ date of note: 2024-11-09
 
 ### Riemannian Manifold
 
-![[Affine Invariant Riemannian Metric in Space of Symmetric Positive Definite Matrices#^773a0d]]
+- [[Riemannian Geometry of Space of Positive Semidefinite Matrices]]
 
-![[Log-Euclidean Riemannian Metric in Space of Symmetric Positive Definite Matrices#^18bd07]]
+![[Affine Invariant Riemannian Distance in Space of Symmetric Positive Definite Matrices#^773a0d]]
 
-- [[Affine Invariant Riemannian Metric in Space of Symmetric Positive Definite Matrices]]
-- [[Log-Euclidean Riemannian Metric in Space of Symmetric Positive Definite Matrices]]
+![[Log-Euclidean Riemannian Distance in Space of Symmetric Positive Definite Matrices#^18bd07]]
+
+- [[Affine Invariant Riemannian Distance in Space of Symmetric Positive Definite Matrices]]
+- [[Log-Euclidean Riemannian Distance in Space of Symmetric Positive Definite Matrices]]
 
 
 
