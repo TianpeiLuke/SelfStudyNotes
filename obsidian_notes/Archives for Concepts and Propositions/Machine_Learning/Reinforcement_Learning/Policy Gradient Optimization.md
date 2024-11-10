@@ -42,6 +42,7 @@ date of note: 2024-05-12
 ^f0d871
 
 - [[Markov Decision Process]]
+- [[Episodic and Continuing Task in Reinforcement Learning]]
 
 ### Policy Gradient Descent
 

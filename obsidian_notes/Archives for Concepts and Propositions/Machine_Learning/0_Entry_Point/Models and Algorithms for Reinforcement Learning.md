@@ -44,7 +44,9 @@ date of note: 2024-06-01
 - [[Sequential Decision Process]]
 - [[Concepts and Theorems for Markov Process]]
 - [[Markov Decision Process]]
+- [[Reinforcement Learning]]
 - [[Returns and Goals of Reinforcement Learning]]
+- [[Episodic and Continuing Task in Reinforcement Learning]]
 - [[Value Function and Bellman Equation for MDP]]
 - [[Bellman Optimality Equation for MDP]]
 

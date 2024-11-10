@@ -29,7 +29,7 @@ date of note: 2024-07-13
 ##  Recommended Notes and References
 
 
-
+- [[Reinforcement Learning]]
 - [[Maximum Entropy Learning]]
 - [[Kullback-Leibler Divergence]]
 - [[Markov Decision Process]]

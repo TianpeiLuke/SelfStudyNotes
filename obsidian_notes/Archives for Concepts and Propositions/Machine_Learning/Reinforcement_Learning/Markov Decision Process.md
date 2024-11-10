@@ -229,11 +229,13 @@ date of note: 2024-05-12
 
 ## Value Function and Bellman Equation
 
+- [[Value Function and Bellman Equation for MDP]]
+- [[Bellman Optimality Equation for MDP]]
 
 
 ## Dynamic Programming for MDP
 
-- [[Bellman Optimality Equation for MDP]]
+- [[Dynamic Programming for MDP]]
 
 
 
@@ -242,9 +244,7 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
-- [[Value Function and Bellman Equation for MDP]]
-- [[Bellman Optimality Equation for MDP]]
-- [[Dynamic Programming for MDP]]
+
 
 - [[Policy Iteration Algorithm]]
 - [[Value Iteration Algorithm]]

@@ -19,12 +19,20 @@ date of note: 2024-07-13
 
 ## Explanation
 
+- [[Returns and Goals of Reinforcement Learning]]
 
-
+- [[Prediction and Control Problems in Reinforcement Learning]]
+- [[Tabular Representation and Function Approximation RL]]
+- [[On-Policy and Off-Policy Reinforcement Learning]]
+- [[Episodic and Continuing Task in Reinforcement Learning]]
+- [[Maximum Entropy Reinforcement Learning]]
+- [[Model-based Reinforcement Learning]]
 
 
 -----------
 ##  Recommended Notes and References
+
+
 
 
 

@@ -57,6 +57,7 @@ date of note: 2024-05-12
 >- For *episodic task*, the constant of *proportionality* is the *average length* of an episode.
 
 - [[Policy Gradient Optimization]]
+- [[Policy Gradient Optimization]]
 - [[Markov Decision Process]]
 - [[Invariant Measure and Stationary Distribution]]
 - [[Classification of States of Markov Chain]]
@@ -79,6 +80,7 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
+- [[Reinforcement Learning]]
 
 - [[Reinforcement Learning An Introduction by Sutton]] pp 324 - 326
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 1147

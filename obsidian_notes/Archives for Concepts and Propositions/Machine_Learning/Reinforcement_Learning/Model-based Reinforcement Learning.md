@@ -28,6 +28,7 @@ date of note: 2024-05-12
 
 - [[Policy Gradient Optimization]]
 - [[Markov Decision Process]]
+- [[Reinforcement Learning]]
 
 
 - [[Reinforcement Learning An Introduction by Sutton]]

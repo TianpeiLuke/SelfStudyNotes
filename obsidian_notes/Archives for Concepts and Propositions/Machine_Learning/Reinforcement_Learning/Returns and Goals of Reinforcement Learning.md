@@ -66,6 +66,7 @@ date of note: 2024-05-12
 > 
 > The **time of termination**, $T$, is a random variable that normally varies from episode to episode. For episodic tasks,  the return is *finite* $$G_{t} = \sum_{t}^{T}R_{\tau}.$$
 
+- [[Episodic and Continuing Task in Reinforcement Learning]]
 ### Continuing Tasks
 
 >[!important] Definition
@@ -91,6 +92,7 @@ date of note: 2024-05-12
 >- Then $\gamma =0$, $G_{t} = R_{t+1}$, i.e. the **short-sighted returns**. 
 >- If $\gamma \rightarrow 1$, we have the **far-sighted returns**, where the return objective takes future rewards into account more strongly. 
 
+- [[Episodic and Continuing Task in Reinforcement Learning]]
 - [[Discounting Payoff in Sequential Decision]]
 ### Returns 
 

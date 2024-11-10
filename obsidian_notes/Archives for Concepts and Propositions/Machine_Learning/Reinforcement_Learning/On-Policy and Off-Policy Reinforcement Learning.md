@@ -22,6 +22,13 @@ date of note: 2024-07-13
 ## Explanation
 
 
+- [[Monte Carlo Control with Exploring Starts]]
+- [[Monte Carlo Prediction for Value Estimation]]
+
+- [[SARSA Algorithm and On-Policy Temporal Difference Control]]
+- [[Q Learning Algorithm and Off-Policy Temporal Difference Control]]
+
+- [[Temporal Difference Learning]]
 
 
 
@@ -29,11 +36,9 @@ date of note: 2024-07-13
 ##  Recommended Notes and References
 
 
-- [[SARSA Algorithm and On-Policy Temporal Difference Control]]
-- [[Q Learning Algorithm and Off-Policy Temporal Difference Control]]
 
-- [[Temporal Difference Learning]]
 - [[Markov Decision Process]]
+- [[Reinforcement Learning]]
 
 
 - [[Reinforcement Learning An Introduction by Sutton]]

@@ -220,6 +220,7 @@ date of note: 2024-08-09
 >-- [[Reinforcement Learning An Introduction by Sutton]] pp 292
 
 - [[lambda-Return and Compound Update#Offline $ lambda$-Return Algorithm]]
+- [[Episodic and Continuing Task in Reinforcement Learning]]
 
 >[!quote]
 >With function approximation, the **eligibility trace** is a vector $z_{t} \in \mathbb{R}^d$ with the *same number of components* as the *weight vector* $w_{t}$. Whereas the weight vector is a **long-term memory**, accumulating over the lifetime of the system, the *eligibility trace* is a **short-term memory**, typically lasting less time than the length of an episode. Eligibility traces assist in the learning process; their only consequence is that they *affect the weight vector*, and then the weight vector determines the estimated value.

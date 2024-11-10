@@ -27,6 +27,7 @@ date of note: 2024-08-09
 >	- In other words, *value* for each *state* is stored and updated **independently**, so the **dimension** of the representation for the tabular value function is $|\mathcal{X}|$ for $v$ and $|\mathcal{X}| \times |\mathcal{A}|$ for $q$. 
 >	- Also it cannot be applied to applications where the total set of states $|\mathcal{X}|$ is large. (The **curse of dimensionality**)
 
+- [[Reinforcement Learning]]
 - [[Value Function and Bellman Equation for MDP]]
 - [[Bellman Optimality Equation for MDP]]
 - [[Temporal Difference Learning]]
