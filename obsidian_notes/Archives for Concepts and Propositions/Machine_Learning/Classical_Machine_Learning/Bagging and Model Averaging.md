@@ -108,6 +108,15 @@ date of note: 2024-10-24
 - [[Gradient Boosting Trees]]
 - [[Gradient Boosting Algorithm]]
 
+### Compound Returns and Eligibility Traces in Reinforcement Learning
+
+- [[lambda-Return and Compound Update]]
+- [[Eligibility Traces]]
+- [[Temporal Difference lambda Algorithm]]
+
+- [[Multi-Step Truncated lambda-Return Method]]
+- [[Actor-Critic Algorithm with Eligibility Traces]]
+
 
 -----------
 ##  Recommended Notes and References

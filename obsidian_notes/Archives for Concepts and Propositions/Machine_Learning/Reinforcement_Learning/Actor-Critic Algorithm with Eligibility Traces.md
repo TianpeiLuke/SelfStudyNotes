@@ -28,7 +28,9 @@ date of note: 2024-05-12
 
 - [[Eligibility Traces]]
 - [[Actor-Critic Algorithm]]
-
+- [[lambda-Return and Compound Update]]
+- [[Multi-Step Truncated lambda-Return Method]]
+- [[Temporal Difference lambda Algorithm]]
 - [[Policy Gradient Algorithm]]
 - [[Markov Decision Process]]
 

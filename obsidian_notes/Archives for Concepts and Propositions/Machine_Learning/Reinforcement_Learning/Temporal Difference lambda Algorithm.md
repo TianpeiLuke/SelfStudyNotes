@@ -245,7 +245,8 @@ date of note: 2024-08-09
 - [[Multi-Step Return and Multi-Step Temporal Difference Learning]]
 
 
-
+- [[Bagging and Model Averaging]]
+- [[Dropout for Deep Learning]]
 
 
 

@@ -37,6 +37,8 @@ date of note: 2024-08-09
 
 ^63443d
 
+- [[Bagging and Model Averaging]]
+- [[Dropout for Deep Learning]]
 
 ![[lambda_return.png]]
 

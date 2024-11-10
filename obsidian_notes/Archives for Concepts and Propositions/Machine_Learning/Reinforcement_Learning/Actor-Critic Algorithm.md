@@ -45,15 +45,15 @@ date of note: 2024-05-12
 - [[Policy Gradient Algorithm]]
 - [[Semi-Gradient Temporal Difference]]
 
-### Algorithm
+### Algorithm for Episodic Task
 
 >[!important] Definition
->Consider the problem of *maximizing the expected returns* $$\max_{\pi}\;v(x; \pi) := \max_{\pi}\mathbb{E}_{ \pi }\left[ \sum_{k=0}^{\infty}\gamma^{k}\,R_{t+k+1} \,|\,X_{t} = x \right]$$
+>Consider the problem of *maximizing the value* for *episodic task*  $$\max_{\pi}\;v(x; \pi) := \max_{\pi}\mathbb{E}_{ \pi }\left[ \sum_{k=0}^{\infty}\gamma^{k}\,R_{t+k+1} \,|\,X_{t} = x \right]$$
 >where
 >-  $\pi$ is the **stochastic policy** *parameterized* by $\theta$ $$\pi(a\,|\,x;\, \theta)$$
->- Let $v(x; \pi)$ be **value function** *parameterized* by $w$ $$\hat{v}(x; w)$$ which approximates $v(x; \pi)$.
+>- Let $v(x; \pi)$ be **state-value function** *parameterized* by $w$ $$\hat{v}(x; w)$$ which approximates $v(x; \pi)$ under the regression setting.
 >  
->The **Actor-Critic algorithm** maximizes the expected returns as follows:
+>For *episodic task*, the **One-Step Actor-Critic algorithm** maximizes the expected returns as follows:
 >- *Require*: a *differentiable parameterized policy function* $\pi(a\,|\,x;\, \theta)$
 >- *Require*: a *differentiable parameterized value functoin* $\hat{v}(x; w)$
 >- *Require*: reward discount factor $\gamma\in (0,1)$
@@ -73,9 +73,14 @@ date of note: 2024-05-12
 >		- Reduce the step size for learning of policy parameters $$\beta \leftarrow \beta\,\gamma$$
 >- *Return*
 >	- **Actor** returns the **optimal policy** $$\pi(a\,|\,x, \theta^{*})$$
->	- **Critic** returns the **optimal value estimation** $$\hat{v}(x; w^{*})$$
+>	- **Critic** returns the **optimal state-value estimation** $$\hat{v}(x; w^{*})$$
 
+- [[Episodic and Continuing Task in Reinforcement Learning]]
 
+>[!info]
+>The *critic* can adopts the **multi-step temporal difference learning** for each *actor update*
+
+- [[Multi-Step Return and Multi-Step Temporal Difference Learning]]
 
 ## Explanation
 
@@ -84,10 +89,14 @@ date of note: 2024-05-12
 >- The **actor** updates its **policy function** $$\pi(\cdot|x,\, \theta) = \arg\max_{\pi(\cdot|x, \theta)}v_{\pi}(x) = \arg\max_{\pi}\mathbb{E}_{ A\sim \pi(\cdot|x, \theta) }\left[ q(x, A; \pi) \right]$$ via *policy gradient methods*
 >- The **critic** updates its **estimation of value function** via value-base methods including *temporal difference*, or *functional approximation*. $$\min_{w} \mathbb{E}_{ X\sim p }\,\left[  \lVert \hat{v}(X,\, w) - v(X; \pi)\rVert_{2}^2\right]$$ or $$\min_{w} \mathbb{E}_{ X\sim p }\,\mathbb{E}_{ A\sim \pi(\cdot|X, \theta) }\left[\left[  \lVert \hat{q}(X,\,A, w) - q(X, A; \pi)\rVert_{2}^2\right]  \right]$$
 >- The **feedback message** between *actor* and *critic* is the **temporal difference error (TD error)**.  $$\delta_{t}:= R_{t+1} + \gamma \hat{q}(X_{t+1}, A_{t+1}, w_{t}) - \hat{q}(X_{t}, A_{t}, w_{t}) $$
+>
+>Overall, the *Actor-Critic algorithm* solves a **min-max game** $$\max_{\theta}\min_{w}\mathbb{E}_{ X\sim p }\,\left[  \lVert \hat{v}(X,\, w) - v(X; \pi(\cdot|X,\, \theta))\rVert_{2}^2\right]$$
 
 - [[Valued-based and Policy-based Reinforcement Learning]]
 - [[Value Function and Bellman Equation for MDP]]
 - [[Gradient Monte Carlo Method for Value Function Approximation]]
+- [[Two-Player Finite Game and Matrix Representation]]
+- [[Von Neumann Min-Max Theorem]]
 
 ![[actor_critic.png]]
 

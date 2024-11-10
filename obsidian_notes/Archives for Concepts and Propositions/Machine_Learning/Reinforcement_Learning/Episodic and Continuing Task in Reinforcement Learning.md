@@ -79,4 +79,4 @@ date of note: 2024-11-10
 - [[Reinforcement Learning]]
 
 
-- [[Reinforcement Learning An Introduction by Sutton]]
+- [[Reinforcement Learning An Introduction by Sutton]] pp 11, 54 - 57, 70, 91, 124, 249, 294

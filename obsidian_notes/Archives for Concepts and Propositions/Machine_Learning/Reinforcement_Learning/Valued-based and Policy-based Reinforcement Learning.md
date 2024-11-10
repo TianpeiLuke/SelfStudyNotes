@@ -50,5 +50,5 @@ date of note: 2024-05-12
 - [[Markov Decision Process]]
 
 
-- [[Reinforcement Learning An Introduction by Sutton]]
+- [[Reinforcement Learning An Introduction by Sutton]] pp 321 - 324
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 1148
