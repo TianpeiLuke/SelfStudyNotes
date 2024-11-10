@@ -23,6 +23,7 @@ date of note: 2024-05-12
 
 - [[Generative Adversarial Network]]
 
+![[biGAN.png]]
 
 ## Explanation
 

@@ -86,6 +86,7 @@ date of note: 2024-07-07
 >- $B, A_{i} \in \mathcal{S}_{+}^{n}$ are *symmetric positive semidefinite matrix* in $\mathbb{R}^{n\times n}$
 >- $c\in \mathbb{R}^{n}$
 
+- [[Space of Symmetric Positive Semidefinite Matrices]]
 
 ## Explanation
 

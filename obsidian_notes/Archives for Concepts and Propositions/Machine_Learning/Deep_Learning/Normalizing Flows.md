@@ -34,3 +34,4 @@ date of note: 2024-08-16
 - [[Wasserstein Distance]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 819 - 837
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 547 - 559
+- [[Foundations of Computer Vision by Torralba]]

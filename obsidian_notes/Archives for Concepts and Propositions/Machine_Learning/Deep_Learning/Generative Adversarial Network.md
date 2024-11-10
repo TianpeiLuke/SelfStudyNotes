@@ -167,6 +167,40 @@ date of note: 2024-05-12
 >-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 884  
 
 
+## Challenges for GAN training
+
+![[mode_clap_mode_hop_gan.png]]
+
+>[!quote]
+>Due to the **adversarial game** nature of *GANs* the *optimizing dynamics* of GANs are both hard to study in theory, and to **stabilize** in practice.
+>
+>GANs are known to suffer from **mode collapse**, a phenomenon where the generator converges to a distribution which *does not cover not all the modes (peaks)* of the data distribution, thus the model **underfits the distribution**. 
+>- We show an example in Figure 26.6: while the data is a mixture of Gaussians with 16 modes, the model converges only to a few modes. 
+>
+>Alternatively, another problematic behavior is **mode hopping**, where the generator “*hops*” between generating *different modes* of the data distribution. An intuitive explanation for this behavior is as follows: 
+>- if the **generator** becomes *good* at generating data *from one mode*, it will *generate more from that mode*. 
+>- If the **discriminator** cannot learn to *distinguish* between real and generated data in this mode, the *generator* has **no incentive** to expand its support and generate data from other modes. 
+>- On the other hand, if the discriminator *eventually* learns to distinguish between the real and generated data inside this mode, the generator can **simply move (hop) to a new mode**, and this game of cat and mouse can continue.
+>
+>-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 897 
+
+>[!quote]
+>While **mode collapse** and **mode hopping** are often associated with GANs, many improvements have made GAN training more stable, and these behaviors more rare. 
+>
+>These improvements include 
+>- using **large batch sizes**, 
+>- increasing the **discriminator** neural **capacity**, 
+>- using discriminator and generator **regularization**, 
+>- as well as more **complex optimization methods**.
+>  
+>-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 897   
+
+
+## Convergence of GAN Training
+
+
+
+
 ## Variants
 
 ### GAN with other Loss
@@ -197,9 +231,11 @@ date of note: 2024-05-12
 - [[Conditional Generative Adversarial Network]]
 
 
+
 ### Deep Convolutional GAN or DCGAN
 
 
+- [[Deep Convolutional Generative Adversarial Network or DCGAN]]
 - [[Convolutional Neural Network]]
 
 ### Self-Attention GAN or SAGAN

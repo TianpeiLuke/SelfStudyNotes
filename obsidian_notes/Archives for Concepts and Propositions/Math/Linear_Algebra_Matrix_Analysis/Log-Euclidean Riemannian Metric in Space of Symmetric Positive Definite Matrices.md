@@ -5,24 +5,24 @@ tags:
   - math/linear_algebra
   - math/riemannian_geometry
 keywords:
-  - affine_invariant_riemannian_metric
+  - log_euclidean_riemannian_metric
 topics:
   - matrix_analysis
   - riemannian_geometry
   - linear_algebra
-name: Affine Invariant Riemannian Metric in Space of Symmetric Positive Definite Matrices
+name: Log-Euclidean Riemannian Metric in Space of Symmetric Positive Definite Matrices
 date of note: 2024-11-09
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Affine Invariant Riemannian Metric in Space of Symmetric Positive Definite Matrices
+>**Name**: Log-Euclidean Riemannian Metric in Space of Symmetric Positive Definite Matrices
 
 >[!important] Definition
->The **Affine Invariant Riemannian Metric (AIRM)** between two symmetric positive definite matrices $X, Y\in \mathcal{S}_{+}^{n}$
+>The **Log-Euclidean Riemannian Metric (LERM)** between two symmetric positive definite matrices $X, Y\in \mathcal{S}_{+}^{n}$
 >$$
->D_{R}(X, Y) = \left\lVert \log \left(X^{- 1/2}\,Y\,X^{- 1/2}\right) \right\rVert_{F} 
+>D_{le}(X, Y) = \left\lVert \log(X) - \log(Y)\right\rVert_{F} 
 >$$
 >where $\log(\cdot)$ is the *principal matrix logarithm*.
 
@@ -32,6 +32,8 @@ date of note: 2024-11-09
 - [[Matrix Logarithm]]
 - [[Frobenius Norm of Matrix]]
 - [[Riemannian Metric and Riemannian Manifold]]
+- [[Fisher Divergence]]
+
 
 ## Explanation
 

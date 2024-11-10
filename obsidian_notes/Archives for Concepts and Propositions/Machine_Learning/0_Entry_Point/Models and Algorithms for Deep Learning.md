@@ -205,6 +205,7 @@ date of note: 2024-06-01
 	- [[Density Ratio Estimation via Binary Classifiers]]
 	- [[Actor-Critic Algorithm]]
 - [[Generative Adversarial Network]]
+- [[Deep Convolutional Generative Adversarial Network or DCGAN]]
 - [[Monte Carlo Simulation vs Generative Adversarial Network]]
 - [[f-Generative Adversarial Network]]
 - [[Wasserstein Generative Adversarial Network]]

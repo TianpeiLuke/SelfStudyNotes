@@ -95,6 +95,7 @@ date of note: 2024-05-12
 ^044857
 
 - [[Convex Optimization Problem]]
+- [[Space of Symmetric Positive Semidefinite Matrices]]
 - [[Least Square Estimation]]
 - [[Positive Semidefinite Transformation]]
 - [[Hermitian or Symmetric Matrix]]

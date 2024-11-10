@@ -30,6 +30,7 @@ date of note: 2024-05-06
 - [[Orthogonal Group]]
 - [[Unitary Group]]
 - [[Special Orthogonal Group and Special Unitary Group]]
+- [[Space of Symmetric Positive Semidefinite Matrices]]
 
 
 ### Matrix Exponential
@@ -37,7 +38,7 @@ date of note: 2024-05-06
 - [[Matrix Exponential]]
 - [[Matrix Exponential as Global Flow in General Linear Group]]
 - [[Polar Decomposition of Transformation]]
-
+- [[Matrix Logarithm]]
 
 ### Lie Derivatives
 

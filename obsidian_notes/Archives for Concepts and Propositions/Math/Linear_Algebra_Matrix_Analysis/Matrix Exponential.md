@@ -40,6 +40,12 @@ date of note: 2024-10-14
 - [[Lie Group]]
 - [[Lie Algebra as Vector Space with Lie Bracket]]
 
+### Matrix Logarithm
+
+![[Matrix Logarithm#^437819]]
+
+- [[Matrix Logarithm]]
+
 
 ## Properties
 

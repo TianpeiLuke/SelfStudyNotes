@@ -35,6 +35,16 @@ date of note: 2024-05-20
 
 - [[Riemannian Metric and Riemannian Manifold]]
 
+### Examples
+
+- [[Stiefel Manifold]]
+- [[Grassmann Manifold as Quotient Manifold]]
+- [[Space of Symmetric Positive Semidefinite Matrices]]
+- [[Affine Invariant Riemannian Metric in Space of Symmetric Positive Definite Matrices]]
+- [[Log-Euclidean Riemannian Metric in Space of Symmetric Positive Definite Matrices]]
+- [[Statistical Manifold as Parametric Family]]
+
+
 ### Tangent-Cotangent Isomorphism
 
 - [[Flat Operator and Lower Index of Vector Field]]

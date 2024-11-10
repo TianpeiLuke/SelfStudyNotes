@@ -31,6 +31,9 @@ date of note: 2024-10-06
 >$$
 >- $$S = A^{T}A \succeq 0$$ is *symmetric positive semidefinite*.
 
+- [[Hermitian or Symmetric Matrix]]
+- [[Positive Semidefinite Transformation]]
+- [[Space of Symmetric Positive Semidefinite Matrices]]
 
 ## Explanation
 
@@ -115,7 +118,7 @@ date of note: 2024-10-06
 
 - [[Taylor Series for Local Polynomial Approximation of Smooth Function]]
 - [[System of Linear Equations or Linear System]]
-- [[Hermitian or Symmetric Matrix]]
+
 - [[Matrix]]
 
 

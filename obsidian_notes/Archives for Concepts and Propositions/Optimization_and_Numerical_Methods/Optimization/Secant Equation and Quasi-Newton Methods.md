@@ -62,6 +62,7 @@ date of note: 2024-07-02
 - [[Positive Semidefinite Transformation]]
 - [[Hermitian or Symmetric Matrix]]
 - [[Normal Equations and Newton System of Equations]]
+- [[Space of Symmetric Positive Semidefinite Matrices]]
 
 >[!info]
 >The **secant equation** is also called **Newton equation** and it is used in *Newton's method*
