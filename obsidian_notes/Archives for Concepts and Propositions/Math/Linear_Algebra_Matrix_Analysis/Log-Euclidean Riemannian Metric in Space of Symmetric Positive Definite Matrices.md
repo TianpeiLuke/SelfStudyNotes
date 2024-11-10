@@ -20,11 +20,15 @@ date of note: 2024-11-09
 >**Name**: Log-Euclidean Riemannian Metric in Space of Symmetric Positive Definite Matrices
 
 >[!important] Definition
->The **Log-Euclidean Riemannian Metric (LERM)** between two symmetric positive definite matrices $X, Y\in \mathcal{S}_{+}^{n}$
+>Let $\mathcal{S}_{++}^{n}$ be the *space of symmetric positive definite matrices* in $M_{n}$.
+>
+>The **Log-Euclidean Riemannian Metric (LERM)** between two symmetric positive definite matrices $X, Y\in \mathcal{S}_{++}^{n}$ is defined as
 >$$
 >D_{le}(X, Y) = \left\lVert \log(X) - \log(Y)\right\rVert_{F} 
 >$$
 >where $\log(\cdot)$ is the *principal matrix logarithm*.
+
+^18bd07
 
 - [[Space of Symmetric Positive Semidefinite Matrices]]
 - [[Hermitian or Symmetric Matrix]]

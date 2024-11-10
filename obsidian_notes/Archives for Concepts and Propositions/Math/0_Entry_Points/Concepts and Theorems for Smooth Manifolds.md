@@ -161,6 +161,7 @@ date of note: 2024-10-25
 
 - [[Matrix Exponential]]
 - [[Matrix Exponential as Global Flow in General Linear Group]]
+- [[Matrix Logarithm]]
 
 #### Lie Derivatives
 

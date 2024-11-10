@@ -35,7 +35,7 @@ date of note: 2024-10-14
 ^437819
 
 >[!important] Definition
->Let $A\in \mathcal{S}_{++}^{n}$ be a *symmetric positive definite matrix*, there exists a **unique logarithm** of $A$,  which is called the **principal logarithm** of $A$ i.e. $$\log(A)$$ 
+>Let $A\in \mathcal{S}_{++}^{n}$ be a *symmetric positive definite matrix*, there exists a **unique logarithm** of $A$,   i.e. $$\log(A)$$  which is called the **principal logarithm** of $A$
 
 
 - [[Space of Symmetric Positive Semidefinite Matrices]]

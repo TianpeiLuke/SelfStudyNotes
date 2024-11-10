@@ -38,23 +38,23 @@ date of note: 2024-11-09
 >[!important] Definition
 >The **space of symmetric positive semi-definite matrices** in $M_{n}(\mathbb{R})$  is denoted as
 >$$
->\mathcal{S}_{+}^{n} := \left\{ A \in M_{n}(\mathbb{R}): A = A^{T}\, \; A \succeq 0 \right\} 
+>\mathcal{S}_{+}^{n} := \mathcal{S}_{+}^{n}(\mathbb{R}) := \left\{ A \in M_{n}(\mathbb{R}): A = A^{T}\, \; A \succeq 0 \right\} 
 >$$
 >
 >Similarly the **space of Hermitian positive semi-definite matrices** in $M_{n}(\mathbb{C})$  is denoted as
 >$$
->\mathcal{S}_{+}^{n} := \left\{ A \in M_{n}(\mathbb{C}): A = A^{*}\, \; A \succeq 0 \right\} 
+>\mathcal{S}_{+}^{n} := \mathcal{S}_{+}^{n}(\mathbb{C}) := \left\{ A \in M_{n}(\mathbb{C}): A = A^{*}\, \; A \succeq 0 \right\} 
 >$$
 
 >[!important] Definition
 >The **space of symmetric positive definite matrices** in $M_{n}(\mathbb{R})$  is denoted as
 >$$
->\mathcal{S}_{++}^{n} := \left\{ A \in M_{n}(\mathbb{R}): A = A^{T}\, \; A \succ 0 \right\} 
+>\mathcal{S}_{++}^{n} := \mathcal{S}_{++}^{n}(\mathbb{R}) := \left\{ A \in M_{n}(\mathbb{R}): A = A^{T}\, \; A \succ 0 \right\} 
 >$$
 >
 >Similarly the **space of Hermitian positive definite matrices** in $M_{n}(\mathbb{C})$  is denoted as
 >$$
->\mathcal{S}_{++}^{n} := \left\{ A \in M_{n}(\mathbb{C}): A = A^{*}\, \; A \succ 0 \right\} 
+>\mathcal{S}_{++}^{n} := \mathcal{S}_{++}^{n}(\mathbb{C}) := \left\{ A \in M_{n}(\mathbb{C}): A = A^{*}\, \; A \succ 0 \right\} 
 >$$
 
 
@@ -94,7 +94,8 @@ date of note: 2024-11-09
 
 >[!important] Theorem
 >The  **space of self-adjoint positive definite matrices** $\mathcal{S}_{++}^{n}$ is a **smooth manifold** of dimension $$\frac{n(n+1)}{2}.$$
->
+
+>[!info]
 >In particular, define the **spectrum map** $$\lambda: \mathcal{S}^{n} \to \mathbb{R}^{n}$$ as $$\lambda(A) := [\lambda_{1}(A) \,{,}\ldots{,}\,\lambda_{n}(A)]$$ where $\lambda_{i}(A)$ is the $i$-th *eigenvalue* of $A$.
 >- By *spectral theorem*, for every matrix $A$ in $\mathcal{S}^{n}$, $\lambda(A)$ exists in $\mathbb{R}^{n}$
 >- $\lambda$ is a **continuous map**.
@@ -135,6 +136,9 @@ date of note: 2024-11-09
 
 ### Riemannian Manifold
 
+![[Affine Invariant Riemannian Metric in Space of Symmetric Positive Definite Matrices#^773a0d]]
+
+![[Log-Euclidean Riemannian Metric in Space of Symmetric Positive Definite Matrices#^18bd07]]
 
 - [[Affine Invariant Riemannian Metric in Space of Symmetric Positive Definite Matrices]]
 - [[Log-Euclidean Riemannian Metric in Space of Symmetric Positive Definite Matrices]]

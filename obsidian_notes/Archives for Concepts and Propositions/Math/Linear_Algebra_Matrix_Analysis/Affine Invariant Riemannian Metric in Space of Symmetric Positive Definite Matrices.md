@@ -20,11 +20,15 @@ date of note: 2024-11-09
 >**Name**: Affine Invariant Riemannian Metric in Space of Symmetric Positive Definite Matrices
 
 >[!important] Definition
->The **Affine Invariant Riemannian Metric (AIRM)** between two symmetric positive definite matrices $X, Y\in \mathcal{S}_{+}^{n}$
+>Let $\mathcal{S}_{++}^{n}$ be the *space of symmetric positive definite matrices* in $M_{n}$.
+>
+>The **Affine Invariant Riemannian Metric (AIRM)** between two symmetric positive definite matrices $X, Y\in \mathcal{S}_{++}^{n}$ is defined as
 >$$
 >D_{R}(X, Y) = \left\lVert \log \left(X^{- 1/2}\,Y\,X^{- 1/2}\right) \right\rVert_{F} 
 >$$
 >where $\log(\cdot)$ is the *principal matrix logarithm*.
+
+^773a0d
 
 - [[Space of Symmetric Positive Semidefinite Matrices]]
 - [[Hermitian or Symmetric Matrix]]
@@ -46,6 +50,8 @@ date of note: 2024-11-09
 -----------
 ##  Recommended Notes and References
 
+
+- [[Log-Euclidean Riemannian Metric in Space of Symmetric Positive Definite Matrices]]
 
 - [[Inner Product Space]]
 - [[Semidefinite Programming]]
