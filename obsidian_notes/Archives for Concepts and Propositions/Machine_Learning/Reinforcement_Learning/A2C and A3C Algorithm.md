@@ -27,7 +27,7 @@ date of note: 2024-05-12
 
 
 - [[Actor-Critic Algorithm]]
-- [[Policy Gradient Optimization]]
+- [[Policy Gradient Algorithm]]
 - [[Markov Decision Process]]
 
 

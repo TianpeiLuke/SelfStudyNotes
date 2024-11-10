@@ -24,6 +24,10 @@ date of note: 2024-05-12
 > 
 >- **Policy-based methods** (or **policy gradient methods**): methods that instead learn a *parameterized policy* that can select actions *without consulting a value function*.  A value function may still be used to learn the policy parameter, but is *not required* for action selection. 
 
+- [[Tabular Representation and Function Approximation RL]]
+- [[Policy Iteration Algorithm]]
+- [[Policy Gradient Algorithm]]
+
 >[!important]
 > Perhaps the simplest **advantage** that *policy parameterization* may have over *action-value parameterization* is that the policy may be a simpler function to approximate. Problems vary in the complexity of their policies and action-value functions. 
 > 
@@ -42,7 +46,7 @@ date of note: 2024-05-12
 
 
 - [[Actor-Critic Algorithm]]
-- [[Policy Gradient Optimization]]
+- [[Policy Gradient Algorithm]]
 - [[Markov Decision Process]]
 
 

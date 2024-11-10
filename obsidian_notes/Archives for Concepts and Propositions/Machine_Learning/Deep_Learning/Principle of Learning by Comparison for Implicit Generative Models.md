@@ -25,6 +25,8 @@ date of note: 2024-11-07
 >
 >-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 883
 
+^32c020
+
 - [[Monte Carlo and Applications]]
 
 

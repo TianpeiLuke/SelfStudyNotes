@@ -96,7 +96,7 @@ date of note: 2024-08-24
 - [[Combinatorial Optimization Problem]]
 - [[Derivative-Free Optimization]]
 
-- [[Policy Gradient Optimization]]
+- [[Policy Gradient Algorithm]]
 - [[Markov Decision Process]]
 - [[Sequential Decision Process]]
 

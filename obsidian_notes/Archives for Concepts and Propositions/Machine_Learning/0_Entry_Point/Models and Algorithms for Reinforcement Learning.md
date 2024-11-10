@@ -136,7 +136,7 @@ date of note: 2024-06-01
 
 - [[Valued-based and Policy-based Reinforcement Learning]]
 - [[Policy Parameterization and Policy Function Approximation]]
-- [[Policy Gradient Optimization]]
+- [[Policy Gradient Algorithm]]
 - [[Policy Gradient Theorem]]
 - [[REINFORCE Algorithm for Monte Carlo Policy Gradient]]
 - [[REINFORCE Algorithm with Baseline]]

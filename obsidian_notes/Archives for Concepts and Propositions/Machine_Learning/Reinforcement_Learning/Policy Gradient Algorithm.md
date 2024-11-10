@@ -9,14 +9,14 @@ keywords:
 topics:
   - reinforcement_learning/theory
   - reinforcement_learning/algorithm
-name: Policy Gradient Optimization
+name: Policy Gradient Algorithm
 date of note: 2024-05-12
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Policy Gradient Optimization
+>**Name**: Policy Gradient Algorithm
 
 ![[Markov Decision Process#^f5dcdf]]
 
@@ -42,6 +42,7 @@ date of note: 2024-05-12
 ^f0d871
 
 - [[Markov Decision Process]]
+- [[Returns and Goals of Reinforcement Learning]]
 - [[Episodic and Continuing Task in Reinforcement Learning]]
 
 ### Policy Gradient Descent
@@ -61,13 +62,23 @@ date of note: 2024-05-12
 > \theta_{t+1} &\leftarrow \theta_t + \alpha \nabla_{\theta}\mathcal{R}(\theta_t). 
 > \end{align}
 >$$
+>where, by the **policy gradient theorem**,
+>$$
+>\begin{align}
+>\nabla_{\theta}\mathcal{R}(\theta) &=  \mathbb{E}_{ S \sim \mu_{\pi(\theta)} }\left[\,\mathbb{E}_{ A \sim  \pi(a\,|\,s, \theta)  }\left[\, \nabla_{\theta} \log \pi(A \,|\,S\,,\,\theta)\,q_{\pi}(S, A) \right] \right]
+> \end{align}
+>$$
+
+^b0c7df
 
 - [[Gradient Descent Algorithm]]
 - [[Stochastic Gradient Descent Algorithm]]
 
-### Policy Approximation
+### Policy Gradient Theorem
 
+![[Policy Gradient Theorem#^672c0f]]
 
+- [[Policy Gradient Theorem]]
 
 
 ## Explanation

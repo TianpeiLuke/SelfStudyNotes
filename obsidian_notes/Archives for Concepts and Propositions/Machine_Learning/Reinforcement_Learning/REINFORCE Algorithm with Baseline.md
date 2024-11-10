@@ -37,7 +37,7 @@ date of note: 2024-05-12
 - [[Monte Carlo and Applications]]
 - [[Importance Sampling]]
 
-- [[Policy Gradient Optimization]]
+- [[Policy Gradient Algorithm]]
 
 
 - [[Reinforcement Learning An Introduction by Sutton]] pp 330

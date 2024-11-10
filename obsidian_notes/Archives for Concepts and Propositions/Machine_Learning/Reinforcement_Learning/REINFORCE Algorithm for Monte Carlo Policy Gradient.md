@@ -33,7 +33,7 @@ date of note: 2024-05-12
 
 - [[Value Function and Bellman Equation for MDP]]
 - [[Markov Decision Process]]
-- [[Policy Gradient Optimization]]
+- [[Policy Gradient Algorithm]]
 - [[Softmax Function and Log-Sum-Exp Function]]
 - [[Linear Temporal Difference Learning]]
 

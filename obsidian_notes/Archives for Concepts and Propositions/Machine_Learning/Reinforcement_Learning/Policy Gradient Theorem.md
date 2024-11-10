@@ -67,7 +67,9 @@ date of note: 2024-05-12
 >- For *ergodic MDP* with *average reward objective*, the equation $(1)$  is **exact**. 
 >- For *episodic task*, the constant of *proportionality* is the *average length* of an episode.
 
-- [[Policy Gradient Optimization]]
+^672c0f
+
+- [[Policy Gradient Algorithm]]
 - [[Markov Decision Process]]
 - [[Value Function and Bellman Equation for MDP]]
 - [[Invariant Measure and Stationary Distribution]]
@@ -84,7 +86,7 @@ date of note: 2024-05-12
 >
 >This theorem provides a theoretical foundation for all policy gradient methods.
 
-- [[Policy Gradient Optimization]]
+- [[Policy Gradient Algorithm]]
 
 
 
