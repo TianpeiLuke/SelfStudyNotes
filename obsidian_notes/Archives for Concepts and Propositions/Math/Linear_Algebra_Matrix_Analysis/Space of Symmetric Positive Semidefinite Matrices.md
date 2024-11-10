@@ -125,6 +125,9 @@ date of note: 2024-11-09
 - [[Smooth Atlas]]
 - [[Smooth Chart and Smooth Coordinate Map]]
 
+- [[Riemannian Geometry of Space of Positive Semidefinite Matrices]]
+- [[Metric Tensor on Space of Positive Semidefinite Matrices]]
+
 ### Lie Group
 
 >[!important] Theorem

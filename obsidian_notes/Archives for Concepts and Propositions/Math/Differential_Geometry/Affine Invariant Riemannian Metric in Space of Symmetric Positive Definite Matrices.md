@@ -27,6 +27,14 @@ date of note: 2024-11-09
 >D_{R}(X, Y) = \left\lVert \log \left(X^{- 1/2}\,Y\,X^{- 1/2}\right) \right\rVert_{F} 
 >$$
 >where $\log(\cdot)$ is the *principal matrix logarithm*.
+>- It can be shown that 
+>$$\begin{align*}
+>D_{R}(X, Y) &= \left\lVert \log \left(X^{- 1/2}\,Y\,X^{- 1/2}\right) \right\rVert_{F} \\[5pt] 
+>&=  \left\lVert \log \left(X^{- 1}\,Y\right) \right\rVert_{F} \\[5pt] 
+>&= \sqrt{ \sum_{i=1}^{n}(\log(\lambda_{i}))^2 }
+>\end{align*}
+>$$
+>where $\{\lambda_{i}\}$ is the *eigenvalue* of $X^{-1}Y.$
 
 ^773a0d
 
@@ -40,9 +48,17 @@ date of note: 2024-11-09
 ## Explanation
 
 
+
+
 - [[Inverse Covariance Estimation]]
 - [[Sparse Inverse Covariance Estimation for GGM with Known Structure]]
 - [[Graph LASSO and Structured Learning in Gaussian Graphical Model]]
+
+
+
+
+
+## Geodesic under Affine Invariant Riemannian Metric
 
 
 

@@ -31,6 +31,7 @@ date of note: 2024-10-25
 - [[Stiefel Manifold]]
 - [[Grassmann Manifold as Quotient Manifold]]
 - [[Space of Symmetric Positive Semidefinite Matrices]]
+- [[Riemannian Geometry of Space of Positive Semidefinite Matrices]]
 - [[Statistical Manifold as Parametric Family]]
 
 
