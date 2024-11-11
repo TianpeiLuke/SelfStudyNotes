@@ -95,6 +95,8 @@ date of note: 2024-07-13
 >v_{\pi}(x) = \sum_{a \in \mathcal{A}}\pi(a | x) \sum_{u \in \mathcal{X}}\sum_{r \in \mathcal{R}}\,p(u, r | x, a)\,\left[\,r + \gamma\,v_{\pi}(u)  \right], \quad \forall x \in \mathcal{X}
 >$$
 
+^7cf44e
+
 - [[Reinforcement Learning An Introduction by Sutton]] pp 58
 
 ### Bellman Equation for Action-Value Function 
