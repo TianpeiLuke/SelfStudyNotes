@@ -159,6 +159,31 @@ date of note: 2024-05-12
 
 ## Explanation
 
+>[!important]
+>- Like many Monte Carlo methods, REINFORCE is **unbiased** but have **high variance** and **slow learning**. 
+>- As a stochastic gradient method, REINFORCE has **good theoretical convergence** properties. 
+>	- By construction, the expected update over an episode is in the *same direction* as the *performance gradient*. 
+>	- This **assures an improvement** in *expected performance* for sufficiently small $\alpha$, and convergence to a **local optimum** under standard stochastic approximation conditions for decreasing $\alpha$.  
+
+
+|                              | **Value-based Policy** $$\pi(x) = \arg\max_{a} q(x, a)$$                                                                                                                                                         | **Parameterized Policy** $$\pi(a ; x,  \theta)$$                                                     |
+| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| **Sample Return**            | - [[Monte Carlo Control with Exploring Starts]]<br>- [[Monte Carlo Prediction for Value Estimation]]                                                                                                             | - [[REINFORCE Algorithm for Monte Carlo Policy Gradient]]<br>- [[REINFORCE Algorithm with Baseline]] |
+| **Bootstrapping / TD Rrror** | - [[Temporal Difference Learning]]<br>- [[SARSA Algorithm and On-Policy Temporal Difference Control]]<br>- [[Q Learning Algorithm and Off-Policy Temporal Difference Control]]<br>- [[Expected SARSA Algorithm]] | - [[Actor-Critic Algorithm]]                                                                         |
+
+>[!important]
+>The REINFORCE update has some **appealing properties**: 
+>- Each **increment** is *proportional* to the *product* of a return $G_t$ and a vector, the **gradient** of the **log-probability** of taking the sample action. $$\Delta \theta \propto G_{t}\;\nabla \log \pi(A_{t}\,|\,X_{t}; \theta)$$
+>	- This vector is the direction in parameter space that *most increases* the **probability** of **repeating the action** $A_t$ on **future visits** to state $X_t$. 
+>- The update increases the parameter vector in this direction **proportional to the return**, and **inversely proportional** to the **action probability**. $$\Delta \theta \propto R_{t}\; \quad \Delta \theta \propto \frac{1}{\pi(A_{t}\,|\,X_{t}; \theta)}$$ 
+>	- The former $$\Delta \theta \propto R_{t}$$  makes sense because it causes the parameter to *move most* in the *directions* that **favor** *actions* that yield the **highest return**. (**Exploitation**)
+>	- The latter $$\Delta \theta \propto \frac{1}{\pi(A_{t}\,|\,X_{t}; \theta)}$$  makes sense because *otherwise* actions that are **selected frequently** are **at an advantage** (the updates will be more often in their direction) and might win out even if they do not yield the highest return. (**Exploration**)
+
+^2e06da
+
+- [[Exploration and Exploitation Tradeoff]]
+
+
 
 
 ## Other Gradient Computation Method

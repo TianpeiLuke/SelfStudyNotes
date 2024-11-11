@@ -66,12 +66,16 @@ date of note: 2024-07-04
 - [[Monte Carlo Control with Exploring Starts]]
 - [[Off-Policy Monte Carlo Prediction with Importance Sampling]]
 - [[Off-Policy Monte Carlo Control]]
+- [[REINFORCE Algorithm for Monte Carlo Policy Gradient]]
 - [[REINFORCE Algorithm with Baseline]]
 
-### Simulation-based Learning
+### Sampling from Implicit Generative Models
 
 - [[Principle of Learning by Comparison for Implicit Generative Models]]
 - [[Generative Adversarial Network]]
+- [[f-Generative Adversarial Network]]
+- [[Wasserstein Generative Adversarial Network]]
+- [[Deep Convolutional Generative Adversarial Network or DCGAN]]
 
 
 

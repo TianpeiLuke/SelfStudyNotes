@@ -70,7 +70,7 @@ date of note: 2024-07-04
 | Related Approaches                    | - [[Accept-Reject Sampling]]<br>- [[Importance Sampling]]<br>- [[Sequential Importance Sampling]]<br>- [[Particle Filter or Sampling-Importance-Resampling]]<br>- [[Stochastic Gradient Descent Algorithm]]<br><br><br><br> | - [[Metropolis-Hastings Algorithm]]<br>- [[Gibbs Sampling]]<br>- [[Hamiltonian Monte Carlo]]<br>- [[Stochastic Gradient Hamiltonian Monte Carlo]]<br>- [[Langevin Dynamics and Langevin Sampling]]<br><br> |
 |                                       |                                                                                                                                                                                          |                                                                                                                                                                                                            |
 
-
+- [[Monte Carlo and Applications]]
 
 
 

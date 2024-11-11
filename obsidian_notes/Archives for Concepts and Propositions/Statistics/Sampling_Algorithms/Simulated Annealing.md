@@ -120,6 +120,7 @@ date of note: 2024-07-04
 - [[Gibbs Measure and Energy-based Model]]
 - [[Stochastic Hill Climbing]]
 - [[Derivative-Free Optimization]]
+- [[Monte Carlo and Applications]]
 
 
 - [[All of Statistics A Concise Course by Wasserman]]

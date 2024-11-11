@@ -117,7 +117,7 @@ date of note: 2024-08-27
 - [[Markov Chain Monte Carlo Methods]]
 - [[Gibbs Sampling]]
 - [[Metropolis-Hastings Algorithm]]
-
+- [[Monte Carlo and Applications]]
 
 - [[Log-Partition Function and Score Function of Graphical Models]]
 - [[Gibbs Measure and Energy-based Model]]

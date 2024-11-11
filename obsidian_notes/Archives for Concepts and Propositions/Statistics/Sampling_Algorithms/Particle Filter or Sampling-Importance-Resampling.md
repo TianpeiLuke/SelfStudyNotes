@@ -88,7 +88,7 @@ date of note: 2024-07-04
 
 - [[Conditional Expectation]]
 - [[Exponential Weights Algorithm for Convex Loss]]
-
+- [[Monte Carlo and Applications]]
 
 - [[Monte Carlo Strategies in Scientific Computing by Liu]] pp 66-101
 - [[Monte Carlo Statistical Methods by Robert]] pp 552

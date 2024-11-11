@@ -26,7 +26,7 @@ date of note: 2024-07-09
 
 ^640e95
 
-
+- [[Monte Carlo and Applications]]
 - [[Quantile Function]]
 - [[Hypograph or Subgraph of Function]]
 - [[Probability Density Function of Random Variable]]

@@ -151,7 +151,7 @@ date of note: 2024-07-04
 
 - [[Markov Chain Monte Carlo Methods]]
 - [[Markov Chain and Markov Process]]
-
+- [[Monte Carlo and Applications]]
 
 
 

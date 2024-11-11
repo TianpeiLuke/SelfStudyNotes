@@ -94,10 +94,12 @@ date of note: 2024-08-07
 >\text{new estimate } = \text{ old estimate } + \text{ stepsize} \times \left(\text{ target } - \text{ old estimate}\right) 
 >$$
 
+^3387d1
+
 - [[Temporal Difference Learning]]
 - [[SARSA Algorithm and On-Policy Temporal Difference Control]]
 - [[Q Learning Algorithm and Off-Policy Temporal Difference Control]]
-
+- [[Exploration and Exploitation Tradeoff]]
 
 
 -----------

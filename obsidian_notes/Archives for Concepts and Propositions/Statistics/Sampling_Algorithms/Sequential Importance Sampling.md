@@ -67,9 +67,11 @@ date of note: 2024-07-04
 -----------
 ##  Recommended Notes and References
 
-- [[Importance Sampling]]
 
+- [[Importance Sampling]]
 - [[Particle Filter or Sampling-Importance-Resampling]]
+- [[Monte Carlo and Applications]]
+
 
 - [[All of Statistics A Concise Course by Wasserman]]
 - [[Monte Carlo Strategies in Scientific Computing by Liu]] pp 46

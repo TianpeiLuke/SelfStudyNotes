@@ -67,6 +67,7 @@ date of note: 2024-08-08
 - [[Metropolis-Hastings Algorithm]]
 - [[Markov Chain and Markov Process]]
 - [[Hamiltonian Monte Carlo]]
+- [[Monte Carlo and Applications]]
 
 
 - [[All of Statistics A Concise Course by Wasserman]] pp 411

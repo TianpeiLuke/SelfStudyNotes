@@ -42,6 +42,7 @@ date of note: 2024-07-04
 
 - [[Fundamental Theorem of Simulation]]
 - [[Importance Sampling]]
+- [[Monte Carlo and Applications]]
 
 
 - [[All of Statistics A Concise Course by Wasserman]] pp 404

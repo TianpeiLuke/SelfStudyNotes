@@ -39,6 +39,7 @@ date of note: 2024-07-08
 
 - [[Markov Chain Monte Carlo Methods]]
 - [[Langevin Equation]]
+- [[Monte Carlo and Applications]]
 
 
 - Chen, T., Fox, E., & Guestrin, C. (2014, June). Stochastic gradient hamiltonian monte carlo. In _International conference on machine learning_ (pp. 1683-1691). PMLR.

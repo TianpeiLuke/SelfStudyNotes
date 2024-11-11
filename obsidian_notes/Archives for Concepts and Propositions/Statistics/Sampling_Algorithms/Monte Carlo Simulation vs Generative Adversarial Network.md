@@ -26,6 +26,7 @@ date of note: 2024-11-08
 
 ![[Fundamental Theorem of Simulation#^640e95]]
 
+
 - [[Fundamental Theorem of Simulation]]
 - [[Importance Sampling]]
 - [[Markov Chain Monte Carlo Methods]]
@@ -67,6 +68,7 @@ date of note: 2024-11-08
 ##  Recommended Notes and References
 
 
+- [[Monte Carlo and Applications]]
 - [[Markov Chain Monte Carlo Methods]]
 - [[Principle of Learning by Comparison for Implicit Generative Models]]
 
