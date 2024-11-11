@@ -32,4 +32,5 @@ date of note: 2024-05-12
 
 
 - [[Reinforcement Learning An Introduction by Sutton]] pp 185 - 187
+- [[Distributional Reinforcement Learning by Bellemare]] pp 53
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 1153

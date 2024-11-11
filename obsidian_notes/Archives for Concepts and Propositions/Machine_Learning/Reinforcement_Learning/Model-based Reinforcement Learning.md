@@ -31,5 +31,5 @@ date of note: 2024-05-12
 - [[Reinforcement Learning]]
 
 
-- [[Reinforcement Learning An Introduction by Sutton]]
+- [[Reinforcement Learning An Introduction by Sutton]] pp 159 - 193
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 1153

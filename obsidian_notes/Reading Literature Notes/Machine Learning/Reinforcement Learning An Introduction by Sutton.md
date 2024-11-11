@@ -4,6 +4,8 @@ tags:
   - reinforcement_learning/book
   - machine_learning/models
   - machine_learning/algorithms
+  - reinforcement_learning/theory
+  - reinforcement_learning/algorithm
 aliases:
   - suttonReinforcementLearningIntroduction2018
 year: 2018
@@ -55,6 +57,9 @@ date of note: 2024-05-07
 
 ---
 ## Reference
+
+- [[Distributional Reinforcement Learning by Bellemare]]
+
 
 - [[Markov Decision Processes by Puterman]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]

@@ -245,6 +245,7 @@ date of note: 2024-05-12
 
 - [[Monte Carlo and Applications]]
 
-- [[Reinforcement Learning An Introduction by Sutton]]
+- [[Reinforcement Learning An Introduction by Sutton]]  pp 119 - 140
+- [[Distributional Reinforcement Learning by Bellemare]] pp 56 - 58
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 1137, 1140 - 1142
 - [[Foundations of Machine Learning by Mohri]] pp 330 - 335

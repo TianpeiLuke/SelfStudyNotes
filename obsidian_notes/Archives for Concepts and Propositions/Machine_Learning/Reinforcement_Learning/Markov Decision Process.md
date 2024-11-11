@@ -233,7 +233,8 @@ date of note: 2024-05-12
 
 ## Value Function and Bellman Equation
 
-\
+- [[Value Function and Bellman Equation for MDP]]
+- [[Bellman Optimality Equation for MDP]]
 
 
 
@@ -263,7 +264,8 @@ date of note: 2024-05-12
 - [[sigma Algebra]]
 - [[Stochastic Process]]
 
-- [[Reinforcement Learning An Introduction by Sutton]]
+- [[Reinforcement Learning An Introduction by Sutton]] pp 47- 71
+- [[Distributional Reinforcement Learning by Bellemare]] pp 15, 42
 - [[Markov Decision Processes by Puterman]] pp 36
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 1118 - 1120
 - [[Statistical Decision Theory by Berger]] pp 282

@@ -37,7 +37,7 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
-- [[Deep Q-Network]]
+- [[Deep Q-Network or DQN]]
 - [[Temporal Difference Learning]]
 
 - [[Bellman Optimality Equation for MDP]]
@@ -46,5 +46,6 @@ date of note: 2024-05-12
 
 
 
-- [[Reinforcement Learning An Introduction by Sutton]]
+- [[Reinforcement Learning An Introduction by Sutton]] pp 136
+- [[Distributional Reinforcement Learning by Bellemare]] pp 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 1143 - 1144

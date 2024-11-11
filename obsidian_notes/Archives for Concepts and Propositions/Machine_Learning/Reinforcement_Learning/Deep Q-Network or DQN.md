@@ -8,14 +8,14 @@ keywords:
   - double_q_learning
 topics:
   - reinforcement_learning/algorithm
-name: Double Q Learning Algorithm
+name: Double Q Network or DQN
 date of note: 2024-05-12
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Double Q Learning Algorithm
+>**Name**: Double Q Network or DQN
 
 ![[Q Learning Algorithm and Off-Policy Temporal Difference Control#^d64bd3]]
 
@@ -145,5 +145,7 @@ date of note: 2024-05-12
 
 
 - [[Deep Learning by Goodfellow]]
-- [[Reinforcement Learning An Introduction by Sutton]]
+- [[Reinforcement Learning An Introduction by Sutton]] pp 236
+- [[Distributional Reinforcement Learning by Bellemare]] pp 294 - 297
+- [[An Introduction to Deep Reinforcement Learning by Francois-Lavet]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 1143 - 1144

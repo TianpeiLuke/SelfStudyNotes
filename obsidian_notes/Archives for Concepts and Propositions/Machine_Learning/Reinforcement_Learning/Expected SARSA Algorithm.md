@@ -110,5 +110,5 @@ date of note: 2024-05-12
 
 
 
-- [[Reinforcement Learning An Introduction by Sutton]]
+- [[Reinforcement Learning An Introduction by Sutton]] pp 133
 

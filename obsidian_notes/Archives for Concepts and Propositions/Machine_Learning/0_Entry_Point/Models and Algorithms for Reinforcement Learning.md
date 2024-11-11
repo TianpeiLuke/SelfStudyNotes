@@ -98,7 +98,7 @@ date of note: 2024-06-01
 - [[Gradient Monte Carlo Method for Value Function Approximation]]
 - [[Semi-Gradient Temporal Difference]]
 - [[Linear Temporal Difference Learning]]
-- [[Deep Q-Network]]
+- [[Deep Q-Network or DQN]]
 
 
 ### On-Policy Control with Approximation

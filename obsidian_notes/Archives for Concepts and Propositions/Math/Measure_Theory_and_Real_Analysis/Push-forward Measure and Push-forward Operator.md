@@ -76,3 +76,9 @@ date of note: 2024-05-07
 - [[Probability Distribution of Random Variable]]
 
 - Github Note [link](https://github.com/TianpeiLuke/SelfStudyNotes/tree/master/self-study/probability_and_measure_theory)
+
+
+- [[Distributional Reinforcement Learning by Bellemare]] pp 36, 65
+- [[Optimal Transport Old and New by Villani]]
+- [[Computational Optimal Transport by Peyre]]
+- [[Optimal Transport for Applied Mathematicians by Santambrogio]]

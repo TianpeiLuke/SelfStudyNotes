@@ -124,6 +124,7 @@ date of note: 2024-05-12
 - [[Prediction and Control Problems in Reinforcement Learning]]
 
 
-- [[Reinforcement Learning An Introduction by Sutton]] pp 287 
+- [[Reinforcement Learning An Introduction by Sutton]] pp 287 - 320
+- [[Distributional Reinforcement Learning by Bellemare]] pp 71
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 1149 - 1150
 - [[Foundations of Machine Learning by Mohri]]

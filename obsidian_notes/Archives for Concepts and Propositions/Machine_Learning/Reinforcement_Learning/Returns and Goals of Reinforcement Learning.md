@@ -140,6 +140,7 @@ date of note: 2024-05-12
 
 
 - [[Reinforcement Learning An Introduction by Sutton]] pp 53
+- [[Distributional Reinforcement Learning by Bellemare]] pp 15, 19 - 20
 
 
 

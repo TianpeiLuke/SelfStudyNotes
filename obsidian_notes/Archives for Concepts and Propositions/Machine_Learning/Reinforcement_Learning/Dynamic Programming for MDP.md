@@ -84,7 +84,8 @@ date of note: 2024-05-12
 - [[Markov Decision Process]]
 
 
-- [[Reinforcement Learning An Introduction by Sutton]] pp 62 - 67
+- [[Reinforcement Learning An Introduction by Sutton]] pp 62 - 67, 73 - 90
+- [[Distributional Reinforcement Learning by Bellemare]] pp 116, 266, 135
 - [[Markov Decision Processes by Puterman]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 1135
 - [[Foundations of Machine Learning by Mohri]] pp 315

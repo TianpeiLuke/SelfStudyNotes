@@ -61,5 +61,6 @@ date of note: 2024-05-12
 
 
 - [[Reinforcement Learning An Introduction by Sutton]] pp 25 - 32
+- [[Distributional Reinforcement Learning by Bellemare]] pp 303
 - [[Bandit Algorithms by Lattimore]] pp 81
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 1148

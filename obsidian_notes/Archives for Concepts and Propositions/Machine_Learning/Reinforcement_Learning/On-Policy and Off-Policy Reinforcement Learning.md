@@ -41,6 +41,7 @@ date of note: 2024-07-13
 - [[Reinforcement Learning]]
 
 
-- [[Reinforcement Learning An Introduction by Sutton]]
+- [[Reinforcement Learning An Introduction by Sutton]] pp 100 - 103, 257 - 286, 
+- [[Distributional Reinforcement Learning by Bellemare]] pp 288
 - [[Markov Decision Processes by Puterman]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 1160

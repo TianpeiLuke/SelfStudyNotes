@@ -75,4 +75,5 @@ date of note: 2024-08-09
 
 
 - [[Reinforcement Learning An Introduction by Sutton]] pp 198
+- [[Distributional Reinforcement Learning by Bellemare]] pp 261
 - [[An Introduction to Deep Reinforcement Learning by Francois-Lavet]]

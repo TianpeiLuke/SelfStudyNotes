@@ -94,3 +94,4 @@ date of note: 2024-08-09
 - [[Monte Carlo and Applications]]
 
 - [[Reinforcement Learning An Introduction by Sutton]] pp 197 - 199
+- [[Distributional Reinforcement Learning by Bellemare]] pp 26
