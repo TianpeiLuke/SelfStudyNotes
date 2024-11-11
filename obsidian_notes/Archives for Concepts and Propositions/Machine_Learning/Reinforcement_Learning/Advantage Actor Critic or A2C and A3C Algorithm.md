@@ -43,3 +43,4 @@ date of note: 2024-05-12
 
 - [[Reinforcement Learning An Introduction by Sutton]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 1148
+- Medium [blog](https://towardsdatascience.com/understanding-actor-critic-methods-931b97b6df3f)
