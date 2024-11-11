@@ -37,8 +37,8 @@ date of note: 2024-05-07
 
 >[!important] Definition
 >The **push-forward measure** is defined as $$\beta := T_{*}\alpha \in \mathcal{M}(\mathcal{Y})$$ of some $\alpha \in \mathcal{M}(\mathcal{X})$,  $T^{-1}(\cdot)$ is the *pre-image* of $T$, and $\mathcal{M}(\mathcal{X})$ is the *set of Radon measures* on the space $\mathcal{X}$. 
->
->Sometimes we denote pushforward measure as $T_{\#}\alpha$.
+>- $\beta$ is called the **pushforward** of $\alpha$ by $T$.
+>- The pushforward measure is denoted as $$T_{*}\alpha, \quad T_{\#}\alpha.$$
 
 - [[Preimage and Range of Function]]
 

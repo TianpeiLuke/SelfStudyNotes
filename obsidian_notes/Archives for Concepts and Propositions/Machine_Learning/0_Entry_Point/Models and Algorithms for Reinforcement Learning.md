@@ -49,6 +49,7 @@ date of note: 2024-06-01
 - [[Episodic and Continuing Task in Reinforcement Learning]]
 - [[Value Function and Bellman Equation for MDP]]
 - [[Bellman Optimality Equation for MDP]]
+- [[Bellman Operator for Policy on Value Functions]]
 
 
 ### Dynamic Programming
