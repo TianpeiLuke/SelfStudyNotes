@@ -49,6 +49,7 @@ date of note: 2024-08-29
 ## Reference
 
 - [[Kernel Methods in Machine Learning by Hofmann]]
+- [[Kernel Mean Embedding of Distributions by Muandet]]
 - [[Boosting Foundations and Algorithms by Schapire]]
 - [[Elements of Statistical Learning by Hastie]]
 - [[Understanding Machine Learning by Shalev-Shwartz]]

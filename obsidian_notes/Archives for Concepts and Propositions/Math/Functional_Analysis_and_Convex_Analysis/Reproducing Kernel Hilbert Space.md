@@ -86,7 +86,10 @@ date of note: 2024-05-12
 
 - [[Elements of Statistical Learning by Hastie]]
 - [[Kernel Methods in Machine Learning by Hofmann]]
+- [[Learning with Kernels by Schölkopf]]
 - [[Understanding Machine Learning by Shalev-Shwartz]]
+- [[Kernel Mean Embedding of Distributions by Muandet]] pp 17 - 20
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]]
 
 
 - [[Functional Analysis by Reed]]

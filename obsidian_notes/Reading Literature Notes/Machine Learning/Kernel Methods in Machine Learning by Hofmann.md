@@ -56,6 +56,8 @@ date of note: 2024-05-10
 	- [[Elements of Statistical Learning by Hastie]]
 	- [[Understanding Machine Learning by Shalev-Shwartz]]
 	- [[Learning with Kernels by Schölkopf]]
+	- [[Kernel Mean Embedding of Distributions by Muandet]]
+	- [[Probabilistic Machine Learning Advanced Topics by Murphy]]
 
 
 - Optimization

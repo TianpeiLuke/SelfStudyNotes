@@ -25,7 +25,7 @@ date of note: 2024-08-27
 >  
 >Then each **minimizer** $f\in \mathcal{H}$ of the **regularized risk** 
 >$$
->f \in \arg\min_{f\in \mathcal{H}} \left\{  \ell \left((x_{i}, y_{i}, f(x_{i})) \,{,}\ldots{,}\, (x_{m}, y_{m}, f(x_{m}))\right) + \Omega \left(\lVert f \rVert_{\mathcal{H}} \right) \right\}
+>f \in \arg\min_{f\in \mathcal{H}} \left\{  \ell \left((x_{1}, y_{1}, f(x_{1})) \,{,}\ldots{,}\, (x_{m}, y_{m}, f(x_{m}))\right) + \Omega \left(\lVert f \rVert_{\mathcal{H}} \right) \right\}
 >$$
 >admits a **representation** of the form
 >$$
@@ -50,7 +50,7 @@ date of note: 2024-08-27
 >  
 >Then any $$\widetilde{f} := f + h, \quad f\in \mathcal{H}, \; h\in \text{span}\left\{ \psi_{p}, p\in [M] \right\} $$ that **minimizes** the **regularized risk** 
 >$$
->\widetilde{f}  \in \arg\min_{f\in \mathcal{H},\; h} \left\{  \ell \left((x_{i}, y_{i}, \widetilde{f}(x_{i})) \,{,}\ldots{,}\, (x_{m}, y_{m}, \widetilde{f}(x_{m}))\right) + \Omega \left(\lVert f \rVert_{\mathcal{H}} \right) \right\}
+>\widetilde{f}  \in \arg\min_{f\in \mathcal{H},\; h} \left\{  \ell \left((x_{1}, y_{1}, \widetilde{f}(x_{1})) \,{,}\ldots{,}\, (x_{m}, y_{m}, \widetilde{f}(x_{m}))\right) + \Omega \left(\lVert f \rVert_{\mathcal{H}} \right) \right\}
 >$$
 >admits a **representation** of the form
 >$$
@@ -59,6 +59,48 @@ date of note: 2024-08-27
 >with $\beta_{p}\in \mathbb{R}$ for all $p\in [M]$.
 
 - [[Linear Span over a Set of Vectors]]
+
+### Distribution Risk Minimization
+
+>[!important] Definition
+>Let $(\mathcal{X}, \mathscr{F})$ be a *measurable space*, and $\mathscr{P}(\mathcal{X})$ is the *space of all probability measures* on $\mathcal{X}$. Denote $\mathcal{H}  \subset \mathcal{Y}^{\mathcal{X}}$ as the *reproducing kernel Hilbert space (RKHS)* of measurable functions over $\mathcal{X}$.
+>
+>Let assume that 
+>- we have access to a training sample $$(\mathcal{P}_{1}, y_{1}) \,{,}\ldots{,}\, (\mathcal{P}_{n}, y_{n}) \in \mathscr{P}(\mathcal{X}) \times \mathcal{Y}$$ generated from some unknown distribution over $\mathscr{P}(\mathcal{X}) \times \mathcal{Y}$, 
+>- a *strictly monotonically increasing function* $$\Omega: [0, \infty) \to \mathbb{R},$$ 
+>- and a *loss function* $$\ell: (\mathscr{P}(\mathcal{X}) \times \mathcal{Y} \times \mathcal{Y}) \to \mathbb{R} \cup \{+\infty\},$$
+>
+>The **distributional risk minimization (DRM)**
+>$$
+>\min_{f\in \mathcal{H}} \left\{  \ell \left((\mathcal{P}_{1}, y_{1},  \mathbb{E}_{ \mathcal{P}_{1} }\left[ f \right]) \,{,}\ldots{,}\, (\mathcal{P}_{n}, y_{n}, \mathbb{E}_{ \mathcal{P}_{n} }\left[ f \right])\right) + \Omega \left(\lVert f \rVert_{\mathcal{H}} \right) \right\}
+>$$
+>- The optimal solution has the form $$f(x) = \sum_{i=1}^{m}\alpha_{i}\;  \mathbb{E}_{ \mathcal{P}_{i} }\left[ K(X, x) \right] = \sum_{i=1}^{m}\alpha_{i}\;\mu_{\mathcal{P}_{i}}$$ where $\mu_{\mathcal{P}_{i}}$ is the *kernel mean embedding* of $\mathcal{P}_{i}$ $$\mu_{\mathcal{P}_{i}} =  \mathbb{E}_{ \mathcal{P}_{i} }\left[K(X, \cdot)  \right]$$
+
+
+- [[Kernel Mean Embedding of Distribution]]
+- [[Space of Bounded Signed Measures]]
+- [[Measure Space and Countably Additive Measure]]
+
+
+![[distributional_data_kernel_embedding.png]]
+
+
+>[!important] Representer Theorem (Distributional Case)
+>Let $(\mathcal{X}, \mathscr{F})$ be a measureable space, and  $\mathcal{H} \subset \mathbb{R}^{\mathcal{X}}$ be a *reproducing kernel Hilbert space* of *measurable real-valued function*. Denote 
+>- by $\Omega : [0, \infty) \to \mathbb{R}$ a **strictly monotonic increasing function**, and 
+>- by  $\mathscr{P}(\mathcal{X})$ the *space of all probability measures* on $\mathcal{X}$.
+>- by $\ell : (\mathscr{P}(\mathcal{X}) \times \mathbb{R}^2)^m  \to \mathbb{R} \cup \{\infty\}$ an arbitrary *loss function*. 
+>  
+>Then each **minimizer** $f\in \mathcal{H}$ of the **regularized risk** 
+>$$
+>f \in \arg\min_{f\in \mathcal{H}} \left\{  \ell \left((\mathcal{P}_{1}, y_{1},  \mathbb{E}_{ \mathcal{P}_{1} }\left[f\right]) \,{,}\ldots{,}\, (\mathcal{P}_{m}, y_{m}, \mathbb{E}_{ \mathcal{P}_{m} }\left[f\right])\right) + \Omega \left(\lVert f \rVert_{\mathcal{H}} \right) \right\}
+>$$
+>admits a **representation** of the form
+>$$
+> f(x) = \sum_{i=1}^{m}\alpha_{i}\;\mathbb{E}_{ X\sim\mathcal{P}_{i} }\left[  K(X, x) \right]  = \sum_{i=1}^{m}\alpha_{i}\;\mu_{\mathcal{P}_{i}}.
+>$$
+>where $\mu_{\mathcal{P}_{i}}$ is the *kernel mean embedding* of $\mathcal{P}_{i}$ $$\mu_{\mathcal{P}_{i}} =  \mathbb{E}_{ \mathcal{P}_{i} }\left[K(X, \cdot)  \right]$$
+
 
 
 ## Explanation
@@ -83,10 +125,11 @@ date of note: 2024-08-27
 - [[Support Vector Machine Linear Separable Case]]
 
 
-- [[Kernel Methods in Machine Learning by Hofmann]] pp 16
+- [[Kernel Methods in Machine Learning by Hofmann]] pp 16 - 19
 - [[Learning with Kernels by Schölkopf]] pp 89, 91
-
+- [[Kernel Mean Embedding of Distributions by Muandet]] pp 57 - 59
 - [[Elements of Statistical Learning by Hastie]]
 - [[Understanding Machine Learning by Shalev-Shwartz]] pp 179 - 189
 - [[Foundations of Machine Learning by Mohri]] pp 117
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 692
+

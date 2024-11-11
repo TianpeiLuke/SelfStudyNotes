@@ -148,6 +148,7 @@ date of note: 2024-11-07
 
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 57,  889
+- [[Kernel Mean Embedding of Distributions by Muandet]] pp 44
 - Wikipedia [Integral_probability_metric](https://en.wikipedia.org/wiki/Integral_probability_metric)
 
 

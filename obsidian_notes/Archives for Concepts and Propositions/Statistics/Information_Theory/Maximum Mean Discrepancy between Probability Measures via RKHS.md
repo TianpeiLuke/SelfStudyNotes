@@ -46,6 +46,7 @@ date of note: 2024-11-07
 >$$
 >D_{\mathcal{F}}(P, Q) := \sup_{\lVert \hat{f} \rVert_{\ell_{2}} \le 1 }\left\langle  \hat{f}\,,\,  \mu_{P} - \mu_{Q}  \right\rangle_{\ell_{2}} = \frac{\mu_{P} - \mu_{Q} }{\lVert \mu_{P} - \mu_{Q} \rVert_{2} }
 >$$  
+>- **MMD** can be reformulated as $$D_{\mathcal{F}}(P, Q) := \sup_{\lVert f \rVert_{\mathcal{H}} \le 1 }\left\lvert \left\langle f , \mu_{P} - \mu_{Q}  \right\rangle_{\mathcal{H}} \right\rvert = \lVert \mu_{P} - \mu_{Q}  \rVert_{\mathcal{H}}.$$
 
 ^345e1a
 
@@ -148,5 +149,6 @@ date of note: 2024-11-07
 
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 58 - 59,  891
+- [[Kernel Mean Embedding of Distributions by Muandet]] pp 44 - 51
 
 

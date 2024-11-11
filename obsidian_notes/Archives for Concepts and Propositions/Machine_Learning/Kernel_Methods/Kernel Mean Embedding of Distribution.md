@@ -61,6 +61,7 @@ date of note: 2024-11-08
 
 ^19844b
 
+![[kernel_mean_embedding.png]]
 
 ### Empirical Kernel Mean Embedding
 
@@ -117,6 +118,9 @@ date of note: 2024-11-08
 
 - [[Parzen Kernel Density Estimation]]
 
+## Kernel Mean Embedding for Conditional Distribution
+
+- [[Kernel Mean Embedding of Conditional Distribution]]
 
 
 
@@ -132,4 +136,5 @@ date of note: 2024-11-08
 - [[Gaussian Process]]
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 58 - 59,  891
+- [[Kernel Mean Embedding of Distributions by Muandet]] pp 22 - 64
 - Wikipedia [Kernel_embedding_of_distributions](https://en.wikipedia.org/wiki/Kernel_embedding_of_distributions)

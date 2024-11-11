@@ -3,17 +3,22 @@ tags:
   - concept
   - machine_learning/kernel_methods
   - machine_learning/dimensionality_reduction
-keywords: 
-topics: 
-name: 
+keywords:
+  - kernel_pca
+  - principle_component_analysis
+topics:
+  - machine_learning/dimensionality_reduction
+  - machine_learning/kernel_methods
+name: Kernel Principal Component Analysis
 date of note: 2024-11-05
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Kernel Principal Component Analysis
 
+![[Principle Component Analysis#^feea32]]
 
 
 ## Explanation
@@ -36,4 +41,5 @@ date of note: 2024-11-05
 
 - [[Elements of Statistical Learning by Hastie]] pp 547 - 550
 - [[Learning with Kernels by Schölkopf]] pp 429 - 442
+- [[Kernel Methods in Machine Learning by Hofmann]] pp 41 - 42
 
