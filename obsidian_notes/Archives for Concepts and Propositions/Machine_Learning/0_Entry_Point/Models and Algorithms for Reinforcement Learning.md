@@ -142,7 +142,7 @@ date of note: 2024-06-01
 - [[REINFORCE Algorithm with Baseline]]
 - [[Actor-Critic Algorithm]]
 - [[Actor-Critic Algorithm with Eligibility Traces]]
-- [[A2C and A3C Algorithm]]
+- [[Advantage Actor Critic or A2C and A3C Algorithm]]
 
 
 ### Planning and Model-based RL

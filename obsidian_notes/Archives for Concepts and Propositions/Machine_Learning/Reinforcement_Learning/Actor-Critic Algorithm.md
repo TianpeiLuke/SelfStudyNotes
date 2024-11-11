@@ -51,6 +51,8 @@ date of note: 2024-05-12
 >where $G$ is the return and $$v_{\pi}(x) := \mathbb{E}_{ \pi }\left[  G| X = x \right]$$
 >- In **Actor-Critic**, this expected returns is approximated by the **value function** from **critic** $$\hat{G}_{t} = R_{t+1} + \gamma\hat{v}(X_{t+1}, w_t )$$ with **baseline** $\hat{v}(X_{t}, w_{t})$ 
 
+^8f78d3
+
 - [[Value Function and Bellman Equation for MDP]]
 - [[REINFORCE Algorithm for Monte Carlo Policy Gradient]]
 
@@ -74,6 +76,8 @@ date of note: 2024-05-12
 >	- and used it as a **feedback** for actor's performance. 
 >	- For instance, **the same TD error** $\delta_t$ is used by *semi-gradient temporal difference methods* $$\begin{align} w_{t+1} &\leftarrow  w_{t} + \alpha_{w} \;\delta_{t}\;\nabla_{w}\hat{v}(X_{t}, w_{t}) \end{align}$$ 
 >	- The *critic* will adjust the value function to **match** the **target value**, i.e. moving in direction to **minimize** the *Mean Squared Value Error*. $$\min_{w} \mathbb{E}_{ X\sim p }\left[  \lVert \hat{v}(X, w) - v(X, \pi) \rVert_{2}^2  \right]$$
+
+^5ba730
 
 - [[REINFORCE Algorithm with Baseline]]
 - [[Temporal Difference Learning]]
@@ -179,6 +183,10 @@ date of note: 2024-05-12
 - [[SARSA Algorithm and On-Policy Temporal Difference Control]]
 - [[Expected SARSA Algorithm]]
 
+### Advantage Actor Critic or A2C Algorithm
+
+
+- [[Advantage Actor Critic or A2C and A3C Algorithm]]
 
 ## Principle of Learning by Comparison
 
