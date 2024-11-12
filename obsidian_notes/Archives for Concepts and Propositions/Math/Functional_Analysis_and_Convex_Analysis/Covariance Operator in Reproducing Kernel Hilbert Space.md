@@ -55,7 +55,7 @@ date of note: 2024-05-10
 >- $$\varphi \otimes \phi \in \mathcal{H}_{Y} \otimes \mathcal{H}_{X}$$ is the *tensor product* of *canonical feature map*.
 >	- This corresponds to the *canonical feature map* of kernel $$K_{Y\otimes X}$$ in tensor product space $\mathcal{H}_{Y} \otimes \mathcal{H}_{X}$
 >	- Note that the kernel in $\mathcal{H}_{Y} \otimes \mathcal{H}_{X}$ is the *product kernel* i.e. $$\begin{align}&K_{Y\otimes X}((y_{1}, x_{1}), (y_{2}, x_{2})) \\[5pt] &:= \left\langle (\varphi \otimes \phi)(y_{1}, x_{1})  , (\varphi \otimes \phi)(y_{2}, x_{2})  \right\rangle_{\mathcal{H}_{Y} \otimes \mathcal{H}_{X}} \\[5pt] &= \left\langle \varphi(y_{1}) ,  \varphi(y_{2})\right\rangle_{\mathcal{H}_{Y}}\;\left\langle \phi(x_{1}) , \phi(x_{2}) \right\rangle_{\mathcal{H}_{X}} \\[5pt] &= K_{Y}(y_{1}, y_{2})\,K_{X}(x_{1}, x_{2})\end{align}$$
->	- Thus the **cross-covariance operator** is a **kernel mean embedding** for *product kernel* 
+>- Thus the **cross-covariance operator** is a **kernel mean embedding** for *product kernel* 
 >	  $$\begin{align}\mathcal{K}_{Y,X} &:=  \mathbb{E}_{ Y,X }\left[K_{Y}(Y,\cdot)\,K_{X}(X, \cdot)  \right] \\[5pt] &= \int_{\mathcal{Y}}\int_{\mathcal{X}}K_{Y}(y,\cdot)\,K_{X}(x, \cdot)\,d\mathcal{P}_{Y,X}(y, x) \\[5pt] &= \mu \left( \mathcal{P}_{Y,X} \right)\end{align}$$
 
 ^52cec0
