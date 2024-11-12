@@ -20,6 +20,13 @@ date of note: 2024-11-05
 
 ![[Principle Component Analysis#^feea32]]
 
+>[!important]
+>$$
+>\begin{align*}
+> \max_{U} & \text{tr}\left\{ U^[T]K(X, X)U \right\} 
+>\end{align*}
+>$$
+
 
 ## Explanation
 
