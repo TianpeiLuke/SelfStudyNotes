@@ -47,3 +47,4 @@ date of note: 2024-11-11
 
 
 - [[Distributional Reinforcement Learning by Bellemare]] pp 78
+- [[Kernel Mean Embedding of Distributions by Muandet]] pp 89 - 92

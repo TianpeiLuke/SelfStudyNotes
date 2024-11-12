@@ -76,10 +76,6 @@ date of note: 2024-11-08
 >$$
 >\mu \left(P_{n}\right) := \frac{1}{n} \sum_{i=1}^{n}\, K(X_{i}, \cdot)
 >$$
->or 
->$$
->\mu \left(P_{n}\right) := \frac{1}{n} \sum_{i=1}^{n}\, \Phi(X_{i}) = \left(  \frac{1}{n} \sum_{i=1}^{n}\,\phi_{k}(X_{i})\right)_{k=1}^{\infty} 
->$$
 >where $$P_{n} = \frac{1}{n}\sum_{i=1}^{n}\delta_{X_{i}}$$ is the *empirical measure.*
 
 ^6e1506

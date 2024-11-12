@@ -81,6 +81,8 @@ date of note: 2024-11-04
 
 ![[Kernel Mean Embedding of Distribution#^19844b]]
 
+![[Kernel Mean Embedding of Distribution#^6e1506]]
+
 - [[Kernel Mean Embedding of Distribution]]
 
 
@@ -98,5 +100,6 @@ date of note: 2024-11-04
 - [[All of Nonparametric Statistics by Wasserman]] pp 125 - 145
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 770
 - [[Elements of Statistical Learning by Hastie]] pp 208 - 215
+- [[Kernel Mean Embedding of Distributions by Muandet]] pp 99
 - [[Density Estimation for Statistics and Data Analysis by Silverman]] pp 15
 - [[Learning with Kernels by Schölkopf]]
