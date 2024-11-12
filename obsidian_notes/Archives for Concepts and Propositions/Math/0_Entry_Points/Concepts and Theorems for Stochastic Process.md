@@ -82,6 +82,7 @@ date of note: 2024-05-30
 - [[Gaussian Random Function]]
 - [[Representation of Gaussian Random Function in Hilbert Space]]
 - [[Covariance Operator]]
+- [[Covariance Operator in Reproducing Kernel Hilbert Space]]
 - [[Covariance Function of Gaussian Process]]
 
 ### Brownian Motion

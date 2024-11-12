@@ -182,6 +182,7 @@ date of note: 2024-05-11
 - [[Reproducing Kernel Hilbert Space]]
 - [[Representation of Evaluational Functional in RKHS]]
 - [[Reproducing Kernel of RKHS]]
+- [[Covariance Operator in Reproducing Kernel Hilbert Space]]
 
 
 ## Explanation

@@ -60,6 +60,9 @@ date of note: 2024-05-30
 
 - [[Reproducing Kernel Hilbert Space]]
 - [[Reproducing Kernel of RKHS]]
+- [[Kernel Mean Embedding of Distribution]]
+- [[Kernel Mean Embedding of Conditional Distribution]]
+- [[Covariance Operator in Reproducing Kernel Hilbert Space]]
 - [[RKHS of Gaussian Process]]
 - [[RKHS of Gaussian Random Function]]
 - [[RKHS of Gaussian Random Function in Hilbert Space]]

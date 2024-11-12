@@ -79,6 +79,14 @@ date of note: 2024-05-10
 - [[Hilbert-Schmidt Operator]]
 - [[Trace of Positive Semi-Definite Operator]]
 
+## Covariance Operator in RKHS
+
+![[Covariance Operator in Reproducing Kernel Hilbert Space#^39f1ad]]
+
+![[Covariance Operator in Reproducing Kernel Hilbert Space#^52cec0]]
+
+- [[Covariance Operator in Reproducing Kernel Hilbert Space]]
+
 
 
 -----------

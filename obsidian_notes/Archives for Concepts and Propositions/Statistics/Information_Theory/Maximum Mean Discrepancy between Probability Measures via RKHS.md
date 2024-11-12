@@ -39,14 +39,11 @@ date of note: 2024-11-07
 >$$
 >where 
 >- $\mathcal{F}$ is a bounded subspace of a *reproducing Kernel Hilbert space* $\mathcal{H}$ of functions on $\Omega$ where $$\mathcal{F} := \left\{ f\in \mathcal{H}\;:\; \lVert f \rVert_{\mathcal{H}} \le 1  \right\} $$ 
->- Let $\phi := \{ \phi_{i} \}_{i=1}^{\infty}$  be a set of *complete orthonormal basis* in $\mathcal{H}$, $$f(x) = \sum_{i=1}^{\infty}f_{i}\,\phi_{i}(x).$$ The subspace $\mathcal{F}$ can be represented as  $$\mathcal{F} := \left\{ f = \sum_{i=1}^{\infty}f_{i}\,\phi_{i}\;:\; \sum_{i=1}^{\infty}f_{i}^2 \le 1  \right\} $$ 
->- We see that $$\int f\,dP := \sum_{i=1}^{\infty}f_{i}\, \int \phi_{i}\,dP := \sum_{i=1}^{\infty}f_{i}\,\mathbb{E}_{ P }\left[  \phi_{i}(X) \right]$$
->- Define the **kernel mean embedding** of *distribution* $P$ as $$\mu_{P} := \left[ \mathbb{E}_{ P }\left[  \phi_{1}(X) \right] \,{,}\ldots{,}\,\mathbb{E}_{ P }\left[  \phi_{d}(X) \right] \,{,}\ldots{,}\,\right] := \mathbb{E}_{ P }\left[  \phi(X) \right] $$
+>- Let $\phi : x\to K(x, \cdot)$  be the canonical feature map for kernel $K$ in $\mathcal{H}$, $$f(x) = \left\langle f , \phi(x) \right\rangle_{\mathcal{H}}.$$ 
+>- We see that $$\int f\,dP := \int \left\langle f , \phi \right\rangle_{\mathcal{H}}dP := \left\langle f ,  \mathbb{E}_{ P }\left[ \phi \right] \right\rangle_{\mathcal{H}}$$
+>- Define the **kernel mean embedding** of *distribution* $P$ as $$\mu_{P} := \mathbb{E}_{ P }\left[  K(X, \cdot) \right] $$
 >- The **maximum mean discrepancy (MMD)** can be reformulated as 
->$$
->D_{\mathcal{F}}(P, Q) := \sup_{\lVert \hat{f} \rVert_{\ell_{2}} \le 1 }\left\langle  \hat{f}\,,\,  \mu_{P} - \mu_{Q}  \right\rangle_{\ell_{2}} = \frac{\mu_{P} - \mu_{Q} }{\lVert \mu_{P} - \mu_{Q} \rVert_{2} }
->$$  
->- **MMD** can be reformulated as $$D_{\mathcal{F}}(P, Q) := \sup_{\lVert f \rVert_{\mathcal{H}} \le 1 }\left\lvert \left\langle f , \mu_{P} - \mu_{Q}  \right\rangle_{\mathcal{H}} \right\rvert = \lVert \mu_{P} - \mu_{Q}  \rVert_{\mathcal{H}}.$$
+>$$D_{\mathcal{F}}(P, Q) := \sup_{\lVert f \rVert_{\mathcal{H}} \le 1 }\left\lvert \left\langle f , \mu_{P} - \mu_{Q}  \right\rangle_{\mathcal{H}} \right\rvert = \lVert \mu_{P} - \mu_{Q}  \rVert_{\mathcal{H}}.$$
 
 ^345e1a
 

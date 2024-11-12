@@ -21,21 +21,22 @@ date of note: 2024-11-08
 >[!important]
 >**Name**: Kernel Mean Embedding of Distribution
 
->[!important] Definition  (Complete Orthonormal Basis Version)
+>[!important] Definition  (Feature Map)
 >Let $(\mathcal{X}, \mathscr{F}, P)$ be a probability space and  $\mathcal{H}$ be a *reproducing Kernel Hilbert space (RKHS)* of functions with kernel $K$, indexed by $\mathcal{X}$.
 >
->Let $\Phi := \{ \phi_{i} \}_{i=1}^{\infty}$  be a set of *complete orthonormal basis* in $\mathcal{H}$, $$\forall f \in \mathcal{H} \implies f(x) = \sum_{i=1}^{\infty}f_{i}\,\phi_{i}(x)$$ for some $\hat{f} := \{ f_{i} \}_{i=1}^{\infty} \subset \ell_{2}$.
->
+>Let $\phi$ be the *canonical feature map* corresponding to kernel $K$ i.e.
+>$$\phi: \mathcal{X} \to \mathcal{H}$$ where $$f(x) = \left\langle  f, K(x,\cdot) \right\rangle_{\mathcal{H}} := \left\langle  f, \phi(x)\right\rangle_{\mathcal{H}}$$
+>- Here $$\phi(x) := K(x, \cdot)$$
+>- Note that $$K(x, x') := \left\langle \phi(x) \,,\,\phi(x')  \right\rangle_{\mathcal{H}}$$
 >
 >The **kernel mean embedding** of *distribution* $P$ is defined as 
 >$$
 >\begin{align*}
->\mu_{P} &:=  \left( \int_{\mathcal{X}}\phi_{i}\,dP\right)_{i=1}^{\infty} \\[8pt] 
->&:= \left( \mathbb{E}_{ P }\left[  \phi_{i}(X) \right]\right)_{i=1}^{\infty} \\[8pt] 
->&:= \mathbb{E}_{ P }\left[  \Phi(X) \right]
+>\mu_{P} &:=  \int_{\mathcal{X}}\phi(x)\,dP(x) \\[8pt] 
+>&:= \mathbb{E}_{ P }\left[  \phi(X) \right]
 >\end{align*}
 >$$
->- With kernel mean embedding $\mu_{P}$, the expectation of $f$ with respect to $P$ can be represented as the *inner product* in $\ell_{2}$ $$\mathbb{E}_{ P }\left[  f(X) \right] = \sum_{i=1}^{\infty}f_{i}\,\mathbb{E}_{ P }\left[  \phi_{i}(X) \right] = \left\langle  \hat{f}\,,\, \mu_{P}  \right\rangle_{\ell_{2}}$$
+>- With kernel mean embedding $\mu_{P}$, the expectation of $f$ with respect to $P$ can be represented as the *inner product* in $\mathcal{H}$ $$\mathbb{E}_{ P }\left[  f(X) \right] = \mathbb{E}_{ P }\left[ \left\langle  f, \phi(X)\right\rangle_{\mathcal{H}} \right] = \left\langle  f\,,\, \mu_{P}  \right\rangle_{\mathcal{H}}$$
 
 ^300ada
 
@@ -58,9 +59,12 @@ date of note: 2024-11-08
 >$$
 >- Under this definition, the *kernel mean embedding* $\mu_{P} \in \mathcal{H}$ is a *function* on $\mathcal{X}$. 
 >- And $$\mathbb{E}_{ P }\left[  f(X) \right] = \left\langle  f\,,\, \mu_{P}   \right\rangle_{\mathcal{H}}$$
+>
+>The **kernel mean embedding** is defined as a map from the *space of all probability measures* on $\mathcal{X}$ to a *reproducing kernel Hilbert space* $\mathcal{H}$ with kernel $K$ $$\mu_{\cdot}: \mathscr{P}(\mathcal{X}) \xhookrightarrow{} \mathcal{H},\; \quad P \to \int_{\mathcal{X}}K(x, \cdot)\,dP(x).$$
 
 ^19844b
 
+![[kernel_mean_embedding.png]]
 ![[kernel_mean_embedding.png]]
 
 ### Empirical Kernel Mean Embedding
@@ -86,18 +90,31 @@ date of note: 2024-11-08
 ## Explanation
 
 >[!important]
->It is called *embedding* since it is a **smooth embedding** from the *space of probability measures (functional space)* $P$ into $\ell_{2}$ space $$\mu_{\cdot}: \mathscr{P}(\mathcal{X}) \xhookrightarrow{} \ell_{2}\; \quad \mu_{P} :=\mu(P) \in \ell_{2}$$
->- This space of measures is a subspace of *dual of RKHS*. $$\mathscr{P}(\mathcal{X}) \subset \mathcal{H}^{*} \simeq \ell_{2}.$$
->  
->  
->Using the second definition, then the *kernel mean embedding*  is a **smooth embedding** from the *space of probability measures (functional space)* $\mathscr{P}$ into $\mathcal{H}$ space $$\mu_{\cdot}: \mathscr{P}(\mathcal{X}) \xhookrightarrow{} \mathcal{H}\; \quad \mu_{P} :=\mu(P) \in \mathcal{H}$$
->- This is equivalent to above, since for RKHS $$\mathcal{H} \simeq \mathcal{H}^{*} \simeq \ell_{2}$$
+>The *kernel mean embedding*  is a **smooth embedding** from the *space of probability measures (functional space)* $\mathscr{P}$ into $\mathcal{H}$ space $$\mu_{\cdot}: \mathscr{P}(\mathcal{X}) \xhookrightarrow{} \mathcal{H}\; \quad \mu_{P} :=\mu(P) \in \mathcal{H}$$
 
 - [[Smooth Embedding]]
 - [[Radon Measure]]
 - [[Space of Bounded Signed Measures]]
 - [[Riesz-Markov Representation Theorem]]
 - [[Riesz Representation Theorem]]
+
+## Examples
+
+### Moment Generating Functions
+
+- [[Moment Generating Function]]
+- 
+
+### Characteristic Functions
+
+
+### Covariance Operator
+
+![[Covariance Operator in Reproducing Kernel Hilbert Space#^39f1ad]]
+
+- [[Covariance Operator in Reproducing Kernel Hilbert Space]]
+- [[Covariance Operator]]
+- [[Covariance Function of Gaussian Process]]
 
 
 ## Maximum Mean Discrepancy
@@ -122,6 +139,9 @@ date of note: 2024-11-08
 
 - [[Kernel Mean Embedding of Conditional Distribution]]
 
+## Kernel Mean Embedding for Conditional Distribution
+
+- [[Kernel Mean Embedding of Conditional Distribution]]
 
 
 -----------
@@ -137,4 +157,5 @@ date of note: 2024-11-08
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 58 - 59,  891
 - [[Kernel Mean Embedding of Distributions by Muandet]] pp 22 - 64
+- [[Density Estimation for Statistics and Data Analysis by Silverman]]
 - Wikipedia [Kernel_embedding_of_distributions](https://en.wikipedia.org/wiki/Kernel_embedding_of_distributions)

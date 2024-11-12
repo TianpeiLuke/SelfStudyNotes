@@ -43,4 +43,5 @@ date of note: 2024-11-11
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 58 - 59,  891
 - [[Kernel Mean Embedding of Distributions by Muandet]] pp 70 - 94
+- [[Density Estimation for Statistics and Data Analysis by Silverman]]
 - Wikipedia [Kernel_embedding_of_distributions](https://en.wikipedia.org/wiki/Kernel_embedding_of_distributions)

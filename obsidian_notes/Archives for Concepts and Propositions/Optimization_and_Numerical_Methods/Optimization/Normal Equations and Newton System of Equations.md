@@ -35,6 +35,16 @@ date of note: 2024-10-06
 - [[Positive Semidefinite Transformation]]
 - [[Space of Symmetric Positive Semidefinite Matrices]]
 
+### Generalization in RKHS
+
+![[Covariance Operator in Reproducing Kernel Hilbert Space#^5a6926]]
+
+- [[Covariance Operator in Reproducing Kernel Hilbert Space]]
+- [[Reproducing Kernel Hilbert Space]]
+- [[Reproducing Kernel of RKHS]]
+
+
+
 ## Explanation
 
 ### Least Square Estimation
