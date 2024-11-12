@@ -135,9 +135,7 @@ date of note: 2024-11-08
 
 - [[Kernel Mean Embedding of Conditional Distribution]]
 
-## Kernel Mean Embedding for Conditional Distribution
 
-- [[Kernel Mean Embedding of Conditional Distribution]]
 
 
 -----------

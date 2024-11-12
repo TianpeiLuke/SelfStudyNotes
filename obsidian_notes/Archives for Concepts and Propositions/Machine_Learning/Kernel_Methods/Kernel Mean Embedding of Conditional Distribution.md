@@ -17,8 +17,12 @@ date of note: 2024-11-11
 
 ![[Kernel Mean Embedding of Distribution#^19844b]]
 
+![[Covariance Operator in Reproducing Kernel Hilbert Space#^52cec0]]
+
+![[Covariance Operator in Reproducing Kernel Hilbert Space#^5a6926]]
+
 - [[Kernel Mean Embedding of Distribution]]
-- Muandet, K., Fukumizu, K., Sriperumbudur, B., & Schölkopf, B. (2017). Kernel Mean Embedding of Distributions: A Review and Beyond. _Foundations and Trends® in Machine Learning_, _10_(1–2), 1–141. [https://doi.org/10.1561/2200000060](https://doi.org/10.1561/2200000060) pp 71
+- [[Covariance Operator in Reproducing Kernel Hilbert Space]]
 
 
 
