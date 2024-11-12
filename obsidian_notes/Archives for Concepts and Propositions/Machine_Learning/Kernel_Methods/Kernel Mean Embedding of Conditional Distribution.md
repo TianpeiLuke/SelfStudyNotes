@@ -92,14 +92,16 @@ date of note: 2024-11-11
 >Thus take conjugate transport of $\mathcal{K}_{X,X}^{-1}\mathcal{K}_{X,Y}$ on both sides
 >$$
 >\begin{align*}
-> \left\langle \mathbb{E}_{ Y,X }\left[g(Y)\,|\,X\right]\,,\, \phi(x)   \right\rangle_{\mathcal{H}_{X}}   &= \left\langle  \left(\mathcal{K}_{X,X}^{-1}\;\mathcal{K}_{X,Y}\right)\,g  \,,\,\phi(x)     \right\rangle_{\mathcal{H}_{X}} \\[8pt]
->  \iff  \left\langle \mathbb{E}_{ Y,X }\left[g(Y)\,|\,X\right]\,,\, \phi(x)   \right\rangle_{\mathcal{H}_{X}}   &= \left\langle  g  \,,\,\left(\mathcal{K}_{X,X}^{-1}\;\mathcal{K}_{X,Y}\right)^{*}\,\phi(x)     \right\rangle_{\mathcal{H}_{X}} \\[8pt]
-> \iff  \mathbb{E}_{ Y,X }\left[g(Y)\,|\,X=x\right]  &= \left\langle  g  \,,\,\mathcal{K}_{Y,X}\,\mathcal{K}_{X,X}^{-1}\,\phi(x)     \right\rangle_{\mathcal{H}_{Y}} \\[8pt]
+>\mathbb{E}_{ Y,X }\left[g(Y)\,|\,X=x\right] &=  \left\langle  \mathbb{E}_{ Y,X }\left[g(Y)\,|\,X\right]\,,\, \phi(x)   \right\rangle_{\mathcal{H}_{X}} \\[8pt]
+>  &= \left\langle  \left(\mathcal{K}_{X,X}^{-1}\;\mathcal{K}_{X,Y}\right)\,g  \,,\,\phi(x)     \right\rangle_{\mathcal{H}_{X}} \\[8pt]
+>  &= \left\langle  g \,,\,\left(\mathcal{K}_{X,X}^{-1}\;\mathcal{K}_{X,Y}\right)^{*}\,\phi(x)     \right\rangle_{\mathcal{H}_{Y}} \\[8pt]
+>  &= \left\langle  g  \,,\,\mathcal{K}_{Y,X}\,\mathcal{K}_{X,X}^{-1}\,\phi(x)     \right\rangle_{\mathcal{H}_{Y}} \\[8pt]
 > &= \left\langle  g  \,,\,\mathcal{U}_{Y|x} \right\rangle_{\mathcal{H}_{Y}}
 >\end{align*}
 >$$
 >- The last equality is based on the second definition.
 >- We see that the **second definition** *satisfies* the **first definition.**
+>- Note that this works when $X$ is *discrete random variables*. For *continuous random variables*, this is an **approximation** since $\mathcal{K}_{X,X}$ may not *invertiable.*
 
 
 ### Empirical Estimator of Conditional Mean Embedding
@@ -121,7 +123,7 @@ date of note: 2024-11-11
 >- $$K := [K_{X}(x_{i}, x_{j})] $$
 >- $$k_{x} := (K_{X}(x, x_{1}) \,{,}\ldots{,}\, K_{X}(x, x_{n}))^{T}$$
 >  
->We may *reformulated* it as the **empirical kernel mean** $$\hat{\mu}_{Y|x} = \sum_{i=1}^{n}\beta_{i}\,\varphi(y_{i}) \in \mathcal{H}_{Y}$$ with *coefficients* $$\beta := \left(K + n\,\lambda\,I\right)^{-1}\,k_{x}.$$  
+>We may *reformulated* it as the **empirical kernel mean** $$\hat{\mu}_{Y|x} = \Phi\,\beta :=  \sum_{i=1}^{n}\beta_{i}\,\varphi(y_{i}) \in \mathcal{H}_{Y}$$ with *coefficients* $$\beta := \left(K + n\,\lambda\,I\right)^{-1}\,k_{x}.$$  
 
 >[!info]
 >This is the **kernel ridge regression**.
