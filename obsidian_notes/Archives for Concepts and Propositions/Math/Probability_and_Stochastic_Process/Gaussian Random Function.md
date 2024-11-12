@@ -32,6 +32,7 @@ date of note: 2024-05-10
 - [[Canonical Dual Pairing]]
 - [[Topological Vector Space]]
 - [[Dual Normed Space and Dual Banach Space]]
+- [[Gaussian Measure]]
 
 
 ## Explanation

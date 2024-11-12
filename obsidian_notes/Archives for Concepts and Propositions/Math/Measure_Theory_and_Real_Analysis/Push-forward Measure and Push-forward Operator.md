@@ -48,9 +48,9 @@ date of note: 2024-05-07
 >The *push-forward measure* is to "push" the *measure* on **domain space** "forward" to *the measure* on **co-domain space**, with the help of a *continuous function* $T$.
 
 
-## Integration
+## Integration and Change of Variable Formula
 
->[!important]
+>[!important] Proposition
 >Let $(\mathcal{X}, \mathscr{F}, \mu)$ be a *measure space* and $(\mathcal{Y}, \mathscr{G})$ be a *measurable space*. Define $T: \mathcal{X} \to \mathcal{Y}$ as a  $\mathscr{F}/\mathscr{G}$ *measurable map*.
 >
 >If $f \circ T\in L^1(\mathcal{X}, \mathscr{F}, \mu)$, then $f \in L^1(\mathcal{Y}, \mathscr{G}, \, T_{*}\mu)$ where $T_{*}\mu$ is the **pushforward measure** of $\mu$ by $T$.
