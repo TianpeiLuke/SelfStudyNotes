@@ -25,7 +25,7 @@ date of note: 2024-09-12
 ##  Recommended Notes and References
 
 
-- [[Bag-of-Words for Text Representation]]
+- [[n-Gram Model and Language Model]]
 - [[Word Embedding]]
 - [[n-Gram Model and Language Model]]
 - [[Cosine Similarity and Cosine Distance]]

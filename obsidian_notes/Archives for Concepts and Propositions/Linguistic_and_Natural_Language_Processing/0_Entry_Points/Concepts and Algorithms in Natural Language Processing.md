@@ -24,8 +24,12 @@ date of note: 2024-09-13
 
 ### Vector Semantics
 
+- [[Bag-of-Words for Text Representation]]
 - [[Vector Space Model for Text Representation]]
 - [[Word Embedding]]
+- [[Skip-Gram Algorithm for Word Embedding]]
+- [[Contiuous-Bag-of-Words Algorithm for Word Embedding]]
+- [[Word2Vec Algorithm for Word Embedding]]
 - [[Topic Models]]
 
 

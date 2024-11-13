@@ -46,6 +46,7 @@ date of note: 2024-09-08
 ##  Recommended Notes and References
 
 
+- [[Bag-of-Words for Text Representation]]
 - [[Word Embedding]]
 - [[Naive Bayes Model]]
 - [[Multinomial Naive Bayes Model]]
