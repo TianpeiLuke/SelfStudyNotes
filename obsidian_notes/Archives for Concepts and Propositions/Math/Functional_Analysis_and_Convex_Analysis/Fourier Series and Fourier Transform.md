@@ -142,5 +142,6 @@ date of note: 2024-06-05
 
 - [[Signals and Systems by Oppenheim]]
 - [[Discrete Time Signal Processing by Oppenheim]]
+- [[Gaussian Processes for Machine Learning by Rasmussen]] pp 206
 
 - Wikipedia [Fourier_transform](https://en.wikipedia.org/wiki/Fourier_transform)

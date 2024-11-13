@@ -142,15 +142,16 @@ date of note: 2024-05-10
 - [[Representation of Gaussian Random Function in Hilbert Space]]
 
 
-- [[Elements of Statistical Learning by Hastie]]
+
 - [[Kernel Methods in Machine Learning by Hofmann]]
 - [[Functional Analysis by Reed]]
 - [[Kernel Mean Embedding of Distributions by Muandet]] pp 14
 - [[Learning with Kernels by Schölkopf]] pp 37
-- [[Foundations of Machine Learning by Mohri]]
+- [[Foundations of Machine Learning by Mohri]] pp 107, 142
 - [[Understanding Machine Learning by Shalev-Shwartz]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 684
-- [[Lectures on Gaussian Processes by Lifshits]]
+- [[Gaussian Processes for Machine Learning by Rasmussen]] pp 96
+
 
 
 - Github Note [link](https://github.com/TianpeiLuke/SelfStudyNotes/tree/master/self-study/probability_and_measure_theory)

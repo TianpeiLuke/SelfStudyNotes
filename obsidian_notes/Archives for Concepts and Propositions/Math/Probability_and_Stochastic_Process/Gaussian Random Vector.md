@@ -105,4 +105,5 @@ date of note: 2024-05-10
 - [[Gaussian Measure]]
 - Wikipedia [Multivariate_normal_distribution](https://en.wikipedia.org/wiki/Multivariate_normal_distribution)
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]] 
+- [[Gaussian Processes for Machine Learning by Rasmussen]] pp 200
 - [[Matrix CookBook by Petersen]] pp 40

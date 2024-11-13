@@ -200,5 +200,6 @@ date of note: 2024-05-12
 
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 948 - 949
+- [[Gaussian Processes for Machine Learning by Rasmussen]] pp 196
 - Lawrence, N. (2003). Gaussian process latent variable models for visualisation of high dimensional data. _Advances in neural information processing systems_, _16_.
 

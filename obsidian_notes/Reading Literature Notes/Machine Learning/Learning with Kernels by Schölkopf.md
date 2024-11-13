@@ -48,6 +48,8 @@ date of note: 2024-08-29
 -----
 ## Reference
 
+
+- [[Gaussian Processes for Machine Learning by Rasmussen]]
 - [[Kernel Methods in Machine Learning by Hofmann]]
 - [[Kernel Mean Embedding of Distributions by Muandet]]
 - [[Boosting Foundations and Algorithms by Schapire]]

@@ -124,5 +124,5 @@ date of note: 2024-11-12
 - [[Functional Analysis by Reed]]
 - [[Kernel Mean Embedding of Distributions by Muandet]] pp 14
 - [[Learning with Kernels by Schölkopf]] pp 32, 37
-- [[Foundations of Machine Learning by Mohri]]
+- [[Foundations of Machine Learning by Mohri]] pp 112 - 114, 117 - 119, 137, 
 - [[Understanding Machine Learning by Shalev-Shwartz]]

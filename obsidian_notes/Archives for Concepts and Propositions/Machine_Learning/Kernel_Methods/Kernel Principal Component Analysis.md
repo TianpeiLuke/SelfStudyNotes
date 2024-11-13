@@ -161,5 +161,7 @@ date of note: 2024-11-05
 - [[Elements of Statistical Learning by Hastie]] pp 547 - 550
 - [[Learning with Kernels by Schölkopf]] pp 429 - 442,
 - [[Kernel Methods in Machine Learning by Hofmann]] pp 41 - 42, 
-
+- [[Gaussian Processes for Machine Learning by Rasmussen]] pp 99
+- [[Foundations of Machine Learning by Mohri]] pp 347, 349–354, 356, 357
+- [[Understanding Machine Learning by Shalev-Shwartz]] pp 281
 

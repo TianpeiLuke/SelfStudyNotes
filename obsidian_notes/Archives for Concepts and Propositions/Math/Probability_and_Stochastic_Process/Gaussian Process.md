@@ -75,3 +75,10 @@ date of note: 2024-05-10
 
 
 - [[Probabilistic Graphical Models]]
+
+
+- [[Gaussian Processes for Machine Learning by Rasmussen]] pp 13
+- [[Lectures on Gaussian Processes by Lifshits]]
+- [[High Dimensional Probability An Introduction by Vershynin]]
+- [[High Dimensional Statistics A Non-Asymptotic Viewpoint by Wainwright]]
+- [[Concentration Inequalities by Boucheron]]

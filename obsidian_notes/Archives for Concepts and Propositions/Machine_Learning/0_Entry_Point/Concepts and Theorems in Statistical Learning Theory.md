@@ -132,10 +132,12 @@ date of note: 2024-06-01
 - [[Mercer Theorem for Positive Definite Integral Kernels]]
 - [[Feature Map for Reproducing Kernels in RKHS]]
 
+
 - [[Kernel Mean Embedding of Distribution]]
 - [[Covariance Operator in Reproducing Kernel Hilbert Space]]
 - [[Kernel Mean Embedding of Conditional Distribution]]
 - [[Maximum Mean Discrepancy between Probability Measures via RKHS]]
+
 
 - [[Representer Theorem]]
 
@@ -159,6 +161,7 @@ date of note: 2024-06-01
 - [[Representation of Gaussian Random Function in Hilbert Space]]
 - [[Covariance Operator]]
 - [[Covariance Function of Gaussian Process]]
+- [[Nyström Method for Low Rank Approximation of Positive Definite Kernel]]
 
 
 ### Deep Learning

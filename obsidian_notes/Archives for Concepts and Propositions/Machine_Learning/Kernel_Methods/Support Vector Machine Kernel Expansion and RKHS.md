@@ -103,6 +103,7 @@ date of note: 2024-10-08
 - [[Elements of Statistical Learning by Hastie]] pp 417 - 421, 654, 657
 - [[Understanding Machine Learning by Shalev-Shwartz]] pp 171 - 177
 - [[Foundations of Machine Learning by Mohri]] pp 87- 100
+- [[Gaussian Processes for Machine Learning by Rasmussen]] pp 141
 
 - [[Convex Optimization by Boyd]]
 - [[Nonlinear Programming by Bertsekas]]

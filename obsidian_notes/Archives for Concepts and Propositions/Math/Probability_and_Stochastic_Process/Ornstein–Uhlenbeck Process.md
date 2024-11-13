@@ -226,4 +226,6 @@ date of note: 2024-06-07
 - [[Wasserstein Space]]
 
 - [[Introduction to Stochastic Differential Equations by Evans]]
+- [[Lectures on Gaussian Processes by Lifshits]]
+- [[Gaussian Processes for Machine Learning by Rasmussen]] pp 86
 - Wikipedia [Ornstein-Uhlenbeck_process](https://en.wikipedia.org/wiki/Ornstein%E2%80%93Uhlenbeck_process)

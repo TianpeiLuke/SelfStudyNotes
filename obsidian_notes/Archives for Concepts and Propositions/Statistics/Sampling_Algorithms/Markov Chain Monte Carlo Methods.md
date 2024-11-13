@@ -90,6 +90,7 @@ date of note: 2024-07-04
 - [[Monte Carlo Strategies in Scientific Computing by Liu]] pp 105
 
 - [[Probabilistic Graphical Models by Koller]] pp 505 - 524
+- [[Gaussian Processes for Machine Learning by Rasmussen]] pp 41
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 477 - 537
 - [[Deep Learning by Goodfellow]] pp 586 - 596
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 429 - 459

@@ -228,3 +228,4 @@ date of note: 2024-09-04
 - [[Elements of Statistical Learning by Hastie]] pp 678
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 930 - 933
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 513, 520 - 521
+- [[Gaussian Processes for Machine Learning by Rasmussen]] pp 89, 107

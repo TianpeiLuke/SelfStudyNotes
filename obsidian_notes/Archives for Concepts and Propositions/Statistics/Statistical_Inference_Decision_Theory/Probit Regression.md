@@ -43,3 +43,4 @@ date of note: 2024-08-22
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 613 - 617
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 163
+- [[Gaussian Processes for Machine Learning by Rasmussen]] pp 35

@@ -119,6 +119,8 @@ date of note: 2024-11-12
 - [[Elements of Statistical Learning by Hastie]]
 - [[Kernel Methods in Machine Learning by Hofmann]] pp 4 - 16
 - [[Learning with Kernels by Schölkopf]] pp 30
-- [[Understanding Machine Learning by Shalev-Shwartz]]
+- [[Foundations of Machine Learning by Mohri]] pp 108, 110 - 119, 121,
+- [[Understanding Machine Learning by Shalev-Shwartz]] 
 - [[Kernel Mean Embedding of Distributions by Muandet]] pp 10 - 20
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 675
+- [[Gaussian Processes for Machine Learning by Rasmussen]] pp 80

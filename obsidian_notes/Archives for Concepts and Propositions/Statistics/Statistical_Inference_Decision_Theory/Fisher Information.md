@@ -155,3 +155,4 @@ date of note: 2024-06-24
 - [[All of Statistics A Concise Course by Wasserman]]
 - [[Elements of Information Theory by Cover]]
 - [[Mathematical Statistics by Shao]] pp 169 - 171
+- [[Gaussian Processes for Machine Learning by Rasmussen]] pp 102

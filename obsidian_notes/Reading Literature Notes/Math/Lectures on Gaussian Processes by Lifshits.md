@@ -49,6 +49,7 @@ date of note: 2024-05-30
 ## Reference
   
 
+- [[Gaussian Processes for Machine Learning by Rasmussen]]
 - [[Functional Analysis for Probability and Stochastic Processes by Bobrowski]]
 - [[Functional Analysis by Reed]]
 

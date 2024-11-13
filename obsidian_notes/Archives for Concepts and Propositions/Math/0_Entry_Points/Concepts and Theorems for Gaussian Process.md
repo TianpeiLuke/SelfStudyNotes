@@ -68,6 +68,7 @@ date of note: 2024-05-30
 - [[RKHS of Gaussian Random Function]]
 - [[RKHS of Gaussian Random Function in Hilbert Space]]
 
+- [[Nyström Method for Low Rank Approximation of Positive Definite Kernel]]
 - [[Cameron–Martin Theorem and Admissible Shift of Gaussian Measure]]
 
 

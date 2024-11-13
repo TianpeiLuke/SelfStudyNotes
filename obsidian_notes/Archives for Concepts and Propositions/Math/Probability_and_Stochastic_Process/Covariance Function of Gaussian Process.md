@@ -81,7 +81,7 @@ date of note: 2024-05-10
 >where $g \mapsto \mu_{g}$ is an **isomorphism** by [[Riesz-Markov Representation Theorem]].
 
 
-## Reproducing Kernel
+## Reproducing Kernel and Positive Definite Kernel
 
 
 >[!important]
@@ -96,7 +96,7 @@ date of note: 2024-05-10
 >The **covariance function** $K: T \times T\to \mathbb{R}$ is a **reproducing kernel**.
 
 - [[Reproducing Kernel of RKHS]]
-
+- [[Positive Definite Kernel]]
 
 ## Integral Kernel of Stochastic PDE
 
@@ -112,3 +112,4 @@ date of note: 2024-05-10
 - [[Random Element and Random Variable]]
 
 
+- [[Gaussian Processes for Machine Learning by Rasmussen]] pp 12, 79

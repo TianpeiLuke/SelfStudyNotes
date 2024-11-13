@@ -353,6 +353,7 @@ date of note: 2024-06-05
 
 - [[Probability and Measure by Billingsley]] pp 498
 - [[Lectures on Gaussian Processes by Lifshits]]
+- [[Gaussian Processes for Machine Learning by Rasmussen]] pp 213
 - [[Mathematical Foundations of Infinite Dimensional Statistical Models by Gine]]
 - [[High Dimensional Probability An Introduction by Vershynin]]
 - [[Introduction to Stochastic Differential Equations by Evans]]

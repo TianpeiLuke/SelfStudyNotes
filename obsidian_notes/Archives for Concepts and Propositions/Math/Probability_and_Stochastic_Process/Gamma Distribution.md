@@ -208,4 +208,5 @@ date of note: 2024-09-05
 - [[Probability Space]]
 
 - [[Mathematical Statistics by Shao]] pp 20, 36
+- [[Gaussian Processes for Machine Learning by Rasmussen]] pp 87, 196
 - Wikipedia [Gamma_distribution](https://en.wikipedia.org/wiki/Gamma_distribution)

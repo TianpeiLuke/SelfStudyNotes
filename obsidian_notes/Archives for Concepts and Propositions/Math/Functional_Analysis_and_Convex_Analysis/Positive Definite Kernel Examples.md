@@ -114,10 +114,12 @@ date of note: 2024-11-12
 - [[Reproducing Kernel Hilbert Space]]
 
 
-- [[Elements of Statistical Learning by Hastie]]
+- [[Gaussian Processes for Machine Learning by Rasmussen]] pp 80 - 102
+- [[Elements of Statistical Learning by Hastie]] pp 209 - 212
 - [[Kernel Methods in Machine Learning by Hofmann]] pp 10 - 16
 - [[Learning with Kernels by Schölkopf]] pp 45 - 47,  56 - 57
-- [[Understanding Machine Learning by Shalev-Shwartz]]
+- [[Foundations of Machine Learning by Mohri]] pp 108 - 131
+- [[Understanding Machine Learning by Shalev-Shwartz]] pp 181 - 185
 - [[Kernel Mean Embedding of Distributions by Muandet]] pp 38
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 675
 - [[Lectures on Gaussian Processes by Lifshits]]
