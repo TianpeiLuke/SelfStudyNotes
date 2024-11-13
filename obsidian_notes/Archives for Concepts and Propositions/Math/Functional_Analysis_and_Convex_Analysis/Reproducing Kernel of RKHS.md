@@ -84,6 +84,12 @@ date of note: 2024-05-12
 - [[Positive Definite Kernel]]
 
 
+## Positive Definite Kernel
+
+![[Positive Definite Kernel#^3a96bf]]
+
+- [[Positive Definite Kernel]]
+
 
 ## Mercer's Theorem
 

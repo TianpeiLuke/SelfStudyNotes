@@ -62,6 +62,16 @@ date of note: 2024-11-12
 - [[Hilbert-Schmidt Operator]]
 - [[Space of Hilbert-Schmidt Operators]]
 
+### Reproducing Kernel Hilbert Space
+
+>[!important] Theorem
+>Every **reproducing kernel** is **positive-definite**, and every **positive definite kernel** defines a **unique** *reproducing kernel Hilbert space (RKHS)*, of which it is the **unique reproducing kernel**.
+
+^3a96bf
+
+- [[Reproducing Kernel of RKHS]]
+- [[Reproducing Kernel Hilbert Space]]
+
 
 ## Explanation
 
