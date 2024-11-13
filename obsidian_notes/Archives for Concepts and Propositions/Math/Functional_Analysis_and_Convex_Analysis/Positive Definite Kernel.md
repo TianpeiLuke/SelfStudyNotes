@@ -26,11 +26,21 @@ date of note: 2024-11-12
 
 - [[Positive Semidefinite Transformation]]
 
+>[!important] Definition
+>Let $\mathcal{X}$ be an nonempty set. 
+>
+>A *complex-valued function* $$K: \mathcal{X} \times \mathcal{X} \to \mathbb{C}$$ is called  a **positive definite kernel** if 
+>- for any finite $n\in \mathbb{N}$, and any points $\left\{ x_{1} \,{,}\ldots{,}\,x_{n}\right\} \subset \mathcal{X}$,  and any complex numbers $\{ c_{1}\,{,}\ldots{,}\,c_{n} \} \subset \mathbb{C}$, 
+>  $$
+>  \sum_{i=1}^{n}\sum_{j=1}^{n}c_{i}\bar{c}_{j}\;K(x_{i}, x_{j}) \ge 0
+> $$
+
+
 
 ### Positive Definite Operator
 
 >[!important] Proposition
->For each **positive (semi)-definite kernel** $K \in L^{\infty}(\mathcal{X}\times \mathcal{X}, \mu)$, there exists an *integral operator* on $L^2(\mathcal{X},\mu)$
+>For each **positive definite kernel** $K \in L^{\infty}(\mathcal{X}\times \mathcal{X}, \mu)$, there exists an *integral operator* on $L^2(\mathcal{X},\mu)$
 >$$
 >T_{K}: L^2(\mathcal{X},\mu) \to L^2(\mathcal{X},\mu),
 >$$
@@ -38,10 +48,10 @@ date of note: 2024-11-12
 >$$
 >T_{k}f := \int_{\mathcal{X}}\,K(\cdot, x)\,f(x)\,d\mu(x),
 >$$
->that is a **positive (semi-)definite operator** on $L^2(\mathcal{X},\mu)$. 
+>that is a **positive semi-definite operator** on $L^2(\mathcal{X},\mu)$. 
 >- That is, for all $f\in L^{2}(\mathcal{X},\mu)$, $$\int_{\mathcal{X}}\int_{\mathcal{X}}\;K(x, x')\;f(x)\,f(x')\,d\mu (x)\,d\mu(x') \ge 0$$
 >  
->Conversely, for every **positive definite Hilbert-Schmidt operator** $$T\in \mathcal{B}_{HS}(\mathcal{X}), \quad T \succ\, 0,$$ there exists a **positive definite kernel** $K$ so that
+>Conversely, for every **positive semi-definite Hilbert-Schmidt operator** $$T\in \mathcal{B}_{HS}(\mathcal{X}), \quad T \succ\, 0,$$ there exists a **positive definite kernel** $K$ so that
 >$$
 > \begin{align*}
 > (T f)(x) &= \int_{M}\, K(x, y)f(y)\; d\mu(y),

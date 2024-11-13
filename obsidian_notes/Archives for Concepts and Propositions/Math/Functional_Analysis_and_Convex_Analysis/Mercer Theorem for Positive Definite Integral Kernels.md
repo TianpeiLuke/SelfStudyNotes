@@ -43,7 +43,7 @@ date of note: 2024-05-10
 >[!important] Mercer's Theorem
 >Let $\mathcal{X}$ be **compact Hausdorff** space and $\mu$ be a *$\sigma$-finite Borel measure* on $\mathcal{X}$
 >
->Let $K\in L^{\infty}(\mathcal{X}, \mathcal{X})$ be a **symmetric**, **continuous positive definite** kernel. 
+>Let $K\in L^{\infty}(\mathcal{X} \times \mathcal{X})$ be a **symmetric**, **continuous real-valued positive definite** kernel. 
 >- The **integral operator** $$T_{k}: L^{2}(\mathcal{X}, \mu) \to L^{2}(\mathcal{X}, \mu)$$ defined as $$(T_{k}f)(x) := \int_{\mathcal{X}}K(x, x')f(x')\,d\mu(x'),$$ is **positive definite.** That is, for all $f\in L^{2}(\mathcal{X},\mu)$, $$\int_{\mathcal{X}}\int_{\mathcal{X}}\;f(x)\,f(x')\,K(x, x')d\mu (x)\,d\mu(x') \ge 0$$
 >
 >  
@@ -74,6 +74,14 @@ date of note: 2024-05-10
 - [[Self-Adjoint Operator in Hilbert Space]]
 - [[Compact Operator]]
 - [[Hilbert-Schmidt Operator]]
+
+>[!info]
+>If $K: \mathcal{X}\times \mathcal{X} \to \mathbb{C}$ is **complex-valued p.d. kernel**, then Mercer's theorem is 
+>$$
+> \begin{align*}
+> K(x,y) &= \sum_{n=1}^{\infty}\,\lambda_{n}\,\psi_n(x)\,\overline{\psi_n(y)}
+> \end{align*}
+>$$
 
 >[!info]
 >Since $\left\{ \psi_{i} \right\}$ are eigenfunctions for $\left\{ \lambda^{i} \right\}$, we can formulate the **complete orthonormal basis** for $L^2$ space as
