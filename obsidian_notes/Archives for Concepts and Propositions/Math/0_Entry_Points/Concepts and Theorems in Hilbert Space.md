@@ -126,6 +126,7 @@ date of note: 2024-05-11
 - [[Hilbert-Schmidt Operator]]
 - [[Space of Hilbert-Schmidt Operators]]
 - [[Positive Definite Kernel]]
+- [[Positive Definite Kernel Examples]]
 - [[Mercer Theorem for Positive Definite Integral Kernels]]
 
 

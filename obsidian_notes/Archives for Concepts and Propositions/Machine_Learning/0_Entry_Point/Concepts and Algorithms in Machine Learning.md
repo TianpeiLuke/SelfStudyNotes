@@ -79,6 +79,7 @@ date of note: 2024-06-01
 - [[Representation of Evaluation Functional in RKHS]]
 - [[Reproducing Kernel of RKHS]]
 - [[Positive Definite Kernel]]
+- [[Positive Definite Kernel Examples]]
 - [[Mercer Theorem for Positive Definite Integral Kernels]]
 - [[Representer Theorem]]
 

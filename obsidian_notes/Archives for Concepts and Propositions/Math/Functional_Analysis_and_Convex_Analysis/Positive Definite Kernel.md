@@ -24,6 +24,8 @@ date of note: 2024-11-12
 >- for any $n\in \mathbb{N}$, $\left\{ x_{1} \,{,}\ldots{,}\,x_{n}\right\} \subset \mathcal{X}$, the *Gram matrix*  is *positive semidefinite*,  $$K := [K(x_{i}, x_{j})]_{i,j=1}^{n} \succeq\,0.$$
 >- A *positive definite kernel* is also called a **Mercer kernel.**
 
+^4f8970
+
 - [[Positive Semidefinite Transformation]]
 
 >[!important] Definition
@@ -34,6 +36,8 @@ date of note: 2024-11-12
 >  $$
 >  \sum_{i=1}^{n}\sum_{j=1}^{n}c_{i}\bar{c}_{j}\;K(x_{i}, x_{j}) \ge 0
 > $$
+
+^f55e18
 
 
 
@@ -85,6 +89,11 @@ date of note: 2024-11-12
 >The *positive definite kernel* only requires the **positive semi-definiteness** of Gram matri.
 >
 >This mismatch is due to historical reason.
+
+
+## Examples
+
+- [[Positive Definite Kernel Examples]]
 
 
 ## Covariance Function

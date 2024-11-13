@@ -60,6 +60,7 @@ date of note: 2024-05-30
 
 - [[Reproducing Kernel Hilbert Space]]
 - [[Reproducing Kernel of RKHS]]
+- [[Positive Definite Kernel Examples]]
 - [[Kernel Mean Embedding of Distribution]]
 - [[Kernel Mean Embedding of Conditional Distribution]]
 - [[Covariance Operator in Reproducing Kernel Hilbert Space]]
