@@ -219,6 +219,9 @@ date of note: 2024-11-07
 >$$
 >where $$\Delta(P, Q) := \frac{1}{2}\int \frac{\left(P(x) - Q(x)\right)^2}{P(x) + Q(x)} \,dx $$
 
+^c559d1
+
+- [[Chi-squared Divergence]]
 - [[Least Square Estimation]]
 - Topsoe, F. (2000). Some inequalities for information divergence and related measures of discrimination. _IEEE Transactions on information theory_, _46_(4), 1602-1609.
 

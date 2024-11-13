@@ -54,7 +54,7 @@ date of note: 2024-11-10
 ^5693ea
 
 - [[Exponential Family of Distributions]]
-- [[Log-Likelihood Score Function]]
+- [[Log-Likelihood Score Function and Fisher Score]]
 - [[Multinomial Distribution]]
 - [[Softmax Function and Log-Sum-Exp Function]]
 - [[Markov Decision Process]]
@@ -111,7 +111,7 @@ date of note: 2024-11-10
 
 - [[Gaussian Random Vector]]
 - [[Exponential Family of Distributions]]
-- [[Log-Likelihood Score Function]]
+- [[Log-Likelihood Score Function and Fisher Score]]
 - [[Markov Decision Process]]
 
 >[!info]

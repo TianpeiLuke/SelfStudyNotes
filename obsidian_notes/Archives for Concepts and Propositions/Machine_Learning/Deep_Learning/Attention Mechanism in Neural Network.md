@@ -222,6 +222,8 @@ date of note: 2024-05-12
 >- The set of records (i.e. *support vectors*) $\left\{ x_{1} \,{,}\ldots{,}\,x_{n}\right\}$ are *stored* in the system, which are called **keys** in *attention layer*.
 >- The evaluations of *kernels* $$\alpha_{i}(x_{i}, x) := K(x_{i}, x)$$ are weights that depends on similarity of the input $x$ and stored vectors $\left\{ x_{1} \,{,}\ldots{,}\,x_{n}\right\}$. These weights are called **attention weights.**
 
+- [[Positive Definite Kernel Examples#Linear Kernel]]
+
 >[!info]
 >The main difference between *attention mechanism* and *kernel machine* is that 
 >- In **Kernel machines**, we adjust *the kernel* parameters and adjust the *set of keys* (support vectors) but **fix the embedding** of query and keys. 

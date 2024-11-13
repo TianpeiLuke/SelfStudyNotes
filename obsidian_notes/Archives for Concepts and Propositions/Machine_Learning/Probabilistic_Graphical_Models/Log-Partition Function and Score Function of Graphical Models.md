@@ -53,7 +53,7 @@ date of note: 2024-08-03
 
 ^830c6c
 
-- [[Log-Likelihood Score Function]]
+- [[Log-Likelihood Score Function and Fisher Score]]
 - [[Markov Network on Undirected Graph]]
 
 >[!important] Definition

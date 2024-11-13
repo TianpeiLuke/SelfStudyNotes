@@ -89,7 +89,7 @@ date of note: 2024-05-12
 >$$
 
 - [[Likelihood Function]]
-- [[Log-Likelihood Score Function]]
+- [[Log-Likelihood Score Function and Fisher Score]]
 - [[Cross-Entropy Loss Function]]
 - [[Monte Carlo and Applications]]
 

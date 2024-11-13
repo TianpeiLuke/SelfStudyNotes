@@ -86,7 +86,7 @@ date of note: 2024-06-24
 - [[Statistical Manifold as Parametric Family]]
 - [[Concepts related to Tangent Space and Tangent Bundle]]
 
-- [[Log-Likelihood Score Function]]
+- [[Log-Likelihood Score Function and Fisher Score]]
 - [[Fisher Metric or Information Metric of Statistical Manifold]]
 
 

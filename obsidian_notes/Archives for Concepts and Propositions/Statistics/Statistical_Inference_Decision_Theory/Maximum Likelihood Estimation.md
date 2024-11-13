@@ -65,7 +65,7 @@ date of note: 2024-06-24
 >\frac{ \partial}{ \partial \theta }\log \ell(\hat{\theta}; x) = 0.  
 >$$
 
-- [[Log-Likelihood Score Function]]
+- [[Log-Likelihood Score Function and Fisher Score]]
 
 
 >[!info]

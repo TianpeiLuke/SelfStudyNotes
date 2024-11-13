@@ -35,7 +35,7 @@ date of note: 2024-06-24
 >$$
 >Let $\ell(\theta; x) = \log p(x; \theta)$ be the *log-likelihood function* of $\theta$ given sample $x\in \mathcal{X}$. 
 >
->The **score function** *of parameter* $\theta$ is the *gradient of log-likelihood function* with respect to $\theta$
+>The **Fisher score** or **score function** *of parameter* $\theta$ is the *gradient of log-likelihood function* with respect to $\theta$
 >$$
 >s(\theta) := \nabla_{\theta} \ell(\theta; x) = \left[ \frac{ \partial  }{ \partial \theta^{1} }\log p(x; \theta) \,{,}\ldots{,}\, \frac{\partial}{ \partial \theta^{n} }\log p(x; \theta) \right] 
 >$$
@@ -43,6 +43,10 @@ date of note: 2024-06-24
 - [[Likelihood Function]]
 
 ## Explanation
+
+>[!info]
+>- **Fisher score**: $$s(\theta) := \nabla_{\theta} \ell(\theta; x) = \nabla_{\theta} \log p(x; \theta)$$
+>- **Stein score**: $$s(x) := \nabla_{x} \log p(x)$$
 
 ![[Score Matching and Denoising Score Matching#^b18499]]
 

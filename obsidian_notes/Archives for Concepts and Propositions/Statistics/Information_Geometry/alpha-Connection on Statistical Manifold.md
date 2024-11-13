@@ -49,7 +49,7 @@ date of note: 2024-06-24
 - [[Affine Connection on Tangent Bundle]]
 - [[Christoffel Symbols]]
 - [[Fisher Metric or Information Metric of Statistical Manifold]]
-- [[Log-Likelihood Score Function]]
+- [[Log-Likelihood Score Function and Fisher Score]]
 - [[Tangent Bundle]]
 - [[Riemannian Metric and Riemannian Manifold]]
 

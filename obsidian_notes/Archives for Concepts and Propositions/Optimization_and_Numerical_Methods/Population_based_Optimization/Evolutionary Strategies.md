@@ -55,7 +55,7 @@ date of note: 2024-08-24
 ^54d190
 
 - [[Gradient Descent Algorithm]]
-- [[Log-Likelihood Score Function]]
+- [[Log-Likelihood Score Function and Fisher Score]]
 - [[REINFORCE Algorithm for Monte Carlo Policy Gradient]]
 
 

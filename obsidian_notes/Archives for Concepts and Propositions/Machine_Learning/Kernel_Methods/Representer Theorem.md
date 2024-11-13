@@ -101,9 +101,29 @@ date of note: 2024-08-27
 >$$
 >where $\mu_{\mathcal{P}_{i}}$ is the *kernel mean embedding* of $\mathcal{P}_{i}$ $$\mu_{\mathcal{P}_{i}} =  \mathbb{E}_{ \mathcal{P}_{i} }\left[K(X, \cdot)  \right]$$
 
-
-
 ## Explanation
+
+>[!info]
+>**Monotonicity** of $\Omega$ is **necessary** to ensure that the theorem holds. 
+>- It does not prevent the *regularized risk functional* from having *multiple local minima*. 
+>- To ensure a single minimum, we would need to require **convexity**.
+>- If we discard the **strictness** of the *monotonicity*, then it no longer follows that each **minimizer** of the *regularized risk* admits an **expansion**; 
+>- it still follows, however, that there is **always another solution** that is **as good**, and that does **admit the expansion**.
+
+>[!important]
+>The **significance** of the **Representer Theorem** is that although we might be trying to solve an *optimization problem* in an **infinite-dimensional space** $\mathcal{H}$, containing *linear combinations of kernels* centered on *arbitrary points* of $X$, it states that the solution lies in the **span** of $m$ **particular kernels** --  those centered on the training points.
+> 
+> In the **Support Vector** community,
+> $$
+> \begin{align*}
+> f(x) &= \sum_{n=1}^{m}\alpha_n K(x_n, x)
+> \end{align*}
+>$$  
+>is called the **Support Vector expansion**. 
+>- For suitable choices of loss functions, it has empirically been found that many of the $\alpha_n$ often equal $0$.
+> 
+
+- [[Support Vector Machine Kernel Expansion and RKHS]]
 
 
 ## Example

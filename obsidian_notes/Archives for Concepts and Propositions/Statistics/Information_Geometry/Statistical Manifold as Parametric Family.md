@@ -73,7 +73,7 @@ date of note: 2024-06-24
 ### Tangent Space of Statistical Manifold
 
 
-- [[Log-Likelihood Score Function]]
+- [[Log-Likelihood Score Function and Fisher Score]]
 
 
 ### Statistical Manifold as Riemannian Manifold with Fisher Metric

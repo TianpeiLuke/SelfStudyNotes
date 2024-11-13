@@ -32,7 +32,7 @@ date of note: 2024-09-08
 
 - [[Exponential Family of Distributions#Score Function]]
 - [[Log-Partition Function and Score Function of Graphical Models]]
-- [[Log-Likelihood Score Function]]
+- [[Log-Likelihood Score Function and Fisher Score]]
 - [[Likelihood Function]]
 - [[Information Projection and Moment Projection]]
 
@@ -168,7 +168,7 @@ date of note: 2024-09-08
 - [[Log-Partition Function and Score Function of Graphical Models]]
 
 
-- [[Log-Likelihood Score Function]]
+- [[Log-Likelihood Score Function and Fisher Score]]
 - [[Likelihood Function]]
 - [[Information Projection and Moment Projection]]
 - [[Log-Partition Function of Exponential Family]]

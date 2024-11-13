@@ -42,7 +42,7 @@ date of note: 2024-06-27
 >  
 >Thus  the Fisher information matrix defines a *Riemannian metric*, $$g_{i,j} := \left\langle  \partial_{i}\ell\,,\, \partial_{j}\ell   \right\rangle, \quad i,j=1\,{,}\ldots{,}\,n.$$ It is called the **Fisher metric** or the **information metric.**
 
-- [[Log-Likelihood Score Function]]
+- [[Log-Likelihood Score Function and Fisher Score]]
 - [[Statistical Manifold as Parametric Family]]
 - [[Exponential Embedding and Representation of Tangent Space of Statistical Manifold]]
 - [[Fisher Information]]
@@ -55,6 +55,11 @@ date of note: 2024-06-27
 ## Explanation
 
 
+## Fisher Kernel
+
+![[Positive Definite Kernel Examples#^b8f451]]
+
+- [[Positive Definite Kernel Examples]]
 
 
 

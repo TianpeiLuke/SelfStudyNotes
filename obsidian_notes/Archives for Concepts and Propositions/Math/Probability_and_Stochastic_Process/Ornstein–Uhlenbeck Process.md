@@ -138,7 +138,9 @@ date of note: 2024-06-07
 >$$
 >K(s, t) = \exp \left(\frac{\min\{ s, t \}}{2}\right)\,\exp \left(-\frac{\max\{ s, t \}}{2}\right).
 >$$
->That is, the **covariance function** is a **Gaussian kernel**. 
+>That is, the **covariance function** is a **Laplacian kernel**. 
+
+- [[Positive Definite Kernel Examples#Laplacian Kernel]]
 
 >[!important]
 >Under the above assumption, the *Ornstein–Uhlenbeck process* is an example of Gaussian process with **bounded variance**.

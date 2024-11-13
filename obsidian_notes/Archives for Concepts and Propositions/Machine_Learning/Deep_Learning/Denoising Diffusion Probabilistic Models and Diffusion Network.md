@@ -85,6 +85,7 @@ date of note: 2024-05-12
 - [[Chapman-Kolmogorov Equation]]
 - [[Invariant Measure and Stationary Distribution]]
 - [[Ergodic Markov Chain and Asymptotic of Transition Kernel]]
+- [[Positive Definite Kernel Examples#Gaussian Kernel or Radial Basis Function]]
 
 ![[diffusion_kernel_ddpm.png]]
 

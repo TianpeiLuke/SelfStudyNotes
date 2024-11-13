@@ -25,7 +25,7 @@ date of note: 2024-10-28
 
 - [[Parametric Models]]
 - [[Statistical Manifold as Parametric Family]]
-- [[Log-Likelihood Score Function]]
+- [[Log-Likelihood Score Function and Fisher Score]]
 
 - [[Fisher Information]]
 - [[Fisher Metric or Information Metric of Statistical Manifold]]
