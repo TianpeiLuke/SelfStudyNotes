@@ -161,7 +161,7 @@ date of note: 2024-06-01
 - [[Representation of Gaussian Random Function in Hilbert Space]]
 - [[Covariance Operator]]
 - [[Covariance Function of Gaussian Process]]
-- [[Nyström Method for Low Rank Approximation of Positive Definite Kernel]]
+- [[Nystrom Method for Low Rank Approximation of Positive Definite Kernel]]
 
 
 ### Deep Learning

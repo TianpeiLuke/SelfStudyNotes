@@ -82,7 +82,7 @@ date of note: 2024-06-01
 - [[Positive Definite Kernel Examples]]
 - [[Mercer Theorem for Positive Definite Integral Kernels]]
 - [[Representer Theorem]]
-- [[Nyström Method for Low Rank Approximation of Positive Definite Kernel]]
+- [[Nystrom Method for Low Rank Approximation of Positive Definite Kernel]]
 
 - [[Integral Probability Metric between Probability Measures]]
 - [[Maximum Mean Discrepancy between Probability Measures via RKHS]]
@@ -198,7 +198,7 @@ date of note: 2024-06-01
 - [[Non-Parametric Least Square Estimation]]
 - [[Gaussian Process]]
 - [[Gaussian Process Latent Variable Model]]
-- [[Nyström Method for Low Rank Approximation of Positive Definite Kernel]]
+- [[Nystrom Method for Low Rank Approximation of Positive Definite Kernel]]
 
 
 ### Reinforcement Learning Models and Algorithms
