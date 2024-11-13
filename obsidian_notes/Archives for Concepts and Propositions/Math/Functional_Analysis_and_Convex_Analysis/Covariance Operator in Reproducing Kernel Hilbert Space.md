@@ -62,6 +62,19 @@ date of note: 2024-05-10
 
 - [[Kernel Mean Embedding of Distribution]]
 
+>[!important] Definition
+>The **covariance operator** on $\mathcal{H}_{X}$ is defined as the *symmetric 2-tensor*
+>$$
+>\mathcal{K}_{X,X} :=  \mathbb{E}_{ X }\left[ \phi(X) \otimes \phi(X)\right]
+>$$
+>- It corresponding to the **diagonalization** of **cross-covariance operator** where $X=Y.$
+>- $$\mathcal{K}_{X,X}(x_{1}, x_{2}) =  \mathbb{E}_{ X }\left[ K(X, x_{1})\,K(X, x_{2}) \right]$$
+
+- [[Symmetric Tensor]]
+- [[Tensor Product]]
+- [[Mercer Theorem for Positive Definite Integral Kernels]]
+
+
 >[!info]
 >- The *space of Hilbert-Schmidt operators* is identified the **product Hilbert space**  $$\mathcal{L}(\mathcal{H}_{X}, \mathcal{H}_{Y}) \simeq  \mathcal{H}_{Y}\otimes \mathcal{H}_{X}$$  with **product kernel** $$K_{Y \otimes X}((y_{1}, x_{1}), (y_{2}, x_{2})) = K_{Y}(y_{1}, y_{2})\,K_{X}(x_{1}, x_{2})$$ where we can find the *isomorphism* $\mathcal{H}_{Y}\otimes \mathcal{H}_{X}  \to \mathcal{L}(\mathcal{H}_{X}, \mathcal{H}_{Y}))$ as
 >	- $$\sum_{i}g_{i}\otimes f_{i} \rightarrow \left(h \to \sum_{i}\left\langle h , f_{i} \right\rangle_{\mathcal{H}_{X}}\,g_{i}\right)$$

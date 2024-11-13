@@ -74,7 +74,7 @@ date of note: 2024-05-27
 -----------
 ##  Recommended Notes and References
 
-- [[Mercer Theorem]]
+- [[Mercer Theorem for Positive Definite Integral Kernels]]
 
 - [[Compact Operator]]
 - [[Self-Adjoint Operator in Hilbert Space]]

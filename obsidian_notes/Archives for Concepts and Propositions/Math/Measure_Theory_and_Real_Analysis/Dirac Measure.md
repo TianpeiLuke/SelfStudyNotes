@@ -29,7 +29,7 @@ date of note: 2024-06-08
 - [[Boolean Algebra]]
 - [[Measure Space and Countably Additive Measure]]
 
-- [[Representation of Evaluational Functional in RKHS]]
+- [[Representation of Evaluation Functional in RKHS]]
 - [[Evaluation Functional]]
 - [[Delta Function]]
 

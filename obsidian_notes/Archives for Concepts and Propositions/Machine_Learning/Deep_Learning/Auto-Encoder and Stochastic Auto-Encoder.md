@@ -93,6 +93,10 @@ date of note: 2024-05-12
 - [[Principle Component Analysis]]
 - [[Probabilistic Principle Component Analysis]]
 
+## Kernel PCA
+
+- [[Kernel Principal Component Analysis]]
+
 ## Latent Variable Model
 
 - [[Latent Variable Models]]

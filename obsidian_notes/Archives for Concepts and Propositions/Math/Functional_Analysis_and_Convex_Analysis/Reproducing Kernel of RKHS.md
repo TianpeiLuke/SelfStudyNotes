@@ -18,9 +18,9 @@ date of note: 2024-05-12
 >**Name**: Reproducing Kernel in RKHS
 
 
-![[Representation of Evaluational Functional in RKHS#^c84e79]]
+![[Representation of Evaluation Functional in RKHS#^c84e79]]
 
-- [[Representation of Evaluational Functional in RKHS]]
+- [[Representation of Evaluation Functional in RKHS]]
 - [[Riesz Representation Theorem]]
 
 >[!important] Definition
@@ -42,7 +42,7 @@ date of note: 2024-05-12
 - [[Hilbert Space]]
 - [[Reproducing Kernel Hilbert Space]]
 
-## Inner Product Representation
+### Inner Product Representation
 
 
 >[!important]  Inner Product Representation of. Reproducing Kernel
@@ -61,6 +61,12 @@ date of note: 2024-05-12
 - [[Space of Functions of Rapid Decrease and Schwartz Class]]
 - [[Space of Tempered Distributions]]
 
+### Feature Map
+
+![[Feature Map for Reproducing Kernels in RKHS#^8efea2]]
+
+- [[Feature Map for Reproducing Kernels in RKHS]]
+
 ## Explanation
 
 
@@ -70,7 +76,18 @@ date of note: 2024-05-12
 >Note that the reproducing property holds if and only if the evaluation functional $\delta_{x}$ is bounded linear functional.
 
 
+## Properties
 
+>[!important] Proposition
+>Every **reproducing kernel** $K$ is a **positive semidefinite kernel.**
+
+- [[Positive Definite Kernel]]
+
+
+
+## Mercer's Theorem
+
+- [[Mercer Theorem for Positive Definite Integral Kernels]]
 
 
 
@@ -83,6 +100,7 @@ date of note: 2024-05-12
 - [[Bounded Linear Functional]]
 - [[Reproducing Kernel Hilbert Space]]
 
+- [[Mercer Theorem for Positive Definite Integral Kernels]]
 
 
 - [[Concepts and Theorems in Hilbert Space]]

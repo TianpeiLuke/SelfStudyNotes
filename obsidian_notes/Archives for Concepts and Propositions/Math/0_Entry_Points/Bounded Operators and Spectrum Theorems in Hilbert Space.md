@@ -43,7 +43,7 @@ date of note: 2024-05-11
 - [[Space of Trace Class Operators]]
 - [[Hilbert-Schmidt Operator]]
 - [[Space of Hilbert-Schmidt Operators]]
-- [[Mercer Theorem]]
+- [[Mercer Theorem for Positive Definite Integral Kernels]]
 
 
 ### Spectrum of Bounded Linear Operator

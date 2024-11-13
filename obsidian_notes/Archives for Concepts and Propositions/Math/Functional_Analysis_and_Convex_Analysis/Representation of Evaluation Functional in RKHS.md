@@ -10,14 +10,14 @@ keywords:
   - riesz_representation_theorem
 topics:
   - machine_learning_theory
-name: Representation of Evaluational Functional in RKHS
+name: Representation of Evaluation Functional in RKHS
 date of note: 2024-05-12
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Representation of Evaluational Functional in RKHS
+>**Name**: Representation of Evaluation Functional in RKHS
 
 ![[Reproducing Kernel Hilbert Space#^8d2f94]]
 - [[Reproducing Kernel Hilbert Space]]
@@ -34,6 +34,7 @@ date of note: 2024-05-12
 
 ^c84e79
 
+- [[Evaluation Functional]]
 ### Integral Representation of Evaluation Functional
 
 >[!important]

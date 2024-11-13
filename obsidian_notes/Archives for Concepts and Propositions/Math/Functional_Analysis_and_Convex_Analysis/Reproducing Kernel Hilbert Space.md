@@ -53,7 +53,7 @@ date of note: 2024-05-12
 ## Reproducing Kernel
 
 - [[Evaluation Functional]]
-- [[Representation of Evaluational Functional in RKHS]]
+- [[Representation of Evaluation Functional in RKHS]]
 
 ![[Reproducing Kernel of RKHS#^8b1e73]]
 

@@ -37,7 +37,7 @@ date of note: 2024-08-27
 - [[Regularized Loss Minimization]]
 - [[Reproducing Kernel of RKHS]]
 - [[Reproducing Kernel Hilbert Space]]
-- [[Representation of Evaluational Functional in RKHS]]
+- [[Representation of Evaluation Functional in RKHS]]
 - [[Tikhonov Regularization in Optimization and Learning]]
 
 ### Semi-Parametric Representer Theorem

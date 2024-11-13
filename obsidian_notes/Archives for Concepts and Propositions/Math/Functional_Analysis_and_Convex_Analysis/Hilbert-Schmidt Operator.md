@@ -53,7 +53,7 @@ date of note: 2024-05-10
 > \end{align*}
 >$$ 
 
-
+- [[Positive Definite Kernel]]
 
 
 

@@ -115,6 +115,7 @@ date of note: 2024-05-11
 - [[Singular Value Decomposition of Compact Operator]]
 
 - [[Positive Semidefinite Operator]]
+
 - [[Square Root of Positive Semidefinite Operator and Absolute Value]]
 - [[Partial Isometry]]
 - [[Polar Decomposition of Bounded Operator]]
@@ -124,7 +125,8 @@ date of note: 2024-05-11
 - [[Space of Trace Class Operators]]
 - [[Hilbert-Schmidt Operator]]
 - [[Space of Hilbert-Schmidt Operators]]
-- [[Mercer Theorem]]
+- [[Positive Definite Kernel]]
+- [[Mercer Theorem for Positive Definite Integral Kernels]]
 
 
 ### Spectrum of Bounded Linear Operator
@@ -180,9 +182,13 @@ date of note: 2024-05-11
 
 - [[Evaluation Functional]]
 - [[Reproducing Kernel Hilbert Space]]
-- [[Representation of Evaluational Functional in RKHS]]
+- [[Representation of Evaluation Functional in RKHS]]
 - [[Reproducing Kernel of RKHS]]
+- [[Positive Definite Kernel]]
+- [[Mercer Theorem for Positive Definite Integral Kernels]]
+- [[Feature Map for Reproducing Kernels in RKHS]]
 - [[Covariance Operator in Reproducing Kernel Hilbert Space]]
+
 
 
 ## Explanation

@@ -44,6 +44,7 @@ date of note: 2024-11-08
 - [[Probability Space]]
 - [[Reproducing Kernel of RKHS]]
 - [[Reproducing Kernel Hilbert Space]]
+- [[Feature Map for Reproducing Kernels in RKHS]]
 - [[Complete Orthonormal Basis of Hilbert Space]]
 - [[lp Sequence Space]]
 

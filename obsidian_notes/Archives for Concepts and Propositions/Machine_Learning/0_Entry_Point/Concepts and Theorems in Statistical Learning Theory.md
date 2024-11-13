@@ -64,12 +64,16 @@ date of note: 2024-06-01
 - [[Fundamental Theorem of Statistical Learning]]
 
 
-### Convex Learning Problem
+### Convex Learning Problem and Surrogate Loss Minimization
 
 - [[Convex Function]]
 - [[Concentration of Separately Convex Lipschitz Functions]]
 - [[Concentration of Quasi-Convex Lipschitz Functions]]
 - [[Surrogate Loss Minimization]]
+
+- [[Concepts and Theorems in Information Theory]]
+- [[f-Divergence]]
+- [[Integral Probability Metric between Probability Measures]]
 
 ### No-Free-Lunch Theorem and Inductive Bias
 
@@ -92,13 +96,16 @@ date of note: 2024-06-01
 
 - [[Curse of Dimensionality]]
 
+
+### PAC-Bayes Learnablity
+
 - [[PAC-Bayes Learnable]]
 
 
 ### K Nearest Neighbor
 
 - [[k Nearest Neighbor Classification]]
-
+- [[k Nearest Neighbor Density Estimation]]
 
 ### Boosting and Ensemble Learning
 
@@ -118,14 +125,22 @@ date of note: 2024-06-01
 
 - [[Evaluation Functional]]
 - [[Reproducing Kernel Hilbert Space]]
-- [[Representation of Evaluational Functional in RKHS]]
+- [[Representation of Evaluation Functional in RKHS]]
 - [[Reproducing Kernel of RKHS]]
-- [[RKHS of Gaussian Random Function]]
-- [[Covariance Function of Gaussian Process]]
+- [[Positive Definite Kernel]]
+- [[Mercer Theorem for Positive Definite Integral Kernels]]
+- [[Feature Map for Reproducing Kernels in RKHS]]
+
+- [[Kernel Mean Embedding of Distribution]]
+- [[Covariance Operator in Reproducing Kernel Hilbert Space]]
+- [[Kernel Mean Embedding of Conditional Distribution]]
+- [[Maximum Mean Discrepancy between Probability Measures via RKHS]]
+
 - [[Representer Theorem]]
 
 ### Margin-based Generalization Bound
 
+- [[Margin-based Loss Function]]
 - [[Margin-based Generalization Error Bound]]
 
 
@@ -137,6 +152,13 @@ date of note: 2024-06-01
 ### Gaussian Process
 
 - [[Concepts and Theorems for Gaussian Process]]
+
+- [[Gaussian Process]]
+- [[RKHS of Gaussian Random Function]]
+- [[Representation of Gaussian Random Function in Hilbert Space]]
+- [[Covariance Operator]]
+- [[Covariance Function of Gaussian Process]]
+
 
 ### Deep Learning
 

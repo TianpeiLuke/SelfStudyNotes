@@ -188,6 +188,10 @@ date of note: 2024-05-12
 - [[Spectral Theorem in Functional Calculus Form]]
 
 
+### Kernel PCA
+
+- [[Kernel Principal Component Analysis]]
+
 
 ## Explanation
 

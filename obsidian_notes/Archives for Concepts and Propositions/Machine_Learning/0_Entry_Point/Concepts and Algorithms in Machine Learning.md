@@ -76,8 +76,10 @@ date of note: 2024-06-01
 
 - [[Support Vector Machine Kernel Expansion and RKHS]]
 - [[Reproducing Kernel Hilbert Space]]
-- [[Representation of Evaluational Functional in RKHS]]
+- [[Representation of Evaluation Functional in RKHS]]
 - [[Reproducing Kernel of RKHS]]
+- [[Positive Definite Kernel]]
+- [[Mercer Theorem for Positive Definite Integral Kernels]]
 - [[Representer Theorem]]
 
 - [[Integral Probability Metric between Probability Measures]]
