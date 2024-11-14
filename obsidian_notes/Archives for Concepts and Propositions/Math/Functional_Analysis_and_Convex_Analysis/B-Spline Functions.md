@@ -20,12 +20,12 @@ date of note: 2024-11-04
 
 >[!important] Definition
 >The **B-Spline of order** $p+1$ in $\mathbb{R}^{d}$ is a collection of *piecewise polynomial functions* $B_{i,p}$ of **degree** $p$.
->- The values $t$ where the pieces of polynomial *meet* are called **knots**,
+>- The values $x$ where the pieces of polynomial *meet* are called **knots**,
 >- Denote an increasing sequence of $m$ points as *knots* $$\tau_{1}\,\le \tau_{2} \,{\le}\ldots{\le}\,\tau_{m}.$$   
 >
 >The *$i$-th* **B-spline Basis functions** of *degree* $p$ can be constructed by means of the **Cox–de Boor recursion formula**
->- The *B-spline* of *degree* $0$ is defined as  $$B_{i,0}(x) = \left\{\begin{array}{cl}1 & \text{if } x\in [\tau_{i}, \tau_{i+1}) \\[5pt] 0 &\text{otherwise} \end{array}\right.$$ 
->- The *B-spline* of *degree* $p$ is defined *recursively* as $$B_{i,p}(x) = \frac{x - \tau_{i}}{\tau_{i+p} - \tau_{i}}\;B_{i, p-1}(x) + \frac{\tau_{i+p+1} - x}{\tau_{i+p+1} - \tau_{i+1}}\;B_{i+1, p-1}(x)$$
+>- $$B_{i,0}(x) = \left\{\begin{array}{cl}1 & \text{if } x\in [\tau_{i}, \tau_{i+1}) \\[5pt] 0 &\text{otherwise} \end{array}\right.$$ 
+>- $$B_{i,p}(x) = \frac{x - \tau_{i}}{\tau_{i+p} - \tau_{i}}\;B_{i, p-1}(x) + \frac{\tau_{i+p+1} - x}{\tau_{i+p+1} - \tau_{i+1}}\;B_{i+1, p-1}(x)$$
 >
 
 ![[bspline-scheme.jpg]]

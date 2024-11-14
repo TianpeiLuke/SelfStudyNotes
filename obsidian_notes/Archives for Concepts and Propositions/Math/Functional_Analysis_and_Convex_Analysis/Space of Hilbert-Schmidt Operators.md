@@ -104,7 +104,12 @@ date of note: 2024-05-28
 - [[Singular Value Decomposition of Compact Operator]]
 
 
+## Positive Definite Kernel
 
+
+![[Hilbert-Schmidt Operator#^783d4f]]
+
+- [[Positive Definite Kernel]]
 
 
 
@@ -126,3 +131,5 @@ date of note: 2024-05-28
 - [[Inner Product Space]]
 - [[Norm and Normed Space]]
 - [[Norm Topology]]
+
+- [[Functional Analysis by Reed]] pp 210
