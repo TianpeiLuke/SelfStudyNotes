@@ -80,9 +80,19 @@ date of note: 2024-08-16
 >-- [[Deep Learning Foundations and Concepts by Bishop]] pp 547
 
 >[!quote]
->In this chapter we discuss **normalizing flows**, a class of *flexible density models* that can be easily sampled from and whose **exact** *likelihood function* is *efficient to compute*. Such models can be used for many tasks, such as density modeling, inference and generative modeling.
+>In this chapter we discuss **normalizing flows**, a class of *flexible density models* that can be easily sampled from and whose **exact** *likelihood function* is *efficient to compute*. 
+>
+>Such models can be used for many tasks, such as 
+>- density modeling, 
+>- inference and 
+>- generative modeling.
 >
 >-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 819
+
+- [[Parzen Kernel Density Estimation]]
+- [[Variational Auto-Encoder]]
+- [[Variational Inference vs EM Algorithm]]
+
 
 >[!info]
 >In order to define a **bijective neural network**, it is required that the input and output *dimensionality* are the **same**. 

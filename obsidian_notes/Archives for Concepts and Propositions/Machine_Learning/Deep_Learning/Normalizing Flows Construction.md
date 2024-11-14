@@ -26,6 +26,10 @@ date of note: 2024-08-16
 
 
 
+- [[Affine Map]]
+
+
+- [[B-Spline Functions]]
 
 
 ## Explanation

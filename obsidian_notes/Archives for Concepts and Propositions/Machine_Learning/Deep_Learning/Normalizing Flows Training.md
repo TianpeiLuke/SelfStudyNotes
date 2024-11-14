@@ -26,6 +26,8 @@ date of note: 2024-08-16
 
 
 
+- [[Evidence Lower Bound]]
+- [[Variational Auto-Encoder]]
 
 
 ## Explanation
@@ -51,10 +53,7 @@ date of note: 2024-08-16
 ##  Recommended Notes and References
 
 
-- [[Langevin Equation]]
-- [[Fokker–Planck and Kolmogorov Forward-Backward Equation]]
-- [[Diffusion Process]]
-- [[Stochastic Differential Equations]]
+- [[Variational Inference vs EM Algorithm]]
 
 
 - [[Wasserstein Distance]]
