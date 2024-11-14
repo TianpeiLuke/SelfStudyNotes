@@ -26,7 +26,7 @@ date of note: 2024-09-08
 >A **n-gram model** is a *language model* for a sequence of $n$-words. $$p(w_{1}\,{,}\ldots{,}\,w_{n})$$
 >- For $n=2$, it is referred to as the **bi-gram model**, which assigns probability for every two successive words $$p(w_{i}, w_{i+1})$$
 >- For $n=3$, it is referred to as the **tri-gram model**, which assigns probability for every three-word sequence $$p(w_{i}. w_{i+1}, w_{i+2})$$
->- We also use the **n-gram model** to estimate the probability of a given word, given *previous $n-1$ words* $$p(w_{n} \,|\,w_{n-1}\,{,}\ldots{,}\,w_{1})$$ 
+>- We also use the **n-gram model** to estimate the probability of a given word, given *previous $n-1$ words* $$p(w_{n} \,|\,w_{n-1}\,{,}\ldots{,}\,w_{1}) = \frac{p(w_{n},\,w_{n-1}\,{,}\ldots{,}\,w_{1})}{p(w_{n-1}\,{,}\ldots{,}\,w_{1})}$$ 
 
 ### Estimation of Joint Probability
 

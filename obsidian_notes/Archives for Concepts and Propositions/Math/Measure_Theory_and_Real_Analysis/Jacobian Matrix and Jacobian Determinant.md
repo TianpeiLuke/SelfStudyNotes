@@ -4,9 +4,14 @@ tags:
   - math/calculus
   - math/real_analysis
   - math/differential_geometry
-keywords: 
-topics: 
-name: 
+keywords:
+  - jacobian_matrix
+  - jacobian_determinant
+topics:
+  - calculus
+  - real_analysis
+  - differential_geometry
+name: Jacobian Matrix and Jacobian Determinant
 date of note: 2024-11-01
 ---
 
@@ -40,6 +45,12 @@ date of note: 2024-11-01
 >The *determinant* of *Jacobian matrix* is the **Jacobian determinant**
 >$$\det(Df) := \det \left( \frac{ \partial (f^1 \,{,}\ldots{,}\,f^{n}) }{ \partial (x^{1} \,{,}\ldots{,}\,x^{n}) }  \right) $$
 
+### Differentials in High Dimensional Space
+
+![[Differentiability in Higher Dimensions Euclidean Space#^d50646]]
+
+- [[Differentiability in Higher Dimensions Euclidean Space]]
+- [[Fréchet Derivative and Strong Derivative in Banach Space]]
 
 ### Geometric Interpretation
 
@@ -109,4 +120,5 @@ date of note: 2024-11-01
 
 - [[Principles of Mathematical Analysis by Rudin]]
 - [[Introduction to Smooth Manifolds by Lee]]
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 44, 820
 - Wikipedia [Jacobian_matrix_and_determinant](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant)

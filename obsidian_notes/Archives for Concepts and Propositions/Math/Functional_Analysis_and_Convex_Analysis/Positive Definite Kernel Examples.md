@@ -249,6 +249,8 @@ date of note: 2024-11-12
 
 ### Kernel on Sets and Probability Measure
 
+
+- [[Jaccard Similarity and Jaccard Distance between Two Sets]]
 - [[Measure Space and Countably Additive Measure]]
 - [[Set Operations]]
 

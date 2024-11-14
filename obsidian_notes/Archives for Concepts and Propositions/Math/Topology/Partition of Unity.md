@@ -26,6 +26,8 @@ date of note: 2024-05-20
 -----------
 ##  Recommended Notes and References
 
+- [[B-Spline Functions]]
+
 
 - [[Topology Book by Munkres]]
 - [[Introduction to Smooth Manifolds by Lee]]

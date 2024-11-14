@@ -26,6 +26,8 @@ date of note: 2024-05-10
 - [[Intersection of Set Family to Set]]
 - [[Shattering of Set by Set Family]]
 
+- [[Jaccard Similarity and Jaccard Distance between Two Sets]]
+
 ### Functions
 
 - [[Function]]

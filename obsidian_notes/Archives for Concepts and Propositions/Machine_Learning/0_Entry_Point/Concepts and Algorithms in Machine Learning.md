@@ -80,6 +80,7 @@ date of note: 2024-06-01
 - [[Reproducing Kernel of RKHS]]
 - [[Positive Definite Kernel]]
 - [[Positive Definite Kernel Examples]]
+- [[Jaccard Similarity and Jaccard Distance between Two Sets]]
 - [[Mercer Theorem for Positive Definite Integral Kernels]]
 - [[Representer Theorem]]
 - [[Nystrom Method for Low Rank Approximation of Positive Definite Kernel]]

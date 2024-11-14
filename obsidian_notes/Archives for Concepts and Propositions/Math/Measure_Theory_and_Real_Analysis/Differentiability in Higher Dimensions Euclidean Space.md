@@ -22,8 +22,10 @@ date of note: 2024-11-02
 >\lim_{ h \to 0 } \frac{\lVert f(x_{0} + h) - f(x_{0}) - \ell(h) \rVert_{\mathbb{R}^{m}} }{\lVert h \rVert_{\mathbb{R}^{n}} } = 0.
 >$$
 >- If $f$ is **differentiable** at $x_{0}$, then all of its **partial derivatives** *exist* $$\frac{ \partial f }{ \partial x^{i} }(x_{0})$$
->- The linear map $\ell$ is called the **differential** of $f$, 
+>- The linear map $\ell$ is called the **differential** of $f$, denoted as $$Df$$
 >- The differential of $f$ is given by the **Jacobian matrix** $$Df := \frac{ \partial f }{ \partial x } :=  \frac{ \partial (f^1 \,{,}\ldots{,}\,f^{m}) }{ \partial (x^{1} \,{,}\ldots{,}\,x^{n}) } $$
+
+^d50646
 
 - [[Jacobian Matrix and Jacobian Determinant]]
 
