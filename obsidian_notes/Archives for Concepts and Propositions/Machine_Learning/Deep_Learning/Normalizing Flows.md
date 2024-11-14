@@ -74,6 +74,14 @@ date of note: 2024-08-16
 
 ## Explanation
 
+
+>[!important]
+>The **key characteristic** of **normalizing flow** is that *each layer* of *generative neural network* is of **same dimension.** 
+>$$
+> \text{dim}(\mathcal{X}) = \text{dim}(\mathcal{U}^{1}) \,{=}\ldots{=}\,\text{dim}(\mathcal{U}^{l}) = \text{dim}(\mathcal{Z})
+>$$
+
+
 >[!quote]
 >... training nonlinear latent variable models that involves *restricting* the form of the neural network model such that the *likelihood function* can be **evaluated without approximation** while still ensuring that **sampling from the trained model** is straightforward.
 >
@@ -89,9 +97,6 @@ date of note: 2024-08-16
 >
 >-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 819
 
-- [[Parzen Kernel Density Estimation]]
-- [[Variational Auto-Encoder]]
-- [[Variational Inference vs EM Algorithm]]
 
 
 >[!info]
@@ -137,6 +142,25 @@ date of note: 2024-08-16
 
 
 - [[Neural Ordinary Differential Equations and Continuous Flows]]
+
+
+## Applications
+
+### Density Estimation
+
+- [[Parzen Kernel Density Estimation]]
+
+
+### Generative Models
+
+
+
+### Inference
+
+- [[Variational Auto-Encoder]]
+- [[Variational Inference vs EM Algorithm]]
+
+
 
 
 

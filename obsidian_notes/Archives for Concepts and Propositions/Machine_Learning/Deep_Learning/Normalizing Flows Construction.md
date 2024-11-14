@@ -24,12 +24,47 @@ date of note: 2024-08-16
 - [[Probability Density Function of Random Variable]]
 - [[Jacobian Matrix and Jacobian Determinant]]
 
+### Affine Flows
 
 
 - [[Affine Map]]
 
 
+### Elementwise Flows
+
+
+
+
+#### B-Spline Function
+
+
 - [[B-Spline Functions]]
+
+
+### Coupling Flows
+
+
+- [[Coupling Flows]]
+
+
+
+### Autoregressive Flows
+
+
+- [[Autoregressive Flows]]
+
+
+### Residual Flows
+
+
+- [[Residual Flows]]
+
+
+### Continuous Flows
+
+
+- [[Neural Ordinary Differential Equations and Continuous Flows]]
+
 
 
 ## Explanation
