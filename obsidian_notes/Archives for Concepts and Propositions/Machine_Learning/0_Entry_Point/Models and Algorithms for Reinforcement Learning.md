@@ -146,6 +146,13 @@ date of note: 2024-06-01
 - [[Advantage Actor Critic or A2C and A3C Algorithm]]
 
 
+### Maximum Entropy Reinforcement Learning and Soft Actor-Critic Algorithm
+
+- [[Maximum Entropy Reinforcement Learning]]
+- [[Soft Actor-Critic Algorithm]]
+
+
+
 ### Planning and Model-based RL
 
 - [[Planning in Markov Decision Process]]
@@ -155,12 +162,12 @@ date of note: 2024-06-01
 
 
 
-
 ### Control as Inference
 
-- [[Maximum Entropy Reinforcement Learning]]
 - [[Inverse Reinforcement Learning]]
 - [[Imitation Learning]]
+
+
 
 ### Reinforcement Learning with Foundational Models
 

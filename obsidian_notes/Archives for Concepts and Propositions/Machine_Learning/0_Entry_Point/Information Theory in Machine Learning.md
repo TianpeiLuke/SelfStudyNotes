@@ -86,14 +86,11 @@ date of note: 2024-11-14
 - [[Iterative Maximum Entropy Learning for AdaBoost]]
 - [[Iterative Maximum Entropy Learning for Gradient Boosting]]
 
-#### Online Learning
-
-- [[Weighted Average Forecast via Potential]]
 
 #### Reinforcement Learning
 
 - [[Maximum Entropy Reinforcement Learning]]
-
+- [[Soft Actor-Critic Algorithm]]
 
 #### Evolutionary Computation
 
@@ -193,6 +190,13 @@ date of note: 2024-11-14
 
 - [[Monte Carlo Expectation Maximization]]
 - [[Simulated Annealing]]
+
+#### Entropy Regularized Optimization
+
+- [[Entropy Minimization Algorithm]]
+- [[Entropic Regularized Optimal Transport in Measure]]
+- [[Entropic Regularized Optimal Transport in Dual Form]]
+- [[Bregman Divergence Minimization]]
 
 
 ### Sampling

@@ -188,6 +188,11 @@ date of note: 2024-05-12
 
 - [[Advantage Actor Critic or A2C and A3C Algorithm]]
 
+### Soft Actor Critic
+
+- [[Soft Actor-Critic Algorithm]]
+
+
 ## Principle of Learning by Comparison
 
 ![[Principle of Learning by Comparison for Implicit Generative Models#^1fd0d6]]
