@@ -136,9 +136,14 @@ date of note: 2024-05-12
 >- the Bellman equation for $v_{*}$ is a **system of $|\mathcal{X}|$ equations.**
 >- the Bellman equation for $q_{*}$ is a **system of $|\mathcal{X}| \times|\mathcal{A}|$ equations.**
 
+>[!quote]
+>The **Bellman optimality equation** (for $v_{*}$) was popularized by Richard Bellman (1957a), who called it the “*basic functional equation*.”
+>
+>The **counterpart** of the Bellman optimality equation for *continuous time* and *state problems* is known as the **Hamilton-Jacobi-Bellman equation** (or often just the **Hamilton-Jacobi equation**), indicating its roots in classical physics (e.g., Schultz and Melsa, 1967).
+>
+>-- [[Reinforcement Learning An Introduction by Sutton]] pp 71
 
-
-
+- [[Hamilton-Jacobi-Bellman Equation]]
 
 
 -----------

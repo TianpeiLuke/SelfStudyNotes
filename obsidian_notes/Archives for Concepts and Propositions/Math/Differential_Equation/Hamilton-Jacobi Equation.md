@@ -18,13 +18,14 @@ date of note: 2024-06-15
 >[!important]
 >**Name**: Hamilton-Jacobi Equation
 
+![[Hamiltonian Function in Mechanic and Variational Calculus#^614926]]
 
 >[!important] Definition
 >Let $u: \mathbb{R}^n \times [0, \infty) \to \mathbb{R}$ be the unknown function, $x := (x^1 \,{,}\ldots{,}\,x^n)$. Denote $$Du := \nabla u  = \left(\frac{\partial}{\partial x^i }u \,{,}\ldots{,}\, \frac{\partial}{\partial x^n }u\right).$$
 >
 >Define the **Hamiltonian** $H: \mathbb{R}^n \to \mathbb{R}$ and the *initial function* $g: \mathbb{R}^n \to \mathbb{R}$.
 >
->The **Hamilton-Jacobi equation** is defined as 
+>The **Hamilton-Jacobi equation**  is defined as 
 >$$
 >\left\{
 >\begin{align*}
@@ -33,7 +34,9 @@ date of note: 2024-06-15
 >\end{align*}
 >\right.
 >$$
->
+>- The *solution* $u(x, t)$ is the **state value function** of the *optimal control problem*.
+
+^e2fc45
 
 
 - [[Hamiltonian Function in Mechanic and Variational Calculus]]
@@ -46,6 +49,7 @@ date of note: 2024-06-15
 
 >[!info]
 >The **Hamilton-Jacobi equation** is a **nonlinear PDE**.
+
 
 ## Hamiltonian Systems of Differential Equations
 
@@ -74,7 +78,6 @@ date of note: 2024-06-15
 ## Euler-Lagrange Equation
 
 - [[Euler–Lagrange Equations]]
-
 
 
 

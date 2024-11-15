@@ -54,6 +54,7 @@ date of note: 2024-05-30
 ### Important Nonlinear PDE and System of Nonlinear PDEs
 
 - [[Hamilton-Jacobi Equation]]
+- [[Hamilton-Jacobi-Bellman Equation]]
 - [[Nonlinear Poisson Equation]]
 - [[Monge–Ampère Equation]]
 
