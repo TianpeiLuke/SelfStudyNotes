@@ -43,20 +43,37 @@ date of note: 2024-09-09
 >[!important] Definition
 >Let $(X,Y)$ be sample from a joint distribution $P$ on $\mathcal{X}\times \mathcal{Y}$ and $$f: \mathcal{X} \to \mathcal{Y}$$ be measurable function. 
 >
->A *loss function* $\ell: \mathcal{Y}\times \mathcal{Y} \to \mathbb{R}_{+}$ is called a **margin-based loss** function if it is of the form 
+>A *loss function* $L_{\rho}: \mathcal{Y}\times \mathcal{Y} \to \mathbb{R}_{+}$ is called a **margin-based loss** function if it is of the form 
 >$$
->\ell(Y, f(X)) := \hat{\ell} \left(Yf(X)\right)
+>L_{\rho}(Y, f(X)) := \Phi_{\rho} \left(Yf(X)\right)
 >$$
 >where 
->- $\hat{\ell}: \mathcal{Y} \to \mathbb{R}$ is a *convex function*, and
->- $yf(x)$ is called the **margin.**
+>- $\Phi_{\rho}: \mathcal{Y} \to \mathbb{R}$ is a *convex surrogate function*, and
+>- $yf(x)$ is called the **confidence margin** or the **margin.**
 >  
->The **margin-based risk** is defined as $$R_{\ell}(f) := \mathbb{E}_{ X,Y }\left[ \hat{\ell}(Y\,f(X)) \right]$$  
+>The **margin-based risk** is defined as $$R_{\rho}(f) := \mathbb{E}_{ X,Y }\left[\, \rho(Yf(X)) \,\right]$$  
+
+^a01095
 
 - [[Statistical Decision Problem]]
 - [[Empirical Risk Minimization]]
 - [[Convex Function]]
 
+>[!important] Definition
+>The **ramp loss** is a *margin-based loss* function, which is defined as
+>$$
+>L_{\rho}(Y, f(X)) := \Phi_{\rho} \left(Yf(X)\right)
+>$$
+>where
+>$$
+>\Phi_{\rho}(x) := \min\left\{ 1,\, \max\left\{ 0,\, 1- \frac{x}{\rho} \right\}  \right\} =  \left\{\begin{array}{cl} 1 & \text{ if }x \le 0 \\[5pt] 1 - \dfrac{x}{\rho} & \text{ if }x\in [0, \rho] \\[5pt] 0 & \text{ if }x \ge \rho \end{array}\right.
+>$$
+
+^19baca
+
+- [[Surrogate Loss Minimization]]
+
+![[ramp_loss.png]]
 
 
 ## Explanation
@@ -83,6 +100,14 @@ date of note: 2024-09-09
 >
 >Thus $v = \left( \frac{- \left\langle  w\,,\,x    \right\rangle -b}{\left\langle  w\,,\,w    \right\rangle} \right) w + x$ is the optimal solution with minimum distance being $$\lVert x - v \rVert_{2} = \lvert  \left\langle  w\,,\,x \right\rangle + b\rvert\,\lVert w \rVert$$
 
+
+## Generational Bound for Margin-Based Loss 
+
+- [[Margin-based Generalization Error Bound]]
+
+## Connection to $f$-Divergence
+
+- [[Density Ratio Estimation via Binary Classifiers]]
 
 
 

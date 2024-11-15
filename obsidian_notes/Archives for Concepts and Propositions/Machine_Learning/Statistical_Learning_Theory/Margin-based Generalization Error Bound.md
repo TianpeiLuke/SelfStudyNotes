@@ -2,19 +2,26 @@
 tags:
   - concept
   - machine_learning/theory
-  - machine_learning/boosting
-keywords: 
-topics: 
-name: 
+  - machine_learning/kernel_methods
+keywords:
+  - margin_based_loss
+topics:
+  - statistical_learning_theory
+  - machine_learning_theory
+name: Margin-based Generalization Error Bound
 date of note: 2024-08-01
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Margin-based Generalization Error Bound
 
+![[Margin-based Loss Function#^a01095]]
 
+![[Margin-based Loss Function#^19baca]]
+
+- [[Margin-based Loss Function]]
 
 ## Explanation
 
@@ -26,7 +33,7 @@ date of note: 2024-08-01
 ##  Recommended Notes and References
 
 
-- [[Margin-based Loss Function]]
+
 - [[Empirical Risk Minimization]]
 - [[PAC Learnable and Agnostic PAC Learnable]]
 

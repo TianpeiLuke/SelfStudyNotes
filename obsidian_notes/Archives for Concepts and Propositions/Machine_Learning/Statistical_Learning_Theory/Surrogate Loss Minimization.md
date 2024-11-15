@@ -21,6 +21,8 @@ date of note: 2024-08-22
 
 ![[surrogate_loss_comparison.png]]
 
+- [[Margin-based Loss Function]]
+
 
 
 -----------
