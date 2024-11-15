@@ -26,7 +26,7 @@ date of note: 2024-08-16
 >	- This requires that for every $w$, each $x\in \mathcal{X}$ corresponds to a *unique* $z\in \mathcal{Z}$ and vice versa.
 >	- The inverse mapping $g$ **normalizes** the *data distribution* by *mapping it back* to base distribution. $$X\sim p_{x}(x) \stackrel{g}{\longrightarrow} p_{z}(z)$$
 >	  
->The **probability density function** of $x\in \mathcal{X}$ is given by $$\begin{align*}p_{x}(x; w) &= p_{z}\left(g(x, w)\right)\;\lvert\, \det D\,g(x) \,\rvert \\[7pt] &= p_{z}(z)\;\lvert\, \det D\,f(z) \,\rvert^{-1}  \end{align*}$$ where
+>The **probability density function** of $x\in \mathcal{X}$ is given by $$\begin{align*}p_{x}(x; w)&= p_{z}(z)\;\lvert\, \det D\,f(z) \,\rvert^{-1}\\[7pt]     &= p_{z}\left(g(x, w)\right)\;\lvert\, \det D\,g(x) \,\rvert \end{align*}$$ where
 >- $D\,g(x)$ is the *Jacobian matrix* of $g$, i.e. $$D\,g(x) := \frac{ \partial (g_{1} \,{,}\ldots{,}\,g_{d})}{ \partial (x^1 \,{,}\ldots{,}\,x^{d}) }\Big|_{x} := \frac{ \partial g }{ \partial x } (x) $$
 >- $D\,f(z)$ is the *Jacobian matrix* of $f$, i.e. $$D\,f(z) := \frac{ \partial (f_{1} \,{,}\ldots{,}\,f_{d})}{ \partial (z^1 \,{,}\ldots{,}\,z^{d}) }\Big|_{z}  := \frac{ \partial f }{ \partial z } (z) $$
 >- The Jacobian matrix is *invertible* $$\left(\frac{ \partial f }{ \partial z } (z)\right)^{-1} = \frac{ \partial g }{ \partial x } (f(z))$$
@@ -76,10 +76,11 @@ date of note: 2024-08-16
 
 
 >[!important]
->The **key characteristic** of **normalizing flow** is that *each layer* of *generative neural network* is of **same dimension.** 
->$$
-> \text{dim}(\mathcal{X}) = \text{dim}(\mathcal{U}^{1}) \,{=}\ldots{=}\,\text{dim}(\mathcal{U}^{l}) = \text{dim}(\mathcal{Z})
->$$
+>The **key characteristic** of **normalizing flow** include:
+>- The neural network for decoder need to be a **diffeomorphism**, i.e. it is a *smooth bijective* function with *smooth inverse.*
+>	- This means that *each layer* is of **same dimension.** $$\text{dim}(\mathcal{X}) = \text{dim}(\mathcal{U}^{1}) \,{=}\ldots{=}\,\text{dim}(\mathcal{U}^{l}) = \text{dim}(\mathcal{Z})$$
+>- The network be **sufficiently expressive** to model the distribution of interest,
+>- The model need to be **computationally efficient**, both in terms of computing $f$ and $g$ (depending on the application) but also in terms of the calculation of the **determinant of the Jacobian**.
 
 
 >[!quote]
@@ -168,6 +169,7 @@ date of note: 2024-08-16
 ##  Recommended Notes and References
 
 
+- [[Artificial Neural Network and Deep Learning]]
 
 
 

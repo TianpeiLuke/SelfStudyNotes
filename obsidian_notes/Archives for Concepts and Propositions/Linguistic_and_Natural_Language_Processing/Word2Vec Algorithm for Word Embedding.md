@@ -15,6 +15,16 @@ date of note: 2024-09-12
 
 
 
+### Continuous Bag-of-Words
+
+
+
+
+### Skip-Gram
+
+
+![[word2vec_cont_bog_skipgram.png]]
+
 ## Explanation
 
 

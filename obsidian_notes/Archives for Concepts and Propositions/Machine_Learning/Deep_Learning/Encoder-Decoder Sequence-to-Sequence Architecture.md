@@ -31,6 +31,7 @@ date of note: 2024-08-31
 - [[Long-Short Term Memory Network]]
 - [[Residual Neural Network]]
 - [[Bidirectional Recurrent Neural Network]]
+- [[Autoregressive Models]]
 
 ### Auto-Encoder
 

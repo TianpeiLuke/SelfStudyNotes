@@ -28,6 +28,9 @@ date of note: 2024-09-08
 >- For $n=3$, it is referred to as the **tri-gram model**, which assigns probability for every three-word sequence $$p(w_{i}. w_{i+1}, w_{i+2})$$
 >- We also use the **n-gram model** to estimate the probability of a given word, given *previous $n-1$ words* $$p(w_{n} \,|\,w_{n-1}\,{,}\ldots{,}\,w_{1}) = \frac{p(w_{n},\,w_{n-1}\,{,}\ldots{,}\,w_{1})}{p(w_{n-1}\,{,}\ldots{,}\,w_{1})}$$ 
 
+- [[Autoregressive Models]]
+
+
 ### Estimation of Joint Probability
 
 

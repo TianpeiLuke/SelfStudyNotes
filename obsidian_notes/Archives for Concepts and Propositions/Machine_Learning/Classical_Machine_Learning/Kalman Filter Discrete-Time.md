@@ -33,6 +33,7 @@ date of note: 2024-05-12
 
 - [[Linear Dynamic System]]
 - [[State-Observation Models]]
+- [[Autoregressive Models]]
 
 ![[Bayesian Filtering and Smoothing Equations for State Observation Models#^1f4438]]
 

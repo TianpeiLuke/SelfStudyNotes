@@ -44,8 +44,10 @@ date of note: 2024-08-16
 - [[Diffusion Process]]
 - [[Stochastic Differential Equations]]
 - [[Ordinary Differential Equations]]
+- [[Artificial Neural Network and Deep Learning]]
 
-- [[Markov Decision Process]]
+
+- [[Markov Chain and Markov Process]]
 
 - [[Wasserstein Distance]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 834 - 837

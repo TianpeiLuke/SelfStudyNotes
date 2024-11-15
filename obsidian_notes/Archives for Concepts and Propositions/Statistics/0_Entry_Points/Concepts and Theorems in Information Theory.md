@@ -22,8 +22,7 @@ date of note: 2024-06-01
 - [[Chain Rule of Shannon Entropy]]
 - [[Conditional Kullback-Leibler Divegence]]
 - [[Chain Rule of Kullback-Leibler Divergence]]
-- [[Mutual Information]]
-- [[f-Divergence]]
+
 
 - [[Entropy Functional]]
 - [[Phi Entropy Functional]]

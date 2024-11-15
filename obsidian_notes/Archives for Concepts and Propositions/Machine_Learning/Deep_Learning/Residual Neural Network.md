@@ -45,8 +45,6 @@ date of note: 2024-05-12
 
 ![[resnet_connection_two_ways.png]]
 
-
-
 - [[Convolutional Filters]]
 - [[Convolutional Neural Network]]
 
@@ -89,7 +87,7 @@ date of note: 2024-05-12
 
 - [[Hidden Markov Model]]
 - [[Linear Dynamic System]]
-
+- [[Autoregressive Models]]
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]
 - [[Deep Learning by Goodfellow]] pp 368

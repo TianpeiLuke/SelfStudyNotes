@@ -59,7 +59,7 @@ date of note: 2024-08-31
 - [[Residual Neural Network]]
 
 - [[Linear Dynamic System]]
-
+- [[Autoregressive Models]]
 
 - [[Deep Learning by Goodfellow]] pp 383 - 384
 - [[Deep Learning Foundations and Concepts by Bishop]]

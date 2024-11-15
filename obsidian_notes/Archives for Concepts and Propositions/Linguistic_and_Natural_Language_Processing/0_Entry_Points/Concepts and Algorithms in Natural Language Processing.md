@@ -35,6 +35,8 @@ date of note: 2024-09-13
 
 ### Machine Learning Models
 
+- [[Autoregressive Models]]
+
 #### Prediction with Structured Output
 
 - [[Support Vector Machine Kernel Expansion and RKHS]]

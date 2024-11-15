@@ -29,7 +29,7 @@ date of note: 2024-08-16
 
 
 
-
+![[coupling_flow.png]]
 
 ## Explanation
 
@@ -40,10 +40,8 @@ date of note: 2024-08-16
 ##  Recommended Notes and References
 
 
-- [[Langevin Equation]]
-- [[Fokker–Planck and Kolmogorov Forward-Backward Equation]]
-- [[Diffusion Process]]
-- [[Stochastic Differential Equations]]
+- [[Artificial Neural Network and Deep Learning]]
+
 
 
 - [[Wasserstein Distance]]

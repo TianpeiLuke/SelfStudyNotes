@@ -54,6 +54,7 @@ date of note: 2024-08-16
 
 
 - [[Variational Inference vs EM Algorithm]]
+- [[Artificial Neural Network and Deep Learning]]
 
 
 - [[Wasserstein Distance]]

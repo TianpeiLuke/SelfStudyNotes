@@ -151,6 +151,9 @@ date of note: 2024-06-01
 
 ### Recurrent Network
 
+- [[State Space Models and Nonlinear Dynamic System]]
+- [[Autoregressive Models]]
+
 - [[Recurrent Neural Network]]
 - [[Vanishing and Exploding Gradient Problems for Sequential Networks]]
 - [[Strategies for Multiple Time Scales Sequential Network]]

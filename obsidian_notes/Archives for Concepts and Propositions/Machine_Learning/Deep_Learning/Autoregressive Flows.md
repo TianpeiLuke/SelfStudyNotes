@@ -40,7 +40,7 @@ date of note: 2024-08-16
 ##  Recommended Notes and References
 
 
-
+- [[Artificial Neural Network and Deep Learning]]
 
 - [[Wasserstein Distance]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 826 - 832

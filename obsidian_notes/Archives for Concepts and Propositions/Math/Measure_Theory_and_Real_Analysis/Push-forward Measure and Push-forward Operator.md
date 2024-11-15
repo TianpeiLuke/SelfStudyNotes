@@ -15,7 +15,7 @@ date of note: 2024-05-07
 ## Concept Definition
 
 >[!important]
->**Name**:  Push-forward Operator
+>**Name**:  Push-forward Measure and Push-forward Operator
 
 >[!important] Definition
 >Given two topological measurable spaces $(\mathcal{X}, \mathscr{F})$ and $(\mathcal{Y}, \mathscr{G})$, define the space of all *Radon measures* on $\mathscr{F}$ as $\mathcal{M}(\mathcal{X})$, and the space of all *Radon measures* on $\mathscr{G}$ as $\mathcal{M}(\mathcal{Y})$.
@@ -23,8 +23,8 @@ date of note: 2024-05-07
 >For a *continuous map* $T : \mathcal{X} \rightarrow \mathcal{Y}$,  the **push-forward operator** is defined as $T_{*}: \mathcal{M}(\mathcal{X}) \rightarrow \mathcal{M}(\mathcal{Y})$ that  satisfies 
 >$$
 > \begin{align*}
-> T_{*}\alpha &:= \alpha \circ T^{-1} \in \mathcal{M}(\mathcal{Y}), \quad \forall \alpha \in \mathcal{M}(\mathcal{X}) \\
-> \left(T_{*}\alpha \right)(B)&:= \alpha\left(\set{ x: T(x) \in B \subset \mathcal{Y} }\right)  = \alpha(T^{-1}(B)), \quad B \in \mathscr{G}
+> T_{*}\alpha &:= \alpha \circ T^{-1} \in \mathcal{M}(\mathcal{Y}), \quad \forall \alpha \in \mathcal{M}(\mathcal{X}) \\[8pt]
+> \left(T_{*}\alpha \right)(B)&:= \alpha\left(\set{ x: T(x) \in B  }\right)  = \alpha(T^{-1}(B)), \quad \forall B \in \mathscr{G}
 > \end{align*}
 >$$
 
@@ -65,6 +65,32 @@ date of note: 2024-05-07
 - [[Absolutely Convergent Integration]]
 - [[Jacobian Matrix and Jacobian Determinant]]
 
+
+## Applications
+
+### Distribution of Random Variable
+
+- [[Probability Distribution of Random Variable]]
+- [[Cumulative Distribution Function of Random Variable]]
+- [[Probability Density Function of Random Variable]]
+
+### Product Measures
+
+- [[Fubini Theorem]]
+
+### Stochastic Process 
+
+- [[Stochastic Process]]
+- [[Empirical Process and Empirical Measure]]
+
+### Optimal Transport
+
+- [[Optimal Transport in Space of Measures]]
+- [[Wasserstein Distance]]
+
+### Normalizing Flows
+
+- [[Normalizing Flows]]
 
 
 

@@ -52,6 +52,7 @@ date of note: 2024-08-16
 
 - [[Linear Dynamic System]]
 - [[Multi-Layer Perceptron and Feed-Forward Network]]
+- [[Autoregressive Models]]
 
 ### Unfolding the Recurrent Structure
 

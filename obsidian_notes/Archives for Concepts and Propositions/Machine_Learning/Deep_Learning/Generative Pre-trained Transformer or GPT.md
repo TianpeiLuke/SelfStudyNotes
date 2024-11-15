@@ -30,6 +30,8 @@ date of note: 2024-10-21
 
 - [[Attention Mechanism in Neural Network]]
 - [[Transformer Network]]
+- [[Autoregressive Models]]
+
 - [[Large Language Model and Pretrained Language Models]]
 - [[Bidirectional Encoder Representation from Transformer or BERT]]
 - [[Artificial Neural Network and Deep Learning]]

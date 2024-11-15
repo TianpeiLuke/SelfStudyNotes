@@ -36,6 +36,8 @@ date of note: 2024-05-12
 >$$
 >That is, the *local dependencies* states that each node $X_{i}$ is *conditionally independent* with its *nondescendants* given its *parents*.
 
+^eeb78d
+
 - [[I-Map and Independence Assertion]]
 - [[Conditional Independence]]
 - [[Directed Acyclic Graph]]

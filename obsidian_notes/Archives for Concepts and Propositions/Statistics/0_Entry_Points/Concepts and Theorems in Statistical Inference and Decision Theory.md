@@ -177,6 +177,10 @@ date of note: 2024-06-01
 - [[Monte Carlo Expectation Maximization]]
 
 
+### Time Series Analysis
+
+- [[Autoregressive Time Series]]
+
 ### Nonparametric Estimation
 
 - [[U-Statistics]]

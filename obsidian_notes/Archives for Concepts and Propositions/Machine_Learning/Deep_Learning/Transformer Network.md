@@ -179,7 +179,7 @@ date of note: 2024-05-12
 
 - [[Auto-Encoder and Stochastic Auto-Encoder]]
 - [[Encoder-Decoder Sequence-to-Sequence Architecture]]
-
+- [[Autoregressive Models]]
 
 
 ## Explanation

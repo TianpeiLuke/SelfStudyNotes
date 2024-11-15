@@ -34,6 +34,7 @@ date of note: 2024-05-12
 - [[Markov Chain and Markov Process]]
 - [[Bayesian Network on Directed Acyclic Graph]]
 - [[Stochastic Process]]
+- [[Autoregressive Models]]
 
 >[!important] Definition
 >In a *2-TBN*, there are two types of edges

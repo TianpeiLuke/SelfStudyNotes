@@ -43,7 +43,7 @@ date of note: 2024-08-16
 
 
 - [[Residual Neural Network]]
-
+- [[Artificial Neural Network and Deep Learning]]
 
 
 - [[Wasserstein Distance]]

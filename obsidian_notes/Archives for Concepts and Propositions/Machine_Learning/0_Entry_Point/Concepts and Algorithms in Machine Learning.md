@@ -192,6 +192,7 @@ date of note: 2024-06-01
 
 - [[Parzen Kernel Density Estimation]]
 - [[k Nearest Neighbor Density Estimation]]
+- [[Normalizing Flows]]
 
 
 #### Nonparametric Inference

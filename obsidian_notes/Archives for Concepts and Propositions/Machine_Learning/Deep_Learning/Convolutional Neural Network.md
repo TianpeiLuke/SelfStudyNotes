@@ -95,10 +95,18 @@ date of note: 2024-05-12
 
 ![[cnn_example.png]]
 
-## Encoder-Decoder Architecture
+
+## Variants
+
+### Encoder-Decoder Architecture
 
 - [[U-Net as Convolutional Autoencoder with Skip Connections]]
 - [[Auto-Encoder and Stochastic Auto-Encoder]]
+
+### Causal CNN
+
+- [[Causal Convolutional Neural Network]]
+
 
 
 

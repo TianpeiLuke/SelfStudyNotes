@@ -47,6 +47,7 @@ date of note: 2024-05-12
 ^78b0f0
 
 - [[Ordinary Differential Equations]]
+- [[Autoregressive Models]]
 
 #### Linear Time Invariant System
 

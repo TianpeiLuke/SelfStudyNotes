@@ -35,6 +35,7 @@ date of note: 2024-05-12
 
 - [[Markov Chain and Markov Process]]
 - [[Markov Transition Kernel and Transition Function]]
+- [[Autoregressive Models]]
 
 
 ![[hmm.png]]

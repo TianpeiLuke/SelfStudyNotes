@@ -78,6 +78,7 @@ date of note: 2024-06-01
 - [[Statistical Prediction Filtering and Smoothing for State Observation Model]]
 - [[Bayesian Filtering and Smoothing Equations for State Observation Models]]
 
+- [[Autoregressive Models]]
 - [[Recurrent Neural Network]]
 - [[Hidden Markov Model]]
 - [[Kalman Filter Discrete-Time]]
