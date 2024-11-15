@@ -42,9 +42,23 @@ date of note: 2024-05-12
 
 - [[Information Projection and Moment Projection]]
 - [[Maximum Entropy Learning]]
+- [[Margin-based Loss Function]]
 - [[AdaBoost Algorithm]]
 - [[Sequential Game Perspective for AdaBoost]]
 
+>[!important] Definition
+>The **AdaBoost** algorithm solves the **maximum entropy learning** problem at each iteration $t=1\,{,}\ldots{,}\,$
+>$$
+>\begin{align*}
+>\min_{D \in \mathscr{P}} \;\;& \mathbb{KL}\left( D \left\|\right. D_{t} \right) \\
+>\text{s.t. }\;\;& \mathbb{E}_{ D }\left[ Y\,h_{t}(X) \right] = \sum_{i=1}^{m}D(i)y_{i}h_{t}(x_{i}) = 0
+>\end{align*}
+>$$
+>where 
+>- $$h_{t}\in \mathcal{H}$$ is the hypothesis learned at epoch $t$
+>- and $D_{t} \in \mathscr{P}$ is the **empirical distribution** of data $\mathcal{D}$ weighted by $w_{i}^{(t)} :=  D_{t}(i).$ $$D_{t} = \frac{1}{\sum_{i=1}^{n}w_{i}^{(t)}} \sum_{i=1}^{n}w_{i}^{(t)}\,\delta_{X_{i}}$$
+
+- [[Empirical Process and Empirical Measure]]
 
 
 ## Explanation

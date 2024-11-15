@@ -131,4 +131,5 @@ date of note: 2024-08-04
 - [[Optimization by Vector Space Methods by Luenberger]] pp 206 - 209
 - [[Convex Analysis by Rockafellar]]
 - [[Prediction Learning and Games by Cesa-Bianchi]] pp 182, 184, 185, 187, 188, 190, 197, 225, 226
+- [[Boosting Foundations and Algorithms by Schapire]] pp 157 - 159
 - Wikipedia [Minimax_theorem](https://en.wikipedia.org/wiki/Minimax_theorem)

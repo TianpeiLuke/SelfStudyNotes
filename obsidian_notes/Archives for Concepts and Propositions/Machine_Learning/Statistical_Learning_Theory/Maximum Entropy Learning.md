@@ -33,6 +33,8 @@ date of note: 2024-05-14
 >
 >- The constraint corresponds to the bound on the *maximum mean discrepancy* $$\lVert \;   \mathbb{E}_{ \mathcal{P} }\left[\phi(X) \right] - \mathbb{E}_{ \mathcal{P}_{n} }\left[\phi(X) \right] \;\rVert_{\mathcal{H}} := \lVert \; \mu(\mathcal{P}) - \mu(\mathcal{P}_{n}) \;\rVert_{\mathcal{H}} \le \lambda $$ where $\mu: \mathscr{P}(\mathcal{X}) \to \mathcal{H}$ is the *kernel mean embedding.*
 
+^7f19cd
+
 
 - [[Space of Bounded Signed Measures]]
 - [[Probability Space]]
