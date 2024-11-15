@@ -129,6 +129,7 @@ date of note: 2024-11-14
 - [[Energy Functional for Probabilistic Graphical Model]]
 - [[Bethe Entropy Approximation and Factorized Energy Functional]]
 
+- [[Bethe Variational Inference for Clique Tree]]
 - [[Sum-Product Belief-Update Expectation Propagation Algorithm]]
 - [[Mean Field Approximation for PGM]]
 
