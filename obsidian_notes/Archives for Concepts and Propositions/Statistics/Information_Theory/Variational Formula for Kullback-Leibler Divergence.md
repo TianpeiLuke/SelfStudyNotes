@@ -173,6 +173,6 @@ dP^{*} = \frac{1}{Z}\exp\left(f\right)\;dQ
 - [[Radon-Nikodym Derivative]]
 
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]]
-- [[Elements of Information Theory by Cover]] pp 257
+- [[Elements of Information Theory by Cover]] pp 257, 408
 - Donsker, Monroe D.; Varadhan, SR Srinivasa (1983). "Asymptotic evaluation of certain Markov process expectations for large time. IV". _Communications on Pure and Applied Mathematics_. **36** (2): 183–212. [doi](https://en.wikipedia.org/wiki/Doi_(identifier) "Doi (identifier)"):[10.1002/cpa.3160360204](https://doi.org/10.1002%2Fcpa.3160360204).
 

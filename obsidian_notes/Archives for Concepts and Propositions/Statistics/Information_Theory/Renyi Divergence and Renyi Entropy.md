@@ -140,6 +140,6 @@ date of note: 2024-11-03
 - [[Shannon Entropy]]
 
 
-- [[Elements of Information Theory by Cover]]
+- [[Elements of Information Theory by Cover]] pp 676 - 677
 - Van Erven, T., & Harremos, P. (2014). Rényi divergence and Kullback-Leibler divergence. _IEEE Transactions on Information Theory_, _60_(7), 3797-3820.
 - Li, Y., & Turner, R. E. (2016). Rényi divergence variational inference. _Advances in neural information processing systems_, _29_.
