@@ -21,6 +21,8 @@ date of note: 2024-05-12
 >- **policy evaluation** task: *estimating* the value function $v_{\pi}$ or $q_{\pi}$ given policy $\pi$
 >- **policy improvement** task: find the *optimal policy* $\pi$ given estimated value functions $v_{\pi}$ or $q_{\pi}$.
 
+^ebca95
+
 ![[Dynamic Programming for MDP#^d0f53b]]
 
 >[!important] Definition
@@ -52,17 +54,40 @@ date of note: 2024-05-12
 >- Else
 >	- Repeat the **Policy Evaluation (Prediction)** and **Policy Improvement** steps.
 
-
-
-
-
 - [[Dynamic Programming for MDP]]
 - [[Value Function and Bellman Equation for MDP]]
 - [[Markov Decision Process]]
 
+
+![[general_policy_iteration.png]]
+
+### Fixed Point and Contraction Map Principle
+
+![[policy_iteration.png]]
+
+- [[Leray-Schauder-Tychonoff Theorem on Fixed Point]]
+- [[Contraction Map Principle]]
+
+### Generalized Policy Iteration
+
+- [[Generalized Policy Iteration]]
+
+
 ## Explanation
 
+>[!quote]
+>**Iterative policy evaluation** is an example of a classical **successive approximation algorithm** for solving a *system of linear equations*. 
+>- The version of the algorithm that uses two arrays, one holding the old values while the other is updated, is often called a **Jacobi-style algorithm**, after Jacobi’s classical use of this method. 
+>- It is also sometimes called a **synchronous algorithm** because the effect is as if all the values are updated at the same time. 
+>- The second array is needed to simulate this *parallel computation* **sequentially**. 
+>- The in-place version of the algorithm is often called a **Gauss-Seidel-style algorithm** after the classical **Gauss-Seidel algorithm** for solving systems of linear equations. 
+>
+>In addition to iterative policy evaluation, other DP algorithms can be implemented in these different versions. Bertsekas and Tsitsiklis (1989) provide excellent coverage of these variations and their performance differences.
+>
+>-- [[Reinforcement Learning An Introduction by Sutton]] pp 90
 
+- [[Jacobi Iteration for Sparse Linear System]]
+- [[Gauss-Seidel Iteration for Sparse Linear System]]
 
 
 

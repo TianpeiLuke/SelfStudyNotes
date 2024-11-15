@@ -1,19 +1,27 @@
 ---
 tags:
   - concept
-  - machine_learning/algorithms
-keywords: 
-topics: 
-name: 
+  - reinforcement_learning/theory
+  - reinforcement_learning/algorithm
+keywords:
+  - generalized_policy_iteration
+topics:
+  - reinforcement_learning/algorithm
+  - reinforcement_learning/theory
+name: Generalized Policy Iteration
 date of note: 2024-05-12
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**:  Generalized Policy Iteration
 
+![[Policy Iteration Algorithm#^ebca95]]
 
+- [[Policy Iteration Algorithm]]
+
+![[general_policy_iteration.png]]
 
 ## Explanation
 
@@ -25,7 +33,7 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
-- [[Policy Iteration Algorithm]]
+
 - [[Value Iteration Algorithm]]
 - [[Dynamic Programming for MDP]]
 
