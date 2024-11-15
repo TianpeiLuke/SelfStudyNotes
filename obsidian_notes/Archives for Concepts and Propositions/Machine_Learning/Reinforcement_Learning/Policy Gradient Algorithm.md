@@ -35,7 +35,8 @@ date of note: 2024-05-12
 >where
 >$$
 > \begin{align}
-> r(\pi(a | s, \theta)) &= \sum_{s}\mu_{\pi}(s)\sum_{a}\pi(a |s, \theta) \sum_{s', r}p(s', r| s, a)r. 
+> r(\pi(a | s, \theta)) &= \sum_{t=0}^{\infty} \mathbb{E}^{\pi}\left[ \,r(X_{t}, A_{t})  \right]\\[8pt]  \\
+>&=\sum_{s}\mu_{\pi}(s)\sum_{a}\pi(a |s, \theta) \sum_{s', r}p(s', r| s, a)r. 
 > \end{align}
 >$$ 
 

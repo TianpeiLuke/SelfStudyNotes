@@ -47,6 +47,7 @@ date of note: 2024-06-01
 - [[Reinforcement Learning]]
 - [[Returns and Goals of Reinforcement Learning]]
 - [[Episodic and Continuing Task in Reinforcement Learning]]
+- [[Finite and Infinite-Horizon Task in Markov Decision Process]]
 - [[Value Function and Bellman Equation for MDP]]
 - [[Bellman Optimality Equation for MDP]]
 - [[Bellman Operator for Policy on Value Functions]]

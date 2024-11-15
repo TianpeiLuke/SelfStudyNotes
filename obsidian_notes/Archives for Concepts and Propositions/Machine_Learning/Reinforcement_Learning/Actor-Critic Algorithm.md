@@ -75,7 +75,7 @@ date of note: 2024-05-12
 >	- to **evaluate** the **value** of the policy $\hat{v}(x, w_{t})$ 
 >	- and used it as a **feedback** for actor's performance. 
 >	- For instance, **the same TD error** $\delta_t$ is used by *semi-gradient temporal difference methods* $$\begin{align} w_{t+1} &\leftarrow  w_{t} + \alpha_{w} \;\delta_{t}\;\nabla_{w}\hat{v}(X_{t}, w_{t}) \end{align}$$ 
->	- The *critic* will adjust the value function to **match** the **target value**, i.e. moving in direction to **minimize** the *Mean Squared Value Error*. $$\min_{w} \mathbb{E}_{ X\sim p }\left[  \lVert \hat{v}(X, w) - v(X, \pi) \rVert_{2}^2  \right]$$
+>	- The *critic* will adjust the value function to **match** the **target value**, i.e. moving in direction to **minimize** the *Mean Squared Value Error*. $$\min_{w} \sum_{t=0}^{T}\mathbb{E}^{\pi(\theta)}\left[  \lVert \hat{v}(X_{t}, w) - v(X_{t}, \pi) \rVert_{2}^2  \right]$$
 
 ^5ba730
 
@@ -88,7 +88,7 @@ date of note: 2024-05-12
 ### Algorithm for Episodic Task
 
 >[!important] Definition
->Consider the problem of *maximizing the value* for *episodic task*  $$\max_{\pi}\;v(x; \pi) := \max_{\pi}\mathbb{E}_{ \pi }\left[ \sum_{k=0}^{\infty}\gamma^{k}\,R_{t+k+1} \,|\,X_{t} = x \right]$$
+>Consider the problem of *maximizing the value* for *episodic task*  $$\max_{\pi}\;v(x; \pi) := \max_{\pi}\mathbb{E}^{ \pi }\left[ \sum_{k=0}^{\infty}\gamma^{k}\,R_{t+k+1} \,|\,X_{t} = x \right]$$
 >where
 >-  $\pi$ is the **stochastic policy** *parameterized* by $\theta$ $$\pi(a\,|\,x;\, \theta)$$
 >- Let $v(x; \pi)$ be **state-value function** *parameterized* by $w$ $$\hat{v}(x; w)$$ which approximates $v(x; \pi)$ under the regression setting.

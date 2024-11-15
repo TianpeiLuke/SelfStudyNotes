@@ -58,10 +58,14 @@ date of note: 2024-11-10
 >- It is the **invariant distribution** under $\pi$, $$\mu(s) = \lim_{t\rightarrow \infty}P\{S_{t} = s| S_{0}, \pi\},$$ or **on-policy distribution** under policy $\pi$.
 
 
-
-
-
 ## Explanation
+
+>[!info]
+>The term **finite-horizon** vs. **infinite-horizon** is more standard than **episodic** vs **continuing**.
+
+- [[Finite and Infinite-Horizon Task in Markov Decision Process]]
+
+
 
 
 - [[Episodic Semi-Gradient Multi-Step SARSA]]

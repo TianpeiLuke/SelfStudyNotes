@@ -136,6 +136,17 @@ date of note: 2024-05-12
 >- the Bellman equation for $v_{*}$ is a **system of $|\mathcal{X}|$ equations.**
 >- the Bellman equation for $q_{*}$ is a **system of $|\mathcal{X}| \times|\mathcal{A}|$ equations.**
 
+>[!important] 
+>The most common notation for **Bellman optimality equation** is the *3 -argument notation*
+>
+>$$
+>\begin{align*}
+> v_{*}(x) &= \max_{a \in \mathcal{A}_{x}}\,\sum_{u \in \mathcal{X}}p(u | x, a)\left[\, r(x, a) + \gamma v_{*}(u) \,\right], \quad \forall x\in \mathcal{X} \\[8pt]
+> q_{*}(x, a) &= \sum_{u \in \mathcal{X}}p(u | x, a)\,\left[ r(x, a) + \gamma\,\max_{a' \in \mathcal{A}}q_{*}(u, a') \right], \quad \forall x\in \mathcal{X}, a\in \mathcal{A}
+>\end{align*}
+>$$
+
+
 >[!quote]
 >The **Bellman optimality equation** (for $v_{*}$) was popularized by Richard Bellman (1957a), who called it the “*basic functional equation*.”
 >
@@ -144,6 +155,10 @@ date of note: 2024-05-12
 >-- [[Reinforcement Learning An Introduction by Sutton]] pp 71
 
 - [[Hamilton-Jacobi-Bellman Equation]]
+
+
+
+
 
 
 -----------

@@ -145,6 +145,15 @@ date of note: 2024-07-13
 >For continuous state $\mathcal{X}$, the Bellman equation describes the **functional relationship** between $v_{\pi}$ and a *linear functional* $I_{\pi, p, r}(v_{\pi})$
 
 
+>[!important]
+>The most common notation for **Bellman equation** is the *3-argument notation*
+>$$
+>\begin{align*}
+>v_{\pi}(x) &= \sum_{a \in \mathcal{A}}\pi(a | x) \sum_{u \in \mathcal{X}}\,p(u | x, a)\,\left[r(x, a) + \gamma\,v_{\pi}(u)  \right], \quad \forall x \in \mathcal{X} \\[8pt]
+>q_{\pi}(x, a) &=  \sum_{u \in \mathcal{X}}\,p(u | x, a)\,\left[\,r(x, a) + \gamma\,\sum_{a' \in \mathcal{A}}\pi(a' | u)\,q_{\pi}(u, a')  \right], \quad \forall x \in \mathcal{X}, \; a \in \mathcal{A}
+>\end{align*}
+>$$
+
 
 
 -----------
