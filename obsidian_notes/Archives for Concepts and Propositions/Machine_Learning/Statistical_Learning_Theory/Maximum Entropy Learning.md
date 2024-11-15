@@ -21,17 +21,17 @@ date of note: 2024-05-14
 >
 >- Denote $P_{0}\in \mathscr{P}(\mathcal{X})$ as a probability distribution, i.e. *prior measure*. 
 >- Let $\mathcal{D} := \left\{ X_{1}\,{,}\ldots{,}\, X_{n}\right\}$ be i.i.d samples in $\mathcal{X}$ and let the *empirical measure* be $$P_{n} = \frac{1}{n}\sum_{i=1}^{n}\;\delta_{X_{i}}.$$
->- Define a *feature map* $\phi$ as $$\phi: \mathcal{X} \to \mathcal{H}$$ with $$\lVert \phi \rVert_{\infty} \le r.$$
+>- Define a *feature map* $\phi$ as $$\phi: \mathcal{X} \to \mathcal{H}$$ with $$\lVert \phi \rVert_{\infty} := \sup_{x\in \mathcal{X}}\;\lVert \phi(x) \rVert_{\mathcal{H}}  \le r.$$
 >  
 >The **maximum entropy learning** or the **principle of maximum entropy** can be formulated as the following optimization problem:
 >$$
 >\begin{align*}
 > \min_{P\in \mathscr{P}(\mathcal{X})}\;&\; \mathbb{KL}\left( P \left\|\right. P_{0} \right) \\[8pt]
->\text{s.t. } & \lVert \;\mathbb{E}_{ P }\left[  \phi(X) \right] - \mathbb{E}_{ P_{n} }\left[  \phi(X) \right] \;\rVert_{\infty} \le \lambda 
+>\text{s.t. } & \lVert \;\mathbb{E}_{ P }\left[  \phi(X) \right] - \mathbb{E}_{ P_{n} }\left[  \phi(X) \right] \;\rVert_{\mathcal{H}} \le \lambda 
 >\end{align*}
 >$$
->where the $L^{\infty}$ norm is with respect to the random variation from empirical measure.
->- The constraint corresponds to the bound on the *maximum mean discrepancy* $$\lVert \;   \mathbb{E}_{ P }\left[\phi(X) \right] - \mathbb{E}_{ P_{n} }\left[\phi(X) \right] \;\rVert_{\infty} := \lVert \; \mu(P) - \mu(P_{n}) \;\rVert_{\mathcal{H}} \le \lambda $$ where $\mu: \mathscr{P}(\mathcal{X}) \to \mathcal{H}$ is the *kernel mean embedding.*
+>
+>- The constraint corresponds to the bound on the *maximum mean discrepancy* $$\lVert \;   \mathbb{E}_{ P }\left[\phi(X) \right] - \mathbb{E}_{ P_{n} }\left[\phi(X) \right] \;\rVert_{\mathcal{H}} := \lVert \; \mu(P) - \mu(P_{n}) \;\rVert_{\mathcal{H}} \le \lambda $$ where $\mu: \mathscr{P}(\mathcal{X}) \to \mathcal{H}$ is the *kernel mean embedding.*
 
 
 - [[Space of Bounded Signed Measures]]
