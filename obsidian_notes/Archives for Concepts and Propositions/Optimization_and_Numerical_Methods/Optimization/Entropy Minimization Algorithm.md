@@ -49,10 +49,19 @@ date of note: 2024-05-12
 - [[Bregman Divergence]]
 
 
-## Optimal Transport
+## Applications
+
+### Optimal Transport
 
 - [[Entropic Regularized Optimal Transport in Discrete Settings]]
 - [[Sinkhorn Algorithm for Entropy Regularized Optimal Transport]]
+
+### Maximum Entropy Reinforcement Learning
+
+- [[Maximum Entropy Reinforcement Learning]]
+- [[Soft Actor-Critic Algorithm]]
+
+
 
 
 -----------
