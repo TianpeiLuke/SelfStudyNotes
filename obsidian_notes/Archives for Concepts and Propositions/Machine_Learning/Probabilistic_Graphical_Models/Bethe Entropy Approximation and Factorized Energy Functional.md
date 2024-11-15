@@ -50,6 +50,8 @@ date of note: 2024-05-12
 >- $C_{i}$ are *cliques* in $T$ and $\mu_{i}$ is the corresponding *clique belief* for each $i\in V(T)$;
 >- $S_{i,j} = C_{i} \cap C_{j}$ are *sepsets* in $T$ and $\mu_{i,j}$ is the corresponding *sepset belief*, for each edge $ij\in E(T)$.
 
+^64315b
+
 >[!info]
 >In general the entropy functional on $\mathcal{Q}$ cannot be factorized. 
 >

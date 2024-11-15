@@ -54,6 +54,8 @@ date of note: 2024-05-12
 >$$
 >- Instead of estimation the joint variational distribution $\mathcal{Q}$, the mean field algorithm estimates *each marginal distribution* independently.
 
+^ddaaef
+
 >[!info]
 >The key characteristic of mean field approximation is that
 >- We **do not approximate the objective function**, which is the case for 
