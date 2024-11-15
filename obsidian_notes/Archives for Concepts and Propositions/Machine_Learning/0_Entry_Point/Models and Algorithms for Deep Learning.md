@@ -191,9 +191,11 @@ date of note: 2024-06-01
 - [[Normalizing Flows Training]]
 - [[Normalizing Flows Construction]]
 - [[Coupling Flows]]
+- [[Real Non-Volume-Preserving as Coupling Flows for Deep Density Estimation]]
 - [[Autoregressive Flows]]
 - [[Residual Flows]]
-- [[Neural Ordinary Differential Equations and Continuous Flows]]
+- [[Continuous-Time Flows]]
+- [[Neural Ordinary Differential Equations]]
 
 
 #### Diffusion Network

@@ -125,8 +125,8 @@ date of note: 2024-08-16
 
 ### Coupling Flows
 
-
 - [[Coupling Flows]]
+- [[Real Non-Volume-Preserving as Coupling Flows for Deep Density Estimation]]
 
 ### Autoregressive Flows
 
@@ -140,28 +140,78 @@ date of note: 2024-08-16
 
 ### Continuous Flows and Neural ODE
 
-
-
-- [[Neural Ordinary Differential Equations and Continuous Flows]]
+- [[Continuous-Time Flows]]
+- [[Neural Ordinary Differential Equations]]
 
 
 ## Applications
 
-### Density Estimation
+### Deep Density Estimation and Random Variable Generation
+
+>[!quote]
+> **Flow models** allow **exact density computation** and can be used to fit *multi-modal densities* to observed data. (see Figure 23.3 for an example). 
+> - An early example is Gaussianization [CG00] who applied this idea to fit low-dimensional densities. Tabak and Vanden-Eijnden [TVE10] and Tabak 
+> - and Turner [TT13] introduced the modern idea of **flows** (including the term ‘**normalizing flows**’), describing a flow as a composition of simpler maps. 
+> - **Deep density models** [RA13] was one of the first to use neural networks for flows to parameterize *high-dimensional densities*. 
+> 	- There has been a rich line of follow-up work including **NICE** [DKB15] and **Real NVP** [DSDB17]. (**NVP** stands for “*non-volume-preserving*”, which refers to the fact that the Jacobian of the transform is not unity.) 
+> 	- **Masked autoregressive flows** (Section 23.2.4.2) further improved performance on unconditional and *conditional density estimation* tasks. 
+> 
+> Flows can be used for *hybrid models* which model the **joint density** of inputs and targets $p(x, y)$, as opposed to *discriminative classification models* which just model the conditional $p(y|x)$ and density models which just model the marginal $p(x)$. 
+> - Nalisnick et al. [Nal+19b] proposed a **flow-based hybrid model** using invertible mappings for representation learning and showed that the joint density $p(x, y)$ can be computed efficiently, which can be useful for downstream tasks such as 
+> 	- *anomaly detection*, 
+> 	- *semi-supervised learning* 
+> 	- and *selective classification*. 
+> - **Flow-based hybrid models** are *memory-efficient* since most of the parameters are in the invertible representation which are shared between the *discriminative* and *generative models*; 
+> 	- furthermore, the density $p(x, y)$ can be computed in a *single forwards pass* leading to computational savings. 
+> - **Residual flows** [Che+19] use invertible residual mappings [Beh+19] for hybrid modeling which further improves performance. 
+> - Flows have also been used to *fit densities* to **embeddings** [Zha+20b; CZG20] for anomaly detection tasks.
+>   
+>-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 836   
 
 - [[Parzen Kernel Density Estimation]]
-
+- [[Random Variable Generation with Inverse Cumulative Distribution Function]]
 
 ### Generative Models
 
+>[!quote]
+>Another task is **generation**, which involves generating novel samples from a fitted model $p^{*}(x)$. Generation is a popular *downstream task* for *normalizing flows*, which have been applied for different **data modalities** including images, video, audio, text, and structured objects such as graphs and point clouds.
+>
+>-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 836
 
 
 ### Inference
 
+>[!quote]
+>Normalizing flows have been used for **probabilistic inference**. 
+>- Rezende and Mohamed [RM15] popularized normalizing flows in machine learning, and showed how they can be used for modeling *variational posterior distributions* in *latent variable models*. 
+>- Various extensions such as 
+>	- **Householder flows** [TW16], 
+>	- **inverse autoregressive flows** [Kin+16], 
+>	- **multiplicative normalizing flows** [LW17], 
+>	- and **Sylvester flows** [Ber+18] 
+>
+>have been proposed for modeling the variational posterior for latent variable models, as well as posteriors for **Bayesian neural networks**. 
+>
+>Flows have been used as complex proposal distributions for **importance sampling**; examples include 
+>- **neural importance sampling** [Mül+19b] 
+>- and **Boltzmann generators** [Noé+19]. 
+>- Hoffman et al. [Hof+19] used flows to improve the performance of **Hamiltonian Monte Carlo** (Section 12.5) by defining *bijective transformations* to transform random variables to simpler distributions and performing HMC in that space instead. 
+>
+>Finally, flows can be used in the context of **simulation-based inference**, where the likelihood function of the parameters is not available, but *simulating data* from the model is possible. 
+>- The main idea is to *train* a **flow** on data *simulated from the model* in order to **approximate the posterior distribution** or the likelihood function. 
+>- The flow model can also be used to guide simulations in order to make inference *more efficient* [PSM19; GNM19]. 
+>- This approach has been used for inference of simulation models in 
+>	- **cosmology** [Als+19] 
+>	- and **computational neuroscience** [Gon+20].
+>
+>-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 837
+
+
+- [[Latent Variable Models]]
 - [[Variational Auto-Encoder]]
 - [[Variational Inference vs EM Algorithm]]
-
-
+- [[Hamiltonian Monte Carlo]]
+- [[Importance Sampling]]
 
 
 

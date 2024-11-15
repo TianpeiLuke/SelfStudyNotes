@@ -13,14 +13,14 @@ topics:
   - deep_learning/generative_models
   - differential_equation
   - numerical_differential_equation
-name: Neural Ordinary Differential Equations and Continuous Flows
+name: Neural Ordinary Differential Equations
 date of note: 2024-08-16
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Neural Ordinary Differential Equations and Continuous Flows
+>**Name**: Neural Ordinary Differential Equations
 
 ![[Normalizing Flows#^294151]]
 
@@ -28,6 +28,7 @@ date of note: 2024-08-16
 
 - [[Normalizing Flows]]
 - [[Residual Flows]]
+- [[Continuous-Time Flows]]
 
 
 ## Explanation

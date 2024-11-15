@@ -17,6 +17,8 @@ date of note: 2024-07-04
 
 ### Fundamental of Monte Carlo Methods
 
+- [[Random Variable Generation with Inverse Cumulative Distribution Function]]
+
 - [[Monte Carlo and Applications]]
 - [[Fundamental Theorem of Simulation]]
 - [[Roulettle Wheel Algorithm to Resample from CDF]]

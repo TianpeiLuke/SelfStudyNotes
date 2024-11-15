@@ -81,9 +81,9 @@ date of note: 2024-08-02
 - [[Gaussian Quantile Function or Probit Function]]
 
 
-## Sampling
+## Sampling and Random Variable Generation
 
-
+- [[Random Variable Generation with Inverse Cumulative Distribution Function]]
 - [[Parent Selection for Evolutionary Computation]]
 
 

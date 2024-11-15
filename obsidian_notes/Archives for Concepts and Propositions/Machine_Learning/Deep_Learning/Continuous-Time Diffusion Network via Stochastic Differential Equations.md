@@ -174,7 +174,7 @@ date of note: 2024-10-19
 
 ## Neural Ordinary Differential Equations
 
-- [[Neural Ordinary Differential Equations and Continuous Flows]]
+- [[Neural Ordinary Differential Equations]]
 
 
 ## Numerical Solution for SDE 
@@ -202,7 +202,7 @@ date of note: 2024-10-19
 - [[Score Matching and Denoising Score Matching]]
 - [[Diffusion Network Score Matching Equivalence]]
 - [[Normalizing Flows]]
-- [[Neural Ordinary Differential Equations and Continuous Flows]]
+- [[Neural Ordinary Differential Equations]]
 
 
 - [[Wasserstein Distance]]

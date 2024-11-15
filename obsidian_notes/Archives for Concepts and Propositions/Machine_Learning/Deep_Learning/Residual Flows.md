@@ -35,7 +35,7 @@ date of note: 2024-08-16
 
 
 
-- [[Neural Ordinary Differential Equations and Continuous Flows]]
+- [[Neural Ordinary Differential Equations]]
 
 
 -----------

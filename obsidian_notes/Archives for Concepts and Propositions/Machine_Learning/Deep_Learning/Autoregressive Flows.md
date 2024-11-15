@@ -27,11 +27,50 @@ date of note: 2024-08-16
 - [[Probability Density Function of Random Variable]]
 - [[Jacobian Matrix and Jacobian Determinant]]
 
+### Affine Autoregressive Flow
 
+
+![[affine_autogressive_flow.png]]
+
+
+### Masked Autoregressive Flow
+
+
+
+
+
+
+### Inverse Autoregressive Flow
+
+
+
+![[inverse_autoregressive_flow.png]]
 
 
 
 ## Explanation
+
+
+
+## Autoregressive Model
+
+>[!quote]
+>**Autoregressive flows** can be thought of as *generalizing* **autoregressive models** of continuous random variables, discussed in Section 22.1. 
+>- Specifically, **any** continuous autoregressive model can be **reparameterized** as a *one-layer* autoregressive flow.
+>  
+>-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 831  
+
+
+- [[Autoregressive Models]]
+
+
+
+## Density Estimation with Autogressive Flow
+
+
+![[autoregressive_flow_density_estimation.png]]
+
+
 
 
 

@@ -88,9 +88,9 @@ date of note: 2024-08-16
 
 ### Coupling Flows
 
+![[Coupling Flows#^f016a0]]
 
 - [[Coupling Flows]]
-
 
 
 ### Autoregressive Flows
@@ -108,7 +108,7 @@ date of note: 2024-08-16
 ### Continuous Flows
 
 
-- [[Neural Ordinary Differential Equations and Continuous Flows]]
+- [[Neural Ordinary Differential Equations]]
 
 
 
