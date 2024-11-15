@@ -147,7 +147,7 @@ date of note: 2024-09-08
 
 ## Contrastive Divergence
 
-- [[Contrastive Divergence]]
+- [[Contrastive Divergence as Approximate Markov Chain Monte Carlo]]
 
 
 ## Diffusion Models

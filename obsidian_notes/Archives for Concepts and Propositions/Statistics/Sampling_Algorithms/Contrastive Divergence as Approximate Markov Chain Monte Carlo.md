@@ -4,22 +4,35 @@ tags:
   - statistics/monte_carlo_simulation
   - deep_learning/models
   - deep_learning/algorithms
-keywords: 
-topics: 
-name: 
+keywords:
+  - contrastive_divergence
+topics:
+  - monte_carlo
+  - markov_chain_monte_carlo
+name: Contrastive Divergence as Approximate Markov Chain Monte Carlo
 date of note: 2024-09-08
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**:  Contrastive Divergence as Approximate Markov Chain Monte Carlo
 
+![[Gibbs Measure and Energy-based Model#^c81bcd]]
 
+- [[Gibbs Measure and Energy-based Model]]
+- [[Markov Chain Monte Carlo Methods]]
+
+- [[Restricted Boltzmann Machine]]
 
 ## Explanation
 
 
+
+
+## Langevin MCMC
+
+- [[Langevin Dynamics and Langevin Sampling]]
 
 
 
@@ -29,8 +42,7 @@ date of note: 2024-09-08
 
 - [[Gibbs Sampling]]
 
-- [[Score Matching and Denoising Score Matching]]
-- [[Gibbs Measure and Energy-based Model]]
+
 
 - [[Artificial Neural Network and Deep Learning]]
 

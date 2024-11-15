@@ -40,8 +40,9 @@ date of note: 2024-07-04
 - [[Random Walk Metropolis-Hastings]]
 - [[Gibbs Sampling]]
 - [[Gibbs Sampling for Graphical Model]]
+- [[Contrastive Divergence as Approximate Markov Chain Monte Carlo]]
 
-### Monte Carlo of Dynamic System
+### Markov Chain Monte Carlo based on Dynamic System
 
 - [[Hamiltonian Monte Carlo]]
 - [[Langevin Dynamics and Langevin Sampling]]
@@ -78,6 +79,8 @@ date of note: 2024-07-04
 - [[f-Generative Adversarial Network]]
 - [[Wasserstein Generative Adversarial Network]]
 - [[Deep Convolutional Generative Adversarial Network or DCGAN]]
+
+
 
 
 

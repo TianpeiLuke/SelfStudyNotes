@@ -81,7 +81,7 @@ date of note: 2024-08-16
 - [[Score Matching and Denoising Score Matching]]
 - [[Denoising Diffusion Probabilistic Models and Diffusion Network]]
 - [[Gibbs Sampling]]
-- [[Contrastive Divergence]]
+- [[Contrastive Divergence as Approximate Markov Chain Monte Carlo]]
 - [[Langevin Dynamics and Langevin Sampling]]
 - [[Hamiltonian Monte Carlo]]
 

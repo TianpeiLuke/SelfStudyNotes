@@ -112,7 +112,7 @@ date of note: 2024-06-01
 - [[Maximum Likelihood Estimation]]
 - [[Gibbs Sampling]]
 - [[Langevin Dynamics and Langevin Sampling]]
-- [[Contrastive Divergence]]
+- [[Contrastive Divergence as Approximate Markov Chain Monte Carlo]]
 
 #### Score Matching
 

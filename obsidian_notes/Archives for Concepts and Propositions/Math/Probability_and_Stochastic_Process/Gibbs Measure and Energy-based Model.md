@@ -94,7 +94,7 @@ date of note: 2024-05-14
 - [[Gibbs Sampling]]
 - [[Langevin Dynamics and Langevin Sampling]]
 - [[Hamiltonian Monte Carlo]]
-- [[Contrastive Divergence]]
+- [[Contrastive Divergence as Approximate Markov Chain Monte Carlo]]
 
 ### Score Matching
 
