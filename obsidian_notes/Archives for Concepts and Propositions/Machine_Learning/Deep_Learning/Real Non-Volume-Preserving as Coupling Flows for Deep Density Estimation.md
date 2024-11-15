@@ -37,6 +37,8 @@ date of note: 2024-08-16
 >- The **Jacobian** is given by $$Df =  \left[ \begin{array}{cc} \text{diag}\left(\exp(s)\right) & \partial x^{A} / \partial z^{B} \\[5pt] 0 & I_{d-p}  \end{array} \right]$$
 >	- The **Jacobian determinant** is given by $$\det Df = \prod_{i}^{p}\exp(s^{i}(z^{B}, w))$$
 
+^79cbda
+
 - [[Coupling Flows]]
 - [[Normalizing Flows]]
 - [[Normalizing Flows Construction]]
@@ -76,8 +78,6 @@ date of note: 2024-08-16
 >-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 826  	  
 
 ## Real NVP for Deep Density Estimation
-
-
 
 
 ![[real_nvp_flow.png]]

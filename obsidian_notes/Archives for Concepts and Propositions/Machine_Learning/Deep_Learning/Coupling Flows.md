@@ -88,25 +88,11 @@ date of note: 2024-08-16
 >	  
 >-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 826  	  
 
-## Real-valued Non-Volume-Preserving
+## Real NVP
 
->[!important] Definition
->The **real-valued non-volume-preserving (NVP)** is a **coupling flow** which are described by the following system of equations
->$$
->\left\{\begin{align}
-> x^{A} &= \exp(s(z^{B}, w)) \odot z^{A} + b(z^B, w) \\[8pt]
-> x^{B} &= z^{B}
->\end{align}\right.
->$$
->where 
->- $$s(z^{B}, w), \quad b(z^{B}, w)$$ are real-valued outputs of *neural networks*, and the exponential ensures that the *multiplicative term is non-negative.*
->	- Note that the networks $s(z^{B}, w)$ and $b(z^{B}, w)$ are *not required to be bijective*.
->- The **inverse** of flow is described as $$\left\{\begin{align}z^{A} &= \exp(-s(z^{B}, w)) \odot \left(x^{A} - b(z^B, w) \right)\\[8pt] z^{B} &= x^{B} \end{align}\right.$$
->- The **Jacobian** is given by $$Df =  \left[ \begin{array}{cc} \text{diag}\left(\exp(s)\right) & \partial x^{A} / \partial z^{B} \\[5pt] 0 & I_{d-p}  \end{array} \right]$$
->	- The **Jacobian determinant** is given by $$\det Df = \prod_{i}^{p}\exp(s^{i}(z^{B}, w))$$
+![[Real Non-Volume-Preserving as Coupling Flows for Deep Density Estimation#^79cbda]]
 
-
-![[real_nvp_flow.png]]
+- [[Real Non-Volume-Preserving as Coupling Flows for Deep Density Estimation]]
 
 
 
