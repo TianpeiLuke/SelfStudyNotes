@@ -126,6 +126,11 @@ date of note: 2024-11-07
 - [[RKHS of Gaussian Process]]
 - [[Gaussian Process]]
 
+## Principle of Maximum Entropy
+
+- [[Maximum Entropy Learning]]
+
+
 
 
 -----------

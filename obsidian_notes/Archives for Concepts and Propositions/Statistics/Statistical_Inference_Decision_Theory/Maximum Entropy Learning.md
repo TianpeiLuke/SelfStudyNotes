@@ -2,7 +2,9 @@
 tags:
   - concept
   - machine_learning/theory
-keywords: 
+  - machine_learning/models
+keywords:
+  - maximum_entropy_learning
 topics:
   - machine_learning_theory
 name: Maximum Entropy Learning
@@ -14,6 +16,33 @@ date of note: 2024-05-14
 >[!important]
 >**Name**: Maximum Entropy Learning
 
+>[!important] Definition
+>Let $(\mathcal{X}, \mathscr{F})$ be a measurable space and  $\mathscr{P}(\mathcal{X})$ be the *space of all probability measures* on $\mathcal{X}$.
+>
+>- Denote $P_{0}\in \mathscr{P}(\mathcal{X})$ as a probability distribution, i.e. *prior measure*. 
+>- Let $\mathcal{D} := \left\{ X_{1}\,{,}\ldots{,}\, X_{n}\right\}$ be i.i.d samples in $\mathcal{X}$ and let the *empirical measure* be $$P_{n} = \frac{1}{n}\sum_{i=1}^{n}\;\delta_{X_{i}}.$$
+>- Define a *feature map* $\phi$ as $$\phi: \mathcal{X} \to \mathcal{H}$$ with $$\lVert \phi \rVert_{\infty} \le r.$$
+>  
+>The **maximum entropy learning** or the **principle of maximum entropy** can be formulated as the following optimization problem:
+>$$
+>\begin{align*}
+> \min_{P\in \mathscr{P}(\mathcal{X})}\;&\; \mathbb{KL}\left( P \left\|\right. P_{0} \right) \\[8pt]
+>\text{s.t. } & \lVert \;\mathbb{E}_{ P }\left[  \phi(X) \right] - \mathbb{E}_{ P_{n} }\left[  \phi(X) \right] \;\rVert_{\infty} \le \lambda 
+>\end{align*}
+>$$
+>where the $L^{\infty}$ norm is with respect to the random variation from empirical measure.
+>- The constraint corresponds to the bound on the *maximum mean discrepancy* $$\lVert \;   \mathbb{E}_{ P }\left[\phi(X) \right] - \mathbb{E}_{ P_{n} }\left[\phi(X) \right] \;\rVert_{\infty} := \lVert \; \mu(P) - \mu(P_{n}) \;\rVert_{\mathcal{H}} \le \lambda $$ where $\mu: \mathscr{P}(\mathcal{X}) \to \mathcal{H}$ is the *kernel mean embedding.*
+
+
+- [[Space of Bounded Signed Measures]]
+- [[Probability Space]]
+- [[Measure Space and Countably Additive Measure]]
+- [[Empirical Process and Empirical Measure]]
+- [[Variational Formula for Kullback-Leibler Divergence]]
+- [[Kullback-Leibler Divergence]]
+- [[Feature Map for Reproducing Kernels in RKHS]]
+- [[Kernel Mean Embedding of Distribution]]
+- [[Maximum Mean Discrepancy between Probability Measures via RKHS]]
 
 
 ## Explanation
@@ -27,12 +56,15 @@ date of note: 2024-05-14
 - [[Maximum Entropy Learning of Exponential Family]]
 - [[Mixture Family of Distributions]]
 
+
 ### Boosting
 
 - [[Iterative Maximum Entropy Learning for AdaBoost]]
 
 
 ### Probabilistic Graphical Model
+
+- [[Energy Functional for Probabilistic Graphical Model]]
 
 - [[Maximum Entropy Learning of Clique Tree PGM]]
 - [[Variational Inference for Clique Tree]]
@@ -54,8 +86,7 @@ date of note: 2024-05-14
 - [[Gibbs Measure and Energy-based Model]]
 
 
-- [[Variational Formula for Kullback-Leibler Divergence]]
-- [[Kullback-Leibler Divergence]]
+
 - [[Probabilistic Graphical Models]]
 
 - [[Maximum Likelihood Estimation]]
