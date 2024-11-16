@@ -192,7 +192,12 @@ date of note: 2024-06-01
 
 - [[Parzen Kernel Density Estimation]]
 - [[k Nearest Neighbor Density Estimation]]
+
 - [[Normalizing Flows]]
+- [[Normalizing Flows Construction]]
+- [[Coupling Flows]]
+- [[Real Non-Volume-Preserving as Coupling Flows for Deep Density Estimation]]
+- [[Autoregressive Flows]]
 
 
 #### Nonparametric Inference
