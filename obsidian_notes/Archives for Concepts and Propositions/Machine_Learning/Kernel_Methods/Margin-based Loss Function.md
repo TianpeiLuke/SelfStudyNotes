@@ -43,15 +43,15 @@ date of note: 2024-09-09
 >[!important] Definition
 >Let $(X,Y)$ be sample from a joint distribution $P$ on $\mathcal{X}\times \mathcal{Y}$ and $$f: \mathcal{X} \to \mathcal{Y}$$ be measurable function. 
 >
->A *loss function* $L_{\rho}: \mathcal{Y}\times \mathcal{Y} \to \mathbb{R}_{+}$ is called a **margin-based loss** function if it is of the form 
+>A *loss function* $L_{\phi}: \mathcal{Y}\times \mathcal{Y} \to \mathbb{R}_{+}$ is called a **margin-based loss** function if it is of the form 
 >$$
->L_{\rho}(Y, f(X)) := \Phi_{\rho} \left(Yf(X)\right)
+>L_{\Phi}(Y, f(X)) := \phi \left(Yf(X)\right)
 >$$
 >where 
->- $\Phi_{\rho}: \mathcal{Y} \to \mathbb{R}$ is a *convex surrogate function*, and
+>- $\phi: \mathcal{Y} \to \mathbb{R}$ is a *convex surrogate function*,  and $$\phi(x) \ge \phi_{\rho, ramp}(x)$$
 >- $yf(x)$ is called the **confidence margin** or the **margin.**
 >  
->The **margin-based risk** is defined as $$R_{\rho}(f) := \mathbb{E}_{ X,Y }\left[\, \rho(Yf(X)) \,\right]$$  
+>The **margin-based risk** is defined as $$R_{\Phi}(f) := \mathbb{E}_{ X,Y }\left[\, \phi(Yf(X)) \,\right]$$  
 
 ^a01095
 
@@ -62,18 +62,22 @@ date of note: 2024-09-09
 >[!important] Definition
 >The **ramp loss** is a *margin-based loss* function, which is defined as
 >$$
->L_{\rho}(Y, f(X)) := \Phi_{\rho} \left(Yf(X)\right)
+>L_{\rho}(Y, f(X)) := \phi_{\rho,ramp} \left(Yf(X)\right)
 >$$
 >where
 >$$
->\Phi_{\rho}(x) := \min\left\{ 1,\, \max\left\{ 0,\, 1- \frac{x}{\rho} \right\}  \right\} =  \left\{\begin{array}{cl} 1 & \text{ if }x \le 0 \\[5pt] 1 - \dfrac{x}{\rho} & \text{ if }x\in [0, \rho] \\[5pt] 0 & \text{ if }x \ge \rho \end{array}\right.
+>\phi_{\rho, ramp}(x) := \min\left\{ 1,\, \max\left\{ 0,\, 1- \frac{x}{\rho} \right\}  \right\} =  \left\{\begin{array}{cl} 1 & \text{ if }x \le 0 \\[5pt] 1 - \dfrac{x}{\rho} & \text{ if }x\in [0, \rho] \\[5pt] 0 & \text{ if }x \ge \rho \end{array}\right.
 >$$
+>- The *convex surrogate function* of the ramp loss is given by any convex function $\phi$ such that  $$\phi(x) \ge \phi_{\rho, ramp}(x)$$ 
 
 ^19baca
 
 - [[Surrogate Loss Minimization]]
 
 ![[ramp_loss.png]]
+
+
+![[surrogate_loss_comparison.png]]
 
 
 ## Explanation
