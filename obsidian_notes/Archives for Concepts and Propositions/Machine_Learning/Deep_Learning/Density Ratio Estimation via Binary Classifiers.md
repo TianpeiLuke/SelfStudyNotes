@@ -44,7 +44,7 @@ date of note: 2024-11-07
 ^010141
 
 - [[Bayes Theorem]]
-
+- [[Classification Problem]]
 - [[Bayes Error and Bayes Classifier]]
 - [[Logistic Regression]]
 
@@ -267,7 +267,7 @@ date of note: 2024-11-07
 - [[Exponential Family of Distributions]]
 - [[Gibbs Distribution]]
 - [[Gibbs Measure and Energy-based Model]]
-- [[Classification Problem]]
+
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 61 - 62
 

@@ -94,6 +94,7 @@ date of note: 2024-08-16
 >  
 >-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 830  
 
+- [[Causal Convolutional Neural Network]]
 
 ### Inverse Autoregressive Flow
 
