@@ -133,20 +133,24 @@ date of note: 2024-08-16
 ### Proof on the Gradient of Loss w.r.t. Parameter 
 
 >[!info]
->Assume that $w(t) =w$ is constant, i.e. $$\frac{\partial}{\partial t} w(t) = 0$$
+>We can view that
+>-  $w(t) =w$ is constant, i.e. $$\frac{\partial}{\partial t} w(t) = 0$$
+>- and $t(t) = t$ is identity map, $$\frac{d}{dt} t = 1$$
 >
 >We have an augmented ODE
 >$$
 >\begin{align*}
-> \frac{d}{dt} (x(t), w(t)) = \left[ \begin{array}{c}F(x(t), w(t)) \\[5pt] 0\end{array} \right] 
+> \frac{d}{dt} (x(t), w(t), t) = \left[ \begin{array}{c}F(x(t), w(t)) \\[5pt] 0 \\[5pt] 1\end{array} \right] 
 >\end{align*}
 >$$
+>
 >Let 
->$$a_{aug}(t) := \left[ \begin{array}{c}a(t) \\[5pt] a_{w}(t)\end{array} \right] = \left[ \begin{array}{c} \dfrac{ \partial \mathcal{L} }{ \partial x(t) }  \\[5pt] \dfrac{ \partial \mathcal{L} }{ \partial w(t) } \end{array} \right] = \delta \mathcal{L}(x(t), w(t)) $$
+>$$a_{aug}(t) := \left[ \begin{array}{c}a(t) \\[5pt] a_{w}(t) \\[5pt] a_{t}(t)\end{array} \right] = \left[ \begin{array}{c} \dfrac{ \partial \mathcal{L} }{ \partial x(t) }  \\[5pt] \dfrac{ \partial \mathcal{L} }{ \partial w(t) } \\[5pt] \dfrac{ \partial \mathcal{L} }{ \partial t } \end{array} \right]$$
+>where $$\mathcal{L} :=  \mathcal{L}(x(t), w(t), t)$$
 >
 >Note that the above derivation regarding the **gradient of adjoint**  still holds which means that 
 >$$
->\frac{d}{dt} a_{aug}(t) =  -  \left[ \begin{array}{cc}a(t) & a_{w}(t)\end{array} \right]\left[ \begin{array}{cc}D_{x}F & \nabla_{w}F \\[5pt] 0 & 0 \end{array} \right]    = - \left[ \begin{array}{c}a(t)^{T}\,D_{x}F \\[5pt] a(t)^{T}\,\nabla_{w}F\end{array} \right] 
+>\frac{d}{dt} a_{aug}(t) =  -  \left[ \begin{array}{cc}a(t) & a_{w}(t) & a_{t}(t)\end{array} \right]\left[ \begin{array}{ccc}D_{x}F & \nabla_{w}F & \partial_{t} F  \\[5pt] 0 & 0 &0 \\[5pt] 0 & 0 & 0 \end{array} \right]    = - \left[ \begin{array}{c}a(t)^{T}\,D_{x}F \\[5pt] a(t)^{T}\,\nabla_{w}F \\[5pt] a(t)^{T}\,\partial_{t}F \end{array} \right] 
 >$$
 >which includes 
 >$$
