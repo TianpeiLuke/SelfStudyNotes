@@ -71,9 +71,6 @@ date of note: 2024-08-16
 >- The  **adjoint sensitive method** is seen as the **continuous-time** analogue of **back-propagation.**
 
 
-- [[Explicit Euler Method for Discretization of ODE]]
-- [[Implicit Euler Method for Discretization of ODE]]
-- [[Theory and Algorithms for Numerical Solution of Differential Equations]]
 - [[Back-Propagation Algorithm]]
 
 ### Reverse-Mode Derivative of Neural ODE Initial Value Problem
@@ -94,13 +91,15 @@ date of note: 2024-08-16
 >- *Require*: final state $x(T) =x$ where $x$ is the *observation*
 >- *Require*: the loss function $\mathcal{L}(x; w)$
 >- *Require*: the *loss gradient* $$a(T) := \frac{ \partial \mathcal{L} }{ \partial x(T) }$$
->- Define the *initial augmented state* $$s(T) := \left[ \begin{array}{ccc}x(T) & \dfrac{ \partial \mathcal{L} }{ \partial x(T) } & \dfrac{ \partial \mathcal{L} }{ \partial w(T) }   \end{array} \right] := [x(T),\; a(T),\; a_{w}(T)]$$ where $\dfrac{ \partial \mathcal{L} }{ \partial w(T) }  = 0.$
+>- Define the *initial augmented state* $$s(T) := \left[ \begin{array}{ccc}x(T) & \dfrac{ \partial \mathcal{L} }{ \partial x(T) } & \dfrac{ \partial \mathcal{L} }{ \partial w(T) }   \end{array} \right] := [x(T),\; a(T),\; a_{w}(T)]$$ where $$a_{w}(T) := \dfrac{ \partial \mathcal{L} }{ \partial w(T) }  = 0.$$
 >- Define the **augmented dynamic system (aug-dynamic)** with *reverse-time ODE* as $$\left\{\begin{align}\frac{d}{dt} s(t) &= \left[ \begin{array}{c} F(x(t), t; w) \\[8pt] -a(t)^{T}\,D_{x}F(\cdot,t; w)(x(t)) \\[8pt] -a(t)^{T}\,\nabla_{w}F(x(t),t; w)  \end{array} \right] \\[8pt] s(T) &= \left[ \begin{array}{ccc}x(T) & a(T) & 0 \end{array} \right]\end{align}\right.$$ where
 >	- the state $$s(t) := \left[ \begin{array}{ccc}x(t) & a(t) & a_{w}(t) \end{array} \right]$$
 >	- Compute the **vector-Jacobian products** $$a(t)^{T}\,D_{x}F(\cdot,t; w), \quad a(t)^{T}\,\nabla_{w}F(x(t),t; w)$$
 >- Call the *ODE solver* to solve the **reverse-time ODE.** $$\left[ \begin{array}{ccc} x(0) & \dfrac{ \partial \mathcal{L} }{ \partial x(0) }  & \dfrac{ \partial \mathcal{L} }{ \partial w} \end{array} \right] = \text{ODE-Solver}\left( s(T), \text{ aug-dynamic}, T, 0, w \right) $$ where $$\frac{ \partial \mathcal{L} }{ \partial w} := \frac{ \partial \mathcal{L} }{ \partial w(0)}.$$
 >- *Return*:
 >	- the gradient of loss with respect to both flow and network parameter $$\dfrac{ \partial \mathcal{L} }{ \partial x(0) }, \quad  \dfrac{ \partial \mathcal{L} }{ \partial w}$$
+
+- [[Theory and Algorithms for Numerical Solution of Differential Equations]]
 
 >[!info]
 >The vector-Jacobian products 
@@ -109,6 +108,9 @@ date of note: 2024-08-16
 
 - [[Automatic Differentiation]]
 
+>[!info]
+>All integrals for solving $$s(t) = \left[ \begin{array}{ccc}x(t) & \dfrac{ \partial \mathcal{L} }{ \partial x(t) } & \dfrac{ \partial \mathcal{L} }{ \partial w } \end{array} \right] $$
+>can be computed in a **single call to an ODE solver**
 
 
 
@@ -245,3 +247,4 @@ date of note: 2024-08-16
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 834 - 837
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 555 - 559
 - Chen, R. T., Rubanova, Y., Bettencourt, J., & Duvenaud, D. K. (2018). Neural ordinary differential equations. _Advances in neural information processing systems_, _31_.
+- Youtube [Neural ODEs (NODEs) Physics Informed Machine Learning](https://www.youtube.com/watch?v=nJphsM4obOk)

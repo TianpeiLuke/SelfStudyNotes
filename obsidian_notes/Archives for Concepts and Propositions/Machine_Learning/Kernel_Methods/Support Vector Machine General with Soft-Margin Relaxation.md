@@ -180,6 +180,15 @@ date of note: 2024-05-12
 - [[Reproducing Kernel of RKHS]]
 
 
+## Generalization Error Bound
+
+![[Margin-based Generalization Error Bound#^e0b885]]
+
+- [[Rademacher Complexity Bound of Kernel-based Hypothesis]]
+- [[Margin-based Generalization Error Bound]]
+- [[Margin-based Generalization Error Bound for Kernel Hypothesis]]
+
+
 
 
 -----------

@@ -107,19 +107,6 @@ date of note: 2024-06-01
 - [[k Nearest Neighbor Classification]]
 - [[k Nearest Neighbor Density Estimation]]
 
-### Boosting and Ensemble Learning
-
-- [[Concepts and Theorems in Boosting and Ensemble Learning]]
-- [[AdaBoost Algorithm]]
-
-- [[Generalization Error Bound for AdaBoost Finite Case]]
-- [[Generalization Error Bound for AdaBoost VC Dimension]]
-- [[Weak PAC Learnablity]]
-- [[Empirical Weak Learning Assumption]]
-- [[Equivalence of Strong and Weak Learnability]]
-
-- [[Rademacher Complexity of a Convex Hull of Function Class]]
-- [[Generalization Error Bound for AdaBoost Rademacher Complexity]]
 
 ### Reproducing Kernel Hilbert Space
 
@@ -141,10 +128,18 @@ date of note: 2024-06-01
 
 - [[Representer Theorem]]
 
+### Generalization Bound for Kernel Methods
+
+
+- [[Rademacher Complexity Bound of Kernel-based Hypothesis]]
+- [[Margin-based Generalization Error Bound for Kernel Hypothesis]]
+
+
 ### Margin-based Generalization Bound
 
 - [[Margin-based Loss Function]]
 - [[Margin-based Generalization Error Bound]]
+- [[Margin-based Generalization Error Bound for Kernel Hypothesis]]
 
 
 ### Probabilistic Graphical Model
@@ -163,6 +158,19 @@ date of note: 2024-06-01
 - [[Covariance Function of Gaussian Process]]
 - [[Nystrom Method for Low Rank Approximation of Positive Definite Kernel]]
 
+### Boosting and Ensemble Learning
+
+- [[Concepts and Theorems in Boosting and Ensemble Learning]]
+- [[AdaBoost Algorithm]]
+
+- [[Generalization Error Bound for AdaBoost Finite Case]]
+- [[Generalization Error Bound for AdaBoost VC Dimension]]
+- [[Weak PAC Learnablity]]
+- [[Empirical Weak Learning Assumption]]
+- [[Equivalence of Strong and Weak Learnability]]
+
+- [[Rademacher Complexity of a Convex Hull of Function Class]]
+- [[Generalization Error Bound for AdaBoost Rademacher Complexity]]
 
 ### Deep Learning
 

@@ -30,6 +30,8 @@ date of note: 2024-05-12
 >$$ 
 > where $\epsilon := (\epsilon_1 \,{,}\ldots{,}\,\epsilon_n)$ are *independent uniform random variables* taking values in $\set{-1, +1}$. The random variables $\epsilon_i$ are called *Rademacher variables*.
 
+^1a8bb4
+
 - [[Rademacher Complexity]]
 - [[Rademacher Process]]
 - [[Empirical Process and Empirical Measure]]

@@ -88,6 +88,13 @@ date of note: 2024-10-08
 >
 >-- [[Elements of Statistical Learning by Hastie]] pp 424
 
+## Generalization Error Bound
+
+![[Margin-based Generalization Error Bound for Kernel Hypothesis#^e0b885]]
+
+- [[Rademacher Complexity Bound of Kernel-based Hypothesis]]
+- [[Margin-based Generalization Error Bound]]
+- [[Margin-based Generalization Error Bound for Kernel Hypothesis]]
 
 
 
