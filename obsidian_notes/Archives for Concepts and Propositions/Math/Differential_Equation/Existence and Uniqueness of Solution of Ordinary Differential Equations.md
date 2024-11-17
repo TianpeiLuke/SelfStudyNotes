@@ -34,6 +34,7 @@ date of note: 2024-06-14
 - [[Space of Continuous Differentiable Functions]]
 - [[Ordinary Differential Equations]]
 - [[Ordinary Differential Equations by Chicone]] pp 3
+- [[Lipschitz Continuous Function]]
 
 
 ## Explanation

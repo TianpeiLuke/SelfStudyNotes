@@ -22,13 +22,44 @@ date of note: 2024-08-16
 >[!important]
 >**Name**: Neural Ordinary Differential Equations
 
-![[Normalizing Flows#^294151]]
+![[Continuous-Time Flows#^f77037]]
 
-![[Normalizing Flows#^8d93c1]]
+>[!important] Definition
+>The **neural ordinary differential equation** characterized a *continuous flow* $$x(t) = f_{t}(z)$$ in terms of *ordinary differential equations* with *initial value condition*
+>$$\left\{
+>\begin{align}
+> \frac{d}{dt} x(t) &= F(x(t), t) \\[5pt] 
+> x(0) &= z
+>\end{align}
+>\right.
+>$$
+>where
+>- the vector field $$F: \mathbb{R}^{d} \times [0,T] \to \mathbb{R}^{d}$$ is parameterized by a **neural network** 
+>- The **continuous flow** is defined as the map from the initial value to final value, along integral curve of ODE $$f(z) = x(T).$$
+>- Note that the **log-determinant of Jacobian** of *continuous flow* $f_{t}$ is determined by another *ODE* $$\left\{\begin{align}\frac{d}{dt} L(t) &= \text{tr}\left[(D\,F(\cdot, t))\,(x(t))\right]  \\[5pt]  L(0) &= 0\end{align}\right.$$ where
+>	- $$L(t)  := \log \lvert \det D f_{t}(x_{0}) \rvert.$$
+>	- To avoid *backpropagation through ODE solver*, weuse the **adjoint sensitivity method** to express the time evolution of the gradient with respect to $x(t)$ as a *separate ODE*.
 
-- [[Normalizing Flows]]
-- [[Residual Flows]]
+
 - [[Continuous-Time Flows]]
+- [[Ordinary Differential Equations]]
+- [[Vector Field as Infinitesimal Generator of Global Flow]]
+- [[Global Flow on Smooth Manifold]]
+- [[Existence and Uniqueness of Solution of Ordinary Differential Equations]]
+- [[Lipschitz Continuous Function]]
+- [[Back-Propagation Algorithm]]
+
+###  Adjoint Sensitivity Method
+
+
+
+
+### Numerical Solution
+
+- [[Explicit Euler Method for Discretization of ODE]]
+- [[Implicit Euler Method for Discretization of ODE]]
+- [[Runge-Kutta Methods for Numerical ODE]]
+- [[k-Step Methods for Numerical ODE]]
 
 
 ## Explanation
@@ -40,16 +71,17 @@ date of note: 2024-08-16
 ##  Recommended Notes and References
 
 
-- [[Langevin Equation]]
-- [[Fokker–Planck and Kolmogorov Forward-Backward Equation]]
-- [[Diffusion Process]]
-- [[Stochastic Differential Equations]]
-- [[Ordinary Differential Equations]]
+
+
 - [[Artificial Neural Network and Deep Learning]]
 
+- [[Normalizing Flows]]
+- [[Residual Flows]]
+- [[Maximal Integral Curve of Vector Field]]
 
 - [[Markov Chain and Markov Process]]
 
-- [[Wasserstein Distance]]
+
+
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 834 - 837
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 555 - 559
