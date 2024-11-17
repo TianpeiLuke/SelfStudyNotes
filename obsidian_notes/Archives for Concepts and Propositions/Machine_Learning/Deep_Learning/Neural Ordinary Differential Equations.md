@@ -65,7 +65,7 @@ date of note: 2024-08-16
 >	- This is the *chain of rule* in continuous time.
 >	- The solution can be solved by **integration backwards**, starting with $a(T)$  with *ODE solver*.
 >- In order to use ODE solver, we need to **store $x(t)$ in forward mode** for $t\in [0,T]$
->	- If we want to use $x(t_{i})$ not stored, we can recompute any required values of $x(t)$ by integrating $$\frac{d}{dt} x(t) = F(x(t); w)$$ along $$\frac{d}{dt} a(t) = -   a(t)^{T}\,DF(\cdot, w)(x(t))$$ given output $x(T).$
+>	- If we want to use $x(t_{i})$ not stored, we can recompute any required values of $x(t)$ by integrating $$\frac{d}{dt} x(t) = F(x(t); w)$$ along $$\frac{d}{dt} a(t) = -   a(t)^{T}\,D_{x}F(\cdot, w)(x(t))$$ given output $x(T).$
 >- Finally, the **gradient of loss** *with respect to* **parameter** $w$  is given by $$\nabla_{w}\mathcal{L} = - \int_{0}^{T}\,a(t)^{T}\,\nabla_{w}\,F(x(t), w)dt$$
 >	- Both $\nabla_{w}F$ and $D_{x}\,F$ can be evaluated efficiently via *back-propagation.*
 >- The  **adjoint sensitive method** is seen as the **continuous-time** analogue of **back-propagation.**
