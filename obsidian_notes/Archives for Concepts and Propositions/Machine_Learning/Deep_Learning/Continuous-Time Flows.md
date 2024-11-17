@@ -70,6 +70,35 @@ date of note: 2024-08-16
 - [[Existence and Uniqueness of Solution of Ordinary Differential Equations]]
 - [[Lipschitz Continuous Function]]
 
+>[!info] Proof
+>Note that 
+>$$
+>\frac{d}{dX} \log |\det X| = (X^{-1})^{T} 
+>$$
+>Thus
+>$$
+>\begin{align*}
+> \frac{d}{d D f_{t}} \log \lvert \det D f_{t} \rvert &= (\left(D f_{t}\right)^{-1})^{T} \\[10pt]
+> \frac{d}{dt} L(t) &= \frac{d}{dt} \log \lvert \det D f_{t} \rvert \\[10pt]
+> &= \text{tr}\left\{\left[ \frac{d}{d D f_{t}} \log \lvert \det D f_{t} \rvert  \right]^{T} \frac{ d D\,f_{t} }{ dt }  \right\} \\[10pt]
+> &= \text{tr}\left\{\left(D f_{t}\right)^{-1} \frac{ d D\,f_{t} }{ dt }  \right\} \\[10pt] 
+> &= \text{tr}\left\{\left(D f_{t}\right)^{-1}  D\;\frac{ df_{t} }{ dt }  \right\} \\[10pt]
+> &= \text{tr}\left\{\left(D f_{t}\right)^{-1} D\,F(f_{t}, t)\,D f_{t} \right\} \\[10pt]
+>  &= \text{tr}\left\{D\,F(\cdot, t)(x(t))  \right\} \\[10pt]
+>\end{align*}
+>$$
+>where the second last equality comes from the fact that
+>$$
+>\frac{d}{dt} f_{t}(x) = F(f_{t}(x), t)
+>$$
+>thus
+>$$
+>\frac{ \partial  }{ \partial x^{i} } \frac{d}{dt} f_{t}(x) = \frac{ \partial  }{ \partial u^{j} }\,F(u, t)\;\frac{ \partial u^{j} }{ \partial x^{i} } = \frac{ \partial  }{ \partial u^{j} }\,F(u, t)\;\frac{ \partial  f_{t}^{j} }{ \partial x^{i} }(z)
+>$$
+>and $$u := x(t) := f_{t}(z).$$
+
+- [[Matrix CookBook by Petersen]]
+
 
 ## Explanation
 
