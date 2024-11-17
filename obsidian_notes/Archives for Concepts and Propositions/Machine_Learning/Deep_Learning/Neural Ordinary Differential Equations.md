@@ -157,7 +157,7 @@ date of note: 2024-08-16
 >$$
 >\begin{align*}
 > \frac{d\mathcal{L}}{dw} &= \int_{0}^{T}\; \frac{d}{dt}  \frac{d\mathcal{L}}{dw(t)}\;dt  \\[8pt]
-> &:= \int_{0}^{T} \frac{d}{dt} a(t)\;dt \\[8pt]
+> &:= \int_{0}^{T} \frac{d}{dt} a_{w}(t)\;dt \\[8pt]
 > &= -\int_{0}^{T}a(t)^{T}\,\nabla_{w}F(x(t), w(t))\;dt \\[8pt]
 > &:= -\int_{0}^{T}a(t)^{T}\,\nabla_{w}F(x(t), w)\;dt
 > \end{align*}
