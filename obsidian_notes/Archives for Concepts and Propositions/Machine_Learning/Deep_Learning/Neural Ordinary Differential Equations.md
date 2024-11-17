@@ -149,3 +149,4 @@ date of note: 2024-08-16
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 834 - 837
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 555 - 559
+- Chen, R. T., Rubanova, Y., Bettencourt, J., & Duvenaud, D. K. (2018). Neural ordinary differential equations. _Advances in neural information processing systems_, _31_.
