@@ -61,12 +61,12 @@ date of note: 2024-08-16
 >The **adjoint sensitive method** solve above problem in the *forward-backward pass* as follows:
 >- Define the **adjoint** as $$a(t) := \frac{d\mathcal{L}}{dx(t)}$$
 >	- $a(T)$ corresponds to the usual gradient of loss with respect to output of the network.
->- The **adjoint** satisfies its own *ordinary differential equation* $$\frac{d}{dt} a(t) = -   a(t)^{T}\,D_{x}F(\cdot, w)(x(t))$$
+>- The **adjoint** satisfies its own *ordinary differential equation* $$\frac{d}{dt} a(t) = -   a(t)^{T}\,D_{x}F(\cdot,t; w)(x(t))$$
 >	- This is the *chain of rule* in continuous time.
->	- The solution can be solved by **integration backwards**, starting with $a(T)$  with *ODE solver*.
+>	- The ODE can be solved by **integration backwards**, starting with $a(T)$  with *ODE solver*.
 >- In order to use ODE solver, we need to **store $x(t)$ in forward mode** for $t\in [0,T]$
->	- If we want to use $x(t_{i})$ not stored, we can recompute any required values of $x(t)$ by integrating $$\frac{d}{dt} x(t) = F(x(t); w)$$ along $$\frac{d}{dt} a(t) = -   a(t)^{T}\,D_{x}F(\cdot, w)(x(t))$$ given output $x(T).$
->- Finally, the **gradient of loss** *with respect to* **parameter** $w$  is given by $$\nabla_{w}\mathcal{L} = - \int_{0}^{T}\,a(t)^{T}\,\nabla_{w}\,F(x(t), w)dt$$
+>	- If we want to use $x(t_{i})$ not stored, we can recompute any required values of $x(t)$ by integrating $$\frac{d}{dt} x(t) = F(x(t), t; w)$$ along $$\frac{d}{dt} a(t) = -   a(t)^{T}\,D_{x}F(\cdot,t; w)(x(t))$$ given output $x(T).$
+>- Finally, the **gradient of loss** *with respect to* **parameter** $w$  is given by $$\nabla_{w}\mathcal{L} = - \int_{0}^{T}\,a(t)^{T}\,\nabla_{w}\,F(x(t), t; w)dt$$
 >	- Both $\nabla_{w}F$ and $D_{x}\,F$ can be evaluated efficiently via *back-propagation.*
 >- The  **adjoint sensitive method** is seen as the **continuous-time** analogue of **back-propagation.**
 
