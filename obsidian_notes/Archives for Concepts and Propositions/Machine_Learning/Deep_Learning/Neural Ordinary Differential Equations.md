@@ -36,9 +36,9 @@ date of note: 2024-08-16
 >where
 >- the vector field $$F: \mathbb{R}^{d} \times [0,T] \to \mathbb{R}^{d}$$ is parameterized by a **neural network** 
 >- The **continuous flow** is defined as the map from the initial value to final value, along integral curve of ODE $$f(z) = x(T).$$
->- Note that the **log-determinant of Jacobian** of *continuous flow* $f_{t}$ is determined by another *ODE* $$\left\{\begin{align}\frac{d}{dt} L(t) &= \text{tr}\left[(D\,F(\cdot, t))\,(x(t))\right]  \\[5pt]  L(0) &= 0\end{align}\right.$$ where
->	- $$L(t)  := \log \lvert \det D f_{t}(x_{0}) \rvert.$$
->	- This requires us to compute $$\text{tr}(DF)$$ for neural network $F$ by **back-propagation** at each step of the ODE solver.
+>- Note that the **log-determinant of Jacobian** of *continuous flow* $f_{t}$ is determined by another *ODE* $$\left\{\begin{align}\frac{d}{dt} L(t) &= \text{tr}\left[(D_{x}\,F(\cdot, t))\,(x(t))\right]  \\[5pt]  L(0) &= 0\end{align}\right.$$ where
+>	- $$L(t)  := \log \lvert \det D_{x}f_{t}(x_{0}) \rvert.$$
+>	- This requires us to compute $$\text{tr}(D_{x}F)$$ for neural network $F$ by **back-propagation** at each step of the ODE solver.
 >	- To avoid *backpropagation through ODE solver*, weuse the **adjoint sensitivity method** to express the time evolution of the gradient with respect to $x(t)$ as a *separate ODE*.
 
 
@@ -56,17 +56,7 @@ date of note: 2024-08-16
 ###  Adjoint Sensitivity Method
 
 >[!important] Definition
->The *continuous flow* is characterized by the  *joint ODE* for the flow $x(t)$ and the *log-determinant of Jacobian*
->$$\left\{
->\begin{align}
-> \frac{d}{dt} (x(t), L(t)) &= \left[ \begin{array}{c}F(x(t), t) \\[5pt] \text{tr}\left[(D_{x}\,F(\cdot, t))\,(x(t))\right] \end{array} \right]  \\[5pt] 
-> (x(0), L(0)) &= (z, 0)
->\end{align}
->\right.
->$$  
->where the vector field requires to compute the *gradient of neural network*  $$\text{tr}\left[(D_{x}\,F(\cdot, t))\,(x(t))\right] $$ at each step of the ODE solver.
->
->Consider the task of training the neural network $F$ under the loss $\mathcal{L}$, i.e. $$\min_{w}\;\mathcal{L}(x_{w}(T))$$ where $$x(T) := x_{w}(T) := \int_{0}^{T}F(x(t); w)\;dt$$
+>Consider the task of training the neural network $F$ under the loss $\mathcal{L}$, i.e. $$\min_{w}\;\mathcal{L}(x(T))$$ where $$x(T) := x(0) +  \int_{0}^{T}F(x(t),t; w)\;dt$$
 >
 >The **adjoint sensitive method** solve above problem in the *forward-backward pass* as follows:
 >- Define the **adjoint** as $$a(t) := \frac{d\mathcal{L}}{dx(t)}$$
@@ -78,37 +68,102 @@ date of note: 2024-08-16
 >	- If we want to use $x(t_{i})$ not stored, we can recompute any required values of $x(t)$ by integrating $$\frac{d}{dt} x(t) = F(x(t); w)$$ along $$\frac{d}{dt} a(t) = -   a(t)^{T}\,DF(\cdot, w)(x(t))$$ given output $x(T).$
 >- Finally, the **gradient of loss** *with respect to* **parameter** $w$  is given by $$\nabla_{w}\mathcal{L} = - \int_{0}^{T}\,a(t)^{T}\,\nabla_{w}\,F(x(t), w)dt$$
 >	- Both $\nabla_{w}F$ and $D_{x}\,F$ can be evaluated efficiently via *back-propagation.*
+>- The  **adjoint sensitive method** is seen as the **continuous-time** analogue of **back-propagation.**
 
-
-
-
-
-
-
-
-### Numerical Solution
-
->[!info]
->- The **explicit Euler method** for the neural ODE is given by 
->$$
->x_{t+1} = x_{t} + F(x_{t}; w)
->$$ 
->- The **implicit Euler method** for the neural ODE is given by 
->$$
->x_{t+1} = x_{t} + F(x_{t+1}; w)
->$$ 
->- The **$2$-step Nyström method** for the neural ODE is given by 
->$$
->x_{t+2} = x_{t} + 2F(x_{t+1}; w)
->$$ 
->- The **trapezoidal rule** for the neural ODE is given by 
->$$
->x_{t+1} = x_{t} + \frac{1}{2}(F(x_{t+1}; w) + F(x_{t}; w))
->$$ 
 
 - [[Explicit Euler Method for Discretization of ODE]]
 - [[Implicit Euler Method for Discretization of ODE]]
 - [[Theory and Algorithms for Numerical Solution of Differential Equations]]
+- [[Back-Propagation Algorithm]]
+
+### Proof on the ODE for Adjoint
+
+>[!info]
+>Define the **bounded linear operator** $T_{\epsilon}$
+>$$
+>T_{\epsilon}(x(t), t) = x(t) + \int_{t}^{t+\epsilon}\;F(x(t), t; w)\,dt = x(t+\epsilon) 
+>$$
+>based on the assumption that $F$ is *Lipschitz continuous* with Lipschitz constant independent from $t$.
+
+- [[Existence and Uniqueness of Solution of Ordinary Differential Equations]]
+
+>[!info]
+>We have
+>$$
+>\begin{align*}
+> \frac{d\mathcal{L}}{dx(t)} &=  \frac{d\mathcal{L}}{dx(t+\epsilon)}\;\frac{d x(t+\epsilon)}{dx(t)} \\[10pt]
+> \iff a(t) &= a(t+\epsilon)^{T}\;\frac{d x(t+\epsilon)}{dx(t)}\\[8pt]
+> &= a(t+\epsilon)^{T}\;\frac{\partial \;T_{\epsilon}(x(t), t)}{\partial x(t)} 
+>\end{align*}
+>$$
+
+>[!info]
+>Consider the *Taylor expansion* of $T_{\epsilon}$ at $x(t)$ as
+>$$
+>\begin{align*}
+>T_{\epsilon}(x(t), t) &= x(t) + \int_{t}^{t+\epsilon}\;F(x(t), t; w)\,dt  \\[10pt]
+>&= x(t) + \epsilon\, F(x(t), t; w) + O(\epsilon^2)
+>\end{align*}
+>$$
+>
+>Note that 
+>$$
+>\begin{align*}
+>\frac{\partial \;T_{\epsilon}(x(t), t)}{\partial x(t)} &= \frac{ \partial  }{ \partial x(t) }\left[  x(t) + \epsilon\, F(x(t), t; w) + O(\epsilon^2) \right]  \\[8pt]
+>&= I + \epsilon\, D_{x}F(x(t), t; w) + O(\epsilon^2)
+>\end{align*}
+>$$
+
+- [[Taylor Series for Local Polynomial Approximation of Smooth Function]]
+
+>[!info]
+>The **derivative** of $a(t)$ is obtained via the definition
+>$$
+>\begin{align*}
+> \frac{d}{dt}a(t) &= \lim_{ \epsilon \to 0 }\; \frac{1}{\epsilon}\;\left[ a(t+\epsilon) - a(t) \right]  \\[8pt]
+> &= \lim_{ \epsilon \to 0 }\; \frac{1}{\epsilon}\;\left[ a(t+\epsilon) - a(t+\epsilon)^{T}\;\frac{\partial \;T_{\epsilon}(x(t), t)}{\partial x(t)}  \right]  \\[8pt]
+>&= \lim_{ \epsilon \to 0 }\; \frac{1}{\epsilon}\;a(t+\epsilon)^{T}\,\left[ I - \frac{\partial \;T_{\epsilon}(x(t), t)}{\partial x(t)}  \right]  \\[8pt]
+>&= \lim_{ \epsilon \to 0 }\; \frac{1}{\epsilon}\;a(t+\epsilon)^{T}\,\left[ I - I - \epsilon\, D_{x}F(x(t), t; w) - O(\epsilon^2) \right]  \\[8pt]  
+>&= \lim_{ \epsilon \to 0 }\; \frac{1}{\epsilon}\;a(t+\epsilon)^{T}\,\left[ - \epsilon\,D_{x}F(x(t), t; w)  \right]  -\frac{1}{\epsilon}\ O(\epsilon^2)\\[8pt]
+>&= \lim_{ \epsilon \to 0 }\; - a(t+\epsilon)^{T}\,D_{x}F(x(t), t; w)  -\frac{1}{\epsilon}\ O(\epsilon^2)\\[8pt]
+>&= - a(t)^{T}\,D_{x}F(x(t), t; w)
+>\end{align*}
+>$$
+
+### Proof on the Gradient of Loss w.r.t. Parameter 
+
+>[!info]
+>Assume that $w(t) =w$ is constant, i.e. $$\frac{\partial}{\partial t} w(t) = 0$$
+>
+>We have an augmented ODE
+>$$
+>\begin{align*}
+> \frac{d}{dt} (x(t), w(t)) = \left[ \begin{array}{c}F(x(t), w(t)) \\[5pt] 0\end{array} \right] 
+>\end{align*}
+>$$
+>Let 
+>$$a_{aug}(t) := \left[ \begin{array}{c}a(t) \\[5pt] a_{w}(t)\end{array} \right] = \left[ \begin{array}{c} \dfrac{ \partial \mathcal{L} }{ \partial x(t) }  \\[5pt] \dfrac{ \partial \mathcal{L} }{ \partial w(t) } \end{array} \right] = \delta \mathcal{L}(x(t), w(t)) $$
+>
+>Note that the above derivation regarding the **gradient of adjoint**  still holds which means that 
+>$$
+>\frac{d}{dt} a_{aug}(t) =  -  \left[ \begin{array}{cc}a(t) & a_{w}(t)\end{array} \right]\left[ \begin{array}{cc}D_{x}F & \nabla_{w}F \\[5pt] 0 & 0 \end{array} \right]    = - \left[ \begin{array}{c}a(t)^{T}\,D_{x}F \\[5pt] a(t)^{T}\,\nabla_{w}F\end{array} \right] 
+>$$
+>which includes 
+>$$
+>\frac{d}{dt} a_{w}(t) = - a(t)^{T}\,\nabla_{w}F
+>$$
+>
+>Finally, 
+>$$
+>\begin{align*}
+> \frac{d\mathcal{L}}{dw} &= \int_{0}^{T}\; \frac{d}{dt}  \frac{d\mathcal{L}}{dw(t)}\;dt  \\[8pt]
+> &:= \int_{0}^{T} \frac{d}{dt} a(t)\;dt \\[8pt]
+> &= -\int_{0}^{T}a(t)^{T}\,\nabla_{w}F(x(t), w(t))\;dt \\[8pt]
+> &:= -\int_{0}^{T}a(t)^{T}\,\nabla_{w}F(x(t), w)\;dt
+> \end{align*}
+>$$
+
+
 
 
 ## Explanation

@@ -157,6 +157,9 @@ date of note: 2024-05-12
 ![[backprop_symbol_symbol.png]]
 
 
+## Neural ODE and Adjoint Sensitivity Method
+
+- [[Neural Ordinary Differential Equations]]
 
 
 
