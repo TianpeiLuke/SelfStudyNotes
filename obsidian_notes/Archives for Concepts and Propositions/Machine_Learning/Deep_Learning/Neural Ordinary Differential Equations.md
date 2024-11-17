@@ -76,6 +76,42 @@ date of note: 2024-08-16
 - [[Theory and Algorithms for Numerical Solution of Differential Equations]]
 - [[Back-Propagation Algorithm]]
 
+### Reverse-Mode Derivative of Neural ODE Initial Value Problem
+
+>[!important] Definition
+>The algorithm that computes the **reverse-mode derivative** of **neural ODE initial value problem (IVP)** is described as below:
+>$$
+>\left\{
+>\begin{align}
+> \frac{d}{dt} x(t) &= F(x(t), t; w) \\[5pt] 
+> x(0) &= z
+>\end{align}
+>\right.
+>$$
+>
+>- *Require*: parameter $w\in \mathbb{R}^{p}$; 
+>- *Require*: stop time $T$
+>- *Require*: final state $x(T) =x$ where $x$ is the *observation*
+>- *Require*: the loss function $\mathcal{L}(x; w)$
+>- *Require*: the *loss gradient* $$a(T) := \frac{ \partial \mathcal{L} }{ \partial x(T) }$$
+>- Define the *initial augmented state* $$s(T) := \left[ \begin{array}{ccc}x(T) & \dfrac{ \partial \mathcal{L} }{ \partial x(T) } & \dfrac{ \partial \mathcal{L} }{ \partial w(T) }   \end{array} \right] := [x(T),\; a(T),\; a_{w}(T)]$$ where $\dfrac{ \partial \mathcal{L} }{ \partial w(T) }  = 0.$
+>- Define the **augmented dynamic system (aug-dynamic)** with *reverse-time ODE* as $$\left\{\begin{align}\frac{d}{dt} s(t) &= \left[ \begin{array}{c} F(x(t), t; w) \\[8pt] -a(t)^{T}\,D_{x}F(\cdot,t; w)(x(t)) \\[8pt] -a(t)^{T}\,\nabla_{w}F(x(t),t; w)  \end{array} \right] \\[8pt] s(T) &= \left[ \begin{array}{ccc}x(T) & a(T) & 0 \end{array} \right]\end{align}\right.$$ where
+>	- the state $$s(t) := \left[ \begin{array}{ccc}x(t) & a(t) & a_{w}(t) \end{array} \right]$$
+>	- Compute the **vector-Jacobian products** $$a(t)^{T}\,D_{x}F(\cdot,t; w), \quad a(t)^{T}\,\nabla_{w}F(x(t),t; w)$$
+>- Call the *ODE solver* to solve the **reverse-time ODE.** $$\left[ \begin{array}{ccc} x(0) & \dfrac{ \partial \mathcal{L} }{ \partial x(0) }  & \dfrac{ \partial \mathcal{L} }{ \partial w} \end{array} \right] = \text{ODE-Solver}\left( s(T), \text{ aug-dynamic}, T, 0, w \right) $$ where $$\frac{ \partial \mathcal{L} }{ \partial w} := \frac{ \partial \mathcal{L} }{ \partial w(0)}.$$
+>- *Return*:
+>	- the gradient of loss with respect to both flow and network parameter $$\dfrac{ \partial \mathcal{L} }{ \partial x(0) }, \quad  \dfrac{ \partial \mathcal{L} }{ \partial w}$$
+
+>[!info]
+>The vector-Jacobian products 
+>$$a(t)^{T}\,D_{x}F(\cdot,t; w), \quad a(t)^{T}\,\nabla_{w}F(x(t),t; w)$$  
+>can be efficiently evaluated by **automatic differentiation**, at a time *cost* similar to that of evaluating $F$.
+
+- [[Automatic Differentiation]]
+
+
+
+
 ### Proof on the ODE for Adjoint
 
 >[!info]
@@ -140,7 +176,7 @@ date of note: 2024-08-16
 >We have an augmented ODE
 >$$
 >\begin{align*}
-> \frac{d}{dt} (x(t), w(t), t) = \left[ \begin{array}{c}F(x(t), w(t)) \\[5pt] 0 \\[5pt] 1\end{array} \right] 
+> \frac{d}{dt} (x(t), w(t), t) = \left[ \begin{array}{c}F(x(t),t, w(t)) \\[5pt] 0 \\[5pt] 1\end{array} \right] 
 >\end{align*}
 >$$
 >
