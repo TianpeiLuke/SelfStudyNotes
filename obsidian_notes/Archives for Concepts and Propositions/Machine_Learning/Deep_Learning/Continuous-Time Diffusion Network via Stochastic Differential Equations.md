@@ -125,6 +125,7 @@ date of note: 2024-10-19
 >\frac{d}{dt}x(t) = -\frac{1}{2}\beta(t)\,x(t) - \beta(t)\;\nabla_{x} \log p(x(t))
 >$$
 
+
 - [[Ordinary Differential Equations]]
 - [[Fokker–Planck and Kolmogorov Forward-Backward Equation]]
 
@@ -136,7 +137,11 @@ date of note: 2024-10-19
 >where $$s(x, w, t) \approx \nabla_{x} \log p(x; t)$$ is the *score function*.
 >- This is also a special case of **neural ordinary differential equations** or **continuous-time normalizing flow.**
 
+^cf4caf
+
 - [[Score Matching and Denoising Score Matching]]
+- [[Neural Ordinary Differential Equations]]
+- [[Continuous-Time Flows]]
 - [[Normalizing Flows]]
 
 
