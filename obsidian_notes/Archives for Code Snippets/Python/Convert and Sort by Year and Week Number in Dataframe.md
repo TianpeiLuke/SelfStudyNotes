@@ -41,6 +41,10 @@ df['year'] = df['week'].str.extract(r'(\d{4})', expand=False)
 
 ### Sort 
 
+```python
+df.sort_values(by=['year'], ascending=True, inplace=True)
+```
+
 
 
 
@@ -56,6 +60,9 @@ df['year'] = df['week'].str.extract(r'(\d{4})', expand=False)
 
 - [[Compute time difference between two time fields in DataFrame]]
 - [[Sort all filenames under a directory by creation time]]
+
+- `pandas.DataFrame.sort_values` 
+	- [reference link](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.sort_values.html)
 
 - Stack Overflow 
 	- [Get date from week number](https://stackoverflow.com/questions/17087314/get-date-from-week-number)
