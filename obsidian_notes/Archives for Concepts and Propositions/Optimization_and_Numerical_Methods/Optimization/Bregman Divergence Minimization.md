@@ -95,6 +95,9 @@ date of note: 2024-05-12
 
 - [[Majorization-Minimization Algorithm]]
 
+## Maximum Entropy Learning
+
+- [[Maximum Entropy Learning]]
 
 
 
@@ -109,3 +112,4 @@ date of note: 2024-05-12
 
 
 - [[Convex Optimization Algorithms by Bertsekas]] pp 388
+- [[Foundations of Machine Learning by Mohri]] pp 307

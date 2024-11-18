@@ -51,7 +51,7 @@ date of note: 2024-09-09
 >- $\phi: \mathcal{Y} \to \mathbb{R}$ is a *convex surrogate function*,  and $$\phi(x) \ge \phi_{\rho, ramp}(x)$$
 >- $yf(x)$ is called the **confidence margin** or the **margin.**
 >  
->The **margin-based risk** is defined as $$R_{\Phi}(f) := \mathbb{E}_{ X,Y }\left[\, \phi(Yf(X)) \,\right]$$  
+>The **margin-based risk** is defined as $$L_{\Phi}(f) := \mathbb{E}_{ X,Y }\left[\, \phi(Yf(X)) \,\right]$$  
 
 ^a01095
 
@@ -69,6 +69,11 @@ date of note: 2024-09-09
 >\phi_{\rho, ramp}(x) := \min\left\{ 1,\, \max\left\{ 0,\, 1- \frac{x}{\rho} \right\}  \right\} =  \left\{\begin{array}{cl} 1 & \text{ if }x \le 0 \\[5pt] 1 - \dfrac{x}{\rho} & \text{ if }x\in [0, \rho] \\[5pt] 0 & \text{ if }x \ge \rho \end{array}\right.
 >$$
 >- The *convex surrogate function* of the ramp loss is given by any convex function $\phi$ such that  $$\phi(x) \ge \phi_{\rho, ramp}(x)$$ 
+>- Note that **ramp loss** is a *surrogate function* for the **empirical error** 
+>$$
+>\mathbb{1}\left\{ f(X) \neq Y \right\} = \mathbb{1}\left\{ f(X) Y < 0\right\} \le  \phi_{\rho, ramp}(Yf(X))
+>$$ 
+>Thus the *generalization error* is bounded above by the *margin loss* $$\begin{align*}L(f) &:= \mathbb{E}_{ X,Y }\left[  \mathbb{1}\left\{ f(X) \neq Y \right\}  \right] \\[5pt] &\le  \mathbb{E}_{ X,Y }\left[  \phi_{\rho}(Yf(X))  \right] \\[5pt] &:= L_{\phi}(h) \end{align*}$$
 
 ^19baca
 
@@ -108,6 +113,7 @@ date of note: 2024-09-09
 ## Generational Bound for Margin-Based Loss 
 
 - [[Margin-based Generalization Error Bound]]
+- [[Margin-based Generalization Error Bound for Kernel Hypothesis]]
 
 ## Connection to $f$-Divergence
 

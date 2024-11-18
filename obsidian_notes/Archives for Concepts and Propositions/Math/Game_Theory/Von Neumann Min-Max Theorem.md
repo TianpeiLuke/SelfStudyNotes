@@ -127,7 +127,7 @@ date of note: 2024-08-04
 
 
 - [[Game Theory An Introduction by Tadelis]] pp 107
-- [[Foundations of Machine Learning by Mohri]] pp 174 - 175
+- [[Foundations of Machine Learning by Mohri]] pp 174 - 175, 204 (new version)
 - [[Optimization by Vector Space Methods by Luenberger]] pp 206 - 209
 - [[Convex Analysis by Rockafellar]]
 - [[Prediction Learning and Games by Cesa-Bianchi]] pp 182, 184, 185, 187, 188, 190, 197, 225, 226

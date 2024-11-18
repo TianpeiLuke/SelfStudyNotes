@@ -75,6 +75,9 @@ date of note: 2024-08-01
 
 - [[Representer Theorem]]
 - [[Support Vector Machine Kernel Expansion and RKHS]]
+- [[Rademacher Complexity Upper Bound for Suprema of Empirical Process]]
+- [[Rademacher Complexity Lower Bound for Suprema of Empirical Process]]
+
 
 
 - [[Foundations of Machine Learning by Mohri]] pp 118

@@ -112,7 +112,13 @@ date of note: 2024-11-07
 - [[Variational Formula for f-Divergence]]
 - [[f-Divergence]]
 
+### MMD Bound
 
+![[Margin-based Generalization Error Bound for Kernel Hypothesis#^e0b885]]
+
+![[Margin-based Generalization Error Bound for Kernel Hypothesis#^928a31]]
+
+- [[Margin-based Generalization Error Bound for Kernel Hypothesis]]
 
 
 
