@@ -56,7 +56,7 @@ date of note: 2024-08-16
 ###  Adjoint Sensitivity Method
 
 >[!important] Definition
->Consider the task of training the neural network $F$ under the loss $\mathcal{L}$, i.e. $$\min_{w}\;\int_{0}^{T}\mathcal{L}(f(x(0); s, w))\,ds := \int_{0}^{T}\mathcal{L}(x(s); w)\,ds$$ where $$x(t) = f(x(0); t, w) =  x(0) +  \int_{0}^{t}F(x(s),s; w)\;ds$$
+>Consider the task of training the neural network $F$ under the loss $\mathcal{L}$, i.e. $$\min_{w}\;\mathcal{L}(f(x(0); T, w)) := \mathcal{L}(x(T); w)$$ where $$x(T) = f(x(0); T, w) =  x(0) +  \int_{0}^{T}F(x(s),s; w)\;ds$$
 >
 >The **adjoint sensitive method** solve above problem in the *forward-backward pass* as follows:
 >- Define the **adjoint** as $$a(t) := \frac{d\mathcal{L}}{dx(t)}$$
