@@ -35,9 +35,9 @@ date of note: 2024-08-16
 >$$
 >where
 >- the vector field $$F: \mathbb{R}^{d} \times [0,T] \to \mathbb{R}^{d}$$ is parameterized by a **neural network** 
->- The **continuous flow** is defined as the map from the initial value to final value, along integral curve of ODE $$f(z) = x(T).$$
+>- The **continuous flow** is defined as the map $f_{t}$ from the initial value to final value, along integral curve of ODE $$x(t) = f_{t}(x(0)) := f(x(0); t, w) := x(0) + \int_{0}^{t}F(x(s), s, w)ds.$$
 >- Note that the **log-determinant of Jacobian** of *continuous flow* $f_{t}$ is determined by another *ODE* $$\left\{\begin{align}\frac{d}{dt} L(t) &= \text{tr}\left[(D_{x}\,F(\cdot, t))\,(x(t))\right]  \\[5pt]  L(0) &= 0\end{align}\right.$$ where
->	- $$L(t)  := \log \lvert \det D_{x}f_{t}(x_{0}) \rvert.$$
+>	- $$L(t)  := \log \lvert \det D_{x}f(x(0); t, w) \rvert.$$
 >	- This requires us to compute $$\text{tr}(D_{x}F)$$ for neural network $F$ by **back-propagation** at each step of the ODE solver.
 >	- To avoid *backpropagation through ODE solver*, weuse the **adjoint sensitivity method** to express the time evolution of the gradient with respect to $x(t)$ as a *separate ODE*.
 
@@ -56,21 +56,25 @@ date of note: 2024-08-16
 ###  Adjoint Sensitivity Method
 
 >[!important] Definition
->Consider the task of training the neural network $F$ under the loss $\mathcal{L}$, i.e. $$\min_{w}\;\mathcal{L}(x(T))$$ where $$x(T) := x(0) +  \int_{0}^{T}F(x(t),t; w)\;dt$$
+>Consider the task of training the neural network $F$ under the loss $\mathcal{L}$, i.e. $$\min_{w}\;\int_{0}^{T}\mathcal{L}(f(x(0); s, w))\,ds := \int_{0}^{T}\mathcal{L}(x(s); w)\,ds$$ where $$x(t) = f(x(0); t, w) =  x(0) +  \int_{0}^{t}F(x(s),s; w)\;ds$$
 >
 >The **adjoint sensitive method** solve above problem in the *forward-backward pass* as follows:
 >- Define the **adjoint** as $$a(t) := \frac{d\mathcal{L}}{dx(t)}$$
 >	- $a(T)$ corresponds to the usual gradient of loss with respect to output of the network.
+>	- The adjoint above is the *Lagrangian multiplier.*
 >- The **adjoint** satisfies its own *ordinary differential equation* $$\frac{d}{dt} a(t) = -   a(t)^{T}\,D_{x}F(\cdot,t; w)(x(t))$$
 >	- This is the *chain of rule* in continuous time.
 >	- The ODE can be solved by **integration backwards**, starting with $a(T)$  with *ODE solver*.
 >- In order to use ODE solver, we need to **store $x(t)$ in forward mode** for $t\in [0,T]$
 >	- If we want to use $x(t_{i})$ not stored, we can recompute any required values of $x(t)$ by integrating $$\frac{d}{dt} x(t) = F(x(t), t; w)$$ along $$\frac{d}{dt} a(t) = -   a(t)^{T}\,D_{x}F(\cdot,t; w)(x(t))$$ given output $x(T).$
+>	- For instance, to obtain a point $x(\tau)$ where $\tau\in [t_{k}, t_{k+1}]$, we can have $$x_{\tau} = x_{t} + \int_{t}^{\tau}F(x(s), s; w)ds$$
 >- Finally, the **gradient of loss** *with respect to* **parameter** $w$  is given by $$\nabla_{w}\mathcal{L} = - \int_{0}^{T}\,a(t)^{T}\,\nabla_{w}\,F(x(t), t; w)dt$$
 >	- Both $\nabla_{w}F$ and $D_{x}\,F$ can be evaluated efficiently via *back-propagation.*
 >- The  **adjoint sensitive method** is seen as the **continuous-time** analogue of **back-propagation.**
 
-
+- [[Methods of Lagrangian Multipliers]]
+- [[Hamiltonian Function in Mechanic and Variational Calculus]]
+- [[Lagrangian Function in Mechanics and Variational Calculus]]
 - [[Back-Propagation Algorithm]]
 
 ### Reverse-Mode Derivative of Neural ODE Initial Value Problem
@@ -101,6 +105,9 @@ date of note: 2024-08-16
 
 - [[Theory and Algorithms for Numerical Solution of Differential Equations]]
 
+![[neural_ode_reverse_mode_diff.png]]
+
+
 >[!info]
 >The vector-Jacobian products 
 >$$a(t)^{T}\,D_{x}F(\cdot,t; w), \quad a(t)^{T}\,\nabla_{w}F(x(t),t; w)$$  
@@ -117,13 +124,14 @@ date of note: 2024-08-16
 ### Proof on the ODE for Adjoint
 
 >[!info]
->Define the **bounded linear operator** $T_{\epsilon}$
+>Note that the **flow map** is a *bounded linear operator* $f_{\epsilon}$
 >$$
->T_{\epsilon}(x(t), t) = x(t) + \int_{t}^{t+\epsilon}\;F(x(t), t; w)\,dt = x(t+\epsilon) 
+>f_{\epsilon}(x(t), t) = x(t) + \int_{t}^{t+\epsilon}\;F(x(s), s; w)\,ds = x(t+\epsilon) 
 >$$
 >based on the assumption that $F$ is *Lipschitz continuous* with Lipschitz constant independent from $t$.
 
 - [[Existence and Uniqueness of Solution of Ordinary Differential Equations]]
+- [[Global Flow on Smooth Manifold]]
 
 >[!info]
 >We have
@@ -131,15 +139,16 @@ date of note: 2024-08-16
 >\begin{align*}
 > \frac{d\mathcal{L}}{dx(t)} &=  \frac{d\mathcal{L}}{dx(t+\epsilon)}\;\frac{d x(t+\epsilon)}{dx(t)} \\[10pt]
 > \iff a(t) &= a(t+\epsilon)^{T}\;\frac{d x(t+\epsilon)}{dx(t)}\\[8pt]
-> &= a(t+\epsilon)^{T}\;\frac{\partial \;T_{\epsilon}(x(t), t)}{\partial x(t)} 
+> &= a(t+\epsilon)^{T}\;\frac{\partial \;f_{\epsilon}(x(t), t)}{\partial x(t)} \\[8pt]
+> &= a(t+\epsilon)^{T}\;D_{x}f_{\epsilon}(\cdot, t, w)(x(t))
 >\end{align*}
 >$$
 
 >[!info]
->Consider the *Taylor expansion* of $T_{\epsilon}$ at $x(t)$ as
+>Consider the *Taylor expansion* of $f_{\epsilon}$ at $x(t)$ as
 >$$
 >\begin{align*}
->T_{\epsilon}(x(t), t) &= x(t) + \int_{t}^{t+\epsilon}\;F(x(t), t; w)\,dt  \\[10pt]
+>f_{\epsilon}(x(t), t) &= x(t) + \int_{t}^{t+\epsilon}\;F(x(t), t; w)\,dt  \\[10pt]
 >&= x(t) + \epsilon\, F(x(t), t; w) + O(\epsilon^2)
 >\end{align*}
 >$$
@@ -147,7 +156,7 @@ date of note: 2024-08-16
 >Note that 
 >$$
 >\begin{align*}
->\frac{\partial \;T_{\epsilon}(x(t), t)}{\partial x(t)} &= \frac{ \partial  }{ \partial x(t) }\left[  x(t) + \epsilon\, F(x(t), t; w) + O(\epsilon^2) \right]  \\[8pt]
+>\frac{\partial \;f_{\epsilon}(x(t), t)}{\partial x(t)} &= \frac{ \partial  }{ \partial x(t) }\left[  x(t) + \epsilon\, F(x(t), t; w) + O(\epsilon^2) \right]  \\[8pt]
 >&= I + \epsilon\, D_{x}F(x(t), t; w) + O(\epsilon^2)
 >\end{align*}
 >$$
@@ -159,8 +168,8 @@ date of note: 2024-08-16
 >$$
 >\begin{align*}
 > \frac{d}{dt}a(t) &= \lim_{ \epsilon \to 0 }\; \frac{1}{\epsilon}\;\left[ a(t+\epsilon) - a(t) \right]  \\[8pt]
-> &= \lim_{ \epsilon \to 0 }\; \frac{1}{\epsilon}\;\left[ a(t+\epsilon) - a(t+\epsilon)^{T}\;\frac{\partial \;T_{\epsilon}(x(t), t)}{\partial x(t)}  \right]  \\[8pt]
->&= \lim_{ \epsilon \to 0 }\; \frac{1}{\epsilon}\;a(t+\epsilon)^{T}\,\left[ I - \frac{\partial \;T_{\epsilon}(x(t), t)}{\partial x(t)}  \right]  \\[8pt]
+> &= \lim_{ \epsilon \to 0 }\; \frac{1}{\epsilon}\;\left[ a(t+\epsilon) - a(t+\epsilon)^{T}\;\frac{\partial \;f_{\epsilon}(x(t), t)}{\partial x(t)}  \right]  \\[8pt]
+>&= \lim_{ \epsilon \to 0 }\; \frac{1}{\epsilon}\;a(t+\epsilon)^{T}\,\left[ I - \frac{\partial \;f_{\epsilon}(x(t), t)}{\partial x(t)}  \right]  \\[8pt]
 >&= \lim_{ \epsilon \to 0 }\; \frac{1}{\epsilon}\;a(t+\epsilon)^{T}\,\left[ I - I - \epsilon\, D_{x}F(x(t), t; w) - O(\epsilon^2) \right]  \\[8pt]  
 >&= \lim_{ \epsilon \to 0 }\; \frac{1}{\epsilon}\;a(t+\epsilon)^{T}\,\left[ - \epsilon\,D_{x}F(x(t), t; w)  \right]  -\frac{1}{\epsilon}\ O(\epsilon^2)\\[8pt]
 >&= \lim_{ \epsilon \to 0 }\; - a(t+\epsilon)^{T}\,D_{x}F(x(t), t; w)  -\frac{1}{\epsilon}\ O(\epsilon^2)\\[8pt]

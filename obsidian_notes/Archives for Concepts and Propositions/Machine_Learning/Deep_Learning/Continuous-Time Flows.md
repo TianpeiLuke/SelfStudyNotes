@@ -40,20 +40,24 @@ date of note: 2024-08-16
 >$$
 >where
 >- $$F: \mathbb{R}^{d} \times [0,T] \to \mathbb{R}^{d}$$ is *continuously differentiable*, and defines a *vector field* that characterized the ODE.
->- The **continuous flow** $f$ is a function $$f: \mathbb{R}^{d} \to \mathbb{R}^{d}$$ that takes in the input $z$ and *solves the ODE* with *initial value condition (IVP)*. That is, $$f(z) = x(T)$$
->	- By existence and uniqueness of solution of ODE, there **exists** a **unique** *continuous flow* $f$ if $F$ is *Lipschitz continuous* with *Lipschitz constant* not depending on $t$ $$\lvert F(x_{1}, t) - F(x_{2}, t) \rvert \le L\,\lVert x_{1} - x_{2} \rVert $$
+>- By existence and uniqueness of solution of ODE, there **exists** a **unique** *solution* for the *IVP* if $F$ is *Lipschitz continuous* with *Lipschitz constant* not depending on $t$ $$\lvert F(x_{1}, t) - F(x_{2}, t) \rvert \le L\,\lVert x_{1} - x_{2} \rVert $$
+>- The **continuous flow** $f_{t}$ is a function $$f_{t}: \mathbb{R}^{d} \to \mathbb{R}^{d}, \quad \forall t\in [0,T]$$ that takes in the input $x(0) = z$ and maps it to $x(t)$ *along the solution of IVP* $$f_{t}(z) := f(z;\,0, t) = x(t)$$
+>	- We have $$f_{0}(z) = z\, \quad f_{T}(z) = x(T)$$
+>	- We can express $f_{t}$ in terms of the integral equation $$f_{t}(z) = f(x(0), t) = x(0) + \int_{0}^{t}F(x(s), s;\, w)\,ds$$
+>	- $f_{t}$ satisfies the *group axiom* 
+>		- $$f_{t} \circ f_{s} = f_{t+ s}$$
+>		- $$f_{0} = I$$
+>	- Thus $f_{t}$ is a *one-parameter group action*.
 >- The **Jacobian determinant** cannot be expressed analytically, but we can define it via a separate *ODE*
->	- Define the flow for time $t$ $$f_{t}: \mathbb{R}^{d} \to \mathbb{R}^{d}$$ as the unique solution of *IVP* of *ODE* with $x(0)  = z.$ i.e. $$f_{t}(z) = x(t)$$
->		- We have $$f_{0} = I\, \quad f_{T} = f$$
->	- Define the **log Jacobian determinant** of $f_{t}$ as $$L(t) := \log \lvert \det D f_{t}(x_{0}) \rvert $$
+>	- Define the **log Jacobian determinant** of $f_{t}$ as $$L(t) := \log \lvert \det D f(x_{0}; t) \rvert $$
 >		- We have $$L(0) = \log \lvert \det I \rvert = 0$$
->	- It can be shown that $L(t)$ satisfies the *ordinary differential equation* with *initial condition* $$\left\{\begin{align}\frac{d}{dt} L(t) &= \text{tr}\left[(D\,F(\cdot, t))\,(x(t))\right]  \\[5pt]  L(0) &= 0\end{align}\right.$$
+>	- It can be shown that $L(t)$ satisfies the *ordinary differential equation* with *initial condition* $$\left\{\begin{align}\frac{d}{dt} L(t) &= \text{tr}\left[(D_{x}F(\cdot, t))\,(x(t))\right]  \\[5pt]  L(0) &= 0\end{align}\right.$$
 >		- The *rate of change* for the *log-det of Jacobian matrix* is equal to the *Jacobian trace* of vector field $F(\cdot,t)$
 >		- $L(T)$ corresponds to the *Jacobian determiant* of $f:= f(T)$.
 >- Finally, we can have joint ODE for $(x(t), L(t))$ as
 >$$\left\{
 >\begin{align}
-> \frac{d}{dt} (x(t), L(t)) &= \left[ \begin{array}{c}F(x(t), t) \\[5pt] \text{tr}\left[(D\,F(\cdot, t))\,(x(t))\right] \end{array} \right]  \\[5pt] 
+> \frac{d}{dt} (x(t), L(t)) &= \left[ \begin{array}{c}F(x(t), t) \\[5pt] \text{tr}\left[(D_{x}F(\cdot, t))\,(x(t))\right] \end{array} \right]  \\[5pt] 
 > (x(0), L(0)) &= (z, 0)
 >\end{align}
 >\right.
