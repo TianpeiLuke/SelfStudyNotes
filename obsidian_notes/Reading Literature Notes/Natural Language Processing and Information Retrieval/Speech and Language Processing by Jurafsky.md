@@ -38,3 +38,4 @@ date of note: 2024-11-17
 ## Reference
   
 
+- [[Foundations of Statistical Natural Language Processing by Manning]]

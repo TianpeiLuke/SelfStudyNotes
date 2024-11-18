@@ -40,3 +40,5 @@ date of note: 2024-09-13
 -----------
 ##  Recommended Notes and References
 
+- [[Speech and Language Processing by Jurafsky]]
+- [[Foundations of Statistical Natural Language Processing by Manning]]

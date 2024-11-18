@@ -41,6 +41,8 @@ date of note: 2024-10-25
 
 > [!Abstract]  
 > Statistical approaches to processing natural language text have become dominant in recent years. This foundational text is the first comprehensive introduction to statistical natural language processing (NLP) to appear. The book contains all the theory and algorithms needed for building NLP tools. It provides broad but rigorous coverage of mathematical and linguistic foundations, as well as detailed discussion of statistical methods, allowing students and researchers to construct their own implementations. The book covers collocation finding, word sense disambiguation, probabilistic parsing, information retrieval, and other applications.  
->-----
+
+-----
 ## Reference
   
+- [[Speech and Language Processing by Jurafsky]]
