@@ -36,4 +36,6 @@ date of note: 2024-09-12
 
 - [[Vector Space over a Field]]
 
+
 - Wikipedia [Vector_space_model](https://en.wikipedia.org/wiki/Vector_space_model)
+- [[Speech and Language Processing by Jurafsky]] 

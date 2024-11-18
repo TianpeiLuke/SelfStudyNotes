@@ -1,11 +1,11 @@
 ---
 tags:
   - concept
-  - natural_language_processing
+  - natural_language_processing/tokenization
 keywords: 
 topics: 
 name: 
-date of note: 2024-05-12
+date of note: 2024-11-17
 ---
 
 ## Concept Definition
@@ -24,6 +24,10 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
+
+
+- [[Word Embedding]]
+- [[Vector Space Model for Text Representation]]
 
 
 - [[Speech and Language Processing by Jurafsky]] 

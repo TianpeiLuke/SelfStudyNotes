@@ -79,7 +79,11 @@ date of note: 2024-08-16
 >-- [[Deep Learning Foundations and Concepts by Bishop]]	 pp 274
 
 
+## Neural ODE
 
+![[Neural Ordinary Differential Equations#^b54270]]
+
+- [[Neural Ordinary Differential Equations]]
 
 
 

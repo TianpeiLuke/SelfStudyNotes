@@ -31,3 +31,7 @@ date of note: 2024-07-02
 -----------
 ##  Recommended Notes and References
 
+
+
+
+- [[Speech and Language Processing by Jurafsky]] 

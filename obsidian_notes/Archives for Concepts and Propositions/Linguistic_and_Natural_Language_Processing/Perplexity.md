@@ -68,3 +68,4 @@ date of note: 2024-04-30
 - Jelinek, F.; Mercer, R. L.; Bahl, L. R.; Baker, J. K. (1977). ["Perplexity—a measure of the difficulty of speech recognition tasks"](https://doi.org/10.1121/1.2016299). _The Journal of the Acoustical Society of America_. **62** (S1): S63–S63. [doi](https://en.wikipedia.org/wiki/Doi_(identifier) "Doi (identifier)"):[10.1121/1.2016299](https://doi.org/10.1121%2F1.2016299). [ISSN](https://en.wikipedia.org/wiki/ISSN_(identifier) "ISSN (identifier)") [0001-4966](https://www.worldcat.org/issn/0001-4966).
   
 - Chen, Stanley F; Beeferman, Douglas; Rosenfeld, Roni (2018). ["Evaluation Metrics For Language Models"](https://doi.org/10.1184/R1/6605324.v1). _Carnegie Mellon University_.
+- [[Speech and Language Processing by Jurafsky]] 

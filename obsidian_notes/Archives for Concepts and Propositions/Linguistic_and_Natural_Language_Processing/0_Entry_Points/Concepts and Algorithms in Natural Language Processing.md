@@ -14,6 +14,9 @@ date of note: 2024-09-13
 
 - [[Concepts and Algorithms in Computational Linguistics]]
 
+### Tokenziation
+
+- [[Tokenization of Words]]
 
 ### N-Gram Models
 
@@ -109,4 +112,5 @@ date of note: 2024-09-13
 
 -----------
 ##  Recommended Notes and References
+
 

@@ -77,6 +77,8 @@ date of note: 2024-08-01
 
 - [[Maximum Mean Discrepancy between Probability Measures via RKHS]]
 - [[Kernel Mean Embedding of Distribution]]
+- [[Talagrand Contraction Principle]]
+- [[Symmetrization Inequalities for Empirical Process]]
 - [[Kernel Mean Embedding of Distributions by Muandet]] pp 34
 
 >[!info]

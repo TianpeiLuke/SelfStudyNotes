@@ -35,3 +35,4 @@ date of note: 2024-07-29
 - [[k Nearest Neighbor Density Estimation]]
 
 - [[FAISS - Facebook AI Similarity Search Tutorial]]
+- [[Speech and Language Processing by Jurafsky]] 

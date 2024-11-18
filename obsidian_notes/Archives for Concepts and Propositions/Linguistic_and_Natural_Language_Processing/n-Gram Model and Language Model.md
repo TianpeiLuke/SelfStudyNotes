@@ -59,3 +59,4 @@ date of note: 2024-09-08
 
 - Daniel Jurafsky and James H. Martin. 2024. *Speech and Language Processing: An Introduction to Natural Language Processing, Computational Linguistics, and Speech Recognition with Language Models*, 3rd edition
 - [[Foundations of Statistical Natural Language Processing by Manning]] pp 191
+- [[Speech and Language Processing by Jurafsky]] 

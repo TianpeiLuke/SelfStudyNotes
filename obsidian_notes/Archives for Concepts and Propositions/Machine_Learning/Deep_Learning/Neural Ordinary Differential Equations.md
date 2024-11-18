@@ -219,6 +219,32 @@ date of note: 2024-08-16
 >
 >-- [[Deep Learning Foundations and Concepts by Bishop]] pp 556 - 557	  
 
+## Residual Connection and Neural ODE
+
+>[!important]
+>The **explicit Euler method** for the neural ODE
+>$$\left\{
+>\begin{align}
+> \frac{d}{dt} x(t) &= F(x(t), t) \\[5pt] 
+> x(0) &= z
+>\end{align}
+>\right.
+>$$
+>is given by 
+>$$
+>x_{t+1} - x_{t} = F(x_{t}, t; w)
+>$$
+>where $F$ is the neural network.
+>
+>This corresponding to the **residual connection**
+>$$
+>x_{t+1} = F(x_{t}, t; w) + x_{t}
+>$$
+
+^b54270
+
+- [[Residual Connection for Deep Learning]]
+- [[Residual Neural Network]]
 
 
 ## Continuous-Time Diffusion Network
