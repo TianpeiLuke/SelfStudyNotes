@@ -240,12 +240,18 @@ date of note: 2024-08-16
 >$$
 >x_{t+1} = F(x_{t}, t; w) + x_{t}
 >$$
+>- The **neural ODE** can be seen as a **continuous-time generalization** and *limit* of **residual network** where 
+>	- the sample point $x(t_{k})$  is *not necessarily equally spaced* as $t_{k} = t_{0} + k\,h.$
+>	- and the time interval $h\to 0$.
 
 ^b54270
 
 - [[Residual Connection for Deep Learning]]
 - [[Residual Neural Network]]
 
+>[!info]
+>Compare with **residual connection** $$x_{t+1} = x_{t} + F(x_{t}, t; w)$$
+>the **neural ODE** represents $x_{t+1} = x(t+1)$ via $x_{t} = x(t)$ as $$x_{t+1} = x_{t} + \int_{t}^{t+1}F(x(s), s, w)\;ds $$ 
 
 ## Continuous-Time Diffusion Network
 
