@@ -32,6 +32,16 @@ date of note: 2024-11-17
 - [[Regular Expression Pattern Basics]]
 - [[Regular Expression Advanced Operations]]
 
+>[!important] Definition
+>One commonly used tokenization standard is known as the **Penn Treebank tokenization** standard.
+
+
+### Bottom-Up Tokenization via Learning
+
+
+
+- [[Byte-Pair Encoding or BPE as Tokenization]]
+- [[Unigram Language Modeling as Tokenization and SentencePiece]]
 
 ## Explanation
 
@@ -43,7 +53,7 @@ date of note: 2024-11-17
 ##  Recommended Notes and References
 
 
-
+- [[Text Normalization]]
 - [[Word Embedding]]
 - [[Vector Space Model for Text Representation]]
 

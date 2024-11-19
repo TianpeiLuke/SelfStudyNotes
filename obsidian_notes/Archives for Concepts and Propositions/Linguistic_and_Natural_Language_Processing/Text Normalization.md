@@ -24,6 +24,22 @@ date of note: 2024-11-17
 >2. **Normalizing word formats** 
 >3. **Segmenting sentences**
 
+### Tokenization
+
+- [[Tokenization of Words and Subwords]]
+- [[Byte-Pair Encoding or BPE as Tokenization]]
+- [[Unigram Language Modeling as Tokenization and SentencePiece]]
+
+### Word Normalization
+
+- [[Word Normalization]]
+- [[Lemmatization of Word]]
+- [[Morphological Parsing]]
+- [[Stemming of Word]]
+
+### Sentence Segmentation
+
+- [[Sentence Segmentation]]
 
 
 ## Explanation

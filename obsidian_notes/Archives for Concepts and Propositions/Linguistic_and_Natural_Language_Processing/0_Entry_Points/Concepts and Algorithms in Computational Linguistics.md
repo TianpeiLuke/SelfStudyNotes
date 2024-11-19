@@ -13,7 +13,10 @@ date of note: 2024-09-13
 ### Word
 
 - [[Word Basic Concepts]]
-
+- [[Lemmatization of Word]]
+- [[Morphology]]
+- [[Morphological Parsing]]
+- [[Stemming of Word]]
 
 ### Lexical Analysis
 

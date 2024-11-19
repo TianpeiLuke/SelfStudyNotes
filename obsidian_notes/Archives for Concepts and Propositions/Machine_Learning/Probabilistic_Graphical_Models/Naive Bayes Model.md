@@ -20,6 +20,8 @@ date of note: 2024-08-16
 
 
 
+- [[Tokenization of Words and Subwords]]
+- [[n-Gram Model and Language Model]]
 
 ![[naive_bayes_1.png]]
 
@@ -42,7 +44,7 @@ date of note: 2024-08-16
 - [[Probabilistic Graphical Models]]
 
 
-
+- [[Speech and Language Processing by Jurafsky]] pp 57 - 61
 - [[Probabilistic Graphical Models by Koller]] pp 47, 727, 767, 875 - 877
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 164
 - [[Elements of Statistical Learning by Hastie]] pp 108, 210-211, 694

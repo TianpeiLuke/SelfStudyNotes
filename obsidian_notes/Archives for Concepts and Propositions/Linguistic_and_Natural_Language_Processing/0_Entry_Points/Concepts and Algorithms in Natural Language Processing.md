@@ -14,17 +14,45 @@ date of note: 2024-09-13
 
 - [[Concepts and Algorithms in Computational Linguistics]]
 
-### Tokenziation and Text Preprocessing
+### Text Preprocessing and Text Normalization
 
 - [[Regular Expression Pattern Basics]]
 - [[Regular Expression Advanced Operations]]
 - [[Word Basic Concepts]]
 - [[Corpora and NLP Dataset Format]]
+
+- [[Text Normalization]]
+
+#### Tokenization
+
 - [[Tokenization of Words and Subwords]]
+- [[Byte-Pair Encoding or BPE as Tokenization]]
+- [[Unigram Language Modeling as Tokenization and SentencePiece]]
+
+#### Word Normalization
+
+- [[Word Normalization]]
+- [[Morphology]]
+- [[Morphological Parsing]]
+- [[Stemming of Word]]
+
+#### Sentence Segmentation
+
+- [[Sentence Segmentation]]
+
+### Edit Distance
+
+- [[Minimum Edit Distance]]
+
 
 ### N-Gram Models
 
 - [[n-Gram Model and Language Model]]
+- [[n-Gram Model Estimation Smoothing]]
+- [[Perplexity]]
+
+### Text Classification
+
 - [[Naive Bayes Model]]
 - [[Multinomial Naive Bayes Model]]
 - [[Multinomial Principle Component Analysis]]

@@ -31,17 +31,25 @@ date of note: 2024-09-08
 - [[Autoregressive Models]]
 
 
-### Estimation of Joint Probability
+### Maximum Likelihood Estimation of Joint Probability
 
 
-
+- [[Maximum Likelihood Estimation]]
 - [[Multinomial Distribution]]
 
+
+
+### Smoothing and Discount
+
+- [[n-Gram Model Estimation Smoothing]]
 
 
 ## Explanation
 
 
+## Evaluation of Language Model
+
+- [[Perplexity]]
 
 
 
@@ -57,6 +65,6 @@ date of note: 2024-09-08
 - [[Probabilistic Latent Semantic Analysis]]
 - [[Latent Dirichlet Allocation]]
 
-- Daniel Jurafsky and James H. Martin. 2024. *Speech and Language Processing: An Introduction to Natural Language Processing, Computational Linguistics, and Speech Recognition with Language Models*, 3rd edition
+
 - [[Foundations of Statistical Natural Language Processing by Manning]] pp 191
-- [[Speech and Language Processing by Jurafsky]] 
+- [[Speech and Language Processing by Jurafsky]] pp 33 - 38, 45

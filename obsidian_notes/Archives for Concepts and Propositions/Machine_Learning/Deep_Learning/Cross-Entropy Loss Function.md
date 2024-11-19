@@ -68,6 +68,7 @@ date of note: 2024-08-24
 - [[Likelihood Function]]
 
 
+
 ## Cross Entropy via Maximum Likelihood Estimation
 
 >[!important]
@@ -83,6 +84,13 @@ date of note: 2024-08-24
 
 - [[Empirical Process and Empirical Measure]]
 - [[Maximum Likelihood Estimation]]
+
+## Perplexity
+
+![[Perplexity#^5aafa3]]
+
+- [[Perplexity]]
+
 
 ## Examples
 
@@ -112,6 +120,8 @@ date of note: 2024-08-24
 >$$
   
 - Wikipedia [Multinomial_distribution](https://en.wikipedia.org/wiki/Multinomial_distribution)
+
+
 
 
 
