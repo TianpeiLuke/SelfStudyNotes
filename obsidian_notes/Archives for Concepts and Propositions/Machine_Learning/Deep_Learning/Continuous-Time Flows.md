@@ -103,6 +103,57 @@ date of note: 2024-08-16
 
 - [[Matrix CookBook by Petersen]]
 
+### Continuous Flow for Stochastic Process
+
+>[!important] Definition
+>Let $\{X(t): t\in [0,T]\}$ be a *stochastic process* in $\mathbb{R}^{d}$, and for each $\omega\in \Omega$, the *sample path* $$x(t) := X(t, \omega), \quad \omega \in \Omega$$ is a solution of the ODE
+>$$\left\{
+>\begin{align}
+> \frac{d}{dt} x(t) &= F(x(t), t) \\[5pt] 
+> x(0) &= z
+>\end{align}
+>\right.
+>$$
+>where 
+>- $$F: \mathbb{R}^{d} \times [0,T] \to \mathbb{R}^{d}$$ is *Lipschitz continuous* in $x$ and *continuous* in $t$
+>- $$z := Z(\omega)\in \mathbb{R}^{d}$$ is a sample at $t=0$.
+>
+>The *continuous flow* is defined as the mapping $f_{t}: \mathbb{R}^{d} \to \mathbb{R}^{d}$ such that $$f_{t}(x(0)) = f(x(0), t) = x(t), \quad \forall t\in [0,T]$$
+>
+>According to the *change of variable formula*, the **log probability density function of state** $x(t)$ is given by
+>$$
+>\log p(x(t)) = \log p(x(0)) - L(t) 
+>$$
+>where $L(t)$ is the *log-determinant of Jacobian of flow map*
+>$$
+>L(t) := \log \,\lvert \det D_{x} f(\cdot; t)(x(t)) \rvert
+>$$
+>
+>Thus the **differential equation** that describes the *dynamic* of *log probability density function of state* $p(x(t))$ as follows
+>$$
+>\left\{
+>\begin{align}
+> \frac{d}{dt} \log p(x(t)) &= - \text{tr}\left[(D_{x}F(\cdot, t))\,(x(t))\right] \\[5pt] 
+> x(0) &= Z
+>\end{align}
+>\right.
+>$$
+>where $$Z\sim p(x(0))$$
+
+- [[Stochastic Process]]
+- [[Push-forward Measure and Push-forward Operator]]
+
+>[!info]
+>$$
+>\begin{align*}
+>\log p(x(t)) &= \log p(x(0)) - L(t) \\[10pt]
+> \frac{d}{dt}\log p(x(t)) &= - \frac{d}{dt} L(t) \\[10pt]
+> &= - \text{tr}\left[(D_{x}F(\cdot, t))\,(x(t))\right] 
+>\end{align*}
+>$$
+>where the last equality is based on previous ODE for *log-det of Jacobian of flow* $L(t)$
+
+
 
 ## Explanation
 
