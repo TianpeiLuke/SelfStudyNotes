@@ -118,7 +118,7 @@ date of note: 2024-08-16
 >- $$F: \mathbb{R}^{d} \times [0,T] \to \mathbb{R}^{d}$$ is *Lipschitz continuous* in $x$ and *continuous* in $t$
 >- $$z := Z(\omega)\in \mathbb{R}^{d}$$ is a sample at $t=0$.
 >
->The *continuous flow* is defined as the mapping $f_{t}: \mathbb{R}^{d} \to \mathbb{R}^{d}$ such that $$f_{t}(x(0)) = f(x(0), t) = x(t), \quad \forall t\in [0,T]$$
+>The *continuous flow* is defined as the *diffeomorphism*  $f_{t}: \mathbb{R}^{d} \to \mathbb{R}^{d}$ such that $$x(t) = f_{t}(x(0)) = f(x(0), t), \quad \forall t\in [0,T]$$
 >
 >According to the *change of variable formula*, the **log probability density function of state** $x(t)$ is given by
 >$$
@@ -129,7 +129,7 @@ date of note: 2024-08-16
 >L(t) := \log \,\lvert \det D_{x} f(\cdot; t)(x(t)) \rvert
 >$$
 >
->Thus the **differential equation** that describes the *dynamic* of *log probability density function of state* $p(x(t))$ as follows
+>Thus the follwing **differential equation** describes the *dynamic* of *log-probability density function* of *state* $X(t)$ 
 >$$
 >\left\{
 >\begin{align}
@@ -141,7 +141,9 @@ date of note: 2024-08-16
 >where $$Z\sim p(x(0))$$
 
 - [[Stochastic Process]]
+- [[Coordinate Representation of Pullback of k-Forms]]
 - [[Push-forward Measure and Push-forward Operator]]
+- [[Hamiltonian Monte Carlo]]
 
 >[!info]
 >$$
