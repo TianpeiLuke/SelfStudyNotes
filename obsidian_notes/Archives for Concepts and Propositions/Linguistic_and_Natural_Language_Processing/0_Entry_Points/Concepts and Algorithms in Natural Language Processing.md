@@ -14,9 +14,13 @@ date of note: 2024-09-13
 
 - [[Concepts and Algorithms in Computational Linguistics]]
 
-### Tokenziation
+### Tokenziation and Text Preprocessing
 
-- [[Tokenization of Words]]
+- [[Regular Expression Pattern Basics]]
+- [[Regular Expression Advanced Operations]]
+- [[Word Basic Concepts]]
+- [[Corpora and NLP Dataset Format]]
+- [[Tokenization of Words and Subwords]]
 
 ### N-Gram Models
 

@@ -1,15 +1,16 @@
 ---
 tags:
   - book
+  - natural_language_processing
 aliases:
-  - "jm3"
-year: 2024 
+  - jm3
+year: 2024
 name: "Speech and language processing: An introduction to natural language processing, computational linguistics, and speech recognition with language models"
-authors: "Daniel Jurafsky, James H. Martin"
+authors: Daniel Jurafsky, James H. Martin
 publication: ""
-type: "book"
+type: book
 DOI: ""
-date of note: 2024-11-17 
+date of note: 2024-11-17
 ---
 
 > [!Cite]  
@@ -39,3 +40,4 @@ date of note: 2024-11-17
   
 
 - [[Foundations of Statistical Natural Language Processing by Manning]]
+- [[Handbook of Natural Language Processing by Indurkhya]]

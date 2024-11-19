@@ -46,3 +46,4 @@ date of note: 2024-10-25
 ## Reference
   
 - [[Speech and Language Processing by Jurafsky]]
+- [[Handbook of Natural Language Processing by Indurkhya]]

@@ -10,9 +10,16 @@ date of note: 2024-09-13
 
 ## List of Concepts
 
+### Word
+
+- [[Word Basic Concepts]]
+
+
+### Lexical Analysis
+
+- [[Lexical Analysis]]
 
 ### Part of Speech and Name Entities
-
 
 - [[Name Entity Recognition]]
 
