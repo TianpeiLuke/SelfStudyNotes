@@ -15,6 +15,13 @@ date of note: 2024-06-12
 >**Name**: 
 
 
+- [[Stopping Time of Markov Chain]]
+- [[Stopping Time of Filtration]]
+
+- [[Weak Optional Sampling Theorem]]
+- [[Doob Optional Sampling Theorem]]
+- [[Doob Maximal Inequality]]
+
 
 ## Explanation
 
@@ -27,7 +34,9 @@ date of note: 2024-06-12
 
 - [[Bellman Optimality Equation for MDP]]
 
-- [[Stopping Time of Markov Chain]]
-- [[Stopping Time of Filtration]]
+
 - [[Stochastic Differential Equations]]
 - [[Markov Chain and Markov Process]]
+
+- [[Dynamic Programming and Optimal Control by Bertsekas]] pp 176
+- [[Bandit Algorithms by Lattimore]] pp 40

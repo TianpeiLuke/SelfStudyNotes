@@ -69,5 +69,7 @@ date of note: 2024-06-15
 - [[Optimal Transport in Space of Measures]]
 - [[Wasserstein Space]]
 
+
 - [[Partial Differential Equations by Evans]]
 - [[Optimal Transport for Applied Mathematicians by Santambrogio]]
+- [[Dynamic Programming and Optimal Control by Bertsekas]] pp 109 - 115
