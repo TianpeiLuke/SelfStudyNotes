@@ -35,6 +35,14 @@ date of note: 2024-11-19
 - [[Knapscak Problem]]
 
 
+### Flow and Shortest Path
+
+- [[Graph]]
+- [[Network and Flow and Capacity and Cut]]
+
+- [[A-star Heuristic Search]]
+
+
 ### Martingale and Optimal Stopping
 
 - [[Martingale]]
@@ -86,7 +94,7 @@ date of note: 2024-11-19
 
 - [[Algorithm Design Manual by Skiena]] pp 307, 474, 498, 556, 599, 633, 706
 - [[Introduction to Algorithms by Cormen]] pp 359–413
-
+- [[Dynamic Programming and Optimal Control by Bertsekas]]
 
 - [[Markov Decision Processes by Puterman]] pp 82, 92-99, 158
 - [[Reinforcement Learning An Introduction by Sutton]] pp 62 - 67, 73 - 90

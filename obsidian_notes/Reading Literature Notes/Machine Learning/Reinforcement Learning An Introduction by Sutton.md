@@ -60,6 +60,6 @@ date of note: 2024-05-07
 
 - [[Distributional Reinforcement Learning by Bellemare]]
 
-
+- [[Dynamic Programming and Optimal Control by Bertsekas]]
 - [[Markov Decision Processes by Puterman]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]

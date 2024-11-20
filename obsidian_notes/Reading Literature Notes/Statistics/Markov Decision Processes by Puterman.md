@@ -48,3 +48,4 @@ date of note: 2024-07-12
   
 - [[Reinforcement Learning An Introduction by Sutton]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]
+- [[Dynamic Programming and Optimal Control by Bertsekas]]

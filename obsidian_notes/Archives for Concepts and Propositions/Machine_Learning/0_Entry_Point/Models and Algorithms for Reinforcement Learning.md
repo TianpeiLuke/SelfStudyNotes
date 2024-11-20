@@ -188,7 +188,7 @@ date of note: 2024-06-01
 - [[Concepts and Theorems for Markov Process]]
 
 
-
+- [[Dynamic Programming and Optimal Control by Bertsekas]]
 - [[Foundations of Machine Learning by Mohri]]
 - [[Understanding Machine Learning by Shalev-Shwartz]]
 - [[Reinforcement Learning An Introduction by Sutton]]
