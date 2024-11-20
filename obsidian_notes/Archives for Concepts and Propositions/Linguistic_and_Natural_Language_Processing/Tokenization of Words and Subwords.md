@@ -28,6 +28,25 @@ date of note: 2024-11-17
 
 ### Top-down Tokenization via Rules
 
+>[!important] Definition
+>The **top-down tokenization** used *predefined rules* to segment text. 
+>- It covert *punctuations* (e.g. `\s`) to a new line `\n` to break off punctuation into separate tokens.
+>	- We often want to keep punctuations *within word* e.g. `m.p.h`, `Ph.D`, `AT&T`
+>	- Some punctuation marks are used as *units* for *prices*, *numbers* etc. `$120`, `01/02/06`
+>	- Some regular expression such as *emails*, *URLs*, *hashtags* contains punctuations not separable. 
+>- Collapse all *upper cases* to *lower cases*
+>- The **number expressions** introduce complexities. 
+>	- *comma* may appear inside numbers such as `120,000`
+>- The *tokenization rule* is **language dependent**.
+>	- German, Spanish, French use a *comma* to mark the *decimal point* 
+>	- It uses *spaces* where the English uses *commas*.
+>	- It is more complex for Chinese, Japanese and Thai etc as they do not use spaces to mark potential word boundaries
+>	- Japanese and Thai need additional **word segmentation**. 
+>- The tokenization rule need to expand the **clitic contractions** that are marked by apostrophes, e.g. `what're`, `you'd` 
+>	- A **clitic** is a part of a word that *can’t stand on its own*, and can only occur when it is *attached* to another word.
+>	- Such contractions occur in other alphabetic languages, including *French pronouns* `j'ai`, or `l'homme`
+>- In some applications, tokenization algorithm would group a *multi-word expression* into a single token., e.g. `New York`, `rock 'n' roll`
+>	- This requires additional **name entity recognition.**
 
 - [[Regular Expression Pattern Basics]]
 - [[Regular Expression Advanced Operations]]
@@ -35,15 +54,62 @@ date of note: 2024-11-17
 >[!important] Definition
 >One commonly used tokenization standard is known as the **Penn Treebank tokenization** standard.
 
+>[!quote]
+>In practice, since tokenization is run *before* any other language processing, it needs to be very **fast**. 
+>
+>For word tokenziation we generally use **deterministic algorithms** based on *regular expressions* compiled into efficient *finite state automata*.
+>
+>Carefully designed *deterministic algorithms* can deal with the ambiguities that arise.
+>
+>-- [[Speech and Language Processing by Jurafsky]] pp 19
+
+- [[Regular Expression Pattern Basics]]
+- [[Regular Expression Advanced Operations]]
 
 ### Bottom-Up Tokenization via Learning
 
+>[!important] Definition
+>The **bottom-up tokenization** uses the data to learn how to define the token.
+>- It mitigates the **unknown word problem**, i.e. a word appears in *test corpus* but not appear in *training corpus*.
 
+>[!important] Definition
+>The modern tokenizer automatically induce sets of tokens that include tokens *smaller than words*, called **subwords**.
+>- Subwords can be arbitrary *substrings*, 
+>- or they can be *meaning-bearing units* like the **morphemes**. e.g. `-est`, `-er`, `-able`, `un-`
+
+- [[Morphology]]
+
+>[!important] Definition
+>Most *tokenization schemes* have two parts: 
+>- **Token learner**
+>	- It takes a raw *training corpus* (sometimes roughly *pre-separated* into words, for example by whitespace) 
+>	- and induces a **vocabulary**, a set of *tokens*. 
+>- **Token segmenter** 
+>	- takes a raw *test sentence* 
+>	- and *segments* it into the tokens *in the vocabulary*.
+
+^e9eebb
+
+>[!example]
+>The most commonly used tokenization algorithms are
+>- **Byte-Pari Encoding (BPE)**
+>	- The BPE token learner begins BPE with a vocabulary that is just the set of all *individual characters*. 
+>	- It then examines the training corpus, chooses the *two symbols* that are *most frequently adjacent*
+>	- and adds a new merged symbol into the *vocabulary*
+>	- and *replaces* every adjacent given symbols in the corpus with the new merged symbol.
+>	- It continues to *count and merge*, creating new longer and longer character strings, *until* $k$ merges have been done creating $k$ novel tokens.
+>	- The resulting vocabulary consists of the *original set* of characters *plus* $k$ *new symbols*.
+>	- This algorithm usually run *inside words*, i.e. not merging word boundaries.
+>	- The *token segmenter* just runs on the merges we have learned from the training data on the test data. 
+>		- It runs them *greedily*, in the order we learned them.
+>- **Unigram Language Modeling**
 
 - [[Byte-Pair Encoding or BPE as Tokenization]]
 - [[Unigram Language Modeling as Tokenization and SentencePiece]]
 
+
 ## Explanation
+
 
 
 

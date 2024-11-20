@@ -59,13 +59,37 @@ date of note: 2024-09-13
 
 ### Vector Semantics
 
+#### Lexical Semantics
+
+- [[Lexical Semantics]]
+- [[Word Association and Relatedness]]
+
+#### Vector Space Model and Information Retrieval
+
+- [[Vector Semantics and Distributional Hypothesis]]
+- [[Co-Occurrence Matrix]]
 - [[Bag-of-Words for Text Representation]]
 - [[Vector Space Model for Text Representation]]
+- [[Cosine Similarity and Cosine Distance]]
+- [[Term Frequency and Inverse Document Frequency or TF-IDF]]
+- [[Pointwise Mutual Information]]
+
+#### Word Embedding and Word2Vec Dense Representation
+
 - [[Word Embedding]]
 - [[Skip-Gram Algorithm for Word Embedding]]
 - [[Contiuous-Bag-of-Words Algorithm for Word Embedding]]
 - [[Word2Vec Algorithm for Word Embedding]]
+- [[Word Embedding Semantic Properties]]
+- [[Word Embedding Evaluation and Datasets]]
+
+#### Topic Models
+
+- [[Semantic Field and Topics]]
 - [[Topic Models]]
+- [[Multinomial Principle Component Analysis]]
+- [[Probabilistic Latent Semantic Analysis]]
+- [[Latent Dirichlet Allocation]]
 
 
 ### Machine Learning Models
@@ -121,7 +145,7 @@ date of note: 2024-09-13
 - [[Reinforcement Learning with Human Feedbacks]]
 
 
-### Text Classification, 
+### Text Classification
 
 - [[Encoder-Decoder Sequence-to-Sequence Architecture]]
 - [[Part-of-Speech Tagging]]

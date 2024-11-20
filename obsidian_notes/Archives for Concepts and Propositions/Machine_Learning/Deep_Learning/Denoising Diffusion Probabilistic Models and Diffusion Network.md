@@ -539,6 +539,9 @@ date of note: 2024-05-12
 
 ![[generative_learning_trilemma.png]]
 
+- [[Normalizing Flows]]
+- [[Generative Adversarial Network]]
+- [[Variational Auto-Encoder]]
 
 ## Variational Auto-encoder
 

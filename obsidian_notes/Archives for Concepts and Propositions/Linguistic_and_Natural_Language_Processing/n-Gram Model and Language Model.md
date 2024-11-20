@@ -29,6 +29,7 @@ date of note: 2024-09-08
 >- We also use the **n-gram model** to estimate the probability of a given word, given *previous $n-1$ words* $$p(w_{n} \,|\,w_{n-1}\,{,}\ldots{,}\,w_{1}) = \frac{p(w_{n},\,w_{n-1}\,{,}\ldots{,}\,w_{1})}{p(w_{n-1}\,{,}\ldots{,}\,w_{1})}$$ 
 
 - [[Autoregressive Models]]
+- [[Tokenization of Words and Subwords]]
 
 
 ### Maximum Likelihood Estimation of Joint Probability

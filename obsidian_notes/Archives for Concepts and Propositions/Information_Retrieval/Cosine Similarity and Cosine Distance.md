@@ -53,5 +53,8 @@ date of note: 2024-09-09
 
 - [[Cauchy-Schwartz Inequality]]
 - [[Error Function or Loss Function for Deep Learning]]
+
+- [[Introduction to Information Retrieval by Manning]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 18
+- [[Speech and Language Processing by Jurafsky]] pp 110
 - Wikipedia [Cosine_similarity](https://en.wikipedia.org/wiki/Cosine_similarity)

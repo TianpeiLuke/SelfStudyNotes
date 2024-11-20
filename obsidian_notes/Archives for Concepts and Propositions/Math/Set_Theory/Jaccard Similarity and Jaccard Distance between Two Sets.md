@@ -71,4 +71,5 @@ date of note: 2024-11-13
 - [[Positive Definite Kernel]]
 
 
+- [[Introduction to Information Retrieval by Manning]]
 - Wikipedia [Jaccard_index](https://en.wikipedia.org/wiki/Jaccard_index)
