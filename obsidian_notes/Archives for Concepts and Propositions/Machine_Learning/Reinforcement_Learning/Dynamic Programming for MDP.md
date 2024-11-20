@@ -85,6 +85,7 @@ date of note: 2024-05-12
 - [[Dynamic Programming Algorithms]]
 
 
+- [[Dynamic Programming by Bellman]]
 - [[Reinforcement Learning An Introduction by Sutton]] pp 62 - 67, 73 - 90
 - [[Distributional Reinforcement Learning by Bellemare]] pp 116, 266, 135
 - [[Markov Decision Processes by Puterman]]

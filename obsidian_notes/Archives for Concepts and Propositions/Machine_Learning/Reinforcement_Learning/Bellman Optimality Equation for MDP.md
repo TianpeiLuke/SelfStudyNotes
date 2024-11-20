@@ -169,6 +169,7 @@ date of note: 2024-05-12
 - [[Markov Decision Process]]
 
 
+- [[Dynamic Programming by Bellman]]
 - [[Reinforcement Learning An Introduction by Sutton]] pp 62 - 67
 - [[Markov Decision Processes by Puterman]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 1121

@@ -9,14 +9,14 @@ tags:
   - optimization/theory
 keywords: 
 topics: 
-name: 
+name: Dynamic Programming Algorithms
 date of note: 2024-11-19
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Dynamic Programming Algorithms
 
 
 
@@ -85,6 +85,21 @@ date of note: 2024-11-19
 - [[CKY Parsing as Dynamic Programming Algorithm]]
 
 
+### Multi-Stage Games
+
+- [[Backward Induction and Dynamic Programming]]
+- [[Sequential Game Play and Sequential Rationality]]
+- [[Extensive-Form Game]]
+- [[Finitely Repeated Games]]
+- [[Infinitely Repeated Games]]
+
+### Calculus of Variations
+
+- [[Lagrangian Function in Mechanics and Variational Calculus]]
+- [[Hamiltonian Function in Mechanic and Variational Calculus]]
+- [[Hamilton-Jacobi-Bellman Equation]]
+
+
 
 -----------
 ##  Recommended Notes and References
@@ -92,6 +107,7 @@ date of note: 2024-11-19
 
 - [[Game Theory An Introduction by Tadelis]] pp 26
 
+- [[Dynamic Programming by Bellman]]
 - [[Algorithm Design Manual by Skiena]] pp 307, 474, 498, 556, 599, 633, 706
 - [[Introduction to Algorithms by Cormen]] pp 359–413
 - [[Dynamic Programming and Optimal Control by Bertsekas]]

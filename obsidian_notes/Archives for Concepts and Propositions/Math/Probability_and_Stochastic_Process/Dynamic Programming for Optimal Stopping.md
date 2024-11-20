@@ -38,5 +38,6 @@ date of note: 2024-06-12
 - [[Stochastic Differential Equations]]
 - [[Markov Chain and Markov Process]]
 
+- [[Dynamic Programming by Bellman]]
 - [[Dynamic Programming and Optimal Control by Bertsekas]] pp 176
 - [[Bandit Algorithms by Lattimore]] pp 40

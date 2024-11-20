@@ -41,6 +41,7 @@ date of note: 2024-11-19
 ## Reference
 
 
+- [[Dynamic Programming by Bellman]]
 - [[Algorithm Design Manual by Skiena]]
 - [[Introduction to Algorithms by Cormen]]
 - [[Reinforcement Learning An Introduction by Sutton]]

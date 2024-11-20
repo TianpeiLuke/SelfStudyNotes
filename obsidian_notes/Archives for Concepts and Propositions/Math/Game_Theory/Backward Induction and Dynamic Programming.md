@@ -30,4 +30,6 @@ date of note: 2024-08-04
 - [[Sequential Decision Process]]
 - [[Statistical Decision Problem]]
 
+
+- [[Dynamic Programming by Bellman]]
 - [[Game Theory An Introduction by Tadelis]] pp 26
