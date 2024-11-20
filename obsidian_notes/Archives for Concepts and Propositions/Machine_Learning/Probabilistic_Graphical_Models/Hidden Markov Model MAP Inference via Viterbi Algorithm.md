@@ -142,3 +142,4 @@ date of note: 2024-09-01
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 480
 - [[Elements of Statistical Learning by Hastie]]
 - [[Artificial Intelligence Modern Approach by Russell]]
+- [[Speech and Language Processing by Jurafsky]] pp 373

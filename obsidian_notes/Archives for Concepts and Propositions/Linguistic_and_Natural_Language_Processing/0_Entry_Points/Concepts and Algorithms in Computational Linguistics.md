@@ -34,26 +34,67 @@ date of note: 2024-09-13
 
 ### Part of Speech and Name Entities
 
+- [[Part-of-Speech Nouns and Verbs]]
+- [[Part-of-Speech Adjectives]]
+- [[Part-of-Speech Adverb]]
+- [[Part-of-Speech Propositions]]
+- [[Part-of-Speech Interjections]]
+- [[Part-of-Speech Particle and Phrasal Verb]]
+- [[Part-of-Speech Determiners and Articles]]
+- [[Part-of-Speech Conjunctions]]
+- [[Part-of-Speech Pronouns]]
+- [[Part-of-Speech Auxiliary]]
+- [[Part-of-Speech Noun Phrase and Verb Phrase]]
+
+- [[Part-of-Speech Ambiguity]]
+- [[Part-of-Speech Tagging]]
 - [[Name Entity Recognition]]
+
+- [[Hidden Markov Model]]
+- [[Hidden Markov Model MAP Inference via Viterbi Algorithm]]
+- [[Hidden Markov Model Inference via Forward-Backward Algorithm]]
+
+- [[Conditional Random Field]]
 
 
 ### Constituency Parsing
 
 - [[Constituency Parsing]]
 - [[Context-Free Grammars]]
+- [[Constituency Parse Tree]]
+- [[Penn Treebank]]
+- [[Strong and Weak Grammar Equivalence]]
+- [[Chomsky Normal Form for Word Constituency]]
+- [[CKY Parsing as Dynamic Programming Algorithm]]
+- [[Span-Based Neural Constituency Parsing]]
 
 
 ### Dependency Parsing
 
+- [[Dependency Relations between Word Phrases]]
 - [[Dependency Parsing]]
+- [[Dependency Parsing Tree and Projectivity]]
+- [[Transition-Based Dependency Parsing]]
+- [[Transition-Based Dependency Parsing Beam Search]]
+- [[Transition-Based Dependency Parsing Neural Network Models]]
+- [[Graph-Based Dependency Parsing]]
 
 
 ### Semantics, Affect, Connotation
 
+- [[Connotations of Word and Sentiment]]
 - [[Semantic Role Labeling]]
 
 
+### Coreference Resolution
 
+- [[Coreference Resolution]]
+- [[Discourse Model for Coreference Resolution]]
+
+### Discourse Coherence
+
+- [[Discourse Coherence]]
+- [[Discourse Structure Parsing]]
 
 
 

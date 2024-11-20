@@ -28,12 +28,12 @@ date of note: 2024-09-08
 ##  Recommended Notes and References
 
 
-- [[Word Embedding]]
-- [[Topic Models]]
-- [[Multinomial Naive Bayes Model]]
-- [[Multinomial Principle Component Analysis]]
-- [[Probabilistic Latent Semantic Analysis]]
-- [[Latent Dirichlet Allocation]]
+- [[Part-of-Speech Ambiguity]]
+- [[Hidden Markov Model]]
+- [[Conditional Random Field]]
 
-- Daniel Jurafsky and James H. Martin. 2024. *Speech and Language Processing: An Introduction to Natural Language Processing, Computational Linguistics, and Speech Recognition with Language Models*, 3rd edition
+
+
+
+- [[Speech and Language Processing by Jurafsky]] pp 365
 - [[Foundations of Statistical Natural Language Processing by Manning]] pp 341

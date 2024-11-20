@@ -89,3 +89,4 @@ date of note: 2024-05-12
 - [[Gaussian Processes for Machine Learning by Rasmussen]] pp 102
 - [[Elements of Statistical Learning by Hastie]]
 - [[Artificial Intelligence Modern Approach by Russell]]
+- [[Speech and Language Processing by Jurafsky]] pp 370 - 373

@@ -25,5 +25,9 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
+- [[Dependency Parsing]]
 
-- [[Speech and Language Processing by Jurafsky]] pp 501 - 503
+- [[Minimum Spanning Tree Problem]]
+- [[Graph]]
+
+- [[Speech and Language Processing by Jurafsky]] pp 425 - 427

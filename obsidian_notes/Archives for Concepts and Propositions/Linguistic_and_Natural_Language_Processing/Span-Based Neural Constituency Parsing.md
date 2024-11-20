@@ -25,5 +25,8 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
+- [[Constituency Parsing]]
+- [[Artificial Neural Network and Deep Learning]]
 
-- [[Speech and Language Processing by Jurafsky]] pp 501 - 503
+
+- [[Speech and Language Processing by Jurafsky]] pp 403

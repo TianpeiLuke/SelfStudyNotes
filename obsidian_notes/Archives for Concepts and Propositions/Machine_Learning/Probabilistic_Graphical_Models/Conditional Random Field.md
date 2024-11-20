@@ -15,6 +15,10 @@ date of note: 2024-05-12
 >**Name**: 
 
 
+- [[Markov Network on Undirected Graph]]
+- [[Exponential Family of Distributions]]
+- [[Log-Partition Function and Score Function of Graphical Models]]
+
 
 ## Explanation
 
@@ -25,6 +29,10 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
+- [[Part-of-Speech Tagging]]
+
+
 - [[Probabilistic Graphical Models by Koller]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]
 - [[Elements of Statistical Learning by Hastie]]
+- [[Speech and Language Processing by Jurafsky]] pp 376

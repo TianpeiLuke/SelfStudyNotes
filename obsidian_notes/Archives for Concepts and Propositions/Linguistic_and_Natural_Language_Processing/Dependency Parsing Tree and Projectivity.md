@@ -25,5 +25,9 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
+- [[Dependency Parsing]]
+- [[Dependency Relations between Word Phrases]]
+- [[Tree Graph and Forest]]
+- [[Graph]]
 
-- [[Speech and Language Processing by Jurafsky]] pp 501 - 503
+- [[Speech and Language Processing by Jurafsky]] pp  412 - 415
