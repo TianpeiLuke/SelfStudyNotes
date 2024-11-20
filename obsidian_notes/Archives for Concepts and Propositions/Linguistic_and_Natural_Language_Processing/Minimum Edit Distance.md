@@ -29,5 +29,6 @@ date of note: 2024-11-17
 
 
 - [[Text Normalization]]
+- [[Dynamic Programming Algorithms]]
 
 - [[Speech and Language Processing by Jurafsky]] pp 25

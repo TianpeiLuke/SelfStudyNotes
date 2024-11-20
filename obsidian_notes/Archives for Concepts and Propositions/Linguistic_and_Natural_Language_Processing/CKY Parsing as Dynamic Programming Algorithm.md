@@ -27,6 +27,7 @@ date of note: 2024-05-12
 
 - [[Constituency Parsing]]
 - [[Chomsky Normal Form for Word Constituency]]
+- [[Dynamic Programming Algorithms]]
 
 
 - [[Speech and Language Processing by Jurafsky]] pp 397 - 405

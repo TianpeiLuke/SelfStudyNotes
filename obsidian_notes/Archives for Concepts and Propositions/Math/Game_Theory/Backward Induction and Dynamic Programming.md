@@ -24,7 +24,7 @@ date of note: 2024-08-04
 -----------
 ##  Recommended Notes and References
 
-
+- [[Dynamic Programming Algorithms]]
 - [[Dynamic Programming for MDP]]
 
 - [[Sequential Decision Process]]

@@ -229,6 +229,7 @@ date of note: 2024-05-12
 >[!info]
 >The message passing algorithm is a **dynamic programming** *implementation* of the sum-product variable elimination.
 
+- [[Dynamic Programming Algorithms]]
 - [[Sum-Product Variable Elimination]]
 
 >[!important]

@@ -224,6 +224,8 @@ date of note: 2024-05-12
 >[!info]
 >This is a version of dynamic programming.
 
+- [[Dynamic Programming Algorithms]]
+
 ## Automatic Differentiation of Vector-valued Function
 
 >[!important]

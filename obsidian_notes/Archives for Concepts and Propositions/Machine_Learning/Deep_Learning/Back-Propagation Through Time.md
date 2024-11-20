@@ -54,6 +54,7 @@ date of note: 2024-08-31
 
 - [[Recurrent Neural Network]]
 - [[Cross-Entropy Loss Function]]
+- [[Dynamic Programming Algorithms]]
 
 
 ## Explanation

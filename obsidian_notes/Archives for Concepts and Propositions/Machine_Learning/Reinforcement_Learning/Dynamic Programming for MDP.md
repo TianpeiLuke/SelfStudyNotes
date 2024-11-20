@@ -82,6 +82,7 @@ date of note: 2024-05-12
 - [[Dynamic Programming for Optimal Stopping]]
 - [[Value Function and Bellman Equation for MDP]]
 - [[Markov Decision Process]]
+- [[Dynamic Programming Algorithms]]
 
 
 - [[Reinforcement Learning An Introduction by Sutton]] pp 62 - 67, 73 - 90
