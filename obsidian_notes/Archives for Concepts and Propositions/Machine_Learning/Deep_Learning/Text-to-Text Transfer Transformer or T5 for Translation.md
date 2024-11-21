@@ -6,40 +6,21 @@ tags:
   - deep_learning/large_language_models
   - natural_language_processing/large_language_models
 keywords:
-  - bert_transformer
+  - t5_transformer
 topics:
   - deep_learning/models
   - natural_language_processing/large_language_models
-name: Bidirectional Encoder Representation from Transformer or BERT
+name: Text-to-Text Transfer Transformer or T5 for Translation
 date of note: 2024-10-21
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Bidirectional Encoder Representation from Transformer or BERT
+>**Name**: Text-to-Text Transfer Transformer or T5 for Translation
 
 
-### BERT Architecture
-
-
-![[bert_input_represntation.png]]
-
-
-
-![[bert.png]]
-
-
-### Tokenization
-
-![[WordPiece Tokenization#^7acc64]]
-
-- [[WordPiece Tokenization]]
-
-
-### Pre-Training
-
-#### Task 1: Masked Language Model (MLM)
+### Architecture
 
 
 
@@ -49,11 +30,7 @@ date of note: 2024-10-21
 
 
 
-#### Task 2: Next Sentence Prediction (NSP)
 
-
-
-### Supervised Fine-Tuning
 
 
 
@@ -62,15 +39,6 @@ date of note: 2024-10-21
 
 ## Dataset in Experiment
 
-### General Language Understanding Evaluation (GLUE) benchmark
-
-
-
-### Stanford Question Answering Dataset (SQuAD v1.1 and v2.0)
-
-
-
-### Situations with Adversarial Generations (SWAG)
 
 
 
@@ -84,10 +52,12 @@ date of note: 2024-10-21
 - [[Attention Mechanism in Neural Network]]
 - [[Transformer Network]]
 - [[Large Language Model and Pretrained Language Models]]
+- [[Encoder-Decoder Sequence-to-Sequence Architecture]]
+
 - [[Generative Pre-trained Transformer or GPT]]
+- [[Bidirectional Encoder Representation from Transformer or BERT]]
 
 - [[Bidirectional Recurrent Neural Network]]
 - [[Artificial Neural Network and Deep Learning]]
 
-- [[devlinBERTPretrainingDeep2019]]
-- [[liuRoBERTaRobustlyOptimized2019]]
+- [[raffelExploringLimitsTransfer2020]]

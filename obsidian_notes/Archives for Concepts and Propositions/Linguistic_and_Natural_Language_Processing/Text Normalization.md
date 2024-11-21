@@ -27,7 +27,7 @@ date of note: 2024-11-17
 ### Tokenization
 
 - [[Tokenization of Words and Subwords]]
-- [[Byte-Pair Encoding or BPE as Tokenization]]
+- [[Byte-Pair Encoding or BPE Tokenization]]
 - [[Unigram Language Modeling as Tokenization and SentencePiece]]
 
 ### Word Normalization

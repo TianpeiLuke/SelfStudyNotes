@@ -108,6 +108,7 @@ date of note: 2024-09-01
 >
 >This is a **dynamic programming algorithm**.
 
+- [[Dynamic Programming Algorithms]]
 - [[Max-Product Belief Propagation for Clique Tree]]
 
 >[!important] Definition

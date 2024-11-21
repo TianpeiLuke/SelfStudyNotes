@@ -72,6 +72,14 @@ date of note: 2024-11-19
 - [[Sum-Product Belief-Update Expectation Propagation Algorithm]]
 
 
+- [[Max-Product Variable Elimination]]
+- [[Max-Product Belief Propagation for Clique Tree]]
+
+- [[Hidden Markov Model]]
+- [[Hidden Markov Model Inference via Forward-Backward Algorithm]]
+- [[Hidden Markov Model MAP Inference via Viterbi Algorithm]]
+
+
 ### Automatic Differentiation
 
 - [[Automatic Differentiation]]
@@ -81,8 +89,10 @@ date of note: 2024-11-19
 
 ### Natural Language Processing
 
-- [[Minimum Edit Distance]]
+- [[Minimum Edit Distance via Dynamic Programming]]
 - [[CKY Parsing as Dynamic Programming Algorithm]]
+
+- [[Unigram Language Modeling as Tokenization and SentencePiece]]
 
 
 ### Multi-Stage Games

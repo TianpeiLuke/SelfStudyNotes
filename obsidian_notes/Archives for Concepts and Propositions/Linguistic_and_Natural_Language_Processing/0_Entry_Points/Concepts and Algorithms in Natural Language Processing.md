@@ -26,7 +26,7 @@ date of note: 2024-09-13
 #### Tokenization
 
 - [[Tokenization of Words and Subwords]]
-- [[Byte-Pair Encoding or BPE as Tokenization]]
+- [[Byte-Pair Encoding or BPE Tokenization]]
 - [[Unigram Language Modeling as Tokenization and SentencePiece]]
 
 #### Word Normalization
@@ -42,7 +42,7 @@ date of note: 2024-09-13
 
 ### Edit Distance
 
-- [[Minimum Edit Distance]]
+- [[Minimum Edit Distance via Dynamic Programming]]
 
 
 ### N-Gram Models

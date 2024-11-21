@@ -34,5 +34,6 @@ date of note: 2024-10-21
 - [[Encoder-Decoder Sequence-to-Sequence Architecture]]
 - [[Bidirectional Encoder Representation from Transformer or BERT]]
 - [[Generative Pre-trained Transformer or GPT]]
+- [[Text-to-Text Transfer Transformer or T5 for Translation]]
 - [[liuRoBERTaRobustlyOptimized2019]]
 - [[touvronLlamaOpenFoundation2023]]

@@ -5,7 +5,8 @@ tags:
 keywords:
   - word_tokenization
   - subword_tokenization
-topics: 
+topics:
+  - natural_language_processing/tokenization
 name: Tokenization of Words and Subwords
 date of note: 2024-11-17
 ---
@@ -71,6 +72,9 @@ date of note: 2024-11-17
 >[!important] Definition
 >The **bottom-up tokenization** uses the data to learn how to define the token.
 >- It mitigates the **unknown word problem**, i.e. a word appears in *test corpus* but not appear in *training corpus*.
+>- It *trains* a **tokenizer** that learns the *merge rule / remove rule* from data, as well as a **vocabulary.**
+
+^bc8d95
 
 >[!important] Definition
 >The modern tokenizer automatically induce sets of tokens that include tokens *smaller than words*, called **subwords**.
@@ -90,26 +94,34 @@ date of note: 2024-11-17
 
 ^e9eebb
 
->[!example]
->The most commonly used tokenization algorithms are
->- **Byte-Pari Encoding (BPE)**
->	- The BPE token learner begins BPE with a vocabulary that is just the set of all *individual characters*. 
->	- It then examines the training corpus, chooses the *two symbols* that are *most frequently adjacent*
->	- and adds a new merged symbol into the *vocabulary*
->	- and *replaces* every adjacent given symbols in the corpus with the new merged symbol.
->	- It continues to *count and merge*, creating new longer and longer character strings, *until* $k$ merges have been done creating $k$ novel tokens.
->	- The resulting vocabulary consists of the *original set* of characters *plus* $k$ *new symbols*.
->	- This algorithm usually run *inside words*, i.e. not merging word boundaries.
->	- The *token segmenter* just runs on the merges we have learned from the training data on the test data. 
->		- It runs them *greedily*, in the order we learned them.
->- **Unigram Language Modeling**
-
-- [[Byte-Pair Encoding or BPE as Tokenization]]
-- [[Unigram Language Modeling as Tokenization and SentencePiece]]
-
-
 ## Explanation
 
+
+
+
+## Algorithm overview
+
+>[!important]
+> In the following sections, we’ll dive into the three main subword tokenization algorithms: 
+> - **BPE** (used by GPT-2 and others), 
+> - **WordPiece** (used for example by BERT), 
+> - and **Unigram** (used by T5 and others).
+> 
+> 
+
+|     Model     |                                    **BPE**                                     |                                                                              **WordPiece**                                                                               |                                               **Unigram**                                               |
+| :-----------: | :----------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------: |
+| **Training**  |     Starts from a *small vocabulary* and learns rules to **merge tokens**      |                                                  Starts from a *small vocabulary* and learns rules to **merge tokens**                                                   |                 Starts from a *large vocabulary* and learns rules to **remove tokens**                  |
+| Training step |         **Merges** the tokens corresponding to the *most common pair*          | **Merges** the tokens corresponding to the pair with the *best score* based on the frequency of the pair, privileging pairs where each individual token is less frequent | **Removes** all the tokens in the vocabulary that will *minimize the loss* computed on the whole corpus |
+|  **Learns**   |                      **Merge rules** and a **vocabulary**                      |                                                                          Just a **vocabulary**                                                                           |                            A **vocabulary** with a **score** for each token                             |
+| **Encoding**  | Splits a word into *characters* and applies the merges learned during training |                     Finds the **longest subword** starting from the beginning that is in the vocabulary, then does the same for the rest of the word                     |          Finds the **most likely split** into tokens, using the scores learned during training          |
+| Example Model |                 [[Generative Pre-trained Transformer or GPT]]                  |                                                    [[Bidirectional Encoder Representation from Transformer or BERT]]                                                     |                       [[Text-to-Text Transfer Transformer or T5 for Translation]]                       |
+
+^217c38
+
+- [[Byte-Pair Encoding or BPE Tokenization]]
+- [[WordPiece Tokenization]]
+- [[Unigram Language Modeling as Tokenization and SentencePiece]]
 
 
 
@@ -125,3 +137,4 @@ date of note: 2024-11-17
 
 
 - [[Speech and Language Processing by Jurafsky]] pp 17
+- Youtube [LLM Tokenizers Explained: BPE Encoding, WordPiece and SentencePiece](https://www.youtube.com/watch?v=hL4ZnAWSyuU)

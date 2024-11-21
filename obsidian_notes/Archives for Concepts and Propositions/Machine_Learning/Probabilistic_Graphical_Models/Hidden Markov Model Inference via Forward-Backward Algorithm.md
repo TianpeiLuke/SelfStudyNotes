@@ -118,6 +118,7 @@ date of note: 2024-05-12
 >This is a **dynamic programming algorithm**.
 
 - [[Sum-Product Belief Propagation Algorithm for Clique Tree]]
+- [[Dynamic Programming Algorithms]]
 
 >[!important]
 >The *forward-backward algorithm* is a **Bayesian smoothing algorithm**.
@@ -137,6 +138,7 @@ date of note: 2024-05-12
 >This is close to **belief update algorithm**.
 
 - [[Sum-Product Belief-Update Message Passing Algorithm for Clique Tree]]
+- [[Dynamic Programming Algorithms]]
 
 ## Fast Implementation
 

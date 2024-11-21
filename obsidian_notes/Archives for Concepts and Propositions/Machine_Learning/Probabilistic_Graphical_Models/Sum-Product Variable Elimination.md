@@ -90,6 +90,7 @@ date of note: 2024-05-12
 >[!info]
 >Note that both [[Sum-Product Belief Propagation Algorithm for Clique Tree]], and [[Sum-Product Belief-Update Expectation Propagation Algorithm]], provide a clique tree ordering for the above variable elimination.
 
+- [[Dynamic Programming Algorithms]]
 
 >[!important] Theorem
 >Let $\mathcal{X}$ be some set of variables, and let $\Phi$ be a set of *factors* such that for each $\phi\in \Phi$, $$\text{scope}[\phi] \subseteq \mathcal{X}.$$

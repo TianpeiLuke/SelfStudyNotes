@@ -36,5 +36,6 @@ date of note: 2024-10-21
 
 - [[Large Language Model and Pretrained Language Models]]
 - [[Bidirectional Encoder Representation from Transformer or BERT]]
+- [[Text-to-Text Transfer Transformer or T5 for Translation]]
 - [[Artificial Neural Network and Deep Learning]]
 
