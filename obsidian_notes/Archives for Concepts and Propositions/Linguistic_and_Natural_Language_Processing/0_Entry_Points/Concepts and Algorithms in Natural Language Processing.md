@@ -67,7 +67,7 @@ date of note: 2024-09-13
 
 #### Vector Space Model and Information Retrieval
 
-- [[Vector Semantics and Distributional Hypothesis]]
+- [[Vector Semantics and Distributional Hypothesis in Linguistic]]
 - [[Co-Occurrence Matrix]]
 - [[Bag-of-Words for Text Representation]]
 - [[Vector Space Model for Text Representation]]

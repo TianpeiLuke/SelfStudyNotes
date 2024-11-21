@@ -25,7 +25,7 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
-- [[Vector Semantics and Distributional Hypothesis]]
+- [[Vector Semantics and Distributional Hypothesis in Linguistic]]
 - [[Word Association and Relatedness]]
 
 - [[Word2Vec Algorithm for Word Embedding]]

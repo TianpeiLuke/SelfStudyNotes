@@ -27,6 +27,6 @@ date of note: 2024-05-12
 
 - [[Word Embedding]]
 - [[Word Embedding Evaluation and Datasets]]
-- [[Vector Semantics and Distributional Hypothesis]]
+- [[Vector Semantics and Distributional Hypothesis in Linguistic]]
 
 - [[Speech and Language Processing by Jurafsky]] pp 124 - 127

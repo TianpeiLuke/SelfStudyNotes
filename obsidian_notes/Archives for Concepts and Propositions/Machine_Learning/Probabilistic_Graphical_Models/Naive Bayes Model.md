@@ -20,6 +20,10 @@ date of note: 2024-08-16
 
 
 
+>[!important] Definition
+>$$\hat{p}(X_{i} | Y) = \frac{C(X_{i}, Y)}{\sum_{j = 1 }^{D}C(X_{j}, Y)}$$
+
+
 - [[Tokenization of Words and Subwords and SentencePiece Tokenization]]
 - [[n-Gram Model and Language Model]]
 
