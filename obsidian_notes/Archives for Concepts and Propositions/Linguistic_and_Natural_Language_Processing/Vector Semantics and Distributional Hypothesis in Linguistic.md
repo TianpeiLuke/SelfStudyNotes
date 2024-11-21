@@ -53,6 +53,7 @@ date of note: 2024-05-12
 
 ### Word2Vec Embedding
 
+- [[Word2Vec Algorithm for Word Embedding]]
 - [[Skip-Gram Algorithm for Word Embedding]]
 - [[Contiuous-Bag-of-Words Algorithm for Word Embedding]]
 
