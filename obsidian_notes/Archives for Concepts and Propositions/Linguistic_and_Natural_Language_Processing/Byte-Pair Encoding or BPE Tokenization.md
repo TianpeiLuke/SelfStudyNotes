@@ -17,11 +17,11 @@ date of note: 2024-11-17
 >[!important]
 >**Name**: Byte-Pair Encoding Tokenization
 
-![[Tokenization of Words and Subwords#^e9eebb]]
+![[Tokenization of Words and Subwords and SentencePiece Tokenization#^e9eebb]]
 
-![[Tokenization of Words and Subwords#^e9eebb]]
+![[Tokenization of Words and Subwords and SentencePiece Tokenization#^e9eebb]]
 
-- [[Tokenization of Words and Subwords]]
+- [[Tokenization of Words and Subwords and SentencePiece Tokenization]]
 
 >[!important]
 > **Byte-Pari Encoding (BPE)**
@@ -317,12 +317,12 @@ def tokenize(text):
 
 ## Other Tokenization
 
-- [[Tokenization of Words and Subwords]]
-- [[Unigram Tokenization and SentencePiece Tokenization]]
+- [[Tokenization of Words and Subwords and SentencePiece Tokenization]]
+- [[Unigram Tokenization]]
 - [[WordPiece Tokenization]]
 
 
-![[Tokenization of Words and Subwords#^217c38]]
+![[Tokenization of Words and Subwords and SentencePiece Tokenization#^217c38]]
 
 
 

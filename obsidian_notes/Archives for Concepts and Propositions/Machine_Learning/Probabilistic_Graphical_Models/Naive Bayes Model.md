@@ -20,7 +20,7 @@ date of note: 2024-08-16
 
 
 
-- [[Tokenization of Words and Subwords]]
+- [[Tokenization of Words and Subwords and SentencePiece Tokenization]]
 - [[n-Gram Model and Language Model]]
 
 ![[naive_bayes_1.png]]

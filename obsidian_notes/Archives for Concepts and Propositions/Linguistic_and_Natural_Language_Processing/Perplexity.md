@@ -41,7 +41,7 @@ date of note: 2024-04-30
 >[!important]
 >the **tokenization procedure** has a direct impact on a model’s perplexity which should always be taken into consideration when comparing different models.
 
-- [[Tokenization of Words and Subwords]]
+- [[Tokenization of Words and Subwords and SentencePiece Tokenization]]
 
 ## Cross Entropy and Relative Entropy
 

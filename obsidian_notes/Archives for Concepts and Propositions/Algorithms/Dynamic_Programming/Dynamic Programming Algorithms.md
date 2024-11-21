@@ -93,7 +93,7 @@ date of note: 2024-11-19
 - [[Minimum Edit Distance via Dynamic Programming]]
 - [[CKY Parsing as Dynamic Programming Algorithm]]
 
-- [[Unigram Tokenization and SentencePiece Tokenization]]
+- [[Unigram Tokenization]]
 
 
 ### Multi-Stage Games

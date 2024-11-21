@@ -7,14 +7,14 @@ keywords:
   - subword_tokenization
 topics:
   - natural_language_processing/tokenization
-name: Tokenization of Words and Subwords
+name: Tokenization of Words and Subwords and SentencePiece Tokenization
 date of note: 2024-11-17
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Tokenization of Words and Subwords
+>**Name**: Tokenization of Words and Subwords and SentencePiece Tokenization
 
 >[!important] Definition
 >The **tokenization** refers to the task of *segmenting* running text into words.
@@ -121,9 +121,27 @@ date of note: 2024-11-17
 
 - [[Byte-Pair Encoding or BPE Tokenization]]
 - [[WordPiece Tokenization]]
-- [[Unigram Tokenization and SentencePiece Tokenization]]
+- [[Unigram Tokenization]]
 
 ![[tokenization_subwords.png]]
+
+
+## SentencePiece Tokenization by Google
+
+>[!quote]
+>SentencePiece is a re-implementation of **sub-word units**, an effective way to alleviate the open vocabulary problems in neural machine translation. SentencePiece supports two segmentation algorithms, **byte-pair-encoding (BPE)** [Sennrich et al.](http://www.aclweb.org/anthology/P16-1162) and **unigram language model** [Kudo.](https://arxiv.org/abs/1804.10959). Here are the high level differences from other implementations.
+>- **The number of unique tokens is predetermined**
+>- **Trains from raw sentences** without pre-tokenization
+>- **Whitespace is treated as a basic symbol** 
+>- **Subword regularization and BPE-dropout**
+>	- **Subword regularization** [Kudo.](https://arxiv.org/abs/1804.10959) and 
+>	- **BPE-dropout** [Provilkov et al](https://arxiv.org/abs/1910.13267) are simple regularization methods that virtually augment training data with on-the-fly subword sampling, which helps to improve the accuracy as well as robustness of NMT models.
+>
+>-- GIthub [Google sentencepiece](https://github.com/google/sentencepiece)
+
+- Kudo, T. (2018). Sentencepiece: A simple and language independent subword tokenizer and detokenizer for neural text processing. _arXiv preprint arXiv:1808.06226_.
+
+
 
 
 

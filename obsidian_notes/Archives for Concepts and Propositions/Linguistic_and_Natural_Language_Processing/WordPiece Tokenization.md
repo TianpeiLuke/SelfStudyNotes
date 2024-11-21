@@ -17,16 +17,16 @@ date of note: 2024-11-17
 >[!important]
 >**Name**: WordPiece Tokenization
 
-![[Tokenization of Words and Subwords#^bc8d95]]
+![[Tokenization of Words and Subwords and SentencePiece Tokenization#^bc8d95]]
 
-![[Tokenization of Words and Subwords#^e9eebb]]
+![[Tokenization of Words and Subwords and SentencePiece Tokenization#^e9eebb]]
 
 ![[Byte-Pair Encoding or BPE Tokenization#^b47474]]
 
 ![[Byte-Pair Encoding or BPE Tokenization#^98ba57]]
 
 - [[Byte-Pair Encoding or BPE Tokenization]]
-- [[Tokenization of Words and Subwords]]
+- [[Tokenization of Words and Subwords and SentencePiece Tokenization]]
 - [[n-Gram Model and Language Model]]
 
 >[!important] Definition
@@ -316,7 +316,7 @@ def encode_word(word):
 >Starting from the word to tokenize, WordPiece finds the **longest subword** that is in the *vocabulary*, then splits on it.
 
 
-![[Tokenization of Words and Subwords#^217c38]]
+![[Tokenization of Words and Subwords and SentencePiece Tokenization#^217c38]]
 
 
 

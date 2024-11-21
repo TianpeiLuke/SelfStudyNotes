@@ -25,10 +25,10 @@ date of note: 2024-09-13
 
 #### Tokenization
 
-- [[Tokenization of Words and Subwords]]
+- [[Tokenization of Words and Subwords and SentencePiece Tokenization]]
 - [[Byte-Pair Encoding or BPE Tokenization]]
 - [[WordPiece Tokenization]]
-- [[Unigram Tokenization and SentencePiece Tokenization]]
+- [[Unigram Tokenization]]
 
 #### Word Normalization
 

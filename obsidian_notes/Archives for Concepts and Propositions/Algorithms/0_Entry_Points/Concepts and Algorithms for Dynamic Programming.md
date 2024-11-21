@@ -79,8 +79,7 @@ date of note: 2024-09-16
 
 - [[Minimum Edit Distance via Dynamic Programming]]
 - [[CKY Parsing as Dynamic Programming Algorithm]]
-
-- [[Unigram Tokenization and SentencePiece Tokenization]]
+- [[Unigram Tokenization]]
 
 
 ### Multi-Stage Games
@@ -90,6 +89,7 @@ date of note: 2024-09-16
 - [[Extensive-Form Game]]
 - [[Finitely Repeated Games]]
 - [[Infinitely Repeated Games]]
+
 
 ### Calculus of Variations
 
