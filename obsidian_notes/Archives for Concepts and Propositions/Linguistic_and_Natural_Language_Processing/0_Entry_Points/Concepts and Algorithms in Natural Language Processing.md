@@ -27,7 +27,8 @@ date of note: 2024-09-13
 
 - [[Tokenization of Words and Subwords]]
 - [[Byte-Pair Encoding or BPE Tokenization]]
-- [[Unigram Language Modeling as Tokenization and SentencePiece]]
+- [[WordPiece Tokenization]]
+- [[Unigram Tokenization and SentencePiece Tokenization]]
 
 #### Word Normalization
 
@@ -138,6 +139,7 @@ date of note: 2024-09-13
 - [[Large Language Model and Pretrained Language Models]]
 - [[Bidirectional Encoder Representation from Transformer or BERT]]
 - [[Generative Pre-trained Transformer or GPT]]
+- [[Text-to-Text Transfer Transformer or T5 for Translation]]
 
 - [[Scaling Law of Large Language Model]]
 - [[Foundational Models for Transfer Learning]]
@@ -155,6 +157,9 @@ date of note: 2024-09-13
 
 ### Machine Translation
 
+
+- [[Transformer Network]]
+- [[Text-to-Text Transfer Transformer or T5 for Translation]]
 
 
 

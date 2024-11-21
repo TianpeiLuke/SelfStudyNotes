@@ -5,23 +5,25 @@ tags:
 keywords:
   - word_tokenization
   - subword_tokenization
+  - sentence_piece_tokenization_unigram
+  - unigram_tokenization
 topics:
   - natural_language_processing/tokenization
-name: Unigram Language Modeling as Tokenization and SentencePiece
+name: Unigram Tokenization and SentencePiece Tokenization
 date of note: 2024-11-17
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Unigram Language Modeling as Tokenization and SentencePiece
+>**Name**: Unigram Tokenization and SentencePiece Tokenization
 
 ### Overview
 
 ![[Tokenization of Words and Subwords#^e9eebb]]
 
 - [[Tokenization of Words and Subwords]]
-- [[n-Gram Model and Language Model]]
+
 
 >[!important] Definition 
 >Compared to BPE and WordPiece, **Unigram** works in the other direction: 
@@ -44,6 +46,7 @@ date of note: 2024-11-17
 >- The tokenization of a word with the Unigram model is then the tokenization with the *highest probability*.
 >
 
+- [[n-Gram Model and Language Model]]
 - [[Multinomial Distribution]]
 - [[Log-Likelihood Score Function and Fisher Score]]
 
@@ -63,15 +66,81 @@ date of note: 2024-11-17
 >	- assign the *weight* $w_{a,b}$ as the *subword probability*
 >- The *Viterbi algorithm* find the **path** in that graph that is going to have the *best score*
 
-
-- [[Hidden Markov Model MAP Inference via Viterbi Algorithm]]
-- [[Dynamic Programming Algorithms]]
 - [[Graph]]
 - [[Paths in Graph and Length of Path]]
 
-### Problem Formulation and Decoding
+### Subword Tokenization via Iterative Algorithm
+
+>[!important] Definition
+>Consider a sequence of *subwords* $x = (x_{1} \,{,}\ldots{,}\,x_{M})$ where $x_{i}$ are statistically independent.
+>- The *probability* of sequence is formulated as the product of marginal probabilies $$p(x_{1} \,{,}\ldots{,}\,x_{M}) = \prod_{i=1}^{M}p(x_{i}), \quad x_{i}\in \mathcal{V}, \forall i$$
+>  
+>The **most probable segmentation** $x^{*}$ is given by maximizing the joint probability of all possible segmentation 
+>$$
+>x^{*} = \arg\max_{x\in \mathcal{S}(C)} p(x)
+>$$   
+>where 
+>- $\mathcal{S}(C)$ is the set of *all possible segmentation candidates* from input sentence $C$. 
+>- This can be seen as a **max-product decoding problem.** We can solve it via the **Viterbi decoding.**
+
+>[!important] Definition
+>Given $\mathcal{V}$, we can estimate $p(x_{i})$ via maximizing the marginal likelihood $$\max L := \max\sum_{s=1}^{|\mathcal{D}|}\log \left(\sum_{x \in \mathcal{S}(C_{s})}p(x)\right)$$ where $\mathcal{D} = \{ C_{s}: s=1\,{,}\ldots{,}\, \}$ is the corpus with $|\mathcal{D}|$ sentences.
+>
+>The **unigram tokenization** estimates the *vocabulary* $\mathcal{V}$ as well as the probability $p(x)$ *iteratively* as follows 
+>- Heuristically make a *reasonably big seed vocabulary* from the training corpus.
+>- Repeat the following steps *until* $|\mathcal{V}|$ reaches a *desired vocabulary size*.
+>	- Fixing the **vocabulary**, optimize the **joint probability** via EM algorithm $$\max L := \max\sum_{s=1}^{|\mathcal{D}|}\log \left(\sum_{x \in \mathcal{S}(C_{s})}p(x)\right)$$
+>		- **M-step**: compute the *most probable segmentation* $$x^{*} = \arg\max_{x\in \mathcal{S}(C)} p(x)$$  via **Viterbi algorithm**
+>		- **E-step**: given the current tokenization, *recompute* the *unigram probabilities* by counting the occurrence of all subwords in the tokenization. 
+>			- Consider the *Bayesian setting* with *Directlet prior*
+>	- Compute the likelihood of **reduction** of $L$ for each subword $x_{i}$ when $x_{i}$ is **removed** from $\mathcal{V}$ $$\Delta L(x_{i}) := L(\mathcal{V}) - L(\mathcal{V} - \{ x_{i} \})$$
+>	- **Sort** the symbols $x_{i}$ according to $\Delta L(x_{i})$
+>	- Keep **top** $\eta \%$ of *subwords*
+>		- Note that we always keep the subwords consisting of a single character to avoid out-of-vocabulary.
+>	 
 
 
+- Kudo, T. (2018). Subword Regularization: Improving Neural Network Translation Models with Multiple Subword Candidates. In I. Gurevych & Y. Miyao (Eds.), _Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)_ (pp. 66–75). Association for Computational Linguistics. [https://doi.org/10.18653/v1/P18-1007](https://doi.org/10.18653/v1/P18-1007)
+- [[Max-Product Variable Elimination]]
+- [[Hidden Markov Model MAP Inference via Viterbi Algorithm]]
+- [[Expectation-Maximization Algorithm]]
+- [[Dynamic Programming Algorithms]]
+
+### Decoding 
+
+>[!quote]
+>If all of the subwords were of the same length, this would be a classic application of the Viterbi algorithm [13]. But alas, life is not so simple. The Viterbi algorithm applies to the following problem
+>> You have some hidden states $z_1 \,{,}\ldots{,}\, z_n$, and you want to transition from $z_{1} \,{\to}\ldots{\to}\,z_{n}$, and you know the _transition matrix_ $A_{i,j}$, giving the probability to go from $z_i^{(1)} \to z_j^{(2)}$, where $i$ and $j$ are the hidden state dimension, and the superscript is the sequence order. All transitions get the same $A$ matrix. You can use **Viterbi** to construct _an_ optimal path
+>
+>The issue is that $A$ is *not between adjacent states*. To understand how this may be a problem, let us represent a simple tokenization procedure diagrammatically.
+>
+>
+>-- Medium blog  [SentencePiece Tokenizer Demystified](https://towardsdatascience.com/sentencepiece-tokenizer-demystified-d0a3aac19b15)
+
+![[tokenization_trie_data_structure_sentencepiece.png]]
+
+>[!quote]
+>- The root node is the *start-of-sequence token* `<sos>`. 
+>- Any time we encounter and `<end>` node, it signifies that everything in the path from `<sos>` to `<end>` is a *valid subword*. 
+>- The root `<sos>` will begin with exactly *one branch for every unique character* in our subword list. 
+>- As we grow the available subwords, we create *more branches* in our trie. 
+>- The **Trie** is going to be the fundamental data structure that our tokenizer uses to store and retrieve subwords.
+>
+>-- Medium blog  [SentencePiece Tokenizer Demystified](https://towardsdatascience.com/sentencepiece-tokenizer-demystified-d0a3aac19b15)
+
+>[!info]
+>More sophisticated algorithms include 
+>- the **Forward-DP Backward-A* algorithm** [15] 
+>- and **Forward-Filtering and Backward-Sampling** algorithm (**FFBS**) [16].
+>  
+>This dynamic programming algorithm is a subset of the **sum-product message passing algorithm** in graphical model.  
+
+- [[Hidden Markov Model Inference via Forward-Backward Algorithm]]
+- [[Sum-Product Belief Propagation Algorithm for Clique Tree]]
+
+- [15] Masaaki Nagata. “A stochastic japanese morphological analyzer using a forward-dp backward-a* nbest search algorithm.” In Proc. of COLING (1994).
+
+- [16] Steven L Scott. “Bayesian methods for hidden markov models: Recursive computing in the 21st century.” Journal of the American Statistical Association (2002).
 
 
 ### Example Codes
@@ -275,6 +344,20 @@ tokenize("This is the Hugging Face course.", model)
 
 
 
+## SentencePiece Tokenization by Google
+
+>[!quote]
+>SentencePiece is a re-implementation of **sub-word units**, an effective way to alleviate the open vocabulary problems in neural machine translation. SentencePiece supports two segmentation algorithms, **byte-pair-encoding (BPE)** [Sennrich et al.](http://www.aclweb.org/anthology/P16-1162) and **unigram language model** [Kudo.](https://arxiv.org/abs/1804.10959). Here are the high level differences from other implementations.
+>- **The number of unique tokens is predetermined**
+>- **Trains from raw sentences** without pre-tokenization
+>- **Whitespace is treated as a basic symbol** 
+>- **Subword regularization and BPE-dropout**
+>	- **Subword regularization** [Kudo.](https://arxiv.org/abs/1804.10959) and 
+>	- **BPE-dropout** [Provilkov et al](https://arxiv.org/abs/1910.13267) are simple regularization methods that virtually augment training data with on-the-fly subword sampling, which helps to improve the accuracy as well as robustness of NMT models.
+>
+>-- GIthub [Google sentencepiece](https://github.com/google/sentencepiece)
+
+- Kudo, T. (2018). Sentencepiece: A simple and language independent subword tokenizer and detokenizer for neural text processing. _arXiv preprint arXiv:1808.06226_.
 
 
 -----------
@@ -289,3 +372,5 @@ tokenize("This is the Hugging Face course.", model)
 
 - [[Speech and Language Processing by Jurafsky]] pp 21
 - Kudo, T. (2018). Subword Regularization: Improving Neural Network Translation Models with Multiple Subword Candidates. In I. Gurevych & Y. Miyao (Eds.), _Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)_ (pp. 66–75). Association for Computational Linguistics. [https://doi.org/10.18653/v1/P18-1007](https://doi.org/10.18653/v1/P18-1007)
+- Medium blog  [SentencePiece Tokenizer Demystified](https://towardsdatascience.com/sentencepiece-tokenizer-demystified-d0a3aac19b15)
+- GIthub [Google sentencepiece](https://github.com/google/sentencepiece)

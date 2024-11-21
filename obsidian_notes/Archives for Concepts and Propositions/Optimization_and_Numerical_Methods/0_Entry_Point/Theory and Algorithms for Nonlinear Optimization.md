@@ -145,6 +145,9 @@ date of note: 2024-05-12
 - [[KKT Matrix and KKT System for Optimization with Equality Constraints]]
 - [[Primal-Dual Interior Point Method for Convex Optimization]]
 
+### Dynamic Programming
+
+- [[Concepts and Algorithms for Dynamic Programming]]
 
 ### Optimization on Manifold
 

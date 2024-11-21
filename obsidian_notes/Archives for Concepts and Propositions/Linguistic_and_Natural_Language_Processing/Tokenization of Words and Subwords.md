@@ -96,7 +96,7 @@ date of note: 2024-11-17
 
 ## Explanation
 
-
+![[tokenization_word_subword.png]]
 
 
 ## Algorithm overview
@@ -121,9 +121,9 @@ date of note: 2024-11-17
 
 - [[Byte-Pair Encoding or BPE Tokenization]]
 - [[WordPiece Tokenization]]
-- [[Unigram Language Modeling as Tokenization and SentencePiece]]
+- [[Unigram Tokenization and SentencePiece Tokenization]]
 
-
+![[tokenization_subwords.png]]
 
 
 

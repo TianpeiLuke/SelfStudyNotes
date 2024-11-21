@@ -5,6 +5,7 @@ tags:
 keywords:
   - word_tokenization
   - subword_tokenization
+  - wordpiece_tokenization
 topics:
   - natural_language_processing/tokenization
 name: WordPiece Tokenization
@@ -44,7 +45,9 @@ date of note: 2024-11-17
 ^7acc64
 
 - [[n-Gram Model and Language Model]]
+- [[Multinomial Distribution]]
 - [[Mutual Information]]
+- [[Likelihood Function]]
 
 >[!important] Definition
 >The **training** algorithm for **WordPiece** tokenization is described as below

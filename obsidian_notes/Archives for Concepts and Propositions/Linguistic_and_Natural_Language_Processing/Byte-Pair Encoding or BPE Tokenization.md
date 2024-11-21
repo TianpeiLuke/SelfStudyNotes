@@ -5,6 +5,7 @@ tags:
 keywords:
   - word_tokenization
   - subword_tokenization
+  - byte_pair_encoding_tokenization
 topics:
   - natural_language_processing/tokenization
 name: Byte-Pair Encoding Tokenization
@@ -285,6 +286,20 @@ def tokenize(text):
 >Most tokenizers have **special tokens** such as
 >- `"<|endoftext|>"` is used by GPT tokenizer as the end of text.
 
+>[!quote]
+>An **advantage** of *BPE segmentation* is that it can effectively *balance the vocabulary size* and the *step size* (the number of tokens required to encode the sentence). 
+>- BPE trains the *merged operations* only with a frequency of characters. 
+>	- **Frequent substrings** will be *joined early*, resulting in *common words* remaining as **one unique symbol**. 
+>	- Words consisting of **rare character combinations** will be *split into smaller units*, e.g., substrings or characters. 
+>	- Therefore, only with a small fixed size of vocabulary (usually 16k to 32k), the number of required symbols to encode a sentence will *not significantly increase*, which is an important feature for an efficient decoding. 
+>
+>One **downside** is, however, that *BPE* is based on a **greedy** and **deterministic symbol replacement**, which can not provide multiple segmentations with probabilities. 
+>- It is not trivial to apply BPE to the *subword regularization* that depends on segmentation probabilities $P(x|X)$.
+>  
+>-- Kudo, T. (2018). Subword Regularization: Improving Neural Network Translation Models with Multiple Subword Candidates. In I. Gurevych & Y. Miyao (Eds.), _Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)_ (pp. 66–75). Association for Computational Linguistics. [https://doi.org/10.18653/v1/P18-1007](https://doi.org/10.18653/v1/P18-1007)  
+
+
+
 ## Other Tricks
 
 >[!info]
@@ -303,7 +318,7 @@ def tokenize(text):
 ## Other Tokenization
 
 - [[Tokenization of Words and Subwords]]
-- [[Unigram Language Modeling as Tokenization and SentencePiece]]
+- [[Unigram Tokenization and SentencePiece Tokenization]]
 - [[WordPiece Tokenization]]
 
 

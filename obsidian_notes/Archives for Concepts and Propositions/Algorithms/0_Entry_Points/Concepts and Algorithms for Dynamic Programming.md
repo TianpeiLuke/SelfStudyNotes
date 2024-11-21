@@ -1,33 +1,21 @@
 ---
 tags:
+  - entry_point
   - concept
   - algorithm/dynamic_programming
-  - reinforcement_learning/algorithm
-  - natural_language_processing
   - optimization/dynamic_programming
-  - optimization/algorithm
-  - optimization/theory
+  - deep_learning/algorithms
+  - natural_language_processing/tokenization
+  - probabilistic_graphical_models/algorithm
 keywords: 
 topics: 
-name: Dynamic Programming Algorithms
-date of note: 2024-11-19
+name: 
+date of note: 2024-09-16
 ---
 
-## Concept Definition
+## List of Concepts
 
->[!important]
->**Name**: Dynamic Programming Algorithms
-
-
-
-- [[Backward Induction and Dynamic Programming]]
-
-## Explanation
-
-
-
-## Applications
-
+- [[Dynamic Programming Algorithms]]
 
 ### Optimization
 
@@ -39,7 +27,6 @@ date of note: 2024-11-19
 
 - [[Graph]]
 - [[Network and Flow and Capacity and Cut]]
-- [[Minimum Spanning Tree Problem]]
 
 - [[A-star Heuristic Search]]
 
@@ -111,25 +98,33 @@ date of note: 2024-11-19
 - [[Hamilton-Jacobi-Bellman Equation]]
 
 
+## Coding Exercise
+
+
+
+
+
+
+
 
 -----------
 ##  Recommended Notes and References
 
 
-- [[Game Theory An Introduction by Tadelis]] pp 26
+
+- [[Introduction to Algorithms by Cormen]]
+- [[Algorithm Design Manual by Skiena]]
+- [[Algorithms to Live By Book Summary]]
+
+- [[Game Theory An Introduction by Tadelis]] 
 
 - [[Dynamic Programming by Bellman]]
-- [[Algorithm Design Manual by Skiena]] pp 307, 474, 498, 556, 599, 633, 706
-- [[Introduction to Algorithms by Cormen]] pp 359–413
+- [[Algorithm Design Manual by Skiena]]
+- [[Introduction to Algorithms by Cormen]]
 - [[Dynamic Programming and Optimal Control by Bertsekas]]
 
-- [[Markov Decision Processes by Puterman]] pp 82, 92-99, 158
-- [[Reinforcement Learning An Introduction by Sutton]] pp 62 - 67, 73 - 90
+- [[Markov Decision Processes by Puterman]] 
+- [[Reinforcement Learning An Introduction by Sutton]] 
 
 - [[Deep Learning by Goodfellow]]
-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 428
-
-
-- Open Course [Dynamic Programming and Stochastic Control](https://ocw.mit.edu/courses/6-231-dynamic-programming-and-stochastic-control-fall-2015/)
-- UIUC  [Algorithms](http://jeffe.cs.illinois.edu/teaching/algorithms/book/Algorithms-JeffE.pdf)
-
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] 

@@ -49,6 +49,7 @@ date of note: 2024-10-30
 
 ### Hamilton-Jacobi Theory
 
+- [[Concepts and Algorithms for Dynamic Programming]]
 - [[Hamilton-Jacobi Equation]]
 
 
