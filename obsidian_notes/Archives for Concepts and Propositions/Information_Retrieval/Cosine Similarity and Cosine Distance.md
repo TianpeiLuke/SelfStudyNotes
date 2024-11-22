@@ -23,6 +23,8 @@ date of note: 2024-09-09
 >S_{c}(w, v) := \cos(\theta) := \frac{\left\langle  w\,,\,v    \right\rangle}{\lVert w \rVert \, \lVert v \rVert  }
 >$$
 
+^ad349d
+
 >[!important] Definition
 >The **cosine distance** between two *unit length* vectors $w, v\in V$ is defined as
 >$$
@@ -39,6 +41,10 @@ date of note: 2024-09-09
 ## Explanation
 
 
+## Vector Space Model in Information Retrieval
+
+- [[Co-Occurrence Matrix]]
+- [[Vector Space Model in Information Retrieval]]
 
 
 
@@ -54,7 +60,7 @@ date of note: 2024-09-09
 - [[Cauchy-Schwartz Inequality]]
 - [[Error Function or Loss Function for Deep Learning]]
 
-- [[Introduction to Information Retrieval by Manning]]
+- [[Introduction to Information Retrieval by Manning]] pp 120 - 121
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 18
 - [[Speech and Language Processing by Jurafsky]] pp 110
 - Wikipedia [Cosine_similarity](https://en.wikipedia.org/wiki/Cosine_similarity)

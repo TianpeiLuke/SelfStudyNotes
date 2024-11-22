@@ -27,7 +27,7 @@ date of note: 2024-05-12
 
 - [[Mutual Information]]
 - [[Co-Occurrence Matrix]]
-- [[Vector Space Model for Text Representation]]
+- [[Vector Space Model in Information Retrieval]]
 - [[Matrix]]
 
 

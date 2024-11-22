@@ -14,6 +14,17 @@ date of note: 2024-05-12
 >**Name**: 
 
 
+### Static Word Embedding
+
+- [[Term Frequency and Inverse Document Frequency or TF-IDF]]
+- [[Pointwise Mutual Information]]
+- [[Word2Vec Algorithm for Static Word Embedding]]
+
+### Contextual Word Embedding
+
+- [[Self-Supervised Learning]]
+- [[Bidirectional Encoder Representation from Transformer or BERT]]
+
 
 ## Explanation
 
@@ -28,7 +39,7 @@ date of note: 2024-05-12
 - [[Vector Semantics and Distributional Hypothesis in Linguistic]]
 - [[Word Association and Relatedness]]
 
-- [[Word2Vec Algorithm for Word Embedding]]
+- [[Word2Vec Algorithm for Static Word Embedding]]
 - [[Skip-Gram Algorithm for Word Embedding]]
 - [[Contiuous-Bag-of-Words Algorithm for Word Embedding]]
 

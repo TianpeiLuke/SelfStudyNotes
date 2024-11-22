@@ -26,6 +26,16 @@ date of note: 2024-06-01
 - [[Supervised Learning and Unsupervised Learning]]
 - [[Regression Problem]]
 
+#### Metrics
+
+- [[Confusion Table]]
+- [[True or False Positive Rate and True or False Negative Rate]]
+- [[Positive Predictive Value and False Discovery Rate]]
+- [[Recall and Precision and F-Measure]]
+- [[Recall and Precision at k]]
+- [[Receiver Characteristic Curve for Binary Classification]]
+
+
 #### Nearest Neighbor Classification
 
 - [[k Nearest Neighbor Classification]]
@@ -265,6 +275,7 @@ date of note: 2024-06-01
 - [[Understanding Machine Learning by Shalev-Shwartz]]
 - [[Boosting Foundations and Algorithms by Schapire]]
 - [[Elements of Statistical Learning by Hastie]]
+- [[Evaluating Learning Algorithms by Japkowicz]]
 
 - [[Gaussian Processes for Machine Learning by Rasmussen]] 
 

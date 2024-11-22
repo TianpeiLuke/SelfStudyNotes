@@ -25,7 +25,7 @@ date of note: 2024-11-17
 - [[Tokenization of Words and Subwords and SentencePiece Tokenization]]
 
 
->[!important] Definition 
+>[!quote]  
 >Compared to BPE and WordPiece, **Unigram** works in the other direction: 
 >- it starts from a *big vocabulary* 
 >- and *removes* tokens from it until it reaches the desired vocabulary size.
@@ -42,7 +42,7 @@ date of note: 2024-11-17
 >- The **unigram** assume that all tokens as *independent* so $$p(w_{1}, w_{2}, w_{3}) = p(w_{1})p(w_{2})p(w_{3})$$
 >	- We use the *negative log-likelihood* $$-\log p(w_{1} \,{,}\ldots{,}\,w_{n}) = -\sum_{i=1}^{n}\log p(w_{i})$$
 >- tokenizations with the *least tokens possible* will have the *highest probabilities*
->	- this corresponds to what we want intuitively: to *split* a *word* into the *least number of tokens* possible. $$\min\left\{ |T|:  \bigcup_{s_{i} \in T}s_{i} = C \right\}$$
+>	- this corresponds to what we want intuitively: to *split* a *word* into the *least number of tokens* possible.
 >- The tokenization of a word with the Unigram model is then the tokenization with the *highest probability*.
 >
 
@@ -219,7 +219,7 @@ model = {token: -log(freq / total_sum) for token, freq in token_freqs.items()}
 > - This algorithm computes the *best segmentation* of each *substring* of the word, which we will store in a variable named `best_segmentations`.
 > - store *one dictionary per position* in the word (from 0 to its total length), with two keys: 
 > 	- the index of the *start* of the *last token* in the *best segmentation*, 
-> 	- and the *score* of the *best segmentation*.
+> 	- and the *score* of the *best segmentation*. $$\text{BestSegmentation}[\text{start}(w_{t-1}^{*})][\text{score}]$$
 > - With the index of the start of the last token, we will be able to retrieve the full segmentation once the list is completely populated.
 > - Populating the list is done with just two loops: 
 > 	- the *main loop* goes over *each start position*, 
@@ -353,7 +353,7 @@ tokenize("This is the Hugging Face course.", model)
 
 - [[Text-to-Text Transfer Transformer or T5 for Translation]]
 - [[Word Embedding]]
-- [[Vector Space Model for Text Representation]]
+- [[Vector Space Model in Information Retrieval]]
 
 
 

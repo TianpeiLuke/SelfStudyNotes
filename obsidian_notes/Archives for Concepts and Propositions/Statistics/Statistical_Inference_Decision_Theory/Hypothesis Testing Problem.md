@@ -86,6 +86,8 @@ date of note: 2024-06-08
 
 ^1194ca
 
+- [[Confusion Table]]
+- [[True or False Positive Rate and True or False Negative Rate]]
 - [[Mathematical Statistics by Shao]] pp 140
 - [[Power and Size of Test]]
 

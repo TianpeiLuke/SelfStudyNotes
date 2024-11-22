@@ -330,7 +330,7 @@ def encode_word(word):
 
 - [[Text-to-Text Transfer Transformer or T5 for Translation]]
 - [[Word Embedding]]
-- [[Vector Space Model for Text Representation]]
+- [[Vector Space Model in Information Retrieval]]
 
 
 

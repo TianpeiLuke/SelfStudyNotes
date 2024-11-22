@@ -57,6 +57,18 @@ date of note: 2024-09-13
 - [[Naive Bayes Model]]
 - [[Multinomial Naive Bayes Model]]
 - [[Multinomial Principle Component Analysis]]
+- [[Logistic Regression]]
+- [[Generalized Linear Models]]
+
+#### Metrics
+
+- [[Confusion Table]]
+- [[True or False Positive Rate and True or False Negative Rate]]
+- [[Positive Predictive Value and False Discovery Rate]]
+- [[Recall and Precision and F-Measure]]
+- [[Recall and Precision at k]]
+- [[Receiver Characteristic Curve for Binary Classification]]
+
 
 ### Vector Semantics
 
@@ -67,10 +79,11 @@ date of note: 2024-09-13
 
 #### Vector Space Model and Information Retrieval
 
+- [[Information Retrieval]]
 - [[Vector Semantics and Distributional Hypothesis in Linguistic]]
 - [[Co-Occurrence Matrix]]
 - [[Bag-of-Words for Text Representation]]
-- [[Vector Space Model for Text Representation]]
+- [[Vector Space Model in Information Retrieval]]
 - [[Cosine Similarity and Cosine Distance]]
 - [[Term Frequency and Inverse Document Frequency or TF-IDF]]
 - [[Pointwise Mutual Information]]
@@ -78,9 +91,14 @@ date of note: 2024-09-13
 #### Word Embedding and Word2Vec Dense Representation
 
 - [[Word Embedding]]
+
+- [[Term Frequency and Inverse Document Frequency or TF-IDF]]
+- [[Pointwise Mutual Information]]
+
+- [[Word2Vec Algorithm for Static Word Embedding]]
 - [[Skip-Gram Algorithm for Word Embedding]]
 - [[Contiuous-Bag-of-Words Algorithm for Word Embedding]]
-- [[Word2Vec Algorithm for Word Embedding]]
+
 - [[Word Embedding Semantic Properties]]
 - [[Word Embedding Evaluation and Datasets]]
 

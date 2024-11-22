@@ -54,7 +54,7 @@ date of note: 2024-11-17
 
 
 - [[Word Embedding]]
-- [[Vector Space Model for Text Representation]]
+- [[Vector Space Model in Information Retrieval]]
 
 
 - [[Speech and Language Processing by Jurafsky]] pp 17

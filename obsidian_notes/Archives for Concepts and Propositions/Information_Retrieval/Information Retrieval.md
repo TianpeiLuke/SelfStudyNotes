@@ -24,7 +24,7 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
-- [[Vector Space Model for Text Representation]]
+- [[Vector Space Model in Information Retrieval]]
 - [[Matrix]]
 - [[Topic Models]]
 

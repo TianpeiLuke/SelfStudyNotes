@@ -64,7 +64,7 @@ date of note: 2024-11-14
 
 - [[Autoregressive Time Series]]
 
-
+![[n-Gram Model and Language Model#^b7a2b4]]
 
 - [[n-Gram Model and Language Model]]
 

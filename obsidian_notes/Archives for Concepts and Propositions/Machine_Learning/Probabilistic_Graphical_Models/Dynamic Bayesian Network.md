@@ -76,6 +76,10 @@ date of note: 2024-05-12
 
 - [[Markov Transition Kernel and Transition Function]]
 
+## n-Gram Language Model
+
+- [[n-Gram Model and Language Model]]
+
 ## Hidden Markov Model
 
 ![[dbn_hmm.png]]

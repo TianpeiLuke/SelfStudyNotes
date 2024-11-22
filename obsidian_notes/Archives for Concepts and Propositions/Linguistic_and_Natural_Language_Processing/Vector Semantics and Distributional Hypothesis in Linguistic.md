@@ -48,12 +48,12 @@ date of note: 2024-05-12
 
 ### Vector Space Model
 
-- [[Vector Space Model for Text Representation]]
+- [[Vector Space Model in Information Retrieval]]
 
 
 ### Word2Vec Embedding
 
-- [[Word2Vec Algorithm for Word Embedding]]
+- [[Word2Vec Algorithm for Static Word Embedding]]
 - [[Skip-Gram Algorithm for Word Embedding]]
 - [[Contiuous-Bag-of-Words Algorithm for Word Embedding]]
 

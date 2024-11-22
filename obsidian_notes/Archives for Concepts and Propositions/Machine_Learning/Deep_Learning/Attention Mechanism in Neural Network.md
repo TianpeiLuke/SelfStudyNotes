@@ -203,7 +203,7 @@ date of note: 2024-05-12
 >- Thus the **attention mechanism** allows the model to *attend to a few* **keywords** in learning.
 
 - [[Word Embedding]]
-- [[Vector Space Model for Text Representation]]
+- [[Vector Space Model in Information Retrieval]]
 
 >[!important] 
 >The **strength** of **attention mechanism** lies in its capability to **ignore input in data dependent way** while the traditional neural network has to apply the same mechanism to all input in the same position.

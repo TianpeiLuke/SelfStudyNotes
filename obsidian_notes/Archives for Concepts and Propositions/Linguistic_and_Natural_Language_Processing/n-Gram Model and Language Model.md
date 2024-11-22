@@ -21,20 +21,29 @@ date of note: 2024-09-08
 >where $w_{i}$ is referred as **words** or **tokens**.
 >
 >A **language model (LM)** is a model that assign a *probability* to a sequence of words $$p(w_{1}\,{,}\ldots{,}\,w_{n})$$
+>- We can use the *chain rule of probability* to compute the joint probability as $$p(w_{1}\,{,}\ldots{,}\,w_{n}) = \prod_{k=1}^{n}p(w_{k}\;|\;w_{k-1}\,{,}\ldots{,}\,w_{1})$$ This is the **autoregressive language model.**
+>- For autoregressive language model, we only need to model the conditional probability $$p(w_{k}\;|\;w_{k-1}\,{,}\ldots{,}\,w_{1}).$$
+>
 
 ^b7a2b4
 
+- [[Autoregressive Models]]
+
 >[!important] Definition
->A **n-gram model** is a *language model* for a sequence of $n$-words. $$p(w_{1}\,{,}\ldots{,}\,w_{n})$$
->- For $n=2$, it is referred to as the **bi-gram model**, which assigns probability for every two successive words $$p(w_{i}, w_{i+1})$$
->- For $n=3$, it is referred to as the **tri-gram model**, which assigns probability for every three-word sequence $$p(w_{i}. w_{i+1}, w_{i+2})$$
->- We also use the **n-gram model** to estimate the probability of a given word, given *previous $n-1$ words* $$p(w_{n} \,|\,w_{n-1}\,{,}\ldots{,}\,w_{1}) = \frac{p(w_{n},\,w_{n-1}\,{,}\ldots{,}\,w_{1})}{p(w_{n-1}\,{,}\ldots{,}\,w_{1})}$$ 
+>The task of language model is to estimate $$p(w_{k} \,|\,w_{k-1}\,{,}\ldots{,}\,w_{1})$$ 
+>
+>A **n-gram model** is a *language model* that is based on the *Markov assumption* i.e. $$p(w_{k} \,|\,w_{k-1}\,{,}\ldots{,}\,w_{1}) \approx p(w_{k} \,|\,w_{k-1}\,{,}\ldots{,}\,w_{k-n+1})$$ for some $n$
+>- That is, it assumes that a history of *previous $n-1$ words* would be *sufficient* to *predict* the current word.
+>- For $n=1$, it is referred to as the **uni-gram model**, which assumes that all words are *independent*, and estimate $$p(w_{k})$$
+>- For $n=2$, it is referred to as the **bi-gram model**, which estimate the conditional probability for a word given its immediate successive word $$p(w_{k} | w_{k-1})$$
+>- For $n=3$, it is referred to as the **tri-gram model**, which assigns probability for every three-word sequence and estimate the conditional distribution based on previous two words $$p(w_{k} | w_{k-1}, w_{k-2})$$
+
 
 ^81ad19
 
-- [[Autoregressive Models]]
+- [[Markov Chain and Markov Process]]
+- [[Dynamic Bayesian Network]]
 - [[Tokenization of Words and Subwords and SentencePiece Tokenization]]
-
 
 ### Maximum Likelihood Estimation of Joint Probability
 
@@ -51,6 +60,17 @@ date of note: 2024-09-08
 ^2256aa
 
 - [[Maximum Likelihood Estimation]]
+
+>[!example]
+>The most common MLE of n-gram is for **bi-gram**
+>$$
+>\widehat{p}(w_{n} \,|\,w_{n-1}) = \frac{C(w_{n-1},\,w_{n})}{C(w_{n-1})} = \frac{C(w_{n-1},\,w_{n})}{\sum_{w}\,C(w_{n-1},\,w)}
+>$$
+>and **tri-gram**
+>$$
+>\widehat{p}(w_{n} \,|\,w_{n-1},\, w_{n-2}) = \frac{C(w_{n-2},\,w_{n-1},\,w_{n})}{C(w_{n-2},\,w_{n-1})}
+>$$
+
 
 ### Smoothing and Discount
 
@@ -73,6 +93,11 @@ date of note: 2024-09-08
 ## Evaluation of Language Model
 
 - [[Perplexity]]
+
+## Multinomial Naive Bayes 
+
+- [[Multinomial Naive Bayes Model]]
+
 
 
 

@@ -242,6 +242,21 @@ date of note: 2024-11-14
 - [[Covariance Function of Gaussian Process]]
 
 
+### Application: Natural Language Processing
+
+- [[n-Gram Model and Language Model]]
+- [[n-Gram Model Estimation Smoothing]]
+- [[Perplexity]]
+
+- [[WordPiece Tokenization]]
+- [[Unigram Tokenization]]
+
+
+### Application: Information Retrieval
+
+- [[Pointwise Mutual Information]]
+
+
 ### Statistical Learning Theory and Concentration Inequalities
 
 #### Information Inequalities

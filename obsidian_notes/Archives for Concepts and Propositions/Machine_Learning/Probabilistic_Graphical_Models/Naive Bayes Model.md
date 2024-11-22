@@ -29,12 +29,20 @@ date of note: 2024-08-16
 
 ![[naive_bayes_1.png]]
 
+### Multinomial Naive Bayes Algorithm
+
+![[Multinomial Naive Bayes Model#^b4ddab]]
+
+- [[Multinomial Naive Bayes Model]]
+
+
 ## Explanation
 
 
 
 
 ![[tree_naive_bayes.png]]
+
 
 
 

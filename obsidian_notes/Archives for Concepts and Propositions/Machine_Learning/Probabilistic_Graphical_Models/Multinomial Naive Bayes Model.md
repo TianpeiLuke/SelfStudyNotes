@@ -45,10 +45,12 @@ date of note: 2024-05-12
 >$$  
 >where $w_{m_{n}}  := W_{m_{n}, :} \in \Delta_{V-1}$.
 
+^b4ddab
+
 - [[Naive Bayes Model]]
 - [[Multinomial Distribution]]
 - [[Latent Variable Models]]
-
+- [[n-Gram Model and Language Model]]
 
 ![[naive_bayes_lda.png]]
 
@@ -110,5 +112,6 @@ date of note: 2024-05-12
 
 
 - [[Probabilistic Graphical Models by Koller]] pp 769
+- [[Speech and Language Processing by Jurafsky]] pp 57 - 62
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]

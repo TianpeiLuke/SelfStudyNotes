@@ -333,7 +333,7 @@ def tokenize(text):
 
 
 - [[Word Embedding]]
-- [[Vector Space Model for Text Representation]]
+- [[Vector Space Model in Information Retrieval]]
 
 
 - [[Speech and Language Processing by Jurafsky]] pp 21
