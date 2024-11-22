@@ -17,6 +17,8 @@ date of note: 2024-09-12
 
 ## Explanation
 
+![[word2vec_cont_bog_skipgram.png]]
+
 
 
 

@@ -23,11 +23,15 @@ date of note: 2024-05-12
 >
 >In other word, it assumes that there exists a link between *similarity* in how words are *distributed* and *similarity*  in what they *mean*.
 
+^849498
+
 >[!important] Definition
 >**Vector semantics** is an approach in computational linguistics that represents the *meaning* of words, phrases, or even entire documents as *vectors* (numerical arrays) in a *high-dimensional space*.
 >
 >- The idea of **vector semantics** is to represent a word as a point in a *multidimensional semantic space* that is derived from the *distributions of  word neighbors*.
 >- The vector semantics instantiates the *distributional hypothesis* by learning the representation of the meaning of words, called the **word embedding.**
+
+^be40ca
 
 - [[Word Embedding]]
 
@@ -54,7 +58,7 @@ date of note: 2024-05-12
 ### Word2Vec Embedding
 
 - [[Word2Vec Algorithm for Static Word Embedding]]
-- [[Skip-Gram Algorithm for Word Embedding]]
+- [[Skip-Gram Algorithm with Negative Sampling for Word Embedding]]
 - [[Contiuous-Bag-of-Words Algorithm for Word Embedding]]
 
 ### Representation Learning and LLM

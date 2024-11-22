@@ -2,21 +2,41 @@
 tags:
   - concept
   - natural_language_processing/word_representation
-keywords: 
-topics: 
-name: 
+keywords:
+  - skip_gram_word_embedding
+topics:
+  - natural_language_processing/word_representation
+name: Skip-Gram Algorithm with Negative Sampling for Word Embedding
 date of note: 2024-09-12
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Skip-Gram Algorithm with Negative Sampling for Word Embedding
+
+### Learning Word Embedding with Classification
+
+
+- [[Word2Vec Algorithm for Static Word Embedding]]
+
+
+
+![[skipgram_embedding.png]]
+
+
+### Learning Skip-Gram Embedding with Negative Sampling
+
+
 
 
 
 ## Explanation
 
+
+![[word2vec_cont_bog_skipgram.png]]
+
+- [[Contiuous-Bag-of-Words Algorithm for Word Embedding]]
 
 
 

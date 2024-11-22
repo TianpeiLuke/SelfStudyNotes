@@ -15,6 +15,23 @@ date of note: 2024-05-12
 
 
 
+### First-Order Co-Occurrence or Syntagmatic Association
+
+
+
+
+### Second-Order Co-Occurrence or Paradigmatic Association
+
+
+
+
+### Parallelogram Model
+
+
+![[word_embedding_parallellogram.png]]
+
+
+
 ## Explanation
 
 

@@ -63,13 +63,30 @@ date of note: 2024-11-14
 - [[Variational Formula for Kullback-Leibler Divergence]]
 - [[Maximum Entropy Learning]]
 
+- [[Kullback-Leibler Divergence for Exponential Family]]
+
 #### Exponential Family
 
+- [[Exponential Family of Distributions]]
 - [[Log-Partition Function of Exponential Family]]
+- [[Convex Conjugate of Log-Partition Function of Exponential Family]]
+- [[Exponential Family and Convex Duality]]
+
+- [[Maximum Likelihood Estimation of Exponential Family]]
+- [[Maximum Likelihood Estimation of Generalized Linear Models]]
 - [[Maximum Entropy Learning of Exponential Family]]
 - [[Fisher Information for Exponential Family]]
 
+#### Energy-based Model
+
+- [[Gibbs Distribution]]
+- [[Gibbs Measure and Energy-based Model]]
+
 #### Graphical Model
+
+- [[Conditional Random Field]]
+- [[Ising Model]]
+- [[Gaussian Graphical Model]]
 
 - [[Log-Partition Function and Score Function of Graphical Models]]
 - [[Maximum Entropy Learning of Clique Tree PGM]]
@@ -102,6 +119,7 @@ date of note: 2024-11-14
 
 - [[Evidence Lower Bound]]
 - [[Variational Problem]]
+- [[Evidence Lower Bound for Exponential Family]]
 
 #### EM Algorithm and Variational Inference
 
@@ -109,6 +127,7 @@ date of note: 2024-11-14
 - [[Variational Inference vs EM Algorithm]]
 - [[Variational Expectation-Maximization]]
 - [[Monte Carlo Expectation Maximization]]
+- [[Expectation-Maximization Algorithm for Exponential Family]]
 
 #### Latent Variable Model
 
@@ -254,6 +273,8 @@ date of note: 2024-11-14
 
 ### Application: Information Retrieval
 
+- [[Co-Occurrence Matrix]]
+- [[Term Frequency and Inverse Document Frequency or TF-IDF]]
 - [[Pointwise Mutual Information]]
 
 
