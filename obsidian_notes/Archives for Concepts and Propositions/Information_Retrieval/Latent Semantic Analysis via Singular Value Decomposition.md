@@ -43,36 +43,46 @@ date of note: 2024-09-05
 >	- The **embedding** of a *document* $d_{j}\in \mathcal{D}$ is given by $$\hat{d}_{j} = \Sigma_{k}^{-1}\,U_{k}^{T}\,X_{:,j}  \in \mathbb{R}^{k}$$ as column of $X_{k}$
 >		- The **LSA** maps the *document vector* from $|\mathcal{V}|$ to *$k$-dimensional*.
 >		- For *query vector* $q\in \mathbb{R}^{|\mathcal{V}|}$, $$\hat{q} = \Sigma_{k}^{-1}\,U_{k}^{T}\,q$$
+>		- The **cosine similarity** between documentds is given by $$\left\langle  \Sigma_{k}\hat{d}_{i} \,,\, \Sigma_{k}\hat{d}_{j}   \right\rangle$$
 >	- The **embedding** of a *term* $t_{i}\in \mathcal{V}$ is given by $$\hat{t}_{i} = \Sigma_{k}^{-1}\,V_{k}^{T}\,X_{i,:}^{T}  \in \mathbb{R}^{k}$$ as row of $X_{k}$
 >		- The **LSA** maps the *word vector* from $|\mathcal{D}|$ to *$k$-dimensional*.
+>		- The **cosine similarity** between words is given by $$\left\langle  \Sigma_{k}\hat{t}_{i} \,,\, \Sigma_{k}\hat{t}_{j}   \right\rangle$$
 
 - [[Co-Occurrence Matrix]]
 - [[Singular Value Decomposition of Linear Map]]
 - [[Eigenvalue and Eigenvector for Linear Map]]
+- [[Cosine Similarity and Cosine Distance]]
 - [[Orthogonal Group]]
 - [[Low Rank Approximation of Matrix and Eckhart-Young Theorem]]
 - [[Vector Space Model in Information Retrieval]]
 
+
 ## Explanation
 
 
-## Probabilistic Latent Semantic Analysis
 
+## Topic Models
 
+- [[Topic Models]]
+
+### Probabilistic Latent Semantic Analysis
+
+- [[Probabilistic Latent Semantic Analysis]]
+
+### Latent Dirichlet Allocation
+
+- [[Latent Dirichlet Allocation]]
 
 
 -----------
 ##  Recommended Notes and References
 
 
-- [[Probabilistic Latent Semantic Analysis]]
+
 
 - [[Principle Component Analysis]]
 
 
-
-- [[Topic Models]]
-- [[Latent Dirichlet Allocation]]
 
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 954

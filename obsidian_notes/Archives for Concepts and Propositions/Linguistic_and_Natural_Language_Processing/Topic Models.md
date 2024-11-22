@@ -30,6 +30,7 @@ date of note: 2024-09-04
 - [[Multinomial Principle Component Analysis]]
 - [[Multinomial Naive Bayes Model]]
 
+- [[Latent Semantic Analysis via Singular Value Decomposition]]
 - [[Probabilistic Latent Semantic Analysis]]
 - [[Latent Dirichlet Allocation]]
 - [[Nonnegative Matrix Factorization]]
