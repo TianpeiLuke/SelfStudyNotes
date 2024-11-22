@@ -41,7 +41,7 @@ date of note: 2024-05-12
 
 ### Static Word Embedding
 
-
+- [[Latent Semantic Analysis via Singular Value Decomposition]]
 - [[Probabilistic Latent Semantic Analysis]]
 - [[Word2Vec Algorithm for Static Word Embedding]]
 - [[Skip-Gram Algorithm with Negative Sampling for Word Embedding]]

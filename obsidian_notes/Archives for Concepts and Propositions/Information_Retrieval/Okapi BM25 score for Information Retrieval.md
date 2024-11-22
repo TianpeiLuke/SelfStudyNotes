@@ -26,7 +26,7 @@ date of note: 2024-05-12
 >[!important] Definition
 >Let $\mathcal{V}$ be the *vocabulary set* and $\mathcal{D}$ be the set of *documents*, where each document $d\in \mathcal{D}$ consists of a sequence of words/tokens $$d := (w_{1}^{d} \,{,}\ldots{,}\,w_{n_{d}}^{d}) \in \mathcal{D} \subset \mathcal{V}^{*}$$
 >
->Denote the *term-document matrix* as $$X = [x_{i,d}] \in \mathbb{R}^{|\mathcal{V}| \times |\mathcal{D}|}$$ where each entity counts the *occurrence* of given word $w_{i}$ in document $d$  $$x_{i,d} = x(w_{i}, d) = \sum_{j=1}^{n_{d}}\mathbb{1}\left\{ w_{j}^{d} = w_{i} \right\}$$
+>Denote the *term-document matrix* as $$X = [x_{i,d}] \in \mathbb{R}^{|\mathcal{V}| \times |\mathcal{D}|}$$ where each entity counts the *occurrence* of given term $t_{i}$ in document $d$  $$x_{i,d} = x(t_{i}, d) = \sum_{j=1}^{n_{d}}\mathbb{1}\left\{ w_{j}^{d} = t_{i} \right\}$$
 >
 >Let $Q$ be a *query* with $k$ *keywords* $q_{1}\,{,}\ldots{,}\,q_{k}$.
 >

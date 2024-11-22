@@ -90,6 +90,7 @@ date of note: 2024-09-13
 
 - [[Topic Models]]
 - [[Multinomial Principle Component Analysis]]
+- [[Latent Semantic Analysis via Singular Value Decomposition]]
 - [[Probabilistic Latent Semantic Analysis]]
 - [[Latent Dirichlet Allocation]]
 
