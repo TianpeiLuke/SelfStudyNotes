@@ -26,7 +26,7 @@ date of note: 2024-05-12
 >A **term-document matrix** is a matrix $$X = [x_{i,d}] \in \mathbb{R}^{|\mathcal{V}| \times |\mathcal{D}|}$$ where
 >- each *row* represents a **word** or **token** $w_{i}\in \mathcal{V}$
 >- and each *column* represents a **document** $d\in \mathcal{D}$
->- Each entity counts the *occurrence* of given word $w_{i}$ in document $d$  $$x_{i,d} = \sum_{j=1}^{n_{d}}\mathbb{1}\left\{ w_{j}^{d} = w_{i} \right\}$$
+>- Each entity counts the *occurrence* of given word $w_{i}$ in document $d$  $$x_{i,d} := x(w_{i}, d) = \sum_{j=1}^{n_{d}}\mathbb{1}\left\{ w_{j}^{d} = w_{i} \right\}$$
 >- We can covert the count into **frequency** by *normalizing it for each document (column)* $$\hat{p}_{i,d} = \frac{x_{i,d}}{\sum_{w_{i}\in d}x_{i,d}}$$
 
 ^253cfb
