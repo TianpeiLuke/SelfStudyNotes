@@ -24,9 +24,9 @@ date of note: 2024-05-12
 >Let $\mathcal{V}$ be the *vocabulary set* and $\mathcal{D}$ be the set of *documents*, where each document $d\in \mathcal{D}$ consists of a sequence of words/tokens $$d := (w_{1}^{d} \,{,}\ldots{,}\,w_{n_{d}}^{d}) \in \mathcal{D} \subset \mathcal{V}^{*}$$
 >
 >A **term-document matrix** is a matrix $$X = [x_{i,d}] \in \mathbb{R}^{|\mathcal{V}| \times |\mathcal{D}|}$$ where
->- each *row* represents a **word** or **token** $t_{i}\in \mathcal{V}$
+>- each *row* represents a **word** or **term** $t_{i}\in \mathcal{V}$
 >- and each *column* represents a **document** $d\in \mathcal{D}$
->- Each entity counts the *occurrence* of given word $w_{i}$ in document $d$  $$x_{i,d} := x(t_{i}, d) = \sum_{j=1}^{n_{d}}\mathbb{1}\left\{ w_{j}^{d} = t_{i} \right\}$$
+>- Each entity counts the *occurrence* of given term $t_{i}$ in document $d$  $$x_{i,d} := x(t_{i}, d) = \sum_{j=1}^{n_{d}}\mathbb{1}\left\{ w_{j}^{d} = t_{i} \right\}$$
 >- We can covert the count into **frequency** by *normalizing it for each document (column)* $$\hat{p}_{i,d} = \frac{x_{i,d}}{\sum_{w_{i}\in d}x_{i,d}}$$
 
 ^253cfb
@@ -55,6 +55,10 @@ date of note: 2024-05-12
 
 - [[Vector Space Model in Information Retrieval]]
 
+
+## SVD and Latent Semantic Analysis
+
+- [[Latent Semantic Analysis via Singular Value Decomposition]]
 
 
 

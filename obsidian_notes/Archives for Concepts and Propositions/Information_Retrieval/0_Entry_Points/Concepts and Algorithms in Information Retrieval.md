@@ -30,6 +30,7 @@ date of note: 2024-09-13
 - [[Term Frequency and Inverse Document Frequency or TF-IDF]]
 - [[Pointwise Mutual Information]]
 - [[Vector Space Model in Information Retrieval]]
+- [[Latent Semantic Analysis via Singular Value Decomposition]]
 
 
 ### Evaluation of Information Retrieval

@@ -17,11 +17,27 @@ date of note: 2024-09-05
 >[!important]
 >**Name**: 
 
+![[Co-Occurrence Matrix#^253cfb]]
 
+- [[Factor Analysis]]
+- [[Latent Variable Models]]
 
 ## Explanation
 
 
+
+## Related Work
+
+### Latent Semantic Analysis
+
+- [[Co-Occurrence Matrix]]
+- [[Latent Semantic Analysis via Singular Value Decomposition]]
+- [[Term Frequency and Inverse Document Frequency or TF-IDF]]
+
+### Latent Dirichlet Allocation
+
+- [[Latent Dirichlet Allocation]]
+- [[Probabilistic Graphical Models]]
 
 
 
@@ -30,15 +46,13 @@ date of note: 2024-09-05
 
 
 
-- [[Latent Dirichlet Allocation]]
 
-- [[Latent Semantic Analysis via Singular Value Decomposition]]
 
-- [[Factor Analysis]]
-- [[Latent Variable Models]]
+
 
 - [[Word Embedding]]
 - [[Topic Models]]
 
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 954
+- Wikipedia [Probabilistic_latent_semantic_analysis](https://en.wikipedia.org/wiki/Probabilistic_latent_semantic_analysis)
