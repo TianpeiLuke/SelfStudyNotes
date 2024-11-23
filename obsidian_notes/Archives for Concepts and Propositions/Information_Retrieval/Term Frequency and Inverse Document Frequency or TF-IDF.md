@@ -104,6 +104,7 @@ date of note: 2024-05-12
 - [[Vector Space Model in Information Retrieval]]
 - [[Matrix]]
 - [[Topic Models]]
+- [[Information Retrieval]]
 
 
 - [[Introduction to Information Retrieval by Manning]] pp 117 - 119

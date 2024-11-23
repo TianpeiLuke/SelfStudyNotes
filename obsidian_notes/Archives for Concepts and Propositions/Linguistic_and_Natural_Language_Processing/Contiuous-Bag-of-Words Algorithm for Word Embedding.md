@@ -15,11 +15,15 @@ date of note: 2024-09-12
 
 
 
+
+
+
+
 ## Explanation
 
 ![[word2vec_cont_bog_skipgram.png]]
 
-
+- [[Skip-Gram Algorithm with Negative Sampling for Word Embedding]]
 
 
 
@@ -39,5 +43,7 @@ date of note: 2024-09-12
 
 - [[Vector Space over a Field]]
 
-- Wikipedia [Vector_space_model](https://en.wikipedia.org/wiki/Vector_space_model)
+- Wikipedia [Word2vec](https://en.wikipedia.org/wiki/Word2vec)
 - [[Speech and Language Processing by Jurafsky]] 
+- Mikolov, T., Chen, K., Corrado, G.S., & Dean, J. (2013). Efficient Estimation of Word Representations in Vector Space. _International Conference on Learning Representations_.
+- Mikolov, T., Sutskever, I., Chen, K., Corrado, G. S., & Dean, J. (2013). Distributed representations of words and phrases and their compositionality. _Advances in neural information processing systems_, _26_.

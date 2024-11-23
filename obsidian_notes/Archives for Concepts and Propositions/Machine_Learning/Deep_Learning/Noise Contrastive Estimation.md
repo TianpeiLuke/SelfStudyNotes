@@ -50,6 +50,7 @@ date of note: 2024-08-16
 - [[Gaussian Mixture Models]]
 - [[Maximum Likelihood Estimation]]
 - [[Kullback-Leibler Divergence]]
+- [[Mixture Family of Distributions]]
 
 
 >[!info]
@@ -193,6 +194,10 @@ date of note: 2024-08-16
 
 - [[Information Noise Contrastive Estimation as Contrastive Learning]]
 - [[Contrastive Learning]]
+
+## Skip-Gram with Negative Sampling for Word Embedding
+
+- [[Skip-Gram Algorithm with Negative Sampling for Word Embedding]]
 
 
 

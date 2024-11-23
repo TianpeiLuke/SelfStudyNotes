@@ -39,14 +39,17 @@ date of note: 2024-05-12
 >[!important] Definition
 >Let $\mathcal{V}$ be the *vocabulary set* and $\mathcal{D}$ be a *corpus* i.e. the set of *documents*, where each document $d\in \mathcal{D}$ consists of a sequence of words/tokens $$d := (w_{1}^{d} \,{,}\ldots{,}\,w_{n_{d}}^{d}) \in \mathcal{D} \subset \mathcal{V}^{*}$$
 >
->A **term-term matrix** or **word-word matrix** or **term-context matrix** is a matrix $$C = [c_{i,j}] \in \mathbb{R}^{|\mathcal{V}| \times |\mathcal{V}|}$$ where
+>A **term-term matrix** or **word-word matrix** or **term-context matrix** is a matrix $$F = [f_{i,j}] \in \mathbb{R}^{|\mathcal{V}| \times |\mathcal{V}|}$$ where
 >- the *row* represents a **target word** $t_{i}\in \mathcal{V}$
->- and the *column* represents a **context word** $w_{j}\in \mathcal{V}$
+>- and the *column* represents a **context word** $c_{j}\in \mathcal{V}$
 >- Each entry represents the **number of co-occurrence** the *target word (row)* and *context word (column)* within some *context* in the corpus $\mathcal{D}$.
 >- The **context** could be 
->	- the entire document $d$, then the *term-context matrix* becomes $$c_{i,j} := \sum_{d\in \mathcal{D}}\mathbb{1}\left\{ t_{i}\in d\, \land \, t_{j} \in d \right\}$$
->	- or within a *context window* $$b_{i}^{d} := B(w_{i}^{d}, r) := \left\{ w_{i-r}^{d}\,{,}\ldots{,}\,w_{i}^{d} \,{,}\ldots{,}\,w_{i+r}^{d} \right\},$$ then  *term-context matrix* becomes $$c_{i,j} := \sum_{d\in \mathcal{D}}\sum_{i=1}^{n_{d}}\mathbb{1}\left\{ t_{j} \in  b_{i}^{d} \right\}$$
+>	- the entire document $d$, then the *term-context matrix* becomes $$f_{i,j} := \sum_{d\in \mathcal{D}}\mathbb{1}\left\{ t_{i}\in d\, \land \, c_{j} \in d \right\}$$
+>	- or within a *context window* $$c_{i}^{d} := B(w_{i}^{d}, l) := \left\{ w_{i-l}^{d}\,{,}\ldots{,}\,w_{i}^{d} \,{,}\ldots{,}\,w_{i+l}^{d} \right\},$$ then  *term-context matrix* becomes $$f_{i,j} := \sum_{d\in \mathcal{D}}\sum_{i=1}^{n_{d}}\mathbb{1}\left\{ c_{j} \in  c_{i}^{d} \right\}$$
 
+^f79d93
+
+- [[Skip-Gram Algorithm with Negative Sampling for Word Embedding]]
 
 ## Explanation
 

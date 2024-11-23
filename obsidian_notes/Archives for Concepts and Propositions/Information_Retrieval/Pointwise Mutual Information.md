@@ -29,6 +29,7 @@ date of note: 2024-05-12
 - [[Co-Occurrence Matrix]]
 - [[Vector Space Model in Information Retrieval]]
 - [[Matrix]]
+- [[Information Retrieval]]
 
 
 - [[Introduction to Information Retrieval by Manning]]

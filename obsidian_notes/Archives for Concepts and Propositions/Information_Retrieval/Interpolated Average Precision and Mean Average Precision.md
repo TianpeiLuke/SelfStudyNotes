@@ -41,6 +41,8 @@ date of note: 2024-04-25
 ##  Recommended Notes
 
 
+- [[Information Retrieval]]
+
 - [[Introduction to Information Retrieval by Manning]] pp 158 - 161
 - [[Evaluating Learning Algorithms by Japkowicz]]
 

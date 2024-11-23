@@ -43,7 +43,7 @@ date of note: 2024-05-12
 >- $\text{idf}(q_{k})$ is the *inverse document frequency* for the keyword. $$\text{idf}_{j} := \text{idf}(q_{j}) = \log_{10}\left( \frac{|\mathcal{D}|}{\text{df}_{j}} \right)  = \log_{10}\left( \frac{|\mathcal{D}|}{\sum_{d\in \mathcal{D}}x(q_{j}, d)} \right)$$
 
 - [[Term Frequency and Inverse Document Frequency or TF-IDF]]
-
+- [[Information Retrieval]]
 
 
 ## Explanation

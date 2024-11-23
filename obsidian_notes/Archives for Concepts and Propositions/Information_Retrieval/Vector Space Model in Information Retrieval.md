@@ -27,6 +27,8 @@ date of note: 2024-09-12
 >The **vector space model** defines a *vector space of documents* $V \subset \mathbb{R}^{p}$, where each document is represented by a vector $$d\in \mathcal{D} \implies d \in \mathbb{R}^{p}$$  
 >- the dimension $p$ is called the **word dimension.**
 
+- [[Information Retrieval]]
+
 ### Examples
 
 >[!example]

@@ -50,7 +50,10 @@ date of note: 2024-05-12
 
 ### Contextual Word Embedding
 
+- [[Auto-Encoder and Stochastic Auto-Encoder]]
 - [[Self-Supervised Learning]]
+- [[Noise Contrastive Estimation]]
+- [[Information Noise Contrastive Estimation as Contrastive Learning]]
 - [[Bidirectional Encoder Representation from Transformer or BERT]]
 
 
