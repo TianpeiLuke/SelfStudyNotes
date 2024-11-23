@@ -53,18 +53,23 @@ date of note: 2024-05-12
 ### Vector Space Model
 
 - [[Vector Space Model in Information Retrieval]]
-
+- [[Co-Occurrence Matrix]]
+- [[Term Frequency and Inverse Document Frequency or TF-IDF]]
 
 ### Word2Vec Embedding
 
 - [[Word2Vec Algorithm for Static Word Embedding]]
+- [[Noise Contrastive Estimation]]
 - [[Skip-Gram Algorithm with Negative Sampling for Word Embedding]]
 - [[Contiuous-Bag-of-Words Algorithm for Word Embedding]]
 
 ### Representation Learning and LLM
 
 - [[Representation Learning]]
+
 - [[Auto-Encoder and Stochastic Auto-Encoder]]
+- [[Information Noise Contrastive Estimation as Contrastive Learning]]
+- [[Transformer Network]]
 - [[Bidirectional Encoder Representation from Transformer or BERT]]
 
 
@@ -79,6 +84,6 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
-
+- [[Distributed Representation]]
 
 - [[Speech and Language Processing by Jurafsky]] pp 101, 105

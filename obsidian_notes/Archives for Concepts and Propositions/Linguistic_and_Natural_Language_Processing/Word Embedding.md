@@ -33,6 +33,8 @@ date of note: 2024-05-12
 >- the embedding vectors are **dense vectors**
 
 - [[Word Embedding Semantic Properties]]
+- [[Distributed Representation]]
+- [[Vector Semantics and Distributional Hypothesis in Linguistic]]
 
 ### Sparse Word Embedding
 
@@ -44,15 +46,16 @@ date of note: 2024-05-12
 - [[Latent Semantic Analysis via Singular Value Decomposition]]
 - [[Probabilistic Latent Semantic Analysis]]
 - [[Word2Vec Algorithm for Static Word Embedding]]
+- [[Noise Contrastive Estimation]]
 - [[Skip-Gram Algorithm with Negative Sampling for Word Embedding]]
 - [[Contiuous-Bag-of-Words Algorithm for Word Embedding]]
 
 
 ### Contextual Word Embedding
 
-- [[Auto-Encoder and Stochastic Auto-Encoder]]
 - [[Self-Supervised Learning]]
-- [[Noise Contrastive Estimation]]
+- [[Representation Learning]]
+- [[Auto-Encoder and Stochastic Auto-Encoder]]
 - [[Information Noise Contrastive Estimation as Contrastive Learning]]
 - [[Bidirectional Encoder Representation from Transformer or BERT]]
 
