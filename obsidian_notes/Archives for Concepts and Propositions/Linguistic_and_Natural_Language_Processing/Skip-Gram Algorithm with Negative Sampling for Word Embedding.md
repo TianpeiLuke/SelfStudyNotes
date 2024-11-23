@@ -50,7 +50,6 @@ date of note: 2024-09-12
 >- with probability $p$,  we randomly select a **context word** in the context window;
 >- with probability $1-p$ we randomly select a **noise sample** from vocabulary based on $p_{noise}(w)$
 >- Denote $k$ i.i.d. *noisy sample* as $$\tilde{c}_{s} \sim p_{\text{noise}}(c), \quad s=1\,{,}\ldots{,}\,k$$
->- It is common to define the noise distribution via *unigram model* as $$p_{\text{noise}, \alpha}(c) = \frac{\text{C}(c)^{\alpha}}{\sum_{w\in \mathcal{V}}\text{C}(w)^{\alpha}}$$ where it is common to choose $\alpha=0.75.$
 >- The joint distribution of context word given target word is from a *mixture family* $$p(c_{1}\,{,}\ldots{,}\,c_{2l} | w_{i}) = p\;\prod_{j=1}^{2l}p(c_{j}|w_{i}) + (1-p)\;\prod_{j=1}^{K}p_{\text{noise}}(\tilde{c}_{j})$$
 >  
 >The **skip-gram with negative sampling (SGNS)** learns a probabilistic *classification* model such that 
@@ -85,6 +84,15 @@ date of note: 2024-09-12
 >$$
 >
 >The **SGNS loss** did not use the *noise ratio* since we only cares for the embedding map $E$.  
+
+### Noise Distribution
+
+>[!important]
+>It is common to define the noise distribution via *unigram model* as $$p_{\text{noise}, \alpha}(c) = \frac{\text{C}(c)^{\alpha}}{\sum_{w\in \mathcal{V}}\text{C}(w)^{\alpha}}$$ where
+>- $C(w)$ is the count of occurrence of word $w$.
+>-  it is common to choose $\alpha=0.75.$
+
+- [[n-Gram Model and Language Model]]
 
 ### Word Embedding Output
 
