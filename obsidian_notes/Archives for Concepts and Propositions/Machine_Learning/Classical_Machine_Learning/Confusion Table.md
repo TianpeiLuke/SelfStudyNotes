@@ -75,6 +75,32 @@ date of note: 2024-04-25
 
 - [[Information Retrieval]]
 
+## Multiclass Case
+
+>[!important] Definition
+>In **$K$-class case**, the **confusion table** or **confusion matrix** or **error matrix** is described as a $K\times K$ matrix 
+>$$
+>C \in \mathbb{R}^{K\times K}
+>$$
+>where 
+>- the *row* corresponds to the instances in an *actual class*
+>- the *column* corresponds to the instances in an *predicted class*
+>- The *diagonal* of the matrix therefore represents all instances that are *correctly predicted*.
+>
+>|                   | **predicted** class $0$ | **predicted** class $1$  | $\dots$ |  **predicted** class $K-1$  |
+>| ----------------- | ---------------------- | ---------------------- | --------------------- | --------------------- |
+>| **actual** class $0$ | $C_{0,0}$              | $C_{0,1}$              | $\dots$ | $C_{0,K-1}$              |
+>| **actual** class $1$ | $C_{1,0}$              | $C_{1,1}$               | $\dots$ | $C_{0,K-1}$              |
+>| $\dots$ |  $\dots$           | $\dots$              | $\dots$ |  $\dots$              |
+>| **actual** class $K-1$ | $C_{K-1,0}$              | $C_{K-1,1}$              | $...$ | $C_{K-1,K-1}$              |
+>
+>- $C_{i,i}$ corresponds to the **true positives (TP)** for *class* $i$
+>- $C_{-i,i}$ corresponds to the **false positives (FP)** for class $i$ i.e. $$C_{-i,i} = \sum_{j\neq i}C_{j,i}$$
+>- $C_{i,-i}$ corresponds to the **false negative (FN)** for *class* $i$ i.e. $$C_{i,-i} = \sum_{j\neq i}C_{i,j}$$
+
+^69bf3c
+
+- [[Macro-Average and Micro-Average for Multi-Class Metric]]
 
 
 

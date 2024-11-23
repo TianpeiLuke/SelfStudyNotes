@@ -60,6 +60,8 @@ date of note: 2024-09-05
 ## Explanation
 
 
+- [[Numerical Algorithms for Eigenvalue Problem]]
+
 
 ## Topic Models
 
@@ -84,7 +86,7 @@ date of note: 2024-09-05
 - [[Information Retrieval]]
 
 
-
+- [[Foundations of Statistical Natural Language Processing by Manning]] pp 554 - 566
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 954
 - [[Speech and Language Processing by Jurafsky]] pp 130
 - Wikipedia [Latent_semantic_analysis](https://en.wikipedia.org/wiki/Latent_semantic_analysis)

@@ -34,6 +34,7 @@ date of note: 2024-06-01
 - [[Recall and Precision and F-Measure]]
 - [[Recall and Precision at k]]
 - [[Receiver Characteristic Curve for Binary Classification]]
+- [[Macro-Average and Micro-Average for Multi-Class Metric]]
 
 
 #### Nearest Neighbor Classification

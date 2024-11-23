@@ -18,9 +18,33 @@ date of note: 2024-09-13
 
 ### Term Vocabulary and Posting Lists
 
+- [[Text Normalization]]
+
+#### Tokenization
+
+- [[Tokenization of Words and Subwords and SentencePiece Tokenization]]
+- [[Byte-Pair Encoding or BPE Tokenization]]
+- [[WordPiece Tokenization]]
+- [[Unigram Tokenization]]
+
+#### Word Normalization
+
+- [[Word Normalization]]
+- [[Morphology]]
+- [[Morphological Parsing]]
+- [[Stemming of Word]]
+
+#### Sentence Segmentation
+
+- [[Sentence Segmentation]]
 
 
 ### Index Construction
+
+
+
+### Index Compression
+
 
 
 
@@ -30,7 +54,10 @@ date of note: 2024-09-13
 - [[Term Frequency and Inverse Document Frequency or TF-IDF]]
 - [[Pointwise Mutual Information]]
 - [[Vector Space Model in Information Retrieval]]
-- [[Latent Semantic Analysis via Singular Value Decomposition]]
+
+### Computing scores in a complete search system
+
+
 
 
 ### Evaluation of Information Retrieval
@@ -46,7 +73,7 @@ date of note: 2024-09-13
 - [[True or False Positive Rate and True or False Negative Rate]]
 - [[Positive Predictive Value and False Discovery Rate]]
 - [[Receiver Characteristic Curve for Binary Classification]]
-
+- [[Macro-Average and Micro-Average for Multi-Class Metric]]
 
 #### Relevancy Scores
 
@@ -66,6 +93,14 @@ date of note: 2024-09-13
 - [[Multinomial Naive Bayes Model]]
 - [[n-Gram Model and Language Model]]
 - [[Okapi BM25 score for Information Retrieval]]
+
+
+### Latent Semantic Indexing
+
+- [[Latent Semantic Analysis via Singular Value Decomposition]]
+
+### Link Analysis
+
 
 
 ### Natural Language Processing

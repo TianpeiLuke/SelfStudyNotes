@@ -36,6 +36,8 @@ date of note: 2024-04-25
 >	- where $$\beta^2 = \frac{1- \alpha}{\alpha}$$
 >	- It is common to choose $\beta=1$,  $$\text{F-measure} := F_{1} := \frac{2\;\text{Precision}\,\text{Recall}}{\text{Precision} + \text{Recall}}$$
 
+^6fe4b0
+
 >[!important] Definition
 >In **information retrieval**, the meaning of confusion table is different
 >- the *row* corresponds to the **relevancy** of instance

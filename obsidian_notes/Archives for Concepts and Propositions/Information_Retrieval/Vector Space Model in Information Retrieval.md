@@ -110,4 +110,5 @@ date of note: 2024-09-12
 
 - Wikipedia [Vector_space_model](https://en.wikipedia.org/wiki/Vector_space_model)
 - [[Speech and Language Processing by Jurafsky]] pp 107
-- [[Introduction to Information Retrieval by Manning]] pp 120
+- [[Introduction to Information Retrieval by Manning]] pp 120 - 124
+- [[Foundations of Statistical Natural Language Processing by Manning]] pp 539 - 544
