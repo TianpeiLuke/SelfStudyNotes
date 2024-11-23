@@ -64,7 +64,30 @@ date of note: 2024-04-25
 >	  
 >-- Tutorial [multi-class-metrics](https://www.evidentlyai.com/classification-metrics/multi-class-metrics)	  
 
+### Pros and cons
 
+>[!quote]
+> A suitable metric depends on the specific problem and the importance of each class or instance.
+> 
+> **Macro-averaging** treats each class equally.
+> 
+> - It can be useful when **all classes are equally important**, and you want to know how well the classifier performs on average across them. 
+> - It is also useful when you have an **imbalanced dataset** and want to ensure each class equally contributes to the final evaluation.
+> 
+> However, macro averaging can also distort the perception of performance. 
+> 
+> - For example, it **can make the classifier look “worse”** due to low performance in an unimportant and small class since it will still contribute equally to the overall score. 
+> - In the opposite scenario, it **can disguise poor performance** in the critical minority class when the overall number of classes is large. In this case, the “contribution” of each class is diluted. The classifier may still achieve high macro-averaged precision and recall by performing well on the majority classes but poorly on the minority class.
+> 
+> If classes have unequal importance, measuring precision and recall by class or weighing them by importance might be helpful.
+> 
+> **Micro-averaging** can be more appropriate when you want to account for the total number of misclassifications in the dataset. It gives equal weight to each instance and will have a higher score when the overall number of errors is low. (If this sounds like accuracy, it is because it is!)
+> 
+> However, micro-averaging can also **overemphasize the performance of the majority class,** especially when it dominates the dataset. In this case, micro-averaging can lead to inflated performance scores when the classifier performs well on the majority class but poorly (or very poorly) on the minority classes. If the class is small, you might not notice!
+> 
+> As a result, there is no single best metric. To choose the most suitable one, you need to consider the number of classes, their balance, and their relative importance.
+> 
+>-- Tutorial [multi-class-metrics](https://www.evidentlyai.com/classification-metrics/multi-class-metrics)	   
 
 
 
