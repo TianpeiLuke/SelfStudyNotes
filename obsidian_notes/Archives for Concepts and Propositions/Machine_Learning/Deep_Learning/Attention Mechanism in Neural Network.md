@@ -121,8 +121,20 @@ date of note: 2024-05-12
 
 ### Masked Attention
 
+>[!important] Definition
+>In the matrix form, the  **masked attention** for $n$ inputs are given by 
+>$$
+>\begin{align*}
+> Z &:= \text{mask-attn}\left( Q, K, V; M  \right) \\[5pt] 
+>&= \text{softmax}\left( M \odot \left(\frac{Q\,K^{T}}{\sqrt{ d_{k} }}\right) \right)\,V
+>\end{align*}
+>$$
+>where $M\in \{ 0,1 \}^{n\times n}$ is the **mask**. 
+>- If $M$ is a *lower triangular matrix*, then the masked attention is called a **causal attention.** 
 
-
+- [[Hadamard Product of Matrices]]
+- [[Causal Convolutional Neural Network]]
+- [[Speech and Language Processing by Jurafsky]] pp 193 - 194
 
 ### Multi-Head Attention and Self-Attention
 
@@ -325,3 +337,4 @@ date of note: 2024-05-12
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 629
 - [[vaswaniAttentionAllYou2017]] Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., & Polosukhin, I. (2017). Attention is All you Need. _Advances in Neural Information Processing Systems_, _30_. [https://proceedings.neurips.cc/paper_files/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html](https://proceedings.neurips.cc/paper_files/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html)
 - [[Foundations of Computer Vision by Torralba]] pp 371 - 378
+- [[Speech and Language Processing by Jurafsky]] pp  185 - 190, 193 - 194

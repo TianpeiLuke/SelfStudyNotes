@@ -211,3 +211,4 @@ date of note: 2024-05-12
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 368 - 374
 - [[vaswaniAttentionAllYou2017]] Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., & Polosukhin, I. (2017). Attention is All you Need. _Advances in Neural Information Processing Systems_, _30_. [https://proceedings.neurips.cc/paper_files/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html](https://proceedings.neurips.cc/paper_files/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html)
 - [[Foundations of Computer Vision by Torralba]] pp 379 - 382
+- [[Speech and Language Processing by Jurafsky]] pp 190 - 193
