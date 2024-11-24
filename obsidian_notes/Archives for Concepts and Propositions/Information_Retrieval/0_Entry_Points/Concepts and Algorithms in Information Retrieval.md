@@ -62,11 +62,6 @@ date of note: 2024-09-13
 
 ### Evaluation of Information Retrieval
 
-#### Similarity Metrics
-
-- [[Cosine Similarity and Cosine Distance]]
-- [[Jaccard Similarity and Jaccard Distance between Two Sets]]
-
 #### Evaluation of Unranked Retrieval Sets
 
 - [[Confusion Table]]
@@ -75,6 +70,8 @@ date of note: 2024-09-13
 - [[Receiver Characteristic Curve for Binary Classification]]
 - [[Macro-Average and Micro-Average for Multi-Class Metric]]
 - [[Recall and Precision and F-Measure]]
+- [[Cosine Similarity and Cosine Distance]]
+- [[Jaccard Similarity and Jaccard Distance between Two Sets]]
 
 #### Evaluation of Ranked Retrieval Result
 
@@ -108,28 +105,6 @@ date of note: 2024-09-13
 
 - [[Concepts and Algorithms in Natural Language Processing]]
 
-#### Language Model
-
-- [[n-Gram Model and Language Model]]
-- [[Hidden Markov Model]]
-- [[Recurrent Neural Network]]
-- [[Transformer Network]]
-- [[Large Language Model and Pretrained Language Models]]
-
-#### Text Classification
-
-- [[Multinomial Naive Bayes Model]]
-- [[Support Vector Machine Kernel Expansion and RKHS]]
-- [[Conditional Random Field]]
-- [[Large Language Model and Pretrained Language Models]]
-
-#### Topic Models
-
-- [[Topic Models]]
-- [[Multinomial Principle Component Analysis]]
-- [[Latent Semantic Analysis via Singular Value Decomposition]]
-- [[Probabilistic Latent Semantic Analysis]]
-- [[Latent Dirichlet Allocation]]
 
 
 
