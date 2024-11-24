@@ -64,6 +64,12 @@ date of note: 2024-05-12
 >- the *word distribution* at **different location** is **identical** given the same **topic**. 
 >	- in other word, the **parameter** for word distribution are **shared**
 
+^3fc7af
+
+>[!important]
+>The **multinomial Naive Bayes** corresponds to the **bag-of-words representation** of documents. 
+
+- [[Bag-of-Words for Document Representation]]
 
 ## Latent Dirichlet Allocation
 

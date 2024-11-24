@@ -32,7 +32,7 @@ date of note: 2024-09-12
 
 
 
-- [[Bag-of-Words for Text Representation]]
+- [[Bag-of-Words for Document Representation]]
 - [[Word Embedding]]
 - [[n-Gram Model and Language Model]]
 - [[Cosine Similarity and Cosine Distance]]

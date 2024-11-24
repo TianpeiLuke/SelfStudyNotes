@@ -56,6 +56,7 @@ date of note: 2024-09-13
 
 - [[Naive Bayes Model]]
 - [[Multinomial Naive Bayes Model]]
+- [[Bag-of-Words for Document Representation]]
 - [[Multinomial Principle Component Analysis]]
 - [[Logistic Regression]]
 - [[Generalized Linear Models]]
@@ -82,7 +83,6 @@ date of note: 2024-09-13
 - [[Information Retrieval]]
 - [[Vector Semantics and Distributional Hypothesis in Linguistic]]
 - [[Co-Occurrence Matrix]]
-- [[Bag-of-Words for Text Representation]]
 - [[Vector Space Model in Information Retrieval]]
 - [[Cosine Similarity and Cosine Distance]]
 - [[Term Frequency and Inverse Document Frequency or TF-IDF]]
