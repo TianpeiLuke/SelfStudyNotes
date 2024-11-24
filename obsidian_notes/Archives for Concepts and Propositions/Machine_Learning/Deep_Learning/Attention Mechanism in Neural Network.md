@@ -136,6 +136,8 @@ date of note: 2024-05-12
 - [[Causal Convolutional Neural Network]]
 - [[Speech and Language Processing by Jurafsky]] pp 193 - 194
 
+![[masked_self_attention.png]]
+
 ### Multi-Head Attention and Self-Attention
 
 >[!important] Definition

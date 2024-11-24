@@ -27,7 +27,10 @@ date of note: 2024-10-21
 
 
 
-![[bert.png]]
+
+
+![[bert_architecture.png]]
+
 
 
 ### Tokenization
@@ -56,7 +59,7 @@ date of note: 2024-10-21
 ### Supervised Fine-Tuning
 
 
-
+![[bert.png]]
 ## Explanation
 
 
@@ -91,3 +94,5 @@ date of note: 2024-10-21
 
 - [[devlinBERTPretrainingDeep2019]]
 - [[liuRoBERTaRobustlyOptimized2019]]
+
+- [[Deep Learning Foundations and Concepts by Bishop]] pp 388 - 390
