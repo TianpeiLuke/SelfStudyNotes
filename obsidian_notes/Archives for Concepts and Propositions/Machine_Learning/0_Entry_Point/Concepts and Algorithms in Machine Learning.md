@@ -32,8 +32,8 @@ date of note: 2024-06-01
 - [[True or False Positive Rate and True or False Negative Rate]]
 - [[Positive Predictive Value and False Discovery Rate]]
 - [[Recall and Precision and F-Measure]]
-- [[Recall and Precision at k]]
 - [[Receiver Characteristic Curve for Binary Classification]]
+- [[Precision-Recall Curve]]
 - [[Macro-Average and Micro-Average for Multi-Class Metric]]
 
 

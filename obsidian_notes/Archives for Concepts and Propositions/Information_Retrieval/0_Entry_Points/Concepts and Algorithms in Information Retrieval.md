@@ -76,10 +76,12 @@ date of note: 2024-09-13
 #### Evaluation of Ranked Retrieval Result
 
 - [[Precision-Recall Curve]]
-- [[Interpolated Average Precision and Mean Average Precision]]
+- [[Interpolated Precision and Average Precision]]
+- [[Mean Average Precision]]
 - [[Recall and Precision at k]]
 - [[Sensitivity and Specificity]]
 - [[Normalized Discounted Cumulative Gain or NDCG]]
+
 
 ### Relevance Feedback and Query Expansion
 

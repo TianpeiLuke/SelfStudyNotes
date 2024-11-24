@@ -69,7 +69,7 @@ date of note: 2024-11-25
 
 ### Average Precision
 
-- [[Interpolated Average Precision and Mean Average Precision]]
+- [[Interpolated Precision and Average Precision]]
 
 
 ### Top-K Relevance
@@ -93,7 +93,7 @@ date of note: 2024-11-25
 >If we want to evaluate **ordered set**, we would need to use other metrics
 
 - [[Recall and Precision at k]]
-- [[Interpolated Average Precision and Mean Average Precision]]
+- [[Interpolated Precision and Average Precision]]
 - [[Normalized Discounted Cumulative Gain or NDCG]]
 
 

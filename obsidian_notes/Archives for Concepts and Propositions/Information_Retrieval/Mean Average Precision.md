@@ -5,20 +5,18 @@ tags:
   - information_retrieval/relevancy_metric
   - natural_language_processing/metric
 keywords:
-  - average_precision
   - mean_average_precision
-  - interploated_average_precision
 topics:
   - machine_learning_metrics
   - information_retrieval/metrics
   - natural_language_processing/metrics
-name: Interpolated Average Precision and Mean Average Precision
+name: Mean Average Precision
 date of note: 2024-11-25
 ---
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Mean Average Precision
 
 
 
