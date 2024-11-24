@@ -20,6 +20,8 @@ date of note: 2024-05-12
 
 ![[Vector Semantics and Distributional Hypothesis in Linguistic#^be40ca]]
 
+![[Vector Semantics and Distributional Hypothesis in Linguistic#^c91885]]
+
 - [[Vector Semantics and Distributional Hypothesis in Linguistic]]
 
 >[!important] Definition
@@ -27,14 +29,19 @@ date of note: 2024-05-12
 >$$
 >w_{1} \text{ is semantically }\sim w_{2} \implies E(w_{1}) \in B(E(w_{2}), \delta)
 >$$
+>- A **word embedding** is a map from **distributional representation space** to **distributed representation space.**
 >
 >Two main properties for *word embedding*
 >- the embedding vectors are **short vectors**, i.e. they are of *smaller dimensionality* than the vocabulary size. $$p \ll |\mathcal{V}|$$
 >- the embedding vectors are **dense vectors**
+>
 
 - [[Word Embedding Semantic Properties]]
 - [[Distributed Representation]]
 - [[Vector Semantics and Distributional Hypothesis in Linguistic]]
+
+
+
 
 ### Sparse Word Embedding
 

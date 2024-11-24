@@ -58,6 +58,12 @@ date of note: 2024-11-09
 
 - [[Vector Space Model in Information Retrieval]]
 
+## Distributional Representation and TF-IDF
+
+![[Vector Semantics and Distributional Hypothesis in Linguistic#^c91885]]
+
+- [[Vector Semantics and Distributional Hypothesis in Linguistic]]
+- [[Term Frequency and Inverse Document Frequency or TF-IDF]]
 
 ## SVD and Latent Semantic Analysis
 

@@ -28,6 +28,8 @@ date of note: 2024-07-07
 ^04ca19
 
 
+- [[Vector Semantics and Distributional Hypothesis in Linguistic]]
+
 ### Why Distributed Representation
 
 >[!important]

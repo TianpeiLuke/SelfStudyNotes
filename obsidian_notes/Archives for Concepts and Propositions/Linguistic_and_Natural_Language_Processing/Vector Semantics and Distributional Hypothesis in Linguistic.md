@@ -30,10 +30,28 @@ date of note: 2024-05-12
 >
 >- The idea of **vector semantics** is to represent a word as a point in a *multidimensional semantic space* that is derived from the *distributions of  word neighbors*.
 >- The vector semantics instantiates the *distributional hypothesis* by learning the representation of the meaning of words, called the **word embedding.**
+>- **vector semantics** refers to the set of NLP methods that aim to learn the word representation based on *distributional properties* of words in a large corpus.
 
 ^be40ca
 
 - [[Word Embedding]]
+
+### Distributional Representation and Distributed Representation
+
+
+>[!important] Definition
+>The **distributional representation** refers to representation based on *distribution* of *words* from the *context* in which the words appear.
+>- This scheme is based on the **distributional hypothesis**.
+>- A distributional representation is based on the *co-occurrence matrix.*
+>- The *distributional representation* is **sparse.**
+
+^c91885
+
+- [[Co-Occurrence Matrix]]
+
+![[Distributed Representation#^04ca19]]
+
+- [[Distributed Representation]]
 
 ### Lexical Semantics and the Meaning of Words
 
