@@ -157,11 +157,13 @@ date of note: 2024-09-13
 - [[Generative Pre-trained Transformer or GPT]]
 - [[Text-to-Text Transfer Transformer or T5 for Translation]]
 
+
 - [[Greedy Decoding for Language Model]]
 - [[Beam Search as Greedy Decoding]]
 - [[Autoregressive or Causal Language Model Generation]]
 - [[Top-k Sampling for Large Language Model Generation]]
 - [[Top-p Sampling or Nucleus Sampling for Large Language Model Generation]]
+
 
 - [[Scaling Law of Large Language Model]]
 - [[Foundational Models for Transfer Learning]]
