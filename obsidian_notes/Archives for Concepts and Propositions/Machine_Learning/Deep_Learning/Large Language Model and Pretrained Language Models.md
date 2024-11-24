@@ -31,18 +31,26 @@ date of note: 2024-10-21
 ### Decoder-Only Transformer Architecture
 
 - [[Generative Pre-trained Transformer or GPT]]
+- [[Greedy Decoding for Language Model]]
 - [[Beam Search as Greedy Decoding]]
 
 ### Encoder-Decoder Transformer Architecture
 
 - [[Text-to-Text Transfer Transformer or T5 for Translation]]
+- [[Greedy Decoding for Language Model]]
 - [[Beam Search as Greedy Decoding]]
-
 
 
 ## Explanation
 
 
+
+
+## LLM Generation
+
+- [[Autoregressive or Causal Language Model Generation]]
+- [[Top-k Sampling for Large Language Model Generation]]
+- [[Top-p Sampling or Nucleus Sampling for Large Language Model Generation]]
 
 
 
@@ -60,3 +68,7 @@ date of note: 2024-10-21
 - [[Text-to-Text Transfer Transformer or T5 for Translation]]
 - [[liuRoBERTaRobustlyOptimized2019]]
 - [[touvronLlamaOpenFoundation2023]]
+
+- [[Speech and Language Processing by Jurafsky]] pp 203 - 220
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 390 - 394
+- [[Deep Learning Foundations and Concepts by Bishop]]

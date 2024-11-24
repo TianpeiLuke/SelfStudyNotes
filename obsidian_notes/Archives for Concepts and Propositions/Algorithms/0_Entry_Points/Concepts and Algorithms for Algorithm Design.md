@@ -42,6 +42,7 @@ date of note: 2024-09-16
 - [[Tabu Search]]
 - [[Random Restart Hill Climbing]]
 - [[Stochastic Hill Climbing]]
+- [[Greedy Decoding for Language Model]]
 - [[Beam Search as Greedy Decoding]]
 
 - [[Minimum Spanning Tree Problem]]
