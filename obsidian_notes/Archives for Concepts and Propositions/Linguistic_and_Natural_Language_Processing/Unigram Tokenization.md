@@ -99,6 +99,8 @@ date of note: 2024-11-17
 >		- Note that we always keep the subwords consisting of a single character to avoid out-of-vocabulary.
 >	 
 
+^5a3115
+
 
 - Kudo, T. (2018). Subword Regularization: Improving Neural Network Translation Models with Multiple Subword Candidates. In I. Gurevych & Y. Miyao (Eds.), _Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)_ (pp. 66–75). Association for Computational Linguistics. [https://doi.org/10.18653/v1/P18-1007](https://doi.org/10.18653/v1/P18-1007)
 - [[Max-Product Variable Elimination]]

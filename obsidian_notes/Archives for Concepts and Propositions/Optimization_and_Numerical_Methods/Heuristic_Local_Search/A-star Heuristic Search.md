@@ -19,8 +19,8 @@ date of note: 2024-08-08
 
 ## Explanation
 
-
-
+- [[Beam Search as Greedy Decoding]]
+- [[Best-First Search]]
 
 
 -----------

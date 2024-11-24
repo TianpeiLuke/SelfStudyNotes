@@ -67,6 +67,10 @@ date of note: 2024-08-25
 - [[Gradient Descent Algorithm]]
 
 
+## Beam Search as Greedy Decoding
+
+- [[Beam Search as Greedy Decoding]]
+
 
 -----------
 ##  Recommended Notes and References

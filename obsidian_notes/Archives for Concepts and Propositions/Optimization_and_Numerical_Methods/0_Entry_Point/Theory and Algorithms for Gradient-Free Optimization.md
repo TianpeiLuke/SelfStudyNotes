@@ -37,10 +37,12 @@ date of note: 2024-08-24
 
 ### Local Search
 
+- [[Greedy Heuristic Algorithms]]
 - [[Greedy Search and Hill Climbing]]
 - [[Random Restart Hill Climbing]]
 - [[Tabu Search]]
 - [[Nelder–Mead Simplex Method]]
+- [[Beam Search as Greedy Decoding]]
 
 - [[A-star Heuristic Search]]
 - [[Backtracking]]

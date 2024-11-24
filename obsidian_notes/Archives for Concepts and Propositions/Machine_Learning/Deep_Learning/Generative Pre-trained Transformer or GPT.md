@@ -22,13 +22,33 @@ date of note: 2024-10-21
 >**Name**: Generative Pre-trained Transformer or GPT
 
 
+### Decoder-Only Transformer Architecture
 
+
+
+
+- [[Autoregressive Models]]
 
 
 ![[gpt_architecture.png]]
 
 
 ![[gpt_transformer.png]]
+
+
+### Byte-Pair Encoding Tokenization
+
+![[Byte-Pair Encoding or BPE Tokenization#^98ba57]]
+
+- [[Byte-Pair Encoding or BPE Tokenization]]
+
+
+### Greedy Decoding via Beam Search
+
+
+
+- [[Beam Search as Greedy Decoding]]
+
 
 ## Explanation
 
@@ -42,7 +62,6 @@ date of note: 2024-10-21
 
 - [[Attention Mechanism in Neural Network]]
 - [[Transformer Network]]
-- [[Autoregressive Models]]
 
 - [[Large Language Model and Pretrained Language Models]]
 - [[Bidirectional Encoder Representation from Transformer or BERT]]

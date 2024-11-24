@@ -24,7 +24,7 @@ date of note: 2024-09-12
 >$$
 >where $t_{i}\in \mathcal{V}$.
 >
->That is, **BOW model** represents a *document* $d\in \mathcal{D}$ via the corresponding *column vector* in *co-occurrence matrix* $X\in \mathbb{R}^{|\mathcal{V}|\times |\mathcal{D}|}$
+>That is, the **BOW model** represents a *document* $d\in \mathcal{D}$ via the corresponding *column vector* in *co-occurrence matrix* $X\in \mathbb{R}^{|\mathcal{V}|\times |\mathcal{D}|}$
 >$$
 >d \to X[:,d]
 >$$

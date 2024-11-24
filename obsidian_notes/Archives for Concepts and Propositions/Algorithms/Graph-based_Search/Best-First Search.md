@@ -18,16 +18,16 @@ date of note: 2024-08-08
 
 ## Explanation
 
-
-- [[Backtracking]]
+- [[Breadth-First Search]]
+- [[A-star Heuristic Search]]
+- [[Beam Search as Greedy Decoding]]
 
 
 -----------
 ##  Recommended Notes and References
 
-
 - [[Graph]]
 
 
 - [[Introduction to Algorithms by Cormen]]
-- [[Algorithm Design Manual by Skiena]] pp 224, 230, 449, 452, 542, 546, 551, 559, 568, 599
+- [[Algorithm Design Manual by Skiena]] pp 299

@@ -39,3 +39,4 @@ date of note: 2024-08-08
 
 - [[Functional Analysis by Reed]]
 - [[Introduction to Algorithms by Cormen]]
+- [[Algorithm Design Manual by Skiena]] pp 422, 495 - 502, 662

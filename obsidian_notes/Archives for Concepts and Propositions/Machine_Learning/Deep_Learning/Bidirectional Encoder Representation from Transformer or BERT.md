@@ -20,7 +20,7 @@ date of note: 2024-10-21
 >**Name**: Bidirectional Encoder Representation from Transformer or BERT
 
 
-### BERT Architecture
+### Encoder-Only Transformer Architecture
 
 
 ![[bert_input_represntation.png]]
@@ -96,3 +96,4 @@ date of note: 2024-10-21
 - [[liuRoBERTaRobustlyOptimized2019]]
 
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 388 - 390
+- [[Speech and Language Processing by Jurafsky]] pp 

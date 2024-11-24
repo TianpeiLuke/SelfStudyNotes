@@ -29,7 +29,7 @@ date of note: 2024-09-16
 - [[Network and Flow and Capacity and Cut]]
 
 - [[A-star Heuristic Search]]
-
+- [[Bellman-Ford Algorithm for Network Flow Problem]]
 
 ### Martingale and Optimal Stopping
 

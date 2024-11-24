@@ -114,6 +114,11 @@ date of note: 2024-09-01
 >[!important] Definition
 >The **Viterbi algorithm** is also called the **Viterbi decoding** as finding the MAP estimate is the process of *decoding*.
 
+>[!info]
+>In contrast to the **Viterbi decoding**, an alternative method is the **greedy decoding** such as the **beam search.**
+
+- [[Beam Search as Greedy Decoding]]
+
 ## Time and Space Complexity
 
 >[!quote]

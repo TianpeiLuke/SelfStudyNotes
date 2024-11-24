@@ -7,6 +7,7 @@ tags:
   - natural_language_processing/large_language_models
 keywords:
   - t5_transformer
+  - machine_translation_models
 topics:
   - deep_learning/models
   - natural_language_processing/large_language_models
@@ -20,26 +21,45 @@ date of note: 2024-10-21
 >**Name**: Text-to-Text Transfer Transformer or T5 for Translation
 
 
-### Architecture
+### Encoder-Decoder Transformer Architecture
 
 
 
 
+![[encoder_decoder_transformer.png]]
+
+- [[Encoder-Decoder Sequence-to-Sequence Architecture]]
+
+
+### Tokenization via Unigram 
+
+![[Unigram Tokenization#^5a3115]]
+
+- [[Unigram Tokenization]]
 
 
 
+### Greedy Decoding via Beam Search
 
 
 
-
-
+- [[Beam Search as Greedy Decoding]]
 
 ## Explanation
 
 
+
+
+
 ## Dataset in Experiment
 
+### Parallel Corpus
 
+### Sentence Alignment
+
+
+
+## Evaluation
 
 
 
@@ -61,3 +81,5 @@ date of note: 2024-10-21
 - [[Artificial Neural Network and Deep Learning]]
 
 - [[raffelExploringLimitsTransfer2020]]
+
+- [[Speech and Language Processing by Jurafsky]] pp 268 - 278
