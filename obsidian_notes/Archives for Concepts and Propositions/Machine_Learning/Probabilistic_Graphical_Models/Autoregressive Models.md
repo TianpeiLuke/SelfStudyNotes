@@ -29,8 +29,8 @@ date of note: 2024-11-14
 >$$
 >- This corresponds to a fully connected DAG, in which each node depends on *all its predecessors* in the ordering.
 
-
 - [[Bayesian Network on Directed Acyclic Graph]]
+- [[n-Gram Model and Language Model]]
 
 ![[autoregressive_model.png]]
 ## Explanation

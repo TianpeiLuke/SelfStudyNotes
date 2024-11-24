@@ -69,7 +69,7 @@ date of note: 2024-05-12
 >[!important]
 >The **multinomial Naive Bayes** corresponds to the **bag-of-words representation** of documents. 
 
-- [[Bag-of-Words for Document Representation]]
+- [[Bag-of-Word Model for Document Representation]]
 
 ## Latent Dirichlet Allocation
 

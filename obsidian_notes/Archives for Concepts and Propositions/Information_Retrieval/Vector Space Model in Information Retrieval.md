@@ -39,7 +39,7 @@ date of note: 2024-09-12
 >[!example]
 >For **bag-of-words representation**, each document is represented by the *count of occurrence of word groups* $$d\in \mathbb{N}^{p}$$
 
-- [[Bag-of-Words for Document Representation]]
+- [[Bag-of-Word Model for Document Representation]]
 
 >[!example]
 >The **tf-idf vector space model** represents each document $d\in \mathcal{D}$ as the *centroid* of *tf-idf* representation for all words in the document
@@ -97,7 +97,7 @@ date of note: 2024-09-12
 ##  Recommended Notes and References
 
 
-- [[Bag-of-Words for Document Representation]]
+- [[Bag-of-Word Model for Document Representation]]
 
 - [[n-Gram Model and Language Model]]
 - [[Cosine Similarity and Cosine Distance]]

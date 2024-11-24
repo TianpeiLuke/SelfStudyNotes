@@ -56,7 +56,7 @@ date of note: 2024-09-13
 
 - [[Naive Bayes Model]]
 - [[Multinomial Naive Bayes Model]]
-- [[Bag-of-Words for Document Representation]]
+- [[Bag-of-Word Model for Document Representation]]
 - [[Multinomial Principle Component Analysis]]
 - [[Logistic Regression]]
 - [[Generalized Linear Models]]

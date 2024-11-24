@@ -6,14 +6,14 @@ keywords:
   - bag_of_words
 topics:
   - natural_language_processing/word_representation
-name: Bag-of-Words for Document Representation
+name: Bag-of-Word Model for Document Representation
 date of note: 2024-09-12
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Bag-of-Words for Document Representation
+>**Name**: Bag-of-Word Model for Document Representation
 
 
 
@@ -57,4 +57,5 @@ date of note: 2024-09-12
 
 - Wikipedia [Bag-of-words_model](https://en.wikipedia.org/wiki/Bag-of-words_model)
 - [[Speech and Language Processing by Jurafsky]]  pp 58
-- [[Probabilistic Graphical Models by Koller]]
+- [[Probabilistic Graphical Models by Koller]] pp 766
+- [[Deep Learning Foundations and Concepts by Bishop]] pp 378

@@ -18,14 +18,17 @@ date of note: 2024-08-16
 >[!important]
 >**Name**: Naive Bayes Model
 
-
-
 >[!important] Definition
->$$\hat{p}(X_{i} | Y) = \frac{C(X_{i}, Y)}{\sum_{j = 1 }^{D}C(X_{j}, Y)}$$
+>Let $(X_{1}\,{,}\ldots{,}\,X_{D}, Y)$ be random sample from $\mathcal{X}^{D}\times \mathcal{Y}$.
+>
+>The **naive Bayes model** assumes that given response $Y$, all covariates $X_{1}\,{,}\ldots{,}\,X_{D}$ are *conditionally independent* i.e.
+>$$
+>p(X_{1}\,{,}\ldots{,}\,X_{D}\;|\;Y) = \prod_{i=1}^{D}\,p(X_{i}\;|\;Y)
+>$$
+>- By *Bayes theorem*, the **posterior distribution** of $Y$ given all covariates $X_{1}\,{,}\ldots{,}\,X_{D}$ is given by $$p(Y|\;X_{1}\,{,}\ldots{,}\,X_{D}) \propto p(Y)\; \prod_{i=1}^{D}\,p(X_{i}\;|\;Y)$$
 
-
-- [[Tokenization of Words and Subwords and SentencePiece Tokenization]]
-- [[n-Gram Model and Language Model]]
+- [[Conditional Independence]]
+- [[Bayes Theorem]]
 
 ![[naive_bayes_1.png]]
 
@@ -35,11 +38,12 @@ date of note: 2024-08-16
 
 - [[Multinomial Naive Bayes Model]]
 
-
 ## Explanation
 
+>[!info]
+>**Naive Bayes model** is one of simplest **Bayesian network** with *star-spaced graph.*
 
-
+- [[Bayesian Network on Directed Acyclic Graph]]
 
 ![[tree_naive_bayes.png]]
 
@@ -51,7 +55,7 @@ date of note: 2024-08-16
 
 
 
-- [[Bayesian Network on Directed Acyclic Graph]]
+
 - [[Classification Problem]]
 - [[Probabilistic Graphical Models]]
 
@@ -60,5 +64,5 @@ date of note: 2024-08-16
 - [[Probabilistic Graphical Models by Koller]] pp 47, 727, 767, 875 - 877
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 164
 - [[Elements of Statistical Learning by Hastie]] pp 108, 210-211, 694
-- [[Deep Learning Foundations and Concepts by Bishop]] pp 344
+- [[Deep Learning Foundations and Concepts by Bishop]] pp 344, 378
 - [[Deep Learning by Goodfellow]] pp 3
