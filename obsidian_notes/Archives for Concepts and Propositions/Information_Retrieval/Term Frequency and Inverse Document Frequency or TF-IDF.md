@@ -10,7 +10,7 @@ topics:
   - information_retrieval/index
   - natural_language_processing/word_representation
 name: Term Frequency and Inverse Document Frequency or TF-IDF
-date of note: 2024-05-12
+date of note: 2024-11-12
 ---
 
 ## Concept Definition

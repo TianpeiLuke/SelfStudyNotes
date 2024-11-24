@@ -41,7 +41,7 @@ date of note: 2024-04-25
 >- $$\begin{align*}\text{Macro-Average Recall} &= \frac{1}{K}\sum_{c=1}^{K}\text{Recall}_{c} \\[5pt] &= \frac{1}{K}\sum_{c=1}^{K} \frac{\text{TP}_{c}}{\text{TP}_{c} + \text{FN}_{c}}\end{align*}$$
 
 >[!important] Definition
->The **Micro-averaging** computes the total number of true positives (TP), false positives (FP), and false negatives (FN) predictions *across all classes*: 
+>The **Micro-averaging** for multi-class metrics computes the total number of true positives (TP), false positives (FP), and false negatives (FN) predictions *across all classes*: 
 > 
 > - **Total True Positive** is the *sum of true positive* counts across all classes;
 > - **Total False Positive** is the *sum of false positive* counts across all classes; 
@@ -51,7 +51,8 @@ date of note: 2024-04-25
 >- $$\text{Micro-Average Precision} = \frac{\sum_{c=1}^{K}\text{TP}_{c}}{\sum_{c=1}^{K}\left(\text{TP}_{c} + \text{FP}_{c}\right)}$$
 >- $$\text{Micro-Average Recall} = \frac{\sum_{c=1}^{K}\text{TP}_{c}}{\sum_{c=1}^{K} \left(\text{TP}_{c} + \text{FN}_{c}\right)}$$
 
-
+>[!info]
+>In **micro-averaging**, we collect the decisions for all classes into a *single confusion matrix*, and then compute precision and  recall from that table
 
 
 ## Explanation
@@ -100,5 +101,6 @@ date of note: 2024-04-25
 
 - [[Introduction to Information Retrieval by Manning]] pp 280
 - [[Evaluating Learning Algorithms by Japkowicz]]
+- [[Speech and Language Processing by Jurafsky]] pp 68
 - Tutorial [multi-class-metrics](https://www.evidentlyai.com/classification-metrics/multi-class-metrics)
 

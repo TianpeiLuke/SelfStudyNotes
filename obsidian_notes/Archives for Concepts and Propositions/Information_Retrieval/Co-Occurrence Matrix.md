@@ -10,7 +10,7 @@ keywords:
 topics:
   - natural_language_processing/word_representation
 name: Co-Occurrence Matrix
-date of note: 2024-05-12
+date of note: 2024-11-09
 ---
 
 ## Concept Definition

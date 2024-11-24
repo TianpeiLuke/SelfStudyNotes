@@ -13,7 +13,7 @@ topics:
   - information_retrieval/metrics
   - natural_language_processing/metrics
 name: Interpolated Average Precision and Mean Average Precision
-date of note: 2024-04-25
+date of note: 2024-11-25
 ---
 ## Concept Definition
 

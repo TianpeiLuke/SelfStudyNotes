@@ -5,14 +5,13 @@ tags:
   - information_retrieval/relevancy_metric
   - natural_language_processing/metric
 keywords:
-  - recall_at_k
-  - precision_at_k
+  - precision_recall_curve
 topics:
   - machine_learning_metrics
   - information_retrieval/metrics
   - natural_language_processing/metrics
 name: Recall and Precision at k
-date of note: 2024-04-25
+date of note: 2024-11-25
 ---
 ## Concept Definition
 
@@ -22,6 +21,9 @@ date of note: 2024-04-25
 
 - [[Recall and Precision and F-Measure]]
 - [[Confusion Table]]
+
+
+![[precision_recall_curve.png]]
 
 ## Explanation
 
@@ -39,7 +41,7 @@ date of note: 2024-04-25
 
 - [[Information Retrieval]]
 
-- [[Introduction to Information Retrieval by Manning]] pp 161
+- [[Introduction to Information Retrieval by Manning]] pp 158
 - [[Evaluating Learning Algorithms by Japkowicz]]
 
 - Medium

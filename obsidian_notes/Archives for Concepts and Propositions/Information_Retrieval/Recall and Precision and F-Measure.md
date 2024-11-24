@@ -13,7 +13,7 @@ topics:
   - information_retrieval/metrics
   - natural_language_processing/metrics
 name: Recall and Precision and F-Measure
-date of note: 2024-04-25
+date of note: 2024-11-25
 ---
 ## Concept Definition
 
@@ -87,6 +87,16 @@ date of note: 2024-04-25
 
 - [[Information Retrieval]]
 
+>[!info]
+>Both *precision, recall and F-measure* are for **unordered set**.
+>
+>If we want to evaluate **ordered set**, we would need to use other metrics
+
+- [[Recall and Precision at k]]
+- [[Interpolated Average Precision and Mean Average Precision]]
+- [[Normalized Discounted Cumulative Gain or NDCG]]
+
+
 ## Precision-Recall Curve
 
 >[!important] Definition
@@ -94,7 +104,7 @@ date of note: 2024-04-25
 >- $x$-axis as *recall*
 >- and $y$-axis as *precision*.
 
-
+- [[Precision-Recall Curve]]
 
 
 -----------

@@ -13,7 +13,7 @@ topics:
   - natural_language_processing/topic_models
   - machine_learning_models
 name: Latent Semantic Analysis via Singular Value Decomposition
-date of note: 2024-09-05
+date of note: 2024-11-05
 ---
 
 ## Concept Definition
@@ -44,6 +44,7 @@ date of note: 2024-09-05
 >		- The **LSA** maps the *document vector* from $|\mathcal{V}|$ to *$k$-dimensional*.
 >		- For *query vector* $q\in \mathbb{R}^{|\mathcal{V}|}$, $$\hat{q} = \Sigma_{k}^{-1}\,U_{k}^{T}\,q$$
 >		- The **cosine similarity** between documentds is given by $$\left\langle  \Sigma_{k}\hat{d}_{i} \,,\, \Sigma_{k}\hat{d}_{j}   \right\rangle$$
+>		- The **cosine similarity** between documentds is given by $$\left\langle  \Sigma_{k}\hat{d}_{i} \,,\, \Sigma_{k}\hat{d}_{j}   \right\rangle$$
 >	- The **embedding** of a *term* $t_{i}\in \mathcal{V}$ is given by $$\hat{t}_{i} = \Sigma_{k}^{-1}\,V_{k}^{T}\,X_{i,:}^{T}  \in \mathbb{R}^{k}$$ as row of $X_{k}$
 >		- The **LSA** maps the *word vector* from $|\mathcal{D}|$ to *$k$-dimensional*.
 >		- The **cosine similarity** between words is given by $$\left\langle  \Sigma_{k}\hat{t}_{i} \,,\, \Sigma_{k}\hat{t}_{j}   \right\rangle$$
@@ -60,8 +61,6 @@ date of note: 2024-09-05
 ## Explanation
 
 
-- [[Numerical Algorithms for Eigenvalue Problem]]
-
 
 ## Topic Models
 
@@ -74,6 +73,17 @@ date of note: 2024-09-05
 ### Latent Dirichlet Allocation
 
 - [[Latent Dirichlet Allocation]]
+
+
+-----------
+##  Recommended Notes and References
+
+
+
+
+- [[Principle Component Analysis]]
+
+
 
 
 -----------

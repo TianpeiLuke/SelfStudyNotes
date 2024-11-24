@@ -11,7 +11,7 @@ topics:
   - information_retrieval/index
   - natural_language_processing/word_representation
 name: Okapi BM25 score for Information Retrieval
-date of note: 2024-05-12
+date of note: 2024-11-12
 ---
 
 ## Concept Definition

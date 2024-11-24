@@ -67,17 +67,18 @@ date of note: 2024-09-13
 - [[Cosine Similarity and Cosine Distance]]
 - [[Jaccard Similarity and Jaccard Distance between Two Sets]]
 
-#### Decision Metrics
+#### Evaluation of Unranked Retrieval Sets
 
 - [[Confusion Table]]
 - [[True or False Positive Rate and True or False Negative Rate]]
 - [[Positive Predictive Value and False Discovery Rate]]
 - [[Receiver Characteristic Curve for Binary Classification]]
 - [[Macro-Average and Micro-Average for Multi-Class Metric]]
-
-#### Relevancy Scores
-
 - [[Recall and Precision and F-Measure]]
+
+#### Evaluation of Ranked Retrieval Result
+
+- [[Precision-Recall Curve]]
 - [[Interpolated Average Precision and Mean Average Precision]]
 - [[Recall and Precision at k]]
 - [[Sensitivity and Specificity]]
