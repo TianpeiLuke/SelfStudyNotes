@@ -21,6 +21,10 @@ date of note: 2024-11-24
 
 
 
+## Codes
+
+- [[PEFT LLM script  - entry point]]
+
 
 
 -----------
@@ -33,3 +37,4 @@ date of note: 2024-11-24
 
 - [[Low Rank Adaptation or LoRA for Large Language Model]]
 - [[Speech and Language Processing by Jurafsky]] pp 217
+- [[Deep Learning Foundations and Concepts by Bishop]]

@@ -132,6 +132,8 @@ date of note: 2024-05-12
 >where $M\in \{ 0,1 \}^{n\times n}$ is the **mask**. 
 >- If $M$ is a *lower triangular matrix*, then the masked attention is called a **causal attention.** 
 
+^bb5243
+
 - [[Hadamard Product of Matrices]]
 - [[Causal Convolutional Neural Network]]
 - [[Speech and Language Processing by Jurafsky]] pp 193 - 194

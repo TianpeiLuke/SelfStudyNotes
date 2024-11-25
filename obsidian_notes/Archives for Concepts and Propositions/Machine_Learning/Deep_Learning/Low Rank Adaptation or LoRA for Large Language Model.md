@@ -20,6 +20,10 @@ date of note: 2024-11-24
 ## Explanation
 
 
+## Codes
+
+- [[PEFT LLM script  - entry point]]
+- [[PEFT LLM script 2 - construct LoRA]]
 
 
 

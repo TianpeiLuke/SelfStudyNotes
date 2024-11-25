@@ -265,7 +265,7 @@ date of note: 2024-06-01
 - [[Scaling Law of Large Language Model]]
 - [[Key-Value Cache for Training of Large Language Models]]
 
-#### Supervised Fine-Tuning and Transfer Learning of LLM
+#### Transfer Learning of LLM
 
 - [[Parameter Efficient Fine Tuning or PEFT for Large Language Model]]
 - [[Low Rank Adaptation or LoRA for Large Language Model]]

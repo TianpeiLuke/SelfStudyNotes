@@ -25,9 +25,15 @@ date of note: 2024-10-21
 ### Decoder-Only Transformer Architecture
 
 
-
-
 - [[Autoregressive Models]]
+
+#### Causal Masked Attention
+
+![[Attention Mechanism in Neural Network#^bb5243]]
+
+![[causal_and_masked_matrix.png]]
+
+- [[Attention Mechanism in Neural Network]]
 
 
 ![[gpt_architecture.png]]

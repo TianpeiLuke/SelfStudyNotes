@@ -15,6 +15,7 @@ date of note: 2024-10-21
 >**Name**: 
 
 
+- [[Generative Pre-trained Transformer or GPT]]
 
 ## Explanation
 

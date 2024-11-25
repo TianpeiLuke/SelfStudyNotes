@@ -94,5 +94,6 @@ date of note: 2024-09-12
 
 - Wikipedia [Word2vec](https://en.wikipedia.org/wiki/Word2vec)
 - [[Speech and Language Processing by Jurafsky]] pp 117 - 120
+- [[Deep Learning Foundations and Concepts by Bishop]] pp 375 - 377
 - Mikolov, T., Chen, K., Corrado, G.S., & Dean, J. (2013). Efficient Estimation of Word Representations in Vector Space. _International Conference on Learning Representations_.
 - Mikolov, T., Sutskever, I., Chen, K., Corrado, G. S., & Dean, J. (2013). Distributed representations of words and phrases and their compositionality. _Advances in neural information processing systems_, _26_.

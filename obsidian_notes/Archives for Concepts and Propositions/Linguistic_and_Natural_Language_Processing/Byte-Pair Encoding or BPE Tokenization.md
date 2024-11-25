@@ -337,5 +337,6 @@ def tokenize(text):
 
 
 - [[Speech and Language Processing by Jurafsky]] pp 21
+- [[Deep Learning Foundations and Concepts by Bishop]] pp 377
 - Sennrich, R., Haddow, B., & Birch, A. (2016). Neural Machine Translation of Rare Words with Subword Units. In K. Erk & N. A. Smith (Eds.), _Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)_ (pp. 1715–1725). Association for Computational Linguistics. [https://doi.org/10.18653/v1/P16-1162](https://doi.org/10.18653/v1/P16-1162)
 - Hugging Face tutorial [link](https://huggingface.co/learn/nlp-course/en/chapter6/5)

@@ -34,6 +34,10 @@ date of note: 2024-10-21
 >- The models are trained for a **masked language modeling** task
 >	- Instead of predicting the *following word*, we *mask* a word in the *middle* and predict the word given words *on both sides.*
 
+![[causal_and_masked_transformer.png]]
+
+![[causal_and_masked_matrix.png]]
+
 >[!important]
 > *Encoder-only architecture* is used in tasks such as
 >- **sequence labeling** including
@@ -87,6 +91,9 @@ date of note: 2024-10-21
 - [[Greedy Decoding for Language Model]]
 - [[Beam Search as Greedy Decoding]]
 
+
+
+
 ### Encoder-Decoder Transformer Architecture
 
 >[!important] Definition
@@ -126,6 +133,12 @@ date of note: 2024-10-21
 - [[Top-k Sampling for Large Language Model Generation]]
 - [[Top-p Sampling or Nucleus Sampling for Large Language Model Generation]]
 
+## Supervised Fine Tuning and Reinforcement Learning with Human Feedback
+
+- [[Parameter Efficient Fine Tuning or PEFT for Large Language Model]]
+- [[Reinforcement Learning with Human Feedbacks or RLHF for LLM]]
+- [[Supervised Fine-Tuning vs Reinforcement Learning with Human Feedbacks]]
+
 
 
 -----------
@@ -145,4 +158,4 @@ date of note: 2024-10-21
 
 - [[Speech and Language Processing by Jurafsky]] pp 203 - 220, 223
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 390 - 394
-- [[Deep Learning Foundations and Concepts by Bishop]]
+- [[Deep Learning Foundations and Concepts by Bishop]] pp 382 - 394

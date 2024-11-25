@@ -22,29 +22,56 @@ date of note: 2024-10-21
 
 ### Encoder-Only Transformer Architecture
 
+#### Unmasked Attention 
 
-![[bert_input_represntation.png]]
+![[Attention Mechanism in Neural Network#^332141]]
 
+![[causal_and_masked_matrix.png]]
 
+![[causal_and_masked_transformer.png]]
 
+- [[Attention Mechanism in Neural Network]]
 
+>[!quote]
+>The term ‘**bidirectional**’ refers to the fact that the network sees words *both before and after* the *masked word* and can use both sources of information to make a prediction. 
+>
+>As a consequence, unlike **decoder models**, there is *no need* to *shift* the inputs to the *right by one place*, and there is no need to *mask* the outputs of each layer from seeing input tokens occurring later in the sequence. 
+>- Compared to the decoder model, an encoder is **less efficient** since *only a fraction* of the sequence tokens are used as training labels. 
+>- Moreover, an encoder model is *unable to generate sequences*.
+
+- [[Large Language Model and Pretrained Language Models]]
+- [[Generative Pre-trained Transformer or GPT]]
 
 ![[bert_architecture.png]]
 
+- [[Transformer Network]]
 
-
-### Tokenization
+### WordPiece Tokenization
 
 ![[WordPiece Tokenization#^7acc64]]
 
 - [[WordPiece Tokenization]]
+
+### Input Representation
+
+![[bert_input_represntation.png]]
+
 
 
 ### Pre-Training
 
 #### Task 1: Masked Language Model (MLM)
 
-
+>[!quote]
+>The **first token** of every input string is given by a special token `<class>`, and the corresponding *output* of the model is *ignored* during pre-training. 
+>- Its role will become apparent when we discuss *fine-tuning*. 
+>
+>The model is pre-trained by presenting token sequences at the input. 
+>- A *randomly chosen subset* of the tokens, say $15\%$, are *replaced* with a special token denoted `<mask>`. 
+>- The model is trained to *predict the missing tokens* at the corresponding output nodes. 
+>- This is analogous to the masking used in **word2vec** to learn *word embeddings*.
+>  
+>-- [[Deep Learning Foundations and Concepts by Bishop]] pp 388  
 
 
 
@@ -61,6 +88,45 @@ date of note: 2024-10-21
 
 ![[bert.png]]
 ## Explanation
+
+
+### Architecture Design of BERT and Its Variants
+
+
+>[!example]
+>The original **English-only** *bidirectional transformer encoder model*, **BERT** (Devlin et al., 2019), consisted of the following:  
+>- An *English-only subword vocabulary* consisting of $$30,000$$ *tokens* generated  using the **WordPiece** algorithm (Schuster and Nakajima, 2012). 
+>- Hidden layers of *dimensionality* $$d = 768$$  
+>- Input **context window** of $$512$$ tokens 
+>- $12$ *layers* of transformer blocks, with $12$ (*bidirectional*) *multihead attention*  layers each. 
+>- The resulting model has about *$$100 \text{ million}$$ parameters*.
+>  
+>-- [[devlinBERTPretrainingDeep2019]]  
+
+
+>[!example]
+>The *larger multilingual* **XLM-RoBERTa** model, trained on *$100$ languages*, has  
+>- A multilingual subword vocabulary with $$250,000$$ *tokens* generated using the **SentencePiece Unigram LM** algorithm (Kudo and Richardson, 2018b). 
+>- $24$ *layers* of transformer blocks, with $16$ *multihead attention* layers each.
+>- Hidden layers of size $$d = 1024$$ 
+>- Input **context window** of $$512$$ tokens 
+>- The resulting model has about *$$550\text{ million}$$ parameters*.
+>  
+>-- [[liuRoBERTaRobustlyOptimized2019]]  
+
+
+|                              | **BERT** (**English**)                                                            | **BERT** (**Multilingual**)                                                                                 | **XLM-RoBERTa** (**Multilingual**)                                                                                                  | **DistilBert** (**Multilingual**)                                                                                                                                                                            |
+| ---------------------------- | --------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Language**                 | English                                                                           | $104$ Language                                                                                              | $100$ Languages                                                                                                                     | $104$ Language                                                                                                                                                                                               |
+| **Tokenization**             | **WordPiece** <br>- [[WordPiece Tokenization]]                                    | **WordPiece** <br>- [[WordPiece Tokenization]]                                                              | **SentencePiece Unigram**<br>- [[Unigram Tokenization]] <br>- [[Tokenization of Words and Subwords and SentencePiece Tokenization]] | **WordPiece** <br>- [[WordPiece Tokenization]]                                                                                                                                                               |
+| *Vocabulary size*            | $30,000$                                                                          | $110,000$                                                                                                   | $250,000$                                                                                                                           | $110,000$                                                                                                                                                                                                    |
+| **Context Window**           | $512$                                                                             | $512$                                                                                                       | $512$                                                                                                                               | $512$                                                                                                                                                                                                        |
+| *Layer Depth*                | $12$                                                                              | $12$                                                                                                        | $24$                                                                                                                                | $6$                                                                                                                                                                                                          |
+| Mutihead Attention per Layer | $12$                                                                              | $12$                                                                                                        | $16$                                                                                                                                | $12$                                                                                                                                                                                                         |
+| *Hidden Layer Dimension*     | $768$                                                                             | $768$                                                                                                       | $1024$                                                                                                                              | $768$                                                                                                                                                                                                        |
+| **Parameter size**           | - $110$ million (*base* uncased/cased)<br>- $340$ million (*large* uncased/cased) | - $110$ million (*base* cased)                                                                              | $550$ million                                                                                                                       | $134$ million                                                                                                                                                                                                |
+| Model Card                   | [BERT Huggingface](https://huggingface.co/docs/transformers/en/model_doc/bert)    | [BERT multilingual base model Huggingface](https://huggingface.co/google-bert/bert-base-multilingual-cased) | [XLM-RoBERTa Huggingface](https://huggingface.co/docs/transformers/en/model_doc/xlm-roberta)                                        | - [DistilBert Huggingface](https://huggingface.co/docs/transformers/en/model_doc/distilbert)<br>- [distilbert-base-multilingual-cased](https://huggingface.co/distilbert/distilbert-base-multilingual-cased) |
+
 
 
 ## Dataset in Experiment
@@ -85,15 +151,16 @@ date of note: 2024-10-21
 
 
 - [[Attention Mechanism in Neural Network]]
-- [[Transformer Network]]
-- [[Large Language Model and Pretrained Language Models]]
-- [[Generative Pre-trained Transformer or GPT]]
+
+
 
 - [[Bidirectional Recurrent Neural Network]]
 - [[Artificial Neural Network and Deep Learning]]
 
 - [[devlinBERTPretrainingDeep2019]]
 - [[liuRoBERTaRobustlyOptimized2019]]
+- Sanh, V. (2019). DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter. _arXiv preprint arXiv:1910.01108_.
+
 
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 388 - 390
 - [[Speech and Language Processing by Jurafsky]] pp 
