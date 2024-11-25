@@ -110,7 +110,13 @@ date of note: 2024-09-13
 
 ### Retrieval Augmented Generation
 
+- [[Large Language Model and Pretrained Language Models]]
+- [[Bidirectional Encoder Representation from Transformer or BERT]]
+- [[Generative Pre-trained Transformer or GPT]]
+- [[In-Context Learning and Prompt Engineering for LLM]]
+- [[Supervised Fine-Tuning vs Reinforcement Learning with Human Feedbacks]]
 
+- [[Retrieval Augmented Generation]]
 
 
 

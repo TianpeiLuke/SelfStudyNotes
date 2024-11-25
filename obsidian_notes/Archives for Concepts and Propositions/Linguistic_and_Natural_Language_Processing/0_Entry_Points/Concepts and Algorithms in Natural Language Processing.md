@@ -166,9 +166,11 @@ date of note: 2024-09-13
 
 
 - [[Scaling Law of Large Language Model]]
+- [[Parameter Efficient Fine Tuning or PEFT for Large Language Model]]
 - [[Foundational Models for Transfer Learning]]
 - [[In-Context Learning and Prompt Engineering for LLM]]
-- [[Reinforcement Learning with Human Feedbacks]]
+- [[Reinforcement Learning with Human Feedbacks or RLHF for LLM]]
+- [[Supervised Fine-Tuning vs Reinforcement Learning with Human Feedbacks]]
 
 
 ### Text Classification

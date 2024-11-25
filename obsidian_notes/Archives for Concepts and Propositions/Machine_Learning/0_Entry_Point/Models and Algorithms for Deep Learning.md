@@ -260,16 +260,23 @@ date of note: 2024-06-01
 - [[Top-k Sampling for Large Language Model Generation]]
 - [[Top-p Sampling or Nucleus Sampling for Large Language Model Generation]]
 
+#### Pre-Training of LLM
 
 - [[Scaling Law of Large Language Model]]
+- [[Key-Value Cache for Training of Large Language Models]]
+
+#### Supervised Fine-Tuning and Transfer Learning of LLM
+
+- [[Parameter Efficient Fine Tuning or PEFT for Large Language Model]]
+- [[Low Rank Adaptation or LoRA for Large Language Model]]
 - [[Foundational Models for Transfer Learning]]
+- [[Reinforcement Learning with Human Feedbacks or RLHF for LLM]]
+- [[Supervised Fine-Tuning vs Reinforcement Learning with Human Feedbacks]]
+
+#### In-Context Learning
+
 - [[In-Context Learning and Prompt Engineering for LLM]]
-- [[Reinforcement Learning with Human Feedbacks]]
-
-
-#### Applications of LLMs
-
-
+- [[Retrieval Augmented Generation]]
 
 
 ### Neural Architecture Search

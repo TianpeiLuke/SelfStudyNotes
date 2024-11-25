@@ -84,7 +84,7 @@ date of note: 2024-09-13
 
 - [[Connotations of Word and Sentiment]]
 - [[Semantic Role Labeling]]
-
+- [[Sentiment Analysis]]
 
 ### Coreference Resolution
 

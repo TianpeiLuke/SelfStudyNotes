@@ -172,7 +172,7 @@ date of note: 2024-06-01
 
 ### Reinforcement Learning with Foundational Models
 
-- [[Reinforcement Learning with Human Feedbacks]]
+- [[Reinforcement Learning with Human Feedbacks or RLHF for LLM]]
 
 
 

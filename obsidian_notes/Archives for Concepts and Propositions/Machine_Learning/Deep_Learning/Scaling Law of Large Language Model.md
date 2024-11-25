@@ -32,3 +32,4 @@ date of note: 2024-10-21
 
 
 - [[kaplanScalingLawsNeural2020]] Kaplan, J., McCandlish, S., Henighan, T., Brown, T. B., Chess, B., Child, R., Gray, S., Radford, A., Wu, J., & Amodei, D. (2020). _Scaling Laws for Neural Language Models_ (Machine Learning (Cs.LG); Machine Learning (Stat.ML) arXiv:2001.08361). arXiv. [https://doi.org/10.48550/arXiv.2001.08361](https://doi.org/10.48550/arXiv.2001.08361)
+- [[Speech and Language Processing by Jurafsky]] pp 216

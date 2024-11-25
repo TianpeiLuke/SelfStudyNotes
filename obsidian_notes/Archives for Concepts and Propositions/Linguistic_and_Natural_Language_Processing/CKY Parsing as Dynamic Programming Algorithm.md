@@ -2,6 +2,7 @@
 tags:
   - concept
   - natural_language_processing
+  - computational_linguistic/constituency_grammar
 keywords: 
 topics: 
 name: 

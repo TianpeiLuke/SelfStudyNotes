@@ -18,8 +18,9 @@ date of note: 2024-10-21
 
 ## Explanation
 
-
-
+- [[Reinforcement Learning with Human Feedbacks or RLHF for LLM]]
+- [[Parameter Efficient Fine Tuning or PEFT for Large Language Model]]
+- [[Low Rank Adaptation or LoRA for Large Language Model]]
 
 
 -----------
