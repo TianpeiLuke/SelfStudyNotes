@@ -35,9 +35,8 @@ date of note: 2024-11-24
 
 ### Temperature Sampling
 
-- [[Softmax Function and Log-Sum-Exp Function]]
-- [[Gibbs Measure and Energy-based Model]]
-- [[Simulated Annealing]]
+- [[Temperature Sampling for Large Language Model Generation]]
+
 
 
 ## Explanation

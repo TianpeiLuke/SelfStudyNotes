@@ -141,7 +141,7 @@ date of note: 2024-10-21
 - [[Parameter Efficient Fine Tuning or PEFT for Large Language Model]]
 - [[Reinforcement Learning with Human Feedbacks or RLHF for LLM]]
 - [[Direct Preference Optimization for Alignment in LLM]]
-- [[Supervised Fine-Tuning vs Reinforcement Learning with Human Feedbacks]]
+- [[Supervised Fine-Tuning vs Human Alignment]]
 
 
 ## LLM Variants

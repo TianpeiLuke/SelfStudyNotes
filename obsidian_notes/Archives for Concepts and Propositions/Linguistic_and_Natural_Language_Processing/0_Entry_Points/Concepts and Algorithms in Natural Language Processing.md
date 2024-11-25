@@ -163,7 +163,7 @@ date of note: 2024-09-13
 - [[Autoregressive or Causal Language Model Generation]]
 - [[Top-k Sampling for Large Language Model Generation]]
 - [[Top-p Sampling or Nucleus Sampling for Large Language Model Generation]]
-
+- [[Temperature Sampling for Large Language Model Generation]]
 
 #### Fine-Tuning with LLM
 
@@ -175,7 +175,7 @@ date of note: 2024-09-13
 
 - [[Reinforcement Learning with Human Feedbacks or RLHF for LLM]]
 - [[Direct Preference Optimization for Alignment in LLM]]
-- [[Supervised Fine-Tuning vs Reinforcement Learning with Human Feedbacks]]
+- [[Supervised Fine-Tuning vs Human Alignment]]
 
 #### In-Context Learning
 

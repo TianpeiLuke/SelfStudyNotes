@@ -114,7 +114,7 @@ date of note: 2024-09-13
 - [[Bidirectional Encoder Representation from Transformer or BERT]]
 - [[Generative Pre-trained Transformer or GPT]]
 - [[In-Context Learning and Prompt Engineering for LLM]]
-- [[Supervised Fine-Tuning vs Reinforcement Learning with Human Feedbacks]]
+- [[Supervised Fine-Tuning vs Human Alignment]]
 
 - [[Retrieval Augmented Generation]]
 
