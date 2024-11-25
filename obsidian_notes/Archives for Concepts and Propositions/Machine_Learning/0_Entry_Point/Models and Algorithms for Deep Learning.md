@@ -265,12 +265,16 @@ date of note: 2024-06-01
 - [[Scaling Law of Large Language Model]]
 - [[Key-Value Cache for Training of Large Language Models]]
 
-#### Transfer Learning of LLM
+#### Fine-Tuning of LLM
 
 - [[Parameter Efficient Fine Tuning or PEFT for Large Language Model]]
 - [[Low Rank Adaptation or LoRA for Large Language Model]]
 - [[Foundational Models for Transfer Learning]]
+
+#### Human Alignment of LLM
+
 - [[Reinforcement Learning with Human Feedbacks or RLHF for LLM]]
+- [[Direct Preference Optimization for Alignment in LLM]]
 - [[Supervised Fine-Tuning vs Reinforcement Learning with Human Feedbacks]]
 
 #### In-Context Learning

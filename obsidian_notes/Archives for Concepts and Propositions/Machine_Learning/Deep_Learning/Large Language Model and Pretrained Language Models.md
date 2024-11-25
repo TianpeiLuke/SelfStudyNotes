@@ -26,13 +26,14 @@ date of note: 2024-10-21
 >[!important] Definition
 >The goal of a **pre-trained language model** is to *pre-train* on a large corpus of text and then to *fine-tune* the pretrained model for a broad range of *downstream tasks*.
 
-### Encoder-Only Transformer Architecture
+### Encoder-Only Architecture or Masked Language Model
 
 >[!important] Definition
 >A **encoder-only transformer language model** is a transformer model based on encoders:
 >- It corresponds to a **contextual embedding** of words based on its context.
 >- The models are trained for a **masked language modeling** task
 >	- Instead of predicting the *following word*, we *mask* a word in the *middle* and predict the word given words *on both sides.*
+>- The *encoder-only transformer language model* is also called the **masked language model.**
 
 ![[causal_and_masked_transformer.png]]
 
@@ -57,11 +58,11 @@ date of note: 2024-10-21
 - [[devlinBERTPretrainingDeep2019]]
 - [[liuRoBERTaRobustlyOptimized2019]]
 
-### Decoder-Only Transformer Architecture
+### Decoder-Only Architecture or Autoregressive Language Models
 
 >[!important] Definition
 >A **decoder-only transformer language model** is a transformer model based on decoders:
->- The decoder model is a **autoregressive generative model**.
+>- The decoder models are **autoregressive language models**.
 >- In order to generate texts, we provide an input piece of text called **prompt**, and then the decoder will continue generate text *token by token*, *conditioned* on the prompt.
 >- It corresponds to a **conditional generation** of words based on previous words.
 >- A *decoder-only transformer model* with *large-scale parameter size* (typically over one billion parameters) is often referred to as the **large language model.**
@@ -133,11 +134,21 @@ date of note: 2024-10-21
 - [[Top-k Sampling for Large Language Model Generation]]
 - [[Top-p Sampling or Nucleus Sampling for Large Language Model Generation]]
 
-## Supervised Fine Tuning and Reinforcement Learning with Human Feedback
+## Supervised Fine Tuning and Human Alignment
+
+
 
 - [[Parameter Efficient Fine Tuning or PEFT for Large Language Model]]
 - [[Reinforcement Learning with Human Feedbacks or RLHF for LLM]]
+- [[Direct Preference Optimization for Alignment in LLM]]
 - [[Supervised Fine-Tuning vs Reinforcement Learning with Human Feedbacks]]
+
+
+## LLM Variants
+
+![[llm_timeline_2024.png]]
+
+- Zhao, W. X., Zhou, K., Li, J., Tang, T., Wang, X., Hou, Y., ... & Wen, J. R. (2023). A survey of large language models. _arXiv preprint arXiv:2303.18223_.
 
 
 
@@ -159,3 +170,7 @@ date of note: 2024-10-21
 - [[Speech and Language Processing by Jurafsky]] pp 203 - 220, 223
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 390 - 394
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 382 - 394
+
+
+- Zhao, W. X., Zhou, K., Li, J., Tang, T., Wang, X., Hou, Y., ... & Wen, J. R. (2023). A survey of large language models. _arXiv preprint arXiv:2303.18223_.
+- Min, B., Ross, H., Sulem, E., Veyseh, A. P. B., Nguyen, T. H., Sainz, O., ... & Roth, D. (2023). Recent advances in natural language processing via large pre-trained language models: A survey. _ACM Computing Surveys_, _56_(2), 1-40.

@@ -16,17 +16,11 @@ date of note: 2024-10-21
 
 
 
-- [[Foundational Models for Transfer Learning]]
-
 ## Explanation
 
 
 - [[Reinforcement Learning with Human Feedbacks or RLHF for LLM]]
-- [[Direct Preference Optimization for Alignment in LLM]]
-
-
-
-
+- [[Supervised Fine-Tuning vs Reinforcement Learning with Human Feedbacks]]
 
 
 -----------
@@ -36,7 +30,7 @@ date of note: 2024-10-21
 - [[Attention Mechanism in Neural Network]]
 - [[Transformer Network]]
 - [[Large Language Model and Pretrained Language Models]]
-
+- [[Foundational Models for Transfer Learning]]
 
 
 - [[Valued-based and Policy-based Reinforcement Learning]]

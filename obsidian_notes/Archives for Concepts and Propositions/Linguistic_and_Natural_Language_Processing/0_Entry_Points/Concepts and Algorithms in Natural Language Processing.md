@@ -165,12 +165,21 @@ date of note: 2024-09-13
 - [[Top-p Sampling or Nucleus Sampling for Large Language Model Generation]]
 
 
+#### Fine-Tuning with LLM
+
 - [[Scaling Law of Large Language Model]]
 - [[Parameter Efficient Fine Tuning or PEFT for Large Language Model]]
 - [[Foundational Models for Transfer Learning]]
-- [[In-Context Learning and Prompt Engineering for LLM]]
+
+#### Human Alignment with LLM
+
 - [[Reinforcement Learning with Human Feedbacks or RLHF for LLM]]
+- [[Direct Preference Optimization for Alignment in LLM]]
 - [[Supervised Fine-Tuning vs Reinforcement Learning with Human Feedbacks]]
+
+#### In-Context Learning
+
+- [[In-Context Learning and Prompt Engineering for LLM]]
 
 
 ### Text Classification

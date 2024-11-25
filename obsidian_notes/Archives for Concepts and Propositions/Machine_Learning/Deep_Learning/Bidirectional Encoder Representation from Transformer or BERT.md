@@ -73,9 +73,13 @@ date of note: 2024-10-21
 >  
 >-- [[Deep Learning Foundations and Concepts by Bishop]] pp 388  
 
+>[!important] Definition
+>One of two tasks to training BERT is called **Masked Language  Modeling (MLM)**.
+>- It is a *self-supervised task*, where the *training corpus* contains a large amount of *unannotated text*.
+>
+>In **MLM**, the model 
 
-
-
+- [[Self-Supervised Learning]]
 
 
 
