@@ -25,7 +25,7 @@ date of note: 2024-11-24
 - [[Random Restart Hill Climbing]]
 - [[Tabu Search]]
 - [[Nelder–Mead Simplex Method]]
-- [[Beam Search as Greedy Decoding]]
+- [[Beam Search for Causal Decoding of Language Model]]
 
 
 -----------

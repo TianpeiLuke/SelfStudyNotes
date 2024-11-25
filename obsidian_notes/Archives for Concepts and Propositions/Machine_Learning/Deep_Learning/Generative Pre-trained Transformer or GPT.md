@@ -53,7 +53,7 @@ date of note: 2024-10-21
 
 
 
-- [[Beam Search as Greedy Decoding]]
+- [[Beam Search for Causal Decoding of Language Model]]
 
 
 ## Explanation

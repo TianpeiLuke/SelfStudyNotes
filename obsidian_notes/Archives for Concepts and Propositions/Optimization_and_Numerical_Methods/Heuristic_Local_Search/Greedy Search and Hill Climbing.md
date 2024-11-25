@@ -69,7 +69,7 @@ date of note: 2024-08-25
 
 ## Beam Search as Greedy Decoding
 
-- [[Beam Search as Greedy Decoding]]
+- [[Beam Search for Causal Decoding of Language Model]]
 
 
 -----------

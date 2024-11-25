@@ -42,13 +42,15 @@ date of note: 2024-08-24
 - [[Random Restart Hill Climbing]]
 - [[Tabu Search]]
 - [[Nelder–Mead Simplex Method]]
-- [[Beam Search as Greedy Decoding]]
+
 
 - [[A-star Heuristic Search]]
 - [[Backtracking]]
 - [[Depth-First Search]]
 - [[Breadth-First Search]]
-
+- [[Best-First Search]]
+- [[Beam Search]]
+- [[Beam Search for Causal Decoding of Language Model]]
 
 ### Stochastic Local Search
 

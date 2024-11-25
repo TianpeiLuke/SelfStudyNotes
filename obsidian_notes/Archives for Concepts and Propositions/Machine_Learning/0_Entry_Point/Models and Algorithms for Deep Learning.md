@@ -254,9 +254,12 @@ date of note: 2024-06-01
 - [[Large Language Model and Pretrained Language Models]]
 - [[Bidirectional Encoder Representation from Transformer or BERT]]
 - [[Generative Pre-trained Transformer or GPT]]
-- [[Greedy Decoding for Language Model]]
-- [[Beam Search as Greedy Decoding]]
-- [[Autoregressive or Causal Language Model Generation]]
+
+#### Decoding and Text Generation of Language Models
+
+- [[Greedy Decoding for Causal Language Model Generation]]
+- [[Beam Search for Causal Decoding of Language Model]]
+- [[Decoding and Sampling from Large Language Models]]
 - [[Top-k Sampling for Large Language Model Generation]]
 - [[Top-p Sampling or Nucleus Sampling for Large Language Model Generation]]
 - [[Temperature Sampling for Large Language Model Generation]]

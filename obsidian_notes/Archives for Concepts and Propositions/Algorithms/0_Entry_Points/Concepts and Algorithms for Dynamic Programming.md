@@ -128,3 +128,4 @@ date of note: 2024-09-16
 
 - [[Deep Learning by Goodfellow]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] 
+- [[Artificial Intelligence Modern Approach by Russell]]

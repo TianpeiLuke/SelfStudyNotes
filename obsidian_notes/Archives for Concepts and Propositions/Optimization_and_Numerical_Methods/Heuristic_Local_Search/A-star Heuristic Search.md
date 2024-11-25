@@ -19,7 +19,7 @@ date of note: 2024-08-08
 
 ## Explanation
 
-- [[Beam Search as Greedy Decoding]]
+- [[Beam Search for Causal Decoding of Language Model]]
 - [[Best-First Search]]
 
 

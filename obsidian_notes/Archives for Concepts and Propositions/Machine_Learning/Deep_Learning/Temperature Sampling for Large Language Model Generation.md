@@ -20,7 +20,7 @@ date of note: 2024-11-24
 - [[Gibbs Measure and Energy-based Model]]
 - [[Simulated Annealing]]
 
-- [[Autoregressive or Causal Language Model Generation]]
+- [[Decoding and Sampling from Large Language Models]]
 
 
 - [[Generative Pre-trained Transformer or GPT]]

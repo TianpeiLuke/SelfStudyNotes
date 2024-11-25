@@ -121,3 +121,4 @@ date of note: 2024-08-04
 
 
 - [[Game Theory An Introduction by Tadelis]]
+- [[Artificial Intelligence Modern Approach by Russell]]

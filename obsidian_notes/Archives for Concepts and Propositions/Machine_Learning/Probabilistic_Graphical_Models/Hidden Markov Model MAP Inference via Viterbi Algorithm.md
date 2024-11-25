@@ -117,7 +117,7 @@ date of note: 2024-09-01
 >[!info]
 >In contrast to the **Viterbi decoding**, an alternative method is the **greedy decoding** such as the **beam search.**
 
-- [[Beam Search as Greedy Decoding]]
+- [[Beam Search for Causal Decoding of Language Model]]
 
 ## Time and Space Complexity
 

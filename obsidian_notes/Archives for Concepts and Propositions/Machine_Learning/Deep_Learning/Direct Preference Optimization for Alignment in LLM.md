@@ -20,7 +20,7 @@ date of note: 2024-10-21
 
 
 - [[Reinforcement Learning with Human Feedbacks or RLHF for LLM]]
-- [[Supervised Fine-Tuning vs Reinforcement Learning with Human Feedbacks]]
+- [[Supervised Fine-Tuning vs Human Alignment]]
 
 
 -----------

@@ -42,8 +42,8 @@ date of note: 2024-09-16
 - [[Tabu Search]]
 - [[Random Restart Hill Climbing]]
 - [[Stochastic Hill Climbing]]
-- [[Greedy Decoding for Language Model]]
-- [[Beam Search as Greedy Decoding]]
+- [[Greedy Decoding for Causal Language Model Generation]]
+- [[Beam Search for Causal Decoding of Language Model]]
 
 - [[Minimum Spanning Tree Problem]]
 
@@ -54,7 +54,8 @@ date of note: 2024-09-16
 - [[Depth-First Search]]
 - [[Best-First Search]]
 - [[A-star Heuristic Search]]
-- [[Beam Search as Greedy Decoding]]
+- [[Beam Search]]
+- [[Beam Search for Causal Decoding of Language Model]]
 
 ### Network Algorithms
 
@@ -78,3 +79,4 @@ date of note: 2024-09-16
 - [[Introduction to Algorithms by Cormen]]
 - [[Algorithm Design Manual by Skiena]]
 - [[Algorithms to Live By Book Summary]]
+- [[Artificial Intelligence Modern Approach by Russell]]

@@ -68,6 +68,8 @@ date of note: 2024-10-21
 >- A *decoder-only transformer model* with *large-scale parameter size* (typically over one billion parameters) is often referred to as the **large language model.**
 >- These models are trained using **next word prediction**.
 
+^2f4e77
+
 >[!important]
 > *Decoder-only architecture* is used in tasks such as
 >- **text generation** including
@@ -89,8 +91,8 @@ date of note: 2024-10-21
 
 - [[Generative Pre-trained Transformer or GPT]]
 - [[Autoregressive Models]]
-- [[Greedy Decoding for Language Model]]
-- [[Beam Search as Greedy Decoding]]
+- [[Greedy Decoding for Causal Language Model Generation]]
+- [[Beam Search for Causal Decoding of Language Model]]
 
 
 
@@ -114,8 +116,8 @@ date of note: 2024-10-21
 ![[transformer.png]]
 
 - [[Text-to-Text Transfer Transformer or T5 for Translation]]
-- [[Greedy Decoding for Language Model]]
-- [[Beam Search as Greedy Decoding]]
+- [[Greedy Decoding for Causal Language Model Generation]]
+- [[Beam Search for Causal Decoding of Language Model]]
 
 >[!example]
 >An important *encoder-decoder* transformer model is the **text-to-text transfer transformer** or **T5 model.**
@@ -130,7 +132,7 @@ date of note: 2024-10-21
 
 ## LLM Generation
 
-- [[Autoregressive or Causal Language Model Generation]]
+- [[Decoding and Sampling from Large Language Models]]
 - [[Top-k Sampling for Large Language Model Generation]]
 - [[Top-p Sampling or Nucleus Sampling for Large Language Model Generation]]
 

@@ -118,3 +118,4 @@ date of note: 2024-09-08
 - [[Speech and Language Processing by Jurafsky]] pp 33 - 38, 45
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 379
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 49
+- [[Artificial Intelligence Modern Approach by Russell]] pp 862

@@ -86,3 +86,4 @@ date of note: 2024-09-08
 
 - [[Foundations of Statistical Natural Language Processing by Manning]] pp 191
 - [[Speech and Language Processing by Jurafsky]] pp 45 - 49
+- [[Artificial Intelligence Modern Approach by Russell]] pp 863

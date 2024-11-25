@@ -18,7 +18,7 @@ date of note: 2024-11-24
 
 - [[Generative Pre-trained Transformer or GPT]]
 - [[Large Language Model and Pretrained Language Models]]
-- [[Beam Search as Greedy Decoding]]
+- [[Decoding and Sampling from Large Language Models]]
 
 
 ## Explanation

@@ -2,17 +2,23 @@
 tags:
   - concept
   - natural_language_processing
-keywords: 
-topics: 
-name: 
+  - information_retrieval
+keywords:
+  - information_retrieval
+topics:
+  - information_retrieval
+  - natural_language_processing
+name: Information Retrieval
 date of note: 2024-05-12
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Information Retrieval
 
+>[!important] Definition
+>**Information retrieval** is the task of finding documents $d\in \mathcal{D}$ that are *relevant* to a user’s need (*query*) $q$ for   information.
 
 
 ## Explanation
@@ -30,4 +36,5 @@ date of note: 2024-05-12
 
 
 - [[Introduction to Information Retrieval by Manning]]
-- [[Speech and Language Processing by Jurafsky]] pp 106
+- [[Speech and Language Processing by Jurafsky]] pp 108
+- [[Artificial Intelligence Modern Approach by Russell]] pp 867
