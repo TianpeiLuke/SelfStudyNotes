@@ -147,6 +147,7 @@ date of note: 2024-06-01
 - [[Contrastive Predictive Coding as Sequence Representation]]
 - [[Siamese Network for Contrastive Learning]]
 - [[Triplet Loss Minimization for Contrastive Learning]]
+- [[Skip-Gram Algorithm with Negative Sampling for Word Embedding]]
 
 
 ### Recurrent Network
@@ -266,8 +267,10 @@ date of note: 2024-06-01
 
 #### Pre-Training of LLM
 
+- [[Self-Supervised Training of Large Language Model and Teacher Forcing]]
 - [[Scaling Law of Large Language Model]]
 - [[Key-Value Cache for Training of Large Language Models]]
+
 
 #### Fine-Tuning of LLM
 

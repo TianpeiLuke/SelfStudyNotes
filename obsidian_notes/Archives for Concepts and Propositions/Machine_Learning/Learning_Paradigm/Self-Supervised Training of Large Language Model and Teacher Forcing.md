@@ -2,6 +2,8 @@
 tags:
   - concept
   - machine_learning/strategy
+  - natural_language_processing/large_language_models
+  - deep_learning/large_language_models
 keywords: 
 topics:
   - machine_learning_strategy
@@ -15,8 +17,12 @@ date of note: 2024-07-07
 >**Name**: 
 
 
+- [[Large Language Model and Pretrained Language Models]]
+- [[Self-Supervised Learning]]
 
-- [[Self-Supervised Training of Large Language Model and Teacher Forcing]]
+
+![[self_supervised_training_llm.png]]
+
 
 ## Explanation
 

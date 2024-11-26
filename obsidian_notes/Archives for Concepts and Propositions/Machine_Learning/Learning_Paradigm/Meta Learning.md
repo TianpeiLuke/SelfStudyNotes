@@ -26,7 +26,7 @@ date of note: 2024-07-07
 ##  Recommended Notes and References
 
 - [[Contrastive Learning]]
-
+- [[Distribution Shift in Transfer Learning]]
 
 - [[Deep Learning Foundations and Concepts by Bishop]]
 - [[Probabilistic Graphical Models by Koller]]

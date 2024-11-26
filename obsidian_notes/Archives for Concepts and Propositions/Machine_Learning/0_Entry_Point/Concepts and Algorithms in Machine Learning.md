@@ -231,18 +231,42 @@ date of note: 2024-06-01
 ### Learning Paradigms and Strategies
 
 - [[Supervised Learning and Unsupervised Learning]]
+- [[Reinforcement Learning]]
+
+#### Representation Learning and Contrastive Learning
+
 - [[Representation Learning]]
 	- [[Contrastive Learning]]
 	- [[Metric Learning]]
 	- [[Multi-view Learning]]
-- [[Multi-Modal Learning]]
-- [[Transfer Learning]]
-- [[Meta Learning]]
+
+#### Self-Supervised Learning
+
 - [[Self-Supervised Learning]]
-- [[Reinforcement Learning]]
+- [[Self-Supervised Training of Large Language Model and Teacher Forcing]]
+
+#### Transfer Learning
+
+- [[Transfer Learning]]
+- [[Distribution Shift in Transfer Learning]]
+	- [[Covariate Shift or Domain Shift in Machine Learning]]
+	- [[Concept Shift or Annotation Shift in Machine Learning]]
+	- [[Label Shift or Prior Shift in Machine Learning]]
+	- [[Conditional Shift or Manifestation Shift in Machine Learning]]
+- [[Meta Learning]]
+
+
+#### Multi-Modal Learning
+
+- [[Multi-Modal Learning]]
+
+#### Maximum Entropy Learning
 
 - [[Maximum Likelihood Estimation]]
 - [[Maximum Entropy Learning]]
+
+#### Learning by Comparison
+
 - [[Principle of Learning by Comparison for Implicit Generative Models]]
 
 

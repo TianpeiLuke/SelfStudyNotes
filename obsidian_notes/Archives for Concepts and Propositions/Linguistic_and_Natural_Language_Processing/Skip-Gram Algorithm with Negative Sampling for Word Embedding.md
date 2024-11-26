@@ -2,6 +2,7 @@
 tags:
   - concept
   - natural_language_processing/word_representation
+  - deep_learning/representation_learning
 keywords:
   - skip_gram_word_embedding
 topics:
@@ -33,9 +34,10 @@ date of note: 2024-09-12
 >- For each *target word* $w_{i}$, define the *context words* as neighboring words within a  *symmetric context window* of size $l$ $$c_{j} = \left\{\begin{array}{ll}w_{i-l+j-1} &j=1\,{,}\ldots{,}\,l \\[5pt] w_{i-l+j} &j=l+1\,{,}\ldots{,}\,2l \end{array}\right.$$
 >	- The *neighborhood* of  $w_{i}$ consists of $2l+1$ words $$B(w_{i}, l) := \{   c_{1} \,{,}\ldots{,}\,c_{l},\, w_{i},\, c_{l+1}\,{,}\ldots{,}\, c_{2l}\} $$
 >- and the probability is given by the *soft-max* $$\log p(w_{i+j}\;|\;w_{i};\, E) = \left\langle  E(w_{i+j})\,,\, E(w_{i})   \right\rangle - \log \sum_{w\in \mathcal{V}} \exp \left(\left\langle  E(w)\,,\, E(w_{i})   \right\rangle\right) $$
+>- Note that **skip-gram** assumes that *all context words* are *conditionally independent* given target word. $$w_{i+j} \perp w_{i+k} \;|\;w_{i}$$
 
 - [[Softmax Function and Log-Sum-Exp Function]]
-
+- [[Conditional Independence]]
 
 ### Learning Skip-Gram Embedding with Negative Sampling
 
@@ -69,6 +71,7 @@ date of note: 2024-09-12
 - [[Sigmoid Function as Activation for Deep Learning]]
 - [[Noise Contrastive Estimation]]
 - [[Mixture Family of Distributions]]
+- [[Density Ratio Estimation via Binary Classifiers
 
 ![[skipgram_embedding.png]]
 
@@ -119,6 +122,11 @@ date of note: 2024-09-12
 
 - [[Noise Contrastive Estimation]]
 
+>[!important]
+>Let $w_{i}$ be target word, and $c_{i}$ be its context words, i.e. $$c_{i} := (w_{i-l} \,{,}\ldots{,}\,w_{i-1},\, w_{i+1},\,{,}\ldots{,}\,w_{i+l})$$
+>
+>- In **continuous bag-of-word approach**, the task is to **predict** the representation of *target word*  given a combination of representation of all *context words* $$p(w_{i} \;|\;c_{i}) := p(w_{i}\;|\;w_{i-l} \,{,}\ldots{,}\,w_{i-1},\, w_{i+1},\,{,}\ldots{,}\,w_{i+l})$$
+>- In **skip-gram approach**, the task is to **predict** the representation of *each context word*  given the representation of *target word* $$p(c_{i} \;|\;w_{i}) := p(w_{i-l} \,{,}\ldots{,}\,w_{i-1},\, w_{i+1},\,{,}\ldots{,}\,w_{i+l}\;|\;w_{i}) = \prod_{j=i-l, j\neq i}^{i+l}p(w_{j}\;|\;w_{i})$$
 
 ![[word2vec_cont_bog_skipgram.png]]
 

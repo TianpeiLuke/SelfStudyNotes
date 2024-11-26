@@ -25,11 +25,19 @@ date of note: 2024-09-12
 
 ### Continuous Bag-of-Words
 
-
+>[!important] Definition
+>Let $w_{i}$ be target word, and $c_{i}$ be its context words, i.e. $$c_{i} := (w_{i-l} \,{,}\ldots{,}\,w_{i-1},\, w_{i+1},\,{,}\ldots{,}\,w_{i+l})$$
+>
+>- In **continuous bag-of-word approach**, the task is to **predict** the representation of *target word*  given a combination of representation of all *context words* $$p(w_{i} \;|\;c_{i}) := p(w_{i}\;|\;w_{i-l} \,{,}\ldots{,}\,w_{i-1},\, w_{i+1},\,{,}\ldots{,}\,w_{i+l})$$
 
 - [[Contiuous-Bag-of-Words Algorithm for Word Embedding]]
 
 ### Skip-Gram
+
+>[!important] Definition
+>Let $w_{i}$ be target word, and $c_{i}$ be its context words, i.e. $$c_{i} := (w_{i-l} \,{,}\ldots{,}\,w_{i-1},\, w_{i+1},\,{,}\ldots{,}\,w_{i+l})$$
+>
+>- In **skip-gram approach**, the task is to **predict** the representation of *each context word*  given the representation of *target word* $$p(c_{i} \;|\;w_{i}) := p(w_{i-l} \,{,}\ldots{,}\,w_{i-1},\, w_{i+1},\,{,}\ldots{,}\,w_{i+l}\;|\;w_{i}) = \prod_{j=i-l, j\neq i}^{i+l}p(w_{j}\;|\;w_{i})$$
 
 >[!quote]
 >The **intuition** of *skip-gram* is:  
@@ -95,5 +103,6 @@ date of note: 2024-09-12
 - Wikipedia [Word2vec](https://en.wikipedia.org/wiki/Word2vec)
 - [[Speech and Language Processing by Jurafsky]] pp 117 - 120
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 375 - 377
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 773
 - Mikolov, T., Chen, K., Corrado, G.S., & Dean, J. (2013). Efficient Estimation of Word Representations in Vector Space. _International Conference on Learning Representations_.
 - Mikolov, T., Sutskever, I., Chen, K., Corrado, G. S., & Dean, J. (2013). Distributed representations of words and phrases and their compositionality. _Advances in neural information processing systems_, _26_.

@@ -129,15 +129,21 @@ date of note: 2024-10-21
 
 
 
+## Self-Supervised Training 
 
-## LLM Generation
+- [[Self-Supervised Training of Large Language Model and Teacher Forcing]]
+- [[Self-Supervised Learning]]
+
+
+## Text Generation via Decoding and Sampling of LLM
 
 - [[Decoding and Sampling from Large Language Models]]
+- [[Greedy Decoding for Causal Language Model Generation]]
+- [[Beam Search for Causal Decoding of Language Model]]
 - [[Top-k Sampling for Large Language Model Generation]]
 - [[Top-p Sampling or Nucleus Sampling for Large Language Model Generation]]
-
+- [[Temperature Sampling for Large Language Model Generation]]
 ## Supervised Fine Tuning and Human Alignment
-
 
 
 - [[Parameter Efficient Fine Tuning or PEFT for Large Language Model]]
@@ -170,7 +176,7 @@ date of note: 2024-10-21
 - [[touvronLlamaOpenFoundation2023]]
 
 - [[Speech and Language Processing by Jurafsky]] pp 203 - 220, 223
-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 390 - 394
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 815 - 816
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 382 - 394
 
 
