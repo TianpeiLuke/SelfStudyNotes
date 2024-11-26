@@ -214,6 +214,9 @@ date of note: 2024-09-13
 - [[Encoder-Decoder Sequence-to-Sequence Architecture]]
 - [[Text-to-Text Transfer Transformer or T5 for Translation]]
 
+### Text Summarization
+
+- [[Text Summarization]]
 
 
 ### Question-Answering and ChatBots
