@@ -257,9 +257,9 @@ date of note: 2024-06-01
 
 #### Decoding and Text Generation of Language Models
 
+- [[Decoding and Sampling from Large Language Models]]
 - [[Greedy Decoding for Causal Language Model Generation]]
 - [[Beam Search for Causal Decoding of Language Model]]
-- [[Decoding and Sampling from Large Language Models]]
 - [[Top-k Sampling for Large Language Model Generation]]
 - [[Top-p Sampling or Nucleus Sampling for Large Language Model Generation]]
 - [[Temperature Sampling for Large Language Model Generation]]

@@ -86,6 +86,7 @@ date of note: 2024-05-12
 
 ![[transformer_block.png]]
 
+![[langugage_model_head.png]]
 #### Computational Complexity
 
 >[!important]

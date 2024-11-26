@@ -29,6 +29,9 @@ date of note: 2024-11-24
 >\hat{w}_{t} = \arg\max_{w\in \mathcal{V}}\;p(w\,|\,w_{<t}) = \arg\max_{w\in \mathcal{V}}\;p(w\,|\,w_{t-1}\,{,}\ldots{,}\,w_{1})
 >$$ 
 >where $\mathcal{V}$ is the vocabulary set.
+>- The **greedy decoding** is an **autoregressive generation** process.
+
+^41dfb7
 
 >[!quote]
 >A problem with **greedy decoding** is that what looks *high probability* at word $t$ might  turn out to have been the *wrong choice* once we get to word $t + 1$.
