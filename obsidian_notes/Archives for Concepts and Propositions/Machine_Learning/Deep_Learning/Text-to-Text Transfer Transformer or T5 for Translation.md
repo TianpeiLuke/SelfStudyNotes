@@ -39,11 +39,28 @@ date of note: 2024-10-21
 
 
 
-### Greedy Decoding via Beam Search
+### Text Generation via Sampling
 
-
-
+- [[Decoding and Sampling from Large Language Models]]
+- [[Top-k Sampling for Large Language Model Generation]]
+- [[Top-p Sampling or Nucleus Sampling for Large Language Model Generation]]
+- [[Temperature Sampling for Large Language Model Generation]]
 - [[Beam Search for Causal Decoding of Language Model]]
+
+### Self-Supervised Training
+
+- [[Self-Supervised Training of Large Language Model and Teacher Forcing]]
+
+### Instruction Fine Tuning
+
+- [[Supervised Fine-Tuning or Instruction Fine-Tuning of LLM]]
+
+### Human Alignment
+
+- [[Reinforcement Learning with Human Feedbacks or RLHF for LLM]]
+- [[Direct Preference Optimization for Alignment in LLM]]
+
+
 
 ## Explanation
 
