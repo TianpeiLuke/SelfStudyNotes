@@ -19,7 +19,7 @@ date of note: 2024-07-07
 
 - [[Large Language Model and Pretrained Language Models]]
 - [[Self-Supervised Learning]]
-
+- [[Cross-Entropy Loss Function]]
 
 ![[self_supervised_training_llm.png]]
 

@@ -274,9 +274,11 @@ date of note: 2024-06-01
 
 #### Fine-Tuning of LLM
 
+- [[Continued Pre-training of Large Language Models]]
 - [[Parameter Efficient Fine Tuning or PEFT for Large Language Model]]
 - [[Low Rank Adaptation or LoRA for Large Language Model]]
 - [[Foundational Models for Transfer Learning]]
+- [[Supervised Fine-Tuning or Instruction Fine-Tuning of LLM]]
 
 #### Human Alignment of LLM
 
