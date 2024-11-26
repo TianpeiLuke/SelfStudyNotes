@@ -255,6 +255,7 @@ date of note: 2024-06-01
 - [[Large Language Model and Pretrained Language Models]]
 - [[Bidirectional Encoder Representation from Transformer or BERT]]
 - [[Generative Pre-trained Transformer or GPT]]
+- [[Text-to-Text Transfer Transformer or T5 for Translation]]
 
 #### Decoding and Text Generation of Language Models
 
