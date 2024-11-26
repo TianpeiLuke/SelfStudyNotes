@@ -96,6 +96,13 @@ date of note: 2024-09-13
 - [[Discourse Coherence]]
 - [[Discourse Structure Parsing]]
 
+### Information Extraction
+
+- [[Information Extraction]]
+- [[Part-of-Speech Tagging]]
+- [[Name Entity Recognition]]
+- [[Relation Extraction]]
+- [[Name Entity Disambiguation]]
 
 
 -----------

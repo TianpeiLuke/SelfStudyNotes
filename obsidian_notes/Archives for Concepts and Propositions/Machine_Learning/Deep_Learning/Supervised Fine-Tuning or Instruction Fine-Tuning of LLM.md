@@ -44,4 +44,4 @@ date of note: 2024-10-21
 
 
 - [[Transfer Learning]]
-- [[Speech and Language Processing by Jurafsky]] pp 214
+- [[Speech and Language Processing by Jurafsky]] pp 214. 249

@@ -25,5 +25,6 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
+- [[Name Entity Recognition]]
 
-- [[Speech and Language Processing by Jurafsky]] pp 237, 367
+- [[Speech and Language Processing by Jurafsky]] pp 367

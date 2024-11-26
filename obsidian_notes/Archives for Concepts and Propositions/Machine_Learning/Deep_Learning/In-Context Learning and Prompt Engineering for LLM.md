@@ -31,3 +31,7 @@ date of note: 2024-10-21
 - [[Transformer Network]]
 - [[Large Language Model and Pretrained Language Models]]
 - [[Foundational Models for Transfer Learning]]
+
+
+- [[Deep Learning Foundations and Concepts by Bishop]] pp 394
+- [[Speech and Language Processing by Jurafsky]] pp 247

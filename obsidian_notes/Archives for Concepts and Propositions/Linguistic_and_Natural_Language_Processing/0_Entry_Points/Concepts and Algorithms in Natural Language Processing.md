@@ -190,21 +190,34 @@ date of note: 2024-09-13
 
 ### Text Classification
 
-- [[Encoder-Decoder Sequence-to-Sequence Architecture]]
+- [[Classification Problem]]
+- [[Multinomial Naive Bayes Model]]
+- [[Support Vector Machine Kernel Expansion and RKHS]]
+- [[Positive Definite Kernel Examples]]
+- [[Bidirectional Encoder Representation from Transformer or BERT]]
+- [[Sentiment Analysis]]
+
+
+### Information Extraction
+
+- [[Information Extraction]]
 - [[Part-of-Speech Tagging]]
 - [[Name Entity Recognition]]
-
+- [[Relation Extraction]]
+- [[Name Entity Disambiguation]]
 
 
 ### Machine Translation
 
-
+- [[Machine Translation]]
 - [[Transformer Network]]
+- [[Encoder-Decoder Sequence-to-Sequence Architecture]]
 - [[Text-to-Text Transfer Transformer or T5 for Translation]]
 
 
 
-### Question-Answering
+### Question-Answering and ChatBots
+
 
 
 

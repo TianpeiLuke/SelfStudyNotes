@@ -37,4 +37,5 @@ date of note: 2024-05-12
 
 - [[Introduction to Information Retrieval by Manning]]
 - [[Speech and Language Processing by Jurafsky]] pp 108
+- [[Foundations of Statistical Natural Language Processing by Manning]] pp 529
 - [[Artificial Intelligence Modern Approach by Russell]] pp 867
