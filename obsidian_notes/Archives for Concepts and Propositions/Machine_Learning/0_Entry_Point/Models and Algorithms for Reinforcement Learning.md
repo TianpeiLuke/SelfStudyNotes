@@ -55,6 +55,7 @@ date of note: 2024-06-01
 
 ### Dynamic Programming
 
+- [[Concepts and Algorithms for Dynamic Programming]]
 - [[Dynamic Programming for MDP]]
 - [[Prediction and Control Problems in Reinforcement Learning]]
 - [[Policy Iteration Algorithm]]

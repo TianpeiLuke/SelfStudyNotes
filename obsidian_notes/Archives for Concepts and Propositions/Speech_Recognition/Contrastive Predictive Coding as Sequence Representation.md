@@ -36,4 +36,5 @@ date of note: 2024-09-08
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 243, 1054 - 1055
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 191
+- [[Speech and Language Processing by Jurafsky]] pp 341 - 346
 - Oord, A. V. D., Li, Y., & Vinyals, O. (2018). Representation learning with contrastive predictive coding. _arXiv preprint arXiv:1807.03748_.

@@ -113,6 +113,9 @@ date of note: 2024-04-25
 - [[Introduction to Information Retrieval by Manning]] pp 155
 - [[Speech and Language Processing by Jurafsky]] pp 66
 - [[Evaluating Learning Algorithms by Japkowicz]]
+- [[Deep Learning Foundations and Concepts by Bishop]] pp 147
+- [[Elements of Statistical Learning by Hastie]]
+
 
 - Wikipedia [Confusion_matrix](https://en.wikipedia.org/wiki/Confusion_matrix)
 

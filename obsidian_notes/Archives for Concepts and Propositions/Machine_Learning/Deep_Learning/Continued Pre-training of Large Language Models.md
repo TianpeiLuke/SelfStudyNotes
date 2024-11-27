@@ -5,6 +5,7 @@ tags:
   - deep_learning/models
   - natural_language_processing/large_language_models
   - deep_learning/large_language_models
+  - speech_recognition/models
 keywords: 
 topics: 
 name: 
