@@ -28,18 +28,19 @@ date of note: 2024-11-25
 >
 >The **Recall-Oriented Understudy for Gisting Evaluation (ROUGE)** is a *recall measure* on the *n-gram* of both the output sequence, and reference ground truth.
 >
->Specifically, consider a set of *n-grams* of $w$ $$G_{n}(w) := \left\{ w_{1:n},\, w_{2:n+1}\,{,}\ldots{,}\, w_{T-n+1:T} \right\} $$
+>Specifically, consider a set of *unique n-grams* of $w$ $$G_{n}(w) := \left\{ w_{1:n},\, w_{2:n+1}\,{,}\ldots{,}\, w_{T-n+1:T} \right\} $$
 >- Define the **substring count** as the number of appearances of a string $s$ as a *substring* of $y$ $$C(s, y) := \#\left\{ i: s = y_{i:|s|+i-1} \right\} $$
 >
 >- The **ROUGE-n precision** between one candidate sequence $w$ and one reference sequence $v$ is computed as follows: $$\begin{align*}\text{ROUGE-n-Precision}(w, v; n) := \frac{\sum_{s\in G_{n}(w)\cap G_{n}(v)}C(s, w)}{\sum_{s\in G_{n}(w)}C(s, w)} = \frac{\sum_{s\in G_{n}(v)}C(s, w)}{\sum_{s\in G_{n}(w)}C(s, w)}\end{align*}$$
->	- Note that $$G_{n}(w)\cap G_{n}(v)$$ is the set of *matched n-gram* in both candidate and reference text.
->	- The numerator is the *total number of occurrences* of *overlapping n-grams* in the candidate text.
->	- The **ROUGE-n precision** counts *__all__ occurrences* of *overlapping n-grams* in the candidate text.
+>	- Note that $$\sum_{s\in G_{n}(w)\cap G_{n}(v)}C(s, w) = \sum_{s\in G_{n}(v)}C(s, w)$$ is the *total count* of *overlapped n-gram* in candidate text with reference text.
 >	- This includes all *repeated n-grams* in *matches*.
+>	- The **ROUGE-n precision** counts *__all__ occurrences* of *overlapping n-grams* in the candidate text.
 > 
 >- The **ROUGE-n recall** is computed as $$\begin{align*}\text{ROUGE-n-Recall}(w, v; n) := \frac{\sum_{s\in G_{n}(v)}\min\left\{ C(s, w), C(s, v) \right\}}{\sum_{s\in G_{n}(v)}C(s, v)}\end{align*}$$  
+>	- $$\sum_{s\in G_{n}(w)\cap G_{n}(v)}\min\{C(s, w), C(s,v)\} = \sum_{s\in G_{n}(v)}\min\{C(s, w), C(s,v)\}$$
 >	- Note that the numerator of the  **ROUGE-n recall** **limits** matches to the reference's *maximum count*.
 >	- Similar to BLEU, it applies the **clipping** in numerator.
+>- The **ROUGE-n F-measure** is given by $$\text{ROUGE-n-F}(w, v;n) := \frac{2\times\text{ROUGE-n-Recall}\times \text{ROUGE-n-Precision} }{\text{ROUGE-n-Recall}  + \text{ROUGE-n-Precision} }$$
 
 - [[n-Gram Model and Language Model]]
 - [[Bilingual Evaluation Understudy or BLEU metric for LLM Generation]]

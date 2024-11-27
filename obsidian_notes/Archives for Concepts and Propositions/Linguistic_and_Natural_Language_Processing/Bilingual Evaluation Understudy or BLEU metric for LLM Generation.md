@@ -28,7 +28,7 @@ date of note: 2024-11-25
 >
 >The **Bilingual Evaluation Understudy (BLEU)** is a *precision measure* on the *n-gram* of both the output sequence, and reference ground truth.
 >
->Specifically, consider a set of *n-grams* of $w$ $$G_{n}(w) := \left\{ w_{1:n},\, w_{2:n+1}\,{,}\ldots{,}\, w_{T-n+1:T} \right\} $$
+>Specifically, consider a set of *unique n-grams* of $w$ $$G_{n}(w) := \left\{ w_{1:n},\, w_{2:n+1}\,{,}\ldots{,}\, w_{T-n+1:T} \right\} $$
 >- Define the **substring count** as the number of appearances of a string $s$ as a *substring* of $y$ $$C(s, y) := \#\left\{ i: s = y_{i:|s|+i-1} \right\} $$
 >
  The **modified n-gram precision** between one candidate sequence $w$ and one reference sequence $v$ is computed as follows:
@@ -37,9 +37,9 @@ date of note: 2024-11-25
 >p_{n}(w, v) := \frac{\sum_{s\in G_{n}(w)}\min\left\{C(s, w),\,C(s, v)  \right\}}{\sum_{s\in G_{n}(w)}C(s, w)}
 >\end{align*}
 >$$
->- The *denominator* is the *total count* of $n$-gram of *candidate* $w$ in the *candidate sequence* $w$; (which acts as the *predicted positive*) $$\text{PP } := \sum_{s\in G_{n}(w)}C(s, w)$$
->- The *numerator* is the *maximum reference count* of *candidate* $n$-gram in *reference sequence* $v$; (which acts as the *true positive*)  $$\text{TP } := \sum_{s\in G_{n}(w)}C(s, v)$$
->- The *normalize* the metric, the numerator need to be **clipped** by  *total count* of $n$-gram of *candidate* $w$ in the *candidate sequence* $w$ $$\text{TP } := \sum_{s\in G_{n}(w)}\min\{C(s, v), C(s, w)  \}$$
+>- The *denominator* is the *total count* of *candidate* $n$-gram; (which acts as the *predicted positive*) $$\text{PP } := \sum_{s\in G_{n}(w)}C(s, w)$$
+>- The *numerator* is the *total count of overlapped candidate* $n$-gram with reference set; (which acts as the *true positive*)  $$\text{TP } := \sum_{s\in G_{n}(v)}C(s, w) = \sum_{s\in G_{n}(w) \cap G_{n}(v)}C(s, w)$$
+>- The *normalize* the metric, the numerator is **clipped** as *total count* of *overlapped candidate* $n$-gram but not exceeding the corresponding count in reference set   $$\text{TP } := \sum_{s\in G_{n}(w)}\min\{C(s, v), C(s, w)  \} = \sum_{s\in G_{n}(w) \cap G_{n}(v)}\min\{C(s, v), C(s, w)  \}$$
 
 ^c36fe8
 
@@ -64,6 +64,14 @@ date of note: 2024-11-25
 >- and *divided* by the *total number* of candidate n-grams.
 >  
 >-- Papineni, K., Roukos, S., Ward, T., & Zhu, W. J. (2002, July). Bleu: a method for automatic evaluation of machine translation. In _Proceedings of the 40th annual meeting of the Association for Computational Linguistics_ (pp. 311-318).
+
+>[!info]
+>$$
+>\begin{align*}
+>\sum_{s\in G_{n}(w)}\min\{ C(s, w), C(s, v) \} &= \sum_{s\in G_{n}(w) \cap G_{n}(v)}\min\{ C(s, w), C(s, v) \} \\[5pt] 
+>&= \sum_{s\in G_{n}(v)}\min\{ C(s, w), C(s, v) \}
+>\end{align*}
+>$$
 
 ### Modified $n$-Gram Precision for Blocks of Text
 
