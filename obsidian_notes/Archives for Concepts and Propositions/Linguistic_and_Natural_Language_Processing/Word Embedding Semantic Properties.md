@@ -30,6 +30,8 @@ date of note: 2024-05-12
 
 ![[word_embedding_parallellogram.png]]
 
+![[word2vec_tsne.png]]
+
 
 
 ## Explanation
@@ -47,3 +49,4 @@ date of note: 2024-05-12
 - [[Vector Semantics and Distributional Hypothesis in Linguistic]]
 
 - [[Speech and Language Processing by Jurafsky]] pp 124 - 127
+- [[Practical Natural Language Processing by Vajjala]] pp 92 - 113

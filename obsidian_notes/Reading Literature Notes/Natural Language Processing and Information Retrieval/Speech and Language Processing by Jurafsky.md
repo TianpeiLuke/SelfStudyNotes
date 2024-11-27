@@ -41,3 +41,6 @@ date of note: 2024-11-17
 
 - [[Foundations of Statistical Natural Language Processing by Manning]]
 - [[Handbook of Natural Language Processing by Indurkhya]]
+- [[Practical Natural Language Processing by Vajjala]]
+- [[Introduction to Information Retrieval by Manning]]
+- [[Deep Learning Foundations and Concepts by Bishop]]

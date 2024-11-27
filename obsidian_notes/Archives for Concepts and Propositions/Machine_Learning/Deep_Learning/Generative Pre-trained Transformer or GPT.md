@@ -77,6 +77,10 @@ date of note: 2024-10-21
 ## Datasets
 
 
+## Evaluation
+
+- [[Bilingual Evaluation Understudy or BLEU metric for LLM Generation]]
+
 
 
 

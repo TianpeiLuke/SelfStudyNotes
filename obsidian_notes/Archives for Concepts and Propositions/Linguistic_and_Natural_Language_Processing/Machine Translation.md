@@ -25,6 +25,7 @@ date of note: 2024-09-04
 ## Explanation
 
 
+- [[Bilingual Evaluation Understudy or BLEU metric for LLM Generation]]
 - [[Text-to-Text Transfer Transformer or T5 for Translation]]
 
 

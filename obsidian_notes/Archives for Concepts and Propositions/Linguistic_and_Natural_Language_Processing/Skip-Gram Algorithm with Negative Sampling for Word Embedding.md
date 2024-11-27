@@ -39,6 +39,7 @@ date of note: 2024-09-12
 - [[Softmax Function and Log-Sum-Exp Function]]
 - [[Conditional Independence]]
 
+![[skipgram_embedding.png]]
 ### Learning Skip-Gram Embedding with Negative Sampling
 
 >[!important] Definition
@@ -71,9 +72,15 @@ date of note: 2024-09-12
 - [[Sigmoid Function as Activation for Deep Learning]]
 - [[Noise Contrastive Estimation]]
 - [[Mixture Family of Distributions]]
-- [[Density Ratio Estimation via Binary Classifiers
+- [[Density Ratio Estimation via Binary Classifiers]]
 
-![[skipgram_embedding.png]]
+
+![[skip_gram_example.png]]
+
+![[skip_gram_data_prepare.png]]
+
+![[skip_gram_model.png]]
+
 
 >[!info]
 >Compare to the *NCE loss*
@@ -87,6 +94,7 @@ date of note: 2024-09-12
 >$$
 >
 >The **SGNS loss** did not use the *noise ratio* since we only cares for the embedding map $E$.  
+
 
 ### Noise Distribution
 
@@ -105,6 +113,7 @@ date of note: 2024-09-12
 >- **context embedding** $E(c_{j})$
 >- It is common to just add them together as the **word embedding** for $w_{i}$ as $$\hat{w}_{i} := E(w_{i}) + E(c_{j})$$
 >- Alternatively we can drop the *context embedding*
+
 
 
 
@@ -171,6 +180,7 @@ date of note: 2024-09-12
 - [[Vector Space over a Field]]
 
 - [[Speech and Language Processing by Jurafsky]] pp 117 - 122
+- [[Practical Natural Language Processing by Vajjala]] pp 101 - 103
 - Wikipedia [Word2vec](https://en.wikipedia.org/wiki/Word2vec)
 - Mikolov, T., Chen, K., Corrado, G.S., & Dean, J. (2013). Efficient Estimation of Word Representations in Vector Space. _International Conference on Learning Representations_.
 - Mikolov, T., Sutskever, I., Chen, K., Corrado, G. S., & Dean, J. (2013). Distributed representations of words and phrases and their compositionality. _Advances in neural information processing systems_, _26_.

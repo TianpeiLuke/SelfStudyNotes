@@ -19,6 +19,9 @@ date of note: 2024-05-12
 
 
 
+## LLM for Semantic Role Labeling
+
+- [[Large Language Model and Pretrained Language Models]]
 
 
 -----------

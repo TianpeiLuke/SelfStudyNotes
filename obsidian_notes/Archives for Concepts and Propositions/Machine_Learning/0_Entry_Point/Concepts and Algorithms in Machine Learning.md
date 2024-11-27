@@ -26,17 +26,6 @@ date of note: 2024-06-01
 - [[Supervised Learning and Unsupervised Learning]]
 - [[Regression Problem]]
 
-#### Metrics
-
-- [[Confusion Table]]
-- [[True or False Positive Rate and True or False Negative Rate]]
-- [[Positive Predictive Value and False Discovery Rate]]
-- [[Recall and Precision and F-Measure]]
-- [[Receiver Characteristic Curve for Binary Classification]]
-- [[Precision-Recall Curve]]
-- [[Macro-Average and Micro-Average for Multi-Class Metric]]
-
-
 #### Nearest Neighbor Classification
 
 - [[k Nearest Neighbor Classification]]
@@ -225,8 +214,28 @@ date of note: 2024-06-01
 
 ### Evaluation Metric
 
+#### Classification and Prediction
+
+- [[Confusion Table]]
+- [[True or False Positive Rate and True or False Negative Rate]]
+- [[Positive Predictive Value and False Discovery Rate]]
+- [[Recall and Precision and F-Measure]]
+- [[Receiver Characteristic Curve for Binary Classification]]
+- [[Precision-Recall Curve]]
+- [[Macro-Average and Micro-Average for Multi-Class Metric]]
+
+#### Information Retrieval
+
+- [[Interpolated Precision and Average Precision]]
+- [[Mean Average Precision]]
 - [[Recall and Precision at k]]
-- [[Perplexity]]
+- [[Normalized Discounted Cumulative Gain or NDCG]]
+
+#### Natural Language Models
+
+- [[Perplexity Measure for Language Models]]
+- [[Bilingual Evaluation Understudy or BLEU metric for LLM Generation]]
+- [[ROUGE metric for LLM Generation]]
 
 ### Learning Paradigms and Strategies
 

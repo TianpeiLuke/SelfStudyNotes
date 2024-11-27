@@ -109,3 +109,4 @@ date of note: 2024-11-12
 
 - [[Introduction to Information Retrieval by Manning]] pp 117 - 119
 - [[Speech and Language Processing by Jurafsky]] pp 111 - 114
+- [[Practical Natural Language Processing by Vajjala]] pp 90 -92

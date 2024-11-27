@@ -18,11 +18,14 @@ date of note: 2024-05-12
 ## Explanation
 
 
-
+- [[Name Entity Disambiguation and Linking]]
+- [[Relation Extraction]]
+- [[Information Extraction]]
 
 
 -----------
 ##  Recommended Notes and References
+
 
 
 

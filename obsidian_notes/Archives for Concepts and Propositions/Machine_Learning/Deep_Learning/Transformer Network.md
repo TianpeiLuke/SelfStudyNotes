@@ -113,6 +113,8 @@ date of note: 2024-05-12
 >Since the linear mapping $W_{i}^{Q}, W_{i}^{K}, W_{i}^{V}$ are shared across all input tokens, the **transformer** has **permutation invariance**,
 >- i.e. permuting the order of input tokens (rows of $X$) will result in permutation of outputs (rows of $\widetilde{X}$) $$\text{Transformer}(P\,X) = P\,(\text{Transformer}(X)).$$
 
+^ce4816
+
 >[!info]
 >Compare to RNN, attention mechanism 
 >- allows the network to learn **long range dependencies** that are not easily captured by recurrent networks such as LSTM, GRU etc.
@@ -135,6 +137,8 @@ date of note: 2024-05-12
 >- it should *generalize to longer sequences*,
 >- and it should have a *consistent* way to express the number of steps between any two input vectors *irrespective of their absolute position* because the **relative position** of tokens is often more important than the absolute position.
 
+^aad689
+
 >[!important] Definition
 >The **positional encoding** provides additional representation of the *relative position* of the input token in the entire sequence. 
 >- This is critical to remedy the *lack* of dependency on **token order** in *original transformer*
@@ -145,7 +149,10 @@ date of note: 2024-05-12
 >- The $i$-th dimension of *encoding* for *$n$-th position*  is given by $$r_{n}^{i} = \left\{\begin{array}{cl}\sin \left(\dfrac{n}{L^{i / d}}\right) & \text{ if }i \text{ is even} \\[5pt] \cos \left(\dfrac{n}{L^{(i-1)/ d}}\right) & \text{ if }i \text{ is odd}\end{array}\right. \quad i=1\,{,}\ldots{,}\,d$$ 
 >- One nice property of the sinusoidal representation given by (12.25) is that, for any **fixed offset** $k$, the **encoding at position** $n + k$ can be represented as a **linear combination** of the *encoding at position* $n$, in which the coefficients do not depend on the *absolute position* but only on the *value of* $k$. The network should therefore be able to learn to *attend to* **relative positions**. Note that this property requires that the encoding makes use of both sine and cosine functions.
 
+^d964b5
+
 - [[vaswaniAttentionAllYou2017]]
+- [[Positional Embeddings of Large Language Models]]
 
 
 ![[position_encoding.png]]

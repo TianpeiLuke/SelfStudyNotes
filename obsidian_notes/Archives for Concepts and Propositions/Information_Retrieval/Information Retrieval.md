@@ -21,8 +21,16 @@ date of note: 2024-05-12
 >**Information retrieval** is the task of finding documents $d\in \mathcal{D}$ that are *relevant* to a user’s need (*query*) $q$ for   information.
 
 
+### Information Extraction
+
+- [[Information Extraction]]
+
 ## Explanation
 
+
+## LLM for Information Retrieval
+
+- Zhu, Y., Yuan, H., Wang, S., Liu, J., Liu, W., Deng, C., ... & Wen, J. R. (2023). Large language models for information retrieval: A survey. _arXiv preprint arXiv:2308.07107_.
 
 
 

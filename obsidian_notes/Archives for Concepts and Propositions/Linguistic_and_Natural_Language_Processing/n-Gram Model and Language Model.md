@@ -92,7 +92,7 @@ date of note: 2024-09-08
 
 ## Evaluation of Language Model
 
-- [[Perplexity]]
+- [[Perplexity Measure for Language Models]]
 
 ## Multinomial Naive Bayes 
 

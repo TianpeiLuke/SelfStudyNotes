@@ -2,6 +2,8 @@
 tags:
   - concept
   - natural_language_processing/word_representation
+  - computational_linguistic/part_of_speech
+  - information_retrieval/information_extraction
 keywords:
   - pos_tagging
   - part_of_speech
@@ -17,20 +19,53 @@ date of note: 2024-09-08
 >**Name**: Part-of-Speech Tagging
 
 
+- [[Part-of-Speech Ambiguity]]
 
 ## Explanation
 
 
+## Models
 
+### Kernel Methods
+
+- [[Support Vector Machine Kernel Expansion and RKHS]]
+- [[Positive Definite Kernel Examples]]
+
+
+### Dynamic Bayesian Network
+
+- [[Hidden Markov Model]]
+
+### Discriminative Graphical Model
+
+- [[Conditional Random Field]]
+
+### Recurrent Neural Network
+
+- [[Recurrent Neural Network]]
+- [[Long-Short Term Memory Network]]
+- [[Gated Recurrent Units in Neural Network]]
+- [[Encoder-Decoder Sequence-to-Sequence Architecture]]
+
+### Transformer
+
+- [[Transformer Network]]
+- [[Large Language Model and Pretrained Language Models]]
+- [[Bidirectional Encoder Representation from Transformer or BERT]]
+
+
+## Downstream Applications 
+
+- [[Information Extraction]]
+- [[Keyphrase Extraction]]
+- [[Name Entity Recognition]]
 
 
 -----------
 ##  Recommended Notes and References
 
 
-- [[Part-of-Speech Ambiguity]]
-- [[Hidden Markov Model]]
-- [[Conditional Random Field]]
+
 
 
 

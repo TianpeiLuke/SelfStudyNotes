@@ -23,6 +23,8 @@ date of note: 2024-09-13
 
 - [[Text Normalization]]
 
+![[nlp_preprocessing_pipeline.png]]
+
 #### Tokenization
 
 - [[Tokenization of Words and Subwords and SentencePiece Tokenization]]
@@ -50,7 +52,7 @@ date of note: 2024-09-13
 
 - [[n-Gram Model and Language Model]]
 - [[n-Gram Model Estimation Smoothing]]
-- [[Perplexity]]
+- [[Perplexity Measure for Language Models]]
 
 ### Text Classification
 
@@ -61,15 +63,6 @@ date of note: 2024-09-13
 - [[Logistic Regression]]
 - [[Generalized Linear Models]]
 
-#### Metrics
-
-- [[Confusion Table]]
-- [[True or False Positive Rate and True or False Negative Rate]]
-- [[Positive Predictive Value and False Discovery Rate]]
-- [[Recall and Precision and F-Measure]]
-- [[Recall and Precision at k]]
-- [[Receiver Characteristic Curve for Binary Classification]]
-- [[Macro-Average and Micro-Average for Multi-Class Metric]]
 
 ### Vector Semantics
 
@@ -107,6 +100,10 @@ date of note: 2024-09-13
 - [[Latent Semantic Analysis via Singular Value Decomposition]]
 - [[Probabilistic Latent Semantic Analysis]]
 - [[Latent Dirichlet Allocation]]
+
+### Natural Language Processing System
+
+![[classical_nlp_dl_nlp.png]]
 
 
 ### Machine Learning Models
@@ -152,40 +149,36 @@ date of note: 2024-09-13
 
 #### Pretrained Large Language Model
 
+- [[Models and Algorithms for Pretrained and Large Language Models]]
 - [[Large Language Model and Pretrained Language Models]]
 - [[Bidirectional Encoder Representation from Transformer or BERT]]
 - [[Generative Pre-trained Transformer or GPT]]
 - [[Text-to-Text Transfer Transformer or T5 for Translation]]
 
-#### Text Generation of Language Models
 
-- [[Decoding and Sampling from Large Language Models]]
-- [[Greedy Decoding for Causal Language Model Generation]]
-- [[Beam Search for Causal Decoding of Language Model]]
-- [[Top-k Sampling for Large Language Model Generation]]
-- [[Top-p Sampling or Nucleus Sampling for Large Language Model Generation]]
-- [[Temperature Sampling for Large Language Model Generation]]
+### Metrics for Natural Language Models
 
-#### Fine-Tuning with LLM
+#### Metrics for Classification
 
-- [[Scaling Law of Large Language Model]]
-- [[Foundational Models for Transfer Learning]]
+- [[Confusion Table]]
+- [[True or False Positive Rate and True or False Negative Rate]]
+- [[Positive Predictive Value and False Discovery Rate]]
+- [[Recall and Precision and F-Measure]]
+- [[Receiver Characteristic Curve for Binary Classification]]
+- [[Macro-Average and Micro-Average for Multi-Class Metric]]
 
-- [[Continued Pre-training of Large Language Models]]
-- [[Parameter Efficient Fine Tuning or PEFT for Large Language Model]]
-- [[Low Rank Adaptation or LoRA for Large Language Model]]
-- [[Supervised Fine-Tuning or Instruction Fine-Tuning of LLM]]
+#### Metrics for Information Retrieval
 
+- [[Positive Predictive Value and False Discovery Rate]]
+- [[Recall and Precision and F-Measure]]
+- [[Recall and Precision at k]]
+- [[Mean Average Precision]]
 
-#### Human Alignment with LLM
+#### Metrics for Generative Language Models
 
-- [[Reinforcement Learning with Human Feedbacks or RLHF for LLM]]
-- [[Direct Preference Optimization for Alignment in LLM]]
-- [[Supervised Fine-Tuning vs Human Alignment]]
-
-#### In-Context Learning
-
-- [[In-Context Learning and Prompt Engineering for LLM]]
+- [[Bilingual Evaluation Understudy or BLEU metric for LLM Generation]]
+- [[ROUGE metric for LLM Generation]]
+- [[Perplexity Measure for Language Models]]
 
 
 ### Text Classification
@@ -194,18 +187,24 @@ date of note: 2024-09-13
 - [[Multinomial Naive Bayes Model]]
 - [[Support Vector Machine Kernel Expansion and RKHS]]
 - [[Positive Definite Kernel Examples]]
+- [[Recurrent Neural Network]]
+- [[Long-Short Term Memory Network]]
+- [[Gated Recurrent Units in Neural Network]]
 - [[Bidirectional Encoder Representation from Transformer or BERT]]
 - [[Sentiment Analysis]]
 
 
 ### Information Extraction
 
+![[information_extraction_pipeline.png]]
+
 - [[Information Extraction]]
 - [[Part-of-Speech Tagging]]
+- [[Keyphrase Extraction]]
 - [[Name Entity Recognition]]
+- [[Coreference Resolution]]
+- [[Name Entity Disambiguation and Linking]]
 - [[Relation Extraction]]
-- [[Name Entity Disambiguation]]
-
 
 ### Machine Translation
 
@@ -221,7 +220,7 @@ date of note: 2024-09-13
 
 ### Question-Answering and ChatBots
 
-
+- [[Question Answering Problem]]
 
 
 
@@ -233,3 +232,6 @@ date of note: 2024-09-13
 
 - [[Speech and Language Processing by Jurafsky]]
 - [[Foundations of Statistical Natural Language Processing by Manning]]
+- [[Handbook of Natural Language Processing by Indurkhya]]
+- [[Practical Natural Language Processing by Vajjala]]
+- [[Introduction to Information Retrieval by Manning]]

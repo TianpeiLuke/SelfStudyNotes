@@ -112,3 +112,4 @@ date of note: 2024-09-12
 - [[Speech and Language Processing by Jurafsky]] pp 107
 - [[Introduction to Information Retrieval by Manning]] pp 120 - 124
 - [[Foundations of Statistical Natural Language Processing by Manning]] pp 539 - 544
+- [[Practical Natural Language Processing by Vajjala]] pp 84

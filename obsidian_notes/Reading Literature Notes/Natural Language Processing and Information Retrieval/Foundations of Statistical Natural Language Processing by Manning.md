@@ -47,3 +47,5 @@ date of note: 2024-10-25
   
 - [[Speech and Language Processing by Jurafsky]]
 - [[Handbook of Natural Language Processing by Indurkhya]]
+- [[Introduction to Information Retrieval by Manning]]
+- [[Practical Natural Language Processing by Vajjala]]

@@ -127,6 +127,9 @@ date of note: 2024-10-21
 
 ## Explanation
 
+![[llm_components.png]]
+
+- Minaee, S., Mikolov, T., Nikzad, N., Chenaghlu, M., Socher, R., Amatriain, X., & Gao, J. (2024). Large language models: A survey. _arXiv preprint arXiv:2402.06196_.
 
 
 ## Self-Supervised Training 
@@ -143,20 +146,50 @@ date of note: 2024-10-21
 - [[Top-k Sampling for Large Language Model Generation]]
 - [[Top-p Sampling or Nucleus Sampling for Large Language Model Generation]]
 - [[Temperature Sampling for Large Language Model Generation]]
-## Supervised Fine Tuning and Human Alignment
 
+
+## Supervised Fine Tuning and Human Alignment
 
 - [[Parameter Efficient Fine Tuning or PEFT for Large Language Model]]
 - [[Reinforcement Learning with Human Feedbacks or RLHF for LLM]]
 - [[Direct Preference Optimization for Alignment in LLM]]
+- [[Supervised Fine-Tuning or Instruction Fine-Tuning of LLM]]
 - [[Supervised Fine-Tuning vs Human Alignment]]
 
 
-## LLM Variants
+## Efficient Training and Inference
+
+- [[Zero Redundancy Optimizer or ZeRO for Optimized Training of LLM]]
+
+
+## Applications from LLM
+
+![[llm_capacity_survey_2024.png]]
+
+- Minaee, S., Mikolov, T., Nikzad, N., Chenaghlu, M., Socher, R., Amatriain, X., & Gao, J. (2024). Large language models: A survey. _arXiv preprint arXiv:2402.06196_.
+
+- [[Information Extraction]]
+	- [[Name Entity Recognition]]
+	- [[Relation Extraction]]
+	- [[Event Extraction]]
+- [[Information Retrieval]]
+
+
+## PLM and LLM Variants
 
 ![[llm_timeline_2024.png]]
 
 - Zhao, W. X., Zhou, K., Li, J., Tang, T., Wang, X., Hou, Y., ... & Wen, J. R. (2023). A survey of large language models. _arXiv preprint arXiv:2303.18223_.
+
+![[llm_model_survey_2024.png]]
+
+![[llm_model_survey_timeline_2024.png]]
+
+- [[touvronLlamaOpenFoundation2023]]
+- Minaee, S., Mikolov, T., Nikzad, N., Chenaghlu, M., Socher, R., Amatriain, X., & Gao, J. (2024). Large language models: A survey. _arXiv preprint arXiv:2402.06196_.
+
+
+
 
 
 

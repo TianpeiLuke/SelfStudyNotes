@@ -29,6 +29,12 @@ date of note: 2024-09-04
 
 - [[Text-to-Text Transfer Transformer or T5 for Translation]]
 
+## LLM for Text Summarization
+
+
+- [[Large Language Model and Pretrained Language Models]]
+- Zhang, H., Yu, P. S., & Zhang, J. (2024). A Systematic Survey of Text Summarization: From Statistical Methods to Large Language Models. _arXiv preprint arXiv:2406.11289_.
+- 
 
 
 -----------

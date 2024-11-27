@@ -87,9 +87,9 @@ date of note: 2024-08-24
 
 ## Perplexity
 
-![[Perplexity#^5aafa3]]
+![[Perplexity Measure for Language Models#^5aafa3]]
 
-- [[Perplexity]]
+- [[Perplexity Measure for Language Models]]
 
 
 ## Examples

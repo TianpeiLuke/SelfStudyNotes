@@ -105,3 +105,4 @@ date of note: 2024-05-12
 - [[Distributed Representation]]
 
 - [[Speech and Language Processing by Jurafsky]] pp 101, 105
+- [[Practical Natural Language Processing by Vajjala]] pp 92 - 94

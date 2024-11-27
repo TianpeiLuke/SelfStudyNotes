@@ -24,6 +24,8 @@ date of note: 2024-11-17
 >2. **Normalizing word formats** 
 >3. **Segmenting sentences**
 
+![[nlp_preprocessing_pipeline.png]]
+
 ### Tokenization
 
 - [[Tokenization of Words and Subwords and SentencePiece Tokenization]]
@@ -44,7 +46,7 @@ date of note: 2024-11-17
 
 ## Explanation
 
-
+![[nlp_preprocessing_outputs.png]]
 
 
 

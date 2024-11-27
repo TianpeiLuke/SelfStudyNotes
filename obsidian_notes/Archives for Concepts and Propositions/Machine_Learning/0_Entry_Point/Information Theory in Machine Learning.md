@@ -265,7 +265,7 @@ date of note: 2024-11-14
 
 - [[n-Gram Model and Language Model]]
 - [[n-Gram Model Estimation Smoothing]]
-- [[Perplexity]]
+- [[Perplexity Measure for Language Models]]
 
 - [[WordPiece Tokenization]]
 - [[Unigram Tokenization]]

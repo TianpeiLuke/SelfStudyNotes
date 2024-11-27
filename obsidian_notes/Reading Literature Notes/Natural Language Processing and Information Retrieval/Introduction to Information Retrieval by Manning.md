@@ -42,6 +42,12 @@ date of note: 2024-10-25
 
 > [!Abstract]  
 > Class-tested and coherent, this groundbreaking new textbook teaches web-era information retrieval, including web search and the related areas of text classification and text clustering from basic concepts. Written from a computer science perspective by three leading experts in the field, it gives an up-to-date treatment of all aspects of the design and implementation of systems for gathering, indexing, and searching documents; methods for evaluating systems; and an introduction to the use of machine learning methods on text collections. All the important ideas are explained using examples and figures, making it perfect for introductory courses in information retrieval for advanced undergraduates and graduate students in computer science. Based on feedback from extensive classroom experience, the book has been carefully structured in order to make teaching more natural and effective. Although originally designed as the primary text for a graduate or advanced undergraduate course in information retrieval, the book will also create a buzz for researchers and professionals alike.  
->-----
+
+-----
 ## Reference
-  
+
+
+- [[Speech and Language Processing by Jurafsky]]
+- [[Handbook of Natural Language Processing by Indurkhya]]
+- [[Practical Natural Language Processing by Vajjala]]
+- [[Foundations of Statistical Natural Language Processing by Manning]]

@@ -54,3 +54,5 @@ New to the Second Edition
   
 - [[Foundations of Statistical Natural Language Processing by Manning]]
 - [[Speech and Language Processing by Jurafsky]]
+- [[Practical Natural Language Processing by Vajjala]]
+- [[Introduction to Information Retrieval by Manning]]

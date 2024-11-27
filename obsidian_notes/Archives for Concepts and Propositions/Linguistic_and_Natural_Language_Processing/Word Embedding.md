@@ -41,11 +41,10 @@ date of note: 2024-05-12
 - [[Vector Semantics and Distributional Hypothesis in Linguistic]]
 
 
-
-
 ### Sparse Word Embedding
 
 - [[Co-Occurrence Matrix]]
+- [[Bag-of-Word Model for Document Representation]]
 - [[Term Frequency and Inverse Document Frequency or TF-IDF]]
 
 ### Static Word Embedding
@@ -84,4 +83,5 @@ date of note: 2024-05-12
 - [[Word Embedding Evaluation and Datasets]]
 
 
+- [[Practical Natural Language Processing by Vajjala]] pp 81 - 113
 - [[Speech and Language Processing by Jurafsky]] 

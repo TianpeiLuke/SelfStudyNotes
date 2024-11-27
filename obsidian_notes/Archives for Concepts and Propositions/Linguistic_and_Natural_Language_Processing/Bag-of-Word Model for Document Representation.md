@@ -76,3 +76,4 @@ date of note: 2024-09-12
 - [[Speech and Language Processing by Jurafsky]]  pp 58
 - [[Probabilistic Graphical Models by Koller]] pp 766
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 378
+- [[Practical Natural Language Processing by Vajjala]] pp 87 - 89

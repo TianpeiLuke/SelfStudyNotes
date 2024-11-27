@@ -242,55 +242,18 @@ date of note: 2024-06-01
 - [[Graph Convolutional Filters]]
 - [[Graph Convolutional Neural Network]]
 
-### Memorization Network
-
-#### Attention and Transformer 
+### Attention and Transformer Network
 
 - [[Attention Mechanism in Neural Network]]
 - [[Transformer Network]]
+- [[Positional Embeddings of Large Language Models]]
 - [[Flash Attention Mechanism for Large Language Model]]
 
-#### Pretrained Large Language Model
 
+### Pretrained Language Model and Large Language Models
+
+- [[Models and Algorithms for Pretrained and Large Language Models]]
 - [[Large Language Model and Pretrained Language Models]]
-- [[Bidirectional Encoder Representation from Transformer or BERT]]
-- [[Generative Pre-trained Transformer or GPT]]
-- [[Text-to-Text Transfer Transformer or T5 for Translation]]
-
-#### Decoding and Text Generation of Language Models
-
-- [[Decoding and Sampling from Large Language Models]]
-- [[Greedy Decoding for Causal Language Model Generation]]
-- [[Beam Search for Causal Decoding of Language Model]]
-- [[Top-k Sampling for Large Language Model Generation]]
-- [[Top-p Sampling or Nucleus Sampling for Large Language Model Generation]]
-- [[Temperature Sampling for Large Language Model Generation]]
-
-#### Pre-Training of LLM
-
-- [[Self-Supervised Training of Large Language Model and Teacher Forcing]]
-- [[Scaling Law of Large Language Model]]
-- [[Key-Value Cache for Training of Large Language Models]]
-
-
-#### Fine-Tuning of LLM
-
-- [[Continued Pre-training of Large Language Models]]
-- [[Parameter Efficient Fine Tuning or PEFT for Large Language Model]]
-- [[Low Rank Adaptation or LoRA for Large Language Model]]
-- [[Foundational Models for Transfer Learning]]
-- [[Supervised Fine-Tuning or Instruction Fine-Tuning of LLM]]
-
-#### Human Alignment of LLM
-
-- [[Reinforcement Learning with Human Feedbacks or RLHF for LLM]]
-- [[Direct Preference Optimization for Alignment in LLM]]
-- [[Supervised Fine-Tuning vs Human Alignment]]
-
-#### In-Context Learning
-
-- [[In-Context Learning and Prompt Engineering for LLM]]
-- [[Retrieval Augmented Generation]]
 
 
 ### Neural Architecture Search
