@@ -117,7 +117,7 @@ date of note: 2024-09-13
 - [[Supervised Fine-Tuning vs Human Alignment]]
 
 - [[Retrieval Augmented Generation]]
-
+- [[Information Retrieval with Encoder Language Models]]
 
 
 

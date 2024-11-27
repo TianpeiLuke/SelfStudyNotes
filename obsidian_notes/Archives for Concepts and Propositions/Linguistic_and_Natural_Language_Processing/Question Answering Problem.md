@@ -20,7 +20,7 @@ date of note: 2024-05-12
 ## Explanation
 
 
-
+- [[Retrieval Augmented Generation]]
 
 
 -----------

@@ -221,9 +221,14 @@ date of note: 2024-09-13
 ### Question-Answering and ChatBots
 
 - [[Question Answering Problem]]
+- [[Retrieval Augmented Generation]]
 
 
+### Information Retrieval
 
+- [[Concepts and Algorithms in Information Retrieval]]
+- [[Information Retrieval with Encoder Language Models]]
+- [[Retrieval Augmented Generation]]
 
 
 -----------
