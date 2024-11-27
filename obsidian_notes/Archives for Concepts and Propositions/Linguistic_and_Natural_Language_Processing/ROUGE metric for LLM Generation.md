@@ -47,6 +47,14 @@ date of note: 2024-11-25
 - [[Bilingual Evaluation Understudy or BLEU metric for LLM Generation]]
 - [[Recall and Precision and F-Measure]]
 
+>[!info]
+>If the candidate text overgenerates repeated n-grams that are present in the reference, the **ROUGE-Precision** will count them as matches, potentially **inflating** the score. 
+>
+>In contrast, the **ROUGE Recall** do **not inflate the recall score** due to clipping.
+
+
+### ROUGE-n for Blocks of Text
+
 >[!important] Definition
 >Let $$S_{w} := \{ w^{(1)} \,{,}\ldots{,}\, w^{(N)} \}, \text{ where }  w^{(i)}:=(w_{1}^{(i)}\,{,}\ldots{,}\,w_{T}^{(i)})$$ be a set of $N$ *output sequences* of language model,  
 >- and let $$S_{v}^{(i)} := \{ v^{(1,i)} \,{,}\ldots{,}\, v^{(M,i)} \}, \text{ where }  v^{(j,i)}:=(v_{1}^{(j,i)}\,{,}\ldots{,}\,v_{S}^{(j,i)})$$  be a set of $M$ *reference ground truth* for *each output sequence* $w^{(i)}$.
@@ -64,6 +72,7 @@ date of note: 2024-11-25
 >$$
 >\text{ROUGE}(S_{w}, S_{v}) := \sum_{n=1}^{\infty}\alpha_{n}\;\text{ROUGE-n-Recall}(S_{w}, S_{V})
 >$$
+
 
 
 ### ROUGE-L based on the Longest Common Subsequence
