@@ -136,6 +136,8 @@ date of note: 2024-10-21
 
 - [[Self-Supervised Training of Large Language Model and Teacher Forcing]]
 - [[Self-Supervised Learning]]
+- [[Masked Language Modeling as Language Model Training Task]]
+- [[Next Sentence Prediction as Language Model Training Task]]
 
 
 ## Text Generation via Decoding and Sampling of LLM
@@ -209,7 +211,7 @@ date of note: 2024-10-21
 - [[touvronLlamaOpenFoundation2023]]
 
 - [[Speech and Language Processing by Jurafsky]] pp 203 - 220, 223
-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 815 - 816
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 815 - 816, 880
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 382 - 394
 
 

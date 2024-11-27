@@ -48,3 +48,4 @@ date of note: 2024-11-27
 - [[devlinBERTPretrainingDeep2019]]
 
 - [[Speech and Language Processing by Jurafsky]] pp 226 - 228
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 1052
