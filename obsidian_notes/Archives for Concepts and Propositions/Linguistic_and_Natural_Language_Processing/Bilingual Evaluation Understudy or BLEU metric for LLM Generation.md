@@ -76,7 +76,7 @@ date of note: 2024-11-25
 >The **modified n-gram precision** between the candidate set $S_{w}$ and  reference set $S_{v}$ is computed as follows:
 >$$
 >\begin{align*}
->p_{n}(S_{w}, S_{v}) := \frac{\sum_{i=1}^{N}\sum_{s\in G_{n}(w)}\min\left\{C(s, w^{(i)}),\; \max_{v^{(j,i)}\in S_{v}^{(i)}}C(s, v^{(j,i)})  \right\}}{\sum_{i=1}^{N}\sum_{s\in G_{n}(w)}C(s, w^{(i)})}
+>p_{n}(S_{w}, S_{v}) := \frac{\sum_{i=1}^{N}\sum_{s\in G_{n}(w^{(i)})}\min\left\{C(s, w^{(i)}),\; \max_{v^{(j,i)}\in S_{v}^{(i)}}C(s, v^{(j,i)})  \right\}}{\sum_{i=1}^{N}\sum_{s\in G_{n}(w^{(i)})}C(s, w^{(i)})}
 >\end{align*}
 >$$
 
@@ -129,6 +129,25 @@ date of note: 2024-11-25
 
 - [[Recall and Precision and F-Measure]]
 - [[ROUGE metric for LLM Generation]]
+
+
+>[!info]
+>- $$\text{ROUGE Precision} = \frac{\text{Number of overlapping n-grams}}{\text{Total n-grams in generated text}}$$
+>- $$\text{Modified n-Gram Precision} = \frac{\text{Clipped Count of overlapping n-grams}}{\text{Total n-grams in generated text}}$$​
+
+| Aspect                    | ROUGE Precision                  | Modified n-Gram Precision (BLEU)                      |
+| ------------------------- | -------------------------------- | ----------------------------------------------------- |
+| **Primary Use**           | Summarization                    | Machine translation                                   |
+| **Focus**                 | Coverage of the reference text   | Accuracy of generated text                            |
+| **N-Gram Counting**       | Counts *all* overlapping n-grams | Counts overlapping n-grams with *clipping*            |
+| **Brevity Consideration** | Does not penalize for brevity    | *Penalizes for brevity* (via brevity penalty in BLEU) |
+| **Orientation**           | **Recall/Precision balance**     | **Precision-focused**                                 |
+
+>[!quote]
+>In summary,
+>- while **ROUGE precision** is *simpler* and mainly about overlap, 
+>- **BLEU's modified precision** introduces **clipping** to ensure *fidelity* and *penalizes excessive repetition* or unfaithful generation.
+
 
 
 ## Application: LLM Performance Measure
