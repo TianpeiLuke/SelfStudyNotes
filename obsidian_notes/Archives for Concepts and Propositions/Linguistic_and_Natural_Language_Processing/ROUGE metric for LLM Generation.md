@@ -29,6 +29,7 @@ date of note: 2024-11-25
 >The **Recall-Oriented Understudy for Gisting Evaluation (ROUGE)** is a *recall measure* on the *n-gram* of both the output sequence, and reference ground truth.
 >
 >Specifically, consider a set of *unique n-grams* of $w$ $$G_{n}(w) := \left\{ w_{1:n},\, w_{2:n+1}\,{,}\ldots{,}\, w_{T-n+1:T} \right\} $$
+>- The set of *matched (overlapped) n-gram* is $$G_{n}(w) \cap G_{n}(v)$$
 >- Define the **substring count** as the number of appearances of a string $s$ as a *substring* of $y$ $$C(s, y) := \#\left\{ i: s = y_{i:|s|+i-1} \right\} $$
 >
 >- The **ROUGE-n precision** between one candidate sequence $w$ and one reference sequence $v$ is computed as follows: $$\begin{align*}\text{ROUGE-n-Precision}(w, v; n) := \frac{\sum_{s\in G_{n}(w)\cap G_{n}(v)}C(s, w)}{\sum_{s\in G_{n}(w)}C(s, w)} = \frac{\sum_{s\in G_{n}(v)}C(s, w)}{\sum_{s\in G_{n}(w)}C(s, w)}\end{align*}$$
