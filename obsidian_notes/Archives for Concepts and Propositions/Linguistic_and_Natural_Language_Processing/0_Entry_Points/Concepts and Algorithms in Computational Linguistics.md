@@ -22,8 +22,9 @@ date of note: 2024-09-13
 
 - [[Lexical Analysis]]
 - [[Lexical Semantics]]
-- [[Lemmas and Senses]]
+- [[Lemmas and Wordforms]]
 - [[Synonymy]]
+- [[Word Sense and WordNet]]
 - [[Word Sense Disambiguation]]
 - [[Principle of Contrast for Semantic Analysis]]
 - [[Word Association and Relatedness]]
@@ -85,6 +86,7 @@ date of note: 2024-09-13
 - [[Connotations of Word and Sentiment]]
 - [[Semantic Role Labeling]]
 - [[Sentiment Analysis]]
+
 
 ### Coreference Resolution
 

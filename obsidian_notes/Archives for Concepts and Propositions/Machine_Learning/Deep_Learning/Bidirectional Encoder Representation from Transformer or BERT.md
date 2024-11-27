@@ -62,30 +62,14 @@ date of note: 2024-10-21
 
 #### Task 1: Masked Language Model (MLM)
 
->[!quote]
->The **first token** of every input string is given by a special token `<class>`, and the corresponding *output* of the model is *ignored* during pre-training. 
->- Its role will become apparent when we discuss *fine-tuning*. 
->
->The model is pre-trained by presenting token sequences at the input. 
->- A *randomly chosen subset* of the tokens, say $15\%$, are *replaced* with a special token denoted `<mask>`. 
->- The model is trained to *predict the missing tokens* at the corresponding output nodes. 
->- This is analogous to the masking used in **word2vec** to learn *word embeddings*.
->  
->-- [[Deep Learning Foundations and Concepts by Bishop]] pp 388  
-
->[!important] Definition
->One of two tasks to training BERT is called **Masked Language  Modeling (MLM)**.
->- It is a *self-supervised task*, where the *training corpus* contains a large amount of *unannotated text*.
->
->In **MLM**, the model 
-
 - [[Self-Supervised Learning]]
-
+- [[Bidirectional Encoder Representation from Transformer or BERT]]
 
 
 #### Task 2: Next Sentence Prediction (NSP)
 
 
+- [[Next Sentence Prediction as Language Model Training Task]]
 
 ### Supervised Fine-Tuning
 

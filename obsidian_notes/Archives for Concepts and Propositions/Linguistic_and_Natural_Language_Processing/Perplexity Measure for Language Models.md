@@ -82,7 +82,7 @@ date of note: 2024-04-30
 ### Standard Metric for Language Models
 
 - [[Bilingual Evaluation Understudy or BLEU metric for LLM Generation]]
-
+- [[ROUGE metric for LLM Generation]]
 
 
 

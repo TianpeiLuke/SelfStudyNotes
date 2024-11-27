@@ -204,6 +204,7 @@ date of note: 2024-09-13
 - [[Name Entity Recognition]]
 - [[Coreference Resolution]]
 - [[Name Entity Disambiguation and Linking]]
+- [[Word Sense Disambiguation]]
 - [[Relation Extraction]]
 
 ### Machine Translation

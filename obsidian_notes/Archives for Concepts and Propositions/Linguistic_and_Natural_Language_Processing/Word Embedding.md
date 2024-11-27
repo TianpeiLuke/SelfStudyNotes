@@ -59,6 +59,7 @@ date of note: 2024-05-12
 
 ### Contextual Word Embedding
 
+- [[Contextual Embeddings and Word Sense]]
 - [[Self-Supervised Learning]]
 - [[Representation Learning]]
 - [[Auto-Encoder and Stochastic Auto-Encoder]]

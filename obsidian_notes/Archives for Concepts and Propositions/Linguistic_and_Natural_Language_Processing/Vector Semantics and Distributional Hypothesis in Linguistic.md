@@ -56,7 +56,7 @@ date of note: 2024-05-12
 ### Lexical Semantics and the Meaning of Words
 
 - [[Lexical Semantics]]
-- [[Lemmas and Senses]]
+- [[Lemmas and Wordforms]]
 - [[Synonymy]]
 - [[Principle of Contrast for Semantic Analysis]]
 - [[Semantic Frames and Roles]]

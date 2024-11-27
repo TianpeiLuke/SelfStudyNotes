@@ -26,4 +26,4 @@ date of note: 2024-05-12
 
 - [[Lexical Semantics]]
 
-- [[Speech and Language Processing by Jurafsky]] pp 102
+- [[Speech and Language Processing by Jurafsky]] pp 102, 232

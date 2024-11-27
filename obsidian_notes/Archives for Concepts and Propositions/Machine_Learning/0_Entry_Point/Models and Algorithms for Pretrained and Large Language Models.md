@@ -56,9 +56,11 @@ date of note: 2024-06-01
 - [[Top-p Sampling or Nucleus Sampling for Large Language Model Generation]]
 - [[Temperature Sampling for Large Language Model Generation]]
 
-### Pre-Training of LLM
+### Pre-Training of LLM and PLM
 
 - [[Self-Supervised Training of Large Language Model and Teacher Forcing]]
+- [[Masked Language Modeling as Language Model Training Task]]
+- [[Next Sentence Prediction as Language Model Training Task]]
 - [[Scaling Law of Large Language Model]]
 - [[Key-Value Cache for Training of Large Language Models]]
 
@@ -86,6 +88,10 @@ date of note: 2024-06-01
 - [[Zero Redundancy Optimizer or ZeRO for Optimized Training of LLM]]
 - [[Knowledge Distillation for Efficient Training]]
 - [[Quantization of Large Language Models]]
+
+### Multi-Modal Transformer Networks
+
+- [[Multi-Modal Learning]]
 
 
 ## Explanation
