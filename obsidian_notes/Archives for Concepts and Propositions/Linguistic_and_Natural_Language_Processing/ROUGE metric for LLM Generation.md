@@ -43,7 +43,7 @@ date of note: 2024-11-25
 >	- $$\sum_{s\in G_{n}(w)\cap G_{n}(v)}\min\{C(s, w), C(s,v)\} = \sum_{s\in G_{n}(v)}\min\{C(s, w), C(s,v)\}$$
 >	- Note that the numerator of the  **ROUGE-n recall** **limits** matches to the reference's *maximum count*.
 >	- Similar to BLEU, it applies the **clipping** in numerator.
->- The **ROUGE-N F-measure** is given by $$\text{ROUGE-F}(w, v;n) := \frac{2\times\text{ROUGE-Recall}\times \text{ROUGE-Precision} }{\text{ROUGE-Recall}  + \text{ROUGE-Precision} }$$
+>- The **ROUGE-N F-measure** is given by $$\text{ROUGE-F}(w, v;n) := \frac{(1 + \beta^2)\times\text{ROUGE-Recall}\times \text{ROUGE-Precision} }{\text{ROUGE-Precision}  + \beta^2\,\text{ROUGE-Recall} }$$
 
 - [[n-Gram Model and Language Model]]
 - [[Bilingual Evaluation Understudy or BLEU metric for LLM Generation]]
