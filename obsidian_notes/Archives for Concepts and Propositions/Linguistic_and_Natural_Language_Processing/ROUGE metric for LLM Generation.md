@@ -64,8 +64,9 @@ date of note: 2024-11-25
 >- The **ROUGE-L Precision** between one candidate sequence $w$ and one reference sequence $v$ is computed as follows: $$\text{ROUGE-L Precision}(w, v) := \frac{\text{LCS}(w, v)}{T}$$
 >- The **ROUGE-L Recall** between one candidate sequence $w$ and one reference sequence $v$ is computed as follows: $$\text{ROUGE-L Recall}(w, v) := \frac{\text{LCS}(w, v)}{S}$$
 >- The **ROUGE-L F measure** is given by $$\begin{align*}\text{ROUGE-L}(w,v; \beta) &:= \text{ROUGE-L F}(w, v; \beta) \\[8pt] &:= \frac{(1 + \beta^2)\times \text{ROUGE-L Precision}\times \text{ROUGE-L Recall}}{\text{ROUGE-L Precision} + \beta^2\;\text{ROUGE-L Recall}}\end{align*}$$
->	- We call **ROUGE-L F measure** as **ROUGE-L score.**
+>	- The **ROUGE-L F measure** is called the **ROUGE-L score.**
 
+- [[Recall and Precision and F-Measure]]
 
 ### ROUGE-S based on the Skip-Bigram
 
