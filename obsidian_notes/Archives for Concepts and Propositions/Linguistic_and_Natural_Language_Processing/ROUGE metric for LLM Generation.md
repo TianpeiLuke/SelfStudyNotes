@@ -57,19 +57,33 @@ date of note: 2024-11-25
 ### ROUGE-L based on the Longest Common Subsequence
 
 >[!important] Definition
->Let $$w:=(w_{1}\,{,}\ldots{,}\,w_{T}), \quad v:=(v_{1}\,{,}\ldots{,}\,v_{S})$$ be the *output sequence* of language model, and the *reference ground truth*, respectively.
+>Let $$w:=(w_{1}\,{,}\ldots{,}\,w_{T}), \quad v:=(v_{1}\,{,}\ldots{,}\,v_{S})$$ be the *output sequence* of language model of length $T$, and the *reference ground truth* of length $S$, respectively.
 >
 >Specifically, consider the *longest common subsequence* between $w$ and $v$ as $$\text{LCS}(w, v)$$
 >
->- The **ROUGE-L Precision** between one candidate sequence $w$ and one reference sequence $v$ is computed as follows: $$\text{ROUGE-L Precision}(w, v) := \frac{\text{LCS}(w, v)}{T}$$
+>Then
+>- the **ROUGE-L Precision** between one candidate sequence $w$ and one reference sequence $v$ is computed as follows: $$\text{ROUGE-L Precision}(w, v) := \frac{\text{LCS}(w, v)}{T}$$
 >- The **ROUGE-L Recall** between one candidate sequence $w$ and one reference sequence $v$ is computed as follows: $$\text{ROUGE-L Recall}(w, v) := \frac{\text{LCS}(w, v)}{S}$$
->- The **ROUGE-L F measure** is given by $$\begin{align*}\text{ROUGE-L}(w,v; \beta) &:= \text{ROUGE-L F}(w, v; \beta) \\[8pt] &:= \frac{(1 + \beta^2)\times \text{ROUGE-L Precision}\times \text{ROUGE-L Recall}}{\text{ROUGE-L Precision} + \beta^2\;\text{ROUGE-L Recall}}\end{align*}$$
+>- The **ROUGE-L** or **ROUGE-L F measure** is given by $$\begin{align*}\text{ROUGE-L}(w,v; \beta) &:= \text{ROUGE-L F}(w, v; \beta) \\[8pt] &:= \frac{(1 + \beta^2)\times \text{ROUGE-L Precision}\times \text{ROUGE-L Recall}}{\text{ROUGE-L Precision} + \beta^2\;\text{ROUGE-L Recall}}\end{align*}$$
 >	- The **ROUGE-L F measure** is called the **ROUGE-L score.**
 
 - [[Recall and Precision and F-Measure]]
 
-### ROUGE-S based on the Skip-Bigram
+### ROUGE-S based on the Skip-Bigram Co-Occurrence
 
+>[!important] Definition
+>**Skip-bigram** is *any pair* of words in their *sentence order*, allowing for *arbitrary gaps*.
+>- For instance, a sentence of 4 words has $4 \choose 2$ skip-bigrams.
+>  
+>Let $$w:=(w_{1}\,{,}\ldots{,}\,w_{T}), \quad v:=(v_{1}\,{,}\ldots{,}\,v_{S})$$ be the *output sequence* of language model, and the *reference ground truth*, respectively.  
+>- Denote $$\text{Skip-2}(w, v)$$ be the *total count* of *overlapped skip-bigram* between $w$ and $v$
+>  
+>Then  
+>- the **ROUGE-S Precision** between one candidate sequence $w$ and one reference sequence $v$ is computed as follows: $$\text{ROUGE-S Precision}(w, v) := \frac{\text{Skip-2}(w, v)}{T \choose 2}$$
+>- The **ROUGE-S Recall** between one candidate sequence $w$ and one reference sequence $v$ is computed as follows: $$\text{ROUGE-S Recall}(w, v) := \frac{\text{Skip-2}(w, v)}{S \choose 2}$$  
+>- The  **ROUGE-S**  or **ROUGE-S F measure** is given by $$\begin{align*}\text{ROUGE-S}(w,v; \beta) &:= \text{ROUGE-S F}(w, v; \beta) \\[8pt] &:= \frac{(1 + \beta^2)\times \text{ROUGE-S Precision}\times \text{ROUGE-S Recall}}{\text{ROUGE-S Precision} + \beta^2\;\text{ROUGE-S Recall}}\end{align*}$$
+
+- [[Co-Occurrence Matrix]]
 
 
 ## Explanation
