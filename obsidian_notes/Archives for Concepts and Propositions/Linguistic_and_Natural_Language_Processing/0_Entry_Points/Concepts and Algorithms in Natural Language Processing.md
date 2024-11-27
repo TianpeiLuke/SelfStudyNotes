@@ -91,6 +91,7 @@ date of note: 2024-09-13
 
 - [[Word Embedding Semantic Properties]]
 - [[Word Embedding Evaluation and Datasets]]
+- [[Contextual Embeddings and Word Sense]]
 
 #### Topic Models
 

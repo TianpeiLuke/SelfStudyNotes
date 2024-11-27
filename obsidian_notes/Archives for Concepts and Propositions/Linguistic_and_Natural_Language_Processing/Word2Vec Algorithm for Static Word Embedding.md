@@ -82,6 +82,13 @@ date of note: 2024-09-12
 - [[Artificial Neural Network and Deep Learning]]
 
 
+>[!important]
+>The **global representation** of word learns *one embedding* for each word in the vocabulary, *regardless* of context around it.
+>
+>A more adaptive approach is the **contextual embedding**, which provides *different representation* of same word for *different context*.
+
+- [[Contextual Embeddings and Word Sense]]
+
 
 
 -----------

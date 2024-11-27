@@ -47,7 +47,7 @@ date of note: 2024-05-12
 - [[Bag-of-Word Model for Document Representation]]
 - [[Term Frequency and Inverse Document Frequency or TF-IDF]]
 
-### Static Word Embedding
+### Static Global Word Embedding
 
 - [[Latent Semantic Analysis via Singular Value Decomposition]]
 - [[Probabilistic Latent Semantic Analysis]]
@@ -78,6 +78,7 @@ date of note: 2024-05-12
 
 
 
+- Liu, Q., Kusner, M. J., & Blunsom, P. (2020). A survey on contextual embeddings. _arXiv preprint arXiv:2003.07278_.
 
 
 

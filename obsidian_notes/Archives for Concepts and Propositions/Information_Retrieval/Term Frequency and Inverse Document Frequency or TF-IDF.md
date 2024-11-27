@@ -95,13 +95,22 @@ date of note: 2024-11-12
 >\text{idf}_{i} := \log_{10}\left( \frac{|\mathcal{D}| - \text{df}_{i} + \frac{1}{2} }{\text{df}_{i} + \frac{1}{2}} \right)
 >$$
 
+>[!important]
+>The **TF-IDF** model is used as the **sparse static word representation**.
+>- the meaning of a word is defined by a simple function  of the *counts of nearby words*.
+>
+
+- [[Vector Space Model in Information Retrieval]]
+- [[Word Embedding]]
+
+
 
 -----------
 ##  Recommended Notes and References
 
 
 
-- [[Vector Space Model in Information Retrieval]]
+
 - [[Matrix]]
 - [[Topic Models]]
 - [[Information Retrieval]]
