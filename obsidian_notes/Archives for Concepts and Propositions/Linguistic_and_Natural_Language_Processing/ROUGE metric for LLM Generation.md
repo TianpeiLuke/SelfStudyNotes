@@ -23,6 +23,8 @@ date of note: 2024-11-25
 
 ![[Bilingual Evaluation Understudy or BLEU metric for LLM Generation#^c36fe8]]
 
+### ROUGE-N Score
+
 >[!important] Definition
 >Let $$w:=(w_{1}\,{,}\ldots{,}\,w_{T}), \quad v:=(v_{1}\,{,}\ldots{,}\,v_{S})$$ be the *output sequence* of language model, and the *reference ground truth*, respectively.
 >
@@ -32,16 +34,16 @@ date of note: 2024-11-25
 >- The set of *matched (overlapped) n-gram* is $$G_{n}(w) \cap G_{n}(v)$$
 >- Define the **substring count** as the number of appearances of a string $s$ as a *substring* of $y$ $$C(s, y) := \#\left\{ i: s = y_{i:|s|+i-1} \right\} $$
 >
->- The **ROUGE-n Precision** between one candidate sequence $w$ and one reference sequence $v$ is computed as follows: $$\begin{align*}\text{ROUGE-Precision}(w, v; n) := \frac{\sum_{s\in G_{n}(w)\cap G_{n}(v)}C(s, w)}{\sum_{s\in G_{n}(w)}C(s, w)} = \frac{\sum_{s\in G_{n}(v)}C(s, w)}{\sum_{s\in G_{n}(w)}C(s, w)}\end{align*}$$
+>- The **ROUGE-N Precision** between one candidate sequence $w$ and one reference sequence $v$ is computed as follows: $$\begin{align*}\text{ROUGE-Precision}(w, v; n) := \frac{\sum_{s\in G_{n}(w)\cap G_{n}(v)}C(s, w)}{\sum_{s\in G_{n}(w)}C(s, w)} = \frac{\sum_{s\in G_{n}(v)}C(s, w)}{\sum_{s\in G_{n}(w)}C(s, w)}\end{align*}$$
 >	- Note that $$\sum_{s\in G_{n}(w)\cap G_{n}(v)}C(s, w) = \sum_{s\in G_{n}(v)}C(s, w)$$ is the *total count* of *overlapped n-gram* in candidate text with reference text.
 >	- This includes all *repeated n-grams* in *matches*.
 >	- The **ROUGE-n precision** counts *__all__ occurrences* of *overlapping n-grams* in the candidate text.
 > 
->- The **ROUGE-n Recall** is computed as $$\begin{align*}\text{ROUGE-Recall}(w, v; n) := \frac{\sum_{s\in G_{n}(v)}\min\left\{ C(s, w), C(s, v) \right\}}{\sum_{s\in G_{n}(v)}C(s, v)}\end{align*}$$  
+>- The **ROUGE-N Recall** is computed as $$\begin{align*}\text{ROUGE-Recall}(w, v; n) := \frac{\sum_{s\in G_{n}(v)}\min\left\{ C(s, w), C(s, v) \right\}}{\sum_{s\in G_{n}(v)}C(s, v)}\end{align*}$$  
 >	- $$\sum_{s\in G_{n}(w)\cap G_{n}(v)}\min\{C(s, w), C(s,v)\} = \sum_{s\in G_{n}(v)}\min\{C(s, w), C(s,v)\}$$
 >	- Note that the numerator of the  **ROUGE-n recall** **limits** matches to the reference's *maximum count*.
 >	- Similar to BLEU, it applies the **clipping** in numerator.
->- The **ROUGE-n F-measure** is given by $$\text{ROUGE-F}(w, v;n) := \frac{2\times\text{ROUGE-Recall}\times \text{ROUGE-Precision} }{\text{ROUGE-Recall}  + \text{ROUGE-Precision} }$$
+>- The **ROUGE-N F-measure** is given by $$\text{ROUGE-F}(w, v;n) := \frac{2\times\text{ROUGE-Recall}\times \text{ROUGE-Precision} }{\text{ROUGE-Recall}  + \text{ROUGE-Precision} }$$
 
 - [[n-Gram Model and Language Model]]
 - [[Bilingual Evaluation Understudy or BLEU metric for LLM Generation]]
@@ -52,36 +54,30 @@ date of note: 2024-11-25
 >
 >In contrast, the **ROUGE Recall** do **not inflate the recall score** due to clipping.
 
-
-### ROUGE-n for Blocks of Text
-
->[!important] Definition
->Let $$S_{w} := \{ w^{(1)} \,{,}\ldots{,}\, w^{(N)} \}, \text{ where }  w^{(i)}:=(w_{1}^{(i)}\,{,}\ldots{,}\,w_{T}^{(i)})$$ be a set of $N$ *output sequences* of language model,  
->- and let $$S_{v}^{(i)} := \{ v^{(1,i)} \,{,}\ldots{,}\, v^{(M,i)} \}, \text{ where }  v^{(j,i)}:=(v_{1}^{(j,i)}\,{,}\ldots{,}\,v_{S}^{(j,i)})$$  be a set of $M$ *reference ground truth* for *each output sequence* $w^{(i)}$.
->- Denote the total reference set $$S_{v} := \left\{ S_{v}^{(1)} \,{,}\ldots{,}\, S_{v}^{(N)}\right\} $$
->
->
->The **ROUGE-n Recall** between the candidate set $S_{w}$ and  reference set $S_{v}$ is computed as follows:
->- $$\begin{align*}\text{ROUGE-n-Precision}(S_{w}, S_{v}) := \frac{\sum_{i=1}^{N}\sum_{j=1}^{M}\sum_{s\in G_{n}(v^{(j,i)})}C(s, w^{(i)})}{\sum_{i=1}^{N}\sum_{s\in G_{n}(w^{(i)})}C(s, w^{(i)})}\end{align*}$$
->- $$\begin{align*}\text{ROUGE-n-Recall}(S_{w}, S_{v}) := \frac{\sum_{i=1}^{N}\sum_{j=1}^{M}\sum_{s\in G_{n}(v^{(j,i)})}\min\left\{C(s, w^{(i)}),\; \max_{v^{(j,i)}\in S_{v}^{(i)}}C(s, v^{(j,i)})  \right\}}{\sum_{i=1}^{N}\sum_{j=1}^{M}\sum_{s\in G_{n}(v^{(j,i)})}C(s, v^{(j,i)})}\end{align*}$$
-
->[!important] Definition
->Define a set of normalized weights $\alpha$ for $n$ as $$\sum_{n=1}^{\infty}\alpha_{n} = 1, \quad \alpha_{n} >0, \forall n=1\,{,}\ldots{,}\,$$  
->
->The **ROUGE score** is given by the weighted sum of *ROUGE recall*
->$$
->\text{ROUGE}(S_{w}, S_{v}) := \sum_{n=1}^{\infty}\alpha_{n}\;\text{ROUGE-n-Recall}(S_{w}, S_{V})
->$$
-
-
-
 ### ROUGE-L based on the Longest Common Subsequence
 
+>[!important] Definition
+>Let $$w:=(w_{1}\,{,}\ldots{,}\,w_{T}), \quad v:=(v_{1}\,{,}\ldots{,}\,v_{S})$$ be the *output sequence* of language model, and the *reference ground truth*, respectively.
+>
+>Specifically, consider the *longest common subsequence* between $w$ and $v$ as $$\text{LCS}(w, v)$$
+>
+>- The **ROUGE-L Precision** between one candidate sequence $w$ and one reference sequence $v$ is computed as follows: $$\text{ROUGE-L Precision}(w, v) := \frac{\text{LCS}(w, v)}{T}$$
+>- The **ROUGE-L Recall** between one candidate sequence $w$ and one reference sequence $v$ is computed as follows: $$\text{ROUGE-L Recall}(w, v) := \frac{\text{LCS}(w, v)}{S}$$
+>- The **ROUGE-L F measure** is given by $$\begin{align*}\text{ROUGE-L}(w,v; \beta) &:= \text{ROUGE-L F}(w, v; \beta) \\[8pt] &:= \frac{(1 + \beta^2)\times \text{ROUGE-L Precision}\times \text{ROUGE-L Recall}}{\text{ROUGE-L Precision} + \beta^2\;\text{ROUGE-L Recall}}\end{align*}$$
+>	- We call **ROUGE-L F measure** as **ROUGE-L score.**
 
+
+### ROUGE-S based on the Skip-Bigram
 
 
 
 ## Explanation
+
+>[!important]
+>- **ROUGE-N** is often used to evaluate the *grammatical correctness* and *fluency* of generated text.
+>- **ROUGE-L** is often used to evaluate the *semantic similarity* and *content coverage* of generated text, as it considers the common subsequence regardless of *word order*.
+>- **ROUGE-S** is often used to evaluate the *coherence and local cohesion* of generated text, as it captures the *semantic similarity* between adjacent words.
+
 
 ### BLEU vs. ROUGE
 
