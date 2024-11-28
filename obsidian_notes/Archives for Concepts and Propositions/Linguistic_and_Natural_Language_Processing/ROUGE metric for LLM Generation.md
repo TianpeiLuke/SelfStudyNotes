@@ -34,16 +34,17 @@ date of note: 2024-11-25
 >- The set of *matched (overlapped) n-gram* is $$G_{n}(w) \cap G_{n}(v)$$
 >- Define the **substring count** as the number of appearances of a string $s$ as a *substring* of $y$ $$C(s, y) := \#\left\{ i: s = y_{i:|s|+i-1} \right\} $$
 >
->- The **ROUGE-N Precision** between one candidate sequence $w$ and one reference sequence $v$ is computed as follows: $$\begin{align*}\text{ROUGE-Precision}(w, v; n) := \frac{\sum_{s\in G_{n}(w)\cap G_{n}(v)}C(s, w)}{\sum_{s\in G_{n}(w)}C(s, w)} = \frac{\sum_{s\in G_{n}(v)}C(s, w)}{\sum_{s\in G_{n}(w)}C(s, w)}\end{align*}$$
+>- The **ROUGE-N Precision** between one candidate sequence $w$ and one reference sequence $v$ is computed as follows: $$\begin{align*}\text{ROUGE-N Precision}(w, v) := \frac{\sum_{s\in G_{n}(w)\cap G_{n}(v)}C(s, w)}{\sum_{s\in G_{n}(w)}C(s, w)} = \frac{\sum_{s\in G_{n}(v)}C(s, w)}{\sum_{s\in G_{n}(w)}C(s, w)}\end{align*}$$
 >	- Note that $$\sum_{s\in G_{n}(w)\cap G_{n}(v)}C(s, w) = \sum_{s\in G_{n}(v)}C(s, w)$$ is the *total count* of *overlapped n-gram* in candidate text with reference text.
 >	- This includes all *repeated n-grams* in *matches*.
 >	- The **ROUGE-n precision** counts *__all__ occurrences* of *overlapping n-grams* in the candidate text.
 > 
->- The **ROUGE-N Recall** is computed as $$\begin{align*}\text{ROUGE-Recall}(w, v; n) := \frac{\sum_{s\in G_{n}(v)}\min\left\{ C(s, w), C(s, v) \right\}}{\sum_{s\in G_{n}(v)}C(s, v)}\end{align*}$$  
+>- The **ROUGE-N Recall** is computed as $$\begin{align*}\text{ROUGE-N Recall}(w, v) := \frac{\sum_{s\in G_{n}(v)}\min\left\{ C(s, w), C(s, v) \right\}}{\sum_{s\in G_{n}(v)}C(s, v)}\end{align*}$$  
 >	- $$\sum_{s\in G_{n}(w)\cap G_{n}(v)}\min\{C(s, w), C(s,v)\} = \sum_{s\in G_{n}(v)}\min\{C(s, w), C(s,v)\}$$
 >	- Note that the numerator of the  **ROUGE-n recall** **limits** matches to the reference's *maximum count*.
 >	- Similar to BLEU, it applies the **clipping** in numerator.
->- The **ROUGE-N F-measure** is given by $$\text{ROUGE-F}(w, v;n) := \frac{(1 + \beta^2)\times\text{ROUGE-Recall}\times \text{ROUGE-Precision} }{\text{ROUGE-Precision}  + \beta^2\,\text{ROUGE-Recall} }$$
+>- The **ROUGE-N** or **ROUGE-N F-measure** is given by $$\begin{align*}\text{ROUGE-N}(w, v) &:= \text{ROUGE-N F}(w, v) \\[8pt] &:= \frac{(1 + \beta^2)\times\text{ROUGE-Recall}\times \text{ROUGE-Precision} }{\text{ROUGE-Precision}  + \beta^2\,\text{ROUGE-Recall} }\end{align*}$$
+
 
 - [[n-Gram Model and Language Model]]
 - [[Bilingual Evaluation Understudy or BLEU metric for LLM Generation]]
@@ -53,6 +54,8 @@ date of note: 2024-11-25
 >If the candidate text overgenerates repeated n-grams that are present in the reference, the **ROUGE-Precision** will count them as matches, potentially **inflating** the score. 
 >
 >In contrast, the **ROUGE Recall** do **not inflate the recall score** due to clipping.
+
+
 
 ### ROUGE-L based on the Longest Common Subsequence
 
@@ -65,7 +68,7 @@ date of note: 2024-11-25
 >- the **ROUGE-L Precision** between one candidate sequence $w$ and one reference sequence $v$ is computed as follows: $$\text{ROUGE-L Precision}(w, v) := \frac{\text{LCS}(w, v)}{T}$$
 >- The **ROUGE-L Recall** between one candidate sequence $w$ and one reference sequence $v$ is computed as follows: $$\text{ROUGE-L Recall}(w, v) := \frac{\text{LCS}(w, v)}{S}$$
 >- The **ROUGE-L** or **ROUGE-L F measure** is given by $$\begin{align*}\text{ROUGE-L}(w,v; \beta) &:= \text{ROUGE-L F}(w, v; \beta) \\[8pt] &:= \frac{(1 + \beta^2)\times \text{ROUGE-L Precision}\times \text{ROUGE-L Recall}}{\text{ROUGE-L Precision} + \beta^2\;\text{ROUGE-L Recall}}\end{align*}$$
->	- The **ROUGE-L F measure** is called the **ROUGE-L score.**
+
 
 - [[Recall and Precision and F-Measure]]
 
@@ -92,6 +95,12 @@ date of note: 2024-11-25
 >- **ROUGE-N** is often used to evaluate the *grammatical correctness* and *fluency* of generated text.
 >- **ROUGE-L** is often used to evaluate the *semantic similarity* and *content coverage* of generated text, as it considers the common subsequence regardless of *word order*.
 >- **ROUGE-S** is often used to evaluate the *coherence and local cohesion* of generated text, as it captures the *semantic similarity* between adjacent words.
+
+>[!info]
+>The most commonly used **ROUGE scores** are
+>- **ROUGE-1**
+>- **ROUGE-2**
+>- **ROUGE-L**
 
 
 ### BLEU vs. ROUGE
