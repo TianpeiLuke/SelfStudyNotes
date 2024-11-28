@@ -1,8 +1,8 @@
 ---
 tags:
   - concept
-  - natural_language_processing/large_language_models
-  - deep_learning/large_language_models
+  - deep_learning/architecture
+  - deep_learning/models
 keywords: 
 topics: 
 name: 
@@ -15,7 +15,7 @@ date of note: 2024-10-21
 >**Name**: 
 
 
-- [[Prompt Engineering for LLM]]
+- [[In-Context Learning and Prompt Engineering for LLM]]
 - [[Generative Pre-trained Transformer or GPT]]
 
 ## Explanation
@@ -35,4 +35,4 @@ date of note: 2024-10-21
 
 
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 394
-- [[Speech and Language Processing by Jurafsky]] pp 247
+- [[Speech and Language Processing by Jurafsky]] pp 243

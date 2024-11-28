@@ -59,6 +59,9 @@ date of note: 2024-04-25
 
 - [[Introduction to Information Retrieval by Manning]] pp 162
 - [[Speech and Language Processing by Jurafsky]] pp 66
+- [[Evaluating Learning Algorithms by Japkowicz]]
+- [[Elements of Statistical Learning by Hastie]]
+- [[Deep Learning Foundations and Concepts by Bishop]] pp 148
 
 - Medium
 	- [Recall and Precision at k for Recommender Systems](https://medium.com/@m_n_malaeb/recall-and-precision-at-k-for-recommender-systems-618483226c54)

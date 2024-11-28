@@ -86,6 +86,7 @@ date of note: 2024-06-01
 ### In-Context Learning
 
 - [[In-Context Learning and Prompt Engineering for LLM]]
+- [[Prompt Engineering for LLM]]
 - [[Retrieval Augmented Generation]]
 
 ### Efficient Training, Inference and Compression
