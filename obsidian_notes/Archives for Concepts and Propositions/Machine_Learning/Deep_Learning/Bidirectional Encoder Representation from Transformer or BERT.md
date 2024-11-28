@@ -56,23 +56,39 @@ date of note: 2024-10-21
 
 ![[bert_input_represntation.png]]
 
-
+- [[Positional Embeddings of Large Language Models]]
 
 ### Pre-Training
 
 #### Task 1: Masked Language Model (MLM)
 
-- [[Self-Supervised Learning]]
-- [[Bidirectional Encoder Representation from Transformer or BERT]]
+![[Masked Language Modeling as Language Model Training Task#^0229dc]]
 
+- [[Masked Language Modeling as Language Model Training Task]]
+- [[Self-Supervised Learning]]
+
+![[Masked Language Modeling as Language Model Training Task#^7164fd]]
+
+>[!important]
+>In training BERT, only **15%** of training samples are used to learn weights.
+
+![[masked_language_model_training.png]]
 
 #### Task 2: Next Sentence Prediction (NSP)
 
+![[Next Sentence Prediction as Language Model Training Task#^48fb58]]
+
+![[Next Sentence Prediction as Language Model Training Task#^3c0dea]]
+
+![[Next Sentence Prediction as Language Model Training Task#^c626ba]]
 
 - [[Next Sentence Prediction as Language Model Training Task]]
 
+![[next_sentence_prediction_loss.png]]
+
 ### Supervised Fine-Tuning
 
+- [[Supervised Fine-Tuning or Instruction Fine-Tuning of LLM]]
 
 ![[bert.png]]
 ## Explanation
@@ -115,6 +131,19 @@ date of note: 2024-10-21
 | **Parameter size**           | - $110$ million (*base* uncased/cased)<br>- $340$ million (*large* uncased/cased) | - $110$ million (*base* cased)                                                                              | $550$ million                                                                                                                       | $134$ million                                                                                                                                                                                                |
 | Model Card                   | [BERT Huggingface](https://huggingface.co/docs/transformers/en/model_doc/bert)    | [BERT multilingual base model Huggingface](https://huggingface.co/google-bert/bert-base-multilingual-cased) | [XLM-RoBERTa Huggingface](https://huggingface.co/docs/transformers/en/model_doc/xlm-roberta)                                        | - [DistilBert Huggingface](https://huggingface.co/docs/transformers/en/model_doc/distilbert)<br>- [distilbert-base-multilingual-cased](https://huggingface.co/distilbert/distilbert-base-multilingual-cased) |
 
+### Monolingual vs. Multilingual
+
+>[!quote] 
+>For many purposes, a **pretrained multilingual model** is *more practical* than a monolingual model, since it avoids the need to build many (a hundred!) separate monolingual models. And multilingual models can improve performance on low-resourced languages by leveraging linguistic information from a *similar language* in the training data that happens to have more resources. 
+>
+>- Nonetheless, when the *number of languages grows very large*, multilingual models exhibit what has been called the **curse of multilinguality** (Conneau et al., 2020): 
+>	- the performance on *each* language *degrades* compared to a model training on *fewer languages*. 
+>
+>- Another problem with multilingual models is that they ‘**have an accent**’: 
+>	- *grammatical structures* in higher-resource languages (often English) *bleed* into lower-resource languages; 
+>	- the vast amount of English language in training makes the model’s representations for low-resource languages slightly more *English-like* (Papadimitriou et al., 2023).
+>
+>-- [[Speech and Language Processing by Jurafsky]] pp 230
 
 
 ## Dataset in Experiment

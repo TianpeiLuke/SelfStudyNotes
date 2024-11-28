@@ -40,6 +40,8 @@ date of note: 2024-09-12
 - [[Conditional Independence]]
 
 ![[skipgram_embedding.png]]
+
+![[skipgram_embedding.png]]
 ### Learning Skip-Gram Embedding with Negative Sampling
 
 >[!important] Definition
@@ -180,7 +182,7 @@ date of note: 2024-09-12
 - [[Vector Space over a Field]]
 
 - [[Speech and Language Processing by Jurafsky]] pp 117 - 122
-- [[Practical Natural Language Processing by Vajjala]] pp 101 - 103
+- [[Practical Natural Language Processing by Vajjala]] pp 101 - 103- [[Practical Natural Language Processing by Vajjala]] pp 101 - 103
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 375
 - Wikipedia [Word2vec](https://en.wikipedia.org/wiki/Word2vec)
 - Mikolov, T., Chen, K., Corrado, G.S., & Dean, J. (2013). Efficient Estimation of Word Representations in Vector Space. _International Conference on Learning Representations_.

@@ -80,6 +80,27 @@ date of note: 2024-09-12
 >
 >-- Vajjala, S., Majumder, B., Gupta, A., & Surana, H. (2020). _Practical Natural Language Processing: A Comprehensive Guide to Building Real-World NLP Systems_ (1st edition). O’Reilly Media. pp 100
 
+![[CBOW_example.png]]
+
+![[CBOW_dsta_prepare.png]]
+
+![[CBOW_model.png]]
+
+>[!quote]
+>The objective is to learn an embedding matrix $$E\in \mathbb{R}^{|\mathcal{V}| \times d}.$$
+>- To begin with, we initialize the matrix randomly. 
+>	- Here, $|\mathcal{V}|$ is the size of corpus vocabulary and $d$ is the dimension of the embedding. 
+>- Let’s break down the shallow net in Figure 3-9 layer by layer. 
+>	- In the *input layer*, **indices** of the words in context are used to fetch the corresponding *rows* from the *embedding matrix* $E$. 
+>	- The vectors fetched are then **added** to get a single $d$-dim vector, and this is passed to the next layer.  $$h = \sum_{c_{j} \in B(w_{i}, l)}E_{c_{j},:}$$
+>	- The *next layer* simply takes this $d$ vector and *multiplies* it with another matrix $E^{'} \in \mathbb{R}^{d \times  |\mathcal{V}| }.$ $$hE^{'} \in \mathbb{R}^{|\mathcal{V}|}$$
+>	- This gives a $1 \times |\mathcal{V}|$ vector, which is fed to a *softmax function* to get probability distribution over the vocabulary space. 
+>	- This distribution is compared with the label and uses *back propagation* to update both the matrices $E$ and $E^{'}$ accordingly. 
+>	- At the end of the training, $E$ is the **embedding matrix** we wanted to learn.
+>		- $E$ and $E'$ are different embeddings, but we can use either of them.
+>
+>-- Vajjala, S., Majumder, B., Gupta, A., & Surana, H. (2020). _Practical Natural Language Processing: A Comprehensive Guide to Building Real-World NLP Systems_ (1st edition). O’Reilly Media. pp 100
+
 ## Explanation
 
 >[!important]

@@ -25,6 +25,8 @@ date of note: 2024-09-13
 
 ![[nlp_preprocessing_pipeline.png]]
 
+![[nlp_preprocessing_pipeline.png]]
+
 #### Tokenization
 
 - [[Tokenization of Words and Subwords and SentencePiece Tokenization]]
@@ -91,7 +93,6 @@ date of note: 2024-09-13
 
 - [[Word Embedding Semantic Properties]]
 - [[Word Embedding Evaluation and Datasets]]
-- [[Contextual Embeddings and Word Sense]]
 
 #### Topic Models
 
@@ -205,7 +206,6 @@ date of note: 2024-09-13
 - [[Name Entity Recognition]]
 - [[Coreference Resolution]]
 - [[Name Entity Disambiguation and Linking]]
-- [[Word Sense Disambiguation]]
 - [[Relation Extraction]]
 
 ### Machine Translation
@@ -223,14 +223,9 @@ date of note: 2024-09-13
 ### Question-Answering and ChatBots
 
 - [[Question Answering Problem]]
-- [[Retrieval Augmented Generation]]
 
 
-### Information Retrieval
 
-- [[Concepts and Algorithms in Information Retrieval]]
-- [[Information Retrieval with Encoder Language Models]]
-- [[Retrieval Augmented Generation]]
 
 
 -----------
@@ -239,6 +234,9 @@ date of note: 2024-09-13
 
 - [[Speech and Language Processing by Jurafsky]]
 - [[Foundations of Statistical Natural Language Processing by Manning]]
+- [[Handbook of Natural Language Processing by Indurkhya]]
+- [[Practical Natural Language Processing by Vajjala]]
+- [[Introduction to Information Retrieval by Manning]]
 - [[Handbook of Natural Language Processing by Indurkhya]]
 - [[Practical Natural Language Processing by Vajjala]]
 - [[Introduction to Information Retrieval by Manning]]

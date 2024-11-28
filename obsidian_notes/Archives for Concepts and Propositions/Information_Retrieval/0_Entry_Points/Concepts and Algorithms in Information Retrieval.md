@@ -107,7 +107,7 @@ date of note: 2024-09-13
 
 - [[Concepts and Algorithms in Natural Language Processing]]
 - [[Models and Algorithms for Pretrained and Large Language Models]]
-
+- [[Models and Algorithms for Pretrained and Large Language Models]]
 ### Retrieval Augmented Generation
 
 - [[Large Language Model and Pretrained Language Models]]

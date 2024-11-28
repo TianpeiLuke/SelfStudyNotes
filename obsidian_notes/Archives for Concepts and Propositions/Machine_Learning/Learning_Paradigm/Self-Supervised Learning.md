@@ -16,11 +16,23 @@ date of note: 2024-07-07
 
 
 
-- [[Self-Supervised Training of Large Language Model and Teacher Forcing]]
+
+
 
 ## Explanation
 
 
+## Self-Supervised Pre-Training of Transformer Networks
+
+- [[Large Language Model and Pretrained Language Models]]
+### Encoder-Only Architecture
+
+- [[Masked Language Modeling as Language Model Training Task]]
+- [[Next Sentence Prediction as Language Model Training Task]]
+
+### Decoder-Only Architecture
+
+- [[Self-Supervised Training of Large Language Model and Teacher Forcing]]
 
 
 

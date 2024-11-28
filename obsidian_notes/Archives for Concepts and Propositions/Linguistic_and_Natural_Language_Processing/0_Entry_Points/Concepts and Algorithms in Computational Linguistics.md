@@ -103,9 +103,13 @@ date of note: 2024-09-13
 - [[Information Extraction]]
 - [[Part-of-Speech Tagging]]
 - [[Keyphrase Extraction]]
+- [[Keyphrase Extraction]]
 - [[Name Entity Recognition]]
 - [[Coreference Resolution]]
 - [[Name Entity Disambiguation and Linking]]
+- [[Relation Extraction]]
+- [[Event Extraction]]
+ and Linking]]
 - [[Relation Extraction]]
 - [[Event Extraction]]
 
