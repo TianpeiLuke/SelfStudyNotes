@@ -50,25 +50,28 @@ date of note: 2024-11-27
 >	- The $h_{L}^{i}$ is the *learned contextual embedding* of masked token $w_{i}$.
 >	- The input dimension of the language modeling head is $$(T, d)$$ where $T$ is the context window length. (For BERT $T=512.$)
 >- For each masked token $w_{i}$, the output of **MLM head**  is given by the *logits* $$u^{i} =  E\,h_{L}^{i} \in \mathbb{R}^{|\mathcal{V}|\times 1}$$ where  $E\in \mathbb{R}^{|\mathcal{V}|\times d}$ is the *unembedding layer*.
->	- Each logit bit $u_{j}^{i}$ is given by *cosine similarity* between the *contextual embedding*  $h_{L}^{i}$  and the input embedding of *each token* $$u_{j}^{i} := \left\langle h_{L}^{i} , E(w_{j}) \right\rangle, \quad \forall t_{j}\in \mathcal{V}$$
->- Then the *softmax function* transforms the *logits* into probabilities $$y^{i} := \text{softmax}(u^{i}) \in \Delta_{|\mathcal{V}|}$$
->	- $y^{i}$ represent the conditional distribution of masked token $w$ given the context.  $$y^{i} := p(w\,|\,h_{L}^{i}) \implies y_{j}^{i} := p(w = w_{j}\;|\;h_{L}^{i})$$ 
+>	- Each logit bit $u_{j}^{i}$ is given by *cosine similarity* between the *contextual embedding*  $h_{L}^{i}$  and the input embedding of *each token* $x_{j}\in \mathcal{V}$,  $$u_{j}^{i} := \left\langle h_{L}^{i} , E(x_{j}) \right\rangle, \quad \forall x_{j}\in \mathcal{V}$$
+>- Then the *softmax function* transforms the *logits* into probabilities $$\hat{y}^{i} := \text{softmax}(u^{i}) \in \Delta_{|\mathcal{V}|}$$
+>	- $\hat{y}^{i}$ represent the conditional distribution of masked token $w_{i}$ given the context.  $$\hat{y}^{i} := p(w_{i}\,|\,h_{L}^{i}) \implies \hat{y}_{j}^{i} := p(w_{i} = x_{j}\;|\;h_{L}^{i})$$ 
+>	- Denote the *ground truth distribution* as the Dirac measure $y^{i}\in \Delta_{|\mathcal{V}|}$, i.e.  $$y_{j}^{i} := \left\{\begin{array}{cl}1 & \text{if }  w_{i} = x_{j(i)} \\[7pt]  0 & \text{otherwise } \end{array}\right. \implies y^{i} := \delta_{x_{j(i)}} \in \Delta_{|\mathcal{V}|}.$$ where $x_{j(i)}\in \mathcal{V}$ is the *ground truth token* for $w_{i}$.
 >	  
 >Let 
 >- the input sequence be $$w = (w_{1}\,{,}\ldots{,}\,w_{T}),$$
 >- and the *masked sequence* be $$w_{\text{mask}},$$ where a set $M$ of tokens in $w$ is randomly selected to be masked. 
 >  
->For a masked token $w_{i}\in M$, the *negative likelihood loss* of $w_{i}$ conditioned on $w_{\text{mask}}$  is given by $$L_{\text{MLM}}(w_{i}) = -\log p(w_{i}\,|\, h_{L}^{i}) := -\mathbb{1}\left\{ w = w_{i} \right\}\log p(w\,|\, h_{L}^{i})$$
+>For a masked token $w_{i} = x_{j}\in \mathcal{V}$, the *cross entropy loss* of $w_{i}$ conditioned on $w_{\text{mask}}$  is given by $$\begin{align*}L_{\text{MLM}}(x_{j}) &= -\log p(x_{j}\,|\, h_{L}^{i}) \\[8pt] &:= -\mathbb{1}\left\{ w_{i} = x_{j} \right\}\log p(w_{i}\,|\, h_{L}^{i}) \\[8pt] &= - \sum_{j: x_{j}\in \mathcal{V}} y^{i}_{j}\;\log \hat{y}_{j}^{i}  \end{align*}$$
 >where $h_{L}$ summarizes the context of masked sequence $w_{\text{mask}}$.
 >
 >Thus the **cross-entropy training loss** for **masked language model (MLM)** is given by 
 >$$
 >\begin{align*}
->L_{\text{MLM}} := -\frac{1}{|M|} \sum_{i\in M}\mathbb{1}\left\{ w = w_{i} \right\}\log p(w\,|\, h_{L}^{i}) :=  -\frac{1}{|M|} \sum_{i\in M}\log y_{i}^{i}
+>L_{\text{MLM}} &= - \frac{1}{|M|} \sum_{i\in M} \sum_{j: x_{j}\in \mathcal{V}} y^{i}_{j}\;\log \hat{y}_{j}^{i} \\[8pt] 
+>&:= -\frac{1}{|M|} \sum_{i\in M}\mathbb{1}\left\{ w_{i} = x_{j(i)} \right\}\log p(w_{i}\,|\, h_{L}^{i}) \\[8pt] 
+>&:=  -\frac{1}{|M|} \sum_{i\in M}\log \hat{y}_{j(i)}^{i}
 \end{align*}
 >$$
 >where
->- $w_{i}\in M$
+>- $w_{i}\in M$ with ground truth token $x_{j(i)}\in \mathcal{V}$.
 >- Note that *only masked tokens* $M$ are involved in the learning, and the rest are not.
 >- Thus it is *sample-inefficient* to train bidirectional encoders to use the MLM.
 
@@ -92,10 +95,6 @@ date of note: 2024-11-27
 
 
 ![[masked_language_model_training.png]]
-
-### MLM Layer
-
-
 
 
 

@@ -21,9 +21,7 @@ date of note: 2024-10-21
 >[!important]
 >**Name**: Generative Pre-trained Transformer or GPT
 
-
 ### Decoder-Only Transformer Architecture
-
 
 - [[Autoregressive Models]]
 
@@ -56,7 +54,12 @@ date of note: 2024-10-21
 - [[Temperature Sampling for Large Language Model Generation]]
 - [[Beam Search for Causal Decoding of Language Model]]
 
-### Self-Supervised Training
+### Self-Training
+
+![[Self-Supervised Training of Large Language Model and Teacher Forcing#^77c15b]]
+
+
+![[self_supervised_training_llm.png]]
 
 - [[Self-Supervised Training of Large Language Model and Teacher Forcing]]
 
