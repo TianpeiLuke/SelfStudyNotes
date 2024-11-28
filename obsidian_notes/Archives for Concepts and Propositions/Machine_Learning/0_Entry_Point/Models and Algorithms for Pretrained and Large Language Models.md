@@ -64,12 +64,17 @@ date of note: 2024-06-01
 - [[Scaling Law of Large Language Model]]
 - [[Key-Value Cache for Training of Large Language Models]]
 
+![[pretrain_finetuning_llm.png]]
+
 ### Fine-Tuning of LLM
 
 - [[Foundational Models for Transfer Learning]]
 - [[Continued Pre-training of Large Language Models]]
 - [[Parameter Efficient Fine Tuning or PEFT for Large Language Model]]
-- [[Low Rank Adaptation or LoRA for Large Language Model]]
+	- [[Adapter-Tuning for Large Language Model]]
+	- [[Prefix-Tuning for Large Language Model]]
+	- [[Prompt-Tuning or Soft-Prompting for Large Language Model]]
+	- [[Low Rank Adaptation or LoRA for Large Language Model]]
 - [[Supervised Fine-Tuning or Instruction Fine-Tuning of LLM]]
 
 ### Human Alignment of LLM
