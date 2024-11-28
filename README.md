@@ -26,6 +26,15 @@ This repository is the latex-based notes for self-learning, mainly for math, sta
 [Link to Animation](https://youtu.be/XVmD8URNH9s)
 
 
+## Adjacency Matrix
+
+<p align="middle">
+  <img src="./obsidian_slip_box_graph/adj_mat_2024-11-27_193051.png" width="60%" />
+</p>
+
+
+
+
 
 ## Table of Contents
 - [Boosting Methods](./self-study/boosting_methods/README.md)
