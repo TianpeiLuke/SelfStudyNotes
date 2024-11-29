@@ -174,6 +174,8 @@ date of note: 2024-05-12
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 264
 - [[Deep Learning by Goodfellow]] pp 197 - 216
-- [[Deep Learning Foundations and Concepts by Bishop]] pp 233
+- [[Deep Learning Foundations and Concepts by Bishop]] pp 233 - 252
+- [[Foundations of Computer Vision by Torralba]] pp 166 - 178
+- [[Speech and Language Processing by Jurafsky]]
 
 - [[Numerical Optimization by Nocedal]]
