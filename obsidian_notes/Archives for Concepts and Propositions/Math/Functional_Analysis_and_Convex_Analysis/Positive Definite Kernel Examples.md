@@ -140,6 +140,8 @@ date of note: 2024-11-12
 
 - [[Word Embedding]]
 - [[Prefix-Free String]]
+- [[Bag-of-Word Model for Document Representation]]
+- [[Sequence Classification and Sequence-Pair Classification]]
 - Wikipedia [String_kernel](https://en.wikipedia.org/wiki/String_kernel)
 - [[Gaussian Processes for Machine Learning by Rasmussen]] pp 100
 

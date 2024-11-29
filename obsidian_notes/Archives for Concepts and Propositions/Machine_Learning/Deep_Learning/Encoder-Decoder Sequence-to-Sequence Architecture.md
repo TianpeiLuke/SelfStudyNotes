@@ -63,6 +63,9 @@ date of note: 2024-08-31
 - [[Bidirectional Recurrent Neural Network]]
 - [[Autoregressive Models]]
 
+- [[Sequence Classification and Sequence-Pair Classification]]
+- [[Sequence Labeling Task]]
+
 ![[sequence_to_sequence_nlp.png]]
 
 

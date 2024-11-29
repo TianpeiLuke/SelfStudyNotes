@@ -51,6 +51,7 @@ date of note: 2024-05-12
 - [[Multinomial Distribution]]
 - [[Latent Variable Models]]
 - [[n-Gram Model and Language Model]]
+- [[Bag-of-Word Model for Document Representation]]
 
 ![[naive_bayes_lda.png]]
 
@@ -108,6 +109,7 @@ date of note: 2024-05-12
 - [[Factor Analysis]]
 - [[Latent Variable Models]]
 
+- [[Sequence Classification and Sequence-Pair Classification]]
 
 - [[Annealed Importance Sampling]]
 - [[Gibbs Sampling]]
