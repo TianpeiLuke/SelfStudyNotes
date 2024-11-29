@@ -17,6 +17,7 @@ date of note: 2024-10-21
 
 - [[In-Context Learning and Prompt Engineering for LLM]]
 - [[Generative Pre-trained Transformer or GPT]]
+- [[Parameter Efficient Fine Tuning or PEFT for Large Language Model]]
 
 ## Explanation
 
