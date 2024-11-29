@@ -83,6 +83,9 @@ date of note: 2024-05-12
 
 - [[Adam Algorithm]]
 - [[Stochastic Gradient Descent with Momentum]]
+- [[RMSProp Algorithm]]
+- [[AdaGrad Algorithm]]
+- [[Adam Algorithm]]
 
 
 ## Online Convex Optimization and Online Gradient Descent

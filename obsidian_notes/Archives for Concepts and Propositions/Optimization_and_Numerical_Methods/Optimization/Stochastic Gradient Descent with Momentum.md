@@ -69,3 +69,4 @@ date of note: 2024-05-12
 - [[Convex Optimization Algorithms by Bertsekas]] pp 63
 - [[Deep Learning Foundations and Concepts by Bishop]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]
+- [[Foundations of Computer Vision by Torralba]] pp 220
