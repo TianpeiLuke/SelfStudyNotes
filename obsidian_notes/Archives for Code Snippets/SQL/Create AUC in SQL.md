@@ -18,6 +18,11 @@ date of note: 2024-04-19
 >- AUC is computed via the **trapezoid idea**:
 >  $$AUC = \sum_{i=1}^{n}\frac{1}{2}(TPR_{i+1} + TPR_{i})(FPR_{i+1} - FPR_{i})$$
 
+^02c039
+
+- [[Confusion Table]]
+- [[True or False Positive Rate and True or False Negative Rate]]
+- [[Receiver Characteristic Curve for Binary Classification]]
 
 ## Code
 

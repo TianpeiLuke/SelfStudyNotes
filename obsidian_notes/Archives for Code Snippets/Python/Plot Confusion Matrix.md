@@ -18,7 +18,7 @@ date of note: 2024-04-07
 >- compute **recall** and **precision**
 >- compute **false positive rate (FPR)**, **false negative rate (FNR)**, **true positive rate (TPR)** and **true negative rate(TNR)**.
 
-
+- [[Confusion Table]]
 
 ## Code
 

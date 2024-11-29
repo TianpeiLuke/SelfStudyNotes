@@ -48,3 +48,4 @@ def prepare_model(model: PreTrainedModel, gradient_checkpointing: bool) -> PreTr
 
 - Hugging Face `peft` package [doc](https://huggingface.co/docs/peft/index) 
 - Hugging Face `transformers` package [doc](https://huggingface.co/docs/transformers/index)
+- [[Fine-Tuning for Sequence or Sequence-Pair Classification via BERT]]

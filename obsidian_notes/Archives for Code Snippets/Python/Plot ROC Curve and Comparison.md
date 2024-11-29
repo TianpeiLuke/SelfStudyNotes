@@ -22,6 +22,8 @@ date of note: 2024-06-25
 >	- one for probability score, named `prob`,  
 >- plot *ROC curve* and *AUC-ROC* metric
 
+- [[Receiver Characteristic Curve for Binary Classification]]
+
 ## Code
 
 ```python

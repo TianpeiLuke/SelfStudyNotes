@@ -19,6 +19,7 @@ date of note: 2024-08-31
 >- compute **recall at k** i.e. $$\text{recall @ k} = \frac{\text{ predicted and true positive}  \land \text{ score percentile } \le k }{\text{true positive } \land \text{ score percentile } \le k}$$
 >- calculate precision and recall for bins $b_{j}: j \le k$
 
+- [[Recall and Precision at k]]
 
 ## Code
 

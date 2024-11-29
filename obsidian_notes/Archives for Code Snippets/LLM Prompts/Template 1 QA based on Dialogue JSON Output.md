@@ -101,3 +101,5 @@ print(response_body.get('completion'))
 -----------
 ##  Recommended Notes
 
+
+- [[Prompt Engineering for LLM]]

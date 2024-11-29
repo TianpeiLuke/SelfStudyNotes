@@ -15,9 +15,15 @@ date of note: 2024-03-25
 
 ## Code Snippet Summary
 
-- We do **Parameter Efficient Fine Tuning (PEFT)** using HuggingFace `peft` package
-- **Low-Rank Adaptation (LoRA)** [[huLoRALowRankAdaptation2022]]
-- **Quantized Low-Rank Adaptation (QLoRA)** [[dettmersQLoRAEfficientFinetuning2023]]
+>[!important]
+> - We do **Parameter Efficient Fine Tuning (PEFT)** using HuggingFace `peft` package
+> - **Low-Rank Adaptation (LoRA)** [[huLoRALowRankAdaptation2022]]
+> - **Quantized Low-Rank Adaptation (QLoRA)** [[dettmersQLoRAEfficientFinetuning2023]]
+
+
+- [[Parameter Efficient Fine Tuning or PEFT for Large Language Model]]
+- [[Low Rank Adaptation or LoRA for Large Language Model]]
+
 
 ## Code Flow
 

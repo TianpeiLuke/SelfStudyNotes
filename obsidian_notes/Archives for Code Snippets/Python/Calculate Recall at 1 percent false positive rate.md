@@ -21,6 +21,11 @@ date of note: 2024-04-05
 >- *Recall = True Positive Rate*. 
 >- Retrieved/Detected Positive and it is truely Positive =  'True Positive'
 
+- [[Confusion Table]]
+- [[True or False Positive Rate and True or False Negative Rate]]
+- [[Recall and Precision and F-Measure]]
+
+
 >[!info] 
 >In order to compute *recall* at the threshold of *1% FPR*, complete the following steps:
 >1. obtain **score threshold** at **top 1 percentile** among records whose **true labels** are **negative**. Records whose score *above this threshold* are supposed to be flagged as *positive*. This means that these records form the population of **false positive**.

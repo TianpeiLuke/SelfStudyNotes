@@ -30,3 +30,5 @@ date of note: 2024-04-09
 -----------
 ##  Recommended Notes
 
+
+- [[Regular Expression Advanced Operations]]

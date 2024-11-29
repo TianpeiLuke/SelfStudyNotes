@@ -26,6 +26,11 @@ date of note: 2024-03-28
 > - **define** *batch collector* `collate_batch_fn` using customized *pipeline*
 > - **build data loader** from **data module** using `collate_batch_fn`
 
+- [[Text Normalization]]
+- [[Tokenization of Words and Subwords and SentencePiece Tokenization]]
+- [[WordPiece Tokenization]]
+
+
 ## Prerequisite
 ### Customized Packages
 

@@ -118,3 +118,4 @@ LOGGER.info("End training.")
 
 - Hugging Face `peft` package [doc](https://huggingface.co/docs/peft/index) 
 - Hugging Face `transformers` package [doc](https://huggingface.co/docs/transformers/index)
+- [[Low Rank Adaptation or LoRA for Large Language Model]]

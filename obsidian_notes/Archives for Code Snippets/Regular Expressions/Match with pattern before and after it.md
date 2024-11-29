@@ -65,6 +65,7 @@ date of note: 2024-04-09
 -----------
 ##  Recommended Notes
 
+- [[Regular Expression Advanced Operations]]
 - Regular expression [wikipedia](https://en.wikipedia.org/wiki/Regular_expression)
 - Regular Expressions Tutorial [https://www.regular-expressions.info](https://www.regular-expressions.info/tutorial.html)
 - Lookahead and Lookbehind Zero-Length Assertions [link](https://www.regular-expressions.info/lookaround.html)
