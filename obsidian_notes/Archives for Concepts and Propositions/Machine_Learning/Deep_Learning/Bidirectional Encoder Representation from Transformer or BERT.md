@@ -66,6 +66,7 @@ date of note: 2024-10-21
 
 - [[Masked Language Modeling as Language Model Training Task]]
 - [[Self-Supervised Learning]]
+- [[Sequence Labeling Task]]
 
 ![[Masked Language Modeling as Language Model Training Task#^7164fd]]
 
@@ -83,12 +84,15 @@ date of note: 2024-10-21
 ![[Next Sentence Prediction as Language Model Training Task#^c626ba]]
 
 - [[Next Sentence Prediction as Language Model Training Task]]
+- [[Sequence Classification and Sequence-Pair Classification]]
 
 ![[next_sentence_prediction_loss.png]]
 
 ### Supervised Fine-Tuning
 
 - [[Supervised Fine-Tuning or Instruction Fine-Tuning of LLM]]
+- [[Fine-Tuning for Sequence or Sequence-Pair Classification via BERT]]
+- [[Fine-Tuning for Sequence Labeling via BERT]]
 
 ![[bert.png]]
 ## Explanation

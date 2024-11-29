@@ -63,12 +63,16 @@ date of note: 2024-06-01
 - [[Next Sentence Prediction as Language Model Training Task]]
 - [[Scaling Law of Large Language Model]]
 - [[Key-Value Cache for Training of Large Language Models]]
+- [[Pre-Training and Fine-Tuning Paradigm for Transfer Learning]]
 
 ![[pretrain_finetuning_llm.png]]
 
 ### Fine-Tuning of LLM
 
 - [[Foundational Models for Transfer Learning]]
+- [[Fine-Tuning for Sequence or Sequence-Pair Classification via BERT]]
+- [[Fine-Tuning for Sequence Labeling via BERT]]
+
 - [[Continued Pre-training of Large Language Models]]
 - [[Parameter Efficient Fine Tuning or PEFT for Large Language Model]]
 	- [[Adapter-Tuning for Large Language Model]]

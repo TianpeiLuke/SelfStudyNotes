@@ -201,6 +201,7 @@ date of note: 2024-10-21
 - [[Attention Mechanism in Neural Network]]
 - [[Transformer Network]]
 - [[Scaling Law of Large Language Model]]
+- [[Pre-Training and Fine-Tuning Paradigm for Transfer Learning]]
 
 
 - [[Encoder-Decoder Sequence-to-Sequence Architecture]]
@@ -213,6 +214,7 @@ date of note: 2024-10-21
 - [[Speech and Language Processing by Jurafsky]] pp 203 - 220, 223
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 815 - 816, 880
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 382 - 394
+
 
 
 - Zhao, W. X., Zhou, K., Li, J., Tang, T., Wang, X., Hou, Y., ... & Wen, J. R. (2023). A survey of large language models. _arXiv preprint arXiv:2303.18223_.

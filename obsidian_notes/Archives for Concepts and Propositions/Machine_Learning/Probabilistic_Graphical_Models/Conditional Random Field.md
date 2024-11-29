@@ -29,7 +29,8 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
-- [[Part-of-Speech Tagging]]
+- [[Sequence Labeling Task]]
+
 
 
 - [[Probabilistic Graphical Models by Koller]]

@@ -43,10 +43,9 @@ date of note: 2024-05-12
 
 - [[Factor Analysis]]
 - [[Latent Variable Models]]
-
-
-
 - [[Partial Correlation]]
+
+- [[Representation Learning]]
 
 - [[Curse of Dimensionality]]
 - [[Gaussian Random Projections]]
@@ -55,7 +54,7 @@ date of note: 2024-05-12
 
 
 - [[Elements of Statistical Learning by Hastie]]
-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 945 - 946
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 945 - 946, 1043 - 1046
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 501
 
 - [[Kullback-Leibler Divergence]]

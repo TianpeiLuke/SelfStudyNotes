@@ -21,6 +21,7 @@ date of note: 2024-05-12
 
 - [[Part-of-Speech Tagging]]
 - [[Information Extraction]]
+- [[Sequence Labeling Task]]
 
 ## Explanation
 
@@ -41,5 +42,5 @@ date of note: 2024-05-12
 
 
 
-- [[Speech and Language Processing by Jurafsky]] pp 237, 367
+- [[Speech and Language Processing by Jurafsky]] pp 237 - 238, 367
 - [[Practical Natural Language Processing by Vajjala]] pp 169 - 177

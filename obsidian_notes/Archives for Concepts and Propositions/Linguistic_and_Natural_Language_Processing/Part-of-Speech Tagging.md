@@ -20,6 +20,7 @@ date of note: 2024-09-08
 
 
 - [[Part-of-Speech Ambiguity]]
+- [[Sequence Labeling Task]]
 
 ## Explanation
 

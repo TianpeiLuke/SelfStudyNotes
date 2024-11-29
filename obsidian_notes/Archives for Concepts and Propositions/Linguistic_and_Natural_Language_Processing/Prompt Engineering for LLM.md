@@ -36,3 +36,4 @@ date of note: 2024-10-21
 
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 394
 - [[Speech and Language Processing by Jurafsky]] pp 243
+- Liu, P., Yuan, W., Fu, J., Jiang, Z., Hayashi, H., & Neubig, G. (2023). Pre-train, prompt, and predict: A systematic survey of prompting methods in natural language processing. _ACM Computing Surveys_, _55_(9), 1-35. [[liuPretrainPromptPredict2023]]

@@ -254,6 +254,8 @@ date of note: 2024-06-01
 
 - [[Models and Algorithms for Pretrained and Large Language Models]]
 - [[Large Language Model and Pretrained Language Models]]
+- [[Pre-Training and Fine-Tuning Paradigm for Transfer Learning]]
+- [[Parameter Efficient Fine Tuning or PEFT for Large Language Model]]
 
 ### Speech Recognition
 

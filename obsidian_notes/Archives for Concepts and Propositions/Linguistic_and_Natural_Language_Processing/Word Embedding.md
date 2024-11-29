@@ -87,5 +87,5 @@ date of note: 2024-05-12
 
 
 - [[Practical Natural Language Processing by Vajjala]] pp 81 - 113
-- [[Practical Natural Language Processing by Vajjala]] pp 81 - 113
 - [[Speech and Language Processing by Jurafsky]] 
+- Wikipedia [word embedding](https://en.wikipedia.org/wiki/Word_embedding "Word embedding")

@@ -150,7 +150,7 @@ date of note: 2024-05-12
 
 - [[Principle Component Analysis]]
 - [[Probabilistic Principle Component Analysis]]
-
+- [[Supervised Learning and Unsupervised Learning]]
 
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 635 - 636

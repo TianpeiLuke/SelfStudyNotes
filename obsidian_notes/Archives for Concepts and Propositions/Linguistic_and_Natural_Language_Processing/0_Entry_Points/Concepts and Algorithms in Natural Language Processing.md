@@ -158,6 +158,7 @@ date of note: 2024-09-13
 - [[Text-to-Text Transfer Transformer or T5 for Translation]]
 
 
+
 ### Metrics for Natural Language Models
 
 #### Metrics for Classification
@@ -185,16 +186,24 @@ date of note: 2024-09-13
 
 ### Text Classification
 
-- [[Classification Problem]]
-- [[Multinomial Naive Bayes Model]]
-- [[Support Vector Machine Kernel Expansion and RKHS]]
-- [[Positive Definite Kernel Examples]]
-- [[Recurrent Neural Network]]
-- [[Long-Short Term Memory Network]]
-- [[Gated Recurrent Units in Neural Network]]
-- [[Bidirectional Encoder Representation from Transformer or BERT]]
+- [[Sequence Classification and Sequence-Pair Classification]]
+
+- [[Fine-Tuning for Sequence or Sequence-Pair Classification via BERT]]
 - [[Sentiment Analysis]]
 
+### Sequence-Pair Classification
+
+- [[Fine-Tuning for Sequence or Sequence-Pair Classification via BERT]]
+- [[Discourse Coherence]]
+- [[Natural Language Inference or Textual Entailment]]
+
+### Sequence Labeling
+
+- [[Semantic Role Labeling]]
+- [[Fine-Tuning for Sequence Labeling via BERT]]
+- [[Part-of-Speech Tagging]]
+- [[Name Entity Recognition]]
+- [[Semantic Role Labeling]]
 
 ### Information Extraction
 

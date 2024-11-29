@@ -56,7 +56,15 @@ date of note: 2024-07-07
 
 - [[VC Dimension]]
 
-
+>[!quote]
+>Neural networks can take advantage of another form of *compositionality* called a **distributed representation**. 
+>- Conceptually, each unit in a hidden layer can be thought of as representing a ‘feature’ at that level of the network, with 
+>	- a *high value* of the activation indicating that the corresponding feature is present 
+>	- and a *low value* indicating its absence. 
+>- With $M$ units in a given layer, such a network can represent $M$ different features. 
+>- However, the network could potentially learn a *different representation* in which combinations of hidden units represent features, thereby potentially allowing a hidden layer with $M$ units to represent $2^M$ different features, growing exponentially with the number of units. 
+>
+>-- [[Deep Learning Foundations and Concepts by Bishop]] pp 188
 
 ## Explanation
 
@@ -107,6 +115,11 @@ date of note: 2024-07-07
 >- [[Deep Learning by Goodfellow]] 541
 
 - [[VC Dimension]]
+
+
+## Natural Language Processing
+
+- [[Vector Semantics and Distributional Hypothesis in Linguistic]]
 
 
 

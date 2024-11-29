@@ -1,8 +1,8 @@
 ---
 tags:
   - concept
-  - natural_language_processing
   - computational_linguistic/sentiment
+  - natural_language_processing/sequence_classification
 keywords: 
 topics: 
 name: 

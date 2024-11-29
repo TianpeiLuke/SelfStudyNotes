@@ -15,6 +15,7 @@ date of note: 2024-10-21
 >**Name**: 
 
 
+- [[Pre-Training and Fine-Tuning Paradigm for Transfer Learning]]
 
 ## Explanation
 
