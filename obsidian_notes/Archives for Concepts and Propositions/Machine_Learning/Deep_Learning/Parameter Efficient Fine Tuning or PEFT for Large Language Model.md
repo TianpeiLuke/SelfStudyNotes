@@ -51,8 +51,7 @@ date of note: 2024-11-24
 -----------
 ##  Recommended Notes and References
 
-- [[Attention Mechanism in Neural Network]]
-- [[Transformer Network]]
+
 - [[Large Language Model and Pretrained Language Models]]
 
 

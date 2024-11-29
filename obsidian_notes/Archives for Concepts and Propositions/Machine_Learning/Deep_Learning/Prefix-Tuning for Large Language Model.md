@@ -17,7 +17,7 @@ date of note: 2024-11-24
 
 
 - [[Large Language Model and Pretrained Language Models]]
-- [[In-Context Learning and Prompt Engineering for LLM]]
+- [[In-Context Learning for LLM]]
 
 
 ## Explanation
@@ -35,7 +35,6 @@ date of note: 2024-11-24
 
 - [[Attention Mechanism in Neural Network]]
 - [[Transformer Network]]
-
 
 
 - [[Parameter Efficient Fine Tuning or PEFT for Large Language Model]]

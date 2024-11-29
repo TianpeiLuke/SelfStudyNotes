@@ -67,11 +67,16 @@ date of note: 2024-06-01
 
 ![[pretrain_finetuning_llm.png]]
 
-### Fine-Tuning of LLM
+### Fine-Tuning of PLM and LLM
 
 - [[Foundational Models for Transfer Learning]]
+
+#### Fine-Tuning of Encoder-Only LMs
+
 - [[Fine-Tuning for Sequence or Sequence-Pair Classification via BERT]]
 - [[Fine-Tuning for Sequence Labeling via BERT]]
+
+#### Fine-Tuning of LLM
 
 - [[Continued Pre-training of Large Language Models]]
 - [[Parameter Efficient Fine Tuning or PEFT for Large Language Model]]
@@ -79,18 +84,29 @@ date of note: 2024-06-01
 	- [[Prefix-Tuning for Large Language Model]]
 	- [[Prompt-Tuning or Soft-Prompting for Large Language Model]]
 	- [[Low Rank Adaptation or LoRA for Large Language Model]]
+
+
+### Model Alignment of LLM
+
+- [[Supervised Fine-Tuning and Preference Alignment for LLM]]
+
+#### Instruction Tuning or Supervised Fine-Tuning for LLM
+
 - [[Supervised Fine-Tuning or Instruction Fine-Tuning of LLM]]
 
-### Human Alignment of LLM
+#### Preference Alignment Methods of LLM
 
+- [[Preference Alignment for LLM]]
 - [[Reinforcement Learning with Human Feedbacks or RLHF for LLM]]
 - [[Direct Preference Optimization for Alignment in LLM]]
-- [[Supervised Fine-Tuning vs Human Alignment]]
+
 
 ### In-Context Learning
 
-- [[In-Context Learning and Prompt Engineering for LLM]]
+- [[In-Context Learning for LLM]]
 - [[Prompt Engineering for LLM]]
+- [[Chain-of-Thought Prompting]]
+- [[ReAct as LLM Agent for Reasoning and Acting]]
 - [[Retrieval Augmented Generation]]
 
 ### Efficient Training, Inference and Compression

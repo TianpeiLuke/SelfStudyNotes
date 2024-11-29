@@ -88,8 +88,7 @@ date of note: 2024-11-28
 - [[Foundational Models for Transfer Learning]]
 
 
-- [[Transformer Network]]
-- [[Attention Mechanism in Neural Network]]
+
 
 - [[Speech and Language Processing by Jurafsky]] pp 234 - 236
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 1041

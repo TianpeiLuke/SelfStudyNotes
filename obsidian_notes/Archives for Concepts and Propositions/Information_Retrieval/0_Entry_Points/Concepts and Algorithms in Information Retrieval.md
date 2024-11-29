@@ -113,8 +113,8 @@ date of note: 2024-09-13
 - [[Large Language Model and Pretrained Language Models]]
 - [[Bidirectional Encoder Representation from Transformer or BERT]]
 - [[Generative Pre-trained Transformer or GPT]]
-- [[In-Context Learning and Prompt Engineering for LLM]]
-- [[Supervised Fine-Tuning vs Human Alignment]]
+- [[In-Context Learning for LLM]]
+- [[Supervised Fine-Tuning and Preference Alignment for LLM]]
 
 - [[Retrieval Augmented Generation]]
 - [[Information Retrieval with Encoder Language Models]]

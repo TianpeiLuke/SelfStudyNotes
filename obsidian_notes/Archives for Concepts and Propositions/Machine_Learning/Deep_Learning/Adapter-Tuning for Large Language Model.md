@@ -17,7 +17,7 @@ date of note: 2024-11-24
 
 
 - [[Large Language Model and Pretrained Language Models]]
-- [[In-Context Learning and Prompt Engineering for LLM]]
+- [[In-Context Learning for LLM]]
 
 
 ## Explanation

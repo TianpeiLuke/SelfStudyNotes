@@ -156,7 +156,7 @@ date of note: 2024-10-21
 - [[Reinforcement Learning with Human Feedbacks or RLHF for LLM]]
 - [[Direct Preference Optimization for Alignment in LLM]]
 - [[Supervised Fine-Tuning or Instruction Fine-Tuning of LLM]]
-- [[Supervised Fine-Tuning vs Human Alignment]]
+- [[Supervised Fine-Tuning and Preference Alignment for LLM]]
 
 
 ## Efficient Training and Inference

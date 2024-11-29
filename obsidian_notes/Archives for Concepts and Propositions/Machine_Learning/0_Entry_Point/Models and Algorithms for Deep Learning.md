@@ -256,6 +256,10 @@ date of note: 2024-06-01
 - [[Large Language Model and Pretrained Language Models]]
 - [[Pre-Training and Fine-Tuning Paradigm for Transfer Learning]]
 - [[Parameter Efficient Fine Tuning or PEFT for Large Language Model]]
+- [[In-Context Learning for LLM]]
+- [[Supervised Fine-Tuning and Preference Alignment for LLM]]
+
+
 
 ### Speech Recognition
 

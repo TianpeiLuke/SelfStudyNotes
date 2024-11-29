@@ -76,7 +76,6 @@ date of note: 2024-11-27
 >- Thus it is *sample-inefficient* to train bidirectional encoders to use the MLM.
 
 ^0229dc
-
 - [[Attention Mechanism in Neural Network]]
 - [[Transformer Network]]
 - [[Cosine Similarity and Cosine Distance]]
