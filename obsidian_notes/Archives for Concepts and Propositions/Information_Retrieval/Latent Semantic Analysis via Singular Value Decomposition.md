@@ -60,7 +60,13 @@ date of note: 2024-11-05
 
 ## Explanation
 
+### Dense Vector vs. Sparse Vector
 
+![[Information Retrieval with Encoder Language Models#^2c7326]]
+
+- [[Okapi BM25 score for Information Retrieval]]
+- [[Term Frequency and Inverse Document Frequency or TF-IDF]]
+- [[Information Retrieval with Encoder Language Models]]
 
 ## Topic Models
 

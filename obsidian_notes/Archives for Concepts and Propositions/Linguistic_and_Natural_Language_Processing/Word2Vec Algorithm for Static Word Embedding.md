@@ -30,7 +30,7 @@ date of note: 2024-09-12
 >
 >- In **continuous bag-of-word approach**, the task is to **predict** the representation of *target word*  given a combination of representation of all *context words* $$p(w_{i} \;|\;c_{i}) := p(w_{i}\;|\;w_{i-l} \,{,}\ldots{,}\,w_{i-1},\, w_{i+1},\,{,}\ldots{,}\,w_{i+l})$$
 
-- [[Contiuous-Bag-of-Words Algorithm for Word Embedding]]
+- [[Continuous-Bag-of-Words Algorithm for Word Embedding]]
 
 ### Skip-Gram
 

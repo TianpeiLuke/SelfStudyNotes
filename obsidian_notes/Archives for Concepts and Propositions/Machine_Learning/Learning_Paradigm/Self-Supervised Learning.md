@@ -28,7 +28,7 @@ date of note: 2024-07-07
 ![[word2vec_cont_bog_skipgram.png]]
 
 - [[Word2Vec Algorithm for Static Word Embedding]]
-- [[Contiuous-Bag-of-Words Algorithm for Word Embedding]]
+- [[Continuous-Bag-of-Words Algorithm for Word Embedding]]
 - [[Skip-Gram Algorithm with Negative Sampling for Word Embedding]]
 
 ## Self-Supervised Training of RNN

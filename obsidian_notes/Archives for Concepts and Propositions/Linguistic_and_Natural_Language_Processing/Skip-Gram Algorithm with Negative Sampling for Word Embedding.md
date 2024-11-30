@@ -141,7 +141,7 @@ date of note: 2024-09-12
 
 ![[word2vec_cont_bog_skipgram.png]]
 
-- [[Contiuous-Bag-of-Words Algorithm for Word Embedding]]
+- [[Continuous-Bag-of-Words Algorithm for Word Embedding]]
 - [[Word2Vec Algorithm for Static Word Embedding]]
 
 ![[skipgram_embedding_pca.png]]

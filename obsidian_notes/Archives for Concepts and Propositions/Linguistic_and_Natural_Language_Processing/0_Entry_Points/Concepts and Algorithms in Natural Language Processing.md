@@ -89,7 +89,7 @@ date of note: 2024-09-13
 
 - [[Word2Vec Algorithm for Static Word Embedding]]
 - [[Skip-Gram Algorithm with Negative Sampling for Word Embedding]]
-- [[Contiuous-Bag-of-Words Algorithm for Word Embedding]]
+- [[Continuous-Bag-of-Words Algorithm for Word Embedding]]
 
 - [[Word Embedding Semantic Properties]]
 - [[Word Embedding Evaluation and Datasets]]

@@ -61,7 +61,7 @@ date of note: 2024-05-12
 >-- [[Speech and Language Processing by Jurafsky]] pp 230 - 231
 
 - [[Word2Vec Algorithm for Static Word Embedding]]
-- [[Contiuous-Bag-of-Words Algorithm for Word Embedding]]
+- [[Continuous-Bag-of-Words Algorithm for Word Embedding]]
 - [[Skip-Gram Algorithm with Negative Sampling for Word Embedding]]
 
 >[!info]

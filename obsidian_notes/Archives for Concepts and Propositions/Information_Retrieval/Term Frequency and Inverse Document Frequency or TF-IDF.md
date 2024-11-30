@@ -103,6 +103,15 @@ date of note: 2024-11-12
 - [[Vector Space Model in Information Retrieval]]
 - [[Word Embedding]]
 
+## Information Retrieval via Dense Vector
+
+![[Information Retrieval with Encoder Language Models#^2c7326]]
+
+
+- [[Information Retrieval with Encoder Language Models]]
+- [[Bidirectional Encoder Representation from Transformer or BERT]]
+- [[Latent Semantic Analysis via Singular Value Decomposition]]
+
 
 
 -----------

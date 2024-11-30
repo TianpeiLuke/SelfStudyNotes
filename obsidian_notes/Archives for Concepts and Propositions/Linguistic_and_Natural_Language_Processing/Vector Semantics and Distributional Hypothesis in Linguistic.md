@@ -79,7 +79,7 @@ date of note: 2024-05-12
 - [[Word2Vec Algorithm for Static Word Embedding]]
 - [[Noise Contrastive Estimation]]
 - [[Skip-Gram Algorithm with Negative Sampling for Word Embedding]]
-- [[Contiuous-Bag-of-Words Algorithm for Word Embedding]]
+- [[Continuous-Bag-of-Words Algorithm for Word Embedding]]
 
 ### Representation Learning and LLM
 

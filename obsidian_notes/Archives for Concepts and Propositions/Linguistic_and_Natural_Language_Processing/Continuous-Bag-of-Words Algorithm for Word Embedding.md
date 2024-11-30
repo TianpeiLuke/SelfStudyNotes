@@ -9,14 +9,14 @@ keywords:
 topics:
   - natural_language_processing/word_representation
   - representation_learning
-name: Contiuous-Bag-of-Words Algorithm for Word Embedding
+name: Continuous-Bag-of-Words Algorithm for Word Embedding
 date of note: 2024-09-12
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Contiuous-Bag-of-Words Algorithm for Word Embedding
+>**Name**: Continuous-Bag-of-Words Algorithm for Word Embedding
 
 >[!important] Definition
 >Let $(w_{1}\,{,}\ldots{,}\,w_{T})$ be a sequence of words in training corpus. 

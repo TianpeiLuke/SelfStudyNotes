@@ -223,8 +223,25 @@ date of note: 2024-09-08
 
 - [[Multi-view Learning]]
 
+## Applications
 
+### Word Embedding
 
+- [[Word2Vec Algorithm for Static Word Embedding]]
+- [[Skip-Gram Algorithm with Negative Sampling for Word Embedding]]
+- [[Continuous-Bag-of-Words Algorithm for Word Embedding]]
+
+### Mask Langauge Models
+
+- [[Bidirectional Encoder Representation from Transformer or BERT]]
+- [[Next Sentence Prediction as Language Model Training Task]]
+- [[Masked Language Modeling as Language Model Training Task]]
+
+### Information Retrieval
+
+- [[Information Retrieval with Encoder Language Models]]
+- [[ColBERT and Bi-Encoder Structure for Dense Information Retrieval]]
+- [[Cross-Encoder Structure for Dense Information Retrieval]]
 
 
 

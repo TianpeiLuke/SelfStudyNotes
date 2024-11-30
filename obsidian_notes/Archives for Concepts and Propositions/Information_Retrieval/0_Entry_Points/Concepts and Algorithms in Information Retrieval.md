@@ -10,6 +10,12 @@ date of note: 2024-09-13
 
 ## List of Concepts
 
+### Natural Language Processing
+
+- [[Concepts and Algorithms in Natural Language Processing]]
+- [[Concepts and Algorithms in Machine Learning]]
+- [[Models and Algorithms for Deep Learning]]
+- [[Models and Algorithms for Pretrained and Large Language Models]]
 
 
 ### Information Retrieval
@@ -42,6 +48,8 @@ date of note: 2024-09-13
 ### Index Construction
 
 
+
+- [[Approximate Nearest Neighbor Search for Information Retrieval]]
 
 ### Index Compression
 
@@ -88,36 +96,43 @@ date of note: 2024-09-13
 
 
 
-### Probabilistic Information Retrieval
+### Information Retrieval with Sparse Vector
 
 - [[Multinomial Naive Bayes Model]]
 - [[n-Gram Model and Language Model]]
+- [[Term Frequency and Inverse Document Frequency or TF-IDF]]
 - [[Okapi BM25 score for Information Retrieval]]
 
 
-### Latent Semantic Indexing
+### Information Retrieval with Dense Vector
+
+#### Latent Semantic Indexing
 
 - [[Latent Semantic Analysis via Singular Value Decomposition]]
+
+#### Masked Language Model
+
+- [[Information Retrieval with Encoder Language Models]]
+- [[Cross-Encoder Structure for Dense Information Retrieval]]
+- [[ColBERT and Bi-Encoder Structure for Dense Information Retrieval]]
+
 
 ### Link Analysis
 
 
 
-### Natural Language Processing
 
-- [[Concepts and Algorithms in Natural Language Processing]]
-- [[Models and Algorithms for Pretrained and Large Language Models]]
-- [[Models and Algorithms for Pretrained and Large Language Models]]
-### Retrieval Augmented Generation
+### Retrieval Augmented Generation for Question-Answering
+
+- [[Question Answering Problem]]
+- [[Retrieval Augmented Generation]]
 
 - [[Large Language Model and Pretrained Language Models]]
-- [[Bidirectional Encoder Representation from Transformer or BERT]]
-- [[Generative Pre-trained Transformer or GPT]]
 - [[In-Context Learning for LLM]]
 - [[Supervised Fine-Tuning and Preference Alignment for LLM]]
 
-- [[Retrieval Augmented Generation]]
-- [[Information Retrieval with Encoder Language Models]]
+
+
 
 
 

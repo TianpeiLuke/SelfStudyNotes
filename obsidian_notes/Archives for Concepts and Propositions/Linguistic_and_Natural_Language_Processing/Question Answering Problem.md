@@ -26,6 +26,7 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
+- [[Information Retrieval with Encoder Language Models]]
 
 
 - [[Speech and Language Processing by Jurafsky]] pp 289

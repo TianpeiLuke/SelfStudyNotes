@@ -114,6 +114,7 @@ date of note: 2024-06-01
 #### Deep Learning
 
 - [[Models and Algorithms for Deep Learning]]
+- [[Models and Algorithms for Pretrained and Large Language Models]]
 
 #### Online Learning
 
