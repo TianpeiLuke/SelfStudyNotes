@@ -24,5 +24,6 @@ date of note: 2024-11-29
 -----------
 ##  Recommended Notes and References
 
+- [[Automatic Speech Recognition]]
 
 - [[Speech and Language Processing by Jurafsky]] pp 339

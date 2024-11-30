@@ -29,4 +29,4 @@ date of note: 2024-11-29
 
 - [[Automatic Speech Recognition]]
 
-- [[Speech and Language Processing by Jurafsky]] pp 348
+- [[Speech and Language Processing by Jurafsky]] pp 348 - 353
