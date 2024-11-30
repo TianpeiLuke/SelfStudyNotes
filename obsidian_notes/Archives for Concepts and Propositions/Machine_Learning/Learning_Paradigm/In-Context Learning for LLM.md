@@ -42,6 +42,16 @@ date of note: 2024-10-21
 >
 >-- [[Speech and Language Processing by Jurafsky]] pp 242
 
+### Transfer Learning
+
+>[!important] Definition
+>The **in-context learning** can be seen as a type of transfer learning where the model $f^{t}$ that best fit the *target distribution* $\mathcal{D}^{t}$ can be obtained by "*conditioning*" the model on the new training data, in form of a **text prompt** $z\in \mathcal{D}^{s}$
+>$$
+>f^{t}(x) := f^{s}(x \cup z)
+>$$
+>where $f^{s}$ is a *pre-trained model* on *source distribution* $\mathcal{D}^{s}$, whose parameters are *frozen.*
+
+- [[Transfer Learning]]
 
 
 
