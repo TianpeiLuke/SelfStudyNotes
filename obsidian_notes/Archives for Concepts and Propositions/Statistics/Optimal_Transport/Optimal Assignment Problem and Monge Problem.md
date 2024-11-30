@@ -143,6 +143,7 @@ date of note: 2024-08-26
 - [[Optimal Transport for Applied Mathematicians by Santambrogio]]
 - [[Optimal Transport Old and New by Villani]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 307
+- [[Introduction to Algorithms by Cormen]] pp 723 - 739
 - [[Graph Theory by Diestel]]
 - Wikipedia [Assignment_problem](https://en.wikipedia.org/wiki/Assignment_problem)
 - Wikipedia [Transportation_theory_(mathematics)](https://en.wikipedia.org/wiki/Transportation_theory_(mathematics))

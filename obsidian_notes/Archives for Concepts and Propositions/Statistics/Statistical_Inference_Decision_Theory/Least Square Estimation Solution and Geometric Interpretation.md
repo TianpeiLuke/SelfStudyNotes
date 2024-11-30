@@ -238,3 +238,4 @@ date of note: 2024-06-08
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 117
 - [[Matrix Analysis for Scientists and Engineers by Laub]] pp 65 - 67
 - [[Matrix CookBook by Petersen]] pp 28
+- [[Introduction to Algorithms by Cormen]] pp 838 - 846

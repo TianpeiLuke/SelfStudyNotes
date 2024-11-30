@@ -37,7 +37,7 @@ date of note: 2024-08-26
 - [[Sum-Product Belief Propagation Algorithm for Clique Tree]]
 
 
-- [[Introduction to Algorithms by Cormen]]
+- [[Introduction to Algorithms by Cormen]] pp 1066, 1073–1079, 1120–1121, 1124 ex.
 - [[Algorithm Design Manual by Skiena]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]
 - [[Probabilistic Graphical Models by Koller]]

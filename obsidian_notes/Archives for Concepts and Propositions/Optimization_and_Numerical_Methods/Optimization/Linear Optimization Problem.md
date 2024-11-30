@@ -107,3 +107,4 @@ date of note: 2024-08-15
 - [[Convex Optimization by Boyd]]
 - [[Introduction to Linear Optimization by Bertsimas]] pp 4
 - [[Convex Analysis by Rockafellar]]
+- [[Introduction to Algorithms by Cormen]] pp 850 - 858

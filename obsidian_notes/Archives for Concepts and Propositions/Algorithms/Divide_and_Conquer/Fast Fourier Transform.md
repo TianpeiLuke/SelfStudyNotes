@@ -38,5 +38,5 @@ date of note: 2024-08-08
 - [[Matrix Computations by Golub]] pp 219 - 231
 
 - [[Functional Analysis by Reed]]
-- [[Introduction to Algorithms by Cormen]]
+- [[Introduction to Algorithms by Cormen]] pp 877 - 894
 - [[Algorithm Design Manual by Skiena]] pp 422, 495 - 502, 662

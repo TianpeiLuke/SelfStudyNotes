@@ -173,3 +173,4 @@ date of note: 2024-06-08
 - [[Numerical Linear Algebra by Trefethen]] pp 36, 77 - 87, 129 - 144
 - [[Matrix Analysis for Scientists and Engineers by Laub]] pp 65 - 71
 - [[Convex Optimization Algorithms by Bertsekas]] pp 119
+- [[Introduction to Algorithms by Cormen]] pp 838 - 846

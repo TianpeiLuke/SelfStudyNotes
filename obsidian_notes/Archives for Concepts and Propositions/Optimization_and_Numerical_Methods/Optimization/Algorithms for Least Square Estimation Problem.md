@@ -193,3 +193,4 @@ date of note: 2024-06-08
 - [[Numerical Optimization by Nocedal]] pp 245 - 269
 - [[Elements of Statistical Learning by Hastie]] pp 43 - 56
 - [[Matrix Computations by Golub]] pp 303 - 334
+- [[Introduction to Algorithms by Cormen]] pp 838 - 846

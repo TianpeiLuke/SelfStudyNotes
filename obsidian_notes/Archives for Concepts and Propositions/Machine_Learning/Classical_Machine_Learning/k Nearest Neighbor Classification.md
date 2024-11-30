@@ -57,6 +57,15 @@ date of note: 2024-05-12
 ## Explanation
 
 
+## Theory
+
+
+## Implementation
+
+- [[k-d Tree Structure for Approximate Nearest Neighbor Search]]
+- [[Locality-Sensitive Hashing or LSH]]
+- [[Approximate Nearest Neighbor Search for Information Retrieval]]
+
 
 
 

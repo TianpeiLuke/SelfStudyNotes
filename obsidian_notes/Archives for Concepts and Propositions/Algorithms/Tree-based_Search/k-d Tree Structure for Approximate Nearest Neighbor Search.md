@@ -29,4 +29,10 @@ date of note: 2024-11-29
 
 
 - [[Information Retrieval]]
-- Wikipedia [Locality-sensitive_hashing](https://en.wikipedia.org/wiki/Locality-sensitive_hashing)
+
+- [[Introduction to Algorithms by Cormen]]
+- [[Algorithm Design Manual by Skiena]] pp 460, 638 - 647
+
+- Wikipedia [K-d_tree](https://en.wikipedia.org/wiki/K-d_tree)
+- Youtube 
+	- [KD-Tree Nearest Neighbor Data Structure](https://www.youtube.com/watch?v=Glp7THUpGow)
