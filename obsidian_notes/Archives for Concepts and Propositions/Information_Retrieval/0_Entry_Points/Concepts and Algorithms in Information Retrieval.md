@@ -47,8 +47,7 @@ date of note: 2024-09-13
 
 ### Index Construction
 
-
-
+- [[Inverted Index for Information Retrieval]]
 - [[Approximate Nearest Neighbor Search for Information Retrieval]]
 
 ### Index Compression
@@ -93,7 +92,8 @@ date of note: 2024-09-13
 
 ### Relevance Feedback and Query Expansion
 
-
+- [[Relevance Feedback for Information Retrieval]]
+- [[Query Expansion for Information Retrieval]]
 
 
 ### Information Retrieval with Sparse Vector
