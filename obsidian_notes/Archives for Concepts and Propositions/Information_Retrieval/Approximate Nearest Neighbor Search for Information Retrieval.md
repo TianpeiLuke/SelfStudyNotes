@@ -41,7 +41,7 @@ date of note: 2024-11-29
 ##  Recommended Notes and References
 
 
-
+- [[Locality-Sensitive Hashing or LSH]]
 - [[Information Retrieval]]
 
 - [[Introduction to Information Retrieval by Manning]]

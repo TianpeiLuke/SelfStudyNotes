@@ -49,6 +49,8 @@ date of note: 2024-09-13
 
 - [[Inverted Index for Information Retrieval]]
 - [[Approximate Nearest Neighbor Search for Information Retrieval]]
+- [[k-d Tree Structure for Approximate Nearest Neighbor Search]]
+- [[Locality-Sensitive Hashing or LSH]]
 
 ### Index Compression
 
