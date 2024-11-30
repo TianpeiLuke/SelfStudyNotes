@@ -160,6 +160,7 @@ date of note: 2024-07-07
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 1054 - 1055
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 191
+- [[Foundations of Computer Vision by Torralba]] pp 455 - 457
 - Bromley, J., Guyon, I., LeCun, Y., Säckinger, E., & Shah, R. (1993). Signature verification using a" siamese" time delay neural network. _Advances in neural information processing systems_, _6_.
 - Chopra, S., Hadsell, R., & LeCun, Y. (2005, June). Learning a similarity metric discriminatively, with application to face verification. In _2005 IEEE computer society conference on computer vision and pattern recognition (CVPR'05)_ (Vol. 1, pp. 539-546). IEEE.
 - Hadsell, R., Chopra, S., & LeCun, Y. (2006, June). Dimensionality reduction by learning an invariant mapping. In _2006 IEEE computer society conference on computer vision and pattern recognition (CVPR'06)_ (Vol. 2, pp. 1735-1742). IEEE.

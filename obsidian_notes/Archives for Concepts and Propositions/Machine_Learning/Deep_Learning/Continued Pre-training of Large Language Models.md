@@ -20,7 +20,7 @@ date of note: 2024-10-21
 
 
 - [[Self-Supervised Training of Large Language Model and Teacher Forcing]]
-- [[Continued Learning]]
+- [[Continual Learning]]
 
 ## Explanation
 

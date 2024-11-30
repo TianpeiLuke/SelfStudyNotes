@@ -24,6 +24,7 @@ date of note: 2024-10-21
 - [[In-Context Learning for LLM]]
 - [[Generative Pre-trained Transformer or GPT]]
 - [[Parameter Efficient Fine Tuning or PEFT for Large Language Model]]
+- [[Few-Shot Learning and Zero-Shot Learning]]
 
 ## Explanation
 

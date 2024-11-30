@@ -97,6 +97,7 @@ date of note: 2024-04-25
 
 - [[Introduction to Information Retrieval by Manning]]
 - [[Speech and Language Processing by Jurafsky]] pp 66
+- [[Elements of Statistical Learning by Hastie]] pp 301
 
 - Medium
 	- [Recall and Precision at k for Recommender Systems](https://medium.com/@m_n_malaeb/recall-and-precision-at-k-for-recommender-systems-618483226c54)

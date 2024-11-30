@@ -46,9 +46,27 @@ date of note: 2024-07-07
 >	  
 >-- [[Speech and Language Processing by Jurafsky]] pp 189 - 190	  
 
-- [[Transfer Learning]]
+
 
 ![[pretrain_finetuning_llm.png]]
+
+### Transfer Learning
+
+![[Transfer Learning#^3eb9a1]]
+
+>[!important] Definition
+>The **pre-train and fine-tune** approach can be seen as learning an optimal function $f^{t}\in \mathcal{H}^{t}$ via *proximal regularized optimization* on *target distribution* $\mathcal{D}^{t}$
+>$$
+>f^{t} := \arg\min_{f\in \mathcal{H}^{t}}\;\mathbb{E}_{ (x_{m},y_{m}) \sim \mathcal{D}^{t} }\left[  \ell(y_{m}, f(x_{m})) \right] + \lambda \;\lVert f - f^{s} \rVert_{\mathcal{H}^{t}} 
+>$$
+>where $f^{s}$ is the *empirical risk minimizer* on *source distribution* $$f^{s} = \arg\min_{f\in \mathcal{H}^{s}}\;\mathbb{E}_{ (x_{n},y_{n}) \sim \mathcal{D}^{s} }\left[  \ell(y_{n}, f(x_{n})) \right] $$
+
+
+- [[Transfer Learning]]
+- [[Empirical Risk Minimization]]
+- [[PAC Learnable and Agnostic PAC Learnable]]
+- [[Proximal Algorithm]]
+- [[Regularized Loss Minimization]]
 
 ## Explanation
 
@@ -98,8 +116,10 @@ date of note: 2024-07-07
 ##  Recommended Notes and References
 
 
-- [[Deep Learning Foundations and Concepts by Bishop]]
-- [[Probabilistic Graphical Models by Koller]]
-- [[Deep Learning by Goodfellow]]
+- [[Deep Learning Foundations and Concepts by Bishop]] pp 189
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 739
+- [[Deep Learning by Goodfellow]] pp 314, 519
+- [[Speech and Language Processing by Jurafsky]] pp 145, 203
+- [[Foundations of Computer Vision by Torralba]] pp 545 - 546
 
 - Liu, P., Yuan, W., Fu, J., Jiang, Z., Hayashi, H., & Neubig, G. (2023). Pre-train, prompt, and predict: A systematic survey of prompting methods in natural language processing. _ACM Computing Surveys_, _55_(9), 1-35. [[liuPretrainPromptPredict2023]]

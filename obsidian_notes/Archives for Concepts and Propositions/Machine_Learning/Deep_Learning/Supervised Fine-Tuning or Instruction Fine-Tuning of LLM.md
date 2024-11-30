@@ -36,12 +36,6 @@ date of note: 2024-10-21
 
 - [[Meta Learning]]
 
->[!info]
->In order to achieve better performance for **in-context learning**, it is necessary to have **instruction fine-tuning**.
-
-- [[In-Context Learning for LLM]]
-
-
 
 >[!quote]
 >**Instruction tuning** is a form of supervised learning where the training data consists of *instructions* and we continue training the model on them using the *same  language modeling objective* used to train the original model. 
@@ -52,6 +46,17 @@ date of note: 2024-10-21
 >-- [[Speech and Language Processing by Jurafsky]] pp 249	  
 
 - [[Supervised Learning and Unsupervised Learning]]
+
+### Why SFT?
+
+![[In-Context Learning for LLM#^937794]]
+
+>[!info]
+>In order to achieve better performance for **in-context learning**, it is necessary to have **instruction fine-tuning**.
+
+- [[In-Context Learning for LLM]]
+
+
 
 ## Other Methods of Fine-Tuning
 
@@ -95,6 +100,7 @@ date of note: 2024-10-21
 ## Compare to Preference Alignment
 
 - [[Supervised Fine-Tuning and Preference Alignment for LLM]]
+- [[Preference Alignment for LLM]]
 
 - [[Reinforcement Learning with Human Feedbacks or RLHF for LLM]]
 - [[Direct Preference Optimization for Alignment in LLM]]

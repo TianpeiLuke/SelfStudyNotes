@@ -20,7 +20,7 @@ date of note: 2024-10-21
 ![[Prompt Engineering for LLM#^0e4cf4]]
 
 >[!important] Definition
->**In-context learning** is a paradigm that allows language models to learn tasks given only a few *example*s in the form of demonstration.
+>**In-context learning (ICL)** is a paradigm that allows language models to learn tasks given only a few *example*s in the form of demonstration.
 >
 >Let $x_{k}$ be input text, and $y_{k}\in \mathcal{Y}$ be  a set of *candidate answers* for $k=1\,{,}\ldots{,}\,m$. 
 >
@@ -33,6 +33,7 @@ date of note: 2024-10-21
 >\hat{y} = \arg\max_{k=1\,{,}\ldots{,}\,m}\;p(y_{k}\,|\,x,\, C)
 >$$  
 
+- [[Few-Shot Learning and Zero-Shot Learning]]
 - [[Prompt Engineering for LLM]]
 - [[Generative Pre-trained Transformer or GPT]]
 
@@ -40,6 +41,8 @@ date of note: 2024-10-21
 >**Prompts** get language models to generate text, but they also can be viewed as  a **learning signal**, because these demonstrations can help language models learn  to perform novel tasks.
 >
 >-- [[Speech and Language Processing by Jurafsky]] pp 242
+
+
 
 
 ## Explanation
@@ -64,6 +67,25 @@ date of note: 2024-10-21
 
 - [[Prompt-Tuning or Soft-Prompting for Large Language Model]]
 - [[Transfer Learning]]
+
+### Limitation of In-Context Learning Model Alignment
+
+>[!quote]
+>LLMs as we’ve described them so far turn out to be *bad at following instructions*. 
+>- Pretraining isn’t sufficient to make them **helpful**. 
+>	- We’ll introduce **instruction tuning**, a technique that helps LLMs learn to *correctly respond* to instructions by *finetuning* them on a corpus of *instructions* with their corresponding response.  
+>- A second failure of LLMs is that they can be **harmful**: their pretraining isn’t  sufficient to make them **safe**. 
+>	- Readers who know Arthur C. Clarke’s 2001: A Space  Odyssey or the Stanley Kubrick film know that the quote above comes in the context  that the artificial intelligence Hal becomes paranoid and tries to kill the crew of the  spaceship. Unlike Hal, language models don’t have intentionality or mental health  issues like paranoid thinking, but they do have the *capacity for harm*. 
+>	- Pretrained language models can say things that are *dangerous or false* (like giving unsafe medical  advice) and they can verbally attack users or say *toxic or hateful* things.
+>	  
+>-- [[Speech and Language Processing by Jurafsky]]	  
+
+^937794
+
+- [[Supervised Fine-Tuning or Instruction Fine-Tuning of LLM]]
+- [[Preference Alignment for LLM]]
+
+
 
 ## Applications
 

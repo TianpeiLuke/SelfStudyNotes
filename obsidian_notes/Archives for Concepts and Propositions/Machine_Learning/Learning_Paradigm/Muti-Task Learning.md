@@ -6,7 +6,7 @@ tags:
 keywords: 
 topics: 
 name: 
-date of note: 2024-10-21
+date of note: 2024-11-29
 ---
 
 ## Concept Definition
@@ -32,11 +32,14 @@ date of note: 2024-10-21
 ##  Recommended Notes and References
 
 
-- [[Attention Mechanism in Neural Network]]
-- [[Transformer Network]]
+- [[Transfer Learning]]
+- [[Multi-Modal Learning]]
+- [[Multi-view Learning]]
 - [[Large Language Model and Pretrained Language Models]]
 
 
-
-- [[Transfer Learning]]
+- [[Deep Learning by Goodfellow]] pp 237, 528
+- [[Deep Learning Foundations and Concepts by Bishop]] pp 190
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 743
 - [[Speech and Language Processing by Jurafsky]] pp 214
+- [[Foundations of Computer Vision by Torralba]] pp 543

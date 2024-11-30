@@ -31,5 +31,4 @@ date of note: 2024-09-09
 - [[Transfer Learning]]
 
 - [[Elements of Statistical Learning by Hastie]]
-- [[Probabilistic Machine Learning Advanced Topics by Murphy]]
-- [[Deep Learning Foundations and Concepts by Bishop]]
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 1054

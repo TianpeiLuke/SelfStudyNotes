@@ -44,4 +44,5 @@ date of note: 2024-11-09
 - A. Radford, L. Metz, and S. Chintala. “Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks”. In: *ICLR*.  2016.
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 905
 - [[Deep Learning Foundations and Concepts by Bishop]]
+- [[Deep Learning by Goodfellow]] pp 542, 692
 - [[Foundations of Computer Vision by Torralba]]

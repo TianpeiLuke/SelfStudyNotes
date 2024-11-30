@@ -37,3 +37,4 @@ date of note: 2024-11-24
 
 - [[Parameter Efficient Fine Tuning or PEFT for Large Language Model]]
 - [[Speech and Language Processing by Jurafsky]] pp 218
+- Hu, E. J., Shen, Y., Wallis, P., Allen-Zhu, Z., Li, Y., Wang, S., ... & Chen, W. (2021). Lora: Low-rank adaptation of large language models. _arXiv preprint arXiv:2106.09685_. [[huLoRALowRankAdaptation2022]]

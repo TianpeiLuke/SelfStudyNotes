@@ -34,6 +34,14 @@ date of note: 2024-10-21
 
 ## Explanation
 
+### Why Preference Alignment?
+
+![[In-Context Learning for LLM#^937794]]
+
+>[!info]
+>In order to achieve better performance for **in-context learning**, it is necessary to have **instruction fine-tuning**.
+
+- [[In-Context Learning for LLM]]
 
 
 ## Compare to Instruction Fine-Tuning

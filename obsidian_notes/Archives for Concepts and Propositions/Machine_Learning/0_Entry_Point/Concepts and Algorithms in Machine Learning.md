@@ -254,6 +254,11 @@ date of note: 2024-06-01
 - [[Self-Supervised Learning]]
 - [[Self-Supervised Training of Large Language Model and Teacher Forcing]]
 
+#### Data Augmentation
+
+- [[Data Augmentation]]
+
+
 #### Transfer Learning
 
 - [[Transfer Learning]]
@@ -263,11 +268,28 @@ date of note: 2024-06-01
 	- [[Label Shift or Prior Shift in Machine Learning]]
 	- [[Conditional Shift or Manifestation Shift in Machine Learning]]
 - [[Meta Learning]]
+- [[Model-Agnostic Meta Learning]]
+- [[Pre-Training and Fine-Tuning Paradigm for Transfer Learning]]
+- [[In-Context Learning for LLM]]
+- [[Few-Shot Learning and Zero-Shot Learning]]
 
 
 #### Multi-Modal Learning
 
 - [[Multi-Modal Learning]]
+- [[Multi-view Learning]]
+
+#### Multi-Task Learning
+
+- [[Muti-Task Learning]]
+
+#### Domain Adaptation
+
+- [[Domain Adaptation]]
+
+#### Continual Learning
+
+- [[Continual Learning]]
 
 #### Maximum Entropy Learning
 

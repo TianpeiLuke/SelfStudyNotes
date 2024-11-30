@@ -32,6 +32,6 @@ date of note: 2024-11-25
 
 
 
-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 731
-- [[Deep Learning by Goodfellow]]
-- [[Deep Learning Foundations and Concepts by Bishop]]
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 731, 751
+- [[Deep Learning by Goodfellow]] pp 528
+- [[Foundations of Computer Vision by Torralba]] pp 536

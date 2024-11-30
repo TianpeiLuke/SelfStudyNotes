@@ -87,6 +87,7 @@ date of note: 2024-09-08
 - [[Contrastive Learning]]
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 1056
+- [[Foundations of Computer Vision by Torralba]] pp 457
 - Chopra, S., Hadsell, R., & LeCun, Y. (2005, June). Learning a similarity metric discriminatively, with application to face verification. In _2005 IEEE computer society conference on computer vision and pattern recognition (CVPR'05)_ (Vol. 1, pp. 539-546). IEEE.
 - Hadsell, R., Chopra, S., & LeCun, Y. (2006, June). Dimensionality reduction by learning an invariant mapping. In _2006 IEEE computer society conference on computer vision and pattern recognition (CVPR'06)_ (Vol. 2, pp. 1735-1742). IEEE.
 - Collobert, R., & Weston, J. (2008, July). A unified architecture for natural language processing: Deep neural networks with multitask learning. In _Proceedings of the 25th international conference on Machine learning_ (pp. 160-167).
