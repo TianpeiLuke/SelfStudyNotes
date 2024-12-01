@@ -3,6 +3,7 @@ tags:
   - concept
   - information_retrieval/index
   - information_retrieval/search
+  - algorithm/search
 keywords: 
 topics: 
 name: 

@@ -45,6 +45,8 @@ date of note: 2024-07-25
 ### Community Detection
 
 
+- [[Navigable Small World Model or NSW]]
+- [[Hierarchical Navigable Small Worlds or HNSW for Graph-based ANN Search]]
 
 
 ### Graph Neural Network Model

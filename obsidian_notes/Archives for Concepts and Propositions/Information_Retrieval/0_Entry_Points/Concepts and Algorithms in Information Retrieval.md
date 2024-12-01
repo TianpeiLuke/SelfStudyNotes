@@ -48,9 +48,7 @@ date of note: 2024-09-13
 ### Index Construction
 
 - [[Inverted Index for Information Retrieval]]
-- [[Approximate Nearest Neighbor Search for Information Retrieval]]
-- [[k-d Tree Structure for Approximate Nearest Neighbor Search]]
-- [[Locality-Sensitive Hashing or LSH]]
+
 
 ### Index Compression
 
@@ -65,6 +63,7 @@ date of note: 2024-09-13
 - [[Vector Space Model in Information Retrieval]]
 
 ### Computing scores in a complete search system
+
 
 
 
@@ -122,6 +121,13 @@ date of note: 2024-09-13
 ### Link Analysis
 
 
+
+### Approximate Nearest Neighbor Search
+
+- [[Approximate Nearest Neighbor Search for Information Retrieval]]
+- [[k-d Tree Structure for Approximate Nearest Neighbor Search]]
+- [[Locality-Sensitive Hashing or LSH]]
+- [[Hierarchical Navigable Small Worlds or HNSW for Graph-based ANN Search]]
 
 
 ### Retrieval Augmented Generation for Question-Answering
