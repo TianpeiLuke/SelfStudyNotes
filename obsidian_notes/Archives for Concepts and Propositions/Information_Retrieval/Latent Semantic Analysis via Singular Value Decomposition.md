@@ -87,7 +87,7 @@ date of note: 2024-11-05
 
 
 
-- [[Principle Component Analysis]]
+- [[Principal Component Analysis]]
 
 
 
@@ -98,7 +98,7 @@ date of note: 2024-11-05
 
 
 
-- [[Principle Component Analysis]]
+- [[Principal Component Analysis]]
 - [[Information Retrieval]]
 
 

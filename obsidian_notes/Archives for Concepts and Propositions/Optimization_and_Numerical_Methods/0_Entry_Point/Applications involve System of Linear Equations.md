@@ -447,13 +447,13 @@ date of note: 2024-09-27
 
 ### Principle Component Analysis
 
-![[Principle Component Analysis#^028c45]]
+![[Principal Component Analysis#^028c45]]
 
-![[Principle Component Analysis#^feea32]]
+![[Principal Component Analysis#^feea32]]
 
-![[Principle Component Analysis#^ab6364]]
+![[Principal Component Analysis#^ab6364]]
 
-- [[Principle Component Analysis]]
+- [[Principal Component Analysis]]
 - [[Nonnegative Matrix Factorization]]
 - [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
 

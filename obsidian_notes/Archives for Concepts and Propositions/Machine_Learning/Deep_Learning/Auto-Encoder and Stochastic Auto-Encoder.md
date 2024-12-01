@@ -83,14 +83,14 @@ date of note: 2024-05-12
 
 ## Linear Autoencoder
 
-![[Principle Component Analysis#^4f6696]]
+![[Principal Component Analysis#^4f6696]]
 
-![[Principle Component Analysis#^b1e550]]
+![[Principal Component Analysis#^b1e550]]
 
 >[!info]
 >The above proposition shows that a **linear autoencoder** is equivalent to the **principle component analysis (PCA)**.
 
-- [[Principle Component Analysis]]
+- [[Principal Component Analysis]]
 - [[Probabilistic Principle Component Analysis]]
 
 ## Kernel PCA
@@ -148,7 +148,7 @@ date of note: 2024-05-12
 - [[Variational Auto-Encoder]]
 - [[Artificial Neural Network and Deep Learning]]
 
-- [[Principle Component Analysis]]
+- [[Principal Component Analysis]]
 - [[Probabilistic Principle Component Analysis]]
 - [[Supervised Learning and Unsupervised Learning]]
 

@@ -6,20 +6,20 @@ tags:
   - machine_learning/latent_variable_model
   - machine_learning/dimensionality_reduction
 keywords:
-  - principle_component_analysis
+  - principal_component_analysis
   - dimensionality_reduction
 topics:
   - probabilistic_graphical_model
   - machine_learning_models
   - dimensionality_reduction
-name: Principle Component Analysis
+name: Principal Component Analysis
 date of note: 2024-05-12
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Principle Component Analysis
+>**Name**: Principal Component Analysis
 
 ### PCA as Linear Auto-Encoder
 

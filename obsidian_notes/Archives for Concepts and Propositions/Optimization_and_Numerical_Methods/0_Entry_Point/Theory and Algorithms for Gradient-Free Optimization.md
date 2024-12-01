@@ -59,6 +59,15 @@ date of note: 2024-08-24
 - [[Annealed Importance Sampling]]
 - [[Monte Carlo Tree Search]]
 
+### Approximate Nearest Neighbor Search
+
+- [[Approximate Nearest Neighbor Search for Information Retrieval]]
+- [[k-d Tree Structure for Approximate Nearest Neighbor Search]]
+- [[Locality-Sensitive Hashing or LSH]]
+- [[Hierarchical Navigable Small Worlds or HNSW for Graph-based ANN Search]]
+- [[Navigable Small World Model or NSW]]
+
+
 
 ### Population-based Algorithm
 

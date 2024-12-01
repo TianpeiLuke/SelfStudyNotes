@@ -65,7 +65,7 @@ date of note: 2024-09-21
 - [[Eigenspace and Spectrum for Linear Map]]
 - [[Spectral Theorem of Normal Map and Eigen decomposition]]
 - [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
-- [[Principle Component Analysis]]
+- [[Principal Component Analysis]]
 - [[Schur Triangularization and Schur Form]]
 - [[Saddle Point of Lagrangian Function]]
 

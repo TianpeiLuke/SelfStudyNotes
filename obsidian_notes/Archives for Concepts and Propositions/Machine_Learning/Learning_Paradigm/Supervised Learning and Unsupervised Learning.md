@@ -110,7 +110,7 @@ date of note: 2024-08-10
 - [[Spectral Clustering]]
 - [[Gaussian Mixture Models]]
 - [[Gaussian Scale Mixtures]]
-- [[Principle Component Analysis]]
+- [[Principal Component Analysis]]
 - [[Probabilistic Principle Component Analysis]]
 - [[Kernel Principal Component Analysis]]
 - [[Factor Analysis]]

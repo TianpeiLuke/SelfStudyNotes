@@ -26,7 +26,7 @@ date of note: 2024-05-12
 >
 >-- [[Deep Learning Foundations and Concepts by Bishop]] pp 183
 
-- [[Principle Component Analysis]]
+- [[Principal Component Analysis]]
 
 ### Sigmoid Activation Function
 

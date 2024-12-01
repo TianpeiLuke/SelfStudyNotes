@@ -94,7 +94,7 @@ date of note: 2024-05-12
 - [[Latent Variable Models]]
 - [[Artificial Neural Network and Deep Learning]]
 
-- [[Principle Component Analysis]]
+- [[Principal Component Analysis]]
 - [[Probabilistic Principle Component Analysis]]
 - [[Factor Analysis]]
 

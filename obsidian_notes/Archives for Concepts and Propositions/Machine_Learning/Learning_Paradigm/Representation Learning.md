@@ -143,7 +143,7 @@ date of note: 2024-07-07
 
 - [[Latent Variable Models]]
 - [[Factor Analysis]]
-- [[Principle Component Analysis]]
+- [[Principal Component Analysis]]
 - [[Probabilistic Principle Component Analysis]]
 - [[Independent Component Analysis]]
 - [[Nonnegative Matrix Factorization]]

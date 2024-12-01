@@ -71,7 +71,7 @@ date of note: 2024-09-04
 ### Factor Analysis Models
 
 - [[Factor Analysis]]
-- [[Principle Component Analysis]]
+- [[Principal Component Analysis]]
 - [[Probabilistic Principle Component Analysis]]
 - [[Nonnegative Matrix Factorization]]
 - [[Canonical Correlation Analysis]]

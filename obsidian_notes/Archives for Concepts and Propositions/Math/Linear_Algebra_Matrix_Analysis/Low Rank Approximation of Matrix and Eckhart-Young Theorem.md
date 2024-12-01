@@ -64,7 +64,7 @@ date of note: 2024-08-21
 
 ## Principle Component Analysis
 
-- [[Principle Component Analysis]]
+- [[Principal Component Analysis]]
 
 
 
@@ -74,7 +74,7 @@ date of note: 2024-08-21
 ##  Recommended Notes and References
 
 
-- [[Principle Component Analysis]]
+- [[Principal Component Analysis]]
 - [[Singular Value Decomposition of Linear Map]]
 - [[Unitary Group]]
 - [[Projection Theorem of Hilbert Spaces]]

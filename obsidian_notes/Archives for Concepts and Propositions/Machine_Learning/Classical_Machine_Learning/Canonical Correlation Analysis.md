@@ -37,7 +37,7 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
-- [[Principle Component Analysis]]
+- [[Principal Component Analysis]]
 - [[Probabilistic Principle Component Analysis]]
 - [[Gaussian Random Vector]]
 

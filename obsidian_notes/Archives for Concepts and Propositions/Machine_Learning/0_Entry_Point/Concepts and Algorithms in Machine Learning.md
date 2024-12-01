@@ -136,7 +136,7 @@ date of note: 2024-06-01
 
 - [[Curse of Dimensionality]]
 
-- [[Principle Component Analysis]]
+- [[Principal Component Analysis]]
 - [[Probabilistic Principle Component Analysis]]
 - [[Kernel Principal Component Analysis]]
 

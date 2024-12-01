@@ -126,9 +126,10 @@ date of note: 2024-09-13
 
 - [[Approximate Nearest Neighbor Search for Information Retrieval]]
 - [[k-d Tree Structure for Approximate Nearest Neighbor Search]]
+- [[Ball Tree Structure for Approximate Nearest Neighbor Search]]
 - [[Locality-Sensitive Hashing or LSH]]
 - [[Hierarchical Navigable Small Worlds or HNSW for Graph-based ANN Search]]
-
+- [[Navigable Small World Model or NSW]]
 
 ### Retrieval Augmented Generation for Question-Answering
 

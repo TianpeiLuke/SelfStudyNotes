@@ -76,7 +76,7 @@ date of note: 2024-09-05
 - [[Dirichlet Distribution]]
 - [[Multinomial Distribution]]
 - [[Probabilistic Principle Component Analysis]]
-- [[Principle Component Analysis]]
+- [[Principal Component Analysis]]
 
 
 - [[Multinomial Naive Bayes Model]]

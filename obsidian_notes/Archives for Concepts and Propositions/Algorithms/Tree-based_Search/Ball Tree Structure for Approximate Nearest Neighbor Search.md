@@ -7,48 +7,38 @@ tags:
   - algorithm/tree_based_search
   - algorithm/tree
 keywords:
-  - kd_tree_search
+  - ball_tree_search
 topics:
   - information_retrieval/search
   - algorithmt/tree_based_search
-name: k-d Tree Structure for Approximate Nearest Neighbor Search
+name: Ball Tree Structure for Approximate Nearest Neighbor Search
 date of note: 2024-11-29
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: k-d Tree Structure for Approximate Nearest Neighbor Search
+>**Name**: Ball Tree Structure for Approximate Nearest Neighbor Search
 
 ![[Approximate Nearest Neighbor Search for Information Retrieval#^fb4fa7]]
 
 - [[Approximate Nearest Neighbor Search for Information Retrieval]]
 
 >[!important] Definition
->The **$k$-$d$ tree** is a data structure used for *multi-dimensional space partitioning.*
->- It creates a *binary tree* with each node representing a part of the space by *iteratively* dividing the space *along predefined dimensions*.
->- k-d tree *parition* the space into a small number of cells $C$ as $$\mathcal{X} = \bigcup_{i\in I}C_{i}, \quad C_{i}\cap C_{j} = \emptyset, \quad \forall i,j\in I,$$ each containing only a few representatives from an input set of points.
 
 
-- [[Partition of Set]]
 - [[Binary Tree Order and Traversal]]
-
-![[kd_tree_partition.png]]
-
+- [[k-d Tree Structure for Approximate Nearest Neighbor Search]]
 
 
-![[kd_tree_example.png]]
+![[ball_tree_search.png]]
+
+
+
 
 
 ### Approximate Nearest Neighbor Search in k-d Tree
 
->[!important] Definition
->Given a query $q$ and a k-d tree for data set $\mathcal{D}$.
->
->The **approximate nearest neighbor search** in **$k$-$d$ tree** can be down by traversing down the hierarchy to find the *smallest cell* containing $q$, and then scan through the objects *in this cell* until we find what we want.
->$$
->x^{(1)} = \arg\min_{x\in \mathcal{D}} d(q, x) \implies  \hat{x}^{(1)} = \arg\min_{x \in C(q)}\; d(q, x)
->$$
 
 
 ### Insert Operation
@@ -78,10 +68,6 @@ date of note: 2024-11-29
 >- In the **worst-case** the tree would essentally be a linked list and the height would be $$O(n).$$
 >- In the **best case** it would be *well-balanced* and the height would be $$O(\log n)$$
 
-## Variants of k-d Tree
-
-- [[Ball Tree Structure for Approximate Nearest Neighbor Search]]
-
 
 
 -----------
@@ -102,7 +88,5 @@ date of note: 2024-11-29
 - Wikipedia [K-d_tree](https://en.wikipedia.org/wiki/K-d_tree)
 - Youtube 
 	- [KD-Tree Nearest Neighbor Data Structure](https://www.youtube.com/watch?v=Glp7THUpGow)
-	- [KD tree algorithm: how it works](https://www.youtube.com/watch?v=TLxWtXEbtFE)
-	- 
 - Medium
 	- [Ball tree and KD Tree Algorithms](https://medium.com/@geethasreemattaparthi/ball-tree-and-kd-tree-algorithms-a03cdc9f0af9)
