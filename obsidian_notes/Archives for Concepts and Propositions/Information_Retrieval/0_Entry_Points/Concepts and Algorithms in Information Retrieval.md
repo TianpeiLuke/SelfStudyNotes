@@ -50,11 +50,6 @@ date of note: 2024-09-13
 - [[Inverted Index for Information Retrieval]]
 
 
-### Index Compression
-
-
-
-
 ### Scoring, Term Weighting and Vector Space Model
 
 - [[Co-Occurrence Matrix]]
@@ -62,7 +57,15 @@ date of note: 2024-09-13
 - [[Pointwise Mutual Information]]
 - [[Vector Space Model in Information Retrieval]]
 
-### Computing scores in a complete search system
+### Information Retrieval System
+
+#### Scoring and Ranking
+
+
+#### Index System
+
+
+#### Query Operator
 
 
 
@@ -118,8 +121,10 @@ date of note: 2024-09-13
 - [[ColBERT and Bi-Encoder Structure for Dense Information Retrieval]]
 
 
-### Link Analysis
+### Link Analysis and Network Theory
 
+- [[Concepts and Theorems in Network Theory]]
+- [[PageRank Algorithm for Ranking based on Network]]
 
 
 ### Approximate Nearest Neighbor Search

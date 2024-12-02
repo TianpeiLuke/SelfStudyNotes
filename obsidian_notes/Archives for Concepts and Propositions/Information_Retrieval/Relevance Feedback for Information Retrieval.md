@@ -25,4 +25,4 @@ date of note: 2024-11-29
 ##  Recommended Notes and References
 
 
-- [[Introduction to Information Retrieval by Manning]]
+- [[Introduction to Information Retrieval by Manning]] pp 177 - 188
