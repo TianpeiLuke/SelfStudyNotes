@@ -87,9 +87,8 @@ date of note: 2024-11-29
 ##  Recommended Notes and References
 
 
-- [[Locality-Sensitive Hashing or LSH]]
-- [[Information Retrieval]]
 
+- [[Information Retrieval]]
 - [[Metric Space]]
 - [[Graph]]
 
@@ -99,3 +98,4 @@ date of note: 2024-11-29
 - Youtube
 	- [Graph-Based Approximate Nearest Neighbors (ANN) and HNSW](https://www.youtube.com/watch?v=4PsyNdFlxmk)
 	- [[CVPR20 Tutorial] Billion-scale Approximate Nearest Neighbor Search](https://www.youtube.com/watch?v=SKrHs03i08Q)
+	- [Approximate Nearest Neighbors : Data Science Concepts](https://www.youtube.com/watch?v=DRbjpuqOsjk)

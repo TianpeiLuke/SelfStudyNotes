@@ -27,8 +27,12 @@ date of note: 2024-11-29
 >[!important] Definition
 >The **$k$-$d$ tree** is a data structure used for *multi-dimensional space partitioning.*
 >- It creates a *binary tree* with each node representing a part of the space by *iteratively* dividing the space *along predefined dimensions*.
->- k-d tree *parition* the space into a small number of cells $C$ as $$\mathcal{X} = \bigcup_{i\in I}C_{i}, \quad C_{i}\cap C_{j} = \emptyset, \quad \forall i,j\in I,$$ each containing only a few representatives from an input set of points.
-
+>	- *Each node* in the binary tree compares points in *one specific dimension*
+>- k-d tree *parition* the space into a small number of *box-shaped* cells $C$ as $$\mathcal{X} = \bigcup_{i\in I}C_{i} \subset \mathbb{R}^{k}, \quad C_{i}\cap C_{j} = \emptyset, \quad \forall i,j\in I,$$ each containing only a few representatives from an input set of points.
+>	- Each cell $C_{i}$ is defined by $2k$ *half-spaces* where $k$ is the *dimension* of the space $\mathcal{X}$. 
+>	- These cells are identified via the *path* from *root* to the corresponding *nodes*, with each half-space defined via the coordinate value of the node along the predefined dimension.
+>	- "*$k$-$d$ tree*" means *k-dimensional tree.*
+>
 
 - [[Partition of Set]]
 - [[Binary Tree Order and Traversal]]
@@ -37,18 +41,114 @@ date of note: 2024-11-29
 
 
 
-![[kd_tree_example.png]]
+### Construction of k-d Tree
 
+>[!quote]
+>Typical algorithms construct **kd-trees** by partitioning point sets. 
+>- Each node in the tree is defined by a **plane** cutting through *one of the dimensions*. 
+>	- Ideally, this plane partitions the subset of points into *equal-sized left/right* (or up/down) subsets. 
+>- These children are again partitioned into *equal halves*, using planes through a *different dimension*. 
+>- Partitioning *stops* after $\log(n)$ *levels*, with every point in its own leaf cell. 
+>
+>The cutting planes along any path from the root to another node defines a **unique box-shaped region** of space. 
+>- Each subsequent plane cuts this box into two boxes. 
+>- Each box-shaped region is defined by $2k$ planes, where k is the number of dimensions. 
+>- Indeed, the “**kd**” in *kd-tree* is short for “**k-dimensional**.” 
+>- We maintain the region of interest defined by the intersection of these half-spaces as we move down the tree.
+>  
+>-- [[Algorithm Design Manual by Skiena]] pp 460  
+
+>[!important] Definition
+>The algorithm for **construction of $k$-$d$ tree** is described as follows:
+>
+ >**kdtree** ($\mathcal{D}$, $h$):
+>- *Require*: data set $\mathcal{D} := \{ x_{1} \,{,}\ldots{,}\,x_{n} \} \subset \mathbb{R}^{k}$
+>	- Denote each point as $$x_{i} := (x_{i}^{1}\,{,}\ldots{,}\,x_{i}^{k}).$$
+>- *Require*: **depth** of **current layer** $h$
+>- If $\mathcal{D} = \emptyset$:
+>	- Return *NULL* pointer.
+>- Determine the **current dimension** of interest from the *layer depth* as $$d \equiv h \mod k$$
+>- **Sort** $\mathcal{D}$ in ascending order according to $d$-th *coordinate value* i.e. for any $i \le j$, $$x_{(i)} \le x_{(j)}\; \iff \; x_{(i)}^{d} \le x_{(j)}^{d}$$
+>	- Denote $\mathcal{D}^{(d)}$ as the sorted list via $d$-th *coordinate*
+>- *Create* **node** at level $h$
+>	- $$\text{node.value}= x_{(i)} \;\;\text{ if }\;\;x_{(i)}^{(d)} = \text{median}(x_{1}^{d} \,{,}\ldots{,}\,x_{n}^{d})$$
+>	- Denote $$\mathcal{D}_{\leq}^{(d)} := \left\{ x_{i_{1}} \,{,}\ldots{,}\,x_{i_{m}}\;:\, x_{i_{1}}^{d} \,{\le}\ldots{\le}\, x_{i_{m}}^{d} \le \text{median} \right\} $$ and  $$\mathcal{D}_{>}^{(d)} := \left\{ x_{j_{1}} \,{,}\ldots{,}\,x_{j_{n-m}}\;:\, \text{median} < x_{j_{1}}^{d} \,{\le}\ldots{\le}\, x_{j_{n-m}}^{d}  \right\} $$
+>- Construct the **left subtree** by calling the  **kdtree** function via **recursion**
+>	- $$\text{node.left}= \text{kdtree}(\mathcal{D}_{\leq}^{(d)}, h+1)$$
+>- Construct the **right subtree** by calling the  **kdtree** function via **recursion**
+>	- $$\text{node.right}= \text{kdtree}(\mathcal{D}_{>}^{(d)}, h+1)$$
+>- Return the reference to the  *node*. $$r^{*} \to \text{node}$$
+
+- [[Binary Tree Order and Traversal]]
+
+
+![[kd_tree_example.png]]
 
 ### Approximate Nearest Neighbor Search in k-d Tree
 
 >[!important] Definition
->Given a query $q$ and a k-d tree for data set $\mathcal{D}$.
+>Given a query $q$ and a k-d tree that partitioned the data set $\mathcal{D}$  into cells $$\mathcal{X} = \bigcup_{i\in I}C_{i}, \quad C_{i}\cap C_{j} = \emptyset, \quad \forall i,j\in I,$$ 
 >
 >The **approximate nearest neighbor search** in **$k$-$d$ tree** can be down by traversing down the hierarchy to find the *smallest cell* containing $q$, and then scan through the objects *in this cell* until we find what we want.
 >$$
->x^{(1)} = \arg\min_{x\in \mathcal{D}} d(q, x) \implies  \hat{x}^{(1)} = \arg\min_{x \in C(q)}\; d(q, x)
+>x^{(1)} = \arg\min_{x\in \mathcal{D}} d(q, x) \implies  \hat{x}^{(1)} = \arg\min_{x \in C_{i(q)}}\; d(q, x)
 >$$
+>where $q \in C_{i(q)}.$
+
+>[!important] Definition
+>The **search algorithm** can be seen as finding the *smallest cell that contains* $q$ and it compare the minimal distance of points in cell with $q$.
+>
+>**search(q, node, h, best, min_dist)**:
+>- *Require*: the query $q$ $$q := (q^1 \,{,}\ldots{,}\,q^{k})$$
+>- *Require*: the *reference* to the *root* of a $k$-$d$ (sub-)tree, $\text{node}$
+>- *Require*: the depth of the node
+>- *Require*: the *previous best candidate point* $$\text{best} = x^{*}\in \mathcal{D}$$
+>- *Require*: the *previous minimum distance* $\text{min\_dist}$
+>- Determine the *coordinate dimension* for comparison $$d \equiv h \mod k$$
+>- If $\text{node}$ is NULL
+>	- *Return*
+>		- the *best candidate* by far $\text{best}$
+>		- the *minimum distance* $\text{min\_dist}$
+>- Compute **distance** from *query* to the node value $$d_{q,n} := d(q\,,\, \text{node.value})$$ 
+>	- *Update* the minimum distance $$\text{min\_dist} \leftarrow \min\{\text{min\_dist},\, d_{q,n}  \}$$
+>	- If $d_{q,n} \le \text{min\_dist}$
+>		- *Update* the best candidate as the node $$\text{best} \leftarrow \text{node.value}$$
+>- Compare the *$d$-th coordinate* of the *query* with the corresponding *node value*:
+>	- If $q^{d} \le \text{node.value}^{d}$
+>		- Search the **left sub-tree** via **recursion** $$(\text{best\_left},\, \text{min\_dist\_left}) \leftarrow \text{search}(q, \text{node.left}, h+1, \text{best}, \text{min\_dist})$$
+>		- Find the **distance** from *query* to **cutting plane** at node along the coordinate $d$, $$r := \text{node.value}^{d} - q^{d}$$
+>		- If $r < \text{min\_dist\_left}$:
+>			- *Explore* **right sub-tree**  $$(\text{best\_right},\, \text{min\_dist\_right}) \leftarrow \text{search}(q, \text{node.right}, h+1, \text{best}, \text{min\_dist})$$
+>			- *Choose* the *best solution* from both sides with *minimal distance*
+>				- $$\text{min\_dist} \leftarrow \min\{\text{min\_dist\_left},\, \text{min\_dist\_right} \}$$
+>				- If $\text{min\_dist\_left} \le \text{min\_dist\_right}$
+>					- $$\text{best} \leftarrow \text{best\_left}$$
+>				- Else
+>					- $$\text{best} \leftarrow \text{best\_right}$$
+>		- Else
+>			- Update the best solution and minimal distance $$\text{min\_dist} \leftarrow \text{min\_dist\_left}$$
+>			- $$\text{best} \leftarrow \text{best\_left}$$
+>	- Else, i.e. $q^{d} > \text{node.value}^{d}$
+>		-  Search the **right sub-tree** via **recursion** $$(\text{best\_right},\, \text{min\_dist\_right}) \leftarrow \text{search}(q, \text{node.right}, h+1, \text{best}, \text{min\_dist})$$
+>		- Find the **distance** from *query* to **cutting plane** at node along the coordinate $d$, $$r := q^{d} - \text{node.value}^{d}$$
+>		- If $r < \text{min\_dist\_right}$:
+>			- *Explore* **left sub-tree**  $$(\text{best\_left},\, \text{min\_dist\_left}) \leftarrow \text{search}(q, \text{node.left}, h+1, \text{best}, \text{min\_dist})$$
+>			- *Choose* the *best solution* from both sides with *minimal distance*
+>				- $$\text{min\_dist} \leftarrow \min\{\text{min\_dist\_left},\, \text{min\_dist\_right} \}$$
+>				- If $\text{min\_dist\_left} \le \text{min\_dist\_right}$
+>					- $$\text{best} \leftarrow \text{best\_left}$$
+>				- Else
+>					- $$\text{best} \leftarrow \text{best\_right}$$
+>		- Else
+>			- Update the best solution and minimal distance $$\text{min\_dist} \leftarrow \text{min\_dist\_right}$$
+>			- $$\text{best} \leftarrow \text{best\_right}$$
+>- *Return* 
+>	- the *best candidate* by far $\text{best}$
+>	- the *minimum distance* $\text{min\_dist}$
+
+
+- [[Greedy Search and Hill Climbing]]
+
 
 
 ### Insert Operation
@@ -57,6 +157,13 @@ date of note: 2024-11-29
 
 ### FindMin Operation
 
+>[!important] Definition
+>**FindMin(d)** function find the point with the *smallest value* in the *$d$-th dimension*.
+>
+>The **FindMin(d)** function can be described as follows:
+>- *Require*: the $k$-$d$ tree $\mathcal{T}$
+>- *Require*: the dimension $d$
+>- 
 
 
 
@@ -91,6 +198,9 @@ date of note: 2024-11-29
 - [[Binary Tree Order and Traversal]]
 - [[Information Retrieval]]
 
+- [[Tree Graph and Forest]]
+
+
 - [[Introduction to Algorithms by Cormen]]
 - [[Algorithm Design Manual by Skiena]] pp 460 - 463, 638 - 647
 
@@ -103,6 +213,6 @@ date of note: 2024-11-29
 - Youtube 
 	- [KD-Tree Nearest Neighbor Data Structure](https://www.youtube.com/watch?v=Glp7THUpGow)
 	- [KD tree algorithm: how it works](https://www.youtube.com/watch?v=TLxWtXEbtFE)
-	- 
+	- [Tutorial 5: K-NN Part 7 KD-Trees](https://www.youtube.com/watch?v=oQQrxiJvnhw)
 - Medium
 	- [Ball tree and KD Tree Algorithms](https://medium.com/@geethasreemattaparthi/ball-tree-and-kd-tree-algorithms-a03cdc9f0af9)
