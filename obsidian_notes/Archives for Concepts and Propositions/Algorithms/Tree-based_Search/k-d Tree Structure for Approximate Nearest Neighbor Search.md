@@ -59,7 +59,7 @@ date of note: 2024-11-29
 >-- [[Algorithm Design Manual by Skiena]] pp 460  
 
 >[!important] Definition
->The algorithm for **construction of $k$-$d$ tree** is described as follows:
+>The *recursive* algorithm for **construction of $k$-$d$ tree** is described as follows:
 >
  >**kdtree** ($\mathcal{D}$, $h$):
 >- *Require*: data set $\mathcal{D} := \{ x_{1} \,{,}\ldots{,}\,x_{n} \} \subset \mathbb{R}^{k}$
@@ -97,14 +97,14 @@ date of note: 2024-11-29
 >where $q \in C_{i(q)}.$
 
 >[!important] Definition
->The **approximate nearest neighbor search** via **$k$-$d$ tree** can be seen as finding the *smallest cell that contains* $q$ and it compare the minimal distance of points in cell with $q$.
+>The **approximate nearest neighbor search** via **$k$-$d$ tree** can be seen as a **recursive algorithm** that finds the *smallest cell that contains* $q$ and compares with the minimal distance of points in cell with $q$.
 >
 >**search(q, node, h, best, min_dist)**:
 >- *Require*: the query $q$ $$q := (q^1 \,{,}\ldots{,}\,q^{k})$$
->- *Require*: the *reference* to the *root* of a $k$-$d$ (sub-)tree, $\text{node}$
+>- *Require*: the *reference* to the *node* of a $k$-$d$ (sub-)tree, $\text{node}$
 >- *Require*: the depth of the node
->- *Require*: the *previous best candidate point* $$\text{best} = x^{*}\in \mathcal{D}$$
->- *Require*: the *previous minimum distance* $\text{min\_dist}$
+>- *Require*: the *best candidate point* $$\text{best} = x^{*}\in \mathcal{D}$$
+>- *Require*: the *minimum distance* $\text{min\_dist}$
 >- Determine the *coordinate dimension* for comparison $$d \equiv h \mod k$$
 >- If $\text{node}$ is `None`
 >	- *Return*
@@ -132,32 +132,89 @@ date of note: 2024-11-29
 
 - [[Greedy Search and Hill Climbing]]
 
-
-
 ### Insert Operation
 
-
+>[!important] Definition
+>The **insert** operation of k-d tree is described as the **recursion** below
+>
+>**insert(x, node, h)**
+>- *Require*: the value $x\in \mathbb{R}^{k}$ to be inserted to the tree
+>- *Require*: node, as the *reference* to the current node
+>- *Require*: the current *depth* $h$ of the node
+>- Determine the *coordinate dimension* for comparison $$d \equiv h \mod k$$
+>- If $\text{node} =$ `None`:
+>	- *create* a new node with $$\text{node.value} = x,$$ $$\text{node.left} = \text{node.right}= \text{None}$$
+>- Elif $\text{node.value} = x$:
+>	- *Return* with duplication warning
+>- Elif $x^{d} \le \text{node.value}^{d}$:
+>	- Add node to the **left sub-tree** $$\text{node.left} = \text{insert}(x, \text{node.left}, h+1)$$
+>- Else i.e. $x^{d} > \text{node.value}^{d}$:
+>	- Add node to the **right sub-tree** $$\text{node.right} = \text{insert}(x, \text{node.right}, h+1)$$
+>- *Return*: node
 
 ### FindMin Operation
 
 >[!important] Definition
->**FindMin(d)** function find the point with the *smallest value* in the *$d$-th dimension*.
+>**find_min(d)** function find the point with the *smallest value* in the *$d$-th dimension*.
 >
->The **FindMin(d)** function can be described as follows:
->- *Require*: the $k$-$d$ tree $\mathcal{T}$
->- *Require*: the dimension $d$
->- 
+>The **find_min(node, h, cd)** function can be described as follows:
+>- *Require*: node, as the reference to current node in the tree
+>- *Require*: the current depth $h$
+>- *Require*: the current search dimension $cd$
+>- If $\text{node}=$`None`: i.e. the sub-tree is empty
+>	- Return `None`
+>- Determine the *coordinate dimension* for comparison $$d \equiv h \mod k$$
+>- If $d = cd$:
+>	- Then the **minimum** *cannot be in the* **right subtree**, so search the **left subtree**
+>	- If $\text{node.left}=$`None`:
+>		- *Return*: node.value.
+>	- Else:
+>		- *Return*: $$\text{find\_min}(\text{node.left}, h+1, cd)$$
+>- Elif $d \neq cd$:
+>	- Then the **minimum** can be in **either** subtrees.
+>	-  *Return*: $$\min\{\text{node.value},\; \text{find\_min}(\text{node.left}, h+1, cd), \; \text{find\_min}(\text{node.right}, h+1, cd)\}$$
 
 
 
 ### Deletion Operation
 
 
-#### General Idea
+>[!important] 
+>In order to **delete** a *node* with corresponding *dimension* $d$ in the tree, we have to find the *node* with **minimal value** *along the dimension* $d$ in the **right subtree**.  $$\text{node-next} = \text{find\_min}(\text{node.right}, h+1, d)$$ This node is the *immediate neighbor* of the deleted node in the tree.
+>- We need to **replace** the deleted node with the *immediate next node*.
+>- And then *delete* that value in the right sub-tree via **recursive call** of **delete** operation on the right sub-tree.
+>
+>If the *right subtree is empty*, we find the *minimal value along* $d$ in the **left subtree** $$\text{node-min-left} = \text{find\_min}(\text{node.right}, h+1, d)$$
+>- Then *replace* the deleted node with the left minimum
+>- And call the deletion process to delete the remaining minimum node in the *left subtree*
 
-
-
-#### Case: No Right Subtree
+>[!important]
+>The *recursive* **deletion** operation for k-d tree is described as below
+>
+>**delete(x, node, h)**
+>- *Require*: the value $x\in \mathcal{D}$ to be deleted
+>- *Require*: the reference to the current node
+>- *Require*: the *current depth*  $h$ of node
+>- If $\text{node}=$`None`:
+>	- *Return* with error message
+>- Determine the *coordinate dimension* for comparison $$d \equiv h \mod k$$
+>- If $\text{node.value} = x$, i.e. the node contains value to be deleted
+>	- If $\text{node.right}\neq$`None`, i.e the **right subtree nonempty**
+>		- *Replace* the value of node to be deleted by the **minimum value** in the **right subtree**. The new node is the *minimum-value in the right tree*. $$\text{node.value} = \text{find\_min}(\text{node.right}, h+1, d)$$
+>		- *Recursive* call **delete operation** on the *right sub-tree* $$\text{node.right} = \text{delete}(\text{node.value},\, \text{node.right}, h+1)$$
+>	- Elif $\text{node.left}\neq$`None`, i.e the **left subtree nonempty**
+>		- *Replace* the value of node to be deleted by the **minimum value** in the **left subtree**; effectively, this **swap** *left subtree* with the *right subtree* $$\text{node.value} = \text{find\_min}(\text{node.left}, h+1, d)$$
+>		- *Recursive* call **delete operation** on the *new right sub-tree* $$\text{node.right} = \text{delete}(\text{node.value},\, \text{node.left}, h+1)$$
+>	- Else, i.e. no subtrees then delete directly
+>		- $$\text{node} = None$$
+>- Else, if current node value does **not match deleted value**
+>	- If $x^{d} \le \text{node.value}^{d}$
+>		- Search node to be deleted to the *left subtree* and *delete* it $$\text{node.left} = \text{delete}(x, \text{node.left},\, h+1)$$
+>	- Else
+>		- Search node to be deleted to the *right subtree* and *delete* it  $$\text{node.right} = \text{delete}(x, \text{node.right},\, h+1)$$
+>- *Return*
+>	- node.
+ 
 
 
 
