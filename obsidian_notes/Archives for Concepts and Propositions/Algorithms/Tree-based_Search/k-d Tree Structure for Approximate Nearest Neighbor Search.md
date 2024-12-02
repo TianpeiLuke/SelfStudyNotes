@@ -66,7 +66,7 @@ date of note: 2024-11-29
 >	- Denote each point as $$x_{i} := (x_{i}^{1}\,{,}\ldots{,}\,x_{i}^{k}).$$
 >- *Require*: **depth** of **current layer** $h$
 >- If $\mathcal{D} = \emptyset$:
->	- Return *NULL* pointer.
+>	- Return  `None`
 >- Determine the **current dimension** of interest from the *layer depth* as $$d \equiv h \mod k$$
 >- **Sort** $\mathcal{D}$ in ascending order according to $d$-th *coordinate value* i.e. for any $i \le j$, $$x_{(i)} \le x_{(j)}\; \iff \; x_{(i)}^{d} \le x_{(j)}^{d}$$
 >	- Denote $\mathcal{D}^{(d)}$ as the sorted list via $d$-th *coordinate*
@@ -77,7 +77,8 @@ date of note: 2024-11-29
 >	- $$\text{node.left}= \text{kdtree}(\mathcal{D}_{\leq}^{(d)}, h+1)$$
 >- Construct the **right subtree** by calling the  **kdtree** function via **recursion**
 >	- $$\text{node.right}= \text{kdtree}(\mathcal{D}_{>}^{(d)}, h+1)$$
->- Return the reference to the  *node*. $$r^{*} \to \text{node}$$
+>- Return
+>	- $\text{node}$, the reference to the root
 
 - [[Binary Tree Order and Traversal]]
 
@@ -96,7 +97,7 @@ date of note: 2024-11-29
 >where $q \in C_{i(q)}.$
 
 >[!important] Definition
->The **search algorithm** can be seen as finding the *smallest cell that contains* $q$ and it compare the minimal distance of points in cell with $q$.
+>The **approximate nearest neighbor search** via **$k$-$d$ tree** can be seen as finding the *smallest cell that contains* $q$ and it compare the minimal distance of points in cell with $q$.
 >
 >**search(q, node, h, best, min_dist)**:
 >- *Require*: the query $q$ $$q := (q^1 \,{,}\ldots{,}\,q^{k})$$
@@ -105,46 +106,28 @@ date of note: 2024-11-29
 >- *Require*: the *previous best candidate point* $$\text{best} = x^{*}\in \mathcal{D}$$
 >- *Require*: the *previous minimum distance* $\text{min\_dist}$
 >- Determine the *coordinate dimension* for comparison $$d \equiv h \mod k$$
->- If $\text{node}$ is NULL
+>- If $\text{node}$ is `None`
 >	- *Return*
->		- the *best candidate* by far $\text{best}$
->		- the *minimum distance* $\text{min\_dist}$
+>		- $\text{best}$
+>		- $\text{min\_dist}$
 >- Compute **distance** from *query* to the node value $$d_{q,n} := d(q\,,\, \text{node.value})$$ 
->	- *Update* the minimum distance $$\text{min\_dist} \leftarrow \min\{\text{min\_dist},\, d_{q,n}  \}$$
 >	- If $d_{q,n} \le \text{min\_dist}$
+>		- *Update* the minimum distance $$\text{min\_dist} \leftarrow d_{q,n}$$
 >		- *Update* the best candidate as the node $$\text{best} \leftarrow \text{node.value}$$
 >- Compare the *$d$-th coordinate* of the *query* with the corresponding *node value*:
 >	- If $q^{d} \le \text{node.value}^{d}$
->		- Search the **left sub-tree** via **recursion** $$(\text{best\_left},\, \text{min\_dist\_left}) \leftarrow \text{search}(q, \text{node.left}, h+1, \text{best}, \text{min\_dist})$$
->		- Find the **distance** from *query* to **cutting plane** at node along the coordinate $d$, $$r := \text{node.value}^{d} - q^{d}$$
->		- If $r < \text{min\_dist\_left}$:
->			- *Explore* **right sub-tree**  $$(\text{best\_right},\, \text{min\_dist\_right}) \leftarrow \text{search}(q, \text{node.right}, h+1, \text{best}, \text{min\_dist})$$
->			- *Choose* the *best solution* from both sides with *minimal distance*
->				- $$\text{min\_dist} \leftarrow \min\{\text{min\_dist\_left},\, \text{min\_dist\_right} \}$$
->				- If $\text{min\_dist\_left} \le \text{min\_dist\_right}$
->					- $$\text{best} \leftarrow \text{best\_left}$$
->				- Else
->					- $$\text{best} \leftarrow \text{best\_right}$$
->		- Else
->			- Update the best solution and minimal distance $$\text{min\_dist} \leftarrow \text{min\_dist\_left}$$
->			- $$\text{best} \leftarrow \text{best\_left}$$
+>		- Search the **left sub-tree** via **recursion** $$(\text{best},\, \text{min\_dist}) \leftarrow \text{search}(q, \text{node.left}, h+1, \text{best}, \text{min\_dist})$$
+>		- Compare the **distance** from *query* to **cutting plane** at node along the coordinate $d$, $$r := \text{node.value}^{d} - q^{d}$$
+>		- If $r \le \text{min\_dist}$:
+>			- *Explore* **right sub-tree** and update the *best solutions* and *minimal distance* $$(\text{best},\, \text{min\_dist}) \leftarrow \text{search}(q, \text{node.right}, h+1, \text{best}, \text{min\_dist})$$
 >	- Else, i.e. $q^{d} > \text{node.value}^{d}$
->		-  Search the **right sub-tree** via **recursion** $$(\text{best\_right},\, \text{min\_dist\_right}) \leftarrow \text{search}(q, \text{node.right}, h+1, \text{best}, \text{min\_dist})$$
+>		-  Search the **right sub-tree** via **recursion** $$(\text{best},\, \text{min\_dist}) \leftarrow \text{search}(q, \text{node.right}, h+1, \text{best}, \text{min\_dist})$$
 >		- Find the **distance** from *query* to **cutting plane** at node along the coordinate $d$, $$r := q^{d} - \text{node.value}^{d}$$
->		- If $r < \text{min\_dist\_right}$:
->			- *Explore* **left sub-tree**  $$(\text{best\_left},\, \text{min\_dist\_left}) \leftarrow \text{search}(q, \text{node.left}, h+1, \text{best}, \text{min\_dist})$$
->			- *Choose* the *best solution* from both sides with *minimal distance*
->				- $$\text{min\_dist} \leftarrow \min\{\text{min\_dist\_left},\, \text{min\_dist\_right} \}$$
->				- If $\text{min\_dist\_left} \le \text{min\_dist\_right}$
->					- $$\text{best} \leftarrow \text{best\_left}$$
->				- Else
->					- $$\text{best} \leftarrow \text{best\_right}$$
->		- Else
->			- Update the best solution and minimal distance $$\text{min\_dist} \leftarrow \text{min\_dist\_right}$$
->			- $$\text{best} \leftarrow \text{best\_right}$$
+>		- If $r \le \text{min\_dist}$:
+>			- *Explore* **left sub-tree** and update the *best solutions* and *minimal distance*  $$(\text{best},\, \text{min\_dist}) \leftarrow \text{search}(q, \text{node.left}, h+1, \text{best}, \text{min\_dist})$$
 >- *Return* 
->	- the *best candidate* by far $\text{best}$
->	- the *minimum distance* $\text{min\_dist}$
+>	- $\text{best}$
+>	- $\text{min\_dist}$
 
 
 - [[Greedy Search and Hill Climbing]]
@@ -216,3 +199,4 @@ date of note: 2024-11-29
 	- [Tutorial 5: K-NN Part 7 KD-Trees](https://www.youtube.com/watch?v=oQQrxiJvnhw)
 - Medium
 	- [Ball tree and KD Tree Algorithms](https://medium.com/@geethasreemattaparthi/ball-tree-and-kd-tree-algorithms-a03cdc9f0af9)
+	- [A look into K-Dimensional Trees](https://medium.com/smucs/a-look-into-k-dimensional-trees-290ec69dffe9)
