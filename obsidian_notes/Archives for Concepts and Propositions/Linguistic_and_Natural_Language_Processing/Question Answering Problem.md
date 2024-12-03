@@ -31,3 +31,4 @@ date of note: 2024-05-12
 
 - [[Speech and Language Processing by Jurafsky]] pp 289
 - [[Practical Natural Language Processing by Vajjala]] pp 200 - 201
+- [[Artificial Intelligence Modern Approach by Russell]] pp 872

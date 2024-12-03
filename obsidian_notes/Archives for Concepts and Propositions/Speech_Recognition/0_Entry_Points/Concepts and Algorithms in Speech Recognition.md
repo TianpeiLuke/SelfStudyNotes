@@ -83,3 +83,4 @@ date of note: 2024-09-13
 - [[Speech and Language Processing by Jurafsky]]
 - [[Foundations of Statistical Natural Language Processing by Manning]]
 - [[Handbook of Natural Language Processing by Indurkhya]]
+- [[Artificial Intelligence Modern Approach by Russell]]

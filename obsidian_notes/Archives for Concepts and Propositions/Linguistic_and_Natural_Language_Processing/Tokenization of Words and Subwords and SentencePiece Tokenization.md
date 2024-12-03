@@ -155,4 +155,6 @@ date of note: 2024-11-17
 
 
 - [[Speech and Language Processing by Jurafsky]] pp 17
+- [[Artificial Intelligence Modern Approach by Russell]] pp 875
+
 - Youtube [LLM Tokenizers Explained: BPE Encoding, WordPiece and SentencePiece](https://www.youtube.com/watch?v=hL4ZnAWSyuU)

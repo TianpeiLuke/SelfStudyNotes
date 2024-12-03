@@ -5,7 +5,7 @@ tags:
 keywords: 
 topics: 
 name: 
-date of note: 2024-05-12
+date of note: 2024-12-02
 ---
 
 ## Concept Definition
@@ -14,7 +14,7 @@ date of note: 2024-05-12
 >**Name**: 
 
 
-- [[Lexical Syntactic and Semantic Ambiguity]]
+
 ## Explanation
 
 

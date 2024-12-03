@@ -32,3 +32,4 @@ date of note: 2024-05-12
 
 
 - [[Speech and Language Processing by Jurafsky]] pp 394
+- [[Artificial Intelligence Modern Approach by Russell]] pp 893

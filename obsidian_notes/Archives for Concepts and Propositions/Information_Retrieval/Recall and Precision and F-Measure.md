@@ -114,6 +114,7 @@ date of note: 2024-11-25
 - [[Introduction to Information Retrieval by Manning]] pp 154 - 156
 - [[Speech and Language Processing by Jurafsky]] pp 66
 - [[Evaluating Learning Algorithms by Japkowicz]]
+- [[Artificial Intelligence Modern Approach by Russell]] pp 869
 
 - Medium
 	- [Recall and Precision at k for Recommender Systems](https://medium.com/@m_n_malaeb/recall-and-precision-at-k-for-recommender-systems-618483226c54)

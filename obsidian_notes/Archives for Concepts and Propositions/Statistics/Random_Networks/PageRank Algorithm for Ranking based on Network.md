@@ -79,3 +79,4 @@ date of note: 2024-12-02
 - [[Social Economic Networks by Jackson]]
 - [[Networks by Newman]] pp 
 - [[Introduction to Information Retrieval by Manning]] pp 464 - 471
+- [[Artificial Intelligence Modern Approach by Russell]] pp 870 - 871

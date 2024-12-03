@@ -122,3 +122,4 @@ date of note: 2024-09-04
 - [[Handbook of Natural Language Processing by Indurkhya]] pp 511
 - [[Foundations of Statistical Natural Language Processing by Manning]] pp 112, 131, 376
 - [[Practical Natural Language Processing by Vajjala]] pp 164
+- [[Artificial Intelligence Modern Approach by Russell]] pp 873 - 876
