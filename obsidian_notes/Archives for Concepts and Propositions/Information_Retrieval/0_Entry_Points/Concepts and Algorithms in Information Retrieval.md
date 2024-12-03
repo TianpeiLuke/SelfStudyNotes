@@ -48,6 +48,7 @@ date of note: 2024-09-13
 ### Index Construction
 
 - [[Inverted Index for Information Retrieval]]
+- [[Indexing or Index Construction for Information Retrieval]]
 
 
 ### Scoring, Term Weighting and Vector Space Model

@@ -50,6 +50,10 @@ date of note: 2024-11-29
 - [[Principal Component Analysis]]
 - [[Information Retrieval]]
 
+
+- Datar, M., Immorlica, N., Indyk, P., & Mirrokni, V. S. (2004, June). Locality-sensitive hashing scheme based on p-stable distributions. In _Proceedings of the twentieth annual symposium on Computational geometry_ (pp. 253-262).
+- Gionis, A., Indyk, P., & Motwani, R. (1999, September). Similarity search in high dimensions via hashing. In _Vldb_ (Vol. 99, No. 6, pp. 518-529).
+
 - Youtube
 	- [Locality Sensitive Hashing (LSH) for Search with Shingling + MinHashing (Python)](https://www.youtube.com/watch?v=e_SBq3s20M8&list=PLIUOU7oqGTLhlWpTz4NnuT3FekouIVlqc&index=5)
 

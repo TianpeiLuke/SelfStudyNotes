@@ -39,6 +39,7 @@ date of note: 2024-11-29
 - [[Order Statistics]]
 - [[Curse of Dimensionality]]
 
+
 ## Explanation
 
 >[!important] 
@@ -55,7 +56,7 @@ date of note: 2024-11-29
 - [[Curse of Dimensionality]]
 - [[Principal Component Analysis]]
 - [[Johnson-Lindenstrauss Lemma for Dimensionality Reduction]]
-
+- Indyk, P., & Motwani, R. (1998, May). Approximate nearest neighbors: towards removing the curse of dimensionality. In _Proceedings of the thirtieth annual ACM symposium on Theory of computing_ (pp. 604-613).
 
 
 ## Algorithms for Approximate Nearest Neighbor 
@@ -103,6 +104,9 @@ date of note: 2024-11-29
 - [[Algorithm Design Manual by Skiena]] pp 460, 638 - 647
 - [[Introduction to Information Retrieval by Manning]]
 - [[Speech and Language Processing by Jurafsky]] pp
+
+- Indyk, P., & Motwani, R. (1998, May). Approximate nearest neighbors: towards removing the curse of dimensionality. In _Proceedings of the thirtieth annual ACM symposium on Theory of computing_ (pp. 604-613).
+
 - Youtube
 	- [Graph-Based Approximate Nearest Neighbors (ANN) and HNSW](https://www.youtube.com/watch?v=4PsyNdFlxmk)
 	- [[CVPR20 Tutorial] Billion-scale Approximate Nearest Neighbor Search](https://www.youtube.com/watch?v=SKrHs03i08Q)

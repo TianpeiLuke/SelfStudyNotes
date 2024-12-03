@@ -14,6 +14,7 @@ date of note: 2024-11-29
 >**Name**: 
 
 
+- [[Indexing or Index Construction for Information Retrieval]]
 
 ## Explanation
 
