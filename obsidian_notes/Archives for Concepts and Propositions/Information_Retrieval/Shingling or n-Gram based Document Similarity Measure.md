@@ -29,7 +29,7 @@ date of note: 2024-11-29
 >  
 >  
 >In particular, let $$(w_{1}\,{,}\ldots{,}\,w_{n})$$ be a **shingle** which is a subsequence of $n$ contiguous tokens in the document $d$.
->- The  **$n$-shingling** of document $d$ is defined as $$S_{n}(d) := \text{unique}\{(w_{1}\,{,}\ldots{,}\,w_{n}) \,{,}\ldots{,}\, (w_{m}\,{,}\ldots{,}\,w_{m+n-1}) \,{,}\ldots{,}\, \}$$ for each $n$-gram $(w_{m}\,{,}\ldots{,}\,w_{m+n-1})$ in $d$
+>- The  **$n$-shingling** of document $d$ is defined as $$S_{n}(d) := \text{unique}\{(w_{1}\,{,}\ldots{,}\,w_{n}) \,{,}\ldots{,}\, (w_{m}\,{,}\ldots{,}\,w_{m+n-1}) \,{,}\ldots{,}\, \}$$ for each $n$-gram $(w_{m}\,{,}\ldots{,}\,w_{m+n-1})$ in $d$.
 >- A *n-gram language model* assign a probability for each *unique shingling*, i.e. $$p(w_{1}\,{,}\ldots{,}\,w_{n})$$ 
 >
 >Then the **$n$-shingling based similiarty** between two documents $d_{1}$ and $d_{2}$ is defined as the *Jaccard similarity* between *$n$-shinglings* of two documents

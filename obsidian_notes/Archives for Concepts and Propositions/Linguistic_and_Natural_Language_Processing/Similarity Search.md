@@ -21,10 +21,25 @@ date of note: 2024-07-29
 - [[k Nearest Neighbor Density Estimation]]
 - [[Metric Space]]
 
-
-
 ## Explanation
 
+
+## Similarity Measure
+
+- [[Jaccard Similarity and Jaccard Distance between Two Sets]]
+- [[Shingling or n-Gram based Document Similarity Measure]]
+- [[Minimum Edit Distance or Levenshtein Distance via Dynamic Programming]]
+- [[Cosine Similarity and Cosine Distance]]
+
+
+## Approximate k-Nearest Neighbor Search
+
+- [[Approximate Nearest Neighbor Search]]
+- [[k-d Tree Structure for Approximate Nearest Neighbor Search]]
+- [[Ball Tree Structure for Approximate Nearest Neighbor Search]]
+- [[Locality-Sensitive Hashing or LSH for Approximate Nearest Neighbor Search]]
+- [[Navigable Small World Model or NSW]]
+- [[Hierarchical Navigable Small Worlds or HNSW for Graph-based ANN Search]]
 
 
 

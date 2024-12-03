@@ -158,6 +158,7 @@ date of note: 2024-09-13
 
 ### Approximate Nearest Neighbor Search
 
+- [[Similarity Search]]
 - [[Approximate Nearest Neighbor Search]]
 - [[k-d Tree Structure for Approximate Nearest Neighbor Search]]
 - [[Ball Tree Structure for Approximate Nearest Neighbor Search]]
@@ -166,6 +167,7 @@ date of note: 2024-09-13
 - [[Navigable Small World Model or NSW]]
 - [[Hierarchical Navigable Small Worlds or HNSW for Graph-based ANN Search]]
 
+- [[FAISS - Facebook AI Similarity Search Tutorial]]
 
 ### Retrieval Augmented Generation for Question-Answering
 

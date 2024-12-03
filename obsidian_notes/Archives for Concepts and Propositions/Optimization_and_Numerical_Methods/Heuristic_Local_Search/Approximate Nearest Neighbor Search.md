@@ -34,7 +34,7 @@ date of note: 2024-11-29
 
 ^fb4fa7
 
-
+- [[Similarity Search]]
 - [[k Nearest Neighbor Classification]]
 - [[Order Statistics]]
 - [[Curse of Dimensionality]]
@@ -95,7 +95,7 @@ date of note: 2024-11-29
 ##  Recommended Notes and References
 
 
-
+- [[Similarity Search]]
 - [[Information Retrieval]]
 - [[Metric Space]]
 - [[Graph]]

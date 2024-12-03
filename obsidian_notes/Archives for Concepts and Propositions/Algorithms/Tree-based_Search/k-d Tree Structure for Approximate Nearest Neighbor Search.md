@@ -237,7 +237,7 @@ date of note: 2024-11-29
 
 - [[Binary Tree Order and Traversal]]
 - [[Information Retrieval]]
-
+- [[Similarity Search]]
 - [[Tree Graph and Forest]]
 
 

@@ -63,7 +63,7 @@ date of note: 2024-11-30
 
 
 - [[FAISS - Facebook AI Similarity Search Tutorial]]
-
+- [[Similarity Search]]
 - [[Approximate Nearest Neighbor Search]]
 - [[Information Retrieval]]
 - [[Graph]]

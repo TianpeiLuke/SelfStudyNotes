@@ -45,7 +45,7 @@ date of note: 2024-11-30
 
 - [[FAISS - Facebook AI Similarity Search Tutorial]]
 
-
+- [[Similarity Search]]
 - [[Information Retrieval]]
 - [[Graph]]
 
