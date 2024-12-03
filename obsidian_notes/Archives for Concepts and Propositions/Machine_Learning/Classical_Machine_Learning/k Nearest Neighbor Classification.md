@@ -66,7 +66,7 @@ date of note: 2024-05-12
 - [[k-d Tree Structure for Approximate Nearest Neighbor Search]]
 - [[Locality-Sensitive Hashing or LSH for Approximate Nearest Neighbor Search]]
 
-- [[Navigable Small World Model and Kleinberg Variant of Watts–Strogatz Model]]
+- [[Navigable Small World Model and Kleinberg Variant of Watts-Strogatz Model]]
 - [[Hierarchical Navigable Small Worlds or HNSW for Graph-based ANN Search]]
 
 
