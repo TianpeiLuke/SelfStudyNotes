@@ -6,6 +6,8 @@ tags:
   - natural_language_processing/sequence_similarity
 keywords:
   - w_shingling_similarity
+  - n_gram_model
+  - shingle_n_gram
 topics:
   - information_retrieval/similarity_measure
   - natural_language_processing/sequence_similarity
@@ -16,7 +18,7 @@ date of note: 2024-11-29
 ## Concept Definition
 
 >[!important]
->**Name**: w-Shingling or n-Gram based Document Similarity Measure
+>**Name**: Shingling or n-Gram based Document Similarity Measure
 
 ![[Jaccard Similarity and Jaccard Distance between Two Sets#^584d86]]
 
@@ -26,11 +28,11 @@ date of note: 2024-11-29
 >- Some textbook called it  **$w$-shinglings** or **$k$-shinglings**.
 >  
 >  
->In particular, let $$(w_{1}\,{,}\ldots{,}\,w_{n})$$ be a subsequence of $n$ contiguous tokens in the document $d$.
+>In particular, let $$(w_{1}\,{,}\ldots{,}\,w_{n})$$ be a **shingle** which is a subsequence of $n$ contiguous tokens in the document $d$.
 >- The  **$n$-shingling** of document $d$ is defined as $$S_{n}(d) := \text{unique}\{(w_{1}\,{,}\ldots{,}\,w_{n}) \,{,}\ldots{,}\, (w_{m}\,{,}\ldots{,}\,w_{m+n-1}) \,{,}\ldots{,}\, \}$$ for each $n$-gram $(w_{m}\,{,}\ldots{,}\,w_{m+n-1})$ in $d$
 >- A *n-gram language model* assign a probability for each *unique shingling*, i.e. $$p(w_{1}\,{,}\ldots{,}\,w_{n})$$ 
 >
->Then the **$n$-shingling based similiarty** between two documents $d_{1}$ and $d_{2}$ is defined as the *Jaccard similarity* between *w-shinglings* of two documents
+>Then the **$n$-shingling based similiarty** between two documents $d_{1}$ and $d_{2}$ is defined as the *Jaccard similarity* between *$n$-shinglings* of two documents
 >$$
 >\text{n-shingling}(d_{1}, d_{2}) := \frac{\lvert S_{n}(d_{1}) \cap S_{n}(d_{2}) \rvert }{\lvert S_{n}(d_{1}) \cup S_{n}(d_{2}) \rvert}
 >$$

@@ -101,8 +101,10 @@ date of note: 2024-09-08
 - [[ROUGE metric for LLM Generation]]
 - [[Bilingual Evaluation Understudy or BLEU metric for LLM Generation]]
 
-## Multinomial Naive Bayes 
 
+## Bag-of-Words and Multinomial Naive Bayes 
+
+- [[Bag-of-Word Model for Document Representation]]
 - [[Multinomial Naive Bayes Model]]
 
 
