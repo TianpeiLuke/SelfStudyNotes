@@ -27,7 +27,7 @@ date of note: 2024-06-02
 ## Explanation
 
 
-- [[Approximate Nearest Neighbor Search for Information Retrieval]]
+- [[Approximate Nearest Neighbor Search]]
 
 
 

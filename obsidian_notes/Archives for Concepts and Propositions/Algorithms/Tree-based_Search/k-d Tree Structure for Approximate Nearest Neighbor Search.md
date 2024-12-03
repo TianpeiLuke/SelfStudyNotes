@@ -20,9 +20,9 @@ date of note: 2024-11-29
 >[!important]
 >**Name**: k-d Tree Structure for Approximate Nearest Neighbor Search
 
-![[Approximate Nearest Neighbor Search for Information Retrieval#^fb4fa7]]
+![[Approximate Nearest Neighbor Search#^fb4fa7]]
 
-- [[Approximate Nearest Neighbor Search for Information Retrieval]]
+- [[Approximate Nearest Neighbor Search]]
 
 >[!important] Definition
 >The **$k$-$d$ tree** is a data structure used for *multi-dimensional space partitioning.*
@@ -81,7 +81,7 @@ date of note: 2024-11-29
 >	- $\text{node}$, the reference to the root
 
 - [[Binary Tree Order and Traversal]]
-
+- [[Recursion Algorithm]]
 
 ![[kd_tree_example.png]]
 

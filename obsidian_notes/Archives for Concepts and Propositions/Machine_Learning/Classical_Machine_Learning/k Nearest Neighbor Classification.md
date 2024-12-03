@@ -60,11 +60,14 @@ date of note: 2024-05-12
 ## Theory
 
 
-## Implementation
+## Implementation via Approximate Nearest Neighbor Search
 
+- [[Approximate Nearest Neighbor Search]]
 - [[k-d Tree Structure for Approximate Nearest Neighbor Search]]
-- [[Locality-Sensitive Hashing or LSH]]
-- [[Approximate Nearest Neighbor Search for Information Retrieval]]
+- [[Locality-Sensitive Hashing or LSH for Approximate Nearest Neighbor Search]]
+
+- [[Navigable Small World Model or NSW]]
+- [[Hierarchical Navigable Small Worlds or HNSW for Graph-based ANN Search]]
 
 
 

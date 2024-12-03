@@ -20,9 +20,9 @@ date of note: 2024-11-29
 >[!important]
 >**Name**: Ball Tree Structure for Approximate Nearest Neighbor Search
 
-![[Approximate Nearest Neighbor Search for Information Retrieval#^fb4fa7]]
+![[Approximate Nearest Neighbor Search#^fb4fa7]]
 
-- [[Approximate Nearest Neighbor Search for Information Retrieval]]
+- [[Approximate Nearest Neighbor Search]]
 
 >[!important] Definition
 

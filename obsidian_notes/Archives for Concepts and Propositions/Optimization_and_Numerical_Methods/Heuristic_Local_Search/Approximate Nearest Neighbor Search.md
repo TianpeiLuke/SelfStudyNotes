@@ -12,14 +12,14 @@ topics:
   - algorithm/search
   - information_retrieval/search
   - machine_learning_algorithm
-name: 
+name: Approximate Nearest Neighbor Search
 date of note: 2024-11-29
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Approximate Nearest Neighbor Search for Information Retrieval
+>**Name**: Approximate Nearest Neighbor Search
 
 >[!important] Definition
 >Let $$\mathcal{D} := \left\{ x_{1}\,{,}\ldots{,}\,x_{n} \right\} $$ be a set of data in $\mathcal{X}$.
@@ -60,10 +60,18 @@ date of note: 2024-11-29
 
 ## Algorithms for Approximate Nearest Neighbor 
 
+### Tree-based Data Structure
 
 - [[k-d Tree Structure for Approximate Nearest Neighbor Search]]
 - [[Ball Tree Structure for Approximate Nearest Neighbor Search]]
-- [[Locality-Sensitive Hashing or LSH]]
+
+### Hash Table and Dimensionality Reduction
+
+- [[Locality-Sensitive Hashing or LSH for Approximate Nearest Neighbor Search]]
+
+### Graph-based Data Structure
+
+- [[Navigable Small World Model or NSW]]
 - [[Hierarchical Navigable Small Worlds or HNSW for Graph-based ANN Search]]
 
 
