@@ -40,3 +40,5 @@ date of note: 2024-07-09
 
 - [[Social Economic Networks by Jackson]] pp 187 - 192, 268
 - [[Networks by Newman]] pp 343 - 344
+- Youtube
+	- [Stanford CS224W: Machine Learning with Graphs | 2021 | Lecture 14.3 - The Small World Model](https://www.youtube.com/watch?v=ZrDpzzVWwFs)

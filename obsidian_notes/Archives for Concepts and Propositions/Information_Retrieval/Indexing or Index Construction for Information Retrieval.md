@@ -44,3 +44,5 @@ date of note: 2024-11-29
 
 
 - [[Introduction to Information Retrieval by Manning]] pp 67 - 84
+- Youtube
+	- [Choosing Indexes for Similarity Search (Faiss in Python)](https://www.youtube.com/watch?v=B7wmo_NImgM)
