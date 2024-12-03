@@ -17,24 +17,29 @@ date of note: 2024-07-09
 
 
 
-- [[Watts-Strogatz Model for Random Network]]
-- [[Navigable Small World Model and Kleinberg Variant of Watts–Strogatz Model]]
+- [[Small World Graph]]
+
 
 ## Explanation
 
 
 
 
+## Variants
+
+- [[Navigable Small World Model and Kleinberg Variant of Watts–Strogatz Model]]
+
 
 -----------
 ##  Recommended Notes and References
 
 
-- [[Graph Neural Network]]
+
 - [[Erdős-Rényi Random Graph]]
+- [[Random Graph]]
 - [[Graph]]
 
 
 
 - [[Social Economic Networks by Jackson]]
-- [[Networks by Newman]] pp 343 - 344
+- [[Networks by Newman]] pp 425

@@ -13,17 +13,18 @@ topics:
   - network_analysis
   - information_retrieval/search
   - information_retrieval/link_analysis
-name: Navigable Small World Model or NSW
+name: Navigable Small World Model and Kleinberg Variant of Watts–Strogatz Model
 date of note: 2024-11-30
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Navigable Small World Model or NSW
+>**Name**: Navigable Small World Model and Kleinberg Variant of Watts–Strogatz Model
 
 
 
+- [[Watts-Strogatz Model for Random Network]]
 - [[Greedy Search and Hill Climbing]]
 
 ## Explanation
@@ -47,13 +48,14 @@ date of note: 2024-11-30
 
 - [[Similarity Search]]
 - [[Information Retrieval]]
+- [[Random Graph]]
 - [[Graph]]
 
 - [[Sum-Product Belief Propagation Algorithm for Clique Tree]]
 - [[Sum-Product Belief-Update Message Passing Algorithm for Clique Tree]]
 - [[Neural Message Passing Algorithm for Graph Neural Network]]
 
-- [[Networks by Newman]] pp 64, 718, 723
+- [[Networks by Newman]] pp 64, 718 -723
 
 - Malkov, Y., Ponomarenko, A., Logvinov, A., & Krylov, V. (2014). Approximate nearest neighbor algorithm based on navigable small world graphs. _Information Systems_, _45_, 61-68.
 - Boguna, M., Krioukov, D., & Claffy, K. C. (2009). Navigability of complex networks. _Nature Physics_, _5_(1), 74-80.

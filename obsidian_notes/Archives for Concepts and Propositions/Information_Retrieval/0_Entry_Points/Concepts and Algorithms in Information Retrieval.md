@@ -165,7 +165,7 @@ date of note: 2024-09-13
 - [[Ball Tree Structure for Approximate Nearest Neighbor Search]]
 - [[Locality-Sensitive Hashing or LSH for Approximate Nearest Neighbor Search]]
 - [[MinHash Algorithm for Approximate Nearest Neighbor Search]]
-- [[Navigable Small World Model or NSW]]
+- [[Navigable Small World Model and Kleinberg Variant of Watts–Strogatz Model]]
 - [[Hierarchical Navigable Small Worlds or HNSW for Graph-based ANN Search]]
 
 - [[FAISS - Facebook AI Similarity Search Tutorial]]
