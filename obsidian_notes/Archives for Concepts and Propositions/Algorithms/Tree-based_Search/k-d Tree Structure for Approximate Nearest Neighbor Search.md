@@ -225,6 +225,13 @@ date of note: 2024-11-29
 >- In the **worst-case** the tree would essentally be a linked list and the height would be $$O(n).$$
 >- In the **best case** it would be *well-balanced* and the height would be $$O(\log n)$$
 
+
+>[!info]
+>The **$k$-$d$ tree** can be seen as a variant of **coordinate descent algorithm** which minimize the distance between candidate and query by looping over the *coordinate dimensions.*
+
+- [[Block Coordinate Descent Algorithm]]
+
+
 ## Variants of k-d Tree
 
 - [[Ball Tree Structure for Approximate Nearest Neighbor Search]]
