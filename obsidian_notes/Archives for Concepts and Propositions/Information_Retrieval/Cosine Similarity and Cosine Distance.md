@@ -3,6 +3,8 @@ tags:
   - concept
   - deep_learning/architecture
   - machine_learning/models
+  - natural_language_processing/sequence_similarity
+  - information_retrieval/similarity_metric
 keywords:
   - cosine_similarity
   - cosine_distance

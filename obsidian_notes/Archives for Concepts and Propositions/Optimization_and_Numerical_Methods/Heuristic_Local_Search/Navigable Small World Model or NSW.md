@@ -29,6 +29,9 @@ date of note: 2024-11-30
 ## Explanation
 
 
+>[!important] 
+>The **time complexity** of searching $k$ nearest neighbor in the graph of $n$ nodes is $$O(\log^k(n))$$
+
 ## Extension
 
 - [[Hierarchical Navigable Small Worlds or HNSW for Graph-based ANN Search]]

@@ -47,7 +47,7 @@ date of note: 2024-09-13
 
 ### Edit Distance
 
-- [[Minimum Edit Distance via Dynamic Programming]]
+- [[Minimum Edit Distance or Levenshtein Distance via Dynamic Programming]]
 
 
 ### N-Gram Models

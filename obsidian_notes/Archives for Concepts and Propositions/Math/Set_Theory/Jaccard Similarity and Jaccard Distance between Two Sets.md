@@ -28,6 +28,8 @@ date of note: 2024-11-13
 >- The **Jaccard similarity** is bounded as $$0 \le J(A, B) \le 1.$$
 >- $$J(A, B) = 0\, \iff A \cap B = \emptyset$$
 
+^584d86
+
 - [[Set Operations]]
 - [[Finite Set and Cardinality]]
 

@@ -57,19 +57,6 @@ date of note: 2024-09-13
 - [[Pointwise Mutual Information]]
 - [[Vector Space Model in Information Retrieval]]
 
-### Information Retrieval System
-
-#### Scoring and Ranking
-
-
-#### Index System
-
-
-#### Query Operator
-
-
-
-
 
 ### Evaluation of Information Retrieval
 
@@ -121,6 +108,48 @@ date of note: 2024-09-13
 - [[ColBERT and Bi-Encoder Structure for Dense Information Retrieval]]
 
 
+### Similarity Measure
+
+#### Set-based Similarity Measure
+
+- [[Jaccard Similarity and Jaccard Distance between Two Sets]]
+- [[Shingling or n-Gram based Document Similarity Measure]]
+- [[Minimum Edit Distance or Levenshtein Distance via Dynamic Programming]]
+
+#### Similarity Measure in Vector Space
+
+- [[Cosine Similarity and Cosine Distance]]
+- [[Weighted Hamming Distance]]
+
+#### Similarity Measure in Space of Probability Density Functions
+
+- [[Concepts and Theorems in Information Theory]]
+- [[Kullback-Leibler Divergence]]
+- [[f-Divergence]]
+- [[alpha-Divergence]]
+- [[Renyi Divergence and Renyi Entropy]]
+- [[Hellinger Distance between Distributions]]
+- [[Jensen-Shannon Divergence]]
+- [[Chi-squared Divergence]]
+- [[Total Variation between Measures]]
+- [[Integral Probability Metric between Probability Measures]]
+- [[Maximum Mean Discrepancy between Probability Measures via RKHS]]
+- [[Wasserstein Distance]]
+
+
+
+### Information Retrieval System
+
+#### Scoring and Ranking
+
+
+#### Index System
+
+
+#### Query Operator
+
+
+
 ### Link Analysis and Network Theory
 
 - [[Concepts and Theorems in Network Theory]]
@@ -133,6 +162,7 @@ date of note: 2024-09-13
 - [[k-d Tree Structure for Approximate Nearest Neighbor Search]]
 - [[Ball Tree Structure for Approximate Nearest Neighbor Search]]
 - [[Locality-Sensitive Hashing or LSH for Approximate Nearest Neighbor Search]]
+- [[MinHash Algorithm for Approximate Nearest Neighbor Search]]
 - [[Navigable Small World Model or NSW]]
 - [[Hierarchical Navigable Small Worlds or HNSW for Graph-based ANN Search]]
 

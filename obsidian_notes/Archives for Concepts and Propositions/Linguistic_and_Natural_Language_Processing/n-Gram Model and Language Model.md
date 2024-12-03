@@ -90,9 +90,16 @@ date of note: 2024-09-08
 
 - [[Multinomial Distribution]]
 
+## Similarity Measure based on n-Gram
+
+- [[Shingling or n-Gram based Document Similarity Measure]]
+
+
 ## Evaluation of Language Model
 
 - [[Perplexity Measure for Language Models]]
+- [[ROUGE metric for LLM Generation]]
+- [[Bilingual Evaluation Understudy or BLEU metric for LLM Generation]]
 
 ## Multinomial Naive Bayes 
 

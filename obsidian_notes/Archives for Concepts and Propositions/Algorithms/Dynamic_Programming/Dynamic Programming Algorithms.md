@@ -91,7 +91,7 @@ date of note: 2024-11-19
 
 ### Natural Language Processing
 
-- [[Minimum Edit Distance via Dynamic Programming]]
+- [[Minimum Edit Distance or Levenshtein Distance via Dynamic Programming]]
 - [[CKY Parsing as Dynamic Programming Algorithm]]
 
 - [[Unigram Tokenization]]
