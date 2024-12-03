@@ -16,7 +16,7 @@ topics:
   - numerical_linear_algebra
   - information_retrieval/link_analysis
 name: PageRank Algorithm for Ranking based on Network
-date of note: 2024-07-09
+date of note: 2024-12-02
 ---
 
 ## Concept Definition

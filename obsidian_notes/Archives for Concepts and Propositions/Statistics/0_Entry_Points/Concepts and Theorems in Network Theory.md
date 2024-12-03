@@ -39,22 +39,45 @@ date of note: 2024-07-25
 - [[Erdős-Rényi Random Graph]]
 - [[Configuration Model for Random Network]]
 - [[Degree Distribution of Random Network]]
+- [[Positive Assortativity and Degree Correlation]]
+
+
+### Growing Random Network
+
+- [[Mean Field Approximation for PGM]]
+- [[Preferential Attachment Models]]
 - [[Power Laws and Scale-Free Distribution of Random Network]]
+- [[Scale-Free Network]]
 
 
 ### Small World Model
 
 - [[Small World Graph]]
 - [[Watts-Strogatz Model for Random Network]]
+- [[Navigable Small World Model and Kleinberg Variant of Watts-Strogatz Model]]
+- [[Hierarchical Navigable Small Worlds or HNSW for Graph-based ANN Search]]
+
+
+
+### Diffusion on Graph
+
+- [[Diffusion Process on Network]]
+- [[Model on Spread of Information and Disease]]
+- [[Susceptible-Infected-Recovered or SIR model]]
+- [[Susceptible-Infected-Susceptible or SIS model]]
+
+
+### Percolation Theory
+
+- [[Percolation Theory on Random Network]]
+
 
 
 ### Community Detection
 
-
-- [[Navigable Small World Model and Kleinberg Variant of Watts–Strogatz Model]]
-- [[Hierarchical Navigable Small Worlds or HNSW for Graph-based ANN Search]]
-
 - [[PageRank Algorithm for Ranking based on Network]]
+- [[Preferential Attachment Models]]
+
 
 ### Graph Neural Network Model
 

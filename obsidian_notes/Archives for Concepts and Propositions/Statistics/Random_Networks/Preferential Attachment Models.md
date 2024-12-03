@@ -18,29 +18,26 @@ date of note: 2024-12-02
 
 
 
-- [[Small World Graph]]
-
+- [[Power Laws and Scale-Free Distribution of Random Network]]
 
 ## Explanation
 
 
 
 
-## Variants
-
-- [[Navigable Small World Model and Kleinberg Variant of Watts-Strogatz Model]]
-
 
 -----------
 ##  Recommended Notes and References
 
 
-
+- [[Graph Neural Network]]
 - [[Erdős-Rényi Random Graph]]
-- [[Random Graph]]
 - [[Graph]]
 
+- [[Ising Model]]
+- [[Metric Markov Random Field]]
+- [[Markov Network on Undirected Graph]]
 
 
 - [[Social Economic Networks by Jackson]]
-- [[Networks by Newman]] pp 425
+- [[Networks by Newman]] pp 435, 442, 448, 458

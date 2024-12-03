@@ -6,6 +6,8 @@ tags:
 keywords: 
 topics:
   - math/graph_theory
+  - statistics/random_network
+  - information_retrieval/search
 name: 
 date of note: 2024-07-09
 ---
@@ -18,7 +20,7 @@ date of note: 2024-07-09
 
 
 - [[Watts-Strogatz Model for Random Network]]
-- [[Navigable Small World Model and Kleinberg Variant of Watts–Strogatz Model]]
+- [[Navigable Small World Model and Kleinberg Variant of Watts-Strogatz Model]]
 
 ## Explanation
 

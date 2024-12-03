@@ -16,8 +16,9 @@ date of note: 2024-07-09
 >**Name**: 
 
 
+- [[Scale-Free Network]]
 
-
+- [[Preferential Attachment Models]]
 
 ## Explanation
 

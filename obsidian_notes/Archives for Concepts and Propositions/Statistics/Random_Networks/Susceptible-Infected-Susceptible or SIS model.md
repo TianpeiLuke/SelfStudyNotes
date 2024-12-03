@@ -18,7 +18,9 @@ date of note: 2024-12-02
 
 
 
-- [[Small World Graph]]
+- [[Susceptible-Infected-Recovered or SIR model]]
+- [[Diffusion Process on Network]]
+- [[Ordinary Differential Equations]]
 
 
 ## Explanation
@@ -26,21 +28,18 @@ date of note: 2024-12-02
 
 
 
-## Variants
-
-- [[Navigable Small World Model and Kleinberg Variant of Watts-Strogatz Model]]
-
 
 -----------
 ##  Recommended Notes and References
 
 
-
+- [[Percolation Theory on Random Network]]
 - [[Erdős-Rényi Random Graph]]
 - [[Random Graph]]
 - [[Graph]]
 
 
 
-- [[Social Economic Networks by Jackson]]
-- [[Networks by Newman]] pp 425
+
+- [[Social Economic Networks by Jackson]] pp 251 - 266
+- [[Networks by Newman]] pp 612 - 616

@@ -74,4 +74,6 @@ date of note: 2024-11-13
 
 
 - [[Introduction to Information Retrieval by Manning]]
+- 
+- [[Networks by Newman]] pp 197, 299
 - Wikipedia [Jaccard_index](https://en.wikipedia.org/wiki/Jaccard_index)

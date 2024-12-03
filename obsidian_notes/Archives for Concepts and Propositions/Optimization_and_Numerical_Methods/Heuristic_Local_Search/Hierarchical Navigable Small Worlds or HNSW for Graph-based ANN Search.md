@@ -30,7 +30,9 @@ date of note: 2024-11-30
 ### Navigable Small Word (NSW) Model
 
 
-- [[Navigable Small World Model and Kleinberg Variant of Watts–Strogatz Model]]
+- [[Navigable Small World Model and Kleinberg Variant of Watts-Strogatz Model]]
+- [[Watts-Strogatz Model for Random Network]]
+- [[Small World Graph]]
 
 ### Probability Skip Linked List
 
