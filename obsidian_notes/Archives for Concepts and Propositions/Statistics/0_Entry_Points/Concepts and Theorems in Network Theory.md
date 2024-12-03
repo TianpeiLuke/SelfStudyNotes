@@ -37,6 +37,7 @@ date of note: 2024-07-25
 
 - [[Random Graph]]
 - [[Erdős-Rényi Random Graph]]
+- [[Ising Model]]
 - [[Configuration Model for Random Network]]
 - [[Degree Distribution of Random Network]]
 - [[Positive Assortativity and Degree Correlation]]
@@ -71,6 +72,10 @@ date of note: 2024-07-25
 
 - [[Percolation Theory on Random Network]]
 
+
+### Spectral Graph Theory
+
+- [[Graph Laplacian]]
 
 
 ### Community Detection

@@ -159,6 +159,7 @@ date of note: 2024-09-13
 
 ### Approximate Nearest Neighbor Search
 
+- [[Theory and Algorithms for Gradient-Free Optimization]]
 - [[Similarity Search]]
 - [[Approximate Nearest Neighbor Search]]
 - [[k-d Tree Structure for Approximate Nearest Neighbor Search]]
