@@ -69,11 +69,18 @@ date of note: 2024-11-29
 ### Hash Table and Dimensionality Reduction
 
 - [[Locality-Sensitive Hashing or LSH for Approximate Nearest Neighbor Search]]
+- [[MinHash Algorithm for Approximate Nearest Neighbor Search]]
 
 ### Graph-based Data Structure
 
 - [[Navigable Small World Model and Kleinberg Variant of Watts-Strogatz Model]]
 - [[Hierarchical Navigable Small Worlds or HNSW for Graph-based ANN Search]]
+
+## Code
+
+- E. Bernhardsson, [ANN Benchmarks](https://github.com/erikbern/ann-benchmarks) (2021), GitHub
+- Facebook Research, [Faiss HNSW Implementation](https://github.com/facebookresearch/faiss/blob/main/faiss/impl/HNSW.cpp), GitHub
+- [[FAISS - Facebook AI Similarity Search Tutorial]]
 
 
 ## Applications
@@ -97,6 +104,7 @@ date of note: 2024-11-29
 
 
 - [[Similarity Search]]
+- [[Indexing or Index Construction for Information Retrieval]]
 - [[Information Retrieval]]
 - [[Metric Space]]
 - [[Graph]]
@@ -106,6 +114,7 @@ date of note: 2024-11-29
 - [[Speech and Language Processing by Jurafsky]] pp
 
 - Indyk, P., & Motwani, R. (1998, May). Approximate nearest neighbors: towards removing the curse of dimensionality. In _Proceedings of the thirtieth annual ACM symposium on Theory of computing_ (pp. 604-613).
+- Li, W., Zhang, Y., Sun, Y., Wang, W., Li, M., Zhang, W., & Lin, X. (2020). Approximate Nearest Neighbor Search on High Dimensional Data—Experiments, Analyses, and Improvement. _IEEE Transactions on Knowledge and Data Engineering_, _32_(8), 1475–1488. IEEE Transactions on Knowledge and Data Engineering. [https://doi.org/10.1109/TKDE.2019.2909204](https://doi.org/10.1109/TKDE.2019.2909204)
 
 - Youtube
 	- [Graph-Based Approximate Nearest Neighbors (ANN) and HNSW](https://www.youtube.com/watch?v=4PsyNdFlxmk)

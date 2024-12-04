@@ -39,6 +39,27 @@ date of note: 2024-11-29
 ### Dynamic Indexing
 
 
+## Index Construction for Vector Similarity Search
+
+### Tree-based Indexing
+
+- [[k-d Tree Structure for Approximate Nearest Neighbor Search]]
+- [[Ball Tree Structure for Approximate Nearest Neighbor Search]]
+
+### Hash Table Indexing
+
+- [[Locality-Sensitive Hashing or LSH for Approximate Nearest Neighbor Search]]
+- [[MinHash Algorithm for Approximate Nearest Neighbor Search]]
+
+### Graph-based Indexing
+
+- [[Navigable Small World Model and Kleinberg Variant of Watts-Strogatz Model]]
+- [[Hierarchical Navigable Small Worlds or HNSW for Graph-based ANN Search]]
+
+
+
+
+
 -----------
 ##  Recommended Notes and References
 

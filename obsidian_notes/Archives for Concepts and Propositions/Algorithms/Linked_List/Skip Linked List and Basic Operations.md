@@ -28,3 +28,5 @@ date of note: 2024-12-02
 
 - [[Algorithm Design Manual by Skiena]]
 - [[Introduction to Algorithms by Cormen]]
+
+- W. Pugh, [Skip lists: a probabilistic alternative to balanced trees](https://15721.courses.cs.cmu.edu/spring2018/papers/08-oltpindexes1/pugh-skiplists-cacm1990.pdf) (1990), Communications of the ACM, vol. 33, no.6, pp. 668-676

@@ -27,6 +27,7 @@ date of note: 2024-11-29
 
 - [[Approximate Nearest Neighbor Search]]
 - [[Jaccard Similarity and Jaccard Distance between Two Sets]]
+- [[Locality-Sensitive Hashing or LSH for Approximate Nearest Neighbor Search]]
 
 
 - [[Gaussian Random Projections]]
@@ -46,6 +47,7 @@ date of note: 2024-11-29
 
 
 - [[Principal Component Analysis]]
+- [[Indexing or Index Construction for Information Retrieval]]
 - [[Information Retrieval]]
 
 - Youtube

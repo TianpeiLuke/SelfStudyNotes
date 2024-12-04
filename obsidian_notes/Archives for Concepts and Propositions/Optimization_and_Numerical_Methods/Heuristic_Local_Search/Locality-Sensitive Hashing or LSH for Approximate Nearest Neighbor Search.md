@@ -48,10 +48,13 @@ date of note: 2024-11-29
 
 - [[Similarity Search]]
 - [[Principal Component Analysis]]
+
+- [[Indexing or Index Construction for Information Retrieval]]
 - [[Information Retrieval]]
 
 
-- Datar, M., Immorlica, N., Indyk, P., & Mirrokni, V. S. (2004, June). Locality-sensitive hashing scheme based on p-stable distributions. In _Proceedings of the twentieth annual symposium on Computational geometry_ (pp. 253-262).
+- Jafari, O., Maurya, P., Nagarkar, P., Islam, K. M., & Crushev, C. (2021). _A Survey on Locality Sensitive Hashing Algorithms and their Applications_ (Databases (Cs.DB) arXiv:2102.08942). arXiv. [https://doi.org/10.48550/arXiv.2102.08942](https://doi.org/10.48550/arXiv.2102.08942)
+- Datar, M., Immorlica, N., Indyk, P., & Mirrokni, V. S. (2004, June). Locality-sensitive hashing scheme based on p-stable distributions. In _Proceedings of the twentieth annual symposium on Computational geometry_ (pp. 253-262). [[datarLocalitySensitiveHashingScheme2004]]
 - Gionis, A., Indyk, P., & Motwani, R. (1999, September). Similarity search in high dimensions via hashing. In _Vldb_ (Vol. 99, No. 6, pp. 518-529).
 
 - Youtube
