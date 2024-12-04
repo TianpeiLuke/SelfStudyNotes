@@ -4,19 +4,28 @@ tags:
   - information_retrieval/index
   - information_retrieval/search
   - algorithm/search
-keywords: 
-topics: 
-name: 
+  - machine_learning/clustering
+keywords:
+  - product_quantization_index
+topics:
+  - information_retrieval/index
+  - information_retrieval/search
+  - algorithm/search
+  - machine_learning/clustering
+name: Product Quantization for ANN Search and Index Compression
 date of note: 2024-12-03
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Product Quantization for ANN Search and Index Compression
 
 
 - [[Approximate Nearest Neighbor Search]]
+- [[k-Means Clustering]]
+
+![[inverted_index_asym_dist_comp.png]]
 
 ## Explanation
 

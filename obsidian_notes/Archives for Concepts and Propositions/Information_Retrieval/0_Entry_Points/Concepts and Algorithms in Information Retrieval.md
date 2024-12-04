@@ -47,8 +47,9 @@ date of note: 2024-09-13
 
 ### Index Construction
 
-- [[Inverted Index for Information Retrieval]]
 - [[Indexing or Index Construction for Information Retrieval]]
+- [[Inverted Index for Information Retrieval]]
+- [[Product Quantization for ANN Search and Index Compression]]
 
 
 ### Scoring, Term Weighting and Vector Space Model
