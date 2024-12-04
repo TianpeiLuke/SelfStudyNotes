@@ -30,6 +30,7 @@ date of note: 2024-11-29
 >- and for each term $m\in \mathcal{V}$, a *list of indices* for documents that contains the given term, $$m \to  ( d_{i_{k}}\in \mathcal{D}:\, x(m, d_{i_{k}}) > 0,\, i_{k}\in [|\mathcal{D}|])$$ 
 >	- Each item in the list, which records that a term appeared in a document, is called a **posting** 
 >	- Such list is called a **posting list** or **inverted list.**
+>	- All *posting lists* taken together are referred to as the **postings.**
 
 - [[Co-Occurrence Matrix]]
 - [[Term Frequency and Inverse Document Frequency or TF-IDF]]

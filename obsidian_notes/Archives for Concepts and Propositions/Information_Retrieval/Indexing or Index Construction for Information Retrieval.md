@@ -20,6 +20,12 @@ date of note: 2024-11-29
 >The process of constructing *inverted index* for information retrieval system is called **index construction** or **indexing.**
 
 - [[Inverted Index for Information Retrieval]]
+- [[Information Retrieval]]
+
+>[!quote]
+>**Search engine indexing** is the collecting, [parsing](https://en.wikipedia.org/wiki/Parsing "Parsing"), and storing of data to facilitate fast and accurate [information retrieval](https://en.wikipedia.org/wiki/Information_retrieval "Information retrieval").
+>
+>-- Wikipedia [Search_engine_indexing](https://en.wikipedia.org/wiki/Search_engine_indexing)
 
 
 ## Explanation
@@ -65,5 +71,6 @@ date of note: 2024-11-29
 
 
 - [[Introduction to Information Retrieval by Manning]] pp 67 - 84
+- Wikipedia [Search_engine_indexing](https://en.wikipedia.org/wiki/Search_engine_indexing)
 - Youtube
 	- [Choosing Indexes for Similarity Search (Faiss in Python)](https://www.youtube.com/watch?v=B7wmo_NImgM)

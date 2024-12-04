@@ -38,6 +38,10 @@ date of note: 2024-05-12
 
 ## Explanation
 
+>[!info]
+>The purpose of **storing an index** is to *optimize speed* and *performance* in finding relevant documents for a search query.
+
+
 
 ## LLM for Information Retrieval
 
