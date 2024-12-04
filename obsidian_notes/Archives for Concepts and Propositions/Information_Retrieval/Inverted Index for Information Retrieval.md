@@ -16,10 +16,6 @@ date of note: 2024-11-29
 >[!important]
 >**Name**: Inverted Index for Information Retrieval
 
->[!important] Definition
->The term **index** in information retrieval is the 
-
-
 ![[Co-Occurrence Matrix#^253cfb]]
 
 >[!important] Definition
@@ -57,6 +53,11 @@ date of note: 2024-11-29
 - [[Sparse Matrix Representation]]
 - [[Adjacency Matrix of Graph]]
 
+>[!info]
+>**indexing** is an *inverse map*:
+>- An **index** maps back from *terms* to the *parts of a document* where they *occur*.
+
+- [[Hash Table for Efficient Retrieval and Inverse Map]]
 
 
 -----------
