@@ -99,6 +99,27 @@ date of note: 2024-11-30
 >The following algorithm describes a **greedy search algorithm** that returns the $k$ nearest neighbors to some query $q$ in layer $h$ of the **Hierarchical Navigable Small World (HNSW)**
 >- This step corresponds to the *greedy routing* in **Navigable Small World (NSW)**
 
+>[!quote]
+>The _routing_ (literally the route we take through the graph) consists of *two phases*. 
+>- We start with the **“zoom-out” phase** where we pass through *low-degree vertices* (degree is the number of links a vertex has)
+>- and the later **“zoom-in” phase** where we pass through *higher-degree vertices*。
+>  
+>Our _stopping condition_ is finding **no nearer vertices** in our current vertex’s friend list. 
+>- Because of this, we are more likely to hit a **local minimum** and stop too early when in the _zoom-out_ phase (fewer links, less likely to find a nearer vertex).  
+>  
+>To minimize the probability of stopping early (and increase recall), we can **increase the average degree** of vertices, but this *increases network complexity* (and *search time*). 
+>- So we need to **balance** the average degree of vertices between recall and search speed.  
+>  
+>-- [Pinecone: Hierarchical Navigable Small Worlds (HNSW)](https://www.pinecone.io/learn/series/faiss/hnsw/)  
+
+![[hnsw_high_degree_low_degree.png]]
+
+>[!quote]
+>Another approach is to start the search on high-degree vertices (**zoom-in first**). 
+>- For NSW, this _does_ improve performance on low-dimensional data. We will see that this is also a significant factor in the structure of HNSW.
+>
+>-- [Pinecone: Hierarchical Navigable Small Worlds (HNSW)](https://www.pinecone.io/learn/series/faiss/hnsw/)  
+
 
 >[!important] Definition
 >**search-layer(q, ep, k, h)**
@@ -138,6 +159,8 @@ date of note: 2024-11-30
 >$$
 > c=\text{NN}(C) \implies e\in \mathcal{N}(c) \stackrel{e \text{ closer}}{\implies} C \leftarrow C\cup \left\{ e \right\} \implies c=\text{NN}(C) \,{\implies}\ldots{}\,
 >$$
+
+
 
 ### Heuristic Choose of M-Best Neighbors in Candidate List
 
