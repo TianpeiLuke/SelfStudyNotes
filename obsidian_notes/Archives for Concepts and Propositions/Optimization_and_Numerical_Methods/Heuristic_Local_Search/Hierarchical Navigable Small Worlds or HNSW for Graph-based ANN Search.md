@@ -25,7 +25,7 @@ date of note: 2024-11-30
 >[!important] Definition
 >The **Hierarchical Navigable Small Worlds** or **HNSW** is a graph-based *approximate nearest neighbor search algorithm*.
 >- **HNSW** graphs are among the top-performing indexes for *vector similarity search*
->- 
+
 
 - [[Similarity Search]]
 - [[Approximate Nearest Neighbor Search]]
@@ -341,6 +341,10 @@ date of note: 2024-11-30
 >If, instead, we’d like to improve our search speeds — we can do that too! All we do is add an IVF component to our index. There is plenty to discuss when adding **IVF** or **PQ** to our index, so we wrote an [entire article on mixing-and-matching of indexes](https://www.pinecone.io/learn/series/faiss/composite-indexes/).
 >
 >-- [Pinecone: Hierarchical Navigable Small Worlds (HNSW)](https://www.pinecone.io/learn/series/faiss/hnsw/)
+
+- [[Inverted File Index - Product Quantization for ANN Search]]
+- [[Inverted File Index for ANN Search]]
+- [[Product Quantization for ANN Search and Index Compression]]
 
 ![[hnsw_memory.png]]
 

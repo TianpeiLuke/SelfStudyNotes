@@ -70,18 +70,12 @@ date of note: 2024-11-29
 
 - [[k-d Tree Structure for ANN Search]]
 - [[Ball Tree Structure for ANN Search]]
-- [[MinHash Algorithm for Approximate Nearest Neighbor Search]]
 
 ### Hash Table and Dimensionality Reduction
 
 - [[Inverted File Index for ANN Search]]
 - [[Product Quantization for ANN Search and Index Compression]]
 - [[Inverted File Index - Product Quantization for ANN Search]]
-## Code
-
-- E. Bernhardsson, [ANN Benchmarks](https://github.com/erikbern/ann-benchmarks) (2021), GitHub
-- Facebook Research, [Faiss HNSW Implementation](https://github.com/facebookresearch/faiss/blob/main/faiss/impl/HNSW.cpp), GitHub
-- [[FAISS - Facebook AI Similarity Search Tutorial]]
 
 - [[Locality-Sensitive Hashing or LSH for ANN Search]]
 - [[MinHash Algorithm for ANN Search]]
