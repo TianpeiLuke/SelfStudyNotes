@@ -26,13 +26,18 @@ date of note: 2024-10-21
 >- **Retrieving Stage**: at this stage, we *retrieve* relevant *passages* from a text collection
 >	- The component used in this stage is called the **retriever**;
 >	- It is common to use **dense retriever** based on *masked language model*
->	- $$q \to [d_{1}\,{,}\ldots{,}\,d_{n}]$$
+>	- $$q \to R(q) := [d_{1}\,{,}\ldots{,}\,d_{n}]$$
 >- **Reading Stage**: at this stage, we *generate* answers *conditioned* on retrieved documents via **retrieval-augmented generation**.
 >	- The text generator is based on *large language models*
 >	- $$\{q,\, [d_{1}\,{,}\ldots{,}\,d_{n}]   \} \to a$$
+>
+>Formally, the *autoregressive model* for **RAG** is given by $$p(w_{1}\,{,}\ldots{,}\,w_{n}) = \prod_{t=1}^{n}p(w_{t}\;|\;R(q); \text{ prompt };\,  q;\,  w_{<t} )$$ where $R(q)$ is the *set of retrieved passages* based on question $q$ 
+>	  
+>	  
 
 - [[Question Answering Problem]]
-- [[Information Retrieval]]
+- [[Autoregressive Models]]
+
 - [[Information Retrieval with Encoder Language Models]]
 - [[Large Language Model and Pretrained Language Models]]
 
@@ -91,7 +96,7 @@ date of note: 2024-10-21
 - [[Attention Mechanism in Neural Network]]
 - [[Transformer Network]]
 - [[Foundational Models for Transfer Learning]]
-
+- [[Information Retrieval]]
 
 
 - [[Generative Pre-trained Transformer or GPT]]
