@@ -4,23 +4,40 @@ tags:
   - information_retrieval/retrieval_augmentation
   - deep_learning/large_language_models
   - natural_language_processing/large_language_models
-keywords: 
-topics: 
-name: 
+keywords:
+  - retrieval_augmented_generation
+topics:
+  - information_retrieval/retrieval_augmentation
+  - natural_language_processing/large_language_models
+  - deep_learning/large_language_models
+name: Retrieval Augmented Generation
 date of note: 2024-10-21
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Retrieval Augmented Generation
 
+>[!important] Definition
+>The method of *question answering* based on *retrieved documents* is called the **retrieval-augmented generation** or **RAG.**
+>
+>There are two stages for the *QA model* of *RAG*
+>- **Retrieving Stage**: at this stage, we *retrieve* relevant *passages* from a text collection
+>	- The component used in this stage is called the **retriever**;
+>	- It is common to use **dense retriever** based on *masked language model*
+>	- $$q \to [d_{1}\,{,}\ldots{,}\,d_{n}]$$
+>- **Reading Stage**: at this stage, we *generate* answers *conditioned* on retrieved documents via **retrieval-augmented generation**.
+>	- The text generator is based on *large language models*
+>	- $$\{q,\, [d_{1}\,{,}\ldots{,}\,d_{n}]   \} \to a$$
 
-
-- [[Large Language Model and Pretrained Language Models]]
-- [[Generative Pre-trained Transformer or GPT]]
-- [[Bidirectional Encoder Representation from Transformer or BERT]]
+- [[Question Answering Problem]]
+- [[Information Retrieval]]
 - [[Information Retrieval with Encoder Language Models]]
+- [[Large Language Model and Pretrained Language Models]]
+
+![[rag_question_answer_flow.png]]
+
 
 ![[rag_process.png]]
 
@@ -74,8 +91,11 @@ date of note: 2024-10-21
 - [[Attention Mechanism in Neural Network]]
 - [[Transformer Network]]
 - [[Foundational Models for Transfer Learning]]
-- [[Question Answering Problem]]
-- [[Information Retrieval]]
+
+
+
+- [[Generative Pre-trained Transformer or GPT]]
+- [[Bidirectional Encoder Representation from Transformer or BERT]]
 
 
 - Youtube
