@@ -78,6 +78,9 @@ date of note: 2024-10-21
 - [[Information Retrieval]]
 
 
+- Youtube
+	- [Stanford CS25: V3 I Retrieval Augmented Language Models](https://www.youtube.com/watch?v=mE7IDf2SmJg)
+
 - [[Speech and Language Processing by Jurafsky]] pp 302
 - Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Goyal, N., ... & Kiela, D. (2020). Retrieval-augmented generation for knowledge-intensive nlp tasks. _Advances in Neural Information Processing Systems_, _33_, 9459-9474.  [[lewisRetrievalAugmentedGenerationKnowledgeIntensive2020]]
 - Gao, Y., Xiong, Y., Gao, X., Jia, K., Pan, J., Bi, Y., ... & Wang, H. (2023). Retrieval-augmented generation for large language models: A survey. _arXiv preprint arXiv:2312.10997_.
