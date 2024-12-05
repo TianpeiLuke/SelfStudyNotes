@@ -74,6 +74,8 @@ date of note: 2024-11-29
 ### Hash Table and Dimensionality Reduction
 
 - [[Inverted File Index for ANN Search]]
+- [[Product Quantization for ANN Search and Index Compression]]
+- [[Inverted File Index - Product Quantization for ANN Search]]
 - [[Locality-Sensitive Hashing or LSH for ANN Search]]
 - [[MinHash Algorithm for ANN Search]]
 

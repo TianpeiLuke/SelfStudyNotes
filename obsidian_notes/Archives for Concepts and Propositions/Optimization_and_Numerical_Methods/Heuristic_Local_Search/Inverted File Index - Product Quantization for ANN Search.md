@@ -122,6 +122,11 @@ date of note: 2024-12-03
 - [[Indexing or Index Construction for Information Retrieval]]
 - [[Information Retrieval]]
 
+- [[Representation Learning]]
+- [[Auto-Encoder and Stochastic Auto-Encoder]]
+- [[Denoising Auto-Encoder]]
+
+
 - Youtube
 	- [Product Quantization for Vector Similarity Search (+ Python)](https://www.youtube.com/watch?v=t9mRf2S5vDI)
 

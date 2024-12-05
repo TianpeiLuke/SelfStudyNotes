@@ -83,8 +83,13 @@ date of note: 2024-12-03
 - [[Indexing or Index Construction for Information Retrieval]]
 - [[Information Retrieval]]
 
+- [[Representation Learning]]
+- [[Auto-Encoder and Stochastic Auto-Encoder]]
+- [[Denoising Auto-Encoder]]
+
+
 - Youtube
-	- 
+	- [IVF Vector Index | Vector Database Fundamentals](https://www.youtube.com/watch?v=VOerTAir9SU)
 
 - Medium
 	- [Similarity Search, Part 1: kNN & Inverted File Index](https://towardsdatascience.com/similarity-search-knn-inverted-file-index-7cab80cc0e79)
