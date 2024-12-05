@@ -64,15 +64,15 @@ date of note: 2024-12-03
 >**Inverted File Index** is based on **vector quantization**.
 
 
-### FAISS Implementation of IVF + PQ Indexing
-
-- [[FAISS - Facebook AI Similarity Search Tutorial]]
-
 
 ## IVF + PQ Indexing
 
 - [[Product Quantization for ANN Search and Index Compression]]
+- [[Inverted File Index - Product Quantization for ANN Search]]
 
+### FAISS Implementation of IVF + PQ Indexing
+
+- [[FAISS - Facebook AI Similarity Search Tutorial]]
 
 
 -----------
