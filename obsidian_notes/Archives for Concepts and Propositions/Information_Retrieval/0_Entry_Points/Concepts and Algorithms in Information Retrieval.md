@@ -82,6 +82,7 @@ date of note: 2024-09-13
 - [[Recall and Precision at k]]
 - [[Sensitivity and Specificity]]
 - [[Normalized Discounted Cumulative Gain or NDCG]]
+- [[Mean Reciprocal Rank or MRR for Ranking and Question Answering]]
 
 
 ### Relevance Feedback and Query Expansion

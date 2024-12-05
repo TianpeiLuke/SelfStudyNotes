@@ -176,6 +176,7 @@ date of note: 2024-09-13
 - [[Recall and Precision and F-Measure]]
 - [[Recall and Precision at k]]
 - [[Mean Average Precision]]
+- [[Mean Reciprocal Rank or MRR for Ranking and Question Answering]]
 
 #### Metrics for Generative Language Models
 
@@ -232,7 +233,8 @@ date of note: 2024-09-13
 ### Question-Answering and ChatBots
 
 - [[Question Answering Problem]]
-
+- [[Mean Reciprocal Rank or MRR for Ranking and Question Answering]]
+- [[Retrieval Augmented Generation]]
 
 
 
