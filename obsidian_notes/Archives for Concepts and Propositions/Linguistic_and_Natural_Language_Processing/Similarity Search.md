@@ -58,13 +58,13 @@ date of note: 2024-07-29
 
 ### Tree-based Vector Similarity Search
 
-- [[k-d Tree Structure for Approximate Nearest Neighbor Search]]
-- [[Ball Tree Structure for Approximate Nearest Neighbor Search]]
+- [[k-d Tree Structure for ANN Search]]
+- [[Ball Tree Structure for ANN Search]]
 
 ### Hash-Table based Vector Similarity Search
 
-- [[Locality-Sensitive Hashing or LSH for Approximate Nearest Neighbor Search]]
-- [[MinHash Algorithm for Approximate Nearest Neighbor Search]]
+- [[Locality-Sensitive Hashing or LSH for ANN Search]]
+- [[MinHash Algorithm for ANN Search]]
 
 ### Graph-based Vector Similarity Search
 

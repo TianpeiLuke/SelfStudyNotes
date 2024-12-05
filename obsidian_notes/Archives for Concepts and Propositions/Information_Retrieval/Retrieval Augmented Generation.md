@@ -27,7 +27,7 @@ date of note: 2024-10-21
 - Gao, Y., Xiong, Y., Gao, X., Jia, K., Pan, J., Bi, Y., ... & Wang, H. (2023). Retrieval-augmented generation for large language models: A survey. _arXiv preprint arXiv:2312.10997_.
 
 
-
+- [[Hierarchical Navigable Small Worlds or HNSW for Graph-based ANN Search]]
 
 
 

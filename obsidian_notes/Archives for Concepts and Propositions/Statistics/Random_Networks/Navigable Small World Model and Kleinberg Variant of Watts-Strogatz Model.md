@@ -39,7 +39,7 @@ date of note: 2024-11-30
 >- the *depth (height)* of *smallest subtree* that *contains* $i$ and $j$  $$D_{\mathcal{T}}(i,j) := \min\left\{h(\mathcal{T}_{\alpha}): \mathcal{T}_{\alpha} \subset \mathcal{T},\; i\in V(\mathcal{T}_{\alpha}),\, j\in V(\mathcal{T}_{\alpha})  \right\} $$  
 >- or, equivalently, the **half** of the **distance** between $i,j\in \mathcal{T}$  $$D_{\mathcal{T}}(i,j) = \frac{1}{2}D(i,j; \mathcal{T})$$ where $D$ is the *shortest path distance* on $\mathcal{T}$. 
 
-- [[k-d Tree Structure for Approximate Nearest Neighbor Search]]
+- [[k-d Tree Structure for ANN Search]]
 - [[Paths in Graph and Length of Path]]
 - [[Trails in Directed Graph]]
 

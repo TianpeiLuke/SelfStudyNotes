@@ -46,7 +46,15 @@ date of note: 2024-11-29
 
 - [[Indexing or Index Construction for Information Retrieval]]
 
+>[!important]
+>For a new sample, we **merge inverted lists** for attributes present in new example
+
+
 ## Explanation
+
+>[!info]
+>For $|\mathcal{V}|= d$ and $|\mathcal{D}| = n$, the average complexity is about $$O(d\,\sqrt{n})$$
+
 
 >[!info]
 >The **inverted index** is just the *adjacency list representation* of **sparse co-occurrence matrix**.
@@ -60,9 +68,52 @@ date of note: 2024-11-29
 
 - [[Hash Table for Efficient Retrieval and Inverse Map]]
 
+## Similarity Search via Inverted Index
+### Exact Nearest Neighbor Search
+
+>[!important] 
+>The **inverted index** can be used to search *$k$ nearest neighbor* for a query $q$.
+>
+>Let $q:= (q^1 \,{,}\ldots{,}\,q^{m})$ be $m$ terms in the query.
+>
+>The **nearest neighbor** $d\in \mathcal{D}$ to $q$ in terms of *Jaccard distance* with respect to *Shingling* is defined as $$J(d, q) := \frac{|\left\{ w^{i}: w^{i}\in q \land w^{i} \in d \right\}|}{|\left\{ w^{i}: w^{i}\in q \lor w^{i} \in d \right\}|}$$
+>
+>The **nearest neighbor search** via *Shingling-based Jaccard distance* can be done by *merging inverted lists*
+>- $\left\{ w^{i}: w^{i}\in q \land w^{i} \in d \right\}$ is a set of *posting lists* that have *both* $q$ and $d$ as items
+>- $\left\{ w^{i}: w^{i}\in q \lor w^{i} \in d \right\}$  is a set of *posting lists* that have *either* $q$ or $d$ as items
+>  
+
+^e1bebe
+
+
+- [[Similarity Search]]
+- [[Jaccard Similarity and Jaccard Distance between Two Sets]]
+- [[Shingling or n-Gram based Document Similarity Measure]]
+
+### Approximate Nearest Neighbor Search
+
+![[Inverted File Index for ANN Search#^8d02f1]]
+
+- [[Inverted File Index for ANN Search]]
+- [[Hash Table for Efficient Retrieval and Inverse Map]]
+
+![[inverted_file_index_knn.png]]
+
+
+## IVF + PQ Indexing System
+
+- [[Product Quantization for ANN Search and Index Compression]]
+
+
 
 -----------
 ##  Recommended Notes and References
 
+
+- Youtube
+	- [kNN.17 Inverted index](https://www.youtube.com/watch?v=Mlp8hlKwETs)
+
+- Medium
+	- [Similarity Search, Part 1: kNN & Inverted File Index](https://towardsdatascience.com/similarity-search-knn-inverted-file-index-7cab80cc0e79)
 
 - [[Introduction to Information Retrieval by Manning]] pp 6

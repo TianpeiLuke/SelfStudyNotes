@@ -27,7 +27,7 @@ date of note: 2024-11-29
 
 - [[Approximate Nearest Neighbor Search]]
 - [[Jaccard Similarity and Jaccard Distance between Two Sets]]
-- [[Locality-Sensitive Hashing or LSH for Approximate Nearest Neighbor Search]]
+- [[Locality-Sensitive Hashing or LSH for ANN Search]]
 
 
 - [[Gaussian Random Projections]]

@@ -47,6 +47,9 @@ date of note: 2024-11-29
 >[!info]
 >The **w-shingling based similarity** is equivalent to a **Jaccard similarity** between two $n$-gram models
 
+## NN Search via Inverted Index
+
+- [[Inverted Index for Information Retrieval]]
 
 
 

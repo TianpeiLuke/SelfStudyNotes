@@ -28,7 +28,7 @@ date of note: 2024-11-29
 
 
 - [[Binary Tree Order and Traversal]]
-- [[k-d Tree Structure for Approximate Nearest Neighbor Search]]
+- [[k-d Tree Structure for ANN Search]]
 
 
 ![[ball_tree_search.png]]

@@ -61,15 +61,21 @@ date of note: 2024-11-29
 
 ## Algorithms for Approximate Nearest Neighbor 
 
+### List-based Data Structure
+
+- [[Shingling or n-Gram based Document Similarity Measure]]
+- [[Inverted Index for Information Retrieval]]
+
 ### Tree-based Data Structure
 
-- [[k-d Tree Structure for Approximate Nearest Neighbor Search]]
-- [[Ball Tree Structure for Approximate Nearest Neighbor Search]]
+- [[k-d Tree Structure for ANN Search]]
+- [[Ball Tree Structure for ANN Search]]
 
 ### Hash Table and Dimensionality Reduction
 
-- [[Locality-Sensitive Hashing or LSH for Approximate Nearest Neighbor Search]]
-- [[MinHash Algorithm for Approximate Nearest Neighbor Search]]
+- [[Inverted File Index for ANN Search]]
+- [[Locality-Sensitive Hashing or LSH for ANN Search]]
+- [[MinHash Algorithm for ANN Search]]
 
 ### Graph-based Data Structure
 
@@ -95,6 +101,7 @@ date of note: 2024-11-29
 
 ### Information Retrieval
 
+- [[Inverted Index for Information Retrieval]]
 - [[Information Retrieval with Encoder Language Models]]
 - [[Retrieval Augmented Generation]]
 

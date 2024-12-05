@@ -52,7 +52,7 @@ date of note: 2024-05-12
 - [[Proximal Gradient Algorithm]]\
 - [[Incremental Algorithm]]
 
-- [[k-d Tree Structure for Approximate Nearest Neighbor Search]]
+- [[k-d Tree Structure for ANN Search]]
 
 
 -----------

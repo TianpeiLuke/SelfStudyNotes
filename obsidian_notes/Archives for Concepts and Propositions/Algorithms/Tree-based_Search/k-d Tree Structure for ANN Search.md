@@ -58,6 +58,14 @@ date of note: 2024-11-29
 >  
 >-- [[Algorithm Design Manual by Skiena]] pp 460  
 
+>[!info]
+>Building k-d tree
+>- pick random dimension
+>- find median
+>- split data
+>- repeat
+
+
 >[!important] Definition
 >The *recursive* algorithm for **construction of $k$-$d$ tree** is described as follows:
 >
@@ -224,6 +232,8 @@ date of note: 2024-11-29
 >The search complexity is the equivalent to the **height** of the search tree
 >- In the **worst-case** the tree would essentally be a linked list and the height would be $$O(n).$$
 >- In the **best case** it would be *well-balanced* and the height would be $$O(\log n)$$
+>  
+>For $d$-dimensional space, the complexity is $$O(d \log(n))$$  
 
 
 >[!info]
@@ -234,7 +244,14 @@ date of note: 2024-11-29
 
 ## Variants of k-d Tree
 
-- [[Ball Tree Structure for Approximate Nearest Neighbor Search]]
+- [[Ball Tree Structure for ANN Search]]
+
+
+## Other ANN Search 
+
+- [[Locality-Sensitive Hashing or LSH for ANN Search]]
+- [[Hierarchical Navigable Small Worlds or HNSW for Graph-based ANN Search]]
+
 
 
 
@@ -246,6 +263,9 @@ date of note: 2024-11-29
 - [[Information Retrieval]]
 - [[Similarity Search]]
 - [[Tree Graph and Forest]]
+- [[k Nearest Neighbor Classification]]
+- [[k Nearest Neighbor Density Estimation]]
+
 
 
 - [[Introduction to Algorithms by Cormen]]
@@ -261,6 +281,7 @@ date of note: 2024-11-29
 	- [KD-Tree Nearest Neighbor Data Structure](https://www.youtube.com/watch?v=Glp7THUpGow)
 	- [KD tree algorithm: how it works](https://www.youtube.com/watch?v=TLxWtXEbtFE)
 	- [Tutorial 5: K-NN Part 7 KD-Trees](https://www.youtube.com/watch?v=oQQrxiJvnhw)
+	- [kNN.15 K-d tree algorithm](https://www.youtube.com/watch?v=Y4ZgLlDfKDg)
 - Medium
 	- [Ball tree and KD Tree Algorithms](https://medium.com/@geethasreemattaparthi/ball-tree-and-kd-tree-algorithms-a03cdc9f0af9)
 	- [A look into K-Dimensional Trees](https://medium.com/smucs/a-look-into-k-dimensional-trees-290ec69dffe9)
