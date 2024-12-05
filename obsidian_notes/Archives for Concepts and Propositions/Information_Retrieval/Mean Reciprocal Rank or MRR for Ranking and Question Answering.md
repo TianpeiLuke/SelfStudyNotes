@@ -33,3 +33,5 @@ date of note: 2024-12-04
 
 - [[Speech and Language Processing by Jurafsky]] pp 305
 - [[Handbook of Natural Language Processing by Indurkhya]]
+
+- Wikipedia [Mean reciprocal rank](https://en.wikipedia.org/wiki/Mean_reciprocal_rank)
