@@ -174,8 +174,10 @@ date of note: 2024-09-13
 
 - [[Positive Predictive Value and False Discovery Rate]]
 - [[Recall and Precision and F-Measure]]
+- [[Precision-Recall Curve]]
 - [[Recall and Precision at k]]
 - [[Mean Average Precision and Average Precision]]
+- [[Normalized Discounted Cumulative Gain or NDCG]]
 - [[Mean Reciprocal Rank or MRR for Ranking and Question Answering]]
 
 #### Metrics for Generative Language Models
@@ -230,11 +232,53 @@ date of note: 2024-09-13
 - [[Text Summarization]]
 
 
-### Question-Answering and ChatBots
+### Question-Answering and Information Retrieval
 
+- [[Concepts and Algorithms in Information Retrieval]]
 - [[Question Answering Problem]]
-- [[Mean Reciprocal Rank or MRR for Ranking and Question Answering]]
+- [[Information Retrieval]]
+- [[Inverted Index for Information Retrieval]]
+- [[Approximate Nearest Neighbor Search]]
 - [[Retrieval Augmented Generation]]
+
+### ChatBots and Dialogue System
+
+- [[Dialogue System]]
+- [[Task-Oriented Dialogue System]]
+- [[Chatbots as Unstructured Dialogue System]]
+
+#### Properties of Conversations
+
+- [[Conversation and its Properties]]
+
+- [[Conversation Turns]]
+- [[Speech Acts or Dialogue Acts in Conversation]]
+- [[Grounding and Common Ground in Conversation]]
+- [[Subdialogues and Dialogue Structure]]
+- [[Initiative of Conversation]]
+- [[Inference and Implicature of Conversation]]
+
+#### Frame-based Dialogue System
+
+- [[Frame-based Dialogue System]]
+
+- [[Domain Classification for Frame-based Dialogue System]]
+- [[Intent Determination for Frame-based Dialogue System]]
+- [[Slot-Filling in Frame-based Dialogue System]]
+
+#### Dialogue-State Architecture of Frame-based System
+
+- [[Dialogue-State Architecture of Dialogue System]]
+- [[Speech Acts or Dialogue Acts in Conversation]]
+- [[Dialogue State Tracking]]
+- [[Dialogue Policy and Content Planning for Frame-based Dialogue System]]
+- [[Sentence Realization based on Dialogue Act in Dialogue System]]
+
+#### ChatBots
+
+- [[Chatbots as Unstructured Dialogue System]]
+
+
 
 
 

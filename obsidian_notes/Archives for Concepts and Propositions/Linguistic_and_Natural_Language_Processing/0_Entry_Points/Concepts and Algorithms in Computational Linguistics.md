@@ -117,6 +117,16 @@ date of note: 2024-09-13
 - [[Event Extraction]]
 
 
+### Human Conversation
+
+- [[Conversation and its Properties]]
+- [[Conversation Turns]]
+- [[Speech Acts or Dialogue Acts in Conversation]]
+- [[Grounding and Common Ground in Conversation]]
+- [[Subdialogues and Dialogue Structure]]
+- [[Initiative of Conversation]]
+
+
 
 
 -----------
