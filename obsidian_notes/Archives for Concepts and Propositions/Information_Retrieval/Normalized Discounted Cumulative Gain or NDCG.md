@@ -62,25 +62,26 @@ date of note: 2024-01-25
 
 ## Compared with MAP
 
-- [[Mean Average Precision]]
+- [[Mean Average Precision and Average Precision]]
 
 >[!info]
 >The **average precision** is the *sum* over **ranks** of **relevant documents**
->- Assume the *best possible ranking* with top $k$ being all relevant
+>- Assume there are total $m$ relevant documents.
+>- Assume the *best possible ranking* as the top $m$ of $K$ retrieved documents being all relevant
 >$$
 >\begin{align*}
->\text{Average Precision}_{m} &:= \frac{1}{m}\sum_{k=1}^{m}\text{Precision}(R_{j,k}) \\[5pt] 
->&= \frac{1}{m}\sum_{k=1}^{m} \frac{1}{|R_{j,k}| }\sum_{i=1}^{|R_{j,k}|}R(j,i) \\[5pt] 
->&= \frac{1}{m}\sum_{k=1}^{m} \frac{1}{k}\sum_{i=1}^{k}R(j,i) \\[5pt]
->&= \frac{1}{m}\sum_{i=1}^{m}R(j,i) \sum_{k=i}^{m}\frac{1}{k} \\[5pt] 
->&\to \frac{1}{m}\sum_{i=1}^{m}R(j,i) \int_{i}^{m} \frac{1}{x}dx  \\[5pt] 
->&= \frac{1}{m}\sum_{i=1}^{m}R(j,i)  \log \left( \frac{m}{i} \right)
+>\text{Average Precision}_{m} &:= \frac{1}{m} \sum_{k=1}^{K} \text{Precision@k}\; \cdot \text{IsRelevant}(k) \\[5pt]
+>&= \sum_{k=1}^{K} \frac{1}{k} \#\{ x_{i}:\; x_{i} \in \mathcal{D}_{R},\;\;  i\le k \}\; \frac{1}{m}\mathbb{1}\{ x_{k} \in \mathcal{D}_{R}\} \\[5pt]
+>&= \sum_{k=1}^{K} \frac{1}{k} \sum_{i=1}^{k}R(q, i) \frac{1}{m}\mathbb{1}\{ x_{k} \in \mathcal{D}_{R}\} \\[5pt]
+>&= \frac{1}{m} \sum_{k=1}^{m} \frac{1}{k} \sum_{i=1}^{k}R(q, i)  \\[5pt]
+>&= \frac{1}{m}\sum_{i=1}^{k}R(q,i) \sum_{k=i}^{m}\frac{1}{k} \\[5pt] 
+>&\to \frac{1}{m}\sum_{i=1}^{m}R(q,i) \int_{i}^{m} \frac{1}{x}dx  \\[5pt] 
+>&= \frac{1}{m}\sum_{i=1}^{m}R(q,i)  \log \left( \frac{m}{i} \right)
 >\end{align*}
 >$$ 
->where $R_{j,k}$ be the set of *ranked retrieved documents* for the query $q_{j}$ from top *until* the document $d_{k}$
->- For best possible ranking $|R_{j,k}| = k$
+>- For best possible ranking $\mathbb{1}\{ x_{k} \in \mathcal{D}_{R}\}  = 1$ for $k\le m$
 >
->The **discounted cumulative gain** is given by $$\text{DCG}_{m} := \sum_{i=1}^{m}R(j,i) \frac{1}{\log(i + 1)}$$ 
+>The **discounted cumulative gain** is given by $$\text{DCG}_{m} := \sum_{i=1}^{m}R(q,i) \frac{1}{\log(i + 1)}$$ 
 
 ^f0ab9e
 

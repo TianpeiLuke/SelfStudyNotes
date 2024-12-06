@@ -175,7 +175,7 @@ date of note: 2024-09-13
 - [[Positive Predictive Value and False Discovery Rate]]
 - [[Recall and Precision and F-Measure]]
 - [[Recall and Precision at k]]
-- [[Mean Average Precision]]
+- [[Mean Average Precision and Average Precision]]
 - [[Mean Reciprocal Rank or MRR for Ranking and Question Answering]]
 
 #### Metrics for Generative Language Models

@@ -78,7 +78,7 @@ date of note: 2024-09-13
 
 - [[Precision-Recall Curve]]
 - [[Interpolated Precision and Interpolated Average Precision]]
-- [[Mean Average Precision]]
+- [[Mean Average Precision and Average Precision]]
 - [[Recall and Precision at k]]
 - [[R-Precision]]
 - [[Sensitivity and Specificity]]

@@ -56,7 +56,7 @@ date of note: 2024-11-25
 
 ### Mean Average Precision
 
-- [[Mean Average Precision]]
+- [[Mean Average Precision and Average Precision]]
 
 
 ## Explanation

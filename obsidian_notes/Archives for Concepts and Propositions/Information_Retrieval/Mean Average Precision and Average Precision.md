@@ -6,17 +6,65 @@ tags:
   - natural_language_processing/metric
 keywords:
   - mean_average_precision
+  - average_precision
 topics:
   - machine_learning_metrics
   - information_retrieval/metrics
   - natural_language_processing/metrics
-name: Mean Average Precision
+name: Mean Average Precision and Average Precision
 date of note: 2024-11-25
 ---
 ## Concept Definition
 
 >[!important]
->**Name**: Mean Average Precision or MAP
+>**Name**: Mean Average Precision or MAP and Average Precision
+
+### Average Precision
+
+>[!important] Definition
+>Let the set of *relevant documents* for given query $q\in Q$ be $$\mathcal{D}_{R} := \left\{ d_{1}\,{,}\ldots{,}\,d_{m} \right\}$$
+>- Assume that for given query $q$, the system *retrieved* $K$ documents.
+>
+>The **average precision** for given query $q$ is given by 
+>$$
+>\begin{align*}
+>\text{Average Precision}(q) &:= \sum_{k=1}^{K}\text{Precision@k} \cdot (\text{Recall@k} - \text{Recall@(k-1)}) \\[5pt]
+>&= \frac{1}{\#\text{ relevant documents}}\sum_{k=1}^{K}\text{Precision@k} \cdot \text{IsRelevant}(k) \\[5pt]
+>&= \frac{1}{m}\sum_{s=1}^{m}\text{Precision}(R_{q,s})
+>\end{align*}
+>$$
+>where
+>- $R_{q,k}$ be the set of *ranked retrieved documents* for the query $q$ from top *until* the document $d_{k}$. $$(s_{1} \,{,}\ldots{,}\,s_{R_{j,k}}\,, d_{k})$$
+>- $|R_{q,k}|$ is the *rank* of *relevant document* $d_{k}$ among $K$ retrieved documents.$$\text{Precision}(R_{q,s}) := \text{Precision@}|R_{q,s}|$$
+>- **Average Precision** is the **area under precision-recall curve (AUPRC)**.
+
+- [[Recall and Precision at k]]
+- [[Precision-Recall Curve]]
+- Wikipedia [Average precision](https://en.wikipedia.org/w/index.php?title=Information_retrieval&oldid=793358396#Average_precision)
+
+>[!info]
+>Note that 
+>$$
+>\begin{align*}
+>& \sum_{k=1}^{K}\text{Precision@k} \cdot (\text{Recall@k} - \text{Recall@(k-1)}) \\[5pt]
+>&= \sum_{k=1}^{K} \frac{1}{k} \#\{ x_{i}:\; x_{i} \in \mathcal{D}_{R},\;\;  i\le k \}\; \frac{1}{m}\left(\#\{ x_{i}:\; x_{i} \in \mathcal{D}_{R},\;\;  i\le k \} - \#\{ x_{i}:\; x_{i} \in \mathcal{D}_{R},\;\;  i\le k-1 \}\right) \\[5pt]
+> &= \sum_{k=1}^{K} \frac{1}{k} \#\{ x_{i}:\; x_{i} \in \mathcal{D}_{R},\;\;  i\le k \}\; \frac{1}{m}\mathbb{1}\{ x_{k} \in \mathcal{D}_{R}\}  \\[5pt]
+> &= \frac{1}{m} \sum_{k=1}^{K} \text{Precision@k}\; \cdot \text{IsRelevant}(k)
+>\end{align*}
+>$$
+>
+>Also
+>$$
+>\begin{align*}
+>&\frac{1}{m} \sum_{k=1}^{K} \text{Precision@k}\; \cdot \text{IsRelevant}(k) \\[5pt]
+>&= \frac{1}{m} \sum_{s=1}^{m} \text{Precision@$k_s$} \\[5pt]
+>&= \frac{1}{m} \sum_{s=1}^{m} \text{Precision}(R_{q,s})
+>\end{align*}
+>$$
+>where $$k_{s} := \text{rank of relevant }d_{s}\in \mathcal{D}_{R} := |R_{q, s}|$$
+
+
+### Mean Average Precision
 
 >[!important] Definition
 >Let $Q$ be a set of *queries*. 
@@ -26,14 +74,20 @@ date of note: 2024-11-25
 >
 >Then the **mean average precision (MAP)** for the *query set* $Q$ is defined as 
 >$$
->\text{MAP}(Q) := \frac{1}{|Q|}\sum_{j=1}^{|Q|}\, \frac{1}{m_{j}}\sum_{k=1}^{m_{j}}\text{Precision}(R_{j,k}) 
+>\begin{align*}
+>\text{MAP}(Q) &:=  \frac{1}{|Q|}\sum_{j=1}^{|Q|}\,\text{AP}(q_{j})\\[5pt]
+>&= \frac{1}{|Q|}\sum_{j=1}^{|Q|}\, \frac{1}{m_{j}}\sum_{s=1}^{m_{j}}\text{Precision}(R_{j,s}) \\[5pt]
+>&= \frac{1}{|Q|}\sum_{j=1}^{|Q|}\, \frac{1}{m_{j}}\sum_{k=1}^{K}\text{Precision@k}(q_{j}) \cdot \text{IsRelevant}(k; q_{j})
+>\end{align*}
 >$$
->- If $Q = \left\{ q \right\}$ is a single query, then the **mean average precision** is the *average of precision* for the set of top $k$ documents until and then it is *averaged* over *queries*
 >- The MAP value for a test collection is the *arithmetic mean* of *average precision values* for individual query.
 >- If a given document $d_{k}$ is *not retrieved at all* $R_{j,k} = \infty$, then the *precision value* is *zero*.
 
 - [[Confusion Table]]
 - [[Recall and Precision and F-Measure]]
+
+
+
 
 ## Explanation
 
@@ -93,6 +147,7 @@ date of note: 2024-11-25
 ##  Recommended Notes
 
 
+- [[Ranking as Learning Problem]]
 - [[Information Retrieval]]
 
 - [[Introduction to Information Retrieval by Manning]] pp 158 - 161

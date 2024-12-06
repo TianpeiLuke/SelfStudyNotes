@@ -27,6 +27,11 @@ date of note: 2024-12-05
 
 - [[RankBoost]]
 - [[Supervised Learning and Unsupervised Learning]]
+- [[Contrastive Learning]]
+
+- [[Mean Average Precision and Average Precision]]
+- [[Information Retrieval]]
+- [[Relevance Feedback for Information Retrieval]]
 
 
 - [[Foundations of Machine Learning by Mohri]] pp 214

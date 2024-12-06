@@ -27,6 +27,8 @@ date of note: 2024-11-29
 >- The system computes a *better representation* of the information need based on the user feedback
 >- The system displays a *revised set* of *retrieval results*
 
+- [[Ranking as Learning Problem]]
+
 
 ### Rocchio Algorithm
 

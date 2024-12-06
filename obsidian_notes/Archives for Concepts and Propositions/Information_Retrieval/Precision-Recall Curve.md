@@ -74,6 +74,11 @@ date of note: 2024-11-25
 >[!info]
 >This applies when $K=N$ i.e. the size of bin is $1$.
 
+>[!important]
+>The **Area Under Precision-Recall Curve (AUPRC)** is the same as the **average precision**.
+
+- [[Mean Average Precision and Average Precision]]
+
 
 ## Explanation
 

@@ -28,9 +28,14 @@ date of note: 2024-04-25
 >$$
 >\text{Precision@k} = \frac{1}{k}\#\{ d_{i}: d_{i}\text{ is relevant to query }q,\, 1 \le i\le k \}
 >$$
-
+>and **recall at $k$** or **recall@k** is defined as the *recall* at top $k$ retrieved results
+>$$
+>\text{Recall@k} = \frac{\#\{ d_{i}: d_{i}\text{ is relevant to query }q,\, 1 \le i\le k \}}{P}
+>$$
+>where $P$ is the total number of *relevant documents* for query $q$, i.e. $$P := \#\{ d_{i}: d_{i}\text{ is relevant to query }q,\, 1 \le i\le N \}$$
 
 - [[Precision-Recall Curve]]
+- [[Mean Average Precision and Average Precision]]
 - [[Recall and Precision and F-Measure]]
 - [[Confusion Table]]
 
