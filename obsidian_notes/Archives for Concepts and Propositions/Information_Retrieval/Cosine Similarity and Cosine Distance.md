@@ -65,4 +65,5 @@ date of note: 2024-09-09
 - [[Introduction to Information Retrieval by Manning]] pp 120 - 121
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 18
 - [[Speech and Language Processing by Jurafsky]] pp 110
+- [[Handbook of Natural Language Processing by Indurkhya]] pp 293 - 315
 - Wikipedia [Cosine_similarity](https://en.wikipedia.org/wiki/Cosine_similarity)

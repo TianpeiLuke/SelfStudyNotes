@@ -57,7 +57,7 @@ date of note: 2024-10-21
 
 
 - [[Large Language Model and Pretrained Language Models]]
-
+- [[Relevance Feedback for Information Retrieval]]
 
 
 - [[Valued-based and Policy-based Reinforcement Learning]]

@@ -72,4 +72,5 @@ date of note: 2024-09-08
 
 
 - [[Speech and Language Processing by Jurafsky]] pp 365
+- [[Handbook of Natural Language Processing by Indurkhya]] pp 205 - 237
 - [[Foundations of Statistical Natural Language Processing by Manning]] pp 341

@@ -60,5 +60,10 @@ date of note: 2024-05-12
 
 - [[Introduction to Information Retrieval by Manning]] pp 1
 - [[Speech and Language Processing by Jurafsky]] pp 108
+- [[Handbook of Natural Language Processing by Indurkhya]] pp 455 - 485
 - [[Foundations of Statistical Natural Language Processing by Manning]] pp 529
 - [[Artificial Intelligence Modern Approach by Russell]] pp 867
+
+
+- Youtube
+	- [Applied Machine Learning for Ranking Products in an Ecommerce Setting Arnoud de Munnik Wehkamp Jerry](https://www.youtube.com/watch?v=6BGCn3h59nA)

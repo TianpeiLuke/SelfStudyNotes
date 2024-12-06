@@ -18,6 +18,7 @@ date of note: 2024-11-29
 
 >[!important] Definition
 >The process of constructing *inverted index* for information retrieval system is called **index construction** or **indexing.**
+>- The process or machine that perform indexing is called the **indexer.**
 
 - [[Inverted Index for Information Retrieval]]
 - [[Information Retrieval]]

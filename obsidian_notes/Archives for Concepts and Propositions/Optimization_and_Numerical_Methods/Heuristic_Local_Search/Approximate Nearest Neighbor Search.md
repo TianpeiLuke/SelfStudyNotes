@@ -66,16 +66,16 @@ date of note: 2024-11-29
 - [[Shingling or n-Gram based Document Similarity Measure]]
 - [[Inverted Index for Information Retrieval]]
 
+- [[Inverted File Index for ANN Search]]
+- [[Product Quantization for ANN Search and Index Compression]]
+- [[Inverted File Index - Product Quantization for ANN Search]]
+
 ### Tree-based Data Structure
 
 - [[k-d Tree Structure for ANN Search]]
 - [[Ball Tree Structure for ANN Search]]
 
 ### Hash Table and Dimensionality Reduction
-
-- [[Inverted File Index for ANN Search]]
-- [[Product Quantization for ANN Search and Index Compression]]
-- [[Inverted File Index - Product Quantization for ANN Search]]
 
 - [[Locality-Sensitive Hashing or LSH for ANN Search]]
 - [[MinHash Algorithm for ANN Search]]

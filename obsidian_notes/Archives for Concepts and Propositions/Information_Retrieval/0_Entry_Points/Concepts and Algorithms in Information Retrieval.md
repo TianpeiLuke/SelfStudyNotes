@@ -77,9 +77,10 @@ date of note: 2024-09-13
 #### Evaluation of Ranked Retrieval Result
 
 - [[Precision-Recall Curve]]
-- [[Interpolated Precision and Average Precision]]
+- [[Interpolated Precision and Interpolated Average Precision]]
 - [[Mean Average Precision]]
 - [[Recall and Precision at k]]
+- [[R-Precision]]
 - [[Sensitivity and Specificity]]
 - [[Normalized Discounted Cumulative Gain or NDCG]]
 - [[Mean Reciprocal Rank or MRR for Ranking and Question Answering]]

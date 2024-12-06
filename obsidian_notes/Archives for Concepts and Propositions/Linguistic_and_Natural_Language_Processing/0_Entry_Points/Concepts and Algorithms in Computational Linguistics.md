@@ -64,7 +64,7 @@ date of note: 2024-09-13
 - [[Constituency Parsing]]
 - [[Context-Free Grammars]]
 - [[Constituency Parse Tree]]
-- [[Penn Treebank]]
+- [[Penn Treebank Annotations]]
 - [[Strong and Weak Grammar Equivalence]]
 - [[Chomsky Normal Form for Word Constituency]]
 - [[CKY Parsing as Dynamic Programming Algorithm]]

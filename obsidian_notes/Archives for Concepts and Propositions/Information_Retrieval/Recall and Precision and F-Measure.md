@@ -53,6 +53,8 @@ date of note: 2024-11-25
 >- the **recall** is given by $$\text{Recall} = \frac{\#(\text{relevant item retrieved})}{\#(\text{relevant item})}$$ 
 >- the **precision** is given by $$\text{Precision} = \frac{\#(\text{relevant item retrieved})}{\#(\text{retrieved item})}$$ 
 
+^eb0990
+
 - [[Information Retrieval]]
 
 ### Binary Decision
@@ -69,7 +71,7 @@ date of note: 2024-11-25
 
 ### Average Precision
 
-- [[Interpolated Precision and Average Precision]]
+- [[Interpolated Precision and Interpolated Average Precision]]
 
 
 ### Top-K Relevance
@@ -87,13 +89,14 @@ date of note: 2024-11-25
 
 - [[Information Retrieval]]
 
->[!info]
+>[!important]
 >Both *precision, recall and F-measure* are for **unordered set**.
 >
 >If we want to evaluate **ordered set**, we would need to use other metrics
 
 - [[Recall and Precision at k]]
-- [[Interpolated Precision and Average Precision]]
+- [[R-Precision]]
+- [[Interpolated Precision and Interpolated Average Precision]]
 - [[Normalized Discounted Cumulative Gain or NDCG]]
 
 

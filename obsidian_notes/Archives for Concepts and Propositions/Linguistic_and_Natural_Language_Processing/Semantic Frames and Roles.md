@@ -28,3 +28,4 @@ date of note: 2024-05-12
 - [[Topic Models]]
 
 - [[Speech and Language Processing by Jurafsky]] pp 104
+- [[Handbook of Natural Language Processing by Indurkhya]] pp 93 - 121

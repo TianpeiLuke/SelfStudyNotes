@@ -139,6 +139,29 @@ date of note: 2024-12-03
 
 - [[Tokenization of Words and Subwords and SentencePiece Tokenization]]
 
+### Distance Metrics for Product Quantization
+
+>[!quote]
+>So far have looked at how to *approximate euclidean distance* by using **partial distances**. Let us generalize the rule for other metrics as well.
+> 
+> Imagine we would like to calculate a *distance metric* between a pair of vectors. If we know the metrics’ formula, we can directly apply it to get the result. But sometimes we can do it *by parts* in the following manner:
+> 
+> - Both vectors are divided into _n_ subvectors.
+> - For each pair of respective subvectors, the distance metric is calculated.
+> - Calculated _n_ metrics are then *combined* to produce the actual distance between the original vectors.
+> 
+>**Euclidean distance** is an example of a metric which can be calculated by parts.
+>
+>**Inner product** is another example of such metric with aggregation functions.
+>
+>In the context of **product quantization**, this is a very *important property* because during inference the algorithm calculates distances *by parts*. This means that it would be much more problematic to use metrics for product quantization that do not have this property. **Cosine distance** is an example of such metric.
+>
+>If there is still a need to use a metric without this property, then *additional heuristics* need to be applied to aggregate partial distances with some error. 
+>
+>-- [Similarity Search, Part 2: Product Quantization](https://towardsdatascience.com/similarity-search-product-quantization-b2a1a6397701)
+
+
+
 ### FAISS Implementation of IVF + PQ Indexing
 
 - [[FAISS - Facebook AI Similarity Search Tutorial]]

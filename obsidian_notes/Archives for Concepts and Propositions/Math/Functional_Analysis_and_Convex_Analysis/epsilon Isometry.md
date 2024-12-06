@@ -36,6 +36,8 @@ date of note: 2024-06-02
 >  
 >That is, $f$ preserve *the metric* between $x, y$ **within** $\epsilon$, and leave *no elements in codomain further than*  $\epsilon$ away from the image of domain.
 
+^575618
+
 - [[Metric Space]]
 
 >[!important] Definition (Normed Vector Space)

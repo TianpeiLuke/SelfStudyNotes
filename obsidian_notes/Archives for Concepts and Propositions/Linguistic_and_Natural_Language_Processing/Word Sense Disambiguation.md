@@ -54,4 +54,5 @@ date of note: 2024-05-12
 - [[Lexical Semantics]]
 
 - [[Speech and Language Processing by Jurafsky]] pp 102, 232
+- [[Handbook of Natural Language Processing by Indurkhya]] pp 315 - 339
 - [[Artificial Intelligence Modern Approach by Russell]] pp 906

@@ -61,6 +61,7 @@ date of note: 2024-11-29
 
 
 - [[Introduction to Information Retrieval by Manning]] pp 438
+- [[Handbook of Natural Language Processing by Indurkhya]] pp 293 - 315
 
 - Youtube
 	- [3 Traditional Methods for Similarity Search (Jaccard, w-shingling, Levenshtein)](https://www.youtube.com/watch?v=AY62z7HrghY&list=PLIUOU7oqGTLhlWpTz4NnuT3FekouIVlqc&index=1)

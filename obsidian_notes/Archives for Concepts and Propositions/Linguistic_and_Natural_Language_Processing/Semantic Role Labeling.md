@@ -30,3 +30,4 @@ date of note: 2024-05-12
 
 
 - [[Speech and Language Processing by Jurafsky]] 
+- [[Handbook of Natural Language Processing by Indurkhya]] pp 93 - 121

@@ -227,7 +227,7 @@ date of note: 2024-06-01
 
 #### Information Retrieval
 
-- [[Interpolated Precision and Average Precision]]
+- [[Interpolated Precision and Interpolated Average Precision]]
 - [[Mean Average Precision]]
 - [[Recall and Precision at k]]
 - [[Normalized Discounted Cumulative Gain or NDCG]]

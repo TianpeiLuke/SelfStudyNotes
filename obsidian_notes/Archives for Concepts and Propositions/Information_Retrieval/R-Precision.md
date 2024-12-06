@@ -5,26 +5,24 @@ tags:
   - information_retrieval/relevancy_metric
   - natural_language_processing/metric
 keywords:
-  - average_precision
-  - interpolated_average_precision
-  - interpolated_precision
+  - r_precision_metric
 topics:
   - machine_learning_metrics
   - information_retrieval/metrics
   - natural_language_processing/metrics
-name: Interpolated Precision and Precision and Average Precision
-date of note: 2024-11-25
+name: R-Precision
+date of note: 2024-04-25
 ---
 ## Concept Definition
 
 >[!important]
->**Name**: Interpolated Precision and Average Precision and Mean Average Precision
+>**Name**:  R-Precision
 
 
 
-- [[Confusion Table]]
+
 - [[Recall and Precision and F-Measure]]
-
+- [[Confusion Table]]
 
 ## Explanation
 
@@ -40,12 +38,10 @@ date of note: 2024-11-25
 -----------
 ##  Recommended Notes
 
-
 - [[Information Retrieval]]
 
-- [[Introduction to Information Retrieval by Manning]] pp 158 - 161
+- [[Introduction to Information Retrieval by Manning]] pp 161
 - [[Evaluating Learning Algorithms by Japkowicz]]
-- [[Speech and Language Processing by Jurafsky]] pp 296, 298
 
 - Medium
 	- [Recall and Precision at k for Recommender Systems](https://medium.com/@m_n_malaeb/recall-and-precision-at-k-for-recommender-systems-618483226c54)

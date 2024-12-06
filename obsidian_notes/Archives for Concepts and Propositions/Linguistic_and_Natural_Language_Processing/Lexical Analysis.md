@@ -14,9 +14,17 @@ date of note: 2024-11-18
 >**Name**: 
 
 
+- [[Lexical Semantics]]
+
+
+- [[Word Sense and WordNet]]
+- [[Word Association and Relatedness]]
+- [[Word Sense Disambiguation]]
 
 ## Explanation
 
+
+- [[Lexical Syntactic and Semantic Ambiguity]]
 
 
 
@@ -24,3 +32,8 @@ date of note: 2024-11-18
 -----------
 ##  Recommended Notes and References
 
+
+
+
+- [[Speech and Language Processing by Jurafsky]]
+- [[Handbook of Natural Language Processing by Indurkhya]] pp 31 - 93

@@ -50,6 +50,39 @@ date of note: 2024-09-04
 ![[information_extraction_pipeline.png]]
 
 
+### Unstructured vs. Semi-Structured
+
+>[!quote]
+>Historically, most natural language processing (NLP) systems have been designed to process **unstructured text**, which consists of natural language sentences. 
+>- In contrast to** **structured data** where the semantics of the data is defined by its *organization* (e.g., *database entries*), the *meaning* of **unstructured text** depends entirely on *linguistic analysis* and *natural language understanding*.
+>  
+>**Semi-structured text** consists of natural language that appears in a document where the *physical layout* of the language plays a role in its *interpretation*. For example, consider the seminar announcements ..  
+>  
+>-- [[Handbook of Natural Language Processing by Indurkhya]] pp 513  
+
+### Single-Document vs. Multi-Document
+
+
+### Multi-Stage IE and Finite-State Transducers
+
+>[!quote]
+>In a **finite-state transducer**, an output entity is constructed when *final states* are reached, e.g., a representation of the information in a phrase. 
+>- In a **cascaded finite-state transducer**, there are different finite-state transducers at different stages. Earlier stages will package a string of elements into something the next stage will view as a single element.
+>
+>In the typical system, 
+>- the *earlier stages* recognize *smaller linguistic objects* and work in a largely *domain-independent* fashion. They use purely *linguistic knowledge* to recognize portions of the *syntactic structure* of a sentence that linguistic methods can determine reliably, requiring relatively little modification or augmentation as the system is moved from domain to domain. 
+>- The later stages take these linguistic objects as input and find *domain-dependent patterns* within them. 
+>
+>In a typical IE system, there are **five levels** of processing: 
+>1. **Complex Words**: This includes the recognition of multiwords and proper name entities, such as people, companies, and countries. 
+>2. **Basic Phrases**: Sentences are segmented into *noun groups*, *verb groups*, and *particles*. 
+>3. **Complex Phrases**: Complex noun groups and complex verb groups are identified. 
+>4. **Domain Events**: The sequence of phrases produced at Level 3 is scanned for *patterns of interest* to the application, and when they are found, *semantic structures* are built that encode the information about *entities and events* contained in the pattern. 
+>5. **Merging Structures**: Semantic structures from different parts of the text are *merged* if they provide information about the *same entity or event*. This process is sometimes called **template generation**, and is a complex process *not done* by a **finite-state transducer**.
+>   
+>-- [[Handbook of Natural Language Processing by Indurkhya]] pp 513     
+
+
 ## Explanation
 
 
@@ -119,7 +152,7 @@ date of note: 2024-09-04
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 953 - 960
 - [[Speech and Language Processing by Jurafsky]] pp 435
-- [[Handbook of Natural Language Processing by Indurkhya]] pp 511
+- [[Handbook of Natural Language Processing by Indurkhya]] pp 511 - 533
 - [[Foundations of Statistical Natural Language Processing by Manning]] pp 112, 131, 376
 - [[Practical Natural Language Processing by Vajjala]] pp 164
 - [[Artificial Intelligence Modern Approach by Russell]] pp 873 - 876
