@@ -120,6 +120,11 @@ date of note: 2024-06-01
 
 - [[Models and Algorithms for Online Learning]]
 
+#### Learning to Rank
+
+- [[Learning to Rank]]
+- [[RankBoost]]
+
 
 ### Unsupervised Learning Models and Algorithms
 
