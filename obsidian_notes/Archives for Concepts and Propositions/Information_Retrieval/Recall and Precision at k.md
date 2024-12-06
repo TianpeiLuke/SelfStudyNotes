@@ -39,6 +39,8 @@ date of note: 2024-04-25
 - [[Recall and Precision and F-Measure]]
 - [[Confusion Table]]
 
+![[rank_precision_recall.png]]
+
 ## Explanation
 
 >[!quote]
@@ -61,6 +63,7 @@ date of note: 2024-04-25
 - [[Information Retrieval]]
 
 - [[Introduction to Information Retrieval by Manning]] pp 161
+- [[Speech and Language Processing by Jurafsky]] pp 296
 - [[Evaluating Learning Algorithms by Japkowicz]]
 
 - Medium

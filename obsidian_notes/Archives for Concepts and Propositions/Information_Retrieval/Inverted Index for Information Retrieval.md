@@ -25,7 +25,7 @@ date of note: 2024-11-29
 >- This matrix is a *sparse matrix* since each document has much less terms than the vocabulary.
 >- The *non-zero entries* in *each row* represents which document that contains the given term. $$m \to  \{ d_{i_{1}} \,{,}\ldots{,}\, d_{i_{K}}\}, \quad x(m, d_{i_{j}}) > 0 $$
 >  
->The **inverted index**, or **inverted file**  consists of two parts:
+>The **inverted index**, or **inverted file** is a data structure that consists of two parts:
 >- a **dictionary** of *terms* or **vocabulary** or **lexicon** $\mathcal{V}$
 >- and for each term $m\in \mathcal{V}$, a *list of indices* for documents that contains the given term, $$m \to  ( d_{i_{k}}\in \mathcal{D}:\, x(m, d_{i_{k}}) > 0,\, i_{k}\in [|\mathcal{D}|])$$ 
 >	- Each item in the list, which records that a term appeared in a document, is called a **posting** 
@@ -117,3 +117,4 @@ date of note: 2024-11-29
 	- [Similarity Search, Part 1: kNN & Inverted File Index](https://towardsdatascience.com/similarity-search-knn-inverted-file-index-7cab80cc0e79)
 
 - [[Introduction to Information Retrieval by Manning]] pp 6
+- [[Speech and Language Processing by Jurafsky]] pp 295

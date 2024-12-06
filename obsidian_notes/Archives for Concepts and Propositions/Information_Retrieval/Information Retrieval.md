@@ -25,6 +25,25 @@ date of note: 2024-05-12
 >
 >--  [[Introduction to Information Retrieval by Manning]] pp 1
 
+>[!important] Definition
+>The **information retrieval (IR)** is the name of the field encompassing the *retrieval* of all  manner of media based on *user information needs*.
+>- A *information retrieval system* is called a **search engine**.
+>  
+>  
+>An **ad hoc retrieval** task is completed by following steps:
+>- user poses a *query* to the information retrieval system
+>- the system returns a *ordered set* of *documents* from some *collection.*
+>  
+>where    
+>- a **term** refers to words or phrases in a collection.
+>- A **query** represents the *user information need* in a few terms.
+>- A **document** refers to a basic unit of text the system *indexes* and *retrieves*
+>- A **collection** refers to a set of *documents* being used to satisfy user requests.
+
+
+![[information_retrieval_system.png]]
+
+
 ### Indexing
 
 >[!important] Definition
@@ -48,6 +67,10 @@ date of note: 2024-05-12
 - Zhu, Y., Yuan, H., Wang, S., Liu, J., Liu, W., Deng, C., ... & Wen, J. R. (2023). Large language models for information retrieval: A survey. _arXiv preprint arXiv:2308.07107_.
 
 
+## Question Answering
+
+- [[Question Answering Problem]]
+
 
 
 -----------
@@ -56,6 +79,8 @@ date of note: 2024-05-12
 - [[Vector Space Model in Information Retrieval]]
 - [[Matrix]]
 - [[Topic Models]]
+- [[Bag-of-Word Model for Document Representation]]
+
 
 
 - [[Introduction to Information Retrieval by Manning]] pp 1

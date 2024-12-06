@@ -115,7 +115,7 @@ date of note: 2024-11-25
 
 
 - [[Introduction to Information Retrieval by Manning]] pp 154 - 156
-- [[Speech and Language Processing by Jurafsky]] pp 66
+- [[Speech and Language Processing by Jurafsky]] pp 66, 295
 - [[Evaluating Learning Algorithms by Japkowicz]]
 - [[Artificial Intelligence Modern Approach by Russell]] pp 869
 

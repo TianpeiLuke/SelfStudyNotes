@@ -49,6 +49,12 @@ date of note: 2024-11-25
 ### Approximate Precision-Recall Curve via Binning
 
 >[!important] Definition
+>The **precision-recall curve** is obtained from the *ranked* validation data
+>- It is a plot of $$(\text{Precision@k},\, \text{Recall@k})$$
+
+- [[Recall and Precision at k]]
+
+>[!important] Definition
 >The **precision-recall curve** can be estimated via *binning*
 >- *Require*: binary labeled validation data $\mathcal{D} := \left\{ (x_{n}, y_{n}) \right\}$
 >- Evaluate the validation data with model, and assign each test sample $x_{n}$ with a score $p_{n}$
@@ -70,6 +76,9 @@ date of note: 2024-11-25
 >- *Return* the list
 >	- $$\text{Recall-L} := [\text{Recall}_{\le 1} \,{,}\ldots{,}\,\text{Recall}_{\le K}]$$
 >	- $$\text{Precision-L} := [\text{Precision}_{\le 1} \,{,}\ldots{,}\,\text{Precision}_{\le K}]$$
+
+![[rank_precision_recall.png]]
+
 
 >[!info]
 >This applies when $K=N$ i.e. the size of bin is $1$.
@@ -107,6 +116,7 @@ date of note: 2024-11-25
 - [[Information Retrieval]]
 
 - [[Introduction to Information Retrieval by Manning]] pp 158
+- [[Speech and Language Processing by Jurafsky]] pp 296
 - [[Evaluating Learning Algorithms by Japkowicz]]
 
 - Medium
