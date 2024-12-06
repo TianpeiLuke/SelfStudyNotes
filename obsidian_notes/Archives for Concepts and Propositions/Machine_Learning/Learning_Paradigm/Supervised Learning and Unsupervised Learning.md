@@ -32,6 +32,7 @@ date of note: 2024-08-10
 - [[Conditional Probability]]
 - [[Classification Problem]]
 - [[Regression Problem]]
+- [[Ranking as Learning Problem]]
 
 >[!important] Definition
 >The **non-probabilistic supervised learning** directly learn a function $h\in \mathcal{H}$ so that the error under $\mathcal{P}$ is minimized

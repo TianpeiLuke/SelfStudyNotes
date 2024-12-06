@@ -26,7 +26,7 @@ date of note: 2024-12-05
 
 
 - [[RankBoost]]
-
+- [[Supervised Learning and Unsupervised Learning]]
 
 
 - [[Foundations of Machine Learning by Mohri]] pp 214

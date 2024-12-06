@@ -122,7 +122,7 @@ date of note: 2024-06-01
 
 #### Learning to Rank
 
-- [[Learning to Rank]]
+- [[Ranking as Learning Problem]]
 - [[RankBoost]]
 
 
