@@ -147,6 +147,8 @@ date of note: 2024-09-13
 
 #### Scoring and Ranking
 
+- [[Learning to Rank]]
+- [[RankBoost]]
 
 #### Index System
 
