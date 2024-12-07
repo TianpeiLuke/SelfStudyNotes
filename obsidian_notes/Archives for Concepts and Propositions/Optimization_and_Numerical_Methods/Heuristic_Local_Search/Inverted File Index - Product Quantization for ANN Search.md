@@ -87,7 +87,7 @@ date of note: 2024-12-03
 
 ![[invert_file_index_prod_quant_inference.png]]
 
-
+![[ivf_pq_system.png]]
 
 
 ### IVF-PQ Indexing System
