@@ -61,15 +61,6 @@ date of note: 2024-11-29
 
 ## Algorithms for Approximate Nearest Neighbor 
 
-### List-based Data Structure
-
-- [[Shingling or n-Gram based Document Similarity Measure]]
-- [[Inverted Index for Information Retrieval]]
-
-- [[Inverted File Index for ANN Search]]
-- [[Product Quantization for ANN Search and Index Compression]]
-- [[Inverted File Index - Product Quantization for ANN Search]]
-
 ### Tree-based Data Structure
 
 - [[k-d Tree Structure for ANN Search]]
@@ -80,10 +71,23 @@ date of note: 2024-11-29
 - [[Locality-Sensitive Hashing or LSH for ANN Search]]
 - [[MinHash Algorithm for ANN Search]]
 
+### Cluster-based Data Structure
+
+- [[Shingling or n-Gram based Document Similarity Measure]]
+- [[Inverted Index for Information Retrieval]]
+
+- [[Inverted File Index for ANN Search]]
+
 ### Graph-based Data Structure
 
 - [[Navigable Small World Model and Kleinberg Variant of Watts-Strogatz Model]]
 - [[Hierarchical Navigable Small Worlds or HNSW for Graph-based ANN Search]]
+
+### Quantization Approach
+
+- [[Product Quantization for ANN Search and Index Compression]]
+- [[Inverted File Index - Product Quantization for ANN Search]]
+
 
 ## Code
 

@@ -63,12 +63,6 @@ date of note: 2024-08-24
 
 - [[Approximate Nearest Neighbor Search]]
 
-#### List-based ANN Search
-
-- [[Inverted File Index for ANN Search]]
-- [[Product Quantization for ANN Search and Index Compression]]
-- [[Inverted File Index - Product Quantization for ANN Search]]
-
 #### Tree-based ANN Search
 
 - [[k-d Tree Structure for ANN Search]]
@@ -78,6 +72,16 @@ date of note: 2024-08-24
 
 - [[Locality-Sensitive Hashing or LSH for ANN Search]]
 - [[MinHash Algorithm for ANN Search]]
+
+#### Cluster-based ANN Search
+
+- [[Inverted File Index for ANN Search]]
+
+#### Quantization Approach 
+
+- [[Product Quantization for ANN Search and Index Compression]]
+- [[Inverted File Index - Product Quantization for ANN Search]]
+
 
 #### Graph-based ANN Search
 
