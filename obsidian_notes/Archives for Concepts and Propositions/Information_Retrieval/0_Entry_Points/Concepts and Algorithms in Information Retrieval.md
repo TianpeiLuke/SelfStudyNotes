@@ -179,7 +179,12 @@ date of note: 2024-09-13
 - [[Locality-Sensitive Hashing or LSH for ANN Search]]
 - [[MinHash Algorithm for ANN Search]]
 
+#### Cluster-based ANN Search
+
 - [[Inverted File Index for ANN Search]]
+
+#### Quantization Approach
+
 - [[Product Quantization for ANN Search and Index Compression]]
 - [[Inverted File Index - Product Quantization for ANN Search]]
 
