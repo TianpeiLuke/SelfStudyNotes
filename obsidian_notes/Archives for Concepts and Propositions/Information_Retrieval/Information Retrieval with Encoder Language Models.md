@@ -22,21 +22,53 @@ date of note: 2024-05-12
 
 
 - [[Bidirectional Encoder Representation from Transformer or BERT]]
-- [[Contrastive Learning]]
-- [[Representation Learning]]
 - [[Information Retrieval]]
-
-
 
 ### Cross-Encoder Structure
 
+>[!important] Definition
+>The **cross-encoder** considers a *query-document pair* as an entire "sentence".
+>
+>In specific, the **cross-encoder approach** for *dense retrieval* is described as following steps
+>- *Encode* the query and document via a *single encoder*
+>	- The input of encoder is the *concatenation* of a query $q$ and a document $d$, separated by *special token* `[SEP]` $$x = q + \text{`[SEP]'} + d$$
+>	- Compute the *embedding* for the special token `[CLS]` in the beginning of sentence $$z = \text{BERT}(x)[\text{CLS}]$$
+>- The *relevance score* is computed via a *linear layer* on the top of embedding as $$\text{relevancy-score}(q, d) := \text{softmax}(Uz)$$
 
-### ColBERT and Bi-Encoder Structure
+^d1dcfd
+
+- [[Softmax Function and Log-Sum-Exp Function]]
+- [[Bidirectional Encoder Representation from Transformer or BERT]]
+
+### Bi-Encoder Structure
+
+>[!important] Definition
+>The **bi-encoder** or **dual-encoder** adopts the *two-tower architecture*:
+>- It has *two encoders*: **query encoder** and **document encoder**. $$\text{BERT}_{\mathcal{Q}}, \quad \text{BERT}_{\mathcal{D}}$$
+>- This is similar to the *representation learning approach* 
+>
+>
+>In specific, the **bi-encoder approach** for *dense retrieval* is described as following steps
+>- Encode each document $d$ via *document encoder* $$z_{d} = \text{BERT}_{\mathcal{D}}(d)[\text{CLS}]$$
+>- Store all document embeddings in a vector database
+>- *Encode* the query  $q$ via *query encoder* $$z_{q} = \text{BERT}_{\mathcal{Q}}(q)[\text{CLS}]$$
+>- The *relevance score* is computed via a *cosine similarity* between query and document embedding $$\text{relevancy-score}(q, d) := \left\langle  z_{q}\,,\, z_{d}   \right\rangle$$
+
+^551842
+
+- [[Siamese Network for Contrastive Learning]]
+- [[Cosine Similarity and Cosine Distance]]
+- [[Contrastive Learning]]
+- [[Representation Learning]]
+
+![[information_dense_retrieval_one_two_encoder.png]]
+
+### ColBERT as Multi-Representation Bi-encoder
 
 - [[ColBERT and Bi-Encoder Structure for Dense Information Retrieval]]
 
 
-![[information_dense_retrieval_one_two_encoder.png]]
+
 
 ## Explanation
 

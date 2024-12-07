@@ -18,7 +18,9 @@ date of note: 2024-05-12
 >[!important]
 >**Name**: ColBERT for Information Retrieval
 
+![[Information Retrieval with Encoder Language Models#^d1dcfd]]
 
+![[Information Retrieval with Encoder Language Models#^551842]]
 
 
 - [[Bidirectional Encoder Representation from Transformer or BERT]]

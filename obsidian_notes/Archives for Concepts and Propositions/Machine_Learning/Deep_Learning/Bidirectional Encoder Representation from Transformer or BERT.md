@@ -135,7 +135,7 @@ date of note: 2024-10-21
 | **Parameter size**           | - $110$ million (*base* uncased/cased)<br>- $340$ million (*large* uncased/cased) | - $110$ million (*base* cased)                                                                              | $550$ million                                                                                                                       | $134$ million                                                                                                                                                                                                |
 | Model Card                   | [BERT Huggingface](https://huggingface.co/docs/transformers/en/model_doc/bert)    | [BERT multilingual base model Huggingface](https://huggingface.co/google-bert/bert-base-multilingual-cased) | [XLM-RoBERTa Huggingface](https://huggingface.co/docs/transformers/en/model_doc/xlm-roberta)                                        | - [DistilBert Huggingface](https://huggingface.co/docs/transformers/en/model_doc/distilbert)<br>- [distilbert-base-multilingual-cased](https://huggingface.co/distilbert/distilbert-base-multilingual-cased) |
 
-- [[ColBERT and Bi-Encoder Structure for Dense Information Retrieval]]
+- [[ColBERT as Multi-Representation Bi-Encoder Structure for Dense Information Retrieval]]
 
 ### Monolingual vs. Multilingual
 

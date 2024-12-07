@@ -110,7 +110,7 @@ date of note: 2024-09-13
 
 - [[Information Retrieval with Encoder Language Models]]
 - [[Cross-Encoder Structure for Dense Information Retrieval]]
-- [[ColBERT and Bi-Encoder Structure for Dense Information Retrieval]]
+- [[ColBERT as Multi-Representation Bi-Encoder Structure for Dense Information Retrieval]]
 
 
 ### Similarity Measure
