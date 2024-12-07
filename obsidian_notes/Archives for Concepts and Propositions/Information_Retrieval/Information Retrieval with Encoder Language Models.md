@@ -65,7 +65,7 @@ date of note: 2024-05-12
 
 ### ColBERT as Multi-Representation Bi-encoder
 
-- [[ColBERT and Bi-Encoder Structure for Dense Information Retrieval]]
+- [[ColBERT as Multi-Representation Bi-Encoder Structure for Dense Information Retrieval]]
 
 
 
