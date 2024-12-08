@@ -109,7 +109,7 @@ date of note: 2024-05-12
 ### Recurrent Layer
 
 - [[Gated Recurrent Units in Neural Network]]
-- [[Long-Short Term Memory Network]]
+- [[Long-Short Term Memory Network or LSTM]]
 
 ### Residual Connection
 

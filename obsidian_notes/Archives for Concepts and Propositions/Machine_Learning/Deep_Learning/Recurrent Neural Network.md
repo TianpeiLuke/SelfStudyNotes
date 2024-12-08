@@ -172,7 +172,7 @@ date of note: 2024-08-16
 
 ## Gated Recurrent Neural Network
 
-- [[Long-Short Term Memory Network]]
+- [[Long-Short Term Memory Network or LSTM]]
 - [[Gated Recurrent Units in Neural Network]]
 
 
@@ -182,7 +182,7 @@ date of note: 2024-08-16
 
 
 - [[Gated Recurrent Units in Neural Network]]
-- [[Long-Short Term Memory Network]]
+- [[Long-Short Term Memory Network or LSTM]]
 - [[Residual Neural Network]]
 - [[Transformer Network]]
 

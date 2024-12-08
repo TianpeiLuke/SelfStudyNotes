@@ -63,7 +63,7 @@ date of note: 2024-11-17
 
 
 - [[Recurrent Neural Network]]
-- [[Long-Short Term Memory Network]]
+- [[Long-Short Term Memory Network or LSTM]]
 - [[Gated Recurrent Units in Neural Network]]
 - [[Encoder-Decoder Sequence-to-Sequence Architecture]]
 

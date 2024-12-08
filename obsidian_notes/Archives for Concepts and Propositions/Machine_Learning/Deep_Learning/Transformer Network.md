@@ -122,7 +122,7 @@ date of note: 2024-05-12
 >  
 >On the other hand, i in *sequence data processing*, where the sequential position is important, attention mechanism and transformer need additional **positional encoding**  
 
-- [[Long-Short Term Memory Network]]
+- [[Long-Short Term Memory Network or LSTM]]
 - [[Gated Recurrent Units in Neural Network]]
 
 >[!info]

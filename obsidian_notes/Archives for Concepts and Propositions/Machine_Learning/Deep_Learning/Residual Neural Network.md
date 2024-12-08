@@ -75,7 +75,7 @@ date of note: 2024-05-12
 
 ### RNN
 
-- [[Long-Short Term Memory Network]]
+- [[Long-Short Term Memory Network or LSTM]]
 
 
 

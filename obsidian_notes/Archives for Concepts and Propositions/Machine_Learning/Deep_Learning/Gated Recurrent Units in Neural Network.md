@@ -21,9 +21,9 @@ date of note: 2024-05-12
 >[!important]
 >**Name**: Gated Recurrent Units in Neural Network
 
-![[Long-Short Term Memory Network#^2f4537]]
+![[Long-Short Term Memory Network or LSTM#^2f4537]]
 
-- [[Long-Short Term Memory Network]]
+- [[Long-Short Term Memory Network or LSTM]]
 
 >[!important] Definition
 >In **gated recurrent unit (GRU)**, we combine the role of long-term memory and short-term memory into one state vector $h$. It consists of the following components
@@ -64,7 +64,7 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
-- [[Long-Short Term Memory Network]]
+- [[Long-Short Term Memory Network or LSTM]]
 - [[Recurrent Neural Network]]
 - [[Artificial Neural Network and Deep Learning]]
 

@@ -317,7 +317,7 @@ date of note: 2024-05-12
 
 - [[Vanishing and Exploding Gradient Problems for Sequential Networks]]
 - [[Strategies for Multiple Time Scales Sequential Network]]
-- [[Long-Short Term Memory Network]]
+- [[Long-Short Term Memory Network or LSTM]]
 - [[Gated Recurrent Units in Neural Network]]
 - [[Residual Connection for Deep Learning]]
 

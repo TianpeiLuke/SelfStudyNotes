@@ -139,7 +139,7 @@ date of note: 2024-09-13
 
 - [[Models and Algorithms for Deep Learning]]
 - [[Recurrent Neural Network]]
-- [[Long-Short Term Memory Network]]
+- [[Long-Short Term Memory Network or LSTM]]
 - [[Gated Recurrent Units in Neural Network]]
 - [[Residual Neural Network]]
 - [[Bidirectional Recurrent Neural Network]]

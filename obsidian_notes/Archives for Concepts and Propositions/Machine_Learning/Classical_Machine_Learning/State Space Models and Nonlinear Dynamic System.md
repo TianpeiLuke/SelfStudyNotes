@@ -110,7 +110,7 @@ date of note: 2024-05-12
 ## Recurrent Neural Network
 
 - [[Recurrent Neural Network]]
-- [[Long-Short Term Memory Network]]
+- [[Long-Short Term Memory Network or LSTM]]
 - [[Gated Recurrent Units in Neural Network]]
 
 

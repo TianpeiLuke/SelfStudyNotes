@@ -19,8 +19,33 @@ date of note: 2024-08-31
 
 ![[Recurrent Neural Network#^81c4ad]]
 
+>[!important] Definition
+>Let $d$ be a sequence of $n$ tokens $$d := (w^{1}\,{,}\ldots{,}\,w^{T}).$$
+>- The **forward language model (LM)** factorizes the joint probability of $d$ in time forward direction $$p(d) := p(w^{1}\,{,}\ldots{,}\,w^{T}) = \prod_{t=1}^{T}p(w^{t}\,|\,w^{1} \,{,}\ldots{,}\,w^{t-1})$$
+>- The **backward language model (LM)** factorizes the joint probability of $d$ in time reversal direction $$p(d) := p(w^{1}\,{,}\ldots{,}\,w^{T}) = \prod_{t=1}^{T}p(w^{t}\,|\,w^{t+1} \,{,}\ldots{,}\,w^{T})$$
+>- A **bidirectional language model (biLM)** combines both *forward* and *backward* language model. It jointly maximizes the likelihood of both models as $$L:= \sum_{t=1}^{T}\left[ \log p(w^{t}\,|\,w^{1} \,{,}\ldots{,}\,w^{t-1};\;\Theta_{f}) + \log p(w^{t}\,|\,w^{t+1} \,{,}\ldots{,}\,w^{T};\;\Theta_{b} )\right] $$
 
+- [[Autoregressive Models]]
+
+>[!important] Definition
+>**ELMo** or the **Embedding from Language Models** is based on a *bidirectional recurrent neural network*.
+>- For each token $w^{k}$, a *L*-layer *bidirectional language model (biLM)* computes a set of $2L+1$ representations 
+>	- For each layer:
+>		- The forward representation from **forward LSTM** $$\begin{align*} h_{k}^{(f)} := ( h_{k,1}^{(f)} \,{,}\ldots{,}\,h_{k,L}^{(f)} )&=  \text{LSTM}\left(\Theta_{x}w^{k},\, \Theta_{f},\,L\right)\end{align*}$$
+>		- The backward representation from **backward LSTM** $$\begin{align*} h_{k}^{(b)} := ( h_{k,1}^{(b)} \,{,}\ldots{,}\,h_{k,L}^{(b)} )&=  \text{LSTM}\left(\Theta_{x}w^{k},\, \Theta_{b},\,L\right)\end{align*}$$
+>		- The *input mapping* $\Theta_{x}$ and the *output softmax mapping* $\Theta_{s}$ of both *forward and backward LSTMs* are **tied** with **shared weight**
+>		- Denote that $$x_{k} := h_{0}^{(f)} = h_{0}^{(b)}$$
+>	-  Collect all hidden representation in all layers into *one vector* $R_{k}$ $$R_{k} := \left\{ (h_{k,j}^{(f)}, h_{k,j}^{(b)}),\; j=0\,{,}\ldots{,}\,L \right\} $$
+>- A **task specific ELMo representation** is computed by *weighting* of all biLM layers $$\text{ELMo}_{k}^{\text{task}} := E\left(R_{k}; \Theta^{\text{task}}\right) = \gamma^{\text{task}}\;\sum_{j=0}^{L}s_{j}^{\text{task}}\;(h_{k,j}^{(f)}, h_{k,j}^{(b)})$$ where $(s_{j}^{\text{task}})$ are *normalized weight*
+>- For downstream task, we can either 
+>	- *concatenate* **ELMO vector** with **representation vector** for token $w^{k}$ as $$[x_{k}, \; \text{ELMo}_{k}^{\text{task}}]$$ as input the task-specific RNNs.
+>	- at the *output* of the RNN,  *replace* $h_{k}$ with  **ELMO vector** and $h_{k}$ passing a linear weight as $$h_{k} \leftarrow W\,[h_{k}, \; \text{ELMo}_{k}^{\text{task}}]$$
+
+
+- [[Long-Short Term Memory Network or LSTM]]
 - [[Bidirectional Recurrent Neural Network]]
+- [[Softmax Function and Log-Sum-Exp Function]]
+- [[Soft Weight Sharing for Deep Learning]]
 
 
 ![[bidirectional_rnn.png]]
@@ -59,8 +84,7 @@ date of note: 2024-08-31
 
 
 - [[Recurrent Neural Network]]
-- [[Gated Recurrent Units in Neural Network]]
-- [[Long-Short Term Memory Network]]
+- [[Gated Recurrent [[Long-Short Term Memory Network or LSTM]]-Short Term Memory Network]]
 - [[Residual Neural Network]]
 
 - [[Linear Dynamic System]]

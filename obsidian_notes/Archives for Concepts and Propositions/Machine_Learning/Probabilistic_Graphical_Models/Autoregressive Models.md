@@ -101,7 +101,7 @@ date of note: 2024-11-14
 ![[Recurrent Neural Network#^81c4ad]]
 
 - [[Recurrent Neural Network]]
-- [[Long-Short Term Memory Network]]
+- [[Long-Short Term Memory Network or LSTM]]
 - [[Gated Recurrent Units in Neural Network]]
 - [[Encoder-Decoder Sequence-to-Sequence Architecture]]
 

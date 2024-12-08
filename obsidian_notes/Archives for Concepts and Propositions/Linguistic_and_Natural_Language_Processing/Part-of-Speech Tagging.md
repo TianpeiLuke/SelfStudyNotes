@@ -44,7 +44,7 @@ date of note: 2024-09-08
 ### Recurrent Neural Network
 
 - [[Recurrent Neural Network]]
-- [[Long-Short Term Memory Network]]
+- [[Long-Short Term Memory Network or LSTM]]
 - [[Gated Recurrent Units in Neural Network]]
 - [[Encoder-Decoder Sequence-to-Sequence Architecture]]
 

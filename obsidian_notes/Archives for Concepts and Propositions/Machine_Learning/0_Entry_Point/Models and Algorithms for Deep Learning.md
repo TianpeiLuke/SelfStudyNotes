@@ -160,7 +160,7 @@ date of note: 2024-06-01
 - [[Strategies for Multiple Time Scales Sequential Network]]
 
 - [[Gated Recurrent Units in Neural Network]]
-- [[Long-Short Term Memory Network]]
+- [[Long-Short Term Memory Network or LSTM]]
 - [[Residual Neural Network]]
 - [[Bidirectional Recurrent Neural Network]]
 - [[Encoder-Decoder Sequence-to-Sequence Architecture]]

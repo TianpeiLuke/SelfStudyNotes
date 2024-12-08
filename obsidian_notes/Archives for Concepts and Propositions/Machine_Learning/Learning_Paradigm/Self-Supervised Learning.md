@@ -36,7 +36,7 @@ date of note: 2024-07-07
 ![[self_train_rnn.png]]
 
 - [[Recurrent Neural Network]]
-- [[Long-Short Term Memory Network]]
+- [[Long-Short Term Memory Network or LSTM]]
 - [[Gated Recurrent Units in Neural Network]]
 
 

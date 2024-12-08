@@ -69,7 +69,7 @@ date of note: 2024-09-02
 
 
 - [[Gated Recurrent Units in Neural Network]]
-- [[Long-Short Term Memory Network]]
+- [[Long-Short Term Memory Network or LSTM]]
 - [[Residual Neural Network]]
 
 - [[Recurrent Neural Network]]
