@@ -22,6 +22,7 @@ date of note: 2024-09-08
 - [[Cosine Similarity and Cosine Distance]]
 - [[Contrastive Learning]]
 - [[Soft Weight Sharing for Deep Learning]]
+- [[Convolutional Neural Network]]
 
 ### Contrastive Loss
 
@@ -62,3 +63,4 @@ date of note: 2024-09-08
 - Wikipedia [Siamese neural network](https://en.wikipedia.org/wiki/Siamese_neural_network)
 
 - Bromley, J., Guyon, I., LeCun, Y., Säckinger, E., & Shah, R. (1993). Signature verification using a" siamese" time delay neural network. _Advances in neural information processing systems_, _6_.
+- Chicco, D. (2021). Siamese neural networks: An overview. _Artificial neural networks_, 73-94.
