@@ -93,6 +93,7 @@ date of note: 2024-09-13
 
 - [[Word Embedding Semantic Properties]]
 - [[Word Embedding Evaluation and Datasets]]
+- [[Contextual Embeddings and Word Sense]]
 
 #### Topic Models
 
@@ -142,6 +143,7 @@ date of note: 2024-09-13
 - [[Gated Recurrent Units in Neural Network]]
 - [[Residual Neural Network]]
 - [[Bidirectional Recurrent Neural Network]]
+- [[EMLo or Embeddings from Language  Models for Word Embedding]]
 
 #### Attention and Transformer 
 
@@ -154,8 +156,10 @@ date of note: 2024-09-13
 - [[Models and Algorithms for Pretrained and Large Language Models]]
 - [[Large Language Model and Pretrained Language Models]]
 - [[Bidirectional Encoder Representation from Transformer or BERT]]
+- [[Sentence-BERT for Sentence Embedding]]
 - [[Generative Pre-trained Transformer or GPT]]
 - [[Text-to-Text Transfer Transformer or T5 for Translation]]
+
 
 
 

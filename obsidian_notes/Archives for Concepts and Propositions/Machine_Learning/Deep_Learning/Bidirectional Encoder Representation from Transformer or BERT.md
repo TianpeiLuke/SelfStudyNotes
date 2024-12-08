@@ -165,6 +165,13 @@ date of note: 2024-10-21
 ### Situations with Adversarial Generations (SWAG)
 
 
+## Variants
+
+- [[devlinBERTPretrainingDeep2019]]
+- [[liuRoBERTaRobustlyOptimized2019]]
+- [[Dense Text Retrieval with Pretrained Language Models]]
+- [[ColBERT as Multi-Representation Bi-Encoder Structure for Dense Information Retrieval]]
+- [[Sentence-BERT for Sentence Embedding]]
 
 
 
@@ -180,8 +187,7 @@ date of note: 2024-10-21
 - [[Bidirectional Recurrent Neural Network]]
 - [[Artificial Neural Network and Deep Learning]]
 
-- [[devlinBERTPretrainingDeep2019]]
-- [[liuRoBERTaRobustlyOptimized2019]]
+
 - Sanh, V. (2019). DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter. _arXiv preprint arXiv:1910.01108_.
 
 

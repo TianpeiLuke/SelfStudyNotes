@@ -8,19 +8,19 @@ keywords:
   - bidirectional
 topics:
   - deep_learning/models
-name: Bidirectional Recurrent Neural Network
+name: EMLo or Embeddings from Language  Models for Word Embedding
 date of note: 2024-08-31
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Bidirectional Recurrent Neural Network
+>**Name**: EMLo or Embeddings from Language Models for Word Embedding
 
 ![[Recurrent Neural Network#^81c4ad]]
 
 
-
+- [[Bidirectional Recurrent Neural Network]]
 
 
 ![[bidirectional_rnn.png]]
@@ -49,15 +49,6 @@ date of note: 2024-08-31
 - [[Bidirectional Encoder Representation from Transformer or BERT]]
 
 
-## Example
-
-### ELMo or Embeddings from Language Models
-
-
-- [[EMLo or Embeddings from Language  Models for Word Embedding]]
-- [[Contextual Embeddings and Word Sense]]
-- [[Word Embedding]]
-
 
 
 -----------
@@ -78,5 +69,5 @@ date of note: 2024-08-31
 - [[Deep Learning by Goodfellow]] pp 383 - 384
 - [[Deep Learning Foundations and Concepts by Bishop]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] 
-- Matthew E. Peters, Mark Neumann, Mohit Iyyer, Matt Gardner, Christopher Clark, Kenton Lee, and Luke Zettlemoyer. 2018. [Deep Contextualized Word Representations](https://aclanthology.org/N18-1202). In _Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long Papers)_, pages 2227–2237, New Orleans, Louisiana. Association for Computational Linguistics.
+- [[petersDeepContextualizedWord2018]] Matthew E. Peters, Mark Neumann, Mohit Iyyer, Matt Gardner, Christopher Clark, Kenton Lee, and Luke Zettlemoyer. 2018. [Deep Contextualized Word Representations](https://aclanthology.org/N18-1202). In _Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long Papers)_, pages 2227–2237, New Orleans, Louisiana. Association for Computational Linguistics.
 - Liu, Q., Kusner, M. J., & Blunsom, P. (2020). A survey on contextual embeddings. _arXiv preprint arXiv:2003.07278_.

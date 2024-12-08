@@ -65,6 +65,7 @@ date of note: 2024-05-12
 - [[Representation Learning]]
 - [[Auto-Encoder and Stochastic Auto-Encoder]]
 - [[Information Noise Contrastive Estimation as Contrastive Learning]]
+- [[EMLo or Embeddings from Language  Models for Word Embedding]]
 - [[Bidirectional Encoder Representation from Transformer or BERT]]
 
 

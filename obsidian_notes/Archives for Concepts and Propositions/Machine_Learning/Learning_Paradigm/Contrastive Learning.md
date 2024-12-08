@@ -144,6 +144,29 @@ date of note: 2024-07-07
 - [[Instance Discrimination for Contrastive Learning]]
 
 
+## Applications
+
+### Static Word Embedding
+
+- [[Word Embedding]]
+- [[Word2Vec Algorithm for Static Word Embedding]]
+- [[Continuous-Bag-of-Words Algorithm for Word Embedding]]
+- [[Skip-Gram Algorithm with Negative Sampling for Word Embedding]]
+
+### Pretrained Language Models
+
+- [[Contextual Embeddings and Word Sense]]
+- [[Bidirectional Encoder Representation from Transformer or BERT]]
+- [[Next Sentence Prediction as Language Model Training Task]]
+- [[Sentence-BERT for Sentence Embedding]]
+
+### Information Retrieval
+
+- [[Dense Text Retrieval with Pretrained Language Models]]
+- [[ColBERT as Multi-Representation Bi-Encoder Structure for Dense Information Retrieval]]
+
+
+
 
 
 -----------

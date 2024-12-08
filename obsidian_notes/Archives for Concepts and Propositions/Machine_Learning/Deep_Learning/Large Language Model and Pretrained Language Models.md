@@ -57,6 +57,7 @@ date of note: 2024-10-21
 - [[Bidirectional Encoder Representation from Transformer or BERT]]
 - [[devlinBERTPretrainingDeep2019]]
 - [[liuRoBERTaRobustlyOptimized2019]]
+- [[Sentence-BERT for Sentence Embedding]]
 
 ### Decoder-Only Architecture or Autoregressive Language Models
 
