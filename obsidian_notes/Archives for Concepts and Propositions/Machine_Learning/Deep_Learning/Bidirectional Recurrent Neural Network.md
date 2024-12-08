@@ -44,11 +44,25 @@ date of note: 2024-08-31
 - [[Denoising Diffusion Probabilistic Models and Diffusion Network]]
 
 
+### Compared with PLM
+
+- [[Bidirectional Encoder Representation from Transformer or BERT]]
+
+
+## Example
+
+### ELMo or Embeddings from Language Models
+
+
+
+- [[Contextual Embeddings and Word Sense]]
+- [[Word Embedding]]
 
 
 
 -----------
 ##  Recommended Notes and References
+
 
 
 
@@ -64,3 +78,4 @@ date of note: 2024-08-31
 - [[Deep Learning by Goodfellow]] pp 383 - 384
 - [[Deep Learning Foundations and Concepts by Bishop]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] 
+- Matthew E Peters, Mark Neumann, Mohit Iyyer, Matt Gardner, Christopher Clark, Kenton Lee, and Luke Zettlemoyer. 2018. Deep contextualized word representations. arXiv preprint arXiv:1802.05365 (2018).
