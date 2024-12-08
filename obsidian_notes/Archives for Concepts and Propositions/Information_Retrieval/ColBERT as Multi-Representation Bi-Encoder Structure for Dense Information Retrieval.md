@@ -54,3 +54,4 @@ date of note: 2024-05-12
 
 - [[Introduction to Information Retrieval by Manning]]
 - [[Speech and Language Processing by Jurafsky]] pp 298 - 301
+- Khattab, O., & Zaharia, M. (2020, July). Colbert: Efficient and effective passage search via contextualized late interaction over BERT. In _Proceedings of the 43rd International ACM SIGIR conference on research and development in Information Retrieval_ (pp. 39-48).
