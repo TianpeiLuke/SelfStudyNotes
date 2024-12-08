@@ -29,14 +29,13 @@ date of note: 2024-05-12
 
 ![[colbert_inference.png]]
 
+![[colbert_architecture.png]]
+
 
 
 ## Explanation
 
 ![[information_dense_retrieval_one_two_encoder.png]]
-
-![[cross_encoder_biencoder_ir.png]]
-
 
 
 - [[Contrastive Learning]]
