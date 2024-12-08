@@ -8,7 +8,7 @@ keywords:
   - bidirectional
 topics:
   - deep_learning/models
-name: EMLo or Embeddings from Language  Models for Word Embedding
+name: EMLo or Embeddings from Language Models for Word Embedding
 date of note: 2024-08-31
 ---
 

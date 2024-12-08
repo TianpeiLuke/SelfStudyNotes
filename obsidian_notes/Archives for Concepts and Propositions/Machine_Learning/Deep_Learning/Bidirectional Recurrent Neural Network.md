@@ -54,7 +54,7 @@ date of note: 2024-08-31
 ### ELMo or Embeddings from Language Models
 
 
-- [[EMLo or Embeddings from Language  Models for Word Embedding]]
+- [[EMLo or Embeddings from Language Models for Word Embedding]]
 - [[Contextual Embeddings and Word Sense]]
 - [[Word Embedding]]
 

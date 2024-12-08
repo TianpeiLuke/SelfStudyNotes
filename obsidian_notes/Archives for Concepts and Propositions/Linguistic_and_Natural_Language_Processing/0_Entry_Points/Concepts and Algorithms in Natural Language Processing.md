@@ -143,7 +143,7 @@ date of note: 2024-09-13
 - [[Gated Recurrent Units in Neural Network]]
 - [[Residual Neural Network]]
 - [[Bidirectional Recurrent Neural Network]]
-- [[EMLo or Embeddings from Language  Models for Word Embedding]]
+- [[EMLo or Embeddings from Language Models for Word Embedding]]
 
 #### Attention and Transformer 
 
