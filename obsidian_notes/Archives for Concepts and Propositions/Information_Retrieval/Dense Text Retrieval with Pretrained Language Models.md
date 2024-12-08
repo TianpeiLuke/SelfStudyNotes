@@ -5,23 +5,36 @@ tags:
   - information_retrieval
 keywords:
   - information_retrieval
+  - dense_vector_information_retrieval
 topics:
   - information_retrieval
   - natural_language_processing
-name: Information Retrieval with Encoder Language Models
+name: Dense Text Retrieval with Pretrained Language Models
 date of note: 2024-05-12
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Information Retrieval with Encoder Language Models
+>**Name**: Dense Text Retrieval with Pretrained Language Models
 
 ### Information Retrieval with Dense Vectors
 
+>[!important] Definition
+>Let $q$ denote a *natural language query* and $d_{i}$ denote a text from a large text collection $$\mathcal{D} := \left\{ d_{1}\,{,}\ldots{,}\,d_{m} \right\}.$$
+>
+>Given a query $q$, **text retrieval** aims to return a *ranked* list of $n$ *most relevant texts* $$\mathcal{L} = [d_{1}\,{,}\ldots{,}\,d_{n}]$$ according to the *relevance scores* of a retrieval model.
+>
+>The key characteristic of **dense retrieval** is that the *query* and *texts* are represented by *dense vectors* 
+>- Under dense representation, the *relevance score* can be computed according to some similarity function $$\text{Rel}(q, d) := f_{sim}(\phi(q), \psi(d))$$ where 
+>	- $\phi: \mathcal{Q}\to \mathbb{R}^{d}$, and $\psi: \mathcal{D}\to \mathbb{R}^{d}$ are both are neural networks which provide *distributed dense representations* of query and texts
+>	- $f_{sim}$ is the *similarity measure.*
+>- The **dense retriever** for text retrieval usually refers to the *pretrained language model (PLM)*.
 
 
-- [[Bidirectional Encoder Representation from Transformer or BERT]]
+- [[Distributed Representation]]
+- [[Large Language Model and Pretrained Language Models]]
+- [[Similarity Search]]
 - [[Information Retrieval]]
 
 ### Cross-Encoder Structure
@@ -62,6 +75,8 @@ date of note: 2024-05-12
 - [[Representation Learning]]
 
 ![[information_dense_retrieval_one_two_encoder.png]]
+
+![[cross_encoder_biencoder_ir.png]]
 
 ### ColBERT as Multi-Representation Bi-encoder
 

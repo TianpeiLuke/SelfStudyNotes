@@ -109,7 +109,7 @@ date of note: 2024-11-29
 ### Information Retrieval
 
 - [[Inverted Index for Information Retrieval]]
-- [[Information Retrieval with Encoder Language Models]]
+- [[Dense Text Retrieval with Pretrained Language Models]]
 - [[Retrieval Augmented Generation]]
 
 

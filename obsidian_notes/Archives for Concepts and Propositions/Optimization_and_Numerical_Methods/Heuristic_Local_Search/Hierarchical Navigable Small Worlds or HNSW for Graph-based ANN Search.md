@@ -312,7 +312,7 @@ date of note: 2024-11-30
 >**HNSW** is a key method for *approximate nearest neighbor search* in **high-dimensional vector databases**, for example in the context of embeddings from neural networks in large language models.
 
 - [[Retrieval Augmented Generation]]
-- [[Information Retrieval with Encoder Language Models]]
+- [[Dense Text Retrieval with Pretrained Language Models]]
 
 ### Time Complexity
 

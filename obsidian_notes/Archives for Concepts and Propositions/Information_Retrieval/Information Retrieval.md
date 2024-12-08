@@ -44,16 +44,52 @@ date of note: 2024-05-12
 ![[information_retrieval_system.png]]
 
 
+![[information_text_retrieval.png]]
+
 ### Indexing
 
 >[!important] Definition
 >**Indexing** is the process to provide **index** for documents before *query* so that the system can avoid *linearly scanning*  the texts for each query. 
 
+- [[Co-Occurrence Matrix]]
 - [[Inverted Index for Information Retrieval]]
+
+
+### Similarity Search
+
+- [[Similarity Search]]
+- [[Approximate Nearest Neighbor Search]]
+
+
+### Metrics
+
+- [[Recall and Precision and F-Measure]]
+- [[Precision-Recall Curve]]
+- [[Recall and Precision at k]]
+- [[Interpolated Precision and Interpolated Average Precision]]
+- [[Mean Average Precision and Average Precision]]
+- [[Normalized Discounted Cumulative Gain or NDCG]]
+- [[Mean Reciprocal Rank or MRR for Ranking and Question Answering]]
+
+
 
 ### Information Extraction
 
 - [[Information Extraction]]
+
+### Sparse Retrieval
+
+- [[Vector Space Model in Information Retrieval]]
+- [[Term Frequency and Inverse Document Frequency or TF-IDF]]
+- [[Okapi BM25 score for Information Retrieval]]
+
+### Dense Retrieval
+
+- [[Distributed Representation]]
+- [[Dense Text Retrieval with Pretrained Language Models]]
+- [[ColBERT as Multi-Representation Bi-Encoder Structure for Dense Information Retrieval]]
+
+
 
 ## Explanation
 
@@ -65,6 +101,7 @@ date of note: 2024-05-12
 ## LLM for Information Retrieval
 
 - Zhu, Y., Yuan, H., Wang, S., Liu, J., Liu, W., Deng, C., ... & Wen, J. R. (2023). Large language models for information retrieval: A survey. _arXiv preprint arXiv:2308.07107_.
+- Zhao, W. X., Liu, J., Ren, R., & Wen, J. R. (2024). Dense text retrieval based on pretrained language models: A survey. _ACM Transactions on Information Systems_, _42_(4), 1-60. 
 
 
 ## Question Answering
@@ -89,6 +126,7 @@ date of note: 2024-05-12
 - [[Foundations of Statistical Natural Language Processing by Manning]] pp 529
 - [[Artificial Intelligence Modern Approach by Russell]] pp 867
 
+- Zhao, W. X., Liu, J., Ren, R., & Wen, J. R. (2024). Dense text retrieval based on pretrained language models: A survey. _ACM Transactions on Information Systems_, _42_(4), 1-60. 
 
 - Youtube
 	- [Applied Machine Learning for Ranking Products in an Ecommerce Setting Arnoud de Munnik Wehkamp Jerry](https://www.youtube.com/watch?v=6BGCn3h59nA)

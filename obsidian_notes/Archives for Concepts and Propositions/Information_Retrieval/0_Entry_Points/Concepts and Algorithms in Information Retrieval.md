@@ -108,8 +108,7 @@ date of note: 2024-09-13
 
 #### Masked Language Model
 
-- [[Information Retrieval with Encoder Language Models]]
-- [[Cross-Encoder Structure for Dense Information Retrieval]]
+- [[Dense Text Retrieval with Pretrained Language Models]]
 - [[ColBERT as Multi-Representation Bi-Encoder Structure for Dense Information Retrieval]]
 
 

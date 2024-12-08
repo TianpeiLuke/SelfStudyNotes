@@ -38,7 +38,7 @@ date of note: 2024-10-21
 - [[Question Answering Problem]]
 - [[Autoregressive Models]]
 
-- [[Information Retrieval with Encoder Language Models]]
+- [[Dense Text Retrieval with Pretrained Language Models]]
 - [[Large Language Model and Pretrained Language Models]]
 
 ![[rag_question_answer_flow.png]]

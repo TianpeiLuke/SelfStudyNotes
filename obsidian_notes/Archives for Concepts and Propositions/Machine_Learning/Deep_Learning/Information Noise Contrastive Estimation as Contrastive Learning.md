@@ -239,9 +239,8 @@ date of note: 2024-09-08
 
 ### Information Retrieval
 
-- [[Information Retrieval with Encoder Language Models]]
+- [[Dense Text Retrieval with Pretrained Language Models]]
 - [[ColBERT as Multi-Representation Bi-Encoder Structure for Dense Information Retrieval]]
-- [[Cross-Encoder Structure for Dense Information Retrieval]]
 
 
 
