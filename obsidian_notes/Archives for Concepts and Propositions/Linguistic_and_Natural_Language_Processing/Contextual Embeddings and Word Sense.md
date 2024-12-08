@@ -82,12 +82,21 @@ date of note: 2024-05-12
 - [[Vector Semantics and Distributional Hypothesis in Linguistic]]
 
 
+## Example of Contextual Word Embedding Models
+
+### Bidirectional RNN and ELMo
+
+- [[Bidirectional Recurrent Neural Network]]
+
+
+### BERT
+
+- [[Bidirectional Encoder Representation from Transformer or BERT]]
+
+
 
 -----------
 ##  Recommended Notes and References
-
-
-
 
 
 
