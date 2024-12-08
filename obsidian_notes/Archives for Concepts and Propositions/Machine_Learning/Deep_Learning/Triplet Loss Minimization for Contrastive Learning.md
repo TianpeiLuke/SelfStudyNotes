@@ -82,7 +82,7 @@ date of note: 2024-09-08
 
 
 - [[Information Noise Contrastive Estimation as Contrastive Learning]]
-- [[Siamese Network for Contrastive Learning]]
+- [[Siamese Network or Twin Tower Network for Contrastive Learning]]
 
 - [[Contrastive Learning]]
 

@@ -19,9 +19,13 @@ date of note: 2024-12-07
 
 
 - [[Bidirectional Encoder Representation from Transformer or BERT]]
-- [[Siamese Network for Contrastive Learning]]
+- [[Cosine Similarity and Cosine Distance]]
+- [[Siamese Network or Twin Tower Network for Contrastive Learning]]
 - [[Triplet Loss Minimization for Contrastive Learning]]
 - [[Contrastive Learning]]
+
+![[sentence_bert.png]]
+
 
 ## Explanation
 

@@ -27,7 +27,7 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
-- [[Siamese Network for Contrastive Learning]]
+- [[Siamese Network or Twin Tower Network for Contrastive Learning]]
 - [[Contrastive Learning]]
 - [[Representation Learning]]
 

@@ -69,7 +69,7 @@ date of note: 2024-05-12
 
 ^551842
 
-- [[Siamese Network for Contrastive Learning]]
+- [[Siamese Network or Twin Tower Network for Contrastive Learning]]
 - [[Cosine Similarity and Cosine Distance]]
 - [[Contrastive Learning]]
 - [[Representation Learning]]

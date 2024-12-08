@@ -126,7 +126,7 @@ date of note: 2024-07-07
 ![[Triplet Loss Minimization for Contrastive Learning#^3609c4]]
 
 - [[Triplet Loss Minimization for Contrastive Learning]]
-- [[Siamese Network for Contrastive Learning]]
+- [[Siamese Network or Twin Tower Network for Contrastive Learning]]
 
 ![[Information Noise Contrastive Estimation as Contrastive Learning#^c99f51]]
 

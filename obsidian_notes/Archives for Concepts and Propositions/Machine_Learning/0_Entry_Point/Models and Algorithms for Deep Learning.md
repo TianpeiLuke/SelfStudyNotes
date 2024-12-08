@@ -145,7 +145,7 @@ date of note: 2024-06-01
 - [[Noise Contrastive Estimation]]
 - [[Information Noise Contrastive Estimation as Contrastive Learning]]
 - [[Contrastive Predictive Coding as Sequence Representation]]
-- [[Siamese Network for Contrastive Learning]]
+- [[Siamese Network or Twin Tower Network for Contrastive Learning]]
 - [[Triplet Loss Minimization for Contrastive Learning]]
 - [[Skip-Gram Algorithm with Negative Sampling for Word Embedding]]
 
