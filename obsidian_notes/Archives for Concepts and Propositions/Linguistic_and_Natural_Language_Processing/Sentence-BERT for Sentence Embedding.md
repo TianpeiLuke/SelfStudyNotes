@@ -46,7 +46,7 @@ date of note: 2024-12-07
 >	- Consider the labeled dataset $$\mathcal{D}_{c} := \{ (s_{A,t}, s_{B,t}, y_{t}),\quad t=1\,{,}\ldots{,}\,T \}$$
 >	- Combine both *sentence representations* $u,v$  $$x_{t} := (u_{t}, v_{t})$$
 >	- Compute the *cosine similarity* $$c_{t} := \left\langle  u_{t}\,,\, v_{t}   \right\rangle$$
->	- The loss function is the *mean squared error* $$L(y_{t}, c_{t}) = \sum_{t=1}^{T}\lVert y_{t} - \left\langle  u_{t}\,,\,v_{t}    \right\rangle \rVert $$
+>	- The loss function is the *mean squared error* $$L(y_{t}, c_{t}) = \sum_{t=1}^{T}\lVert y_{t} - \left\langle  u_{t}\,,\,v_{t}    \right\rangle \rVert^2 $$
 >- **Contrastive Learning**
 >	- Consider the  *triplet pairs* with  *positive* and *negative* samples $$\mathcal{D}_{r} := \left\{ (s_{A,t}, s_{p,t}, s_{n,t}),\quad t=1\,{,}\ldots{,}\,T \right\} $$
 >	- Compute the sentence embedding for each triplet pair as $$(u_{t}, v_{p,t}, v_{n,t})$$
@@ -55,6 +55,9 @@ date of note: 2024-12-07
 
 - [[Multi-Layer Perceptron and Feed-Forward Network]]
 - [[Softmax Function and Log-Sum-Exp Function]]
+- [[Cross-Entropy Loss Function]]
+
+- [[Minimum Mean Square Estimation]]
 
 - [[Siamese Network or Twin Tower Network for Contrastive Learning]]
 - [[Triplet Loss Minimization for Contrastive Learning]]
