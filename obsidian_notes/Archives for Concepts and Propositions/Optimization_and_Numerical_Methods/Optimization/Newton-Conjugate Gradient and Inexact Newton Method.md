@@ -89,6 +89,8 @@ date of note: 2024-07-02
 >then the *convergence* is **quadratic**, i.e. $$\nabla f_{k+1} = O(\lVert \nabla f_{k} \rVert^2 ).$$  
 
 - [[Lipschitz Continuous Function]]
+- [[Algorithm Big-O Notations and Rate of Growth]]
+- [[Algorithm RAM Model and Complexity Analysis]]
 
 ### Line-Search Newton-Conjugate Gradient
 

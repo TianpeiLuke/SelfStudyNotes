@@ -93,6 +93,10 @@ date of note: 2024-05-12
 
 - [[Space of Continuous Differentiable Functions]]
 
+- [[Algorithm Big-O Notations and Rate of Growth]]
+- [[Algorithm RAM Model and Complexity Analysis]]
+
+
 - [[Numerical Optimization by Nocedal]]  pp 44
 - [[Nonlinear Programming by Bertsekas]] pp 26, 79, 88
 - [[Convex Optimization Algorithms by Bertsekas]] pp 67

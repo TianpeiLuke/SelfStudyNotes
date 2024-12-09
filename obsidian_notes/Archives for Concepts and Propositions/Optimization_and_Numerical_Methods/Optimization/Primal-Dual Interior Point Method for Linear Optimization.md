@@ -150,7 +150,8 @@ date of note: 2024-05-12
 
 - [[KKT Matrix and KKT System for Optimization with Equality Constraints]]
 
-
+- [[Algorithm Big-O Notations and Rate of Growth]]
+- [[Algorithm RAM Model and Complexity Analysis]]
 
 
 - [[Introduction to Linear Optimization by Bertsimas]] pp 303 - 438

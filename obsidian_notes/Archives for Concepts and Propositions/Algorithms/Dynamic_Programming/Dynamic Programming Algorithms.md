@@ -21,6 +21,7 @@ date of note: 2024-11-19
 
 
 - [[Backward Induction and Dynamic Programming]]
+- [[Recursion Algorithm]]
 
 ## Explanation
 

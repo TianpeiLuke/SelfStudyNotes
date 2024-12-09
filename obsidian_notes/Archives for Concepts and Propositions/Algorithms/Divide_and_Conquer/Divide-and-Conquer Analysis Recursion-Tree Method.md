@@ -16,6 +16,7 @@ date of note: 2024-12-08
 
 
 - [[Recursion Algorithm]]
+- [[Divide-and-Conquer Algorithms]]
 
 ## Explanation
 

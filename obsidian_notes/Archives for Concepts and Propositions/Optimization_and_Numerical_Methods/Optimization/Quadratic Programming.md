@@ -88,11 +88,14 @@ date of note: 2024-10-06
 ## Explanation
 
 >[!quote]
->Ye and Tse [7](https://en.wikipedia.org/wiki/Quadratic_programming#cite_note-7) present a polynomial-time algorithm, which extends [Karmarkar's algorithm](https://en.wikipedia.org/wiki/Karmarkar%27s_algorithm "Karmarkar's algorithm") from linear programming to convex quadratic programming. On a system with $n$ *variables* and $L$ *input bits*, their algorithm requires $O(L n)$ iterations, each of which can be done using $O(L n^3)$ arithmetic operations, for a **total runtime complexity** of $O(L^2 n^4)$.
+>Ye and Tse present a polynomial-time algorithm, which extends [Karmarkar's algorithm](https://en.wikipedia.org/wiki/Karmarkar%27s_algorithm "Karmarkar's algorithm") from linear programming to convex quadratic programming. On a system with $n$ *variables* and $L$ *input bits*, their algorithm requires $$O(L n)$$ iterations, each of which can be done using $$O(L n^3)$$ arithmetic operations, for a **total runtime complexity** of $$O(L^2 n^4).$$
 >
->Kapoor and Vaidya[8](https://en.wikipedia.org/wiki/Quadratic_programming#cite_note-8) present another algorithm, which requires $O(L * log L * n^{3.67} * log\,n)$ arithmetic operations.
+>Kapoor and Vaidya present another algorithm, which requires $$O(L \cdot log L \cdot n^{3.67} \cdot log\,n)$$ arithmetic operations.
 >
 >-- Wikipedia [Quadratic_programming](https://en.wikipedia.org/wiki/Quadratic_programming)
+
+- [[Algorithm Big-O Notations and Rate of Growth]]
+- [[Algorithm RAM Model and Complexity Analysis]]
 
 ### Indefinite Quadratic Programming
 
