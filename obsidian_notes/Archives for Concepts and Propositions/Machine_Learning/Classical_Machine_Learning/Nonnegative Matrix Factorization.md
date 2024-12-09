@@ -4,7 +4,7 @@ tags:
   - machine_learning/models
   - probabilistic_graphical_models/models
   - machine_learning/latent_variable_model
-  - recommendation_system/information_filter
+  - recommender_system/information_filter
 keywords:
   - dimensionality_reduction
 topics:

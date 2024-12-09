@@ -1,7 +1,7 @@
 ---
 tags:
   - concept
-  - recommendation_system/information_filter
+  - recommender_system/information_filter
 keywords: 
 topics: 
 name: 
@@ -18,23 +18,15 @@ date of note: 2024-12-08
 ## Explanation
 
 
-- [[Ensemble Learning]]
-
-- [[Latent Variable Models]]
-- [[Nonnegative Matrix Factorization]]
-- [[Singular Value Decomposition of Linear Map]]
-
-
-- [[Naive Bayes Model]]
-- [[Multinomial Naive Bayes Model]]
-
+- [[Sparse Matrix Representation]]
+- [[Sparse Linear System and Graph]]
 
 
 
 -----------
 ##  Recommended Notes and References
 
-
-
+- [[Neighborhood-based Collaborative Filtering]]
+- [[Recommender System]]
 
 - [[Recommender Systems Textbook by Aggarwal]] pp 8, 29, 72

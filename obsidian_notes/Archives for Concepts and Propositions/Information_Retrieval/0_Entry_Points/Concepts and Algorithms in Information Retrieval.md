@@ -208,7 +208,7 @@ date of note: 2024-09-13
 
 ### Recommendation System
 
-- [[Recommendation System]]
+- [[Recommender System]]
 - [[Collaborative Filtering]]
 
 

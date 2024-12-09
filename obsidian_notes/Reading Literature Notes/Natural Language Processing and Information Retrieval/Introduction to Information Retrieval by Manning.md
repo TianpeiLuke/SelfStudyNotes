@@ -51,3 +51,4 @@ date of note: 2024-10-25
 - [[Handbook of Natural Language Processing by Indurkhya]]
 - [[Practical Natural Language Processing by Vajjala]]
 - [[Foundations of Statistical Natural Language Processing by Manning]]
+- [[Recommender Systems Textbook by Aggarwal]]

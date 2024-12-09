@@ -26,15 +26,25 @@ date of note: 2024-12-08
 - [[Models and Algorithms for Deep Learning]]
 - [[Models and Algorithms for Pretrained and Large Language Models]]
 
-### Information Filtering and Recommendation System
+### Information Filtering and Recommender System
 
-- [[Recommendation System]]
+- [[Recommender System]]
+- [[User-Item Preference and Rating for Recommendation]]
 
 
 ### Collaborative Filtering
 
 - [[Collaborative Filtering]]
+- [[Neighborhood-based Collaborative Filtering]]
+- [[Model-based Collaborative Filtering]]
 
+### Content-based Recommender System
+
+- [[Information Extraction]]
+
+### Knowledge-based Recommender System
+
+- [[Information Retrieval]]
 
 
 

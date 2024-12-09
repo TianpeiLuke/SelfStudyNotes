@@ -1,8 +1,8 @@
 ---
 tags:
   - concept
-  - recommendation_system/design
-  - recommendation_system/architecture
+  - recommender_system/design
+  - recommender_system/architecture
 keywords: 
 topics: 
 name: 
