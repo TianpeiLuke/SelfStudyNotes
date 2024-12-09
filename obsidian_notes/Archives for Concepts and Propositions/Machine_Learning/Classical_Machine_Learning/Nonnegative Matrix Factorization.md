@@ -4,6 +4,7 @@ tags:
   - machine_learning/models
   - probabilistic_graphical_models/models
   - machine_learning/latent_variable_model
+  - recommendation_system/information_filter
 keywords:
   - dimensionality_reduction
 topics:
@@ -27,6 +28,7 @@ date of note: 2024-05-12
 
 
 
+- [[Collaborative Filtering]]
 
 
 -----------
@@ -53,5 +55,6 @@ date of note: 2024-05-12
 - [[Elements of Information Theory by Cover]]
 - [[Matrix Analysis by Horn]]
 - [[Convex Optimization Algorithms by Bertsekas]] pp 30 
+- [[Recommender Systems Textbook by Aggarwal]] pp
 
 - [[Kullback-Leibler Divergence]]

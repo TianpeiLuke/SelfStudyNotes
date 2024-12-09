@@ -84,7 +84,8 @@ date of note: 2024-08-31
 
 
 - [[Recurrent Neural Network]]
-- [[Gated Recurrent [[Long-Short Term Memory Network or LSTM]]-Short Term Memory Network]]
+- [[Gated Recurrent Units in Neural Network]]
+- [[Long-Short Term Memory Network or LSTM]]
 - [[Residual Neural Network]]
 
 - [[Linear Dynamic System]]

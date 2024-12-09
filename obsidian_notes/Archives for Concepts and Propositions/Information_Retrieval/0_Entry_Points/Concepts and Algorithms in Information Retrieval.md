@@ -206,6 +206,10 @@ date of note: 2024-09-13
 - [[Supervised Fine-Tuning and Preference Alignment for LLM]]
 
 
+### Recommendation System
+
+- [[Recommendation System]]
+- [[Collaborative Filtering]]
 
 
 
