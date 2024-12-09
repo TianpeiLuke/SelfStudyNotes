@@ -117,6 +117,9 @@ date of note: 2024-11-19
 ##  Recommended Notes and References
 
 
+- [[Constrained Optimization Problem]]
+- [[Algorithm General Definition]]
+
 - [[Game Theory An Introduction by Tadelis]] pp 26
 
 - [[Dynamic Programming by Bellman]]

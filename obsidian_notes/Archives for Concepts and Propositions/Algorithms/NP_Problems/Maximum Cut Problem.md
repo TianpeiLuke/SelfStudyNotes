@@ -29,7 +29,7 @@ date of note: 2024-08-26
 
 - [[Supervised Learning and Unsupervised Learning]]
 - [[Graph]]
-
+- [[Algorithm General Definition]]
 
 
 - [[Elements of Statistical Learning by Hastie]]

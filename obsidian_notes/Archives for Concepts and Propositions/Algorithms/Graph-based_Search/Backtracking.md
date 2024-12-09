@@ -25,6 +25,9 @@ date of note: 2024-08-08
 ##  Recommended Notes and References
 
 - [[Graph]]
+- [[Algorithm General Definition]]
+- [[Data Structure General Definition]]
+
 
 - [[Introduction to Algorithms by Cormen]]
 - [[Algorithm Design Manual by Skiena]] pp 281, 499, 519, 547, 587, 599, 605, 611, 615, 680, 683

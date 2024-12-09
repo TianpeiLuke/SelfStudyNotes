@@ -29,6 +29,8 @@ date of note: 2024-08-26
 
 - [[Combinatorial Optimization Problem]]
 - [[Integer Linear Optimization Problem and Integer Programming]]
+- [[Algorithm General Definition]]
+
 
 - [[Least Square Estimation]]
 - [[LASSO and Sparsity-Induced Least Square]]

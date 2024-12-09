@@ -33,7 +33,7 @@ date of note: 2024-08-26
 - [[Graph]]
 
 - [[Combinatorial Optimization Problem]]
-
+- [[Algorithm General Definition]]
 
 - [[Elements of Statistical Learning by Hastie]]
 - [[Probabilistic Graphical Models by Koller]]

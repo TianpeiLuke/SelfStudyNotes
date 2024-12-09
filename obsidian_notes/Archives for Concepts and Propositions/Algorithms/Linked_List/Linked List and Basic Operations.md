@@ -14,6 +14,7 @@ date of note: 2024-12-02
 >**Name**: 
 
 
+- [[Data Structure General Definition]]
 
 ## Explanation
 

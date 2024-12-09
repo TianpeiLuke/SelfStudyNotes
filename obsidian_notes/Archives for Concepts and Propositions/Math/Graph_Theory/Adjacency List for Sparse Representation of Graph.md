@@ -15,16 +15,26 @@ date of note: 2024-07-09
 >**Name**: 
 
 
+- [[Adjacency Matrix of Graph]]
 
-
-
-### Adjacency List for Sparse Representation
-
-- [[Adjacency List for Sparse Representation of Graph]]
 
 
 ## Explanation
 
+
+
+## Applications
+
+### Sparse Matrix Operations
+
+- [[Sparse Matrix Representation]]
+- [[Sparse Linear System and Graph]]
+
+
+### Information Retrieval
+
+- [[Inverted Index for Information Retrieval]]
+- [[Inverted File Index for ANN Search]]
 
 
 

@@ -25,23 +25,40 @@ date of note: 2024-07-07
 >- *Initialization*: $L \leftarrow$ Empty list that will contain the sorted elements
 >- *Initialization*: $S \leftarrow$  Set of all nodes with *no incoming edge*
 > 
->- while $S$ is not empty:
->	- **remove** a node $n$ from $S$
->	- *add* $n$ to $L$
->	- for each node $m$ with **an edge** $e$ *from* $n$ *to* $m$:
->		- **remove edge** $e$ from the graph
->		- if $m$ has **no other incoming edges**:
->			- *insert* $m$ into $S$
+>- while $S \neq \emptyset$:
+>	- **remove** a node $n$ from $S$ $$S \leftarrow S \setminus \{ n \}$$
+>	- *add* $n$ to $L$  $$L \leftarrow L \cup \{ n \}$$
+>	- for each node $m$ with **an edge** $e$ *from* $n$ *to* $m$, i.e. $m\in \text{Ch}(n)$:
+>		- **remove edge** $e$ from the graph $$E \leftarrow E \setminus \{ e \}, \quad \text{Ch}(n) \leftarrow \text{Ch}(n) \setminus \{ m \}$$
+>		- if $m$ has **no other incoming edges**, i.e. $\text{Pa}(m) = \emptyset$:
+>			- *insert* $m$ into $S$ $$S \leftarrow S \cup \{ m \}$$
 > 
 >- if _graph_ has edges:
 >	- **return** error   _(graph has at least one cycle)_
 >- else 
 >	- **return** _L_   _(a topologically sorted order)_
 
+- [[Oriented Directed Graph]]
+- [[Directed Graph]]
+
 
 ## Explanation
 
 
+## Topological Sort in Optimization and Machine Learning
+
+### Automatic Differentiation
+
+- [[Automatic Differentiation]]
+- [[Back-Propagation Algorithm]]
+
+### Graphical Model
+
+- [[Sum-Product Belief Propagation Algorithm for Clique Tree]]
+- [[Sum-Product Belief-Update Message Passing Algorithm for Clique Tree]]
+- [[Sum-Product Belief-Update Expectation Propagation Algorithm]]
+- [[Max-Product Belief Propagation for Clique Tree]]
+- [[Max-Product Belief Update for Clique Tree]]
 
 
 
@@ -50,6 +67,8 @@ date of note: 2024-07-07
 
 
 - [[Graph]]
+- [[Algorithm General Definition]]
+- [[Data Structure General Definition]]
 
 - [[Introduction to Algorithms by Cormen]]
 - [[Algorithm Design Manual by Skiena]] pp 481

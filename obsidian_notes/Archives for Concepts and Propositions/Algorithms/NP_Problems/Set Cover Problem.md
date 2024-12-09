@@ -29,7 +29,7 @@ date of note: 2024-08-26
 
 - [[Integer Linear Optimization Problem and Integer Programming]]
 - [[Combinatorial Optimization Problem]]
-
+- [[Algorithm General Definition]]
 
 - [[Introduction to Algorithms by Cormen]] pp 1115 - 1119
 - [[Algorithm Design Manual by Skiena]]

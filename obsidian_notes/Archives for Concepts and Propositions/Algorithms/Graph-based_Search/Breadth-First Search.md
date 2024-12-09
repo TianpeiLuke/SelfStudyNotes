@@ -26,6 +26,8 @@ date of note: 2024-08-08
 ##  Recommended Notes and References
 
 - [[Graph]]
+- [[Algorithm General Definition]]
+- [[Data Structure General Definition]]
 
 
 - [[Introduction to Algorithms by Cormen]]

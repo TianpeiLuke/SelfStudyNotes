@@ -46,7 +46,7 @@ date of note: 2024-05-12
 >- *Update* the **clique belief** using Bayes rule $$\beta_{j} \leftarrow \beta_{j} \cdot \frac{\sigma_{i\to j}}{\mu_{i,j}}$$
 >- *Update* the **sepset belief** $$\mu_{i,j} = \sigma_{i\to j}$$ 
 
-
+- [[Topological Sorting]]
 
 ## Explanation
 

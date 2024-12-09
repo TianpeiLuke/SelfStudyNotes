@@ -16,6 +16,7 @@ date of note: 2024-12-02
 
 
 - [[Linked List and Basic Operations]]
+- [[Data Structure General Definition]]
 
 ## Explanation
 

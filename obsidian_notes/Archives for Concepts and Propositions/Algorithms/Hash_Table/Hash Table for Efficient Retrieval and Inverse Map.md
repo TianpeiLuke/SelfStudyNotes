@@ -27,7 +27,7 @@ date of note: 2024-12-03
 
 
 - [[Locality-Sensitive Hashing or LSH for ANN Search]]
-
+- [[Data Structure General Definition]]
 
 
 - [[Algorithm Design Manual by Skiena]]

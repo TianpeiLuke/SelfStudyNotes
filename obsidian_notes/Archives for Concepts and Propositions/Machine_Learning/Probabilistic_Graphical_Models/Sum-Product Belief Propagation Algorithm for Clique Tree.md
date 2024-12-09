@@ -94,6 +94,8 @@ date of note: 2024-05-12
 
 ^d4e300
 
+- [[Topological Sorting]]
+
 >[!info]
 >In above algorithm, we assume that the *target marginal distribution* is over the **root clique**.
 >

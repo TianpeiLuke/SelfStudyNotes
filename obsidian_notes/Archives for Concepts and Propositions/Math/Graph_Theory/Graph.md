@@ -71,9 +71,12 @@ date of note: 2024-07-09
 - Wikipedia [Topological_graph_theory](https://en.wikipedia.org/wiki/Topological_graph_theory)
 
 
-## Graph Algorithms
+## Graph as Data Structure and Algorithms
 
-
+- [[Data Structure General Definition]]
+- [[Breadth-First Search]]
+- [[Breadth-First Search]]
+- [[Best-First Search]]
 
 ## Probabilistic Graphical Model
 

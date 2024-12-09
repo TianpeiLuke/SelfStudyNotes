@@ -56,7 +56,6 @@ date of note: 2024-07-14
 - [[Connected Graph and Connected Component of Graph]]
 - [[Separation of Graph]]
 - [[Connectivity of Graph]]
-- [[Connectivity of Graph]]
 - [[Edge Connectivity of Graph]]
 
 
@@ -91,6 +90,7 @@ date of note: 2024-07-14
 - [[Cut Space of Graph]]
 - [[Fundamental Cycle of Chord to Spanning Tree]]
 - [[Adjacency Matrix of Graph]]
+- [[Adjacency List for Sparse Representation of Graph]]
 
 ### Matching and Covering
 

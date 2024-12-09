@@ -32,6 +32,7 @@ date of note: 2024-10-06
 >		- finally, we retrieve the value $A.val[s]$ if the corresponding $A.r[s] = i$
 >		- $$A.val[s] = A_{A.r[s], j} = A_{i,j}, \quad \text{ where } s\in [A.c[j]:A.c[j+1]-1]$$
 
+- [[Adjacency List for Sparse Representation of Graph]]
 
 ### Matrix-Vector Product Operations 
 

@@ -29,7 +29,7 @@ date of note: 2024-08-26
 
 - [[Combinatorial Optimization Problem]]
 - [[Graph]]
-
+- [[Algorithm General Definition]]
 
 
 - [[Introduction to Algorithms by Cormen]]

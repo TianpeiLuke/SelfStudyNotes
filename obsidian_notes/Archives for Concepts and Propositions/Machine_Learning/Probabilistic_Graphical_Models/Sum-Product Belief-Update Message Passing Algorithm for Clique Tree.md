@@ -77,6 +77,8 @@ date of note: 2024-05-12
 
 ^73ff45
 
+- [[Topological Sorting]]
+
 >[!info]
 >The *message passing process* is as follows
 >- Each *clique* $C_{i}$ **initializes** $\beta_{i}$ as $\psi_{i}$ and 

@@ -60,7 +60,7 @@ date of note: 2024-11-29
 >The **inverted index** is just the *adjacency list representation* of **sparse co-occurrence matrix**.
 
 - [[Sparse Matrix Representation]]
-- [[Adjacency Matrix of Graph]]
+- [[Adjacency List for Sparse Representation of Graph]]
 
 >[!info]
 >**indexing** is an *inverse map*:

@@ -38,6 +38,7 @@ date of note: 2024-08-26
 - [[Integer Linear Optimization Problem and Integer Programming]]
 - [[Combinatorial Optimization Problem]]
 - [[Constrained Optimization Problem]]
+- [[Algorithm General Definition]]
 
 
 - [[Bayesian Network on Directed Acyclic Graph]]

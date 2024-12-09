@@ -49,6 +49,8 @@ date of note: 2024-05-12
 >	- Update the **belief** $$\beta_{i} = \psi_{i}\,\cdot\prod_{k\in N(i)}\delta_{k\to i}$$ 
 >- *Return*: *all beliefs* $\{ \beta_{i}, i\in V(T) \}$
 
+- [[Topological Sorting]]
+
 >[!info]
 >As for sum-product message passing, the algorithm will **converge** after a single **upward and downward pass**. After those steps, the resulting clique tree $T$ will contain the appropriate **max-marginal** in every *clique*.
 

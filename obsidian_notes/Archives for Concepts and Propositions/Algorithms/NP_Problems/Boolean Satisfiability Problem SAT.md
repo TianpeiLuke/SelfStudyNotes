@@ -30,6 +30,7 @@ date of note: 2024-08-26
 - [[Integer Linear Optimization Problem and Integer Programming]]
 - [[Combinatorial Optimization Problem]]
 - [[Constraint Satisfaction Problem CSP]]
+- [[Algorithm General Definition]]
 
 
 - [[Bayesian Network on Directed Acyclic Graph]]

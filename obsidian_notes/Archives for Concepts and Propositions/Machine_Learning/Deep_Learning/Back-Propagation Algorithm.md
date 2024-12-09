@@ -86,7 +86,7 @@ date of note: 2024-05-12
 
 ^71c3c4
 
-
+- [[Topological Sorting]]
 
 ![[backprop_outer_loop.png]] ^a79a3a
 

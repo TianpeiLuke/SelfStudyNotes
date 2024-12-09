@@ -10,9 +10,19 @@ date of note: 2024-09-16
 
 ## List of Concepts
 
+### General Theory of Algorithm, Data Structure and Analysis
+
+- [[Algorithm General Definition]]
+- [[Data Structure General Definition]]
+- [[Loop Invariant Format]]
+- [[Algorithm RAM Model and Complexity Analysis]]
+- [[Algorithm Big-O Notations and Rate of Growth]]
+- [[Algorithm Best-Case Running Time Analysis]]
+- [[Algorithm Worst-Case Running Time Analysis]]
+- [[Algorithm Average-Case Running Time Analysis]]
+- [[Probabilistic Analysis of Randomized Algorithm]]
 
 ### Divide and Conquer
-
 
 #### Sorting
 
@@ -20,14 +30,18 @@ date of note: 2024-09-16
 - [[QuickSort Algorithm]]
 - [[BucketSort or Distribution Sort Algorithm]]
 - [[HeapSort Algorithm]]
-- [[Topological Sorting]]
-
 
 
 ### Recursion
 
 - [[Recursion Algorithm]]
 - [[Backtracking]]
+
+
+### Linked List
+
+- [[Linked List and Basic Operations]]
+- [[Skip Linked List and Basic Operations]]
 
 
 ### Binary Tree and Binary Search Tree
@@ -56,6 +70,8 @@ date of note: 2024-09-16
 - [[A-star Heuristic Search]]
 - [[Beam Search]]
 - [[Beam Search for Causal Decoding of Language Model]]
+- [[Topological Sorting]]
+
 
 ### Network Algorithms
 
