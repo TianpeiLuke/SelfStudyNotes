@@ -87,7 +87,9 @@ date of note: 2024-09-21
 >
 >The **space complexity** is $O(1)$ since we can substitute $b$ into $x$ in place.
 
-
+- [[Algorithm Big-O Notations and Rate of Growth]]
+- [[Algorithm RAM Model and Complexity Analysis]]
+- [[Algorithm General Definition]]
 
 
 

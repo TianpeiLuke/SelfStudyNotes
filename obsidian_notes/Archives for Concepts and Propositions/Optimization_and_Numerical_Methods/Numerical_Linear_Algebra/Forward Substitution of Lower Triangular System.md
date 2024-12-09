@@ -120,7 +120,9 @@ date of note: 2024-09-21
 >[!important]
 >Since the algorithm need to access each entry $a_{i,j}$ by row, the **time complexity** of the algorithm is $$O\left( n^2 \right)$$
 
-
+- [[Algorithm Big-O Notations and Rate of Growth]]
+- [[Algorithm RAM Model and Complexity Analysis]]
+- [[Algorithm General Definition]]
 
 
 

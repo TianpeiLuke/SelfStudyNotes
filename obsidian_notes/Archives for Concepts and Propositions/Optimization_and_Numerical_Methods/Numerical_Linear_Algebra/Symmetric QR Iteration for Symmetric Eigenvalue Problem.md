@@ -61,6 +61,10 @@ date of note: 2024-10-02
 >[!important]
 >This algorithm requires about $$\frac{4n^3}{3}$$ flops if $Q$ is *not accumulated* and about $$9n^3$$ flops if $Q$ is *accumulated*.
 
+- [[Algorithm Big-O Notations and Rate of Growth]]
+- [[Algorithm RAM Model and Complexity Analysis]]
+- [[Algorithm General Definition]]
+
 ![[eigenvalue_symmetric.png]]
 
 

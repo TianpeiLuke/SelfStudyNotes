@@ -54,7 +54,9 @@ date of note: 2024-09-21
 >- If we use $LDL^{T}$, it woudl take $$np^2 + 8\,np + n$$ flops with *no additional square roots*.
 
 - [[LDU Factorization of Symmetric Matrix]]
-
+- [[Algorithm Big-O Notations and Rate of Growth]]
+- [[Algorithm RAM Model and Complexity Analysis]]
+- [[Algorithm General Definition]]
 
 
 ## Explanation

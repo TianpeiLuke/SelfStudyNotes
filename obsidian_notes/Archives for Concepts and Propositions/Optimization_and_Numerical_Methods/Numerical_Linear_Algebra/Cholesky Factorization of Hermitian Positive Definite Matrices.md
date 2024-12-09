@@ -72,6 +72,9 @@ date of note: 2024-09-21
 
 - [[LDU Factorization of Symmetric Matrix]]
 - [[Gaussian Elimination for General Linear System]]
+- [[Algorithm Big-O Notations and Rate of Growth]]
+- [[Algorithm RAM Model and Complexity Analysis]]
+- [[Algorithm General Definition]]
 
 >[!important] Definition
 >The *Gaxpy implementation* of **Cholesky factorization** algorithm is described as below:

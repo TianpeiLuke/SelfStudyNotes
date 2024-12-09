@@ -50,6 +50,9 @@ date of note: 2024-08-08
 >- The  *LU factorization* for solution of general linear system requires $O(n^3).$
 
 - [[Tridiagonal Bidiagonal and Block Tridiagonal Matrix]]
+- [[Algorithm Big-O Notations and Rate of Growth]]
+- [[Algorithm RAM Model and Complexity Analysis]]
+- [[Algorithm General Definition]]
 
 ![[Band Gaussian Elimination and Band LU Factorization#^bb2266]]
 

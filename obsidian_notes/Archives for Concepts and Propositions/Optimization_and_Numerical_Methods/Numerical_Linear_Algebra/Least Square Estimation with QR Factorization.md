@@ -159,6 +159,9 @@ date of note: 2024-08-20
 >- $O(mn)$ flops associated with *updating* $b$
 >- $O(n^2)$ flops associated with solving $R\beta = b'$ via *back substitution.*
 
+- [[Algorithm Big-O Notations and Rate of Growth]]
+- [[Algorithm RAM Model and Complexity Analysis]]
+- [[Algorithm General Definition]]
 
 
 -----------
