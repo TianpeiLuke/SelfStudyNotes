@@ -63,7 +63,7 @@ date of note: 2024-10-02
 
 - [[Algorithm Big-O Notations and Rate of Growth]]
 - [[Algorithm RAM Model and Complexity Analysis]]
-- [[Algorithm General Definition]]
+
 
 ![[eigenvalue_symmetric.png]]
 

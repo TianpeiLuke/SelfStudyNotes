@@ -44,6 +44,7 @@ date of note: 2024-09-21
 ^084714
 
 - [[Jacobi Iteration for Sparse Linear System]]
+- [[Adjacency List for Sparse Representation of Graph]]
 
 >[!important] Definition
 >Consider the *linear system* $$Ax = b$$ where $A = [a_{i,j}] \in M_{m,n}(\mathbb{C})$,  $b = [b_{i}]\in \mathbb{C}^{m}$. 
@@ -83,7 +84,7 @@ date of note: 2024-09-21
 
 - [[Algorithm Big-O Notations and Rate of Growth]]
 - [[Algorithm RAM Model and Complexity Analysis]]
-- [[Algorithm General Definition]]
+
 
 
 -----------

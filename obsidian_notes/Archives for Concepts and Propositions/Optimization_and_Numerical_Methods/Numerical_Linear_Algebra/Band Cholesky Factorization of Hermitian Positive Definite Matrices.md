@@ -56,7 +56,7 @@ date of note: 2024-09-21
 - [[LDU Factorization of Symmetric Matrix]]
 - [[Algorithm Big-O Notations and Rate of Growth]]
 - [[Algorithm RAM Model and Complexity Analysis]]
-- [[Algorithm General Definition]]
+
 
 
 ## Explanation

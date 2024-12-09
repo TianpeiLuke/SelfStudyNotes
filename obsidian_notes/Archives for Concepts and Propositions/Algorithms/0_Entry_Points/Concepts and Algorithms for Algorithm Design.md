@@ -24,12 +24,21 @@ date of note: 2024-09-16
 
 ### Divide and Conquer
 
+- [[Divide-and-Conquer Analysis Substitution Method]]
+- [[Divide-and-Conquer Analysis Recursion-Tree Method]]
+- [[Divide-and-Conquer Analysis Master Method]]
+
+
 #### Sorting
 
 - [[MergeSort Algorithm]]
 - [[QuickSort Algorithm]]
 - [[BucketSort or Distribution Sort Algorithm]]
 - [[HeapSort Algorithm]]
+
+#### Median and Order Statistics
+
+- [[Order Statistics]]
 
 
 ### Recursion
@@ -44,8 +53,9 @@ date of note: 2024-09-16
 - [[Skip Linked List and Basic Operations]]
 
 
-### Binary Tree and Binary Search Tree
+### Rooted Tree
 
+- [[Root and Rooted Tree]]
 - [[Binary Tree Order and Traversal]]
 
 
@@ -83,6 +93,9 @@ date of note: 2024-09-16
 - [[Dynamic Programming Algorithms]]
 - [[Concepts and Algorithms for Dynamic Programming]]
 
+### Amortized Analysis
+
+- [[Algorithm Amortized Analysis]]
 
 
 

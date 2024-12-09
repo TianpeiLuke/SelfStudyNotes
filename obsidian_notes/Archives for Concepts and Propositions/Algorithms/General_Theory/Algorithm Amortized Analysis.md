@@ -14,6 +14,7 @@ date of note: 2024-12-08
 >**Name**: 
 
 
+- [[Algorithm RAM Model and Complexity Analysis]]
 
 ## Explanation
 
@@ -27,7 +28,5 @@ date of note: 2024-12-08
 - [[Loop Invariant Format]]
 - [[Algorithm General Definition]]
 
-- [[Introduction to Algorithms by Cormen]] pp  25 - 31
-- [[Algorithm Design Manual by Skiena]] pp 34 - 41
-- [[Numerical Linear Algebra by Trefethen]]
-- [[Matrix Computations by Golub]]
+- [[Introduction to Algorithms by Cormen]] pp 448 - 477
+- [[Algorithm Design Manual by Skiena]] pp 444

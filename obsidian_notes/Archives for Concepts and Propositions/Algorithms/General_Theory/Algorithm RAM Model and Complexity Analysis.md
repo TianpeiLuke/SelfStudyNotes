@@ -49,3 +49,5 @@ date of note: 2024-12-08
 
 - [[Introduction to Algorithms by Cormen]] pp  25 - 31
 - [[Algorithm Design Manual by Skiena]] pp 31 - 33
+- [[Matrix Computations by Golub]]
+- [[Numerical Linear Algebra by Trefethen]]

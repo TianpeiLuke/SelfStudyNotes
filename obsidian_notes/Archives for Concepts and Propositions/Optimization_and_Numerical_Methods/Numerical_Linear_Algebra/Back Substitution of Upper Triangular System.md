@@ -89,7 +89,6 @@ date of note: 2024-09-21
 
 - [[Algorithm Big-O Notations and Rate of Growth]]
 - [[Algorithm RAM Model and Complexity Analysis]]
-- [[Algorithm General Definition]]
 
 
 
