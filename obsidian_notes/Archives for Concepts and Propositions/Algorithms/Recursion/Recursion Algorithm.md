@@ -20,6 +20,13 @@ date of note: 2024-08-08
 
 - [[Loop Invariant Format]]
 
+
+### Recurrence
+
+- [[Recurrence and Algorithmic Recurrence]]
+
+
+
 ## Explanation
 
 >[!quote]
@@ -28,6 +35,9 @@ date of note: 2024-08-08
 >- **Divide and conquer** instead *splits* the problem into (say) halves, solves *each* half, then *stitches* the pieces back together to form a full solution.
 >  
 >-- [[Algorithm Design Manual by Skiena]]  pp 147
+
+- [[Divide-and-Conquer Algorithms]]
+- [[Dynamic Programming Algorithms]]
 
 
 ## Types of Recursions

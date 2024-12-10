@@ -21,6 +21,12 @@ date of note: 2024-09-16
 - [[Probabilistic Analysis of Randomized Algorithm]]
 - [[Algorithm Big-O Notations in Probability]]
 
+### Recursion
+
+- [[Recursion Algorithm]]
+- [[Loop Invariant Format]]
+- [[Recurrence and Algorithmic Recurrence]]
+
 ### Amortized Analysis
 
 - [[Algorithm Amortized Analysis]]
@@ -55,11 +61,6 @@ date of note: 2024-09-16
 
 ## Algorithm Design Paradigms 
 
-### Recursion
-
-- [[Recursion Algorithm]]
-- [[Loop Invariant Format]]
-
 ### Divide and Conquer
 
 - [[Divide-and-Conquer Algorithms]]
@@ -67,11 +68,9 @@ date of note: 2024-09-16
 - [[Divide-and-Conquer Analysis Recursion-Tree Method]]
 - [[Divide-and-Conquer Analysis Master Method]]
 
-
 ### Greedy Algorithm
 
 - [[Greedy Heuristic Algorithms]]
-
 
 ### Dynamic Programming
 
