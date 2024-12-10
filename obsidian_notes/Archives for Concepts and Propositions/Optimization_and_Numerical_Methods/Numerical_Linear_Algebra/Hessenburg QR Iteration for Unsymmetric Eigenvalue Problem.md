@@ -77,8 +77,8 @@ date of note: 2024-09-25
 >[!important]
 >Each **Hessenberg QR step** takes about $$6n^2$$ flops.
 
-- [[Algorithm Big-O Notations and Rate of Growth]]
-- [[Algorithm RAM Model and Complexity Analysis]]
+- [[Algorithm Big-O Notations and Dominance Relation]]
+- [[Algorithm RAM Model and Running-Time Complexity Analysis]]
 
 
 ### Hessenberg Reduction

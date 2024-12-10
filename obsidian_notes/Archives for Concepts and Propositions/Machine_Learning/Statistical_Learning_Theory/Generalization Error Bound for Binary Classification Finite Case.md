@@ -79,7 +79,7 @@ date of note: 2024-08-01
 ^ac9f27
 
 - [[Hoeffding Inequality]]
-
+- [[Algorithm Big-O Notations and Dominance Relation]]
 
 
 ## Explanation

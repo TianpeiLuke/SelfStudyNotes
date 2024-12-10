@@ -19,7 +19,7 @@ date of note: 2024-08-08
 
 - [[Depth-First Search]]
 - [[Recursion Algorithm]]
-- [[Algorithm Big-O Notations and Rate of Growth]]
+- [[Algorithm Big-O Notations and Dominance Relation]]
 
 
 

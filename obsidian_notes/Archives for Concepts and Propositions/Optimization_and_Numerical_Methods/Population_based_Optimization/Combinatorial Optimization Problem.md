@@ -36,12 +36,12 @@ date of note: 2024-08-25
 	- [[Boolean Satisfiability Problem SAT]]
 - [[Traveling Salesman Problem]]
 - [[Knapscak Problem]]
-- [[Set Cover Problem]]
+- [[Vertex Cover Problem]]
 - [[Optimal Job Scheduling]]
 - [[Optimal Assignment Problem and Monge Problem]]
 - [[Minimum Spanning Tree Problem]]
 - [[Maximum Clique Problem]]
-- [[Maximum Cut Problem]]
+- [[Minimum k-Cut Problem]]
 - [[Minimum Relevant Variables in Linear System and L0 Sparsity]]
 
 ## Examples
@@ -72,7 +72,7 @@ date of note: 2024-08-25
 
 - [[Minimum Spanning Tree Problem]]
 - [[Maximum Clique Problem]]
-- [[Maximum Cut Problem]]
+- [[Minimum k-Cut Problem]]
 
 
 ### Network Flow Problem

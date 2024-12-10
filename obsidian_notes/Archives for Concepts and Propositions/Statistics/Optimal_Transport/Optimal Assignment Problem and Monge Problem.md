@@ -114,7 +114,7 @@ date of note: 2024-08-26
 ## Network Flow Theory
 
 - [[Minimum Cost Flow Problem]]
-- [[Maximum Cut Problem]]
+- [[Minimum k-Cut Problem]]
 - [[Network and Flow and Capacity and Cut]]
 
 

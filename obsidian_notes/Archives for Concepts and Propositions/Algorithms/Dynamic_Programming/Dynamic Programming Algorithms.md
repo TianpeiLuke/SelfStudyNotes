@@ -7,8 +7,16 @@ tags:
   - optimization/dynamic_programming
   - optimization/algorithm
   - optimization/theory
-keywords: 
-topics: 
+  - algorithm/design_paradigm
+  - algorithm/recursion
+keywords:
+  - dynamic_programming
+topics:
+  - algorithm/design_paradigm
+  - algorithm/dynamic_programming
+  - optimization/algorithm
+  - reinforcement_learning/algorithm
+  - machine_learning_algorithm
 name: Dynamic Programming Algorithms
 date of note: 2024-11-19
 ---

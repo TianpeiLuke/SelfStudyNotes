@@ -67,9 +67,9 @@ date of note: 2024-08-19
 
 
 - [[Knapscak Problem]]
-- [[Set Cover Problem]]
+- [[Vertex Cover Problem]]
 - [[Traveling Salesman Problem]]
-- [[Maximum Cut Problem]]
+- [[Minimum k-Cut Problem]]
 - [[Constraint Satisfaction Problem CSP]]
 - [[Optimal Assignment Problem and Monge Problem]]
 

@@ -41,6 +41,7 @@ date of note: 2024-08-05
 ^873808
 
 - [[Uniform Convergence]]
+- [[Algorithm Big-O Notations and Dominance Relation]]
 
 ## Explanation
 

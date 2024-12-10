@@ -94,8 +94,8 @@ date of note: 2024-10-06
 >
 >-- Wikipedia [Quadratic_programming](https://en.wikipedia.org/wiki/Quadratic_programming)
 
-- [[Algorithm Big-O Notations and Rate of Growth]]
-- [[Algorithm RAM Model and Complexity Analysis]]
+- [[Algorithm Big-O Notations and Dominance Relation]]
+- [[Algorithm RAM Model and Running-Time Complexity Analysis]]
 
 ### Indefinite Quadratic Programming
 

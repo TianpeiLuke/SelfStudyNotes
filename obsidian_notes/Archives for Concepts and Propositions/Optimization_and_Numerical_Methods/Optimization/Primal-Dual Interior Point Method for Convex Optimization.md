@@ -239,8 +239,8 @@ date of note: 2024-05-12
 - [[Secant Equation and Quasi-Newton Methods]]
 - [[BFGS Algorithm]]
 
-- [[Algorithm Big-O Notations and Rate of Growth]]
-- [[Algorithm RAM Model and Complexity Analysis]]
+- [[Algorithm Big-O Notations and Dominance Relation]]
+- [[Algorithm RAM Model and Running-Time Complexity Analysis]]
 
 - [[Sequential Quadratic Programming]]
 - [[Convex Optimization Problem]]

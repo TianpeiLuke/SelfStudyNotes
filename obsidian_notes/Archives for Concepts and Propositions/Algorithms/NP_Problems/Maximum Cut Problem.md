@@ -16,6 +16,7 @@ date of note: 2024-08-26
 >**Name**: 
 
 
+- [[Network and Flow and Capacity and Cut]]
 
 ## Explanation
 
@@ -27,11 +28,12 @@ date of note: 2024-08-26
 ##  Recommended Notes and References
 
 
-- [[Supervised Learning and Unsupervised Learning]]
+- [[Combinatorial Optimization Problem]]
 - [[Graph]]
 - [[Algorithm General Definition]]
 
 
-- [[Elements of Statistical Learning by Hastie]]
-- [[Probabilistic Graphical Models by Koller]]
-- [[Probabilistic Machine Learning Advanced Topics by Murphy]]
+- [[Graph Theory by Diestel]]
+- [[Algorithm Design Manual by Skiena]]
+- [[Introduction to Algorithms by Cormen]]
+- Wikipedia [Maximum_cut](https://en.wikipedia.org/wiki/Maximum_cut)

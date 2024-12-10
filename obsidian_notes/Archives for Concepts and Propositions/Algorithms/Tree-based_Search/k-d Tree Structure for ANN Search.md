@@ -35,7 +35,7 @@ date of note: 2024-11-29
 >
 
 - [[Partition of Set]]
-- [[Binary Tree Order and Traversal]]
+- [[Binary Search Tree Data Structure]]
 
 ![[kd_tree_partition.png]]
 
@@ -235,7 +235,7 @@ date of note: 2024-11-29
 >  
 >For $d$-dimensional space, the complexity is $$O(d \log(n))$$  
 
-- [[Algorithm Big-O Notations and Rate of Growth]]
+- [[Algorithm Big-O Notations and Dominance Relation]]
 
 >[!info]
 >The **$k$-$d$ tree** can be seen as a variant of **coordinate descent algorithm** which minimize the distance between candidate and query by looping over the *coordinate dimensions.*

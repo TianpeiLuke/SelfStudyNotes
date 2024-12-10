@@ -44,8 +44,8 @@ date of note: 2024-08-08
 >[!important] 
 >If $n \gg p$, then this algorithm requires about $$2np$$ flops.
 
-- [[Algorithm Big-O Notations and Rate of Growth]]
-- [[Algorithm RAM Model and Complexity Analysis]]
+- [[Algorithm Big-O Notations and Dominance Relation]]
+- [[Algorithm RAM Model and Running-Time Complexity Analysis]]
 
 
 ### Band Back Substitution

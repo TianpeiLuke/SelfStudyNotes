@@ -115,6 +115,8 @@ date of note: 2024-05-08
 >$$ 
 >This implies that the Poisson distribution has *heavier tails* compared to Gaussian distribution. 
 
+- [[Algorithm Big-O Notations and Dominance Relation]]
+
 ## Bernstein’s Inequality for Poisson Distribution
 
 >[!important]

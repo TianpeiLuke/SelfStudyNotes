@@ -3,8 +3,12 @@ tags:
   - concept
   - algorithm/analysis
   - algorithm/divide_and_conquer
+  - algorithm/design_paradigm
 keywords: 
-topics: 
+topics:
+  - algorithm/design_paradigm
+  - algorithm/analysis
+  - algorithm/divide_and_conquer
 name: 
 date of note: 2024-12-08
 ---
@@ -20,12 +24,33 @@ date of note: 2024-12-08
 - [[Divide-and-Conquer Analysis Recursion-Tree Method]]
 - [[Divide-and-Conquer Analysis Master Method]]
 
+- [[Algorithm RAM Model and Running-Time Complexity Analysis]]
+- [[Algorithm Big-O Notations and Dominance Relation]]
+
+
 
 ## Explanation
 
+>[!quote]
+>One of the **most powerful techniques** for solving problems is to *break them down* into *smaller*, more *easily solved pieces*. 
+>- Smaller problems are *less overwhelming*, and they permit us to **focus on details** that are lost when we are studying the whole thing. 
+>- A **recursive algorithm** starts to become apparent whenever we can break the problem into smaller instances of the same type of problem. 
+>- Multicore processors now sit in almost every computer, but effective *parallel processing* requires decomposing jobs into at least as many tasks as the number of processors.
+>  
+>-- [[Algorithm Design Manual by Skiena]] pp 147  
 
-- [[Algorithm RAM Model and Complexity Analysis]]
-- [[Algorithm Big-O Notations and Rate of Growth]]
+- [[Recursion Algorithm]]
+
+>[!quote]
+>Two important **algorithm design paradigms** are based on breaking problems down into smaller problems. 
+>- In Chapter 10, we will see **dynamic programming**, which typically *removes* one element from the problem, solves the smaller problem, and then *adds back* the element to the solution of this smaller problem in the proper way. 
+>- **Divide and conquer** instead *splits* the problem into (say) halves, solves *each* half, then *stitches* the pieces back together to form a full solution.
+>  
+>-- [[Algorithm Design Manual by Skiena]]  pp 147
+
+- [[Dynamic Programming Algorithms]]
+
+
 
 ## Examples
 
@@ -35,7 +60,7 @@ date of note: 2024-12-08
 
 ### Median and Order-Statistics
 
-
+- [[Order Statistics]]
 
 ### FFT
 
@@ -44,7 +69,7 @@ date of note: 2024-12-08
 
 ### Numerical Linear Algebra
 
-- 
+- [[Strassen Matrix Multiplication Algorithm]]
 
 
 

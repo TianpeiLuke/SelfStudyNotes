@@ -1,11 +1,11 @@
 ---
 tags:
   - concept
-  - algorithm/linked_list
+  - algorithm/computer_science
 keywords: 
 topics: 
 name: 
-date of note: 2024-12-02
+date of note: 2024-12-09
 ---
 
 ## Concept Definition
@@ -14,7 +14,6 @@ date of note: 2024-12-02
 >**Name**: 
 
 
-- [[Data Structure General Definition]]
 
 ## Explanation
 
@@ -25,5 +24,6 @@ date of note: 2024-12-02
 -----------
 ##  Recommended Notes and References
 
-- [[Algorithm Design Manual by Skiena]]
+
 - [[Introduction to Algorithms by Cormen]]
+- [[Algorithm Design Manual by Skiena]]

@@ -49,8 +49,8 @@ date of note: 2024-09-25
 >[!important]
 >The **Householder QR** requires $$2n^2\left(m - \frac{n}{3}\right)$$ flops.
 
-- [[Algorithm Big-O Notations and Rate of Growth]]
-- [[Algorithm RAM Model and Complexity Analysis]]
+- [[Algorithm Big-O Notations and Dominance Relation]]
+- [[Algorithm RAM Model and Running-Time Complexity Analysis]]
 
 
 ### Computing $Q$ by Back Accumulation of Householder Transformations

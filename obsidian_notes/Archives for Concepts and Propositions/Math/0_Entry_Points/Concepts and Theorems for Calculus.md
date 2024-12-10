@@ -37,6 +37,7 @@ date of note: 2024-10-27
 - [[Tangent Space Definition and Development]]
 - [[Derivation of Smooth Map at point and Tangent Vector]]
 
+- [[L Hospital Rule]]
 - [[Taylor Series for Local Polynomial Approximation of Smooth Function]]
 
 

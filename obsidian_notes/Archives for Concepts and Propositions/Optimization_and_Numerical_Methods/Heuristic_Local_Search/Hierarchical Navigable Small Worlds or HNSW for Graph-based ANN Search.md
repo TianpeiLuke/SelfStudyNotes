@@ -56,7 +56,7 @@ date of note: 2024-11-30
 
 ![[prob_skip_list.png]]
 
-- [[Skip Linked List and Basic Operations]]
+- [[Skip Linked List Data Structure]]
 
 ### Navigable Small Word (NSW) Model
 
@@ -286,11 +286,11 @@ date of note: 2024-11-30
 >- The quality of the search is controlled by the parameter $k$
 >  
 >  
->**k-nn-search(G, q, k,  dk)**
+>**k-nn-search(G, q, k,  ef)**
 >- *Require*: $G$ the  **HNSW** graph
 >- *Require*: $q\in \mathbb{R}^{d}$ the *query*
 >- *Require*: $k$ *nearest neighbors* to $q$ to return
->- *Require*: $dk$, the *size of dynamic candidate list*
+>- *Require*: `ef`, the *size of dynamic candidate list*
 >- Initialize current nearest element set $$W = \emptyset$$
 >- Retrieve the *entry point* in HNSW as $ep$ at top layer
 >- Retrieve the **top layer number** of HNSW as $L$, which also the level for $ep$
@@ -298,7 +298,7 @@ date of note: 2024-11-30
 >	- Set dynamic list size as $1$, 
 >	- Find **list of nearest neighbor** to $q$ at each layer $$W \leftarrow \text{search-layer}(q, ep, 1, l)$$
 >	- Find **nearest neighbor** to $q$ in $W$ as the **entry point** for **next layer** $$ep = \arg\min_{x\in W}d(x, q)$$
->- Search for **$dk$-nearest neighbor** in **bottom layer** $$W \leftarrow \text{search-layer}(q, ep, dk, 0)$$
+>- Search for **`ef`-nearest neighbor** in **bottom layer** $$W \leftarrow \text{search-layer}(q, ep, ef, 0)$$
 >- Find the **$k$-nearest neighbor** to $q$ in candidate list $W$ $$R := \text{kNN}(W, q)$$
 >	- Equivalently, call the **select-neighbors-simple** function $$R \leftarrow \text{select-neighbors-simple}(q, W, k)$$
 >- *Return*

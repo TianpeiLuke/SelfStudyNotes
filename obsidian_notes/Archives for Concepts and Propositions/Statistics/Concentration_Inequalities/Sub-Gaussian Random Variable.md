@@ -45,6 +45,8 @@ date of note: 2024-05-10
 >$$  
 >We denote the collection of such random variables by $\mathcal{G}(\nu)$.
 
+- [[Algorithm Big-O Notations and Dominance Relation]]
+
 ## Explanation
 
 

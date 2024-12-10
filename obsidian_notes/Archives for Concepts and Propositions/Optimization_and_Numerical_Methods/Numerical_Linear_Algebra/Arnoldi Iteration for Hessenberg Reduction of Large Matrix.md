@@ -195,8 +195,8 @@ date of note: 2024-09-29
 
 - [[Lanczos Iteration for Tridiagonal Reduction of Large Matrix]]
 
-- [[Algorithm Big-O Notations and Rate of Growth]]
-- [[Algorithm RAM Model and Complexity Analysis]]
+- [[Algorithm Big-O Notations and Dominance Relation]]
+- [[Algorithm RAM Model and Running-Time Complexity Analysis]]
 
 
 - [[QR Factorization of Matrix]]

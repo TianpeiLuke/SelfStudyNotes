@@ -18,6 +18,8 @@ date of note: 2024-09-05
 
 
 
+- [[Algorithm Big-O Notations and Dominance Relation]]
+
 ## Explanation
 
 

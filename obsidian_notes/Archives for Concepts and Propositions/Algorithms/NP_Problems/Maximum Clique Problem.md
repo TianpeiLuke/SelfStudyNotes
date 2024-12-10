@@ -35,7 +35,10 @@ date of note: 2024-08-26
 - [[Combinatorial Optimization Problem]]
 - [[Algorithm General Definition]]
 
-- [[Elements of Statistical Learning by Hastie]]
+
+- [[Graph Theory by Diestel]]
+- [[Algorithm Design Manual by Skiena]]
+- [[Introduction to Algorithms by Cormen]]
 - [[Probabilistic Graphical Models by Koller]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]
 - Wikipedia [Clique_problem](https://en.wikipedia.org/wiki/Clique_problem)

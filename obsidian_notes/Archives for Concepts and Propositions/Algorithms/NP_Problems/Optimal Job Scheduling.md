@@ -5,6 +5,7 @@ tags:
   - algorithm/graph
   - optimization/theory
   - operating_system/scheduling
+  - algorithm/computational_complexity_theory
 keywords: 
 topics: 
 name: 
@@ -18,6 +19,8 @@ date of note: 2024-08-26
 
 
 
+- [[NP Complete Complexity Class and Problems]]
+
 ## Explanation
 
 
@@ -30,6 +33,7 @@ date of note: 2024-08-26
 
 - [[Combinatorial Optimization Problem]]
 - [[Graph]]
+- [[Computational Complexity Theory]]
 - [[Algorithm General Definition]]
 
 

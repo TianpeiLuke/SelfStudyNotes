@@ -38,8 +38,8 @@ date of note: 2024-12-08
 
 ### Running-Time Analysis
 
-- [[Algorithm RAM Model and Complexity Analysis]]
-- [[Algorithm Big-O Notations and Rate of Growth]]
+- [[Algorithm RAM Model and Running-Time Complexity Analysis]]
+- [[Algorithm Big-O Notations and Dominance Relation]]
 - [[Algorithm Best-Case Running Time Analysis]]
 - [[Algorithm Worst-Case Running Time Analysis]]
 - [[Algorithm Average-Case Running Time Analysis]]

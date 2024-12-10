@@ -2,6 +2,7 @@
 tags:
   - concept
   - algorithm/hash_table
+  - algorithm/data_structure
 keywords: 
 topics:
   - algorithm/hash_table
@@ -16,8 +17,21 @@ date of note: 2024-12-03
 
 
 
+- [[Data Structure General Definition]]
+
 ## Explanation
 
+
+## Application
+
+### Information Retrieval
+
+- [[Inverted Index for Information Retrieval]]
+
+### ANN Search
+
+- [[Inverted File Index for ANN Search]]
+- [[Locality-Sensitive Hashing or LSH for ANN Search]]
 
 
 
@@ -26,8 +40,8 @@ date of note: 2024-12-03
 ##  Recommended Notes and References
 
 
-- [[Locality-Sensitive Hashing or LSH for ANN Search]]
-- [[Data Structure General Definition]]
+
+
 
 
 - [[Algorithm Design Manual by Skiena]]

@@ -2,6 +2,7 @@
 tags:
   - concept
   - algorithm/linked_list
+  - algorithm/data_structure
 keywords: 
 topics: 
 name: 
@@ -15,7 +16,7 @@ date of note: 2024-12-02
 
 
 
-- [[Linked List and Basic Operations]]
+- [[Linked List Data Structure]]
 - [[Data Structure General Definition]]
 
 ## Explanation

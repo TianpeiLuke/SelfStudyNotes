@@ -99,8 +99,8 @@ date of note: 2024-09-25
 >[!important]
 >The algorithm $\text{Householder}(x)$ involves about $$3n$$ flops.
 
-- [[Algorithm Big-O Notations and Rate of Growth]]
-- [[Algorithm RAM Model and Complexity Analysis]]
+- [[Algorithm Big-O Notations and Dominance Relation]]
+- [[Algorithm RAM Model and Running-Time Complexity Analysis]]
 
 
 ## Explanation

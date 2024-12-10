@@ -3,16 +3,20 @@ tags:
   - concept
   - algorithm/greedy_algorithm
   - algorithm/search
-keywords: 
-topics: 
-name: 
+  - algorithm/recursion
+  - algorithm/design_paradigm
+keywords:
+  - greedy_algorithm
+topics:
+  - algorithm/greedy_algorithm
+name: Greedy Heuristic Algorithms
 date of note: 2024-11-24
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Greedy Heuristic Algorithms
 
 
 

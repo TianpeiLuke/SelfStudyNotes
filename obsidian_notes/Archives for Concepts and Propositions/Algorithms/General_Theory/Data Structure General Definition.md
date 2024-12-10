@@ -29,8 +29,8 @@ date of note: 2024-12-08
 
 ### Linked Lists
 
-- [[Linked List and Basic Operations]]
-- [[Skip Linked List and Basic Operations]]
+- [[Linked List Data Structure]]
+- [[Skip Linked List Data Structure]]
 
 ### Stack
 

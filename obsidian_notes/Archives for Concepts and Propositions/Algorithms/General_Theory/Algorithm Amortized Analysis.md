@@ -14,7 +14,7 @@ date of note: 2024-12-08
 >**Name**: 
 
 
-- [[Algorithm RAM Model and Complexity Analysis]]
+- [[Algorithm RAM Model and Running-Time Complexity Analysis]]
 
 ## Explanation
 

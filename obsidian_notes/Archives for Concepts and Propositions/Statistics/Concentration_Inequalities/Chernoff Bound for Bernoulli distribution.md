@@ -142,6 +142,7 @@ date of note: 2024-05-08
 > \mathcal{P}\{Z \ge t - p\} = O\left( e^{-\mathbb{KL}\left( \mathcal{P}_{t}  \left\|\right. \mathcal{P}_p\right)} \right), \quad t\in (p, 1)
 >$$ 
 
+- [[Algorithm Big-O Notations and Dominance Relation]]
 
 ## Bennett's Inequality: Loose Chernoff Bound
 

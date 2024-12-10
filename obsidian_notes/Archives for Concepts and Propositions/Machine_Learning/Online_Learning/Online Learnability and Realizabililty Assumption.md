@@ -63,7 +63,7 @@ date of note: 2024-08-06
 ^f05186
 
 - [[Characteristic Function of Set]]
-
+- [[Algorithm Big-O Notations and Dominance Relation]]
 
 
 ## Explanation

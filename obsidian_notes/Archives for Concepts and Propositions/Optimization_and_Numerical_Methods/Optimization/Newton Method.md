@@ -93,8 +93,8 @@ date of note: 2024-05-12
 
 - [[Space of Continuous Differentiable Functions]]
 
-- [[Algorithm Big-O Notations and Rate of Growth]]
-- [[Algorithm RAM Model and Complexity Analysis]]
+- [[Algorithm Big-O Notations and Dominance Relation]]
+- [[Algorithm RAM Model and Running-Time Complexity Analysis]]
 
 
 - [[Numerical Optimization by Nocedal]]  pp 44

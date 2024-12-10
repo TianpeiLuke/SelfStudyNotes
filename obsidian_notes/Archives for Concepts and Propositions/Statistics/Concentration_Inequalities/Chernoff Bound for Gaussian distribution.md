@@ -99,6 +99,7 @@ date of note: 2024-05-08
 > \mathcal{P}\{X \ge t\} = O\left( e^{-c t^2} \right)
 >$$
 
+- [[Algorithm Big-O Notations and Dominance Relation]]
 
 ## Generalization
 

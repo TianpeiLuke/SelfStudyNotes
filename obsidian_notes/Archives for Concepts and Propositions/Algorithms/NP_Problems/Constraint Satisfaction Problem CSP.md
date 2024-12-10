@@ -6,6 +6,7 @@ tags:
   - optimization/theory
   - algorithm/dynamic_programming
   - probabilistic_graphical_models/theory
+  - algorithm/computational_complexity_theory
 keywords: 
 topics: 
 name: 
@@ -18,6 +19,9 @@ date of note: 2024-08-26
 >**Name**: 
 
 
+
+
+- [[NP Complete Complexity Class and Problems]]
 
 ## Explanation
 
@@ -39,6 +43,7 @@ date of note: 2024-08-26
 - [[Combinatorial Optimization Problem]]
 - [[Constrained Optimization Problem]]
 - [[Algorithm General Definition]]
+- [[Computational Complexity Theory]]
 
 
 - [[Bayesian Network on Directed Acyclic Graph]]

@@ -27,7 +27,8 @@ date of note: 2024-11-29
 >[!important] Definition
 
 
-- [[Binary Tree Order and Traversal]]
+- [[Binary Search Tree Data Structure]]
+
 - [[k-d Tree Structure for ANN Search]]
 
 

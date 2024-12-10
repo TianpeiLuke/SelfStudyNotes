@@ -4,6 +4,7 @@ tags:
   - algorithm/np_problems
   - algorithm/graph
   - optimization/theory
+  - algorithm/computational_complexity_theory
 keywords: 
 topics: 
 name: 
@@ -16,6 +17,8 @@ date of note: 2024-08-26
 >**Name**: 
 
 
+
+- [[NP Complete Complexity Class and Problems]]
 
 ## Explanation
 
@@ -30,6 +33,7 @@ date of note: 2024-08-26
 - [[Combinatorial Optimization Problem]]
 - [[Graph]]
 - [[Algorithm General Definition]]
+- [[NP Complexity Class and Problems]]
 
 
 - [[Introduction to Algorithms by Cormen]]

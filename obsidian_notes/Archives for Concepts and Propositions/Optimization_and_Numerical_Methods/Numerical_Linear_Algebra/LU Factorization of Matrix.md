@@ -118,8 +118,8 @@ date of note: 2024-08-08
 - [[Forward Substitution of Lower Triangular System]]
 - [[Back Substitution of Upper Triangular System]]
 
-- [[Algorithm Big-O Notations and Rate of Growth]]
-- [[Algorithm RAM Model and Complexity Analysis]]
+- [[Algorithm Big-O Notations and Dominance Relation]]
+- [[Algorithm RAM Model and Running-Time Complexity Analysis]]
 
 
 ## LU Factorization via Gaussian Elimination

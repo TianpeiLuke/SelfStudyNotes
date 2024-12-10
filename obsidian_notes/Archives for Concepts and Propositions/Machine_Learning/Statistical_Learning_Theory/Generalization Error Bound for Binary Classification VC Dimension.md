@@ -14,6 +14,7 @@ date of note: 2024-08-01
 >**Name**: 
 
 
+- [[Algorithm Big-O Notations and Dominance Relation]]
 
 ## Explanation
 

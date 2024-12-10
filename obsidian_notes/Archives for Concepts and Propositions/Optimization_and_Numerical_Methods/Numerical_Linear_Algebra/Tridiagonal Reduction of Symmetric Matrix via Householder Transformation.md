@@ -43,8 +43,8 @@ date of note: 2024-09-25
 >[!important]
 >This algorithm requires  $$\frac{4}{3}n^3$$ flops.
 
-- [[Algorithm Big-O Notations and Rate of Growth]]
-- [[Algorithm RAM Model and Complexity Analysis]]
+- [[Algorithm Big-O Notations and Dominance Relation]]
+- [[Algorithm RAM Model and Running-Time Complexity Analysis]]
 
 
 ## Explanation

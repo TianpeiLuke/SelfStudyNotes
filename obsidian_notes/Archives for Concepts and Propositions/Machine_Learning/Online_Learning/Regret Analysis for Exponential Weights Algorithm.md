@@ -41,6 +41,7 @@ date of note: 2024-08-06
 - [[Convex Function]]
 - [[No-Regret Learning]]
 - [[Sub-Gaussian Random Variable]]
+- [[Algorithm Big-O Notations and Dominance Relation]]
 - [[Prediction Learning and Games by Cesa-Bianchi]] pp 14 - 16
 
 ### Proof of Theorem
