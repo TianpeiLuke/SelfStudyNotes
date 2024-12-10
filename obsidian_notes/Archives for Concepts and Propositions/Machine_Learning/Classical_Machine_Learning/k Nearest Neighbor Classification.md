@@ -56,6 +56,15 @@ date of note: 2024-05-12
 
 ## Explanation
 
+>[!important]
+>The *$k$-nearest neighbor classification* is a **non-parametric learning via searching** algorithm
+>- The *training process* is equivalent to  *data indexing* and *storage*
+>- The *inference process* is via *$k$-nearest neighbor similarity search*
+>- The **learning model** is essentially an **information retrieval system.**
+
+- [[Nonparametric Models and Semi-Parametric Models]]
+- [[Indexing or Index Construction for Information Retrieval]]
+- [[Similarity Search]]
 
 ## Theory
 

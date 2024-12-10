@@ -59,6 +59,19 @@ date of note: 2024-05-12
 
 - [[Lebesgue Density from Radon-Nikodym Derivative]]
 
+>[!important]
+>The *$k$-nearest neighbor density classification* is a **non-parametric regression via searching** algorithm
+>- The *inference process* is via *$k$-nearest neighbor similarity search*
+>- The **estimation model** is essentially an **information retrieval system.
+
+- [[Information Retrieval]]
+- [[Similarity Search]]
+- [[Nonparametric Models and Semi-Parametric Models]]
+- [[Indexing or Index Construction for Information Retrieval]]
+
+- [[Approximate Nearest Neighbor Search]]
+
+
 
 
 
