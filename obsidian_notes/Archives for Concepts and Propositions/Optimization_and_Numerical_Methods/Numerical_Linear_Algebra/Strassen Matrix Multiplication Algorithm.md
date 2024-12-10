@@ -19,7 +19,7 @@ date of note: 2024-12-09
 
 - [[Divide-and-Conquer Algorithms]]
 - [[Algorithm Big-O Notations and Dominance Relation]]
-- [[Algorithm RAM Model and Running-Time Complexity Analysis]]
+
 
 
 ## Explanation
@@ -40,3 +40,5 @@ date of note: 2024-12-09
 
 - [[Matrix Computations by Golub]] pp 30 - 32
 - [[Numerical Linear Algebra by Trefethen]] pp 247, 249, 330, 340
+- [[Introduction to Algorithms by Cormen]] pp 83 - 84
+- [[Algorithm Design Manual by Skiena]] pp 469, 473, 474, 560
