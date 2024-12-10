@@ -81,7 +81,15 @@ date of note: 2024-05-12
 
 
 
-## Vector Quantization
+## Applications
+
+### Vector Quantization
+
+
+### Information Retrieval and Index Compression
+
+- [[Inverted File Index for ANN Search]]
+- [[Product Quantization for ANN Search and Index Compression]]
 
 
 
