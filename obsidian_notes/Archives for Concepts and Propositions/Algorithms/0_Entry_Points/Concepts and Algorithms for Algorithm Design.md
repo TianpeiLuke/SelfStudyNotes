@@ -8,8 +8,6 @@ name:
 date of note: 2024-09-16
 ---
 
-# List of Concepts
-
 ## General Theory of Algorithm, Data Structure and Analysis
 
 - [[Algorithm General Definition]]
@@ -104,6 +102,10 @@ date of note: 2024-09-16
 - [[Priority Queue as Partially Ordered Data Structure]]
 - [[Heap as Partially Ordered Data Structure]]
 
+### Hash Table
+
+- [[Hash Table for Efficient Retrieval and Inverse Map]]
+
 
 ### Rooted Tree
 
@@ -136,9 +138,11 @@ date of note: 2024-09-16
 - [[BucketSort or Distribution Sort Algorithm]]
 - [[HeapSort Algorithm]]
 
+
 ### Median and Order Statistics
 
 - [[Order Statistics]]
+
 
 ### Greedy Search
 
@@ -164,6 +168,7 @@ date of note: 2024-09-16
 - [[Best-First Search]]
 - [[A-star Heuristic Search]]
 - [[Topological Sorting]]
+
 
 ### Network Algorithms
 

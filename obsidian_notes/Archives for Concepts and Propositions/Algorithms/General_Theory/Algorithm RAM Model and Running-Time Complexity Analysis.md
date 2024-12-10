@@ -81,5 +81,5 @@ date of note: 2024-12-08
 
 - [[Introduction to Algorithms by Cormen]] pp  25 - 31, 49 - 76
 - [[Algorithm Design Manual by Skiena]] pp 31
-- [[Matrix Computations by Golub]]
+- [[Matrix Computations by Golub]] pp 12
 - [[Numerical Linear Algebra by Trefethen]]
