@@ -4,21 +4,37 @@ tags:
   - algorithm/analysis
   - algorithm/divide_and_conquer
   - algorithm/design_paradigm
-keywords: 
+keywords:
+  - divide_and_conquer_algorithm
 topics:
   - algorithm/design_paradigm
   - algorithm/analysis
   - algorithm/divide_and_conquer
-name: 
+name: Divide-and-Conquer Algorithms
 date of note: 2024-12-08
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Divide-and-Conquer Algorithms
+
+>[!important] Definition
+>The **divide-and-conquer algorithm** is an *recursive algorithm design paradigm*, which is described in the following steps
+>- **Base case**: solve the problem directly
+>- **Recursive case**: performs the following *three characteristic steps*
+>	- **Divide** the problem into *one or more* subproblems that are *smaller instances* of the *same* problem.
+>	- **Conquer** the subproblems by solving them *recursively*.
+>	- **Combine** the *subproblem solutions* to form a solution to the *original problem*.
+
+- [[Recursion Algorithm]]
+- [[Algorithm General Definition]]
+
+### Algorithmic Recurrence 
 
 
+
+### Divide and Conquer Algorithm Analysis
 
 - [[Divide-and-Conquer Analysis Substitution Method]]
 - [[Divide-and-Conquer Analysis Recursion-Tree Method]]
@@ -30,6 +46,13 @@ date of note: 2024-12-08
 
 
 ## Explanation
+
+>[!quote]
+>A **divide-and-conquer algorithm** *breaks down* a large problem into *smaller* subproblems, which themselves may be broken down into even smaller subproblems, and so forth. 
+>- The recursion **bottoms out** when it reaches a *base case* and the subproblem is *small enough* to solve directly without further recursing.
+>  
+>-- [[Introduction to Algorithms by Cormen]] pp 76  
+
 
 >[!quote]
 >One of the **most powerful techniques** for solving problems is to *break them down* into *smaller*, more *easily solved pieces*. 

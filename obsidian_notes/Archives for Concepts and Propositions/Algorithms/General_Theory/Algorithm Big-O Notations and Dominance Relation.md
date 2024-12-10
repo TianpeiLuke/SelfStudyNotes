@@ -20,6 +20,8 @@ date of note: 2024-12-08
 >[!important] Definition
 >The **Big-Oh notation** is a member of a family of notations, collectively called the **Bachmann–Landau notation** or **Landau notation** or **asymptotic notation**.
 
+![[big_o_notations.png]]
+
 ### $O$-Notation
 
 >[!important] Definition
@@ -164,7 +166,11 @@ date of note: 2024-12-08
 >- **Addition**: the *sum* of two functions is governed by the **dominant** one $$f(n)+ g(n) = \Theta(\max\left\{ f(n), g(n) \right\})$$
 >- **Multiplication by constant**: the *asymptotic behavior* of growth function is not affected by a multiplicative constant $$\begin{align*}O(c \cdot f(n)) &= O(f(n)) \\[5pt] \Omega(c \cdot f(n)) &= \Omega(f(n)) \\[5pt] \Theta(c \cdot f(n)) &= \Theta(f(n))  \end{align*}$$
 >- **Multiplication of increasing functions**: when two functions in a product are increasing, both are important.  $$\begin{align*} O(f(n)) \cdot O(g(n)) &= O(f(n) \cdot g(n))  \\[5pt] \Omega(f(n)) \cdot \Omega(g(n)) &= \Omega(f(n) \cdot g(n)) \\[5pt] \Theta(f(n)) \cdot \Theta(g(n)) &= \Theta(f(n) \cdot g(n)) \end{align*}$$
->- **Transitivity**: if $$f(n) = O(g(n))$$ and $$g(n) = O(h(n))$$ then $$f(n) = O(h(n))$$
+>- **Transitivity**: $$\begin{align*}f(n) = O(g(n)) \text{ and } g(n) = O(h(n)) &\implies f(n) = O(h(n)) \\[5pt]  f(n) = \Omega(g(n)) \text{ and } g(n) = \Omega(h(n)) &\implies f(n) = \Omega(h(n)) \\[5pt] f(n) = \Theta(g(n)) \text{ and } g(n) = \Theta(h(n)) &\implies f(n) = \Theta(h(n)) \\[5pt]\end{align*}$$
+>- **Reflexivity**:  $$\begin{align*}f(n) = O(f(n)) \\[5pt]  f(n) = \Omega(f(n))  \\[5pt] f(n) = \Theta(f(n))\end{align*}$$
+>- **Symmetry**: $$\begin{align*}f(n) = \Theta(g(n)) \iff g(n) = \Theta(f(n))  \end{align*}$$
+>- **Transpose Symmetry**: $$\begin{align*}f(n) = O(g(n)) &\iff g(n) = \Omega(f(n)) \\[5pt] f(n) = o(g(n)) &\iff g(n) = \omega(f(n))\end{align*}$$
+
 
 ## Common Series
 
