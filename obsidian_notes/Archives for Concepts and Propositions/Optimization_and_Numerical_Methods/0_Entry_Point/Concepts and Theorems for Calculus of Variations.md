@@ -49,7 +49,7 @@ date of note: 2024-10-30
 
 ### Hamilton-Jacobi Theory
 
-- [[Concepts and Algorithms based on Dynamic Programming Strategy]]
+- [[Concepts and Algorithms based on Dynamic Programming]]
 - [[Hamilton-Jacobi Equation]]
 
 

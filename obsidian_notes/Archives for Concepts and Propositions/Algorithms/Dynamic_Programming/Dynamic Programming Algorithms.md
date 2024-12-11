@@ -52,6 +52,20 @@ date of note: 2024-11-19
 > S \subset A \implies  \arg\min_{x\in S} F(x) \supset \arg\min_{x\in A} F(x)
 >$$
 >- The existence of *optimal substructure* is the *key* ingredient of both *dynamic programming* and *greedy algorithm.*
+>- Dynamic programming builds an optimal solution to the problem *from* optimal solutions to *subproblems*
+
+>[!important] Definition
+>The following patterns can be used to identify the **optimal substructure**:
+>- Show a solution to the problem consists of **making a choice**.
+>	- Making this choice leaves *one or more subproblems solved*
+>- Assume that for given problem, we **are given the choice** that *leads to optimal solution*
+>	- Not concerning on *how to determine this choice*.
+>- *Given this choice*, determine which *subproblem* appears, and how to best *characterize* the resulting space of subproblems
+>- Show that the *solutions* to the *subproblems* used within an *optimal solution* to the problem must themselves be *optimal* 
+>	- Find the **Bellman equation** $$V(x^{*}) = \min_{x\in A}F(x, V(z^{*}))$$
+>	- **Proof by contradition**: 
+>		- supposing that each of the subproblem solutions is not optimal and then deriving a contradiction.
+>		- Show that *substituting* *non-optimal* solution from subproblem with *optimal solution* would result in an *improvement* in the *original problem* $$g(x, V(z^{*})) \le g(x, V(z)),\quad \forall z\in S,\; z^{*} = \arg\min_{z\in S} V(z)$$
 
 
 ### Bellman Equations
@@ -62,6 +76,7 @@ date of note: 2024-11-19
 >\begin{align*}
 >&S \subset A\\[5pt]
 >&x^{*} \in \arg\min_{x \in A}V(x)\\[5pt]
+>\implies& V(x) = g(x, V(z),\, z\in S)\\[5pt]
 >\implies & V(x^{*}) = \min_{x\in A} g(x, V(z^{*})) := \min_{x\in A} g\left(x,\;  \min_{z\in S}V(z) \right)
 >\end{align*}
 >$$
@@ -81,6 +96,21 @@ date of note: 2024-11-19
 
 >[!info]
 >"Programming" in this context refers to a **tabular method**, not to writing computer code.
+
+>[!info]
+>To characterize the space of subproblems, a good **rule of thumb** says to try to 
+>- keep the space **as simple as possible** 
+>- and then *expand* it as necessary.
+
+>[!quote]
+>Dynamic programming often uses optimal substructure in a **bottom-up fashion**. 
+>- That is, you first find *optimal solutions* to **subproblems** 
+>- and, having *solved the subproblems*, you find an *optimal solution* to the **problem**. 
+>
+>Finding an optimal solution to the problem entails **making a choice** among *subproblems* as to which you will use in solving the problem. 
+>- The **cost** of the problem solution is usually the **subproblem costs** plus a **cost** that is directly attributable to the **choice** itself.
+>  
+>-- [[Introduction to Algorithms by Cormen]] pp 384  
 
 
 ### Compared with Divide-and-Conquer
@@ -117,6 +147,9 @@ date of note: 2024-11-19
 >-- [[Introduction to Algorithms by Cormen]] pp 427	  
 
 - [[Greedy Heuristic Algorithms]]
+
+
+![[Concepts and Algorithms for Algorithm Design#^b8bfb7]]
 
 ## Applications
 

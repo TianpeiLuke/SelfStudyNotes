@@ -106,12 +106,23 @@ date of note: 2024-12-08
 ### Numerical Linear Algebra
 
 - [[Strassen Matrix Multiplication Algorithm]]
+- [[LU Factorization of Matrix]]
+- [[Lanczos Iteration Practical with Reorthogonalization]]
+- [[Arnoldi Iteration for Hessenberg Reduction of Large Matrix]]
+
 
 ### Binary Search Tree
 
 - [[Binary Search Tree Data Structure]]
 - [[Binary Tree Order and Traversal]]
 - [[k-d Tree Structure for ANN Search]]
+
+### Parallel Processing
+
+
+
+### Map-Reduce
+
 
 
 

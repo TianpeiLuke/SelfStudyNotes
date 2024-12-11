@@ -40,6 +40,19 @@ date of note: 2024-11-24
 - [[Recursion Algorithm]]
 - [[Recurrence and Algorithmic Recurrence]]
 
+>[!important]
+>An alternative approach is to fashion optimal substructure with a **greedy choice** in mind, so that the choice leaves **just one subproblem** to solve.
+>
+>More generally, you can design greedy algorithms according to the following sequence of steps:
+>- Cast the optimization problem as one in which 
+>	- you *make a choice* 
+>	- and are left with *one subproblem* to solve.
+>- Prove that there is always an optimal solution to the *original* problem that makes the *greedy choice*, 
+>	- so that the greedy choice is always safe.
+>- Demonstrate **optimal substructure**
+>	- Show that having made the greedy choice, what *remains* is a subproblem with the *property* that 
+>		- if you *combine* an optimal solution to the *subproblem* with the *greedy choice* you have made, you arrive at an optimal solution to the *original problem*.
+
 ### Greedy Choice Property
 
 >[!important] Definition
@@ -53,6 +66,8 @@ date of note: 2024-11-24
 
 - [[Unconstrained Global Minimization]]
 - [[Unconstrained Local Minimization]]
+
+
 
 ### Optimal Substructure
 
@@ -111,6 +126,10 @@ date of note: 2024-11-24
 >-- [[Introduction to Algorithms by Cormen]] pp 428	  
 
 - [[Dynamic Programming Algorithms]]
+
+![[Concepts and Algorithms for Algorithm Design#^b8bfb7]]
+
+- [[Concepts and Algorithms for Algorithm Design]]
 
 ## Applications
 

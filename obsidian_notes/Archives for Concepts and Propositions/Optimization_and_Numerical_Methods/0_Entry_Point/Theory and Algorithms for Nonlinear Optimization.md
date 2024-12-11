@@ -147,7 +147,7 @@ date of note: 2024-05-12
 
 ### Dynamic Programming
 
-- [[Concepts and Algorithms based on Dynamic Programming Strategy]]
+- [[Concepts and Algorithms based on Dynamic Programming]]
 
 ### Optimization on Manifold
 
