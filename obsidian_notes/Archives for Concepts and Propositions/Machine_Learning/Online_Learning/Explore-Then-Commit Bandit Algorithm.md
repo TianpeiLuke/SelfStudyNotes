@@ -77,6 +77,7 @@ date of note: 2024-08-07
 - [[Multi-Armed Adversarial Bandit]]
 - [[epsilon-Greedy Algorithm]]
 
+
 ## Explanation
 
 >[!info]
@@ -111,6 +112,7 @@ date of note: 2024-08-07
 - [[Multi-Armed Adversarial Bandit]]
 - [[Exploration and Exploitation Tradeoff]]
 
+- [[Greedy Heuristic Algorithms]]
 
 - [[Bandit Algorithms by Lattimore]] pp 75
 - [[Reinforcement Learning An Introduction by Sutton]]

@@ -23,6 +23,11 @@ date of note: 2024-07-09
 
 
 
+### Preferred Graph Algorithms
+
+- [[Depth-First Search]]
+
+
 ## Applications
 
 ### Sparse Matrix Operations

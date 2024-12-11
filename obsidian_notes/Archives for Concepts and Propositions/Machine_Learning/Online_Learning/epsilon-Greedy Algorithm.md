@@ -41,7 +41,7 @@ date of note: 2024-05-12
 >	- Update the **average reward** for all arms $i=1\,{,}\ldots{,}\,k$ $$\hat{\mu}_{i}(t)  = \left\{ \begin{array}{cc} \hat{\mu}_{i}(t-1) + \dfrac{1}{T_{i}(t)}\left(X_{t} - \hat{\mu}_{i}(t-1)\right) & \text{ if } i = A_{t}\\ \hat{\mu}_{i}(t-1) &\text{ if } i\neq A_{t}\end{array} \right.$$
 
 - [[Explore-Then-Commit Bandit Algorithm]]
-
+- [[Greedy Heuristic Algorithms]]
 
 
 ## Explanation

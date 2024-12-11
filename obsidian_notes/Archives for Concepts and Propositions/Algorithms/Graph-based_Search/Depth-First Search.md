@@ -29,5 +29,5 @@ date of note: 2024-08-08
 - [[Graph]]
 - [[Algorithm General Definition]]
 
-- [[Introduction to Algorithms by Cormen]]
+- [[Introduction to Algorithms by Cormen]] pp 563 - 573
 - [[Algorithm Design Manual by Skiena]] pp 224, 230, 449, 452, 542, 546, 551, 559, 568, 599

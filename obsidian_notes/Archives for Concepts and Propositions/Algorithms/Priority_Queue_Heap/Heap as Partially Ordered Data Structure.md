@@ -16,6 +16,8 @@ date of note: 2024-12-09
 >**Name**: 
 
 
+- [[Min-Heap Data Structure]]
+- [[Fibonacci-Heap Data Structure]]
 
 ## Explanation
 

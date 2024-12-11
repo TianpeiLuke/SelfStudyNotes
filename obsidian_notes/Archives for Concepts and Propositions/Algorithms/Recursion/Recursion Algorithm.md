@@ -26,8 +26,37 @@ date of note: 2024-08-08
 - [[Recurrence and Algorithmic Recurrence]]
 
 
+- [[Loop Invariant Format]]
 
 ## Explanation
+
+
+
+
+## Types of Recursions
+
+
+### Divide-and-Conquer
+
+- [[Divide-and-Conquer Algorithms]]
+
+### Greedy Algorithms
+
+- [[Greedy Heuristic Algorithms]]
+
+### Tree-based Algorithms
+
+- [[Binary Search Tree Data Structure]]
+
+### Dynamic Programming
+
+- [[Dynamic Programming Algorithms]]
+
+### Time Recursion
+
+- [[Markov Chain and Markov Process]]
+- [[Dynamic Bayesian Network]]
+- [[Recurrent Neural Network]]
 
 >[!quote]
 >Two important **algorithm design paradigms** are based on breaking problems down into smaller problems. 

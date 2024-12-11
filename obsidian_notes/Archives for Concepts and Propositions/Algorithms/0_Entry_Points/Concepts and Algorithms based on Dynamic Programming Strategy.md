@@ -29,7 +29,9 @@ date of note: 2024-09-16
 - [[Network and Flow and Capacity and Cut]]
 
 - [[A-star Heuristic Search]]
-- [[Bellman-Ford Algorithm for Network Flow Problem]]
+- [[Bellman-Ford Algorithm for Single-Source Shortest Path Problem]]
+- [[Dijkstra Algorithm for Single-Source Shortest Path Problem on DAG]]
+- [[Ford-Fulkerson Method for Maximum Flow Problem]]
 
 ### Martingale and Optimal Stopping
 
@@ -73,12 +75,19 @@ date of note: 2024-09-16
 - [[Automatic Differentiation]]
 - [[Back-Propagation Algorithm]]
 - [[Back-Propagation Through Time]]
+- [[Topological Sorting]]
+
+
+### Numerical Linear Algebra
+
+- [[Matrix-Chain Multiplication]]
 
 
 ### Natural Language Processing
 
 - [[Minimum Edit Distance or Levenshtein Distance via Dynamic Programming]]
 - [[CKY Parsing as Dynamic Programming Algorithm]]
+- [[Longest Common Subsequence between Strings]]
 - [[Unigram Tokenization]]
 
 
@@ -96,6 +105,22 @@ date of note: 2024-09-16
 - [[Lagrangian Function in Mechanics and Variational Calculus]]
 - [[Hamiltonian Function in Mechanic and Variational Calculus]]
 - [[Hamilton-Jacobi-Bellman Equation]]
+
+## Compare to Greedy Algorithm
+
+>[!quote]
+>Here is where **greedy algorithms** *differ* from **dynamic programming**. 
+>- In **dynamic programming**, you make a choice at each step, but the *choice* usually depends on the *solutions to subproblems*. 
+>	- Consequently, you typically solve dynamic programming problems in a **bottom-up manner**, progressing from *smaller* subproblems to *larger* subproblems. 
+>	- (Alternatively, you can solve them top down, but memoizing. Of course, even though the code works top down, you still must solve the subproblems before making a choice.) 
+>- In a **greedy algorithm**, you make whatever choice seems *best at the moment* and then solve the subproblem that remains. 
+>	- The *choice* made by a greedy algorithm may depend on choices so far, but it *cannot* depend on any *future choices* or on the *solutions to subproblems*. 
+>- Thus, 
+>	- unlike **dynamic programming**, which *solves the subproblems before* making the *first choice*,  a **greedy algorithm** makes its *first choice before* solving any *subproblems*.  $$\begin{align*}\text{dynamic programming:}& \quad \text{ solving subproblem }\to \text{ choice} \\[5pt] \text{greedy algorithm:}& \quad \text{ choice }\to \text{ solving subproblem}\end{align*}$$
+>	- A dynamic-programming algorithm proceeds **bottom up**, whereas a greedy strategy usually progresses **top down**, making one greedy choice after another, reducing each given problem instance to a smaller one.
+>	  
+>-- [[Introduction to Algorithms by Cormen]] pp 427	  
+
 
 
 ## Coding Exercise
@@ -119,8 +144,6 @@ date of note: 2024-09-16
 - [[Game Theory An Introduction by Tadelis]] 
 
 - [[Dynamic Programming by Bellman]]
-- [[Algorithm Design Manual by Skiena]]
-- [[Introduction to Algorithms by Cormen]]
 - [[Dynamic Programming and Optimal Control by Bertsekas]]
 
 - [[Markov Decision Processes by Puterman]] 

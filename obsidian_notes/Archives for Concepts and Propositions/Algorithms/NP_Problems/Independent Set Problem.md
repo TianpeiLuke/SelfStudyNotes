@@ -5,6 +5,7 @@ tags:
   - algorithm/set
   - optimization/theory
   - algorithm/computational_complexity_theory
+  - math/graph_theory
 keywords: 
 topics: 
 name: 
@@ -23,6 +24,19 @@ date of note: 2024-08-26
 ## Explanation
 
 
+## Related NP Problem
+
+- [[Maximum Clique Problem]]
+
+
+## Application
+
+### Probabilistic Graphical Model
+
+- [[Probabilistic Graphical Models]]
+- [[D-Separation in Bayesian Network]]
+- [[Separation in Markov Network]]
+
 
 
 
@@ -38,8 +52,8 @@ date of note: 2024-08-26
 
 
 - [[Introduction to Algorithms by Cormen]] pp 1115 - 1119
-- [[Algorithm Design Manual by Skiena]]
-- [[Probabilistic Machine Learning Advanced Topics by Murphy]]
+- [[Algorithm Design Manual by Skiena]] pp 589
+
 
 
 - [[Algorithms to Live By Chapter 08 Relaxation]]

@@ -52,6 +52,7 @@ date of note: 2024-08-25
 
 ^85f6f8
 
+- [[Greedy Heuristic Algorithms]]
 - [[Combinatorial Optimization Problem]]
 - [[Unconstrained Local Minimization]]
 - [[Topology of Set]]

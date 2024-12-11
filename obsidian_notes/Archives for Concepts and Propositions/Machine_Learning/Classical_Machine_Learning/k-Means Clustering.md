@@ -72,7 +72,8 @@ date of note: 2024-05-12
 >[!info]
 >*k-means* algorithm is an **approximation algorithm** to solve the NP-hard optimal assignment problem.
 
-
+- [[NP Hard Complexity Class and Problems]]
+- [[Greedy Heuristic Algorithms]]
 
 
 ## Variants

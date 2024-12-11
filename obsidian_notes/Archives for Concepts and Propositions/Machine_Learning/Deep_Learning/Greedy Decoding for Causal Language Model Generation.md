@@ -33,6 +33,8 @@ date of note: 2024-11-24
 
 ^41dfb7
 
+- [[Greedy Heuristic Algorithms]]
+
 >[!quote]
 >A problem with **greedy decoding** is that what looks *high probability* at word $t$ might  turn out to have been the *wrong choice* once we get to word $t + 1$.
 >
@@ -40,6 +42,7 @@ date of note: 2024-11-24
 
 - [[Autoregressive Models]]
 - [[n-Gram Model and Language Model]]
+
 
 
 ## Explanation
@@ -54,6 +57,7 @@ date of note: 2024-11-24
 >Both **greedy decoding** and **beam search** corresponds to the **autoregressive generation** as it generate *next token* based on *previous generated tokens*.
 
 - [[Decoding and Sampling from Large Language Models]]
+
 
 
 -----------

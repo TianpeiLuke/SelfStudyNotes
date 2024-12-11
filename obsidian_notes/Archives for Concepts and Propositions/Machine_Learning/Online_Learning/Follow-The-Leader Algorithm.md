@@ -38,6 +38,7 @@ date of note: 2024-08-07
 
 - [[Online Convex Optimization]]
 - [[Incremental Algorithm]]
+- [[Greedy Heuristic Algorithms]]
 
 ### Follow-The-Best-Expert for Prediction with Expert Advice
 

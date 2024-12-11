@@ -70,6 +70,6 @@ date of note: 2024-07-07
 - [[Algorithm General Definition]]
 - [[Data Structure General Definition]]
 
-- [[Introduction to Algorithms by Cormen]]
-- [[Algorithm Design Manual by Skiena]] pp 481
+- [[Introduction to Algorithms by Cormen]] pp 573 - 576
+- [[Algorithm Design Manual by Skiena]] pp 546 - 549
 - [[Probabilistic Graphical Models by Koller]] pp 1144

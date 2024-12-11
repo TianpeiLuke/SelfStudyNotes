@@ -18,6 +18,9 @@ date of note: 2024-12-09
 
 ## Explanation
 
+- [[Linked List Data Structure]]
+- [[Heap as Partially Ordered Data Structure]]
+- [[Binary Search Tree Data Structure]]
 
 
 

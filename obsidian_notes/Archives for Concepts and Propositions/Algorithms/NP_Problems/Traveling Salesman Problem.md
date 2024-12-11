@@ -5,6 +5,7 @@ tags:
   - algorithm/graph
   - optimization/theory
   - algorithm/computational_complexity_theory
+  - math/graph_theory
 keywords: 
 topics: 
 name: 
@@ -36,8 +37,9 @@ date of note: 2024-08-26
 - [[NP Complexity Class and Problems]]
 
 
+- [[Graph Theory by Diestel]]
 - [[Introduction to Algorithms by Cormen]]
-- [[Algorithm Design Manual by Skiena]]
+- [[Algorithm Design Manual by Skiena]] pp 594
 - [[Introduction to Evolutionary Computing by Eiben]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]
 - [[Artificial Intelligence Modern Approach by Russell]]

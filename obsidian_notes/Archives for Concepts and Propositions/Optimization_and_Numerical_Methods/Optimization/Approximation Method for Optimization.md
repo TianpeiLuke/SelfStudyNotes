@@ -32,6 +32,7 @@ date of note: 2024-05-12
 
 ^9a898b
 
+- [[Greedy Heuristic Algorithms]]
 
 ## Explanation
 

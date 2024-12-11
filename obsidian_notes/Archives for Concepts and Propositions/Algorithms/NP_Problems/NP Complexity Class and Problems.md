@@ -28,7 +28,7 @@ date of note: 2024-12-09
 ##  Recommended Notes and References
 
 
-- [[Introduction to Algorithms by Cormen]]
-- [[Algorithm Design Manual by Skiena]]
+- [[Introduction to Algorithms by Cormen]] pp 1042 - 1103
+- [[Algorithm Design Manual by Skiena]] pp 355 - 383, 585- 621
 
 - Wikipedia [NP_(complexity)](https://en.wikipedia.org/wiki/NP_(complexity))

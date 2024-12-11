@@ -91,6 +91,8 @@ date of note: 2024-07-14
 - [[Fundamental Cycle of Chord to Spanning Tree]]
 - [[Adjacency Matrix of Graph]]
 - [[Adjacency List for Sparse Representation of Graph]]
+- [[Incidence Matrix for Graph and Hypergraph]]
+
 
 ### Matching and Covering
 
@@ -101,6 +103,7 @@ date of note: 2024-07-14
 - [[Hypergraph in Graph Theory]]
 - [[Cluster Graph and Family Preservation]]
 - [[Clique Tree and Graph and Running Intersection Property]]
+- [[Maximum Bipartite Matching]]
 
 
 ### Network Flows

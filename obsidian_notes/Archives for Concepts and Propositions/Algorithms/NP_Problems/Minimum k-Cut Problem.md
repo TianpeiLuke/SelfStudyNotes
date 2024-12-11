@@ -34,6 +34,6 @@ date of note: 2024-08-26
 
 
 - [[Graph Theory by Diestel]]
-- [[Algorithm Design Manual by Skiena]]
+- [[Algorithm Design Manual by Skiena]] pp 601
 - [[Introduction to Algorithms by Cormen]]
 - Wikipedia [Minimum_k-cut](https://en.wikipedia.org/wiki/Minimum_k-cut)

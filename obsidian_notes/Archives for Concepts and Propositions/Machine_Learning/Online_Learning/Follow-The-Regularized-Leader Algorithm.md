@@ -35,6 +35,7 @@ date of note: 2024-08-07
 - [[Online Mirror Descent Algorithm]]
 - [[Tikhonov Regularization in Optimization and Learning]]
 - [[Follow-The-Leader Algorithm]]
+- [[Greedy Heuristic Algorithms]]
 
 
 ## Explanation

@@ -71,6 +71,7 @@ date of note: 2024-11-25
 
 
 - [[Recall and Precision and F-Measure]]
+- [[Longest Common Subsequence between Strings]]
 
 ### ROUGE-S based on the Skip-Bigram Co-Occurrence
 

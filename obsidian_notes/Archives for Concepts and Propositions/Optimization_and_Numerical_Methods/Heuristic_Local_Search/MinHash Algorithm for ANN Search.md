@@ -25,6 +25,8 @@ date of note: 2024-11-29
 >[!important]
 >**Name**: MinHash Algorithm for Approximate Nearest Neighbor Search
 
+
+- [[Hash Table for Efficient Retrieval and Inverse Map]]
 - [[Approximate Nearest Neighbor Search]]
 - [[Jaccard Similarity and Jaccard Distance between Two Sets]]
 - [[Locality-Sensitive Hashing or LSH for ANN Search]]
@@ -53,4 +55,6 @@ date of note: 2024-11-29
 - Youtube
 	- [Locality Sensitive Hashing (LSH) for Search with Shingling + MinHashing (Python)](https://www.youtube.com/watch?v=e_SBq3s20M8&list=PLIUOU7oqGTLhlWpTz4NnuT3FekouIVlqc&index=5)
 
+
+- [[Algorithm Design Manual by Skiena]] pp 186
 - Wikipedia [MinHash](https://en.wikipedia.org/wiki/MinHash)

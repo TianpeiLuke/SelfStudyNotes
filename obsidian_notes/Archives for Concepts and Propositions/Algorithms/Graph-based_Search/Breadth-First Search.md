@@ -30,5 +30,5 @@ date of note: 2024-08-08
 - [[Data Structure General Definition]]
 
 
-- [[Introduction to Algorithms by Cormen]]
+- [[Introduction to Algorithms by Cormen]] pp 554 - 563
 - [[Algorithm Design Manual by Skiena]] pp 214, 221, 274, 542, 551, 555,

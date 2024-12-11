@@ -160,6 +160,9 @@ date of note: 2024-05-12
 
 - [[Kullback-Leibler Divergence]]
 
+
+- [[Greedy Heuristic Algorithms]]
+
 ## Variational EM
 
 - [[Variational Expectation-Maximization]]

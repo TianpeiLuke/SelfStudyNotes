@@ -35,7 +35,7 @@ date of note: 2024-08-27
 >f(x^{(1)}) \,{\ge}\ldots{\ge}\, f(x^{(\lambda)}) \,{\le}\ldots{\ge}\, f(x^{(\mu)})
 >$$
 
-
+- [[Greedy Heuristic Algorithms]]
 ### Fitness Proportional Selection
 
 >[!important] Definition

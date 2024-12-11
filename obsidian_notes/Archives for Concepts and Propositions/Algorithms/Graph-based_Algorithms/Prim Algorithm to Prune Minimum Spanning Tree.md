@@ -16,22 +16,22 @@ date of note: 2024-08-08
 >**Name**: 
 
 
-- [[Maximum Flow Problem]]
-- [[Max-Flow Min-Cut Theorem]]
-- [[Network and Flow and Capacity and Cut]]
+- [[Minimum Spanning Tree Problem]]
+
 
 ## Explanation
 
-- [[Dynamic Programming Algorithms]]
+
+- [[Greedy Heuristic Algorithms]]
 
 
 -----------
 ##  Recommended Notes and References
 
 
-
+- [[Minimum k-Spanning Tree]]
 - [[Graph]]
 
 
-- [[Introduction to Algorithms by Cormen]]
-- [[Algorithm Design Manual by Skiena]] pp 555 - 557
+- [[Introduction to Algorithms by Cormen]] pp 591 - 604
+- [[Algorithm Design Manual by Skiena]] pp 245 - 248

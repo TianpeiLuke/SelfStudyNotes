@@ -34,6 +34,19 @@ date of note: 2024-12-08
 
 
 
+### Structure of Optimal Solution
+
+>[!important] Definition
+>The **divide-and-conquer** algorithm *partition* the space into subspaces and then the optimal solution can be obtained by *combining the subproblem solution*
+>$$
+>\begin{align*}
+>&A = \bigcup_{i\in I}C_{i}\\[5pt]
+>&x^{(i)} = \arg\min_{x\in C_{i}}F(x) \\[5pt]
+>\implies &x^{*} := \arg\min_{x\in A}F(x) = g(x^{(i)},\; i\in I)
+\end{align*}
+>$$
+
+
 ### Divide and Conquer Algorithm Analysis
 
 - [[Divide-and-Conquer Analysis Substitution Method]]
@@ -93,6 +106,14 @@ date of note: 2024-12-08
 ### Numerical Linear Algebra
 
 - [[Strassen Matrix Multiplication Algorithm]]
+
+### Binary Search Tree
+
+- [[Binary Search Tree Data Structure]]
+- [[Binary Tree Order and Traversal]]
+- [[k-d Tree Structure for ANN Search]]
+
+
 
 
 

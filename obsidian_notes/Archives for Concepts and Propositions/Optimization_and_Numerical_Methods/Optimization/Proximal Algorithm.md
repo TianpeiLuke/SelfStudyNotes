@@ -35,6 +35,8 @@ date of note: 2024-05-12
 ## Explanation
 
 
+- [[Greedy Heuristic Algorithms]]
+
 ## Proximal Type Algorithms
 
 - [[Dual Proximal Algorithm]]

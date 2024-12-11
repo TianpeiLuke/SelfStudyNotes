@@ -21,6 +21,12 @@ date of note: 2024-08-26
 ## Explanation
 
 
+## Application
+
+### Spectral Clustering
+
+- [[Graph Laplacian]]
+
 
 
 
@@ -34,6 +40,6 @@ date of note: 2024-08-26
 
 
 - [[Graph Theory by Diestel]]
-- [[Algorithm Design Manual by Skiena]]
+- [[Algorithm Design Manual by Skiena]] pp 601
 - [[Introduction to Algorithms by Cormen]]
 - Wikipedia [Maximum_cut](https://en.wikipedia.org/wiki/Maximum_cut)

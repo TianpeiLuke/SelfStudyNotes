@@ -67,7 +67,7 @@ date of note: 2024-08-28
 ## Explanation
 
 
-
+- [[Greedy Heuristic Algorithms]]
 
 
 -----------

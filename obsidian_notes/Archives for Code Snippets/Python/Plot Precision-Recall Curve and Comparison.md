@@ -23,7 +23,7 @@ date of note: 2024-06-25
 >- plot *Precision-Recall curve* and *Average Precision* metric
 
 - [[Precision-Recall Curve]]
-- [[Interpolated Precision and Average Precision]]
+- [[Interpolated Precision and Interpolated Average Precision]]
 
 ## Code
 

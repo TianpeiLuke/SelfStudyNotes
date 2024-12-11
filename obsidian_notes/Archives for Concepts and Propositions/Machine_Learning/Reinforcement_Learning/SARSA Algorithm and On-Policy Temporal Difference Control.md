@@ -93,6 +93,7 @@ date of note: 2024-05-12
 >		- **SARSA update** on entry $(X_{t}, A_{t})$ as  $$Q_{t+1}(X_{t}, A_{t}) = Q_{t}(X_{t}, A_{t}) + \alpha_{t}\left[ R_{t+1} + \gamma Q_{t}(X_{t+1}, A_{t+1})  - Q_{t}(X_{t}, A_{t}) \right] $$
 
 - [[Prediction and Control Problems in Reinforcement Learning]]
+- [[Greedy Heuristic Algorithms]]
 
 ## Explanation
 
