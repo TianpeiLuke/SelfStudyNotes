@@ -205,4 +205,5 @@ date of note: 2024-10-06
 - [[Nonlinear Programming by Bertsekas]] pp 202, 256, 365, 385, 471, 600
 - [[Matrix Computations by Golub]] pp 313 - 318
 - [[Gaussian Processes for Machine Learning by Rasmussen]] pp 142
+- [[Artificial Intelligence Modern Approach by Russell]] pp 746
 - Wikipedia [Quadratic_programming](https://en.wikipedia.org/wiki/Quadratic_programming)

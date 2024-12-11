@@ -34,3 +34,4 @@ date of note: 2024-08-08
 
 - [[Introduction to Algorithms by Cormen]]
 - [[Algorithm Design Manual by Skiena]] pp 281, 499, 519, 547, 587, 599, 605, 611, 615, 680, 683
+- [[Artificial Intelligence Modern Approach by Russell]] pp 215, 218 - 222, 227

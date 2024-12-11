@@ -148,7 +148,7 @@ date of note: 2024-05-12
 - [[Markov Decision Processes by Puterman]] pp 36
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]
 - [[Statistical Decision Theory by Berger]] pp 282
-
+- [[Artificial Intelligence Modern Approach by Russell]] pp 645 - 651, 685
 
 
 - [[Probability and Measure by Billingsley]]

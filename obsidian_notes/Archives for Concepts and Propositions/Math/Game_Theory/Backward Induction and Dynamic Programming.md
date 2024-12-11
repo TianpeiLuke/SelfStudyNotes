@@ -2,6 +2,8 @@
 tags:
   - concept
   - math/game_theory
+  - logic/math_logic
+  - algorithm/dynamic_programming
 keywords: 
 topics: 
 name: 
@@ -13,6 +15,8 @@ date of note: 2024-08-04
 >[!important]
 >**Name**: 
 
+- [[Dynamic Programming Algorithms]]
+- [[Dynamic Programming for MDP]]
 
 
 ## Explanation
@@ -24,8 +28,7 @@ date of note: 2024-08-04
 -----------
 ##  Recommended Notes and References
 
-- [[Dynamic Programming Algorithms]]
-- [[Dynamic Programming for MDP]]
+
 
 - [[Sequential Decision Process]]
 - [[Statistical Decision Problem]]

@@ -117,4 +117,4 @@ date of note: 2024-05-12
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 326
 - [[Deep Learning by Goodfellow]] pp 554 - 556
-- [[Artificial Intelligence Modern Approach by Russell]]
+- [[Artificial Intelligence Modern Approach by Russell]] pp 510 - 517, 551, 565, 827

@@ -34,3 +34,4 @@ date of note: 2024-08-04
 
 
 - [[Game Theory An Introduction by Tadelis]] pp 60
+- [[Artificial Intelligence Modern Approach by Russell]] pp 668, 680

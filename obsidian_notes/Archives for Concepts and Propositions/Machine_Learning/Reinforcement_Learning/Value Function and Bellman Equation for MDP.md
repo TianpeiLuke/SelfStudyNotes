@@ -170,3 +170,4 @@ date of note: 2024-07-13
 - [[Distributional Reinforcement Learning by Bellemare]] pp 26 - 27, 57, 78, 237
 - [[Markov Decision Processes by Puterman]] pp 26
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 1121
+- [[Artificial Intelligence Modern Approach by Russell]] pp 652

@@ -33,6 +33,7 @@ date of note: 2024-12-09
 
 - [[Introduction to Algorithms by Cormen]] pp 1042 - 1103
 - [[Algorithm Design Manual by Skiena]] pp 355 - 383, 585- 621
+- [[Artificial Intelligence Modern Approach by Russell]] pp 1054- 1055
 
 - Wikipedia [NP_(complexity)](https://en.wikipedia.org/wiki/NP_(complexity))
 - Wikipedia [NP-hardness](https://en.wikipedia.org/wiki/NP-hardness)

@@ -49,6 +49,7 @@ date of note: 2024-08-26
 - [[Introduction to Algorithms by Cormen]] pp 1115 - 1119
 - [[Algorithm Design Manual by Skiena]] pp 591
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]
+- [[Artificial Intelligence Modern Approach by Russell]] pp 376
 
 
 - [[Algorithms to Live By Chapter 08 Relaxation]]

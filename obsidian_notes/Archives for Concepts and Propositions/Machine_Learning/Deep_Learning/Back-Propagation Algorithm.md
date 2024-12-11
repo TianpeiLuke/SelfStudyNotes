@@ -177,5 +177,5 @@ date of note: 2024-05-12
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 233 - 252
 - [[Foundations of Computer Vision by Torralba]] pp 166 - 178
 - [[Speech and Language Processing by Jurafsky]]
-
+- [[Artificial Intelligence Modern Approach by Russell]] pp 24, 733 - 736
 - [[Numerical Optimization by Nocedal]]

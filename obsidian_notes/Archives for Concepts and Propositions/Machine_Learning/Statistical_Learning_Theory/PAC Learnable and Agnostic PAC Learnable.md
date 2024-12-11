@@ -139,5 +139,6 @@ date of note: 2024-04-18
 - [[Understanding Machine Learning by Shalev-Shwartz]]
 - [[Boosting Foundations and Algorithms by Schapire]] pp 45
 - [[Probabilistic Graphical Models by Koller]]
+- [[Artificial Intelligence Modern Approach by Russell]] pp 714
 
 - Github Note [link](https://github.com/TianpeiLuke/SelfStudyNotes/tree/master/self-study/statistical_learning_theory)

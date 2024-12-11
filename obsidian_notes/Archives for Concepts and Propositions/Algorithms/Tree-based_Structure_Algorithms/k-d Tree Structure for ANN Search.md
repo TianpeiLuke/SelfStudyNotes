@@ -271,6 +271,7 @@ date of note: 2024-11-29
 
 - [[Introduction to Algorithms by Cormen]]
 - [[Algorithm Design Manual by Skiena]] pp 460 - 463, 638 - 647
+- [[Artificial Intelligence Modern Approach by Russell]] pp 739
 
 
 - Notes

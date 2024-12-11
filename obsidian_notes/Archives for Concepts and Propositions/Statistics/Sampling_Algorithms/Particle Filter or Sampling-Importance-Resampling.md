@@ -95,4 +95,5 @@ date of note: 2024-07-04
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 542 - 547
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 439 - 440
 - [[Probabilistic Graphical Models by Koller]] pp 667
+- [[Artificial Intelligence Modern Approach by Russell]] pp 605
 - Wikipedia [Particle_filter](https://en.wikipedia.org/wiki/Particle_filter)

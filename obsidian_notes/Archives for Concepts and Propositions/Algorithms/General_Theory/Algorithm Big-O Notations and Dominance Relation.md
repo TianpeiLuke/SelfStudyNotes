@@ -262,7 +262,7 @@ date of note: 2024-12-08
 - [[Numerical Linear Algebra by Trefethen]] pp 103-106
 - [[Matrix Computations by Golub]] pp 12
 - [[Numerical Optimization by Nocedal]] pp 631 - 633
-- 
+- [[Artificial Intelligence Modern Approach by Russell]] pp1054
 
 
 - Wikipedia [Big_O_notation](https://en.wikipedia.org/wiki/Big_O_notation)

@@ -89,6 +89,6 @@ date of note: 2024-11-28
 - [[Encoder-Decoder Sequence-to-Sequence Architecture]]
 
 
-
+- [[Artificial Intelligence Modern Approach by Russell]] pp 240, 274
 - [[Speech and Language Processing by Jurafsky]] pp 236
 - Wikipedia [Textual_entailment](https://en.wikipedia.org/wiki/Textual_entailment)

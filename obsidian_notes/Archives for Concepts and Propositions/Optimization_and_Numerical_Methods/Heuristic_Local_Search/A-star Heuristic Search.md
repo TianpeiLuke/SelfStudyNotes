@@ -31,4 +31,4 @@ date of note: 2024-08-08
 - [[Depth-First Search]]
 - [[Graph]]
 
-- [[Artificial Intelligence Modern Approach by Russell]]
+- [[Artificial Intelligence Modern Approach by Russell]] pp 93 - 99

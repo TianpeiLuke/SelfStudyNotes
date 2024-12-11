@@ -115,3 +115,4 @@ date of note: 2024-05-12
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 1143
 - [[Foundations of Machine Learning by Mohri]] pp 331
 - [[An Introduction to Deep Reinforcement Learning by Francois-Lavet]]
+- [[Artificial Intelligence Modern Approach by Russell]] pp 831

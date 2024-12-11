@@ -264,6 +264,9 @@ date of note: 2024-06-01
 
 - [[Data Augmentation]]
 
+#### Semi-Supervised Learning
+
+- [[Semi-Supervised Learning]]
 
 #### Transfer Learning
 

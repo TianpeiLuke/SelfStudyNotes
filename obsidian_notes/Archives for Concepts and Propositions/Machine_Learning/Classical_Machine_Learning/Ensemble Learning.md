@@ -63,3 +63,4 @@ date of note: 2024-07-29
 - [[Boosting Foundations and Algorithms by Schapire]]  pp 5
 - [[Elements of Statistical Learning by Hastie]]
 - [[Understanding Machine Learning by Shalev-Shwartz]]
+- [[Artificial Intelligence Modern Approach by Russell]] pp 748 - 752

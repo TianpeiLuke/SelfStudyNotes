@@ -28,7 +28,9 @@ date of note: 2024-11-19
 
 >[!important] Definition
 >The **dynamic programming (DP)** is an *multi-stage optimization strategy*.
+>- Dynamic programming is also called **backward induction** in logics.
 
+- [[Backward Induction and Dynamic Programming]]
 
 >[!important] Definition
 >To develop a dynamic programming algorithm, we follow a sequence of *four steps*:
@@ -38,9 +40,9 @@ date of note: 2024-11-19
 >	- This is typically done in **bottom-up** fashion
 >- *Construct* an optimal solution from computed information.	 
 
-
 - [[Constrained Optimization Problem]]
-- [[Backward Induction and Dynamic Programming]]
+
+- [[Value Function and Bellman Equation for MDP]]
 - [[Recursion Algorithm]]
 
 
@@ -62,10 +64,10 @@ date of note: 2024-11-19
 >	- Not concerning on *how to determine this choice*.
 >- *Given this choice*, determine which *subproblem* appears, and how to best *characterize* the resulting space of subproblems
 >- Show that the *solutions* to the *subproblems* used within an *optimal solution* to the problem must themselves be *optimal* 
->	- Find the **Bellman equation** $$V(x^{*}) = \min_{x\in A}F(x, V(z^{*}))$$
+>	- Find the **Bellman equation** $$V(x) = \min_{a\in \mathcal{A}(x)}F(x, a, V(z^{*}))$$
 >	- **Proof by contradition**: 
 >		- supposing that each of the subproblem solutions is not optimal and then deriving a contradiction.
->		- Show that *substituting* *non-optimal* solution from subproblem with *optimal solution* would result in an *improvement* in the *original problem* $$g(x, V(z^{*})) \le g(x, V(z)),\quad \forall z\in S,\; z^{*} = \arg\min_{z\in S} V(z)$$
+>		- Show that *substituting* *non-optimal* solution from subproblem with *optimal solution* would result in an *improvement* in the *original problem* $$F(x,a, V(z^{*})) \le F(x,a, V(z)),\quad \forall z\in S,\; z^{*} = \arg\min_{z\in S} V(z)$$
 
 
 ### Bellman Equations
@@ -260,6 +262,7 @@ date of note: 2024-11-19
 
 - [[Deep Learning by Goodfellow]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 428
+- [[Artificial Intelligence Modern Approach by Russell]] pp 342, 575, 685, 60, 106, 110 -111
 
 
 - Open Course [Dynamic Programming and Stochastic Control](https://ocw.mit.edu/courses/6-231-dynamic-programming-and-stochastic-control-fall-2015/)
