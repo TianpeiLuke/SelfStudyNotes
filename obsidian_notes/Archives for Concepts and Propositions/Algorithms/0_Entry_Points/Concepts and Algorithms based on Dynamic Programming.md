@@ -89,7 +89,7 @@ date of note: 2024-09-16
 - [[Minimum Edit Distance or Levenshtein Distance via Dynamic Programming]]
 - [[CKY Parsing as Dynamic Programming Algorithm]]
 - [[Longest Common Subsequence between Strings]]
-- 
+- [[Substring Matching via Dynamic Programming]]
 - [[Unigram Tokenization]]
 
 

@@ -137,5 +137,6 @@ date of note: 2024-08-08
 - [[Matrix Computations by Golub]] pp 208 - 218
 - [[Matrix Analysis by Horn]]
 - [[Functional Analysis by Reed]]
-- [[Introduction to Algorithms by Cormen]]
+- [[Introduction to Algorithms by Cormen]] pp 888
+- [[Algorithm Design Manual by Skiena]] pp 501 - 502
 - Wikipedia [Discrete_Fourier_transform](https://en.wikipedia.org/wiki/Discrete_Fourier_transform)

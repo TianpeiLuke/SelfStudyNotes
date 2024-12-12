@@ -34,4 +34,5 @@ date of note: 2024-05-12
 - [[Handbook of Natural Language Processing by Indurkhya]]
 - [[Foundations of Statistical Natural Language Processing by Manning]]
 - [[Algorithm Design Manual by Skiena]] pp 687
-- [[Artificial Intelligence Modern Approach by Russell]] pp 889
+- [[Foundations of Machine Learning by Mohri]] pp 363
+- [[Artificial Intelligence Modern Approach by Russell]] pp 1060, 889, 918, 919

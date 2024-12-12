@@ -29,5 +29,5 @@ date of note: 2024-08-08
 - [[HeapSort Algorithm]]
 
 
-- [[Introduction to Algorithms by Cormen]]
-- [[Algorithm Design Manual by Skiena]]
+- [[Introduction to Algorithms by Cormen]] pp 215 - 219
+- [[Algorithm Design Manual by Skiena]] pp 136 - 137

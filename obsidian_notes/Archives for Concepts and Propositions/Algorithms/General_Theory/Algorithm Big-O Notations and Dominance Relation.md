@@ -258,7 +258,7 @@ date of note: 2024-12-08
 - [[Algorithm General Definition]]
 
 - [[Introduction to Algorithms by Cormen]] pp  25 - 31, 49 - 76
-- [[Algorithm Design Manual by Skiena]] pp 34 - 41
+- [[Algorithm Design Manual by Skiena]] pp 34 - 41, 62
 - [[Numerical Linear Algebra by Trefethen]] pp 103-106
 - [[Matrix Computations by Golub]] pp 12
 - [[Numerical Optimization by Nocedal]] pp 631 - 633

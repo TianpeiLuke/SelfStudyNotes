@@ -63,7 +63,7 @@ date of note: 2024-09-16
 - [[Feedback Arc and Vertex Set Problem]]
 - [[Optimal Job Scheduling]]
 - [[Optimal Assignment Problem and Monge Problem]]
-
+- [[Conjunctive Normal Form or CNF Formula]]
 
 
 ## Algorithm Design Paradigms 

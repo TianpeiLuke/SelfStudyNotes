@@ -2,13 +2,13 @@
 tags:
   - concept
   - algorithm/np_problems
-  - algorithm/set
-  - optimization/theory
   - algorithm/computational_complexity_theory
+  - machine_learning/theory
+  - logic/math_logic
 keywords: 
 topics: 
 name: 
-date of note: 2024-08-26
+date of note: 2024-12-10
 ---
 
 ## Concept Definition
@@ -17,7 +17,8 @@ date of note: 2024-08-26
 >**Name**: 
 
 
-
+- [[Conjunctive Normal Form or CNF Formula]]
+- [[Boolean Satisfiability Problem SAT]]
 - [[NP Complete Complexity Class and Problems]]
 
 ## Explanation
@@ -42,14 +43,12 @@ date of note: 2024-08-26
 - [[Sum-Product Belief Propagation Algorithm for Clique Tree]]
 
 
-- [[Introduction to Algorithms by Cormen]] pp 1066, 1073–1079, 1120–1121, 1124 ex.
-- [[Algorithm Design Manual by Skiena]] pp 368
-- [[Probabilistic Machine Learning Advanced Topics by Murphy]]
-- [[Probabilistic Graphical Models by Koller]]
+- [[Introduction to Algorithms by Cormen]] pp 1124
+- [[Algorithm Design Manual by Skiena]] pp 538
+
 - [[Understanding Machine Learning by Shalev-Shwartz]]
-- [[Foundations of Machine Learning by Mohri]]
-- [[Artificial Intelligence Modern Approach by Russell]] pp 250, 264, 277
+- [[Foundations of Machine Learning by Mohri]] pp 18 - 19
+- [[Artificial Intelligence Modern Approach by Russell]]
 
 
-- [[Algorithms to Live By Chapter 08 Relaxation]]
 - Wikipedia [Boolean_satisfiability_problem](https://en.wikipedia.org/wiki/Boolean_satisfiability_problem)

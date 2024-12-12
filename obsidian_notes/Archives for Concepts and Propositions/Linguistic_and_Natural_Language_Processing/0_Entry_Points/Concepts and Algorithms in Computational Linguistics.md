@@ -63,6 +63,7 @@ date of note: 2024-09-13
 
 - [[Constituency Parsing]]
 - [[Context-Free Grammars]]
+- [[Backus–Naur Form or BNF]]
 - [[Constituency Parse Tree]]
 - [[Penn Treebank Annotations]]
 - [[Strong and Weak Grammar Equivalence]]
