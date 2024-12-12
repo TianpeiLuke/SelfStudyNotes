@@ -176,6 +176,14 @@ date of note: 2024-06-01
 - [[Reinforcement Learning with Human Feedbacks or RLHF for LLM]]
 
 
+### Multi-Agent Reinforcement Learning
+
+- [[Multi-Agent Reinforcement Learning]]
+- [[Sequential Game Play and Sequential Rationality]]
+- [[Sequential Game of Perfect Information]]
+- [[Sequential Game of Imperfect Information]]
+
+
 
 ## Explanation
 
