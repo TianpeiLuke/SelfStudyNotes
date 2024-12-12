@@ -41,7 +41,8 @@ vector<int> inorderTraversal(TreeNode* root) {
 			array.push_back(cur);
 			// since this is in-order so after root, visit left-subtree
 			cur = cur->left;
-		}else if (array.size()!=0){
+		}
+		else if (array.size()!=0){
 			cur = array.back();
 			array.pop_back();
 			result.push_back(cur->val);

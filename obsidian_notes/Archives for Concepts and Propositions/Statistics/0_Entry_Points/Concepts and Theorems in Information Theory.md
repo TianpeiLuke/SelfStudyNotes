@@ -63,6 +63,7 @@ date of note: 2024-06-01
 - [[Occam Razor]]
 - [[Minimum Description Length]]
 - [[Kraft Inequality]]
+- [[Huffman Coding]]
 
 ### Communication Theory
 

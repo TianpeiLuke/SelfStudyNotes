@@ -109,3 +109,8 @@ public:
 -----------
 ##  Recommended Notes
 
+
+- [[Backtracking]]
+- [[Depth-First Search]]
+
+- [[Constraint Satisfaction Problem CSP]]

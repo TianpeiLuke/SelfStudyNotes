@@ -51,6 +51,10 @@ date of note: 2024-12-10
 - [[Partition of Unity]]
 - [[B-Spline Functions]]
 
+### Information Theory
+
+- [[Huffman Coding]]
+
 
 ### Decision Tree and Ensemble Methods
 
