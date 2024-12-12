@@ -19,10 +19,14 @@ date of note: 2024-08-26
 
 
 
-- [[NP Complete Complexity Class and Problems]]
+- [[Knapscak or Subset Sum Problem]]
 
 ## Explanation
 
+
+## Approximation via Dynamic Programming
+
+- [[Dynamic Programming Algorithms]]
 
 
 
@@ -37,8 +41,6 @@ date of note: 2024-08-26
 
 
 - [[Introduction to Algorithms by Cormen]]
-- [[Algorithm Design Manual by Skiena]]
+- [[Algorithm Design Manual by Skiena]] pp 333 - 337
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]
 
-
-- [[Algorithms to Live By Chapter 08 Relaxation]]

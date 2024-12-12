@@ -20,7 +20,8 @@ date of note: 2024-09-16
 ### Optimization
 
 - [[Integer Linear Optimization Problem and Integer Programming]]
-- [[Knapscak Problem]]
+- [[Knapscak or Subset Sum Problem]]
+- [[Longest Increasing Subsequence Algorithm]]
 
 
 ### Flow and Shortest Path
@@ -88,6 +89,7 @@ date of note: 2024-09-16
 - [[Minimum Edit Distance or Levenshtein Distance via Dynamic Programming]]
 - [[CKY Parsing as Dynamic Programming Algorithm]]
 - [[Longest Common Subsequence between Strings]]
+- 
 - [[Unigram Tokenization]]
 
 

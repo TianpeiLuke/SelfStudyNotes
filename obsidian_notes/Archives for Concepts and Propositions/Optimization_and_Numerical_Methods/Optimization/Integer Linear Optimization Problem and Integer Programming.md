@@ -66,7 +66,7 @@ date of note: 2024-08-19
 >The *general integer programming problem* is shown to be **NP-complete.**
 
 
-- [[Knapscak Problem]]
+- [[Knapscak or Subset Sum Problem]]
 - [[Vertex Cover Problem]]
 - [[Traveling Salesman Problem]]
 - [[Minimum k-Cut Problem]]

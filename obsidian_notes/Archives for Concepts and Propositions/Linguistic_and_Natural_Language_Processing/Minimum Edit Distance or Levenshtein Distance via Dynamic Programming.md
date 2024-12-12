@@ -59,3 +59,4 @@ date of note: 2024-11-17
 - [[Dynamic Programming Algorithms]]
 
 - [[Speech and Language Processing by Jurafsky]] pp 25
+- [[Algorithm Design Manual by Skiena]] pp 314 - 324

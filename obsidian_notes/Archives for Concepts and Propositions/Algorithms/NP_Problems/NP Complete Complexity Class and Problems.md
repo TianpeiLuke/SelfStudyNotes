@@ -24,7 +24,7 @@ date of note: 2024-12-09
 
 - [[3-Dimensional Matching]]
 - [[Boolean Satisfiability Problem SAT]]
-- [[Knapscak Problem]]
+- [[Knapscak or Subset Sum Problem]]
 - [[Subset Sum Problem]]
 
 - [[Traveling Salesman Problem]]

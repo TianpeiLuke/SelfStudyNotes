@@ -32,3 +32,4 @@ date of note: 2024-08-08
 - [[Graph]]
 
 - [[Artificial Intelligence Modern Approach by Russell]] pp 93 - 99
+- [[Algorithm Design Manual by Skiena]] pp 300

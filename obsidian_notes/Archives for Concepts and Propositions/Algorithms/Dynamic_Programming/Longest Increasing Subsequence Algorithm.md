@@ -23,9 +23,7 @@ date of note: 2024-08-08
 
 ## Applications
 
-### Natural Language Processing
 
-- [[ROUGE metric for LLM Generation]]
 
 
 
@@ -38,4 +36,4 @@ date of note: 2024-08-08
 
 
 - [[Introduction to Algorithms by Cormen]] pp 393 - 400 
-- [[Algorithm Design Manual by Skiena]] pp 323, 449 - 451, 692, 706
+- [[Algorithm Design Manual by Skiena]] pp 324 - 326

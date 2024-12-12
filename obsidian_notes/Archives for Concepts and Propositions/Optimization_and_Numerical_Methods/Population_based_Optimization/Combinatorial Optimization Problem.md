@@ -35,7 +35,7 @@ date of note: 2024-08-25
 - [[Constraint Satisfaction Problem CSP]]
 	- [[Boolean Satisfiability Problem SAT]]
 - [[Traveling Salesman Problem]]
-- [[Knapscak Problem]]
+- [[Knapscak or Subset Sum Problem]]
 - [[Vertex Cover Problem]]
 - [[Optimal Job Scheduling]]
 - [[Optimal Assignment Problem and Monge Problem]]

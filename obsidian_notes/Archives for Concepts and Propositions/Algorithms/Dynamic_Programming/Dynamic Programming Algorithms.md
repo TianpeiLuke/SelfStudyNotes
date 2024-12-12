@@ -29,8 +29,18 @@ date of note: 2024-11-19
 >[!important] Definition
 >The **dynamic programming (DP)** is an *multi-stage optimization strategy*.
 >- Dynamic programming is also called **backward induction** in logics.
+>- DP approximates the solution of a **nonlinear functional equation** $$V(x) = \max_{y \in \Gamma(x)} F(V, y)$$ by a *sequential decision process*.
+>	- The unknown function $V: \mathcal{X} \to \mathbb{R}$ is called the **value function.**
+>	- At each time, the choice of optimal $y^{*}$ is determined by the **policy function** $$\pi^{*}(x) = y^{*} := \arg\max_{y \in \Gamma(x)} F(V^{*}, y)$$
+>- The **goal** of DP is to find 
+>	- the *optimal value function* $V^{*}$ 
+>	- and *optimal policy function* $\pi^{*}$.
 
 - [[Backward Induction and Dynamic Programming]]
+- [[Sequential Decision Process]]
+- [[Markov Decision Process]]
+- [[Value Function and Bellman Equation for MDP]]
+
 
 >[!important] Definition
 >To develop a dynamic programming algorithm, we follow a sequence of *four steps*:
@@ -41,20 +51,15 @@ date of note: 2024-11-19
 >- *Construct* an optimal solution from computed information.	 
 
 - [[Constrained Optimization Problem]]
-
-- [[Value Function and Bellman Equation for MDP]]
 - [[Recursion Algorithm]]
-
 
 ### Optimal Substructure
 
 >[!important] Definition
+>The *first key* ingredient of applying *dynamic programming* is the existence of *optimal substructure*.
+>
 >A problem exhibits **optimal substructure** if an *optimal* solution to the *problem* contains within it *optimal* solutions to *subproblems*.
->$$
-> S \subset A \implies  \arg\min_{x\in S} F(x) \supset \arg\min_{x\in A} F(x)
->$$
->- The existence of *optimal substructure* is the *key* ingredient of both *dynamic programming* and *greedy algorithm.*
->- Dynamic programming builds an optimal solution to the problem *from* optimal solutions to *subproblems*
+>- Dynamic programming builds an optimal solution to the problem *from* optimal solutions to *subproblems*. 
 
 >[!important] Definition
 >The following patterns can be used to identify the **optimal substructure**:
@@ -62,33 +67,42 @@ date of note: 2024-11-19
 >	- Making this choice leaves *one or more subproblems solved*
 >- Assume that for given problem, we **are given the choice** that *leads to optimal solution*
 >	- Not concerning on *how to determine this choice*.
->- *Given this choice*, determine which *subproblem* appears, and how to best *characterize* the resulting space of subproblems
+>- *Given this choice*, determine which *subproblem* appears, and how to best *characterize* the resulting space of *subproblems*
 >- Show that the *solutions* to the *subproblems* used within an *optimal solution* to the problem must themselves be *optimal* 
->	- Find the **Bellman equation** $$V(x) = \min_{a\in \mathcal{A}(x)}F(x, a, V(z^{*}))$$
 >	- **Proof by contradition**: 
 >		- supposing that each of the subproblem solutions is not optimal and then deriving a contradiction.
->		- Show that *substituting* *non-optimal* solution from subproblem with *optimal solution* would result in an *improvement* in the *original problem* $$F(x,a, V(z^{*})) \le F(x,a, V(z)),\quad \forall z\in S,\; z^{*} = \arg\min_{z\in S} V(z)$$
+>		- Show that *substituting* *non-optimal* solution from subproblem with *optimal solution* would result in an *improvement* in the *original problem*.
 
 
-### Bellman Equations
+
+### Overlapping Subproblems
 
 >[!important] Definition
->The *structure* of the *optimal solution* obtained by *dynamic programming* is characterized by the **Bellman equation**.
+>The *second key* ingredient that an optimization problem must have for *dynamic programming* is that it must have the **overlapping subproblems**.
+>
+>An optimization problem has **overlapping subproblems** if a recursive algorithm *revisits* the *same problem* repeatedly.
 >$$
->\begin{align*}
->&S \subset A\\[5pt]
->&x^{*} \in \arg\min_{x \in A}V(x)\\[5pt]
->\implies& V(x) = g(x, V(z),\, z\in S)\\[5pt]
->\implies & V(x^{*}) = \min_{x\in A} g(x, V(z^{*})) := \min_{x\in A} g\left(x,\;  \min_{z\in S}V(z) \right)
->\end{align*}
+>S_{t_{1}} = S_{t_{2}} \,{=}\ldots{=}\,S_{t_{k}}
 >$$
->- Note that the optimal solution $x^{*}$ can *only* be obtained *after* the optimal solution of *subproblem* $z^{*}$ is *obtained*. $$z^{*} = \arg\min_{z\in S}V(z) \to x^{*} \in \arg\min_{x \in A}V(x) $$
+>- Dynamic-programming algorithms typically solves each subproblem *once* and then *storing the solution* in a table where it can be looked up when needed, using constant time per lookup.
+
+
+
+### Principle of Optimality and Bellman Equation
+
+
+>[!important] Principle of Optimality
+>An **optimal policy** has the property that whatever the *initial state* and *initial decision* are, the remaining decisions must constitute an *optimal policy* with regard to the *state resulting from* the first decision.
+
+- [[Dynamic Programming by Bellman]] pp 83
 
 - [[Fixed Point of Bellman Operator]]
 - [[Value Function and Bellman Equation for MDP]]
 - [[Bellman Optimality Equation for MDP]]
 
 ### Subproblem Graphs
+
+![[dp_recursion_tree.png]]
 
 
 
@@ -159,7 +173,7 @@ date of note: 2024-11-19
 ### Optimization
 
 - [[Integer Linear Optimization Problem and Integer Programming]]
-- [[Knapscak Problem]]
+- [[Knapscak or Subset Sum Problem]]
 
 
 ### Flow and Shortest Path
@@ -221,6 +235,7 @@ date of note: 2024-11-19
 - [[CKY Parsing as Dynamic Programming Algorithm]]
 - [[Unigram Tokenization]]
 - [[Longest Common Subsequence between Strings]]
+- [[Longest Increasing Subsequence Algorithm]]
 
 ### Numerical Linear Algorithm
 
@@ -263,7 +278,7 @@ date of note: 2024-11-19
 - [[Deep Learning by Goodfellow]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 428
 - [[Artificial Intelligence Modern Approach by Russell]] pp 342, 575, 685, 60, 106, 110 -111
-
+- Bellman, R. (2003). _Dynamic Programming_ (Reprint edition). Dover Publications.
 
 - Open Course [Dynamic Programming and Stochastic Control](https://ocw.mit.edu/courses/6-231-dynamic-programming-and-stochastic-control-fall-2015/)
 - UIUC  [Algorithms](http://jeffe.cs.illinois.edu/teaching/algorithms/book/Algorithms-JeffE.pdf)
