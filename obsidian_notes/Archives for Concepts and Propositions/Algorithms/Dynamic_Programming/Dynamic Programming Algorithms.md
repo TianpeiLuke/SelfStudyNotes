@@ -173,7 +173,7 @@ date of note: 2024-11-19
 ### Optimization
 
 - [[Integer Linear Optimization Problem and Integer Programming]]
-- [[Knapscak or Subset Sum Problem]]
+- [[Knapsack or Subset Sum Problem]]
 
 
 ### Flow and Shortest Path

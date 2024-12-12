@@ -47,7 +47,7 @@ date of note: 2024-09-16
 
 - [[3-Dimensional Matching]]
 - [[Boolean Satisfiability Problem SAT]]
-- [[Knapscak or Subset Sum Problem]]
+- [[Knapsack or Subset Sum Problem]]
 - [[Traveling Salesman Problem]]
 - [[Hamiltonian Cycle Problem]]
 - [[Subgraph Isomorphism Problem]]

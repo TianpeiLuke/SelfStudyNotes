@@ -19,7 +19,7 @@ date of note: 2024-08-26
 
 
 
-- [[Knapscak or Subset Sum Problem]]
+- [[Knapsack or Subset Sum Problem]]
 
 ## Explanation
 

@@ -20,7 +20,7 @@ date of note: 2024-09-16
 ### Optimization
 
 - [[Integer Linear Optimization Problem and Integer Programming]]
-- [[Knapscak or Subset Sum Problem]]
+- [[Knapsack or Subset Sum Problem]]
 - [[Longest Increasing Subsequence Algorithm]]
 
 

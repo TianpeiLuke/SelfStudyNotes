@@ -46,3 +46,5 @@ date of note: 2024-08-26
 
 
 - [[Algorithms to Live By Chapter 08 Relaxation]]
+- Wikipedia
+	- [Knapsack_problem](https://en.wikipedia.org/wiki/Knapsack_problem)
