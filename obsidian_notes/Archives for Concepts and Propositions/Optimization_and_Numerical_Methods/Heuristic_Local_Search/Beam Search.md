@@ -75,4 +75,5 @@ date of note: 2024-11-24
 - [[Artificial Intelligence Modern Approach by Russell]] pp 125, 174
 - [[Speech and Language Processing by Jurafsky]] pp 206, 274 - 277
 - [[Deep Learning Foundations and Concepts by Bishop]]  pp 386
+- [[Probabilistic Graphical Models by Koller]] pp 595, 675, 685, 693, 1158
 - Wikipedia [Beam_search](https://en.wikipedia.org/wiki/Beam_search)

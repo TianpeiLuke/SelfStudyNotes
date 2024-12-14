@@ -35,5 +35,6 @@ date of note: 2024-05-12
 - [[Speech and Language Processing by Jurafsky]]  pp 392
 - [[Handbook of Natural Language Processing by Indurkhya]]
 - [[Foundations of Statistical Natural Language Processing by Manning]]
+- [[Probabilistic Graphical Models by Koller]] pp 243
 - [[Artificial Intelligence Modern Approach by Russell]] pp 890
 - [[Algorithm Design Manual by Skiena]] pp 687

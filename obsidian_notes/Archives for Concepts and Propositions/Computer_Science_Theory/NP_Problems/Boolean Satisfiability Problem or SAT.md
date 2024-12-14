@@ -70,7 +70,7 @@ date of note: 2024-08-26
 - [[Introduction to Algorithms by Cormen]] pp 1066, 1073–1079, 1120–1121, 1124 ex.
 - [[Algorithm Design Manual by Skiena]] pp 367, 421, 480- 481,
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]
-- [[Probabilistic Graphical Models by Koller]]
+- [[Probabilistic Graphical Models by Koller]] pp 288, 1151
 - [[Understanding Machine Learning by Shalev-Shwartz]]
 - [[Foundations of Machine Learning by Mohri]]
 - [[Artificial Intelligence Modern Approach by Russell]] pp 250, 264, 277, 334, 362

@@ -61,3 +61,4 @@ date of note: 2024-08-25
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 299
 - [[Artificial Intelligence Modern Approach by Russell]]
+- [[Probabilistic Graphical Models by Koller]] pp 1159

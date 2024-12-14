@@ -27,3 +27,4 @@ date of note: 2024-12-09
 
 - [[Introduction to Algorithms by Cormen]]
 - [[Algorithm Design Manual by Skiena]]
+- [[Probabilistic Graphical Models by Koller]] pp 1153

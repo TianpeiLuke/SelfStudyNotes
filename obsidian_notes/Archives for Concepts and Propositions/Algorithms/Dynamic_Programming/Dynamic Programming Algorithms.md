@@ -278,7 +278,8 @@ date of note: 2024-11-19
 - [[Deep Learning by Goodfellow]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 428
 - [[Artificial Intelligence Modern Approach by Russell]] pp 342, 575, 685, 60, 106, 110 -111
-- Bellman, R. (2003). _Dynamic Programming_ (Reprint edition). Dover Publications.
+- [[Probabilistic Graphical Models by Koller]] pp 292–296, 337, 356, 371, 482, 596, 1149
+- [[Dynamic Programming by Bellman]]
 
 - Open Course [Dynamic Programming and Stochastic Control](https://ocw.mit.edu/courses/6-231-dynamic-programming-and-stochastic-control-fall-2015/)
 - UIUC  [Algorithms](http://jeffe.cs.illinois.edu/teaching/algorithms/book/Algorithms-JeffE.pdf)
