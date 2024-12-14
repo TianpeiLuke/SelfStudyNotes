@@ -1,22 +1,25 @@
 ---
 tags:
   - concept
-  - algorithm/np_problems
+  - computer_science/np_problems
   - algorithm/set
   - optimization/theory
   - algorithm/dynamic_programming
   - probabilistic_graphical_models/theory
-  - algorithm/computational_complexity_theory
-keywords: 
-topics: 
-name: 
+  - computer_science/computational_complexity_theory
+keywords:
+  - constraint_satisfaction_problem
+  - csp_problem
+topics:
+  - computational_complexity_theory
+name: Constraint Satisfaction Problem CSP
 date of note: 2024-08-26
 ---
-
+ 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Constraint Satisfaction Problem or CSP
 
 
 
@@ -27,7 +30,7 @@ date of note: 2024-08-26
 
 
 
-- [[Boolean Satisfiability Problem SAT]]
+- [[Boolean Satisfiability Problem or SAT]]
 
 
 ## Examples

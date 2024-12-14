@@ -1,10 +1,10 @@
 ---
 tags:
   - concept
-  - algorithm/np_problems
+  - computer_science/np_problems
   - algorithm/graph
   - optimization/theory
-  - algorithm/computational_complexity_theory
+  - computer_science/computational_complexity_theory
   - math/graph_theory
 keywords: 
 topics: 

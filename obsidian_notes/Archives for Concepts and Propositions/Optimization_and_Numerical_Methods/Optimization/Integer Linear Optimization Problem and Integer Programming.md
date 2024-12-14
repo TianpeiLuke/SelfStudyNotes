@@ -64,13 +64,20 @@ date of note: 2024-08-19
 
 >[!important] 
 >The *general integer programming problem* is shown to be **NP-complete.**
+>- Integer programming can be reduced to the **general satisfiability (SAT)**. 
+>
 
+- [[Boolean Satisfiability Problem or SAT]]
+- [[Combinatorial Optimization Problem]]
+
+
+### Other NP Hard Problem that solves the Integer Programming
 
 - [[Knapsack or Subset Sum Problem]]
 - [[Vertex Cover Problem]]
 - [[Traveling Salesman Problem]]
 - [[Minimum k-Cut Problem]]
-- [[Constraint Satisfaction Problem CSP]]
+- [[Constraint Satisfaction Problem or CSP]]
 - [[Optimal Assignment Problem and Monge Problem]]
 
 
@@ -129,5 +136,6 @@ date of note: 2024-08-19
 - [[Introduction to Linear Optimization by Bertsimas]] pp 451
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]]
 - [[Probabilistic Graphical Models by Koller]]
+- [[Algorithm Design Manual by Skiena]] pp 271
 
 - Wikipedia [Integer_programming](https://en.wikipedia.org/wiki/Integer_programming)

@@ -108,7 +108,7 @@ date of note: 2024-08-26
 
 ## NP Problem
 
-- [[Constraint Satisfaction Problem CSP]]
+- [[Constraint Satisfaction Problem or CSP]]
 
 
 ## Network Flow Theory

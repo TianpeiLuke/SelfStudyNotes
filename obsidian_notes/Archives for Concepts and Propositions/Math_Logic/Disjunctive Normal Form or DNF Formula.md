@@ -1,8 +1,8 @@
 ---
 tags:
   - concept
-  - algorithm/np_problems
-  - algorithm/computational_complexity_theory
+  - computer_science/np_problems
+  - computer_science/computational_complexity_theory
   - machine_learning/theory
   - logic/math_logic
 keywords: 
@@ -33,7 +33,7 @@ date of note: 2024-12-10
 
 - [[Integer Linear Optimization Problem and Integer Programming]]
 - [[Combinatorial Optimization Problem]]
-- [[Constraint Satisfaction Problem CSP]]
+- [[Constraint Satisfaction Problem or CSP]]
 - [[Algorithm General Definition]]
 - [[Computational Complexity Theory]]
 

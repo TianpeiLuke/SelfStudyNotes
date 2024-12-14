@@ -1,7 +1,7 @@
 ---
 tags:
   - concept
-  - algorithm/computer_science
+  - computer_science/general_theory
 keywords: 
 topics: 
 name: 
@@ -23,7 +23,7 @@ date of note: 2024-12-09
 ## NP Complete Problems
 
 - [[3-Dimensional Matching]]
-- [[Boolean Satisfiability Problem SAT]]
+- [[Boolean Satisfiability Problem or SAT]]
 - [[Knapsack or Subset Sum Problem]]
 - [[Subset Sum Problem]]
 

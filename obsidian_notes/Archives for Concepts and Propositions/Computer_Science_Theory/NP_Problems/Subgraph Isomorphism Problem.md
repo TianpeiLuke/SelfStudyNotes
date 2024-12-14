@@ -5,7 +5,7 @@ tags:
   - optimization/theory
   - machine_learning/models
   - math/graph_theory
-  - algorithm/computational_complexity_theory
+  - computer_science/computational_complexity_theory
 keywords: 
 topics: 
 name: 

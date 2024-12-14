@@ -90,7 +90,7 @@ date of note: 2024-08-24
 
 ### Constraint Satisfaction Problem
 
-- [[Constraint Satisfaction Problem CSP]]
+- [[Constraint Satisfaction Problem or CSP]]
 - [[Backtracking]]
 
 

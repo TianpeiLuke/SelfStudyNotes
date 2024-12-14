@@ -1,8 +1,8 @@
 ---
 tags:
   - concept
-  - algorithm/np_problems
-  - algorithm/computational_complexity_theory
+  - computer_science/np_problems
+  - computer_science/computational_complexity_theory
   - machine_learning/theory
   - logic/math_logic
 keywords: 

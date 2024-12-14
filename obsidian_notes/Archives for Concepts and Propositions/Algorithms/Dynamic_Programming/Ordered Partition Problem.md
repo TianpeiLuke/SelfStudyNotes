@@ -1,10 +1,10 @@
 ---
 tags:
   - concept
-  - algorithm/np_problems
+  - computer_science/np_problems
   - algorithm/backtracking
   - algorithm/dynamic_programming
-  - algorithm/computational_complexity_theory
+  - computer_science/computational_complexity_theory
 keywords: 
 topics: 
 name: 

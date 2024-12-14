@@ -1,8 +1,8 @@
 ---
 tags:
   - concept
-  - algorithm/computer_science
-  - algorithm/computational_complexity_theory
+  - computer_science/general_theory
+  - computer_science/computational_complexity_theory
 keywords: 
 topics: 
 name: 

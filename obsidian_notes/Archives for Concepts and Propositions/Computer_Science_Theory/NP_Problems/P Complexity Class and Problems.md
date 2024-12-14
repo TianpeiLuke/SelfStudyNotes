@@ -1,7 +1,7 @@
 ---
 tags:
   - concept
-  - algorithm/computer_science
+  - computer_science/general_theory
 keywords: 
 topics: 
 name: 

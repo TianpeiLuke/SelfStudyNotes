@@ -1,8 +1,8 @@
 ---
 tags:
   - concept
-  - algorithm/np_problems
-  - algorithm/computational_complexity_theory
+  - computer_science/np_problems
+  - computer_science/computational_complexity_theory
   - machine_learning/theory
   - logic/math_logic
 keywords: 
@@ -18,7 +18,7 @@ date of note: 2024-12-10
 
 
 - [[Conjunctive Normal Form or CNF Formula]]
-- [[Boolean Satisfiability Problem SAT]]
+- [[Boolean Satisfiability Problem or SAT]]
 - [[NP Complete Complexity Class and Problems]]
 
 ## Explanation
@@ -33,7 +33,7 @@ date of note: 2024-12-10
 
 - [[Integer Linear Optimization Problem and Integer Programming]]
 - [[Combinatorial Optimization Problem]]
-- [[Constraint Satisfaction Problem CSP]]
+- [[Constraint Satisfaction Problem or CSP]]
 - [[Algorithm General Definition]]
 - [[Computational Complexity Theory]]
 
@@ -44,7 +44,7 @@ date of note: 2024-12-10
 
 
 - [[Introduction to Algorithms by Cormen]] pp 1124
-- [[Algorithm Design Manual by Skiena]] pp 538
+- [[Algorithm Design Manual by Skiena]] pp 367, 421, 480- 481, 538
 
 - [[Understanding Machine Learning by Shalev-Shwartz]]
 - [[Foundations of Machine Learning by Mohri]] pp 18 - 19

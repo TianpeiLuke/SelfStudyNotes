@@ -46,7 +46,7 @@ date of note: 2024-09-16
 ### NP Complete Problems
 
 - [[3-Dimensional Matching]]
-- [[Boolean Satisfiability Problem SAT]]
+- [[Boolean Satisfiability Problem or SAT]]
 - [[Knapsack or Subset Sum Problem]]
 - [[Traveling Salesman Problem]]
 - [[Hamiltonian Cycle Problem]]

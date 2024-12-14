@@ -32,8 +32,8 @@ date of note: 2024-08-25
 >[!important]
 >Many **NP hard problems** and **NP complete problems** are *combinatorial optimization problem*.
 
-- [[Constraint Satisfaction Problem CSP]]
-	- [[Boolean Satisfiability Problem SAT]]
+- [[Constraint Satisfaction Problem or CSP]]
+	- [[Boolean Satisfiability Problem or SAT]]
 - [[Traveling Salesman Problem]]
 - [[Knapsack or Subset Sum Problem]]
 - [[Vertex Cover Problem]]

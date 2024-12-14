@@ -1,7 +1,7 @@
 ---
 tags:
   - concept
-  - algorithm/np_problems
+  - computer_science/np_problems
   - optimization/regularization
   - machine_learning/theory
 keywords: 
