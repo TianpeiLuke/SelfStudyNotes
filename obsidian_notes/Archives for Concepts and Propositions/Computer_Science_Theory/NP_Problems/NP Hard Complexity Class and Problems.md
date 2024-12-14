@@ -19,6 +19,13 @@ date of note: 2024-12-09
 
 ## Explanation
 
+>[!quote]
+>That said, there are some problems that appear to be **NP-hard** yet are **not in NP**. 
+>- These problems might be even **harder than NP-complete**! 
+>- **Two-player games** such as chess provide examples of problems that are not in NP.
+>  
+>-- [[Algorithm Design Manual by Skiena]] pp 382  
+
 
 ## NP Complete Problems
 

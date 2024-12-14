@@ -123,6 +123,7 @@ date of note: 2024-06-01
 - [[Latent Dirichlet Allocation]]
 - [[Restricted Boltzmann Machine]]
 - [[Ising Model]]
+- [[Constraint Satisfaction Problem or CSP]]
 - [[Denoising Diffusion Probabilistic Models and Diffusion Network]]
 
 ### Exact Inference for Graphical Model
