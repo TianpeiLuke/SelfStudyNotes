@@ -92,6 +92,8 @@ date of note: 2024-08-24
 
 - [[Constraint Satisfaction Problem or CSP]]
 - [[Backtracking]]
+- [[Constraint Graph for Linear Inequality Constraints]]
+
 
 
 ### Population-based Algorithm

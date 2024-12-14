@@ -113,6 +113,7 @@ date of note: 2024-07-14
 - [[Network and Flow and Capacity and Cut]]
 - [[Max-Flow Min-Cut Theorem]]
 - [[Network Flow Problem as Linear Optimization]]
+- [[Constraint Graph for Linear Inequality Constraints]]
 - [[Maximum Flow Problem]]
 - [[Minimum Cost Flow Problem]]
 

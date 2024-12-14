@@ -26,6 +26,7 @@ date of note: 2024-05-12
 ### Linear Optimization Problem
 
 - [[Linear Optimization Problem]]
+- [[Constraint Graph for Linear Inequality Constraints]]
 - [[Active and Independent Constraints for Linear Optimization]]
 - [[Basic Solution for Linear Optimization]]
 - [[Degeneracy of Basic Solution in Linear Optimization]]
@@ -68,6 +69,7 @@ date of note: 2024-05-12
 - [[Network and Flow and Capacity and Cut]]
 - [[Max-Flow Min-Cut Theorem]]
 - [[Network Flow Problem as Linear Optimization]]
+- [[Constraint Graph for Linear Inequality Constraints]]
 - [[Maximum Flow Problem]]
 - [[Minimum Cost Flow Problem]]
 - [[Network Simplex Algorithm]]
