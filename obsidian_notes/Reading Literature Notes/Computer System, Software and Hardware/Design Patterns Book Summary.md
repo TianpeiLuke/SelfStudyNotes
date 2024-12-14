@@ -51,7 +51,7 @@ year: 1994
 -----------
 ##  Recommended Notes
 
-- [[Design Patterns Entry Point]]
+
 
 
 ----------

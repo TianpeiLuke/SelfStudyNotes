@@ -88,7 +88,10 @@ date of note: 2024-08-24
 - [[Navigable Small World Model and Kleinberg Variant of Watts-Strogatz Model]]
 - [[Hierarchical Navigable Small Worlds or HNSW for Graph-based ANN Search]]
 
+### Constraint Satisfaction Problem
 
+- [[Constraint Satisfaction Problem CSP]]
+- [[Backtracking]]
 
 
 ### Population-based Algorithm
