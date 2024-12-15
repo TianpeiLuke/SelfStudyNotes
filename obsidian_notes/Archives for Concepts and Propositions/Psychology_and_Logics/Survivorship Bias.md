@@ -29,7 +29,7 @@ date of note: 2024-04-26
 
 
 >[!quote]
->Survivorship bias is one of the research issues brought up in the provocative 2005 paper "[Why Most Published Research Findings Are False](https://en.wikipedia.org/wiki/Why_Most_Published_Research_Findings_Are_False "Why Most Published Research Findings Are False")", which shows that a large number of published medical research papers contain results that cannot be replicated.[[3]](https://en.wikipedia.org/wiki/Survivorship_bias#cite_note-ioannidis2005-3)
+>Survivorship bias is one of the research issues brought up in the provocative 2005 paper "[Why Most Published Research Findings Are False](https://en.wikipedia.org/wiki/Why_Most_Published_Research_Findings_Are_False "Why Most Published Research Findings Are False")", which shows that a large number of published medical research papers contain results that cannot be replicated.
 
 
 >[!quote]
