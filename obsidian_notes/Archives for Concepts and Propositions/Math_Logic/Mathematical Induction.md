@@ -34,3 +34,4 @@ date of note: 2024-12-08
 
 
 - [[Algorithm Design Manual by Skiena]] pp 15
+- [[Introduction to Automata Theory Language and Computation by Hopcroft]] pp 19 - 28

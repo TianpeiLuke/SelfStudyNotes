@@ -15,9 +15,19 @@ date of note: 2024-12-13
 
 
 
+- [[epsilon-Deterministic Finite Automata or epsilon-DFA]]
+
+
+- [[Markov Transition Kernel and Transition Function]]
+- [[Markov Chain and Markov Process]]
+- [[epsilon-Deterministic Finite Automata or epsilon-DFA]]
+
+
 ## Explanation
 
 
+
+- [[Transition-Based Dependency Parsing]]
 
 
 
@@ -25,9 +35,9 @@ date of note: 2024-12-13
 ##  Recommended Notes and References
 
 
-- [[Markov Chain and Markov Process]]
+
 
 
 - [[Artificial Intelligence Modern Approach by Russell]]
-- [[Algorithm Design Manual by Skiena]] 
+- [[Algorithm Design Manual by Skiena]] pp 702
 - [[Introduction to Automata Theory Language and Computation by Hopcroft]]

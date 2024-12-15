@@ -15,6 +15,10 @@ date of note: 2024-12-13
 
 
 
+- [[Alphabets and Strings Abstract Definition]]
+- [[Language Abstract Definition]]
+- [[Finite Automata]]
+
 ## Explanation
 
 
@@ -30,4 +34,4 @@ date of note: 2024-12-13
 
 - [[Artificial Intelligence Modern Approach by Russell]]
 - [[Algorithm Design Manual by Skiena]] 
-- [[Introduction to Automata Theory Language and Computation by Hopcroft]]
+- [[Introduction to Automata Theory Language and Computation by Hopcroft]] pp 31

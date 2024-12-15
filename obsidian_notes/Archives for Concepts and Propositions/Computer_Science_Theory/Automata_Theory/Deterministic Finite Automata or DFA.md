@@ -15,6 +15,7 @@ date of note: 2024-12-13
 
 
 
+- [[Transition Diagrams of Finite Automata]]
 - [[Finite Automata]]
 
 ## Explanation
@@ -27,6 +28,6 @@ date of note: 2024-12-13
 ##  Recommended Notes and References
 
 
-- [[Introduction to Automata Theory Language and Computation by Hopcroft]]
+- [[Introduction to Automata Theory Language and Computation by Hopcroft]] pp 45 - 52
 - [[Artificial Intelligence Modern Approach by Russell]]
 - [[Algorithm Design Manual by Skiena]] pp 702

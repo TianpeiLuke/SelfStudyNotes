@@ -15,6 +15,9 @@ date of note: 2024-12-13
 
 
 
+- [[Finite Automata]]
+- [[Regular Expression Definition]]
+
 ## Explanation
 
 
@@ -25,9 +28,9 @@ date of note: 2024-12-13
 ##  Recommended Notes and References
 
 
-- [[Markov Chain and Markov Process]]
+
 
 
 - [[Artificial Intelligence Modern Approach by Russell]]
 - [[Algorithm Design Manual by Skiena]] 
-- [[Introduction to Automata Theory Language and Computation by Hopcroft]]
+- [[Introduction to Automata Theory Language and Computation by Hopcroft]] pp 92 - 108

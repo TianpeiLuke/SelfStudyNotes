@@ -15,8 +15,13 @@ date of note: 2024-12-13
 
 
 
+- [[Finite Automata]]
+
 ## Explanation
 
+
+
+- [[Deterministic Finite Automata or DFA]]
 
 
 
@@ -25,9 +30,6 @@ date of note: 2024-12-13
 ##  Recommended Notes and References
 
 
-- [[Markov Chain and Markov Process]]
-
-
+- [[Introduction to Automata Theory Language and Computation by Hopcroft]] pp 55 - 64
 - [[Artificial Intelligence Modern Approach by Russell]]
 - [[Algorithm Design Manual by Skiena]] 
-- [[Introduction to Automata Theory Language and Computation by Hopcroft]]

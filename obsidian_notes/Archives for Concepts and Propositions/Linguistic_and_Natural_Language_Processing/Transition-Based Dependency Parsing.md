@@ -15,9 +15,14 @@ date of note: 2024-05-12
 
 
 
+
+
+
 ## Explanation
 
 
+- [[Transition Diagrams of Finite Automata]]
+- [[Finite Automata]]
 
 
 

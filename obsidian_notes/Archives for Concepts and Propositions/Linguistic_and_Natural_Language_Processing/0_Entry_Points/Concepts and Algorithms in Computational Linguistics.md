@@ -65,6 +65,7 @@ date of note: 2024-09-13
 - [[Context-Free Grammars]]
 - [[Backus–Naur Form or BNF]]
 - [[Constituency Parse Tree]]
+- [[Parse Tree in Compiler]]
 - [[Penn Treebank Annotations]]
 - [[Strong and Weak Grammar Equivalence]]
 - [[Chomsky Normal Form for Word Constituency]]
