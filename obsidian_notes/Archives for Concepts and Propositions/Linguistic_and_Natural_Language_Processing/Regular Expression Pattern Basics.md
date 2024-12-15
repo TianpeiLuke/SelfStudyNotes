@@ -17,7 +17,7 @@ date of note: 2024-11-17
 ### Regular Expression
 
 
-
+- [[Regular Expression Definition]]
 
 ### Concatenation and Range
 
@@ -75,3 +75,4 @@ date of note: 2024-11-17
 
 
 - [[Speech and Language Processing by Jurafsky]] pp 5 - 8
+- [[Introduction to Automata Theory Language and Computation by Hopcroft]]

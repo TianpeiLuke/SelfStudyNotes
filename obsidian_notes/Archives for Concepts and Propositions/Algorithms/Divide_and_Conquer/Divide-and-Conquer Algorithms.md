@@ -123,8 +123,9 @@ date of note: 2024-12-08
 
 ### Map-Reduce
 
-
-
+- [[Data Parallelism]]
+- [[Model Parallelism]]
+- [[MapReduce Architecture for Data Parallelism]]
 
 
 

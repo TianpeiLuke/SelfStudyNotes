@@ -16,6 +16,7 @@ date of note: 2024-09-13
 
 ### Text Preprocessing and Text Normalization
 
+- [[Regular Expression Definition]]
 - [[Regular Expression Pattern Basics]]
 - [[Regular Expression Advanced Operations]]
 - [[Word Basic Concepts]]

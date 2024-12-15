@@ -1,11 +1,12 @@
 ---
 tags:
   - concept
-  - computer_science/finite_automata
+  - natural_language_processing/regular_expression
+  - computer_science/regular_expression
 keywords: 
 topics: 
 name: 
-date of note: 2024-12-13
+date of note: 2024-12-14
 ---
 
 ## Concept Definition
@@ -15,11 +16,12 @@ date of note: 2024-12-13
 
 
 
-- [[Finite Automata]]
-
 ## Explanation
 
 
+
+- [[Regular Expression Pattern Basics]]
+- [[Regular Expression Advanced Operations]]
 
 
 
@@ -27,6 +29,6 @@ date of note: 2024-12-13
 ##  Recommended Notes and References
 
 
+
 - [[Introduction to Automata Theory Language and Computation by Hopcroft]]
-- [[Artificial Intelligence Modern Approach by Russell]]
-- [[Algorithm Design Manual by Skiena]] pp 702
+- [[Speech and Language Processing by Jurafsky]]
