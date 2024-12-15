@@ -18,10 +18,12 @@ date of note: 2024-12-14
 
 - [[Context-Free Grammars]]
 
+
+
 ## Explanation
 
 
-
+- [[Parse Tree in Compiler]]
 
 
 -----------
@@ -30,4 +32,4 @@ date of note: 2024-12-14
 - [[Part-of-Speech Tagging]]
 
 - [[Algorithm Design Manual by Skiena]] pp 
-- [[Introduction to Automata Theory Language and Computation by Hopcroft]]
+- [[Introduction to Automata Theory Language and Computation by Hopcroft]] pp 178

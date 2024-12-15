@@ -30,5 +30,5 @@ date of note: 2024-12-14
 
 
 
-- [[Introduction to Automata Theory Language and Computation by Hopcroft]]
+- [[Introduction to Automata Theory Language and Computation by Hopcroft]] pp 85 - 166
 - [[Speech and Language Processing by Jurafsky]]

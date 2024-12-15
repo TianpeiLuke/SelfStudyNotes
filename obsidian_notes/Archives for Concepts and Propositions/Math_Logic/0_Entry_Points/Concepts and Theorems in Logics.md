@@ -19,12 +19,24 @@ date of note: 2024-12-13
 
 
 
-
 ## Explanation
 
 
+## List of Logical Fallacies 
 
 - [[Cognitive Bias and Logical Fallacies Entry Point]]
+
+- [[Anchoring Effect]]
+- [[Availability Bias]]
+- [[Attentional Bias]]
+- [[Salience Bias]]
+- [[Selection Bias]]
+- [[Self-Selection Bias]]
+- [[Survivorship Bias]]
+
+- [[Confirmation Bias]]
+
+
 
 
 
