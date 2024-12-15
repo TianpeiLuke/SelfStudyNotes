@@ -27,3 +27,6 @@ date of note: 2024-12-14
 ##  Recommended Notes and References
 
 - [[Divide-and-Conquer Algorithms]]
+
+
+- [[The Art of Multiprocessor Programming by Herlihy]]

@@ -26,3 +26,4 @@ date of note: 2024-12-14
 
 
 - [[Large Language Model and Pretrained Language Models]]
+- [[The Art of Multiprocessor Programming by Herlihy]]
