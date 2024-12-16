@@ -49,6 +49,7 @@ date of note: 2024-12-10
 
 - [[Foundations of Machine Learning by Mohri]] pp 18 - 19
 - [[Artificial Intelligence Modern Approach by Russell]] pp 253–254, 275, 345–347
+- [[Introduction to Automata Theory Language and Computation by Hopcroft]] pp 448
 
 
 - Wikipedia [Boolean_satisfiability_problem](https://en.wikipedia.org/wiki/Boolean_satisfiability_problem)

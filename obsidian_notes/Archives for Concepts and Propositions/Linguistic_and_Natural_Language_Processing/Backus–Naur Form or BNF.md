@@ -19,6 +19,7 @@ date of note: 2024-12-10
 
 
 - [[Context-Free Grammars]]
+- [[Context-Free Language]]
 
 ## Explanation
 
@@ -29,13 +30,14 @@ date of note: 2024-12-10
 ##  Recommended Notes and References
 
 
-
-
+- [[Formal Language Abstract Definition]]
+- [[Alphabets and Strings Abstract Definition]]
 
 
 
 - [[Speech and Language Processing by Jurafsky]] pp 388
 - [[Artificial Intelligence Modern Approach by Russell]] pp 1060
+- [[Introduction to Automata Theory Language and Computation by Hopcroft]]
 
 
 - Wikipedia [Boolean_satisfiability_problem](https://en.wikipedia.org/wiki/Boolean_satisfiability_problem)

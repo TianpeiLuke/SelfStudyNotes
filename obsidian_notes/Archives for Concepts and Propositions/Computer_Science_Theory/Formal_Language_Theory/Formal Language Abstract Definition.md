@@ -20,7 +20,7 @@ date of note: 2024-12-15
 ## Concept Definition
 
 >[!important]
->**Name**: Language Abstract Definition
+>**Name**: Formal Language Abstract Definition
 
 ![[Alphabets and Strings Abstract Definition#^339899]]
 
@@ -32,8 +32,6 @@ date of note: 2024-12-15
 ^820f46
 
 - [[Alphabets and Strings Abstract Definition]]
-- [[Regular Expression Definition]]
-
 
 
 ## Explanation

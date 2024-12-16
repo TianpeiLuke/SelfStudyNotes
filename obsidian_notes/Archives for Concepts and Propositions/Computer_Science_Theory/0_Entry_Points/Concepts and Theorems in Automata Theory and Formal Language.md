@@ -25,7 +25,7 @@ date of note: 2024-12-15
 - [[Alphabets and Strings Abstract Definition]]
 - [[Formal Language Abstract Definition]]
 - [[Problem Formulation in Automata Theory]]
-
+- [[Natural Language Abstract Definition]]
 
 
 ### Finite Automata Theory
