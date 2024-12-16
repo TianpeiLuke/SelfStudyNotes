@@ -16,6 +16,9 @@ date of note: 2024-12-14
 
 
 
+- [[Alphabets and Strings Abstract Definition]]
+- [[Formal Language Abstract Definition]]
+
 ## Explanation
 
 
@@ -32,3 +35,4 @@ date of note: 2024-12-14
 
 - [[Introduction to Automata Theory Language and Computation by Hopcroft]] pp 85 - 166
 - [[Speech and Language Processing by Jurafsky]]
+- [[Foundations of Machine Learning by Mohri]] pp 361

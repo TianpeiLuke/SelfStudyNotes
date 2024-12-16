@@ -31,3 +31,4 @@ date of note: 2024-12-13
 - [[Introduction to Automata Theory Language and Computation by Hopcroft]] pp 45 - 52
 - [[Artificial Intelligence Modern Approach by Russell]]
 - [[Algorithm Design Manual by Skiena]] pp 702
+- [[Foundations of Machine Learning by Mohri]] pp 360 - 361

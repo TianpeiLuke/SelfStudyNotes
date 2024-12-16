@@ -34,6 +34,7 @@ date of note: 2024-11-09
 - [[Matrix]]
 - [[Tokenization of Words and Subwords and SentencePiece Tokenization]]
 - [[Bag-of-Word Model for Document Representation]]
+- [[Alphabets and Strings Abstract Definition]]
 
 ### Term-Term Matrix or Term-Context Matrix
 

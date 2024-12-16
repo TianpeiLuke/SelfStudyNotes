@@ -52,6 +52,8 @@ date of note: 2024-05-12
 - [[Latent Variable Models]]
 - [[n-Gram Model and Language Model]]
 - [[Bag-of-Word Model for Document Representation]]
+- [[Alphabets and Strings Abstract Definition]]
+
 
 ![[naive_bayes_lda.png]]
 

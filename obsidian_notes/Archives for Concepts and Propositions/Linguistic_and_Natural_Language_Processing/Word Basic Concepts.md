@@ -111,6 +111,6 @@ date of note: 2024-11-17
 -----------
 ##  Recommended Notes and References
 
-
+- [[Alphabets and Strings Abstract Definition]]
 
 - [[Speech and Language Processing by Jurafsky]] pp 13 - 14

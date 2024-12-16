@@ -86,6 +86,7 @@ date of note: 2024-04-25
 - [[Evaluating Learning Algorithms by Japkowicz]]
 - [[Elements of Statistical Learning by Hastie]]
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 148
+- [[Foundations of Machine Learning by Mohri]] pp 239, 255 - 265
 
 - Medium
 	- [Recall and Precision at k for Recommender Systems](https://medium.com/@m_n_malaeb/recall-and-precision-at-k-for-recommender-systems-618483226c54)

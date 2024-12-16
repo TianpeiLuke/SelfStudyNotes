@@ -59,6 +59,7 @@ date of note: 2024-05-12
 - [[Latent Variable Models]]
 - [[Conjugate Prior Distribution for Bayesian Inference]]
 - [[Multinomial Principle Component Analysis]]
+- [[Alphabets and Strings Abstract Definition]]
 
 
 ![[latent_dirichlet_allocation.png]]

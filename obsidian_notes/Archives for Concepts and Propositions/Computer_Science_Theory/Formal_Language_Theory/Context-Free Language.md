@@ -17,14 +17,13 @@ date of note: 2024-12-14
 
 
 - [[Context-Free Grammars]]
-- [[Context-Free Grammar Derivations]]
-- [[Tree Graph and Forest]]
+- [[Formal Language Abstract Definition]]
 
 
 ## Explanation
 
 
-
+- [[Parse Tree in Compiler]]
 
 
 -----------
@@ -33,4 +32,4 @@ date of note: 2024-12-14
 - [[Part-of-Speech Tagging]]
 
 - [[Algorithm Design Manual by Skiena]] pp 
-- [[Introduction to Automata Theory Language and Computation by Hopcroft]]
+- [[Introduction to Automata Theory Language and Computation by Hopcroft]] pp 179

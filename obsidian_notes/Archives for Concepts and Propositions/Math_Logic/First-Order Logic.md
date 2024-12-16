@@ -15,6 +15,9 @@ date of note: 2024-12-13
 
 
 
+- [[Formal Language Abstract Definition]]
+- [[Alphabets and Strings Abstract Definition]]
+
 ## Explanation
 
 
@@ -26,3 +29,4 @@ date of note: 2024-12-13
 
 
 - [[Artificial Intelligence Modern Approach by Russell]] pp 285 - 321
+- [[Foundations of Machine Learning by Mohri]]

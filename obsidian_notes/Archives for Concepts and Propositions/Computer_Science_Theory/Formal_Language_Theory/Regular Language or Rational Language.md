@@ -16,8 +16,9 @@ date of note: 2024-12-14
 
 
 
-- [[Context-Free Grammars]]
-
+- [[Regular Expression Definition]]
+- [[Formal Language Abstract Definition]]
+- [[Alphabets and Strings Abstract Definition]]
 
 
 ## Explanation
@@ -33,3 +34,5 @@ date of note: 2024-12-14
 
 - [[Algorithm Design Manual by Skiena]] pp 
 - [[Introduction to Automata Theory Language and Computation by Hopcroft]] pp 179
+
+- Wikipedia [Regular_language](https://en.wikipedia.org/wiki/Regular_language)

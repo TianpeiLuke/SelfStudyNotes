@@ -49,6 +49,7 @@ date of note: 2024-09-05
 - [[Multinomial Distribution]]
 - [[Dirichlet Distribution]]
 - [[Latent Variable Models]]
+- [[Alphabets and Strings Abstract Definition]]
 
 
 >[!info]

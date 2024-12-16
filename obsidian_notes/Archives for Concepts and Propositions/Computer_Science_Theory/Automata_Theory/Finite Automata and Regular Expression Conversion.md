@@ -17,6 +17,7 @@ date of note: 2024-12-13
 
 - [[Finite Automata]]
 - [[Regular Expression Definition]]
+- [[Regular Language or Rational Language]]
 
 ## Explanation
 

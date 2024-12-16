@@ -30,6 +30,7 @@ date of note: 2024-09-12
 >$$
 
 - [[Co-Occurrence Matrix]]
+- [[Alphabets and Strings Abstract Definition]]
 
 ![[Multinomial Naive Bayes Model#^3fc7af]]
 

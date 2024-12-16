@@ -152,6 +152,7 @@ date of note: 2024-11-17
 - [[Text Normalization]]
 - [[Word Embedding]]
 - [[Vector Space Model in Information Retrieval]]
+- [[Alphabets and Strings Abstract Definition]]
 
 
 - [[Speech and Language Processing by Jurafsky]] pp 17

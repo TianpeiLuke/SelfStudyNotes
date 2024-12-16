@@ -14,6 +14,8 @@ date of note: 2024-12-15
 
 - [[Concepts and Theorems in Logics]]
 - [[Concepts and Theorems in Formal Logics]]
+- [[Conjunctive Normal Form or CNF Formula]]
+- [[Disjunctive Normal Form or DNF Formula]]
 - [[Inductive Argument]]
 - [[Deductive Argument]]
 - [[Mathematical Induction]]
@@ -21,8 +23,9 @@ date of note: 2024-12-15
 ### Language and Problem in Automata Theory
 
 - [[Alphabets and Strings Abstract Definition]]
-- [[Language Abstract Definition]]
+- [[Formal Language Abstract Definition]]
 - [[Problem Formulation in Automata Theory]]
+
 
 
 ### Finite Automata Theory
@@ -73,4 +76,5 @@ date of note: 2024-12-15
 
 - [[Introduction to Automata Theory Language and Computation by Hopcroft]]
 - [[Artificial Intelligence Modern Approach by Russell]]
+- [[Foundations of Machine Learning by Mohri]]
 - [[Speech and Language Processing by Jurafsky]]

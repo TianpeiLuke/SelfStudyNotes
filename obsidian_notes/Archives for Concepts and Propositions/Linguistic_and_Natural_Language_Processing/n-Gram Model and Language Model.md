@@ -45,6 +45,7 @@ date of note: 2024-09-08
 - [[Dynamic Bayesian Network]]
 - [[Tokenization of Words and Subwords and SentencePiece Tokenization]]
 
+
 ### Maximum Likelihood Estimation of Joint Probability
 
 >[!important] Definition
@@ -122,6 +123,7 @@ date of note: 2024-09-08
 - [[Probabilistic Latent Semantic Analysis]]
 - [[Latent Dirichlet Allocation]]
 
+- [[Alphabets and Strings Abstract Definition]]
 
 - [[Foundations of Statistical Natural Language Processing by Manning]] pp 191
 - [[Speech and Language Processing by Jurafsky]] pp 33 - 38, 45
