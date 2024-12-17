@@ -109,5 +109,5 @@ date of note: 2024-12-15
 
 - [[Introduction to Automata Theory Language and Computation by Hopcroft]] pp 173
 - [[Speech and Language Processing by Jurafsky]] pp 388 - 389, 392
-- [[Artificial Intelligence Modern Approach by Russell]]
+- [[Artificial Intelligence Modern Approach by Russell]] pp 860, 890, 1060
 - Wikipedia [Formal_grammar](https://en.wikipedia.org/wiki/Formal_grammar)

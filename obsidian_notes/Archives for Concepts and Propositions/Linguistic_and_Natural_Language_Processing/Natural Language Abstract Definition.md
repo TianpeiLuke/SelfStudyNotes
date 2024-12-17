@@ -47,10 +47,6 @@ date of note: 2024-12-15
 ##  Recommended Notes and References
 
 
-
-
+- [[Artificial Intelligence Modern Approach by Russell]] pp 4, 286, 861
 - [[Introduction to Automata Theory Language and Computation by Hopcroft]] pp 193
-- [[Foundations of Machine Learning by Mohri]]
-- [[Artificial Intelligence Modern Approach by Russell]]
 - [[Speech and Language Processing by Jurafsky]]
-- [[Handbook of Natural Language Processing by Indurkhya]]

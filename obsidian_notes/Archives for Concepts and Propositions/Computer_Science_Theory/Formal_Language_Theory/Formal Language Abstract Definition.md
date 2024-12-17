@@ -75,10 +75,9 @@ date of note: 2024-12-15
 ##  Recommended Notes and References
 
 
-- [[Introduction to Automata Theory Language and Computation by Hopcroft]] pp  28 - 30
-- [[Foundations of Machine Learning by Mohri]]
-- [[Artificial Intelligence Modern Approach by Russell]]
-- [[Speech and Language Processing by Jurafsky]]
+- [[Introduction to Automata Theory Language and Computation by Hopcroft]] pp 28 - 30
+- [[Artificial Intelligence Modern Approach by Russell]] pp 860
+- [[Speech and Language Processing by Jurafsky]] pp 391
 
 - Lectures
 	- [Stanford CS 143 Compilers](http://web.stanford.edu/class/cs143/)

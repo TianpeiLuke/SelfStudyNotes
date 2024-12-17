@@ -71,9 +71,9 @@ date of note: 2024-05-12
 
 - [[Speech and Language Processing by Jurafsky]]  pp 388, 392
 - [[Handbook of Natural Language Processing by Indurkhya]] pp 61
-- [[Foundations of Statistical Natural Language Processing by Manning]]
+- [[Foundations of Statistical Natural Language Processing by Manning]] pp 97 - 101
 - [[Algorithm Design Manual by Skiena]] pp 687
 - [[Foundations of Machine Learning by Mohri]] pp 363
-- [[Artificial Intelligence Modern Approach by Russell]] pp 1060, 889, 918, 919
+- [[Artificial Intelligence Modern Approach by Russell]] pp 889, 918 - 919, 1060
 - [[Introduction to Automata Theory Language and Computation by Hopcroft]] pp 171, 173
 - Wikipedia [Context-free_grammar](https://en.wikipedia.org/wiki/Context-free_grammar)

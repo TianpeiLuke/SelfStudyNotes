@@ -34,5 +34,7 @@ date of note: 2024-12-14
 
 
 - [[Introduction to Automata Theory Language and Computation by Hopcroft]] pp 85 - 166
-- [[Speech and Language Processing by Jurafsky]]
+- [[Speech and Language Processing by Jurafsky]] pp 5, 29 - 30
 - [[Foundations of Machine Learning by Mohri]] pp 361
+- [[Foundations of Statistical Natural Language Processing by Manning]] pp 120
+- [[Artificial Intelligence Modern Approach by Russell]] pp 874
