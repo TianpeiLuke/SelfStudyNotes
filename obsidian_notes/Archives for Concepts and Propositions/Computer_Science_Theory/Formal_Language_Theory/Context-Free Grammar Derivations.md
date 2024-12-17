@@ -64,5 +64,5 @@ date of note: 2024-12-14
 
 
 
-
+- [[Handbook of Natural Language Processing by Indurkhya]] pp 65
 - [[Introduction to Automata Theory Language and Computation by Hopcroft]] pp 176 -  178,

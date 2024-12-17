@@ -26,7 +26,7 @@ date of note: 2024-05-12
 
 
 - [[Context-Free Grammars or CFG]]
-- [[Chomsky Normal Form as Grammatical Simplification]]
+- [[Chomsky Normal Form as Simplification of CFG]]
 - [[Constituency Parsing]]
 - [[CKY Parsing as Dynamic Programming Algorithm]]
 

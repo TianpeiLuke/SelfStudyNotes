@@ -3,7 +3,8 @@ tags:
   - concept
   - natural_language_processing
   - computational_linguistic/constituency_grammar
-keywords: 
+keywords:
+  - chomsky_normal_form
 topics: 
 name: 
 date of note: 2024-05-12
@@ -16,9 +17,18 @@ date of note: 2024-05-12
 
 
 
+- [[Strong and Weak Grammar Equivalence]]
+- [[Context-Free Grammars or CFG]]
+
+
 ## Explanation
 
 
+
+## Ambiguity 
+
+- [[Part-of-Speech Ambiguity]]
+- [[Structural Ambiguity]]
 
 
 
@@ -26,11 +36,11 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
-- [[Strong and Weak Grammar Equivalence]]
+
 - [[Constituency Parsing]]
 - [[CKY Parsing as Dynamic Programming Algorithm]]
 
 
-- [[Speech and Language Processing by Jurafsky]] pp 394
+- [[Speech and Language Processing by Jurafsky]] pp 394 - 395
 - [[Artificial Intelligence Modern Approach by Russell]] pp 893
 - [[Introduction to Automata Theory Language and Computation by Hopcroft]] pp 272 - 275, 301

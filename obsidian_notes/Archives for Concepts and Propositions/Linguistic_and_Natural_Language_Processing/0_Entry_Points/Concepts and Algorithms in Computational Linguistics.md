@@ -65,12 +65,13 @@ date of note: 2024-09-13
 
 - [[Constituency Parsing]]
 - [[Context-Free Grammars or CFG]]
+- [[Context-Free Language]]
 - [[Backus-Naur Form or BNF]]
 - [[Parse Tree or Derivation Tree in Context-Free Grammar]]
 - [[Constituency Parse Tree]]
 - [[Penn Treebank Annotations]]
 - [[Strong and Weak Grammar Equivalence]]
-- [[Chomsky Normal Form as Grammatical Simplification]]
+- [[Chomsky Normal Form as Simplification of CFG]]
 - [[CKY Parsing as Dynamic Programming Algorithm]]
 - [[Span-Based Neural Constituency Parsing]]
 

@@ -50,5 +50,6 @@ date of note: 2024-12-16
 
 
 - [[Introduction to Automata Theory Language and Computation by Hopcroft]] pp 179
+- [[Speech and Language Processing by Jurafsky]]  pp 392
 - [Stanford cs143](https://web.stanford.edu/class/archive/cs/cs143/cs143.1128/handouts/080%20Formal%20Grammars.pdf)
 - [UCR CS215](https://www.cs.ucr.edu/~jiang/cs215/tao-new.pdf)

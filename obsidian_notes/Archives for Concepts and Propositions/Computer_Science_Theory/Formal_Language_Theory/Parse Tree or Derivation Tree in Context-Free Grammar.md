@@ -46,5 +46,7 @@ date of note: 2024-12-14
 - [[Formal Language Abstract Definition]]
 - [[Natural Language Abstract Definition]]
 
-- [[Algorithm Design Manual by Skiena]] pp 
-- [[Introduction to Automata Theory Language and Computation by Hopcroft]]
+- [[Algorithm Design Manual by Skiena]]  
+- [[Speech and Language Processing by Jurafsky]] pp 389
+- [[Handbook of Natural Language Processing by Indurkhya]] pp 65
+- [[Introduction to Automata Theory Language and Computation by Hopcroft]] pp 183 - 191, 207 - 208, 280

@@ -28,7 +28,7 @@ date of note: 2024-05-12
 
 - [[Context-Free Grammars or CFG]]
 - [[Strong and Weak Grammar Equivalence]]
-- [[Chomsky Normal Form as Grammatical Simplification]]
+- [[Chomsky Normal Form as Simplification of CFG]]
 - [[Probabilistic Graphical Models]]
 
 

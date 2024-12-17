@@ -39,7 +39,7 @@ date of note: 2024-12-15
 
 >[!important] Definition
 >Let $G=(\Sigma, V, S, P)$ be a *grammar*, and $w, z$ be two *sentential forms* of $G$
->- If we apply a *production* $p\in P$ to a *string* of symbols $$w\in (\Sigma \cup V)^{*}\;V\;(\Sigma \cup V)^{*}$$ to yield a new string $$z\in (\Sigma \cup V)^{*},$$ we say that $z$ is **directly derived from** $w$ *using* $p$, denoted as $$w \stackrel{p}{\implies} z$$
+>- If we apply a *production* $p\in P$ to a *string* of symbols $$w\in (\Sigma \cup V)^{*}\;V\;(\Sigma \cup V)^{*}$$ to yield a new string $$z\in (\Sigma \cup V)^{*},$$ we say that $w$ **directly derives** $z$ *using* $p$, denoted as $$w \stackrel{p}{\implies} z$$
 >- We say that $w$ **derives** $z$ i.e. $$w \stackrel{*}{\implies} z$$  if there exists a *sequence* of *sentential forms* $\sigma_{1}\,{,}\ldots{,}\,\sigma_{n}$ such that $$w \implies \sigma_{1} \,{\implies}\ldots{\implies}\,\sigma_{n} \implies z.$$
 >- The derivatoin operation $\implies$ defines  the process of *deriving* strings by *applying productions* from *head* to *body*.	
 
@@ -86,9 +86,10 @@ date of note: 2024-12-15
 
 
 - [[Introduction to Automata Theory Language and Computation by Hopcroft]] pp  28 - 30
+- [[Handbook of Natural Language Processing by Indurkhya]] pp 65
 - [[Foundations of Machine Learning by Mohri]]
 - [[Artificial Intelligence Modern Approach by Russell]]
-- [[Speech and Language Processing by Jurafsky]]
+- [[Speech and Language Processing by Jurafsky]] pp 392
 
 - [Stanford cs143](https://web.stanford.edu/class/archive/cs/cs143/cs143.1128/handouts/080%20Formal%20Grammars.pdf)
 - [UCR CS215](https://www.cs.ucr.edu/~jiang/cs215/tao-new.pdf)

@@ -66,11 +66,11 @@ date of note: 2024-05-12
 
 
 - [[Strong and Weak Grammar Equivalence]]
-- [[Chomsky Normal Form as Grammatical Simplification]]
+- [[Chomsky Normal Form as Simplification of CFG]]
 
 
-- [[Speech and Language Processing by Jurafsky]]  pp 392
-- [[Handbook of Natural Language Processing by Indurkhya]]
+- [[Speech and Language Processing by Jurafsky]]  pp 388, 392
+- [[Handbook of Natural Language Processing by Indurkhya]] pp 61
 - [[Foundations of Statistical Natural Language Processing by Manning]]
 - [[Algorithm Design Manual by Skiena]] pp 687
 - [[Foundations of Machine Learning by Mohri]] pp 363
