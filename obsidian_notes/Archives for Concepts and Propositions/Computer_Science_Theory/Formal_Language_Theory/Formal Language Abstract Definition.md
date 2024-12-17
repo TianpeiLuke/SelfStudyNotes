@@ -45,7 +45,7 @@ date of note: 2024-12-15
 >[!info]
 >It is often assumed that a **formal language** is equipped with a **formal grammar** that describes it.
 
-## Formal Language
+## Example of Formal Languages
 
 ### Regular Language
 
@@ -59,9 +59,12 @@ date of note: 2024-12-15
 - [[Context-Free Grammar Derivations]]
 - [[Context-Free Language]]
 
-## First-Order Logic
+### Formal Language in Logic
 
 - [[First-Order Logic]]
+- [[PL Language for Propositional Logic]]
+- [[QL Language for Quantificational Logic]]
+
 
 
 ## Natural Language
