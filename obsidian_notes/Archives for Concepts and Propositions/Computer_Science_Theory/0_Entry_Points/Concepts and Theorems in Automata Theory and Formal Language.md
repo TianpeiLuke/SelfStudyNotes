@@ -57,7 +57,7 @@ date of note: 2024-12-15
 - [[Context-Free Grammar Derivations]]
 - [[Context-Free Language]]
 
-- [[Backus–Naur Form or BNF]]
+- [[Backus-Naur Form or BNF]]
 - [[Constituency Parse Tree]]
 - [[Parse Tree or Derivation Tree in Context-Free Grammar]]
 

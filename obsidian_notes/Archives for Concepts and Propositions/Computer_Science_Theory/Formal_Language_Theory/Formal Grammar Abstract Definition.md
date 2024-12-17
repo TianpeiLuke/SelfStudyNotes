@@ -97,7 +97,7 @@ date of note: 2024-12-15
 
 - [[Context-Free Grammars or CFG]]
 - [[Context-Free Grammar Derivations]]
-- [[Backus–Naur Form or BNF]]
+- [[Backus-Naur Form or BNF]]
 
 
 
