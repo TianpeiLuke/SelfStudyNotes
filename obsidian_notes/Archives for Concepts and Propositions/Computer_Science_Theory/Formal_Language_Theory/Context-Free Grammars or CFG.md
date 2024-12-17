@@ -66,7 +66,7 @@ date of note: 2024-05-12
 
 
 - [[Strong and Weak Grammar Equivalence]]
-- [[Chomsky Normal Form for Word Constituency]]
+- [[Chomsky Normal Form as Grammatical Simplification]]
 
 
 - [[Speech and Language Processing by Jurafsky]]  pp 392

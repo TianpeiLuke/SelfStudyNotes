@@ -68,7 +68,7 @@ date of note: 2024-09-13
 - [[Constituency Parse Tree]]
 - [[Penn Treebank Annotations]]
 - [[Strong and Weak Grammar Equivalence]]
-- [[Chomsky Normal Form for Word Constituency]]
+- [[Chomsky Normal Form as Grammatical Simplification]]
 - [[CKY Parsing as Dynamic Programming Algorithm]]
 - [[Span-Based Neural Constituency Parsing]]
 
