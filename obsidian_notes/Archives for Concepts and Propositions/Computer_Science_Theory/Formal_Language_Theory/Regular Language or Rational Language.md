@@ -24,7 +24,7 @@ date of note: 2024-12-14
 ## Explanation
 
 
-- [[Parse Tree in Compiler]]
+- [[Parse Tree or Derivation Tree in Context-Free Grammar]]
 
 
 -----------

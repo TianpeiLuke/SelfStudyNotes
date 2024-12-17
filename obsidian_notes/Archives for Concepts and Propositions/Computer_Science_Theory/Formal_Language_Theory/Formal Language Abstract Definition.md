@@ -28,18 +28,22 @@ date of note: 2024-12-15
 >Let $\Sigma$ be an *alphabet*.
 >
 >A set of *strings* all of which are chosen from $\Sigma^{*}$ is called a **formal language** *over* $\Sigma$. $$L \subseteq \Sigma^{*}.$$
+>- In computer science, *formal language* is often abbreviated as **language**.
 
 ^820f46
 
 - [[Alphabets and Strings Abstract Definition]]
 
 
+
 ## Explanation
 
-![[Problem Formulation in Automata Theory#^ddc086]]
+![[Membership Problem in Automata Theory#^ddc086]]
 
-- [[Problem Formulation in Automata Theory]]
+- [[Membership Problem in Automata Theory]]
 
+>[!info]
+>It is often assumed that a **formal language** is equipped with a **formal grammar** that describes it.
 
 ## Formal Language
 
@@ -75,3 +79,6 @@ date of note: 2024-12-15
 - [[Foundations of Machine Learning by Mohri]]
 - [[Artificial Intelligence Modern Approach by Russell]]
 - [[Speech and Language Processing by Jurafsky]]
+
+- Lectures
+	- [Stanford CS 143 Compilers](http://web.stanford.edu/class/cs143/)

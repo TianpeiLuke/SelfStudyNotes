@@ -27,6 +27,8 @@ date of note: 2024-12-15
 >[!important] Definition
 >An **alphabet** $\Sigma$ is a *finite*, nonempty set of *symbols*.
 
+^e5b7e8
+
 - [[Formal Language Abstract Definition]]
 - [[Regular Expression Definition]]
 
@@ -48,6 +50,7 @@ date of note: 2024-12-15
 >
 >The set of *all strings* of *given length* $d$ from that alphabet is called the **power of an alphabet** $$\Sigma^{d} := \{w: |w| = d \}$$  
 >- The set of *all strings* from $\Sigma$ is denoted as $$\Sigma^{*} := \Sigma^{0} \cup \Sigma^{1} \cup \Sigma^{2} \cup \,{}\ldots{}\, = \Sigma^{+} \cup \{ \epsilon \}$$
+>	- The star operator $*$ is called the **Kleene star**.
 >- The set of *all nonempty string* from $\Sigma$ is denoted as $$\Sigma^{+} := \Sigma^{1} \cup \Sigma^{2} \cup \,{}\ldots{}$$
 
 ^339899

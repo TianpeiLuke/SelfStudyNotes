@@ -4,31 +4,40 @@ tags:
   - computer_science/finite_automata
 keywords:
   - problem_automata_theory
+  - formal_grammar
 topics:
   - computer_science/automata_theory
-name: Problem Formulation in Automata Theory
+name: Membership Problem in Automata Theory
 date of note: 2024-12-13
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Problem Formulation in Automata Theory
+>**Name**: Membership Problem in Automata Theory
 
 ![[Alphabets and Strings Abstract Definition#^339899]]
 
  ![[Formal Language Abstract Definition#^820f46]]
 >[!important] Definition
->A **problem** in **automata theory** is the question of deciding whether or not a given *string* is a *member* of some particular *language*.
+>A **(membership) problem** in **automata theory** is the question of deciding whether or not a given *string* is a *member* of some particular *language*.
 >
 >Let $\Sigma$ be an *alphabet* and $L \subseteq \Sigma^{*}$ is a *language over* $\Sigma$
 >
->Then the **problem** $L$ is formulated as
+>Then the **(membership) problem** $L$ is formulated as
 >> Given a string $w\in \Sigma^{*}$, decide if $w\in L$.
 
 - [[Alphabets and Strings Abstract Definition]]
 - [[Formal Language Abstract Definition]]
 - [[Finite Automata]]
+
+### Formal Grammar
+
+![[Formal Grammar Abstract Definition#^d2e40a]]
+
+
+- [[Formal Grammar Abstract Definition]]
+
 
 ## Explanation
 

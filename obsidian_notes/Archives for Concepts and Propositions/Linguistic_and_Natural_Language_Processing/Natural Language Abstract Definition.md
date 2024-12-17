@@ -20,6 +20,8 @@ date of note: 2024-12-15
 
 ![[Alphabets and Strings Abstract Definition#^339899]]
 
+>[!important] Definition
+>A **natural language** or **ordinary language** is any language that occurs naturally in a *human* community by a process of use, repetition and change.
 
 - [[Alphabets and Strings Abstract Definition]]
 
@@ -28,9 +30,16 @@ date of note: 2024-12-15
 
 ## Explanation
 
+>[!info]
+>**Natural languages** are distinguished from **formal languages** such as language in *logics* and *computer programming languages*.
+
+- [[Formal Language Abstract Definition]]
 
 
+## Computational Linguistic and NLP
 
+- [[Concepts and Algorithms in Computational Linguistics]]
+- [[Concepts and Algorithms in Natural Language Processing]]
 
 
 
@@ -38,11 +47,10 @@ date of note: 2024-12-15
 ##  Recommended Notes and References
 
 
-- [[Concepts and Algorithms in Computational Linguistics]]
-- [[Concepts and Algorithms in Natural Language Processing]]
 
 
 - [[Introduction to Automata Theory Language and Computation by Hopcroft]] pp 193
 - [[Foundations of Machine Learning by Mohri]]
 - [[Artificial Intelligence Modern Approach by Russell]]
 - [[Speech and Language Processing by Jurafsky]]
+- [[Handbook of Natural Language Processing by Indurkhya]]
