@@ -25,7 +25,7 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
-- [[Context-Free Grammars]]
+- [[Context-Free Grammars or CFG]]
 - [[Chomsky Normal Form for Word Constituency]]
 - [[Constituency Parsing]]
 - [[CKY Parsing as Dynamic Programming Algorithm]]

@@ -53,7 +53,7 @@ date of note: 2024-12-15
 
 - [[Concepts and Algorithms in Natural Language Processing]]
 
-- [[Context-Free Grammars]]
+- [[Context-Free Grammars or CFG]]
 - [[Context-Free Grammar Derivations]]
 - [[Context-Free Language]]
 

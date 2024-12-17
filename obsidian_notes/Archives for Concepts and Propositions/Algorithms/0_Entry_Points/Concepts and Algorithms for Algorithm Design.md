@@ -278,7 +278,7 @@ date of note: 2024-09-16
 
 #### Natural Language Processing
 
-- [[Context-Free Grammars]]
+- [[Context-Free Grammars or CFG]]
 - [[CKY Parsing as Dynamic Programming Algorithm]]
 
 

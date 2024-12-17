@@ -9,14 +9,14 @@ keywords:
 topics:
   - computer_science/formal_language
   - computational_linguistic/language
-name: Context-Free Grammars
+name: Context-Free Grammars or CFG
 date of note: 2024-05-12
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Context-Free Grammars
+>**Name**: Context-Free Grammars or CFG
 
 ![[Formal Grammar Abstract Definition#^d2e40a]]
 
@@ -28,11 +28,14 @@ date of note: 2024-05-12
 >A *formal grammar* $$G := (\Sigma, V, S, P)$$ is called **context-free grammar** if each *production* $p\in P$ is of the form $$A \stackrel{p}{\to} \alpha$$ where 
 >- $A\in V$ is a *single non-terminal symbol* 
 >- and $\alpha\in (\Sigma \cup V)^{*}$ is a *string* of *terminal or non-terminal* (including *empty string* $\epsilon$)
+>- That is $$P \subset V \times (\Sigma \cup V)^{*}.$$
 
 ^7bce3b
 
 - [[Alphabets and Strings Abstract Definition]]
 - [[Sentential Form in Formal Grammar]]
+- [[Relation]]
+
 
 >[!important] Definition
 >It is convenient to think of a **production** as *belonging to* the *variable of its head*. 
@@ -46,11 +49,15 @@ date of note: 2024-05-12
 >[!info]
 >**Regardless** of the **symbols around it (context)**, each *non-terminal symbol* $A$ can be replaced by a *string*. $$A \to \alpha$$
 
-- [[Context-Free Grammar Derivations]]
-- [[Context-Free Language]]
+
 
 >[!info]
 >The **context-sensitive grammar** has production rules of the form $$\alpha\,A\,\beta \to \alpha\,\gamma\,\beta$$
+
+## Derivation and Language of Context-Free Grammar
+
+- [[Context-Free Grammar Derivations]]
+- [[Context-Free Language]]
 
 
 
@@ -69,3 +76,4 @@ date of note: 2024-05-12
 - [[Foundations of Machine Learning by Mohri]] pp 363
 - [[Artificial Intelligence Modern Approach by Russell]] pp 1060, 889, 918, 919
 - [[Introduction to Automata Theory Language and Computation by Hopcroft]] pp 171, 173
+- Wikipedia [Context-free_grammar](https://en.wikipedia.org/wiki/Context-free_grammar)

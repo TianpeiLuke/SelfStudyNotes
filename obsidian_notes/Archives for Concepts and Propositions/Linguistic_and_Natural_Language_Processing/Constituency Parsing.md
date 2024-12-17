@@ -16,7 +16,7 @@ date of note: 2024-05-12
 
 
 - [[Constituency Parse Tree]]
-- [[Context-Free Grammars]]
+- [[Context-Free Grammars or CFG]]
 - [[Penn Treebank Annotations]]
 
 ## Explanation

@@ -21,7 +21,7 @@ date of note: 2024-12-14
 
 ![[Formal Grammar Abstract Definition#^d2e40a]]
 
-![[Context-Free Grammars#^7bce3b]]
+![[Context-Free Grammars or CFG#^7bce3b]]
 
 ### Derivation of CFG
 
@@ -35,7 +35,7 @@ date of note: 2024-12-14
 >The **derivation** from **context-free grammar** using $p$ is denoted as $$w \stackrel{p}{\implies} z$$
 
 - [[Formal Grammar Abstract Definition]]
-- [[Context-Free Grammars]]
+- [[Context-Free Grammars or CFG]]
 - [[Sentential Form in Formal Grammar]]
 - [[Derivation from Formal Grammar]]
 

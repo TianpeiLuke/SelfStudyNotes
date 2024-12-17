@@ -26,7 +26,7 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
-- [[Context-Free Grammars]]
+- [[Context-Free Grammars or CFG]]
 - [[Strong and Weak Grammar Equivalence]]
 - [[Chomsky Normal Form for Word Constituency]]
 - [[Probabilistic Graphical Models]]

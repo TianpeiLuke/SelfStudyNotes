@@ -93,9 +93,9 @@ date of note: 2024-12-15
 
 ### Context-Free Language
 
-![[Context-Free Grammars#^7bce3b]]
+![[Context-Free Grammars or CFG#^7bce3b]]
 
-- [[Context-Free Grammars]]
+- [[Context-Free Grammars or CFG]]
 - [[Context-Free Grammar Derivations]]
 - [[Backus–Naur Form or BNF]]
 

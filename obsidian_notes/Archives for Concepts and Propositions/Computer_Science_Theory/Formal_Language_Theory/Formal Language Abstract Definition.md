@@ -55,7 +55,7 @@ date of note: 2024-12-15
 
 ### Context-Free Language
 
-- [[Context-Free Grammars]]
+- [[Context-Free Grammars or CFG]]
 - [[Context-Free Grammar Derivations]]
 - [[Context-Free Language]]
 

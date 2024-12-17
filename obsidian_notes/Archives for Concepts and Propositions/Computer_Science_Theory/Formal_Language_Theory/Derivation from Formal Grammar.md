@@ -73,7 +73,7 @@ date of note: 2024-12-15
 
 ## Parsing and Derivation in Context-Free Grammar
 
-- [[Context-Free Grammars]]
+- [[Context-Free Grammars or CFG]]
 - [[Context-Free Grammar Derivations]]
 - [[Context-Free Language]]
 

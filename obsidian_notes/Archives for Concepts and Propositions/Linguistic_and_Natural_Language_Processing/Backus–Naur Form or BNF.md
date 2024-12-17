@@ -18,7 +18,7 @@ date of note: 2024-12-10
 
 
 
-- [[Context-Free Grammars]]
+- [[Context-Free Grammars or CFG]]
 - [[Context-Free Language]]
 
 ## Explanation

@@ -26,7 +26,7 @@ date of note: 2024-12-14
 
 
 - [[Formal Grammar Abstract Definition]]
-- [[Context-Free Grammars]]
+- [[Context-Free Grammars or CFG]]
 - [[Context-Free Grammar Derivations]]
 - [[Tree Graph and Forest]]
 

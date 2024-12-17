@@ -62,7 +62,7 @@ date of note: 2024-09-13
 ### Constituency Parsing
 
 - [[Constituency Parsing]]
-- [[Context-Free Grammars]]
+- [[Context-Free Grammars or CFG]]
 - [[Backus–Naur Form or BNF]]
 - [[Parse Tree or Derivation Tree in Context-Free Grammar]]
 - [[Constituency Parse Tree]]
