@@ -61,6 +61,8 @@ date of note: 2024-09-13
 
 ### Constituency Parsing
 
+- [[Concepts and Theorems in Automata Theory and Formal Language]]
+
 - [[Constituency Parsing]]
 - [[Context-Free Grammars or CFG]]
 - [[Backus-Naur Form or BNF]]
