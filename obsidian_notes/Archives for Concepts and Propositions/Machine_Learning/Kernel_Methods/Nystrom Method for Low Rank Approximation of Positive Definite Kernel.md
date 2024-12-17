@@ -42,3 +42,4 @@ date of note: 2024-11-12
 - [[Gaussian Process Latent Variable Model]]
 
 - [[Gaussian Processes for Machine Learning by Rasmussen]] pp 172 - 174, 177
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 699

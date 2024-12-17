@@ -45,3 +45,4 @@ date of note: 2024-05-12
 - [[Foundations of Statistical Natural Language Processing by Manning]] pp 389
 - [[Artificial Intelligence Modern Approach by Russell]] pp 893
 - [[Introduction to Automata Theory Language and Computation by Hopcroft]] pp 272 - 275, 301
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 188 - 189

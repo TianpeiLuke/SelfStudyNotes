@@ -134,3 +134,4 @@ date of note: 2024-05-10
 - [[Concentration Inequalities by Boucheron]]
 - [[High Dimensional Probability An Introduction by Vershynin]] pp 21 -  28
 - [[High Dimensional Statistics A Non-Asymptotic Viewpoint by Wainwright]]
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 13 

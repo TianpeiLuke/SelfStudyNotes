@@ -42,6 +42,7 @@ date of note: 2024-12-09
 - [[Algorithm Design Manual by Skiena]] pp 355 - 383, 585- 621
 - [[Artificial Intelligence Modern Approach by Russell]] pp 1054- 1055
 - [[Probabilistic Graphical Models by Koller]] pp 1150 - 1153
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 427
 
 - Wikipedia [NP_(complexity)](https://en.wikipedia.org/wiki/NP_(complexity))
 - Wikipedia [NP-hardness](https://en.wikipedia.org/wiki/NP-hardness)

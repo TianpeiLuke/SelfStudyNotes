@@ -123,6 +123,7 @@ date of note: 2024-06-01
 - [[Latent Dirichlet Allocation]]
 - [[Restricted Boltzmann Machine]]
 - [[Ising Model]]
+- [[Markov Logic Network for Probabilistic First-Order Logic]]
 - [[Constraint Satisfaction Problem or CSP]]
 - [[Denoising Diffusion Probabilistic Models and Diffusion Network]]
 

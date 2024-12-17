@@ -27,7 +27,7 @@ date of note: 2024-12-13
 - [[Validity of Argument]]
 - [[Soundness of Argument]]
 
-### Proofs
+### Formal Proofs
 
 - [[Proof by Contradiction]]
 - [[Proof by Counterexample]]
@@ -63,4 +63,6 @@ date of note: 2024-12-13
 ##  Recommended Notes and References
 
 
+- [[An Introduction to Formal Logic by Smith]]
+- [[An Concise Introduction to Logic by Hurley]]
 - [[Artificial Intelligence Modern Approach by Russell]]

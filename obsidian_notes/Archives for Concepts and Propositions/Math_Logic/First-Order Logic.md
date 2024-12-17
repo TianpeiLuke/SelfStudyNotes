@@ -30,3 +30,4 @@ date of note: 2024-12-13
 
 - [[Artificial Intelligence Modern Approach by Russell]] pp 285 - 321
 - [[Foundations of Machine Learning by Mohri]]
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 208

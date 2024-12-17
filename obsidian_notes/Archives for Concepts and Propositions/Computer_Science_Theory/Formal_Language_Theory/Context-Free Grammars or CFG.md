@@ -76,4 +76,6 @@ date of note: 2024-05-12
 - [[Foundations of Machine Learning by Mohri]] pp 363
 - [[Artificial Intelligence Modern Approach by Russell]] pp 889, 918 - 919, 1060
 - [[Introduction to Automata Theory Language and Computation by Hopcroft]] pp 171, 173
+- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 188
+
 - Wikipedia [Context-free_grammar](https://en.wikipedia.org/wiki/Context-free_grammar)
