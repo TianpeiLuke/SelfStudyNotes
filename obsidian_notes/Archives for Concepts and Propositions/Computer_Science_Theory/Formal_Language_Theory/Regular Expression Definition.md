@@ -66,7 +66,16 @@ date of note: 2024-12-14
 >	- e.g. $$\alpha\cdot \beta^{*} + \gamma = (\alpha \cdot (\beta^{*})) + \gamma$$
 >	
 
-- [[Group]]
+
+
+### Algebraic Properties of Operations
+
+![[Regular Expression Algebraic Definition#^df3a11]]
+
+![[Regular Expression Algebraic Definition#^3659de]]
+
+- [[Regular Expression Algebraic Definition]]
+- [[Semi-Ring]]
 
 
 ## Explanation

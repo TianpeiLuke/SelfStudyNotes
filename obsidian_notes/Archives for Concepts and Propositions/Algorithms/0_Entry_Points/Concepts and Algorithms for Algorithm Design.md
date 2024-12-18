@@ -38,6 +38,8 @@ date of note: 2024-09-16
 
 ### Computational Complexity Theory
 
+- [[Concepts and Theorems in Automata Theory and Formal Language]]
+
 - [[Computational Complexity Theory]]
 - [[P Complexity Class and Problems]]
 - [[NP Complexity Class and Problems]]

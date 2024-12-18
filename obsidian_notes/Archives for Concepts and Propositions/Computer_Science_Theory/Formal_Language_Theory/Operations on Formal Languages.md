@@ -35,15 +35,29 @@ date of note: 2024-12-17
 ^f9ecd3
 
 
-- [[Group]]
 - [[Alphabets and Strings Abstract Definition]]
 - [[Formal Language Abstract Definition]]
+- [[Regular Expression Algebraic Definition]]
+- [[Closed Convex Function and Closure Operation]]
+
+>[!important] Definition
+>Define the operation of **"one or more of"** as $$L^{+} := L + LL \,{+}\ldots{+}\,$$ 
+>
+>Note that the star operation means "**zero or more of**" $$L^{*} := \epsilon + L + LL \,{+}\ldots{+}\,$$ 
+>Then 
+>- $$L^{+} = L\,L^{*} = L^{*}\,L$$
+>- $$L^{*} = L^{+} + \epsilon$$
+
+>[!important] Definition
+>Define the operation of **"zero or one of"** as $$L? := L + \epsilon$$ 
+
 
 ### Regular Expression via Algebraic Structure
 
 ![[Regular Expression Definition#^697bd7]]
 
 - [[Regular Expression Definition]]
+
 
 
 

@@ -46,6 +46,7 @@ date of note: 2024-12-15
 
 - [[Operations on Formal Languages]]
 - [[Regular Expression Definition]]
+- [[Regular Expression Algebraic Definition]]
 - [[Regular Expression Pattern Basics]]
 - [[Regular Expression Advanced Operations]]
 - [[Regular Expression and Finite Automata Equivalence]]
