@@ -31,12 +31,13 @@ date of note: 2024-12-14
 >- For each **regular expression** $E$, let $L(E)$ be the **language** it represents.
 >
 >The **regular expression** can be defined *recursively* as follows:
->- The *constant* $\epsilon$, and $\emptyset$ are *regular expressions*.
->	- The corresponding languages are denoted as $$L(\epsilon) := \{ \epsilon \}, \quad L(\emptyset) = \emptyset.$$
->- If $a\in \Sigma$ is any symbol, then the *literal charater* $a$ is a *regular expression*
->	- The corresponding languages is denoted as $$L(a) := \{ a \}.$$
->- A variable $L \in V$ is a variable *representing any language*
->	- We use capitalized and italic symbols
+>- **Basic**
+>	- The *constant* $\epsilon$, and $\emptyset$ are *regular expressions*.
+>		- The corresponding languages are denoted as $$L(\epsilon) := \{ \epsilon \}, \quad L(\emptyset) = \emptyset.$$
+>	- If $a\in \Sigma$ is any symbol, then the *literal charater* $a$ is a *regular expression*
+>		- The corresponding languages is denoted as $$L(a) := \{ a \}.$$
+>	- A variable $L \in V$ is a variable *representing any language*
+>		- We use capitalized and italic symbols
 >- **Induction**:
 >	- If $E, F$ are *regular expression*, then $$E + F\; \text{ or }\; E|F$$ is *regular expression*, denoting the **union** of $L(E)$ and $L(F)$ i.e. $$L(E + F) = L(E) \cup L(F)$$
 >	- If $E, F$ are *regular expression*, then $$E\,F$$ is a *regular expression*, denoting the **concatenation** of $L(E)$ and $L(F)$ i.e. $$L(E\,F) = L(E) \, L(F)$$
