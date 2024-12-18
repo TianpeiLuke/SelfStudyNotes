@@ -42,6 +42,7 @@ date of note: 2024-12-15
 
 ### Regular Expression
 
+- [[Operations on Formal Languages]]
 - [[Regular Expression Definition]]
 - [[Regular Expression Pattern Basics]]
 - [[Regular Expression Advanced Operations]]
