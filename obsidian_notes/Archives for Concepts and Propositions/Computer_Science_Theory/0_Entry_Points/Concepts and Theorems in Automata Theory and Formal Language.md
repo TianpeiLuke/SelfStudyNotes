@@ -2,8 +2,10 @@
 tags:
   - entry_point
   - concept
+  - computer_science
 keywords: 
-topics: 
+topics:
+  - computer_science
 name: 
 date of note: 2024-12-15
 ---
@@ -46,7 +48,9 @@ date of note: 2024-12-15
 - [[Regular Expression Definition]]
 - [[Regular Expression Pattern Basics]]
 - [[Regular Expression Advanced Operations]]
-- [[Finite Automata and Regular Expression Conversion]]
+- [[Regular Expression and Finite Automata Equivalence]]
+	- [[DFA to Regular Expression Conversion]]
+	- [[Regular Expression to Automata Conversion]]
 - [[Regular Expression Properties]]
 
 

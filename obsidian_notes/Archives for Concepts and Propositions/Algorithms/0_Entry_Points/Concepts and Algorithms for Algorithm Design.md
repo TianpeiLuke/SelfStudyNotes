@@ -6,7 +6,9 @@ tags:
   - algorithm/design_paradigm
   - algorithm/data_structure
 keywords: 
-topics: 
+topics:
+  - algorithm
+  - data_structure
 name: 
 date of note: 2024-09-16
 ---

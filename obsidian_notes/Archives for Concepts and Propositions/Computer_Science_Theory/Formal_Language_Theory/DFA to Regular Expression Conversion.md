@@ -2,6 +2,7 @@
 tags:
   - concept
   - computer_science/finite_automata
+  - computer_science/regular_expression
 keywords: 
 topics: 
 name: 
@@ -34,4 +35,4 @@ date of note: 2024-12-13
 
 - [[Artificial Intelligence Modern Approach by Russell]]
 - [[Algorithm Design Manual by Skiena]] 
-- [[Introduction to Automata Theory Language and Computation by Hopcroft]] pp 92 - 108
+- [[Introduction to Automata Theory Language and Computation by Hopcroft]] pp 93 - 102
