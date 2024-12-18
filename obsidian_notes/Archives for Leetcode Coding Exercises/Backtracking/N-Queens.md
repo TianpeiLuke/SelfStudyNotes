@@ -113,4 +113,4 @@ public:
 - [[Backtracking]]
 - [[Depth-First Search]]
 
-- [[Constraint Satisfaction Problem CSP]]
+- [[Constraint Satisfaction Problem or CSP]]
