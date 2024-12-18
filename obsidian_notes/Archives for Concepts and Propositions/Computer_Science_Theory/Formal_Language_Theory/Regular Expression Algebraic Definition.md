@@ -36,13 +36,12 @@ date of note: 2024-12-14
 >The set of all **regular expressions** over some alphabet $\Sigma$,  equipped with the *union operation* $+$ and *concatenation operation* $\cdot$, forms a **idempotent semi-ring** $$(\mathcal{R}, +, \cdot)$$
 >
 >Specifically, 
->- $(\mathcal{R}, +)$ is an **abelian group**. 
->  That is, the *union* $$+: \mathcal{R}\times \mathcal{R}\to \mathcal{R}$$ is *closed* in $\mathcal{R}$, and it satisfies the following properties 
+>- The *union* $$+: \mathcal{R}\times \mathcal{R}\to \mathcal{R}$$ is *closed* in $\mathcal{R}$, and it satisfies the following properties 
 >	- **Associativity for union**: for all $E, F, G \in \mathcal{R}$, $$(E + F) + G = E + (F + G)$$
 >	- **Identity element (empty set)**: there exists an element $\emptyset \in \mathcal{R}$, such that for all $L\in \mathcal{R},$ $$\emptyset + L = L + \emptyset = L$$ 
 >	- **Commutativity for union**: for all $E, F\in \mathcal{R}$, $$E + F = F + E.$$
 >	- **Idempotent for union**, i.e., for any $L\in \mathcal{R}$, $$L + L = L$$ 
->- The *concatenation* $$\cdot: \mathcal{R}\times \mathcal{R} \to \mathcal{R}$$ satisfies the following properties: 
+>- The *concatenation* $$\cdot: \mathcal{R}\times \mathcal{R} \to \mathcal{R}$$  is *closed* in $\mathcal{R}$, and it satisfies the following properties: 
 >	- **Associativity for concatenation**:  for all $E, F, G \in \mathcal{R}$, $$(E \cdot  F) \cdot G = E \cdot (F \cdot G)$$
 >	- **Identity element (empty string)**: there exists $\epsilon\in \mathcal{R}$ such that for all $L\in \mathcal{R}$, $$\epsilon \cdot L = L \cdot \epsilon = L$$
 >	- **Annihilator element (empty set)** : there exists $\emptyset \in \mathcal{R}$ such that  for all $L\in \mathcal{R}$, $$\emptyset \cdot L = L \cdot \emptyset = \emptyset$$ 
@@ -103,7 +102,7 @@ date of note: 2024-12-14
 - [[Mathematical Induction]]
 
 - [[Ring with Identity]]
-- [[Group]]
+
 
 - [[Introduction to Automata Theory Language and Computation by Hopcroft]] pp 115 - 122
 
