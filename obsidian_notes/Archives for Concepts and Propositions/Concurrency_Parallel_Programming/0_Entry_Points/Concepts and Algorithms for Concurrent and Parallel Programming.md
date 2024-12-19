@@ -14,24 +14,35 @@ date of note: 2024-12-18
 
 ### Basic Problems in Concurrent and Parallel Computing
 
+#### Concurrent Programming
+
 - [[Concurrent Programming]]
-- [[Parallel Programming]]
 - [[Shared-Memory Multi-Processors or Multi-Cores]]
+- [[Concurrent Coordination Problem]]
 - [[Safety Property of Computer Program]]
 - [[Liveness Property of Computer Program]]
-
 - [[Producer-Consumer Problem for Concurrent Programming]]
 - [[Reader-Writer Problem for Concurrent Programming]]
+
+#### Parallel Programming
+
+- [[Speedup of Parallelism]]
+- [[Amdahl Law to Analyze Speedup of Parallelism]]
+- [[Parallel Programming]]
 
 
 ### Mutual Exclusion in Concurrent Computing
 
 - [[Mutual Exclusion Problem in Concurrent Programming]]
 - [[Critical Section for Concurrent Programming]]
-- [[Two-Thread Solution in Concurrent Programming]]
-- [[Deadlock]]
+- [[Deadlock in Concurrent Programming]]
+- [[Starvation in Concurrent Programming]]
+- [[Two-Thread Solution for Mutual Exclusion Problem]]
+- [[Peterson Lock Algorithm for Mutual Exclusion Problem]]
+- [[Filter Lock Algorithm for Mutual Exclusion Problem]]
+- [[Fairness in Concurrent Programming]]
+- [[Bounded Wait-Free Property]]
 - [[Lamport Bakery Algorithm]]
-
 
 
 ### Concurrent Object
