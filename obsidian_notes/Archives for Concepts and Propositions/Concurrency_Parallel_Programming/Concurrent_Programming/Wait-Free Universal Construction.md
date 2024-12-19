@@ -1,11 +1,11 @@
 ---
 tags:
   - concept
-  - parallel_computing/principles
+  - concurrent_computing/principles
 keywords: 
 topics: 
 name: 
-date of note: 2024-12-14
+date of note: 2024-12-18
 ---
 
 ## Concept Definition
@@ -15,16 +15,16 @@ date of note: 2024-12-14
 
 
 
+- [[Universality of Consensus]]
+
 ## Explanation
 
+- [[Wait-Freedom as Progress Conditions]]
 
-
-- [[Data Parallelism]]
 
 
 -----------
 ##  Recommended Notes and References
 
 
-- [[Large Language Model and Pretrained Language Models]]
 - [[The Art of Multiprocessor Programming by Herlihy]]

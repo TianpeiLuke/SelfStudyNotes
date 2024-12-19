@@ -286,6 +286,9 @@ date of note: 2024-09-16
 - [[CKY Parsing as Dynamic Programming Algorithm]]
 
 
+## Concurrent and Parallel Programming
+
+- [[Concepts and Algorithms for Concurrent and Parallel Programming]]
 
 
 

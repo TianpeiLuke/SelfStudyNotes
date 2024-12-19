@@ -1,11 +1,11 @@
 ---
 tags:
   - concept
-  - parallel_computing/principles
+  - concurrent_computing/data_structure
 keywords: 
 topics: 
 name: 
-date of note: 2024-12-14
+date of note: 2024-12-18
 ---
 
 ## Concept Definition
@@ -19,12 +19,11 @@ date of note: 2024-12-14
 
 
 
-- [[Data Parallelism]]
 
 
 -----------
 ##  Recommended Notes and References
 
 
-- [[Large Language Model and Pretrained Language Models]]
+- [[Algorithms to Live By Chapter 10 Network]]
 - [[The Art of Multiprocessor Programming by Herlihy]]

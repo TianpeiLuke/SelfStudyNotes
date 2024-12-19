@@ -1,11 +1,11 @@
 ---
 tags:
   - concept
-  - parallel_computing/principles
+  - concurrent_computing/data_structure
 keywords: 
 topics: 
 name: 
-date of note: 2024-12-14
+date of note: 2024-12-18
 ---
 
 ## Concept Definition
@@ -18,13 +18,12 @@ date of note: 2024-12-14
 ## Explanation
 
 
-
-- [[Data Parallelism]]
+- [[CLH Queue Lock]]
+- [[MCS Queue Lock]]
 
 
 -----------
 ##  Recommended Notes and References
 
 
-- [[Large Language Model and Pretrained Language Models]]
 - [[The Art of Multiprocessor Programming by Herlihy]]

@@ -1,7 +1,7 @@
 ---
 tags:
   - concept
-  - parallel_computing
+  - parallel_computing/principles
 keywords: 
 topics: 
 name: 
