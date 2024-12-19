@@ -34,7 +34,6 @@ date of note: 2024-12-18
 
 
 
-
 ### Concurrent Object
 
 - [[Sequential Object]]
@@ -209,6 +208,7 @@ date of note: 2024-12-18
 -----------
 ##  Recommended Notes and References
 
+- [[Concepts and Algorithms for Algorithm Design]]
 
 - [[The Art of Multiprocessor Programming by Herlihy]]
 - [[Introduction to Algorithms by Cormen]]
