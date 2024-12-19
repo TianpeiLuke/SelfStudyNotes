@@ -17,8 +17,6 @@ date of note: 2024-12-19
 
 
 
-- [[Ladder of Causation from Association to Counterfactual]]
-
 ## Explanation
 
 
@@ -29,9 +27,11 @@ date of note: 2024-12-19
 ##  Recommended Notes and References
 
 
-- [[Probabilistic Graphical Models by Koller]] pp 1009
+
+- [[Probabilistic Graphical Models by Koller]] pp 1017
 - [[Causality Models Reasoning and Inference by Pearl]]
 - [[All of Statistics A Concise Course by Wasserman]]
-- [[Book of Why by Pearl]]
+- [[Elements of Causal Inference by Peters]]
+- [[Book of Why by Pearl]] pp 86, 285
 
 - [Introduction to Causal Inference by Neal](https://www.bradyneal.com/causal-inference-course) pp 40 - 44

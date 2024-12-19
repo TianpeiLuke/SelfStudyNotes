@@ -25,6 +25,8 @@ date of note: 2024-07-25
 - [[Ladder of Causation from Association to Counterfactual]]
 - [[Interventions in Causal Inference]]
 - [[Counterfactual in Causal Inference]]
+- [[Identifiability of Causal Effect]]
+- [[Confounder in Causal Inference]]
 
 
 ### Potential Outcome Theory
@@ -40,10 +42,10 @@ date of note: 2024-07-25
 - [[Unconfoundedeness of Causal Inference]]
 - [[Consistency of Causal Inference]]
 - [[No interference of Causal Inference]]
-- [[SUTVA of Causal Inference]]
+- [[Stable Unit Treatment Value Assumption or SUTVA of Causal Inference]]
 
 
-### Causal Graphical Model
+### Causal Graphical Model via Bayesian Network
 
 - [[Bayesian Network on Directed Acyclic Graph]]
 - [[D-Separation in Bayesian Network]]
@@ -68,9 +70,10 @@ date of note: 2024-07-25
 
 - [[do-Operator]]
 - [[Modularity Assumption in Causal Inference]]
-- [[Backdoor Adjustment for Causal Inference]]
+- [[Confounder in Causal Inference]]
+- [[Backdoor Adjustment or Criterion for Deconfounding]]
 - [[Mediator in Causal Graph]]
-- [[Frontdoor Adjustment with Mediator for Causal Inference]]
+- [[Frontdoor Adjustment or Criterion with Mediator for Causal Inference]]
 - [[do-Calculus]]
 
 ### Causal Analysis via Hypothesis Testing
@@ -83,6 +86,7 @@ date of note: 2024-07-25
 - [[Conditional Outcome Modeling or COM]]
 - [[TARNet for Causal Estimation]]
 - [[XLearner for Causal Estimation]]
+- [[Causal Learning from Interventional Data]]
 
 
 ### Propensity Score and Doubly Robust Estimation
@@ -108,6 +112,17 @@ date of note: 2024-07-25
 - [[Mediator in Causal Graph]]
 - [[Mediation Formula for Causal Analysis]]
 
+### Causal Analysis for Transfer Learning
+
+- [[Distribution Shift in Transfer Learning]]
+	- [[Covariate Shift or Domain Shift in Machine Learning]]
+	- [[Concept Shift or Annotation Shift in Machine Learning]]
+	- [[Label Shift or Prior Shift in Machine Learning]]
+	- [[Conditional Shift or Manifestation Shift in Machine Learning]]
+
+### Causal Analysis in Time Series
+
+- [[Granger Causality in Time Series Analysis]]
 
 
 

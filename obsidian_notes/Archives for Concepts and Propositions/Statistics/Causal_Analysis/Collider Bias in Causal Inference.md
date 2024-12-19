@@ -34,4 +34,7 @@ date of note: 2024-12-19
 
 - [[Causality Models Reasoning and Inference by Pearl]]
 - [[All of Statistics A Concise Course by Wasserman]]
+- [[Elements of Causal Inference by Peters]]
+- [[Book of Why by Pearl]]
+
 - [Introduction to Causal Inference by Neal](https://www.bradyneal.com/causal-inference-course) pp 40 - 44
