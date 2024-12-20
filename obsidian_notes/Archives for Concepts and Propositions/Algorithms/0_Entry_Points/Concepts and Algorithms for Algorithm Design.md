@@ -301,3 +301,6 @@ date of note: 2024-09-16
 - [[Algorithm Design Manual by Skiena]]
 - [[Algorithms to Live By Book Summary]]
 - [[Artificial Intelligence Modern Approach by Russell]]
+
+- Lectures
+	- MIT Open Course [Introduction to Algorithms Spring 2020](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/)

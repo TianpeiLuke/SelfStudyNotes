@@ -87,3 +87,6 @@ date of note: 2024-12-15
 - [[Artificial Intelligence Modern Approach by Russell]]
 - [[Foundations of Machine Learning by Mohri]]
 - [[Speech and Language Processing by Jurafsky]]
+
+- Lecture
+	- MIT Open Course [Theory of Computation Fall 2020](https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/)

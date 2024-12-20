@@ -108,3 +108,6 @@ date of note: 2024-07-25
 - [[Social Economic Networks by Jackson]]
 - [[Networks by Newman]]
 - [[Graph Theory by Diestel]]
+
+- Lecture
+	- MIT Open Course [Networks Spring 2022](https://ocw.mit.edu/courses/14-15-networks-spring-2022/)

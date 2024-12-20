@@ -122,3 +122,6 @@ date of note: 2024-06-01
 - [[Mathematical Foundations of Infinite Dimensional Statistical Models by Gine]]
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]
+
+- Lecture
+	- MIT Open Course [Information Theory Spring 2016](https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/)

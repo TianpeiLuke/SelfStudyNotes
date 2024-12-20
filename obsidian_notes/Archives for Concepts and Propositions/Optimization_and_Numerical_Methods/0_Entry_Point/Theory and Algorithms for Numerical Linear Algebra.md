@@ -331,3 +331,6 @@ date of note: 2024-05-12
 - [[Matrix Analysis by Horn]]
 - [[Finite Dimensional Vector Spaces by Halmos]]
 - [[Matrix CookBook by Petersen]]
+
+- Lectures
+	- MIT Open Course [Introduction to Numerical Methods Spring 2019](https://ocw.mit.edu/courses/18-335j-introduction-to-numerical-methods-spring-2019/)

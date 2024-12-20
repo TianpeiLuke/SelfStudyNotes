@@ -301,3 +301,6 @@ date of note: 2024-09-13
 - [[Introduction to Information Retrieval by Manning]]
 - [[Practical Natural Language Processing by Vajjala]]
 - [[Artificial Intelligence Modern Approach by Russell]]
+
+- Lectures
+	- MIT Open Course [Advanced Natural Language Processing Fall 2005](https://ocw.mit.edu/courses/6-864-advanced-natural-language-processing-fall-2005/)

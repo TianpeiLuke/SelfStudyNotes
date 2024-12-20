@@ -195,6 +195,7 @@ date of note: 2024-06-01
 ##  Recommended Notes and References
 
 - [[Concepts and Theorems for Markov Process]]
+- [[Concepts and Algorithms based on Dynamic Programming]]
 
 
 - [[Dynamic Programming and Optimal Control by Bertsekas]]
@@ -206,3 +207,6 @@ date of note: 2024-06-01
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]
 
 - [[Artificial Intelligence Modern Approach by Russell]]
+
+- Lecture
+	- MIT Open Course [Dynamic Programming and Stochastic Control](https://ocw.mit.edu/courses/6-231-dynamic-programming-and-stochastic-control-fall-2015/)

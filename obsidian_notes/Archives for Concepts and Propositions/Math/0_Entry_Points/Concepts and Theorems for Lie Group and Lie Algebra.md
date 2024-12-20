@@ -79,3 +79,8 @@ date of note: 2024-05-06
 - [[Introduction to Smooth Manifolds by Lee]]
 - [[Introduction to Riemannian Manifolds by Lee]]
 - [[Lie Groups Lie Algebra and Representations by Hall]]
+
+- Lecture
+	- MIT Open Course [Representations of Lie Groups Fall 2023](https://ocw.mit.edu/courses/18-757-representations-of-lie-groups-fall-2023/)
+	- MIT Open Course [Lie Groups and Lie Algebras I Fall 2020](https://ocw.mit.edu/courses/18-745-lie-groups-and-lie-algebras-i-fall-2020/)
+	- MIT Open Course [Lie Groups and Lie Algebras II Spring 2024](https://ocw.mit.edu/courses/18-755-lie-groups-and-lie-algebras-ii-spring-2024/)

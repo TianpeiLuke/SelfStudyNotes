@@ -155,3 +155,6 @@ date of note: 2024-09-16
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] 
 - [[Artificial Intelligence Modern Approach by Russell]]
 - [[Probabilistic Graphical Models by Koller]] 
+
+- Lecture
+	- MIT Open Course [Dynamic Programming and Stochastic Control](https://ocw.mit.edu/courses/6-231-dynamic-programming-and-stochastic-control-fall-2015/)

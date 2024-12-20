@@ -173,3 +173,6 @@ date of note: 2024-05-11
 - [[Introductory Functional Analysis with Applications by Kreyszig]]
 - [[Real Analysis Modern Techniques and Their Applications by Folland]]
 - [[Optimization by Vector Space Methods by Luenberger]]
+
+- Lecture
+	- MIT Open Course [Introduction to Functional Analysis Spring 2021](https://ocw.mit.edu/courses/18-102-introduction-to-functional-analysis-spring-2021/)

@@ -213,3 +213,6 @@ date of note: 2024-06-01
 - [[Mathematical Foundations of Infinite Dimensional Statistical Models by Gine]]
 - [[High Dimensional Statistics A Non-Asymptotic Viewpoint by Wainwright]]
 - [[High Dimensional Probability An Introduction by Vershynin]]
+
+- Lecture
+	- MIT Open Course [Mathematics of Machine Learning Fall 2015](https://ocw.mit.edu/courses/18-657-mathematics-of-machine-learning-fall-2015/)

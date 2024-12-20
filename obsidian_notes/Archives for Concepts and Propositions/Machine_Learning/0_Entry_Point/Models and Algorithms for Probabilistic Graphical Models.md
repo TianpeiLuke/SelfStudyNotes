@@ -285,3 +285,6 @@ date of note: 2024-06-01
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]
 - [[Deep Learning by Goodfellow]]
 - [[Deep Learning Foundations and Concepts by Bishop]]
+
+- Lecture
+	- MIT Open Course [Algorithms for Inference Fall 2014](https://ocw.mit.edu/courses/6-438-algorithms-for-inference-fall-2014/)

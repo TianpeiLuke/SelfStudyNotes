@@ -146,3 +146,7 @@ date of note: 2024-09-13
 - [[Handbook of Natural Language Processing by Indurkhya]]
 - [[Artificial Intelligence Modern Approach by Russell]]
 - [[Introduction to Automata Theory Language and Computation by Hopcroft]]
+
+- Lecture
+	- MIT Open Course [Introduction to Linguistics Spring 2022](https://ocw.mit.edu/courses/24-900-introduction-to-linguistics-spring-2022/)
+	- MIT Open Course [Introduction to Linguistics Fall 2012](https://ocw.mit.edu/courses/24-900-introduction-to-linguistics-fall-2012/)
