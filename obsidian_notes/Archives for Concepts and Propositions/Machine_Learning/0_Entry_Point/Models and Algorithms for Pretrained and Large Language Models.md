@@ -111,9 +111,20 @@ date of note: 2024-06-01
 
 ### Efficient Training, Inference and Compression
 
+- [[Concepts and Algorithms for Concurrent and Parallel Programming]]
+- [[Data Parallelism]]
+- [[Model Parallelism]]
+- [[Pipeline Parallelism]]
+
+- [[Fully Sharded Data Parallel or FSDP for LLM Training]]
 - [[Zero Redundancy Optimizer or ZeRO for Optimized Training of LLM]]
 - [[Knowledge Distillation for Efficient Training]]
 - [[Quantization of Large Language Models]]
+
+
+
+
+
 
 ### Multi-Modal Transformer Networks
 

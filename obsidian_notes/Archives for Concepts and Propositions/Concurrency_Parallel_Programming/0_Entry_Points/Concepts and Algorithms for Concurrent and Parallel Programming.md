@@ -194,6 +194,9 @@ date of note: 2024-12-18
 - [[MapReduce Architecture for Data Parallelism]]
 - [[Stream Computing]]
 - [[Model Parallelism]]
+- [[Pipeline Parallelism]]
+- [[Fully Sharded Data Parallel or FSDP for LLM Training]]
+- [[Zero Redundancy Optimizer or ZeRO for Optimized Training of LLM]]
 
 ### Barriers
 
