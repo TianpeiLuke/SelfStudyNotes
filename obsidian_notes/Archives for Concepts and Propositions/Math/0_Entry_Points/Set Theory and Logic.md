@@ -41,6 +41,7 @@ date of note: 2024-05-10
 - [[Canonical Projection]]
 - [[Characteristic Function of Set]]
 
+
 ### Finite and Infinite
 
 - [[Finite Set and Cardinality]]
@@ -81,6 +82,20 @@ date of note: 2024-05-10
 	- [[Well Ordering Theorem]]
 	- [[Zorn Lemma]]
 
+
+### Set Functions
+
+- [[Theory and Algorithms for Submodular Optimization]]
+
+- [[Mobius Inversion of Set Function]]
+- [[Modular Function as Linear Equivalence of Set Function]]
+- [[Submodular Function as Convex Equivalence of Set Function]]
+
+
+### Matroid 
+
+- [[Matroid and Independent Sets]]
+- [[Graph Matroid]]
 
 
 ## Explanation

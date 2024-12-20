@@ -58,5 +58,6 @@ The mathematization of causality is a relatively recent development, and has bec
 - [[Probabilistic Graphical Models by Koller]]
 - [[Causality Models Reasoning and Inference by Pearl]]
 - [[Book of Why by Pearl]]
+- [[Causal Inference in Python by Facure]]
 
 - [Introduction to Causal Inference by Neal](https://www.bradyneal.com/causal-inference-course)

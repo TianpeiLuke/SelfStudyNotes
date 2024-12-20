@@ -50,5 +50,6 @@ date of note: 2024-12-19
 - [[Probabilistic Graphical Models by Koller]]
 - [[Elements of Causal Inference by Peters]]
 - [[Book of Why by Pearl]]
+- [[Causal Inference in Python by Facure]]
 
 - [Introduction to Causal Inference by Neal](https://www.bradyneal.com/causal-inference-course)

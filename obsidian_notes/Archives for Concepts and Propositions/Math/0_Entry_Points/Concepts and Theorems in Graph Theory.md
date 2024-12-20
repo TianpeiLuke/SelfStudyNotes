@@ -93,6 +93,8 @@ date of note: 2024-07-14
 - [[Adjacency List for Sparse Representation of Graph]]
 - [[Incidence Matrix for Graph and Hypergraph]]
 
+- [[Graph Matroid]]
+
 
 ### Matching and Covering
 
@@ -117,6 +119,12 @@ date of note: 2024-07-14
 - [[Maximum Flow Problem]]
 - [[Minimum Cost Flow Problem]]
 
+- [[Minimum k-Cut Problem]]
+- [[Maximum Cut Problem]]
+- [[Maximum Clique Problem]]
+
+- [[Set Cover Problem]]
+- [[Set Cover Problem with Network Flow Formulation]]
 
 ### Spectral Graph Theory
 

@@ -130,8 +130,9 @@ date of note: 2024-05-11
 ## Explanation
 
 
+### Submodular Optimization from Convex Optimization Perspective
 
-
+- [[Theory and Algorithms for Submodular Optimization]]
 
 
 
