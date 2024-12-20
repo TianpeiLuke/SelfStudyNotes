@@ -71,6 +71,19 @@ date of note: 2024-12-10
 - [[Approximate Nearest Neighbor Search]]
 
 
+### Submodular Optimization
+
+- [[Theory and Algorithms for Submodular Optimization]]
+- [[Submodular Function as Convex Equivalence of Set Function]]
+- [[Base Polyhedron]]
+- [[Submodualar Polyhedron]]
+- [[Positive Submodular Polyhedron]]
+- [[Symmetric Submodular Polyhedron]]
+- [[Greedy Algorithm for Submodular and Base Polyhedron]]
+- [[Greedy Algorithm for Positive Submodular Polyhedron]]
+- [[Greedy Algorithm for Symmetric Submodular Polyhedron]]
+
+
 ### EM Algorithm
 
 - [[Expectation-Maximization Algorithm]]
