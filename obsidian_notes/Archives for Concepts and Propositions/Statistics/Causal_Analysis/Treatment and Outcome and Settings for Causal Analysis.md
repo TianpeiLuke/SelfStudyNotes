@@ -15,6 +15,8 @@ date of note: 2024-12-19
 >**Name**: 
 
 
+- [[Potential Outcome]]
+- [[Stable Unit Treatment Value Assumption or SUTVA of Causal Inference]]
 
 ## Explanation
 
@@ -30,7 +32,7 @@ date of note: 2024-12-19
 - [[Causality Models Reasoning and Inference by Pearl]]
 - [[All of Statistics A Concise Course by Wasserman]]
 - [[Elements of Causal Inference by Peters]]
-- [[Causal Inference in Python by Facure]] pp 8
+- [[Book of Why by Pearl]]
+- [[Causal Inference in Python by Facure]]
 
-
-- [Introduction to Causal Inference by Neal](https://www.bradyneal.com/causal-inference-course) pp 7
+- [Introduction to Causal Inference by Neal](https://www.bradyneal.com/causal-inference-course) pp

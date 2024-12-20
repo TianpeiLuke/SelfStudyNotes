@@ -17,7 +17,7 @@ date of note: 2024-12-19
 
 
 
-- [[Confounder in Causal Inference]]
+- [[Confounder and Confounding Bias in Causal Inference]]
 - [[Confounding in Conditional Independence]]
 
 
@@ -25,7 +25,7 @@ date of note: 2024-12-19
 
 
 
-- [[Backdoor Adjustment or Criterion for Deconfounding]]
+- [[Backdoor Adjustment or Criterion for Confounding Adjustment]]
 - [[Frontdoor Adjustment or Criterion with Mediator for Causal Inference]]
 
 

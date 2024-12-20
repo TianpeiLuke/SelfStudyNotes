@@ -31,5 +31,6 @@ date of note: 2024-12-19
 - [[All of Statistics A Concise Course by Wasserman]]
 - [[Book of Why by Pearl]] pp 280 - 281
 - [[Elements of Causal Inference by Peters]]
+- [[Causal Inference in Python by Facure]] pp 13
 
 - [Introduction to Causal Inference by Neal](https://www.bradyneal.com/causal-inference-course) pp 13

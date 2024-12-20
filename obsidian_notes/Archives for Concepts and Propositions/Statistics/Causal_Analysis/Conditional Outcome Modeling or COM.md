@@ -17,20 +17,21 @@ date of note: 2024-12-19
 
 
 
-- [[D-Separation in Bayesian Network]]
+
 - [[Confounding in Conditional Independence]]
+- [[Conditional Exchangeability of Causal Inference]]
 
 
 ## Explanation
 
-
+- [[Grouped Conditional Outcome Modeling or GCOM]]
 
 
 
 -----------
 ##  Recommended Notes and References
 
-
+- [[Meta-Learner for Causal Estimation]]
 
 - [[Causality Models Reasoning and Inference by Pearl]]
 - [[All of Statistics A Concise Course by Wasserman]]

@@ -35,4 +35,6 @@ date of note: 2024-12-19
 
 - [[Causality Models Reasoning and Inference by Pearl]]
 - [[All of Statistics A Concise Course by Wasserman]]
+- [[Causal Inference in Python by Facure]] pp 162
+
 - [Introduction to Causal Inference by Neal](https://www.bradyneal.com/causal-inference-course) pp 66

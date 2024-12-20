@@ -24,7 +24,7 @@ date of note: 2024-12-19
 ## Explanation
 
 
-- [[Backdoor Adjustment or Criterion for Deconfounding]]
+- [[Backdoor Adjustment or Criterion for Confounding Adjustment]]
 
 
 -----------

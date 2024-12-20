@@ -22,11 +22,14 @@ date of note: 2024-07-25
 
 ### Ladder of Causation
 
+- [[Treatment and Outcome and Settings for Causal Analysis]]
 - [[Ladder of Causation from Association to Counterfactual]]
 - [[Interventions in Causal Inference]]
 - [[Counterfactual in Causal Inference]]
 - [[Identifiability of Causal Effect]]
-- [[Confounder in Causal Inference]]
+- [[Confounder and Confounding Bias in Causal Inference]]
+- [[Collider Bias in Causal Inference]]
+- [[Selection Bias]]
 
 
 ### Potential Outcome Theory
@@ -70,22 +73,31 @@ date of note: 2024-07-25
 
 - [[do-Operator]]
 - [[Modularity Assumption in Causal Inference]]
-- [[Confounder in Causal Inference]]
-- [[Backdoor Adjustment or Criterion for Deconfounding]]
+- [[Confounder and Confounding Bias in Causal Inference]]
+- [[Backdoor Adjustment or Criterion for Confounding Adjustment]]
 - [[Mediator in Causal Graph]]
 - [[Frontdoor Adjustment or Criterion with Mediator for Causal Inference]]
 - [[do-Calculus]]
 
-### Causal Analysis via Hypothesis Testing
+### Randomized Controlled Trial and Hypothesis Testing
 
 - [[Randomized Controlled Trial or RCT]]
 - [[Hypothesis Testing Problem]]
+- [[Power and Size of Test]]
+- [[p-Value of Test]]
+
 
 ### Causal Estimation
 
 - [[Conditional Outcome Modeling or COM]]
+- [[Grouped Conditional Outcome Modeling or GCOM]]
+- [[Two-Stage Least Square for Causal Estimation]]
+
+- [[Meta-Learner for Causal Estimation]]
 - [[TARNet for Causal Estimation]]
-- [[XLearner for Causal Estimation]]
+- [[T-Learner for Causal Estimation]]
+- [[X-Learner for Causal Estimation]]
+- [[Double Machine Learning for Causal Inference]]
 - [[Causal Learning from Interventional Data]]
 
 
@@ -94,6 +106,12 @@ date of note: 2024-07-25
 - [[Propensity Scores for Causal Estimation]]
 - [[Inverse Probability Weighting or IPW for Causal Estimation]]
 - [[Doubly Robust Methods for Causal Estimation]]
+
+
+### Difference-In-Difference
+
+- [[Difference-In-Differences for Average Treatment Effects]]
+
 
 ### Sensitivity Analysis
 

@@ -261,8 +261,11 @@ date of note: 2024-06-01
 ### Causal Graphical Model
 
 - [[Concepts and Theorems in Causal Analysis and Causal Machine Learning]]
-- [[Confounding in Conditional Independence]]
+- [[Interventions in Causal Inference]]
+- [[Counterfactual in Causal Inference]]
+- [[Causal Graph]]
 - [[Directed Connection in Causal Graph]]
+- [[Structural Causal Models or SCMs]]
 
 
 
