@@ -139,7 +139,7 @@ date of note: 2024-05-22
 ##  Recommended Notes and References
 
 
-
+- [[Randomized Controlled Trial or RCT]]
 - [[Probability Distribution of Random Variable]]
 - [[Probability Space]]
 

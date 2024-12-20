@@ -22,12 +22,14 @@ date of note: 2024-06-01
 
 ### Basics of Hypothesis Testing
 
+
 - [[Population and Sample and Statistical Problem]]
 - [[Statistical Decision Problem]]
 - [[Statistical Inference Problem]]
 - [[Statistical Estimation Problem]]
+- [[Randomized Controlled Trial or RCT]]
+- [[Treatment and Outcome and Settings for Causal Analysis]]
 - [[Hypothesis Testing Problem]]
-
 - [[Power and Size of Test]]
 - [[p-Value of Test]]
 

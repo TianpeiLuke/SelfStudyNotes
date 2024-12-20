@@ -37,6 +37,10 @@ date of note: 2024-12-18
 - [[Critical Section for Concurrent Programming]]
 - [[Deadlock in Concurrent Programming]]
 - [[Starvation in Concurrent Programming]]
+- [[Mutual Exclusion Protocol Properties]]
+- [[Deadlock Freedom Property]]
+- [[Starvation Freedom or Lockout Freedom Property]]
+- [[Wait Freedom Property]]
 - [[Two-Thread Solution for Mutual Exclusion Problem]]
 - [[Peterson Lock Algorithm for Mutual Exclusion Problem]]
 - [[Filter Lock Algorithm for Mutual Exclusion Problem]]
@@ -220,6 +224,7 @@ date of note: 2024-12-18
 ##  Recommended Notes and References
 
 - [[Concepts and Algorithms for Algorithm Design]]
+- [[Concepts and Paradigms in Software Engineering]]
 
 - [[The Art of Multiprocessor Programming by Herlihy]]
 - [[Introduction to Algorithms by Cormen]]

@@ -34,6 +34,7 @@ date of note: 2024-07-25
 
 ### Potential Outcome Theory
 
+- [[Treatment and Outcome and Settings for Causal Analysis]]
 - [[Potential Outcome]]
 - [[Individual Treatment Effects]]
 - [[Fundamental Problem of Causal Inference]]

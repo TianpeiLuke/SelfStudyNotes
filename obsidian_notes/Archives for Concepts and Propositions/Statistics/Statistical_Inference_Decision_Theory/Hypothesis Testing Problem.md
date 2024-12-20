@@ -65,7 +65,7 @@ date of note: 2024-06-08
 
 ^14f68d
 
-
+- [[Randomized Controlled Trial or RCT]]
 - [[Population and Sample and Statistical Problem]]
 - [[Statistical Decision Problem]]
 - [[Statistics]]

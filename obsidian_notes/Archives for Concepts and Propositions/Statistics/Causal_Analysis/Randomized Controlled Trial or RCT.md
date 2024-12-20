@@ -16,8 +16,9 @@ date of note: 2024-12-19
 
 
 
-- [[D-Separation in Bayesian Network]]
-- [[Confounding in Conditional Independence]]
+- [[Hypothesis Testing Problem]]
+- [[Power and Size of Test]]
+- [[p-Value of Test]]
 
 
 ## Explanation
