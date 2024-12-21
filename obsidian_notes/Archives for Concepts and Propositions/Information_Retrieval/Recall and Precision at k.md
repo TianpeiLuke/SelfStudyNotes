@@ -33,6 +33,7 @@ date of note: 2024-04-25
 >\text{Recall@k} = \frac{\#\{ d_{i}: d_{i}\text{ is relevant to query }q,\, 1 \le i\le k \}}{P}
 >$$
 >where $P$ is the total number of *relevant documents* for query $q$, i.e. $$P := \#\{ d_{i}: d_{i}\text{ is relevant to query }q,\, 1 \le i\le N \}$$
+>- Note that **recall@1** is the *probability* of the *most similar item* to the query $q$ is actually *relevant* $$\text{Recall@1} := \frac{\mathbb{1}\left\{ d_{1} \text{ is relevant to }q \right\} }{P} = \mathcal{P}\left\{ \text{Rel}(d_{1}, q) = 1 \right\} $$
 
 - [[Precision-Recall Curve]]
 - [[Mean Average Precision and Average Precision]]
@@ -61,6 +62,8 @@ date of note: 2024-04-25
 ##  Recommended Notes
 
 - [[Information Retrieval]]
+- [[Similarity Search]]
+- [[Approximate Nearest Neighbor Search]]
 
 - [[Introduction to Information Retrieval by Manning]] pp 161
 - [[Speech and Language Processing by Jurafsky]] pp 296
