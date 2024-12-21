@@ -55,7 +55,7 @@ date of note: 2024-06-24
 -----------
 ##  Recommended Notes and References
 
-- [[Fundamental Lemma of Neyman and Pearson.]]
+- [[Fundamental Lemma of Neyman and Pearson]]
 
 - [[Point Estimator]]
 - [[Cumulative Distribution Function of Random Variable]]

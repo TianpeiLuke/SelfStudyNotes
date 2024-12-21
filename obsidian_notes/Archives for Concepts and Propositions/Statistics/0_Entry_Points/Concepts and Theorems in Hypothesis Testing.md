@@ -37,7 +37,7 @@ date of note: 2024-06-01
 
 ### Unbiased Most Powerful Test
 
-- [[Fundamental Lemma of Neyman and Pearson.]]
+- [[Fundamental Lemma of Neyman and Pearson]]
 - [[Unbiased Most Powerful Test]]
 
 ### Test in Parametric Models
@@ -57,6 +57,14 @@ date of note: 2024-06-01
 ## Basics of Statistics and Estimation
 
 - [[Concepts and Theorems in Statistical Inference and Decision Theory]]
+
+## Causal Analysis
+
+- [[Concepts and Theorems in Causal Analysis and Causal Machine Learning]]
+- [[Ladder of Causation from Association to Counterfactual]]
+- [[Interventions in Causal Inference]]
+- [[Counterfactual in Causal Inference]]
+- [[Fundamental Problem of Causal Inference]]
 
 
 ## Explanation

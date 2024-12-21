@@ -25,6 +25,10 @@ date of note: 2024-12-21
 
 ## Explanation
 
+>[!important]
+> **Ops** stands for **Developments and Operations**
+
+
 
 
 

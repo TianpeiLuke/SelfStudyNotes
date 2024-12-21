@@ -330,6 +330,16 @@ date of note: 2024-06-01
 ## Explanation
 
 
+## MLOps and Automated System
+
+- [[DevOps]]
+- [[Continuous Integration or CI in DevOps and MLOps]]
+- [[Continuous Delivery or CD in DevOps and MLOps]]
+- [[DataOps]]
+- [[MLOps]]
+- [[Feature Store]]
+- [[Maturity Model as MLOps Sophistication Level]]
+
 
 
 

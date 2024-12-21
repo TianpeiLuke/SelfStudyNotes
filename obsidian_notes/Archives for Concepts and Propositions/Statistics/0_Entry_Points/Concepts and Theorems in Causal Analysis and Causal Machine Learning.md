@@ -82,10 +82,12 @@ date of note: 2024-07-25
 
 ### Randomized Controlled Trial and Hypothesis Testing
 
+- [[Concepts and Theorems in Hypothesis Testing]]
 - [[Randomized Controlled Trial or RCT]]
 - [[Hypothesis Testing Problem]]
 - [[Power and Size of Test]]
 - [[p-Value of Test]]
+- [[Fundamental Lemma of Neyman and Pearson]]
 
 
 ### Causal Estimation

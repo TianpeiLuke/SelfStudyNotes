@@ -23,7 +23,7 @@ date of note: 2024-06-24
 -----------
 ##  Recommended Notes and References
 
-- [[Fundamental Lemma of Neyman and Pearson.]]
+- [[Fundamental Lemma of Neyman and Pearson]]
 - [[Power and Size of Test]]
 
 

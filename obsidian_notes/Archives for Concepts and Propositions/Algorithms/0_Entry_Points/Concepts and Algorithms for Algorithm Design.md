@@ -296,6 +296,7 @@ date of note: 2024-09-16
 ##  Recommended Notes and References
 
 
+- [[Algorithms Exercise Entry Point]]
 
 - [[Introduction to Algorithms by Cormen]]
 - [[Algorithm Design Manual by Skiena]]

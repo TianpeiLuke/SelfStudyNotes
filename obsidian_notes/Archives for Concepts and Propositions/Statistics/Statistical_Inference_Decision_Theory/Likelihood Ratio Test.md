@@ -23,7 +23,7 @@ date of note: 2024-06-24
 -----------
 ##  Recommended Notes and References
 
-- [[Fundamental Lemma of Neyman and Pearson.]]
+- [[Fundamental Lemma of Neyman and Pearson]]
 
 
 - [[All of Statistics A Concise Course by Wasserman]]
