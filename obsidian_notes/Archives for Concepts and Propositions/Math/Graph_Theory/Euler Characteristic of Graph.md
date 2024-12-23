@@ -22,7 +22,7 @@ date of note: 2024-12-23
 
 - [[Euler Characteristic of Riemannian Manifold]]
 - [[Gauss-Bonnet Formula]]
-- [[Gauss-Bonnet Theorem or Theorema Egregium]]
+- [[Gauss-Bonnet Theorem]]
 
 
 

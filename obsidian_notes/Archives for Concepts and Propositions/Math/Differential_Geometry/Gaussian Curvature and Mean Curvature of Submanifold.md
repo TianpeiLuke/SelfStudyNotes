@@ -16,10 +16,12 @@ date of note: 2024-05-20
 
 
 
+
+
 ## Explanation
 
 
-
+- [[Theorema Egregium and invariance of Gaussian Curvature]]
 
 
 -----------
@@ -27,7 +29,7 @@ date of note: 2024-05-20
 
 
 - [[Principle Curvature of Submanifold]]
-- [[Gauss-Bonnet Theorem or Theorema Egregium]]
+- [[Gauss-Bonnet Theorem]]
 
 
 - [[Embedded Submanifold]]

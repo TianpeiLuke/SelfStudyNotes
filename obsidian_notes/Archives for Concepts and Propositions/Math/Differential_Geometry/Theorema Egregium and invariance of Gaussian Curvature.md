@@ -20,6 +20,7 @@ date of note: 2024-05-20
 - [[Geodesic Polygon on Riemannian Manifold]]
 - [[Gaussian Curvature and Mean Curvature of Submanifold]]
 - [[Gauss-Bonnet Formula]]
+- [[Gauss-Bonnet Theorem]]
 
 ## Explanation
 

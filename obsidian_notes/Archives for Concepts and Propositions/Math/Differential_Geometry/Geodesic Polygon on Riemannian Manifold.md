@@ -26,7 +26,7 @@ date of note: 2024-05-20
 ##  Recommended Notes and References
 
 
-- [[Gauss-Bonnet Theorem or Theorema Egregium]]
+- [[Gauss-Bonnet Theorem]]
 - [[Gaussian Curvature and Mean Curvature of Submanifold]]
 - [[Geodesic Curvature]]
 - [[Riemannian Metric and Riemannian Manifold]]

@@ -138,9 +138,11 @@ date of note: 2024-05-20
 - [[Shape Operator of Submanifold]]
 - [[Principle Curvature of Submanifold]]
 - [[Gaussian Curvature and Mean Curvature of Submanifold]]
+- [[Theorema Egregium and invariance of Gaussian Curvature]]
 - [[Minimal Hypersurface]]
 - [[Plane Section]]
 - [[Sectional Curvature of Plane Section]]
+
 
 ### Gauss-Bonnet Theorem
 
@@ -148,7 +150,7 @@ date of note: 2024-05-20
 - [[Gauss-Bonnet Formula]]
 - [[Euler Characteristic of Riemannian Manifold]]
 - [[Euler Characteristic of Graph]]
-- [[Gauss-Bonnet Theorem or Theorema Egregium]]
+- [[Gauss-Bonnet Theorem]]
 
 
 ## Explanation
