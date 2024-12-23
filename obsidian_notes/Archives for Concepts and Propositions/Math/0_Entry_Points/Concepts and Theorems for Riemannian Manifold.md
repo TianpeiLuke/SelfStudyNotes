@@ -147,7 +147,8 @@ date of note: 2024-05-20
 - [[Geodesic Polygon on Riemannian Manifold]]
 - [[Gauss-Bonnet Formula]]
 - [[Euler Characteristic of Riemannian Manifold]]
-- [[Gauss-Bonnet Theorem]]
+- [[Euler Characteristic of Graph]]
+- [[Gauss-Bonnet Theorem or Theorema Egregium]]
 
 
 ## Explanation

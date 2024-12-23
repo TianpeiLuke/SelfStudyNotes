@@ -107,6 +107,13 @@ date of note: 2024-07-14
 - [[Clique Tree and Graph and Running Intersection Property]]
 - [[Maximum Bipartite Matching]]
 
+### Euler Characteristic
+
+- [[Euler Characteristic of Graph]]
+- [[Euler Characteristic of Riemannian Manifold]]
+- [[Gauss-Bonnet Formula]]
+- [[Gauss-Bonnet Theorem or Theorema Egregium]]
+
 
 ### Network Flows
 

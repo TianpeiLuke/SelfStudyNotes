@@ -14,8 +14,14 @@ date of note: 2024-05-20
 >[!important]
 >**Name**: 
 
+>[!important]
+>$$\int_{\mathcal{M}}K\,dA + \int_{\partial \mathcal{M}}\,k_{g}\,ds = 2\pi \chi(\mathcal{M})$$
 
-- [[Gauss-Bonnet Theorem]]
+- [[Gauss-Bonnet Theorem or Theorema Egregium]]
+- [[Gaussian Curvature and Mean Curvature of Submanifold]]
+- [[Geodesic Curvature]]
+- [[Euler Characteristic of Graph]]
+
 
 ## Explanation
 

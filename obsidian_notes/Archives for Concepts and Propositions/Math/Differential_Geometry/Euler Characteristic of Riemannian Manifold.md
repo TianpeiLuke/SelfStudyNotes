@@ -16,6 +16,10 @@ date of note: 2024-05-20
 
 
 
+- [[Euler Characteristic of Graph]]
+- [[Gauss-Bonnet Formula]]
+- [[Gauss-Bonnet Theorem or Theorema Egregium]]
+
 ## Explanation
 
 

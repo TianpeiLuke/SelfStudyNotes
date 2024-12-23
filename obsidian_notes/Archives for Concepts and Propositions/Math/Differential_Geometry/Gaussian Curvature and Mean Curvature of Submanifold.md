@@ -27,7 +27,7 @@ date of note: 2024-05-20
 
 
 - [[Principle Curvature of Submanifold]]
-- [[Gauss-Bonnet Theorem]]
+- [[Gauss-Bonnet Theorem or Theorema Egregium]]
 
 
 - [[Embedded Submanifold]]
