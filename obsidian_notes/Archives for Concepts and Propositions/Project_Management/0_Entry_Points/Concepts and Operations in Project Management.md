@@ -13,7 +13,7 @@ date of note: 2024-12-27
 ### Foundations of Project Management
 
 - [[Project Definition]]
-
+- [[Project Management Definition and Purpose]]
 
 
 
