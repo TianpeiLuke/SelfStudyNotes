@@ -210,3 +210,6 @@ date of note: 2024-06-01
 
 - Lecture
 	- MIT Open Course [Dynamic Programming and Stochastic Control](https://ocw.mit.edu/courses/6-231-dynamic-programming-and-stochastic-control-fall-2015/)
+
+- Coursera
+	- [Reinforcement Learning Specialization by University of Alberta](https://www.coursera.org/specializations/reinforcement-learning)

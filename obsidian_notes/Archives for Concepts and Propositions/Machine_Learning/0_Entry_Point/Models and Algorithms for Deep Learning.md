@@ -293,4 +293,7 @@ date of note: 2024-06-01
 
 - [[Artificial Intelligence Modern Approach by Russell]]
 
+- Coursera
+	- [Deep Learning Specialization by DeepLearning.AI](https://www.coursera.org/specializations/deep-learning)
+	- [Neural Networks by Geoffrey Hinton](https://www.coursera.org/learn/neural-networks)
 

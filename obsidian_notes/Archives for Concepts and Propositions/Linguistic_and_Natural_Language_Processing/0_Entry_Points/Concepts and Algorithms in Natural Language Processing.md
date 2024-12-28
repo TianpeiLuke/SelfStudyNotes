@@ -304,3 +304,6 @@ date of note: 2024-09-13
 
 - Lectures
 	- MIT Open Course [Advanced Natural Language Processing Fall 2005](https://ocw.mit.edu/courses/6-864-advanced-natural-language-processing-fall-2005/)
+
+- Coursera
+	- [Natural Language Processing Specialization by DeepLearning.AI](https://www.coursera.org/specializations/natural-language-processing)

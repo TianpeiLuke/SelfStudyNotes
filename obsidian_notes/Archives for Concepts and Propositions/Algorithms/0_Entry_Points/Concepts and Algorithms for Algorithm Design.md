@@ -305,3 +305,6 @@ date of note: 2024-09-16
 
 - Lectures
 	- MIT Open Course [Introduction to Algorithms Spring 2020](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/)
+
+- Coursera
+	- [Algorithms Specialization by Stanford University](https://www.coursera.org/specializations/algorithms)

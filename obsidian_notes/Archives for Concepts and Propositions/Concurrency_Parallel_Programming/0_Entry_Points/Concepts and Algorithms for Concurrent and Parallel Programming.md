@@ -233,3 +233,6 @@ date of note: 2024-12-18
 - [[Introduction to Algorithms by Cormen]]
 - [[Algorithm Design Manual by Skiena]]
 - [[Matrix Computations by Golub]]
+
+- Coursera
+	- [GPU Programming Specialization by John Hopkins University](https://www.coursera.org/specializations/gpu-programming)

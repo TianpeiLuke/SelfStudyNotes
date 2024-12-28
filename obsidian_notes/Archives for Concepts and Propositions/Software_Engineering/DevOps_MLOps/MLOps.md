@@ -32,6 +32,12 @@ date of note: 2024-12-21
 
 
 
+
+
+
 -----------
 ##  Recommended Notes and References
 
+
+- Coursera
+	- [DevOps, DataOps, MLOps by Duke University](https://www.coursera.org/learn/devops-dataops-mlops-duke)
