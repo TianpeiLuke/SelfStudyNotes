@@ -24,6 +24,10 @@ date of note: 2024-12-21
 - [[DevOps]]
 - [[Continuous Delivery or CD in DevOps and MLOps]]
 
+>[!important] Definition
+>**Continuous integration (CI)** is an *automated software development* practice where 
+>- developers frequently *merge code changes* into a *shared repository*. 
+>- *Changes* are then *automatically built and tested* to catch issues early.
 
 
 ## Explanation
@@ -33,7 +37,11 @@ date of note: 2024-12-21
 
 ### GIT
 
-
+- [[Create and Checkout to Local Branch]]
+- [[Add URL and Push to Remote Git Repository]]
+- [[Amending Git Comments]]
+- [[Revert Previous Commit in Git Repo]]
+- [[Untrack Files in Git Repository]]
 
 
 

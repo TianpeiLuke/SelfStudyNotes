@@ -24,11 +24,13 @@ date of note: 2024-12-10
 - [[MLOps]]
 - [[Maturity Model as MLOps Sophistication Level]]
 - [[Feature Store]]
-
+- [[Infrastructure as Code for Continuous Delivery]]
+- [[End-to-End MLOps]]
 
 
 ### Design Principles
 
+- 
 
 
 
@@ -39,8 +41,22 @@ date of note: 2024-12-10
 
 ### Concurrency
 
+- [[Concepts and Algorithms for Concurrent and Parallel Programming]]
 
 
+### Microservices
+
+- [[Microservice Definition]]
+- [[Infrastructure as Code for Continuous Delivery]]
+
+- [[Container as Microservice]]
+- [[Container Registry]]
+- [[Container Orchestration]]
+- [[Distroless Container]]
+
+- [[Flask as Lightweighted Python Web App Framework]]
+- [[Makefile File for Project Management and Automation]]
+- [[Requirement File for Python Package Dependency Management]]
 
 
 

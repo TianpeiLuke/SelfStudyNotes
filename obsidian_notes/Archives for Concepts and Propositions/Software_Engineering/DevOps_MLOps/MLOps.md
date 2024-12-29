@@ -20,10 +20,26 @@ date of note: 2024-12-21
 
 - [[DevOps]]
 
+>[!important] Definition
+>**MLOps platform** is a specialized software solution and workflow for operationalizing machine learning models. 
+>- MLOps platforms have capabilities like 
+>	- *data labeling*, 
+>	- *model monitoring*, 
+>	- *feature stores*, 
+>	- and *optimized model serving*.
+
+^a91989
 
 - [[Continuous Integration or CI in DevOps and MLOps]]
 - [[Maturity Model as MLOps Sophistication Level]]
 - [[Feature Store]]
+
+
+### End-to-End MLOps
+
+![[End-to-End MLOps#^3edbf6]]
+
+- [[End-to-End MLOps]]
 
 
 ## Explanation
