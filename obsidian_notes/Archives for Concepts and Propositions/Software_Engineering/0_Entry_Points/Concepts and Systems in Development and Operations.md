@@ -50,6 +50,7 @@ date of note: 2024-12-10
 - [[Infrastructure as Code for Continuous Delivery]]
 
 - [[Container as Microservice]]
+- [[Container Images]]
 - [[Container Registry]]
 - [[Container Orchestration]]
 - [[Distroless Container]]

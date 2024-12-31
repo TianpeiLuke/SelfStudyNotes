@@ -81,6 +81,7 @@ date of note: 2024-06-01
 - [[Conditional Likelihood Function]]
 - [[Mixture Family of Distributions]]
 
+
 ### Least Square Estimation
 
 - [[Regression Problem]]
@@ -91,6 +92,8 @@ date of note: 2024-06-01
 - [[Algorithms for Least Square Estimation Problem]]
 - [[Best Linear Unbiased Prediction]]
 - [[Gauss–Markov Theorem]]
+
+- [[One-Way Analysis of Variance or ANOVA]]
 
 - [[Partial Correlation]]
 - [[Non-Parametric Least Square Estimation]]

@@ -12,43 +12,26 @@ date of note: 2024-12-29
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Container Images
 
->[!important] Definition
->**Container** is a *standardized, lightweight* software package that bundles together 
->- an *application's code* 
->- and *dependencies* 
->  
->to *run reliably* in any environment.
+![[Container as Microservice#^0d486a]]
 
-^0d486a
-
+- [[Container as Microservice]]
 - [[Microservice Definition]]
 - [[Infrastructure as Code for Continuous Delivery]]
 
-### Container Images
+>[!important] Definition
+>**Container Image** is a *lightweight*, *stand-alone*, *executable* software package allowing code to run quickly and reliably *across environments*.
 
-![[Container Images#^3b1eef]]
+^3b1eef
 
-- [[Container Images]]
-
-### Container Registry
-
-![[Container Registry#^3b1eef]]
-
-- [[Container Registry]]
-
-### Container Orchestration
-
-![[Container Orchestration#^3b1eef]]
-
-- [[Container Orchestration]]
+- [[Continuous Integration or CI in DevOps and MLOps]]
+- [[Continuous Delivery or CD in DevOps and MLOps]]
 
 
-### Distroless Container
 
 
-**Distroless Container** - Optimized container image containing only an app, run-time language, and essential system libraries, omitting shells, package managers, etc. Improves security.
+
 
 
 ## Explanation

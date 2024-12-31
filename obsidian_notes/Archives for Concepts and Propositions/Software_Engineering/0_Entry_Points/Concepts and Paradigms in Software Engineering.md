@@ -15,18 +15,17 @@ date of note: 2024-12-10
 
 - [[Concepts and Algorithms for Algorithm Design]]
 
-### DevOps, DataOps and MLOps
-
-- [[DevOps]]
-- [[Continuous Integration or CI in DevOps and MLOps]]
-- [[Continuous Delivery or CD in DevOps and MLOps]]
-- [[DataOps]]
-- [[MLOps]]
-- [[Maturity Model as MLOps Sophistication Level]]
-- [[Feature Store]]
+### Software Development Process
 
 
-### Design Patterns
+
+### Specifications in Software Development
+
+
+### High Level Design Patterns 
+
+
+### Low Level Design Patterns
 
 #### Creational Patterns
 
@@ -58,15 +57,27 @@ date of note: 2024-12-10
 
 
 
-
 ### Concurrency
 
 
 
 
+### DevOps, DataOps and MLOps
+
+- [[DevOps]]
+- [[Continuous Integration or CI in DevOps and MLOps]]
+- [[Continuous Delivery or CD in DevOps and MLOps]]
+- [[DataOps]]
+- [[MLOps]]
+- [[Maturity Model as MLOps Sophistication Level]]
+- [[Feature Store]]
+
+
 
 
 ## Project Management
+
+- [[Concepts and Operations in Project Management]]
 
 - [[The Lean Product Playbook Book Summary]]
 - [[Getting Things Done Book Summary]]
