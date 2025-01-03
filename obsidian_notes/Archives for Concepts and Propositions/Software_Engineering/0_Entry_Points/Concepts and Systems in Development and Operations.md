@@ -56,6 +56,7 @@ date of note: 2024-12-10
 - [[Container Orchestration]]
 - [[Distroless Container]]
 
+- [[Docker Container]]
 - [[Flask as Lightweighted Python Web App Framework]]
 - [[Makefile File for Project Management and Automation]]
 - [[Requirement File for Python Package Dependency Management]]

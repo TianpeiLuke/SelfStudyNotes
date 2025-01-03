@@ -80,6 +80,10 @@ date of note: 2024-12-29
 >- **migration** to container requires additional costs
 >- hard to **estimate the right size** of containers for specific scenarios.
 
+### Virtual Machine vs. Containers
+
+![[VM_vs_container.png]]
+
 
 ## Docker Container
 
