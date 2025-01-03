@@ -6,7 +6,7 @@ keywords:
   - project_management
   - project_manager
 topics:
-  - project_managemanet
+  - project_management
 name: Project Manager Role and Responsibility
 date of note: 2024-12-27
 ---

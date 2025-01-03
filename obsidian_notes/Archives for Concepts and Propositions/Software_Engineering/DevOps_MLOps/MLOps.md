@@ -2,6 +2,8 @@
 tags:
   - concept
   - software_engineering/operational_excellence
+  - machine_learning/ml_ops
+  - machine_learning/production
 keywords:
   - MLOps
 topics:
@@ -45,6 +47,11 @@ date of note: 2024-12-21
 ## Explanation
 
 
+## Docker Container and Kubernetes
+
+- [[Container as Microservice]]
+- [[Container Orchestration]]
+- [[Container Images]]
 
 
 

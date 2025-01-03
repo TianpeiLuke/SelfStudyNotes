@@ -5,7 +5,7 @@ tags:
 keywords:
   - project_management
 topics:
-  - project_managemanet
+  - project_management
 name: Project Management Definition and Purpose
 date of note: 2024-12-27
 ---

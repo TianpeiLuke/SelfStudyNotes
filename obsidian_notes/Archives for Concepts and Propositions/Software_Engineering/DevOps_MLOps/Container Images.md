@@ -3,9 +3,11 @@ tags:
   - concept
   - software_engineering/operational_excellence
   - software_development/container
-keywords: 
-topics: 
-name: 
+keywords:
+  - container_image
+topics:
+  - software_development/container_microservice
+name: Container Images
 date of note: 2024-12-29
 ---
 

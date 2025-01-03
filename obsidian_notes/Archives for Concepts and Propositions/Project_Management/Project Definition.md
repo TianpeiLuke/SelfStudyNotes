@@ -5,7 +5,7 @@ tags:
 keywords:
   - project_definition
 topics:
-  - project_managemanet
+  - project_management
 name: Project Definition
 date of note: 2024-12-27
 ---

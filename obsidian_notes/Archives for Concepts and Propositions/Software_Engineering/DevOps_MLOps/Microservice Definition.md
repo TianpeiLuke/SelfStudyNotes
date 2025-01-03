@@ -2,6 +2,7 @@
 tags:
   - concept
   - software_engineering/operational_excellence
+  - machine_learning/ml_ops
 keywords:
   - MLOps
   - micro_service

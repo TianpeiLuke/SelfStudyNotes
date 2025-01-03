@@ -1,11 +1,12 @@
 ---
 tags:
   - concept
-  - data_engineering/data_ops
+  - machine_learning/ml_ops
+  - machine_learning/production
 keywords: 
 topics: 
 name: 
-date of note: 2024-12-29
+date of note: 2025-01-02
 ---
 
 ## Concept Definition
@@ -13,6 +14,9 @@ date of note: 2024-12-29
 >[!important]
 >**Name**: 
 
+
+
+- [[MLOps]]
 
 
 ## Explanation

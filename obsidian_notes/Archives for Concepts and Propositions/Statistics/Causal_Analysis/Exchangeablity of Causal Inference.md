@@ -15,11 +15,16 @@ date of note: 2024-12-19
 >**Name**: 
 
 
+- [[Ignorability of Causal Inference]]
+- [[Conditional Exchangeability of Causal Inference]]
+
 
 ## Explanation
 
 
 
+- [[No interference of Causal Inference]]
+- [[Stable Unit Treatment Value Assumption or SUTVA of Causal Inference]]
 
 
 -----------

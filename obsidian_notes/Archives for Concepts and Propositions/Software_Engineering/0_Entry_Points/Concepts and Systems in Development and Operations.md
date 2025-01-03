@@ -48,6 +48,7 @@ date of note: 2024-12-10
 
 - [[Microservice Definition]]
 - [[Infrastructure as Code for Continuous Delivery]]
+- [[Kubernetes as Microservice]]
 
 - [[Container as Microservice]]
 - [[Container Images]]
@@ -58,6 +59,10 @@ date of note: 2024-12-10
 - [[Flask as Lightweighted Python Web App Framework]]
 - [[Makefile File for Project Management and Automation]]
 - [[Requirement File for Python Package Dependency Management]]
+
+### AutoML
+
+- [[AutoML]]
 
 
 
@@ -81,4 +86,6 @@ date of note: 2024-12-10
 ##  Recommended Notes and References
 
 
+- Coursera
+	- [DevOps on AWS Specialization](https://www.coursera.org/specializations/aws-devops)
 - [[Design Patterns Book Summary]]

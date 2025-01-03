@@ -19,6 +19,10 @@ date of note: 2024-12-19
 ## Explanation
 
 
+- [[Ignorability of Causal Inference]]
+- [[Exchangeablity of Causal Inference]]
+- [[Conditional Exchangeability of Causal Inference]]
+- [[Stable Unit Treatment Value Assumption or SUTVA of Causal Inference]]
 
 
 

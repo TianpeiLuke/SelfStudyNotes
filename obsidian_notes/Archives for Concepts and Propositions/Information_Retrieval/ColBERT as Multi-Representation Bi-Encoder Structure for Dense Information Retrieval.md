@@ -37,7 +37,7 @@ date of note: 2024-05-12
 >	- After the linear layer, the document encoder has an additional **filter**, which *filters out* the embedding corresponding to the *punctuation symbols*.
 >	- This filter reduce the number of embeddings.
 >- **Late Interaction**:
->	- The *late interaction* computes the *relevance score* between encoded query tokens and document tokens via the *sum* of *maximum similarity* between *each query vector* and *all document vectors*
+>	- The *late interaction* computes the *relevance score* between encoded query tokens and document tokens via the *sum* of *maximum similarity* between *each query vector* and *all document vectors*.
 >
 >
 >Specifically, given the *query* $$q = q^{0}q^{1}\,{}\ldots{}\,q^{l}$$ and *document* $$d = d^{0}d^{1}\,{}\ldots{}\,d^{n},$$ the **ColBERT** computes the *bags of embeddings* in the following ways:
@@ -71,7 +71,6 @@ date of note: 2024-05-12
 
 - [[Contrastive Learning]]
 - [[Representation Learning]]
-
 - [[Retrieval Augmented Generation]]
 
 
@@ -80,8 +79,10 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
+
 - [[Dense Text Retrieval with Pretrained Language Models]]
 - [[Information Retrieval]]
+- [[Masked Language Modeling as Language Model Training Task]]
 - [[Large Language Model and Pretrained Language Models]]
 
 - [[Introduction to Information Retrieval by Manning]]

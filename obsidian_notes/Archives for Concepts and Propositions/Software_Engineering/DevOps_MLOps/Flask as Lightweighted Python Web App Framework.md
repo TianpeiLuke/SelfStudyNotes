@@ -43,6 +43,9 @@ date of note: 2024-12-21
 ##  Recommended Notes and References
 
 
+- Documentation
+	- [Flask documentation](https://flask.palletsprojects.com/en/stable/)
+	- [Flask Quickstart](https://flask.palletsprojects.com/en/stable/quickstart/)
 
 - Coursera
 	- [DevOps, DataOps, MLOps by Duke University](https://www.coursera.org/learn/devops-dataops-mlops-duke)

@@ -3,16 +3,18 @@ tags:
   - concept
   - software_engineering/operational_excellence
   - software_development/container
-keywords: 
-topics: 
-name: 
+keywords:
+  - container_orchestration
+topics:
+  - software_development/container_microservice
+name: Container Orchestration
 date of note: 2024-12-29
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Container Orchestration
 
 ![[Container as Microservice#^0d486a]]
 

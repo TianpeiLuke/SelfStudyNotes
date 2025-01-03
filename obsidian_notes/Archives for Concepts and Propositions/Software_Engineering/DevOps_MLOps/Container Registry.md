@@ -3,16 +3,18 @@ tags:
   - concept
   - software_engineering/operational_excellence
   - software_development/container
-keywords: 
-topics: 
-name: 
+keywords:
+  - container_registry
+topics:
+  - software_development/container_microservice
+name: Container Registry
 date of note: 2024-12-29
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Container Registry
 
 ![[Container as Microservice#^0d486a]]
 
