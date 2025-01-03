@@ -30,6 +30,7 @@ date of note: 2024-12-29
 
 ![[container_concept.png]]
 
+
 ### Container Images
 
 ![[Container Images#^3b1eef]]
@@ -80,17 +81,11 @@ date of note: 2024-12-29
 >- hard to **estimate the right size** of containers for specific scenarios.
 
 
+## Docker Container
 
-## AWS ML Docker Containers
+- [[Docker Container]]
 
-- [[Amazon SageMaker Python SDK 2 Deploy a Pre-Trained Model]]
-- [[Amazon SageMaker Python SDK 3 Frameworks]]
-- [[Amazon SageMaker Python SDK 4.1 BYO Processing Container]]
-- [[Amazon SageMaker Example Building Your Own Container 0 Overview]]
-- [[Amazon SageMaker Example Building Your Own Container 1 Docker]]
 
-- [[Pipeline for MODS Deep Learning training]]
-- [[Pipeline for MODS training]]
 
 
 
