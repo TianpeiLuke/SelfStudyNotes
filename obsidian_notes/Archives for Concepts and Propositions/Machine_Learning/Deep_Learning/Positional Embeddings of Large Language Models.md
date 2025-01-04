@@ -38,7 +38,7 @@ date of note: 2024-11-26
 
 ### Rotary Positional Embedding
 
-
+- [[Rotary Positional Embedding for Large Language Models]]
 - [[touvronLlamaOpenFoundation2023]]
 - J. Su, Y. Lu, S. Pan, B. Wen, and Y. Liu, “Roformer: Enhanced transformer with rotary position embedding,” *arXiv preprint* arXiv:2104.09864, 2021 [[suRoFormerEnhancedTransformer2024]]
 

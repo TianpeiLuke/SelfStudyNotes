@@ -51,7 +51,7 @@ date of note: 2024-10-24
 
 ## Deep Ensemble Learning
 
-- [[Mixture of Experts as Deep Ensemble Learning]]
+- [[Mixture of Experts or MoE as Deep Ensemble Learning]]
 - [[Bagging and Model Averaging]]
 - [[Ensemble Learning]]
 

@@ -232,7 +232,7 @@ date of note: 2024-06-01
 ### Bayesian Neural Network and Deep Ensemble Learning
 
 - [[Bayesian Neural Network]]
-- [[Mixture of Experts as Deep Ensemble Learning]]
+- [[Mixture of Experts or MoE as Deep Ensemble Learning]]
 
 
 ### Graph-based Neural Network
@@ -248,6 +248,11 @@ date of note: 2024-06-01
 - [[Transformer Network]]
 - [[Positional Embeddings of Large Language Models]]
 - [[Flash Attention Mechanism for Large Language Model]]
+
+- [[Sparsely-Gated Mixture-of-Experts or MoE Layer]]
+- [[Mixture of Experts or MoE as Deep Ensemble Learning]]
+- [[Switch Transformer via Mixture of Expert Layer]]
+
 
 
 ### Pretrained Language Model and Large Language Models

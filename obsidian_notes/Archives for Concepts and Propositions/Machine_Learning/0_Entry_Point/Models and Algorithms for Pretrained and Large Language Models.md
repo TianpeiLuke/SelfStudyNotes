@@ -37,8 +37,15 @@ date of note: 2024-06-01
 - [[Attention Mechanism in Neural Network]]
 - [[Transformer Network]]
 - [[Positional Embeddings of Large Language Models]]
+- [[Rotary Positional Embedding for Large Language Models]]
 - [[Flash Attention Mechanism for Large Language Model]]
-- [[Mixture of Experts as Deep Ensemble Learning]]
+
+### Mixture-of-Experts
+
+- [[Sparsely-Gated Mixture-of-Experts or MoE Layer]]
+- [[Mixture of Experts or MoE as Deep Ensemble Learning]]
+- [[Switch Transformer via Mixture of Expert Layer]]
+
 
 ### Pretrained Language Model Architecture
 

@@ -102,7 +102,7 @@ date of note: 2024-07-28
 ### Deep Ensemble Learning
 
 - [[Dropout for Deep Learning]]
-- [[Mixture of Experts as Deep Ensemble Learning]]
+- [[Mixture of Experts or MoE as Deep Ensemble Learning]]
 
 
 ## Explanation
