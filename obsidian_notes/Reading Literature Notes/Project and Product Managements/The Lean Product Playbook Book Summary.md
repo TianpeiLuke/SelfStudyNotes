@@ -125,6 +125,7 @@ year: 2015
 ##  Recommended Notes
 
 - Lean Product Management fits Amazon [[Leadership Principle Customer Obsession]]
+- [[Operational Excellence or OpEx]]
 
 
 [^1]: Check **the Lean Startup Principles** from the book of  *The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses* by Eric Ries. 2011. [Amazon link](https://www.amazon.com/Lean-Startup-Entrepreneurs-Continuous-Innovation/dp/0307887898/?_encoding=UTF8&pd_rd_w=CksZ9&content-id=amzn1.sym.dde481d7-92dc-42ce-a703-f1bc175e21c6%3Aamzn1.symc.d10b1e54-47e4-4b2a-b42d-92fe6ebbe579&pf_rd_p=dde481d7-92dc-42ce-a703-f1bc175e21c6&pf_rd_r=5TH8BMG86QCJG15FE40Q&pd_rd_wg=yjppH&pd_rd_r=5a3415e2-c68d-4dea-9425-5f9574d7ade1&ref_=pd_gw_ci_mcx_mr_hp_atf_m)
