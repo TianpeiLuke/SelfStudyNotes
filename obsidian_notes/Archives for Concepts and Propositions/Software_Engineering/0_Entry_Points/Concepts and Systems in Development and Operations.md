@@ -51,12 +51,15 @@ date of note: 2024-12-10
 - [[Kubernetes as Microservice]]
 
 - [[Container as Microservice]]
-- [[Container Images]]
-- [[Container Registry]]
+- [[Docker Container]]
+- [[Docker Container Daemon]]
+- [[Docker Container Images]]
+- [[Dockerfile as Instruction to Build Docker Image]]
+- [[Docker Container Image Registry]]
 - [[Container Orchestration]]
 - [[Distroless Container]]
 
-- [[Docker Container]]
+
 - [[Flask as Lightweighted Python Web App Framework]]
 - [[Makefile File for Project Management and Automation]]
 - [[Requirement File for Python Package Dependency Management]]

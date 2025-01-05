@@ -51,7 +51,7 @@ date of note: 2024-12-21
 
 - [[Container as Microservice]]
 - [[Container Orchestration]]
-- [[Container Images]]
+- [[Docker Container Images]]
 
 
 

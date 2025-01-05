@@ -4,17 +4,19 @@ tags:
   - software_engineering/operational_excellence
   - software_development/container
 keywords:
-  - container_image
+  - container_registry
+  - docker_image_registry
+  - image_registry
 topics:
   - software_development/container_microservice
-name: Container Images
+name: Docker Container Registry
 date of note: 2024-12-29
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Container Images
+>**Name**: Docker Container Image Registry
 
 ![[Container as Microservice#^0d486a]]
 
@@ -22,16 +24,33 @@ date of note: 2024-12-29
 - [[Microservice Definition]]
 - [[Infrastructure as Code for Continuous Delivery]]
 
+### Container Registry
+
 >[!important] Definition
->**Container Image** is a *lightweight*, *stand-alone*, *executable* software package allowing code to run quickly and reliably *across environments*.
+>**Container Registry** is a repository for 
+>- *storing*, 
+>- *sharing* 
+>- and *deploying container images*, 
+>
+>often integrated into *CI/CD pipelines*. 
+>
+>Examples: Docker Hub, AWS ECR.
 
 ^3b1eef
 
 - [[Continuous Integration or CI in DevOps and MLOps]]
 - [[Continuous Delivery or CD in DevOps and MLOps]]
 
+>[!important] Definition
+>An **image registry** is a repository where you can store *container images*. 
+>- You can store the images either *publicly* or *privately*. 
+>- From the repository, images can be *pulled* and *deployed*, or used by other developers.
 
+![[docker_container_images_registry.png]]
 
+![[Docker Container#^3dfe41]]
+
+- [[Docker Container]]
 
 
 
