@@ -3,8 +3,11 @@ tags:
   - concept
   - software_engineering/operational_excellence
   - software_development/container
+  - docker/images
+  - docker/dockerfile
 keywords:
   - container_image
+  - dockerfile
 topics:
   - software_development/container_microservice
 name: Docker Container Images

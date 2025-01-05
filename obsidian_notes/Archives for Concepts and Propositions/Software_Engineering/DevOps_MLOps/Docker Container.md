@@ -2,6 +2,7 @@
 tags:
   - concept
   - software_development/container
+  - docker/concepts
 keywords:
   - docker_container
 topics:

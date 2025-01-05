@@ -3,6 +3,7 @@ tags:
   - concept
   - software_engineering/operational_excellence
   - software_development/container
+  - docker/concepts
 keywords:
   - container_registry
   - docker_image_registry
