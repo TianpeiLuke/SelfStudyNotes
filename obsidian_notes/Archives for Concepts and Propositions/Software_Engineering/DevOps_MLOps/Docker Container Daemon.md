@@ -43,7 +43,7 @@ date of note: 2025-01-02
 ![[Docker Container Images#^0a8ba3]]
 
 - [[Docker Container Images]]
-- [[Docker Container Image Registry]]
+- [[Docker Container Image Registry and DockerHub]]
 - [[Container Orchestration]]
 
 

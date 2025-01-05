@@ -31,7 +31,7 @@ date of note: 2025-01-02
 >		- or *stop* your containers. `docker stop`
 >- The **Docker daemon**: the *server* that running on the machine that *carries out the request*
 >	- The Docker daemon is installed on a *host machine*.
->	- The Docker daemon creates and manages the *Docker images* on your behalf.
+>	- The Docker daemon *creates and manages* the *Docker images* on your behalf.
 >	- The purpose of Docker daemon is to perform the request from client.
 >- and the **Image Registry**.
 >	- The image registry is the place to store **Docker images**.
@@ -44,6 +44,7 @@ date of note: 2025-01-02
 
 - [[Container as Microservice]]
 - [[Docker Container Daemon]]
+- [Docker CLI Reference](https://docs.docker.com/reference/cli/docker/)
 
 ![[docker_container_images_registry.png]]
 
@@ -57,7 +58,7 @@ date of note: 2025-01-02
 ![[Docker Container Images#^0a8ba3]]
 
 - [[Docker Container Images]]
-- [[Docker Container Image Registry]]
+- [[Docker Container Image Registry and DockerHub]]
 - [[Container Orchestration]]
 
 

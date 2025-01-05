@@ -57,13 +57,22 @@ docker container prune
 		- until (`<timestamp>`) - only remove containers created before given timestamp
 		- label (`label=<key>`, `label=<key>=<value>`, `label!=<key>`, or `label!=<key>=<value>`) - only remove containers with (or without, in case `label!=...` is used) the specified labels.
 
+>[!info]
+>A **Docker container** is a running **Docker Image**.
+>
+>**Docker image** includes programs, dependencies, and environments.
+
 
 
 -----------
 ##  Recommended Notes
 
 - [**`docker system prune`**](https://docs.docker.com/engine/reference/commandline/system_prune/) will delete all dangling data (containers, networks, and images). You can remove all unused volumes with the `--volumes` option and remove all unused images (not just dangling) with the `-a` option.
+- [docker base command](https://docs.docker.com/engine/reference/commandline/docker/).
 
+
+- [[Docker Container]]
+- [[Docker Container Images]]
 - You also have:
 	- [`docker container prune`](https://docs.docker.com/engine/reference/commandline/container_prune/)
 	- [`docker image prune`](https://docs.docker.com/engine/reference/commandline/image_prune/)

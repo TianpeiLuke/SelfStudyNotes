@@ -55,7 +55,7 @@ date of note: 2024-12-10
 - [[Docker Container Daemon]]
 - [[Docker Container Images]]
 - [[Dockerfile as Instruction to Build Docker Image]]
-- [[Docker Container Image Registry]]
+- [[Docker Container Image Registry and DockerHub]]
 - [[Container Orchestration]]
 - [[Distroless Container]]
 

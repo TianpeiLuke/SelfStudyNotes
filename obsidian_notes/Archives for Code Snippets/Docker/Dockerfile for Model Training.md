@@ -20,6 +20,7 @@ date of note: 2024-03-27
 >- Finally, we *add the code* that implements our specific algorithm to the container and *set up the right environment* to run under.
 >- Along the way, we *clean up extra space*. This makes the container smaller and faster to start.
 
+- [[Dockerfile Instructions]]
 
 ## Background Knowledge
 ### Location of Dockerfile
@@ -57,9 +58,14 @@ In summary, the two files you will probably want to change for your application 
 
 - The **Dockerfile** *describes the image that we want to build*. You can think of it as describing the *complete operating system installation* of the system that you want to run. A Docker container running is quite a bit lighter than a full operating system, however, because it takes advantage of Linux on the host machine for the basic operations.
 
+- [[Dockerfile Instructions]]
+- [[Dockerfile as Instruction to Build Docker Image]]
+
 ### Building and registering the container
 
 - The following shell code shows how to build the container image using `docker build` and push the container image to ECR using `docker push`. This code is also available as the shell script `container/build-and-push.sh`, which you can run as `build-and-push.sh decision_trees_sample` to build the image `decision_trees_sample`.
+
+- [[Amazon ECR or Elastic Container Registry Create and Push Image]]
 
 
 ## Code
@@ -185,6 +191,10 @@ ENTRYPOINT ["python3"]
 
 -----------
 ##  Recommended Notes
+
+- [[Dockerfile Instructions]]
+- 
+
 
 - Overview of BYO training: [[SageMaker BYO Container Entry point]]
 	- Prepare `train` script in [[SageMaker BYO Container - Pytorch Lightning Training]]

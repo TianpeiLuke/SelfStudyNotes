@@ -15,12 +15,15 @@ date of note: 2024-03-27
 ## Code Snippet Summary
 
 >[!important] 
->The following code build and push docker file to Amazon ECR. It contains three parts:
+>The following code build and push docker file to **Amazon ECR**. It contains three parts:
 >- **Prepare** names and **retrieve** account information from *AWS CLI*
 >- **Create** container repository in **Amazon ECR** if it does not exists in ECR
 >- **Authenticate** ECR login with Docker
 >- **Build** *Docker image* locally 
 >- **Push** it to *Amazon ECR*
+
+- [[Docker Container Image Registry and DockerHub]]
+- [[Docker Container Images]]
 
 ## Background Knowledge
 ### Location of Dockerfile and the `build_and_push` file
@@ -47,9 +50,14 @@ date of note: 2024-03-27
 
 - The **Dockerfile** *describes the image that we want to build*. You can think of it as describing the *complete operating system installation* of the system that you want to run. A Docker container running is quite a bit lighter than a full operating system, however, because it takes advantage of Linux on the host machine for the basic operations.
 
+- [[Dockerfile Instructions]]
+- [[Dockerfile for Model Training]]
+
 ### Building and registering the container
 
 - The following shell code shows how to build the container image using `docker build` and push the container image to [ECR](https://aws.amazon.com/ecr/) using `docker push`. This code is also available as the shell script `container/build-and-push.sh`, which you can run as `build-and-push.sh decision_trees_sample` to build the image `decision_trees_sample`.
+
+
 
 ## Code
 
@@ -94,6 +102,8 @@ docker tag ${algorithm_name} ${fullname}
 docker push ${fullname}
 ```
 
+- [[Dockerfile Instructions]]
+- [docker base command](https://docs.docker.com/engine/reference/commandline/docker/).
 
 ## Interpretation
 
@@ -160,10 +170,11 @@ aws ecr get-login-password --region ${region}|docker login --username AWS --pass
 ```
 
 - `aws ecr`: *Amazon Elastic Container Registry (Amazon ECR)* is a managed container image registry service. Customers can use the familiar Docker CLI, or their preferred client, to push, pull, and manage images. [reference](https://docs.aws.amazon.com/cli/latest/reference/ecr/)
-	- `aws ecr describe-repositories`: Describes image repositories in a registry. [reference](https://docs.aws.amazon.com/cli/latest/reference/ecr/describe-repositories.html)
+	- `aws ecr describe-repositories`: **Describes image repositories** in a registry. [reference](https://docs.aws.amazon.com/cli/latest/reference/ecr/describe-repositories.html)
 		- `--repository-names`: A list of repositories to describe. If this parameter is omitted, then all repositories in a registry are described.
 	- `aws ecr create-repository`: **Creates a repository**. [reference](https://docs.aws.amazon.com/cli/latest/reference/ecr/create-repository.html)
 	- `aws ecr get-login-password`: **To log in to an Amazon ECR registry**. This command *retrieves and displays an authentication token* using the GetAuthorizationToken API that you can use to **authenticate to an Amazon ECR registry**. You can *pass* the authorization token to the *login command* of the *container client* of your preference, such as the **Docker CLI**. [reference](https://docs.aws.amazon.com/cli/latest/reference/ecr/get-login-password.html)
+
 
 - `docker login`: Log in to a registry.  [reference](https://docs.docker.com/reference/cli/docker/login/)
 	- `--username`: 
@@ -272,5 +283,6 @@ docker push ${fullname}
 - [AWS Command Line Interface (CLI)](https://aws.amazon.com/cli/)
 - [AWS CLI Command Reference](https://docs.aws.amazon.com/cli/latest/)
 - [Docker CLI Reference](https://docs.docker.com/reference/cli/docker/)
+- [docker base command](https://docs.docker.com/engine/reference/commandline/docker/).
 
 [^1]: [Amazon ECR private registry](https://docs.aws.amazon.com/AmazonECR/latest/userguide/Registries.html)

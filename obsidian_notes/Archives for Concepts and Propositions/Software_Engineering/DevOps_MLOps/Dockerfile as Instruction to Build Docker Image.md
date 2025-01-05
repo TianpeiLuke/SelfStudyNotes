@@ -87,6 +87,8 @@ date of note: 2024-12-29
 ##  Recommended Notes and References
 
 
+- [AWS CLI Command Reference](https://docs.aws.amazon.com/cli/latest/)
+- [Docker CLI Reference](https://docs.docker.com/reference/cli/docker/)
 - [Dockerfile reference](https://docs.docker.com/engine/reference/builder/)
 - For more information, see [Best Practices for writing Dockerfiles](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/).
 - Coursera

@@ -10,14 +10,14 @@ keywords:
   - image_registry
 topics:
   - software_development/container_microservice
-name: Docker Container Registry
+name: Docker Container Image Registry and DockerHub
 date of note: 2024-12-29
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Docker Container Image Registry
+>**Name**: Docker Container Image Registry and DockerHub
 
 ![[Container as Microservice#^0d486a]]
 
@@ -45,7 +45,20 @@ date of note: 2024-12-29
 >[!important] Definition
 >An **image registry** is a repository where you can store *container images*. 
 >- You can store the images either *publicly* or *privately*. 
->- From the repository, images can be *pulled* and *deployed*, or used by other developers.
+>- From the repository, images can be *pulled* and *deployed*, or used by other *developers*.
+
+- [[DevOps]]
+- [[Docker Container Images]]
+
+>[!important] Definition
+>**Image registries** can be public or private. 
+> 
+> - **Public registries** are useful for providing images that can be used as *base images* for software development. 
+> 	- e.g. [[Amazon SageMaker Python SDK 3 Frameworks]]
+> 	- [Docker Hub](https://hub.docker.com/)
+> 
+> - **Private registries** are useful in situations where you don’t want to expose container images to the public, which is often the case with proprietary software.
+
 
 ![[docker_container_images_registry.png]]
 
@@ -53,6 +66,13 @@ date of note: 2024-12-29
 
 - [[Docker Container]]
 
+### Docker Hub
+
+>[!important] Definition
+>**Docker Hub** is a popular repository for *container images*. 
+>- It offers a variety of sources for container images that you can use, including images from container community developers, open-source projects, and software vendors. 
+
+- For more information about Docker Hub, see [Docker Hub](https://www.docker.com/products/docker-hub/).
 
 
 

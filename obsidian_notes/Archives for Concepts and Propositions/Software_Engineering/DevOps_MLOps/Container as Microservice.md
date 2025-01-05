@@ -66,9 +66,9 @@ date of note: 2024-12-29
 
 ### Container Registry
 
-![[Docker Container Image Registry#^3b1eef]]
+![[Docker Container Image Registry and DockerHub#^3b1eef]]
 
-- [[Docker Container Image Registry]]
+- [[Docker Container Image Registry and DockerHub]]
 
 ### Container Orchestration
 

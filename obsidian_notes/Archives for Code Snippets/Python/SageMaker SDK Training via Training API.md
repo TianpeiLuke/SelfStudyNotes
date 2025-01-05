@@ -65,7 +65,7 @@ image = '{account_id}.dkr.ecr.{region}.{uri_suffix}/{algorithm_name}:{tag}'.form
 - `boto3.client`: Create a low-level service client by name using the default session. [reference](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/core/session.html#boto3.session.Session.client)
 	- **`service_name`**: You can get a list of available services via [`get_available_services()`](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/core/session.html#boto3.session.Session.get_available_services "boto3.session.Session.get_available_services"). 
 	- In this code, we called *'sts'* as *Security Token Service (STS)* to retrieve caller's account information. 
-	- Similar to the **AWS CLI** command `aws sts get-caller-identity`. [[SageMaker SDK Training Script Push Dockerfile to ECR#Prepare and Retrieve Information]]
+	- Similar to the **AWS CLI** command `aws sts get-caller-identity`. [[Amazon ECR or Elastic Container Registry Create and Push Image#Prepare and Retrieve Information]]
 
   
 ## Code
@@ -74,7 +74,7 @@ image = '{account_id}.dkr.ecr.{region}.{uri_suffix}/{algorithm_name}:{tag}'.form
 
 - Create `Estimator` class based on uploaded Docker Image in ECR. 
 	- `Estimator` is a high level interface for SageMaker training.
-	- Docker Image pushed to ECR [[SageMaker SDK Training Script Push Dockerfile to ECR]]
+	- Docker Image pushed to ECR [[Amazon ECR or Elastic Container Registry Create and Push Image]]
 
 - Use generic `sagemaker.estimator.Estimator` Framework for *BYO container* 
 	- Check other Frameworks in SageMaker. [[Amazon SageMaker Python SDK 3 Frameworks]]
