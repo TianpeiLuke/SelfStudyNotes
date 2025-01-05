@@ -36,6 +36,10 @@ year: 2022
 > - **Amazon SageMaker** uses *Docker* to allow users to train and deploy arbitrary algorithms.
 
 - [[Docker Container]]
+- [[Docker Container Daemon]]
+- [[Docker Container Images]]
+- [[Docker Container Image Registry and DockerHub]]
+
 
 ## How Amazon SageMaker runs your Docker container
 
@@ -117,7 +121,7 @@ Amazon SageMaker uses two **URLs** in the container:
 ```
 
 Let's discuss each of these in turn:
-- **`Dockerfile`** describes how to build your Docker container image. More details below.
+- **`Dockerfile`** describes how to build your Docker container image. More details below. [[Docker Container Images]]
 - **`build_and_push.sh`** is a script that uses the Dockerfile to build your container images and then pushes it to ECR. We'll invoke the commands directly later in this notebook, but you can just copy and run the script for your own algorithms.
 - **`model`** is the directory which contains the files that will be installed in the container.
 - **`local_test`** is a directory that shows how to test your new container on any computer that can run **Docker**, including an **Amazon SageMaker** *notebook instance*. Using this method, you can quickly iterate using small datasets to eliminate any structural bugs before you use the container with Amazon SageMaker. We'll walk through local testing later in this notebook.
@@ -142,6 +146,11 @@ In summary, the two files you will probably want to change for your application 
 
 -----------
 ##  Recommended Notes
+
+- [[Docker Container]]
+- [[Docker Container Images]]
+- [[Dockerfile as Instruction to Build Docker Image]]
+- [[Docker Container Image Registry and DockerHub]]
 
 - [[Amazon SageMaker Python SDK 3 Frameworks]]
 - Amazon Guide on [Bring Your Own Container for distributed parallel training](https://docs.aws.amazon.com/sagemaker/latest/dg/data-parallel-use-api.html#data-parallel-bring-your-own-container).

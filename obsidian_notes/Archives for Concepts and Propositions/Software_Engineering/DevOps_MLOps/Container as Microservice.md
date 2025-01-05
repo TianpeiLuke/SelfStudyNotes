@@ -141,6 +141,21 @@ date of note: 2024-12-29
 
 ![[VM_vs_container.png]]
 
+>[!quote]
+>**VMs** make it possible to host *multiple isolated* **guest *operating systems (OSs)*** on top of a host machine by **virtualizing** the **hardware environment** and *sharing* host resources with guest OSs. 
+>- Each **guest OS** must have its own *full* guest OS. 
+>- The guest OS interacts with the **hypervisor**, which then interacts with the host OS.
+>  
+>With **containers**, the **OS is virtualized**. 
+>- Each container doesn’t need a full guest OS, and *multiple* containers on the same host can *share layers* where appropriate. 
+>- This makes each container *lightweight* in nature when compared to VMs. 
+>- The containers interact with the **containerization engine** (such as Docker) instead of with the *hypervisor*. 
+>
+>That being said, you can run containers on top of VMs. So, these two technologies are *not mutually exclusive*. 
+>- When running containers on **AWS**, *both* VMs and containers are being used together.
+>
+>--  [Containerized Applications on AWS](https://www.coursera.org/learn/containerized-applications-on-aws/home/welcome)
+
 
 ## Docker Container
 

@@ -62,12 +62,17 @@ date of note: 2025-01-02
 - [[Container Orchestration]]
 
 
-
 ## Explanation
 
 
 
 ## AWS ML Docker Containers
+
+>[!warning]
+>**Q**: What’s the difference between **Amazon Elastic Compute Cloud (Amazon EC2)** and **containers**? 
+>
+>**A**: Amazon EC2 is an AWS service that provides **virtual machines** on demand. *Containers* can be *hosted on top of Amazon EC2*, which you will learn more about in Week 2 of the course.
+
 
 - [[Amazon SageMaker Python SDK 2 Deploy a Pre-Trained Model]]
 - [[Amazon SageMaker Python SDK 3 Frameworks]]

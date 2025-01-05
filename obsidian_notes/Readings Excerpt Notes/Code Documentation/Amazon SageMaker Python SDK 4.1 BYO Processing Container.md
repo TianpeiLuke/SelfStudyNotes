@@ -23,8 +23,8 @@ year: 2024
 >[!info]
 > - You can provide Amazon SageMaker Processing with a **Docker image** that has your own *code and dependencies* to run your data processing, feature engineering, and model evaluation workloads.
 > 
-> - Example on *Dockerfile* in [[SageMaker SDK Training Script Dockerfile]]
-> - Example code on build Docker Image and pull to ECR [[SageMaker SDK Training Script Push Dockerfile to ECR]]
+> - Example on *Dockerfile* in [[Dockerfile for Model Training]]
+> - Example code on build Docker Image and pull to ECR [[Amazon ECR or Elastic Container Registry Create and Push Image]]
 > - For an example of a *processing script*, see [Get started with SageMaker Processing](https://github.com/aws/amazon-sagemaker-examples/blob/main/sagemaker_processing/basic_sagemaker_data_processing/basic_sagemaker_processing.ipynb).
 > -- [link](https://docs.aws.amazon.com/sagemaker/latest/dg/build-your-own-processing-container.html) 
 

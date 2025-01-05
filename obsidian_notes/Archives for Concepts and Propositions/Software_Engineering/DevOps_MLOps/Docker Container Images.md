@@ -85,7 +85,10 @@ date of note: 2024-12-29
 >- So the image is shared, but each container gets its **own writeable top layer**.
 >- This writeable top layer stays *relatively small* by only bringing data into the writeable layer when needed.
 
-
+>[!warning]
+>**Q**: Does the data that my applications write to the writable layer **persist**? 
+>
+>**A**: **No**, any data that’s stored in the writable layer *doesn’t persist* when the container no longer exists. For more information, see [Manage data in Docker](https://docs.docker.com/storage/).
 
 
 ![[docker_union_file_system.png]]
