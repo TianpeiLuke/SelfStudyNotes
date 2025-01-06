@@ -72,3 +72,15 @@ date of note: 2024-12-27
 
 - Coursera
 	- [Google Project Management: Professional Certificate](https://www.coursera.org/professional-certificates/google-project-management)
+		- [Foundations of Project Management](https://www.coursera.org/learn/project-management-foundations/home/welcome)
+		- [Project Initiation: Starting a Successful Project](https://www.coursera.org/learn/project-initiation-google/home/welcome)
+		- [Project Planning: Putting It All Together](https://www.coursera.org/learn/project-planning-google/home/welcome)
+		- [Project Execution: Running the Project](https://www.coursera.org/learn/project-execution-google/home/welcome)
+		- [Agile Project Management](https://www.coursera.org/learn/agile-project-management/home/welcome)
+		- [Capstone: Applying Project Management in the Real World](https://www.coursera.org/learn/applying-project-management/home/welcome)
+	- [Software Product Management Specialization by University of Alberta](https://www.coursera.org/specializations/product-management)
+		- [Introduction to Software Product Management](https://www.coursera.org/learn/introduction-to-software-product-management?specialization=product-management)
+		- [Software Processes and Agile Practices](https://www.coursera.org/learn/software-processes-and-agile-practices?specialization=product-management)
+		- [Client Needs and Software Requirements](https://www.coursera.org/learn/client-needs-and-software-requirements?specialization=product-management)
+		- [Agile Planning for Software Products](https://www.coursera.org/learn/agile-planning-for-software-products?specialization=product-management)
+		- [Reviews & Metrics for Software Improvements](https://www.coursera.org/learn/reviews-and-metrics-for-software-improvements?specialization=product-management)

@@ -142,5 +142,6 @@ NTILE(buckets) OVER (PARTITION BY expr1, expr2,... 	ORDER BY expr1 [ASC|DESC], e
 - Amazon Redshift [NTILE window function](https://docs.aws.amazon.com/redshift/latest/dg/r_WF_NTILE.html)
 
 - Blog [AUC with SQL](https://roywrightme.wordpress.com/2018/01/11/auc-sql/)
-  
+
+- `CROSS JOIN` is used in [[Group by Count and Compute Ratio over Full]]
 - A similar computation in Python Pandas [[Risk Value Mapping of Categorical Field]]

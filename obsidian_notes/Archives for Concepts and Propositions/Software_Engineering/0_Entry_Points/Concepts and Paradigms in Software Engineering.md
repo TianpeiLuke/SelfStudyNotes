@@ -98,3 +98,9 @@ date of note: 2024-12-10
 
 
 - [[Design Patterns Book Summary]]
+- Coursera
+	- [Software Design and Architecture Specialization by University of Alberta](https://www.coursera.org/specializations/software-design-architecture#courses)
+		- [Object-Oriented Design](https://www.coursera.org/learn/object-oriented-design?specialization=software-design-architecture)
+		- [Design Patterns](https://www.coursera.org/learn/design-patterns?specialization=software-design-architecture)
+		- [Software Architecture](https://www.coursera.org/learn/software-architecture?specialization=software-design-architecture)
+		- [Service-Oriented Architecture](https://www.coursera.org/learn/service-oriented-architecture?specialization=software-design-architecture)
