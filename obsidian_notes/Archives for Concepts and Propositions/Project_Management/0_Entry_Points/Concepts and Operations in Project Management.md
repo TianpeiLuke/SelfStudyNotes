@@ -14,10 +14,21 @@ date of note: 2024-12-27
 ### Foundations of Project Management
 
 - [[Project Definition]]
+- [[Program Definition]]
+- [[Portfolio Definition]]
 - [[Project Management Definition and Purpose]]
-- [[Project Manager Role and Responsibility]]
+- [[Project Manager Roles and Responsibilities]]
+- [[Job Description Buzzwords]]
 
 ### Project Initiation
+
+- [[Project Initiation Key Components]]
+- [[Project Initiation Identifying Scope Goals and Deliverables]]
+- [[SMART or Specific Measurable Attainable Relevant and Time-bound]]
+- [[Project Initiation Measuring Success]]
+- [[Project Initiation Cost Benefit Analysis]]
+- [[ROI or Return on Investment]]
+- [[Project Initiation Identifying Stakeholders]]
 
 
 ### Project Planning
@@ -69,6 +80,12 @@ date of note: 2024-12-27
 - [[Atomic Habits Book Summary]]
 - [[The 7 Habits of Highly Effective People Book Summary]]
 
+
+- The [Project Management Institute](https://www.pmi.org/) is the leading association for those in project, program, or portfolio management professions. Their website provides guides, industry standards, articles, templates, job boards, certifications, and more to help support professionals in these careers.
+    
+- The [Scrum Guide](https://www.scrumguides.org/index.html) defines Scrum, a technique used in Agile project management. You’ll learn about this framework later in the program. This guide describes Scrum’s roles, events, artifacts, and the rules that bind them together. You can also find hundreds of free resources to learn more about Scrum at [Scrum.org Resources](https://www.scrum.org/resources)- .
+    
+- [PRINCE2](https://www.prince2.com/usa/resources) is a project management method and certification that teaches the skills to be an effective project manager. Along with their certification services and subscription products, they also offer free resources like blog posts, case studies, webinars , whitepapers and podcasts.
 
 - Coursera
 	- [Google Project Management: Professional Certificate](https://www.coursera.org/professional-certificates/google-project-management)
