@@ -63,6 +63,7 @@ year: 2015
 > - Estimate the **Return On Investment (ROI)** and **Compare** and **Rank** *feature chunks*
 > - Decide on **MVP candidate**.
 
+- [[Project Initiation Key Components]]
 
 
 - **Brainstorming**:
@@ -129,9 +130,9 @@ year: 2015
 		- the developers estimate the amount of effort required using story points
 		- stories above some *maximum threshold value* need to break down into smaller ones.
 
-- **Return On Investment (ROI)**
+- **Return On Investment (ROI)** [[ROI or Return on Investment]]
 	- Not only consider how much *customer value* you believe each feature will create, but also the amount of *resources* required to build each feature.
-	- **ROI calculation**: $$ROI = \frac{Return}{Investment} = \frac{Final\ Value − Investment}{Investment}$$
+	- **ROI calculation**  : $$ROI = \frac{Return}{Investment} = \frac{Final\ Value − Investment}{Investment}$$
 	- ROI can be used as a *second-pass prioritization* that accounts for both the **value** and the **effort**.
 	- *investing*: both of the numbers you plug into the formula are *monetary amounts* (e.g., dollars).
 	- *product development*: may use **developer-weeks**

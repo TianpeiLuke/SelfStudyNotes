@@ -3,8 +3,7 @@ tags:
   - concept
   - project_management/projection_initiation
 keywords:
-  - project_goal
-  - SMART_as_project_goal_criteria
+  - project_stakeholder
 topics: 
 name: 
 date of note: 2025-01-06
@@ -15,10 +14,17 @@ date of note: 2025-01-06
 >[!important]
 >**Name**: 
 
+![[Project Initiation Key Components#^c69f9c]]
+
+- [[Project Initiation Key Components]]
+
 
 
 ## Explanation
 
+
+- [[The Lean Product Playbook Chapter Summary 2.1 Target Customer]]
+- [[The Lean Product Playbook Chapter Summary 2.2 Customer Needs]]
 
 
 

@@ -73,6 +73,8 @@ date of note: 2024-12-10
 
 ## Project Management
 
+- [[Concepts and Operations in Project Management]]
+
 - [[The Lean Product Playbook Book Summary]]
 - [[Getting Things Done Book Summary]]
 - [[The 7 Habits of Highly Effective People Book Summary]]

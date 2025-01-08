@@ -227,7 +227,8 @@ year: 2015
 ##  Recommended Notes
 
 - [[The Lean Product Playbook Chapter Summary 2.1 Target Customer]]
-
+- [[Project Management Definition and Purpose]]
+- [[Project Initiation Key Components]]
 
 
 ----------

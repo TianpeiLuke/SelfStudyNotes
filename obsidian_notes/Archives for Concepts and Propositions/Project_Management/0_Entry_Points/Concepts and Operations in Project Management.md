@@ -23,12 +23,16 @@ date of note: 2024-12-27
 ### Project Initiation
 
 - [[Project Initiation Key Components]]
-- [[Project Initiation Identifying Scope Goals and Deliverables]]
-- [[SMART or Specific Measurable Attainable Relevant and Time-bound]]
+- [[Project Initiation Identifying Goals]]
+- [[SMART or Specific Measurable Attainable Relevant and Time-bound Goals]]
+- [[Project Initiation Identifying Scope]]
+- [[Project Initiation Identifying Deliverables]]
 - [[Project Initiation Measuring Success]]
 - [[Project Initiation Cost Benefit Analysis]]
 - [[ROI or Return on Investment]]
 - [[Project Initiation Identifying Stakeholders]]
+- [[RACI Chart to Assign Role and Responsibilities]]
+- [[Project Initiation Project Charter]]
 
 
 ### Project Planning

@@ -6,22 +6,43 @@ keywords:
   - project_scope
   - project_goal
   - project_deliverable
-topics: 
-name: 
+topics:
+  - project_management/project_initiation
+name: Project Initiation Identifying Deliverables
 date of note: 2025-01-06
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Project Initiation Identifying Deliverables
 
 ![[Project Initiation Key Components#^c69f9c]]
 
 - [[Project Initiation Key Components]]
-- [[SMART or Specific Measurable Attainable Relevant and Time-bound]]
+
+### Defining Project Deliverables
+
+>[!important] Definition
+>The **project deliverables** are the *products* or *services* that are created for the customer, client, or project sponsor.
+>- They are what are produced or presented at the *end* of a task, a event or a process. 
+
+- [[The 7 Habits of Highly Effective People Chapter Summary 2]]
+
+
+
+
+
+
+
+
+
+
+
 
 ## Explanation
+
+
 
 
 - [[The Lean Product Playbook Chapter Summary 2.3 Value Proposition]]

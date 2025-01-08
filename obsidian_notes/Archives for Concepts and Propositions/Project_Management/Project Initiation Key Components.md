@@ -71,18 +71,54 @@ date of note: 2025-01-06
 ^c69f9c
 
 
-- [[Project Initiation Identifying Scope Goals and Deliverables]]
+- [[Project Initiation Identifying Goals]]
+- [[Project Initiation Identifying Scope]]
+- [[Project Initiation Identifying Deliverables]]
 - [[Project Initiation Measuring Success]]
 - [[Project Initiation Identifying Stakeholders]]
 
+### Refine goals with stakeholders
+
+>[!info]
+>First, you will meet with the *stakeholders* to discuss their aims for the project. 
+>- To **clarify** these goals and keep the project on track, you’ll turn them into **SMART goals**.
+
+![[SMART or Specific Measurable Attainable Relevant and Time-bound Goals#^105083]]
+
+
+- [[Project Initiation Identifying Goals]]
+- [[SMART or Specific Measurable Attainable Relevant and Time-bound Goals]]
+
+### Assess stakeholder power and influence
+
+>[!info]
+>Next, you’ll get to know some of your stakeholders and find out *how they fit into the project*. 
+>- A **stakeholder analysis** and **power grid** will help you decide how best—and *how often*—to *communicate* with team members, investors, and more.
+
+- [[Project Initiation Identifying Stakeholders]]
+
+### Assign roles and responsibilities to promote the service
+
+>[!info]
+>You’ll *assemble teams* to plan the marketing and sales strategy and redesign the website. 
+>- You’ll use **RACI charts** to determine who should be 
+>	- **responsible**, 
+>	- **accountable**, 
+>	- **consulted**, 
+>	- and **informed** about various project tasks.
+
+- [[RACI Chart to Assign Role and Responsibilities]]
+
+
 ### Project Charter
 
->[!important] Definition
->A **project charter** is a document that contains all the details of the project. 
->- Project charters clearly *define the project* and its *goals* and *outline what is needed* to accomplish them.
->- A project charter allows you to *get organized*, set up a *framework* for what needs to be done and *communicate* those details to others.
->- Draft the project charter and *review with stakeholder*.
->- Get *approval* from stakeholder to move on to the next phase.
+>[!info]
+>As you wrap up the initiation phase, your focus will shift to internal operations. 
+>- You’ll create a **project charter** to guide your team as they plan training, fulfillment, and delivery procedures
+
+![[Project Initiation Project Charter#^361357]]
+
+- [[Project Initiation Project Charter]]
 
 
 ## Explanation
