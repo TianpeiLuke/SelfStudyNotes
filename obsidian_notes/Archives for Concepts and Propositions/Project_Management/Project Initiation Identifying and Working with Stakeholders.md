@@ -6,14 +6,14 @@ keywords:
   - project_stakeholder
 topics:
   - project_management/project_initiation
-name: Project Initiation Identifying Stakeholders
+name: Project Initiation Identifying and Working with Stakeholders
 date of note: 2025-01-06
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Project Initiation Identifying Stakeholders
+>**Name**: Project Initiation Identifying and Working with Stakeholders
 
 ![[Project Initiation Key Components#^c69f9c]]
 
@@ -35,7 +35,7 @@ date of note: 2025-01-06
 >- *consulted*, 
 >- and *informed* about various project tasks.
 
-
+- [[Project Initiation Defining Project Roles]]
 - [[RACI Chart to Assign Role and Responsibilities]]
 
 

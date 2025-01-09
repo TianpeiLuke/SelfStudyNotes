@@ -21,23 +21,26 @@ date of note: 2025-01-06
 
 >[!important] Definition
 >**SMART** is the acronym for *five* critical criteria of *defining goals*, which include:
->- **Specific**:
+>- **Specific**: 
+>	- The objective has *no ambiguity* for the project team to misinterpret.
 >	- be specific about the *target*
 >	- be specific about the *reason* and  *benefit*
 >	- be specific about the *people involved*
 >	- be specific about the *place to deliver* the project
 >	- be specific about the *requirement* and *constraints*
->- **Measurable**
->	- so that we can determine if the goals were *objectively met* 
+>- **Measurable**: 
+>	- *Metrics* help the project team determine when the objective is met.
 >	- good to *track the progress* and *stay motivated*
 >	- ask 
 >		- how much 
 >		- how many
 >		- how will i know if this is accomplished.
 >- **Attainable**
+>	- The project team agrees the objective is *realistic*.
 >	- can it be *reasonably reached* based on *metrics*?
 >	- goal should be *a bit challenging* but not *too extreme*
 >- **Relevant**
+>	- The goal fits the organization’s *strategic plan* and supports the *project charter*.
 >	- Does the goal *make sense*?
 >	- Is the goal *worthwhile*?
 >	- Consider *priorities*
@@ -46,11 +49,16 @@ date of note: 2025-01-06
 >	- *Budget*
 >	- *Customer*
 >- **TIme-bound**
+>	- The project team documents a date to *achieve the goal*.
 >	- Put a **deadline** or a *clear time frame* to your goal
 >  
 >
 
 ^105083
+
+![[SMART_goal.png]]
+
+
 
 
 ### Be Specific
@@ -129,8 +137,32 @@ date of note: 2025-01-06
 
 ## Explanation
 
+>[!warning]
+>**Explain what makes the goal SMART** by answering the following questions:
+> 
+> 1. What makes the goal **specific**? Does it provide enough detail to avoid ambiguity?
+>     
+> 2. What makes the goal **measurable**? Does it include metrics to gauge success?
+>     
+> 3. What makes the goal **attainable**? Is it realistic given available time and resources?
+>     
+> 4. What makes the goal **relevant**? Does it support project or business objectives?
+>     
+> 5. What makes the goal **time-bound**?Does it include a timeline or deadline?
 
+### Focusing on the "M" in SMART
 
+>[!quote] 
+> Let’s take a moment to zoom in on the **M** in SMART, which stands for **measurable**. Having measurable goals allows you to assess the success of your project based on *quantifiable or tangible metrics*, such as dollar amounts, number of outputs, quantities, etc. 
+> - Measurable goals are important because they leave *little room for confusion* around expectations from stakeholders. 
+> 
+> Not every metric will have value, so you will have to determine *which metrics make sense* for the project. 
+> - For example, measuring how many meetings the software engineers on your project attend on a weekly basis may not be the most valuable metric for a productivity goal. 
+> - Alternatively, you might measure other aspects of the engineers’ productivity, such as a particular number of features created per engineer or a specific number of issues flagged per day.
+
+### OKR
+
+- [[OKRs or Objective and Key Results as Tool to define and measure Project]]
 
 
 

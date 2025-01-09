@@ -23,6 +23,7 @@ date of note: 2024-12-27
 ^560aa3
 
 
+
 ## Explanation
 
 >[!quote]

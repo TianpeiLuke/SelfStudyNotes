@@ -75,7 +75,7 @@ date of note: 2025-01-06
 - [[Project Initiation Identifying Scope]]
 - [[Project Initiation Identifying Deliverables]]
 - [[Project Initiation Measuring Success]]
-- [[Project Initiation Identifying Stakeholders]]
+- [[Project Initiation Identifying and Working with Stakeholders]]
 
 ### Refine goals with stakeholders
 
@@ -88,6 +88,8 @@ date of note: 2025-01-06
 
 - [[Project Initiation Identifying Goals]]
 - [[SMART or Specific Measurable Attainable Relevant and Time-bound Goals]]
+- [[OKRs or Objective and Key Results as Tool to define and measure Project]]
+
 
 ### Assess stakeholder power and influence
 
@@ -95,7 +97,7 @@ date of note: 2025-01-06
 >Next, you’ll get to know some of your stakeholders and find out *how they fit into the project*. 
 >- A **stakeholder analysis** and **power grid** will help you decide how best—and *how often*—to *communicate* with team members, investors, and more.
 
-- [[Project Initiation Identifying Stakeholders]]
+- [[Project Initiation Identifying and Working with Stakeholders]]
 
 ### Assign roles and responsibilities to promote the service
 

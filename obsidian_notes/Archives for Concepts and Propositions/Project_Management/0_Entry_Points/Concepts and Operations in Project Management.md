@@ -17,20 +17,39 @@ date of note: 2024-12-27
 - [[Program Definition]]
 - [[Portfolio Definition]]
 - [[Project Management Definition and Purpose]]
+- [[Project Management Life Cycle]]
 - [[Project Manager Roles and Responsibilities]]
 - [[Job Description Buzzwords]]
+
+![[project_management_life_cycle.png]]
 
 ### Project Initiation
 
 - [[Project Initiation Key Components]]
+
+#### Identifying Goal
+
 - [[Project Initiation Identifying Goals]]
-- [[SMART or Specific Measurable Attainable Relevant and Time-bound Goals]]
-- [[Project Initiation Identifying Scope]]
 - [[Project Initiation Identifying Deliverables]]
+- [[SMART or Specific Measurable Attainable Relevant and Time-bound Goals]]
+- [[OKRs or Objective and Key Results as Tool to define and measure Project]]
+
+#### Defining Scope
+
+- [[Project Initiation Identifying Scope]]
+- [[Project Initiation Triple Constraint Model to Manage Scope]]
+
+
+#### Measuring Success
+
+- [[Project Launch and Project Landing]]
 - [[Project Initiation Measuring Success]]
 - [[Project Initiation Cost Benefit Analysis]]
 - [[ROI or Return on Investment]]
-- [[Project Initiation Identifying Stakeholders]]
+
+#### Identifying Role of Stakeholders
+
+- [[Project Initiation Identifying and Working with Stakeholders]]
 - [[RACI Chart to Assign Role and Responsibilities]]
 - [[Project Initiation Project Charter]]
 

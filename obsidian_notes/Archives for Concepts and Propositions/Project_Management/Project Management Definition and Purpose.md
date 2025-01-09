@@ -26,7 +26,13 @@ date of note: 2024-12-27
 
 ^b87df8
 
+### Project Management Life Cycle
 
+
+
+- [[Project Management Life Cycle]]
+
+![[project_management_life_cycle.png]]
 
 
 
