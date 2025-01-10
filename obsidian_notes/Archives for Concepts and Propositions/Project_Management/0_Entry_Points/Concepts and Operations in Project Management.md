@@ -34,6 +34,7 @@ date of note: 2024-12-27
 - [[SMART or Specific Measurable Attainable Relevant and Time-bound Goals]]
 - [[OKRs or Objective and Key Results as Tool to define and measure Project]]
 
+
 #### Defining Scope
 
 - [[Project Initiation Identifying Scope]]
@@ -47,11 +48,21 @@ date of note: 2024-12-27
 - [[Project Initiation Cost Benefit Analysis]]
 - [[ROI or Return on Investment]]
 
-#### Identifying Role of Stakeholders
+
+#### Identifying, Evaluating and Assigning Role of Stakeholders
 
 - [[Project Initiation Identifying and Working with Stakeholders]]
+- [[Project Initiation Choosing Project Team]]
+- [[Project Initiation Defining Project Roles]]
+- [[Project Initiation Stakeholder Analysis]]
 - [[RACI Chart to Assign Role and Responsibilities]]
+
+
+#### Documentation
+
 - [[Project Initiation Project Charter]]
+
+
 
 
 ### Project Planning
