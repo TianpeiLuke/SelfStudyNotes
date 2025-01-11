@@ -1,7 +1,7 @@
 ---
 tags:
   - concept
-  - project_management/projection_initiation
+  - project_management/project_initiation
 keywords:
   - project_stakeholder
 topics:
@@ -39,18 +39,17 @@ date of note: 2025-01-06
 
 ^028ef3
 
-
-### Choosing Team
-
-- [[Project Initiation Choosing Project Team]]
-
-### Assigning Roles and Responsibilities
+### Define Project Roles
 
 ![[Project Initiation Defining Project Roles#^41ce0d]]
 
 - [[Project Initiation Defining Project Roles]]
 
-### Assess stakeholder power and influence
+### Choosing Team
+
+- [[Project Initiation Choosing Project Team]]
+
+### Conducting Stakeholder Analysis
 
 >[!quote]
 >Next, you’ll get to know some of your stakeholders and find out *how they fit into the project*. 
@@ -61,7 +60,6 @@ date of note: 2025-01-06
 - [[Project Initiation Stakeholder Analysis]]
 
 ### RACI Chart
-
 
 >[!quote]
 >You’ll use **RACI charts** to determine who should be 

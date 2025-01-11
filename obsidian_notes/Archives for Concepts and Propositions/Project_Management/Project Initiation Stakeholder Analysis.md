@@ -1,7 +1,7 @@
 ---
 tags:
   - concept
-  - project_management/projection_initiation
+  - project_management/project_initiation
 keywords:
   - project_stakeholder
   - project_stakeholder_analysis
@@ -64,7 +64,7 @@ date of note: 2025-01-06
 >- **Engagement and Involvement:**
 >	- Keep these stakeholders *well-informed* and *engaged* *throughout* the project lifecycle.
 >	- Involve them in decision-making processes, seeking their *input* and *feedback*.
->	- Address their concerns *promptl*y and *effectively*.
+>	- Address their concerns *promptly* and *effectively*.
 >- **Regular Communication:**
 >	- Schedule *regular meetings* or updates to keep them informed about project progress and any issues.
 >	- *Tailor communication* to their *preferences* and needs to ensure they remain *supportive* and engaged.

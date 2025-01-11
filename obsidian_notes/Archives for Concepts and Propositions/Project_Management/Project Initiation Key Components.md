@@ -1,7 +1,7 @@
 ---
 tags:
   - concept
-  - project_management/projection_initiation
+  - project_management/project_initiation
 keywords:
   - project_goal
   - project_scope
@@ -76,6 +76,9 @@ date of note: 2025-01-06
 - [[Project Initiation Identifying Deliverables]]
 - [[Project Initiation Measuring Success]]
 - [[Project Initiation Identifying and Working with Stakeholders]]
+- [[Project Initiation Essential Project Resources and Tools]]
+- [[Project Initiation Project Documentation]]
+
 
 ### Refine goals with stakeholders
 
@@ -98,6 +101,7 @@ date of note: 2025-01-06
 >- A **stakeholder analysis** and **power grid** will help you decide how best—and *how often*—to *communicate* with team members, investors, and more.
 
 - [[Project Initiation Identifying and Working with Stakeholders]]
+- [[Project Initiation Stakeholder Analysis]]
 
 ### Assign roles and responsibilities to promote the service
 
@@ -109,14 +113,36 @@ date of note: 2025-01-06
 >	- **consulted**, 
 >	- and **informed** about various project tasks.
 
+- [[Project Initiation Defining Project Roles]]
 - [[RACI Chart to Assign Role and Responsibilities]]
 
 
 ### Project Charter
 
+>[!important]
+>**Documentation** is an important part of a project manager's role.
+>- It records all *information* in the project initiation phase.
+>	- project goals, scope and deliverables
+>	- stakeholders
+>	- resources
+>- It is used for *communication* with stakeholders.
+>
+
+
 >[!info]
 >As you wrap up the initiation phase, your focus will shift to internal operations. 
 >- You’ll create a **project charter** to guide your team as they plan training, fulfillment, and delivery procedures
+
+>[!quote]
+>*Clear and consistent documentation* can ensure **transparency** and **clear communication**.
+>
+>It also helps to answer *key questions*
+>- what problem are you trying to solve
+>- what are the project goals
+>- what are the scope and deliverables, and 
+>- who are the project's stakeholder
+
+- [[Project Initiation Project Documentation]]
 
 ![[Project Initiation Project Charter#^361357]]
 

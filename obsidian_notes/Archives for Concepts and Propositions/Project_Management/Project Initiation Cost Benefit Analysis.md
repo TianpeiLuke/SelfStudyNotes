@@ -1,7 +1,7 @@
 ---
 tags:
   - concept
-  - project_management/projection_initiation
+  - project_management/project_initiation
 keywords:
   - cost_benefit_analysis
   - project_initiation

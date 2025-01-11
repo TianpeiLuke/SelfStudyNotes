@@ -1,7 +1,7 @@
 ---
 tags:
   - concept
-  - project_management/projection_initiation
+  - project_management/project_initiation
 keywords:
   - ROI
   - return_on_investment

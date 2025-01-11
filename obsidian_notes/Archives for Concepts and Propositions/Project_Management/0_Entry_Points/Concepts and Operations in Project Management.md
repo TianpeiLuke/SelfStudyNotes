@@ -46,7 +46,6 @@ date of note: 2024-12-27
 - [[Project Launch and Project Landing]]
 - [[Project Initiation Measuring Success]]
 - [[Project Initiation Cost Benefit Analysis]]
-- [[ROI or Return on Investment]]
 
 
 #### Identifying, Evaluating and Assigning Role of Stakeholders
@@ -58,14 +57,26 @@ date of note: 2024-12-27
 - [[RACI Chart to Assign Role and Responsibilities]]
 
 
+#### Project Resources
+
+- [[Project Initiation Essential Project Resources and Tools]]
+
 #### Documentation
 
+- [[Project Initiation Project Documentation]]
+- [[Project Initiation Project Proposals]]
 - [[Project Initiation Project Charter]]
-
-
+- [[Project Initiation Cost Benefit Analysis]]
+- [[ROI or Return on Investment]]
 
 
 ### Project Planning
+
+- [[Project Planning]]
+- [[Project Planning Schedule]]
+- [[Project Planning Budget Setting]]
+- [[Project Planning Risk Management]]
+
 
 
 ### Project Execution
