@@ -48,7 +48,7 @@ date of note: 2025-01-06
 >	- *Timing*
 >	- *Budget*
 >	- *Customer*
->- **TIme-bound**
+>- **Time-bound**
 >	- The project team documents a date to *achieve the goal*.
 >	- Put a **deadline** or a *clear time frame* to your goal
 >  
