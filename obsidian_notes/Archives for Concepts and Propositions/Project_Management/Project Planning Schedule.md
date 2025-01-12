@@ -4,7 +4,7 @@ tags:
   - project_management/project_planning
 keywords:
   - project_planning
-  - budge_setting
+  - planning_schedule
 topics:
   - project_management
 name: Project Planning Schedule
@@ -25,6 +25,7 @@ date of note: 2025-01-10
 
 - [[Project Planning]]
 - [[Project Initiation Essential Project Resources and Tools]]
+
 
 
 

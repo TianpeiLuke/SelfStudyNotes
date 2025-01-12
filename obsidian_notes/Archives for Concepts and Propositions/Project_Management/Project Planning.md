@@ -17,7 +17,6 @@ date of note: 2025-01-10
 
 ### Benefits of Planning
 
-
 >[!quote]
 >Planning has many **benefits**. As we've discussed, planning helps you map out the *full project*.
 > - It helps you understand the *work needed* to achieve your goals.
@@ -32,6 +31,32 @@ date of note: 2025-01-10
 >- Planning also *demonstrates to stakeholders* that the team is taking care to start the project with a detailed plan.
 >- But one of the most significant benefits of planning is *teamwork*, which will help you push your project across the finish line.
 >	- By working together in the planning phase, individuals assigned to the project can become a *strong team* by *the time the planning is done* and the work is about to start.
+
+
+### Kickoff Meeting
+
+- [[Project Planning Project Kickoff Meeting]]
+
+### Setup Milestones
+
+- [[Project Tasks and Milestones]]
+- [[Project Planning Setting Milestones]]
+- [[Project Planning Work Breakdown Structure or WBS]]
+
+
+### Schedule
+
+- [[Project Planning Schedule]]
+- [[Project Tasks and Milestones]]
+
+
+### Budget
+
+- [[Project Planning Budget Setting]]
+
+### Risk Management
+
+- [[Project Planning Risk Management]]
 
 
 

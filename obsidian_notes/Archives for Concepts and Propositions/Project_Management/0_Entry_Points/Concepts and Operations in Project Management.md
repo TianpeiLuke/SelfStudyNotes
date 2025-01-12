@@ -34,19 +34,16 @@ date of note: 2024-12-27
 - [[SMART or Specific Measurable Attainable Relevant and Time-bound Goals]]
 - [[OKRs or Objective and Key Results as Tool to define and measure Project]]
 
-
 #### Defining Scope
 
 - [[Project Initiation Identifying Scope]]
 - [[Project Initiation Triple Constraint Model to Manage Scope]]
-
 
 #### Measuring Success
 
 - [[Project Launch and Project Landing]]
 - [[Project Initiation Measuring Success]]
 - [[Project Initiation Cost Benefit Analysis]]
-
 
 #### Identifying, Evaluating and Assigning Role of Stakeholders
 
@@ -55,7 +52,6 @@ date of note: 2024-12-27
 - [[Project Initiation Defining Project Roles]]
 - [[Project Initiation Stakeholder Analysis]]
 - [[RACI Chart to Assign Role and Responsibilities]]
-
 
 #### Project Resources
 
@@ -73,9 +69,26 @@ date of note: 2024-12-27
 ### Project Planning
 
 - [[Project Planning]]
+- [[Project Planning Project Kickoff Meeting]]
+- [[Project Tasks and Milestones]]
+- [[Project Planning Setting Milestones]]
+- [[Project Planning Work Breakdown Structure or WBS]]
+
+#### Setting Up Schedule
+
 - [[Project Planning Schedule]]
+
+#### Setting Budget
+
 - [[Project Planning Budget Setting]]
+
+#### Risk Management
+
 - [[Project Planning Risk Management]]
+
+
+#### Effective Communication and Documentation
+
 
 
 
@@ -84,6 +97,7 @@ date of note: 2024-12-27
 
 ### Agile Project Management
 
+- [[Agile Project Management]]
 - [[The Lean Product Playbook Chapter Summary 3.1 Agile Development]]
 
 ### Lean Product Management

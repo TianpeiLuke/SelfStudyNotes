@@ -29,3 +29,5 @@ date of note: 2025-01-02
 -----------
 ##  Recommended Notes and References
 
+
+- [[The Lean Product Playbook Chapter Summary 3.1 Agile Development]]
