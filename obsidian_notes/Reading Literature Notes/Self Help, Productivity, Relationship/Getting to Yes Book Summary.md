@@ -37,6 +37,9 @@ year: 2011
 ##  Recommended Notes
 
 - The principles in negotiation in this book is referred in [[The 7 Habits of Highly Effective People Book Summary]], esp. in *Habit 4: Think Win/Win -- Principles of Interpersonal Leadership* [[The 7 Habits of Highly Effective People Chapter Summary 4]]
+- [[Project Planning Realistic Time Estimate]]
+- [[Project Planning Capacity Planning]]
+- [[Project Planning Critical Path]]
 
 
 ----------

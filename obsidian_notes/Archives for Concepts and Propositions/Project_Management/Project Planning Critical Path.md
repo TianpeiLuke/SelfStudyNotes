@@ -61,6 +61,113 @@ date of note: 2025-01-10
 - [[Project Planning Work Breakdown Structure or WBS]]
 - [[Project Planning Realistic Time Estimate]]
 
+>[!important] 
+>Some general steps for *creating a critical path*
+>- **Step 1: Capture all tasks**
+>	- capture all of the tasks associated with the completion of the effort
+>	- use **work breakdown structure (WBS)**
+>	- The main goal in this step is to make sure that you *aren’t missing a key piece of work* that is required to complete your project.
+>		- focus on the *essential*, *“need to do” tasks*
+>- **Step 2: Set dependencies**
+>	- arrange critical tasks *in order of completion* by identifying **dependencies**.
+>	- To determine **dependencies**, figure out which tasks *must be completed before* other tasks can start.
+>		- Which task needs to take place before this task?
+>		- Which task can be finished at the same time as this task?
+>		- Which task needs to happen right after this task?
+>- **Step 3: Create a network diagram**
+>	- One common way to visualize the critical path is by creating a **network diagram**.
+>	- Network diagrams sequence tasks in the *order* in which they *need to be completed*, based on their *dependencies*. 
+>	- These diagrams help visualize:
+>		- The *path* of the work from the start of the project to the end of the project
+>		- Which tasks can be performed *in parallel*
+>		- Which non-essential tasks are *NOT on the critical path*
+>- **Step 4: Make time estimates**
+>	- *consult* key stakeholders to get accurate *time estimates* for each task
+>	- This is a **crucial step** in determining your critical path.
+>		- under/overestimate the time would cause the *length of your critical path* to change.
+>	- Time estimates can be reviewed and updated throughout the project, as necessary.
+>- **Step 5: Find the critical path**
+>	- *adding up* the *durations* for all of your “*essential*” tasks and calculate the *longest possible path* can determine your critical path.
+>	- *only* include the tasks that, if they go *unfinished*, will *impact* the project’s finish date.
+
+
+#### Example
+
+##### Step 1 Capture all tasks
+
+|**Task**|
+|---|
+|A) Excavation|
+|B) Foundation|
+|C) Framing|
+|D) Roof|
+|E) Plumbing|
+|F) Heating, ventilation, and air conditioning (HVAC)|
+|G) Electrical|
+|H) Insulation|
+|I) Drywall + Paint|
+|J) Flooring|
+
+
+##### Step 2 Set dependencies
+
+|**Task**|**Dependency**|
+|---|---|
+|A) Excavation||
+|B) Foundation|A) Excavation|
+|C) Framing|B) Foundation|
+|D) Roof|C) Framing|
+|E) Plumbing|C) Framing|
+|F) HVAC|C) Framing|
+|G) Electrical|C) Framing|
+|H) Insulation|E) Plumbing, F) HVAC, G) Electrical|
+|I) Drywall + Paint|H) Insulation|
+|J) Flooring|I) Drywall + Paint|
+
+
+##### Step 3: Create a network diagram
+
+![[critical-path-1.svg]]
+
+##### Step 4: Make time estimates
+
+|**Task**|**Duration**|**Dependency**|
+|---|---|---|
+|A) Excavation|1 Day||
+|B) Foundation|3 Days|A) Excavation|
+|C) Framing|15 Days|B) Foundation|
+|D) Roof|3 Days|C) Framing|
+|E) Plumbing|4 Days|C) Framing|
+|F) HVAC|3 Days|C) Framing|
+|G) Electrical|3 Days|C) Framing|
+|H) Insulation|2 Days|E) Plumbing, F) HVAC, G) Electrical|
+|I) Drywall + Paint|15 Days|H) Insulation|
+|J) Flooring|7 Days|I) Drywall + Paint|
+
+
+![[critical-path-2.svg]]
+##### Step 5: Find the critical path
+
+
+### Forward Pass and Backward Pass Approach
+
+>[!quote] 
+> You can also calculate the critical path using two common approaches: 
+> - the **forward pass** 
+> - and the **backward pass**. 
+> 
+> These techniques are useful if you are asked to identify the **earliest and latest start dates** (the earliest and latest dates on which you can begin working on a task) or the **slack** (the amount of time that task can be delayed past its earliest start date without delaying the project).
+> 
+> - The **forward pass** refers to when you *start at the beginning* of your project *task list* and *add up* the duration of the tasks *on the critical path* to the *end* of your project. 
+> 	- When using this approach, start with the *first task* you have identified that *needs to be completed* before *anything else* can start. 
+>     
+> - The **backward pass** is the opposite—start with the *final task or milestone* and *move backwards* through your schedule to determine the shortest path to completion. 
+> 	- When there is a *hard deadline*, **working backwards** can help you determine which tasks are *actually critical*. 
+> 	- You may be able to *cut some tasks*—or complete them later—in order to meet your deadline.
+
+- [[Amazon Working Backwards]]
+
+
 ### Capacity Planning 
 
 ![[Project Planning Capacity Planning#^89225b]]
@@ -70,7 +177,14 @@ date of note: 2025-01-10
 
 ## Explanation
 
+### Why the critical path is critical
 
+>[!quote] 
+> - The *critical path* helps you determine the **essential tasks** that *need to be completed* on your project to meet your end goal and *how long* each task will take. 
+> 
+>- The *critical path* also provides a **quick reference** for **critical tasks** by revealing which tasks will *impact* your project completion date negatively if their scheduled finish dates are late or missed. 
+>
+>- A critical path can help you **define the resources** you need, your project baselines, and any flexibility you have in the schedule.
 
 
 
@@ -84,5 +198,10 @@ date of note: 2025-01-10
 - [[Bayesian Network on Directed Acyclic Graph]]
 - [[The 7 Habits of Highly Effective People Chapter Summary 2]]
 
-- [[Project Management Definition and Purpose]]
+You can read more about each of these concepts and critical path calculation methods in the following articles:
+
+- [How to Use the Critical Path Method for Complete Beginners](https://www.workamajig.com/blog/critical-path-method)
+- [Critical Path Method: A Project Management Essential](https://www.wrike.com/blog/critical-path-is-easy-as-123/)
+
+
 - Coursera [Project Planning: Putting It All Together](https://www.coursera.org/learn/project-planning-google/home/welcome)

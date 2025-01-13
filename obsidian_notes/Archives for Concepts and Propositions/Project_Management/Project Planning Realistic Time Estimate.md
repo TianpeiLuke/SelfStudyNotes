@@ -97,6 +97,40 @@ date of note: 2025-01-10
 
 - [[Planning Fallacy]]
 
+### Use Soft Skills to Gather Information
+
+>[!important] Definition
+>**Soft skills** are *personal characteristics* that help people work effectively with others.
+>
+>These include 
+>- **crucial communication** 
+>- and **interpersonal skills**
+
+
+- [[Earn Trust as Deposit in Emotional Bank Account]]
+- [[The 7 Habits of Highly Effective People Chapter Summary 4]]
+- [[The 7 Habits of Highly Effective People Chapter Summary 5]]
+- [[The 7 Habits of Highly Effective People Chapter Summary 6]]
+
+>[!important]
+>There are three ways to use *soft skills* and *gather accurate estimates* from your teammates
+>- **Asking the right questions**
+>	- asking effective, *open-ended questions* about their assigned tasks
+>	- An **open-ended question** is a question that cannot be answered with a yes or a no.
+>- **Negotiating effectively**,
+>	- it's possible that people on your project team have *competing priorities* on other teams to keep track of
+>	- *Win-win solution*: 
+>		- Create a sense of *shared ownership* over the project outcomes and create a schedule that aligns with everyone's workload.
+>- **Practicing empathy**.
+>	-  **Empathy** refers to a person's ability to *relate to the thoughts and feelings* of others.
+>	- avoid assigning tasks when teammates are unable to complete them on time.
+>	- avoid overloading 
+>	- remembering to always be **appreciative** of the work, collaboration, and support that you're getting from the team.
+
+- [[Getting to Yes Book Summary]]
+- [[The 7 Habits of Highly Effective People Chapter Summary 5]]
+- [[Leadership Principle Earn Trust]]
+
 
 
 ## Explanation
