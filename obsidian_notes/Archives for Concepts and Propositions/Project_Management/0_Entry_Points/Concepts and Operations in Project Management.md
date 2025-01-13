@@ -76,6 +76,8 @@ date of note: 2024-12-27
 
 #### Setting Up Schedule
 
+- [[Project Planning Components]]
+- [[Project Planning Realistic Time Estimate]]
 - [[Project Planning Schedule]]
 
 #### Setting Budget

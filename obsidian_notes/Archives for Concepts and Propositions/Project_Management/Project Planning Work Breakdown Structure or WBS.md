@@ -27,6 +27,8 @@ date of note: 2025-01-10
 >A **work breakdown structure (WBS)** is a *deliverable-oriented breakdown* of a project into smaller components. 
 >- It’s a tool that *sorts* the *milestones and tasks* of a project into a **hierarchy**, in the *order* they need *to be completed*.
 
+^44b70d
+
 - [[Project Tasks and Milestones]]
 - [[Project Planning Schedule]]
 - [[Leadership Principle Deliver Results]]

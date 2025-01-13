@@ -18,17 +18,30 @@ date of note: 2024-04-29
 >
 >The **planning fallacy** is a phenomenon in which **predictions** about **how much time** will be needed to complete a future task display an [**optimism bias**](https://en.wikipedia.org/wiki/Optimism_bias "Optimism bias") and **underestimate the time needed**. This phenomenon sometimes occurs regardless of the individual's knowledge that past tasks of a similar nature have taken longer to complete than generally planned.[^1][^2][^3] The bias affects predictions only about *one's own tasks*. On the other hand, when outside observers predict task completion times, they tend to exhibit a **pessimistic bias**, *overestimating the time needed*.[^4][^5] The planning fallacy involves *estimates of task completion times* more *optimistic* than those encountered in similar projects in the past.
 
+^d20547
+
 
 
 ## Explanation
 
+>[!quote]
+>The idea of the **planning fallacy** was first introduced in a 1977 paper written by Daniel Kahneman and Amos Tversky, two foundational figures in the field of behavioral economics. 
+>
+>The **planning fallacy** describes our tendency to *underestimate the amount of time* it will take to complete a task, as well as the *costs and risks* associated with that task, due to **optimism bias**. 
+>- **Optimism bias** is when a person *believes* that they are *less likely* to experience a *negative event*. 
+>	- For example, when you are planning to walk your dog in between meetings, you might think that you can do it faster than you actually can. 
+>- **Optimism bias** is what tells you that you are going to be able to walk your dog without being late for your next meeting. If you don’t consider things that might affect the time it will take you to walk your dog—the weather, the chance of them running into another dog and wanting to play, or the fact that they frequently get distracted while sniffing around—you might be late for your next meeting, or you might miss it altogether!
+>  
+>-- Coursera [Project Planning: Putting It All Together](https://www.coursera.org/learn/project-planning-google/home/welcome)  
 
+- [[Principle of Optimism under Uncertainty]]
 
 
 
 -----------
 ##  Recommended Notes and References
 
+- [[Project Planning Realistic Time Estimate]]
 - [[The Art of Thinking Clearly Book Summary]]
 - [[Thinking, Fast and Slow Book Summary]]
 

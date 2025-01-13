@@ -46,6 +46,7 @@ date of note: 2025-01-10
 
 ### Schedule
 
+- [[Project Planning Components]]
 - [[Project Planning Schedule]]
 - [[Project Tasks and Milestones]]
 

@@ -23,9 +23,31 @@ date of note: 2025-01-10
 >	- the end date, 
 >	- and the dates for things that will happen in between.
 
+
 - [[Project Planning]]
 - [[Project Initiation Essential Project Resources and Tools]]
 
+### Tasks and Milestones
+
+![[Project Tasks and Milestones#^9bb973]]
+
+![[Project Tasks and Milestones#^fc3702]]
+
+- [[Project Tasks and Milestones]]
+
+### Work Breakdown Structure
+
+![[Project Planning Work Breakdown Structure or WBS#^44b70d]]
+
+- [[Project Planning Work Breakdown Structure or WBS]]
+
+### Buffers
+
+![[Project Planning Realistic Time Estimate#^e95a79]]
+
+![[Project Planning Realistic Time Estimate#^1565ce]]
+
+- [[Project Planning Realistic Time Estimate]]
 
 
 

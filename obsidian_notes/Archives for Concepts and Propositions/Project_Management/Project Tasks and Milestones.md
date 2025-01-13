@@ -42,6 +42,10 @@ date of note: 2025-01-10
 
 ^fc3702
 
+>[!important] Definition
+>**Sub-tasks** refer to smaller tasks that are required to complete a larger task.
+
+
 ### Setting Milestones
 
 - [[Project Planning Setting Milestones]]
