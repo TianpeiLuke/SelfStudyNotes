@@ -20,8 +20,12 @@ date of note: 2025-01-10
 >[!important] Definition
 >**Time estimation** is a prediction of the total amount of time required to complete a task.
 
+^7494f2
+
 >[!important] Definition
 >**Effort estimation** is a prediction of the amount and difficulty of active work required to complete a task.
+
+^4cbb80
 
 - [[Project Planning]]
 - [[Project Tasks and Milestones]]

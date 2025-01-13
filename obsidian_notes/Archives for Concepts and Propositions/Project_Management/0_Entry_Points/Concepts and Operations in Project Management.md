@@ -76,9 +76,12 @@ date of note: 2024-12-27
 
 #### Setting Up Schedule
 
+- [[Project Planning Schedule]]
 - [[Project Planning Components]]
 - [[Project Planning Realistic Time Estimate]]
-- [[Project Planning Schedule]]
+- [[Project Planning Capacity Planning]]
+- [[Project Planning Critical Path]]
+
 
 #### Setting Budget
 
@@ -100,6 +103,7 @@ date of note: 2024-12-27
 ### Agile Project Management
 
 - [[Agile Project Management]]
+- [[Kanban Approach for Agile Project Management]]
 - [[The Lean Product Playbook Chapter Summary 3.1 Agile Development]]
 
 ### Lean Product Management

@@ -49,6 +49,8 @@ date of note: 2025-01-10
 - [[Project Planning Components]]
 - [[Project Planning Schedule]]
 - [[Project Tasks and Milestones]]
+- [[Project Planning Realistic Time Estimate]]
+- [[Project Planning Capacity Planning]]
 
 
 ### Budget

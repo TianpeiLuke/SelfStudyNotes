@@ -116,6 +116,9 @@ Covey, S. R. (1991). _The seven habits of highly effective people_. Provo, UT: 
 -----------
 ##  Book Reference Highlights
 
+- [[Project Planning Critical Path]]
+- [[Project Planning Capacity Planning]]
+
 - Suggestions in this book resonate with **Amazon Leadership Principles**:
 	- **Be Proactive** is a part of [[Leadership Principle Ownership]]; It is also emphasized in [[Leadership Principle Bias for Action]]
 	- The Core of Private Victory is [[Leadership Principle Ownership]]
