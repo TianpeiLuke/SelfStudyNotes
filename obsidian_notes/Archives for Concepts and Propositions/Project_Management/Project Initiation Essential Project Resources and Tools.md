@@ -64,6 +64,7 @@ date of note: 2025-01-06
 
 - [[Project Initiation Identifying Scope]]
 - [[Project Initiation Identifying and Working with Stakeholders]]
+- [[Project Planning Budget Setting and Procurement]]
 
 ### People
 
@@ -119,6 +120,8 @@ date of note: 2025-01-06
 >- project overviews
 >- email and chat
 
+>[!example]
+>tools like [Smartsheet](https://www.smartsheet.com/), [Asana](https://asana.com/guide/videos/anatomy-of-projects-and-tasks-chapter), [Jira](https://www.atlassian.com/software/jira/guides/getting-started/basics), [Trello](https://trello.com/?&aceid=&adposition=&adgroup=143241824802&campaign=18406634136&creative=672218367487&device=c&keyword=trello%20app&matchtype=e&network=g&placement=&ds_kids=p73316792578&ds_e=GOOGLE&ds_eid=700000001557344&ds_e1=GOOGLE&gad_source=1&gclid=Cj0KCQiAn-2tBhDVARIsAGmStVmlcmh098I8Nfdirc7gBhUzivBatlw8e04akRa9YupfZ43UgLtdnuwaAhjUEALw_wcB&gclsrc=aw.ds)
 
 
 ## Explanation

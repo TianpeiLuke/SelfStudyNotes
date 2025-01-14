@@ -74,6 +74,7 @@ date of note: 2024-12-27
 - [[Project Planning Setting Milestones]]
 - [[Project Planning Work Breakdown Structure or WBS]]
 
+
 #### Setting Up Schedule
 
 - [[Project Planning Schedule]]
@@ -81,11 +82,19 @@ date of note: 2024-12-27
 - [[Project Planning Realistic Time Estimate]]
 - [[Project Planning Capacity Planning]]
 - [[Project Planning Critical Path]]
+- [[Project Planning Gantt Chart]]
 
 
 #### Setting Budget
 
-- [[Project Planning Budget Setting]]
+- [[Project Planning Budget Setting and Procurement]]
+- [[Project Budget Key Components]]
+- [[Project Budget Category of Cost]]
+- [[Project Budgeting Best Practices]]
+- [[Project Budget Management]]
+- [[Project Planning Legal Team Role in Procurement]]
+- [[Project Planning Legal and Contractual Documentation]]
+
 
 #### Risk Management
 
@@ -103,6 +112,7 @@ date of note: 2024-12-27
 ### Agile Project Management
 
 - [[Agile Project Management]]
+- [[Scrum Approach for Agile Project Management]]
 - [[Kanban Approach for Agile Project Management]]
 - [[The Lean Product Playbook Chapter Summary 3.1 Agile Development]]
 

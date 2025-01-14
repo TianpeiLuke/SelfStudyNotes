@@ -36,6 +36,17 @@ date of note: 2024-12-27
 >
 >Everything they do helps make sure the project can be **completed on time** and **on budget**. 
 
+- [[Project Planning]]
+- [[Project Planning Project Kickoff Meeting]]
+- [[Project Planning Realistic Time Estimate]]
+
+![[Project Planning Budget Setting and Procurement#^e9f29b]]
+
+- [[Project Planning Budget Setting and Procurement]]
+
+
+
+
 ## Project management job categories and common roles
 
 ### Introductory-level project management roles

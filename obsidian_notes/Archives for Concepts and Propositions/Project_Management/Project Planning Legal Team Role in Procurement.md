@@ -4,23 +4,24 @@ tags:
   - project_management/project_planning
 keywords:
   - project_planning
-  - budge_setting
+  - budget_setting
+  - budget_procurement
 topics:
   - project_management
-name: Project Planning Setting the Budget
+name: Project Planning Legal and Contractual Documentation
 date of note: 2025-01-10
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Project Planning Budget Setting
+>**Name**: Project Planning Legal and Contractual Documentation
 
 >[!important] Definition
->The **budget** will account for the total cost to complete the project.
->-  The total cost needs to be broken down to determine how much has to be spent on different elements of the project.
+
 
 - [[Project Planning]]
+- [[Project Planning Budget Setting and Procurement]]
 - [[Project Initiation Essential Project Resources and Tools]]
 
 

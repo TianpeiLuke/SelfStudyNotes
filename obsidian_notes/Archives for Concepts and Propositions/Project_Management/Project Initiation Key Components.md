@@ -77,6 +77,7 @@ date of note: 2025-01-06
 - [[Project Initiation Measuring Success]]
 - [[Project Initiation Identifying and Working with Stakeholders]]
 - [[Project Initiation Essential Project Resources and Tools]]
+- [[Project Planning Budget Setting and Procurement]]
 - [[Project Initiation Project Documentation]]
 
 

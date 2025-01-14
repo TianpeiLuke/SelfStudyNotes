@@ -78,7 +78,7 @@ date of note: 2025-01-10
 - [[Project Initiation Identifying Scope]]
 - [[Project Initiation Project Charter]]
 - [[Project Planning Work Breakdown Structure or WBS]]
-- [[Project Planning Budget Setting]]
+- [[Project Planning Budget Setting and Procurement]]
 
 ![[planning_components.png]]
 
