@@ -110,8 +110,8 @@ date of note: 2024-12-27
 - [[Project Risk Assessment]]
 - [[Probability and Impact Matrix for Risk Assessment and Prioritization]]
 - [[Project Risk Management Type of Risks]]
+- [[Project Risk Mitigation Strategies]]
 - [[Project Risk Management Plan]]
-
 
 
 #### Effective Communication and Documentation
@@ -119,6 +119,7 @@ date of note: 2024-12-27
 - [[Project Communication Plan]]
 - [[Tips for Effective Communication]]
 - [[Project Legal and Contractual Documentation]]
+
 
 ### Project Execution
 

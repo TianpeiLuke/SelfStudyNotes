@@ -34,6 +34,8 @@ date of note: 2025-01-14
 >[!important] Definition
 >A **risk register** is a table or chart that contains your list of risks.
 
+^47e340
+
 
 >[!important] Definition
 >A **root cause** is the initial cause of a situation that introduces a problem or risk.
