@@ -85,26 +85,40 @@ date of note: 2024-12-27
 - [[Project Planning Gantt Chart]]
 
 
-#### Setting Budget
+#### Setting Budget and Procurement
 
 - [[Project Planning Budget Setting and Procurement]]
+
 - [[Project Budget Key Components]]
+- [[Project Budget Terms]]
 - [[Project Budget Category of Cost]]
 - [[Project Budgeting Best Practices]]
-- [[Project Budget Management]]
-- [[Project Planning Legal Team Role in Procurement]]
-- [[Project Planning Legal and Contractual Documentation]]
+- [[Project Budget Creation]]
+- [[Project Budget Maintenance]]
+- [[Project Budget Challenges]]
+
+- [[Project Procurement and Vendor Management]]
+- [[Project Procurement Process]]
+- [[Project Procurement Documentation]]
+- [[Project Procurement Legal and Ethic Team Role]]
 
 
 #### Risk Management
 
 - [[Project Planning Risk Management]]
+- [[Fishbone Diagram for Root Cause Identification and Risk Management]]
+- [[Project Risk Assessment]]
+- [[Probability and Impact Matrix for Risk Assessment and Prioritization]]
+- [[Project Risk Management Type of Risks]]
+- [[Project Risk Management Plan]]
+
 
 
 #### Effective Communication and Documentation
 
-
-
+- [[Project Communication Plan]]
+- [[Tips for Effective Communication]]
+- [[Project Legal and Contractual Documentation]]
 
 ### Project Execution
 

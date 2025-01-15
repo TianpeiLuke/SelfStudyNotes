@@ -6,6 +6,7 @@ keywords:
   - project_planning
 topics:
   - project_management
+  - project_management/project_planning
 name: Project Planning
 date of note: 2025-01-10
 ---

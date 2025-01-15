@@ -7,6 +7,7 @@ keywords:
   - planning_schedule
 topics:
   - project_management
+  - project_management/project_planning
 name: Project Planning Schedule
 date of note: 2025-01-10
 ---
@@ -25,9 +26,13 @@ date of note: 2025-01-10
 
 ^3a6b90
 
-
 - [[Project Planning]]
 - [[Project Initiation Essential Project Resources and Tools]]
+
+![[Project Planning Components#^63c93f]]
+
+- [[Project Planning Components]]
+
 
 ### Tasks and Milestones
 

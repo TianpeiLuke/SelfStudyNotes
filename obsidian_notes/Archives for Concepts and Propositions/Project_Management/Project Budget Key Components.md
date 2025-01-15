@@ -35,7 +35,6 @@ date of note: 2025-01-10
 
 ### Key Factors in Budgeting
 
-
 >[!important] 
 >Some important *factors* to consider during the **budgeting process** include
 >- **resource cost rates**
@@ -56,6 +55,9 @@ date of note: 2025-01-10
 >		- **external failure costs**
 
 ^84d3cd
+
+- [[Project Budget Creation]]
+- [[Project Budget Maintenance]]
 
 ### Perform a reserve analysis
 

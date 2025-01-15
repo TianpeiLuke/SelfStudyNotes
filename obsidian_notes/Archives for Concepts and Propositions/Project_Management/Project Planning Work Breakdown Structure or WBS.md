@@ -9,6 +9,7 @@ keywords:
   - work_breakdown_structure
 topics:
   - project_management
+  - project_management/project_planning
 name: Project Planning Work Breakdown Structure
 date of note: 2025-01-10
 ---

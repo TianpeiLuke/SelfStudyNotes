@@ -8,7 +8,7 @@ keywords:
 topics:
   - project_management
 name: Project Budget Key Components
-date of note: 2025-01-10
+date of note: 2025-01-14
 ---
 
 ## Concept Definition
@@ -30,6 +30,8 @@ date of note: 2025-01-10
 >- and **indirect costs** in your project budget. 
 >
 >Categorize these different types of costs in your budget so that you can ensure you are meeting the requirements of your organization and customer. 
+
+^0c8087
 
 #### Direct Cost
 

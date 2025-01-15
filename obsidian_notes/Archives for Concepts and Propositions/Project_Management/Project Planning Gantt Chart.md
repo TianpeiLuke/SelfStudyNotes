@@ -7,6 +7,7 @@ keywords:
   - planning_schedule
 topics:
   - project_management
+  - project_management/project_planning
 name: Project Planning Gantt Chart
 date of note: 2025-01-10
 ---

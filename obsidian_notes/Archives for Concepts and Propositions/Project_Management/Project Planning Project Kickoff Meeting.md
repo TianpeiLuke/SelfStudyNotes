@@ -7,6 +7,7 @@ keywords:
   - project_kickoff
 topics:
   - project_management
+  - project_management/project_planning
 name: Project Planning Project Kickoff Meeting
 date of note: 2025-01-10
 ---

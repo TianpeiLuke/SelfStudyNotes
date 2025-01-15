@@ -8,6 +8,7 @@ keywords:
   - budget_procurement
 topics:
   - project_management
+  - project_management/project_planning
 name: Project Planning Budget Setting and Procurement
 date of note: 2025-01-10
 ---
@@ -84,6 +85,19 @@ date of note: 2025-01-10
 
 - [[Project Budget Category of Cost]]
 
+### Budget Terms
+
+![[Project Budget Terms#^f5a840]]
+
+![[Project Budget Terms#^dfe99f]]
+
+![[Project Budget Terms#^fd64e3]]
+
+![[Project Budget Terms#^11e010]]
+
+- [[Project Budget Terms]]
+
+
 ### Develop a baseline budget
 
 >[!important] Definition
@@ -103,6 +117,53 @@ date of note: 2025-01-10
 ![[Project Budget Key Components#^36cf88]]
 
 - [[Project Budget Key Components]]
+
+### Budget Creation
+
+#### How
+
+![[Project Budget Creation#^1f2fa4]]
+
+- [[Project Budget Creation]]
+
+#### What
+
+![[Project Budget Creation#^d67e50]]
+
+![[budget_templates.png]]
+
+### Budget Maintenance
+
+![[Project Budget Maintenance#^fe054c]]
+
+- [[Project Budget Maintenance]]
+
+### Budget Planning and Maintenance Challenges
+
+#### Challenge 1: Budget pre-allocation
+
+![[Project Budget Challenges#^76e25d]]
+
+#### Challenge 2: Inaccurately calculating TCO
+
+![[Project Budget Challenges#^23c5c2]]
+
+#### Challenge 3: Scope creep
+
+![[Project Budget Challenges#^a645d2]]
+
+- [[Project Budget Challenges]]
+
+### Budget Procurement
+
+![[Project Procurement and Vendor Management#^b22b9d]]
+
+![[Project Procurement Process#^88b4ff]]
+
+- [[Project Procurement and Vendor Management]]
+- [[Project Procurement Process]]
+
+![[procurment_process.png]]
 
 
 ## Explanation

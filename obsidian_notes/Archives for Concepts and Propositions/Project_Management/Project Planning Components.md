@@ -7,6 +7,7 @@ keywords:
   - planning_schedule
 topics:
   - project_management
+  - project_management/project_planning
 name: Project Planning Components
 date of note: 2025-01-10
 ---
@@ -38,6 +39,8 @@ date of note: 2025-01-10
 >	- dates when you hope to *reach various milestones*.
 >	- the start and end dates of the *project*
 >		- determine which resources need and when need them 
+
+^63c93f
 
 - [[Project Planning]]
 - [[Project Tasks and Milestones]]

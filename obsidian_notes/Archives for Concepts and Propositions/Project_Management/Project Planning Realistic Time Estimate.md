@@ -8,6 +8,7 @@ keywords:
   - project_time_estimate
 topics:
   - project_management
+  - project_management/project_planning
 name: Project Planning Realistic Time Estimate
 date of note: 2025-01-10
 ---

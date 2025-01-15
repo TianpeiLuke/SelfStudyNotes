@@ -7,6 +7,7 @@ keywords:
   - setting_milestone
 topics:
   - project_management
+  - project_management/project_planning
 name: Project Planning Setting Milestones
 date of note: 2025-01-10
 ---

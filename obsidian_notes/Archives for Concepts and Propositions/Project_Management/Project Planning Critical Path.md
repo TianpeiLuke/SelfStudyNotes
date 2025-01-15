@@ -9,6 +9,7 @@ keywords:
   - project_critical_path
 topics:
   - project_management
+  - project_management/project_planning
 name: Project Planning Critical Path
 date of note: 2025-01-10
 ---

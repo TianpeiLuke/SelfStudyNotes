@@ -8,7 +8,7 @@ keywords:
   - budget_procurement
 topics:
   - project_management
-name: Project Planning Legal and Contractual Documentation
+name: Project Legal and Contractual Documentation
 date of note: 2025-01-10
 ---
 
