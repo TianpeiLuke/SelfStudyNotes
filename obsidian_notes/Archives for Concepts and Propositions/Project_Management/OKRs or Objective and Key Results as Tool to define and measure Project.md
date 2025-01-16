@@ -2,6 +2,8 @@
 tags:
   - concept
   - project_management/project_initiation
+  - project_management/goal
+  - project_management/milestones
 keywords:
   - project_goal
 topics:

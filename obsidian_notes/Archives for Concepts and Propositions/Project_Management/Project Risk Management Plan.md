@@ -2,6 +2,8 @@
 tags:
   - concept
   - project_management/project_planning
+  - project_management/documentation
+  - project_management/risk_management
 keywords:
   - risk_management
   - risk_management_plan

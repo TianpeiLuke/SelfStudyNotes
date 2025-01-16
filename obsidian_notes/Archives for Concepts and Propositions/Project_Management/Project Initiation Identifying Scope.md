@@ -2,6 +2,7 @@
 tags:
   - concept
   - project_management/project_initiation
+  - project_management/scope
 keywords:
   - project_scope
   - project_goal

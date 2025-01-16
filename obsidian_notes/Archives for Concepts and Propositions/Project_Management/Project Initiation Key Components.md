@@ -2,6 +2,11 @@
 tags:
   - concept
   - project_management/project_initiation
+  - project_management/goal
+  - project_management/scope
+  - project_management/stakeholders
+  - project_management/resources
+  - project_management/deliverables
 keywords:
   - project_goal
   - project_scope

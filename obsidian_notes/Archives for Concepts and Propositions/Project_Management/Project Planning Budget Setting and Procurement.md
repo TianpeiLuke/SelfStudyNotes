@@ -2,6 +2,8 @@
 tags:
   - concept
   - project_management/project_planning
+  - project_management/budgeting
+  - project_management/documentation
 keywords:
   - project_planning
   - budget_setting

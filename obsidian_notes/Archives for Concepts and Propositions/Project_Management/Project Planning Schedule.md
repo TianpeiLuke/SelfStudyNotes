@@ -2,6 +2,8 @@
 tags:
   - concept
   - project_management/project_planning
+  - project_management/documentation
+  - project_management/scheduling
 keywords:
   - project_planning
   - planning_schedule

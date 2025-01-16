@@ -2,6 +2,11 @@
 tags:
   - concept
   - project_management/project_planning
+  - project_management/scope
+  - project_management/milestones
+  - project_management/scheduling
+  - project_management/documentation
+  - project_management/stakeholders
 keywords:
   - project_planning
   - planning_schedule

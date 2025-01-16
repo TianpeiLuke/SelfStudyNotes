@@ -2,6 +2,7 @@
 tags:
   - concept
   - project_management/project_initiation
+  - project_management/goal
 keywords:
   - project_goal
   - SMART_as_project_goal_criteria

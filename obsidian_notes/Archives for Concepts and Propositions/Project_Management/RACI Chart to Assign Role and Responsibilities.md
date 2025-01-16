@@ -2,6 +2,7 @@
 tags:
   - concept
   - project_management/project_initiation
+  - project_management/stakeholders
 keywords:
   - project_stakeholder
   - raci_chart_define_role_responsibility

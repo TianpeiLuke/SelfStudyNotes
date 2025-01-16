@@ -2,6 +2,7 @@
 tags:
   - concept
   - project_management/project_planning
+  - project_management/risk_management
 keywords:
   - risk_management
   - risk_management_plan
@@ -22,7 +23,6 @@ date of note: 2025-01-14
 
 ^d40f1c
 
-
 - [[Project Planning Risk Management]]
 - [[Project Risk Management Type of Risks]]
 
@@ -32,11 +32,11 @@ date of note: 2025-01-14
 
 - [[Probability and Impact Matrix for Risk Assessment and Prioritization]]
 
-
 ### Risk Appetite
 
 >[!important] Definition
 >**Risk appetite** refers to the willingness of an organization to accept the possible outcomes of a risk.
+
 
 
 

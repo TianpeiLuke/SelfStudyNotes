@@ -116,9 +116,13 @@ date of note: 2024-12-27
 
 #### Effective Communication and Documentation
 
-- [[Project Communication Plan]]
+- [[Project Communication]]
 - [[Tips for Effective Communication]]
+- [[Project Communication Plan]]
+- [[Project Communication Plan Best Practice]]
 - [[Project Legal and Contractual Documentation]]
+
+- [[Project Documentation Value and Knowledge Management]]
 
 
 ### Project Execution

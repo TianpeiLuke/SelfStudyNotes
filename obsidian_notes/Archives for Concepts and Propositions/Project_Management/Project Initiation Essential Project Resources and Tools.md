@@ -2,6 +2,8 @@
 tags:
   - concept
   - project_management/project_initiation
+  - project_management/budgeting
+  - project_management/resources
 keywords:
   - project_scope
   - project_goal

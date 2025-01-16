@@ -2,11 +2,13 @@
 tags:
   - concept
   - project_management/project_initiation
+  - project_management/documentation
 keywords:
   - project_proposal
 topics:
   - project_management
   - project_management/project_initiation
+  - project_management/documentation
 name: Project Initiation Project Proposals
 date of note: 2025-01-06
 ---

@@ -8,6 +8,7 @@ keywords:
 topics:
   - project_management
   - project_management/project_initiation
+  - project_management/documentation
 name: Project Initiation Project Documentation
 date of note: 2025-01-06
 ---

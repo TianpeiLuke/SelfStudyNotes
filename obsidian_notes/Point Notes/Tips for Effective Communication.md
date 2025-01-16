@@ -6,7 +6,7 @@ tags:
 aliases: 
 date of note: 2025-01-14
 ---
-## **Recognize and understand individual differences**
+## Recognize and understand individual differences
 
 >[!quote] 
 > You can encourage open, **inclusive communication** by:
@@ -24,7 +24,7 @@ date of note: 2025-01-14
 > 
 >-- Coursera [Project Planning: Putting It All Together](https://www.coursera.org/learn/project-planning-google/home/welcome) 
 
-## **Brainstorm and craft the appropriate message**
+## Brainstorm and craft the appropriate message
 
 >[!quote] 
 > Communicate the right message by thinking about your intended audience. **With whom** are you communicating? In your communications, always be clear about your **reasons for reaching out**:
@@ -44,7 +44,7 @@ date of note: 2025-01-14
 >
 >-- Coursera [Project Planning: Putting It All Together](https://www.coursera.org/learn/project-planning-google/home/welcome)  
 
-## **Deliver your message**
+## Deliver your message
 
 >[!quote] 
 > As you craft your message, think about which **methods** are available and **appropriate** for communicating with various members of your team, whether that is in person, in a video conference, over the phone, via email, or in a meeting. Choosing the right method is especially important if you have team members or stakeholders in different regions and time zones. Also, be sure to:
@@ -53,7 +53,7 @@ date of note: 2025-01-14
 >     
 > - Assume everyone at the company will receive the communication.
 
-## **Obtain feedback and incorporate that feedback going forward**
+## Obtain feedback and incorporate that feedback going forward
 
 >[!quote] 
 > Communication doesn’t end when you deliver your message, so be sure to **follow up with your audience** by:
@@ -75,6 +75,7 @@ date of note: 2025-01-14
 ![[effective_communication.png]]
 
 - [[Project Planning]]
+- [[Project Communication Plan]]
 - [[Getting to Yes Book Summary]]
 - [[The 7 Habits of Highly Effective People Chapter Summary 4]]
 - [[The 7 Habits of Highly Effective People Chapter Summary 5]]

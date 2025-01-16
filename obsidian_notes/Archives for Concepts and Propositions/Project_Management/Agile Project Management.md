@@ -33,6 +33,7 @@ date of note: 2025-01-02
 ### Kanban
 
 - [[Kanban Approach for Agile Project Management]]
+- [[Scrum Approach for Agile Project Management]]
 
 
 

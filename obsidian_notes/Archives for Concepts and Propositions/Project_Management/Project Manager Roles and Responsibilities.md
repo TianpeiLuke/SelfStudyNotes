@@ -2,6 +2,7 @@
 tags:
   - concept
   - project_management/fundamental_concepts
+  - project_management/stakeholders
 keywords:
   - project_management
   - project_manager

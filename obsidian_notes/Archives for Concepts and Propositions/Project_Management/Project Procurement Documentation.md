@@ -2,6 +2,9 @@
 tags:
   - concept
   - project_management/project_planning
+  - project_management/procurement
+  - project_management/communication
+  - project_management/documentation
 keywords:
   - project_planning
   - project_budget

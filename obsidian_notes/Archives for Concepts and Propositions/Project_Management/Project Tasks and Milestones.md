@@ -2,6 +2,7 @@
 tags:
   - concept
   - project_management/project_planning
+  - project_management/milestones
 keywords:
   - project_planning
   - project_milestone

@@ -2,6 +2,7 @@
 tags:
   - concept
   - project_management/project_planning
+  - project_management/agile
 keywords:
   - project_planning
   - kanban_project_management

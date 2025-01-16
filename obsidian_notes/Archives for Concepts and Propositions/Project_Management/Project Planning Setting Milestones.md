@@ -2,6 +2,7 @@
 tags:
   - concept
   - project_management/project_planning
+  - project_management/scheduling
 keywords:
   - project_planning
   - setting_milestone
