@@ -138,6 +138,11 @@ date of note: 2024-12-27
 - [[Project Execution Effective Escalation Email]]
 
 
+#### Data Analysis
+
+- [[Project Execution Data Analysis Steps]]
+
+
 #### Effective Leadership
 
 - [[Project Execution Leadership Skills]]
@@ -151,6 +156,9 @@ date of note: 2024-12-27
 #### Organizing Effective Meetings
 
 - [[Project Execution Organizing Effective Meeting]]
+
+
+
 
 
 ### Project Closure
