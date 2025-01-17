@@ -72,6 +72,13 @@ date of note: 2025-01-15
 
 ## Knowledge Management System
 
+### Getting Things Done
+
+- [[Getting Things Done Book Summary]]
+- [[Getting Things Done Chapter Summary 1]]
+- [[Getting Things Done Chapter Summary 2]]
+
+
 ### Building A Second Brain and PARA
 
 - [[Building a Second Brain Book Summary]]

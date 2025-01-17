@@ -100,6 +100,8 @@ year: 2022
 - [Combining the Zettelkasten Method and Building a Second Brain](https://zettelkasten.de/posts/building-a-second-brain-and-zettelkasten/#:~:text=While%20BASB's%20%E2%80%9Csecond%20brain%E2%80%9D%20doesn,between%20BASB%20and%20the%20ZKM)
 - [[Building a Second Brain Excerpt 01]]
 - [[Building a Second Brain Excerpt 02]]
+- [[Concepts and Operations in Project Management]]
+- [[Project Documentation Value and Knowledge Management]]
 
 
 ----------

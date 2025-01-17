@@ -83,6 +83,8 @@ year: 2022
 		- Projects have *concrete objectives* and *action items*. 
 		- Projects need to clearly define *success criteria* and to have *expected outcome.*
 		- Projects are units of low-level time management and prioritization.  
+		- [[Concepts and Operations in Project Management]]
+		- [[Project Documentation Value and Knowledge Management]]
 		  
 	- **Area**: defines our roles and responsibilities that need long term maintenance. 
 		- Areas are associated with our *roles* and the corresponding expectations.

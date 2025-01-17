@@ -9,6 +9,7 @@ tags:
   - earn_trust
   - listening
   - empathy
+  - emotional_intelligence
 aliases:
   - 06017habits06s
 keywords:

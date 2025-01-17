@@ -9,6 +9,7 @@ tags:
   - negotiation
   - earn_trust
   - win_win
+  - emotional_intelligence
 aliases:
   - 06017habits05s
 keywords:

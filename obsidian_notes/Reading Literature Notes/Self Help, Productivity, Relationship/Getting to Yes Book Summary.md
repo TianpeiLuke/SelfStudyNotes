@@ -3,6 +3,7 @@ tags:
   - book
   - relationship_management
   - negotiation
+  - emotional_intelligence
 aliases:
   - 0603gty01s
 keywords:
@@ -40,6 +41,10 @@ year: 2011
 - [[Project Planning Realistic Time Estimate]]
 - [[Project Planning Capacity Planning]]
 - [[Project Planning Critical Path]]
+- [[Project Execution Leadership Skills]]
+- [[Project Execution Influencing Skills]]
+
+
 
 
 ----------

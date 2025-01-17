@@ -127,6 +127,30 @@ date of note: 2024-12-27
 
 ### Project Execution
 
+#### Tracking Project
+
+- [[Project Execution Tracking Method]]
+- [[Project Status Reports]]
+
+#### Effective Leadership
+
+- [[Project Execution Leadership Skills]]
+
+#### Element of Influencing
+
+- [[Project Execution Influencing Skills]]
+
+
+#### Organizing Effective Meetings
+
+- [[Project Execution Organizing Effective Meeting]]
+
+
+### Project Closure
+
+- [[Project Closure Closing Process]]
+
+
 
 ### Agile Project Management
 

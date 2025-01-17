@@ -150,6 +150,7 @@ year: 2022
 >[!cite]
 >Forte, T. (2023), *The PARA Method: Simplify, Organize, and Master Your Digital Life*. Atria Books
 - [The Iceberg Theory of Zettelkasten Method - Exploring the Depths](https://zettelkasten.de/posts/zettelkasten-iceberg/#/discussions)
+- [[Project Documentation Value and Knowledge Management]]
 - This book can help to develop **Amazon Leadership Principles**
 	- The workflow developed in this book would help with [[Leadership Principle Deliver Results]]
 	- The *action-oriented* organization of **P.A.R.A** suggests [[Leadership Principle Bias for Action]]

@@ -7,6 +7,7 @@ tags:
   - habit
   - earn_trust
   - synergize
+  - emotional_intelligence
 aliases:
   - 06017habits07s
 keywords:

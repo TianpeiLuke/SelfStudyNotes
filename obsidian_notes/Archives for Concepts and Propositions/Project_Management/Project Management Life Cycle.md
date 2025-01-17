@@ -2,6 +2,8 @@
 tags:
   - concept
   - project_management/fundamental_concepts
+  - communiction
+  - emotional_intelligence
 keywords:
   - project_management
 topics:

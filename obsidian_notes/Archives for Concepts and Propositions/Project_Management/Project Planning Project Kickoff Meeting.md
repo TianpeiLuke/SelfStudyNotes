@@ -2,6 +2,7 @@
 tags:
   - concept
   - project_management/project_planning
+  - emotional_intelligence
 keywords:
   - project_planning
   - project_kickoff

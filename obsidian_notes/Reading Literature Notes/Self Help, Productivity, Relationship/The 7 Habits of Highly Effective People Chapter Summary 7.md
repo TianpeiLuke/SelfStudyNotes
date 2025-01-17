@@ -6,6 +6,7 @@ tags:
   - productivity
   - habit
   - renewal
+  - emotional_intelligence
 aliases:
   - 06017habits08s
 keywords:

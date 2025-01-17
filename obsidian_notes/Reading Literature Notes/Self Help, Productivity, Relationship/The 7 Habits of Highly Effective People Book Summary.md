@@ -7,6 +7,7 @@ tags:
   - personal_development
   - relationship_management
   - effectiveness
+  - emotional_intelligence
 aliases:
   - 06017habits01s
 keywords:

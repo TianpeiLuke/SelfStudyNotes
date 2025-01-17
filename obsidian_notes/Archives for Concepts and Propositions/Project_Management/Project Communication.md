@@ -3,6 +3,8 @@ tags:
   - concept
   - project_management/project_planning
   - project_management/communication
+  - communiction
+  - emotional_intelligence
 keywords:
   - risk_management
   - communication_plan

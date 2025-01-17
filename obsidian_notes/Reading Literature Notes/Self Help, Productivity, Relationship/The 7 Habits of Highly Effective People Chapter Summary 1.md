@@ -9,6 +9,7 @@ tags:
   - relationship_management
   - effectiveness
   - paradigm_shift
+  - emotional_intelligence
 aliases:
   - 06017habits02s
 keywords:

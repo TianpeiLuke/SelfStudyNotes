@@ -3,6 +3,7 @@ tags:
   - concept
   - project_management/project_initiation
   - project_management/stakeholders
+  - circle_of_influence
 keywords:
   - project_stakeholder
   - project_stakeholder_analysis
@@ -152,7 +153,11 @@ date of note: 2025-01-06
 -----------
 ##  Recommended Notes and References
 
+
 - [[Project Initiation Key Components]]
+- [[The 7 Habits of Highly Effective People Book Summary]]
+- [[The 7 Habits of Highly Effective People Chapter Summary 1]]
+- [[The 7 Habits of Highly Effective People Chapter Summary 2]]
 - [Roll Call: We Asked the Project Management Community: What Steps Do You Take To Identify and Prioritize All Stakeholders at the Start of a Project?](https://www.pmi.org/learning/library/identify-prioritize-stakeholders-11408) , describes additional strategies for identifying stakeholders to further increase your understanding.
 
 - Coursera

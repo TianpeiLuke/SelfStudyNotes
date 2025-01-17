@@ -116,9 +116,11 @@ Covey, S. R. (1991). _The seven habits of highly effective people_. Provo, UT: 
 -----------
 ##  Book Reference Highlights
 
+- [[Project Initiation Stakeholder Analysis]] 
 - [[Project Planning Critical Path]]
 - [[Project Planning Capacity Planning]]
 - [[Project Risk Management Type of Risks]]
+
 
 
 - Suggestions in this book resonate with **Amazon Leadership Principles**:
