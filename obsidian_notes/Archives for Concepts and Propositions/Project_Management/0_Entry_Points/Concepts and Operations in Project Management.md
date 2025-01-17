@@ -132,9 +132,16 @@ date of note: 2024-12-27
 - [[Project Execution Tracking Method]]
 - [[Project Status Reports]]
 
+
+#### Escalation Process
+
+- [[Project Execution Effective Escalation Email]]
+
+
 #### Effective Leadership
 
 - [[Project Execution Leadership Skills]]
+
 
 #### Element of Influencing
 
