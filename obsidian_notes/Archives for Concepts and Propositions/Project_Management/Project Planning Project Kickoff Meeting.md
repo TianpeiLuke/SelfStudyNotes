@@ -25,6 +25,7 @@ date of note: 2025-01-10
 >- and to understand each person's individual *roles* within the team.
 
 - [[Project Planning]]
+- [[Project Execution Effective Meeting]]
 
 ### People to Attend
 
@@ -136,5 +137,6 @@ date of note: 2025-01-10
 ##  Recommended Notes and References
 
 
+- [[Project Communication]]
 - [[Project Management Definition and Purpose]]
 - Coursera [Project Planning: Putting It All Together](https://www.coursera.org/learn/project-planning-google/home/welcome)

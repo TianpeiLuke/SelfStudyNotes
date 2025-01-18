@@ -33,11 +33,14 @@ date of note: 2025-01-15
 - [[Project Manager Roles and Responsibilities]]
 - [[Project Initiation Choosing Project Team]]
 - [[Project Initiation Identifying and Working with Stakeholders]]
+- [[Project Communication Plan]]
+
+### Documentation
+
 - [[Project Initiation Stakeholder Analysis]]
 - [[Project Initiation Project Proposals]]
 - [[Project Initiation Project Charter]]
 - [[Project Initiation Project Documentation]]
-- [[Project Planning Project Kickoff Meeting]]
 - [[Project Planning Capacity Planning]]
 - [[Project Planning Realistic Time Estimate]]
 - [[Project Planning Budget Setting and Procurement]]
@@ -45,7 +48,22 @@ date of note: 2025-01-15
 - [[Project Procurement and Vendor Management]]
 - [[Project Procurement Documentation]]
 - [[Project Planning Risk Management]]
-- [[Project Communication Plan]]
+
+### Meeting
+
+- [[Project Planning Project Kickoff Meeting]]
+- [[Project Execution Effective Meeting]]
+
+
+### Presentation
+
+- [[Project Execution Effective Presentation]]
+
+### Email
+
+- 
+- [[Project Execution Effective Escalation Email]]
+
 
 
 ## Explanation

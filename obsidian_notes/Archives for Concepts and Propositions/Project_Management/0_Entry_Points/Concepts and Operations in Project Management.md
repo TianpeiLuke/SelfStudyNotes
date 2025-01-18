@@ -133,6 +133,13 @@ date of note: 2024-12-27
 - [[Project Status Reports]]
 
 
+#### Quality Management
+
+- [[Project Execution Quality Management]]
+- [[Project Execution Quality Standard]]
+- [[Project Execution Quality Planning]]
+- [[Project Execution Quality Assurance]]
+
 #### Escalation Process
 
 - [[Project Execution Effective Escalation Email]]
@@ -140,7 +147,15 @@ date of note: 2024-12-27
 
 #### Data Analysis
 
-- [[Project Execution Data Analysis Steps]]
+- [[Project Execution Data-Informed Decision-Making]]
+- [[Project Execution Data Analysis and Steps]]
+- [[Project Execution Common Data Metrics]]
+- [[Project Execution Data Visualization]]
+
+#### Effective Meeting and Presentation
+
+- [[Project Execution Effective Presentation]]
+- [[Project Execution Effective Meeting]]
 
 
 #### Effective Leadership
@@ -153,17 +168,11 @@ date of note: 2024-12-27
 - [[Project Execution Influencing Skills]]
 
 
-#### Organizing Effective Meetings
-
-- [[Project Execution Organizing Effective Meeting]]
-
-
-
-
 
 ### Project Closure
 
 - [[Project Closure Closing Process]]
+- [[Project Closure Project Impact Report]]
 
 
 
