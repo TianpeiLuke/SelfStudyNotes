@@ -26,7 +26,7 @@ date of note: 2024-10-21
 -----------
 ##  Recommended Notes and References
 
-
+- [[rafailovDirectPreferenceOptimization2023]] Rafailov, R., Sharma, A., Mitchell, E., Manning, C. D., Ermon, S., & Finn, C. (2024). Direct preference optimization: Your language model is secretly a reward model. _Advances in Neural Information Processing Systems_, _36_.
 - [[Attention Mechanism in Neural Network]]
 - [[Transformer Network]]
 - [[Large Language Model and Pretrained Language Models]]
