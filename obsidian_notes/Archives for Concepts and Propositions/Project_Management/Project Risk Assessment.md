@@ -37,13 +37,24 @@ date of note: 2025-01-14
 >[!important] Definition
 >**Risk appetite** refers to the willingness of an organization to accept the possible outcomes of a risk.
 
+### Risk Exposure
 
+>[!important] Definition
+>**Risk exposure** is a way to measure the potential future loss resulting from a specific activity or event.
+
+^18a032
 
 
 ## Explanation
 
+>[!important]
+>The most important risks are
+>- **scope creep**
+>- **dependencies**
 
-
+- [[Project Initiation Identifying Scope]]
+- [[Project Risk Management Type of Risks#Dependency]]
+- [[ROAM Analysis to Manage Action After Risk Arise]]
 
 
 -----------

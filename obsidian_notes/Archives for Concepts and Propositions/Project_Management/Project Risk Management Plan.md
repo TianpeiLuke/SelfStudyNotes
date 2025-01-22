@@ -76,6 +76,17 @@ date of note: 2025-01-14
 - [[Probability and Impact Matrix for Risk Assessment and Prioritization]]
 - [[Project Risk Mitigation Strategies]]
 
+
+>[!important] Definition
+>A **risk register** is a table or a chart that contains your list of possible risks, which include 
+>- *Description*
+>- **Risk Rating**
+>- **Mitigation plan**
+
+![[Project Risk Assessment#^18a032]]
+
+- [[Project Risk Assessment]]
+
 >[!info]
 >*Share* to team and stakeholders to reach alignment.
 
@@ -85,6 +96,8 @@ date of note: 2025-01-14
 > it's not enough for you and your teammates to simply be aware of the biggest risks to a project.
 > 
 > You also need to **communicate these risks to your project stakeholders**, whether through documentation, e-mail, meetings, or other forms of communication you've deemed appropriate.
+
+- [[Project Execution Effective Escalation Email]]
 
 >[!info]
 >if you don't tell your stakeholders about important risks, they may be *less equipped to help* you if an issue does arise.

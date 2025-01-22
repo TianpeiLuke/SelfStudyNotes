@@ -74,17 +74,20 @@ date of note: 2025-01-10
 
 - [[Project Planning Work Breakdown Structure or WBS]]
 
+- [[Waterfall Project Management]]
+
+
 ### Spreadsheet templates
 
 It is helpful to try online tutorials so that you can get used to the different functionalities and user interfaces of each tool. We have included links to some project plan templates below:
 
-[Smartsheet: Project Plan Templates for Microsoft Word](https://www.smartsheet.com/content/project-plan-templates)
+- [Smartsheet: Project Plan Templates for Microsoft Word](https://www.smartsheet.com/content/project-plan-templates)
 
-[Smartsheet: Project Plan Templates for Google Sheets](https://www.smartsheet.com/free-google-docs-templates-google-timeline-templates)
+- [Smartsheet: Project Plan Templates for Google Sheets](https://www.smartsheet.com/free-google-docs-templates-google-timeline-templates)
 
-[Google Project Plan Timeline Template](https://docs.google.com/spreadsheets/d/1TauRTFipsWDWGqaw6tmqJeknKhVI5IjR5jJvBfVzfGw/template/preview)
+- [Google Project Plan Timeline Template](https://docs.google.com/spreadsheets/d/1TauRTFipsWDWGqaw6tmqJeknKhVI5IjR5jJvBfVzfGw/template/preview)
 
-[Microsoft Gantt Chart Template](https://create.microsoft.com/en-us/template/simple-gantt-chart-4bf6b793-490f-4623-84ca-c9c6251a91fc)
+- [Microsoft Gantt Chart Template](https://create.microsoft.com/en-us/template/simple-gantt-chart-4bf6b793-490f-4623-84ca-c9c6251a91fc)
 
 
 

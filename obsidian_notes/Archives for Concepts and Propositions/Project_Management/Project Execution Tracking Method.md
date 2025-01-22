@@ -16,6 +16,9 @@ date of note: 2025-01-16
 >[!important]
 >**Name**: Project Execution Tracking Method
 
+![[Project Execution Tracking#^a938d7]]
+
+- [[Project Execution Tracking]]
 ### Gantt charts
 
 ![[Project Planning Gantt Chart#^323bad]]
@@ -37,6 +40,11 @@ date of note: 2025-01-16
 
 - [[Project Planning Gantt Chart]]
 
+>[!important]
+>**Gantt chart** is commonly used in **Waterfall project management**.
+
+- [[Waterfall Project Management]]
+
 ### Roadmaps
 
 >[!quote]
@@ -51,6 +59,19 @@ date of note: 2025-01-16
 >     
 > - Illustrating to your team or *key stakeholders* how a project should *evolve over time*
 > 
+
+>[!info]
+>A **roadmap** might list 
+>- your project's **goals** at the *top* 
+>- and a **description** of the **approach** we'll be taking to meet those goals.
+>  
+>A roadmap also includes 
+>- a **high-level project overview**. 
+>	- *High-level* in this context means a concise summary, usually three-to-four sentences, to clearly state 
+>		- the **objectives** 
+>		- and **priorities** for your project.
+>- Below the goals, approach, and overview is a **table** that maps out what the **process** will entail.  
+
 
 
 ### Burndown charts

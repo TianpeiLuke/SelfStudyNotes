@@ -18,6 +18,8 @@ date of note: 2025-01-14
 
 ![[Project Risk Assessment#^d40f1c]]
 
+![[Project Risk Assessment#^18a032]]
+
 - [[Project Risk Assessment]]
 - [[Project Planning Risk Management]]
 - [[Project Risk Management Type of Risks]]
@@ -25,7 +27,7 @@ date of note: 2025-01-14
 ### Probability and Impact Matrix
 
 >[!important] Definition
->A **probability and impact matrix** is a tool used to *prioritize project risks*.
+>A **probability and impact matrix** is a tool used to *prioritize project risks* and identify the *risk exposure*.
 >- **Impact** refers to the damage a risk could cause if it occurs.
 >	- Impact is also determined on a scale of *high*, *medium*, and *low*.
 >	- *High* means that if the risk occurs, it will substantially alter the project.

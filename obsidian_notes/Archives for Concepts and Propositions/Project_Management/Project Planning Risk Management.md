@@ -147,6 +147,7 @@ date of note: 2025-01-10
 -----------
 ##  Recommended Notes and References
 
+- [[ROAM Analysis to Manage Action After Risk Arise]]
 
 - Review the following article for further information on using risk management strategies to identify and take advantage of opportunities that may occur during your projects: [The Risk Management Process in Project Management](https://www.projectmanager.com/blog/risk-management-process-steps)
 

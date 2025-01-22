@@ -39,7 +39,9 @@ date of note: 2025-01-02
 
 ## Explanation
 
+### Waterfall vs. Agile
 
+- [[Waterfall Project Management]]
 
 
 

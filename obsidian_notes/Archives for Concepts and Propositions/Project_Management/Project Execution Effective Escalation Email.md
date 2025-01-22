@@ -18,6 +18,9 @@ date of note: 2025-01-16
 >[!important]
 >**Name**: Project Execution Effective Escalation Email
 
+![[Project Risk Management Escalation#^25823c]]
+
+- [[Project Risk Management Escalation]]
 ## Escalation email best practices
 
 >[!important]

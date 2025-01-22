@@ -6,6 +6,8 @@ tags:
 keywords:
   - risk_management
   - risk_management_plan
+  - project_dependency
+  - single_point_of_failure
 topics:
   - project_management/project_planning
 name: Project Risk Management Type of Risks
@@ -67,6 +69,8 @@ date of note: 2025-01-14
 >- A dependency *must be addressed before* the task can be completed or before another task can begin.
 >- Because dependencies are the links that connect one project task to another, they are often a *huge source of risk* to a project.
 
+^842aeb
+
 >[!info]
 >If you don't **plan for dependencies**, you might risk and impact your *budget schedule* or project outcome.
 
@@ -75,7 +79,7 @@ date of note: 2025-01-14
 >-  **Internal dependencies** refer to dependencies within the project that you and your team *have control* over.
 >- **External dependencies** are dependencies that you have *no control over*.
 
-
+- [[ROAM Analysis to Manage Action After Risk Arise]]
 - [[The 7 Habits of Highly Effective People Chapter Summary 1]]
 - [[The 7 Habits of Highly Effective People Chapter Summary 2]]
 
