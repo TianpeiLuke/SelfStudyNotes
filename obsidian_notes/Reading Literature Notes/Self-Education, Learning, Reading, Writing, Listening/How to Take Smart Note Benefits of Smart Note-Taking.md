@@ -146,6 +146,7 @@ year: 2022
 
 ## Recommended Notes
 
+- [[Project Documentation Value and Knowledge Management]]
 - Refer to [[How to Take Smart Note Book Summary]] for book summary
 
 - Check on suggestions to counter confirmation bias in 

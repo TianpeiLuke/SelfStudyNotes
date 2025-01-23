@@ -20,7 +20,7 @@ date of note: 2024-10-21
 > - **Abstract:** The dominant sequence transduction models are based on complex recurrent orconvolutional neural networks in an encoder and decoder configuration. The best performing such models also connect the encoder and decoder through an attentionm echanisms.  We propose a novel, simple network architecture based solely onan attention mechanism, dispensing with recurrence and convolutions entirely.Experiments on two machine translation tasks show these models to be superiorin quality while being more parallelizable and requiring significantly less timeto train. Our single model with 165 million parameters, achieves 27.5 BLEU onEnglish-to-German translation, improving over the existing best ensemble result by over 1 BLEU. On English-to-French translation, we outperform the previoussingle state-of-the-art with model by 0.7 BLEU, achieving a BLEU score of 41.1. 
 > - **Sources**: [online](http://zotero.org/users/13492210/items/5UFWAJKT) [local](zotero://select/library/items/5UFWAJKT) [pdf](file:////home/lukexie/Documents/Papers/storage/83LHIK3E/Vaswani%20et%20al.%20-%202017%20-%20Attention%20is%20All%20you%20Need.pdf) 
 > - **Bibliography**: Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., & Polosukhin, I. (2017). Attention is All you Need. _Advances in Neural Information Processing Systems_, _30_. [https://proceedings.neurips.cc/paper_files/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html](https://proceedings.neurips.cc/paper_files/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html)
-> - **Cite Key:** [[@vaswaniAttentionAllYou2017]] 
+> - **Cite Key:** @vaswaniAttentionAllYou2017
 > - **Conclusion**:
 
 

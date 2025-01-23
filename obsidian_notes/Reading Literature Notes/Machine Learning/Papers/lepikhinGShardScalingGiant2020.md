@@ -13,11 +13,12 @@ date of note: 2025-01-03
 # Descriptions
 
 ## GShard: Scaling Giant Models with Conditional Computation and Automatic Sharding 
+
 > [!info] 
 > - **Abstract:** Neural network scaling has been critical for improving the model quality in many real-world machine learning applications with vast amounts of training data and compute. Although this trend of scaling is affirmed to be a sure-fire approach for better model quality, there are challenges on the path such as the computation cost,ease of programming, and efficient implementation on parallel devices. In this paper we demonstrate conditional computation as a remedy to the above mentioned impediments, and demonstrate its efficacy and utility. We make extensive use of GShard, a module composed of a set of lightweight annotation APIs and an extension to the XLA compiler to enable large scale models with up to trillions of parameters. GShard and conditional computation enable us to scale up multilingual neural machine translation Transformer model with Sparsely-Gated Mixture-of-Experts. We demonstrate that such a giant model with 600 billion parameters can efficiently be trained on 2048 TPU v3 cores in 4 days to achieve far superior quality for translation from 100 languages to English compared to the prior art. 
 > - **Sources**: [online](http://zotero.org/users/13492210/items/9S2R48II) [local](zotero://select/library/items/9S2R48II) [pdf](file:////home/lukexie/Documents/Papers/storage/9Q4RJ8F9/Lepikhin%20et%20al.%20-%202020%20-%20GShard%20Scaling%20Giant%20Models%20with%20Conditional%20Comp.pdf) 
 > - **Bibliography**: Lepikhin, D., Lee, H., Xu, Y., Chen, D., Firat, O., Huang, Y., Krikun, M., Shazeer, N., & Chen, Z. (2020, October 2). _GShard: Scaling Giant Models with Conditional Computation and Automatic Sharding_. International Conference on Learning Representations. [https://openreview.net/forum?id=qrwe7XHTmYb](https://openreview.net/forum?id=qrwe7XHTmYb)
-> - **Cite Key:** [[@lepikhinGShardScalingGiant2020]] 
+> - **Cite Key:** @lepikhinGShardScalingGiant2020 
 > - **Conclusion**:
 
 

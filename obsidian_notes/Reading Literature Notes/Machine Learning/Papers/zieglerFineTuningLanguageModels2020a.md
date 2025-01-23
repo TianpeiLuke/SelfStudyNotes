@@ -1,25 +1,25 @@
 ---
 tags:
 - '#paper'
-aliases: "huLoRALowRankAdaptation2022"
-year: 2022
-name: "LoRA: Low-Rank Adaptation of Large Language Models"
-authors: "Edward J. Hu, Yelong Shen, Phillip Wallis, Zeyuan Allen-Zhu, Yuanzhi Li, Shean Wang, Lu Wang, Weizhu Chen"
+aliases: "zieglerFineTuningLanguageModels2020a"
+year: 2020
+name: "Fine-Tuning Language Models from Human Preferences"
+authors: "Daniel M. Ziegler, Nisan Stiennon, Jeffrey Wu, Tom B. Brown, Alec Radford, Dario Amodei, Paul Christiano, Geoffrey Irving"
 publication: ""
-type: "conferencePaper"
-DOI: ""
-date of note: 
+type: "preprint"
+DOI: "10.48550/arXiv.1909.08593"
+date of note: 2025-01-19 
 ---
 # Descriptions
 
-## LoRA: Low-Rank Adaptation of Large Language Models 
+## Fine-Tuning Language Models from Human Preferences 
 > [!info] 
-> - **Abstract:** An important paradigm of natural language processing consists of large-scale pre-training on general domain data and adaptation to particular tasks or domains. As we pre-train larger models, full fine-tuning, which retrains all model parameters, becomes less feasible. Using GPT-3 175B as an example -- deploying independent instances of fine-tuned models, each with 175B parameters, is prohibitively expensive. We propose Low-Rank Adaptation, or LoRA, which freezes the pre-trained model weights and injects trainable rank decomposition matrices into each layer of the Transformer architecture, greatly reducing the number of trainable parameters for downstream tasks. Compared to GPT-3 175B fine-tuned with Adam, LoRA can reduce the number of trainable parameters by a factor of 10,000 and the GPU memory requirement by a factor of 3. LoRA performs on-par or better than fine-tuning in model quality on RoBERTa, DeBERTa, GPT-2, and GPT-3, despite having fewer trainable parameters, a higher training throughput, and, unlike adapters, no additional inference latency. We also provide an empirical investigation into rank-deficiency in language model adaptation, which sheds light on the efficacy of LoRA. We release a package that facilitates the integration of LoRA with PyTorch models and provide our implementations and model checkpoints for RoBERTa, DeBERTa, and GPT-2 at https://github.com/microsoft/LoRA. 
-> - **Sources**: [online](http://zotero.org/users/13492210/items/YZ46EBS7) [local](zotero://select/library/items/YZ46EBS7) [pdf](file:////home/lukexie/Documents/Papers/storage/NRFTLTBJ/Hu%20et%20al.%20-%202022%20-%20LoRA%20Low-Rank%20Adaptation%20of%20Large%20Language%20Models.pdf) 
-> - **Bibliography**: Hu, E. J., Shen, Y., Wallis, P., Allen-Zhu, Z., Li, Y., Wang, S., Wang, L., & Chen, W. (2022, April 25). LoRA: Low-Rank Adaptation of Large Language Models. _The 10th International Conference on Learning Representations (ICLR)_. International Conference on Learning Representations (ICLR 2022). [https://openreview.net/forum?id=nZeVKeeFYf9](https://openreview.net/forum?id=nZeVKeeFYf9)
-> - **Cite Key:** @huLoRALowRankAdaptation2022
+> - **Abstract:** Reward learning enables the application of reinforcement learning (RL) to tasks where reward is defined by human judgment, building a model of reward by asking humans questions. Most work on reward learning has used simulated environments, but complex information about values is often expressed in natural language, and we believe reward learning for language is a key to making RL practical and safe for real-world tasks. In this paper, we build on advances in generative pretraining of language models to apply reward learning to four natural language tasks: continuing text with positive sentiment or physically descriptive language, and summarization tasks on the TL;DR and CNN/Daily Mail datasets. For stylistic continuation we achieve good results with only 5,000 comparisons evaluated by humans. For summarization, models trained with 60,000 comparisons copy whole sentences from the input but skip irrelevant preamble; this leads to reasonable ROUGE scores and very good performance according to our human labelers, but may be exploiting the fact that labelers rely on simple heuristics. 
+> - **Sources**: [online](http://zotero.org/users/13492210/items/565DEH6R) [local](zotero://select/library/items/565DEH6R) [pdf](file:////home/lukexie/Documents/Papers/storage/F8QAZUKZ/Ziegler%20et%20al.%20-%202020%20-%20Fine-Tuning%20Language%20Models%20from%20Human%20Preferences.pdf) 
+> - **Bibliography**: Ziegler, D. M., Stiennon, N., Wu, J., Brown, T. B., Radford, A., Amodei, D., Christiano, P., & Irving, G. (2020). _Fine-Tuning Language Models from Human Preferences_ (No. arXiv:1909.08593). arXiv. [https://doi.org/10.48550/arXiv.1909.08593](https://doi.org/10.48550/arXiv.1909.08593)
+> - **Cite Key:** @zieglerFineTuningLanguageModels2020a 
 > - **Conclusion**:
-> - **Tags:** #Large-language-model, #LoRA, #Low-Rank-Approximation
+> - **Tags:** #Computer-Science---Computation-and-Language, #Computer-Science---Machine-Learning, #Statistics---Machine-Learning
 
 
 >[!Personal Summary] 
@@ -191,7 +191,3 @@ date of note:
 ----
 
 ## Reference and Related Notes
-
-
-- [[Large Language Model and Pretrained Language Models]]
-- [[vaswaniAttentionAllYou2017]]

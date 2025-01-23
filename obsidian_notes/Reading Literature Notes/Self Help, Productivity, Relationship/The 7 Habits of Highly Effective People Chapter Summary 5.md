@@ -73,3 +73,9 @@ Covey, S. R. (1991). _The seven habits of highly effective people_. Provo, UT: 
 
 -----------
 ##  Book Reference Highlights
+
+
+- [[Project Communication]]
+- [[Project Communication Plan Best Practice]]
+- [[Project Planning Best Practices]]
+- [[Project Execution Influencing Skills]]

@@ -19,7 +19,7 @@ date of note: 2024-10-21
 > - **Abstract:** We present high quality image synthesis results using diffusion probabilistic models, a class of latent variable models inspired by considerations from nonequilibrium thermodynamics. Our best results are obtained by training on a weighted variational bound designed according to a novel connection between diffusion probabilistic models and denoising score matching with Langevin dynamics, and our models naturally admit a progressive lossy decompression scheme that can be interpreted as a generalization of autoregressive decoding. On the unconditional CIFAR10 dataset, we obtain an Inception score of 9.46 and a state-of-the-art FID score of 3.17. On 256x256 LSUN, we obtain sample quality similar to ProgressiveGAN. 
 > - **Sources**: [online](http://zotero.org/users/13492210/items/SUHW7Y8U) [local](zotero://select/library/items/SUHW7Y8U) [pdf](file:////home/lukexie/Documents/Papers/storage/9GVCE3U8/Ho%20et%20al.%20-%202020%20-%20Denoising%20Diffusion%20Probabilistic%20Models.pdf)  [pdf](file:////home/lukexie/Documents/Papers/storage/9F4TKKRM/NeurIPS-2020-denoising-diffusion-probabilistic-models-Supplemental.pdf) 
 > - **Bibliography**: Ho, J., Jain, A., & Abbeel, P. (2020). Denoising Diffusion Probabilistic Models. _Advances in Neural Information Processing Systems_, _33_, 6840–6851. [https://proceedings.neurips.cc/paper/2020/hash/4c5bcfec8584af0d967f1ab10179ca4b-Abstract.html](https://proceedings.neurips.cc/paper/2020/hash/4c5bcfec8584af0d967f1ab10179ca4b-Abstract.html)
-> - **Cite Key:** [[@hoDenoisingDiffusionProbabilistic2020]] 
+> - **Cite Key:** @hoDenoisingDiffusionProbabilistic2020 
 > - **Conclusion**:
 
 

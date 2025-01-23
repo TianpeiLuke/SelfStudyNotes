@@ -18,7 +18,7 @@ date of note: {{importDate | format("YYYY-MM-DD")}}
 >[!Synth]  
 >**Contribution**::  
 >  
->**Related**:: {% for relation in relations | selectattr("citekey") %} [[@{{relation.citekey}}]]{% if not loop.last %}, {% endif%} {% endfor %}  
+>**Related**:: {% for relation in relations | selectattr("citekey") %} @{{relation.citekey}}{% if not loop.last %}, {% endif%} {% endfor %}  
 >  
   
 >[!md]  

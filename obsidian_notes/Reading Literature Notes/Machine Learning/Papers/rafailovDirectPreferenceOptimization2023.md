@@ -1,25 +1,25 @@
 ---
 tags:
 - '#paper'
-aliases: "huLoRALowRankAdaptation2022"
-year: 2022
-name: "LoRA: Low-Rank Adaptation of Large Language Models"
-authors: "Edward J. Hu, Yelong Shen, Phillip Wallis, Zeyuan Allen-Zhu, Yuanzhi Li, Shean Wang, Lu Wang, Weizhu Chen"
+aliases: "rafailovDirectPreferenceOptimization2023"
+year: 2023
+name: "Direct Preference Optimization: Your Language Model is Secretly a Reward Model"
+authors: "Rafael Rafailov, Archit Sharma, Eric Mitchell, Christopher D. Manning, Stefano Ermon, Chelsea Finn"
 publication: ""
 type: "conferencePaper"
 DOI: ""
-date of note: 
+date of note: 2025-01-19 
 ---
 # Descriptions
 
-## LoRA: Low-Rank Adaptation of Large Language Models 
+## Direct Preference Optimization: Your Language Model is Secretly a Reward Model 
 > [!info] 
-> - **Abstract:** An important paradigm of natural language processing consists of large-scale pre-training on general domain data and adaptation to particular tasks or domains. As we pre-train larger models, full fine-tuning, which retrains all model parameters, becomes less feasible. Using GPT-3 175B as an example -- deploying independent instances of fine-tuned models, each with 175B parameters, is prohibitively expensive. We propose Low-Rank Adaptation, or LoRA, which freezes the pre-trained model weights and injects trainable rank decomposition matrices into each layer of the Transformer architecture, greatly reducing the number of trainable parameters for downstream tasks. Compared to GPT-3 175B fine-tuned with Adam, LoRA can reduce the number of trainable parameters by a factor of 10,000 and the GPU memory requirement by a factor of 3. LoRA performs on-par or better than fine-tuning in model quality on RoBERTa, DeBERTa, GPT-2, and GPT-3, despite having fewer trainable parameters, a higher training throughput, and, unlike adapters, no additional inference latency. We also provide an empirical investigation into rank-deficiency in language model adaptation, which sheds light on the efficacy of LoRA. We release a package that facilitates the integration of LoRA with PyTorch models and provide our implementations and model checkpoints for RoBERTa, DeBERTa, and GPT-2 at https://github.com/microsoft/LoRA. 
-> - **Sources**: [online](http://zotero.org/users/13492210/items/YZ46EBS7) [local](zotero://select/library/items/YZ46EBS7) [pdf](file:////home/lukexie/Documents/Papers/storage/NRFTLTBJ/Hu%20et%20al.%20-%202022%20-%20LoRA%20Low-Rank%20Adaptation%20of%20Large%20Language%20Models.pdf) 
-> - **Bibliography**: Hu, E. J., Shen, Y., Wallis, P., Allen-Zhu, Z., Li, Y., Wang, S., Wang, L., & Chen, W. (2022, April 25). LoRA: Low-Rank Adaptation of Large Language Models. _The 10th International Conference on Learning Representations (ICLR)_. International Conference on Learning Representations (ICLR 2022). [https://openreview.net/forum?id=nZeVKeeFYf9](https://openreview.net/forum?id=nZeVKeeFYf9)
-> - **Cite Key:** @huLoRALowRankAdaptation2022
+> - **Abstract:** While large-scale unsupervised language models (LMs) learn broad world knowledge and some reasoning skills, achieving precise control of their behavior is difficult due to the completely unsupervised nature of their training. Existing methods for gaining such steerability collect human labels of the relative quality of model generations and fine-tune the unsupervised LM to align with these preferences, often with reinforcement learning from human feedback (RLHF). However, RLHF is a complex and often unstable procedure, first fitting a reward model that reflects the human preferences, and then fine-tuning the large unsupervised LM using reinforcement learning to maximize this estimated reward without drifting too far from the original model. In this paper, we leverage a mapping between reward functions and optimal policies to show that this constrained reward maximization problem can be optimized exactly with a single stage of policy training, essentially solving a classification problem on the human preference data. The resulting algorithm, which we call Direct Preference Optimization (DPO), is stable, performant, and computationally lightweight, eliminating the need for fitting a reward model, sampling from the LM during fine-tuning, or performing significant hyperparameter tuning. Our experiments show that DPO can fine-tune LMs to align with human preferences as well as or better than existing methods. Notably, fine-tuning with DPO exceeds RLHF's ability to control sentiment of generations and improves response quality in summarization and single-turn dialogue while being substantially simpler to implement and train. 
+> - **Sources**: [online](http://zotero.org/users/13492210/items/K2L39WXQ) [local](zotero://select/library/items/K2L39WXQ) [pdf](file:////home/lukexie/Documents/Papers/storage/VYC84AQ3/Rafailov%20et%20al.%20-%202023%20-%20Direct%20Preference%20Optimization%20Your%20Language%20Mode.pdf)  [pdf](file:////home/lukexie/Documents/Papers/storage/K23L8NIE/NeurIPS-2023-direct-preference-optimization-your-language-model-is-secretly-a-reward-model-Supplemental-Conference.pdf) 
+> - **Bibliography**: Rafailov, R., Sharma, A., Mitchell, E., Manning, C. D., Ermon, S., & Finn, C. (2023). Direct Preference Optimization: Your Language Model is Secretly a Reward Model. _Advances in Neural Information Processing Systems_, _36_, 53728–53741. [https://proceedings.neurips.cc/paper_files/paper/2023/hash/a85b405ed65c6477a4fe8302b5e06ce7-Abstract-Conference.html](https://proceedings.neurips.cc/paper_files/paper/2023/hash/a85b405ed65c6477a4fe8302b5e06ce7-Abstract-Conference.html)
+> - **Cite Key:** @rafailovDirectPreferenceOptimization2023 
 > - **Conclusion**:
-> - **Tags:** #Large-language-model, #LoRA, #Low-Rank-Approximation
+> - **Tags:** #Direct-Preference-Optimization, #DPO, #Fine-tuning-LLM
 
 
 >[!Personal Summary] 
@@ -191,7 +191,3 @@ date of note:
 ----
 
 ## Reference and Related Notes
-
-
-- [[Large Language Model and Pretrained Language Models]]
-- [[vaswaniAttentionAllYou2017]]

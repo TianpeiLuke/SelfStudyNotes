@@ -86,6 +86,7 @@ Ahrens, S. (2022), *How to Take Smart Notes: One Simple Technique to Boost Writi
 
 ## Recommended Literature Notes and Extend Reading
 
+- [[Project Documentation Value and Knowledge Management]]
 - Refer to [[How to Take Smart Note Workflow]] for instructions on creating Zettelkasten system.
 - Check on a blog that discuss the Zettelkasten method in [link](https://sacredkarailee.medium.com/understanding-zettelkasten-notes-d7eb3fae0c45)
 - Blog in Medium [The Zettelkasten Method: Examples to help you get started](https://medium.com/@fairylights_io/the-zettelkasten-method-examples-to-help-you-get-started-8f8a44fa9ae6)

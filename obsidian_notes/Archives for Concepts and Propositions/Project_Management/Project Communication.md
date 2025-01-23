@@ -83,7 +83,17 @@ date of note: 2025-01-15
 >- *setting the tone* for team communication 
 >- and working to make sure everyone's *on the same page*, every step of the way, gives your project the best chance to succeed.
 
+>[!important]
+>Soft skills such as 
+>- **negotiation**
+>- **empathetic listening**
+>- **trust building**
+>  
+>will help to boost the relationship with customers.  
 
+- [[The 7 Habits of Highly Effective People Chapter Summary 3]]
+- [[The 7 Habits of Highly Effective People Chapter Summary 4]]
+- [[The 7 Habits of Highly Effective People Chapter Summary 5]]
 
 
 

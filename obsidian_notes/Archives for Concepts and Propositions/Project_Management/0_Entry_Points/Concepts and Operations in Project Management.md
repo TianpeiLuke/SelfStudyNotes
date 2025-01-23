@@ -147,6 +147,15 @@ date of note: 2024-12-27
 - [[Project Execution Quality Planning]]
 - [[Project Execution Quality Assurance]]
 
+#### Feedback Collection
+
+- [[Project Execution User Acceptance Test or UAT]]
+
+#### Continuous Improvement
+
+- [[Project Execution Continuous Improvement]]
+- [[Project Execution Data-Driven Improvement Frameworks]]
+
 
 #### Data Analysis
 

@@ -17,7 +17,7 @@ date of note: 2024-05-12
 > - **Abstract:** Tree boosting is a highly effective and widely used machine learning method. In this paper, we describe a scalable end-to-end tree boosting system called XGBoost, which is used widely by data scientists to achieve state-of-the-art results on many machine learning challenges. We propose a novel sparsity-aware algorithm for sparse data and weighted quantile sketch for approximate tree learning. More importantly, we provide insights on cache access patterns, data compression and sharding to build a scalable tree boosting system. By combining these insights, XGBoost scales beyond billions of examples using far fewer resources than existing systems. 
 > - **Sources**: [online](http://zotero.org/users/13492210/items/Y5VQ8JF7) [local](zotero://select/library/items/Y5VQ8JF7) [pdf](file:////home/lukexie/Documents/Papers/storage/59SZWKF9/Chen%20and%20Guestrin%20-%202016%20-%20XGBoost%20A%20Scalable%20Tree%20Boosting%20System.pdf) 
 > - **Bibliography**: Chen, T., & Guestrin, C. (2016). XGBoost: A Scalable Tree Boosting System. _Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining_, 785–794. [https://doi.org/10.1145/2939672.2939785](https://doi.org/10.1145/2939672.2939785)
-> - **Cite Key:** [[@chenXGBoostScalableTree2016]] 
+> - **Cite Key:** @chenXGBoostScalableTree2016
 > - **Conclusion**:
 > - **Tags:** #large-scale-machine-learning, #XGBoost
 

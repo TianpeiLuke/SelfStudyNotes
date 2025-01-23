@@ -1,14 +1,14 @@
 ---
 tags:
-- '#paper'
-aliases: "{{citekey}}"
-year: {{date | format ("YYYY")}}
-name: "{{title}}"
-authors: "{{authors}}"
-publication: "{{publicationTitle}}"
-type: "{{itemType}}"
-DOI: "{{DOI}}"
-date of note: {{importDate | format("YYYY-MM-DD")}} 
+  - project
+aliases: 
+year: 
+name: 
+authors: 
+organization: 
+type: 
+date of note:
+  "{ date | format(\"YYYY-MM-DD\") }":
 ---
 # Descriptions
 
@@ -16,7 +16,6 @@ date of note: {{importDate | format("YYYY-MM-DD")}}
 > [!info] 
 > - **Abstract:** {{abstractNote}} 
 > - **Sources**: [online]({{uri}}) [local]({{desktopURI}}) {%- for attachment in attachments | filterby("path", "endswith",".pdf") %} [pdf](file:///{{attachment.path | replace(" ","%20")}}) {% if loop.last %}{% endif %}{%- endfor %}
-> - **Bibliography**: {{bibliography}}
 > - **Cite Key:** @{{citekey}}
 > - **Conclusion**:
  {%- if hashTags %}

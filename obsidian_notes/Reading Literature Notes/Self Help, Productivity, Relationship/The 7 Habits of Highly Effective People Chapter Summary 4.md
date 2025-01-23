@@ -58,3 +58,8 @@ Covey, S. R. (1991). _The seven habits of highly effective people_. Provo, UT: 
 
 [^1]: There are several books discussed the impact of scarcity mentality. [[Scarcity Brain Book Summary]]; Also we can find how to use Second Brain to boost abundance mentality. See [[Building a Second Brain Chapter Summary 3]]
 [^2]: This part corresponds to the **social awareness** and **relationship management** in *the Emotional Intelligence 2.0*. It also covers the **principled negotiations** in *Getting to Yes: Negotiating Agreement Without Giving In*. [[Getting to Yes Book Summary]]
+
+
+- [[Project Communication]]
+- [[Project Communication Plan Best Practice]]
+- [[Project Planning Best Practices]]

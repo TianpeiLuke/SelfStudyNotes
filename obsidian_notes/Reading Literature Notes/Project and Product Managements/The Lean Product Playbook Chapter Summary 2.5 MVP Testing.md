@@ -162,6 +162,9 @@ year: 2015
 ##  Recommended Notes
 
 - [[The Lean Product Playbook Chapter Summary 2.4 MVP Feature Sets]]
+- [[Project Execution User Acceptance Test or UAT]]
+- [[Project Execution Common Data Metrics]]
+- [[Project Initiation Measuring Success]]
 
 
 ----------

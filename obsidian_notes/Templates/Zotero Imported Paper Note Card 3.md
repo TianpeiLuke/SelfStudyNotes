@@ -17,7 +17,7 @@ date of note: {{importDate | format("YYYY-MM-DD")}}
 > - **Abstract:** {{abstractNote}} 
 > - **Sources**: [online]({{uri}}) [local]({{desktopURI}}) {%- for attachment in attachments | filterby("path", "endswith",".pdf") %} [pdf](file:///{{attachment.path | replace(" ","%20")}}) {% if loop.last %}{% endif %}{%- endfor %}
 > - **Bibliography**: {{bibliography}}
-> - **Cite Key:** [[@{{citekey}}]] 
+> - **Cite Key:** @{{citekey}}
 > - **Conclusion**:
  {%- if hashTags %}
 > - **Tags:** {{hashTags}} 

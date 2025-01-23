@@ -20,7 +20,7 @@ date of note:
 > - **Abstract:** In this work, we develop and release Llama 2, a collection of pretrained and fine-tuned large language models (LLMs) ranging in scale from 7 billion to 70 billion parameters. Our fine-tuned LLMs, called Llama 2-Chat, are optimized for dialogue use cases. Our models outperform open-source chat models on most benchmarks we tested, and based on our human evaluations for helpfulness and safety, may be a suitable substitute for closed-source models. We provide a detailed description of our approach to fine-tuning and safety improvements of Llama 2-Chat in order to enable the community to build on our work and contribute to the responsible development of LLMs. 
 > - **Sources**: [online](http://zotero.org/users/13492210/items/NFCBFT8I) [local](zotero://select/library/items/NFCBFT8I) [pdf](file:////Users/lukexie/Zotero/storage/DJEKBJNF/Touvron%20et%20al.%20-%202023%20-%20Llama%202%20Open%20Foundation%20and%20Fine-Tuned%20Chat%20Model.pdf) 
 > - **Bibliography**: Touvron, H., Martin, L., Stone, K., Albert, P., Almahairi, A., Babaei, Y., Bashlykov, N., Batra, S., Bhargava, P., Bhosale, S., Bikel, D., Blecher, L., Ferrer, C. C., Chen, M., Cucurull, G., Esiobu, D., Fernandes, J., Fu, J., Fu, W., … Scialom, T. (2023). _Llama 2: Open Foundation and Fine-Tuned Chat Models_ (arXiv:2307.09288). arXiv. [https://doi.org/10.48550/arXiv.2307.09288](https://doi.org/10.48550/arXiv.2307.09288)
-> - **Cite Key:** [[@touvronLlamaOpenFoundation2023]] 
+> - **Cite Key:** @touvronLlamaOpenFoundation2023 
 > - **Conclusion**:
 > - **Tags:** #Computer-Science---Artificial-Intelligence, #Computer-Science---Computation-and-Language
 

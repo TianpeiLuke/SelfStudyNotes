@@ -67,3 +67,6 @@ Covey, S. R. (1991). _The seven habits of highly effective people_. Provo, UT: 
 ##  Book Reference Highlights
 
 - The Core of **Public Victory** in this book is [[Leadership Principle Earn Trust]]
+- [[Project Communication]]
+- [[Project Communication Plan Best Practice]]
+- [[Project Planning Best Practices]]

@@ -17,7 +17,7 @@ date of note: 2024-10-15
 > - **Abstract:** This paper gives an overview of the majorization-minimization (MM) algorithmic framework, which can provide guidance in deriving problem-driven algorithms with low computational cost. A general introduction of MM is presented, including a description of the basic principle and its convergence results. The extensions, acceleration schemes, and connection to other algorithmic frameworks are also covered. To bridge the gap between theory and practice, upperbounds for a large number of basic functions, derived based on the Taylor expansion, convexity, and special inequalities, are provided as ingredients for constructing surrogate functions. With the pre-requisites established, the way of applying MM to solving specific problems is elaborated by a wide range of applications in signal processing, communications, and machine learning. 
 > - **Sources**: [online](http://zotero.org/users/13492210/items/2FI6RWTU) [local](zotero://select/library/items/2FI6RWTU)
 > - **Bibliography**: Sun, Y., Babu, P., & Palomar, D. P. (2017). Majorization-Minimization Algorithms in Signal Processing, Communications, and Machine Learning. _IEEE Transactions on Signal Processing_, _65_(3), 794–816. IEEE Transactions on Signal Processing. [https://doi.org/10.1109/TSP.2016.2601299](https://doi.org/10.1109/TSP.2016.2601299)
-> - **Cite Key:** [[@sunMajorizationMinimizationAlgorithmsSignal2017]] 
+> - **Cite Key:** @sunMajorizationMinimizationAlgorithmsSignal2017 
 > - **Conclusion**:
 > - **Tags:** #Estimation, #Optimization, #Linear-programming, #Convergence, #Minimization, #Signal-processing-algorithms, #Majorization-minimization, #non-convex-optimization, #surrogate-function, #Taylor-series, #upperbounds
 

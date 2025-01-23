@@ -53,6 +53,7 @@ order by total_feature_count desc;
 -----------
 ##  Recommended Notes
 
+- [[Binning and Pivot Table - Count Frequency of Pairs of Features]]
 - documentation on `PIVOT` table example in RedShift. [link](https://docs.aws.amazon.com/redshift/latest/dg/r_FROM_clause-pivot-unpivot-examples.html)
 - doc of `FROM` clause in Redshift [link](https://docs.aws.amazon.com/redshift/latest/dg/r_FROM_clause30.html)
 - [[Table mfn_abuse_reversals]]

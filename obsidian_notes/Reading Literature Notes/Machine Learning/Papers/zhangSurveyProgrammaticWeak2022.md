@@ -14,11 +14,12 @@ date of note: 2024-03-08
 ---
 
 ## A Survey on Programmatic Weak Supervision 
+
 > [!info] 
 > - **Abstract:** Labeling training data has become one of the major roadblocks to using machine learning. Among various weak supervision paradigms, programmatic weak supervision (PWS) has achieved remarkable success in easing the manual labeling bottleneck by programmatically synthesizing training labels from multiple potentially noisy supervision sources. This paper presents a comprehensive survey of recent advances in PWS. In particular, we give a brief introduction of the PWS learning paradigm, and review representative approaches for each component within PWS's learning workflow. In addition, we discuss complementary learning paradigms for tackling limited labeled data scenarios and how these related approaches can be used in conjunction with PWS. Finally, we identify several critical challenges that remain under-explored in the area to hopefully inspire future research directions in the field. 
 > - **Sources**: [online](http://zotero.org/users/13492210/items/LDVMQN8D) [local](zotero://select/library/items/LDVMQN8D) [pdf](file:////Users/lukexie/Zotero/storage/LACFAQWR/Zhang%20et%20al.%20-%202022%20-%20A%20Survey%20on%20Programmatic%20Weak%20Supervision.pdf) 
 > - **Bibliography**: Zhang, J., Hsieh, C.-Y., Yu, Y., Zhang, C., & Ratner, A. (2022). _A Survey on Programmatic Weak Supervision_ (arXiv:2202.05433). arXiv. [https://doi.org/10.48550/arXiv.2202.05433](https://doi.org/10.48550/arXiv.2202.05433)
-> - **Cite Key:** [[@zhangSurveyProgrammaticWeak2022]]
+> - **Cite Key:** @zhangSurveyProgrammaticWeak2022
 > - **Tags:** #Computer-Science---Artificial-Intelligence, #Computer-Science---Machine-Learning, #Statistics---Applications
 > - **Conclusion**: Manual annotations are always of great importance to training machine learning models, but usually expensive and timeconsuming. Programmatic weak supervision (PWS) offers a promising direction to achieve large-scale annotations with minimal human efforts. In this article, we review the PWS area by introducing existing approaches for each component inside a PWS workflow. We also describe how PWS could interact with methods from related fields for better performance on downstream applications. Then, we list existing datasets and recent applications of PWS in the literature. Finally, we discuss current challenges and future directions in the PWS area, hoping to inspire future research advances in PWS.
 
