@@ -23,6 +23,9 @@ date of note: 2024-12-27
 
 - [[Project Definition]]
 
+![[Project Manager Roles and Responsibilities#^03b161]]
+
+- [[Project Manager Roles and Responsibilities]]
 
 ## Explanation
 

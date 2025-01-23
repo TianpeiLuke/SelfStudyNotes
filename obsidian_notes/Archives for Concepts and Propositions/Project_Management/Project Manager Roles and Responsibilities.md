@@ -92,14 +92,21 @@ date of note: 2024-12-27
 >[!important] Definition
 >While a project is one single-focused endeavor, a **program** is a *collection* of *projects*. 
 >
->**Program managers** are responsible for managing many projects
+>A **program manager** supervises *groups of projects*, and even other *project managers*, and focuses on *long-term business objectives*.
+>- **Program managers** are responsible for managing many projects
+>
+
+^03b161
 
 - [[Program Definition]]
 
 >[!important] Definition
 >A **portfolio** is a *collection* of *projects* and *programs* across an *entire organization*. 
 >
->**Portfolio managers** are responsible for portfolios of projects or programs for one client.
+>A **portfolio manager** supervises a *grouping of projects* and *programs* and provides *centralized management* to them.
+>- **Portfolio managers** are responsible for portfolios of projects or programs for one client.
+
+^246da1
 
 - [[Portfolio Definition]]
 
