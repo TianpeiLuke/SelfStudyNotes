@@ -33,6 +33,7 @@ year: 2022
 
 - This part covers the major objectives of the book, i.e. *what is the **Second Brain*** and *how to build a **Second Brain***. 
 - In this book, the Second Brain is an external *personal knowledge management system*. 
+	- [[Project Documentation Value and Knowledge Management]]
 - The target audience of this book is *the knowledge workers*, people who need to deal with extensive knowledge exchange in their career and life.
 - The basic *building blocks* for the personal knowledge management system are **notes**. Note is a *"discrete unit of information interpreted through your unique perspective and stored outside your head."*
 - This book focus on how to take notes that facilitate knowledge digestion, development and knowledge sharing. 

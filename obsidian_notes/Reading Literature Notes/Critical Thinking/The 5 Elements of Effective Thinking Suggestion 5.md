@@ -53,3 +53,6 @@ Burger, E. B., & Starbird, M. (2012). _The 5 elements of effective thinking_. P
 
 -----------
 ##  Book Reference Highlights
+
+- [[Project Execution Continuous Improvement]]
+- [[Project Execution Retrospective]]

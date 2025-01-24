@@ -84,20 +84,31 @@ year: 2022
 		- Projects need to clearly define *success criteria* and to have *expected outcome.*
 		- Projects are units of low-level time management and prioritization.  
 		- [[Concepts and Operations in Project Management]]
-		- [[Project Documentation Value and Knowledge Management]]
+		- [[Project Definition]]
+		- [[Project Management Life Cycle]]
+		- [[Project Initiation Key Components]]
+		- [[Project Initiation Identifying Goals]]
+		- [[Project Initiation Measuring Success]]
+		- [[Project Execution Tracking]]
 		  
 	- **Area**: defines our roles and responsibilities that need long term maintenance. 
 		- Areas are associated with our *roles* and the corresponding expectations.
 		- Areas have clear definition of *scope*, which defines where our ownership/responsibility ends. 
 		- Areas do not have clear end time but need *continual efforts* for long term management.
-		- Areas are essentially not managed but to be led by principles. Handling area of responsibility need *top-down approach* with ***Principles of Personal Vision*** and ***Principles of Personal Leadership***. [^6] See more comparison between projects and areas in [[Define Area vs. Define Project]]
+		- Areas are essentially not managed but to be led by **principles**. Handling area of responsibility need *top-down approach* with ***Principles of Personal Vision*** and ***Principles of Personal Leadership***. [^6] See more comparison between projects and areas in [[Define Area vs. Define Project]]
 		- Inclusion of the concept of *Area* is beyond *GTD*.
+		- [[Program Definition]]
+		- [[Portfolio Definition]]
+		- [[Project Initiation Identifying Scope]]
+		- [[Project Initiation Identifying and Working with Stakeholders]]
+		- [[Project Execution Continuous Improvement]]
 		  
 	- **Resource**: include information that are *not immediately actionable* but would be kept closely for use *in near future*.
 		- Resources are not to be confused with supporting materials and information within Project and Area scope. 
 		- *"Resource"* is a folder that serve the same purpose of *"Sometime/Maybe"* folder in GTD. [^5]
 		- Original material under Resources should be kept in a **Reference Management System**, as suggested by *Zettelkasten*. We can keep a *literature note* that refers to the original materials and highlights the main points. [[How to Take Smart Note Workflow]] [^6]
 		- For research, *"Resources"* folder keep *primary and secondary sources*.
+		- [[Project Initiation Essential Project Resources and Tools]]
 		  
 	- **Archive**: contains all *completed* projects, *uncommitted* areas and *inactive* action items and information that are *no longer relevant*. 
 		- Archive is a dump of all information in the past. No longer associated with active actions. 

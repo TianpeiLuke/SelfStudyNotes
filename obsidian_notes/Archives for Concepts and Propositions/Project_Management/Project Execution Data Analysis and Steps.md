@@ -60,6 +60,8 @@ date of note: 2025-01-16
 >- **Act**
 >	- the business takes all of the insights you have provided and puts them into action to solve the original business problem.
 
+^59ca92
+
 
 
 - [[Project Initiation Identifying and Working with Stakeholders]]

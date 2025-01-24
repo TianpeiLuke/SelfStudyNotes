@@ -39,7 +39,7 @@ date of note: 2024-12-21
 
 ### End-to-End MLOps
 
-![[End-to-End MLOps#^3edbf6]]
+![[End-to-End MLOps#^3edbf6]] ^da650b
 
 - [[End-to-End MLOps]]
 
