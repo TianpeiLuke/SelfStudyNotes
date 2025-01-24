@@ -81,7 +81,8 @@ date of note: 2025-01-16
 
 - [[Project Execution Continuous Improvement]]
 - [[Project Execution Data-Informed Decision-Making]]
-
+- [[Project Execution Retrospective]]
+- [[The 5 Elements of Effective Thinking Suggestion 2]]
 
 
 - Coursera

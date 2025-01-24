@@ -5,12 +5,14 @@ tags:
   - project_management/leadership
   - emotional_intelligence
   - project_management/meeting
+  - project_management/communication
 keywords:
   - effective_email_writting
+  - project_communication
 topics:
   - project_management/project_execution
-  - project_management/meeting
-name: Project Execution Effective Email Writing
+  - project_management/effective_writing
+name: Project Communication Effective Email Writing
 date of note: 2025-01-16
 ---
 
@@ -31,7 +33,7 @@ date of note: 2025-01-16
 >     
 > - Check *grammar*, *punctuation*, and *spelling*.
 
-- [[Project Execution Effective Presentation]]
+- [[Project Communication Effective Presentation]]
 - [[Project Communication]]
 
 ### State what you want clearly

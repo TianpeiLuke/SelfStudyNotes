@@ -20,6 +20,35 @@ date of note: 2025-01-16
 - [[Project Execution Data-Informed Decision-Making]]
 - [[Project Execution Common Data Metrics]]
 
+
+>[!important] Definition
+>**Storytelling** is the process of turning facts into narrative to communicate something to your audience.
+
+>[!important]
+>we'll go over some best practices to tell a great story using data,
+>- **Define** your **audience**
+>- **Collect** the **data**
+>- **Filter** and **analyze** the data
+>- Choose a **visual representation**
+>- Shape the **story**
+>- Gather your **feedbacks**
+
+- [[Project Execution Storytelling with Data]]
+
+>[!important] Definition
+>**Data visualization** is the graphical representation of information to facilitate understanding.
+>
+>It helps to
+>- **filter** information 
+>	- focusing on most important data
+>- **condense** long ideas and facts into single image
+>- **maker sense** of the information presented
+
+![[Project Execution Data Visualization Dashboard#^7b0cd4]]
+
+- [[Project Execution Data Visualization Dashboard]]
+
+
 ### Show relationships
 
 >[!important] Definition

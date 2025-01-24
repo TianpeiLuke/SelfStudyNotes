@@ -68,5 +68,5 @@ date of note: 2025-01-10
 ##  Recommended Notes and References
 
 
-
+- [[Key Performance Indicator or KPI]]
 - Coursera [Project Planning: Putting It All Together](https://www.coursera.org/learn/project-planning-google/home/welcome)

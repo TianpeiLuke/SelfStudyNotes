@@ -98,7 +98,7 @@ date of note: 2025-01-16
 >- This way, you can *address issues right away*, before they become major problems. 
 >- They also help you plan *more efficiently* for the next project by identifying potential problem areas.
 
-
+![[burndown_chart.png]]
 
 
 ## Explanation

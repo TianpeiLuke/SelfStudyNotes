@@ -31,7 +31,7 @@ date of note: 2025-01-17
 - [[Project Execution Quality Assurance]]
 
 >[!important] Definition
->**Quality control**, or *QC*, involves *monitoring* project results and delivery to determine if they are *meeting* desired results. 
+>**Quality control**, or *QC*, involves *monitoring* project *results* and delivery to determine if they are *meeting* desired results. 
 >- It includes the techniques that are used to ensure *quality standards* are maintained when a problem is identified. 
 >- Quality control is a subset of **quality assurance** activities. 
 >	- While *QA* seeks to prevent defects _before_ they occur, 

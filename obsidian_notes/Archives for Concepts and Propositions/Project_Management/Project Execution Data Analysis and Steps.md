@@ -24,6 +24,11 @@ date of note: 2025-01-16
 >- and support your goals.
 
 >[!important] Definition
+>- **Quantitative data** includes statistical and numerical facts about the number of rider requests that came in.
+>- **Qualitative data** describes the subjective qualities or things that can't be measured with numerical data,
+
+
+>[!important] Definition
 >There are six main steps involved in data analysis: 
 >- **Ask**
 >	- During the **Ask** phase, ask key questions to help *frame your analysis*, 
@@ -64,7 +69,7 @@ date of note: 2025-01-16
 - [[SMART or Specific Measurable Attainable Relevant and Time-bound Goals]]
 
 - [[Project Execution Data Visualization]]
-- [[Project Execution Effective Presentation]]
+- [[Project Communication Effective Presentation]]
 - [[Project Execution Data-Informed Decision-Making]]
 
 

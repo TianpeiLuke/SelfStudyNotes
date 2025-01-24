@@ -10,14 +10,14 @@ keywords:
 topics:
   - project_management/project_execution
   - project_management/meeting
-name: Project Execution Effective Meeting
+name: Project Communication Effective Meeting
 date of note: 2025-01-16
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Project Execution Effective Meeting
+>**Name**: Project Communication Effective Meeting
 
 
 >[!quote]
@@ -29,7 +29,7 @@ date of note: 2025-01-16
 >     
 > 3. The **correct attendees** (meaning the participants can contribute to achieving the meeting’s goal)
 
-- [[Project Execution Effective Presentation]]
+- [[Project Communication Effective Presentation]]
 - [[Project Communication]]
 
 ### Before the meeting

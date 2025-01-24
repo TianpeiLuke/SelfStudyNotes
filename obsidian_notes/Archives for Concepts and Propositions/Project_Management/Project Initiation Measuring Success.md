@@ -80,6 +80,7 @@ date of note: 2025-01-06
 >     
 > - Measure the **percentage of features** you **delivered** or released at the end of the project
 
+- [[Project Execution Common Data Metrics]]
 - [[The Lean Product Playbook Chapter Summary 2.4 MVP Feature Sets]]
 - [[The Lean Product Playbook Chapter Summary 2.5 MVP Testing]]
 - [[The Lean Product Playbook Chapter Summary 3.2 Metrics]]

@@ -61,6 +61,7 @@ date of note: 2025-01-17
 >- Provide a **step-by-step plan** to help **guide users** through the testing process.
 >	- It will be helpful for users to have some *clear, easy-to-follow instructions* that will help focus their attention on the right places. 
 >	- You can create this plan in a digital document or spreadsheet and share with them ahead of time.
+>	- This step is called the **critical user journey.**
 >- Compile *notes* in a **single document** and **record any issues** that are discovered.
 >	- You can create a digital spreadsheet or document that corresponds to your plan. 
 >	- It can have designated areas to track issues for each item that is tested, including the users’ opinions on the severity of each issue. 
@@ -125,5 +126,7 @@ To learn more about these concepts, check out these articles: 
 - [Quality Assurance & Quality Control](https://asq.org/quality-resources/quality-assurance-vs-control)
 
 
+
+- [[The 5 Elements of Effective Thinking Suggestion 2]]
 - Coursera
 	- [Project Execution: Running the Project](https://www.coursera.org/learn/project-execution-google/home/welcome)

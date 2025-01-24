@@ -8,11 +8,12 @@ tags:
 keywords:
   - communication
   - presentation
+  - storytelling
 topics:
   - project_management/project_execution
   - project_management/presentation
   - project_management/communication
-name: Project Execution Effective Presentation
+name: Project Communication Effective Presentation
 date of note: 2025-01-16
 ---
 
@@ -20,6 +21,20 @@ date of note: 2025-01-16
 
 >[!important]
 >**Name**: Project Execution Effective Presentation
+
+
+>[!important] Definition
+>**Storytelling** is the process of turning facts into narrative to communicate something to your audience.
+
+>[!important]
+>we'll go over some best practices to tell a great story using data,
+>- **Define** your **audience**
+>- **Collect** the **data**
+>- **Filter** and **analyze** the data
+>- Choose a **visual representation**
+>- Shape the **story**
+>- Gather your **feedbacks**
+
 
 ### Preparation
 
@@ -67,6 +82,9 @@ date of note: 2025-01-16
 >		- If time runs short, can you quickly summarize the key points?
 >		- Can you pivot the content according to what is most important to your audience?
 
+
+
+
 ### Presentation and pace
 
 >[!important]
@@ -100,6 +118,34 @@ date of note: 2025-01-16
 ## Explanation
 
 - [[Project Communication]]
+
+>[!quote]
+>One way I ensure that my slideshow presentations are as precise as they can be is by using a technique called "**designing for five seconds**."
+>-  The idea is that your audience should be able to *understand a slide* within *five seconds*.
+>- So I keep my presentation slides *simple*, including only the most relevant data points, to *avoid overloading* my audience with *text* they don't have time to read.
+
+
+>[!important] Tips
+>- Consider the approach you'd take if you had to *shorten your presentation* **unexpectedly**.
+>- Practice to *avoid mistakes* that could distract from your message.
+>- Identify and come up with *answers* to **potential audience questions**.
+>- Imagine and prepare for possible *objections*
+
+
+>[!important]
+>Be **memorable**. Develop a strategy that helps make your narrative unforgettable.
+>- Use **stories** and **repetition**
+>- Be aware of your **body language**
+>	- Posture
+>	- Tone of voice
+>	- Pace
+>		- Keep half speed of normal speed and keep sentence short
+>	- Eye contact
+>	- Warm and friendly facial expressions
+>	- Confidence
+>
+
+
 
 
 

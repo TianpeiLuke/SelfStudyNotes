@@ -57,6 +57,8 @@ To learn more about these concepts, check out these articles: 
 - [What Is a Quality Plan?](https://asq.org/quality-resources/quality-plans)
 - [Quality Assurance & Quality Control](https://asq.org/quality-resources/quality-assurance-vs-control)
 
+- [[The 5 Elements of Effective Thinking Suggestion 5]]
+- [[The 7 Habits of Highly Effective People Chapter Summary 6]]
 
 - Coursera
 	- [Project Execution: Running the Project](https://www.coursera.org/learn/project-execution-google/home/welcome)

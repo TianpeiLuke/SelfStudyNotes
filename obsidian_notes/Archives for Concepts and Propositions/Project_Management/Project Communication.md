@@ -52,12 +52,12 @@ date of note: 2025-01-15
 ### Meeting
 
 - [[Project Planning Project Kickoff Meeting]]
-- [[Project Execution Effective Meeting]]
+- [[Project Communication Effective Meeting]]
 
 
 ### Presentation
 
-- [[Project Execution Effective Presentation]]
+- [[Project Communication Effective Presentation]]
 
 ### Email
 

@@ -38,5 +38,5 @@ date of note: 2024-12-27
 -----------
 ##  Recommended Notes and References
 
-
+- [[Portfolio Definition]]
 - Coursera [Foundations of Project Management](https://www.coursera.org/learn/project-management-foundations?specialization=google-project-management)

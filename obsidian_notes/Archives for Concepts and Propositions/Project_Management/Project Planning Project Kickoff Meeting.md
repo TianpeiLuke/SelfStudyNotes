@@ -25,7 +25,7 @@ date of note: 2025-01-10
 >- and to understand each person's individual *roles* within the team.
 
 - [[Project Planning]]
-- [[Project Execution Effective Meeting]]
+- [[Project Communication Effective Meeting]]
 
 ### People to Attend
 

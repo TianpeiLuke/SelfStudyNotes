@@ -147,7 +147,7 @@ date of note: 2024-12-27
 - [[Project Execution Quality Planning]]
 - [[Project Execution Quality Assurance]]
 
-#### Feedback Collection
+#### Feedback Collection and Testing
 
 - [[Project Execution User Acceptance Test or UAT]]
 
@@ -155,19 +155,23 @@ date of note: 2024-12-27
 
 - [[Project Execution Continuous Improvement]]
 - [[Project Execution Data-Driven Improvement Frameworks]]
-
+- [[Project Execution Retrospective]]
 
 #### Data Analysis
 
 - [[Project Execution Data-Informed Decision-Making]]
 - [[Project Execution Data Analysis and Steps]]
 - [[Project Execution Common Data Metrics]]
+- [[Project Execution Storytelling with Data]]
 - [[Project Execution Data Visualization]]
+- [[Project Execution Data Visualization Dashboard]]
+- [[Key Performance Indicator or KPI]]
 
-#### Effective Meeting and Presentation
 
-- [[Project Execution Effective Presentation]]
-- [[Project Execution Effective Meeting]]
+#### Effective Communication
+
+- [[Project Communication Effective Presentation]]
+- [[Project Communication Effective Meeting]]
 
 
 #### Effective Leadership
