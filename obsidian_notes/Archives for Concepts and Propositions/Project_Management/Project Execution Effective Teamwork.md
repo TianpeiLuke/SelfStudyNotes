@@ -2,8 +2,7 @@
 tags:
   - concept
   - project_management/project_execution
-  - project_management/leadership
-  - emotional_intelligence
+  - project_management/teamwork
 keywords: 
 topics: 
 name: 
@@ -16,8 +15,7 @@ date of note: 2025-01-16
 >**Name**: 
 
 
-
-- [[Project Execution Effective Teamwork]]
+- [[Project Execution Leadership Skills]]
 
 ## Explanation
 

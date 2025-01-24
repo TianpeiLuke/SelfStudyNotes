@@ -176,6 +176,7 @@ date of note: 2024-12-27
 
 #### Effective Leadership
 
+- [[Project Execution Effective Teamwork]]
 - [[Project Execution Leadership Skills]]
 
 
