@@ -165,7 +165,14 @@ date of note: 2024-12-27
 - [[Leadership Principle Deliver Results]]
 - [[Continuous Delivery or CD in DevOps and MLOps]]
 
+>[!quote]
+>being a great project manager is about more than simply leading a team to complete a project.
+>- It's about **supporting** the people on your team to do their best work, and **enabling** people to build things they're proud of.
 
+- [[Project Execution Effective Teamwork and Best Practice]]
+
+>[!info]
+>project managers develop and lead effective teams by fostering a **culture of teamwork**.
 
 
 

@@ -57,13 +57,19 @@ date of note: 2025-01-15
 
 ### Presentation
 
+- [[Project Execution Storytelling with Data]]
 - [[Project Communication Effective Presentation]]
+- [[Project Execution Data Analysis and Steps]]
+- [[Project Execution Data Visualization]]
 
 ### Email
 
-- 
 - [[Project Execution Effective Escalation Email]]
 
+### Team
+
+- [[Project Execution Aircover for Team]]
+- [[Project Execution Effective Teamwork and Best Practice]]
 
 
 ## Explanation
