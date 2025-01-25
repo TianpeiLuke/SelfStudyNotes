@@ -19,7 +19,7 @@ date of note: 2024-05-14
 > - **Abstract:** One of the fundamental problems in Bayesian statistics is the approximation of the posterior distribution. Gibbs sampler and coordinate ascent variational inference are renownedly utilized approximation techniques that rely on stochastic and deterministic approximations. In this paper, we define fundamental sets of densities frequently used in Bayesian inference. We shall be concerned with the clarification of the two schemes from the set-theoretical point of view. This new way provides an alternative mechanism for analyzing the two schemes endowed with pedagogical insights. 
 > - **Sources**: [online](http://zotero.org/users/13492210/items/DTLMVBEK) [local](zotero://select/library/items/DTLMVBEK) [pdf](file:////home/lukexie/Documents/Papers/storage/RZN84GU8/Lee%20-%202022%20-%20Gibbs%20sampler%20and%20coordinate%20ascent%20variational%20in.pdf) 
 > - **Bibliography**: Lee, S. Y. (2022). Gibbs sampler and coordinate ascent variational inference: A set-theoretical review. _Communications in Statistics - Theory and Methods_, _51_(6), 1549–1568. [https://doi.org/10.1080/03610926.2021.1921214](https://doi.org/10.1080/03610926.2021.1921214)
-> - **Cite Key:** [[@leeGibbsSamplerCoordinate2022]] 
+> - **Cite Key:** @leeGibbsSamplerCoordinate2022 
 > - **Conclusion**:
 > - **Tags:** #Mathematics---Statistics-Theory
 

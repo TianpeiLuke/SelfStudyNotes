@@ -17,7 +17,7 @@ date of note: 2024-12-07
 > - **Abstract:** We introduce a new type of deep contextualized word representation that models both (1) complex characteristics of word use (e.g., syntax and semantics), and (2) how these uses vary across linguistic contexts (i.e., to model polysemy). Our word vectors are learned functions of the internal states of a deep bidirectional language model (biLM), which is pre-trained on a large text corpus. We show that these representations can be easily added to existing models and significantly improve the state of the art across six challenging NLP problems, including question answering, textual entailment and sentiment analysis. We also present an analysis showing that exposing the deep internals of the pre-trained network is crucial, allowing downstream models to mix different types of semi-supervision signals. 
 > - **Sources**: [online](http://zotero.org/users/13492210/items/6DX4QKL2) [local](zotero://select/library/items/6DX4QKL2) [pdf](file:////home/lukexie/Documents/Papers/storage/QRBP4AF2/Peters%20et%20al.%20-%202018%20-%20Deep%20Contextualized%20Word%20Representations.pdf) 
 > - **Bibliography**: Peters, M. E., Neumann, M., Iyyer, M., Gardner, M., Clark, C., Lee, K., & Zettlemoyer, L. (2018). Deep Contextualized Word Representations. In M. Walker, H. Ji, & A. Stent (Eds.), _Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long Papers)_ (pp. 2227–2237). Association for Computational Linguistics. [https://doi.org/10.18653/v1/N18-1202](https://doi.org/10.18653/v1/N18-1202)
-> - **Cite Key:** [[@petersDeepContextualizedWord2018]] 
+> - **Cite Key:** @petersDeepContextualizedWord2018 
 > - **Conclusion**:
 
 

@@ -17,7 +17,7 @@ date of note: 2024-07-04
 > - **Abstract:** Distributed Optimization and Statistical Learning via the Alternating Direction Method of Multipliers 
 > - **Sources**: [online](http://zotero.org/users/13492210/items/9XHNPFR9) [local](zotero://select/library/items/9XHNPFR9) [pdf](file:////home/lukexie/Documents/Papers/storage/3D7GCYT6/Boyd%20et%20al.%20-%202011%20-%20Distributed%20Optimization%20and%20Statistical%20Learning%20.pdf) 
 > - **Bibliography**: Boyd, S., Parikh, N., Chu, E., Peleato, B., & Eckstein, J. (2011). Distributed Optimization and Statistical Learning via the Alternating Direction Method of Multipliers. _Foundations and Trends® in Machine Learning_, _3_(1), 1–122. [https://doi.org/10.1561/2200000016](https://doi.org/10.1561/2200000016)
-> - **Cite Key:** [[@boydDistributedOptimizationStatistical2011]] 
+> - **Cite Key:** @boydDistributedOptimizationStatistical2011 
 > - **Conclusion**:
 
 
