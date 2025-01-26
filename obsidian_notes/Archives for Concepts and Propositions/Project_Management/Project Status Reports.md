@@ -20,6 +20,7 @@ date of note: 2025-01-16
 >A **project status report** gives an overview of all of the project’s common elements and *summarizes* them in a snapshot. 
 >- It is an efficient communication tool to convey the latest status in one place for the team and stakeholders.
 
+- [[Project Communication Common Meeting Types]]
 ### Format
 
 >[!important] Definition
@@ -44,6 +45,10 @@ date of note: 2025-01-16
 > - **Status:** 
 > 	- As you can imagine, **status** is a crucial piece. 
 > 	- The status of the project illustrates your actual progress versus your planned progress. 
+> 	- Include
+> 		- *Task* updates
+> 		- *Schedule status*
+> 		- *Budget status*
 > 	- In project management, a common way to depict this is through **RAG** (**red**, **amber**, **green**), or **Red-Yellow-Green**, status reporting. 
 > 		- **RAG** follows a traffic light pattern to indicate progress and status. 
 > 			- **Red** indicates that there are issues that need resolution and that the project may be delayed or go significantly over budget. 
@@ -81,6 +86,13 @@ date of note: 2025-01-16
 
 ![[project_status_report.png]]
 
+### How Frequent
+
+>[!info]
+>How often you decide to schedule these meetings depends on several factors, such as 
+>- the **project's complexity**,
+>- **number** of team members,
+>- and the **level of information** required by the project sponsor, clients, or others.
 
 
 ## Explanation

@@ -171,6 +171,7 @@ date of note: 2024-12-27
 #### Effective Communication
 
 - [[Project Communication Effective Presentation]]
+- [[Project Communication Common Meeting Types]]
 - [[Project Communication Effective Meeting]]
 
 
@@ -188,6 +189,7 @@ date of note: 2024-12-27
 
 ### Project Closure
 
+- [[Project Closure Importance of Closing]]
 - [[Project Closure Closing Process]]
 - [[Project Closure Project Impact Report]]
 

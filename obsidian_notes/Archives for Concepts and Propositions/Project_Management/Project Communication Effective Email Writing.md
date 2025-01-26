@@ -100,6 +100,18 @@ date of note: 2025-01-16
 >- Turning grammar and spelling suggestions on in your email application can help you quickly identify errors. 
 >- Be sure to *correct any errors* **before** sending off.
 
+### Email Writing Best Practice
+
+>[!important]
+>Email Writing Best Practice
+>- Carefully select **who** you're *sending* an email *to*, and **why**
+>-  Make sure the **subject field** clearly states what the email is about.
+>- Keep messages **short**  and **stay on topic**.
+>- Attach and link *large amounts* of information **separately**
+>- Clearly state **action items**
+>- Use **correct grammar** and **spelling**
+>- Write in appropriate **tone**
+
 
 
 

@@ -25,6 +25,7 @@ date of note: 2025-01-10
 >- and to understand each person's individual *roles* within the team.
 
 - [[Project Planning]]
+- [[Project Communication Common Meeting Types]]
 - [[Project Communication Effective Meeting]]
 
 ### People to Attend
