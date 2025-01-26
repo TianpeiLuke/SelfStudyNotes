@@ -31,7 +31,22 @@ date of note: 2025-01-16
 
 - [[Project Execution Team Development and Managing Dynamics]]
 
+### Influencing
+
+![[Project Communication Influencing Skills#^0137f2]]
+
+- [[Project Communication Influencing Skills]]
+### Source of Power
+
+![[Project Communication Influencing Skills#^780899]]
+
+- [[Organizational and Personal Sources of Power]]
+
+
 ## Explanation
+
+
+
 
 
 

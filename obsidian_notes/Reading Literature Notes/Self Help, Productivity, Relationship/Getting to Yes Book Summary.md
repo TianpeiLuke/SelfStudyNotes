@@ -42,7 +42,7 @@ year: 2011
 - [[Project Planning Capacity Planning]]
 - [[Project Planning Critical Path]]
 - [[Project Execution Leadership Skills]]
-- [[Project Execution Influencing Skills]]
+- [[Project Communication Influencing Skills]]
 
 
 

@@ -109,6 +109,7 @@ year: 1991
 
 - A more detailed bottom-up approach for improving productivity and building workflows can be seen in [[Getting Things Done Book Summary]]
 - Check on a comparison with both *The 7 Habits* and *the GTD [[Comparison between 7 Habits of Highly Effective People and Getting Things Done]]*
+- [[Project Communication Influencing Skills]]
 - Suggestions in this book resonate with **Amazon Leadership Principles**:
 	- **Be Proactive** is a part of [[Leadership Principle Ownership]]; It is also emphasized in [[Leadership Principle Bias for Action]]
 	- The Core of Private Victory is [[Leadership Principle Ownership]]

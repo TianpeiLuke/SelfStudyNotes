@@ -176,14 +176,13 @@ date of note: 2024-12-27
 
 #### Effective Leadership
 
-- [[Project Execution Effective Teamwork and Best Practice]]
-- [[Project Execution Team Development and Managing Dynamics]]
 - [[Project Execution Leadership Skills]]
-
-
-#### Element of Influencing
-
-- [[Project Execution Influencing Skills]]
+- [[Project Execution Effective Teamwork and Best Practice]]
+- [[Project Execution Aircover for Team]]
+- [[Project Execution Team Development and Managing Dynamics]]
+- [[Project Execution Ethical Decision-Making]]
+- [[Project Communication Influencing Skills]]
+- [[Organizational and Personal Sources of Power]]
 
 
 
