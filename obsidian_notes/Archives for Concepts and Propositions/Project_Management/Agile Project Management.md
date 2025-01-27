@@ -50,3 +50,5 @@ date of note: 2025-01-02
 
 
 - [[The Lean Product Playbook Chapter Summary 3.1 Agile Development]]
+- Coursera
+	- [Agile Project Management](https://www.coursera.org/learn/agile-project-management/home/welcome)

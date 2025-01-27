@@ -40,4 +40,6 @@ date of note: 2025-01-10
 
 - [[Kanban Approach for Agile Project Management]]
 - [[Project Management Definition and Purpose]]
-- Coursera [Project Planning: Putting It All Together](https://www.coursera.org/learn/project-planning-google/home/welcome)
+- Coursera
+	- [Project Planning: Putting It All Together](https://www.coursera.org/learn/project-planning-google/home/welcome)
+	- [Agile Project Management](https://www.coursera.org/learn/agile-project-management/home/welcome)

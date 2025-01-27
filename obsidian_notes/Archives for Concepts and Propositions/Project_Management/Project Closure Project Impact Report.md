@@ -15,9 +15,16 @@ date of note: 2025-01-16
 >[!important]
 >**Name**: Project Closure Project Impact Report
 
+>[!important] Definition
+>**Impact reporting** is a presentation that's given at the end of a project for key stakeholders, which typically includes the stakeholders you had in the initial kick-off meeting.
+
+^76aec5
+
+- [[Project Closure Closing Process]]
+
 ### Highlight key performance areas
 
->[!quote]
+>[!important]
 >The **purpose** of your **impact report** is to show your key stakeholders the impact your project had on the organization. 
 >- Goals, 
 >- objectives, 

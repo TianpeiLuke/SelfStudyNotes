@@ -192,19 +192,63 @@ date of note: 2024-12-27
 - [[Project Closure Importance of Closing]]
 - [[Project Closure Closing Process]]
 - [[Project Closure Project Impact Report]]
+- [[Project Closure Project Closeout Report]]
 
 
 
 ### Agile Project Management
 
+#### Introduction to Agile
+
 - [[Waterfall Project Management]]
 - [[Agile Project Management]]
+- [[Agile Manifesto Four Values]]
+- [[Agile Manifesto Twelve Principles]]
+- [[Agile Manifesto Agile Mindset]]
+
+#### Scrum
+
 - [[Scrum Approach for Agile Project Management]]
+- [[Scrum Approach Founding Principles]]
+- [[Scrum Approach Three Pillars]]
+- [[Scrum Approach Five Values]]
+- [[Scrum Approach Guide]]
+
+#### Scrum Roles and Responsibilities
+
+- [[Scrum Approach Essential Scrum Roles]]
+- [[Scrum Approach Effective Product Owner]]
+- [[Scrum Approach Effective Development Team]]
+
+
+#### Product Backlog
+
+- [[Scrum Approach Product Backlog]]
+- [[Scrum Approach User Stories]]
+- [[Agile Effort Estimation Techniques]]
+- [[Agile Effort Estimation T-shirt Size]]
+
+#### Scrum Events
+
+- [[Agile Project Management Sprint]]
+- [[Agile Project Management Sprint Planning]]
+- [[Agile Project Management Sprint Backlog]]
+- [[Agile Project Management Sprint Review]]
+- [[Scrum Approach Daily Standup and Daily Scrum]]
+- [[Agile Project Management Sprint Retrospective]]
+
+#### Scrum Tools
+
+- [[Scrum Approach Velocity]]
+
+
+#### Kanban
+
 - [[Kanban Approach for Agile Project Management]]
-- [[The Lean Product Playbook Chapter Summary 3.1 Agile Development]]
 
-### Lean Product Management
+#### Lean Product Management
 
+- [[Lean Product Management]]
 - [[The Lean Product Playbook Book Summary]]
 - [[The Lean Product Playbook Chapter Summary 1 Concepts]]
 - [[The Lean Product Playbook Chapter Summary 2.1 Target Customer]]
@@ -216,6 +260,28 @@ date of note: 2024-12-27
 - [[The Lean Product Playbook Chapter Summary 3.1 Agile Development]]
 - [[The Lean Product Playbook Chapter Summary 3.2 Metrics]]
 - [[The Lean Product Playbook Chapter Summary 3.3 Analytics Process]]
+
+#### XP
+
+- 
+
+#### Agile in Organization
+
+- [[Agile in Organization]]
+- [[Agile Project Management Value Roadmap]]
+- [[Agile Project Management Effective Value Roadmap]]
+
+#### Leading toward Changes and Challenges
+
+- [[Agile Team Managing]]
+- [[Agile Team Coaching]]
+- [[Agile Team Challenges]]
+
+#### Agile Opportunities
+
+- [[Agile Project Management and DevOps]]
+- [[Agile Project Management Scaling]]
+
 
 
 ### Software Engineering Principles and Best Practice

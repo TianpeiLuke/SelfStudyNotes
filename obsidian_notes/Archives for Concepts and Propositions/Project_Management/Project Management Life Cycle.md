@@ -64,12 +64,47 @@ date of note: 2024-12-27
 
 ### Project Planning
 
+- [[Project Planning]]
+- [[Project Tasks and Milestones]]
+- [[Project Planning Setting Milestones]]
+- [[Project Planning Schedule]]
+- [[Project Planning Components]]
+- [[Project Planning Realistic Time Estimate]]
+- [[Project Planning Capacity Planning]]
+- [[Project Planning Critical Path]]
+- [[Project Planning Budget Setting and Procurement]]
+- [[Project Budget Key Components]]
+- [[Project Planning Risk Management]]
+- [[Project Risk Management Plan]]
 
+- [[Project Communication]]
+- [[Project Communication Plan]]
 
 ### Project Execution
 
+- [[Project Execution Tracking]]
+- [[Project Status Reports]]
+- [[Project Risk Management Escalation]]
+- [[Project Execution Quality Management]]
+- [[Project Execution User Acceptance Test or UAT]]
+- [[Project Execution Continuous Improvement]]
+- [[Project Execution Data-Driven Improvement Frameworks]]
+- [[Project Execution Retrospective]]
+- [[Project Execution Data-Informed Decision-Making]]
+- [[Project Execution Data Analysis and Steps]]
+- [[Project Execution Storytelling with Data]]
+- [[Key Performance Indicator or KPI]]
+- [[Project Communication Effective Presentation]]
+- [[Project Communication Effective Meeting]]
+- [[Project Execution Leadership Skills]]
+- [[Project Execution Effective Teamwork and Best Practice]]
+- [[Project Execution Team Development and Managing Dynamics]]
+- [[Project Communication Influencing Skills]]
 
+### Project Closure
 
+- [[Project Closure Importance of Closing]]
+- [[Project Closure Closing Process]]
 
 
 ## Explanation

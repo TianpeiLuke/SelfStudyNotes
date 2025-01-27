@@ -108,7 +108,10 @@ date of note: 2025-01-15
 - [[Project Planning Schedule]]
 
 - [[Project Planning Budget Setting and Procurement]]
-- [[Project Procurement Documentation]]
+- [[Project Procurement Documentation#NDA]]
+- [[Project Procurement Documentation#RFP]]
+- [[Project Procurement Documentation#SOW]]
+
 
 - [[Project Risk Management Plan]]
 - [[Fishbone Diagram for Root Cause Identification and Risk Management]]
@@ -116,10 +119,14 @@ date of note: 2025-01-15
 
 
 - [[Project Communication Plan]]
-
 - [[Project Legal and Contractual Documentation]]
 
 
+### Project Closure
+
+- [[Project Execution Retrospective]]
+- [[Project Closure Project Impact Report]]
+- [[Project Closure Project Closeout Report]]
 
 
 -----------

@@ -25,6 +25,8 @@ date of note: 2025-01-17
 >	- but mostly are implemented *after major milestones*, 
 >	- or most commonly, *after* a project is *completed*.
 
+^00a8ca
+
 - [[Project Execution Continuous Improvement]]
 - [[Project Tasks and Milestones]]
 - [[Project Closure Closing Process]]
@@ -57,6 +59,18 @@ date of note: 2025-01-17
 
 - [[Scrum Approach for Agile Project Management]]
 - [[Project Launch and Project Landing]]
+
+### Benefits
+
+>[!important] 
+>Main *benefits* of retrospective include
+>- **Encourage team-building** 
+>	- they allow team members to understand differing perspectives.
+>- **Facilitate improved collaboration** on future projects
+>- **Promote positive changes** in future procedures and processes.
+
+^6de7fd
+
 
 ### Conduct Retros
 
