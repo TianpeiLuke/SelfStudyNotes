@@ -9,19 +9,24 @@ keywords:
 topics:
   - agile_project_management
   - project management
-name: Agile Manifesto Agile Mindset
+name: Agile Manifesto
 date of note: 2025-01-26
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Agile Manifesto Agile Mindset
+>**Name**: Agile Manifesto
 
+![[Agile Project Management#^486e17]]
 
-
-- [[Agile Manifesto]]
 - [[Agile Project Management]]
+
+- [[Agile Manifesto Four Values]]
+
+- [[Agile Manifesto Twelve Principles]]
+
+- [[Agile Manifesto Agile Mindset]]
 
 
 ## Explanation

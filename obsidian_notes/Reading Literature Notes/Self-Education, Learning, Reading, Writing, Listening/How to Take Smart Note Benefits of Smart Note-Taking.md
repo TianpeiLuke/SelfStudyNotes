@@ -147,6 +147,9 @@ year: 2022
 ## Recommended Notes
 
 - [[Project Documentation Value and Knowledge Management]]
+- [[Agile vs Waterfall Project Management]]
+- [[Agile Project Management]]
+- [[Agile Manifesto Agile Mindset]]
 - Refer to [[How to Take Smart Note Book Summary]] for book summary
 
 - Check on suggestions to counter confirmation bias in 

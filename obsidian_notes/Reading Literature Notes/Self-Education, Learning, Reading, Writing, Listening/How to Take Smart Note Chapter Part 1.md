@@ -70,6 +70,8 @@ year: 2022
 ## Recommended Notes
 
 - Refer back to the main summary note [[How to Take Smart Note Book Summary]]
+- [[Agile Project Management]]
+- [[Agile Manifesto Agile Mindset]]
 - Excerpts:
 	- [[How to Take Smart Note Excerpt 01 Introduction]]
 	- [[How to Take Smart Note Excerpt 02 The slip-box manual]]

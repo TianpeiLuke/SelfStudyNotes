@@ -55,6 +55,7 @@ date of note: 2025-01-06
 >- collect *information* and *write* and *share documentation*
 >- The *metrics* you choose should be as closely aligned to your *project's goal* as possible
 
+- [[Project Initiation Project Requirement]]
 - [[SMART or Specific Measurable Attainable Relevant and Time-bound Goals]]
 
 #### Customer Metric

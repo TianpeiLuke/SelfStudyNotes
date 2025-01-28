@@ -202,6 +202,7 @@ date of note: 2024-12-27
 
 - [[Waterfall Project Management]]
 - [[Agile Project Management]]
+- [[Agile vs Waterfall Project Management]]
 - [[Agile Manifesto Four Values]]
 - [[Agile Manifesto Twelve Principles]]
 - [[Agile Manifesto Agile Mindset]]

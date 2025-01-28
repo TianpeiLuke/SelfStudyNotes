@@ -84,7 +84,7 @@ date of note: 2025-01-06
 - [[Project Initiation Essential Project Resources and Tools]]
 - [[Project Planning Budget Setting and Procurement]]
 - [[Project Initiation Project Documentation]]
-
+- [[Project Initiation Project Requirement]]
 
 ### Refine goals with stakeholders
 

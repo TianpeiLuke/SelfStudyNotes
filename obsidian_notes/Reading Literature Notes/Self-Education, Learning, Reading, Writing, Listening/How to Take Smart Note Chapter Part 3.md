@@ -167,6 +167,9 @@ year: 2022
 	- [[How to Take Smart Note Excerpt 13 The Six Steps to Successful Writing 5]]
 	- [[How to Take Smart Note Excerpt 14 The Six Steps to Successful Writing 6]]
 
+
+- [[Agile Project Management]]
+- [[Agile Manifesto Agile Mindset]]
 - Cognitive Bias
 	- [[Mere-exposure Effect]]
 	- [[Illusory Truth Effect]]

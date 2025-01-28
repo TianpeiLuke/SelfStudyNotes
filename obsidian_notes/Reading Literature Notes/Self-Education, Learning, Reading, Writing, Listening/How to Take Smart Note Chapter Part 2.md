@@ -130,6 +130,8 @@ year: 2022
 	- [[How to Take Smart Note Excerpt 06 The Four Underlying Principles 2]]
 	- [[How to Take Smart Note Excerpt 07 The Four Underlying Principles 3]]
 	- [[How to Take Smart Note Excerpt 08 The Four Underlying Principles 4]]
+- [[Agile Project Management]]
+- [[Agile Manifesto Agile Mindset]]
 
 
 [^1]: The importance of writing our ***self-evidence*** down while doing research is discussed in [[Where Research Begins Book Summary]] Also this book stress the importance of ***leaving the Topic Land*** which is one of the benefits of using Zettelkasten. It also discuss the importance of seeking feedbacks from *Sounding board*. 

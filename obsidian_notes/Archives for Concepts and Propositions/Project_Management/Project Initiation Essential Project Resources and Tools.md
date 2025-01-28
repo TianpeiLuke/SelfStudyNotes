@@ -33,6 +33,7 @@ date of note: 2025-01-06
 >- and other items that you will have at your disposal.
 
 - [[The 7 Habits of Highly Effective People Chapter Summary 2]]
+- [[Project Initiation Project Requirement]]
 
 ### Budget 
 

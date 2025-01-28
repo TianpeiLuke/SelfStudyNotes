@@ -20,6 +20,7 @@ date of note: 2025-01-26
 
 
 
+- [[Agile Manifesto]]
 - [[Agile Project Management]]
 
 
