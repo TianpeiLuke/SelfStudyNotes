@@ -24,7 +24,7 @@ year: "2018"
 
 ## Book Excerpt
 
-
+>[!quote]
 >The process of building a habit can be divided into four simple steps: cue, craving, response, and reward.
 >
 > * First, there is the __cue__. The cue triggers your brain to initiate a behavior. It is a bit of information that predicts a reward. 

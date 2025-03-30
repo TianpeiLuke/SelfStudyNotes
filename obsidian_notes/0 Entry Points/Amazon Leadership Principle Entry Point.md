@@ -20,7 +20,7 @@ sort file.name ASC
 - [[Leadership Principle Bias for Action]]
 - [[Leadership Principle Are Right A Lot]]
 - [[Leadership Principle Think Big]]
-- [[Leadership Principle Insist on Highest Standard]]
+- [[Leadership Principle Insist on the Highest Standard]]
 - [[Leadership Principle Learn and Be Curious]]
 - [[Leadership Principle Invent and Simplify]]
 
@@ -40,13 +40,13 @@ sort file.name ASC
 
 - [[Leadership Principle Dive Deep]]
 - [[Leadership Principle Deliver Results]]
-- [[Leadership Principle Insist on Highest Standard]]
+- [[Leadership Principle Insist on the Highest Standard]]
 
 ## Knowledge Development
 
 - [[Leadership Principle Learn and Be Curious]]
 - [[Leadership Principle Invent and Simplify]]
-- [[Leadership Principle Insist on Highest Standard]]
+- [[Leadership Principle Insist on the Highest Standard]]
 
 ## Product and Project Management
 
@@ -57,6 +57,7 @@ sort file.name ASC
 - [[Leadership Principle Dive Deep]]
 - [[Leadership Principle Bias for Action]]
 - [[Leadership Principle Earn Trust]]
+- [[Leadership Principle Frugality]]
 
 ## People Management
 
@@ -66,7 +67,39 @@ sort file.name ASC
 - [[Leadership Principle Hire and Develop the Best]]
 - [[Leadership Principle Frugality]]
 
+## Research
+
+- [[Leadership Principle Customer Obsession]]
+- [[Leadership Principle Ownership]]
+- [[Leadership Principle Think Big]]
+- [[Leadership Principle Invent and Simplify]]
+
+
+# Leadership Principles Interview Questions
+
+- [[Interview Questions Customer Obsession]]
+- [[Interview Questions Ownership]]
+- [[Interview Questions Invent and Simplify]]
+- [[Interview Questions Are Right A Lot]]
+- [[Interview Questions Learn and Be Curious]]
+- [[Interview Questions Hire and Develop the Best]]
+- [[Interview Questions Insist on the Highest Standards]]
+- [[Interview Questions Think Big]]
+- [[Interview Questions Bias for Action]]
+- [[Interview Questions Frugality]]
+- [[Interview Questions Earn Trust]]
+- [[Interview Questions Deep Dive]]
+- [[Interview Questions Disagree and Commit]]
+- [[Interview Questions Deliver Results]]
+
+
+# Functional Competencies
+
+
+
+
 
 
 -----------
 ##  Recommended Notes
+

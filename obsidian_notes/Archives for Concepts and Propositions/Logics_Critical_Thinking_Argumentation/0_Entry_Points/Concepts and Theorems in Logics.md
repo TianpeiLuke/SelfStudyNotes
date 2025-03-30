@@ -80,9 +80,9 @@ date of note: 2024-12-13
 - [[Concepts and Theorems in Hypothesis Testing]]
 
 
+### Critical Thinking
 
-
-
+- [[Concepts and Theorems in Critical Thinking]]
 
 
 
@@ -107,3 +107,5 @@ date of note: 2024-12-13
 - [[The Art of Thinking Clearly Book Summary]]
 - [[An Concise Introduction to Logic by Hurley]]
 - [[An Introduction to Formal Logic by Smith]]
+- Critical Thinking 
+	- [The Foundation of Critical Thinking](https://www.criticalthinking.org/pages/index-of-articles/1021/)

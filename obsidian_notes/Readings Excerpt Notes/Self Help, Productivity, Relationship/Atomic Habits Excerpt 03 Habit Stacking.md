@@ -22,11 +22,12 @@ year: "2018"
 
 ## Book Excerpt
 
-
+>[!quote]
 > No behavior happens in isolation. Each action becomes a cue that triggers the next behavior.
 >
 > When it comes to building new habits, you can use the connectedness of behavior to your advantage. One of the best ways to build a new habit is to identify a current habit you already do each day and then stack your new behavior on top. This is called **habit stacking**.
 
+>[!quote]
 > The habit stacking formula is: 
 > “After \[CURRENT HABIT\], I will \[NEW HABIT\].”
 

@@ -72,7 +72,7 @@ date of note: 2025-01-06
 >- If done correctly, a landing creates *greater alignment* within the teams on the end results you all desire, 
 >- and it gives everybody on the team *better visibility* on how to achieve success.
 
-- [[Leadership Principle Insist on Highest Standard]]
+- [[Leadership Principle Insist on the Highest Standard]]
 - [[Leadership Principle Ownership]]
 
 ## Explanation

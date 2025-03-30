@@ -60,6 +60,9 @@ date of note: 2025-01-16
 - [[The 7 Habits of Highly Effective People Chapter Summary 4]]
 - [[The 7 Habits of Highly Effective People Chapter Summary 5]]
 - [[The 7 Habits of Highly Effective People Chapter Summary 6]]
+- [[Emotional Intelligence 2.0 Book Summary]]
+- [[Functional Competencies Team and People Management]]
+- [[Developing the Leader Within You 2.0 Book Summary]]
 
 ### Managing Team Dynamics
 

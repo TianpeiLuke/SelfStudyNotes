@@ -45,6 +45,7 @@ date of note: 2025-01-17
 - [[The 7 Habits of Highly Effective People Chapter Summary 7]]
 - [[The 5 Elements of Effective Thinking Suggestion 5]]
 - [[Atomic Habits Book Summary]]
+- [[Functional Competencies Team and People Management]]
 
 ### Reason to hold Retros
 

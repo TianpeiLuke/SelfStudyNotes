@@ -2,8 +2,9 @@
 tags:
   - code
   - code_snippet
-  - sql
   - deep_dive
+  - SQL/groupby
+  - SQL
 keywords: 
 topics:
   - data_analysis

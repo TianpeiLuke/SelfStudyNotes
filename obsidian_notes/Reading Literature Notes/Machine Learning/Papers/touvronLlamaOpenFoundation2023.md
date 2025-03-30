@@ -79,3 +79,4 @@ date of note:
 
 - [[daoFlashAttentionFastMemoryEfficient2022]]
 - [[vaswaniAttentionAllYou2017]]
+- [[Flash Attention Mechanism for Large Language Model]]

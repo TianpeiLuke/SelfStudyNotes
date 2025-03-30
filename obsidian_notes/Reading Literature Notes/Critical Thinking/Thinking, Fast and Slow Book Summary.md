@@ -4,8 +4,11 @@ tags:
   - critical_thinking
   - bias
   - cognition
-aliases: 
-keywords: 
+aliases:
+  - 0503thinkingfastandslow01s
+keywords:
+  - system_ii
+  - system_i
 topics: 
 date of note: 2024-03-19
 name: Thinking, Fast and Slow

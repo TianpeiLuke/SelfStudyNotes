@@ -25,6 +25,8 @@ year: 2022
 
 ^e3ea3f
 
+^e3ea3f
+
 
 >[!quote]
 > - Docker is more powerful than **environment managers** like conda or virtualenv because (a) it is *completely language independent* and (b) it *comprises your whole operating environment*, including startup commands, environment variable, etc.
@@ -35,6 +37,7 @@ year: 2022
 > 
 > - **Amazon SageMaker** uses *Docker* to allow users to train and deploy arbitrary algorithms.
 
+- [[Docker Container]]
 - [[Docker Container]]
 - [[Docker Container Daemon]]
 - [[Docker Container Images]]

@@ -65,3 +65,4 @@ Covey, S. R. (1991). _The seven habits of highly effective people_. Provo, UT: 
 - [[Project Planning Best Practices]]
 - [[Project Execution Effective Teamwork and Best Practice]]
 - [[Project Communication Influencing Skills]]
+- [[Emotional Intelligence 2.0 Book Summary]]

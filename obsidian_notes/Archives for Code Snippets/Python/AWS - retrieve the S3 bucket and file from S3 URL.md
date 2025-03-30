@@ -3,6 +3,7 @@ tags:
   - code
   - code_snippet
   - aws/lambda
+  - aws/s3
 keywords: 
 topics: 
 language: python
@@ -134,6 +135,27 @@ def get_filepath_from_s3(s3uri):
 > for page in page_iterator:
 >     print(page['Contents'])
 > ```
+
+>[!example]
+>List all parquet files under a given bucket and prefix
+>
+> ```python
+> s3_client = boto3.client('s3') 
+> 
+> # List all objects with the given prefix
+> def list_s3_files(bucket, prefix):
+>     paginator = s3.get_paginator('list_objects_v2')
+>     pages = paginator.paginate(Bucket=bucket, Prefix=prefix)
+>     
+>     files = []
+>     for page in pages:
+>         if 'Contents' in page:
+>             for obj in page['Contents']:
+>                 if obj['Key'].endswith('.parquet'):
+>                     files.append(obj['Key'])
+>     return files
+> ```
+> 
 
 
 

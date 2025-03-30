@@ -14,7 +14,7 @@ date of note: 2024-12-18
 ### MODS Training and Auto-Refresh
 
 - [[Pipeline for MODS training]]
-- [[Pipeline for MODS Deep Laerning training]]
+- [[Pipeline for MODS Deep Learning training]]
 - [[Register SageMaker Model]]
 - 
 

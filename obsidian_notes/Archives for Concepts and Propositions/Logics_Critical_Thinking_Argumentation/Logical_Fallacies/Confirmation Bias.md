@@ -81,6 +81,7 @@ date of note: 2024-04-26
 
 - [[The Art of Thinking Clearly Book Summary]]
 - [[Thinking, Fast and Slow Book Summary]]
+- Reason is not designed for discovering *objective truth* but for winning debates and *influencing social dynamics*. [[The Enigma of Reason Book Summary]]
 
 - Wikipedia [Confirmation bias](https://en.wikipedia.org/wiki/Confirmation_bias#:~:text=Confirmation%20bias%20(also%20confirmatory%20bias,one's%20prior%20beliefs%20or%20values.)
 - Wikipedia [List of cognitive biases](https://en.wikipedia.org/wiki/List_of_cognitive_biases)

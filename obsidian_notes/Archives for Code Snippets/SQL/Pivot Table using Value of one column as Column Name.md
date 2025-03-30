@@ -2,8 +2,8 @@
 tags:
   - code
   - code_snippet
-  - sql
   - deep_dive
+  - SQL
 keywords: 
 topics:
   - data_analysis

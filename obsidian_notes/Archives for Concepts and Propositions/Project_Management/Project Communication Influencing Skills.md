@@ -65,10 +65,14 @@ date of note: 2025-01-16
 - [[Project Execution Data Analysis and Steps]]
 - [[Project Execution Data-Informed Decision-Making]]
 - _The Necessary Art of Persuasion_, Jay A. Conger
+- [[Functional Competencies Influencing]]
 - [[Getting to Yes Book Summary]]
 - [[The 7 Habits of Highly Effective People Book Summary]]
 - [[The 7 Habits of Highly Effective People Chapter Summary 4]]
 - [[The 7 Habits of Highly Effective People Chapter Summary 5]]
+- [[Emotional Intelligence 2.0 Book Summary]]
+- [[Developing the Leader Within You 2.0 Book Summary]]
+	- [[Developing the Leader Within You Chapter 01 Influence]]
 
 ### Using sources of power to influence
 
@@ -169,7 +173,8 @@ date of note: 2025-01-16
 
 
 - [[Getting Things Done Book Summary]]
-
+- [[Self-Help and Personal Development Book Collection]]
+- [[Developing the Leader Within You 2.0 Book Summary]]
 
 
 - Coursera

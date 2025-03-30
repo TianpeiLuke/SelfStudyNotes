@@ -87,3 +87,4 @@ date of note: 2024-07-07
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 743
 - [[Deep Learning by Goodfellow]] pp 372 - 373
 - [[Speech and Language Processing by Jurafsky]] pp 155, 163,  210 - 211
+- [Parallel Training Techniques](https://github.com/saforem2/parallel-training-slides#parallel-training-techniques)

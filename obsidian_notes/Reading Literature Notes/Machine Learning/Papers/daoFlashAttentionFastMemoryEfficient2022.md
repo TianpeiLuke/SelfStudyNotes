@@ -38,16 +38,54 @@ date of note: 2024-10-21
 >[!question] 
 >What are the *primary assumptions* behind this paper?
 
+- **Attention** is bottlenecked by **Memory Reads/Writes**
+- Memory Reads/Writes happens in **GPU HBM**
+
+- [[Attention Mechanism in Neural Network]]
+
+![[flash_attention.png]]
+
+![[flash_attention_gpu_model.png]]
 
 
 >[!question]
 >What are the major *problems of concern* behind this paper? If i had to guess, what does the author seems to be concerned. 
 
+- **Modeling Longer Sequences**
+	- Bridging New Capabilities
+	- Closing Reality Gap
+	- Opening New Areas
 
+- Reduce HBM Reads/Writes
+	- Compute by Blocks
+		- Challenge
+			- compute *softmax reduction* without access to full input
+			- *backward* without the large attention matrix from forward
+		- Technique to solve
+			- **Tiling**: 
 
 
 >[!question]
 >What are *the main contributions* of the paper?
+
+- **Speedup**
+	- Speedup run-time of attention module
+	- Faster End-to-End Training of Transformers
+- **Memory Saving**
+	- Longer Sequences
+	- Higher Quality transformers
+
+![[flash_atten_speedup.png]]
+
+![[flash_atten_memory_reduction.png]]
+
+![[flash_atten_faster_train.png]]
+
+![[flash_atten_faster_train_2.png]]
+
+![[flash_atten_longer_context.png]]
+
+![[flash_atten_longer_sequence.png]]
 
 
 
@@ -77,5 +115,12 @@ date of note: 2024-10-21
 
 ## Reference and Related Notes
 
+- [[Flash Attention Mechanism for Large Language Model]]
+- [[Transformer Network]]
 - [[touvronLlamaOpenFoundation2023]]
 - [[vaswaniAttentionAllYou2017]]
+
+
+- Youtube
+	- [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness | Tri Dao](https://www.youtube.com/watch?v=FThvfkXWqtE)
+	- [FlashAttention - Tri Dao | Stanford MLSys #67](https://www.youtube.com/watch?v=gMOAud7hZg4)

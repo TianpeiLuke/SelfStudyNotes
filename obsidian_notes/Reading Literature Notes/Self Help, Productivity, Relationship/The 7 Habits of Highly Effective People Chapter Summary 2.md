@@ -121,6 +121,14 @@ Covey, S. R. (1991). _The seven habits of highly effective people_. Provo, UT: 
 - [[Project Planning Capacity Planning]]
 - [[Project Risk Management Type of Risks]]
 
+- [[Developing the Leader Within You 2.0 Book Summary]]
+- [[Subtle Art of Not Giving a Fuck Book Summary]] 
+	- You can’t care about everything, so prioritize what truly matters to you. (**Put First Things First**)
+	- While you can’t always control what happens to you, you can *control how you respond* (**Be Proactive**)
+	- Death put Life in Perspective (**Begin with End in Mind**)
+- [[80-20 Principle Book Summary]]
+	- Prioritize the vital few
+	- Identify the key 20% that drives the most success and prioritize those tasks, relationships, or investments.
 
 
 - Suggestions in this book resonate with **Amazon Leadership Principles**:

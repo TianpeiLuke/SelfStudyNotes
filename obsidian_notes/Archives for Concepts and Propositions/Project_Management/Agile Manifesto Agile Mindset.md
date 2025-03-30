@@ -33,5 +33,6 @@ date of note: 2025-01-26
 ##  Recommended Notes and References
 
 
+- [[Mindset the New Psychology of Success Book Summary]]
 - Coursera
 	- [Agile Project Management](https://www.coursera.org/learn/agile-project-management/home/welcome)

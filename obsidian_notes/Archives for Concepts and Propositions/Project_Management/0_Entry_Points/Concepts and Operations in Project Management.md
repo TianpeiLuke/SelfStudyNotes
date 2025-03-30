@@ -308,7 +308,12 @@ date of note: 2024-12-27
 - [[Building a Second Brain Book Summary]]
 - [[Atomic Habits Book Summary]]
 - [[The 7 Habits of Highly Effective People Book Summary]]
+- [[80-20 Principle Book Summary]]
+- [[Developing the Leader Within You 2.0 Book Summary]]
+- [[The Lean Product Playbook Book Summary]]
 
+- [[Productivity Book Collection]]
+- [[Self-Help and Personal Development Book Collection]]
 
 - The [Project Management Institute](https://www.pmi.org/) is the leading association for those in project, program, or portfolio management professions. Their website provides guides, industry standards, articles, templates, job boards, certifications, and more to help support professionals in these careers.
     

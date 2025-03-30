@@ -169,6 +169,7 @@ date of note: 2024-10-21
 
 - [[devlinBERTPretrainingDeep2019]]
 - [[liuRoBERTaRobustlyOptimized2019]]
+- [[warnerSmarterBetterFaster2024]]
 - [[Dense Text Retrieval with Pretrained Language Models]]
 - [[ColBERT as Multi-Representation Bi-Encoder Structure for Dense Information Retrieval]]
 - [[Sentence-BERT for Sentence Embedding]]

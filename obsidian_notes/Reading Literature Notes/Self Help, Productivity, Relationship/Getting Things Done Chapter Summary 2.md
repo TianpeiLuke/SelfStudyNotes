@@ -28,6 +28,8 @@ year: 2015
 
 ## Part 2: Practicing Stress-Free Productivity
 
+![[getting_things_done_workflow.png]]
+
 
 
 

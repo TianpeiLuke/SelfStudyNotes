@@ -2,6 +2,10 @@
 tags:
   - code
   - code_snippet
+  - SQL
+  - SQL/partition_by
+  - SQL/having
+  - SQL/groupby
 keywords: 
 topics: 
 language: SQL

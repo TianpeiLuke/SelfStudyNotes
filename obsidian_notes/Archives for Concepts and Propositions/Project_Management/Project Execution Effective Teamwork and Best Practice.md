@@ -121,6 +121,8 @@ date of note: 2025-01-16
 - [[Project Execution Leadership Skills]]
 - [[Project Communication]]
 - [[Project Communication Plan]]
+- [[Developing the Leader Within You 2.0 Book Summary]]
+- [[Emotional Intelligence 2.0 Book Summary]]
 
 >[!important]
 >You can demonstrate **empathy** for your teammates by 

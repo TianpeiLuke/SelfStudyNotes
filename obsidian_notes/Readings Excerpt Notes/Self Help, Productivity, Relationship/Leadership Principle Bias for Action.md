@@ -3,6 +3,7 @@ tags:
   - excerpt
   - leadership_principle
   - amazon
+  - leadership_principle/bias_for_action
 aliases:
   - 0601amazonprinciple01e
 date of note: 2024-02-05
@@ -29,12 +30,30 @@ date of note: 2024-02-05
 
 >[!info]
 > As individual contributor: 
->- Quickly identify if you need more info before taking action, request that info, and move forward?
->- Be ready, willing and able to roll up sleeves and assist with customer-facing tasks when needed?
->- Ask for help when needed in a timely manner?
->- Respond promptly to requests for information?
->- Follow up and deliver as promised?
->- Make sure you create an “action item list” (identify owner and target dates)?
+>- *Quickly* identify if you *need more info before taking action*, request that info, and move forward
+>	- [[Critical Thinking Book Collection]]
+>- Be ready, willing and able to roll up sleeves and assist with customer-facing tasks when needed
+>- *Ask for help when needed* in a timely manner
+>	- [[Project Risk Management Escalation]]
+>- *Respond promptly* to requests for information
+>- Follow up and *deliver as promised*
+>	- [[Leadership Principle Deliver Results]]
+>- Make sure you create an “**action item list**” (identify owner and target dates)
+>	- **Next Action** [[Getting Things Done Book Summary]]
+>	- [[Building a Second Brain Book Summary]]
+
+>[!info]
+>- Moves quickly on a project, even when some information is lacking
+>	- [[Agile Manifesto]]
+> - Understands *when to consult* with others and *when* its *not necessary*
+> - Willing to *make small progress* toward a solution rather than finding the perfect solution right away
+> 	- [[Continuous Delivery or CD in DevOps and MLOps]]
+> 	- [[Project Execution Continuous Improvement]]
+> - Deals with problems *quickly* so others can make progress
+> - Carefully considers what is *important to get done right away* and what can *wait*
+> 	- [[Getting Things Done Book Summary]]
+> 	- [[Building a Second Brain Book Summary]]
+
 
 
 
@@ -43,6 +62,7 @@ date of note: 2024-02-05
 
 - [[Interview Questions Bias for Action]]
 - Bias For Action [Internal Wiki](https://w.amazon.com/bin/view/LeadershipPrinciples/BiasForAction/)
+- Leadership Principle Explained [internal link](https://w.amazon.com/bin/view/LeadershipPrinciples/)
   
 - **Pros**: This LP is against the following cognitive bias
 	- [[Information Bias]]

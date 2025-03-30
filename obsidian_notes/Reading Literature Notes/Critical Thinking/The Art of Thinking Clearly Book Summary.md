@@ -5,13 +5,16 @@ tags:
   - psychology/cognitive_bias
   - logic/fallacies
   - behavior_economy
-aliases: 
-keywords: fallacies,cognitive_bias,critical_thinking
+aliases:
+  - 0503artofthinkingclearly01s
+keywords:
+  - fallacies,cognitive_bias,critical_thinking
 topics:
   - psychology
   - logic
   - behavior economy
   - social psychology
+  - critical_thinking
 date of note: 2024-03-19
 name: The Art of Thinking Clearly
 author:

@@ -3,7 +3,7 @@ tags:
   - restaurant
   - los_angeles
 region:
-  - san_diego
+  - los_angeles
 topics:
   - restaurant
 name: 豫香缘 Northern Chinese Cuisine

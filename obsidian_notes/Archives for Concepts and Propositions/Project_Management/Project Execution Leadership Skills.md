@@ -66,6 +66,8 @@ date of note: 2025-01-16
 - [[The 7 Habits of Highly Effective People Chapter Summary 4]]
 - [[The 7 Habits of Highly Effective People Chapter Summary 5]]
 
+- [[Developing the Leader Within You 2.0 Book Summary]]
+
 
 - Coursera
 	- [Project Execution: Running the Project](https://www.coursera.org/learn/project-execution-google/home/welcome)

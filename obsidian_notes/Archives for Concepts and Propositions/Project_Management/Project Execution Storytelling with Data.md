@@ -53,6 +53,8 @@ date of note: 2025-01-16
 
 - [[Project Execution Data Visualization]]
 - [[Project Communication Effective Presentation]]
+- [[Functional Competencies Interpretation and Analysis]]
+
 
 
 ## Explanation

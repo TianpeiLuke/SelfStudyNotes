@@ -3,11 +3,13 @@ tags:
   - excerpt
   - leadership_principle
   - amazon
+  - leadership_principle/disagree_and_commit
 aliases: 
 date of note: 2024-04-29
 ---
+
 > [!quote]
-> 
+>Leaders are obligated to **respectfully challenge** decisions when they *disagree*, even when doing so is uncomfortable or exhausting. Leaders have *conviction* and are *tenacious*. They do not compromise for the sake of social cohesion. *Once a decision is determined*, they **commit wholly**. 
 >
 >-- *Have a Backbone; Disagree and Commit*, Amazon Leadership Principle
 
@@ -20,12 +22,20 @@ date of note: 2024-04-29
 
 >[!info]
 > As individual contributor: 
->
+>- Disagrees with peers and supervisors using *data to thoughtfully explain* counter-arguments
+>	- [[Project Execution Data-Informed Decision-Making]]
+> - *Stands up* for what they believe is in the best interest of the company and the customer
+> - Advocates *clearly and passionately* for beliefs
+> - Openly supports and *commits to decisions* that have been made, even if not originally in agreement
+
 
 
 
 ----
 ## Reference
+
+- Leadership Principle Explained [internal link](https://w.amazon.com/bin/view/LeadershipPrinciples/)
+
 
 - Critical Thinking
 	- Ask Good Questions [[The 5 Elements of Effective Thinking Suggestion 3]]

@@ -119,6 +119,8 @@ date of note: 2024-06-01
 ### Efficient Training, Inference and Compression
 
 - [[Concepts and Algorithms for Concurrent and Parallel Programming]]
+
+- [[Parallel Pretraining of Large Language Models]]
 - [[Data Parallelism]]
 - [[Model Parallelism]]
 - [[Pipeline Parallelism]]

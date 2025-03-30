@@ -19,9 +19,9 @@ date of note: 2024-03-26
 > 	- [[SageMaker BYO Container - Pytorch Lightning Training]]
 > 	- [[SageMaker BYO Container - Pytorch Lightning Hosting and Prediction]]
 > 1. Write the *Dockerfile*. 
-> 	- [[SageMaker SDK Training Script Dockerfile]]
+> 	- [[Dockerfile for Model Training]]
 > 2. **Build** *Docker Image* using Dockerfile and **Push** to *Amazon ECR*. 
-> 	- [[SageMaker SDK Training Script Push Dockerfile to ECR]] 
+> 	- [[Amazon ECR or Elastic Container Registry Create and Push Image]] 
 > 3. **Test** algorithm in local machine or Amazon SageMaker instance 
 > 	- [[SageMaker SDK Test Container in SageMaker]]
 > 4. Start **Training Process** in **SageMaker** using Docker Image in ECR 

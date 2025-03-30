@@ -84,6 +84,7 @@ date of note: 2025-01-16
 - [[Project Execution Data Visualization Dashboard]]
 - [[Project Communication Effective Meeting]]
 
+- [[Building a Second Brain Chapter Summary 2]]
 
 ## Explanation
 

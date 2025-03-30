@@ -100,6 +100,7 @@ date of note: 2025-01-15
 - [[The 7 Habits of Highly Effective People Chapter Summary 3]]
 - [[The 7 Habits of Highly Effective People Chapter Summary 4]]
 - [[The 7 Habits of Highly Effective People Chapter Summary 5]]
+- [[Getting to Yes Book Summary]]
 
 
 

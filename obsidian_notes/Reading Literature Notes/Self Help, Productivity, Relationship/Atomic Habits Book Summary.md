@@ -43,21 +43,32 @@ _Atomic Habits_ is a book on **habit development**. It emphasizes the role of **
 According to the author, _**our own identity** is shaped by all our habits_. These habits are so small that they are not observable by our mind and many of us are not even aware of their impact on our life. In order to form a good life, the author argues that we should make our own behavior change by taking control of our atomic habits: forming habits that align with good life and our identity and removing habits that contradicts them. 
 [[Atomic Habits Excerpt 06 3 Layers of Behavior Change]]
 
-The major part of the book is on _how_ to develop/get rid of habits. It begins with observation on the our human habit development cycle with four sequential steps: **cue, craving, response and reward.** _Cue_ triggers our behavior/habit. _Craving_ generates our desire (_emotional force_) to repeat the behavior. We then _response_ to the desire with our actions/thoughts that form the habit. Finally, our response generate _rewards_, which fulfills the end goal of a habit. _Cue_ and _Craving_ forms the _problem phase_, where we realized that something need to change. Then _response_ and _reward_ forms the _solution phase_, where we take actions to achieve the change we want. 
+The major part of the book is on _how_ to develop/get rid of habits. It begins with observation on the our human habit development cycle with four sequential steps: **cue, craving, response and reward.**
+- _Cue_ triggers our behavior/habit. 
+- _Craving_ generates our desire (_emotional force_) to repeat the behavior. 
+- We then _response_ to the desire with our actions/thoughts that form the habit. 
+- Finally, our response generate _rewards_, which fulfills the end goal of a habit.
+
+_Cue_ and _Craving_ forms the _problem phase_, where we realized that something need to change. Then _response_ and _reward_ forms the _solution phase_, where we take actions to achieve the change we want. 
+
 [[Atomic Habits Excerpt 01 Four Steps]] 
 [[Atomic Habits Excerpt 02 Cues]]
 
 Taking control of our habits is to manipulate during these four stages. The author then proceeded with his suggestions which summarize into __four laws__, each taking one section:
 
 - ***Make It Obvious***:  To start development of a new habit, we need to _strengthen the cue_ of that habit. Simple cues include _time_ and _location_.  We can also use techniques such as ***habit stacking*** [[Atomic Habits Excerpt 03 Habit Stacking]], allowing us to stack new habits upon old ones. The author also argues that _the **environment** matters more to our behavior than our own motivations._ The most straightforward way to strengthen the cue is to make it obvious to our mind/eye.  We can _design/manipulate the environment_ ([[Atomic Habits Excerpt 05 Environment Design]]) so that the visual cue that triggers the habit would be more obvious. [[Atomic Habits Excerpt 04 Make Obvious]]
+	- [[Atomic Habits Law 1 Make Obvious]]
   
 - ***Make It Attractive***: Human behaviors follows the group / social norms. An attractive habit is irresistible. Thus to better build a habit is to find a group of people (a **culture**) who share the same habit. When our habit is attractive to our group, it will be strengthened and it will last longer. This section emphasizes _the role of family, friends and authority figures_ in shaping our habits. 
+	- [[Atomic Habits Law 2 Make Attractive]]
   
 - ***Make It Easy***: 
 	- The first main suggestions in this section is to ***take small steps forward continually but never backward or stop***. "_Merely showing up_" is the most important step. The ***frequency*** of performing habits is more important than the time of performing such habit.  _"Action is more important than planning."_ [[Atomic Habits Excerpt 08 Action Planning]] The habit formation is to repeat actions until it become automatic and thus consumes less mental energy. The author even suggests a ***two-minutes rule*** to begin a habit: starting with 2-min effort to take actions. Then gradually increasing the duration and depth/strength to our actions, keep improving until we finally shape the desired habits. 
 	- The second main suggestions is to follow ***the law of least effort***. The author argues that habit development should not require our additional _mind power_. If developing a habit takes the least amount of effort and is less punishing, we naturally would like to do it.  We can also _create an environment_ (surrounding, policies etc.) where performing the desired behaviors would requires less efforts than the undesired ones. [[Atomic Habits Excerpt 11 Law of Least Effort]]
+	- [[Atomic Habits Law 3 Make Easy]]
 	  
 - ***Make It Satisfying***: Developing a habit is all for its long term effect. Thus we would like our habit to satisfy our need/craving in long term. People prefer the instant reward over the long term effect. Thus a lasting habit can be formed only when we allows us to receive instant reward. The author suggests us to _keep track of the our habit development process_. The ***Habit Tracking*** is time consuming but our progress towards a desired habit itself is a _reward_ to our actions. Habit tracking also makes the good/bad habits obvious to ourselves. 
+	- [[Atomic Habits Law 4 Make Satisfying]]
   
 These suggestions can be used reversely to suppress an old habit:
 - ***Make It Invisible***: _The secret of self-control is to avoid the tempting situations._ Thus to eliminate bad habits, we should take rid of/reduce the exposure to the cue that triggers it. 
@@ -68,10 +79,52 @@ These suggestions can be used reversely to suppress an old habit:
 Finally the author discussed some **advanced tactics**:
 
 - ***Understanding the role of personality and talents***: the author suggests us to choose our habits according our own **talents/personality*** so that we would _exploit_ their benefits of a good habit 80% of time, while also allowing us to _explore_ new opportunities 20% of time. When we are winning, we are more likely to stick to it in long run.  [[Atomic Habits Excerpt 09 Find a Habit in Your Favor]]
+	- [[80-20 Principle Book Summary]]
+	- [[Grit Book Summary]]
+	- [[Mindset the New Psychology of Success Book Summary]]
   
 - ***Pushing the boundary of our abilities and not to be bored***: _Boredom is the greatest threat to long term habits?_ by _**Goldilocks Rule**: humans experience peak motivation when working on tasks that are right on the edge of their current abilities._ Starting a new habit with easy tasks so that we will stick to it. Once it is established, we need to _make small improvement continually_. We need to keep a balance between searching new challenges and making small improvement. Let our habit stay novel to be attractive and satisfying. 
   
 - ***Be aware of the downside of a good habit***: When a habit is established, it become __automatic__ and we are less and less likely aware of the feedback received from actions. We may make mistakes from our habits when we are not aware of the change of environment.  Also habits are repetition of previous actions. To achieve mastery, we need to combine automatic habits with deliberate practice. [[Atomic Habits Excerpt 10 Good Habits can be Bad]]
+
+## Table of Content
+
+- The Fundamentals - Why Tiny Changes Make a Big Difference
+	1. The Surprising Power of Atomic Habits
+	2. How Your Habits Shape Your Identity (and Vice Versa)
+	3. How to Build Better Habits in 4 Simple Steps
+	   
+- The 1st Law - Make It Obvious
+	4. The Man Who Didn’t Look Right
+	5. The Best Way to Start a New Habit
+	6. Motivation Is Overrated; Environment Often Matters More
+	7. The Secret to Self-Control
+	   
+- The 2nd Law - Make It Attractive
+	8. How to Make a Habit Irresistible
+	9. The Role of Family and Friends in Shaping Your Habits
+	10. How to Find and Fix the Causes of Your Bad Habits
+	    
+- The 3rd Law - Make It Easy
+	11. Walk Slowly, but Never Backward
+	12. The Law of Least Effort
+	13. How to Stop Procrastinating by Using the Two-Minute Rule
+	14. How to Make Good Habits Inevitable and Bad Habits Impossible
+	    
+- The 4th Law - Make It Satisfying
+	15. The Cardinal Rule of Behavior Change
+	16. How to Stick with Good Habits Every Day
+	17. How an Accountability Partner Can Change Everything
+	    
+- Advanced Tactics - How to Go from Being Merely Good to Being Truly Great
+	18. The Truth About T alent (When Genes Matter and When They Don’t)
+	19. The Goldilocks Rule: How to Stay Motivated in Life and Work
+	20. The Downside of Creating Good Habits
+
+- Conclusion: The Secret to Results That Last
+
+
+
 
 
 ----------

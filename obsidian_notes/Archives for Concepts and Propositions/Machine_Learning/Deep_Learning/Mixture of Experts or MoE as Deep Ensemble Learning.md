@@ -45,6 +45,7 @@ date of note: 2024-10-24
 - [[Dropout for Deep Learning]]
 
 - [[Transformer Network]]
+- [[Expert Parallelism]]
 
 - [[Artificial Neural Network and Deep Learning]]
 

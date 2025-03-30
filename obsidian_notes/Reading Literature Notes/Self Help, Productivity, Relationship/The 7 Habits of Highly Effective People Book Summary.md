@@ -43,6 +43,7 @@ topics:
   - productivity
   - personal_development
   - relationship_management
+  - self-help
 date of note: 2024-02-04
 name: "The 7 Habits of Highly Effective People: 30th Anniversary Edition"
 author:
@@ -59,6 +60,7 @@ year: 1991
 - The ***effectiveness*** defined in this book lies in the ***balance** of **production (P)** and **production capacity (PC)***.
 
 - This approach belongs to so called the ***character ethic*** approaches, which emphasizes that "there are *basic principles of effective living*, and that people can only experience true success and enduring happiness as they learn and integrate these principles into their basic character."[[The 7 Habits of Highly Effective People Chapter Summary 1]]
+	- [[Developing the Leader Within You Chapter 03 Character]]
 
 - The author's argument is that developing a ***principle center** of ourselves* is essential to form an *effective, mature, independent* individual, which becomes the foundation for *trustworthy*, *interdependent  relationships* with others. [[The 7 Habits of Highly Effective People Chapter Summary 2]]
 
@@ -110,6 +112,7 @@ year: 1991
 - A more detailed bottom-up approach for improving productivity and building workflows can be seen in [[Getting Things Done Book Summary]]
 - Check on a comparison with both *The 7 Habits* and *the GTD [[Comparison between 7 Habits of Highly Effective People and Getting Things Done]]*
 - [[Project Communication Influencing Skills]]
+- [[80-20 Principle Book Summary]]
 - Suggestions in this book resonate with **Amazon Leadership Principles**:
 	- **Be Proactive** is a part of [[Leadership Principle Ownership]]; It is also emphasized in [[Leadership Principle Bias for Action]]
 	- The Core of Private Victory is [[Leadership Principle Ownership]]
