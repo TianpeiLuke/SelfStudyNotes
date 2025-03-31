@@ -55,6 +55,26 @@ year: 2024
 >[!info]
 >Overall, "Critical Thinking: Think Smarter" serves as a practical resource, offering readers tools and strategies to navigate complex situations, challenge assumptions, and make well-informed decisions.
 
+## Table of Contents
+
+- **Foundation of Critical Thinking**
+- **Decision-Making Frameworks**
+- **Structured Frameworks for Problem Solving**
+- **Enhancing Strategic Decision-Making**
+- **Overcoming Bias and Misinformation**
+- **Analytical Skill Development**
+- **Logical Fallacies and Reasoning**
+- **Practical Application of Critical Thinking**
+- **Effective Communication through Critical Thinking**
+- **Communication and Persuasion**
+- **Confidence-Building through Critical Thinking**
+- **Interactive and Reflective Exercises**
+- **Empathy and Emotional Intelligence**
+- **Advanced Decision-Making Techniques**
+- **Transforming Critical Thinking into a Superpower**
+- **Empowerment Through Critical Thinking**
+- **Conclusion**
+
 
 
 

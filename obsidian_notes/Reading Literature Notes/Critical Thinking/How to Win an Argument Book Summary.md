@@ -53,10 +53,33 @@ year: 2022
 >     
 > 5. **Affirm Your Point of View**: Reinforce your stance while remaining receptive to feedback.
 
+## Table of Contents
 
+### Part 1: The Mindsets Behind Every Winning Argument
 
+- Chapter 01 **Mindsets to Win - The Power of Listening**
+- Chapter 02 **Keeping Your Cool - How to Argue and Win Without Being Hated**
 
+### Part 2: Logic and Reason
 
+- Chapter 03 **Logic & Reasoning - Creating a Sound Argument**
+- Chapter 04 **Arrangement**
+- Chapter 05 **Responding & Proving Your Point**
+- Chapter 06 **Logical Fallacies to Avoid and Call Out**
+
+### Part 3: Emotions and Persuasion
+
+- Chapter 07 **Style & Delivery**
+- Chapter 08 **Emotional Appeals**
+- Chapter 09 **The Power of Storytelling**
+
+### Part 4: Putting it All Together and Real-Life Applications
+
+- Chapter 10 **Creating a Bulletproof Argument Step-by-Step**
+- Chapter 11 **Arguing in Relationships With Your Significant Other**
+- Chapter 12 **Arguing with Friends**
+- Chapter 13 **Arguing in the Workspace**
+- Chapter 14 **Special Cases**
 
 
 -----------
