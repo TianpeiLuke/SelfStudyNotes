@@ -15,50 +15,66 @@ date of note: 2025-03-27
 
 ## Code Snippet Summary
 
->[!important]
->Develop Prompt to provide label on reversal reasons
->- `No_BSM`
->	- No complete message available in a dialogue
->	- Cannot tell what buyer ask for
->	- No response from seller
->- `Buyer_Received_WrongORDefective_Item`
->	- Buyer claims they received wrong or defective item
->	- Buyer describes the quality issues of item
->- `In-Transit`
->	- Buyer claims they didn't receive the package
->	- Seller confirms that the item was in-transit
->- `Delivered_Post_EDD`
->	- Buyer claims they didn't receive the package
->	- Seller agrees to refund the item
->	- The order was delivered after the seller agree to refund the item
->- `TrueDNR`
->	- Buyer claims they didn't receive the package
->	- Tracking shows delivered but buyer disputes receiving it
->	- Discussion about delivery location, tracking number, or delivery confirmation
->	- Mentions of missing package, lost delivery, or not finding the package
->- `Seller_Unable_To_Ship`
->	- Buyer claims they didn't receive the package
->	- Seller confirms that the item was not shipped
->- `BuyerCancellation`
->	- Buyer requests cancellation of the order
->- `ReturnRequested`
->	- Buyer requests return of the item
->- `AddresschangeRequest`
->	- Buyer request the change of delivery address
->- `Invoice`
->	- The dialogue contains invoice of the purchase
->- `Price_Discount`
->	- The dialogue contains a price discount
->- `NoconfirmatiofromBSM`
->	- Buyer did not raise a return or refund request; 
->	- No discussion about delivery location, tracking number, or delivery confirmation
->	- No mentions of missing package, lost delivery, or not finding package
->	- No discussion on product quality
+![[Prompt RnR Reason Code 02 0-Main#^602eda]]
 
-- [[Prompt RnR Reason Code 02]]
+>[!important]
+>The function of this takes in a `df` with fields `dialogue`, `shiptrack_event_history`, and `max_estimated_arrival_date`. 
+>
+>- Define `process_single_row` to process one row
+>	- Invoke Bedrock [[Invoke Bedrock with Exponential Backoff]]
+>	- Parse [[Prompt RnR Reason Code 02 1-Parse]]
+>- For the whole dataframe `df`, call the `process_single_row` function
+>- In this function, a multi-thread concurrent strategy is used
+>- Also a process bar is enabled
+
+- [[Prompt RnR Reason Code 02 0-Main]]
+
+
 ## Code
 
+```python
+from tqdm.auto import tqdm
+import time
+import pandas as pd
+from concurrent.futures import ThreadPoolExecutor, as_completed
+```
+
+### Single Row Processing
+
+```python
+def process_single_row(
+    bedrock_client: boto3.client,
+    dialogue: str,
+    shiptrack: str,
+    max_estimated_arrival_date: str,
+    max_retries: int = 5
+) -> BSMAnalysis:
+    """Process a single row of data"""
+    result, latency = analyze_dialogue_with_claude(
+        dialogue, shiptrack, max_estimated_arrival_date, max_retries
+    )
+    
+    if isinstance(result, str) and result.startswith("Error"):
+        return BSMAnalysis(
+            category="Error",
+            confidence_score=0.0,
+            raw_response=result,
+            error=result,
+            latency=latency
+        )
+    
+    analysis = parse_claude_response(result)
+    analysis.latency = latency
+    return analysis
+```
+
+- [[Invoke Bedrock with Exponential Backoff]]
+- [[Prompt RnR Reason Code 02 1-Parse]]
+
 ### Batch Processing
+
+- Call above single row processing
+- Use Multi-thread
 
 ```python
 def batch_process_dataframe(
@@ -132,7 +148,7 @@ def batch_process_dataframe(
         analysis = result['analysis']
         result_records.append({
             'index': result['index'],
-            **analysis.dict(exclude={'raw_response'})  # Use Pydantic's dict() method
+            **analysis.model_dump(exclude={'raw_response'})  # Use Pydantic's dict() method
         })
     
     result_df = pd.DataFrame(result_records)
@@ -142,7 +158,9 @@ def batch_process_dataframe(
     return pd.concat([df, result_df], axis=1)
 ```
 
-#### With Progress Bar
+### With Progress Bar
+
+- Add process bar 
 
 ```python
 from tqdm.auto import tqdm
@@ -261,7 +279,7 @@ def batch_process_dataframe(
             analysis = result['analysis']
             result_records.append({
                 'index': result['index'],
-                **analysis.dict(exclude={'raw_response'})  # Use Pydantic's dict() method
+                **analysis.model_dump(exclude={'raw_response'})  # Updated to use model_dump instead of dict
             })
         
         result_df = pd.DataFrame(result_records)
@@ -289,28 +307,6 @@ def batch_process_dataframe(
         # Close progress bars
         main_pbar.close()
         batch_pbar.close()
-
-# Example usage with error handling
-"""
-try:
-    # Process DataFrame
-    processed_df = batch_process_dataframe(
-        df=your_dataframe,
-        batch_size=10,
-        max_workers=5,
-        max_retries=5
-    )
-    
-    # Additional analysis
-    print("\nCategory Distribution:")
-    print(processed_df['category'].value_counts())
-    
-    print("\nConfidence Score Statistics:")
-    print(processed_df['confidence_score'].describe())
-    
-except Exception as e:
-    print(f"Processing failed: {str(e)}")
-"""
 ```
 
 

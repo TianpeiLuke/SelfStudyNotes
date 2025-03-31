@@ -15,50 +15,54 @@ date of note: 2025-03-27
 
 ## Code Snippet Summary
 
+![[Prompt RnR Reason Code 02 0-Main#^602eda]]
+
 >[!important]
->Develop Prompt to provide label on reversal reasons
->- `No_BSM`
->	- No complete message available in a dialogue
->	- Cannot tell what buyer ask for
->	- No response from seller
->- `Buyer_Received_WrongORDefective_Item`
->	- Buyer claims they received wrong or defective item
->	- Buyer describes the quality issues of item
->- `In-Transit`
->	- Buyer claims they didn't receive the package
->	- Seller confirms that the item was in-transit
->- `Delivered_Post_EDD`
->	- Buyer claims they didn't receive the package
->	- Seller agrees to refund the item
->	- The order was delivered after the seller agree to refund the item
->- `TrueDNR`
->	- Buyer claims they didn't receive the package
->	- Tracking shows delivered but buyer disputes receiving it
->	- Discussion about delivery location, tracking number, or delivery confirmation
->	- Mentions of missing package, lost delivery, or not finding the package
->- `Seller_Unable_To_Ship`
->	- Buyer claims they didn't receive the package
->	- Seller confirms that the item was not shipped
->- `BuyerCancellation`
->	- Buyer requests cancellation of the order
->- `ReturnRequested`
->	- Buyer requests return of the item
->- `AddresschangeRequest`
->	- Buyer request the change of delivery address
->- `Invoice`
->	- The dialogue contains invoice of the purchase
->- `Price_Discount`
->	- The dialogue contains a price discount
->- `NoconfirmatiofromBSM`
->	- Buyer did not raise a return or refund request; 
->	- No discussion about delivery location, tracking number, or delivery confirmation
->	- No mentions of missing package, lost delivery, or not finding package
->	- No discussion on product quality
+>Before this step, we invoke Bedrock LLM in exponential backoff strategy [[Invoke Bedrock with Exponential Backoff]]
+>
+>In this step, we complete the following tasks
+>- define a `pydantic` data structure to format the output of LLM
+>- parse the output text of LLM 
+>- create four main fields
+>	- `category`
+>	- `confidence_score`
+>	- `Key evidence` 
+>		- `message_evidence`
+>		- `shipping_evidence`
+>		- `timeline_evidence`
+>	- `Reasoning`
+>		- `primary_factors`
+>		- `supporting_evidence`
+>		- `contradicting_evidence`
+
 ## Code
 
 ### Invoke BedRock
 
 - [[Invoke Bedrock with Exponential Backoff]]
+
+### Output Example
+
+```
+1. Category: TrueDNR (Delivered Not Received)
+2. Confidence Score: 0.95
+3. Key Evidence:
+   - Message Evidence: 
+     - "Hi, the logistics of my purchase shows that it has been delivered for a long time, but I never received the package."
+     - "I checked with my family, my neighbors, and no one accepted my package."
+   - Shipping Evidence:
+     - [Event Time]: 2024-12-03T13:30:42.733Z [Ship Track Event]: Delivered to customer.
+   - Timeline Evidence:
+     - Delivery event occurred on 2024-12-03, before the buyer's message on 2024-12-06.
+4. Reasoning:
+   - Primary Factors:
+     - The buyer explicitly states they did not receive the package, despite the tracking showing a delivery event.
+     - The buyer confirmed checking their surroundings and with neighbors, but the package could not be located.
+   - Supporting Evidence:
+     - The seller's initial response acknowledges the delivery event and suggests checking common misdelivery locations.
+     - The seller ultimately approves a refund, implying acceptance of the buyer's non-receipt claim.
+   - Contradicting Evidence: None
+```
 
 ### Parse Response and Convert to Fields
 

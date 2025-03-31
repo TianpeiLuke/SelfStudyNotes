@@ -52,6 +52,9 @@ date of note: 2025-03-27
 >	- No discussion about delivery location, tracking number, or delivery confirmation
 >	- No mentions of missing package, lost delivery, or not finding package
 >	- No discussion on product quality
+
+^602eda
+
 ## Code
 
 >[!question]
@@ -237,19 +240,23 @@ Classification Rules:
 
 ### Parse Response and Convert to Fields
 
-- [[Prompt RnR Reason Code 02 Parse]]
+- [[Prompt RnR Reason Code 02 1-Parse]]
 
-### Batch Processing
+### Batch Processing, Save and Merge Chunks
 
-- [[Prompt RnR Reason Code 02 Batch Processing]]
+- [[Prompt RnR Reason Code 02 5-Process-Save-Merge]]
 
-### Run and Save Chunks to Parquet
+#### Batch Processing
 
-- [[Prompt RnR Reason Code 02 Save Chunks]]
+- [[Prompt RnR Reason Code 02 2-Batch Processing]]
 
-### Merge Chunks
+#### Run and Save Chunks to Parquet
 
-- [[Prompt RnR Reason Code 02 Merge Chunks]]
+- [[Prompt RnR Reason Code 02 3-Save Chunks]]
+
+#### Merge Chunks
+
+- [[Prompt RnR Reason Code 02 4-Merge Chunks]]
 
 
 
