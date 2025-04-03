@@ -204,31 +204,31 @@ Provide your analysis in the following structured format:
 2. Confidence Score: [Number between 0.00 and 1.00]
 
 3. Key Evidence:
-   - Message Evidence:
-     - [sep] [Quote or description of relevant message content]
-     - [sep] [Additional message evidence if available]
-   - Shipping Evidence:
-     - [sep] [Relevant tracking events with timestamps]
-     - [sep] [Additional shipping evidence if available]
-   - Timeline Evidence:
-     - [sep] [Chronological analysis of events]
-     - [sep] [Timing comparisons]
+   * Message Evidence:
+     [sep] [Quote or description of relevant message content]
+     [sep] [Additional message evidence if available]
+   * Shipping Evidence:
+     [sep] [Relevant tracking events with timestamps]
+     [sep] [Additional shipping evidence if available]
+   * Timeline Evidence:
+     [sep] [Chronological analysis of events]
+     [sep] [Timing comparisons]
 
 4. Reasoning:
-   - Primary Factors:
-     - [sep] [Main reasons for classification]
-     - [sep] [Key decision points]
-   - Supporting Evidence:
-     - [sep] [Additional evidence supporting the classification]
-     - [sep] [Corroborating details]
-   - Contradicting Evidence:
-     - [sep] [Any evidence that conflicts with the classification]
-     - [sep] [Write "None" if no contradicting evidence exists]
+   * Primary Factors:
+     [sep] [Main reasons for classification]
+     [sep] [Key decision points]
+   * Supporting Evidence:
+     [sep] [Additional evidence supporting the classification]
+     [sep] [Corroborating details]
+   * Contradicting Evidence:
+     [sep] [Any evidence that conflicts with the classification]
+     [sep] [Write "None" if no contradicting evidence exists]
 
 Classification Rules:
 - Choose exactly ONE category
 - Provide confidence score as a decimal number (e.g., 0.95)
-- List evidence as bullet points starting with "-"
+- List evidence as bullet points starting with "[sep]"
 - Include specific quotes and timestamps where available
 - Separate evidence types clearly under appropriate headers
 - Ensure all sections are properly formatted for automated parsing
@@ -238,15 +238,25 @@ Classification Rules:
 
 Example Format:
 3. Key Evidence:
-   - Message Evidence:
-     [sep] Customer message: "Package never arrived"
-     [sep] Seller response: "Tracking shows delivered"
-   - Shipping Evidence:
-     [sep] EVENT_301: Delivered on 2024-03-15
-     [sep] No subsequent delivery scans
-   - Timeline Evidence:
-     [sep] Delivery scan on March 15
-     [sep] Customer complaint on March 16
+   * Message Evidence: 
+     [sep] [BUYER]: Hello, I have not received my package, but I see the order shows that it has been delivered, why?
+     [sep] [BUYER]: But I did not find any package, please refund me, thank you
+   * Shipping Evidence:
+     [sep] [Event Time]: 2025-02-21T17:40:49.323Z [Ship Track Event]: Delivered to customer.
+     [sep] No further shipping events after delivery confirmation
+   * Timeline Evidence:
+     [sep] Delivery confirmation on 2025-02-21 17:40 
+     [sep] Buyer reports non-receipt starting 2025-02-25 07:14
+
+4. Reasoning:
+   * Primary Factors:
+     [sep] Tracking shows package was delivered successfully
+     [sep] Buyer explicitly states they did not receive the package after delivery scan
+   * Supporting Evidence: 
+     [sep] Buyer requests refund due to missing package
+     [sep] No evidence of buyer receiving wrong/defective item
+   * Contradicting Evidence:
+     [sep] None
 ```
 
 ### Invoke BedRock
@@ -255,7 +265,7 @@ Example Format:
 
 ### Parse Response and Convert to Fields
 
-- [[Prompt RnR Reason Code 02 1-Parse]]
+- [[Prompt RnR Reason Code 03 1-Parse]]
 
 ### Batch Processing, Save and Merge Chunks
 

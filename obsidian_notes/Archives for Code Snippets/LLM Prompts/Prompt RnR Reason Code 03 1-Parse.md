@@ -35,6 +35,7 @@ date of note: 2025-03-27
 >		- `supporting_evidence`
 >		- `contradicting_evidence`
 
+
 ## Code
 
 ### Invoke BedRock
@@ -44,25 +45,35 @@ date of note: 2025-03-27
 ### Output Example
 
 ```
-1. Category: TrueDNR (Delivered Not Received)
+1. Category: ReturnRequested
+
 2. Confidence Score: 0.95
+
 3. Key Evidence:
-   - Message Evidence: 
-     - "Hi, the logistics of my purchase shows that it has been delivered for a long time, but I never received the package."
-     - "I checked with my family, my neighbors, and no one accepted my package."
-   - Shipping Evidence:
-     - [Event Time]: 2024-12-03T13:30:42.733Z [Ship Track Event]: Delivered to customer.
-   - Timeline Evidence:
-     - Delivery event occurred on 2024-12-03, before the buyer's message on 2024-12-06.
+   * Message Evidence:
+     [sep] [BUYER]: Please send me a return label that the post office will accept. Your previous label was rejected.
+     [sep] [SELLER]: you will have to apply for return again and then use your own label. there is no prepaid label available.
+     [sep] [BUYER]: The only reason it wasn't sent back is because Amazon told me to not pay for shipping. I would like a shipping label because the first one wasn't accepted by USPS.
+   * Shipping Evidence:
+     [sep] EVENT_301: Delivered to customer on 2024-03-28T23:00:54.770Z
+     [sep] No return shipping events after delivery
+   * Timeline Evidence: 
+     [sep] Item delivered on March 28th
+     [sep] Return discussions start on May 4th, over a month after delivery
+
 4. Reasoning:
-   - Primary Factors:
-     - The buyer explicitly states they did not receive the package, despite the tracking showing a delivery event.
-     - The buyer confirmed checking their surroundings and with neighbors, but the package could not be located.
-   - Supporting Evidence:
-     - The seller's initial response acknowledges the delivery event and suggests checking common misdelivery locations.
-     - The seller ultimately approves a refund, implying acceptance of the buyer's non-receipt claim.
-   - Contradicting Evidence: None
+   * Primary Factors:
+     [sep] Buyer explicitly requests a return label from the seller
+     [sep] Seller acknowledges the need for the buyer to apply for a return
+     [sep] Delivery confirmation (EVENT_301) present before return discussions
+   * Supporting Evidence:
+     [sep] Buyer mentions the previous return label provided was rejected by USPS
+     [sep] Seller states the return time has expired, implying a return window policy
+   * Contradicting Evidence:
+     [sep] None
 ```
+
+- [[Prompt RnR Reason Code 03 0-Main]]
 
 ### Parse Response and Convert to Fields
 
@@ -99,7 +110,7 @@ class BSMAnalysis(BaseModel):
 
 ```python
 def parse_claude_response(response: str) -> BSMAnalysis:
-    """Parse Claude's response into structured format with Pydantic validation"""
+    """Parse Claude's response with [sep] tokens using Pydantic validation"""
     try:
         # Extract category
         category_match = re.search(r'Category:\s*([A-Za-z_]+(?:\s*\([^)]*\))?)', response)
@@ -111,17 +122,19 @@ def parse_claude_response(response: str) -> BSMAnalysis:
 
         # Helper function to extract evidence sections
         def extract_evidence(section_name: str) -> List[str]:
-            pattern = f"{section_name}:(.*?)(?=\n\d\.|\Z)"
+            # Look for section starting with * and ending before the next section
+            pattern = f"\* {section_name}:.*?(?=(?:\n\s*\* |\n\d\.|\Z))"
             match = re.search(pattern, response, re.DOTALL)
             if not match:
                 return []
             
-            # Split by bullet points and clean
-            evidence_text = match.group(1).strip()
-            items = re.findall(r'-\s*(.*?)(?=(?:-|\Z))', evidence_text, re.DOTALL)
+            # Split by [sep] token and clean
+            evidence_text = match.group(0)
+            # Use positive lookbehind to ensure we get content after [sep]
+            items = re.findall(r'(?<=\[sep\])(.*?)(?=(?:\[sep\]|\n\s*\*|\Z))', evidence_text, re.DOTALL)
             return [item.strip() for item in items if item.strip()]
 
-        # Extract all evidence sections
+        # Extract evidence for each section
         message_evidence = extract_evidence("Message Evidence")
         shipping_evidence = extract_evidence("Shipping Evidence")
         timeline_evidence = extract_evidence("Timeline Evidence")
@@ -129,7 +142,8 @@ def parse_claude_response(response: str) -> BSMAnalysis:
         supporting_evidence = extract_evidence("Supporting Evidence")
         contradicting_evidence = extract_evidence("Contradicting Evidence")
 
-        return BSMAnalysis(
+        # Create BSMAnalysis instance
+        analysis = BSMAnalysis(
             category=category,
             confidence_score=confidence_score,
             message_evidence=message_evidence,
@@ -140,6 +154,13 @@ def parse_claude_response(response: str) -> BSMAnalysis:
             contradicting_evidence=contradicting_evidence,
             raw_response=response
         )
+
+        # Validate the results
+        if not analysis.category or analysis.confidence_score == 0.0:
+            raise ValueError("Missing required fields: category or confidence score")
+
+        return analysis
+
     except Exception as e:
         print(f"Parsing error: {str(e)}")
         print(f"Raw response: {response}")
@@ -167,30 +188,79 @@ def parse_claude_response(response: str) -> BSMAnalysis:
 #### Unit Test
 
 ```python
-
-# Test the parser
-test_response = '''1. Category: TrueDNR (Delivered Not Received)
+def test_parser():
+    """Test the parser with sample output"""
+    test_response = """
+1. Category: TrueDNR
 2. Confidence Score: 0.95
 3. Key Evidence:
-   - Message Evidence: 
-     - "Hi, the logistics of my purchase shows that it has been delivered for a long time, but I never received the package."
-     - "I checked with my family, my neighbors, and no one accepted my package."
-   - Shipping Evidence:
-     - [Event Time]: 2024-12-03T13:30:42.733Z [Ship Track Event]: Delivered to customer.
-   - Timeline Evidence:
-     - Delivery event occurred on 2024-12-03, before the buyer's message on 2024-12-06.
+   * Message Evidence:
+     [sep] Customer message: "Package never arrived"
+     [sep] Seller response: "Tracking shows delivered"
+   * Shipping Evidence:
+     [sep] EVENT_301: Delivered on 2024-03-15
+     [sep] No subsequent delivery scans
+   * Timeline Evidence:
+     [sep] Delivery scan on March 15
+     [sep] Customer complaint on March 16
 4. Reasoning:
-   - Primary Factors:
-     - The buyer explicitly states they did not receive the package, despite the tracking showing a delivery event.
-     - The buyer confirmed checking their surroundings and with neighbors, but the package could not be located.
-   - Supporting Evidence:
-     - The seller's initial response acknowledges the delivery event and suggests checking common misdelivery locations.
-     - The seller ultimately approves a refund, implying acceptance of the buyer's non-receipt claim.
-   - Contradicting Evidence: None'''
-
-analysis = parse_claude_response(test_response)
-print(analysis.dict(exclude={'raw_response'}))
+   * Primary Factors:
+     [sep] Tracking shows delivery but customer claims non-receipt
+     [sep] Timeline supports DNR claim
+   * Supporting Evidence:
+     [sep] Customer checked with neighbors
+     [sep] No alternative delivery location found
+   * Contradicting Evidence:
+     [sep] None
+    """
+    
+    result = parse_claude_response(test_response)
+    print("Parsed Result:")
+    print(f"Category: {result.category}")
+    print(f"Confidence: {result.confidence_score}")
+    print("Message Evidence:", result.message_evidence)
+    print("Shipping Evidence:", result.shipping_evidence)
+    print("Timeline Evidence:", result.timeline_evidencence)
 ```
+
+#### Change
+
+- Compare to [[Prompt RnR Reason Code 02 1-Parse]]
+
+1. Modified evidence extraction:
+
+```python
+def extract_evidence(section_name: str) -> List[str]:
+    pattern = f"{section_name}:.*?(?=(?:\n[*-]|\n\d\.|\Z))"
+    match = re.search(pattern, response, re.DOTALL)
+    if not match:
+        return []
+    
+    evidence_text = match.group(0)
+    items = re.findall(r'(?<=\[sep\])(.*?)(?=(?:\[sep\]|\Z))', evidence_text, re.DOTALL)
+    return [item.strip() for item in items if item.strip()]
+
+```
+
+2. Modified the section pattern to explicitly look for bullet points with asterisk:
+
+```python
+pattern = f"\* {section_name}:.*?(?=(?:\n\s*\* |\n\d\.|\Z))"
+```
+
+3. Modified the [sep] pattern to stop at the next section:
+
+```python
+items = re.findall(r'(?<=\[sep\])(.*?)(?=(?:\[sep\]|\n\s*\*|\Z))', evidence_text, re.DOTALL)
+```
+
+4. Added validation for required fields:
+
+```python
+if not analysis.category or analysis.confidence_score == 0.0:
+    raise ValueError("Missing required fields: category or confidence score")
+```
+
 
 
 
