@@ -52,6 +52,7 @@ conda install langchain -c conda-forge
 -----------
 ##  Recommended Notes
 
+- [[How to integrate LangGraph with AutoGen, CrewAI, and other frameworks]]
 - LangChain Doc [introduction](https://python.langchain.com/docs/get_started/introduction)
 
 
