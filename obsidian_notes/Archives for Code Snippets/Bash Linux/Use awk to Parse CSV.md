@@ -12,9 +12,86 @@ date of note: 2024-04-25
 ## Code Snippet Summary
 
 >[!important]
->Use `awk` to parse csv file
+>Provide some examples that use `awk` to parse csv file
 
 ## Code
+
+### Count the number of Columns
+
+![[Count Number of Columns in CSV file#^48d329]]
+
+- [[Count Number of Columns in CSV file]]
+
+### Extract Specific Column
+
+>[!example] 
+> Prints the second column of every row in the CSV file:
+> 
+> ```bash
+> awk -F, '{print $2}' file.csv
+> ```
+> 
+
+- The command splits each line using commas.
+- `$2` refers to the second field, which is printed for every line.
+
+- [[Extract Columns in CSV and Ignore delimiter in double quotes]]
+
+
+### Filter Rows Based on a Column Value
+
+>[!example] 
+> Prints rows where the third column matches a specific value (e.g., `"someValue"`):
+> ```bash
+> awk -F, '$3 == "someValue" {print}' file.csv
+> ```
+> 
+
+- The condition `$3 == "someValue"` checks if the third field equals `"someValue"`.
+- Only rows that meet the condition are printed.
+
+
+### Sum a Numeric Column (Skipping the Header)
+
+> [!example]
+> Sums the values in the fourth column, ignoring the header row:
+> ```bash
+> awk -F, 'NR > 1 {sum += $4} END {print sum}' file.csv
+> ```
+>  
+
+- `NR > 1` skips the header.
+- `sum += $4` adds the value of the fourth column for each subsequent line.
+- `END {print sum}` outputs the total sum after processing all rows.
+
+
+### Handling Quoted Fields with GNU AWK (gawk) Using FPAT
+
+> [!example]
+> For CSV files with fields enclosed in quotes (which may contain commas), you can use GNU AWK's `FPAT`:
+> ```bash
+> gawk 'BEGIN { FPAT = "([^,]+)|(\"[^\"]+\")" } { print $1, $2, $3 }' file.csv
+> ```
+
+- `FPAT` defines a *field pattern* that matches either a *sequence* of *non-comma characters* or *a quoted string*.
+- This approach helps correctly parse fields that *contain commas within quotes*.
+- The command prints the first three fields for each row.
+
+
+### Process Header Row and Print Selected Columns
+
+> [!example]
+> Stores the header fields and then prints the first and third columns for the remaining rows:
+> ```bash
+> awk -F, 'NR==1 {for (i=1; i<=NF; i++) header[i]=$i; next} {print $1, $3}' file.csv
+> ```
+> 
+
+- For the header row (`NR==1`), the `for` loop stores each header value in an array.
+- `next` skips to the next record after processing the header.
+- For subsequent rows, the command prints the first and third columns.
+
+
 
 
 

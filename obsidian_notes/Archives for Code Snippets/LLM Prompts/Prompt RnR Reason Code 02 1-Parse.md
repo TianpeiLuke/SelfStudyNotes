@@ -95,6 +95,7 @@ class BSMAnalysis(BaseModel):
         validate_assignment = True
 ```
 
+- [[Simple Data Class from Pydantic]]
 #### Parse
 
 ```python

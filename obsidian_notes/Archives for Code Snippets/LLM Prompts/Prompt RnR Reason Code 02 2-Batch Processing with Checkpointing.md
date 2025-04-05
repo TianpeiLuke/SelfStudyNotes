@@ -125,11 +125,42 @@ def load_checkpoint(checkpoint_file):
     return 0, []
 ```
 
+- merge output
+
+```python
+def create_result_dataframe(results: List[dict], original_df: pd.DataFrame) -> pd.DataFrame:
+    """Helper function to create result DataFrame"""
+    # Save original index
+    original_df = original_df.copy()
+    original_df['index'] = original_df.index
+    
+    result_records = []
+    for result in results:
+        analysis = result['analysis']
+        result_records.append({
+            'index': result['index'],
+            **analysis.model_dump(exclude={'raw_response'})
+        })
+    
+    result_df = pd.DataFrame(result_records)
+    
+    
+    # Concatenate
+    final_df = original_df.merge(result_df, on='index', how='left')
+
+    # Optionally, set back to original index if needed
+    # final_df.set_index('original_index', inplace=True)
+    
+    return final_df
+```
+
 - **Resumable Processing**:
     
     - Checks for existing checkpoint at the start
     - Resumes processing from the last saved point
     - Updates progress bars with initial values from checkpoint
+
+
 
 ```python
 def batch_process_dataframe(
@@ -272,49 +303,6 @@ def batch_process_dataframe(
     finally:
         main_pbar.close()
         batch_pbar.close()
-
-def create_result_dataframe(results: List[dict], original_df: pd.DataFrame) -> pd.DataFrame:
-    """Helper function to create result DataFrame"""
-    result_records = []
-    for result in results:
-        analysis = result['analysis']
-        result_records.append({
-            'index': result['index'],
-            **analysis.model_dump(exclude={'raw_response'})
-        })
-    
-    result_df = pd.DataFrame(result_records)
-    result_df.set_index('index', inplace=True)
-    
-    return pd.concat([original_df, result_df], axis=1)
-
-# Example usage in Jupyter Notebook:
-"""
-# Run this cell to start or resume processing
-checkpoint_file = 'processing_checkpoint.json'
-
-try:
-    processed_df = batch_process_dataframe(
-        df=input_df,
-        batch_size=10,
-        max_workers=5,
-        max_retries=5,
-        checkpoint_file=checkpoint_file,
-        checkpoint_frequency=100
-    )
-    
-    # Save results
-    processed_df.to_parquet("final_results.parquet")
-    
-    # Analysis
-    print("\nCategory Distribution:")
-    print(processed_df['category'].value_counts())
-    
-except Exception as e:
-    print(f"Processing interrupted: {str(e)}")
-    print("You can resume processing by running this cell again.")
-"""
-
 ```
 
 

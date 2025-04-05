@@ -25,6 +25,15 @@ date of note: 2025-03-27
 >- `In_Transit`
 >	- Buyer claims they didn't receive the package
 >	- Seller confirms that the item was in-transit
+>- `TrueDNR`
+>	- Buyer claims they didn't receive the package
+>	- Tracking shows delivered but buyer disputes receiving it
+>	- Discussion about delivery location, tracking number, or delivery confirmation
+>	- Mentions of missing package, lost delivery, or not finding the package
+>- `TrueNOTR`
+>	- Buyer claims they didn't receive the package
+>	- Tracking did not show delivery
+>	- Mentions of lost in transit, inventory issues etc.
 >- `Delivered_Post_EDD`
 >	- Buyer claims they didn't receive the package
 >	- Seller agrees to refund the item
@@ -32,11 +41,6 @@ date of note: 2025-03-27
 >- `TruePDA`
 >	- Buyer claims they didn't receive the package
 >	- Tracking shows delivered but it happens after the claim
->- `TrueDNR`
->	- Buyer claims they didn't receive the package
->	- Tracking shows delivered but buyer disputes receiving it
->	- Discussion about delivery location, tracking number, or delivery confirmation
->	- Mentions of missing package, lost delivery, or not finding the package
 >- `Seller_Unable_To_Ship`
 >	- Buyer claims they didn't receive the package
 >	- Seller confirms that the item was not shipped
@@ -102,16 +106,7 @@ Categories and their criteria:
         * Lost package claims
         * Delivery failure notices
       
-4. Delivered_Post_EDD
-    - Confirmed delivery AFTER estimated delivery date
-    - Key verification points:
-        * Ship track shows EVENT_301 (Delivered)
-        * Delivery timestamp > Estimated delivery date
-        * Customer mentions late delivery
-        * Discussion of delay impact
-    - Focus on timing rather than missing package claims
-      
-5. TrueDNR (Delivered Not Received)
+4. TrueDNR
     - Package marked as delivered (EVENT_301)
     - BUT buyer claims non-receipt
     - Key elements:
@@ -121,7 +116,7 @@ Categories and their criteria:
         * Missing package investigation
         * Possible theft/misdelivery
       
-6. TrueNOTR (Not Delivered Not Received)
+5. TrueNOTR
     - Buyer reports non-receipt
     - Tracking shows NO delivery
     - Package status indicates:
@@ -130,8 +125,29 @@ Categories and their criteria:
         * Delivery attempt failed
         * No delivery scan
     - Different from DNR: no delivery confirmation
-      
-7. Seller_Unable_To_Ship
+
+6. Delivered_Post_EDD
+    - Confirmed delivery AFTER estimated delivery date
+    - Key verification points:
+        * Ship track shows EVENT_301 (Delivered)
+        * Delivery timestamp > Estimated delivery date
+        * Customer mentions late delivery
+        * Discussion of delay impact
+    - Focus on timing rather than missing package claims
+
+7. TruePDA (Pre-Delivery Abuse) 
+	- Buyer claims non-receipt of item before actual delivery 
+	- Refund issued to buyer based on this claim 
+	- Key elements: 
+		* Buyer states they haven't received the item 
+		* Refund confirmation or discussion in messages 
+		* Shiptrack shows delivery (EVENT_301) AFTER the claim 
+		* No delivery confirmation during the dialogue 
+	- Timeline is crucial: 
+		* Non-receipt claim PRECEDE actual delivery 
+		* Delivery event occurs AFTER dialogue concludes
+		  
+8. Seller_Unable_To_Ship
     - Order not shipped due to seller issues:
         * Stock unavailable
         * Shipping restrictions
@@ -140,7 +156,7 @@ Categories and their criteria:
         * Carrier pickup failure
     - Must occur before any shipping events
       
-8. BuyerCancellation
+9. BuyerCancellation
     - Explicit cancellation request from buyer
     - Reasons include:
         * Changed mind
@@ -150,7 +166,7 @@ Categories and their criteria:
         * Shipping timeline concerns
     - Must occur before delivery
       
-9. ReturnRequested
+10. ReturnRequested
     - Post-delivery return initiation
     - Key elements:
         * Return authorization
@@ -160,7 +176,7 @@ Categories and their criteria:
         * Exchange requests
     - Must include delivery confirmation
       
-10. AddressChangeRequest
+11. AddressChangeRequest
     - Active request to modify delivery address
     - Types:
         * Error correction
@@ -169,7 +185,7 @@ Categories and their criteria:
         * Alternative delivery location
     - Must occur before delivery
       
-11. Invoice
+12. Invoice
     - Documentation requests:
         * Invoice copies
         * Receipt needs
@@ -178,7 +194,7 @@ Categories and their criteria:
         * Order summaries
     - Focus on paperwork, not shipping
       
-12. Price_Discount
+13. Price_Discount
     - Pricing-related discussions:
         * Coupon applications
         * Promotional codes
@@ -187,7 +203,7 @@ Categories and their criteria:
         * Special program rates
     - Focus on monetary aspects
       
-13. NoConfirmationFromBSM
+14. NoConfirmationFromBSM
     - General inquiries without clear resolution
     - Non-specific customer service
     - Insufficient evidence for other categories
@@ -202,7 +218,7 @@ Estimated Delivery: {max_estimated_arrival_date}
 
 Provide your analysis in the following structured format:
 
-1. Category: [Exactly one of: No_BSM, Buyer_Received_WrongORDefective_Item, In_Transit, Delivered_Post_EDD, TrueDNR, TrueNOTR, Seller_Unable_To_Ship, BuyerCancellation, ReturnRequested, AddressChangeRequest, Invoice, Price_Discount, NoConfirmationFromBSM]
+1. Category: [Exactly one of: No_BSM, Buyer_Received_WrongORDefective_Item, In_Transit, TrueDNR, TrueNOTR, Delivered_Post_EDD, TruePDA, Seller_Unable_To_Ship, BuyerCancellation, ReturnRequested, AddressChangeRequest, Invoice, Price_Discount, NoConfirmationFromBSM]
 
 2. Confidence Score: [Number between 0.00 and 1.00]
 

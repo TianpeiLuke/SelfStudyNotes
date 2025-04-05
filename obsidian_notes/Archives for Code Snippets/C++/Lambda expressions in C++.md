@@ -52,7 +52,7 @@ back-attr ﻿(optional) trailing-type ﻿(optional) requires ﻿(optiona
 
 
 >[!example]
-> ```c++
+> ```cpp
 > // generic lambda, operator() is a template with two parameters
 > auto glambda = [](auto a, auto&& b) { return a < b; };
 > ```
@@ -64,7 +64,7 @@ back-attr ﻿(optional) trailing-type ﻿(optional) requires ﻿(optiona
 
 
 >[!example]
-> ```c++
+> ```cpp
 >   auto plus = [data=1](const int value)
 >     {
 >         return value + data;

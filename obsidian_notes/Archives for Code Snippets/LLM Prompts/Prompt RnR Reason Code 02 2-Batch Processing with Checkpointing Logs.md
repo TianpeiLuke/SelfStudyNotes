@@ -146,6 +146,10 @@ def load_checkpoint(checkpoint_file):
 ```python
 def create_result_dataframe(results: List[dict], original_df: pd.DataFrame) -> pd.DataFrame:
     """Helper function to create result DataFrame"""
+    # Save original index
+    original_df = original_df.copy()
+    original_df['index'] = original_df.index
+    
     result_records = []
     for result in results:
         analysis = result['analysis']
@@ -155,9 +159,15 @@ def create_result_dataframe(results: List[dict], original_df: pd.DataFrame) -> p
         })
     
     result_df = pd.DataFrame(result_records)
-    result_df.set_index('index', inplace=True)
     
-    return pd.concat([original_df, result_df], axis=1)
+    # Concatenate
+    final_df = original_df.merge(result_df, on='index', how='left')
+
+    
+    # Optionally, set back to original index if needed
+    # final_df.set_index('original_index', inplace=True)
+    
+    return final_df
 ```
 
 
