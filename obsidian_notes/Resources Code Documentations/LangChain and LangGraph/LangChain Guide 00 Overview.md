@@ -56,7 +56,7 @@ conda install langchain -c conda-forge
 - LangChain Doc [introduction](https://python.langchain.com/docs/get_started/introduction)
 
 
-
+- [[LangChain Documentation Community Tools]]
 
 
 
