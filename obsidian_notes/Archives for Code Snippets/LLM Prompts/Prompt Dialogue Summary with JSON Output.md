@@ -7,19 +7,18 @@ tags:
 keywords: 
 topics: 
 language: python
-date of note: 2024-04-09
+date of note: 2024-04-10
 ---
 
 ## Code Snippet Summary
 
 >[!important]
 >You are given a dialogue in between `<dialogue>` and `</dialogue>`. 
->1. Please answer the question between `<question>` and `</question>`. 
+>1. Please provide a summary of dialogue. 
 >2. Provide answer in the following JSON format
 >   ```json
 >{
- >Decision: "Yes"/"No"/"Not clear",
- >Reason: 
+ >Summary: 
 >}
 >   ```
 > 3. Do not copy input in response.
@@ -29,18 +28,13 @@ date of note: 2024-04-09
 
 Use the following prompt
 
-```python
-
-prompt_template = '''
-
-
+```text
 Human: You are given a dialogue between BUYER and SELLER in the bottom. Complete the following tasks
-1. Please answer the following question. 
+1. Please provide a summary of the dialogue
 2. Provide Answer in following JSON format.
 
 {{
- Decision: "Yes"/"No"/"Not clear",
- Reason: 
+ Summary: 
 }}
 
 3. Do not copy the input in response.
@@ -55,9 +49,6 @@ Human: You are given a dialogue between BUYER and SELLER in the bottom. Complete
 </dialogue>
 
 Assistant:
-
-
-'''
 ```
 
 ```python
@@ -100,6 +91,5 @@ print(response_body.get('completion'))
 
 -----------
 ##  Recommended Notes
-
 
 - [[Prompt Engineering for LLM]]
