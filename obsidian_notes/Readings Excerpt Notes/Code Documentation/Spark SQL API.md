@@ -24,7 +24,7 @@ year:
 -----------
 ##  Recommended Notes
 
-- [https://spark.apache.org/docs/2.3.0/api/sql/](https://spark.apache.org/docs/2.3.0/api/sql/)
+- [Spark SQL API](https://spark.apache.org/docs/latest/api/sql/index.html)
 
 
 

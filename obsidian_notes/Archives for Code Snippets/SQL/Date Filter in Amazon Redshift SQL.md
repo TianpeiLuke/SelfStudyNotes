@@ -26,7 +26,7 @@ where a.cond1 = 'xxx'
 and a.date >= to_date('20240101','YYYYMMDD')
 ```
 
-- `to_date` function [reference](https://docs.aws.amazon.com/redshift/latest/dg/r_TO_DATE_function.html)
+- `to_date` function [reference](https://docs.aws.amazon.com/redshift/latest/dg/r_TO_DATE_function.html) [to_date](https://spark.apache.org/docs/latest/api/sql/index.html#to_date)
 	- TO_DATE **converts a date** represented by a character string to a **DATE data type**.
 	- `string` to be converted
 	- `format` A string literal that defines the format of the input _string_, in terms of its date parts. For a list of valid day, month, and year formats, see [Datetime format strings](https://docs.aws.amazon.com/redshift/latest/dg/r_FORMAT_strings.html).

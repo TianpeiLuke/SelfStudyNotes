@@ -32,6 +32,28 @@ FROM tab
 	- `seperator`: required. 
 	- `_string1, string2, string_n_`: the strings to add together
 
+- [concat_ws](https://spark.apache.org/docs/latest/api/sql/index.html#concat_ws)
+	- `concat_ws(sep[, str | array(str)]+)`
+		- Returns the concatenation of the strings separated by `sep`, skipping null values.
+
+
+>[!example]
+>**Examples:**
+> 
+> ```sql
+> SELECT concat_ws(' ', 'Spark', 'SQL');
+>   Spark SQL
+> SELECT concat_ws('s');
+> 
+> SELECT concat_ws('/', 'foo', null, 'bar');
+>   foo/bar
+> SELECT concat_ws(null, 'Spark', 'SQL');
+>   NULL
+> ```
+> 
+> **Since:** 1.5.0
+
+
 
 
 -----------

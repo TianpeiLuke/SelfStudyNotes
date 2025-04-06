@@ -80,8 +80,28 @@ GROUP BY key2
 
 - `collect_list` aggregate function
 	- [reference](https://docs.databricks.com/aws/en/sql/language-manual/functions/collect_list)
+	- [reference API](https://spark.apache.org/docs/latest/api/sql/index.html#collect_list)
+	- `collect_list(expr)` 
+		- Collects and returns a list of non-unique elements.
+
+>[!example]
+> **Examples:**
+> 
+> ```sql
+> SELECT collect_list(col) FROM VALUES (1), (2), (1) AS tab(col);
+>  [1,2,1]
+> ```
+> 
+> **Note:**
+> 
+> The function is non-deterministic because the order of collected results depends on the order of the rows which may be non-deterministic after a shuffle.
+
+
 - `struct`:
 	- [reference](https://docs.databricks.com/aws/en/sql/language-manual/data-types/struct-type)
+	- [struct](https://spark.apache.org/docs/latest/api/sql/index.html#struct)
+	- `struct(col1, col2, col3, ...)` 
+		- Creates a struct with the given field values.
 	- `STRUCT < [fieldName [:] fieldType [NOT NULL] [COLLATE collationName] [COMMENT str] [, …] ] >`
 		- `fieldName`: An identifier naming the field. The names need not be unique.
 		- `fieldType`: Any data type.
@@ -94,10 +114,22 @@ GROUP BY key2
 ]
 ```
 
+>[!example]
+>**Examples:**
+> 
+> ```sql
+> SELECT struct(1, 2, 3);
+>  {"col1":1,"col2":2,"col3":3}
+> ```
+> 
+> **Since:** 1.4.0
 
 
 - `sort_array`
 	- [reference](https://docs.databricks.com/aws/en/sql/language-manual/functions/sort_array)
+	- [Spark SQL link](https://spark.apache.org/docs/latest/api/sql/index.html#sort_array)
+	- `sort_array(array[, ascendingOrder])` 
+		- Sorts the input array in ascending or descending order according to the natural ordering of the array elements. NaN is greater than any non-NaN elements for double/float type. Null elements will be placed at the beginning of the returned array in ascending order or at the end of the returned array in descending order.
 	- `sort_array(expr [, ascendingOrder] )`
 		- `expr`: An `ARRAY` expression of sortable elements.
 		- `ascendingOrder`: An optional `BOOLEAN` expression defaulting to `true`.
@@ -116,12 +148,49 @@ GROUP BY key2
 ['First message', 'Second message', 'Third message']
 ```
 
+
+>[!example]
+>**Examples:**
+> 
+> ```sql
+> SELECT sort_array(array('b', 'd', null, 'c', 'a'), true);
+>  [null,"a","b","c","d"]
+> ```
+> 
+> **Since:** 1.5.0
+
+
 - Finally `CONCAT_WS` concatenate them
+	- [concat_ws](https://spark.apache.org/docs/latest/api/sql/index.html#concat_ws)
+	- `concat_ws(sep[, str | array(str)]+)`
+		- Returns the concatenation of the strings separated by `sep`, skipping null values.
+
+
+>[!example]
+>**Examples:**
+> 
+> ```sql
+> SELECT concat_ws(' ', 'Spark', 'SQL');
+>   Spark SQL
+> SELECT concat_ws('s');
+> 
+> SELECT concat_ws('/', 'foo', null, 'bar');
+>   foo/bar
+> SELECT concat_ws(null, 'Spark', 'SQL');
+>   NULL
+> ```
+> 
+> **Since:** 1.5.0
+
+
 
 
 
 -----------
 ##  Recommended Notes
+
+- Spark SQL API 
+	- [doc link](https://spark.apache.org/docs/latest/api/sql/index.html)
 
 - `collect_list` aggregate function
 	- [reference](https://docs.databricks.com/aws/en/sql/language-manual/functions/collect_list)
