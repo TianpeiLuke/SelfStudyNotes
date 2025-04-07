@@ -5,7 +5,8 @@ tags:
   - langgraph/react
   - agentic_ai
   - large_language_models
-keywords: 
+keywords:
+  - LangGraph
 topics: 
 language: python
 date of note: 2025-04-06
@@ -186,6 +187,10 @@ You are a smart research assistant. Use the search engine to look up information
 model = ChatOpenAI(model="gpt-3.5-turbo")
 ```
 
+>[!info]
+>For Bedrock model, we can check [[LangChain BedRock Model]]
+
+
 ### Search Engine Tavily as Tool
 
 ```python
@@ -284,3 +289,6 @@ result['messages'][-1].content
 
 - [[LangGraph Guide Tutorials]]
 - [[LangGraph Concepts]]
+
+- Coursera
+	- [AI Agents in LangGraph](https://www.coursera.org/learn/ai-agents-in-langgraph/home/welcome)

@@ -15,24 +15,6 @@ The OpenAI API provides a simple interface to state-of-the-art AI [models](https
 Generate text from a model
 
 ```javascript
-1
-
-2
-
-3
-
-4
-
-5
-
-6
-
-7
-
-8
-
-9
-
 import OpenAI from "openai";
 const client = new OpenAI();
 
@@ -66,46 +48,6 @@ You can provide image inputs to the model as well. Scan receipts, analyze screen
 Analyze the content of an image
 
 ```javascript
-1
-
-2
-
-3
-
-4
-
-5
-
-6
-
-7
-
-8
-
-9
-
-10
-
-11
-
-12
-
-13
-
-14
-
-15
-
-16
-
-17
-
-18
-
-19
-
-20
-
 import OpenAI from "openai";
 const client = new OpenAI();
 
@@ -128,11 +70,7 @@ const response = await client.responses.create({
 console.log(response.output_text);
 ```
 
-[Computer vision guide
-
-Learn to use image inputs to the model and extract meaning from images.
-
-](https://platform.openai.com/docs/guides/images)  
+[Computer vision guide Learn to use image inputs to the model and extract meaning from images.](https://platform.openai.com/docs/guides/images)  
   
 
 ## Extend the model with tools
@@ -142,26 +80,6 @@ Give the model access to new data and capabilities using [tools](https://platfor
 Get information for the response from the Internet
 
 ```javascript
-1
-
-2
-
-3
-
-4
-
-5
-
-6
-
-7
-
-8
-
-9
-
-10
-
 import OpenAI from "openai";
 const client = new OpenAI();
 
@@ -192,40 +110,6 @@ Using either the new [Realtime API](https://platform.openai.com/docs/guides/real
 Stream server-sent events from the API
 
 ```javascript
-1
-
-2
-
-3
-
-4
-
-5
-
-6
-
-7
-
-8
-
-9
-
-10
-
-11
-
-12
-
-13
-
-14
-
-15
-
-16
-
-17
-
 import { OpenAI } from "openai";
 const client = new OpenAI();
 
@@ -261,64 +145,6 @@ Use WebRTC or WebSockets for super fast speech-to-speech AI apps.
 Use the OpenAI platform to build [agents](https://platform.openai.com/docs/guides/agents) capable of taking action—like [controlling computers](https://platform.openai.com/docs/guides/tools-computer-use)—on behalf of your users. Use the [Agent SDK for Python](https://platform.openai.com/docs/guides/agents-sdk) to create orchestration logic on the backend.
 
 ```python
-1
-
-2
-
-3
-
-4
-
-5
-
-6
-
-7
-
-8
-
-9
-
-10
-
-11
-
-12
-
-13
-
-14
-
-15
-
-16
-
-17
-
-18
-
-19
-
-20
-
-21
-
-22
-
-23
-
-24
-
-25
-
-26
-
-27
-
-28
-
-29
-
 from agents import Agent, Runner
 import asyncio
 

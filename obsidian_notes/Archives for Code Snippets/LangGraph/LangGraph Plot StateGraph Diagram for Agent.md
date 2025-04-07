@@ -2,9 +2,10 @@
 tags:
   - code
   - code_snippet
-  - langgraph
   - agentic_ai
-keywords: 
+  - langgraph
+keywords:
+  - LangGraph
 topics: 
 language: python
 date of note: 2025-04-06
@@ -31,6 +32,8 @@ from langchain_core.messages import AnyMessage, SystemMessage, HumanMessage, Too
 class AgentState(TypedDict):
     messages: Annotated[list[AnyMessage], operator.add]
 ```
+
+^d47e45
 
 ### Define Agent Class from StateGraph
 
@@ -94,3 +97,5 @@ Image(abot.graph.get_graph().draw_png())
 -----------
 ##  Recommended Notes
 
+- Coursera
+	- [AI Agents in LangGraph](https://www.coursera.org/learn/ai-agents-in-langgraph/home/welcome)
