@@ -56,13 +56,10 @@ import lightning.pytorch as pl
 from lightning.pytorch.callbacks.early_stopping import EarlyStopping
 from lightning.pytorch.callbacks import ModelCheckpoint, TQDMProgressBar, LearningRateMonitor
 from lightning.pytorch.loggers import TensorBoardLogger
-# from lightning.pytorch.accelerators import find_usable_cuda_devices
+from lightning.pytorch.accelerators import find_usable_cuda_devices
 from lightning.pytorch.strategies import DDPStrategy
 
-
 from transformers import AutoTokenizer, AutoModel
-import json
-
 ```
 
 - [[Pytorch Lightning 3 Trainer]]
@@ -95,93 +92,93 @@ logger.addHandler(handler)
 
 ```
 
+### Logger
+
+```python
+def setup_logger():
+    import logging
+    logger = logging.getLogger(__name__)
+    if not logger.hasHandlers():
+        handler = logging.StreamHandler()
+        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+        handler.setFormatter(formatter)
+        logger.addHandler(handler)
+        logger.setLevel(logging.INFO)
+    return logger
+
+
+logger = setup_logger()
+```
+
+
 ### Model Train Interface
 
 ```python
-def model_train(model, 
-                config, 
-                train_dataloader: torch.utils.data.DataLoader, 
-                val_dataloader: torch.utils.data.DataLoader, 
-                device: Optional[str] = "auto", 
-                model_log_path: Optional[str] = './model_logs', 
-                early_stop_metric: Optional[str] = 'f1_score/val'
-                ):
+def model_train(
+    model: pl.LightningModule,
+    config: Dict,
+    train_dataloader: DataLoader,
+    val_dataloader: DataLoader,
+    device: Union[int, str, List[int]] = "auto",
+    model_log_path: str = './model_logs',
+    early_stop_metric: str = 'val/f1_score'
+) -> pl.Trainer:
+
+    max_epochs = config.get("max_epochs", 10)
+    early_stop_patience = config.get("early_stop_patience", 10)
+    model_class = config.get("model_class", "multimodal_cnn")
+    val_check_interval = config.get("val_check_interval", 1.0)
+    use_fp16 = config.get("fp16", False)
+    clip_val = config.get("gradient_clip_val", 0.0)
+
+    logger_tb = TensorBoardLogger(save_dir=model_log_path, name="tensorboard_logs")
+    monitor_mode = "min" if "loss" in early_stop_metric else "max"
+
+    checkpoint_dir = os.environ.get("SM_CHECKPOINT_DIR", "/opt/ml/checkpoints")
+    logger.info(f"Checkpoints will be saved to: {checkpoint_dir}")    #checkpoint_callback = ModelCheckpoint(
+    #    dirpath=Path(checkpoint_dir),
+    #    filename=f'{model_class}' + '-{epoch:02d}-{' + f'{early_stop_metric}' + ':.2f}',
+    #    monitor=early_stop_metric,
+    #    save_top_k=1,
+    #    mode=monitor_mode
+    #)
     
-    if 'max_epochs' in config:
-        max_epochs = config['max_epochs']
-    else:
-        max_epochs = 10
+    checkpoint_callback = ModelCheckpoint(
+        dirpath=Path(checkpoint_dir),
+        filename=f'{model_class}' + '-{epoch:02d}-{' + f'{early_stop_metric}' + ':.2f}',
+        monitor=early_stop_metric,
+        save_top_k=1,
+        mode=monitor_mode,
+        save_weights_only=False
+    )
 
-    if 'early_stop_patience' in config:
-        early_stop_patience = config['early_stop_patience']
-    else:
-        early_stop_patience = 10
+    earlystopping_callback = EarlyStopping(
+        monitor=early_stop_metric,
+        patience=early_stop_patience,
+        mode=monitor_mode
+    )
 
-    if 'model_class' in config:
-        model_class = config['model_class']
-    else:
-        model_class = 'multimodal_cnn'
+    trainer = pl.Trainer(
+        max_epochs=max_epochs,
+        logger=logger_tb,
+        default_root_dir=model_log_path,
+        callbacks=[
+            earlystopping_callback,
+            checkpoint_callback,
+            TQDMProgressBar(refresh_rate=10),
+            LearningRateMonitor(logging_interval='step')
+        ],
+        val_check_interval=val_check_interval,
+        sync_batchnorm=True if torch.cuda.is_available() else False,
+        accelerator="gpu" if torch.cuda.is_available() else "cpu",
+        devices=device,
+        strategy=DDPStrategy(find_unused_parameters=True),
+        accumulate_grad_batches=2,
+        precision=16 if use_fp16 else 32
+    )
 
-    if 'val_check_interval' in config:
-        val_check_interval = config['val_check_interval']
-    else:
-        val_check_interval = 1.0
-
-    logger = TensorBoardLogger(os.path.join(model_log_path, 'tensorboard_logs'))
-
-	# Checkpointing
-    ckpt_filename= '%s_{epoch:02d}-{%s:.2f}' % (model_class, early_stop_metric)
-
-	# Early stop
-    if early_stop_metric == 'val_loss' or early_stop_metric == 'test_loss':
-        checkpoint_callback = ModelCheckpoint(dirpath= os.path.join(model_log_path, 'ckpts'),
-                                       filename = ckpt_filename, 
-                                      save_top_k = 3, 
-                                      monitor=f"{early_stop_metric}",
-                                      mode="min"
-                                     )
-        earlystopping_callback = EarlyStopping(monitor = f"{early_stop_metric}",
-                                           patience= early_stop_patience, 
-                                           verbose = False,
-                                           mode = "min")
-    else:
-        checkpoint_callback = ModelCheckpoint(dirpath= os.path.join(model_log_path, 'ckpts'),
-                                       filename = ckpt_filename, 
-                                      save_top_k = 3, 
-                                      monitor=f"{early_stop_metric}",
-                                      mode="max"
-                                     )
-        earlystopping_callback = EarlyStopping(monitor = f"{early_stop_metric}", 
-                                           patience= early_stop_patience, 
-                                           verbose = False, 
-                                           mode = "max")   
-    # Show progresser bar                                        
-    progressbar_callback = TQDMProgressBar(process_position = -1)
-    
-    # Monitor the learning rate
-    lr_monitor = LearningRateMonitor(logging_interval='step')
-
-    # train model
-    trainer = pl.Trainer(max_epochs = max_epochs,
-                         logger = logger,
-                         default_root_dir = model_log_path,
-                         callbacks = [earlystopping_callback,
-                                      checkpoint_callback,
-                                      progressbar_callback,
-                                      lr_monitor
-                                     ],
-                         val_check_interval = val_check_interval,
-                         sync_batchnorm=True,
-                         accelerator = "gpu", 
-                         devices = device,
-                         precision=16 if config["fp16"] else 32,
-                         gradient_clip_val = config["gradient_clip_val"],
-                         strategy = "ddp"
-                        )
-
-    trainer.fit(model, train_dataloaders = train_dataloader, val_dataloaders = val_dataloader) 
+    trainer.fit(model, train_dataloaders=train_dataloader, val_dataloaders=val_dataloader)
     return trainer
-
 ```
 
 - [[Pytorch Lightning 3 Trainer]]
@@ -241,7 +238,6 @@ def model_online_inference(model,
         _, preds, _ = model.run_epoch(batch, 'pred')
         predictions.append(preds.detach().cpu().numpy())
     return np.concatenate(predictions, axis=0)
- 
 ```
 
 #### Gather the inference result from all machines / GPUs 
@@ -257,8 +253,7 @@ def predict_stack_transform(outputs):
         return preds, labels
     else:
         preds = torch.cat([pred_batch for pred_batch in outputs])
-        return preds
-    
+        return preds  
 ```
 
 ### Save Model and Output
@@ -379,6 +374,11 @@ def load_checkpoint(filename: str,
 -----------
 ##  Recommended Notes
 
+- [[Tabular Embedding with Pydantic]]
+- [[Tabular Autoencoder]]
+
+- [[BERT Base Embedding Model with Pydantic]]
+- [[BERT Base Emedding Model for BSM]]
 
 - [[AtoZ BSM Model Training Script]]
 - [[AtoZ BSM MODS script]]

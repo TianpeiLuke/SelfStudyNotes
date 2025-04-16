@@ -1,12 +1,10 @@
 ---
 tags:
-  - project
   - code
   - code_snippet
   - mlops/preprocessing
   - buyer_seller_messaging
   - natural_language_processing
-
 keywords: 
 topics: 
 language: python
@@ -99,6 +97,25 @@ class Pipeline(ABC):
 - `OrdinalProcessorPipeline`
 	- *categorical feature processing pipeline*.
 	- Similar to `TokenizationPipeline` as the last `Processor` in `pipes` must be `OrdinalProcessor`.
+
+
+## Change in Ver.2
+
+- [[Processors ver 2.0]]
+
+With version 2 definition, the pipeline can be replaced as
+
+```python
+pipeline = TextProcessorPipeline()
+pipeline.push_processor(processor1)
+pipeline.push_processor(processor2)
+```
+
+is equivalent to
+
+```python
+pipeline = processor1 >> processor2
+```
 
 
 
