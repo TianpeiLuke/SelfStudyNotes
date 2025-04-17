@@ -14,7 +14,7 @@ date of note: 2025-01-02
 ## Code Snippet Summary
 
 >[!important]
->This script contains the fine-tuning process from BERT
+>This script contains the inference step 
 >- the main step calls `Trainer` from `lightning` package
 >	- assign multi-GPU devices
 >- Use **FSDP (Fully Sharded Data Parallel) strategy**
@@ -65,16 +65,17 @@ from transformers import AutoTokenizer, AutoModel
 
 - [[Pytorch Lightning 3 Trainer]]
 - [[Pytorch Lightning 5 Distributed Training Strategies]]
-
-- FDSP strategy
+- [[Fully Sharded Data Parallel or FSDP for LLM Training]]
 
 ```python
 from lightning.pytorch.strategies import FSDPStrategy, DDPStrategy
+from torch.distributed.fsdp import FullyShardedDataParallel as FSDP
+```
 
 
+```python
 from torch.utils.data import DataLoader
 import torch.distributed as dist
-from torch.distributed.fsdp import FullyShardedDataParallel as FSDP
 ```
 
 
@@ -122,7 +123,7 @@ def setup_logger():
 logger = setup_logger()
 ```
 
-### Define Wrapper for FDSP
+### FSDP Strategy
 
 ```python
 #----------------- FDSP ---------------------
@@ -151,16 +152,23 @@ def my_auto_wrap_policy(module: nn.Module,
         isinstance(module, (TextBertBase, TabAE, nn.Linear, nn.Embedding, nn.Conv2d))
         and unwrapped_params >= min_num_params
     )
+```
 
+
+```python
 def is_fsdp_available():
     return torch.cuda.is_available() and torch.cuda.device_count() > 1 and dist.is_available() and dist.is_initialized()
 
+```
+
+
+```python
 strategy = FSDPStrategy(auto_wrap_policy=my_auto_wrap_policy, verbose=True) if is_fsdp_available() else "auto"
 #-----------------------------
 ```
 
 
-### Update: Model Train Interface using FDSP strategy
+### Model Train 
 
 ```python
 def model_train(
@@ -184,13 +192,7 @@ def model_train(
     monitor_mode = "min" if "loss" in early_stop_metric else "max"
 
     checkpoint_dir = os.environ.get("SM_CHECKPOINT_DIR", "/opt/ml/checkpoints")
-    logger.info(f"Checkpoints will be saved to: {checkpoint_dir}")    #checkpoint_callback = ModelCheckpoint(
-    #    dirpath=Path(checkpoint_dir),
-    #    filename=f'{model_class}' + '-{epoch:02d}-{' + f'{early_stop_metric}' + ':.2f}',
-    #    monitor=early_stop_metric,
-    #    save_top_k=1,
-    #    mode=monitor_mode
-    #)
+    logger.info(f"Checkpoints will be saved to: {checkpoint_dir}")
     
     checkpoint_callback = ModelCheckpoint(
         dirpath=Path(checkpoint_dir),
@@ -224,7 +226,7 @@ def model_train(
         sync_batchnorm=True if torch.cuda.is_available() else False,
         accelerator="gpu" if torch.cuda.is_available() else "cpu",
         devices=device,
-        strategy=strategy, # defined above
+        strategy=strategy, # You might need this
         #accumulate_grad_batches=1,
         precision=16 if use_fp16 else 32
     )
@@ -239,7 +241,9 @@ def model_train(
 ### Update: Save Model under FSDP
 
 ```python
-def save_model(filename: str, model: nn.Module):
+def save_model(filename: str, 
+				model: nn.Module
+				):
     logger.info("Saving model weights.")
 
     # Unwrap if wrapped in FSDP
@@ -251,56 +255,39 @@ def save_model(filename: str, model: nn.Module):
     torch.save(model_to_save.state_dict(), filename)
 ```
 
+### Save Predictions
 
-### Load Model
 
 ```python
-def load_model(filename: str, 
-               config: Dict[str, Union[str, float, List[str]]], 
-               embedding_mat: torch.tensor, 
-               model_class: Optional[str] = 'multimodal_cnn',
-               device_l: Optional[str] = 'cpu') -> torch.nn.Module:
-    
-    logger.info("Model initialization ...")    
-    if model_class == 'multimodal_cnn':
-        model = MultimodalCNN(config, embedding_mat.shape[0], embedding_mat)
-    elif model_class == 'bert':
-        model = TextBertClassification(config)
-    elif model_class == 'lstm':
-        model = TextLSTM(config, embedding_mat.shape[0], embedding_mat)
-    elif model_class == 'multimodal_bert':
-        model = MultimodalBert(config)
-    else:
-        model = MultimodalCNN(config, embedding_mat.shape[0], embedding_mat)
-
-    logger.info("Loading model parameters...")
-    model.load_state_dict(torch.load(filename,  map_location=device_l))
-    logger.info("Loading process finished.")
-
-    return model 
-
+def save_prediction(filename: str, 
+					y_true: List, 
+					y_pred: List
+					):
+    logger.info("Saving prediction.")
+    torch.save({'y_true': y_true, 'y_pred': y_pred}, filename)
 ```
 
-### Load Checkpoints
+
+### Save Artifacts
 
 ```python
-def load_checkpoint(filename: str,
-                    model_class: Optional[str] = 'multimodal_cnn',
-                    device_l: Optional[str] = 'cpu') -> torch.nn.Module:
-    
-    logger.info(f"Load model state parameters")
-    if model_class == 'multimodal_cnn':
-        model = MultimodalCNN.load_from_checkpoint(filename, map_location=device_l)
-    elif model_class == 'bert':
-        model = TextBertClassification.load_from_checkpoint(filename, map_location=device_l)
-    elif model_class == 'lstm':
-        model = TextLSTM.load_from_checkpoint(filename, map_location=device_l)
-    elif model_class == 'multimodal_bert':
-        model = MultimodalBert.load_from_checkpoint(filename, map_location=device_l)
-    else:
-        model = MultimodalCNN.load_from_checkpoint(filename, map_location=device_l)
-            
-    return model
+def save_artifacts(filename: str, 
+					config: Dict, 
+					embedding_mat: torch.Tensor, 
+					vocab: Dict[str, int], 
+					model_class: str
+					):
+    logger.info("Saving artifacts.")
+    artifacts = {
+        'config': config,
+        'embedding_mat': embedding_mat,
+        'vocab': vocab,
+        'model_class': model_class,
+        'torch_version': torch.__version__,
+        'transformers_version': __import__('transformers').__version__,
+        'pytorch_lightning_version': __import__('lightning.pytorch').__version__,
+    }
+    torch.save(artifacts, filename)
 ```
 
 
@@ -308,6 +295,8 @@ def load_checkpoint(filename: str,
 
 -----------
 ##  Recommended Notes
+
+- [[Inference for FSDP Model Parallelism]]
 
 - [[Tabular Embedding with Pydantic]]
 - [[Tabular Autoencoder]]

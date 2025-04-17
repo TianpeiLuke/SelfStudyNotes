@@ -314,9 +314,6 @@ class MultimodalBert(pl.LightningModule):
 
     # === Export ===
     def export_to_onnx(self, save_path: Union[str, Path], sample_batch: Dict[str, Union[torch.Tensor, List]]):
-        import onnx
-        from torch import nn
-
         class MultimodalBertONNXWrapper(nn.Module):
             def __init__(self, model: MultimodalBert):
                 super().__init__()
@@ -324,6 +321,7 @@ class MultimodalBert(pl.LightningModule):
                 self.text_key = model.text_name
                 self.mask_key = model.text_attention_mask
                 self.tab_keys = model.tab_field_list or []
+                self.softmax = nn.Softmax(dim=1)
 
             def forward(self, input_ids: torch.Tensor, attention_mask: torch.Tensor, *tab_tensors: torch.Tensor):
                 batch = {
@@ -332,47 +330,81 @@ class MultimodalBert(pl.LightningModule):
                 }
                 for name, tensor in zip(self.tab_keys, tab_tensors):
                     batch[name] = tensor
-                return self.model(batch)
+                #output probability scores instead of logits
+                logits = self.model(batch)
+                return self.softmax(logits)
 
         self.eval()
+
+        # Unwrap from FSDP if needed
         model_to_export = self.module if isinstance(self, FSDP) else self
         model_to_export = model_to_export.to("cpu")
         wrapper = MultimodalBertONNXWrapper(model_to_export).to("cpu").eval()
 
-        # Prepare input tensor list
+        # === Prepare input tensor list ===
         input_names = [self.text_name, self.text_attention_mask]
-        input_tensors = [
-            sample_batch[self.text_name].to("cpu") if isinstance(sample_batch[self.text_name], torch.Tensor) else torch.zeros((1, 1), dtype=torch.long),  # Handle potential list
-            sample_batch[self.text_attention_mask].to("cpu") if isinstance(sample_batch[self.text_attention_mask], torch.Tensor) else torch.zeros((1, 1), dtype=torch.long),  # Handle potential list
-        ]
+        input_tensors = []
 
+        # Handle text inputs
+        input_ids_tensor = sample_batch.get(self.text_name)
+        attention_mask_tensor = sample_batch.get(self.text_attention_mask)
+
+        if not isinstance(input_ids_tensor, torch.Tensor) or not isinstance(attention_mask_tensor, torch.Tensor):
+            raise ValueError("Both input_ids and attention_mask must be torch.Tensor in sample_batch.")
+
+        input_ids_tensor = input_ids_tensor.to("cpu")
+        attention_mask_tensor = attention_mask_tensor.to("cpu")
+
+        input_tensors.append(input_ids_tensor)
+        input_tensors.append(attention_mask_tensor)
+
+        batch_size = input_ids_tensor.shape[0]
+
+        # Handle tabular inputs
         if self.tab_field_list:
             for field in self.tab_field_list:
-                if isinstance(sample_batch[field], torch.Tensor):
-                    input_names.append(field)
-                    input_tensors.append(sample_batch[field].to("cpu"))
+                input_names.append(field)
+                value = sample_batch.get(field)
+                if isinstance(value, torch.Tensor):
+                    value = value.to("cpu").float()
+                    if value.shape[0] != batch_size:
+                        raise ValueError(f"Tensor for field '{field}' has batch size {value.shape[0]} but expected {batch_size}")
+                    input_tensors.append(value)
+                elif isinstance(value, list) and all(isinstance(x, (int, float)) for x in value):
+                    tensor_val = torch.tensor(value, dtype=torch.float32).view(batch_size, -1).to("cpu")
+                    input_tensors.append(tensor_val)
                 else:
-                    input_names.append(field)
-                    # Handle potential list for tabular data
-                    input_tensors.append(torch.zeros((1, 1), dtype=torch.float32).to("cpu"))                
+                    logger.warning(f"Field '{field}' has unsupported type ({type(value)}); replacing with zeros.")
+                    input_tensors.append(torch.zeros((batch_size, 1), dtype=torch.float32).to("cpu"))
 
-        dynamic_axes = {name: {0: "batch"} for name in input_names}
+        # Final check
+        for name, tensor in zip(input_names, input_tensors):
+            assert tensor.shape[0] == batch_size, f"Inconsistent batch size for input '{name}': {tensor.shape}"
 
+        dynamic_axes = {}
+        for name, tensor in zip(input_names, input_tensors):
+            # Assume at least first dimension (batch) is dynamic
+            axes = {0: "batch"}
+            # Make all further dims dynamic as well
+            for i in range(1, tensor.dim()):
+                axes[i] = f"dim_{i}"
+            dynamic_axes[name] = axes
+            
         try:
             torch.onnx.export(
                 wrapper,
                 tuple(input_tensors),
                 f=save_path,
                 input_names=input_names,
-                output_names=["logits"],
+                output_names=["probs"],
                 dynamic_axes=dynamic_axes,
                 opset_version=14,
             )
             onnx_model = onnx.load(str(save_path))
             onnx.checker.check_model(onnx_model)
-            print(f"ONNX model exported and verified at {save_path}")
+            logger.info(f"ONNX model exported and verified at {save_path}")
         except Exception as e:
-            print(f"ONNX export failed: {e}")
+            logger.warning(f"ONNX export failed: {e}")
 
 
 
@@ -401,10 +433,10 @@ class MultimodalBert(pl.LightningModule):
         try:
             scripted_model = torch.jit.trace(model_to_export, (sample_batch_tensorized,))
         except Exception as e:
-            print(f"Trace failed: {e}. Trying script...")
+            logger.warning(f"Trace failed: {e}. Trying script...")
             scripted_model = torch.jit.script(model_to_export)
         scripted_model.save(str(save_path))
-        print(f"TorchScript model saved to: {save_path}")
+        logger.info(f"TorchScript model saved to: {save_path}")
 ```
 
 - [[Trainer for BERT Fine-tune v2]]

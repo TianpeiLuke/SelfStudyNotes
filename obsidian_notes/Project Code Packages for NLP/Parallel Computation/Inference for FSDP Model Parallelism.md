@@ -20,6 +20,7 @@ date of note: 2025-01-02
 >- Use **FSDP (Fully Sharded Data Parallel) strategy**
 
 
+- [[Trainer for FSDP Model Parallelism]]
 - [[Trainer for BERT Fine-tune v2]]
 - [[Model Parallelism]]
 - [[Fully Sharded Data Parallel or FSDP for LLM Training]]
@@ -177,12 +178,6 @@ def model_inference(
     if not result_files:
         raise RuntimeError(f"No test result files found in {result_folder}.")
 
-    #dfs = [
-    #    pd.read_csv(Path(result_folder) / f, sep='\t')
-    #    for f in os.listdir(result_folder)
-    #    if f.endswith('.tsv')
-    #]
-    
     dfs = []
     for f in result_files:
         try:
@@ -211,72 +206,165 @@ def model_inference(
 - [[Trainer for BERT Fine-tune v2]]
 - [[Pytorch Lightning 3 Trainer]]
 
-### Update: Save Model under FSDP
+### Update: Online Inference ONNX and Pytorch
+
+- key is to design the batch sample and format
+- all keys (input_ids, attention_mask) are int
+- all tabular fields are float
+- skip all string fields
+- [[Export to ONNX and Inference]]
 
 ```python
-def save_model(filename: str, model: nn.Module):
-    logger.info("Saving model weights.")
+def model_online_inference(model: Union[pl.LightningModule, ort.InferenceSession], dataloader: DataLoader) -> np.ndarray:
+    """
+    Run online inference for either a PyTorch Lightning model or an ONNX Runtime session.
+    """
+    if isinstance(model, ort.InferenceSession):
+        print("Running inference with ONNX Runtime.")
+        predictions = []
+        expected_input_names = [inp.name for inp in model.get_inputs()]
 
-    # Unwrap if wrapped in FSDP
-    if isinstance(model, FSDP):
-        model_to_save = model.module
+        for batch in dataloader:
+            input_feed = {}
+            for k in expected_input_names:
+                if k not in batch:
+                    raise KeyError(f"ONNX input '{k}' not found in batch")
+
+                val = batch[k]
+
+                # Convert to numpy with correct type
+                if isinstance(val, torch.Tensor):
+                    val_np = val.cpu().numpy()
+
+                    # Ensure correct dtype
+                    if "input_ids" in k or "attention_mask" in k:
+                        val_np = val_np.astype("int64")  # Required for ONNX
+                    else:
+                        val_np = val_np.astype("float32")
+
+                    input_feed[k] = val_np
+                    
+                elif isinstance(val, list) and all(isinstance(x, (int, float)) for x in val):
+                    # Fallback for list-based numeric features
+                    val_np = np.array(val, dtype="float32").reshape(-1, 1)
+                    input_feed[k] = val_np
+
+                else:
+                    # Skip fields like order_id (string/list[str]) or raise error
+                    print(f"[Warning] Skipping unsupported ONNX input field: '{k}' ({type(val)})")
+
+            output = model.run(None, input_feed)[0]  # Run inference
+            predictions.append(output)
+
+        return np.concatenate(predictions, axis=0)
+    
     else:
-        model_to_save = model
-
-    torch.save(model_to_save.state_dict(), filename)
+        print("Running inference with PyTorch model.")
+        model.eval()
+        predictions = []
+        for batch in dataloader:
+            _, preds, _ = model.run_epoch(batch, 'pred')
+            predictions.append(preds.detach().cpu().numpy())
+        return np.concatenate(predictions, axis=0)
 ```
 
 
 ### Load Model
 
 ```python
-def load_model(filename: str, 
-               config: Dict[str, Union[str, float, List[str]]], 
-               embedding_mat: torch.tensor, 
-               model_class: Optional[str] = 'multimodal_cnn',
-               device_l: Optional[str] = 'cpu') -> torch.nn.Module:
-    
-    logger.info("Model initialization ...")    
-    if model_class == 'multimodal_cnn':
-        model = MultimodalCNN(config, embedding_mat.shape[0], embedding_mat)
-    elif model_class == 'bert':
-        model = TextBertClassification(config)
-    elif model_class == 'lstm':
-        model = TextLSTM(config, embedding_mat.shape[0], embedding_mat)
-    elif model_class == 'multimodal_bert':
-        model = MultimodalBert(config)
-    else:
-        model = MultimodalCNN(config, embedding_mat.shape[0], embedding_mat)
+def load_model(filename: str, config: Dict, embedding_mat: torch.Tensor, model_class: str = 'multimodal_cnn', device_l: str = 'cpu') -> nn.Module:
+    """
+    Load model weights into a fresh model instance.
 
-    logger.info("Loading model parameters...")
-    model.load_state_dict(torch.load(filename,  map_location=device_l))
-    logger.info("Loading process finished.")
+    Returns:
+        torch.nn.Module: Model with loaded weights.
+    """
+    logger.info("Instantiating model.")
+    model = {
+        'multimodal_cnn': lambda: MultimodalCNN(config, embedding_mat.shape[0], embedding_mat),
+        'bert': lambda: TextBertClassification(config),
+        'lstm': lambda: TextLSTM(config, embedding_mat.shape[0], embedding_mat),
+        'multimodal_bert': lambda: MultimodalBert(config)
+    }.get(model_class, lambda: MultimodalCNN(config, embedding_mat.shape[0], embedding_mat))()
 
-    return model 
+    try:
+        model.load_state_dict(torch.load(filename, map_location=device_l))
+    except RuntimeError as e:
+        logger.error(f"Failed to load model weights: {e}")
+    raise
 
+    return model
 ```
+
+### Load ONNX Model
+
+```python
+def load_onnx_model(onnx_path: Union[str, Path]) -> ort.InferenceSession:
+    """
+    Load an ONNX model exported by MultimodalBert.export_to_onnx and return an ONNX Runtime InferenceSession.
+
+    Args:
+        onnx_path (str or Path): Path to the ONNX model file.
+
+    Returns:
+        ort.InferenceSession: A session object that can be used to run inference.
+    
+    Example:
+        >>> session = load_onnx_model("model.onnx")
+        >>> inputs = {
+        >>>     "input_ids": np.array([[101, 1024, 102]]),
+        >>>     "attention_mask": np.array([[1, 1, 1]]),
+        >>>     "tab_field1": np.array([[0.3, 1.5]]),
+        >>>     ...
+        >>> }
+        >>> outputs = session.run(None, inputs)
+        >>> prob = outputs[0]
+    """
+    if not os.path.isfile(onnx_path):
+        raise FileNotFoundError(f"ONNX model not found at: {onnx_path}")
+
+    providers = ['CUDAExecutionProvider', 'CPUExecutionProvider'] if ort.get_device() == 'GPU' else ['CPUExecutionProvider']
+    
+    try:
+        session = ort.InferenceSession(str(onnx_path), providers=providers)
+        logger.info(f"Successfully loaded ONNX model from {onnx_path}")
+        return session
+    except Exception as e:
+        raise RuntimeError(f"Failed to load ONNX model: {e}")
+```
+
+- [[Export to ONNX and Inference]]
+
+### Load Artifacts
+
+```python
+def load_artifacts(filename: str, device_l: str = 'cpu') -> Tuple[Dict, torch.Tensor, Dict, str]:
+    logger.info("Loading artifacts.")
+    artifacts = torch.load(filename, map_location=device_l)
+    config = artifacts['config']
+    embedding_mat = artifacts['embedding_mat']
+    vocab = artifacts['vocab']
+    model_class = artifacts['model_class']
+    for k in ['torch_version', 'transformers_version', 'pytorch_lightning_version']:
+        logger.info(f"{k}: {artifacts.get(k, 'N/A')}")
+    return config, embedding_mat, vocab, model_class 
+```
+
 
 ### Load Checkpoints
 
 ```python
-def load_checkpoint(filename: str,
-                    model_class: Optional[str] = 'multimodal_cnn',
-                    device_l: Optional[str] = 'cpu') -> torch.nn.Module:
-    
-    logger.info(f"Load model state parameters")
-    if model_class == 'multimodal_cnn':
-        model = MultimodalCNN.load_from_checkpoint(filename, map_location=device_l)
-    elif model_class == 'bert':
-        model = TextBertClassification.load_from_checkpoint(filename, map_location=device_l)
-    elif model_class == 'lstm':
-        model = TextLSTM.load_from_checkpoint(filename, map_location=device_l)
-    elif model_class == 'multimodal_bert':
-        model = MultimodalBert.load_from_checkpoint(filename, map_location=device_l)
-    else:
-        model = MultimodalCNN.load_from_checkpoint(filename, map_location=device_l)
-            
-    return model
+def load_checkpoint(filename: str, model_class: str = 'multimodal_bert', device_l: str = 'cpu') -> nn.Module:
+    logger.info("Loading checkpoint.")
+    model_fn = {
+        'multimodal_cnn': MultimodalCNN,
+        'bert': TextBertClassification,
+        'lstm': TextLSTM,
+        'multimodal_bert': MultimodalBert
+    }.get(model_class, MultimodalBert)
+    return model_fn.load_from_checkpoint(filename, map_location=device_l)
 ```
+
 
 
 
