@@ -17,9 +17,18 @@ date of note: 2024-12-14
 
 ## Explanation
 
+### Tensor Parallelism and Pipeline Parallelism
 
+- [[Tensor Parallelism]]
+- [[Pipeline Parallelism]]
+
+
+### Compare to Data Parallelism
 
 - [[Data Parallelism]]
+
+
+
 
 
 -----------

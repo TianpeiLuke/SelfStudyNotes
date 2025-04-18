@@ -12,7 +12,26 @@ date of note: 2025-04-13
 ## Code Snippet Summary
 
 >[!important]
+>This is the entry point for Pytorch Estimator `fit()`
+>
+>It involves the following tasks
+>- Load hyperparameters
+>- Load train, validation, test dataset
+>- Preprocessing
+>	- normalization
+>	- chunking
+>	- tokenization
+>	- label transformation
+>	- dataset construction
+>	- dataloader construction
+>- Trainer start training
+>- Save to Pytorch
+>- Save to ONNX
+>- Evaluation on test dataset
+>- Plot performance metric
 
+
+- [[Pytorch Estimator Training for RnR BSM]]
 
 ## Code
 
@@ -103,14 +122,17 @@ test_path = os.path.join(input_path, test_channel)
 ### Logger 
 
 ```python
-# =================== Logging Setup =================================
+# ============ Logging Setup =================================
 logger = logging.getLogger(__name__)
-handler = logging.StreamHandler()
-handler.setLevel(logging.INFO)
-formatter = logging.Formatter("%(levelname)s - %(message)s")
-handler.setFormatter(formatter)
-logger.addHandler(handler)
+logger.setLevel(logging.INFO)  
 
+if is_main_process():
+    handler = logging.StreamHandler()
+    handler.setLevel(logging.INFO)
+    formatter = logging.Formatter("%(levelname)s - %(message)s")
+    handler.setFormatter(formatter)
+    logger.addHandler(handler)
+    logger.propagate = False
 
 def log_once(logger, message, level=logging.INFO):
     if is_main_process():
@@ -123,7 +145,7 @@ def log_once(logger, message, level=logging.INFO):
 #### Config (Hyperparameter) based on Pydantic
 
 ```python
-# ================================================================================
+# =============================================================
 class Config(BaseModel):
     id_name: str = "order_id"
     text_name: str = "text"
@@ -150,7 +172,7 @@ class Config(BaseModel):
     lr_decay: float = 0.05
     momentum: float = 0.9
     weight_decay: float = 0
-    class_weights: List[int] = Field(default_factory=lambda: [1, 10])
+    class_weights: List[float] = Field(default_factory=lambda: [1.0, 10.0])
     dropout_keep: float = 0.5
     optimizer: str = "SGD"
     fixed_tokenizer_length: bool = True
@@ -217,7 +239,7 @@ class Config(BaseModel):
 - Need to transform strings into `int`, `float`, `bool`, `list`, 
 
 ```python
-# ------------------- Improved Hyperparameter Parser ----------------------
+# --------------- Improved Hyperparameter Parser ---------------
 def safe_cast(val):
     if isinstance(val, str):
         val = val.strip()
@@ -327,7 +349,7 @@ def load_parse_hyperparameters(hparam_path: str) -> Dict:
 #### Identify Filename of Training,  Validation and Testing 
 
 ```python
-# ----------------- Detect training, testing and validation file names --------
+# --- Detect training, testing and validation file names -------
 def find_first_data_file(
     data_dir: str, extensions: List[str] = [".tsv", ".csv", ".parquet"]
 ) -> Optional[str]:
@@ -344,7 +366,7 @@ def find_first_data_file(
 # ----------------- Dataset Loading -------------------------
 def load_data_module(file_dir, filename, config: Config) -> BSMDataset:
     log_once(logger, f"Loading BSM dataset from {filename} in folder {file_dir}")
-    bsm_dataset = BSMDataset(config=config.dict(), file_dir=file_dir, filename=filename)  # Pass as dict
+    bsm_dataset = BSMDataset(config=config.model_dump(), file_dir=file_dir, filename=filename)  # Pass as dict
     log_once(logger, f"Filling missing values in dataset {filename}")
     bsm_dataset.fill_missing_value(
         label_name=config.label_name, column_cat_name=config.cat_field_list
@@ -361,7 +383,7 @@ def load_data_module(file_dir, filename, config: Config) -> BSMDataset:
 - process text fields
 
 ```python
-# ----------------- Updated Data Preprocessing Pipeline ------------------
+# ----------- Updated Data Preprocessing Pipeline -------------
 def data_preprocess_pipeline(config: Config) -> Tuple[AutoTokenizer, Dict[str, Processor]]:
     if not config.tokenizer:
         config.tokenizer = "bert-base-multilingual-cased"
@@ -395,7 +417,7 @@ def data_preprocess_pipeline(config: Config) -> Tuple[AutoTokenizer, Dict[str, P
 #### Categorical Preprocessing Pipeline
 
 ```python
-# ----------------- Updated Categorical Label Pipeline ------------------
+# ------------- Updated Categorical Label Pipeline -----------
 def build_categorical_label_pipelines(
     config: Config, datasets: List[BSMDataset]
 ) -> Dict[str, CategoricalLabelProcessor]:
@@ -424,15 +446,15 @@ def model_select(
     model_class: str, config: Config, vocab_size: int, embedding_mat: torch.Tensor
 ) -> nn.Module:
     if model_class == "multimodal_cnn":
-        return MultimodalCNN(config.dict(), vocab_size, embedding_mat)
+        return MultimodalCNN(config.model_dump(), vocab_size, embedding_mat)
     elif model_class == "bert":
-        return TextBertClassification(config.dict())
+        return TextBertClassification(config.model_dump())
     elif model_class == "lstm":
-        return TextLSTM(config.dict(), vocab_size, embedding_mat)
+        return TextLSTM(config.model_dump(), vocab_size, embedding_mat)
     elif model_class == "multimodal_bert":
-        return MultimodalBert(config.dict())
+        return MultimodalBert(config.model_dump())
     else:
-        return TextBertClassification(config.dict())
+        return TextBertClassification(config.model_dump())
 ```
 
 - [[Multi-modal BERT for FSDP Model Parallelism]]
@@ -455,7 +477,7 @@ def setup_training_environment(config: Config) -> torch.device:
 #### Inject Preprocessing Pipeline  and Construct Data Loader
 
 ```python
-# ----------------- Data Loading and Preprocessing ------------------
+# ----------------- Data Loading and Preprocessing -------------
 def load_and_preprocess_data(config: Config) -> Tuple[List[BSMDataset], AutoTokenizer, Dict]:
     """
     Loads and preprocesses the train/val/test datasets according to the provided config.
@@ -570,10 +592,65 @@ def build_model_and_optimizer(
 
 ```
 
+#### Exporting to ONNX
+
+```python
+# ----------------- Save to ONNX -----------------------------
+def export_model_to_onnx(
+    model: torch.nn.Module,
+    trainer,
+    val_dataloader: DataLoader,
+    onnx_path: Union[str, Path],
+):
+    """
+    Export a (possibly FSDP-wrapped) MultimodalBert model to ONNX using a sample batch from the validation dataloader.
+
+    Args:
+        model (torch.nn.Module): The trained model or FSDP-wrapped model.
+        trainer: The Lightning trainer used during training (for strategy check).
+        val_dataloader (DataLoader): DataLoader to fetch a sample batch for tracing.
+        onnx_path (Union[str, Path]): File path to save the ONNX model.
+
+    Raises:
+        RuntimeError: If export fails.
+    """
+    logger.info(f"Exporting model to ONNX: {onnx_path}")
+
+    # 1. Sample and move batch to CPU
+    try:
+        sample_batch = next(iter(val_dataloader))
+    except StopIteration:
+        raise RuntimeError("Validation dataloader is empty. Cannot export ONNX.")
+
+    sample_batch_cpu = {
+        k: v.to("cpu") if isinstance(v, torch.Tensor) else v
+        for k, v in sample_batch.items()
+    }
+
+    # 2. Handle FSDP unwrapping if needed
+    model_to_export = model
+    if isinstance(trainer.strategy, FSDPStrategy):
+        if isinstance(model, FSDP):
+            logger.info("Unwrapping FSDP model for ONNX export.")
+            model_to_export = model.module
+        else:
+            logger.warning("Trainer uses FSDPStrategy, but model is not FSDP-wrapped.")
+
+    # 3. Move model to CPU and export
+    model_to_export = model_to_export.to("cpu").eval()
+
+    try:
+        model_to_export.export_to_onnx(onnx_path, sample_batch_cpu)
+        logger.info(f"ONNX export completed: {onnx_path}")
+    except Exception as e:
+        logger.error(f"ONNX export failed: {e}")
+        raise RuntimeError("Failed to export model to ONNX.") from e
+```
+
 #### Evaluate Model and Creating Plots
 
 ```python
-# ----------------- Evaluation and Logging -----------------------
+# ----------------- Evaluation and Logging ---------------------
 def evaluate_and_log_results(
     model: nn.Module,
     val_dataloader: DataLoader,
@@ -644,7 +721,7 @@ def evaluate_and_log_results(
         save_prediction(prediction_filename, test_true_labels, test_predict_labels)
 ```
 
-#### Main Function in Training
+### Main Function
 
 ```python
 # ----------------- Main Function ---------------------------
@@ -659,7 +736,7 @@ def main(config: Config):
     log_once(logger, "Training starts using pytorch.lightning ...")
     trainer = model_train(
         model,
-        config.dict(),
+        config.model_dump(),
         train_dataloader,
         val_dataloader,
         device="auto",
@@ -682,47 +759,17 @@ def main(config: Config):
         logger.info(f"Saving model artifacts to {artifact_filename}")
         save_artifacts(
             artifact_filename,
-            config.dict(),
+            config.model_dump(),
             embedding_mat,
             tokenizer.vocab,
             model_class=config.model_class,
         )
         
-        # ------------- Onnx -------------------------------
+        # ------------------ ONNX Export ------------------
         onnx_path = os.path.join(model_path, "model.onnx")
         logger.info(f"Saving model as ONNX to {onnx_path}")
-        sample_batch = next(iter(val_dataloader))
-
-        if isinstance(trainer.strategy, FSDPStrategy):
-            from torch.distributed.fsdp import FullyShardedDataParallel as FSDP
-            model_to_export = model.module if isinstance(model, FSDP) else model
-            model_to_export = model_to_export.to("cpu")
-            sample_batch_cpu = {
-                k: v.to("cpu") if isinstance(v, torch.Tensor) else v
-                for k, v in sample_batch.items()
-            }
-            model_to_export.export_to_onnx(onnx_path, sample_batch_cpu)
-        else:
-            model.export_to_onnx(onnx_path, sample_batch)
-            
-            
-#        # ------------- TorchScript -------------------------------
-#        torchscript_path = os.path.join(model_path, "model_scripted.pt")
-#        logger.info(f"Saving model as TorchScript to {torchscript_path}")
-#        sample_batch = next(iter(val_dataloader))
-
-#        if isinstance(trainer.strategy, FSDPStrategy):
-#            # Unwrap FSDP to get the base model
-#            from torch.distributed.fsdp import FullyShardedDataParallel as FSDP
-#            model_to_export = model.module if isinstance(model, FSDP) else model
-#            model_to_export = model_to_export.to("cpu")
-#            sample_batch_cpu = {
-#                k: v.to("cpu") if isinstance(v, torch.Tensor) else v
-#                for k, v in sample_batch.items()
-#            }
-#            model_to_export.export_to_torchscript(torchscript_path, sample_batch_cpu)
-#        else:
-#            model.export_to_torchscript(torchscript_path, sample_batch)            
+        export_model_to_onnx(model, trainer, val_dataloader, onnx_path)   
+                      
 
     evaluate_and_log_results(model, val_dataloader, test_dataloader, config, trainer)
     sys.exit(0)
@@ -742,10 +789,10 @@ if __name__ == "__main__":
         logger.error(f"Configuration Error: {e}")
         sys.exit(1)  # Exit with error code
     print("Sanitized config:")
-    for k, v in config.dict().items():
+    for k, v in config.model_dump().items():
         print(f"{k}: {v} ({type(v)})")
     log_once(logger, "Final Hyperparameters:")
-    log_once(logger, json.dumps(config.dict(), indent=4))
+    log_once(logger, json.dumps(config.model_dump(), indent=4))
     log_once(logger, "================================================")
     log_once(logger, "Starting the training process.")
     try:

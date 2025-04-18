@@ -16,6 +16,7 @@ date of note: 2024-12-14
 
 
 - [[MapReduce Architecture for Data Parallelism]]
+- [[Fully Sharded Data Parallel or FSDP for LLM Training]]
 
 ## Explanation
 

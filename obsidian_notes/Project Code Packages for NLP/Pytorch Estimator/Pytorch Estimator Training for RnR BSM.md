@@ -188,6 +188,7 @@ entry_point = "train.py"
 source_dir = "/home/ec2-user/SageMaker/AmazonSageMaker-lukexie-sagemaker-bsm-repo/dockers/docker_fsdp/bsm"
 ```
 
+- [[Train Script under FSDP]]
 - The file structure of codes in `/opt/ml` folder in container
 
 ![[pytorch_container_folder_structure.drawio.png]]
@@ -241,8 +242,8 @@ py_version = "py310"
 
 ```python
 estimator = PyTorch(
-    entry_point=entry_point,
-    source_dir=source_dir,
+    entry_point=entry_point,  # train.py
+    source_dir=source_dir,    # folder containing train, package, requirements.txt etc.
     role=role,
     instance_count=1,
     instance_type=instance_type,

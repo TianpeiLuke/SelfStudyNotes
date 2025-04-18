@@ -16,8 +16,44 @@ date of note: 2025-03-16
 >**Name**: 
 
 
+### Data Parallelism 
+
+- [[Data Parallelism]]
+- [[Fully Sharded Data Parallel or FSDP for LLM Training]]
+- [[Zero Redundancy Optimizer or ZeRO for Optimized Training of LLM]]
+
+### Model Parallelism
+
+- [[Model Parallelism]]
+- [[Pipeline Parallelism]]
+- [[Tensor Parallelism]]
+
+### Mixture of Experts
+
+- [[Expert Parallelism]]
+
 
 ## Explanation
+
+
+## Examples
+
+>[!example]
+>RnR with BSM **(DDP implementation)**
+>- [[Trainer for BERT Fine-tune v2]]
+>- [[Multi-modal BERT Classification Model v2 for BSM]]
+>- [[Tabular Embedding with Pydantic]]
+>- [[BERT Base Embedding Model with Pydantic]]
+
+
+>[!example] 
+>RnR with BSM (**FSDP implementation**)
+> - [[Trainer for FSDP Model Parallelism]]
+> - [[Inference for FSDP Model Parallelism]]
+> - [[Multi-modal BERT for FSDP Model Parallelism]]
+> - [[Export to ONNX and Inference]]
+
+
 
 
 
@@ -26,13 +62,9 @@ date of note: 2025-03-16
 -----------
 ##  Recommended Notes and References
 
-- [[Data Parallelism]]
-- [[Model Parallelism]]
-- [[Pipeline Parallelism]]
-- [[Tensor Parallelism]]
-- [[Expert Parallelism]]
-- [[Fully Sharded Data Parallel or FSDP for LLM Training]]
-- [[Zero Redundancy Optimizer or ZeRO for Optimized Training of LLM]]
+
+
+
 
 
 - [[Large Language Model and Pretrained Language Models]]

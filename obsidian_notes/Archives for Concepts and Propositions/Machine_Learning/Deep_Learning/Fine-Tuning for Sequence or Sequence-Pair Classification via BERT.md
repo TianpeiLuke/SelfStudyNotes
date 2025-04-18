@@ -129,7 +129,7 @@ date of note: 2024-11-28
 ##  Recommended Notes and References
 
 
-- [[BERT Text Classification Model for BSM]]
+- [[Multi-modal BERT Classification Model v1 for BSM]]
 - [[Trainer for BERT Fine-tune Classification in BSM]]
 
 

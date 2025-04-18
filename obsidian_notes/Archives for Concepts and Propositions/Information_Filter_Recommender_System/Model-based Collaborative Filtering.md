@@ -3,19 +3,22 @@ tags:
   - concept
   - recommender_system/information_filter
   - machine_learning/dimensionality_reduction
-keywords: 
-topics: 
-name: 
+keywords:
+  - model_based_collaborative_filtering
+topics:
+  - recommender_system
+name: Model-based Collaborative Filtering
 date of note: 2024-12-08
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Model-based Collaborative Filtering
 
 
 - [[Collaborative Filtering]]
+- [[Memory-based Collaborative Filtering]]
 - [[User-Item Preference and Rating for Recommendation]]
 
 

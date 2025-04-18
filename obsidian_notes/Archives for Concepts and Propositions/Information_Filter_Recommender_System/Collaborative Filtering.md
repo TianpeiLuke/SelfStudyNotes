@@ -17,6 +17,11 @@ date of note: 2024-12-08
 
 ## Explanation
 
+>[!important]
+>The key **assumption** is:
+> 
+>- “Users who liked *similar items* in the *past* will likely enjoy *similar items* in the *future*.”
+
 
 - [[Ensemble Learning]]
 
@@ -28,6 +33,12 @@ date of note: 2024-12-08
 - [[Naive Bayes Model]]
 - [[Multinomial Naive Bayes Model]]
 
+
+## Collaborative Filtering Methods
+
+- [[Memory-based Collaborative Filtering]]
+- [[Model-based Collaborative Filtering]]
+- [[Neighborhood-based Collaborative Filtering]]
 
 
 
