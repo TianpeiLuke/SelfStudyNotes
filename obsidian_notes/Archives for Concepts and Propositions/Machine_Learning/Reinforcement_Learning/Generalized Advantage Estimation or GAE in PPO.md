@@ -81,10 +81,10 @@ returns = advantages + values[:-1]      # target for value‑loss
 
 ### Operational difference
 
-| TD(λ) **eligibility‑trace loop**                                                                     | GAE **post‑rollout pass**                                                                                                                                     |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| While acting, keep an eligibility vector ete_tet​ in memory and update critic parameters every step. | Collect $T$ steps first; then run a _reverse_ loop to accumulate $\hat A_t$​ without ever storing or updating an eligibility variable during data collection. |
-| Fully online, suitable for tabular or small function approximators.                                  | Mini‑batch friendly; matches PPO’s paradigm of _first gather, then optimise_ many epochs with SGD.                                                            |
+| TD(λ) **eligibility‑trace loop**                                                                         | GAE **post‑rollout pass**                                                                                                                                       |
+| -------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| While acting, keep an eligibility vector $e_t$​ *in memory* and *update* critic parameters *every step*. | Collect $T$ steps first; then run a _reverse_ loop to accumulate $\hat A_t$​ *without ever storing or updating* an eligibility variable during data collection. |
+| Fully online, suitable for tabular or small function approximators.                                      | *Mini‑batch friendly*; matches PPO’s paradigm of _first gather, then optimise_ many epochs with SGD.                                                            |
 
 - [[Eligibility Traces]]
 
@@ -156,7 +156,7 @@ returns = advantages + values[:-1]      # target for value‑loss
 - [[Reinforcement Learning An Introduction by Sutton]]
 
 
-- [[Proximal Policy Gradient Optimization Algorithm]]
+- [[Proximal Policy Gradient or PPO Algorithm]]
 - [[Preference Alignment for LLM]]
 - [[Supervised Fine-Tuning or Instruction Fine-Tuning of LLM]]
 - [[Supervised Fine-Tuning and Preference Alignment for LLM]]

@@ -21,6 +21,47 @@ date of note: 2024-05-12
 >[!important]
 >**Name**: Proximal Policy Gradient Optimization Algorithm
 
+>[!important] Definition
+>The **Proximal Policy Gradient** or **PPO** algorithm (*clipped objective*, *single–thread* version) is described as below:
+>- *Require*:
+>	- *Initial policy* $\pi_{\theta}$, 
+>	- *value network* $V_{\theta_v}$ (parameters may be shared);  
+>	- *rollout length* $T$; 
+>	- minibatch size $M$; 
+>	- epochs per update $E$;  
+>	- *clip range* $\varepsilon$; 
+>	- learning rate $\alpha$; 
+>	- discount $\gamma$; 
+>	- *GAE parameter* $\lambda$.
+>- For iteration $k = 1,2,\dots$
+>	- **Collect rollout**
+>		- For $t = 0 \ \textbf{to}\ T-1$:
+>			- **Sample action** $$a_t \sim \pi_{\theta}( \cdot \mid s_t)$$ and step env
+>			- Store $$(s_t, a_t, r_t, s_{t+1}, \pi_{\theta}(a_t\!\mid\!s_t))$$
+>	- **Compute advantages and returns (GAE)**
+>		- $\hat A_T \gets 0,\; R_T \gets V_{\theta_v}(s_T)$
+>		- For $t = T-1 \,{,}\ldots{,}\, 0$ (**backward recursion**)
+>			- Compute **TD error** $$\delta_t \gets r_t + \gamma V_{\theta_v}(s_{t+1}) - V_{\theta_v}(s_t)$$
+>			- *Exponentially weighted* aggregate $$\hat A_t \gets \delta_t + \gamma\lambda \hat A_{t+1}$$
+>			- Adjust value from *baseline* $$R_t \gets \hat A_t + V_{\theta_v}(s_t)$$
+>	- **Optimise policy $\&$ value for $E$ epochs**
+>		- For $e = 1 \ \textbf{to}\ E$
+>			- *Shuffle rollout* and *split* into minibatches of size $M$
+>			- For all minibatch $\mathcal B$
+>				- Compute **probability ratio** $$r_t(\theta) = \frac{\pi_{\theta}(a_t\mid s_t)}{\pi_{\theta_{\text{old}}}(a_t\mid s_t)},\quad (s_t,a_t)\in\mathcal B$$
+>				- Compute **clipped policy loss** $$\mathcal{L}^{\text{CLIP}} = -\frac1{|\mathcal{B}|}\sum_{t\in\mathcal{B}}\min\Bigl(r_t(\theta)\hat A_t,\; \operatorname{clip}\bigl(r_t(\theta),1-\varepsilon,1+\varepsilon\bigr) \hat A_t\Bigr)$$
+>				- Compute **value loss** $$\displaystyle \mathcal L^{\text{V}} = \frac{1}{|\mathcal B|}\sum_{t\in\mathcal B}\bigl(R_t - V_{\theta_v}(s_t)\bigr)^2$$
+>				- Compute **entropy bonus** $$\displaystyle \mathcal L^{\text{ENT}} = -\frac{1}{|\mathcal B|}\sum_{t\in\mathcal B} \mathcal H\bigl(\pi_{\theta}(\cdot\mid s_t)\bigr)$$
+>				- **Total loss** is given by $$\displaystyle \mathcal L =  \mathcal L^{\text{CLIP}}  + c_v\,\mathcal L^{\text{V}} + c_H\,\mathcal L^{\text{ENT}}$$
+>				- Update parameters\; $$(\theta, \theta_v) \leftarrow  (\theta, \theta_v) - \alpha \nabla_{(\theta,\theta_v)}\mathcal L$$
+>	- **Update reference policy** 
+>		- $$\theta_{\text{old}} \gets \theta$$
+
+
+>[!info]
+>- *Sharing* parameters ($\theta = \theta_v$) or using separate networks both fit this template.
+>- $c_v$ and $c_H$ are *scalar coefficients* (value loss and entropy bonus, e.g.\ 0.5 and 0.01).
+
 
 ### Clipped Surrogate Objective
 
@@ -38,6 +79,8 @@ date of note: 2024-05-12
 > 	- outside, the term is *clipped*, preventing large updates.
 
 - [[Generalized Advantage Estimation or GAE in PPO]]
+- [[Advantage Actor Critic or A2C and A3C Algorithm]]
+- [[Actor-Critic Algorithm]]
 
 >[!important] Definition
 >Then the **total loss** combines *policy*, *value*, and *entropy bonus*:
@@ -47,6 +90,12 @@ date of note: 2024-05-12
 
 
 ## Explanation
+
+>[!info]
+>PPO is an **actor-critic algorithm**.
+>- it update both value function and policy function 
+
+- [[Actor-Critic Algorithm]]
 
 >[!info]
 >- **Vanilla policy gradients** can take steps that change the policy too much, destabilising learning.
@@ -81,6 +130,11 @@ date of note: 2024-05-12
 -----------
 ##  Recommended Notes and References
 
+
+- [[Generalized Advantage Estimation or GAE in PPO]]
+- [[Advantage Actor Critic or A2C and A3C Algorithm]]
+- [[Actor-Critic Algorithm]]
+- [[Actor-Critic Algorithm with Eligibility Traces]]
 
 - [[Reinforcement Learning An Introduction by Sutton]]
 
