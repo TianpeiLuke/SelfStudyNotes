@@ -21,7 +21,9 @@ date of note: 2025-03-22
 COALESCE(_val1_, _val2_, _...._, _val_n_)
 ```
 
-- The `COALESCE()` function returns the first non-null value in a list.
+- `coalesce(expr1, expr2, ...)`
+	- [reference](https://spark.apache.org/docs/latest/api/sql/index.html#coalesce)
+	- Returns the first non-null argument if exists. Otherwise, null.
 
 
 

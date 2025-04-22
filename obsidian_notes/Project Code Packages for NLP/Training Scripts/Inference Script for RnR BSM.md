@@ -350,7 +350,7 @@ def predict_fn(input_object, model_data, context=None):
         attention_mask_key=config.text_attention_mask_key
     )
 
-    batch_size = min(config.batch_size, len(input_object))
+    batch_size = len(input_object)
     predict_dataloader = DataLoader(dataset, collate_fn=bsm_collate_batch, batch_size=batch_size)
 
     try:
@@ -470,6 +470,91 @@ def output_fn(prediction_output, accept='application/json'):
         return error_response, 'application/json'
 ```
 
+- change format
+
+```python
+# ================== Output Function ================================
+def output_fn(prediction_output, accept='application/json'):
+    """
+    Serializes the multi-class prediction output.
+
+    Args:
+        prediction_output: The output from predict_fn, expected to be a
+                           numpy array of shape (N, num_classes) or list of lists.
+        accept: The requested response MIME type (e.g., 'application/json').
+
+    Returns:
+        tuple: (response_body, content_type)
+    """
+    logger.info(f"Received prediction output of type: {type(prediction_output)} for accept type: {accept}")
+
+    scores_list = None
+
+    # Step 1: Normalize input format into a list of lists
+    if isinstance(prediction_output, np.ndarray):
+        logger.info(f"Prediction output numpy array shape: {prediction_output.shape}")
+        scores_list = prediction_output.tolist()
+    elif isinstance(prediction_output, list):
+        scores_list = prediction_output
+    else:
+        msg = f"Unsupported prediction output type: {type(prediction_output)}"
+        logger.error(msg)
+        raise ValueError(msg)
+        
+        
+    try:
+        is_multiclass = isinstance(scores_list[0], list)
+
+        # Step 2: JSON output formatting
+        # {
+        #  "prob_01": ...
+        #  "prob_02": ...
+        # ...
+        #  "prob_0k": ...
+        #  "output-label"": ...
+        # }
+        if accept.lower() == 'application/json':
+            output_records = []
+            for probs in scores_list:
+                probs = probs if isinstance(probs, list) else [probs]
+                max_idx = probs.index(max(probs)) if probs else -1
+
+                record = {
+                    **{f"prob_{str(i+1).zfill(2)}": p for i, p in enumerate(probs)},
+                    "output-label": f"class-{max_idx}" if max_idx >= 0 else "unknown"
+                }
+                output_records.append(record)
+
+            response = json.dumps({"predictions": output_records})
+            return response, 'application/json'
+
+        # Step 3: CSV output formatting
+        elif accept.lower() == 'text/csv':
+            csv_lines = []
+            for probs in scores_list:
+                probs = probs if isinstance(probs, list) else [probs]
+                max_idx = probs.index(max(probs)) if probs else -1
+                formatted_probs = [round(float(p), 4) for p in probs]  # Output as numerical floats
+                # Format list string without brackets and parentheses
+                list_str = ",".join(f"{p:.4f}" for p in formatted_probs)
+                
+                line = [list_str] + [f"class-{max_idx}" if max_idx >= 0 else "unknown"]
+                csv_lines.append(",".join(map(str, line)))
+
+            response_body = "\n".join(csv_lines) + "\n"
+            return response_body, 'text/csv'
+
+        # Step 4: Unsupported content type
+        else:
+            logger.error(f"Unsupported accept type: {accept}")
+            raise ValueError(f"Unsupported accept type: {accept}")
+
+    # Step 5: Error handling
+    except Exception as e:
+        logger.error(f"Error during DataFrame creation or serialization in output_fn: {e}", exc_info=True)
+        error_response = json.dumps({'error': f'Failed to serialize output: {e}'})
+        return error_response, 'application/json'
+```
 
 ## Launch Endpoint
 

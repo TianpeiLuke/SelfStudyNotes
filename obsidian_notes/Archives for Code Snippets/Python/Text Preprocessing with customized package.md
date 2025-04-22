@@ -110,7 +110,7 @@ val_bsm_dataset.fill_missing_value(label_name=config['label_name'], column_cat_n
 test_bsm_dataset.fill_missing_value(label_name=config['label_name'], column_cat_name=config['cat_field_list'])
 ```
 
-- We need to construct a pipeline that *filter*, *clean text and then tokenize the text into tokens*. [[Processors]]
+- We need to construct a pipeline that *filter*, *clean text and then tokenize the text into tokens*. [[Processors ver 1.0]]
 
 ```python
 from transformers import AutoTokenizer

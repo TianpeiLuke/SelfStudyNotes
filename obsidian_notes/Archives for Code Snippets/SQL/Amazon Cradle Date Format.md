@@ -21,6 +21,9 @@ date of note: 2024-04-18
 >Defining fact table inputs is identical to defining dimension table inputs with 1 difference: *each partition in a fact table represents a single day*, so Cradle needs to know which day partitions to fetch in the form of a date range.  For example, if you want to query `D_CUSTOMER_ORDER_ITEM_DETAILS` for the past 30 days from each job run's #datasetDate inclusive, add the filters in your WHERE clause and Cradle will choose the right partitions using push-down filtering.
 
 - `CAST('${date}' AS TIMESTAMP)`: cast the job run date `{date}` as a *timestamp variable*
+	- `cast(expr AS type)`
+	- Casts the value `expr` to the target data type `type`.
+	- [reference](https://spark.apache.org/docs/latest/api/sql/index.html#cast)
 - using `>=` and `<=` 
 
 ```sql
@@ -67,6 +70,14 @@ There's another way to format dates you'll see a lot on Sage and in the wikis:
 
 -----------
 ##  Recommended Notes
+
+
+- [to_date](https://spark.apache.org/docs/latest/api/sql/index.html#to_date)
+	- `to_date(date_str[, fmt])` 
+	- Parses the `date_str` expression with the `fmt` expression to a date. Returns null with invalid input. By default, it follows casting rules to a date if the `fmt` is omitted.
+	- `date_str` - A string to be parsed to date.
+	- `fmt` - Date format pattern to follow. See [Datetime Patterns](https://spark.apache.org/docs/latest/sql-ref-datetime-pattern.html) for valid date and time format patterns.
+
 
 
 - Cradle Docs: 

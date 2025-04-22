@@ -182,8 +182,6 @@ class EmojiRemoverProcessor(Processor):
 ```
 
 
-
-
 #### Dialogue Split into Sequence
 
 - [[RnR LLM training data 2023-2025]]
@@ -194,9 +192,14 @@ class EmojiRemoverProcessor(Processor):
 ```python
 # --- Processor 4: Dialogue Splitting ---
 class DialogueSplitterProcessor(Processor):
-    def __init__(self):
+    def __init__(self, min_length: int = 1):
+        """
+        Args:
+            min_length: Minimum number of non-whitespace characters required to keep a message.
+        """
         super().__init__()
         self.processor_name = "dialogue_splitter_processor"
+        self.min_length = min_length
 
     def process(self, input_text: str):
         """
@@ -206,8 +209,14 @@ class DialogueSplitterProcessor(Processor):
         """
         pattern = r'\[bom\](.*?)\[eom\]'
         raw_messages = re.findall(pattern, input_text, flags=re.DOTALL)
-        # Strip extra whitespace from each message
-        messages = [msg.strip() for msg in raw_messages if msg.strip()]
+
+        # Strip whitespace and filter out short/empty messages
+        messages = [
+            msg.strip()
+            for msg in raw_messages
+            if msg.strip() and len(msg.strip()) >= self.min_length
+        ]
+
         return messages
 ```
 
@@ -275,6 +284,7 @@ class DialogueChunkerProcessor(Processor):
         self.max_tokens = max_tokens
         self.max_total_chunks = max_total_chunks
 
+
     def process(self, messages: List[str]):
         """
         Chunks a list of messages into groups such that each chunk's token count (without special tokens)
@@ -296,19 +306,27 @@ class DialogueChunkerProcessor(Processor):
                 if current_chunk:
                     chunks.append(" ".join(current_chunk).strip())
                     num_chunks += 1 # Increment chunk count
-                    if self.max_total_chunks is not None and num_chunks >= self.max_total_chunks:
+                    if self.max_total_chunks is not None and self.truncate and num_chunks >= self.max_total_chunks:
                         break  # Stop if max_total_chunks is reached
                 current_chunk = [msg]
                 current_tokens = token_count
             else:
                 current_chunk.append(msg)
                 current_tokens += token_count
-                
-            if self.max_total_chunks is not None and num_chunks >= self.max_total_chunks:
+
+            if self.max_total_chunks is not None and self.truncate and num_chunks >= self.max_total_chunks:
                 break # Stop if max_total_chunks is reached
 
-        if current_chunk:
+        if current_chunk and (not self.truncate or num_chunks < self.max_total_chunks):
             chunks.append(" ".join(current_chunk).strip())
+            num_chunks += 1
+
+        # Ensure at least one non-empty chunk exists
+        if not chunks:
+            chunks = ["."]
+        elif all(not chunk.strip() for chunk in chunks):
+            chunks = ["."]
+
         return chunks
 ```
 
@@ -349,6 +367,10 @@ class TokenizationProcessor(Processor):
         """
         tokenized_output = []
         for chunk in input_chunks:
+            # Skip empty or whitespace-only chunks
+            if not chunk or not chunk.strip():
+                continue
+                
             encoded = self.tokenizer(chunk,
                                      add_special_tokens=self.add_special_tokens,
                                      max_length=self.max_length,

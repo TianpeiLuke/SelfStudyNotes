@@ -87,6 +87,11 @@ class TokenizationProcessor(Processor):
             List[Dict[str, List[int]]]: Processed tokenization outputs.
         """
         tokenized_output = []
+        
+	    # If input_chunks is empty, simulate processing a single empty string
+        if not input_chunks:
+            input_chunks = [""]
+            
         for chunk in input_chunks:
             encoded = self.tokenizer(chunk,
                                      add_special_tokens=self.add_special_tokens,

@@ -78,11 +78,15 @@ GROUP BY key2
 > ```
 
 
-- `collect_list` aggregate function
+- `collect_list(expr)`  aggregate function
 	- [reference](https://docs.databricks.com/aws/en/sql/language-manual/functions/collect_list)
 	- [reference API](https://spark.apache.org/docs/latest/api/sql/index.html#collect_list)
-	- `collect_list(expr)` 
-		- Collects and returns a list of non-unique elements.
+	- Collects and returns a list of non-unique elements.
+
+- `struct(col1, col2, col3, ...)` 
+	- [reference](https://spark.apache.org/docs/latest/api/sql/index.html#struct)
+	- Creates a struct with the given field values.
+
 
 >[!example]
 > **Examples:**
@@ -97,11 +101,10 @@ GROUP BY key2
 > The function is non-deterministic because the order of collected results depends on the order of the rows which may be non-deterministic after a shuffle.
 
 
-- `struct`:
+- `struct(col1, col2, col3, ...)` :
 	- [reference](https://docs.databricks.com/aws/en/sql/language-manual/data-types/struct-type)
 	- [struct](https://spark.apache.org/docs/latest/api/sql/index.html#struct)
-	- `struct(col1, col2, col3, ...)` 
-		- Creates a struct with the given field values.
+	- Creates a struct with the given field values.
 	- `STRUCT < [fieldName [:] fieldType [NOT NULL] [COLLATE collationName] [COMMENT str] [, …] ] >`
 		- `fieldName`: An identifier naming the field. The names need not be unique.
 		- `fieldType`: Any data type.
@@ -125,15 +128,13 @@ GROUP BY key2
 > **Since:** 1.4.0
 
 
-- `sort_array`
+- `sort_array(array[, ascendingOrder])` 
 	- [reference](https://docs.databricks.com/aws/en/sql/language-manual/functions/sort_array)
 	- [Spark SQL link](https://spark.apache.org/docs/latest/api/sql/index.html#sort_array)
-	- `sort_array(array[, ascendingOrder])` 
-		- Sorts the input array in ascending or descending order according to the natural ordering of the array elements. NaN is greater than any non-NaN elements for double/float type. Null elements will be placed at the beginning of the returned array in ascending order or at the end of the returned array in descending order.
-	- `sort_array(expr [, ascendingOrder] )`
-		- `expr`: An `ARRAY` expression of sortable elements.
-		- `ascendingOrder`: An optional `BOOLEAN` expression defaulting to `true`.
-		- Sorts the input array in ascending or descending order according to the natural ordering of the array elements. `NULL` elements are placed at the beginning of the returned array in ascending order or at the end of the returned array in descending order.
+	- Sorts the input array in ascending or descending order according to the natural ordering of the array elements. NaN is greater than any non-NaN elements for double/float type. Null elements will be placed at the beginning of the returned array in ascending order or at the end of the returned array in descending order.
+	- `expr`: An `ARRAY` expression of sortable elements.
+	- `ascendingOrder`: An optional `BOOLEAN` expression defaulting to `true`.
+	- Sorts the input array in ascending or descending order according to the natural ordering of the array elements. `NULL` elements are placed at the beginning of the returned array in ascending order or at the end of the returned array in descending order.
 	- In this example, `sort_array` sort `struct` by the first field 
 		- This is the default ordering of Spark SQL
 ```
@@ -160,10 +161,9 @@ GROUP BY key2
 > **Since:** 1.5.0
 
 
-- Finally `CONCAT_WS` concatenate them
+- `concat_ws(sep[, str | array(str)]+)` 
 	- [concat_ws](https://spark.apache.org/docs/latest/api/sql/index.html#concat_ws)
-	- `concat_ws(sep[, str | array(str)]+)`
-		- Returns the concatenation of the strings separated by `sep`, skipping null values.
+	- Returns the concatenation of the strings separated by `sep`, skipping null values.
 
 
 >[!example]

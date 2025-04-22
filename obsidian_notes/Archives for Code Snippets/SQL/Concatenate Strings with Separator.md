@@ -25,16 +25,16 @@ SELECT
 FROM tab	
 ```
 
-- `CONCAT_WS` function
+- `CONCAT_WS(_separator, string1_, _string2_, _...._, _string_n_)`
 	- [reference](https://www.w3schools.com/sql/func_sqlserver_concat_ws.asp)
-	- syntax `CONCAT_WS(_separator, string1_, _string2_, _...._, _string_n_)`
+	- [spark sql: concat_ws](https://spark.apache.org/docs/latest/api/sql/index.html#concat_ws) 
 	- The CONCAT_WS() function adds two or more strings together with a *separator*.
 	- `seperator`: required. 
 	- `_string1, string2, string_n_`: the strings to add together
 
-- [concat_ws](https://spark.apache.org/docs/latest/api/sql/index.html#concat_ws)
-	- `concat_ws(sep[, str | array(str)]+)`
-		- Returns the concatenation of the strings separated by `sep`, skipping null values.
+- `concat_ws(sep[, str | array(str)]+)`
+	- [concat_ws](https://spark.apache.org/docs/latest/api/sql/index.html#concat_ws)
+	- Returns the concatenation of the strings separated by `sep`, skipping null values.
 
 
 >[!example]
