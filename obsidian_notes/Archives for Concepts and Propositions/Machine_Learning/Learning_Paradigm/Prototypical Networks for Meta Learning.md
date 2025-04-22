@@ -2,8 +2,12 @@
 tags:
   - concept
   - meta_learning
-keywords: 
-topics: 
+  - prototypical_network
+keywords:
+  - meta_learning
+  - prototypical_network
+topics:
+  - machine_learning_paradigm
 name: Prototypical Networks for Meta Learning
 date of note: 2025-04-21
 ---
