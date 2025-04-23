@@ -41,6 +41,9 @@ date of note: 2025-04-21
 >- *Return*
 >	- the trained encoder parameters $\boldsymbol\phi^\star$
 
+- [[Contrastive Learning]]
+- [[Information Noise Contrastive Estimation as Contrastive Learning]]
+
 >[!important] Definition
 >The **inference algorithm** is described as
 >- *Require*
@@ -51,8 +54,6 @@ date of note: 2025-04-21
 >- For $\forall\,$ query example $x_{q}$:
 >	- Generate *query embedding*  $$\mathbf z \gets f_{\boldsymbol\phi^\star}(x_q)$$
 >	- Predict class $$\displaystyle \hat{y} \gets \arg\min_{c} d(\mathbf z,\mathbf p_c)$$
-
-
 
 
 ### Episodic Few‑Shot Setting
@@ -113,17 +114,19 @@ date of note: 2025-04-21
 ## Explanation
 
 >[!quote]
->**Intuition:** meta‑training shapes the embedding so that each class forms a _tight, convex cluster_; the cluster mean becomes a _sufficient statistic_ for classifying new points with minimal data.
+>**Intuition:** 
+>- meta‑training shapes the embedding so that each class forms a _tight, convex cluster_; 
+>- the cluster mean becomes a _sufficient statistic_ for classifying new points with minimal data.
 
 
 ### Key properties
 
-|Trait|Explanation|
-|---|---|
-|**Model‑agnostic encoder**|Any differentiable backbone works.|
-|**Fast at test time**|Only averaging + distance; no fine‑tuning loop.|
-|**Distance metric matters**|Euclidean in feature space often outperforms cosine when the encoder is trained accordingly.|
-|**Extensible**|Works with variable N,KN, KN,K; supports semi‑supervised, domain‑a|
+| Trait                       | Explanation                                                                                  |
+| --------------------------- | -------------------------------------------------------------------------------------------- |
+| **Model‑agnostic encoder**  | Any differentiable backbone works.                                                           |
+| **Fast at test time**       | Only averaging + distance; no fine‑tuning loop.                                              |
+| **Distance metric matters** | Euclidean in feature space often outperforms cosine when the encoder is trained accordingly. |
+| **Extensible**              | Works with variable $N,K$; supports semi‑supervised, domain‑adaptive                         |
 
 
 

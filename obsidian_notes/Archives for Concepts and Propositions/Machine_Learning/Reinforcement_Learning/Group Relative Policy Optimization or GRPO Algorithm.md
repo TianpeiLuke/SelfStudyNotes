@@ -2,27 +2,29 @@
 tags:
   - concept
   - machine_learning/algorithms
-  - proximal_policy_gradient
   - ppo
   - reinforcement_learning/algorithm
   - deep_learning/large_language_models
+  - group_relative_policy_optimization
+  - grpo
 keywords:
   - reinforcement_learning
-  - proximal_gradient_algorithm
+  - group_relative_policy_optimization
+  - grpo
 topics:
   - reinforcement_learning/algorithm
   - deep_learning/large_language_models
-name: Proximal Policy Gradient Optimization Algorithm
+name: Group Relative Policy Optimization or GRPO Algorithm
 date of note: 2024-05-12
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Proximal Policy Gradient Optimization Algorithm
+>**Name**: Group Relative Policy Optimization or GRPO Algorithm
 
 >[!important] Definition
->The **Proximal Policy Gradient** or **PPO** algorithm (*clipped objective*, *single–thread* version) is described as below:
+>The **Group Relative Policy Optimization** or **GRPO** algorithm (*clipped objective*, *single–thread* version) is described as below:
 >- *Require*:
 >	- *Initial policy* $\pi_{\theta}$, 
 >	- *value network* $V_{\theta_v}$ (parameters may be shared);  
@@ -35,8 +37,10 @@ date of note: 2024-05-12
 >	- *GAE parameter* $\lambda$.
 >- For iteration $k = 1,2,\dots$
 >	- **Collect rollout**
->		- For $t = 0 \ \textbf{to}\ T-1$:
->			- **Sample action** $$a_t \sim \pi_{\theta}( \cdot \mid s_t)$$ and step env
+>		- For $t = 0 \,{,}\ldots{,}\, T-1$:
+>			- **Sample action** $$a_t \sim \pi_{\theta}( \cdot \mid s_t)$$ 
+>			- Advance the environment one time-step with chosen action; (`env.step` or *step env* ) 
+>				- Receive $(s_{t+1}, r_{t})$
 >			- Store $$(s_t, a_t, r_t, s_{t+1}, \pi_{\theta}(a_t\!\mid\!s_t))$$
 >	- **Compute advantages and returns (GAE)**
 >		- $\hat A_T \gets 0,\; R_T \gets V_{\theta_v}(s_T)$
@@ -44,6 +48,10 @@ date of note: 2024-05-12
 >			- Compute **TD error** $$\delta_t \gets r_t + \gamma V_{\theta_v}(s_{t+1}) - V_{\theta_v}(s_t)$$
 >			- *Exponentially weighted* aggregate $$\hat A_t \gets \delta_t + \gamma\lambda \hat A_{t+1}$$
 >			- Adjust value from *baseline* $$R_t \gets \hat A_t + V_{\theta_v}(s_t)$$
+>		- **Advantage averaging (normalisation)**
+>			- Compute the mean of advantage $$\displaystyle \bar A \gets \frac{1}{T}\sum_{t=0}^{T-1} \hat A_t$$
+>			- Compute the standard deviation $$\displaystyle \sigma_A \gets \sqrt{\frac{1}{T}\sum_{t=0}^{T-1} (\hat A_t-\bar A)^2 + \epsilon}$$
+>			- Standardization: for $t= 0 \,{,}\ldots{,}\, T-1$  $$\hat A_t \gets \dfrac{\hat A_t-\bar A}{\sigma_A}$$
 >	- **Optimise policy $\&$ value for $E$ epochs**
 >		- For $e = 1 \ \textbf{to}\ E$
 >			- *Shuffle rollout* and *split* into minibatches of size $M$
@@ -57,6 +65,10 @@ date of note: 2024-05-12
 >	- **Update reference policy** 
 >		- $$\theta_{\text{old}} \gets \theta$$
 
+- [[Proximal Policy Optimization or PPO Algorithm]]
+- [[Generalized Advantage Estimation or GAE in PPO]]
+- [[Advantage Actor Critic or A2C and A3C Algorithm]]
+- [[Actor-Critic Algorithm]]
 
 >[!info]
 >- *Sharing* parameters ($\theta = \theta_v$) or using separate networks both fit this template.
@@ -78,9 +90,7 @@ date of note: 2024-05-12
 > - When $r_t$​ stays in $[1-\epsilon,1+\epsilon]$ the gradient is the same as *vanilla PG*; 
 > 	- outside, the term is *clipped*, preventing large updates.
 
-- [[Generalized Advantage Estimation or GAE in PPO]]
-- [[Advantage Actor Critic or A2C and A3C Algorithm]]
-- [[Actor-Critic Algorithm]]
+
 
 >[!important] Definition
 >Then the **total loss** combines *policy*, *value*, and *entropy bonus*:
@@ -97,16 +107,17 @@ date of note: 2024-05-12
 
 - [[Actor-Critic Algorithm]]
 
->[!info]
+### Motivations
+
+>[!important]
 >- **Vanilla policy gradients** can take steps that change the policy too much, destabilising learning.
 >     
-> - **Trust‑Region Policy Optimization** (TRPO) fixes this with a hard KL‐divergence constraint but needs second‑order methods.
+> - **Trust‑Region Policy Optimization** (TRPO) fixes this with a hard KL‐divergence constraint but needs *second‑order* methods.
 >     
 > - **PPO** keeps the “small‑step” idea but uses _only first‑order gradients_ by **penalising or clipping** the policy update.
 
 - [[Policy Gradient Algorithm]]
 - [[Policy Gradient Theorem]]
-
 
 
 >[!important]

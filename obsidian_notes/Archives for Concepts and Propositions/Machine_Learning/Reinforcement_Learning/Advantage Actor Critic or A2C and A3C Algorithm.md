@@ -36,7 +36,7 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
-- [[Proximal Policy Gradient or PPO Algorithm]]
+- [[Proximal Policy Optimization or PPO Algorithm]]
 - [[Policy Gradient Algorithm]]
 - [[Markov Decision Process]]
 

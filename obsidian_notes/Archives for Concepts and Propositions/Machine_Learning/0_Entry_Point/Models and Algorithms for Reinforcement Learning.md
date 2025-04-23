@@ -174,9 +174,9 @@ date of note: 2024-06-01
 ### Reinforcement Learning with Foundational Models
 
 - [[Reinforcement Learning with Human Feedbacks or RLHF for LLM]]
-- [[Proximal Policy Gradient or PPO Algorithm]]
+- [[Proximal Policy Optimization or PPO Algorithm]]
 - [[Generalized Advantage Estimation or GAE in PPO]]
-- 
+- [[Group Relative Policy Optimization or GRPO Algorithm]]
 
 
 ### Multi-Agent Reinforcement Learning

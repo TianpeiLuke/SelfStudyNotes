@@ -24,6 +24,13 @@ date of note: 2024-10-21
 
 ![[reinforcement_learning_human_feedback.png]]
 
+### RLHF Algorithms
+
+- [[Proximal Policy Optimization or PPO Algorithm]]
+- [[Generalized Advantage Estimation or GAE in PPO]]
+- [[Group Relative Policy Optimization or GRPO Algorithm]]
+
+
 ## Explanation
 
 >[!quote]
@@ -34,6 +41,9 @@ date of note: 2024-10-21
 >Our motivation is NLP tasks where *supervised data sets* are *unavailable* or *insufficient*, and where *programmatic reward functions* are *poor* proxies for our true goals.  
 >  
 >-- [[zieglerFineTuningLanguageModels2020a]]   
+
+
+
 
 
 

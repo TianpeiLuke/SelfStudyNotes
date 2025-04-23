@@ -156,7 +156,7 @@ returns = advantages + values[:-1]      # target for value‑loss
 - [[Reinforcement Learning An Introduction by Sutton]]
 
 
-- [[Proximal Policy Gradient or PPO Algorithm]]
+- [[Proximal Policy Optimization or PPO Algorithm]]
 - [[Preference Alignment for LLM]]
 - [[Supervised Fine-Tuning or Instruction Fine-Tuning of LLM]]
 - [[Supervised Fine-Tuning and Preference Alignment for LLM]]
