@@ -99,7 +99,7 @@ date of note: 2024-05-12
 >- This is a *useful distinction*, for only through **bootstrapping** do we introduce **bias** and an **asymptotic dependence** on the quality of the function approximation. 
 
 - [[Actor-Critic Algorithm]]
-- [[Advantage Actor Critic or A2C and A3C Algorithm]]
+- [[Advantage and Advantage Actor Critic or A2C Algorithm]]
 
 
 -----------

@@ -67,7 +67,7 @@ date of note: 2024-05-12
 
 - [[Proximal Policy Optimization or PPO Algorithm]]
 - [[Generalized Advantage Estimation or GAE in PPO]]
-- [[Advantage Actor Critic or A2C and A3C Algorithm]]
+- [[Advantage and Advantage Actor Critic or A2C Algorithm]]
 - [[Actor-Critic Algorithm]]
 
 >[!info]
@@ -143,7 +143,7 @@ date of note: 2024-05-12
 
 
 - [[Generalized Advantage Estimation or GAE in PPO]]
-- [[Advantage Actor Critic or A2C and A3C Algorithm]]
+- [[Advantage and Advantage Actor Critic or A2C Algorithm]]
 - [[Actor-Critic Algorithm]]
 - [[Actor-Critic Algorithm with Eligibility Traces]]
 

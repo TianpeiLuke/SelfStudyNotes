@@ -145,7 +145,7 @@ date of note: 2024-06-01
 - [[REINFORCE Algorithm with Baseline]]
 - [[Actor-Critic Algorithm]]
 - [[Actor-Critic Algorithm with Eligibility Traces]]
-- [[Advantage Actor Critic or A2C and A3C Algorithm]]
+- [[Advantage and Advantage Actor Critic or A2C Algorithm]]
 
 
 ### Maximum Entropy Reinforcement Learning and Soft Actor-Critic Algorithm

@@ -23,15 +23,25 @@ date of note: 2024-05-12
 
 ![[Temporal Difference lambda Algorithm#^1134a1]]
 
+### Advantage Function and Sample Approximation
+
+![[Advantage and Advantage Actor Critic or A2C Algorithm#^c94fbd]]
+
+![[Advantage and Advantage Actor Critic or A2C Algorithm#^69485c]]
+
+- [[Advantage and Advantage Actor Critic or A2C Algorithm]]
+
+### Generalized Advantage Function on $\lambda$-return
 
 >[!important] Definition
 >Define the **TD residual**
 > 
 > $$\delta_t = r_t + \gamma V_\theta(s_{t+1}) - V_\theta(s_t),$$
 > 
->then *smooth* it:
+>The **generalized advantage function (GA)** is obtained by $\lambda$-weighted *smoothing* of the TD residual
 > 
 > $$\hat A_t^{\text{GAE}(\gamma,\lambda)} =\sum_{l=0}^{T-t-1} (\gamma\lambda)^l\,\delta_{t+l}.$$
+>- It can be seen as a generalization of advantage function where the return is replaced by *$\lambda$-return.*
 > 
 > Returns for *value‑loss* are reconstructed as  
 > $$R_t = \hat A_t + V_\theta(s_t).$$

@@ -34,6 +34,8 @@ date of note: 2024-05-12
 >- where the action-value function $q_{\pi(\theta)}$ is replaced by *expected returns* $$q_{\pi(\theta)}(X, A) = \mathbb{E}_{ \pi(\theta) }\left[  G\,|\,X, A \right]$$
 >- The **REINFORCE** algorithm use the **Monte Carlo estimation** to approximate the gradient of objective. 
 
+^395314
+
 >[!important] Definition
 >In particular, at iteration $t$, the **REINFORCE update** is given by
 >$$

@@ -186,7 +186,7 @@ date of note: 2024-05-12
 ### Advantage Actor Critic or A2C Algorithm
 
 
-- [[Advantage Actor Critic or A2C and A3C Algorithm]]
+- [[Advantage and Advantage Actor Critic or A2C Algorithm]]
 
 ### Soft Actor Critic
 

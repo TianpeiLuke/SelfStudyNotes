@@ -65,7 +65,7 @@ date of note: 2024-05-12
 >		- $$\theta_{\text{old}} \gets \theta$$
 
 - [[Generalized Advantage Estimation or GAE in PPO]]
-- [[Advantage Actor Critic or A2C and A3C Algorithm]]
+- [[Advantage and Advantage Actor Critic or A2C Algorithm]]
 - [[Actor-Critic Algorithm]]
 
 >[!info]
@@ -145,7 +145,7 @@ date of note: 2024-05-12
 
 
 - [[Generalized Advantage Estimation or GAE in PPO]]
-- [[Advantage Actor Critic or A2C and A3C Algorithm]]
+- [[Advantage and Advantage Actor Critic or A2C Algorithm]]
 - [[Actor-Critic Algorithm]]
 - [[Actor-Critic Algorithm with Eligibility Traces]]
 
@@ -155,5 +155,5 @@ date of note: 2024-05-12
 - [[Supervised Fine-Tuning or Instruction Fine-Tuning of LLM]]
 - [[Supervised Fine-Tuning and Preference Alignment for LLM]]
 
-- **“Proximal Policy Optimization Algorithms.”** J. Schulman et al., arXiv 1707.06347 (2017).
-- **“Trust Region Policy Optimization.”** J. Schulman et al., ICML 2015.
+- Schulman, J., Wolski, F., Dhariwal, P., Radford, A., & Klimov, O. (2017). Proximal policy optimization algorithms. _arXiv preprint arXiv:1707.06347_.
+- Schulman, J., Levine, S., Abbeel, P., Jordan, M., & Moritz, P. (2015, June). Trust region policy optimization. In _International conference on machine learning_ (pp. 1889-1897). PMLR.
