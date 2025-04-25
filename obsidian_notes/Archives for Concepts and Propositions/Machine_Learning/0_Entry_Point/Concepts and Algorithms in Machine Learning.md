@@ -306,6 +306,11 @@ date of note: 2024-06-01
 - [[Maximum Likelihood Estimation]]
 - [[Maximum Entropy Learning]]
 
+
+#### Weak Supervision
+
+- [[Programmatic Weak Supervision or PWS]]
+
 #### Learning by Comparison
 
 - [[Principle of Learning by Comparison for Implicit Generative Models]]

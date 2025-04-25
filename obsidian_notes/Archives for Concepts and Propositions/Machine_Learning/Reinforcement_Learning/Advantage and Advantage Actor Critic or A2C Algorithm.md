@@ -107,16 +107,16 @@ date of note: 2024-05-12
 
 ### Vanilla Actor Critic vs. A2C
 
-| Feature                          | **Vanilla Actor-Critic**                                                                    | **Advantage Actor-Critic (A2C)**                                                                                  |
-| -------------------------------- | ------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| **Policy Gradient Signal**       | Directly uses **TD error** $$\delta_t = r_t + \gamma V(s_{t+1}) - V(s_t)$$                  | Uses an **explicit estimate of the advantage** function $$\hat{A}_t$$, which may be *TD error* or *n-step return* |
-| **Advantage Estimate**           | Not explicitly used                                                                         | Explicitly estimates and uses $$A(s_t, a_t) = Q(s_t, a_t) - V(s_t)$$ or approximations                            |
-| **Variance Reduction**           | Higher variance                                                                             | Lower variance due to *better advantage estimation*                                                               |
-| **Critic Role**                  | Estimates state value $$V(s_t)$$                                                            | Same as Actor-Critic — estimates $$V(s_t)$$                                                                       |
-| **Actor Update Rule**            | $$\theta_{t+1} \leftarrow \theta_t + \alpha \delta_t \nabla_\theta \log \pi(a_t \| s_t) )$$ | $$\theta_{t+1} \leftarrow \theta_t + \alpha \, \hat{A}_t \, \nabla_\theta \log \pi(a_t \| s_t)$$                  |
-| **Typical Advantage Estimators** | Not defined — TD error is used directly                                                     | TD error, *n-step return*, or *GAE* (Generalized Advantage Estimation)                                            |
-| **Training Stability**           | Less stable, more sensitive to noise                                                        | *More stable* and sample-efficient                                                                                |
-| **Parallelism**                  | Often not parallelized                                                                      | A2C is typically implemented with **synchronous parallel environments** (distinguishing it from A3C)              |
+| Feature                          | **Vanilla Actor-Critic**                                                                      | **Advantage Actor-Critic (A2C)**                                                                                  |
+| -------------------------------- | --------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| **Policy Gradient Signal**       | Directly uses **TD error** $$\delta_t = r_t + \gamma V(s_{t+1}) - V(s_t)$$                    | Uses an **explicit estimate of the advantage** function $$\hat{A}_t$$, which may be *TD error* or *n-step return* |
+| **Advantage Estimate**           | Not explicitly used                                                                           | Explicitly estimates and uses $$A(s_t, a_t) = Q(s_t, a_t) - V(s_t)$$ or approximations                            |
+| **Variance Reduction**           | Higher variance                                                                               | Lower variance due to *better advantage estimation*                                                               |
+| **Critic Role**                  | Estimates state value $$V(s_t)$$                                                              | Same as Actor-Critic — estimates $$V(s_t)$$                                                                       |
+| **Actor Update Rule**            | $$\theta_{t+1} \leftarrow \theta_t + \alpha\, \delta_t\, \nabla_\theta \log \pi(a_t \| s_t)$$ | $$\theta_{t+1} \leftarrow \theta_t + \alpha \, \hat{A}_t \, \nabla_\theta \log \pi(a_t \| s_t)$$                  |
+| **Typical Advantage Estimators** | Not defined — TD error is used directly                                                       | TD error, *n-step return*, or *GAE* (Generalized Advantage Estimation)                                            |
+| **Training Stability**           | Less stable, more sensitive to noise                                                          | *More stable* and sample-efficient                                                                                |
+| **Parallelism**                  | Often not parallelized                                                                        | A2C is typically implemented with **synchronous parallel environments** (distinguishing it from A3C)              |
 
 - [[Actor-Critic Algorithm]]
 
