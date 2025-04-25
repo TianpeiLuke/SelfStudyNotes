@@ -46,6 +46,8 @@ date of note: 2024-05-12
 > Returns for *value‑loss* are reconstructed as  
 > $$R_t = \hat A_t + V_\theta(s_t).$$
 
+^0abee5
+
 - [[lambda-Return and Compound Update]]
 - [[Temporal Difference Learning]]
 - [[Temporal Difference lambda Algorithm]]
