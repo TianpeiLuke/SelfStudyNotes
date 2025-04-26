@@ -6,6 +6,8 @@ tags:
   - deep_learning/models
   - deep_learning/architecture
   - probabilistic_graphical_models/sequential_models
+  - denoising_diffusion_probabilistic_model
+  - ddpm
 keywords:
   - denoising_diffusion_probabilistic_models
   - ddpm
@@ -447,6 +449,7 @@ date of note: 2024-05-12
 
 - [[Stochastic Gradient Descent Algorithm]]
 - [[Adam Algorithm]]
+- [[Latent Space Diffusion Model]]
 
 >[!info]
 >Although both *forward pass* and *reverse pass* are based on **Markov chain**,  the *DDPM training* be **paralleled**. This is because

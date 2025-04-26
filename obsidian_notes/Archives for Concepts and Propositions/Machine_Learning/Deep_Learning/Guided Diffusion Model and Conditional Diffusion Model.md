@@ -2,16 +2,22 @@
 tags:
   - concept
   - deep_learning/generative_models
-keywords: 
-topics: 
-name: 
+  - diffusion_models
+  - guided_diffusion_model
+  - conditional_diffusion_model
+keywords:
+  - diffusion_network
+  - guided_diffusion_model
+topics:
+  - deep_learning/generative_models
+name: Guided Diffusion Model and Conditional Diffusion Model
 date of note: 2024-10-20
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Guided Diffusion Model and Conditional Diffusion Model
 
 
 

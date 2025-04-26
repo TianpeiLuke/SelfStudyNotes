@@ -4,8 +4,11 @@ tags:
   - deep_learning/architecture
   - deep_learning/models
   - natural_language_processing/large_language_models
-keywords: 
-topics: 
+  - KV_cache
+keywords:
+  - KV_cache
+topics:
+  - deep_learning/large_language_models
 name: Key-Value Cache for Training of Large Language Models
 date of note: 2024-11-21
 ---
