@@ -310,6 +310,7 @@ date of note: 2024-06-01
 #### Weak Supervision
 
 - [[Programmatic Weak Supervision or PWS]]
+- [[Snorkel for Programmatic Weak Supervision]]
 
 #### Learning by Comparison
 

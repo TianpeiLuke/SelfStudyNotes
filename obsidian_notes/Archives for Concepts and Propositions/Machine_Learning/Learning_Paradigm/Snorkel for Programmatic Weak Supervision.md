@@ -32,7 +32,7 @@ date of note: 2025-04-24
 ### Define the Label Model (Generative Model)
 
 >[!important] Definition
-> We model the **joint distribution**:
+> We model the **joint distribution** as part of the *Exponential Family*
 > 
 > $$
 > \begin{equation}
@@ -47,6 +47,7 @@ date of note: 2025-04-24
 - [[Markov Network on Undirected Graph]]
 - [[Exponential Family of Distributions]]
 - [[Exponential Family as Probabilistic Graphical Model]]
+- [[Conditional Random Field]]
 
 
 ### Marginal Likelihood
@@ -76,7 +77,6 @@ date of note: 2025-04-24
 > which can be used as *soft labels* or converted to hard labels via thresholding.
 
 
-
 ### Optimization via SGD
 
 > [!important]
@@ -88,9 +88,9 @@ date of note: 2025-04-24
 >$$ 
 >This is the difference between:
 > 
-> - **Empirical expected feature values** under the model
+> - *Empirical expected* feature values under the *model*
 >     
-> - **True expected feature values** (which we approximate via inference)
+> - *True expected* feature values (which we approximate via inference)
 >
 
 - [[Log-Partition Function and Score Function of Graphical Models]]
