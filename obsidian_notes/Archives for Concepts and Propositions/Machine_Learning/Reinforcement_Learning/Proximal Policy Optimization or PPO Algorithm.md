@@ -67,6 +67,7 @@ date of note: 2024-05-12
 - [[Generalized Advantage Estimation or GAE in PPO]]
 - [[Advantage and Advantage Actor Critic or A2C Algorithm]]
 - [[Actor-Critic Algorithm]]
+- [[Group Relative Policy Optimization or GRPO Algorithm]]
 
 >[!info]
 >- *Sharing* parameters ($\theta = \theta_v$) or using separate networks both fit this template.
