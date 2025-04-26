@@ -2,20 +2,34 @@
 tags:
   - concept
   - recommender_system/information_filter
-keywords: 
-topics: 
-name: 
+  - collaborative_filtering
+keywords:
+  - collaborative_filtering
+topics:
+  - recommender_system
+name: Collaborative Filtering
 date of note: 2024-12-08
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Collaborative Filtering
 
+>[!important] Definition
+>**Collaborative Filtering** is a recommendation technique that predicts a user's preferences by analyzing patterns of likes, ratings, or behaviors across many users, 
+>- under the *assumption* that users with *similar past behaviors* will prefer *similar items in the future*.
+
+
+- [[User-Item Preference and Rating for Recommendation]]
+
+>[!important]
+>Instead of relying on the content of the items themselves, collaborative filtering focuses purely on *relationships between users and items*, learning from the structure of **user-item interactions**.
 
 
 ## Explanation
+
+### Key Assumption
 
 >[!important]
 >The key **assumption** is:
