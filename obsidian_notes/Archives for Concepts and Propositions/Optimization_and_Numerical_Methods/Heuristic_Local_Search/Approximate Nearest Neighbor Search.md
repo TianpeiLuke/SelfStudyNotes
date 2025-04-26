@@ -6,6 +6,8 @@ tags:
   - algorithm/tree
   - algorithm/search
   - machine_learning/algorithms
+  - approximate_nearest_neighbor_search
+  - ann_search
 keywords:
   - approximate_nearest_neightbor_search
 topics:

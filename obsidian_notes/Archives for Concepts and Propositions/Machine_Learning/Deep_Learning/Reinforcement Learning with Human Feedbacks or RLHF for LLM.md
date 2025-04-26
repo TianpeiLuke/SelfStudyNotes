@@ -19,10 +19,23 @@ date of note: 2024-10-21
 >[!important]
 >**Name**: Reinforcement Learning with Human Feedbacks or RLHF for LLM
 
+>[!important] Definition
+>**Reinforcement Learning with Human Feedback (RLHF)** is a framework for training models, particularly large language models, by combining *human preferences* with *reinforcement learning* techniques. 
 
 - [[Supervised Fine-Tuning and Preference Alignment for LLM]]
 
 ![[reinforcement_learning_human_feedback.png]]
+
+### Basic Procedure
+
+>[!important]
+>Instead of relying solely on predefined reward functions, **RLHF** 
+>- first *collects human feedback*—typically in the form of preference rankings between model outputs—
+>- and uses this feedback to *train a reward model* that approximates human judgment. 
+>- The main model is then *fine-tuned* using reinforcement learning 
+>	- (often Proximal Policy Optimization, PPO) to maximize the learned reward signal, 
+>	- aligning the model's behavior more closely with *human values*, intentions, or quality expectations. 
+
 
 ### RLHF Algorithms
 
@@ -32,6 +45,10 @@ date of note: 2024-10-21
 
 
 ## Explanation
+
+>[!info]
+>RLHF enables powerful models to *generalize better* to nuanced tasks where explicit supervision is difficult to define, and it has been foundational in the development of aligned AI systems like ChatGPT.
+
 
 >[!quote]
 >In this paper, we *combine* the **pretraining** advances in natural language processing with **human preference learning**. 

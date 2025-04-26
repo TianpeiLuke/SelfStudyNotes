@@ -21,6 +21,22 @@ date of note: 2024-08-26
 >[!important]
 >**Name**: Constraint Satisfaction Problem or CSP
 
+>[!important] Definition
+>A **Constraint Satisfaction Problem (CSP)** is a mathematical framework where the goal is to find an assignment to a set of variables that satisfies a set of constraints.
+>
+>- *Require*: a set of **variables** $$\mathcal{X} = \{X_1, X_2, \ldots, X_n\}$$
+>- *Require*: a corresponding set of **domains** $$\mathcal{D} = \{D_1, D_2, \ldots, D_n\}$$ where each $D_i$ is the set of possible values for variable $X_i$.
+>- *Require*: a set of **constraints** $\mathcal{C}$ where each constraint $C_k$ involves some subset of variables and specifies allowable combinations of values for those variables.
+>
+>
+>The objective is to find an **assignment**:
+>  $$
+>  \{X_1 = v_1, X_2 = v_2, \ldots, X_n = v_n\}
+>  $$
+>  where $v_i \in D_i$, such that **all constraints are satisfied**:
+>  $$
+>  C_k(v_{i_1}, v_{i_2}, \ldots) = \text{True} \quad \text{for all } C_k \in \mathcal{C}.
+>  $$
 
 
 - [[Backtracking]]
