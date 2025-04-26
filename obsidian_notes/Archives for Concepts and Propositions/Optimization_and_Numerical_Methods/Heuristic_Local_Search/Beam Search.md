@@ -5,6 +5,7 @@ tags:
   - probabilistic_graphical_models/inference
   - algorithm/search
   - algorithm/stochastic_search
+  - beam_search
 keywords:
   - beam_search
   - greedy_decoding

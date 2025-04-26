@@ -4,6 +4,7 @@ tags:
   - machine_learning/models
   - machine_learning/boosting
   - machine_learning/ensemble_methods
+  - gradient_boost
 keywords:
   - gradient_boost
 topics:
