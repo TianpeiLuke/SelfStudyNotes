@@ -36,6 +36,7 @@ date of note: 2024-06-01
 
 
 - [[Contextual Bandit Problem]]
+- [[Linear Contextual Bandit Problem]]
 
 
 

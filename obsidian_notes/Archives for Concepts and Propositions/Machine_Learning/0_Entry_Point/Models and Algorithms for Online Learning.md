@@ -113,6 +113,7 @@ date of note: 2024-07-14
 
 
 - [[Contextual Bandit Problem]]
+- [[Linear Contextual Bandit Problem]]
 
 
 ### Approximate Dynamic Programming

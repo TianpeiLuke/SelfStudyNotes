@@ -38,6 +38,8 @@ date of note: 2024-08-08
 >- In contextual bandits, the learner’s action selection depends on the observed **context** $c_t$ at each round.
 >- Rewards are **context-dependent**, i.e., each arm's reward may vary based on the current context.
 
+^af2210
+
 
 ## Explanation
 
