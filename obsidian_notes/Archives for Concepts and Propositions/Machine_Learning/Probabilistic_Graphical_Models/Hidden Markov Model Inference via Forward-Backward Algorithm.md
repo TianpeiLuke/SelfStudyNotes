@@ -24,6 +24,7 @@ date of note: 2024-05-12
 ![[Hidden Markov Model#^f3f54e]]
 
 - [[Hidden Markov Model]]
+- [[Conditional Random Field]]
 - [[Markov Chain and Markov Process]]
 - [[Markov Transition Kernel and Transition Function]]
 

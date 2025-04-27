@@ -4,6 +4,12 @@ tags:
   - probabilistic_graphical_models/models
   - probabilistic_graphical_models/algorithm
   - probabilistic_graphical_models/inference
+  - Viterbi
+  - viterbi_algorithm
+  - MAP_Inference
+  - maximum_a_posteriori_probability
+  - HMM
+  - viterbi_decoding
 keywords:
   - maximum_a_posteriori_probability
   - hidden_markov_model
@@ -24,6 +30,7 @@ date of note: 2024-09-01
 ![[Hidden Markov Model#^f3f54e]]
 
 - [[Hidden Markov Model]]
+- [[Conditional Random Field]]
 
 
 >[!important] Definition

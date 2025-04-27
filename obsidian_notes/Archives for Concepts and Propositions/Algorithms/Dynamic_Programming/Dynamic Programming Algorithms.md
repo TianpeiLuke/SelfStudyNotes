@@ -9,6 +9,8 @@ tags:
   - optimization/theory
   - algorithm/design_paradigm
   - algorithm/recursion
+  - DP
+  - dynamic_programming
 keywords:
   - dynamic_programming
 topics:
@@ -217,6 +219,9 @@ date of note: 2024-11-19
 
 - [[Max-Product Variable Elimination]]
 - [[Max-Product Belief Propagation for Clique Tree]]
+
+- [[Conditional Random Field]]
+- [[CRF MAP Inference via Viterbi Algorithm]]
 
 - [[Hidden Markov Model]]
 - [[Hidden Markov Model Inference via Forward-Backward Algorithm]]
