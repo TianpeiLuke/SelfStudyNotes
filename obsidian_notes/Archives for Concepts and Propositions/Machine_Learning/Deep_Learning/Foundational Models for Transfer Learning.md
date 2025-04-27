@@ -24,8 +24,23 @@ date of note: 2024-10-21
 >[!important]
 >**Name**: Foundational Models for Transfer Learning
 
+>[!important] Definition
+>**Foundational Models** are large, versatile machine learning models trained on *broad, diverse datasets* at scale, designed to be *adapted* to a *wide range* of *downstream tasks* with minimal task-specific supervision. 
+>- By leveraging massive *pretraining*—often using *self-supervised* or *weakly supervised objectives*—foundational models such as GPT, BERT, CLIP, and DALL-E develop rich *internal representations* that can generalize across domains, modalities, and tasks. 
+
+### Strength
+
+>[!important]
+>The **strength** of *foundational models* lies in the ability to *transfer knowledge* to new applications through **fine-tuning**, **prompting**, or **adaptation**, enabling rapid development of powerful AI systems without retraining from scratch. 
+
 
 - [[Pre-Training and Fine-Tuning Paradigm for Transfer Learning]]
+
+### Challenges
+
+>[!important]
+>However, foundational models also raise **challenges** related to **bias**, **robustness**, **interpretability**, and **societal impact**, given their size, opacity, and broad influence across different use cases.
+
 
 ## Explanation
 
