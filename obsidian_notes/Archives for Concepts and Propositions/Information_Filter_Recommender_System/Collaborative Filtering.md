@@ -3,6 +3,7 @@ tags:
   - concept
   - recommender_system/information_filter
   - collaborative_filtering
+  - CF
 keywords:
   - collaborative_filtering
 topics:
@@ -25,6 +26,14 @@ date of note: 2024-12-08
 
 >[!important]
 >Instead of relying on the content of the items themselves, collaborative filtering focuses purely on *relationships between users and items*, learning from the structure of **user-item interactions**.
+
+### Memory-based Collaborative Filtering
+
+- [[Memory-based Collaborative Filtering]]
+
+### Model-based Collaborative Filtering
+
+- [[Model-based Collaborative Filtering]]
 
 
 ## Explanation

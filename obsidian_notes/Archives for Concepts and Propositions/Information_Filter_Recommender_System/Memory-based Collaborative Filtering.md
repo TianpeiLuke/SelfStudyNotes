@@ -2,6 +2,9 @@
 tags:
   - concept
   - recommender_system/information_filter
+  - collaborative_filtering
+  - memory_based_CF
+  - momory_based_collaborative_filtering
 keywords:
   - memory_based_collaborative_filtering
   - collaborative_filtering
@@ -17,41 +20,35 @@ date of note: 2024-12-08
 >[!important]
 >**Name**: Memory-based Collaborative Filtering
 
+>[!important] Definition
+>**Memory-Based Collaborative Filtering** is a traditional approach to recommendation systems that directly leverages the *user-item interaction* matrix by computing similarities between users or between items to make predictions. 
+>- In **user-based** collaborative filtering, the model recommends items that *similar users* have liked.
+>- In **item-based** collaborative filtering, it recommends *items* similar to those *the user* has already liked. 
 
+- [[User-Item Preference and Rating for Recommendation]]
 
-## Explanation
+>[!info]
+>Similarity is typically measured using metrics such as 
+>- cosine similarity, 
+>- Pearson correlation, 
+>- or adjusted cosine for rating data. 
 
->[!important]
->The key **assumption** is:
-> 
->- “Users who liked *similar items* in the *past* will likely enjoy *similar items* in the *future*.”
+- [[Cosine Similarity and Cosine Distance]]
 
+### User-Based Collaborative Filtering
 
-- [[Ensemble Learning]]
-
-- [[Latent Variable Models]]
-- [[Nonnegative Matrix Factorization]]
-- [[Singular Value Decomposition of Linear Map]]
-
-
-- [[Naive Bayes Model]]
-- [[Multinomial Naive Bayes Model]]
-
-
-## Memory-based Collaborative Filtering
-#### A. **User-Based CF**
-
-- Recommend items to a user **based on other users who are similar**.
-- Example: If Alice and Bob like the same movies, recommend movies that Bob liked to Alice.
+>[!important] Definition
+>Recommend items to a user **based on other users who are similar**.
+> - Example: If Alice and Bob like the same movies, recommend movies that Bob liked to Alice.
     
-#### B. **Item-Based CF**
+### Item-Based Collaborative Filtering
 
-- Recommend items **similar to those the user already liked**.
-- Example: If many users who liked _Movie A_ also liked _Movie B_, recommend _Movie B_.
+>[!important] Definition
+>Recommend items **similar to those the user already liked**.
+> - Example: If many users who liked _Movie A_ also liked _Movie B_, recommend _Movie B_.
 
 
-## Algorithm
-
+### Algorithm
 
 > [!important] Algorithm
 > The **Memory-based Collaborative Filtering (CF)** is described as below
@@ -65,7 +62,21 @@ date of note: 2024-12-08
 > 3. **Aggregate ratings from those users** for items the target user hasn't rated.
 >     
 >     - Usually a weighted average: $$\hat{r}_{u,i} = \frac{\sum_{v \in N(u)} \text{sim}(u,v) \cdot r_{v,i}}{\sum_{v \in N(u)} |\text{sim}(u,v)|}$$​​
-> 1. **Recommend items** with the highest predicted scores.
+> 4. **Recommend items** with the highest predicted scores.
+
+
+
+## Explanation
+
+>[!info]
+>- **Pros**
+>	- Memory-based methods are simple, interpretable, and require *no explicit training phase*
+>- **Cons**
+>	- they can struggle with **scalability**, **sparsity**, and **cold-start** problems in large-scale recommendation settings.
+
+- [[Model-based Collaborative Filtering]]
+
+
 
 
 
