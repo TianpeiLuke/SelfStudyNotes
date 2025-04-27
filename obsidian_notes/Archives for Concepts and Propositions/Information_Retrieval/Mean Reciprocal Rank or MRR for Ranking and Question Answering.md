@@ -5,6 +5,8 @@ tags:
   - natural_language_processing/metric
   - information_retrieval/relevancy_metric
   - information_retrieval/ranking
+  - MRR
+  - mean_reciprocal_rank
 keywords:
   - mean_reciprocal_rank_metric
 topics:

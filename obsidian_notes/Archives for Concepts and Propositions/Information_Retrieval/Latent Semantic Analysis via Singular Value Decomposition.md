@@ -5,6 +5,9 @@ tags:
   - natural_language_processing/topic_models
   - information_retrieval/index
   - natural_language_processing/word_representation
+  - LSA
+  - latent_semantic_analysis
+  - information_retrieval
 keywords:
   - latent_semantic_analysis
 topics:

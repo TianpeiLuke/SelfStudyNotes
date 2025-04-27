@@ -2,6 +2,8 @@
 tags:
   - concept
   - math/topology
+  - compact_set
+  - compactness
 keywords:
   - compact_set
 topics:

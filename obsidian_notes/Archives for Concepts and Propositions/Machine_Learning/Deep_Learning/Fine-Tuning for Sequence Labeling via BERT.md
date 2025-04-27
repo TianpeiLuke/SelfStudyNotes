@@ -4,6 +4,10 @@ tags:
   - deep_learning/large_language_models
   - natural_language_processing/large_language_models
   - natural_language_processing/sequence_labeling
+  - fine_tuning
+  - sequence_labeling
+  - BERT
+  - bidirectional_encoder_representation_from_transformer
 keywords:
   - fine_tuning_bert
   - sequence_labeling

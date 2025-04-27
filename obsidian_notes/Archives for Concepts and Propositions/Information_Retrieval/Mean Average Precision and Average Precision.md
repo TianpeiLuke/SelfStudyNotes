@@ -4,6 +4,7 @@ tags:
   - machine_learning/metrics
   - information_retrieval/relevancy_metric
   - natural_language_processing/metric
+  - mean_average_precision
 keywords:
   - mean_average_precision
   - average_precision

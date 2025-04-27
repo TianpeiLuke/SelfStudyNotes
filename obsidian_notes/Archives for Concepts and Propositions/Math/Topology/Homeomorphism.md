@@ -2,6 +2,9 @@
 tags:
   - concept
   - math/topology
+  - homemorphism
+  - morphism
+  - topology
 keywords:
   - homemorphism
 topics:

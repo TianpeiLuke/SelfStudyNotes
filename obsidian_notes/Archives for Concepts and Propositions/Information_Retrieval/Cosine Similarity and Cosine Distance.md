@@ -5,6 +5,7 @@ tags:
   - machine_learning/models
   - natural_language_processing/sequence_similarity
   - information_retrieval/similarity_metric
+  - cosine_similarity
 keywords:
   - cosine_similarity
   - cosine_distance

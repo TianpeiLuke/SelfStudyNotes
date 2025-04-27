@@ -4,6 +4,8 @@ tags:
   - machine_learning/models
   - probabilistic_graphical_models/representation
   - probabilistic_graphical_models/inference
+  - MAP_Inference
+  - exact_inference
 keywords:
   - bayesian_network
   - statistical_inference

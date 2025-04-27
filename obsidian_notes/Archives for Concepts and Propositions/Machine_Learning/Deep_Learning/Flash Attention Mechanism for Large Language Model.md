@@ -6,6 +6,7 @@ tags:
   - deep_learning/models
   - deep_learning/algorithms
   - deep_learning/hardware_acceleration
+  - flash_attention_mechanism
 keywords:
   - flash_attention
   - large_language_models

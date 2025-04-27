@@ -4,6 +4,8 @@ tags:
   - machine_learning/metrics
   - information_retrieval/relevancy_metric
   - natural_language_processing/metric
+  - interpolated_average_precision
+  - interpolated_precision
 keywords:
   - average_precision
   - interpolated_average_precision

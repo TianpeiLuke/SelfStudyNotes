@@ -2,6 +2,9 @@
 tags:
   - concept
   - information_retrieval/index
+  - inverted_file
+  - inverted_index
+  - inverted_index_retrieval
 keywords:
   - inverted_index_retrieval
   - inverted_file

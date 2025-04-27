@@ -2,6 +2,9 @@
 tags:
   - concept
   - math/topology
+  - topology
+  - open_set
+  - closed_set
 keywords:
   - topology
 topics:

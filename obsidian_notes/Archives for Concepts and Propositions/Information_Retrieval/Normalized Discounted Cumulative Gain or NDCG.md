@@ -4,6 +4,8 @@ tags:
   - machine_learning/metrics
   - information_retrieval/relevancy_metric
   - natural_language_processing/metric
+  - NDCG
+  - normalized_discounted_cumulative_gain
 keywords:
   - cumulative_gain
   - normalized_discounted_cumulative_gain

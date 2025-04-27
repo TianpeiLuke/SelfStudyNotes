@@ -3,6 +3,7 @@ tags:
   - concept
   - natural_language_processing
   - information_retrieval
+  - ColBERT
 keywords:
   - information_retrieval
   - colbert_method

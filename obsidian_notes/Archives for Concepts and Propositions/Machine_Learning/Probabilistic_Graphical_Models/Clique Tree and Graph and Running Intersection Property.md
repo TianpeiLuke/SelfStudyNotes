@@ -5,6 +5,11 @@ tags:
   - probabilistic_graphical_models/representation
   - probabilistic_graphical_models/algorithm
   - math/graph_theory
+  - clique_tree
+  - running_intersection_property
+  - juntion_tree
+  - clique_graph
+  - PGM
 keywords:
   - clique_tree
   - running_intersection_property

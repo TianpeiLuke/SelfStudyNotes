@@ -2,6 +2,9 @@
 tags:
   - concept
   - information_retrieval/index
+  - indexing_retrieval
+  - index_construction
+  - indexing
 keywords:
   - indexing
   - index_construction_information_retrieval

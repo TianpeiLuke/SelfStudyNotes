@@ -3,6 +3,7 @@ tags:
   - concept
   - math/topology
   - math/functional_analysis
+  - continuous_function
 keywords:
   - continuous_function
 topics:

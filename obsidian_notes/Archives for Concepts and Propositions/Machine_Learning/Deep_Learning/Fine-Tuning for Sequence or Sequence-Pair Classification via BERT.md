@@ -5,6 +5,10 @@ tags:
   - natural_language_processing/large_language_models
   - natural_language_processing/sequence_classification
   - natural_language_processing/sequence_pair_classification
+  - sequence_pair_classification
+  - BERT
+  - bidirectional_encoder_representation_from_transformer
+  - fine_tuning
 keywords:
   - fine_tuning_bert
   - sequence_classification
