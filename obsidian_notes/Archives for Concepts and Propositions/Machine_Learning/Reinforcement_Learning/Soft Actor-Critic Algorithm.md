@@ -77,6 +77,45 @@ date of note: 2024-07-13
 - [[Entropy Minimization Algorithm]]
 - [[Kullback-Leibler Divergence]]
 
+### Mermaid Diagram
+
+```mermaid
+flowchart TD
+    Start([Start: Initialize Policy, Q-function, Value Function])
+    
+    subgraph Environment_Interaction
+        State(State Xt)
+        Action(Sample action At using policy pi given Xt)
+        NextState(Observe next state Xt_plus_1 and reward Rt)
+    end
+
+    subgraph Critic_Update
+        QUpdate(Critic update Q-function minimize Bellman error)
+        VUpdate(Critic update Value function minimize value error)
+    end
+
+    subgraph Actor_Update
+        PolicyUpdate(Actor update policy maximize Q and entropy)
+    end
+
+    subgraph Entropy_Term
+        EntropyBonus(Compute entropy bonus alpha times entropy of pi)
+    end
+    
+    Start --> State
+    State --> Action
+    Action --> NextState
+    NextState --> QUpdate
+    NextState --> EntropyBonus
+    QUpdate --> VUpdate
+    EntropyBonus --> PolicyUpdate
+    VUpdate --> PolicyUpdate
+    PolicyUpdate --> State
+
+    PolicyUpdate -->|Convergence| End([End: Output optimal stochastic policy])
+```
+
+
 
 ## Explanation
 

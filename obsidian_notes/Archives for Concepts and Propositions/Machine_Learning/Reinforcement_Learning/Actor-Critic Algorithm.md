@@ -86,6 +86,41 @@ date of note: 2024-05-12
 - [[Policy Gradient Algorithm]]
 - [[Semi-Gradient Temporal Difference]]
 
+### Mermaid Diagram
+
+```mermaid
+flowchart TD
+    Start([Start: Initialize Actor and Critic networks])
+
+    subgraph Environment_Interaction
+        State(State Xt)
+        Action(Sample action At from policy pi given Xt)
+        NextState(Execute action At and observe reward Rt and next state Xt_plus_1)
+    end
+
+    subgraph Critic_Update
+        ComputeTD(Compute TD error delta as Rt plus gamma times value Xt_plus_1 minus value Xt)
+        UpdateCritic(Update Critic network parameters using TD error)
+    end
+
+    subgraph Actor_Update
+        ComputePolicyGradient(Compute policy gradient using TD error as advantage)
+        UpdateActor(Update Actor network parameters to maximize advantage)
+    end
+    
+    Start --> State
+    State --> Action
+    Action --> NextState
+    NextState --> ComputeTD
+    ComputeTD --> UpdateCritic
+    ComputeTD --> ComputePolicyGradient
+    ComputePolicyGradient --> UpdateActor
+    UpdateActor --> State
+
+    UpdateActor -->|Convergence| End([End: Output optimized policy and value function])
+```
+
+
 ### Algorithm for Episodic Task
 
 >[!important] Definition

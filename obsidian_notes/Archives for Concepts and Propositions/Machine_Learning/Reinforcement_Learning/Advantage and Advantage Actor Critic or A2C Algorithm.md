@@ -93,6 +93,40 @@ date of note: 2024-05-12
 >	  $$
 >	- The critic aims to **reduce value estimation error**, allowing better advantage estimates for the actor.
 
+### Mermaid Diagram
+
+```mermaid
+flowchart TD
+    Start([Start: Initialize Actor and Critic networks])
+
+    subgraph Environment_Interaction
+        State(State Xt)
+        Action(Sample action At from policy pi given Xt)
+        NextState(Execute action and observe reward Rt and next state Xt_plus_1)
+    end
+
+    subgraph Critic_Update
+        ComputeTD(Compute TD error delta Rt plus gamma times value Xt_plus_1 minus value Xt)
+        UpdateCritic(Update Critic network by minimizing TD error)
+    end
+
+    subgraph Actor_Update
+        ComputeAdvantage(Use TD error as advantage estimate)
+        UpdateActor(Update Actor network to maximize advantage weighted log probability)
+    end
+    
+    Start --> State
+    State --> Action
+    Action --> NextState
+    NextState --> ComputeTD
+    ComputeTD --> UpdateCritic
+    ComputeTD --> ComputeAdvantage
+    ComputeAdvantage --> UpdateActor
+    UpdateActor --> State
+
+    UpdateActor -->|Convergence| End([End: Output optimal policy and value function])
+```
+
 
 
 ## Explanation
