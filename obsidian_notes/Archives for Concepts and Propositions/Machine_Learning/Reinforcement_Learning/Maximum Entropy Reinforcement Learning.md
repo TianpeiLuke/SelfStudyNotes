@@ -21,6 +21,10 @@ date of note: 2024-07-13
 ![[Policy Gradient Algorithm#^f0d871]]
 
 >[!important] Definition
+>The **Maximum Entropy Reinforcement Learning (MaxEnt RL)** framework augments standard reinforcement learning by *encouraging policies* to maximize both *expected return* and *entropy*, resulting in more stochastic, exploratory, and robust behavior.
+
+
+>[!important] Definition
 >Given 
 >- a *Markov decision process* $$\{T, \mathcal{X}, \mathcal{B}(\mathcal{X}), \mathcal{A}, \mathscr{F}_{\mathcal{A}}\,,\, p_{t}(\cdot|x, a)\,,\, r_{t}(x, a)\},$$
 >- and a *Markov policy* $\pi = (\delta_{1}, \delta_{2} \,{,}\ldots{,}\,)$ where each $\delta_{t}$ is *randomized Markov decision rule* $$\delta_{t}: x \mapsto q_{\delta_{t}(x)}(\cdot) \in \mathscr{P}_{\mathcal{A}},$$
@@ -34,6 +38,8 @@ date of note: 2024-07-13
 >where
 >- the **temperature parameter** $\lambda >0$ determines the relative importance of the entropy term against the reward.
 >	- It controls the *stochasticity* of the optimal policy. 
+
+^4c30b8
 
 - [[Policy Gradient Algorithm]]
 - [[Entropy Minimization Algorithm]]
@@ -49,6 +55,21 @@ date of note: 2024-07-13
 >- Second, the policy can capture **multiple modes** of *near-optimal behavior*. In problem settings where multiple actions seem equally attractive, the policy will **commit equal probability** mass to those actions. 
 >- Lastly, prior work has observed **improved exploration** with this objective (Haarnoja et al., 2017; Schulman et al., 2017a), and in our experiments, we observe that it considerably improves learning speed over state-of-art methods that optimize the conventional RL objective function. 
 >- We can extend the objective to **infinite horizon** problems by introducing a discount factor γ to ensure that the sum of expected rewards and entropies is finite.
+
+
+
+>[!info]
+>Unlike standard reinforcement learning, which solely maximizes the expected sum of rewards, **Maximum Entropy RL** additionally encourages the agent to act as randomly as possible while still being effective.
+>
+>- Intuition:
+>	- Promotes **exploration** by preferring diverse behaviors.
+>	- Avoids premature convergence to suboptimal deterministic policies.
+>	- Encourages robustness in uncertain or multimodal environments.
+>
+>- The stochasticity is quantified via the **entropy** of the policy:
+>  $$
+>  \mathcal{H}(\pi(\cdot|s)) = \mathbb{E}_{a \sim \pi(\cdot|s)}\left[-\log \pi(a|s)\right].
+>  $$
 
 
 ## Soft Actor Critic
