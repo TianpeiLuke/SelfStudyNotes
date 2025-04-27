@@ -5,6 +5,9 @@ tags:
   - information_retrieval/relevancy_metric
   - natural_language_processing/metric
   - statistics/hypothesis_testing
+  - precision
+  - positive_predictive_value
+  - false_discovery_rate
 keywords:
   - positive_predictive_value
   - false_discovery_rate

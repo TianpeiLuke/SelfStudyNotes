@@ -35,8 +35,9 @@ date of note: 2024-12-08
 ### Collaborative Filtering
 
 - [[Collaborative Filtering]]
-- [[Neighborhood-based Collaborative Filtering]]
+- [[Memory-based Collaborative Filtering]]
 - [[Model-based Collaborative Filtering]]
+- [[Neighborhood-based Collaborative Filtering]]
 
 ### Content-based Recommender System
 

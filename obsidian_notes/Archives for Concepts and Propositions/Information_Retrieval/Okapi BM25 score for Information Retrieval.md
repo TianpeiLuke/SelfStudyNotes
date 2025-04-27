@@ -4,6 +4,8 @@ tags:
   - natural_language_processing
   - information_retrieval/relevancy_metric
   - information_retrieval/index
+  - BM25
+  - okapi_BM25_score
 keywords:
   - tf_idf_representation
   - okapi_bm25_score

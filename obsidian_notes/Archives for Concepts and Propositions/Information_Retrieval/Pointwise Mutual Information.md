@@ -2,6 +2,8 @@
 tags:
   - concept
   - natural_language_processing
+  - pointwise_mutual_information
+  - information_retrieval/relevancy_metric
 keywords: 
 topics: 
 name: 
