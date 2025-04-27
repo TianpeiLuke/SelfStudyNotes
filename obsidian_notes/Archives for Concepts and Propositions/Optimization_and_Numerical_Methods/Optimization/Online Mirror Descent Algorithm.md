@@ -4,6 +4,8 @@ tags:
   - optimization/algorithm
   - online_learning/algorithms
   - optimization/convex_optimization
+  - mirror_descent
+  - online_mirror_descent
 keywords:
   - mirror_descent_algorithm
 topics:

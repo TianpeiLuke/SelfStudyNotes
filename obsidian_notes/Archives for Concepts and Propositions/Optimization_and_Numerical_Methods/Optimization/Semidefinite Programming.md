@@ -5,6 +5,8 @@ tags:
   - optimization/theory
   - optimization/algorithm
   - optimization/convex_optimization
+  - SDP
+  - semidefinite_programming
 keywords:
   - semidefinite_programming
   - sdp_optimization

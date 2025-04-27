@@ -5,6 +5,8 @@ tags:
   - reinforcement_learning/algorithm
   - maximum_entropy_learning
   - maximum_entropy_reinforcement_learning
+  - maximum_entropy_learning
+  - maximum_entropy_reinforcement_learning
 keywords:
   - maximum_entropy_learning_reinforcement_learning
 topics:

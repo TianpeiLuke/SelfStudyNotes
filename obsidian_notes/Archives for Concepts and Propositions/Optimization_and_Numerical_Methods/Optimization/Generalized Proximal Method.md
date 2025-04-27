@@ -3,6 +3,7 @@ tags:
   - concept
   - optimization/algorithm
   - optimization/convex_optimization
+  - generalized_proximal_method
 keywords:
   - generalized_proximal_method
 topics:

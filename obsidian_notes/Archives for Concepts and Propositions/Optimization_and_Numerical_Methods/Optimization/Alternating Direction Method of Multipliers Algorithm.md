@@ -3,6 +3,8 @@ tags:
   - concept
   - optimization/algorithm
   - optimization/convex_optimization
+  - ADMM
+  - alternating_direction_method_of_multipliers
 keywords:
   - admm
   - alternating_direction_method_of_multipliers

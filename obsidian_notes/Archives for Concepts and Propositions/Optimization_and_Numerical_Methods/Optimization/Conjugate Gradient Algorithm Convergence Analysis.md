@@ -5,6 +5,8 @@ tags:
   - optimization/theory
   - optimization/convex_optimization
   - numerical_methods/numerical_linear_algebra
+  - conjugate_gradient_algorithm
+  - conjugate_vector_positive_definite
 keywords:
   - conjugate_vector_positive_definite
 topics:

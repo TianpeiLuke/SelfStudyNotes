@@ -5,6 +5,8 @@ tags:
   - optimization/algorithm
   - optimization/convex_optimization
   - numerical_methods/numerical_linear_algebra
+  - quadratic_programming
+  - QP
 keywords:
   - quadratic_programming
 topics:

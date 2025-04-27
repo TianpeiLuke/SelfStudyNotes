@@ -3,6 +3,7 @@ tags:
   - concept
   - optimization/algorithm
   - optimization/convex_optimization
+  - proximal_algorithm
 keywords:
   - proximal_algorithm
 topics:

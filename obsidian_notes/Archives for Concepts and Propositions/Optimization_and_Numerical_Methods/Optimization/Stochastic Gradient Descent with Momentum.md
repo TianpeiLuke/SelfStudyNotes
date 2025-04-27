@@ -4,6 +4,9 @@ tags:
   - optimization/algorithm
   - deep_learning/algorithms
   - optimization/convex_optimization
+  - SGD_momentum
+  - stochastic_gradient_descent_momentum
+  - momentum
 keywords:
   - stochastic_gradient_descent
   - momentum_algorithm

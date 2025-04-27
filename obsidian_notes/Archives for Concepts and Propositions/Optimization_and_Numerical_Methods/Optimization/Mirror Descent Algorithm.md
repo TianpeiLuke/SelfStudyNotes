@@ -3,6 +3,7 @@ tags:
   - concept
   - optimization/algorithm
   - optimization/convex_optimization
+  - mirror_descent
 keywords:
   - mirror_descent_algorithm
 topics:

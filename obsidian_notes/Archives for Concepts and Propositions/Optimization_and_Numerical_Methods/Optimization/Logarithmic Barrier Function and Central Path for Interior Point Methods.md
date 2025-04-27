@@ -5,6 +5,11 @@ tags:
   - optimization/algorithm
   - math/convex_analysis
   - optimization/convex_optimization
+  - log_barrier_method
+  - logarithmic_barrier
+  - IPM
+  - primal_dual_interior_point_method
+  - barrier_method
 keywords:
   - interior_point_method
   - logarithmic_barrier

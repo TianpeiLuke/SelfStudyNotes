@@ -4,6 +4,10 @@ tags:
   - optimization/theory
   - optimization/algorithm
   - optimization/linear_optimization
+  - barrier_method
+  - LP
+  - linear_programming
+  - linear_optimization
 keywords:
   - barrier_method
   - linear_optimization

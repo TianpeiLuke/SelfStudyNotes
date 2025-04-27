@@ -4,6 +4,7 @@ tags:
   - optimization/theory
   - math/convex_analysis
   - optimization/convex_optimization
+  - Lagrange_dual_function
 keywords:
   - lagrangian_function
 topics:

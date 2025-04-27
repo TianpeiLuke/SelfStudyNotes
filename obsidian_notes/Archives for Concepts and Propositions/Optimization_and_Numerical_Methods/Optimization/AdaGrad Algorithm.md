@@ -4,6 +4,8 @@ tags:
   - optimization/algorithm
   - deep_learning/algorithms
   - optimization/convex_optimization
+  - AdaGrad_Algorithm
+  - SGD
 keywords:
   - adagrad_algorithm
   - stochastic_gradient_descent

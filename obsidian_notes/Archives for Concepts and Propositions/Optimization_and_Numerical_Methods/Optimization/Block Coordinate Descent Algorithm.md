@@ -3,6 +3,9 @@ tags:
   - concept
   - optimization/algorithm
   - optimization/convex_optimization
+  - coordinate_descent_algorithm
+  - block_coordinate_descent_algorithm
+  - COD
 keywords:
   - coordinate_descent_algorithm
   - block_coordinate_descent_algorithm

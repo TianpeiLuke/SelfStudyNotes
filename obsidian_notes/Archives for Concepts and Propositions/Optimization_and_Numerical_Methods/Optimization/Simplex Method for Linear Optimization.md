@@ -4,6 +4,10 @@ tags:
   - optimization/theory
   - optimization/algorithm
   - optimization/linear_optimization
+  - simplex_method
+  - linear_programming
+  - linear_optimization
+  - LP
 keywords:
   - simplex_method_linear
   - linear_optimization

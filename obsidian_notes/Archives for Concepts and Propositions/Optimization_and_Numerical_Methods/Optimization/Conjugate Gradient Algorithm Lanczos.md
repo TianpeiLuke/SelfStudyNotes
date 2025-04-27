@@ -5,6 +5,9 @@ tags:
   - numerical_methods/numerical_linear_algebra
   - math/matrix_analysis
   - optimization/convex_optimization
+  - conjugate_gradient_algorithm/lanczos
+  - Lanczos_iteration
+  - CG_Lanczos
 keywords:
   - conjugate_gradient_linear
   - lanczos_iteration

@@ -3,6 +3,8 @@ tags:
   - concept
   - optimization/algorithm
   - optimization/convex_optimization
+  - entropy_minimization
+  - entropy_regularization
 keywords:
   - entropy_minimization
   - entropy_regularization

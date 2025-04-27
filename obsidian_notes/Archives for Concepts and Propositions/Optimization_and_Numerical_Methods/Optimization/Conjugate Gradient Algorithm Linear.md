@@ -4,6 +4,8 @@ tags:
   - optimization/algorithm
   - numerical_methods/numerical_linear_algebra
   - optimization/convex_optimization
+  - conjugate_gradient_algorithm/linear
+  - CG_linear
 keywords:
   - conjugate_vector_positive_definite
   - conjugate_gradient_linear

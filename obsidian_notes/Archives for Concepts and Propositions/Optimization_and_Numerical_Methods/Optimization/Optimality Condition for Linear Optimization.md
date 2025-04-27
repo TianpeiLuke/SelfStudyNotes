@@ -3,6 +3,10 @@ tags:
   - concept
   - optimization/theory
   - optimization/linear_optimization
+  - linear_programming
+  - polyhedral_set
+  - extreme_points
+  - optimal_solution
 keywords:
   - extreme_points
   - polyhedral_set

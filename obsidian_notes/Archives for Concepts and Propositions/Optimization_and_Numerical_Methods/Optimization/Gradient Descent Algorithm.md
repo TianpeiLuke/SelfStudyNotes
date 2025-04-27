@@ -4,6 +4,8 @@ tags:
   - optimization/algorithm
   - optimization/convex_optimization
   - deep_learning/algorithms
+  - gradient_descent_algorithm
+  - GD
 keywords:
   - gradient_descent_algorithm
 topics:

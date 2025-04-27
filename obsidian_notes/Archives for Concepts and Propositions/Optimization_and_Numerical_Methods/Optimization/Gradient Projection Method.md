@@ -3,6 +3,7 @@ tags:
   - concept
   - optimization/algorithm
   - optimization/convex_optimization
+  - gradient_projection_method
 keywords:
   - gradient_projection_method
 topics:

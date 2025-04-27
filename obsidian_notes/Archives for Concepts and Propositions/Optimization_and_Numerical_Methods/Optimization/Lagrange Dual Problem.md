@@ -3,6 +3,8 @@ tags:
   - concept
   - optimization/theory
   - optimization/convex_optimization
+  - Lagrange_dual_function
+  - Lagrange_dual_problem
 keywords:
   - dual_optimization
 topics:

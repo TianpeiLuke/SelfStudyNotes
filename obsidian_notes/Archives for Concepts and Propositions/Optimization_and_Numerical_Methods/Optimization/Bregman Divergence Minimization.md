@@ -3,6 +3,8 @@ tags:
   - concept
   - optimization/algorithm
   - optimization/convex_optimization
+  - Bregman_divergence
+  - Bregman_divergence_minimization
 keywords:
   - bregman_divergence
   - bregman_projection

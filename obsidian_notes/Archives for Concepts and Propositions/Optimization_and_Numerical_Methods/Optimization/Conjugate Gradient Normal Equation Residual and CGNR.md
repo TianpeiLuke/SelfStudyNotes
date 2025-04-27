@@ -3,6 +3,8 @@ tags:
   - concept
   - optimization/algorithm
   - numerical_methods/numerical_linear_algebra
+  - CGNR
+  - conjugate_gradient_normal_equation_residual
 keywords:
   - conjugate_gradient_normal_equation_residual
 topics:

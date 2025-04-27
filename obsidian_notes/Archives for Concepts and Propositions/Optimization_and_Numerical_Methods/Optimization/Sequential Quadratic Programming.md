@@ -4,18 +4,21 @@ tags:
   - optimization/theory
   - optimization/algorithm
   - optimization/convex_optimization
-keywords: 
+  - sequential_quadratic_programming
+  - SQP
+keywords:
+  - sequential_quadratic_programming
 topics:
   - optimization/algorithm
   - optimization/theory
-name: 
+name: Sequential Quadratic Programming
 date of note: 2024-10-06
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Sequential Quadratic Programming
 
 
 

@@ -4,6 +4,10 @@ tags:
   - optimization/theory
   - optimization/algorithm
   - optimization/linear_optimization
+  - IPM
+  - primal_dual_interior_point_method
+  - LP
+  - linear_programming
 keywords:
   - linear_optimization
   - primal_dual_interior_point_method

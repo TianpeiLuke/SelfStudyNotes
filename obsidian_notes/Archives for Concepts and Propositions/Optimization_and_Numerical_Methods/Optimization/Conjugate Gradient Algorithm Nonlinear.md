@@ -3,6 +3,8 @@ tags:
   - concept
   - optimization/algorithm
   - optimization/convex_optimization
+  - conjugate_gradient_algorithm/nonlinear
+  - CG_nonlinear
 keywords:
   - conjugate_gradient_nonlinear
 topics:

@@ -3,6 +3,7 @@ tags:
   - concept
   - optimization/algorithm
   - optimization/convex_optimization
+  - trust_region_method
 keywords: 
 topics:
   - optimization

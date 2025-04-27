@@ -5,6 +5,8 @@ tags:
   - optimization/convex_optimization
   - numerical_methods/numerical_linear_algebra
   - statistics/inference
+  - normal_equation
+  - Newton_system_of_equations
 keywords:
   - normal_equation_least_square
   - netwon_system_equations

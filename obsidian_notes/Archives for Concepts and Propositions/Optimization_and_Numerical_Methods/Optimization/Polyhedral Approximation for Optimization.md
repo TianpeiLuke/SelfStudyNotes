@@ -4,6 +4,9 @@ tags:
   - optimization/algorithm
   - optimization/convex_optimization
   - optimization/linear_optimization
+  - polyhedral_approximation
+  - convex_programming
+  - convex_function
 keywords:
   - polyhedral_approximation
   - convex_function

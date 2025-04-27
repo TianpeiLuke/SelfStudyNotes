@@ -4,6 +4,10 @@ tags:
   - optimization/convex_optimization
   - optimization/theory
   - numerical_methods/numerical_linear_algebra
+  - KKT_matrix
+  - KKT_system
+  - Karush_Kuhn_Tucker_condition
+  - KKT_condition
 keywords:
   - kkt_system
   - kkt_matrix

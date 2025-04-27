@@ -3,6 +3,8 @@ tags:
   - concept
   - optimization/algorithm
   - optimization/convex_optimization
+  - MM_algorithm
+  - Majorization-minimization
 keywords:
   - majorization_minimization
 topics:

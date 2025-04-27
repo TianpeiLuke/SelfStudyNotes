@@ -3,6 +3,7 @@ tags:
   - concept
   - optimization/algorithm
   - optimization/convex_optimization
+  - Newton_method
 keywords:
   - newton_algorithm
 topics:

@@ -3,6 +3,8 @@ tags:
   - concept
   - optimization/algorithm
   - optimization/theory
+  - Newton_Lanczos_method
+  - inexact_Newton_method
 keywords:
   - inexact_newton_method
   - newton_lanczos

@@ -5,6 +5,8 @@ tags:
   - optimization/theory
   - optimization/algorithm
   - optimization/convex_optimization
+  - second_order_cone_programming
+  - SOCP
 keywords:
   - second_order_cone_programming
 topics:

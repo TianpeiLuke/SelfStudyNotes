@@ -3,6 +3,8 @@ tags:
   - concept
   - optimization/algorithm
   - optimization/convex_optimization
+  - quasi_Newton_method
+  - secant_equation
 keywords:
   - gradient_descent_algorithm
   - line_search

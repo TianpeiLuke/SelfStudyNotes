@@ -3,6 +3,8 @@ tags:
   - concept
   - optimization/algorithm
   - optimization/convex_optimization
+  - augmented_lagrangian_algorithm
+  - augmented_lagrangian_function
 keywords:
   - augmented_lagrangian_function
 topics:
