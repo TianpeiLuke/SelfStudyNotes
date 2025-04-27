@@ -31,6 +31,21 @@ date of note: 2024-07-07
 >- **missing modality handling**, 
 >- and **cross-modal interactions** to fully leverage the shared and unique information contained in each modality.
 
+### Compare Multi-view and Multi-modal Learning
+
+| Aspect                 | **Multi-View Learning**                                                                                | **Multi-Modal Learning**                                                                       |
+| ---------------------- | ------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------- |
+| **Definition**         | Learning from multiple _feature sets_ (views) that describe the same instance                          | Learning from multiple _modalities_ (different data types) that together describe the instance |
+| **Nature of Input**    | Different *representations* of the *same* data type                                                    | Different types of data (e.g., image, text, audio)                                             |
+| **Example**            | Two sets of handcrafted features extracted from the same image                                         | An image and its associated text description                                                   |
+| **Goal**               | Exploit *redundancy* and *complementary* information among views to improve learning                   | *Fuse heterogeneous signals* to capture richer representations across modalities               |
+| **Typical Assumption** | All views describe the *same underlying object* and are aligned (e.g., co-occurring)                   | Modalities may vary widely in structure, scale, and semantic meaning                           |
+| **Common Techniques**  | Co-training, Canonical Correlation Analysis (CCA), multi-view deep networks                            | Cross-modal transformers, multi-modal fusion, attention over modalities                        |
+| **Challenges**         | *Aligning* feature spaces, handling missing views                                                      | *Bridging* modality gaps, balancing contributions from heterogeneous modalities                |
+| **Applications**       | Web page classification (text + link graph view), sensor fusion with multiple sensors of the same type | Visual question answering (image + text), video understanding (audio + video frames)           |
+
+- [[Multi-view Learning]]
+
 
 
 

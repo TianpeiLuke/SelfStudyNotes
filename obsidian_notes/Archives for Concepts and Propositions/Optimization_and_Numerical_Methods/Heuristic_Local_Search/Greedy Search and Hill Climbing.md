@@ -81,7 +81,7 @@ date of note: 2024-08-25
 - [[Gradient Descent Algorithm]]
 
 - [[Tabu Search]]
-- [[Nelder–Mead Simplex Method]]
+- [[Nelder-Mead Simplex Method]]
 
 - [[Introduction to Algorithms by Cormen]]
 - [[Algorithm Design Manual by Skiena]]

@@ -11,14 +11,14 @@ topics:
   - optimization/algorithm
   - heuristic_search
   - algorithm/search
-name: Nelder–Mead Simplex Method
+name: Nelder-Mead Simplex Method
 date of note: 2024-08-24
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Nelder–Mead Simplex Method
+>**Name**: Nelder-Mead Simplex Method
 
 
 ### Algorithm

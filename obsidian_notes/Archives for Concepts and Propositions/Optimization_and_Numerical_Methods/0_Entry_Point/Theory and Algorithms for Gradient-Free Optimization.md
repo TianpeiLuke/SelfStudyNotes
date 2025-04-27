@@ -41,7 +41,7 @@ date of note: 2024-08-24
 - [[Greedy Search and Hill Climbing]]
 - [[Random Restart Hill Climbing]]
 - [[Tabu Search]]
-- [[Nelder–Mead Simplex Method]]
+- [[Nelder-Mead Simplex Method]]
 
 
 - [[A-star Heuristic Search]]

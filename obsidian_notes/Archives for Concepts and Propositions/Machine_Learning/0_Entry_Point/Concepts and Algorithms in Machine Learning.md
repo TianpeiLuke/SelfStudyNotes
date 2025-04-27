@@ -287,6 +287,9 @@ date of note: 2024-06-01
 #### Multi-Modal Learning
 
 - [[Multi-Modal Learning]]
+
+#### Multi-View Learning
+
 - [[Multi-view Learning]]
 
 #### Multi-Task Learning
