@@ -4,6 +4,9 @@ tags:
   - machine_learning/models
   - deep_learning/discriminative_models
   - deep_learning/architecture
+  - convolutional_neural_network
+  - cnn
+  - CNN
 keywords:
   - convolutional_neural_network
   - convolutional_filter

@@ -4,6 +4,9 @@ tags:
   - machine_learning/models
   - machine_learning/theory
   - machine_learning/classification
+  - kNN
+  - k_nearest_neighbor
+  - k_nearest_neighbor_classification
 keywords:
   - k_nearest_neighbor
   - k_nearest_neighbor_classification

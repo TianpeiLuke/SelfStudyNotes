@@ -4,12 +4,17 @@ tags:
   - machine_learning/models
   - probabilistic_graphical_models/models
   - machine_learning/dimensionality_reduction
+  - ICA
+  - independent_component_analysis
+  - dimensionality_reduction
 keywords:
   - dimensionality_reduction
+  - ICA
+  - independent_component_analysis
 topics:
   - probabilistic_graphical_model
   - machine_learning_models
-name: 
+name: Independent Component Analysis
 date of note: 2024-05-12
 ---
 
@@ -34,7 +39,7 @@ date of note: 2024-05-12
 
 
 - [[Principal Component Analysis]]
-- [[Probabilistic Principle Component Analysis]]
+- [[Probabilistic Principal Component Analysis]]
 - [[Gaussian Random Vector]]
 
 - [[Latent Variable Models]]

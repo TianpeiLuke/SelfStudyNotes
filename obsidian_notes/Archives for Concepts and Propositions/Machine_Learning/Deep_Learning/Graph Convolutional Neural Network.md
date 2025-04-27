@@ -3,6 +3,10 @@ tags:
   - concept
   - machine_learning/models
   - deep_learning/discriminative_models
+  - GNN
+  - deep_learning/graph_models
+  - graph_convolutional_neural_network
+  - GCN
 keywords: 
 topics: 
 name: 

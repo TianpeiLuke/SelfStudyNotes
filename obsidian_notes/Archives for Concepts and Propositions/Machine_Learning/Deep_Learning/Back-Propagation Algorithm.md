@@ -3,6 +3,7 @@ tags:
   - concept
   - machine_learning/algorithms
   - deep_learning/algorithms
+  - back_propagation_algorithm
 keywords:
   - back_propagation_algorithm
   - deep_learning/algorithm

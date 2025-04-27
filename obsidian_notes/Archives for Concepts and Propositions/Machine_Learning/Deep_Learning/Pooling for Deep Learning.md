@@ -3,6 +3,10 @@ tags:
   - concept
   - machine_learning/models
   - deep_learning/discriminative_models
+  - max_pooling
+  - average_pooling
+  - convolutional_neural_network
+  - cnn
 keywords:
   - max_pooling_deep_learning
 topics:

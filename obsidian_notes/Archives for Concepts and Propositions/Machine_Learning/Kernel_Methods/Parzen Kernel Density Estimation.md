@@ -3,6 +3,9 @@ tags:
   - concept
   - machine_learning/density_estimation
   - machine_learning/kernel_methods
+  - parzen_kernel_density_estimation
+  - kde
+  - KDE
 keywords:
   - kernel_density_estimation
   - parzen_density_estimator

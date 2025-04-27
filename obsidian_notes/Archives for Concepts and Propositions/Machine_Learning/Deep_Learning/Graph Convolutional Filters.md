@@ -3,6 +3,7 @@ tags:
   - concept
   - machine_learning/models
   - deep_learning/discriminative_models
+  - deep_learning/graph_models
 keywords: 
 topics: 
 name: 

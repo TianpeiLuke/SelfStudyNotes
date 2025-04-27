@@ -3,6 +3,8 @@ tags:
   - concept
   - reinforcement_learning/algorithm
   - reinforcement_learning/theory
+  - value_network
+  - value_function
 keywords:
   - value_function_approximation
 topics:

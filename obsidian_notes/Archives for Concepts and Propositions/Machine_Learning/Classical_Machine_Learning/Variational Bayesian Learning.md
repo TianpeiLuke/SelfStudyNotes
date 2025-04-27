@@ -6,6 +6,7 @@ tags:
   - probabilistic_graphical_models/models
   - deep_learning/algorithms
   - deep_learning/variational_learning
+  - variational_bayesian_learning
 keywords:
   - expectation_maximization
   - variational_inference
@@ -14,14 +15,14 @@ keywords:
 topics:
   - machine_learning_algorithm
   - machine_learning_models
-name: 
+name: Variational Bayesian Learning
 date of note: 2024-07-23
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Variational Bayesian Learning
 
 
 

@@ -3,6 +3,14 @@ tags:
   - concept
   - machine_learning/models
   - probabilistic_graphical_models/models
+  - GGM
+  - gaussian_graphical_model
+  - sum_product
+  - canonical_form
+  - gaussian_markov_random_field
+  - Gaussian_MRF
+  - MRF
+  - markov_random_field
 keywords:
   - gaussian_graphical_model
   - probabilistic_graphical_model

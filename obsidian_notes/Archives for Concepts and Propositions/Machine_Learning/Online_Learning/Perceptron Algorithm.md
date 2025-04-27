@@ -4,6 +4,8 @@ tags:
   - machine_learning/models
   - deep_learning/discriminative_models
   - online_learning/algorithms
+  - perceptron
+  - perceptron_algorithm
 keywords:
   - perceptron
   - perceptron_algorithm

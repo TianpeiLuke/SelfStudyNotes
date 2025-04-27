@@ -4,6 +4,9 @@ tags:
   - online_learning/theory
   - machine_learning/theory
   - machine_learning/online_learning
+  - weighted_average_algorithm
+  - potential_function_weighted_average_algorithm
+  - exp_concave_loss
 keywords:
   - exp_concave_loss
   - exp_potential

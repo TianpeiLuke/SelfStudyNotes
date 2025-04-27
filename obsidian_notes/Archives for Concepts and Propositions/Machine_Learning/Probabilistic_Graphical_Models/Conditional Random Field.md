@@ -3,16 +3,21 @@ tags:
   - concept
   - machine_learning/models
   - probabilistic_graphical_models/models
-keywords: 
-topics: 
-name: 
+  - CRF
+  - conditional_random_field
+keywords:
+  - CRF
+  - conditional_random_field
+topics:
+  - probabilistic_graphical_model
+name: Conditional Random Field
 date of note: 2024-05-12
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Conditional Random Field
 
 
 - [[Markov Network on Undirected Graph]]

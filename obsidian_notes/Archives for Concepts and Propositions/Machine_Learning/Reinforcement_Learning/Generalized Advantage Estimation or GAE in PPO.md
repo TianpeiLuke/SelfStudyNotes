@@ -6,6 +6,8 @@ tags:
   - ppo
   - reinforcement_learning/algorithm
   - deep_learning/large_language_models
+  - gae
+  - generalized_advantage_estimation
 keywords:
   - reinforcement_learning
   - proximal_gradient_algorithm

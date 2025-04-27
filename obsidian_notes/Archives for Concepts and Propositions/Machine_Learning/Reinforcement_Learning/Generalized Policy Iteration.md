@@ -3,6 +3,7 @@ tags:
   - concept
   - reinforcement_learning/theory
   - reinforcement_learning/algorithm
+  - generalized_policy_iteration
 keywords:
   - generalized_policy_iteration
 topics:

@@ -3,6 +3,9 @@ tags:
   - concept
   - machine_learning/algorithms
   - reinforcement_learning/algorithm
+  - off_policy_temporal_difference_control
+  - off_policy_learning
+  - q_learning_algorithm
 keywords:
   - q_learning
   - off_policy_learning

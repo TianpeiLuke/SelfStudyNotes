@@ -4,6 +4,9 @@ tags:
   - deep_learning/discriminative_models
   - deep_learning/models
   - deep_learning/sequential_networks
+  - rnn
+  - recurrent_neural_network
+  - RNN
 keywords:
   - recurrent_network
   - rnn

@@ -3,6 +3,8 @@ tags:
   - concept
   - machine_learning/models
   - machine_learning/clustering
+  - k_mean_clustering
+  - unsupervised_learning
 keywords:
   - k_means_clustering
   - unsupervised_learning

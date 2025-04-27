@@ -5,6 +5,7 @@ tags:
   - online_learning/algorithms
   - reinforcement_learning/bandit
   - multi_arm_bandit
+  - adversarial_bandit
 keywords:
   - multi_arm_bandit
   - reinforcement_learning

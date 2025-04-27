@@ -3,6 +3,7 @@ tags:
   - concept
   - machine_learning/models
   - deep_learning/generative_models
+  - normalizing_flow_model
 keywords:
   - normalizing_flow_model
 topics:

@@ -5,6 +5,10 @@ tags:
   - probabilistic_graphical_models/theory
   - probabilistic_graphical_models/models
   - machine_learning/theory
+  - log_partition_function
+  - score_function
+  - PGM
+  - probabilistic_graphical_models
 keywords:
   - log_partition_function
   - score_function

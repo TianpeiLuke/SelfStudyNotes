@@ -4,6 +4,7 @@ tags:
   - machine_learning/algorithms
   - deep_learning/algorithms
   - deep_learning/regularization
+  - weight_decay
 keywords: 
 topics: 
 name: 

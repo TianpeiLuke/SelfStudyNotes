@@ -5,6 +5,11 @@ tags:
   - deep_learning/sequential_networks
   - deep_learning/models
   - deep_learning/architecture
+  - LSTM
+  - lstm_network
+  - long-term_memory
+  - short-term_memory
+  - long_short_term_memory
 keywords:
   - lstm_network
   - long_short_term_memory

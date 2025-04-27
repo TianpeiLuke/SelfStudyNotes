@@ -4,6 +4,10 @@ tags:
   - deep_learning/models
   - deep_learning/large_language_models
   - natural_language_processing/large_language_models
+  - reinforcement_learning_with_human_feedbacks
+  - rlhf_llm
+  - rlhf
+  - RLHF
 keywords:
   - reinforcement_learning_with_human_feedbacks
   - rlhf_llm

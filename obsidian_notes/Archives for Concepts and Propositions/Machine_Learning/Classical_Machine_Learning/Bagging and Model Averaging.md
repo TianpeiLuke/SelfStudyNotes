@@ -3,6 +3,8 @@ tags:
   - concept
   - machine_learning/ensemble_methods
   - machine_learning/theory
+  - bagging
+  - model_averaging
 keywords:
   - bagging_ml
   - model_averaging_ml

@@ -86,11 +86,11 @@ date of note: 2024-07-07
 
 ### Multi-Task Learning
 
-- [[Muti-Task Learning]]
+- [[Multi-Task Learning]]
 
 ### Multi-View Learning
 
-- [[Multi-view Learning]]
+- [[Multi-View Learning]]
 
 
 

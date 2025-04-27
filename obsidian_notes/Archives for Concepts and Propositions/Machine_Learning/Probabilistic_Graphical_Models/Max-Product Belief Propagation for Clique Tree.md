@@ -5,6 +5,8 @@ tags:
   - probabilistic_graphical_models/models
   - probabilistic_graphical_models/algorithm
   - probabilistic_graphical_models/inference
+  - max_product_belief_propagation
+  - message_passing
 keywords:
   - max_product
   - message_passing

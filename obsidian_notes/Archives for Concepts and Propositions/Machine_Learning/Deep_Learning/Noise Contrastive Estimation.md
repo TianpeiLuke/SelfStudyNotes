@@ -4,6 +4,9 @@ tags:
   - deep_learning/algorithms
   - machine_learning/noise_tolerate_learning
   - deep_learning/representation_learning
+  - noise_contrastive_estimation
+  - NCE
+  - representation_learning
 keywords:
   - noise_contrastive_estimation
   - representation_learning

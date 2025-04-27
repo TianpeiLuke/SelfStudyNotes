@@ -3,16 +3,22 @@ tags:
   - concept
   - machine_learning/algorithms
   - reinforcement_learning
-keywords: 
-topics: 
-name: 
+  - actor_critic_algorithm
+  - actor_critic_eligibility_algorithm
+  - reinforcement_learning/algorithm
+keywords:
+  - actor_critic_algorithm
+  - actor_critic_eligibility_algorithm
+topics:
+  - reinforcement_learning/algorithm
+name: Actor-Critic Algorithm with Eligibility Traces
 date of note: 2024-05-12
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Actor-Critic Algorithm with Eligibility Traces
 
 
 

@@ -4,6 +4,8 @@ tags:
   - machine_learning/algorithms
   - reinforcement_learning/theory
   - reinforcement_learning/algorithm
+  - policy_gradient_algorithm
+  - policy_gradient_theorem
 keywords:
   - policy_gradient_theorem
 topics:

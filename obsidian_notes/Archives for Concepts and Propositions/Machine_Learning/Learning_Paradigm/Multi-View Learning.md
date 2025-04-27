@@ -7,14 +7,14 @@ keywords:
   - multi-view_learning
 topics:
   - machine_learning_paradigm
-name: Multi-view Learning
+name: Multi-View Learning
 date of note: 2024-09-09
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Multi-view Learning
+>**Name**: Multi-View Learning
 
 >[!important] Definition
 >**Multi-View Learning** is a machine learning paradigm where the model learns from *multiple distinct but complementary views* of the same data, aiming to *exploit the redundancy* and *diversity* across views to improve learning performance. 

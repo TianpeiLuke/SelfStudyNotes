@@ -5,6 +5,8 @@ tags:
   - probabilistic_graphical_models/models
   - machine_learning/dimensionality_reduction
   - machine_learning/latent_variable_model
+  - PPCA
+  - probabilistic_principal_component_analysis
 keywords:
   - principle_component_analysis
   - probabilistic_principle_component_analysis
@@ -19,7 +21,7 @@ date of note: 2024-09-04
 ## Concept Definition
 
 >[!important]
->**Name**: Probabilistic Principle Component Analysis
+>**Name**: Probabilistic Principal Component Analysis
 
 >[!important] Definition
 >The **probabilistic principle component analysis (PPCA)** considers the following *factor analysis* model

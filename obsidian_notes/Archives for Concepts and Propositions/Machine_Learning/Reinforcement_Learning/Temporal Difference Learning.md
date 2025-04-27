@@ -4,6 +4,7 @@ tags:
   - machine_learning/algorithms
   - reinforcement_learning/algorithm
   - reinforcement_learning/theory
+  - temporal_difference_learning
 keywords:
   - temporal_difference_learning
 topics:

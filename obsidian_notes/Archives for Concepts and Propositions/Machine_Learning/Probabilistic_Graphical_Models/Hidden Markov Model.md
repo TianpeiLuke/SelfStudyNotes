@@ -4,8 +4,11 @@ tags:
   - machine_learning/models
   - probabilistic_graphical_models/models
   - probabilistic_graphical_models/sequential_models
+  - HMM
+  - hidden_markov_model
 keywords:
   - hidden_markov_model
+  - HMM
 topics:
   - probabilistic_graphical_model
   - machine_learning_models

@@ -2,6 +2,9 @@
 tags:
   - concept
   - machine_learning/kernel_methods
+  - kernel_mean_embedding
+  - kme
+  - KME
 keywords:
   - kernel_mean_embedding_distribution
 topics:

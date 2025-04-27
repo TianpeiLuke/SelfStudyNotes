@@ -5,6 +5,8 @@ tags:
   - probabilistic_graphical_models/models
   - probabilistic_graphical_models/sequential_models
   - machine_learning/dynamic_system
+  - DBN
+  - dynamic_bayesian_network
 keywords:
   - dynamic_bayesian_network
 topics:

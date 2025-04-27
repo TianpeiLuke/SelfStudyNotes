@@ -3,6 +3,11 @@ tags:
   - concept
   - machine_learning/models
   - probabilistic_graphical_models/theory
+  - D_separation
+  - d_sepration
+  - PGM
+  - Bayesian_Network
+  - bayesian_network
 keywords:
   - d_separation_graphical_model
   - conditional_independence

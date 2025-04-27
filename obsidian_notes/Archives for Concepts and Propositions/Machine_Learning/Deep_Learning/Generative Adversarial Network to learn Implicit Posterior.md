@@ -4,6 +4,9 @@ tags:
   - machine_learning/models
   - deep_learning/generative_models
   - math/game_theory
+  - generative_adversarial_network
+  - gan
+  - conditional_gan
 keywords:
   - generative_adversarial_network
   - conditional_gan

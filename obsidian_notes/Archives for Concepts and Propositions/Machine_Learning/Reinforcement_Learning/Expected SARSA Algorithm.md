@@ -4,6 +4,7 @@ tags:
   - machine_learning/algorithms
   - reinforcement_learning/algorithm
   - reinforcement_learning/theory
+  - expected_sarsa_algorithm
 keywords:
   - expected_sarsa_algorithm
   - temporal_difference_learning

@@ -2,6 +2,8 @@
 tags:
   - concept
   - machine_learning/algorithms
+  - value_iteration
+  - policy_iteration
 keywords: 
 topics: 
 name: 

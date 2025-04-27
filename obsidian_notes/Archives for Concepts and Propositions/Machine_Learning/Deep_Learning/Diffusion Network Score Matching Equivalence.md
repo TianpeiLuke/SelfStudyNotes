@@ -5,6 +5,8 @@ tags:
   - deep_learning/generative_models
   - math/differential_equation
   - math/stochastic_process
+  - score_matching
+  - diffusion_network
 keywords:
   - diffusion_network
   - score_matching

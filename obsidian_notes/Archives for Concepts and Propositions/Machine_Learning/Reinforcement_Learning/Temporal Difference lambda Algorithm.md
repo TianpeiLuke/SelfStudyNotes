@@ -3,6 +3,7 @@ tags:
   - concept
   - reinforcement_learning/algorithm
   - reinforcement_learning/theory
+  - temporal_difference_lambda_algorithm
 keywords:
   - temporal_difference_lambda_learning
   - eligibility_traces

@@ -4,6 +4,7 @@ tags:
   - machine_learning/models
   - probabilistic_graphical_models/theory
   - math/probability
+  - conditional_independence
 keywords:
   - conditional_independence
 topics:

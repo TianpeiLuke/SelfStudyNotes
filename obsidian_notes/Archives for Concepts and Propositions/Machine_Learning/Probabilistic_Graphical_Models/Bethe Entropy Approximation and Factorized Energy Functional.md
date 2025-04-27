@@ -5,6 +5,8 @@ tags:
   - probabilistic_graphical_models/theory
   - probabilistic_graphical_models/algorithm
   - probabilistic_graphical_models/inference
+  - bethe_entropy_approximation
+  - entropy
 keywords:
   - probabilistic_graphical_model
   - bethe_entropy_approximation

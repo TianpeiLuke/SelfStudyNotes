@@ -5,6 +5,9 @@ tags:
   - machine_learning/models
   - machine_learning/algorithms
   - machine_learning/variational_learning
+  - EM_algorithm
+  - EM
+  - exponential_family
 keywords:
   - expectation_maximization
   - exponential_family

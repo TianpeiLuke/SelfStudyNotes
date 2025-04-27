@@ -3,6 +3,10 @@ tags:
   - concept
   - machine_learning/models
   - probabilistic_graphical_models/models
+  - canonical_form
+  - sum_product
+  - PGM
+  - probabilistic_graphical_models
 keywords:
   - gaussian_graphical_model
   - probabilistic_graphical_model
@@ -10,14 +14,14 @@ keywords:
   - canonical_form
 topics:
   - probabilistic_graphical_model
-name: Gaussian Graphical Model
+name: Canonical Form of Gaussian Graphical Model
 date of note: 2024-05-12
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Gaussian Graphical Model
+>**Name**: Canonical Form of Gaussian Graphical Model
 
 >[!quote]
 >the key difference between inference in the continuous and the discrete case is that the factors can no longer be represented as tables. Naively, we might think that we can represent **factors as Gaussians**, but this is *not the case*. The reason is that **linear Gaussian CPDs are generally not Gaussians**, but are rather a conditional distribution. Thus, we need to find a more *general representation* for factors, that accommodates both Gaussian distributions and linear Gaussian models, as well as any combination of these models that might arise during the course of inference.

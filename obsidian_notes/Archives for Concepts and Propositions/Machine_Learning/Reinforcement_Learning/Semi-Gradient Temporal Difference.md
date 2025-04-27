@@ -3,6 +3,7 @@ tags:
   - concept
   - reinforcement_learning/algorithm
   - reinforcement_learning/theory
+  - semi_gradient_temporal_difference
 keywords:
   - semi_gradient_temporal_difference
   - gradient_descent_algorithm

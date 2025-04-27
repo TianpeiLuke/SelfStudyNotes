@@ -3,6 +3,11 @@ tags:
   - concept
   - deep_learning/contrastive_learning
   - deep_learning/representation_learning
+  - infoNCE
+  - information_noise_contrastive_estimation
+  - info_nce_loss
+  - contrastive_learning
+  - representation_learning
 keywords:
   - info_nce_loss
   - contrastive_learning
@@ -221,7 +226,7 @@ date of note: 2024-09-08
 
 ^56fa08
 
-- [[Multi-view Learning]]
+- [[Multi-View Learning]]
 
 ## Applications
 

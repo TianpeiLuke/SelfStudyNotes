@@ -5,6 +5,7 @@ tags:
   - reinforcement_learning/theory
   - statistics/decision_theory
   - math/stochastic_process
+  - markov_decision_process
 keywords:
   - markov_decision_process
   - stochastic_process

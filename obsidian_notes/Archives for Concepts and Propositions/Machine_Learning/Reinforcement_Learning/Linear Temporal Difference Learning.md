@@ -3,6 +3,7 @@ tags:
   - concept
   - reinforcement_learning/algorithm
   - reinforcement_learning/theory
+  - linear_temporal_difference_learning
 keywords:
   - linear_approximation_value_function
   - linear_td

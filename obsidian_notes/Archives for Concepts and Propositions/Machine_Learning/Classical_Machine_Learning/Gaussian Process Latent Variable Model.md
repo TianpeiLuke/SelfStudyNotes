@@ -6,6 +6,9 @@ tags:
   - math/stochastic_process
   - machine_learning/latent_variable_model
   - machine_learning/dimensionality_reduction
+  - GPLVM
+  - gaussian_process_latent_variable_model
+  - gaussian_process
 keywords:
   - gaussian_process
   - gaussian_process_latent_variable_model
@@ -22,9 +25,9 @@ date of note: 2024-05-12
 >[!important]
 >**Name**: Gaussian Process Latent Variable Model
 
-![[Probabilistic Principle Component Analysis#^098ba1]]
+![[Probabilistic Principal Component Analysis#^098ba1]]
 
-![[Probabilistic Principle Component Analysis#^a7df83]]
+![[Probabilistic Principal Component Analysis#^a7df83]]
 
 ### From PPCA to Dual PPCA
 
@@ -63,7 +66,7 @@ date of note: 2024-05-12
 >Note that $(X_{h}, h\in \mathcal{H})$ defined above is a **Gaussian process** with state $h$ as index variable.
 
 - [[Regression Problem]]
-- [[Probabilistic Principle Component Analysis]]
+- [[Probabilistic Principal Component Analysis]]
 - [[Gaussian Process]]
 - [[RKHS of Gaussian Process]]
 
@@ -91,7 +94,7 @@ date of note: 2024-05-12
 ^6c8c67
 
 
-- [[Probabilistic Principle Component Analysis#Maximum Likelihood Estimation for PPCA]]
+- [[Probabilistic Principal Component Analysis#Maximum Likelihood Estimation for PPCA]]
 
 ### Gaussian Process Latent Variable Model as Nonlinear Dual PPCA
 
@@ -167,7 +170,7 @@ date of note: 2024-05-12
 
 ^501d8c
 
-- [[Probabilistic Principle Component Analysis]]
+- [[Probabilistic Principal Component Analysis]]
 
 >[!info]
 >By assuming index/state is *fixed unknown*, we move from **parametric model** to **non-parameteric model** as the model parameter from $$C\in \mathbb{R}^{d\times d} \implies K \in \mathbb{R}^{n\times n}.$$
@@ -182,7 +185,7 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
-- [[Probabilistic Principle Component Analysis]]
+- [[Probabilistic Principal Component Analysis]]
 - [[Gaussian Process]]
 - [[Latent Variable Models]]
 

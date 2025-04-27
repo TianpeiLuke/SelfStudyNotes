@@ -3,6 +3,10 @@ tags:
   - concept
   - machine_learning/online_learning
   - online_learning/algorithms
+  - exponential_weighted_algorithm
+  - exponential_weights
+  - EWA
+  - EWA_algorithm
 keywords:
   - exponential_weightes_algorithm
   - online_learning

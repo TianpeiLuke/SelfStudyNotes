@@ -5,6 +5,8 @@ tags:
   - deep_learning/discriminative_models
   - deep_learning/architecture
   - deep_learning/models
+  - convolutional_filters
+  - convolutional_neural_network
 keywords:
   - convolutional_filter
   - translation_invariance

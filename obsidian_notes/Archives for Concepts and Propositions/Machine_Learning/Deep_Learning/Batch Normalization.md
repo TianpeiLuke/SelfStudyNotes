@@ -4,6 +4,7 @@ tags:
   - machine_learning/algorithms
   - deep_learning/algorithms
   - deep_learning/regularization
+  - batch_normalization
 keywords:
   - batch_normalization
 topics:

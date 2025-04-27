@@ -4,6 +4,9 @@ tags:
   - math/probability
   - machine_learning/models
   - statistics/estimation
+  - exponential_family
+  - PGM
+  - probabilistic_graphical_models
 keywords: 
 topics:
   - machine_learning_models

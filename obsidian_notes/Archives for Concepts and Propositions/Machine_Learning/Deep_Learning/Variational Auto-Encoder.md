@@ -3,6 +3,8 @@ tags:
   - concept
   - machine_learning/models
   - deep_learning/generative_models
+  - variational_auto_encoder
+  - vae
 keywords:
   - variational_inference
   - variational_autoencoder

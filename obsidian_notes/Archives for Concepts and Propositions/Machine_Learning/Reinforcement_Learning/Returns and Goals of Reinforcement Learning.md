@@ -5,6 +5,8 @@ tags:
   - reinforcement_learning/theory
   - statistics/decision_theory
   - math/stochastic_process
+  - return_rl
+  - value_function
 keywords:
   - returns_reinforcement_learning
   - reward_reinforcement_learning

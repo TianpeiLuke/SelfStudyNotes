@@ -6,6 +6,10 @@ tags:
   - probabilistic_graphical_models/algorithm
   - probabilistic_graphical_models/models
   - statistics/concentration_inequality
+  - GraphLasso
+  - graph_lasso
+  - gaussian_graphical_model
+  - GMM
 keywords:
   - graph_lasso
   - inverse_convariance_estimation

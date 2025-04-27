@@ -4,6 +4,7 @@ tags:
   - deep_learning/generative_models
   - diffusion_models
   - latent_space_diffusion_models
+  - latent_diffusion_model
 keywords: 
 topics: 
 name: 

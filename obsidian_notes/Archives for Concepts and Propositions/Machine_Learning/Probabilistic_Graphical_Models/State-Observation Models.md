@@ -3,6 +3,9 @@ tags:
   - concept
   - machine_learning/models
   - probabilistic_graphical_models/sequential_models
+  - state_observation_model
+  - dynamic_bayesian_network
+  - dynamic_system
 keywords:
   - state_observation_model
 topics:

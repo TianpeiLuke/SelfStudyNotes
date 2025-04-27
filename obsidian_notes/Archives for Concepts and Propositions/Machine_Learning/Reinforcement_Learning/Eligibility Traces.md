@@ -5,6 +5,7 @@ tags:
   - reinforcement_learning
   - reinforcement_learning/algorithm
   - reinforcement_learning/theory
+  - eligibility_trace
 keywords:
   - eligibility_traces
 topics:

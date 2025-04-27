@@ -4,6 +4,11 @@ tags:
   - machine_learning/models
   - deep_learning/generative_models
   - math/game_theory
+  - generative_adversarial_network
+  - f_divergence
+  - f_gan
+  - f_generative_adversarial_network
+  - f-GAN
 keywords:
   - generative_adversarial_network
   - f_divergence

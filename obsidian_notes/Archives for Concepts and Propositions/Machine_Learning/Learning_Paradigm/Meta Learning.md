@@ -21,7 +21,7 @@ date of note: 2024-07-07
 >- A common way to do this is to provide the **meta-learner** with a set of datasets from *different distributions*.
 >- Whereas *multitask learning* aims to make predictions for a *fixed* set of tasks, the aim of **meta-learning** is to make predictions for *future tasks* that were *not seen* during training.
 
-- [[Muti-Task Learning]]
+- [[Multi-Task Learning]]
 - [[Transfer Learning]]
 - [[Domain Adaptation]]
 - [[Continual Learning]]

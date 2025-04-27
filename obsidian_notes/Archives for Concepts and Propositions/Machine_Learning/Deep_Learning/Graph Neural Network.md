@@ -3,6 +3,9 @@ tags:
   - concept
   - machine_learning/models
   - deep_learning/generative_models
+  - graph_neural_network
+  - GNN
+  - deep_learning/graph_models
 keywords: 
 topics: 
 name: 

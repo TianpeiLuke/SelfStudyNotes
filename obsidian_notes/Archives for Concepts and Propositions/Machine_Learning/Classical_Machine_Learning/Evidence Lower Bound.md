@@ -6,8 +6,11 @@ tags:
   - deep_learning/discriminative_models
   - machine_learning/latent_variable_model
   - deep_learning/variational_learning
+  - ELBO
+  - evidence_lower_bound
 keywords:
   - evidence_lower_bound
+  - ELBO
 topics:
   - machine_learning_models
   - machine_learning_theory

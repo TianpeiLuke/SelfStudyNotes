@@ -5,6 +5,8 @@ tags:
   - machine_learning/algorithms
   - deep_learning/algorithms
   - deep_learning/models
+  - logistic_regression
+  - LR
 keywords:
   - logistic_regression
 topics:

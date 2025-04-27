@@ -3,6 +3,8 @@ tags:
   - concept
   - machine_learning/kernel_methods
   - machine_learning/dimensionality_reduction
+  - kernel_principal_component_analysis
+  - kpca
 keywords:
   - kernel_pca
   - principle_component_analysis
@@ -151,7 +153,7 @@ date of note: 2024-11-05
 
 
 
-- [[Probabilistic Principle Component Analysis]]
+- [[Probabilistic Principal Component Analysis]]
 
 - [[Spectral Theorem in Projection-Valued Measure Form]]
 

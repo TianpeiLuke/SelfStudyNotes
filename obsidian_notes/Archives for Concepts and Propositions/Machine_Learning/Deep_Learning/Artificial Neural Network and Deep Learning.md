@@ -3,6 +3,8 @@ tags:
   - concept
   - machine_learning/models
   - deep_learning/discriminative_models
+  - deep_learning
+  - artificial_neural_network
 keywords:
   - artificial_neural_network
   - deep_learning

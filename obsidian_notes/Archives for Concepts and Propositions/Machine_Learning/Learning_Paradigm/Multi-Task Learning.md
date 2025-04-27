@@ -8,14 +8,14 @@ keywords:
   - multi-task_learning
 topics:
   - machine_learning_strategy
-name: Muti-Task Learning
+name: Multi-Task Learning
 date of note: 2024-11-29
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Muti-Task Learning
+>**Name**: Multi-Task Learning
 
 >[!important] Definition
 >**Multi-Task Learning (MTL)** is a machine learning framework where a single model is trained to perform *multiple related tasks simultaneously*, leveraging *shared representations* to improve generalization across all tasks. 
@@ -42,7 +42,7 @@ date of note: 2024-11-29
 
 - [[Transfer Learning]]
 - [[Multi-Modal Learning]]
-- [[Multi-view Learning]]
+- [[Multi-View Learning]]
 - [[Large Language Model and Pretrained Language Models]]
 
 

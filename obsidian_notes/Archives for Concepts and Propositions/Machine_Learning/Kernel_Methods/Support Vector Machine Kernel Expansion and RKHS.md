@@ -4,6 +4,11 @@ tags:
   - machine_learning/models
   - machine_learning/theory
   - machine_learning/kernel_methods
+  - support_vector_machine
+  - kernel_svm
+  - kernel_support_vector_machine
+  - reproducing_kernel_hilbert_space
+  - RKHS
 keywords:
   - support_vector_machine
   - kernel_trick

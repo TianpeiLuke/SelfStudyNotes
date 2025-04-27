@@ -37,7 +37,7 @@ date of note: 2024-05-12
 
 - [[Nonnegative and Positive Matrix]]
 - [[Principal Component Analysis]]
-- [[Probabilistic Principle Component Analysis]]
+- [[Probabilistic Principal Component Analysis]]
 - [[Gaussian Random Vector]]
 
 - [[Latent Variable Models]]

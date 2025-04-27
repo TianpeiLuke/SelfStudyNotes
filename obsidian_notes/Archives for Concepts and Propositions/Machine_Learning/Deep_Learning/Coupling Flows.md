@@ -3,6 +3,10 @@ tags:
   - concept
   - machine_learning/models
   - deep_learning/generative_models
+  - coupling_flow
+  - normalizing_flow_model
+  - global_flow_smooth_manifold
+  - local_flow_smooth_manifold
 keywords:
   - normalizing_flow_model
   - coupling_flow

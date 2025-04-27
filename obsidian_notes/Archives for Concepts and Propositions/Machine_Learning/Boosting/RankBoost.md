@@ -4,6 +4,7 @@ tags:
   - machine_learning/boosting
   - rank_boost
   - learning_to_rank
+  - RankBoost
 keywords:
   - rank_boost
   - learning_to_rank

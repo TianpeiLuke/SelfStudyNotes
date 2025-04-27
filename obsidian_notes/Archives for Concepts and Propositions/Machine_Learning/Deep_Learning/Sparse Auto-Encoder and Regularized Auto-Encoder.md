@@ -62,7 +62,7 @@ date of note: 2024-05-12
 - [[Artificial Neural Network and Deep Learning]]
 
 - [[Principal Component Analysis]]
-- [[Probabilistic Principle Component Analysis]]
+- [[Probabilistic Principal Component Analysis]]
 - [[Factor Analysis]]
 
 

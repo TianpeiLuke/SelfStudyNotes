@@ -5,6 +5,7 @@ tags:
   - machine_learning/theory
   - machine_learning/models
   - deep_learning/architecture
+  - margin_based_loss_function
 keywords:
   - margin_based_loss
 topics:

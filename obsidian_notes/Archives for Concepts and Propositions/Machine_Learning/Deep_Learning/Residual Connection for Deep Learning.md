@@ -4,6 +4,8 @@ tags:
   - machine_learning/algorithms
   - deep_learning/algorithms
   - deep_learning/regularization
+  - residual_connections
+  - residual_neural_network
 keywords:
   - residual_connection
   - residual_network

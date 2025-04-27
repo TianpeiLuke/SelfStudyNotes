@@ -4,6 +4,9 @@ tags:
   - machine_learning/algorithms
   - deep_learning/algorithms
   - deep_learning/regularization
+  - dropout
+  - dropout_deep_learning
+  - ensemble_learning
 keywords:
   - dropout_deep_learning
   - ensemble_method

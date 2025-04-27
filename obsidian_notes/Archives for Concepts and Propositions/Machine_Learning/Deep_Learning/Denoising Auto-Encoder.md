@@ -4,6 +4,8 @@ tags:
   - machine_learning/models
   - deep_learning/generative_models
   - deep_learning/representation_learning
+  - denoising_auto_encoder
+  - DAE
 keywords:
   - autoencoder
   - representation_learning
@@ -95,7 +97,7 @@ date of note: 2024-05-12
 - [[Artificial Neural Network and Deep Learning]]
 
 - [[Principal Component Analysis]]
-- [[Probabilistic Principle Component Analysis]]
+- [[Probabilistic Principal Component Analysis]]
 - [[Factor Analysis]]
 
 - [[Denoising Diffusion Probabilistic Models and Diffusion Network]]

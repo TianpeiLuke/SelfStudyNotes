@@ -8,6 +8,7 @@ tags:
   - probabilistic_graphical_models/sequential_models
   - denoising_diffusion_probabilistic_model
   - ddpm
+  - DDPM
 keywords:
   - denoising_diffusion_probabilistic_models
   - ddpm

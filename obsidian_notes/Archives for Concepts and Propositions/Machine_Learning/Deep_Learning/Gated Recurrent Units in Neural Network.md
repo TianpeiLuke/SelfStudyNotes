@@ -5,6 +5,9 @@ tags:
   - deep_learning/architecture
   - deep_learning/sequential_networks
   - deep_learning/models
+  - gru
+  - gated_recurrent_neural_network
+  - GRU
 keywords:
   - gru
   - gated_recurrent_neural_network

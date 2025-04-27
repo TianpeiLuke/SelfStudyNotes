@@ -3,6 +3,9 @@ tags:
   - concept
   - reinforcement_learning/theory
   - reinforcement_learning/algorithm
+  - value_function
+  - bellman_equation
+  - markov_decision_process
 keywords:
   - value_function_reinforcement_learning
   - bellman_equation

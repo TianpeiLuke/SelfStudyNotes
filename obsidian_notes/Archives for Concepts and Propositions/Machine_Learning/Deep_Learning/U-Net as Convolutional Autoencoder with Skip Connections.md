@@ -4,6 +4,7 @@ tags:
   - machine_learning/models
   - deep_learning/discriminative_models
   - deep_learning/architecture
+  - u_net
 keywords:
   - convolutional_neural_network
   - convolutional_filter

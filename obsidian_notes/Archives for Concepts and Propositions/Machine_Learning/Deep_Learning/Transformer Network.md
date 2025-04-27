@@ -7,6 +7,11 @@ tags:
   - deep_learning/models
   - natural_language_processing/large_language_models
   - deep_learning/large_language_models
+  - transformers
+  - transformer_network
+  - multi_head_attention
+  - self_attention_network
+  - attention_mechanism
 keywords:
   - transformer_network
   - attention_network

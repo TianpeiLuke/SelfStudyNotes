@@ -3,6 +3,8 @@ tags:
   - concept
   - reinforcement_learning/theory
   - reinforcement_learning/algorithm
+  - finite_horizon_task
+  - infinite_horizon_task
 keywords:
   - finite_horizon_task_mdp
   - infinite_horizon_task_mdp

@@ -3,6 +3,8 @@ tags:
   - concept
   - reinforcement_learning/algorithm
   - reinforcement_learning/theory
+  - multi_step_return
+  - multi_step_temporal_difference_learning
 keywords:
   - multi_step_temporal_difference_learning
   - temporal_difference_learning

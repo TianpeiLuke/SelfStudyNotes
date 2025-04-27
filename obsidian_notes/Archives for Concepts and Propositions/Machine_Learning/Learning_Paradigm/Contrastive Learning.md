@@ -95,7 +95,7 @@ date of note: 2024-07-07
 
 ### Multiview Representation Learning
 
-- [[Multi-view Learning]]
+- [[Multi-View Learning]]
 
 >[!quote]
 >The members of positive and negative pairs do not necessarily have to come from the same data modality. In **contrastive-language image pretraining**, or **CLIP** (Radford et al., 2021), a positive pair consists of an image and its corresponding text caption, and two separate functions, one for each modality, are used to map the inputs to the same representation space. *Negative pairs* are then *mismatched images and captions*. This is often referred to as **weakly supervised**, as it relies on captioned images, which are often easier to obtain by scraping data from the internet than by manually labelling images with their classes.

@@ -4,6 +4,9 @@ tags:
   - deep_learning/architecture
   - machine_learning/theory
   - math/information_theory
+  - cross_entropy_loss
+  - maximum_entropy_learning
+  - maximum_likelihood_estimation
 keywords:
   - cross_entropy_loss
 topics:

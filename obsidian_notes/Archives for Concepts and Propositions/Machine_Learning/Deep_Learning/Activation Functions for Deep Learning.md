@@ -3,6 +3,10 @@ tags:
   - concept
   - machine_learning/models
   - deep_learning/architecture
+  - activation_functions
+  - sigmoid_functions
+  - rectified_linear_units
+  - relu_functions
 keywords:
   - activation_function
   - deep_learning

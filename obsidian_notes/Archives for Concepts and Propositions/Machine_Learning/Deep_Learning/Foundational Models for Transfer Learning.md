@@ -3,16 +3,26 @@ tags:
   - concept
   - deep_learning/architecture
   - deep_learning/models
-keywords: 
-topics: 
-name: 
+  - foundational_models
+  - deep_learning/large_language_models
+  - natural_language_processing/large_language_models
+  - machine_learning/transfer_learning
+  - transfer_learning
+keywords:
+  - foundational_models
+  - transfer_learning
+topics:
+  - deep_learning/generative_models
+  - deep_learning/large_language_models
+  - natural_language_processing/large_language_models
+name: Foundational Models for Transfer Learning
 date of note: 2024-10-21
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Foundational Models for Transfer Learning
 
 
 - [[Pre-Training and Fine-Tuning Paradigm for Transfer Learning]]

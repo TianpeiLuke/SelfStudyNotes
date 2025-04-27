@@ -4,6 +4,9 @@ tags:
   - machine_learning/models
   - machine_learning/kernel_methods
   - machine_learning/density_estimation
+  - k_nearest_neighbor
+  - k_nearest_neighbor_density_estimation
+  - knn_density_estimation
 keywords:
   - k_nearest_neighbor
   - k_nearest_neighbor_density_estimation

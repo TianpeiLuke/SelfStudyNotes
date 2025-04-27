@@ -5,16 +5,20 @@ tags:
   - machine_learning/strategy
   - machine_learning/theory
   - machine_learning/ensemble_methods
-keywords: 
-topics: 
-name: 
+  - ensemble_learning
+keywords:
+  - ensemble_method
+topics:
+  - machine_learning_models
+  - machine_learning_strategy
+name: Ensemble Learning
 date of note: 2024-07-29
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Ensemble Learning
 
 
 

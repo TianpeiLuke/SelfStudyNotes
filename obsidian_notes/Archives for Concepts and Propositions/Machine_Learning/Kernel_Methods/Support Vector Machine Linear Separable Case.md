@@ -4,6 +4,7 @@ tags:
   - machine_learning/models
   - machine_learning/kernel_methods
   - math/functional_analysis
+  - support_vector_machine
 keywords:
   - support_vector_machine
 topics:

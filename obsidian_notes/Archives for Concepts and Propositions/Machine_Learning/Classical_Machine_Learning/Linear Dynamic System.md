@@ -5,6 +5,10 @@ tags:
   - statistics/signal_processing
   - probabilistic_graphical_models/sequential_models
   - machine_learning/dynamic_system
+  - SSM
+  - state_space_model
+  - linear_time_invariant_system
+  - linear_dynamic_system
 keywords:
   - state_space_model
   - linear_dynamic_system

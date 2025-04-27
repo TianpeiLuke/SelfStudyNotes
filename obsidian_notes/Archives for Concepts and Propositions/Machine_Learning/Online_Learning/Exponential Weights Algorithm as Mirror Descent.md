@@ -4,6 +4,11 @@ tags:
   - online_learning/theory
   - online_learning/algorithms
   - machine_learning/online_learning
+  - mirror_descent
+  - online_mirror_descent
+  - exponential_weights
+  - exponential_weighted_algorithm
+  - EWA
 keywords:
   - mirror_descent_algorithm
   - exponential_weights_algorithm

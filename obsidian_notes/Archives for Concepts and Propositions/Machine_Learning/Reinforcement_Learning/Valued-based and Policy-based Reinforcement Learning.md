@@ -4,6 +4,8 @@ tags:
   - machine_learning/algorithms
   - reinforcement_learning/theory
   - reinforcement_learning/algorithm
+  - value_iteration
+  - policy_iteration
 keywords:
   - value_based_reinforcement_learning
   - policy_based_reinforcement_learning

@@ -6,6 +6,8 @@ tags:
   - online_learning/algorithms
   - online_learning/theory
   - optimization/convex_optimization
+  - follow_the_leader_algorithm
+  - follow_the_best_expert
 keywords:
   - follow_the_leader
   - follow_the_best_expert

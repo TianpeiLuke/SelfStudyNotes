@@ -4,9 +4,14 @@ tags:
   - deep_learning/generative_models
   - natural_language_processing/large_language_models
   - deep_learning/large_language_models
-keywords: 
-topics: 
-name: 
+  - top_p_sampling
+  - nucleus_sampling
+keywords:
+  - top_p_sampling
+  - nucleus_sampling
+topics:
+  - deep_learning/large_language_models
+name: Top-p Sampling or Nucleus Sampling for Large Language Model Generation
 date of note: 2024-11-24
 ---
 

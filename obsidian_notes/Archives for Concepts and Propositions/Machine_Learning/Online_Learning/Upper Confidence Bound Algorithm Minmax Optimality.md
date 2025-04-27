@@ -3,6 +3,8 @@ tags:
   - concept
   - reinforcement_learning/bandit
   - online_learning/algorithms
+  - upper_confidence_bound_algorithm
+  - UCB_algorithm
 keywords: 
 topics:
   - online_learning

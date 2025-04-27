@@ -3,6 +3,11 @@ tags:
   - concept
   - machine_learning/models
   - probabilistic_graphical_models/models
+  - Bayesian_Network
+  - directed_acyclic_graph
+  - DAG
+  - PGM
+  - probabilistic_graphical_models
 keywords:
   - bayesian_network
   - probabilistic_graphical_model

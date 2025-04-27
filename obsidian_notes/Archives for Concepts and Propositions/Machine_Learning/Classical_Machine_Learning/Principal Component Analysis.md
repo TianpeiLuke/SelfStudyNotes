@@ -5,6 +5,9 @@ tags:
   - probabilistic_graphical_models/models
   - machine_learning/latent_variable_model
   - machine_learning/dimensionality_reduction
+  - PCA
+  - principal_component_analysis
+  - dimensionality_reduction
 keywords:
   - principal_component_analysis
   - dimensionality_reduction
@@ -238,7 +241,7 @@ date of note: 2024-05-12
 ## Probabilistic Principle Component Analysis
 
 - [[Factor Analysis]]
-- [[Probabilistic Principle Component Analysis]]
+- [[Probabilistic Principal Component Analysis]]
 
 
 ## Random Matrix Theory
@@ -262,7 +265,7 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 
-- [[Probabilistic Principle Component Analysis]]
+- [[Probabilistic Principal Component Analysis]]
 - [[Gaussian Random Vector]]
 - [[Factor Analysis]]
 - [[Latent Variable Models]]

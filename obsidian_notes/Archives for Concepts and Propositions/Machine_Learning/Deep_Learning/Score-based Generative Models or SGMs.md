@@ -3,6 +3,8 @@ tags:
   - concept
   - machine_learning/models
   - deep_learning/generative_models
+  - score_based_generative_models
+  - sgm
 keywords: 
 topics: 
 name: 

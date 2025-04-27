@@ -3,6 +3,8 @@ tags:
   - concept
   - reinforcement_learning/bandit
   - online_learning/algorithms
+  - multi_arm_bandit
+  - explore_then_commit_bandit
 keywords:
   - multi_arm_bandit
   - explore_then_commit_bandit

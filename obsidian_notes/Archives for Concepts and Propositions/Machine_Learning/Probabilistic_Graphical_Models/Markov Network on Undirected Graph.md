@@ -4,6 +4,9 @@ tags:
   - machine_learning/models
   - probabilistic_graphical_models/models
   - probabilistic_graphical_models/theory
+  - markov_random_field
+  - MRF
+  - markov_network
 keywords:
   - markov_network
   - markov_random_field

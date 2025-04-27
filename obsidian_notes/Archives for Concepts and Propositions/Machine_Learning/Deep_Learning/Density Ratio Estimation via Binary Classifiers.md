@@ -3,7 +3,10 @@ tags:
   - concept
   - deep_learning/generative_models
   - deep_learning/contrastive_learning
-keywords: []
+  - density_ratio_estimation
+  - dre
+keywords:
+  - density_ratio_estimation
 topics:
   - machine_learning_theory
   - deep_learning/generative_models

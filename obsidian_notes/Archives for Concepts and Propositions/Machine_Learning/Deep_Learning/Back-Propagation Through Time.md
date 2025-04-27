@@ -3,6 +3,9 @@ tags:
   - concept
   - deep_learning/sequential_networks
   - deep_learning/models
+  - back_propagation_through_time
+  - back_propagation_algorithm
+  - BPTT
 keywords:
   - back_propagation_algorithm
   - dynamic_bayesian_network

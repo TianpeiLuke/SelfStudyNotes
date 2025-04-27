@@ -3,6 +3,8 @@ tags:
   - concept
   - natural_language_processing/large_language_models
   - deep_learning/large_language_models
+  - positional_embedding
+  - large_language_models
 keywords:
   - positional_embedding_llm
 topics:

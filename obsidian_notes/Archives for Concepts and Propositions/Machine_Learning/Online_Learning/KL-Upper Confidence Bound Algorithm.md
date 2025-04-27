@@ -3,12 +3,18 @@ tags:
   - concept
   - reinforcement_learning/bandit
   - online_learning/algorithms
-keywords: 
+  - upper_confidence_bound_algorithm
+  - bandit_algorithm
+  - multi_arm_bandit
+  - KL_UCB
+  - UCB
+keywords:
+  - kl_upper_confidence_bound_algorithm
 topics:
   - online_learning
   - bandit_problem
   - reinforcement_learning
-name: 
+name: KL-Upper Confidence Bound Algorithm
 date of note: 2024-08-07
 ---
 

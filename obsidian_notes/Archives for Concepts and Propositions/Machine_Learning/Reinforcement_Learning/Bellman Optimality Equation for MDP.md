@@ -5,6 +5,7 @@ tags:
   - reinforcement_learning/theory
   - reinforcement_learning/algorithm
   - algorithm/dynamic_programming
+  - bellman_optimality_equation
 keywords:
   - dynamic_programming
   - markov_decision_process

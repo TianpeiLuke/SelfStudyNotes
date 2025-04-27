@@ -3,6 +3,9 @@ tags:
   - concept
   - machine_learning/models
   - deep_learning/architecture
+  - relu_functions
+  - leaky_relu_functions
+  - ReLU
 keywords:
   - relu_activation
   - activation_function

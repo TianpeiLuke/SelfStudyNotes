@@ -3,6 +3,7 @@ tags:
   - concept
   - machine_learning/models
   - deep_learning/architecture
+  - sigmoid_functions
 keywords:
   - sigmoid_function
   - deep_learning/architecture

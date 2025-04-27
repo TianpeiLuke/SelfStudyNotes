@@ -3,6 +3,9 @@ tags:
   - concept
   - machine_learning/online_learning
   - online_learning/algorithms
+  - online_prediction
+  - prediction_witih_expert_advice
+  - online_learning
 keywords:
   - online_learning
   - online_prediction

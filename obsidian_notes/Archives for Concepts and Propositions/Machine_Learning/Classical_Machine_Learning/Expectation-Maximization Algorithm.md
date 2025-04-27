@@ -6,6 +6,9 @@ tags:
   - deep_learning/variational_learning
   - machine_learning/latent_variable_model
   - machine_learning/variational_learning
+  - EM_algorithm
+  - EM
+  - expectation_maximization_algorithm
 keywords:
   - expectation_maximization
 topics:

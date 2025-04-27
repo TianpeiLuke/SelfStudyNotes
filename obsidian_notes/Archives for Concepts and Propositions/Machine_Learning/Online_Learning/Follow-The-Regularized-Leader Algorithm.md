@@ -6,6 +6,7 @@ tags:
   - online_learning/algorithms
   - online_learning/theory
   - optimization/convex_optimization
+  - follow_the_regularized_leader
 keywords:
   - follow_the_regularized_leader
   - online_learning

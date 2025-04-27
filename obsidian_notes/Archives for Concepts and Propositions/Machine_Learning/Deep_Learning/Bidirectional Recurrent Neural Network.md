@@ -3,6 +3,9 @@ tags:
   - concept
   - deep_learning/sequential_networks
   - deep_learning/models
+  - bidirectional_recurrent_neural_network
+  - recurrent_neural_network
+  - bidirectional_rnn
 keywords:
   - bidirectional_rnn
   - bidirectional

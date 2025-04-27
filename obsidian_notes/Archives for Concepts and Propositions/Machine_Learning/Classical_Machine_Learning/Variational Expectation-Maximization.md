@@ -7,6 +7,7 @@ tags:
   - deep_learning/algorithms
   - deep_learning/variational_learning
   - machine_learning/variational_learning
+  - Variational_EM
 keywords:
   - expectation_maximization
   - variational_inference

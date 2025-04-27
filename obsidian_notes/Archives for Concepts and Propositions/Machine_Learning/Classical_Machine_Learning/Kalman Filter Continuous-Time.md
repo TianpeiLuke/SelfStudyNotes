@@ -6,6 +6,8 @@ tags:
   - probabilistic_graphical_models/sequential_models
   - statistics/signal_processing
   - math/stochastic_process
+  - kalman_filter
+  - Kalman_Filter
 keywords:
   - kalman_filter
   - kalman_bucy_filter

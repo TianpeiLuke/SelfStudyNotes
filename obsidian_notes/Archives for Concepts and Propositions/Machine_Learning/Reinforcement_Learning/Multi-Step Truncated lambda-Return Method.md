@@ -3,6 +3,7 @@ tags:
   - concept
   - reinforcement_learning/algorithm
   - reinforcement_learning/theory
+  - multi_step_truncated_lambda_return
 keywords:
   - multi_step_truncated_lambda_return_method
   - truncated_lambda_return

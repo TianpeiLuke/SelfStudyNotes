@@ -4,6 +4,11 @@ tags:
   - machine_learning/models
   - deep_learning/generative_models
   - math/game_theory
+  - wasserstein_generative_adversarial_network
+  - wgan
+  - wasserstein_gan
+  - generative_adversarial_network
+  - wasserstein_distance
 keywords:
   - generative_adversarial_network
   - wasserstein_distance

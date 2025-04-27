@@ -3,6 +3,9 @@ tags:
   - concept
   - machine_learning/models
   - probabilistic_graphical_models/theory
+  - separation_graphical_model
+  - MRF
+  - markov_random_field
 keywords:
   - separation_graphical_model
   - markov_network

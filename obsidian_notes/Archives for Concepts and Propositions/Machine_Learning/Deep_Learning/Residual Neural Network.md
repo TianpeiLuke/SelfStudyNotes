@@ -3,6 +3,9 @@ tags:
   - concept
   - machine_learning/models
   - deep_learning/generative_models
+  - residual_neural_network
+  - residual_connections
+  - skip_connections
 keywords:
   - residual_network
 topics:

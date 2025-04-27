@@ -4,6 +4,10 @@ tags:
   - machine_learning/models
   - machine_learning/kernel_methods
   - math/functional_analysis
+  - svm
+  - support_vector_machine
+  - kernel_svm
+  - kernel_support_vector_machine
 keywords:
   - support_vector_machine
 topics:

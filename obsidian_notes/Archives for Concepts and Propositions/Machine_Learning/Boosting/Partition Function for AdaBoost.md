@@ -4,6 +4,8 @@ tags:
   - machine_learning/boosting
   - machine_learning/models
   - machine_learning/theory
+  - partition_function
+  - log_partition_function
 keywords:
   - log_partition_function
   - partition_function

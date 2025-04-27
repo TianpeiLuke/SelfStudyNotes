@@ -3,6 +3,7 @@ tags:
   - concept
   - machine_learning/theory
   - machine_learning/kernel_methods
+  - representer_theorem
 keywords:
   - representer_theorem
   - reproducing_kernel_hilbert_space

@@ -2,6 +2,7 @@
 tags:
   - concept
   - machine_learning/models
+  - Bayesian_Network
 keywords: 
 topics: 
 name: 

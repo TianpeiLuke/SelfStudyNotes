@@ -7,6 +7,8 @@ tags:
   - deep_learning/large_language_models
   - deep_learning/ensemble_learning
   - machine_learning/ensemble_methods
+  - mixture_of_experts
+  - MoE
 keywords:
   - mixture_of_experts
 topics:

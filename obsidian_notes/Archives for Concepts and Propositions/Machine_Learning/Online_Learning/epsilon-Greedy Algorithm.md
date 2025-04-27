@@ -3,6 +3,8 @@ tags:
   - concept
   - machine_learning/algorithms
   - reinforcement_learning
+  - epsilon_greedy_algorithm
+  - greedy_algorithm
 keywords:
   - epsilon_greedy_algorithm
   - multi_arm_bandit

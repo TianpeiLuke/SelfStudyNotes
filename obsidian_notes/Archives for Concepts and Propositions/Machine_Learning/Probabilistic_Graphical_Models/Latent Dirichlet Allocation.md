@@ -4,8 +4,11 @@ tags:
   - machine_learning/models
   - probabilistic_graphical_models/models
   - natural_language_processing/topic_models
+  - LDA
+  - latent_dirichlet_allocation
 keywords:
   - latent_dirichlet_allocation
+  - LDA
 topics:
   - natural_language_processing/topic_models
   - probabilistic_graphical_model

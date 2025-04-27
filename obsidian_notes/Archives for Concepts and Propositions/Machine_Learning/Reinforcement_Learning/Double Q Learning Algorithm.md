@@ -3,6 +3,7 @@ tags:
   - concept
   - machine_learning/algorithms
   - reinforcement_learning/algorithm
+  - double_q_learning
 keywords:
   - q_learning
   - double_q_learning

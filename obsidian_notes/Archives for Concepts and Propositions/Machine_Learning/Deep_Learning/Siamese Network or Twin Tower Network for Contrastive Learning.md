@@ -3,6 +3,9 @@ tags:
   - concept
   - deep_learning/representation_learning
   - deep_learning/contrastive_learning
+  - siamese_network
+  - twin_networks
+  - twin_tower_network
 keywords:
   - siamese_network
   - contrastive_learning

@@ -4,6 +4,7 @@ tags:
   - machine_learning/algorithms
   - reinforcement_learning/theory
   - reinforcement_learning/algorithm
+  - actor_critic_algorithm
 keywords:
   - actor_critic_algorithm
 topics:

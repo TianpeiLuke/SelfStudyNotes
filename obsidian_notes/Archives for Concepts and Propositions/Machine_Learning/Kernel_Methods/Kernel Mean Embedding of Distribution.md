@@ -5,6 +5,8 @@ tags:
   - math/information_geometry
   - machine_learning/kernel_methods
   - machine_learning/density_estimation
+  - kernel_mean_embedding
+  - KME
 keywords:
   - kernel_mean_embedding_distribution
 topics:

@@ -4,6 +4,8 @@ tags:
   - machine_learning/models
   - probabilistic_graphical_models/models
   - machine_learning/latent_variable_model
+  - LVM
+  - latent_variable_model
 keywords:
   - latent_variable_model
 topics:
@@ -72,7 +74,7 @@ date of note: 2024-09-04
 
 - [[Factor Analysis]]
 - [[Principal Component Analysis]]
-- [[Probabilistic Principle Component Analysis]]
+- [[Probabilistic Principal Component Analysis]]
 - [[Nonnegative Matrix Factorization]]
 - [[Canonical Correlation Analysis]]
 

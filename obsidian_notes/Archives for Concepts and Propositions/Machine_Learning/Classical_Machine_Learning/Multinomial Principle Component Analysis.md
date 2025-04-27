@@ -5,6 +5,9 @@ tags:
   - probabilistic_graphical_models/models
   - machine_learning/dimensionality_reduction
   - machine_learning/latent_variable_model
+  - multinomial_pca
+  - multinomial_principal_component_analysis
+  - principal_component_analysis
 keywords:
   - multinomial_pca
   - multinomial_priniciple_component_analysis
@@ -76,7 +79,7 @@ date of note: 2024-09-05
 
 - [[Dirichlet Distribution]]
 - [[Multinomial Distribution]]
-- [[Probabilistic Principle Component Analysis]]
+- [[Probabilistic Principal Component Analysis]]
 - [[Principal Component Analysis]]
 
 

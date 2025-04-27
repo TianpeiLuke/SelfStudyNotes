@@ -4,6 +4,8 @@ tags:
   - machine_learning/algorithms
   - reinforcement_learning/algorithm
   - actor_critic_algorithm
+  - advantage_actor_critic_algorithm
+  - A2C_algorithm
 keywords:
   - advantage_actor_critic_algorithm
   - actor_critic_algorithm

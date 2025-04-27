@@ -44,7 +44,7 @@ date of note: 2024-07-07
 | **Challenges**         | *Aligning* feature spaces, handling missing views                                                      | *Bridging* modality gaps, balancing contributions from heterogeneous modalities                |
 | **Applications**       | Web page classification (text + link graph view), sensor fusion with multiple sensors of the same type | Visual question answering (image + text), video understanding (audio + video frames)           |
 
-- [[Multi-view Learning]]
+- [[Multi-View Learning]]
 
 
 

@@ -3,8 +3,11 @@ tags:
   - concept
   - machine_learning/dynamic_system
   - probabilistic_graphical_models/sequential_models
+  - EKM
+  - extended_kalman_filter
 keywords:
   - extended_kalman_filter
+  - EKM
 topics:
   - dynamic_system
   - probabilistic_graphical_model

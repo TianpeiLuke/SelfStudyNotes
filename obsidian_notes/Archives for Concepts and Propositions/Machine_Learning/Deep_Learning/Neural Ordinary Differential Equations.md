@@ -5,6 +5,8 @@ tags:
   - deep_learning/generative_models
   - math/differential_equation
   - numerical_methods/numerical_differential_equations
+  - neural_ode
+  - nerual_ordinary_differential_equations
 keywords:
   - neural_ordinary_differential_equations
   - ordinary_differential_equations

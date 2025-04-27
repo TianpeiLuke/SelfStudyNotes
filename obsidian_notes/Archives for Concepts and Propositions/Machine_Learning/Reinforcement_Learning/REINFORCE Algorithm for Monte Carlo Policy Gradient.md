@@ -5,6 +5,8 @@ tags:
   - reinforcement_learning/book
   - reinforcement_learning/theory
   - reinforcement_learning/algorithm
+  - reinforce_algorithm
+  - monte_carlo_policy_gradient
 keywords:
   - reinforce_algorithm
 topics:

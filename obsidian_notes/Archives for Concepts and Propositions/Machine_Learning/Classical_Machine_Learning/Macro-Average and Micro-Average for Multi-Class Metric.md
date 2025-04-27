@@ -5,6 +5,8 @@ tags:
   - information_retrieval/relevancy_metric
   - natural_language_processing/metric
   - statistics/hypothesis_testing
+  - macro_average
+  - micro_average
 keywords:
   - macro_average
   - micro_average

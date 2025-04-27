@@ -3,6 +3,8 @@ tags:
   - concept
   - machine_learning/algorithms
   - probabilistic_graphical_models/algorithm
+  - belief_propagation
+  - belief_update
 keywords:
   - belief_propagation
   - belief_update

@@ -4,6 +4,7 @@ tags:
   - machine_learning/theory
   - machine_learning/kernel_methods
   - machine_learning/models
+  - hinge_loss
 keywords:
   - hinge_loss
 topics:

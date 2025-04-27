@@ -4,6 +4,9 @@ tags:
   - machine_learning/models
   - probabilistic_graphical_models/models
   - natural_language_processing/topic_models
+  - multinomial_naive_bayes_model
+  - naive_bayes_model
+  - multinomial_distribution
 keywords:
   - naive_bayes_model
   - multinomial_distribution

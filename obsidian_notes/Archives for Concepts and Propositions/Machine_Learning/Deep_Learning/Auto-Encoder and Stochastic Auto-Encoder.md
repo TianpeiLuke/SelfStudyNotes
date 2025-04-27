@@ -4,6 +4,12 @@ tags:
   - machine_learning/models
   - deep_learning/generative_models
   - deep_learning/representation_learning
+  - auto_encoder
+  - stochastic_auto_encoder
+  - ae
+  - ae_network
+  - AE
+  - SAE
 keywords:
   - autoencoder
   - representation_learning
@@ -91,7 +97,7 @@ date of note: 2024-05-12
 >The above proposition shows that a **linear autoencoder** is equivalent to the **principle component analysis (PCA)**.
 
 - [[Principal Component Analysis]]
-- [[Probabilistic Principle Component Analysis]]
+- [[Probabilistic Principal Component Analysis]]
 
 ## Kernel PCA
 
@@ -149,7 +155,7 @@ date of note: 2024-05-12
 - [[Artificial Neural Network and Deep Learning]]
 
 - [[Principal Component Analysis]]
-- [[Probabilistic Principle Component Analysis]]
+- [[Probabilistic Principal Component Analysis]]
 - [[Supervised Learning and Unsupervised Learning]]
 
 

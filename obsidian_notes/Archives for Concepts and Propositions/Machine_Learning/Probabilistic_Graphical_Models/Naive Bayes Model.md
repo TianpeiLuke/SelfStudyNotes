@@ -3,6 +3,8 @@ tags:
   - concept
   - machine_learning/models
   - probabilistic_graphical_models/models
+  - naive_bayes_model
+  - naive_bayes_classifier
 keywords:
   - naive_bayes_model
   - naive_bayes_classifier

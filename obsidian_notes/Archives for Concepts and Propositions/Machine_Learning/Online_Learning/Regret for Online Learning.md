@@ -3,6 +3,9 @@ tags:
   - concept
   - online_learning/theory
   - machine_learning/theory
+  - regret_reinforcement_learning
+  - regret_online_learning
+  - no_regret_learning
 keywords:
   - regret_online_learning
   - no_regret_learning

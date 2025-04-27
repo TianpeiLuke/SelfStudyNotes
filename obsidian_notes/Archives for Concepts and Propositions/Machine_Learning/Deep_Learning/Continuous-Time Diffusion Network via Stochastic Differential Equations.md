@@ -6,6 +6,9 @@ tags:
   - deep_learning/algorithms
   - math/stochastic_process
   - math/stochastic_differential_equations
+  - continuous_time_diffusion_network
+  - stochastic_differential_equations
+  - sde
 keywords:
   - stochastic_differential_equations
   - denoising_diffusion_probabilistic_models

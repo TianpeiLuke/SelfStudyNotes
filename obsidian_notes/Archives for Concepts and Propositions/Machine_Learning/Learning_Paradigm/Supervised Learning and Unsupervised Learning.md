@@ -112,7 +112,7 @@ date of note: 2024-08-10
 - [[Gaussian Mixture Models]]
 - [[Gaussian Scale Mixtures]]
 - [[Principal Component Analysis]]
-- [[Probabilistic Principle Component Analysis]]
+- [[Probabilistic Principal Component Analysis]]
 - [[Kernel Principal Component Analysis]]
 - [[Factor Analysis]]
 - [[Gaussian Process Latent Variable Model]]

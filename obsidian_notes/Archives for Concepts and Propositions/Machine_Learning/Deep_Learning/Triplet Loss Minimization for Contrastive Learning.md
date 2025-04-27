@@ -3,6 +3,10 @@ tags:
   - concept
   - deep_learning/representation_learning
   - deep_learning/contrastive_learning
+  - triplet_loss_minimization
+  - contrastive_learning
+  - triplet_loss
+  - representation_learning
 keywords:
   - triplet_loss
   - contrastive_learning

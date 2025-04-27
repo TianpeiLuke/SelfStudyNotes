@@ -142,7 +142,7 @@ date of note: 2024-06-01
 - [[Curse of Dimensionality]]
 
 - [[Principal Component Analysis]]
-- [[Probabilistic Principle Component Analysis]]
+- [[Probabilistic Principal Component Analysis]]
 - [[Kernel Principal Component Analysis]]
 
 - [[Independent Component Analysis]]
@@ -155,7 +155,7 @@ date of note: 2024-06-01
 
 - [[Latent Variable Models]]
 - [[Factor Analysis]]
-- [[Probabilistic Principle Component Analysis]]
+- [[Probabilistic Principal Component Analysis]]
 - [[Independent Component Analysis]]
 - [[Nonnegative Matrix Factorization]]
 - [[Canonical Correlation Analysis]]
@@ -254,7 +254,7 @@ date of note: 2024-06-01
 - [[Representation Learning]]
 	- [[Contrastive Learning]]
 	- [[Metric Learning]]
-	- [[Multi-view Learning]]
+	- [[Multi-View Learning]]
 
 #### Self-Supervised Learning
 
@@ -290,11 +290,11 @@ date of note: 2024-06-01
 
 #### Multi-View Learning
 
-- [[Multi-view Learning]]
+- [[Multi-View Learning]]
 
 #### Multi-Task Learning
 
-- [[Muti-Task Learning]]
+- [[Multi-Task Learning]]
 
 #### Domain Adaptation
 

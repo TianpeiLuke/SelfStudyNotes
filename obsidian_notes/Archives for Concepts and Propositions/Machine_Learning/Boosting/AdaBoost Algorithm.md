@@ -7,6 +7,8 @@ tags:
   - machine_learning/boosting
   - machine_learning/ensemble_methods
   - adaboost
+  - AdaBoost
+  - ensemble_learning
 keywords:
   - boosting
   - adaboost

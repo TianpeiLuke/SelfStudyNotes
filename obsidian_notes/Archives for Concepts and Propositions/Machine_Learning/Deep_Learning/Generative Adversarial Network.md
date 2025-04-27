@@ -4,8 +4,12 @@ tags:
   - machine_learning/models
   - deep_learning/generative_models
   - math/game_theory
+  - generative_adversarial_network
+  - gan
+  - GAN
 keywords:
   - generative_adversarial_network
+  - gan
 topics:
   - deep_learning/generative_models
   - game_theory

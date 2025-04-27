@@ -3,6 +3,9 @@ tags:
   - concept
   - machine_learning/models
   - deep_learning/generative_models
+  - residual_flows
+  - residual_flow_network
+  - residual_flow_models
 keywords:
   - normalizing_flow_model
   - global_flow_smooth_manifold

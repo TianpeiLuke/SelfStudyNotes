@@ -6,6 +6,8 @@ tags:
   - probabilistic_graphical_models/representation
   - probabilistic_graphical_models/algorithm
   - probabilistic_graphical_models/theory
+  - PGM
+  - mean_field_approximation
 keywords:
   - mean_field_approximation
 topics:

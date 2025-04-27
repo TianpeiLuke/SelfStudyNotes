@@ -6,16 +6,23 @@ tags:
   - probabilistic_graphical_models/models
   - information_retrieval/index
   - information_retrieval/model
-keywords: 
-topics: 
-name: 
+  - PLSA
+  - probabilistic_latent_semantic_analysis
+  - information_retrieval
+  - information_retrieval/ranking
+keywords:
+  - PLSA
+  - probabilistic_latent_semantic_analysis
+topics:
+  - information_retrieval
+name: Probabilistic Latent Semantic Analysis
 date of note: 2024-09-05
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Probabilistic Latent Semantic Analysis
 
 ![[Co-Occurrence Matrix#^253cfb]]
 

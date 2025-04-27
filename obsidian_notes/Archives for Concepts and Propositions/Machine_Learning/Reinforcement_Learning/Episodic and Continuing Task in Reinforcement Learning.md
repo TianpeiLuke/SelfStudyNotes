@@ -3,6 +3,8 @@ tags:
   - concept
   - reinforcement_learning/theory
   - reinforcement_learning/algorithm
+  - episodic_task_rl
+  - continuing_task_rl
 keywords:
   - episodic_task_rl
   - continuing_task_rl

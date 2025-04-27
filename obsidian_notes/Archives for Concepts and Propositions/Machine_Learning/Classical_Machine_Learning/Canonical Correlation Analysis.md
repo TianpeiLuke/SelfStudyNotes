@@ -5,20 +5,23 @@ tags:
   - probabilistic_graphical_models/models
   - machine_learning/latent_variable_model
   - machine_learning/dimensionality_reduction
+  - canonical_correlation_analysis
+  - CCA
 keywords:
   - dimensionality_reduction
+  - canonical_correlation_analysis
 topics:
   - probabilistic_graphical_model
   - machine_learning_models
   - machine_learning/dimensionality_reduction
-name: 
+name: Canonical Correlation Analysis
 date of note: 2024-05-12
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Canonical Correlation Analysis
 
 >[!important] Definition
 
@@ -38,7 +41,7 @@ date of note: 2024-05-12
 
 
 - [[Principal Component Analysis]]
-- [[Probabilistic Principle Component Analysis]]
+- [[Probabilistic Principal Component Analysis]]
 - [[Gaussian Random Vector]]
 
 - [[Factor Analysis]]

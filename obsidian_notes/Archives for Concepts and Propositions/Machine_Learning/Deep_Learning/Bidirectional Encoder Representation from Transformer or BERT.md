@@ -5,6 +5,9 @@ tags:
   - deep_learning/models
   - deep_learning/large_language_models
   - natural_language_processing/large_language_models
+  - bert
+  - bidirectional_encoder_representation_from_transformer
+  - bert_transformer
 keywords:
   - bert_transformer
 topics:

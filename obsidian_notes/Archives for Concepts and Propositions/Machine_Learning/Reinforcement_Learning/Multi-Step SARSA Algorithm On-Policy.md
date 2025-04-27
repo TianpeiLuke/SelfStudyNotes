@@ -3,6 +3,7 @@ tags:
   - concept
   - reinforcement_learning/algorithm
   - reinforcement_learning/theory
+  - multi_step_sarasa_algorithm
 keywords:
   - multi_step_sarsa
   - monte_carlo

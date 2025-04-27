@@ -3,6 +3,7 @@ tags:
   - concept
   - reinforcement_learning/theory
   - reinforcement_learning/algorithm
+  - policy_gradient_algorithm
 keywords:
   - policy_function_approximation
 topics:

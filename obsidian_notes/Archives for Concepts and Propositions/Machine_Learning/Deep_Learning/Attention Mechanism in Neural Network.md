@@ -4,6 +4,7 @@ tags:
   - machine_learning/models
   - deep_learning/generative_models
   - deep_learning/architecture
+  - attention_mechanism
 keywords:
   - attention_mechanism_network
   - attention_network
