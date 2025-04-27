@@ -68,11 +68,17 @@ date of note: 2024-12-08
 
 ## Explanation
 
->[!info]
+>[!important]
 >- **Pros**
->	- Memory-based methods are simple, interpretable, and require *no explicit training phase*
+>	- Memory-based methods are 
+>		- *simple*, 
+>		- *interpretable*, 
+>		- and require *no explicit training phase*
 >- **Cons**
->	- they can struggle with **scalability**, **sparsity**, and **cold-start** problems in large-scale recommendation settings.
+>	- they can struggle with 
+>		- **scalability**, 
+>		- **sparsity**, 
+>		- and **cold-start** problems in large-scale recommendation settings.
 
 - [[Model-based Collaborative Filtering]]
 

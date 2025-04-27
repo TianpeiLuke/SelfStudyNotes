@@ -31,9 +31,12 @@ date of note: 2024-12-08
 
 ## Explanation
 
->[!info]
+>[!important]
 >- **Pros**
->	- Model-based collaborative filtering typically offers *better scalability*, *robustness to data sparsity*, and *higher-quality recommendations* compared to memory-based methods
+>	- Model-based collaborative filtering typically offers 
+>		- *better scalability*, 
+>		- *robustness to data sparsity*, 
+>		- and *higher-quality recommendations* compared to memory-based methods
 >- **Cons**
 >	- it often requires a *training phase* and careful regularization to prevent overfitting.
 
