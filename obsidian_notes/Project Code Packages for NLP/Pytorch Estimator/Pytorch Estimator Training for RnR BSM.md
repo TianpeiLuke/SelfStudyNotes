@@ -101,6 +101,22 @@ if len(class_weights) != num_classes:
     raise ValueError(f"The dimension '{len(class_weights)}' not match with number of classses {num_classes}.")
 ```
 
+#### Model Class
+
+```python
+model_class_list = [
+    'multimodal_bert',
+    'multimodal_moe',
+    'multimodal_gate_fusion',
+    'multimodal_cross_attn'
+]
+
+model_id_choice = 3
+
+model_class = model_class_list[model_id_choice]
+```
+
+
 #### Config File
 
 ```python
@@ -130,7 +146,7 @@ config = {'adam_epsilon' : 1e-08,
         'chunk_trancate': True,
         'max_total_chunks': 3,   
         'metric_choices':  ['f1_score', 'auroc'],
-        'model_class': 'multimodal_bert',
+        'model_class': model_class,
         'momentum': 0.9,
         'num_channels': [100, 100],
         'num_classes': num_classes,                         #2,

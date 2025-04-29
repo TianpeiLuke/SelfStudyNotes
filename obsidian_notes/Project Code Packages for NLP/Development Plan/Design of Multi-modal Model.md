@@ -20,6 +20,19 @@ date of note: 2025-04-28
 - [[Multi-modal BERT Classification Model v2 for BSM]]
 - [[Multi-modal BERT for FSDP Model Parallelism]]
 
+| ID  | Network             |                  | Number of Parameters |
+| --- | ------------------- | ---------------- | -------------------- |
+| 0   | tab_subnetwork      | TabAE            | 1.2 K                |
+| 1   | text_subnetwork     | TextBertBase     | 167 M                |
+| 2   | final_merge_network | **Sequential**   | **603**              |
+| 3   | loss_op             | CrossEntropyLoss | 0                    |
+
+>[!info]
+>- 167 M Trainable params
+>- 0 Non-trainable params
+>- 167 M Total params
+>- **669.741** Total estimated model params size (MB)
+
 
 ```mermaid
 flowchart TB
@@ -106,6 +119,23 @@ flowchart TB
 - [[Mixture of Experts or MoE as Deep Ensemble Learning]]
 - [[Switch Transformer via Mixture of Expert Layer]]
 
+| ID  | Network         |                      | Name of Parameters |
+| --- | --------------- | -------------------- | ------------------ |
+| 0   | tab_subnetwork  | TabAE                | 1.2 K              |
+| 1   | text_subnetwork | TextBertBase         | 167 M              |
+| 2   | moe_fusion      | **MixtureOfExperts** | **402**            |
+| 3   | classifier      | **Sequential**       | **303**            |
+| 4   | loss_op         | CrossEntropyLoss     | 0                  |
+
+
+>[!info]
+>- 167 M Trainable params
+>- 0 Non-trainable params
+>- 167 M Total params
+>- **669.741** Total estimated model params size (MB)
+
+
+
 ```mermaid
 flowchart TB
   %% Inputs
@@ -167,10 +197,24 @@ flowchart TB
 >- **Tab attends to Text** $$U^a \;=\;\mathrm{MHA}\bigl(Q = A,\;K = \widetilde X,\;V = \widetilde X\bigr),$$ and 
 >	- **Residual connection** $$\widetilde A \;=\;\mathrm{LayerNorm}\bigl(A + U^a\bigr)$$
 
-
 - [[Multi-modal BERT via Cross-Attention]]
 - [[Attention Mechanism in Neural Network]]
 - [[Transformer Network]]
+
+| ID  | Network             |                          | Number of Parameters |
+| --- | ------------------- | ------------------------ | -------------------- |
+| 0   | tab_subnetwork      | TabAE                    | 1.2 K                |
+| 1   | text_subnetwork     | TextBertBase             | 167 M                |
+| 2   | cross_att           | **CrossAttentionFusion** | **81.2 K**           |
+| 3   | final_merge_network | **Sequential**           | **20.4 K**           |
+| 4   | loss_op             | CrossEntropyLoss         | 0                    |
+
+>[!info]
+>- 167 M Trainable params
+>- 0 Non-trainable params
+>- 167 M Total params
+>- **670.145** Total estimated model params size (MB)
+
 
 ```mermaid
 flowchart TB
