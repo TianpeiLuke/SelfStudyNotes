@@ -84,6 +84,9 @@ from .pl_text_cnn import TextCNN
 from .pl_tab_ae import TabAE
 from .pl_multimodal_cnn import MultimodalCNN
 from .pl_multimodal_bert import MultimodalBert
+from .pl_multimodal_gate_fusion import MultimodalBertGateFusion
+from .pl_multimodal_moe import MultimodalBertMoE
+from .pl_multimodal_cross_attn import MultimodalBertCrossAttn
 from .pl_bert import (TextBertBase,
                       TextBertClassification
                       )
@@ -91,6 +94,12 @@ from .pl_lstm import TextLSTM
 from .pl_model_plots import compute_metrics
 from .dist_utils import all_gather
 ```
+
+- [[Multi-modal BERT for FSDP Model Parallelism]]
+- [[Multi-modal BERT via Cross-Attention]]
+- [[Multi-modal BERT via Fusion Gate]]
+- [[Multi-modal BERT via Mixture of Experts]]
+
 
 ```python
 dtype = torch.float
@@ -272,7 +281,7 @@ def model_online_inference(model: Union[pl.LightningModule, ort.InferenceSession
 ### Load Model
 
 ```python
-def load_model(filename: str, config: Dict, embedding_mat: torch.Tensor, model_class: str = 'multimodal_cnn', device_l: str = 'cpu') -> nn.Module:
+def load_model(filename: str, config: Dict, embedding_mat: torch.Tensor, model_class: str = 'multimodal_bert', device_l: str = 'cpu') -> nn.Module:
     """
     Load model weights into a fresh model instance.
 
@@ -284,8 +293,11 @@ def load_model(filename: str, config: Dict, embedding_mat: torch.Tensor, model_c
         'multimodal_cnn': lambda: MultimodalCNN(config, embedding_mat.shape[0], embedding_mat),
         'bert': lambda: TextBertClassification(config),
         'lstm': lambda: TextLSTM(config, embedding_mat.shape[0], embedding_mat),
-        'multimodal_bert': lambda: MultimodalBert(config)
-    }.get(model_class, lambda: MultimodalCNN(config, embedding_mat.shape[0], embedding_mat))()
+        'multimodal_bert': lambda: MultimodalBert(config),
+        'multimodal_gate_fusion': lambda: MultimodalBertGateFusion(config),
+        'multimodal_moe': lambda: MultimodalBertMoE(config),
+        'multimodal_cross_attn': lambda: MultimodalBertCrossAttn(config)
+    }.get(model_class, lambda: MultimodalBert(config))()
 
     try:
         model.load_state_dict(torch.load(filename, map_location=device_l))
@@ -360,7 +372,10 @@ def load_checkpoint(filename: str, model_class: str = 'multimodal_bert', device_
         'multimodal_cnn': MultimodalCNN,
         'bert': TextBertClassification,
         'lstm': TextLSTM,
-        'multimodal_bert': MultimodalBert
+        'multimodal_bert': MultimodalBert,
+        'multimodal_gate_fusion': MultimodalBertGateFusion,
+        'multimodal_moe': MultimodalBertMoE,
+        'multimodal_cross_attn': MultimodalBertCrossAttn
     }.get(model_class, MultimodalBert)
     return model_fn.load_from_checkpoint(filename, map_location=device_l)
 ```

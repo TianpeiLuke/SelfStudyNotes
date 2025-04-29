@@ -1,6 +1,5 @@
 ---
 tags:
-  - project
   - code
   - code_snippet
   - buyer_seller_messaging
@@ -23,6 +22,35 @@ date of note: 2025-01-02
 - [[Multi-modal BERT Classification Model v2 for BSM]]
 - [[Model Parallelism]]
 - [[Fully Sharded Data Parallel or FSDP for LLM Training]]
+
+
+```mermaid
+flowchart LR
+  %% Inputs
+  A1["dialogue_processed_input_ids & attention_mask\nshape: B x C x T"]
+  A2["tabular fields\nshape: B x input_tab_dim"]
+
+  %% Text branch
+  subgraph TextBranch["TextBertBase"]
+    A1 --> B1["Reshape → (B·C) x T"]
+    B1 --> B2["BERT encoder → pooler_output\nshape: (B·C) x H"]
+    B2 --> B3["Reshape & mean over C → B x H"]
+  end
+
+  %% Tabular branch
+  subgraph TabBranch["TabAE"]
+    A2 --> C1["combine_tab_data → B x input_tab_dim"]
+    C1 --> C2["LayerNorm → Linear(input_tab_dim→H) → ReLU\nshape: B x H"]
+  end
+
+  %% Fusion & classification
+  B3 --> D1["Concat → B x (2H)"]
+  C2 --> D1
+  D1 --> D2["ReLU"]
+  D2 --> D3["Linear(2H→num_classes)"]
+  D3 --> E["logits\nshape: B x num_classes"]
+```
+
 
 
 ## Code
@@ -670,6 +698,7 @@ class MultimodalBert(pl.LightningModule):
 -----------
 ##  Recommended Notes
 
+- [[Bidirectional Encoder Representation from Transformer or BERT]]
 
 - [[AtoZ BSM Model Training Script]]
 - [[AtoZ BSM MODS script]]

@@ -1,6 +1,5 @@
 ---
 tags:
-  - project
   - code
   - code_snippet
   - buyer_seller_messaging

@@ -37,8 +37,14 @@ date of note: 2024-04-09
 - Add Shiptrack datastream
 	- [[RnR LLM training data 2023-2025]]
 
-- Adjust Model Architecture
-	- Add cross-attention between shiptrack field and chat field
+- Add Multi-modal Model Architecture
+	- Fusion Gate
+		- [[Multi-modal BERT via Fusion Gate]]
+	- Cross-Attention
+		- [[Multi-modal BERT via Cross-Attention]]
+	- Mixture of Experts
+		- [[Multi-modal BERT via Mixture of Experts]]
+	- cross-attention between shiptrack field and chat field
 	- Attention over chunks?
 
 

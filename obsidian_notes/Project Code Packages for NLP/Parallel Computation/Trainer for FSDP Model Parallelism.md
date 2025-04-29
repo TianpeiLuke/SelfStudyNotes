@@ -84,6 +84,9 @@ from .pl_text_cnn import TextCNN
 from .pl_tab_ae import TabAE
 from .pl_multimodal_cnn import MultimodalCNN
 from .pl_multimodal_bert import MultimodalBert
+from .pl_multimodal_gate_fusion import MultimodalBertGateFusion
+from .pl_multimodal_moe import MultimodalBertMoE
+from .pl_multimodal_cross_attn import MultimodalBertCrossAttn
 from .pl_bert import (TextBertBase,
                       TextBertClassification
                       )
@@ -149,7 +152,7 @@ def my_auto_wrap_policy(module: nn.Module,
         bool: Whether to wrap this module
     """
     return (
-        isinstance(module, (TextBertBase, TabAE, nn.Linear, nn.Embedding, nn.Conv2d))
+        isinstance(module, (TextBertBase, TabAE, nn.Linear, nn.Embedding, nn.Conv2d, nn.MultiheadAttention))
         and unwrapped_params >= min_num_params
     )
 ```
