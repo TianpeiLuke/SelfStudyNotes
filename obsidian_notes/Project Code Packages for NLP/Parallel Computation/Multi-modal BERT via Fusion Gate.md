@@ -26,7 +26,7 @@ date of note: 2025-04-28
 - [[Gated Recurrent Units in Neural Network]]
 
 ```mermaid
-flowchart LR
+flowchart TB
   %% Inputs
   A1["dialogue_processed_input_ids & attention_mask\nshape: B×C×T"]
   A2["tabular fields\nshape: B×input_tab_dim"]

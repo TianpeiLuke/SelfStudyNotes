@@ -22,7 +22,7 @@ date of note: 2025-04-28
 
 
 ```mermaid
-flowchart LR
+flowchart TB
   %% Inputs
   A1["dialogue_processed_input_ids & attention_mask\nshape: B x C x T"]
   A2["tabular fields\nshape: B x input_tab_dim"]
@@ -62,7 +62,7 @@ flowchart LR
 - [[Gated Recurrent Units in Neural Network]]
 
 ```mermaid
-flowchart LR
+flowchart TB
   %% Inputs
   A1["dialogue_processed_input_ids & attention_mask\nshape: B×C×T"]
   A2["tabular fields\nshape: B×input_tab_dim"]
@@ -107,7 +107,7 @@ flowchart LR
 - [[Switch Transformer via Mixture of Expert Layer]]
 
 ```mermaid
-flowchart LR
+flowchart TB
   %% Inputs
   A1["dialogue_processed_input_ids & attention_mask\nshape: B×C×T"]
   A2["tabular fields\nshape: B×input_tab_dim"]
@@ -173,7 +173,7 @@ flowchart LR
 - [[Transformer Network]]
 
 ```mermaid
-flowchart LR
+flowchart TB
   %% Inputs
   A1["dialogue_processed_input_ids & attention_mask\nshape: B×C×T"]
   A2["tabular fields\nshape: B×input_tab_dim"]

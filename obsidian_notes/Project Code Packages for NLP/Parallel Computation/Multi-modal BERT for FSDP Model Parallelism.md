@@ -25,7 +25,7 @@ date of note: 2025-01-02
 
 
 ```mermaid
-flowchart LR
+flowchart TB
   %% Inputs
   A1["dialogue_processed_input_ids & attention_mask\nshape: B x C x T"]
   A2["tabular fields\nshape: B x input_tab_dim"]
