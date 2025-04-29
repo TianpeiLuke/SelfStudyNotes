@@ -117,6 +117,7 @@ class ComposedProcessor(Processor):
 #### Text Normalization
 
 - collapses multiple whitespace into a single space to avoid extra spaces that might otherwise cause test mismatches.
+- adapt to be splitting aware
 
 ```python
 # Processor 1: Text Normalization
@@ -125,15 +126,21 @@ class TextNormalizationProcessor(Processor):
         super().__init__()
         self.processor_name = "text_normalization_processor"
 
-    def process(self, input_text: str):
-        # Basic normalization: trim and lowercase.
-        normalized = input_text.strip().lower()
-        # Collapse multiple spaces into one.
-        normalized = re.sub(r'\s+', ' ', normalized)
-        return normalized
+    def process(self, input_text: Union[str, List[str]]) -> Union[str, List[str]]:
+        def _norm(s: str) -> str:
+            s = s.strip().lower()
+            return re.sub(r'\s+', ' ', s)
+
+        if isinstance(input_text, list):
+            return [_norm(msg) for msg in input_text]
+        else:
+            return _norm(input_text)
 ```
 
 #### HTML Normalization
+
+- extract text from HTML
+- adapt to be splitting aware
 
 ```python
 # --- Processor 2: HTML Normalization ---
@@ -142,18 +149,27 @@ class HTMLNormalizerProcessor(Processor):
         super().__init__()
         self.processor_name = "html_normalizer_processor"
     
-    def process(self, input_text: str) -> str:
+    def process(self, input_text: Union[str, List[str]]) -> Union[str, List[str]]:
         """
-        Converts HTML content to raw text using BeautifulSoup.
+        If given a list of dialogue messages, normalize each one; 
+        otherwise normalize the single HTML string.
         """
-        # Parse the HTML content
-        soup = BeautifulSoup(input_text, "html.parser")
-        # Get text content with whitespace normalized.
-        raw_text = soup.get_text(separator=" ", strip=True)
-        return raw_text
+        def _norm_single(text: str) -> str:
+            soup = BeautifulSoup(text, "html.parser")
+            # collapse whitespace and strip
+            return soup.get_text(separator=" ", strip=True)
+
+        if isinstance(input_text, list):
+            # apply to each chunk/message
+            return [_norm_single(msg) for msg in input_text]
+        else:
+            return _norm_single(input_text)
 ```
 
 #### Emoji Removal
+
+- remove emoji
+- adapt to be splitting aware
 
 ```python
 # --- Processor 3: Emoji Remover ---
@@ -161,7 +177,6 @@ class EmojiRemoverProcessor(Processor):
     def __init__(self):
         super().__init__()
         self.processor_name = 'emoji_remover_processor'
-        # Define a regex pattern that captures common emoji ranges.
         self.emoji_pattern = re.compile(
             "["                                     
             u"\U0001F600-\U0001F64F"  # emoticons
@@ -174,11 +189,14 @@ class EmojiRemoverProcessor(Processor):
             flags=re.UNICODE
         )
 
-    def process(self, input_text: str) -> str:
-        """
-        Removes emojis from the input text.
-        """
-        return self.emoji_pattern.sub('', input_text)
+    def process(self, input_text: Union[str, List[str]]) -> Union[str, List[str]]:
+        def _remove(s: str) -> str:
+            return self.emoji_pattern.sub('', s)
+
+        if isinstance(input_text, list):
+            return [_remove(msg) for msg in input_text]
+        else:
+            return _remove(input_text)
 ```
 
 
