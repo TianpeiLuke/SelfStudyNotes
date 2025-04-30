@@ -79,6 +79,8 @@ date of note: 2025-01-14
 - [[Getting to Yes Book Summary]]
 - [[The 7 Habits of Highly Effective People Chapter Summary 4]]
 - [[The 7 Habits of Highly Effective People Chapter Summary 5]]
+- [[Developing the Leader Within You 2.0 Book Summary]]
+- [[Emotional Intelligence 2.0 Book Summary]]
 
 
 

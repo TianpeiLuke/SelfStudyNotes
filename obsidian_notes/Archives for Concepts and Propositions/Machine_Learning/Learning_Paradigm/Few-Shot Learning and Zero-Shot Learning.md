@@ -25,6 +25,12 @@ date of note: 2024-11-29
 - [[Transfer Learning]]
 - [[Supervised Learning and Unsupervised Learning]]
 
+
+>[!important] Definition
+>**N-way K-shot Learning** is a common experimental setup in few-shot learning and meta-learning, particularly for classification. 
+>- Each task involves distinguishing between *$N$ classes*, with *$K$ labeled* examples (shots) provided for each class in the support set.
+
+
 ## Explanation
 
 
