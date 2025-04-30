@@ -74,6 +74,25 @@ date of note: 2024-08-09
 - [[Temporal Difference lambda Algorithm]]
 
 
+```mermaid
+flowchart TD
+    A["Initialize Q0(x,a) for all x,a; z_{-1}(x,a)=0"]
+    A --> B{"Episode k = 1…K?"}
+    B -->|yes| C["Initialize X0; choose A0 ~ π(·|X0)"]
+    C --> D{"Step t = 0…T?"}
+    D -->|yes| E["Take action Aₜ"]
+    E --> F["Observe Rₜ₊₁ and Xₜ₊₁"]
+    F --> G["Choose Aₜ₊₁ ~ π(·|Xₜ₊₁)"]
+    G --> H["Compute δₜ = Rₜ₊₁ + γ Qₜ(Xₜ₊₁,Aₜ₊₁) – Qₜ(Xₜ,Aₜ)"]
+    H --> I["zₜ(Xₜ,Aₜ) = zₜ₋₁(Xₜ,Aₜ) + 1"]
+    I --> J["For all (x,a): Qₜ₊₁(x,a) = Qₜ(x,a) + αₜ δₜ zₜ(x,a)"]
+    J --> K["Decay traces: zₜ(x,a) ← γ λ zₜ(x,a) ∀(x,a)"]
+    K --> D
+    D -->|no| L{"More episodes?"}
+    L -->|yes| B
+    L -->|no| Z["End"]
+```
+
 
 ## Eligibility Trace for Semi-Gradient Algorithm
 

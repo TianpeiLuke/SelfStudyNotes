@@ -95,12 +95,12 @@ flowchart TD
 
     subgraph Environment_Interaction
         State(State Xt)
-        Action(Sample action At from policy pi given Xt)
+        Action(Sample action At from policy pi given X)
         NextState(Execute action At and observe reward Rt and next state Xt_plus_1)
     end
 
     subgraph Critic_Update
-        ComputeTD(Compute TD error delta as Rt plus gamma times value Xt_plus_1 minus value Xt)
+        ComputeTD(Compute TD error)
         UpdateCritic(Update Critic network parameters using TD error)
     end
 

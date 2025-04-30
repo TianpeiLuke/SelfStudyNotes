@@ -30,37 +30,37 @@ date of note: 2025-04-28
 ```mermaid
 flowchart TB
   %% Inputs
-  A1["dialogue_processed_input_ids & attention_mask\nshape: B×C×T"]
-  A2["tabular fields\nshape: B×input_tab_dim"]
+  A1["dialogue_processed_input_ids & attention_mask<br>shape: B×C×T"]
+  A2["tabular fields<br>shape: B×input_tab_dim"]
 
   %% Text branch
   subgraph TextBranch["TextBertBase"]
     A1 --> T1["Reshape → (B·C)×T"]
-    T1 --> T2["BERT encoder → pooler_output\nshape: (B·C)×H"]
+    T1 --> T2["BERT encoder → pooler_output<br>shape: (B·C)×H"]
     T2 --> T3["Reshape & mean over C → B×H"]
   end
 
   %% Tabular branch
   subgraph TabBranch["TabAE"]
     A2 --> U1["combine_tab_data → B×input_tab_dim"]
-    U1 --> U2["LayerNorm → Linear(input_tab_dim→H) → ReLU\nshape: B×H"]
+    U1 --> U2["LayerNorm → Linear(input_tab_dim→H) → ReLU<br>shape: B×H"]
   end
 
   %% Expert projections
-  T3 --> M1["text_proj: Linear(H→F)\n→ B×F"]
-  U2 --> M2["tab_proj: Linear(H→F)\n→ B×F"]
+  T3 --> M1["text_proj: Linear(H→F)<br>→ B×F"]
+  U2 --> M2["tab_proj: Linear(H→F)<br>→ B×F"]
 
   %% Mixture of Experts
   M1 --> M3["Concat → B×2F"]
   M2 --> M3
-  M3 --> M4["router: Linear(2F→2) + Softmax\n→ weights [B×2]"]
+  M3 --> M4["router: Linear(2F→2) + Softmax<br>→ weights [B×2]"]
   M4 --> M5["Split to w_txt [B×1], w_tab [B×1]"]
-  M5 --> M6["Fuse: w_txt·txt_feat + w_tab·tab_feat\n→ B×F"]
+  M5 --> M6["Fuse: w_txt·txt_feat + w_tab·tab_feat<br>→ B×F"]
 
   %% Classification
   M6 --> C1["ReLU"]
   C1 --> C2["Linear(F→num_classes)"]
-  C2 --> Out["logits\nshape: B×num_classes"]
+  C2 --> Out["logits<br>shape: B×num_classes"]
 ```
 
 ## Code

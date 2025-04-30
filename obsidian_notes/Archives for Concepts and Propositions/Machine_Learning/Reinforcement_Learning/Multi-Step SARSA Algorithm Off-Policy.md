@@ -79,6 +79,8 @@ date of note: 2024-08-09
 >			- If $\pi$ is learned
 >				- Update $\pi$ so that $\pi(\cdot\,|\,X_{\tau})$ is **greedy** with respect to $Q_{\tau}$
 
+### Mermaid Diagram
+
 
 
 

@@ -28,34 +28,34 @@ date of note: 2025-04-28
 ```mermaid
 flowchart TB
   %% Inputs
-  A1["dialogue_processed_input_ids & attention_mask\nshape: B×C×T"]
-  A2["tabular fields\nshape: B×input_tab_dim"]
+  A1["dialogue_processed_input_ids & attention_mask<br>shape: B×C×T"]
+  A2["tabular fields<br>shape: B×input_tab_dim"]
 
   %% Text branch
   subgraph TextBranch["TextBertBase"]
     A1 --> T1["Reshape → (B·C)×T"]
-    T1 --> T2["BERT encoder → pooler_output\nshape: (B·C)×H"]
+    T1 --> T2["BERT encoder → pooler_output<br>shape: (B·C)×H"]
     T2 --> T3["Mean over C → B×H"]
   end
 
   %% Tabular branch
   subgraph TabBranch["TabAE"]
     A2 --> U1["combine_tab_data → B×input_tab_dim"]
-    U1 --> U2["LayerNorm → Linear(input_tab_dim→D_tab) → ReLU\nshape: B×D_tab"]
+    U1 --> U2["LayerNorm → Linear(input_tab_dim→D_tab) → ReLU<br>shape: B×D_tab"]
   end
 
   %% GateFusion
-  T3 --> G1["text_proj: Linear(H→F)\n→ B×F"]
-  U2 --> G2["tab_proj: Linear(D_tab→F)\n→ B×F"]
+  T3 --> G1["text_proj: Linear(H→F)<br>→ B×F"]
+  U2 --> G2["tab_proj: Linear(D_tab→F)<br>→ B×F"]
   G1 --> G3["Concat → B×2F"]
   G2 --> G3
-  G3 --> G4["gate_net:\nLinear(2F→F) → LayerNorm → Sigmoid\n→ g (B×F)"]
-  G4 --> G5["Fuse:\nfused = g⊙text_proj + (1–g)⊙tab_proj\n→ B×F"]
+  G3 --> G4["gate_net:<br>Linear(2F→F) → LayerNorm → Sigmoid<br>→ g (B×F)"]
+  G4 --> G5["Fuse:<br>fused = g⊙text_proj + (1–g)⊙tab_proj<br>→ B×F"]
 
   %% Classification
   G5 --> C1["ReLU"]
   C1 --> C2["Linear(F→num_classes)"]
-  C2 --> Out["logits\nshape: B×num_classes"]
+  C2 --> Out["logits<br>shape: B×num_classes"]
 ```
 
 

@@ -108,7 +108,7 @@ flowchart TD
     end
 
     subgraph Critic_Update
-        ComputeTD(Compute TD error delta Rt plus gamma times value Xt_plus_1 minus value Xt)
+        ComputeTD(Compute TD error)
         UpdateCritic(Update Critic network by minimizing TD error)
     end
 

@@ -37,20 +37,20 @@ date of note: 2025-04-28
 ```mermaid
 flowchart TB
   %% Inputs
-  A1["dialogue_processed_input_ids & attention_mask\nshape: B x C x T"]
-  A2["tabular fields\nshape: B x input_tab_dim"]
+  A1["dialogue_processed_input_ids & attention_mask<br>shape: B x C x T"]
+  A2["tabular fields<br>shape: B x input_tab_dim"]
 
   %% Text branch
   subgraph TextBranch["TextBertBase"]
     A1 --> B1["Reshape → (B·C) x T"]
-    B1 --> B2["BERT encoder → pooler_output\nshape: (B·C) x H"]
+    B1 --> B2["BERT encoder → pooler_output<br>shape: (B·C) x H"]
     B2 --> B3["Reshape & mean over C → B x H"]
   end
 
   %% Tabular branch
   subgraph TabBranch["TabAE"]
     A2 --> C1["combine_tab_data → B x input_tab_dim"]
-    C1 --> C2["LayerNorm → Linear(input_tab_dim→H) → ReLU\nshape: B x H"]
+    C1 --> C2["LayerNorm → Linear(input_tab_dim→H) → ReLU<br>shape: B x H"]
   end
 
   %% Fusion & classification
@@ -58,7 +58,7 @@ flowchart TB
   C2 --> D1
   D1 --> D2["ReLU"]
   D2 --> D3["Linear(2H→num_classes)"]
-  D3 --> E["logits\nshape: B x num_classes"]
+  D3 --> E["logits<br>shape: B x num_classes"]
 ```
 
 ### Fusion Gate
@@ -74,37 +74,52 @@ flowchart TB
 - [[Multi-modal BERT via Fusion Gate]]
 - [[Gated Recurrent Units in Neural Network]]
 
+| ID  | Network             |                  | Number of Parameters |     |
+| --- | ------------------- | ---------------- | -------------------- | --- |
+| 0   | tab_subnetwork      | TabAE            | 1.2 K                |     |
+| 1   | text_subnetwork     | TextBertBase     | 167 M                |     |
+| 2   | gate_fusion         | GateFusion       | **40.5 K**           |     |
+| 3   | final_merge_network | Sequential       | **303**              |     |
+| 4   | loss_op             | CrossEntropyLoss | 0                    |     |
+
+>[!info]
+>- 167 M     Trainable params
+>- 0         Non-trainable params
+>- 167 M     Total params
+>- **669.901**   Total estimated model params size (MB)
+
+
 ```mermaid
 flowchart TB
   %% Inputs
-  A1["dialogue_processed_input_ids & attention_mask\nshape: B×C×T"]
-  A2["tabular fields\nshape: B×input_tab_dim"]
+  A1["dialogue_processed_input_ids & attention_mask<br>shape: B×C×T"]
+  A2["tabular fields<br>shape: B×input_tab_dim"]
 
   %% Text branch
   subgraph TextBranch["TextBertBase"]
     A1 --> T1["Reshape → (B·C)×T"]
-    T1 --> T2["BERT encoder → pooler_output\nshape: (B·C)×H"]
+    T1 --> T2["BERT encoder → pooler_output<br>shape: (B·C)×H"]
     T2 --> T3["Mean over C → B×H"]
   end
 
   %% Tabular branch
   subgraph TabBranch["TabAE"]
     A2 --> U1["combine_tab_data → B×input_tab_dim"]
-    U1 --> U2["LayerNorm → Linear(input_tab_dim→D_tab) → ReLU\nshape: B×D_tab"]
+    U1 --> U2["LayerNorm → Linear(input_tab_dim→D_tab) → ReLU<br>shape: B×D_tab"]
   end
 
   %% GateFusion
-  T3 --> G1["text_proj: Linear(H→F)\n→ B×F"]
-  U2 --> G2["tab_proj: Linear(D_tab→F)\n→ B×F"]
+  T3 --> G1["text_proj: Linear(H→F)<br>→ B×F"]
+  U2 --> G2["tab_proj: Linear(D_tab→F)<br>→ B×F"]
   G1 --> G3["Concat → B×2F"]
   G2 --> G3
-  G3 --> G4["gate_net:\nLinear(2F→F) → LayerNorm → Sigmoid\n→ g (B×F)"]
-  G4 --> G5["Fuse:\nfused = g⊙text_proj + (1–g)⊙tab_proj\n→ B×F"]
+  G3 --> G4["gate_net:<br>Linear(2F→F) → LayerNorm → Sigmoid<br>→ g (B×F)"]
+  G4 --> G5["Fuse:<br>fused = g⊙text_proj + (1–g)⊙tab_proj<br>→ B×F"]
 
   %% Classification
   G5 --> C1["ReLU"]
   C1 --> C2["Linear(F→num_classes)"]
-  C2 --> Out["logits\nshape: B×num_classes"]
+  C2 --> Out["logits<br>shape: B×num_classes"]
 ```
 
 ### Mixture of Expert
@@ -139,37 +154,37 @@ flowchart TB
 ```mermaid
 flowchart TB
   %% Inputs
-  A1["dialogue_processed_input_ids & attention_mask\nshape: B×C×T"]
-  A2["tabular fields\nshape: B×input_tab_dim"]
+  A1["dialogue_processed_input_ids & attention_mask<br>shape: B×C×T"]
+  A2["tabular fields<br>shape: B×input_tab_dim"]
 
   %% Text branch
   subgraph TextBranch["TextBertBase"]
     A1 --> T1["Reshape → (B·C)×T"]
-    T1 --> T2["BERT encoder → pooler_output\nshape: (B·C)×H"]
+    T1 --> T2["BERT encoder → pooler_output<br>shape: (B·C)×H"]
     T2 --> T3["Reshape & mean over C → B×H"]
   end
 
   %% Tabular branch
   subgraph TabBranch["TabAE"]
     A2 --> U1["combine_tab_data → B×input_tab_dim"]
-    U1 --> U2["LayerNorm → Linear(input_tab_dim→H) → ReLU\nshape: B×H"]
+    U1 --> U2["LayerNorm → Linear(input_tab_dim→H) → ReLU<br>shape: B×H"]
   end
 
   %% Expert projections
-  T3 --> M1["text_proj: Linear(H→F)\n→ B×F"]
-  U2 --> M2["tab_proj: Linear(H→F)\n→ B×F"]
+  T3 --> M1["text_proj: Linear(H→F)<br>→ B×F"]
+  U2 --> M2["tab_proj: Linear(H→F)<br>→ B×F"]
 
   %% Mixture of Experts
   M1 --> M3["Concat → B×2F"]
   M2 --> M3
-  M3 --> M4["router: Linear(2F→2) + Softmax\n→ weights [B×2]"]
+  M3 --> M4["router: Linear(2F→2) + Softmax<br>→ weights [B×2]"]
   M4 --> M5["Split to w_txt [B×1], w_tab [B×1]"]
-  M5 --> M6["Fuse: w_txt·txt_feat + w_tab·tab_feat\n→ B×F"]
+  M5 --> M6["Fuse: w_txt·txt_feat + w_tab·tab_feat<br>→ B×F"]
 
   %% Classification
   M6 --> C1["ReLU"]
   C1 --> C2["Linear(F→num_classes)"]
-  C2 --> Out["logits\nshape: B×num_classes"]
+  C2 --> Out["logits<br>shape: B×num_classes"]
 ```
 
 
@@ -219,20 +234,20 @@ flowchart TB
 ```mermaid
 flowchart TB
   %% Inputs
-  A1["dialogue_processed_input_ids & attention_mask\nshape: B×C×T"]
-  A2["tabular fields\nshape: B×input_tab_dim"]
+  A1["dialogue_processed_input_ids & attention_mask<br>shape: B×C×T"]
+  A2["tabular fields<br>shape: B×input_tab_dim"]
 
   %% Text branch
   subgraph TextBranch["TextBertBase"]
     A1 --> B1["Reshape → (B·C)×T"]
-    B1 --> B2["BERT encoder → pooler_output\nshape: (B·C)×H"]
+    B1 --> B2["BERT encoder → pooler_output<br>shape: (B·C)×H"]
     B2 --> B3["Reshape & mean over C → B×H"]
   end
 
   %% Tabular branch
   subgraph TabBranch["TabAE"]
     A2 --> C1["combine_tab_data → B×input_tab_dim"]
-    C1 --> C2["LayerNorm → Linear(input_tab_dim→H) → ReLU\nshape: B×H"]
+    C1 --> C2["LayerNorm → Linear(input_tab_dim→H) → ReLU<br>shape: B×H"]
   end
 
   %% Prepare sequences for cross‐attention
@@ -241,8 +256,8 @@ flowchart TB
 
   %% Cross‐attention fusion
   subgraph Fusion["CrossAttentionFusion"]
-    D1 --> F1["text2tab MHA\n(query=text, key=tab, value=tab)"]
-    D2 --> F2["tab2text MHA\n(query=tab, key=text, value=text)"]
+    D1 --> F1["text2tab MHA<br>(query=text, key=tab, value=tab)"]
+    D2 --> F2["tab2text MHA<br>(query=tab, key=text, value=text)"]
     F1 --> F3["Add & LayerNorm → B×1×H"]
     F2 --> F4["Add & LayerNorm → B×1×H"]
   end
@@ -256,7 +271,7 @@ flowchart TB
   E2 --> G1
   G1 --> G2["Linear(2H→H) → ReLU"]
   G2 --> G3["Linear(H→num_classes)"]
-  G3 --> Out["logits\nshape: B×num_classes"]
+  G3 --> Out["logits<br>shape: B×num_classes"]
 ```
 
 

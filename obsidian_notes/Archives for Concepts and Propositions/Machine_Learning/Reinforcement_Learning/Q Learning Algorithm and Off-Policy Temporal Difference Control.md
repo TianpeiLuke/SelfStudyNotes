@@ -76,6 +76,36 @@ date of note: 2024-05-12
 - [[epsilon-Greedy Algorithm]]
 - [[Prediction and Control Problems in Reinforcement Learning]]
 
+### Mermaid Diagram
+
+```mermaid
+flowchart TD
+  Start([Start]) 
+  Start --> InitQ["Initialize Q₀(x,a) for all x∈𝒳, a∈𝒜(x)\nSet Q₀(x_terminal,a)=0"]
+  InitQ --> EpisodeLoop{"Episode k = 1 … K"}
+  
+  subgraph Episode
+    EpisodeLoop --> InitState["X₀ ← initial state"]
+    InitState --> StepLoop{"Step t = 0 … T"}
+    
+    subgraph Step
+      StepLoop --> SampleA["Sample A ~ Uniform(𝒜(Xₜ))"]
+      SampleA --> EpsilonGreedy{"ε-greedy select Aₜ:\nwith prob ε pick Sampled A\nelse pick argmax_a Qₜ(Xₜ,a)"}
+      EpsilonGreedy --> Observe["Observe Rₜ₊₁ and next state Xₜ₊₁"]
+      Observe --> GreedyNext["Compute aₜ₊₁ = argmax_a Qₜ(Xₜ₊₁,a)"]
+      GreedyNext --> UpdateQ["Qₜ₊₁(Xₜ,Aₜ) ← Qₜ(Xₜ,Aₜ) + αₜ [Rₜ₊₁ + γ Qₜ(Xₜ₊₁,aₜ₊₁) – Qₜ(Xₜ,Aₜ)]"]
+      UpdateQ --> IncrementT["t ← t + 1"]
+      IncrementT --> StepLoop
+    end
+    
+    StepLoop --> EpisodeLoop
+  end
+  
+  EpisodeLoop --> End([End])
+
+```
+
+
 ## Explanation
 
 >[!important]

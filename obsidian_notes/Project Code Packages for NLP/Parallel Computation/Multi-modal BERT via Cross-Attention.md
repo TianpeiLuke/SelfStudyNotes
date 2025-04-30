@@ -31,8 +31,8 @@ date of note: 2025-04-28
 ```mermaid
 flowchart TB
   %% Inputs
-  A1["dialogue_processed_input_ids & attention_mask\nshape: B×C×T"]
-  A2["tabular fields\nshape: B×input_tab_dim"]
+  A1["dialogue_processed_input_ids & attention_mask<br>shape: B×C×T"]
+  A2["tabular fields<br>shape: B×input_tab_dim"]
 
   %% Text branch
   subgraph TextBranch["TextBertBase"]
@@ -44,7 +44,7 @@ flowchart TB
   %% Tabular branch
   subgraph TabBranch["TabAE"]
     A2 --> C1["combine_tab_data → B×input_tab_dim"]
-    C1 --> C2["LayerNorm → Linear(input_tab_dim→H) → ReLU\nshape: B×H"]
+    C1 --> C2["LayerNorm → Linear(input_tab_dim→H) → ReLU<br>shape: B×H"]
   end
 
   %% Prepare sequences for cross‐attention
@@ -53,8 +53,8 @@ flowchart TB
 
   %% Cross‐attention fusion
   subgraph Fusion["CrossAttentionFusion"]
-    D1 --> F1["text2tab MHA\n(query=text, key=tab, value=tab)"]
-    D2 --> F2["tab2text MHA\n(query=tab, key=text, value=text)"]
+    D1 --> F1["text2tab MHA<br>(query=text, key=tab, value=tab)"]
+    D2 --> F2["tab2text MHA<br>(query=tab, key=text, value=text)"]
     F1 --> F3["Add & LayerNorm → B×1×H"]
     F2 --> F4["Add & LayerNorm → B×1×H"]
   end
@@ -68,7 +68,7 @@ flowchart TB
   E2 --> G1
   G1 --> G2["Linear(2H→H) → ReLU"]
   G2 --> G3["Linear(H→num_classes)"]
-  G3 --> Out["logits\nshape: B×num_classes"]
+  G3 --> Out["logits<br>shape: B×num_classes"]
 ```
 
 ### Cross Attention Mechanism
