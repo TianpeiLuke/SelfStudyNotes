@@ -163,6 +163,7 @@ flowchart TD
 
 - [[Policy Gradient Algorithm]]
 - [[Policy Gradient Theorem]]
+- [[Trust Region Method]]
 
 
 
