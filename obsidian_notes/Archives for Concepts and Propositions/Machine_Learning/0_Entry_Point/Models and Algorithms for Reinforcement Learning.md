@@ -63,7 +63,7 @@ date of note: 2024-06-01
 - [[Value Iteration Algorithm]]
 - [[Generalized Policy Iteration]]
 - [[On-Policy and Off-Policy Reinforcement Learning]]
-
+- [[Model-Free Reinforcement Learning]]
 
 ### Monte Carlo Prediction and Control
 
@@ -160,6 +160,7 @@ date of note: 2024-06-01
 
 - [[Planning in Markov Decision Process]]
 - [[Model-based Reinforcement Learning]]
+- [[Model-Free Reinforcement Learning]]
 - [[Monte Carlo Tree Search]]
 - [[PILCO or Probabilistic Inference for Learning Control]]
 
