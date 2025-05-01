@@ -131,6 +131,12 @@ flowchart TD
 - [[Actor-Critic Algorithm]]
 
 
+## Proximal Policy Optimization
+
+- [[Proximal Policy Optimization or PPO Algorithm]]
+- [[Group Relative Policy Optimization or GRPO Algorithm]]
+
+
 -----------
 ##  Recommended Notes and References
 

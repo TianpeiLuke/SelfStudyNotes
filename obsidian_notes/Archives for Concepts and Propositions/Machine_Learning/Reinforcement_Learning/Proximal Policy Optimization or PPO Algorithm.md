@@ -67,6 +67,7 @@ date of note: 2024-05-12
 - [[Generalized Advantage Estimation or GAE in PPO]]
 - [[Advantage and Advantage Actor Critic or A2C Algorithm]]
 - [[Actor-Critic Algorithm]]
+- [[Soft Actor-Critic Algorithm]]
 - [[Group Relative Policy Optimization or GRPO Algorithm]]
 
 >[!info]
@@ -96,6 +97,53 @@ date of note: 2024-05-12
 >$$
 >\mathcal{L}(\theta) = − \mathcal{L}^{\text{CLIP}}(\theta) + c_{v}\, \mathbb{E}_{ t }\left[ \left(V_{\theta}(s_{t}) - R_{t}\right)^2 \right] ​- c_{H}\, \mathbb{E}_{ t }\left[  \mathcal{H}\left(\pi_{\theta}\left(\cdot\,|\,s_{t}\right)\right) \right] .
 >$$ 	  
+
+
+### Mermaid Diagram
+
+```mermaid
+flowchart TD
+    %% ============ INITIALISE ============
+    A0([Init policy theta  value net theta_v])
+
+    %% ============ MAIN LOOP ============
+    subgraph LOOP[Repeat until stop]
+        direction TB
+
+        %% -------- Rollout --------
+        R1[[Rollout T steps]]
+        R2a[t loop 0 to T minus 1  sample action a_t]
+        R2b[env step  yields  s_next  reward r_t]
+        R2c[store  s  a  r  old prob]
+
+        %% -------- GAE --------
+        G1[[Compute GAE]]
+        G2a[delta_t  equals  r_t  plus  gamma times V next  minus V now]
+        G2b[backward  accumulate  A hat with lambda]
+        G2c[normalise  A hat]
+
+        %% -------- Optimise --------
+        O1[[E epochs over minibatches]]
+        O2a[ratio  r_t  equals  pi new  over  pi old]
+        O2b[L clip  equals  min  r times A  and  clipped r times A]
+        O2c[L value equals  R_t minus V  squared]
+        O2d[L total equals  L clip  plus c_v L value  plus c_H entropy]
+        O2e[SGD step  update  theta  theta_v]
+
+        %% -------- Update --------
+        U1[[set theta_old  to theta]]
+    end
+
+    %% ============ FLOW =============
+    A0 --> R1
+    R1 --> R2a --> R2b --> R2c --> G1
+    G1 --> G2a --> G2b --> G2c --> O1
+    O1 --> O2a --> O2b --> O2c --> O2d --> O2e --> U1
+    U1 -->|not done| R1
+    U1 -->|done| Z0([Return final policy])
+
+```
+
 
 
 ## Explanation
@@ -133,6 +181,28 @@ date of note: 2024-05-12
 > - **Observation/return normalisation** helps with stability.
 >     
 > - **Reward scaling** or clipping often necessary in continuous‑control tasks.
+
+## Soft Actor-Critic
+
+- [[Soft Actor-Critic Algorithm]]
+
+### Proximal Policy Optimization (PPO) vs. Soft Actor–Critic (SAC)
+
+>[!info]
+>_PPO_ trades data efficiency for extreme robustness by cautiously nudging an on-policy actor, whereas _SAC_ spends more compute to reuse experience and actively maximizes entropy, making it the go-to algorithm when samples are costly and continuous exploration matters.
+
+| Aspect                               | **PPO**                                                                                                                                                                     | **Soft Actor–Critic (SAC)**                                                                                                                                                                                 |
+| ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Paradigm**                         | _On-policy_ policy-gradient (actor–critic).                                                                                                                                 | _Off-policy_ maximum-entropy actor–critic.                                                                                                                                                                  |
+| **Key Objective**                    | Clipped surrogate loss keeps the new policy close to the old one (trust-region–style).                                                                                      | Maximize expected return **plus an α · entropy bonus**; explicit temperature parameter α.                                                                                                                   |
+| **Exploration Mechanism**            | Implicit: stochastic policy and clipped updates prevent premature collapse, but entropy is only an _optional_ bonus.                                                        | Explicit: entropy is part of the objective, so the policy is encouraged to stay stochastic until it is worth becoming confident.                                                                            |
+| **Sample Efficiency**                | Moderate: trajectories are reused for a few epochs (<10) then discarded (on-policy).                                                                                        | High: replay buffer lets each transition be reused many times (off-policy).                                                                                                                                 |
+| **Stability / Tuning**               | Very stable; few sensitive hyper-params (clip ε, GAE λ). Works well out of the box.                                                                                         | Stable **if** twin Q-function critics and automatic α tuning are used, but more moving parts (2 critics, target nets, α scheduler).                                                                         |
+| **Continuous Control**               | Good, but needs careful scaling of action log-std.                                                                                                                          | Excellent; designed for continuous action spaces and broader entropy exploration.                                                                                                                           |
+| **Discrete Action Support**          | Works natively.                                                                                                                                                             | Possible but less common — needs categorical policy and entropy term.                                                                                                                                       |
+| **Computation per Environment Step** | Higher rollout cost (must interact fresh with env) but cheap updates.                                                                                                       | Cheaper environment interaction (can reuse buffer) but two critics and target nets make updates heavier.                                                                                                    |
+| **When to Choose**                   | • Low-dim or **simulation** tasks where generating trajectories is cheap.  <br>• You want quick, robust results with minimal tuning.  <br>• Discrete or continuous actions. | • Real-world or hardware-in-the-loop where samples are **expensive**.  <br>• Continuous robotics control, manipulation, locomotion.  <br>• Need sustained exploration or robustness to multi-modal rewards. |
+| **Canonical Implementations**        | OpenAI Baselines / RLlib PPO.                                                                                                                                               | DeepMind SAC / SoftLearning / Stable-Baselines3 SAC.                                                                                                                                                        |
 
 
 ## Other Variants
