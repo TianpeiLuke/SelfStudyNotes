@@ -21,6 +21,7 @@ date of note: 2024-08-24
 >**Name**: Nelder-Mead Simplex Method
 
 
+
 ### Algorithm
 
 >[!important] Definition
@@ -68,15 +69,62 @@ date of note: 2024-08-24
 >- *Return*: the best point $x_1$ as the approximate minimizer.
 
 
+
+- _Default coefficients_ (almost every library uses them):
+
+|α (reflection)|γ (expansion)|ρ (contraction)|σ (shrink)|
+|---|---|---|---|
+|1.0|2.0|0.5|0.5|
+
+
 ## Explanation
 
-| Step            | Operation                                | Purpose                |
-| --------------- | ---------------------------------------- | ---------------------- |
-| **Reflection**  | Probe outward away from worst point      | Explore new region     |
-| **Expansion**   | Probe further if reflection is very good | Accelerate improvement |
-| **Contraction** | Pull inward if reflection is bad         | Rescue poor moves      |
-| **Shrink**      | Collapse simplex toward best point       | Reset when stuck       |
+| Step            | Operation                                      | Purpose                    |
+| --------------- | ---------------------------------------------- | -------------------------- |
+| **Reflection**  | Probe outward *away from worst point*          | Explore new region         |
+| **Expansion**   | Probe *further* if reflection is **very good** | **Accelerate** improvement |
+| **Contraction** | Pull *inward* if reflection is **bad**         | Rescue poor moves          |
+| **Shrink**      | Collapse simplex toward best point             | Reset when **stuck**       |
 
+
+>[!info]
+>Think of the current iterate as a little **rubber-band polyhedron** (a “simplex”) that walks over the surface of your cost function.  
+At each iteration you:
+> 
+> 1. **Rank the corners** by their cost.
+>     
+> 2. **Throw away the worst corner**, replace it with a new one obtained by simple geometric moves (reflection, expansion, contraction or shrink).
+>     
+> 3. Keep doing this until the simplex contracts to a tiny region.
+>     
+> 
+> Because the moves use only function values—not derivatives—the method works on noisy or discontinuous objectives.
+
+### Pros and Cons
+
+>[!important]  Pros
+> - **No gradients needed** → handy for simulation-based objectives.
+>     
+> - **Very small code-footprint**.
+>     
+> - Works well in low dimensions (≈ n ≤ 10) and for smooth, mildly non-convex problems.
+
+
+
+>[!important] **Limitations**
+> 
+> - **No convergence guarantee** in higher dimensions or for non-smooth objectives.
+>     
+> - Can stagnate on ridges/flat valleys.
+>     
+> - Requires many function evaluations compared to gradient methods.
+
+
+
+>[!important]
+>Nelder–Mead is a **geometry-based, derivative-free search**: 
+>- you carry a little simplex, kick out its worst corner, and nudge it downhill by reflection/expansion/contraction. 
+>- Great for quick *low-dimensional problems*, but switch to gradient-based or Bayesian-optimisation methods when you have accurate derivatives or expensive evaluations.
 
 
 
