@@ -57,11 +57,25 @@ date of note: 2024-08-10
 >[!important] 
 >Informally, **unsupervised learning** refers to most attempts to *extract information from a distribution* that do not require human labor to annotate examples. The term is usually associated with *density estimation*, learning to draw samples from a distribution, learning to denoise data from some distribution, finding a *manifold* that the data lies near, or *clustering* the data into groups of related examples.
 
+>[!important] Definition
+>**Unsupervised learning** deals with datasets that consist only of input features without any explicit labels or targets. 
+>- Its aim is to uncover *hidden structure or patterns* in the data, such as 
+>	- grouping similar points, 
+>	- reducing dimensionality, or 
+>	- modeling the data distribution. 
 
+>[!info]
+>Unsupervised learning is particularly valuable for exploratory data analysis, anomaly detection, and as a pretraining step to capture representations that can be fine-tuned for downstream supervised tasks. 
 
 
 ## Explanation
 
+>[!info]
+>Unsupervised Learning techniques include 
+>- **clustering methods** (e.g., k-means, hierarchical clustering), 
+>- **dimensionality-reduction methods** (e.g., PCA, t-SNE, autoencoders), 
+>- **density estimation** (e.g., Gaussian mixture models), 
+>- and **generative models** (e.g., GANs, variational autoencoders). 
 
 ## Examples
 
@@ -131,6 +145,7 @@ date of note: 2024-08-10
 - [[Gated Recurrent Units in Neural Network]]
 - [[Auto-Encoder and Stochastic Auto-Encoder]]
 - [[Variational Auto-Encoder]]
+- [[t-SNE as Dimensionality Reduction]]
 - [[Transformer Network]]
 - [[Generative Pre-trained Transformer or GPT]]
 - [[Denoising Diffusion Probabilistic Models and Diffusion Network]]

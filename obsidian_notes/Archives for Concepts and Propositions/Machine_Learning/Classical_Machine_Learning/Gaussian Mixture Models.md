@@ -6,16 +6,19 @@ tags:
   - machine_learning/latent_variable_model
   - GMM
   - gaussian_mixture_models
-keywords: 
-topics: 
-name: 
+keywords:
+  - gaussian_mixture_models
+topics:
+  - machine_learning_models
+  - probabilistic_graphical_model
+name: Gaussian Mixture Models
 date of note: 2024-09-04
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Gaussian Mixture Models
 
 
 

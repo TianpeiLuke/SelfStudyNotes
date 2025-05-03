@@ -148,6 +148,7 @@ date of note: 2024-06-01
 - [[Independent Component Analysis]]
 - [[Nonnegative Matrix Factorization]]
 - [[Latent Dirichlet Allocation]]
+- [[t-SNE as Dimensionality Reduction]]
 
 - [[Canonical Correlation Analysis]]
 
