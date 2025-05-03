@@ -2,24 +2,40 @@
 tags:
   - concept
   - machine_learning/strategy
-keywords: 
+  - domain_adaptation
+keywords:
+  - domain_adaptation
 topics:
   - machine_learning_strategy
-name: 
+name: Domain Adaptation
 date of note: 2024-11-29
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Domain Adaptation
 
+>[!important] Definition
+>**Domain adaptation** is a subfield of *transfer learning* that addresses the challenge of applying a model trained on one “*source*” domain (where ample labeled data are available) to a different but related “*target*” domain whose data distribution differs and often *lacks labels*. 
+>- By explicitly modeling and compensating for *shifts* in feature distributions or label–feature relationships, domain‐adaptation methods aim to *learn representations* or *calibrations* that are *invariant across domains*.
+>- The *ultimate goal* is to *leverage existing labeled source data* to build accurate, robust models for new environments or tasks, reducing costly annotation efforts in the target domain.
 
 - [[Transfer Learning]]
 - [[Representation Learning]]
 
 ## Explanation
 
+>[!info]
+>Techniques range from 
+>- **instance reweighting**—where source examples are weighted by their similarity to target inputs—to 
+>- **adversarial training**, which encourages a feature extractor to produce embeddings indistinguishable between domains, to 
+>- **multi‐task** and **discrepancy‐minimization** approaches that align statistical moments or minimize divergence measures 
+>	- (e.g., **Maximum Mean Discrepancy**) between source and target.
+
+- [[Inverse Probability Weighting or IPW for Causal Estimation]]
+- [[Multi-Task Learning]]
+- [[Maximum Mean Discrepancy between Probability Measures via RKHS]]
 
 ### Distribution Shifts
 

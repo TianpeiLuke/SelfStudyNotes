@@ -20,10 +20,20 @@ date of note: 2024-07-29
 >[!important]
 >**Name**: Ensemble Learning
 
-
+>[!important] Definition
+>**Ensemble learning** is a technique in machine learning where *multiple* “base” models—often referred to as *learners* or *experts*—are trained and *combined* to solve a single prediction task. 
+>- By aggregating the strengths and compensating for the weaknesses of individual models, ensembles typically achieve *higher accuracy*, *greater robustness*, and *better generalization* than any single constituent.
 
 ## Explanation
 
+>[!info]
+>Common strategies include 
+>- **bagging** (e.g., random forests), which trains each model on a different bootstrap sample and *averages* their predictions to reduce variance;
+>- **boosting** (e.g., AdaBoost, Gradient Boosting), which *sequentially* trains models to focus on examples that previous ones misclassified and then weights their votes; 
+>- and **stacking**, which learns how to best combine the outputs of diverse base learners using a “*meta‐learner*.”
+
+>[!info]
+>Ensemble methods are widely used in competitions and real‐world applications because they tend to be more resilient to overfitting and can adapt to a variety of data distributions.
 
 ## Ensemble Learning Methods
 

@@ -48,7 +48,9 @@ date of note: 2024-05-12
 > 	    - **Orthogonalise** against previously found components:  
 >       $$\mathbf{w}^{+}\leftarrow \mathbf{w}^{+}-\sum_{j<k}(\mathbf{w}^{+}\!\cdot\!\mathbf{w}_j)\,\mathbf{w}_j.$$  
 > 	    - **Normalise**: $$ \mathbf{w}^{+}\leftarrow\mathbf{w}^{+}/\lVert\mathbf{w}^{+}\rVert.$$  
-> 	    - If $\bigl|\mathbf{w}^{+\top}\mathbf{w}-1\bigr|<\epsilon$ then **converged**; set $$\mathbf{w}_k=\mathbf{w}^{+}$$, else $$ \mathbf{w}\leftarrow\mathbf{w}^{+}.$$  
+> 	    - If $\bigl|\mathbf{w}^{+\top}\mathbf{w}-1\bigr|<\epsilon$ then **converged**; 
+> 		    - set $$\mathbf{w}_k=\mathbf{w}^{+},$$ 
+> 	    - else $$ \mathbf{w}\leftarrow\mathbf{w}^{+}.$$  
 >
 >- **Step 2  (Form un-mixing matrix)**  $$\mathbf{W} = [\mathbf{w}_1^\top;\dots;\mathbf{w}_n^\top] \in\mathbb{R}^{n\times m}.$$  
 >
