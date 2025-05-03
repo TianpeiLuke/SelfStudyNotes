@@ -18,7 +18,6 @@ date of note: 2024-07-07
 >[!important]
 >**Name**: Contrastive Learning
 
-
 >[!important] Definition
 >Intuitively, **contrastive representation learning** or **contrastive learning** can be considered as **learning by comparing**. 
 >-  Unlike a discriminative model that learns a mapping to some (pseudo-)labels and a generative model that reconstructs input samples, in contrastive learning a representation is learned by comparing among the input samples.
