@@ -21,9 +21,43 @@ date of note: 2024-08-24
 ![[EDA or Estimation of Distribution Algorithm#^ad5721]]
 
 
+### Algorithm
+
+> [!important] Definition  
+> The **Covariance Matrix Adaptation Evolution Strategy (CMA-ES)** is a *stochastic*, *derivative-free* algorithm that adapts a *multivariate Gaussian search distribution* to minimize a real-valued objective $$\mathbb R^n\to\mathbb R.$$
+> 
+> - _Require_: objective $f:\mathbb R^n\to\mathbb R$.
+>     
+> - _Require_: 
+> 	- initial *mean* $\mathbf m_0\in\mathbb R^n$ 
+> 	- initial *step-size* $\sigma_0>0$.
+>     
+> - _Require_: 
+> 	- *population size* $\lambda$, 
+> 	- *parent count* $\mu<\lambda$, 
+> 	- positive, *normalized weights* $w_1\ge\cdots\ge w_\mu$, $\sum_iw_i=1$.
+>     
+> - _Require_: 
+> 	- *learning rates* $c_\sigma$, $c_c$, $c_1$, $c_\mu$​ 
+> 	- *damping* $d_\sigma$.
+>- **Initialize** the search distribution: 
+>	- $$\mathbf{m}\leftarrow\mathbf{m}_0,\quad \sigma\leftarrow\sigma_0,\quad \mathbf{C}\leftarrow\mathbf{I}_n,\quad \mathbf{p}_\sigma\leftarrow\mathbf{0},\quad \mathbf{p}_c\leftarrow\mathbf{0}.$$
+>- While not _converged_:
+> 
+> 	- **Sample** $\lambda$ *offspring* 
+> 		- $$\mathbf y_k\sim\mathcal N(\mathbf0,\mathbf C)$$ 
+> 		- $$\mathbf x_k=\mathbf m+\sigma\,\mathbf y_k,\quad k=1,\dots,\lambda.$$
+> 	- **Evaluate** and **sort** so that $$f(\mathbf x_{(1)})\le f(\mathbf x_{(2)})\le\cdots\le f(\mathbf x_{(\lambda)}).$$
+> 	- **Update mean** $$\mathbf m_{\rm old}\leftarrow\mathbf m,\qquad \mathbf m\leftarrow\sum_{i=1}^\mu w_i\,\mathbf x_{(i)}.$$
+> 	- **Evolution path for step-size** $$\mathbf p_\sigma\leftarrow (1-c_\sigma)\,\mathbf p_\sigma +\sqrt{c_\sigma(2-c_\sigma)\,\mu_{\rm eff}}\; \mathbf C^{-\tfrac12}\frac{\mathbf m-\mathbf m_{\rm old}}{\sigma}$$ where $$\mu_{\rm eff}=1/\sum_iw_i^2.$$
+> 	- **Evolution path for covariance** $$\mathbf p_c\leftarrow (1-c_c)\,\mathbf p_c +h_\sigma\,\sqrt{c_c(2-c_c)\,\mu_{\rm eff}}\; \frac{\mathbf m-\mathbf m_{\rm old}}{\sigma},$$ with $h_\sigma$​ an indicator of successful step-size control.​
+> 	- **Adapt covariance matrix** $$\mathbf C\leftarrow (1 - c_1 - c_\mu)\,\mathbf C + c_1\,\mathbf p_c\,\mathbf p_c^\top + c_\mu\sum_{i=1}^\mu w_i\,\mathbf y_{(i)}\,\mathbf y_{(i)}^\top.$$
+> 	- **Adapt step-size** $$\sigma\leftarrow \sigma\, \exp\!\left(\dfrac{c_\sigma}{d_\sigma} \left(\dfrac{\|\mathbf p_\sigma\|}{\mathbb E\|\mathcal N(0,I)\|}-1\right)\right).$$
+> - _Return_: the current mean $\mathbf m$ as the approximate minimizer.
 
 - [[EDA or Estimation of Distribution Algorithm]]
 - [[Gaussian Random Vector]]
+- [[Nelder-Mead Simplex Method]]
 
 ## Explanation
 
