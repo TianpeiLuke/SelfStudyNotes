@@ -145,7 +145,7 @@ date of note: 2024-08-10
 - [[Gated Recurrent Units in Neural Network]]
 - [[Auto-Encoder and Stochastic Auto-Encoder]]
 - [[Variational Auto-Encoder]]
-- [[t-SNE as Dimensionality Reduction]]
+- [[T-Distributed Stochastic Neighbor Embedding or t-SNE]]
 - [[Transformer Network]]
 - [[Generative Pre-trained Transformer or GPT]]
 - [[Denoising Diffusion Probabilistic Models and Diffusion Network]]

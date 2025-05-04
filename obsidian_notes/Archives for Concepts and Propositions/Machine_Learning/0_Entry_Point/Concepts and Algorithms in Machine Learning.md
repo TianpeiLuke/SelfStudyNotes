@@ -148,7 +148,7 @@ date of note: 2024-06-01
 - [[Independent Component Analysis]]
 - [[Nonnegative Matrix Factorization or NMF]]
 - [[Latent Dirichlet Allocation]]
-- [[t-SNE as Dimensionality Reduction]]
+- [[T-Distributed Stochastic Neighbor Embedding or t-SNE]]
 
 - [[Canonical Correlation Analysis]]
 
