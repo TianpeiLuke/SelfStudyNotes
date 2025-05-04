@@ -62,6 +62,7 @@ date of note: 2024-05-13
 - [[Sub-Gaussian Random Variable]]
 - [[Bernoulli Distribution]]
 - [[Binomial Distribution]]
+- [[Student-t Distribution]]
 
 - [[Multinomial Distribution]]
 - [[Dirichlet Distribution]]

@@ -13,7 +13,7 @@ date of note: 2024-06-24
 >**Name**: 
 
 
-
+- [[Student-t Distribution]]
 ## Explanation
 
 

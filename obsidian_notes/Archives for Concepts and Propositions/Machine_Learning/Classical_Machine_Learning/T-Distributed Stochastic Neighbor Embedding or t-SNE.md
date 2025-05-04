@@ -22,6 +22,9 @@ date of note: 2025-05-03
 
 
 - [[k-Means Clustering]]
+- [[T-Distributed Stochastic Neighbor Embedding or t-SNE]]
+
+
 ## Explanation
 
 
