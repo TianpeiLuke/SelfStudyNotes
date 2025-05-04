@@ -4,20 +4,54 @@ tags:
   - machine_learning/models
   - probabilistic_graphical_models/models
   - natural_language_processing/topic_models
-keywords: 
-topics: 
-name: 
+  - topic_modeling
+keywords:
+  - topic_modeling
+  - topic_models
+topics:
+  - natural_language_processing/topic_models
+name: Topic Models or Topic Modeling
 date of note: 2024-09-04
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Topic Models or Topic Modeling
 
 
 
 ## Explanation
+
+
+## Methods
+
+- [[Latent Variable Models]]
+
+### PCA
+
+- [[Multinomial Principle Component Analysis]]
+
+### Naive Bayes
+
+- [[Multinomial Naive Bayes Model]]
+
+### Latent Semantic Analysis or LSA
+
+- [[Latent Semantic Analysis via Singular Value Decomposition]]
+- [[Probabilistic Latent Semantic Analysis]]
+
+### Latent Dirichlet Allocation or LDA
+
+- [[Latent Dirichlet Allocation]]
+
+### Non-negative Matrix Factorization or NMF
+
+- [[Nonnegative Matrix Factorization or NMF]]
+
+### BERTopic
+
+- 
 
 
 
@@ -25,18 +59,6 @@ date of note: 2024-09-04
 
 -----------
 ##  Recommended Notes and References
-
-
-- [[Multinomial Principle Component Analysis]]
-- [[Multinomial Naive Bayes Model]]
-
-- [[Latent Semantic Analysis via Singular Value Decomposition]]
-- [[Probabilistic Latent Semantic Analysis]]
-- [[Latent Dirichlet Allocation]]
-- [[Nonnegative Matrix Factorization or NMF]]
-- [[Latent Variable Models]]
-
-
 
 
 - [[Elements of Statistical Learning by Hastie]]

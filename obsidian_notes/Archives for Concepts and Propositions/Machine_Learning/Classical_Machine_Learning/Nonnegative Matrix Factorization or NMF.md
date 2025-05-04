@@ -79,7 +79,35 @@ date of note: 2024-05-12
 
 ## Applications
 
+### Dimensionality Reduction
+
+- [[Curse of Dimensionality]]
+- [[Gaussian Random Projections]]
+- [[epsilon Isometry]]
+- [[Johnson-Lindenstrauss Lemma for Dimensionality Reduction]]
+
+### Collaborative Filtering
+
 - [[Collaborative Filtering]]
+- [[Model-based Collaborative Filtering]]
+- [[User-Item Preference and Rating for Recommendation]]
+
+### Topic Modeling
+
+- [[Topic Models]]
+- [[Word Embedding]]
+- [[Co-Occurrence Matrix]]
+
+### Clustering
+
+- [[Spectral Clustering]]
+
+### Text Summarization
+
+- [[Text Summarization]]
+
+
+
 
 
 -----------
@@ -94,10 +122,7 @@ date of note: 2024-05-12
 - [[Latent Variable Models]]
 
 
-- [[Curse of Dimensionality]]
-- [[Gaussian Random Projections]]
-- [[epsilon Isometry]]
-- [[Johnson-Lindenstrauss Lemma for Dimensionality Reduction]]
+
 
 
 
