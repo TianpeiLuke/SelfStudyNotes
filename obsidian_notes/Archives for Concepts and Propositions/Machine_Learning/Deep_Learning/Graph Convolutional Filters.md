@@ -17,6 +17,10 @@ date of note: 2024-08-16
 
 
 
+- [[Convolutional Filters]]
+- [[Convolutional Neural Network]]
+- [[Graph]]
+
 ## Explanation
 
 
@@ -26,9 +30,9 @@ date of note: 2024-08-16
 -----------
 ##  Recommended Notes and References
 
-- [[Convolutional Filters]]
+
 - [[Equivariance of Estimator]]
-- [[Convolutional Neural Network]]
+
 
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 625
 - [[Deep Learning by Goodfellow]] pp 321

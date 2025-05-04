@@ -196,10 +196,10 @@ flowchart TD
 - [[REINFORCE Algorithm with Baseline]]
 - [[Bootstrap Method]]
 
-|                              | **Value-based Policy** $$\pi(x) = \arg\max_{a} q(x, a)$$                                                                                                                                                         | **Parameterized Policy** $$\pi(a ; x,  \theta)$$                                                     |
-| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| **Sample Return**            | - [[Monte Carlo Control with Exploring Starts]]<br>- [[Monte Carlo Prediction for Value Estimation]]                                                                                                             | - [[REINFORCE Algorithm for Monte Carlo Policy Gradient]]<br>- [[REINFORCE Algorithm with Baseline]] |
-| **Bootstrapping / TD Rrror** | - [[Temporal Difference Learning]]<br>- [[SARSA Algorithm and On-Policy Temporal Difference Control]]<br>- [[Q Learning Algorithm and Off-Policy Temporal Difference Control]]<br>- [[Expected SARSA Algorithm]] | - [[Actor-Critic Algorithm]]                                                                         |
+|                              | **Value-based Policy** $$\pi(x) = \arg\max_{a} q(x, a)$$                                                                                                                                                         | **Parameterized Policy** $$\pi(a ; x,  \theta)$$                                                                                                                                        |
+| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Sample Return**            | - [[Monte Carlo Control with Exploring Starts]]<br>- [[Monte Carlo Prediction for Value Estimation]]                                                                                                             | - [[REINFORCE Algorithm for Monte Carlo Policy Gradient]]<br>- [[REINFORCE Algorithm with Baseline]]                                                                                    |
+| **Bootstrapping / TD Rrror** | - [[Temporal Difference Learning]]<br>- [[SARSA Algorithm and On-Policy Temporal Difference Control]]<br>- [[Q Learning Algorithm and Off-Policy Temporal Difference Control]]<br>- [[Expected SARSA Algorithm]] | - [[Actor-Critic Algorithm]]<br>- [[Advantage and Advantage Actor Critic or A2C Algorithm]]<br>- [[Proximal Policy Optimization or PPO Algorithm]]<br>- [[Soft Actor-Critic Algorithm]] |
 
 
 
@@ -222,12 +222,18 @@ flowchart TD
 
 ### Advantage Actor Critic or A2C Algorithm
 
-
 - [[Advantage and Advantage Actor Critic or A2C Algorithm]]
+
+### Proximal Policy Optimization (PPO)
+
+- [[Proximal Policy Optimization or PPO Algorithm]]
+- [[Group Relative Policy Optimization or GRPO Algorithm]]
 
 ### Soft Actor Critic
 
 - [[Soft Actor-Critic Algorithm]]
+
+
 
 
 ## Principle of Learning by Comparison

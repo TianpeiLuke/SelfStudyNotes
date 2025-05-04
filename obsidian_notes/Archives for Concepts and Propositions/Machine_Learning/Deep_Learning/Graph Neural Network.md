@@ -18,11 +18,11 @@ date of note: 2024-05-12
 >**Name**: 
 
 
-
+- [[Graph]]
 ## Explanation
 
 
-
+- [[Graph Convolutional Neural Network]]
 
 
 -----------

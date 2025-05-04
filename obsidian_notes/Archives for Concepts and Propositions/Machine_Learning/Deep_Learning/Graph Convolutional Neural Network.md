@@ -20,6 +20,13 @@ date of note: 2024-08-16
 
 
 
+
+
+- [[Convolutional Filters]]
+- [[Convolutional Neural Network]]
+- [[Graph]]
+
+
 ## Explanation
 
 
