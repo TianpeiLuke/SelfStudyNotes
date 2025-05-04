@@ -454,7 +454,7 @@ date of note: 2024-09-27
 ![[Principal Component Analysis#^ab6364]]
 
 - [[Principal Component Analysis]]
-- [[Nonnegative Matrix Factorization]]
+- [[Nonnegative Matrix Factorization or NMF]]
 - [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
 
 ### Latent Variable Model and Factor Analysis

@@ -256,7 +256,7 @@ date of note: 2024-05-12
 
 - [[Independent Component Analysis]]
 - [[Auto-Encoder and Stochastic Auto-Encoder]]
-- [[Nonnegative Matrix Factorization]]
+- [[Nonnegative Matrix Factorization or NMF]]
 - [[Canonical Correlation Analysis]]
 
 

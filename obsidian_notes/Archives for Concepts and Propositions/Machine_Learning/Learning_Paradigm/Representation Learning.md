@@ -146,7 +146,7 @@ date of note: 2024-07-07
 - [[Principal Component Analysis]]
 - [[Probabilistic Principal Component Analysis]]
 - [[Independent Component Analysis]]
-- [[Nonnegative Matrix Factorization]]
+- [[Nonnegative Matrix Factorization or NMF]]
 
 - [[Gaussian Process Latent Variable Model]]
 

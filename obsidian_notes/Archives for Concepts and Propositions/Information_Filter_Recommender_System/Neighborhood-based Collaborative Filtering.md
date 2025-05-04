@@ -25,7 +25,7 @@ date of note: 2024-12-08
 
 - [[Sparse Linear System and Graph]]
 
-- [[Nonnegative Matrix Factorization]]
+- [[Nonnegative Matrix Factorization or NMF]]
 - [[LASSO and Sparsity-Induced Least Square]]
 
 - [[Graph LASSO and Structured Learning in Gaussian Graphical Model]]

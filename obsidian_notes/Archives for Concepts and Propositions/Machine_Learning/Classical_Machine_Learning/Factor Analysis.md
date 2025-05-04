@@ -187,7 +187,7 @@ date of note: 2024-09-04
 >	- There are a variety of heuristic methods that try to find rotation matrices $R$ which can be used to modify $W$ (and hence the latent factors) so as to try to increase the *interpretability*, typically by encouraging them to be (approximately) sparse.
 >- **Use of non-Gaussian priors for the latent factors**.
 >	- e.g. [[Independent Component Analysis]]
->	- e.g. [[Nonnegative Matrix Factorization]]
+>	- e.g. [[Nonnegative Matrix Factorization or NMF]]
 >	  
 >	  
 >-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 934	  

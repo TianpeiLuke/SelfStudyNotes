@@ -33,7 +33,7 @@ date of note: 2024-09-04
 - [[Latent Semantic Analysis via Singular Value Decomposition]]
 - [[Probabilistic Latent Semantic Analysis]]
 - [[Latent Dirichlet Allocation]]
-- [[Nonnegative Matrix Factorization]]
+- [[Nonnegative Matrix Factorization or NMF]]
 - [[Latent Variable Models]]
 
 

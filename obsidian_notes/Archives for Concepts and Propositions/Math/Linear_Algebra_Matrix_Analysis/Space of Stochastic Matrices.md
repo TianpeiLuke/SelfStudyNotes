@@ -55,7 +55,7 @@ date of note: 2024-09-24
 - [[Invariant Measure and Stationary Distribution]]
 - [[Hidden Markov Model]]
 - [[Markov Chain and Markov Process]]
-- [[Nonnegative Matrix Factorization]]
+- [[Nonnegative Matrix Factorization or NMF]]
 - [[Markov Transition Kernel and Transition Function]]
 - [[Matrix]]
 - [[Positive Linear Functional]]

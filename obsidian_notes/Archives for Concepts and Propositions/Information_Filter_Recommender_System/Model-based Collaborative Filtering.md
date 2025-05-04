@@ -49,7 +49,7 @@ date of note: 2024-12-08
 >Common techniques include 
 >- **matrix factorization** (e.g., SVD, ALS), 
 >	- [[Singular Value Decomposition of Linear Map]]
->	- [[Nonnegative Matrix Factorization]]
+>	- [[Nonnegative Matrix Factorization or NMF]]
 >- **probabilistic models**, 
 >	- [[Naive Bayes Model]]
 >	- [[Multinomial Naive Bayes Model]]

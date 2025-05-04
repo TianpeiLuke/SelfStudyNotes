@@ -146,7 +146,7 @@ date of note: 2024-06-01
 - [[Kernel Principal Component Analysis]]
 
 - [[Independent Component Analysis]]
-- [[Nonnegative Matrix Factorization]]
+- [[Nonnegative Matrix Factorization or NMF]]
 - [[Latent Dirichlet Allocation]]
 - [[t-SNE as Dimensionality Reduction]]
 
@@ -158,7 +158,7 @@ date of note: 2024-06-01
 - [[Factor Analysis]]
 - [[Probabilistic Principal Component Analysis]]
 - [[Independent Component Analysis]]
-- [[Nonnegative Matrix Factorization]]
+- [[Nonnegative Matrix Factorization or NMF]]
 - [[Canonical Correlation Analysis]]
 - [[Multinomial Principle Component Analysis]]
 

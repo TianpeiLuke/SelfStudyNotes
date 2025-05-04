@@ -75,7 +75,7 @@ date of note: 2024-09-04
 - [[Factor Analysis]]
 - [[Principal Component Analysis]]
 - [[Probabilistic Principal Component Analysis]]
-- [[Nonnegative Matrix Factorization]]
+- [[Nonnegative Matrix Factorization or NMF]]
 - [[Canonical Correlation Analysis]]
 
 ### State Space Models and Dynamic Systems

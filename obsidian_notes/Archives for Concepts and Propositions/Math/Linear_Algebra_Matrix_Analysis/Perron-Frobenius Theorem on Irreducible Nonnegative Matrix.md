@@ -55,7 +55,7 @@ date of note: 2024-09-24
 ##  Recommended Notes and References
 
 - [[Nonnegative and Positive Matrix]]
-- [[Nonnegative Matrix Factorization]]
+- [[Nonnegative Matrix Factorization or NMF]]
 
 - [[Matrix]]
 - [[Positive Linear Functional]]

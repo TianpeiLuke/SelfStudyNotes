@@ -49,7 +49,7 @@ date of note: 2024-12-08
 - [[Ensemble Learning]]
 
 - [[Latent Variable Models]]
-- [[Nonnegative Matrix Factorization]]
+- [[Nonnegative Matrix Factorization or NMF]]
 - [[Singular Value Decomposition of Linear Map]]
 
 
