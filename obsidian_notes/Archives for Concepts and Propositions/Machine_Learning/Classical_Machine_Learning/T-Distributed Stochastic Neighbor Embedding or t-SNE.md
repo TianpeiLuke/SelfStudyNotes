@@ -6,23 +6,27 @@ tags:
   - unsupervised_learning
   - t-SNE
   - t-distributed_stochastic_neighbor_embedding
+  - machine_learning/dimensionality_reduction
 keywords:
   - t_sne
   - dimensionality_reduction
-topics: 
-name: 
+  - t-SNE
+topics:
+  - machine_learning/dimensionality_reduction
+name: T-Distributed Stochastic Neighbor Embedding or t-SNE
 date of note: 2025-05-03
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: T-Distributed Stochastic Neighbor Embedding or t-SNE
 
 
 
 - [[k-Means Clustering]]
-- [[T-Distributed Stochastic Neighbor Embedding or t-SNE]]
+- [[Student-t Distribution]]
+
 
 
 ## Explanation
@@ -33,6 +37,8 @@ date of note: 2025-05-03
 
 -----------
 ##  Recommended Notes and References
+
+- [[Smooth Embedding]]
 
 - [[Supervised Learning and Unsupervised Learning]]
 - [[Auto-Encoder and Stochastic Auto-Encoder]]

@@ -155,12 +155,12 @@ date of note: 2024-05-12
 
 
 >[!important] Definition
->We call the *eigenvector* $u_{j}$ corresponding to the  *j-th largest eigenvalue*  of $S$ as the *j-th* **principle component directions** of $X$. 
+>We call the *eigenvector* $u_{j}$ corresponding to the  *j-th largest eigenvalue*  of $S$ as the *j-th* **principal component directions** of $X$. 
 >
->- Denote $$V^{j} := X\,u_{j} \in \mathbb{R}^{n}$$ as the  *j-th* **principle component** of $X$. 
->- For $j=1$, we call $u_{1}$ is the **first principle component direction** of $X$ and $V^{1}$ the **first principle component** of $X$  
+>- Denote $$V^{j} := X\,u_{j} \in \mathbb{R}^{n}$$ as the  *j-th* **principal component** of $X$. 
+>- For $j=1$, we call $u_{1}$ is the **first principal component direction** of $X$ and $V^{1}$ the **first principal component** of $X$  
 >
->- The *eigenvalues* corresponds to the *$1$-st principle component direction* has the **maximum variance**  $$\lambda_{1} = \text{Var}(Xu_{1}) = \max_{u} \text{Var}(Xu)$$
+>- The *eigenvalues* corresponds to the *$1$-st principal component direction* has the **maximum variance**  $$\lambda_{1} = \text{Var}(Xu_{1}) = \max_{u} \text{Var}(Xu)$$
 
 
 - [[Eigenvalue and Eigenvector for Linear Map]]

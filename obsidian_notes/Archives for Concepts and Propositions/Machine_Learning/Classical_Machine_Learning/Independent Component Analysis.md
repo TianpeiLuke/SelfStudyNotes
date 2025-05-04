@@ -60,6 +60,10 @@ date of note: 2024-05-12
 >	- *Independent component estimates* $\widehat{\mathbf{S}}$.  
 >	- *Un-mixing matrix* $\mathbf{W}$ such that  $$\mathbf{X}\approx\mathbf{A}\,\widehat{\mathbf{S}}.$$  
 
+- [[Newton Method]]
+- [[Fixed Point of Map]]
+- [[Gram-Schmidt Orthogonalization]]
+- [[QR Factorization of Matrix]]
 
 
 ## Explanation
@@ -81,7 +85,7 @@ date of note: 2024-05-12
 
 - [[Latent Variable Models]]
 
-
+- [[QR Iteration for General Eigenvalue Problem]]
 
 
 - [[Curse of Dimensionality]]
