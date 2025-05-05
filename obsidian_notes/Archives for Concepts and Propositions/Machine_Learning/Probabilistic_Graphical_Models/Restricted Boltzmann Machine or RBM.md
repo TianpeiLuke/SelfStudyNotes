@@ -5,12 +5,14 @@ tags:
   - restricted_boltzmann_machine
   - RBM
   - deep_learning/models
+  - probabilistic_graphical_models/models
 keywords:
   - RBM
   - restricted_boltzmann_machine
 topics:
   - deep_learning/models
   - machine_learning_models
+  - probabilistic_graphical_model
 name: Restricted Boltzmann Machine
 date of note: 2024-05-12
 ---
@@ -75,9 +77,6 @@ date of note: 2024-05-12
 - [[Contrastive Divergence as Approximate Markov Chain Monte Carlo]]
 
 
-
-
-
 ## Explanation
 
 
@@ -86,12 +85,16 @@ date of note: 2024-05-12
 
 - [[Artificial Neural Network and Deep Learning]]
 
+## Deep Belief Network
 
+- [[Deep Belief Network or DBN]]
 
 
 -----------
 ##  Recommended Notes and References
 
+
+- [[Supervised Learning and Unsupervised Learning]]
 - [[Probabilistic Graphical Models by Koller]]
 - [[Graphical Models Exponential Families and Variational Inference by Wainwright and Jordan]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]]

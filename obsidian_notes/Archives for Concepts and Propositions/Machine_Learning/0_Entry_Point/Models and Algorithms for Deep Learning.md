@@ -93,6 +93,11 @@ date of note: 2024-06-01
 
 ## Deep Learning Architectures
 
+### RBM and DBN
+
+- [[Restricted Boltzmann Machine or RBM]]
+- [[Deep Belief Network or DBN]]
+
 ### Convolutional Neural Network
 
 - [[Convolutional Filters]]
