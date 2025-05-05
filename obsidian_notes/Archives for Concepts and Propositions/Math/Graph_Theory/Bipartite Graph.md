@@ -28,7 +28,7 @@ date of note: 2024-07-09
 ##  Recommended Notes and References
 
 
-- [[Restricted Boltzmann Machine]]
+- [[Restricted Boltzmann Machine or RBM]]
 - [[Artificial Neural Network and Deep Learning]]
 - [[Graph]]
 

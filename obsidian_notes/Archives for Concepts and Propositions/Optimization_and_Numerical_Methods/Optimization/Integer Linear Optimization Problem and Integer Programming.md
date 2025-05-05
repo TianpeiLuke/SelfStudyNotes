@@ -114,7 +114,7 @@ date of note: 2024-08-19
 
 ### Graphical Model and Neural Network
 
-- [[Restricted Boltzmann Machine]]
+- [[Restricted Boltzmann Machine or RBM]]
 
 
 

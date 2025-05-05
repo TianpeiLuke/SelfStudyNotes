@@ -45,7 +45,7 @@ date of note: 2024-05-14
 
 
 
-- [[Restricted Boltzmann Machine]]
+- [[Restricted Boltzmann Machine or RBM]]
 - [[Exponential Family of Distributions]]
 - [[Log-Partition Function of Exponential Family]]
 - [[Probability Space]]

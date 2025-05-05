@@ -57,6 +57,7 @@ date of note: 2024-05-12
 
 - [[Siamese Network or Twin Tower Network for Contrastive Learning]]
 - [[Principal Component Analysis]]
+- [[Multi-View Learning]]
 
 ### CCA as Optimization on Generalized Steifel Manifolds
 

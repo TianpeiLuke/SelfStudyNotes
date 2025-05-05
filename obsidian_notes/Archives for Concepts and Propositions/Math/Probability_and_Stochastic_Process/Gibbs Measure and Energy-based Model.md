@@ -107,7 +107,7 @@ date of note: 2024-05-14
 
 - [[Gibbs Distribution]]
 - [[Simulated Annealing]]
-- [[Restricted Boltzmann Machine]]
+- [[Restricted Boltzmann Machine or RBM]]
 - [[Auto-Encoder and Stochastic Auto-Encoder]]
 - [[Score Matching and Denoising Score Matching]]
 - [[Langevin Dynamics and Langevin Sampling]]

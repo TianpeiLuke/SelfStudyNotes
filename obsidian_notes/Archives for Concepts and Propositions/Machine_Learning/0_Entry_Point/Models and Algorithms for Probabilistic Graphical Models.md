@@ -121,7 +121,7 @@ date of note: 2024-06-01
 - [[Recurrent Neural Network]]
 - [[Conditional Random Field]]
 - [[Latent Dirichlet Allocation]]
-- [[Restricted Boltzmann Machine]]
+- [[Restricted Boltzmann Machine or RBM]]
 - [[Ising Model]]
 - [[Markov Logic Network for Probabilistic First-Order Logic]]
 - [[Constraint Satisfaction Problem or CSP]]

@@ -118,7 +118,7 @@ date of note: 2024-08-16
 >The **logistic function** $$\sigma(x) = \frac{1}{1+ \exp(-x)}$$  is used as **activation function** in *neural network*
 
 - [[Activation Functions for Deep Learning]]
-- [[Restricted Boltzmann Machine]]
+- [[Restricted Boltzmann Machine or RBM]]
 
 
 

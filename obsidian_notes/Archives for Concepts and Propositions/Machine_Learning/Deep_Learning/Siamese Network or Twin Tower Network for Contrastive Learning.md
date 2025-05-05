@@ -111,6 +111,7 @@ date of note: 2024-09-08
 
 - [[Representation Learning]]
 - [[Supervised Learning and Unsupervised Learning]]
+- [[Canonical Correlation Analysis]]
 
 
 - Wikipedia [Siamese neural network](https://en.wikipedia.org/wiki/Siamese_neural_network)

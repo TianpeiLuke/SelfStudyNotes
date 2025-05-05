@@ -98,7 +98,7 @@ date of note: 2024-07-07
 >
 >-- [[Deep Learning Foundations and Concepts by Bishop]] pp 189
 
-- [[Restricted Boltzmann Machine]]
+- [[Restricted Boltzmann Machine or RBM]]
 
 ## Self-Supervised Learning
 
@@ -181,7 +181,7 @@ date of note: 2024-07-07
 
 ### Graphical Model
 
-- [[Restricted Boltzmann Machine]]
+- [[Restricted Boltzmann Machine or RBM]]
 - [[Conditional Random Field]]
 - [[Gaussian Graphical Model]]
 - [[Gaussian Belief Propagation]]

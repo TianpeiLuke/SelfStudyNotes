@@ -3,16 +3,17 @@ tags:
   - concept
   - recommender_system/information_filter
   - machine_learning/dimensionality_reduction
+  - neighborhood_based_collaborative_filtering
 keywords: 
 topics: 
-name: 
+name: Neighborhood-based Collaborative Filtering
 date of note: 2024-12-08
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Neighborhood-based Collaborative Filtering
 
 
 - [[Collaborative Filtering]]
