@@ -133,7 +133,7 @@ date of note: 2024-05-12
 - [[Variational Inference vs EM Algorithm]]
 - [[Variational Inference for Clique Tree]]
 
-- [[Probabilistic Latent Semantic Analysis]]
+- [[Probabilistic Latent Semantic Analysis or pLSA]]
 
 - [[Annealed Importance Sampling]]
 - [[Gibbs Sampling]]

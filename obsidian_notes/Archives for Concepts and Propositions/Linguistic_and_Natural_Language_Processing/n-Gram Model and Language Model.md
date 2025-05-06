@@ -120,7 +120,7 @@ date of note: 2024-09-08
 - [[Naive Bayes Model]]
 - [[Multinomial Naive Bayes Model]]
 - [[Multinomial Principle Component Analysis]]
-- [[Probabilistic Latent Semantic Analysis]]
+- [[Probabilistic Latent Semantic Analysis or pLSA]]
 - [[Latent Dirichlet Allocation]]
 
 - [[Alphabets and Strings Abstract Definition]]

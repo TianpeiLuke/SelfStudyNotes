@@ -176,7 +176,7 @@ date of note: 2024-09-12
 - [[Cosine Similarity and Cosine Distance]]
 
 
-- [[Probabilistic Latent Semantic Analysis]]
+- [[Probabilistic Latent Semantic Analysis or pLSA]]
 - [[Latent Dirichlet Allocation]]
 
 - [[Vector Space over a Field]]

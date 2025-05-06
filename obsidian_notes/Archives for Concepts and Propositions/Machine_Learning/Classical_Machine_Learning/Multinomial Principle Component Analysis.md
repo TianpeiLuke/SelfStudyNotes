@@ -49,6 +49,8 @@ date of note: 2024-09-05
 >where $w_{m_{n}}  := W_{m_{n}, :} \in \Delta_{V-1}$.
 >
 
+^0a642a
+
 - [[Multinomial Distribution]]
 - [[Dirichlet Distribution]]
 - [[Latent Variable Models]]
@@ -69,8 +71,10 @@ date of note: 2024-09-05
 
 ## Explanation
 
+>[!info]
+>Multi-nomial PCA and NMF are equivalent under KL Loss
 
-
+- [[Nonnegative Matrix Factorization or NMF]]
 
 
 -----------
@@ -84,6 +88,7 @@ date of note: 2024-09-05
 
 
 - [[Multinomial Naive Bayes Model]]
+- [[Probabilistic Latent Semantic Analysis or pLSA]]
 - [[Latent Dirichlet Allocation]]
 - [[Factor Analysis]]
 - [[Latent Variable Models]]

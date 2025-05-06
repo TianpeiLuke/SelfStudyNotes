@@ -39,7 +39,7 @@ date of note: 2024-09-04
 ### Latent Semantic Analysis or LSA
 
 - [[Latent Semantic Analysis via Singular Value Decomposition]]
-- [[Probabilistic Latent Semantic Analysis]]
+- [[Probabilistic Latent Semantic Analysis or pLSA]]
 
 ### Latent Dirichlet Allocation or LDA
 

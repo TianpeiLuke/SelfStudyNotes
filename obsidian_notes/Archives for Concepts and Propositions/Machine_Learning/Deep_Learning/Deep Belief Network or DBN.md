@@ -90,6 +90,15 @@ date of note: 2025-05-04
 
 ## DBN vs. Feedforward Network
 
+>[!info]
+>In essence, 
+>- **DBNs** leverage *unsupervised learning* to find useful representations of data before potentially being fine-tuned for a specific supervised task. 
+>- **MLPs**, on the other hand, are trained directly in a *supervised manner* to perform a specific mapping. 
+>
+>While both can be deep architectures, their fundamental building blocks and training philosophies differ significantly. 
+>
+>DBNs were particularly important in the *early days of deep learning* for *initializing deep networks effectively*, a challenge that MLPs faced more acutely when trained purely with backpropagation from *random initial weights*.  
+
 
 | Feature             | Deep Belief Network (DBN)                                                     | Multi-Layer Perceptron (MLP)                  |
 | ------------------- | ----------------------------------------------------------------------------- | --------------------------------------------- |

@@ -51,7 +51,7 @@ date of note: 2024-05-12
 ### Static Global Word Embedding
 
 - [[Latent Semantic Analysis via Singular Value Decomposition]]
-- [[Probabilistic Latent Semantic Analysis]]
+- [[Probabilistic Latent Semantic Analysis or pLSA]]
 - [[Word2Vec Algorithm for Static Word Embedding]]
 - [[Noise Contrastive Estimation]]
 - [[Skip-Gram Algorithm with Negative Sampling for Word Embedding]]

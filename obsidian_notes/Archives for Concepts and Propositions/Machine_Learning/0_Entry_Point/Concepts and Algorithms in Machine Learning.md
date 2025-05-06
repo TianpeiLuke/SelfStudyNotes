@@ -164,9 +164,9 @@ date of note: 2024-06-01
 
 
 - [[Topic Models]]
-- [[Probabilistic Latent Semantic Analysis]]
+- [[Probabilistic Latent Semantic Analysis or pLSA]]
 - [[Latent Dirichlet Allocation]]
-
+- [[Comparison of pLSA Multinomial PCA and Multinomial Naive Bayes]]
 
 - [[Gaussian Process Latent Variable Model]]
 

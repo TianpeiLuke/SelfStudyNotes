@@ -105,7 +105,7 @@ date of note: 2024-09-13
 - [[Topic Models]]
 - [[Multinomial Principle Component Analysis]]
 - [[Latent Semantic Analysis via Singular Value Decomposition]]
-- [[Probabilistic Latent Semantic Analysis]]
+- [[Probabilistic Latent Semantic Analysis or pLSA]]
 - [[Latent Dirichlet Allocation]]
 
 ### Natural Language Processing System

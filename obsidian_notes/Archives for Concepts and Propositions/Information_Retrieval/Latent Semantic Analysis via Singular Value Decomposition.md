@@ -77,7 +77,7 @@ date of note: 2024-11-05
 
 ### Probabilistic Latent Semantic Analysis
 
-- [[Probabilistic Latent Semantic Analysis]]
+- [[Probabilistic Latent Semantic Analysis or pLSA]]
 
 ### Latent Dirichlet Allocation
 
