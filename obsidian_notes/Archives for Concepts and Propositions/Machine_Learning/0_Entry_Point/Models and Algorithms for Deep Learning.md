@@ -271,11 +271,18 @@ date of note: 2024-06-01
 - [[Supervised Fine-Tuning and Preference Alignment for LLM]]
 
 
-
 ### Speech Recognition
 
 - [[Contrastive Predictive Coding as Sequence Representation]]
 - [[Connectionist Temporal Classification for Speech Recognition]]
+
+
+### Computer Vision
+
+- [[U-Net as Convolutional Autoencoder with Skip Connections]]
+- [[Residual Neural Network]]
+- [[Vision Transformer or ViT]]
+- [[Contrastive Language Image Pre-training or CLIP]]
 
 
 ### Neural Architecture Search

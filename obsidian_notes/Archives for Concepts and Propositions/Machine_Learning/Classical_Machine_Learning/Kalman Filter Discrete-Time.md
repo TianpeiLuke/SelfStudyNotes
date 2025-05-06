@@ -310,7 +310,9 @@ date of note: 2024-05-12
 
 - [[Marginal and Conditional Distribution of Gaussian]]
 
+## Extended Kalman Filter
 
+- [[Extended Kalman Filter]]
 
 
 -----------
@@ -318,7 +320,7 @@ date of note: 2024-05-12
 
 
 - [[Kalman Filter Continuous-Time]]
-- [[Extended Kalman Filter]]
+
 - [[Linear Dynamic System]]
 - [[BFGS Algorithm]]
 

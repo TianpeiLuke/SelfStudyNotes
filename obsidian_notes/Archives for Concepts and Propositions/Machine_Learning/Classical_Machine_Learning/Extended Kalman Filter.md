@@ -55,7 +55,7 @@ date of note: 2024-08-14
 >	- **Prediction Step**: 
 >		- compute the *predicted state estimate* and *predicted error covariance*. 
 >		- **Linearizing** the non-linear *state transition* function $f$ around the previous state estimate $\mu_{t-1|t-1}$. 
->			- The **Jacobian matrix** of $f$ with respect to $X$ is denoted by $F_x(t-1)$ and evaluated at $\mu_{t-1|t-1}$ and $U^{(t-1)}$ (if applicable). $$F_{x}(t-1) := \nabla f(\mu_{t-1|t-1}, U^{(t-1)})$$
+>			- The *Jacobian matrix* of $f$ with respect to $X$ is denoted by $F_x(t-1)$ and evaluated at $\mu_{t-1|t-1}$ and $U^{(t-1)}$ (if applicable). $$F_{x}(t-1) := \nabla f(\mu_{t-1|t-1}, U^{(t-1)})$$
 >		- The **predicted state estimate** is given by $$\mu_{t|t-1} = f(\mu_{t-1|t-1}, U^{(t-1)})$$
 >		- The **predicted error covariance** is updated via $$\Sigma_{t|t-1} = F_x(t-1)\,\Sigma_{t-1|t-1}\,F_x(t-1)^{T} + Q^{(t-1)}$$
 >	- **Update Step**: (also called the **measurement update step**) 
@@ -65,7 +65,7 @@ date of note: 2024-08-14
 >		- The **innovation (measurement residual)** is given by $$e_{t} = O^{(t)} - \hat{O}^{(t)} = O^{(t)} - h(\mu_{t|t-1}, U^{(t)})$$
 >		- The **innovation covariance matrix** (or measurement covariance) is given by $$S^{(t)} = H_x(t)\,\Sigma_{t|t-1}\,H_x(t)^{T} + R^{(t)}$$
 >		- Compute the **Kalman gain matrix** $$K_{t} = \Sigma_{t|t-1}\,H_x(t)^{T}\,\left(S^{(t)}\right)^{-1}$$
->			- Note that the *cross covariance matrix* between the predicted state and the predicted measurement is $\Sigma_{t|t-1}\,H_x(t)^{T}$.
+>			- Note that the *cross covariance matrix* between the predicted state and the predicted measurement is $$\Sigma_{t|t-1}\,H_x(t)^{T}.$$
 >			- In practice, we solve *a system of linear equations* $$(S^{(t)})^{T}\,K_{t}^{T}\, = (H_x(t)\,\Sigma_{t|t-1})^{T}$$
 >		- **Update** the **state estimate** $$\mu_{t|t} = \mu_{t|t-1} + K_{t}\,e_{t} = \mu_{t|t-1} + K_{t}\,\left(O^{(t)} - h(\mu_{t|t-1}, U^{(t)})\right)$$
 >		- **Update** the **error covariance matrix** $$\Sigma_{t|t} = (I - K_{t}\,H_x(t))\,\Sigma_{t|t-1}$$

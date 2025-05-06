@@ -132,12 +132,14 @@ date of note: 2024-06-01
 
 
 
-
-
-
 ### Multi-Modal Transformer Networks
 
 - [[Multi-Modal Learning]]
+- [[Vision Tokenization]]
+- [[Vision Transformer or ViT]]
+- [[Contrastive Language Image Pre-training or CLIP]]
+- [[Vision-Language Foundational Models]]
+
 
 
 ## Explanation

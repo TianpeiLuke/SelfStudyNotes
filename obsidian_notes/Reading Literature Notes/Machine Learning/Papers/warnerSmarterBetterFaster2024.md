@@ -128,7 +128,7 @@ date of note: 2025-01-31
 
 - [[devlinBERTPretrainingDeep2019]]
 - [[Bidirectional Encoder Representation from Transformer or BERT]]
-- [[BERT Text Classification Model for BSM]]
+- [[Multi-modal BERT Classification Model v1 for BSM]]
 - [[Sentence-BERT for Sentence Embedding]]
 - [[ColBERT as Multi-Representation Bi-Encoder Structure for Dense Information Retrieval]]
 - Medium

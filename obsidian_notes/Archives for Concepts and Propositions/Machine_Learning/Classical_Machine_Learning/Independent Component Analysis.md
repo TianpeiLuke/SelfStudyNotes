@@ -75,6 +75,12 @@ date of note: 2024-05-12
 >- **Caveats**: component order and scale are indeterminate; requires sufficient samples and non-Gaussian sources.
 
 
+## Kernel ICA
+
+- [[bachKernelIndependentComponent2002]] Bach, Francis. R., & Jordan, Michael. I. (2002). Kernel Independent Component Analysis. *Journal of Machine Learning Research*, *3*, 1-48. https://doi.org/10.1162/153244303768966085
+
+
+
 -----------
 ##  Recommended Notes and References
 
@@ -100,3 +106,4 @@ date of note: 2024-05-12
 - [[Elements of Information Theory by Cover]]
 
 - [[Kullback-Leibler Divergence]]
+- Bach, Francis. R., & Jordan, Michael. I. (2002). Kernel Independent Component Analysis. *Journal of Machine Learning Research*, *3*, 1-48. https://doi.org/10.1162/153244303768966085

@@ -192,6 +192,7 @@ date of note: 2024-05-12
 - [[Factor Analysis]]
 - [[Latent Variable Models]]
 - [[Partial Correlation]]
+- [[Independent Component Analysis]]
 
 - [[Representation Learning]]
 
@@ -199,10 +200,10 @@ date of note: 2024-05-12
 - [[Gaussian Random Projections]]
 - [[epsilon Isometry]]
 - [[Johnson-Lindenstrauss Lemma for Dimensionality Reduction]]
-
+- [[Kullback-Leibler Divergence]]
 
 - [[Elements of Statistical Learning by Hastie]]
 - [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 945 - 946, 1043 - 1046
 - [[Deep Learning Foundations and Concepts by Bishop]] pp 501
+- [[hardoonCanonicalCorrelationAnalysis2004a]] Hardoon, D. R., Szedmak, S., & Shawe-Taylor, J. (2004). Canonical correlation analysis: An overview with application to learning methods. _Neural computation_, _16_(12), 2639-2664.
 
-- [[Kullback-Leibler Divergence]]

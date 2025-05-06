@@ -25,7 +25,7 @@ year: 2019
 
 
 
-## Table of Content
+## Table of Contents
 
 1. The Definition of Leadership: Influence [[Developing the Leader Within You Chapter 01 Influence]]
 2. The Key to Leadership: Priorities [[Developing the Leader Within You Chapter 02 Priorities]]

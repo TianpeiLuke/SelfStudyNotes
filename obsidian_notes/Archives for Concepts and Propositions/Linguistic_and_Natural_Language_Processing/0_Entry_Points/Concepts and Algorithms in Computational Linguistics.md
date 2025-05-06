@@ -3,7 +3,8 @@ tags:
   - entry_point
   - concept
 keywords: 
-topics: 
+topics:
+  - computational_linguistic
 name: 
 date of note: 2024-09-13
 ---
