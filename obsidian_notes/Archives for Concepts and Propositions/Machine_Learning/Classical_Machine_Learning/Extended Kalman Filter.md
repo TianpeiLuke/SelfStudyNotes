@@ -31,8 +31,6 @@ date of note: 2024-08-14
 >
 >This approach is called the **extended Kalman filter (EKF)**
 
-- [[Kalman Filter Discrete-Time]]
-- [[State Space Models and Nonlinear Dynamic System]]
 
 >[!important] Definition
 >The *discrete-time* **Extended Kalman Filter (EKF)** is an extension of the Kalman filter designed for *non-linear dynamic models*. Consider the following non-linear state and observation equations:
@@ -45,6 +43,7 @@ date of note: 2024-08-14
 
 - [[State Space Models and Nonlinear Dynamic System]]
 - [[State-Observation Models]]
+- [[Kalman Filter Discrete-Time]]
 
 ### Algorithm
 
@@ -76,8 +75,8 @@ date of note: 2024-08-14
 - [[Bayesian Filtering and Smoothing Equations for State Observation Models]]
 
 
-## Explanation
 
+## Explanation
 
 >[!info]
 >The Extended Kalman Filter approximates the non-linear system by **linearizing** around the current estimate, allowing the application of Kalman filter principles. 
