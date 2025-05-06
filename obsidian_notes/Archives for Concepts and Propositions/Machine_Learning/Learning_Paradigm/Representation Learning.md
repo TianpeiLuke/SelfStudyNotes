@@ -118,7 +118,7 @@ date of note: 2024-07-07
 
 - [[Contrastive Learning]]
 - [[Metric Learning]]
-- [[Canonical Correlation Analysis]]
+- [[Canonical Correlation Analysis or CCA]]
 
 ## Transfer Learning
 

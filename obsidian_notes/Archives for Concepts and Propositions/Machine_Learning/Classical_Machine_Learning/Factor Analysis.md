@@ -217,7 +217,7 @@ date of note: 2024-09-04
 
 - [[Gaussian Mixture Models]]
 - [[Probabilistic Principal Component Analysis]]
-- [[Canonical Correlation Analysis]]
+- [[Canonical Correlation Analysis or CCA]]
 - [[Principal Component Analysis]]
 - [[Latent Variable Models]]
 

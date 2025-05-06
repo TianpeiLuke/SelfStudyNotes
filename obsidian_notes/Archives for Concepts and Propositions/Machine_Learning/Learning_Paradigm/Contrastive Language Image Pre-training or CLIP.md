@@ -34,6 +34,9 @@ date of note: 2025-05-05
 ## Explanation
 
 
+- [[SimCLR as Visual Representation Learning]]
+- [[Information Noise Contrastive Estimation as Contrastive Learning]]
+
 
 
 

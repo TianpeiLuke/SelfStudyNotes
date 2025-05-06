@@ -257,7 +257,7 @@ date of note: 2024-05-12
 - [[Independent Component Analysis]]
 - [[Auto-Encoder and Stochastic Auto-Encoder]]
 - [[Nonnegative Matrix Factorization or NMF]]
-- [[Canonical Correlation Analysis]]
+- [[Canonical Correlation Analysis or CCA]]
 
 
 
@@ -269,7 +269,7 @@ date of note: 2024-05-12
 - [[Gaussian Random Vector]]
 - [[Factor Analysis]]
 - [[Latent Variable Models]]
-- [[Canonical Correlation Analysis]]
+- [[Canonical Correlation Analysis or CCA]]
 - [[Quadratic Programming]]
 
 - [[Eigenvalue and Eigenvector for Linear Map]]

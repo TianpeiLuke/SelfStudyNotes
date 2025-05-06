@@ -46,6 +46,17 @@ date of note: 2024-07-07
 
 - [[Multi-View Learning]]
 
+## Examples
+
+### Latent Variable Model
+
+- [[Canonical Correlation Analysis or CCA]]
+
+
+### Vision-Language Model
+
+- [[Contrastive Language Image Pre-training or CLIP]]
+- [[Vision-Language Foundational Models]]
 
 
 

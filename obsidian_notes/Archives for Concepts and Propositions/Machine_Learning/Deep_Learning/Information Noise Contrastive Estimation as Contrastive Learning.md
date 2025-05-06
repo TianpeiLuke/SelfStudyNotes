@@ -247,7 +247,9 @@ date of note: 2024-09-08
 - [[Dense Text Retrieval with Pretrained Language Models]]
 - [[ColBERT as Multi-Representation Bi-Encoder Structure for Dense Information Retrieval]]
 
+### Vision Embedding
 
+- [[SimCLR as Visual Representation Learning]]
 
 
 

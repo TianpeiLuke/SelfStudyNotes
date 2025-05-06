@@ -31,7 +31,7 @@ date of note: 2024-09-09
 >- **canonical correlation analysis**, 
 >- and **multi-view deep networks**
 
-- [[Canonical Correlation Analysis]]
+- [[Canonical Correlation Analysis or CCA]]
 
 >[!info]
 >it has applications in fields like natural language processing, computer vision, and bioinformatics, where data naturally comes from multiple perspectives or feature spaces.
@@ -57,6 +57,8 @@ date of note: 2024-09-09
 ##  Recommended Notes and References
 
 
+- [[SimCLR as Visual Representation Learning]]
+- [[Information Noise Contrastive Estimation as Contrastive Learning]]
 - [[Representation Learning]]
 
 - [[Multi-Modal Learning]]

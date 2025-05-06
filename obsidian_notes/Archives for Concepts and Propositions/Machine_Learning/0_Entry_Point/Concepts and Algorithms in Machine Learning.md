@@ -150,7 +150,7 @@ date of note: 2024-06-01
 - [[Latent Dirichlet Allocation]]
 - [[T-Distributed Stochastic Neighbor Embedding or t-SNE]]
 
-- [[Canonical Correlation Analysis]]
+- [[Canonical Correlation Analysis or CCA]]
 
 #### Latent Factor Models
 
@@ -159,7 +159,7 @@ date of note: 2024-06-01
 - [[Probabilistic Principal Component Analysis]]
 - [[Independent Component Analysis]]
 - [[Nonnegative Matrix Factorization or NMF]]
-- [[Canonical Correlation Analysis]]
+- [[Canonical Correlation Analysis or CCA]]
 - [[Multinomial Principle Component Analysis]]
 
 

@@ -164,7 +164,14 @@ date of note: 2024-07-07
 - [[Dense Text Retrieval with Pretrained Language Models]]
 - [[ColBERT as Multi-Representation Bi-Encoder Structure for Dense Information Retrieval]]
 
+### Vision Representation
 
+- [[SimCLR as Visual Representation Learning]]
+- [[Siamese Network or Twin Tower Network for Contrastive Learning]]
+
+### Vision-Language Models
+
+- [[Contrastive Language Image Pre-training or CLIP]]
 
 
 
