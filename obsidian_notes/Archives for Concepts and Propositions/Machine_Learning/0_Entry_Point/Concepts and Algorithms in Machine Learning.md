@@ -133,7 +133,7 @@ date of note: 2024-06-01
 #### Clustering
 
 - [[k-Means Clustering]]
-- [[Gaussian Mixture Models]]
+- [[Gaussian Mixture Models or GMM]]
 - [[Gaussian Scale Mixtures]]
 - [[Spectral Clustering]]
 

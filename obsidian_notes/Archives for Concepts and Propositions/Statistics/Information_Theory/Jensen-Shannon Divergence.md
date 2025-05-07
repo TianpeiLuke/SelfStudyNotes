@@ -32,7 +32,7 @@ date of note: 2024-11-07
 - [[Measure Space and Countably Additive Measure]]
 - [[Mixture Family of Distributions]]
 - [[Exponential Connection and Mixture Connection on Statistical Manifold]]
-- [[Gaussian Mixture Models]]
+- [[Gaussian Mixture Models or GMM]]
 
 >[!important] Definition
 >Let $(\Omega, \mathscr{F})$ be a meaureable space, and $P_{1}\,{,}\ldots{,}\,P_{K}$ are probability measures on $\mathscr{F}$.

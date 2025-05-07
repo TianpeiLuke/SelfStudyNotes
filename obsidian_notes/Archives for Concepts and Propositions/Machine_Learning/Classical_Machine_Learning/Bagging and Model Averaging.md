@@ -87,7 +87,7 @@ date of note: 2024-10-24
 
 ### Mixture of Gaussian
 
-- [[Gaussian Mixture Models]]
+- [[Gaussian Mixture Models or GMM]]
 - [[Gaussian Scale Mixtures]]
 
 ### Bootstrap Methods

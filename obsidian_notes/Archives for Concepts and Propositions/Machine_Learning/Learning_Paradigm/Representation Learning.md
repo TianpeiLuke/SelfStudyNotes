@@ -133,7 +133,7 @@ date of note: 2024-07-07
 - [[k-Means Clustering]]
 - [[k Nearest Neighbor Classification]]
 - [[Gradient Boosting Trees]]
-- [[Gaussian Mixture Models]]
+- [[Gaussian Mixture Models or GMM]]
 - [[Reproducing Kernel Hilbert Space]]
 - [[Gaussian Process]]
 - [[RKHS of Gaussian Process]]

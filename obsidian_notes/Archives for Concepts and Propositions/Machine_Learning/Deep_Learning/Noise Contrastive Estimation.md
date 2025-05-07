@@ -50,7 +50,7 @@ date of note: 2024-08-16
 
 - [[Gibbs Measure and Energy-based Model]]
 - [[Bernoulli Distribution]]
-- [[Gaussian Mixture Models]]
+- [[Gaussian Mixture Models or GMM]]
 - [[Maximum Likelihood Estimation]]
 - [[Kullback-Leibler Divergence]]
 - [[Mixture Family of Distributions]]

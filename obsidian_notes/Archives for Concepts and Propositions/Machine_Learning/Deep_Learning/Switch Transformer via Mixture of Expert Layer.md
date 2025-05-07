@@ -42,7 +42,7 @@ date of note: 2024-10-24
 ##  Recommended Notes and References
 
 
-- [[Gaussian Mixture Models]]
+- [[Gaussian Mixture Models or GMM]]
 - [[Bagging and Model Averaging]]
 - [[Ensemble Learning]]
 - [[Dropout for Deep Learning]]

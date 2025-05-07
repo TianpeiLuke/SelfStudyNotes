@@ -205,7 +205,7 @@ date of note: 2024-09-04
 
 ## Gaussian Mixtures
 
-- [[Gaussian Mixture Models]]
+- [[Gaussian Mixture Models or GMM]]
 
 
 
@@ -215,7 +215,7 @@ date of note: 2024-09-04
 ##  Recommended Notes and References
 
 
-- [[Gaussian Mixture Models]]
+- [[Gaussian Mixture Models or GMM]]
 - [[Probabilistic Principal Component Analysis]]
 - [[Canonical Correlation Analysis or CCA]]
 - [[Principal Component Analysis]]

@@ -79,7 +79,7 @@ date of note: 2024-11-07
 ##  Recommended Notes and References
 
 
-- [[Gaussian Mixture Models]]
+- [[Gaussian Mixture Models or GMM]]
 - [[Gaussian Scale Mixtures]]
 
 - [[Exponential Family of Distributions]]

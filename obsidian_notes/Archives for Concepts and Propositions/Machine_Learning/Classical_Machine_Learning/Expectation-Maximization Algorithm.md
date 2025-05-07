@@ -174,6 +174,10 @@ date of note: 2024-05-12
 
 - [[Monte Carlo Expectation Maximization]]
 
+## Gaussian Mixture Model
+
+- [[Gaussian Mixture Models or GMM]]
+
 
 
 -----------
@@ -181,7 +185,7 @@ date of note: 2024-05-12
 
 - [[Evidence Lower Bound]]
 - [[Variational Inference vs EM Algorithm]]
-- [[Gaussian Mixture Models]]
+- [[Gaussian Mixture Models or GMM]]
 
 - [[Radon-Nikodym Derivative]]
 - [[Parametric Models]]

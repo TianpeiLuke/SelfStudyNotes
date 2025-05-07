@@ -66,7 +66,7 @@ date of note: 2024-06-24
 
 ^fb526f
 
-- [[Gaussian Mixture Models]]
+- [[Gaussian Mixture Models or GMM]]
 
 
 ## Explanation

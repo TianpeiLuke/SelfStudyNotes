@@ -47,7 +47,7 @@ date of note: 2024-07-29
 
 ### Gaussian Mixtures
 
-- [[Gaussian Mixture Models]]
+- [[Gaussian Mixture Models or GMM]]
 - [[Gaussian Scale Mixtures]]
 
 ### Dropout in Deep Learning
