@@ -17,7 +17,7 @@ date of note: 2025-05-03
 
 
 - [[Gaussian Random Variable]]
-- [[Inverse-Gamma Distribution]]
+- [[Student-t Distribution]]
 
 ## Explanation
 
