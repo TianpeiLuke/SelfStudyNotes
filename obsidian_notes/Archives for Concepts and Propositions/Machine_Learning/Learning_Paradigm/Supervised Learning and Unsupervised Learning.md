@@ -125,7 +125,7 @@ date of note: 2024-08-10
 - [[Spectral Clustering]]
 - [[Gaussian Mixture Models or GMM]]
 - [[Gaussian Scale Mixtures]]
-- [[Principal Component Analysis]]
+- [[Principal Component Analysis or PCA]]
 - [[Probabilistic Principal Component Analysis]]
 - [[Kernel Principal Component Analysis]]
 - [[Factor Analysis]]

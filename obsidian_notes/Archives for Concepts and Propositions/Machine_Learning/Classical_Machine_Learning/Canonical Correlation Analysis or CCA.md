@@ -56,7 +56,7 @@ date of note: 2024-05-12
 >- The **joint latent code** is encouraged to have **maximal cross-view correlation** rather than low reconstruction loss.
 
 - [[Siamese Network or Twin Tower Network for Contrastive Learning]]
-- [[Principal Component Analysis]]
+- [[Principal Component Analysis or PCA]]
 - [[Multi-View Learning]]
 
 ### CCA as Optimization on Generalized Steifel Manifolds

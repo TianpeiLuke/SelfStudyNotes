@@ -90,7 +90,7 @@ date of note: 2024-11-05
 
 
 
-- [[Principal Component Analysis]]
+- [[Principal Component Analysis or PCA]]
 
 
 
@@ -101,7 +101,7 @@ date of note: 2024-11-05
 
 
 
-- [[Principal Component Analysis]]
+- [[Principal Component Analysis or PCA]]
 - [[Information Retrieval]]
 
 

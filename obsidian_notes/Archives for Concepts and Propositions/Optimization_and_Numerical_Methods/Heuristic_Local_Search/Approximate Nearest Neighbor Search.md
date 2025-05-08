@@ -56,7 +56,7 @@ date of note: 2024-11-29
 >	- If we need to frequently insert or delete samples in $\mathcal{D}$, we may need a dynamic data structure.
 
 - [[Curse of Dimensionality]]
-- [[Principal Component Analysis]]
+- [[Principal Component Analysis or PCA]]
 - [[Johnson-Lindenstrauss Lemma for Dimensionality Reduction]]
 - Indyk, P., & Motwani, R. (1998, May). Approximate nearest neighbors: towards removing the curse of dimensionality. In _Proceedings of the thirtieth annual ACM symposium on Theory of computing_ (pp. 604-613).
 

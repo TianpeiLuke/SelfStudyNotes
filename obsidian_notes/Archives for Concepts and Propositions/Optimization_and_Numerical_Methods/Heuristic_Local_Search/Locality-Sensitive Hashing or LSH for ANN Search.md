@@ -127,7 +127,7 @@ date of note: 2024-11-29
 
 
 - [[Similarity Search]]
-- [[Principal Component Analysis]]
+- [[Principal Component Analysis or PCA]]
 - [[k-d Tree Structure for ANN Search]]
 - [[k Nearest Neighbor Classification]]
 - [[k Nearest Neighbor Density Estimation]]

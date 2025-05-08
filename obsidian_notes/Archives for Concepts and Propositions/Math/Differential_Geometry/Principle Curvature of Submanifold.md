@@ -30,6 +30,6 @@ date of note: 2024-05-20
 - [[Ricci Curvature Ricci Tensor]]
 - [[Curvature Tensor on Riemannian Manifold]]
 - [[Eigenvalue and Eigenvector for Linear Map]]
-- [[Principal Component Analysis]]
+- [[Principal Component Analysis or PCA]]
 
 - [[Introduction to Riemannian Manifolds by Lee]]

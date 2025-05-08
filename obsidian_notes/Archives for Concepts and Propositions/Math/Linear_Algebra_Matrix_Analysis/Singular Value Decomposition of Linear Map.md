@@ -174,7 +174,7 @@ date of note: 2024-05-27
 
 - [[Singular Value Decomposition of Compact Operator]]
 
-- [[Principal Component Analysis]]
+- [[Principal Component Analysis or PCA]]
 - [[Least Square Estimation via Singular Value Decomposition]]
 
 - [[Finite Dimensional Vector Spaces by Halmos]]

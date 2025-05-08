@@ -75,7 +75,7 @@ date of note: 2024-10-02
 - [[Retraction on Smooth Manifold]]
 - [[Retraction Map onto a Subspace]]
 
-- [[Principal Component Analysis]]
+- [[Principal Component Analysis or PCA]]
 - [[Invariance under Linear Transformation]]
 - [[Rayleigh Quotient for Eigenvalue Problem]]
 - [[Convex Optimization for Eigenvalue Problem]]

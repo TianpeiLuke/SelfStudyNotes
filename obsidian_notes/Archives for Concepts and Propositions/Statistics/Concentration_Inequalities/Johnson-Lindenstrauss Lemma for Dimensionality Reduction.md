@@ -36,7 +36,7 @@ date of note: 2024-06-02
 ##  Recommended Notes and References
 
 - [[Gaussian Process]]
-- [[Principal Component Analysis]]
+- [[Principal Component Analysis or PCA]]
 
 
 - [[Mathematical Foundations of Infinite Dimensional Statistical Models by Gine]]

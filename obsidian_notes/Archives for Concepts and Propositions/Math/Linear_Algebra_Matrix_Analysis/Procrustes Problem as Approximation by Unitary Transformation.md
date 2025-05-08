@@ -74,7 +74,7 @@ date of note: 2024-09-30
 - [[Frobenius Norm of Matrix]]
 
 - [[Singular Value Decomposition of Linear Map]]
-- [[Principal Component Analysis]]
+- [[Principal Component Analysis or PCA]]
 
 
 - [[Elements of Statistical Learning by Hastie]] pp 539 - 541

@@ -63,9 +63,9 @@ date of note: 2024-08-21
 
 ## Principle Component Analysis
 
-![[Principal Component Analysis#^d06ebc]]
+![[Principal Component Analysis or PCA#^d06ebc]]
 
-- [[Principal Component Analysis]]
+- [[Principal Component Analysis or PCA]]
 
 ## Rayleigh Quotient Iterations for Eigenvalue Problem
 

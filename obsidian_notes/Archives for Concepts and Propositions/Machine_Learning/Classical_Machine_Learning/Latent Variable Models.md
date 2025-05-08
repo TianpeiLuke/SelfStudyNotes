@@ -73,7 +73,7 @@ date of note: 2024-09-04
 ### Factor Analysis Models
 
 - [[Factor Analysis]]
-- [[Principal Component Analysis]]
+- [[Principal Component Analysis or PCA]]
 - [[Probabilistic Principal Component Analysis]]
 - [[Nonnegative Matrix Factorization or NMF]]
 - [[Canonical Correlation Analysis or CCA]]

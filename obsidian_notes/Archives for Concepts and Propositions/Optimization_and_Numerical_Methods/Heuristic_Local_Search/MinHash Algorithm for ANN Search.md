@@ -48,7 +48,7 @@ date of note: 2024-11-29
 
 
 
-- [[Principal Component Analysis]]
+- [[Principal Component Analysis or PCA]]
 - [[Indexing or Index Construction for Information Retrieval]]
 - [[Information Retrieval]]
 

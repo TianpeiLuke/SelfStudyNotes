@@ -141,7 +141,7 @@ date of note: 2024-06-01
 
 - [[Curse of Dimensionality]]
 
-- [[Principal Component Analysis]]
+- [[Principal Component Analysis or PCA]]
 - [[Probabilistic Principal Component Analysis]]
 - [[Kernel Principal Component Analysis]]
 

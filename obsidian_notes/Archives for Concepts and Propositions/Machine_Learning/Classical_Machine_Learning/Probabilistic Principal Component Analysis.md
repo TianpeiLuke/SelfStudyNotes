@@ -42,7 +42,7 @@ date of note: 2024-09-04
 
 ^098ba1
 
-- [[Principal Component Analysis]]
+- [[Principal Component Analysis or PCA]]
 - [[Factor Analysis]]
 
 ### Maximum Likelihood Estimation for PPCA
@@ -202,7 +202,7 @@ date of note: 2024-09-04
 - [[Factor Analysis]]
 - [[Latent Variable Models]]
 
-- [[Principal Component Analysis]]
+- [[Principal Component Analysis or PCA]]
 - [[Gaussian Random Vector]]
 - [[Marginal and Conditional Distribution of Gaussian]]
 - [[Natural Parameter and Mean Parameter for Gaussian Distribution]]

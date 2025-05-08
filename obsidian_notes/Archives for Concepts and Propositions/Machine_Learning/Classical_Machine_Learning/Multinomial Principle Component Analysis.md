@@ -84,7 +84,7 @@ date of note: 2024-09-05
 - [[Dirichlet Distribution]]
 - [[Multinomial Distribution]]
 - [[Probabilistic Principal Component Analysis]]
-- [[Principal Component Analysis]]
+- [[Principal Component Analysis or PCA]]
 
 
 - [[Multinomial Naive Bayes Model]]

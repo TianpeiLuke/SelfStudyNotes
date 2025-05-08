@@ -177,7 +177,7 @@ date of note: 2024-10-06
 - [[Rayleigh Quotient for Eigenvalue Problem]]
 - [[Courant-Fischer Minimax Theorem for Eigenvalue Problem]]
 - [[Convex Optimization for Eigenvalue Problem]]
-- [[Principal Component Analysis]]
+- [[Principal Component Analysis or PCA]]
 
 
 

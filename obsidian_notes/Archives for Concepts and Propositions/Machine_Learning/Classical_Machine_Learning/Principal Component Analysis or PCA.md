@@ -15,14 +15,14 @@ topics:
   - probabilistic_graphical_model
   - machine_learning_models
   - dimensionality_reduction
-name: Principal Component Analysis
+name: Principal Component Analysis or PCA
 date of note: 2024-05-12
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Principal Component Analysis
+>**Name**: Principal Component Analysis or PCA
 
 ### PCA as Linear Auto-Encoder
 

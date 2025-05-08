@@ -30,7 +30,7 @@ date of note: 2024-05-12
 >
 >-- [[Deep Learning Foundations and Concepts by Bishop]] pp 183
 
-- [[Principal Component Analysis]]
+- [[Principal Component Analysis or PCA]]
 
 ### Sigmoid Activation Function
 

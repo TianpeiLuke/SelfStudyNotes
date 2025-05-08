@@ -20,7 +20,7 @@ date of note: 2024-11-05
 >[!important]
 >**Name**: Kernel Principal Component Analysis
 
-![[Principal Component Analysis#^feea32]]
+![[Principal Component Analysis or PCA#^feea32]]
 
 >[!important] Definition
 >Let $\mathcal{D} := \{x_{1}\,{,}\ldots{,}\,x_{n}\}$ be i.i.d. samples from $\mathcal{P}(x)$ on $\mathcal{X}$. 
@@ -96,7 +96,7 @@ date of note: 2024-11-05
 - [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
 - [[Methods of Lagrangian Multipliers]]
 - [[Symmetric Tensor]]
-- [[Principal Component Analysis]]
+- [[Principal Component Analysis or PCA]]
 
 ![[kernel_pca.png]]
 
@@ -141,7 +141,7 @@ date of note: 2024-11-05
 >- We also define a map $g\in \mathcal{H}_{Z}$ $$z \mapsto g(z)$$ as the corresponding **nonlinear decoder**.
 
 
-- [[Principal Component Analysis]]
+- [[Principal Component Analysis or PCA]]
 - [[Auto-Encoder and Stochastic Auto-Encoder]]
 
 
