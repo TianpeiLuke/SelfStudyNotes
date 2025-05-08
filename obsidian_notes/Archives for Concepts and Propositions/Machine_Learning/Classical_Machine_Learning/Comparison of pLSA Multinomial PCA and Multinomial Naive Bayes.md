@@ -5,6 +5,7 @@ tags:
   - multinomial_pca
   - multinomial_naive_bayes_model
   - chatgpt
+  - comparison
 keywords:
   - pLSA
   - multinomial_pca

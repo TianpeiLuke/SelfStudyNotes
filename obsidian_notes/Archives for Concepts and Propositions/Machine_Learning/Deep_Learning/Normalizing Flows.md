@@ -209,7 +209,7 @@ date of note: 2024-08-16
 
 
 - [[Latent Variable Models]]
-- [[Variational Auto-Encoder]]
+- [[Variational Auto-Encoder or VAE]]
 - [[Comparison of Variational Inference vs EM Algorithm]]
 - [[Hamiltonian Monte Carlo]]
 - [[Importance Sampling]]

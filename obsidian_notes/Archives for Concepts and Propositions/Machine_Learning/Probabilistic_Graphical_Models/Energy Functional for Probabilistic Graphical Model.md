@@ -139,7 +139,7 @@ date of note: 2024-10-12
 - [[Maximum Entropy Learning for Approximate Inference in PGM]]
 - [[Variational Inference for Clique Tree]]
 - [[Variational Inference Formulation of Expectation Propagation]]
-- [[Variational Auto-Encoder]]
+- [[Variational Auto-Encoder or VAE]]
 
 
 

@@ -247,7 +247,7 @@ date of note: 2024-05-12
 
 - [[Markov Chain and Markov Process]]
 - [[Evidence Lower Bound]]
-- [[Variational Auto-Encoder]]
+- [[Variational Auto-Encoder or VAE]]
 - [[Metropolis-Hastings Algorithm]]
 
 
@@ -545,7 +545,7 @@ date of note: 2024-05-12
 
 - [[Normalizing Flows]]
 - [[Generative Adversarial Network]]
-- [[Variational Auto-Encoder]]
+- [[Variational Auto-Encoder or VAE]]
 
 ## Variational Auto-encoder
 
@@ -599,7 +599,7 @@ date of note: 2024-05-12
 
 ^90afc8
 
-- [[Variational Auto-Encoder]]
+- [[Variational Auto-Encoder or VAE]]
 - [[Information Projection and Moment Projection]]
 - [[Generative Adversarial Network]]
 

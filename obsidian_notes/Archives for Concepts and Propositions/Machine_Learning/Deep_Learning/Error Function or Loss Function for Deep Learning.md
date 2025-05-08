@@ -72,7 +72,7 @@ date of note: 2024-08-16
 
 - [[Evidence Lower Bound]]
 - [[Evidence Lower Bound for Exponential Family]]
-- [[Variational Auto-Encoder]]
+- [[Variational Auto-Encoder or VAE]]
 - [[Energy Functional for Probabilistic Graphical Model]]
 
 

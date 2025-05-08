@@ -59,6 +59,7 @@ date of note: 2024-06-01
 
 - [[Bayesian Network and Markov Network Comparison]]
 - [[Bayesian Network as Markov Network]]
+- [[Comparison of Deep Learning and Probabilistic Graphical Models]]
 
 #### Graphical Model with Continuous Variables
 

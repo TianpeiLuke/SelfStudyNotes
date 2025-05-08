@@ -156,7 +156,7 @@ date of note: 2024-07-07
 - [[Denoising Auto-Encoder]]
 - [[Sparse Auto-Encoder and Regularized Auto-Encoder]]
 - [[Contractive Auto-Encoder]]
-- [[Variational Auto-Encoder]]
+- [[Variational Auto-Encoder or VAE]]
 
 
 ### Convolutional Neural Network

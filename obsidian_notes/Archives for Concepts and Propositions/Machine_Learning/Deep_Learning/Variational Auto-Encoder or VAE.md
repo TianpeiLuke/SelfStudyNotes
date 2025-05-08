@@ -5,9 +5,11 @@ tags:
   - deep_learning/generative_models
   - variational_auto_encoder
   - vae
+  - VAE
 keywords:
   - variational_inference
   - variational_autoencoder
+  - VAE
 topics:
   - deep_learning
   - generative_model

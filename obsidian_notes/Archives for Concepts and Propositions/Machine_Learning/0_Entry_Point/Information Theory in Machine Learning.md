@@ -151,7 +151,7 @@ date of note: 2024-11-14
 
 #### Variational Autoencoder
 
-- [[Variational Auto-Encoder]]
+- [[Variational Auto-Encoder or VAE]]
 
 #### Variational Bayes
 

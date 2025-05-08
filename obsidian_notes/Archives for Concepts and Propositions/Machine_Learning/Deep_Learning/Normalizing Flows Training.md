@@ -27,7 +27,7 @@ date of note: 2024-08-16
 
 
 - [[Evidence Lower Bound]]
-- [[Variational Auto-Encoder]]
+- [[Variational Auto-Encoder or VAE]]
 
 
 ## Explanation

@@ -72,7 +72,7 @@ date of note: 2024-08-31
 
 ### Auto-Encoder
 
-- [[Variational Auto-Encoder]]
+- [[Variational Auto-Encoder or VAE]]
 - [[Auto-Encoder and Stochastic Auto-Encoder]]
 
 

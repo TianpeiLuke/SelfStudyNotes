@@ -63,7 +63,7 @@ date of note: 2024-09-04
 ### Auto-Encoder
 
 - [[Auto-Encoder and Stochastic Auto-Encoder]]
-- [[Variational Auto-Encoder]]
+- [[Variational Auto-Encoder or VAE]]
 
 ### Clustering
 

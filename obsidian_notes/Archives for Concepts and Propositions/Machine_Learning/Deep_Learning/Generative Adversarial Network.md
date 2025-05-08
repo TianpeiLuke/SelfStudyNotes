@@ -156,7 +156,7 @@ date of note: 2024-05-12
 >Compared to **explicit generative models** such as 
 >- [[Gaussian Process]]
 >- [[Factor Analysis]]
->- [[Variational Auto-Encoder]]
+>- [[Variational Auto-Encoder or VAE]]
 >- [[Denoising Diffusion Probabilistic Models and Diffusion Network]]
 >- [[Normalizing Flows]]
 >  

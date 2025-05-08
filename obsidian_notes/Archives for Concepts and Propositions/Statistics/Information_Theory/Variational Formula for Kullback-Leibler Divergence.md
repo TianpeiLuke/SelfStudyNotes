@@ -85,7 +85,7 @@ date of note: 2024-05-07
 
 >[!info]
 >**The variational formula** of relative entropy is the basis for variational inference methods. 
->- [[Variational Auto-Encoder]]
+>- [[Variational Auto-Encoder or VAE]]
 >- [[Expectation-Maximization Algorithm]]
 
 ## Gibbs distribution as optimal solution

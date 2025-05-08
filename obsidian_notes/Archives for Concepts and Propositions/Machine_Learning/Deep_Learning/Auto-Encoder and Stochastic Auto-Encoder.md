@@ -61,7 +61,7 @@ date of note: 2024-05-12
 >$$
 
 - [[Maximum Likelihood Estimation]]
-- [[Variational Auto-Encoder]]
+- [[Variational Auto-Encoder or VAE]]
 
 ![[stochastic_autoencoder.png]]
 
@@ -123,7 +123,7 @@ date of note: 2024-05-12
 
 ## Variational Autoencoder
 
-- [[Variational Auto-Encoder]]
+- [[Variational Auto-Encoder or VAE]]
 
 
 ## Other Models with Encoder-Decoder Architecture
@@ -151,7 +151,7 @@ date of note: 2024-05-12
 
 
 
-- [[Variational Auto-Encoder]]
+- [[Variational Auto-Encoder or VAE]]
 - [[Artificial Neural Network and Deep Learning]]
 
 - [[Principal Component Analysis or PCA]]

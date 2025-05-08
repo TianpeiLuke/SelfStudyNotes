@@ -20,7 +20,7 @@ date of note: 2024-05-12
 ![[Local Probabilistic Models#^8f6b15]]
 
 ![[Local Probabilistic Models#^98dd1f]]
-\
+
 ### Basic Rule Transformation
 
 >[!important] Definition

@@ -52,7 +52,7 @@ date of note: 2024-06-01
 	- [[f-Divergence]]
 	- [[Wasserstein Distance]]
 
-
+- [[Comparison of Deep Learning and Probabilistic Graphical Models]]
 
 - [[Perceptron Algorithm]]
 - [[Multi-Layer Perceptron and Feed-Forward Network]]
@@ -179,7 +179,7 @@ date of note: 2024-06-01
 
 - [[Evidence Lower Bound]]
 - [[Comparison of Variational Inference vs EM Algorithm]]
-- [[Variational Auto-Encoder]]
+- [[Variational Auto-Encoder or VAE]]
 
 - [[Gumbel Distribution as Generalized Extreme Value Distribution]]
 - [[Gumbel Softmax]]

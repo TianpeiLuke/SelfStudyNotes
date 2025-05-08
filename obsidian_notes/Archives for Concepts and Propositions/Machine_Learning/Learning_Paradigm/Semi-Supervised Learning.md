@@ -37,7 +37,7 @@ date of note: 2024-12-11
 
 - [[Self-Supervised Learning]]
 - [[Tikhonov Regularization in Optimization and Learning]]
-- [[Variational Auto-Encoder]]
+- [[Variational Auto-Encoder or VAE]]
 
 
 ## Related Paradigms

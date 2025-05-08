@@ -5,6 +5,8 @@ tags:
   - machine_learning/algorithms
   - machine_learning/latent_variable_model
   - deep_learning/variational_learning
+  - comparison
+  - chatgpt
 keywords:
   - variational_inference
   - em_algorithm
@@ -108,7 +110,7 @@ date of note: 2024-07-05
 
 - [[Expectation-Maximization Algorithm#EM Algorithm as Coordinate Ascent Algorithm]]
 - [[Parametric Models]]
-- [[Variational Auto-Encoder]]
+- [[Variational Auto-Encoder or VAE]]
  
 >[!important]
 >In **variational inference algorithm**, there are several additional **assumptions**:
@@ -127,7 +129,7 @@ date of note: 2024-07-05
 
 - [[Expectation-Maximization Algorithm#EM Algorithm as Coordinate Ascent Algorithm]]
 - [[Parametric Models]]
-- [[Variational Auto-Encoder]]
+- [[Variational Auto-Encoder or VAE]]
 - [[Probabilistic Graphical Models by Koller]] pp 914
 
 
@@ -159,10 +161,10 @@ date of note: 2024-07-05
 | **Update for latent variables**      | *Closed-form* when the posterior is in the *same exponential family* as the prior (e.g. **GMM**, **HMM**).                                                                                                                             | Choose a *factorised*/parameterised $q$ (**mean-field**, **structured**, **amortised**) and optimise its parameters with *closed-form*, *coordinate ascent*, or *gradient methods*.                               |
 | **Update for parameters $\theta$**   | - *Closed-form* maximisation for many conjugate models; <br>- otherwise numerical.                                                                                                                                                     | **Same**: maximise ELBO w.r.t. $\theta$, but relies on the _approximate_ posterior $q$, not the true one.                                                                                                         |
 | **Guarantees**                       | - Monotonically **increases** data log-likelihood; <br>- converges to a local maximum.                                                                                                                                                 | - Monotonically **increases** ELBO; <br>- converges to a local optimum of ELBO (a _lower bound_ on log-likelihood).                                                                                               |
-| **When is EM a special case of VI?** | EM = VI with **delta-function $$q(\theta)=\delta(\theta− \theta^{old})$$** and exact E-step (i.e. q(Z)=p(Z\mid X,θ)).                                                                                                                  | –                                                                                                                                                                                                                 |
+| **When is EM a special case of VI?** | EM = VI with <br>- **delta-function $$q(\theta)=\delta(\theta− \theta^{old})$$** - and **exact E-step** i.e. $$q(Z)=p(Z\mid X,\theta).$$                                                                                               | –                                                                                                                                                                                                                 |
 | **Computational trade-off**          | - Requires _exact_ posterior expectations ⇒ feasible only with *conjugacy* or small latent space.                                                                                                                                      | - Trades exactness for *tractability*; <br>- scales to massive, non-conjugate models via stochastic gradients, **re-parameterisation**, **amortisation** (VAE).                                                   |
 | **Outputs**                          | - *MLE/MAP* estimate $\hatθ$.<br>- Optionally *posterior* $$p(Z\mid X,\hat θ)$$ (already computed in E-step).                                                                                                                          | - Full **variational posterior** $q(Z)$ (and sometimes $q(\theta)$).<br>- *Approximate* evidence lower bound for model comparison.                                                                                |
-| **Typical uses**                     | - **GMM** [[Gaussian Mixture Models or GMM]]<br>- **HMM,** [[Hidden Markov Model]] <br>- mixture of experts,<br>- **factor analysis**, [[Factor Analysis]] <br>- **probabilistic PCA**. [[Probabilistic Principal Component Analysis]] | - **Latent Dirichlet Allocation**,  [[Latent Dirichlet Allocation or LDA]]<br>- **Bayesian neural networks**, <br>- **variational auto-encoders**, [[Variational Auto-Encoder]]<br>- deep latent Gaussian models. |
+| **Typical uses**                     | - **GMM** [[Gaussian Mixture Models or GMM]]<br>- **HMM,** [[Hidden Markov Model]] <br>- mixture of experts,<br>- **factor analysis**, [[Factor Analysis]] <br>- **probabilistic PCA**. [[Probabilistic Principal Component Analysis]] | - **Latent Dirichlet Allocation**,  [[Latent Dirichlet Allocation or LDA]]<br>- **Bayesian neural networks**, <br>- **variational auto-encoders**, [[Variational Auto-Encoder or VAE]]<br>- deep latent Gaussian models. |
 | **Strengths**                        | Simple, closed-form, fast per-iteration; **exact** in E-step.                                                                                                                                                                          | Flexible, handles non-conjugate models, yields uncertainty over latents/parameters, amenable to *stochastic and amortised variants.*                                                                              |
 | **Weaknesses**                       | - Limited to models with **tractable posteriors**; <br>- no distribution over θ; <br>- can get stuck in poor local maxima.                                                                                                             | - Gives only an _approximate_ posterior; <br>- quality depends on variational family; <br>- optimisation can be sensitive and slower per iteration.                                                               |
 
@@ -180,7 +182,7 @@ date of note: 2024-07-05
 
 ## Variational Inference in Deep Learning
 
-- [[Variational Auto-Encoder]]
+- [[Variational Auto-Encoder or VAE]]
 - [[Denoising Diffusion Probabilistic Models and Diffusion Network]]
 
 

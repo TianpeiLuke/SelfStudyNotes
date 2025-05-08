@@ -34,7 +34,7 @@ date of note: 2024-10-20
 - [[Diffusion Network Score Matching Equivalence]]
 - [[Continuous-Time Diffusion Network via Stochastic Differential Equations]]
 - [[Score Matching and Denoising Score Matching]]
-- [[Variational Auto-Encoder]]
+- [[Variational Auto-Encoder or VAE]]
 - [[Evidence Lower Bound]]
 - [[Multinomial Distribution]]
 

@@ -21,7 +21,7 @@ date of note: 2024-10-20
 >- learns to perform *denoising diffusion* 
 >- not directly in the high-dimensional data space (e.g., pixel space for images), but instead in a *lower-dimensional latent space* produced by a pretrained encoder (such as a VAE).
 
-- [[Variational Auto-Encoder]]
+- [[Variational Auto-Encoder or VAE]]
 - [[Denoising Diffusion Probabilistic Models and Diffusion Network]]
 
 ![[latent_diffusion_model.png]]

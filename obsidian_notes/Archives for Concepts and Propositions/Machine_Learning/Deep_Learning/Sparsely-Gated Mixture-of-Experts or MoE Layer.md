@@ -73,7 +73,7 @@ date of note: 2024-10-24
 
 - [[Activation Functions for Deep Learning]]
 - [[Rectified Linear Unit as Activation for Deep Learning]]
-- [[Variational Auto-Encoder#Reparameterization Trick]]
+- [[Variational Auto-Encoder or VAE#Reparameterization Trick]]
 - [[LASSO and Sparsity-Induced Least Square]]
 - [[Order Statistics]]
 

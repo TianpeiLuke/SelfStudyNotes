@@ -151,7 +151,7 @@ date of note: 2024-08-24
 >
 >-- [[Probabilistic Machine Learning Advanced Topics by Murphy]] pp 305 - 306
 
-- [[Variational Auto-Encoder]]
+- [[Variational Auto-Encoder or VAE]]
 - [[Restricted Boltzmann Machine or RBM]]
 - [[Auto-Encoder and Stochastic Auto-Encoder]]
 

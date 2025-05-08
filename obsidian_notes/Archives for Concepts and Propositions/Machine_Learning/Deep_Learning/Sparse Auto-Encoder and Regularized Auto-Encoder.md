@@ -58,7 +58,7 @@ date of note: 2024-05-12
 
 
 - [[Latent Variable Models]]
-- [[Variational Auto-Encoder]]
+- [[Variational Auto-Encoder or VAE]]
 - [[Artificial Neural Network and Deep Learning]]
 
 - [[Principal Component Analysis or PCA]]
