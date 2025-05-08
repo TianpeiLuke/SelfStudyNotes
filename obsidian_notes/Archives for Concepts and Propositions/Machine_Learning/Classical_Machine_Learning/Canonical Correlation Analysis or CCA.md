@@ -192,7 +192,7 @@ date of note: 2024-05-12
 - [[Factor Analysis]]
 - [[Latent Variable Models]]
 - [[Partial Correlation]]
-- [[Independent Component Analysis]]
+- [[Independent Component Analysis or ICA]]
 
 - [[Representation Learning]]
 

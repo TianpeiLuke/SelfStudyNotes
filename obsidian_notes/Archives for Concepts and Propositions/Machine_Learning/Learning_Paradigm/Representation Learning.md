@@ -145,7 +145,7 @@ date of note: 2024-07-07
 - [[Factor Analysis]]
 - [[Principal Component Analysis or PCA]]
 - [[Probabilistic Principal Component Analysis]]
-- [[Independent Component Analysis]]
+- [[Independent Component Analysis or ICA]]
 - [[Nonnegative Matrix Factorization or NMF]]
 
 - [[Gaussian Process Latent Variable Model]]

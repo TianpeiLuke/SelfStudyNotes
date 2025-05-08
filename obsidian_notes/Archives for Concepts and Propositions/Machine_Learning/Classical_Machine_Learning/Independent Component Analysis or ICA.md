@@ -14,14 +14,14 @@ keywords:
 topics:
   - probabilistic_graphical_model
   - machine_learning_models
-name: Independent Component Analysis
+name: Independent Component Analysis or ICA
 date of note: 2024-05-12
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: Independent Component Analysis
+>**Name**: Independent Component Analysis or ICA
 
 >[!important] Definition  
 >The **Independent Component Analysis (ICA)** algorithm separates a multivariate signal — typically sensor mixtures — into statistically *independent source components* without knowing the original mixing process.  
@@ -44,7 +44,7 @@ date of note: 2024-05-12
 >		- Initialise a random weight vector $\mathbf{w}^{(0)}\in\mathbb{R}^{m}$ with $$ \lVert\mathbf{w}^{(0)}\rVert=1.$$  
 >	- **Iterate Newton fixed-point** until convergence:  
 > 	    - $$\mathbf{w}^{+} \gets \mathbb{E}\!\bigl[\mathbf{Z}\,g(\mathbf{w}^\top\!\mathbf{Z})\bigr] - \mathbb{E}\!\bigl[g'(\mathbf{w}^\top\!\mathbf{Z})\bigr]\mathbf{w}$$
-> 		    - where $g(\cdot)$ is a non-linear *contrast* (e.g. $\tanh$, cube).  
+> 		    - where $g(\cdot)$ is a **non-linear contrast function** (e.g. $\tanh$, cube).  
 > 	    - **Orthogonalise** against previously found components:  
 >       $$\mathbf{w}^{+}\leftarrow \mathbf{w}^{+}-\sum_{j<k}(\mathbf{w}^{+}\!\cdot\!\mathbf{w}_j)\,\mathbf{w}_j.$$  
 > 	    - **Normalise**: $$ \mathbf{w}^{+}\leftarrow\mathbf{w}^{+}/\lVert\mathbf{w}^{+}\rVert.$$  

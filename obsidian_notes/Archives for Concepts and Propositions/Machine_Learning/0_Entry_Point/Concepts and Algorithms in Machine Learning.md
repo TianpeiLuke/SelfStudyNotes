@@ -145,7 +145,7 @@ date of note: 2024-06-01
 - [[Probabilistic Principal Component Analysis]]
 - [[Kernel Principal Component Analysis]]
 
-- [[Independent Component Analysis]]
+- [[Independent Component Analysis or ICA]]
 - [[Nonnegative Matrix Factorization or NMF]]
 - [[Latent Dirichlet Allocation]]
 - [[T-Distributed Stochastic Neighbor Embedding or t-SNE]]
@@ -157,7 +157,7 @@ date of note: 2024-06-01
 - [[Latent Variable Models]]
 - [[Factor Analysis]]
 - [[Probabilistic Principal Component Analysis]]
-- [[Independent Component Analysis]]
+- [[Independent Component Analysis or ICA]]
 - [[Nonnegative Matrix Factorization or NMF]]
 - [[Canonical Correlation Analysis or CCA]]
 - [[Multinomial Principle Component Analysis]]

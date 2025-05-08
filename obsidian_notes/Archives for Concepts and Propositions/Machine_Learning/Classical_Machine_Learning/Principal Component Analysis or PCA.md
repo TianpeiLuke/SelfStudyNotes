@@ -254,7 +254,7 @@ date of note: 2024-05-12
 
 ## Other Dimensionality Reduction Method
 
-- [[Independent Component Analysis]]
+- [[Independent Component Analysis or ICA]]
 - [[Auto-Encoder and Stochastic Auto-Encoder]]
 - [[Nonnegative Matrix Factorization or NMF]]
 - [[Canonical Correlation Analysis or CCA]]
