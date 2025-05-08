@@ -124,7 +124,7 @@ date of note: 2024-08-10
 - [[k-Means Clustering]]
 - [[Spectral Clustering]]
 - [[Gaussian Mixture Models or GMM]]
-- [[Gaussian Scale Mixtures]]
+- [[Gaussian Scale Mixtures or GSM]]
 - [[Principal Component Analysis or PCA]]
 - [[Probabilistic Principal Component Analysis]]
 - [[Kernel Principal Component Analysis]]

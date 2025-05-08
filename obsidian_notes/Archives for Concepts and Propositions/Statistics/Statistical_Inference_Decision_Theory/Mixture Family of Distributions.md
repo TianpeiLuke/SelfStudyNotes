@@ -80,7 +80,7 @@ date of note: 2024-11-07
 
 
 - [[Gaussian Mixture Models or GMM]]
-- [[Gaussian Scale Mixtures]]
+- [[Gaussian Scale Mixtures or GSM]]
 
 - [[Exponential Family of Distributions]]
 - [[Parametric Models]]

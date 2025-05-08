@@ -124,7 +124,7 @@ date of note: 2024-09-04
 ##  Recommended Notes and References
 
 
-- [[Gaussian Scale Mixtures]]
+- [[Gaussian Scale Mixtures or GSM]]
 - [[k-Means Clustering]]
 - [[Expectation-Maximization Algorithm]]
 

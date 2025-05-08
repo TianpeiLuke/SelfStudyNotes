@@ -153,6 +153,7 @@ date of note: 2024-06-11
 
 - [[Langevin Equation]]
 - [[Matrix Exponential]]
+- [[Gaussian Mixture Models or GMM]]
 
 >[!example]
 >Consider a **homoegeneous**  *linear SDE* with **multiplicative noise**
@@ -172,6 +173,8 @@ date of note: 2024-06-11
 >We see that the solution is a **multiplicative scaling** to $X_{0}.$
 
 - [[Matrix Exponential]]
+- [[Gaussian Scale Mixtures or GSM]]
+
 ## Separation of Variables
 
 >[!important]

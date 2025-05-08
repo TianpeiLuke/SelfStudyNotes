@@ -68,7 +68,7 @@ date of note: 2024-09-04
 ### Clustering
 
 - [[Gaussian Mixture Models or GMM]]
-- [[Gaussian Scale Mixtures]]
+- [[Gaussian Scale Mixtures or GSM]]
 
 ### Factor Analysis Models
 

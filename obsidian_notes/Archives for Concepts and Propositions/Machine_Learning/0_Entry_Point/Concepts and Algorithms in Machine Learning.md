@@ -134,7 +134,7 @@ date of note: 2024-06-01
 
 - [[k-Means Clustering]]
 - [[Gaussian Mixture Models or GMM]]
-- [[Gaussian Scale Mixtures]]
+- [[Gaussian Scale Mixtures or GSM]]
 - [[Spectral Clustering]]
 
 #### Dimensionality Reduction

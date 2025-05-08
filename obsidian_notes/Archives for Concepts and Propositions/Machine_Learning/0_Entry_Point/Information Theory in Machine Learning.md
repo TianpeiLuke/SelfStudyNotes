@@ -132,7 +132,7 @@ date of note: 2024-11-14
 #### Latent Variable Model
 
 - [[Gaussian Mixture Models or GMM]]
-- [[Gaussian Scale Mixtures]]
+- [[Gaussian Scale Mixtures or GSM]]
 - [[Gaussian Process Latent Variable Model]]
 
 #### Exponential Family
