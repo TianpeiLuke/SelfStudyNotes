@@ -57,6 +57,12 @@ date of note: 2024-05-12
 >
 >-- [[Deep Learning by Goodfellow]] pp 12  
 
+### Compare Deep Learning and Probabilistic Graphical Models
+
+
+- [[Comparison of Deep Learning and Probabilistic Graphical Models]]
+
+
 ### From Neural Science to Computer Science
 
 >[!quote]
@@ -128,8 +134,6 @@ date of note: 2024-05-12
 
 -----------
 ##  Recommended Notes and References
-
-
 
 
 - [[Back-Propagation Algorithm]]
