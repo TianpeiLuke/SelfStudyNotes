@@ -107,7 +107,7 @@ date of note: 2024-09-13
 - [[Multinomial Principle Component Analysis]]
 - [[Latent Semantic Analysis via Singular Value Decomposition]]
 - [[Probabilistic Latent Semantic Analysis or pLSA]]
-- [[Latent Dirichlet Allocation]]
+- [[Latent Dirichlet Allocation or LDA]]
 
 ### Natural Language Processing System
 

@@ -25,7 +25,7 @@ date of note: 2024-10-24
 ### Loss
 
 - [[Evidence Lower Bound]]
-- [[Variational Inference vs EM Algorithm]]
+- [[Comparison of Variational Inference vs EM Algorithm]]
 
 ### Inference
 

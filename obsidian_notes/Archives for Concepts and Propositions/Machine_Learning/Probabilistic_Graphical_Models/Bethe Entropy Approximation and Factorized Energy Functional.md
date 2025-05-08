@@ -121,7 +121,7 @@ date of note: 2024-05-12
 - [[Variational Inference for Clique Tree]]
 
 - [[Evidence Lower Bound]]
-- [[Variational Inference vs EM Algorithm]]
+- [[Comparison of Variational Inference vs EM Algorithm]]
 
 - [[Cluster Graph and Family Preservation]]
 - [[Clique Tree and Graph and Running Intersection Property]]

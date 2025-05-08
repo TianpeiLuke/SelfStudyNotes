@@ -124,7 +124,7 @@ date of note: 2024-11-14
 #### EM Algorithm and Variational Inference
 
 - [[Expectation-Maximization Algorithm]]
-- [[Variational Inference vs EM Algorithm]]
+- [[Comparison of Variational Inference vs EM Algorithm]]
 - [[Variational Expectation-Maximization]]
 - [[Monte Carlo Expectation Maximization]]
 - [[Expectation-Maximization Algorithm for Exponential Family]]

@@ -100,7 +100,7 @@ date of note: 2024-06-01
 - [[Expectation-Maximization Algorithm]]
 - [[Evidence Lower Bound for Exponential Family]]
 - [[Expectation-Maximization Algorithm for Exponential Family]]
-- [[Variational Inference vs EM Algorithm]]
+- [[Comparison of Variational Inference vs EM Algorithm]]
 - [[Variational Expectation-Maximization]]
 - [[Variational Bayesian Learning]]
 
@@ -147,7 +147,7 @@ date of note: 2024-06-01
 
 - [[Independent Component Analysis or ICA]]
 - [[Nonnegative Matrix Factorization or NMF]]
-- [[Latent Dirichlet Allocation]]
+- [[Latent Dirichlet Allocation or LDA]]
 - [[T-Distributed Stochastic Neighbor Embedding or t-SNE]]
 
 - [[Canonical Correlation Analysis or CCA]]
@@ -165,7 +165,7 @@ date of note: 2024-06-01
 
 - [[Topic Models]]
 - [[Probabilistic Latent Semantic Analysis or pLSA]]
-- [[Latent Dirichlet Allocation]]
+- [[Latent Dirichlet Allocation or LDA]]
 - [[Comparison of pLSA Multinomial PCA and Multinomial Naive Bayes]]
 
 - [[Gaussian Process Latent Variable Model]]

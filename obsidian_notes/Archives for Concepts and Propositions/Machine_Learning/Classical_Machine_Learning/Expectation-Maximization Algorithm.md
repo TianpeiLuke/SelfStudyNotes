@@ -184,7 +184,7 @@ date of note: 2024-05-12
 ##  Recommended Notes and References
 
 - [[Evidence Lower Bound]]
-- [[Variational Inference vs EM Algorithm]]
+- [[Comparison of Variational Inference vs EM Algorithm]]
 - [[Gaussian Mixture Models or GMM]]
 
 - [[Radon-Nikodym Derivative]]

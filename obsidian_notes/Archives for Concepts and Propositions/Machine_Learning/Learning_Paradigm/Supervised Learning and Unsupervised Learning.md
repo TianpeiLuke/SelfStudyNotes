@@ -131,7 +131,7 @@ date of note: 2024-08-10
 - [[Factor Analysis]]
 - [[Gaussian Process Latent Variable Model]]
 - [[Multinomial Principle Component Analysis]]
-- [[Latent Dirichlet Allocation]]
+- [[Latent Dirichlet Allocation or LDA]]
 - [[k Nearest Neighbor Density Estimation]]
 - [[Parzen Kernel Density Estimation]]
 - [[Probabilistic Graphical Models]]

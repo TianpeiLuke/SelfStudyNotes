@@ -88,7 +88,7 @@ date of note: 2024-09-04
 
 ### Topic Models
 
-- [[Latent Dirichlet Allocation]]
+- [[Latent Dirichlet Allocation or LDA]]
 
 ### Gaussian Process
 

@@ -177,7 +177,7 @@ date of note: 2024-05-12
 - [[Maximum Entropy Learning of Clique Tree PGM]]
 - [[Evidence Lower Bound]]
 - [[Expectation-Maximization Algorithm]]
-- [[Variational Inference vs EM Algorithm]]
+- [[Comparison of Variational Inference vs EM Algorithm]]
 
 
 - [[Bayesian Network on Directed Acyclic Graph]]

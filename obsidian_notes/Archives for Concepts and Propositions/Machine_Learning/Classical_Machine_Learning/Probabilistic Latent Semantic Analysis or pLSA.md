@@ -137,7 +137,7 @@ date of note: 2024-09-05
 
 ### Latent Dirichlet Allocation
 
-- [[Latent Dirichlet Allocation]]
+- [[Latent Dirichlet Allocation or LDA]]
 - [[Probabilistic Graphical Models]]
 
 

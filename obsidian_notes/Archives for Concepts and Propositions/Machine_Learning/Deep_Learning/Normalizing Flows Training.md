@@ -53,7 +53,7 @@ date of note: 2024-08-16
 ##  Recommended Notes and References
 
 
-- [[Variational Inference vs EM Algorithm]]
+- [[Comparison of Variational Inference vs EM Algorithm]]
 - [[Artificial Neural Network and Deep Learning]]
 
 

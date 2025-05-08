@@ -116,8 +116,11 @@ date of note: 2024-05-12
 
 ![[naive_bayes_lda.png]]
 
+## Inference
 
-
+- [[Comparison of Variational Inference vs EM Algorithm]]
+- [[Evidence Lower Bound]]
+- [[Evidence Lower Bound for Exponential Family]]
 
 
 
@@ -130,7 +133,7 @@ date of note: 2024-05-12
 - [[Dirichlet Distribution]]
 
 - [[Mean Field Approximation for PGM]]
-- [[Variational Inference vs EM Algorithm]]
+- [[Comparison of Variational Inference vs EM Algorithm]]
 - [[Variational Inference for Clique Tree]]
 
 - [[Probabilistic Latent Semantic Analysis or pLSA]]

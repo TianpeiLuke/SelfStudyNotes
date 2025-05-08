@@ -1,6 +1,6 @@
 ---
 tags:
-  - concept
+  - thought
   - machine_learning/models
   - machine_learning/algorithms
   - machine_learning/latent_variable_model
@@ -144,6 +144,30 @@ date of note: 2024-07-05
 >3. In terms of *performance guarantee*:
 >	- **EM algorithm** guarantee to **maximize** the *marginal log-likelihood* $p_{\theta}(x)$ when converges.
 >	- **VAE** has *no theoretical guarantee* as the choice of the *family of variational densities* (i.e. the function space of **encoder networks**) may not contain the *true posterior density.*
+
+### Comparison via ChatGPT
+
+>[!important]
+>- _EM_ is a **special, exact** coordinate-ascent on the log-likelihood that works when the posterior moments are tractable. 
+>- _Variational inference_ generalises the idea: replace the true posterior with a _learned approximation_ so expectation steps and gradients remain feasible, sacrificing *exactness* for *scalability* and flexibility in modern Bayesian and deep generative models.
+
+
+| Aspect                               | **Expectation-Maximization (EM)**                                                                                                                                                                                                      | **Variational Inference (VI)**                                                                                                                                                                                    |
+| ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Goal**                             | Maximize the **log-likelihood** $$\log p_\theta(X)$$ for latent-variable models.                                                                                                                                                       | Approximate the **posterior** $$p_\theta(Z\mid X)$$ (and often the **evidence**) by optimisation over a *tractable family* $q(Z)$.                                                                                |
+| **Core idea**                        | Alternate between <br>- **E-step:** exact expectation under the _true_ posterior $$p(Z\mid X,\theta^{\text{old}}).$$<br>- **M-step:** maximise that *expected complete-data log-likelihood* w.r.t. $\theta$.                           | Turn inference into *optimisation* of the **ELBO**  $$\mathcal L(q,\theta)=\mathbb E_q[\log p_\theta(X,Z)]-\mathbb E_q[\log q(Z)].$$ Update q and $\theta$ *jointly* or alternately.                              |
+| **Update for latent variables**      | *Closed-form* when the posterior is in the *same exponential family* as the prior (e.g. **GMM**, **HMM**).                                                                                                                             | Choose a *factorised*/parameterised $q$ (**mean-field**, **structured**, **amortised**) and optimise its parameters with *closed-form*, *coordinate ascent*, or *gradient methods*.                               |
+| **Update for parameters $\theta$**   | - *Closed-form* maximisation for many conjugate models; <br>- otherwise numerical.                                                                                                                                                     | **Same**: maximise ELBO w.r.t. $\theta$, but relies on the _approximate_ posterior $q$, not the true one.                                                                                                         |
+| **Guarantees**                       | - Monotonically **increases** data log-likelihood; <br>- converges to a local maximum.                                                                                                                                                 | - Monotonically **increases** ELBO; <br>- converges to a local optimum of ELBO (a _lower bound_ on log-likelihood).                                                                                               |
+| **When is EM a special case of VI?** | EM = VI with **delta-function $$q(\theta)=\delta(\theta− \theta^{old})$$** and exact E-step (i.e. q(Z)=p(Z\mid X,θ)).                                                                                                                  | –                                                                                                                                                                                                                 |
+| **Computational trade-off**          | - Requires _exact_ posterior expectations ⇒ feasible only with *conjugacy* or small latent space.                                                                                                                                      | - Trades exactness for *tractability*; <br>- scales to massive, non-conjugate models via stochastic gradients, **re-parameterisation**, **amortisation** (VAE).                                                   |
+| **Outputs**                          | - *MLE/MAP* estimate $\hatθ$.<br>- Optionally *posterior* $$p(Z\mid X,\hat θ)$$ (already computed in E-step).                                                                                                                          | - Full **variational posterior** $q(Z)$ (and sometimes $q(\theta)$).<br>- *Approximate* evidence lower bound for model comparison.                                                                                |
+| **Typical uses**                     | - **GMM** [[Gaussian Mixture Models or GMM]]<br>- **HMM,** [[Hidden Markov Model]] <br>- mixture of experts,<br>- **factor analysis**, [[Factor Analysis]] <br>- **probabilistic PCA**. [[Probabilistic Principal Component Analysis]] | - **Latent Dirichlet Allocation**,  [[Latent Dirichlet Allocation or LDA]]<br>- **Bayesian neural networks**, <br>- **variational auto-encoders**, [[Variational Auto-Encoder]]<br>- deep latent Gaussian models. |
+| **Strengths**                        | Simple, closed-form, fast per-iteration; **exact** in E-step.                                                                                                                                                                          | Flexible, handles non-conjugate models, yields uncertainty over latents/parameters, amenable to *stochastic and amortised variants.*                                                                              |
+| **Weaknesses**                       | - Limited to models with **tractable posteriors**; <br>- no distribution over θ; <br>- can get stuck in poor local maxima.                                                                                                             | - Gives only an _approximate_ posterior; <br>- quality depends on variational family; <br>- optimisation can be sensitive and slower per iteration.                                                               |
+
+
+
 
 ## Variational EM
 

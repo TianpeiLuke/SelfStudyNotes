@@ -178,7 +178,7 @@ date of note: 2024-06-01
 #### Variational Auto-Encoder
 
 - [[Evidence Lower Bound]]
-- [[Variational Inference vs EM Algorithm]]
+- [[Comparison of Variational Inference vs EM Algorithm]]
 - [[Variational Auto-Encoder]]
 
 - [[Gumbel Distribution as Generalized Extreme Value Distribution]]

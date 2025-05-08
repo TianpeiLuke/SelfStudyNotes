@@ -81,7 +81,7 @@ date of note: 2024-11-05
 
 ### Latent Dirichlet Allocation
 
-- [[Latent Dirichlet Allocation]]
+- [[Latent Dirichlet Allocation or LDA]]
 
 
 -----------

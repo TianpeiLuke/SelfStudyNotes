@@ -95,7 +95,7 @@ date of note: 2024-05-12
 ^1410e1
 
 
-- [[Latent Dirichlet Allocation]]
+- [[Latent Dirichlet Allocation or LDA]]
 
 
 

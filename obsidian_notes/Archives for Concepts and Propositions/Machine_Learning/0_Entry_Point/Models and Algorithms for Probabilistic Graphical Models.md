@@ -120,7 +120,7 @@ date of note: 2024-06-01
 - [[Kalman Filter Discrete-Time]]
 - [[Recurrent Neural Network]]
 - [[Conditional Random Field]]
-- [[Latent Dirichlet Allocation]]
+- [[Latent Dirichlet Allocation or LDA]]
 - [[Restricted Boltzmann Machine or RBM]]
 - [[Ising Model]]
 - [[Markov Logic Network for Probabilistic First-Order Logic]]

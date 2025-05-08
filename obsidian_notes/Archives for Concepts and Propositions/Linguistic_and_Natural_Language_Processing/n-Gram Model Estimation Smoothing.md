@@ -81,7 +81,7 @@ date of note: 2024-09-08
 - [[Multinomial Naive Bayes Model]]
 - [[Multinomial Principle Component Analysis]]
 - [[Probabilistic Latent Semantic Analysis or pLSA]]
-- [[Latent Dirichlet Allocation]]
+- [[Latent Dirichlet Allocation or LDA]]
 
 
 - [[Foundations of Statistical Natural Language Processing by Manning]] pp 191

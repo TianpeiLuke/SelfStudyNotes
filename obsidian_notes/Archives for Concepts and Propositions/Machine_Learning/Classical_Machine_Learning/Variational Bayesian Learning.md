@@ -39,7 +39,7 @@ date of note: 2024-07-23
 - [[Bayes Theorem]]
 - [[Exponential Family of Distributions]]
 - [[Evidence Lower Bound]]
-- [[Variational Inference vs EM Algorithm]]
+- [[Comparison of Variational Inference vs EM Algorithm]]
 - [[Denoising Diffusion Probabilistic Models and Diffusion Network]]
 
 

@@ -46,7 +46,7 @@ date of note: 2024-05-12
 >- making the training of the encoder model tractable using the **reparameterization trick**
 
 - [[Expectation-Maximization Algorithm]]
-- [[Variational Inference vs EM Algorithm]]
+- [[Comparison of Variational Inference vs EM Algorithm]]
 
 ### Evidence Lower Bound
 

@@ -44,7 +44,7 @@ date of note: 2024-07-23
 
 - [[Expectation-Maximization Algorithm]]
 - [[Expectation-Maximization Algorithm for Exponential Family]]
-- [[Variational Inference vs EM Algorithm]]
+- [[Comparison of Variational Inference vs EM Algorithm]]
 
 - [[Mean Field Approximation for PGM]]
 

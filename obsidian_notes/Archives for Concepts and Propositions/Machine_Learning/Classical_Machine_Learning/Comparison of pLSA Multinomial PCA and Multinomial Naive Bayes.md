@@ -1,14 +1,16 @@
 ---
 tags:
-  - concept
+  - thought
   - PLSA
   - multinomial_pca
   - multinomial_naive_bayes_model
+  - chatgpt
 keywords:
   - pLSA
   - multinomial_pca
   - multinomial_naive_bayes
-topics: 
+topics:
+  - machine_learning_models
 name: Comparison of pLSA Multinomial PCA and Multinomial Naive Bayes
 date of note: 2025-05-05
 ---

@@ -43,7 +43,7 @@ date of note: 2024-09-04
 
 ### Latent Dirichlet Allocation or LDA
 
-- [[Latent Dirichlet Allocation]]
+- [[Latent Dirichlet Allocation or LDA]]
 
 ### Non-negative Matrix Factorization or NMF
 

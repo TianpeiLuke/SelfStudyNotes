@@ -89,7 +89,7 @@ date of note: 2024-09-05
 
 - [[Multinomial Naive Bayes Model]]
 - [[Probabilistic Latent Semantic Analysis or pLSA]]
-- [[Latent Dirichlet Allocation]]
+- [[Latent Dirichlet Allocation or LDA]]
 - [[Factor Analysis]]
 - [[Latent Variable Models]]
 

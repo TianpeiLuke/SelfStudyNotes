@@ -68,7 +68,7 @@ date of note: 2024-09-12
 
 
 - [[Probabilistic Latent Semantic Analysis or pLSA]]
-- [[Latent Dirichlet Allocation]]
+- [[Latent Dirichlet Allocation or LDA]]
 
 - [[Vector Space over a Field]]
 
