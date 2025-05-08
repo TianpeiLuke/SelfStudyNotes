@@ -89,7 +89,10 @@ date of note: 2024-09-13
 ### Relevance Feedback and Query Expansion
 
 - [[Relevance Feedback for Information Retrieval]]
+- [[Pseudo-Relevance Feedback or PRF]]
 - [[Query Expansion for Information Retrieval]]
+- [[Rocchio Algorithm as Query Expansion Method]]
+
 
 
 ### Information Retrieval with Sparse Vector

@@ -28,11 +28,11 @@ date of note: 2024-11-29
 >- The system displays a *revised set* of *retrieval results*
 
 - [[Ranking as Learning Problem]]
-
+- [[Query Expansion for Information Retrieval]]
 
 ### Rocchio Algorithm
 
-
+- [[Rocchio Algorithm as Query Expansion Method]]
 
 
 
@@ -47,6 +47,7 @@ date of note: 2024-11-29
 ### Implicit Relevance Feedback
 
 
+- [[Pseudo-Relevance Feedback or PRF]]
 
 
 
