@@ -52,6 +52,7 @@ date of note: 2024-09-04
 >- **Discrete set** $\{s_1,\dots,s_K\}$ with weights $\pi_k$ when the marginal distribution $x$ is a finite mixture.  
 
 - [[Student-t Distribution]]
+- [[Inverse-Gamma Distribution]]
 
 
 ### Complete-data log-likelihood  

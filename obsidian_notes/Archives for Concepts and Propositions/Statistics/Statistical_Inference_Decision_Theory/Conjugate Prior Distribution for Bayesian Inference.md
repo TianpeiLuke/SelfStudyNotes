@@ -29,3 +29,6 @@ date of note: 2024-09-05
 
 - [[Dirichlet Distribution]]
 - [[Multinomial Distribution]]
+
+- [[Student-t Distribution]]
+- [[Inverse-Gamma Distribution]]
