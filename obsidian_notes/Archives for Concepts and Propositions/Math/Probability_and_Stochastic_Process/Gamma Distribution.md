@@ -191,6 +191,10 @@ date of note: 2024-09-05
 
 - [[Conjugate Prior Distribution for Bayesian Inference]]
 
+![[Conjugate Prior Distribution for Bayesian Inference#^0b043a]]
+
+- [[Poisson Distribution]]
+
 
 
 -----------

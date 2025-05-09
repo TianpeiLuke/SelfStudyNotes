@@ -136,6 +136,13 @@ date of note: 2024-09-05
 
 - [[Multinomial Distribution]]
 
+## Conjugate Prior
+
+![[Conjugate Prior Distribution for Bayesian Inference#^160ded]]
+
+- [[Conjugate Prior Distribution for Bayesian Inference]]
+- [[Beta Distribution]]
+
 
 
 -----------

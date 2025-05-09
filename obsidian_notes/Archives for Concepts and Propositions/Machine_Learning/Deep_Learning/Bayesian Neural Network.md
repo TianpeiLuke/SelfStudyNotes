@@ -20,6 +20,7 @@ date of note: 2024-10-24
 
 - [[Gaussian Process]]
 - [[Dirichlet Distribution]]
+- [[Conjugate Prior Distribution for Bayesian Inference]]
 
 
 ### Loss

@@ -130,6 +130,11 @@ date of note: 2024-09-05
 - [[Bennett Inequality]]
 - [[Bernstein Inequality]]
 
+## Gamma Conjugate Prior Distribution
+
+
+- [[Gamma Distribution]]
+- [[Conjugate Prior Distribution for Bayesian Inference]]
 
 
 ## Concentration Inequalities 

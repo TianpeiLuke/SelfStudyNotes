@@ -62,17 +62,20 @@ date of note: 2024-05-13
 - [[Sub-Gaussian Random Variable]]
 - [[Bernoulli Distribution]]
 - [[Binomial Distribution]]
-- [[Student-t Distribution]]
 
 - [[Multinomial Distribution]]
 - [[Dirichlet Distribution]]
 
 - [[Poisson Distribution]]
+- [[Gamma Distribution]]
 - [[Chi-Squared Distribution]]
+
+- [[Student-t Distribution]]
+- [[Inverse-Gamma Distribution]]
 
 - [[Geometric Distribution]]
 - [[Negative Binomial Distribution]]
-- [[Gamma Distribution]]
+
 - [[Laplace Distribution]]
 
 - [[Gumbel Distribution as Generalized Extreme Value Distribution]]
@@ -130,6 +133,7 @@ date of note: 2024-05-13
 
 - [[Prior and Posterior Measure]]
 - [[Bayes Theorem]]
+- [[Conjugate Prior Distribution for Bayesian Inference]]
 
 
 

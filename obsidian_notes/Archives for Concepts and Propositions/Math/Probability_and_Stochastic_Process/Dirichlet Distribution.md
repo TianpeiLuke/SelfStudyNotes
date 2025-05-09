@@ -54,13 +54,19 @@ date of note: 2024-09-05
 
 
 
+## Conjugate Prior
+
+![[Conjugate Prior Distribution for Bayesian Inference#^4ec2ef]]
+
+- [[Multinomial Distribution]]
+- [[Conjugate Prior Distribution for Bayesian Inference]]
 
 
 -----------
 ##  Recommended Notes and References
 
 
-- [[Multinomial Distribution]]
+
 - [[Sub-Gaussian Random Variable]]
 
 - [[Moment Generating Function]]

@@ -25,6 +25,14 @@ date of note: 2025-05-03
 - [[Likelihood Ratio Test]]
 - [[T-Test]]
 
+## Conjugate Prior
+
+![[Conjugate Prior Distribution for Bayesian Inference#^8064fe]]
+
+- [[Inverse-Gamma Distribution]]
+- [[Conjugate Prior Distribution for Bayesian Inference]]
+
+
 
 -----------
 ##  Recommended Notes and References
