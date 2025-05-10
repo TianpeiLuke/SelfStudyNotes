@@ -141,6 +141,12 @@ date of note: 2024-06-01
 - [[Margin-based Generalization Error Bound]]
 - [[Margin-based Generalization Error Bound for Kernel Hypothesis]]
 
+### Model Validation
+
+- [[Cross-Validation for Out-of-Sample Model Validation]]
+- [[Leave-One-Out Cross Validation or LOOCV]]
+- [[K-Fold Cross Validation or k-CV]]
+
 
 ### Probabilistic Graphical Model
 

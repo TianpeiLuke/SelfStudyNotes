@@ -235,6 +235,11 @@ date of note: 2024-06-01
 - [[Wasserstein Generative Adversarial Network]]
 - [[Conditional Generative Adversarial Network]]
 
+#### Adversarial Training
+
+- [[Adversarial Training]]
+
+
 ### Bayesian Neural Network and Deep Ensemble Learning
 
 - [[Bayesian Neural Network]]

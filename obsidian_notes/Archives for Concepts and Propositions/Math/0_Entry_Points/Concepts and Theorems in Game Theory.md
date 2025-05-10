@@ -106,6 +106,9 @@ date of note: 2024-08-04
 - [[Finitely Repeated Games]]
 - [[Infinitely Repeated Games]]
 
+### Coalition Game
+
+- [[Shapley Value for Attribution in Coalition Game]]
 
 
 

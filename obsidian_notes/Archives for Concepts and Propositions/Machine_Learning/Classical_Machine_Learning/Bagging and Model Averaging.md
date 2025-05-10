@@ -82,6 +82,13 @@ date of note: 2024-10-24
 >The decision boundary is **nonsmooth.**
 
 
+## Model Validation
+
+- [[Cross-Validation for Out-of-Sample Model Validation]]
+- [[Leave-One-Out Cross Validation or LOOCV]]
+- [[K-Fold Cross Validation or k-CV]]
+- [[Monte Carlo Cross-Validation for Model Validation]]
+
 
 ## Other Ensemble Methods
 

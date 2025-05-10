@@ -26,7 +26,10 @@ date of note: 2024-09-05
 >
 >Based on *Bayes theorem*, 
 >$$
->p(\theta\mid x)\;=\; \frac{p(x\mid\theta)\,p(\theta)} {\int p(x\mid\theta)\,p(\theta)\,d\theta} \;\Longrightarrow\; p(\theta\mid x)\;\in\;\mathcal{F}, \quad p(\theta)\;\in\;\mathcal{F}.
+>\begin{align*}
+>p(\theta\mid x) &\;=\; \frac{p(x\mid\theta)\,p(\theta)} {\int p(x\mid\theta)\,p(\theta)\,d\theta} \\[5pt]
+>\;\Longrightarrow\; &p(\theta\mid x)\;\in\;\mathcal{F}, \quad p(\theta)\;\in\;\mathcal{F}.
+>\end{align*}
 >$$
 >Here $\mathcal F$ denotes the *shared functional form* (e.g., Beta, Dirichlet, Gamma, Normal).
 
@@ -171,19 +174,7 @@ date of note: 2024-09-05
 - [[Gamma Distribution]]
 
 
-
-
-### Gaussian-Gaussian Pair
-
-
-
-- [[Gaussian Random Vector]]
-- [[Gaussian Random Variable]]
-- [[Inverse-Gamma Distribution]]
-
-
-
-### Inverse-Gamma-Student-t
+### Normal-Inverse-Gamma-Normal Pair
 
 >[!example]
 >For real-valued data assumed i.i.d. **Gaussian** with *unknown mean and variance*
@@ -248,6 +239,16 @@ date of note: 2024-09-05
 >- Adding data simply **increments** the prior “pseudo-counts” $(\kappa_0,\alpha_0)$ and updates the scale ($\beta_0$) using the sample scatter, yielding closed-form Bayesian inference for both the mean and variance of a Normal distribution.
 
 ^8064fe
+
+
+- [[Gaussian Random Vector]]
+- [[Gaussian Random Variable]]
+- [[Inverse-Gamma Distribution]]
+
+
+
+### Inverse-Gamma-Student-t Pair
+
 
 - [[Student-t Distribution]]
 - [[Inverse-Gamma Distribution]]

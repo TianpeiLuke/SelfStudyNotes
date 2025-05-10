@@ -244,6 +244,24 @@ date of note: 2024-06-01
 - [[Bilingual Evaluation Understudy or BLEU metric for LLM Generation]]
 - [[ROUGE metric for LLM Generation]]
 
+### Model Validation and Calibration
+
+#### Model Validation and Model Selection
+
+- [[Model Validation]]
+- [[Holdout Method for Model Validation]]
+- [[Bootstrap Method]]
+- [[Cross-Validation for Out-of-Sample Model Validation]]
+- [[Leave-One-Out Cross Validation or LOOCV]]
+- [[K-Fold Cross Validation or k-CV]]
+- [[Monte Carlo Cross-Validation for Model Validation]]
+
+#### Model Calibration and Conformal Prediction
+
+- [[Model Score Calibration]]
+- [[Conformal Prediction for Confidence Interval of ML Model]]
+
+
 ### Learning Paradigms and Strategies
 
 - [[Supervised Learning and Unsupervised Learning]]
@@ -256,6 +274,11 @@ date of note: 2024-06-01
 	- [[Contrastive Learning]]
 	- [[Metric Learning]]
 	- [[Multi-View Learning]]
+
+#### Learning by Comparison
+
+- [[Principle of Learning by Comparison for Implicit Generative Models]]
+
 
 #### Self-Supervised Learning
 
@@ -310,15 +333,27 @@ date of note: 2024-06-01
 - [[Maximum Likelihood Estimation]]
 - [[Maximum Entropy Learning]]
 
-
 #### Weak Supervision
 
 - [[Programmatic Weak Supervision or PWS]]
 - [[Snorkel for Programmatic Weak Supervision]]
 
-#### Learning by Comparison
+### Explainable AI
 
-- [[Principle of Learning by Comparison for Implicit Generative Models]]
+#### Explainable AI or XAI
+
+- [[Explainable AI or XAI]]
+- [[Interpretable Machine Learning]]
+- [[RuleFit for Automatic Rule Generation and Optimization]]
+- [[Local Interpretable Model-Agnostic Explanations or LIME]]
+- [[Shapley Value for Attribution in Coalition Game]]
+- [[SHapley Additive exPlanations or SHAP]]
+- [[Leave One Feature Out or LOFO Importance]]
+
+#### Adversarial Training
+
+- [[Adversarial Training]]
+
 
 
 ### Statistical Learning Theory
