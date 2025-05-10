@@ -259,6 +259,7 @@ date of note: 2024-06-01
 #### Model Calibration and Conformal Prediction
 
 - [[Model Score Calibration]]
+- [[Isotonic Regression or Monotonic Regression]]
 - [[Conformal Prediction for Confidence Interval of ML Model]]
 
 

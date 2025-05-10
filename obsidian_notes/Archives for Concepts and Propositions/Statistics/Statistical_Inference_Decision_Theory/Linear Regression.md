@@ -3,6 +3,7 @@ tags:
   - concept
   - statistics/estimation
   - statistics/inference
+  - statistics/regression
 keywords:
   - linear_regression
 topics:

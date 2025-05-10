@@ -215,7 +215,7 @@ date of note: 2024-09-16
 - [[Breadth-First Search]]
 - [[Depth-First Search]]
 - [[Best-First Search]]
-- [[A-star Heuristic Search]]
+- [[A-star Best-First Search]]
 - [[Topological Sorting]]
 
 ### Graph Algorithms

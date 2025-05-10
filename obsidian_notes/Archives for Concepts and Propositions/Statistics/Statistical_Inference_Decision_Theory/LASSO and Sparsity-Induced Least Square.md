@@ -6,6 +6,7 @@ tags:
   - machine_learning/theory
   - optimization/regularization
   - optimization/convex_optimization
+  - statistics/regression
 keywords:
   - lasso
   - sparsity

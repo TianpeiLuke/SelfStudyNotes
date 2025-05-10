@@ -3,6 +3,7 @@ tags:
   - concept
   - statistics/estimation
   - math/probability
+  - statistics/regression
 keywords:
   - least_square_estimation
   - pseudo_inverse_matrix

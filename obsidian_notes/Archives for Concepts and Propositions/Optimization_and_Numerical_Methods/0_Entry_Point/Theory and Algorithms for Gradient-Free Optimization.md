@@ -44,7 +44,7 @@ date of note: 2024-08-24
 - [[Nelder-Mead Simplex Method]]
 
 
-- [[A-star Heuristic Search]]
+- [[A-star Best-First Search]]
 - [[Backtracking]]
 - [[Depth-First Search]]
 - [[Breadth-First Search]]

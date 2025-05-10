@@ -3,6 +3,8 @@ tags:
   - concept
   - statistics/estimation
   - math/probability
+  - statistics/regression
+  - statistics/nonparameteric_estimation
 keywords:
   - least_square_estimation
   - nonparametric_model

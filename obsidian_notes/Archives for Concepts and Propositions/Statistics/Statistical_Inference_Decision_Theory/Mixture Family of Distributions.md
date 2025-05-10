@@ -74,6 +74,13 @@ date of note: 2024-11-07
 - [[Log-Concave and Log-Convex Function]]
 
 
+## Gaussian Mixture
+
+- [[Gaussian Mixture Models or GMM]]
+- [[Gaussian Scale Mixtures or GSM]]
+
+
+
 
 -----------
 ##  Recommended Notes and References

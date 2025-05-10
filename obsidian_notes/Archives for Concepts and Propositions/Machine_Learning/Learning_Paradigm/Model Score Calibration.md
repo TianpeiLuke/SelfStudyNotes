@@ -25,6 +25,7 @@ date of note: 2025-05-09
 ### Regression
 
 - [[Regression Problem]]
+- [[Isotonic Regression or Monotonic Regression]]
 
 ## Explanation
 

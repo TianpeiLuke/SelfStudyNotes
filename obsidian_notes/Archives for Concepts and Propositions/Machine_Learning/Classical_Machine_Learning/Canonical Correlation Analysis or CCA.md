@@ -179,6 +179,11 @@ date of note: 2024-05-12
 - [[Eigenspace and Spectrum for Linear Map]]
 - [[Spectral Theorem of Self-Adjoint Map and Eigen decomposition]]
 
+## CCA as Special Case of Partial Least Square
+
+- [[Partial Least Square]]
+
+
 
 
 -----------

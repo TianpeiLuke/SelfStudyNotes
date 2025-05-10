@@ -6,6 +6,7 @@ tags:
   - optimization/algorithm
   - optimization/linear_optimization
   - optimization/theory
+  - statistics/regression
 keywords:
   - least_absolute_deviations
   - sparsity

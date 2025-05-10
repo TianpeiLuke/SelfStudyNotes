@@ -16,10 +16,12 @@ date of note: 2024-08-08
 
 
 
+- [[A-star Best-First Search]]
+
+
 ## Explanation
 
 - [[Breadth-First Search]]
-- [[A-star Heuristic Search]]
 - [[Beam Search for Causal Decoding of Language Model]]
 - [[Algorithm Big-O Notations and Dominance Relation]]
 

@@ -3,6 +3,7 @@ tags:
   - concept
   - statistics/estimation
   - math/probability
+  - statistics/nonparameteric_estimation
 keywords:
   - nonparametric_model
 topics:

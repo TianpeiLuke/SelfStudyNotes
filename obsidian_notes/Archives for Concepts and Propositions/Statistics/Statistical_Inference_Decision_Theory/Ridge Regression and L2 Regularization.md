@@ -6,6 +6,7 @@ tags:
   - deep_learning/regularization
   - machine_learning/models
   - machine_learning/algorithms
+  - statistics/regression
 keywords:
   - ridge_regression
   - l2_regularization

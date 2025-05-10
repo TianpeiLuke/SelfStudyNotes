@@ -185,7 +185,7 @@ date of note: 2024-11-19
 - [[Minimum Spanning Tree Problem]]
 - [[Bellman-Ford Algorithm for Single-Source Shortest Path Problem]]
 - [[Dijkstra Algorithm for Single-Source Shortest Path Problem on DAG]]
-- [[A-star Heuristic Search]]
+- [[A-star Best-First Search]]
 
 
 ### Martingale and Optimal Stopping

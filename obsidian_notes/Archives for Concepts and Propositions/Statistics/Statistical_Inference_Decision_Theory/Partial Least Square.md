@@ -2,6 +2,10 @@
 tags:
   - concept
   - statistics/estimation
+  - partial_least_square
+  - PLS
+  - partial_correlation
+  - statistics/regression
 keywords:
   - partial_correlation
   - conditional_independence
@@ -18,9 +22,12 @@ date of note: 2024-07-24
 
 
 
+
 ## Explanation
 
 
+
+- [[Canonical Correlation Analysis or CCA]]
 
 
 

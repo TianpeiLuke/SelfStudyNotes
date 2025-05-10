@@ -29,7 +29,7 @@ date of note: 2024-09-16
 - [[Graph]]
 - [[Network and Flow and Capacity and Cut]]
 
-- [[A-star Heuristic Search]]
+- [[A-star Best-First Search]]
 - [[Bellman-Ford Algorithm for Single-Source Shortest Path Problem]]
 - [[Dijkstra Algorithm for Single-Source Shortest Path Problem on DAG]]
 - [[Ford-Fulkerson Method for Maximum Flow Problem]]

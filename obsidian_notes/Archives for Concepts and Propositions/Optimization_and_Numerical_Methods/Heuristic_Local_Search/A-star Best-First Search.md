@@ -4,20 +4,21 @@ tags:
   - algorithm/search
   - algorithm/graph
   - a_star_search
+  - best_first_search
 keywords:
   - local_search
   - a_star_search
 topics:
   - algorithm/search
   - heuristic_search
-name: A-star Heuristic Search
+name: A-star Best-First Search
 date of note: 2024-08-08
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: A-star Heuristic Search
+>**Name**: A-star Best-First Search
 
 ### Algorithm
 
