@@ -1,5 +1,6 @@
 ---
 tags:
+  - entry_point
   - travel
   - hawaii
 region:
@@ -31,3 +32,5 @@ date of note: 2025-05-10
 -----------
 ##  Recommended Notes and References
 
+- [[List of Places of Visits in Los Angeles]]
+- [[List of Places of Visits in San Diego]]

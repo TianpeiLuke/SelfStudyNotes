@@ -1,5 +1,6 @@
 ---
 tags:
+  - entry_point
   - travel
   - los_angeles
 region:
@@ -25,9 +26,16 @@ date of note: 2025-05-10
 
 - [[Griffith Observatory]]
 
+### Theme Park, Hollywood
+
+- [[Hollywood Boulevard]]
+- [[Universal Studios Hollywood]]
+
+
 
 
 
 -----------
 ##  Recommended Notes and References
 
+- [[List of Restaurants in Los Angeles]]

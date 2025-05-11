@@ -1,5 +1,6 @@
 ---
 tags:
+  - entry_point
   - travel
   - san_diego
 region:
@@ -34,3 +35,4 @@ date of note: 2025-05-10
 -----------
 ##  Recommended Notes and References
 
+- [[List of Restaurants in San Diego]]

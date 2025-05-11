@@ -24,10 +24,9 @@ date of note: 2025-05-10
 
 ## Comments and Reviews
 
-- Chinese Garden
-- Japanese Garden
-- Botanical Garden
-- Rose Garden
+- City Landscape
+- Mountain
+- **Hollywood Sign** on Mountain
 
 
 
