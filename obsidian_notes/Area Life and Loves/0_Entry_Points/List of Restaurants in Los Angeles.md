@@ -24,7 +24,7 @@ date of note: 2025-01-20
 ### 粤菜
 
 - [[银记肠粉 Yin Ji Chang Fen]]
-- [[Tasty spot cafe - Arcadia 新原味店]]
+- [[新原味店 Tasty spot cafe - Arcadia]]
 - [[Garden Café - Arcadia]]
 - [[Chef Tony]]
 

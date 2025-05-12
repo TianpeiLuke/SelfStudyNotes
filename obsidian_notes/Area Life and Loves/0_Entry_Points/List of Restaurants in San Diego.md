@@ -31,7 +31,7 @@ date of note: 2025-01-20
 ### 上海菜
 
 - [[老正兴 Chef Zhu]]
-- [[鼎泰丰 Ding Tai Feng]]
+- [[鼎泰丰 Ding Tai Feng San Diego]]
 - [[Tofu House]]
 
 ### 粤菜
