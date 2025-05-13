@@ -72,7 +72,7 @@ plt.savefig(os.path.join(path, filename))
 -----------
 ##  Recommended Notes
 
-
+- [[Plot Micro-average of ROC and PR Curve for Multiclass]]
 - Sklearn `precision_recall_curve`: [reference](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_recall_curve.html)
 - Sklearn `average_precision_score`: [reference](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.average_precision_score.html)
 - [AUC of Precision-Recall curve vs. Average Precision](https://stats.stackexchange.com/questions/157012/area-under-precision-recall-curve-auc-of-pr-curve-and-average-precision-ap)
