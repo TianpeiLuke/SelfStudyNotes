@@ -4,6 +4,7 @@ tags:
   - code_snippet
   - aws/step_function
   - aws/sagemaker
+  - python/aws_python_sdk
 keywords: 
 topics: 
 language: python

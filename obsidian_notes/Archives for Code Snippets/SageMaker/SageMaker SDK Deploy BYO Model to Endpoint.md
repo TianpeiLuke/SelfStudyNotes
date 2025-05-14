@@ -5,6 +5,7 @@ tags:
   - aws/sagemaker
   - model/deploy_production
   - model/prediction
+  - python/aws_python_sdk
 keywords: 
 topics: 
 language: python
@@ -21,12 +22,13 @@ date of note: 2024-03-28
 >
 >-- [link](https://sagemaker-examples.readthedocs.io/en/latest/advanced_functionality/scikit_bring_your_own/scikit_bring_your_own.html#Hosting-your-model) 
 
+- [[SageMaker BYO Container - Pytorch Lightning Hosting and Prediction]]
 
 ### Prerequisite: get model 
 
 #### Using trained estimator
 
-[[SageMaker SDK Training via Training API]]
+[[SageMaker SDK Training with BYO Container]]
 
 #### Attached to other trained estimator
 
@@ -244,11 +246,18 @@ sagemaker_client.delete_model(ModelName=model_name)
 - `sagemaker.session.Session()`: [reference](https://sagemaker.readthedocs.io/en/stable/api/utility/session.html)
 	- **`delete_model()`**: Delete an Amazon SageMaker Model. [reference](https://sagemaker.readthedocs.io/en/stable/api/utility/session.html#sagemaker.session.Session.delete_model)
 
+
+##  Deploy PytorchModel
+
+- [[SageMaker SDK Deploy PytorchModel to Endpoint]]
+
+
+
 -----------
 ##  Recommended Notes
 
 - [[SageMaker BYO Container Entry point]]
-- [[SageMaker SDK Training via Training API]]
+- [[SageMaker SDK Training with BYO Container]]
 - [[Amazon SageMaker Python SDK 2 Deploy a Pre-Trained Model]]
 - [[Amazon SageMaker Python SDK 3 Frameworks]]
 	- [[Amazon SageMaker Python SDK 3.1.2 Pytorch Deploy and Hosting]]

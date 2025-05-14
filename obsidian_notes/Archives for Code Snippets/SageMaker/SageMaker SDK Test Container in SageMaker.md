@@ -4,6 +4,7 @@ tags:
   - code_snippet
   - aws/sagemaker
   - model/training
+  - python/aws_python_sdk
 keywords: 
 topics: 
 language: python

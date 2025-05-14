@@ -4,6 +4,7 @@ tags:
   - code_snippet
   - aws/sagemaker
   - model/training
+  - python/aws_python_sdk
 keywords: 
 topics: 
 language: python
@@ -19,6 +20,8 @@ date of note: 2024-03-26
 > - **train** a model
 > - **save** a model to `model_dir` so that it can be deployed to endpoint
 
+- [[SageMaker SDK Training with BYO Container]]
+- [[SageMaker SDK Training with Pytorch Container]]
 
 ## Background: File System within Container 
 ### The parts of a sample container

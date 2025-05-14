@@ -4,6 +4,8 @@ tags:
   - code_snippet
   - aws/sagemaker
   - model/prediction
+  - python/aws_python_sdk
+  - model/deploy_production
 keywords: 
 topics: 
 language: python
@@ -23,6 +25,9 @@ date of note: 2024-03-29
 > 	- **configure** pipeline for preprocessing
 > 	- **predict** output
 > 	- **send** output to caller via HTTP invocation
+
+- [[SageMaker SDK Deploy BYO Model to Endpoint]]
+- [[SageMaker SDK Deploy PytorchModel to Endpoint]]
 
 
 >[!important]

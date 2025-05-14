@@ -17,26 +17,28 @@ date of note: 2024-03-22
 
 ## Code Snippet Summary
 
-- Basic *Model* class definition from **Pytorch Lightning** library
-- Import the base class repository via `import lightning.pytorch as pl` 
-- Define *constructor* as `__init__(self, ...)`
-- Define *forward-pass* function as `forward(self, xxx)`
-- *Configure optimizer* via `configure_optimizers(self)` based on imported optimizer class `import torch.optim as optim`
-- Define function `loss_fn` to *compute loss* given output of model `logits`and ground truth `label`
-- Define `training_step(self, batch, batch_idx)` which covers one *forward pass* and *loss computation* for a *single batch*
-- Similarly, define *one step implementation* in validation set, test set or prediction step
-	- `validation_step(self, batch, batch_idx)`
-	- `test_step(self, batch, batch_idx)`
-	- `predict_step(self, batch, batch_idx)`
-- No need to explicitly call *backward pass*; also `pl.LightingModule` implements common steps such as
-	- *training mode initiation*, 
-	- *batch iteration*, 
-	- *gradient clearing*, 
-	- *loss averaging*, 
-	- *gradient forward step* 
-	- etc. 
-	in the back-end.  
-- Allow for **multi-GPU** and **multi-thread parallel** implementation without additional code change.
+>[!important]
+> - Basic *Model* class definition from **Pytorch Lightning** library
+> - Import the base class repository via `import lightning.pytorch as pl` 
+> - Define *constructor* as `__init__(self, ...)`
+> - Define *forward-pass* function as `forward(self, xxx)`
+> - *Configure optimizer* via `configure_optimizers(self)` based on imported optimizer class `import torch.optim as optim`
+> - Define function `loss_fn` to *compute loss* given output of model `logits`and ground truth `label`
+> - Define `training_step(self, batch, batch_idx)` which covers one *forward pass* and *loss computation* for a *single batch*
+> - Similarly, define *one step implementation* in validation set, test set or prediction step
+> 	- `validation_step(self, batch, batch_idx)`
+> 	- `test_step(self, batch, batch_idx)`
+> 	- `predict_step(self, batch, batch_idx)`
+> - No need to explicitly call *backward pass*; also `pl.LightingModule` implements common steps such as
+> 	- *training mode initiation*, 
+> 	- *batch iteration*, 
+> 	- *gradient clearing*, 
+> 	- *loss averaging*, 
+> 	- *gradient forward step* 
+> 	- etc. 
+> 	in the back-end.  
+> - Allow for **multi-GPU** and **multi-thread parallel** implementation without additional code change.
+
 
 
 ## Code
@@ -189,6 +191,12 @@ model = LitMNIST.load_from_checkpoint(PATH, param1, param2)
 
 -----------
 ##  Recommended Notes
+
+
+- [[Multi-modal BERT for FSDP Model Parallelism]]
+- [[Multi-modal BERT via Cross-Attention]]
+- [[Multi-modal BERT via Fusion Gate]]
+- [[Multi-modal BERT via Mixture of Experts]]
 
 - Lightning Documentation [link](https://lightning.ai/docs/pytorch/stable/common/lightning_module.html)
 - [[Pytorch Lightning 1 Module]]

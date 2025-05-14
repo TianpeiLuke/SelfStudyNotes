@@ -14,12 +14,16 @@ date of note: 2024-03-27
 
 ## Code Snippet Summary
 
-- Write a training script using **Pytorch Lightning** package
-- Input the following parameters
-	- `model_class`:  choose a model from a list of available models
-	- `early_stop_metric`: choose a metric to monitor for early stopping
-	- `max_epochs` defined the maximum epochs to run
-	- `default_root_dir` define the root directory for saving. In container it is a predefined folder for output.
+>[!important]
+> - Write a training script using **Pytorch Lightning** package
+> - Input the following parameters
+> 	- `model_class`:  choose a model from a list of available models
+> 	- `early_stop_metric`: choose a metric to monitor for early stopping
+> 	- `max_epochs` defined the maximum epochs to run
+> 	- `default_root_dir` define the root directory for saving. In container it is a predefined folder for output.
+
+- [[SageMaker SDK Training with BYO Container]]
+- [[Train Script under FSDP]]
 ## Code
 
 ### Define logger
