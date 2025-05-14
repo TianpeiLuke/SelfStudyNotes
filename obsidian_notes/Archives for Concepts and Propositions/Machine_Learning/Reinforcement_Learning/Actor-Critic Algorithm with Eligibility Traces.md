@@ -6,6 +6,8 @@ tags:
   - actor_critic_algorithm
   - actor_critic_eligibility_algorithm
   - reinforcement_learning/algorithm
+  - eligibility_trace
+  - reinforcement_learning/policy_gradient
 keywords:
   - actor_critic_algorithm
   - actor_critic_eligibility_algorithm

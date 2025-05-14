@@ -4,6 +4,8 @@ tags:
   - reinforcement_learning/theory
   - reinforcement_learning/algorithm
   - math/game_theory
+  - multi_agent_reinforcement_learning
+  - reinforcement_learning/multi_agent
 keywords:
   - reinforcement_learning
   - multi_agent_reinforcement_learning

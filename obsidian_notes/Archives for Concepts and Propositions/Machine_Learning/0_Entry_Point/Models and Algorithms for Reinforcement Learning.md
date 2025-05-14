@@ -183,7 +183,7 @@ date of note: 2024-06-01
 
 ### Multi-Agent Reinforcement Learning
 
-- [[Multi-Agent Reinforcement Learning]]
+- [[Archives for Concepts and Propositions/Machine_Learning/Learning_Paradigm/Multi-Agent Reinforcement Learning]]
 - [[Sequential Game Play and Sequential Rationality]]
 - [[Sequential Game of Perfect Information]]
 - [[Sequential Game of Imperfect Information]]

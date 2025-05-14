@@ -62,7 +62,7 @@ date of note: 2024-07-13
 
 
 
-- [[Multi-Agent Reinforcement Learning]]
+- [[Archives for Concepts and Propositions/Machine_Learning/Learning_Paradigm/Multi-Agent Reinforcement Learning]]
 
 
 

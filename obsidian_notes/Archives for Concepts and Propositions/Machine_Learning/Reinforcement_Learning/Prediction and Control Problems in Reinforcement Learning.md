@@ -3,6 +3,9 @@ tags:
   - concept
   - machine_learning/algorithms
   - reinforcement_learning
+  - reinforcement_learning/control
+  - reinforcement_learning/prediction
+  - reinforcement_learning/policy_iteration
 keywords:
   - policy_evaluation
   - policy_improvement

@@ -3,6 +3,11 @@ tags:
   - concept
   - machine_learning/algorithms
   - reinforcement_learning/algorithm
+  - reinforcement_learning/policy_iteration
+  - value_function
+  - reinforcement_learning
+  - reinforcement_learning/prediction
+  - reinforcement_learning/control
 keywords:
   - policy_iteration
 topics:

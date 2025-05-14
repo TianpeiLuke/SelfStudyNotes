@@ -6,6 +6,7 @@ tags:
   - reinforcement_learning/algorithm
   - policy_gradient_algorithm
   - policy_gradient_theorem
+  - reinforcement_learning/policy_gradient
 keywords:
   - policy_gradient_theorem
 topics:

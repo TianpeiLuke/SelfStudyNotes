@@ -6,6 +6,8 @@ tags:
   - reinforcement_learning/algorithm
   - value_iteration
   - policy_iteration
+  - reinforcement_learning/policy_iteration
+  - reinforcement_learning/policy_gradient
 keywords:
   - value_based_reinforcement_learning
   - policy_based_reinforcement_learning

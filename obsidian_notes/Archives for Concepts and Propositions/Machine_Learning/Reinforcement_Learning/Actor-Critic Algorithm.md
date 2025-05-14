@@ -5,7 +5,7 @@ tags:
   - reinforcement_learning/theory
   - reinforcement_learning/algorithm
   - actor_critic_algorithm
-  - actor_critic_algorithm
+  - reinforcement_learning/policy_gradient
 keywords:
   - actor_critic_algorithm
 topics:

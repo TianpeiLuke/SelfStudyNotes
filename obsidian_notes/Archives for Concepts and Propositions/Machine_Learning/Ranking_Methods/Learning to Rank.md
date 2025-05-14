@@ -2,16 +2,19 @@
 tags:
   - concept
   - machine_learning/ranking
-keywords: 
-topics: 
-name: 
+  - learning_to_rank
+keywords:
+  - learning_to_rank
+topics:
+  - machine_learning/ranking
+name: Learning to Rank Problem
 date of note: 2024-12-05
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Learning to Rank Problem
 
 
 

@@ -122,7 +122,7 @@ date of note: 2024-06-01
 
 #### Learning to Rank
 
-- [[Ranking as Learning Problem]]
+- [[Learning to Rank]]
 - [[RankBoost]]
 
 
@@ -267,7 +267,7 @@ date of note: 2024-06-01
 
 - [[Supervised Learning and Unsupervised Learning]]
 - [[Reinforcement Learning]]
-	- [[Multi-Agent Reinforcement Learning]]
+	- [[Archives for Concepts and Propositions/Machine_Learning/Learning_Paradigm/Multi-Agent Reinforcement Learning]]
 
 #### Representation Learning and Contrastive Learning
 

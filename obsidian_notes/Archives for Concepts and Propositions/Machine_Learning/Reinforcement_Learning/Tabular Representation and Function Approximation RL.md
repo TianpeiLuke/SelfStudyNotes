@@ -3,6 +3,8 @@ tags:
   - concept
   - reinforcement_learning/algorithm
   - reinforcement_learning/theory
+  - value_function
+  - value_tabular
 keywords:
   - reinforcement_learning/theory
   - reinforcement_learning/algorithm

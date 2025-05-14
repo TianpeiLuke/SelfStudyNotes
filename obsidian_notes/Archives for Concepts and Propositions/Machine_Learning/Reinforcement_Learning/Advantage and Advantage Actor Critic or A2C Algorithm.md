@@ -6,8 +6,8 @@ tags:
   - actor_critic_algorithm
   - advantage_actor_critic_algorithm
   - A2C_algorithm
-  - advantage_actor_critic_algorithm
-  - A2C_algorithm
+  - reinforcement_learning/policy_gradient
+  - advantage_RL
 keywords:
   - advantage_actor_critic_algorithm
   - actor_critic_algorithm

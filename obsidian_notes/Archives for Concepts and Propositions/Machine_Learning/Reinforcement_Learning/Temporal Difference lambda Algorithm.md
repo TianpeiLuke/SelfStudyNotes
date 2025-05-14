@@ -4,6 +4,8 @@ tags:
   - reinforcement_learning/algorithm
   - reinforcement_learning/theory
   - temporal_difference_lambda_algorithm
+  - eligibility_trace
+  - temporal_difference_learning
 keywords:
   - temporal_difference_lambda_learning
   - eligibility_traces
