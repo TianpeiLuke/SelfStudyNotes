@@ -86,6 +86,8 @@ class Processor(ABC):
         return ComposedProcessor([self, other])
 ```
 
+^7bfe96
+
 ```python
 class ComposedProcessor(Processor):
     def __init__(self, processors: List[Processor]):
@@ -237,6 +239,8 @@ class DialogueSplitterProcessor(Processor):
 
         return messages
 ```
+
+- For CS Chat, see [[Processors CS Chat]]
 
 #### Dialogue Chunking
 
