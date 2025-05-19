@@ -65,8 +65,8 @@ year: 1972
 ## Chapter Summary
 
 - [[How to Read a Book Four Levels of Reading]]
-- [[How to Read a Book Rules for Inspectional Reading]]
-- [[How to Read a Book Rules for Analytical Reading]]
+- [[How to Read a Book Level 02 Inspectional Reading]]
+- [[How to Read a Book Level 03 Analytical Reading]]
 
 
 

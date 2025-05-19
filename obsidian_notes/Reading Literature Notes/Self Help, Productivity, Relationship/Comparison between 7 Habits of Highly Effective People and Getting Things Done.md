@@ -1,8 +1,9 @@
 ---
 tags:
+  - thought
   - book
-  - book_comparison
   - productivity
+  - chatgpt
 aliases:
   - 06017habitgtdcompare01s
 date of note: 2024-02-11
@@ -51,6 +52,7 @@ date of note: 2024-02-11
 - See Book Summary [[The 7 Habits of Highly Effective People 0 Book Summary]]
 - See Book Summary [[Getting Things Done Book Summary]]
 - [^1]  [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]
+- [[How to Read a Book Book Summary]]
 
 
 ----------

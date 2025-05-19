@@ -82,19 +82,19 @@ year: 1972
 > - What type of the book it is? novel, history or scientific treatise
 > 
 
-- [[How to Read a Book Rules for Inspectional Reading]]
+- [[How to Read a Book Level 02 Inspectional Reading]]
 
 
 ### Analytical Reading 
 
 
-- [[How to Read a Book Rules for Analytical Reading]]
+- [[How to Read a Book Level 03 Analytical Reading]]
 
 
 ### Syntopical Reading
 
 
-
+- [[How to Read a Book Level 04 Comparative Reading]]
 
 
 

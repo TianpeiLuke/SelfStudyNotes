@@ -38,7 +38,7 @@ year: 1972
 
 - [[How to Read a Book Book Summary]]
 - [[How to Read a Book Four Levels of Reading]]
-- [[How to Read a Book Rules for Analytical Reading]]
+- [[How to Read a Book Level 03 Analytical Reading]]
 
 
 
