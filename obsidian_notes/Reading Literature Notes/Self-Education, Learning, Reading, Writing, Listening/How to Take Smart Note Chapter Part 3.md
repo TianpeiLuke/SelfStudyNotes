@@ -143,6 +143,7 @@ year: 2022
 	- The workflow of Zettelkasten established a regular routine to follow. Through repeated actions, we would develop a habit of collection, a habit of critical thinking and a habit of writing. 
 	  
 	- Breaking old habits is hard but with the help of a system we do not need much willpower to adopt a new habit that would replace the old ones. 
+	- [[Atomic Habits Book Summary]]
 
 
 

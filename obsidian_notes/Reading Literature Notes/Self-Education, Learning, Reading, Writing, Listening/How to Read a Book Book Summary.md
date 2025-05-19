@@ -32,7 +32,7 @@ year: 1972
 
 ## Table of Contents
 
->[!info]
+>[!important]
 > - **Part 1 The Dimensions of Reading** 
 > 	- The Activity and Art of Reading 
 > 	- The Levels of Reading 

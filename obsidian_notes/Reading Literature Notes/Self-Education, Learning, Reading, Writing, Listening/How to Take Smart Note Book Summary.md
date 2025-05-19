@@ -64,16 +64,28 @@ year: 2022
 - A major ***criticism*** comes from the lack of further details in the first part, i.e. the know-how. Since most of readers refer to this book to learn the Zettelkasten method, it is expected that this book would provide instructions on how to build the Zettelkasten note systems, how to write fleeting notes, literature notes, and permanent notes, and how to build connections etc. Instead, the **focus** of this book is on the principles behind Zettelkasten method and its further extension to general academia writing and research methods. Many people feels that the part 2 and part 3 are merely motivation section of the part 1, which is a misunderstanding. 
 
 
+## Table of Contents
 
-[^1]: [Zettelkasten wiki page](https://en.wikipedia.org/wiki/Zettelkasten)
+>[!important]
+> - **Introduction**
+> 	- Everything You Need to Know
+> 	- Everything You Need to Do
+> 	- Everything You Need to Have
+> 	- A Few Things to Keep in Mind
+> - **The Four Underlying Principles**
+> 	- Writing Is the Only Thing That Matters
+> 	- Simplicity Is Paramount
+> 	- Nobody Ever Starts From Scratch
+> 	- Let the Work Carry You Forward
+> - **The Six Steps to Successful Writing**
+> 	- Separate and Interlocking Tasks
+> 	- Read for Understanding
+> 	- Take Smart Notes
+> 	- Develop Ideas
+> 	- Share Your Insight
+> 	- Make It a Habit
 
-[^2]: [Niklas Luhmann wiki page](https://en.wikipedia.org/wiki/Niklas_Luhmann)
 
-[^3]: The concept of second brain has been discussed in *Building a Second Brain* [[Building a Second Brain Book Summary]]
-
-[^4]: self-centered research in [[Where Research Begins Book Summary]] 
-
-[^5]: Effective thinking skills such as deep understanding [[The 5 Elements of Effective Thinking Suggestion 1]], learning from mistakes [[The 5 Elements of Effective Thinking Suggestion 2]], raising effective questions [[The 5 Elements of Effective Thinking Suggestion 3]] and generating flow of ideas [[The 5 Elements of Effective Thinking Suggestion 4]]. 
 
 ----------
 ## Book Citations
@@ -99,4 +111,14 @@ Ahrens, S. (2022), *How to Take Smart Notes: One Simple Technique to Boost Writi
 
 
 
+
+[^1]: [Zettelkasten wiki page](https://en.wikipedia.org/wiki/Zettelkasten)
+
+[^2]: [Niklas Luhmann wiki page](https://en.wikipedia.org/wiki/Niklas_Luhmann)
+
+[^3]: The concept of second brain has been discussed in *Building a Second Brain* [[Building a Second Brain Book Summary]]
+
+[^4]: self-centered research in [[Where Research Begins Book Summary]] 
+
+[^5]: Effective thinking skills such as deep understanding [[The 5 Elements of Effective Thinking Suggestion 1]], learning from mistakes [[The 5 Elements of Effective Thinking Suggestion 2]], raising effective questions [[The 5 Elements of Effective Thinking Suggestion 3]] and generating flow of ideas [[The 5 Elements of Effective Thinking Suggestion 4]]. 
 
