@@ -133,7 +133,7 @@ year: 2006
 -----------
 ##  Recommended Notes
 
-- [[The 7 Habits of Highly Effective People Book Summary]]
+- [[The 7 Habits of Highly Effective People 0 Book Summary]]
 - [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]
 - [[The 7 Habits of Highly Effective People 7 Balanced Self-Renewal]]
 

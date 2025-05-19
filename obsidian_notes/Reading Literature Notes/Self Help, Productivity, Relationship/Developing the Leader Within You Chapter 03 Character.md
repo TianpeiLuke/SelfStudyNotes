@@ -34,7 +34,7 @@ year: 2019
 -----------
 ##  Recommended Notes
 
-- [[The 7 Habits of Highly Effective People Book Summary]]
+- [[The 7 Habits of Highly Effective People 0 Book Summary]]
 - [[The 7 Habits of Highly Effective People 1 Paradigms and Principles]]
 - [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]
 - [[Emotional Intelligence 2.0 Book Summary]]

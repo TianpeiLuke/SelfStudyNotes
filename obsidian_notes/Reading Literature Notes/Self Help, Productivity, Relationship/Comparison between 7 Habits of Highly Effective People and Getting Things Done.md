@@ -48,7 +48,7 @@ date of note: 2024-02-11
 -----------
 ##  Recommended Notes
 
-- See Book Summary [[The 7 Habits of Highly Effective People Book Summary]]
+- See Book Summary [[The 7 Habits of Highly Effective People 0 Book Summary]]
 - See Book Summary [[Getting Things Done Book Summary]]
 - [^1]  [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]
 

@@ -39,7 +39,7 @@ year: 2016
 
 
 - [[Algorithms to Live By Book Summary]]
-- [[The 7 Habits of Highly Effective People Book Summary]]
+- [[The 7 Habits of Highly Effective People 0 Book Summary]]
 	- **Habit 3: Put First Things First -- Principles of Personal Management.**  [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]] 
 
 

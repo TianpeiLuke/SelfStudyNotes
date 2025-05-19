@@ -118,7 +118,7 @@ year: 2022
 ##  Recommended Literature Notes
 
 [^1]: Similar to identify center in [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]
-[^2]: Use relationship management skills in [[The 7 Habits of Highly Effective People Book Summary]]
+[^2]: Use relationship management skills in [[The 7 Habits of Highly Effective People 0 Book Summary]]
 [^3]: Refer to [[Where Research Begins Book Chapter Summary]] for summaries on each chapter. 
 
 

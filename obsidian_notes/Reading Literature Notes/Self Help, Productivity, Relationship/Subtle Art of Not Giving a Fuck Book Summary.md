@@ -55,7 +55,7 @@ year: 2016
 
 - [[Atomic Habits Book Summary]]
 
-- [[The 7 Habits of Highly Effective People Book Summary]]
+- [[The 7 Habits of Highly Effective People 0 Book Summary]]
 - [[The 7 Habits of Highly Effective People 3 Public Victory]]
 - [[The 7 Habits of Highly Effective People 5 Empathetic Communication]]
 - [[The 7 Habits of Highly Effective People 6 Synergy]]

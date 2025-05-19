@@ -95,7 +95,7 @@ The authors provide **66 practical strategies** to develop each of the four EQ s
 -----------
 ##  Recommended Notes
 
-- [[The 7 Habits of Highly Effective People Book Summary]]
+- [[The 7 Habits of Highly Effective People 0 Book Summary]]
 - [[The 7 Habits of Highly Effective People 4 Win-Win]]
 
 - [[Earn Trust as Deposit in Emotional Bank Account]]

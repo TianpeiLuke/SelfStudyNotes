@@ -33,7 +33,7 @@ year: 2022
 >The book also addresses the significance of identifying *logical fallacies* and *emotional appeals*, providing real-world examples of applying these techniques in various settings, including personal relationships and professional environments.
 >- By adopting these strategies, readers can approach disagreements with confidence, aiming for outcomes that are not only *persuasive* but also *enhance* the quality of their relationships.
 
-- [[The 7 Habits of Highly Effective People Book Summary]]
+- [[The 7 Habits of Highly Effective People 0 Book Summary]]
 - [[The 7 Habits of Highly Effective People 4 Win-Win]]
 
 

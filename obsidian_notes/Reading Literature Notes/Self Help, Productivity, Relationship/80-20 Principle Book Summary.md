@@ -82,7 +82,7 @@ year: 1999
 - [[Subtle Art of Not Giving a Fuck Book Summary]] Prioritize a few things that matters
 - [[Mindset the New Psychology of Success Book Summary]] 
 
-- [[The 7 Habits of Highly Effective People Book Summary]]
+- [[The 7 Habits of Highly Effective People 0 Book Summary]]
 - [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]
 	- Put First Things First
 	- Quadrant II Focus

@@ -89,7 +89,7 @@ year: 1991
 > 	 - **Principle of Person Management**
 > 	    [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]
 > 	 - **Principle of Interpersonal Leadership**  
-> 		[[The 7 Habits of Highly Effective People 3 Public Victory]]
+> 		[[The 7 Habits of Highly Effective People 4 Win-Win]]
 > 	 - **Principle of Empathetic Communication**
 > 		[[The 7 Habits of Highly Effective People 5 Empathetic Communication]]
 > 	 - **Principle of Creative Cooperative** 
@@ -103,6 +103,24 @@ year: 1991
 - It is called ***Seven Habits***, but it is actually ***Five Habits (1-5)*** + a ***Looping Mechanism (Habit 7)*** + the ***Ideal Outcome (Habit 6)***.
 
 
+## Table of Contents
+
+>[!important]
+>- Part One: **Paradigms and Principles** [[The 7 Habits of Highly Effective People 1 Paradigms and Principles]]
+>	- *Inside-Out*
+>	- The 7 Habits -- An Overview
+>- Part Two: **Private Victory** [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]
+>	- **Habit 1**: **Be Proactive** -- Principles of **Personal Vision**
+>	- **Habit 2**: **Begin with End in Mind** -- Principles of **Personal Leadership**
+>	- **Habit 3**: **Put First Things First** -- Principles of **Personal Management**
+>- Part Three: **Public Victory** 
+>	- Paradigms of **Inter-Dependence** [[The 7 Habits of Highly Effective People 3 Public Victory]]
+>	- **Habit 4**: **Think Win/Win** -- Principles of **Interpersonal Leadership** [[The 7 Habits of Highly Effective People 4 Win-Win]]
+>	- **Habit 5**: **Seek First to Understand, Then to Be Understood** -- Principles of **Empathetic Communication** [[The 7 Habits of Highly Effective People 5 Empathetic Communication]]
+>	- **Habit 6**: **Synergize** -- Principles of **Creative Cooperation** [[The 7 Habits of Highly Effective People 6 Synergy]]
+>- Part Four: **Renewal**
+>	- **Habit 7**: **Sharpen the Saw** -- Principles of **Balanced Self-Renewal** [[The 7 Habits of Highly Effective People 7 Balanced Self-Renewal]]
+>	- Inside-Out Again
 
 
 
