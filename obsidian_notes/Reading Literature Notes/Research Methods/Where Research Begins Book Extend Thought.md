@@ -86,7 +86,7 @@ Q: What about the research in **Science, Engineering and Math (STEM)?**
 
 
 
-[^1]: [[The 7 Habits of Highly Effective People Chapter Summary 2]]
+[^1]: [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]
 
 ---
 ## Recommended Notes

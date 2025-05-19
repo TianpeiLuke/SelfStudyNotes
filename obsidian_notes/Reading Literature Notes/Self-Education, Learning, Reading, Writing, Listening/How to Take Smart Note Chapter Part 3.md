@@ -147,7 +147,7 @@ year: 2022
 
 
 
-[^1]: The task management and prioritization skills are listed as *the Habit of "Put First Things First"* in  [[The 7 Habits of Highly Effective People Chapter Summary 2]]; 
+[^1]: The task management and prioritization skills are listed as *the Habit of "Put First Things First"* in  [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]; 
 [^2]: The GTD workflow also provides a *workflow* that manage tasks and prioritize important matters using the *"Next Action" list*. Check [[Getting Things Done Book Summary]]
  [^3]: The slow hunch is introduced in *Where Good Ideas Come From: The Natural History of Innovation* by Steven Johnson, 2010. 
 [^4]: We can also find good suggestions to overcome bias in *Understanding Deeply* [[The 5 Elements of Effective Thinking Suggestion 1]] and *Raise Effective Questions* [[The 5 Elements of Effective Thinking Suggestion 3]]. *The 5 Elements of Effective Thinking* is referred and discussed in *Develop Ideas* chapter in the book. 

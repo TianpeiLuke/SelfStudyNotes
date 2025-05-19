@@ -83,7 +83,7 @@ year: 1999
 - [[Mindset the New Psychology of Success Book Summary]] 
 
 - [[The 7 Habits of Highly Effective People Book Summary]]
-- [[The 7 Habits of Highly Effective People Chapter Summary 2]]
+- [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]
 	- Put First Things First
 	- Quadrant II Focus
 

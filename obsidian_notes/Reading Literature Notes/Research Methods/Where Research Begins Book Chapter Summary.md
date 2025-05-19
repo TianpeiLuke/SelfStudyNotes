@@ -232,7 +232,7 @@ Afshan, S. (2023). Where research begins: Choosing a Research Project That Matte
 [^4]: Be aware of the ***ethical issues*** on how to use the source materials. Be *honest* for what you see and what you don't see. Not forcing a story. Represent the source accurately.  
 [^5]: Source has its own **agency** so treat them with ***critical mindset***. Even if the sources contain flaws, you can still use them in question-generation process to clarify your assumptions and problems. See suggestions in [[The 5 Elements of Effective Thinking Suggestion 2]]
 [^6]: They may not be impressed by the same topics as our Field. Also we need to note that our Problem Collectives *may not have same default inhibitions.* 
-[^7]: **First seek to understand, then to be understood** is a key habit in [[The 7 Habits of Highly Effective People Chapter Summary 5]]
+[^7]: **First seek to understand, then to be understood** is a key habit in [[The 7 Habits of Highly Effective People 5 Empathetic Communication]]
 [^8]: In this way, you learn to **respect** the others and to **learn from their mistakes** as well. Discussion on *fail to succeed* in [[The 5 Elements of Effective Thinking Suggestion 3]]
 [^9]: Understand more on *principled negotiations* in [[Getting to Yes Book Summary]]
 [^10]: Store your *self-evidence* in Zettelkasten. See how to do that in [[How to Take Smart Note Workflow]].

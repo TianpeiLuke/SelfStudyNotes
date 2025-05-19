@@ -170,9 +170,9 @@ year: 2022
 - The idea of externalization of processing in systems of notes can be seen in Zettelkasten method discussed in [[How to Take Smart Note Book Summary]]. We can check on webpage.
 - The concept of "writing it down" has been discussed in [[How to Take Smart Note Book Summary]] and [[Where Research Begins Book Summary]]
 - The importance of Weekly Review is stressed in [[Getting Things Done Book Summary]]. GTD also used external system to reduce the stress and burden of our brain.
-- Both [[The 7 Habits of Highly Effective People Chapter Summary 7]] and [[How to Take Smart Note Chapter Part 3]] discussed the importance of regular review and maintenance for personal growth. 
+- Both [[The 7 Habits of Highly Effective People 7 Balanced Self-Renewal]] and [[How to Take Smart Note Chapter Part 3]] discussed the importance of regular review and maintenance for personal growth. 
 - [[How to Take Smart Note Chapter Part 3]] and [[Where Research Begins Book Chapter Summary]] both encourage readers to share our understandings and ideas to others, i.e to express ourselves. 
-- Paradigm shift from Scarcity Mindset to Abundance Mindset is the topic for both [[The 7 Habits of Highly Effective People Chapter Summary 4]] and [[Scarcity Brain Book Summary]]. 
+- Paradigm shift from Scarcity Mindset to Abundance Mindset is the topic for both [[The 7 Habits of Highly Effective People 4 Win-Win]] and [[Scarcity Brain Book Summary]]. 
 - Disregard the the self-criticism and self-judgement are also mentioned in  [[Where Research Begins Book Chapter Summary]]
 - The benefits of build a Second Brain coincides with the benefits of developing Zettelkasten note system. See [[How to Take Smart Note Benefits of Smart Note-Taking]]
 - "Self-ignorance" is a topic central to Machine Learning and Artificial intelligence. 
@@ -206,7 +206,7 @@ year: 2022
 
 [^12]: More discussion on the impact of scarcity loop on our behavior in [[Scarcity Brain Book Summary]]
 
-[^13]: "Be proactive" is the first habit for effective people. [[The 7 Habits of Highly Effective People Chapter Summary 1]]
+[^13]: "Be proactive" is the first habit for effective people. [[The 7 Habits of Highly Effective People 1 Paradigms and Principles]]
 
 [^14]: At this stage, we will transit from "introversion first" to "extroversion second". [[Where Research Begins Book Chapter Summary]]
 

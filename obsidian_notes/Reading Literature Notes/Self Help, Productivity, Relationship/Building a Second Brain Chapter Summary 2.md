@@ -201,7 +201,7 @@ year: 2022
 
 [^5]: David Allan discuss organization according to *the "Next Action" principle*, which is the key principle behind PARA. [[Getting Things Done Book Summary]]. However, PARA would be more broader since it covers higher level *area of responsibility* and lower level *projects*. The *Resources* folder corresponds to the *"Sometimes/Maybe"* folder in GTD. In GTD, the inactive items may be deleted but in digital world, PARA can just *archive* them without wasting spaces. 
 
-[^6]: Area of responsibility coincides with the concept of Circle of Influence in [[The 7 Habits of Highly Effective People Chapter Summary 2]]. To understand how to take actions within the Area of responsibility, we need to apply *the Principles of Personal Vision* and *the Principles of Personal Leadership*.  
+[^6]: Area of responsibility coincides with the concept of Circle of Influence in [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]. To understand how to take actions within the Area of responsibility, we need to apply *the Principles of Personal Vision* and *the Principles of Personal Leadership*.  
 
 [^6]: Use literature notes would serve as both Organize and Distill functionality since the literature note itself is not the original material but a distilled abstract of it.  
 

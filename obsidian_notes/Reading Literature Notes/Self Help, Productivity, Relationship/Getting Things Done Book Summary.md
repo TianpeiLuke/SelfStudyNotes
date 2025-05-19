@@ -75,26 +75,27 @@ year: 2015
 
 ## Table of Contents
 
-- Part	1: The Art of Getting Things Done [[Getting Things Done Chapter Summary 1]]
-	- Chapter 1 A New Practice for a New Reality
-	- Chapter 2	 Getting Control of Your Life: The Five Steps of Mastering Workflow
-	- Chapter 3 Getting Projects Creatively Under Way: The Five Phases of Project Planning
-- Part	2: Practicing Stress-Free Productivity [[Getting Things Done Chapter Summary 2]]
-	- Chapter 4 Getting Started: Setting Up the Time, Space, and Tools
-	- Chapter 5 Capturing: Corralling Your “Stuff” 
-	- Chapter 6 Clarifying: Getting “In” to Empty
-	- Chapter 7 Organizing: Setting Up the Right Buckets
-	- Chapter 8 Reflecting: Keeping It All Fresh and Functional
-	- Chapter 9 Engaging: Making the Best Action Choices
-	- Chapter 10 Getting Projects Under Control
-- Part 3: The Power of the Key Principles [[Getting Things Done Chapter Summary 3]]
-	- Chapter 11 The Power of the Capturing Habit
-	- Chapter 12 The Power of the Next-Action Decision
-	- Chapter 13 The Power of Outcome Focusing
-	- Chapter 14 GTD and Cognitive Science
-	- Chapter 15 The Path of GTD Mastery
-- Conclusion
-
+>[!important]
+> - Part	1: The Art of Getting Things Done [[Getting Things Done Chapter Summary 1]]
+> 	- Chapter 1 A New Practice for a New Reality
+> 	- Chapter 2 *Getting Control of Your Life*: **The Five Steps of Mastering Workflow**
+> 	- Chapter 3 *Getting Projects Creatively Under Way*: **The Five Phases of Project Planning**
+> - Part	2: Practicing Stress-Free Productivity [[Getting Things Done Chapter Summary 2]]
+> 	- Chapter 4 **Getting Started**: Setting Up the Time, Space, and Tools
+> 	- Chapter 5 **Capturing**: Corralling Your “Stuff” 
+> 	- Chapter 6 **Clarifying**: Getting “In” to Empty
+> 	- Chapter 7 **Organizing**: Setting Up the Right Buckets
+> 	- Chapter 8 **Reflecting**: Keeping It All Fresh and Functional
+> 	- Chapter 9 **Engaging**: Making the Best Action Choices
+> 	- Chapter 10 *Getting Projects Under Control*
+> - Part 3: The Power of the Key Principles [[Getting Things Done Chapter Summary 3]]
+> 	- Chapter 11 The Power of the **Capturing Habit**
+> 	- Chapter 12 The Power of the **Next-Action Decision**
+> 	- Chapter 13 The Power of **Outcome Focusing**
+> 	- Chapter 14 GTD and Cognitive Science
+> 	- Chapter 15 The Path of GTD Mastery
+> - Conclusion
+> 
 
 ## Quotes
 

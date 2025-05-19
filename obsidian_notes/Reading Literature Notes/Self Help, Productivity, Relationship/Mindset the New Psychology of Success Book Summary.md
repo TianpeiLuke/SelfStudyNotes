@@ -134,8 +134,8 @@ year: 2006
 ##  Recommended Notes
 
 - [[The 7 Habits of Highly Effective People Book Summary]]
-- [[The 7 Habits of Highly Effective People Chapter Summary 2]]
-- [[The 7 Habits of Highly Effective People Chapter Summary 7]]
+- [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]
+- [[The 7 Habits of Highly Effective People 7 Balanced Self-Renewal]]
 
 - [[Emotional Intelligence 2.0 Book Summary]]
 - [[Grit Book Summary]]

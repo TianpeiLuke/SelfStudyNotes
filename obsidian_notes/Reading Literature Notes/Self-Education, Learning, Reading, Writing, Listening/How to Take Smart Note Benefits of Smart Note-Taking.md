@@ -163,7 +163,7 @@ year: 2022
 [^2]: The GTD workflow also provides a *workflow* that manage tasks and prioritize important matters using the *"Next Action" list*. Check [[Getting Things Done Book Summary]]
 [^3]: Check concept of [[Confirmation Bias]]
 [^4]: This suggestion coincides with the suggestions in *Atomic Habit* which also take advantages with **the compound effect** of small incremental behavior change to develop habits. This suggestion would help to develop a new habit and to break an old one. See more in [[Atomic Habits Book Summary]]. This book also discussed how to use feedback loops to develop habits. 
- [^5]: To role of **synergy** in creative cooperation is discussed in [[The 7 Habits of Highly Effective People Chapter Summary 6]].
+ [^5]: To role of **synergy** in creative cooperation is discussed in [[The 7 Habits of Highly Effective People 6 Synergy]].
 [^6]:  People tends to remember unfinished task better.  [[Zeigarnik Effect]]
 
 

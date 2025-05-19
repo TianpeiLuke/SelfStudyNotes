@@ -42,7 +42,7 @@ year: 1991
 	- then reached *respectful communications*, a mature, polite interactions but not empathically,
 	- Finally reached *synergistic communications*, a level of high trust, high cooperation, high creativity.
 
-- ***Valuing the differences** is the essence of synergy* -- the mental, the emotional, the psychological difference between people. It requires us to master Habit 5, *to understand first.* [[The 7 Habits of Highly Effective People Chapter Summary 5]] We need to recognize our own perceptual limitations and appreciate resources available through rich interactions.   
+- ***Valuing the differences** is the essence of synergy* -- the mental, the emotional, the psychological difference between people. It requires us to master Habit 5, *to understand first.* [[The 7 Habits of Highly Effective People 5 Empathetic Communication]] We need to recognize our own perceptual limitations and appreciate resources available through rich interactions.   
   
 
 

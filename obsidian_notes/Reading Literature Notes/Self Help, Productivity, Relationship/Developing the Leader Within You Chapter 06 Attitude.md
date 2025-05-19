@@ -36,7 +36,7 @@ year: 2019
 
 
 - [[The 7 Habits of Highly Effective People Book Summary]]
-- [[The 7 Habits of Highly Effective People Chapter Summary 2]]
+- [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]
 - [[Emotional Intelligence 2.0 Book Summary]]
 - [[Mindset the New Psychology of Success Book Summary]]
 

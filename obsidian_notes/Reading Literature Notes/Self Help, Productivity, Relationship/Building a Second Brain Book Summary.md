@@ -116,7 +116,7 @@ year: 2022
 
 [^4]: The emphasis of only capturing information that *"resonates"* with us is also the key idea behind *self-centered researcher* in [[Where Research Begins Book Summary]]. We can use the exercise in  [[Where Research Begins Exercise 01 Search Yourself]] and [[Where Research Begins Exercise 02 Let Boredom Be Your Guide]] to apply self-introspection to detect useful information. *Being selective* in note-taking is also an important suggestion in [[How to Take Smart Note Chapter Part 2]].
 
-[^5]: The definition Area of Responsibility is high level. It defines *"an area of activity with a standard to be maintained over time."* It is associated with ***personal vision, personal leadership*** instead of ***personal management*** since this standard is essentially our *principles of life*. For a top-down approach of productivity improvement, check on   [[The 7 Habits of Highly Effective People Book Summary]]. In particular, check on [[The 7 Habits of Highly Effective People Chapter Summary 2]] for *the Habit of Proactivity* and *the Habit of Begin with End in Mind*. We can also find useful concepts including the definition of *Circle of Influence* and *personal mission statement* which encodes our *roles* and *responsibilities* as well as their *associated principles*.
+[^5]: The definition Area of Responsibility is high level. It defines *"an area of activity with a standard to be maintained over time."* It is associated with ***personal vision, personal leadership*** instead of ***personal management*** since this standard is essentially our *principles of life*. For a top-down approach of productivity improvement, check on   [[The 7 Habits of Highly Effective People Book Summary]]. In particular, check on [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]] for *the Habit of Proactivity* and *the Habit of Begin with End in Mind*. We can also find useful concepts including the definition of *Circle of Influence* and *personal mission statement* which encodes our *roles* and *responsibilities* as well as their *associated principles*.
 
 [^6]: In GTD, if an item is not immediately actionable, it will be put in a *"Maybe/Sometimes"* folder for future review. This folder is the *Resource* folder in PARA. 
 
@@ -134,7 +134,7 @@ year: 2022
 
 [^13]: Weakly/Monthly Review was proposed by GTD in  [[Getting Things Done Book Summary]]
 
-[^14]: The abundance mindset is also associated with *the Habit of Thinking Win/Win*.  [[The 7 Habits of Highly Effective People Chapter Summary 4]]. Similarly  paradigm shift is the key message for many self-help books including [[The 7 Habits of Highly Effective People Book Summary]],  [[Atomic Habits Book Summary]] and [[How to Take Smart Note Book Summary]], [[Scarcity Brain Book Summary]]
+[^14]: The abundance mindset is also associated with *the Habit of Thinking Win/Win*.  [[The 7 Habits of Highly Effective People 4 Win-Win]]. Similarly  paradigm shift is the key message for many self-help books including [[The 7 Habits of Highly Effective People Book Summary]],  [[Atomic Habits Book Summary]] and [[How to Take Smart Note Book Summary]], [[Scarcity Brain Book Summary]]
 
 [^15]: The suggestion of sharing ideas to others coincides with suggestions in both  [[How to Take Smart Note Chapter Part 3]] and [[Where Research Begins Book Chapter Summary]]
 

@@ -59,40 +59,44 @@ year: 1991
 
 - The ***effectiveness*** defined in this book lies in the ***balance** of **production (P)** and **production capacity (PC)***.
 
-- This approach belongs to so called the ***character ethic*** approaches, which emphasizes that "there are *basic principles of effective living*, and that people can only experience true success and enduring happiness as they learn and integrate these principles into their basic character."[[The 7 Habits of Highly Effective People Chapter Summary 1]]
+- This approach belongs to so called the ***character ethic*** approaches, which emphasizes that "there are *basic principles of effective living*, and that people can only experience true success and enduring happiness as they learn and integrate these principles into their basic character."[[The 7 Habits of Highly Effective People 1 Paradigms and Principles]]
 	- [[Developing the Leader Within You Chapter 03 Character]]
 
-- The author's argument is that developing a ***principle center** of ourselves* is essential to form an *effective, mature, independent* individual, which becomes the foundation for *trustworthy*, *interdependent  relationships* with others. [[The 7 Habits of Highly Effective People Chapter Summary 2]]
+- The author's argument is that developing a ***principle center** of ourselves* is essential to form an *effective, mature, independent* individual, which becomes the foundation for *trustworthy*, *interdependent  relationships* with others. [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]
 
  - The ***seven principles*** and the corresponding ***seven habits*** presented in this book are thus a part of a *sequential development process*. From *top to down*, from *inside to outside*, this process allows the reader to *introspect*, *evaluate* and then change their own *paradigms of life* and finally to live in harmony with their principles, their values in an ever-changing, challenging, interdependent environment.
-   
- - The _7 Habits_ in this book are:
-	 - **Be Proactive**
-	 - **Begin with End in Mind**
-	 - **Put First Things First**
-	    [[The 7 Habits of Highly Effective People Chapter Summary 2]]
-	 - **Think Win/Win**
-	    [[The 7 Habits of Highly Effective People Chapter Summary 4]]
-	 - **Seek First to Understand, Then to Be Understood** 
-	    [[The 7 Habits of Highly Effective People Chapter Summary 5]]
-	 - **Synergize** 
-	    [[The 7 Habits of Highly Effective People Chapter Summary 6]]
-	 - **Sharpen the Saw** 
-	    [[The 7 Habits of Highly Effective People Chapter Summary 7]]
 
-- The corresponding _7 Principles_ are:
-	 - **Principle of Person Vision**
-	 - **Principle of Person Leadership**
-	 - **Principle of Person Management**
-	    [[The 7 Habits of Highly Effective People Chapter Summary 2]]
-	 - **Principle of Interpersonal Leadership**  
-		[[The 7 Habits of Highly Effective People Chapter Summary 3]]
-	 - **Principle of Empathetic Communication**
-		[[The 7 Habits of Highly Effective People Chapter Summary 5]]
-	 - **Principle of Creative Cooperative** 
-	    [[The 7 Habits of Highly Effective People Chapter Summary 6]]
-	 - **Principle of Balanced Renewal** 
-	    [[The 7 Habits of Highly Effective People Chapter Summary 7]]
+>[!important]
+>  - The _7 Habits_ in this book are:
+> 	 - **Be Proactive**
+> 	 - **Begin with End in Mind**
+> 	 - **Put First Things First**
+> 	    [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]
+> 	 - **Think Win/Win**
+> 	    [[The 7 Habits of Highly Effective People 4 Win-Win]]
+> 	 - **Seek First to Understand, Then to Be Understood** 
+> 	    [[The 7 Habits of Highly Effective People 5 Empathetic Communication]]
+> 	 - **Synergize** 
+> 	    [[The 7 Habits of Highly Effective People 6 Synergy]]
+> 	 - **Sharpen the Saw** 
+> 	    [[The 7 Habits of Highly Effective People 7 Balanced Self-Renewal]]
+> 
+
+>[!important]
+> - The corresponding _7 Principles_ are:
+> 	 - **Principle of Person Vision**
+> 	 - **Principle of Person Leadership**
+> 	 - **Principle of Person Management**
+> 	    [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]
+> 	 - **Principle of Interpersonal Leadership**  
+> 		[[The 7 Habits of Highly Effective People 3 Public Victory]]
+> 	 - **Principle of Empathetic Communication**
+> 		[[The 7 Habits of Highly Effective People 5 Empathetic Communication]]
+> 	 - **Principle of Creative Cooperative** 
+> 	    [[The 7 Habits of Highly Effective People 6 Synergy]]
+> 	 - **Principle of Balanced Renewal** 
+> 	    [[The 7 Habits of Highly Effective People 7 Balanced Self-Renewal]]
+> 
 
 - *The **ultimate goal*** for the readers to achieve is to form *an **upward spiral renewal process*** that helps the readers to continually develop themselves and to improve their relationships with other individuals. 
   

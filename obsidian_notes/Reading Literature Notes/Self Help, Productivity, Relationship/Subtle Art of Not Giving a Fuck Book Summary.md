@@ -37,12 +37,12 @@ year: 2016
 ## Key Takeaways
 
 >[!important]
-> 1. **You Have Limited Fucks to Give** – You can’t care about everything, so prioritize what truly matters to you. [[The 7 Habits of Highly Effective People Chapter Summary 2]], [[80-20 Principle Book Summary]]
+> 1. **You Have Limited Fucks to Give** – You can’t care about everything, so prioritize what truly matters to you. [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]], [[80-20 Principle Book Summary]]
 > 2. **Happiness Comes from Solving Problems** – Avoiding problems doesn’t bring happiness; growth and fulfillment come from *overcoming challenges*. [[Mindset the New Psychology of Success Book Summary]]
 > 3. **Embrace Failure and Pain** – Struggles and failures are inevitable; instead of avoiding them, *learn from them*. [[The 5 Elements of Effective Thinking Suggestion 2]], [[Grit Book Summary]], [[Mindset the New Psychology of Success Book Summary]]
 > 4. **You’re Not Special** – The book challenges entitlement, emphasizing that everyone has problems and that struggle is a normal part of life.
-> 5. **Responsibility Over Blame** – While you can’t always control what happens to you, you can *control how you respond*. [[The 7 Habits of Highly Effective People Chapter Summary 2]]
-> 6. **Death Puts Life in Perspective** – Acknowledging your mortality helps you focus on what truly matters. [[The 7 Habits of Highly Effective People Chapter Summary 2]]
+> 5. **Responsibility Over Blame** – While you can’t always control what happens to you, you can *control how you respond*. [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]
+> 6. **Death Puts Life in Perspective** – Acknowledging your mortality helps you focus on what truly matters. [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]
 
 ## Quotes
 
@@ -56,9 +56,9 @@ year: 2016
 - [[Atomic Habits Book Summary]]
 
 - [[The 7 Habits of Highly Effective People Book Summary]]
-- [[The 7 Habits of Highly Effective People Chapter Summary 3]]
-- [[The 7 Habits of Highly Effective People Chapter Summary 5]]
-- [[The 7 Habits of Highly Effective People Chapter Summary 6]]
+- [[The 7 Habits of Highly Effective People 3 Public Victory]]
+- [[The 7 Habits of Highly Effective People 5 Empathetic Communication]]
+- [[The 7 Habits of Highly Effective People 6 Synergy]]
 
 - [[Emotional Intelligence 2.0 Book Summary]]
 

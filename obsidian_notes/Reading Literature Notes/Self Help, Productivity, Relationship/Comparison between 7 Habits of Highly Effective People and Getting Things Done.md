@@ -50,7 +50,7 @@ date of note: 2024-02-11
 
 - See Book Summary [[The 7 Habits of Highly Effective People Book Summary]]
 - See Book Summary [[Getting Things Done Book Summary]]
-- [^1]  [[The 7 Habits of Highly Effective People Chapter Summary 2]]
+- [^1]  [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]
 
 
 ----------

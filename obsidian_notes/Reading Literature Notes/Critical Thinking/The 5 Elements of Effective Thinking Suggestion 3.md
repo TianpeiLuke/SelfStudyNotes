@@ -70,7 +70,7 @@ year: 2012
 
 ##  Recommended Literature Notes
 
-- Active listening is an important habit in [[The 7 Habits of Highly Effective People Chapter Summary 5]]
+- Active listening is an important habit in [[The 7 Habits of Highly Effective People 5 Empathetic Communication]]
 - Check on Cognitive Bias and Logical Fallacies in [[Cognitive Bias and Logical Fallacies Entry Point]]
 
 

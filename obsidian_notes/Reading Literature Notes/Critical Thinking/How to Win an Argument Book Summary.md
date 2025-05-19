@@ -26,7 +26,7 @@ year: 2022
 >- He emphasizes the importance of presenting one's perspective *calmly and rationally*, supported by valid evidence, and being *open to opposing viewpoints*. 
 >- *Active listening* plays a crucial role in this process, fostering trust and mutual respect, which are essential for influencing opinions.
 
-- [[The 7 Habits of Highly Effective People Chapter Summary 5]]
+- [[The 7 Habits of Highly Effective People 5 Empathetic Communication]]
 
 
 >[!info]
@@ -34,7 +34,7 @@ year: 2022
 >- By adopting these strategies, readers can approach disagreements with confidence, aiming for outcomes that are not only *persuasive* but also *enhance* the quality of their relationships.
 
 - [[The 7 Habits of Highly Effective People Book Summary]]
-- [[The 7 Habits of Highly Effective People Chapter Summary 4]]
+- [[The 7 Habits of Highly Effective People 4 Win-Win]]
 
 
 
