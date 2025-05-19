@@ -19,6 +19,11 @@ date of note: 2025-05-10
 
 ### Zoo
 
+- [[San Diego Zoo]]
+
+### Aquarium
+
+- [[Sea World in San Diego]]
 
 ### Beach
 
@@ -35,4 +40,7 @@ date of note: 2025-05-10
 -----------
 ##  Recommended Notes and References
 
-- [[List of Restaurants in San Diego]]
+
+- [[List of Places of Visits in Los Angeles]]
+- [[List of Places of Visits in Hawaii]]
+- [[List of Places of Visits in Chicago]]

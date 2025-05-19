@@ -121,6 +121,15 @@ year: 2022
 [^2]: Use relationship management skills in [[The 7 Habits of Highly Effective People Book Summary]]
 [^3]: Refer to [[Where Research Begins Book Chapter Summary]] for summaries on each chapter. 
 
+
+- [[How to Take Smart Note Book Summary]]
+- [[How to Take Smart Note Workflow]]
+- [[How to Read a Book Book Summary]]
+- [[How to Read a Book Four Levels of Reading]]
+- [[How to Read a Book Rules for Analytical Reading]]
+
+
+
 ----------
 ## Book Citations
 

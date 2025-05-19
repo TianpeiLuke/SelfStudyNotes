@@ -34,3 +34,4 @@ date of note: 2025-05-10
 
 - [[List of Places of Visits in Los Angeles]]
 - [[List of Places of Visits in San Diego]]
+- [[List of Places of Visits in Chicago]]

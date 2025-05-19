@@ -83,6 +83,8 @@ year: 2022
 		- **Learn to Read**: To a certain degree, ***learning is understanding.*** And we shall not *confuse familiarity with understanding (the mere-exposure effect)*. We can only improve our learning by testing our knowledge in the process, by retrieving it and connecting it with what we have seen before.
 		  
 		- **Learn by Reading**: Learning requires deliberate practice. Through writing and further elaboration on the meaning of material, the questions behind them and the connection to existing knowledge, we can better understand materials. 
+		- [[How to Read a Book Rules for Analytical Reading]]
+		- [[How to Read a Book Book Summary]]
 		  
 - **Take Smart Notes.**
 	- This section covers some of topics related to smart note-taking:

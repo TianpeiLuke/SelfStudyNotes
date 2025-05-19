@@ -38,4 +38,6 @@ date of note: 2025-05-10
 -----------
 ##  Recommended Notes and References
 
-- [[List of Restaurants in Los Angeles]]
+- [[List of Places of Visits in San Diego]]
+- [[List of Places of Visits in Hawaii]]
+- [[List of Places of Visits in Chicago]]

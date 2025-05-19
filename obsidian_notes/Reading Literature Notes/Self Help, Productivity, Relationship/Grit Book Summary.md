@@ -63,7 +63,7 @@ year: 2016
 >[!info]
 >_Grit_ argues that *perseverance* and *passion* are the keys to achieving *long-term goals*, suggesting that *cultivating grit* in ourselves and others—like children or employees—can lead to greater success.
 
->[!info]
+>[!important]
 >The book is organized into two parts
 >- The first part focus on the definition of *Grit*, and its relationship to Success. 
 >	- The author compare the role of *Grit* vs. *Talent* 
