@@ -38,7 +38,7 @@ date of note: 2025-05-20
 
 ### Endpoint Step
 
-- [[Builder Endpoint Step]]
+- [[AWS Step Functions - Endpoint Step]]
 
 ### Construct Pipeline
 

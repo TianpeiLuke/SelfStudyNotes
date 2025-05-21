@@ -128,6 +128,10 @@ execution_output = execution.get_output(wait=True)
 		- **`inputs`**: Input data for the workflow execution.
 
 
+## SageMaker Pipeline Implementation
+
+- [[An End-to-End Training Deployment Pipeline on AWS]]
+
 
 -----------
 ##  Recommended Notes
@@ -138,5 +142,6 @@ execution_output = execution.get_output(wait=True)
 - `stepfunctions.workflow.Workflow`: Class for creating and managing a workflow. [reference](https://aws-step-functions-data-science-sdk.readthedocs.io/en/stable/workflow.html#stepfunctions.workflow.Workflow) 
   
 - [[SageMaker SDK Script Processor]]
+- Check [[AWS SageMaker Pipeline vs. AWS Step Functions State Machine]] to distinguish *SageMaker Pipeline* with *State Machine*
 - Check on how to build BYO container [[SageMaker BYO Container Entry point]]
 - Check User Guide on AWS Step Function, and Workflow [[Amazon SageMaker Python SDK 5 Workflow and Step Function]]

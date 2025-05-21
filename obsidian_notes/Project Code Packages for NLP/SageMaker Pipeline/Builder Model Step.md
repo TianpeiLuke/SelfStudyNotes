@@ -208,7 +208,7 @@ class PytorchModelStepBuilder:
 
 ## Next Step
 
-- [[Builder Endpoint Step]]
+- [[AWS Step Functions - Endpoint Step]]
 
 
 -----------
