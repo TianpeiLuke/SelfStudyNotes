@@ -7,7 +7,7 @@ tags:
   - aws/step_function
 keywords: 
 topics: 
-language: 
+language: python
 date of note: 2025-05-20
 ---
 

@@ -309,3 +309,4 @@ estimator.fit(inputs)
 ##  Recommended Notes
 
 - [[SageMaker BYO Container - Pytorch Lightning Training]]
+- [[Docker Container Images]]

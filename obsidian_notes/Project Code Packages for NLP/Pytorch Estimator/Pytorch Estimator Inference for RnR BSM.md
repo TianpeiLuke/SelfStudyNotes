@@ -4,7 +4,7 @@ tags:
   - code_snippet
   - aws/sagemaker
   - aws/pytorch_estimator
-  - python/aws_cdk
+  - python/aws_python_sdk
 keywords: 
 topics: 
 language: python
@@ -117,4 +117,4 @@ predictor.delete_endpoint(delete_endpoint_config=True)
 ##  Recommended Notes
 
 - [[SageMaker BYO Container - Pytorch Lightning Training]]
-- [[An End-to-End Training Deployment Pipeline on AWS]]
+- [[Docker Container Images]]

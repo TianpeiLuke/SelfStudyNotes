@@ -4,6 +4,7 @@ tags:
   - code_snippet
   - aws/pytorch_estimator
   - aws/sagemaker
+  - python/aws_python_sdk
 keywords: 
 topics: 
 language: python

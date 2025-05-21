@@ -3,9 +3,11 @@ tags:
   - code
   - code_snippet
   - reversal_reclassification
+  - aws/sagemaker
+  - python/aws_python_sdk
 keywords: 
 topics: 
-language: 
+language: python
 date of note: 2025-04-13
 ---
 

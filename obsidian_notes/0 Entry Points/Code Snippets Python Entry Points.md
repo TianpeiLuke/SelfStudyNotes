@@ -23,9 +23,69 @@ date of note: 2024-04-12
 
 ```dataview
 list
-from #python and #code_snippet and -#entry_point 
+from #code_snippet and -#entry_point 
+where lower(language) = "python"
 sort file.name ASC
 ```
+
+### Pydantic
+
+```dataview
+list
+from #code_snippet and #python/pydantic   and -#entry_point 
+where lower(language) = "python"
+sort file.name ASC
+```
+
+
+### AWS SDK
+
+```dataview
+list
+from #code_snippet and #aws and -#entry_point 
+where lower(language) = "python"
+sort file.name ASC
+```
+
+### Pytorch
+
+```dataview
+list
+from #code_snippet and #pytorch   and -#entry_point 
+where lower(language) = "python"
+sort file.name ASC
+```
+
+### BedRock
+
+```dataview
+list
+from #code_snippet and #aws/bedrock  and -#entry_point 
+where lower(language) = "python"
+sort file.name ASC
+```
+
+### Prompt
+
+```dataview
+list
+from #code_snippet and #prompt  and -#entry_point 
+where lower(language) = "python"
+sort file.name ASC
+```
+
+
+### LangGraph
+
+```dataview
+list
+from #code_snippet and (#langgraph or #langchain)  and -#entry_point 
+where lower(language) = "python"
+sort file.name ASC
+```
+
+
+
 
 
 
