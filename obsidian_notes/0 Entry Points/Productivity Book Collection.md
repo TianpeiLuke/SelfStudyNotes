@@ -9,10 +9,10 @@ date of note: 2025-03-10
 
 ## Vision, Leadership and Management
 
-- [[The 7 Habits of Highly Effective People Book Summary]]
-	- [[The 7 Habits of Highly Effective People Chapter Summary 1]]
-	- Personal Vision, Leadership, Management [[The 7 Habits of Highly Effective People Chapter Summary 2]]
-	- [[The 7 Habits of Highly Effective People Chapter Summary 7]]
+- [[The 7 Habits of Highly Effective People 0 Book Summary]]
+	- [[The 7 Habits of Highly Effective People 1 Paradigms and Principles]]
+	- Personal Vision, Leadership, Management [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]
+	- [[The 7 Habits of Highly Effective People 7 Balanced Self-Renewal]]
 
 - Personal Leadership
 	- [[Developing the Leader Within You 2.0 Book Summary]]
@@ -23,10 +23,10 @@ date of note: 2025-03-10
 
 ## Relationship Management
 
-- Relationship Management [[The 7 Habits of Highly Effective People Chapter Summary 3]]
-- Win/Win [[The 7 Habits of Highly Effective People Chapter Summary 4]]
-- Empathy Listening [[The 7 Habits of Highly Effective People Chapter Summary 5]]
-- Synergy [[The 7 Habits of Highly Effective People Chapter Summary 6]]
+- Relationship Management [[The 7 Habits of Highly Effective People 3 Public Victory]]
+- Win/Win [[The 7 Habits of Highly Effective People 4 Win-Win]]
+- Empathy Listening [[The 7 Habits of Highly Effective People 5 Empathetic Communication]]
+- Synergy [[The 7 Habits of Highly Effective People 6 Synergy]]
 
 
 ## Product Management

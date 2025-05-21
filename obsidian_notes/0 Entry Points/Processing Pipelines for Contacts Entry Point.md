@@ -13,7 +13,7 @@ date of note: 2024-04-05
 
 # Processor
 
-- [[Processors]]
+- [[Processors ver 1.0]]
 
 # Pipeline
 

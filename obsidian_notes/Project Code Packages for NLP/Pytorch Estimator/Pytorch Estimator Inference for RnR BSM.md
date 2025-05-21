@@ -107,7 +107,14 @@ predictor.delete_endpoint(delete_endpoint_config=True)
 
 
 
+## End-to-End Pipeline
+
+- [[An End-to-End Training Deployment Pipeline on AWS]]
+
+
+
 -----------
 ##  Recommended Notes
 
 - [[SageMaker BYO Container - Pytorch Lightning Training]]
+- [[An End-to-End Training Deployment Pipeline on AWS]]

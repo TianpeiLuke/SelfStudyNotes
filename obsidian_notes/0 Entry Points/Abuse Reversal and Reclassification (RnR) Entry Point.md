@@ -55,7 +55,7 @@ Here are some main points for why RnR is proposed:
 - Summary of RnR data sources:
 	- [[RnR Data Source]]
 - Offline Pipeline for data pulling, mode inference and storage in EDX:
-	- [[RnR Data Pipeline]]
+	- [[RnR Offline Pipeline - Data Collection and Inference]]
 
 ## Training Data ETL
 

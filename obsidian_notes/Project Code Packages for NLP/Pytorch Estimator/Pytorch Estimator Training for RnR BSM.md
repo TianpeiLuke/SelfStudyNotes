@@ -194,6 +194,7 @@ def serialize_config(config):
 hyperparameters = serialize_config(config)
 ```
 
+- [[Hyperparameter for Training Step]]
 
 ### Source Directory and Entry Point
 
@@ -256,6 +257,7 @@ framework_version = "2.1.0"
 py_version = "py310"
 ```
 
+
 #### Build Estimator
 
 ```python
@@ -283,7 +285,7 @@ estimator = PyTorch(
 )
 ```
 
-
+- [[Model Config for Training Step]]
 - [[Amazon SageMaker Python SDK 1 Training Model with SDK]]
 - [[Amazon SageMaker Python SDK 2 Deploy a Pre-Trained Model]]
 - [[Amazon SageMaker Python SDK 3.1.1 Pytorch Train]]
@@ -298,6 +300,9 @@ estimator.fit(inputs)
 
 
 
+## End-to-End Pipeline
+
+- [[An End-to-End Training Deployment Pipeline on AWS]]
 
 
 -----------

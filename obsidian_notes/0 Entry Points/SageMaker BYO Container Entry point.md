@@ -25,9 +25,9 @@ date of note: 2024-03-26
 > 3. **Test** algorithm in local machine or Amazon SageMaker instance 
 > 	- [[SageMaker SDK Test Container in SageMaker]]
 > 4. Start **Training Process** in **SageMaker** using Docker Image in ECR 
-> 	- [[SageMaker SDK Training via Training API]]
+> 	- [[SageMaker SDK Training with BYO Container]]
 > 5. **Deploy** model to **Endpoint** in **SageMaker**
-> 	- [[SageMaker SDK Deploy Model to Endpoint]]
+> 	- [[SageMaker SDK Deploy BYO Model to Endpoint]]
 
 
 

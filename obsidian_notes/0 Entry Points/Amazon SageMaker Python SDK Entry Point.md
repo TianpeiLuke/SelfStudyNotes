@@ -108,6 +108,51 @@ year: 2024
 	- [[Amazon SageMaker Python SDK 4.1 BYO Processing Container]]
 - [[Amazon SageMaker Python SDK 5 Workflow and Step Function]]
 
+# Application NLP Pipeline
+
+## Processing
+
+- [[Processors ver 2.0]]
+- [[Processors Categorical Labeler]]
+- [[Processors Multiclass One-hot Encoder]]
+- [[Processors Tokenizer]]
+- [[Processors CS Chat]]
+
+- [[BSMDataset]]
+- [[Data Loader]]
+
+## Models
+
+- [[Tabular Embedding with Pydantic]]
+- [[BERT Base Embedding Model with Pydantic]]
+- [[Multi-modal BERT for FSDP Model Parallelism]]
+- [[Multi-modal BERT via Fusion Gate]]
+- [[Multi-modal BERT via Mixture of Experts]]
+- [[Multi-modal BERT via Cross-Attention]]
+- [[Export to ONNX and Inference]]
+- [[Trainer for FSDP Model Parallelism]]
+
+- [[RnR Model Compute Metrics]]
+- [[RnR Model Performance Plots]]
+
+## Training and Inference Main Script
+
+- [[Train Script under FSDP]]
+- [[Inference Script for RnR BSM]]
+- [[Requirements]]
+
+## Pipeline
+
+- [[Pytorch Estimator Training for RnR BSM]]
+- [[Pytorch Estimator Inference for RnR BSM]]
+- [[Batch Transform using Endpoint from SageMaker]]
+
+- [[An End-to-End Training Deployment Pipeline on AWS]]
+- [[Hyperparameter for Training Step]]
+- [[Model Config for Training Step]]
+- [[Builder Training Step]]
+- [[Builder Model Step]]
+
 
 
 ----------
