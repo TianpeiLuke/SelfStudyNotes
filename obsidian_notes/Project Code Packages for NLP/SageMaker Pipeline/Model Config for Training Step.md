@@ -89,6 +89,8 @@ class ModelConfig(BaseModel):
     processing_instance_count: int = Field(default=1, ge=1, le=10, description="Instance count for processing jobs")
     processing_volume_size: int = Field(default=500, ge=10, le=1000, description="Volume size for processing jobs in GB")
 
+    # Add reference to hyperparameters
+    hyperparameters: Optional[ModelHyperparameters] = Field(None, description="Model hyperparameters")
 
     class Config:
         arbitrary_types_allowed = True
@@ -186,9 +188,50 @@ class ModelConfig(BaseModel):
         if container_memory_limit and v > container_memory_limit:
             raise ValueError("Inference memory limit cannot exceed container memory limit")
         return v
+    
+
+def save_config_to_json(
+    model_config: ModelConfig, 
+    hyperparams: ModelHyperparameters, 
+    config_path: str = "config/config.json"
+) -> Path:
+    """
+    Save ModelConfig and ModelHyperparameters to JSON file
+    
+    Args:
+        model_config: ModelConfig instance
+        hyperparams: ModelHyperparameters instance
+        config_path: Path to save the config file
+    
+    Returns:
+        Path object of the saved config file
+    """
+    try:
+        # Convert both models to dictionaries
+        config_dict = model_config.model_dump()
+        hyperparams_dict = hyperparams.model_dump()
+        
+        # Combine both dictionaries
+        combined_config = {**config_dict, **hyperparams_dict}
+        
+        # Create config directory if it doesn't exist
+        path = Path(config_path)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        
+        # Save to JSON file
+        with open(path, 'w') as f:
+            json.dump(combined_config, f, indent=2, sort_keys=True)
+            
+        print(f"Configuration saved to: {path}")
+        return path
+        
+    except Exception as e:
+        raise ValueError(f"Failed to save config: {str(e)}")
 ```
 
+- [[Hyperparameter for Training Step]]
 - [[Data Class with Pydantic]]
+- [[Simple Data Class from Pydantic]]
 - [[Pytorch Estimator Training for RnR BSM]]
 
 
@@ -199,3 +242,4 @@ class ModelConfig(BaseModel):
 
 - [[Pytorch Estimator Inference for RnR BSM]]
 - [[Batch Transform using Endpoint from SageMaker]]
+- [[RnR JUMIC URES Pipeline Production]]

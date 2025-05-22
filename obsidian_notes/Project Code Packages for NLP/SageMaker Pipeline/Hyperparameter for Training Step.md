@@ -161,7 +161,7 @@ class ModelHyperparameters(BaseModel):
 
 - [[Pytorch Estimator Training for RnR BSM]]
 - [[Data Class with Pydantic]]
-
+- [[Simple Data Class from Pydantic]]
 
 
 -----------

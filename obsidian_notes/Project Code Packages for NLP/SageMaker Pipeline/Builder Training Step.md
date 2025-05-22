@@ -31,41 +31,72 @@ date of note: 2025-05-20
 from sagemaker.pytorch import PyTorch
 from sagemaker.debugger import ProfilerConfig
 from sagemaker.inputs import TrainingInput
-from sagemaker.workflow.steps import TrainingStep
+from sagemaker.workflow.steps import TrainingStep, Step
 from sagemaker.workflow.pipeline_context import PipelineSession
-from typing import Dict, List, Optional
+from pathlib import Path
+
+from typing import Optional, Dict, List
 import os
 ```
 
-### Import Model Config and Hyperparameters
 
-- [[Model Config for Training Step]]
-- [[Hyperparameter for Training Step]]
+```python
+import logging
+logger = logging.getLogger(__name__)
+```
+### Import Model Config and Base Class
+
+```python
+from .workflow_config import ModelConfig
+from .builder_step_base import StepBuilderBase
+```
 
 ### Builder Class
 
 ```python
-class PyTorchTrainingStepBuilder:
+class PyTorchTrainingStepBuilder(StepBuilderBase):
     """PyTorch model builder"""
-    def __init__(self, 
-                 config: ModelConfig, 
-                 hyperparams: ModelHyperparameters,
-                 sagemaker_session: Optional[PipelineSession] = None, 
-                 role: str = None):
+    
+    def __init__(
+        self, 
+        config: ModelConfig, 
+        sagemaker_session: Optional[PipelineSession] = None,
+        role: Optional[str] = None,
+        notebook_root: Optional[Path] = None
+    ):
         """
         Initialize PyTorch model builder
         
         Args:
-            config: Pydantic ModelConfig instance
-            hyperparams: Pydantic ModelHyperparameters instance
+            config: Pydantic ModelConfig instance with hyperparameters
             sagemaker_session: SageMaker session
             role: IAM role ARN
+            notebook_root: Root directory of notebook
         """
-        self.config = config
-        self.hyperparams = hyperparams
-        self.session = sagemaker_session
-        self.role = role
-        logger.info(f"Initialized PyTorchModelBuilder with hyperparams: {hyperparams.get_config()}")
+        super().__init__(config, sagemaker_session, role, notebook_root)
+        
+        if not self.config.hyperparameters:
+            raise ValueError("ModelConfig must include hyperparameters for training")
+            
+        logger.info(f"Initialized PyTorchTrainingStepBuilder with hyperparams: {self.config.hyperparameters.get_config()}")
+
+    def validate_configuration(self) -> None:
+        """Validate configuration requirements"""
+        required_attrs = [
+            'entry_point',
+            'source_dir',
+            'instance_type',
+            'instance_count',
+            'framework_version',
+            'py_version',
+            'volume_size',
+            'input_path',
+            'output_path'
+        ]
+        
+        for attr in required_attrs:
+            if not hasattr(self.config, attr):
+                raise ValueError(f"ModelConfig missing required attribute: {attr}")
         
     def _create_profiler_config(self) -> ProfilerConfig:
         """Create profiler configuration"""
@@ -82,8 +113,8 @@ class PyTorchTrainingStepBuilder:
             {'Name': 'Validation AUC ROC', 'Regex': 'val/auroc=([0-9\\.]+)'},
         ]
     
-    
-    def _create_pytorch_estimator(self, checkpoint_s3_uri) -> PyTorch:
+    def _create_pytorch_estimator(self, checkpoint_s3_uri: str) -> PyTorch:
+        """Create PyTorch estimator"""
         return PyTorch(
             entry_point=self.config.entry_point,
             source_dir=self.config.source_dir,
@@ -98,39 +129,32 @@ class PyTorchTrainingStepBuilder:
             checkpoint_s3_uri=checkpoint_s3_uri,
             checkpoint_local_path="/opt/ml/checkpoints",
             sagemaker_session=self.session,
-            hyperparameters=self.hyperparams.serialize_config(),
+            hyperparameters=self.config.hyperparameters.serialize_config(),
             profiler_config=self._create_profiler_config(),
             metric_definitions=self._get_metric_definitions()
         )
 
-    
-    def create_estimator(self) -> PyTorch:
-        """Create PyTorch estimator"""
-        # Use checkpoint path from config if available
-        checkpoint_s3_uri = None
+    def _get_checkpoint_uri(self) -> str:
+        """Get checkpoint URI for training"""
         if self.config.has_checkpoint():
-            checkpoint_s3_uri = self.config.get_checkpoint_uri()
-        else:
-            # Create default checkpoint path
-            checkpoint_s3_uri = os.path.join(
-                self.config.output_path,
-                "checkpoints",
-                self.config.current_date
-            )
-    
-        logger.info(
-            f"Creating PyTorch estimator:"
-            f"\n\tCheckpoint URI: {checkpoint_s3_uri}"
-            f"\n\tInstance Type: {self.config.instance_type}"
-            f"\n\tFramework Version: {self.config.framework_version}"
-            f"\n\tPython Version: {self.config.py_version}"
-        )
+            return self.config.get_checkpoint_uri()
         
-        return self._create_pytorch_estimator(checkpoint_s3_uri)
+        return os.path.join(
+            self.config.output_path,
+            "checkpoints",
+            self.config.current_date
+        )
 
-    
-    def create_training_step(self) -> TrainingStep:
-        """Create training step with dataset inputs"""
+    def create_step(self, dependencies: Optional[List] = None) -> Step:
+        """
+        Create training step with dataset inputs.
+        
+        Args:
+            dependencies: List of dependent steps
+            
+        Returns:
+            TrainingStep instance
+        """
         # Validate input path structure
         train_path = os.path.join(self.config.input_path, "train", "train.parquet")
         val_path = os.path.join(self.config.input_path, "val", "val.parquet")
@@ -143,19 +167,38 @@ class PyTorchTrainingStepBuilder:
             "test": TrainingInput(test_path)
         }
 
-        estimator = self.create_estimator()
+        # Get checkpoint URI and create estimator
+        checkpoint_uri = self._get_checkpoint_uri()
+        logger.info(
+            f"Creating PyTorch estimator:"
+            f"\n\tCheckpoint URI: {checkpoint_uri}"
+            f"\n\tInstance Type: {self.config.instance_type}"
+            f"\n\tFramework Version: {self.config.framework_version}"
+            f"\n\tPython Version: {self.config.py_version}"
+        )
+        estimator = self._create_pytorch_estimator(checkpoint_uri)
+        
+        # Get step name
+        step_name = self._get_step_name('Training')
         
         return TrainingStep(
-            name="ModelTraining",
+            name=step_name,
             estimator=estimator,
             inputs=inputs,
-            depends_on=[]
+            depends_on=dependencies or []
         )
+
+    # Maintain backwards compatibility
+    def create_training_step(self, dependencies: Optional[List] = None) -> TrainingStep:
+        """Backwards compatible method for creating training step"""
+        return self.create_step(dependencies)
+
 ```
 
-
-- [[Hyperparameter for Training Step]]
 - [[Model Config for Training Step]]
+- [[Hyperparameter for Training Step]]
+- [[Base Step Builder]]
+
 
 ### Learning: TrainingStep
 
