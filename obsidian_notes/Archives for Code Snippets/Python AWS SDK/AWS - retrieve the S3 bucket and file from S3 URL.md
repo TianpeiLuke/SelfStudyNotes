@@ -24,6 +24,7 @@ date of note: 2024-04-02
 >	- check the `'Contents'` field to obtain a  list of *folder/filenames* (`Key`)
 >	- collect filename if *all* filenames under `key` ends with `'.csv'` 
 
+- [[AWS S3 Parse Path]]
 
 ## Code
 
