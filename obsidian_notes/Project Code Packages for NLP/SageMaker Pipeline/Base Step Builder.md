@@ -20,16 +20,26 @@ date of note: 2025-05-21
 from abc import ABC, abstractmethod
 from typing import Dict, Optional, Any
 from pathlib import Path
-import logging
+
 from sagemaker.workflow.pipeline_context import PipelineSession
 from sagemaker.workflow.steps import Step
-
-from .workflow_config import ModelConfig
-
-logger = logging.getLogger(__name__)
 ```
 
 
+```python
+import logging
+logger = logging.getLogger(__name__)
+```
+
+### Import Base Config
+
+```python
+from .config_base import BasePipelineConfig
+```
+
+- [[Base Config]]
+
+### Base Builder
 
 ```python
 class StepBuilderBase(ABC):
@@ -46,12 +56,13 @@ class StepBuilderBase(ABC):
         'Training': 'TrainingStep',
         'Model': 'CreateModelStep',
         'Package': 'PackagingStep',
+        'Payload': 'PayloadGenerationStep',  # <-- Added for payload step
         'Registration': 'RegistrationStep'
     }
 
     def __init__(
         self,
-        config: ModelConfig,
+        config: BasePipelineConfig,
         sagemaker_session: Optional[PipelineSession] = None,
         role: Optional[str] = None,
         notebook_root: Optional[Path] = None
@@ -154,8 +165,15 @@ class StepBuilderBase(ABC):
 ```
 
 
+## Derived Classes
+
+- [[Builder Training Step]]
+- [[Builder Model Step]]
+
 
 
 -----------
 ##  Recommended Notes
 
+- [[Design Pattern Builder Pattern]]
+- [[Design Pattern Abstract Factory Pattern]]

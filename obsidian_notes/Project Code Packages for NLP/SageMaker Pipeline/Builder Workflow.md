@@ -34,7 +34,7 @@ from sagemaker.pytorch import PyTorchModel # Added for deploy_endpoint
 
 ### Load Config
 
-- [[Model Config for Training Step]]
+- [[Config for Training Step]]
 - [[Hyperparameter for Training Step]]
 
 ### Load Builders

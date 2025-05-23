@@ -9,7 +9,7 @@ date of note: 2025-05-20
 ## Create Pipeline
 
 - [[An End-to-End Training Deployment Pipeline on AWS]]
-- [[Model Config for Training Step]]
+- [[Config for Training Step]]
 - [[Hyperparameter for Training Step]]
 - [[Builder Training Step]]
 - [[Builder Model Step]]

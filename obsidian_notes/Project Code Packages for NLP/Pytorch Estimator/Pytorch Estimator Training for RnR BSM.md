@@ -285,7 +285,7 @@ estimator = PyTorch(
 )
 ```
 
-- [[Model Config for Training Step]]
+- [[Config for Training Step]]
 - [[Amazon SageMaker Python SDK 1 Training Model with SDK]]
 - [[Amazon SageMaker Python SDK 2 Deploy a Pre-Trained Model]]
 - [[Amazon SageMaker Python SDK 3.1.1 Pytorch Train]]

@@ -17,7 +17,12 @@ date of note: 2025-05-20
 >- Used to define `PyTorchTrainingStepBuilder`
 
 
-- [[Builder Training Step]]
+- [[Config for Training Step]]
+- [[Config for Model Step]]
+- [[Hyperparameter for Training Step]]
+- [[Config for Packaging Step]]
+- [[Config for Payload Generation Step]]
+- [[Config for Model Registration Step]]
 
 ## Code
 
@@ -94,6 +99,8 @@ class ModelConfig(BaseModel):
     
     
     # Payload Test
+    payload_script_path: str = Field(default=None, description="Path to the payload creation script (relative to notebook_root or S3 URI)") # payload test script
+    payload_script_arguments: Optional[List[str]] = Field(default=None, description="Optional arguments for the payload creation script") # payload test argument
     expected_tps: int = Field(default=2, description="Expected transactions per second")
     max_latency_in_millisecond: int = Field(default=800, description="Maximum latency in milliseconds")
     max_acceptable_error_rate: float = Field(default=0.2, description="Maximum acceptable error rate")
@@ -125,7 +132,8 @@ class ModelConfig(BaseModel):
 
 
     # Processing Step Configuration
-    processing_instance_type: str = Field(default='ml.m5.4xlarge', description="Instance type for processing jobs")
+    processing_instance_type_large: str = Field(default='ml.m5.4xlarge', description="Instance type for large processing jobs")
+    processing_instance_type_small: str = Field(default='ml.m5.2xlarge', description="Instance type for small processing jobs")
     processing_instance_count: int = Field(default=1, ge=1, le=10, description="Instance count for processing jobs")
     processing_volume_size: int = Field(default=500, ge=10, le=1000, description="Volume size for processing jobs in GB")
 

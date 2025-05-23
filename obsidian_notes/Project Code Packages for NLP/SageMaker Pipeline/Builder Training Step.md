@@ -44,12 +44,15 @@ import os
 import logging
 logger = logging.getLogger(__name__)
 ```
-### Import Model Config and Base Class
+### Import Training Config and Base Class
 
 ```python
-from .workflow_config import ModelConfig
+from .config_training_step import TrainingConfig
 from .builder_step_base import StepBuilderBase
 ```
+
+- [[Config for Training Step]]
+- [[Base Step Builder]]
 
 ### Builder Class
 
@@ -59,7 +62,7 @@ class PyTorchTrainingStepBuilder(StepBuilderBase):
     
     def __init__(
         self, 
-        config: ModelConfig, 
+        config: TrainingConfig, 
         sagemaker_session: Optional[PipelineSession] = None,
         role: Optional[str] = None,
         notebook_root: Optional[Path] = None
@@ -83,13 +86,13 @@ class PyTorchTrainingStepBuilder(StepBuilderBase):
     def validate_configuration(self) -> None:
         """Validate configuration requirements"""
         required_attrs = [
-            'entry_point',
+            'training_entry_point',
             'source_dir',
-            'instance_type',
-            'instance_count',
+            'training_instance_type',
+            'training_instance_count',
+            'training_volume_size',
             'framework_version',
             'py_version',
-            'volume_size',
             'input_path',
             'output_path'
         ]
@@ -116,14 +119,14 @@ class PyTorchTrainingStepBuilder(StepBuilderBase):
     def _create_pytorch_estimator(self, checkpoint_s3_uri: str) -> PyTorch:
         """Create PyTorch estimator"""
         return PyTorch(
-            entry_point=self.config.entry_point,
+            entry_point=self.config.training_entry_point,
             source_dir=self.config.source_dir,
             role=self.role,
-            instance_count=self.config.instance_count,
-            instance_type=self.config.instance_type,
+            instance_count=self.config.training_instance_count,
+            instance_type=self.config.training_instance_type,
             framework_version=self.config.framework_version,
             py_version=self.config.py_version,
-            volume_size=self.config.volume_size,
+            volume_size=self.config.training_volume_size,
             max_run=4 * 24 * 60 * 60,
             output_path=self.config.output_path,
             checkpoint_s3_uri=checkpoint_s3_uri,
@@ -192,10 +195,9 @@ class PyTorchTrainingStepBuilder(StepBuilderBase):
     def create_training_step(self, dependencies: Optional[List] = None) -> TrainingStep:
         """Backwards compatible method for creating training step"""
         return self.create_step(dependencies)
-
 ```
 
-- [[Model Config for Training Step]]
+- [[Config for Training Step]]
 - [[Hyperparameter for Training Step]]
 - [[Base Step Builder]]
 

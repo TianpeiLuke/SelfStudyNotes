@@ -25,7 +25,7 @@ date of note: 2025-05-20
 
 ### Configuration 
 
-- [[Model Config for Training Step]]
+- [[Config for Training Step]]
 - [[Hyperparameter for Training Step]]
 
 ### Train Step 
