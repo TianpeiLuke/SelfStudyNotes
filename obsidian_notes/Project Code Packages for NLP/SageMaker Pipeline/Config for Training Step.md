@@ -77,7 +77,7 @@ class TrainingConfig(BasePipelineConfig):
 
     @model_validator(mode='before')
     @classmethod
-    def _construct_paths(cls, values: Dict[str, Any]) -> Dict[str, Any]:
+    def _construct_training_paths(cls, values: Dict[str, Any]) -> Dict[str, Any]:
         """Constructs S3 paths specific to training if not provided."""
         # Ensure base attributes like bucket and current_date are present from BasePipelineConfig's validator
         # (which should have run if this ModelConfig is part of a hierarchy correctly parsed)
@@ -91,16 +91,12 @@ class TrainingConfig(BasePipelineConfig):
             # For safety, one might re-fetch/default them if BasePipelineConfig's validator hasn't run yet for these values.
             pass # Assuming they are already populated by BasePipelineConfig validator
 
-        # Construct paths if not provided
-        if not values.get('input_path'):
-            values['input_path'] = f"s3://{bucket}/train_test_val/{current_date}"
-        
-        if not values.get('output_path'):
-            values['output_path'] = f"s3://{bucket}/models/{current_date}"
-        
-        if not values.get('checkpoint_path'):
-            values['checkpoint_path'] = f"s3://{bucket}/checkpointing/{current_date}"
-
+        if 'input_path' not in values or values['input_path'] is None:
+            values['input_path'] = f"s3://{bucket}/training_input/{current_date}"
+        if 'output_path' not in values or values['output_path'] is None:
+            values['output_path'] = f"s3://{bucket}/training_output/{current_date}/model"
+        if 'checkpoint_path' not in values: # Allow explicit None
+             values['checkpoint_path'] = f"s3://{bucket}/training_checkpoints/{current_date}"
         return values
 
     @model_validator(mode='after')
@@ -129,7 +125,7 @@ class TrainingConfig(BasePipelineConfig):
 
 
     @model_validator(mode='after')
-    def validate_field_lists(self) -> 'ModelConfig':
+    def validate_field_lists(self) -> 'TrainingConfig':
         """Validate field lists from hyperparameters"""
         if not self.hyperparameters:
             raise ValueError("hyperparameters must be provided")

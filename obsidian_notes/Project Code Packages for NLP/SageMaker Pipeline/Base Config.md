@@ -33,7 +33,7 @@ date of note: 2025-05-22
 
 ```python
 from pydantic import BaseModel, Field, model_validator, field_validator
-from typing import List, Optional, Dict, Any
+from typing import List, Optional, Dict, Any, ClassVar
 from pathlib import Path
 import json
 from datetime import datetime
@@ -45,6 +45,23 @@ from datetime import datetime
 ```python
 class BasePipelineConfig(BaseModel):
     """Base configuration with shared pipeline attributes."""
+    
+    # Class variables using ClassVar for Pydantic
+    REGION_MAPPING: ClassVar[Dict[str, str]] = {
+        "NA": "us-east-1",
+        "EU": "eu-west-1",
+        "FE": "us-west-2"
+    }
+    
+    STEP_NAMES: ClassVar[Dict[str, str]] = {
+        'BasePipelineConfig': 'Base',
+        'TrainingConfig': 'Training',
+        'ModelCreationConfig': 'Model',
+        'ProcessingStepConfigBase': 'Processing',
+        'PackageStepConfig': 'Package',
+        'ModelRegistrationConfig': 'Registration'
+    }
+    
     # Shared basic info
     bucket: str = Field(description="S3 bucket name for pipeline artifacts and data.")
     current_date: str = Field(
@@ -81,51 +98,64 @@ class BasePipelineConfig(BaseModel):
     @classmethod
     def _construct_base_attributes(cls, values: Dict[str, Any]) -> Dict[str, Any]:
         """
-        Sets up default values for core attributes if not provided,
-        often using external context like a session object (mocked here).
+        Sets up default values for core attributes if not provided.
         """
         # Resolve bucket and author using sais_session if not provided
-        # In real usage, sais_session might be passed differently or be a global
         if 'bucket' not in values or values['bucket'] is None:
-            values['bucket'] = sais_session.team_owned_s3_bucket_name()
+            values['bucket'] = 'my-default-bucket'
         if 'author' not in values or values['author'] is None:
-            values['author'] = sais_session.owner_alias()
+            values['author'] = 'my-default-author'
 
         # Ensure current_date is set
         if 'current_date' not in values or values['current_date'] is None:
             values['current_date'] = datetime.now().strftime("%Y-%m-%d")
         
         # Derive aws_region from custom region code
-        region_code = values.get('region', 'NA') # Default to 'NA' if not present
-        values['region'] = region_code # Ensure region code is in values
+        region_code = values.get('region', 'NA')
+        values['region'] = region_code
 
-        region_mapping = {"NA": "us-east-1", "EU": "eu-west-1", "FE": "us-west-2"}
         if 'aws_region' not in values or values['aws_region'] is None:
-            values['aws_region'] = region_mapping.get(region_code, "us-east-1") # Default if mapping fails
+            region_code = values.get('region', 'NA')
+            values['aws_region'] = cls.REGION_MAPPING.get(region_code, "us-east-1")
 
         # Construct pipeline name if not provided
-        pipeline_name = values.get('pipeline_name')
-        if not pipeline_name:
-            pipeline_name = f'{author}-BSM-RnR-{region}'
-            values['pipeline_name'] = pipeline_name
+        if not values.get('pipeline_name'):
+            author = values.get('author')
+            region = values.get('region')
+            values['pipeline_name'] = f'{author}-BSM-RnR-{region}'
 
         # Construct pipeline description if not provided
         if not values.get('pipeline_description'):
+            region = values.get('region')
             values['pipeline_description'] = f'BSM RnR {region}'
 
         # Set default pipeline version if not provided
-        pipeline_version = values.get('pipeline_version')
-        if not pipeline_version:
-            pipeline_version = '0.1.0'
-            values['pipeline_version'] = pipeline_version
+        if not values.get('pipeline_version'):
+            values['pipeline_version'] = '0.1.0'
 
         # Construct pipeline S3 location if not provided
         if not values.get('pipeline_s3_loc'):
-            pipeline_subdirectory = 'MODS'  # You might want to make this configurable
+            bucket = values.get('bucket')
+            pipeline_name = values.get('pipeline_name')
+            pipeline_version = values.get('pipeline_version')
+            pipeline_subdirectory = 'MODS'
             pipeline_subsubdirectory = f"{pipeline_name}_{pipeline_version}"
-            values['pipeline_s3_loc'] = f"s3://{Path(bucket) / pipeline_subdirectory / pipeline_subsubdirectory}"
+            values['pipeline_s3_loc'] = f"s3://{bucket}/{pipeline_subdirectory}/{pipeline_subsubdirectory}"
         
         return values
+
+    @model_validator(mode='after')
+    def validate_dependencies(self) -> 'BasePipelineConfig':
+        """Validate interdependent fields after all values are set"""
+        # Ensure all required fields are present
+        required_fields = ['bucket', 'author', 'region', 'pipeline_name', 
+                         'pipeline_description', 'pipeline_version', 'pipeline_s3_loc']
+        
+        for field in required_fields:
+            if not getattr(self, field):
+                raise ValueError(f"Required field '{field}' is missing or empty")
+        
+        return self
 
     @field_validator('region')
     @classmethod
@@ -145,54 +175,20 @@ class BasePipelineConfig(BaseModel):
                 raise ValueError(f"Local source_dir is not a directory: {v}")
         return v
     
+    @classmethod
+    def get_step_name(cls, config_class_name: str) -> str:
+        """Get the step name for a configuration class"""
+        return cls.STEP_NAMES.get(config_class_name, config_class_name)
+
+    @classmethod
+    def get_config_class_name(cls, step_name: str) -> str:
+        """Get the configuration class name from a step name"""
+        reverse_mapping = {v: k for k, v in cls.STEP_NAMES.items()}
+        return reverse_mapping.get(step_name, step_name)
 ```
 
 - [[Data Class with Pydantic]]
 - [[Simple Data Class from Pydantic]]
-
-
-### Save Config to JSON
-
-```python
-def save_config_to_json(
-    model_config: ModelConfig, 
-    hyperparams: ModelHyperparameters, 
-    config_path: str = "config/config.json"
-) -> Path:
-    """
-    Save ModelConfig and ModelHyperparameters to JSON file
-    
-    Args:
-        model_config: ModelConfig instance
-        hyperparams: ModelHyperparameters instance
-        config_path: Path to save the config file
-    
-    Returns:
-        Path object of the saved config file
-    """
-    try:
-        # Convert both models to dictionaries
-        config_dict = model_config.model_dump()
-        hyperparams_dict = hyperparams.model_dump()
-        
-        # Combine both dictionaries
-        combined_config = {**config_dict, **hyperparams_dict}
-        
-        # Create config directory if it doesn't exist
-        path = Path(config_path)
-        path.parent.mkdir(parents=True, exist_ok=True)
-        
-        # Save to JSON file
-        with open(path, 'w') as f:
-            json.dump(combined_config, f, indent=2, sort_keys=True)
-            
-        print(f"Configuration saved to: {path}")
-        return path
-        
-    except Exception as e:
-        raise ValueError(f"Failed to save config: {str(e)}")
-```
-
 
 ## Derived Classes
 

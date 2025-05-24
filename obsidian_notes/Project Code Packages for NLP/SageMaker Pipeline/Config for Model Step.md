@@ -42,7 +42,7 @@ from .config_base import BasePipelineConfig
 - [[Base Config]]
 
 ```python
-class ModelCreationConfig(BasePipelineConfig): # Renamed from ModelStepConfig for clarity
+class ModelCreationConfig(BasePipelineConfig): 
     """Configuration specific to the SageMaker Model creation (for inference)."""
     inference_instance_type: str = Field(default='ml.m5.large', description="Instance type for inference endpoint/transform job.")
     inference_entry_point: str = Field(default='inference.py', description="Entry point script for inference.")
@@ -60,13 +60,36 @@ class ModelCreationConfig(BasePipelineConfig): # Renamed from ModelStepConfig fo
 
     class Config(BasePipelineConfig.Config):
         pass
-
-        
+    
     @model_validator(mode='after')
-    def _validate_memory_constraints(self) -> 'ModelCreationConfig':
-        if self.inference_memory_limit > self.container_memory_limit:
-            raise ValueError("Inference memory limit cannot exceed container memory limit.")
+    def validate_configuration(self) -> 'ModelCreationConfig':
+        """Validate the complete configuration"""
+        self._validate_memory_constraints()
+        self._validate_timeouts()
+        self._validate_entry_point()
         return self
+
+    def _validate_memory_constraints(self) -> None:
+        """Validate memory-related constraints"""
+        if self.inference_memory_limit > self.container_memory_limit:
+            raise ValueError(
+                f"Inference memory limit ({self.inference_memory_limit}MB) cannot exceed "
+                f"container memory limit ({self.container_memory_limit}MB)"
+            )
+            
+    def _validate_timeouts(self) -> None:
+        """Validate timeout-related configurations"""
+        if self.container_startup_health_check_timeout > self.data_download_timeout:
+            raise ValueError(
+                "Container startup health check timeout should not exceed data download timeout"
+            )
+
+    def _validate_entry_point(self) -> None:
+        """Validate entry point script"""
+        if self.source_dir and not self.source_dir.startswith('s3://'):
+            entry_point_path = Path(self.source_dir) / self.inference_entry_point
+            if not entry_point_path.exists():
+                raise ValueError(f"Inference entry point script not found: {entry_point_path}")
     
     @field_validator('inference_memory_limit')
     @classmethod
@@ -82,6 +105,20 @@ class ModelCreationConfig(BasePipelineConfig): # Renamed from ModelStepConfig fo
         if not v.startswith('ml.'):
             raise ValueError(f"Invalid inference instance type: {v}. Must start with 'ml.'")
         return v
+
+    
+    def get_model_name(self) -> str:
+        """Generate a unique model name"""
+        timestamp = datetime.now().strftime("%Y%m%d-%H%M%S")
+        return f"{self.pipeline_name}-model-{timestamp}"
+
+    def get_endpoint_config_name(self) -> str:
+        """Generate endpoint configuration name"""
+        return f"{self.get_model_name()}-config"
+
+    def get_endpoint_name(self) -> str:
+        """Generate endpoint name"""
+        return f"{self.pipeline_name}-endpoint"
 ```
 
 
