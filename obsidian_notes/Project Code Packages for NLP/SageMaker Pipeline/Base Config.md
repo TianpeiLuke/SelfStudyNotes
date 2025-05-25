@@ -59,7 +59,8 @@ class BasePipelineConfig(BaseModel):
         'ModelCreationConfig': 'Model',
         'ProcessingStepConfigBase': 'Processing',
         'PackageStepConfig': 'Package',
-        'ModelRegistrationConfig': 'Registration'
+        'ModelRegistrationConfig': 'Registration',
+        'PayloadConfig': 'Payload'
     }
     
     # Shared basic info
