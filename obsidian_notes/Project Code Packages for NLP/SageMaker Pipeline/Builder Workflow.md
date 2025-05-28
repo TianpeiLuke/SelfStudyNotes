@@ -34,13 +34,13 @@ from sagemaker.pytorch import PyTorchModel # Added for deploy_endpoint
 
 ### Load Config
 
-- [[Config for Training Step]]
-- [[Hyperparameter for Training Step]]
+- [[Config for Pytorch Training Step]]
+- [[Hyperparameter for Pytorch Training Step]]
 
 ### Load Builders
 
-- [[Builder Training Step]]
-- [[Builder Model Step]]
+- [[Builder Pytorch Training Step]]
+- [[Builder Pytorch Model Step]]
 
 
 ### Workflow

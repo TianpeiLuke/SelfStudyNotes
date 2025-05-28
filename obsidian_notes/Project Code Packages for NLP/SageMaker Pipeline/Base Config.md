@@ -193,8 +193,8 @@ class BasePipelineConfig(BaseModel):
 
 ## Derived Classes
 
-- [[Config for Training Step]]
-- [[Config for Model Step]]
+- [[Config for Pytorch Training Step]]
+- [[Config for Pytorch Model Step]]
 - [[Base Config for Processing Step]]
 
 

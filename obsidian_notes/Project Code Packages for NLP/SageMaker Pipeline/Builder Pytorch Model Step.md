@@ -14,7 +14,7 @@ date of note: 2025-05-20
 ## Code Snippet Summary
 
 >[!important]
->**Builder** for `ModelStep`
+>**Builder** for `PytorchModelStep`
 >- Create a SageMaker model object (`sagemaker.model.Model` or `sagemaker.pytorch.model.PyTorchModel`)
 >- Register that model in SageMaker using `model.create(...)`
 
@@ -23,7 +23,7 @@ date of note: 2025-05-20
 
 ### Previous Step
 
-- [[Builder Training Step]]
+- [[Builder Pytorch Training Step]]
 
 ## Code
 
@@ -49,11 +49,11 @@ logger = logging.getLogger(__name__)
 ### Import Model Config and Base Class
 
 ```python
-from .config_model_step import ModelCreationConfig
+from .config_model_step_pytorch import PytorchModelCreationConfig
 from .builder_step_base import StepBuilderBase
 ```
 
-- [[Config for Model Step]]
+- [[Config for Pytorch Model Step]]
 - [[Base Step Builder]]
 
 ### Builder Class
@@ -64,7 +64,7 @@ class PytorchModelStepBuilder(StepBuilderBase):
 
     def __init__(
         self, 
-        config: ModelCreationConfig, 
+        config: PytorchModelCreationConfig, 
         sagemaker_session: Optional[PipelineSession] = None,
         role: Optional[str] = None,
         notebook_root: Optional[Path] = None
@@ -241,7 +241,7 @@ class PytorchModelStepBuilder(StepBuilderBase):
 
 ## Previous Step
 
-- [[Builder Training Step]]
+- [[Builder Pytorch Training Step]]
 
 ## Next Step
 
@@ -263,3 +263,7 @@ class PytorchModelStepBuilder(StepBuilderBase):
 
 - [[Design Pattern Builder Pattern]]
 - [[Docker Container Images]]
+
+- [[MLOps]]
+- [[Continuous Delivery or CD in DevOps and MLOps]]
+- [[Continuous Integration or CI in DevOps and MLOps]]

@@ -14,14 +14,14 @@ date of note: 2025-05-22
 ## Code Snippet Summary
 
 >[!important]
->Create Config Class for **Model Creation** Step
+>Create Config Class for **Pytorch Model Creation** Step
 >- Based on `Pydantic` version 2
 >- Derived from `BasePipelineConfig`
 >- Used to define `PytorchModelStepBuilder`
 
 ### Builder
 
-- [[Builder Model Step]]
+- [[Builder Pytorch Model Step]]
 
 ## Code
 
@@ -42,7 +42,7 @@ from .config_base import BasePipelineConfig
 - [[Base Config]]
 
 ```python
-class ModelCreationConfig(BasePipelineConfig): 
+class PytorchModelCreationConfig(BasePipelineConfig): 
     """Configuration specific to the SageMaker Model creation (for inference)."""
     inference_instance_type: str = Field(default='ml.m5.large', description="Instance type for inference endpoint/transform job.")
     inference_entry_point: str = Field(default='inference.py', description="Entry point script for inference.")

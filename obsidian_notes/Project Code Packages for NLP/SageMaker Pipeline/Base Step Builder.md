@@ -167,8 +167,8 @@ class StepBuilderBase(ABC):
 
 ## Derived Classes
 
-- [[Builder Training Step]]
-- [[Builder Model Step]]
+- [[Builder Pytorch Training Step]]
+- [[Builder Pytorch Model Step]]
 
 
 
@@ -177,3 +177,7 @@ class StepBuilderBase(ABC):
 
 - [[Design Pattern Builder Pattern]]
 - [[Design Pattern Abstract Factory Pattern]]
+
+- [[MLOps]]
+- [[Continuous Delivery or CD in DevOps and MLOps]]
+- [[Continuous Integration or CI in DevOps and MLOps]]

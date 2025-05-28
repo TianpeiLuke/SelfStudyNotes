@@ -12,14 +12,14 @@ date of note: 2025-05-20
 ## Code Snippet Summary
 
 >[!important]
->Create Config Class for **Model Training** Step
+>Create Config Class for **Pytorch Model Training** Step
 >- Based on `Pydantic` version 2
 >- Derived from `BasePipelineConfig`
 >- Used to define `PyTorchTrainingStepBuilder`
 
 ### Builder
 
-- [[Builder Training Step]]
+- [[Builder Pytorch Training Step]]
 
 ## Code
 
@@ -34,18 +34,19 @@ from datetime import datetime
 ### Import Hyper-parameters and Base Config
 
 ```python
-from .hyperparameters import ModelHyperparameters
+from .hyperparameters_base import ModelHyperparameters
 from .config_base import BasePipelineConfig
 ```
 
-- [[Hyperparameter for Training Step]]
+- [[Base Hyperparameters]]
+- [[Hyperparameter for Pytorch Training Step]]
 - [[Base Config]]
 
 
 ### Training Config
 
 ```python
-class TrainingConfig(BasePipelineConfig):
+class PytorchTrainingConfig(BasePipelineConfig):
     """Configuration specific to the SageMaker Training Step."""
     # S3 paths with updated pattern
     input_path: str = Field(

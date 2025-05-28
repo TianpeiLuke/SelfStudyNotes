@@ -14,9 +14,9 @@ date of note: 2025-05-20
 ## Code Snippet Summary
 
 >[!important]
->**Builder** class for `TrainingStep`
+>**Builder** class for `PytorchTrainingStep`
 >- Create `Pytorch` Estimator
->- Create `TrainingStep`
+>- Create `PytorchTrainingStep`
 >	- Construct metric monitor
 >	- Configure `TrainingInput`
 >	- Configure `output_path`
@@ -47,11 +47,11 @@ logger = logging.getLogger(__name__)
 ### Import Training Config and Base Class
 
 ```python
-from .config_training_step import TrainingConfig
+from .config_training_step_pytorch import PytorchTrainingConfig
 from .builder_step_base import StepBuilderBase
 ```
 
-- [[Config for Training Step]]
+- [[Config for Pytorch Training Step]]
 - [[Base Step Builder]]
 
 ### Builder Class
@@ -62,7 +62,7 @@ class PyTorchTrainingStepBuilder(StepBuilderBase):
     
     def __init__(
         self, 
-        config: TrainingConfig, 
+        config: PytorchTrainingConfig, 
         sagemaker_session: Optional[PipelineSession] = None,
         role: Optional[str] = None,
         notebook_root: Optional[Path] = None
@@ -197,8 +197,8 @@ class PyTorchTrainingStepBuilder(StepBuilderBase):
         return self.create_step(dependencies)
 ```
 
-- [[Config for Training Step]]
-- [[Hyperparameter for Training Step]]
+- [[Config for Pytorch Training Step]]
+- [[Hyperparameter for Pytorch Training Step]]
 - [[Base Step Builder]]
 
 
@@ -245,7 +245,7 @@ TrainingStep(
 
 ## Next Step
 
-- [[Builder Model Step]]
+- [[Builder Pytorch Model Step]]
 
 
 
@@ -254,3 +254,7 @@ TrainingStep(
 
 
 - [[Pytorch Estimator Training for RnR BSM]]
+
+- [[MLOps]]
+- [[Continuous Delivery or CD in DevOps and MLOps]]
+- [[Continuous Integration or CI in DevOps and MLOps]]

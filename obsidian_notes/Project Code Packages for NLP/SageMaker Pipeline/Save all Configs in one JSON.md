@@ -222,9 +222,9 @@ if __name__ == "__main__":
 ```
 
 
-- [[Config for Training Step]]
-- [[Config for Model Step]]
-- [[Hyperparameter for Training Step]]
+- [[Config for Pytorch Training Step]]
+- [[Config for Pytorch Model Step]]
+- [[Hyperparameter for Pytorch Training Step]]
 - [[Config for Packaging Step]]
 - [[Config for Payload Generation Step]]
 - [[Config for Model Registration Step]]

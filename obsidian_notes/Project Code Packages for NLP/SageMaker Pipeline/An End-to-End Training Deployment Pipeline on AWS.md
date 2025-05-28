@@ -25,16 +25,16 @@ date of note: 2025-05-20
 
 ### Configuration 
 
-- [[Config for Training Step]]
-- [[Hyperparameter for Training Step]]
+- [[Config for Pytorch Training Step]]
+- [[Hyperparameter for Pytorch Training Step]]
 
 ### Train Step 
 
-- [[Builder Training Step]]
+- [[Builder Pytorch Training Step]]
 
 ### Model Step
 
-- [[Builder Model Step]]
+- [[Builder Pytorch Model Step]]
 
 ### Endpoint Step
 
