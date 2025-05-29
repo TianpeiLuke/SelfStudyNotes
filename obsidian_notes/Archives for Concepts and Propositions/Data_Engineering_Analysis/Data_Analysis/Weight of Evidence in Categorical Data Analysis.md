@@ -23,8 +23,7 @@ date of note: 2025-05-28
 
 - **Weight of Evidence (WoE)** will help us to determine which categories should be binned together. WOE measures the strength of a bin in differentiating the Good and Bad accounts. WOE < 0 indicates that the variable bin is captures higher proportion of bad accounts.
 
-
-- **Information Value (IV)** will help in determining which variables are useful for prediction in the logistic regression model. IV is the measure of overall predictive power of the variables and is very useful for feature selection.
+- [[Information Value for Predictive Power of Categorical Data]]
 
 ## Explanation
 
@@ -32,16 +31,16 @@ date of note: 2025-05-28
 - [[Risk Table for Categorical Data Analysis]]
 - [[Logistic Regression]]
 
-### IV for Variable Predictive
+### Usage
 
-|Information Value|Variable Predictiveness|
-|---|---|
-|Less than 0.02|Not useful for prediction|
-|0.02 to 0.1|Weak predictive Power|
-|0.1 to 0.3|Medium predictive Power|
-|0.3 to 0.5|Strong predictive Power|
-|>0.5|Suspicious Predictive Power|
+- Popular in **credit risk modeling**
+- Handles **ordinal relationship** better
+- Used in **logistic regression** models for interpretability
 
+
+## Related
+
+- [[Instrumental Variables for Causal Inference]]
 
 
 
