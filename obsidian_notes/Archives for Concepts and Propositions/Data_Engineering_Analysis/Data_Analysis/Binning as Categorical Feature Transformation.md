@@ -1,10 +1,11 @@
 ---
 tags:
   - concept
-  - machine_learning/preprocessing
-  - data_engineering/preprocessing
+  - machine_learning/feature_engineering
+  - data_engineering/feature_engineering
   - credit_risk_modeling
   - binning
+  - feature_engineering
 keywords: 
 topics:
   - machine_learning/preprocessing
@@ -28,11 +29,7 @@ date of note: 2025-05-28
 ## Code
 
 - [[Binning - Partition a field into bins and show the size of each bin]]
-- [[Binning and Pivot Table - Count Frequency of Pairs of Features]]
-- [[Risk Value Mapping of Categorical Field]]
 
-- [[Processors Risk Binning]]
-- [[Binning]]
 
 
 -----------
@@ -44,6 +41,7 @@ date of note: 2025-05-28
 
 - Reference
 	- [Kaggle Binning](https://www.kaggle.com/code/chandrimad31/credit-risk-part-1-binning-woe-iv-pd-model)
+	- [Feature Engineering Examples: Binning Categorical Features](https://towardsdatascience.com/feature-engineering-examples-binning-categorical-features-9f8d582455da/)
 	
 - Github
 	- [Optimal Binning](https://github.com/guillermo-navas-palencia/optbinning)

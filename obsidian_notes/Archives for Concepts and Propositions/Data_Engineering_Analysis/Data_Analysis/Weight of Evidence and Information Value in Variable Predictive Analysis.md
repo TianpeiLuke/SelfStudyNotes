@@ -2,10 +2,11 @@
 tags:
   - concept
   - credit_risk_modeling
-  - data_engineering/preprocessing
+  - data_engineering/feature_engineering
   - binning
   - weight_of_evidence
   - information_value
+  - feature_engineering
 keywords:
   - weight_of_evidence
 topics: 
