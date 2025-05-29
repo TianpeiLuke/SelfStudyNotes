@@ -36,6 +36,7 @@ date of note: 2024-04-03
 
 - [[Processors Risk Binning]]
 - [[Binning as Categorical Feature Transformation]]
+- [[Risk Table for Categorical Feature]]
 - [[Binning]]
 - [[Binning and Pivot Table - Count Frequency of Pairs of Features]]
 

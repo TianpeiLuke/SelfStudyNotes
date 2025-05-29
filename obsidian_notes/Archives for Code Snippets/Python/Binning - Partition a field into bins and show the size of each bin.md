@@ -3,6 +3,8 @@ tags:
   - code
   - code_snippet
   - python/dataframe
+  - feature_engineering
+  - machine_learning/feature_engineering
 keywords: 
 topics: 
 language: python

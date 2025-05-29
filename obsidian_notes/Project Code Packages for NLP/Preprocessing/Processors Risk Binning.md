@@ -4,6 +4,8 @@ tags:
   - code_snippet
   - python
   - python/processor
+  - feature_engineering
+  - machine_learning/feature_engineering
 keywords: 
 topics: 
 language: python
@@ -323,6 +325,7 @@ dataset.add_pipeline(COLUMN_TO_BIN, binning_processor)
 - [[Binning]]
 
 - [[Binning as Categorical Feature Transformation]]
+- [[Risk Table for Categorical Feature]]
 - Wikipedia
 	- [Data binning](https://en.wikipedia.org/wiki/Data_binning)
 
