@@ -19,6 +19,8 @@ date of note: 2025-01-21
 >	- count of occurrence for each cell
 >- If `f2` is binary vector, then the resulting binning of feature `f1` is given by  $$b(f_{1}) :=  \frac{p(f_{1}, 1)}{p(f_{1}, 0) + p(f_{1}, 1)}$$ 
 
+^f5d031
+
 ## Code
 
 ```python
@@ -78,8 +80,11 @@ table_reset.apply(lambda x: x[1] / (x[1] + x[0]), axis=1)
 
 
 - [[Binning]]
+- [[Processors Risk Binning]]
 - [[Pivot Table using Value of one column as Column Name]]
 
+- Wikipedia
+	- [Data binning](https://en.wikipedia.org/wiki/Data_binning)
 - Documentation
 	- `pandas.crosstab`  [reference](https://pandas.pydata.org/docs/reference/api/pandas.crosstab.html)
 	- `pandas.pivot_table` [reference](https://pandas.pydata.org/docs/reference/api/pandas.pivot_table.html)

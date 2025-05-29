@@ -33,7 +33,7 @@ date of note: 2025-05-20
 
 ## Alternative Implementation
 
-- [[Builder Model Step]]
+- [[Builder Pytorch Model Step]]
 
 
 

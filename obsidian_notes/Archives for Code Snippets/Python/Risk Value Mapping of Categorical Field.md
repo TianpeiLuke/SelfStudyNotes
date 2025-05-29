@@ -34,6 +34,10 @@ date of note: 2024-04-03
 >$$
 >- For $x \not\in \mathcal{X}$, $r[x] = P(y=1)$ default value.
 
+- [[Processors Risk Binning]]
+- [[Binning as Categorical Feature Transformation]]
+- [[Binning]]
+- [[Binning and Pivot Table - Count Frequency of Pairs of Features]]
 
 ## Code
 

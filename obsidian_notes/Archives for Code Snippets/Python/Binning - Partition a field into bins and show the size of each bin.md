@@ -70,3 +70,9 @@ print(result)
 - `pandas.DataFrame`: [reference](https://pandas.pydata.org/pandas-docs/stable/reference/frame.html)
 - `pandas.cut()`: [reference](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.cut.html#pandas.cut)
 - `pandas.qcut()`: Quantile-based discretization function. Discretize variable into equal-sized buckets based on rank or based on sample quantiles.  [reference](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.qcut.html#pandas.qcut)
+
+- Wikipedia
+	- [Data binning](https://en.wikipedia.org/wiki/Data_binning)
+
+- [[Processors Risk Binning]]
+- [[Binning and Pivot Table - Count Frequency of Pairs of Features]]

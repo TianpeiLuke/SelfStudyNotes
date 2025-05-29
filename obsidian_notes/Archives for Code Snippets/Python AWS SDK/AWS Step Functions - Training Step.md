@@ -32,7 +32,7 @@ date of note: 2025-05-20
 
 ## Alternative Implementation
 
-- [[Builder Training Step]]
+- [[Builder Pytorch Training Step]]
 
 
 
