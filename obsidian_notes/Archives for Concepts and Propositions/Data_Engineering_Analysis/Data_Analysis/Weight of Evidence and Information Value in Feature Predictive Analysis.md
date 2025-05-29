@@ -22,13 +22,14 @@ date of note: 2025-05-28
 - [[Binning as Categorical Feature Transformation]]
 
 - **Weight of Evidence (WoE)** will help us to determine which categories should be binned together. WOE measures the strength of a bin in differentiating the Good and Bad accounts. WOE < 0 indicates that the variable bin is captures higher proportion of bad accounts.
-    
+
 
 - **Information Value (IV)** will help in determining which variables are useful for prediction in the logistic regression model. IV is the measure of overall predictive power of the variables and is very useful for feature selection.
 
 ## Explanation
 
 
+- [[Risk Table for Categorical Feature Predictive Analysis]]
 - [[Logistic Regression]]
 
 ### IV for Variable Predictive

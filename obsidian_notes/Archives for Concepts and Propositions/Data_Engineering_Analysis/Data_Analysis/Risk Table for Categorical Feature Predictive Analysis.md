@@ -19,6 +19,7 @@ date of note: 2025-05-28
 
 
 - [[Binning as Categorical Feature Transformation]]
+- [[Weight of Evidence and Information Value in Feature Predictive Analysis]]
 
 ## Explanation
 
