@@ -29,7 +29,7 @@ date of note: 2025-05-28
 ## Explanation
 
 
-- [[Risk Table for Categorical Feature Predictive Analysis]]
+- [[Risk Table for Categorical Data Analysis]]
 - [[Logistic Regression]]
 
 ### IV for Variable Predictive

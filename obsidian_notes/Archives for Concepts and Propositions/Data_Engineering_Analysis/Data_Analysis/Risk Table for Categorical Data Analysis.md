@@ -22,7 +22,7 @@ date of note: 2025-05-28
 >- *Risk table* is often interpreted as a *risk*, *probability*, or *proportion* of a particular class.
 
 - [[Binning as Categorical Feature Transformation]]
-- [[Weight of Evidence and Information Value in Feature Predictive Analysis]]
+- [[Weight of Evidence and Information Value in Categorical Data Analysis]]
 
 ## Explanation
 
