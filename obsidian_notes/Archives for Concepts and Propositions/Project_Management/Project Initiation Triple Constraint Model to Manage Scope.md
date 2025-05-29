@@ -64,7 +64,7 @@ date of note: 2025-01-06
 >- To do this successfully, you need a clear *understanding* of the project **priorities**. 
 >- You have to know what is most important when it comes to scope, time, and cost.
 
-- [[The 7 Habits of Highly Effective People Chapter Summary 2]]
+- [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]
 
 >[!quote]
 >Keeping in mind scope, time, and cost as you manage your project will help you navigate different conditions while still achieving your goals. 

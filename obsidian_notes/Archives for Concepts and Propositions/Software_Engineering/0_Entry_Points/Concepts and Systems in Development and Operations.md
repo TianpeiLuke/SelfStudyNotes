@@ -77,7 +77,7 @@ date of note: 2024-12-10
 
 - [[The Lean Product Playbook Book Summary]]
 - [[Getting Things Done Book Summary]]
-- [[The 7 Habits of Highly Effective People Book Summary]]
+- [[The 7 Habits of Highly Effective People 0 Book Summary]]
 - [[Building a Second Brain Book Summary]]
 
 

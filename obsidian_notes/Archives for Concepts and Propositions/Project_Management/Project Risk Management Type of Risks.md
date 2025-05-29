@@ -80,8 +80,8 @@ date of note: 2025-01-14
 >- **External dependencies** are dependencies that you have *no control over*.
 
 - [[ROAM Analysis to Manage Action After Risk Arise]]
-- [[The 7 Habits of Highly Effective People Chapter Summary 1]]
-- [[The 7 Habits of Highly Effective People Chapter Summary 2]]
+- [[The 7 Habits of Highly Effective People 1 Paradigms and Principles]]
+- [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]
 
 #### Types of Dependency
 

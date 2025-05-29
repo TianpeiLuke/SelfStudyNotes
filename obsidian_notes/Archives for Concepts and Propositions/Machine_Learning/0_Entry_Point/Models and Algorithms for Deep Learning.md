@@ -52,7 +52,7 @@ date of note: 2024-06-01
 	- [[f-Divergence]]
 	- [[Wasserstein Distance]]
 
-- [[Comparison of Deep Learning and Probabilistic Graphical Models]]
+- [[Comparison of Deep Learning and Probabilistic Graphical Models]]- [[Comparison of Deep Learning and Probabilistic Graphical Models]]
 
 - [[Perceptron Algorithm]]
 - [[Multi-Layer Perceptron and Feed-Forward Network]]
@@ -179,7 +179,7 @@ date of note: 2024-06-01
 
 - [[Evidence Lower Bound]]
 - [[Comparison of Variational Inference vs EM Algorithm]]
-- [[Variational Auto-Encoder or VAE]]
+- [[Comparison of Variational Auto-Encoder or VAE or VAE]]
 
 - [[Gumbel Distribution as Generalized Extreme Value Distribution]]
 - [[Gumbel Softmax]]
@@ -280,6 +280,14 @@ date of note: 2024-06-01
 
 - [[Contrastive Predictive Coding as Sequence Representation]]
 - [[Connectionist Temporal Classification for Speech Recognition]]
+
+
+### Computer Vision
+
+- [[U-Net as Convolutional Autoencoder with Skip Connections]]
+- [[Residual Neural Network]]
+- [[Vision Transformer or ViT]]
+- [[Contrastive Language Image Pre-training or CLIP]]
 
 
 ### Computer Vision

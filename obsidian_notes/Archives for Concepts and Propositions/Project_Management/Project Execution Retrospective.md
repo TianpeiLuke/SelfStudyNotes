@@ -42,7 +42,7 @@ date of note: 2025-01-17
 >[!important]
 >The *emphasis* in retrospectives is on **continuous improvement** and **change**, instead of recycling old— and potentially bad—habits, procedures, and processes.
 
-- [[The 7 Habits of Highly Effective People Chapter Summary 7]]
+- [[The 7 Habits of Highly Effective People 7 Balanced Self-Renewal]]
 - [[The 5 Elements of Effective Thinking Suggestion 5]]
 - [[Atomic Habits Book Summary]]
 - [[Functional Competencies Team and People Management]]

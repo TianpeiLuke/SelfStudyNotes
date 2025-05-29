@@ -307,7 +307,7 @@ date of note: 2024-12-27
 - [[Getting Things Done Book Summary]]
 - [[Building a Second Brain Book Summary]]
 - [[Atomic Habits Book Summary]]
-- [[The 7 Habits of Highly Effective People Book Summary]]
+- [[The 7 Habits of Highly Effective People 0 Book Summary]]
 - [[80-20 Principle Book Summary]]
 - [[Developing the Leader Within You 2.0 Book Summary]]
 - [[The Lean Product Playbook Book Summary]]

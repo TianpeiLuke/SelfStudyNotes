@@ -90,6 +90,7 @@ date of note: 2024-09-13
 
 - [[Relevance Feedback for Information Retrieval]]
 - [[Pseudo-Relevance Feedback or PRF]]
+- [[Pseudo-Relevance Feedback or PRF]]
 - [[Query Expansion for Information Retrieval]]
 - [[Rocchio Algorithm as Query Expansion Method]]
 
@@ -101,6 +102,8 @@ date of note: 2024-09-13
 - [[n-Gram Model and Language Model]]
 - [[Term Frequency and Inverse Document Frequency or TF-IDF]]
 - [[Okapi BM25 score for Information Retrieval]]
+- [[Rocchio Algorithm as Query Expansion Method]]
+
 
 
 ### Information Retrieval with Dense Vector

@@ -41,7 +41,7 @@ date of note: 2025-01-14
 - [[Project Planning Risk Management]]
 - [[Project Risk Management Type of Risks]]
 - [[Project Risk Management Plan]]
-- [[The 7 Habits of Highly Effective People Chapter Summary 2]]
+- [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]
 
 ![[Four-types-of-risk-mitigation.png]]
 

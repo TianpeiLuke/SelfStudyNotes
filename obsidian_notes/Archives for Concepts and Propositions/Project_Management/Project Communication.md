@@ -97,9 +97,9 @@ date of note: 2025-01-15
 >  
 >will help to boost the relationship with customers.  
 
-- [[The 7 Habits of Highly Effective People Chapter Summary 3]]
-- [[The 7 Habits of Highly Effective People Chapter Summary 4]]
-- [[The 7 Habits of Highly Effective People Chapter Summary 5]]
+- [[The 7 Habits of Highly Effective People 3 Public Victory]]
+- [[The 7 Habits of Highly Effective People 4 Win-Win]]
+- [[The 7 Habits of Highly Effective People 5 Empathetic Communication]]
 - [[Getting to Yes Book Summary]]
 
 

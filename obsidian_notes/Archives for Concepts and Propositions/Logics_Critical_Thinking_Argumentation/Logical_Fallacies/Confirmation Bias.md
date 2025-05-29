@@ -94,4 +94,4 @@ date of note: 2024-04-26
 
 [^4]: Plous, Scott (1993), _The psychology of judgment and decision making_, McGraw-Hill, [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier) "ISBN (identifier)") [978-0-07-050477-6](https://en.wikipedia.org/wiki/Special:BookSources/978-0-07-050477-6 "Special:BookSources/978-0-07-050477-6"), [OCLC](https://en.wikipedia.org/wiki/OCLC_(identifier) "OCLC (identifier)") [26931106](https://www.worldcat.org/oclc/26931106)
 
-[^5]: Similar advice to write down your mission statement in [[The 7 Habits of Highly Effective People Chapter Summary 2]]
+[^5]: Similar advice to write down your mission statement in [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]

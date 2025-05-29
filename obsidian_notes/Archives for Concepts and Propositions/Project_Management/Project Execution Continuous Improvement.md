@@ -58,7 +58,7 @@ To learn more about these concepts, check out these articles: 
 - [Quality Assurance & Quality Control](https://asq.org/quality-resources/quality-assurance-vs-control)
 
 - [[The 5 Elements of Effective Thinking Suggestion 5]]
-- [[The 7 Habits of Highly Effective People Chapter Summary 6]]
+- [[The 7 Habits of Highly Effective People 6 Synergy]]
 
 - Coursera
 	- [Project Execution: Running the Project](https://www.coursera.org/learn/project-execution-google/home/welcome)

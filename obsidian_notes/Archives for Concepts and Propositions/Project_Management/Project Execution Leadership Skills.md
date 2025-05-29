@@ -61,10 +61,10 @@ date of note: 2025-01-16
 - [[Leadership Principle Are Right A Lot]]
 - [[Leadership Principle Deliver Results]]
 
-- [[The 7 Habits of Highly Effective People Chapter Summary 2]]
-- [[The 7 Habits of Highly Effective People Chapter Summary 3]]
-- [[The 7 Habits of Highly Effective People Chapter Summary 4]]
-- [[The 7 Habits of Highly Effective People Chapter Summary 5]]
+- [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]
+- [[The 7 Habits of Highly Effective People 3 Public Victory]]
+- [[The 7 Habits of Highly Effective People 4 Win-Win]]
+- [[The 7 Habits of Highly Effective People 5 Empathetic Communication]]
 
 - [[Developing the Leader Within You 2.0 Book Summary]]
 

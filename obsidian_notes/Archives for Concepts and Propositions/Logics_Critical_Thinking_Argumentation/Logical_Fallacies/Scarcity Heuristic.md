@@ -36,7 +36,7 @@ date of note: 2024-04-28
 - [[The Art of Thinking Clearly Book Summary]]
 - [[Thinking, Fast and Slow Book Summary]]
 - [[Scarcity Brain Book Summary]]
-- [[The 7 Habits of Highly Effective People Chapter Summary 4]]
+- [[The 7 Habits of Highly Effective People 4 Win-Win]]
 
 - Wikipedia [Scarcity](https://en.wikipedia.org/wiki/Scarcity_(social_psychology))
 - Wikipedia [List of cognitive biases](https://en.wikipedia.org/wiki/List_of_cognitive_biases)

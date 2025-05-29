@@ -67,9 +67,9 @@ date of note: 2025-01-16
 - _The Necessary Art of Persuasion_, Jay A. Conger
 - [[Functional Competencies Influencing]]
 - [[Getting to Yes Book Summary]]
-- [[The 7 Habits of Highly Effective People Book Summary]]
-- [[The 7 Habits of Highly Effective People Chapter Summary 4]]
-- [[The 7 Habits of Highly Effective People Chapter Summary 5]]
+- [[The 7 Habits of Highly Effective People 0 Book Summary]]
+- [[The 7 Habits of Highly Effective People 4 Win-Win]]
+- [[The 7 Habits of Highly Effective People 5 Empathetic Communication]]
 - [[Emotional Intelligence 2.0 Book Summary]]
 - [[Developing the Leader Within You 2.0 Book Summary]]
 	- [[Developing the Leader Within You Chapter 01 Influence]]

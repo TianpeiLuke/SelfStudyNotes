@@ -76,8 +76,8 @@ date of note: 2024-11-07
 
 ## Gaussian Mixture
 
-- [[Gaussian Mixture Models or GMM]]
-- [[Gaussian Scale Mixtures or GSM]]
+- [[Gaussian Mixture Models or GMM or GMM]]
+- [[Gaussian Scale Mixtures or GSM or GSM]]
 
 
 

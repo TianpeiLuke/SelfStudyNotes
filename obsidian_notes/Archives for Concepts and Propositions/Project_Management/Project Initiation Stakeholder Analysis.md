@@ -155,9 +155,9 @@ date of note: 2025-01-06
 
 
 - [[Project Initiation Key Components]]
-- [[The 7 Habits of Highly Effective People Book Summary]]
-- [[The 7 Habits of Highly Effective People Chapter Summary 1]]
-- [[The 7 Habits of Highly Effective People Chapter Summary 2]]
+- [[The 7 Habits of Highly Effective People 0 Book Summary]]
+- [[The 7 Habits of Highly Effective People 1 Paradigms and Principles]]
+- [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]
 - [Roll Call: We Asked the Project Management Community: What Steps Do You Take To Identify and Prioritize All Stakeholders at the Start of a Project?](https://www.pmi.org/learning/library/identify-prioritize-stakeholders-11408) , describes additional strategies for identifying stakeholders to further increase your understanding.
 
 - Coursera

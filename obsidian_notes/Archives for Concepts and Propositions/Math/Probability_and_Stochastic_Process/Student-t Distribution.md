@@ -18,7 +18,7 @@ date of note: 2025-05-03
 
 - [[Gaussian Random Variable]]
 - [[Inverse-Gamma Distribution]]
-
+- [[Inverse-Gamma Distribution]]
 ## Explanation
 
 
@@ -38,4 +38,5 @@ date of note: 2025-05-03
 ##  Recommended Notes and References
 
 - [[Chi-Squared Distribution]]
+- [[Gaussian Scale Mixtures or GSM]]
 - [[Gaussian Scale Mixtures or GSM]]

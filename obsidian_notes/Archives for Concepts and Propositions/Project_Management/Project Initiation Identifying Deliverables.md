@@ -28,7 +28,7 @@ date of note: 2025-01-06
 >The **project deliverables** are the *products* or *services* that are created for the customer, client, or project sponsor.
 >- They are what are produced or presented at the *end* of a task, a event or a process. 
 
-- [[The 7 Habits of Highly Effective People Chapter Summary 2]]
+- [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]
 
 
 

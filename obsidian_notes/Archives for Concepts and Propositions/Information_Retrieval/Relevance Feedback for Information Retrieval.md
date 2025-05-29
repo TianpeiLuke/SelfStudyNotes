@@ -30,11 +30,12 @@ date of note: 2024-11-29
 - [[Learning to Rank]]
 - [[Query Expansion for Information Retrieval]]
 
+- [[Rocchio Algorithm as Query Expansion Method]]
+- [[Query Expansion for Information Retrieval]]
+
 ### Rocchio Algorithm
 
 - [[Rocchio Algorithm as Query Expansion Method]]
-
-
 
 ### Probabilistic Relevance Feedback
 
@@ -47,6 +48,7 @@ date of note: 2024-11-29
 ### Implicit Relevance Feedback
 
 
+- [[Pseudo-Relevance Feedback or PRF]]
 - [[Pseudo-Relevance Feedback or PRF]]
 
 

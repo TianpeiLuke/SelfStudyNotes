@@ -198,7 +198,7 @@ date of note: 2025-01-10
 
 
 - [[Bayesian Network on Directed Acyclic Graph]]
-- [[The 7 Habits of Highly Effective People Chapter Summary 2]]
+- [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]
 
 You can read more about each of these concepts and critical path calculation methods in the following articles:
 

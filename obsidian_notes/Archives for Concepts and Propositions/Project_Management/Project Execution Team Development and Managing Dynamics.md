@@ -55,11 +55,11 @@ date of note: 2025-01-16
 ^587098
 
 
-- [[The 7 Habits of Highly Effective People Chapter Summary 2]]
-- [[The 7 Habits of Highly Effective People Chapter Summary 3]]
-- [[The 7 Habits of Highly Effective People Chapter Summary 4]]
-- [[The 7 Habits of Highly Effective People Chapter Summary 5]]
-- [[The 7 Habits of Highly Effective People Chapter Summary 6]]
+- [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]
+- [[The 7 Habits of Highly Effective People 3 Public Victory]]
+- [[The 7 Habits of Highly Effective People 4 Win-Win]]
+- [[The 7 Habits of Highly Effective People 5 Empathetic Communication]]
+- [[The 7 Habits of Highly Effective People 6 Synergy]]
 - [[Emotional Intelligence 2.0 Book Summary]]
 - [[Functional Competencies Team and People Management]]
 - [[Developing the Leader Within You 2.0 Book Summary]]

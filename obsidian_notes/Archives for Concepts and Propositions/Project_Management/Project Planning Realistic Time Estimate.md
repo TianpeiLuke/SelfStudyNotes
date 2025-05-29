@@ -110,9 +110,9 @@ date of note: 2025-01-10
 
 
 - [[Earn Trust as Deposit in Emotional Bank Account]]
-- [[The 7 Habits of Highly Effective People Chapter Summary 4]]
-- [[The 7 Habits of Highly Effective People Chapter Summary 5]]
-- [[The 7 Habits of Highly Effective People Chapter Summary 6]]
+- [[The 7 Habits of Highly Effective People 4 Win-Win]]
+- [[The 7 Habits of Highly Effective People 5 Empathetic Communication]]
+- [[The 7 Habits of Highly Effective People 6 Synergy]]
 
 >[!important]
 >There are three ways to use *soft skills* and *gather accurate estimates* from your teammates
@@ -130,7 +130,7 @@ date of note: 2025-01-10
 >	- remembering to always be **appreciative** of the work, collaboration, and support that you're getting from the team.
 
 - [[Getting to Yes Book Summary]]
-- [[The 7 Habits of Highly Effective People Chapter Summary 5]]
+- [[The 7 Habits of Highly Effective People 5 Empathetic Communication]]
 - [[Leadership Principle Earn Trust]]
 
 

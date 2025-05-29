@@ -135,10 +135,10 @@ date of note: 2025-01-16
 >If you're quiet and curious, there's always more to learn.
 
 
-- [[The 7 Habits of Highly Effective People Chapter Summary 2]]
-- [[The 7 Habits of Highly Effective People Chapter Summary 3]]
-- [[The 7 Habits of Highly Effective People Chapter Summary 4]]
-- [[The 7 Habits of Highly Effective People Chapter Summary 5]]
+- [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]
+- [[The 7 Habits of Highly Effective People 3 Public Victory]]
+- [[The 7 Habits of Highly Effective People 4 Win-Win]]
+- [[The 7 Habits of Highly Effective People 5 Empathetic Communication]]
 
 ## Explanation
 

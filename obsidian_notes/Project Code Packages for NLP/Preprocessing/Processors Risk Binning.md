@@ -24,6 +24,7 @@ date of note: 2025-05-28
 >	- when both $C(f_{1}, 1), \sum_{l\in \mathcal{Y}}C(f_{1}, l) \to \infty$, it converges to histogram $$b(f_{1}) \to \hat{p}(1| f_{1})  = \frac{C(f_{1}, 1)}{C(f_{1}, 0) + C(f_{1}, 1)}$$
 >	- when  $\sum_{l\in \mathcal{Y}}C(f_{1}, l) \to 0$, it converges to default risk $$b(f_{1}) \to \frac{\alpha \cdot p_{1}}{\alpha} = p_{1}$$
 
+- [[Risk Value Mapping of Categorical Field]]
 
 ## Code
 
@@ -33,10 +34,14 @@ import numpy as np
 from typing import Dict, List, Tuple, Optional, Union, Any
 from pathlib import Path
 import json
+```
 
+
+```python
 from .processors import Processor
 ```
 
+- [[Processors ver 2.0]]
 
 ### Binning Processor
 
@@ -315,7 +320,13 @@ dataset.add_pipeline(COLUMN_TO_BIN, binning_processor)
 
 
 - [[Binning - Partition a field into bins and show the size of each bin]]
-
 - [[Binning]]
+
+- [[Binning as Categorical Feature Transformation]]
 - Wikipedia
 	- [Data binning](https://en.wikipedia.org/wiki/Data_binning)
+
+- Resources
+	- [Optimal Binning](https://gnpalencia.org/optbinning/tutorials/tutorial_binary.html)
+	- Weight of Evidence (WoE)
+	- Information Value (IV)

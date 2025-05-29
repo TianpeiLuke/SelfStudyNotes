@@ -80,13 +80,14 @@ date of note: 2024-05-12
 > 	- outside, the term is *clipped*, preventing large updates.
 
 
-
 >[!important] Definition
 >Then the **total loss** combines *policy*, *value*, and *entropy bonus*:
 >$$
->\mathcal{L}(\theta) = − \mathcal{L}^{\text{CLIP}}(\theta) + c_{v}\, \mathbb{E}_{ t }\left[ \left(V_{\theta}(s_{t}) - R_{t}\right)^2 \right] ​- c_{H}\, \mathbb{E}_{ t }\left[  \mathcal{H}\left(\pi_{\theta}\left(\cdot\,|\,s_{t}\right)\right) \right] .
->$$ 	  
+>\mathcal{L}(\theta) = − \mathcal{L}^{\text{CLIP}}(\theta) + c_{v}\, \mathbb{E}_{ t }\left[ \left(V_{\theta}(s_{t}) - R_{t}\right)^2 \right] ​- c_{H}\, \mathbb{E}_{ t }\left[  \mathcal{H}\left(\pi_{\theta}\left(\cdot\,|\,s_{t}\right)\right) \right].
+>$$
 
+- [[Maximum Entropy Reinforcement Learning]]
+- [[Soft Actor-Critic Algorithm]]
 
 ## Explanation
 

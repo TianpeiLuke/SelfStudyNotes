@@ -14,7 +14,10 @@ date of note: 2024-09-05
 ## Concept Definition
 
 >[!important]
->**Name**: Conjugate Prior Distribution for Bayesian Inference
+>**Name**: Conjugate Prior Distribution
+
+- [[Student-t Distribution]]
+- [[Inverse-Gamma Distribution]] for Bayesian Inference
 
 ![[Prior and Posterior Measure#^319070]]
 

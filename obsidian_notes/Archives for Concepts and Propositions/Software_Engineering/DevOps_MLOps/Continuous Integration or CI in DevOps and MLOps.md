@@ -49,3 +49,4 @@ date of note: 2024-12-21
 -----------
 ##  Recommended Notes and References
 
+- [[AWS SageMaker Pipeline vs. AWS Step Functions State Machine]]

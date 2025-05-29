@@ -41,7 +41,7 @@ date of note: 2025-01-06
 >- it's important that a team is *aligned* and working towards a shared goal.
 >- Sometimes forcing the conversation and *clarifying what the __end result__* looks like can bring to light *questions* and *areas of disagreement.*
 
-- [[The 7 Habits of Highly Effective People Chapter Summary 2]]
+- [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]
 
 ### Determine the Success Criteria
 

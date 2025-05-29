@@ -47,12 +47,12 @@ date of note: 2024-04-28
 - This bias leads to us to understand the *Circle of Influence* vs. *Circle of Concern*
 	- we should _be content with things outside Circle of Influence_
 	- "Habit 1: Be Proactive"
-	- [[The 7 Habits of Highly Effective People Chapter Summary 2]]
+	- [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]
 
 - Wikipedia [Illusion of control](https://en.wikipedia.org/wiki/Illusion_of_control)
 - Wikipedia [List of cognitive biases](https://en.wikipedia.org/wiki/List_of_cognitive_biases)
 
 [^1]: Thompson SC (1999). "Illusions of Control: How We Overestimate Our Personal Influence". _Current Directions in Psychological Science_. **8** (6): 187–190. [doi](https://en.wikipedia.org/wiki/Doi_(identifier) "Doi (identifier)"):[10.1111/1467-8721.00044](https://doi.org/10.1111%2F1467-8721.00044). [JSTOR](https://en.wikipedia.org/wiki/JSTOR_(identifier) "JSTOR (identifier)") [20182602](https://www.jstor.org/stable/20182602). [S2CID](https://en.wikipedia.org/wiki/S2CID_(identifier) "S2CID (identifier)") [145714398](https://api.semanticscholar.org/CorpusID:145714398).
 
-[^2] "Habit 3: Put first things first" is an important habit in [[The 7 Habits of Highly Effective People Chapter Summary 2]]
+[^2] "Habit 3: Put first things first" is an important habit in [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]
 

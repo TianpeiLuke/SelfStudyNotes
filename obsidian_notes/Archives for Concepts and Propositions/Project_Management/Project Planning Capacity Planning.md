@@ -81,7 +81,7 @@ date of note: 2025-01-10
 
 - [[Speedup of Parallelism]]
 - [[Project Planning Capacity Planning]]
-- [[The 7 Habits of Highly Effective People Chapter Summary 2]]
+- [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]
 - [[Project Planning Critical Path]]
 
 

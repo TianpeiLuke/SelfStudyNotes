@@ -106,8 +106,8 @@ date of note: 2025-01-14
 >*Failing to communicate* can **erode that trust** in you as a leader of the project.
 
 - [[Leadership Principle Earn Trust]]
-- [[The 7 Habits of Highly Effective People Chapter Summary 4]]
-- [[The 7 Habits of Highly Effective People Chapter Summary 5]]
+- [[The 7 Habits of Highly Effective People 4 Win-Win]]
+- [[The 7 Habits of Highly Effective People 5 Empathetic Communication]]
 
 >[!quote]
 >They'll likely want to know *if you were aware* of the possibility that this risk could occur, and they might wonder *why you didn't share* this information with them sooner.

@@ -32,7 +32,7 @@ date of note: 2025-01-06
 >- *materials*, 
 >- and other items that you will have at your disposal.
 
-- [[The 7 Habits of Highly Effective People Chapter Summary 2]]
+- [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]
 - [[Project Initiation Project Requirement]]
 
 ### Budget 
