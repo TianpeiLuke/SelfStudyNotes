@@ -136,7 +136,9 @@ date of note: 2024-11-07
 - [[Logistic Regression]]
 
 
+## Categorical Data Analysis
 
+- [[Information Value for Predictive Power of Categorical Data]]
 
 
 -----------

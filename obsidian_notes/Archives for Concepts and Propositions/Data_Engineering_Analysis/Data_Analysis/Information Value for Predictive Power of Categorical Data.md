@@ -40,9 +40,13 @@ date of note: 2025-05-28
 
 ## Explanation
 
+>[!important]
+>The *Information Value (IV)* used in credit scoring and categorical feature evaluation is mathematically **equivalent** to the discrete form of the **symmetric Kullback-Leibler (KL) divergence** or **Jensen-Shanon divergence (JSD)** between two probability distributions:
+
 
 - [[Logistic Regression]]
 - [[Kullback-Leibler Divergence]]
+- [[Jensen-Shannon Divergence]]
 
 
 ### Usage
