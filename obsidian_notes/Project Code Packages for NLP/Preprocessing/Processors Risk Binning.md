@@ -69,7 +69,6 @@ class BinningProcessor(Processor):
         super().__init__() # Initialize base Processor
         self.processor_name = 'binning_processor'
         # Lists primary public methods for potential introspection
-        self.function_name_list = ['process', 'transform', 'fit'] 
         
         if not isinstance(column_name, str) or not column_name:
             raise ValueError("column_name must be a non-empty string.")
