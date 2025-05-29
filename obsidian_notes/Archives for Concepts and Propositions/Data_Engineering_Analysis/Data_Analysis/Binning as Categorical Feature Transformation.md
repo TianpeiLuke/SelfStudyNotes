@@ -3,6 +3,8 @@ tags:
   - concept
   - machine_learning/preprocessing
   - data_engineering/preprocessing
+  - credit_risk_modeling
+  - binning
 keywords: 
 topics:
   - machine_learning/preprocessing

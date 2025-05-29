@@ -1,7 +1,13 @@
 ---
-tags: 
+tags:
   - concept
-keywords: 
+  - credit_risk_modeling
+  - data_engineering/preprocessing
+  - binning
+  - weight_of_evidence
+  - information_value
+keywords:
+  - weight_of_evidence
 topics: 
 name: 
 date of note: 2025-05-28
@@ -24,12 +30,28 @@ date of note: 2025-05-28
 
 - [[Logistic Regression]]
 
+### IV for Variable Predictive
+
+|Information Value|Variable Predictiveness|
+|---|---|
+|Less than 0.02|Not useful for prediction|
+|0.02 to 0.1|Weak predictive Power|
+|0.1 to 0.3|Medium predictive Power|
+|0.3 to 0.5|Strong predictive Power|
+|>0.5|Suspicious Predictive Power|
+
+
 
 
 -----------
 ##  Recommended Notes and References
 
 
+- [[SHapley Additive exPlanations or SHAP]]
 
+- Resources
+	- [Weight of Evidence (WOE) and Information Value (IV) Explained](https://www.listendata.com/2015/03/weight-of-evidence-woe-and-information.html)
+	- [Kaggle Binning, WoE, IV and PD model](https://www.kaggle.com/code/chandrimad31/credit-risk-part-1-binning-woe-iv-pd-model)
+	
 - Stack Exchange
 	- [Why is Binning, Weight of Evidence and Information Value so ubiquitous in the Credit Risk/Finance industry?](https://stats.stackexchange.com/questions/567489/why-is-binning-weight-of-evidence-and-information-value-so-ubiquitous-in-the-cr)
