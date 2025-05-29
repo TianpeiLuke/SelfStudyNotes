@@ -17,6 +17,9 @@ date of note: 2025-05-28
 >[!important]
 >**Name**: 
 
+>[!important]
+>A **risk table** maps each category (or combination of categories) of a categorical variable to the *observed outcome rate*.
+>- *Risk table* is often interpreted as a *risk*, *probability*, or *proportion* of a particular class.
 
 - [[Binning as Categorical Feature Transformation]]
 - [[Weight of Evidence and Information Value in Feature Predictive Analysis]]
