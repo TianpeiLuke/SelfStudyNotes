@@ -280,6 +280,10 @@ class TestProcessors(unittest.TestCase):
 unittest.main(argv=[''], exit=False)
 ```
 
+## Relate Processors
+
+- [[Processor Multiclass One-hot Encoder]]
+
 
 
 -----------

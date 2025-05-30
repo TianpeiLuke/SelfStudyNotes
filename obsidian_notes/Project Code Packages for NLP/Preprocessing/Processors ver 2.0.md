@@ -241,7 +241,7 @@ class DialogueSplitterProcessor(Processor):
         return messages
 ```
 
-- For CS Chat, see [[Processors CS Chat]]
+- For CS Chat, see [[Processor CS Chat]]
 
 #### Dialogue Chunking
 

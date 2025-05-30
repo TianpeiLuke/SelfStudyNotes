@@ -40,7 +40,7 @@ date of note: 2025-04-10
  'dialogue_processed_attention_mask': //torch tensor [B x C x L]
 ```
 
-- [[Processors Tokenizer]]
+- [[Processor Tokenizer]]
 ### Configuration Dictionary
 
 ```json

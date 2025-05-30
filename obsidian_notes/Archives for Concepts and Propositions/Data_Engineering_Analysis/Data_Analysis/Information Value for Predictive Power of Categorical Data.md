@@ -19,9 +19,9 @@ date of note: 2025-05-28
 >[!important]
 >**Name**: 
 
-- [[Binning as Categorical Feature Transformation]]
+- [[Binning as Feature Categorization]]
 
-- [[Weight of Evidence in Categorical Data Analysis]]
+- [[Weight of Evidence or WoE in Categorical Data Analysis]]
 
 
 - **Information Value (IV)** will help in determining which variables are useful for prediction in the logistic regression model. IV is the measure of overall predictive power of the variables and is very useful for feature selection.

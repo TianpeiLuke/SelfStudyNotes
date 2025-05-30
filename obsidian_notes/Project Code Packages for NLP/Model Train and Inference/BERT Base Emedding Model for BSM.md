@@ -278,7 +278,7 @@ class TextBertBase(pl.LightningModule):
  'dialogue_processed_attention_mask': //torch tensor [B x C x L]
 ```
 
-- [[Processors Tokenizer]]
+- [[Processor Tokenizer]]
 
 ### Define the Forward Pass and Computational Graph
 

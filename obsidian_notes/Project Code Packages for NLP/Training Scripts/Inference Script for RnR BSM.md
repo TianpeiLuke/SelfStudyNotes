@@ -147,9 +147,9 @@ from processing.bsm_dataloader import build_collate_batch
 ```
 
 - [[Processors ver 2.0]]
-- [[Processors Tokenizer]]
-- [[Processors Multiclass One-hot Encoder]]
-- [[Processors Categorical Labeler]]
+- [[Processor Tokenizer]]
+- [[Processor Multiclass One-hot Encoder]]
+- [[Processor Categorical Labeler]]
 - [[BSMDataset]]
 - [[Data Loader]]
 

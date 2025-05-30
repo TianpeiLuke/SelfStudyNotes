@@ -9,7 +9,7 @@ date of note: 2025-03-30
 
 ## Pipelines Class
 
-- [[Pipelines]]
+- [[Pipelines ver 1.0]]
 
 ## ChatGPT Review
 

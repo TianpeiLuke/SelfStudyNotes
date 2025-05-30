@@ -12,8 +12,8 @@ date of note: 2024-04-09
 - Code Refactor (using LLM)
 	- Processor (normalization, chunking, tokenization, label transformation)
 		- [[Processors ver 2.0]]
-		- [[Processors Tokenizer]]
-		- [[Processors Multiclass One-hot Encoder]]
+		- [[Processor Tokenizer]]
+		- [[Processor Multiclass One-hot Encoder]]
 	- BSMDataset
 		- [[BSMDataset]]
 	- Dataloader

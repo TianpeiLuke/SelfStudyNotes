@@ -15,14 +15,14 @@ date of note: 2025-05-28
 ## Code Snippet Summary
 
 >[!important]
->Develop a **binning processor**
+>Develop a **risk table mapping processor**
 >- Transform *categorical value* into numerical via **risk table mapping**
 >- Assume $$C(f_{1}, l)$$ be the count of co-occurence of feature-label pair $(f_{1}, l)$ for $l\in \mathcal{Y} := \left\{ 0,1 \right\}$
 >	- Assume $N$ as the count of all samples
 >- Additional parameters
 >	- smooth factor $\alpha$
 >	- default risk $p_{1} \in (0,1]$, which is the *marginal label probability* $$p_{1} = \frac{C(1)}{C(0) + C(1)}$$
->- Formula for **risk-table binning** $$b(f_{1}) :=  \frac{C(f_{1}, 1) + \alpha \cdot  N \cdot p_{1}}{\sum_{l\in \mathcal{Y}}C(f_{1}, l) + \alpha \cdot N}$$ 
+>- Formula for **risk-table mapping** $$b(f_{1}) :=  \frac{C(f_{1}, 1) + \alpha \cdot  N \cdot p_{1}}{\sum_{l\in \mathcal{Y}}C(f_{1}, l) + \alpha \cdot N}$$ 
 >	- when both $C(f_{1}, 1), \sum_{l\in \mathcal{Y}}C(f_{1}, l) \to \infty$, it converges to histogram $$b(f_{1}) \to \hat{p}(1| f_{1})  = \frac{C(f_{1}, 1)}{C(f_{1}, 0) + C(f_{1}, 1)}$$
 >	- when  $\sum_{l\in \mathcal{Y}}C(f_{1}, l) \to 0$, it converges to default risk $$b(f_{1}) \to \frac{\alpha \cdot p_{1}}{\alpha} = p_{1}$$
 
@@ -45,10 +45,10 @@ from .processors import Processor
 
 - [[Processors ver 2.0]]
 
-### Binning Processor
+### Risk Table Mapping Processor
 
 ```python
-class BinningProcessor(Processor):
+class RiskTableMappingProcessor(Processor):
     """
     A processor that performs risk-based binning on a specified categorical variable.
     The 'process' method (called via __call__) handles single values.
@@ -110,7 +110,7 @@ class BinningProcessor(Processor):
         self.risk_tables = risk_tables
         self.is_fitted = True
 
-    def fit(self, data: pd.DataFrame) -> 'BinningProcessor':
+    def fit(self, data: pd.DataFrame) -> 'RiskTableMappingProcessor':
         if not isinstance(data, pd.DataFrame):
             raise TypeError("fit() requires a pandas DataFrame.")
         if self.label_name not in data.columns:
@@ -279,38 +279,38 @@ risk_tables = {
     "default_bin": 0.15
 }
 
-binning_processor_ex1 = BinningProcessor( 
+risk_table_map_processor_ex1 = RiskTableMappingProcessor( 
 	column_name=COLUMN_TO_BIN, # <<< ADDED/MODIFIED 
 	label_name=TARGET_COLUMN, 
 	risk_tables=risk_tables_data # Provide pre-computed risk tables 
 	)
 
 # Example 2: Setting risk tables after initialization
-binning_processor = BinningProcessor( 
+risk_table_map_processor = RiskTableMappingProcessor( 
 	column_name=COLUMN_TO_BIN, # <<< ADDED/MODIFIED 
 	label_name=TARGET_COLUMN 
 	)
-binning_processor.set_risk_tables(risk_tables)
+risk_table_map_processor.set_risk_tables(risk_tables)
 
 # Example 3: Loading risk tables from file
-binning_processor = BinningProcessor(	
+risk_table_map_processor = RiskTableMappingProcessor(	
 	column_name=COLUMN_TO_BIN, # <<< ADDED/MODIFIED 
 	label_name=TARGET_COLUMN 
 	)
-binning_processor.load_risk_tables(Path("path/to/risk_tables.pkl"))
+risk_table_map_processor.load_risk_tables(Path("path/to/risk_tables.pkl"))
 
 # Example 4: Fitting from data (original functionality)
-binning_processor = BinningProcessor(
+risk_table_map_processor = RiskTableMappingProcessor(
 	column_name=COLUMN_TO_BIN,
     label_name=TARGET_COLUMN,
     smooth_factor=0.1,
     count_threshold=10
 )
-binning_processor.fit(training_data)
+risk_table_map_processor.fit(training_data)
 
 # Using with BSMDataset
 dataset = BSMDataset(config=config, dataframe=data)
-dataset.add_pipeline(COLUMN_TO_BIN, binning_processor)
+dataset.add_pipeline(COLUMN_TO_BIN, risk_table_map_processor)
 ```
 
 - [[BSMDataset]]
@@ -324,8 +324,8 @@ dataset.add_pipeline(COLUMN_TO_BIN, binning_processor)
 - [[Binning - Partition a field into bins and show the size of each bin]]
 - [[Binning]]
 
-- [[Binning as Categorical Feature Transformation]]
-- [[Risk Table for Categorical Feature]]
+- [[Binning as Feature Categorization]]
+- [[Risk Table for Categorical Data Analysis]]
 - Wikipedia
 	- [Data binning](https://en.wikipedia.org/wiki/Data_binning)
 

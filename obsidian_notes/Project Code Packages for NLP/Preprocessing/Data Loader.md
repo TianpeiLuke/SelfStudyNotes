@@ -61,7 +61,7 @@ def build_collate_batch(input_ids_key: str = 'input_ids', attention_mask_key: st
 ```
 
 - [[BSMDataset]]
-- [[Processors Tokenizer]]
+- [[Processor Tokenizer]]
 - [[Processors ver 2.0]]
 
 

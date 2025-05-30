@@ -7,19 +7,21 @@ tags:
   - weight_of_evidence
   - information_value
   - feature_engineering
+  - WoE
 keywords:
   - weight_of_evidence
-topics: 
-name: 
+topics:
+  - feature_engineering
+name: Weight of Evidence or WoE in Categorical Data Analysis
 date of note: 2025-05-28
 ---
 
 ## Concept Definition
 
 >[!important]
->**Name**: 
+>**Name**: Weight of Evidence or WoE in Categorical Data Analysis
 
-- [[Binning as Categorical Feature Transformation]]
+- [[Binning as Feature Categorization]]
 
 - **Weight of Evidence (WoE)** will help us to determine which categories should be binned together. WOE measures the strength of a bin in differentiating the Good and Bad accounts. WOE < 0 indicates that the variable bin is captures higher proportion of bad accounts.
 

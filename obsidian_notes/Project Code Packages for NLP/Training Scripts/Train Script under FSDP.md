@@ -417,7 +417,7 @@ def data_preprocess_pipeline(config: Config) -> Tuple[AutoTokenizer, Dict[str, P
 ```
 
 - [[Processors ver 2.0]]
-- [[Processors Tokenizer]]
+- [[Processor Tokenizer]]
 
 #### Categorical Preprocessing Pipeline
 
@@ -442,7 +442,7 @@ def build_categorical_label_pipelines(
     return field_to_processor
 ```
 
-- [[Processors Categorical Labeler]]
+- [[Processor Categorical Labeler]]
 #### Choose Model Type
 
 ```python
