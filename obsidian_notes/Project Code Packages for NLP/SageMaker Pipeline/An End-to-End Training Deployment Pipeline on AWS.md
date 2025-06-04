@@ -42,7 +42,7 @@ date of note: 2025-05-20
 
 ### Construct Pipeline
 
-- [[Builder Workflow]]
+- [[Builder End-to-End Pipeline]]
 
 
 
@@ -50,4 +50,4 @@ date of note: 2025-05-20
 ##  Recommended Notes
 
 
-- 
+- [[MODS Pipeline Builder without Training]]
