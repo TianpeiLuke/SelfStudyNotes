@@ -30,8 +30,8 @@ import json
 from .processors import Processor
 ```
 
-### Numerical Binning
 
+### Numerical Binning
 
 ```python
 class NumericalBinningProcessor(Processor):

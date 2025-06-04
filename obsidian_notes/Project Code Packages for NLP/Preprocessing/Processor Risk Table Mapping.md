@@ -17,16 +17,10 @@ date of note: 2025-05-28
 >[!important]
 >Develop a **risk table mapping processor**
 >- Transform *categorical value* into numerical via **risk table mapping**
->- Assume $$C(f_{1}, l)$$ be the count of co-occurence of feature-label pair $(f_{1}, l)$ for $l\in \mathcal{Y} := \left\{ 0,1 \right\}$
->	- Assume $N$ as the count of all samples
->- Additional parameters
->	- smooth factor $\alpha$
->	- default risk $p_{1} \in (0,1]$, which is the *marginal label probability* $$p_{1} = \frac{C(1)}{C(0) + C(1)}$$
->- Formula for **risk-table mapping** $$b(f_{1}) :=  \frac{C(f_{1}, 1) + \alpha \cdot  N \cdot p_{1}}{\sum_{l\in \mathcal{Y}}C(f_{1}, l) + \alpha \cdot N}$$ 
->	- when both $C(f_{1}, 1), \sum_{l\in \mathcal{Y}}C(f_{1}, l) \to \infty$, it converges to histogram $$b(f_{1}) \to \hat{p}(1| f_{1})  = \frac{C(f_{1}, 1)}{C(f_{1}, 0) + C(f_{1}, 1)}$$
->	- when  $\sum_{l\in \mathcal{Y}}C(f_{1}, l) \to 0$, it converges to default risk $$b(f_{1}) \to \frac{\alpha \cdot p_{1}}{\alpha} = p_{1}$$
 
-- [[Risk Value Mapping of Categorical Field]]
+![[Risk Table for Categorical Data Analysis#^81d5d5]]
+
+- [[Risk Table for Categorical Data Analysis]]
 
 ## Code
 
@@ -316,16 +310,22 @@ dataset.add_pipeline(COLUMN_TO_BIN, risk_table_map_processor)
 - [[BSMDataset]]
 
 
+## Related Codes
+
+- [[Risk Value Mapping of Categorical Field]]
+- [[Binning - Partition a field into bins and show the size of each bin]]
+- [[Binning]]
+
+
 -----------
 ##  Recommended Notes
 
 
 
-- [[Binning - Partition a field into bins and show the size of each bin]]
-- [[Binning]]
+
 
 - [[Binning as Feature Categorization]]
-- [[Risk Table for Categorical Data Analysis]]
+
 - Wikipedia
 	- [Data binning](https://en.wikipedia.org/wiki/Data_binning)
 

@@ -37,7 +37,7 @@ from .config_base import BasePipelineConfig
 
 - [[Base Config]]
 
-### Base Config
+### Base Processing Config
 
 ```python
 class ProcessingStepConfigBase(BasePipelineConfig):
@@ -49,9 +49,63 @@ class ProcessingStepConfigBase(BasePipelineConfig):
     # processing_instance_type_large from original ModelConfig -> maps to a specific instance type
     processing_instance_type_large: str = Field(default='ml.m5.4xlarge', description="Large instance type for this processing step.")
     processing_instance_type_small: str = Field(default='ml.m5.large', description="Small instance type for this processing step.")
+    
+    processing_source_dir: Optional[str] = Field(
+        default=None, 
+        description="Source directory for processing scripts. If not provided, falls back to base source_dir."
+    )
 
     class Config(BasePipelineConfig.Config):
         pass
+    
+    @field_validator('processing_source_dir')
+    @classmethod
+    def validate_processing_source_dir(cls, v: Optional[str]) -> Optional[str]:
+        """Validate processing source directory if provided"""
+        if v is not None:
+            if v.startswith('s3://'):
+                # Validate S3 path format
+                if not v.replace('s3://', '').strip('/'):
+                    raise ValueError(f"Invalid S3 path format: {v}")
+            else:
+                # Validate local path
+                path = Path(v)
+                if not path.exists():
+                    raise ValueError(f"Processing source directory does not exist: {v}")
+                if not path.is_dir():
+                    raise ValueError(f"Processing source directory is not a directory: {v}")
+                
+                # Validate presence of processing scripts (optional, uncomment if needed)
+                # required_scripts = ['processing.py', 'requirements.txt']
+                # for script in required_scripts:
+                #     if not (path / script).exists():
+                #         raise ValueError(f"Required script {script} not found in {v}")
+                
+        return v
+    
+    def get_processing_source_dir(self) -> Optional[str]:
+        """
+        Get the effective processing source directory.
+        Returns the processing_source_dir if set, otherwise falls back to base source_dir.
+        """
+        return self.processing_source_dir or self.source_dir
+    
+    def get_instance_type(self, size: str = 'small') -> str:
+        """
+        Get the appropriate instance type based on size parameter.
+        
+        Args:
+            size (str): 'small' or 'large'
+            
+        Returns:
+            str: The corresponding instance type
+        """
+        if size.lower() == 'large':
+            return self.processing_instance_type_large
+        elif size.lower() == 'small':
+            return self.processing_instance_type_small
+        else:
+            raise ValueError(f"Invalid size parameter: {size}. Must be 'small' or 'large'")
 ```
 
 
