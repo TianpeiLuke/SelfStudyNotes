@@ -15,17 +15,13 @@ date of note: 2025-05-21
 ## Code Snippet Summary
 
 >[!important]
->**Model Training Workflow Operation and Development System (MODS)** is a MLOps Tool.
->- It provides *Secure-by-Default* ML environment.
->- It allows API call of internal services such as 
->	- *Cradle* for data loading
->	- *MMS* for model registration
->- It provides *Python SDK* support from Secure *AI Sandbox*
-
-^4abbc8
-
-- [[MODS Model Registration Step Builder]]
-- [[MODS Execution Document]]
+>In this code, we provide an end-to-end **SageMaker Pipeline**.
+>
+>This pipeline consists of the following steps
+>- **Training Step**
+>- **Model Creation Step**
+>- **Model Packaging Step**
+>- **Model Registration Step**
 
 
 ## Code
@@ -49,19 +45,6 @@ from sagemaker.workflow.steps import ProcessingStep
 from sagemaker.workflow.pipeline_context import PipelineSession
 ```
 
-### MODS Template
-
-```python
-from mods_workflow_core.utils.constants import (
-    PIPELINE_EXECUTION_TEMP_DIR,
-    KMS_ENCRYPTION_KEY_PARAM,
-    PROCESSING_JOB_SHARED_NETWORK_CONFIG,
-    SECURITY_GROUP_ID,
-    VPC_SUBNET,
-)
-```
-
-- [[MODSTemplate Decorator]]
 ### Import Builders
 
 ```python
@@ -280,131 +263,9 @@ class PytorchPipelineBuilder:
 >[!info]
 >Note that since SAIS is in `us-east-1`, all model step and training step must be in `us-east-1`
 
-### Usage 1: Direct Class Decoration
-
-```python
-from mods.mods_template import MODSTemplate
-```
-
-```python
-@MODSTemplate(author="lukexie", version="0.1.0", description="BSM RnR")  
-class PytorchPipelineBuilder:  
-    """Builder for model deployment pipeline without training"""
-
-    def __init__(
-        self,
-        config_path: str,
-        sagemaker_session: Optional[PipelineSession] = None,
-        role: Optional[str] = None,
-        notebook_root: Optional[Path] = None
-    ):
-       # ...  
-  
-    def generate_pipeline(self, model_s3_path: str) -> Pipeline:
-	    # ...
-        # Create and return pipeline
-        return Pipeline(
-            name=self.base_config.pipeline_name,
-            parameters=self._get_pipeline_parameters(),
-            steps=steps,
-            sagemaker_session=self.session
-        )
-```
-
-
-```python
-pipeline_builder = PytorchPipelineBuilder(
-        config=model_config,
-        hyperparams=hyperparams,
-        sagemaker_session=pipeline_session,
-        role=role,
-        notebook_root=Path.cwd()
-    )
-```
-
-```python
-pipeline = pipeline_builder.create_pipeline(model_s3_path)
-```
-
->[!info]
->The above code snippet adheres to the following requirements:
-> 
->- You must use `@MODSTemplate` to define the *template metadata*.
->- Manually update the *version number* whenever you make a meaningful change to the pipeline. 
->	- MODS uses this number to know which *commit* to pull when looking for a pipeline version to ensure consistency. 
->- You must also have `sagemaker_session` parameter. 
->	- MODS uses this internally to set the *bucket* and *execution role* in production.
->- Your class must also have the **`generate_pipeline`** function that returns a pipeline. 
->	- MODS uses this to generate the pipeline.
->- When defining the processing, training and other SageMaker jobs in the pipeline, always use `self.sagemaker_session` and `self.execution_role` where applicable [like this](https://code.amazon.com/packages/MODSSampleTemplates/blobs/e657016af920f3d6c0661ddb9e4291de83dc39a1/--/src/modssampletemplates/four_step_demo_pipeline/four_step_demo_pipeline.py#L98,L95). 
->	- Otherwise execution in MODS will fail due to using the wrong session variables like the bucket or execution role. 
->	- See the below example where the processor uses `sagemaker_session=self.sagemaker_session`
-
-### Direct Class Input
-
-```python
-from mods.mods_template import MODSTemplate
-# customized template
-from pipelines.builder_mods_pipeline_pytorch import PytorchPipelineBuilder
-```
-
-```python
-MODSPipelineBuilder = MODSTemplate(
-	author=base_config.author,
-	description=base_config.pipeline_description,
-	version=base_config.pipeline_version
-	)(PytorchPipelineBuilder)
-```
-
-```python
-pipeline_builder = MODSPipelineBuilder(
-    config_path=config_path,
-    sagemaker_session=pipeline_session,
-    role=role,
-    notebook_root=Path.cwd()
-)
-```
-
-- [[MODSTemplate Decorator]]
-
-
-### MODS Guide
-
-- Internal Wiki
-	- [Model Training Workflow Operation and Development System (MODS)](https://w.amazon.com/bin/view/CMLS/Overview/MODS/)
-	- [MODS Onboarding Guide](https://w.amazon.com/bin/view/CMLS/Overview/MODS/HowTo/Onboarding/)
-	- [MODS Create New Template](https://w.amazon.com/bin/view/CMLS/Overview/MODS/CreateNewTemplate/)
-
-
-## Launch MODS Pipeline
-
-### Prepare Execution Document
-
-- [[MODS Execution Document]]
-
-### Start Pipeline
-
-```python
-from mods_workflow_helper.sagemaker_pipeline_helper import SagemakerPipelineHelper
-```
-
-```python
-SagemakerPipelineHelper.start_pipeline_execution(
-    pipeline=pipeline,
-    secure_config=security_config,
-    sagemaker_session=pipeline_session,
-    preparation_space_local_root="/tmp",
-    pipeline_execution_document=test_execution_doc #execution doc
-)
-```
-
 
 -----------
 ##  Recommended Notes
-
-- **Model Inference Management Service** (MIMS)
-	- [internal wiki](https://w.amazon.com/bin/view/CMLS/ME/Projects/RBSM/Design/HLD/MIMS/)
-	- [MIMS Python SDK API](https://w.amazon.com/bin/view/CMLS/ME/MIMS/UserGuide/API/)
 
 
 - [[MLOps]]
