@@ -67,6 +67,8 @@ year: 1972
 - [[How to Read a Book Four Levels of Reading]]
 - [[How to Read a Book Level 02 Inspectional Reading]]
 - [[How to Read a Book Level 03 Analytical Reading]]
+- [[How to Read a Book Level 04 Comparative Reading]]
+- [[How to Read a Book Become Demanding Reader]]
 
 
 
