@@ -31,9 +31,9 @@ date of note: 2024-04-09
 	- Export on ONNX and Inference (with FSDP)
 		- [[Export to ONNX and Inference]]
 	- Training Script under Pytorch Estimator
-		- [[Train Script under FSDP]]
+		- [[Pytorch Train Script under FSDP]]
 	- Inference Script under Pytorch Estimator
-		- [[Inference Script for RnR BSM]]
+		- [[Pytorch Inference Script for RnR BSM]]
 - Add Shiptrack datastream
 	- [[RnR LLM training data 2023-2025]]
 

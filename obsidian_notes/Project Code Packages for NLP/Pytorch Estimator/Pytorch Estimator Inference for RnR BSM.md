@@ -58,7 +58,7 @@ pytorch_model = PyTorchModel(
 ^0aed2c
 
 - Inference script
-	- [[Inference Script for RnR BSM]]
+	- [[Pytorch Inference Script for RnR BSM]]
 - [[Pytorch Estimator Training for RnR BSM]]
 - [[SageMaker SDK Deploy PytorchModel to Endpoint]]
 

@@ -42,16 +42,16 @@ from .config_base import BasePipelineConfig
 class XGBoostTrainingConfig(BasePipelineConfig):
     """
     Configuration specific to the SageMaker XGBoost Training Step.
-    This assumes script mode for XGBoost to align with the builder's design.
-    If using built-in XGBoost without a script, entry_point/source_dir would be optional.
+    This version is adapted to pass hyperparameters as a single config file
+    via an S3 input channel, avoiding character limits.
     """
-    # S3 paths with updated pattern
+    # S3 paths for data inputs and model outputs
     input_path: str = Field(
-        description="S3 path for input training data (e.g., train and validation channels).",
-        pattern=r'^s3://[a-zA-Z0-9.-]+(?:/[a-zA-Z0-9._-]+)*$' # Simplified pattern a bit
+        description="S3 path for input training data (containing train/val/test channels).",
+        pattern=r'^s3://[a-zA-Z0-9.-]+(?:/[a-zA-Z0-9._-]+)*$'
     )
     output_path: str = Field(
-        description="S3 path for output data (model artifacts, etc.).",
+        description="S3 path for output model artifacts.",
         pattern=r'^s3://[a-zA-Z0-9.-]+(?:/[a-zA-Z0-9._-]+)*$'
     )
     checkpoint_path: Optional[str] = Field(
@@ -65,39 +65,60 @@ class XGBoostTrainingConfig(BasePipelineConfig):
     training_instance_count: int = Field(default=1, ge=1, description="Number of instances for XGBoost training job.")
     training_volume_size: int = Field(default=30, ge=1, description="Volume size (GB) for training instances.")
 
-    # Script mode configuration (if not using built-in algorithm directly)
+    # Script mode configuration
     training_entry_point: str = Field(default='train_xgb.py', description="Entry point script for XGBoost training.")
-    # source_dir is inherited from BasePipelineConfig, should contain training_entry_point
 
     # Framework versions for SageMaker XGBoost container
-    framework_version: str = Field(default="1.7-1", description="SageMaker XGBoost framework version (e.g., '1.7-1', '1.5-1').")
+    framework_version: str = Field(default="1.7-1", description="SageMaker XGBoost framework version.")
     py_version: str = Field(default="py3", description="Python version for the SageMaker XGBoost container.")
 
 
-    # XGBoost specific hyperparameters
-    hyperparameters: XGBoostModelHyperparameters # Use the specific XGBoost hyperparameter class
+    # XGBoost specific hyperparameters object
+    hyperparameters: XGBoostModelHyperparameters
 
-    class Config(BasePipelineConfig.Config): # Inherit base config settings
+
+    # --- ADDED: S3 path for the hyperparameter config file ---
+    hyperparameters_s3_uri: Optional[str] = Field(
+        default=None,
+        description="S3 URI *prefix* under which `hyperparameters.json` will be uploaded.  e.g. `s3://my-bucket/pipeline/config/2025-06-12/`",
+        pattern=r'^s3://[a-zA-Z0-9.-]+(?:/.+?)/$'
+    )
+
+    class Config(BasePipelineConfig.Config):
         pass
 
     @model_validator(mode='before')
     @classmethod
-    def _construct_training_paths(cls, values: Dict[str, Any]) -> Dict[str, Any]:
-        """Constructs S3 paths specific to training if not provided."""
-        # Call base validator to ensure bucket, current_date etc. are there
-        values = super()._construct_base_attributes(values) # Explicitly call if not guaranteed by Pydantic order
+    def _construct_paths(cls, values: Dict[str, Any]) -> Dict[str, Any]:
+        """Constructs S3 paths if they are not explicitly provided."""
+        values = super()._construct_base_attributes(values)
 
-        bucket = values.get('bucket')
+        bucket       = values.get('bucket')
         current_date = values.get('current_date')
         pipeline_name = values.get('pipeline_name', 'DefaultPipeline')
 
-
         if not values.get('input_path'):
-            values['input_path'] = f"s3://{bucket}/{pipeline_name}/training_input/{current_date}"
+            values['input_path'] = (
+                f"s3://{bucket}/{pipeline_name}/preprocessed_data/{current_date}"
+            )
         if not values.get('output_path'):
-            values['output_path'] = f"s3://{bucket}/{pipeline_name}/training_output/{current_date}/model"
-        if 'checkpoint_path' not in values: # Allow explicit None to disable default path construction
-             values['checkpoint_path'] = f"s3://{bucket}/{pipeline_name}/training_checkpoints/{current_date}"
+            values['output_path'] = (
+                f"s3://{bucket}/{pipeline_name}/training_output/"
+                f"{current_date}/model"
+            )
+        if 'checkpoint_path' not in values:
+            values['checkpoint_path'] = (
+                f"s3://{bucket}/{pipeline_name}/training_checkpoints/"
+                f"{current_date}"
+            )
+
+        # Default S3 *prefix* under which the builder will write `hyperparameters.json`
+        if not values.get('hyperparameters_s3_uri'):
+            values['hyperparameters_s3_uri'] = (
+                f"s3://{bucket}/{pipeline_name}/training_config/"
+                f"{current_date}/"
+            )
+
         return values
 
     @model_validator(mode='after')

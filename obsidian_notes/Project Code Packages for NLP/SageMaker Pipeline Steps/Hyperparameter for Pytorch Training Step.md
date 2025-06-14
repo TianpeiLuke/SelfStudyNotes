@@ -34,8 +34,8 @@ from .hyperparameters_base import ModelHyperparameters
 - [[Base Hyperparameters]]
 ### Hyperparameter for RnR
 
-- [[Train Script under FSDP]]
-- [[Inference Script for RnR BSM]]
+- [[Pytorch Train Script under FSDP]]
+- [[Pytorch Inference Script for RnR BSM]]
 
 
 ```python

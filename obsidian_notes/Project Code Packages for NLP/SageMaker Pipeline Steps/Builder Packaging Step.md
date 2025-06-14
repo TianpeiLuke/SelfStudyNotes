@@ -277,7 +277,7 @@ class MIMSPackagingStepBuilder(StepBuilderBase):
 
 - [[Script for Model and Code Packaging]]
 - [[Base Step Builder]]
-- [[Config for Training Step]]
+
 
 
 ### Learning: ProcessingStep
@@ -328,12 +328,13 @@ ProcessingStep(
 
 ## Previous Step
 
-- [[Builder Pytorch Model Step]]
-- [[Builder XGBoost Model Step]]
+- [[Builder Pytorch Training Step]]
+- [[Builder XGBoost Training Step]]
+
 
 ## Next Step
 
-- [[MIMS Model Registration Step Builder]]
+- [[MODS Model Registration Step Builder]]
 
 
 
