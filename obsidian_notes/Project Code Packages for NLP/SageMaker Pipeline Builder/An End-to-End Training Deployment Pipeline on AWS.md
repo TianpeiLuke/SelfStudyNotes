@@ -42,7 +42,7 @@ date of note: 2025-05-20
 
 ### Construct Pipeline
 
-- [[Builder End-to-End Pipeline]]
+- [[Builder Pytorch Pipeline from Trained Model]]
 
 
 
