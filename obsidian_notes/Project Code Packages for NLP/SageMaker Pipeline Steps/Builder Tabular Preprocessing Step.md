@@ -281,7 +281,7 @@ class TabularPreprocessingStepBuilder(StepBuilderBase):
 
 ## Previous Step
 
-- [[MODS Cradle Data Loading Step Builder]]
+- [[Builder MODS Cradle Data Loading Step]]
 - [[MODS Cradle Data Downloader]]
 
 ## Next Step

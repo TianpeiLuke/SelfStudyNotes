@@ -39,6 +39,26 @@ from .config_base import BasePipelineConfig
 
 - [[Base Config]]
 
+### Step Name Registry
+
+```python
+STEP_NAMES = {
+    'Base':                 'BaseStep',
+    'Processing':           'ProcessingStep',
+    'PytorchTraining':      'PytorchTrainingStep',
+    'XGBoostTraining':      'XGBoostTrainingStep',
+    'PytorchModel':         'CreatePytorchModelStep',
+    'XGBoostModel':         'CreateXGBoostModelStep',
+    'Package':              'PackagingStep',
+    'Payload':              'PayloadTestStep',
+    'Registration':         'RegistrationStep',
+    'TabularPreprocessing': 'TabularPreprocessingStep',
+    'CurrencyConversion':   'CurrencyConversionStep',
+    'CradleDataLoading':    'CradleDataLoadingStep',
+    'BatchTransform':       'BatchTransformStep'
+    }
+```
+
 ### Base Builder
 
 ```python
@@ -52,13 +72,7 @@ class StepBuilderBase(ABC):
     }
 
     # Define standard step names
-    STEP_NAMES = {
-        'Training': 'TrainingStep',
-        'Model': 'CreateModelStep',
-        'Package': 'PackagingStep',
-        'Payload': 'PayloadGenerationStep',  # <-- Added for payload step
-        'Registration': 'RegistrationStep'
-    }
+    STEP_NAMES = STEP_NAMES
 
     def __init__(
         self,

@@ -39,6 +39,38 @@ import json
 from datetime import datetime
 ```
 
+### Step Config Registry
+
+```python
+STEP_REGISTRY = {
+        'BasePipelineConfig':         'Base',
+        'PytorchTrainingConfig':      'PytorchTraining',
+        'PytorchModelCreationConfig': 'PytorchModel',
+        'XGBoostTrainingConfig':      'XGBoostTraining',
+        'XGBoostModelCreationConfig': 'XGBoostModel',
+        'ProcessingStepConfigBase':   'Processing',
+        'PackageStepConfig':          'Package',
+        'ModelRegistrationConfig':    'Registration',
+        'PayloadConfig':              'Payload',
+        'TabularPreprocessingConfig': 'TabularPreprocessing',
+        'CurrencyConversionConfig':   'CurrencyConversion',
+        'CradleDataLoadConfig':       'CradleDataLoading',
+        'BatchTransformStepConfig':   'BatchTransform',
+    }
+```
+
+
+- [[Config for Cradle Data Loading Step]]
+- [[Base Config for Processing Step]]
+- [[Config for Tabular Preprocessing Step]]
+- [[Config for Pytorch Training Step]]
+- [[Config for Pytorch Model Step]]
+- [[Config for XGBoost Training Step]]
+- [[Config for XGBoost Model Step]]
+- [[Config for Packaging Step]]
+- [[Config for Batch Transform Step]]
+- [[Config for Model Registration Step]]
+
 
 ### Base Config
 
@@ -53,15 +85,7 @@ class BasePipelineConfig(BaseModel):
         "FE": "us-west-2"
     }
     
-    STEP_NAMES: ClassVar[Dict[str, str]] = {
-        'BasePipelineConfig': 'Base',
-        'TrainingConfig': 'Training',
-        'ModelCreationConfig': 'Model',
-        'ProcessingStepConfigBase': 'Processing',
-        'PackageStepConfig': 'Package',
-        'ModelRegistrationConfig': 'Registration',
-        'PayloadConfig': 'Payload'
-    }
+    STEP_NAMES: ClassVar[Dict[str, str]] = STEP_REGISTRY
     
     # Shared basic info
     bucket: str = Field(description="S3 bucket name for pipeline artifacts and data.")
@@ -191,11 +215,9 @@ class BasePipelineConfig(BaseModel):
 - [[Data Class with Pydantic]]
 - [[Simple Data Class from Pydantic]]
 
-## Derived Classes
 
-- [[Config for Pytorch Training Step]]
-- [[Config for Pytorch Model Step]]
-- [[Base Config for Processing Step]]
+
+
 
 
 -----------

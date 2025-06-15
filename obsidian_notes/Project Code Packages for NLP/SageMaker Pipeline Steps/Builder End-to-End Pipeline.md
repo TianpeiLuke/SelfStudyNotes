@@ -57,8 +57,8 @@ from .builder_mims_registration_step import ModelRegistrationStepBuilder
 - [[Base Step Builder]]
 - [[Builder Pytorch Training Step]]
 - [[Builder Pytorch Model Step]]
-- [[MODS Packaging Step Builder]]
-- [[MODS Model Registration Step Builder]]
+- [[Builder Packaging Step]]
+- [[Builder MODS Model Registration Step]]
 
 ### Import Configs
 
