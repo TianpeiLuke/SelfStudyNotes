@@ -59,4 +59,4 @@ FROM tab
 -----------
 ##  Recommended Notes
 
-- [[Group by and Aggregate Text Fields via Concatenation]]
+- [[Group by and Aggregate Ordered Text Fields via Concatenation]]

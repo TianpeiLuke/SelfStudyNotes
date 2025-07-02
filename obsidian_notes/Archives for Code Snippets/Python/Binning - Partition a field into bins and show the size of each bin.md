@@ -76,5 +76,5 @@ print(result)
 - Wikipedia
 	- [Data binning](https://en.wikipedia.org/wiki/Data_binning)
 
-- [[Processors Risk Binning]]
+- [[Processor Risk Table Mapping]]
 - [[Binning and Pivot Table - Count Frequency of Pairs of Features]]

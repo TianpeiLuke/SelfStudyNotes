@@ -23,7 +23,7 @@ date of note: 2024-03-27
 > 	- `default_root_dir` define the root directory for saving. In container it is a predefined folder for output.
 
 - [[SageMaker SDK Training with BYO Container]]
-- [[Train Script under FSDP]]
+- [[Pytorch Train Script under FSDP]]
 ## Code
 
 ### Define logger

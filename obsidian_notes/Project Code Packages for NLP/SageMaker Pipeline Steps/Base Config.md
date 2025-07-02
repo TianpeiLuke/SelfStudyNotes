@@ -67,9 +67,11 @@ STEP_REGISTRY = {
 - [[Config for Pytorch Model Step]]
 - [[Config for XGBoost Training Step]]
 - [[Config for XGBoost Model Step]]
+- [[Config for XGBoost Model Evaluation Step]]
 - [[Config for Packaging Step]]
 - [[Config for Batch Transform Step]]
 - [[Config for Model Registration Step]]
+
 
 
 ### Base Config

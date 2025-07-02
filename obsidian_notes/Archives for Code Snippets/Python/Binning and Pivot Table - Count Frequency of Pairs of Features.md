@@ -80,7 +80,7 @@ table_reset.apply(lambda x: x[1] / (x[1] + x[0]), axis=1)
 
 
 - [[Binning]]
-- [[Processors Risk Binning]]
+- [[Processor Risk Table Mapping]]
 - [[Pivot Table using Value of one column as Column Name]]
 
 - Wikipedia

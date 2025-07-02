@@ -122,7 +122,7 @@ tokenize_processor = BertTokenizationProcessor(tokenizer=tokenizer,
                  max_length = config['max_sen_len'])
 ```
 
-- Group above operations into a *pipeline*: [[Pipelines]]
+- Group above operations into a *pipeline*: [[Pipelines ver 1.0]]
 
 ```python
 tokenization_pipeline = TokenizationPipeline(tokenize_processor)

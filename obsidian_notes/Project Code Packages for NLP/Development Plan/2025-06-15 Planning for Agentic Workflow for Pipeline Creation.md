@@ -56,7 +56,7 @@ date of note: 2025-06-15
 - [[Builder XGBoost Training Step]]
 - [[Builder MODS Cradle Data Loading Step]]
 - [[Builder MODS Model Registration Step]]
-- [[Builder MODS Payload Generation Step]]
+- [[Builder Payload Generation Step]]
 
 
 ## Principle of Pipeline Building
@@ -96,6 +96,27 @@ date of note: 2025-06-15
 	- Retrieve the `Config` class as input
 	- Retrieve the `StepBuilder` class and construct the step in a separate method
 	- Link them in a pipeline flow method or in `generate_pipeline` method
+
+### Pipeline DAG
+
+- Create a Pipeline DAG
+	- Node: Step, linked to [[Base Step Builder]], and [[Base Config]]
+	- Link: connection from step to step
+- Implement
+	- Add_Node
+	- Add_Link
+	- **Topological_Ordering**: traverse the DAG with topological ordering, showing the *ordering of step execution*
+
+### Pipeline Template
+
+- Summary of [[MODS XGBoost Pipeline Builder]] and others
+- Input
+	- **PipelineDAG**
+	- **ConfigMap**
+	- **StepBuilderMap**
+- Use **Message Passing Algorithm** to collect input and output information between steps, to achieve automatically linking
+
+
 
 
 

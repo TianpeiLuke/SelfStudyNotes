@@ -31,6 +31,31 @@ date of note: 2025-05-23
 >	- load a list of Configs from JSON saved
 >- `verify_configs`
 
+## Rule for Field Categorization
+
+>[!important]
+> - Identify fields that appear in both processing and non-processing configs (cross-type fields)
+> 
+> - For these **cross-type fields**:
+> 	- If the field is **static** *AND* has **identical values across ALL configs** (both processing and non-processing):
+> 	    - Place it in the root "**shared**" section
+> 
+> 	- If values **differ between configs**:
+> 	    - For *non-processing configs*: keep in "**specific**" section
+> 	    - For *processing configs*: keep in "**processing_specific**" section
+> 
+> - For fields that are **exclusive** to only **processing configs**:
+> 	- If **static** *and* **identical** across all processing configs: place in "**processing_shared**"
+> 	- Otherwise: place in "**processing_specific**"
+> 
+> - For fields **exclusive** to **non-processing configs**:
+> 	- If **static** *and* **identical** across multiple configs: place in "**shared**"
+> 	- Otherwise: place in "**specific**"
+>- The following categories are mutual exclusive
+>	- "**specific**" and "**shared**"
+>	-  "**processing_specific**" and "**processing_shared**"
+>-  "**processing_specific**" and "**specific**" are grouped by step names
+
 
 ## Code
 

@@ -23,6 +23,8 @@ date of note: 2024-04-03
 >- Thus we can define the **risk value mapping** $r: \mathcal{X} \mapsto [0,1]$ as  $r[x] = P(y=1 | x)$ where $x \in \mathcal{X} = \{a, b, c, \ldots \}$
 >- Risk value mapping is used for **categorical feature encoding**.
 
+^5e54da
+
 
 >[!important]
 >Task: compute both numerator and denominator of the above formula and to handle the anomalies and exceptions
@@ -34,9 +36,9 @@ date of note: 2024-04-03
 >$$
 >- For $x \not\in \mathcal{X}$, $r[x] = P(y=1)$ default value.
 
-- [[Processors Risk Binning]]
-- [[Binning as Categorical Feature Transformation]]
-- [[Risk Table for Categorical Feature]]
+- [[Processor Risk Table Mapping]]
+- [[Binning as Feature Categorization]]
+- [[Risk Table for Categorical Data Analysis]]
 - [[Binning]]
 - [[Binning and Pivot Table - Count Frequency of Pairs of Features]]
 
