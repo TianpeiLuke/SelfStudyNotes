@@ -50,6 +50,7 @@ The process of solving these pain points revealed several important design princ
     
 - **Robust Scripting for Refactoring**: Using scripts for codebase-wide changes, such as renaming directories and updating references, is more reliable and less error-prone than manual changes.
     
+- [[Design Patterns Book Summary]]
 
 ### 3. Standardization Rules for the Universal Pipeline
 

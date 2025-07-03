@@ -62,6 +62,7 @@ These methods handle the management of inputs and outputs for the step builders:
 ## 4. Dependency Management Methods
 
 These methods handle the extraction of inputs from dependency steps:
+- [[Step Builder Methods Dependency Management Claude 4.0]]
 
 ### Dependency Extraction Methods
 
@@ -159,7 +160,7 @@ These methods are specific to certain step builders and handle specialized funct
 -----------
 ##  Recommended Notes
 
-- [[Step Builder Methods Dependency Management Analysis]]
+- [[Step Builder Methods Dependency Management Claude 4.0]]
 - [[Step Builder Methods Analysis Average Code lines Statistics]]
 
 
