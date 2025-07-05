@@ -55,7 +55,7 @@ __all__ = [
 ### **1.3 Enhance pipeline_deps/ Foundation**
 
 - [[Step Builder Methods Dependency Management Claude 4.0]]
-- [[Step Specification as Declarative Pipeline Architecture]]
+- [[Step Specification Design as Declarative Pipeline Architecture]]
 
 **Step 1.3.1: Create base_specifications.py**
 ```python

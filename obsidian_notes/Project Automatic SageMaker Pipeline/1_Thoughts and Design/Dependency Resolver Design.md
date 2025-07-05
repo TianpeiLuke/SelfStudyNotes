@@ -599,6 +599,6 @@ The Dependency Resolver represents the **intelligent automation layer** that tra
 - [[Dependency Resolver Hybrid Design Review]]
 
 
-- [[Step Specification as Declarative Pipeline Architecture]]
+- [[Step Specification Design as Declarative Pipeline Architecture]]
 - [[Step Builder Methods Dependency Management Claude 4.0]]
 - [[Step Builder Methods Dependency Management Gemini]]

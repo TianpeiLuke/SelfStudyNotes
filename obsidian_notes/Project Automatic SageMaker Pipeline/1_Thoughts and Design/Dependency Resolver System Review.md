@@ -8,7 +8,7 @@ date of note: 2025-07-04
 
 I've completed a thorough review of the dependency resolver in `src/pipeline_deps` along with the design documentation. Here's my comprehensive analysis:
 
-- [[Dependency Resolver]]
+- [[Dependency Resolver Design]]
 ## Overall Architecture Assessment
 
 The dependency resolver system demonstrates **excellent architectural design** with a well-thought-out separation of concerns and sophisticated automation capabilities. The system follows modern software engineering principles and provides a robust foundation for ML pipeline dependency management.

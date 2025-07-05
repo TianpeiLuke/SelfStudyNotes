@@ -1,5 +1,6 @@
 ---
 tags:
+  - project
   - planning
   - aws/sagemaker_pipeline
 aliases: 

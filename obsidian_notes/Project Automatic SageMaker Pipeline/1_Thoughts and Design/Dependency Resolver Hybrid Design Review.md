@@ -8,7 +8,7 @@ date of note: 2025-07-04
 
 I've completed a thorough review of the dependency resolver in `src/pipeline_deps` along with the design documentation. Here's my comprehensive analysis:
 
-- [[Dependency Resolver]]
+- [[Dependency Resolver Design]]
 # Hybrid Design Philosophy Alignment Analysis
 
 Now I can provide a comprehensive analysis of how well the current dependency resolver system aligns with the hybrid design philosophy. After reviewing all three design approaches, I can see both strong alignments and some gaps.

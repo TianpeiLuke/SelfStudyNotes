@@ -318,7 +318,7 @@ class FluentPipeline:
 ### With Step Specifications
 
 Fluent APIs leverage specifications for validation and intelligent behavior: 
-[[Step Specification as Declarative Pipeline Architecture]]
+[[Step Specification Design as Declarative Pipeline Architecture]]
 
 ```python
 class SpecificationAwareFluentAPI:

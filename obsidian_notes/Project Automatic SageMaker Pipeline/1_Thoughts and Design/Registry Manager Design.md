@@ -164,7 +164,7 @@ all_registries = [get_registry(ctx) for ctx in list_contexts()]
 print(f"Created {len(all_registries)} registries")
 ```
 
-- [[Specification Registry]]
+- [[Specification Registry Design]]
 ### With Pipeline Builders
 
 Seamless integration with pipeline construction:
@@ -216,7 +216,7 @@ resolved = resolver.resolve_all_dependencies(["data_loading", "preprocessing"])
 stats = get_context_stats()
 print(f"Training pipeline has {stats['training_pipeline']['step_count']} steps")
 ```
-- [[Dependency Resolver]]
+- [[Dependency Resolver Design]]
 
 ### With Testing Framework
 
@@ -582,5 +582,5 @@ Registry Manager represents the **centralized orchestration layer** that enables
 -----------
 ##  Recommended Notes
 
-- [[Specification Registry]]
-- [[Step Specification as Declarative Pipeline Architecture]]
+- [[Specification Registry Design]]
+- [[Step Specification Design as Declarative Pipeline Architecture]]

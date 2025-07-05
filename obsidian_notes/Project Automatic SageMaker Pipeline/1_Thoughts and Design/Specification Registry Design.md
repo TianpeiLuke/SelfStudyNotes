@@ -462,5 +462,5 @@ Specification Registries represent the **atomized foundation** for context-aware
 -----------
 ##  Recommended Notes
 
-- [[Step Specification as Declarative Pipeline Architecture]]
+- [[Step Specification Design as Declarative Pipeline Architecture]]
 - [[Pipeline Registry]]

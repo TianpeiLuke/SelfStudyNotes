@@ -8,7 +8,7 @@ date of note: 2025-07-04
 
 I've completed a thorough review of the dependency resolver in `src/pipeline_deps` along with the design documentation. Here's my comprehensive analysis:
 
-- [[Dependency Resolver]]
+- [[Dependency Resolver Design]]
 # Component Integration Architecture
 
 Now I can provide a comprehensive explanation of how the dependency resolver connects with the specification registry, registry manager, and pipeline DAG. The integration is sophisticated and follows a well-designed layered architecture.

@@ -168,7 +168,7 @@ flowchart TD
 
 ### Step Specification
 
-- [[Step Specification as Declarative Pipeline Architecture]]
+- [[Step Specification Design as Declarative Pipeline Architecture]]
 
 
 ## Intermediate Abstraction Layer
@@ -186,14 +186,14 @@ flowchart TD
 
 ### Pipeline DAG
 
-- [[Pipeline DAG]]
+- [[Pipeline DAG Design]]
 - [[Pipeline DAG Validation]]
 
 ### Dependency Resolution
 
-- [[Specification Registry]]
-- [[Registry Manager]]
-- [[Dependency Resolver]]
+- [[Specification Registry Design]]
+- [[Registry Manager Design]]
+- [[Dependency Resolver Design]]
 - [[Semantic Matcher for Dependency Resolution]]
 
 
