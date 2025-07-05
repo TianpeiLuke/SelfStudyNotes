@@ -1,6 +1,6 @@
 ---
 tags:
-  - thought
+  - entry_point
   - design_principles
   - aws/sagemaker_pipeline
 aliases: 

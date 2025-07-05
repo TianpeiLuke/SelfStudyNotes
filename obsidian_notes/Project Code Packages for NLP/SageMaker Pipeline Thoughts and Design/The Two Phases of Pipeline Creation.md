@@ -1,5 +1,7 @@
 ---
-tags: 
+tags:
+  - thought
+  - design/design_architecture
 aliases: 
 date of note: 2025-07-01
 ---

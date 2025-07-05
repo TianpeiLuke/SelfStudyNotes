@@ -10,416 +10,456 @@ date of note: 2025-07-02
 
 Perfect! I can see the existing `PipelineDAG` class provides a solid foundation. Let me adjust the solution to build upon this existing infrastructure while adding the port-based dependency management and property reference capabilities.
 
-## **Enhanced PipelineDAG with Port-Based Dependencies**
+## What is the Purpose of Fluent API?
 
-- [[Pipeline DAG]]
+The Fluent API serves as a **natural language-like interface** for pipeline construction that transforms complex, imperative pipeline building into an intuitive, readable, and maintainable experience. It enables method chaining that mirrors the logical flow of ML workflows.
+
+## Core Purpose
+
+The Fluent API provides the **natural language interface layer** that:
+
+1. **Natural Language-Like Pipeline Construction** - Enable pipeline construction that reads like natural language
+2. **Method Chaining for Workflow Composition** - Support method chaining that mirrors ML pipeline flow
+3. **Context-Aware Step Configuration** - Maintain context throughout pipeline construction
+4. **Progressive Disclosure of Complexity** - Provide multiple abstraction levels from simple to advanced
+5. **Type Safety and IntelliSense Support** - Provide compile-time validation and IDE support
+
+## Key Features
+
+### 1. Natural Language-Like Pipeline Construction
+
+The Fluent API enables pipeline construction that reads like natural language:
 
 ```python
-from dataclasses import dataclass
-from typing import Dict, List, Optional, Any, Set, Tuple
-from src.pipeline_builder.pipeline_dag import PipelineDAG
+# Traditional Approach - Verbose, imperative, hard to read
+data_step = DataLoadingStep()
+data_step.set_config(data_config)
+data_step.set_inputs(input_dict)
 
-@dataclass
-class InputPort:
-    """Input port specification for a pipeline step."""
-    name: str
-    data_type: str
-    required: bool = True
-    description: str = ""
-    semantic_keywords: List[str] = None
-    
-    def __post_init__(self):
-        if self.semantic_keywords is None:
-            self.semantic_keywords = []
+preprocess_step = PreprocessingStep()
+preprocess_step.set_config(preprocess_config)
+preprocess_step.set_inputs({
+    "DATA": data_step.properties.ProcessingOutputConfig.Outputs["DATA"].S3Output.S3Uri,
+    "METADATA": data_step.properties.ProcessingOutputConfig.Outputs["METADATA"].S3Output.S3Uri
+})
 
-@dataclass
-class OutputPort:
-    """Output port specification for a pipeline step."""
-    name: str
-    data_type: str
-    property_path: str  # Runtime SageMaker property path
-    description: str = ""
-    
-@dataclass
-class PropertyReference:
-    """Lazy evaluation reference that bridges definition-time and runtime."""
-    step_name: str
-    output_port: OutputPort
-    
-    def to_sagemaker_property(self):
-        """Convert to SageMaker Properties object at runtime."""
-        return {"Get": f"Steps.{self.step_name}.{self.output_port.property_path}"}
-    
-    def __str__(self):
-        return f"{self.step_name}.{self.output_port.name}"
+pipeline = Pipeline()
+pipeline.add_step(data_step)
+pipeline.add_step(preprocess_step)
 
-@dataclass
-class DependencyEdge:
-    """Represents a typed dependency edge between step ports."""
-    source_step: str
-    target_step: str
-    source_port: OutputPort
-    target_port: InputPort
-    confidence: float = 1.0
-    
-    def to_property_reference(self) -> PropertyReference:
-        """Convert edge to a property reference for SageMaker."""
-        return PropertyReference(
-            step_name=self.source_step,
-            output_port=self.source_port
-        )
-
-class EnhancedPipelineDAG(PipelineDAG):
-    """
-    Enhanced version of PipelineDAG with port-based dependency management.
-    Extends the existing PipelineDAG to add typed ports and intelligent dependency resolution.
-    """
-    
-    def __init__(self, nodes: Optional[List[str]] = None, edges: Optional[List[tuple]] = None):
-        super().__init__(nodes, edges)
-        
-        # Enhanced data structures for port-based dependencies
-        self.step_contracts: Dict[str, 'StepContract'] = {}
-        self.dependency_edges: List[DependencyEdge] = []
-        self.property_references: Dict[str, Dict[str, PropertyReference]] = {}
-        
-    def register_step_contract(self, step_name: str, contract: 'StepContract'):
-        """Register a step contract defining its input/output ports."""
-        self.step_contracts[step_name] = contract
-        self.add_node(step_name)
-        logger.info(f"Registered contract for step: {step_name}")
-        
-    def auto_resolve_dependencies(self) -> List[DependencyEdge]:
-        """Automatically resolve dependencies based on port compatibility."""
-        resolved_edges = []
-        
-        for target_step, target_contract in self.step_contracts.items():
-            for input_port in target_contract.inputs.values():
-                if input_port.required and not self._is_input_satisfied(target_step, input_port.name):
-                    # Find compatible output ports
-                    candidates = self._find_compatible_outputs(target_step, input_port)
-                    if candidates:
-                        best_match = max(candidates, key=lambda x: x[1])
-                        source_step, output_port, confidence = best_match
-                        
-                        # Create dependency edge
-                        edge = DependencyEdge(
-                            source_step=source_step,
-                            target_step=target_step,
-                            source_port=output_port,
-                            target_port=input_port,
-                            confidence=confidence
-                        )
-                        
-                        self.add_dependency_edge(edge)
-                        resolved_edges.append(edge)
-                        
-        return resolved_edges
-    
-    def add_dependency_edge(self, edge: DependencyEdge):
-        """Add a typed dependency edge."""
-        self.dependency_edges.append(edge)
-        
-        # Add to the base DAG structure
-        self.add_edge(edge.source_step, edge.target_step)
-        
-        # Create property reference
-        prop_ref = edge.to_property_reference()
-        if edge.target_step not in self.property_references:
-            self.property_references[edge.target_step] = {}
-        self.property_references[edge.target_step][edge.target_port.name] = prop_ref
-        
-        logger.info(f"Added dependency edge: {edge.source_step}.{edge.source_port.name} -> {edge.target_step}.{edge.target_port.name}")
-    
-    def _find_compatible_outputs(self, target_step: str, input_port: InputPort) -> List[Tuple[str, OutputPort, float]]:
-        """Find compatible output ports for an input port."""
-        candidates = []
-        
-        for source_step, source_contract in self.step_contracts.items():
-            if source_step == target_step:
-                continue  # Skip self-connections
-                
-            for output_port in source_contract.outputs.values():
-                confidence = self._calculate_port_compatibility(output_port, input_port)
-                if confidence > 0.5:
-                    candidates.append((source_step, output_port, confidence))
-                    
-        return candidates
-    
-    def _calculate_port_compatibility(self, output_port: OutputPort, input_port: InputPort) -> float:
-        """Calculate compatibility score between ports."""
-        # Data type compatibility (40%)
-        type_score = 1.0 if output_port.data_type == input_port.data_type else 0.3
-        
-        # Semantic name similarity (40%)
-        semantic_score = self._semantic_similarity(output_port.name, input_port.name)
-        
-        # Keyword matching (20%)
-        keyword_score = 0.0
-        if input_port.semantic_keywords:
-            for keyword in input_port.semantic_keywords:
-                if keyword.lower() in output_port.name.lower():
-                    keyword_score = 1.0
-                    break
-        
-        return (type_score * 0.4) + (semantic_score * 0.4) + (keyword_score * 0.2)
-    
-    def _semantic_similarity(self, name1: str, name2: str) -> float:
-        """Calculate semantic similarity between two names."""
-        # Simple implementation - can be enhanced with more sophisticated matching
-        name1_norm = name1.lower().replace('_', '').replace('-', '')
-        name2_norm = name2.lower().replace('_', '').replace('-', '')
-        
-        if name1_norm == name2_norm:
-            return 1.0
-        
-        # Check for substring matches
-        if name1_norm in name2_norm or name2_norm in name1_norm:
-            return 0.8
-        
-        # Check for common keywords
-        common_keywords = ['model', 'data', 'output', 'input', 'artifacts', 'training']
-        for keyword in common_keywords:
-            if keyword in name1_norm and keyword in name2_norm:
-                return 0.6
-        
-        return 0.0
-    
-    def _is_input_satisfied(self, step_name: str, input_name: str) -> bool:
-        """Check if an input port is already satisfied by an existing edge."""
-        for edge in self.dependency_edges:
-            if edge.target_step == step_name and edge.target_port.name == input_name:
-                return True
-        return False
-    
-    def get_step_inputs(self, step_name: str) -> Dict[str, PropertyReference]:
-        """Get all property references for a step's inputs."""
-        return self.property_references.get(step_name, {})
-    
-    def validate_dependencies(self) -> List[str]:
-        """Validate the dependency graph for completeness and correctness."""
-        errors = []
-        
-        # Check for cycles (inherited from base class)
-        try:
-            self.topological_sort()
-        except ValueError as e:
-            errors.append(str(e))
-        
-        # Check for unsatisfied required inputs
-        for step_name, contract in self.step_contracts.items():
-            for input_port in contract.inputs.values():
-                if input_port.required and not self._is_input_satisfied(step_name, input_port.name):
-                    errors.append(f"Required input '{input_port.name}' on step '{step_name}' is not satisfied")
-        
-        return errors
-    
-    def to_sagemaker_inputs(self) -> Dict[str, Dict[str, Any]]:
-        """Convert the dependency graph to SageMaker input format."""
-        sagemaker_inputs = {}
-        
-        for step_name in self.nodes:
-            step_inputs = {}
-            for input_name, prop_ref in self.get_step_inputs(step_name).items():
-                step_inputs[input_name] = prop_ref.to_sagemaker_property()
-            
-            if step_inputs:
-                sagemaker_inputs[step_name] = step_inputs
-                
-        return sagemaker_inputs
+# Fluent API Approach - Reads like natural language
+pipeline = (Pipeline("xgboost-training")
+    .load_data(from_source="s3://bucket/data")
+    .preprocess(with_config=preprocess_config)
+    .train_xgboost(with_hyperparameters=xgb_params)
+    .package_model()
+    .register_in_model_registry())
 ```
 
-## **Step Contract Definition**
+### 2. Method Chaining for Workflow Composition
 
-- [[Step Contract for Dependency Resolution]]
+Enable method chaining that mirrors the logical flow of ML pipelines:
 
 ```python
-@dataclass
-class StepContract:
-    """Complete contract defining a step's input and output ports."""
-    step_type: str
-    inputs: Dict[str, InputPort]
-    outputs: Dict[str, OutputPort]
+# Each method returns the pipeline object, enabling chaining
+result = (pipeline
+    .with_data_source("s3://training-data/")
+    .apply_preprocessing(StandardScaler(), OneHotEncoder())
+    .split_data(train_ratio=0.8, validation_ratio=0.2)
+    .train_model(XGBoostClassifier())
+    .evaluate_performance(metrics=["accuracy", "f1", "auc"])
+    .deploy_if_performance_threshold(min_accuracy=0.85)
+    .notify_on_completion(email="team@company.com"))
+```
+
+### 3. Context-Aware Step Configuration
+
+Maintain context throughout the pipeline construction for intelligent defaults:
+
+```python
+# Context flows through the chain
+pipeline = (Pipeline("fraud-detection")
+    .for_classification_task()  # Sets context for subsequent steps
+    .load_tabular_data("s3://data/")  # Knows it's classification + tabular
+    .apply_standard_preprocessing()  # Uses classification-appropriate preprocessing
+    .train_with_hyperparameter_tuning()  # Uses classification metrics
+    .deploy_with_auto_scaling())  # Configures for classification inference
+
+class FluentPipeline:
+    def __init__(self, name: str):
+        self.name = name
+        self.context = PipelineContext()
+        self.steps = []
     
-    def __init__(self, step_type: str, inputs: List[InputPort], outputs: List[OutputPort]):
+    def for_classification_task(self) -> 'FluentPipeline':
+        """Set pipeline context for classification"""
+        self.context.task_type = "classification"
+        self.context.default_metrics = ["accuracy", "precision", "recall", "auc"]
+        self.context.default_objective = "binary:logistic"
+        return self
+    
+    def for_regression_task(self) -> 'FluentPipeline':
+        """Set pipeline context for regression"""
+        self.context.task_type = "regression"
+        self.context.default_metrics = ["rmse", "mae", "r2"]
+        self.context.default_objective = "reg:squarederror"
+        return self
+```
+
+### 4. Progressive Disclosure of Complexity
+
+Provide multiple levels of abstraction from simple to advanced:
+
+```python
+# Level 1 - Simple: One-liner for quick prototyping
+pipeline = Pipeline("quick-model").auto_train_xgboost("s3://data/")
+
+# Level 2 - Configured: Basic configuration
+pipeline = (Pipeline("configured-model")
+    .load_data("s3://data/")
+    .preprocess_with_defaults()
+    .train_xgboost(max_depth=6, n_estimators=100))
+
+# Level 3 - Advanced: Full control with custom configurations
+pipeline = (Pipeline("advanced-model")
+    .load_data("s3://data/", validation_schema=schema)
+    .preprocess(custom_transformers=[...])
+    .train_xgboost(hyperparameter_tuning=True, custom_metrics=[...])
+    .validate_with_holdout_set()
+    .deploy_with_canary_strategy())
+
+# Level 4 - Expert: Complete customization
+pipeline = (Pipeline("expert-model")
+    .load_data("s3://data/")
+        .with_custom_processor(MyDataProcessor())
+        .with_validation_rules([DataQualityCheck(), SchemaValidation()])
+    .preprocess()
+        .with_feature_engineering(FeatureEngineer())
+        .with_data_balancing(SMOTEBalancer())
+    .train_xgboost()
+        .with_custom_estimator(CustomXGBoost())
+        .with_distributed_training(instances=4)
+        .with_early_stopping(patience=10))
+```
+
+### 5. Type Safety and IntelliSense Support
+
+Provide compile-time validation and IDE support:
+
+```python
+class TypedFluentPipeline:
+    def load_data(self, source: str) -> 'DataLoadedPipeline':
+        """Load data - returns DataLoadedPipeline type"""
+        return DataLoadedPipeline(self, source)
+    
+class DataLoadedPipeline:
+    def preprocess(self, **kwargs) -> 'PreprocessedPipeline':
+        """Preprocess data - returns PreprocessedPipeline type"""
+        return PreprocessedPipeline(self, **kwargs)
+    
+class PreprocessedPipeline:
+    def train_xgboost(self, **kwargs) -> 'TrainedPipeline':
+        """Train XGBoost model - returns TrainedPipeline type"""
+        return TrainedPipeline(self, **kwargs)
+    
+    def train_pytorch(self, **kwargs) -> 'TrainedPipeline':
+        """Train PyTorch model - returns TrainedPipeline type"""
+        return TrainedPipeline(self, **kwargs)
+
+# Usage with full type safety
+pipeline = (Pipeline("typed-pipeline")
+    .load_data("s3://data/")  # Returns DataLoadedPipeline
+    .preprocess()  # Returns PreprocessedPipeline  
+    .train_xgboost())  # Returns TrainedPipeline
+
+# IDE knows what methods are available at each stage
+# Invalid operations are caught at development time
+```
+
+## Fluent API Patterns
+
+### 1. Builder Pattern Integration
+
+```python
+class FluentStepBuilder:
+    def __init__(self, step_type: str):
         self.step_type = step_type
-        self.inputs = {port.name: port for port in inputs}
-        self.outputs = {port.name: port for port in outputs}
+        self.config = {}
+        self.connections = []
     
-    def get_input_port(self, name: str) -> Optional[InputPort]:
-        return self.inputs.get(name)
+    def with_config(self, **config) -> 'FluentStepBuilder':
+        """Configure step with fluent interface"""
+        self.config.update(config)
+        return self
     
-    def get_output_port(self, name: str) -> Optional[OutputPort]:
-        return self.outputs.get(name)
+    def connect_to(self, target_step) -> 'FluentStepBuilder':
+        """Connect to target step"""
+        self.connections.append(target_step)
+        return self
+    
+    def build(self):
+        """Build the actual step"""
+        return self._create_step(self.config, self.connections)
+
+# Usage
+step = (FluentStepBuilder("XGBoostTraining")
+    .with_config(instance_type="ml.m5.xlarge", max_depth=6)
+    .connect_to(preprocessing_step)
+    .build())
 ```
 
-## **Enhanced Step Builder Integration**
+### 2. Conditional Pipeline Construction
+
+Support conditional logic and dynamic pipeline construction:
 
 ```python
-class EnhancedStepBuilderBase(StepBuilderBase):
-    """Enhanced step builder that integrates with the DAG-based dependency system."""
+class ConditionalFluentPipeline:
+    def when(self, condition: bool) -> 'ConditionalFluentPipeline':
+        """Conditional execution"""
+        self._condition = condition
+        return self
     
-    # Subclasses must define this
-    STEP_CONTRACT: StepContract = None
+    def then(self, action: Callable) -> 'ConditionalFluentPipeline':
+        """Execute action if condition is true"""
+        if self._condition:
+            action(self)
+        return self
     
-    def __init_subclass__(cls, **kwargs):
-        super().__init_subclass__(**kwargs)
-        if not hasattr(cls, 'STEP_CONTRACT') or cls.STEP_CONTRACT is None:
-            raise ValueError(f"{cls.__name__} must define STEP_CONTRACT")
-    
-    def register_with_dag(self, dag: EnhancedPipelineDAG, step_name: str):
-        """Register this step builder with a pipeline DAG."""
-        dag.register_step_contract(step_name, self.STEP_CONTRACT)
-    
-    def create_step_with_dag_inputs(self, dag: EnhancedPipelineDAG, step_name: str, **kwargs):
-        """Create step using inputs resolved from the DAG."""
-        # Get resolved inputs from the DAG
-        dag_inputs = dag.get_step_inputs(step_name)
-        
-        # Convert property references to SageMaker format
-        sagemaker_inputs = {}
-        for input_name, prop_ref in dag_inputs.items():
-            sagemaker_inputs[input_name] = prop_ref.to_sagemaker_property()
-        
-        # Merge with any additional kwargs
-        sagemaker_inputs.update(kwargs)
-        
-        # Create the step
-        return self.create_step(**sagemaker_inputs)
+    def otherwise(self, action: Callable) -> 'ConditionalFluentPipeline':
+        """Execute action if condition is false"""
+        if not self._condition:
+            action(self)
+        return self
+
+# Usage
+pipeline = (Pipeline("dynamic")
+    .load_data("s3://data/")
+    .when(use_hyperparameter_tuning)
+        .then(lambda p: p.with_hyperparameter_tuning(trials=50))
+    .otherwise(lambda p: p.with_fixed_hyperparameters(params))
+    .when(deploy_to_production)
+        .then(lambda p: p.deploy_with_monitoring())
+    .otherwise(lambda p: p.save_model_artifacts()))
 ```
 
-## **Concrete Implementation Example**
+### 3. Reusable Pipeline Templates
+
+Enable creation of reusable pipeline templates:
 
 ```python
-# Define step contracts
-XGBOOST_TRAINING_CONTRACT = StepContract(
-    step_type="XGBoostTraining",
-    inputs=[
-        InputPort(
-            name="training_data",
-            data_type="S3Uri",
-            required=True,
-            description="Training dataset S3 location",
-            semantic_keywords=["data", "input", "training", "dataset"]
-        ),
-        InputPort(
-            name="hyperparameters",
-            data_type="S3Uri",
-            required=False,
-            description="Hyperparameters configuration file",
-            semantic_keywords=["config", "params", "hyperparameters"]
-        )
-    ],
-    outputs=[
-        OutputPort(
-            name="model_artifacts",
-            data_type="S3Uri",
-            property_path="properties.ModelArtifacts.S3ModelArtifacts",
-            description="Trained model artifacts"
-        ),
-        OutputPort(
-            name="training_job_name",
-            data_type="String",
-            property_path="properties.TrainingJobName",
-            description="Training job name"
-        )
-    ]
-)
-
-class XGBoostTrainingStepBuilder(EnhancedStepBuilderBase):
-    """XGBoost training step builder with DAG integration."""
-    
-    STEP_CONTRACT = XGBOOST_TRAINING_CONTRACT
-    
-    def create_step(self, **resolved_inputs):
-        """Create step using resolved inputs from DAG."""
-        # All dependency resolution is handled by the DAG
-        # Just focus on step creation logic
-        estimator = self._create_estimator()
+class PipelineTemplate:
+    @staticmethod
+    def classification_pipeline(data_source: str, model_type: str = "xgboost") -> FluentPipeline:
+        """Reusable template for classification pipelines"""
+        base_pipeline = (Pipeline("classification-template")
+            .load_data(data_source)
+            .validate_data_quality()
+            .apply_classification_preprocessing())
         
-        training_inputs = {}
-        if "training_data" in resolved_inputs:
-            training_inputs["training"] = TrainingInput(
-                s3_data=resolved_inputs["training_data"]
+        if model_type == "xgboost":
+            return base_pipeline.train_xgboost().evaluate_classification_metrics()
+        elif model_type == "neural_network":
+            return base_pipeline.train_neural_network().evaluate_classification_metrics()
+        else:
+            raise ValueError(f"Unsupported model type: {model_type}")
+    
+    @staticmethod
+    def regression_pipeline(data_source: str, model_type: str = "xgboost") -> FluentPipeline:
+        """Reusable template for regression pipelines"""
+        base_pipeline = (Pipeline("regression-template")
+            .load_data(data_source)
+            .validate_data_quality()
+            .apply_regression_preprocessing())
+        
+        if model_type == "xgboost":
+            return base_pipeline.train_xgboost().evaluate_regression_metrics()
+        elif model_type == "linear":
+            return base_pipeline.train_linear_model().evaluate_regression_metrics()
+
+# Usage
+fraud_pipeline = PipelineTemplate.classification_pipeline("s3://fraud-data/", "xgboost")
+churn_pipeline = PipelineTemplate.classification_pipeline("s3://churn-data/", "neural_network")
+sales_pipeline = PipelineTemplate.regression_pipeline("s3://sales-data/", "xgboost")
+```
+
+## Integration with Other Components
+
+### With Smart Proxies
+
+Fluent APIs use [Smart Proxies](smart_proxy.md) as the underlying implementation:
+
+```python
+class FluentPipeline:
+    def __init__(self, name: str):
+        self.name = name
+        self.proxies = []
+    
+    def load_data(self, **kwargs) -> 'FluentPipeline':
+        """Fluent data loading using Smart Proxy"""
+        config = DataLoadingStepConfig(**kwargs)
+        proxy = DataLoadingProxy(config)  # Smart Proxy
+        self.proxies.append(proxy)
+        return self
+    
+    def preprocess(self, **kwargs) -> 'FluentPipeline':
+        """Fluent preprocessing using Smart Proxy"""
+        config = PreprocessingStepConfig(**kwargs)
+        proxy = PreprocessingProxy(config)  # Smart Proxy
+        
+        # Auto-connect using Smart Proxy intelligence
+        if self.proxies:
+            last_proxy = self.proxies[-1]
+            proxy.connect_from(last_proxy)
+        
+        self.proxies.append(proxy)
+        return self
+```
+
+### With Step Specifications
+
+Fluent APIs leverage specifications for validation and intelligent behavior: 
+[[Step Specification as Declarative Pipeline Architecture]]
+
+```python
+class SpecificationAwareFluentAPI:
+    def add_step(self, step_type: str) -> 'FluentStepProxy':
+        """Add step with specification-driven validation"""
+        spec = global_registry.get_specification(step_type)
+        if not spec:
+            raise ValueError(f"Unknown step type: {step_type}")
+        
+        proxy = FluentStepProxy(step_type, spec)
+        return proxy
+    
+class FluentStepProxy:
+    def __init__(self, step_type: str, specification: StepSpecification):
+        self.step_type = step_type
+        self.specification = specification
+    
+    def connect_to(self, target_step: str) -> 'FluentStepProxy':
+        """Connect with specification validation"""
+        target_spec = global_registry.get_specification(target_step)
+        
+        # Validate compatibility using specifications
+        if not self._is_compatible(self.specification, target_spec):
+            raise ConnectionError(f"Cannot connect {self.step_type} to {target_step}")
+        
+        return self
+```
+
+### With Step Contracts
+
+Fluent APIs enforce [step contracts](step_contract.md) during construction:
+
+```python
+class ContractEnforcingFluentAPI:
+    def train_xgboost(self, **kwargs) -> 'FluentPipeline':
+        """Train XGBoost with contract enforcement"""
+        
+        # Check preconditions from step contract
+        contract = self._get_step_contract("XGBoostTraining")
+        precondition_errors = contract.validate_preconditions(self.current_state)
+        
+        if precondition_errors:
+            raise ContractViolationError(
+                f"XGBoost training preconditions not met: {precondition_errors}"
             )
         
-        return TrainingStep(
-            name=self._get_step_name('XGBoostTraining'),
-            estimator=estimator,
-            inputs=training_inputs
-        )
+        return self._add_training_step("xgboost", **kwargs)
 ```
 
-## **Pipeline Construction with Enhanced DAG**
+## Error Prevention and Validation
+
+Fluent APIs catch errors early in the construction process:
 
 ```python
-def build_pipeline_with_enhanced_dag():
-    """Build pipeline using the enhanced DAG system."""
-    
-    # Create enhanced DAG
-    dag = EnhancedPipelineDAG()
-    
-    # Create step builders
-    preprocessing_builder = TabularPreprocessingStepBuilder(config=preprocess_config)
-    training_builder = XGBoostTrainingStepBuilder(config=training_config)
-    registration_builder = ModelRegistrationStepBuilder(config=registration_config)
-    
-    # Register step contracts with the DAG
-    preprocessing_builder.register_with_dag(dag, "preprocessing-step")
-    training_builder.register_with_dag(dag, "training-step")
-    registration_builder.register_with_dag(dag, "registration-step")
-    
-    # Auto-resolve dependencies
-    resolved_edges = dag.auto_resolve_dependencies()
-    logger.info(f"Auto-resolved {len(resolved_edges)} dependency edges")
-    
-    # Validate the DAG
-    errors = dag.validate_dependencies()
-    if errors:
-        raise ValueError(f"DAG validation failed: {errors}")
-    
-    # Build steps in topological order
-    execution_order = dag.topological_sort()
-    steps = []
-    
-    for step_name in execution_order:
-        if step_name == "preprocessing-step":
-            step = preprocessing_builder.create_step_with_dag_inputs(dag, step_name)
-        elif step_name == "training-step":
-            step = training_builder.create_step_with_dag_inputs(dag, step_name)
-        elif step_name == "registration-step":
-            step = registration_builder.create_step_with_dag_inputs(dag, step_name)
+class ValidatingFluentPipeline:
+    def train_xgboost(self, **kwargs) -> 'FluentPipeline':
+        """Train XGBoost with validation"""
         
-        steps.append(step)
+        # Check if preprocessing step exists
+        if not self._has_preprocessing_step():
+            raise PipelineValidationError(
+                "XGBoost training requires preprocessed data. "
+                "Add .preprocess() before .train_xgboost()"
+            )
+        
+        # Validate hyperparameters
+        if "max_depth" in kwargs and kwargs["max_depth"] < 1:
+            raise ValidationError("max_depth must be positive")
+        
+        return self._add_training_step("xgboost", **kwargs)
     
-    return Pipeline(name="enhanced-dag-pipeline", steps=steps)
+    def deploy(self) -> 'FluentPipeline':
+        """Deploy with validation"""
+        
+        # Check if model training step exists
+        if not self._has_training_step():
+            raise PipelineValidationError(
+                "Cannot deploy without trained model. "
+                "Add a training step before .deploy()"
+            )
+        
+        return self._add_deployment_step()
 ```
 
-## **Benefits of Enhanced DAG Approach**
+## Strategic Value
 
-### **1. Builds on Existing Infrastructure**
-- Leverages the proven `PipelineDAG` class
-- Maintains backward compatibility
-- Adds port-based enhancements incrementally
+The Fluent API provides:
 
-### **2. Unified Dependency Management**
-- **Nodes** represent steps with typed input/output ports
-- **Edges** represent typed dependencies with confidence scoring
-- **Property References** bridge definition-time and runtime
+1. **Improved Readability**: Pipeline construction reads like natural language
+2. **Reduced Learning Curve**: Intuitive interface for new developers
+3. **Error Prevention**: Type safety and validation prevent common mistakes
+4. **Enhanced Productivity**: Method chaining and IntelliSense support
+5. **Maintainability**: Clear, expressive code that's easy to understand and modify
+6. **Flexibility**: Progressive disclosure allows simple to advanced usage
 
-### **3. Intelligent Auto-Resolution**
-- Semantic matching based on port names and keywords
-- Type compatibility checking
-- Confidence scoring for ambiguous matches
+## Example Usage
 
-### **4. Validation and Safety**
-- DAG cycle detection (inherited)
-- Required input validation
-- Type safety through port definitions
+```python
+# Complete fluent pipeline construction
+pipeline = (Pipeline("fraud-detection-v2")
+    # Data loading with validation
+    .load_data("s3://fraud-data/raw/")
+        .with_schema_validation(FraudDataSchema)
+        .with_quality_checks([NoMissingValues(), ValidDateRange()])
+    
+    # Feature engineering
+    .engineer_features()
+        .with_categorical_encoding(OneHotEncoder())
+        .with_numerical_scaling(StandardScaler())
+        .with_feature_selection(SelectKBest(k=50))
+    
+    # Model training with hyperparameter tuning
+    .train_xgboost()
+        .with_hyperparameter_tuning(
+            max_depth=range(3, 10),
+            learning_rate=[0.1, 0.2, 0.3],
+            n_estimators=[100, 200, 300]
+        )
+        .with_early_stopping(patience=10)
+        .with_cross_validation(folds=5)
+    
+    # Model evaluation
+    .evaluate_model()
+        .with_metrics(["accuracy", "precision", "recall", "auc"])
+        .with_threshold_optimization()
+        .with_feature_importance_analysis()
+    
+    # Conditional deployment
+    .when(lambda results: results.auc > 0.85)
+        .then(lambda p: p.deploy_to_production()
+            .with_auto_scaling(min_instances=2, max_instances=10)
+            .with_monitoring(CloudWatchMetrics())
+            .with_a_b_testing(traffic_split=0.1))
+    .otherwise(lambda p: p.save_model_artifacts()
+        .with_notification("Model performance below threshold"))
+    
+    # Execution
+    .execute())
+```
 
-This enhanced approach builds upon your existing `PipelineDAG` infrastructure while adding the sophisticated dependency management and property reference capabilities we need to solve both the dependency complexity and definition-runtime bridge problems.
-
-Would you like me to proceed with implementing this enhanced DAG-based solution?
+The Fluent API represents the **user-facing culmination** of the specification-driven architecture, transforming complex pipeline construction into an intuitive, natural language-like experience while maintaining all the power and safety of the underlying system.
 
 -----------
 ##  Recommended Notes

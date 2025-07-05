@@ -168,8 +168,6 @@ class DAGDependencyResolver:
 
 ### **2.2 Create Step Contracts**
 
-- [[Step Contract for Dependency Resolution]]
-
 **Step 2.2.1: Create pipeline_contracts/ structure**
 ```
 src/pipeline_contracts/
@@ -433,7 +431,7 @@ class EnhancedStepBuilderBase(StepBuilderBase):
 
 ### **4.2 Update Specific Step Builders**
 
-- [[Step Builder and Config Design]]
+- [[Step Builder Design]]
 
 **Step 4.2.1: Update XGBoostTrainingStepBuilder**
 ```python
