@@ -15,47 +15,11 @@ date of note: 2025-05-21
 
 
 
-### Standardization
 
-#### Input and Output Name Format
-
-- [[Rule Standard Input and Output Names and Usage]]
-
-#### Matching Principle
-
-- Use the **VALUE** of **output_names** in dependent steps to match the **KEY** of **input_names** of current step
-
-#### Rule for Updating the Pipeline Builder
-
-- We prefer **pipeline builder** to be as generic as possible
-- Prioritize updates on **step builder** first
-- Keep **message passing** generic
-
-#### Output Names
-
->[!important]
-> Standard Pattern for `output_names`:
-> 
-> 1. In config classes, define `output_names` as mapping from **logical names** to **descriptive values**:
-> 
-> `output_names = {"logical_name": "DescriptiveValue"}`
-> 
-> 2. In template, `_generate_outputs` will create *outputs dictionary* using **VALUES as keys**:
-> 
-> `outputs = {"DescriptiveValue": "s3://path/..."}`
-> 
-> 3. In step builders, use the **VALUES** from `output_names` as keys when validating outputs:
-> 
-> ```python
-> value = self.config.output_names["logical_name"] # Gets "DescriptiveValue"
-> if value not in outputs: # Checks if "DescriptiveValue" is in outputs
-> 	raise ValueError(f"Must supply an S3 URI for '{value}'")
-> ```
-> 
-> 4. Special case for **processing scripts**: 
-> 	- If the script expects specific `output_name` values, use those *directly* for `output_name` while still using **VALUES** for outputs *dictionary lookup*
-> 
-> 
+| Implementation        | Specification / Summary                        |
+| --------------------- | ---------------------------------------------- |
+| ![[step_script.png]]  | <br><br><br>![[step_spec_script_contract.png]] |
+| [[Base Step Builder]] | [[Base Step Specification]]                    |
 
 
 

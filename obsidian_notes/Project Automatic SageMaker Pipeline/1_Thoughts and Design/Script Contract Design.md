@@ -226,7 +226,7 @@ Script Contracts enable:
 ## Integration with Other Components
 
 ### With Step Specifications
-Script Contracts extend [Step Specifications](step_specification.md) with execution details.
+Script Contracts extend [Step Specifications](Step%20Specification%20Development.md) with execution details.
 
 ### With Registry System
 ```python
@@ -238,7 +238,7 @@ for step_type in registry.get_all_step_types():
 ```
 
 ### With Step Builders
-[Step Builders](step_builder.md) use Script Contracts for validation and channel mapping.
+[Step Builders](Step%20Builder%20Implementation.md) use Script Contracts for validation and channel mapping.
 
 ## Example: Complete Integration
 
@@ -280,7 +280,7 @@ def main():
     evaluate_model(model_path, eval_data_path)
 ```
 
-Script Contracts bridge the gap between **architectural intent** ([Step Specifications](step_specification.md)) and **implementation reality** (actual scripts), ensuring they remain aligned throughout the development lifecycle.
+Script Contracts bridge the gap between **architectural intent** ([Step Specifications](Step%20Specification%20Development.md)) and **implementation reality** (actual scripts), ensuring they remain aligned throughout the development lifecycle.
 
 
 

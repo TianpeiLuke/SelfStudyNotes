@@ -166,12 +166,27 @@ flowchart TD
 - [[Base Config]]
 	- [[Base Config for Processing Step]]
 
+## Declarative Specification Layer
+
 ### Step Specification
 
 - [[Step Specification Design as Declarative Pipeline Architecture]]
+- [[Script Contract Design]]
+
+### Dependency Resolution
+
+- [[Specification Registry Design]]
+- [[Registry Manager Design]]
+- [[Dependency Resolver Design]]
+- [[Semantic Matcher for Dependency Resolution]]
 
 
-## Intermediate Abstraction Layer
+## Abstraction Layer
+
+### Pipeline DAG
+
+- [[Pipeline DAG Design]]
+- [[Pipeline DAG Validation]]
 
 ### Smart Proxy 
 
@@ -182,29 +197,6 @@ flowchart TD
 - [[Fluent API Design for Step Chaining]]
 
 
-## Declarative Specification Layer
-
-### Pipeline DAG
-
-- [[Pipeline DAG Design]]
-- [[Pipeline DAG Validation]]
-
-### Dependency Resolution
-
-- [[Specification Registry Design]]
-- [[Registry Manager Design]]
-- [[Dependency Resolver Design]]
-- [[Semantic Matcher for Dependency Resolution]]
-
-
-### Pipeline Specification
-
-- [[Pipeline Specification]]
-
-### Pipeline Template Builder
-
-- [[Pipeline Template Builder v1]]
-- [[Pipeline Template Builder v2]]
 
 
 

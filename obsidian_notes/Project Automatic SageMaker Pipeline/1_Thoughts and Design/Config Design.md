@@ -286,7 +286,7 @@ class IntegrationConfig(ConfigBase):
 
 ### With Step Builders
 
-[Step Builders](step_builder.md) use dependency injection pattern with configs:
+[Step Builders](Step%20Builder%20Implementation.md) use dependency injection pattern with configs:
 
 ```python
 class XGBoostTrainingStepBuilder(BuilderStepBase):

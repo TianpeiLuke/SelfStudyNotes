@@ -17,6 +17,12 @@ date of note: 2025-07-16
 >- It enables *type-safe specification* of *step dependencies* and *outputs* with *automatic validation*.
 
 
+| Implementation        | Specification / Summary                        |
+| --------------------- | ---------------------------------------------- |
+| ![[step_script.png]]  | <br><br><br>![[step_spec_script_contract.png]] |
+| [[Base Step Builder]] | [[Base Step Specification]]                    |
+
+
 ## Code
 
 ```python

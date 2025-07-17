@@ -8,13 +8,13 @@ date of note: 2025-07-03
 ---
 ## What is the Purpose of Step Builder?
 
-Step Builders serve as the **implementation bridge** that translates abstract [specifications](step_specification.md) into executable SageMaker pipeline steps. They represent the "how" while [specifications](step_specification.md) represent the "what", handling the concrete implementation details of pipeline step execution.
+Step Builders serve as the **implementation bridge** that translates abstract [specifications](Step%20Specification%20Development.md) into executable SageMaker pipeline steps. They represent the "how" while [specifications](Step%20Specification%20Development.md) represent the "what", handling the concrete implementation details of pipeline step execution.
 
 ## Core Purpose
 
 Step Builders provide the **concrete implementation layer** that:
 
-1. **Implementation Bridge** - Convert [specifications](step_specification.md) into SageMaker steps
+1. **Implementation Bridge** - Convert [specifications](Step%20Specification%20Development.md) into SageMaker steps
 2. **Input/Output Transformation** - Map logical names to SageMaker properties
 3. **Configuration Integration** - Apply step-specific settings from [configs](config.md)
 4. **Validation and Error Handling** - Runtime validation with meaningful errors
@@ -24,7 +24,7 @@ Step Builders provide the **concrete implementation layer** that:
 
 ### 1. Implementation Bridge
 
-Step Builders translate abstract [specifications](step_specification.md) into executable SageMaker steps:
+Step Builders translate abstract [specifications](Step%20Specification%20Development.md) into executable SageMaker steps:
 
 ```python
 class XGBoostTrainingStepBuilder(BuilderStepBase):
@@ -139,7 +139,7 @@ def _get_sagemaker_step_kwargs(self):
 
 ### With Step Specifications
 
-Step Builders implement the behavior defined by [specifications](step_specification.md):
+Step Builders implement the behavior defined by [specifications](Step%20Specification%20Development.md):
 
 ```python
 class XGBoostTrainingStepBuilder(BuilderStepBase):
@@ -266,7 +266,7 @@ class TrainingStepBuilder(BuilderStepBase):
 Step Builders provide:
 
 1. **Implementation Abstraction**: Hide SageMaker complexity from users
-2. **Specification Compliance**: Ensure implementations match [specifications](step_specification.md)
+2. **Specification Compliance**: Ensure implementations match [specifications](Step%20Specification%20Development.md)
 3. **Validation Logic**: Runtime validation and comprehensive error handling
 4. **Integration Points**: Bridge between logical and physical pipeline layers
 5. **Reusability**: Common patterns can be shared across different step types
@@ -291,7 +291,7 @@ model_artifacts = builder.get_output_reference("model_output")
 training_job_name = builder.get_output_reference("training_job_name")
 ```
 
-Step Builders form the **implementation foundation** that makes the declarative [specification system](step_specification.md) practical and usable in real-world ML pipeline development, handling all the complex details of SageMaker integration while maintaining clean, specification-driven interfaces.
+Step Builders form the **implementation foundation** that makes the declarative [specification system](Step%20Specification%20Development.md) practical and usable in real-world ML pipeline development, handling all the complex details of SageMaker integration while maintaining clean, specification-driven interfaces.
 
 
 - [[Base Config]]

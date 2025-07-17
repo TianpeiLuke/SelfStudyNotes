@@ -16,6 +16,7 @@ date of note: 2025-07-16
 >The **Dependency Resolver** is a key component of the specification-driven pipeline building system. 
 >- It *automatically resolves dependencies* between pipeline steps based on their *declared input and output specifications*, eliminating the need for manual wiring of step connections.
 
+![[step_pipeline.png]]
 
 ## Code
 

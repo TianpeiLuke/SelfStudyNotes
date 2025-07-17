@@ -9,7 +9,7 @@ date of note: 2025-07-04
 
 ## What is the Purpose of Dependency Resolver?
 
-The Dependency Resolver serves as the **intelligent matching engine** that automatically connects pipeline steps by analyzing their [step specifications](step_specification.md) and finding compatible input-output relationships. It transforms manual, error-prone dependency wiring into intelligent, automated resolution based on semantic compatibility scoring.
+The Dependency Resolver serves as the **intelligent matching engine** that automatically connects pipeline steps by analyzing their [step specifications](Step%20Specification%20Development.md) and finding compatible input-output relationships. It transforms manual, error-prone dependency wiring into intelligent, automated resolution based on semantic compatibility scoring.
 
 ## Core Purpose
 
@@ -204,7 +204,7 @@ def get_resolution_report(self, available_steps: List[str]) -> Dict[str, any]:
 
 ### With Step Specifications
 
-The resolver consumes [step specifications](step_specification.md) to understand step capabilities:
+The resolver consumes [step specifications](Step%20Specification%20Development.md) to understand step capabilities:
 
 ```python
 from src.pipeline_deps.base_specifications import StepSpecification, DependencySpec, OutputSpec, DependencyType, NodeType
@@ -581,10 +581,10 @@ resolver.clear_cache()
 
 ## Related Components
 
-- **[Step Specification](step_specification.md)** - Provides the declarative metadata that drives resolution
+- **[Step Specification](Step%20Specification%20Development.md)** - Provides the declarative metadata that drives resolution
 - **[Specification Registry](specification_registry.md)** - Context-aware storage for step specifications
 - **[Registry Manager](registry_manager.md)** - Coordinates multiple isolated registry contexts
-- **[Base Specifications](step_specification.md)** - Core Pydantic models for dependencies and outputs
+- **[Base Specifications](Step%20Specification%20Development.md)** - Core Pydantic models for dependencies and outputs
 
 ---
 

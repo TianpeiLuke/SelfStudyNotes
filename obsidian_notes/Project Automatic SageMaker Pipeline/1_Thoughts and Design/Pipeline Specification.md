@@ -96,7 +96,7 @@ fraud_pipeline_spec = PipelineSpec(
 
 ### 3. Type Safety Through Step Specifications
 
-Leverage [Step Specifications](step_specification.md) for compile-time validation and dependency resolution:
+Leverage [Step Specifications](Step%20Specification%20Development.md) for compile-time validation and dependency resolution:
 
 ```python
 # Reference step specifications for type safety
@@ -317,7 +317,7 @@ class SpecificationProxyIntegration:
 
 ### With Step Builders
 
-Pipeline Specifications coordinate with [Step Builders](step_builder.md) through configuration:
+Pipeline Specifications coordinate with [Step Builders](Step%20Builder%20Implementation.md) through configuration:
 
 ```python
 class SpecificationBuilderIntegration:

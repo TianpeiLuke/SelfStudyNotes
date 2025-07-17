@@ -453,7 +453,7 @@ class FluentPipelineIntegration:
 
 ### With Step Builders
 
-Coordinate with existing [Step Builders](step_builder.md) through the registry:
+Coordinate with existing [Step Builders](Step%20Builder%20Implementation.md) through the registry:
 
 ```python
 class TemplateBuilderStepIntegration:

@@ -11,6 +11,7 @@ date of note: 2025-07-16
 
 ## Hierarchical System Representation  
 
+![[spec-driven-system-design.png]]
 
 ### User Layer
 
@@ -28,11 +29,15 @@ date of note: 2025-07-16
 
 ### Dependency Resolver and Semantic Matcher
 
+![[step_pipeline.png]]
+
 - [[Dependency Resolver for Automatic Pipeline]]
 - [[Semantic Matcher for Dependency Resolution of Auto-Pipeline]]
 
 
 ### Step Specification and Script Contract
+
+![[step_spec_script_contract.png]]
 
 - [[Base Step Specification]]
 - [[Base Step Specification Dependency Type]]
@@ -44,6 +49,8 @@ date of note: 2025-07-16
 
 
 ### Step Builder
+
+![[step_script.png]]
 
 - [[Base Step Builder]]
 - [[Base Config]]

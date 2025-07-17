@@ -57,7 +57,7 @@ class PipelineBuilderTemplate:
 
 ### 2. Step Builder Integration
 
-Coordinates with existing [Step Builders](step_builder.md) through type mapping:
+Coordinates with existing [Step Builders](Step%20Builder%20Implementation.md) through type mapping:
 
 ```python
 def _initialize_step_builders(self) -> None:
@@ -342,7 +342,7 @@ class PipelineBuilderTemplate:
 
 ### With Step Builders
 
-Coordinates with [Step Builders](step_builder.md) through builder registry:
+Coordinates with [Step Builders](Step%20Builder%20Implementation.md) through builder registry:
 
 ```python
 def _initialize_step_builders(self) -> None:
