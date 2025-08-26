@@ -1,0 +1,19 @@
+filters:
+  and:
+    - file.hasTag("aws")
+    - or:
+        - file.hasTag("code")
+        - file.hasTag("documentation")
+        - language == "aws"
+        - file.hasTag("python/aws_cdk")
+        - file.hasTag("python/aws_python_sdk")
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - tags
+      - file.folder
+      - file.ctime
+    columnSize:
+      file.name: 436

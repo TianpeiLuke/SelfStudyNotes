@@ -1,0 +1,13 @@
+filters:
+  and:
+    - file.hasTag("entry_point")
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - tags
+      - file.folder
+    columnSize:
+      file.name: 483
+      note.tags: 493

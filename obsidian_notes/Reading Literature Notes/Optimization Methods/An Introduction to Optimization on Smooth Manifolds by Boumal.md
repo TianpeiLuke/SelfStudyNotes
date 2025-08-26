@@ -12,6 +12,11 @@ publication: ""
 type: book
 DOI: ""
 date of note: 2024-06-29
+keywords:
+  - optimization
+  - smooth_manifold
+  - stiefel_manifold
+  - machine_learning_algorithm
 ---
 
 > [!Cite]  

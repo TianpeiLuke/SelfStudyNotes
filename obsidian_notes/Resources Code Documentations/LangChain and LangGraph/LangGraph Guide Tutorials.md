@@ -1,14 +1,16 @@
 ---
 title: LangGraph Guide Tutorials
 source: https://langchain-ai.github.io/langgraph/tutorials/
-author: 
-published: 
+author:
+published:
 created: 2025-04-04
 description: Build language agents as graphs
 tags:
   - excerpt
   - langgraph
   - agentic_ai
+  - documentation
+  - code_package
 ---
 New to LangGraph or LLM app development? Read this material to get up and running building your first applications.
 

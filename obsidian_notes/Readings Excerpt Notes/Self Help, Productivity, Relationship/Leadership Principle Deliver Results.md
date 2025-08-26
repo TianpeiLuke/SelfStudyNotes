@@ -27,7 +27,7 @@ date of note: 2024-04-29
 >	- [[Project Tasks and Milestones]]
 >	- [[Key Performance Indicator or KPI]]
 > - Focuses on delivering the *most important products*
-> 	- [[The 7 Habits of Highly Effective People Chapter Summary 2]]
+> 	- [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]
 > 	- [[Getting Things Done Book Summary]]
 > - Able to deliver *multiple projects* at the same time
 > - Overcomes and *persists* in the face of *obstacles*

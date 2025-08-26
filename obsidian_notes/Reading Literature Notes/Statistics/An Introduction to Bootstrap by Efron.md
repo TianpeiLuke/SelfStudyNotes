@@ -14,6 +14,9 @@ publication: ""
 type: book
 DOI: ""
 date of note: 2024-08-13
+keywords:
+  - boostrap_sampling
+  - boostrap_estimation
 ---
 
 > [!Cite]  

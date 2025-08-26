@@ -14,6 +14,8 @@ publication: ""
 type: book
 DOI: ""
 date of note: 2024-05-30
+keywords:
+  - gaussian_process
 ---
 
 > [!Cite]  

@@ -1,0 +1,16 @@
+filters:
+  and:
+    - file.hasTag("code")
+    - language == "python"
+    - '!file.hasTag("entry_point")'
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - tags
+      - file.ctime
+      - file.folder
+    columnSize:
+      file.name: 435
+      file.ctime: 231

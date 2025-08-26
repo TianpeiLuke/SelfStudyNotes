@@ -1,0 +1,24 @@
+filters:
+  and:
+    - file.hasTag("book")
+    - '!file.hasTag("entry_point")'
+    - '!file.inFolder("Templates")'
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - keywords
+      - tags
+      - file.ctime
+      - file.folder
+    sort:
+      - property: file.name
+        direction: ASC
+      - property: keywords
+        direction: ASC
+    columnSize:
+      file.name: 518
+      note.keywords: 439
+      note.tags: 474
+      file.ctime: 227

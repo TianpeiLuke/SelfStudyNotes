@@ -1,0 +1,24 @@
+filters:
+  or:
+    - and:
+        - file.hasTag("resource")
+        - file.hasTag("work")
+    - and:
+        - file.hasTag("excerpt")
+        - file.hasTag("work")
+    - and:
+        - file.hasTag("work")
+    - and:
+        - file.hasTag("buyer_abuse_ml")
+    - and:
+        - file.hasTag("amazon")
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - tags
+      - file.folder
+      - file.ctime
+    columnSize:
+      file.name: 386

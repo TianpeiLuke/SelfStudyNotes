@@ -3,9 +3,10 @@ tags:
   - code
   - code_snippet
   - linux/tar
+  - bash/tar
 keywords: 
 topics: 
-language: linux
+language: bash
 date of note: 2024-04-04
 ---
 
@@ -46,6 +47,27 @@ tar -xvzf community_images.tar.gz
 ```bash
 tar -xvzf community_images.tar.gz -C some_custom_folder_name
 ```
+
+### Exclude Certain Files
+
+```bash
+tar --exclude='*.pyc' --exclude='*.pyo' --exclude='__pycache__' --exclude='*~' --exclude='.*' -czf name_of_archive_file.tar.gz name_of_directory_to_tar
+```
+
+```bash
+tar --exclude="*__pycache__*" --exclude="*.pyc" --exclude="*/.pytest_cache/*" --exclude="*.temp" --exclude="*temp*" --exclude="*.tmp" --exclude="*.DS_Store" --exclude="*.coverage" --exclude="*.hypothesis" --exclude="*/.eggs/*" --exclude="*.egg-info" --exclude="*/__pycache__" --exclude="*/.pytest_cache" -czvf ../cursus.tar.gz ./src ./test ./slipbox
+```
+
+
+```bash
+tar -czf ../cursus.tar.gz --exclude="*/__pycache__" --exclude="*.pyc" --exclude="*/.pytest_cache" --exclude="*/__pytest__" --exclude="*/.coverage" --exclude="*/dist" --exclude="*/build" --exclude="*.egg-info" --exclude="*/.eggs" --exclude=".tox" --exclude="*/.hypothesis" --exclude="*/.cache" --exclude="*/.mypy_cache" --exclude="*/htmlcov" --exclude=".venv" --exclude=".git" .
+```
+
+
+### Check Content
+
+- [[Check the Compressed File content]]
+
 
 -----------
 ##  Recommended Notes

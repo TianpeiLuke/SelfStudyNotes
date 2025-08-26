@@ -1,0 +1,17 @@
+filters:
+  and:
+    - '!file.hasTag("entry_point")'
+    - or:
+        - file.hasTag("bash")
+        - file.hasTag("linux")
+    - file.hasTag("code_snippet")
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - file.ctime
+      - file.folder
+    columnSize:
+      file.name: 419
+      file.ctime: 216

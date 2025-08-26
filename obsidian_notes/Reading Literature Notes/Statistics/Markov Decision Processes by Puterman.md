@@ -12,6 +12,9 @@ publication: ""
 type: book
 DOI: ""
 date of note: 2024-07-12
+keywords:
+  - reinforcement_learning
+  - markov_decision_process
 ---
 
 > [!Cite]  

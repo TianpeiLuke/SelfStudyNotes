@@ -7,7 +7,8 @@ tags:
   - reading_for_understanding
 aliases:
   - 0703howtoreadbook03
-keywords: 
+keywords:
+  - analytical_reading
 topics:
   - reading
   - learning

@@ -15,6 +15,11 @@ publication: ""
 type: book
 DOI: ""
 date of note: 2024-05-12
+keywords:
+  - multi_arm_bandit
+  - online_learning
+  - stochastic_bandit_problem
+  - stochastic_process
 ---
 
 > [!Cite]  

@@ -1,0 +1,20 @@
+filters:
+  or:
+    - and:
+        - file.hasTag("excerpt")
+        - file.hasTag("documentation")
+        - file.hasTag("code_package")
+    - and:
+        - file.inFolder("Resources Code Documentations")
+        - file.ext == "md"
+    - and:
+        - file.inFolder("Readings Excerpt Notes/Amazon Internal Code Documentation")
+        - file.ext == "md"
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - tags
+    columnSize:
+      file.name: 364

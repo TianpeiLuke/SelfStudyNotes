@@ -1,0 +1,17 @@
+filters:
+  and:
+    - and:
+        - file.hasTag("project_management")
+        - file.hasTag("concept")
+        - '!file.hasTag("entry_point")'
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - keywords
+      - tags
+      - file.ctime
+    columnSize:
+      file.name: 415
+      file.ctime: 205

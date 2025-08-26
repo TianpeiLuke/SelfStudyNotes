@@ -11,6 +11,9 @@ publication: ""
 type: book
 DOI: ""
 date of note: 2024-05-22
+keywords:
+  - statistical_inference
+  - statistical_estimation
 ---
 
 > [!Cite]  

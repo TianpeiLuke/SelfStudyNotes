@@ -12,6 +12,9 @@ publication: ""
 type: book
 DOI: ""
 date of note: 2024-11-12
+keywords:
+  - gaussian_process
+  - kernel_trick
 ---
 
 > [!Cite]  

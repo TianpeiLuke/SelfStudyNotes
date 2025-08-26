@@ -8,6 +8,7 @@ aliases:
   - 0602developLeaderInYou20chp02s
 keywords:
   - leadership
+  - priority
 topics:
   - leadership
   - self-help

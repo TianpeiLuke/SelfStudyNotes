@@ -90,7 +90,7 @@ However, your preference for working independently and your dislike for office p
 > - **Strategic Vision**
 > 	- Your combination of ambition and strategic thinking allows you to see the big picture and plan for the long term. 
 > 	- You excel at developing innovative strategies that others might overlook.
-> 	- [[The 7 Habits of Highly Effective People Chapter Summary 2]]
+> 	- [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]
 >- **Self-Motivated**
 >	- Your high motivation coupled with your ambitious nature makes you an unstoppable force when tackling complex projects. 
 >	- You consistently deliver exceptional results without the need for external pressure or supervision.
@@ -226,8 +226,8 @@ Yet, true personal growth for you also involves developing your emotional intell
 > 
 >- **Sense of Control (70%)** ⁠
 >	- How much you feel you can influence the events and outcomes in your life, rather than feeling at the mercy of external forces.
->	- [[The 7 Habits of Highly Effective People Book Summary]]
->	- [[The 7 Habits of Highly Effective People Chapter Summary 2]]
+>	- [[The 7 Habits of Highly Effective People 0 Book Summary]]
+>	- [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]
 
 ##### Your Strengths
 
@@ -281,8 +281,8 @@ Yet, true personal growth for you also involves developing your emotional intell
 >	- While you excel at maintaining emotional stability, you might sometimes overlook the importance of emotional intelligence in your personal growth journey. 
 >	- This can limit your development in certain areas.
 >	- [[Emotional Intelligence 2.0 Book Summary]]
->	- [[The 7 Habits of Highly Effective People Chapter Summary 5]]
->	- [[The 7 Habits of Highly Effective People Chapter Summary 6]]
+>	- [[The 7 Habits of Highly Effective People 5 Empathetic Communication]]
+>	- [[The 7 Habits of Highly Effective People 6 Synergy]]
 
 ##### What Energizes You
 
@@ -392,7 +392,7 @@ However, your tendency to prioritize logic over emotion can create challenges in
 >- **Selective Empathy**
 >	- While you can understand others' emotions well, you might choose not to engage with them unless you see a clear benefit. 
 >	- This can make you seem cold or indifferent, even when you're not.
->	- [[The 7 Habits of Highly Effective People Chapter Summary 5]]
+>	- [[The 7 Habits of Highly Effective People 5 Empathetic Communication]]
 > 
 >- **Keeping Others at a Distance**
 >	- Your careful approach to emotional investment might sometimes create unnecessary distance in relationships that could benefit from more spontaneous engagement. 

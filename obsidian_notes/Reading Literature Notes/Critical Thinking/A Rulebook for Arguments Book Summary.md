@@ -7,6 +7,9 @@ aliases:
   - 0502rulebookargument01s
 keywords:
   - arguments
+  - critical thinking
+  - logics
+  - fallacies
 topics:
   - critical_thinking
 date of note: 2025-03-11

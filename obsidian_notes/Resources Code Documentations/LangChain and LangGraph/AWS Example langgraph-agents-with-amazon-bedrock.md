@@ -1,13 +1,15 @@
 ---
-title: "aws-samples/langgraph-agents-with-amazon-bedrock"
-source: "https://github.com/aws-samples/langgraph-agents-with-amazon-bedrock"
+title: aws-samples/langgraph-agents-with-amazon-bedrock
+source: https://github.com/aws-samples/langgraph-agents-with-amazon-bedrock
 author:
   - "[[GitHub]]"
 published:
 created: 2025-04-06
-description: "Contribute to aws-samples/langgraph-agents-with-amazon-bedrock development by creating an account on GitHub."
+description: Contribute to aws-samples/langgraph-agents-with-amazon-bedrock development by creating an account on GitHub.
 tags:
-  - "excerpt"
+  - excerpt
+  - documentation
+  - code_package
 ---
 ## LangGraph Agents with Amazon Bedrock
 

@@ -1,0 +1,13 @@
+filters:
+  and:
+    - file.inFolder("Area Life and Loves/Restaurants")
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - tags
+      - region
+    sort:
+      - property: region
+        direction: ASC

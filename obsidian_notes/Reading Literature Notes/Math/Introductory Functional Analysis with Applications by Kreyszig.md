@@ -11,6 +11,11 @@ publication: Wiley
 type: book
 DOI: ""
 date of note: 2024-05-09
+keywords:
+  - metric_space
+  - functional_calculus
+  - measure_space
+  - bounded_linear_operator
 ---
 
 > [!Cite]  

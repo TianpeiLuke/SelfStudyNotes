@@ -17,7 +17,7 @@ date of note: 2024-04-05
 
 # Pipeline
 
-- [[Pipelines]]
+- [[Pipelines ver 1.0]]
 
 # Data Module
 

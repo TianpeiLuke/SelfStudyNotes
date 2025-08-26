@@ -1,13 +1,15 @@
 ---
 title: Concepts
 source: https://langchain-ai.github.io/langgraph/concepts/#deployment-options
-author: 
-published: 
+author:
+published:
 created: 2025-04-05
 description: Conceptual Guide for LangGraph
 tags:
   - excerpt
   - langgraph
+  - documentation
+  - code_package
 ---
 ## Conceptual Guide
 

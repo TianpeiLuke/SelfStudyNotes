@@ -1,0 +1,21 @@
+filters:
+  and:
+    - file.hasTag("concept")
+    - file.hasTag("deep_learning")
+    - '!file.hasTag("entry_point")'
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - keywords
+      - tags
+      - file.ctime
+    sort:
+      - property: file.name
+        direction: ASC
+      - property: file.ctime
+        direction: ASC
+    columnSize:
+      file.name: 484
+      note.tags: 531

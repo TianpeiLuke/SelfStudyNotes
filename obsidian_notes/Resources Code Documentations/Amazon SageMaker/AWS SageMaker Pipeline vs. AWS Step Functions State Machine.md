@@ -65,8 +65,8 @@ year: 2925
 
 
 - [[An End-to-End Training Deployment Pipeline on AWS]]
-	- [[Builder Training Step]]
-	- [[Builder Model Step]]
+	- [[Builder Pytorch Training Step]]
+	- [[Builder Pytorch Model Step]]
 	- [[Builder Workflow]]
 
 

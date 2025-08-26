@@ -8,6 +8,8 @@ aliases:
   - 0602developLeaderInYou201s
 keywords:
   - leadership
+  - team_development
+  - personal management
 topics:
   - leadership
   - self-help

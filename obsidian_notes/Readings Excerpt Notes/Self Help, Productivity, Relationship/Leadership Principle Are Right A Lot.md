@@ -40,7 +40,7 @@ date of note: 2024-04-29
 - [[Functional Competencies Deal with Ambiguity]]
 - Leadership Principle Explained [internal link](https://w.amazon.com/bin/view/LeadershipPrinciples/)
 
-- Seek to Understand, then to Be Understood [[The 7 Habits of Highly Effective People Chapter Summary 5]]
+- Seek to Understand, then to Be Understood [[The 7 Habits of Highly Effective People 5 Empathetic Communication]]
 
 - Pros: This LP is against the following cognitive bias
 	- [[Authority Bias]]

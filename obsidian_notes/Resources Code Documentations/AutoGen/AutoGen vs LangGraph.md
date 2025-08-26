@@ -1,9 +1,10 @@
 ---
 tags:
+  - analysis
   - agentic_ai
   - autogen
   - langgraph
-aliases: 
+aliases:
 date of note: 2025-04-04
 ---
 

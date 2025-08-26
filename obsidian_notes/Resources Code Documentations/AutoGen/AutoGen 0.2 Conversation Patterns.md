@@ -1,8 +1,8 @@
 ---
 title: Conversation Patterns | AutoGen 0.2
 source: https://microsoft.github.io/autogen/0.2/docs/tutorial/conversation-patterns
-author: 
-published: 
+author:
+published:
 created: 2025-04-04
 description: Open In Colab
 tags:
@@ -10,6 +10,8 @@ tags:
   - autogen
   - agentic_ai
   - large_language_models
+  - documentation
+  - code_package
 ---
 ## Conversation Patterns
 

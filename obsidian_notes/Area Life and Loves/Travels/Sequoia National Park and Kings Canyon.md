@@ -33,7 +33,17 @@ date of note: 2025-05-11
 - **General Sherman Tree**
 - **Tunnel Log**
 - **Moro Rock**
+- **Big Tree Trail**
 - Tokopath Falls
+
+### Bus
+
+- Parking and Driving Map
+
+![[sequoia_park_map_driving.jpg]]
+
+
+
 
 
 
@@ -46,3 +56,5 @@ date of note: 2025-05-11
 
 - Wikipedia
 	- [Sequoia_National_Park](https://en.wikipedia.org/wiki/Sequoia_National_Park)
+
+- [[Travel Plan to Sequoia National Park]]

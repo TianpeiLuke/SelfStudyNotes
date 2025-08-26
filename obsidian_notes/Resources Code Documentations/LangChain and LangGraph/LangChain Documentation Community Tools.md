@@ -1,12 +1,14 @@
 ---
-title: "tools — 🦜🔗 LangChain  documentation"
-source: "https://python.langchain.com/api_reference/community/tools.html"
+title: tools — 🦜🔗 LangChain  documentation
+source: https://python.langchain.com/api_reference/community/tools.html
 author:
 published:
 created: 2025-04-06
 description:
 tags:
-  - "excerpt"
+  - excerpt
+  - documentation
+  - code_package
 ---
 ## tools
 

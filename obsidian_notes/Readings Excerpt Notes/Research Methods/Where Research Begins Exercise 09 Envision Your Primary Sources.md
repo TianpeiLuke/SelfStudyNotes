@@ -70,7 +70,7 @@ year: 2022
 ## Recommended Notes
 
 - Check on *How to Take Smart Note* to learn Zettelkasten method. [[How to Take Smart Note Book Summary]]
-- What this exercise is doing is essentially to ***"Begin with End in Mind"***.  This part can be generalized as a principle for effective living. *Envisioning, Imagination as **a critical human endorsement.*** See  [[The 7 Habits of Highly Effective People Chapter Summary 2]]
+- What this exercise is doing is essentially to ***"Begin with End in Mind"***.  This part can be generalized as a principle for effective living. *Envisioning, Imagination as **a critical human endorsement.*** See  [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]
 
 
 

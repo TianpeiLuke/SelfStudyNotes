@@ -2,10 +2,12 @@
 tags:
   - book
   - 80-20_principle
+  - pareto_principle
 aliases:
   - 06018020principle01s
 keywords:
   - 80/20 rules
+  - pareto_principle
 topics:
   - productivity
   - time_management

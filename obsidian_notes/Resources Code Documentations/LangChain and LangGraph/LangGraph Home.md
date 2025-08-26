@@ -1,13 +1,15 @@
 ---
 title: LangGraph Home
 source: https://langchain-ai.github.io/langgraph/
-author: 
-published: 
+author:
+published:
 created: 2025-04-05
 description: Build language agents as graphs
 tags:
   - excerpt
   - langgraph
+  - documentation
+  - code_package
 ---
 Note
 

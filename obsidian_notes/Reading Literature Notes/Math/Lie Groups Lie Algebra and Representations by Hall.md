@@ -11,6 +11,9 @@ publication: ""
 type: book
 DOI: ""
 date of note: 2024-10-27
+keywords:
+  - lie_group
+  - lie_algebra
 ---
 
 > [!Cite]  

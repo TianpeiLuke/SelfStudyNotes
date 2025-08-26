@@ -1,8 +1,8 @@
 ---
 title: Amazon Bedrock | AutoGen 0.2
 source: https://microsoft.github.io/autogen/0.2/docs/topics/non-openai-models/cloud-bedrock/
-author: 
-published: 
+author:
+published:
 created: 2025-04-04
 description: Define and load a custom model
 tags:
@@ -10,6 +10,8 @@ tags:
   - large_language_models
   - autogen
   - agentic_ai
+  - documentation
+  - code_package
 ---
 ## Amazon Bedrock
 

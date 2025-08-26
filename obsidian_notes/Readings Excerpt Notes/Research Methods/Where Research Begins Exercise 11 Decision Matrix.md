@@ -68,7 +68,7 @@ year: 2022
 ## Recommended Notes
 
 - Check on *Get Things Done* and *Build a Second Brain* to learn how to plan and develop projects. Using efficient system to track and push the progress of projects.
-- Check on the habit of ***"Put First Things First"**, Quadrant II focus* principles in [[The 7 Habits of Highly Effective People Chapter Summary 2]]
+- Check on the habit of ***"Put First Things First"**, Quadrant II focus* principles in [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]
 
 ----------
 ## Book Citations

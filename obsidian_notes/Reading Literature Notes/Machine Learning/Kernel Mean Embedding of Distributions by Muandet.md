@@ -11,6 +11,8 @@ publication: Foundations and Trends® in Machine Learning
 type: journalArticle
 DOI: 10.1561/2200000060
 date of note: 2024-11-11
+keywords:
+  - kernel_mean_embedding_distribution
 ---
 
 > [!Cite]  

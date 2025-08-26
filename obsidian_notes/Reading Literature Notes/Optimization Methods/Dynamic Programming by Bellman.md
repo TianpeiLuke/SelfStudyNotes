@@ -12,6 +12,9 @@ publication: ""
 type: book
 DOI: ""
 date of note: 2024-11-20
+keywords:
+  - dynamic_programming
+  - markov_decision_process
 ---
 
 > [!Cite]  

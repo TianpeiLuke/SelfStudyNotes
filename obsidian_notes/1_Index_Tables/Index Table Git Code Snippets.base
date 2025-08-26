@@ -1,0 +1,15 @@
+filters:
+  and:
+    - file.hasTag("git")
+    - '!file.hasTag("entry_point")'
+    - file.hasTag("code")
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - file.ctime
+      - file.folder
+    columnSize:
+      file.name: 348
+      file.ctime: 286

@@ -153,6 +153,9 @@ where
 -----------
 ##  Recommended Notes
 
+- Overview Wiki
+	- [internal wiki](https://w.amazon.com/bin/view/AbusePrevention/Abuse_ML/Buyer_Abuse_RnR)
+	- Overview Quip [link](https://quip-amazon.com/EPteAk1T1qjx/Reversal-and-Reclassification-RnR-Program-Overview)
 - Check BSM data description, access, owner and pipeline in [[Buyer Seller Messaging (BSM) Entry Point]]
 - Wiki for MFN RnR with BSM. [link](https://w.amazon.com/bin/view/AbusePrevention/Abuse_ML/BuyerAbuse_BuyerSellerMessaging/reversal_reclassification/)
 - New label definition quip doc [RR tags- simplification](https://quip-amazon.com/SxaXAFQUffjr/RR-tags-simplification)

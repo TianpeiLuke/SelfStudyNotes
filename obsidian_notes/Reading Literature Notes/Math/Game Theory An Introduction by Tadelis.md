@@ -11,6 +11,9 @@ publication: Princeton University Press.
 type: book
 DOI: ""
 date of note: 2024-08-04
+keywords:
+  - math/game_theory
+  - game_theory
 ---
 
 > [!Cite]  

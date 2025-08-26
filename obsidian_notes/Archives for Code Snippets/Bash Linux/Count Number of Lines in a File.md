@@ -176,4 +176,6 @@ done
 -----------
 ##  Recommended Notes
 
+
 - [[Count Number of Columns in CSV file]]
+- [[Count Number of Lines for Each File and Aggregate]]

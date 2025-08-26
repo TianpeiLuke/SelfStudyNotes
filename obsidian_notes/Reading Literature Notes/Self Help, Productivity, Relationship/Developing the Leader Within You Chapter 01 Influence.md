@@ -8,6 +8,8 @@ aliases:
   - 0602developLeaderInYou20chp01s
 keywords:
   - leadership
+  - effective_influencing
+  - influence
 topics:
   - leadership
   - self-help

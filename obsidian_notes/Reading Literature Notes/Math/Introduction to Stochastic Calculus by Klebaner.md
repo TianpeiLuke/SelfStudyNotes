@@ -12,6 +12,10 @@ publication: Imperial College Press.
 type: book
 DOI: ""
 date of note: 2024-06-12
+keywords:
+  - ito_integration
+  - ito_formula
+  - stochastic_differential_equations
 ---
 
 > [!Cite]  

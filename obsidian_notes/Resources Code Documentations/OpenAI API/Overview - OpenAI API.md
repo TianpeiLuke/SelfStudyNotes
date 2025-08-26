@@ -1,12 +1,13 @@
 ---
-title: "Overview - OpenAI API"
-source: "https://platform.openai.com/docs/overview"
+title: Overview - OpenAI API
+source: https://platform.openai.com/docs/overview
 author:
 published:
 created: 2025-04-06
-description: "Explore resources, tutorials, API docs, and dynamic examples to get the most out of OpenAI's developer platform."
+description: Explore resources, tutorials, API docs, and dynamic examples to get the most out of OpenAI's developer platform.
 tags:
-  - "excerpt"
+  - excerpt
+  - documentation
 ---
 ## OpenAI developer platform
 

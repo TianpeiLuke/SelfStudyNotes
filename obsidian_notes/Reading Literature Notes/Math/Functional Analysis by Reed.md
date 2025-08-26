@@ -12,6 +12,11 @@ publication: Academic Press.
 type: book
 DOI: ""
 date of note: 2024-05-06
+keywords:
+  - functional_analysis
+  - hilbert_space
+  - topology
+  - banach_space
 ---
 
 > [!Cite]  

@@ -4,7 +4,7 @@ tags:
   - project
   - data_digestion
   - customer_service_contact
-  - data_sources
+  - data/source
 aliases:
   - 0804csdigestion0
 date of note: 2024-02-27

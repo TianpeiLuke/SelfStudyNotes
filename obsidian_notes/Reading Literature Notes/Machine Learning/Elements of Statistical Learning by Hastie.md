@@ -2,14 +2,16 @@
 tags:
   - book
 aliases:
-  - "hastieElementsStatisticalLearning2009"
-year: 2009 
+  - hastieElementsStatisticalLearning2009
+year: 2009
 name: "The Elements of Statistical Learning: Data Mining, Inference, and Prediction"
-authors: "Trevor Hastie, Robert Tibshirani, Jerome H Friedman"
+authors: Trevor Hastie, Robert Tibshirani, Jerome H Friedman
 publication: ""
-type: "book"
+type: book
 DOI: ""
-date of note: 2024-05-06 
+date of note: 2024-05-06
+keywords:
+  - statistical_learning
 ---
 
 > [!Cite]  

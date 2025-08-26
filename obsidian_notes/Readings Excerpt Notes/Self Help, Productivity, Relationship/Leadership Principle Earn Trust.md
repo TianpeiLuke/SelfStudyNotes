@@ -43,10 +43,10 @@ date of note: 2024-04-29
 
 
 - Leadership Principle Explained [internal link](https://w.amazon.com/bin/view/LeadershipPrinciples/)
-- Public Victory [[The 7 Habits of Highly Effective People Chapter Summary 3]]
-	- Think of Win/Win [[The 7 Habits of Highly Effective People Chapter Summary 4]]
-	- Seek First to Understand, Then to Be Understood [[The 7 Habits of Highly Effective People Chapter Summary 5]]
-	- Synergy [[The 7 Habits of Highly Effective People Chapter Summary 6]]
+- Public Victory [[The 7 Habits of Highly Effective People 3 Public Victory]]
+	- Think of Win/Win [[The 7 Habits of Highly Effective People 4 Win-Win]]
+	- Seek First to Understand, Then to Be Understood [[The 7 Habits of Highly Effective People 5 Empathetic Communication]]
+	- Synergy [[The 7 Habits of Highly Effective People 6 Synergy]]
 
 - [[Emotional Intelligence 2.0 Book Summary]]
 - [[Developing the Leader Within You 2.0 Book Summary]]

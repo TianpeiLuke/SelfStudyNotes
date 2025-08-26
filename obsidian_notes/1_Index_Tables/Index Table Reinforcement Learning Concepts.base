@@ -1,0 +1,17 @@
+filters:
+  and:
+    - file.hasTag("concept")
+    - file.hasTag("reinforcement_learning")
+    - '!file.hasTag("entry_point")'
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - keywords
+      - tags
+      - file.ctime
+    columnSize:
+      file.name: 440
+      note.keywords: 445
+      note.tags: 774

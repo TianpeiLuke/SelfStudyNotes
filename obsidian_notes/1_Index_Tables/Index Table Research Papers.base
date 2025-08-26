@@ -1,0 +1,17 @@
+filters:
+  and:
+    - file.hasTag("paper")
+    - '!file.inFolder("Templates")'
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - name
+      - authors
+      - tags
+      - file.ctime
+    columnSize:
+      file.name: 134
+      note.name: 437
+      note.authors: 416

@@ -13,6 +13,10 @@ publication: ""
 type: book
 DOI: ""
 date of note: 2024-12-19
+keywords:
+  - causal_analysis
+  - causality
+  - causal_graph
 ---
 
 > [!Cite]  

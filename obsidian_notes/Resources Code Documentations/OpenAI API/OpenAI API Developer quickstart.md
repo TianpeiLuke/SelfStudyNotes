@@ -1,12 +1,14 @@
 ---
-title: "Developer quickstart - OpenAI API"
-source: "https://platform.openai.com/docs/quickstart?api-mode=responses"
+title: Developer quickstart - OpenAI API
+source: https://platform.openai.com/docs/quickstart?api-mode=responses
 author:
 published:
 created: 2025-04-06
-description: "Learn how to use the OpenAI API to generate human-like responses to natural language prompts, analyze images with computer vision, use powerful built-in tools, and more."
+description: Learn how to use the OpenAI API to generate human-like responses to natural language prompts, analyze images with computer vision, use powerful built-in tools, and more.
 tags:
-  - "clippings"
+  - clippings
+  - excerpt
+  - documentation
 ---
 Take your first steps with the OpenAI API.
 

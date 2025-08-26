@@ -18,6 +18,11 @@ publication: ""
 type: book
 DOI: ""
 date of note: 2024-08-15
+keywords:
+  - algorithm/sort
+  - algorithm/recipes
+  - algorithm/search
+  - algorithm/data_structure
 ---
 
 > [!Cite]  

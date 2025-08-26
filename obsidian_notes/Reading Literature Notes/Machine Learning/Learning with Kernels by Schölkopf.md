@@ -11,6 +11,8 @@ publication: ""
 type: book
 DOI: ""
 date of note: 2024-08-29
+keywords:
+  - support_vector_machine
 ---
 
 > [!Cite]  

@@ -20,6 +20,7 @@ date of note: 2025-01-20
 
 - [[兰州牛肉面 Lanzhou Beef Noodle]]
 - [[粉爱面土豆粉 Potato Powder Love Noodle]]
+- [[Noodle Street]]
 
 ### 粤菜
 
@@ -34,6 +35,12 @@ date of note: 2025-01-20
 - [[豫香缘 Northern Chinese Cuisine]]
 - [[北京缘 Beijing Tasty House]]
 - [[那家小馆 Bistro Na]]
+- [[吉荣烤鸭 Ji Rong Beijing Duck]]
+
+
+### 台湾
+
+- [[义美 Yi Mei Taiwanese Restaurant]]
 
 
 

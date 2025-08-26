@@ -8,6 +8,7 @@ aliases:
   - 0602developLeaderInYou20chp03s
 keywords:
   - leadership
+  - character strength
 topics:
   - leadership
   - self-help

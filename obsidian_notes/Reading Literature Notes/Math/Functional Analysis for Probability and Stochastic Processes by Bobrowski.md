@@ -13,6 +13,11 @@ publication: ""
 type: book
 DOI: ""
 date of note: 2024-05-30
+keywords:
+  - functional_analysis
+  - probability_space
+  - banach_space
+  - hilbert_space
 ---
 
 > [!Cite]  

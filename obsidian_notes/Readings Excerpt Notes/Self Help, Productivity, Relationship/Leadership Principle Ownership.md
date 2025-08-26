@@ -49,7 +49,7 @@ date of note: 2024-04-29
 
 - [[Interview Questions Ownership]]
 - Leadership Principle Explained [internal link](https://w.amazon.com/bin/view/LeadershipPrinciples/)
-- Private Victory [[The 7 Habits of Highly Effective People Chapter Summary 2]]
+- Private Victory [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]
 	- Be Proactive
 	- Begin with Ends in Mind
 	- Put First Things First

@@ -7,7 +7,10 @@ tags:
   - emotional_intelligence
 aliases:
   - 0603winfriendinfluence01s
-keywords: 
+keywords:
+  - influence
+  - social_awareness
+  - emotional_intelligence
 topics:
   - leadership
   - emotional_intelligence

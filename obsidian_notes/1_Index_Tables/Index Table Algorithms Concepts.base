@@ -1,0 +1,19 @@
+filters:
+  and:
+    - file.hasTag("concept")
+    - or:
+        - file.hasTag("algorithm")
+        - file.hasTag("numerical_methods")
+    - '!file.hasTag("entry_point")'
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - keywords
+      - tags
+      - file.folder
+      - file.ctime
+    columnSize:
+      file.name: 455
+      note.keywords: 368

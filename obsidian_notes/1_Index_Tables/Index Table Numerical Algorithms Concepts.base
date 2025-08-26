@@ -1,0 +1,17 @@
+filters:
+  and:
+    - file.hasTag("concept")
+    - file.hasTag("numerical_methods")
+    - '!file.hasTag("entry_point")'
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - keywords
+      - tags
+      - file.ctime
+    columnSize:
+      file.name: 460
+      note.keywords: 441
+      note.tags: 403

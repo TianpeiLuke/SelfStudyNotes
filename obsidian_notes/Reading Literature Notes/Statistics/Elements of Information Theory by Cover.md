@@ -11,6 +11,9 @@ publication: Wiley-Interscience.
 type: book
 DOI: https://doi.org/10.1002/047174882X
 date of note: 2024-05-07
+keywords:
+  - information_theory
+  - shannon_entropy
 ---
 
 > [!Cite]  

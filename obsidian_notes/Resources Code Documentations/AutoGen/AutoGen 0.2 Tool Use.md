@@ -1,8 +1,8 @@
 ---
 title: Tool Use | AutoGen 0.2
 source: https://microsoft.github.io/autogen/0.2/docs/tutorial/tool-use
-author: 
-published: 
+author:
+published:
 created: 2025-04-04
 description: Open In Colab
 tags:
@@ -10,6 +10,8 @@ tags:
   - autogen
   - large_language_models
   - agentic_ai
+  - documentation
+  - code_package
 ---
 ## Tool Use
 

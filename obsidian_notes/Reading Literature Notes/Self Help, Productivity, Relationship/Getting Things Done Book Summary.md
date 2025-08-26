@@ -16,7 +16,8 @@ tags:
   - outcome_focusing
 aliases:
   - 0601gtd01s
-keywords: 
+keywords:
+  - getting_things_done
 topics:
   - gtd
   - productivity

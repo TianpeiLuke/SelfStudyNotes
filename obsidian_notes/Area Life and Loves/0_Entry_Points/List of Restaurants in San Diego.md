@@ -22,6 +22,12 @@ date of note: 2025-01-20
 - [[刘一手 Liuyishou Hot Pot]]
 - [[品味 Quality Taste Pot]]
 - [[过桥园 Spicy City]]
+- [[张亮麻辣烫]]
+- [[杨国福麻辣烫 YGF Malatang]]
+
+### 京菜
+
+- [[宴遇 Yummy House]]
 
 ### 台菜
 
@@ -39,6 +45,8 @@ date of note: 2025-01-20
 - [[豪记私房菜 Noble Chef]]
 - [[翠府 Taste of Hong Kong]]
 - [[Jasmine Seafood Restaurant]]
+- [[Mom Kitchen]]
+- [[品味 Quality Taste Pot]]
 
 ### 米线 拉面
 
@@ -61,11 +69,14 @@ date of note: 2025-01-20
 - [[Taco Stand]]
 - Tacos El Gordo
 
-### 美式
+### 美式 Brunch
 
 - [[Snooze an Am Eatery]]
+- [[Culinary Dropout]]
 
+### 越南
 
+- [[Pho Cow Cali]]
 
 
 

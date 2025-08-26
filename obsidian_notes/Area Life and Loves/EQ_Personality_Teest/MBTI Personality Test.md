@@ -64,7 +64,7 @@ date of note: 2025-05-10
 >- Prefers to make decisions on the basis of *values*.
 
 - [[Emotional Intelligence 2.0 Book Summary]]
-- [[The 7 Habits of Highly Effective People Chapter Summary 2]]
+- [[The 7 Habits of Highly Effective People 2 Vision Leadership Management]]
 
 
 #### Approach the Outside World: Judging (J) vs. Perceiving (P)
@@ -95,7 +95,7 @@ date of note: 2025-05-10
 ##  Recommended Notes and References
 
 
-- [[The 7 Habits of Highly Effective People Book Summary]]
+- [[The 7 Habits of Highly Effective People 0 Book Summary]]
 - [[Emotional Intelligence 2.0 Book Summary]]
 - Website
 	- [www.themyersbriggs.com](https://www.themyersbriggs.com/en-US/Products-and-Services/Myers-Briggs)

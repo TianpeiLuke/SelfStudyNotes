@@ -1,0 +1,14 @@
+filters:
+  and:
+    - file.hasTag("interview")
+    - file.hasTag("amazon")
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - tags
+      - file.ctime
+    columnSize:
+      file.name: 414
+      note.tags: 635

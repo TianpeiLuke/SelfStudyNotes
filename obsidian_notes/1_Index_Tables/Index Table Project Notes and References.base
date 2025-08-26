@@ -1,0 +1,23 @@
+filters:
+  and:
+    - '!file.inFolder("Templates")'
+    - or:
+        - file.hasTag("reversal_reclassification")
+        - file.hasTag("buyer_seller_messaging")
+        - file.hasTag("customer_service_contact")
+        - file.hasTag("data_source")
+        - file.hasTag("data")
+        - file.hasTag("shipment_tracking_service")
+    - or:
+        - file.hasTag("project")
+        - file.hasTag("resource")
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - file.ctime
+      - tags
+      - file.folder
+    columnSize:
+      file.name: 421

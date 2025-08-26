@@ -12,6 +12,10 @@ publication: ""
 type: book
 DOI: ""
 date of note: 2024-12-13
+keywords:
+  - logics
+  - fallacies
+  - argument
 ---
 
 > [!Cite]  

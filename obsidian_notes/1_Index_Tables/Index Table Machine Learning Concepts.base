@@ -1,0 +1,18 @@
+filters:
+  and:
+    - file.inFolder("Archives for Concepts and Propositions/Machine_Learning")
+    - file.ext == "md"
+    - '!file.hasTag("entry_point")'
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - keywords
+      - tags
+      - file.ctime
+    columnSize:
+      file.name: 488
+      note.keywords: 490
+      note.tags: 340
+      file.ctime: 209

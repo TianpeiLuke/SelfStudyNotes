@@ -18,6 +18,10 @@ publication: Springer
 type: book
 DOI: ""
 date of note: 2024-08-15
+keywords:
+  - algorithm/sort
+  - algorithm/search
+  - algorithm/data_structure
 ---
 
 > [!Cite]  

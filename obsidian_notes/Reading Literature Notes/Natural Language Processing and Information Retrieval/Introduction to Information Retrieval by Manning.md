@@ -11,6 +11,9 @@ publication: ""
 type: book
 DOI: ""
 date of note: 2024-10-25
+keywords:
+  - information_retrieval
+  - search_engine
 ---
 
 > [!Cite]  

@@ -11,6 +11,10 @@ publication: ""
 type: book
 DOI: ""
 date of note: 2024-10-25
+keywords:
+  - natural_language_inference_nlp
+  - natural_language
+  - natural_language_processing
 ---
 
 > [!Cite]  

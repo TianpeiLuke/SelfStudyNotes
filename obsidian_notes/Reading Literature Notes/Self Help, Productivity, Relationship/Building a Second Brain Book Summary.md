@@ -21,7 +21,11 @@ tags:
   - noticing_habit
 aliases:
   - 0601basb01s
-keywords: 
+keywords:
+  - productivity
+  - note taking
+  - basb
+  - build_a_second_brain
 topics:
   - gtd
   - productivity

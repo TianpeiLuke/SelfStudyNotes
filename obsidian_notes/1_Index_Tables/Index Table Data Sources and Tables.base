@@ -1,0 +1,14 @@
+filters:
+  and:
+    - file.hasTag("data")
+    - '!file.inFolder("Templates")'
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - tags
+      - file.folder
+      - file.ctime
+    columnSize:
+      file.name: 375
